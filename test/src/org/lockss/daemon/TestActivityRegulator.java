@@ -1,5 +1,5 @@
 /*
- * $Id: TestActivityRegulator.java,v 1.21 2004-02-07 06:44:05 eaalto Exp $
+ * $Id: TestActivityRegulator.java,v 1.22 2004-02-26 00:38:44 eaalto Exp $
  */
 
 /*
@@ -159,7 +159,9 @@ public class TestActivityRegulator extends LockssTestCase {
     MockCachedUrlSet mcus2 = new MockCachedUrlSet("test url2");
     // set the first AU and spec to avoid null comparisons
     mcus.setArchivalUnit(new MockArchivalUnit());
-    mcus.setSpec(new MockCachedUrlSetSpec("test", "test"));
+    mcus.setSpec(new RangeCachedUrlSetSpec("test"));
+    mcus2.setArchivalUnit(new MockArchivalUnit());
+    mcus2.setSpec(new RangeCachedUrlSetSpec("test2"));
     ActivityRegulator.CusLockRequest req1 =
         new ActivityRegulator.CusLockRequest(mcus, regulator.REPAIR_CRAWL, 234);
     ActivityRegulator.CusLockRequest req2 =
@@ -186,20 +188,30 @@ public class TestActivityRegulator extends LockssTestCase {
   }
 
   public void testAuToCusConversionMultipleConflict() {
+    // get a lock for later use
+    ActivityRegulator.Lock tempLock =
+        regulator.getAuActivityLock(regulator.BACKGROUND_CRAWL, 123);
+    tempLock.expire();
+
+
     ActivityRegulator.Lock auLock =
         regulator.getAuActivityLock(regulator.NEW_CONTENT_CRAWL, 123);
     MockCachedUrlSet mcus = new MockCachedUrlSet("test url");
     MockCachedUrlSet mcus2 = new MockCachedUrlSet("test url2");
-    // set the first AU and spec to avoid null comparisons
+    // set the AU and spec to avoid null comparisons
     mcus.setArchivalUnit(new MockArchivalUnit());
-    mcus.setSpec(new MockCachedUrlSetSpec("test", "test"));
+    mcus.setSpec(new RangeCachedUrlSetSpec("test"));
+    mcus2.setArchivalUnit(new MockArchivalUnit());
+    mcus2.setSpec(new RangeCachedUrlSetSpec("test2"));
     ActivityRegulator.CusLockRequest req1 =
         new ActivityRegulator.CusLockRequest(mcus, regulator.REPAIR_CRAWL, 234);
     ActivityRegulator.CusLockRequest req2 =
         new ActivityRegulator.CusLockRequest(mcus2, regulator.BACKGROUND_CRAWL,
         123);
-    // put a lock in under the CUS
-    regulator.cusMap.put(mcus, auLock);
+    // put a lock in under the CUS (can't be an expired lock)
+    tempLock.extend(123321);
+    assertFalse(tempLock.isExpired());
+    regulator.cusMap.put(mcus, tempLock);
 
     List locks = regulator.changeAuLockToCusLocks(auLock,
         ListUtil.list(req1, req2));
