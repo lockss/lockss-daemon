@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.132 2005-03-11 02:12:22 tlipkis Exp $
+ $Id: build.xml,v 1.133 2005-03-11 19:04:57 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -194,6 +194,8 @@ Args:
   <!--  Files -->
   <property name="test.classpath.file" value="${test}/test-classpath"/>
   <property name="production.classpath.file" value="${lib}/run-classpath"/>
+  <property name="production.packinglist.file" value="${lib}/packing-list"/>
+  <property name="run.props" value="${lib}/run-props"/>
   <!--  This path is also known to org.lockss.util.BuildInfo class -->
   <property name="build.info.file"
                      value="${classes}/org/lockss/htdocs/build.properties"/>
@@ -258,6 +260,13 @@ Args:
   <path id="prod.run.classpath">
 <!--     <path refid="test.run.classpath" /> -->
     <path refid="run.classpath" />
+  </path> 
+
+  <!-- Packing list isn't really a path but handy way to do it. -->
+  <path id="prod.packing.list">
+    <path refid="run.classpath" />
+    <pathelement path="${production.classpath.file}" />
+    <pathelement path="${run.props}" />
   </path> 
 
   <path id="tools.compile.classpath">
@@ -432,9 +441,12 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
     <delete dir="${plugins.dir}" quiet="true"/>
     <delete file="${lockss.jar}" quiet="true"/>
     <delete file="${lockss.test.jar}" quiet="true"/>
+    <delete file="${plugins.jar}" quiet="true"/>
     <delete file="${lockss.ant.jar}" quiet="true"/>
     <delete file="${test.classpath.file}" quiet="true"/>
     <delete file="${production.classpath.file}" quiet="true"/>
+    <delete file="${production.packinglist.file}" quiet="true"/>
+    <delete file="${run.props}" quiet="true"/>
     <delete quiet="true" verbose="true">
       <!-- ant-generated files that can get left around if build is aborted -->
       <fileset dir="${basedir}" includes="files?* junit?*.properties"/>
@@ -821,17 +833,36 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
     <jar jarfile="${lockss.test.jar}" basedir="${test.classes}" >
        <include name="**/" />
     </jar>
-    <!-- Write test classpath to a file, so scripts can get it -->
+    <!-- Write test classpath to a file, so test scripts can get it -->
     <pathconvert refid="test.run.classpath" property="tmp.test.clspth"
       targetos="${detected.os}" />
     <echo message="${tmp.test.clspth}" file="${test.classpath.file}"/>
-    <!-- Write run classpath to a different file, for package build -->
+  </target>
+
+  <!-- ==================================================================== -->
+  <target name="package" depends="jar-lockss"
+   description="Produce all files for a production package" >
+    <!-- Write run classpath file -->
     <pathconvert refid="prod.run.classpath" property="tmp.run.clspth"
       targetos="${detected.os}">
       <!-- entity codes below are open and close curly brace -->
       <map from="${basedir}/lib" to="$&#x07b;JAVA.LIB.PATH&#x07d;" />
     </pathconvert>
     <echo message="${tmp.run.clspth}" file="${production.classpath.file}"/>
+    <!-- Write run-props -->
+    <echo file="${run.props}">ULIMIT_DATA=192000
+ULIMIT_MEMORY=128000
+ULIMIT_STACK=14000
+ULIMIT_FILES=256
+JAVA_COMMAND_ARGS=-Xmx120m -Dsun.net.inetaddr.ttl=3600 -showversion
+</echo>
+    <!-- Write packing list file-->
+    <pathconvert refid="prod.packing.list" property="tmp.packing.list"
+      targetos="${detected.os}">
+      <!-- entity codes below are open and close curly brace -->
+      <map from="${basedir}/lib" to="$&#x07b;JAVA.LIB.PATH&#x07d;" />
+    </pathconvert>
+    <echo message="${tmp.packing.list}" file="${production.packinglist.file}"/>
   </target>
 
   <!-- ==================================================================== -->
@@ -1223,7 +1254,7 @@ java -classpath &quot;${tmp.ptool.clspth.unix}&quot; org.lockss.devtools.plugind
 
   <!-- ==================================================================== -->
   <target name="test-all"
-   depends="test-unit,test-func"
+   depends="package,test-unit,test-func"
    description="Run all unit tests and functional tests" >
   </target>
 
