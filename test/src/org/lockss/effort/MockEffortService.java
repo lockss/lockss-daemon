@@ -1,5 +1,5 @@
 /*
- * $Id: MockEffortService.java,v 1.1.2.1 2004-10-01 19:52:43 dshr Exp $
+ * $Id: MockEffortService.java,v 1.1.2.2 2004-10-03 20:40:52 dshr Exp $
  */
 
 /*
@@ -50,13 +50,39 @@ public class MockEffortService extends BaseLockssDaemonManager
 
     static Logger log = Logger.getLogger("MockEffortService");
 
-    private EffortService theEffortService = null;
+    private EffortService theEffortService;
+    private boolean myGenerateResult;
+    private boolean myVerifyResult;
+    private List myProof;
+    private long duration;
 
     public MockEffortService() {
 	super();
 	theEffortService = this;
+	myGenerateResult = false;
+	myVerifyResult = false;
+	myProof = ListUtil.list();
+	duration = 500;
     }
 
+    public MockEffortService(boolean res, boolean ver, List l, long dur) {
+	super();
+	theEffortService = this;
+	myGenerateResult = res;
+	myVerifyResult = ver;
+	myProof = l;
+	duration = dur;
+    }
+
+    public void setGenerateResult(boolean res) {
+	myGenerateResult = res;
+    }
+    public void setVerifyResult(boolean res) {
+	myVerifyResult = res;
+    }
+    public void setProof(List l) {
+	myProof = l;
+    }
   /**
    * Ask for the effort proof specified by the <code>EffortService.Proof</code>
    * object to be generated so that it can later be retrieved from the
@@ -83,7 +109,7 @@ public class MockEffortService extends BaseLockssDaemonManager
 		  cb.generationFinished(ep, (Serializable)tqCookie, null);
 	      }
 	  };
-	  TimerQueue.schedule(Deadline.in(500), tqcb, cookie);
+	  TimerQueue.schedule(Deadline.in(duration), tqcb, cookie);
 	  log.debug("Callback in 500 scheduled for " + ((String) cookie));
       return true;
   }
@@ -125,7 +151,7 @@ public class MockEffortService extends BaseLockssDaemonManager
 		  cb.generationFinished(vote, (Serializable)tqCookie, null);
 	      }
 	  };
-	  TimerQueue.schedule(Deadline.in(500), tqcb, cookie);
+	  TimerQueue.schedule(Deadline.in(duration), tqcb, cookie);
 	  log.debug("Callback in 500 scheduled for " + ((String) cookie));
       return true;
   }
@@ -175,6 +201,17 @@ public class MockEffortService extends BaseLockssDaemonManager
 	  return theEffortService;
       }
 
+      protected boolean generate() {
+	  return myGenerateResult;
+      }
+
+      protected boolean verify() {
+	  return myVerifyResult;
+      }
+
+      public List getProof() {
+	  return myProof;
+      }
   }
 
   /**

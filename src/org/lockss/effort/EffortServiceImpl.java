@@ -1,5 +1,5 @@
 /*
- * $Id: EffortServiceImpl.java,v 1.1.2.1 2004-10-01 20:21:27 dshr Exp $
+ * $Id: EffortServiceImpl.java,v 1.1.2.2 2004-10-03 20:40:51 dshr Exp $
  */
 
 /*
@@ -154,6 +154,17 @@ public class EffortServiceImpl extends BaseLockssDaemonManager
 	  return theEffortService;
       }
 
+      protected boolean generate() {
+	  return false;
+      }
+
+      protected boolean verify() {
+	  return false;
+      }
+
+      public List getProof() {
+	  return ListUtil.list();
+      }
   }
 
   /**

@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poll.java,v 1.1.2.4 2004-10-01 19:50:53 dshr Exp $
+ * $Id: TestV3Poll.java,v 1.1.2.5 2004-10-03 20:40:52 dshr Exp $
  */
 
 /*
@@ -110,22 +110,62 @@ public class TestV3Poll extends LockssTestCase {
     // Tests
 
     public void testInitialVoterState() {
+	assertTrue(testV3polls[0] instanceof V3Voter);
 	assertEquals("Poll " + testV3polls[0] + " should be in Initializing",
 		     V3Voter.STATE_INITIALIZING,
 		     testV3polls[0].getPollState());
     }
 
-    public void testVoterStateTransitions() {
-	//  Check starting conditions
-	String key = testV3polls[0].getKey();
-	assertEquals("Poll " + testV3polls[0] + " should be in Initializing",
+    public void testVoterDuration() {
+	V3Voter poll = (V3Voter) testV3polls[0];
+	long duration = testV3msg[0].getDuration();
+	final int numSteps = 10;
+	long step = (duration - 1) / numSteps;
+	String key = poll.getKey();
+	assertTrue(step > 1);
+	assertEquals("Poll " + poll + " should be in Initializing",
 		     V3Voter.STATE_INITIALIZING,
-		     testV3polls[0].getPollState());
-	assertTrue("Poll " + testV3polls[0] + " should be active",
+		     poll.getPollState());
+	for (int i = 0; i < numSteps; i++) {
+	    assertTrue("Poll " + poll + " should be active",
+		       pollmanager.isPollActive(key));
+	    assertFalse("Poll " + poll + " should not be closed",
+			pollmanager.isPollClosed(key));
+	    assertFalse("Poll " + poll + " should not be suspended",
+			pollmanager.isPollSuspended(key));
+	    TimeBase.step(step);
+	}
+	assertTrue("Poll " + poll + " should be active",
 		   pollmanager.isPollActive(key));
-	assertFalse("Poll " + testV3polls[0] + " should not be closed",
+	assertFalse("Poll " + poll + " should not be closed",
+		    pollmanager.isPollClosed(key));
+	assertFalse("Poll " + poll + " should not be suspended",
+		    pollmanager.isPollSuspended(key));
+	TimeBase.step(step);
+	assertFalse("Poll " + poll + " should not be active",
+		   pollmanager.isPollActive(key));
+	assertTrue("Poll " + poll + " should be closed",
+		    pollmanager.isPollClosed(key));
+	assertFalse("Poll " + poll + " should not be suspended",
+		    pollmanager.isPollSuspended(key));
+	PollTally tally = poll.getVoteTally();
+	assertNotNull(tally);
+	List votes = tally.getPollVotes();
+	assertTrue(votes.isEmpty());
+    }
+
+    public void testNormalVoterStateTransitions() {
+	//  Check starting conditions
+	V3Voter poll = (V3Voter)testV3polls[0];
+	String key = poll.getKey();
+	assertEquals("Poll " + poll + " should be in Initializing",
+		     V3Voter.STATE_INITIALIZING,
+		     poll.getPollState());
+	assertTrue("Poll " + poll + " should be active",
+		   pollmanager.isPollActive(key));
+	assertFalse("Poll " + poll + " should not be closed",
 		   pollmanager.isPollClosed(key));
-	assertFalse("Poll " + testV3polls[0] + " should not be suspended",
+	assertFalse("Poll " + poll + " should not be suspended",
 		   pollmanager.isPollSuspended(key));
 	TimeBase.step(1000);
 	//  Receive a Poll message, go to SendingPollAck
@@ -134,24 +174,24 @@ public class TestV3Poll extends LockssTestCase {
 	} catch (IOException ex) {
 	    fail("Message " + testV3msg[0].toString() + " threw " + ex);
 	}
-	assertEquals("Poll " + testV3polls[0] + " should be in SendingPollAck",
+	assertEquals("Poll " + poll + " should be in SendingPollAck",
 		     V3Voter.STATE_SENDING_POLL_ACK,
-		     testV3polls[0].getPollState());
-	assertTrue("Poll " + testV3polls[0] + " should be active",
+		     poll.getPollState());
+	assertTrue("Poll " + poll + " should be active",
 		   pollmanager.isPollActive(key));
-	assertFalse("Poll " + testV3polls[0] + " should not be closed",
+	assertFalse("Poll " + poll + " should not be closed",
 		   pollmanager.isPollClosed(key));
-	assertFalse("Poll " + testV3polls[0] + " should not be suspended",
+	assertFalse("Poll " + poll + " should not be suspended",
 		   pollmanager.isPollSuspended(key));
 	TimeBase.step(1000);
-	assertEquals("Poll " + testV3polls[0] + " should be in WaitingPollProof",
+	assertEquals("Poll " + poll + " should be in WaitingPollProof",
 		     V3Voter.STATE_WAITING_POLL_PROOF,
-		     testV3polls[0].getPollState());
-	assertTrue("Poll " + testV3polls[0] + " should be active",
+		     poll.getPollState());
+	assertTrue("Poll " + poll + " should be active",
 		   pollmanager.isPollActive(key));
-	assertFalse("Poll " + testV3polls[0] + " should not be closed",
+	assertFalse("Poll " + poll + " should not be closed",
 		   pollmanager.isPollClosed(key));
-	assertFalse("Poll " + testV3polls[0] + " should not be suspended",
+	assertFalse("Poll " + poll + " should not be suspended",
 		   pollmanager.isPollSuspended(key));
 	//  Receive a PollProof message, go to SendingVote
 	try {
@@ -159,26 +199,279 @@ public class TestV3Poll extends LockssTestCase {
 	} catch (IOException ex) {
 	    fail("Message " + testV3msg[2].toString() + " threw " + ex);
 	}
-	assertEquals("Poll " + testV3polls[0] + " should be in SendingVote",
+	assertEquals("Poll " + poll + " should be in SendingVote",
 		     V3Voter.STATE_SENDING_VOTE,
-		     testV3polls[0].getPollState());
-	assertTrue("Poll " + testV3polls[0] + " should be active",
+		     poll.getPollState());
+	assertTrue("Poll " + poll + " should be active",
 		   pollmanager.isPollActive(key));
-	assertFalse("Poll " + testV3polls[0] + " should not be closed",
+	assertFalse("Poll " + poll + " should not be closed",
 		   pollmanager.isPollClosed(key));
-	assertFalse("Poll " + testV3polls[0] + " should not be suspended",
+	assertFalse("Poll " + poll + " should not be suspended",
 		   pollmanager.isPollSuspended(key));
 	TimeBase.step(1000);
-	assertEquals("Poll " + testV3polls[0] + " should be in WaitingRepairReq",
+	assertEquals("Poll " + poll + " should be in WaitingRepairReq",
 		     V3Voter.STATE_WAITING_REPAIR_REQ,
-		     testV3polls[0].getPollState());
-	assertTrue("Poll " + testV3polls[0] + " should be active",
+		     poll.getPollState());
+	assertTrue("Poll " + poll + " should be active",
 		   pollmanager.isPollActive(key));
-	assertFalse("Poll " + testV3polls[0] + " should not be closed",
+	assertFalse("Poll " + poll + " should not be closed",
 		   pollmanager.isPollClosed(key));
-	assertFalse("Poll " + testV3polls[0] + " should not be suspended",
+	assertFalse("Poll " + poll + " should not be suspended",
+		   pollmanager.isPollSuspended(key));
+	//  Receive a RepairReq message, go to SendingRepair
+	try {
+	    pollmanager.handleIncomingMessage(testV3msg[4]);
+	} catch (IOException ex) {
+	    fail("Message " + testV3msg[4].toString() + " threw " + ex);
+	}
+	assertEquals("Poll " + poll + " should be in SendingRepair",
+		     V3Voter.STATE_SENDING_REPAIR,
+		     poll.getPollState());
+	assertTrue("Poll " + poll + " should be active",
+		   pollmanager.isPollActive(key));
+	assertFalse("Poll " + poll + " should not be closed",
+		   pollmanager.isPollClosed(key));
+	assertFalse("Poll " + poll + " should not be suspended",
+		   pollmanager.isPollSuspended(key));
+	// And after a while go back to WaitingRepairReq
+	TimeBase.step(1000);
+	assertEquals("Poll " + poll + " should be in WaitingRepairReq",
+		     V3Voter.STATE_WAITING_REPAIR_REQ,
+		     poll.getPollState());
+	assertTrue("Poll " + poll + " should be active",
+		   pollmanager.isPollActive(key));
+	assertFalse("Poll " + poll + " should not be closed",
+		   pollmanager.isPollClosed(key));
+	assertFalse("Poll " + poll + " should not be suspended",
+		   pollmanager.isPollSuspended(key));
+	//  Receive an EvaluationReceipt, go to ProcessReceipt
+	try {
+	    pollmanager.handleIncomingMessage(testV3msg[6]);
+	} catch (IOException ex) {
+	    fail("Message " + testV3msg[6].toString() + " threw " + ex);
+	}
+	assertEquals("Poll " + poll + " should be in ProcessReceipt",
+		     V3Voter.STATE_PROCESS_RECEIPT,
+		     poll.getPollState());
+	assertTrue("Poll " + poll + " should be active",
+		   pollmanager.isPollActive(key));
+	assertFalse("Poll " + poll + " should not be closed",
+		   pollmanager.isPollClosed(key));
+	assertFalse("Poll " + poll + " should not be suspended",
+		   pollmanager.isPollSuspended(key));
+	// And after a while go to Finalizing
+	TimeBase.step(1000);
+	assertEquals("Poll " + poll + " should be in Finalizing",
+		     V3Voter.STATE_FINALIZING,
+		     poll.getPollState());
+	assertFalse("Poll " + poll + " should not be active",
+		   pollmanager.isPollActive(key));
+	assertTrue("Poll " + poll + " should be closed",
+		   pollmanager.isPollClosed(key));
+	assertFalse("Poll " + poll + " should not be suspended",
 		   pollmanager.isPollSuspended(key));
     }
+
+    public void testVoterBadMessageOrderOne() {
+	//  Check starting conditions
+	V3Voter poll = (V3Voter)testV3polls[0];
+	String key = testV3polls[0].getKey();
+	assertEquals("Poll " + poll + " should be in Initializing",
+		     V3Voter.STATE_INITIALIZING,
+		     poll.getPollState());
+	assertTrue("Poll " + poll + " should be active",
+		   pollmanager.isPollActive(key));
+	assertFalse("Poll " + poll + " should not be closed",
+		   pollmanager.isPollClosed(key));
+	assertFalse("Poll " + poll + " should not be suspended",
+		   pollmanager.isPollSuspended(key));
+	TimeBase.step(1000);
+	//  Receive a PollProof message, go to Error
+	try {
+	    pollmanager.handleIncomingMessage(testV3msg[2]);
+	} catch (IOException ex) {
+	    fail("Message " + testV3msg[2].toString() + " threw " + ex);
+	}
+	assertEquals("Poll " + poll + " should be in Finalizing",
+		     V3Voter.STATE_FINALIZING,
+		     poll.getPollState());
+	assertTrue("Poll " + poll + " should be in error",
+		   poll.isErrorState());
+	assertFalse("Poll " + poll + " should not be active",
+		   pollmanager.isPollActive(key));
+	assertTrue("Poll " + poll + " should be closed",
+		   pollmanager.isPollClosed(key));
+	assertFalse("Poll " + poll + " should not be suspended",
+		   pollmanager.isPollSuspended(key));
+    }
+
+    public void testVoterBadMessageOrderTwo() {
+	//  Check starting conditions
+	V3Voter poll = (V3Voter) testV3polls[0];
+	String key = testV3polls[0].getKey();
+	assertEquals("Poll " + poll + " should be in Initializing",
+		     V3Voter.STATE_INITIALIZING,
+		     poll.getPollState());
+	assertTrue("Poll " + poll + " should be active",
+		   pollmanager.isPollActive(key));
+	assertFalse("Poll " + poll + " should not be closed",
+		   pollmanager.isPollClosed(key));
+	assertFalse("Poll " + poll + " should not be suspended",
+		   pollmanager.isPollSuspended(key));
+	TimeBase.step(1000);
+	//  Receive a Poll message, go to SendingPollAck
+	try {
+	    pollmanager.handleIncomingMessage(testV3msg[0]);
+	} catch (IOException ex) {
+	    fail("Message " + testV3msg[0].toString() + " threw " + ex);
+	}
+	assertEquals("Poll " + poll + " should be in SendingPollAck",
+		     V3Voter.STATE_SENDING_POLL_ACK,
+		     poll.getPollState());
+	assertTrue("Poll " + poll + " should be active",
+		   pollmanager.isPollActive(key));
+	assertFalse("Poll " + poll + " should not be closed",
+		   pollmanager.isPollClosed(key));
+	assertFalse("Poll " + poll + " should not be suspended",
+		   pollmanager.isPollSuspended(key));
+	TimeBase.step(1000);
+	assertEquals("Poll " + poll + " should be in WaitingPollProof",
+		     V3Voter.STATE_WAITING_POLL_PROOF,
+		     poll.getPollState());
+	assertTrue("Poll " + poll + " should be active",
+		   pollmanager.isPollActive(key));
+	assertFalse("Poll " + poll + " should not be closed",
+		   pollmanager.isPollClosed(key));
+	assertFalse("Poll " + poll + " should not be suspended",
+		   pollmanager.isPollSuspended(key));
+	//  Receive a RepairReq message, go to Error
+	try {
+	    pollmanager.handleIncomingMessage(testV3msg[4]);
+	} catch (IOException ex) {
+	    fail("Message " + testV3msg[4].toString() + " threw " + ex);
+	}
+	assertEquals("Poll " + poll + " should be in Finalizing",
+		     V3Voter.STATE_FINALIZING,
+		     poll.getPollState());
+	assertTrue("Poll " + poll + " should be in error",
+		   poll.isErrorState());
+	assertFalse("Poll " + poll + " should not be active",
+		   pollmanager.isPollActive(key));
+	assertTrue("Poll " + poll + " should be closed",
+		   pollmanager.isPollClosed(key));
+	assertFalse("Poll " + poll + " should not be suspended",
+		   pollmanager.isPollSuspended(key));
+    }
+
+    public void testVoterBadMessageOrderThree() {
+	//  Check starting conditions
+	V3Voter poll = (V3Voter)testV3polls[0];
+	String key = testV3polls[0].getKey();
+	assertEquals("Poll " + poll + " should be in Initializing",
+		     V3Voter.STATE_INITIALIZING,
+		     poll.getPollState());
+	assertTrue("Poll " + poll + " should be active",
+		   pollmanager.isPollActive(key));
+	assertFalse("Poll " + poll + " should not be closed",
+		   pollmanager.isPollClosed(key));
+	assertFalse("Poll " + poll + " should not be suspended",
+		   pollmanager.isPollSuspended(key));
+	TimeBase.step(1000);
+	//  Receive a Poll message, go to SendingPollAck
+	try {
+	    pollmanager.handleIncomingMessage(testV3msg[0]);
+	} catch (IOException ex) {
+	    fail("Message " + testV3msg[0].toString() + " threw " + ex);
+	}
+	assertEquals("Poll " + poll + " should be in SendingPollAck",
+		     V3Voter.STATE_SENDING_POLL_ACK,
+		     poll.getPollState());
+	assertTrue("Poll " + poll + " should be active",
+		   pollmanager.isPollActive(key));
+	assertFalse("Poll " + poll + " should not be closed",
+		   pollmanager.isPollClosed(key));
+	assertFalse("Poll " + poll + " should not be suspended",
+		   pollmanager.isPollSuspended(key));
+	TimeBase.step(1000);
+	assertEquals("Poll " + poll + " should be in WaitingPollProof",
+		     V3Voter.STATE_WAITING_POLL_PROOF,
+		     poll.getPollState());
+	assertTrue("Poll " + poll + " should be active",
+		   pollmanager.isPollActive(key));
+	assertFalse("Poll " + poll + " should not be closed",
+		   pollmanager.isPollClosed(key));
+	assertFalse("Poll " + poll + " should not be suspended",
+		   pollmanager.isPollSuspended(key));
+	//  Receive a PollProof message, go to SendingVote
+	try {
+	    pollmanager.handleIncomingMessage(testV3msg[2]);
+	} catch (IOException ex) {
+	    fail("Message " + testV3msg[2].toString() + " threw " + ex);
+	}
+	assertEquals("Poll " + poll + " should be in SendingVote",
+		     V3Voter.STATE_SENDING_VOTE,
+		     poll.getPollState());
+	assertTrue("Poll " + poll + " should be active",
+		   pollmanager.isPollActive(key));
+	assertFalse("Poll " + poll + " should not be closed",
+		   pollmanager.isPollClosed(key));
+	assertFalse("Poll " + poll + " should not be suspended",
+		   pollmanager.isPollSuspended(key));
+	TimeBase.step(1000);
+	assertEquals("Poll " + poll + " should be in WaitingRepairReq",
+		     V3Voter.STATE_WAITING_REPAIR_REQ,
+		     poll.getPollState());
+	assertTrue("Poll " + poll + " should be active",
+		   pollmanager.isPollActive(key));
+	assertFalse("Poll " + poll + " should not be closed",
+		   pollmanager.isPollClosed(key));
+	assertFalse("Poll " + poll + " should not be suspended",
+		   pollmanager.isPollSuspended(key));
+	//  Receive a RepairReq message, go to SendingRepair
+	try {
+	    pollmanager.handleIncomingMessage(testV3msg[4]);
+	} catch (IOException ex) {
+	    fail("Message " + testV3msg[4].toString() + " threw " + ex);
+	}
+	assertEquals("Poll " + poll + " should be in SendingRepair",
+		     V3Voter.STATE_SENDING_REPAIR,
+		     poll.getPollState());
+	assertTrue("Poll " + poll + " should be active",
+		   pollmanager.isPollActive(key));
+	assertFalse("Poll " + poll + " should not be closed",
+		   pollmanager.isPollClosed(key));
+	assertFalse("Poll " + poll + " should not be suspended",
+		   pollmanager.isPollSuspended(key));
+	// And after a while go back to WaitingRepairReq
+	TimeBase.step(1000);
+	assertEquals("Poll " + poll + " should be in WaitingRepairReq",
+		     V3Voter.STATE_WAITING_REPAIR_REQ,
+		     poll.getPollState());
+	assertTrue("Poll " + poll + " should be active",
+		   pollmanager.isPollActive(key));
+	assertFalse("Poll " + poll + " should not be closed",
+		   pollmanager.isPollClosed(key));
+	assertFalse("Poll " + poll + " should not be suspended",
+		   pollmanager.isPollSuspended(key));
+	//  Receive a Poll message, go to Error
+	try {
+	    pollmanager.handleIncomingMessage(testV3msg[0]);
+	} catch (IOException ex) {
+	    fail("Message " + testV3msg[0].toString() + " threw " + ex);
+	}
+	assertEquals("Poll " + poll + " should be in Finalizing",
+		     V3Voter.STATE_FINALIZING,
+		     poll.getPollState());
+	assertTrue("Poll " + poll + " should be in error",
+		   poll.isErrorState());
+	assertFalse("Poll " + poll + " should not be active",
+		   pollmanager.isPollActive(key));
+	assertTrue("Poll " + poll + " should be closed",
+		   pollmanager.isPollClosed(key));
+	assertFalse("Poll " + poll + " should not be suspended",
+		   pollmanager.isPollSuspended(key));
+    }
+
 
     //  Support methods
 

@@ -1,5 +1,5 @@
 /*
-* $Id: V3Voter.java,v 1.1.2.5 2004-10-01 19:50:53 dshr Exp $
+* $Id: V3Voter.java,v 1.1.2.6 2004-10-03 20:40:51 dshr Exp $
  */
 
 /*
@@ -131,6 +131,8 @@ public class V3Voter extends V3Poll {
     case STATE_FINALIZING:
       log.debug("Unexpected message " + msg.toString() + " in state " +
 		stateName[m_state]);
+      m_pollstate = ERR_IO; // XXX choose better
+      stopPoll();
       break;
     case STATE_INITIALIZING:
       doPollMessage(v3msg);
@@ -151,15 +153,12 @@ public class V3Voter extends V3Poll {
    * start the poll.
    */
   void startPoll() {
-    if (m_pollstate != PS_INITING)
-      return;
-    // XXX
-    if (false) {
-      m_pollstate = ERR_SCHEDULE_HASH;
-      log.debug("couldn't schedule our hash:" + m_deadline + ", stopping poll.");
+      if (m_pollstate != PS_INITING) {
+      m_pollstate = ERR_IO; // XXX choose better
       stopPoll();
       return;
-    }
+      }
+    // XXX
     log.debug3("scheduling poll to complete by " + m_deadline);
     TimerQueue.schedule(m_deadline, new PollTimerCallback(), this);
     m_pollstate = PS_WAIT_HASH;
@@ -188,7 +187,9 @@ public class V3Voter extends V3Poll {
   private void doPollMessage(V3LcapMessage msg) {
     if (msg.getOpcode() != V3LcapMessage.MSG_POLL) {
       log.warning("Expecting a Poll but got: " + msg.toString());
-      //  XXX should abort poll?
+      m_pollstate = ERR_IO; // XXX choose better
+      m_state = STATE_FINALIZING;
+      stopPoll();
       return;
     }
     EffortService.ProofCallback cb = new PollAckEffortCallback(m_pollmanager);
@@ -219,7 +220,9 @@ public class V3Voter extends V3Poll {
   private void doPollProofMessage(V3LcapMessage msg) {
     if (msg.getOpcode() != V3LcapMessage.MSG_POLL_PROOF) {
       log.warning("Expecting a PollProof but got: " + msg.toString());
-      //  XXX should abort poll?
+      m_pollstate = ERR_IO; // XXX choose better
+      m_state = STATE_FINALIZING;
+      stopPoll();
       return;
     }
     EffortService.VoteCallback cb = new VoteGenerationCallback(m_pollmanager);
@@ -250,8 +253,10 @@ public class V3Voter extends V3Poll {
   private void doRepairReqMessage(V3LcapMessage msg) {
     switch (msg.getOpcode()) {
     default:
-      log.warning("Expecting a Poll but got: " + msg.toString());
-      //  XXX should abort poll?
+      log.warning("Expecting a RepairReq but got: " + msg.toString());
+      m_pollstate = ERR_IO; // XXX choose better
+      m_state = STATE_FINALIZING;
+      stopPoll();
       return;
     case V3LcapMessage.MSG_EVALUATION_RECEIPT:
       doReceiptMessage(msg);
@@ -259,6 +264,8 @@ public class V3Voter extends V3Poll {
     case V3LcapMessage.MSG_REPAIR_REQ:
       break;
     }
+    long delay = 500; // XXX
+    TimerQueue.schedule(Deadline.in(delay), new RepairTimerCallback(), this);
     // XXX actually supply repair
     m_state = STATE_SENDING_REPAIR;
   }
@@ -266,9 +273,13 @@ public class V3Voter extends V3Poll {
   private void doReceiptMessage(V3LcapMessage msg) {
     if (msg.getOpcode() != V3LcapMessage.MSG_EVALUATION_RECEIPT) {
       log.warning("Expecting an EvaluationReceipt but got: " + msg.toString());
-      //  XXX should abort poll?
+      m_pollstate = ERR_IO; // XXX choose better
+      m_state = STATE_FINALIZING;
+      stopPoll();
       return;
     }
+    long delay = 500; // XXX
+    TimerQueue.schedule(Deadline.in(delay), new ReceiptTimerCallback(), this);
     // XXX do an EvaluationReceipt?
     m_state = STATE_PROCESS_RECEIPT;
   }
@@ -282,7 +293,6 @@ public class V3Voter extends V3Poll {
    * @return a String
    */
   public String toString() {
-    // XXX should report state of poll here
     String pollType = "V3";
     StringBuffer sb = new StringBuffer("[Voter: ");
     sb.append(pollType);
@@ -340,27 +350,39 @@ public class V3Voter extends V3Poll {
 				   Exception e) {
       // XXX
 	log.debug("VoteGenerationCallback: " + ((String) cookie));
-	V3Voter p = (V3Voter) pollMgr.getPoll((String) cookie);
-	p.m_state = STATE_WAITING_REPAIR_REQ;
+	if (true) {
+	    m_state = STATE_WAITING_REPAIR_REQ;
+	} else {
+	    V3Voter p = (V3Voter) pollMgr.getPoll((String) cookie);
+	    p.m_state = STATE_WAITING_REPAIR_REQ;
+	}
     }
 
   }
 
-  class VoteTimerCallback implements TimerQueue.Callback {
-    /**
-     * Called when the timer expires.
-     * @param cookie  data supplied by caller to schedule()
-     */
-    public void timerExpired(Object cookie) {
-      log.debug3("VoteTimerCallback called, checking if I should vote");
-      if(m_pollstate == PS_WAIT_VOTE) {
-        log.debug3("I should vote");
-        // voteInPoll();
-        log.debug("I just voted");
-      }
+    class RepairTimerCallback implements TimerQueue.Callback {
+	public void timerExpired(Object cookie) {
+	    if (m_state == STATE_SENDING_REPAIR) {
+		m_state = STATE_WAITING_REPAIR_REQ;
+	    } else {
+		log.error("Bad state in callback " + m_state);
+	    }
+	}
     }
-  }
 
+    class ReceiptTimerCallback implements TimerQueue.Callback {
+	public void timerExpired(Object cookie) {
+	    if (m_state == STATE_PROCESS_RECEIPT) {
+		m_state = STATE_FINALIZING;
+		if(m_pollstate != PS_COMPLETE) {
+		   stopPoll();
+		}
+		
+	    } else {
+		log.error("Bad state in callback " + m_state);
+	    }
+	}
+    }
 
   class PollTimerCallback implements TimerQueue.Callback {
     /**

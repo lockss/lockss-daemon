@@ -1,5 +1,5 @@
 /*
- * $Id: EffortService.java,v 1.1.2.3 2004-10-01 19:50:53 dshr Exp $
+ * $Id: EffortService.java,v 1.1.2.4 2004-10-03 20:40:51 dshr Exp $
  */
 
 /*
@@ -151,6 +151,7 @@ public interface EffortService extends LockssManager {
      */
     public EffortService getEffortService();
 
+      public List getProof();
   }
 
   /**
