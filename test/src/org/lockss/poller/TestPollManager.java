@@ -256,12 +256,28 @@ public class TestPollManager extends TestCase {
   }
 
 
-  /** test for method rememberVote(..) */
-  public void testRememberVote() {
-  }
-
   /** test for method closeThePoll(..) */
   public void testCloseThePoll() {
+    try {
+      Poll p1 = PollManager.makePoll(testmsg[0]);
+      // we should now be open
+      assertTrue(!PollManager.isPollClosed(p1.m_challenge));
+
+      // we should now be closed
+      PollManager.closeThePoll(p1.m_key);
+      assertTrue(PollManager.isPollClosed(p1.m_challenge));
+      // we should reject an attempt to handle a packet with this key
+      try {
+        PollManager.handleMessage(testmsg[0]);
+        fail("packet on recent poll s/b rejected");
+      }
+      catch (IOException ex) {
+        // this is ok.
+      }
+    }
+    catch (IOException ex) {
+      fail("unable to make content poll");
+    }
   }
 
   /** test for method getHasher(..) */

@@ -147,7 +147,7 @@ public class TestPoll extends TestCase {
   /** test for method vote(..) */
   public void testVote() {
     Poll p = testpolls[1];
-    //p.vote();
+    p.vote();
   }
 
   /** test for method startPoll(..) */
@@ -163,10 +163,10 @@ public class TestPoll extends TestCase {
     p.m_agreeWt = 2000;
     p.m_disagreeWt = 200;
 
-    //p.voteInPoll();
+    p.voteInPoll();
 
     p.m_agree = 20;
-    //p.voteInPoll();
+    p.voteInPoll();
 
   }
 
@@ -186,7 +186,6 @@ public class TestPoll extends TestCase {
     p.m_counting = 3;
     p.startVote();
     assertEquals(4, p.m_counting);
-
   }
 
   /** test for method stopVote(..) */

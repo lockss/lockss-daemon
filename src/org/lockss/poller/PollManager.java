@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.8 2002-11-23 01:46:12 troberts Exp $
+* $Id: PollManager.java,v 1.9 2002-11-23 05:49:00 claire Exp $
  */
 
 /*
@@ -49,10 +49,12 @@ import gnu.regexp.*;
 public class PollManager {
 
   static final String HASH_ALGORITHM = "SHA-1";
+  static final long EXPIRATION_TIME = 24 * 60 * 60 * 1000; // 1 day
+  static final long VERIFIER_EXPIRATION_TIME = 24 * 60 * 60 * 1000;
 
-  private static Logger theLog=
-    Logger.getLogger("PollManager");
+  private static Logger theLog=Logger.getLogger("PollManager");
   private static HashMap thePolls = new HashMap();
+  private static HashMap theRecentPolls = new HashMap();
   private static HashMap theVerifiers = new HashMap();
   private static Random theRandom = new Random();
 
@@ -93,17 +95,17 @@ public class PollManager {
     switch(msg.getOpcode()) {
       case LcapMessage.CONTENT_POLL_REP:
       case LcapMessage.CONTENT_POLL_REQ:
-	theLog.debug("Making a content poll on "+cus);
+        theLog.debug("Making a content poll on "+cus);
         ret_poll = new ContentPoll(msg, cus);
         break;
       case LcapMessage.NAME_POLL_REP:
       case LcapMessage.NAME_POLL_REQ:
-	theLog.debug("Making a name poll on "+cus);
+        theLog.debug("Making a name poll on "+cus);
         ret_poll = new NamePoll(msg, cus);
         break;
       case LcapMessage.VERIFY_POLL_REP:
       case LcapMessage.VERIFY_POLL_REQ:
-	theLog.debug("Making a verify poll on "+cus);
+        theLog.debug("Making a verify poll on "+cus);
         ret_poll = new VerifyPoll(msg, cus);
         break;
       default:
@@ -130,18 +132,18 @@ public class PollManager {
    * @throws IOException thrown if Message construction fails.
    */
   public static void makePollRequest(String url,
-				     String regexp,
-				     int opcode,
-				     int timeToLive,
-				     InetAddress grpAddr,
-				     long duration,
-				     long voteRange)
+                                     String regexp,
+                                     int opcode,
+                                     int timeToLive,
+                                     InetAddress grpAddr,
+                                     long duration,
+                                     long voteRange)
       throws IOException {
     if (voteRange > (duration/4)) {
       voteRange = duration/4;
     }
     Deadline deadline = Deadline.inRandomRange(duration - voteRange,
-					       duration + voteRange);
+        duration + voteRange);
     long timeUntilCount = deadline.getRemainingTime();
     byte[] challenge = makeVerifier();
     byte[] verifier = makeVerifier();
@@ -150,7 +152,7 @@ public class PollManager {
         challenge,verifier,opcode,timeUntilCount,
         LcapIdentity.getLocalIdentity());
 
-    theLog.debug("send" +  msg.toString());
+    theLog.debug("send: " +  msg.toString());
     LcapComm.sendMessage(msg, Plugin.findArchivalUnit(url));
   }
 
@@ -186,7 +188,12 @@ public class PollManager {
    * @throws IOException thrown if the poll was unsucessfully created
    */
   public static void handleMessage(LcapMessage msg) throws IOException {
-    theLog.info("Got a message: "+msg);
+    theLog.info("Got a message: " + msg);
+    if(isPollClosed(msg.getChallenge())) {
+      theLog.info("Message received after poll was closed." + msg.toString());
+      // XXX - what to do here - not really an exception
+      throw new ProtocolException("Poll is closed:" + msg.toString());
+    }
     Poll p = findPoll(msg);
     if (p == null) {
       theLog.error("Unable to create poll for Message: " + msg.toString());
@@ -304,14 +311,33 @@ public class PollManager {
     return url_set;
   }
 
+  /**
+   * is this a poll that has been recently closed
+   * @param challenge the challenge identifying the poll
+   * @return true
+   */
+  static boolean isPollClosed(byte[] challenge) {
+    String key = makeKey(challenge);
+    synchronized(theRecentPolls) {
+      return (theRecentPolls.containsKey(key));
+    }
+  }
 
   /**
    * close the poll from any further voting
-   * @param urlSet the url set on whcih we've been working
-   * @param challenge the poll signature
+   * @param key the poll signature
    */
-  static void closeThePoll(CachedUrlSet urlSet, byte[] challenge)  {
-    // XXX implement this
+  static void closeThePoll(String key)  {
+    // remove the poll from the active poll table
+    synchronized(thePolls) {
+      thePolls.remove(key);
+    }
+    // add the key to the recent polls table with an expiration time
+    long expiration = TimeBase.nowMs() + EXPIRATION_TIME;
+    Deadline d = Deadline.in(expiration);
+    TimerQueue.schedule(d, new ExpireRecentCallback(), key);
+    theRecentPolls.put(key, new Long(expiration));
+
   }
 
   static MessageDigest getHasher() {
@@ -334,6 +360,7 @@ public class PollManager {
   static String makeKey(byte[] keyBytes) {
     return String.valueOf(B64Code.encode(keyBytes));
   }
+
 
   /**
    * make a verifier by generating a secret and hashing it. Then store the
@@ -366,6 +393,7 @@ public class PollManager {
     return null;
   }
 
+
   /**
    * generate a random array of 20 bytes
    * @return the array of bytes
@@ -375,6 +403,7 @@ public class PollManager {
     theRandom.nextBytes(secret);
     return secret;
   }
+
 
   /**
    * generate a verifier from a array of bytes representing a secret
@@ -390,12 +419,40 @@ public class PollManager {
     return verifier;
   }
 
+
   static private void rememberVerifier(byte[] verifier,
                                        byte[] secret) {
     String ver = String.valueOf(B64Code.encode(verifier));
     String sec = secret == null ? "" : String.valueOf(B64Code.encode(secret));
+    long expiration = TimeBase.nowMs() + VERIFIER_EXPIRATION_TIME;
+    Deadline d = Deadline.in(expiration);
+    TimerQueue.schedule(d, new ExpireVerifierCallback(), ver);
     synchronized (theVerifiers) {
       theVerifiers.put(ver, sec);
+    }
+  }
+
+  static class ExpireRecentCallback implements TimerQueue.Callback {
+    /**
+     * Called when the timer expires.
+     * @param cookie  data supplied by caller to schedule()
+     */
+    public void timerExpired(Object cookie) {
+      synchronized(theRecentPolls) {
+        theRecentPolls.remove(cookie);
+      }
+    }
+  }
+
+  static class ExpireVerifierCallback implements TimerQueue.Callback {
+    /**
+     * Called when the timer expires.
+     * @param cookie  data supplied by caller to schedule()
+     */
+    public void timerExpired(Object cookie) {
+      synchronized(theVerifiers) {
+        theVerifiers.remove(cookie);
+      }
     }
   }
 }

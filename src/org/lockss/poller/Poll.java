@@ -1,5 +1,5 @@
 /*
- * $Id: Poll.java,v 1.17 2002-11-23 01:41:37 troberts Exp $
+ * $Id: Poll.java,v 1.18 2002-11-23 05:49:00 claire Exp $
  */
 
 /*
@@ -52,10 +52,14 @@ import org.lockss.util.*;
  */
 
 public abstract class Poll {
-  static final int DEFAULT_QUORUM = 3;
+  static final int DEFAULT_QUORUM = 5;
   static final int DEFAULT_DURATION = 6*3600*1000;
-  static final int DEFAULT_VOTEDELAY = DEFAULT_DURATION/2;
-  static final int DEFAULT_VOTERANGE = DEFAULT_DURATION/4;
+
+  static final int ERR_SCHEDULE_HASH = -1;
+  static final int ERR_HASHING = -2;
+  static final int ERR_NO_QUORUM = -3;
+  static final int ERR_IO = -4;
+
   static final int PS_INITING = 0;
   static final int PS_WAIT_HASH = 1;
   static final int PS_WAIT_VOTE = 2;
@@ -65,8 +69,8 @@ public abstract class Poll {
   static Logger log=Logger.getLogger("Poll");
 
   LcapMessage m_msg;          // The message which triggered the poll
-  int m_quorum = 5;           // The caller's quorum value
-  int m_quorumWt = 500;         // The quorum weights
+  int m_quorum = DEFAULT_QUORUM;// The caller's quorum value
+  int m_quorumWt = 500;       // The quorum weights
   int m_agree = 0;            // The # of votes we've heard that agree with us
   int m_agreeWt = 0;          // the sum of the the agree weights
   int m_disagree = 0;         // The # of votes we've heard that disagree with us
@@ -136,7 +140,9 @@ public abstract class Poll {
     return sb.toString();
   }
 
+
   abstract void receiveMessage(LcapMessage msg);
+
 
   /**
    * schedule the hash for this poll.
@@ -154,19 +160,16 @@ public abstract class Poll {
    * only interested in how long we have remaining.
    */
   void scheduleVote() {
-    long time_remaining = m_deadline.getRemainingTime();
-    long vote_delay = time_remaining/2;
-    long vote_dev = time_remaining/4;
-
     m_voteTime = Deadline.atRandomBefore(m_deadline);
     log.debug("Waiting until at most "+m_deadline+" to vote");
     TimerQueue.schedule(m_voteTime, new VoteTimerCallback(), this);
     m_pollstate = PS_WAIT_VOTE;
   }
 
+
   /**
    * check the hash result obtained by the hasher with one stored in the
-   * originating method.
+   * originating message.
    * @param hashResult byte array containing the result of the hasher
    * @param msg the original Message.
    */
@@ -205,7 +208,7 @@ public abstract class Poll {
         VerifyPoll.randomRequestVerify(msg,(int)verify);
       }
       catch (IOException ex) {
-        log.debug("attempt to verify random failed.");
+        log.debug("attempt to randomly verify failed:", ex);
       }
     }
   }
@@ -237,7 +240,7 @@ public abstract class Poll {
         VerifyPoll.randomRequestVerify(msg, (int)verify);
       }
       catch (IOException ex) {
-        log.debug("attempt to verify random failed.");
+        log.debug("attempt to verify randomly failed.", ex);
       }
     }
   }
@@ -256,8 +259,7 @@ public abstract class Poll {
       yesWt = m_agreeWt;
       noWt = m_disagreeWt;
     }
-    PollManager.removePoll(m_key);
-    //NodeManager.rememberTally(m_arcUnit, this, yes, no, yesWt, noWt, m_replyOpcode);
+    //NodeManager.recordTally(m_arcUnit, this, yes, no, yesWt, noWt, m_replyOpcode);
   }
 
   /**
@@ -273,8 +275,9 @@ public abstract class Poll {
       log.debug("vote:" + msg.toString());
       LcapComm.sendMessage(msg,m_arcUnit);
     }
-    catch(IOException ioe) {
-
+    catch(IOException ex) {
+      //XXX how serious is this
+      log.info("unable to cast our vote.", ex);
     }
   }
 
@@ -287,12 +290,13 @@ public abstract class Poll {
       return;
     Deadline pt = Deadline.in(m_msg.getDuration());
     if(!scheduleHash( pt, m_msg, new PollHashCallback())) {
+      m_pollstate = ERR_SCHEDULE_HASH;
       stopPoll();
       return;
     }
-    m_pollstate = PS_WAIT_HASH;
     TimerQueue.schedule(m_deadline, new PollTimerCallback(), this);
-  }
+    m_pollstate = PS_WAIT_HASH;
+ }
 
   /**
    * cast our vote in the current poll
@@ -305,22 +309,32 @@ public abstract class Poll {
     m_pollstate = PS_WAIT_TALLY;
   }
 
+
   /**
-   * finish the poll once the deadline has expired
+   * is our poll currently in an error condition
+   * @return true if the poll state is an error value
+   */
+  boolean isErrorState() {
+    return m_pollstate < 0;
+  }
+
+  /**
+   * finish the poll once the deadline has expired. we update our poll record
+   * and prevent any more activity in this poll.
    */
   void stopPoll() {
-    // prevent any further activity on this poll by recording the challenge
-    // and dropping any further packets that match it.
-    m_pollstate = PS_COMPLETE;
-    PollManager.closeThePoll(m_urlSet, m_challenge);
+    boolean have_quorum = (m_agree + m_disagree) >= m_quorum;
+    m_pollstate = have_quorum ? PS_COMPLETE : ERR_NO_QUORUM;
 
-    // if we have a quorum, record the results
-    if((m_agree + m_disagree) >= m_quorum) {
+    if(isErrorState()) {
+      // notify node manager of failed poll
+      m_pollstate = PS_COMPLETE;
+    }
+    else if(m_pollstate == PS_WAIT_TALLY){
+      // notify the node manager of tally results
       tally();
     }
-    else { // we don't have a quorum
-      /// XXX we need to notify that we failed and why;
-    }
+    PollManager.closeThePoll(m_key);
   }
 
   /**
@@ -387,9 +401,11 @@ public abstract class Poll {
       if(hash_completed)  {
         m_hash  = hasher.digest();
 	log.debug("Hash on "+urlset+" complete: "+m_hash);
-	//        LcapMessage msg = (LcapMessage)cookie;
-	//        checkVote(m_hash, msg);
         scheduleVote();
+      }
+      else {
+        m_pollstate = ERR_HASHING;
+
       }
     }
   }
