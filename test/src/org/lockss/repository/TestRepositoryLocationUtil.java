@@ -1,5 +1,5 @@
 /*
- * $Id: TestFileLocationUtil.java,v 1.4 2003-02-26 21:34:52 tal Exp $
+ * $Id: TestRepositoryLocationUtil.java,v 1.1 2003-03-01 01:57:56 aalto Exp $
  */
 
 /*
@@ -30,7 +30,7 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.util;
+package org.lockss.repository;
 
 import java.net.MalformedURLException;
 import org.lockss.util.*;
@@ -42,28 +42,27 @@ import org.lockss.plugin.*;
  * This is the test class for org.lockss.daemon.LockssRepositoryImpl
  */
 
-public class TestFileLocationUtil extends LockssTestCase {
-  public TestFileLocationUtil(String msg) {
+public class TestRepositoryLocationUtil extends LockssTestCase {
+  public TestRepositoryLocationUtil(String msg) {
     super(msg);
   }
 
   public void testMapAuToFileLocation() {
     ArchivalUnit mau = new MockArchivalUnit();
-    // tk will have to change when AUId -> path uses some encoding
-    String expectedStr = "root/" + mau.getAUId() + "/";
+    String expectedStr = "root/" + mau.getPluginId() +"/"+ mau.getAUId() + "/";
     assertEquals(expectedStr,
-                 FileLocationUtil.mapAuToFileLocation("root", mau));
+                 RepositoryLocationUtil.mapAuToFileLocation("root", mau));
   }
 
   public void testMapUrlToFileLocation() throws MalformedURLException {
     String testStr = "http://www.example.com/branch1/branch2/index.html";
     String expectedStr = "root/www.example.com/http/branch1/branch2/index.html";
     assertEquals(expectedStr,
-                 FileLocationUtil.mapUrlToFileLocation("root", testStr));
+                 RepositoryLocationUtil.mapUrlToFileLocation("root", testStr));
 
     try {
       testStr = ":/brokenurl.com/branch1/index/";
-      FileLocationUtil.mapUrlToFileLocation("root", testStr);
+      RepositoryLocationUtil.mapUrlToFileLocation("root", testStr);
       fail("Should have thrown MalformedURLException");
     } catch (MalformedURLException mue) { }
   }
