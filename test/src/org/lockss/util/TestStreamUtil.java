@@ -1,5 +1,5 @@
 /*
- * $Id: TestStreamUtil.java,v 1.6 2003-07-18 00:37:14 tyronen Exp $
+ * $Id: TestStreamUtil.java,v 1.7 2003-07-28 23:36:10 troberts Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ public class TestStreamUtil extends LockssTestCase {
 
   public void testCopyNullInputStream() throws IOException {
     OutputStream baos = new ByteArrayOutputStream(11);
-    StreamUtil.copy(null, baos);
+    assertEquals(0, StreamUtil.copy(null, baos));
     String resultStr = baos.toString();
     baos.close();
     assertEquals("", baos.toString());
@@ -55,7 +55,7 @@ public class TestStreamUtil extends LockssTestCase {
 
   public void testCopyNullOutputStream() throws IOException {
     InputStream is = new StringInputStream("test string");
-    StreamUtil.copy(is, null);
+    assertEquals(0, StreamUtil.copy(is, null));
     is.close();
   }
 
@@ -69,9 +69,17 @@ public class TestStreamUtil extends LockssTestCase {
     assertTrue(resultStr.equals("test string"));
   }
 
+  public void testCopyInputStreamReturnsCount() throws IOException {
+    InputStream is = new StringInputStream("test string");
+    OutputStream baos = new ByteArrayOutputStream(11);
+    assertEquals(11, StreamUtil.copy(is, baos));
+    is.close();
+    baos.close();
+  }
+
   public void testCopyNullReader() throws IOException {
     Writer writer = new CharArrayWriter(11);
-    StreamUtil.copy(null, writer);
+    assertEquals(0, StreamUtil.copy(null, writer));
     String resultStr = writer.toString();
     writer.close();
     assertEquals("", writer.toString());
@@ -79,14 +87,14 @@ public class TestStreamUtil extends LockssTestCase {
 
   public void testCopyNullWriter() throws IOException {
     Reader reader = new StringReader("test string");
-    StreamUtil.copy(reader, null);
+    assertEquals(0, StreamUtil.copy(reader, null));
     reader.close();
   }
 
   public void testCopyReader() throws IOException {
     Reader reader = new StringReader("test string");
     Writer writer = new CharArrayWriter(11);
-    StreamUtil.copy(reader, writer);
+    assertEquals(11, StreamUtil.copy(reader, writer));
     reader.close();
     String resultStr = writer.toString();
     writer.close();

@@ -1,5 +1,5 @@
 /*
- * $Id: StreamUtil.java,v 1.7 2003-07-18 00:37:14 tyronen Exp $
+ * $Id: StreamUtil.java,v 1.8 2003-07-28 23:36:10 troberts Exp $
  */
 
 /*
@@ -50,18 +50,22 @@ public class StreamUtil {
    * It buffers the copying, and closes neither.
    * @param is input
    * @param os output
+   * @return number of bytes copied
    * @throws IOException
    */
-  public static void copy(InputStream is, OutputStream os) throws IOException {
+  public static int copy(InputStream is, OutputStream os) throws IOException {
     if (is == null || os == null) {
-      return;
+      return 0;
     }
+    int totalByteCount = 0;
     byte[] bytes = new byte[BUFFER_SIZE];
     int byteCount;
     while ((byteCount = is.read(bytes)) > 0) {
+      totalByteCount += byteCount;
       os.write(bytes, 0, byteCount);
     }
     os.flush();
+    return totalByteCount;
   }
 
   /**
@@ -69,18 +73,22 @@ public class StreamUtil {
    * It buffers the copying, and closes neither.
    * @param reader reader
    * @param writer writer
+   * @return number of charscopied
    * @throws IOException
    */
-  public static void copy(Reader reader, Writer writer) throws IOException {
+  public static int copy(Reader reader, Writer writer) throws IOException {
     if (reader == null || writer == null) {
-      return;
+      return 0;
     }
+    int totalCharCount = 0;
     char[] chars = new char[BUFFER_SIZE];
     int count;
     while ((count = reader.read(chars)) > 0) {
+      totalCharCount += count;
       writer.write(chars, 0, count);
     }
     writer.flush();
+    return totalCharCount;
   }
 }
 
