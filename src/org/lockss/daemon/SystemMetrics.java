@@ -1,5 +1,5 @@
 /*
- * $Id: SystemMetrics.java,v 1.3 2002-12-31 00:15:07 aalto Exp $
+ * $Id: SystemMetrics.java,v 1.4 2002-12-31 22:44:34 aalto Exp $
  */
 
 /*
@@ -54,8 +54,8 @@ public class SystemMetrics {
    */
   public static final String PARAM_HASH_TEST_BYTE_STEP =
       Configuration.PREFIX + "hashtest.bytestep";
-  static final int DEFAULT_HASH_DURATION = 1000;
-  static final int DEFAULT_HASH_STEP = 1024;
+  static final String DEFAULT_HASH_DURATION = "1000";
+  static final String DEFAULT_HASH_STEP = "1024";
 
 
   private static SystemMetrics metrics = null;
@@ -93,23 +93,12 @@ public class SystemMetrics {
       long timeTaken = 0;
       long bytesHashed = 0;
       boolean earlyFinish = false;
-      int hashDuration = -1;
-      int hashStep = -1;
-      try {
-        hashDuration =
-            Integer.parseInt(Configuration.getParam(PARAM_HASH_TEST_DURATION));
-        hashStep =
-            Integer.parseInt(Configuration.getParam(PARAM_HASH_TEST_BYTE_STEP));
-      } catch (NumberFormatException nfe) {
-        if (hashDuration==-1) {
-          logger.error("Couldn't get "+PARAM_HASH_TEST_DURATION+" from Configuration");
-          hashDuration = DEFAULT_HASH_DURATION;
-        }
-        if (hashStep==-1) {
-          logger.error("Couldn't get "+PARAM_HASH_TEST_BYTE_STEP+" from Configuration");
-          hashStep = DEFAULT_HASH_STEP;
-        }
-      }
+      int hashDuration =
+          Integer.parseInt(Configuration.getParam(PARAM_HASH_TEST_DURATION,
+          DEFAULT_HASH_DURATION));
+      int hashStep =
+          Integer.parseInt(Configuration.getParam(PARAM_HASH_TEST_BYTE_STEP,
+          DEFAULT_HASH_STEP));
 
       long startTime = TimeBase.nowMs();
       Deadline deadline = Deadline.in(hashDuration);
