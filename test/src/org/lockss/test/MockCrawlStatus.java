@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawlStatus.java,v 1.6 2005-01-11 01:57:39 troberts Exp $
+ * $Id: MockCrawlStatus.java,v 1.7 2005-01-12 02:14:41 troberts Exp $
  */
 
 /*
@@ -33,7 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.test;
 import org.lockss.daemon.Crawler;
 import org.lockss.plugin.ArchivalUnit;
-import java.util.Set;
+import java.util.*;
 
 public class MockCrawlStatus extends Crawler.Status {
   private static final int UNDEFINED_TYPE = -1;
@@ -41,8 +41,10 @@ public class MockCrawlStatus extends Crawler.Status {
   String crawlStatus = null;
   boolean crawlEndSignaled = false;
   long numFetched = 0;
+  long numErrors = 0;
 
   Set urlsFetched = null;
+  Map errorUrls = null;
 
 
   public MockCrawlStatus(int type) {
@@ -78,6 +80,25 @@ public class MockCrawlStatus extends Crawler.Status {
       return urlsFetched.size();
     }
     return numFetched;
+  }
+
+  public void setUrlsWithErrors(Map errorUrls) {
+    this.errorUrls = errorUrls;
+  }
+
+  public void setNumUrlsWithErrors(int num) {
+    this.numErrors = num;
+  }
+
+  public long getNumUrlsWithErrors() {
+    if (errorUrls != null) {
+      return urlsWithErrors.size();
+    }
+    return numErrors;
+  }
+
+  public Map getUrlsWithErrors() {
+    return errorUrls;
   }
 
   public void setUrlsFetched(Set urlsFetched) {
