@@ -1,5 +1,5 @@
 /*
- * $Id: StatusTable.java,v 1.5 2003-03-14 00:27:45 troberts Exp $
+ * $Id: StatusTable.java,v 1.6 2003-03-14 01:49:29 troberts Exp $
  */
 
 /*
@@ -258,7 +258,7 @@ public class StatusTable {
   public static class Reference implements Comparable {
     private Object value;
     private String tableName;
-    private Object key;
+    private String key;
 
     /**
      * @param value value to be displayed
@@ -266,7 +266,7 @@ public class StatusTable {
      * links to
      * @param key object further specifying the table this links to
      */
-    public Reference(Object value, String tableName, Object key){
+    public Reference(Object value, String tableName, String key){
       this.value = value;
       this.tableName = tableName;
       this.key = key;
@@ -280,7 +280,7 @@ public class StatusTable {
       return tableName;
     }
 
-    public Object getKey() {
+    public String getKey() {
       return key;
     }
 
