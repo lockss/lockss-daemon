@@ -1,5 +1,5 @@
 /*
- * $Id: ReaderInputStream.java,v 1.3 2003-05-30 00:26:25 troberts Exp $
+ * $Id: ReaderInputStream.java,v 1.4 2003-06-02 21:41:10 troberts Exp $
  */
 
 /*
@@ -42,9 +42,9 @@ public class ReaderInputStream extends InputStream {
   protected static Logger logger = Logger.getLogger("ReaderInputStream");
 
   public int read() throws IOException {
-    logger.debug("Calling read");
+    logger.debug3("Calling read");
     int kar = reader.read();
-    logger.debug("Read called");
+    logger.debug3("Read called");
     if (kar == -1) {
       logger.debug3("Reader is done");
       return kar;
@@ -53,14 +53,24 @@ public class ReaderInputStream extends InputStream {
   }
 
   private byte charToByte(char kar) {
+    return charToByte2(kar);
+  }
+
+  private byte charToByte1(char kar) {
     //XXX hack, make better
-    logger.debug3("Converting "+kar);
+    if (logger.isDebug3()) {
+      logger.debug3("Converting "+kar);
+    }
     byte bytes[] = String.valueOf(kar).getBytes();
     return bytes[0];
   }
-  
+
+  private byte charToByte2(char kar) {
+    return (byte)kar;
+  }
+
   public ReaderInputStream(Reader reader) {
-    this.reader = new BufferedReader(reader);
+    this.reader = reader;//new BufferedReader(reader);
   }
 
 }
