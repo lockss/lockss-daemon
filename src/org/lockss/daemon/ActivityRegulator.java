@@ -1,5 +1,5 @@
 /*
- * $Id: ActivityRegulator.java,v 1.11 2003-04-24 01:21:27 aalto Exp $
+ * $Id: ActivityRegulator.java,v 1.12 2003-04-26 01:14:30 aalto Exp $
  */
 
 /*
@@ -33,9 +33,10 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.daemon;
 
 import java.util.*;
-import org.lockss.util.*;
-import org.lockss.plugin.*;
+
 import org.lockss.app.BaseLockssManager;
+import org.lockss.plugin.*;
+import org.lockss.util.*;
 
 /**
  * The ActivityAllower is queried by the various managers when they wish to
@@ -113,10 +114,14 @@ public class ActivityRegulator extends BaseLockssManager {
     logger.debug2("ActivityRegulator created.");
   }
 
+  public void startService() {
+    super.startService();
+  }
+
   public void stopService() {
     logger.debug2("ActivityRegulator stopped.");
-    auMap = new HashMap();
-    cusMap = new HashMap();
+    auMap.clear();
+    cusMap.clear();
     super.stopService();
   }
 
@@ -131,25 +136,25 @@ public class ActivityRegulator extends BaseLockssManager {
   /**
    * Tries to start a particular AU-level activity.  If it can, it sets
    * the state to indicate that the requested activity is now running.
-   * @param activity the activity int
+   * @param newActivity the activity int
    * @param au the {@link ArchivalUnit}
    * @param expireIn expire in X ms
    * @return true iff the activity was marked as started
    */
-  public synchronized boolean startAuActivity(int activity, ArchivalUnit au,
+  public synchronized boolean startAuActivity(int newActivity, ArchivalUnit au,
                                               long expireIn) {
     // check if the au is free for this activity
-    int auActivity = getAuActivity(au);
-    if (!isAllowedOnAu(activity, auActivity)) {
+    int curActivity = getAuActivity(au);
+    if (!isAllowedOnAu(newActivity, curActivity)) {
       // au is being acted upon
       logger.debug2("AU '" + au.getName() + "' busy with " +
-                    activityCodeToString(auActivity) + ". Couldn't start " +
-                    activityCodeToString(activity));
+                    activityCodeToString(curActivity) + ". Couldn't start " +
+                    activityCodeToString(newActivity));
       return false;
     }
 
-    setAuActivity(au, activity, expireIn);
-    logger.debug("Started " + activityCodeToString(activity) + " on AU '" +
+    setAuActivity(au, newActivity, expireIn);
+    logger.debug("Started " + activityCodeToString(newActivity) + " on AU '" +
                  au.getName() + "'");
     return true;
   }
@@ -157,37 +162,37 @@ public class ActivityRegulator extends BaseLockssManager {
   /**
    * Tries to start a particular CUS-level activity.  If it can, it sets
    * the state to inidicate that the requested activity is now running.
-   * @param activity the activity int
+   * @param newActivity the activity int
    * @param cus the {@link CachedUrlSet}
    * @param expireIn expire in X ms
    * @return true iff the activity was marked as started
    */
-  public synchronized boolean startCusActivity(int activity, CachedUrlSet cus,
+  public synchronized boolean startCusActivity(int newActivity, CachedUrlSet cus,
                                                long expireIn) {
     // first, check if au is busy
     int auActivity = getAuActivity(cus.getArchivalUnit());
-    if (!isAllowedOnAu(activity, auActivity)) {
+    if (!isAllowedOnAu(newActivity, auActivity)) {
       // au is being acted upon at the AU level
       logger.debug2("AU '" + cus.getArchivalUnit().getName() + "' busy with " +
                     activityCodeToString(auActivity) + ". Couldn't start " +
-                    activityCodeToString(activity) + " on CUS '" +
+                    activityCodeToString(newActivity) + " on CUS '" +
                     cus.getUrl() + "'");
       return false;
     }
     // check if the cus is free for this activity
-    int cusActivity = getCusActivity(cus);
-    if (!isAllowedOnCus(activity, cusActivity, RELATION_SAME)) {
+    int curActivity = getCusActivity(cus);
+    if (!isAllowedOnCus(newActivity, curActivity, RELATION_SAME)) {
       logger.debug2("CUS '" + cus.getUrl() + "' busy with " +
-                    activityCodeToString(cusActivity) + ". Couldn't start " +
-                    activityCodeToString(activity) + " on CUS '" +
+                    activityCodeToString(curActivity) + ". Couldn't start " +
+                    activityCodeToString(newActivity) + " on CUS '" +
                     cus.getUrl() + "'");
       return false;
     }
-    if (checkForRelatedCusActivity(activity, cus)) {
+    if (checkForRelatedCusActivity(newActivity, cus)) {
       return false;
     }
-    setCusActivity(cus, activity, expireIn);
-    logger.debug("Started " + activityCodeToString(activity) + " on CUS '" +
+    setCusActivity(cus, newActivity, expireIn);
+    logger.debug("Started " + activityCodeToString(newActivity) + " on CUS '" +
                  cus.getUrl() + "'");
     return true;
   }
@@ -245,7 +250,7 @@ public class ActivityRegulator extends BaseLockssManager {
     }
   }
 
-  boolean checkForRelatedCusActivity(int activity, CachedUrlSet cus) {
+  boolean checkForRelatedCusActivity(int newActivity, CachedUrlSet cus) {
     String cusKey = getCusKey(cus);
     Iterator cusIt = cusMap.entrySet().iterator();
     while (cusIt.hasNext()) {
@@ -265,11 +270,11 @@ public class ActivityRegulator extends BaseLockssManager {
           cusMap.remove(entryKey);
           continue;
         }
-        if (!isAllowedOnCus(activity, value.activity, relation)) {
+        if (!isAllowedOnCus(newActivity, value.activity, relation)) {
           String relationStr = (relation==RELATION_CHILD ? "Child" : "Parent");
           logger.debug2(relationStr + " CUS busy with " +
                         activityCodeToString(value.activity) +
-                        ". Couldn't start " + activityCodeToString(activity) +
+                        ". Couldn't start " + activityCodeToString(newActivity) +
                         " on CUS '" + cus.getUrl() + "'");
           return true;
         }
@@ -292,8 +297,8 @@ public class ActivityRegulator extends BaseLockssManager {
     }
   }
 
-  static boolean isAllowedOnAu(int newActivity, int auActivity) {
-    switch (auActivity) {
+  static boolean isAllowedOnAu(int newActivity, int curActivity) {
+    switch (curActivity) {
       case NEW_CONTENT_CRAWL:
       case TREEWALK:
         // no new activity allowed
@@ -313,51 +318,62 @@ public class ActivityRegulator extends BaseLockssManager {
   }
 
 //XXX fix multiple-scheduling error.
-  static boolean isAllowedOnCus(int newActivity, int cusActivity, int relation) {
-    switch (cusActivity) {
+  static boolean isAllowedOnCus(int newActivity, int curActivity, int relation) {
+    switch (curActivity) {
       case BACKGROUND_CRAWL:
       case REPAIR_CRAWL:
-        if (relation==RELATION_SAME) {
-          // only one action on a CUS at a time except for name polls
-          // (resuming after repair crawl)
-          return (newActivity==STANDARD_NAME_POLL);
-        } else if (relation==RELATION_PARENT) {
-          // if this CUS is a parent, any action allowed
-          return true;
-        } else {
-          // if this CUS is a child, only crawls allowed
-          return ((newActivity==BACKGROUND_CRAWL) ||
-                  (newActivity==REPAIR_CRAWL));
+        switch (relation) {
+          case RELATION_SAME:
+            // only one action on a CUS at a time except for name polls
+            // (resuming after repair crawl)
+            return (newActivity==STANDARD_NAME_POLL);
+          case RELATION_PARENT:
+            // if this CUS is a parent, any action allowed
+            return true;
+          case RELATION_CHILD:
+            return ((newActivity==BACKGROUND_CRAWL) ||
+                    (newActivity==REPAIR_CRAWL));
+          default:
+            return true;
         }
       case STANDARD_CONTENT_POLL:
       case STANDARD_NAME_POLL:
-        if (relation==RELATION_SAME) {
-          // only one action on a CUS at a time unless it's a name poll or
-          // a repair crawl
-          return ((newActivity==STANDARD_NAME_POLL) ||
-                  (newActivity==REPAIR_CRAWL));
-        } else if (relation==RELATION_PARENT) {
-          // if this CUS is a parent, allow content polls and repair crawls on
-          // sub-nodes
-          return ((cusActivity==STANDARD_NAME_POLL) &&
-                  ((newActivity==STANDARD_CONTENT_POLL) ||
-                   (newActivity==REPAIR_CRAWL)));
-        } else {
-          // if this CUS is a child, only crawls allowed
-          return ((newActivity==BACKGROUND_CRAWL) ||
-                  (newActivity==REPAIR_CRAWL));
+        switch (relation) {
+          case RELATION_SAME:
+            // only one action on a CUS at a time unless it's a name poll or
+            // a repair crawl
+            return ((newActivity==STANDARD_NAME_POLL) ||
+                    (newActivity==REPAIR_CRAWL));
+          case RELATION_PARENT:
+            // if this CUS is a parent, allow content polls and repair crawls on
+            // sub-nodes
+            return ((curActivity==STANDARD_NAME_POLL) &&
+                    ((newActivity==STANDARD_CONTENT_POLL) ||
+                     (newActivity==REPAIR_CRAWL)));
+          case RELATION_CHILD:
+            // if this CUS is a child, only crawls allowed, and single node
+            // content polls
+            return ((newActivity==BACKGROUND_CRAWL) ||
+                    (newActivity==REPAIR_CRAWL) ||
+                    (newActivity==SINGLE_NODE_CONTENT_POLL));
+          default:
+            return true;
         }
       case SINGLE_NODE_CONTENT_POLL:
-        if (relation==RELATION_SAME) {
-          // only one action on a CUS at a time unless it's a name poll
-          return (newActivity==REPAIR_CRAWL);
-        } else if (relation==RELATION_PARENT) {
-          // if this CUS is a parent, allow anything below
-          return true;
-        } else {
-          // if this CUS is a child, only crawls allowed
-          return ((newActivity==BACKGROUND_CRAWL) ||
-                  (newActivity==REPAIR_CRAWL));
+        switch (relation) {
+          case RELATION_SAME:
+            // only one action on a CUS at a time unless it's a name poll
+            return (newActivity==REPAIR_CRAWL);
+          case RELATION_PARENT:
+            // if this CUS is a parent, allow anything below
+            return true;
+          case RELATION_CHILD:
+            // if this CUS is a child, only crawls allowed
+            return ((newActivity==BACKGROUND_CRAWL) ||
+                    (newActivity==REPAIR_CRAWL));
+          default:
+            return true;
+
         }
       case NO_ACTIVITY:
       default:

@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.87 2003-04-24 02:15:14 claire Exp $
+* $Id: PollManager.java,v 1.88 2003-04-26 01:14:30 aalto Exp $
  */
 
 /*
@@ -401,9 +401,16 @@ public class PollManager  extends BaseLockssManager {
       theDaemon.getActivityRegulator().auActivityFinished(
           ActivityRegulator.TOP_LEVEL_POLL, cus.getArchivalUnit());
     } else {
-      int activity = (isContentPoll ?
-                      ActivityRegulator.STANDARD_CONTENT_POLL :
-                      ActivityRegulator.STANDARD_NAME_POLL);
+      int activity;
+      if (cus.getSpec() instanceof SingleNodeCachedUrlSetSpec) {
+        activity = (isContentPoll ?
+                    ActivityRegulator.SINGLE_NODE_CONTENT_POLL :
+                    ActivityRegulator.STANDARD_NAME_POLL);
+      } else {
+        activity = (isContentPoll ?
+                    ActivityRegulator.STANDARD_CONTENT_POLL :
+                    ActivityRegulator.STANDARD_NAME_POLL);
+      }
       theDaemon.getActivityRegulator().cusActivityFinished(activity, cus);
     }
   }

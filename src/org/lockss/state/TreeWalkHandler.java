@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkHandler.java,v 1.22 2003-04-23 19:09:28 aalto Exp $
+ * $Id: TreeWalkHandler.java,v 1.23 2003-04-26 01:14:30 aalto Exp $
  */
 
 /*
@@ -151,6 +151,8 @@ public class TreeWalkHandler {
           treeWalkAborted = false;
         }
       }
+    } else {
+      logger.debug2("Treewalk couldn't start due to activity lock.");
     }
 
     //alert the AuState (it writes through)
