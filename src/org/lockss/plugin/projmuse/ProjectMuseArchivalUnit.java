@@ -1,5 +1,5 @@
 /*
- * $Id: ProjectMuseArchivalUnit.java,v 1.18 2004-01-13 04:46:26 clairegriffin Exp $
+ * $Id: ProjectMuseArchivalUnit.java,v 1.19 2004-01-23 00:00:05 eaalto Exp $
  */
 
 /*
@@ -32,13 +32,10 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.projmuse;
 
-import java.net.*;
 import java.util.*;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
-import org.lockss.state.AuState;
-import org.lockss.plugin.base.BaseArchivalUnit;
 import gnu.regexp.REException;
 import org.lockss.plugin.configurable.*;
 
@@ -61,6 +58,8 @@ public class ProjectMuseArchivalUnit extends ConfigurableArchivalUnit {
    */
   public static final String AUPARAM_PAUSE_TIME = PAUSE_TIME_KEY;
   private static final long DEFAULT_PAUSE_TIME = 6 * Constants.SECOND;
+
+  static final int REFETCH_DEPTH = 2;
 
   protected Logger logger = Logger.getLogger("ProjectMusePlugin");
 
@@ -132,8 +131,18 @@ public class ProjectMuseArchivalUnit extends ConfigurableArchivalUnit {
     return ret;
   }
 
-  protected CrawlRule makeRules()
-      throws REException {
+  /**
+   * Override to use refetchDepth of 2.
+   * @return the CrawlSpec need by this au.
+   * @throws REException if the CrawlRules contain an invalid regular expression
+   */
+  protected CrawlSpec makeCrawlSpec() throws REException {
+    CrawlRule rule = makeRules();
+    return new CrawlSpec(startUrlString, rule, REFETCH_DEPTH);
+  }
+
+
+  protected CrawlRule makeRules() throws REException {
     List rules = new LinkedList();
     final int incl = CrawlRules.RE.MATCH_INCLUDE;
     final int excl = CrawlRules.RE.MATCH_EXCLUDE;
