@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.48 2004-03-30 02:09:58 eaalto Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.49 2004-04-10 05:40:59 tlipkis Exp $
  */
 
 /*
@@ -87,7 +87,7 @@ public class LockssRepositoryImpl
    */
   public static final String PARAM_MAX_LRUMAP_SIZE = Configuration.PREFIX +
       "cache.max.lrumap.size";
-  private static final int DEFAULT_MAX_LRUMAP_SIZE = 12;
+  private static final int DEFAULT_MAX_LRUMAP_SIZE = 100;
 
   // this contains a '#' so that it's not defeatable by strings which
   // match the prefix in a url (like '../tmp/')
@@ -95,6 +95,7 @@ public class LockssRepositoryImpl
 
   private String rootLocation;
   private LRUMap nodeCache;
+  private int nodeCacheSize = DEFAULT_MAX_LRUMAP_SIZE;
   private ReferenceMap refMap;
   private int cacheHits = 0;
   private int cacheMisses = 0;
@@ -108,7 +109,7 @@ public class LockssRepositoryImpl
       // this shouldn't happen
       rootLocation += File.separator;
     }
-    nodeCache = new LRUMap(DEFAULT_MAX_LRUMAP_SIZE);
+    nodeCache = new LRUMap(nodeCacheSize);
     refMap = new ReferenceMap(ReferenceMap.HARD, ReferenceMap.WEAK);
   }
 
@@ -124,10 +125,10 @@ public class LockssRepositoryImpl
     // at some point we'll have to respond to changes in the available disk
     // space list
 
-    int maxLruMapSize = newConfig.getInt(PARAM_MAX_LRUMAP_SIZE,
-                                         DEFAULT_MAX_LRUMAP_SIZE);
-    if (nodeCache.getMaximumSize() != maxLruMapSize) {
-      nodeCache.setMaximumSize(maxLruMapSize);
+    nodeCacheSize = newConfig.getInt(PARAM_MAX_LRUMAP_SIZE,
+				     DEFAULT_MAX_LRUMAP_SIZE);
+    if (nodeCache.getMaximumSize() != nodeCacheSize) {
+      nodeCache.setMaximumSize(nodeCacheSize);
     }
   }
 
@@ -178,6 +179,10 @@ public class LockssRepositoryImpl
     } else {
       // create a canonical path, handling all illegal path traversal
       urlKey = canonicalizePath(url);
+    }
+    // XXX canonicalize "dir" and "dir/"
+    if (urlKey.endsWith("/")) {
+      urlKey = urlKey.substring(0, urlKey.length()-1);
     }
     // check LRUMap cache for node
     RepositoryNode node = (RepositoryNode)nodeCache.get(urlKey);
