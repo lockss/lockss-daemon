@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericFileCachedUrlSet.java,v 1.7 2002-11-27 20:30:09 aalto Exp $
+ * $Id: TestGenericFileCachedUrlSet.java,v 1.8 2002-12-03 23:07:47 aalto Exp $
  */
 
 /*
@@ -82,6 +82,7 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
       CachedUrlSet childSet = (CachedUrlSet)setIt.next();
       childL.add(childSet.getSpec().getPrefixList().get(0));
     }
+    // should be sorted
     String[] expectedA = new String[] {
       "http://www.example.com/testDir/branch1",
       "http://www.example.com/testDir/branch2",
@@ -91,13 +92,13 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
   }
 
   public void testLeafIterator() throws Exception {
-    createLeaf("http://www.example.com/testDir/branch1/leaf1",
-               "test stream", null);
     createLeaf("http://www.example.com/testDir/branch1/leaf2",
                "test stream", null);
+    createLeaf("http://www.example.com/testDir/leaf4", "test stream", null);
     createLeaf("http://www.example.com/testDir/branch2/leaf3",
                "test stream", null);
-    createLeaf("http://www.example.com/testDir/leaf4", "test stream", null);
+    createLeaf("http://www.example.com/testDir/branch1/leaf1",
+               "test stream", null);
 
     CachedUrlSetSpec rSpec =
         new RECachedUrlSetSpec("http://www.example.com/testDir");
@@ -108,6 +109,7 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
       CachedUrl childUrl = (CachedUrl)setIt.next();
       childL.add(childUrl.getUrl());
     }
+    // should be sorted
     String[] expectedA = new String[] {
       "http://www.example.com/testDir/branch1/leaf1",
       "http://www.example.com/testDir/branch1/leaf2",
