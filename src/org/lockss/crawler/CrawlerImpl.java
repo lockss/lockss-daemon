@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerImpl.java,v 1.3 2004-01-13 02:57:48 troberts Exp $
+ * $Id: CrawlerImpl.java,v 1.4 2004-01-17 00:15:59 troberts Exp $
  */
 
 /*
@@ -79,7 +79,7 @@ public class CrawlerImpl implements Crawler {
 
   private Set failedUrls = new HashSet();
 
-  private GoslingHtmlParser htmlParser = null;
+  private ContentParser myParser = null;
 
   private static final String PARAM_RETRY_TIMES =
     Configuration.PREFIX + "CrawlerImpl.numCacheRetries";
@@ -136,14 +136,14 @@ public class CrawlerImpl implements Crawler {
      return new CrawlerImpl(au, spec, aus, Crawler.REPAIR, repairUrls);
   }
 
-  private CrawlerImpl(ArchivalUnit au, CrawlSpec spec,
+  protected CrawlerImpl(ArchivalUnit au, CrawlSpec spec,
 			     AuState aus, int type) {
     this.au = au;
     this.spec = spec;
     this.type = type;
     this.aus = aus;
     crawlStatus = new Crawler.Status(au, spec.getStartingUrls(), type);
-    htmlParser = new GoslingHtmlParser(au);
+    setParser(new GoslingHtmlParser(au));
   }
 
   private CrawlerImpl(ArchivalUnit au, CrawlSpec spec,
@@ -416,7 +416,7 @@ public class CrawlerImpl implements Crawler {
 	return null;
       } 
       if (contentType.toLowerCase().startsWith("text/html")) {
-	return htmlParser;
+	return myParser;
       }
     }
     return null;
@@ -482,6 +482,10 @@ public class CrawlerImpl implements Crawler {
     sb.append(au.toString());
     sb.append("]");
     return sb.toString();
+  }
+
+  public void setParser(ContentParser parser) {
+    this.myParser = parser;
   }
 
   private static class MyUrlCheckCallback
