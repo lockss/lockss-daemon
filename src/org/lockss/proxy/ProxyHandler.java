@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.17 2003-06-20 22:34:52 claire Exp $
+ * $Id: ProxyHandler.java,v 1.18 2003-09-12 20:47:47 eaalto Exp $
  */
 
 /*
@@ -31,28 +31,27 @@ in this Software without prior written authorization from Stanford University.
 */
 // ========================================================================
 // Copyright (c) 1999 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.17 2003-06-20 22:34:52 claire Exp $
+// $Id: ProxyHandler.java,v 1.18 2003-09-12 20:47:47 eaalto Exp $
 // ========================================================================
 
 package org.lockss.proxy;
 
 import java.io.*;
-import java.util.*;
-import java.net.*;
+import java.net.Socket;
 import org.mortbay.util.*;
 import org.mortbay.http.*;
-import org.mortbay.http.handler.*;
-import org.lockss.daemon.*;
+import org.mortbay.http.handler.AbstractHttpHandler;
 import org.lockss.plugin.*;
-import org.lockss.util.*;
-import org.lockss.app.*;
+import org.lockss.daemon.CuUrl;
+import org.lockss.util.Logger;
+import org.lockss.app.LockssDaemon;
 
 /** LOCKSS proxy handler.
  */
 public class ProxyHandler extends AbstractHttpHandler {
   private static Logger log = Logger.getLogger("Proxy");
-  private static LockssDaemon theDaemon = null;
-  private static PluginManager pluginMgr = null;
+  private LockssDaemon theDaemon = null;
+  private PluginManager pluginMgr = null;
 
   ProxyHandler(LockssDaemon daemon) {
     theDaemon = daemon;
@@ -75,8 +74,9 @@ public class ProxyHandler extends AbstractHttpHandler {
     //     our classpath (should delegate to another class to
     //     avoid linking hassles).
     org.mortbay.util.URI uri = request.getURI();
-    if (!"http".equals(uri.getScheme()))
+    if (!"http".equals(uri.getScheme())) {
       return;
+    }
 
     if (log.isDebug3()) {
       log.debug3("\nPROXY:");
@@ -84,41 +84,43 @@ public class ProxyHandler extends AbstractHttpHandler {
       log.debug3("URI="+uri);
     }
 
-
     String urlString = uri.toString();
     CachedUrl cu = pluginMgr.findMostRecentCachedUrl(urlString);
-    if (log.isDebug2()) log.debug2("cu: " + cu);
+    if (log.isDebug2()) {
+      log.debug2("cu: " + cu);
+    }
     if (cu != null && cu.hasContent()) {
       serveFromCache(pathInContext, pathParams, request, response, cu);
       return;
     }
 
-    Socket socket=null;
+    Socket socket = null;
     try {
-      String host=uri.getHost();
-      int port =uri.getPort();
-      if (port<=0)
-	port=80;
-      String path=uri.getPath();
-      if (path==null || path.length()==0)
-	path="/";
+      String host= uri.getHost();
+      int port = uri.getPort();
+      if (port<=0) {
+        port = 80;
+      }
+      String path = uri.getPath();
+      if (path==null || path.length()==0) {
+        path = "/";
+      }
 
-      if (Code.debug())
-	{
-	  Code.debug("host=",host);
-	  Code.debug("port="+port);
-	  Code.debug("uri=",uri.toString());
-	}
-            
+      if (Code.debug()) {
+        Code.debug("host=",host);
+        Code.debug("port="+port);
+        Code.debug("uri=",uri.toString());
+      }
+
       // XXX associate this socket with the connection so
       // that it may be persistent.
-            
+
       socket = new Socket(host,port);
       socket.setSoTimeout(5000); // XXX configure this
-      OutputStream sout=socket.getOutputStream();
-            
+      OutputStream sout = socket.getOutputStream();
+
       request.setState(HttpMessage.__MSG_EDITABLE);
-      HttpFields header=request.getHeader();
+      HttpFields header = request.getHeader();
 
       // XXX Lets reject range requests at this point!!!!?
 
@@ -141,22 +143,22 @@ public class ProxyHandler extends AbstractHttpHandler {
       // tk - for now always use 1.0 to avoid chunked responses, which we
       // don't handle right
       writer.write(request.getDotVersion()==0  || true
-		   ?HttpMessage.__HTTP_1_0
-		   :HttpMessage.__HTTP_1_1);
+		   ? HttpMessage.__HTTP_1_0
+		   : HttpMessage.__HTTP_1_1);
       writer.write('\015');
       writer.write('\012');
       header.write(writer);
-            
+
       // Send the request to the next hop.
-      Code.debug("\nreq=\n"+new String(writer.getBuf(),0,writer.length()));
+      Code.debug("\nreq=\n"+new String(writer.getBuf(), 0, writer.length()));
       writer.writeTo(sout);
       writer.reset();
-            
+
       // XXX If expect 100-continue flush or no body the header now!
       sout.flush();
-            
+
       // XXX cache http versions and do 417
-            
+
       // XXX To to copy content with content length or chunked.
 
 
@@ -167,27 +169,28 @@ public class ProxyHandler extends AbstractHttpHandler {
       // XXX need to do something about timeouts here
       String resLine = lin.readLine();
       Code.debug("First resLine = " + resLine);
-      if (resLine==null)
-	return; // XXX what should we do?
-            
+      if (resLine==null) {
+        return; // XXX what should we do?
+      }
+
       // At this point we are committed to sending a response!!!!
       header = response.getHeader();
       header.clear();
       OutputStream out=response.getOutputStream();
-            
+
       // Forward 100 responses
-      while (resLine.startsWith("100"))
-	{
-	  Code.debug("resLine = " + resLine);
-	  writer.write(resLine);
-	  writer.writeTo(out);
-	  out.flush();
-	  writer.reset();
-                
-	  resLine = lin.readLine();
-	  if (resLine==null)
-	    return; // XXX what should we do?
-	}
+      while (resLine.startsWith("100")) {
+        Code.debug("resLine = " + resLine);
+        writer.write(resLine);
+        writer.writeTo(out);
+        out.flush();
+        writer.reset();
+
+        resLine = lin.readLine();
+        if (resLine==null) {
+          return; // XXX what should we do?
+        }
+      }
 
       // Read Response lne
       header.read(lin);
@@ -207,32 +210,36 @@ public class ProxyHandler extends AbstractHttpHandler {
 
       // return the body
       // XXX need more content length options here
-      // XXX need to handle prechunked 
+      // XXX need to handle prechunked
       IO.copy(lin,out);
-    }
-    catch(Exception e)
-      {
-	Code.warning(e);
-      }
-    finally
-      {
+    } catch (Exception e) {
+      Code.warning(e);
+    } finally {
       request.setHandled(true);
-	request.setState(HttpMessage.__MSG_RECEIVED);
-	response.setState(HttpMessage.__MSG_SENT);
-	if (socket!=null)
-	  {
-	    try{socket.close();}
-	    catch(Exception e){Code.warning(e);}
-	  }
+      request.setState(HttpMessage.__MSG_RECEIVED);
+      response.setState(HttpMessage.__MSG_SENT);
+      if (socket!=null) {
+        try { socket.close(); }
+        catch (Exception e) { Code.warning(e); }
       }
+    }
   }
 
   /* XXXXXX */
 
 
-  /** Add a Lockss-Cu: field to the request with the locksscu: url to serve
+  /**
+   * Add a Lockss-Cu: field to the request with the locksscu: url to serve
    * from the cache, then allow request to be passed on to a
-   * LockssResourceHandler */
+   * LockssResourceHandler.
+   * @param pathInContext the path
+   * @param pathParams params
+   * @param request the HttpRequest
+   * @param response the HttpResponse
+   * @param cu the CachedUrl
+   * @throws HttpException
+   * @throws IOException
+   */
   private void serveFromCache(String pathInContext,
 			      String pathParams,
 			      HttpRequest request,
