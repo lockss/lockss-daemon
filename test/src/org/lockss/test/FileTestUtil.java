@@ -1,5 +1,5 @@
 /*
- * $Id: FileTestUtil.java,v 1.3 2004-06-14 03:08:45 smorabito Exp $
+ * $Id: FileTestUtil.java,v 1.4 2004-07-12 06:27:43 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -55,7 +55,9 @@ public class FileTestUtil {
   public static File tempFile(String prefix, String suffix, File dir)
       throws IOException {
     File f = File.createTempFile(prefix, suffix, dir);
-    f.deleteOnExit();
+    if (!LockssTestCase.isKeepTempFiles()) {
+      f.deleteOnExit();
+    }
     return f;
   }
 
