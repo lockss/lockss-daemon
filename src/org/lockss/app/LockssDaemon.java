@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.15 2003-03-21 20:42:32 tal Exp $
+ * $Id: LockssDaemon.java,v 1.16 2003-03-24 01:19:23 tal Exp $
  */
 
 /*
@@ -52,9 +52,6 @@ import org.apache.commons.collections.SequencedHashMap;
  */
 
 public class LockssDaemon {
-  private static String PARAM_CACHE_LOCATION =
-    Configuration.PREFIX + "cacheDir";
-
   private static String PARAM_DAEMON_EXIT =
     Configuration.PREFIX + "daemon.exit";
 
@@ -137,7 +134,6 @@ public class LockssDaemon {
 
   private static Logger log = Logger.getLogger("LockssDaemon");
   protected List propUrls = null;
-  private String cacheDir = null;
   private String configDir = null;
 
   // Need to preserve order so managers are started and stopped in the
@@ -335,14 +331,6 @@ public class LockssDaemon {
     return (IdentityManager) getManager(IDENTITY_MANAGER);
   }
 
-  /**
-   * get cache directory
-   * @return get the location of the cache directory
-   */
-  public String getCacheDir() {
-    return cacheDir;
-  }
-
   public void stopDaemon() {
     stop();
   }
@@ -386,8 +374,6 @@ public class LockssDaemon {
     System.err.println("Awake");
 
     // get the properties we're going to store locally
-    cacheDir = Configuration.getParam(PARAM_CACHE_LOCATION,
-                                      DEFAULT_CACHE_LOCATION);
 
   }
 
