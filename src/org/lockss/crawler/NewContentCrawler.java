@@ -1,5 +1,5 @@
 /*
- * $Id: NewContentCrawler.java,v 1.31 2004-08-19 00:02:18 clairegriffin Exp $
+ * $Id: NewContentCrawler.java,v 1.32 2004-09-01 02:20:25 tlipkis Exp $
  */
 
 /*
@@ -341,7 +341,6 @@ public class NewContentCrawler extends CrawlerImpl {
 
 	  cacheWithRetries(uc, Configuration.getIntParam(PARAM_RETRY_TIMES,
 							 DEFAULT_RETRY_TIMES));
-	  numUrlsFetched++;
 	}
       } catch (CacheException e) {
 	// Failed.  Don't try this one again during this crawl.
@@ -411,9 +410,7 @@ public class NewContentCrawler extends CrawlerImpl {
 	if (wdog != null) {
 	  wdog.pokeWDog();
 	}
-	uc.cache(); //IOException if there is a caching problem
-
-	crawlStatus.signalUrlFetched();
+	updateCacheStats(uc.cache());
 	return; //cache didn't throw
       } catch (CacheException.RetryableException e) {
 	logger.debug("Exception when trying to cache "+uc, e);
@@ -531,7 +528,7 @@ public class NewContentCrawler extends CrawlerImpl {
     return null;
   }
 
-  private static class MyFoundUrlCallback
+  static class MyFoundUrlCallback
     implements ContentParser.FoundUrlCallback {
     Set parsedPages = null;
     Collection extractedUrls = null;
@@ -549,9 +546,18 @@ public class NewContentCrawler extends CrawlerImpl {
      * @param url the url string, fully qualified (ie, not relative)
      */
     public void foundUrl(String url) {
-      if (isSupportedUrlProtocol(url) && !parsedPages.contains(url)
-	  && !extractedUrls.contains(url) && au.shouldBeCached(url)) {
-	extractedUrls.add(url);
+      if (!isSupportedUrlProtocol(url)) {
+	return;
+      }
+      try {
+	String normUrl = UrlUtil.normalizeUrl(url, au);
+	if (!parsedPages.contains(normUrl)
+	    && !extractedUrls.contains(normUrl)
+	    && au.shouldBeCached(normUrl)) {
+	  extractedUrls.add(url);
+	}
+      } catch (MalformedURLException e) {
+	logger.warning("Normalizing", e);
       }
     }
   }
