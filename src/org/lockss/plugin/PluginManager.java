@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.87 2004-07-13 00:41:07 smorabito Exp $
+ * $Id: PluginManager.java,v 1.88 2004-07-13 00:43:18 smorabito Exp $
  */
 
 /*
@@ -85,7 +85,7 @@ public class PluginManager extends BaseLockssManager {
     "password";
 
   static String PARAM_REGISTRY_CRAWL_INTERVAL =
-    "plugin.registries.crawl.interval";
+    Configuration.PREFIX + "plugin.registries.crawl.interval";
   static String DEFAULT_REGISTRY_CRAWL_INTERVAL =
     "1d"; // not specified as a long value because this will be passed as
           // a string literal to the AU config.
