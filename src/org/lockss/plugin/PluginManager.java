@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.15 2003-03-04 01:02:06 aalto Exp $
+ * $Id: PluginManager.java,v 1.16 2003-03-04 01:47:04 aalto Exp $
  */
 
 /*
@@ -164,11 +164,7 @@ public class PluginManager implements LockssManager {
   private void configureAU(Plugin plugin, Configuration auConf)
       throws ArchivalUnit.ConfigurationException {
     ArchivalUnit au = plugin.configureAU(auConf);
-    // add the lockss repository and node manager for this AU
-    // the lockss repository needs to be added first, as the node manager
-    // uses it
-    theDaemon.getLockssRepositoryService().addLockssRepository(au);
-    theDaemon.getNodeManagerService().addNodeManager(au);
+    theDaemon.startAUManagers(au);
   }
 
   /**

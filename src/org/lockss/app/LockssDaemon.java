@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.11 2003-03-04 00:16:12 aalto Exp $
+ * $Id: LockssDaemon.java,v 1.12 2003-03-04 01:47:03 aalto Exp $
  */
 
 /*
@@ -160,6 +160,17 @@ public class LockssDaemon {
       throw new IllegalArgumentException("Unavailable manager:" + managerKey);
     }
     return mgr;
+  }
+
+  /**
+   * Starts any managers necessary to handle the ArchivalUnit.
+   * @param au the ArchivalUnit
+   */
+  public void startAUManagers(ArchivalUnit au) {
+    // lockss repository needs to be started first
+    // as the node manager uses it
+    getLockssRepositoryService().addLockssRepository(au);
+    getNodeManagerService().addNodeManager(au);
   }
 
   /**
