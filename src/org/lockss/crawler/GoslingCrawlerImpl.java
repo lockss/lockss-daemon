@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingCrawlerImpl.java,v 1.48 2003-12-13 01:29:30 troberts Exp $
+ * $Id: GoslingCrawlerImpl.java,v 1.49 2003-12-19 01:33:56 eaalto Exp $
  */
 
 /*
@@ -78,6 +78,7 @@ import org.lockss.daemon.*;
 import org.lockss.state.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.base.BaseUrlCacher;
 
 /**
  * The crawler.
@@ -124,7 +125,7 @@ public class GoslingCrawlerImpl implements Crawler {
   private Collection repairUrls = null;
 
   private CrawlSpec spec = null;
-  
+
   private int crawlError = 0;
   private AuState aus = null;
 
@@ -134,13 +135,14 @@ public class GoslingCrawlerImpl implements Crawler {
 
   public static final String PARAM_RETRY_PAUSE =
     Configuration.PREFIX + "GoslingCrawlerImpl.retryPause";
-  public static final long DEFAULT_RETRY_PAUSE = 10*Constants.SECOND; 
+  public static final long DEFAULT_RETRY_PAUSE = 10*Constants.SECOND;
 
 
   /**
    * Construct a new content crawl object; does NOT start the crawl
    * @param au {@link ArchivalUnit} that this crawl will happen on
    * @param spec {@link CrawlSpec} that defines the crawl
+   * @param aus {@link AuState} for the AU
    * @return new content crawl object
    */
   public static GoslingCrawlerImpl makeNewContentCrawler(ArchivalUnit au,
@@ -160,6 +162,7 @@ public class GoslingCrawlerImpl implements Crawler {
    * Construct a repair crawl object; does NOT start the crawl
    * @param au {@link ArchivalUnit} that this crawl will happen on
    * @param spec {@link CrawlSpec} that defines the crawl
+   * @param aus {@link AuState} for the AU
    * @param repairUrls list of URLs to crawl for the repair
    * @return repair crawl object
    */
@@ -194,7 +197,7 @@ public class GoslingCrawlerImpl implements Crawler {
     this.repairUrls = repairUrls;
 
     //XXX hack, since crawlStatus will get set twice
-    crawlStatus = new Crawler.Status(repairUrls, type); 
+    crawlStatus = new Crawler.Status(repairUrls, type);
   }
 
 //   public long getNumFetched() {
@@ -316,7 +319,7 @@ public class GoslingCrawlerImpl implements Crawler {
 
     //we don't alter the crawl list from AuState until we've enumerated the
     //urls that need to be recrawled.
-    
+
     Collection urlsToCrawl = aus.getCrawlUrls();
     while (!extractedUrls.isEmpty()) {
       String url = (String)extractedUrls.iterator().next();
@@ -324,7 +327,7 @@ public class GoslingCrawlerImpl implements Crawler {
       urlsToCrawl.add(url);
     }
 
-    
+
     while (!urlsToCrawl.isEmpty() && !deadline.expired() && !windowClosed) {
       String nextUrl = (String)CollectionUtil.removeElement(urlsToCrawl);
       // check crawl window during crawl
@@ -352,7 +355,7 @@ public class GoslingCrawlerImpl implements Crawler {
       logger.info("Finished crawl (errors) of "+au);
     } else {
       logger.info("Finished crawl of "+au);
-    }      
+    }
     return (crawlStatus.getCrawlError() == 0);
   }
 
@@ -368,10 +371,8 @@ public class GoslingCrawlerImpl implements Crawler {
       if (au.shouldBeCached(manifest)) {
         // check for proper crawl window
         if ((au.getCrawlSpec()==null) || (au.getCrawlSpec().canCrawl())) {
-          uc.cache();
-          // check for the permission on the page
-          CachedUrl cu = plugin.makeCachedUrl(ownerCus, manifest);
-          InputStream is = cu.openForReading();
+          // check for the permission on the page without caching it
+          InputStream is = uc.getUncachedInputStream();
           // set the reader to our default encoding
           //XXX try to extract encoding from source
           Reader reader = new InputStreamReader(is, Constants.DEFAULT_ENCODING);
