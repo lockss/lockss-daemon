@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollSpec.java,v 1.11 2004-01-20 18:22:50 tlipkis Exp $
+ * $Id: TestPollSpec.java,v 1.12 2004-01-31 22:57:12 tlipkis Exp $
  */
 
 /*
@@ -73,21 +73,24 @@ public class TestPollSpec extends LockssTestCase {
     String url = "http://foo.bar/";
     String lower = "abc";
     String upper = "xyz";
+    String plugVer = "ver42";
     MockArchivalUnit au = new MockArchivalUnit();
     au.setAuId(auid);
+    MockPlugin mp = new MockPlugin();
+    mp.setVersion(plugVer);
+    au.setPlugin(mp);
 
-    CachedUrlSet cus = new MockCachedUrlSet(au,
-					    new RangeCachedUrlSetSpec(url,
-								      lower,
-								      upper));
+    CachedUrlSet cus =
+      new MockCachedUrlSet(au, new RangeCachedUrlSetSpec(url, lower, upper));
     PollSpec ps = new PollSpec(cus);
     assertEquals(auid, ps.getAuId());
     assertEquals(url, ps.getUrl());
     assertEquals(lower, ps.getLwrBound());
     assertEquals(upper, ps.getUprBound());
+    assertEquals(plugVer, ps.getPluginVersion());
   }
 
-  public void testFromLcapMessage() {
+  public void testFromLcapMessage() throws Exception {
     byte[] testbytes = {0,1,2,3,4,5,6,8,10};
     String auid = "aaai1";
     String url = "http://foo.bar/";
@@ -95,10 +98,10 @@ public class TestPollSpec extends LockssTestCase {
     String upper = "xyx";
     MockArchivalUnit au = new MockArchivalUnit();
     au.setAuId(auid);
-    CachedUrlSet cus = new MockCachedUrlSet(au,
-                                            new RangeCachedUrlSetSpec(url,
-                                                                      lower,
-                                                                      upper));
+    Plugin plug = new MockPlugin();
+    au.setPlugin(plug);
+    CachedUrlSet cus =
+      new MockCachedUrlSet(au, new RangeCachedUrlSetSpec(url, lower, upper));
     PollSpec ps = new PollSpec(cus);
     LcapIdentity id = null;
     try {
@@ -109,24 +112,20 @@ public class TestPollSpec extends LockssTestCase {
       fail("can't open test host");
     }
     LcapMessage msg = null;
-    try {
-      msg = LcapMessage.makeRequestMsg(
-          ps,
-          null,
-          testbytes,
-          testbytes,
-          LcapMessage.NAME_POLL_REQ,
-          10000000,
-          id);
-    }
-    catch (IOException ex1) {
-      fail("can't make request message");
-    }
+      msg =
+	LcapMessage.makeRequestMsg(ps,
+				   null,
+				   testbytes,
+				   testbytes,
+				   LcapMessage.NAME_POLL_REQ,
+				   10000000,
+				   id);
     ps = new PollSpec(msg);
     assertEquals(auid, ps.getAuId());
     assertEquals(url, ps.getUrl());
     assertEquals(lower, ps.getLwrBound());
     assertEquals(upper, ps.getUprBound());
+    assertEquals(plug.getVersion(), ps.getPluginVersion());
 }
 
   public static void main(String[] argv) {

@@ -1,5 +1,5 @@
 /*
- * $Id: PollSpec.java,v 1.21 2003-12-12 00:56:29 tlipkis Exp $
+ * $Id: PollSpec.java,v 1.22 2004-01-31 22:57:12 tlipkis Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import org.lockss.protocol.*;
 import org.lockss.app.*;
 
 /**
- * <p>Class implementing the concept of the set of URLs covered by a poll.</p>
+ * Class implementing the concept of the set of URLs covered by a poll.
  * @author Claire Griffin
  * @version 1.0
  */
@@ -55,79 +55,47 @@ public class PollSpec {
    */
   public static final String SINGLE_NODE_LWRBOUND = ".";
 
-  public static final String PARAM_USE_PROTOCOL_VERSION = Configuration.PREFIX
-      +      "protocol.useProtocolVersion";
+  public static final String PARAM_USE_POLL_VERSION =
+    Configuration.PREFIX + "protocol.usePollVersion";
 
-  public static final int DEFAULT_USE_PROTOCOL_VERSION = 1;
+  public static final int DEFAULT_USE_POLL_VERSION = 1;
+  static final String DEFAULT_PLUGIN_VERSION = "1";
 
   private static Logger theLog=Logger.getLogger("PollSpec");
   private static LockssRandom theRandom = new LockssRandom();
   private String auId;
+  private String pluginVersion;
   private String url;
   private String uprBound = null;
   private String lwrBound = null;
   private CachedUrlSet cus = null;
   private PluginManager pluginMgr = null;
-  private int version; // poll protocol version
+  private int pollVersion; // poll protocol version
+
 
   /**
-   * constructor for a "mock" poll spec
-   * @param auId the archival unit id
-   * @param url the url
-   * @param lwrBound the lower bound of the url
-   * @param uprBound the upper bound of the url
-   * @param cus the cached url set
-   */
-  public PollSpec(String auId, String url,
-                  String lwrBound, String uprBound, CachedUrlSet cus) {
-    this.auId = auId;
-    this.url = url;
-    this.uprBound = uprBound;
-    this.lwrBound = lwrBound;
-    this.cus = cus;
-    this.version = Configuration.getIntParam(PARAM_USE_PROTOCOL_VERSION,
-					  DEFAULT_USE_PROTOCOL_VERSION);
-  }
-
-  /**
-   * construct a pollspec from an existing pollspec but change the
-   * upper and lower boundary of the RangedCachedUrlSetSpec
-   * @param cus the existing cached url set
-   * @param lwrBound the new lower boundary
-   * @param uprBound the new upper boundary
+   * Construct a PollSpec from a CachedUrlSet and an upper and lower bound
+   * @param cus the CachedUrlSet
+   * @param lwrBound the lower boundary
+   * @param uprBound the upper boundary
    */
   public PollSpec(CachedUrlSet cus, String lwrBound, String uprBound) {
-    this.cus = cus;
-    ArchivalUnit au = cus.getArchivalUnit();
-    auId = au.getAuId();
-    CachedUrlSetSpec cuss = cus.getSpec();
-    url = cuss.getUrl();
-    this.lwrBound = lwrBound;
-    this.uprBound = uprBound;
-    this.version = Configuration.getIntParam(PARAM_USE_PROTOCOL_VERSION,
-					  DEFAULT_USE_PROTOCOL_VERSION);
+    commonSetup(cus, lwrBound, uprBound);
   }
 
   /**
-   * construct a pollspec from an existing pollspec but change the
-   * upper and lower boundary of the RangedCachedUrlSetSpec
-   * @param cus the existing cached url set
-   * @param lwrBound the new lower boundary
-   * @param uprBound the new upper boundary
-   * @param version the protocol version to use
+   * Construct a PollSpec from a CachedUrlSet, an upper and lower bound
+   * and an explicit poll version
+   * @param cus the CachedUrlSet
+   * @param lwrBound the lower boundary
+   * @param uprBound the upper boundary
+   * @param pollVersion the poll version to use
    */
   public PollSpec(CachedUrlSet cus,
 		  String lwrBound,
 		  String uprBound,
-		  int version) {
-    this.cus = cus;
-    ArchivalUnit au = cus.getArchivalUnit();
-    auId = au.getAuId();
-    CachedUrlSetSpec cuss = cus.getSpec();
-    url = cuss.getUrl();
-    this.lwrBound = lwrBound;
-    this.uprBound = uprBound;
-    this.version = version;
+		  int pollVersion) {
+    commonSetup(cus, lwrBound, uprBound, pollVersion);
   }
 
   /**
@@ -135,22 +103,15 @@ public class PollSpec {
    * @param cus the CachedUrlSpec which defines the range of interest
    */
   public PollSpec(CachedUrlSet cus) {
-    this.cus = cus;
-    ArchivalUnit au = cus.getArchivalUnit();
-    auId = au.getAuId();
     CachedUrlSetSpec cuss = cus.getSpec();
-    url = cuss.getUrl();
     if (cuss instanceof RangeCachedUrlSetSpec) {
       RangeCachedUrlSetSpec rcuss = (RangeCachedUrlSetSpec)cuss;
-      lwrBound = rcuss.getLowerBound();
-      uprBound = rcuss.getUpperBound();
+      commonSetup(cus, rcuss.getLowerBound(), rcuss.getUpperBound());
     } else if (cuss.isSingleNode()) {
-      // not used, but needs to be set to allow this poll to overlap with
-      // other ranged polls
-      lwrBound = SINGLE_NODE_LWRBOUND;
+      commonSetup(cus, SINGLE_NODE_LWRBOUND, null);
+    } else {
+      commonSetup(cus, null, null);
     }
-    this.version = Configuration.getIntParam(PARAM_USE_PROTOCOL_VERSION,
-					  DEFAULT_USE_PROTOCOL_VERSION);
   }
 
   /**
@@ -159,11 +120,40 @@ public class PollSpec {
    */
   public PollSpec(LcapMessage msg) {
     auId = msg.getArchivalId();
+    pluginVersion = msg.getPluginVersion();
     url = msg.getTargetUrl();
     uprBound = msg.getUprBound();
     lwrBound = msg.getLwrBound();
-    version = msg.getVersion();
+    pollVersion = msg.getPollVersion();
     cus = getPluginManager().findCachedUrlSet(this);
+  }
+
+  /** Setup common to most constructors */
+  private void commonSetup(CachedUrlSet cus,
+			   String lwrBound,
+			   String uprBound) {
+    commonSetup(cus, lwrBound, uprBound, getDefaultPollVersion());
+  }
+
+  /** Setup common to most constructors */
+  private void commonSetup(CachedUrlSet cus,
+			   String lwrBound,
+			   String uprBound,
+			   int pollVersion) {
+    this.cus = cus;
+    ArchivalUnit au = cus.getArchivalUnit();
+    auId = au.getAuId();
+    this.pluginVersion = au.getPlugin().getVersion();
+    CachedUrlSetSpec cuss = cus.getSpec();
+    url = cuss.getUrl();
+    this.lwrBound = lwrBound;
+    this.uprBound = uprBound;
+    this.pollVersion = pollVersion;
+  }
+
+  protected int getDefaultPollVersion() {
+    return Configuration.getIntParam(PARAM_USE_POLL_VERSION,
+				     DEFAULT_USE_POLL_VERSION);
   }
 
   public CachedUrlSet getCachedUrlSet() {
@@ -172,6 +162,10 @@ public class PollSpec {
 
   public String getAuId() {
     return auId;
+  }
+
+  public String getPluginVersion() {
+    return (pluginVersion != null) ? pluginVersion : DEFAULT_PLUGIN_VERSION;
   }
 
   public String getUrl() {
@@ -187,12 +181,12 @@ public class PollSpec {
   }
 
   public String getRangeString() {
-    if ((lwrBound!=null) && (lwrBound.equals(SINGLE_NODE_LWRBOUND))) {
+    if (StringUtil.equalStrings(lwrBound, SINGLE_NODE_LWRBOUND)) {
       return "single node";
     }
-    String lwrDisplay = lwrBound;
-    String uprDisplay = uprBound;
     if (lwrBound != null || uprBound != null) {
+      String lwrDisplay = lwrBound;
+      String uprDisplay = uprBound;
       if (lwrBound != null && lwrBound.startsWith("/")) {
         lwrDisplay = lwrBound.substring(1);
       }
@@ -204,22 +198,20 @@ public class PollSpec {
     return null;
   }
 
-  public int getVersion() {
-    return version;
+  public int getPollVersion() {
+    return pollVersion;
   }
 
   private PluginManager getPluginManager() {
-    if(pluginMgr == null) {
-      pluginMgr = (PluginManager)LockssDaemon.getManager(
-          LockssDaemon.PLUGIN_MANAGER);
+    if (pluginMgr == null) {
+      pluginMgr =
+	(PluginManager)LockssDaemon.getManager(LockssDaemon.PLUGIN_MANAGER);
     }
     return pluginMgr;
   }
 
   public String toString() {
-    return "[PS: pid=" + "auid=" + auId + ", url=" + url
-      + ", l=" + lwrBound + ", u=" + uprBound + ", version=" + version + "]";
+    return "[PS: auid=" + auId + ", url=" + url
+      + ", l=" + lwrBound + ", u=" + uprBound + ", pollV=" + pollVersion + "]";
   }
 }
-
-
