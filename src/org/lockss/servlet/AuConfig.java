@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.15 2004-01-12 06:22:22 tlipkis Exp $
+ * $Id: AuConfig.java,v 1.16 2004-01-14 05:25:05 tlipkis Exp $
  */
 
 /*
@@ -576,7 +576,7 @@ public class AuConfig extends LockssServlet {
     if (aup.isActiveAu()) {
       updateAu(aup, "Reactivated");
     } else {
-      createAuFromPlugin("reactivated");
+      createAuFromPlugin("Reactivated");
     }
   }
 
@@ -586,17 +586,17 @@ public class AuConfig extends LockssServlet {
       AuProxy au =
 	remoteApi.createAndSaveAuConfiguration(plugin, formConfig);
       statusMsg = msg + " Archival Unit:<br>" + encodeText(au.getName());
-      displayEditAu(au);
+      displayAuSummary();
+      return;
     } catch (ArchivalUnit.ConfigurationException e) {
       log.error("Error configuring AU", e);
       errMsg = "Error configuring AU:<br>" + encodeText(e.getMessage());
-      displayEditNew();
     } catch (IOException e) {
       log.error("Error saving AU configuration", e);
       errMsg = "Error saving AU configuration:<br>" +
 	encodeText(e.getMessage());
-      displayEditNew();
     }
+    displayEditNew();
   }
 
   /** Process the Update button */
@@ -608,13 +608,14 @@ public class AuConfig extends LockssServlet {
       try {
 	remoteApi.setAndSaveAuConfiguration(au, formConfig);
 	statusMsg = msg + " Archival Unit:<br>" + encodeText(au.getName());
+	displayAuSummary();
+	return;
       } catch (ArchivalUnit.ConfigurationException e) {
 	log.error("Couldn't reconfigure AU", e);
 	errMsg = encodeText(e.getMessage());
       } catch (IOException e) {
 	log.error("Couldn't save AU configuraton", e);
 	errMsg = "Error saving AU:<br>" + encodeText(e.getMessage());
-	displayEditAu(au);
       }
     } else {
       statusMsg = "No changes made.";
@@ -648,6 +649,8 @@ public class AuConfig extends LockssServlet {
     try {
       remoteApi.deleteAu(au);
       statusMsg = "Deleted Archival Unit:<br>" + encodeText(name);
+      displayAuSummary();
+      return;
     } catch (ArchivalUnit.ConfigurationException e) {
       log.error("Can't happen", e);
       errMsg = encodeText(e.getMessage());
@@ -655,7 +658,7 @@ public class AuConfig extends LockssServlet {
       log.error("Couldn't save AU configuraton", e);
       errMsg = "Error deleting AU:<br>" + encodeText(e.getMessage());
     }
-    displayAuSummary();
+    confirmDeleteAu(au);
   }
 
   /** Display the Confirm Deactivate  page */
@@ -688,6 +691,8 @@ public class AuConfig extends LockssServlet {
     try {
       remoteApi.deactivateAu(au);
       statusMsg = "Deactivated Archival Unit:<br>" + encodeText(name);
+      displayAuSummary();
+      return;
     } catch (ArchivalUnit.ConfigurationException e) {
       log.error("Can't happen", e);
       errMsg = encodeText(e.getMessage());
@@ -695,7 +700,7 @@ public class AuConfig extends LockssServlet {
       log.error("Couldn't save AU configuraton", e);
       errMsg = "Error deactivating AU:<br>" + encodeText(e.getMessage());
     }
-    displayAuSummary();
+    confirmDeactivateAu(au);
   }
 
   /** Put a value from the config form into the properties, iff it is set
