@@ -1,5 +1,5 @@
 /*
- * $Id: TestTreeWalkThread.java,v 1.2 2003-03-20 01:53:21 aalto Exp $
+ * $Id: TestTreeWalkThread.java,v 1.3 2003-03-20 02:13:12 claire Exp $
  */
 
 /*
@@ -379,7 +379,7 @@ public class TestTreeWalkThread extends LockssTestCase {
       fail("can't create test name message" + ex.toString());
     }
     log.debug("daemon = " + theDaemon);
-    Poll p = TestPoll.createCompletedPoll(theDaemon,
+    Poll p = TestPoll.createCompletedPoll(theDaemon, mau,
                                           testmsg, numAgree, numDisagree);
     TestHistoryRepositoryImpl.configHistoryParams(tempDirPath);
     return p;

@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.50 2003-03-18 22:28:53 troberts Exp $
+* $Id: PollManager.java,v 1.51 2003-03-20 02:13:11 claire Exp $
  */
 
 /*
@@ -351,8 +351,13 @@ public class PollManager  implements LockssManager {
    */
   public void suspendPoll(String key) {
     PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
-    pme.setPollSuspended();
-    theLog.debug2("suspended poll " + key);
+    if(pme != null) {
+      pme.setPollSuspended();
+      theLog.debug2("suspended poll " + key);
+    }
+    else {
+      theLog.debug2("ignoring suspend request for unknown key " + key);
+    }
   }
 
 

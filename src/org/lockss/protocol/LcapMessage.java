@@ -1,34 +1,28 @@
 /*
-* $Id: LcapMessage.java,v 1.25 2003-02-27 01:50:48 claire Exp $
+ * $Id: LcapMessage.java,v 1.26 2003-03-20 02:13:11 claire Exp $
  */
 
 /*
-
-Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
-all rights reserved.
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
-STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
-IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-Except as contained in this notice, the name of Stanford University shall not
-be used in advertising or otherwise to promote the sale, use or other dealings
-in this Software without prior written authorization from Stanford University.
-
-*/
+ Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
+ all rights reserved.
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+ STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ Except as contained in this notice, the name of Stanford University shall not
+ be used in advertising or otherwise to promote the sale, use or other dealings
+ in this Software without prior written authorization from Stanford University.
+ */
 
 package org.lockss.protocol;
 
@@ -45,7 +39,6 @@ import java.security.*;
 import org.lockss.app.LockssDaemon;
 import org.lockss.poller.*;
 
-
 /**
  * <p>Description: used to encapsulate a message which has been received
  * or will be sent over the wire. </p>
@@ -53,7 +46,8 @@ import org.lockss.poller.*;
  * @version 1.0
  */
 
-public class LcapMessage implements Serializable {
+public class LcapMessage
+    implements Serializable {
   public static final int NAME_POLL_REQ = 0;
   public static final int NAME_POLL_REP = 1;
   public static final int CONTENT_POLL_REQ = 2;
@@ -68,12 +62,13 @@ public class LcapMessage implements Serializable {
 
   public static final String DEFAULT_HASH_ALGORITM = "SHA-1";
 
-  public static final String[] POLL_OPCODES =
-  {"NameReq", "NameRep",
-    "ContentReq", "ContentRep",
-    "VerifyReq", "VerifyRep"};
+  public static final String[] POLL_OPCODES = {
+      "NameReq", "NameRep",
+      "ContentReq", "ContentRep",
+      "VerifyReq", "VerifyRep"};
 
-  public static final String[] POLL_NAMES = {"NamePoll", "ContentPoll", "VerfiyPoll"};
+  public static final String[] POLL_NAMES = {
+      "NamePoll", "ContentPoll", "VerfiyPoll"};
 
   public static final int MAX_HOP_COUNT = 16;
   public static final int SHA_LENGTH = 20;
@@ -87,36 +82,37 @@ public class LcapMessage implements Serializable {
     6-7       property length
     8-27      SHA-1 hash of encoded properties
     28-End    encoded properties
-  */
+   */
   /* items which are not in the property list */
-  byte[]             m_signature;   // magic number + version (4 bytes)
-  boolean            m_multicast;   // multicast flag - modifiable
-  byte               m_hopCount;    // current hop count - modifiable
-  byte[]             m_pktHash;     // hash of remaining packet
-  int                m_length;      // length of remaining packet
+  byte[] m_signature; // magic number + version (4 bytes)
+  boolean m_multicast; // multicast flag - modifiable
+  byte m_hopCount; // current hop count - modifiable
+  byte[] m_pktHash; // hash of remaining packet
+  int m_length; // length of remaining packet
 
   /* items which are in the property list */
-  InetAddress        m_originAddr;    // the address of the originator
-  protected String   m_hashAlgorithm; // the algorithm used to hash
-  byte               m_ttl;         // The original time-to-live
-  long               m_startTime;   // the original start time
-  long               m_stopTime;    // the original stop time
-  int                m_opcode;      // the kind of packet
-  protected String   m_archivalID;  // the archival unit
-  protected String   m_pluginID;    // the plugin
-  protected String   m_targetUrl;   // the target URL
-  protected String   m_lwrBound;    // the boundary for the url range (opt)
-  protected String   m_uprBound;    // the boundary for the url range (opt)
-  protected byte[]   m_challenge;   // the challenge bytes
-  protected byte[]   m_verifier;    // th verifier bytes
-  protected byte[]   m_hashed;      // the hash of content
-  protected String   m_lwrRem;      // the remaining entries lwr bound (opt)
-  protected String   m_uprRem;      // the remaining entries upr bound (opt)
-  protected String[] m_entries;     // the name poll entry list (opt)
+  InetAddress m_originAddr; // the address of the originator
+  protected String m_hashAlgorithm; // the algorithm used to hash
+  byte m_ttl; // The original time-to-live
+  long m_startTime; // the original start time
+  long m_stopTime; // the original stop time
+  int m_opcode; // the kind of packet
+  protected String m_archivalID; // the archival unit
+  protected String m_pluginID; // the plugin
+  protected String m_targetUrl; // the target URL
+  protected String m_lwrBound; // the boundary for the url range (opt)
+  protected String m_uprBound; // the boundary for the url range (opt)
+  protected byte[] m_challenge; // the challenge bytes
+  protected byte[] m_verifier; // th verifier bytes
+  protected byte[] m_hashed; // the hash of content
+  protected String m_lwrRem; // the remaining entries lwr bound (opt)
+  protected String m_uprRem; // the remaining entries upr bound (opt)
+  protected Object[] m_entries; // the name poll entry list (opt)
 
   private EncodedProperty m_props;
-  private static byte[] signature = {'l','p','m','1'};
-  private static Logger log = Logger.getLogger("Message");
+  private static byte[] signature = {
+      'l', 'p', 'm', '1'};
+  private static Logger log = Logger.getLogger("LcapMessage");
   private static byte theSendHopcount = -1;
   private String m_key = null;
 
@@ -132,13 +128,13 @@ public class LcapMessage implements Serializable {
       decodeMsg(encodedBytes);
     }
     catch (IOException ex) {
-      log.error("Unreadable Packet",ex);
+      log.error("Unreadable Packet", ex);
       throw new ProtocolException("Unable to decode pkt.");
     }
   }
 
-  protected LcapMessage( PollSpec ps,
-      String[] entries,
+  protected LcapMessage(PollSpec ps,
+                        Object[] entries,
                         byte ttl,
                         byte[] challenge,
                         byte[] verifier,
@@ -170,12 +166,12 @@ public class LcapMessage implements Serializable {
                         LcapIdentity localID,
                         byte[] verifier,
                         byte[] hashedContent,
-                        String[] entries,
+                        Object[] entries,
                         int opcode) throws IOException {
 
     this();
     // copy the essential information from the trigger packet
-    m_hopCount =trigger.getHopCount();
+    m_hopCount = trigger.getHopCount();
     m_ttl = trigger.getTimeToLive();
     m_challenge = trigger.getChallenge();
     m_targetUrl = trigger.getTargetUrl();
@@ -196,8 +192,8 @@ public class LcapMessage implements Serializable {
   }
 
   public static String getDefaultHashAlgorithm() {
-    String algorithm =  Configuration.getParam( PARAM_HASH_ALGORITHM,
-        DEFAULT_HASH_ALGORITM);
+    String algorithm = Configuration.getParam(PARAM_HASH_ALGORITHM,
+                                              DEFAULT_HASH_ALGORITM);
     return algorithm;
   }
 
@@ -205,13 +201,13 @@ public class LcapMessage implements Serializable {
     MessageDigest hasher = null;
     try {
       hasher = MessageDigest.getInstance(getDefaultHashAlgorithm());
-    } catch (NoSuchAlgorithmException ex) {
+    }
+    catch (NoSuchAlgorithmException ex) {
       log.error("Unable to run - no hasher");
     }
 
     return hasher;
   }
-
 
   /**
    * get a property that was decoded and stored for this packet
@@ -244,7 +240,7 @@ public class LcapMessage implements Serializable {
    * @throws IOException if unable to create message
    */
   static public LcapMessage makeRequestMsg(PollSpec pollspec,
-                                           String[] entries,
+                                           Object[] entries,
                                            byte[] challenge,
                                            byte[] verifier,
                                            int opcode,
@@ -279,13 +275,13 @@ public class LcapMessage implements Serializable {
    * @throws IOException if message construction failed
    */
   static public LcapMessage makeReplyMsg(LcapMessage trigger,
-      byte[] hashedContent,
-      byte[] verifier,
-      String[] entries,
-      int opcode,
-      long timeRemaining,
-      LcapIdentity localID)
-      throws IOException {
+                                         byte[] hashedContent,
+                                         byte[] verifier,
+                                         Object[] entries,
+                                         int opcode,
+                                         long timeRemaining,
+                                         LcapIdentity localID) throws
+      IOException {
     if (hashedContent == null) {
       log.error("Making a reply message with null hashed content");
     }
@@ -308,7 +304,7 @@ public class LcapMessage implements Serializable {
   static public LcapMessage decodeToMsg(byte[] data,
                                         boolean mcast) throws IOException {
     LcapMessage msg = new LcapMessage(data);
-    if(msg != null) {
+    if (msg != null) {
       msg.m_multicast = mcast;
     }
     return msg;
@@ -325,23 +321,23 @@ public class LcapMessage implements Serializable {
     long duration;
     long elapsed;
     String addr;
-    int    port;
+    int port;
 
     // the mutable stuff
     DataInputStream dis =
         new DataInputStream(new ByteArrayInputStream(encodedBytes));
 
     // read in the header
-    for(int i=0; i< signature.length; i++) {
-      if(signature[i] != dis.readByte()) {
+    for (int i = 0; i < signature.length; i++) {
+      if (signature[i] != dis.readByte()) {
         throw new ProtocolException("Invalid Signature");
       }
     }
 
     m_multicast = dis.readBoolean();
-    m_hopCount =  dis.readByte();
+    m_hopCount = dis.readByte();
 
-    if(!hopCountInRange(m_hopCount)) {
+    if (!hopCountInRange(m_hopCount)) {
       throw new ProtocolException("Hop count out of range.");
     }
     m_hopCount--;
@@ -352,7 +348,7 @@ public class LcapMessage implements Serializable {
     dis.read(hash_bytes);
     dis.read(prop_bytes);
 
-    if(!verifyHash(hash_bytes,prop_bytes)) {
+    if (!verifyHash(hash_bytes, prop_bytes)) {
       throw new ProtocolException("Hash verification failed.");
     }
 
@@ -365,14 +361,14 @@ public class LcapMessage implements Serializable {
     try {
       m_originAddr = LcapIdentity.stringToAddr(addr_str);
     }
-    catch(UnknownHostException ex) {
+    catch (UnknownHostException ex) {
       log.warning("Unknown originating host:" + addr_str);
     }
 
     m_hashAlgorithm = m_props.getProperty("hashAlgorithm");
     m_ttl = (byte) m_props.getInt("ttl", 0);
     duration = m_props.getInt("duration", 0) * 1000;
-    elapsed = m_props.getInt("elapsed", 0)* 1000;
+    elapsed = m_props.getInt("elapsed", 0) * 1000;
     m_opcode = m_props.getInt("opcode", -1);
     m_pluginID = m_props.getProperty("plugin", "UNKNOWN");
     m_archivalID = m_props.getProperty("au", "UNKNOWN");
@@ -401,54 +397,54 @@ public class LcapMessage implements Serializable {
     try {
       m_props.setProperty("origIP", LcapIdentity.addrToString(m_originAddr));
     }
-    catch(NullPointerException npe) {
+    catch (NullPointerException npe) {
       throw new ProtocolException("encode - null origin host address.");
     }
 
     m_props.setProperty("hashAlgorithm", m_hashAlgorithm);
-    m_props.putInt("ttl",m_ttl);
-    m_props.putInt("duration",(int)(getDuration()/1000));
-    m_props.putInt("elapsed",(int)(getElapsed()/1000));
-    m_props.putInt("opcode",m_opcode);
+    m_props.putInt("ttl", m_ttl);
+    m_props.putInt("duration", (int) (getDuration() / 1000));
+    m_props.putInt("elapsed", (int) (getElapsed() / 1000));
+    m_props.putInt("opcode", m_opcode);
     m_props.setProperty("url", m_targetUrl);
 
-    if(m_lwrBound != null) {
+    if (m_lwrBound != null) {
       m_props.setProperty("lwrBnd", m_lwrBound);
     }
 
-    if(m_uprBound != null) {
+    if (m_uprBound != null) {
       m_props.setProperty("uprBnd", m_uprBound);
     }
 
-    if(m_pluginID == null) {
+    if (m_pluginID == null) {
       m_pluginID = "UNKNOWN";
     }
     m_props.setProperty("plugin", m_pluginID);
 
-    if(m_archivalID == null) {
+    if (m_archivalID == null) {
       m_archivalID = "UNKNOWN";
     }
     m_props.setProperty("au", m_archivalID);
     m_props.putByteArray("challenge", m_challenge);
     m_props.putByteArray("verifier", m_verifier);
-    if(m_hashed != null) {
+    if (m_hashed != null) {
       m_props.putByteArray("hashed", m_hashed);
     }
-    else if(m_opcode % 2 == 1) { // if we're a reply we'd better have a hash
+    else if (m_opcode % 2 == 1) { // if we're a reply we'd better have a hash
       throw new ProtocolException("encode - missing hash in reply packet.");
     }
     byte[] cur_bytes = m_props.encode();
     int remaining_bytes = MAX_PACKET_SIZE - cur_bytes.length - 28;
 
     if (m_entries != null) {
-      m_props.setProperty("entries",entriesToString(remaining_bytes));
+      m_props.setProperty("entries", entriesToString(remaining_bytes));
     }
 
-    if(m_lwrRem != null) {
+    if (m_lwrRem != null) {
       m_props.setProperty("lwrRem", m_lwrRem);
     }
 
-    if(m_uprRem != null) {
+    if (m_uprRem != null) {
       m_props.setProperty("uprRem", m_uprRem);
     }
 
@@ -513,7 +509,7 @@ public class LcapMessage implements Serializable {
     return m_ttl;
   }
 
-  public InetAddress getOriginAddr(){
+  public InetAddress getOriginAddr() {
     return m_originAddr;
   }
 
@@ -541,7 +537,7 @@ public class LcapMessage implements Serializable {
     m_multicast = multicast;
   }
 
-  public String[] getEntries() {
+  public Object[] getEntries() {
     return m_entries;
   }
 
@@ -566,7 +562,7 @@ public class LcapMessage implements Serializable {
   }
 
   public void setHopCount(int hopCount) {
-    m_hopCount = (byte)hopCount;
+    m_hopCount = (byte) hopCount;
   }
 
   public byte[] getChallenge() {
@@ -581,26 +577,24 @@ public class LcapMessage implements Serializable {
     return m_hashed;
   }
 
-
   public String getTargetUrl() {
     return m_targetUrl;
   }
-
 
   public String getHashAlgorithm() {
     return m_hashAlgorithm;
   }
 
   public String getKey() {
-    if(m_key == null) {
+    if (m_key == null) {
       m_key = String.valueOf(B64Code.encode(m_challenge));
     }
     return m_key;
   }
 
   static byte sendHopCount() {
-    if(theSendHopcount == -1) {
-      theSendHopcount = (byte)Configuration.getIntParam(PARAM_SEND_HOPCOUNT,5);
+    if (theSendHopcount == -1) {
+      theSendHopcount = (byte) Configuration.getIntParam(PARAM_SEND_HOPCOUNT, 5);
     }
     return theSendHopcount;
   }
@@ -610,34 +604,36 @@ public class LcapMessage implements Serializable {
 
     m_lwrRem = null;
     m_uprRem = null;
-
-    for(int i= 0; i< m_entries.length; i++) {
+    log.debug3("Entries To String max buffer size: " + maxBufSize);
+    for (int i = 0; i < m_entries.length; i++) {
       // if the length of this entry < max buffer
       byte[] cur_bytes = m_props.encodeString(buf.toString());
-      byte[] entry_bytes = m_props.encodeString(m_entries[i]);
-      if(cur_bytes.length + entry_bytes.length < maxBufSize) {
-        buf.append(m_entries[i]);
+      byte[] entry_bytes = m_props.encodeString((String)m_entries[i]);
+      if (cur_bytes.length + entry_bytes.length < maxBufSize) {
+        buf.append((String)m_entries[i]);
         buf.append("\n");
       }
       else {
         // we need to set RERemaining and break
-        m_lwrRem = m_entries[i];
+        m_lwrRem = (String)m_entries[i];
         m_uprRem = m_uprBound;
         break;
       }
     }
+    log.debug3("Entries string: " + buf.toString()
+              + " l_rem: " + m_lwrRem + " u_rem: " + m_uprRem);
     return buf.toString();
   }
 
   String[] stringToEntries(String estr) {
-    if(estr == null || estr.length() <= 0) {
+    if (estr == null || estr.length() <= 0) {
       return null;
     }
-    StringTokenizer tokenizer = new StringTokenizer(estr,"\n");
+    StringTokenizer tokenizer = new StringTokenizer(estr, "\n");
     String[] ret = new String[tokenizer.countTokens()];
     int i = 0;
 
-    while(tokenizer.hasMoreTokens()) {
+    while (tokenizer.hasMoreTokens()) {
       ret[i++] = tokenizer.nextToken();
     }
     return ret;
@@ -661,6 +657,9 @@ public class LcapMessage implements Serializable {
       sb.append(" H:");
       sb.append(String.valueOf(B64Code.encode(m_hashed)));
     }
+    if(m_entries != null) {
+
+    }
     sb.append("]");
     return sb.toString();
   }
@@ -671,13 +670,14 @@ public class LcapMessage implements Serializable {
     return true;
   }
 
-  private static boolean verifyHash(byte[] hashValue, byte[]data) {
+  private static boolean verifyHash(byte[] hashValue, byte[] data) {
     try {
       MessageDigest hasher = MessageDigest.getInstance("SHA");
       hasher.update(data);
       byte[] hashed = hasher.digest();
-      return Arrays.equals(hashValue,hashed);
-    } catch (java.security.NoSuchAlgorithmException e) {
+      return Arrays.equals(hashValue, hashed);
+    }
+    catch (java.security.NoSuchAlgorithmException e) {
       return false;
     }
   }
@@ -688,7 +688,8 @@ public class LcapMessage implements Serializable {
       hasher.update(data);
       byte[] hashed = hasher.digest();
       return hashed;
-    } catch (java.security.NoSuchAlgorithmException e) {
+    }
+    catch (java.security.NoSuchAlgorithmException e) {
       return new byte[0];
     }
   }

@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.55 2003-03-15 03:24:05 claire Exp $
+* $Id: Poll.java,v 1.56 2003-03-20 02:13:11 claire Exp $
  */
 
 /*
@@ -534,8 +534,8 @@ public abstract class Poll implements Serializable {
     ArrayList pollVotes;
     String hashAlgorithm; // the algorithm used to hash this poll
 
-    String[] localEntries = null;  // the local entries less the remaining RegExp
-    String[] votedEntries = null;  // entries which match the won votes in a poll
+    Object[] localEntries = null;  // the local entries less the remaining RegExp
+    Object[] votedEntries = null;  // entries which match the won votes in a poll
     private Deadline replayDeadline = null;
     private Iterator replayIter = null;
     private ArrayList originalVotes = null;

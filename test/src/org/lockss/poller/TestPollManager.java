@@ -263,7 +263,7 @@ public class TestPollManager extends LockssTestCase {
   public void testSuspendPoll() {
     Poll p1 = null;
     try {
-      p1 = TestPoll.createCompletedPoll(daemon, testmsg[0], 7, 2);
+      p1 = TestPoll.createCompletedPoll(daemon, testau, testmsg[0], 7, 2);
       pollmanager.addPoll(p1);
 
     }

@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.64 2003-03-20 01:53:21 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.65 2003-03-20 02:13:11 claire Exp $
  */
 
 /*
@@ -308,7 +308,7 @@ public class NodeManagerImpl implements NodeManager {
   }
 
   NodeState addNodeState(CachedUrlSet cus) {
-    logger.debug3("Loading NodeState: " + cus.toString());
+    logger.debug2("Loading NodeState: " + cus.toString());
     // load from file cache, or get a new one
     NodeStateImpl state = (NodeStateImpl)historyRepo.loadNodeState(cus);
     state.setNodeManagerImpl(this);
@@ -365,7 +365,7 @@ public class NodeManagerImpl implements NodeManager {
     } else {
       // if disagree
       if (pollState.getStatus() == PollState.REPAIRING) {
-        logger.debug2("lost repair poll, state = unrepairable");
+        logger.debug2("lost repair content poll, state = unrepairable");
         // if repair poll, can't be repaired
         pollState.status = PollState.UNREPAIRABLE;
         updateReputations(results);
@@ -375,13 +375,13 @@ public class NodeManagerImpl implements NodeManager {
         pollState.status = PollState.LOST;
         callNamePoll(results.getCachedUrlSet());
       } else {
-        logger.debug2("lost content poll, state = repairing, node marked for repair.");
+        logger.debug2("lost content poll, state = repairing, marking for repair.");
         // if leaf node, we need to repair
         pollState.status = PollState.REPAIRING;
         try {
           markNodeForRepair(nodeState.getCachedUrlSet(), results);
         } catch (IOException ioe) {
-          logger.error("Repair attempt failed.", ioe);
+          logger.error("Attempt to mark node for repair failed.", ioe);
           // the treewalk will fix this eventually
         }
       }
@@ -411,7 +411,7 @@ public class NodeManagerImpl implements NodeManager {
     } else {
       // if disagree
       logger.debug2("lost name poll, collecting repair info.");
-      String baseUrl = nodeState.getCachedUrlSet().getUrl() + "/";
+      String baseUrl = nodeState.getCachedUrlSet().getUrl();
       pollState.status = PollState.REPAIRING;
       Iterator masterIt = results.getCorrectEntries();
       Iterator localIt = results.getLocalEntries();
@@ -427,7 +427,7 @@ public class NodeManagerImpl implements NodeManager {
         } else {
           // if not found locally, fetch
           try {
-            logger.debug3("marking missing node for repair: " + url);
+            logger.debug2("marking missing node for repair: " + url);
             CachedUrlSet newCus = au.makeCachedUrlSet(baseUrl+url, null, null);
             markNodeForRepair(newCus, results);
           } catch (Exception e) {
@@ -440,7 +440,7 @@ public class NodeManagerImpl implements NodeManager {
       while (localIt.hasNext()) {
         // for extra items - deletion
         String url = (String)localIt.next();
-        logger.debug3("deleting node: " + url);
+        logger.debug2("deleting node: " + url);
         try {
           CachedUrlSet oldCus = au.makeCachedUrlSet(baseUrl + url, null, null);
           deleteNode(oldCus);
@@ -484,8 +484,9 @@ public class NodeManagerImpl implements NodeManager {
     PollHistory history = new PollHistory(pollState, duration, votes);
     ((NodeStateImpl)nodeState).closeActivePoll(history);
     historyRepo.storePollHistories(nodeState);
-    logger.debug3("Closing poll for url '" +
-                  nodeState.getCachedUrlSet().getUrl() + "'");
+    logger.debug2("Closing poll for url '" +
+                  nodeState.getCachedUrlSet().getUrl() + " " +
+                  pollState.getLwrBound() + "-" + pollState.getUprBound() + "'");
     // if this is an AU top-level content poll
     // update the AuState to indicate the poll is finished
     if ((AuUrl.isAuUrl(nodeState.getCachedUrlSet().getUrl())) &&
@@ -544,6 +545,7 @@ public class NodeManagerImpl implements NodeManager {
     ArrayList childList = new ArrayList();
 
     Iterator children = results.getCachedUrlSet().flatSetIterator();
+
     while (children.hasNext()) {
       CachedUrlSetNode child = (CachedUrlSetNode)children.next();
       CachedUrlSet cus = null;
@@ -558,7 +560,7 @@ public class NodeManagerImpl implements NodeManager {
       childList.add(cus);
     }
     // Divide the list in two and call two new content polls
-    if(childList.size() > 4) {
+    if (childList.size() > 4) {
       String base = results.getCachedUrlSet().getSpec().getUrl();
       int mid = childList.size() / 2;
       String lwr = ( (CachedUrlSet) childList.get(0)).getSpec().getUrl();
@@ -580,11 +582,13 @@ public class NodeManagerImpl implements NodeManager {
       theDaemon.getPollManager().requestPoll(LcapMessage.CONTENT_POLL_REQ,
                                              pspec);
     }
-    else {
+    else if (childList.size() > 0) {
       logger.debug2("less than 4 items, calling content poll on all items.");
-      for(int i=0; i< childList.size(); i++) {
+      for (int i = 0; i < childList.size(); i++) {
+        PollSpec pspec = new PollSpec( (CachedUrlSet) childList.get(i));
+        logger.debug2("calling content poll on " + pspec);
         theDaemon.getPollManager().requestPoll(LcapMessage.CONTENT_POLL_REQ,
-        new PollSpec((CachedUrlSet)childList.get(i)));
+                                               pspec);
       }
     }
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.45 2003-03-20 01:53:21 aalto Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.46 2003-03-20 02:13:12 claire Exp $
  */
 
 /*
@@ -362,6 +362,70 @@ public class TestNodeManagerImpl extends LockssTestCase {
     theDaemon.getPollManager().stopService();
   }
 
+  public void testHandleNamePoll() throws Exception {
+    theDaemon.getHashService().startService();
+    theDaemon.getPollManager().startService();
+    namePoll = createPoll(TEST_URL + "/branch2", false, 10, 5);
+    Poll.VoteTally results = namePoll.getVoteTally();
+    PollSpec spec = results.getPollSpec();
+    NodeState nodeState =
+      nodeManager.getNodeState(getCUS(mau, TEST_URL + "/branch2"));
+    // won name poll
+    PollState pollState = new PollState(results.getType(),
+                                        spec.getLwrBound(),
+                                        spec.getUprBound(),
+                                        PollState.RUNNING,
+                                        results.getStartTime(),
+                                        null);
+    MockCachedUrlSet mcus = (MockCachedUrlSet)results.getCachedUrlSet();
+    Vector subFiles = new Vector(2);
+    subFiles.add(getCUS(mau, TEST_URL + "/branch2/file1.doc"));
+    subFiles.add(getCUS(mau, TEST_URL + "/branch2/file2.doc"));
+    mcus.setFlatItSource(subFiles);
+    nodeManager.handleNamePoll(pollState, results, nodeState);
+    // we should call a content poll on the subnodes here
+    assertEquals(MockPollManager.CONTENT_REQUESTED,
+                 ((MockPollManager)theDaemon.getPollManager()).getPollStatus(
+        TEST_URL + "/branch2/file1.doc"));
+    assertEquals(MockPollManager.CONTENT_REQUESTED,
+                 ((MockPollManager)theDaemon.getPollManager()).getPollStatus(
+        TEST_URL + "/branch2/file2.doc"));
+
+    assertEquals(PollState.WON, pollState.getStatus());
+
+    // lost name poll (these are the artificial results)
+    String deleteUrl = TEST_URL + "/branch2/testentry2.html";
+    String repairUrl = TEST_URL + "/branch2/testentry4.html";
+    String repairUrl2 = TEST_URL + "/branch2/testentry5.html";
+
+    contentPoll = createPoll(TEST_URL + "/branch2", false, 5, 10);
+    results = contentPoll.getVoteTally();
+    spec = results.getPollSpec();
+    pollState = new PollState(results.getType(),
+                              spec.getLwrBound(),
+                              spec.getUprBound(),
+
+                              PollState.RUNNING,
+                              results.getStartTime(),
+                              null);
+    RepositoryNode repoNode = theDaemon.getLockssRepository(mau).createNewNode(
+        deleteUrl);
+    assertFalse(repoNode.isInactive());
+    nodeManager.handleNamePoll(pollState, results, nodeState);
+    assertEquals(PollState.REPAIRED, pollState.getStatus());
+
+    assertEquals(MockCrawlManager.SCHEDULED,
+                 ((MockCrawlManager)theDaemon.getCrawlManager()).getUrlStatus(
+        repairUrl));
+    assertEquals(MockCrawlManager.SCHEDULED,
+                 ((MockCrawlManager)theDaemon.getCrawlManager()).getUrlStatus(
+        repairUrl2));
+    assertTrue(repoNode.isInactive());
+
+    theDaemon.getHashService().stopService();
+    theDaemon.getPollManager().stopService();
+  }
+
   public void testHandleAuPolls() throws Exception {
     theDaemon.getHashService().startService();
     theDaemon.getPollManager().startService();
@@ -411,6 +475,11 @@ public class TestNodeManagerImpl extends LockssTestCase {
     // test that won name poll calls content polls on Au children
     contentPoll = createPoll(auUrl, false, 10, 5);
     results = contentPoll.getVoteTally();
+    MockCachedUrlSet mcus2 = (MockCachedUrlSet)results.getCachedUrlSet();
+    Vector subFiles = new Vector(2);
+    subFiles.add(getCUS(mau, "testDir1"));
+    subFiles.add(getCUS(mau, "testDir2"));
+    mcus2.setFlatItSource(subFiles);
     pollState = new PollState(results.getType(),
                                         spec.getLwrBound(),
                                         spec.getUprBound(),
@@ -421,87 +490,16 @@ public class TestNodeManagerImpl extends LockssTestCase {
     nodeManager.updateState(nodeState, results);
     assertEquals(PollState.WON, pollState.getStatus());
     assertEquals(TimeBase.nowMs(), auState.getLastTopLevelPollTime());
-    /*
-     This is no longer correct, the Name Poll is going to use the VoteTally
-     to get the needed polls since Node states don't contain appropriate
-     range information.  This needs a different test using better mock polls
-
     assertEquals(MockPollManager.CONTENT_REQUESTED,
                  ((MockPollManager)theDaemon.getPollManager()).getPollStatus(
         "testDir1"));
     assertEquals(MockPollManager.CONTENT_REQUESTED,
                  ((MockPollManager)theDaemon.getPollManager()).getPollStatus(
         "testDir2"));
-     */
     theDaemon.getHashService().stopService();
     theDaemon.getPollManager().stopService();
   }
 
-  public void testHandleNamePoll() throws Exception {
-    theDaemon.getHashService().startService();
-    theDaemon.getPollManager().startService();
-    contentPoll = createPoll(TEST_URL + "/branch2", false, 10, 5);
-    Poll.VoteTally results = contentPoll.getVoteTally();
-    PollSpec spec = results.getPollSpec();
-    NodeState nodeState =
-      nodeManager.getNodeState(getCUS(mau, TEST_URL + "/branch2"));
-    // won name poll
-    PollState pollState = new PollState(results.getType(),
-                                        spec.getLwrBound(),
-                                        spec.getUprBound(),
-
-                                        PollState.RUNNING,
-                                        results.getStartTime(),
-                                        null);
-    nodeManager.handleNamePoll(pollState, results, nodeState);
-    // test poll request
-    /*
-     This is no longer correct, the Name Poll is going to use the VoteTally
-     to get the needed polls since Node states don't contain appropriate
-     range information.  This needs a different test
-    assertEquals(MockPollManager.CONTENT_REQUESTED,
-                 ((MockPollManager)theDaemon.getPollManager()).getPollStatus(
-        TEST_URL + "/branch2/file1.doc"));
-    assertEquals(MockPollManager.CONTENT_REQUESTED,
-                 ((MockPollManager)theDaemon.getPollManager()).getPollStatus(
-        TEST_URL+"/branch2/file2.doc"));
-     */
-    // was used (should have created an IO error, but didn't)
-    assertEquals(PollState.WON, pollState.getStatus());
-
-    // lost name poll (these are the artificial results)
-    String deleteUrl = TEST_URL + "/branch2/entry 2";
-    String repairUrl = TEST_URL + "/branch2/entry 3";
-    String repairUrl2 = TEST_URL + "/branch2/entry 4";
-
-    contentPoll = createPoll(TEST_URL + "/branch2", false, 5, 10);
-    results = contentPoll.getVoteTally();
-    spec = results.getPollSpec();
-    pollState = new PollState(results.getType(),
-                              spec.getLwrBound(),
-                              spec.getUprBound(),
-
-                              PollState.RUNNING,
-                              results.getStartTime(),
-                              null);
-    RepositoryNode repoNode = theDaemon.getLockssRepository(mau).createNewNode(
-        deleteUrl);
-    assertFalse(repoNode.isInactive());
-
-    nodeManager.handleNamePoll(pollState, results, nodeState);
-    assertEquals(PollState.REPAIRED, pollState.getStatus());
-
-    assertEquals(MockCrawlManager.SCHEDULED,
-                 ((MockCrawlManager)theDaemon.getCrawlManager()).getUrlStatus(
-        repairUrl));
-    assertEquals(MockCrawlManager.SCHEDULED,
-                 ((MockCrawlManager)theDaemon.getCrawlManager()).getUrlStatus(
-        repairUrl2));
-    assertTrue(repoNode.isInactive());
-
-    theDaemon.getHashService().stopService();
-    theDaemon.getPollManager().stopService();
-  }
 
   private void testReputationChanges(Poll.VoteTally results) {
     Iterator voteIt = results.getPollVotes().iterator();
@@ -521,8 +519,10 @@ public class TestNodeManagerImpl extends LockssTestCase {
     return new MockCachedUrlSet(mau, new RangeCachedUrlSetSpec(url));
   }
 
-  static CachedUrlSet makeFakeCachedUrlSet(MockArchivalUnit mau, String startUrl, int numBranches,
-                                            int numFiles) throws Exception {
+  static CachedUrlSet makeFakeCachedUrlSet(MockArchivalUnit mau,
+                                           String startUrl,
+                                           int numBranches,
+                                           int numFiles) throws Exception {
     Vector files = new Vector(numFiles * numBranches);
     Vector branches = new Vector(numBranches);
 
@@ -602,7 +602,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
       testmsg = LcapMessage.makeRequestMsg(
           new PollSpec(mau.getPluginId(),
 		       mau.getAUId(),
-		       url, "lwr", "upr", null),
+		       url, null, null, null),
           null,
           bytes,
           bytes,
@@ -615,7 +615,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
       fail("can't create test name message" + ex.toString());
     }
     log.debug("daemon = " + theDaemon);
-    Poll p = TestPoll.createCompletedPoll(theDaemon,
+    Poll p = TestPoll.createCompletedPoll(theDaemon, mau,
 					  testmsg, numAgree, numDisagree);
     TestHistoryRepositoryImpl.configHistoryParams(tempDirPath);
     return p;

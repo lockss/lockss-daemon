@@ -1,3 +1,6 @@
+#org.lockss.log.GenericHasher.level=debug
+#org.lockss.log.LcapMessage.level=debug3
+
 org.lockss.ui.start=yes
 org.lockss.proxy.start=yes
 org.lockss.localIPAddress=1.1.1.1
@@ -8,11 +11,11 @@ org.lockss.comm.unicast.sendToAddr=127.0.0.1
 org.lockss.cache.location=.
 
 #au config settings
-org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.localA.badFileLoc=1,1
+org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.localA.badFileLoc=1
 org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.localA.badFileNum=1
 
 #test settings
-org.lockss.test.treewalk=true
+org.lockss.test.treewalk=false
 org.lockss.treewalk.pluginId=org|lockss|plugin|simulated|SimulatedPlugin
 org.lockss.treewalk.auId=localA
 
@@ -20,6 +23,6 @@ org.lockss.test.poll=true
 org.lockss.poll.type=2
 org.lockss.pollspec.pluginId=org|lockss|plugin|simulated|SimulatedPlugin
 org.lockss.pollspec.auId=localA
-org.lockss.pollspec.url=LOCKSSAU:
+org.lockss.pollspec.url=http://www.example.com
 #org.lockss.pollspec.lwrBound=
 #org.lockss.pollspec.uprBound=

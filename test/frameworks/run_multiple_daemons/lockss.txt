@@ -1,10 +1,10 @@
 # LOCKSS & LCAP tuning parameters
 org.lockss.log.default.level=info
 org.lockss.log.LockssRepository=debug
-org.lockss.log.PollManager.level=debug2
+org.lockss.log.PollManager.level=debug
 org.lockss.log.Poll.level=info
 org.lockss.log.Comm.level=info
-org.lockss.log.NodeManager.level=debug3
+org.lockss.log.NodeManager.level=debug2
 org.lockss.log.Message.level=info
 org.lockss.log.GenericHasher.level=info
 org.lockss.log.MSock_3456_Rcv.level=info
@@ -44,7 +44,7 @@ org.lockss.protocol.hashAlgorithm=SHA-1
 org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.localA.root=localA
 org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.localA.depth=2
 org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.localA.branch=2
-#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.localA.numFiles=3
+org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.localA.numFiles=4
 #org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.<dir>.binFileSize=<n>
 #org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.<dir>.maxFileName=<n>
 #org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.<dir>.fileTypes=<n>
@@ -52,7 +52,7 @@ org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.localA.branch=2
 #org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.<dir>.badFileNum=<n>
 
 # poll settings
-org.lockss.poll.maxpolls=12
+org.lockss.poll.maxpolls=20
 org.lockss.poll.quorum=3
 org.lockss.poll.agreeVerify=0
 org.lockss.poll.disagreeVerify=0

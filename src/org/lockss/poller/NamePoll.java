@@ -1,5 +1,5 @@
 /*
- * $Id: NamePoll.java,v 1.40 2003-03-11 02:47:08 claire Exp $
+ * $Id: NamePoll.java,v 1.41 2003-03-20 02:13:11 claire Exp $
  */
 
 /*
@@ -44,7 +44,7 @@ import org.lockss.plugin.*;
 public class NamePoll
     extends Poll {
 
-  String[] m_entries;
+  ArrayList m_entries;
 
   public NamePoll(LcapMessage msg, PollSpec pollspec, PollManager pm) {
     super(msg, pollspec, pm);
@@ -61,7 +61,7 @@ public class NamePoll
     long remainingTime = m_deadline.getRemainingTime();
     try {
       msg = LcapMessage.makeReplyMsg(m_msg, m_hash, m_verifier,
-                                     getEntries(), m_replyOpcode,
+                                     getEntries().toArray(), m_replyOpcode,
                                      remainingTime, local_id);
       log.debug("vote:" + msg.toString());
       m_pollmanager.sendMessage(msg, m_arcUnit);
@@ -149,7 +149,7 @@ public class NamePoll
     super.tally();
   }
 
-  String[] getEntries() {
+  ArrayList getEntries() {
     if (m_entries == null) {
       Iterator it = m_urlSet.flatSetIterator();
       ArrayList alist = new ArrayList();
@@ -161,7 +161,7 @@ public class NamePoll
         }
         alist.add(name);
       }
-      m_entries = (String[]) alist.toArray(new String[alist.size()]);
+      m_entries = alist;
     }
     return m_entries;
   }
@@ -213,7 +213,7 @@ public class NamePoll
       if (lwrRem != null) {
         // we call a new poll on the remaining entries and set the regexp
         try {
-          PollSpec spec = new PollSpec(m_pollspec.getCachedUrlSet(),lwrRem,uprRem);
+          PollSpec spec = new PollSpec(m_pollspec.getCachedUrlSet(),lwrRem, uprRem);
           m_pollmanager.requestPoll(LcapMessage.NAME_POLL_REQ, spec);
         }
         catch (IOException ex) {
@@ -221,15 +221,18 @@ public class NamePoll
         }
         // we make our list from whatever is in our
         // master list that doesn't match the remainder;
-        HashSet localSet = new HashSet();
-        Iterator localIt = new ArrayIterator(getEntries());
+        ArrayList localSet = new ArrayList();
+        Iterator localIt = getEntries().iterator();
         while (localIt.hasNext()) {
           String url = (String) localIt.next();
-          if (url.compareTo(lwrRem) < 0 || url.compareTo(uprRem) > 0) {
+          if((lwrRem != null) && url.compareTo(lwrRem) < 0) {
+            localSet.add(url);
+          }
+          else if((uprRem != null) && url.compareTo(uprRem) > 0) {
             localSet.add(url);
           }
         }
-        m_tally.localEntries = (String[]) localSet.toArray();
+        m_tally.localEntries = localSet.toArray();
       }
     }
   }
@@ -239,11 +242,11 @@ public class NamePoll
   }
 
   static class NameVote extends Vote {
-    private String[] knownEntries;
+    private Object[] knownEntries;
     private String lwrRemaining;
     private String uprRemaining;
 
-    NameVote(String[] entries, String lwr, String upr) {
+    NameVote(Object[] entries, String lwr, String upr) {
       knownEntries = entries;
       lwrRemaining = lwr;
       uprRemaining = upr;
@@ -257,7 +260,7 @@ public class NamePoll
       uprRemaining = msg.getUprRemain();
     }
 
-    String[] getKnownEntries() {
+    Object[] getKnownEntries() {
       return knownEntries;
     }
 
@@ -276,7 +279,7 @@ public class NamePoll
       return false;
     }
 
-    boolean sameEntries(String[] entries) {
+    boolean sameEntries(Object[] entries) {
       return Arrays.equals(knownEntries, entries);
     }
   }

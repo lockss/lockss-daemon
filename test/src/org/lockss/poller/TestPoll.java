@@ -140,7 +140,7 @@ public class TestPoll extends LockssTestCase {
     }
     Poll p = null;
     try {
-      p = createCompletedPoll(daemon, msg, 8,2);
+      p = createCompletedPoll(daemon, testau, msg, 8,2);
     }
     catch (Exception ex2) {
     }
@@ -368,12 +368,11 @@ public class TestPoll extends LockssTestCase {
 
 
   public static Poll createCompletedPoll(LockssDaemon daemon,
+                                         ArchivalUnit au,
 					 LcapMessage testmsg, int numAgree,
                                          int numDisagree) throws Exception {
     log.debug("daemon = " + daemon);
-    testau = PollTestPlugin.PTArchivalUnit.createFromListOfRootUrls(rooturls);
-    PluginUtil.registerArchivalUnit(testau);
-    CachedUrlSet cus = testau.makeCachedUrlSet(testmsg.getTargetUrl(),
+    CachedUrlSet cus = au.makeCachedUrlSet(testmsg.getTargetUrl(),
                                                testmsg.getLwrBound(),
                                                testmsg.getUprBound());
     PollSpec spec = new PollSpec(cus);
@@ -384,9 +383,10 @@ public class TestPoll extends LockssTestCase {
     p.m_tally.wtAgree = 2000;
     p.m_tally.wtDisagree = 200;
     p.m_tally.localEntries = new String[] {
-        "entry 1", "entry 2", "entry 5"};
+        "/testentry1.html", "/testentry2.html", "/testentry3.html" };
     p.m_tally.votedEntries = new String[] {
-        "entry 1", "entry 3", "entry 4", "entry 5"};
+        "/testentry1.html", "/testentry3.html",
+        "/testentry4.html", "/testentry5.html"};
     p.m_pollstate = Poll.PS_COMPLETE;
     return p;
   }
