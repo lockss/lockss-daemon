@@ -12,6 +12,7 @@ org.lockss.cache.location=.
 
 #test settings
 org.lockss.test.treewalk=true
+org.lockss.treewalk.pluginId=org|lockss|plugin|simulated|SimulatedPlugin
 org.lockss.treewalk.auId=localA
 
 org.lockss.test.poll=true
