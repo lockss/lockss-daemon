@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedContentGenerator.java,v 1.16 2005-02-21 03:10:39 tlipkis Exp $
+ * $Id: SimulatedContentGenerator.java,v 1.17 2005-02-28 18:15:29 tlipkis Exp $
  */
 
 /*
@@ -621,6 +621,8 @@ public class SimulatedContentGenerator {
       file_content += "<BR>" + permission;
     }
     File[] children = directory.listFiles();
+
+    Arrays.sort(children);    // must sort to ensure index page always same
 
     for (int ii=0; ii<children.length; ii++) {
       File child = children[ii];
