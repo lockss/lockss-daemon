@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.63 2004-09-19 01:29:56 tlipkis Exp $
+ * $Id: LockssDaemon.java,v 1.64 2004-09-22 17:42:26 dshr Exp $
  */
 
 /*
@@ -139,7 +139,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     new ManagerDesc(AUDIT_PROXY_MANAGER, "org.lockss.proxy.AuditProxyManager"),
     // comm layer at end so don't process messages until other services ready
     new ManagerDesc(COMM_MANAGER, "org.lockss.protocol.LcapComm"),
-    new ManagerDesc(ROUTER_MANAGER, "org.lockss.protocol.LcapRouter"),
+    new ManagerDesc(ROUTER_MANAGER, "org.lockss.protocol.LcapDatagramRouter"),
     new ManagerDesc(WATCHDOG_SERVICE, DEFAULT_WATCHDOG_SERVICE),
     new ManagerDesc(NODE_MANAGER_MANAGER, "org.lockss.state.NodeManagerManager"),
     new ManagerDesc(ARCHIVAL_UNIT_STATUS,
@@ -266,11 +266,11 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
 
   /**
    * return the communication router manager instance
-   * @return the LcapRouter
+   * @return the LcapDatagramRouter
    * @throws IllegalArgumentException if the manager is not available.
    */
-  public LcapRouter getRouterManager()  {
-    return (LcapRouter) getManager(ROUTER_MANAGER);
+  public LcapDatagramRouter getRouterManager()  {
+    return (LcapDatagramRouter) getManager(ROUTER_MANAGER);
   }
 
   /**

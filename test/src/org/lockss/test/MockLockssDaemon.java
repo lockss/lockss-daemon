@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssDaemon.java,v 1.41 2004-08-22 02:10:46 tlipkis Exp $
+ * $Id: MockLockssDaemon.java,v 1.42 2004-09-22 17:42:30 dshr Exp $
  */
 
 /*
@@ -62,7 +62,7 @@ public class MockLockssDaemon extends LockssDaemon {
   SystemMetrics systemMetrics = null;
   PollManager pollManager = null;
   LcapComm commManager = null;
-  LcapRouter routerManager = null;
+  LcapDatagramRouter routerManager = null;
   ProxyManager proxyManager = null;
   CrawlManager crawlManager = null;
   RepositoryManager repositoryManager = null;
@@ -237,11 +237,11 @@ public class MockLockssDaemon extends LockssDaemon {
 
   /**
    * return the router manager instance
-   * @return the LcapRouter
+   * @return the LcapDatagramRouter
    */
-  public LcapRouter getRouterManager() {
+  public LcapDatagramRouter getRouterManager() {
     if (routerManager == null) {
-      routerManager = (LcapRouter)newManager(LockssDaemon.ROUTER_MANAGER);
+      routerManager = (LcapDatagramRouter)newManager(LockssDaemon.ROUTER_MANAGER);
       managerMap.put(LockssDaemon.ROUTER_MANAGER, routerManager);
     }
     return routerManager;
@@ -369,7 +369,7 @@ public class MockLockssDaemon extends LockssDaemon {
    * Set the RouterManager
    * @param routerMan the new manager
    */
-  public void setRouterManager(LcapRouter routerMan) {
+  public void setRouterManager(LcapDatagramRouter routerMan) {
     routerManager = routerMan;
     managerMap.put(LockssDaemon.ROUTER_MANAGER, routerManager);
   }

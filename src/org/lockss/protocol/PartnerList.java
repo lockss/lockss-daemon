@@ -1,5 +1,5 @@
 /*
- * $Id: PartnerList.java,v 1.21 2004-09-22 02:43:12 tlipkis Exp $
+ * $Id: PartnerList.java,v 1.22 2004-09-22 17:42:30 dshr Exp $
  */
 
 /*
@@ -44,7 +44,7 @@ import org.apache.commons.collections.LRUMap;
  * and record the last time a message was received.
  */
 class PartnerList {
-  static final String PREFIX = LcapRouter.PREFIX;
+  static final String PREFIX = LcapDatagramRouter.PREFIX;
   static final String PARAM_MIN_PARTNER_REMOVE_INTERVAL =
     PREFIX + "minPartnerRemoveInterval";
   static final String PARAM_MAX_PARTNERS = PREFIX + "maxPartners";

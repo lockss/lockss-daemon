@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManager.java,v 1.46 2004-09-22 02:43:13 tlipkis Exp $
+ * $Id: IdentityManager.java,v 1.47 2004-09-22 17:42:29 dshr Exp $
  */
 
 /*
@@ -206,7 +206,7 @@ public class IdentityManager
   /**
    * ipAddrToPeerIdentity returns the peer identity matching the
    * IP address and port.  An instance is created if necesary.
-   * Used only by LcapRouter (and soon by its stream analog).
+   * Used only by LcapDatagramRouter (and soon by its stream analog).
    * @param addr the IPAddr of the peer, null for the local peer
    * @param port the port of the peer
    * @return the PeerIdentity representing the peer

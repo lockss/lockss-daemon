@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapRouter.java,v 1.14 2004-09-20 14:20:40 dshr Exp $
+ * $Id: TestLcapDatagramRouter.java,v 1.1 2004-09-22 17:42:30 dshr Exp $
  */
 
 /*
@@ -41,10 +41,10 @@ import org.lockss.test.*;
 import org.lockss.poller.*;
 
 /** JUnitTest case for class: org.lockss.protocol.Message */
-public class TestLcapRouter extends LockssTestCase {
-  static Logger log = Logger.getLogger("TestLcapRouter");
+public class TestLcapDatagramRouter extends LockssTestCase {
+  static Logger log = Logger.getLogger("TestLcapDatagramRouter");
 
-  private LcapRouter rtr;
+  private LcapDatagramRouter rtr;
 
   private static String urlstr = "http://www.example.com";
   private static byte[] testbytes = {1,2,3,4,5,6,7,8,9,10};
@@ -95,11 +95,11 @@ public class TestLcapRouter extends LockssTestCase {
 
   void setConfig() {
     Properties p = new Properties();
-    p.put(LcapRouter.PARAM_FWD_PKTS_PER_INTERVAL, "100");
-    p.put(LcapRouter.PARAM_FWD_PKT_INTERVAL, "1");
-    p.put(LcapRouter.PARAM_BEACON_INTERVAL, "1m");
-    p.put(LcapRouter.PARAM_INITIAL_HOPCOUNT, "3");
-    p.put(LcapRouter.PARAM_PROB_PARTNER_ADD, "100");
+    p.put(LcapDatagramRouter.PARAM_FWD_PKTS_PER_INTERVAL, "100");
+    p.put(LcapDatagramRouter.PARAM_FWD_PKT_INTERVAL, "1");
+    p.put(LcapDatagramRouter.PARAM_BEACON_INTERVAL, "1m");
+    p.put(LcapDatagramRouter.PARAM_INITIAL_HOPCOUNT, "3");
+    p.put(LcapDatagramRouter.PARAM_PROB_PARTNER_ADD, "100");
     p.put(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
     ConfigurationUtil.setCurrentConfigFromProps(p);
   }
@@ -146,7 +146,7 @@ public class TestLcapRouter extends LockssTestCase {
   }
 
   public static void main(String[] argv) {
-    String[] testCaseList = {TestLcapRouter.class.getName()};
+    String[] testCaseList = {TestLcapDatagramRouter.class.getName()};
     junit.swingui.TestRunner.main(testCaseList);
   }
 }

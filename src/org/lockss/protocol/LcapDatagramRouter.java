@@ -1,5 +1,5 @@
 /*
- * $Id: LcapRouter.java,v 1.39 2004-09-22 02:43:12 tlipkis Exp $
+ * $Id: LcapDatagramRouter.java,v 1.1 2004-09-22 17:42:30 dshr Exp $
  */
 
 /*
@@ -45,11 +45,11 @@ import org.mortbay.util.B64Code;
 // tk - synchronization here and in PartnerList
 
 /**
- * LcapRouter implements unicast routing parts of the LCAP V1 protocol.
+ * LcapDatagramRouter implements unicast routing parts of the LCAP V1 protocol.
  * Routing involves decisions about using unicast to supplement multicast,
  * including forwarding received unicast packets.
  */
-public class LcapRouter
+public class LcapDatagramRouter
   extends BaseLockssDaemonManager implements ConfigurableManager {
 
   static final String PREFIX = Configuration.PREFIX + "comm.router.";
@@ -448,7 +448,7 @@ public class LcapRouter
   }
 
   /**
-   * Register a {@link LcapRouter.MessageHandler}, which will be called
+   * Register a {@link LcapDatagramRouter.MessageHandler}, which will be called
    * whenever an LcapMessage is received.
    * @param handler MessageHandler to add
    */
@@ -459,7 +459,7 @@ public class LcapRouter
   }
 
   /**
-   * Unregister a {@link LcapRouter.MessageHandler}.
+   * Unregister a {@link LcapDatagramRouter.MessageHandler}.
    * @param handler MessageHandler to remove
    */
   public void unregisterMessageHandler(MessageHandler handler) {
@@ -467,15 +467,15 @@ public class LcapRouter
   }
 
   /**
-   * The LcapRouter.MessageHandler interface defines the
-   * callback registered by clients of {@link LcapRouter} who want to process
+   * The LcapDatagramRouter.MessageHandler interface defines the
+   * callback registered by clients of {@link LcapDatagramRouter} who want to process
    * incoming LcapMessages.
    */
   public interface MessageHandler {
     /**
      * Callback used to inform clients that an LcapMessage has been received.
      * @param msg the received LcapMessage
-     * @see LcapRouter#registerMessageHandler */
+     * @see LcapDatagramRouter#registerMessageHandler */
     public void handleMessage(LcapMessage msg);
   }
 }
