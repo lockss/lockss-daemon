@@ -1,5 +1,5 @@
 /*
- * $Id: PriorityQueue.java,v 1.11 2003-10-29 23:29:07 tlipkis Exp $
+ * $Id: PriorityQueue.java,v 1.12 2004-07-12 06:22:29 tlipkis Exp $
  */
 
 /*
@@ -42,27 +42,28 @@ import java.util.*;
  * in a way that might affect its sort order, {@link #sort()} must be
  * called to resort the queue.
  */
-public class PriorityQueue implements Queue {
-  private Vector queue = new Vector();
-  Comparator comparator = null;
+public class PriorityQueue extends AbstractQueue {
+  private Comparator comparator = null;
 
-  /** 
-   * Create a new priority queue. 
+  /**
+   * Create a new priority queue.
    */
   public PriorityQueue() {
+    super();
   }
 
-  /** 
+  /**
    * Create a new priority queue with the specified Comparator.
    */
   public PriorityQueue(Comparator c) {
+    super();
     comparator = c;
   }
 
   private int compare(Object o1, Object o2) {
     return (comparator == null
-            ? ((Comparable)o1).compareTo(o2)
-            : comparator.compare(o1, o2));
+	    ? ((Comparable)o1).compareTo(o2)
+	    : comparator.compare(o1, o2));
   }
 
   /**
@@ -75,8 +76,8 @@ public class PriorityQueue implements Queue {
     int ix = 0;
     for (; ix < size; ix++) {
       if (compare(obj, queue.elementAt(ix)) < 0) {
-        queue.insertElementAt(obj, ix);
-        break;
+	queue.insertElementAt(obj, ix);
+	break;
       }
     }
     if (ix >= size) {
@@ -87,77 +88,7 @@ public class PriorityQueue implements Queue {
     return obj;
   }
 
-  /** 
-   * Remove from the beginning of the queue. Does not return until
-   * an object appears in the queue and becomes available to this thread.
-   * @return the item formerly at the head of the queue, or null if a
-   * timeout occurred before an item was available.
-   * @throws InterruptedException if interrupted while waiting
-   */
-  public synchronized Object get(Deadline timer) throws InterruptedException {
-    Object head = peekWait(timer);
-    if (head != null) {
-      queue.removeElementAt(0);
-    }
-    return head;
-  }
-
-  /** 
-   * Wait until the queue is non-empty, then return the element at the
-   * head of the queue, leaving it on the queue.
-   * @return the item at the head of the queue, or null if a
-   * timeout occurred before an item was available.
-   * @throws InterruptedException if interrupted while waiting
-   */
-  public synchronized Object peekWait(Deadline timer)
-      throws InterruptedException {
-    final Thread thread = Thread.currentThread();
-    Deadline.Callback cb = new Deadline.Callback() {
-	public void changed(Deadline deadline) {
-	  thread.interrupt();
-	}};
-    try {
-      timer.registerCallback(cb);
-      while (queue.isEmpty() && !timer.expired()) {
-	this.wait(timer.getSleepTime());
-      }
-    } finally {
-      timer.unregisterCallback(cb);
-    }
-    if (!queue.isEmpty()) {
-      // remove from beginning
-      Object obj = queue.firstElement();
-      return obj;
-    } else {
-      return null;
-    }
-  }
-
-  /** 
-   * Return first element on queue, without removing it.
-   * @return The element at the head of the queue, or null if queue is empty
-   */
-  public synchronized Object peek() {
-    return (queue.isEmpty() ? null : queue.firstElement());
-  }
-
-  /** 
-   * Remove the specified element from the queue.  If the element appears
-   * in the queue more than once, the behavior is undefined.
-   * @return true iff the element was present in the queue
-   */
-  public synchronized boolean remove(Object obj) {
-    return queue.remove(obj);
-  }
-
-  /** 
-   * Return true iff the queue is empty
-   */
-  public boolean isEmpty() {
-    return queue.isEmpty();
-  }
-
-  /** 
+  /**
    * Resort the elements on the queue.  Must be called if any element
    * changes in a way that might affect its sort order
    */

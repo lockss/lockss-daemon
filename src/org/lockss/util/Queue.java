@@ -1,5 +1,5 @@
 /*
- * $Id: Queue.java,v 1.5 2003-06-20 22:34:53 claire Exp $
+ * $Id: Queue.java,v 1.6 2004-07-12 06:22:29 tlipkis Exp $
  */
 
 /*
@@ -35,7 +35,7 @@ package org.lockss.util;
 import java.util.*;
 
 /**
- * Queue interface. 
+ * Queue interface.
 */
 public interface Queue {
 
@@ -43,27 +43,41 @@ public interface Queue {
    * Add to the queue. */
   public Object put(Object obj);
 
-  /** 
+  /**
    * Remove first element from the queue. Does not return until
    * an object appears in the queue or the timer expires.
    * @return The element formerly at the head of the queue
    */
   public Object get(Deadline timer) throws InterruptedException;
 
-  /** 
+  /**
    * Return first element on queue, without removing it.
    * @return The element at the head of the queue, or null if queue is empty
    */
   public Object peek();
 
-  /** 
+  /**
+   * Wait until the queue is non-empty, then return the element at the
+   * head of the queue, leaving it on the queue.
+   * @return the item at the head of the queue, or null if a
+   * timeout occurred before an item was available.
+   * @throws InterruptedException if interrupted while waiting
+   */
+  public Object peekWait(Deadline timer) throws InterruptedException;
+
+  /**
    * Remove the specified element from the queue.  If the element appears
    * in the queue more than once, the behavior is undefined.
    * @return true iff the element was present in the queue
    */
   public boolean remove(Object obj);
 
-  /** 
+  /**
+   * Return the number of elements in the queue
+   */
+  public int size();
+
+  /**
    * Return true iff the queue is empty
    */
   public boolean isEmpty();

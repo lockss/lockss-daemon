@@ -1,5 +1,5 @@
 /*
- * $Id: FifoQueue.java,v 1.9 2003-10-29 23:29:07 tlipkis Exp $
+ * $Id: FifoQueue.java,v 1.10 2004-07-12 06:22:29 tlipkis Exp $
  */
 
 /*
@@ -37,13 +37,12 @@ import java.util.*;
 /**
  * A thread-safe FIFO queue
  */
-public class FifoQueue implements Queue {
-  private Vector queue = new Vector();
-
-  /** 
-   * Create a new FIFO queue. 
+public class FifoQueue extends AbstractQueue {
+  /**
+   * Create a new FIFO queue.
    */
   public FifoQueue() {
+    super();
   }
 
   /**
@@ -56,58 +55,5 @@ public class FifoQueue implements Queue {
     // supposedly allows the highest priority thread to run first
     notifyAll();
     return obj;
-  }
-
-  /** 
-   * Remove from the beginning of the queue. Does not return until
-   * an object appears in the queue and becomes available to this thread.
-   * @throws InterruptedException if interrupted while waiting
-   */
-  public synchronized Object get(Deadline timer) throws InterruptedException {
-    final Thread thread = Thread.currentThread();
-    Deadline.Callback cb = new Deadline.Callback() {
-	public void changed(Deadline deadline) {
-	  thread.interrupt();
-	}};
-    try {
-      timer.registerCallback(cb);
-      while (queue.isEmpty() && !timer.expired()) {
-	this.wait(timer.getSleepTime());
-      }
-    } finally {
-      timer.unregisterCallback(cb);
-    }
-    if (!queue.isEmpty()) {
-      // remove from beginning
-      Object obj = queue.firstElement();
-      queue.removeElementAt(0);
-      return obj;
-    } else {
-      return null;
-    }
-  }
-
-  /** 
-   * Return first element on queue, without removing it.
-   * @return The element at the head of the queue, or null if queue is empty
-   */
-  public synchronized Object peek() {
-    return (queue.isEmpty() ? null : queue.firstElement());
-  }
-
-  /** 
-   * Remove the specified element from the queue.  If the element appears
-   * in the queue more than once, the behavior is undefined.
-   * @return true iff the element was present in the queue
-   */
-  public synchronized boolean remove(Object obj) {
-    return queue.remove(obj);
-  }
-
-  /** 
-   * Return true iff the queue is empty
-   */
-  public boolean isEmpty() {
-    return queue.isEmpty();
   }
 }
