@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.48 2004-01-12 06:19:23 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.49 2004-01-13 02:20:02 eaalto Exp $
  */
 
 /*
@@ -210,7 +210,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 
     // get the fetch delay
     fetchDelay = config.getTimeInterval(PAUSE_TIME_KEY, defaultFetchDelay);
-    fetchDelay = Math.min(fetchDelay, minFetchDelay);
+    fetchDelay = Math.max(fetchDelay, minFetchDelay);
     logger.debug2("Set fetch delay to " + fetchDelay);
 
     // get the new content crawl interval
