@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepairCrawler.java,v 1.19 2004-12-07 17:55:31 troberts Exp $
+ * $Id: TestRepairCrawler.java,v 1.20 2005-01-07 01:23:29 troberts Exp $
  */
 
 /*
@@ -240,18 +240,11 @@ public class TestRepairCrawler extends LockssTestCase {
     assertTrue("Fail! fetch from caches occur, fetchCacheCnt = " +
 	         crawler.getFetchCacheCnt() , crawler.getFetchCacheCnt() == 1);
     assertTrue("Fail! fetch from publisher occurs", crawler.getFetchPubCnt() == 0);
+    
   }
 
   public void testFetchFromOtherCachesOnlyWithoutRetryLimit()
       throws MalformedIdentityKeyException {
-//     PeerIdentity id1 = idm.stringToPeerIdentity("127.0.0.1");
-//     PeerIdentity id2 = idm.stringToPeerIdentity("127.0.0.2");
-//     PeerIdentity id3 = idm.stringToPeerIdentity("127.0.0.3");
-//     Map map = new HashMap();
-//     map.put(id1, new Long(10));
-//     map.put(id2, new Long(11));
-//     map.put(id3, new Long(12));
-//     idm.setAgeedForAu(mau, map);
 
     setAgreeingPeers(3);
 
@@ -273,15 +266,6 @@ public class TestRepairCrawler extends LockssTestCase {
   }
 
   public void testFetchFromOtherCachesOnlyWithRetryLimit() throws MalformedIdentityKeyException {
-//     PeerIdentity id1 = idm.stringToPeerIdentity("127.0.0.1");
-//     PeerIdentity id2 = idm.stringToPeerIdentity("127.0.0.2");
-//     PeerIdentity id3 = idm.stringToPeerIdentity("127.0.0.3");
-//     Map map = new HashMap();
-//     map.put(id1, new Long(10));
-//     map.put(id2, new Long(11));
-//     map.put(id3, new Long(12));
-//     idm.setAgeedForAu(mau, map);
-
     setAgreeingPeers(3);
 
     String repairUrl = "http://example.com/blah.html";
@@ -460,6 +444,73 @@ public class TestRepairCrawler extends LockssTestCase {
 	       crawler.getFetchCacheCnt() , crawler.getFetchCacheCnt() == 2);
     assertTrue("Fail: sequence in caching from", crawler.getCacheLastCall() > crawler.getPubLastCall() );
   }
+
+  //Status tests
+  public void testRepairedUrlsNotedInStatus() {
+    String repairUrl1 = "http://example.com/blah.html";
+    String repairUrl2 = "http://example.com/blah2.html";
+
+    crawlRule.addUrlToCrawl(repairUrl1);
+    crawlRule.addUrlToCrawl(repairUrl2);
+
+    MyRepairCrawler crawler =
+      new MyRepairCrawler(mau, spec, aus,
+			  ListUtil.list(repairUrl1, repairUrl2), 0);
+
+    Properties p = new Properties();
+    p.setProperty(RepairCrawler.PARAM_FETCH_FROM_PUBLISHER_ONLY, "true");
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+
+    assertTrue("doCrawl() returned false", crawler.doCrawl());
+    Crawler.Status crawlStatus = crawler.getStatus();
+    assertEquals(2, crawlStatus.getNumFetched());
+    assertEquals(0, crawlStatus.getNumParsed());
+    assertEquals(SetUtil.set(repairUrl1, repairUrl2),
+		 crawlStatus.getUrlsFetched());
+  }
+
+  public void testPluginThrowsRuntimeExceptionDoesntUpdateStatus() {
+    String repairUrl = "http://example.com/forcecache.html";
+    mau.addUrl(repairUrl, new ExpectedRuntimeException("Test exception"), 0);
+    List repairUrls = ListUtil.list(repairUrl);
+    crawlRule.addUrlToCrawl(repairUrl);
+    spec = new SpiderCrawlSpec(startUrls, startUrls, crawlRule, 1);
+    crawler = new RepairCrawler(mau, spec, aus, repairUrls, 0);
+
+    crawler.doCrawl();
+
+    Crawler.Status crawlStatus = crawler.getStatus();
+    assertEquals(0, crawlStatus.getNumFetched());
+    assertEquals(0, crawlStatus.getNumParsed());
+    Map errorUrls = crawlStatus.getUrlsWithErrors();
+    assertEquals("Unexpected Exception", (String)errorUrls.get(repairUrl));
+    assertEquals(SetUtil.set(), crawlStatus.getUrlsFetched());
+  }
+  
+  public void testFailedFetchDoesntUpdateStatus()
+      throws MalformedIdentityKeyException {
+
+    String repairUrl = "http://example.com/blah.html";
+    MyRepairCrawler crawler =
+      new MyRepairCrawler(mau, spec, aus, ListUtil.list(repairUrl),0);
+    crawler.setTimesToThrow(3);
+
+
+    Properties p = new Properties();
+    p.setProperty(RepairCrawler.PARAM_FETCH_FROM_OTHER_CACHES_ONLY, "true");
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+
+    crawler.doCrawl();
+
+    Crawler.Status crawlStatus = crawler.getStatus();
+    assertEquals(0, crawlStatus.getNumFetched());
+    assertEquals(0, crawlStatus.getNumParsed());
+
+    Map errorUrls = crawlStatus.getUrlsWithErrors();
+    assertEquals(Crawler.STATUS_FETCH_ERROR, (String)errorUrls.get(repairUrl));
+    assertEquals(SetUtil.set(), crawlStatus.getUrlsFetched());
+  }
+  
 
   private class MyMockCrawlWindow implements CrawlWindow {
     public boolean canCrawl() {
