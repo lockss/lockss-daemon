@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.6 2003-03-03 19:33:28 troberts Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.7 2003-03-03 22:48:08 troberts Exp $
  */
 
 /*
@@ -122,7 +122,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     Deadline deadline = Deadline.in(1000 * 10);
 
 
-    assertTrue(!crawlManager.canTreeWalkStart(mau, new TestCrawlCB(deadline), 
+    assertFalse(crawlManager.canTreeWalkStart(mau, new TestCrawlCB(deadline), 
 					      null));
 
     while (!deadline.expired()) {
@@ -208,7 +208,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     crawlManager.canTreeWalkStart(mau, cb, null);
 
     //if the callback was triggered, the crawl completed
-    assertTrue("Callback was triggered", !cb.wasTriggered());
+    assertFalse("Callback was triggered", cb.wasTriggered());
   }
 
   public void testScheduleRepairNullAU() throws MalformedURLException {
@@ -320,7 +320,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       } catch (InterruptedException ie) {
       }
     }
-    assertTrue(lastCrawlTime != maus.getLastCrawlTime());
+    assertNotEquals(lastCrawlTime, maus.getLastCrawlTime());
   }
   
 
