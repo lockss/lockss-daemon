@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawlManager.java,v 1.13 2003-07-02 00:56:43 troberts Exp $
+ * $Id: MockCrawlManager.java,v 1.14 2003-07-31 00:45:01 eaalto Exp $
  */
 
 /*
@@ -56,7 +56,8 @@ public class MockCrawlManager implements CrawlManager, LockssManager {
   }
 
   public void startRepair(ArchivalUnit au, Collection urls,
-			  CrawlManager.Callback cb, Object cookie) {
+			  CrawlManager.Callback cb, Object cookie,
+                          ActivityRegulator.Lock lock) {
     Iterator urlIt = urls.iterator();
     while (urlIt.hasNext()) {
       scheduledRepairs.put(urlIt.next(), SCHEDULED);
@@ -82,7 +83,7 @@ public class MockCrawlManager implements CrawlManager, LockssManager {
   }
 
   public void startNewContentCrawl(ArchivalUnit au, CrawlManager.Callback cb,
-                                   Object cookie) {
+                                   Object cookie, ActivityRegulator.Lock lock) {
     scheduleNewContentCrawl(au, cb, cookie);
   }
 

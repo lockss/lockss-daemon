@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManager.java,v 1.15 2003-07-02 00:55:02 troberts Exp $
+ * $Id: CrawlManager.java,v 1.16 2003-07-31 00:45:00 eaalto Exp $
  */
 
 /*
@@ -44,26 +44,31 @@ import org.lockss.plugin.*;
 public interface CrawlManager {
   /**
    * Schedules a repair crawl and calls cb.signalRepairAttemptCompleted
-   * when done.
+   * when done.  If lock is null, attempts to get its own.  If multiple locks
+   * are needed, gets
+   *
    * @param au ArchivalUnit that the crawl manager should check
    * @param urls url Strings that need to be repaired
    * @param cb callback to talk to when repair attempt is done
    * @param cookie object that the callback needs to understand which
    * repair we're referring to.
+   * @param lock the activity lock (can be null)
    */
   public void startRepair(ArchivalUnit au, Collection urls,
-			  CrawlManager.Callback cb, Object cookie);
+			  CrawlManager.Callback cb, Object cookie,
+                          ActivityRegulator.Lock lock);
 
   /**
-   * Starts a new content crawl
+   * Starts a new content crawl.  If lock is null, attempts to get its own.
    *
    * @param au ArchivalUnit that the crawl manager should check
    * @param cb callback to be called when the crawler is done with the AU,
    * if not now
    * @param cookie cookie for the callback
+   * @param lock the activity lock (can be null)
    */
   public void startNewContentCrawl(ArchivalUnit au, CrawlManager.Callback cb,
-                                   Object cookie);
+                                   Object cookie, ActivityRegulator.Lock lock);
 
 
   public interface Callback {
@@ -89,7 +94,7 @@ public interface CrawlManager {
      * return a <code>Collection</code> of {@link Crawler}s doing repair
      * crawls for <code>au</code>
      *
-     * @param au {@link ArchivalUnit} to get {@link Crawler}s doing repair
+     * @param auid id of ArchivalUnit to get {@link Crawler}s doing repair
      * crawls for
      * @return <code>Collection</code> of {@link Crawler}s for <code>au</code>
      */
