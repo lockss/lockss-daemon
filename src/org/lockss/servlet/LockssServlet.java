@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.28 2003-08-15 21:31:39 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.29 2003-09-11 07:48:07 tlipkis Exp $
  */
 
 /*
@@ -717,7 +717,7 @@ public abstract class LockssServlet extends HttpServlet
     if (!isGrey) {
       return txt;
     }
-    return "<font color=grey>" + txt + "</font>";
+    return "<font color=gray>" + txt + "</font>";
   }
 
   /** Store a footnote, assign it a number, return html for footnote
@@ -739,7 +739,7 @@ public abstract class LockssServlet extends HttpServlet
       n = footNumber++;
       footnotes.addElement(s);
     }
-    return "<sup>" + (n+1) + "</sup>";
+    return "<sup><font size=-1>" + (n+1) + "</font></sup>";
   }
 
   /** Add accumulated footnotes to Composite. */
