@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescrPicker.java,v 1.6 2004-07-14 20:46:03 clairegriffin Exp $
+ * $Id: ConfigParamDescrPicker.java,v 1.7 2004-07-14 22:31:57 clairegriffin Exp $
  */
 
 /*
@@ -144,6 +144,8 @@ public class ConfigParamDescrPicker
     availableBorder.setTitleFont(new java.awt.Font("Dialog", 0, 12));
     mainPanel.setMinimumSize(new Dimension(400, 220));
     mainPanel.setPreferredSize(new Dimension(480, 250));
+    AvailableParamList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+    PluginParamList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
     ButtonPanel.add(CreateButton, null);
     ButtonPanel.add(OkButton, null);
     ButtonPanel.add(CancelButton, null);
