@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.29 2003-02-15 01:41:55 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.30 2003-02-19 00:38:06 aalto Exp $
  */
 
 /*
@@ -324,10 +324,12 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
           // if node is cached
           if (node.getCachedUrlSet().isCached(
               node.getCachedUrlSet().getPrimaryUrl())) {
-            // if CrawlManager.shouldCrawl()
+            // if (theCrawlManager.shouldRecrawl(managerAu, node)) {
             // then CrawlManager.scheduleBackgroundCrawl()
           }
         }
+      default:
+        break;
     }
     // check recent histories to see if something needs fixing
     // if there are no current polls

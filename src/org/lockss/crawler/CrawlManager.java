@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManager.java,v 1.5 2003-02-10 23:45:45 troberts Exp $
+ * $Id: CrawlManager.java,v 1.6 2003-02-19 00:38:06 aalto Exp $
  */
 
 /*
@@ -43,21 +43,23 @@ public interface CrawlManager {
   /**
    * Schedules a repair crawl and calls cb.signalRepairAttemptCompleted
    * when done.
+   * @param au ArchivalUnit that the crawl manager should check
    * @param url URL that needs to be repaired
    * @param cb callback to talk to when repair attempt is done
    * @param cookie object that the callback needs to understand which
    * repair we're referring to.
    */
-  public void scheduleRepair(ArchivalUnit au, URL url, 
+  public void scheduleRepair(ArchivalUnit au, URL url,
 			     CrawlManager.Callback cb, Object cookie);
 
 
   /**
    * Called at the beginning of each tree walk.  The crawler checks if there
-   * is anything it needs to do on the AU (such as a new content crawl) 
+   * is anything it needs to do on the AU (such as a new content crawl)
    * before the treewalk begins.
    *
    * @param au ArchivalUnit that the crawl manager should check
+   * @param aus AuState that the crawl manager should use
    * @param cb callback to be called when treewalk can start, if not now
    * @param cookie cookie for the callback
    * @return true if the tree walk can begin now, false otherwise

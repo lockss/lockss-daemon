@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.21 2003-02-15 01:41:55 aalto Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.22 2003-02-19 00:38:06 aalto Exp $
  */
 
 /*
@@ -162,12 +162,12 @@ public class TestNodeManagerImpl
 
     CachedUrlSet cus = getCUS("http://www.example.com/branch1");
     NodeState node = nodeManager.getNodeState(cus);
-    ( (NodeStateImpl) node).addPollState(new PollState(Poll.CONTENT_POLL, "",
+    ((NodeStateImpl)node).addPollState(new PollState(Poll.CONTENT_POLL, "",
         "",
         PollState.RUNNING, 123, null));
     cus = getCUS("http://www.example.com/branch2/file1.doc");
     node = nodeManager.getNodeState(cus);
-    ( (NodeStateImpl) node).addPollState(new PollState(Poll.NAME_POLL, "", "",
+    ((NodeStateImpl)node).addPollState(new PollState(Poll.NAME_POLL, "", "",
         PollState.WON, 123, null));
     nodeIt = nodeManager.getFilteredPolledNodes(mau.getAUCachedUrlSet(),
                                                 PollState.RUNNING +
@@ -187,7 +187,7 @@ public class TestNodeManagerImpl
                                                 PollState.RUNNING);
     nodeL = new ArrayList(1);
     while (nodeIt.hasNext()) {
-      node = (NodeState) nodeIt.next();
+      node = (NodeState)nodeIt.next();
       nodeL.add(node.getCachedUrlSet().getPrimaryUrl());
     }
     expectedA = new String[] {
@@ -253,17 +253,101 @@ public class TestNodeManagerImpl
     assertIsomorphic(expectedA, histL);
   }
 
-  public void testWalkNodeState() throws Exception {
-    theDaemon.getHashService().startService();
+  public void testTreeWalkStart() throws Exception {
+    MockCrawlManager crawlMan = (MockCrawlManager)theDaemon.getCrawlManager();
+    crawlMan.startService();
+
+    AuState auState = nodeManager.getAuState();
+
+    //should allow walk to start if last crawl time >= 0
+    auState.lastCrawlTime = 123;
+    nodeManager.doTreeWalk();
+    assertTrue(crawlMan.getAuStatus(mau)==null);
+
+    //should abort walk and schedule crawl if last crawl time < 0
+    auState.lastCrawlTime = -123;
+    nodeManager.doTreeWalk();
+    assertTrue(crawlMan.getAuStatus(mau)==MockCrawlManager.SCHEDULED);
+
+    crawlMan.stopService();
+  }
+
+  public void testWalkNodeStateInaction() throws Exception {
     theDaemon.getPollManager().startService();
-    NodeState node = nodeManager.getNodeState(getCUS(TEST_URL));
+    MockPollManager pollMan = (MockPollManager)theDaemon.getPollManager();
+    MockCrawlManager crawlMan = (MockCrawlManager)theDaemon.getCrawlManager();
+    crawlMan.startService();
+
+    NodeStateImpl node =
+        (NodeStateImpl)nodeManager.getNodeState(getCUS(TEST_URL));
+    CrawlState crawlState = node.getCrawlState();
+
+    // with no interesting node state, nothing should happen
     nodeManager.walkNodeState(node);
-    //XXX set various CrawlStates, PollHistories
-    // make sure it triggers the right things?
+    assertTrue(pollMan.getPollStatus(TEST_URL)==null);
+    assertTrue(crawlMan.getUrlStatus(TEST_URL)==null);
 
+    // should be ignored if deleted
+    crawlState.type = CrawlState.NODE_DELETED;
+    nodeManager.walkNodeState(node);
+    assertTrue(pollMan.getPollStatus(TEST_URL)==null);
+    assertTrue(crawlMan.getUrlStatus(TEST_URL)==null);
 
-    theDaemon.getHashService().stopService();
+    // should ignore if active poll
+    PollState pollState = new PollState(1, "", "", PollState.RUNNING, 1, null);
+    node.addPollState(pollState);
+    nodeManager.walkNodeState(node);
+    // no poll in manager since we just created a PollState
+    assertTrue(pollMan.getPollStatus(TEST_URL)==null);
+    assertTrue(crawlMan.getUrlStatus(TEST_URL)==null);
+
+    // should do nothing if last poll not LOST or REPAIRING
+    PollHistory pollHist = new PollHistory(1, "", "", PollState.REPAIRED, 1, 1,
+                                           null);
+    node.closeActivePoll(pollHist);
+    nodeManager.walkNodeState(node);
+    assertTrue(pollMan.getPollStatus(TEST_URL)==null);
+    assertTrue(crawlMan.getUrlStatus(TEST_URL)==null);
+
     theDaemon.getPollManager().stopService();
+    crawlMan.stopService();
+  }
+
+  public void testWalkNodeStateAction() throws Exception {
+    theDaemon.getPollManager().startService();
+    MockPollManager pollMan = (MockPollManager)theDaemon.getPollManager();
+    MockCrawlManager crawlMan = (MockCrawlManager)theDaemon.getCrawlManager();
+    crawlMan.startService();
+
+    NodeStateImpl node =
+        (NodeStateImpl)nodeManager.getNodeState(getCUS(TEST_URL));
+    CrawlState crawlState = node.getCrawlState();
+
+    // should schedule background crawl if no recent crawl (time < 0)
+    crawlState.type = CrawlState.NEW_CONTENT_CRAWL;
+    crawlState.status = CrawlState.FINISHED;
+    crawlState.startTime = -123;
+    nodeManager.walkNodeState(node);
+    assertTrue(pollMan.getPollStatus(TEST_URL)==null);
+    //XXX uncomment when CrawlManager ready
+    //assertTrue(crawlMan.getUrlStatus(TEST_URL)==MockCrawlManager.SCHEDULED);
+
+    // should schedule name poll if last history is LOST or REPAIRING
+    PollHistory pollHist = new PollHistory(1, "", "", PollState.LOST, 1, 1,
+                                           null);
+    node.closeActivePoll(pollHist);
+    nodeManager.walkNodeState(node);
+    assertTrue(pollMan.getPollStatus(TEST_URL)==MockPollManager.NAME_REQUESTED);
+    assertTrue(crawlMan.getUrlStatus(TEST_URL)==null);
+
+    pollHist = new PollHistory(1, "", "", PollState.REPAIRING, 1, 1, null);
+    node.closeActivePoll(pollHist);
+    nodeManager.walkNodeState(node);
+    assertTrue(pollMan.getPollStatus(TEST_URL)==MockPollManager.NAME_REQUESTED);
+    assertTrue(crawlMan.getUrlStatus(TEST_URL)==null);
+
+    theDaemon.getPollManager().stopService();
+    crawlMan.stopService();
   }
 
   public void testEstimatedTreeWalk() {

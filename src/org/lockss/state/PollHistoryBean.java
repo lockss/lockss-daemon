@@ -1,5 +1,5 @@
 /*
- * $Id: PollHistoryBean.java,v 1.5 2003-02-13 06:28:52 claire Exp $
+ * $Id: PollHistoryBean.java,v 1.6 2003-02-19 00:38:06 aalto Exp $
  */
 
 /*
@@ -128,6 +128,9 @@ public class PollHistoryBean extends PollHistory {
    * for marshalling purposes, since the Vote objects cannot be marshalled.
    */
   private void convertVotesToVoteBeans() {
+    if (votes==null) {
+      votes = new ArrayList();
+    }
     voteBeans = new ArrayList(votes.size());
     Iterator voteIter = votes.iterator();
     while (voteIter.hasNext()) {

@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawlManager.java,v 1.1 2003-02-12 23:57:37 aalto Exp $
+ * $Id: MockCrawlManager.java,v 1.2 2003-02-19 00:38:06 aalto Exp $
  */
 
 /*
@@ -60,6 +60,15 @@ public class MockCrawlManager implements CrawlManager, LockssManager {
     scheduledRepairs.put(url.toString(), SCHEDULED);
   }
 
+  /**
+   * Currently returns true if last crawl time > 0, schedules new content crawl
+   * and returns false otherwise.
+   * @param au the ArchivalUnit
+   * @param aus the AuState
+   * @param cb the Callback
+   * @param cookie the cookie
+   * @return true if can start
+   */
   public boolean canTreeWalkStart(ArchivalUnit au, AuState aus,
 				  CrawlManager.Callback cb, Object cookie) {
     if (aus.getLastCrawlTime() <= 0) {
@@ -69,7 +78,16 @@ public class MockCrawlManager implements CrawlManager, LockssManager {
     return true;
   }
 
+  /**
+   * Currently returns true iff last crawl time less than 0.
+   * @param au the ArchivalUnit
+   * @param ns the NodeState
+   * @return true if last crawl time < 0.
+   */
   public boolean shouldRecrawl(ArchivalUnit au, NodeState ns) {
+    if (ns.getCrawlState().getStartTime() < 0) {
+      return true;
+    }
     return false;
   }
 
