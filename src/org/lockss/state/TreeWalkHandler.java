@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkHandler.java,v 1.50 2003-12-12 00:57:19 tlipkis Exp $
+ * $Id: TreeWalkHandler.java,v 1.51 2003-12-12 03:54:41 tlipkis Exp $
  */
 
 /*
@@ -499,7 +499,7 @@ public class TreeWalkHandler {
 
         // wait on the semaphore (the callback will 'give()')
         try {
-          if (treeWalkSemaphore.take(Deadline.in(start + Constants.DAY))) {
+          if (treeWalkSemaphore.take(Deadline.at(start + Constants.DAY))) {
 	    // semaphore was posted, do treewalk
 	    try {
 	      doingTreeWalk = true;
