@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.13 2003-02-20 22:29:39 tal Exp $
+ * $Id: MockArchivalUnit.java,v 1.14 2003-02-22 03:01:34 tal Exp $
  */
 
 /*
@@ -34,7 +34,6 @@ package org.lockss.test;
 
 import java.util.*;
 import java.security.MessageDigest;
-import gnu.regexp.*;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.state.*;
@@ -111,8 +110,10 @@ public class MockArchivalUnit implements ArchivalUnit {
     return new MockCachedUrlSet(this, cuss);
   }
 
-  public CachedUrlSet makeCachedUrlSet(String url, String lwrBound, String uprBound) {
-    return makeCachedUrlSet(new RangeCachedUrlSetSpec(url, lwrBound, uprBound));
+  public CachedUrlSet makeCachedUrlSet(String url,
+				       String lwrBound, String uprBound) {
+    return makeCachedUrlSet(new RangeCachedUrlSetSpec(url,
+						      lwrBound, uprBound));
   }
 
   public boolean shouldBeCached(String url) {
