@@ -1,5 +1,5 @@
 /*
- * $Id: HashQueue.java,v 1.30 2003-03-29 20:25:39 tal Exp $
+ * $Id: HashQueue.java,v 1.31 2003-04-01 01:53:11 tal Exp $
  */
 
 /*
@@ -225,7 +225,7 @@ class HashQueue implements Serializable {
   }
 
   private void setConfig(Configuration config, Set changedKeys) {
-    hashPriority = config.getInt(PARAM_PRIORITY, -1);
+    hashPriority = config.getInt(PARAM_PRIORITY, Thread.MIN_PRIORITY);
     hashStepBytes = config.getInt(PARAM_STEP_BYTES, 10000);
     hashNumSteps = config.getInt(PARAM_NUM_STEPS, 10);
     int cMax = config.getInt(PARAM_COMPLETED_MAX, 50);
