@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.70 2004-01-21 08:27:09 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.71 2004-01-27 04:07:09 tlipkis Exp $
  */
 
 /*
@@ -181,24 +181,25 @@ public class PluginManager extends BaseLockssManager {
   /**
    * Return a unique identifier for an au based on its plugin id and defining
    * properties.
-   *
+   * @param pluginId plugin id (with . not escaped)
+   * @param auDefProps Properties with values for all definitional AU params
    * @return a unique identifier for an au based on its plugin id and defining
    * properties.
-   * @param pluginId plugin id (with . not escaped)
-   * @param auDefProps defining properties for the au
-   * @see Plugin#getDefiningConfigKeys
    */
   public static String generateAuId(String pluginId, Properties auDefProps) {
     return generateAuId(pluginId,
 			PropUtil.propsToCanonicalEncodedString(auDefProps));
   }
 
-  public static String generateAuId(Plugin plugin, Configuration auConf) {
-    Collection defKeys = plugin.getDefiningConfigKeys();
+  public static String generateAuId(Plugin plugin, Configuration auConfig) {
     Properties props = new Properties();
-    for (Iterator it = defKeys.iterator(); it.hasNext();) {
-      String curKey = (String)it.next();
-      props.setProperty(curKey, auConf.get(curKey));
+    for (Iterator iter = plugin.getAuConfigDescrs().iterator();
+	 iter.hasNext();) {
+      ConfigParamDescr descr = (ConfigParamDescr)iter.next();
+      if (descr.isDefinitional()) {
+	String key = descr.getKey();
+	props.setProperty(key, auConfig.get(key));
+      }
     }
     return generateAuId(plugin.getPluginId(), props);
   }

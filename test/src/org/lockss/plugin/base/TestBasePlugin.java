@@ -1,5 +1,5 @@
 /*
- * $Id: TestBasePlugin.java,v 1.3 2004-01-13 04:46:27 clairegriffin Exp $
+ * $Id: TestBasePlugin.java,v 1.4 2004-01-27 04:07:06 tlipkis Exp $
  */
 
 /*
@@ -75,7 +75,7 @@ public class TestBasePlugin extends LockssTestCase {
   }
 
   public void testInitTitleDB() {
-    mbp.setConfigurationProps(ListUtil.list(PD_VOL, PD_YEAR));
+    mbp.setConfigDescrs(ListUtil.list(PD_VOL, PD_YEAR));
     Properties p = new Properties();
     p.put("org.lockss.title.0.title", "Not me");
     p.put("org.lockss.title.0.plugin", "org.lockss.NotThisClass");
@@ -100,8 +100,7 @@ public class TestBasePlugin extends LockssTestCase {
   private static class MockBasePlugin extends BasePlugin {
     String name;
     String version;
-    List definingConfigProps;
-    List configProps;
+    List configDescrs;
 
     public MockBasePlugin() {
       super();
@@ -115,12 +114,8 @@ public class TestBasePlugin extends LockssTestCase {
       this.version = version;
     }
 
-    public void setConfigurationProps(List configProps) {
-      this.configProps = configProps;
-    }
-
-    public void setDefiningConfigProps(List definingConfigProps) {
-      this.definingConfigProps = definingConfigProps;
+    public void setConfigDescrs(List configDescrs) {
+      this.configDescrs = configDescrs;
     }
 
 
@@ -140,12 +135,8 @@ public class TestBasePlugin extends LockssTestCase {
       return name;
     }
 
-    public List getAuConfigProperties() {
-      return configProps;
-    }
-
-    public Collection getDefiningConfigKeys() {
-      return definingConfigProps;
+    public List getAuConfigDescrs() {
+      return configDescrs;
     }
   }
 }

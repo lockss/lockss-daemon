@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCachedUrl.java,v 1.5 2004-01-07 20:03:43 troberts Exp $
+ * $Id: TestBaseCachedUrl.java,v 1.6 2004-01-27 04:07:06 tlipkis Exp $
  */
 
 /*
@@ -64,7 +64,6 @@ public class TestBaseCachedUrl extends LockssTestCase {
     mau = new MockArchivalUnit();
     plugin = new MyMockPlugin();
     plugin.initPlugin(theDaemon);
-    plugin.setDefiningConfigKeys(Collections.EMPTY_LIST);
     mau.setPlugin(plugin);
 
     repo = theDaemon.getLockssRepository(mau);

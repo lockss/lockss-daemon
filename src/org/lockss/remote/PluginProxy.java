@@ -1,5 +1,5 @@
 /*
- * $Id: PluginProxy.java,v 1.1 2004-01-04 06:17:41 tlipkis Exp $
+ * $Id: PluginProxy.java,v 1.2 2004-01-27 04:07:07 tlipkis Exp $
  */
 
 /*
@@ -115,21 +115,12 @@ public class PluginProxy {
   }
 
   /**
-   * Return the set of configuration properties required to configure
-   * an archival unit for this plugin.
-   * @return a {@link List} of strings which are the names of the
-   * properties for which values are needed in order to configure an AU
+   * Return a list of descriptors for configuration parameters required to
+   * configure an archival unit for this plugin.
+   * @return a List of {@link ConfigParamDescr}s
    */
-  public List getAuConfigProperties() {
-    return plugin.getAuConfigProperties();
-  }
-
-  /**
-   * Return the keys for the config values that define the AU
-   * @return the keys for the config values that define the AU
-   */
-  public Collection getDefiningConfigKeys() {
-    return plugin.getDefiningConfigKeys();
+  public List getAuConfigDescrs() {
+    return plugin.getAuConfigDescrs();
   }
 
   /**

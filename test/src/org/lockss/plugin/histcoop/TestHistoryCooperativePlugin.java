@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryCooperativePlugin.java,v 1.3 2004-01-27 01:03:53 clairegriffin Exp $
+ * $Id: TestHistoryCooperativePlugin.java,v 1.4 2004-01-27 04:07:05 tlipkis Exp $
  */
 
 /*
@@ -99,13 +99,6 @@ public class TestHistoryCooperativePlugin extends LockssTestCase {
     assertEquals(ListUtil.list(ConfigParamDescr.BASE_URL,
                                ConfigParamDescr.JOURNAL_DIR,
 			       ConfigParamDescr.VOLUME_NUMBER),
-		 plugin.getAuConfigProperties());
-  }
-
-  public void testGetDefiningProperties() {
-    assertEquals(ListUtil.list(ConfigParamDescr.BASE_URL.getKey(),
-                               ConfigParamDescr.JOURNAL_DIR.getKey(),
-                               ConfigParamDescr.VOLUME_NUMBER.getKey()),
-		 plugin.getDefiningConfigKeys());
+		 plugin.getAuConfigDescrs());
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestWrappedPlugin.java,v 1.2 2004-01-27 00:41:49 tyronen Exp $
+ * $Id: TestWrappedPlugin.java,v 1.3 2004-01-27 04:07:10 tlipkis Exp $
  */
 
 /*
@@ -114,17 +114,10 @@ public class TestWrappedPlugin extends LockssTestCase {
                  plugin.getPluginId());
   }
 
-  public void testGetAuConfigProperties() {
+  public void testGetAuConfigDescrs() {
     assertEquals(ListUtil.list(ConfigParamDescr.BASE_URL,
                                ConfigParamDescr.VOLUME_NUMBER),
-                 plugin.getAuConfigProperties());
+                 plugin.getAuConfigDescrs());
   }
-
-  public void testGetDefiningProperties() {
-    assertEquals(ListUtil.list(ConfigParamDescr.BASE_URL.getKey(),
-                               ConfigParamDescr.VOLUME_NUMBER.getKey()),
-                 plugin.getDefiningConfigKeys());
-  }
-
 
 }

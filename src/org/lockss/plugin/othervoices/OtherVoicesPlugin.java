@@ -1,5 +1,5 @@
 /*
- * $Id: OtherVoicesPlugin.java,v 1.4 2004-01-13 04:46:26 clairegriffin Exp $
+ * $Id: OtherVoicesPlugin.java,v 1.5 2004-01-27 04:07:08 tlipkis Exp $
  */
 
 /*
@@ -60,9 +60,6 @@ public class OtherVoicesPlugin
     configurationMap.putString(CM_VERSION_KEY, CURRENT_VERSION);
     configurationMap.putCollection(CM_CONFIG_PROPS_KEY,
                                    ListUtil.list(PD_BASE, PD_VOL));
-    configurationMap.putCollection(CM_DEFINING_CONFIG_PROPS_KEY,
-                                   ListUtil.list(AUPARAM_BASE_URL,
-                                                 AUPARAM_VOL));
     // then call the overridden initializaton.
     super.initPlugin(daemon);
   }

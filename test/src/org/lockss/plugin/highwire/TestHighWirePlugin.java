@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWirePlugin.java,v 1.17 2004-01-27 01:03:53 clairegriffin Exp $
+ * $Id: TestHighWirePlugin.java,v 1.18 2004-01-27 04:07:06 tlipkis Exp $
  */
 
 /*
@@ -118,12 +118,6 @@ public class TestHighWirePlugin extends LockssTestCase {
   public void testGetAuConfigProperties() {
     assertEquals(ListUtil.list(ConfigParamDescr.BASE_URL,
 			       ConfigParamDescr.VOLUME_NUMBER),
-		 plugin.getAuConfigProperties());
-  }
-
-  public void testGetDefiningProperties() {
-    assertEquals(ListUtil.list(ConfigParamDescr.BASE_URL.getKey(),
-			       ConfigParamDescr.VOLUME_NUMBER.getKey()),
-		 plugin.getDefiningConfigKeys());
+		 plugin.getAuConfigDescrs());
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestAbsinthePlugin.java,v 1.4 2004-01-27 01:03:50 clairegriffin Exp $
+ * $Id: TestAbsinthePlugin.java,v 1.5 2004-01-27 04:07:07 tlipkis Exp $
  */
 
 /*
@@ -110,12 +110,6 @@ public class TestAbsinthePlugin extends LockssTestCase {
   public void testGetAuConfigProperties() {
     assertEquals(ListUtil.list(ConfigParamDescr.BASE_URL,
                                ConfigParamDescr.YEAR),
-                 plugin.getAuConfigProperties());
-  }
-
-  public void testGetDefiningProperties() {
-    assertEquals(ListUtil.list(ConfigParamDescr.BASE_URL.getKey(),
-                               ConfigParamDescr.YEAR.getKey()),
-                 plugin.getDefiningConfigKeys());
+                 plugin.getAuConfigDescrs());
   }
 }

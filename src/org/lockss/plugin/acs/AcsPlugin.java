@@ -1,5 +1,5 @@
 /*
- * $Id: AcsPlugin.java,v 1.9 2004-01-13 04:46:25 clairegriffin Exp $
+ * $Id: AcsPlugin.java,v 1.10 2004-01-27 04:07:09 tlipkis Exp $
  */
 
 /*
@@ -90,11 +90,6 @@ public class AcsPlugin extends ConfigurablePlugin {
     configurationMap.putCollection(CM_CONFIG_PROPS_KEY,
                                    ListUtil.list(PD_BASE, PD_ARTICLE, PD_JKEY,
                                                  PD_VOL, PD_YEAR));
-    configurationMap.putCollection(CM_DEFINING_CONFIG_PROPS_KEY,
-                                   ListUtil.list(AUPARAM_BASE_URL,
-                                                 AUPARAM_ARTICLE_URL,
-                                                 AUPARAM_JOURNAL_KEY,
-                                                 AUPARAM_VOL, AUPARAM_YEAR));
     // then call the overridden initializaton.
     super.initPlugin(daemon);
   }

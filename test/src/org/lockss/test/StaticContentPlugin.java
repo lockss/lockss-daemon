@@ -1,5 +1,5 @@
 /*
- * $Id: StaticContentPlugin.java,v 1.20 2004-01-27 01:03:55 clairegriffin Exp $
+ * $Id: StaticContentPlugin.java,v 1.21 2004-01-27 04:07:04 tlipkis Exp $
  */
 
 /*
@@ -69,8 +69,9 @@ public class StaticContentPlugin extends BasePlugin implements PluginTestable {
     throw new UnsupportedOperationException("Not implemented");
   }
 
-  public List getAuConfigProperties() {
-    throw new UnsupportedOperationException("Not implemented");
+  public List getAuConfigDescrs() {
+    return Collections.EMPTY_LIST;
+    //    throw new UnsupportedOperationException("Not implemented");
   }
 
   public ArchivalUnit createAu(Configuration auConfig)
@@ -84,10 +85,6 @@ public class StaticContentPlugin extends BasePlugin implements PluginTestable {
 
   public void unregisterArchivalUnit(ArchivalUnit au) {
     aus.remove(au);
-  }
-
-  public Collection getDefiningConfigKeys() {
-    return Collections.EMPTY_LIST;
   }
 
   public CachedUrlSet makeCachedUrlSet(ArchivalUnit owner,

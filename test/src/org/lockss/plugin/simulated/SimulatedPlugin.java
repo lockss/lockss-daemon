@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedPlugin.java,v 1.17 2003-12-17 02:09:45 tlipkis Exp $
+ * $Id: SimulatedPlugin.java,v 1.18 2004-01-27 04:07:04 tlipkis Exp $
  */
 
 /*
@@ -50,65 +50,168 @@ public class SimulatedPlugin extends BasePlugin implements PluginTestable {
   /**
    * The root location for the simulated content to be generated.
    */
-  public static final String AU_PARAM_ROOT = "root";
+  static final ConfigParamDescr PD_ROOT = new ConfigParamDescr();
+  static {
+    PD_ROOT.setKey("root");
+    PD_ROOT.setDisplayName("Root");
+    PD_ROOT.setType(ConfigParamDescr.TYPE_STRING);
+    PD_ROOT.setSize(20);
+  }
+  public static final String AU_PARAM_ROOT = PD_ROOT.getKey();
+
   /**
    * The depth of the tree to generate (0 equals just the root dir).
    */
-  public static final String AU_PARAM_DEPTH = "depth";
+  static final ConfigParamDescr PD_DEPTH = new ConfigParamDescr();
+  static {
+    PD_DEPTH.setKey("depth");
+    PD_DEPTH.setDisplayName("Depth");
+    PD_DEPTH.setType(ConfigParamDescr.TYPE_INT);
+    PD_DEPTH.setSize(8);
+    PD_DEPTH.setDefinitional(false);
+  }
+  public static final String AU_PARAM_DEPTH = PD_DEPTH.getKey();
+
   /**
    * The number of branches in each directory.
    */
-  public static final String AU_PARAM_BRANCH = "branch";
+  static final ConfigParamDescr PD_BRANCH = new ConfigParamDescr();
+  static {
+    PD_BRANCH.setKey("branch");
+    PD_BRANCH.setDisplayName("Branches");
+    PD_BRANCH.setType(ConfigParamDescr.TYPE_INT);
+    PD_BRANCH.setSize(8);
+    PD_BRANCH.setDefinitional(false);
+  }
+  public static final String AU_PARAM_BRANCH = PD_BRANCH.getKey();
+
   /**
    * The number of files in each directory.  This will be multiplied by the
    * number of file types, so having both '.html' and '.txt' will generate
    * 'file1.html', 'file1.txt', 'file2.html', 'file2.txt', etc.
    */
-  public static final String AU_PARAM_NUM_FILES = "numFiles";
+  static final ConfigParamDescr PD_NUM_FILES = new ConfigParamDescr();
+  static {
+    PD_NUM_FILES.setKey("numFiles");
+    PD_NUM_FILES.setDisplayName("Files/branch");
+    PD_NUM_FILES.setType(ConfigParamDescr.TYPE_INT);
+    PD_NUM_FILES.setSize(8);
+    PD_NUM_FILES.setDefinitional(false);
+  }
+  public static final String AU_PARAM_NUM_FILES = PD_NUM_FILES.getKey();
 
   /**
    * The size to make binary files, if chosen as a type.
    */
-  public static final String AU_PARAM_BIN_FILE_SIZE = "binFileSize";
+  static final ConfigParamDescr PD_BIN_FILE_SIZE = new ConfigParamDescr();
+  static {
+    PD_BIN_FILE_SIZE.setKey("binFileSize");
+    PD_BIN_FILE_SIZE.setDisplayName("Binary file size");
+    PD_BIN_FILE_SIZE.setType(ConfigParamDescr.TYPE_INT);
+    PD_BIN_FILE_SIZE.setSize(8);
+    PD_BIN_FILE_SIZE.setDefinitional(false);
+  }
+  public static final String AU_PARAM_BIN_FILE_SIZE =
+    PD_BIN_FILE_SIZE.getKey();
 
   /**
    * The maximum length for file names.  Currently unused.
    */
-  public static final String AU_PARAM_MAXFILE_NAME = "maxFileName";
+  static final ConfigParamDescr PD_MAXFILE_NAME = new ConfigParamDescr();
+  static {
+    PD_MAXFILE_NAME.setKey("maxFileName");
+    PD_MAXFILE_NAME.setDisplayName("Max file name");
+    PD_MAXFILE_NAME.setType(ConfigParamDescr.TYPE_INT);
+    PD_MAXFILE_NAME.setSize(8);
+    PD_MAXFILE_NAME.setDefinitional(false);
+  }
+  public static final String AU_PARAM_MAXFILE_NAME = PD_MAXFILE_NAME.getKey();
 
   /**
    * The file types to create.  A bit-wise addition of
    * {@link SimulatedContentGenerator}.FILE_TYPE_XXX values.
    */
-  public static final String AU_PARAM_FILE_TYPES = "fileTypes";
+  static final ConfigParamDescr PD_FILE_TYPES = new ConfigParamDescr();
+  static {
+    PD_FILE_TYPES.setKey("fileTypes");
+    PD_FILE_TYPES.setDisplayName("File types");
+    PD_FILE_TYPES.setType(ConfigParamDescr.TYPE_INT);
+    PD_FILE_TYPES.setSize(8);
+    PD_FILE_TYPES.setDefinitional(false);
+  }
+  public static final String AU_PARAM_FILE_TYPES = PD_FILE_TYPES.getKey();
 
   /**
-   * The maximum length for file names.  Currently unused.
+   * ???
    */
-  public static final String AU_PARAM_ODD_BRANCH_CONTENT = "oddBranchContent";
+  static final ConfigParamDescr PD_ODD_BRANCH_CONTENT = new ConfigParamDescr();
+  static {
+    PD_ODD_BRANCH_CONTENT.setKey("odd_branch_content");
+    PD_ODD_BRANCH_CONTENT.setDisplayName("Odd Branch Contents");
+    PD_ODD_BRANCH_CONTENT.setType(ConfigParamDescr.TYPE_BOOLEAN);
+    PD_ODD_BRANCH_CONTENT.setDefinitional(false);
+  }
+  public static final String AU_PARAM_ODD_BRANCH_CONTENT =
+    PD_ODD_BRANCH_CONTENT.getKey();
 
   /**
-   * The directory location of the 'abnormal' file.  Should be a string filepath
-   * (i.e. 'root/branch1/branch3').
+   * The directory location of the 'abnormal' file.  Should be a string
+   * filepath (i.e. 'root/branch1/branch3').
    */
-  public static final String AU_PARAM_BAD_FILE_LOC = "badFileLoc";
+  static final ConfigParamDescr PD_BAD_FILE_LOC = new ConfigParamDescr();
+  static {
+    PD_BAD_FILE_LOC.setKey("badFileLoc");
+    PD_BAD_FILE_LOC.setDisplayName("Bad File Path");
+    PD_BAD_FILE_LOC.setType(ConfigParamDescr.TYPE_STRING);
+    PD_BAD_FILE_LOC.setSize(30);
+    PD_BAD_FILE_LOC.setDefinitional(false);
+  }
+  public static final String AU_PARAM_BAD_FILE_LOC = PD_BAD_FILE_LOC.getKey();
 
   /**
    * The file number of the 'abnormal' file, in the directory given by the
    * location string.
    */
-  public static final String AU_PARAM_BAD_FILE_NUM = "badFileNum";
+  static final ConfigParamDescr PD_BAD_FILE_NUM = new ConfigParamDescr();
+  static {
+    PD_BAD_FILE_NUM.setKey("badFileNum");
+    PD_BAD_FILE_NUM.setDisplayName("Bad File Number");
+    PD_BAD_FILE_NUM.setType(ConfigParamDescr.TYPE_INT);
+    PD_BAD_FILE_NUM.setSize(8);
+    PD_BAD_FILE_NUM.setDefinitional(false);
+  }
+  public static final String AU_PARAM_BAD_FILE_NUM = PD_BAD_FILE_NUM.getKey();
 
   /**
    * The directory location of a file to be marked as 'damaged' in the cache.
    * Should be a string filepath.
    */
-  public static final String AU_PARAM_BAD_CACHED_FILE_LOC = "badCachedFileLoc";
+  static final ConfigParamDescr PD_BAD_CACHED_FILE_LOC =
+    new ConfigParamDescr();
+  static {
+    PD_BAD_CACHED_FILE_LOC.setKey("badCachedFileLoc");
+    PD_BAD_CACHED_FILE_LOC.setDisplayName("Damaged File Path");
+    PD_BAD_CACHED_FILE_LOC.setType(ConfigParamDescr.TYPE_STRING);
+    PD_BAD_CACHED_FILE_LOC.setSize(30);
+    PD_BAD_CACHED_FILE_LOC.setDefinitional(false);
+  }
+  public static final String AU_PARAM_BAD_CACHED_FILE_LOC =
+    PD_BAD_CACHED_FILE_LOC.getKey();
 
   /**
    * File number of the 'damaged' cache file
    */
-  public static final String AU_PARAM_BAD_CACHED_FILE_NUM = "badCachedFileNum";
+  static final ConfigParamDescr PD_BAD_CACHED_FILE_NUM =
+    new ConfigParamDescr();
+  static {
+    PD_BAD_CACHED_FILE_NUM.setKey("badCachedFileNum");
+    PD_BAD_CACHED_FILE_NUM.setDisplayName("Damaged File Number");
+    PD_BAD_CACHED_FILE_NUM.setType(ConfigParamDescr.TYPE_INT);
+    PD_BAD_CACHED_FILE_NUM.setSize(8);
+    PD_BAD_CACHED_FILE_NUM.setDefinitional(false);
+  }
+  public static final String AU_PARAM_BAD_CACHED_FILE_NUM =
+    PD_BAD_CACHED_FILE_NUM.getKey();
 
   private String pluginId = "SimulatedPlugin";
   private int initCtr = 0;
@@ -160,18 +263,18 @@ public class SimulatedPlugin extends BasePlugin implements PluginTestable {
    * @return a List of strings which are the names of the properties for
    * which values are needed in order to configure an AU
    */
-  public List getAuConfigProperties() {
-    return ListUtil.list(AU_PARAM_ROOT, AU_PARAM_DEPTH,
-			 AU_PARAM_BRANCH, AU_PARAM_NUM_FILES,
-			 AU_PARAM_BIN_FILE_SIZE, AU_PARAM_MAXFILE_NAME,
-			 AU_PARAM_FILE_TYPES, AU_PARAM_ODD_BRANCH_CONTENT,
-                         AU_PARAM_BAD_FILE_LOC, AU_PARAM_BAD_FILE_NUM);
+  public List getAuConfigDescrs() {
+    return ListUtil.list(PD_ROOT, PD_DEPTH,
+			 PD_BRANCH, PD_NUM_FILES,
+			 PD_BIN_FILE_SIZE, PD_MAXFILE_NAME,
+			 PD_FILE_TYPES, PD_ODD_BRANCH_CONTENT,
+                         PD_BAD_FILE_LOC, PD_BAD_FILE_NUM);
   }
 
   /**
    * Create an ArchivalUnit for the AU specified by the configuration.
-   * @param auConfig Configuration object with values for all properties
-   * returned by {@link #getDefiningConfigKeys()}
+   * @param auConfig {@link Configuration} object with values for the AU
+   * config params
    * @return an {@link ArchivalUnit}
    * @throws ArchivalUnit.ConfigurationException if the configuration is
    * illegal in any way.
@@ -182,10 +285,6 @@ public class SimulatedPlugin extends BasePlugin implements PluginTestable {
     ArchivalUnit au = new SimulatedArchivalUnit(this);
     au.setConfiguration(auConfig);
     return au;
-  }
-
-  public Collection getDefiningConfigKeys() {
-    return ListUtil.list(AU_PARAM_ROOT);
   }
 
   // SimulatedPlugin methods, not part of Plugin interface

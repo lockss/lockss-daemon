@@ -1,5 +1,5 @@
 /*
- * $Id: MockPlugin.java,v 1.15 2004-01-27 00:41:50 tyronen Exp $
+ * $Id: MockPlugin.java,v 1.16 2004-01-27 04:07:04 tlipkis Exp $
  */
 
 /*
@@ -54,7 +54,6 @@ public class MockPlugin extends BasePlugin implements PluginTestable {
   private int initCtr = 0;
   private int stopCtr = 0;
   private Configuration auConfig;
-  private Collection defKeys = null;
 
   public MockPlugin(){
     super();
@@ -114,25 +113,15 @@ public class MockPlugin extends BasePlugin implements PluginTestable {
    * @return a List of strings which are the names of the properties for
    * which values are needed in order to configure an AU
    */
-  public List getAuConfigProperties() {
-    return ListUtil.list(CONFIG_PROP_1, CONFIG_PROP_2);
-  }
-
-  public Collection getDefiningConfigKeys() {
-    if (defKeys != null) {
-      return defKeys;
-    }
-    return ListUtil.list(CONFIG_PROP_1, CONFIG_PROP_2);
-  }
-
-  public void setDefiningConfigKeys(Collection keys) {
-    defKeys = keys;
+  public List getAuConfigDescrs() {
+    return ListUtil.list(ConfigParamDescr.BASE_URL,
+			 ConfigParamDescr.VOLUME_NUMBER);
   }
 
   /**
    * Create an ArchivalUnit for the AU specified by the configuration.
    * @param auConfig Configuration object with values for all properties
-   * returned by {@link #getAuConfigProperties()}
+   * returned by {@link #getAuConfigDescrs()}
    * @return the ArchivalUnit
    * @throws ArchivalUnit.ConfigurationException
    */

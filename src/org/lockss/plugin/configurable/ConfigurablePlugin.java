@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurablePlugin.java,v 1.6 2004-01-27 01:03:46 clairegriffin Exp $
+ * $Id: ConfigurablePlugin.java,v 1.7 2004-01-27 04:07:08 tlipkis Exp $
  */
 
 /*
@@ -51,9 +51,6 @@ public class ConfigurablePlugin extends BasePlugin {
   static final protected String CM_NAME_KEY = "plugin_name";
   static final protected String CM_VERSION_KEY = "plugin_version";
   static final protected String CM_CONFIG_PROPS_KEY = "plugin_config_props";
-  static final protected String CM_DEFINING_CONFIG_PROPS_KEY =
-      "plugin_defining_props";
-
 
   String mapName = null;
 
@@ -85,14 +82,9 @@ public class ConfigurablePlugin extends BasePlugin {
     return configurationMap.getString(CM_VERSION_KEY, "UNKNOWN VERSION");
   }
 
-  public List getAuConfigProperties() {
+  public List getAuConfigDescrs() {
     return (List) configurationMap.getCollection(CM_CONFIG_PROPS_KEY,
                                                  Collections.EMPTY_LIST);
-  }
-
-  public Collection getDefiningConfigKeys() {
-    return configurationMap.getCollection(CM_DEFINING_CONFIG_PROPS_KEY,
-                                          Collections.EMPTY_LIST);
   }
 
   public ArchivalUnit createAu(Configuration auConfig)

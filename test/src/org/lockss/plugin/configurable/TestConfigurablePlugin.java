@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigurablePlugin.java,v 1.4 2004-01-27 01:03:52 clairegriffin Exp $
+ * $Id: TestConfigurablePlugin.java,v 1.5 2004-01-27 04:07:06 tlipkis Exp $
  */
 
 /*
@@ -80,7 +80,7 @@ public class TestConfigurablePlugin extends LockssTestCase {
     map.putCollection(ConfigurablePlugin.CM_CONFIG_PROPS_KEY,
                       expectedReturn);
 
-    List actualReturn = configurablePlugin.getAuConfigProperties();
+    List actualReturn = configurablePlugin.getAuConfigDescrs();
     assertIsomorphic("return value", expectedReturn, actualReturn);
   }
 
@@ -88,15 +88,6 @@ public class TestConfigurablePlugin extends LockssTestCase {
     ExternalizableMap expectedReturn = configurablePlugin.configurationMap;
     ExternalizableMap actualReturn = configurablePlugin.getConfigurationMap();
     assertEquals("return value", expectedReturn, actualReturn);
-  }
-
-  public void testGetDefiningConfigKeys() {
-    Collection expectedReturn = ListUtil.list("Item1", "Item2");
-    ExternalizableMap map = configurablePlugin.getConfigurationMap();
-    map.putCollection(ConfigurablePlugin.CM_DEFINING_CONFIG_PROPS_KEY,
-                      expectedReturn);
-    Collection actualReturn = configurablePlugin.getDefiningConfigKeys();
-    assertIsomorphic("return value", expectedReturn, actualReturn);
   }
 
   public void testGetPluginName() {

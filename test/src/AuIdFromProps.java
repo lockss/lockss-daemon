@@ -1,5 +1,5 @@
 /*
- * $Id: AuIdFromProps.java,v 1.1 2003-09-26 23:45:51 eaalto Exp $
+ * $Id: AuIdFromProps.java,v 1.2 2004-01-27 04:07:07 tlipkis Exp $
  */
 
 /*
@@ -102,13 +102,15 @@ public class AuIdFromProps {//extends BaseArchivalUnit {
     Properties props = new Properties();
     try {
       System.err.println("Enter values for the following properties");
-      for (Iterator it = plugin.getDefiningConfigKeys().iterator();
-	   it.hasNext();) {
-	
-	String curKey = (String)it.next();
-	System.out.print(curKey+": ");
-	String line = in.readLine();
-	props.setProperty(curKey, line);
+      for (Iterator iter = plugin.getAuConfigDescrs().iterator();
+	   iter.hasNext();) {
+	ConfigParamDescr descr = (ConfigParamDescr)iter.next();
+	if (descr.isDefinitional()) {
+	  String key = descr.getKey();
+	  System.out.print(key + ": ");
+	  String line = in.readLine();
+	  props.setProperty(key, line);
+	}
       }
 	//       PropUtil.printPropsTo(props, System.out);
 	//       System.out.println();

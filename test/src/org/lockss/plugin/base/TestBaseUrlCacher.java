@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.10 2004-01-17 00:14:35 troberts Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.11 2004-01-27 04:07:06 tlipkis Exp $
  */
 
 /*
@@ -70,7 +70,6 @@ public class TestBaseUrlCacher extends LockssTestCase {
     mau.setCrawlSpec(new CrawlSpec(tempDirPath, null));
     MockPlugin plugin = new MyMockPlugin();
     plugin.initPlugin(theDaemon);
-    plugin.setDefiningConfigKeys(Collections.EMPTY_LIST);
     mau.setPlugin(plugin);
 
     theDaemon.getLockssRepository(mau);

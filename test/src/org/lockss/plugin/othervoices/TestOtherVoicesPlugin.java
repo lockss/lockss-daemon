@@ -1,5 +1,5 @@
 /*
- * $Id: TestOtherVoicesPlugin.java,v 1.3 2004-01-27 01:03:53 clairegriffin Exp $
+ * $Id: TestOtherVoicesPlugin.java,v 1.4 2004-01-27 04:07:05 tlipkis Exp $
  */
 
 /*
@@ -96,12 +96,6 @@ public class TestOtherVoicesPlugin extends LockssTestCase {
   public void testGetAuConfigProperties() {
     assertEquals(ListUtil.list(ConfigParamDescr.BASE_URL,
 			       ConfigParamDescr.VOLUME_NUMBER),
-		 plugin.getAuConfigProperties());
-  }
-
-  public void testGetDefiningProperties() {
-    assertEquals(ListUtil.list(ConfigParamDescr.BASE_URL.getKey(),
-                               ConfigParamDescr.VOLUME_NUMBER.getKey()),
-		 plugin.getDefiningConfigKeys());
+		 plugin.getAuConfigDescrs());
   }
 }

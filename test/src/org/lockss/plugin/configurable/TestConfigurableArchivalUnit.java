@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigurableArchivalUnit.java,v 1.2 2004-01-27 01:03:51 clairegriffin Exp $
+ * $Id: TestConfigurableArchivalUnit.java,v 1.3 2004-01-27 04:07:06 tlipkis Exp $
  */
 
 /*
@@ -49,8 +49,6 @@ public class TestConfigurableArchivalUnit extends LockssTestCase {
   private ExternalizableMap map;
   private List configProps = ListUtil.list(ConfigParamDescr.BASE_URL,
                                            ConfigParamDescr.VOLUME_NUMBER);
-  private List defConfigProps = ListUtil.list(ConfigParamDescr.BASE_URL.getKey(),
-                                              ConfigParamDescr.VOLUME_NUMBER.getKey());
   private List crawlRules = ListUtil.list("1\n%s\nbase_url",
                                           "1\n.*\\.gif");
 
@@ -65,9 +63,6 @@ public class TestConfigurableArchivalUnit extends LockssTestCase {
     map.putString(ConfigurablePlugin.CM_NAME_KEY, PLUGIN_NAME);
     map.putString(ConfigurablePlugin.CM_VERSION_KEY, CURRENT_VERSION);
     map.putCollection(ConfigurablePlugin.CM_CONFIG_PROPS_KEY, configProps);
-    map.putCollection(ConfigurablePlugin.CM_DEFINING_CONFIG_PROPS_KEY,
-                      defConfigProps);
-
   }
 
   protected void tearDown() throws Exception {

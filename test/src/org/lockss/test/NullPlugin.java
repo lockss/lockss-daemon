@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.45 2004-01-03 06:18:50 tlipkis Exp $
+ * $Id: NullPlugin.java,v 1.46 2004-01-27 04:07:04 tlipkis Exp $
  */
 
 /*
@@ -87,12 +87,8 @@ public class NullPlugin {
       return null;
     }
 
-    public List getAuConfigProperties() {
+    public List getAuConfigDescrs() {
       return null;
-    }
-
-    public Collection getDefiningConfigKeys() {
-      return Collections.EMPTY_LIST;
     }
 
     public org.lockss.plugin.ArchivalUnit configureAu(Configuration config,

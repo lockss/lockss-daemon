@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.16 2004-01-14 05:25:05 tlipkis Exp $
+ * $Id: AuConfig.java,v 1.17 2004-01-27 04:07:07 tlipkis Exp $
  */
 
 /*
@@ -526,7 +526,7 @@ public class AuConfig extends LockssServlet {
   private void addPropRows(Table tbl, Collection keys, Configuration initVals,
 		      Collection editableKeys) {
     for (Iterator iter = getAuConfigParams().iterator(); iter.hasNext(); ) {
-      ConfigParamDescr descr = descrFromObj(iter.next());
+      ConfigParamDescr descr = (ConfigParamDescr)iter.next();
       if (!keys.contains(descr.getKey())) {
 	continue;
       }
@@ -846,14 +846,16 @@ public class AuConfig extends LockssServlet {
   }
 
   void prepareConfigParams() {
-    auConfigParams = new ArrayList(plugin.getAuConfigProperties());
+    auConfigParams = new ArrayList(plugin.getAuConfigDescrs());
     // let the plugin specify the order
     // Collections.sort(auConfigParams);
-    defKeys = plugin.getDefiningConfigKeys();
+    defKeys = new ArrayList();
     editKeys = new ArrayList();
     for (Iterator iter = auConfigParams.iterator(); iter.hasNext(); ) {
-      ConfigParamDescr descr = descrFromObj(iter.next());
-      if (!defKeys.contains(descr.getKey())) {
+      ConfigParamDescr descr = (ConfigParamDescr)iter.next();
+      if (descr.isDefinitional()) {
+	defKeys.add(descr.getKey());
+      } else {
 	editKeys.add(descr.getKey());
       }
     }
@@ -878,13 +880,6 @@ public class AuConfig extends LockssServlet {
       prepareConfigParams();
     }
     return auConfigParams;
-  }
-
-  ConfigParamDescr descrFromObj(Object obj) {
-    if (obj instanceof ConfigParamDescr) {
-      return (ConfigParamDescr)obj;
-    }
-    return new ConfigParamDescr(obj.toString());
   }
 
   private String formKeyFromKey(String key) {

@@ -1,5 +1,5 @@
 /*
- * $Id: TitleParams.java,v 1.1 2004-01-03 06:28:01 tlipkis Exp $
+ * $Id: TitleParams.java,v 1.2 2004-01-27 04:07:07 tlipkis Exp $
  */
 
 /*
@@ -125,7 +125,7 @@ public class TitleParams {
       }
       prevPlugin = plugin;
 
-      List params = plugin.getAuConfigProperties();
+      List params = plugin.getAuConfigDescrs();
       cout.print("Title: ");
       String title = cin.readLine();
       String propId;

@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurableArchivalUnit.java,v 1.3 2004-01-27 01:03:46 clairegriffin Exp $
+ * $Id: ConfigurableArchivalUnit.java,v 1.4 2004-01-27 04:07:09 tlipkis Exp $
  */
 
 /*
@@ -77,7 +77,7 @@ public class ConfigurableArchivalUnit
 
   protected void loadDefiningConfig(Configuration config) throws
       ConfigurationException {
-    List descrList = plugin.getAuConfigProperties();
+    List descrList = plugin.getAuConfigDescrs();
     for (Iterator it = descrList.iterator(); it.hasNext(); ) {
       ConfigParamDescr descr = (ConfigParamDescr) it.next();
       String key = descr.getKey();

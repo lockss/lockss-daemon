@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.51 2004-01-27 01:03:45 clairegriffin Exp $
+ * $Id: BaseArchivalUnit.java,v 1.52 2004-01-27 04:07:09 tlipkis Exp $
  */
 
 /*
@@ -164,19 +164,22 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 
   private void checkLegalConfigChange(Configuration newConfig)
       throws ArchivalUnit.ConfigurationException {
-    Collection defKeys = plugin.getDefiningConfigKeys();
-    for (Iterator it = defKeys.iterator(); it.hasNext();) {
-      String curKey = (String)it.next();
-      String oldVal = auConfig.get(curKey);
-      String newVal = newConfig.get(curKey);
-      if (!StringUtil.equalStrings(oldVal, newVal)) {
-	throw new ConfigurationException("Attempt to modify defining property "
-					 +"of existing ArchivalUnit: "+curKey
-					 +". old: "+oldVal+" new: "+newVal);
+    for (Iterator iter = plugin.getAuConfigDescrs().iterator();
+	 iter.hasNext();) {
+      ConfigParamDescr descr = (ConfigParamDescr)iter.next();
+      if (descr.isDefinitional()) {
+	String key = descr.getKey();
+	String oldVal = auConfig.get(key);
+	String newVal = newConfig.get(key);
+	if (!StringUtil.equalStrings(oldVal, newVal)) {
+	  throw
+	    new ConfigurationException("Attempt to modify defining property "
+				       +"of existing ArchivalUnit: "+ key
+				       +". old: "+oldVal+" new: "+newVal);
+	}
       }
     }
   }
-
 
   protected void setBaseAuParams(Configuration config)
       throws ConfigurationException {
@@ -228,13 +231,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    */
   public final String getAuId() {
     if (auId == null) {
-      Collection defKeys = getPlugin().getDefiningConfigKeys();
-      Properties props = new Properties();
-      for (Iterator it = defKeys.iterator(); it.hasNext();) {
-	String curKey = (String)it.next();
-	props.setProperty(curKey, auConfig.get(curKey));
-      }
-      auId = PluginManager.generateAuId(getPluginId(), props);
+      auId = PluginManager.generateAuId(getPlugin(), auConfig);
     }
     return auId;
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: ProjectMusePlugin.java,v 1.11 2004-01-13 04:46:26 clairegriffin Exp $
+ * $Id: ProjectMusePlugin.java,v 1.12 2004-01-27 04:07:07 tlipkis Exp $
  */
 
 /*
@@ -62,10 +62,6 @@ public class ProjectMusePlugin
     configurationMap.putString(CM_VERSION_KEY, CURRENT_VERSION);
     configurationMap.putCollection(CM_CONFIG_PROPS_KEY,
                                    ListUtil.list(PD_BASE, PD_DIR, PD_VOL));
-    configurationMap.putCollection(CM_DEFINING_CONFIG_PROPS_KEY,
-                                   ListUtil.list(AUPARAM_BASE_URL,
-                                                 AUPARAM_JOURNAL_DIR,
-                                                 AUPARAM_VOL));
     // then call the overridden initializaton.
     super.initPlugin(daemon);
   }

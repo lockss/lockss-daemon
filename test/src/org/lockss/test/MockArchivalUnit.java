@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.43 2004-01-07 01:14:10 troberts Exp $
+ * $Id: MockArchivalUnit.java,v 1.44 2004-01-27 04:07:04 tlipkis Exp $
  */
 
 /*
@@ -186,15 +186,18 @@ public class MockArchivalUnit implements ArchivalUnit {
     if (plugin == null || config == null) {
       return defaultAUId;
     }
-    Collection defKeys = plugin.getDefiningConfigKeys();
     Properties props = new Properties();
-    for (Iterator it = defKeys.iterator(); it.hasNext();) {
-      String curKey = (String)it.next();
-      String val = config.get(curKey);
-      // during testing, don't allow missing config values to cause
-      // NullPointerException in setProperty()
-      if (val != null) {
-	props.setProperty(curKey, config.get(curKey));
+    for (Iterator iter = plugin.getAuConfigDescrs().iterator();
+	 iter.hasNext();) {
+      ConfigParamDescr descr = (ConfigParamDescr)iter.next();
+      if (descr.isDefinitional()) {
+	String key = descr.getKey();
+	String val = config.get(key);
+	// during testing, don't allow missing config values to cause
+	// NullPointerException in setProperty()
+	if (val != null) {
+	  props.setProperty(key, config.get(key));
+	}
       }
     }
     return PluginManager.generateAuId(getPluginId(), props);
