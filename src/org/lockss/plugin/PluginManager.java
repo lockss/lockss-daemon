@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.75 2004-03-11 09:41:39 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.75.2.1 2004-03-18 20:10:31 tlipkis Exp $
  */
 
 /*
@@ -203,6 +203,14 @@ public class PluginManager extends BaseLockssManager {
 
   static String generateAuId(String pluginId, String auKey) {
     return pluginKeyFromId(pluginId)+"&"+auKey;
+  }
+
+  public static String auKeyFromAuId(String auid) {
+    int pos = auid.indexOf("&");
+    if (pos < 0) {
+      throw new IllegalArgumentException("Illegal AuId: " + auid);
+    }
+    return auid.substring(pos + 1);
   }
 
   public static String pluginIdFromAuId(String auid) {
