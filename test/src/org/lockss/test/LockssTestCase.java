@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.6 2002-11-06 21:17:12 tal Exp $
+ * $Id: LockssTestCase.java,v 1.7 2002-11-19 23:30:21 tal Exp $
  */
 
 /*
@@ -37,16 +37,17 @@ import java.io.*;
 import java.net.*;
 import org.lockss.util.*;
 import junit.framework.TestCase;
+import junit.framework.TestResult;
 
 
 public class LockssTestCase extends TestCase {
   List tmpDirs;
+  List doLaters;
 
   public LockssTestCase(String msg) {
     super(msg);
   }
 
-  
   /** Create and return the name of a temp dir.  The dir is created within
    * the default temp file dir.
    * It will be deleted following the test, by tearDown().  (So if you
@@ -72,6 +73,13 @@ public class LockssTestCase extends TestCase {
 	if (FileUtil.delTree(dir)) {
 	  iter.remove();
 	}
+      }
+    }
+    if (doLaters != null) {
+      for (ListIterator iter = doLaters.listIterator(); iter.hasNext(); ) {
+	DoLater doer = (DoLater)iter.next();
+	doer.cancel();
+	iter.remove();
       }
     }
     super.tearDown();
@@ -160,6 +168,130 @@ public class LockssTestCase extends TestCase {
     assertEquals(expected.getLength(), actual.getLength());
     assertEquals(expected.getOffset(), actual.getOffset());
     assertEquals(expected.getData(), actual.getData());
+  }
+  /** Abstraction to do something in another thread, after a delay,
+   * unless cancelled.  If the sceduled activity is still pending when the
+   * test completes, it is cancelled by tearDown().
+   * <br>For one-off use:<pre>
+   *  final Object obj = ...;
+   *  DoLater doer = new DoLater(1000) {
+   *      protected void doit() {
+   *        obj.method(...);
+   *      }
+   *    };
+   *  doer.start();</pre>
+   *
+   * Or, for convenient repeated use of a particular delayed operation,
+   * define a class that extends <code>DoLater</code>,
+   * with a constructor that calls
+   * <code>super(wait)</code> and stores any other necessary args into
+   * instance vars, and a <code>doit()</code> method that does whatever needs
+   * to be done.  And a convenience method to create and start it.
+   * For example, <code>Interrupter</code> is defined as:<pre>
+   *  public class Interrupter extends DoLater {
+   *    private Thread thread;
+   *    Interrupter(long waitMs, Thread thread) {
+   *      super(waitMs);
+   *      this.thread = thread;
+   *    }
+   *
+   *    protected void doit() {
+   *      thread.interrupt();
+   *    }
+   *  }
+   * 
+   *  public Interrupter interruptMeIn(long ms) {
+   *    Interrupter i = new Interrupter(ms, Thread.currentThread());
+   *    i.start();
+   *    return i;
+   *  }</pre>
+   *
+   * Then, to protect a test with a timeout:<pre>
+   *  Interrupter intr = null;
+   *  try {
+   *    intr = interruptMeIn(1000);
+   *    // perform a test that should complete in less than one second
+   *    intr.cancel();
+   *  } finally {
+   *    if (intr.did()) {
+   *      fail("operation failed to complete in one second");
+   *    }
+   *  }</pre>
+   * The <code>cancel()</code> ensures that the interrupt will not
+   * happen after the try block completes.  (This is not necessary at the
+   * end of a test case, as any pending interrupters will be cancelled
+   * by tearDown.)
+   */
+  protected abstract class DoLater extends Thread {
+    private long wait;
+    private boolean want = true;
+    private boolean did = false;
+
+    public DoLater(long waitMs) {
+      wait = waitMs;
+    }
+
+    /** Must override this to perform desired action */
+    protected abstract void doit();
+
+    /** Return true iff action was taken */
+    public boolean did() {
+      return did;
+    }
+
+    /** Cancel the action iff it hasn't already started.  If it has started,
+     * wait until it completes.  (Thus when <code>cancel()</code> returns, it
+     * is safe to destroy any environment on which the action relies.)
+     */
+    public synchronized void cancel() {
+      if (want) {
+	want = false;
+	this.interrupt();
+      }
+    }
+
+    public final void run() {
+      try {
+	if (doLaters == null) {
+	  doLaters = new LinkedList();
+	}
+	doLaters.add(this);
+	if (wait != 0) {
+	  TimerUtil.sleep(wait);
+	}
+	synchronized (this) {
+	  if (want) {
+	    want = false;
+	    did = true;
+	    doit();
+	  }
+	}
+      } catch (InterruptedException e) {
+	// exit thread
+      } finally {
+	doLaters.remove(this);
+      }
+    }
+  }
+  /** Interrupter interrupts a thread in a while */
+  public class Interrupter extends DoLater {
+    private Thread thread;
+    Interrupter(long waitMs, Thread thread) {
+      super(waitMs);
+      this.thread = thread;
+    }
+
+    /** Interrupt the thread */
+    protected void doit() {
+      thread.interrupt();
+    }
+  }
+
+  /** Interrupt current thread in a while */
+  public Interrupter interruptMeIn(long ms) {
+    Interrupter i = new Interrupter(ms, Thread.currentThread());
+    i.start();
+    return i;
   }
   
 }
