@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuTreeWalkManager.java,v 1.6 2004-10-01 09:27:39 tlipkis Exp $
+ * $Id: TestAuTreeWalkManager.java,v 1.7 2004-10-19 20:19:56 tlipkis Exp $
  */
 
 /*
@@ -77,7 +77,7 @@ public class TestAuTreeWalkManager extends LockssTestCase {
     p.put(TreeWalkManager.PARAM_TREEWALK_INTERVAL_MIN, "12h");
     p.put(TreeWalkManager.PARAM_TREEWALK_INTERVAL_MAX, "36h");
     p.put(TreeWalkManager.PARAM_TREEWALK_START_DELAY,  "1s");
-    p.put(TreeWalkManager.PARAM_TREEWALK_INITIAL_ESTIMATE, "3");
+    p.put(TreeWalkManager.PARAM_TREEWALK_INITIAL_ESTIMATE, "11000");
     p.put(TreeWalkManager.PARAM_TREEWALK_ESTIMATE_GROWTH_MULTIPLIER, "150");
     p.put(TreeWalkManager.PARAM_TREEWALK_ESTIMATE_PADDING_MULTIPLIER, "125");
     p.put(TreeWalkManager.PARAM_TREEWALK_SLEEP_INTERVAL, "1s");
@@ -152,7 +152,7 @@ public class TestAuTreeWalkManager extends LockssTestCase {
     assertTrue(autwm.deferredSem.take(TIMEOUT_SHOULDNT));
     // task should be marked finished by the time doDeferredAction() runs
     assertTrue(task.isFinished());
-    // wait for lockkRun to finish
+    // wait for lockssRun to finish
     assertTrue(autwm.lockssRunDoneSem.take(TIMEOUT_SHOULDNT));
     // now it should have scheduled a new task
     assertNotNull(autwm.curTask);
@@ -193,7 +193,7 @@ public class TestAuTreeWalkManager extends LockssTestCase {
     assertTrue(autwm.curTask.getStart().getExpirationTime() >=
 	       TimeBase.nowMs() + 12 * Constants.HOUR);
     // and estimate should still be 3
-    assertEquals(3, autwm.treeWalkEstimate);
+    assertEquals(11000, autwm.treeWalkEstimate);
   }
 
   public void testRunWalkerNoTreewalk() {
@@ -260,7 +260,7 @@ public class TestAuTreeWalkManager extends LockssTestCase {
     // wait until start evant has completed.
     assertTrue(autwm.eventStartSem.take(TIMEOUT_SHOULDNT));
     assertTrue(autwm.walkStartSem.take(TIMEOUT_SHOULDNT));
-    TimeBase.step(10000);
+    TimeBase.step(12000);
     // wait until finish evant has completed.
     assertTrue(autwm.eventFinishSem.take(TIMEOUT_SHOULDNT));
     // walker should have been told to abort
