@@ -1,5 +1,5 @@
 /*
- * $Id: TestReaderInputStream.java,v 1.2 2003-06-20 22:34:56 claire Exp $
+ * $Id: TestReaderInputStream.java,v 1.3 2003-10-07 22:23:17 troberts Exp $
  */
 
 /*
@@ -35,6 +35,14 @@ import java.io.*;
 import org.lockss.test.*;
 
 public class TestReaderInputStream extends LockssTestCase {
+
+  public void testNullReaderInConstructor() {
+    try {
+      ReaderInputStream is = new ReaderInputStream(null);
+      fail("Calling the constructor with a null Reader should have thrown");
+    } catch (IllegalArgumentException e) {
+    }
+  }
 
   public void testEmptyReaderYieldsEmptyStream() throws IOException {
     Reader reader = new StringReader("");
