@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManager.java,v 1.25 2003-12-17 02:09:45 tlipkis Exp $
+ * $Id: NodeManager.java,v 1.26 2003-12-23 00:26:14 tlipkis Exp $
  */
 
 /*
@@ -36,14 +36,14 @@ import java.util.Iterator;
 import org.lockss.plugin.*;
 import org.lockss.poller.*;
 import org.lockss.util.*;
-import org.lockss.app.LockssManager;
+import org.lockss.app.*;
 
 /**
  * NodeManager handles all nodes in a given system.  It retrieves and stores
  * polls histories, manages tree walks, and maintains current state of the
  * system.
  */
-public interface NodeManager extends LockssManager {
+public interface NodeManager extends LockssAuManager {
   /**
    * Starts a new poll on a particular CachedUrlSet.
    * @param cus the CachedUrlSet being polled

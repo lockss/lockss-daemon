@@ -1,5 +1,5 @@
 /*
- * $Id: ActivityRegulator.java,v 1.24 2003-08-02 00:17:09 eaalto Exp $
+ * $Id: ActivityRegulator.java,v 1.25 2003-12-23 00:26:15 tlipkis Exp $
  */
 
 /*
@@ -35,7 +35,7 @@ package org.lockss.daemon;
 import java.util.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
-import org.lockss.app.BaseLockssManager;
+import org.lockss.app.*;
 import org.lockss.repository.LockssRepository;
 
 /**
@@ -45,7 +45,8 @@ import org.lockss.repository.LockssRepository;
  * whether or not new activities can be permitted to start.  If so, it adjusts
  * the state to reflect the new activity.
  */
-public class ActivityRegulator extends BaseLockssManager {
+public class ActivityRegulator
+  extends BaseLockssManager implements LockssAuManager {
 
 // AU level
   /**
@@ -128,6 +129,12 @@ public class ActivityRegulator extends BaseLockssManager {
                            Configuration prevConfig,
                            Set changedKeys) {
     // nothing to config
+  }
+
+  /** Called between initService() and startService(), then whenever the
+   * AU's config changes.
+   */
+  public void setAuConfig(Configuration auConfig) {
   }
 
   /**
@@ -617,11 +624,11 @@ public class ActivityRegulator extends BaseLockssManager {
   }
 
   /**
-   * Factory method to create ActivityRegulator instances.
-   * @param au the {@link ArchivalUnit}
-   * @return the ActivityRegulator instance for that au
+   * Factory to create ActivityRegulator instances.
    */
-  public static ActivityRegulator createNewActivityRegulator(ArchivalUnit au) {
-    return new ActivityRegulator(au);
+  public static class Factory implements LockssAuManager.Factory {
+    public LockssAuManager createAuManager(ArchivalUnit au) {
+      return new ActivityRegulator(au);
+    }
   }
 }

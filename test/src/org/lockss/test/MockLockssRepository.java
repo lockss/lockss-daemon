@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssRepository.java,v 1.6 2003-09-26 23:47:45 eaalto Exp $
+ * $Id: MockLockssRepository.java,v 1.7 2003-12-23 00:26:14 tlipkis Exp $
  */
 
 /*
@@ -68,6 +68,10 @@ public class MockLockssRepository implements LockssRepository {
   }
 
   public void stopService() {
+  }
+
+  public void setAuConfig(Configuration auConfig) {
+    throw new UnsupportedOperationException("Not implemented");
   }
 
   public RepositoryNode getNode(String url)

@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.158 2003-11-19 04:16:41 eaalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.159 2003-12-23 00:26:14 tlipkis Exp $
  */
 
 /*
@@ -45,7 +45,8 @@ import org.apache.commons.collections.LRUMap;
 /**
  * Implementation of the NodeManager.
  */
-public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
+public class NodeManagerImpl
+  extends BaseLockssManager implements NodeManager {
   /**
    * This parameter indicates the size of the {@link NodeStateCache} used by the
    * node manager.
@@ -103,7 +104,8 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
 
   public void startService() {
     super.startService();
-    logger.debug("NodeManager being started");
+    if (logger.isDebug()) logger.debug("NodeManager being started for " +
+				       managedAu);
     historyRepo = theDaemon.getHistoryRepository();
     lockssRepo = theDaemon.getLockssRepository(managedAu);
     pollManager = theDaemon.getPollManager();
@@ -179,6 +181,12 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
         nodeCache.setCacheSize(maxCacheSize);
       }
     }
+  }
+
+  /** Called between initService() and startService(), then whenever the
+   * AU's config changes.
+   */
+  public void setAuConfig(Configuration auConfig) {
   }
 
   public synchronized NodeState getNodeState(CachedUrlSet cus) {
@@ -1606,11 +1614,11 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
   }
 
   /**
-   * Factory method to create new NodeManager instances.
-   * @param au the {@link ArchivalUnit}
-   * @return the new NodeManager instance
+   * Factory to create new NodeManager instances.
    */
-  public static NodeManager createNewNodeManager(ArchivalUnit au) {
-    return new NodeManagerImpl(au);
+  public static class Factory implements LockssAuManager.Factory {
+    public LockssAuManager createAuManager(ArchivalUnit au) {
+      return new NodeManagerImpl(au);
+    }
   }
 }

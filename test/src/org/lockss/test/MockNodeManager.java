@@ -1,5 +1,5 @@
 /*
- * $Id: MockNodeManager.java,v 1.13 2003-07-17 22:58:48 clairegriffin Exp $
+ * $Id: MockNodeManager.java,v 1.14 2003-12-23 00:26:14 tlipkis Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.test;
 
 import java.util.*;
+import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.poller.*;
 import org.lockss.util.*;
@@ -60,6 +61,10 @@ public class MockNodeManager implements NodeManager {
 
   public void stopService() {
     logger.debug3("Service stopped");
+  }
+
+  public void setAuConfig(Configuration auConfig) {
+    throw new UnsupportedOperationException("Not implemented");
   }
 
   public NodeManager managerFactory(ArchivalUnit au) {
