@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlTagFilter.java,v 1.3 2004-04-05 07:58:18 tlipkis Exp $
+ * $Id: HtmlTagFilter.java,v 1.4 2004-04-05 17:08:06 tlipkis Exp $
  */
 
 /*
@@ -92,7 +92,7 @@ public class HtmlTagFilter extends Reader {
     }
     startTag = pair.start;
     endTag = pair.end;
-    if (startTag == "" || endTag == "") {
+    if (StringUtil.isNullString(startTag) || StringUtil.isNullString(endTag)) {
       throw new IllegalArgumentException("Called with a tag pair with an "
 					 +"empty string: "+pair);
     }
