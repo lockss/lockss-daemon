@@ -1,5 +1,5 @@
 /*
- * $Id: PollHistory.java,v 1.12 2003-06-20 22:34:52 claire Exp $
+ * $Id: PollHistory.java,v 1.13 2003-08-02 00:17:09 eaalto Exp $
  */
 
 /*
@@ -71,10 +71,10 @@ public class PollHistory
   }
 
   /**
-   * Returns an immutable iterator of Votes.
+   * Returns an iterator of Votes.
    * @return an Iterator of Vote objects.
    */
   public Iterator getVotes() {
-    return Collections.unmodifiableCollection(votes).iterator();
+    return (new ArrayList(votes)).iterator();
   }
 }

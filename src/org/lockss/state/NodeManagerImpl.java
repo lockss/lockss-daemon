@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.150 2003-07-31 00:49:17 eaalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.151 2003-08-02 00:17:09 eaalto Exp $
  */
 
 /*
@@ -1452,7 +1452,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
             break;
           case CachedUrlSetNode.TYPE_CACHED_URL:
             CachedUrlSetSpec rSpec = new RangeCachedUrlSetSpec(child.getUrl());
-            cus = ( (BaseArchivalUnit) managedAu).makeCachedUrlSet(rSpec);
+            cus = managedAu.makeCachedUrlSet(rSpec);
         }
         childList.add(cus);
       }
