@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyManager.java,v 1.18 2004-03-11 09:42:45 tlipkis Exp $
+ * $Id: ProxyManager.java,v 1.19 2004-04-19 02:18:06 tlipkis Exp $
  */
 
 /*
@@ -70,10 +70,11 @@ public class ProxyManager extends JettyManager {
     PREFIX + "connectionPool.maxPerHost";
   public static final int DEFAULT_PROXY_MAX_CONN_PER_HOST = 2;
 
+  // See comments regarding connect timeouts in HttpClientUrlConnection
   public static final String PARAM_PROXY_CONNECT_TIMEOUT =
     PREFIX + "timeout.connect";
   public static final long DEFAULT_PROXY_CONNECT_TIMEOUT =
-    2 * Constants.MINUTE;
+    1 * Constants.MINUTE;
   public static final String PARAM_PROXY_DATA_TIMEOUT =
     PREFIX + "timeout.data";
   public static final long DEFAULT_PROXY_DATA_TIMEOUT =
