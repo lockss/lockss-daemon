@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.39 2003-08-05 20:21:31 tlipkis Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.40 2003-09-09 20:35:16 eaalto Exp $
  */
 
 /*
@@ -294,8 +294,7 @@ public class LockssRepositoryImpl extends BaseLockssManager implements LockssRep
       node.cacheLocationFile.mkdirs();
     }
     // manually deactivate
-    node.currentVersion = RepositoryNodeImpl.INACTIVE_VERSION;
-    node.curProps = null;
+    node.deactivateContent();
   }
 
   // static calls

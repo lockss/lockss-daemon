@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.32 2003-09-05 22:46:58 eaalto Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.33 2003-09-09 20:35:16 eaalto Exp $
  */
 
 /*
@@ -300,15 +300,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
       // store the deletion value
       nodeProps.setProperty(INACTIVE_CONTENT_PROPERTY, "false");
       nodeProps.setProperty(DELETION_PROPERTY, "false");
-      try {
-        OutputStream os = new BufferedOutputStream(new FileOutputStream(nodePropsFile));
-        nodeProps.store(os, "Node properties");
-        os.close();
-      } catch (IOException ioe) {
-        logger.error("Couldn't write node properties for " +
-                     nodePropsFile.getPath()+".");
-        throw new LockssRepository.RepositoryStateException("Couldn't write node properties file.");
-      }
+      writeNodeProperties();
     }
 
     newVersionOpen = true;
@@ -389,8 +381,10 @@ public class RepositoryNodeImpl implements RepositoryNode {
     }
 
     if (hasContent()) {
-      if (!currentCacheFile.renameTo(getInactiveCacheFile()) ||
-          !currentPropsFile.renameTo(getInactivePropsFile())) {
+      if ((currentCacheFile.exists() &&
+          !currentCacheFile.renameTo(getInactiveCacheFile())) ||
+          (currentPropsFile.exists() &&
+          !currentPropsFile.renameTo(getInactivePropsFile()))) {
         logger.error("Couldn't deactivate: " + url);
         throw new LockssRepository.RepositoryStateException(
             "Couldn't deactivate.");
@@ -403,15 +397,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
     // store the inactive value
     nodeProps.setProperty(INACTIVE_CONTENT_PROPERTY, "true");
-    try {
-      OutputStream os = new BufferedOutputStream(new FileOutputStream(nodePropsFile));
-      nodeProps.store(os, "Node properties");
-      os.close();
-    } catch (IOException ioe) {
-      logger.error("Couldn't write node properties for " +
-                   nodePropsFile.getPath()+".");
-      throw new LockssRepository.RepositoryStateException("Couldn't write node properties file.");
-    }
+    writeNodeProperties();
 
     currentVersion = INACTIVE_VERSION;
     curProps = null;
@@ -425,15 +411,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
     // store the deletion value
     nodeProps.setProperty(DELETION_PROPERTY, "true");
-    try {
-      OutputStream os = new BufferedOutputStream(new FileOutputStream(nodePropsFile));
-      nodeProps.store(os, "Node properties");
-      os.close();
-    } catch (IOException ioe) {
-      logger.error("Couldn't write node properties for " +
-                   nodePropsFile.getPath()+".");
-      throw new LockssRepository.RepositoryStateException("Couldn't write node properties file.");
-    }
+    writeNodeProperties();
 
     currentVersion = DELETED_VERSION;
   }
@@ -443,15 +421,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
     // store the deletion value
     nodeProps.setProperty(DELETION_PROPERTY, "false");
-    try {
-      OutputStream os = new BufferedOutputStream(new FileOutputStream(nodePropsFile));
-      nodeProps.store(os, "Node properties");
-      os.close();
-    } catch (IOException ioe) {
-      logger.error("Couldn't write node properties for " +
-                   nodePropsFile.getPath()+".");
-      throw new LockssRepository.RepositoryStateException("Couldn't write node properties file.");
-    }
+    writeNodeProperties();
 
     currentVersion = INACTIVE_VERSION;
 
@@ -480,15 +450,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
       // store the deletion value
       nodeProps.setProperty(INACTIVE_CONTENT_PROPERTY, "false");
-      try {
-        OutputStream os = new BufferedOutputStream(new FileOutputStream(nodePropsFile));
-        nodeProps.store(os, "Node properties");
-        os.close();
-      } catch (IOException ioe) {
-        logger.error("Couldn't write node properties for " +
-                     nodePropsFile.getPath()+".");
-        throw new LockssRepository.RepositoryStateException("Couldn't write node properties file.");
-      }
+      writeNodeProperties();
 
       return;
     }
@@ -671,6 +633,18 @@ public class RepositoryNodeImpl implements RepositoryNode {
        }
     }
     return -1;
+  }
+
+  private void writeNodeProperties() {
+    try {
+      OutputStream os = new BufferedOutputStream(new FileOutputStream(nodePropsFile));
+      nodeProps.store(os, "Node properties");
+      os.close();
+    } catch (IOException ioe) {
+      logger.error("Couldn't write node properties for " +
+                   nodePropsFile.getPath()+".");
+      throw new LockssRepository.RepositoryStateException("Couldn't write node properties file.");
+    }
   }
 
   private void loadCurrentCacheFile() {
