@@ -1,5 +1,5 @@
 /*
- * $Id: ServletManager.java,v 1.27 2004-02-27 00:22:24 tlipkis Exp $
+ * $Id: ServletManager.java,v 1.28 2004-03-04 19:21:16 tlipkis Exp $
  */
 
 /*
@@ -263,8 +263,10 @@ public class ServletManager extends JettyManager {
 		       "org.lockss.servlet.AdminIpAccess");
     handler.addServlet("ProxyIpAccess", "/ProxyIpAccess",
 		       "org.lockss.servlet.ProxyIpAccess");
-    handler.addServlet("ThreadDump", "/ThreadDump",
-		       "org.lockss.servlet.ThreadDump");
+    addServletIfAvailable(handler, "ThreadDump", "/ThreadDump",
+			  "org.lockss.servlet.ThreadDump");
+    addServletIfAvailable(handler, "Api", "/Api",
+			  "org.lockss.ui.servlet.Api");
     context.addHandler(handler);
 
     // ResourceHandler should come after servlets
@@ -373,6 +375,18 @@ public class ServletManager extends JettyManager {
     setIpFilter(ah);
     context.addHandler(ah);
     accessHandlers.add(ah);
+  }
+
+  // Add a servlet if its class can be loaded.
+  void addServletIfAvailable(ServletHandler handler, String name,
+			     String pathSpec, String servletClass) {
+    try {
+      Class.forName(servletClass);
+      handler.addServlet(name, pathSpec, servletClass);
+    } catch (ClassNotFoundException e) {
+      log.warning("Not starting servlet \"" + name +
+		  "\", class not found: " + servletClass);
+    }
   }
 
 }
