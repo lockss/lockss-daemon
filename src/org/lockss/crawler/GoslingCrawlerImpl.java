@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingCrawlerImpl.java,v 1.13 2003-02-24 22:13:41 claire Exp $
+ * $Id: GoslingCrawlerImpl.java,v 1.14 2003-03-04 02:21:05 troberts Exp $
  */
 
 /*
@@ -129,7 +129,7 @@ public class GoslingCrawlerImpl implements Crawler {
     } else if (deadline == null) {
       throw new IllegalArgumentException("Called with a null Deadline");
     }
-
+    logger.info("Beginning crawl of "+au);
     CachedUrlSet cus = au.getAUCachedUrlSet();
     Set parsedPages = new HashSet();
 
@@ -182,7 +182,9 @@ public class GoslingCrawlerImpl implements Crawler {
 	au.pause(); //XXX make sure we throw InterruptedExceptions
       }
       else {
-	logger.info(uc+" exists, not caching");
+	if (!parsedPages.contains(uc.getUrl())) {
+	  logger.info(uc+" exists, not caching");
+	}
       }
       try {
 	if (shouldParse && !parsedPages.contains(uc.getUrl())) {
