@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrlSet.java,v 1.42 2003-05-03 01:23:33 aalto Exp $
+ * $Id: GenericFileCachedUrlSet.java,v 1.43 2003-05-03 06:22:19 tal Exp $
  */
 
 /*
@@ -176,6 +176,10 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
   }
 
   public long estimatedHashDuration() {
+    return hashService.padHashEstimate(makeHashEstiamte());
+  }
+
+  private long makeHashEstiamte() {
     // if this is a single node spec, don't use standard estimation
     if (spec instanceof SingleNodeCachedUrlSetSpec) {
       long contentSize = 0;
@@ -189,7 +193,7 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
           logger.warning("Couldn't estimate hash time: getting 0");
           return contentSize / BYTES_PER_MS_DEFAULT;
         }
-        return hashService.padHashEstimate(contentSize / bytesPerMs);
+        return (contentSize / bytesPerMs);
       } catch (Exception e) {
         logger.error("Couldn't finish estimating hash time: " + e);
         return contentSize / BYTES_PER_MS_DEFAULT;
@@ -197,13 +201,13 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
     }
     long lastDuration = nodeManager.getNodeState(this).getAverageHashDuration();
     if (lastDuration>0) {
-      return hashService.padHashEstimate(lastDuration);
+      return lastDuration;
     } else {
       NodeState state = nodeManager.getNodeState(this);
       if (state!=null) {
         lastDuration = state.getAverageHashDuration();
         if (lastDuration>0) {
-          return hashService.padHashEstimate(lastDuration);
+          return lastDuration;
         }
       }
       // determine total size
@@ -226,7 +230,7 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
       lastDuration = (long) (totalNodeSize / bytesPerMs);
       // store hash estimate
       nodeManager.hashFinished(this, lastDuration);
-      return hashService.padHashEstimate(lastDuration);
+      return lastDuration;
     }
   }
 
