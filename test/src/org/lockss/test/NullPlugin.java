@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.25 2003-03-20 00:38:04 troberts Exp $
+ * $Id: NullPlugin.java,v 1.26 2003-03-27 00:50:23 aalto Exp $
  */
 
 /*
@@ -327,6 +327,10 @@ public class NullPlugin {
     }
 
     public boolean shouldCrawlForNewContent(AuState aus) {
+      return false;
+    }
+
+    public boolean shouldCallTopLevelPoll(AuState aus) {
       return false;
     }
 

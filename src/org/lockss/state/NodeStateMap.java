@@ -1,5 +1,5 @@
 /*
- * $Id: NodeStateMap.java,v 1.3 2003-03-22 01:15:19 aalto Exp $
+ * $Id: NodeStateMap.java,v 1.4 2003-03-27 00:50:23 aalto Exp $
  */
 
 /*
@@ -43,8 +43,10 @@ import org.apache.commons.collections.ReferenceMap;
  */
 public class NodeStateMap extends LRUMap {
   private HistoryRepository repository;
-  private ReferenceMap refMap = new ReferenceMap(ReferenceMap.HARD,
-                                                 ReferenceMap.WEAK);
+  ReferenceMap refMap = new ReferenceMap(ReferenceMap.HARD,
+                                         ReferenceMap.WEAK);
+  Callback theCallback = new Callback();
+
   private int cacheHits = 0;
   private int cacheMisses = 0;
   private int refHits = 0;
@@ -81,18 +83,13 @@ public class NodeStateMap extends LRUMap {
   }
 
   public Object put(Object key, Object value) {
-    refMap.put(key, value);
-    return super.put(key, value);
-  }
-
-  /**
-   * Removes a weak reference from the reference map.  Called by finalize()
-   * of {@link NodeStateImpl}.
-   * @param urlKey the reference key url
-   */
-  synchronized void removeReference(String urlKey) {
-    if (refMap!=null) {
-      refMap.remove(urlKey);
+    if (value instanceof NodeStateImpl) {
+      ((NodeStateImpl)value).setMapCallback(theCallback);
+      refMap.put(key, value);
+      return super.put(key, value);
+    } else {
+      throw new IllegalArgumentException(
+          "Putting a non-NodeStateImpl into NodeStateMap.");
     }
   }
 
@@ -100,5 +97,32 @@ public class NodeStateMap extends LRUMap {
   int getCacheMisses() { return cacheMisses; }
   int getRefHits() { return refHits; }
   int getRefMisses() { return refMisses; }
+
+  /**
+   * An inner class which the NodeStateMap hands out to {@link NodeStateImpl}s
+   * stored in it.  This allows them to make calls to the NodeStateMap.
+   */
+  class Callback {
+    /**
+     * Removes a weak reference from the reference map.  Called by finalize()
+     * of {@link NodeStateImpl}.
+     * @param urlKey the reference key url
+     */
+    synchronized void removeReference(String urlKey) {
+      if (refMap!=null) {
+        refMap.remove(urlKey);
+      }
+    }
+
+    /**
+     * This simply re-'puts' the object into the LRUMap, refreshing its
+     * 'last-used' ranking.
+     * @param urlKey the reference key url
+     * @param node the {@link NodeStateImpl}
+     */
+    void refreshInLRUMap(String urlKey, NodeStateImpl node) {
+      put(urlKey, node);
+    }
+  }
 
 }

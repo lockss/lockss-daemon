@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.9 2003-03-26 23:14:35 tal Exp $
+ * $Id: BaseArchivalUnit.java,v 1.10 2003-03-27 00:50:23 aalto Exp $
  */
 
 /*
@@ -44,12 +44,21 @@ import org.lockss.daemon.*;
  * Plugins may extend this to get some common ArchivalUnit functionality.
  */
 public abstract class BaseArchivalUnit implements ArchivalUnit {
+  /**
+   * Configuration parameter name for interval, in ms, after which
+   * a new top level poll should be called.
+   */
+  public static final String PARAM_TOP_LEVEL_POLL_INTERVAL =
+      Configuration.PREFIX + "baseau.toplevel.poll.interval";
+  static final long DEFAULT_TOP_LEVEL_POLL_INTERVAL = 2 * Constants.WEEK;
+
   private static final long
     DEFAULT_MILLISECONDS_BETWEEN_CRAWL_HTTP_REQUESTS = 10 * Constants.SECOND;
 
   private Plugin plugin;
   protected CrawlSpec crawlSpec;
   private String idStr = null;
+  private static long pollInterval = -1;
 
   /**
    * Must invoke this constructor in plugin subclass.
@@ -199,8 +208,31 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     }
   }
 
+  /**
+   * Simplified implementation which returns true if a crawl has never
+   * been done, otherwise false
+   * @param aus the {@link AuState}
+   * @return true iff no crawl done
+   */
   public boolean shouldCrawlForNewContent(AuState aus) {
     if (aus.getLastCrawlTime() <= 0) {
+      return true;
+    }
+    return false;
+  }
+
+  /**
+   * Simplified implementation which gets the poll interval parameter
+   * and compares now vs. the last poll time.
+   * @param aus the {@link AuState}
+   * @return true iff a top level poll should be called
+   */
+  public boolean shouldCallTopLevelPoll(AuState aus) {
+    if (pollInterval==-1) {
+      pollInterval = Configuration.getLongParam(PARAM_TOP_LEVEL_POLL_INTERVAL,
+                                                DEFAULT_TOP_LEVEL_POLL_INTERVAL);
+    }
+    if ((TimeBase.nowMs() - aus.getLastTopLevelPollTime()) > pollInterval) {
       return true;
     }
     return false;

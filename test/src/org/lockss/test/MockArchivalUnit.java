@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.21 2003-03-20 00:38:04 troberts Exp $
+ * $Id: MockArchivalUnit.java,v 1.22 2003-03-27 00:50:23 aalto Exp $
  */
 
 /*
@@ -52,6 +52,7 @@ public class MockArchivalUnit implements ArchivalUnit {
   private MockObjectCallback pauseCallback = null;
   private List newContentUrls = null;
   private boolean shouldCrawlForNewContent = true;
+  private boolean shouldCallTopLevelPoll = true;
 
   public MockArchivalUnit(){
   }
@@ -187,6 +188,14 @@ public class MockArchivalUnit implements ArchivalUnit {
 
   public void setShouldCrawlForNewContent(boolean val) {
     shouldCrawlForNewContent = val;
+  }
+
+  public boolean shouldCallTopLevelPoll(AuState aus) {
+    return shouldCallTopLevelPoll;
+  }
+
+  public void setShouldCallTopLevelPoll(boolean val) {
+    shouldCallTopLevelPoll = val;
   }
 
 

@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.69 2003-03-26 23:39:39 claire Exp $
+ * $Id: NodeManagerImpl.java,v 1.70 2003-03-27 00:50:23 aalto Exp $
  */
 
 /*
@@ -48,16 +48,18 @@ import org.lockss.protocol.IdentityManager;
 import org.lockss.repository.LockssRepository;
 import gnu.regexp.*;
 import org.apache.commons.collections.LRUMap;
+import org.lockss.daemon.status.*;
 
 /**
  * Implementation of the NodeManager.
  */
 public class NodeManagerImpl implements NodeManager {
   /**
-   * This parameter indicates the size of the LRUMap used by the node manager.
+   * This parameter indicates the size of the {@link NodeStateMap} used by the
+   * node manager.
    */
   public static final String PARAM_NODESTATE_MAP_SIZE =
-      Configuration.PREFIX + "nodestate.map.size";
+      Configuration.PREFIX + "state.nodemap.size";
   static final int DEFAULT_MAP_SIZE = 100;
 
   private static LockssDaemon theDaemon;
@@ -70,7 +72,7 @@ public class NodeManagerImpl implements NodeManager {
   Map nodeMap;
   int maxMapSize;
   private static Logger logger = Logger.getLogger("NodeManager");
-  TreeWalkThread treeWalkThread;
+  TreeWalkHandler treeWalkHandler;
 
   Configuration.Callback configCallback;
 
@@ -117,9 +119,8 @@ public class NodeManagerImpl implements NodeManager {
 
     historyRepo = theDaemon.getHistoryRepository();
 
-    treeWalkThread = new TreeWalkThread("TreeWalk: " + managedAu.getName(),
-                                          this, theDaemon.getCrawlManager());
-    treeWalkThread.start();
+    treeWalkHandler = new TreeWalkHandler(this, theDaemon.getCrawlManager());
+    treeWalkHandler.start();
     logger.debug("NodeManager sucessfully started");
   }
 
@@ -130,9 +131,9 @@ public class NodeManagerImpl implements NodeManager {
   public void stopService() {
     logger.debug("NodeManager being stopped");
     // checkpoint here
-    if (treeWalkThread!=null) {
-      treeWalkThread.end();
-      treeWalkThread = null;
+    if (treeWalkHandler!=null) {
+      treeWalkHandler.end();
+      treeWalkHandler = null;
     }
     Configuration.unregisterConfigurationCallback(configCallback);
     theManager = null;
@@ -281,23 +282,25 @@ public class NodeManagerImpl implements NodeManager {
     return historyV.iterator();
   }
 
+/*
+ Removed until needed.
   public long getEstimatedTreeWalkDuration() {
     long treeWalkEstimate = -1;
-    if (treeWalkThread!=null) {
+    if (treeWalkHandler!=null) {
       logger.debug("Estimating treewalk...");
       logger.debug3("Checking thread estimate...");
-      treeWalkEstimate  = treeWalkThread.getEstimatedTreeWalkDuration();
+      treeWalkEstimate  = treeWalkHandler.getEstimatedTreeWalkDuration();
       if (treeWalkEstimate < 0) {
-        treeWalkThread.calculateEstimatedTreeWalkDuration();
+        treeWalkHandler.calculateEstimatedTreeWalkDuration();
 
         // give up after 10*the test duration
         Deadline quitDeadline =
-            Deadline.in(10*treeWalkThread.treeWalkTestDuration);
+            Deadline.in(10*treeWalkHandler.treeWalkTestDuration);
         while ((treeWalkEstimate < 0) && (!quitDeadline.expired())) {
-          treeWalkEstimate = treeWalkThread.getEstimatedTreeWalkDuration();
+          treeWalkEstimate = treeWalkHandler.getEstimatedTreeWalkDuration();
           // sleep for a test duration
           Deadline sleepDeadline =
-              Deadline.in(treeWalkThread.treeWalkTestDuration);
+              Deadline.in(treeWalkHandler.treeWalkTestDuration);
           try {
             sleepDeadline.sleep();
           } catch (InterruptedException ie) { }
@@ -310,12 +313,11 @@ public class NodeManagerImpl implements NodeManager {
     }
     return treeWalkEstimate;
   }
-
+*/
   NodeState createNodeState(CachedUrlSet cus) {
     logger.debug2("Loading NodeState: " + cus.toString());
     // load from file cache, or get a new one
     NodeStateImpl state = (NodeStateImpl)historyRepo.loadNodeState(cus);
-    state.setNodeManagerImpl(this);
     nodeMap.put(cus.getUrl(), state);
     return state;
   }
@@ -348,7 +350,6 @@ public class NodeManagerImpl implements NodeManager {
       throw new UnsupportedOperationException("Updating state for invalid "
                                               +"results type.");
     }
-    refreshInLRUMap(state);
   }
 
   void handleContentPoll(PollState pollState, PollTally results,
@@ -687,18 +688,6 @@ public class NodeManagerImpl implements NodeManager {
     return set;
   }
 
-  void refreshInLRUMap(NodeState node) {
-    if (nodeMap!=null) {
-      nodeMap.put(node.getCachedUrlSet().getUrl(), node);
-    }
-  }
-
-  void removeReference(String urlKey) {
-    if (nodeMap!=null) {
-      nodeMap.remove(urlKey);
-    }
-  }
-
   static class ContentRepairCallback implements CrawlManager.Callback {
     /**
      * @param success whether the repair was successful or not
@@ -710,12 +699,81 @@ public class NodeManagerImpl implements NodeManager {
       theDaemon.getPollManager().resumePoll(success, cookie);
     }
   }
+/*
+  private static class Status implements StatusAccessor {
+      private static final List sortRules =
+        ListUtil.list(new StatusTable.SortRule("au", true));
+
+      private static final List colDescs =
+        ListUtil.list(
+                      new ColumnDescriptor("au", "Journal Volume",
+                                           ColumnDescriptor.TYPE_STRING),
+                      new ColumnDescriptor("pluginid", "Plugin ID",
+                                           ColumnDescriptor.TYPE_STRING),
+                      new ColumnDescriptor("auid", "AUID",
+                                           ColumnDescriptor.TYPE_STRING),
+                      new ColumnDescriptor("poll", "Poll Status",
+                                           ColumnDescriptor.TYPE_STRING),
+                      new ColumnDescriptor("crawl", "Crawl Status",
+                                           ColumnDescriptor.TYPE_STRING)
+                      );
+
+      // need this because the statics above require this to be a nested,
+      // not inner class.
+      PluginManager mgr;
+
+      Status(PluginManager mgr) {
+        this.mgr = mgr;
+      }
+
+      public List getColumnDescriptors(String key) {
+        return colDescs;
+      }
+
+      public List getRows(String key) {
+        List table = new ArrayList();
+        for (Iterator iter = mgr.getAllAUs().iterator(); iter.hasNext();) {
+          Map row = new HashMap();
+          ArchivalUnit au = (ArchivalUnit)iter.next();
+          row.put("au", au.getName());
+          row.put("pluginid", au.getPluginId());
+          row.put("auid", au.getAUId());
+          row.put("poll",
+                  statusSvc.getReference(PollManager.MANAGER_STATUS_TABLE_NAME,
+                                         au));
+          table.add(row);
+        }
+        return table;
+      }
+
+      public List getDefaultSortRules(String key) {
+        return sortRules;
+      }
+
+      public boolean requiresKey() {
+        return false;
+      }
+
+      public String getTitle(String key) {
+        return "Archival Units";
+      }
+
+      public StatusTable getStatusTable(String key) {
+        StatusTable table = new StatusTable(key, getTitle(key),
+                                            getColumnDescriptors(key),
+                                            getDefaultSortRules(key),
+                                            getRows(key), null);
+        return table;
+      }
+
+
+    }
+
+*/
 
   public void startTreeWalk() {
     logger.info("Starting treewalk");
-    treeWalkThread = new TreeWalkThread("TreeWalk: " + managedAu.getName(),
-                                        this, theDaemon.getCrawlManager());
-    treeWalkThread.doTreeWalk();
+    treeWalkHandler = new TreeWalkHandler(this, theDaemon.getCrawlManager());
+    treeWalkHandler.doTreeWalk();
   }
-
 }

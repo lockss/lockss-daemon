@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerServiceImpl.java,v 1.7 2003-03-25 01:26:24 aalto Exp $
+ * $Id: TestNodeManagerServiceImpl.java,v 1.8 2003-03-27 00:50:23 aalto Exp $
  */
 
 /*
@@ -100,11 +100,11 @@ public class TestNodeManagerServiceImpl extends LockssTestCase {
     nms.addNodeManager(mau);
     NodeManagerImpl node = (NodeManagerImpl)nms.getNodeManager(mau);
     // if the NodeManagerImpl has started, the thread is non-null
-    assertNotNull(node.treeWalkThread);
+    assertNotNull(node.treeWalkHandler);
 
     nms.stopService();
     // once stopped, the thread should be null
-    assertNull(node.treeWalkThread);
+    assertNull(node.treeWalkHandler);
   }
 
   public static void main(String[] argv) {

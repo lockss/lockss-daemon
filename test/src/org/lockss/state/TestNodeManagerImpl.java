@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.50 2003-03-26 23:39:39 claire Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.51 2003-03-27 00:50:23 aalto Exp $
  */
 
 /*
@@ -82,7 +82,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     nodeManager.historyRepo = new HistoryRepositoryImpl(tempDirPath);
     nodeManager.startService();
     // don't need the thread
-    nodeManager.treeWalkThread.end();
+    nodeManager.treeWalkHandler.end();
 
     theDaemon.getHashService().startService();
 

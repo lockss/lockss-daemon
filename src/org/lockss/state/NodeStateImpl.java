@@ -1,5 +1,5 @@
 /*
- * $Id: NodeStateImpl.java,v 1.9 2003-03-20 00:14:43 aalto Exp $
+ * $Id: NodeStateImpl.java,v 1.10 2003-03-27 00:50:23 aalto Exp $
  */
 
 /*
@@ -47,7 +47,8 @@ public class NodeStateImpl implements NodeState {
   protected List polls;
   protected List pollHistories = null;
   protected HistoryRepository repository;
-  protected NodeManagerImpl nodeMan;
+
+  protected NodeStateMap.Callback callback = null;
 
   // for marshalling only
   NodeStateImpl() { }
@@ -72,8 +73,8 @@ public class NodeStateImpl implements NodeState {
   }
 
   public void finalize() {
-    if (nodeMan!=null) {
-      nodeMan.removeReference(cus.getUrl());
+    if (callback!=null) {
+      callback.removeReference(cus.getUrl());
     }
   }
 
@@ -115,14 +116,14 @@ public class NodeStateImpl implements NodeState {
     return cus.flatSetIterator().hasNext();
   }
 
-  void setNodeManagerImpl(NodeManagerImpl nodeMan) {
-    this.nodeMan = nodeMan;
+  void setMapCallback(NodeStateMap.Callback callback) {
+    this.callback = callback;
   }
 
   protected void addPollState(PollState new_poll) {
     polls.add(new_poll);
-    if (nodeMan!=null) {
-      nodeMan.refreshInLRUMap(this);
+    if (callback!=null) {
+      callback.refreshInLRUMap(cus.getUrl(), this);
     }
   }
 
@@ -145,8 +146,8 @@ public class NodeStateImpl implements NodeState {
       pollHistories.add(finished_poll);
     }
     polls.remove(finished_poll);
-    if (nodeMan!=null) {
-      nodeMan.refreshInLRUMap(this);
+    if (callback!=null) {
+      callback.refreshInLRUMap(cus.getUrl(), this);
     }
   }
 

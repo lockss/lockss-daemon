@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManager.java,v 1.15 2003-03-26 23:39:39 claire Exp $
+ * $Id: NodeManager.java,v 1.16 2003-03-27 00:50:23 aalto Exp $
  */
 
 /*
@@ -113,7 +113,7 @@ public interface NodeManager extends LockssManager {
    * parameter settings in the Configuration.
    * @return estimated time in ms
    */
-  public long getEstimatedTreeWalkDuration();
+ // public long getEstimatedTreeWalkDuration();
 
 
   /**
