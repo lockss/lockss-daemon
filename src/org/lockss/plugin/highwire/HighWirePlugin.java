@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePlugin.java,v 1.8 2002-10-23 01:04:50 troberts Exp $
+ * $Id: HighWirePlugin.java,v 1.9 2002-10-23 16:56:33 troberts Exp $
  */
 
 /*
@@ -51,9 +51,7 @@ import org.lockss.plugin.*;
  
 public class HighWirePlugin extends BaseArchivalUnit {
   static public final String LOG_NAME = "HighWirePlugin";
-  private String urlRoot; //url root for the web page, eg. http://www.bmj.org
   protected Logger logger = Logger.getLogger(LOG_NAME);
-  private RECachedUrlSetSpec mySpec;
 
   /**
    * Standard constructor for HighWirePlugin.  
@@ -62,11 +60,6 @@ public class HighWirePlugin extends BaseArchivalUnit {
    */
   public HighWirePlugin(String start) throws REException, MalformedURLException{
     super(makeCrawlSpec(start));
-//      try{
-//      }
-//      catch(MalformedURLException mue){
-//        logger.error("Bad url", mue);
-//      }
   }
 
   protected CachedUrlSet cachedUrlSetFactory(ArchivalUnit owner,
