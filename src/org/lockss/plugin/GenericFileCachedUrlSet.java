@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrlSet.java,v 1.6 2002-11-21 21:07:56 aalto Exp $
+ * $Id: GenericFileCachedUrlSet.java,v 1.7 2002-11-23 02:21:35 aalto Exp $
  */
 
 /*
@@ -150,7 +150,7 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
   public long estimatedHashDuration() {
     if (lastDuration>0) return lastDuration;
     //XXX else estimate in some way
-    return 0;
+    return 1000;
   }
 
   public CachedUrl makeCachedUrl(String url) {
@@ -181,7 +181,11 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
         return prefix.compareTo(prefix2);
       } else if ((o1 instanceof CachedUrl) && (o2 instanceof CachedUrl)) {
         return ((CachedUrl)o1).getUrl().compareTo(((CachedUrl)o2).getUrl());
-      } else return -1;
+      } else {
+        throw new IllegalStateException("Bad object in iterator: " +
+                                        o1.getClass() + "," +
+                                        o2.getClass());
+      }
     }
   }
 }
