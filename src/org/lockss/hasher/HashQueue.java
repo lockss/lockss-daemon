@@ -1,5 +1,5 @@
 /*
- * $Id: HashQueue.java,v 1.37 2003-05-06 01:45:45 troberts Exp $
+ * $Id: HashQueue.java,v 1.38 2003-05-28 16:13:17 tal Exp $
  */
 
 /*
@@ -575,11 +575,18 @@ class HashQueue implements Serializable {
       int ix = 0;
       for (ListIterator iter = getQlistSnapshot().listIterator();
 	   iter.hasNext();) {
-	table.add(makeRow((Request)iter.next(), false, ix));
+	table.add(makeRow((Request)iter.next(), false, ix++));
       }
       for (ListIterator iter = getCompletedSnapshot().listIterator();
 	   iter.hasNext();) {
-	table.add(makeRow((Request)iter.next(), true, 0));
+	Map row = makeRow((Request)iter.next(), true, 0);
+	// if both parts of the table are present (ix is number of pending
+	// requests), add a separator before the first displayed completed
+	// request (which is the last one in the history list)
+	if (ix != 0 && !iter.hasNext()) {
+	  row.put(StatusTable.ROW_SEPARATOR, "");
+	}
+	table.add(row);
       }
       return table;
     }
