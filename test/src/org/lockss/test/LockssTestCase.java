@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.60 2004-12-14 22:02:50 troberts Exp $
+ * $Id: LockssTestCase.java,v 1.61 2004-12-15 00:35:00 troberts Exp $
  */
 
 /*
@@ -300,12 +300,81 @@ public class LockssTestCase extends TestCase {
     sb.append(value);
     assertTrue(sb.toString(), value<0);
   }
+
   /**
    * Asserts that c1.compareTo(c2) > 0 and c2.compareTo(c1) < 0
    */
-  static public void assertGreaterThan(Comparable c1, Comparable c2) {
-    assertPositive(c1.compareTo(c2));
-    assertNegative(c2.compareTo(c1));
+  static public void assertCompareIsGreaterThan(Comparable c1, Comparable c2) {
+    assertCompareIsGreaterThan(null, c1, c2);
+  }
+
+  /**
+   * Asserts that c1.compareTo(c2) > 0 and c2.compareTo(c1) < 0
+   */
+  static public void assertCompareIsGreaterThan(String msg,
+						Comparable c1, Comparable c2) {
+    int comp = c1.compareTo(c2);
+    int revComp = c2.compareTo(c1);
+
+    if (comp > 0 && revComp < 0) {
+      return; //as asserted
+    }
+    
+    if (comp == 0 && revComp == 0) {
+      if (msg == null) {
+	msg = c1 + " is equal to " + c2;
+      } else {
+	msg += " (equal)";
+      }
+    } else if (comp * revComp >= 0) {
+      //one should be positive and the other neg
+      if (msg != null) {
+	msg =
+	  "Inconsistent comparison\n"+
+	  "Forward comparison returns "+comp+"\n"+
+	  "While reverse comparison returns "+revComp+"\n";
+      } else {
+	msg += " (inconsistent)";
+      }
+    } else { //opposite of what we expected
+      if (msg != null) {
+	msg = "First comparable ("+c1+") is less than second ("+c2+")";
+      }
+    }
+    fail(msg);
+  }
+
+  /**
+   * Asserts that c1.compareTo(c2) == 0 and c2.compareTo(c1) == 0
+   */
+  static public void assertCompareIsEqualTo(Comparable c1, Comparable c2) {
+    assertCompareIsEqualTo(null, c1, c2);
+  }
+
+  static public void assertCompareIsEqualTo(String msg,
+					    Comparable c1, Comparable c2) {
+    int comp = c1.compareTo(c2);
+    int revComp = c2.compareTo(c1);
+    if (comp == 0 && revComp == 0) {
+      return;
+    }
+
+    if (comp == 0 || revComp == 0) {
+      if (msg == null) {
+	msg =
+	  "Inconsistent results.\n"+
+	  "Forward comparison is "+comp+"\n"+
+	  "Reverse comparison returns "+revComp+"\n";
+      } else {
+	msg += " (inconsistent)";
+      }
+    } else {
+      if (msg == null) {
+	msg = "First compparable ("+c1+")"
+	  +" is not equal to than second ("+c2+")";
+      } 
+    }
+    fail(msg);
   }
 
   /**
