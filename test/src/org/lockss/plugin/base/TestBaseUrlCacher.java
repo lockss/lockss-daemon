@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.34 2005-03-04 23:54:09 troberts Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.35 2005-03-18 18:07:51 troberts Exp $
  */
 
 /*
@@ -443,7 +443,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
     PermissionMap map = new PermissionMap();
     map.putStatus(TEST_URL, PermissionMap.PERMISSION_OK);
     map.putStatus(redTo, PermissionMap.PERMISSION_OK);
-    muc.setPermissionMap(map);
+    muc.setPermissionMapSource(new MockPermissionMapSource(map));
     muc.addConnection(makeConn(301, "Moved to Spain", redTo));
     muc.addConnection(makeConn(200, "Ok", null, "bar"));
     muc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_STORE_ALL_IN_SPEC);
@@ -487,7 +487,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
     map.putStatus(TEST_URL, PermissionMap.PERMISSION_OK);
     map.putStatus(redTo1, PermissionMap.PERMISSION_OK);
     map.putStatus(redTo, PermissionMap.PERMISSION_OK);
-    muc.setPermissionMap(map);
+    muc.setPermissionMapSource(new MockPermissionMapSource(map));
     muc.addConnection(makeConn(301, "Moved to Spain", redTo1));
     muc.addConnection(makeConn(301, "Moved to Spain", redTo2));
     muc.addConnection(makeConn(301, "Moved to Spain", redTo));
@@ -607,7 +607,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
     PermissionMap map = new PermissionMap();
     map.putStatus(TEST_URL, PermissionMap.PERMISSION_OK);
     map.putStatus(redTo, PermissionMap.PERMISSION_OK);
-    muc.setPermissionMap(map);
+    muc.setPermissionMapSource(new MockPermissionMapSource(map));
     muc.addConnection(makeConn(301, "Moved to Spain", redTo));
     muc.addConnection(makeConn(200, "Ok", null, "bar"));
     muc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_STORE_ALL_IN_SPEC);
@@ -640,7 +640,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
     PermissionMap map = new PermissionMap();
     map.putStatus(TEST_URL, PermissionMap.PERMISSION_OK);
     map.putStatus(redTo1, PermissionMap.PERMISSION_OK);
-    muc.setPermissionMap(map);
+    muc.setPermissionMapSource(new MockPermissionMapSource(map));
     muc.addConnection(makeConn(301, "Moved to Spain", redTo1));
     muc.addConnection(makeConn(301, "Moved to Spain", redTo2));
     muc.addConnection(makeConn(301, "Moved to Spain", redTo3));
@@ -682,7 +682,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
     PermissionMap map = new PermissionMap();
     map.putStatus(TEST_URL, PermissionMap.PERMISSION_OK);
     map.putStatus(redTo1, PermissionMap.PERMISSION_OK);
-    muc.setPermissionMap(map);
+    muc.setPermissionMapSource(new MockPermissionMapSource(map));
     muc.addConnection(makeConn(302, "Moved to Spain", redTo1));
     muc.addConnection(makeConn(303, "Moved to Spain", redTo2));
     muc.addConnection(makeConn(307, "Moved to Spain", redTo3));
@@ -746,7 +746,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
       new MockConnectionMockBaseUrlCacher(mau, url);
     map.putStatus(url, PermissionMap.PERMISSION_OK);
     map.putStatus(redTo1, PermissionMap.PERMISSION_OK);
-    muc.setPermissionMap(map);
+    muc.setPermissionMapSource(new MockPermissionMapSource(map));
     muc.addConnection(makeConn(301, "Moved to Spain", redTo1));
     muc.addConnection(makeConn(301, "Moved to Spain", redTo2));
     muc.addConnection(makeConn(200, "Ok", null, content));

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.48 2005-03-08 02:06:40 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.49 2005-03-18 18:07:50 troberts Exp $
  */
 
 /*
@@ -42,6 +42,7 @@ import org.lockss.plugin.*;
 import org.lockss.repository.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
+import org.lockss.daemon.*;
 import org.lockss.crawler.PermissionMap;
 
 /**
@@ -78,7 +79,7 @@ public class BaseUrlCacher implements UrlCacher {
   private LockssRepository repository;
   private CacheResultMap resultMap;
   private CIProperties uncachedProperties;
-  private PermissionMap permissionMap;
+  private PermissionMapSource permissionMapSource;
   private String proxyHost = null;
   private int proxyPort;
   private Properties reqProps;
@@ -499,16 +500,20 @@ public class BaseUrlCacher implements UrlCacher {
 	  return false;
 	}
       }
+      PermissionMap permissionMap = null;
+      if (permissionMapSource != null) {
+	permissionMap = permissionMapSource.getPermissionMap();
+      }
+
       // TODO: swap isSameHost with isRedirectOption and
       // add permission check on same level as redirectOption.
       if(!UrlUtil.isSameHost(fetchUrl, newUrlString)) {
-      if (isRedirectOption(REDIRECT_OPTION_ON_HOST_ONLY)) {
+	if (isRedirectOption(REDIRECT_OPTION_ON_HOST_ONLY)) {
 	  logger.warning("Redirect to different host: " + newUrlString +
 			 " from: " + origUrl);
 	  return false;
-	}
-        else if(permissionMap == null || permissionMap.getStatus(newUrlString)
-                != PermissionMap.PERMISSION_OK) {
+	} else if(permissionMap == null ||
+		  permissionMap.getStatus(newUrlString) != PermissionMap.PERMISSION_OK) {
           logger.warning("No permission for redirect to different host: "
                          + newUrlString + " from: " + origUrl);
           return false;
@@ -546,14 +551,23 @@ public class BaseUrlCacher implements UrlCacher {
   private boolean isRedirectOption(int option) {
     return (redirectOptions & option) != 0;
   }
-
   /**
    * setPermissionMap
    *
    * @param permissionMap PermissionMap
    */
+  /*
   public void setPermissionMap(PermissionMap permissionMap) {
     this.permissionMap = permissionMap;
   }
+*/
 
+  /**
+   * Sets the PermissionMapSource object, which is what BaseUrlCacher
+   * will use to get the permission map when needed
+   *
+   */
+  public void setPermissionMapSource(PermissionMapSource permissionMapSource) {
+    this.permissionMapSource = permissionMapSource;
+  }
 }

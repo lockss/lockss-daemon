@@ -1,5 +1,5 @@
 /*
- * $Id: MockUrlCacher.java,v 1.23 2005-01-14 02:13:18 troberts Exp $
+ * $Id: MockUrlCacher.java,v 1.24 2005-03-18 18:07:51 troberts Exp $
  */
 
 /*
@@ -60,7 +60,7 @@ public class MockUrlCacher implements UrlCacher {
   private int numTimesToThrow = 1;
   private int timesThrown = 0;
   private boolean forceRefetch = false;
-  private PermissionMap permissionMap;
+  private PermissionMapSource permissionMapSource;
 
   public MockUrlCacher(String url, MockArchivalUnit au){
     this.url = url;
@@ -236,12 +236,13 @@ public class MockUrlCacher implements UrlCacher {
    *
    * @param permissionMap PermissionMap
    */
-  public void setPermissionMap(PermissionMap permissionMap) {
-    this.permissionMap = permissionMap;
+  public void setPermissionMapSource(PermissionMapSource pmSource) {
+    this.permissionMapSource = pmSource;
   }
 
+  /*
   public PermissionMap getPermissionMap() {
     return permissionMap;
   }
-
+  */
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: UrlCacher.java,v 1.16 2004-09-23 03:38:04 tlipkis Exp $
+ * $Id: UrlCacher.java,v 1.17 2005-03-18 18:07:49 troberts Exp $
  */
 
 /*
@@ -159,7 +159,7 @@ public interface UrlCacher {
   public void storeContent(InputStream input, CIProperties headers)
       throws IOException;
 
-  public void setPermissionMap(PermissionMap permissionMap);
+  public void setPermissionMapSource(PermissionMapSource permissionMapSource);
 
   public static class RedirectScheme {
     private int options = 0;
