@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.44 2004-01-04 06:12:29 tlipkis Exp $
+ * $Id: LockssDaemon.java,v 1.45 2004-01-12 06:18:31 tlipkis Exp $
  */
 
 /*
@@ -733,8 +733,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   public void startOrReconfigureAuManagers(ArchivalUnit au,
 					   Configuration auConfig)
       throws Exception {
-    SequencedHashMap auMgrMap =
-      (SequencedHashMap)auManagerMaps.get(au);
+    SequencedHashMap auMgrMap = (SequencedHashMap)auManagerMaps.get(au);
     if (auMgrMap != null) {
       // If au has a map it's been created, just set new config
       configAuManagers(au, auConfig, auMgrMap);
@@ -900,7 +899,11 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     for (Iterator iter = auManagerMaps.values().iterator();
 	 iter.hasNext(); ) {
       SequencedHashMap auMgrMap = (SequencedHashMap)iter.next();
-      res.add(auMgrMap.get(managerKey));
+      Object auMgr = auMgrMap.get(managerKey);
+      if (auMgr != null) {
+	res.add(auMgr);
+	log.info("Add: " + auMgr);
+      }
     }
     return res;
   }
