@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.13 2002-10-18 18:05:24 claire Exp $
+ $Id: build.xml,v 1.14 2002-10-25 23:03:46 tal Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
@@ -30,7 +30,7 @@ in this Software without prior written authorization from Stanford University.
 
 -->
 
-<project name="LOCKSS Gamma" default="jar-lockss" basedir=".">
+<project name="LOCKSS Gamma" default="test-all" basedir=".">
   <property environment="env"/>
   <!--  Ignore system classpath, to ensure consistent builds -->
   <property name="build.sysclasspath" value="ignore" />
@@ -302,6 +302,12 @@ in this Software without prior written authorization from Stanford University.
   </target>
 
   <!-- ==================================================================== -->
+  <target name="jdftp" depends="javadoc,javadoc-test" >
+    <echo message="Copying javadoc to server"/>
+    <exec executable="./jdftp" dir="${basedir}">
+    </exec>
+  </target>
+  <!-- ==================================================================== -->
 <!--  Once we have more files this will fail due to command line length.
       It should pipe the names to etags as in:
       find . -name \*.java -print | etags -t -S - -->
@@ -328,7 +334,20 @@ in this Software without prior written authorization from Stanford University.
   <!-- ==================================================================== -->
   <target name="run-class" depends="jar-tests"
    description="Run a class named by class prop, with args in args prop" >
+    <!-- default args empty if not supplied on command line -->
+    <property name="args" value="" />
     <java classname="${class}" fork="true">
+       <classpath refid="test.run.classpath" />
+       <arg line="${args}" />
+    </java>
+  </target>
+
+  <!-- ==================================================================== -->
+  <target name="write-script" depends="jar-tests"
+   description="Write, into the file named by the script property, a command to run the class named by class prop, with args in args prop" >
+    <echo message="java " file="${script}"/>
+    <java classname="${class}" fork="true" jvm="echo"
+      output="${script}" append="true">
        <classpath refid="test.run.classpath" />
        <arg line="${args}" />
     </java>
@@ -342,14 +361,14 @@ in this Software without prior written authorization from Stanford University.
 Test results in ${test.results}
     </echo>
     <delete file="${test.results}/*" quiet="true" />
-    <junit fork="no" printsummary="yes" haltonerror="yes" haltonfailure="yes" >
+    <junit fork="yes" printsummary="yes" haltonerror="yes" haltonfailure="yes">
       <batchtest fork="no" todir="${test.results}">
         <fileset dir="${test.src}">
           <include name="**/Test*.java" />
         </fileset>
-      </batchtest>   
-      <formatter type="plain" usefile="true" />                  
-      <classpath> 
+      </batchtest>
+      <formatter type="plain" usefile="true" />
+      <classpath>
          <path refid="test.run.classpath" />
       </classpath>        
     </junit>
@@ -387,7 +406,7 @@ Running tests for class ${class}
 Test results in ${test.results}
     </echo>
     <delete file="${test.results}/*" quiet="true" />
-    <junit fork="no" printsummary="yes" haltonerror="yes" haltonfailure="yes" >
+    <junit fork="yes" printsummary="yes" haltonerror="yes" haltonfailure="yes">
       <batchtest fork="no" todir="${test.results}">
         <fileset dir="${test.src}">
           <include name="**/Test*.java" />
