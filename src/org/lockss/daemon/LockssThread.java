@@ -1,5 +1,5 @@
 /*
- * $Id: LockssThread.java,v 1.3 2004-02-10 04:55:03 tlipkis Exp $
+ * $Id: LockssThread.java,v 1.4 2004-02-12 02:58:24 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -70,6 +70,20 @@ public abstract class LockssThread extends Thread implements LockssWatchdog {
 	}
       }};
 
+  private static boolean watchdogDisabled = false;
+
+  /** Globally disable the watchdog.  Thread watchdogs can cause problems
+   * during unit testing, esp. when switching between simulated and real
+   * time.  LockssTestCase uses this to disable the watchdog during unit
+   * tests.
+   * @param disable disables watchdog if true, enables if false.
+   * @return the previous state of the disable flag. */
+  public static boolean disableWatchdog(boolean disable) {
+    boolean old = watchdogDisabled;
+    watchdogDisabled = disable;
+    return old;
+  }
+
   protected LockssThread(String name) {
     super(name);
   }
@@ -129,6 +143,9 @@ public abstract class LockssThread extends Thread implements LockssWatchdog {
    * @param interval milliseconds after which watchdog will go off.
    */
   public void startWDog(long interval) {
+    if (watchdogDisabled) {
+      return;
+    }
     stopWDog();
     if (interval != 0) {
       this.interval = interval;
@@ -176,6 +193,9 @@ public abstract class LockssThread extends Thread implements LockssWatchdog {
    * false; threads that are supposed to be persistent and never exit
    * should set this true. */
   public void triggerWDogOnExit(boolean triggerOnExit) {
+    if (watchdogDisabled) {
+      return;
+    }
     if (this.triggerOnExit != triggerOnExit) {
       logEvent(triggerOnExit ?
 	       "Enabling thread exit" : "Disabling thread exit",
