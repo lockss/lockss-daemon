@@ -1,5 +1,5 @@
 /*
- * $Id: HashQueue.java,v 1.32 2003-04-21 05:37:30 tal Exp $
+ * $Id: HashQueue.java,v 1.33 2003-04-29 01:07:33 tal Exp $
  */
 
 /*
@@ -200,12 +200,12 @@ class HashQueue implements Serializable {
 
   boolean scheduleReq(Request req) {
     if (!insert(req)) {
-      log.debug("Can't schedule hash");
+      log.debug("Can't schedule hash: " + req);
       return false;
     }
     ensureQRunner();
     sem.give();
-    log.debug("Scheduled hash:" +req);
+    log.debug("Scheduled hash: " + req);
     return true;
   }
 
