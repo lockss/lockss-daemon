@@ -1,5 +1,5 @@
 // ========================================================================
-// $Id: UiHome.java,v 1.2 2004-12-07 05:15:05 tlipkis Exp $
+// $Id: UiHome.java,v 1.3 2005-01-04 03:03:59 tlipkis Exp $
 // ========================================================================
 
 /*
@@ -79,7 +79,7 @@ public class UiHome extends LockssServlet {
   }
 
   protected Table getMainNavTable() {
-    Table navTable = new Table(0, " cellspacing=2 cellpadding=4 align=center");
+    Table navTable = new Table(0, "cellspacing=2 cellpadding=4 align=center");
 
     for (int i = 0; i < servletDescrs.length; i++) {
       ServletDescr d = servletDescrs[i];
