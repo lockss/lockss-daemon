@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrl.java,v 1.10 2004-03-09 23:39:00 tlipkis Exp $
+ * $Id: CachedUrl.java,v 1.11 2004-03-10 22:19:55 troberts Exp $
  */
 
 /*
@@ -60,6 +60,7 @@ public interface CachedUrl extends CachedUrlSetNode {
   */
   public static final String HEADER_PREFIX = null;
   public static final String PROPERTY_REDIRECTED_TO = "X-Lockss-redirected-to";
+  public static final String PROPERTY_REPAIR_FROM = "X-Lockss-repaired-from";
   public static final String PROPERTY_CONTENT_TYPE = "X-Lockss-content-type";
   public static final String PROPERTY_ORIG_URL = "X-Lockss-orig-url";
   public static final String PROPERTY_FETCH_TIME = "X_Lockss-server-date";
