@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.9 2004-05-18 21:30:00 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.9.2.1 2004-05-20 08:56:15 tlipkis Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.*;
 import org.lockss.app.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.repository.*;
 import org.lockss.util.*;
 import org.apache.commons.collections.ReferenceMap;
 
@@ -61,6 +62,7 @@ public class RemoteApi extends BaseLockssManager {
 						    ReferenceMap.WEAK);
   private ReferenceMap pluginProxies = new ReferenceMap(ReferenceMap.WEAK,
 							ReferenceMap.WEAK);
+  private PlatformInfo platInfo = PlatformInfo.getInstance();
 
   public RemoteApi() {
   }
@@ -297,6 +299,16 @@ public class RemoteApi extends BaseLockssManager {
     return configMgr.getRepositoryList();
   }
 
+  public PlatformInfo.DF getRepositoryDF(String repo) {
+    String path = LockssRepositoryImpl.getLocalRepositoryPath(repo);
+    log.debug("path: " + path);
+    try {
+      return platInfo.getDF(path);
+    } catch (PlatformInfo.UnsupportedException e) {
+      return null;
+    }
+  }
+
   ArchivalUnit getAuFromId(String auid) {
     return pluginMgr.getAuFromId(auid);
   }
@@ -388,6 +400,29 @@ public class RemoteApi extends BaseLockssManager {
     return status;
   }
 
+  /** Canonicalize a configuration so we can check it for equality with
+   * another Configuration.  This is necessary both to handle parameters
+   * whose value is the default (but which might be missing from the other
+   * Configuration), and values that are equivalent but not equal (such as
+   * case differences).  (This canonicalization would make more sense, and
+   * could be moved into Configuration, where it would be less
+   * out-of-place, if configuration parameters had an associated type and
+   * default.  They do have type in the context of AU config params
+   * (ConfigParamDescr), but we don't have that information here. */
+  Configuration canonicalizeAuConfig(Configuration auConfig) {
+    canonicalizeBoolean(auConfig, PluginManager.AU_PARAM_DISABLED, false);
+    return auConfig;
+  }
+
+  void canonicalizeBoolean(Configuration auConfig, String param,
+			   boolean dfault) {
+    auConfig.put(param, boolString(auConfig.getBoolean(param, dfault)));
+  }
+
+  String boolString(boolean b) {
+    return b ? "true" : "false";
+  }
+
   void restoreOneAu(PluginProxy pluginp, String auid,
 		    Configuration auConfig, RestoreAllStatus status) {
     RestoreStatus stat = new RestoreStatus(auid);
@@ -400,6 +435,8 @@ public class RemoteApi extends BaseLockssManager {
     stat.setName(name);
 
     if (currentConfig != null && !currentConfig.isEmpty()) {
+      currentConfig = canonicalizeAuConfig(currentConfig);
+      auConfig = canonicalizeAuConfig(auConfig);
       ArchivalUnit au = pluginMgr.getAuFromId(auid);
       if (au != null) {
 	stat.setName(au.getName());
@@ -417,8 +454,9 @@ public class RemoteApi extends BaseLockssManager {
 	  String key = (String)iter.next();
 	  String foo = "Key: " + key + ", current=" + currentConfig.get(key) +
 	    ", file=" + auConfig.get(key) + "<br>";
-	  stat.setExplanation(foo);
+	  sb.append(foo);
 	}
+	stat.setExplanation(sb.toString());
       }
     } else {
       try {
