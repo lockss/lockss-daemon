@@ -1,5 +1,5 @@
 /*
- * $Id: EnumerationIterator.java,v 1.2 2003-06-20 22:34:53 claire Exp $
+ * $Id: EnumerationIterator.java,v 1.3 2005-03-22 06:23:00 tlipkis Exp $
  */
 
 /*
@@ -39,18 +39,18 @@ import java.util.*;
  * <code>Iterator</code>.
  */
 public class EnumerationIterator implements Iterator {
-  private Enumeration enum;
+  private Enumeration en;
 
-  public EnumerationIterator(Enumeration enum) {
-    this.enum = enum;
+  public EnumerationIterator(Enumeration en) {
+    this.en = en;
   }
 
   public boolean hasNext() {
-    return enum.hasMoreElements();
+    return en.hasMoreElements();
   }
 
   public Object next() {
-    return enum.nextElement();
+    return en.nextElement();
   }
 
   /** Unsupported. */

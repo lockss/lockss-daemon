@@ -1,5 +1,5 @@
 /*
- * $Id: PropUtil.java,v 1.11 2004-09-07 07:26:04 tlipkis Exp $
+ * $Id: PropUtil.java,v 1.12 2005-03-22 06:23:00 tlipkis Exp $
  */
 /*
 
@@ -46,8 +46,9 @@ public class PropUtil {
   /** Returns a copy of the Properties */
   public static Properties copy(Properties props) {
     Properties copy = new Properties();
-    for (Enumeration enum = props.propertyNames(); enum.hasMoreElements(); ) {
-      String key = (String)enum.nextElement();
+    for (Enumeration en = props.propertyNames();
+	 en.hasMoreElements(); ) {
+      String key = (String)en.nextElement();
       copy.setProperty(key, props.getProperty(key));
     }
     return copy;

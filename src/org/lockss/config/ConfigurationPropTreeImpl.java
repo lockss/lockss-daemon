@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurationPropTreeImpl.java,v 1.4 2004-10-20 21:49:50 smorabito Exp $
+ * $Id: ConfigurationPropTreeImpl.java,v 1.5 2005-03-22 06:23:01 tlipkis Exp $
  */
 
 /*
@@ -191,9 +191,9 @@ public class ConfigurationPropTreeImpl extends Configuration {
     return possiblyEmptyIterator(props.getNodes(key));
   }
 
-  private Iterator possiblyEmptyIterator(Enumeration enum) {
-    if (enum != null) {
-      return new EnumerationIterator(enum);
+  private Iterator possiblyEmptyIterator(Enumeration en) {
+    if (en != null) {
+      return new EnumerationIterator(en);
     } else {
       return CollectionUtil.EMPTY_ITERATOR;
     }

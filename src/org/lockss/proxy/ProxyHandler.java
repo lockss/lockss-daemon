@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.34 2005-02-02 00:15:47 tlipkis Exp $
+ * $Id: ProxyHandler.java,v 1.35 2005-03-22 06:23:00 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.34 2005-02-02 00:15:47 tlipkis Exp $
+// $Id: ProxyHandler.java,v 1.35 2005-03-22 06:23:00 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -280,11 +280,11 @@ public class ProxyHandler extends AbstractHttpHandler {
       // copy headers
       boolean xForwardedFor=false;
       boolean hasContent=false;
-      Enumeration enum = request.getFieldNames();
+      Enumeration en = request.getFieldNames();
 
-      while (enum.hasMoreElements()) {
+      while (en.hasMoreElements()) {
 	// XXX could be better than this!
-	String hdr=(String)enum.nextElement();
+	String hdr=(String)en.nextElement();
 
 	if (_DontProxyHeaders.containsKey(hdr))
 	  continue;
@@ -431,9 +431,9 @@ public class ProxyHandler extends AbstractHttpHandler {
       boolean hasContent=false;
       String ifModified = null;
 
-      for (Enumeration enum = request.getFieldNames();
-	   enum.hasMoreElements(); ) {
-	String hdr=(String)enum.nextElement();
+      for (Enumeration en = request.getFieldNames();
+	   en.hasMoreElements(); ) {
+	String hdr=(String)en.nextElement();
 
 	if (_DontProxyHeaders.containsKey(hdr)) continue;
 
