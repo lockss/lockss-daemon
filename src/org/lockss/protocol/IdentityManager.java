@@ -1,5 +1,5 @@
 /*
-* $Id: IdentityManager.java,v 1.23 2003-04-02 23:46:56 aalto Exp $
+* $Id: IdentityManager.java,v 1.24 2003-04-03 11:34:10 tal Exp $
  */
 
 /*
@@ -110,7 +110,6 @@ public class IdentityManager extends BaseLockssManager {
    */
   public void startService() {
     super.startService();
-    registerDefaultConfigCallback();
     reloadIdentities();
     log.info("Local identity: " + getLocalIdentity());
     getDaemon().getStatusService().registerStatusAccessor("Identities",
@@ -397,7 +396,7 @@ public class IdentityManager extends BaseLockssManager {
   }
 
   private static final List statusSortRules =
-    ListUtil.list(new StatusTable.SortRule("id", true));
+    ListUtil.list(new StatusTable.SortRule("ip", true));
 
   private static final List statusColDescs =
     ListUtil.list(
