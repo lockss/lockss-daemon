@@ -1,5 +1,5 @@
 /*
- * $Id: PartnerList.java,v 1.16 2003-06-20 22:34:52 claire Exp $
+ * $Id: PartnerList.java,v 1.16.16.1 2004-02-03 01:03:41 tlipkis Exp $
  */
 
 /*
@@ -74,14 +74,14 @@ class PartnerList {
   long recentMulticastInterval;
   long minPartnerRemoveInterval;
   int maxPartners;
-  InetAddress localIP;
+  IPAddr localIP;
 
   /** Create a PartnerList */
   public PartnerList() {
   }
 
   /** Tell us the local IP address */
-  public void setLocalIP(InetAddress local) {
+  public void setLocalIP(IPAddr local) {
     localIP = local;
   }
 
@@ -104,7 +104,7 @@ class PartnerList {
       List newDefaultList = new ArrayList();
       for (Iterator iter = stringList.iterator(); iter.hasNext(); ) {
 	try {
-	  newDefaultList.add(InetAddress.getByName((String)iter.next()));
+	  newDefaultList.add(IPAddr.getByName((String)iter.next()));
 	} catch (UnknownHostException e) {
 	  log.warning("Can't add default partner", e);
 	}
@@ -127,7 +127,7 @@ class PartnerList {
   /** Inform the PartnerList that a multicast packet was received.
    * @param ip the address of the packet sender
    */
-  public void multicastPacketReceivedFrom(InetAddress ip) {
+  public void multicastPacketReceivedFrom(IPAddr ip) {
     removePartner(ip);
     lastMulticastReceived.put(ip, nowLong());
   }
@@ -136,14 +136,14 @@ class PartnerList {
    * @param partnerIP the address of the partner
    * @probability the probability of adding the partner
    */
-  public void addPartner(InetAddress partnerIP, double probability) {
+  public void addPartner(IPAddr partnerIP, double probability) {
     log.debug2("addPartner(" + partnerIP + ", " + probability + ")");
     if (ProbabilisticChoice.choose(probability)) {
       addPartner(partnerIP);
     }
   }
 
-  void addPartner(InetAddress partnerIP) {
+  void addPartner(IPAddr partnerIP) {
     // don't ever add ourself
     if (partnerIP.equals(localIP)) {
       return;
@@ -172,13 +172,13 @@ class PartnerList {
     Collections.shuffle(defaultPartnerList);
     // then add all its elements.
     for (Iterator iter = defaultPartnerList.iterator(); iter.hasNext(); ) {
-      InetAddress ip = (InetAddress)iter.next();
+      IPAddr ip = (IPAddr)iter.next();
       addPartner(ip);
     }
   }
 
   void removeLeastRecent() {
-    InetAddress oldest = (InetAddress)partners.getFirstKey();
+    IPAddr oldest = (IPAddr)partners.getFirstKey();
     if (oldest != null) {
       removePartner(oldest);
     }
@@ -187,7 +187,7 @@ class PartnerList {
   /** Remove a partner from the list
    * @param partnerIP the partner to remove
    */
-  public void removePartner(InetAddress partnerIP) {
+  public void removePartner(IPAddr partnerIP) {
     if (partners.containsKey(partnerIP)) {
       log.debug("Removing partner " + partnerIP);
       partners.remove(partnerIP);
@@ -198,7 +198,7 @@ class PartnerList {
   void addFromDefaultList() {
     if (!defaultPartnerList.isEmpty()) {
       int ix = random.nextInt(defaultPartnerList.size());
-      addPartner((InetAddress)defaultPartnerList.get(ix));
+      addPartner((IPAddr)defaultPartnerList.get(ix));
     }
   }
 
@@ -207,14 +207,14 @@ class PartnerList {
   }
 
 //   static class Element {
-//     InetAddress addr;
+//     IPAddr addr;
 //     long lastReceiveTime;
 
 //     Element(LcapIdentity id) throws UnknownHostException {
 //       this(id.getAddress());
 //     }
 
-//     Element(InetAddress ip) {
+//     Element(IPAddr ip) {
 //       addr = ip;
 //     }
 //   }

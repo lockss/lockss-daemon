@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.101 2004-01-12 06:22:55 tlipkis Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.101.2.1 2004-02-03 01:03:39 tlipkis Exp $
  */
 
 /*
@@ -1184,7 +1184,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     }
     else {
       try {
-        InetAddress testAddr = InetAddress.getByName("123.3.4.5");
+        IPAddr testAddr = IPAddr.getByName("123.3.4.5");
         testID = idManager.findIdentity(testAddr);
       }
       catch (UnknownHostException ex) {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestPoll.java,v 1.74 2004-01-13 01:09:54 eaalto Exp $
+ * $Id: TestPoll.java,v 1.74.2.1 2004-02-03 01:03:40 tlipkis Exp $
  */
 
 /*
@@ -65,8 +65,8 @@ public class TestPoll extends LockssTestCase {
   private ArrayList disagree_entries = makeEntries(15, 57);
   private ArrayList dissenting_entries = makeEntries(7, 50);
 
-  protected InetAddress testaddr;
-  protected InetAddress testaddr1;
+  protected IPAddr testaddr;
+  protected IPAddr testaddr1;
   protected LcapIdentity testID;
   protected LcapIdentity testID1;
   protected LcapMessage[] testV1msg;
@@ -499,9 +499,9 @@ public class TestPoll extends LockssTestCase {
 
   private void initTestAddr() {
     try {
-      testaddr = InetAddress.getByName("127.0.0.1");
+      testaddr = IPAddr.getByName("127.0.0.1");
       testID = theDaemon.getIdentityManager().findIdentity(testaddr);
-      testaddr1 = InetAddress.getByName("1.1.1.1");
+      testaddr1 = IPAddr.getByName("1.1.1.1");
       testID1 = theDaemon.getIdentityManager().findIdentity(testaddr1);
     }
     catch (UnknownHostException ex) {

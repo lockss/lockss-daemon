@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapComm.java,v 1.12 2003-09-01 20:41:30 tlipkis Exp $
+ * $Id: TestLcapComm.java,v 1.12.8.1 2004-02-03 01:03:39 tlipkis Exp $
  */
 
 /*
@@ -70,7 +70,7 @@ public class TestLcapComm extends LockssTestCase {
   byte[] testData;
   byte[] testPktData;
   int testPort = 1234;
-  InetAddress testAddr;
+  IPAddr testAddr;
   String[] ar1 = {"foo"};
   byte[] chal = {1,2,3,4,5,6,7,8,9,10};
   LockssDatagram testSend;
@@ -92,14 +92,14 @@ public class TestLcapComm extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     testData = testStr.getBytes();
-    testAddr = InetAddress.getByName("127.0.0.1");
+    testAddr = IPAddr.getByName("127.0.0.1");
     testSend = new LockssDatagram(LockssDatagram.PROTOCOL_TEST, testData);
     byte[] testHeader = {0, 0, 0, LockssDatagram.PROTOCOL_TEST};
     testPktData = ByteArray.concat(testHeader, testData);
     testPacket = new DatagramPacket(testPktData, testPktData.length,
-				    testAddr, testPort);
+				    testAddr.getInetAddr(), testPort);
     testPacket2 = new DatagramPacket(testPktData, testPktData.length,
-				     testAddr, testPort - 1);
+				     testAddr.getInetAddr(), testPort - 1);
 
     fact = new MockSocketFactory();
     Properties props = new Properties();
@@ -139,7 +139,7 @@ public class TestLcapComm extends LockssTestCase {
     assertTrue(ssock.getSentPackets().isEmpty());
     comm.sendTo(testSend, testAddr, testPort);
     DatagramPacket sent = (DatagramPacket)ssock.getSentPackets().elementAt(0);
-    assertEquals(testAddr, sent.getAddress());
+    assertEquals(testAddr, new IPAddr(sent.getAddress()));
     assertEquals(testPort, sent.getPort());
     assertEquals(testPktData, sent.getData());
   }
@@ -148,8 +148,8 @@ public class TestLcapComm extends LockssTestCase {
     assertTrue(ssock.getSentPackets().isEmpty());
     comm.send(testSend, (ArchivalUnit)null);
     DatagramPacket sent = (DatagramPacket)ssock.getSentPackets().elementAt(0);
-    assertEquals(InetAddress.getByName(config.get(PARAM_MULTI_GROUP)),
-		 sent.getAddress());
+    assertEquals(IPAddr.getByName(config.get(PARAM_MULTI_GROUP)),
+		 new IPAddr(sent.getAddress()));
     assertEquals(config.getInt(PARAM_MULTI_PORT), sent.getPort());
     assertEquals(testPktData, sent.getData());
   }
@@ -222,12 +222,13 @@ public class TestLcapComm extends LockssTestCase {
     List ssocks = new ArrayList();
 
     public LcapSocket.Multicast newMulticastSocket(Queue rcvQ,
-					    InetAddress group,
+					    IPAddr group,
 					    int port)
 	throws IOException {
       MockMulticastSocket mskt = new MockMulticastSocket();
       msocks.add(mskt);
-      return new LcapSocket.Multicast(rcvQ, mskt, (InetAddress)null);
+      return new LcapSocket.Multicast(rcvQ, mskt,
+				      IPAddr.getByName("127.0.0.1"));
     }
 
     public LcapSocket.Unicast newUnicastSocket(Queue rcvQ, int port)

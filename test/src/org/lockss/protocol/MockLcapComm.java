@@ -1,5 +1,5 @@
 /*
- * $Id: MockLcapComm.java,v 1.3 2003-12-17 02:09:44 tlipkis Exp $
+ * $Id: MockLcapComm.java,v 1.3.2.1 2004-02-03 01:03:39 tlipkis Exp $
  */
 
 /*
@@ -49,12 +49,12 @@ public class MockLcapComm extends LcapComm {
   static Logger log = Logger.getLogger("MockComm");
 
   // These may change if/when we use multiple groups/ports
-  private InetAddress group;
+  private IPAddr group;
   private int multiPort = -1;		// multicast port
   private int uniPort = -1;		// unicast port
   private int uniSendToPort = -1;       // unicast send-to port, for testing
 					// multiple instances on one machine
-  private InetAddress uniSendToAddr = null; // unicast send-to addr, for
+  private IPAddr uniSendToAddr = null; // unicast send-to addr, for
 					    // testing multiple instances on
 					    // one machine
 
@@ -120,7 +120,7 @@ public class MockLcapComm extends LcapComm {
     }
     try {
       if (groupName != null) {
-	group = InetAddress.getByName(groupName);
+	group = IPAddr.getByName(groupName);
       }
       if (group == null) {
 	log.critical("null group addr");
@@ -131,7 +131,7 @@ public class MockLcapComm extends LcapComm {
     }
     try {
       if (uniSendToName != null) {
-	uniSendToAddr = InetAddress.getByName(uniSendToName);
+	uniSendToAddr = IPAddr.getByName(uniSendToName);
       }
     } catch (UnknownHostException e) {
       log.critical("Can't get unicast send-to addr, not started", e);
@@ -148,7 +148,7 @@ public class MockLcapComm extends LcapComm {
 
   private int derivedMultiPort() {
     try {
-      InetAddress local = InetAddress.getLocalHost();
+      IPAddr local = IPAddr.getLocalHost();
       byte[] addr = local.getAddress();
       return ((int)addr[3]) + 1234;
     } catch (UnknownHostException e) {
@@ -191,12 +191,12 @@ public class MockLcapComm extends LcapComm {
 	   uniSendToPort);
   }
 
-  void sendTo(LockssDatagram ld, InetAddress addr)
+  void sendTo(LockssDatagram ld, IPAddr addr)
       throws IOException {
     sendTo(ld, addr, uniSendToPort);
   }
 
-  void sendTo(LockssDatagram ld, InetAddress addr, int port)
+  void sendTo(LockssDatagram ld, IPAddr addr, int port)
       throws IOException {
     log.debug("sending "+ ld +" to "+ addr +":"+ port);
     DatagramPacket pkt = ld.makeSendPacket(addr, port);
@@ -424,7 +424,7 @@ public class MockLcapComm extends LcapComm {
   /** SocketFactory interface is so test case can use mock sockets */
   interface SocketFactory {
     LcapSocket.Multicast newMulticastSocket(Queue rcvQ,
-					    InetAddress group,
+					    IPAddr group,
 					    int port)
 	throws IOException;
 
@@ -437,7 +437,7 @@ public class MockLcapComm extends LcapComm {
   /** Normal socket factory creates real LcapSockets */
   static class NormalSocketFactory implements SocketFactory {
     public LcapSocket.Multicast newMulticastSocket(Queue rcvQ,
-						   InetAddress group,
+						   IPAddr group,
 						   int port)
 	throws IOException {
       return new LcapSocket.Multicast(rcvQ, group, port);

@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollSpec.java,v 1.10 2003-09-26 23:47:46 eaalto Exp $
+ * $Id: TestPollSpec.java,v 1.10.6.1 2004-02-03 01:03:39 tlipkis Exp $
  */
 
 /*
@@ -102,7 +102,7 @@ public class TestPollSpec extends LockssTestCase {
     PollSpec ps = new PollSpec(cus);
     LcapIdentity id = null;
     try {
-      InetAddress addr = InetAddress.getByName("127.0.0.1");
+      IPAddr addr = IPAddr.getByName("127.0.0.1");
       id = theDaemon.getIdentityManager().findIdentity(addr);
     }
     catch (UnknownHostException ex) {

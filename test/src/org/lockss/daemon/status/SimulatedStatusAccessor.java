@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedStatusAccessor.java,v 1.12 2003-12-23 00:34:06 tlipkis Exp $
+ * $Id: SimulatedStatusAccessor.java,v 1.12.2.1 2004-02-03 01:03:40 tlipkis Exp $
  */
 
 /*
@@ -111,7 +111,7 @@ public class SimulatedStatusAccessor {
 	return new Float(1.0 / row);
       case ColumnDescriptor.TYPE_IP_ADDRESS:
 	try {
-	  return InetAddress.getByName("10.1.0.42");
+	  return IPAddr.getByName("10.1.0.42");
 	} catch (UnknownHostException e) {
 	  return null;
 	}

@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigManager.java,v 1.6 2003-09-16 23:31:19 eaalto Exp $
+ * $Id: TestConfigManager.java,v 1.6.6.1 2004-02-03 01:03:40 tlipkis Exp $
  */
 
 /*
@@ -249,6 +249,35 @@ public class TestConfigManager extends LockssTestCase {
 		 config.get("org.lockss.log.target.MailTarget.smtphost"));
     assertEquals("25",
 		 config.get("org.lockss.log.target.MailTarget.smtpport"));
+  }
+
+  public void testPlatformVersionConfig() throws Exception {
+    Properties props = new Properties();
+    props.put(ConfigManager.PARAM_PLATFORM_VERSION, "123");
+    props.put("org.lockss.foo", "44");
+    props.put("123.org.lockss.foo", "55");
+    ConfigurationUtil.setCurrentConfigFromProps(props);
+    Configuration config = mgr.getCurrentConfig();
+    assertEquals("55", config.get("org.lockss.foo"));
+  }
+
+  public void testPlatformDifferentVersionConfig() throws Exception {
+    Properties props = new Properties();
+    props.put(ConfigManager.PARAM_PLATFORM_VERSION, "321");
+    props.put("org.lockss.foo", "22");
+    props.put("123.org.lockss.foo", "55");
+    ConfigurationUtil.setCurrentConfigFromProps(props);
+    Configuration config = mgr.getCurrentConfig();
+    assertEquals("22", config.get("org.lockss.foo"));
+  }
+
+  public void testPlatformNoVersionConfig() throws Exception {
+    Properties props = new Properties();
+    props.put("org.lockss.foo", "11");
+    props.put("123.org.lockss.foo", "55");
+    ConfigurationUtil.setCurrentConfigFromProps(props);
+    Configuration config = mgr.getCurrentConfig();
+    assertEquals("11", config.get("org.lockss.foo"));
   }
 
   public void testPlatformConfigDirSetup() throws Exception {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestPartnerList.java,v 1.9 2003-07-14 06:46:39 tlipkis Exp $
+ * $Id: TestPartnerList.java,v 1.9.14.1 2004-02-03 01:03:39 tlipkis Exp $
  */
 
 /*
@@ -58,10 +58,10 @@ public class TestPartnerList extends LockssTestCase {
   static final String IP4 = "1.1.1.4";
 
   PartnerList pl;
-  InetAddress inet1;
-  InetAddress inet2;
-  InetAddress inet3;
-  InetAddress inet4;
+  IPAddr inet1;
+  IPAddr inet2;
+  IPAddr inet3;
+  IPAddr inet4;
 
   private void setConfig(PartnerList pl, Configuration config) {
     pl.setConfig(config, ConfigManager.EMPTY_CONFIGURATION,
@@ -74,10 +74,10 @@ public class TestPartnerList extends LockssTestCase {
     pl = new PartnerList();
     setConfig(pl, getConfig(DEF_MIN_PARTNER_REMOVE_INTERVAL, DEF_MAX_PARTNERS,
 			    DEF_MULTICAST_INTERVAL, DEF_PARTNERS));
-    inet1 = InetAddress.getByName(IP1);
-    inet2 = InetAddress.getByName(IP2);
-    inet3 = InetAddress.getByName(IP3);
-    inet4 = InetAddress.getByName(IP4);
+    inet1 = IPAddr.getByName(IP1);
+    inet2 = IPAddr.getByName(IP2);
+    inet3 = IPAddr.getByName(IP3);
+    inet4 = IPAddr.getByName(IP4);
   }
 
   public void tearDown() throws Exception {
@@ -101,7 +101,7 @@ public class TestPartnerList extends LockssTestCase {
 
   private void removeAll() {
     for (Iterator iter = pl.getPartners().iterator(); iter.hasNext(); ) {
-      InetAddress ip = (InetAddress)iter.next();
+      IPAddr ip = (IPAddr)iter.next();
       pl.removePartner(ip);
     }
   }

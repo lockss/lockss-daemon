@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapMessage.java,v 1.29 2003-06-26 22:55:50 clairegriffin Exp $
+ * $Id: TestLcapMessage.java,v 1.29.16.1 2004-02-03 01:03:39 tlipkis Exp $
  */
 
 /*
@@ -54,7 +54,7 @@ public class TestLcapMessage extends LockssTestCase {
   private static ArrayList testentries;
 
   private static MockLockssDaemon daemon = new MockLockssDaemon(null);
-  protected InetAddress testaddr;
+  protected IPAddr testaddr;
   protected LcapIdentity testID;
   protected LcapMessage testmsg;
   protected static String archivalID = "TestAU_1.0";
@@ -67,7 +67,7 @@ public class TestLcapMessage extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     try {
-      testaddr = InetAddress.getByName("127.0.0.1");
+      testaddr = IPAddr.getByName("127.0.0.1");
     }
     catch (UnknownHostException ex) {
       fail("can't open test host");

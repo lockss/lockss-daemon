@@ -1,5 +1,5 @@
 /*
- * $Id: LcapIdentity.java,v 1.19 2003-09-05 03:23:18 dshr Exp $
+ * $Id: LcapIdentity.java,v 1.19.6.1 2004-02-03 01:03:41 tlipkis Exp $
  */
 
 /*
@@ -71,7 +71,7 @@ public class LcapIdentity implements Serializable {
     END PACKET HISTOGRAM SUPPORT - CURRENTLY NOT BEING USED
   */
 
-  transient InetAddress m_address = null;
+  transient IPAddr m_address = null;
 
   int m_reputation;
   String m_idKey;
@@ -87,9 +87,9 @@ public class LcapIdentity implements Serializable {
 
   /**
    * construct a new Identity from an address
-   * @param addr the InetAddress
+   * @param addr the IPAddr
    */
-  public LcapIdentity(InetAddress addr) {
+  public LcapIdentity(IPAddr addr) {
     m_idKey = makeIdKey(addr);
     m_reputation = IdentityManager.INITIAL_REPUTATION;
     m_address = addr;
@@ -100,9 +100,9 @@ public class LcapIdentity implements Serializable {
 
   /**
    * return the address of the Identity
-   * @return the <code>InetAddress<\code> for this Identity
+   * @return the <code>IPAddr<\code> for this Identity
    */
-  public InetAddress getAddress() {
+  public IPAddr getAddress() {
     return m_address;
   }
 
@@ -153,7 +153,7 @@ public class LcapIdentity implements Serializable {
 
   // methods which may need to be overridden
 
-  public boolean isEqual(InetAddress addr) {
+  public boolean isEqual(IPAddr addr) {
     String key = makeIdKey(addr);
 
     return key.equals(m_idKey);
@@ -248,24 +248,24 @@ public class LcapIdentity implements Serializable {
     m_reputation += delta;
   }
 
-  static String makeIdKey(InetAddress addr) {
+  static String makeIdKey(IPAddr addr) {
     return addrToString(addr);
   }
 
   /**
-   * turn and InetAddress into a dotted quartet string since
+   * turn and IPAddr into a dotted quartet string since
    * get host address doesn't necessarily return an address
    * @param addr the address to turn into a string
    * @return the address as dotted quartet sting
    */
-  public static String addrToString(InetAddress addr)  {
+  public static String addrToString(IPAddr addr)  {
     String ret = addr.getHostAddress();
     return ret;
   }
 
-  public static InetAddress stringToAddr(String addr)
+  public static IPAddr stringToAddr(String addr)
       throws UnknownHostException {
-    InetAddress ret = InetAddress.getByName(addr);
+    IPAddr ret = IPAddr.getByName(addr);
     if(ret == null) {
       throw new UnknownHostException("Unable to get address: " + addr);
     }

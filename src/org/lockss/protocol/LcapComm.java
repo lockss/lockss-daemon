@@ -1,5 +1,5 @@
 /*
- * $Id: LcapComm.java,v 1.43 2003-12-23 00:34:06 tlipkis Exp $
+ * $Id: LcapComm.java,v 1.43.2.1 2004-02-03 01:03:41 tlipkis Exp $
  */
 
 /*
@@ -75,12 +75,12 @@ public class LcapComm extends BaseLockssManager {
   private boolean verifyMulticast = false;
 
   // These may change if/when we use multiple groups/ports
-  private InetAddress group;
+  private IPAddr group;
   private int multiPort = -1;		// multicast port
   private int uniPort = -1;		// unicast port
   private int uniSendToPort = -1;       // unicast send-to port, for testing
 					// multiple instances on one machine
-  private InetAddress uniSendToAddr = null; // unicast send-to addr, for
+  private IPAddr uniSendToAddr = null; // unicast send-to addr, for
 					    // testing multiple instances on
 					    // one machine
 
@@ -169,7 +169,7 @@ public class LcapComm extends BaseLockssManager {
     }
     try {
       if (groupName != null) {
-	group = InetAddress.getByName(groupName);
+	group = IPAddr.getByName(groupName);
       }
       if (group == null) {
 	log.critical("null group addr");
@@ -180,12 +180,12 @@ public class LcapComm extends BaseLockssManager {
     }
     try {
       if (uniSendToName != null) {
-	uniSendToAddr = InetAddress.getByName(uniSendToName);
+	uniSendToAddr = IPAddr.getByName(uniSendToName);
       }
     } catch (UnknownHostException e) {
       log.critical("Can't get unicast send-to addr, not started: " + e);
     }
-    // make list of InetAddresses of local interfaces
+    // make list of IPAddrs of local interfaces
     if (localInterfaces == null || changedKeys.contains(PARAM_LOCAL_IPS)) {
       String s = config.get(PARAM_LOCAL_IPS, "");
       List ipStrings = StringUtil.breakAt(s, ';');
@@ -193,7 +193,7 @@ public class LcapComm extends BaseLockssManager {
       for (Iterator iter = ipStrings.iterator(); iter.hasNext(); ) {
 	String ip = (String)iter.next();
 	try {
-	  InetAddress inet = InetAddress.getByName(ip);
+	  IPAddr inet = IPAddr.getByName(ip);
 	  newList.add(inet);
 	} catch (UnknownHostException e) {
 	  log.warning("Couldn't parse local interface IP address: " + ip);
@@ -215,12 +215,12 @@ public class LcapComm extends BaseLockssManager {
 
   /** Return true if the packet's source address is one of my interfaces. */
   boolean didISend(LockssReceivedDatagram dg) {
-    InetAddress sender = dg.getSender();
+    IPAddr sender = dg.getSender();
     if (localInterfaces == null) {
       return sender.equals(getLocalIdentityAddr());
     } else {
       for (Iterator iter = localInterfaces.iterator(); iter.hasNext(); ) {
-	if (sender.equals((InetAddress)iter.next())) {
+	if (sender.equals((IPAddr)iter.next())) {
 	  return true;
 	}
       }
@@ -228,9 +228,9 @@ public class LcapComm extends BaseLockssManager {
     }
   }
 
-  private InetAddress localIp;
+  private IPAddr localIp;
 
-  InetAddress getLocalIdentityAddr() {
+  IPAddr getLocalIdentityAddr() {
     if (localIp == null) {
       localIp = idMgr.getLocalIdentity().getAddress();
     }
@@ -239,7 +239,7 @@ public class LcapComm extends BaseLockssManager {
 
   private int derivedMultiPort() {
     try {
-      InetAddress local = InetAddress.getLocalHost();
+      IPAddr local = IPAddr.getLocalHost();
       byte[] addr = local.getAddress();
       return ((int)addr[3]) + 1234;
     } catch (UnknownHostException e) {
@@ -283,13 +283,13 @@ public class LcapComm extends BaseLockssManager {
 	   uniSendToPort);
   }
 
-  void sendTo(LockssDatagram ld, InetAddress addr)
+  void sendTo(LockssDatagram ld, IPAddr addr)
       throws IOException {
     updateOutStats(ld, uniSendToPort, false);
     sendTo(ld, addr, uniSendToPort);
   }
 
-  void sendTo(LockssDatagram ld, InetAddress addr, int port)
+  void sendTo(LockssDatagram ld, IPAddr addr, int port)
       throws IOException {
     log.debug2("sending "+ ld +" to "+ addr +":"+ port);
     DatagramPacket pkt = ld.makeSendPacket(addr, port);
@@ -524,7 +524,7 @@ public class LcapComm extends BaseLockssManager {
   /** SocketFactory interface is so test case can use mock sockets */
   interface SocketFactory {
     LcapSocket.Multicast newMulticastSocket(Queue rcvQ,
-					    InetAddress group,
+					    IPAddr group,
 					    int port)
 	throws IOException;
 
@@ -537,7 +537,7 @@ public class LcapComm extends BaseLockssManager {
   /** Normal socket factory creates real LcapSockets */
   static class NormalSocketFactory implements SocketFactory {
     public LcapSocket.Multicast newMulticastSocket(Queue rcvQ,
-						   InetAddress group,
+						   IPAddr group,
 						   int port)
 	throws IOException {
       return new LcapSocket.Multicast(rcvQ, group, port);

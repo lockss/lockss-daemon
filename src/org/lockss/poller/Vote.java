@@ -1,5 +1,5 @@
 /*
-* $Id: Vote.java,v 1.9 2003-06-20 22:34:51 claire Exp $
+* $Id: Vote.java,v 1.9.16.1 2004-02-03 01:03:41 tlipkis Exp $
  */
 
 /*
@@ -38,14 +38,14 @@ import org.lockss.protocol.LcapMessage;
 import java.util.Arrays;
 import java.io.Serializable;
 import org.lockss.app.LockssDaemon;
-import java.net.InetAddress;
+import org.lockss.util.*;
 
 /**
  * Vote stores the information need to replay a single vote. These are needed
  * to run a repair poll.
  */
 public class Vote implements Serializable {
-  private InetAddress voteAddr;
+  private IPAddr voteAddr;
   protected boolean agree;
   private byte[] challenge;
   private byte[] verifier;
@@ -57,7 +57,7 @@ public class Vote implements Serializable {
 
 
   Vote(byte[] challenge, byte[] verifier, byte[] hash,
-       InetAddress addr, boolean agree) {
+       IPAddr addr, boolean agree) {
     this.voteAddr = addr;
     this.agree = agree;
     this.challenge = challenge;
@@ -108,7 +108,7 @@ public class Vote implements Serializable {
    * Return the Identity of the voter
    * @return <code>LcapIdentity</code> the id
    */
-  public InetAddress getIDAddress() {
+  public IPAddr getIDAddress() {
     return voteAddr;
   }
 

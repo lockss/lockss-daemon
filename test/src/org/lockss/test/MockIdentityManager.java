@@ -1,5 +1,5 @@
 /*
-* $Id: MockIdentityManager.java,v 1.4 2003-06-20 22:34:55 claire Exp $
+* $Id: MockIdentityManager.java,v 1.4.16.1 2004-02-03 01:03:39 tlipkis Exp $
  */
 
 /*
@@ -34,7 +34,7 @@ package org.lockss.test;
 import java.util.HashMap;
 import org.lockss.app.*;
 import org.lockss.protocol.*;
-import java.net.InetAddress;
+import org.lockss.util.*;
 
 /**
  * Mock override of IdentityManager.
@@ -52,11 +52,11 @@ public class MockIdentityManager extends IdentityManager {
     idMap = new HashMap();
   }
 
-  public void changeReputation(InetAddress id, int changeKind) {
+  public void changeReputation(IPAddr id, int changeKind) {
     idMap.put(id, new Integer(changeKind));
   }
 
-  public int lastChange(InetAddress id) {
+  public int lastChange(IPAddr id) {
     Integer change = (Integer)idMap.get(id);
     if (change==null) {
       return -1;

@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssDatagram.java,v 1.6 2003-06-20 22:34:54 claire Exp $
+ * $Id: TestLockssDatagram.java,v 1.6.16.1 2004-02-03 01:03:39 tlipkis Exp $
  */
 
 /*
@@ -74,9 +74,9 @@ public class TestLockssDatagram extends LockssTestCase {
 
   public void testMakePacket() throws Exception {
     LockssDatagram dg = new LockssDatagram(4, testData);
-    InetAddress testAddr = InetAddress.getByName("127.0.0.1");
+    IPAddr testAddr = IPAddr.getByName("127.0.0.1");
     DatagramPacket pkt = dg.makeSendPacket(testAddr, testPort);
-    assertEquals(testAddr, pkt.getAddress());
+    assertEquals(testAddr, new IPAddr(pkt.getAddress()));
     assertEquals(testPort, pkt.getPort());
     byte[] data = pkt.getData();
     assertEquals(LockssDatagram.HEADER_LENGTH + testData.length,
@@ -93,7 +93,7 @@ public class TestLockssDatagram extends LockssTestCase {
 
   public void testEncodeDecode() throws Exception {
     LockssDatagram dg = new LockssDatagram(27, testData);
-    InetAddress testAddr = InetAddress.getByName("10.4.111.27");
+    IPAddr testAddr = IPAddr.getByName("10.4.111.27");
     DatagramPacket pkt = dg.makeSendPacket(dg.encodeUncompressedPacketData(),
 					   testAddr, testPort);
     LockssReceivedDatagram rdg = new LockssReceivedDatagram(pkt);
@@ -116,7 +116,7 @@ public class TestLockssDatagram extends LockssTestCase {
     props.put(LcapComm.PARAM_COMPRESS_MIN, "10");
     ConfigurationUtil.setCurrentConfigFromProps(props);
     LockssDatagram dg = new LockssDatagram(27, testData);
-    InetAddress testAddr = InetAddress.getByName("10.4.111.27");
+    IPAddr testAddr = IPAddr.getByName("10.4.111.27");
     DatagramPacket pkt = dg.makeSendPacket(testAddr, testPort);
     LockssReceivedDatagram rdg = new LockssReceivedDatagram(pkt);
     assertTrue(rdg.isCompressed());
@@ -131,12 +131,14 @@ public class TestLockssDatagram extends LockssTestCase {
   }
 
   public void testEquals() throws Exception {
-    InetAddress testAddr = InetAddress.getByName("127.0.0.1");
+    IPAddr testAddr = IPAddr.getByName("127.0.0.1");
     byte[] otherData = new String(testData).getBytes();
     DatagramPacket pkt1 =
-      new DatagramPacket(testData, testData.length, testAddr, testPort);
+      new DatagramPacket(testData, testData.length,
+			 testAddr.getInetAddr(), testPort);
     DatagramPacket pkt2 =
-      new DatagramPacket(otherData, otherData.length, testAddr, testPort);
+      new DatagramPacket(otherData, otherData.length,
+			 testAddr.getInetAddr(), testPort);
     LockssReceivedDatagram d1 = new LockssReceivedDatagram(pkt1);
     LockssReceivedDatagram d2 = new LockssReceivedDatagram(pkt2);
     // Don't use assertEquals() here; want to make sure really testing
@@ -156,7 +158,7 @@ public class TestLockssDatagram extends LockssTestCase {
     assertTrue(d1.equals(d2));
     pkt2.setAddress(InetAddress.getByName("127.0.0.2"));
     assertNotEquals(d1, d2);
-    pkt2.setAddress(testAddr);
+    pkt2.setAddress(testAddr.getInetAddr());
     assertTrue(d1.equals(d2));
     otherData[0] = 'X';
     pkt2.setData(otherData);
@@ -167,12 +169,14 @@ public class TestLockssDatagram extends LockssTestCase {
   // be.  But knowing how LockssReceivedDatagram.hashCode() is implemented,
   // these tests should work.
   public void testHash() throws Exception {
-    InetAddress testAddr = InetAddress.getByName("127.0.0.1");
+    IPAddr testAddr = IPAddr.getByName("127.0.0.1");
     byte[] otherData = new String(testData).getBytes();
     DatagramPacket pkt1 =
-      new DatagramPacket(testData, testData.length, testAddr, testPort);
+      new DatagramPacket(testData, testData.length,
+			 testAddr.getInetAddr(), testPort);
     DatagramPacket pkt2 =
-      new DatagramPacket(otherData, otherData.length, testAddr, testPort);
+      new DatagramPacket(otherData, otherData.length,
+			 testAddr.getInetAddr(), testPort);
     LockssReceivedDatagram d1 = new LockssReceivedDatagram(pkt1);
     LockssReceivedDatagram d2 = new LockssReceivedDatagram(pkt2);
     assertEquals(d1.hashCode(), d2.hashCode());
@@ -196,7 +200,7 @@ public class TestLockssDatagram extends LockssTestCase {
     pkt2.setAddress(InetAddress.getByName("127.0.0.2"));
     d2 = new LockssReceivedDatagram(pkt2);
     assertTrue(d1.hashCode() != d2.hashCode());
-    pkt2.setAddress(testAddr);
+    pkt2.setAddress(testAddr.getInetAddr());
     d2 = new LockssReceivedDatagram(pkt2);
     assertEquals(d1.hashCode(), d2.hashCode());
     otherData[0] = 'X';

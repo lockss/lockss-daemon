@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.47 2004-01-14 05:24:30 tlipkis Exp $
+ * $Id: LockssDaemon.java,v 1.47.2.1 2004-02-03 01:03:42 tlipkis Exp $
  */
 
 /*
@@ -71,6 +71,9 @@ public class LockssDaemon {
 
   static final String PARAM_PLATFORM_VERSION =
     Configuration.PREFIX + "platform.version";
+
+  static final String PARAM_EXERCISE_DNS = PREFIX + "poundDns";
+  private static boolean DEFAULT_EXERCISE_DNS = false;
 
   public static final String MANAGER_PREFIX =
     Configuration.PREFIX + "manager.";
@@ -544,7 +547,8 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     log.info("Started");
   }
 
-  private String getVersionInfo() {
+  /** Return a string describing the version of the daemon and platform */
+  public String getVersionInfo() {
     String vDaemon = BuildInfo.getBuildInfoString();
     String vPlatform = Configuration.getParam(PARAM_PLATFORM_VERSION);
     if (vPlatform != null) {
@@ -580,6 +584,13 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
 
   protected void setConfig(Configuration config, Configuration prevConfig,
 			   Set changedKeys) {
+
+    // temporary while debugging jvm DNS problem
+    if (changedKeys.contains(PARAM_EXERCISE_DNS)) {
+      IPAddr.setExerciseDNS(config.getBooleanParam(PARAM_EXERCISE_DNS,
+						   DEFAULT_EXERCISE_DNS));
+    }
+
     long life = config.getTimeInterval(PARAM_DAEMON_EXIT_AFTER,
 				       DEFAULT_DAEMON_EXIT_AFTER);
     if (life != daemonLifetime) {

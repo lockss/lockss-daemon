@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapRouter.java,v 1.10 2003-07-17 05:21:54 tlipkis Exp $
+ * $Id: TestLcapRouter.java,v 1.10.10.1 2004-02-03 01:03:39 tlipkis Exp $
  */
 
 /*
@@ -55,7 +55,7 @@ public class TestLcapRouter extends LockssTestCase {
 
   private static MockLockssDaemon daemon = new MockLockssDaemon(null);
   private IdentityManager idmgr;
-  protected InetAddress testaddr;
+  protected IPAddr testaddr;
   protected LcapIdentity testID;
   protected LcapMessage testmsg;
   protected static String archivalID = "TestAU_1.0";
@@ -108,7 +108,7 @@ public class TestLcapRouter extends LockssTestCase {
   LcapMessage createTestMsg(String originator, int hopCount)
       throws IOException {
     try {
-      testaddr = InetAddress.getByName(originator);
+      testaddr = IPAddr.getByName(originator);
     }
     catch (UnknownHostException ex) {
       fail("can't open test host");

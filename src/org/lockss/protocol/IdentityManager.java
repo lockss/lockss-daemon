@@ -1,5 +1,5 @@
 /*
-* $Id: IdentityManager.java,v 1.34 2003-12-23 00:34:06 tlipkis Exp $
+* $Id: IdentityManager.java,v 1.34.2.1 2004-02-03 01:03:41 tlipkis Exp $
  */
 
 /*
@@ -137,7 +137,7 @@ public class IdentityManager extends BaseLockssManager {
 
   protected void makeLocalIdentity() throws LockssDaemonException {
     try {
-      InetAddress addr = InetAddress.getByName(localIdentityStr);
+      IPAddr addr = IPAddr.getByName(localIdentityStr);
       theLocalIdentity = new LcapIdentity(addr);
     } catch (UnknownHostException uhe) {
       theLog.error("Could not resolve: " + localIdentityStr, uhe);
@@ -174,10 +174,10 @@ public class IdentityManager extends BaseLockssManager {
   /**
    * public constructor for the creation of an Identity object
    * from an address.
-   * @param addr the InetAddress
+   * @param addr the IPAddr
    * @return a newly constructed Identity
    */
-  public LcapIdentity findIdentity(InetAddress addr) {
+  public LcapIdentity findIdentity(IPAddr addr) {
     LcapIdentity ret;
 
     if(addr == null)  {
@@ -230,12 +230,12 @@ public class IdentityManager extends BaseLockssManager {
   }
 
   /**
-   * returns true if the InetAddress is the same as the InetAddress for our
+   * returns true if the IPAddr is the same as the IPAddr for our
    * local host
    * @param addr the address to check
-   * @return boolean true if the this is InetAddress is considered local
+   * @return boolean true if the this is IPAddr is considered local
    */
-  public boolean isLocalIdentity(InetAddress addr) {
+  public boolean isLocalIdentity(IPAddr addr) {
     return theLocalIdentity.m_address.equals(addr);
   }
 
@@ -487,7 +487,7 @@ public class IdentityManager extends BaseLockssManager {
 
     private Map makeRow(LcapIdentity id) {
       Map row = new HashMap();
-      InetAddress ip = id.getAddress();
+      IPAddr ip = id.getAddress();
       Object obj = ip;
       if (isLocalIdentity(ip)) {
 	StatusTable.DisplayedValue val =
