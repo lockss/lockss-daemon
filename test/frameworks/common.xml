@@ -95,6 +95,22 @@
 
     <!-- Title Database -->
 
+    <!-- Title Sets -->
+    <property name="titleSet">
+      <property name="1">
+	<property name="name" value="All Project Muse Titles" />
+	<property name="class" value="xpath" />
+	<property name="xpath" value="[pluginName='org.lockss.plugin.projmuse.ProjectMusePlugin']" />
+      </property>
+      <property name="2">
+	<property name="name" value="All &quot;Journals&quot;" />
+	<property name="class" value="xpath" />
+	<property name="xpath" value="[RE:isMatchRe(displayName, 'Journal')]" />
+      </property>
+    </property>
+
+
+    <!-- Titles -->
     <property name="title">
       <property name="ip20">
 	<property name="title" value="Inverse Problems Volume 20" />
