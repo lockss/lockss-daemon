@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.118 2003-05-06 01:45:45 troberts Exp $
+ * $Id: NodeManagerImpl.java,v 1.119 2003-05-07 22:06:23 claire Exp $
  */
 
 /*
@@ -403,7 +403,12 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
           }
           // call a content poll on this node's subnodes
           callContentPollsOnSubNodes(nodeState, results.getCachedUrlSet());
-          pollState.status = PollState.WON;
+          if(pollState.status == PollState.REPAIRING) {
+            pollState.status = PollState.REPAIRED;
+          }
+          else {
+            pollState.status = PollState.WON;
+          }
         }
         catch (IOException ex) {
           logger.debug2("unable to start content poll, setting status to ERR_IO");
@@ -416,6 +421,12 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
       }
     }
     else {
+      if (pollState.getStatus() == PollState.REPAIRING) {
+        logger.debug2("lost repair name poll, state = unrepairable");
+        // if repair poll, can't be repaired and we leave it our damaged table
+        pollState.status = PollState.UNREPAIRABLE;
+        return;
+      }
       // if disagree
       logger.debug2("lost name poll, collecting repair info.");
       String baseUrl = nodeState.getCachedUrlSet().getUrl();
@@ -463,7 +474,9 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
           // the treewalk will fix this eventually
         }
       }
-      pollState.status = PollState.REPAIRED;
+      if(!repairMarked) {
+        pollState.status = PollState.REPAIRED;
+      }
     }
   }
 
@@ -846,8 +859,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
   private Set createUrlSetFromCusIterator(Iterator cusIt) {
     Set set = new HashSet();
     while (cusIt.hasNext()) {
-      String key = (String) cusIt.next();
-      set.add(key);
+      set.add(cusIt.next());
     }
     return set;
   }
