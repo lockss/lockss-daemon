@@ -1,5 +1,5 @@
 /*
- * $Id: StaticContentPlugin.java,v 1.5 2003-04-17 02:41:11 aalto Exp $
+ * $Id: StaticContentPlugin.java,v 1.6 2003-05-10 00:41:12 troberts Exp $
  */
 
 /*
@@ -58,15 +58,15 @@ public class StaticContentPlugin extends BasePlugin implements PluginTestable {
   }
 
   public String getVersion() {
-    return "42";
+    throw new UnsupportedOperationException("Not implemented");
   }
 
   public List getSupportedAUNames() {
-    return null;
+    throw new UnsupportedOperationException("Not implemented");
   }
 
   public List getAUConfigProperties() {
-    return null;
+    throw new UnsupportedOperationException("Not implemented");
   }
 
   public ArchivalUnit createAU(Configuration auConfig)
@@ -102,11 +102,11 @@ public class StaticContentPlugin extends BasePlugin implements PluginTestable {
     }
 
     public boolean shouldBeCached(String url) {
-      return true;
+      return cuMap.containsKey(url);
     }
 
     public List getNewContentCrawlUrls() {
-      return null;
+      throw new UnsupportedOperationException("Not implemented");
     }
 
     public CachedUrlSet makeCachedUrlSet(CachedUrlSetSpec cuss) {
@@ -115,15 +115,15 @@ public class StaticContentPlugin extends BasePlugin implements PluginTestable {
 
     public CachedUrlSet cachedUrlSetFactory(ArchivalUnit owner,
 					    CachedUrlSetSpec cuss) {
-      return null;
+      throw new UnsupportedOperationException("Not implemented");
     }
 
     public CachedUrl cachedUrlFactory(CachedUrlSet owner, String url) {
-      return null;
+      throw new UnsupportedOperationException("Not implemented");
     }
 
     public UrlCacher urlCacherFactory(CachedUrlSet owner, String url) {
-      return null;
+      throw new UnsupportedOperationException("Not implemented");
     }
 
     /**
@@ -134,7 +134,7 @@ public class StaticContentPlugin extends BasePlugin implements PluginTestable {
      * @param contents the contents
      */
     public void storeCachedUrl(CachedUrlSet owner, String url,
-				String type, String contents) {
+			       String type, String contents) {
       SCU scu = new SCU(owner, url, type, contents);
       cuMap.put(scu.getUrl(), scu);
     }
@@ -184,7 +184,7 @@ public class StaticContentPlugin extends BasePlugin implements PluginTestable {
     }
 
     public boolean isLeaf() {
-      return true;
+      throw new UnsupportedOperationException("Not implemented");
     }
 
     public InputStream openForReading() {
@@ -196,8 +196,8 @@ public class StaticContentPlugin extends BasePlugin implements PluginTestable {
     }
 
     public byte[] getContentSize() {
-      return (new BigInteger(
-			     Integer.toString(contents.length()))).toByteArray();
+      BigInteger bigInt = new BigInteger(Integer.toString(contents.length()));
+      return bigInt.toByteArray();
     }
 
     public Properties getProperties() {
@@ -211,26 +211,27 @@ public class StaticContentPlugin extends BasePlugin implements PluginTestable {
     }
 
     public void storeActualHashDuration(long elapsed, Exception err) {
+      throw new UnsupportedOperationException("Not implemented");
     }
 
     public Iterator flatSetIterator() {
-      return null;
+      throw new UnsupportedOperationException("Not implemented");
     }
 
     public Iterator contentHashIterator() {
-      return null;
+      throw new UnsupportedOperationException("Not implemented");
     }
 
     public boolean isLeaf() {
-      return false;
+      throw new UnsupportedOperationException("Not implemented");
     }
 
     public CachedUrlSetHasher getContentHasher(MessageDigest hasher) {
-      return null;
+      throw new UnsupportedOperationException("Not implemented");
     }
 
     public CachedUrlSetHasher getNameHasher(MessageDigest hasher) {
-      return null;
+      throw new UnsupportedOperationException("Not implemented");
     }
 
     public long estimatedHashDuration() {
@@ -245,7 +246,7 @@ public class StaticContentPlugin extends BasePlugin implements PluginTestable {
     }
 
     public org.lockss.plugin.UrlCacher makeUrlCacher(String url) {
-      return null;
+      throw new UnsupportedOperationException("Not implemented");
     }
   }
 
