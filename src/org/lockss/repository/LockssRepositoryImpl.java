@@ -1,4 +1,8 @@
 /*
+ * $Id: LockssRepositoryImpl.java,v 1.2 2002-10-31 01:53:30 aalto Exp $
+ */
+
+/*
 
 Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -29,6 +33,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.repository;
 import java.io.*;
 import java.util.*;
+import java.net.*;
+import org.lockss.util.StringUtil;
 
 /**
  * LockssRepository is used to organize the urls being cached.
@@ -43,56 +49,50 @@ public class LockssRepositoryImpl implements LockssRepository {
 
   public LockssRepositoryImpl(String rootPath) {
     rootLocation = rootPath;
-    if (rootLocation.charAt(rootLocation.length()-1) != File.separatorChar) {
-      rootLocation += "/";
+    if (!rootLocation.endsWith(File.separator)) {
+      rootLocation += File.separator;
     }
   }
 
-  public RepositoryEntry getRepositoryEntry(String url) {
-    File entryDir = new File(rootLocation + mapUrlToCacheLocation(url));
+  public RepositoryNode getRepositoryNode(String url) throws MalformedURLException {
+//XXX cache
+    String cacheLocation = rootLocation + mapUrlToCacheLocation(url);
+    File entryDir = new File(cacheLocation);
     if (!entryDir.exists() || !entryDir.isDirectory()) {
       return null;
     }
-    File leafFile = new File(entryDir, LeafEntryImpl.LEAF_FILE_NAME);
+    File leafFile = new File(entryDir, LeafNodeImpl.LEAF_FILE_NAME);
     if (leafFile.exists()) {
-      return new LeafEntryImpl(url, rootLocation);
+      return new LeafNodeImpl(url, cacheLocation);
     } else {
-      return new DirectoryEntryImpl(url, rootLocation);
+      return new InternalNodeImpl(url, cacheLocation, rootLocation);
     }
   }
 
-  public LeafEntry createLeafEntry(String url) {
-    return new LeafEntryImpl(url, rootLocation);
+  public LeafNode createLeafNode(String url) throws MalformedURLException {
+    String cacheLocation = rootLocation + mapUrlToCacheLocation(url);
+    return new LeafNodeImpl(url, cacheLocation);
   }
 
   /**
-   * mapUrlToCacheFileName() is the name mapping method used by the GenericFileUrlCacher.
+   * mapUrlToCacheFileName() is the name mapping method used by the LockssRepository.
    * This maps a given url to a cache file location.
-   * It is also used by the GenericFileCachedUrl to extract the content.
    * It creates directories under a CACHE_ROOT location which mirror the html string.
    * So 'http://www.journal.org/issue1/index.html' would be cached in the file:
    * CACHE_ROOT/www.journal.org/http/issue1/index.html
-   * @param url the url to translate
+   * @param urlStr the url to translate
    * @return the file cache location
+   * @throws java.net.MalformedURLException
    */
-  public static String mapUrlToCacheLocation(String url) {
-    String fileName = CACHE_ROOT_NAME + File.separator;
-
-    int idx = url.indexOf("://");
-    if (idx>=0) {
-      String prefix = url.substring(0, idx);
-      String urlRemainder = url.substring(idx+3);
-      idx = urlRemainder.indexOf("/");
-      if (idx>=0) {
-        fileName += urlRemainder.substring(0, idx) + File.separator;
-        fileName += prefix + urlRemainder.substring(idx);
-      } else {
-        fileName += urlRemainder;
-      }
-    } else {
-      fileName += url;
-    }
-    return fileName;
+  public static String mapUrlToCacheLocation(String urlStr) throws MalformedURLException {
+    URL url = new URL(urlStr);
+    StringBuffer buffer = new StringBuffer(CACHE_ROOT_NAME);
+    buffer.append(File.separator);
+    buffer.append(url.getHost());
+    buffer.append(File.separator);
+    buffer.append(url.getProtocol());
+    buffer.append(StringUtil.replaceString(url.getPath(), "/", File.separator));
+    return buffer.toString();
   }
 
 }

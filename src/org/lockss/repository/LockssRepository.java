@@ -1,4 +1,8 @@
 /*
+ * $Id: LockssRepository.java,v 1.2 2002-10-31 01:53:30 aalto Exp $
+ */
+
+/*
 
 Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -29,25 +33,28 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.repository;
 import java.io.*;
 import java.util.*;
+import java.net.MalformedURLException;
 
 /**
  * LockssRepository is used to organize the urls being cached.
  */
 public interface LockssRepository {
   /**
-   * Returns a {@link RepositoryEntry} which represents the url in question.
+   * Returns a {@link RepositoryNode} which represents the url in question.
    * This only returns urls which exist in the cache.
    * @param url the desired url
    * @return an entry for the url
+   * @throws java.net.MalformedURLException
    */
-  public RepositoryEntry getRepositoryEntry(String url);
+  public RepositoryNode getRepositoryNode(String url) throws MalformedURLException;
 
   /**
-   * Creates a {@link LeafEntry} for the purposes of writing a new leaf to the
+   * Creates a {@link LeafNode} for the purposes of writing a new leaf to the
    * cache.  This is used to add new leaves.
    * @param url the url to be cached
    * @return an entry for the url
+   * @throws java.net.MalformedURLException
    */
-  public LeafEntry createLeafEntry(String url);
+  public LeafNode createLeafNode(String url) throws MalformedURLException;
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.1 2002-10-30 00:29:25 aalto Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.2 2002-10-31 01:53:30 aalto Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ import java.util.*;
 import java.io.File;
 import junit.framework.TestCase;
 import org.lockss.test.*;
+import java.net.MalformedURLException;
 
 /**
  * This is the test class for org.lockss.daemon.LockssRepositoryImpl
@@ -47,49 +48,50 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
   }
 
 
-  public void testGetRepositoryEntry() {
+  public void testGetRepositoryEntry() throws MalformedURLException {
     String tempDirPath = "";
     try {
       tempDirPath = super.getTempDir().getAbsolutePath() + File.separator;
     } catch (Exception ex) { assertTrue("Couldn't get tempDir.", false); }
     LockssRepository repo = new LockssRepositoryImpl(tempDirPath);
-    LeafEntry leaf = repo.createLeafEntry("testDir/branch1/leaf1");
+    LeafNode leaf = repo.createLeafNode("http://www.example.com/testDir/branch1/leaf1");
     leaf.makeNewVersion();
-    leaf.closeNewVersion();
-    leaf = repo.createLeafEntry("testDir/branch1/leaf2");
+    leaf.sealNewVersion();
+    leaf = repo.createLeafNode("http://www.example.com/testDir/branch1/leaf2");
     leaf.makeNewVersion();
-    leaf.closeNewVersion();
-    leaf = repo.createLeafEntry("testDir/branch2/leaf3");
+    leaf.sealNewVersion();
+    leaf = repo.createLeafNode("http://www.example.com/testDir/branch2/leaf3");
     leaf.makeNewVersion();
-    leaf.closeNewVersion();
-    leaf = repo.createLeafEntry("testDir/leaf4");
+    leaf.sealNewVersion();
+    leaf = repo.createLeafNode("http://www.example.com/testDir/leaf4");
     leaf.makeNewVersion();
-    leaf.closeNewVersion();
+    leaf.sealNewVersion();
 
-    RepositoryEntry entry = repo.getRepositoryEntry("testDir");
+    RepositoryNode entry = repo.getRepositoryNode("http://www.example.com/testDir");
     assertTrue(!entry.isLeaf());
-    assertTrue(entry instanceof DirectoryEntry);
-    entry = repo.getRepositoryEntry("testDir/branch1");
+    assertTrue(entry instanceof InternalNode);
+    entry = repo.getRepositoryNode("http://www.example.com/testDir/branch1");
     assertTrue(!entry.isLeaf());
-    assertTrue(entry instanceof DirectoryEntry);
-    entry = repo.getRepositoryEntry("testDir/branch2/leaf3");
+    assertTrue(entry instanceof InternalNode);
+    entry = repo.getRepositoryNode("http://www.example.com/testDir/branch2/leaf3");
     assertTrue(entry.isLeaf());
-    assertTrue(entry instanceof LeafEntry);
-    entry = repo.getRepositoryEntry("testDir/leaf4");
+    assertTrue(entry instanceof LeafNode);
+    entry = repo.getRepositoryNode("http://www.example.com/testDir/leaf4");
     assertTrue(entry.isLeaf());
-    assertTrue(entry instanceof LeafEntry);
+    assertTrue(entry instanceof LeafNode);
 
   }
 
-  public void testMapUrlToCacheLocation() {
+  public void testMapUrlToCacheLocation() throws MalformedURLException {
     String testStr = "http://www.example.com/branch1/branch2/index.html";
     String expectedStr = LockssRepositoryImpl.CACHE_ROOT_NAME +
                          "/www.example.com/http/branch1/branch2/index.html";
     assertTrue(LockssRepositoryImpl.mapUrlToCacheLocation(testStr).equals(expectedStr));
 
-    testStr = ":/brokenurl.com/branch1/index/";
-    expectedStr = LockssRepositoryImpl.CACHE_ROOT_NAME + "/:/brokenurl.com/branch1/index/";
-    assertTrue(LockssRepositoryImpl.mapUrlToCacheLocation(testStr).equals(expectedStr));
+    try {
+      testStr = ":/brokenurl.com/branch1/index/";
+      LockssRepositoryImpl.mapUrlToCacheLocation(testStr);
+      fail("Should have thrown MalformedURLException");
+    } catch (MalformedURLException mue) { }
   }
-
 }
