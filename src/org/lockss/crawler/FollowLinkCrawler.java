@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.19 2005-01-14 01:37:38 troberts Exp $
+ * $Id: FollowLinkCrawler.java,v 1.20 2005-01-19 04:14:14 tlipkis Exp $
  */
 
 /*
@@ -252,6 +252,7 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
     // now in background (crawl) thread since it's likely to be necessary, to
     // make it more likely to be already computed when accessed from the UI.
     AuUtil.getAuContentSize(au);
+    AuUtil.getAuDiskUsage(au);
   }
 
   /**
