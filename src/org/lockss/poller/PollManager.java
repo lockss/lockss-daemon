@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.125 2004-03-27 02:33:47 eaalto Exp $
+ * $Id: PollManager.java,v 1.126 2004-05-11 23:51:14 tlipkis Exp $
  */
 
 /*
@@ -245,6 +245,11 @@ public class PollManager  extends BaseLockssManager {
       }
     }
     return false;
+  }
+
+  /** Return the PollManagerEntry for the poll with the specified key. */
+  public PollManagerEntry getPollManagerEntry(String key) {
+    return (PollManagerEntry)thePolls.get(key);
   }
 
   /**
