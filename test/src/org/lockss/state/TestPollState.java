@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollState.java,v 1.2 2004-12-14 22:03:54 troberts Exp $
+ * $Id: TestPollState.java,v 1.3 2004-12-15 00:35:22 troberts Exp $
  */
 
 /*
@@ -64,29 +64,29 @@ public class TestPollState extends LockssTestCase {
   public void testCompareToDiffType() {
     PollState state = new PollState(1, "none", null, 1, 0, null, false);
     PollState state2 = new PollState(2, "none", null, 1, 0, null, false);
-    assertGreaterThan(state2, state);
+    assertCompareIsGreaterThan(state2, state);
   }
 
   public void testCompareToDiffLower() {
     PollState state = new PollState(1, "none", null, 1, 0, null, false);
     PollState state2 = new PollState(1, "none2", null, 1, 0, null, false);
     PollState state3 = new PollState(1, null, null, 1, 0, null, false);
-    assertGreaterThan(state2, state);
+    assertCompareIsGreaterThan(state2, state);
 
-    assertGreaterThan(state, state3);
+    assertCompareIsGreaterThan(state, state3);
 
-    assertGreaterThan(state2, state3);
+    assertCompareIsGreaterThan(state2, state3);
   }
 
   public void testCompareToDiffUpper() {
     PollState state = new PollState(1, null, "none", 1, 0, null, false);
     PollState state2 = new PollState(1, null, "none2", 1, 0, null, false);
     PollState state3 = new PollState(1, null, null, 1, 0, null, false);
-    assertGreaterThan(state2, state);
+    assertCompareIsGreaterThan(state2, state);
 
-    assertGreaterThan(state, state3);
+    assertCompareIsGreaterThan(state, state3);
 
-    assertGreaterThan(state2, state3);
+    assertCompareIsGreaterThan(state2, state3);
   }
 
   public void testHashCodeEquals() {
