@@ -1,5 +1,5 @@
 /*
- * $Id: TimerQueue.java,v 1.16 2004-02-10 02:27:49 tlipkis Exp $
+ * $Id: TimerQueue.java,v 1.17 2004-02-10 04:55:57 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -169,6 +169,7 @@ public class TimerQueue /*extends BaseLockssManager*/ implements Serializable {
       log.info("Starting thread");
       timerThread = new TimerThread("TimerQ");
       timerThread.start();
+      timerThread.waitRunning();
     } else {
       timerThread.interrupt();
     }
@@ -202,6 +203,7 @@ public class TimerQueue /*extends BaseLockssManager*/ implements Serializable {
       triggerWDogOnExit(true);
       setPriority(PRIORITY_PARAM_TIMERQUEUE, PRIORITY_DEFAULT_TIMERQUEUE);
       goOn = true;
+      nowRunning();
 
       while (goOn) {
 	try {

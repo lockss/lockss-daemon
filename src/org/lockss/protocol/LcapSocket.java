@@ -1,5 +1,5 @@
 /*
- * $Id: LcapSocket.java,v 1.14 2004-02-10 02:27:49 tlipkis Exp $
+ * $Id: LcapSocket.java,v 1.15 2004-02-10 04:55:58 tlipkis Exp $
  */
 
 /*
@@ -101,6 +101,7 @@ public class LcapSocket {
 	log.info("Starting receive thread");
 	rcvThread = new ReceiveThread(getThreadName());
 	rcvThread.start();
+	rcvThread.waitRunning();
       }
     }
 
@@ -140,6 +141,7 @@ public class LcapSocket {
 	triggerWDogOnExit(true);
 	setPriority(PRIORITY_PARAM_SOCKET, PRIORITY_DEFAULT_SOCKET);
 	goOn = true;
+	nowRunning();
 
 	try {
 	  while (goOn) {

@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.62 2004-02-10 03:31:45 troberts Exp $
+ * $Id: CrawlManagerImpl.java,v 1.63 2004-02-10 04:55:58 tlipkis Exp $
  */
 
 /*
@@ -276,6 +276,7 @@ public class CrawlManagerImpl extends BaseLockssManager
       runningCrawls.put(au, crawler);
     }
     crawlThread.start();
+    crawlThread.waitRunning();
   }
 
   protected Crawler makeNewContentCrawler(ArchivalUnit au, CrawlSpec spec) {
@@ -314,6 +315,7 @@ public class CrawlManagerImpl extends BaseLockssManager
       setPriority(PRIORITY_PARAM_CRAWLER, PRIORITY_DEFAULT_CRAWLER);
       crawler.setWatchdog(this);
       startWDog(WDOG_PARAM_CRAWLER, WDOG_DEFAULT_CRAWLER);
+      nowRunning();
 
       boolean crawlSuccessful = crawler.doCrawl(deadline);
 

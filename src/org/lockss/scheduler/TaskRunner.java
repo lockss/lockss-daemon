@@ -1,5 +1,5 @@
 /*
- * $Id: TaskRunner.java,v 1.14 2004-02-10 02:27:12 tlipkis Exp $
+ * $Id: TaskRunner.java,v 1.15 2004-02-10 04:55:57 tlipkis Exp $
  */
 
 /*
@@ -266,6 +266,7 @@ class TaskRunner implements Serializable {
       log.info("Starting Q runner");
       stepThread = new StepThread("TaskRunner");
       stepThread.start();
+      stepThread.waitRunning();
     } else {
       stepThread.pokeStepper();
     }
@@ -690,6 +691,7 @@ class TaskRunner implements Serializable {
       triggerWDogOnExit(true);
       setPriority(PRIORITY_PARAM_STEPPER, PRIORITY_DEFAULT_STEPPER);
       startWDog(WDOG_PARAM_STEPPER, WDOG_DEFAULT_STEPPER);
+      nowRunning();
 
       try {
 	while (!exit) {
