@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.69 2003-04-10 05:39:28 claire Exp $
+* $Id: PollManager.java,v 1.70 2003-04-10 21:28:01 claire Exp $
  */
 
 /*
@@ -208,6 +208,10 @@ public class PollManager  extends BaseLockssManager {
    */
   void handleIncomingMessage(LcapMessage msg) throws IOException {
     theLog.info("Got a message: " + msg);
+    if(isDuplicateMessage(msg)) {
+      theLog.debug3("Dropping duplicate message:" + msg);
+      return;
+    }
     String key = msg.getKey();
     PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
     if(pme != null) {
@@ -224,7 +228,6 @@ public class PollManager  extends BaseLockssManager {
       theLog.info("Unable to create poll for Message: " + msg);
     }
   }
-
 
   /**
    * Find the poll defined by the <code>Message</code>.  If the poll
@@ -576,6 +579,11 @@ public class PollManager  extends BaseLockssManager {
     }
   }
 
+  private boolean isDuplicateMessage(LcapMessage msg) {
+    synchronized (theVerifiers) {
+      return theVerifiers.containsKey(msg.getVerifier());
+    }
+  }
 
   IdentityManager getIdentityManager() {
     return theIDManager;
