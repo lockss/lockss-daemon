@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.21 2003-12-17 02:09:47 tlipkis Exp $
+ * $Id: ArchivalUnit.java,v 1.22 2004-01-28 02:20:44 troberts Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ import gnu.regexp.*;
 import java.util.*;
 import org.lockss.state.*;
 import org.lockss.daemon.*;
+import org.lockss.crawler.*;
 import java.io.*;
 
 /**
@@ -171,6 +172,14 @@ public interface ArchivalUnit {
    */
   public boolean shouldCallTopLevelPoll(AuState aus);
 
+
+  /**
+   * Get a {@link org.lockss.crawler.ContentParser} that knows how to parse
+   * the given mime type
+   * @param mimeType mime type to get a content parser for
+   * @return a content parser for mimeType if we have one, null otherwise
+   */
+  public ContentParser getContentParser(String mimeType);
 
   /**
    * Return the {@link FilterRule} for the given mimeType or null if there
