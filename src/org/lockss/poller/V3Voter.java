@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.1.2.12 2004-10-07 02:17:05 dshr Exp $
+ * $Id: V3Voter.java,v 1.1.2.13 2004-10-19 23:00:50 dshr Exp $
  */
 
 /*
@@ -61,19 +61,23 @@ import org.lockss.util.*;
 public class V3Voter extends V3Poll {
 
   public static final int STATE_INITIALIZING = 0;
-  public static final int STATE_SENDING_POLL_ACK = 1;
-  public static final int STATE_WAITING_POLL_PROOF = 2;
-  public static final int STATE_SENDING_VOTE = 3;
-  public static final int STATE_WAITING_REPAIR_REQ = 4;
-  public static final int STATE_SENDING_REPAIR = 5;
-  public static final int STATE_WAITING_RECEIPT = 6;
-  public static final int STATE_PROCESS_RECEIPT = 7;
-  public static final int STATE_FINALIZING = 8;
+  public static final int STATE_VERIFYING_POLL_EFFORT = 1;
+  public static final int STATE_PROVING_POLL_ACK = 2;
+  public static final int STATE_WAITING_POLL_PROOF = 3;
+  public static final int STATE_VERIFYING_POLL_PROOF = 4;
+  public static final int STATE_GENERATING_VOTE = 5;
+  public static final int STATE_WAITING_REPAIR_REQ = 6;
+  public static final int STATE_SENDING_REPAIR = 7;
+  public static final int STATE_WAITING_RECEIPT = 8;
+  public static final int STATE_PROCESS_RECEIPT = 9;
+  public static final int STATE_FINALIZING = 10;
   private static final String[] stateName = {
     "Initializing",
-    "SendingPollAck",
+    "VerifyPollEffort",
+    "provingPollAck",
     "WaitingPollProof",
-    "SendingVote",
+    "VerifyingPollProof",
+    "GeneratingVote",
     "WaitingRepairReq",
     "SendingRepair",
     "WaitingReceipt",
@@ -124,8 +128,10 @@ public class V3Voter extends V3Poll {
       m_pollstate = ERR_IO; // XXX choose better
       stopPoll();
       break;
-    case STATE_SENDING_POLL_ACK:
-    case STATE_SENDING_VOTE:
+    case STATE_VERIFYING_POLL_EFFORT:
+    case STATE_PROVING_POLL_ACK:
+    case STATE_VERIFYING_POLL_PROOF:
+    case STATE_GENERATING_VOTE:
     case STATE_SENDING_REPAIR:
     case STATE_PROCESS_RECEIPT:
     case STATE_FINALIZING:
@@ -219,7 +225,7 @@ public class V3Voter extends V3Poll {
       // effort verification for Poll successfuly scheduled
       log.debug("Scheduled verification callback in " +
 		timer.getRemainingTime() + " for " + ((String)cookie));
-      m_state = STATE_SENDING_POLL_ACK;
+      m_state = STATE_VERIFYING_POLL_EFFORT;
     } else {
       log.warning("could not schedule effort verification " + ep.toString() +
 		  " for " + msg.toString());
@@ -260,7 +266,7 @@ public class V3Voter extends V3Poll {
       // effort verification for PollProof successfuly scheduled
       log.debug("Scheduled verification callback in " +
 		timer.getRemainingTime() + " for " + ((String)cookie));
-      m_state = STATE_SENDING_VOTE;
+      m_state = STATE_VERIFYING_POLL_PROOF;
     } else {
       log.warning("could not schedule effort verification " + ep.toString() +
 		  " for " + msg.toString());
@@ -304,6 +310,10 @@ public class V3Voter extends V3Poll {
 
   public int getPollState() {
     return m_state;
+  }
+
+  public static String getPollStateName(int s) {
+    return stateName[s];
   }
 
   /**
@@ -393,6 +403,7 @@ public class V3Voter extends V3Poll {
       if (es.proveEffort(pollAckProof, timer, this, cookie)) {
 	log.debug("Scheduled generation callback in " +
 		  timer.getRemainingTime() + " for " + ((String)cookie));
+	m_state = STATE_PROVING_POLL_ACK;
       } else {
 	log.warning("could not schedule effort generation " +
 		    pollAckProof.toString() + " for " + cookie);
@@ -420,7 +431,7 @@ public class V3Voter extends V3Poll {
 				   Deadline timer,
 				   Serializable cookie,
 				   Exception e) {
-      log.error("PollAckEffortProofCallback: bad call " + ((String) cookie) +
+      log.error("VoteEffortCallback: bad call " + ((String) cookie) +
 		  " threw " + e);
       m_state = STATE_FINALIZING;
       m_pollstate = ERR_IO; // XXX choose better
@@ -469,6 +480,7 @@ public class V3Voter extends V3Poll {
       if (es.generateVote(vote, timer, cb, cookie)) {
 	// vote generation successfuly scheduled
 	log.debug("Scheduled vote callback for " + ((String)cookie));
+	m_state = STATE_GENERATING_VOTE;
       } else {
 	log.warning("could not schedule effort proof " + vote.toString() +
 		    " for " + cookie);
@@ -518,7 +530,11 @@ public class V3Voter extends V3Poll {
 				     Deadline timer,
 				     Serializable cookie,
 				     Exception e) {
-      // XXX
+      log.error("VoteGenerationCallback: bad call " + ((String) cookie) +
+		  " threw " + e);
+      m_state = STATE_FINALIZING;
+      m_pollstate = ERR_IO; // XXX choose better
+      stopPoll();
     }
   }
 
