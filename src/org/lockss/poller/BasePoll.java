@@ -1,5 +1,5 @@
 /*
-* $Id: BasePoll.java,v 1.9 2004-10-01 09:25:53 tlipkis Exp $
+* $Id: BasePoll.java,v 1.10 2004-10-02 13:08:24 dshr Exp $
  */
 
 /*
@@ -105,7 +105,10 @@ public abstract class BasePoll implements Poll {
   }
 
   public void setMessage(LcapMessage msg) {
-    m_msg = msg;
+    if (m_msg == null) {
+      m_msg = msg;
+      log.debug("Setting message for " + this + " from " + msg);
+    }
   }
 
   /**

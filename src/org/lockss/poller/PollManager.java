@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.144 2004-10-02 01:16:11 tlipkis Exp $
+ * $Id: PollManager.java,v 1.145 2004-10-02 13:08:24 dshr Exp $
  */
 
 /*
@@ -320,6 +320,7 @@ public class PollManager
     }
     BasePoll p = findPoll(msg);
     if (p != null) {
+      p.setMessage(msg);
       p.receiveMessage(msg);
     }
   }

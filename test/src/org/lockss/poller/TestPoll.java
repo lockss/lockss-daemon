@@ -1,5 +1,5 @@
 /*
- * $Id: TestPoll.java,v 1.87 2004-09-29 18:57:58 tlipkis Exp $
+ * $Id: TestPoll.java,v 1.88 2004-10-02 13:08:25 dshr Exp $
  */
 
 /*
@@ -553,6 +553,8 @@ public class TestPoll extends LockssTestCase {
     for (int i = 0; i < testV1polls.length; i++) {
       log.debug3("initTestPolls: V1 " + i);
       BasePoll p = pollmanager.makePoll(testV1msg[i]);
+      assertNotNull(p);
+      assertNotNull(p.getMessage());
       log.debug("initTestPolls: V1 " + i + " returns " + p);
       assertTrue(p instanceof V1Poll);
       switch (i) {

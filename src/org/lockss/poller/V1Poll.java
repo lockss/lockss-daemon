@@ -1,5 +1,5 @@
 /*
-* $Id: V1Poll.java,v 1.18 2004-09-29 06:36:20 tlipkis Exp $
+* $Id: V1Poll.java,v 1.19 2004-10-02 13:08:24 dshr Exp $
  */
 
 /*
@@ -274,6 +274,10 @@ public abstract class V1Poll extends BasePoll {
    * cast our vote for this poll
    */
   void castOurVote() {
+    if (m_msg == null) {
+      log.error("no vote to cast for " + this);
+      return;
+    }
     LcapMessage msg;
     PeerIdentity local_id = idMgr.getLocalPeerIdentity(Poll.V1_POLL);
     long remainingTime = m_deadline.getRemainingTime();

@@ -1,5 +1,5 @@
 /*
-* $Id: V1ContentPoll.java,v 1.5 2004-09-29 01:19:11 dshr Exp $
+* $Id: V1ContentPoll.java,v 1.6 2004-10-02 13:08:24 dshr Exp $
  */
 
 /*
@@ -75,6 +75,10 @@ public class V1ContentPoll extends V1Poll {
   void receiveMessage(LcapMessage msg) {
     int opcode = msg.getOpcode();
 
+    if (m_msg == null) {
+      m_msg = msg;
+      log.debug("Setting message for " + this + " from " + msg);
+    }
     if(opcode == LcapMessage.CONTENT_POLL_REP) {
       startVoteCheck(msg);
     }
