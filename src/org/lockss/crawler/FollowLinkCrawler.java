@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.2 2004-10-08 22:47:38 dcfok Exp $
+ * $Id: FollowLinkCrawler.java,v 1.3 2004-10-11 08:09:39 tlipkis Exp $
  */
 
 /*
@@ -206,14 +206,12 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
 
     if (!urlsToCrawl.isEmpty() && shouldFollowLink() ) {
       //when there are more Url to crawl in  new content crawl or follow link moded oai crawl
-      logger.error("Site depth exceeds max. crawl depth. Stopped Crawl of " + au.getName() +
-		   " at depth " + (lvlCnt-1));
+      logger.error("Site depth exceeds max. crawl depth. Stopped Crawl of " +
+		   au.getName() + " at depth " + lvlCnt);
       crawlStatus.setCrawlError("Site depth exceeded max. crawl depth");
-      logger.debug2("urlsToCrawl contains: " + urlsToCrawl);
-      logger.info("Crawled depth = " + (lvlCnt-1));
-    } else {
-      logger.info("Crawled depth = "+ (lvlCnt-1));
+      logger.debug("urlsToCrawl contains: " + urlsToCrawl);
     }
+    logger.info("Crawled depth = " + lvlCnt);
     
     if (crawlAborted) {
         return aborted();
@@ -221,7 +219,7 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
 
     if (crawlStatus.getCrawlError() != null) {
       logger.info("Finished crawl (errors) of "+au.getName());
-      logger.debug3("Error status = " + crawlStatus.getCrawlError());
+      logger.debug2("Error status = " + crawlStatus.getCrawlError());
     } else {
       logger.info("Finished crawl of "+au.getName());
     }
