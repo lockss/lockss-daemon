@@ -82,6 +82,7 @@ class RuleTester {
   private long m_crawlDelay;
   private String m_outputFile;
   private String m_propFile;
+  private static BufferedWriter m_outWriter;
 
   RuleTester(String propFile, String outFile, int crawlDepth) {
     m_propFile = propFile;
@@ -91,8 +92,29 @@ class RuleTester {
 
   void runTest() {
     loadProps();
-
     checkRules();
+    closeOutputFile();
+  }
+
+  private void openOutputFile() {
+    try {
+      m_outWriter = new BufferedWriter(new FileWriter(m_outputFile,false));
+    }
+    catch (Exception ex) {
+      System.out.println("Unable to write to output file, writing to stdout");
+      m_outWriter = new BufferedWriter(new OutputStreamWriter(System.out));
+    }
+  }
+
+  private void closeOutputFile() {
+    try {
+      if(m_outWriter != null) {
+        m_outWriter.close();
+      }
+    }
+    catch (IOException ex) {
+      System.err.println("Error closing output file.");
+    }
   }
 
   private void loadProps() {
@@ -105,25 +127,26 @@ class RuleTester {
       if (m_outputFile == null) {
         m_outputFile = props.getProperty(OUT_FILE_PROP, m_outputFile);
       }
-      props.remove(OUT_FILE_PROP);
+      openOutputFile();
 
       // initialize the crawl depth
       if (m_crawlDepth == -1) {
         m_crawlDepth = Integer.parseInt(props.getProperty(CRAWL_DEPTH_PROP, "0"));
       }
-      props.remove(CRAWL_DEPTH_PROP);
 
       // initialize the crawl delay
       m_crawlDelay = Math.max(Long.parseLong(props.getProperty(CRAWL_DELAY_PROP,
           String.valueOf(DEFAULT_CRAWL_DELAY))), DEFAULT_CRAWL_DELAY);
-      props.remove(CRAWL_DELAY_PROP);
 
      // initialize the base url
       m_baseUrl = props.getProperty(BASE_URL_PROP);
-      props.remove(BASE_URL_PROP);
+
+      // initialize the base crawl depth
+      int baseCrawlDepth = Integer.parseInt(
+          props.getProperty("BASE_CRAWL_DEPTH", "1"));
 
       // now load the crawl rules
-      m_crawlSpec = new CrawlSpec(m_baseUrl, makeRules(props), null, 1);
+      m_crawlSpec = new CrawlSpec(m_baseUrl, makeRules(props), null, baseCrawlDepth);
     }
     catch (IOException ex) {
       exitOnError("Error processing prop file: ", ex);
@@ -190,14 +213,16 @@ class RuleTester {
         exitOnError("Error creating crawl rule: ", ex);
       }
     }
-    System.out.println("\nChecking " + root + " using rules:\n" + rules);
+    outputMessage("\nChecking " + root + " using rules:\n" + rules);
     return new CrawlRules.FirstMatch(rules);
   }
 
   private void exitOnError(String msg, Exception ex) {
-    System.out.println(msg + ex.toString());
+    outputMessage(msg + ex.toString());
+    closeOutputFile();
     System.exit(2);
   }
+
   private int fetchCount;
   private void buildUrlSets(URL srcUrl,
                             Set fetchSet,
@@ -212,15 +237,8 @@ class RuleTester {
       String encoding = conn.getContentEncoding();
       if (type == null || !type.toLowerCase().startsWith("text/html"))
         return;
-      int i = type.indexOf("charset=");
-      if(i > 0) {
-        encoding = type.substring(i + "charset=".length());
-        System.out.println("Encoding:" + encoding);
-      }
       InputStreamReader reader = new InputStreamReader(conn.getInputStream());
       String nextUrl = null;
-      System.out.println("System encoding " + System.getProperty("file.encoding")
-      + " reader encoding: " + reader.getEncoding() +"\n\n");
       while ( (nextUrl = extractNextLink(reader, srcUrl)) != null) {
         if (!crawledSet.contains(nextUrl)) {
           crawledSet.add(nextUrl);
@@ -235,7 +253,7 @@ class RuleTester {
       }
     }
     catch (Exception ex) {
-      System.out.println("Error reading " + srcUrl + "Ex:" + ex.getMessage());
+      outputErrResults(srcUrl.toString(), ex.getMessage());
     }
   }
 
@@ -252,38 +270,53 @@ class RuleTester {
   fetchDeadline.expireIn(m_crawlDelay);
 }
 
+  private static void outputMessage(String msg) {
+    try {
+      m_outWriter.write(msg);
+      m_outWriter.newLine();
+    }
+    catch (Exception ex) {
+      System.err.println(msg);
+    }
+  }
+
   private void outputErrResults(String url, String errMsg) {
-    System.out.println("Error: " + errMsg + " occured while processing " + url);
+    outputMessage("Error: " + errMsg + " occured while processing " + url);
   }
 
   private void outputUrlResults(String url, Set inclSet, Set exclSet) {
-    System.out.println("\nProcessed: " + url);
+    outputMessage("\nProcessed: " + url);
 
     Iterator it = inclSet.iterator();
     if (it.hasNext()) {
-      System.out.println("\nUrl's included:");
+      outputMessage("\nUrl's included:");
     }
     while (it.hasNext()) {
-      System.out.println(it.next());
+      outputMessage(it.next().toString());
     }
 
     it = exclSet.iterator();
     if (it.hasNext())
-      System.out.println("\nUrl's excluded:");
+      outputMessage("\nUrl's excluded:");
     while (it.hasNext()) {
-      System.out.println(it.next());
+      outputMessage(it.next().toString());
+    }
+    try {
+      m_outWriter.flush();
+    }
+    catch (IOException ex) {
     }
   }
 
   private void outputSummary(String baseUrl, Set crawledSet, long elapsedTime) {
-    System.out.println("\n\nSummary for base Url:" + baseUrl +
+    outputMessage("\n\nSummary for base Url:" + baseUrl +
                        " at depth " + m_crawlDepth);
-    System.out.println("\nUrls checked: " + crawledSet.size() +
+    outputMessage("\nUrls checked: " + crawledSet.size() +
                        "    Urls fetched: " + fetchCount);
     long secs = elapsedTime / Constants.SECOND;
-
-    System.out.println("Elapsed Time: " + secs + " secs." +
-                       "    Fetch Rate: " + (fetchCount* 60)/secs + " p/m" );
+    long fetchRate = fetchCount * 60 * Constants.SECOND / elapsedTime;
+    outputMessage("Elapsed Time: " + secs + " secs." +
+              "    Fetch Rate: " + fetchRate + " p/m" );
   }
 
   /**
@@ -436,7 +469,7 @@ class RuleTester {
     if (returnStr != null) {
       returnStr = StringUtil.trimAfterChars(returnStr, " #\"");
       if (!isSupportedUrlProtocol(srcUrl, returnStr)) {
-        System.out.println("skipping unsupported url " + returnStr);
+        outputMessage("skipping unsupported url " + returnStr);
       }
       else {
         URL retUrl = new URL(srcUrl, returnStr);
