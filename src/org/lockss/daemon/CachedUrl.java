@@ -63,23 +63,24 @@ public interface CachedUrl {
      */
     public boolean shouldBeCached();
 
-    // Read interface - used by the proxy.
+    // Read interface - used by the proxy to access the cache.
 
     /**
-     * Get an object from which the content of the url can be read.
+     * Get an object from which the content of the url can be read
+     * from the cache.
      * @return a <code>InputStream</code> object from which the
-     *         unfiltered content of the url can be read.
+     *         unfiltered content of the cached url can be read.
      */
     public InputStream openForReading();
     /**
-     * Get the properties attached to the url, if any.
+     * Get the properties attached to the url in the cache, if any.
      * @return the <code>Properties</code> object attached to the
      *         url.  If no properties have been attached, an
      *         empty <code>Properties</code> object is returned.
      */
     public Properties getProperties();
 
-    // Write interface - used by the crawler.
+    // Write interface - used by the crawler to write into the cache.
 
     /**
      * Store the content from an input stream with associated
@@ -92,4 +93,17 @@ public interface CachedUrl {
      */
     public void storeContent(InputStream input,
 			     Properties headers) throws IOException;
+
+    // Un-cached read interface, accessing the udnerlying object
+
+    /**
+     * @return an <code>InputStream</code> object from which the contents of
+     *         the original object being cached can be read.
+     */
+    public InputStream getUncachedInputStream();
+    /**
+     * @return a <code>Properties</code> object contgaining the headers of
+     *         the original object being cached.
+     */
+    public Properties getUncachedProperties();
 }
