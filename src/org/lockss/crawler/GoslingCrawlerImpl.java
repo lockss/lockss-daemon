@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingCrawlerImpl.java,v 1.14 2003-03-04 02:21:05 troberts Exp $
+ * $Id: GoslingCrawlerImpl.java,v 1.15 2003-03-05 20:55:37 troberts Exp $
  */
 
 /*
@@ -146,6 +146,7 @@ public class GoslingCrawlerImpl implements Crawler {
       doCrawlLoop(url, extractedUrls, parsedPages, au, cus,
 		  false, followLinks);
     }
+    logger.info("Finished crawl of "+au);
   }
 
 
@@ -183,7 +184,7 @@ public class GoslingCrawlerImpl implements Crawler {
       }
       else {
 	if (!parsedPages.contains(uc.getUrl())) {
-	  logger.info(uc+" exists, not caching");
+	  logger.debug2(uc+" exists, not caching");
 	}
       }
       try {
