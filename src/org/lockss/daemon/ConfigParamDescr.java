@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescr.java,v 1.10 2004-01-27 04:02:24 tlipkis Exp $
+ * $Id: ConfigParamDescr.java,v 1.11 2004-01-28 05:23:28 tlipkis Exp $
  */
 
 /*
@@ -67,7 +67,7 @@ public class ConfigParamDescr implements Comparable {
     YEAR.setDisplayName("Year");
     YEAR.setType(TYPE_YEAR);
     YEAR.setSize(4);
-    YEAR.setDescription("Must be four digits eg 2003.");
+    YEAR.setDescription("Four digit year (e.g., 2004)");
   }
 
   public static final ConfigParamDescr BASE_URL = new ConfigParamDescr();
@@ -102,8 +102,10 @@ public class ConfigParamDescr implements Comparable {
   private String description;		// explanatory test
   private int type = TYPE_STRING;
   private int size = -1;		// size of input field
-  private boolean definitional = true;  // true if this parameter
-                                        // is not required to define the au.
+
+  // A parameter is definitional if its value is integral to the identity
+  // of the AU.  (I.e., if changing it results in a different AU.)
+  private boolean definitional = true;
 
   public ConfigParamDescr() {
   }
@@ -169,7 +171,9 @@ public class ConfigParamDescr implements Comparable {
   }
 
   /**
-   * Set the expected value type
+   * Set the expected value type.  If {@link #setSize(int)} has not been
+   * called, and the type is one for which there is a reasonable default
+   * size, this will also set the size to the reasonable default.
    * @param type the new type
    */
   public void setType(int type) {
@@ -205,6 +209,10 @@ public class ConfigParamDescr implements Comparable {
     definitional = isDefinitional;
   }
 
+  /** A parameter is definitional if its value is integral to the identity
+   * of the AU.  (I.e., if changing it results in a different AU.)
+   * @return true if the parameter is definitional
+   */
   public boolean isDefinitional() {
     return definitional;
   }
