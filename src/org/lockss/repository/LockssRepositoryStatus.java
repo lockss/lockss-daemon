@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryStatus.java,v 1.8 2004-07-12 23:01:50 smorabito Exp $
+ * $Id: LockssRepositoryStatus.java,v 1.9 2004-08-02 03:05:00 tlipkis Exp $
  */
 
 /*
@@ -39,7 +39,7 @@ import org.lockss.state.*;
 /**
  * Collect and report the status of the LockssRepository
  */
-public class LockssRepositoryStatus extends BaseLockssManager {
+public class LockssRepositoryStatus extends BaseLockssDaemonManager {
   public static final String SERVICE_STATUS_TABLE_NAME = "RepositoryTable";
   public static final String SPACE_TABLE_NAME = "RepositorySpace";
 
@@ -201,26 +201,29 @@ public class LockssRepositoryStatus extends BaseLockssManager {
 	  Configuration config = au.getConfiguration();
 	  row.put("params", config);
 	} else {
-
 	  Configuration config = pluginMgr.getStoredAuConfiguration(auid);
-	  if (config == null | config.isEmpty()) {
-	    Properties auidProps = null;
-	    try {
-	      auidProps = PropUtil.canonicalEncodedStringToProps(auKey);
-	    } catch (Exception e) {
-	      log.warning("Couldn't decode AUKey: " + auKey, e);
-	    }
-	    row.put("status",
-		    (isOrphaned(auid, auidProps) ? "Orphaned" : "Deleted"));
+	  Properties auidProps = null;
+	  try {
+	    auidProps = PropUtil.canonicalEncodedStringToProps(auKey);
 	    if (auidProps != null) {
-	      row.put("params", PropUtil.canonicalEncodedStringToProps(auKey));
+	      row.put("params", auidProps);
 	    }
+	  } catch (Exception e) {
+	    log.warning("Couldn't decode AUKey: " + auKey, e);
+	  }
+	  if (isOrphaned(auid, auidProps)) {
+	    row.put("status", "Orphaned");
 	  } else {
-	    row.put("status",
-		    (config.getBoolean(PluginManager.AU_PARAM_DISABLED, false)
-		     ? "Inactive" : "Deleted"));
-	    row.put("au", config.get(PluginManager.AU_PARAM_DISPLAY_NAME));
-	    row.put("params", config);
+	    if (config == null | config.isEmpty()) {
+	      row.put("status", "Deleted");
+	    } else {
+	      row.put("params", config);
+	      name = config.get(PluginManager.AU_PARAM_DISPLAY_NAME);
+	      row.put("status",
+		      (config.getBoolean(PluginManager.AU_PARAM_DISABLED,
+					 false)
+		       ? "Inactive" : "Deleted"));
+	    }
 	  }
 	  if (name != null) {
 	    row.put("au", name);
@@ -328,10 +331,14 @@ public class LockssRepositoryStatus extends BaseLockssManager {
 	String repo = (String)iter.next();
 	PlatformInfo.DF df = remoteApi.getRepositoryDF(repo);
 	row.put("repo", repo);
-	row.put("size", orderedKBObj(df.getSize()));
-	row.put("used", orderedKBObj(df.getUsed()));
-	row.put("free", orderedKBObj(df.getAvail()));
-	row.put("percent", new Double(df.getPercent()));
+	if (df != null) {
+	  row.put("size", orderedKBObj(df.getSize()));
+	  row.put("used", orderedKBObj(df.getUsed()));
+	  row.put("free", orderedKBObj(df.getAvail()));
+	  row.put("percent", new Double(df.getPercent()));
+	} else {
+	  row.put("size", "unavailable");
+	}
 	rows.add(row);
       }
       return rows;
