@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.110 2003-07-17 04:39:11 dshr Exp $
+* $Id: PollManager.java,v 1.111 2003-07-24 20:41:18 clairegriffin Exp $
  */
 
 /*
@@ -919,16 +919,6 @@ public class PollManager  extends BaseLockssManager {
       PollTally tally = poll.getVoteTally();
       int version = tally.getPollSpec().getVersion();
       tally.tallyVotes();
-      if((tally.type == Poll.NAME_POLL) && (tally.stateIsLost())) {
-        theLog.debug2("lost a name poll, building poll list");
-	switch (version) {
-	case 1:
-          ((V1NamePoll)poll).buildPollLists(tally.pollVotes.iterator());
-	  break;
-	default:
-	  theLog.warning("Unsupported name poll version: " + version);
-	}
-      }
     }
 
     synchronized void setPollSuspended() {

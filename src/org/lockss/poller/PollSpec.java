@@ -1,5 +1,5 @@
 /*
- * $Id: PollSpec.java,v 1.14 2003-07-16 17:34:39 dshr Exp $
+ * $Id: PollSpec.java,v 1.15 2003-07-24 20:41:18 clairegriffin Exp $
  */
 
 /*
@@ -49,7 +49,8 @@ public class PollSpec {
    */
   public static final String SINGLE_NODE_LWRBOUND = ".";
 
-  public static final String PARAM_USE_PROTOCOL_VERSION = Configuration.PREFIX +      "protocol.useProtocolVersion";
+  public static final String PARAM_USE_PROTOCOL_VERSION = Configuration.PREFIX
+      +      "protocol.useProtocolVersion";
 
   public static final int DEFAULT_USE_PROTOCOL_VERSION = 1;
 

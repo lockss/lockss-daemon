@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.148 2003-07-23 22:56:31 eaalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.149 2003-07-24 20:41:18 clairegriffin Exp $
  */
 
 /*
@@ -436,33 +436,44 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
 
     try {
       boolean notFinished = false;
-      if (results.stateIsError()) {
-        pollState.status = mapResultsErrorToPollError(results.getErr());
-        logger.info("Poll didn't finish fully.  Error: "
-                    + results.getErrString());
-        notFinished = true;
-      } else if (results.stateIsNoQuorum()) {
-        pollState.status = PollState.INCONCLUSIVE;
-        logger.info("Poll finished without quorum");
-        notFinished = true;
-      } else if (results.stateIsInconclusive()) {
-        pollState.status = PollState.INCONCLUSIVE;
-        logger.warning("Poll concluded with suspect result - "
-                       + pollState.getStatusString());
-        notFinished = true;
-      } else if (results.stateIsLost() || results.stateIsWon()) {
-        // set last state in case it changes
-        lastState = nodeState.getState();
-        if (results.getType() == Poll.CONTENT_POLL) {
-          handleContentPoll(pollState, results, nodeState);
-        } else if (results.getType() == Poll.NAME_POLL) {
-          handleNamePoll(pollState, results, nodeState);
-        } else {
-          String err = "Request to update state for unknown type: " +
-              results.getType();
-          logger.error(err);
-          throw new UnsupportedOperationException(err);
-        }
+      switch (results.getTallyResult()) {
+        case Tallier.RESULT_ERROR:
+          pollState.status = mapResultsErrorToPollError(results.getErr());
+          logger.info("Poll didn't finish fully.  Error: "
+                      + results.getErrString());
+          notFinished = true;
+          break;
+        case Tallier.RESULT_NOQUORUM:
+          pollState.status = PollState.INCONCLUSIVE;
+          logger.info("Poll finished without quorum");
+          notFinished = true;
+          break;
+
+        case Tallier.RESULT_TOO_CLOSE:
+        case Tallier.RESULT_UNTRUSTED:
+          pollState.status = PollState.INCONCLUSIVE;
+          logger.warning("Poll concluded with suspect result - "
+                         + pollState.getStatusString());
+          notFinished = true;
+          break;
+        case Tallier.RESULT_WON:
+        case Tallier.RESULT_LOST:
+
+          // set last state in case it changes
+          lastState = nodeState.getState();
+          if (results.getType() == Poll.CONTENT_POLL) {
+            handleContentPoll(pollState, results, nodeState);
+          }
+          else if (results.getType() == Poll.NAME_POLL) {
+            handleNamePoll(pollState, results, nodeState);
+          }
+          else {
+            String err = "Request to update state for unknown type: " +
+                results.getType();
+            logger.error(err);
+            throw new UnsupportedOperationException(err);
+          }
+          break;
       }
 
       // if error state occurred, set node state accordingly
@@ -658,7 +669,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     boolean isRangedPoll =
         results.getCachedUrlSet().getSpec().isRangeRestricted();
 
-    if (results.stateIsWon()) {
+    if (results.getTallyResult() == Tallier.RESULT_WON) {
       // if agree
 
       // change poll state accordingly
@@ -757,7 +768,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     boolean isRangedPoll =
         results.getCachedUrlSet().getSpec().isRangeRestricted();
 
-    if (results.stateIsWon()) {
+    if (results.getTallyResult() == Tallier.RESULT_WON) {
       // if agree
 
       // change poll state accordingly
@@ -1462,11 +1473,11 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     int agreeChange = 0;
     int disagreeChange = 0;
 
-    if (results.stateIsWon()) {
+    if (results.getTallyResult() == Tallier.RESULT_WON) {
       agreeChange = IdentityManager.AGREE_VOTE;
       disagreeChange = IdentityManager.DISAGREE_VOTE;
     }
-    else if (results.stateIsLost()) {
+    else if (results.getTallyResult() == Tallier.RESULT_LOST) {
       agreeChange = IdentityManager.DISAGREE_VOTE;
       disagreeChange = IdentityManager.AGREE_VOTE;
     }

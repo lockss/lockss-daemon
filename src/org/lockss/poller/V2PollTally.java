@@ -1,5 +1,5 @@
 /*
- * $Id: V2PollTally.java,v 1.2 2003-07-17 04:39:11 dshr Exp $
+ * $Id: V2PollTally.java,v 1.3 2003-07-24 20:41:18 clairegriffin Exp $
  */
 
 /*
@@ -107,15 +107,12 @@ public class V2PollTally extends PollTally {
     return sbuf.toString();
   }
 
-  public boolean isErrorState() {
+  boolean isErrorState() {
     return poll.m_pollstate < 0;
   }
 
-  public boolean isInconclusiveState() {
-    switch(status) {
-      default:
-        return false;
-    }
+  public int getTallyResult() {
+    return result;
   }
 
   /**
@@ -143,7 +140,7 @@ public class V2PollTally extends PollTally {
   }
 
   public String getStatusString() {
-    switch (status) {
+    switch (result) {
       default:
         return "No quorum"; // XXX
 
@@ -155,7 +152,7 @@ public class V2PollTally extends PollTally {
   }
 
   void tallyVotes() {
-    status = STATE_NOQUORUM; // XXX
+    result = STATE_NOQUORUM; // XXX
   }
 
   void verifyTally() {
@@ -194,11 +191,7 @@ public class V2PollTally extends PollTally {
     return true;
   }
 
-  void setTrustedWeight(double weight) {
-    trustedWeight = weight;
-  }
-
-  public boolean isTrustedResults() {
+  private boolean isTrustedResults() {
 
     return (numDisagree == 0 ||
 	    (wtDisagree/numDisagree >= trustedWeight));
@@ -237,72 +230,32 @@ public class V2PollTally extends PollTally {
    * True if the poll is active
    * @return true if the poll is active
    */
-  public boolean stateIsActive() {
-    return (status == STATE_POLLING);
+  boolean stateIsActive() {
+    return (result == STATE_POLLING);
   }
 
   /**
    * True if the poll has finshed
    * @return true if the poll has finished
    */
-  public boolean stateIsFinished() {
+  boolean stateIsFinished() {
     return (false);
   }
 
-  /**
-   * True if the poll has an error
-   * @return true if the poll has an error
-   */
-  public boolean stateIsError() {
-    return (false);
-  }
-
-  /**
-   * True if the poll has finished without a quorum
-   * @return true if the poll has finisehd without a quorum
-   */
-  public boolean stateIsNoQuorum() {
-    return (false);
-  }
-
-  /**
-   * True if the poll has finished with a quorum but without a
-   * conclusive win or loss
-   * @return true if the poll has finished without a conclusive win or loss
-   */
-  public boolean stateIsInconclusive() {
-    return (false);
-  }
-
-  /**
-   * True if the poll has been lost
-   * @return true if the poll has been lost
-   */
-  public boolean stateIsLost() {
-    return(false);
-  }
-
-  /**
-   * True if the poll has been won
-   * @return true if the poll has been won
-   */
-  public boolean stateIsWon() {
-    return (false);
-  }
 
   /**
    * True if the poll is suspended
    * @return true if the poll is suspended
    */
-  public boolean stateIsSuspended() {
-    return (status == STATE_SUSPENDED);
+  boolean stateIsSuspended() {
+    return (result == STATE_SUSPENDED);
   }
 
   /**
    * Set the poll state to suspended
    */
-  public void setStateSuspended() {
-    status = STATE_SUSPENDED;
+  void setStateSuspended() {
+    result = STATE_SUSPENDED;
   }
 
 }

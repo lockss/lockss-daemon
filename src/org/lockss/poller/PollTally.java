@@ -1,5 +1,5 @@
 /*
- * $Id: PollTally.java,v 1.20 2003-07-17 04:39:11 dshr Exp $
+ * $Id: PollTally.java,v 1.21 2003-07-24 20:41:18 clairegriffin Exp $
  */
 
 /*
@@ -62,7 +62,7 @@ public abstract class PollTally implements Tallier{
   int wtAgree;      // The weight of the votes that agree with us
   int wtDisagree;   // The weight of the votes that disagree with us
   int quorum;       // The # of votes needed to have a quorum
-  int status;
+  int result;
   ArrayList pollVotes;
   String hashAlgorithm; // the algorithm used to hash this poll
   long m_createTime;       // poll creation time
@@ -185,7 +185,6 @@ public abstract class PollTally implements Tallier{
         localEntries.iterator();
   }
 
-
   /**
    * get the error state for this poll
    * @return 0 == NOERR or one of the poll err conditions
@@ -217,6 +216,29 @@ public abstract class PollTally implements Tallier{
    */
   abstract void tallyVotes();
 
+  /**
+   * True if the poll is active
+   * @return true if the poll is active
+   */
+  abstract boolean stateIsActive();
+
+  /**
+   * True if the poll has finshed
+   * @return true if the poll has finished
+   */
+  abstract boolean stateIsFinished();
+
+
+  /**
+   * True if the poll is suspended
+   * @return true if the poll is suspended
+   */
+  abstract boolean stateIsSuspended();
+
+  /**
+   * Set the poll state to suspended
+   */
+  abstract void setStateSuspended();
 
   /**
    * Determine if the voter with a given ID has voted

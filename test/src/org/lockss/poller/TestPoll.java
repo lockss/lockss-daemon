@@ -1,5 +1,5 @@
 /*
- * $Id: TestPoll.java,v 1.67 2003-07-19 00:45:40 eaalto Exp $
+ * $Id: TestPoll.java,v 1.68 2003-07-24 20:41:19 clairegriffin Exp $
  */
 
 /*
@@ -209,15 +209,14 @@ public class TestPoll extends LockssTestCase {
     np = makeCompletedNamePoll(4,1,0);
     assertEquals(5, np.m_tally.numAgree);
     assertEquals(1, np.m_tally.numDisagree);
-
-    assertTrue(np.m_tally.stateIsWon());
+    assertEquals(Tallier.RESULT_WON, np.m_tally.getTallyResult());
 
     // test a name poll we lost with a dissenting vote
     np = makeCompletedNamePoll(1,8,1);
 
     assertEquals(2, np.m_tally.numAgree);
     assertEquals(9, np.m_tally.numDisagree);
-    assertTrue(np.m_tally.stateIsLost());
+    assertEquals(Tallier.RESULT_LOST, np.m_tally.getTallyResult());
 
     // build a master list
     np.buildPollLists(np.m_tally.pollVotes.iterator());

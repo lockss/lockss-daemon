@@ -1,5 +1,5 @@
 /*
-* $Id: Tallier.java,v 1.3 2003-07-17 04:39:11 dshr Exp $
+* $Id: Tallier.java,v 1.4 2003-07-24 20:41:18 clairegriffin Exp $
  */
 
 /*
@@ -36,6 +36,17 @@ import java.util.*;
 import org.lockss.plugin.*;
 
 public interface Tallier {
+  public static final int RESULT_POLLING = 0;
+  public static final int RESULT_ERROR = 1;
+  public static final int RESULT_NOQUORUM = 2;
+  public static final int RESULT_TOO_CLOSE = 3;
+  public static final int RESULT_UNTRUSTED = 4;
+  public static final int RESULT_WON = 5;
+  public static final int RESULT_LOST = 6;
+  public static final int RESULT_UNVERIFIED = 7;
+  public static final int RESULT_VERIFIED = 8;
+  public static final int RESULT_DISOWNED = 9;
+
   /**
    * return the unique key for the poll for this tally
    * @return a String representing the key
@@ -121,58 +132,13 @@ public interface Tallier {
    */
   public String getStatusString();
 
-  /**
-   * True if the poll is active
-   * @return true if the poll is active
-   */
-  abstract public boolean stateIsActive();
 
   /**
-   * True if the poll has finshed
-   * @return true if the poll has finished
+   * return a constant reflecting the results of the poll tally.
+   * @return an integer representing the results of the poll
    */
-  abstract public boolean stateIsFinished();
+  public int getTallyResult();
 
-  /**
-   * True if the poll has an error
-   * @return true if the poll has an error
-   */
-  abstract public boolean stateIsError();
 
-  /**
-   * True if the poll has finished without a quorum
-   * @return true if the poll has finisehd without a quorum
-   */
-  abstract public boolean stateIsNoQuorum();
-
-  /**
-   * True if the poll has finished with a quorum but without a
-   * conclusive win or loss
-   * @return true if the poll has finished without a conclusive win or loss
-   */
-  abstract public boolean stateIsInconclusive();
-
-  /**
-   * True if the poll has been lost
-   * @return true if the poll has been lost
-   */
-  abstract public boolean stateIsLost();
-
-  /**
-   * True if the poll has been won
-   * @return true if the poll has been won
-   */
-  abstract public boolean stateIsWon();
-
-  /**
-   * True if the poll is suspended
-   * @return true if the poll is suspended
-   */
-  abstract public boolean stateIsSuspended();
-
-  /**
-   * Set the poll state to suspended
-   */
-  abstract public void setStateSuspended();
 
 }

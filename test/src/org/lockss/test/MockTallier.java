@@ -1,5 +1,5 @@
 /*
-* $Id: MockTallier.java,v 1.3 2003-07-17 05:33:12 tlipkis Exp $
+* $Id: MockTallier.java,v 1.4 2003-07-24 20:41:19 clairegriffin Exp $
  */
 
 /*
@@ -60,7 +60,7 @@ public class MockTallier implements Tallier {
   List m_votedEntries = null; // entries which match the won votes in a poll
   ArrayList m_pollVotes;
   int m_error = 0;
-  int m_status = 0;
+  int m_result = 0;
 
   public MockTallier() {
   }
@@ -230,52 +230,18 @@ public class MockTallier implements Tallier {
    * get the current value of the poll tally status
    * @return the status
    */
-  public int getStatus() {
-    return m_status;
+  public int getTallyResult() {
+    return m_result;
   }
 
   public String getStatusString() {
     String statusString = null;
     return statusString;
   }
-  public void setStatus(int status) {
-    m_status = status;
+
+  public void setTallyResult(int result) {
+    m_result = result;
   }
 
-  public boolean stateIsActive() {
-    throw new RuntimeException("foo");
-  }
-
-  public boolean stateIsFinished() {
-    throw new RuntimeException("foo");
-  }
-
-  public boolean stateIsError() {
-    throw new RuntimeException("foo");
-  }
-
-  public boolean stateIsNoQuorum() {
-    throw new RuntimeException("foo");
-  }
-
-  public boolean stateIsInconclusive() {
-    throw new RuntimeException("foo");
-  }
-
-  public boolean stateIsLost() {
-    throw new RuntimeException("foo");
-  }
-
-  public boolean stateIsWon() {
-    throw new RuntimeException("foo");
-  }
-
-  public boolean stateIsSuspended() {
-    throw new RuntimeException("foo");
-  }
-
-  public void setStateSuspended() {
-    throw new RuntimeException("foo");
-  }
 
 }

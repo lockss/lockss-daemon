@@ -1,5 +1,5 @@
 /*
- * $Id: V1PollTally.java,v 1.5 2003-07-17 22:58:48 clairegriffin Exp $
+ * $Id: V1PollTally.java,v 1.6 2003-07-24 20:41:18 clairegriffin Exp $
  */
 
 /*
@@ -52,16 +52,6 @@ import org.lockss.daemon.status.*;
  * state of votes within a V1Poll.
  */
 public class V1PollTally extends PollTally {
-  private static final int STATE_POLLING = 0;
-  private static final int STATE_ERROR = 1;
-  private static final int STATE_NOQUORUM = 2;
-  private static final int STATE_RESULTS_TOO_CLOSE = 3;
-  private static final int STATE_RESULTS_UNTRUSTED = 4;
-  private static final int STATE_WON = 5;
-  private static final int STATE_LOST = 6;
-  private static final int STATE_UNVERIFIED = 7;
-  private static final int STATE_VERIFIED = 8;
-  private static final int STATE_DISOWNED = 9;
   private static final int STATE_SUSPENDED = 10;
 
   double voteMargin = 0;    // the margin by which we must win or lose
@@ -112,15 +102,8 @@ public class V1PollTally extends PollTally {
     return poll.m_pollstate < 0;
   }
 
-  public boolean isInconclusiveState() {
-    switch(status) {
-      case STATE_NOQUORUM:
-      case STATE_RESULTS_UNTRUSTED:
-      case STATE_RESULTS_TOO_CLOSE:
-        return true;
-      default:
-        return false;
-    }
+  public int getTallyResult() {
+    return result;
   }
 
   /**
@@ -148,27 +131,27 @@ public class V1PollTally extends PollTally {
   }
 
   public String getStatusString() {
-    switch (status) {
-      case STATE_ERROR:
+    switch (result) {
+      case RESULT_ERROR:
         return getErrString();
-      case STATE_NOQUORUM:
+      case RESULT_NOQUORUM:
         return "No Quorum";
-      case STATE_RESULTS_UNTRUSTED:
+      case RESULT_UNTRUSTED:
           return "Untrusted Peers";
-      case STATE_RESULTS_TOO_CLOSE:
+      case RESULT_TOO_CLOSE:
         return "Too Close";
-      case STATE_WON:
+      case RESULT_WON:
         if(replayDeadline != null) {
           return "Repaired";
         }
         return "Won";
-      case STATE_LOST:
+      case RESULT_LOST:
         return "Lost";
-      case STATE_UNVERIFIED:
+      case RESULT_UNVERIFIED:
         return "Unverified";
-      case STATE_VERIFIED:
+      case RESULT_VERIFIED:
         return "Verified";
-      case STATE_DISOWNED:
+      case RESULT_DISOWNED:
         return "Disowned";
       default:
         return "Active";
@@ -180,7 +163,7 @@ public class V1PollTally extends PollTally {
     return poll;
   }
 
-  public boolean isTrustedResults() {
+  private boolean isTrustedResults() {
 
     return (numDisagree == 0 ||
             (wtDisagree/numDisagree >= trustedWeight));
@@ -195,32 +178,28 @@ public class V1PollTally extends PollTally {
     log.debug3("tallying name or content poll results.");
     // if it's an error
     if (isErrorState()) {
-      status = STATE_ERROR;
+      result = RESULT_ERROR;
     }
     else if (!haveQuorum()) {
-      status = STATE_NOQUORUM;
+      result = RESULT_NOQUORUM;
     }
     else if (!isWithinMargin()) {
-      status = STATE_RESULTS_TOO_CLOSE;
+      result = RESULT_TOO_CLOSE;
     }
     else {
       boolean won = numAgree > numDisagree;
       if (!won && !isTrustedResults()) {
-        status = STATE_RESULTS_UNTRUSTED;
+        result = RESULT_UNTRUSTED;
       }
       else {
-        status = won ? STATE_WON : STATE_LOST;
+        result = won ? RESULT_WON : RESULT_LOST;
       }
     }
     log.debug3("V1PollTally.tallyVotes() " + poll.toString());
     log.debug3("agree " + numAgree + " disagree " + numDisagree +
-		" status " + status);
-    if((type == Poll.NAME_POLL) && (status != STATE_WON)) {
+		" status " + result);
+    if((type == Poll.NAME_POLL) && (result != RESULT_WON)) {
       log.debug2("lost a name poll, building poll list");
-      if (pollVotes == null)
-	log.debug3("V1PollTally.tallyVotes() 4 null");
-      else
-	log.debug3("V1PollTally.tallyVotes() 4 non-null");
       ((V1NamePoll)poll).buildPollLists(pollVotes.iterator());
       log.debug3("V1PollTally.tallyVotes() 5");
     }
@@ -229,19 +208,19 @@ public class V1PollTally extends PollTally {
 
   void verifyTally() {
     if(isErrorState()) {
-      status = STATE_ERROR;
+      result = RESULT_ERROR;
     }
     else if(poll.isMyPoll()) {
       if (!haveQuorum()) {
-        status = STATE_UNVERIFIED;
+        result = RESULT_UNVERIFIED;
       } else if (numAgree > 0 && numDisagree == 0) {
-        status = STATE_VERIFIED;
+        result = RESULT_VERIFIED;
       } else {
-        status = STATE_DISOWNED;
+        result = RESULT_DISOWNED;
       }
     }
     else {
-      status = STATE_VERIFIED;
+      result = RESULT_VERIFIED;
     }
   }
 
@@ -372,73 +351,32 @@ void replayVoteCheck(Vote vote, Deadline deadline) {
    * True if the poll is active
    * @return true if the poll is active
    */
-public boolean stateIsActive() {
-  return (status == STATE_POLLING);
-}
+  public boolean stateIsActive() {
+    return (result == RESULT_POLLING);
+  }
 
   /**
    * True if the poll has finshed
    * @return true if the poll has finished
    */
-public boolean stateIsFinished() {
-  return (status != STATE_SUSPENDED && status != STATE_POLLING);
-}
-
-  /**
-   * True if the poll has an error
-   * @return true if the poll has an error
-   */
-public boolean stateIsError() {
-  return (status == STATE_ERROR);
-}
-
-  /**
-   * True if the poll has finished without a quorum
-   * @return true if the poll has finisehd without a quorum
-   */
-public boolean stateIsNoQuorum() {
-  return (status == STATE_NOQUORUM);
-}
-
-  /**
-   * True if the poll has finished with a quorum but without a
-   * conclusive win or loss
-   * @return true if the poll has finished without a conclusive win or loss
-   */
-public boolean stateIsInconclusive() {
-  return (status == STATE_RESULTS_TOO_CLOSE ||
-	  status == STATE_RESULTS_UNTRUSTED);
-}
-
-  /**
-   * True if the poll has been lost
-   * @return true if the poll has been lost
-   */
-public boolean stateIsLost() {
-  return (status == STATE_LOST);
-}
-
-  /**
-   * True if the poll has been won
-   * @return true if the poll has been won
-   */
-  public boolean stateIsWon() {
-    return (status == STATE_WON);
+  public boolean stateIsFinished() {
+    return (result != STATE_SUSPENDED && result != RESULT_POLLING);
   }
+
 
   /**
    * True if the poll is suspended
    * @return true if the poll is suspended
    */
   public boolean stateIsSuspended() {
-    return (status == STATE_SUSPENDED);
+    return (result == STATE_SUSPENDED);
   }
 
   /**
    * Set the poll state to suspended
    */
   public void setStateSuspended() {
-    status = STATE_SUSPENDED;
+    result = STATE_SUSPENDED;
   }
 
 class ReplayVoteCallback implements HashService.Callback {
