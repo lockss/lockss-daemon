@@ -2,7 +2,7 @@
 # This is included in the list of prop files by all the run_xxx_daemon
 # scripts
 
-# List the plugins that should be included in UI menus.
+# List of plugins whose names and titles should be included in UI menus.
 # (Don't comment out lines in the middle of the list; it will cause all
 # following lines to be ignored.)
 
@@ -16,8 +16,9 @@ org.lockss.plugin.registry=\
     org.lockss.plugin.histcoop.HistoryCooperativePlugin;\
     org.lockss.plugin.othervoices.OtherVoicesPlugin;
 
-# Temporary list of plugins that should be loaded as ConfigurablePlugins
-# with a xml file.  These need not be included in the registry.
+# List of plugins that should be loaded as ConfigurablePlugins with an xml
+# file.  These should still be included in the registry above, unless you
+# don't want them or their titles to appear in UI menus.
 
 #org.lockss.plugin.xmlPlugins=\
 #    org.lockss.plugin.absinthe.AbsinthePlugin;
