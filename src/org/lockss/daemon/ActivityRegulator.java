@@ -1,5 +1,5 @@
 /*
- * $Id: ActivityRegulator.java,v 1.4 2003-04-16 05:52:39 aalto Exp $
+ * $Id: ActivityRegulator.java,v 1.5 2003-04-16 20:20:15 aalto Exp $
  */
 
 /*
@@ -32,13 +32,10 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.daemon;
 
+import java.util.*;
+import org.lockss.util.*;
 import org.lockss.plugin.*;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-import org.lockss.util.Logger;
-import org.lockss.util.Deadline;
-import org.lockss.util.Constants;
+import org.lockss.app.BaseLockssManager;
 
 /**
  * The ActivityAllower is queried by the various managers when they wish to
@@ -47,7 +44,7 @@ import org.lockss.util.Constants;
  * whether or not new activities can be permitted to start.  If so, it adjusts
  * the state to reflect the new activity.
  */
-public class ActivityRegulator {
+public class ActivityRegulator extends BaseLockssManager {
 
 // AU level
   /**
@@ -111,10 +108,20 @@ public class ActivityRegulator {
     logger.debug2("ActivityRegulator created.");
   }
 
-  public void freeAllLocks() {
+  public void stopService() {
+    logger.debug2("ActivityRegulator stopped.");
     auMap = new HashMap();
     cusMap = new HashMap();
+    super.stopService();
   }
+
+  protected void setConfig(Configuration newConfig,
+                           Configuration prevConfig,
+                           Set changedKeys) {
+    // nothing to config
+  }
+
+
 
   /**
    * Tries to start a particular AU-level activity.  If it can, it sets

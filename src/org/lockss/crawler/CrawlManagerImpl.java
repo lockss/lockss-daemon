@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.21 2003-04-16 05:52:11 aalto Exp $
+ * $Id: CrawlManagerImpl.java,v 1.22 2003-04-16 20:20:15 aalto Exp $
  */
 
 /*
@@ -64,6 +64,7 @@ public class CrawlManagerImpl
   private static final long DEFAULT_REPAIR_EXPIRATION_TIME = 5 * Constants.MINUTE;
 
   private Map newContentCrawls = new HashMap();
+  private static ActivityRegulator regulator;
   private Set activeCrawls = new HashSet();
   private static Logger logger = Logger.getLogger("CrawlManagerImpl");
 
@@ -74,6 +75,8 @@ public class CrawlManagerImpl
    */
   public void startService() {
     super.startService();
+    regulator = theDaemon.getActivityRegulator();
+
     StatusService statusServ = theDaemon.getStatusService();
     statusServ.registerStatusAccessor(CRAWL_STATUS_TABLE_NAME, new Status());
   }
@@ -116,10 +119,10 @@ public class CrawlManagerImpl
     // check with regulator and start repair
     //XXX get real expiration time
     long expiration = DEFAULT_REPAIR_EXPIRATION_TIME;
-    if (LockssDaemon.getActivityRegulator().startCusActivity(
-        ActivityRegulator.REPAIR_CRAWL, au.makeCachedUrlSet(
+    if (regulator.startCusActivity(ActivityRegulator.REPAIR_CRAWL,
+                                   au.makeCachedUrlSet(
         new SingleNodeCachedUrlSetSpec(url.toString())),
-        expiration)) {
+                                   expiration)) {
       CrawlThread crawlThread =
           new CrawlThread(au, ListUtil.list(url.toString()),
                           false, Deadline.MAX, ListUtil.list(cb), cookie);
@@ -158,8 +161,8 @@ public class CrawlManagerImpl
     logger.debug3("Scheduling new content crawl for AU '" + au.getName() + "'");
     //XXX get real expiration time
     long expiration = DEFAULT_CRAWL_EXPIRATION_TIME;
-    if (LockssDaemon.getActivityRegulator().startAuActivity(
-        ActivityRegulator.NEW_CONTENT_CRAWL, au, expiration)) {
+    if (regulator.startAuActivity(ActivityRegulator.NEW_CONTENT_CRAWL,
+                                  au, expiration)) {
       activeCrawls.add(au);
       scheduleNewContentCrawl(au, cb, cookie);
     } else {
@@ -243,13 +246,12 @@ public class CrawlManagerImpl
       }
       // if followLinks is true, assume it's a new content crawl
       if (followLinks) {
-        LockssDaemon.getActivityRegulator().auActivityFinished(
-            ActivityRegulator.NEW_CONTENT_CRAWL, au);
+        regulator.auActivityFinished(ActivityRegulator.NEW_CONTENT_CRAWL, au);
       } else {
         // otherwise, assume it's a repair crawl
         String url = (String)urls.get(0);
-        LockssDaemon.getActivityRegulator().cusActivityFinished(
-            ActivityRegulator.REPAIR_CRAWL, au.makeCachedUrlSet(
+        regulator.cusActivityFinished(ActivityRegulator.REPAIR_CRAWL,
+                                      au.makeCachedUrlSet(
             new SingleNodeCachedUrlSetSpec(url)));
       }
     }

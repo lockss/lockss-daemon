@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.76 2003-04-16 19:23:07 claire Exp $
+* $Id: PollManager.java,v 1.77 2003-04-16 20:20:15 aalto Exp $
  */
 
 /*
@@ -96,8 +96,6 @@ public class PollManager  extends BaseLockssManager {
   private static long m_replayPollExpireTime;
   private static long m_verifierExpireTime;
   private static int m_quorum;
-
-
 
   public PollManager() {
   }
@@ -346,9 +344,9 @@ public class PollManager  extends BaseLockssManager {
         // get expiration time for the lock
         long expiration = ret_poll.m_deadline.getRemainingTime() * 2;
         if (AuUrl.isAuUrl(cus.getUrl())) {
-          if (!LockssDaemon.getActivityRegulator().startAuActivity(
-              ActivityRegulator.TOP_LEVEL_POLL, cus.getArchivalUnit(),
-              expiration)) {
+          if (!theDaemon.getActivityRegulator().startAuActivity(
+              ActivityRegulator.TOP_LEVEL_POLL,
+              cus.getArchivalUnit(), expiration)) {
             theLog.debug2("New top-level poll aborted due to activity lock.");
             return null;
           }
@@ -357,8 +355,8 @@ public class PollManager  extends BaseLockssManager {
           int activity = (msg.isContentPoll() ?
                           ActivityRegulator.STANDARD_CONTENT_POLL :
                           ActivityRegulator.STANDARD_NAME_POLL);
-          if (!LockssDaemon.getActivityRegulator().startCusActivity(
-              activity, cus, expiration)) {
+          if (!theDaemon.getActivityRegulator().startCusActivity(activity,
+              cus, expiration)) {
             theLog.debug2("New poll aborted due to activity lock.");
             return null;
           }

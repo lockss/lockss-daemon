@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.20 2003-04-16 05:50:48 aalto Exp $
+ * $Id: LockssDaemon.java,v 1.21 2003-04-16 20:20:15 aalto Exp $
  */
 
 /*
@@ -58,6 +58,7 @@ public class LockssDaemon {
   private static String MANAGER_PREFIX = Configuration.PREFIX + "manager.";
 
   /* the parameter strings that represent our managers */
+  public static String ACTIVITY_REGULATOR = "ActivityRegulator";
   public static String HASH_SERVICE = "HashService";
   public static String COMM_MANAGER = "CommManager";
   public static String ROUTER_MANAGER = "RouterManager";
@@ -74,6 +75,8 @@ public class LockssDaemon {
   public static String URL_MANAGER = "UrlManager";
 
   /* the default classes that represent our managers */
+  private static String DEFAULT_ACTIVITY_REGULATOR =
+      "org.lockss.daemon.ActivityRegulator";
   private static String DEFAULT_HASH_SERVICE = "org.lockss.hasher.HashService";
   private static String DEFAULT_COMM_MANAGER = "org.lockss.protocol.LcapComm";
   private static String DEFAULT_ROUTER_MANAGER =
@@ -117,6 +120,7 @@ public class LockssDaemon {
   // Manager descriptors.  The order of this table determines the order in
   // which managers are initialized and started.
   private ManagerDesc[] managerDescs = {
+    new ManagerDesc(ACTIVITY_REGULATOR, DEFAULT_ACTIVITY_REGULATOR),
     new ManagerDesc(STATUS_SERVICE, DEFAULT_STATUS_SERVICE),
     new ManagerDesc(URL_MANAGER, DEFAULT_URL_MANAGER),
     new ManagerDesc(HASH_SERVICE, DEFAULT_HASH_SERVICE),
@@ -145,8 +149,7 @@ public class LockssDaemon {
 
   // Need to preserve order so managers are started and stopped in the
   // right order.  This does not need to be synchronized.
-  protected static Map theManagers = new SequencedHashMap();
-  protected static ActivityRegulator regulator = new ActivityRegulator();
+  protected static SequencedHashMap theManagers = new SequencedHashMap();
 
   protected LockssDaemon(List propUrls) {
     this.propUrls = propUrls;
@@ -334,8 +337,13 @@ public class LockssDaemon {
     return (IdentityManager) getManager(IDENTITY_MANAGER);
   }
 
-  public static ActivityRegulator getActivityRegulator() {
-    return regulator;
+  /**
+   * return the ActivityRegulator
+   * @return ActivityRegulator
+   * @throws IllegalArgumentException if the manager is not available.
+   */
+  public ActivityRegulator getActivityRegulator() {
+    return (ActivityRegulator) getManager(ACTIVITY_REGULATOR);
   }
 
   public void stopDaemon() {
@@ -361,16 +369,16 @@ public class LockssDaemon {
    */
   protected void stop() {
     daemonRunning = false;
-    /* stop the managers */
-    // tk - should this stop the managers in the reverse order?
-    Iterator it = theManagers.values().iterator();
-    while(it.hasNext()) {
-      LockssManager lm = (LockssManager)it.next();
-      lm.stopService();
+    // stop the managers in the reverse order of starting
+    LockssManager lm;
+    while (true) {
+      lm = (LockssManager)theManagers.getLastValue();
+      if (lm==null) {
+        break;
+      } else {
+        lm.stopService();
+      }
     }
-
-    // release all locks in the ActivityRegulator
-    regulator.freeAllLocks();
   }
 
   /**

@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.100 2003-04-16 19:23:07 claire Exp $
+ * $Id: NodeManagerImpl.java,v 1.101 2003-04-16 20:20:14 aalto Exp $
  */
 
 /*
@@ -53,6 +53,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
       Configuration.PREFIX + "state.cache.size";
 
   static final int DEFAULT_CACHE_SIZE = 100;
+
   /**
    * This parameter indicates how long since the last unsucessful poll on a node
    * the node manager should wait before recalling that poll.
@@ -65,6 +66,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
   static HistoryRepository historyRepo;
   private LockssRepository lockssRepo;
   static PollManager pollManager;
+  static ActivityRegulator regulator;
 
   ArchivalUnit managedAu;
   AuState auState;
@@ -89,12 +91,14 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     historyRepo = theDaemon.getHistoryRepository();
     lockssRepo = theDaemon.getLockssRepository(managedAu);
     pollManager = theDaemon.getPollManager();
+    regulator = theDaemon.getActivityRegulator();
 
     nodeCache = new NodeStateCache(maxCacheSize);
 
     auState = historyRepo.loadAuState(managedAu);
 
-    treeWalkHandler = new TreeWalkHandler(this, theDaemon.getCrawlManager());
+    treeWalkHandler = new TreeWalkHandler(this, theDaemon.getCrawlManager(),
+                                          regulator);
     treeWalkHandler.start();
     logger.debug("NodeManager sucessfully started");
   }
@@ -116,7 +120,8 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
   public void forceTreeWalk() {
     logger.info("Forcing treewalk...");
     if (treeWalkHandler == null) {
-      treeWalkHandler = new TreeWalkHandler(this, theDaemon.getCrawlManager());
+      treeWalkHandler = new TreeWalkHandler(this, theDaemon.getCrawlManager(),
+                                            regulator);
       treeWalkHandler.start();
     }
     treeWalkHandler.forceTreeWalk();
@@ -284,13 +289,11 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
 
   void freePollLock(CachedUrlSet cus, boolean isContent) {
     if (AuUrl.isAuUrl(cus.getUrl())) {
-      LockssDaemon.getActivityRegulator().auActivityFinished(
-          ActivityRegulator.TOP_LEVEL_POLL, managedAu);
+      regulator.auActivityFinished(ActivityRegulator.TOP_LEVEL_POLL, managedAu);
     } else {
       int activity = (isContent ? ActivityRegulator.STANDARD_CONTENT_POLL :
                       ActivityRegulator.STANDARD_NAME_POLL);
-      LockssDaemon.getActivityRegulator().cusActivityFinished(
-          activity, cus);
+      regulator.cusActivityFinished(activity, cus);
     }
   }
 

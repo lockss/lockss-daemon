@@ -12,8 +12,10 @@ import org.lockss.crawler.*;
 import org.lockss.plugin.*;
 import org.lockss.app.*;
 import org.lockss.daemon.status.*;
+import org.lockss.daemon.ActivityRegulator;
 
 public class MockLockssDaemon extends LockssDaemon {
+  ActivityRegulator activityRegulator = null;
   HashService hashService = null;
   PollManager pollManager = null;
   LcapComm commManager = null;
@@ -39,6 +41,7 @@ public class MockLockssDaemon extends LockssDaemon {
   }
 
   public void stopDaemon() {
+    activityRegulator = null;
     hashService = null;
     pollManager = null;
     commManager = null;
@@ -51,8 +54,23 @@ public class MockLockssDaemon extends LockssDaemon {
     nodeManagerService = null;
     statusService = null;
     //super.stopDaemon();
+  }
 
-    regulator.freeAllLocks();
+  /**
+   * return the activity regulator instance
+   * @return the ActivityRegulator
+   */
+  public ActivityRegulator getActivityRegulator() {
+    if (activityRegulator == null) {
+      activityRegulator = new ActivityRegulator();
+      try {
+        activityRegulator.initService(this);
+      }
+      catch (LockssDaemonException ex) {
+      }
+      theManagers.put(LockssDaemon.ACTIVITY_REGULATOR, activityRegulator);
+    }
+    return activityRegulator;
   }
 
   /**
@@ -308,6 +326,15 @@ public class MockLockssDaemon extends LockssDaemon {
   }
 
   /**
+   * Set the ActivityRegulator
+   * @param activityReg the new regulator
+   */
+  public void setActivityRegulator(ActivityRegulator activityReg) {
+    activityRegulator = activityReg;
+    theManagers.put(LockssDaemon.ACTIVITY_REGULATOR, activityRegulator);
+  }
+
+  /**
    * Set the HashService
    * @param hashServ the new service
    */
@@ -415,22 +442,30 @@ public class MockLockssDaemon extends LockssDaemon {
   private boolean daemonInited = false;
   private boolean daemonRunning = false;
 
-  /** Return true iff all managers have been inited */
+  /**
+   * @return true iff all managers have been inited
+   */
   public boolean isDaemonInited() {
     return daemonInited;
   }
 
-  /** Return true iff all managers have been started */
+  /**
+   * @return true iff all managers have been started
+   */
   public boolean isDaemonRunning() {
     return daemonRunning;
   }
 
-  /** set daemonInited */
+  /** set daemonInited
+   * @param val true if inited
+   */
   public void setDaemonInited(boolean val) {
     daemonInited = val;
   }
 
-  /** set daemonRunning */
+  /** set daemonRunning
+   * @param val true if running
+   */
   public void setDaemonRunning(boolean val) {
     daemonRunning = val;
   }
