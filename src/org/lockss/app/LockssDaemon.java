@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.52 2004-03-07 08:34:16 tlipkis Exp $
+ * $Id: LockssDaemon.java,v 1.53 2004-03-11 02:29:31 eaalto Exp $
  */
 
 /*
@@ -470,7 +470,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
    * @return a LockssAuManager
    * @throws IllegalArgumentException if the manager is not available.
    */
-  public LockssAuManager getAuManager(String key, ArchivalUnit au) {
+  public static LockssAuManager getAuManager(String key, ArchivalUnit au) {
     LockssAuManager mgr = null;
     SequencedHashMap auMgrMap =
       (SequencedHashMap)auManagerMaps.get(au);
