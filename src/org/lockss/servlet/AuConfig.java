@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.22 2004-05-14 08:41:35 tlipkis Exp $
+ * $Id: AuConfig.java,v 1.23 2004-05-18 17:11:13 tlipkis Exp $
  */
 
 /*
@@ -78,6 +78,7 @@ public class AuConfig extends LockssServlet {
   private String statusMsg;
 
   String action;			// action request by form
+  MultiPartRequest multiReq;
   PluginProxy plugin;			// current plugin
   Configuration auConfig;		// current config from AU
   Configuration formConfig;		// config read from form
@@ -98,6 +99,7 @@ public class AuConfig extends LockssServlet {
     auConfigParams = null;
     defKeys = null;
     editKeys = null;
+    multiReq = null;
   }
 
   public void init(ServletConfig config) throws ServletException {
@@ -107,27 +109,27 @@ public class AuConfig extends LockssServlet {
   }
 
   protected void lockssHandleRequest() throws IOException {
-    action = req.getParameter(ACTION_TAG);
-
     errMsg = null;
     statusMsg = null;
     formConfig = null;
     titleConfig = null;
     submitButtonNumber = 0;
+    multiReq = null;
 
-    if (req.getContentType() != null &&
-	req.getContentType().startsWith("multipart/form-data") &&
-	req.getContentLength() < 100000) {
-      MultiPartRequest multi = new MultiPartRequest(req);
-      String[] parts = multi.getPartNames();
-      log.info("Multipart request, " + parts.length + " parts");
-      for (int p=0;p<parts.length;p++) {
-	String name = parts[p];
-	String cont = multi.getString(parts[p]);
-	log.info(name + ": " + cont);
+    action = req.getParameter(ACTION_TAG);
+    if (StringUtil.isNullString(action)) {
+      try {
+	multiReq = getMultiPartRequest(100000);
+	if (multiReq != null) {
+	  action = multiReq.getString(ACTION_TAG);
+	  log.debug(ACTION_TAG + " = " + action);
+	}
+      } catch (FormDataTooLongException e) {
+	errMsg = "Uploaded file too large: " + e.getMessage();
+	// leave action null, will call displayAuSummary() below
       }
-
     }
+
     String auid = req.getParameter("auid");
 
     if (StringUtil.isNullString(action)) displayAuSummary();
@@ -137,15 +139,21 @@ public class AuConfig extends LockssServlet {
     else if (action.equals("Add")) displayAddAu();
     else if (action.equals("EditNew")) displayEditNew();
     else if (action.equals("Create")) createAu();
-    else if (action.equals("Reactivate") || action.equals("DoReactivate")) {
+    else if (action.equals("Reactivate") || action.equals("DoReactivate") ||
+	     action.equals("Delete") || action.equals("Confirm Delete")) {
       AuProxy au = getAuProxy(auid);
       if (au == null) {
 	au = getInactiveAuProxy(auid);
       }
       if (au == null) {
+	if (auid != null) {
+	  errMsg = "Invalid AuId: " + auid;
+	}
 	displayAuSummary();
       } else if (action.equals("Reactivate")) displayReactivateAu(au);
       else if (action.equals("DoReactivate")) doReactivateAu(au);
+      else if (action.equals("Delete")) confirmDeleteAu(au);
+      else if (action.equals("Confirm Delete")) doDeleteAu(au);
     } else {
       // all other actions require AU.  If missing, display summary page
       AuProxy au = getAuProxy(auid);
@@ -158,8 +166,6 @@ public class AuConfig extends LockssServlet {
       else if (action.equals("Update")) updateAu(au, "Updated");
       else if (action.equals("Deactivate")) confirmDeactivateAu(au);
       else if (action.equals("Confirm Deactivate")) doDeactivateAu(au);
-      else if (action.equals("Delete")) confirmDeleteAu(au);
-      else if (action.equals("Confirm Delete")) doDeleteAu(au);
       else {
 	errMsg = "Unknown action: " + action;
 	displayAuSummary();
@@ -173,10 +179,7 @@ public class AuConfig extends LockssServlet {
   private void doSaveAll() throws IOException {
     PrintWriter wrtr = resp.getWriter();
     resp.setContentType("application/binary");
-    wrtr.println("# AU Configuration saved " + new Date() +
-		 " from " + getMachineName());
-    InputStream is =
-      remoteApi.openCacheConfigFile(ConfigManager.CONFIG_FILE_AU_CONFIG);
+    InputStream is = remoteApi.getAuConfigBackupStream(getMachineName());
     Reader rdr = new InputStreamReader(is, Constants.DEFAULT_ENCODING);
     StreamUtil.copy(rdr, wrtr);
     rdr.close();
@@ -186,6 +189,7 @@ public class AuConfig extends LockssServlet {
   private void displayRestoreAll() throws IOException {
     Page page = newPage();
     addJavaScript(page);
+    page.add(getErrBlock());
     Form frm = new Form(srvURL(myServletDescr(), null));
     frm.method("POST");
     frm.attribute("enctype", "multipart/form-data");
@@ -208,6 +212,46 @@ public class AuConfig extends LockssServlet {
 
   /** Restore the AU config */
   private void doRestoreAll() throws IOException {
+    InputStream ins = multiReq.getInputStream("AuConfigBackupContents");
+    if (ins == null) {
+      errMsg = "No backup file uploaded";
+      displayRestoreAll();
+    } else {
+      try {
+	RemoteApi.RestoreAllStatus status = remoteApi.restoreAllAus(ins);
+	displayRestoreAllStatus(status);
+      } catch (RemoteApi.InvalidAuConfigBackupFile e) {
+	errMsg = "Couldn't restore configuration: " + e.getMessage();
+	displayRestoreAll();
+      }
+    }
+  }
+
+  private void displayRestoreAllStatus(RemoteApi.RestoreAllStatus status)
+      throws IOException {
+    Page page = newPage();
+    page.add(getErrBlock());
+    java.util.List statusList = status.getStatusList();
+    int okCnt = status.getOkCnt();
+    int errCnt = statusList.size() - okCnt;
+    page.add(getExplanationBlock(okCnt + " AUs restored, " +
+				 errCnt + " skipped"));
+    Table tbl = new Table(0, "align=center cellspacing=4 cellpadding=0");
+    tbl.addHeading("AU");
+    tbl.addHeading("Status");
+    for (Iterator iter = statusList.iterator(); iter.hasNext(); ) {
+      RemoteApi.RestoreStatus stat = (RemoteApi.RestoreStatus)iter.next();
+      tbl.newRow();
+      tbl.newCell();
+      String name = stat.getName();
+      tbl.add(name != null ? name : stat.getAuId());
+      tbl.newCell();
+      tbl.add(stat.getStatus());
+      tbl.newCell();
+      tbl.add(stat.getExplanation());
+    }
+    page.add(tbl);
+    endPage(page);
   }
 
   /** Display "Add Archival Unit" button and list of configured AUs with Edit
@@ -324,6 +368,7 @@ public class AuConfig extends LockssServlet {
   /** Display form to reactivate deactivated AU */
   private void displayReactivateAu(AuProxy au) throws IOException {
     Page page = newPage();
+    addJavaScript(page);
     fetchAuConfig(au);
     if (plugin == null) {
       errMsg = "Unknown plugin: " + au.getPluginId() +
@@ -335,9 +380,10 @@ public class AuConfig extends LockssServlet {
     page.add(getExplanationBlock("Reactivating: " + encodedAuName(au)));
 
     java.util.List actions =
-      ListUtil.list(new Input(Input.Hidden, ACTION_TAG, "DoReactivate"),
-		    new Input(Input.Submit, "button", "Reactivate"));
+      ListUtil.list(submitButton("Reactivate", "DoReactivate"),
+		    submitButton("Delete", "Delete"));
     Form frm = createAuEditForm(actions, au, true);
+    frm.add("<input type=hidden name=\"" + ACTION_TAG + "\">");
     page.add(frm);
     endPage(page);
   }
@@ -620,9 +666,6 @@ public class AuConfig extends LockssServlet {
       Object act = iter.next();
       if (act instanceof String) {
 	tbl.add(setTabOrder(new Input(Input.Submit, ACTION_TAG, (String)act)));
-	if (iter.hasNext()) {
-	  tbl.add("&nbsp;");
-	}
       } else {
 	if (act instanceof Element) {
 	  // this will include hidden inputs in tab order, but that seems
@@ -631,6 +674,9 @@ public class AuConfig extends LockssServlet {
 	  setTabOrder(ele);
 	}
 	tbl.add(act);
+      }
+      if (iter.hasNext()) {
+	tbl.add("&nbsp;");
       }
     }
     frm.add(tbl);
@@ -796,7 +842,8 @@ public class AuConfig extends LockssServlet {
     String name = au.getName();
     try {
       remoteApi.deleteAu(au);
-      statusMsg = "Deleted Archival Unit:<br>" + encodeText(name);
+      statusMsg = "Deleted " + (au.isActiveAu() ? "" : "Inactive ") +
+	"Archival Unit:<br>" + encodeText(name);
       displayAuSummary();
       return;
     } catch (ArchivalUnit.ConfigurationException e) {

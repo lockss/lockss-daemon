@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.82 2004-05-12 17:47:06 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.83 2004-05-18 17:11:29 tlipkis Exp $
  */
 
 /*
@@ -208,7 +208,7 @@ public class PluginManager extends BaseLockssManager {
     return generateAuId(plugin.getPluginId(), props);
   }
 
-  static String generateAuId(String pluginId, String auKey) {
+  public static String generateAuId(String pluginId, String auKey) {
     return pluginKeyFromId(pluginId)+"&"+auKey;
   }
 
@@ -473,7 +473,11 @@ public class PluginManager extends BaseLockssManager {
 
   private void updateAuConfigFile(ArchivalUnit au, Configuration auConf)
       throws ArchivalUnit.ConfigurationException, IOException {
-    String auid = au.getAuId();
+    updateAuConfigFile(au.getAuId(), auConf);
+  }
+
+  public void updateAuConfigFile(String auid, Configuration auConf)
+      throws ArchivalUnit.ConfigurationException, IOException {
     String prefix = PARAM_AU_TREE + "." + configKeyFromAuId(auid);
     Configuration fqConfig = auConf.addPrefix(prefix);
     configMgr.updateAuConfigFile(fqConfig, prefix);
@@ -527,6 +531,21 @@ public class PluginManager extends BaseLockssManager {
       throws ArchivalUnit.ConfigurationException, IOException {
     log.debug("Deleting AU config: " + au);
     updateAuConfigFile(au, ConfigManager.EMPTY_CONFIGURATION);
+  }
+
+  /**
+   * Delete AU configuration from the local config file.  Need to find a
+   * better place for this.
+   * @param auid the AuId
+   * @throws ArchivalUnit.ConfigurationException
+   * @throws IOException
+   */
+  public void deleteAuConfiguration(String auid)
+      throws ArchivalUnit.ConfigurationException, IOException {
+    log.debug("Deleting AU config: " + auid);
+    updateAuConfigFile(auid, ConfigManager.EMPTY_CONFIGURATION);
+    // might be deleting an inactive au
+    inactiveAuIds.remove(auid);
   }
 
   /**

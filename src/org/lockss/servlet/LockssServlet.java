@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.40 2004-05-12 19:54:12 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.41 2004-05-18 17:11:13 tlipkis Exp $
  */
 
 /*
@@ -42,6 +42,7 @@ import java.text.*;
 //  import org.mortbay.util.*;
 import org.mortbay.html.*;
 import org.mortbay.tools.*;
+import org.mortbay.servlet.MultiPartRequest;
 import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
@@ -799,6 +800,32 @@ public abstract class LockssServlet extends HttpServlet
     }
     return jstext;
   }
+
+  public MultiPartRequest getMultiPartRequest(int maxLen)
+      throws FormDataTooLongException, IOException {
+    if (req.getContentType() == null ||
+	!req.getContentType().startsWith("multipart/form-data")) {
+      return null;
+    }
+    if (req.getContentLength() > maxLen) {
+      throw new FormDataTooLongException(req.getContentLength() + " bytes, " +
+					 maxLen + " allowed");
+    }
+    MultiPartRequest multi = new MultiPartRequest(req);
+    if (log.isDebug2()) {
+      String[] parts = multi.getPartNames();
+      log.debug3("Multipart request, " + parts.length + " parts");
+      if (log.isDebug3()) {
+	for (int p = 0; p < parts.length; p++) {
+	  String name = parts[p];
+	  String cont = multi.getString(parts[p]);
+	  log.debug3(name + ": " + cont);
+	}
+      }
+    }
+    return multi;
+  }
+
   /** Return the daemon instance. */
   protected LockssDaemon getLockssDaemon() {
     return theDaemon;
@@ -825,5 +852,13 @@ public abstract class LockssServlet extends HttpServlet
   /** Convenience method */
   protected String encodeAttr(String s) {
     return HtmlUtil.encode(s, HtmlUtil.ENCODE_ATTR);
+  }
+
+  /** Exception thrown if multipart form data is longer than the
+   * caller-supplied max */
+  public class FormDataTooLongException extends Exception {
+    public FormDataTooLongException(String message) {
+      super(message);
+    }
   }
 }

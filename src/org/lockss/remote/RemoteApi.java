@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.7 2004-05-14 08:40:56 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.8 2004-05-18 17:11:13 tlipkis Exp $
  */
 
 /*
@@ -47,6 +47,10 @@ import org.apache.commons.collections.ReferenceMap;
  */
 public class RemoteApi extends BaseLockssManager {
   private static Logger log = Logger.getLogger("RemoteApi");
+  static final String PARAM_AU_TREE = PluginManager.PARAM_AU_TREE;
+  static final String AU_PARAM_DISPLAY_NAME =
+    PluginManager.AU_PARAM_DISPLAY_NAME;
+
   private Comparator auProxyComparator = new AuProxyOrderComparator();
 
   private PluginManager pluginMgr;
@@ -214,8 +218,12 @@ public class RemoteApi extends BaseLockssManager {
    */
   public void deleteAu(AuProxy aup)
       throws ArchivalUnit.ConfigurationException, IOException {
-    ArchivalUnit au = aup.getAu();
-    pluginMgr.deleteAu(au);
+    if (aup.isActiveAu()) {
+      ArchivalUnit au = aup.getAu();
+      pluginMgr.deleteAu(au);
+    } else {
+      pluginMgr.deleteAuConfiguration(aup.getAuId());
+    }
   }
 
   /**
@@ -306,6 +314,180 @@ public class RemoteApi extends BaseLockssManager {
     File cfile = configMgr.getCacheConfigFile(cacheConfigFileName);
     return new FileInputStream(cfile);
   }
+
+  static final String AU_BACKUP_FILE_COMMENT = "# AU Configuration saved ";
+
+  public InputStream getAuConfigBackupStream(String machineName)
+      throws FileNotFoundException {
+    InputStream fileStream =
+      openCacheConfigFile(ConfigManager.CONFIG_FILE_AU_CONFIG);
+    String line1 =
+      AU_BACKUP_FILE_COMMENT + new Date() + " from " + machineName + "\n";
+    return new SequenceInputStream(new ByteArrayInputStream(line1.getBytes()),
+				   fileStream);
+  }
+
+  public RestoreAllStatus restoreAllAus(InputStream configBackupStream)
+      throws IOException, InvalidAuConfigBackupFile {
+    BufferedInputStream bis = new BufferedInputStream(configBackupStream);
+    bis.mark(10000);
+    BufferedReader rdr =
+      new BufferedReader(new InputStreamReader(bis,
+					       Constants.DEFAULT_ENCODING));
+    String line1 = rdr.readLine();
+    if (line1 == null) {
+      throw new InvalidAuConfigBackupFile("Uploaded file is empty");
+    }
+    if (!line1.startsWith(AU_BACKUP_FILE_COMMENT)) {
+      log.debug("line1: " + line1);
+      throw new InvalidAuConfigBackupFile("Uploaded file does not appear to be a saved AU configuration");
+    }
+    bis.reset();
+    Properties allAuProps = new Properties();
+    try {
+      allAuProps.load(bis);
+    } catch (Exception e) {
+      log.warning("Loading AU config backup file", e);
+      throw new InvalidAuConfigBackupFile("Uploaded file has illegal format: "
+					  + e.getMessage());
+    }
+    return restoreAllAus(ConfigManager.fromPropertiesUnsealed(allAuProps));
+  }
+
+  public RestoreAllStatus restoreAllAus(Configuration allAuConfig)
+      throws InvalidAuConfigBackupFile {
+    checkLegalProps(allAuConfig);
+    Configuration allPlugs = allAuConfig.getConfigTree(PARAM_AU_TREE);
+    RestoreAllStatus status = new RestoreAllStatus();
+    for (Iterator iter = allPlugs.nodeIterator(); iter.hasNext(); ) {
+      String pluginKey = (String)iter.next();
+      PluginProxy pluginp = findPluginProxy(pluginKey);
+      Configuration pluginConf = allPlugs.getConfigTree(pluginKey);
+      for (Iterator auIter = pluginConf.nodeIterator(); auIter.hasNext(); ) {
+	String auKey = (String)auIter.next();
+	Configuration auConf = pluginConf.getConfigTree(auKey);
+	String auid = PluginManager.generateAuId(pluginKey, auKey);
+	restoreOneAu(pluginp, auid, auConf, status);
+      }
+
+    }
+    return status;
+  }
+
+  void restoreOneAu(PluginProxy pluginp, String auid,
+		    Configuration auConfig, RestoreAllStatus status) {
+    RestoreStatus stat = new RestoreStatus(auid);
+    status.add(stat);
+    Configuration currentConfig = pluginMgr.getStoredAuConfiguration(auid);
+    String name = currentConfig.get(AU_PARAM_DISPLAY_NAME);
+    if (name == null) {
+      name = auConfig.get(AU_PARAM_DISPLAY_NAME);
+    }
+    stat.setName(name);
+
+    if (currentConfig != null && !currentConfig.isEmpty()) {
+      if (currentConfig.equals(auConfig)) {
+	log.debug("Restore: same config: " + auid);
+	stat.setStatus("Unchanged");
+      } else {
+	log.debug("Restore: conflicting config: " + auid +
+		  ", current: " + currentConfig + ", new: " + auConfig);
+	stat.setStatus("Conflict");
+      }
+    } else {
+      try {
+	if (auConfig.getBoolean(PluginManager.AU_PARAM_DISABLED, false)) {
+	  log.debug("Restore: inactive: " + auid);
+	  pluginMgr.updateAuConfigFile(auid, auConfig);
+	  stat.setStatus("Restored (inactive)");
+	  status.incrOk();
+	} else {
+	  log.debug("Restore: active: " + auid);
+	  AuProxy aup = createAndSaveAuConfiguration(pluginp, auConfig);
+	  stat.setStatus("Restored");
+	  stat.setName(aup.getName());
+	  status.incrOk();
+	}
+      } catch (ArchivalUnit.ConfigurationException e) {
+	stat.setStatus("Configuration Error");
+	stat.setExplanation(e.getMessage());
+      } catch (IOException e) {
+	stat.setStatus("I/O Error");
+	stat.setExplanation(e.getMessage());
+      }
+    }
+  }
+
+  /** Throw InvalidAuConfigBackupFile if the config contains any keys
+   * outside the AU config subtree. */
+  void checkLegalProps(Configuration config)
+      throws InvalidAuConfigBackupFile {
+    String verProp =
+      ConfigManager.configVersionProp(ConfigManager.CONFIG_FILE_AU_CONFIG);
+    int ver = config.getInt(verProp, 0);
+    if (ver != 1) {
+      throw new InvalidAuConfigBackupFile("Uploaded file has incompatbile version number");
+    }
+    Configuration auConfig = config.getConfigTree(PluginManager.PARAM_AU_TREE);
+    if (auConfig.keySet().size() != (config.keySet().size() - 1)) {
+      throw new InvalidAuConfigBackupFile("Uploaded file contains illegal keys; does not appear to be a saved AU configuration");
+    }
+  }
+
+  public class RestoreAllStatus {
+    private List statusList = new ArrayList();
+    private int ok = 0;
+    public List getStatusList() {
+      return statusList;
+    }
+    public int getOkCnt() {
+      return ok;
+    }
+    void add(RestoreStatus status) {
+      statusList.add(status);
+    }
+    void incrOk() {
+      ok++;
+    }
+  }
+  public class RestoreStatus {
+    private String auid;
+    private String name;
+    private String status;
+    private String explanation;
+    RestoreStatus(String auid) {
+      this.auid = auid;
+    }
+    public String getAuId() {
+      return auid;
+    }
+    public String getName() {
+      return name;
+    }
+    public String getStatus() {
+      return status;
+    }
+    public String getExplanation() {
+      return explanation;
+    }
+    void setStatus(String s) {
+      this.status = s;
+    }
+    void setName(String s) {
+      this.name = s;
+    }
+    void setExplanation(String s) {
+      this.explanation = s;
+    }
+  }
+
+  /** Exception thrown if the uploaded AU config backup file isn't valid */
+  public class InvalidAuConfigBackupFile extends Exception {
+    public InvalidAuConfigBackupFile(String message) {
+      super(message);
+    }
+  }
+
 
   /** Comparator for sorting AuProxy lists.  Not suitable for use in a
    * TreeSet unless changed to never return 0. */

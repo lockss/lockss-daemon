@@ -1,5 +1,5 @@
 /*
- * $Id: TestRemoteApi.java,v 1.2 2004-01-12 06:20:26 tlipkis Exp $
+ * $Id: TestRemoteApi.java,v 1.3 2004-05-18 17:11:12 tlipkis Exp $
  */
 
 /*
@@ -122,6 +122,35 @@ public class TestRemoteApi extends LockssTestCase {
     assertNotNull(mapped.get(1));
     assertSame(rapi.findPluginProxy(mp1), (PluginProxy)mapped.get(0));
     assertSame(rapi.findPluginProxy(mp2), (PluginProxy)mapped.get(1));
+  }
+
+  public void testCheckLegalProps() throws Exception {
+    Properties p = new Properties();
+    p.setProperty("org.lockss.au.foobar", "17");
+    p.setProperty("org.lockss.config.fileVersion.au", "1");
+    rapi.checkLegalProps(ConfigManager.fromProperties(p));
+    p.setProperty("org.lockss.other.prop", "foo");
+    try {
+      rapi.checkLegalProps(ConfigManager.fromProperties(p));
+      fail("checkLegalProps() allowed non-AU prop");
+    } catch (RemoteApi.InvalidAuConfigBackupFile e) {
+    }
+    p.remove("org.lockss.other.prop");
+    rapi.checkLegalProps(ConfigManager.fromProperties(p));
+    p.setProperty("org.lockss.au", "xx");
+    try {
+      rapi.checkLegalProps(ConfigManager.fromProperties(p));
+      fail("checkLegalProps() allowed non-AU prop");
+    } catch (RemoteApi.InvalidAuConfigBackupFile e) {
+    }
+    p.remove("org.lockss.au");
+    rapi.checkLegalProps(ConfigManager.fromProperties(p));
+    p.setProperty("org.lockss.config.fileVersion.au", "0");
+    try {
+      rapi.checkLegalProps(ConfigManager.fromProperties(p));
+      fail("checkLegalProps() allowed non-AU prop");
+    } catch (RemoteApi.InvalidAuConfigBackupFile e) {
+    }
   }
 
   class MockPluginManager extends PluginManager {

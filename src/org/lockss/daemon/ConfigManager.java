@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.22 2004-05-14 08:40:44 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.23 2004-05-18 17:11:30 tlipkis Exp $
  */
 
 /*
@@ -634,7 +634,7 @@ public class ConfigManager implements LockssManager {
   }
 
   /** Return the config version prop key for the named config file */
-  static String configVersionProp(String cacheConfigFileName) {
+  public static String configVersionProp(String cacheConfigFileName) {
     String noExt = StringUtil.upToFinal(cacheConfigFileName, ".");
     return StringUtil.replaceString(PARAM_CONFIG_FILE_VERSION,
 				    "<filename>", noExt);
