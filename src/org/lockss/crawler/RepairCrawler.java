@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.12 2004-03-04 23:25:32 troberts Exp $
+ * $Id: RepairCrawler.java,v 1.13 2004-03-07 08:34:36 tlipkis Exp $
  */
 
 /*
@@ -194,6 +194,7 @@ public class RepairCrawler extends CrawlerImpl {
       (ProxyManager)LockssDaemon.getManager(LockssDaemon.PROXY_MANAGER);
     int proxyPort = proxyMan.getProxyPort();
 
+    // XXX fix this to use BaseUrlCacher
     LockssUrlConnection conn = UrlUtil.openConnection(uc.getUrl(),
 						      connectionPool);
     if (!conn.canProxy()) {
@@ -208,6 +209,7 @@ public class RepairCrawler extends CrawlerImpl {
 		    getPropertiesFromConn(conn, uc.getUrl()));
   }
 
+  // XXX fix this to use BaseUrlCacher
   private Properties getPropertiesFromConn(LockssUrlConnection conn,
 					   String url)
       throws IOException {
@@ -227,7 +229,8 @@ public class RepairCrawler extends CrawlerImpl {
 
   private void cache(UrlCacher uc) throws IOException {
     try {
-      uc.forceCache();
+      uc.setForceRefetch(true);
+      uc.cache();
     } catch (IOException e) {
       logger.debug("Exception when trying to cache "+uc, e);
     }
