@@ -14,8 +14,12 @@ SIGN_ONLY = 0
 BUILD_ONLY = 1
 BUILD_AND_SIGN = 2
 
-validArgs = ["help", "nosign", "signonly", "jar=", "plugin=", "alias=", "keystore=", "password="]
+validArgs = ["help", "nosign", "signonly", "jar=", "plugin=",
+             "alias=", "keystore=", "password="]
 passedArgs = {}
+
+# Location of the 'ant' command.
+antBin = path.join(environ.get('ANT_HOME'), 'bin', 'ant')
 
 # By default, the mode is to build and sign plugins.
 mode = BUILD_AND_SIGN
@@ -112,8 +116,6 @@ def parse_options(argv):
 #
 def run_ant(command):
     """ Run ANT, print the output if there is error. """
-
-    antBin = path.join(environ.get('ANT_HOME'), 'bin', 'ant')
 
     child = popen(antBin + " -f " + buildXml + " " + command)
     output = child.read()

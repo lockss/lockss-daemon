@@ -14,7 +14,7 @@ dn_c = "US"
 # Other constants
 validDays = 3650 # ~ 10 years
 defStorepass = "password"
-keyTool = "/usr/java/jdk1.3.1_11/bin/keytool"
+keyTool = path.join(environ.get('JAVA_HOME'), 'bin', 'keytool')
 
 args = {}
 
