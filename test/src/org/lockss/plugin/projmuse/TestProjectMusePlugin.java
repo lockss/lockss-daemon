@@ -1,5 +1,5 @@
 /*
- * $Id: TestProjectMusePlugin.java,v 1.2 2003-08-27 00:26:42 eaalto Exp $
+ * $Id: TestProjectMusePlugin.java,v 1.3 2003-08-27 19:27:32 eaalto Exp $
  */
 
 /*
@@ -35,9 +35,9 @@ package org.lockss.plugin.projmuse;
 import java.net.*;
 import java.util.Properties;
 import org.lockss.test.*;
+import org.lockss.daemon.*;
 import org.lockss.util.ListUtil;
 import org.lockss.plugin.ArchivalUnit;
-import org.lockss.daemon.*;
 
 public class TestProjectMusePlugin extends LockssTestCase {
   private ProjectMusePlugin plugin;
@@ -67,7 +67,6 @@ public class TestProjectMusePlugin extends LockssTestCase {
     props.setProperty(ProjectMusePlugin.AUPARAM_VOL, "322");
     props.setProperty(ProjectMusePlugin.AUPARAM_BASE_URL, "blah");
     props.setProperty(ProjectMusePlugin.AUPARAM_JOURNAL_DIR, "blah2");
-    props.setProperty(ProjectMusePlugin.AUPARAM_JOURNAL_ABBR, "b");
 
     try {
       ProjectMuseArchivalUnit au = makeAuFromProps(props);
@@ -86,7 +85,6 @@ public class TestProjectMusePlugin extends LockssTestCase {
     props.setProperty(ProjectMusePlugin.AUPARAM_BASE_URL,
                       "http://www.example.com/");
     props.setProperty(ProjectMusePlugin.AUPARAM_JOURNAL_DIR, "journal_dir");
-    props.setProperty(ProjectMusePlugin.AUPARAM_JOURNAL_ABBR, "jd");
 
     ProjectMuseArchivalUnit au = makeAuFromProps(props);
     assertEquals("www.example.com, journal_dir, vol. 322", au.getName());
@@ -100,16 +98,14 @@ public class TestProjectMusePlugin extends LockssTestCase {
   public void testGetAuConfigProperties() {
     assertEquals(ListUtil.list(ConfigParamDescr.BASE_URL,
 			       ConfigParamDescr.VOLUME_NUMBER,
-                               ConfigParamDescr.JOURNAL_DIR,
-                               ConfigParamDescr.JOURNAL_ABBR),
+                               ConfigParamDescr.JOURNAL_DIR),
 		 plugin.getAUConfigProperties());
   }
 
   public void testGetDefiningProperties() {
     assertEquals(ListUtil.list(ConfigParamDescr.BASE_URL.getKey(),
 			       ConfigParamDescr.VOLUME_NUMBER.getKey(),
-                               ConfigParamDescr.JOURNAL_DIR.getKey(),
-                               ConfigParamDescr.JOURNAL_ABBR.getKey()),
+                               ConfigParamDescr.JOURNAL_DIR.getKey()),
 		 plugin.getDefiningConfigKeys());
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: ProjectMuseArchivalUnit.java,v 1.3 2003-08-27 18:38:22 eaalto Exp $
+ * $Id: ProjectMuseArchivalUnit.java,v 1.4 2003-08-27 19:27:32 eaalto Exp $
  */
 
 /*
@@ -68,7 +68,6 @@ public class ProjectMuseArchivalUnit extends BaseArchivalUnit {
   private URL baseUrl; // the base Url for the volume
   private int volume; // the volume index
   private String journalDir;
-  private String journalAbbr;
   private long pauseTime; // the time to pause between fetchs
   private long newContentCrawlIntv; // the new content crawl interval
 
@@ -149,14 +148,6 @@ public class ProjectMuseArchivalUnit extends BaseArchivalUnit {
       throw new ConfigurationException(exception);
     }
 
-    // get the journal abbreviation
-    journalAbbr = config.get(ProjectMusePlugin.AUPARAM_JOURNAL_ABBR);
-    if ((journalAbbr == null) || (journalAbbr.equals(""))) {
-      exception = "No configuration value for " +
-          ProjectMusePlugin.AUPARAM_JOURNAL_ABBR;
-      throw new ConfigurationException(exception);
-    }
-
     // turn them into appropriate types
     try {
       baseUrl = new URL(urlStr);
@@ -201,7 +192,7 @@ public class ProjectMuseArchivalUnit extends BaseArchivalUnit {
 
   private CrawlSpec makeCrawlSpec(URL base, int volume) throws REException {
 
-    CrawlRule rule = makeRules(base, journalDir, volume, journalAbbr);
+    CrawlRule rule = makeRules(base, journalDir, volume);
     return new CrawlSpec(makeStartUrl(base, journalDir, volume), rule);
   }
 
@@ -228,8 +219,8 @@ public class ProjectMuseArchivalUnit extends BaseArchivalUnit {
   }
 
   // Todo: add the crawl rules appropriate for Project Muse
-  private CrawlRule makeRules(URL urlRoot, String journal, int volume,
-                              String abbr) throws REException {
+  private CrawlRule makeRules(URL urlRoot, String journal, int volume)
+      throws REException {
     List rules = new LinkedList();
     final int incl = CrawlRules.RE.MATCH_INCLUDE;
     final int excl = CrawlRules.RE.MATCH_EXCLUDE;
@@ -245,7 +236,7 @@ public class ProjectMuseArchivalUnit extends BaseArchivalUnit {
     }
     rules.add(new CrawlRules.RE(volStr + volume + "/.*", incl));
     rules.add(new CrawlRules.RE(urlRoot.toString() +
-                                "journals/"+journal+"/toc/" + abbr + volume +
+                                "journals/"+journal+"/toc/[a-zA-Z]*" + volume +
                                 "\\..*", incl));
     rules.add(new CrawlRules.RE(urlRoot.toString() + "images/.*", incl));
     //rules.add(new CrawlRules.RE(".*ck=nck.*", excl));
