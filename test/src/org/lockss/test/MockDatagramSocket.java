@@ -38,13 +38,13 @@ public class MockDatagramSocket extends DatagramSocket{
 
   private boolean isClosed = false;
   private Vector sentPackets;
-  private Vector receiveQueue;
+  private SimpleQueue.Fifo receiveQueue;
 
   //stubs for DatagramSocket methods
 
   public MockDatagramSocket() throws SocketException{
     sentPackets = new Vector();
-    receiveQueue = new Vector();
+    receiveQueue = new SimpleQueue.Fifo();
   }
 
   /**
@@ -60,7 +60,8 @@ public class MockDatagramSocket extends DatagramSocket{
    * DatagramSocket contructor
    * @param host ditto
    */
-  public MockDatagramSocket(int port, InetAddress laddr) throws SocketException{
+  public MockDatagramSocket(int port, InetAddress laddr)
+      throws SocketException{
     this();
   }
 
@@ -134,35 +135,38 @@ public class MockDatagramSocket extends DatagramSocket{
   }
 
   /**
-   * If packets have been preloaded using addToReceiveQueue, will copy the top one
-   * into p
+   * "Receive" a packet that has been added to the receive queue with
+   * {@link  #addToReceiveQueue}.  Waits until a packet arrives if necessary
    * @param p pre-allocated packet to receive data from queued packet
-   * @throws IOException if no packets have been queued
-   * @see #addToReceiveQueue
    */
-  public void receive(DatagramPacket p) throws IOException{
-    if (receiveQueue.size() == 0){
-      throw new IOException("receive called in "+
-			    "org.lockss.test.MockDatagramSocket without "+
-			    "receivedPackets set");
+  public void receive(DatagramPacket p) throws IOException {
+    DatagramPacket qPkt = (DatagramPacket)receiveQueue.get();
+    if (qPkt == null) {
+      // didn't get a packet, must have been interrupted
+      throw new IOException("MockDatagramSocket.receive interrupted");
     }
-    DatagramPacket returnPacket = (DatagramPacket)receiveQueue.remove(0);
-    p.setPort(returnPacket.getPort());
-    p.setAddress(returnPacket.getAddress());
-    p.setData(returnPacket.getData());
+    p.setData(qPkt.getData());
+    p.setAddress(qPkt.getAddress());
+    p.setPort(qPkt.getPort());
   }
 
   /**
-   * Take p and add it to the queue of "sent" packets.  This queue can be read using
-   * getSentPackets()
+   * "Send" a packet by adding it to the output vector (which can be read with
+   * {@link #getSentPackets})
    * @param p packet to "send"
-   * @see #getSentPackets
    */
   public void send(DatagramPacket p){
-    sentPackets.add(p);
+    // enqueue a copy, as that's what a real DatagramSocket would do
+    DatagramPacket qPkt = new DatagramPacket(p.getData(),
+					     p.getOffset(),
+					     p.getLength(),
+					     p.getAddress(),
+					     p.getPort());
+    sentPackets.add(qPkt);
   }
 
-  public static void setDatagramSocketImplFactory(DatagramSocketImplFactory fac){
+  public static void setDatagramSocketImplFactory(DatagramSocketImplFactory
+						  fac){
   }
 
   public void setReceiveBufferSize(int size){
@@ -186,7 +190,8 @@ public class MockDatagramSocket extends DatagramSocket{
   }
 
   /**
-   * @return a vector containing all packets which have been queued using send(p)
+   * @return a vector containing all packets which have been "sent" on the
+   * socket
    * @see #send
    */
   public Vector getSentPackets(){
@@ -194,11 +199,9 @@ public class MockDatagramSocket extends DatagramSocket{
   }
 
   /**
-   * @param packet DatagramPacket to add to the queue of packets to feed back when 
-   * receive(p) is called
-   * @see #receive
+   * Add a packet to the receive queue to be processed by {@link #receive}
    */
   public void addToReceiveQueue(DatagramPacket packet){
-    receiveQueue.add(packet);
+    receiveQueue.put(packet);
   }
 }
