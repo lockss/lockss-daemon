@@ -18,7 +18,7 @@ import org.lockss.test.FileUtil;
 public class TestPoll extends TestCase {
   private static String[] rooturls = {"http://www.test.org",
     "http://www.test1.org", "http://www.test2.org"};
-  private static String regexp = "*.doc";
+  private static String regexp = "^.*\\.doc";
   private static long testduration = 5 * 60 *60 *1000; /* 5 min */
 
   private static String[] testentries = {"test1.doc", "test2.doc", "test3.doc"};
@@ -282,8 +282,8 @@ public class TestPoll extends TestCase {
     p.m_tally.numDisagree = numDisagree;
     p.m_tally.wtAgree = 2000;
     p.m_tally.wtDisagree = 200;
-    p.m_tally.localEntries = new String[] { "entry 1", "entry 2" };
-    p.m_tally.votedEntries = new String[] { "entry 1", "entry 3" };
+    p.m_tally.localEntries = new String[] { "entry 1", "entry 2", "entry 5" };
+    p.m_tally.votedEntries = new String[] { "entry 1", "entry 3", "entry 4", "entry 5"};
     return p;
   }
 

@@ -1,5 +1,5 @@
 /*
-* $Id: NamePoll.java,v 1.25 2003-01-25 02:21:11 aalto Exp $
+* $Id: NamePoll.java,v 1.26 2003-01-28 02:10:20 claire Exp $
  */
 
 /*
@@ -175,26 +175,25 @@ public class NamePoll extends Poll {
   }
 
   void buildPollLists(Iterator voteIter) {
-    HashMap winners = new HashMap();
+    ArrayList winners = new ArrayList();
 
-    // build a list of winners
+    // build a list of unique winners
     while(voteIter.hasNext()) {
       NamePoll.NameVote vote = (NamePoll.NameVote) voteIter.next();
       if(!vote.agree) {
-        NameVoteCounter counter =
-            (NameVoteCounter)winners.get(vote.getHashString());
-        if(counter == null) {
-          counter = new NameVoteCounter(vote);
-          winners.put(vote.getHashString(),counter);
+        NameVoteCounter counter = new NameVoteCounter(vote);
+        if(winners.contains(counter)) {
+          counter = (NameVoteCounter)winners.get(winners.indexOf(counter));
+          counter.addVote();
         }
         else {
-          counter.addVote();
+          winners.add(counter);
         }
       }
     }
 
     // find the "definitive" list
-    Iterator it = winners.values().iterator();
+    Iterator it = winners.iterator();
     NameVoteCounter winningCounter = null;
     while(it.hasNext()) {
       NameVoteCounter counter = (NameVoteCounter)it.next();
@@ -269,6 +268,7 @@ public class NamePoll extends Poll {
     }
   }
 
+
   static class NameVoteCounter {
     private String[] knownEntries;
     private String   RERemainingEntries;
@@ -288,12 +288,23 @@ public class NamePoll extends Poll {
       return voteCount++;
     }
 
-    public String[] getKnownEntries() {
+    String[] getKnownEntries() {
       return knownEntries;
     }
 
-    public String getRERemainingEntries() {
+    String getRERemainingEntries() {
       return RERemainingEntries;
+    }
+
+    public boolean equals(Object obj) {
+      if(obj instanceof NameVoteCounter) {
+        return (sameEntries(((NameVoteCounter)obj).knownEntries));
+      }
+      return false;
+    }
+
+    boolean sameEntries(String[] entries) {
+      return Arrays.equals(knownEntries, entries);
     }
 
   }

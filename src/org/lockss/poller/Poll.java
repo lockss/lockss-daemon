@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.42 2003-01-27 03:02:06 claire Exp $
+* $Id: Poll.java,v 1.43 2003-01-28 02:10:20 claire Exp $
  */
 
 /*
@@ -316,6 +316,7 @@ public abstract class Poll implements Serializable {
         tally();
       }
     }
+
     m_pollmanager.closeThePoll(m_key);
     log.debug("closed the poll:" + m_key);
   }
@@ -693,6 +694,7 @@ public abstract class Poll implements Serializable {
 
     void addVote(Vote vote) {
       LcapIdentity id = vote.getIdentity();
+
       int weight = id.getReputation();
 
       synchronized (this) {

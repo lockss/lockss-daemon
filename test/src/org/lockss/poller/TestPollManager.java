@@ -20,7 +20,7 @@ public class TestPollManager extends TestCase {
     "http://www.test2.org"};
 
   private static String urlstr = "http://www.test3.org";
-  private static String regexp = "*.doc";
+  private static String regexp = "^.*\\.doc";
   private static long testduration = 5 * 60 *60 *1000; /* 5 min */
 
   private static String[] testentries = {"test1.doc", "test2.doc", "test3.doc"};
@@ -140,15 +140,6 @@ public class TestPollManager extends TestCase {
     }
   }
 
-  /** test for method handleMessage(..) */
-//   public void testHandleMessage() {
-//     try {
-//       pollmanager.handleMessage(testmsg[1]);
-//     }
-//     catch (IOException ex) {
-//       fail("could not create or find content message");
-//     }
-//   }
 
   /** test for method removePoll(..) */
   public void testRemovePoll() {
@@ -259,25 +250,47 @@ public class TestPollManager extends TestCase {
   public void testCloseThePoll() {
     try {
       Poll p1 = pollmanager.makePoll(testmsg[0]);
-      // we should now be open
-      assertTrue(!pollmanager.isPollClosed(p1.m_challenge));
+      // we should now be active
+      assertTrue(pollmanager.isPollActive(p1.m_key));
+      // we should not be closed
+      assertTrue(!pollmanager.isPollClosed(p1.m_key));
 
-      // we should now be closed
+
       pollmanager.closeThePoll(p1.m_key);
-      assertTrue(pollmanager.isPollClosed(p1.m_challenge));
+      // we should not be active
+      assertTrue(!pollmanager.isPollActive(p1.m_key));
+      // we should now be closed
+      assertTrue(pollmanager.isPollClosed(p1.m_key));
       // we should reject an attempt to handle a packet with this key
-      try {
-        pollmanager.handleMessage(testmsg[0]);
-        //fail("packet on recent poll s/b rejected");
-      }
-      catch (IOException ex) {
-        // this is ok.
-      }
-    }
+      pollmanager.handleMessage(testmsg[0]);
+      assertTrue(!pollmanager.isPollActive(p1.m_key));
+
+   }
     catch (IOException ex) {
-      fail("unable to make content poll");
+      fail("unable to make test poll");
     }
   }
+  /** test for method suspendPoll(...) */
+
+  public void testSuspendPoll() {
+    Poll p1 = null;
+    try {
+      p1 = TestPoll.createCompletedPoll(testmsg[0], 7, 2);
+    }
+    catch (Exception ex) {
+      fail("unable to make a test poll");
+    }
+
+    // check our suspend
+    pollmanager.suspendPoll(p1);
+    assertTrue(pollmanager.isPollSuspended(p1.m_key));
+    assertTrue(!pollmanager.isPollClosed(p1.m_key));
+
+    // now we resume...
+    pollmanager.resumePoll(p1.m_key);
+    assertTrue(!pollmanager.isPollSuspended(p1.m_key));
+  }
+
 
   /** test for method getHasher(..) */
   public void testGetHasher() {

@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.19 2003-01-18 01:01:26 claire Exp $
+* $Id: PollManager.java,v 1.20 2003-01-28 02:10:20 claire Exp $
  */
 
 /*
@@ -47,24 +47,36 @@ import org.mortbay.util.*;
 import gnu.regexp.*;
 
 public class PollManager {
+  static final String PARAM_RECENT_EXPIRATION = Configuration.PREFIX + "poll.expire_recent";
+  static final String PARAM_REPLAY_EXPIRATION = Configuration.PREFIX +
+      "poll.expire_replay";
+  static final String PARAM_VERIFY_EXPIRATION = Configuration.PREFIX +
+      "poll.expire_verifier";
 
-  static final long EXPIRATION_TIME = 24 * 60 * 60 * 1000; // 1 day
-  static final long VERIFIER_EXPIRATION_TIME = 24 * 60 * 60 * 1000;
+
+
+  static final long DEFAULT_RECENT_EXPIRATION = 24 * 60 * 60 * 1000; // 1 day
+  static final long DEFAULT_REPLAY_EXPIRATION = DEFAULT_RECENT_EXPIRATION/2;
+  static final long DEFAULT_VERIFIER_EXPIRATION = 24 * 60 * 60 * 1000;
 
   private static PollManager theManager = null;
   private static Logger theLog=Logger.getLogger("PollManager");
   private static HashMap thePolls = new HashMap();
   private static HashMap theRecentPolls = new HashMap();
   private static HashMap theVerifiers = new HashMap();
+  private static HashMap theSuspended = new HashMap();
+
   private static Random theRandom = new Random();
   private static LcapComm theComm = null;
   private static IdentityManager theIdMgr = IdentityManager.getIdentityManager();
+
   private PollManager() {
   }
 
   public static PollManager getPollManager() {
     if(theManager == null) {
       theManager = new PollManager();
+
       try {
         theComm = LcapComm.getComm();
         theComm.registerMessageHandler(LockssDatagram.PROTOCOL_LCAP,
@@ -143,9 +155,11 @@ public class PollManager {
         throw new ProtocolException("Unknown opcode:" +
         msg.getOpcode());
     }
+
     if(ret_poll != null && thePolls.get(ret_poll.m_key) == null) {
       thePolls.put(ret_poll.m_key, ret_poll);
     }
+
     return ret_poll;
   }
 
@@ -192,14 +206,13 @@ public class PollManager {
     String key = makeKey(msg.getChallenge());
     Poll ret = (Poll)thePolls.get(key);
     if(ret == null) {
-      theLog.info("Making new poll: "+key);
+      theLog.info("Making new poll: "+ key);
       ret = makePoll(msg);
-      theLog.info("Done making new poll: "+key);
+      theLog.info("Done making new poll: "+ key);
       ret.startPoll();
     }
     return ret;
   }
-
 
   /**
    * handle an incoming message packet.  This will create a poll if
@@ -211,9 +224,13 @@ public class PollManager {
    */
   void handleMessage(LcapMessage msg) throws IOException {
     theLog.info("Got a message: " + msg);
-    if(isPollClosed(msg.getChallenge())) {
+    String key = makeKey(msg.getChallenge());
+    if(isPollClosed(key)) {
       theLog.info("Message received after poll was closed." + msg.toString());
-      // XXX - what to do here - not really an exception
+      return;
+    }
+    if(isPollSuspended(key)) {
+      theLog.info("Message received while poll was suspended." + msg.toString());
       return;
     }
     Poll p = findPoll(msg);
@@ -362,16 +379,29 @@ public class PollManager {
     return null;
   }
 
+  boolean isPollActive(String key) {
+    return thePolls.containsKey(key);
+  }
+
+
+
   /**
    * is this a poll that has been recently closed
-   * @param challenge the challenge identifying the poll
-   * @return true
+   * @param key the String identifying the poll
+   * @return true if closed
    */
-  boolean isPollClosed(byte[] challenge) {
-    String key = makeKey(challenge);
-    synchronized(theRecentPolls) {
-      return (theRecentPolls.containsKey(key));
-    }
+  boolean isPollClosed(String key) {
+
+    return (theRecentPolls.containsKey(key));
+  }
+
+  /**
+   * is this a poll that has been suspended
+   * @param key the String identifying the poll
+   * @return true if suspended
+   */
+  boolean isPollSuspended(String key) {
+     return (theSuspended.containsKey(key));
   }
 
   /**
@@ -384,13 +414,64 @@ public class PollManager {
       thePolls.remove(key);
     }
     // add the key to the recent polls table with an expiration time
-    long expiration = TimeBase.nowMs() + EXPIRATION_TIME;
+    long expiration = TimeBase.nowMs() +
+                      Configuration.getLongParam(PARAM_REPLAY_EXPIRATION,
+                      DEFAULT_REPLAY_EXPIRATION);
     Deadline d = Deadline.in(expiration);
     TimerQueue.schedule(d, new ExpireRecentCallback(), key);
-    theRecentPolls.put(key, new Long(expiration));
+    theRecentPolls.put(key, d);
 
   }
 
+  /**
+   * suspend a poll while we wait for a repair
+   * @param p the poll to suspend
+   */
+  void suspendPoll(Poll p) {
+    synchronized(thePolls) {
+      thePolls.remove(p.m_key);
+    }
+
+    synchronized(theRecentPolls) {
+      Deadline d = (Deadline)theRecentPolls.remove(p.m_key);
+      if(d != null) {
+        d.expire();
+      }
+    }
+
+    synchronized(theSuspended) {
+      theSuspended.put(p.m_key, p);
+    }
+  }
+
+  /**
+   * resume a poll that had been suspended for a repair and check the repair
+   * @param key the key of the suspended poll
+   */
+  void resumePoll(Object key) {
+    Poll p = null;
+
+    synchronized(theSuspended) {
+      p = (Poll)theSuspended.remove(key);
+    }
+
+    if(p != null) {
+      long expiration = TimeBase.nowMs() +
+                        Configuration.getLongParam(PARAM_REPLAY_EXPIRATION,
+                        DEFAULT_REPLAY_EXPIRATION);
+      Deadline d = Deadline.in(expiration);
+      p.getVoteTally().replayAllVotes(d);
+
+      // now we want to make sure we add it to the recent polls.
+      expiration += Configuration.getLongParam(PARAM_RECENT_EXPIRATION,
+          DEFAULT_RECENT_EXPIRATION);
+
+      d = Deadline.in(expiration);
+      TimerQueue.schedule(d, new ExpireRecentCallback(), (String)key);
+      theRecentPolls.put(key, d);
+    }
+
+  }
 
   void requestVerifyPoll(String url, String regexp, long duration, Vote vote)
       throws IOException {
@@ -414,6 +495,7 @@ public class PollManager {
     Poll poll = findPoll(reqmsg);
     poll.m_pollstate = Poll.PS_WAIT_TALLY;
   }
+
 
   /**
    * return a MessageDigest hasher for needed to hash this message
@@ -512,7 +594,7 @@ public class PollManager {
                                 byte[] secret) {
     String ver = String.valueOf(B64Code.encode(verifier));
     String sec = secret == null ? "" : String.valueOf(B64Code.encode(secret));
-    long expiration = TimeBase.nowMs() + VERIFIER_EXPIRATION_TIME;
+    long expiration = TimeBase.nowMs() + DEFAULT_VERIFIER_EXPIRATION;
     Deadline d = Deadline.in(expiration);
     TimerQueue.schedule(d, new ExpireVerifierCallback(), ver);
     synchronized (theVerifiers) {
