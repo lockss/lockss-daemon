@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.90 2003-04-30 23:40:21 tal Exp $
+* $Id: PollManager.java,v 1.91 2003-05-01 00:21:41 tal Exp $
  */
 
 /*
@@ -748,11 +748,11 @@ public class PollManager  extends BaseLockssManager {
 		       +") is too low, adjusting to the minimum: "
 		       +m_minContentPollDuration);
 	  ret = m_minContentPollDuration;
-	} else if (ret > m_maxNamePollDuration) {
+	} else if (ret > m_maxContentPollDuration) {
 	  theLog.error("My poll estimate ("+ret
 		       +") is too high, adjusting to the maximum: "
-		       +m_maxNamePollDuration);
-	  ret = m_maxNamePollDuration;
+		       +m_maxContentPollDuration);
+	  ret = m_maxContentPollDuration;
 	}
 
 // 	theLog.debug3("Minimum content poll duration: "
