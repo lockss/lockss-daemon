@@ -1,5 +1,5 @@
 /*
- * $Id: ServletManager.java,v 1.18 2003-04-22 06:49:42 tal Exp $
+ * $Id: ServletManager.java,v 1.19 2003-04-22 17:59:57 tal Exp $
  */
 
 /*
@@ -85,6 +85,7 @@ public class ServletManager extends JettyManager {
   private boolean logForbidden;
   private boolean doAuth;
   private String logdir;
+  private UserRealm realm;
 
   List accessHandlers = new ArrayList();
 
@@ -159,6 +160,17 @@ public class ServletManager extends JettyManager {
       // Create a port listener
       HttpListener listener = server.addListener(new InetAddrPort(port));
 
+      // create auth realm
+      if (doAuth) {
+	URL propsUrl = this.getClass().getResource(PASSWORD_PROPERTY_FILE);
+	if (propsUrl != null) {
+	  log.debug("passwd props file: " + propsUrl);
+	  realm = new HashUserRealm(UI_REALM, propsUrl.toString());
+	} else {
+	  log.warning("Passwd file not found, not authenticating users.");
+	}
+      }
+
       configureDebugServlets();
 //       configureAdminServlets();
 
@@ -166,6 +178,16 @@ public class ServletManager extends JettyManager {
       server.start ();
     } catch (Exception e) {
       log.warning("Couldn't start servlets", e);
+    }
+  }
+
+  private void setContextAuthHandler(HttpContext context, UserRealm realm) {
+    if (realm != null) {
+      context.setRealm(realm);
+      context.setAuthenticator(new BasicAuthenticator());
+      context.addHandler(new SecurityHandler());
+      context.addSecurityConstraint("/",
+				    new SecurityConstraint("Admin", "*"));
     }
   }
 
@@ -198,11 +220,17 @@ public class ServletManager extends JettyManager {
 	// Create a context
 	HttpContext logContext = server.getContext("/log/");
 	logContext.setAttribute("LockssDaemon", theDaemon);
+	// In this environment there is no point in consuming memory with
+	// cached resources
+	logContext.setMaxCachedFileSize(0);
 
 	// Now add handlers in the order they should be tried.
 
 	// IpAccessHandler is first
 	addAccessHandler(logContext);
+
+	// then user authentication handler
+	setContextAuthHandler(logContext, realm);
 
 	// log dir resource
 	String logdirname = (logdir != null) ? logdir : ".";
@@ -227,32 +255,24 @@ public class ServletManager extends JettyManager {
       }
 
       HttpContext context = server.getContext("/");
+
+      // Give servlets a way to find the daemon instance
+      context.setAttribute("LockssDaemon", theDaemon);
+
+      // In this environment there is no point in consuming memory with
+      // cached resources
+      context.setMaxCachedFileSize(0);
 //       context.setErrorPage("500", "images/");
 //       log.debug("Error page URL: " + context.getErrorPage("500"));
 //       log.debug("Error page URL: " + context.getErrorPage());
-      // Give servlets a way to find the daemon instance
-      context.setAttribute("LockssDaemon", theDaemon);
 
       // Now add handlers in the order they should be tried.
 
       // IpAccessHandler is first
       addAccessHandler(context);
 
-      // then user authentication
-      if (doAuth) {
-	URL propsUrl = this.getClass().getResource(PASSWORD_PROPERTY_FILE);
-	if (propsUrl != null) {
-	  log.debug("passwd props file: " + propsUrl);
-	  UserRealm realm = new HashUserRealm(UI_REALM, propsUrl.toString());
-	  context.setRealm(realm);
-	  context.setAuthenticator(new BasicAuthenticator());
-	  context.addHandler(new SecurityHandler());
-	  context.addSecurityConstraint("/",
-					new SecurityConstraint("Admin", "*"));
-	} else {
-	  log.warning("Passwd file not found, not authenticating users.");
-	}
-      }
+      // then user authentication handler
+      setContextAuthHandler(context, realm);
 
       // Create a servlet container
       ServletHandler handler = new ServletHandler();
