@@ -1,5 +1,5 @@
 /*
- * $Id: AuState.java,v 1.1 2003-02-06 00:51:45 aalto Exp $
+ * $Id: AuState.java,v 1.2 2003-02-10 23:47:23 troberts Exp $
  */
 
 /*
@@ -39,10 +39,10 @@ import org.lockss.daemon.ArchivalUnit;
  * AuState contains the state information for an au.
  */
 public class AuState {
-  ArchivalUnit au;
-  long lastCrawlTime;
+  protected ArchivalUnit au;
+  protected long lastCrawlTime;
 
-  AuState(ArchivalUnit au, long lastCrawlTime) {
+  protected AuState(ArchivalUnit au, long lastCrawlTime) {
     this.au = au;
     this.lastCrawlTime = lastCrawlTime;
   }
@@ -61,5 +61,14 @@ public class AuState {
    */
   public long getLastCrawlTime() {
     return lastCrawlTime;
+  }
+
+  public String toString() {
+    StringBuffer sb = new StringBuffer();
+    sb.append("[AuState: ");
+    sb.append("lastCrawlTime=");
+    sb.append(lastCrawlTime);
+    sb.append("]");
+    return sb.toString();
   }
 }
