@@ -1,5 +1,5 @@
 /*
- * $Id: SingleCrawlStatus.java,v 1.1.2.1 2005-01-19 17:05:02 troberts Exp $
+ * $Id: SingleCrawlStatus.java,v 1.1.2.2 2005-01-19 18:06:13 tlipkis Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ public class SingleCrawlStatus implements StatusAccessor {
   private CrawlManagerStatus cmStatus = null;
 
   private static final String URL = "url";
+  private static final String IX = "ix";
   private static final String CRAWL_ERROR = "crawl_error";
 
   private static final String FETCHED_TABLE_NAME = "fetched";
@@ -68,27 +69,46 @@ public class SingleCrawlStatus implements StatusAccessor {
 		  new ColumnDescriptor(CRAWL_ERROR, "Error",
 				       ColumnDescriptor.TYPE_STRING));
 
+  private static final List statusSortRules =
+    ListUtil.list(new StatusTable.SortRule(IX, true));
+
   public SingleCrawlStatus(CrawlManagerStatus cmStatus) {
     this.cmStatus = cmStatus;
   }
 
-  public void populateTable(StatusTable table) {
+  public void populateTable(StatusTable table)
+      throws StatusService.NoSuchTableException{
     if (table == null) {
       throw new IllegalArgumentException("Called with null table");
     } else if (table.getKey() == null) {
       throw new IllegalArgumentException("SingleCrawlStatus requires a key");
     }
     String key = table.getKey();
-    table.setColumnDescriptors(getColDescs(key));
-    table.setTitle(getTableTitle(key));
-    table.setRows(makeRows(key));
+    Crawler.Status status;
+    String tableStr;
+    try {
+      status = cmStatus.getStatusObject(getStatusKeyFromTableKey(key));
+      tableStr = getTableStrFromKey(key);
+    } catch (Exception e) {
+      throw new StatusService.NoSuchTableException("Malformed table key: " +
+						   key);
+    }      
+    if (status == null) {
+      throw new StatusService.NoSuchTableException("Status info from that crawl is no longer available");
+    }
+    table.setDefaultSortRules(statusSortRules);
+    table.setColumnDescriptors(getColDescs(tableStr));
+    table.setTitle(getTableTitle(status, tableStr));
+    table.setRows(makeRows(status, tableStr));
+//       List res = new ArrayList();
+//       res.add(new StatusTable.SummaryInfo("Foreground time",
+// 					  ColumnDescriptor.TYPE_TIME_INTERVAL,
+// 					  new Long(totalTime)));
+//       table.setSummaryInfo(getSummaryInfo(key));
   }
-  
-  private String getTableTitle(String key) {
-    Crawler.Status status =
-      (Crawler.Status)cmStatus.getStatusObject(getIndexFromKey(key));
+
+  private String getTableTitle(Crawler.Status status, String tableStr) {
     ArchivalUnit au = status.getAu();
-    String tableStr = getTableStrFromKey(key);
     if (FETCHED_TABLE_NAME.equals(tableStr)) {
       return "URLs fetched during crawl of "+au.getName();
     } else if (ERROR_TABLE_NAME.equals(tableStr)) {
@@ -103,16 +123,14 @@ public class SingleCrawlStatus implements StatusAccessor {
 
 
   private String getTableStrFromKey(String key) {
-    return key.substring(0, key.indexOf(";"));
+    return key.substring(0, key.indexOf("."));
   }
 
-  private int getIndexFromKey(String key) {
-    return Integer.parseInt(key.substring(key.indexOf(";")+1));
+  private String getStatusKeyFromTableKey(String key) {
+    return key.substring(key.indexOf(".")+1);
   }
 
-  private List getColDescs(String key) {
-    String tableStr = getTableStrFromKey(key);
-
+  private List getColDescs(String tableStr) {
     if (FETCHED_TABLE_NAME.equals(tableStr)) {
       return colDescsFetched;
     } else if (ERROR_TABLE_NAME.equals(tableStr)) {
@@ -125,10 +143,7 @@ public class SingleCrawlStatus implements StatusAccessor {
     return null;
   }
 
-  private List makeRows(String key) {
-    Crawler.Status status =
-      (Crawler.Status)cmStatus.getStatusObject(getIndexFromKey(key));
-    String tableStr = getTableStrFromKey(key);
+  private List makeRows(Crawler.Status status, String tableStr) {
     List rows = null;
 
     if (FETCHED_TABLE_NAME.equals(tableStr)) {
@@ -141,9 +156,10 @@ public class SingleCrawlStatus implements StatusAccessor {
       Map errorMap = status.getUrlsWithErrors();
       Set errorUrls = errorMap.keySet();
       rows = new ArrayList(errorUrls.size());
+      int ix = 1;
       for (Iterator it = errorUrls.iterator(); it.hasNext();) {
 	String url = (String)it.next();
- 	rows.add(makeRow(url, (String)errorMap.get(url)));
+ 	rows.add(makeRow(url, ix++, (String)errorMap.get(url)));
       }
     }
     return rows;
@@ -152,24 +168,26 @@ public class SingleCrawlStatus implements StatusAccessor {
   /**
    * Take a set of URLs and make a row for each, where row{"URL"}=<url>
    */
-  private List urlSetToRows(Set urls) {
+  private List urlSetToRows(Collection urls) {
     List rows = new ArrayList(urls.size());
+    int ix = 1;
     for (Iterator it = urls.iterator(); it.hasNext();) {
-      String url = (String)it.next(); 
-      rows.add(makeRow(url));
+      String url = (String)it.next();
+      rows.add(makeRow(url, ix++));
     }
     return rows;
   }
     
-  private Map makeRow(String url) {
+  private Map makeRow(String url, int ix) {
     Map row = new HashMap();
-    row.put(URL, url);   
+    row.put(URL, url);
+    row.put(IX, new Integer(ix));
     return row;
   }
 
-  private Map makeRow(String url, String error) {
-    Map row = makeRow(url);
-    row.put(CRAWL_ERROR, error);   
+  private Map makeRow(String url, int ix, String error) {
+    Map row = makeRow(url, ix);
+    row.put(CRAWL_ERROR, error);
     return row;
   }
 
