@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.28 2003-02-05 18:47:04 tal Exp $
+ $Id: build.xml,v 1.29 2003-02-26 21:25:48 tal Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
@@ -66,6 +66,7 @@ Args:
 <!--    <property name="test.lib"       value="${test}/lib"/> -->
   <property name="test.lib"       value="${lib}"/>
   <property name="test.results"   value="${test}/results"/>
+  <property name="test.native"    value="${test}/native"/>
 
   <property name="ant"           value="${basedir}/ant"/>
   <property name="ant.src"       value="${ant}/src"/>
@@ -302,6 +303,7 @@ Args:
     <jar jarfile="${lockss.test.jar}" basedir="${test.classes}" >
        <include name="**/" />
     </jar>
+    <!-- Write the classpath to a file, so scripts can get it -->
     <pathconvert refid="test.run.classpath" property="tmp.test.clspth"
       targetos="unix" />
     <echo message="${tmp.test.clspth}" file="${test.classpath.file}"/>
@@ -490,6 +492,7 @@ Args:
        <classpath refid="test.run.classpath" />
        <arg line="${args}" />
        <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
+       <sysproperty key="java.library.path" value="${test.native}"/>
     </java>
   </target>
 
@@ -514,6 +517,33 @@ Test results in ${test.results}
          <path refid="test.run.classpath" />
       </classpath>        
       <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
+      <sysproperty key="java.library.path" value="${test.native}"/>
+      <sysproperty key="org.lockss.test.timeout.shouldnt" value="${timeout}"/>
+    </junit>
+  </target>
+
+  <!-- ==================================================================== -->
+  <target name="func-all"
+   depends="prepare.test,check.junit,jar-tests"
+   description="Run all the functional tests (test/src/**/Func*.class" >
+    <property name="loglevel" value="" />
+    <property name="timeout" value="" />
+    <echo>
+Test results in ${test.results}
+    </echo>
+    <delete file="${test.results}/*" quiet="true" />
+    <junit fork="yes" printsummary="yes" haltonerror="yes" haltonfailure="yes">
+      <batchtest fork="no" todir="${test.results}">
+        <fileset dir="${test.src}">
+          <include name="**/Func*.java" />
+        </fileset>
+      </batchtest>
+      <formatter type="plain" usefile="true" />
+      <classpath>
+         <path refid="test.run.classpath" />
+      </classpath>        
+      <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
+      <sysproperty key="java.library.path" value="${test.native}"/>
       <sysproperty key="org.lockss.test.timeout.shouldnt" value="${timeout}"/>
     </junit>
   </target>
@@ -589,6 +619,7 @@ Test results in ${test.results}
          <path refid="test.run.classpath" />
       </classpath>        
       <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
+      <sysproperty key="java.library.path" value="${test.native}"/>
       <sysproperty key="org.lockss.test.timeout.shouldnt" value="${timeout}"/>
     </junit>
   </target>
@@ -626,6 +657,23 @@ Test results in ${test.results}
      <fail message="Recursive build failed."/>
     </catch>
    </trycatch>
+  </target>
+
+  <!-- ==================================================================== -->
+  <target name="javah-test" depends="jar-tests"
+   description="Generate headers for native code in test/" >
+     <javah destdir="${test.native}">
+      <classpath> 
+         <path refid="test.run.classpath" />
+      </classpath>        
+      <class name="org.lockss.test.DebugUtils" />
+     </javah>
+  </target>
+
+  <!-- ==================================================================== -->
+  <target name="native-test" depends="javah-test"
+   description="Compile and link native code in test/" >
+     <exec dir="${test.native}" executable="make" />
   </target>
 
   <!-- ==================================================================== -->
