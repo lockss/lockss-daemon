@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.95 2004-07-23 04:35:27 smorabito Exp $
+ $Id: build.xml,v 1.96 2004-07-23 16:48:00 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -200,7 +200,6 @@ Args:
 
   <!--  Classpaths -->
   <path id="compile.classpath">
-    <pathelement path="${regexp.jar}" />
     <pathelement path="${commons.collections.jar}" />
     <pathelement path="${commons.logging.jar}" />
     <pathelement path="${commons.httpclient.jar}" />
@@ -221,6 +220,7 @@ Args:
   <path id="test.compile.classpath">
     <path refid="compile.classpath" />
     <pathelement path="${lockss.jar}" />
+    <pathelement path="${regexp.jar}" />
     <pathelement path="${junit.jar}" />
     <pathelement path="${junit.addons.jar}" />
     <pathelement path="${httpunit.jar}" />
@@ -237,6 +237,7 @@ Args:
   <path id="tools.compile.classpath">
     <path refid="compile.classpath" />
     <pathelement path="${lockss.jar}" />
+    <pathelement path="${regexp.jar}" />
     <pathelement path="${jdk.tools.jar}" />
   </path>
 
@@ -1027,7 +1028,9 @@ java -classpath &quot;${tmp.ptool.clspth.unix}&quot; org.lockss.devtools.plugind
       <arg value="-S"/>
 <!--        <arg value="-o"/> -->
 <!--        <arg file="${etags.filename}"/> -->
-      <fileset dir="${basedir}" includes="**/*.java"/>
+      <fileset dir="${basedir}" includes="src/**/*.java"/>
+      <fileset dir="${basedir}" includes="*/src/**/*.java"/>
+      <fileset dir="${basedir}" includes="*/*/src/**/*.java"/>
     </apply>
     <property name="tagsfile" location="TAGS" />
     <echo>Tags written to ${tagsfile}</echo>
