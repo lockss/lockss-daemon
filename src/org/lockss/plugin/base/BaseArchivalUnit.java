@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.19 2003-04-23 20:32:50 tal Exp $
+ * $Id: BaseArchivalUnit.java,v 1.20 2003-04-27 08:52:19 tal Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import org.lockss.util.*;
 import org.lockss.plugin.*;
 import org.lockss.state.*;
 import org.lockss.daemon.*;
+import org.apache.commons.collections.LRUMap;
 
 /**
  * Abstract base class for ArchivalUnits.
@@ -174,13 +175,33 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     return crawlSpec;
   }
 
+  LRUMap crawlSpecCache = new LRUMap(1000);
+  int hits = 0;
+  int misses = 0;
+
   /**
    * Determine whether the url falls within the CrawlSpec.
    * @param url the url
    * @return true if it is included
    */
   public boolean shouldBeCached(String url) {
-    return getCrawlSpec().isIncluded(url);
+    Boolean cachedVal = (Boolean)crawlSpecCache.get(url);
+    if (cachedVal != null) {
+      hits++;
+      return cachedVal.booleanValue();
+    }
+    misses++;
+    boolean val = getCrawlSpec().isIncluded(url);
+    crawlSpecCache.put(url, val ? Boolean.TRUE : Boolean.FALSE);
+    return val;
+  }
+
+  public int getCrawlSpecCacheHits() {
+    return hits;
+  }
+
+  public int getCrawlSpecCacheMisses() {
+    return misses;
   }
 
   /**
