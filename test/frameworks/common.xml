@@ -78,6 +78,9 @@
 	<value>org.lockss.plugin.ojs.OJSPlugin</value>
 	<value>edu.upenn.library.plugin.clcweb.CLCWebPlugin</value>
 	<value>edu.wisc.library.plugin.CortlandReviewPlugin</value>
+	<value>edu.wisc.library.plugin.CortlandReview00Plugin</value>
+	<value>edu.wisc.library.plugin.CortlandReview99Plugin</value>
+	<value>edu.wisc.library.plugin.CortlandReview98Plugin</value>
 	<value>edu.wisc.library.plugin.BigBridgePlugin</value>
       </list>
     </property>
