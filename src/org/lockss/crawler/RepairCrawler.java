@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.5 2004-02-10 07:51:27 tlipkis Exp $
+ * $Id: RepairCrawler.java,v 1.6 2004-02-13 02:34:20 troberts Exp $
  */
 
 /*
@@ -173,23 +173,23 @@ public class RepairCrawler extends CrawlerImpl {
     Map map = idm.getAgreed(au);
     Iterator it = map.keySet().iterator();
     if (it.hasNext()) {
-      fetchFromCache(uc, (LcapIdentity)it.next());
+      fetchFromCache(uc, (String)it.next());
     }
   }
 
-  protected void fetchFromCache(UrlCacher uc, LcapIdentity id)
+  protected void fetchFromCache(UrlCacher uc, String id)
       throws IOException {
     ProxyManager proxyMan = 
       (ProxyManager)LockssDaemon.getManager(LockssDaemon.PROXY_MANAGER);
     int proxyPort = proxyMan.getProxyPort();
-    URL url =
-      new URL(null,
-	      uc.getUrl(),
-	      new sun.net.www.protocol.http.Handler(id.toString(), proxyPort));
+
+    URL url = new URL(null, uc.getUrl(), new MyHandler(id, proxyPort));
 
     
     HttpURLConnection conn = (HttpURLConnection)url.openConnection();
     conn.setRequestProperty("user-agent", LockssDaemon.getUserAgent());
+    conn.connect();
+    logger.debug("Trying to fetch from "+id);
     uc.storeContent(conn.getInputStream(),
 		    getPropertiesFromConn(conn, uc.getUrl()));
   }
@@ -243,4 +243,45 @@ public class RepairCrawler extends CrawlerImpl {
     return idMgr;
   }
 
+}
+
+//XXX mighty hack.  FIXME.
+class MyHandler extends sun.net.www.protocol.http.Handler {
+  public MyHandler (String proxy, int port) {
+    super(proxy, port);
+  }
+
+  protected java.net.URLConnection openConnection(URL u) throws IOException {
+    return new MyHttpURLConnection(u, this);
+  }
+
+  public String getProxyHost() {
+    return proxy;
+  }
+
+  public int getProxyPort() {
+    return proxyPort;
+  }
+}
+
+class MyHttpURLConnection extends sun.net.www.protocol.http.HttpURLConnection {
+  protected MyHttpURLConnection(URL u, MyHandler handler) throws IOException {
+    super(u, handler);
+  }
+
+  public void connect() throws IOException {
+    if (connected) {
+      return;
+    }
+    try {
+      // Always create new connection when proxying
+      MyHandler h = (MyHandler)handler;
+      http = getProxiedClient(url, h.getProxyHost(), h.getProxyPort());
+      ps = (PrintStream)http.getOutputStream();
+    } catch (IOException e) {
+      throw e;
+    }
+    // constructor to HTTP client calls openserver
+    connected = true;
+  }
 }
