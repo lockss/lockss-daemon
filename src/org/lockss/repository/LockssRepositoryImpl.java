@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.24 2003-03-08 03:37:26 aalto Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.25 2003-03-11 18:56:14 aalto Exp $
  */
 
 /*
@@ -57,6 +57,8 @@ public class LockssRepositoryImpl implements LockssRepository {
    * Maximum number of node instances to cache.
    */
   public static final int MAX_LRUMAP_SIZE = 12;
+
+  private static final String TEST_PREFIX = "/tmp";
 
   private String rootLocation;
   private ArchivalUnit repoAu;
@@ -190,17 +192,23 @@ public class LockssRepositoryImpl implements LockssRepository {
       try {
         URL testUrl = new URL(url);
         String path = testUrl.getPath();
-        if (!path.equals("")) {
+        if (path.indexOf("..")>=0) {
           // filtering to remove urls including '..' and such
+          path = TEST_PREFIX + path;
           File testFile = new File(path);
-          urlKey = testUrl.getProtocol() + "://" + testUrl.getHost().toLowerCase()
-              + testFile.getCanonicalPath();
+          String canonPath = testFile.getCanonicalPath();
+          if (canonPath.startsWith(TEST_PREFIX)) {
+            urlKey = testUrl.getProtocol() + "://" + testUrl.getHost().toLowerCase()
+                   + canonPath.substring(TEST_PREFIX.length());
+          } else {
+            logger.error("Illegal URL detected: "+url);
+            throw new MalformedURLException("Illegal URL detected.");
+          }
+          url = urlKey;
         } else {
-          // no path, no test needed
-          // (otherwise testFile would return a relative path, which is bad)
+          // clean path, no testing needed
           urlKey = url;
         }
-        url = urlKey;
       } catch (IOException ie) {
         logger.error("Error testing URL: "+ie);
         throw new MalformedURLException ("Error testing URL.");
