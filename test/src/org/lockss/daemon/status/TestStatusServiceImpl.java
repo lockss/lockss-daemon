@@ -1,5 +1,5 @@
 /*
- * $Id: TestStatusServiceImpl.java,v 1.6 2003-03-15 02:32:11 troberts Exp $
+ * $Id: TestStatusServiceImpl.java,v 1.7 2003-03-17 08:26:29 tal Exp $
  */
 
 /*
@@ -394,26 +394,29 @@ public class TestStatusServiceImpl extends LockssTestCase {
 
   static Object[][] allTablesExpectedColArray = 
   {
-    {"table_name", "Table name", new Integer(ColumnDescriptor.TYPE_STRING)}
+    {"table_name", "Available Tables",
+     new Integer(ColumnDescriptor.TYPE_STRING)}
   };
 
   static Object[][] allTablesExpectedRowArray = 
   {
     {new StatusTable.Reference("A_table", "A_table", null)},
-    {new StatusTable.Reference("B_table", "B_table", null)},
+    {new StatusTable.Reference("B Title", "B_table", null)},
     {new StatusTable.Reference("F_table", "F_table", null)},
     {new StatusTable.Reference("Z_table", "Z_table", null)},
-    {new StatusTable.Reference("table_of_all_tables", 
-			       "table_of_all_tables", null)}
   };
 
   public void testGetTableOfAllTables() 
       throws StatusService.NoSuchTableException {
     statusService.startService(); //registers table of all tables
-    statusService.registerStatusAccessor("A_table", new MockStatusAccessor());
-    statusService.registerStatusAccessor("B_table", new MockStatusAccessor());
-    statusService.registerStatusAccessor("F_table", new MockStatusAccessor());
-    statusService.registerStatusAccessor("Z_table", new MockStatusAccessor());
+    statusService.registerStatusAccessor("A_table",
+					 makeMockStatusAccessor(null));
+    statusService.registerStatusAccessor("B_table",
+					 makeMockStatusAccessor("B Title"));
+    statusService.registerStatusAccessor("F_table",
+					 makeMockStatusAccessor("F_table"));
+    statusService.registerStatusAccessor("Z_table",
+					 makeMockStatusAccessor("Z_table"));
     
     StatusTable table = 
       statusService.getTable(StatusService.ALL_TABLES_TABLE, null);
@@ -429,13 +432,23 @@ public class TestStatusServiceImpl extends LockssTestCase {
     assertRowsEqual(expectedRows, table.getSortedRows());
   }
   
+  MockStatusAccessor makeMockStatusAccessor(String title) {
+    MockStatusAccessor sa = new MockStatusAccessor();
+    sa.setTitle(title, null);
+    return sa;
+  }
+
   public void testGetTableOfAllTablesFiltersTablesThatRequireKeys() 
       throws StatusService.NoSuchTableException {
     statusService.startService(); //registers table of all tables
-    statusService.registerStatusAccessor("A_table", new MockStatusAccessor());
-    statusService.registerStatusAccessor("B_table", new MockStatusAccessor());
-    statusService.registerStatusAccessor("F_table", new MockStatusAccessor());
-    statusService.registerStatusAccessor("Z_table", new MockStatusAccessor());
+    statusService.registerStatusAccessor("A_table",
+					 makeMockStatusAccessor("A_table"));
+    statusService.registerStatusAccessor("B_table",
+					 makeMockStatusAccessor("B Title"));
+    statusService.registerStatusAccessor("F_table",
+					 makeMockStatusAccessor("F_table"));
+    statusService.registerStatusAccessor("Z_table",
+					 makeMockStatusAccessor("Z_table"));
 
     MockStatusAccessor statusAccessor = new MockStatusAccessor();
     statusAccessor.setRequiresKey(true);

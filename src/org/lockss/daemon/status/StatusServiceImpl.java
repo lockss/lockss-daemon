@@ -1,5 +1,5 @@
 /*
- * $Id: StatusServiceImpl.java,v 1.9 2003-03-15 02:32:11 troberts Exp $
+ * $Id: StatusServiceImpl.java,v 1.10 2003-03-17 08:26:29 tal Exp $
  */
 
 /*
@@ -91,9 +91,10 @@ public class StatusServiceImpl
     }
 
     synchronized(statusAccessors) {
-      if (statusAccessors.get(tableName) != null) {
+      Object oldAccessor = statusAccessors.get(tableName);
+      if (oldAccessor != null) {
 	throw new 
-	  StatusService.MultipleRegistrationException(statusAccessor
+	  StatusService.MultipleRegistrationException(oldAccessor
 						      +" already registered "
 						      +"for "+tableName);
       }
@@ -113,7 +114,7 @@ public class StatusServiceImpl
     private List columns;
     private List sortRules;
     private static final String COL_NAME = "table_name";
-    private static final String COL_TITLE = "Table name";
+    private static final String COL_TITLE = "Available Tables";
     private static final String ALL_TABLE_TITLE = "Cache Overview";
 
     public AllTableStatusAccessor() {
@@ -148,10 +149,21 @@ public class StatusServiceImpl
 	  String tableName = (String) it.next();
 	  StatusAccessor statusAccessor = 
 	    (StatusAccessor)statusAccessors.get(tableName);
-	  if (!statusAccessor.requiresKey()) {
+	  if (!ALL_TABLES_TABLE.equals(tableName) &&
+	      !statusAccessor.requiresKey()) {
 	    Map row = new HashMap(1); //will only have the one key-value pair
+	    String title = null;
+	    try {
+	      title = statusAccessor.getTitle(null);
+	    } catch (NoSuchTableException e) {
+	      // no action, title is null here
+	    }
+	    // getTitle might return null or throw
+	    if (title == null) {
+	      title = tableName;
+	    }
 	    row.put(COL_NAME, 
-		    new StatusTable.Reference(tableName, tableName, null));
+		    new StatusTable.Reference(title, tableName, null));
 	    rows.add(row);
 	  }
 	}
