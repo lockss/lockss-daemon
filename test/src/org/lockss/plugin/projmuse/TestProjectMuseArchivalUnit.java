@@ -1,5 +1,5 @@
 /*
- * $Id: TestProjectMuseArchivalUnit.java,v 1.6 2003-09-26 23:49:01 eaalto Exp $
+ * $Id: TestProjectMuseArchivalUnit.java,v 1.7 2003-10-28 23:45:43 eaalto Exp $
  */
 
 /*
@@ -236,6 +236,13 @@ public class TestProjectMuseArchivalUnit extends LockssTestCase {
     ProjectMuseArchivalUnit au1 =
         makeAu(new URL("http://www.bmj.com/"), 61, "bmj");
     assertEquals("www.bmj.com, bmj, vol. 61", au1.getName());
+  }
+
+  public void testGetFilterRules() throws Exception {
+    ProjectMuseArchivalUnit au = makeAu(new URL(ROOT_URL), 60, DIR);
+    assertNull(au.getFilterRule(null));
+    assertNull(au.getFilterRule("jpg"));
+    assertTrue(au.getFilterRule("text/html") instanceof ProjectMuseFilterRule);
   }
 
   public static void main(String[] argv) {

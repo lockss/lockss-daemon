@@ -1,5 +1,5 @@
 /*
- * $Id: ProjectMuseArchivalUnit.java,v 1.15 2003-10-10 19:21:45 eaalto Exp $
+ * $Id: ProjectMuseArchivalUnit.java,v 1.16 2003-10-28 23:45:43 eaalto Exp $
  */
 
 /*
@@ -182,6 +182,18 @@ public class ProjectMuseArchivalUnit extends BaseArchivalUnit {
 
     CrawlRule rule = makeRules(base, journalDir, volume);
     return new CrawlSpec(makeStartUrl(base, journalDir, volume), rule);
+  }
+
+  /**
+   * Override to filter javascript for html.
+   * @param mimeType the mime type
+   * @return the FilterRule if 'text/html', else null
+   */
+  public FilterRule getFilterRule(String mimeType) {
+    if ("text/html".equals(mimeType)) {
+      return new ProjectMuseFilterRule();
+    }
+    return null;
   }
 
   public String getManifestPage() {
