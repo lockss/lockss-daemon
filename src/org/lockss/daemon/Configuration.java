@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.2 2002-09-02 04:22:44 tal Exp $
+ * $Id: Configuration.java,v 1.3 2002-09-05 22:13:34 tal Exp $
  */
 
 /*
@@ -49,6 +49,7 @@ import org.lockss.util.*;
  * from the current configuration, not that instance.  So don't do that.)
  * */
 public abstract class Configuration {
+  /** The common prefix string of all LOCKSS configuration parameters. */
   public static final String PREFIX = "org.lockss.";
 
   // MUST pass in explicit log level to avoid recursive call back to
@@ -188,6 +189,9 @@ public abstract class Configuration {
 
   abstract Set differentKeys(Configuration otherConfig);
 
+  /** Return the config value associated with <code>key</code>.
+   * If the value is null or the key is missing, return <code>dfault</code>.
+   */
   public String get(String key, String dfault) {
     String val = get(key);
     if (val == null) {
@@ -196,24 +200,122 @@ public abstract class Configuration {
     return val;
   }
 
+  static Map boolStrings = new HashMap();
+  static {
+    boolStrings.put("true", Boolean.TRUE);
+    boolStrings.put("yes", Boolean.TRUE);
+    boolStrings.put("on", Boolean.TRUE);
+    boolStrings.put("1", Boolean.TRUE);
+    boolStrings.put("false", Boolean.FALSE);
+    boolStrings.put("no", Boolean.FALSE);
+    boolStrings.put("off", Boolean.FALSE);
+    boolStrings.put("0", Boolean.FALSE);
+  }
+
+  private Boolean stringToBool(String s) {
+    if (s == null) {
+      return null;
+    }
+    Boolean res = (Boolean)boolStrings.get(s);
+    if (res != null) {
+      return res;
+    } else {
+      return (Boolean)boolStrings.get(s.toLowerCase());
+    }
+  }
+
+  /** Return the config value as a boolean.
+   * @throws Configuration.Error if the value is missing or
+   * not parsable as a boolean.
+   */
+  public boolean getBoolean(String key) throws Error {
+    String val = get(key);
+    Boolean bool = stringToBool(val);
+    if (bool != null) {
+      return bool.booleanValue();
+    }
+    throw new Error("Not a boolean value: " + val);
+  }
+
+  /** Return the config value as a boolean.  If it's missing, return the
+   * default value.  If it's present but not parsable as a boolean, log a
+   * warning and return the default value.
+   */
+  public boolean getBoolean(String key, boolean dfault) {
+    String val = get(key);
+    if (val == null) {
+      return dfault;
+    }
+    Boolean bool = stringToBool(val);
+    if (bool != null) {
+      return bool.booleanValue();
+    }
+    log.warning("getBoolean(\'" + key + "\") = \"" + val + "\"");
+    return dfault;
+  }
+
+  /** Return the config value as an int.
+   * @throws Configuration.Error if the value is missing or
+   * not parsable as an int.
+   */
+  public int getInt(String key) throws Error {
+    String val = get(key);
+    try {
+      return Integer.parseInt(val);
+    } catch (NumberFormatException e) {
+      throw new Error("Not an int value: " + val);
+    }
+  }
+
+  /** Return the config value as an int.  If it's missing, return the
+   * default value.  If it's present but not parsable as an int, log a
+   * warning and return the default value
+   */
+  public int getInt(String key, int dfault) {
+    String val = get(key);
+    if (val == null) {
+      return dfault;
+    }
+    try {
+      return Integer.parseInt(val);
+    } catch (NumberFormatException e) {
+      log.warning("getInt(\'" + key + "\") = \"" + val + "\"");
+      return dfault;
+    }
+  }
+
   // must be implemented by implementation subclass
 
-  public abstract void reset();
+  abstract void reset();
 
+  /** return true iff the configurations have the same keys
+   * with the same values.
+   */
   public abstract boolean equals(Object c);
 
+  /** Return the config value associated with <code>key</code>.
+   * @return the string, or null if the key is not present
+   * or its value is null.
+   */
   public abstract String get(String key);
 
-  public abstract boolean getBoolean(String key);
-
-  public abstract boolean getBoolean(String key, boolean dFault);
-
+  /** Returns a Configuration instance containing all the keys at or
+   * below <code>key</code>
+   */
   public abstract Configuration getConfigTree(String key);
 
+  /** Returns an <code>Iterator</code> over all the keys in the configuration.
+   */
   public abstract Iterator keyIterator();
 
+  /** Returns an <code>Iterator</code> over all the top level
+     keys in the configuration.
+   */
   public abstract Iterator nodeIterator();
 
+  /** Returns an <code>Iterator</code> over the top-level keys in the
+   * configuration subtree below <code>key</code>
+   */
   public abstract Iterator nodeIterator(String key);
 
   // static convenience methods
@@ -235,7 +337,7 @@ public abstract class Configuration {
   /** Static convenience method to get param from current configuration.
    * Don't accidentally use this on a <code>Configuration</code> instance.
    */
-  public static boolean getBooleanParam(String key) {
+  public static boolean getBooleanParam(String key) throws Error {
     return currentConfig.getBoolean(key);
   }
 
@@ -244,6 +346,20 @@ public abstract class Configuration {
    */
   public static boolean getBooleanParam(String key, boolean dfault) {
     return currentConfig.getBoolean(key, dfault);
+  }
+
+  /** Static convenience method to get param from current configuration.
+   * Don't accidentally use this on a <code>Configuration</code> instance.
+   */
+  public static int getIntParam(String key) throws Error {
+    return currentConfig.getInt(key);
+  }
+
+  /** Static convenience method to get param from current configuration.
+   * Don't accidentally use this on a <code>Configuration</code> instance.
+   */
+  public static int getIntParam(String key, int dfault) {
+    return currentConfig.getInt(key, dfault);
   }
 
   /** Static convenience method to get a <code>Configuration</code>
@@ -270,9 +386,9 @@ public abstract class Configuration {
     return currentConfig.nodeIterator(key);
   }
 
-  static void startHandler() {
+  public static void startHandler() {
     if (handlerThread != null) {
-      log.warning("Handler's already running; stopping old one first");
+      log.warning("Handler already running; stopping old one first");
       stopHandler();
     } else {
       log.info("Starting handler");
@@ -331,6 +447,13 @@ public abstract class Configuration {
     private void stopHandler() {
       goOn = false;
       this.interrupt();
+    }
+  }
+
+  /** Exception thrown for errors in accessors. */
+  public class Error extends Exception {
+    public Error(String message) {
+      super(message);
     }
   }
 }
