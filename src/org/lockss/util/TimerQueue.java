@@ -1,5 +1,5 @@
 /*
- * $Id: TimerQueue.java,v 1.4 2002-11-20 19:43:32 tal Exp $
+ * $Id: TimerQueue.java,v 1.5 2002-11-22 17:44:45 tal Exp $
  *
 
 Copyright (c) 2000-2002 Board of Trustees of Leland Stanford Jr. University,
@@ -48,13 +48,6 @@ public class TimerQueue implements Serializable {
   public static boolean schedule(Deadline deadline, Callback callback,
 				 Object cookie) {
     return singleton.add(deadline, callback, cookie);
-  }
-
-  private void someDeadlineChanged() {
-    queue.sort();
-    if (timerThread != null) {
-      timerThread.interrupt();
-    }
   }
 
   private boolean add(Deadline deadline, Callback callback, Object cookie) {
@@ -117,6 +110,13 @@ public class TimerQueue implements Serializable {
     }
   }
 
+  private void someDeadlineChanged() {
+    queue.sort();
+    if (timerThread != null) {
+      timerThread.interrupt();
+    }
+  }
+
   // Timer thread
   private class TimerThread extends Thread {
     private boolean goOn = false;
@@ -142,7 +142,7 @@ public class TimerQueue implements Serializable {
 	    }
 	  }
 	} catch (InterruptedException e) {
-	  // no action - expected when stopping
+	  // no action - expected when stopping or when queue reordered
 	} catch (Exception e) {
 	  log.error("Unexpected exception caught in TimerQueue thread", e);
 	}
