@@ -159,15 +159,15 @@ public class TestPoll extends TestCase {
 
     try {
       m = LcapMessage.makeRequestMsg(urlstr,
-                                 regexp,
-                                 testentries,
-                                 testaddr,
-                                 (byte)5,
-                                 testbytes,
-                                 testbytes,
-                                 LcapMessage.VERIFY_POLL_REQ,
-                                 5 * 60 *60 *1000,
-                                 testID);
+                                     regexp,
+                                     testentries,
+                                     testaddr,
+                                     (byte)5,
+                                     testbytes,
+                                     testbytes,
+                                     LcapMessage.VERIFY_POLL_REQ,
+                                     5 * 60 *60 *1000,
+                                     testID);
     }
     catch (IOException ex) {
       fail("can't create test message");
