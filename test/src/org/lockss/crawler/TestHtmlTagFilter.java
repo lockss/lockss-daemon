@@ -1,5 +1,5 @@
 /*
- * $Id: TestHtmlTagFilter.java,v 1.9 2003-09-02 20:12:41 troberts Exp $
+ * $Id: TestHtmlTagFilter.java,v 1.10 2003-10-07 22:22:42 troberts Exp $
  */
 
 /*
@@ -459,17 +459,6 @@ public class TestHtmlTagFilter extends LockssTestCase {
     HtmlTagFilter reader = new HtmlTagFilter(new StringReader(""),
 					     tagPair1);
     assertFalse(reader.markSupported());
-  }
-
-
-  private void assertReaderMatchesString(String expected, Reader reader)
-      throws IOException{
-    StringBuffer actual = new StringBuffer(expected.length());
-    int kar;
-    while ((kar = reader.read()) != -1) {
-      actual.append((char)kar);
-    }
-    assertEquals(expected, actual.toString());
   }
 
 

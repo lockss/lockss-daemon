@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringFilter.java,v 1.1 2003-09-10 22:59:02 troberts Exp $
+ * $Id: TestStringFilter.java,v 1.2 2003-10-07 22:22:42 troberts Exp $
  */
 
 /*
@@ -162,16 +162,6 @@ public class TestStringFilter extends LockssTestCase {
       StringFilter.makeNestedFilter(new StringReader(str),
  				    ListUtil.list("REMOVE", "ALSO"));
     assertReaderMatchesString("This is a test string", sf);
-  }
-
-  private void assertReaderMatchesString(String expected, Reader reader)
-      throws IOException{
-    StringBuffer actual = new StringBuffer(expected.length());
-    int kar;
-    while ((kar = reader.read()) != -1) {
-      actual.append((char)kar);
-    }
-    assertEquals(expected, actual.toString());
   }
 
   public static void main(String[] argv) {
