@@ -1,5 +1,5 @@
 /*
- * $Id: FileUtil.java,v 1.1 2003-09-16 23:22:45 eaalto Exp $
+ * $Id: FileUtil.java,v 1.2 2003-09-18 06:50:12 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -66,60 +66,45 @@ public class FileUtil {
 
   /**
    * Tests a path to see if it moves 'above' the root via '..'.
-   * I.e. '/test/../..' would return 'false'.  It assumes the path begins
-   * with '/', and isn't guaranteed to handle other forms.
+   * I.e. '/test/../..' would return 'false'.
    * @param path the path to be tested
    * @return true iff the path is legal
    */
   public static boolean isLegalPath(String path) {
-    int dirCount = 0;
-    // don't count first '/' at head of path
-    boolean skipNextSlash = true;
+    int len = path.length();
+    int depth = 0;
+    int index = -1;			// Points to char before start of next
+					// path component.  (Normally a slash)
+    while (index<len-2) {
+      depth++;				// assume it's a real path component
 
-    if (path.startsWith("..")) {
-      return false;
-    }
-
-    // path should start with '/', since it's from a URL object
-    int index = path.indexOf("/");
-    while (index>-1) {
-      if (index>=path.length()-2) {
-        // exit if there isn't enough room left for a '..'
-        break;
+      // index+1 points at start of path component.  Check first char
+      switch (path.charAt(index+1)) {
+      case '/':
+	depth--;			// empty path component ("//") doesn't
+	break;				// count. (Equivalent to single slash)
+      case '.':
+	// component starts with "."
+	switch (path.charAt(index+2)) {
+	case '/':
+	  depth--;			// './' doesn't count
+	  break;
+	case '.':
+	  // component starts with '..'; is next char '/' or end of string?
+	  if (((index+3)==len) || (path.charAt(index+3)=='/')) {
+	    depth-=2;	   // '../' doesn't count, and reduces depth by one
+	  }
+	  break;
+	}
+	break;
       }
-      // increment dir counter or skip
-      if (!skipNextSlash) {
-        dirCount++;
-      } else {
-        skipNextSlash = false;
+      // if depth is negative, path has too many '..'s
+      if (depth < 0) {
+	return false;
       }
-
-      // check next char
-      char c = path.charAt(index+1);
-      if (c=='.') {
-        // check char after '.'
-        c = path.charAt(index+2);
-        if (c=='/') {
-          // ignore effect of '/./' by skipping next '/' in count
-          skipNextSlash = true;
-        } else if (c=='.') {
-          // '..' detected; check if next char is '/' or end of string
-          if (((index+3)==path.length()) || (path.charAt(index+3)=='/')) {
-            dirCount--;
-            skipNextSlash = true;
-          }
-        }
-      }
-      // test for illegality
-      if (dirCount < 0) {
-        return false;
-      }
-
-      // move on to next '/'
       index = path.indexOf("/", index+1);
-    }
-
+      if (index < 0) break;
+    };
     return true;
   }
-
 }
