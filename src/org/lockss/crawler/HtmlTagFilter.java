@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlTagFilter.java,v 1.10 2003-09-02 20:12:40 troberts Exp $
+ * $Id: HtmlTagFilter.java,v 1.11 2003-09-10 22:58:39 troberts Exp $
  */
 
 /*
@@ -56,10 +56,9 @@ public class HtmlTagFilter extends Reader {
 
   Reader reader = null;
   TagPair pair = null;
-  CharRing charBuffer = null;
+  FilterCharRing charBuffer = null;
   int minBufferSize = 0;
   int bufferCapacity;
-  char[] preBuffer;
   boolean streamDone = false;
 
   private static Logger logger = Logger.getLogger("HtmlTagFilter");
@@ -91,8 +90,7 @@ public class HtmlTagFilter extends Reader {
     bufferCapacity = Configuration.getIntParam(PARAM_BUFFER_CAPACITY,
 					       DEFAULT_BUFFER_CAPACITY);
     bufferCapacity = Math.max(minBufferSize, bufferCapacity);
-    charBuffer = new CharRing(bufferCapacity);
-    preBuffer = new char[bufferCapacity];
+    charBuffer = new FilterCharRing(bufferCapacity);
   }
 
   /**
@@ -165,76 +163,13 @@ public class HtmlTagFilter extends Reader {
 //   }
 
 
-  private void refillBuffer(CharRing charBuffer, Reader reader) 
-      throws IOException {
-    logger.debug3("Refilling buffer");
-    int curKar;
-
-    int charsNeeded = charBuffer.capacity() - charBuffer.size();
-    while (charsNeeded > 0) {
-      int charsRead = reader.read(preBuffer, 0, charsNeeded);
-      if (charsRead == -1) {
-	streamDone = true;
-	return;
-      }
-      try{
-	charBuffer.add(preBuffer, 0, charsRead);
-      } catch (CharRing.RingFullException e) {
-	logger.error("Overfilled a CharRing", e);
-	throw new IOException("Overfilled a CharRing");
-      }
-      charsNeeded = charBuffer.capacity() - charBuffer.size();
-    }
-  }
-
-  private boolean startsWithTag(CharRing charBuffer, int idx,
-				String tag, boolean ignoreCase) {
-    //XXX reimplement with DNA searching algorithm
-    if ((idx + tag.length()) > charBuffer.size()) {
-      throw new RuntimeException("idx("+idx+") plus the length of the tag("
-				 +tag+") is greater than the remaining size "
-				 +"of the charBuffer("+charBuffer.size()+")");
-    }
-
-    if (logger.isDebug3()) {
-      logger.debug3("checking if \""+charBuffer+"\" has \""
-		    +tag+"\" at index "+idx);
-    }
-    //less common case than first char not match, but we have to check for 
-    //size before that anyway
-    if (charBuffer.size() < tag.length() + idx) {
-      return false;
-    }
-
-    for (int ix=0; ix < tag.length() && ix + idx < charBuffer.size(); ix ++) {
-      char curChar = charBuffer.get(ix + idx);
-      if (ignoreCase) {
-	if (!charEqualsIgnoreCase(curChar, tag.charAt(ix))) {
-	  logger.debug3("It doesn't");
-	  return false;
-	} 
-      } else {
-	if (curChar != tag.charAt(ix)) {
-	  logger.debug3("It doesn't");
-	  return false;
-	}
-      }
-    }
-    logger.debug3("It does");
-    return true;
-  }
-
-  private boolean charEqualsIgnoreCase(char kar1, char kar2) {
-    return (Character.toUpperCase(kar1) == Character.toUpperCase(kar2));
-  }
-
   /**
    * Reads through the charBuffer until the end tag is reached, taking
    * nesting into account
    *
    * May leave buffer empty even if there are chars left on the reader
    */
-  private void readThroughTag(CharRing charBuffer, Reader reader,
+  private void readThroughTag(FilterCharRing charBuffer, Reader reader,
 			      TagPair pair)
   throws IOException {
     int idx = pair.start.length();
@@ -250,7 +185,7 @@ public class HtmlTagFilter extends Reader {
       }
       if ((idx + maxTagLength) > charBuffer.size()) {
 	charBuffer.clear(idx);
-	refillBuffer(charBuffer, reader);
+	streamDone = charBuffer.refillBuffer(reader);
 	idx = 0;
       }
       if (streamDone && charBuffer.size() == 0) {
@@ -260,11 +195,12 @@ public class HtmlTagFilter extends Reader {
 	idx += charBuffer.size();
       } else {
 	if (charBuffer.size() >= pair.start.length()
-	    && startsWithTag(charBuffer, idx, pair.start, pair.ignoreCase)) {
+	    && charBuffer.startsWith(idx, pair.start,
+				     pair.ignoreCase)) {
 	  tagNesting++;
 	  idx += pair.start.length();
 	} else if (charBuffer.size() >= pair.end.length()
-		   && startsWithTag(charBuffer, idx,
+		   && charBuffer.startsWith(idx,
 				    pair.end, pair.ignoreCase)) {
 	  tagNesting--;
 	  idx += pair.end.length();
@@ -299,7 +235,7 @@ public class HtmlTagFilter extends Reader {
     while (numLeft > 0
 	   && (!streamDone || charBuffer.size() > 0)) {
       if (charBuffer.size() < minBufferSize) {
-	refillBuffer(charBuffer, reader);
+	streamDone = charBuffer.refillBuffer(reader);
       }
       if (charBuffer.size() < pair.start.length()) {
 	logger.debug3("Refill only returned "+charBuffer.size()+" elements, "+
@@ -313,8 +249,8 @@ public class HtmlTagFilter extends Reader {
 	int idx =0;
 	while (!matchedTag && idx < numLeft
 	       && idx+pair.start.length() <= charBuffer.size()) {
-	  matchedTag = startsWithTag(charBuffer, idx,
-				     pair.start, pair.ignoreCase);
+	  matchedTag = charBuffer.startsWith(idx,
+					     pair.start, pair.ignoreCase);
 	  if (!matchedTag) {
 	    idx++;
 	  }
