@@ -1,5 +1,5 @@
 /*
- * $Id: MockLogTarget.java,v 1.7 2004-01-26 20:04:24 tyronen Exp $
+ * $Id: MockLogTarget.java,v 1.8 2004-02-23 09:18:35 tlipkis Exp $
  */
 
 /*
@@ -71,6 +71,10 @@ public class MockLogTarget implements LogTarget{
 
   public Iterator messageIterator() {
     return messages.iterator();
+  }
+
+  public List getMessages() {
+    return messages;
   }
 
   public int messageCount() {
