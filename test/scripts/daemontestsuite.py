@@ -1,9 +1,9 @@
 #!/usr/bin/python
-
-import sys, tempfile, time, unittest, os
+import sys, time, unittest, os
 from os import path
 from lockss_daemon import *
 
+fwCount = 0
 curFramework = None
 
 ##########################################################################
@@ -80,8 +80,8 @@ class LockssTestCase(unittest.TestCase):
         self.projectDir = config.get('projectDir')
         self.debugLevel = config.get('debugLevel', 'debug')
         self.deleteAfter = config.get('deleteAfter', False)
-        self.startPort = config.get('startPort', 8081)
-        self.timeout = config.get('timeout', 60 * 45)
+        self.startPort = int(config.get('startPort', 8081))
+        self.timeout = int(config.get('timeout', 60 * 45))
         
 
     def setUp(self):
@@ -136,7 +136,13 @@ class LockssTestCase(unittest.TestCase):
         directory in which to create the framework.  This allows each
         functional test to work in its own directory, and for all the test
         results to be left for examination if deleteAfter is false. """
-        return tempfile.mkdtemp(prefix='framework-', dir=self.workDir)
+        global fwCount
+        fwCount += 1
+        dirname = path.join(self.workDir, 'framework-' + str(fwCount))
+        if path.isdir(dirname):
+            raise LockssError("Directory %s already exists." % dirname)
+        os.mkdir(dirname)
+        return dirname
 
 ##
 ## Ensure caches can recover from simple file damage.
@@ -171,7 +177,7 @@ class SimpleDamageTestCase(LockssTestCase):
         client = self.clients[0]
 
         node = client.randomDamage(simAu)
-        log("Damaged client %s, node %s" % (client, node.url))
+        log("Damaged node %s on client %s" % (node.url, client))
 
         # Request a tree walk (deactivate and reactivate AU)
         client.requestTreeWalk(simAu)
@@ -194,8 +200,8 @@ class SimpleDamageTestCase(LockssTestCase):
                "Never called top level name poll"
         log("Called top level name poll")
 
-        # expect to see the specific damaged node marked for repairing.
-        log("Waiting for damaged node %s to be marked 'damaged'." % node.url)
+        # expect to see the specific node marked 'damaged'
+        log("Waiting for node %s to be marked 'damaged'." % node.url)
         assert client.waitForDamage(simAu, node, timeout=self.timeout),\
                "Never marked node %s 'damaged'" % node.url
         log("Marked node %s 'damaged'" % node.url)
@@ -241,7 +247,7 @@ class SimpleDeleteTestCase(LockssTestCase):
         client = self.clients[1]
 
         node = client.randomDelete(simAu)
-        log("Deleted client %s, node %s" % (client, node.url))
+        log("Deleted node %s on client %s" % (node.url, client))
 
         # Request a tree walk (deactivate and reactivate AU)
         client.requestTreeWalk(simAu)
@@ -311,15 +317,15 @@ class RangedNamePollDeleteTestCase(LockssTestCase):
         node = client.getAuNode(simAu,
                                 "http://www.example.com/" + filename)
         client.deleteNode(node)
-        log("Deleted client %s, node %s" % (client, node.url))
+        log("Deleted node %s on client %s" % (node.url, client))
 
         # Request a tree walk (deactivate and reactivate AU)
         client.requestTreeWalk(simAu)
-
+        
         # expect to see a top level content poll
         log("Waiting for top level content poll.")
         assert client.waitForTopLevelContentPoll(simAu, timeout=self.timeout),\
-        "Never called top level content poll"
+               "Never called top level content poll"
         log("Called top level content poll.")
 
         # expect to see the top level node marked damaged.

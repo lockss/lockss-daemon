@@ -1,4 +1,3 @@
-#!/usr/bin/python
 import base64, glob, httplib, os, random, shutil, signal
 import sys, time, types, urllib, urllib2
 from os import path
@@ -208,7 +207,6 @@ class Client:
         happens in about 10 seconds. """
         self.deactivateAu(au, True)
         self.reactivateAu(au, True)
-        
 
     def reactivateAu(self, au, doWait=True):
         """
@@ -251,21 +249,11 @@ class Client:
 
         return self.__getStatusTable('crawl_status_table', key)
 
-
-
-    def getAuIdStatus(self):
-        """ Return the current AU id list. """
-        return self.__getStatusTable('AuIds')
-
-    def getRepositoryStatus(self):
-        """ Return the Repository status table. """
-        return self.__getStatusTable('RepositoryTable')
-
     def getAuRepository(self, au):
         """ RepositoryStatus table does not accept key, so loop through it until
         the corresponding au is found. """
         auid = au.getAuId()
-        table = self.getRepositoryStatus()
+        table = self.__getStatusTable('RepositoryTable')
         for row in table:
             auRef = row['au']
             if auRef['key'] == auid:
@@ -279,8 +267,8 @@ class Client:
     def hasAu(self, au):
         """ Return true iff the status table lists the given au. """
         auid = au.getAuId()
-        auTable = self.getAuIdStatus()
-        for row in auTable:
+        tab = self.__getStatusTable('AuIds')
+        for row in tab:
             if row["AuId"] == auid:
                 return True
         # au wasn't found
@@ -289,9 +277,8 @@ class Client:
     def isActiveAu(self, au):
         """ Return true iff the au is activated."""
         auid = au.getAuId()
-        repositoryTable = self.getRepositoryStatus()
-
-        for row in repositoryTable:
+        tab = self.__getStatusTable('RepositoryTable')
+        for row in tab:
             status = row["status"]
             auRef = row["au"]
             # Repository status table may report with two types,
@@ -840,6 +827,7 @@ class Client:
         post.add('output', 'xml')
 
         doc = minidom.parseString(post.execute().read())
+        doc.normalize() # required for python 2.2
         rowList = doc.getElementsByTagName('st:row')
 
         data = []
@@ -866,7 +854,6 @@ class Client:
                     # Unlikely to happen, but just in case...
                     continue
             data.append(dict)
-
         return data
 
     def __makePost(self, page, lockssAction=None):
@@ -1068,6 +1055,8 @@ def loadConfig(f):
             (key, val) = line.split('=')
         except ValueError:
             continue
+        # Allow comments embedded in the line -- strip everything after '#'
+        val = val.split('#')[0]
         key = key.strip()
         val = val.strip()
         if not key or not val:
