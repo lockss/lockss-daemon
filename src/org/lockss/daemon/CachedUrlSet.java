@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrlSet.java,v 1.7 2002-10-31 01:55:36 aalto Exp $
+ * $Id: CachedUrlSet.java,v 1.8 2002-12-17 01:56:49 aalto Exp $
  */
 
 /*
@@ -45,13 +45,17 @@ import java.security.MessageDigest;
  * @author  David S. H. Rosenthal
  * @version 0.0 */
 public interface CachedUrlSet {
-  /** Return the {@link ArchivalUnit} to which this CachedUrlSet belongs */
+  /**
+   * @return the {@link ArchivalUnit} to which this CachedUrlSet belongs
+   */
   public ArchivalUnit getArchivalUnit();
 
     /**
      * Return the <code>CachedUrlSetSpec</code>
      * describing the set of URLs that are members of this
-     * <code>CachedUrlSet</code>. */
+     * <code>CachedUrlSet</code>.
+     * @return the CachedUrlSet
+     */
     public CachedUrlSetSpec getSpec();
     /**
      * Return true if the url matches an entry in the
@@ -85,15 +89,6 @@ public interface CachedUrlSet {
      *         <code>CachedUrlSetSpec</code> list.
      */
     public Iterator flatSetIterator();
-    /* NO LONGER INCLUDED
-     * Return an <code>Iterator</code> of <code>CachedUrlSet</code>
-     * objects representing the entire tree rooted at this
-     * <code>CachedUrlSet</code> object.
-     * @return an <code>Iterator</code> of the <code>CachedUrlSet</code>
-     *         matching the members of the
-     *         <code>CachedUrlSetSpec</code> list.
-     */
-//    public Iterator treeSetIterator();
     /**
      * Return an <code>Iterator</code> of <code>CachedUrl/code>
      * objects representing the leaves of the tree rooted at this
