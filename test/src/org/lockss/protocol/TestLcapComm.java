@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapComm.java,v 1.6 2003-03-04 01:02:05 aalto Exp $
+ * $Id: TestLcapComm.java,v 1.7 2003-03-24 19:40:48 troberts Exp $
  */
 
 /*
@@ -62,7 +62,7 @@ public class TestLcapComm extends LockssTestCase {
   static final String PARAM_MULTI_PORT = LcapComm.PARAM_MULTI_PORT;
   static final String PARAM_UNI_PORT = LcapComm.PARAM_UNI_PORT;
   static final String PARAM_UNI_PORT_SEND = LcapComm.PARAM_UNI_PORT_SEND;
-  static final String PARAM_VERIFY_MULTICAST = LcapComm.PARAM_VERIFY_MULTICAST;
+  static final String PARAM_VERIFY_MULTICAST = LcapComm.PARAM_MULTI_VERIFY;
 
   private static final String c1 =
     PARAM_MULTI_GROUP + "=239.3.4.5" + "\n" +
