@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.33 2003-02-20 02:23:40 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.34 2003-02-21 21:53:28 aalto Exp $
  */
 
 /*
@@ -370,14 +370,16 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
     // recurse the set's children
     Iterator children = cus.flatSetIterator();
     while (children.hasNext()) {
-      UrlElement child = (UrlElement)children.next();
-      if (child instanceof CachedUrlSet) {
-        recurseLoadCachedUrlSets((CachedUrlSet)child);
-      } else {
-        CachedUrlSetSpec rSpec = new RangeCachedUrlSetSpec(child.getUrl());
-        CachedUrlSet newSet = ((BaseArchivalUnit)managerAu).makeCachedUrlSet(
-            rSpec);
-        addNewNodeState(newSet);
+      CachedUrlSetNode child = (CachedUrlSetNode)children.next();
+      switch (child.getType()) {
+        case CachedUrlSetNode.TYPE_CACHED_URL_SET:
+          recurseLoadCachedUrlSets((CachedUrlSet)child);
+          break;
+        case CachedUrlSetNode.TYPE_CACHED_URL:
+          CachedUrlSetSpec rSpec = new RangeCachedUrlSetSpec(child.getUrl());
+          CachedUrlSet newSet = ((BaseArchivalUnit)managerAu).makeCachedUrlSet(
+              rSpec);
+          addNewNodeState(newSet);
       }
     }
   }
@@ -585,14 +587,15 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
       Poll.VoteTally results) throws IOException {
     Iterator children = state.getCachedUrlSet().flatSetIterator();
     while (children.hasNext()) {
-      UrlElement child = (UrlElement)children.next();
+      CachedUrlSetNode child = (CachedUrlSetNode)children.next();
       CachedUrlSet cus = null;
-      if (child instanceof CachedUrlSet) {
-        cus = (CachedUrlSet)child;
-      } else {
-        CachedUrlSetSpec rSpec = new RangeCachedUrlSetSpec(child.getUrl());
-        cus = ((BaseArchivalUnit)managerAu).makeCachedUrlSet(
-            rSpec);
+      switch (child.getType()) {
+        case CachedUrlSetNode.TYPE_CACHED_URL_SET:
+          cus = (CachedUrlSet)child;
+          break;
+        case CachedUrlSetNode.TYPE_CACHED_URL:
+          CachedUrlSetSpec rSpec = new RangeCachedUrlSetSpec(child.getUrl());
+          cus = ((BaseArchivalUnit)managerAu).makeCachedUrlSet(rSpec);
       }
       theDaemon.getPollManager().requestPoll(cus, null, null,
           LcapMessage.CONTENT_POLL_REQ);

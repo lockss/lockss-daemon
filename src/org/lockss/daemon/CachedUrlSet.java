@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrlSet.java,v 1.14 2003-02-20 02:23:40 aalto Exp $
+ * $Id: CachedUrlSet.java,v 1.15 2003-02-21 21:53:28 aalto Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ import java.security.MessageDigest;
  * @author  David S. H. Rosenthal
  * @version 0.0
  */
-public interface CachedUrlSet extends UrlElement {
+public interface CachedUrlSet extends CachedUrlSetNode {
   /**
    * @return the {@link ArchivalUnit} to which this CachedUrlSet belongs
    */

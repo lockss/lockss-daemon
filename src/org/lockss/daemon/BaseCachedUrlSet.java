@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrlSet.java,v 1.9 2003-02-20 02:23:40 aalto Exp $
+ * $Id: BaseCachedUrlSet.java,v 1.10 2003-02-21 21:53:28 aalto Exp $
  */
 
 /*
@@ -32,9 +32,6 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.daemon;
 
-import java.util.*;
-import java.io.File;
-import org.lockss.util.*;
 
 /**
  * Abstract base class for CachedUrlSets.
@@ -77,7 +74,11 @@ public abstract class BaseCachedUrlSet implements CachedUrlSet {
    */
   public boolean isCached(String url) {
     CachedUrl cu = makeCachedUrl(url);
-    return cu == null ? false : cu.exists();
+    return (cu == null ? false : cu.hasContent());
+  }
+
+  public boolean hasContent() {
+    return isCached(getUrl());
   }
 
   /**
@@ -87,7 +88,7 @@ public abstract class BaseCachedUrlSet implements CachedUrlSet {
    * @return true if is within the scope
    */
   public boolean containsUrl(String url) {
-    return (null != makeCachedUrl(url));
+    return (makeCachedUrl(url) != null);
   }
 
   /**
@@ -100,6 +101,10 @@ public abstract class BaseCachedUrlSet implements CachedUrlSet {
 
   public String getUrl() {
     return spec.getUrl();
+  }
+
+  public int getType() {
+    return CachedUrlSetNode.TYPE_CACHED_URL_SET;
   }
 
   /**

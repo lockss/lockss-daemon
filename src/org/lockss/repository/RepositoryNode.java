@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNode.java,v 1.7 2003-01-14 02:22:28 aalto Exp $
+ * $Id: RepositoryNode.java,v 1.8 2003-02-21 21:53:28 aalto Exp $
  */
 
 /*
@@ -79,6 +79,12 @@ public interface RepositoryNode {
    * @param newProps the new state information
    */
   public void storeState(Properties newProps);
+
+  /**
+   * Returns true if node has no children.
+   * @return true if no children
+   */
+  public boolean isLeaf();
 
   /**
    * Returns the immediate children of the entry, possibly filtered (null

@@ -1,5 +1,5 @@
 /*
- * $Id: NamePoll.java,v 1.34 2003-02-20 02:23:40 aalto Exp $
+ * $Id: NamePoll.java,v 1.35 2003-02-21 21:53:28 aalto Exp $
  */
 
 /*
@@ -159,7 +159,7 @@ public class NamePoll
       ArrayList alist = new ArrayList();
       String baseUrl = m_urlSet.getSpec().getUrl();
       while(it.hasNext()) {
-        String name = ((UrlElement)it.next()).getUrl();
+        String name = ((CachedUrlSetNode)it.next()).getUrl();
         if(name.startsWith(baseUrl)) {
           name = name.substring(name.length());
         }

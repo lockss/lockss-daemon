@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericContentHasher.java,v 1.7 2003-02-20 02:23:40 aalto Exp $
+ * $Id: TestGenericContentHasher.java,v 1.8 2003-02-21 21:53:28 aalto Exp $
  */
 
 /*
@@ -161,12 +161,15 @@ public class TestGenericContentHasher extends LockssTestCase {
 
     while (it.hasNext()) {
       CachedUrl cu = null;
-      Object element = it.next();
-      if (element instanceof CachedUrlSet) {
-        CachedUrlSet cus2 = (CachedUrlSet)element;
-        cu = cus2.makeCachedUrl(cus.getUrl());
-      } else if (element instanceof CachedUrl) {
-        cu = (CachedUrl)element;
+      CachedUrlSetNode element = (CachedUrlSetNode)it.next();
+      switch (element.getType()) {
+        case CachedUrlSetNode.TYPE_CACHED_URL_SET:
+          CachedUrlSet cus2 = (CachedUrlSet)element;
+          cu = cus2.makeCachedUrl(cus2.getUrl());
+          break;
+        case CachedUrlSetNode.TYPE_CACHED_URL:
+          cu = (CachedUrl)element;
+          break;
       }
       String delimStr = String.valueOf(DELIMITER);
       byte[] nameBytes = (delimStr+cu.getUrl()+delimStr).getBytes();

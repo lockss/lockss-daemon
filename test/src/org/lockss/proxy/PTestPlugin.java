@@ -1,5 +1,5 @@
 /*
- * $Id: PTestPlugin.java,v 1.9 2003-02-20 02:23:40 aalto Exp $
+ * $Id: PTestPlugin.java,v 1.10 2003-02-21 21:53:28 aalto Exp $
  */
 
 /*
@@ -69,8 +69,16 @@ class PTestPlugin {
       return url;
     }
 
-    public boolean exists() {
+    public boolean hasContent() {
       return contents != null;
+    }
+
+    public boolean isLeaf() {
+      return true;
+    }
+
+    public int getType() {
+      return CachedUrlSetNode.TYPE_CACHED_URL;
     }
 
     public InputStream openForReading() {

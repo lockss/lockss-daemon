@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingCrawlerImpl.java,v 1.10 2003-02-06 23:31:05 troberts Exp $
+ * $Id: GoslingCrawlerImpl.java,v 1.11 2003-02-21 21:53:29 aalto Exp $
  */
 
 /*
@@ -188,7 +188,7 @@ public class GoslingCrawlerImpl implements Crawler {
 
 	  //XXX quick fix; if statement should be removed when we rework
 	  //handling of error condition
-	  if (cu.exists()) {
+	  if (cu.hasContent()) {
 	    addUrlsToList(cu, extractedUrls);//IOException if the CU can't be read
 	    parsedPages.add(uc.getUrl());
 	  }

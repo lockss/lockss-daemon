@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrl.java,v 1.12 2003-02-11 00:58:16 aalto Exp $
+ * $Id: GenericFileCachedUrl.java,v 1.13 2003-02-21 21:53:28 aalto Exp $
  */
 
 /*
@@ -55,7 +55,7 @@ public class GenericFileCachedUrl extends BaseCachedUrl {
     super(owner, url);
   }
 
-  public boolean exists() {
+  public boolean hasContent() {
     ensureLeafLoaded();
     return leaf.hasContent();
   }

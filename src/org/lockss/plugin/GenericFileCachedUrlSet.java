@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrlSet.java,v 1.21 2003-02-20 02:23:40 aalto Exp $
+ * $Id: GenericFileCachedUrlSet.java,v 1.22 2003-02-21 21:53:28 aalto Exp $
  */
 
 /*
@@ -68,6 +68,15 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
     repository = (new LockssRepositoryImpl()).repositoryFactory(owner);
   }
 
+  public boolean isLeaf() {
+    try {
+      return repository.getNode(getUrl()).isLeaf();
+    } catch (MalformedURLException mue) {
+      logger.error("Bad url in spec: " + getUrl());
+      throw new LockssRepository.RepositoryStateException("Bad url in spec: "+getUrl());
+    }
+  }
+
   public Iterator flatSetIterator() {
     TreeSet flatSet = new TreeSet(new UrlComparator());
     String prefix = spec.getUrl();
@@ -78,14 +87,14 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
         RepositoryNode child = (RepositoryNode)children.next();
         CachedUrlSetSpec rSpec =
             new RangeCachedUrlSetSpec(child.getNodeUrl());
-        if (child.listNodes(rSpec, true).hasNext()) {
-          CachedUrlSet newSet = ((BaseArchivalUnit)au).makeCachedUrlSet(
-              rSpec);
-          flatSet.add(newSet);
-        } else {
+        if (child.isLeaf()) {
           CachedUrl newUrl = ((BaseArchivalUnit)au).cachedUrlFactory(this,
               child.getNodeUrl());
           flatSet.add(newUrl);
+        } else {
+          CachedUrlSet newSet = ((BaseArchivalUnit)au).makeCachedUrlSet(
+              rSpec);
+          flatSet.add(newSet);
         }
       }
     } catch (MalformedURLException mue) {
@@ -111,15 +120,14 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
         RepositoryNode child = (RepositoryNode)children.next();
         CachedUrlSetSpec rSpec =
             new RangeCachedUrlSetSpec(child.getNodeUrl());
-        if (child.listNodes(rSpec, true).hasNext()) {
-          CachedUrlSet newSet = ( (BaseArchivalUnit) au).makeCachedUrlSet(
-              rSpec);
-          treeSet.add(newSet);
-        }
-        else {
+        if (child.isLeaf()) {
           CachedUrl newUrl = ( (BaseArchivalUnit) au).cachedUrlFactory(this,
               child.getNodeUrl());
           treeSet.add(newUrl);
+        } else {
+          CachedUrlSet newSet = ( (BaseArchivalUnit) au).makeCachedUrlSet(
+              rSpec);
+          treeSet.add(newSet);
         }
         if (child.hasContent()) {
           contentNodeCount++;
@@ -145,14 +153,14 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
       RepositoryNode child = (RepositoryNode)children.next();
       CachedUrlSetSpec rSpec =
           new RangeCachedUrlSetSpec(child.getNodeUrl());
-      if (child.listNodes(rSpec, true).hasNext()) {
-        CachedUrlSet newSet = ((BaseArchivalUnit)au).makeCachedUrlSet(
-            rSpec);
-        set.add(newSet);
-      } else {
+      if (child.isLeaf()) {
         CachedUrl newUrl = ((BaseArchivalUnit)au).cachedUrlFactory(this,
             child.getNodeUrl());
         set.add(newUrl);
+      } else {
+        CachedUrlSet newSet = ((BaseArchivalUnit)au).makeCachedUrlSet(
+            rSpec);
+        set.add(newSet);
       }
       if (child.hasContent()) {
         contentNodeCount++;
@@ -243,9 +251,9 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
     public int compare(Object o1, Object o2) {
       String prefix = null;
       String prefix2 = null;
-      if ((o1 instanceof UrlElement) && (o2 instanceof UrlElement)) {
-        prefix = ((UrlElement)o1).getUrl();
-        prefix2 = ((UrlElement)o2).getUrl();
+      if ((o1 instanceof CachedUrlSetNode) && (o2 instanceof CachedUrlSetNode)) {
+        prefix = ((CachedUrlSetNode)o1).getUrl();
+        prefix2 = ((CachedUrlSetNode)o2).getUrl();
       } else {
         throw new IllegalStateException("Bad object in iterator: " +
                                         o1.getClass() + "," +

@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrlSet.java,v 1.21 2003-02-20 02:27:37 aalto Exp $
+ * $Id: MockCachedUrlSet.java,v 1.22 2003-02-21 21:53:28 aalto Exp $
  */
 
 /*
@@ -84,7 +84,19 @@ public class MockCachedUrlSet implements CachedUrlSet {
 
   public boolean isCached(String url) {
     CachedUrl cu = (CachedUrl)cuHash.get(url);
-    return cu.exists();
+    return cu.hasContent();
+  }
+
+  public boolean hasContent() {
+    return isCached(getUrl());
+  }
+
+  public boolean isLeaf() {
+    return ((flatSetIterator()==null) && (treeIterator()==null));
+  }
+
+  public int getType() {
+    return CachedUrlSetNode.TYPE_CACHED_URL_SET;
   }
 
   public Iterator flatSetIterator() {

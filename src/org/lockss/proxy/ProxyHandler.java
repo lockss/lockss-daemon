@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.8 2003-02-07 19:15:48 aalto Exp $
+ * $Id: ProxyHandler.java,v 1.9 2003-02-21 21:53:28 aalto Exp $
  */
 
 /*
@@ -139,7 +139,7 @@ public class ProxyHandler extends NullHandler implements LockssManager {
       if (cus != null) {
 	CachedUrl cu = cus.makeCachedUrl(urlString);
 	System.err.println("proxy: cu = " + cu);
-	if (cu.exists()) {
+	if (cu.hasContent()) {
 	  serveFromCache(pathInContext, pathParams, request, response, cu);
 	  return;
 	}

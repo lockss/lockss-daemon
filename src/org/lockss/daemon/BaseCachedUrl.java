@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.6 2003-02-20 02:23:40 aalto Exp $
+ * $Id: BaseCachedUrl.java,v 1.7 2003-02-21 21:53:28 aalto Exp $
  */
 
 /*
@@ -53,12 +53,16 @@ public abstract class BaseCachedUrl implements CachedUrl {
     this.url = url;
   }
 
-  /**
-   * Return the URL
-   * @return the url
-   */
   public String getUrl() {
     return url;
+  }
+
+  public int getType() {
+    return CachedUrlSetNode.TYPE_CACHED_URL;
+  }
+
+  public boolean isLeaf() {
+    return true;
   }
 
   /**

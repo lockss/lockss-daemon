@@ -1,5 +1,5 @@
 /*
- * $Id: UrlElement.java,v 1.1 2003-02-20 02:15:37 aalto Exp $
+ * $Id: CachedUrlSetNode.java,v 1.1 2003-02-21 21:53:28 aalto Exp $
  */
 
 /*
@@ -37,11 +37,39 @@ package org.lockss.daemon;
  * It simply provides a mechanism for easily getting the urls of lists of those
  * classes.
  */
-public interface UrlElement {
+public interface CachedUrlSetNode {
+  /**
+   * The type int for a CachedUrlSet.
+   */
+  public static final int TYPE_CACHED_URL_SET = 0;
+  /**
+   * The type int for a CachedUrl.
+   */
+  public static final int TYPE_CACHED_URL = 1;
 
   /**
-   * Returns the name of this element (typically the url).
-   * @return the name
+   * Returns the url of this node.
+   * @return the url
    */
   public String getUrl();
+
+  /**
+   * Returns an int representing the type of node.
+   * @return the int
+   */
+  public int getType();
+
+  /**
+   * Returns true if the node has content.
+   * @return true if content
+   */
+  public boolean hasContent();
+
+  /**
+   * Returns true if a leaf node.
+   * @return true if a leaf
+   */
+  public boolean isLeaf();
+
+
 }

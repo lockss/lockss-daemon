@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.17 2003-02-20 22:29:39 tal Exp $
+ * $Id: NullPlugin.java,v 1.18 2003-02-21 21:53:28 aalto Exp $
  */
 
 /*
@@ -65,8 +65,16 @@ public class NullPlugin {
       return null;
     }
 
-    public boolean exists() {
+    public boolean hasContent() {
       return false;
+    }
+
+    public boolean isLeaf() {
+      return true;
+    }
+
+    public int getType() {
+      return CachedUrlSetNode.TYPE_CACHED_URL;
     }
 
     public InputStream openForReading() {
@@ -159,6 +167,14 @@ public class NullPlugin {
       return null;
     }
 
+    public boolean isLeaf() {
+      return false;
+    }
+
+    public int getType() {
+      return CachedUrlSetNode.TYPE_CACHED_URL_SET;
+    }
+
     public org.lockss.daemon.CachedUrlSetHasher
       getContentHasher(MessageDigest hasher) {
       return new CachedUrlSetHasher();
@@ -175,7 +191,11 @@ public class NullPlugin {
 
     public boolean isCached(String url) {
       org.lockss.daemon.CachedUrl cu = makeCachedUrl(url);
-      return cu == null ? false : cu.exists();
+      return cu == null ? false : cu.hasContent();
+    }
+
+    public boolean hasContent() {
+      return false;
     }
 
     public org.lockss.daemon.CachedUrl makeCachedUrl(String url) {

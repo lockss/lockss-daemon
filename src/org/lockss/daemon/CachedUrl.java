@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrl.java,v 1.8 2003-02-20 02:23:40 aalto Exp $
+ * $Id: CachedUrl.java,v 1.9 2003-02-21 21:53:28 aalto Exp $
  */
 
 /*
@@ -31,6 +31,7 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.daemon;
+
 import java.io.*;
 import java.util.Properties;
 
@@ -50,17 +51,7 @@ import java.util.Properties;
  * @author  David S. H. Rosenthal
  * @see UrlCacher
  * @version 0.0 */
-public interface CachedUrl extends UrlElement {
-    /**
-     * Return <code>true</code> if the object describes a url that
-     * exists in the cache.
-     * @return <code>true</code> if the object describes a url that
-     *         exists in the cache, <code>false</code> otherwise.
-     */
-    public boolean exists();
-
-    // Read interface - used by the proxy and hasher.
-
+public interface CachedUrl extends CachedUrlSetNode {
     /**
      * Get an object from which the content of the url can be read
      * from the cache.
