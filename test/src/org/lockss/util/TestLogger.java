@@ -1,5 +1,5 @@
 /*
- * $Id: TestLogger.java,v 1.7 2003-01-02 06:45:54 tal Exp $
+ * $Id: TestLogger.java,v 1.8 2003-01-05 04:38:13 tal Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ import org.lockss.test.*;
  * @version 0.0
  */
 
-public class TestLogger extends LockssTestCase{
+public class TestLogger extends LockssTestCase {
   public static Class testedClasses[] = {
     org.lockss.util.Logger.class
   };
@@ -62,11 +62,18 @@ public class TestLogger extends LockssTestCase{
     "critical"
   };
 
-  public TestLogger(String msg){
+  public TestLogger(String msg) {
     super(msg);
   }
 
-  public void setUp(){
+  public void setUp() throws Exception {
+    super.setUp();
+    Logger.defaultTarget();
+  }
+
+  public void tearDown() throws Exception {
+    Logger.defaultTarget();
+    super.tearDown();
   }
 
   public void testNames() {
@@ -96,6 +103,38 @@ public class TestLogger extends LockssTestCase{
     assertEquals(1, target.initCount());
   }
 
+  public void testAddTargetByName() {
+    Logger l = Logger.getLogger("test-log");
+    Logger.addTarget("org.lockss.test.MockLogTarget");
+    List tgts = Logger.getTargets();
+    int cnt = 0;
+    for (Iterator iter = tgts.iterator(); iter.hasNext(); ) {
+      LogTarget tgt = (LogTarget)iter.next();
+      if (tgt instanceof MockLogTarget) {
+	cnt++;
+      }
+    }
+    assertEquals(1, cnt);
+  }
+
+  public void testConfigureTargets() throws Exception {
+    Logger l = Logger.getLogger("test-log");
+    String s =
+      "org.lockss.log.targets=" +
+      "org.lockss.test.MockLogTarget:org.lockss.util.SyslogTarget\n";
+    TestConfiguration.setCurrentConfigFromString(s);
+    List tgts = Logger.getTargets();
+    List tgtClasses = new ArrayList();
+    for (Iterator iter = tgts.iterator(); iter.hasNext(); ) {
+      LogTarget tgt = (LogTarget)iter.next();
+      tgtClasses.add(tgt.getClass());
+    }
+    assertIsomorphic(ListUtil.list(StdErrTarget.class,
+				   MockLogTarget.class,
+				   SyslogTarget.class),
+		     tgtClasses);
+  }
+
   public void testLevelFilter() {
     Logger l = Logger.getLogger("test-log");
     MockLogTarget target = new MockLogTarget();
@@ -112,7 +151,6 @@ public class TestLogger extends LockssTestCase{
     l.setLevel(Logger.LEVEL_CRITICAL);
     l.error("yes");
     assertEquals(2, target.messageCount());
-    l.defaultTarget();
   }
 
   static String testOutputOutput[] = {
@@ -136,7 +174,6 @@ public class TestLogger extends LockssTestCase{
       System.err.println((String)iter.next());
     }
     assertIsomorphic(testOutputOutput, target.messageIterator());
-    l.defaultTarget();
   }
 
   private static final String c1 = "prop1=12\nprop2=foobar\nprop3=true\n"; 
@@ -150,8 +187,7 @@ public class TestLogger extends LockssTestCase{
     String s =
       "org.lockss.log." + logName + ".level=" + Logger.nameOf(level) + "\n" +
       "org.lockss.log.default.level=critical\n";
-    TestConfiguration.
-      setCurrentConfigFromUrlList(ListUtil.list(FileUtil.urlOfString(s)));
+    TestConfiguration.setCurrentConfigFromString(s);
   }
 
   public void testLevelconfig()
@@ -172,7 +208,6 @@ public class TestLogger extends LockssTestCase{
       System.err.println((String)iter.next());
     }
     assertIsomorphic(testOutputOutput, target.messageIterator());
-    l.defaultTarget();
   }
 
   public void testNoRecurse() {

@@ -1,5 +1,5 @@
 /*
- * $Id: Logger.java,v 1.11 2003-01-02 06:43:20 tal Exp $
+ * $Id: Logger.java,v 1.12 2003-01-05 04:38:13 tal Exp $
  */
 
 /*
@@ -51,6 +51,7 @@ public class Logger {
   static final String PREFIX = Configuration.PREFIX + "log.";
   static final String PARAM_DEFAULT_LEVEL = PREFIX + "default.level";
   static final String PARAM_LOG_LEVEL = PREFIX + "<logname>.level";
+  static final String PARAM_LOG_TARGETS = PREFIX + "targets";
 
   /** Critical errors, need immediate attention */
   public static final int LEVEL_CRITICAL = 1;
@@ -82,12 +83,14 @@ public class Logger {
   // allow default level to be specified on command line
   private static int defaultLevel;
 
-  private static boolean configHandlerRegistered = false;
+  private static boolean deferredInitDone = false;
   private static ThreadLocal targetStack = new ThreadLocal() {
       protected Object initialValue() {
 	return new Vector();
       }
     };
+
+  private static Logger myLog;
 
   private int level;			// this log's level
   private String name;			// this log's name
@@ -114,15 +117,22 @@ public class Logger {
    * @param name identifies the log instance, appears in output
    */
   public static Logger getLogger(String name) {
-    // Ick.  But can't call this until Configuration class is fully loaded
-    if (!configHandlerRegistered) {
-      registerConfigCallback();
-      configHandlerRegistered = true;
+    if (!deferredInitDone) {
+      // set this true FIRST, as this method will be called recursively by
+      // deferredInit()
+      deferredInitDone = true;
+      deferredInit();
     }
     if (name == null) {
       name = genName();
     }
     return getLogger(name, getConfiguredLevel(name));
+  }
+
+  private static void deferredInit() {
+    // Can't call this until Configuration class is fully loaded.
+    registerConfigCallback();
+    myLog = Logger.getLogger("Logger");
   }
 
   /**
@@ -279,19 +289,44 @@ public class Logger {
 	public void configurationChanged(Configuration oldConfig,
 					 Configuration newConfig,
 					 Set changedKeys) {
-	  setConfiguredLogLevels();
+	  setConfig(changedKeys);
 	}
       });
   }
 
   /** Set log level of all logs to the currently configured value
    */
-  private static void setConfiguredLogLevels() {
-    Iterator iter = logs.values().iterator();
-    while (iter.hasNext()) {
+  private static void setConfig(Set changedKeys) {
+    for (Iterator iter = logs.values().iterator();
+	 iter.hasNext(); ) {
       Logger l = (Logger)iter.next();
       l.setLevel(getConfiguredLevel(l.name));
     }
+    if (changedKeys.contains(PARAM_LOG_TARGETS)) {
+      Vector v =
+	StringUtil.breakAt(Configuration.getParam(PARAM_LOG_TARGETS), ':');
+      for (Iterator iter = v.iterator(); iter.hasNext(); ) {
+	addTarget((String)iter.next());
+      }
+    }
+  }
+
+  /**
+   * Add an output target to all loggers.
+   * @param name of <code>LogTarget</code> implementation.
+   */
+  static void addTarget(String targetName) {
+    try {
+      Class targetClass = Class.forName(targetName);
+      LogTarget target = (LogTarget)targetClass.newInstance();
+      addTarget(target);
+    } catch (Exception e) {
+    myLog.error("Couldn't add log target \"" + targetName + "\"", e);
+    }
+  }
+
+  static Vector getTargets() {
+    return targets;
   }
 
   /**
