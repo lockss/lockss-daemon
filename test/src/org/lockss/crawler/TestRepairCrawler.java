@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepairCrawler.java,v 1.9 2004-07-12 06:27:30 tlipkis Exp $
+ * $Id: TestRepairCrawler.java,v 1.10 2004-07-12 18:19:02 dcfok Exp $
  */
 
 /*
@@ -33,12 +33,14 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.crawler;
 import java.util.*;
 import java.net.*;
+import java.io.*;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
 import org.lockss.protocol.*;
 import org.lockss.state.*;
 import org.lockss.test.*;
+import org.lockss.util.urlconn.CacheException;
 
 /**
  *TODO
@@ -200,29 +202,167 @@ public class TestRepairCrawler extends LockssTestCase {
     assertFalse(crawler.doCrawl());
   }
 
-//   public void testFetchFromOtherCache() throws UnknownHostException {
-//     MockLockssDaemon theDaemon = new MockLockssDaemon();
-//     MockIdentityManager idm = new MockIdentityManager();
-//     LcapIdentity id = new LcapIdentity(LcapIdentity.stringToAddr("127.0.0.1"));
-//     Map map = new HashMap();
-//     map.put(id, new Long(10));
-//     idm.setAgeedForAu(mau, map);
+  public void testFetchFromACacheOnly() throws UnknownHostException {
+    MockLockssDaemon theDaemon = new MockLockssDaemon();
+    MockIdentityManager idm = new MockIdentityManager();
+    String id = "127.0.0.1";
+    Map map = new HashMap();
+    map.put(id, new Long(10));
+    idm.setAgeedForAu(mau, map);
 		      
-//     theDaemon.setIdentityManager(idm);
+    theDaemon.setIdentityManager(idm);
 
+    String repairUrl = "http://example.com/blah.html";
+    MyRepairCrawler crawler =
+      new MyRepairCrawler(mau, spec, aus, ListUtil.list(repairUrl),0);
 
-//     String repairUrl = "http://example.com/blah.html";
-//     MyRepairCrawler crawler =
-//       new MyRepairCrawler(mau, spec, aus, ListUtil.list(repairUrl));
+    Properties p = new Properties();
+    p.setProperty(RepairCrawler.PARAM_FETCH_FROM_OTHER_CACHES_ONLY, "true");
+    ConfigurationUtil.setCurrentConfigFromProps(p);
 
-//     Properties p = new Properties();
-//     p.setProperty(RepairCrawler.PARAM_FETCH_FROM_OTHER_CACHE, "true");
-//     ConfigurationUtil.setCurrentConfigFromProps(p);
+    crawler.doCrawl();
+    assertEquals("Fail! fetch from "+ crawler.getContentSource(repairUrl) ,id, crawler.getContentSource(repairUrl));
+    assertTrue("Fail! fetch from caches occur, fetchCacheCnt = " + 
+	         crawler.getFetchCacheCnt() , crawler.getFetchCacheCnt() == 1);
+    assertTrue("Fail! fetch from publisher occurs", crawler.getFetchPubCnt() == 0);
+  }
 
-//     crawler.doCrawl(Deadline.MAX);
-//     assertEquals(id, crawler.getContentSource(repairUrl));
-//   }
+  public void testFetchFromOtherCachesOnlyWithoutRetryLimit() throws UnknownHostException {
+    MockLockssDaemon theDaemon = new MockLockssDaemon();
+    MockIdentityManager idm = new MockIdentityManager();
+    String id1 = "127.0.0.1";
+    String id2 = "127.0.0.2";
+    String id3 = "127.0.0.3";
+    Map map = new HashMap();
+    map.put(id1, new Long(10));
+    map.put(id2, new Long(11));
+    map.put(id3, new Long(12));
+    idm.setAgeedForAu(mau, map);
+		      
+    theDaemon.setIdentityManager(idm);
 
+    String repairUrl = "http://example.com/blah.html";
+    MyRepairCrawler crawler =
+      new MyRepairCrawler(mau, spec, aus, ListUtil.list(repairUrl),0);
+
+    Properties p = new Properties();
+    p.setProperty(RepairCrawler.PARAM_FETCH_FROM_OTHER_CACHES_ONLY, "true");
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+
+    crawler.doCrawl();
+    assertTrue("Fetch from caches occur, fetchCacheCnt = " + 
+	         crawler.getFetchCacheCnt() , crawler.getFetchCacheCnt() == 3);
+    assertTrue("Fetch from publisher should never occur, yet FetchPubCnt = " + 
+	       crawler.getFetchPubCnt(), crawler.getFetchPubCnt() == 0);
+  }
+
+  public void testFetchFromOtherCachesOnlyWithRetryLimit() throws UnknownHostException {
+    MockLockssDaemon theDaemon = new MockLockssDaemon();
+    MockIdentityManager idm = new MockIdentityManager();
+    String id1 = "127.0.0.1";
+    String id2 = "127.0.0.2";
+    String id3 = "127.0.0.3";
+    Map map = new HashMap();
+    map.put(id1, new Long(10));
+    map.put(id2, new Long(11));
+    map.put(id3, new Long(12));
+    idm.setAgeedForAu(mau, map);
+		      
+    theDaemon.setIdentityManager(idm);
+
+    String repairUrl = "http://example.com/blah.html";
+    MyRepairCrawler crawler =
+      new MyRepairCrawler(mau, spec, aus, ListUtil.list(repairUrl),0);
+
+    Properties p = new Properties();
+    p.setProperty(RepairCrawler.PARAM_FETCH_FROM_OTHER_CACHES_ONLY, "true");
+    p.setProperty(RepairCrawler.PARAM_NUM_RETRIES_FROM_CACHES, ""+2);
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+
+    crawler.doCrawl();
+    assertTrue("Fetch from caches occur, fetchCacheCnt = " + 
+	       crawler.getFetchCacheCnt() , crawler.getFetchCacheCnt() == 2);
+    assertTrue("Fetch from publisher never occur", crawler.getFetchPubCnt() == 0);
+  }
+
+  public void testFetchFromPublisherOnly() throws UnknownHostException {
+    String repairUrl = "http://example.com/blah.html";
+    MyRepairCrawler crawler =
+      new MyRepairCrawler(mau, spec, aus, ListUtil.list(repairUrl),0);
+
+    Properties p = new Properties();
+    //p.setProperty(RepairCrawler.PARAM_FETCH_FROM_OTHER_CACHES_ONLY, "false");
+    p.setProperty(RepairCrawler.PARAM_FETCH_FROM_PUBLISHER_ONLY, "true");
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+
+    crawler.doCrawl();
+    assertTrue("Fetch from caches occur, fetchCacheCnt = " + 
+	        crawler.getFetchCacheCnt() , crawler.getFetchCacheCnt() == 0);
+    assertTrue("Fetch from publisher" + 
+	       crawler.getFetchPubCnt(), crawler.getFetchPubCnt() == 1);
+  }
+
+  public void testFetchFromOtherCachesThenPublisher() throws UnknownHostException {
+    MockLockssDaemon theDaemon = new MockLockssDaemon();
+    MockIdentityManager idm = new MockIdentityManager();
+    String id1 = "127.0.0.1";
+    String id2 = "127.0.0.2";
+    String id3 = "127.0.0.3";
+    Map map = new HashMap();
+    map.put(id1, new Long(10));
+    map.put(id2, new Long(11));
+    map.put(id3, new Long(12));
+    idm.setAgeedForAu(mau, map);
+		      
+    theDaemon.setIdentityManager(idm);
+
+    String repairUrl = "http://example.com/blah.html";
+    MyRepairCrawler crawler =
+      new MyRepairCrawler(mau, spec, aus, ListUtil.list(repairUrl),1);
+
+    Properties p = new Properties();
+    //p.setProperty(RepairCrawler.PARAM_FETCH_FROM_OTHER_CACHES_ONLY, "false");
+    p.setProperty(RepairCrawler.PARAM_NUM_RETRIES_FROM_CACHES, ""+2);
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+
+    crawler.doCrawl();
+    assertTrue("Fail fetch from other caches count, fetchCacheCnt = " + 
+	       crawler.getFetchCacheCnt() , crawler.getFetchCacheCnt() == 2);
+    assertTrue("Fail fetch from publisher count, fetchPubCnt = " + 
+	       crawler.getFetchPubCnt(), crawler.getFetchPubCnt() == 1);
+    assertTrue("Fail: sequence in caching from", crawler.getCacheLastCall() < crawler.getPubLastCall() );
+  }
+
+  public void testFetchFromPublisherThenOtherCaches() throws UnknownHostException {
+    MockLockssDaemon theDaemon = new MockLockssDaemon();
+    MockIdentityManager idm = new MockIdentityManager();
+    String id1 = "127.0.0.1";
+    String id2 = "127.0.0.2";
+    String id3 = "127.0.0.3";
+    Map map = new HashMap();
+    map.put(id1, new Long(10));
+    map.put(id2, new Long(11));
+    map.put(id3, new Long(12));
+    idm.setAgeedForAu(mau, map);
+		      
+    theDaemon.setIdentityManager(idm);
+
+    String repairUrl = "http://example.com/blah.html";
+    MyRepairCrawler crawler =
+      new MyRepairCrawler(mau, spec, aus, ListUtil.list(repairUrl),0);
+
+    Properties p = new Properties();
+    //   p.setProperty(RepairCrawler.PARAM_FETCH_FROM_OTHER_CACHES_ONLY, "false");
+    p.setProperty(RepairCrawler.PARAM_NUM_RETRIES_FROM_CACHES, ""+2);
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+
+    crawler.doCrawl();
+    assertTrue("Fail fetch from publisher count, fetchPubCnt = " + 
+	       crawler.getFetchPubCnt(), crawler.getFetchPubCnt() == 1);
+    assertTrue("Fail fetch from other caches count, fetchCacheCnt = " + 
+	       crawler.getFetchCacheCnt() , crawler.getFetchCacheCnt() == 2);
+    assertTrue("Fail: sequence in caching from", crawler.getCacheLastCall() > crawler.getPubLastCall() );
+  }
 
   private class MyMockCrawlWindow implements CrawlWindow {
     public boolean canCrawl() {
@@ -235,6 +375,11 @@ public class TestRepairCrawler extends LockssTestCase {
 
   private class MyRepairCrawler extends RepairCrawler {
     private Map contentMap = new HashMap();
+    private int fetchCacheCnt = 0;
+    private int fetchPubCnt = 0;
+    private int fetchSequence = 0;
+    private int cacheLastCall = 0;
+    private int pubLastCall = 0;
 
     public MyRepairCrawler(ArchivalUnit au, CrawlSpec spec,
 			   AuState aus, Collection repairUrls,
@@ -242,12 +387,47 @@ public class TestRepairCrawler extends LockssTestCase {
       super(au, spec, aus, repairUrls, percentFetchFromCache);
     }
 
-    protected void fetchFromCache(LcapIdentity id, String url) {
-      contentMap.put(url, id);
+    protected void fetchFromCache(UrlCacher uc, String id) throws IOException {
+      fetchCacheCnt++;
+      cacheLastCall = ++fetchSequence;
+      contentMap.put(uc.getUrl(),id);
+      super.fetchFromCache(uc, id);
     }
 
-    public LcapIdentity getContentSource(String url) {
-      return (LcapIdentity)contentMap.get(url);
+    protected int getFetchCacheCnt(){
+      return fetchCacheCnt;
+    }
+
+    protected void fetchFromPublisher(UrlCacher uc) throws IOException {
+      fetchPubCnt++;
+      pubLastCall = ++fetchSequence;
+
+      //setup so that uc.cache will throw CacheException
+      MockUrlCacher muc = new MockUrlCacher(uc.getUrl());
+      muc.setCachingException(new CacheException(),1);
+
+      super.fetchFromPublisher(muc);
+    }
+    
+    protected int getFetchPubCnt(){
+      return fetchPubCnt;
+    }
+
+    protected int getCacheLastCall(){
+      return cacheLastCall;
+    }
+
+    protected int getPubLastCall() {
+      return pubLastCall;
+    }
+
+    // make the repair fail and then go thru other caches or publisher
+    protected int getProxyPort(){ 
+      return 8080; //XXX for testing only
+    }
+
+    public String getContentSource(String url) {
+      return (String)contentMap.get(url);
     }
 
   }

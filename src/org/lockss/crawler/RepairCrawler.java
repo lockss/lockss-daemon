@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.23 2004-06-14 23:54:46 dcfok Exp $
+ * $Id: RepairCrawler.java,v 1.24 2004-07-12 18:19:03 dcfok Exp $
  */
 
 /*
@@ -44,6 +44,27 @@ import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
 import org.lockss.state.*;
 
+/**
+ * Repair crawler that can do the repair crawl in 4 modes.
+ * <ul>
+ * <li>1. repair from other caches only
+ * <li>2. repair from publisher only
+ * <li>3. repair from other caches first. If repair fails in trying 
+ *        a certain number of caches, it will try repair from the publisher
+ * <li>4. repair from publisher first. If repair fails, it will try repair from other caches
+ * </ul>
+ * <p>
+ * In mode 1,3,4, the number of other caches the repair crawler will try from can be change
+ * by setting PARAM_NUM_RETRIES_FROM_CACHES in properties.    
+ * <p>
+ * e.g.
+ * <br>
+ * Properties p = new Properties();<br>
+ * p.setProperty(RepairCrawler.PARAM_NUM_RETRIES_FROM_CACHES, ""+2); <br>
+ * ConfigurationUtil.setCurrentConfigFromProps(p); <br>
+ * <br>
+ * That will set the retry limit to 2.
+ */
 public class RepairCrawler extends CrawlerImpl {
   
   private static Logger logger = Logger.getLogger("RepairCrawler");
@@ -52,8 +73,27 @@ public class RepairCrawler extends CrawlerImpl {
 
   protected Collection repairUrls = null;
 
-  public static final String PARAM_FETCH_FROM_OTHER_CACHE =
-      Configuration.PREFIX + "crawler.fetch_from_other_caches";
+  /**
+   * Sets this to true in properties and repair will be done from other caches only
+   */
+  public static final String PARAM_FETCH_FROM_OTHER_CACHES_ONLY =
+    Configuration.PREFIX + "crawler.fetch_from_other_caches_only";
+  public static final boolean DEFAULT_FETCH_FROM_OTHER_CACHES_ONLY = false;
+
+  /**
+   * Sets this to true in properties and repair will be done from publisher only 
+   */
+  public static final String PARAM_FETCH_FROM_PUBLISHER_ONLY =
+    Configuration.PREFIX + "crawler.fetch_from_publisher_only";
+  public static final boolean DEFAULT_FETCH_FROM_PUBLISHER_ONLY = false;
+
+  /**
+   * Sets this in properties to limit the number of caches it will try in repair mode 1,3 and 4.
+   */
+  public static final String PARAM_NUM_RETRIES_FROM_CACHES =
+    Configuration.PREFIX + "crawler.num_retries_from_caches";
+  public static final int DEFAULT_NUM_RETRIES_FROM_CACHES = 5; //XXX subject to change
+
 
   private float percentFetchFromCache = 0;
 
@@ -79,7 +119,6 @@ public class RepairCrawler extends CrawlerImpl {
   protected Iterator getStartingUrls() {
     return repairUrls.iterator();
   }
-
 
   /** We always want our UrlCacher to follow redirects in crawl spec, but
    * store only the one node we requested. */
@@ -152,7 +191,7 @@ public class RepairCrawler extends CrawlerImpl {
       long cacheMisses = bau.getCrawlSpecCacheMisses();
       double per = ((float)cacheHits /
 		    ((float)cacheHits + (float)cacheMisses));
-      logger.info("Had "+cacheHits+" cache hits, with a percentage of "+per);
+      logger.info("Had "+cacheHits+" cache hits, with a percentage of "+(per*100));
     }
     return (crawlStatus.getCrawlError() == null);
   }
@@ -167,20 +206,67 @@ public class RepairCrawler extends CrawlerImpl {
       if (wdog != null) {
 	wdog.pokeWDog();
       }
-      if (shouldFetchFromCache()) {
+
+      boolean fetchCache = 
+	Configuration.getBooleanParam(PARAM_FETCH_FROM_OTHER_CACHES_ONLY,DEFAULT_FETCH_FROM_OTHER_CACHES_ONLY);
+	
+      boolean fetchPublisher = 
+	Configuration.getBooleanParam(PARAM_FETCH_FROM_PUBLISHER_ONLY, DEFAULT_FETCH_FROM_PUBLISHER_ONLY);
+      
+      int numCacheRetries = 
+	 Configuration.getIntParam(PARAM_NUM_RETRIES_FROM_CACHES, DEFAULT_NUM_RETRIES_FROM_CACHES);
+
+//       int numPubRetries =
+// 	Configuration.getIntParam(PARAM_NUM_RETRIES_FROM_PUBLISHER, DEFAULT_NUM_RETRIES_FROM_PUBLISHER);
+
+      //4 cases to choose where to repair from
+      if (fetchCache && fetchPublisher) {
+	logger.error("Contradicting parameters! both PARAM_FETCH_FROM_OTHER_CACHE_ONLY " + 
+		     "and PARAM_FETCH_FROM_PUBLISHER_ONLY flag is true.");
+	error = Crawler.STATUS_FETCH_ERROR;
+      } else if (fetchCache) { //(1) other caches only
 	try {
-	  logger.debug3("Trying to fetch from a cache");
-	  fetchFromCache(uc);
+	  logger.debug3("Trying to fetch from caches only");
+	  if (Configuration.getCurrentConfig().containsKey(PARAM_NUM_RETRIES_FROM_CACHES)){
+	    // try only from some caches
+	    fetchFromCache(uc, numCacheRetries);
+	  } else {
+	    // try "all" possible caches
+	    fetchFromCache(uc, Integer.MAX_VALUE);
+	  }
+	} catch (CantProxyException e){
+	  logger.warning("Failed to fetch from caches", e);
+	}
+      } else if (fetchPublisher){ //(2) publisher only
+	try {
+	  logger.debug3("Trying to fetch from publisher only");
+	  fetchFromPublisher(uc);
+	} catch (CacheException e) {
+	  logger.warning(uc+" not found on publisher's site",e);
+	}
+      } else if (shouldFetchFromCache()) { //(3) caches then publisher
+	try {
+	  logger.debug3("Trying to fetch from caches");
+	  //it will try the publisher if it fails to cache 
+	  //from other caches after the default # of retries
+	  fetchFromCache(uc, numCacheRetries);
 	} catch (CantProxyException e) {
 	  logger.debug3("Failed, so trying to fetch from publisher");
-	  cache(uc);
+	  fetchFromPublisher(uc);
 	}
-      } else {
-	logger.debug3("Trying to fetch from publisher");
-	cache(uc);
+      } else { //(4) publisher then caches
+	try {
+	  logger.debug3("Trying to fetch from publisher");
+	  fetchFromPublisher(uc);
+	} catch (CacheException e){
+	  logger.warning(uc+" not found on publisher's site",e);
+	  logger.debug3("Trying to fetch from other caches");
+	  fetchFromCache(uc, numCacheRetries);
+	}
       }
       crawlStatus.signalUrlFetched();
       numUrlsFetched++;
+
     } catch (CacheException e) {
       if (e.isAttributeSet(CacheException.ATTRIBUTE_FAIL)) {
 	logger.error("Problem caching "+uc+". Ignoring", e);
@@ -188,6 +274,8 @@ public class RepairCrawler extends CrawlerImpl {
       } else {
 	logger.warning(uc+" not found on publisher's site", e);
       }
+    } catch (CantProxyException e){
+      logger.warning("Failed to fetch from caches", e);
     } catch (IOException e) {
       //XXX not expected
       logger.critical("Unexpected IOException during crawl", e);
@@ -200,7 +288,7 @@ public class RepairCrawler extends CrawlerImpl {
     return ProbabilisticChoice.choose(percentFetchFromCache);
   }
   
-  protected void fetchFromCache(UrlCacher uc) throws IOException {
+  protected void fetchFromCache(UrlCacher uc, int numCacheRetries) throws IOException {
     IdentityManager idm = getIdentityManager();
     Map map = idm.getAgreed(au);
     if (map == null) {
@@ -212,24 +300,38 @@ public class RepairCrawler extends CrawlerImpl {
       throw new CantProxyException("Couldn't get a cache we agree with");
     }
     Iterator it = keySet.iterator();
-    if (it.hasNext()) {
-      fetchFromCache(uc, (String)it.next());
+    int iz = 0;
+    boolean repaired = false;
+    while ((it.hasNext()) && (iz < numCacheRetries) && !repaired ){
+      String cacheId = null;
+      try {
+	cacheId = (String) it.next();
+	fetchFromCache(uc, cacheId);
+	repaired = true;
+      } catch (IOException e) {
+	logger.warning(uc.getUrl() + " cannot be fetch from "+ cacheId);
+      }
+      iz++;
+    }
+
+    if (!repaired) {
+      throw new CantProxyException(uc.getUrl() + " couldn't repair from other caches");
     }
   }
 
   protected void fetchFromCache(UrlCacher uc, String id)
       throws IOException {
-    ProxyManager proxyMan = 
-      (ProxyManager)LockssDaemon.getManager(LockssDaemon.PROXY_MANAGER);
-    int proxyPort = proxyMan.getProxyPort();
+    logger.debug3("***********In fetchFromCache( uc , id)****************");
 
+    int proxyPort = getProxyPort();    
+   
     // XXX fix this to use BaseUrlCacher
     LockssUrlConnection conn = UrlUtil.openConnection(uc.getUrl(),
 						      connectionPool);
     if (!conn.canProxy()) {
       throw new CantProxyException();
     }
-    logger.debug("Trying to fetch from "+id);
+    logger.debug2("Trying to fetch from "+id);
     conn.setProxy(id, proxyPort);
     conn.setRequestProperty("user-agent", LockssDaemon.getUserAgent());
     conn.execute();
@@ -241,6 +343,12 @@ public class RepairCrawler extends CrawlerImpl {
     }
     uc.storeContent(conn.getResponseInputStream(),
 		    getPropertiesFromConn(conn, uc.getUrl(), id));
+  }
+
+  protected int getProxyPort(){
+    ProxyManager proxyMan = 
+      (ProxyManager)LockssDaemon.getManager(LockssDaemon.PROXY_MANAGER);
+    return proxyMan.getProxyPort();
   }
 
   // XXX fix this to use BaseUrlCacher
@@ -265,7 +373,8 @@ public class RepairCrawler extends CrawlerImpl {
     return props;
   }
 
-  private void cache(UrlCacher uc) throws IOException {
+  //  private void cache(UrlCacher uc) throws IOException {
+  protected void fetchFromPublisher(UrlCacher uc) throws IOException {
     uc.setForceRefetch(true);
     uc.cache();
   }
