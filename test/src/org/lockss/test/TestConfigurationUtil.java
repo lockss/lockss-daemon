@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigurationUtil.java,v 1.1 2003-07-16 00:05:06 tlipkis Exp $
+ * $Id: TestConfigurationUtil.java,v 1.2 2003-12-23 01:39:16 tlipkis Exp $
  */
 
 /*
@@ -51,7 +51,8 @@ public class TestConfigurationUtil extends LockssTestCase {
   private void check(Configuration config) throws Configuration.InvalidParam {
     assertEquals("12", config.get("prop1"));
     assertEquals(true, config.getBoolean("prop2"));
-    assertEquals(2, config.keySet().size());
+    // ConfigManager.copyPlatformParams() can add params
+    assertTrue("Fewer than 2 resulting params", config.keySet().size() >= 2);
   }
 
   private void check() throws IOException, Configuration.InvalidParam {
