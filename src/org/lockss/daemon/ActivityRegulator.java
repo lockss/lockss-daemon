@@ -1,5 +1,5 @@
 /*
- * $Id: ActivityRegulator.java,v 1.16 2003-06-04 22:00:48 tal Exp $
+ * $Id: ActivityRegulator.java,v 1.16.2.1 2003-06-09 20:14:23 aalto Exp $
  */
 
 /*
@@ -272,8 +272,10 @@ public class ActivityRegulator extends BaseLockssManager {
   }
 
   static int getRelation(String key1, String key2) {
-    String key1Sub = key1.substring(0, key1.lastIndexOf("::")) + "/";
-    String key2Sub = key2.substring(0, key2.lastIndexOf("::")) + "/";
+    String key1Sub = key1.substring(0, key1.lastIndexOf("::")) +
+        UrlUtil.URL_PATH_SEPARATOR;
+    String key2Sub = key2.substring(0, key2.lastIndexOf("::")) +
+        UrlUtil.URL_PATH_SEPARATOR;
     if (key1Sub.equals(key2Sub)) {
       return RELATION_SAME;
     } else if (key1Sub.startsWith(key2Sub)) {

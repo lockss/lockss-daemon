@@ -1,5 +1,5 @@
 /*
- * $Id: RangeCachedUrlSetSpec.java,v 1.10 2003-06-03 22:07:33 tal Exp $
+ * $Id: RangeCachedUrlSetSpec.java,v 1.10.2.1 2003-06-09 20:14:23 aalto Exp $
  */
 
 /*
@@ -91,10 +91,21 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
     if (!url.startsWith(prefix)) {
       return false;
     }
-    if (url.equals(prefix)) {
+    // if url length is same, it's this node
+    if (url.length() == prefix.length()) {
       return !isRangeRestricted();
     }
     return inRange(url);
+  }
+
+  private boolean isInitialPathComponent(String path, String ofPath) {
+    // is initial path if starts with
+    if (!ofPath.startsWith(path)) {
+      return false;
+    } else {
+      // and next char is '/' (so 'foo' doesn't start 'foobar' but does 'foo/bar')
+      return (ofPath.charAt(path.length()) == UrlUtil.URL_PATH_SEPARATOR_CHAR);
+    }
   }
 
   /** @return false */
@@ -114,12 +125,12 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
   }
 
   /**
-   * @arg spec the set to test disjointness with
+   * @param spec the set to test disjointness with
    * @return true if the two sets are disjoint
    */
   public boolean isDisjoint(CachedUrlSetSpec spec) {
     if (spec.isSingleNode()) {
-      return !subsumes(spec);
+      return !matches(spec.getUrl());
     }
     if (spec.isAU()) {
       return false;
@@ -127,26 +138,28 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
     if (spec instanceof RangeCachedUrlSetSpec) {
       RangeCachedUrlSetSpec rspec = (RangeCachedUrlSetSpec)spec;
       if (prefix.equals(rspec.getUrl())) {
+	// same node, check ranges disjoint
 	String l1 = lowerBound;
 	String u1 = upperBound;
 	String l2 = rspec.getLowerBound();
 	String u2 = rspec.getUpperBound();
 	return (l1 != null && u2 != null && l1.compareTo(u2) > 0) ||
 	  (l2 != null && u1 != null && l2.compareTo(u1) > 0);
+      } else {
+	// different node, disjoint if neither root is included in other's set
+	return !(matches(rspec.getUrl()) || rspec.matches(prefix));
       }
-      return !(matches(rspec.getUrl()) || rspec.matches(prefix));
     }
     throw new RuntimeException("Unknown CUSS type: " + spec);
   }
 
   /**
-   * @arg spec the set to test subsumption of
+   * @param spec the set to test subsumption of
    * @return true if spec is entirely contained in this one
    */
   public boolean subsumes(CachedUrlSetSpec spec) {
     if (spec.isSingleNode()) {
-      String specUrl = spec.getUrl();
-      return matches(specUrl);
+      return matches(spec.getUrl());
     }
     if (spec.isAU()) {
       return false;
@@ -154,14 +167,17 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
     if (spec instanceof RangeCachedUrlSetSpec) {
       RangeCachedUrlSetSpec rspec = (RangeCachedUrlSetSpec)spec;
       if (prefix.equals(rspec.getUrl())) {
+	// same node, check range1 includes range2
 	String l1 = lowerBound;
 	String u1 = upperBound;
 	String l2 = rspec.getLowerBound();
 	String u2 = rspec.getUpperBound();
 	return (l1 == null || (l2 != null && l1.compareTo(l2) <= 0)) &&
 	  (u1 == null || (u2 != null && u1.compareTo(u2) >= 0));
+      } else {
+	// different node, subsumed if its root is in our set
+	return matches(rspec.getUrl());
       }
-      return matches(rspec.getUrl());
     }
     throw new RuntimeException("Unknown CUSS type: " + spec);
   }
@@ -177,7 +193,7 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
 	StringUtil.equalStrings(lowerBound, spec.getLowerBound()) &&
 	StringUtil.equalStrings(upperBound, spec.getUpperBound());
     } else {
-      // not the right kind of object
+      // not a RangeCachedUrlSetSpec
       return false;
     }
   }
@@ -194,14 +210,14 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
     StringBuffer sb = new StringBuffer("[CUSS: ");
     sb.append(prefix);
 
-    if(lowerBound != null ||upperBound != null) {
+    if (lowerBound != null || upperBound != null) {
       sb.append(" [");
 
-      if(lowerBound != null) {
+      if (lowerBound != null) {
 	sb.append(lowerBound);
       }
       sb.append(" - ");
-      if(upperBound != null) {
+      if (upperBound != null) {
 	sb.append(upperBound);
       }
       sb.append("]");
