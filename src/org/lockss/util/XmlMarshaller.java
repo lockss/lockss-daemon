@@ -1,5 +1,5 @@
 /*
- * $Id: XmlMarshaller.java,v 1.3 2004-04-13 22:24:12 eaalto Exp $
+ * $Id: XmlMarshaller.java,v 1.4 2004-07-12 06:26:31 tlipkis Exp $
  */
 
 /*
@@ -52,6 +52,33 @@ public class XmlMarshaller {
   public XmlMarshaller() { }
 
   /**
+   * Stores an Object into a File
+   * @param file the File
+   * @param storeObj the object to be stored
+   * @param mapping the Mapping
+   * @throws IOException
+   * @throws MarshallingException
+   */
+  public void store(File file, Object storeObj, Mapping mapping)
+      throws IOException, MarshallingException {
+    FileWriter writer = new FileWriter(file);
+    storeToWriter(writer, storeObj, mapping);
+  }
+
+  /**
+   * Stores an Object into a File
+   * @param file the File
+   * @param storeObj the object to be stored
+   * @param mappingFile the name of the mapping file
+   * @throws IOException
+   * @throws MarshallingException
+   */
+  public void store(File file, Object storeObj, String mappingFile)
+      throws IOException, MarshallingException {
+    store(file, storeObj, getMapping(mappingFile));
+  }
+
+  /**
    * Stores an Object into a file location specified.
    * @param root the file's directory.  Created if non-existant.
    * @param fileName the name of the file
@@ -61,7 +88,8 @@ public class XmlMarshaller {
    * @throws MarshallingException
    */
   public void store(String root, String fileName, Object storeObj,
-      String mappingFile) throws IOException, MarshallingException {
+		    String mappingFile)
+      throws IOException, MarshallingException {
     store(root, fileName, storeObj, getMapping(mappingFile));
   }
 
@@ -75,14 +103,14 @@ public class XmlMarshaller {
    * @throws MarshallingException
    */
   public void store(String root, String fileName, Object storeObj,
-      Mapping mapping) throws IOException, MarshallingException {
+		    Mapping mapping)
+      throws IOException, MarshallingException {
     File rootDir = new File(root);
     if (!rootDir.exists()) {
       rootDir.mkdirs();
     }
     File storeFile = new File(rootDir, fileName);
-    FileWriter writer = new FileWriter(storeFile);
-    storeToWriter(writer, storeObj, mapping);
+    store(new File(rootDir, fileName), storeObj, mapping);
   }
 
   /**
