@@ -1,5 +1,5 @@
 /*
- * $Id: NewContentCrawler.java,v 1.7 2004-03-03 00:37:49 troberts Exp $
+ * $Id: NewContentCrawler.java,v 1.8 2004-03-05 23:09:04 troberts Exp $
  */
 
 /*
@@ -293,7 +293,7 @@ public class NewContentCrawler extends CrawlerImpl {
 
     /**
      * Check that we should cache this url and haven't already parsed it
-     * @param url the url string
+     * @param url the url string, fully qualified (ie, not relative)
      */
     public void foundUrl(String url) {
       if (isSupportedUrlProtocol(url) && !parsedPages.contains(url)
