@@ -1,5 +1,5 @@
 /*
- * $Id: ServletManager.java,v 1.3 2003-03-14 22:00:10 tal Exp $
+ * $Id: ServletManager.java,v 1.4 2003-03-17 08:32:24 tal Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.servlet;
 
+import java.net.*;
 import java.util.*;
 import org.lockss.app.*;
 import org.lockss.daemon.*;
@@ -39,6 +40,7 @@ import org.lockss.util.*;
 import org.lockss.jetty.*;
 import org.mortbay.util.*;
 import org.mortbay.http.*;
+import org.mortbay.http.handler.*;
 import org.mortbay.jetty.servlet.*;
 
 /**
@@ -159,6 +161,13 @@ public class ServletManager extends JettyManager {
       // Create a context
       HttpContext context = server.getContext(null, "/");
       context.setAttribute("LockssDaemon", theDaemon);
+
+      ClassLoader loader = Thread.currentThread().getContextClassLoader();
+      URL resourceUrl=loader.getResource("org/lockss/htdocs/");
+      log.debug("Resource URL: " + resourceUrl);
+
+      context.setResourceBase(resourceUrl.toString());
+      context.addHandler(new ResourceHandler());
 
       // Create a servlet container
       ServletHandler handler = new ServletHandler();
