@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.29 2003-05-30 23:27:53 aalto Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.30 2003-05-30 23:31:17 aalto Exp $
  */
 
 /*
@@ -238,8 +238,8 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
 
   public void testStoreDamagedNodeSet() throws Exception {
     DamagedNodeSet damNodes = new DamagedNodeSet(mau, repository);
-    damNodes.add("test1");
-    damNodes.add("test2");
+    damNodes.nodes.add("test1");
+    damNodes.nodes.add("test2");
     assertTrue(damNodes.contains("test1"));
     assertTrue(damNodes.contains("test2"));
     assertFalse(damNodes.contains("test3"));
