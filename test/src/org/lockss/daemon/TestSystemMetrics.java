@@ -1,5 +1,5 @@
 /*
- * $Id: TestSystemMetrics.java,v 1.8 2003-04-24 00:51:55 aalto Exp $
+ * $Id: TestSystemMetrics.java,v 1.9 2003-04-30 23:39:27 tal Exp $
  */
 
 /*
@@ -85,11 +85,9 @@ public class TestSystemMetrics extends LockssTestCase {
     assertTrue(duration > expectedMin);
   }
 
-  public void testDefaultEstimate() throws Exception {
-    assertEquals(-1, metrics.getBytesPerMsHashEstimate());
-    metrics.updateHashEstimate(metrics.defaultAlgorithm, 123);
-    assertEquals(123, metrics.getBytesPerMsHashEstimate());
-  }
+//   public void testDefaultEstimate() throws Exception {
+//     assertEquals(-1, metrics.getBytesPerMsHashEstimate());
+//   }
 
   public void testEstimationCaching() throws IOException {
     MockCachedUrlSetHasher hasher = new MockCachedUrlSetHasher(10000);
