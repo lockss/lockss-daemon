@@ -526,6 +526,7 @@ class RandomizedDamageTestCase(LockssTestCase):
     def runTest(self):
         "Test recovery from random file damage in a randomly sized AU."
 
+	random.seed(time.time())
         depth = random.randint(0, 3)
         branch = random.randint(0, 3)
         numFiles = random.randint(0, 50)
@@ -533,9 +534,6 @@ class RandomizedDamageTestCase(LockssTestCase):
         log("Creating simulated AUs: depth = %s; branch = %s; "
             "numFiles = %s; maxFileName = %s" %
             (depth, branch, numFiles, maxFileName))
-
-        ## Pick a client at random
-        client = self.clients[random.randint(0, len(self.clients) - 1)]
 
         ##
         ## Create simulated AUs
@@ -549,12 +547,14 @@ class RandomizedDamageTestCase(LockssTestCase):
         ## Assert that the AUs have been crawled.
         ##
         log("Waiting for simulated AUs to crawl.")
-        for c in self.clients:
-            if not (c.waitForSuccessfulCrawl(simAu)):
+        for client in self.clients:
+            if not (client.waitForSuccessfulCrawl(simAu)):
                 self.fail("AUs never completed initial crawl.")
         log("AUs completed initial crawl.")
 
-        ## To damage one file, use randomDamageSingleNode(simAu)
+        ## Pick a client at random
+        client = self.clients[random.randint(0, len(self.clients) - 1)]
+
         log("Causing random damage...")
         nodeList = client.randomDamageRandomNodes(simAu)
 
@@ -616,6 +616,7 @@ class RandomizedDeleteTestCase(LockssTestCase):
     def runTest(self):
         "Test recovery from random file deletion in a randomly sized AU."
 
+	random.seed(time.time())
         depth = random.randint(0, 3)
         branch = random.randint(0, 3)
         numFiles = random.randint(0, 50)
@@ -623,9 +624,6 @@ class RandomizedDeleteTestCase(LockssTestCase):
         log("Creating simulated AUs: depth = %s; branch = %s; "
             "numFiles = %s; maxFileName = %s" %
             (depth, branch, numFiles, maxFileName))
-
-        ## Pick a client at random
-        client = self.clients[random.randint(0, len(self.clients) - 1)]
 
         ##
         ## Create simulated AUs
@@ -639,10 +637,13 @@ class RandomizedDeleteTestCase(LockssTestCase):
         ## Assert that the AUs have been crawled.
         ##
         log("Waiting for simulated AUs to crawl.")
-        for c in self.clients:
-            if not (c.waitForSuccessfulCrawl(simAu)):
+        for client in self.clients:
+            if not (client.waitForSuccessfulCrawl(simAu)):
                 self.fail("AUs never completed initial crawl.")
         log("AUs completed initial crawl.")
+
+        ## Pick a client at random
+        client = self.clients[random.randint(0, len(self.clients) - 1)]
 
         log("Deleting random files...")
         nodeList = client.randomDeleteRandomNodes(simAu)

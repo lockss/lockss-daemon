@@ -350,12 +350,10 @@ class Client:
         url = node.url
         for row in table:
             rowUrl = row['NodeName']
-            if not row.has_key('NodeStatus'):
-                continue
             if url == rowUrl:
-                return (not row['NodeStatus'] == "Damaged") and \
-                       (not row['NodeStatus'] == "Repairing")
-
+                # A repaired (non-damaged) node simply will not have
+                # a 'NodeStatus' key.
+                return (not row.has_key('NodeStatus'))
         # au wasn't found.
         return False
 
