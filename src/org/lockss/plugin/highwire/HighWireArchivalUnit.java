@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireArchivalUnit.java,v 1.2 2003-01-03 21:49:18 aalto Exp $
+ * $Id: HighWireArchivalUnit.java,v 1.3 2003-02-06 23:33:16 troberts Exp $
  */
 
 /*
@@ -55,8 +55,13 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
       Configuration.PREFIX + "highwire.pause.time";
   private static final int DEFAULT_PAUSE_TIME = 10000;
 
+  private static final String EXPECTED_URL_PATH = "/";
+
   protected Logger logger = Logger.getLogger(LOG_NAME);
   private int pauseMS;
+
+  private int volume;
+  private URL base;
 
   /**
    * Standard constructor for HighWirePlugin.
@@ -65,9 +70,21 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
    * @throws REException
    * @throws MalformedURLException
    */
-  public HighWireArchivalUnit(String start)
-      throws REException, MalformedURLException {
-    super(makeCrawlSpec(start));
+  public HighWireArchivalUnit(URL base, int volume) 
+      throws REException {
+    super();
+    if (base == null) {
+      throw new IllegalArgumentException("Called with null base url");
+    } if (volume < 0) {
+      throw new IllegalArgumentException("Called with negative volume");
+    } if (!EXPECTED_URL_PATH.equals(base.getPath())) {
+      throw new IllegalArgumentException("Called with url that had path: "+
+					 base.getPath());
+    }
+
+    this.volume = volume;
+    this.base = base;
+    this.crawlSpec = makeCrawlSpec(base, volume);
     loadPauseTime();
   }
 
@@ -84,40 +101,33 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
     return new HighWireUrlCacher(owner, url);
   }
 
-  private static CrawlSpec makeCrawlSpec(String start)
-      throws REException, MalformedURLException {
-    String prefix = UrlUtil.getUrlPrefix(start);
-    int volume = getUrlVolumeNumber(start);
-
-    CrawlRule rule = makeRules(prefix, volume);
-    return new CrawlSpec(start, rule);
+  private CrawlSpec makeCrawlSpec(URL base, int volume)
+      throws REException {
+    
+    CrawlRule rule = makeRules(base, volume);
+    return new CrawlSpec(makeStartUrl(base, volume), rule);
   }
 
-  protected static int getUrlVolumeNumber(String urlStr)
-      throws MalformedURLException {
-    URL url = new URL(urlStr);
-    String path = url.getPath();
-
-    String volStr = "lockss-volume";
-    int volStrIdx = path.indexOf(volStr);
-    int startIdx = volStrIdx + volStr.length();
-    int endIdx = path.lastIndexOf(".");
-    if (volStrIdx < 0 || endIdx < 0 || endIdx <= startIdx) {
-      return -1;
-    }
-    return Integer.parseInt(path.substring(startIdx, endIdx));
+  private String makeStartUrl(URL base, int volume) {
+    StringBuffer sb = new StringBuffer();
+    sb.append(base.toString());
+    sb.append("lockss-volumme");
+    sb.append(volume);
+    sb.append(".shtml");
+    logger.debug("makeStartUrl returning: "+sb.toString());
+    return sb.toString();
   }
 
-  private static CrawlRule makeRules(String urlRoot, int volume)
+  private CrawlRule makeRules(URL urlRoot, int volume)
       throws REException {
     List rules = new LinkedList();
     final int incl = CrawlRules.RE.MATCH_INCLUDE;
     final int excl = CrawlRules.RE.MATCH_EXCLUDE;
-    String escapedRoot = StringUtil.escapeNonAlphaNum(urlRoot);
 
-    rules.add(new CrawlRules.RE("^" + escapedRoot,
+    rules.add(new CrawlRules.RE("^" + urlRoot.toString(),
 				CrawlRules.RE.NO_MATCH_EXCLUDE));
-    rules.add(new CrawlRules.RE(escapedRoot+"/lockss-volume"+volume+".shtml",
+    rules.add(new CrawlRules.RE(urlRoot.toString()+"lockss-volume"+
+				volume+".shtml",
 				incl));
     rules.add(new CrawlRules.RE(".*ck=nck.*", excl));
     rules.add(new CrawlRules.RE(".*ck=nck.*", excl));
@@ -130,6 +140,7 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
     rules.add(new CrawlRules.RE(".*/icons.*", incl));
     rules.add(new CrawlRules.RE(".*/math.*", incl));
     rules.add(new CrawlRules.RE("http://.*/.*/.*", excl));
+    logger.debug("Rules: "+rules);
     return new CrawlRules.FirstMatch(rules);
   }
 
@@ -147,11 +158,15 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
   }
 
   public String getAUId() {
-    try {
-      String url = (String)getCrawlSpec().getStartingUrls().get(0);
-      return Integer.toString(getUrlVolumeNumber(url));
-    } catch (MalformedURLException ex) {
-      return "null";
-    }
+    return String.valueOf(getVolumeNumber());
   }
+
+  public int getVolumeNumber() {
+    return volume;
+  }
+
+  public URL getBaseUrl() {
+    return base;
+  }
+
 }

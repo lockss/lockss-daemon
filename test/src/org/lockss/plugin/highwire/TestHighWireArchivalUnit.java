@@ -29,17 +29,14 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.highwire;
 
 import java.io.File;
-import java.net.MalformedURLException;
+import java.net.*;
+import gnu.regexp.*;
 import org.lockss.daemon.*;
 import org.lockss.test.LockssTestCase;
 import org.lockss.plugin.GenericFileCachedUrlSet;
 import org.lockss.repository.TestLockssRepositoryImpl;
 
 public class TestHighWireArchivalUnit extends LockssTestCase {
-  private static final String cStart =
-    "http://shadow1.stanford.edu/lockss-volume322.shtml";
-  private static final String cRoot = "http://shadow1.stanford.edu/";
-
   public TestHighWireArchivalUnit(String msg) {
     super(msg);
   }
@@ -50,38 +47,61 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
     TestLockssRepositoryImpl.configCacheLocation(tempDirPath);
   }
 
-  public void testGetUrlVolumeNumberNullUrl() {
+  public void testGetVolumeNum() {
+    
+  }
+
+  public void testConstructNullUrl() throws REException {
     try {
-      HighWireArchivalUnit.getUrlVolumeNumber(null);
-      fail("Should have thrown MalformedURLException");
-    } catch(MalformedURLException mue) { }
+      new HighWireArchivalUnit(null, 1);
+      fail("Should have thrown IllegalArgumentException");
+    } catch(IllegalArgumentException iae) { 
+    }
   }
 
-  public void testGetUrlvolumeNumberNonRootUrl() throws MalformedURLException {
-    String url = "http://shadow8.stanford.edu/";
-    assertEquals(-1, HighWireArchivalUnit.getUrlVolumeNumber(url));
+  public void testConstructNegativeVolume() 
+      throws REException, MalformedURLException {
+    URL url = new URL("http://www.example.com/");
+    try {
+      new HighWireArchivalUnit(url, -1);
+      fail("Should have thrown IllegalArgumentException");
+    } catch(IllegalArgumentException iae) { 
+    }
   }
 
-  public void testGetUrlvolumeNumberRootUrl() throws MalformedURLException {
-    String url = "http://shadow8.stanford.edu/lockss-volume327.shtml";
-    assertEquals(327, HighWireArchivalUnit.getUrlVolumeNumber(url));
-  }
-
-  public void testShouldCacheRootPage() throws Exception {
-    ArchivalUnit hwAu = new HighWireArchivalUnit(cStart);
-    CachedUrlSetSpec spec = new RECachedUrlSetSpec(cRoot);
+  
+  public void testShouldCacheRootPage() 
+      throws REException, MalformedURLException {
+    URL base = new URL("http://shadow1.stanford.edu/");
+    int volume = 322;
+    ArchivalUnit hwAu = new HighWireArchivalUnit(base, volume);
+    CachedUrlSetSpec spec = new RECachedUrlSetSpec(base.toString());
     GenericFileCachedUrlSet cus = new GenericFileCachedUrlSet(hwAu, spec);
     UrlCacher uc =
       cus.makeUrlCacher("http://shadow1.stanford.edu/lockss-volume322.shtml");
     assertTrue(uc.shouldBeCached());
   }
 
-  public void testShouldNotCachePageFromOtherSite() throws Exception {
-    ArchivalUnit hwAu = new HighWireArchivalUnit(cStart);
-    CachedUrlSetSpec spec = new RECachedUrlSetSpec(cRoot);
+  public void testShouldNotCachePageFromOtherSite() 
+      throws REException, MalformedURLException {
+    URL base = new URL("http://shadow1.stanford.edu/");
+    int volume = 322;
+    ArchivalUnit hwAu = new HighWireArchivalUnit(base, volume);
+    CachedUrlSetSpec spec = new RECachedUrlSetSpec(base.toString());
     GenericFileCachedUrlSet cus = new GenericFileCachedUrlSet(hwAu, spec);
     UrlCacher uc =
       cus.makeUrlCacher("http://shadow2.stanford.edu/lockss-volume322.shtml");
     assertTrue(!uc.shouldBeCached());
   }
+
+  public void testPathInUrlThrowsException() 
+      throws REException, MalformedURLException {
+    URL url = new URL("http://www.example.com/path");
+    try {
+      new HighWireArchivalUnit(url, 10);
+      fail("Should have thrown IllegalArgumentException");
+    } catch(IllegalArgumentException iae) { 
+    }
+  }
+
 }
