@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.21 2003-05-07 08:45:09 tal Exp $
+ * $Id: DaemonStatus.java,v 1.22 2003-05-28 16:14:14 tal Exp $
  */
 
 /*
@@ -206,6 +206,11 @@ public class DaemonStatus extends LockssServlet {
     for (Iterator rowIter = rowList.iterator(); rowIter.hasNext(); ) {
       Map rowMap = (Map)rowIter.next();
       if (html) {
+	if (rowMap.get(StatusTable.ROW_SEPARATOR) != null) {
+	  table.newRow();
+	  table.newCell("align=center colspan=" + (cols * 2 - 1));
+	  table.add("<hr>");
+	}
 	table.newRow();
 	for (int ix = 0; ix < cols; ix++) {
 	  ColumnDescriptor cd = cds[ix];
