@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSimulatedContent.java,v 1.8 2002-12-17 20:59:33 troberts Exp $
+ * $Id: FuncSimulatedContent.java,v 1.9 2003-01-02 19:46:30 aalto Exp $
  */
 
 /*
@@ -57,7 +57,11 @@ public class FuncSimulatedContent extends LockssTestCase {
     super.setUp();
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     sau = new SimulatedArchivalUnit(tempDirPath);
-    TestLockssRepositoryImpl.configCacheLocation(tempDirPath);
+    String s = SystemMetrics.PARAM_HASH_TEST_DURATION + "=1000";
+    String s2 = SystemMetrics.PARAM_HASH_TEST_BYTE_STEP + "=1024";
+    String s3 = LockssRepositoryImpl.PARAM_CACHE_LOCATION + "=" + tempDirPath;
+    TestConfiguration.setCurrentConfigFromUrlList(ListUtil.list(FileUtil.urlOfString(s),
+      FileUtil.urlOfString(s2), FileUtil.urlOfString(s3)));
   }
 
   public void testPluginRegistration() {
@@ -71,7 +75,7 @@ public class FuncSimulatedContent extends LockssTestCase {
     assertTrue(au==sau);
   }
 
-  public void testSimulatedContent() throws IOException {
+  public void testSimulatedContent() throws Exception {
     createContent();
     crawlContent();
     checkContent();
@@ -114,7 +118,7 @@ public class FuncSimulatedContent extends LockssTestCase {
   private void crawlContent() {
     CrawlSpec spec = new CrawlSpec(sau.SIMULATED_URL_START, null);
     Crawler crawler = new GoslingCrawlerImpl();
-    crawler.doCrawl(sau, spec.getStartingUrls(), 
+    crawler.doCrawl(sau, spec.getStartingUrls(),
 		    true, false, Deadline.NEVER);
   }
 
@@ -124,7 +128,8 @@ public class FuncSimulatedContent extends LockssTestCase {
     checkStoredContent();
   }
 
-  private void hashContent() throws IOException {
+  private void hashContent() throws Exception {
+    measureHashSpeed();
     hashSet(true);
     hashSet(false);
   }
@@ -193,6 +198,27 @@ public class FuncSimulatedContent extends LockssTestCase {
     assertEquals(expectedContent, content);
   }
 
+  private void measureHashSpeed() throws Exception {
+    MessageDigest dig = null;
+    try {
+      dig = MessageDigest.getInstance("SHA-1");
+    } catch (NoSuchAlgorithmException ex) {
+      fail("No algorithm.");
+    }
+    CachedUrlSet set = sau.getAUCachedUrlSet();
+    CachedUrlSetHasher hasher = set.getContentHasher(dig);
+    SystemMetrics metrics = SystemMetrics.getSystemMetrics();
+    int estimate = metrics.getBytesPerMsHashEstimate(hasher, dig);
+    assertTrue(estimate > 0);
+    long size = ((Long)PrivilegedAccessor.getValue(set, "totalNodeSize")).longValue();
+    assertTrue(size > 0);
+    long estimatedTime = set.estimatedHashDuration();
+    System.out.println("b/ms: "+estimate);
+    System.out.println("size: "+size);
+    System.out.println("estimate: "+estimatedTime);
+    assertEquals(size / estimate, estimatedTime);
+  }
+
   private void hashSet(boolean namesOnly) throws IOException {
     CachedUrlSet set = sau.getAUCachedUrlSet();
     byte[] hash = getHash(set, namesOnly);
@@ -244,4 +270,5 @@ public class FuncSimulatedContent extends LockssTestCase {
     baos.close();
     return contentStr;
   }
+
 }
