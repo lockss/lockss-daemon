@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.18 2003-01-05 00:45:53 tal Exp $
+ * $Id: Configuration.java,v 1.19 2003-02-26 04:36:08 tal Exp $
  */
 
 /*
@@ -67,6 +67,7 @@ public abstract class Configuration {
   // Current configuration instance.
   // Start with an empty one to avoid errors in the static accessors.
   private static Configuration currentConfig = newConfiguration();
+  private static Configuration emptyConfig = newConfiguration();
   private static OneShotSemaphore haveConfig = new OneShotSemaphore();
 
   private static HandlerThread handlerThread; // reload handler thread
@@ -216,7 +217,7 @@ public abstract class Configuration {
     if (!configChangedCallbacks.contains(c)) {
       configChangedCallbacks.add(c);
       if (haveConfig.isFull()) {
-	runCallback(c, null, currentConfig);
+	runCallback(c, emptyConfig, currentConfig);
       }
     }
   }

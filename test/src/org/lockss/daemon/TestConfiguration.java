@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfiguration.java,v 1.6 2003-01-05 00:46:44 tal Exp $
+ * $Id: TestConfiguration.java,v 1.7 2003-02-26 04:36:08 tal Exp $
  */
 
 /*
@@ -217,6 +217,7 @@ public class TestConfiguration extends TestCase {
 	public void configurationChanged(Configuration oldConfig,
 					 Configuration newConfig,
 					 Set changedKeys) {
+	  assertNotNull(oldConfig);
 	  configs.add(newConfig);
 	}
       });
