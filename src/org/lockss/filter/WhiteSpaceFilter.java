@@ -1,5 +1,5 @@
 /*
- * $Id: WhiteSpaceFilter.java,v 1.1 2003-09-02 20:12:11 troberts Exp $
+ * $Id: WhiteSpaceFilter.java,v 1.2 2003-12-11 22:37:21 eaalto Exp $
  */
 
 package org.lockss.filter;
@@ -68,8 +68,7 @@ public class WhiteSpaceFilter extends FilterInputStream {
     return (read(b, 0, b.length));
   }
 
-  // Read bytes into array.  Remove everything between < and >, and
-  // collapse all whitespace to a single space
+  // Read bytes into array.  Collapses all whitespace to a single space
   public int read(byte[] b, int off, int len) throws IOException {
     if (hitEOF)
       return -1;
