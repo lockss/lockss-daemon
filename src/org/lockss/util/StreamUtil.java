@@ -1,5 +1,5 @@
 /*
- * $Id: StreamUtil.java,v 1.8 2003-07-28 23:36:10 troberts Exp $
+ * $Id: StreamUtil.java,v 1.9 2003-07-28 23:53:13 troberts Exp $
  */
 
 /*
@@ -53,11 +53,11 @@ public class StreamUtil {
    * @return number of bytes copied
    * @throws IOException
    */
-  public static int copy(InputStream is, OutputStream os) throws IOException {
+  public static long copy(InputStream is, OutputStream os) throws IOException {
     if (is == null || os == null) {
       return 0;
     }
-    int totalByteCount = 0;
+    long totalByteCount = 0;
     byte[] bytes = new byte[BUFFER_SIZE];
     int byteCount;
     while ((byteCount = is.read(bytes)) > 0) {
@@ -76,11 +76,11 @@ public class StreamUtil {
    * @return number of charscopied
    * @throws IOException
    */
-  public static int copy(Reader reader, Writer writer) throws IOException {
+  public static long copy(Reader reader, Writer writer) throws IOException {
     if (reader == null || writer == null) {
       return 0;
     }
-    int totalCharCount = 0;
+    long totalCharCount = 0;
     char[] chars = new char[BUFFER_SIZE];
     int count;
     while ((count = reader.read(chars)) > 0) {
