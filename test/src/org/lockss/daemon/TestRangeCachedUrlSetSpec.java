@@ -1,5 +1,5 @@
 /*
- * $Id: TestRangeCachedUrlSetSpec.java,v 1.2 2003-02-20 02:23:40 aalto Exp $
+ * $Id: TestRangeCachedUrlSetSpec.java,v 1.3 2003-02-26 04:39:16 tal Exp $
  */
 
 /*
@@ -67,7 +67,10 @@ public class TestRangeCachedUrlSetSpec extends LockssTestCase {
     String lwrb1 = "abc";
     String lwrb2 = "bcd";
 
-    CachedUrlSetSpec cuss4 = new RangeCachedUrlSetSpec("xxx", lwrb1, uprb1);
+    RangeCachedUrlSetSpec cuss4 =
+      new RangeCachedUrlSetSpec("xxx", lwrb1, uprb1);
+    assertEquals(lwrb1, cuss4.getLowerBound());
+    assertEquals(uprb1, cuss4.getUpperBound());
     CachedUrlSetSpec cuss5 = new RangeCachedUrlSetSpec("xxx", lwrb2, uprb2);
     CachedUrlSetSpec cuss6 = new RangeCachedUrlSetSpec("xxx", lwrb1, uprb2);
     CachedUrlSetSpec cuss7 = new RangeCachedUrlSetSpec("xxx", lwrb2, uprb1);

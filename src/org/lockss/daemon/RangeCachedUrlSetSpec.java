@@ -1,5 +1,5 @@
 /*
- * $Id: RangeCachedUrlSetSpec.java,v 1.2 2003-02-20 02:23:40 aalto Exp $
+ * $Id: RangeCachedUrlSetSpec.java,v 1.3 2003-02-26 04:39:16 tal Exp $
  */
 
 /*
@@ -32,9 +32,8 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.daemon;
 
-import java.util.List;
-import java.util.Collections;
-import org.lockss.util.ListUtil;
+import java.util.*;
+import org.lockss.util.*;
 
 /**
  * A CachedUrlSetSpec that matches based on a URL prefix and an optional
@@ -57,7 +56,7 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
    * @throws NullPointerException if the prefix is null
    */
   public RangeCachedUrlSetSpec(String urlPrefix,
-                                String upperBound, String lowerBound) {
+			       String lowerBound, String upperBound) {
     if (urlPrefix == null) {
       throw new NullPointerException("RangeCachedUrlSetSpec with null URL");
     }
@@ -97,35 +96,13 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
   public boolean equals(Object obj) {
     if (obj instanceof RangeCachedUrlSetSpec) {
       RangeCachedUrlSetSpec spec = (RangeCachedUrlSetSpec)obj;
-      if (!prefix.equals(spec.getUrl())) {
-        return false;
-      }
-
-      // check the lower boundary
-      if (lowerBound == null) {
-        if (spec.getLowerBound() != null) {
-          return false;
-        }
-      }
-      else if (!lowerBound.equals(spec.getLowerBound())) {
-        return false;
-      }
-
-      // check the upper boundary
-      if (upperBound == null) {
-        if (spec.getUpperBound() != null) {
-          return false;
-        }
-      }
-      else if (!upperBound.equals(spec.getUpperBound())) {
-        return false;
-      }
-    }
-    else {
+      return prefix.equals(spec.getUrl()) &&
+	StringUtil.equalStrings(lowerBound, spec.getLowerBound()) &&
+	StringUtil.equalStrings(upperBound, spec.getUpperBound());
+    } else {
       // not the right kind of object
       return false;
     }
-    return true;
   }
 
   /**
@@ -162,19 +139,16 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
    * @return the hashcode
    */
   public int hashCode() {
-    StringBuffer sb = new StringBuffer();
-    sb.append(prefix);
-
-    if(lowerBound != null) {
-      sb.append(lowerBound);
+    int hash = 0x40700704;
+    hash += prefix.hashCode();
+    if (lowerBound != null) {
+      hash += lowerBound.hashCode();
     }
-
-    if(upperBound != null) {
-     sb.append(upperBound);
+    if (upperBound != null) {
+      hash += upperBound.hashCode();
     }
-    return sb.toString().hashCode();
+    return hash;
   }
-
 
   /**
    * return the upper bounds of the range
@@ -203,13 +177,13 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
 
      if(upperBound != null) {
       String us = prefix + upperBound;
-      if(us.compareTo(url) > 0) {
+      if(us.compareTo(url) < 0) {
         return false;
       }
     }
     if(lowerBound != null) {
       String ls = prefix + lowerBound;
-      if(ls.compareTo(url) < 0)  {
+      if(ls.compareTo(url) > 0)  {
         return false;
       }
     }
