@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.102 2004-09-02 23:10:12 smorabito Exp $
+ * $Id: PluginManager.java,v 1.103 2004-09-02 23:23:12 smorabito Exp $
  */
 
 /*
@@ -83,7 +83,7 @@ public class PluginManager
   static final String PARAM_KEYSTORE_LOCATION =
     Configuration.PREFIX + "plugin.keystore.location";
   static final String DEFAULT_KEYSTORE_LOCATION =
-    "/org/lockss/plugin/lockss.keystore";
+    "org/lockss/plugin/lockss.keystore";
   /** The password to use when opening the loadable plugin
       verification keystore (optional). */
   static final String PARAM_KEYSTORE_PASSWORD =
