@@ -1,5 +1,5 @@
 /*
- * $Id: TestStatusTable.java,v 1.1 2003-03-13 23:14:49 troberts Exp $
+ * $Id: TestStatusTable.java,v 1.2 2003-03-26 23:12:04 tal Exp $
  */
 
 /*
@@ -32,15 +32,29 @@ import org.lockss.util.*;
 
 public class TestStatusTable extends LockssTestCase {
 
-  public void testReferenceCompareTo() {
-    StatusTable.Reference ref = new StatusTable.Reference("C", "blah", null);
-    assertEquals(0, 
-		 ref.compareTo(new StatusTable.Reference("C", "blah", null)));
-    assertEquals(-1, 
-		 ref.compareTo(new StatusTable.Reference("D", "blah", null)));
-    assertEquals(1, 
-		 ref.compareTo(new StatusTable.Reference("B", "blah", null)));
+  public void testGetActualValue() {
+    Integer val = new Integer(3);
+    StatusTable.DisplayedValue aval = new StatusTable.DisplayedValue(val);
+    StatusTable.Reference rval = new StatusTable.Reference(val, "foo", "bar");
+    StatusTable.DisplayedValue arval = new StatusTable.DisplayedValue(rval);
+    StatusTable.Reference raval = new StatusTable.Reference(aval,
+							    "foo", "bar");
+    assertEquals(val, StatusTable.getActualValue(val));
+    assertEquals(val, StatusTable.getActualValue(aval));
+    assertEquals(val, StatusTable.getActualValue(rval));
+    assertEquals(val, StatusTable.getActualValue(arval));
+    assertEquals(val, StatusTable.getActualValue(raval));
   }
+
+//   public void testReferenceCompareTo() {
+//     StatusTable.Reference ref = new StatusTable.Reference("C", "blah", null);
+//     assertEquals(0, 
+// 		 ref.compareTo(new StatusTable.Reference("C", "blah", null)));
+//     assertEquals(-1, 
+// 		 ref.compareTo(new StatusTable.Reference("D", "blah", null)));
+//     assertEquals(1, 
+// 		 ref.compareTo(new StatusTable.Reference("B", "blah", null)));
+//   }
 
   public void testReferenceEquals() {
     StatusTable.Reference ref = new StatusTable.Reference("C", "blah", null);

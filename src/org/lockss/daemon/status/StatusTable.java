@@ -1,5 +1,5 @@
 /*
- * $Id: StatusTable.java,v 1.18 2003-03-25 01:04:05 troberts Exp $
+ * $Id: StatusTable.java,v 1.19 2003-03-26 23:12:04 tal Exp $
  */
 
 /*
@@ -197,6 +197,21 @@ public class StatusTable {
     this.rows = rows;
   }
 
+  /** Return the actual value, possibly embedded in a {@link
+   * StatusTable.DisplayedValue} and/or a {@link
+   * StatusTable.Reference}
+   * @param value an object, possibly an DisplayedValue or Reference
+   * @return The innermost embedded value that is not an DisplayedValue
+   * or a Reference.
+   */
+  public static Object getActualValue(Object value) {
+    if (value instanceof DisplayedValue) {
+      return getActualValue(((DisplayedValue)value).getValue());
+    } else if (value instanceof Reference) {
+      return getActualValue(((Reference)value).getValue());
+    } else return value;
+  }
+
   /**
    * Sets the default {@link StatusTable.SortRule}s for this table
    * @param defaultSortRules List of default {@link StatusTable.SortRule}s 
@@ -218,6 +233,129 @@ public class StatusTable {
     sb.append(rows);
     sb.append("]");
     return sb.toString();
+  }
+
+  /**
+   * Wrapper for a value with additional display properties
+   */
+  public static class DisplayedValue {
+    private Object value;
+    private String color = null;
+
+    /** Create a DisplayedValue with the specified value */
+    public DisplayedValue(Object value) {
+      this.value = value;
+    }
+
+    /** Get the value */
+    public Object getValue() {
+      return value;
+    }
+
+    /** Set the color.
+     * @param color the name of the color (understandable by html)
+     */
+    public void setColor(String color) {
+      this.color = color;
+    }
+
+    /** Get the color */
+    public String getColor() {
+      return color;
+    }
+
+  }
+  /**
+   * Object which refers to another table
+   */
+  public static class Reference {
+    private Object value;
+    private String tableName;
+    private String key;
+
+    /**
+     * @param value value to be displayed
+     * @param tableName name of the {@link StatusTable} that this 
+     * links to
+     * @param key object further specifying the table this links to
+     */
+    public Reference(Object value, String tableName, String key){
+      this.value = value;
+      this.tableName = tableName;
+      this.key = key;
+    }
+
+    public Object getValue() {
+      return value;
+    }
+    
+    public String getTableName() {
+      return tableName;
+    }
+
+    public String getKey() {
+      return key;
+    }
+
+    public String toString() {
+      StringBuffer sb = new StringBuffer();
+      sb.append("[StatusTable.Reference:");
+      sb.append(value);
+      sb.append(", ");
+      sb.append(tableName);
+      sb.append(", ");
+      sb.append(key);
+      sb.append("]");
+      return sb.toString();
+    }
+
+    public boolean equals(Object obj) {
+      if (! (obj instanceof StatusTable.Reference)) {
+  	return false;
+      }
+      StatusTable.Reference ref = (StatusTable.Reference)obj;
+      if (!value.equals(ref.getValue())) {
+	return false;
+      }
+      if (!tableName.equals(ref.getTableName())) {
+	return false;
+      }
+
+      //true iff both strings are equal or null
+      return StringUtil.equalStrings(key, ref.getKey());
+    }
+  }
+
+  /**
+   * Object representing scalar information in a table
+   */
+  public static class SummaryInfo {
+    private String title;
+    private int type;
+    private Object value;
+
+    /**
+     * @param title title for this SummaryInfo
+     * @param type int representing the type of value
+     * @param value value object associated with this SummaryInfo
+     */    
+    public SummaryInfo(String title, int type, Object value) {
+      this.title = title;
+      this.type = type;
+      this.value = value;
+    }
+
+    public String getTitle() {
+      return this.title;
+    }
+
+    public int getType() {
+      return this.type;
+    }
+
+    public Object getValue() {
+      return value;
+    }
   }
 
   private static class SortRuleComparator implements Comparator {
@@ -247,8 +385,10 @@ public class StatusTable {
       while (returnVal == 0 && it.hasNext()){
 	SortRule sortRule = (SortRule)it.next();
 	String colName = sortRule.getColumnName();
-	Object valA = rowA.get(colName);
-	Object valB = rowB.get(colName);
+	// Either of both objects might be either a Reference or an
+	// DisplayedValue.  We want to compare the actual value.
+	Object valA = getActualValue(rowA.get(colName));
+	Object valB = getActualValue(rowB.get(colName));
 
 	
 	switch (sortRule.getColumnType()) {
@@ -343,104 +483,6 @@ public class StatusTable {
       // column that isn't displayed.
       logger.warning("Unknown type for sort column: "+ columnName);
       columnType = ColumnDescriptor.TYPE_INT;
-    }
-  }
-
-  /**
-   * Object which refers to another table
-   */
-  public static class Reference implements Comparable {
-    private Object value;
-    private String tableName;
-    private String key;
-
-    /**
-     * @param value value to be displayed
-     * @param tableName name of the {@link StatusTable} that this 
-     * links to
-     * @param key object further specifying the table this links to
-     */
-    public Reference(Object value, String tableName, String key){
-      this.value = value;
-      this.tableName = tableName;
-      this.key = key;
-    }
-
-    public Object getValue() {
-      return value;
-    }
-    
-    public String getTableName() {
-      return tableName;
-    }
-
-    public String getKey() {
-      return key;
-    }
-
-    public int compareTo(Object obj) {
-      Reference ref = (Reference)obj;
-      return ((Comparable)value).compareTo(ref.getValue());
-    }
-
-    public String toString() {
-      StringBuffer sb = new StringBuffer();
-      sb.append("[StatusTable.Reference:");
-      sb.append(value);
-      sb.append(", ");
-      sb.append(tableName);
-      sb.append(", ");
-      sb.append(key);
-      sb.append("]");
-      return sb.toString();
-    }
-
-    public boolean equals(Object obj) {
-      if (! (obj instanceof StatusTable.Reference)) {
-  	return false;
-      }
-      StatusTable.Reference ref = (StatusTable.Reference)obj;
-      if (!value.equals(ref.getValue())) {
-	return false;
-      }
-      if (!tableName.equals(ref.getTableName())) {
-	return false;
-      }
-
-      //true iff both strings are equal or null
-      return StringUtil.equalStrings(key, ref.getKey());
-    }
-  }
-
-  /**
-   * Object representing scalar information in a table
-   */
-  public static class SummaryInfo {
-    private String title;
-    private int type;
-    private Object value;
-
-    /**
-     * @param title title for this SummaryInfo
-     * @param type int representing the type of value
-     * @param value value object associated with this SummaryInfo
-     */    
-    public SummaryInfo(String title, int type, Object value) {
-      this.title = title;
-      this.type = type;
-      this.value = value;
-    }
-
-    public String getTitle() {
-      return this.title;
-    }
-
-    public int getType() {
-      return this.type;
-    }
-
-    public Object getValue() {
-      return value;
     }
   }
 

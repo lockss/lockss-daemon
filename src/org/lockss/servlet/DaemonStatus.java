@@ -1,5 +1,5 @@
 // ========================================================================
-// $Id: DaemonStatus.java,v 1.9 2003-03-21 07:27:30 tal Exp $
+// $Id: DaemonStatus.java,v 1.10 2003-03-26 23:12:04 tal Exp $
 // ========================================================================
 
 /*
@@ -259,6 +259,20 @@ public class DaemonStatus extends LockssServlet {
   }
 
   private String dispString1(Object val, int type) {
+    if (val instanceof StatusTable.DisplayedValue) {
+      StatusTable.DisplayedValue aval = (StatusTable.DisplayedValue)val;
+      String str = dispString2(aval.getValue(), type);
+      String color = aval.getColor();
+      if (color != null) {
+	str = "<font color=red>" + str + "</font>";
+      }
+      return str;
+    } else {
+      return dispString2(val, type);
+    }
+  }
+
+  private String dispString2(Object val, int type) {
     if (val == null) {
       return "";
     }
