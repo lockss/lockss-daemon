@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.18 2003-02-26 06:01:10 tal Exp $
+ * $Id: MockArchivalUnit.java,v 1.19 2003-02-26 21:33:34 tal Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ public class MockArchivalUnit implements ArchivalUnit {
   private Configuration config;
   private CrawlSpec spec;
   private String pluginId = "mock";
-  private String auId = "none";
+  private String auId = StringUtil.gensym("MockAU_");
   private CachedUrlSet cus = null;
   private MockObjectCallback pauseCallback = null;
   private List newContentUrls = null;
