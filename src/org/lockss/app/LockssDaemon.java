@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.45 2004-01-12 06:18:31 tlipkis Exp $
+ * $Id: LockssDaemon.java,v 1.46 2004-01-13 10:19:58 tlipkis Exp $
  */
 
 /*
@@ -189,13 +189,13 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     // start plugin manager after generic services
     new ManagerDesc(PLUGIN_MANAGER, DEFAULT_PLUGIN_MANAGER),
     // start proxy and servlets after plugin manager
+    new ManagerDesc(REMOTE_API, DEFAULT_REMOTE_API),
     new ManagerDesc(SERVLET_MANAGER, DEFAULT_SERVLET_MANAGER),
     new ManagerDesc(PROXY_MANAGER, DEFAULT_PROXY_MANAGER),
-    // start comm layer so we don't receive a message
+    // comm layer at end so don't process messages until other services ready
     new ManagerDesc(COMM_MANAGER, DEFAULT_COMM_MANAGER),
     new ManagerDesc(ROUTER_MANAGER, DEFAULT_ROUTER_MANAGER),
     new ManagerDesc(WATCHDOG_SERVICE, DEFAULT_WATCHDOG_SERVICE),
-    new ManagerDesc(REMOTE_API, DEFAULT_REMOTE_API),
   };
 
   // AU-specific manager descriptors.  As each AU is created its managers
