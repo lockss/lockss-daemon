@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.1.2.18 2004-11-29 23:58:08 dshr Exp $
+ * $Id: V3Poller.java,v 1.1.2.19 2005-01-06 19:28:37 dshr Exp $
  */
 
 /*
@@ -142,7 +142,7 @@ public class V3Poller extends V3Poll {
     V3LcapMessage v3msg = (V3LcapMessage) msg;
     switch (m_state) {
     default:
-      log.debug("Unexpected message " + msg.toString() + " in state " +
+      log.error("Unexpected message " + msg.toString() + " in state " +
 		getPollStateName(m_state));
       m_pollstate = ERR_IO; // XXX choose better
       stopPoll();
@@ -211,7 +211,7 @@ public class V3Poller extends V3Poll {
 	      " to " + stateName[state]);
       throw new RuntimeException("V3Poller: bad state change");
     }
-    log.debug("Change state from " + stateName[m_state] +
+    log.debug3("Change state from " + stateName[m_state] +
 	      " to " + stateName[state]);
     m_state = state;
   }
@@ -247,7 +247,7 @@ public class V3Poller extends V3Poll {
     Deadline timer = msg.getDeadline();
     if (es.verifyProof(ep, timer, cb, cookie)) {
       // effort verification for Poll successfuly scheduled
-      log.debug("Scheduled verification callback before " +
+      log.debug3("Scheduled verification callback before " +
 		timer.getRemainingTime() + " for " + ((String)cookie));
       changePollState(STATE_VERIFYING_POLL_ACK_EFFORT);
     } else {
@@ -261,7 +261,6 @@ public class V3Poller extends V3Poll {
   protected void doVoteMessage(V3LcapMessage msg) {
     Serializable cookie = msg.getKey();
     if (msg.getOpcode() != V3LcapMessage.MSG_VOTE) {
-      log.debug("Expect " + V3LcapMessage.MSG_VOTE + " got " + msg.getOpcode());
       log.warning("Expecting a Vote but got: " + msg.toString());
       nextVoter(cookie, false);
       return;
@@ -300,7 +299,7 @@ public class V3Poller extends V3Poll {
     Deadline timer = msg.getDeadline();
     if (es.verifyProof(ep, timer, cb, cookie)) {
       // effort verification for Vote successfuly scheduled
-      log.debug("Scheduled verification callback before " +
+      log.debug3("Scheduled verification callback before " +
 		timer.getRemainingTime() + " for " + ((String)cookie));
       changePollState(STATE_VERIFYING_VOTE_EFFORT);
     } else {
@@ -330,7 +329,7 @@ public class V3Poller extends V3Poll {
 
   protected void solicitVotesFrom(List peers) {
     if (peers.size() == 0) {
-      log.debug("No voters to solicit from");
+      log.debug("No more voters to solicit from");
       changePollState(STATE_CHOOSING_NEXT_VOTE);
       pauseBeforeVerifyNextVote(m_key);
       return;
@@ -338,10 +337,6 @@ public class V3Poller extends V3Poll {
     m_voterRoll = peers;
     Object[] voters = peers.toArray();
 
-    if (!(voters[0] instanceof PeerIdentity)) {
-      log.error("Voter is not a PeerIdentity");
-      // XXX throw?
-    }
     m_currentVoter = (PeerIdentity) voters[0];
     // XXX this is mock stuff for initial testing
     EffortService.ProofCallback cb = new PollEffortCallback(m_pollmanager);
@@ -351,7 +346,7 @@ public class V3Poller extends V3Poll {
     Deadline timer = Deadline.in(duration);
     Serializable cookie = challengeToKey(m_challenge);
     if (es.proveEffort(pollProof, timer, cb, cookie)) {
-      log.debug("Scheduled generation callback before " +
+      log.debug3("Scheduled generation callback before " +
 		timer.getRemainingTime() + " for " + ((String)cookie));
       changePollState(STATE_PROVING_INTRO_EFFORT);
     } else {
@@ -371,7 +366,7 @@ public class V3Poller extends V3Poll {
     } else {
       Object obj = m_voterRoll.remove(0);
       changePollState(STATE_CHOOSING_NEXT_VOTER);
-      log.debug("nextVoter(" + cookie + ")");
+      log.debug3("nextVoter(" + cookie + ")");
       if (addBack) {
 	m_voterRoll.add(obj);
       }
@@ -382,7 +377,6 @@ public class V3Poller extends V3Poll {
 	  stopPoll();
 	}
       } else {
-	log.debug("voter roll returns a " + obj.getClass().getName());
 	solicitVotesFrom(m_voterRoll);
       }
     }
@@ -433,11 +427,11 @@ public class V3Poller extends V3Poll {
 				   Serializable cookie,
 				   Exception e) {
       if (e != null) {
-	log.debug("PollEffortProofCallback: " + ((String) cookie) +
+	log.warning("PollEffortProofCallback: " + ((String) cookie) +
 		  " threw " + e);
 	nextVoter(cookie, true);
       } else {
-	log.debug("PollEffortProofCallback: " + ((String) cookie));
+	log.debug3("PollEffortProofCallback: " + ((String) cookie));
 	changePollState(STATE_SENDING_POLL);
 	Properties props = null;
 	//  XXX put effort etc into Properties for message
@@ -458,7 +452,8 @@ public class V3Poller extends V3Poll {
     }
 
     /**
-     * Called to indicate verification of a proof of effort is complete.
+     * Called to indicate verification of a proof of effort is complete
+     * for a Poll message - should not be invoked by Poller.
      * @param ep the <code>EffortService.Proof</code> in question
      * @param cookie used to disambiguate callbacks
      * @param e the exception that caused the effort proof to fail
@@ -467,7 +462,7 @@ public class V3Poller extends V3Poll {
 				     Deadline timer,
 				     Serializable cookie,
 				     Exception e) {
-      log.debug("Poll effort verification should not happen");
+      log.warning("Poll effort verification should not happen");
       m_pollstate = ERR_IO; // XXX choose better
       changePollState(STATE_FINALIZING);
       stopPoll();
@@ -492,11 +487,11 @@ public class V3Poller extends V3Poll {
 				   Serializable cookie,
 				   Exception e) {
       if (e != null) {
-	log.debug("PollProofEffortProofCallback: " + ((String) cookie) +
+	log.warning("PollProofEffortProofCallback: " + ((String) cookie) +
 		  " threw " + e);
 	nextVoter(cookie, true);
       } else {
-	log.debug("PollProofEffortProofCallback: " + ((String) cookie));
+	log.debug3("PollProofEffortProofCallback: " + ((String) cookie));
 	changePollState(STATE_SENDING_POLL_PROOF);
 	Properties props = null;
 	//  XXX put effort etc into Properties for message
@@ -527,23 +522,23 @@ public class V3Poller extends V3Poll {
 				     Serializable cookie,
 				     Exception e) {
       if (e != null) {
-	log.debug("PollAck effort verification threw: " + e);
+	log.warning("PollAck effort verification threw: " + e);
 	nextVoter(cookie, true);
 	return;
       }
       if (!ep.isVerified()) {
-	log.debug("PollAck effort verification failed");
+	log.warning("PollAck effort verification failed");
 	nextVoter(cookie, false);
 	return;
       }
       //  Poll effort verified,  now generate effort for reply
-      log.debug("PollProof effort verification succeeds with " +
+      log.debug3("PollProof effort verification succeeds with " +
 		timer.getRemainingTime() + " to go");
       EffortService es = ep.getEffortService();
       //  XXX should get spec for proof from message
       EffortService.Proof pollProof = es.makeProof();
       if (es.proveEffort(pollProof, timer, this, cookie)) {
-	log.debug("Scheduled generation callback before " +
+	log.debug3("Scheduled generation callback before " +
 		  timer.getRemainingTime() + " for " + ((String)cookie));
 	changePollState(STATE_PROVING_REMAINING_EFFORT);
       } else {
@@ -572,7 +567,7 @@ public class V3Poller extends V3Poll {
 				   Serializable cookie,
 				   Exception e) {
       if (e != null) {
-	log.debug("VoteEffortProofCallback: " + ((String) cookie) +
+	log.warning("VoteEffortProofCallback: " + ((String) cookie) +
 		  " threw " + e);
 	// We assume there's something bad about the vote we just
 	// failed to verify
@@ -580,7 +575,7 @@ public class V3Poller extends V3Poll {
 	changePollState(STATE_CHOOSING_NEXT_VOTE);
 	pauseBeforeVerifyNextVote(cookie);
       } else {
-	log.debug("VoteEffortProofCallback: " + ((String) cookie));
+	log.debug3("VoteEffortProofCallback: " + ((String) cookie));
 	m_repairEffort = ep;
 	// Now verify the vote
 	EffortService es = ep.getEffortService();
@@ -593,7 +588,7 @@ public class V3Poller extends V3Poll {
 	EffortService.VoteCallback cb =
 	  new VoteVerificationCallback(m_pollmanager);
 	if (es.verifyVote(vote, timer, cb, cookie)) {
-	  log.debug("Scheduled vote verification callback before " +
+	  log.debug3("Scheduled vote verification callback before " +
 		    timer.getRemainingTime() + " for " + ((String)cookie));
 	  changePollState(STATE_VERIFYING_VOTE);
 	} else {
@@ -616,27 +611,27 @@ public class V3Poller extends V3Poll {
 				     Serializable cookie,
 				     Exception e) {
       if (e != null) {
-	log.debug("Vote effort verification threw: " + e);
+	log.warning("Vote effort verification threw: " + e);
 	ballotBox.remove(0);
 	changePollState(STATE_CHOOSING_NEXT_VOTE);
 	pauseBeforeVerifyNextVote(cookie);
 	return;
       }
       if (!ep.isVerified()) {
-	log.debug("Vote effort verification failed");
+	log.warning("Vote effort verification failed");
 	ballotBox.remove(0);
 	changePollState(STATE_CHOOSING_NEXT_VOTE);
 	pauseBeforeVerifyNextVote(cookie);
 	return;
       }
       //  Vote effort verified,  now generate effort for repair request
-      log.debug("Vote effort verification succeeds with " +
+      log.debug3("Vote effort verification succeeds with " +
 		timer.getRemainingTime() + " to go");
       EffortService es = ep.getEffortService();
       //  XXX should get spec for proof from message
       EffortService.Proof pollProof = es.makeProof();
       if (es.proveEffort(pollProof, timer, this, cookie)) {
-	log.debug("Scheduled generation callback before " +
+	log.debug3("Scheduled generation callback before " +
 		  timer.getRemainingTime() + " for " + ((String)cookie));
 	changePollState(STATE_PROVING_REPAIR_EFFORT);
       } else {
@@ -665,7 +660,7 @@ public class V3Poller extends V3Poll {
 				   Deadline timer,
 				   Serializable cookie,
 				   Exception e) {
-      log.debug("VoteVerificationCallback: " + ((String) cookie) +
+      log.warning("VoteVerificationCallback: " + ((String) cookie) +
 		" threw " + e + " should not happen");
       changePollState(STATE_FINALIZING);
       m_pollstate = ERR_IO; // XXX choose better
@@ -684,7 +679,7 @@ public class V3Poller extends V3Poll {
 				     Exception e) {
       ballotBox.remove(0);
       if (e != null) {
-	log.debug("Vote effort verification threw: " + e);
+	log.warning("Vote effort verification threw: " + e);
 	changePollState(STATE_CHOOSING_NEXT_VOTE);
 	pauseBeforeVerifyNextVote(cookie);
 	return;
@@ -714,7 +709,6 @@ public class V3Poller extends V3Poll {
     }
   }
 
-  //  XXX temporary
   class ReceiptTimerCallback implements TimerQueue.Callback {
     /**
      * Called when the timer expires.
@@ -722,6 +716,7 @@ public class V3Poller extends V3Poll {
      */
     public void timerExpired(Object cookie) {
       log.debug("ReceiptTimerCallback for " + cookie);
+      //  XXX Sending receipts not yet implemented
       changePollState(STATE_CHOOSING_NEXT_VOTE);
       pauseBeforeVerifyNextVote((Serializable)cookie);
     }
