@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrlSet.java,v 1.8 2002-11-25 21:33:45 tal Exp $
+ * $Id: MockCachedUrlSet.java,v 1.9 2002-11-26 18:00:32 troberts Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.util.*;
 import java.security.MessageDigest;
 import org.lockss.daemon.*;
 import org.lockss.test.*;
+import org.lockss.util.*;
 
 /**
  * This is a mock version of <code>CachedUrlSet</code> used for testing
@@ -48,9 +49,15 @@ public class MockCachedUrlSet implements CachedUrlSet {
   private ArchivalUnit au;
   private CachedUrlSetSpec spec;
 
+  private HashSet cachedUrls = new HashSet();
   private Vector urls = null;
   private Iterator flatIterator = null;
   private Iterator leafIterator = null;
+
+  private Hashtable ucHash = new Hashtable();
+  private Hashtable cuHash = new Hashtable();
+
+  private static final Logger logger = Logger.getLogger("MockCachedUrlSet");
 
   public MockCachedUrlSet(ArchivalUnit owner, CachedUrlSetSpec spec) {
     this.spec = spec;
@@ -66,7 +73,7 @@ public class MockCachedUrlSet implements CachedUrlSet {
   }
 
   public MockCachedUrlSet(CachedUrlSetSpec spec) {
-    this(new MockArchivalUnit(null), spec);
+    this(new MockArchivalUnit(), spec);
   }
 
   public boolean containsUrl(String url) {
@@ -146,9 +153,45 @@ public class MockCachedUrlSet implements CachedUrlSet {
   }
 
   public UrlCacher makeUrlCacher(String url) {
-    return null;
+    UrlCacher uc = null;
+    if (ucHash != null) {
+      uc = (UrlCacher)ucHash.get(url);
+      logger.debug(uc+" came from ucHash");
+    } else {
+      logger.debug("ucHash is null, so makeUrlCacher is returning null");
+    }
+    return uc;
   }
 
   //methods used to generate proper mock objects
+
+  /**
+   * Sets up a cached url and url cacher for this url
+   * @param source content to associate with this url
+   * @param url url for which we should set up a CachedUrl and UrlCacher
+   */
+  public void addUrl(String source, String url) {
+
+    MockUrlCacher uc = new MockUrlCacher(url, this);
+    MockCachedUrl cu = new MockCachedUrl(url);
+    cu.setInputStream(new StringInputStream(source));
+    Properties prop = new Properties();
+    prop.setProperty("content-type", "text/html");
+    cu.setProperties(prop);
+    uc.setShouldBeCached(true);
+    uc.setCachedUrl(cu);
+    cu.setExists(false);
+    logger.debug("Adding "+url+" to cuHash and ucHash");
+    cuHash.put(url, cu);
+    ucHash.put(url, uc);
+  }
+
+  public void addCachedUrl(String url) {
+    cachedUrls.add(url);
+  }
+
+  public Set getCachedUrls() {
+    return cachedUrls;
+  }
 
 }
