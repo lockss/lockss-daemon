@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.77 2003-05-07 22:07:33 claire Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.78 2003-05-07 23:47:46 aalto Exp $
  */
 
 /*
@@ -62,6 +62,7 @@ public class TestNodeManagerImpl
     theDaemon = new MockLockssDaemon();
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     Properties p = new Properties();
+    p.setProperty(LockssRepositoryServiceImpl.PARAM_CACHE_LOCATION, tempDirPath);
     p.setProperty(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION, tempDirPath);
     p.setProperty(NodeManagerImpl.PARAM_NODESTATE_CACHE_SIZE, "10");
     p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.1.2.3");
@@ -80,7 +81,7 @@ public class TestNodeManagerImpl
     idManager = new MockIdentityManager();
     idManager.initService(theDaemon);
     theDaemon.setIdentityManager(idManager);
-    theDaemon.setLockssRepositoryService(new MockLockssRepositoryService());
+//    theDaemon.setLockssRepositoryService(new MockLockssRepositoryService());
     pollManager.initService(theDaemon);
     pollManager.startService();
 
@@ -406,9 +407,10 @@ public class TestNodeManagerImpl
     assertEquals(PollState.WON, pollState.getStatus());
 
     // Test a repair
+    String deleteUrl = TEST_URL + "/branch2/testentry2.html";
     String repairUrl = TEST_URL + "/branch2/testentry4.html";
     String repairUrl2 = TEST_URL + "/branch2/testentry5.html";
-    // unsucessful repair
+    // unsuccessful repair
     namePoll = createPoll(TEST_URL + "/branch2", false, true, 5, 15);
     results = namePoll.getVoteTally();
     spec = results.getPollSpec();
@@ -433,15 +435,15 @@ public class TestNodeManagerImpl
                               Deadline.MAX,
                               false);
 
-    // add url to delete
-    String deleteUrl = TEST_URL + "/branch2/testentry2.html";
-    RepositoryNode repoNode = theDaemon.getLockssRepository(mau).createNewNode(
-        deleteUrl);
-    assertFalse(repoNode.isInactive());
+    // add url to delete to repository (need to really add it, so it can be
+    // deactivated)
+    RepositoryNode delNode = TestRepositoryNodeImpl.createLeaf(
+        theDaemon.getLockssRepository(mau), deleteUrl, "test stream", null);
+    assertFalse(delNode.isInactive());
+    assertNull(theDaemon.getLockssRepository(mau).getNode(repairUrl));
 
     nodeManager.handleNamePoll(pollState, results, nodeState);
     assertEquals(PollState.REPAIRING, pollState.getStatus());
-
     assertEquals(MockCrawlManager.SCHEDULED,
                  ( (MockCrawlManager) theDaemon.getCrawlManager()).getUrlStatus(
         repairUrl));
@@ -450,8 +452,9 @@ public class TestNodeManagerImpl
         repairUrl2));
 
     // deleted node is marked inactive
-    assertTrue(repoNode.isInactive());
-
+    assertTrue(delNode.isInactive());
+    // node is created for the repair
+    assertNotNull(theDaemon.getLockssRepository(mau).getNode(repairUrl));
   }
 
   public void testHandleAuPolls() throws Exception {

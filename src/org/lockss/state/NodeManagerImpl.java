@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.119 2003-05-07 22:06:23 claire Exp $
+ * $Id: NodeManagerImpl.java,v 1.120 2003-05-07 23:47:46 aalto Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.protocol.*;
 import org.lockss.crawler.CrawlManager;
 import org.lockss.repository.LockssRepository;
 import org.apache.commons.collections.LRUMap;
+import org.lockss.repository.RepositoryNodeImpl;
 
 /**
  * Implementation of the NodeManager.
@@ -399,14 +400,15 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
           if ((spec instanceof RangeCachedUrlSetSpec) &&
               (((RangeCachedUrlSetSpec)spec).getLowerBound()==null)) {
             logger.debug2("calling content poll on node's contents");
+            //XXX once we're checking the content bit in the name poll,
+            // only call SNCP if has content
             callSingleNodeContentPoll(results.getCachedUrlSet());
           }
           // call a content poll on this node's subnodes
           callContentPollsOnSubNodes(nodeState, results.getCachedUrlSet());
-          if(pollState.status == PollState.REPAIRING) {
+          if (pollState.status == PollState.REPAIRING) {
             pollState.status = PollState.REPAIRED;
-          }
-          else {
+          } else {
             pollState.status = PollState.WON;
           }
         }
@@ -423,7 +425,10 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     else {
       if (pollState.getStatus() == PollState.REPAIRING) {
         logger.debug2("lost repair name poll, state = unrepairable");
-        // if repair poll, can't be repaired and we leave it our damaged table
+        // if repair poll, can't be repaired and we leave it in our damage table
+        //XXX currently, this makes it difficult to do multiple repairs, since
+        // the poll calls only one repair, and repeats only once.
+        // the treewalk will have to handle the rest
         pollState.status = PollState.UNREPAIRABLE;
         return;
       }
@@ -443,12 +448,22 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
         if (localSet.contains(url)) {
           // removing from the set to leave only files for deletion
           localSet.remove(url);
-        }
-        else if (!repairMarked) {
+        } else if (!repairMarked) {
           // if not found locally, fetch
           logger.debug2("marking missing node for repair: " + url);
           CachedUrlSet newCus = au.makeCachedUrlSet(
               new RangeCachedUrlSetSpec(baseUrl + url));
+          //XXX eventually check content status, and only mark for repair if
+          // should have content.  Else just create in repository.
+          // create node in repository
+          try {
+            RepositoryNodeImpl repairNode =
+                (RepositoryNodeImpl)lockssRepo.createNewNode(newCus.getUrl());
+            repairNode.createNodeLocation();
+          } catch (MalformedURLException mue) {
+            // this shouldn't happen
+          }
+          // run a repair crawl
           markNodeForRepair(newCus, results);
           // only try one repair per poll
           //XXX instead, allow multi-URL repair crawls and schedule one
@@ -468,13 +483,12 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
           //set crawl status to DELETED
           NodeState oldState = getNodeState(oldCus);
           oldState.getCrawlState().type = CrawlState.NODE_DELETED;
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
           logger.error("Couldn't delete node.", e);
           // the treewalk will fix this eventually
         }
       }
-      if(!repairMarked) {
+      if (!repairMarked) {
         pollState.status = PollState.REPAIRED;
       }
     }
@@ -677,8 +691,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
                                                  new URL(cus.getUrl()),
                                                  new ContentRepairCallback(),
                                                  tally.getPollKey());
-    }
-    catch (MalformedURLException mue) {
+    } catch (MalformedURLException mue) {
       // this shouldn't happen
       // if it does, let the tree walk catch the repair
     }
