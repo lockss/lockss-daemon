@@ -1,5 +1,5 @@
 /*
- * $Id: PollHistory.java,v 1.6 2002-12-13 23:51:32 aalto Exp $
+ * $Id: PollHistory.java,v 1.7 2002-12-14 00:14:09 aalto Exp $
  */
 
 /*
@@ -37,7 +37,8 @@ import java.util.*;
 import org.lockss.protocol.LcapIdentity;
 
 /**
- * PollHistory contains the information for a completed poll.
+ * PollHistory contains the information for a completed poll.  It extends
+ * PollState but ignores 'getDeadline()' (returns null).
  */
 public class PollHistory extends PollState {
   long duration;
@@ -71,7 +72,7 @@ public class PollHistory extends PollState {
   }
 
   /**
-   * Returns a collection of Votes.
+   * Returns an immutable collection of Votes.
    * @return a Collection of Poll.Vote objects.
    */
   public Collection getVotes() {

@@ -1,5 +1,5 @@
 /*
- * $Id: PollState.java,v 1.4 2002-12-13 23:51:32 aalto Exp $
+ * $Id: PollState.java,v 1.5 2002-12-14 00:14:09 aalto Exp $
  */
 
 /*
@@ -46,9 +46,8 @@ public class PollState {
   public static final int RUNNING = 2;
   public static final int REPAIRING = 4;
   public static final int WON = 8;
-  public static final int LOST = 16;
-  public static final int REPAIRED = 32;
-  public static final int UNREPAIRABLE = 64;
+  public static final int REPAIRED = 16;
+  public static final int UNREPAIRABLE = 32;
 
   int type;
   String regExp;
