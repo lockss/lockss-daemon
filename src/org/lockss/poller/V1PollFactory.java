@@ -1,5 +1,5 @@
 /*
- * $Id: V1PollFactory.java,v 1.13.2.2 2004-10-28 08:33:09 tlipkis Exp $
+ * $Id: V1PollFactory.java,v 1.13.2.3 2004-11-30 01:06:39 tlipkis Exp $
  */
 
 /*
@@ -143,14 +143,11 @@ public class V1PollFactory implements PollFactory {
       opcode = LcapMessage.VERIFY_POLL_REQ;
       break;
     }
-    theLog.debug("sending a request for polltype: "
-                 + LcapMessage.POLL_OPCODES[opcode] +
-                 " for spec " + pollspec);
+    theLog.debug("Constructing request for poll: " + pollspec);
     long duration = poll.getDeadline().getRemainingTime();
-    if(duration <=0) {
-      theLog.debug("not sending request for polltype: "
-                   + LcapMessage.POLL_OPCODES[opcode] +
-                   " for spec " + pollspec + "not enough hash time.");
+    if (duration <= 0) {
+      theLog.debug("duration < 0 (" + duration +
+		   "), not sending request for poll: " + pollspec);
       return;
     }
     byte[] challenge = ((V1Poll)poll).getChallenge();

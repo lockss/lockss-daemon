@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.148.2.4 2004-11-17 23:46:43 tlipkis Exp $
+ * $Id: PollManager.java,v 1.148.2.5 2004-11-30 01:06:39 tlipkis Exp $
  */
 
 /*
@@ -565,7 +565,7 @@ public class PollManager
 	tally = lastTally.concatenateNameSubPollLists();
       }
       NodeManager nm = theDaemon.getNodeManager(tally.getArchivalUnit());
-      theLog.debug("sending completed poll results " + tally);
+      theLog.debug("handing poll results to node manager: " + tally);
       nm.updatePollResults(tally.getCachedUrlSet(), tally);
       try {
         theIDManager.storeIdentities();

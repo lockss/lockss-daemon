@@ -1,5 +1,5 @@
 /*
- * $Id: V1PollTally.java,v 1.17.2.1 2004-11-16 01:53:13 tlipkis Exp $
+ * $Id: V1PollTally.java,v 1.17.2.2 2004-11-30 01:06:39 tlipkis Exp $
  */
 
 /*
@@ -201,7 +201,6 @@ public class V1PollTally extends PollTally {
   }
 
   void tallyVotes() {
-    log.debug3("checking for tally of verify poll results.");
     if(type == Poll.VERIFY_POLL) {
       verifyTally();
       return;
@@ -238,6 +237,7 @@ public class V1PollTally extends PollTally {
   }
 
   void verifyTally() {
+    log.debug3("verifyTally");
     if(isErrorState()) {
       result = RESULT_ERROR;
     }
