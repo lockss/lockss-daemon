@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepairCrawler.java,v 1.18 2004-11-12 23:29:02 troberts Exp $
+ * $Id: TestRepairCrawler.java,v 1.19 2004-12-07 17:55:31 troberts Exp $
  */
 
 /*
@@ -111,8 +111,8 @@ public class TestRepairCrawler extends LockssTestCase {
     try {
       new RepairCrawler(mau, spec, aus, null, 0);
       fail("Contstructing a RepairCrawler with a null repair list"
-	   +" should throw an IllegalArgumentException");
-    } catch (IllegalArgumentException iae) {
+	   +" should throw a NullPointerException");
+    } catch (NullPointerException npe) {
     }
   }
 
@@ -146,6 +146,8 @@ public class TestRepairCrawler extends LockssTestCase {
 
     Set cachedUrls = cus.getForceCachedUrls();
     assertEquals(0, cachedUrls.size());
+    assertEquals(Crawler.STATUS_WINDOW_CLOSED,
+		 crawler.getStatus().getCrawlError());
   }
 
   public void testRepairCrawlPokesWatchdog() {
