@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.5 2003-01-25 02:22:20 aalto Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.6 2003-01-28 00:32:11 aalto Exp $
  */
 
 /*
@@ -90,7 +90,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     CachedUrlSet cus = getCUS("http://www.example.com");
     NodeState node = nodeManager.getNodeState(cus);
     assertNotNull(node);
-    assertTrue(cusEquals(cus, node.getCachedUrlSet()));
+    assertTrue(cus.equals(node.getCachedUrlSet()));
     assertNotNull(node.getCrawlState());
     assertEquals(-1, node.getCrawlState().getType());
     assertEquals(CrawlState.FINISHED, node.getCrawlState().getStatus());
@@ -98,12 +98,12 @@ public class TestNodeManagerImpl extends LockssTestCase {
     cus = getCUS("http://www.example.com/branch1");
     node = nodeManager.getNodeState(cus);
     assertNotNull(node);
-    assertTrue(cusEquals(cus, node.getCachedUrlSet()));
+    assertTrue(cus.equals(node.getCachedUrlSet()));
 
     cus = getCUS("http://www.example.com/branch2/file2.doc");
     node = nodeManager.getNodeState(cus);
     assertNotNull(node);
-    assertTrue(cusEquals(cus, node.getCachedUrlSet()));
+    assertTrue(cus.equals(node.getCachedUrlSet()));
 
     cus = getCUS("http://www.example.com/branch3");
     node = nodeManager.getNodeState(cus);
@@ -223,18 +223,6 @@ public class TestNodeManagerImpl extends LockssTestCase {
     assertIsomorphic(expectedA, histL);
   }
 
-
-  public void testGetKeys() throws Exception {
-    mau.setPluginId("mock2");
-    mau.setAuId("none2");
-    String expectedStr = "mock2:none2";
-    assertEquals(expectedStr, mau.getIdString());
-
-    CachedUrlSet mcus = getCUS("http://www.foo.com");
-    expectedStr = "http://www.foo.com";
-    assertEquals(expectedStr, mcus.getPrimaryUrl());
-  }
-
   public void testMapErrorCodes() {
     assertEquals(PollState.ERR_HASHING, nodeManager.mapResultsErrorToPollError(Poll.ERR_HASHING));
     assertEquals(PollState.ERR_IO, nodeManager.mapResultsErrorToPollError(Poll.ERR_IO));
@@ -316,12 +304,6 @@ public class TestNodeManagerImpl extends LockssTestCase {
     assertEquals(PollState.REPAIRED, pollState.getStatus());
   }
 
-  private boolean cusEquals(CachedUrlSet cus1, CachedUrlSet cus2) {
-    String url1 = (String)cus1.getPrimaryUrl();
-    String url2 = (String)cus2.getPrimaryUrl();
-    return url1.equals(url2);
-  }
-
   private CachedUrlSet getCUS(String url) throws Exception {
     return new MockCachedUrlSet(mau, new RECachedUrlSetSpec(url, (String)null));
   }
@@ -378,7 +360,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     try {
       testmsg =  LcapMessage.makeRequestMsg(
         url,
-        "*.doc",
+        "^.*doc",
         null,
         bytes,
         bytes,

@@ -1,5 +1,5 @@
 /*
- * $Id: AnyCachedUrlSetSpec.java,v 1.2 2003-01-25 02:21:11 aalto Exp $
+ * $Id: AnyCachedUrlSetSpec.java,v 1.3 2003-01-28 00:32:11 aalto Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import org.lockss.util.*;
  * A CachedUrlSetSpec that matches any of a list of CachedUrlSetSpecs
  */
 public class AnyCachedUrlSetSpec implements CachedUrlSetSpec {
+  private static Logger logger = Logger.getLogger("CachedUrlSetSpec");
   private List list;
 
   /**
@@ -81,7 +82,7 @@ public class AnyCachedUrlSetSpec implements CachedUrlSetSpec {
   }
 
   /**
-   * Overrides Object.hashCode();
+   * Overrides Object.hashCode().
    * Returns the sum of the sub-spec hashcodes.
    * @return the hashcode
    */
@@ -92,6 +93,22 @@ public class AnyCachedUrlSetSpec implements CachedUrlSetSpec {
       hashSum += cuss.hashCode();
     }
     return hashSum;
+  }
+
+  /**
+   * Overrides Object.equals().
+   * Returns the id strings.
+   * @param obj the object to compare to
+   * @return the hashcode
+   */
+  public boolean equals(Object obj) {
+    if (obj instanceof CachedUrlSetSpec) {
+      CachedUrlSetSpec spec = (CachedUrlSetSpec)obj;
+      return getIdString().equals(spec.getIdString());
+    } else {
+      logger.error("Trying to compare a spec and a non-spec.");
+      throw new IllegalArgumentException("Trying to compare spec to non-spec.");
+    }
   }
 
   /**

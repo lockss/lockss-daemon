@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrlSet.java,v 1.9 2003-01-25 02:21:11 aalto Exp $
+ * $Id: CachedUrlSet.java,v 1.10 2003-01-28 00:32:11 aalto Exp $
  */
 
 /*
@@ -162,8 +162,15 @@ public interface CachedUrlSet {
     public String getPrimaryUrl();
 
     /**
-     * Needs to be overwritten to hash CachedUrlSets properly.
+     * Needs to be overridden to hash CachedUrlSets properly.
      * @return the hashcode
      */
     public int hashCode();
+
+    /**
+     * Needs to be overridden to hash CachedUrlSets properly.
+     * @param obj the object to compare to
+     * @return true if equal
+     */
+    public boolean equals(Object obj);
 }

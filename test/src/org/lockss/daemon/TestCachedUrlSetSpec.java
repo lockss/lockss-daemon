@@ -1,5 +1,5 @@
 /*
- * $Id: TestCachedUrlSetSpec.java,v 1.2 2002-11-14 22:00:38 tal Exp $
+ * $Id: TestCachedUrlSetSpec.java,v 1.3 2003-01-28 00:32:11 aalto Exp $
  */
 
 /*
@@ -94,7 +94,7 @@ public class TestCachedUrlSetSpec extends LockssTestCase {
       fail("Wrong type AnyCachedUrlSetSpec list item");
     } catch (ClassCastException e) {
     }
-  }    
+  }
 
   public void testNullAnyCachedUrlSetSpec() {
     try {
@@ -102,13 +102,13 @@ public class TestCachedUrlSetSpec extends LockssTestCase {
       fail("AnyCachedUrlSetSpec(null) should fail");
     } catch (NullPointerException e) {
     }
-  }    
+  }
 
   public void testEmptyAnyCachedUrlSetSpec() {
     CachedUrlSetSpec cuss = new AnyCachedUrlSetSpec(Collections.EMPTY_LIST);
     assertTrue(!cuss.matches(""));
     assertTrue(!cuss.matches("foo"));
-  }    
+  }
 
   public void testAnyCachedUrlSetSpec() throws REException {
     CachedUrlSetSpec re1 = new RECachedUrlSetSpec("foo", (RE)null);
@@ -125,5 +125,41 @@ public class TestCachedUrlSetSpec extends LockssTestCase {
     assertEquals(new HashSet(prefixes), as);
     al.add("xyz");
     assertEquals(as, new HashSet(any.getPrefixList()));
+  }
+
+  public void testHashCode() throws Exception {
+    CachedUrlSetSpec re1 = new RECachedUrlSetSpec("foo", (RE)null);
+    CachedUrlSetSpec re2 = new RECachedUrlSetSpec("bar", "12");
+    assertTrue(re1.hashCode() != re2.hashCode());
+    assertTrue(re1 != re2);
+    re2 = new RECachedUrlSetSpec("foo", "123");
+    assertTrue(re1.hashCode() != re2.hashCode());
+    assertTrue(re1 != re2);
+    re2 = new RECachedUrlSetSpec("foo", (RE)null);
+    assertEquals(re1.hashCode(), re2.hashCode());
+    assertEquals(re1, re2);
+  }
+
+  public void testGetIdString() throws Exception {
+    CachedUrlSetSpec re1 = new RECachedUrlSetSpec("foo", (RE)null);
+    String expectedStr = "foo:null";
+    assertEquals(expectedStr, re1.getIdString());
+    re1 = new RECachedUrlSetSpec("bar", "123");
+    expectedStr = "bar:(?:123)";
+    assertEquals(expectedStr, re1.getIdString());
+    CachedUrlSetSpec re2 = new RECachedUrlSetSpec("bar2", "12");
+    List l = ListUtil.list(re1, re2);
+    CachedUrlSetSpec any = new AnyCachedUrlSetSpec(l);
+    expectedStr += ",bar2:(?:12)";
+    assertEquals(expectedStr, any.getIdString());
+  }
+
+  public void testGetPrimaryUrl() throws Exception {
+    CachedUrlSetSpec re1 = new RECachedUrlSetSpec("foo", (RE)null);
+    assertEquals("foo", re1.getPrimaryUrl());
+    CachedUrlSetSpec re2 = new RECachedUrlSetSpec("bar", "12");
+    List l = ListUtil.list(re1, re2);
+    CachedUrlSetSpec any = new AnyCachedUrlSetSpec(l);
+    assertEquals("foo", any.getPrimaryUrl());
   }
 }

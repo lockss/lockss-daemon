@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.7 2003-01-25 02:21:11 aalto Exp $
+ * $Id: MockArchivalUnit.java,v 1.8 2003-01-28 00:32:11 aalto Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.util.*;
 import java.security.MessageDigest;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
+import gnu.regexp.*;
 
 /**
  * This is a mock version of <code>ArchivalUnit</code> used for testing
@@ -88,15 +89,23 @@ public class MockArchivalUnit implements ArchivalUnit {
   // Methods used by the crawler
 
   public CachedUrlSet makeCachedUrlSet(CachedUrlSetSpec cuss) {
-    return null;
+    return new MockCachedUrlSet(this, cuss);
   }
 
   public CachedUrlSet makeCachedUrlSet(String url, String regexp) {
-    return null;
+    try {
+      return makeCachedUrlSet(new RECachedUrlSetSpec(url, regexp));
+    } catch (REException ex) {
+      return null;
+    }
   }
 
   public boolean shouldBeCached(String url) {
-    return false;
+    if (cus!=null) {
+      return cus.containsUrl(url);
+    } else {
+      return false;
+    }
   }
 
   public String getPluginId() {
@@ -121,6 +130,14 @@ public class MockArchivalUnit implements ArchivalUnit {
 
   public int hashCode() {
     return getIdString().hashCode();
+  }
+
+  public boolean equals(Object obj) {
+    if (obj instanceof ArchivalUnit) {
+      return getIdString().equals(((ArchivalUnit)obj).getIdString());
+    } else {
+      throw new IllegalArgumentException("Trying to compare an au and a non-au.");
+    }
   }
 
   public void pause() {

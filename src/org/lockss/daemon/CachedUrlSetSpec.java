@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrlSetSpec.java,v 1.4 2003-01-25 02:21:11 aalto Exp $
+ * $Id: CachedUrlSetSpec.java,v 1.5 2003-01-28 00:32:11 aalto Exp $
  */
 
 /*
@@ -52,10 +52,17 @@ public interface CachedUrlSetSpec {
   public List getPrefixList();
 
   /**
-   * This needs to be overwritten to hash CachedUrlSets properly.
+   * This needs to be overridden to hash CachedUrlSets properly.
    * @return the hashcode
    */
   public int hashCode();
+
+  /**
+   * This needs to be overridden to hash CachedUrlSets properly.
+   * @param obj the object to compare to
+   * @return true if the objects are equal
+   */
+  public boolean equals(Object obj);
 
   /**
    * Returns a unique id string.
