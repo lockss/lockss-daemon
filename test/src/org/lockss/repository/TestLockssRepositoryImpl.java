@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.13 2002-12-31 00:14:02 aalto Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.14 2003-01-14 20:19:47 aalto Exp $
  */
 
 /*
@@ -102,6 +102,17 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     assertEquals("http://www.example.com/testDir/leaf4", node.getNodeUrl());
   }
 
+  public void testDeleteNode() throws Exception {
+    createLeaf("http://www.example.com/test1", "test stream", null);
+
+    RepositoryNode node = repo.getNode("http://www.example.com/test1");
+    assertTrue(node.hasContent());
+    assertTrue(!node.isInactive());
+    repo.deleteNode("http://www.example.com/test1");
+    assertTrue(!node.hasContent());
+    assertTrue(node.isInactive());
+  }
+
   public void testCaching() throws Exception {
     createLeaf("http://www.example.com/testDir/leaf1", null, null);
     createLeaf("http://www.example.com/testDir/leaf2", null, null);
@@ -158,12 +169,9 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     } catch (MalformedURLException mue) { }
   }
 
-  static final String PARAM_CACHE_LOCATION =
-    LockssRepositoryImpl.PARAM_CACHE_LOCATION;
-
   public static void configCacheLocation(String location)
     throws IOException {
-    String s = PARAM_CACHE_LOCATION + "=" + location;
+    String s = LockssRepositoryImpl.PARAM_CACHE_LOCATION + "=" + location;
     TestConfiguration.setCurrentConfigFromUrlList(ListUtil.list(FileUtil.urlOfString(s)));
   }
 

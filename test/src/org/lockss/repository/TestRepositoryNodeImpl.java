@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.9 2003-01-14 02:22:28 aalto Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.10 2003-01-14 20:19:47 aalto Exp $
  */
 
 /*
@@ -186,6 +186,8 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     try {
       leaf.getCurrentVersion();
       fail("Cannot get current version if no content.");
+    } catch (UnsupportedOperationException uoe) { }
+    try {
       leaf.getContentSize();
       fail("Cannot get content size if no content.");
     } catch (UnsupportedOperationException uoe) { }
@@ -199,6 +201,10 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
       fail("Cannot seal version if getNewOutputStream() uncalled.");
     } catch (UnsupportedOperationException uoe) { }
     leaf.makeNewVersion();
+    try {
+      leaf.deactivate();
+      fail("Cannot deactivate if currently open for writing.");
+    } catch (UnsupportedOperationException uoe) { }
     writeToLeaf(leaf, "test stream");
     try {
       leaf.sealNewVersion();
@@ -267,7 +273,6 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     String resultStr = getLeafContent(leaf);
     assertEquals("test stream 2", resultStr);
     props = leaf.getNodeContents().props;
-    props.list(System.out);
     assertEquals("value 2", props.getProperty("test 1"));
   }
 
@@ -325,6 +330,122 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
         "test stream", null);
     assertTrue(leaf.hasContent());
     assertEquals(11, (int)leaf.getContentSize());
+  }
+
+  public void testDeactivate() throws Exception {
+    RepositoryNode leaf =
+        createLeaf("http://www.example.com/test1", "test stream", null);
+    assertTrue(leaf.hasContent());
+    assertTrue(!leaf.isInactive());
+    assertEquals(1, leaf.getCurrentVersion());
+    leaf.deactivate();
+    assertTrue(!leaf.hasContent());
+    assertTrue(leaf.isInactive());
+    assertEquals(RepositoryNodeImpl.INACTIVE_VERSION, leaf.getCurrentVersion());
+  }
+
+  public void testRestoreLastVersion() throws Exception {
+    Properties props = new Properties();
+    props.setProperty("test 1", "value 1");
+    RepositoryNode leaf =
+        createLeaf("http://www.example.com/test1", "test stream 1", props);
+    assertEquals(1, leaf.getCurrentVersion());
+
+    props = new Properties();
+    props.setProperty("test 1", "value 2");
+    leaf.makeNewVersion();
+    leaf.setNewProperties(props);
+    writeToLeaf(leaf, "test stream 2");
+    leaf.sealNewVersion();
+    assertEquals(2, leaf.getCurrentVersion());
+
+    leaf.restoreLastVersion();
+    assertEquals(1, leaf.getCurrentVersion());
+
+    String resultStr = getLeafContent(leaf);
+    assertEquals("test stream 1", resultStr);
+    props = leaf.getNodeContents().props;
+    assertEquals("value 1", props.getProperty("test 1"));
+  }
+
+  public void testReactivateViaRestore() throws Exception {
+    RepositoryNode leaf =
+        createLeaf("http://www.example.com/test1", "test stream", null);
+    leaf.deactivate();
+    assertTrue(leaf.isInactive());
+    assertEquals(RepositoryNodeImpl.INACTIVE_VERSION, leaf.getCurrentVersion());
+
+    leaf.restoreLastVersion();
+    assertTrue(!leaf.isInactive());
+    assertEquals(1, leaf.getCurrentVersion());
+    String resultStr = getLeafContent(leaf);
+    assertEquals("test stream", resultStr);
+  }
+
+  public void testReactivateViaNewVersion() throws Exception {
+    RepositoryNode leaf =
+        createLeaf("http://www.example.com/test1", "test stream", null);
+    leaf.deactivate();
+    assertTrue(leaf.isInactive());
+    assertEquals(RepositoryNodeImpl.INACTIVE_VERSION, leaf.getCurrentVersion());
+
+    Properties props = new Properties();
+    props.setProperty("test 1", "value 2");
+    leaf.makeNewVersion();
+    leaf.setNewProperties(props);
+    writeToLeaf(leaf, "test stream 2");
+    leaf.sealNewVersion();
+    assertTrue(!leaf.isInactive());
+    assertEquals(2, leaf.getCurrentVersion());
+    String resultStr = getLeafContent(leaf);
+    assertEquals("test stream 2", resultStr);
+  }
+
+  public void testListInactiveNodes() throws Exception {
+    createLeaf("http://www.example.com/testDir/test1", "test stream", null);
+    createLeaf("http://www.example.com/testDir/test2", "test stream", null);
+    createLeaf("http://www.example.com/testDir/test3", "test stream", null);
+
+    RepositoryNode dirEntry = repo.getNode("http://www.example.com/testDir");
+    Iterator childIt = dirEntry.listNodes(null, false);
+    ArrayList childL = new ArrayList(3);
+    while (childIt.hasNext()) {
+      RepositoryNode node = (RepositoryNode)childIt.next();
+      childL.add(node.getNodeUrl());
+    }
+    String[] expectedA = new String[] {
+      "http://www.example.com/testDir/test1",
+      "http://www.example.com/testDir/test2",
+      "http://www.example.com/testDir/test3"
+      };
+    assertIsomorphic(expectedA, childL);
+
+    RepositoryNode leaf = repo.getNode("http://www.example.com/testDir/test2");
+    leaf.deactivate();
+    childIt = dirEntry.listNodes(null, false);
+    childL = new ArrayList(2);
+    while (childIt.hasNext()) {
+      RepositoryNode node = (RepositoryNode)childIt.next();
+      childL.add(node.getNodeUrl());
+    }
+    expectedA = new String[] {
+      "http://www.example.com/testDir/test1",
+      "http://www.example.com/testDir/test3"
+      };
+    assertIsomorphic("Excluding inactive nodes failed.", expectedA, childL);
+
+    childIt = dirEntry.listNodes(null, true);
+    childL = new ArrayList(3);
+    while (childIt.hasNext()) {
+      RepositoryNode node = (RepositoryNode)childIt.next();
+      childL.add(node.getNodeUrl());
+    }
+    expectedA = new String[] {
+      "http://www.example.com/testDir/test1",
+      "http://www.example.com/testDir/test2",
+      "http://www.example.com/testDir/test3"
+      };
+    assertIsomorphic("Including inactive nodes failed.", expectedA, childL);
   }
 
   private RepositoryNode createLeaf(String url, String content,
