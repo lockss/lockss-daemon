@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.14 2003-01-14 20:19:47 aalto Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.15 2003-02-05 23:33:29 aalto Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.daemon.Configuration;
 import org.lockss.daemon.TestConfiguration;
+import org.lockss.daemon.*;
 
 /**
  * This is the test class for org.lockss.daemon.LockssRepositoryImpl
@@ -61,7 +62,7 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
   }
 
   public void testFileLocation() throws Exception {
-    tempDirPath += "cache/mock/none/";
+    tempDirPath += "cache/none/";
     File testFile = new File(tempDirPath);
     assertTrue(!testFile.exists());
 
@@ -156,17 +157,41 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     assertEquals(refHits+1, repoImpl.getRefHits());
   }
 
-  public void testMapUrlToCacheLocation() throws MalformedURLException {
-    String testStr = "http://www.example.com/branch1/branch2/index.html";
-    String expectedStr = "root/www.example.com/http/branch1/branch2/index.html";
-    assertEquals(expectedStr,
-                 FileLocationUtil.mapUrlToFileLocation("root", testStr));
+  public void testCusCompare() throws Exception {
+    CachedUrlSetSpec spec1 = new RECachedUrlSetSpec("http://www.example.com/test");
+    CachedUrlSetSpec spec2 = new RECachedUrlSetSpec("http://www.example.com");
+    MockCachedUrlSet cus1 = new MockCachedUrlSet(spec1);
+    MockCachedUrlSet cus2 = new MockCachedUrlSet(spec2);
+    assertEquals(LockssRepository.BELOW, repo.cusCompare(cus1, cus2));
 
-    try {
-      testStr = ":/brokenurl.com/branch1/index/";
-      FileLocationUtil.mapUrlToFileLocation("root", testStr);
-      fail("Should have thrown MalformedURLException");
-    } catch (MalformedURLException mue) { }
+    spec1 = new RECachedUrlSetSpec("http://www.example.com/test");
+    spec2 = new RECachedUrlSetSpec("http://www.example.com/test/subdir");
+    cus1 = new MockCachedUrlSet(spec1);
+    cus2 = new MockCachedUrlSet(spec2);
+    assertEquals(LockssRepository.ABOVE, repo.cusCompare(cus1, cus2));
+
+    spec1 = new RECachedUrlSetSpec("http://www.example.com/test");
+    spec2 = new RECachedUrlSetSpec("http://www.example.com/test/");
+    cus1 = new MockCachedUrlSet(spec1);
+    cus2 = new MockCachedUrlSet(spec2);
+    Vector v = new Vector(2);
+    v.addElement("test 1");
+    v.addElement("test 2");
+    Vector v2 = new Vector(1);
+    v2.addElement("test 3");
+    cus1.setFlatItSource(v);
+    cus2.setFlatIterator(v2.iterator());
+    assertEquals(LockssRepository.SAME_LEVEL_NO_OVERLAP, repo.cusCompare(cus1, cus2));
+
+    v2.addElement("test 2");
+    cus2.setFlatIterator(v2.iterator());
+    assertEquals(LockssRepository.SAME_LEVEL_OVERLAP, repo.cusCompare(cus1, cus2));
+
+    spec1 = new RECachedUrlSetSpec("http://www.example.com/test/subdir2");
+    spec2 = new RECachedUrlSetSpec("http://www.example.com/subdir");
+    cus1 = new MockCachedUrlSet(spec1);
+    cus2 = new MockCachedUrlSet(spec2);
+    assertEquals(LockssRepository.NO_RELATION, repo.cusCompare(cus1, cus2));
   }
 
   public static void configCacheLocation(String location)

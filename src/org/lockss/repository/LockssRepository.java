@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepository.java,v 1.7 2003-01-14 02:22:28 aalto Exp $
+ * $Id: LockssRepository.java,v 1.8 2003-02-05 23:33:29 aalto Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.repository;
 
 import java.net.MalformedURLException;
+import org.lockss.daemon.*;
 
 /**
  * LockssRepository is used to organize the urls being cached.
@@ -69,6 +70,40 @@ public interface LockssRepository {
    * node.  Corrects and logs any correctable errors it encounters.
    */
 //  public void nodeConsistencyCheck();
+
+/**
+ * Compares the two CachedUrlSets and returns an int representing the
+ * relationship between the two.  For example, if the first was above the
+ * second in the hierarchy, it would return <code>LockssRepository.ABOVE</code>.
+ * @param cus1 the first cus
+ * @param cus2 the second cus
+ * @return an int representing the relationship
+ */
+  public int cusCompare(CachedUrlSet cus1, CachedUrlSet cus2);
+
+  /**
+   * The cus is above the second cus in the hierarchy.
+   */
+  public static final int ABOVE = 0;
+  /**
+   * The cus is below the second cus in the hierarchy.
+   */
+  public static final int BELOW = 1;
+  /**
+   * The cus is at the same level as the second cus in the hierarchy, with
+   * no overlap.
+   */
+  public static final int SAME_LEVEL_NO_OVERLAP = 2;
+  /**
+   * The cus is at the same level as the second cus in the hierarchy, with
+   * overlap.
+   */
+  public static final int SAME_LEVEL_OVERLAP = 3;
+
+  /**
+   * There is no relation between the two sets in the hierarchy.
+   */
+  public static final int NO_RELATION = 4;
 
   /**
    * Thrown when an unexpected error is encountered while caching.

@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.12 2003-01-14 02:22:28 aalto Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.13 2003-02-05 23:33:29 aalto Exp $
  */
 
 /*
@@ -43,6 +43,8 @@ import org.lockss.daemon.Configuration;
 import org.apache.commons.collections.LRUMap;
 import org.apache.commons.collections.ReferenceMap;
 import org.lockss.util.FileLocationUtil;
+import org.lockss.daemon.*;
+import org.lockss.util.*;
 
 /**
  * LockssRepository is used to organize the urls being cached.
@@ -102,6 +104,37 @@ public class LockssRepositoryImpl implements LockssRepository {
     RepositoryNode node = getNode(url, false);
     if (node!=null) {
       node.deactivate();
+    }
+  }
+
+  public int cusCompare(CachedUrlSet cus1, CachedUrlSet cus2) {
+    String url1 = cus1.getPrimaryUrl();
+    String url2 = cus2.getPrimaryUrl();
+    if (!url1.endsWith(File.separator)) {
+      url1 += File.separator;
+    }
+    if (!url2.endsWith(File.separator)) {
+      url2 += File.separator;
+    }
+    if (url1.equals(url2)) {
+      //the urls are on the same level; check for overlap
+      Iterator firstIt = cus1.flatSetIterator();
+      Set secondSet = SetUtil.fromIterator(cus2.flatSetIterator());
+      while (firstIt.hasNext()) {
+        if (secondSet.contains(firstIt.next())) {
+          return LockssRepository.SAME_LEVEL_OVERLAP;
+        }
+      }
+      return LockssRepository.SAME_LEVEL_NO_OVERLAP;
+    } else if (url1.startsWith(url2)) {
+      // url1 is a sub-directory of url2
+      return LockssRepository.BELOW;
+    } else if (url2.startsWith(url1)) {
+      // url2 is a sub-directory of url1
+      return LockssRepository.ABOVE;
+    } else {
+      // no connection between the two urls
+      return LockssRepository.NO_RELATION;
     }
   }
 
