@@ -24,10 +24,10 @@ public class TestPoll extends LockssTestCase {
   private static String uprbnd = "test3.doc";
   private static long testduration = Constants.HOUR;
 
-  protected ArchivalUnit testau;
+  protected ArchivalUnit testau = PollTestPlugin.PTArchivalUnit.createFromListOfRootUrls(rooturls);
   private IdentityManager idmgr;
   //XXX fix to use non-statically
-  private static MockLockssDaemon theDaemon = new MockLockssDaemon();
+  private static MockLockssDaemon theDaemon;
   private String[] agree_entries = makeEntries(10, 50);
   private String[] disagree_entries = makeEntries(15, 57);
   private String[] dissenting_entries = makeEntries(7, 50);
@@ -38,86 +38,28 @@ public class TestPoll extends LockssTestCase {
   protected LcapIdentity testID1;
   protected LcapMessage[] testmsg;
   protected Poll[] testpolls;
-  protected PollManager pollmanager = theDaemon.getPollManager();
+  protected PollManager pollmanager;
 
   protected void setUp() throws Exception {
     super.setUp();
 
-//    theDaemon = new MockLockssDaemon();
-  //  pollmanager = theDaemon.getPollManager();
-  //  pollmanager.startService();
-
-    theDaemon.getPluginManager();
-    testau = PollTestPlugin.PTArchivalUnit.createFromListOfRootUrls(rooturls);
-    PluginUtil.registerArchivalUnit(testau);
-
-    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    String cacheStr = LockssRepositoryServiceImpl.PARAM_CACHE_LOCATION +"=" +
-        tempDirPath;
-    TestIdentityManager.configParams(tempDirPath + "iddb",
-                                     "src/org/lockss/protocol", cacheStr);
-
-    idmgr = theDaemon.getIdentityManager();
-    theDaemon.getHashService().startService();
-    theDaemon.getLockssRepositoryService().startService();
-
-    theDaemon.setNodeManagerService(new MockNodeManagerService());
-    theDaemon.setNodeManager(new MockNodeManager(), testau);
-
-    try {
-      testaddr = InetAddress.getByName("127.0.0.1");
-      testID = idmgr.findIdentity(testaddr);
-      testaddr1 = InetAddress.getByName("123.3.4.5");
-      testID1 = idmgr.findIdentity(testaddr1);
-    }
-    catch (UnknownHostException ex) {
-      fail("can't open test host");
-    }
-    try {
-      testmsg = new LcapMessage[3];
-
-      for (int i = 0; i < 3; i++) {
-        PollSpec spec =
-	  new PollSpec(testau.getPluginId(),
-		       testau.getAUId(),
-		       rooturls[i],lwrbnd,uprbnd,
-		       testau.makeCachedUrlSet(rooturls[i],lwrbnd,uprbnd));
-        testmsg[i] = LcapMessage.makeRequestMsg(
-            spec,
-            agree_entries,
-            pollmanager.generateRandomBytes(),
-            pollmanager.generateRandomBytes(),
-            LcapMessage.NAME_POLL_REQ + (i * 2),
-            testduration,
-            testID);
-      }
-    }
-    catch (IOException ex) {
-      fail("can't create test message" + ex.toString());
-    }
-
-    try {
-      testpolls = new Poll[3];
-      for (int i = 0; i < 3; i++) {
-        testpolls[i] = pollmanager.makePoll(testmsg[i]);
-        assertNotNull(testpolls[i]);
-      }
-    }
-    catch (IOException ex) {
-      fail("can't create test poll" + ex.toString());
-    }
+    initRequiredServices();
+    initTestAddr();
+    initTestMsg();
+    initTestPolls();
   }
 
   /** tearDown method for test case
    * @throws Exception if removePoll failed
    */
   public void tearDown() throws Exception {
+    pollmanager.stopService();
     theDaemon.getHashService().stopService();
     theDaemon.getLockssRepositoryService().stopService();
-    for (int i = 0; i < 3; i++) {
-      pollmanager.removePoll(testpolls[i].m_key);
+    theDaemon.getRouterManager().stopService();
+    for(int i=0; i<3; i++) {
+      pollmanager.removePoll(testmsg[i].getKey());
     }
-    pollmanager.stopService();
     super.tearDown();
   }
 
@@ -238,7 +180,7 @@ public class TestPoll extends LockssTestCase {
     Poll p = testpolls[1];
     p.m_hash = pollmanager.generateRandomBytes();
     try {
-      p.vote();
+      p.castOurVote();
     }
     catch (IllegalStateException e) {
       // the socket isn't inited and should squack
@@ -416,6 +358,86 @@ public class TestPoll extends LockssTestCase {
     return ret_arry;
   }
 
+  private void initRequiredServices() {
+    theDaemon = new MockLockssDaemon();
+    pollmanager = theDaemon.getPollManager();
+
+    theDaemon.getPluginManager();
+    testau = PollTestPlugin.PTArchivalUnit.createFromListOfRootUrls(rooturls);
+    PluginUtil.registerArchivalUnit(testau);
+
+    String tempDirPath = null;
+    try {
+      tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    }
+    catch (IOException ex) {
+      fail("unable to create a temporary directory");
+    }
+
+    String cacheStr = LockssRepositoryServiceImpl.PARAM_CACHE_LOCATION +"=" +
+        tempDirPath;
+    TestIdentityManager.configParams(tempDirPath + "iddb",
+                                     "src/org/lockss/protocol", cacheStr);
+    idmgr = theDaemon.getIdentityManager();
+    theDaemon.getHashService().startService();
+    theDaemon.getLockssRepositoryService().startService();
+    theDaemon.getRouterManager().startService();
+
+    theDaemon.setNodeManagerService(new MockNodeManagerService());
+    theDaemon.setNodeManager(new MockNodeManager(),testau);
+    pollmanager.startService();
+  }
+
+  private void initTestAddr() {
+    try {
+      testaddr = InetAddress.getByName("127.0.0.1");
+      testID = theDaemon.getIdentityManager().findIdentity(testaddr);
+      testaddr1 = InetAddress.getByName("1.1.1.1");
+      testID1 = theDaemon.getIdentityManager().findIdentity(testaddr1);
+    }
+    catch (UnknownHostException ex) {
+      fail("can't open test host");
+    }
+  }
+
+  private void initTestMsg() {
+    try {
+      testmsg = new LcapMessage[3];
+
+      for(int i= 0; i<3; i++) {
+        PollSpec spec = new PollSpec(testau.getPluginId(),
+                                     testau.getAUId(),
+                                     rooturls[i],lwrbnd, uprbnd,
+                                     testau.makeCachedUrlSet(rooturls[i],
+                                                             lwrbnd,uprbnd));
+        testmsg[i] =  LcapMessage.makeRequestMsg(
+          spec,
+          agree_entries,
+          pollmanager.generateRandomBytes(),
+          pollmanager.generateRandomBytes(),
+          LcapMessage.NAME_POLL_REQ + (i * 2),
+          testduration,
+          testID);
+      }
+    }
+    catch (IOException ex) {
+      fail("can't create test message" + ex.toString());
+    }
+  }
+
+  private void initTestPolls() {
+    try {
+     testpolls = new Poll[3];
+     for (int i = 0; i < 3; i++) {
+       testpolls[i] = pollmanager.makePoll(testmsg[i]);
+       assertNotNull(testpolls[i]);
+     }
+   }
+   catch (IOException ex) {
+     fail("can't create test poll" + ex.toString());
+   }
+
+  }
 
   /** Executes the test case
    * @param argv array of Strings containing command line arguments

@@ -49,6 +49,8 @@ public class MockLockssDaemon extends LockssDaemon {
     pluginManager = null;
     identityManager = null;
     nodeManagerService = null;
+    statusService = null;
+    //super.stopDaemon();
   }
 
   /**
