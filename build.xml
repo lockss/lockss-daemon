@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.77 2004-04-15 00:41:43 tlipkis Exp $
+ $Id: build.xml,v 1.78 2004-05-21 20:32:48 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -236,8 +236,8 @@ Args:
   </path>
 
   <path id="tools.test.compile.classpath">
-    <path refid="test.run.classpath" />
-    <pathelement path="${jdk.tools.jar}" />
+    <path refid="tools.compile.classpath" />
+    <pathelement path="${lockss.tools.jar}" />
   </path>
 
   <path id="generated.test.compile.classpath">
