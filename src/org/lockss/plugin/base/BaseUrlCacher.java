@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.29 2004-03-09 23:40:02 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.30 2004-03-10 08:49:55 tlipkis Exp $
  */
 
 /*
@@ -195,14 +195,14 @@ public class BaseUrlCacher implements UrlCacher {
    */
   public void storeContent(InputStream input, CIProperties headers)
       throws IOException {
-    if (logger.isDebug3()) logger.debug3("Storing url '"+ origUrl +"'");
+    if (logger.isDebug2()) logger.debug2("Storing url '"+ origUrl +"'");
     storeContentIn(origUrl, input, headers);
     if (otherNames != null) {
       CachedUrl cu = getCachedUrl();
       for (Iterator iter = otherNames.iterator(); iter.hasNext(); ) {
 	String name = (String)iter.next();
-	if (logger.isDebug3())
-	  logger.debug3("Storing in redirected-to url '"+ name +"'");
+	if (logger.isDebug2())
+	  logger.debug2("Storing in redirected-to url '"+ name +"'");
 	InputStream is = cu.getUnfilteredInputStream();
 	if (name.equals(fetchUrl)) {
 	  // this one was not redirected, don't store a redirected-to property
@@ -418,17 +418,44 @@ public class BaseUrlCacher implements UrlCacher {
 	  return false;
 	}
       }
-
       conn.release();
       conn = null;
-      fetchUrl = newUrlString;
-      if (otherNames == null) {
-	otherNames = new ArrayList();
+
+      // XXX
+      // The names .../foo and .../foo/ map to the same repository node, so
+      // the case of a slash-appending redirect requires special handling.
+      // (Still. sigh.)  We want to record the fact of the redirection, but
+      // only end up with one name in the list, so don't add the new one if
+      // it's just a slash addition
+
+      if (!isSlashAppended(fetchUrl, newUrlString)) {
+	if (otherNames == null) {
+	  otherNames = new ArrayList();
+	}
+	otherNames.add(newUrlString);
       }
-      otherNames.add(fetchUrl);
+      fetchUrl = newUrlString;
+      logger.debug2("Following redirect to " + newUrlString);
       return true;
     } catch (MalformedURLException e) {
       logger.warning("Redirected location '" + location + "' is malformed", e);
+      return false;
+    }
+  }
+
+  boolean isSlashAppended(String name, String redir) {
+    int len = name.length();
+    if (redir.length() != (len + 1)) return false;
+    if (redir.charAt(len) != '/') return false;
+    if (redir.startsWith(name)) return true;
+    try {
+      URL uname = new URL(name);
+      URL uredir = new URL(redir);
+      return (uname.getHost().equalsIgnoreCase(uredir.getHost()) &&
+	      uname.getProtocol().equalsIgnoreCase(uredir.getProtocol()) &&
+	      uname.getPort() == uredir.getPort() &&
+	      uredir.getPath().startsWith(uname.getPath()));
+    } catch (MalformedURLException e) {
       return false;
     }
   }

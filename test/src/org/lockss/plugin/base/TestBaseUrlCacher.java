@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.19 2004-03-09 23:56:30 tlipkis Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.20 2004-03-10 08:49:53 tlipkis Exp $
  */
 
 /*
@@ -459,6 +459,17 @@ public class TestBaseUrlCacher extends LockssTestCase {
     assertCuProperty(redTo1, redTo3, CachedUrl.PROPERTY_REDIRECTED_TO);
     assertCuProperty(redTo2, redTo3, CachedUrl.PROPERTY_REDIRECTED_TO);
     assertCuProperty(redTo3, null, CachedUrl.PROPERTY_REDIRECTED_TO);
+  }
+
+  public void testIsSlashAppended() {
+    BaseUrlCacher b = new BaseUrlCacher(mcus, "foo");
+    assertTrue(b.isSlashAppended("foo", "foo/"));
+    assertTrue(b.isSlashAppended("http://xx.com/foo", "http://xx.com/foo/"));
+    assertTrue(b.isSlashAppended("http://xx.com/foo", "Http://xx.com/foo/"));
+    assertTrue(b.isSlashAppended("http://xx.com/foo", "Http://Xx.COM/foo/"));
+    assertFalse(b.isSlashAppended("http://xx.com/foo", "http://xx.com/FOO/"));
+    assertFalse(b.isSlashAppended("http://xx.com/foo", "http://xx.com/foo"));
+    assertFalse(b.isSlashAppended("http://xx.com/foo", "http://zz.com/foo/"));
   }
 
   void assertCuContents(String url, String contents) throws IOException {
