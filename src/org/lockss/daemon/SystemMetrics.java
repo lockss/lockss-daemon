@@ -1,5 +1,5 @@
 /*
- * $Id: SystemMetrics.java,v 1.13 2003-04-30 23:39:27 tal Exp $
+ * $Id: SystemMetrics.java,v 1.14 2003-05-06 01:01:09 aalto Exp $
  */
 
 /*
@@ -61,8 +61,8 @@ public class SystemMetrics extends BaseLockssManager {
 
   public static final String PARAM_SLOWEST_RATE = PREFIX + "slowest.hashrate";
 
-  static final long DEFAULT_HASH_DURATION = 10 * Constants.SECOND;
-  static final int DEFAULT_HASH_STEP = 1024;
+  static final long DEFAULT_HASH_TEST_DURATION = 10 * Constants.SECOND;
+  static final int DEFAULT_HASH_TEST_BYTE_STEP = 10 * 1024;
   static final int DEFAULT_SLOWEST_RATE = 250;
 
   private static Logger logger = Logger.getLogger("SystemMetrics");
@@ -150,9 +150,9 @@ public class SystemMetrics extends BaseLockssManager {
     boolean earlyFinish = false;
     long hashDuration =
       Configuration.getTimeIntervalParam(PARAM_HASH_TEST_DURATION,
-					 DEFAULT_HASH_DURATION);
+					 DEFAULT_HASH_TEST_DURATION);
     int hashStep =
-      Configuration.getIntParam(PARAM_HASH_TEST_BYTE_STEP, DEFAULT_HASH_STEP);
+      Configuration.getIntParam(PARAM_HASH_TEST_BYTE_STEP, DEFAULT_HASH_TEST_BYTE_STEP);
 
     long startTime = TimeBase.nowMs();
     Deadline deadline = Deadline.in(hashDuration);
@@ -192,7 +192,10 @@ public class SystemMetrics extends BaseLockssManager {
     return speed;
   }
 
-  /** Return the hash speed of the slowest cache */
+  /**
+   * Return the hash speed of the slowest cache
+   * @return the slowest speed
+   */
   public int getSlowestHashSpeed() {
     return Configuration.getIntParam(PARAM_SLOWEST_RATE, DEFAULT_SLOWEST_RATE);
   }

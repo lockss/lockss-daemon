@@ -1,5 +1,5 @@
 /*
- * $Id: TestSystemMetrics.java,v 1.9 2003-04-30 23:39:27 tal Exp $
+ * $Id: TestSystemMetrics.java,v 1.10 2003-05-06 01:01:09 aalto Exp $
  */
 
 /*
@@ -49,12 +49,12 @@ public class TestSystemMetrics extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     metrics = new SystemMetrics();
-    configHashParams(SystemMetrics.DEFAULT_HASH_DURATION,
-                     SystemMetrics.DEFAULT_HASH_STEP);
+    configHashParams(SystemMetrics.DEFAULT_HASH_TEST_DURATION,
+                     SystemMetrics.DEFAULT_HASH_TEST_BYTE_STEP);
   }
 
   public void testHashEstimation() throws IOException {
-    int byteCount = SystemMetrics.DEFAULT_HASH_STEP * 10;
+    int byteCount = SystemMetrics.DEFAULT_HASH_TEST_BYTE_STEP * 10;
     int estimate = byteCount;
     long duration;
 
@@ -81,7 +81,7 @@ public class TestSystemMetrics extends LockssTestCase {
 
     assertTrue(estimate < byteCount);
     // minimum amount of time would be delay * number of hash steps
-    int expectedMin = (byteCount * 10) / SystemMetrics.DEFAULT_HASH_STEP;
+    int expectedMin = (byteCount * 10) / SystemMetrics.DEFAULT_HASH_TEST_BYTE_STEP;
     assertTrue(duration > expectedMin);
   }
 
