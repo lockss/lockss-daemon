@@ -1,5 +1,5 @@
 /*
- * $Id: TestLogger.java,v 1.13 2003-04-14 07:28:47 tal Exp $
+ * $Id: TestLogger.java,v 1.14 2003-05-22 03:42:26 tal Exp $
  */
 
 /*
@@ -189,6 +189,23 @@ public class TestLogger extends LockssTestCase {
       "org.lockss.log." + logName + ".level=" + Logger.nameOf(level) + "\n" +
       "org.lockss.log.default.level=critical\n";
     TestConfiguration.setCurrentConfigFromString(s);
+  }
+
+  private void configLogLevelOnly(String logName, int level)
+      throws IOException {
+    String s =
+      "org.lockss.log." + logName + ".level=" + Logger.nameOf(level) + "\n";
+    TestConfiguration.setCurrentConfigFromString(s);
+  }
+
+  public void testGetConfiguredLevel()
+      throws IOException {
+    System.getProperties().setProperty("org.lockss.defaultLogLevel", "debug2");
+    Logger.setInitialDefaultLevel();
+    assertEquals(Logger.LEVEL_DEBUG2, Logger.getConfiguredLevel("foobar"));
+    configLogLevelOnly("foo", Logger.LEVEL_WARNING);
+    assertEquals(Logger.LEVEL_WARNING, Logger.getConfiguredLevel("foo"));
+    assertEquals(Logger.LEVEL_DEBUG2, Logger.getConfiguredLevel("foobar"));
   }
 
   public void testLevelconfig()

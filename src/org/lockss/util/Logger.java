@@ -1,5 +1,5 @@
 /*
- * $Id: Logger.java,v 1.23 2003-05-22 01:20:50 tal Exp $
+ * $Id: Logger.java,v 1.24 2003-05-22 03:42:26 tal Exp $
  */
 
 /*
@@ -185,13 +185,14 @@ public class Logger {
     String levelName =
       Configuration.getParam(StringUtil.replaceString(PARAM_LOG_LEVEL,
 						      "<logname>", name),
-			     Configuration.getParam(PARAM_DEFAULT_LEVEL,
-						    defaultLevelName));
-    int level = 0;
-    try {
-      level = levelOf(levelName);
-    } catch (IllegalArgumentException e) {
-      level = defaultLevel;
+			     Configuration.getParam(PARAM_DEFAULT_LEVEL));
+    int level = defaultLevel;
+    if (levelName != null) {
+      try {
+	level = levelOf(levelName);
+      } catch (IllegalArgumentException e) {
+	level = defaultLevel;
+      }
     }
     return level;
   }
@@ -322,7 +323,7 @@ public class Logger {
   /** Set the initial default log level to that specified by the
    * org.lockss.defaultLogLevel system property if present, or DEFAULT_LEVEL
    */
-  private static void setInitialDefaultLevel() {
+  static void setInitialDefaultLevel() {
     defaultLevel = getInitialDefaultLevel();
     defaultLevelName = nameOf(defaultLevel);
   }
