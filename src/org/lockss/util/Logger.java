@@ -1,5 +1,5 @@
 /*
- * $Id: Logger.java,v 1.27 2003-07-14 06:45:22 tlipkis Exp $
+ * $Id: Logger.java,v 1.28 2003-08-29 03:01:10 dshr Exp $
  */
 
 /*
@@ -166,7 +166,7 @@ public class Logger {
   /**
    * Special purpose Logger factory.  Return the unique instance
    * of <code>Logger</code> with the given name, creating it if necessary.
-   * This is here primarily so <Conde>Configuration</code> can create a
+   * This is here primarily so <code>Configuration</code> can create a
    * log without being invoked recursively, which causes its class
    * initialization to not complete correctly.
    * @param name identifies the log instance, appears in output

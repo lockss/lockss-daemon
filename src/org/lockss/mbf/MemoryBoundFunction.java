@@ -1,5 +1,5 @@
 /*
- * $Id: MemoryBoundFunction.java,v 1.8 2003-08-24 22:38:25 dshr Exp $
+ * $Id: MemoryBoundFunction.java,v 1.9 2003-08-29 03:01:10 dshr Exp $
  */
 
 /*
@@ -47,6 +47,7 @@ public class MemoryBoundFunction {
   protected byte[] nonce;
   protected long e;
   protected int[] proof;
+  protected int[] trace;
   protected boolean verify;
   protected boolean finished;
   protected int pathLen;
@@ -70,6 +71,7 @@ public class MemoryBoundFunction {
       verify = true;
       maxPath = maxPathVal;
     }
+    trace = null;
     implSPI.initialize(this);
   }
 
@@ -107,6 +109,23 @@ public class MemoryBoundFunction {
     if (!finished)
       throw new MemoryBoundFunctionException("not finished");
     return (proof);
+  }
+
+  /**
+   * Obtain the trace of the MBF.  If this object has not yet finished,
+   * or is verifying a proof throw MemoryBoundFunction Exception.
+   * The array returned contains the final value fetched from the
+   * basis array for each path included in the proof (for a non-empty
+   * proof) or for each path searched (for an empty proof).
+   * @return array of int containing the trace,  null if none available.
+   * 
+   */
+  public int[] traceArray() throws MemoryBoundFunctionException {
+    if (!finished)
+      throw new MemoryBoundFunctionException("not finished");
+    if (verify)
+      throw new MemoryBoundFunctionException("not generating");
+    return (trace);
   }
 
   /**

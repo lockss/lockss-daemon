@@ -1,5 +1,5 @@
 /*
- * $Id: MBF2.java,v 1.6 2003-08-28 16:46:14 dshr Exp $
+ * $Id: MBF2.java,v 1.7 2003-08-29 03:01:10 dshr Exp $
  */
 
 /*
@@ -80,6 +80,8 @@ public class MBF2 extends MemoryBoundFunctionSPI {
   private int numPath;
   // log2(number of entries expected in result) - should be param
   private int n;
+  // ArrayList that accumulates the final array values in each path
+  private ArrayList traceArrayList;
 
   /**
    * No-argument constructor for use with Class.newInstance()
@@ -101,9 +103,14 @@ public class MBF2 extends MemoryBoundFunctionSPI {
     ensureConfigured();
     setup();
     ret = new ArrayList();
-    n = 4;  // XXX should be parameter
-    if (ourE < n)
-      n = ourE - 1;
+    traceArrayList = new ArrayList();
+    {
+      // XXX this is total cruft.  n should be a parameter
+      // of the MemoryBoundFunctionFactory.
+      n = 4;
+      if (ourE < n)
+	n = ourE - 1;
+    }
     logger.debug("MBF2: ourE " + ourE + " n " + n);
   }
 
@@ -229,7 +236,7 @@ public class MBF2 extends MemoryBoundFunctionSPI {
   }
 
   // Path termination
-  private void finishPath() {
+  private void finishPath() throws MemoryBoundFunctionException {
     numPath++;
     // XXX actually only need to look at bottom 32 bits of A
     BigInteger hashOfA = new BigInteger(hasher.digest(A));
@@ -270,6 +277,9 @@ public class MBF2 extends MemoryBoundFunctionSPI {
 	  pathIndex = -1;
       }
     } else {
+      // Remember the final value - XXX actually the next value that
+      // would have been fetched if the path had continued
+      traceArrayList.add(new Integer(wordAt(T, c)));
       // We are generating - accumulate matches
       if (match()) {
 	// Its a match.
@@ -277,10 +287,29 @@ public class MBF2 extends MemoryBoundFunctionSPI {
       }
       if (k >= mbf.e) {
 	mbf.finished = true;
-	Object[] tmp = ret.toArray();
-	mbf.proof = new int[tmp.length];
-	for (int i = 0; i < tmp.length; i++) {
-	  mbf.proof[i] = ((Integer)tmp[i]).intValue();
+	Object[] proofEntries = ret.toArray();
+	Object[] traceEntries = traceArrayList.toArray();
+	mbf.proof = new int[proofEntries.length];
+	if (proofEntries.length > 0) {
+	  // Non-empty proof
+	  mbf.trace = new int[proofEntries.length];
+	  for (int i = 0; i < proofEntries.length; i++) {
+	    int proofEntry = ((Integer)proofEntries[i]).intValue();
+	    mbf.proof[i] = proofEntry;
+	    if (proofEntry <= 0 || proofEntry > traceEntries.length)
+	      throw new MemoryBoundFunctionException("proof entry " +
+						     proofEntry +
+						     " range " +
+						     proofEntries.length +
+						     " / " +
+						     traceEntries.length);
+	    mbf.trace[i] = ((Integer)traceEntries[proofEntry-1]).intValue();
+	  }
+	} else {
+	  // Empty proof
+	  mbf.trace = new int[traceEntries.length];
+	  for (int i = 0; i <traceEntries.length; i++)
+	    mbf.trace[i] = ((Integer)traceEntries[i]).intValue();
 	}
 	logger.debug("proof geenrated");
 	for (int i = 0; i < mbf.proof.length; i++) {

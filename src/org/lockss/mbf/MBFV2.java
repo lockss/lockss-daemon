@@ -1,5 +1,5 @@
 /*
- * $Id: MBFV2.java,v 1.5 2003-08-28 16:46:14 dshr Exp $
+ * $Id: MBFV2.java,v 1.6 2003-08-29 03:01:10 dshr Exp $
  */
 
 /*
@@ -75,11 +75,12 @@ public class MBFV2 extends MemoryBoundFunctionVote {
   private CachedUrlSetHasher hasher;
   private int[] thisProof;
   private byte[] thisHash;
+  private int[] thisTrace;
   private int index;
   private int bytesToGo;
   private int[][] ourProofs;
   private byte[][] ourHashes;
-  private int stepLimit;
+  private byte[] firstProofNonce;
   
   /**
    * No-argument constructor for use with Class.newInstance().
@@ -91,10 +92,13 @@ public class MBFV2 extends MemoryBoundFunctionVote {
     hasher = null;
     thisProof = null;
     thisHash = null;
+    thisTrace = null;
     index = -1;
     bytesToGo = -1;
-    stepLimit = 4096;
+    firstProofNonce = null;
     currentState = Bad;
+    if (false)
+      logger.setLevel(6);
   }
 
   /**
@@ -193,9 +197,6 @@ public class MBFV2 extends MemoryBoundFunctionVote {
   public boolean computeSteps(int n) throws MemoryBoundFunctionException {
     logger.debug("computeSteps: block " + index + " steps " + n + " state " +
 		 stateName[currentState]);
-    stepLimit -= n;
-    if (stepLimit <= 0)
-      throw new MemoryBoundFunctionException("no more steps");
     switch (currentState) {
     case Finished:
       return false;
@@ -231,14 +232,7 @@ public class MBFV2 extends MemoryBoundFunctionVote {
     return (!finished);
   }
 
-  private void startingGeneration(int n) throws MemoryBoundFunctionException {
-    if (verify || currentState != StartingGeneration)
-      throw new MemoryBoundFunctionException("bad state");
-    if (index >= 0)
-      throw new MemoryBoundFunctionException("bad index " + index + " in " +
-					     stateName[currentState]);
-    // The first proof uses the nonce and the AU name [XXX and
-    // also the first bytes of the AU].
+  private byte[] makeFirstBlockProofNonce() throws MemoryBoundFunctionException {
     proofDigest.update(nonce);
     if (cus != null) {
       ArchivalUnit au = cus.getArchivalUnit();
@@ -247,7 +241,44 @@ public class MBFV2 extends MemoryBoundFunctionVote {
     } else {
       throw new MemoryBoundFunctionException("no CUS");
     }
-    // XXX should also hash first bytes of AU
+    return proofDigest.digest();
+  }
+
+  private byte[] makeSubsequentBlockProofNonce(byte[] prevHash,
+					       int[] prevProof) {
+    // Second or subsequent block - nonce is previous hash and
+    // previous proof.
+    // XXX nonce should be the hash of the message nonce and
+    // XXX the array of final values from the previous proof.
+    proofDigest.update(prevHash);
+    logger.debug("block " + index + " hash " + byteArrayToString(prevHash));
+    if (true /* thisTrace == null */) {
+      // Use the previous proof - dangerous because too few bits
+      if (prevProof.length > 0)
+	for (int i = 0; i < prevProof.length; i++)
+	  proofDigest.update(intToByteArray(prevProof[i]));
+      else {
+	logger.debug("block " + index + " 0-length proof");
+	proofDigest.update(nonce);
+      }
+    } else {
+      // Use the trace array as the nonce
+      for (int i = 0; i < thisTrace.length; i++) {
+	byte[] trace = intToByteArray(thisTrace[i]);
+	logger.debug("trace " + i + " is " + byteArrayToString(trace));
+	proofDigest.update(trace);
+      }
+    }
+    return proofDigest.digest();
+  }
+
+  private void startingGeneration(int n) throws MemoryBoundFunctionException {
+    if (verify || currentState != StartingGeneration)
+      throw new MemoryBoundFunctionException("bad state");
+    if (index >= 0)
+      throw new MemoryBoundFunctionException("bad index " + index + " in " +
+					     stateName[currentState]);
+    firstProofNonce = makeFirstBlockProofNonce();
     thisHash = null;
     thisProof = null;
     setState(FirstBlockProofGeneration);
@@ -261,17 +292,7 @@ public class MBFV2 extends MemoryBoundFunctionVote {
 					     stateName[currentState]);
     logger.debug("starting verification " + ourProofs.length + "/" +
 		ourHashes.length);
-    // The first proof uses the nonce and the AU name [XXX and
-    // also the first bytes of the AU].
-    proofDigest.update(nonce);
-    if (cus != null) {
-      ArchivalUnit au = cus.getArchivalUnit();
-      String AUid = au.getAUId();
-      proofDigest.update(AUid.getBytes());
-    } else {
-      throw new MemoryBoundFunctionException("no CUS");
-    }
-    // XXX should also hash first bytes of AU
+    firstProofNonce = makeFirstBlockProofNonce();
     logger.debug("verifySteps: index < 0");
     thisHash = null;
     thisProof = null;
@@ -282,21 +303,23 @@ public class MBFV2 extends MemoryBoundFunctionVote {
     if (verify || currentState != FirstBlockProofGeneration)
       throw new MemoryBoundFunctionException("bad state");
     if (thisHash != null)
-      throw new MemoryBoundFunctionException("thisHash should be null" + " in " +
+      throw new MemoryBoundFunctionException("thisHash should be null in " +
 					     stateName[currentState]);
     if (thisProof != null)
-      throw new MemoryBoundFunctionException("thisProof should be null" + " in " +
+      throw new MemoryBoundFunctionException("thisProof should be null in " +
 					     stateName[currentState]);
     if (index >= 0)
-      throw new MemoryBoundFunctionException("index should be -1" + " in " +
+      throw new MemoryBoundFunctionException("index should be -1 in " +
 					     stateName[currentState]);
     if (mbf != null)
-      throw new MemoryBoundFunctionException("mbf should be null" + " in " +
+      throw new MemoryBoundFunctionException("mbf should be null in " +
+					     stateName[currentState]);
+    if (firstProofNonce == null)
+      throw new MemoryBoundFunctionException("firstProofNonce should not be null in " +
 					     stateName[currentState]);
     try{
-      byte[] nonce1 = proofDigest.digest();
-      logger.debug("MBFV2: nonce " + byteArrayToString(nonce1));
-      mbf = factory.make(nonce1,
+      logger.debug("MBFV2: nonce " + byteArrayToString(firstProofNonce));
+      mbf = factory.make(firstProofNonce,
 			 e,
 			 1,
 			 null,
@@ -371,22 +394,11 @@ public class MBFV2 extends MemoryBoundFunctionVote {
       if (thisProof == null)
 	throw new MemoryBoundFunctionException("thisProof should not be null in " +
 					     stateName[currentState]);
-      // Second or subsequent block - nonce is previous hash and
-      // previous proof.
-      proofDigest.update(thisHash);
-      logger.debug("block " + index + " hash " + byteArrayToString(thisHash));
-      if (thisProof.length > 0)
-	for (int i = 0; i < thisProof.length; i++)
-	  proofDigest.update(intToByteArray(thisProof[i]));
-      else {
-	logger.debug("block " + index + " 0-length proof");
-	proofDigest.update(nonce);
-      }
+      byte[] nonce1 = makeSubsequentBlockProofNonce(thisHash, thisProof);
+      logger.debug("MBFV2: nonce " + byteArrayToString(nonce1));
       logger.debug("generateSteps: index " + index);
       thisHash = null;
       thisProof = null;
-      byte[] nonce1 = proofDigest.digest();
-      logger.debug("MBFV2: nonce " + byteArrayToString(nonce1));
       mbf = factory.make(nonce1,
 			 e,
 			 (1 << index),
@@ -414,6 +426,7 @@ public class MBFV2 extends MemoryBoundFunctionVote {
 	throw new MemoryBoundFunctionException("Null proof in " +
 					       stateName[currentState]);
       saveProof(index, thisProof);
+      thisTrace = mbf.traceArray();
       bytesToGo = (1 << index);
       setState(BlockHashGeneration);
       mbf = null;
@@ -435,13 +448,15 @@ public class MBFV2 extends MemoryBoundFunctionVote {
     if (mbf != null)
       throw new MemoryBoundFunctionException("mbf should be null" + " in " +
 					     stateName[currentState]);
+    if (firstProofNonce == null)
+      throw new MemoryBoundFunctionException("firstProofNonce should not be null in " +
+					     stateName[currentState]);
     index = 0;
     thisProof = ourProofs[index];
     thisHash = null;
     try{
-      byte[] nonce1 = proofDigest.digest();
-      logger.debug("MBFV2: nonce " + byteArrayToString(nonce1));
-      mbf = factory.make(nonce1,
+      logger.debug("MBFV2: nonce " + byteArrayToString(firstProofNonce));
+      mbf = factory.make(firstProofNonce,
 			 e,
 			 (1 << index),
 			 thisProof,
@@ -533,19 +548,10 @@ public class MBFV2 extends MemoryBoundFunctionVote {
       
       // Second or subsequent block - nonce is previous hash and
       // previous proof.
-      proofDigest.update(ourHashes[index-1]);
-      logger.debug("block " + (index-1) + " hash " + byteArrayToString(ourHashes[index-1]));
-      int[] prevProof = ourProofs[index-1];
-      thisProof = ourProofs[index];
-      if (prevProof.length > 0)
-	for (int i = 0; i < prevProof.length; i++)
-	  proofDigest.update(intToByteArray(prevProof[i]));
-      else {
-	logger.debug("block " + (index-1) + " 0-length proof");
-	proofDigest.update(nonce);
-      }
-      byte[] nonce1 = proofDigest.digest();
+      byte[] nonce1 = makeSubsequentBlockProofNonce(ourHashes[index-1],
+						    ourProofs[index-1]);
       logger.debug("MBFV2: nonce " + byteArrayToString(nonce1));
+      thisProof = ourProofs[index];
       mbf = factory.make(nonce1,
 			 e,
 			 (1 << index),
@@ -563,13 +569,16 @@ public class MBFV2 extends MemoryBoundFunctionVote {
     mbf.computeSteps(n);
     if (mbf.done()) {
       // Finished
+      thisProof = null;
+      bytesToGo = (1 << index);
       if (mbf.result() == null) {
 	logger.debug("verifySteps: proof invalid");
 	valid = false;
+	agreeing = false;
+	setState(Finished);
+      } else {
+	setState(BlockHashVerification);
       }
-      thisProof = null;
-      bytesToGo = (1 << index);
-      setState(BlockHashVerification);
     }
   }
 
@@ -630,4 +639,5 @@ public class MBFV2 extends MemoryBoundFunctionVote {
       logger.debug("hashes " + hashesToString(ourHashes));
 		  
   }
+
 }
