@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.172 2004-03-19 05:56:38 eaalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.173 2004-03-24 02:24:12 eaalto Exp $
  */
 
 /*
@@ -265,8 +265,7 @@ public class NodeManagerImpl
     return true;
   }
 
-  public void startPoll(CachedUrlSet cus, Tallier tally,
-                         boolean isReplayPoll) {
+  public void startPoll(CachedUrlSet cus, Tallier tally, boolean isReplayPoll) {
     NodeState nodeState = getNodeState(cus);
     PollSpec spec = tally.getPollSpec();
     int status;
@@ -329,10 +328,11 @@ public class NodeManagerImpl
         default:
           logger.error("Invalid nodestate: " + nodeState.getStateString());
           status = PollState.RUNNING;
-          if (tally.getType() == Poll.CONTENT_POLL) {
+          if (cus.getSpec().isSingleNode()) {
+            nodeState.setState(NodeState.SNCUSS_POLL_RUNNING);
+          } else if (tally.getType() == Poll.CONTENT_POLL) {
             nodeState.setState(NodeState.CONTENT_RUNNING);
-          }
-          else {
+          } else {
             nodeState.setState(NodeState.NAME_RUNNING);
           }
       }
@@ -452,11 +452,9 @@ public class NodeManagerImpl
           lastState = nodeState.getState();
           if (results.getType() == Poll.CONTENT_POLL) {
             handleContentPoll(pollState, results, nodeState);
-          }
-          else if (results.getType() == Poll.NAME_POLL) {
+          } else if (results.getType() == Poll.NAME_POLL) {
             handleNamePoll(pollState, results, nodeState);
-          }
-          else {
+          } else {
             String err = "Request to update state for unknown type: " +
                 results.getType();
             logger.error(err);
@@ -510,15 +508,13 @@ public class NodeManagerImpl
           try {
             logger.debug3("New node state: " + nodeState.getStateString());
             checkCurrentState(pollState, results, nodeState, false);
-          }
-          catch (IOException ie) {
+          } catch (IOException ie) {
             logger.error("Unable to continue actions on node: ", ie);
             pollState.status = PollState.ERR_IO;
           }
         }
       }
-    }
-    finally {
+    } finally {
       if ((isRangedPoll) && (lastState != -1)) {
         // if it was a ranged poll, may have temporarily set state to
         // CONTENT_LOST, so restore last state
@@ -975,7 +971,10 @@ public class NodeManagerImpl
           logger.debug2("won name poll (mine), calling content poll on subnodes.");
           // call a content poll for this node's content if we haven't started
           // sub-dividing yet (and not an AU url, since they never have content)
-          if ((lastOrCurrentPoll.getLwrBound() == null) &&
+          // (bug fix here to ignore any name polls which manage to get range
+          // information)
+          if (((lastOrCurrentPoll.getType() == Poll.NAME_POLL) ||
+               (lastOrCurrentPoll.getLwrBound() == null)) &&
               (!nodeState.getCachedUrlSet().getSpec().isAu())) {
             logger.debug2("calling single node content poll on node's contents");
             //XXX once we're checking the content bit in the name poll,
@@ -1075,7 +1074,7 @@ public class NodeManagerImpl
   }
 
   boolean checkValidStatesForResults(PollState poll, NodeState node,
-                           CachedUrlSetSpec spec) {
+                                     CachedUrlSetSpec spec) {
     boolean isContent = poll.getType()==Poll.CONTENT_POLL;
     boolean isName = poll.getType()==Poll.NAME_POLL;
     boolean isSNCUSS = spec.isSingleNode();
