@@ -135,9 +135,9 @@ public class TestPoll extends TestCase {
   public void testTally() {
     Poll p = testpolls[0];
     LcapMessage msg = p.getMessage();
-    p.m_tally.addVote(new Poll.Vote(msg,false));
-    p.m_tally.addVote(new Poll.Vote(msg,false));
-    p.m_tally.addVote(new Poll.Vote(msg,false));
+    p.m_tally.addVote(new Vote(msg,false));
+    p.m_tally.addVote(new Vote(msg,false));
+    p.m_tally.addVote(new Vote(msg,false));
     assertEquals(0, p.m_tally.numYes);
     assertEquals(0, p.m_tally.wtYes);
     assertEquals(3, p.m_tally.numNo);
@@ -145,9 +145,9 @@ public class TestPoll extends TestCase {
 
     p = testpolls[1];
     msg = p.getMessage();
-    p.m_tally.addVote(new Poll.Vote(msg,true));
-    p.m_tally.addVote(new Poll.Vote(msg,true));
-    p.m_tally.addVote(new Poll.Vote(msg,true));
+    p.m_tally.addVote(new Vote(msg,true));
+    p.m_tally.addVote(new Vote(msg,true));
+    p.m_tally.addVote(new Vote(msg,true));
     assertEquals(3, p.m_tally.numYes);
     assertEquals(1500, p.m_tally.wtYes);
     assertEquals(0, p.m_tally.numNo);

@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.1 2002-12-17 23:35:14 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.2 2002-12-21 01:15:45 aalto Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ import org.lockss.plugin.Plugin;
  */
 public class NodeManagerImpl implements NodeManager {
   private static NodeManager nodeManager = null;
-  private StateRepository repository;
+  private HistoryRepository repository;
   private HashMap auMaps;
 
   /**
@@ -58,14 +58,14 @@ public class NodeManagerImpl implements NodeManager {
   }
 
   private NodeManagerImpl() {
-    repository = new StateRepositoryImpl();
+    repository = HistoryRepositoryImpl.getHistoryRepository();
     loadStateTree();
   }
 
   public void updatePollResults(CachedUrlSet cus, Poll.VoteTally results) {
     NodeState state = getNodeState(cus);
     updateState(state, results);
-    repository.storeNodeState(state);
+    repository.storePollHistories(state);
   }
 
   public NodeState getNodeState(CachedUrlSet cus) {
@@ -153,7 +153,20 @@ public class NodeManagerImpl implements NodeManager {
   }
 
   public long getEstimatedTreeWalkDuration(ArchivalUnit au) {
+    // check size (node count) of tree
+    // estimate via short walk
+    // multiply
     return 1000;
+  }
+
+  private void doTreeWalk() {
+    // traverse the tree
+    // at each node, check for crawl state
+    // schedule crawls if it's been too long
+    // check with plugin for scheduling
+    // convert finished polls to histories?
+    // update poll states?
+
   }
 
   private void loadStateTree() {
@@ -172,7 +185,9 @@ public class NodeManagerImpl implements NodeManager {
 
   private void recurseLoadCachedUrlSets(CachedUrlSet cus, TreeMap nodeMap) {
     // get the nodeState for this cus
-    NodeState state = repository.loadNodeState(cus);
+    NodeState state = new NodeStateImpl(cus, new CrawlState(
+        CrawlState.NEW_CONTENT_CRAWL, CrawlState.FINISHED, 0), new ArrayList(),
+        repository);
     nodeMap.put(getCusKey(cus), state);
     // recurse the set's children
     Iterator children = cus.flatSetIterator();

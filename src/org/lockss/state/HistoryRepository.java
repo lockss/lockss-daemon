@@ -1,5 +1,5 @@
 /*
- * $Id: PollHistory.java,v 1.9 2002-12-21 01:15:45 aalto Exp $
+ * $Id: HistoryRepository.java,v 1.1 2002-12-21 01:15:45 aalto Exp $
  */
 
 /*
@@ -33,52 +33,24 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.state;
 
-import java.util.*;
-import org.lockss.protocol.LcapIdentity;
+import org.lockss.daemon.CachedUrlSet;
+import java.util.List;
 
 /**
- * PollHistory contains the information for a completed poll.  It extends
- * PollState but ignores 'getDeadline()' (returns null).
+ * HistoryRepository is an inner layer of the NodeManager which handles the actual
+ * storage of NodeStates.
  */
-public class PollHistory extends PollState {
-  long duration;
-  Collection votes;
+public interface HistoryRepository {
+  /**
+   * Stores PollHistories for a given NodeState.
+   * @param nodeState to store
+   */
+  public void storePollHistories(NodeState nodeState);
 
   /**
-   * Empty constructor used for marshalling.  Needed to create the
-   * PollHistoryBean.
+   * Loads the poll histories into the given NodeState.
+   * @param nodeState the NodeState
    */
-  public PollHistory() {
-    super(-1, null, -1, 0, null);
-    duration = 0;
-    votes = new ArrayList();
-  }
+  public void loadPollHistories(NodeState nodeState);
 
-  PollHistory(int type, String regExp, int status, long startTime,
-              long duration, Collection votes) {
-    super(type, regExp, status, startTime, null);
-    this.duration = duration;
-    this.votes = votes;
-  }
-
-  PollHistory(PollState state, long duration, Collection votes) {
-    this(state.type, state.regExp, state.status, state.startTime, duration,
-         votes);
-  }
-
-  /**
-   * Returns the duration the poll took.
-   * @return the duration in ms
-   */
-  public long getDuration() {
-    return duration;
-  }
-
-  /**
-   * Returns an immutable iterator of Votes.
-   * @return an Iterator of Vote objects.
-   */
-  public Iterator getVotes() {
-    return Collections.unmodifiableCollection(votes).iterator();
-  }
 }

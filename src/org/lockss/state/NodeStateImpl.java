@@ -1,5 +1,5 @@
 /*
- * $Id: NodeStateImpl.java,v 1.2 2002-12-18 00:11:59 aalto Exp $
+ * $Id: NodeStateImpl.java,v 1.3 2002-12-21 01:15:45 aalto Exp $
  */
 
 /*
@@ -41,14 +41,14 @@ import org.lockss.daemon.CachedUrlSet;
  * poll histories.
  */
 public class NodeStateImpl implements NodeState {
-  CachedUrlSet cus;
-  CrawlState crawlState;
-  List polls;
-  List pollHistories = null;
-  StateRepository repository;
+  protected CachedUrlSet cus;
+  protected CrawlState crawlState;
+  protected List polls;
+  protected List pollHistories = null;
+  protected HistoryRepository repository;
 
-  NodeStateImpl(CachedUrlSet cus, CrawlState crawlState, List polls,
-                StateRepository repository) {
+  protected NodeStateImpl(CachedUrlSet cus, CrawlState crawlState, List polls,
+                HistoryRepository repository) {
     this.cus = cus;
     this.crawlState = crawlState;
     this.polls = polls;
@@ -74,15 +74,34 @@ public class NodeStateImpl implements NodeState {
     return Collections.unmodifiableList(pollHistories).iterator();
   }
 
-  void addPollState(PollState new_poll) {
+  protected void addPollState(PollState new_poll) {
     polls.add(new_poll);
   }
 
-  void closeActivePoll(PollHistory finished_poll) {
+  protected void closeActivePoll(PollHistory finished_poll) {
     if (pollHistories==null) {
       repository.loadPollHistories(this);
     }
     pollHistories.add(finished_poll);
     polls.remove(finished_poll);
+  }
+
+  protected void setPollHistoryBeanList(List new_histories) {
+    pollHistories = new ArrayList(new_histories.size());
+    Iterator beanIter = new_histories.iterator();
+    while (beanIter.hasNext()) {
+      PollHistoryBean bean = (PollHistoryBean)beanIter.next();
+      pollHistories.add(bean.getPollHistory());
+    }
+  }
+
+  protected List getPollHistoryBeanList() {
+    List histBeans = new ArrayList(pollHistories.size());
+    Iterator histIter = pollHistories.iterator();
+    while (histIter.hasNext()) {
+      PollHistory history = (PollHistory)histIter.next();
+      histBeans.add(new PollHistoryBean(history));
+    }
+    return histBeans;
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: PollHistory.java,v 1.9 2002-12-21 01:15:45 aalto Exp $
+ * $Id: NodeHistoryBean.java,v 1.1 2002-12-21 01:15:45 aalto Exp $
  */
 
 /*
@@ -30,55 +30,33 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-
 package org.lockss.state;
 
-import java.util.*;
-import org.lockss.protocol.LcapIdentity;
+import java.util.Collection;
 
-/**
- * PollHistory contains the information for a completed poll.  It extends
- * PollState but ignores 'getDeadline()' (returns null).
- */
-public class PollHistory extends PollState {
-  long duration;
-  Collection votes;
+public class NodeHistoryBean {
+  public Collection historyBeans;
 
   /**
-   * Empty constructor used for marshalling.  Needed to create the
-   * PollHistoryBean.
+   * Empty constructor for bean creation during marshalling
    */
-  public PollHistory() {
-    super(-1, null, -1, 0, null);
-    duration = 0;
-    votes = new ArrayList();
-  }
-
-  PollHistory(int type, String regExp, int status, long startTime,
-              long duration, Collection votes) {
-    super(type, regExp, status, startTime, null);
-    this.duration = duration;
-    this.votes = votes;
-  }
-
-  PollHistory(PollState state, long duration, Collection votes) {
-    this(state.type, state.regExp, state.status, state.startTime, duration,
-         votes);
+  public NodeHistoryBean() {
   }
 
   /**
-   * Returns the duration the poll took.
-   * @return the duration in ms
+   * Gets the collection of PollHistoryBeans.
+   * @return a Collection of PollHistoryBeans
    */
-  public long getDuration() {
-    return duration;
+  public Collection getHistoryBeans() {
+    return historyBeans;
   }
 
   /**
-   * Returns an immutable iterator of Votes.
-   * @return an Iterator of Vote objects.
+   * Sets the collection of PollHistoryBeans
+   * @param historyBeans a Collection of PollHistoryBeans
    */
-  public Iterator getVotes() {
-    return Collections.unmodifiableCollection(votes).iterator();
+  public void setHistoryBeans(Collection historyBeans) {
+    this.historyBeans = historyBeans;
   }
+
 }

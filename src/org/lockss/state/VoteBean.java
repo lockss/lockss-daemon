@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBean.java,v 1.2 2002-12-13 23:51:32 aalto Exp $
+ * $Id: VoteBean.java,v 1.3 2002-12-21 01:15:45 aalto Exp $
  */
 
 /*
@@ -32,17 +32,38 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.state;
 
-public class VoteBean {
+import org.lockss.poller.Vote;
+
+public class VoteBean extends Vote {
   public String idStr = null;
-  public boolean agree = false;
-  public String challenge = null;
-  public String verifier = null;
-  public String hash = null;
+  public String challengeStr = null;
+  public String verifierStr = null;
+  public String hashStr = null;
 
   /**
    * Empty constructor for bean creation during marshalling
    */
   public VoteBean() {
+  }
+
+  /**
+   * Constructor for converting from a Vote object.
+   * @param vote the Vote
+   */
+  VoteBean(Vote vote) {
+    idStr = vote.getIdentity().toString();
+    agree = vote.isAgreeVote();
+    challengeStr = vote.getChallengeString();
+    verifierStr = vote.getVerifierString();
+    hashStr = vote.getHashString();
+  }
+
+  /**
+   * Returns a Vote object based off the values in the VoteBean class.
+   * @return a Vote object
+   */
+  Vote getVote() {
+    return super.makeVote(challengeStr, verifierStr, hashStr, idStr, agree);
   }
 
   /**
@@ -81,48 +102,48 @@ public class VoteBean {
    * Returns the vote's challenge in Base64.
    * @return the challenge
    */
-  public String getChallenge() {
-    return challenge;
+  public String getChallengeString() {
+    return challengeStr;
   }
 
   /**
    * Sets the challenge.
-   * @param challenge the new challenge
+   * @param challengeStr the new challenge
    */
-  public void setChallenge(String challenge) {
-    this.challenge = challenge;
+  public void setChallengeString(String challengeStr) {
+    this.challengeStr = challengeStr;
   }
 
   /**
    * Returns the vote's verifier in Base64.
    * @return the verifier
    */
-  public String getVerifier() {
-    return verifier;
+  public String getVerifierString() {
+    return verifierStr;
   }
 
   /**
    * Sets the verifier.
-   * @param verifier the new verifier
+   * @param verifierStr the new verifier
    */
-  public void setVerifier(String verifier) {
-    this.verifier = verifier;
+  public void setVerifierString(String verifierStr) {
+    this.verifierStr = verifierStr;
   }
 
   /**
    * Returns the vote's hash in Base64.
    * @return the hash
    */
-  public String getHash() {
-    return hash;
+  public String getHashString() {
+    return hashStr;
   }
 
   /**
    * Sets the hash.
-   * @param hash the new hash
+   * @param hashStr the new hash
    */
-  public void setHash(String hash) {
-    this.hash = hash;
+  public void setHashString(String hashStr) {
+    this.hashStr = hashStr;
   }
 
 }

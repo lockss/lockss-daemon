@@ -1,5 +1,5 @@
 /*
- * $Id: PollHistoryBean.java,v 1.3 2002-12-18 00:11:59 aalto Exp $
+ * $Id: PollHistoryBean.java,v 1.4 2002-12-21 01:15:45 aalto Exp $
  */
 
 /*
@@ -35,13 +35,30 @@ package org.lockss.state;
 
 import java.util.*;
 import org.lockss.protocol.LcapIdentity;
+import org.lockss.poller.Vote;
 
 /**
  * PollHistoryBean is a settable version of PollHistory used purely for
  * marshalling purposes.
  */
 public class PollHistoryBean extends PollHistory {
-  public PollHistoryBean() { }
+  public Collection voteBeans;
+
+  public PollHistoryBean() {
+    voteBeans = new ArrayList();
+  }
+
+  PollHistoryBean(PollHistory history) {
+    super(history.type, history.regExp, history.status, history.startTime,
+          history.duration, history.votes);
+    voteBeans = new ArrayList();
+    convertVotesToVoteBeans();
+  }
+
+  PollHistory getPollHistory() {
+    convertVoteBeansToVotes();
+    return new PollHistory(type, regExp, status, startTime, duration, votes);
+  }
 
   /**
    * Sets the type.
@@ -84,19 +101,50 @@ public class PollHistoryBean extends PollHistory {
   }
 
   /**
-   * Gets the vote list.  This is used purely for marshalling purposes, since
-   * the votes Collection must be reached in a mutable fashion.
-   * @return a Collection of Poll.Vote objects
+   * Gets the voteBeans collection.
+   * @return the voteBeans Collection
    */
-  public Collection getMutableVotes() {
-    return votes;
+  public Collection getVoteBeans() {
+    return voteBeans;
   }
+
   /**
-   * Sets the vote list.  This is used purely for marshalling purposes, since
-   * the votes Collection must be reached in a mutable fashion.
-   * @param votes a Collection of Poll.Vote objects
+   * Sets the voteBeans collection.
+   * @param voteBeans the new Collection
    */
-  public void setMutableVotes(Collection votes) {
-    super.votes = votes;
+  public void setVoteBeans(Collection voteBeans) {
+    this.voteBeans = voteBeans;
+  }
+
+  /**
+   * Populates the list of votebeans from the votes list.  This is used purely
+   * for marshalling purposes, since the Vote objects cannot be marshalled.
+   */
+  private void convertVotesToVoteBeans() {
+    voteBeans = new ArrayList(votes.size());
+    Iterator voteIter = votes.iterator();
+    while (voteIter.hasNext()) {
+      Vote vote = (Vote)voteIter.next();
+      voteBeans.add(new VoteBean(vote));
+    }
+  }
+
+  /**
+   * Populates the vote list from the list of VoteBeans.  This is used purely
+   * for marshalling purposes, since the unmarshalled VoteBean objects must be
+   * converted back into Votes.
+   */
+  private void convertVoteBeansToVotes() {
+    votes = new ArrayList(voteBeans.size());
+    Iterator beanIter = voteBeans.iterator();
+    while (beanIter.hasNext()) {
+      VoteBean bean = (VoteBean)beanIter.next();
+      votes.add(bean.getVote());
+    }
+  }
+
+  public Iterator getVotes() {
+    convertVoteBeansToVotes();
+    return super.getVotes();
   }
 }

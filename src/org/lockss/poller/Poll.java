@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.30 2002-12-19 01:44:23 claire Exp $
+* $Id: Poll.java,v 1.31 2002-12-21 01:15:45 aalto Exp $
  */
 
 /*
@@ -556,104 +556,5 @@ public abstract class Poll implements Serializable {
       }
       pollVotes.add(vote);
     }
-  }
-
-
-  /**
-   * Vote stores the information need to replay a single vote. These are needed
-   * to run a repair poll.
-   */
-  public static class Vote {
-    private LcapIdentity id;
-    private boolean agree;
-    private byte[] challenge;
-    private byte[] verifier;
-    private byte[] hash;
-
-    Vote(byte[] challenge, byte[] verifier, byte[] hash,
-         LcapIdentity id, boolean agree) {
-      this.id = id;
-      this.agree = agree;
-      this.challenge = challenge;
-      this.verifier = verifier;
-      this.hash = hash;
-    }
-
-    Vote(LcapMessage msg, boolean agree) {
-      this(msg.getChallenge(), msg.getVerifier(), msg.getHashed(),
-           msg.getOriginID(), agree);
-    }
-
-
-    boolean setAgreeWithHash(byte[] new_hash) {
-      agree = Arrays.equals(hash, new_hash);
-
-      return agree;
-    }
-
-    /**
-     * Return the Identity of the voter
-     * @return <code>LcapIdentity</code> the id
-     */
-    public LcapIdentity getIdentity() {
-      return id;
-    }
-
-    /**
-     * return whether we agreed or disagreed with this vote
-     * @return booleean true if we agree; false otherwise
-     */
-    public boolean isAgreeVote() {
-      return agree;
-    }
-
-    /**
-     * Return the challenge bytes of the voter
-     * @return the array of bytes of the challenge
-     */
-    public byte[] getChallenge() {
-      return challenge;
-    }
-
-    /**
-     * Return the challenge bytes as a string
-     * @return a String representing the challenge
-     */
-    public String getChallengeString() {
-      return String.valueOf(B64Code.encode(challenge));
-    }
-
-    /**
-     * Return the bytes of the hash computed by this voter
-     * @return the array of bytes of the hash
-     */
-    public byte[] getHash() {
-      return hash;
-    }
-
-    /**
-     * Return the hash bytes as a string
-     * @return a String representing the hash
-     */
-    public String getHashString() {
-      return String.valueOf(B64Code.encode(hash));
-    }
-
-    /**
-     * Return the verifer bytes of the voter
-     * @return the array of bytes of the verifier
-     */
-    public byte[] getVerifier() {
-      return verifier;
-    }
-
-    /**
-     * Return the verifier bytes as a string
-     * @return a String representing the verifier
-     */
-    public String getVerifierString() {
-      return String.valueOf(B64Code.encode(verifier));
-    }
-
   }
 }

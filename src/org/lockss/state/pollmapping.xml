@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<!DOCTYPE mapping PUBLIC "-//EXOLAB/Castor Object Mapping DTD Version 1.0//EN"
+                         "http://castor.exolab.org/mapping.dtd">
+
+<mapping>
+        <class name="org.lockss.state.NodeHistoryBean">
+                <map-to xml="NodeHistory"/>
+                <field name="historyBeans"
+                       type="java.util.Collection"
+                       collection="collection" lazy="true">
+                </field>
+        </class>
+        <class name="org.lockss.state.PollHistoryBean">
+                <map-to xml="PollHistory"/>
+                <field name="type"
+                       type="integer">
+                        <bind-xml name="Type" node="element"/>
+                </field>
+
+                <field name="regExp"
+                       type="java.lang.String">
+                        <bind-xml name="RegExp" node="element"/>
+                </field>
+                <field name="status"
+                       type="integer">
+                        <bind-xml name="Status" node="element"/>
+                </field>
+                <field name="startTime"
+                       type="long">
+                        <bind-xml name="StartTime" node="element"/>
+                </field>
+                <field name="duration"
+                       type="long">
+                        <bind-xml name="Duration" node="element"/>
+                </field>
+                <field name="voteBeans"
+                       type="java.util.Collection"
+                       collection="collection" lazy="true">
+                        <bind-xml name="Votes" node="element"/>
+                </field>
+        </class>
+
+        <class name="org.lockss.state.VoteBean">
+                <map-to xml="Vote"/>
+
+                <field name="id"
+                       type="java.lang.String">
+                        <bind-xml name="Id" node="attribute"/>
+                </field>
+                <field name="agreeState"
+                       type="boolean">
+                        <bind-xml name="AgreeState" node="attribute"/>
+                </field>
+                <field name="challengeString"
+                       type="java.lang.String">
+                        <bind-xml name="Challenge" node="element"/>
+                </field>
+                <field name="verifierString"
+                       type="java.lang.String">
+                        <bind-xml name="Verifier" node="element"/>
+                </field>
+                <field name="hashString"
+                       type="java.lang.String">
+                        <bind-xml name="Hash" node="element"/>
+                </field>
+
+        </class>
+</mapping>
