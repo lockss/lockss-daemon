@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessage.java,v 1.34 2003-04-28 23:48:55 aalto Exp $
+ * $Id: LcapMessage.java,v 1.35 2003-05-01 23:29:50 tal Exp $
  */
 
 /*
@@ -638,7 +638,9 @@ public class LcapMessage
 
   public String toString() {
     StringBuffer sb = new StringBuffer();
-    sb.append("[LcapMessage: ");
+    sb.append("[LcapMessage: from ");
+    sb.append(m_originAddr.getHostAddress());
+    sb.append(", ");
     if (isNoOp()) {
       sb.append(POLL_OPCODES[m_opcode]);
     } else {
