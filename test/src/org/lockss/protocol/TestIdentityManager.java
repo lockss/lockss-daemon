@@ -1,5 +1,5 @@
 /*
- * $Id: TestIdentityManager.java,v 1.23 2004-01-20 18:22:49 tlipkis Exp $
+ * $Id: TestIdentityManager.java,v 1.24 2004-02-03 23:19:37 troberts Exp $
  */
 
 /*
@@ -228,6 +228,149 @@ public class TestIdentityManager extends LockssTestCase {
     catch (ProtocolException ex) {
       fail("identity db store failed");
     }
+  }
+
+  public void testSetAgreedThrowsOnNullAu() throws UnknownHostException {
+    LcapIdentity id = new LcapIdentity(LcapIdentity.stringToAddr("127.0.0.1"));
+    try {
+      idmgr.signalAgreed(id, null);
+      fail("Should have thrown on a null au");
+    } catch (IllegalArgumentException e) {
+    }
+  }
+
+  public void testSetAgreedThrowsOnNullId() throws UnknownHostException {
+    MockArchivalUnit mau = new MockArchivalUnit();
+    try {
+      idmgr.signalAgreed(null, mau);
+      fail("Should have thrown on a null au");
+    } catch (IllegalArgumentException e) {
+    }
+  }
+
+  public void testSetDisagreedThrowsOnNullAu() throws UnknownHostException {
+    LcapIdentity id = new LcapIdentity(LcapIdentity.stringToAddr("127.0.0.1"));
+    try {
+      idmgr.signalDisagreed(id, null);
+      fail("Should have thrown on a null au");
+    } catch (IllegalArgumentException e) {
+    }
+  }
+
+  public void testSetDisagreedThrowsOnNullId() throws UnknownHostException {
+    MockArchivalUnit mau = new MockArchivalUnit();
+    try {
+      idmgr.signalDisagreed(null, mau);
+      fail("Should have thrown on a null au");
+    } catch (IllegalArgumentException e) {
+    }
+  }
+
+  public void testGetAgreeThrowsOnNullAu() throws UnknownHostException {
+    try {
+      idmgr.getAgreed(null);
+      fail("Should have thrown on a null au");
+    } catch (IllegalArgumentException e) {
+    }
+  }
+
+  public void testGetAgreeNoneSet() throws UnknownHostException {
+    MockArchivalUnit mau = new MockArchivalUnit();
+    assertNull(idmgr.getAgreed(mau));
+  }
+
+  public void testGetAgree() throws UnknownHostException {
+    TimeBase.setSimulated(10);
+    LcapIdentity id1 =
+      new LcapIdentity(LcapIdentity.stringToAddr("127.0.0.1"));
+    LcapIdentity id2 =
+      new LcapIdentity(LcapIdentity.stringToAddr("127.0.0.2"));
+
+    MockArchivalUnit mau = new MockArchivalUnit();
+    idmgr.signalAgreed(id1, mau);
+    TimeBase.step();
+    idmgr.signalAgreed(id2, mau);
+    Map expected = new HashMap();
+    expected.put(id1, new Long(10));
+    expected.put(id2, new Long(11));
+    assertEquals(expected, idmgr.getAgreed(mau));
+  }
+
+  public void testAgreeUpdatesTime() throws UnknownHostException {
+    TimeBase.setSimulated(10);
+    LcapIdentity id1 =
+      new LcapIdentity(LcapIdentity.stringToAddr("127.0.0.1"));
+
+    MockArchivalUnit mau = new MockArchivalUnit();
+    idmgr.signalAgreed(id1, mau);
+    TimeBase.step(15);
+    idmgr.signalAgreed(id1, mau);
+
+    Map expected = new HashMap();
+    expected.put(id1, new Long(25));
+
+    assertEquals(expected, idmgr.getAgreed(mau));
+  }
+
+  public void testDisagreeNullsMap() throws UnknownHostException {
+    TimeBase.setSimulated(10);
+    LcapIdentity id1 =
+      new LcapIdentity(LcapIdentity.stringToAddr("127.0.0.1"));
+
+    MockArchivalUnit mau = new MockArchivalUnit();
+    idmgr.signalAgreed(id1, mau);
+
+    idmgr.signalDisagreed(id1, mau);
+
+    Map expected = new HashMap();
+
+    assertNull(idmgr.getAgreed(mau));
+  }
+
+  public void testDisagreeRemoves() throws UnknownHostException {
+    TimeBase.setSimulated(10);
+    LcapIdentity id1 =
+      new LcapIdentity(LcapIdentity.stringToAddr("127.0.0.1"));
+    LcapIdentity id2 =
+      new LcapIdentity(LcapIdentity.stringToAddr("127.0.0.2"));
+
+    MockArchivalUnit mau = new MockArchivalUnit();
+    idmgr.signalAgreed(id1, mau);
+    idmgr.signalAgreed(id2, mau);
+
+    idmgr.signalDisagreed(id1, mau);
+
+    Map expected = new HashMap();
+    expected.put(id2, new Long(10)); 
+
+    assertEquals(expected, idmgr.getAgreed(mau));
+  }
+
+  public void testMultipleAus() throws UnknownHostException {
+    TimeBase.setSimulated(10);
+    LcapIdentity id1 =
+      new LcapIdentity(LcapIdentity.stringToAddr("127.0.0.1"));
+    LcapIdentity id2 =
+      new LcapIdentity(LcapIdentity.stringToAddr("127.0.0.2"));
+    LcapIdentity id3 =
+      new LcapIdentity(LcapIdentity.stringToAddr("127.0.0.3"));
+
+    MockArchivalUnit mau1 = new MockArchivalUnit();
+    MockArchivalUnit mau2 = new MockArchivalUnit();
+
+    idmgr.signalAgreed(id1, mau1);
+    idmgr.signalAgreed(id2, mau2);
+
+    idmgr.signalDisagreed(id1, mau2);
+
+    Map expected = new HashMap();
+    expected.put(id2, new Long(10)); 
+
+    assertEquals(expected, idmgr.getAgreed(mau2));
+
+    expected = new HashMap();
+    expected.put(id1, new Long(10)); 
+    assertEquals(expected, idmgr.getAgreed(mau1));
   }
 
   public static void main(String[] argv) {

@@ -1,5 +1,5 @@
 /*
-* $Id: IdentityManager.java,v 1.35 2004-01-20 18:22:50 tlipkis Exp $
+* $Id: IdentityManager.java,v 1.36 2004-02-03 23:19:36 troberts Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.protocol;
 import java.io.*;
 import java.net.*;
 import java.util.*;
+import org.lockss.plugin.*;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
 import org.lockss.util.*;
@@ -116,6 +117,7 @@ public class IdentityManager extends BaseLockssManager {
   int[] reputationDeltas = new int[10];
 
   Mapping mapping = null;
+  private Map agreeMap = new HashMap();
 
   HashMap theIdentities = new HashMap(); // all known identities
 
@@ -376,6 +378,62 @@ public class IdentityManager extends BaseLockssManager {
   }
 
 
+
+  /**
+   * Signals that we've agreed with id on a top level poll on au.
+   * Only called if we're both on the winning side
+   */
+  public void signalAgreed(LcapIdentity id, ArchivalUnit au) {
+    if (au == null) {
+      throw new IllegalArgumentException("Called with null au");
+    } else if (id == null) {
+      throw new IllegalArgumentException("Called with null id");
+    }
+    synchronized (agreeMap) {
+      Map map = (Map)agreeMap.get(au);
+      if (map == null) {
+	map = new HashMap();
+	agreeMap.put(au, map);
+      }
+      map.put(id, new Long(TimeBase.nowMs()));
+    }
+  }
+
+  /**
+   * Signals that we've disagreed with id on any level poll on au.
+   * Only called if we're on the winning side
+   */
+  public void signalDisagreed(LcapIdentity id, ArchivalUnit au) {
+    if (au == null) {
+      throw new IllegalArgumentException("Called with null au");
+    } else if (id == null) {
+      throw new IllegalArgumentException("Called with null id");
+    }
+    synchronized (agreeMap) {
+      Map map = (Map)agreeMap.get(au);
+      if (map == null) {
+	return;
+      }
+      map.remove(id);
+      if (map.size() == 0) {
+	agreeMap.remove(au);
+      }
+    }
+  }
+
+  /**
+   * @param au ArchivalUnit to look up LcapIdentities for
+   * @return a map of LcapIdentity -> last agreed time.
+   */
+  public Map getAgreed(ArchivalUnit au) {
+    if (au == null) {
+      throw new IllegalArgumentException("Called with null au");
+    }
+    synchronized (agreeMap) {
+      return (Map)agreeMap.get(au);
+    }
+  }
+
   Mapping getMapping() {
 
     if (mapping==null) {
@@ -517,6 +575,5 @@ public class IdentityManager extends BaseLockssManager {
 // 					  new Integer(0)));
       return res;
     }
-
   }
 }
