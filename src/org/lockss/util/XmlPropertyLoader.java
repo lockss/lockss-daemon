@@ -1,5 +1,5 @@
 /*
- * $Id: XmlPropertyLoader.java,v 1.3 2004-06-15 21:43:23 smorabito Exp $
+ * $Id: XmlPropertyLoader.java,v 1.4 2004-06-17 22:44:19 smorabito Exp $
  */
 
 /*
@@ -468,7 +468,7 @@ public class XmlPropertyLoader {
      */
     public void setProperty(Object value) {
       String prop = getPropname();
-      if (m_props.get(prop) == null) {
+      if (m_props.get(prop) != null) {
 	log.warning("Overwriting property '" + prop + "'.  Was: '" +
 		    m_props.get(prop) + "'," + "Now: '" + value + "'");
 
