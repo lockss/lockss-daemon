@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.30 2003-11-13 01:05:57 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.30.2.1 2003-11-17 22:51:08 tlipkis Exp $
  */
 
 /*
@@ -71,7 +71,7 @@ public abstract class LockssServlet extends HttpServlet
 
   /** Format to display date/time in headers */
   public static final DateFormat headerDf =
-    new SimpleDateFormat("MM/dd/yy HH:mm:ss z");
+    new SimpleDateFormat("HH:mm:ss MM/dd/yy");
 
   static final String BACKGROUND_COLOR = "#FFFFFF";
   static final Image IMAGE_LOGO_LARGE = image("lockss-logo-large.gif",
