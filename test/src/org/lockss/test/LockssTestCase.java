@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.32 2003-07-17 05:22:13 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.33 2003-08-05 19:45:54 tlipkis Exp $
  */
 
 /*
@@ -102,18 +102,6 @@ public class LockssTestCase extends TestCase {
    * @throws Exception
    */
   protected void tearDown() throws Exception {
-    boolean leave = Boolean.getBoolean("org.lockss.keepTempFiles");
-    if (tmpDirs != null && !leave) {
-      for (ListIterator iter = tmpDirs.listIterator(); iter.hasNext(); ) {
-	File dir = (File)iter.next();
-	if (FileUtil.delTree(dir)) {
-	  log.debug2("deltree(" + dir + ") = true");
-	  iter.remove();
-	} else {
-	  log.debug2("deltree(" + dir + ") = false");
-	}
-      }
-    }
     if (doLaters != null) {
       List copy = new ArrayList(doLaters);
       for (Iterator iter = copy.iterator(); iter.hasNext(); ) {
@@ -130,7 +118,22 @@ public class LockssTestCase extends TestCase {
     if (cfg != null) {
       cfg.stopService();
     }
+
     TimerQueue.stopTimerQueue();
+
+    // delete temp dirs
+    boolean leave = Boolean.getBoolean("org.lockss.keepTempFiles");
+    if (tmpDirs != null && !leave) {
+      for (ListIterator iter = tmpDirs.listIterator(); iter.hasNext(); ) {
+	File dir = (File)iter.next();
+	if (FileUtil.delTree(dir)) {
+	  log.debug2("deltree(" + dir + ") = true");
+	  iter.remove();
+	} else {
+	  log.debug2("deltree(" + dir + ") = false");
+	}
+      }
+    }
     super.tearDown();
     if (Boolean.getBoolean("org.lockss.test.threadDump")) {
       DebugUtils.getInstance().threadDump();
