@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.151 2003-08-02 00:17:09 eaalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.151.2.1 2003-08-08 18:37:02 eaalto Exp $
  */
 
 /*
@@ -333,6 +333,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
           break;
         case NodeState.WRONG_NAMES:
           nodeState.setState(NodeState.NAME_REPLAYING);
+        case NodeState.NAME_REPLAYING:
           status = PollState.REPAIRING;
           break;
         case NodeState.POSSIBLE_DAMAGE_HERE:
@@ -342,6 +343,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
           break;
         case NodeState.NEEDS_REPAIR:
           nodeState.setState(NodeState.SNCUSS_POLL_REPLAYING);
+        case NodeState.SNCUSS_POLL_REPLAYING:
           status = PollState.REPAIRING;
           break;
         default:
@@ -1524,22 +1526,25 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
                    pollCookie.cus.getUrl());
       // set state properly
       NodeState state = getNodeState(pollCookie.cus);
-      if (pollCookie.isNamePoll) {
-        state.setState(NodeState.WRONG_NAMES);
-      } else {
-        state.setState(NodeState.POSSIBLE_DAMAGE_HERE);
-      }
 
       // resume poll (or call new one)
       if (pollCookie.pollKey!=null) {
         logger.debug("Resuming poll...");
+        // set state to replaying, since resumed polls don't call 'startPoll()'
+        if (pollCookie.isNamePoll) {
+          state.setState(NodeState.NAME_REPLAYING);
+        } else {
+          state.setState(NodeState.SNCUSS_POLL_REPLAYING);
+        }
         pollManager.resumePoll(success, pollCookie.pollKey);
       } else {
         if (pollCookie.isNamePoll) {
           logger.debug("Calling new name poll...");
+          state.setState(NodeState.WRONG_NAMES);
           callNamePoll(new PollSpec(pollCookie.cus));
         } else {
           logger.debug("Calling new SNCUSS poll...");
+          state.setState(NodeState.POSSIBLE_DAMAGE_HERE);
           try {
             callSingleNodeContentPoll(pollCookie.cus);
           } catch (IOException ie) {
