@@ -1,0 +1,497 @@
+/*
+ * $Id: HashSvcSchedImpl.java,v 1.1 2003-11-11 20:33:02 tlipkis Exp $
+ */
+
+/*
+
+Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+all rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Except as contained in this notice, the name of Stanford University shall not
+be used in advertising or otherwise to promote the sale, use or other dealings
+in this Software without prior written authorization from Stanford University.
+
+*/
+
+package org.lockss.hasher;
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.security.MessageDigest;
+import org.lockss.daemon.*;
+import org.lockss.daemon.status.*;
+import org.lockss.scheduler.*;
+import org.lockss.util.*;
+import org.lockss.app.*;
+import org.lockss.plugin.*;
+
+/**
+ * Implementation of API for content and name hashing services that uses
+ * the SchedService to execute tasks.
+ */
+public class HashSvcSchedImpl
+  extends BaseLockssManager implements HashService {
+
+  protected static Logger log = Logger.getLogger("HashSvcSchedImpl");
+
+  private SchedService sched = null;
+  private long estPadConstant = 0;
+  private long estPadPercent = 0;
+  private List queue = new LinkedList();
+  private HistoryList completed = new HistoryList(50);
+  private int hashStepBytes = 10000;
+  private BigInteger totalBytesHashed = BigInteger.valueOf(0);
+  private long totalTime = 0;
+
+  public HashSvcSchedImpl() {}
+
+  /**
+   * start the hash service.
+   * @see org.lockss.app.LockssManager#startService()
+   */
+  public void startService() {
+    super.startService();
+    log.debug("startService()");
+    sched = getDaemon().getSchedService();
+    getDaemon().getStatusService().registerStatusAccessor("HashQ",
+ 							  new Status());
+  }
+
+  /**
+   * stop the hash service
+   * @see org.lockss.app.LockssManager#stopService()
+   */
+  public void stopService() {
+    getDaemon().getStatusService().unregisterStatusAccessor("HashQ");
+    super.stopService();
+  }
+
+  protected void setConfig(Configuration config, Configuration prevConfig,
+			   Set changedKeys) {
+    estPadConstant = config.getLong(PARAM_ESTIMATE_PAD_CONSTANT,
+				    DEFAULT_ESTIMATE_PAD_CONSTANT);
+    estPadPercent = config.getLong(PARAM_ESTIMATE_PAD_PERCENT,
+				   DEFAULT_ESTIMATE_PAD_PERCENT);
+    hashStepBytes = config.getInt(PARAM_STEP_BYTES, DEFAULT_STEP_BYTES);
+    int cMax = config.getInt(PARAM_COMPLETED_MAX, DEFAULT_COMPLETED_MAX);
+    if (changedKeys.contains(PARAM_COMPLETED_MAX) ) {
+      synchronized (completed) {
+	completed.setMax(config.getInt(PARAM_COMPLETED_MAX, 50));
+      }
+    }
+  }
+
+  /**
+   * Ask for the content of the <code>CachedUrlSet</code> object to be
+   * hashed by the <code>hasher</code> before the expiration of
+   * <code>deadline</code>, and the result provided to the
+   * <code>callback</code>.
+   * @param urlset   a <code>CachedUrlSet</code> object representing
+   *                 the content to be hashed.
+   * @param hasher   a <code>MessageDigest</code> object to which
+   *                 the content will be provided.
+   * @param deadline the time by which the callbeack must have been
+   *                 called.
+   * @param callback the object whose <code>hashComplete()</code>
+   *                 method will be called when hashing succeds
+   *                 or fails.
+   * @param cookie   used to disambiguate callbacks
+   * @return <code>true</code> if the request has been queued,
+   *         <code>false</code> if the resources to do it are not
+   *         available.
+   */
+  public boolean hashContent(CachedUrlSet urlset,
+			     MessageDigest hasher,
+			     Deadline deadline,
+			     Callback callback,
+			     Serializable cookie) {
+    HashTask task = 
+      new HashTask(urlset, hasher, deadline, callback, cookie,
+		   urlset.getContentHasher(hasher),
+		   urlset.estimatedHashDuration(),
+		   CONTENT_HASH);
+    return scheduleTask(task);
+  }
+
+  /**
+   * Ask for the names in the <code>CachedUrlSet</code> object to be
+   * hashed by the <code>hasher</code> before the expiration of
+   * <code>deadline</code>, and the result provided to the
+   * <code>callback</code>.
+   * @param urlset   a <code>CachedUrlSet</code> object representing
+   *                 the content to be hashed.
+   * @param hasher   a <code>MessageDigest</code> object to which
+   *                 the content will be provided.
+   * @param deadline the time by which the callbeack must have been
+   *                 called.
+   * @param callback the object whose <code>hashComplete()</code>
+   *                 method will be called when hashing succeeds
+   *                 or fails.
+   * @param cookie   used to disambiguate callbacks
+   * @return <code>true</code> if the request has been queued,
+   *         <code>false</code> if the resources to do it are not
+   *         available.
+   */
+  public boolean hashNames(CachedUrlSet urlset,
+			   MessageDigest hasher,
+			   Deadline deadline,
+			   Callback callback,
+			   Serializable cookie) {
+    HashTask task = 
+      new HashTask(urlset, hasher, deadline, callback, cookie,
+			    // tk - get better duration estimate
+		   urlset.getNameHasher(hasher), 1000, NAME_HASH);
+    return scheduleTask(task);
+  }
+
+  /** Return the average hash speed, or -1 if not known.
+   * @param digest the hashing algorithm
+   * @return hash speed in bytes/ms, or -1 if not known
+   */
+  public int getHashSpeed(MessageDigest digest) {
+    if (sched == null) {
+      throw new IllegalStateException("HashService has not been initialized");
+    }
+    if (totalTime < 5 * Constants.SECOND) {
+      return -1;
+    }
+    int bpms =
+      totalBytesHashed.divide(BigInteger.valueOf(totalTime)).intValue();
+    return bpms;
+  }
+
+  /** Add the configured padding percentage, plus the constant */
+  public long padHashEstimate(long estimate) {
+    return estimate + ((estimate * estPadPercent) / 100) + estPadConstant;
+  }
+
+  private boolean scheduleTask(HashTask task) {
+    if (sched == null) {
+      throw new IllegalStateException("HashService has not been initialized");
+    }
+    task.setOverrunAllowed(true);
+    if (sched.scheduleTask(task)) {
+      synchronized (completed) {
+	queue.add(task);
+      }
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  /** Test whether a hash request could be successfully sceduled before a
+   * given deadline.
+   * @param duration the estimated hash time needed.
+   * @param when the deadline
+   * @return true if such a request could be accepted into the scedule.
+   */
+  public boolean canHashBeScheduledBefore(long duration, Deadline when) {
+    return sched.isTaskSchedulable(new DummyTask(when, duration));
+  }
+
+  /** Return true if the HashService has nothing to do.  Useful in unit
+   * tests. */
+  public boolean isIdle() {
+    return queue.isEmpty();
+  }
+
+  List getQueueSnapshot() {
+    synchronized (queue) {
+      return new ArrayList(queue);
+    }
+  }
+  List getCompletedSnapshot() {
+    synchronized (completed) {
+      return new ArrayList(completed);
+    }
+  }
+
+  // HashTask
+  class HashTask extends StepTask {
+    CachedUrlSet urlset;
+    MessageDigest hasher;
+    HashService.Callback callback;
+    CachedUrlSetHasher urlsetHasher;
+    int type;
+    int sched;
+    int finish;
+    long bytesHashed = 0;
+
+    HashTask(CachedUrlSet urlset,
+	     MessageDigest hasher,
+	     Deadline deadline,
+	     HashService.Callback callback,
+	     Object cookie,
+	     CachedUrlSetHasher urlsetHasher,
+	     long estimatedDuration,
+	     int type) {
+      //      super(Deadline.in(0), deadline, estimatedDuration, getCB(), cookie);
+      super(Deadline.in(0), deadline, estimatedDuration,
+	    new TaskCallback() {
+	      public void taskEvent(SchedulableTask task,
+				    Schedule.EventType event) {
+		if (log.isDebug2()) log.debug2("taskEvent: " + event);
+		if (event == Schedule.EventType.FINISH) {
+		  ((HashTask)task).doFinished();
+		}
+	      }
+	    },
+	    cookie);
+      this.urlset = urlset;
+      this.hasher = hasher;
+      this.callback = callback;
+      this.urlsetHasher = urlsetHasher;
+      this.type = type;
+    }
+
+    public int step(int n) {
+      try {
+	int res = urlsetHasher.hashStep(hashStepBytes);
+	bytesHashed += res;
+	return res;
+      } catch (Exception e) {
+	log.error("Hash callback threw", e);
+	throw new RuntimeException(e.toString());
+      }
+    }
+
+    public boolean isFinished() {
+      return super.isFinished() || urlsetHasher.finished();
+    }
+
+    private void doFinished() {
+      // tk - find a way to update these after each (set of) step(s)
+      totalBytesHashed =
+	totalBytesHashed.add(BigInteger.valueOf(bytesHashed));
+      totalTime += getTimeUsed();
+      try {
+	callback.hashingFinished(urlset, cookie, hasher, e);
+      } catch (Exception e) {
+	log.error("Hash callback threw", e);
+      }
+      // completed list for status only, don't hold on to caller's objects
+      hasher = null;
+      callback = null;
+      cookie = null;
+      urlsetHasher = null;
+      synchronized (completed) {
+	queue.remove(this);
+	completed.add(this);
+      }
+    }
+
+    public String toString() {
+      StringBuffer sb = new StringBuffer();
+      sb.append("[HTask:");
+      sb.append(urlset);
+      toStringCommon(sb);
+      sb.append("]");
+      return sb.toString();
+    }
+  }
+
+  class DummyTask extends StepTask {
+    DummyTask(Deadline deadline,
+	     long estimatedDuration) {
+      super(Deadline.in(0), deadline, estimatedDuration, null, null);
+    }
+
+    public int step(int n) {
+      return 0;
+    }
+  }
+
+  // status table
+
+  private static final List statusSortRules =
+    ListUtil.list(new StatusTable.SortRule("state", true),
+		  new StatusTable.SortRule("sort", true));
+
+  static final String FOOT_IN = "Order in which requests were made.";
+
+  static final String FOOT_OVER = "Red indicates overrun.";
+
+  static final String FOOT_TITLE =
+    "Pending requests are first in table, in the order they were requested."+
+    "  Completed requests follow, in reverse completion order " +
+    "(most recent first).";
+
+  private static final List statusColDescs =
+    ListUtil.list(
+		  new ColumnDescriptor("sched", "Req",
+				       ColumnDescriptor.TYPE_INT, FOOT_IN),
+		  new ColumnDescriptor("state", "State",
+				       ColumnDescriptor.TYPE_STRING),
+		  new ColumnDescriptor("au", "Volume",
+				       ColumnDescriptor.TYPE_STRING),
+		  new ColumnDescriptor("cus", "Cached Url Set",
+				       ColumnDescriptor.TYPE_STRING),
+		  new ColumnDescriptor("type", "Type",
+				       ColumnDescriptor.TYPE_STRING),
+		  new ColumnDescriptor("deadline", "Deadline",
+				       ColumnDescriptor.TYPE_DATE),
+		  new ColumnDescriptor("estimate", "Estimated",
+				       ColumnDescriptor.TYPE_TIME_INTERVAL),
+		  new ColumnDescriptor("timeused", "Used",
+				       ColumnDescriptor.TYPE_TIME_INTERVAL,
+				       FOOT_OVER),
+
+		  new ColumnDescriptor("bytesHashed", "Bytes<br>Hashed",
+				       ColumnDescriptor.TYPE_INT)
+		  );
+
+
+  private class Status implements StatusAccessor {
+    public void populateTable(StatusTable table) {
+      String key = table.getKey();
+      table.setTitle("Hash Queue");
+      table.setTitleFootnote(FOOT_TITLE);
+      table.setColumnDescriptors(statusColDescs);
+      table.setDefaultSortRules(statusSortRules);
+      table.setRows(getRows(key));
+      table.setSummaryInfo(getSummaryInfo(key));
+    }
+
+    public boolean requiresKey() {
+      return false;
+    }
+
+    private List getRows(String key) {
+      List table = new ArrayList();
+      int ix = 0;
+      for (ListIterator iter = getQueueSnapshot().listIterator();
+	   iter.hasNext();) {
+	table.add(makeRow((HashTask)iter.next(), false, ix++));
+      }
+      for (ListIterator iter = getCompletedSnapshot().listIterator();
+	   iter.hasNext();) {
+	Map row = makeRow((HashTask)iter.next(), true, 0);
+	// if both parts of the table are present (ix is number of pending
+	// requests), add a separator before the first displayed completed
+	// request (which is the last one in the history list)
+	if (ix != 0 && !iter.hasNext()) {
+	  row.put(StatusTable.ROW_SEPARATOR, "");
+	}
+	table.add(row);
+      }
+      return table;
+    }
+
+    private Map makeRow(HashTask task, boolean done, int qpos) {
+      Map row = new HashMap();
+      row.put("sort", new Long(done ? -task.getFinishDate().getTime() : qpos));
+      row.put("sched", new Integer(task.getSchedSeq()));
+      row.put("state", getState(task, done));
+      row.put("au", task.urlset.getArchivalUnit().getName());
+      row.put("cus", task.urlset.getSpec());
+      row.put("type", getType(task));
+      row.put("deadline", task.getLatestFinish().getExpiration());
+      row.put("estimate", new Long(task.getOrigEst()));
+      Object used = new Long(task.getTimeUsed());
+      if (task.hasOverrun()) {
+	StatusTable.DisplayedValue val = new StatusTable.DisplayedValue(used);
+	val.setColor("red");
+	used = val;
+      }
+      row.put("timeused", used);
+      row.put("bytesHashed", new Long(task.bytesHashed));
+      return row;
+    }
+
+    private String getType(HashTask task) {
+      switch (task.type) {
+      case HashService.CONTENT_HASH: return "C";
+      case HashService.NAME_HASH: return "N";
+      default: return "?";
+      }
+    }
+
+    private Object getState(HashTask task, boolean done) {
+      if (!done) {
+	return (task.getTimeUsed() > 0) ? TASK_STATE_RUN : TASK_STATE_WAIT;
+      }
+      if (task.getExcption() == null) {
+	return TASK_STATE_DONE;
+      } else if (task.getExcption() instanceof HashService.Timeout) {
+	return TASK_STATE_TIMEOUT;
+      } else {
+	return TASK_STATE_ERROR;
+      }
+    }
+
+    private List getSummaryInfo(String key) {
+      List res = new ArrayList();
+      res.add(new StatusTable.SummaryInfo("Total bytes hashed",
+					  ColumnDescriptor.TYPE_INT,
+					  totalBytesHashed));
+      res.add(new StatusTable.SummaryInfo("Total hash time",
+					  ColumnDescriptor.TYPE_TIME_INTERVAL,
+					  new Long(totalTime)));
+      if (totalTime != 0) {
+	long bpms =
+	  totalBytesHashed.divide(BigInteger.valueOf(totalTime)).intValue();
+	if (bpms < (100 * Constants.SECOND)) {
+	  res.add(new StatusTable.SummaryInfo("Bytes/ms",
+					      ColumnDescriptor.TYPE_INT,
+					      new Long(bpms)));
+	} else {
+	  res.add(new
+		  StatusTable.SummaryInfo("Bytes/sec",
+					  ColumnDescriptor.TYPE_INT,
+					  new Long(bpms / Constants.SECOND)));
+	}
+      }
+      return res;
+    }
+
+  }
+
+  static class TaskState implements Comparable {
+    String name;
+    int order;
+
+    TaskState(String name, int order) {
+      this.name = name;
+      this.order = order;
+    }
+
+    public int compareTo(Object o) {
+      return order - ((TaskState)o).order;
+    }
+    public String toString() {
+      return name;
+    }
+  }
+  static final TaskState TASK_STATE_RUN = new TaskState("Run", 1);
+  static final TaskState TASK_STATE_WAIT = new TaskState("Wait", 2);
+  static final TaskState TASK_STATE_DONE = new TaskState("Done", 3);
+
+  static final StatusTable.DisplayedValue TASK_STATE_TIMEOUT =
+    new StatusTable.DisplayedValue(new TaskState("Timeout", 3));
+  static final StatusTable.DisplayedValue TASK_STATE_ERROR =
+    new StatusTable.DisplayedValue(new TaskState("Error", 3));
+
+  static {
+    TASK_STATE_TIMEOUT.setColor("red");
+    TASK_STATE_ERROR.setColor("red");
+  }
+}
