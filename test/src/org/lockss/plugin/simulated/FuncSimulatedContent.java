@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSimulatedContent.java,v 1.9 2003-01-02 19:46:30 aalto Exp $
+ * $Id: FuncSimulatedContent.java,v 1.10 2003-01-07 02:00:08 troberts Exp $
  */
 
 /*
@@ -119,7 +119,7 @@ public class FuncSimulatedContent extends LockssTestCase {
     CrawlSpec spec = new CrawlSpec(sau.SIMULATED_URL_START, null);
     Crawler crawler = new GoslingCrawlerImpl();
     crawler.doCrawl(sau, spec.getStartingUrls(),
-		    true, false, Deadline.NEVER);
+		    true, Deadline.NEVER);
   }
 
   private void checkContent() throws IOException {

@@ -1,5 +1,5 @@
 /*
- * $Id: RunDaemon.java,v 1.10 2002-12-17 20:59:33 troberts Exp $
+ * $Id: RunDaemon.java,v 1.11 2003-01-07 02:00:08 troberts Exp $
  */
 
 /*
@@ -134,6 +134,6 @@ public class RunDaemon {
   private void crawlContent() {
     CrawlSpec spec = new CrawlSpec(sau.SIMULATED_URL_START, null);
     Crawler crawler = new GoslingCrawlerImpl();
-    crawler.doCrawl(sau, spec.getStartingUrls(), true, false, Deadline.NEVER);
+    crawler.doCrawl(sau, spec.getStartingUrls(), true, Deadline.NEVER);
   }
 }
