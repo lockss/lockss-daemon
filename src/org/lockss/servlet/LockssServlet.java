@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.33 2004-01-20 18:22:50 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.34 2004-01-21 08:28:04 tlipkis Exp $
  */
 
 /*
@@ -683,12 +683,7 @@ public abstract class LockssServlet extends HttpServlet
   // Common page footer
   public Element getFooter() {
     Composite comp = new Composite();
-
-    String vDaemon = BuildInfo.getBuildInfoString();
-    String vPlatform = Configuration.getParam(PARAM_PLATFORM_VERSION);
-    if (vPlatform != null) {
-      vDaemon = vDaemon + ", CD " + vPlatform;
-    }
+    String vDaemon = theDaemon.getVersionInfo();
 
     addNotes(comp);
     comp.add("<p>");
