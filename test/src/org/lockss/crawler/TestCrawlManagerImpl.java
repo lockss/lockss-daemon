@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.44 2004-02-10 03:49:55 troberts Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.45 2004-02-25 21:18:37 troberts Exp $
  */
 
 /*
@@ -217,6 +217,17 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 
   public void testNCCrawlFreesActivityLockWhenDone() {
     SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
+
+    crawlManager.startNewContentCrawl(mau, new TestCrawlCB(sem), null, null);
+
+    waitForCrawlToFinish(sem);
+    activityRegulator.assertNewContentCrawlFinished();
+  }
+
+  public void testNCCrawlFreesActivityLockWhenError() {
+    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
+    crawler = new ThrowingCrawler(new RuntimeException("Blah"));
+    crawlManager.setTestCrawler(crawler);
 
     crawlManager.startNewContentCrawl(mau, new TestCrawlCB(sem), null, null);
 
@@ -587,6 +598,17 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 
     private void setTestCrawler(MockCrawler mockCrawler) {
       this.mockCrawler = mockCrawler;
+    }
+  }
+
+  private static class ThrowingCrawler extends MockCrawler {
+    RuntimeException e = null;
+    public ThrowingCrawler(RuntimeException e) {
+      this.e = e;
+    }
+
+    public boolean doCrawl(Deadline deadline) {
+      throw e;
     }
   }
 
