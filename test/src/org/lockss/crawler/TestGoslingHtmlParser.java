@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingHtmlParser.java,v 1.2 2004-01-17 00:15:29 troberts Exp $
+ * $Id: TestGoslingHtmlParser.java,v 1.3 2004-01-22 23:49:04 troberts Exp $
  */
 
 /*
@@ -50,29 +50,39 @@ public class TestGoslingHtmlParser extends LockssTestCase {
   public static final String startUrl = "http://www.example.com/index.html";
 
   GoslingHtmlParser parser = null;
+  MyFoundUrlCallback cb = null;
 
   public void setUp() throws Exception {
     super.setUp();
     MockArchivalUnit mau = new MockArchivalUnit();
     parser = new GoslingHtmlParser(mau);
+    cb = new MyFoundUrlCallback();
   }
 
   public void testThrowsOnNullCachedUrl() throws IOException {
     try {
-      parser.parseForUrls(null, new HashSet(), null);
+      parser.parseForUrls(null, new MyFoundUrlCallback());
       fail("Calling parseForUrls with a null CachedUrl should have thrown");
     } catch (IllegalArgumentException iae) {
     } 
   }
 
-  public void testThrowsOnNullSet() throws IOException {
+  public void testThrowsOnNullCallback() throws IOException {
     try {
-      parser.parseForUrls(new MockCachedUrl("http://www.example.com/"),
-			  null, null);
-      fail("Calling parseForUrls with a null Set should have thrown");
+      parser.parseForUrls(new MockCachedUrl("http://www.example.com/"), null);
+      fail("Calling parseForUrls with a null FoundUrlCallback should have thrown");
     } catch (IllegalArgumentException iae) {
     } 
   }
+
+//   public void testThrowsOnNullSet() throws IOException {
+//     try {
+//       parser.parseForUrls(new MockCachedUrl("http://www.example.com/"),
+// 			  null, null);
+//       fail("Calling parseForUrls with a null Set should have thrown");
+//     } catch (IllegalArgumentException iae) {
+//     } 
+//   }
 
   public void testThrowsOnNullAu() {
     try {
@@ -110,11 +120,10 @@ public class TestGoslingHtmlParser extends LockssTestCase {
     MockCachedUrl mcu = new MockCachedUrl(startUrl);
     mcu.setContent(source);
 
-    Collection parsedUrls = new HashSet();
-    parser.parseForUrls(mcu, parsedUrls, null);
+    parser.parseForUrls(mcu, cb);
 
     Set expected = SetUtil.set(url);
-    assertEquals(expected, parsedUrls);
+    assertEquals(expected, cb.getFoundUrls());
   }
 
   public void testDoCrawlFrame() throws IOException {
@@ -177,15 +186,15 @@ public class TestGoslingHtmlParser extends LockssTestCase {
     String content = makeContent(url, startTag, endTag);
     mcu.setContent(content);
     
-    Collection parsedUrls = new HashSet();
-    parser.parseForUrls(mcu, parsedUrls, null);
+    MyFoundUrlCallback cb = new MyFoundUrlCallback();
+    parser.parseForUrls(mcu, cb);
 
     if (shouldParse) {
       Set expected = SetUtil.set(url);
-      assertEquals("Misparsed: "+content, expected, parsedUrls);
+      assertEquals("Misparsed: "+content, expected, cb.getFoundUrls());
     } else {
       Set expected = SetUtil.set();
-      assertEquals("Misparsed: "+content, expected, parsedUrls);
+      assertEquals("Misparsed: "+content, expected, cb.getFoundUrls());
     }
   }
 
@@ -304,11 +313,10 @@ public class TestGoslingHtmlParser extends LockssTestCase {
     MockCachedUrl mcu = new MockCachedUrl("http://www.example.com");
     mcu.setContent(source);
 
-    Collection parsedUrls = new HashSet();
-    parser.parseForUrls(mcu, parsedUrls, null);
+    parser.parseForUrls(mcu, cb);
     
     Set expected = SetUtil.set(url);
-    assertEquals(expected, parsedUrls);
+    assertEquals(expected, cb.getFoundUrls());
   }
 
   public void testSkipsComments() throws IOException {
@@ -324,11 +332,10 @@ public class TestGoslingHtmlParser extends LockssTestCase {
     MockCachedUrl mcu = new MockCachedUrl("http://www.example.com");
     mcu.setContent(source);
 
-    Collection parsedUrls = new HashSet();
-    parser.parseForUrls(mcu, parsedUrls, null);
+    parser.parseForUrls(mcu, cb);
     
     Set expected = SetUtil.set(url);
-    assertEquals(expected, parsedUrls);
+    assertEquals(expected, cb.getFoundUrls());
   }
 
   public void testMultipleLinks() throws IOException {
@@ -346,11 +353,10 @@ public class TestGoslingHtmlParser extends LockssTestCase {
     MockCachedUrl mcu = new MockCachedUrl("http://www.example.com");
     mcu.setContent(source);
 
-    Collection parsedUrls = new HashSet();
-    parser.parseForUrls(mcu, parsedUrls, null);
+    parser.parseForUrls(mcu, cb);
 
     Set expected = SetUtil.set(url1, url2, url3);
-    assertEquals(expected, parsedUrls);
+    assertEquals(expected, cb.getFoundUrls());
   }
 
   public void testRelativeLinksLocationTagsAndMultipleKeys()
@@ -369,11 +375,10 @@ public class TestGoslingHtmlParser extends LockssTestCase {
     MockCachedUrl mcu = new MockCachedUrl("http://www.example.com");
     mcu.setContent(source);
 
-    Collection parsedUrls = new HashSet();
-    parser.parseForUrls(mcu, parsedUrls, null);
+    parser.parseForUrls(mcu, cb);
 
     Set expected = SetUtil.set(url1, url2, url3);
-    assertEquals(expected, parsedUrls);
+    assertEquals(expected, cb.getFoundUrls());
   }
 
   public void testRelativeLinksWithSameName() throws IOException {
@@ -389,11 +394,10 @@ public class TestGoslingHtmlParser extends LockssTestCase {
     MockCachedUrl mcu = new MockCachedUrl("http://www.example.com");
     mcu.setContent(source);
 
-    Collection parsedUrls = new HashSet();
-    parser.parseForUrls(mcu, parsedUrls, null);
+    parser.parseForUrls(mcu, cb);
 
     Set expected = SetUtil.set(url1, url2);
-    assertEquals(expected, parsedUrls);
+    assertEquals(expected, cb.getFoundUrls());
   }
 
 
@@ -416,7 +420,17 @@ public class TestGoslingHtmlParser extends LockssTestCase {
     return sb.toString();
   }
 
+  private class MyFoundUrlCallback implements ContentParser.FoundUrlCallback {
+    Set foundUrls = new HashSet();
 
+    public void foundUrl(String url) {
+      foundUrls.add(url);
+    }    
+
+    public Set getFoundUrls() {
+      return foundUrls;
+    }
+  }
 
   public static void main(String[] argv) {
     String[] testCaseList = {TestGoslingHtmlParser.class.getName()};

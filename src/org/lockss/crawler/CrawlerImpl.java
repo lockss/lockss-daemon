@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerImpl.java,v 1.4 2004-01-17 00:15:59 troberts Exp $
+ * $Id: CrawlerImpl.java,v 1.5 2004-01-22 23:49:03 troberts Exp $
  */
 
 /*
@@ -391,10 +391,10 @@ public class CrawlerImpl implements Crawler {
 	  ContentParser parser = getContentParser(cu);
 	  if (parser != null) {
 	    //IOException if the CU can't be read
-	    parser.parseForUrls(cu, extractedUrls,
-				new MyUrlCheckCallback(parsedPages, au));
+	    parser.parseForUrls(cu, new MyFoundUrlCallback(parsedPages,
+							   extractedUrls, au));
 	  }
-
+	  
  	  crawlStatus.signalUrlParsed();
 	  parsedPages.add(uc.getUrl());
 	}
@@ -488,23 +488,29 @@ public class CrawlerImpl implements Crawler {
     this.myParser = parser;
   }
 
-  private static class MyUrlCheckCallback
-    implements ContentParser.UrlCheckCallback {
+  private static class MyFoundUrlCallback
+    implements ContentParser.FoundUrlCallback {
     Set parsedPages = null;
+    Collection extractedUrls = null;
     ArchivalUnit au = null;
 
-    public MyUrlCheckCallback(Set parsedPages, ArchivalUnit au) {
+    public MyFoundUrlCallback(Set parsedPages, Collection extractedUrls,
+			      ArchivalUnit au) {
       this.parsedPages = parsedPages;
+      this.extractedUrls = extractedUrls;
       this.au = au;
     }
     
     /**
      * Check that we should cache this url and haven't already parsed it
      */
-    public boolean shouldCacheUrl(String url) {
-      return (isSupportedUrlProtocol(url)
-	      && !parsedPages.contains(url)
-	      && au.shouldBeCached(url));
+    public void foundUrl(String url) {
+      if (isSupportedUrlProtocol(url)
+	  && !parsedPages.contains(url)
+	  && !extractedUrls.contains(url)
+	  && au.shouldBeCached(url)) {
+	extractedUrls.add(url);
+      }
     }
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlParser.java,v 1.2 2004-01-17 00:14:59 troberts Exp $
+ * $Id: GoslingHtmlParser.java,v 1.3 2004-01-22 23:49:03 troberts Exp $
  */
 
 /*
@@ -106,23 +106,20 @@ public class GoslingHtmlParser implements ContentParser {
   }
 
   /**
-   * Method which will parse the html file represented by cu and add all
-   * urls in it which should be cached to set
+   * Method which will parse the html file represented by cu call
+   * cb.foundUrl() for each url found
    *
    * @param cu object representing a html file in the local file system
-   * @param set set to which all the urs in cu should be added
-   * @param urlsToIgnore urls which should not be added to set
+   * @param cb callback to call each time a url is found
    * @throws IOException
    */
-  public void parseForUrls(CachedUrl cu, Collection set,
-			   ContentParser.UrlCheckCallback cb)
+  public void parseForUrls(CachedUrl cu, ContentParser.FoundUrlCallback cb) 
       throws IOException {
     if (cu == null) {
-      throw new IllegalArgumentException("Called with a null CachedUrl");
-    } else if (set == null) {
-      throw new IllegalArgumentException("Called with a null set");
-    } 
-
+      throw new IllegalArgumentException("Called with null cu");
+    } else if (cb == null) {
+      throw new IllegalArgumentException("Called with null callback");
+    }
     String cuStr = cu.getUrl();
     if (cuStr == null) {
       logger.error("CachedUrl has null getUrl() value: "+cu);
@@ -138,34 +135,9 @@ public class GoslingHtmlParser implements ContentParser {
     String nextUrl = null;
     while ((nextUrl = extractNextLink(reader, srcUrl)) != null) {
       logger.debug2("Extracted "+nextUrl);
-      
-      //should check if this is something we should cache first
-      if (!set.contains(nextUrl)
-	  && (cb == null || cb.shouldCacheUrl(nextUrl))) {
-	set.add(nextUrl);
-      }
+      cb.foundUrl(nextUrl);
     }
   }
-
-//   protected static boolean shouldExtractLinksFromCachedUrl(CachedUrl cu) {
-//     boolean returnVal = false;
-//     Properties props = cu.getProperties();
-//     if (props != null) {
-//       String contentType = props.getProperty("content-type");
-//       if (contentType != null) {
-// 	//XXX check if the string starts with this
-// 	returnVal = contentType.toLowerCase().startsWith("text/html");
-//       }
-//     }
-//     if (returnVal) {
-//       logger.debug2("I should try to extract links from "+cu);
-//     } else {
-//       logger.debug2("I shouldn't try to extract links from "+cu);
-//     }
-
-//     return returnVal;
-//   }
-
 
   /**
    * Read through the reader stream, extract and return the next url found
