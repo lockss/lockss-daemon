@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlWindows.java,v 1.5 2003-12-06 00:53:01 eaalto Exp $
+ * $Id: CrawlWindows.java,v 1.6 2003-12-06 01:32:15 eaalto Exp $
  */
 
 /*
@@ -109,12 +109,6 @@ public class CrawlWindows {
       return isMatch(windowCal);
     }
 
-    public boolean crawlIsPossible() {
-      // crawl is always possible for the current BaseCrawlWindows,
-      // Interval and FieldSet
-      return true;
-    }
-
     /**
      * Primary function to be implemented.  Returns true if the calendar
      * matches its criteria.
@@ -221,6 +215,13 @@ public class CrawlWindows {
       }
     }
 
+    public boolean crawlIsPossible() {
+      // crawl is always possible for any given Interval, though it could
+      // be unreasonably short
+      return true;
+    }
+
+
     public String toString() {
       return "[CrawlWindows.Interval: field: " + fieldMask +
           ", "+start+", "+end+"]";
@@ -298,6 +299,12 @@ public class CrawlWindows {
 
       return true;
     }
+
+    public boolean crawlIsPossible() {
+      // crawl is possible so long as there are any members in the set
+      return !calendarSet.isEmpty();
+    }
+
   }
 
   /**

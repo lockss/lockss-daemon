@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlWindows.java,v 1.3 2003-12-06 00:53:01 eaalto Exp $
+ * $Id: TestCrawlWindows.java,v 1.4 2003-12-06 01:32:15 eaalto Exp $
  */
 
 /*
@@ -347,7 +347,7 @@ public class TestCrawlWindows extends LockssTestCase {
     assertFalse(orPair.canCrawl(testCal.getTime()));
   }
 
-  public void testFieldEnum() {
+  public void testFieldSet() {
     // M,W,F enum
     Calendar cal1 = Calendar.getInstance();
     Calendar cal2 = Calendar.getInstance();
@@ -356,22 +356,22 @@ public class TestCrawlWindows extends LockssTestCase {
     cal2.set(Calendar.DAY_OF_WEEK, Calendar.WEDNESDAY);
     cal3.set(Calendar.DAY_OF_WEEK, Calendar.FRIDAY);
 
-    CrawlWindows.FieldSet fieldEnum =
+    CrawlWindows.FieldSet fieldSet =
         new CrawlWindows.FieldSet(SetUtil.set(cal1, cal2, cal3),
                                    CrawlWindows.DAY_OF_WEEK, null);
     testCal.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
-    assertTrue(fieldEnum.isMatch(testCal));
+    assertTrue(fieldSet.isMatch(testCal));
     testCal.set(Calendar.DAY_OF_WEEK, Calendar.TUESDAY);
-    assertFalse(fieldEnum.isMatch(testCal));
+    assertFalse(fieldSet.isMatch(testCal));
     testCal.set(Calendar.DAY_OF_WEEK, Calendar.WEDNESDAY);
-    assertTrue(fieldEnum.isMatch(testCal));
+    assertTrue(fieldSet.isMatch(testCal));
     testCal.set(Calendar.DAY_OF_WEEK, Calendar.THURSDAY);
-    assertFalse(fieldEnum.isMatch(testCal));
+    assertFalse(fieldSet.isMatch(testCal));
     testCal.set(Calendar.DAY_OF_WEEK, Calendar.FRIDAY);
-    assertTrue(fieldEnum.isMatch(testCal));
+    assertTrue(fieldSet.isMatch(testCal));
   }
 
-  public void testMultipleFieldEnum() {
+  public void testMultipleFieldSet() {
     // M-1st,W-2nd enum
     Calendar cal1 = Calendar.getInstance();
     Calendar cal2 = Calendar.getInstance();
@@ -380,22 +380,64 @@ public class TestCrawlWindows extends LockssTestCase {
     cal2.set(Calendar.DAY_OF_WEEK, Calendar.WEDNESDAY);
     cal2.set(Calendar.WEEK_OF_MONTH, 2);
 
-    CrawlWindows.FieldSet fieldEnum =
+    CrawlWindows.FieldSet fieldSet =
         new CrawlWindows.FieldSet(SetUtil.set(cal1, cal2),
                                    CrawlWindows.DAY_OF_WEEK +
                                    CrawlWindows.WEEK_OF_MONTH, null);
 
     testCal.set(Calendar.WEEK_OF_MONTH, 1);
     testCal.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
-    assertTrue(fieldEnum.isMatch(testCal));
+    assertTrue(fieldSet.isMatch(testCal));
     testCal.set(Calendar.DAY_OF_WEEK, Calendar.WEDNESDAY);
-    assertFalse(fieldEnum.isMatch(testCal));
+    assertFalse(fieldSet.isMatch(testCal));
 
     testCal.set(Calendar.WEEK_OF_MONTH, 2);
     testCal.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
-    assertFalse(fieldEnum.isMatch(testCal));
+    assertFalse(fieldSet.isMatch(testCal));
     testCal.set(Calendar.DAY_OF_WEEK, Calendar.WEDNESDAY);
-    assertTrue(fieldEnum.isMatch(testCal));
+    assertTrue(fieldSet.isMatch(testCal));
+  }
+
+  public void testCrawlIsPossible() {
+    // interval
+    start.set(Calendar.DAY_OF_WEEK, Calendar.TUESDAY);
+    end.set(Calendar.DAY_OF_WEEK, Calendar.FRIDAY);
+
+    CrawlWindows.Interval interval = new CrawlWindows.Interval(start, end,
+        CrawlWindows.DAY_OF_WEEK, null);
+    assertTrue(interval.crawlIsPossible());
+
+    // fieldset
+    CrawlWindows.FieldSet fieldSet =
+        new CrawlWindows.FieldSet(SetUtil.set(),
+                                  CrawlWindows.DAY_OF_WEEK, null);
+    // only false for empty set
+    assertFalse(fieldSet.crawlIsPossible());
+    fieldSet.calendarSet = SetUtil.set(start);
+    assertTrue(fieldSet.crawlIsPossible());
+
+    MockCrawlWindow win1 = new MockCrawlWindow();
+    win1.setAllowCrawl(true);
+    MockCrawlWindow win2 = new MockCrawlWindow();
+    win2.setAllowCrawl(false);
+
+    // and
+    Set s = SetUtil.set(win1, win2);
+    CrawlWindow andWin = new CrawlWindows.And(s);
+    //XXX always returns true right now
+    assertTrue(andWin.crawlIsPossible());
+
+    // or
+    CrawlWindow orWin = new CrawlWindows.Or(s);
+    // true if at least one is possible
+    assertTrue(orWin.crawlIsPossible());
+    win1.setAllowCrawl(false);
+    assertFalse(orWin.crawlIsPossible());
+
+    // not
+    CrawlWindow notWin = new CrawlWindows.Not(win1);
+    //XXX always returns true right not
+    assertTrue(notWin.crawlIsPossible());
   }
 }
 
