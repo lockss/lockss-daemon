@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.44 2004-01-27 04:07:04 tlipkis Exp $
+ * $Id: MockArchivalUnit.java,v 1.45 2004-01-28 02:21:46 troberts Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.test;
 import java.util.*;
 import java.security.MessageDigest;
 import org.lockss.daemon.*;
+import org.lockss.crawler.*;
 import org.lockss.util.*;
 import org.lockss.state.*;
 import org.lockss.plugin.*;
@@ -243,6 +244,10 @@ public class MockArchivalUnit implements ArchivalUnit {
 
   public void setShouldCallTopLevelPoll(boolean val) {
     shouldCallTopLevelPoll = val;
+  }
+
+  public ContentParser getContentParser(String mimeType) {
+    throw new UnsupportedOperationException("not implemented");
   }
 
   public FilterRule getFilterRule(String mimeType) {
