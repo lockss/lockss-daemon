@@ -1,5 +1,5 @@
 /*
- * $Id: V1NamePoll.java,v 1.4 2004-09-13 04:02:21 dshr Exp $
+ * $Id: V1NamePoll.java,v 1.5 2004-09-16 21:29:16 dshr Exp $
  */
 
 /*
@@ -54,7 +54,7 @@ public class V1NamePoll extends V1Poll {
                               NAME_POLL,
                               m_createTime,
                               msg.getDuration(),
-                              pm.getQuorum(),
+                              V1PollFactory.getQuorum(),  // XXX AU-specific
                               msg.getHashAlgorithm());
   }
 
@@ -206,8 +206,10 @@ public class V1NamePoll extends V1Poll {
       log.debug3("buildPollLists 2");
       if (lwrRem != null) {
         // we call a new poll on the remaining entries and set the regexp
-	PollSpec spec = new PollSpec(m_pollspec.getCachedUrlSet(),lwrRem, uprRem);
-	if (m_pollmanager.callPoll(Poll.NAME_POLL, spec)) {
+	PollSpec spec = new PollSpec(m_pollspec.getCachedUrlSet(),
+				     lwrRem, uprRem,
+				     Poll.NAME_POLL);
+	if (m_pollmanager.callPoll(spec)) {
           log.error("unable to call name poll for " + spec);
         }
 	log.debug3("buildPollLists 3");

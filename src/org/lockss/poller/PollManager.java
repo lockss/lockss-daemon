@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.131 2004-09-13 04:02:21 dshr Exp $
+ * $Id: PollManager.java,v 1.132 2004-09-16 21:29:16 dshr Exp $
  */
 
 /*
@@ -63,35 +63,8 @@ public class PollManager
   static final String PARAM_VERIFY_EXPIRATION = Configuration.PREFIX +
       "poll.expireVerifier";
 
-  static final String PARAM_NAMEPOLL_DEADLINE = Configuration.PREFIX +
-      "poll.namepoll.deadline";
-  static final String PARAM_CONTENTPOLL_MIN = Configuration.PREFIX +
-      "poll.contentpoll.min";
-  static final String PARAM_CONTENTPOLL_MAX = Configuration.PREFIX +
-      "poll.contentpoll.max";
-
-  static final String PARAM_QUORUM = Configuration.PREFIX + "poll.quorum";
-  static final String PARAM_DURATION_MULTIPLIER_MIN = Configuration.PREFIX +
-      "poll.duration.multiplier.min";
-  static final String PARAM_DURATION_MULTIPLIER_MAX = Configuration.PREFIX +
-      "poll.duration.multiplier.max";
-
-  // tk - temporary until real name hash estimates
-  static final String PARAM_NAME_HASH_ESTIMATE =
-    HashService.PARAM_NAME_HASH_ESTIMATE;
-  static final long DEFAULT_NAME_HASH_ESTIMATE =
-    HashService.DEFAULT_NAME_HASH_ESTIMATE;
-
-  static long DEFAULT_NAMEPOLL_DEADLINE =  10 * Constants.MINUTE;
-  static long DEFAULT_CONTENTPOLL_MIN = 3 * Constants.MINUTE;
-  static long DEFAULT_CONTENTPOLL_MAX = 5 * Constants.DAY;
-  static final int DEFAULT_QUORUM = 5;
-
   static final long DEFAULT_RECENT_EXPIRATION = Constants.DAY;
   static final long DEFAULT_VERIFY_EXPIRATION = Constants.DAY;
-
-  static final int DEFAULT_DURATION_MULTIPLIER_MIN = 3;
-  static final int DEFAULT_DURATION_MULTIPLIER_MAX = 7;
 
   private static PollManager theManager = null;
   protected static Logger theLog = Logger.getLogger("PollManager");
@@ -106,17 +79,16 @@ public class PollManager
   private static SystemMetrics theSystemMetrics = null;
 
   // our configuration variables
-  protected static long m_minContentPollDuration;
-  protected static long m_maxContentPollDuration;
-  protected static long m_minNamePollDuration;
-  protected static long m_maxNamePollDuration;
-  protected static long m_nameHashEstimate;
   protected static long m_recentPollExpireTime;
   protected static long m_verifierExpireTime;
-  protected static int m_quorum;
-  protected static int m_minDurationMultiplier;
-  protected static int m_maxDurationMultiplier;
 
+  // The PollFactory instances
+  PollFactory [] pf = {
+    null,
+    new V1PollFactory(),
+    new V2PollFactory(),
+    null, // new V3PollFactory(),
+  };
 
   public PollManager() {
   }
@@ -199,80 +171,18 @@ public class PollManager
    *                 the <code>Poll</code>.
    * @return true if the poll was successfuly called.
    */
-  public boolean callPoll(int polltype, PollSpec pollspec) {
+  public boolean callPoll(PollSpec pollspec) {
     boolean ret = false;
-    switch (pollspec.getPollVersion()) {
-    case 1:
-      try {
-	sendV1PollRequest(polltype, pollspec);
-	ret = true;
-      } catch (IOException ioe) {
-	theLog.debug("Exception sending V1 poll request for " +
-		     pollspec + ioe);
-      }
-      break;
+    int version = pollspec.getPollVersion();
+    if (version <= 0 || version >= pf.length) {
+      theLog.debug("Bad poll version " + version + " for " + pollspec);
+    } else {
+      ret = pf[version].callPoll(pollspec, this, theIDManager);
     }
     return ret;
   }
 
-  /**
-   * cause a V1 poll by sending a request packet.
-   * @param polltype the poll type
-   * @param pollspec the <code>PollSpec</code> used to define the range,
-   *                 version, and location of poll
-   * @throws IOException thrown if <code>LcapMessage</code> construction fails.
-   */
-  private void sendV1PollRequest(int polltype, PollSpec pollspec)
-      throws IOException {
-    int opcode = -1;
-    switch (polltype) {
-    case Poll.NAME_POLL:
-      opcode = LcapMessage.NAME_POLL_REQ;
-      break;
-    case Poll.CONTENT_POLL:
-      opcode = LcapMessage.CONTENT_POLL_REQ;
-      break;
-    case Poll.VERIFY_POLL:
-      opcode = LcapMessage.VERIFY_POLL_REQ;
-      break;
-    }
-    theLog.debug("sending a request for polltype: "
-                 + LcapMessage.POLL_OPCODES[opcode] +
-                 " for spec " + pollspec);
-    CachedUrlSet cus = pollspec.getCachedUrlSet();
-    long duration = calcDuration(opcode, cus);
-    if(duration <=0) {
-      theLog.debug("not sending request for polltype: "
-                   + LcapMessage.POLL_OPCODES[opcode] +
-                   " for spec " + pollspec + "not enough hash time.");
-      return;
-    }
-    byte[] challenge = makeVerifier(duration);
-    byte[] verifier = makeVerifier(duration);
-    LcapMessage msg =
-      LcapMessage.makeRequestMsg(pollspec,
-				 null,
-				 challenge,
-				 verifier,
-				 opcode,
-				 duration,
-				 theIDManager.getLocalIdentity());
-
-    // before we actually send the message make sure that another poll
-    // isn't going to conflict with this and create a split poll
-    if(checkForConflicts(msg,cus) == null) {
-      theLog.debug2("sending poll request message: " +  msg.toString());
-      sendMessage(msg, cus.getArchivalUnit());
-    }
-    else {
-      theLog.debug("not sending request for polltype: "
-                   + LcapMessage.POLL_OPCODES[opcode] +
-                   " for spec " + pollspec + "- conflicts with existing poll.");
-    }
-  }
-
-
-  /**
+   /**
    * Is a poll of the given type and spec currently running
    * @param type the type of the poll.
    * @param spec the PollSpec definining the location of the poll.
@@ -328,7 +238,12 @@ public class PollManager
     nm.startPoll(tally.getCachedUrlSet(), tally, true);
     if (replayNeeded) {
       theLog.debug2("starting replay of poll " + key);
-      expiration = m_maxContentPollDuration;
+      int version = pme.poll.getVersion();
+      if (version > 0 && version < pf.length) {
+	expiration = pf[version].getMaxContentPollDuration();
+      } else {
+	expiration = 0; // XXX
+      }
       d = Deadline.in(expiration);
       tally.startReplay(d);
     }
@@ -418,27 +333,19 @@ public class PollManager
     }
     theLog.debug("Making poll from: " + spec);
     ActivityRegulator.Lock lock = null;
-
-    // check for conflicts
-    CachedUrlSet conflict = checkForConflicts(msg, cus);
-    if (conflict != null) {
-      String err = "New poll " + cus + " conflicts with " + conflict +
-          ", ignoring poll request.";
-      theLog.debug(err);
+    int pollVersion = spec.getPollVersion();
+    if (pollVersion <= 0 || pollVersion >= pf.length) {
+      theLog.debug("Bad poll version " + pollVersion + " for poll on " + spec);
       return null;
     }
-    if (msg.isVerifyPoll()) {
-      // if we didn't call the poll and we don't have the verifier ignore this
-      if ((getSecret(msg.getChallenge())== null) &&
-        !theIDManager.isLocalIdentity(msg.getOriginatorID())) {
-       String ver = String.valueOf(B64Code.encode(msg.getChallenge()));
-       theLog.debug("ignoring verify request from " + msg.getOriginatorID()
-        + " on unknown verifier " + ver);
-       return null;
-     }
+
+    // check for conflicts
+    if (!pf[pollVersion].pollShouldBeCreated(msg, spec, this, theIDManager)) {
+      theLog.debug("Poll request ignored");
+      return null;
     }
     // check with regulator if not verify poll
-    else {
+    else if (spec.getPollType() != Poll.VERIFY_POLL) {
       // get expiration time for the lock
       long expiration = 2 * msg.getDuration();
       if (AuUrl.isAuUrl(cus.getUrl())) {
@@ -449,17 +356,7 @@ public class PollManager
           return null;
         }
       } else {
-        int activity;
-        if (msg.isContentPoll()) {
-          if (cus.getSpec().isSingleNode()) {
-            activity = ActivityRegulator.SINGLE_NODE_CONTENT_POLL;
-          } else {
-            activity = ActivityRegulator.STANDARD_CONTENT_POLL;
-          }
-        } else {
-          activity = ActivityRegulator.STANDARD_NAME_POLL;
-        }
-
+        int activity = pf[pollVersion].getPollActivity(msg, spec, this);
         lock = theDaemon.getActivityRegulator(au).
 	  getCusActivityLock(cus, activity, expiration);
         if (lock==null) {
@@ -471,7 +368,7 @@ public class PollManager
 
     // create the appropriate poll for the message type
     try {
-      ret_poll = createPoll(msg, spec);
+      ret_poll = pf[pollVersion].createPoll(msg, spec, this, theIDManager);
     }
     catch (Exception ex) {
       if(ex instanceof ProtocolException) {
@@ -611,42 +508,25 @@ public class PollManager
     return ret_poll;
   }
 
-  void raiseAlert(Alert alert) {
-    theAlertManager.raiseAlert(alert);
-  }
-
   /**
-   * check for conflicts between the poll defined by the Message and any
-   * currently existing poll.
-   * @param msg the <code>Message</code> to check
-   * @param cus the <code>CachedUrlSet</code> from the url and reg expression
-   * @return the CachedUrlSet of the conflicting poll.
+   * getActivePollSpecIterator returns an Iterator over the set of
+   * PollSpec instances which currently have active polls.
+   * @return Iterator over set of PollSpec
    */
-  CachedUrlSet checkForConflicts(LcapMessage msg, CachedUrlSet cus) {
-
-    // eliminate incoming verify polls - never conflicts
-    if(msg.isVerifyPoll()) {
-      return null;
-    }
-
+  protected Iterator getActivePollSpecIterator() {
+    Set pollspecs = new HashSet();
     Iterator iter = thePolls.values().iterator();
-    while(iter.hasNext()) {
-      PollManagerEntry entry = (PollManagerEntry)iter.next();
-      BasePoll p = entry.poll;
-
-      // eliminate completed polls or verify polls
-      if(!entry.isPollCompleted() && !p.getMessage().isVerifyPoll()) {
-        CachedUrlSet pcus = p.getPollSpec().getCachedUrlSet();
-        int rel_pos = cus.cusCompare(pcus);
-        if(rel_pos != CachedUrlSet.SAME_LEVEL_NO_OVERLAP &&
-           rel_pos != CachedUrlSet.NO_RELATION) {
-          theLog.debug2("Conflict between new poll '"+cus+"' and running poll '"+
-                        pcus+"'");
-          return pcus;
-        }
+    while (iter.hasNext()) {
+      PollManagerEntry pme = (PollManagerEntry)iter.next();
+      if (!pme.isPollCompleted()) {
+	pollspecs.add(pme.poll.getPollSpec());
       }
     }
-    return null;
+    return (pollspecs.iterator());
+  }
+
+  void raiseAlert(Alert alert) {
+    theAlertManager.raiseAlert(alert);
   }
 
   /**
@@ -799,10 +679,6 @@ public class PollManager
     return theHashService;
   }
 
-  int getQuorum() {
-    return m_quorum;
-  }
-
   private void rememberVerifier(byte[] verifier,
                                 byte[] secret,
                                 long duration) {
@@ -837,144 +713,24 @@ public class PollManager
   public void setConfig(Configuration newConfig,
 			Configuration oldConfig,
 			Configuration.Differences changedKeys) {
-    long aveDuration = newConfig.getTimeInterval(PARAM_NAMEPOLL_DEADLINE,
-                                                  DEFAULT_NAMEPOLL_DEADLINE);
-    m_minNamePollDuration = aveDuration - aveDuration / 4;
-    m_maxNamePollDuration = aveDuration + aveDuration / 4;
-
-    // tk - temporary until real name hash estimates
-    m_nameHashEstimate = newConfig.getTimeInterval(PARAM_NAME_HASH_ESTIMATE,
-						   DEFAULT_NAME_HASH_ESTIMATE);
-
-
-    m_minContentPollDuration = newConfig.getTimeInterval(PARAM_CONTENTPOLL_MIN,
-        DEFAULT_CONTENTPOLL_MIN);
-    m_maxContentPollDuration = newConfig.getTimeInterval(PARAM_CONTENTPOLL_MAX,
-        DEFAULT_CONTENTPOLL_MAX);
-
-    m_quorum = newConfig.getIntParam(PARAM_QUORUM, DEFAULT_QUORUM);
-
-    m_minDurationMultiplier =
-      newConfig.getIntParam(PARAM_DURATION_MULTIPLIER_MIN,
-			    DEFAULT_DURATION_MULTIPLIER_MIN);
-    m_maxDurationMultiplier =
-      newConfig.getIntParam(PARAM_DURATION_MULTIPLIER_MAX,
-			    DEFAULT_DURATION_MULTIPLIER_MAX);
     m_recentPollExpireTime = newConfig.getTimeInterval(PARAM_RECENT_EXPIRATION,
         DEFAULT_RECENT_EXPIRATION);
     m_verifierExpireTime = newConfig.getTimeInterval(PARAM_VERIFY_EXPIRATION,
                                         DEFAULT_VERIFY_EXPIRATION);
-  }
-
-  // Poll time calculation
-  long calcDuration(int opcode, CachedUrlSet cus) {
-    int quorum = getQuorum();
-    switch (opcode) {
-    case LcapMessage.NAME_POLL_REQ:
-    case LcapMessage.NAME_POLL_REP: {
-      long minPoll = (m_minNamePollDuration +
-		      theRandom.nextLong(m_maxNamePollDuration -
-					 m_minNamePollDuration));
-
-      return findSchedulableDuration(m_nameHashEstimate,
-				     minPoll, m_maxNamePollDuration,
-				     m_nameHashEstimate);
-    }
-    case LcapMessage.CONTENT_POLL_REQ:
-    case LcapMessage.CONTENT_POLL_REP: {
-      long hashEst = cus.estimatedHashDuration();
-      theLog.debug3("CUS estimated hash duration: " + hashEst);
-
-      hashEst = getAdjustedEstimate(hashEst);
-      theLog.debug3("My adjusted hash duration: " + hashEst);
-
-      long totalHash = hashEst * (quorum + 1);
-      long minPoll = Math.max(totalHash * m_minDurationMultiplier,
-			      m_minContentPollDuration);
-      long maxPoll = Math.max(Math.min(totalHash * m_maxDurationMultiplier,
-				       m_maxContentPollDuration),
-			      m_minContentPollDuration);
-      return findSchedulableDuration(totalHash, minPoll, maxPoll, totalHash);
-    }
-    default:
-      return -1;
-    }
-  }
-
-  // try poll durations between min and max at increments of incr.
-  // return duration in which all hashing can be scheduled, or -1 if not.
-
-  // tk - multiplicative padding factor to avoid poll durations that nearly
-  // completely fill the schedule.
-
-  long findSchedulableDuration(long hashTime, long min, long max, long incr) {
-    // loop goes maybe one more because we don't want to stop before
-    // reaching max
-    for (long dur = min; dur <= (max + incr - 1); dur += incr) {
-      if (dur > max) {
-	dur = max;
-      }
-      theLog.debug3("Trying to schedule poll of duration: " + dur);
-      if (canSchedulePoll(dur, hashTime)) {
-	theLog.debug2("Poll duration: " +
-		      StringUtil.timeIntervalToString(dur));
-	return dur;
-      }
-      if (dur >= max) {
-	// Complete paranoia here.  This shouldn't be necessary, because if
-	// we've reset dur to max, the loop will exit on the next iteration
-	// because (max + incr) > (max + incr - 1).  But because we might
-	// reduce dur in the loop the possibility of an infinite loop has
-	// been raised; this is insurance against that.
-	break;
+    for (int i = 0; i < pf.length; i++) {
+      if (pf[i] != null) {
+	pf[i].setConfig(newConfig, oldConfig, changedKeys);
       }
     }
-    theLog.info("Can't schedule poll within " +
-		StringUtil.timeIntervalToString(max));
-    return -1;
   }
 
-  boolean canSchedulePoll(long pollTime, long hashTime) {
-    if (hashTime > pollTime) {
-      theLog.warning("Total hash time " +
-		     StringUtil.timeIntervalToString(hashTime) +
-		     " greater than max poll time " +
-		     StringUtil.timeIntervalToString(pollTime));
-      return false;
+  public PollFactory getPollFactory(int version) {
+    PollFactory ret = null;
+    if (version > 0 || version <= pf.length) {
+      ret = pf[version];
     }
-    Deadline when = Deadline.in(pollTime);
-    return canHashBeScheduledBefore(hashTime, when);
+    return ret;
   }
-
-  boolean canHashBeScheduledBefore(long duration, Deadline when) {
-    return theHashService.canHashBeScheduledBefore(duration, when);
-  }
-
-  long getAdjustedEstimate(long estTime) {
-    long my_estimate = estTime;
-    long my_rate;
-    long slow_rate = getSlowestHashSpeed();
-    try {
-      my_rate = getBytesPerMsHashEstimate();
-    }
-    catch (SystemMetrics.NoHashEstimateAvailableException e) {
-      // if can't get my rate, use slowest rate to prevent adjustment
-      theLog.warning("No hash estimate available, " +
-                     "not adjusting poll for slow machines");
-      my_rate = slow_rate;
-    }
-    theLog.debug3("My hash speed is " + my_rate
-                  + ". Slow speed is " + slow_rate);
-
-
-    if (my_rate > slow_rate) {
-      my_estimate = estTime * my_rate / slow_rate;
-      theLog.debug3("I've corrected the hash estimate to " + my_estimate);
-    }
-    return my_estimate;
-  }
-
-
 
 
 //--------------- PollerStatus Accessors -----------------------------

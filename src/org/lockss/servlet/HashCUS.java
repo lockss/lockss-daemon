@@ -1,5 +1,5 @@
 /*
- * $Id: HashCUS.java,v 1.12 2004-09-15 22:58:10 tlipkis Exp $
+ * $Id: HashCUS.java,v 1.13 2004-09-16 21:29:17 dshr Exp $
  */
 
 /*
@@ -245,9 +245,14 @@ public class HashCUS extends LockssServlet {
 	    (lower != null && !lower.equals(PollSpec.SINGLE_NODE_LWRBOUND))) {
 	  errMsg = "Upper/Lower ignored";
 	}
-	ps = new PollSpec(auid, url, PollSpec.SINGLE_NODE_LWRBOUND, null);
+	ps = new PollSpec(auid,
+			  url,
+			  PollSpec.SINGLE_NODE_LWRBOUND,
+			  null,
+			  Poll.CONTENT_POLL, 1); // XXX select version
       } else {
-	ps = new PollSpec(auid, url, lower, upper);
+	// XXX select version
+	ps = new PollSpec(auid, url, lower, upper, Poll.CONTENT_POLL, 1);
       }
     } catch (Exception e) {
       errMsg = "Error making PollSpec: " + e.toString();

@@ -1,5 +1,5 @@
 /*
- * $Id: TestPoll.java,v 1.78 2004-09-13 04:02:24 dshr Exp $
+ * $Id: TestPoll.java,v 1.79 2004-09-16 21:29:18 dshr Exp $
  */
 
 /*
@@ -317,7 +317,7 @@ public class TestPoll extends LockssTestCase {
     Plugin plugin = testau.getPlugin();
     PollSpec spec =
       new MockPollSpec(testau,
-		       rootV1urls[0],null,null);
+		       rootV1urls[0],null,null, Poll.NAME_POLL);
     ((MockCachedUrlSet)spec.getCachedUrlSet()).setHasContent(false);
     LcapMessage poll_msg =
       LcapMessage.makeRequestMsg(spec,
@@ -401,7 +401,7 @@ public class TestPoll extends LockssTestCase {
     Plugin plugin = au.getPlugin();
     CachedUrlSet cus = plugin.makeCachedUrlSet(au, cusSpec);
     log.debug3("createCompletedPoll 1");
-    PollSpec spec = new PollSpec(cus);
+    PollSpec spec = new PollSpec(cus, Poll.CONTENT_POLL);
     log.debug3("createCompletedPoll 1");
     ((MockCachedUrlSet)spec.getCachedUrlSet()).setHasContent(false);
     log.debug3("createCompletedPoll 1");
@@ -483,10 +483,18 @@ public class TestPoll extends LockssTestCase {
 
   private void initTestMsg() throws Exception {
     testV1msg = new LcapMessage[3];
+    int[] pollType = {
+      Poll.NAME_POLL,
+      Poll.CONTENT_POLL,
+      Poll.VERIFY_POLL,
+    };
+    PollFactory pf = pollmanager.getPollFactory(1);
+    // XXX V1 support mandatory
+    assertNotNull("PollFactory should not be null", pf);
 
     for (int i= 0; i<testV1msg.length; i++) {
       PollSpec spec = new MockPollSpec(testau, rootV1urls[i],
-				       lwrbnd, uprbnd);
+				       lwrbnd, uprbnd, pollType[i]);
       ((MockCachedUrlSet)spec.getCachedUrlSet()).setHasContent(false);
       int opcode = LcapMessage.NAME_POLL_REQ + (i * 2);
       testV1msg[i] =
@@ -495,15 +503,19 @@ public class TestPoll extends LockssTestCase {
 				   pollmanager.generateRandomBytes(),
 				   pollmanager.generateRandomBytes(),
 				   opcode,
-				   pollmanager.calcDuration(opcode,spec.getCachedUrlSet()),
+				   pf.calcDuration(opcode,
+						   spec.getCachedUrlSet(),
+						   pollmanager),
 				   testID);
+      assertNotNull(testV1msg[i]);
     }
 
     testV2msg = new LcapMessage[2];
+    pf = pollmanager.getPollFactory(2);
 
     for (int i= 0; i<testV2msg.length; i++) {
       PollSpec spec = new MockPollSpec(testau, rootV2urls[i],
-				       lwrbnd, uprbnd);
+				       lwrbnd, uprbnd, pollType[i]);
       ((MockCachedUrlSet)spec.getCachedUrlSet()).setHasContent(false);
       // XXX - should have specific way to make V2 messages
       // XXX - should have separate opcodes for V2 messages
@@ -514,7 +526,9 @@ public class TestPoll extends LockssTestCase {
 				   pollmanager.generateRandomBytes(),
 				   pollmanager.generateRandomBytes(),
 				   opcode,
-				   pollmanager.calcDuration(opcode,spec.getCachedUrlSet()),
+				   pf.calcDuration(opcode,
+						   spec.getCachedUrlSet(),
+						   pollmanager),
 				   testID);
       testV2msg[i].setPollVersion(2);
     }

@@ -1,5 +1,5 @@
 /*
- * $Id: MockPollSpec.java,v 1.1 2004-01-31 23:03:40 tlipkis Exp $
+ * $Id: MockPollSpec.java,v 1.2 2004-09-16 21:29:19 dshr Exp $
  */
 
 /*
@@ -62,20 +62,23 @@ public class MockPollSpec extends PollSpec {
    * @param cus the cached url set
    */
   public MockPollSpec(String auId, String url,
-		      String lwrBound, String uprBound) {
-    this(auId, url, lwrBound, uprBound, null);
+		      String lwrBound, String uprBound,
+		      int pollType) {
+    this(auId, url, lwrBound, uprBound, null, pollType);
   }
 
   public MockPollSpec(ArchivalUnit au, String url,
-		      String lwrBound, String uprBound) {
+		      String lwrBound, String uprBound,
+		      int pollType) {
     super(makeCus(au, url, lwrBound, uprBound, null),
-	  lwrBound, uprBound);
+	  lwrBound, uprBound, pollType);
   }
 
   public MockPollSpec(String auId, String url,
-		      String lwrBound, String uprBound, String pluginVersion) {
+		      String lwrBound, String uprBound, String pluginVersion,
+		      int pollType) {
     super(makeCus(auId, url, lwrBound, uprBound, pluginVersion),
-	  lwrBound, uprBound);
+	  lwrBound, uprBound, pollType);
   }
 
   public String getPluginVersion() {

@@ -1,5 +1,5 @@
 /*
- * $Id: PollSpec.java,v 1.23 2004-03-29 09:16:43 tlipkis Exp $
+ * $Id: PollSpec.java,v 1.24 2004-09-16 21:29:16 dshr Exp $
  */
 
 /*
@@ -71,16 +71,20 @@ public class PollSpec {
   private CachedUrlSet cus = null;
   private PluginManager pluginMgr = null;
   private int pollVersion; // poll protocol version
-
+  private int pollType;    // One of the types defined by Poll
 
   /**
    * Construct a PollSpec from a CachedUrlSet and an upper and lower bound
    * @param cus the CachedUrlSet
    * @param lwrBound the lower boundary
    * @param uprBound the upper boundary
+   * @param pollType one of the types defined by Poll
    */
-  public PollSpec(CachedUrlSet cus, String lwrBound, String uprBound) {
-    commonSetup(cus, lwrBound, uprBound);
+  public PollSpec(CachedUrlSet cus,
+		  String lwrBound,
+		  String uprBound,
+		  int pollType) {
+    commonSetup(cus, lwrBound, uprBound, pollType);
   }
 
   /**
@@ -89,28 +93,31 @@ public class PollSpec {
    * @param cus the CachedUrlSet
    * @param lwrBound the lower boundary
    * @param uprBound the upper boundary
+   * @param pollType one of the types defined by Poll
    * @param pollVersion the poll version to use
    */
   public PollSpec(CachedUrlSet cus,
 		  String lwrBound,
 		  String uprBound,
+		  int pollType,
 		  int pollVersion) {
-    commonSetup(cus, lwrBound, uprBound, pollVersion);
+    commonSetup(cus, lwrBound, uprBound, pollType, pollVersion);
   }
 
   /**
    * Construct a PollSpec from a CachedUrlSet
    * @param cus the CachedUrlSpec which defines the range of interest
+   * @param pollType one of the types defined by Poll
    */
-  public PollSpec(CachedUrlSet cus) {
+  public PollSpec(CachedUrlSet cus, int pollType) {
     CachedUrlSetSpec cuss = cus.getSpec();
     if (cuss instanceof RangeCachedUrlSetSpec) {
       RangeCachedUrlSetSpec rcuss = (RangeCachedUrlSetSpec)cuss;
-      commonSetup(cus, rcuss.getLowerBound(), rcuss.getUpperBound());
+      commonSetup(cus, rcuss.getLowerBound(), rcuss.getUpperBound(), pollType);
     } else if (cuss.isSingleNode()) {
-      commonSetup(cus, SINGLE_NODE_LWRBOUND, null);
+      commonSetup(cus, SINGLE_NODE_LWRBOUND, null, pollType);
     } else {
-      commonSetup(cus, null, null);
+      commonSetup(cus, null, null, pollType);
     }
   }
 
@@ -125,31 +132,49 @@ public class PollSpec {
     uprBound = msg.getUprBound();
     lwrBound = msg.getLwrBound();
     pollVersion = msg.getPollVersion();
+    if (msg.isContentPoll()) {
+      pollType = Poll.CONTENT_POLL;
+    } else if (msg.isNamePoll()) {
+      pollType = Poll.NAME_POLL;
+    } else if (msg.isVerifyPoll()) {
+      pollType = Poll.VERIFY_POLL;
+    } else {
+      pollType = -1;
+    }
     cus = getPluginManager().findCachedUrlSet(this);
   }
 
   /**
    * Construct a PollSpec from explicit args
    */
-  public PollSpec(String auId, String url, String lower, String upper) {
+  public PollSpec(String auId,
+		  String url,
+		  String lower,
+		  String upper,
+		  int pollType,
+		  int pollVersion) {
     this.auId = auId;
     this.url = url;
     uprBound = upper;
     lwrBound = lower;
     cus = getPluginManager().findCachedUrlSet(this);
-  }
-
-  /** Setup common to most constructors */
-  private void commonSetup(CachedUrlSet cus,
-			   String lwrBound,
-			   String uprBound) {
-    commonSetup(cus, lwrBound, uprBound, getDefaultPollVersion());
+    this.pollType = pollType;
+    this.pollVersion = pollVersion;
   }
 
   /** Setup common to most constructors */
   private void commonSetup(CachedUrlSet cus,
 			   String lwrBound,
 			   String uprBound,
+			   int pollType) {
+    commonSetup(cus, lwrBound, uprBound, pollType, getDefaultPollVersion());
+  }
+
+  /** Setup common to most constructors */
+  private void commonSetup(CachedUrlSet cus,
+			   String lwrBound,
+			   String uprBound,
+			   int pollType,
 			   int pollVersion) {
     this.cus = cus;
     ArchivalUnit au = cus.getArchivalUnit();
@@ -160,6 +185,7 @@ public class PollSpec {
     this.lwrBound = lwrBound;
     this.uprBound = uprBound;
     this.pollVersion = pollVersion;
+    this.pollType = pollType;
   }
 
   protected int getDefaultPollVersion() {
@@ -211,6 +237,10 @@ public class PollSpec {
 
   public int getPollVersion() {
     return pollVersion;
+  }
+
+  public int getPollType() {
+    return pollType;
   }
 
   private PluginManager getPluginManager() {

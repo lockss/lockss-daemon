@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.115 2004-09-13 04:02:25 dshr Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.116 2004-09-16 21:29:19 dshr Exp $
  */
 
 /*
@@ -164,7 +164,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     polls.add(new PollState(1, "lwr1", "upr1", 1, 0, Deadline.MAX, false));
 
     // start the poll
-    assertTrue(pollManager.callPoll(Poll.CONTENT_POLL, new PollSpec(cus)));
+    assertTrue(pollManager.callPoll(new PollSpec(cus, Poll.CONTENT_POLL)));
 
     NodeStateImpl node = new NodeStateImpl(cus, 123, new CrawlState(-1, -1, -1),
                                            polls, historyRepo);
@@ -1324,7 +1324,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
 
     try {
       testmsg = LcapMessage.makeRequestMsg(
-          new MockPollSpec(mau, url, lwrBound, uprBound),
+          new MockPollSpec(mau, url, lwrBound, uprBound, Poll.NAME_POLL),
           null,
           bytes,
           bytes,

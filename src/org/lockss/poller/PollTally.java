@@ -1,5 +1,5 @@
 /*
- * $Id: PollTally.java,v 1.25 2004-09-13 04:02:21 dshr Exp $
+ * $Id: PollTally.java,v 1.26 2004-09-16 21:29:16 dshr Exp $
  */
 
 /*
@@ -199,7 +199,7 @@ public abstract class PollTally implements Tallier{
     String voterID = voter.getIdKey();
     while(it.hasNext()) {
       Vote vote = (Vote) it.next();
-      if(voterID.compareTo(vote.getIdentityKey()) == 0) {
+      if(voterID.equals(vote.getIdentityKey())) {
         return true;
       }
     }

@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.186 2004-09-13 04:02:22 dshr Exp $
+ * $Id: NodeManagerImpl.java,v 1.187 2004-09-16 21:29:17 dshr Exp $
  */
 
 /*
@@ -148,7 +148,8 @@ public class NodeManagerImpl
         PollState poll = (PollState) activePolls.next();
         PollSpec pollSpec = new PollSpec(state.getCachedUrlSet(),
                                          poll.getLwrBound(),
-                                         poll.getUprBound());
+                                         poll.getUprBound(),
+					 poll.type);
         // if poll isn't running and it was our poll
         if (!pollManager.isPollRunning(poll.getType(), pollSpec)) {
           // transfer dead poll to history and let treewalk handle it
@@ -887,7 +888,8 @@ public class NodeManagerImpl
             callTopLevelPoll();
           } else {
             logger.debug2("calling content poll");
-            callContentPoll(new PollSpec(nodeState.getCachedUrlSet()));
+            callContentPoll(new PollSpec(nodeState.getCachedUrlSet(),
+					 Poll.CONTENT_POLL));
           }
         }
         return true;
@@ -904,7 +906,8 @@ public class NodeManagerImpl
             // call name poll if not ranged or no results to use
             logger.debug2(
                 "lost content poll, state = lost, calling name poll.");
-            callNamePoll(new PollSpec(nodeState.getCachedUrlSet()));
+            callNamePoll(new PollSpec(nodeState.getCachedUrlSet(),
+				      Poll.NAME_POLL));
           }
         }
         return true;
@@ -912,7 +915,8 @@ public class NodeManagerImpl
         // call name poll
         if (!reportOnly) {
           logger.debug2("calling name poll");
-          callNamePoll(new PollSpec(nodeState.getCachedUrlSet()));
+          callNamePoll(new PollSpec(nodeState.getCachedUrlSet(),
+				    Poll.NAME_POLL));
         }
         return true;
       case NodeState.CONTENT_RUNNING:
@@ -926,7 +930,8 @@ public class NodeManagerImpl
           PollHistory lastHistory = (PollHistory)lastOrCurrentPoll;
           PollSpec lastPollSpec = new PollSpec(nodeState.getCachedUrlSet(),
                                                lastHistory.lwrBound,
-                                               lastHistory.uprBound);
+                                               lastHistory.uprBound,
+					       lastHistory.getType());
           if ((lastHistory.isOurPoll())) {
             // if should recall and is our incomplete poll
             if (pollManager.isPollRunning(lastHistory.getType(), lastPollSpec)) {
@@ -1009,7 +1014,8 @@ public class NodeManagerImpl
             }
           } else {
             logger.debug2("no results found, so recalling name poll");
-            callNamePoll(new PollSpec(nodeState.getCachedUrlSet()));
+            callNamePoll(new PollSpec(nodeState.getCachedUrlSet(),
+				      Poll.NAME_POLL));
           }
         }
         return true;
@@ -1218,7 +1224,8 @@ public class NodeManagerImpl
                            boolean reportOnly) {
     PollSpec lastPollSpec = new PollSpec(node.getCachedUrlSet(),
                                          lastHistory.lwrBound,
-                                         lastHistory.uprBound);
+                                         lastHistory.uprBound,
+					 lastHistory.type);
     boolean shouldRecallLastPoll =
         ((lastHistory.getStartTime() + lastHistory.getDuration() +
 	  nodeMgrMgr.paramRecallDelay)
@@ -1270,7 +1277,8 @@ public class NodeManagerImpl
                            lastHistory.getStatusString() + ", " +
                            sdf.format(new Date(lastHistory.startTime)));
               PollSpec newPollSpec = new PollSpec(node.getCachedUrlSet(),
-                                                   null, null);
+                                                   null, null,
+						   Poll.CONTENT_POLL);
               callContentPoll(newPollSpec);
             }
             return true;
@@ -1287,7 +1295,8 @@ public class NodeManagerImpl
           CachedUrlSet cus1 = lastPollSpec.getCachedUrlSet();
           PollSpec prevPollSpec = new PollSpec(node.getCachedUrlSet(),
                                                prevHistory.lwrBound,
-                                               prevHistory.uprBound);
+                                               prevHistory.uprBound,
+					       prevHistory.type);
           CachedUrlSet cus2 = prevPollSpec.getCachedUrlSet();
           if ((cus1.cusCompare(cus2) == CachedUrlSet.SAME_LEVEL_NO_OVERLAP)) {
             if (prevHistory.getStatus()==PollState.LOST) {
@@ -1368,11 +1377,12 @@ public class NodeManagerImpl
    * Convenience method to call a top-level poll.
    */
   void callTopLevelPoll() {
-    PollSpec spec = new PollSpec(managedAu.getAuCachedUrlSet());
+    PollSpec spec = new PollSpec(managedAu.getAuCachedUrlSet(),
+				 Poll.CONTENT_POLL);
     if (logger.isDebug2()) {
       logger.debug2("Calling a top level poll on " + spec);
     }
-    if (!pollManager.callPoll(Poll.CONTENT_POLL, spec)) {
+    if (!pollManager.callPoll(spec)) {
       if (logger.isDebug2()) {
 	logger.debug2("Failed to call a top level poll on " + spec);
       }
@@ -1553,11 +1563,11 @@ public class NodeManagerImpl
     Plugin plugin = au.getPlugin();
     CachedUrlSet newCus =
       plugin.makeCachedUrlSet(au, new RangeCachedUrlSetSpec(base, lwr, upr));
-    PollSpec spec = new PollSpec(newCus, lwr, upr);
+    PollSpec spec = new PollSpec(newCus, lwr, upr, Poll.CONTENT_POLL);
     if (logger.isDebug2()) {
       logger.debug2("Calling a content poll on " + spec);
     }
-    if (!pollManager.callPoll(Poll.CONTENT_POLL, spec)) {
+    if (!pollManager.callPoll(spec)) {
       if (logger.isDebug2()) {
 	logger.debug2("Failed to call a content poll on " + spec);
       }
@@ -1575,11 +1585,11 @@ public class NodeManagerImpl
     CachedUrlSet newCus =
       plugin.makeCachedUrlSet(au,
 			      new SingleNodeCachedUrlSetSpec(cus.getUrl()));
-    PollSpec spec = new PollSpec(newCus);
+    PollSpec spec = new PollSpec(newCus, Poll.CONTENT_POLL);
     if (logger.isDebug2()) {
       logger.debug2("Calling a single node content poll on " + spec);
     }
-    if (!pollManager.callPoll(Poll.CONTENT_POLL, spec)) {
+    if (!pollManager.callPoll(spec)) {
       if (logger.isDebug2()) {
 	logger.debug2("Failed to call single node content poll on " + spec);
       }
@@ -1592,11 +1602,14 @@ public class NodeManagerImpl
    * @param lastPoll last poll to recall
    */
   private void callLastPoll(PollSpec spec, PollState lastPoll) {
+    if (spec.getPollType() != lastPoll.type)
+      logger.error("Re-calling a " + Poll.PollName[lastPoll.type] +
+		   " poll but spec is " + Poll.PollName[spec.getPollType()]);
     if (logger.isDebug2()) {
       logger.debug2("Re-calling a " + Poll.PollName[lastPoll.type] +
 		    " poll on " + spec);
     }
-    if (!pollManager.callPoll(lastPoll.type, spec)) {
+    if (!pollManager.callPoll(spec)) {
       if (logger.isDebug2()) {
 	logger.debug2("Failed to re-call a " + Poll.PollName[lastPoll.type] +
 		      " poll on " + spec);
@@ -1612,7 +1625,11 @@ public class NodeManagerImpl
     if (logger.isDebug2()) {
       logger.debug2("Calling a name poll on " + spec);
     }
-    if (!pollManager.callPoll(Poll.NAME_POLL, spec)) {
+    if (spec.getPollType() != Poll.NAME_POLL) {
+      logger.error("callNamePoll on spec for " +
+		   Poll.PollName[spec.getPollType()]);
+    }
+    if (!pollManager.callPoll(spec)) {
       if (logger.isDebug2()) {
 	logger.debug2("Failed to call a name poll on " + spec);
       }
@@ -1624,10 +1641,14 @@ public class NodeManagerImpl
    * @param spec PollSpec
    */
   private void callContentPoll(PollSpec spec) {
+    if (spec.getPollType() != Poll.CONTENT_POLL) {
+      logger.error("Calling a content poll on spec for " +
+		   Poll.PollName[spec.getPollType()]);
+    }
     if (logger.isDebug2()) {
       logger.debug2("Calling a content poll on " + spec);
     }
-    if (!pollManager.callPoll(Poll.CONTENT_POLL, spec)) {
+    if (!pollManager.callPoll(spec)) {
       if (logger.isDebug2()) {
         logger.debug2("Failed to call a content poll on " + spec);
       }
@@ -1830,7 +1851,7 @@ public class NodeManagerImpl
         if (pollCookie.isNamePoll) {
           logger.debug("Calling new name poll...");
           state.setState(NodeState.WRONG_NAMES);
-          callNamePoll(new PollSpec(cus));
+          callNamePoll(new PollSpec(cus, Poll.NAME_POLL));
         } else {
           logger.debug("Calling new SNCUSS poll...");
           state.setState(NodeState.POSSIBLE_DAMAGE_HERE);

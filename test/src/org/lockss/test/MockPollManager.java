@@ -1,5 +1,5 @@
 /*
-* $Id: MockPollManager.java,v 1.12 2004-09-13 04:02:25 dshr Exp $
+* $Id: MockPollManager.java,v 1.13 2004-09-16 21:29:19 dshr Exp $
  */
 
 /*
@@ -68,13 +68,13 @@ public class MockPollManager extends PollManager {
     thePolls = new Hashtable();
   }
 
-  public boolean callPoll(int polltype, PollSpec pollspec) {
+  public boolean callPoll(PollSpec pollspec) {
     boolean ret = false;
     theLog.debug("MockPollManager: call V" + pollspec.getPollVersion() + " poll");
     switch (pollspec.getPollVersion()) {
     case 1:
       try {
-	sendV1PollRequest(polltype, pollspec);
+	sendV1PollRequest(pollspec);
 	ret = true;
       } catch (IOException ioe) {
 	theLog.error("Exception sending V1 poll request for " +
@@ -90,9 +90,10 @@ public class MockPollManager extends PollManager {
   }
 
 
-  private void sendV1PollRequest(int opcode, PollSpec ps) throws IOException {
+  private void sendV1PollRequest(PollSpec ps) throws IOException {
     // note: uses a different key than the other two, since we're not
     // creating an actual challenge and verifier to key off of.
+    int opcode = ps.getPollType();
     if (opcode == Poll.CONTENT_POLL) {
       theLog.debug("MockPollManager: send V1 content poll request");
       thePolls.put(ps.getUrl(), CONTENT_REQUESTED);
@@ -127,32 +128,40 @@ public class MockPollManager extends PollManager {
 
   public BasePoll createPoll(LcapMessage msg, PollSpec pollspec) throws ProtocolException {
     theLog.debug("MockPollManager: createPoll(" + pollspec.getUrl() + ") ");
-    int polltype = -1;
+    int polltype = pollspec.getPollType();
     switch (pollspec.getPollVersion()) {
     case 1:
       int opcode = msg.getOpcode();
       switch (opcode) {
       case LcapMessage.CONTENT_POLL_REQ:
       case LcapMessage.CONTENT_POLL_REP:
-	polltype = Poll.CONTENT_POLL;
+	if (polltype != Poll.CONTENT_POLL)
+	  theLog.error("calling " + LcapMessage.POLL_OPCODES[opcode] +
+		       " on spec " + Poll.PollName[polltype]);
 	break;
       case LcapMessage.NAME_POLL_REQ:
       case LcapMessage.NAME_POLL_REP:
-	polltype = Poll.NAME_POLL;
+	if (polltype != Poll.NAME_POLL)
+	  theLog.error("calling " + LcapMessage.POLL_OPCODES[opcode] +
+		       " on spec " + Poll.PollName[polltype]);
 	break;
       case LcapMessage.VERIFY_POLL_REQ:
       case LcapMessage.VERIFY_POLL_REP:
-	polltype = Poll.VERIFY_POLL;
+	if (polltype != Poll.VERIFY_POLL)
+	  theLog.error("calling " + LcapMessage.POLL_OPCODES[opcode] +
+		       " on spec " + Poll.PollName[polltype]);
 	break;
       default:
 	theLog.error("Bad V1 poll message opcode: " +  opcode);
+	polltype = -1;
       }
       break;
     default:
       theLog.error("No support for V" + pollspec.getPollVersion() + " yet");
+      polltype = -1;
     }
     if (polltype != -1) {
-      callPoll(polltype, pollspec);
+      callPoll(pollspec);
       return super.createPoll(msg, pollspec);
     } else {
       return null;

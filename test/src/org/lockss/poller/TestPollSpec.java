@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollSpec.java,v 1.13 2004-09-13 04:02:24 dshr Exp $
+ * $Id: TestPollSpec.java,v 1.14 2004-09-16 21:29:19 dshr Exp $
  */
 
 /*
@@ -82,7 +82,7 @@ public class TestPollSpec extends LockssTestCase {
 
     CachedUrlSet cus =
       new MockCachedUrlSet(au, new RangeCachedUrlSetSpec(url, lower, upper));
-    PollSpec ps = new PollSpec(cus);
+    PollSpec ps = new PollSpec(cus, Poll.CONTENT_POLL);
     assertEquals(auid, ps.getAuId());
     assertEquals(url, ps.getUrl());
     assertEquals(lower, ps.getLwrBound());
@@ -102,7 +102,7 @@ public class TestPollSpec extends LockssTestCase {
     au.setPlugin(plug);
     CachedUrlSet cus =
       new MockCachedUrlSet(au, new RangeCachedUrlSetSpec(url, lower, upper));
-    PollSpec ps = new PollSpec(cus);
+    PollSpec ps = new PollSpec(cus, Poll.CONTENT_POLL);
     LcapIdentity id = null;
     try {
       IPAddr addr = IPAddr.getByName("127.0.0.1");

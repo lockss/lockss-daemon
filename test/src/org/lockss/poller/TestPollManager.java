@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.62 2004-09-13 04:02:24 dshr Exp $
+ * $Id: TestPollManager.java,v 1.63 2004-09-16 21:29:19 dshr Exp $
  */
 
 /*
@@ -33,7 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.poller;
 
 import java.io.*;
-import java.net.*;
+import java.net.UnknownHostException;
 import java.security.*;
 import java.util.*;
 import org.lockss.daemon.*;
@@ -67,9 +67,17 @@ public class TestPollManager extends LockssTestCase {
   protected LcapIdentity testID;
   protected LcapMessage[] testmsg;
   protected PollManager pollmanager;
+  protected IdentityManager idmanager;
 
   protected void setUp() throws Exception {
     super.setUp();
+
+    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    Properties p = new Properties();
+    p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
+    p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.1.2.3");
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+
     TimeBase.setSimulated();
     initRequiredServices();
     initTestAddr();
@@ -79,12 +87,193 @@ public class TestPollManager extends LockssTestCase {
 
   public void tearDown() throws Exception {
     pollmanager.stopService();
+    idmanager.stopService();
     theDaemon.getLockssRepository(testau).stopService();
     theDaemon.getHashService().stopService();
     theDaemon.getRouterManager().stopService();
     TimeBase.setReal();
     super.tearDown();
   }
+
+  // Tests for the V1 PollFactory implementation
+
+  // Start by testing the local mock poll factory
+
+  public void testLocalMockV1PollFactory() {
+    // This ensures that LocalMockV1PollFactory.canHashBeScheduledBefore() does
+    // what I intended
+    LocalMockPollManager mpm = new LocalMockPollManager();
+    LocalMockV1PollFactory mpf = new LocalMockV1PollFactory();
+
+    mpf.setMinPollDeadline(Deadline.in(1000));
+    assertFalse(mpf.canHashBeScheduledBefore(100, Deadline.in(0), mpm));
+    assertTrue(mpf.canHashBeScheduledBefore(100, Deadline.in(1000), mpm));
+    assertTrue(mpf.canHashBeScheduledBefore(100, Deadline.in(1001), mpm));
+
+  }
+
+  public void testV1CallPoll() {
+    LocalMockPollManager pm = new LocalMockPollManager();
+    PollFactory pf = pm.getPollFactory(1);
+    int[] opcode = {
+      LcapMessage.NAME_POLL_REQ,
+      LcapMessage.CONTENT_POLL_REQ,
+      LcapMessage.VERIFY_POLL_REQ,
+    };
+    // NB - Verify polls are never called via callPoll()
+    for (int i = 0; i < testmsg.length - 1; i++) {
+      pm.msgSent = null;
+      assertTrue("Calling this poll should succeed",
+		 pf.callPoll(new PollSpec(testmsg[i]), pm,
+			     idmanager));
+      assertTrue(pm.msgSent instanceof LcapMessage);
+      assertEquals(pm.msgSent.getOpcode(), opcode[i]);
+    }
+  }
+
+  public void testV1CreatePoll() {
+    PollFactory pf = pollmanager.getPollFactory(1);
+    PollSpec[] ps = new PollSpec[3];
+    for (int i = 0; i < testmsg.length; i++) {
+      ps[i] = new PollSpec(testmsg[i]);
+      try {
+	BasePoll p = pf.createPoll(testmsg[i], ps[i], pollmanager,
+				   idmanager);
+	assertTrue(p instanceof V1Poll);
+	// assertTrue(p.isMyPoll());
+	assertEquals("Poll caller ID is " + p.getCallerID() +
+		   " but message ID is " + testmsg[i].getOriginatorID(),
+		   p.getCallerID(), testmsg[i].getOriginatorID());
+	assertTrue(p.getMessage() == testmsg[i]);
+	assertTrue(p.getPollSpec().equals(ps[i]));
+      } catch (ProtocolException pe) {
+	fail("createPoll " + testmsg[i] + " threw " + pe);
+      }
+    }
+  }
+
+  /** test for V1 method PollFactory.pollShouldBeCalled(..) */
+  public void testV1PollShouldBeCalled() throws Exception {
+    // lets try to run two V1 content polls in the same location
+    PollFactory pf = pollmanager.getPollFactory(1);
+
+   LcapMessage[] sameroot = new LcapMessage[3];
+   PollSpec[] spec = new PollSpec[3];
+   int[] pollType = {
+     Poll.NAME_POLL,
+     Poll.CONTENT_POLL,
+     Poll.VERIFY_POLL,
+   };
+
+   for(int i= 0; i<3; i++) {
+     spec[i] = new MockPollSpec(testau, urlstr, lwrbnd, uprbnd, pollType[i]);
+     sameroot[i] =
+       LcapMessage.makeRequestMsg(spec[i],
+				  testentries,
+				  pollmanager.generateRandomBytes(),
+				  pollmanager.generateRandomBytes(),
+				  LcapMessage.NAME_POLL_REQ + (i * 2),
+				  testduration,
+				  testID);
+   }
+
+   // check content poll conflicts
+   BasePoll c1 = pollmanager.makePoll(sameroot[1]);
+   // differnt content poll should be ok
+
+   assertTrue("different content poll s/b ok",
+	      pf.pollShouldBeCreated(testmsg[1], new PollSpec(testmsg[1]),
+				     pollmanager, idmanager));
+
+   // same content poll same range s/b a conflict
+   assertFalse("same content poll root s/b conflict",
+	       pf.pollShouldBeCreated(sameroot[1], new PollSpec(sameroot[1]),
+				     pollmanager, idmanager));
+
+   // different name poll should be ok
+   assertTrue("different name poll s/b ok",
+	      pf.pollShouldBeCreated(testmsg[0], new PollSpec(testmsg[0]),
+				     pollmanager, idmanager));
+
+   // same name poll s/b conflict
+   assertFalse("same name poll root s/b conflict",
+	       pf.pollShouldBeCreated(sameroot[0], new PollSpec(sameroot[0]),
+				     pollmanager, idmanager));
+
+   // verify poll should be ok
+   assertTrue("verify poll s/b ok",
+	      pf.pollShouldBeCreated(testmsg[2], new PollSpec(testmsg[2]),
+				     pollmanager, idmanager));
+
+   // remove the poll
+   pollmanager.removePoll(c1.m_key);
+  }
+
+  public void testGetPollActivity() {
+    PollFactory pf = pollmanager.getPollFactory(1);
+    assertEquals(pf.getPollActivity(testmsg[0],
+				    new PollSpec(testmsg[0]),
+				    pollmanager),
+		 ActivityRegulator.STANDARD_NAME_POLL);
+    int pa = pf.getPollActivity(testmsg[1],new PollSpec(testmsg[1]),
+				pollmanager);
+    assertTrue(pa == ActivityRegulator.STANDARD_CONTENT_POLL ||
+	       pa == ActivityRegulator.SINGLE_NODE_CONTENT_POLL);
+  }
+
+  // Test for the V1 method PollFactory.calcDuration(...)
+  public void testV1CalcDuration() {
+    MockCachedUrlSet mcus =
+      new MockCachedUrlSet((MockArchivalUnit)testau,
+			   new RangeCachedUrlSetSpec("", "", ""));
+    PollSpec ps = new PollSpec(mcus, Poll.CONTENT_POLL);
+    LocalMockPollManager mpm = new LocalMockPollManager();
+    LocalMockV1PollFactory pf = new LocalMockV1PollFactory();
+    mpm.setPollFactory(1, pf);
+
+    configPollTimes();
+    pf.setBytesPerMsHashEstimate(100);
+    pf.setSlowestHashSpeed(100);
+
+    mcus.setEstimatedHashDuration(100);
+    pf.setMinPollDeadline(Deadline.in(1000));
+    assertEquals(1800, pf.calcDuration(LcapMessage.CONTENT_POLL_REQ, mcus, mpm));
+    pf.setMinPollDeadline(Deadline.in(2000));
+    assertEquals(2400, pf.calcDuration(LcapMessage.CONTENT_POLL_REQ, mcus, mpm));
+    // this one should be limited by max content poll
+    pf.setMinPollDeadline(Deadline.in(4000));
+    assertEquals(4100, pf.calcDuration(LcapMessage.CONTENT_POLL_REQ, mcus, mpm));
+    pf.setMinPollDeadline(Deadline.in(5000));
+    assertEquals(-1, pf.calcDuration(LcapMessage.CONTENT_POLL_REQ, mcus, mpm));
+
+    // calulated poll time will be less than min, should be adjusted up to min
+    mcus.setEstimatedHashDuration(10);
+    pf.setMinPollDeadline(Deadline.in(100));
+    assertEquals(1000, pf.calcDuration(LcapMessage.CONTENT_POLL_REQ, mcus, mpm));
+
+    // name poll duration is randomized so less predictable, but should
+    // always be between min and max.
+    long ndur = pf.calcDuration(LcapMessage.NAME_POLL_REQ, mcus, mpm);
+    assertTrue(ndur >= pf.getMinNamePollDuration());
+    assertTrue(ndur <= pf.getMaxNamePollDuration());
+  }
+
+  public void testV1CanSchedulePoll() {
+    LocalMockPollManager mpm = new LocalMockPollManager();
+    LocalMockV1PollFactory pf = new LocalMockV1PollFactory();
+
+    mpm.setPollFactory(1, pf);
+    // Accept polls that finish no earlier than this
+    pf.setMinPollDeadline(Deadline.in(1000));
+    // this one can't
+    assertFalse(pf.canSchedulePoll(500, 100, mpm));
+    // can
+    assertTrue(pf.canSchedulePoll(2000, 100, mpm));
+    // neededTime > duration
+    assertFalse(pf.canSchedulePoll(500, 600, mpm));
+  }
+
+  //  Now test the PollManager itself
 
   /** test for method makePoll(..) */
   public void testMakePoll() throws Exception {
@@ -110,7 +299,7 @@ public class TestPollManager extends LockssTestCase {
 
     // make a name poll witha bogus plugin version
     MockPollSpec spec =
-      new MockPollSpec(testau, urlstr, lwrbnd, uprbnd);
+      new MockPollSpec(testau, urlstr, lwrbnd, uprbnd, Poll.NAME_POLL);
     spec.setPluginVersion(bogus);
     LcapMessage msg1 =
       LcapMessage.makeRequestMsg(spec,
@@ -145,8 +334,8 @@ public class TestPollManager extends LockssTestCase {
       Plugin plugin = testau.getPlugin();
       cus = plugin.makeCachedUrlSet(testau,
 				    new RangeCachedUrlSetSpec(rooturls[1]));
-      PollSpec spec = new PollSpec(cus, lwrbnd, uprbnd);
-      assertTrue(pollmanager.callPoll(Poll.VERIFY_POLL, spec));
+      PollSpec spec = new PollSpec(cus, lwrbnd, uprbnd, Poll.CONTENT_POLL);
+      assertTrue(pollmanager.callPoll(spec));
     }
     catch (IllegalStateException e) {
       // ignore this for now
@@ -180,59 +369,6 @@ public class TestPollManager extends LockssTestCase {
     }
 
   }
-
-  /** test for method checkForConflicts(..) */
-  public void testCheckForConflicts() throws Exception {
-    // lets try to run two content polls in the same location
-
-   LcapMessage[] sameroot = new LcapMessage[3];
-
-   for(int i= 0; i<3; i++) {
-     PollSpec spec =
-       new MockPollSpec(testau, urlstr, lwrbnd, uprbnd);
-     sameroot[i] =
-       LcapMessage.makeRequestMsg(spec,
-				  testentries,
-				  pollmanager.generateRandomBytes(),
-				  pollmanager.generateRandomBytes(),
-				  LcapMessage.NAME_POLL_REQ + (i * 2),
-				  testduration,
-				  testID);
-   }
-
-   // check content poll conflicts
-   BasePoll c1 = pollmanager.makePoll(sameroot[1]);
-   // differnt content poll should be ok
-
-   CachedUrlSet cus =
-     pollmanager.checkForConflicts(testmsg[1],
-				   makeCachedUrlSet(testmsg[1]));
-   assertNull("different content poll s/b ok", cus);
-
-   // same content poll same range s/b a conflict
-   cus = pollmanager.checkForConflicts(sameroot[1],
-				       makeCachedUrlSet(sameroot[1]));
-   assertNotNull("same content poll root s/b conflict", cus);
-
-   // different name poll should be ok
-   cus = pollmanager.checkForConflicts(testmsg[0],
-				       makeCachedUrlSet(testmsg[0]));
-   assertNull("name poll with different root s/b ok", cus);
-
-   // same name poll s/b conflict
-   cus = pollmanager.checkForConflicts(sameroot[0],
-				       makeCachedUrlSet(sameroot[0]));
-   assertNotNull("same name poll root s/b conflict", cus);
-
-   // verify poll should be ok
-   cus = pollmanager.checkForConflicts(testmsg[2],
-				       makeCachedUrlSet(testmsg[2]));
-   assertNull("verify poll s/b ok", cus);
-
-   // remove the poll
-   pollmanager.removePoll(c1.m_key);
-  }
-
 
   /** test for method closeThePoll(..) */
   public void testCloseThePoll() throws Exception {
@@ -302,84 +438,46 @@ public class TestPollManager extends LockssTestCase {
 
   }
 
-  public void testMockPollManager() {
-    // This ensures that MockPollManager.canHashBeScheduledBefore() does
-    // what I intended
-    MockPollManager mpm = new MockPollManager();
-
-    mpm.setMinPollDeadline(Deadline.in(1000));
-    assertFalse(mpm.canHashBeScheduledBefore(100, Deadline.in(0)));
-    assertTrue(mpm.canHashBeScheduledBefore(100, Deadline.in(1000)));
-    assertTrue(mpm.canHashBeScheduledBefore(100, Deadline.in(1001)));
-
-  }
-
-  public void testCanSchedulePoll() {
-    MockPollManager mpm = new MockPollManager();
-
-    // Accept polls that finish no earlier than this
-    mpm.setMinPollDeadline(Deadline.in(1000));
-    // this one can't
-    assertFalse(mpm.canSchedulePoll(500, 100));
-    // can
-    assertTrue(mpm.canSchedulePoll(2000, 100));
-    // neededTime > duration
-    assertFalse(mpm.canSchedulePoll(500, 600));
-  }
 
   void configPollTimes() {
     Properties p = new Properties();
     addRequiredConfig(p);
-    p.setProperty(PollManager.PARAM_NAMEPOLL_DEADLINE, "10000");
-    p.setProperty(PollManager.PARAM_CONTENTPOLL_MIN, "1000");
-    p.setProperty(PollManager.PARAM_CONTENTPOLL_MAX, "4100");
-    p.setProperty(PollManager.PARAM_QUORUM, "5");
-    p.setProperty(PollManager.PARAM_DURATION_MULTIPLIER_MIN, "3");
-    p.setProperty(PollManager.PARAM_DURATION_MULTIPLIER_MAX, "7");
-    p.setProperty(PollManager.PARAM_NAME_HASH_ESTIMATE, "1s");
+    p.setProperty(V1PollFactory.PARAM_NAMEPOLL_DEADLINE, "10000");
+    p.setProperty(V1PollFactory.PARAM_CONTENTPOLL_MIN, "1000");
+    p.setProperty(V1PollFactory.PARAM_CONTENTPOLL_MAX, "4100");
+    p.setProperty(V1PollFactory.PARAM_QUORUM, "5");
+    p.setProperty(V1PollFactory.PARAM_DURATION_MULTIPLIER_MIN, "3");
+    p.setProperty(V1PollFactory.PARAM_DURATION_MULTIPLIER_MAX, "7");
+    p.setProperty(V1PollFactory.PARAM_NAME_HASH_ESTIMATE, "1s");
     ConfigurationUtil.setCurrentConfigFromProps(p);
   }
 
-  public void testCalcDuration() {
-    MockCachedUrlSet mcus =
-      new MockCachedUrlSet((MockArchivalUnit)testau,
-			   new RangeCachedUrlSetSpec("", "", ""));
-    PollSpec ps = new PollSpec(mcus);
-    MockPollManager mpm = new MockPollManager();
+  //  Local mock classes
 
-    configPollTimes();
-    mpm.setBytesPerMsHashEstimate(100);
-    mpm.setSlowestHashSpeed(100);
-
-    mcus.setEstimatedHashDuration(100);
-    mpm.setMinPollDeadline(Deadline.in(1000));
-    assertEquals(1800, mpm.calcDuration(LcapMessage.CONTENT_POLL_REQ, mcus));
-    mpm.setMinPollDeadline(Deadline.in(2000));
-    assertEquals(2400, mpm.calcDuration(LcapMessage.CONTENT_POLL_REQ, mcus));
-    // this one should be limited by max content poll
-    mpm.setMinPollDeadline(Deadline.in(4000));
-    assertEquals(4100, mpm.calcDuration(LcapMessage.CONTENT_POLL_REQ, mcus));
-    mpm.setMinPollDeadline(Deadline.in(5000));
-    assertEquals(-1, mpm.calcDuration(LcapMessage.CONTENT_POLL_REQ, mcus));
-
-    // calulated poll time will be less than min, should be adjusted up to min
-    mcus.setEstimatedHashDuration(10);
-    mpm.setMinPollDeadline(Deadline.in(100));
-    assertEquals(1000, mpm.calcDuration(LcapMessage.CONTENT_POLL_REQ, mcus));
-
-    // name poll duration is randomized so less predictable, but should
-    // always be between min and max.
-    long ndur = mpm.calcDuration(LcapMessage.NAME_POLL_REQ, mcus);
-    assertTrue(ndur >= mpm.m_minNamePollDuration);
-    assertTrue(ndur <= mpm.m_maxNamePollDuration);
+  // LocalMockPollManager allows us to override the PollFactory
+  // used for a particular protocol,  and to override the
+  // sendMessage() method.
+  static class LocalMockPollManager extends PollManager {
+    LcapMessage msgSent = null;
+    void setPollFactory(int i, PollFactory fact) {
+      pf[i] = fact;
+    }
+    void sendMessage(LcapMessage msg, ArchivalUnit au) throws IOException {
+      msgSent = msg;
+    }
   }
 
-  static class MockPollManager extends PollManager {
+  // LocalMockV1PollFactory allows us to override the
+  // canHashBeScheduledBefore() method and avoid the
+  // complexity of mocking the hasher and scheduler.
+  static class LocalMockV1PollFactory extends V1PollFactory {
     long bytesPerMsHashEstimate = 0;
     long slowestHashSpeed = 0;
     Deadline minPollDeadline = Deadline.EXPIRED;
 
-    boolean canHashBeScheduledBefore(long duration, Deadline when) {
+    boolean canHashBeScheduledBefore(long duration,
+				     Deadline when,
+				     PollManager pm) {
       return !when.before(minPollDeadline);
     }
     void setMinPollDeadline(Deadline when) {
@@ -402,6 +500,7 @@ public class TestPollManager extends LockssTestCase {
   private void initRequiredServices() {
     theDaemon = new MockLockssDaemon();
     pollmanager = theDaemon.getPollManager();
+    idmanager = theDaemon.getIdentityManager();
 
     theDaemon.getPluginManager();
     testau = PollTestPlugin.PTArchivalUnit.createFromListOfRootUrls(rooturls);
@@ -446,14 +545,20 @@ public class TestPollManager extends LockssTestCase {
 
   private void initTestMsg() throws Exception {
     testmsg = new LcapMessage[3];
+    int[] pollType = {
+      Poll.NAME_POLL,
+      Poll.CONTENT_POLL,
+      Poll.VERIFY_POLL,
+    };
 
     for(int i= 0; i<3; i++) {
-      PollSpec spec = new MockPollSpec(testau, rooturls[i], lwrbnd, uprbnd);
+      PollSpec spec = new MockPollSpec(testau, rooturls[i], lwrbnd, uprbnd,
+				       pollType[i]);
       testmsg[i] =
 	LcapMessage.makeRequestMsg(spec,
 				   testentries,
-				   pollmanager.generateRandomBytes(),
-				   pollmanager.generateRandomBytes(),
+				   pollmanager.makeVerifier(testduration),
+				   pollmanager.makeVerifier(testduration),
 				   LcapMessage.NAME_POLL_REQ + (i * 2),
 				   testduration,
 				   testID);

@@ -1,5 +1,5 @@
 /*
- * $Id: ActivityRegulator.java,v 1.35 2004-08-22 02:05:56 tlipkis Exp $
+ * $Id: ActivityRegulator.java,v 1.36 2004-09-16 21:29:15 dshr Exp $
  */
 
 /*
@@ -98,7 +98,7 @@ public class ActivityRegulator
   /**
    * Integer representing no activity. AU or CUS level.
    */
-  static final int NO_ACTIVITY = -1;
+  public static final int NO_ACTIVITY = -1;
 
   private static Logger logger = Logger.getLogger("ActivityRegulator");
 

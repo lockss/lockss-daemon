@@ -1,5 +1,5 @@
 /*
-* $Id: V2Poll.java,v 1.2 2004-07-23 16:44:10 tlipkis Exp $
+* $Id: V2Poll.java,v 1.3 2004-09-16 21:29:16 dshr Exp $
  */
 
 /*
@@ -70,7 +70,7 @@ public abstract class V2Poll extends BasePoll {
                               CONTENT_POLL,
                               m_createTime,
                               msg.getDuration(),
-                              pm.getQuorum(),
+                              0, // XXX
                               msg.getHashAlgorithm());
   }
 

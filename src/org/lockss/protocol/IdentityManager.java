@@ -1,5 +1,5 @@
 /*
-* $Id: IdentityManager.java,v 1.43 2004-09-13 04:02:21 dshr Exp $
+* $Id: IdentityManager.java,v 1.44 2004-09-16 21:29:16 dshr Exp $
  */
 
 /*
@@ -269,7 +269,7 @@ public class IdentityManager
    * @return boolean true if this is the local identity, false otherwise
    */
   public boolean isLocalIdentity(String id) {
-    return (localIdentityStr.compareTo(id) == 0);
+    return (localIdentityStr.equals(id));
   }
 
   /**
