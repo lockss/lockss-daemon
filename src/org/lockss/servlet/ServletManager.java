@@ -1,5 +1,5 @@
 /*
- * $Id: ServletManager.java,v 1.1 2003-03-12 22:15:35 tal Exp $
+ * $Id: ServletManager.java,v 1.2 2003-03-14 01:39:38 tal Exp $
  */
 
 /*
@@ -68,7 +68,7 @@ public class ServletManager extends JettyManager {
    * @see LockssManager#initService(LockssDaemon)
    */
   public void initService(LockssDaemon daemon) throws LockssDaemonException {
-    //    super.initService();
+//     super.initService();
     if (theManager == null) {
       theDaemon = daemon;
       theManager = this;
@@ -152,7 +152,8 @@ public class ServletManager extends JettyManager {
   public void configureDebugServlets() {
     try {
       // Create a context
-      HttpContext context = server.getContext(null, "/debug/*");
+      HttpContext context = server.getContext(null, "/");
+      context.setAttribute("LockssDaemon", theDaemon);
 
       // Create a servlet container
       ServletHandler handler = new ServletHandler();
@@ -160,7 +161,7 @@ public class ServletManager extends JettyManager {
       // Request dump servlet
       handler.addServlet("Dump", "/Dump", "org.mortbay.servlet.Dump");
       // Daemon status servlet
-      handler.addServlet("DaemonStatus", "/Status",
+      handler.addServlet("DaemonStatus", "/DaemonStatus",
 			 "org.lockss.servlet.DaemonStatus");
 
       context.addHttpHandler(handler);

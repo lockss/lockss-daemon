@@ -1,5 +1,5 @@
 // ========================================================================
-// $Id: LockssServlet.java,v 1.1 2003-03-12 22:15:35 tal Exp $
+// $Id: LockssServlet.java,v 1.2 2003-03-14 01:39:38 tal Exp $
 // ========================================================================
 
 /*
@@ -42,6 +42,7 @@ import java.text.*;
 //  import org.mortbay.util.*;
 import org.mortbay.html.*;
 import org.mortbay.tools.*;
+import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 
@@ -70,6 +71,8 @@ public abstract class LockssServlet extends HttpServlet
 
   protected ServletContext context;
   protected static Logger log = Logger.getLogger("LockssServlet");
+
+  private LockssDaemon theDaemon = null;
 
   // Request-local storage.  Convenient, but requires servlet instances
   // to be single threaded, and must ensure reset them to avoid carrying
@@ -563,6 +566,11 @@ public abstract class LockssServlet extends HttpServlet
   public void init(ServletConfig config) throws ServletException {
     super.init(config);
     context = config.getServletContext();
+    theDaemon = (LockssDaemon)context.getAttribute("LockssDaemon");
+  }
+
+  protected LockssDaemon getLockssDaemon() {
+    return theDaemon;
   }
 
   private void logParams() {
