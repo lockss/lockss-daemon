@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.33 2003-01-06 23:18:34 claire Exp $
+* $Id: Poll.java,v 1.34 2003-01-09 01:55:38 aalto Exp $
  */
 
 /*
@@ -55,6 +55,10 @@ import org.lockss.state.NodeManager;
  */
 
 public abstract class Poll implements Serializable {
+  public static final int NAME_POLL = 0;
+  public static final int CONTENT_POLL = 1;
+  public static final int VERIFY_POLL = 2;
+
   static final String PARAM_QUORUM = Configuration.PREFIX + "poll.quorum";
   static final String PARAM_AGREE_VERIFY = Configuration.PREFIX +
       "poll.agreeVerify";
@@ -65,10 +69,10 @@ public abstract class Poll implements Serializable {
   static final int DEFAULT_AGREE_VERIFY = 20;
   static final int DEFAULT_DISAGREE_VERIFY = 90;
 
-  static final int ERR_SCHEDULE_HASH = -1;
-  static final int ERR_HASHING = -2;
-  static final int ERR_NO_QUORUM = -3;
-  static final int ERR_IO = -4;
+  public static final int ERR_SCHEDULE_HASH = -1;
+  public static final int ERR_HASHING = -2;
+  public static final int ERR_NO_QUORUM = -3;
+  public static final int ERR_IO = -4;
 
   static final int PS_INITING = 0;
   static final int PS_WAIT_HASH = 1;
@@ -124,12 +128,12 @@ public abstract class Poll implements Serializable {
     m_msg = msg;
     m_urlSet = urlSet;
 
-    m_createTime = TimeBase.nowMs();
-    m_tally = new VoteTally(msg.getOpcode(),msg.getDuration());
-
-    // now copy the msg elements we need
     m_url = msg.getTargetUrl();
     m_regExp = msg.getRegExp();
+    m_createTime = TimeBase.nowMs();
+    m_tally = new VoteTally(-1, m_url, m_regExp, msg.getDuration());
+
+    // now copy the msg elements we need
     m_arcUnit = m_urlSet.getArchivalUnit();
     m_hashTime = m_urlSet.estimatedHashDuration();
     m_deadline = Deadline.in(msg.getDuration());
@@ -497,6 +501,8 @@ public abstract class Poll implements Serializable {
    */
   public class VoteTally {
     public int type;
+    public String url;           // the url for this poll
+    public String regExp;        // the regular expression for the poll
     public long startTime;
     public long duration;
     public int numAgree;     // The # of votes that agree with us
@@ -510,9 +516,11 @@ public abstract class Poll implements Serializable {
     private Iterator replayIter = null;
     private ArrayList originalVotes = null;
 
-    VoteTally(int type, long startTime, long duration, int numAgree,
+    VoteTally(int type, String url, String regExp, long startTime, long duration, int numAgree,
               int numDisagree, int wtAgree, int wtDisagree) {
       this.type = type;
+      this.url = url;
+      this.regExp = regExp;
       this.startTime = startTime;
       this.duration = duration;
       this.numAgree = numAgree;
@@ -524,8 +532,8 @@ public abstract class Poll implements Serializable {
       hashAlgorithm = m_msg.getHashAlgorithm();
     }
 
-    VoteTally(int type, long duration) {
-      this(type, m_createTime, duration, 0, 0, 0, 0);
+    VoteTally(int type, String url, String regExp, long duration) {
+      this(type, url, regExp, m_createTime, duration, 0, 0, 0, 0);
     }
 
     /**
@@ -540,6 +548,15 @@ public abstract class Poll implements Serializable {
         return (numAgree > numDisagree) && (wtAgree >= wtDisagree);
       }
       return false;
+    }
+
+    /**
+     * Returns true if the poll belongs to this Identity
+     * @return true if this Identity
+     */
+    public boolean isMyPoll() {
+      //XXX fix!
+      return true;
     }
 
     /**

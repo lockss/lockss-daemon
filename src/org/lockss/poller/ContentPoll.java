@@ -1,5 +1,5 @@
 /*
-* $Id: ContentPoll.java,v 1.20 2002-12-17 02:24:00 claire Exp $
+* $Id: ContentPoll.java,v 1.21 2003-01-09 01:55:38 aalto Exp $
  */
 
 /*
@@ -53,6 +53,7 @@ public class ContentPoll extends Poll {
   ContentPoll(LcapMessage msg, CachedUrlSet urlSet, PollManager pm) {
     super(msg, urlSet, pm);
     m_replyOpcode = LcapMessage.CONTENT_POLL_REP;
+    m_tally.type = CONTENT_POLL;
   }
 
 

@@ -1,5 +1,5 @@
 /*
-* $Id: VerifyPoll.java,v 1.24 2003-01-06 23:18:34 claire Exp $
+* $Id: VerifyPoll.java,v 1.25 2003-01-09 01:55:38 aalto Exp $
  */
 
 /*
@@ -53,6 +53,7 @@ class VerifyPoll extends Poll {
     super(msg, urlSet, pm);
     m_replyOpcode = LcapMessage.VERIFY_POLL_REP;
     m_tally.quorum = 1;
+    m_tally.type = VERIFY_POLL;
   }
 
 

@@ -1,5 +1,5 @@
 /*
-* $Id: NamePoll.java,v 1.19 2002-12-17 02:24:00 claire Exp $
+* $Id: NamePoll.java,v 1.20 2003-01-09 01:55:38 aalto Exp $
  */
 
 /*
@@ -49,6 +49,7 @@ public class NamePoll extends Poll {
   public NamePoll(LcapMessage msg, CachedUrlSet urlSet, PollManager pm) {
     super(msg, urlSet, pm);
     m_replyOpcode = LcapMessage.NAME_POLL_REP;
+    m_tally.type = NAME_POLL;
   }
 
 
