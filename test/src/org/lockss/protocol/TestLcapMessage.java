@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapMessage.java,v 1.11 2003-02-20 00:57:28 claire Exp $
+ * $Id: TestLcapMessage.java,v 1.12 2003-02-26 20:38:54 aalto Exp $
  */
 
 /*
@@ -38,13 +38,12 @@ import org.lockss.test.MockCachedUrlSetSpec;
 import java.net.*;
 import java.io.*;
 import java.util.*;
-import junit.framework.TestCase;
 import org.lockss.test.*;
 import gnu.regexp.*;
 import org.lockss.poller.TestPoll;
 
 /** JUnitTest case for class: org.lockss.protocol.Message */
-public class TestLcapMessage extends TestCase {
+public class TestLcapMessage extends LockssTestCase {
 
   private static String urlstr = "http://www.test.org";
   private static byte[] testbytes = {1,2,3,4,5,6,7,8,9,10};
@@ -258,8 +257,6 @@ public class TestLcapMessage extends TestCase {
 
   }
 
-
-  /** Executes the test case */
   public static void main(String[] argv) {
     String[] testCaseList = {TestLcapMessage.class.getName()};
     junit.swingui.TestRunner.main(testCaseList);

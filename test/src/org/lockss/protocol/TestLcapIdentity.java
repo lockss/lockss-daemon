@@ -4,14 +4,13 @@ import java.io.*;
 import java.net.*;
 import java.util.Random;
 import org.mortbay.util.B64Code;
-import junit.framework.TestCase;
 import org.lockss.daemon.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 
 
 /** JUnitTest case for class: org.lockss.protocol.Identity */
-public class TestLcapIdentity extends TestCase {
+public class TestLcapIdentity extends LockssTestCase {
 
   static String fakeIdString = "127.0.0.1";
   static LcapIdentity fakeId = null;
@@ -70,7 +69,9 @@ public class TestLcapIdentity extends TestCase {
     assertTrue(id2.isEqual(id1));
   }
 
-  /** test for method getLocalIdentity(..) */
+  /** test for method getLocalIdentity(..)
+   * @throws IOException
+   */
   public void testGetLocalIdentity() throws IOException {
     String host = "1.2.3.4";
     String prop = "org.lockss.localIPAddress="+host;
@@ -137,7 +138,6 @@ public class TestLcapIdentity extends TestCase {
     assertEquals(duplicates + 1, fakeId.m_duplPackets);
   }
 
-  /** Executes the test case */
   public static void main(String[] argv) {
     String[] testCaseList = {TestLcapIdentity.class.getName()};
     junit.swingui.TestRunner.main(testCaseList);

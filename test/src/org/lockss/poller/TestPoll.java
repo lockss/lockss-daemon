@@ -9,15 +9,13 @@ import org.lockss.hasher.*;
 import org.lockss.plugin.*;
 import org.lockss.protocol.*;
 import org.lockss.util.*;
-import junit.framework.TestCase;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import org.lockss.test.FileUtil;
 import org.lockss.test.*;
 
 /** JUnitTest case for class: org.lockss.poller.Poll */
-public class TestPoll
-    extends TestCase {
+public class TestPoll extends LockssTestCase {
   private static String[] rooturls = {
       "http://www.test.org",
       "http://www.test1.org", "http://www.test2.org"};
@@ -101,7 +99,7 @@ public class TestPoll
   /** tearDown method for test case
    * @throws Exception if removePoll failed
    */
-  protected void tearDown() throws Exception {
+  public void tearDown() throws Exception {
     daemon.getHashService().stopService();
     for (int i = 0; i < 3; i++) {
       pollmanager.removePoll(testpolls[i].m_key);

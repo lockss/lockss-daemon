@@ -1,19 +1,16 @@
 package org.lockss.protocol;
 
-import org.lockss.daemon.Configuration;
-import java.net.UnknownHostException;
-import org.lockss.util.Logger;
-import java.util.Random;
-import junit.framework.TestCase;
-import java.net.InetAddress;
-import org.lockss.daemon.TestConfiguration;
-import org.lockss.util.ListUtil;
-import org.lockss.test.FileUtil;
 import java.io.IOException;
-import org.lockss.test.MockLockssDaemon;
+import java.util.Random;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+import org.lockss.daemon.Configuration;
+import org.lockss.daemon.TestConfiguration;
+import org.lockss.util.*;
+import org.lockss.test.*;
 
 /** JUnitTest case for class: org.lockss.protocol.IdentityManager */
-public class TestIdentityManager extends TestCase {
+public class TestIdentityManager extends LockssTestCase {
   static String fakeIdString = "213.239.33.100";
   static LcapIdentity fakeId = null;
   InetAddress testAddress;
@@ -230,7 +227,6 @@ public class TestIdentityManager extends TestCase {
     }
   }
 
-  /** Executes the test case */
   public static void main(String[] argv) {
     String[] testCaseList = {TestIdentityManager.class.getName()};
     junit.swingui.TestRunner.main(testCaseList);

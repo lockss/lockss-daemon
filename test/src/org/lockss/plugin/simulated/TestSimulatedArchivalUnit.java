@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimulatedArchivalUnit.java,v 1.4 2002-11-23 02:15:32 aalto Exp $
+ * $Id: TestSimulatedArchivalUnit.java,v 1.5 2003-02-26 20:38:54 aalto Exp $
  */
 
 /*
@@ -32,8 +32,8 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.simulated;
 
-import junit.framework.TestCase;
 import org.lockss.daemon.*;
+import org.lockss.test.LockssTestCase;
 
 /**
  * This is the test class for org.lockss.plugin.simulated.SimulatedArchivalUnit
@@ -43,7 +43,7 @@ import org.lockss.daemon.*;
  */
 
 
-public class TestSimulatedArchivalUnit extends TestCase {
+public class TestSimulatedArchivalUnit extends LockssTestCase {
  public TestSimulatedArchivalUnit(String msg) {
     super(msg);
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfiguration.java,v 1.7 2003-02-26 04:36:08 tal Exp $
+ * $Id: TestConfiguration.java,v 1.8 2003-02-26 20:38:54 aalto Exp $
  */
 
 /*
@@ -35,16 +35,14 @@ package org.lockss.daemon;
 import java.util.*;
 import java.io.*;
 import java.net.*;
-import junit.framework.TestCase;
 import org.lockss.util.*;
 import org.lockss.test.*;
-
 
 /**
  * Test class for <code>org.lockss.util.Configuration</code>
  */
 
-public class TestConfiguration extends TestCase {
+public class TestConfiguration extends LockssTestCase {
   public static Class testedClasses[] = {
     org.lockss.daemon.Configuration.class
   };
@@ -55,8 +53,8 @@ public class TestConfiguration extends TestCase {
   }
 
   private static final String c1 = "prop1=12\nprop2=foobar\nprop3=true\n" +
-    "prop5=False\n"; 
-  private static final String c1a = "prop2=xxx\nprop4=yyy\n"; 
+    "prop5=False\n";
+  private static final String c1a = "prop2=xxx\nprop4=yyy\n";
 
   public void testLoad() throws IOException, Configuration.InvalidParam {
     String f = FileUtil.urlOfString(c1);
@@ -112,7 +110,7 @@ public class TestConfiguration extends TestCase {
     "prop.p2=foobar\n" +
     "prop.p3.a=true\n" +
     "prop.p3.b=false\n" +
-    "otherprop.p3.b=foo\n"; 
+    "otherprop.p3.b=foo\n";
 
   private static HashMap m2 = new HashMap();
   static {

@@ -1,5 +1,5 @@
 /*
- * $Id: HashSpeedTest.java,v 1.3 2003-02-24 22:13:43 claire Exp $
+ * $Id: HashSpeedTest.java,v 1.4 2003-02-26 20:38:54 aalto Exp $
  */
 
 /*
@@ -46,6 +46,7 @@ import org.lockss.plugin.*;
 
 public class HashSpeedTest extends LockssTestCase {
   private SimulatedArchivalUnit sau;
+  private MockLockssDaemon theDaemon = new MockLockssDaemon(null);
   private static final int DEFAULT_DURATION = 1000;
   private static final int DEFAULT_BYTESTEP = 1024;
   private static final int DEFAULT_FILESIZE = 3000;
@@ -71,8 +72,12 @@ public class HashSpeedTest extends LockssTestCase {
       } catch (NumberFormatException ex) { }
     }
     test.setUp(duration, byteStep);
-    test.runSelf();
+    test.testRunSelf();
     test.tearDown();
+  }
+
+  public void setUp() throws Exception {
+    this.setUp(DEFAULT_DURATION, DEFAULT_BYTESTEP);
   }
 
   public void setUp(int duration, int byteStep) throws Exception {
@@ -84,9 +89,10 @@ public class HashSpeedTest extends LockssTestCase {
     String s3 = LockssRepositoryImpl.PARAM_CACHE_LOCATION + "=" + tempDirPath;
     TestConfiguration.setCurrentConfigFromUrlList(ListUtil.list(FileUtil.urlOfString(s),
       FileUtil.urlOfString(s2), FileUtil.urlOfString(s3)));
+    theDaemon.getLockssRepository(new MockArchivalUnit());
   }
 
-  public void runSelf() throws Exception {
+  public void testRunSelf() throws Exception {
     createContent();
     crawlContent();
     hashContent();

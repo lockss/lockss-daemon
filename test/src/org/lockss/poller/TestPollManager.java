@@ -10,12 +10,11 @@ import org.lockss.protocol.*;
 import org.lockss.util.*;
 import org.mortbay.util.*;
 import gnu.regexp.*;
-import junit.framework.TestCase;
 import org.lockss.hasher.HashService;
 import org.lockss.test.*;
 
 /** JUnitTest case for class: org.lockss.poller.PollManager */
-public class TestPollManager extends TestCase {
+public class TestPollManager extends LockssTestCase {
 
   private static String[] rooturls = {"http://www.test.org",
     "http://www.test1.org",
@@ -76,8 +75,7 @@ public class TestPollManager extends TestCase {
     }
   }
 
-  /** tearDown method for test case */
-  protected void tearDown() throws Exception {
+  public void tearDown() throws Exception {
     daemon.getHashService().stopService();
     for(int i=0; i<3; i++) {
       pollmanager.removePoll(testmsg[i].getKey());

@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericNameHasher.java,v 1.5 2003-02-25 22:08:34 troberts Exp $
+ * $Id: TestGenericNameHasher.java,v 1.6 2003-02-26 20:38:54 aalto Exp $
  */
 
 /*
@@ -32,7 +32,6 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.hasher;
 
-import junit.framework.TestCase;
 import java.io.*;
 import java.security.*;
 import java.util.*;
@@ -41,7 +40,7 @@ import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 
-public class TestGenericNameHasher extends TestCase {
+public class TestGenericNameHasher extends LockssTestCase {
   private static final char DELIMITER = '\n';
 
   private static final byte IS_NOT_LEAF=0;
