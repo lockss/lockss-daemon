@@ -14,6 +14,8 @@ for (( i=1 ; i<=4 ; i++ )) ; do
        rm -rf cache
        rm -rf history
        rm -rf localA
+       rm -rf config
+       rm -rf lib
        rm test.out
     else
 	kill `cat dpid`

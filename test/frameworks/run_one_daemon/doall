@@ -13,6 +13,7 @@ elif [ "$1" == "clean" ] ; then
     rm -rf history
     rm -rf localA
     rm -rf lib
+    rm -rf config
     rm -f test.out
 else
     kill -9 `cat dpid`
