@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.12 2002-09-05 22:11:21 tal Exp $
+ $Id: build.xml,v 1.13 2002-10-18 18:05:24 claire Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
@@ -296,8 +296,7 @@ in this Software without prior written authorization from Stanford University.
              doctitle="LOCKSS test"
              bottom="Copyright &#169; 2002 Board of Trustees of Leland Stanford Jr. University, all rights reserved.">
 <!--         <fileset dir="${test.src}" includes="**/*.java"/> -->
-       <fileset dir="${test.src}"
-         includes="**/*.java" excludes="**/Test*.java"/>
+       <fileset dir="${test.src}" includes="**/*.java" excludes="**/Test*.java"/>
        <classpath refid="test.compile.classpath" />
     </javadoc>
   </target>
@@ -400,8 +399,8 @@ Test results in ${test.results}
 	    <param name="class" value="${class}" />
 	  </custom>
         </fileset>
-      </batchtest>   
-      <formatter type="plain" usefile="true" />                  
+      </batchtest>
+      <formatter type="plain" usefile="true" />
       <classpath> 
          <path refid="test.run.classpath" />
       </classpath>        

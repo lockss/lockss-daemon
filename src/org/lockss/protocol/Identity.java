@@ -1,5 +1,5 @@
 /*
- * $Id: Identity.java,v 1.1 2002-10-02 15:41:43 claire Exp $
+* $Id: Identity.java,v 1.2 2002-10-18 18:05:24 claire Exp $
  */
 
 /*
@@ -32,6 +32,10 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.protocol;
 
 import java.net.*;
+import java.util.HashMap;
+import org.lockss.util.Logger;
+import java.util.Random;
+import org.mortbay.util.B64Code;
 
 /**
  * quick and dirty wrapper class for a network identity.
@@ -41,18 +45,56 @@ import java.net.*;
  */
 public class Identity {
 
-  private InetAddress m_address;
-  private int m_port;
-  private static Identity theLocalIdentity;
+  protected static final int INITIAL_REPUTATION = 500;
+  protected static final int REPUTATION_NUMERATOR = 1000;
+  protected static final int MAX_REPUTATION_DELTA = 100;
+  protected static final int AGREE_DELTA = 100;
+  protected static final int DISAGREE_DELTA = -150;
+  protected static final int CALL_INTERNAL_DELTA = -100;
+  protected static final int SPOOF_DETECTED = -30;
+  protected static final int REPLAY_DETECTED = -20;
+  protected static final int ATTACK_DETECTED = -500;
+  protected static final int VOTE_NOT_VERIFIED = -30;
+  protected static final int VOTE_VERIFIED = 40;
+  protected static final int VOTE_DISOWNED = -400;
 
-  /**
-   * construct a new Identity from the information found in
-   * a datagram socket
-   * @param socket
-   */
-  Identity(DatagramSocket socket) {
-    m_address = socket.getInetAddress();
-    m_port = socket.getPort();
+  long m_lastActiveTime;
+  long m_lastOpTime;
+  long m_incrPackets;    // Total packets arrived this interval
+  long m_origPackets;    // Unique pkts from this indentity this interval
+  long m_forwPackets;    // Unique pkts forwarded by this identity this interval
+  long m_duplPackets;    // Duplicate packets originated by this identity
+  long m_totalPackets;
+  long m_lastTimeZeroed;
+
+  HashMap m_pktsThisInterval = new HashMap();
+  HashMap m_pktsLastInterval = new HashMap();
+
+  InetAddress m_address;
+  int m_port;
+  int m_reputation;
+  Object m_idKey;
+  static HashMap theIdentities = null; // all known identities
+  static Identity theLocalIdentity;
+  static Logger theLog=Logger.getLogger("Identity",Logger.LEVEL_DEBUG);
+  static Random theRandom = new Random();
+
+
+  Identity(Object idKey)  {
+    m_idKey = idKey;
+    m_reputation = INITIAL_REPUTATION;
+    m_lastActiveTime = 0;
+    m_lastOpTime = 0;
+    m_lastTimeZeroed = 0;
+    m_incrPackets = 0;
+    m_totalPackets = 0;
+    m_origPackets = 0;
+    m_forwPackets = 0;
+    m_duplPackets = 0;
+    if(theIdentities == null) {
+      reloadIdentities();
+    }
+    theIdentities.put(m_idKey, this);
   }
 
   /**
@@ -63,7 +105,31 @@ public class Identity {
   Identity(InetAddress addr, int port) {
     m_address = addr;
     m_port = port;
+    m_idKey = makeIdKey(addr,port);
+    m_reputation = INITIAL_REPUTATION;
+    m_lastActiveTime = 0;
+    m_lastOpTime = 0;
+    m_lastTimeZeroed = 0;
+    m_incrPackets = 0;
+    m_totalPackets = 0;
+    m_origPackets = 0;
+    m_forwPackets = 0;
+    m_duplPackets = 0;
+    if(theIdentities == null) {
+      reloadIdentities();
+    }
+    theIdentities.put(m_idKey, this);
   }
+
+  /**
+   * construct a new Identity from the information found in
+   * a datagram socket
+   * @param socket
+   */
+  Identity(DatagramSocket socket) {
+    this(socket.getInetAddress(),socket.getPort());
+  }
+
 
   /**
    * public constructor for creation of an Identity object
@@ -72,7 +138,7 @@ public class Identity {
    * @return newly constructed <code>Identity<\code>
    */
   public static Identity getIdentity(DatagramSocket socket) {
-    return new Identity(socket);
+    return getIdentity(socket.getInetAddress(), socket.getPort());
   }
 
   /**
@@ -83,7 +149,32 @@ public class Identity {
    * @return a newly constructed Identity
    */
   public static Identity getIdentity(InetAddress addr, int port) {
-    return new Identity(addr,port);
+    Identity ret;
+
+    if(theIdentities == null)  {
+      reloadIdentities();
+    }
+
+    if(addr == null)  {
+      ret = getLocalIdentity();
+    }
+    else  {
+      ret = findIdentity(makeIdKey(addr,port));
+      if(ret == null)  {
+        ret = new Identity(addr, port);
+      }
+    }
+
+    return ret;
+  }
+
+
+  public static Identity findIdentity(Object idKey)  {
+    if(theIdentities == null)  {
+      reloadIdentities();
+    }
+
+    return (Identity) theIdentities.get(idKey);
   }
 
   /**
@@ -100,28 +191,251 @@ public class Identity {
     return theLocalIdentity;
   }
 
-  public boolean isLocalIdentity() {
-    if(theLocalIdentity != null) {
-      return isEqual(theLocalIdentity);
-    }
-    return false;
-  }
-
-  public boolean isEqual(Identity id) {
-    if(m_port == id.getPort()) {
-      if(id.getAddress().equals(m_address)) {
-        return true;
+  /**
+   * get the Identity of the local host
+   * @return
+   */
+  public static Identity getLocalIdentity() {
+    if(theLocalIdentity == null)  {
+      try {
+        theLocalIdentity = new Identity(InetAddress.getLocalHost(), 0);
+      }
+      catch (UnknownHostException ex) {
       }
     }
-    return false;
+    return theLocalIdentity;
   }
 
   // accessor methods
+  /**
+   * return the address of the Identity
+   * @return
+   */
   public InetAddress getAddress() {
     return m_address;
   }
 
+  /**
+   * return the port used by this Identity
+   * @return
+   */
   public int getPort() {
     return m_port;
+  }
+
+  /**
+   * return the current value of this Identity's reputation
+   * @return
+   */
+  public int getReputation() {
+    return m_reputation;
+  }
+
+  /**
+   * return true if this Identity is the same as the local host
+   * @return
+   */
+  public boolean isLocalIdentity() {
+    if(theLocalIdentity == null)  {
+      getLocalIdentity();
+    }
+    return isEqual(theLocalIdentity);
+  }
+
+
+
+  // methods which may need to be overridden
+  /**
+   * return true if two Identity are found to be the same
+   * @param id
+   * @return
+   */
+  public boolean isEqual(Identity id) {
+    String idKey = (String)id.m_idKey;
+
+    return idKey.equals((String)m_idKey);
+  }
+
+  /**
+   * return the identity of the Identity
+   * @return
+   */
+  public String toString() {
+    return (String)m_idKey;
+  }
+
+  /**
+   * return the name of the host as a string
+   * @return
+   */
+  protected String toHost() {
+    return (String)m_idKey;
+  }
+
+  //
+
+  /**
+   * change the reputation by the amount defined for a agree vote
+   */
+  public void agreeWithVote() {
+    changeReputation(AGREE_DELTA);
+  }
+
+  /**
+   * change the reputation by the amount defined for a disagree vote
+   */
+  public void disagreeWithVote() {
+    changeReputation(DISAGREE_DELTA);
+  }
+
+  /**
+   * change the reputation by the amount defined for a internal vote
+   */
+  public void callInternalPoll() {
+    changeReputation(CALL_INTERNAL_DELTA);
+  }
+
+  /**
+   * change the reputation by the amount defined for a spoofed vote
+   */
+  public void spoofDetected() {
+    changeReputation(SPOOF_DETECTED);
+  }
+
+  /**
+   * change the reputation by the amount defined for a replayed vote
+   */
+  public void replayDetected() {
+    if (false)	 {
+      changeReputation(REPLAY_DETECTED);
+    }
+  }
+
+  /**
+   * change the reputation by the amount defined for an attack attempt
+   */
+  public void attackDetected() {
+    changeReputation(ATTACK_DETECTED);
+  }
+
+  /**
+   * change the reputation by the amount defined for a unverified vote
+   */
+  public void voteNotVerify() {
+    changeReputation(VOTE_NOT_VERIFIED);
+  }
+
+  /**
+   * change the reputation by the amount defined for a verify vote
+   */
+  public void voteVerify() {
+    changeReputation(VOTE_VERIFIED);
+  }
+
+  /**
+   * change the reputation by the amount defined for a disowned vote
+   */
+  public void voteDisown() {
+    changeReputation(VOTE_DISOWNED);
+  }
+
+  /**
+   * update the active packet counter
+   * @param NoOp
+   * @param msg
+   */
+  public void rememberActive(boolean NoOp, Message msg) {
+    m_lastActiveTime = System.currentTimeMillis();
+    if (!NoOp) {
+      m_lastOpTime = m_lastActiveTime;
+    }
+    m_incrPackets++;
+    m_totalPackets++;
+    if (msg.getOriginID() == this) {
+      char[] encoded = B64Code.encode(msg.getVerifier());
+
+      String verifier = String.valueOf(encoded);
+      Integer count = (Integer) m_pktsThisInterval.get(verifier);
+      if (count != null) {
+        // We've seen this packet before
+        count = new Integer(count.intValue() + 1);
+      }
+      else {
+        count = new Integer(1);
+      }
+      m_pktsThisInterval.put(verifier, count);
+    }
+  }
+
+  /**
+   * increment the originator packet counter
+   * @param msg
+   */
+  public void rememberValidOriginator(Message msg) {
+    m_origPackets++;
+  }
+
+  /**
+   * increment the forwarded packet counter
+   * @param msg
+   */
+  public void rememberValidForward(Message msg) {
+    m_forwPackets++;
+  }
+
+  /**
+   * increment the duplicate packet counter
+   * @param msg
+   */
+  public void rememberDuplicate(Message msg) {
+    m_duplPackets++;
+  }
+
+  static void storeIdentities()  {
+    // XXX store our identities here
+  }
+  static void reloadIdentities()  {
+    // XXX load our saved Ids here
+    theIdentities = new HashMap();
+  }
+
+  /**
+   * update the reputation value for this Identity
+   * @param delta the change in reputation
+   */
+  void changeReputation(int delta) {
+    if (this == theLocalIdentity) {
+      theLog.debug(m_idKey + " ignoring reputation delta " + delta);
+      return;
+    }
+
+    delta = (int) (((float) delta) * theRandom.nextFloat());
+    if (delta > 0) {
+      if (delta > MAX_REPUTATION_DELTA) {
+        delta = MAX_REPUTATION_DELTA;
+
+      }
+      if (delta > (REPUTATION_NUMERATOR - m_reputation)) {
+        delta = (REPUTATION_NUMERATOR - m_reputation);
+
+      }
+    }
+    else if (delta < 0) {
+      if (delta < (-MAX_REPUTATION_DELTA)) {
+        delta = -MAX_REPUTATION_DELTA;
+      }
+      if ((m_reputation + delta) < 0) {
+        delta = -m_reputation;
+      }
+    }
+    if (delta != 0)
+      theLog.debug(m_idKey +" change reputation from " + m_reputation +
+                   " to " + (m_reputation + delta));
+    m_reputation += delta;
+  }
+
+  static Object makeIdKey(InetAddress addr, int port)  {
+    // we ignore port for now and just use addr
+    return addr.getHostAddress();
   }
 }

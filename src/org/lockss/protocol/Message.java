@@ -1,5 +1,5 @@
 /*
-* $Id: Message.java,v 1.2 2002-10-06 00:19:01 claire Exp $
+* $Id: Message.java,v 1.3 2002-10-18 18:05:24 claire Exp $
  */
 
 /*
@@ -32,12 +32,18 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.protocol;
 
-import java.io.*;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+import java.security.MessageDigest;
+import java.util.Arrays;
+import java.util.StringTokenizer;
 import org.lockss.util.EncodedProperty;
 import org.lockss.util.Logger;
-import java.net.*;
-import java.security.*;
-import java.util.*;
+import java.io.IOException;
+import java.io.DataInputStream;
+import java.io.ByteArrayInputStream;
+import java.io.DataOutputStream;
+import java.io.ByteArrayOutputStream;
 
 
 /**
@@ -396,6 +402,10 @@ public class Message {
     return (m_opcode % 2 == 1) ? true : false;
   }
 
+  public boolean isLocal() {
+	return (Identity.getLocalIdentity().equals(m_originID));
+
+  }
 
   /* methods to support data access */
   public long getStartTime() {
