@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireCachedUrl.java,v 1.6 2003-09-02 20:35:17 troberts Exp $
+ * $Id: HighWireCachedUrl.java,v 1.6.2.1 2003-09-05 22:49:30 troberts Exp $
  */
 
 /*
@@ -63,6 +63,7 @@ public class HighWireCachedUrl extends GenericFileCachedUrl {
       logger.debug2("Filtering "+url);
       List tagList =
 	ListUtil.list(
+		      new HtmlTagFilter.TagPair("<script", "</script>", true),
 		      new HtmlTagFilter.TagPair("<table", "</table>", true),
 		      new HtmlTagFilter.TagPair("This article has been cited by",
 						" other articles:", true),
