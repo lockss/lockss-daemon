@@ -1,5 +1,5 @@
 /*
- * $Id: TestTimerQueue.java,v 1.1 2002-11-20 23:33:56 tal Exp $
+ * $Id: TestTimerQueue.java,v 1.2 2002-12-06 19:29:32 tal Exp $
  */
 
 /*
@@ -56,18 +56,47 @@ public class TestTimerQueue extends LockssTestCase {
     super(msg);
   }
 
-  int cnt = 0;
+
+  public void setUp() {
+    TimeBase.setSimulated();
+  }
+
+  public void tearDown() {
+    TimeBase.setReal();
+  }
+
 
   public void testQueue() {
+    final List l = new ArrayList();
+    TimerQueue.Callback cb = new TimerQueue.Callback() {
+	public void timerExpired(Object cookie) {
+	  l.add(cookie);
+	}};
+    TimerQueue.schedule(Deadline.in(500), cb, "foo");
+    assertEquals(0, l.size());
+    TimerQueue.schedule(Deadline.in(300), cb, "bar");
+    assertEquals(0, l.size());
+    TimeBase.step(501);
+    TimerUtil.guaranteedSleep(10);
+    assertEquals(ListUtil.list("bar", "foo"), l);
+  }
+
+  public void testExpire() {
+    final List l = new ArrayList();
     Deadline d1 = Deadline.in(500);
-    TimerQueue.schedule(d1,
-			new TimerQueue.Callback() {
-			  public void timerExpired(Object cookie) {
-			    cnt++;
-			  }},
-			"foo");
-    assertEquals(0, cnt);
-    TimerUtil.guaranteedSleep(550);
-    assertEquals(1, cnt);
+    TimerQueue.Callback cb = new TimerQueue.Callback() {
+	public void timerExpired(Object cookie) {
+	  l.add(cookie);
+	}};
+    TimerQueue.schedule(d1, cb, "foo");
+    assertEquals(0, l.size());
+    TimerQueue.schedule(Deadline.in(300), cb, "bar");
+    assertEquals(0, l.size());
+    d1.expire();
+    TimerUtil.guaranteedSleep(10);
+    assertEquals(ListUtil.list("foo"), l);
+    TimeBase.step(501);
+    TimerUtil.guaranteedSleep(10);
+    assertEquals(ListUtil.list("foo", "bar"), l);
   }
 }
