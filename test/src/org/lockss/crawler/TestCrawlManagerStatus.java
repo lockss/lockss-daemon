@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerStatus.java,v 1.13 2004-10-13 06:21:28 tlipkis Exp $
+ * $Id: TestCrawlManagerStatus.java,v 1.14 2005-01-08 00:47:05 troberts Exp $
  */
 
 /*
@@ -70,6 +70,8 @@ public class TestCrawlManagerStatus extends LockssTestCase {
 				       ColumnDescriptor.TYPE_DATE),
 		  new ColumnDescriptor(END_TIME_COL_NAME, "End Time",
 				       ColumnDescriptor.TYPE_DATE),
+		  new ColumnDescriptor(CRAWL_STATUS, "Crawl Status",
+				       ColumnDescriptor.TYPE_STRING),
 		  new ColumnDescriptor(NUM_URLS_PARSED, "Parsed",
 				       ColumnDescriptor.TYPE_INT),
 		  new ColumnDescriptor(NUM_URLS_FETCHED, "Fetched",
@@ -77,8 +79,6 @@ public class TestCrawlManagerStatus extends LockssTestCase {
 		  new ColumnDescriptor(NUM_URLS_NOT_MODIFIED, "Not Modified ",
 				       ColumnDescriptor.TYPE_INT),
 		  new ColumnDescriptor(START_URLS, "starting url",
-				       ColumnDescriptor.TYPE_STRING),
-		  new ColumnDescriptor(CRAWL_STATUS, "Crawl Status",
 				       ColumnDescriptor.TYPE_STRING)
 		  );
 
@@ -254,6 +254,7 @@ public class TestCrawlManagerStatus extends LockssTestCase {
     map = (Map)rows.get(2);
     assertEquals(STATUS_ERROR, map.get(CRAWL_STATUS));
   }
+
 
   public void testSortOrder() {
     StatusTable table = new StatusTable("test");

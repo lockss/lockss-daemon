@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatus.java,v 1.18 2004-10-21 00:34:29 dcfok Exp $
+ * $Id: CrawlManagerStatus.java,v 1.19 2005-01-08 00:47:05 troberts Exp $
  */
 
 /*
@@ -51,15 +51,6 @@ public class CrawlManagerStatus implements StatusAccessor {
   private static final String START_URLS = "start_urls";
   private static final String CRAWL_STATUS = "crawl_status";
 
-//   public static final String INCOMPLETE_STRING = "Active";
-//   public static final String SUCCESSFUL_STRING = "Successful";
-//   public static final String ERROR_STRING = "Error";
-//   public static final String FETCH_ERROR_STRING = "Fetch error";
-//   public static final String PUB_PERMISSION_STRING =
-//     "No permission from publisher";
-//   public static final String WINDOW_CLOSED_STRING = "Crawl window closed";
-//   public static final String UNKNOWN_STRING = "Unknown";
-
   private List sortRules = null;
 
   private List colDescs =
@@ -73,6 +64,8 @@ public class CrawlManagerStatus implements StatusAccessor {
 				       ColumnDescriptor.TYPE_DATE),
 		  new ColumnDescriptor(END_TIME_COL_NAME, "End Time",
 				       ColumnDescriptor.TYPE_DATE),
+		  new ColumnDescriptor(CRAWL_STATUS, "Crawl Status",
+				       ColumnDescriptor.TYPE_STRING),
 		  new ColumnDescriptor(NUM_URLS_PARSED, "Parsed",
 				       ColumnDescriptor.TYPE_INT),
 		  new ColumnDescriptor(NUM_URLS_FETCHED, "Fetched",
@@ -80,8 +73,6 @@ public class CrawlManagerStatus implements StatusAccessor {
 		  new ColumnDescriptor(NUM_URLS_NOT_MODIFIED, "Not Modified ",
 				       ColumnDescriptor.TYPE_INT),
 		  new ColumnDescriptor(START_URLS, "starting url",
-				       ColumnDescriptor.TYPE_STRING),
-		  new ColumnDescriptor(CRAWL_STATUS, "Crawl Status",
 				       ColumnDescriptor.TYPE_STRING)
 		  );
 
@@ -113,7 +104,7 @@ public class CrawlManagerStatus implements StatusAccessor {
     return rows;
   }
 
-  public void addCrawls(String key, List rows, boolean includeInternalAus) {
+  private void addCrawls(String key, List rows, boolean includeInternalAus) {
     Collection crawls = statusSource.getCrawlStatus(key);
     if (crawls != null) {
       for (Iterator it = crawls.iterator(); it.hasNext();) {
@@ -129,6 +120,8 @@ public class CrawlManagerStatus implements StatusAccessor {
 
   private List getAllCrawls(boolean includeInternalAus) {
     Collection aus = statusSource.getActiveAus();
+
+
     List crawls = new ArrayList();
     if (aus != null) {
       for (Iterator it = aus.iterator(); it.hasNext();) {
@@ -170,21 +163,6 @@ public class CrawlManagerStatus implements StatusAccessor {
     return row;
   }
 
-//   private Map makeRow(String type, Crawler crawler) {
-//     Map row = new HashMap();
-//     ArchivalUnit au = crawler.getAu();
-//     row.put(AU_COL_NAME, au.getName());
-//     row.put(CRAWL_TYPE, type);
-//     row.put(START_TIME_COL_NAME, new Long(crawler.getStartTime()));
-//     row.put(END_TIME_COL_NAME, new Long(crawler.getEndTime()));
-//     row.put(NUM_URLS_FETCHED, new Long(crawler.getNumFetched()));
-//     row.put(NUM_URLS_PARSED, new Long(crawler.getNumParsed()));
-//     row.put(START_URLS,
-//	    (StringUtil.separatedString(crawler.getStartUrls(), "\n")));
-//     row.put(CRAWL_STATUS, statusToString(crawler.getStatus()));
-//     return row;
-//   }
-
   public boolean requiresKey() {
     return false;
   }
@@ -213,23 +191,4 @@ public class CrawlManagerStatus implements StatusAccessor {
     }
     return sortRules;
   }
-
-//   private String statusToString(int status) {
-//     switch (status) {
-//     case Crawler.STATUS_SUCCESSFUL :
-//       return SUCCESSFUL_STRING;
-//     case Crawler.STATUS_INCOMPLETE :
-//       return INCOMPLETE_STRING;
-//     case Crawler.STATUS_ERROR :
-//       return ERROR_STRING;
-//     case Crawler.STATUS_FETCH_ERROR :
-//       return FETCH_ERROR_STRING;
-//     case Crawler.STATUS_PUB_PERMISSION :
-//       return PUB_PERMISSION_STRING;
-//     case Crawler.STATUS_WINDOW_CLOSED :
-//       return WINDOW_CLOSED_STRING;
-//     default :
-//       return UNKNOWN_STRING;
-//     }
-//   }
 }
