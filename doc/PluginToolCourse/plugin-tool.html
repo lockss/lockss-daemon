@@ -669,12 +669,36 @@ Reviewing this rather long list, it appears that the crawl rules are
 now including and excluding the correct files. Note that among the
 files included are programs for Windows and the Mac, .gif and .jpg
 images and .wrl files.<br>
+<h4>Article-ID Journal Structure</h4>
 <br>
+XXX need example - words without borders isn't a good example XXX<br>
 <h4>Archival Unit Design</h4>
+Its a year unless the journal has volumes in which case its a
+volume.&nbsp; If its a year the manifest URL should be
+&lt;base_url&gt;lockss-&lt;year&gt;.html,&nbsp; if its a volume it
+should be &lt;base_url&gt;lockss-volume&lt;volume&gt;.html NB just a
+suggestion.&nbsp; Work with publisher's existing division.&nbsp; Goal
+is manageable units not more that a year at a time.<br>
+<br>
+Platforms with multiple journals.&nbsp; E.q. Project Muse. Two cases:<br>
+HW - different base_url<br>
+Muse - journal directory<br>
+<br>
 XXX need an example of a complex AU design XXX<br>
 XXX what principles to apply and what parameters to choose? XXX<br>
 <h4>Crawl Rule Design</h4>
+Guidelines:<br>
+- If you have a good tree structure work with it to exclude everything
+not under issue directory example EMLS<br>
+- If flat but not parameter include everything explicitly examplke
+Disputatio<br>
+- If parameter includes vol or year exclude everything that doesn't
+match it. XXX need example - BePress?<br>
 XXX need an example of complex crawl rules and principles behind them
+XXX<br>
+<br>
+Your Own Example<br>
+<br>
 XXX<br>
 <h4>What are the plugin generator's limits?</h4>
 The plugin generation tool has limitations; the plugins for many more
@@ -698,7 +722,9 @@ dynamic content to the otherwise static pages. The LOCKSS daemon must <span
  style="font-style: italic;">filter</span> the pages of these journals
 to remove the additions before comparing them with the same pages at
 other caches, which will have received different advertisements, etc.
-Filtering requires the use of special filter classes.</li>
+Filtering requires the use of special filter classes and the tool
+support for these is incomplete.<br>
+  </li>
   <li>Some journals experience massive spikes of reader interest
 immediately a new issue is published. They typically want LOCKSS not to
 crawl during these predictable periods of high load, and the LOCKSS
@@ -711,7 +737,9 @@ these error pages and re-map them to be conventional errors.</li>
   <li>Some journals have sophisticated access control methods or
 crawler traps to prevent theft of their valuable content.</li>
   <li>Some journals have media types for which LOCKSS support is not
-yet available. Examples are Real Audio, XXX.</li>
+yet available, for example streaming media. In some cases, such as Real
+Audio, LOCKSS does support non-streamed versions but this again is
+beyond the tool's current capability.</li>
 </ul>
 <h4><a name="ExpertMode"></a>Using Expert Mode</h4>
 Selecting expert mode in the Plug-in Menu will bring up the remaining
