@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuProxy.java,v 1.1 2004-01-04 06:16:29 tlipkis Exp $
+ * $Id: TestAuProxy.java,v 1.2 2004-01-08 22:43:29 tlipkis Exp $
  */
 
 /*
@@ -48,15 +48,15 @@ public class TestAuProxy extends LockssTestCase {
 
   MockLockssDaemon daemon;
   MockRemoteApi mrapi;
-  AuProxy proxy;
+  MockArchivalUnit mau;
 
   public void setUp() throws Exception {
     super.setUp();
-
     daemon = getMockLockssDaemon();
     mrapi = new MockRemoteApi();
     daemon.setRemoteApi(mrapi);
     daemon.setDaemonInited(true);
+    mau = new MockArchivalUnit();
   }
 
   public void tearDown() throws Exception {
@@ -66,7 +66,6 @@ public class TestAuProxy extends LockssTestCase {
 
   public void testConstructFromId()
       throws AuProxy.NoSuchAU {
-    MockArchivalUnit mau = new MockArchivalUnit();
     mrapi.setAuFromId("idid", mau);
     AuProxy aup = new AuProxy("idid", mrapi);
     assertSame(mau, aup.getAu());
@@ -78,6 +77,11 @@ public class TestAuProxy extends LockssTestCase {
       fail("Failed to throw AuProxy.NoSuchAU");
     } catch (AuProxy.NoSuchAU e) {
     }
+  }
+
+  public void testIsActiveAu() {
+    AuProxy aup = new AuProxy(mau, mrapi);
+    assertTrue(aup.isActiveAu());
   }
 
   class MockRemoteApi extends RemoteApi {

@@ -1,5 +1,5 @@
 /*
- * $Id: AuProxy.java,v 1.1 2004-01-04 06:16:29 tlipkis Exp $
+ * $Id: AuProxy.java,v 1.2 2004-01-08 22:43:30 tlipkis Exp $
  */
 
 /*
@@ -51,6 +51,10 @@ public class AuProxy {
   AuProxy(ArchivalUnit au, RemoteApi remoteApi) {
     this.remoteApi = remoteApi;
     this.au = au;
+  }
+
+  AuProxy(RemoteApi remoteApi) {
+    this.remoteApi = remoteApi;
   }
 
   /** Create an AuProxy for the AU with the given ID.
@@ -116,5 +120,13 @@ public class AuProxy {
     public NoSuchAU(String msg) {
       super(msg);
     }
+  }
+
+  protected RemoteApi getRemoteApi() {
+    return remoteApi;
+  }
+
+  public boolean isActiveAu() {
+    return true;
   }
 }
