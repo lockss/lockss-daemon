@@ -1,5 +1,5 @@
 /*
- * $Id: TaskRunner.java,v 1.3.2.1 2003-11-17 22:50:43 tlipkis Exp $
+ * $Id: TaskRunner.java,v 1.3.2.2 2003-11-18 01:19:25 tlipkis Exp $
  */
 
 /*
@@ -250,7 +250,24 @@ class TaskRunner implements Serializable {
     if (currentSchedule == null) {
       return Collections.EMPTY_LIST;
     }
-    return new ArrayList(currentSchedule.getEvents());
+    List events = currentSchedule.getEvents();
+    List res = new ArrayList(events.size());
+    for (Iterator iter = events.iterator(); iter.hasNext();) {
+      Schedule.Event event = (Schedule.Event)iter.next();
+      // tk - hack to prevent finish event of already finished background
+      // tasks, or redundant start events, from appearing in queue display.
+      if (event.isBackgroundEvent()) {
+	Schedule.BackgroundEvent be = (Schedule.BackgroundEvent)event;
+	BackgroundTask bt = be.getTask();
+	if (event.isTaskFinished() ||
+	    (be.getType() == Schedule.EventType.START &&
+	     backgroundTasks.contains(bt))) {
+	  continue;
+	}
+      }
+      res.add(event);
+    }
+    return res;
   }
 
   boolean isIdle() {
@@ -553,6 +570,7 @@ class TaskRunner implements Serializable {
     long statsStartTime = TimeBase.nowMs();
 
     task.setStarted();
+    task.setStepping(true);
     try {
        // step until reach deadline, or told to stop
        while (continueStepping.booleanValue() && !until.expired()) {
@@ -596,6 +614,7 @@ class TaskRunner implements Serializable {
     }
     totalTime += timeDelta;
     task.updateStats();
+    task.setStepping(false);
 
     if (runningChunk != null) {
       if (runningChunk.getFinish().expired() || task.isFinished()) {
@@ -705,9 +724,7 @@ class TaskRunner implements Serializable {
       for (ListIterator iter = getSchedSnapshot().listIterator();
 	   iter.hasNext();) {
 	Schedule.Event event = getDisplayEvent(iter);
-	// tk - hack to prevent finish event of already finished background
-	// tasks from appearing in queue.
-	if (!event.isTaskFinished()) {
+	if (event != null) {
 	  table.add(makeRow(event, ix++));
 	}
       }
@@ -828,7 +845,7 @@ class TaskRunner implements Serializable {
 					  ColumnDescriptor.TYPE_TIME_INTERVAL,
 					  new Long(totalTime)));
       if (!overrunTasks.isEmpty()) {
-	res.add(new StatusTable.SummaryInfo("Overrun foreground tasks",
+	res.add(new StatusTable.SummaryInfo("Active overrun tasks",
 					    ColumnDescriptor.TYPE_INT,
 					    new Long(overrunTasks.size())));
       }

@@ -1,5 +1,5 @@
 /*
- * $Id: StepTask.java,v 1.1 2003-11-11 20:29:45 tlipkis Exp $
+ * $Id: StepTask.java,v 1.1.2.1 2003-11-18 01:19:25 tlipkis Exp $
  */
 
 /*
@@ -44,6 +44,7 @@ import org.lockss.util.*;
  * @see StepperTask
  */
 public abstract class StepTask extends SchedulableTask {
+  private boolean isStepping = false;
 
   public StepTask(Deadline earliestStart,
 		  Deadline latestFinish,
@@ -61,6 +62,14 @@ public abstract class StepTask extends SchedulableTask {
   abstract public int step(int n);
 
   //  abstract public boolean isFinished();
+
+  void setStepping(boolean val) {
+    isStepping = val;
+  }
+
+  public boolean isStepping() {
+    return isStepping;
+  }
 
   public String toString() {
     StringBuffer sb = new StringBuffer();
