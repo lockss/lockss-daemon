@@ -1,5 +1,5 @@
 /*
- * $Id: TestOaiHandler.java,v 1.2 2005-02-15 02:08:39 dcfok Exp $
+ * $Id: TestOaiHandler.java,v 1.3 2005-02-19 01:18:08 dcfok Exp $
  */
 
 /*
@@ -55,8 +55,8 @@ import org.lockss.oai.OaiHandler.OaiResponseErrorException;
  */
 public class TestOaiHandler extends LockssTestCase {
 
+  protected static Logger logger = Logger.getLogger("TestOaiHandler");
   private OaiRequestData oaiData;
-  
   private String handler = "http://www.foo.com/handler";
   private String ns = "ns";
   private String tag = "tag";
@@ -75,37 +75,55 @@ public class TestOaiHandler extends LockssTestCase {
     oaiData = new OaiRequestData( handler, ns, tag, setSpec, prefix );
   }
 
-  public void testNullParameter(){
-    try {
-      oaiHandler = new OaiHandler( (OaiRequestData) null, fromDate, untilDate, retries);
-      fail("OaiHandler with null OaiRequestData should throw");
-    } catch (NullPointerException e) { }
-    try {
-      oaiHandler = new OaiHandler( oaiData , (String) null , untilDate, retries);
-      fail("OaiHandler with null fromDate should throw");
-    } catch (NullPointerException e) { }
-    try {
-      oaiHandler = new OaiHandler( oaiData , fromDate , (String) null, retries);
-      fail("OaiHandler with null untilDate should throw");
-    } catch (NullPointerException e) { }    
+//   public void testNullParameter(){
+//     try {
+//       oaiHandler = new OaiHandler( (OaiRequestData) null, fromDate, untilDate, retries);
+//       fail("OaiHandler with null OaiRequestData should throw");
+//     } catch (NullPointerException e) { }
+//     try {
+//       oaiHandler = new OaiHandler( oaiData , (String) null , untilDate, retries);
+//       fail("OaiHandler with null fromDate should throw");
+//     } catch (NullPointerException e) { }
+//     try {
+//       oaiHandler = new OaiHandler( oaiData , fromDate , (String) null, retries);
+//       fail("OaiHandler with null untilDate should throw");
+//     } catch (NullPointerException e) { }    
   
-  }
+//   }
 
-  /** XXX 2 things particular need to test in OaiHandler 
-   * getErrors()
+  /** XXX things particular need to test in OaiHandler
+   * issueRequest()
+   * processResponse()
+   * getErrors() with sth other than badResumptionToken
+   * getErrors() with badResumptionToken
    * getUpdatedUrls()
    *
    */
 
 
   public void testGetErrorMockListRecords(){
-    oaiHandler =  new MyMockOaiHandler( oaiData, fromDate, untilDate, retries);
+    oaiHandler =  new MyMockOaiHandler();
+    //build an element contain the error information
+    try {
+      Document doc = XmlDomBuilder.createDocument();    
+      Element elm = (Element) doc.createElement("error");
+      elm.setAttribute("code", "badArgument");
+      elm.appendChild( doc.createTextNode("This is an error statement") );
+      ((MyMockOaiHandler)oaiHandler).setErrors(elm);
+    } catch (XmlDomException xde) {
+      logger.error("error when creating a Document", xde);
+    } 
+    
+    oaiHandler.issueRequest(oaiData, fromDate, untilDate);
+    oaiHandler.processResponse(retries);
+
     List errList = oaiHandler.getErrors();
     String errMsg = ((OaiResponseErrorException) errList.get(0)).getMessage();
     String expectedErrMsg = "badArgument : This is an error statement";
     assertEquals(expectedErrMsg, errMsg);
-    //    System.out.println(errMsg);
   }
+
+  
 
   /**
    * there are 4 parts in the OaiHandler
@@ -127,17 +145,29 @@ public class TestOaiHandler extends LockssTestCase {
   // MockOaiHandler class to test listRecords.getErrors()
   private class MyMockOaiHandler extends OaiHandler {
 
-  
-    public MyMockOaiHandler(OaiRequestData oaiData, String fromDate, String untilDate, int retries ){
-      super(oaiData, fromDate, untilDate, retries);    
+    Element errElm = null;
+
+    public MyMockOaiHandler(){
+      super();
+    }
+
+    public void setErrors(Element elm) {
+      errElm = elm;
     }
     
-    protected ListRecords createListRecords(
-	     OaiRequestData oaiData, String fromDate, String untilDate) {
+    public ListRecords issueRequest(
+      OaiRequestData oaiData, String fromDate, String untilDate) {
+      
+      // do not check if oaiData == null, it is taken care in OaiRequestData constructor
+      if (fromDate == null) {
+	throw new NullPointerException("Called with null fromDate");
+      } else if (untilDate == null) {
+	throw new NullPointerException("Called with null untilDate");
+      }
+    
       String baseUrl = oaiData.getOaiRequestHandlerUrl();
       String setSpec = oaiData.getAuSetSpec();
       String metadataPrefix = oaiData.getMetadataPrefix();  
-      ListRecords listRecords = null;
       
       // the query string that send to OAI repository
       queryString = baseUrl + "?verb=ListRecords&from=" + fromDate + "&until=" +
@@ -148,13 +178,15 @@ public class TestOaiHandler extends LockssTestCase {
 				      metadataPrefix);
 
 	//build an element contain the error information
-	Document doc = XmlDomBuilder.createDocument();
-	Element elm = (Element) doc.createElement("error");
-	elm.setAttribute("code", "badArgument");
-	elm.appendChild( doc.createTextNode("This is an error statement") );
-	((MockListRecords)listRecords).setErrors(elm);
-      } catch (XmlDomException xde) {
-	logError("error when creating a Document", xde);
+// 	Document doc = XmlDomBuilder.createDocument();
+// 	errElm = (Element) doc.createElement("error");
+// 	errElm.setAttribute("code", "badArgument");
+// 	errElm.appendChild( doc.createTextNode("This is an error statement") );
+	if (errElm != null) {
+	  ((MockListRecords)listRecords).setErrors(errElm);
+	}
+//       } catch (XmlDomException xde) {
+// 	logError("error when creating a Document", xde);
       } catch (IOException ioe) {
 	logError("In createListRecords calling new ListRecords", ioe);
       } catch (ParserConfigurationException pce) {

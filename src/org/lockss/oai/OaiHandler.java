@@ -1,5 +1,5 @@
 /*
- * $Id: OaiHandler.java,v 1.4 2005-02-02 09:42:44 tlipkis Exp $
+ * $Id: OaiHandler.java,v 1.5 2005-02-19 01:18:08 dcfok Exp $
  */
 
 /*
@@ -66,10 +66,10 @@ public class OaiHandler {
 
   protected static Logger logger = Logger.getLogger("OaiHandler");
   private Set updatedUrls = new HashSet();
-  protected String queryString = null;
-  //private ListRecords listRecords = null;
+  protected String queryString;
+  protected ListRecords listRecords;
   private String baseUrl;
-  private int retries = 0;
+  private int retries;
   private int maxRetries;
   private OaiRequestData oaiData;
   private String fromDate;
@@ -88,26 +88,42 @@ public class OaiHandler {
    * @param untilDate create date of records the Oai request want until
    * @param maxRetries retry limit of oai request when retriable error is encountered
    */
-  public OaiHandler(OaiRequestData oaiData, 
-		    String fromDate, 
-		    String untilDate, 
-		    int maxRetries) {
+//   public OaiHandler(OaiRequestData oaiData, 
+// 		    String fromDate, 
+// 		    String untilDate, 
+// 		    int maxRetries) {
 
-    if (fromDate == null) {
-      throw new NullPointerException("Called with null fromDate");
-    } else if (untilDate == null) {
-      throw new NullPointerException("Called with null untilDate");
-    }
+//     if (fromDate == null) {
+//       throw new NullPointerException("Called with null fromDate");
+//     } else if (untilDate == null) {
+//       throw new NullPointerException("Called with null untilDate");
+//     }
     
-    this.oaiData = oaiData;
-    this.fromDate = fromDate;
-    this.untilDate = untilDate;
-    this.maxRetries = maxRetries;
+//     this.oaiData = oaiData;
+//     this.fromDate = fromDate;
+//     this.untilDate = untilDate;
+//     this.maxRetries = maxRetries;
 
-    ListRecords lr = createListRecords(oaiData, fromDate, untilDate);
-    processListRecords(lr);
-  }
+//     //XXX need to remove this from the constructor and have the outside make
+//     // a function call explicitly.
+//     // make it to sth like
+//     // constructor (with the oai requset setup)
+//     // issueRequest (really make a request to the repository)
+//     // processResult 
+
+//     ListRecords lr = issueOaiRequest(oaiData, fromDate, untilDate);
+//     processListRecords(lr);
+//   }
   
+  public OaiHandler(){
+    retries = 0;
+    oaiData = null;
+    fromDate = null;
+    untilDate = null;
+    listRecords = null;
+    queryString = null;
+  }
+
   /**
    * Read varies things off the ListRecords
    * 1. check for error in creating ListRecords
@@ -116,7 +132,14 @@ public class OaiHandler {
    * 
    * @param listRecords the ListRecords object need to be processed
    */
-  protected void processListRecords(ListRecords listRecords){
+  public void processResponse(int maxRetries){
+    if (listRecords == null){
+      logger.error("Make sure OaiHandler.issueRequest() is executed");
+      return;
+    } 
+    if (maxRetries < 0){
+      logger.warning("maxRetries is a negative number");
+    }
 
     nextListRecords:
     while (listRecords != null) {
@@ -148,7 +171,7 @@ public class OaiHandler {
 	  } else if (errCode == "badResumptionToken") {
 	    if ( retries < maxRetries) {
 	      logger.info("badResumptionToke error, re-issue a new oai request");
-	      listRecords = createListRecords(oaiData, fromDate, untilDate);
+	      listRecords = issueRequest(oaiData, fromDate, untilDate);
 	      retries++;
 	      continue nextListRecords;
 	    } else {
@@ -211,15 +234,15 @@ public class OaiHandler {
 	  listRecords = new ListRecords(baseUrl, resumptionToken);
 	} 
       } catch (IOException ioe) {
-        logError("In calling getResumptionToken", ioe);
+        logError("In getting ResumptionToken and requesting new ListRecords", ioe);
       } catch (NoSuchFieldException nsfe) {
-	logError("In calling getResumptionToken", nsfe);
+	logError("In getting ResumptionToken and requesting new ListRecords", nsfe);
       } catch (TransformerException tfe) {
-	logError("In calling getResumptionToken", tfe);
+	logError("In getting ResumptionToken and requesting new ListRecords", tfe);
       } catch (SAXException saxe) {
-	logError("In createListRecords calling new ListRecords", saxe);
+	logError("In getting ResumptionToken and requesting new ListRecords", saxe);
       } catch (ParserConfigurationException pce) {
-	logError("In createListRecords calling new ListRecords", pce);
+	logError("In getting ResumptionToken and requesting new ListRecords", pce);
       }
 
     } //loop until there is no resumptionToken
@@ -233,12 +256,24 @@ public class OaiHandler {
    * @param fromDate date from when we want to query about
    * @param untilDate date until when we want to query about
    */
-  protected ListRecords createListRecords(
+  public ListRecords issueRequest(
 	    OaiRequestData oaiData, String fromDate, String untilDate){
+    
+    // do not check if oaiData == null, it is taken care in OaiRequestData constructor
+    if (fromDate == null) {
+      throw new NullPointerException("Called with null fromDate");
+    } else if (untilDate == null) {
+      throw new NullPointerException("Called with null untilDate");
+    }
+    
+    this.oaiData = oaiData;
+    this.fromDate = fromDate;
+    this.untilDate = untilDate;
+
     baseUrl = oaiData.getOaiRequestHandlerUrl();
     String setSpec = oaiData.getAuSetSpec();
     String metadataPrefix = oaiData.getMetadataPrefix();  
-    ListRecords listRecords = null;
+    //    ListRecords listRecords = null;
     
     // the query string that send to OAI repository
     queryString = baseUrl + "?verb=ListRecords&from=" + fromDate + "&until=" +
@@ -248,13 +283,13 @@ public class OaiHandler {
       listRecords = new ListRecords(baseUrl, fromDate, untilDate, setSpec, 
 				    metadataPrefix);
     } catch (IOException ioe) {
-      logError("In createListRecords calling new ListRecords", ioe);
+      logError("In issueOaiRequest calling new ListRecords", ioe);
     } catch (ParserConfigurationException pce) {
-      logError("In createListRecords calling new ListRecords", pce);
+      logError("In issueOaiRequest calling new ListRecords", pce);
     } catch (SAXException saxe) {
-      logError("In createListRecords calling new ListRecords", saxe);
+      logError("In issueOaiRequest calling new ListRecords", saxe);
     } catch (TransformerException tfe) {
-      logError("In createListRecords calling new ListRecords", tfe);
+      logError("In issueOaiRequest calling new ListRecords", tfe);
     }
     
     return listRecords;
