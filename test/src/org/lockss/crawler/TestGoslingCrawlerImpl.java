@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingCrawlerImpl.java,v 1.22 2003-10-08 21:20:53 troberts Exp $
+ * $Id: TestGoslingCrawlerImpl.java,v 1.22.2.1 2003-10-09 23:20:52 eaalto Exp $
  */
 
 /*
@@ -34,7 +34,6 @@ package org.lockss.crawler;
 
 import java.io.*;
 import java.util.*;
-import junit.framework.TestCase;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
@@ -65,10 +64,6 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
   public static Class prerequisites[] = {
     TestCrawlRule.class
   };
-
-  public TestGoslingCrawlerImpl(String msg) {
-    super(msg);
-  }
 
   public void setUp() throws Exception {
     super.setUp();
@@ -561,10 +556,10 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
       "<a blah1=blah href="+url2+">link2</a>"+
       "<a href="+url3+">link3</a>";
 
-    String source2 = 
+    String source2 =
       "<html><head><title>Test</title></head><body>"+
       "<a href="+url4+">link1</a>";
-      
+
     cus.addUrl(source, startUrl, true, true);
     cus.addUrl(LINKLESS_PAGE, url1, true, true);
     cus.addUrl(source2, url2, true, true);
@@ -751,9 +746,9 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
   }
 
   public void testGetStatusCrawlDone() {
-    String url1= "http://www.example.com/link1.html";
-    String url2= "http://www.example.com/link2.html";
-    String url3= "http://www.example.com/link3.html";
+    String url1 = "http://www.example.com/link1.html";
+    String url2 = "http://www.example.com/link2.html";
+    String url3 = "http://www.example.com/link3.html";
 
     String source =
       "<html><head><title>Test</title></head><body>"+
@@ -785,6 +780,57 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     Set cachedUrls = cus.getForceCachedUrls();
     assertEquals(1, cachedUrls.size());
     assertTrue(cachedUrls.contains(startUrl));
+  }
+
+  public void testCrawlWindow() {
+    String url1 = "http://www.example.com/link1.html";
+    String url2 = "http://www.example.com/link2.html";
+    String url3 = "http://www.example.com/link3.html";
+
+    String source =
+      "<html><head><title>Test</title></head><body>"+
+      "<a href="+url1+">link1</a>"+
+      "Filler, with <b>bold</b> tags and<i>others</i>"+
+      "<a href="+url2+">link2</a>"+
+      "<a href="+url3+">link3</a>";
+
+    mau.setCrawlSpec(new CrawlSpec(startUrl, null,
+                                   new MockCrawlWindowRuleThatCountsDown(3),
+                                   1));
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    cus.addUrl(source, startUrl);
+    cus.addUrl(LINKLESS_PAGE, url1);
+    cus.addUrl(LINKLESS_PAGE, url2);
+    cus.addUrl(LINKLESS_PAGE, url3);
+
+    crawler.doCrawl(Deadline.MAX);
+    // only gets 2 urls because start url is fetched twice (manifest & parse)
+    Set expected = SetUtil.set(startUrl, url1);
+    assertEquals(expected, cus.getCachedUrls());
+  }
+
+  private class MockCrawlWindowRuleThatCountsDown implements CrawlWindowRule {
+    int counter;
+
+    public MockCrawlWindowRuleThatCountsDown(int counter) {
+      this.counter = counter;
+    }
+
+    public int getCurrentCount() {
+      return counter;
+    }
+
+    public int canCrawl() {
+      if (counter > 0) {
+        counter--;
+        return INCLUDE;
+      }
+      return EXCLUDE;
+    }
+
+    public int canCrawl(Date serverDate) {
+      return canCrawl();
+    }
   }
 
   private class MyMockCachedUrlSet extends MockCachedUrlSet {
