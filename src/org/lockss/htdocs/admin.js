@@ -15,3 +15,15 @@ function lockssButton(element, action, name, val) {
  form.lockssAction.value = action;
  form.submit();
 }
+
+function cascadeSelectEnable(elem, nextId) {
+ var elemVal = elem.options[elem.selectedIndex].value;
+ var enable = (elemVal == "" && !elem.disabled);
+ var nextEl = document.getElementById(nextId);
+ if (nextEl !== undefined) {
+  nextEl.disabled = !enable;
+  if (nextEl.onchange !== undefined && nextEl.onchange != null) {
+   nextEl.onchange();
+  }
+ }
+}
