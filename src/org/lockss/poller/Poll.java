@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.40 2003-01-23 02:00:50 claire Exp $
+* $Id: Poll.java,v 1.41 2003-01-25 02:23:25 aalto Exp $
  */
 
 /*
@@ -616,7 +616,7 @@ public abstract class Poll implements Serializable {
 
     /**
      * return the votes cast in this poll
-     * @return
+     * @return the list of votes
      */
 
     public List getPollVotes() {
