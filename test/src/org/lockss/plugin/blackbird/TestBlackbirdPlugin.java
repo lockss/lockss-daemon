@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlackbirdPlugin.java,v 1.1 2003-12-06 00:57:25 eaalto Exp $
+ * $Id: TestBlackbirdPlugin.java,v 1.2 2004-01-03 06:29:34 tlipkis Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ public class TestBlackbirdPlugin extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     plugin = new BlackbirdPlugin();
-    plugin.initPlugin(null);
+    plugin.initPlugin(getMockLockssDaemon());
   }
 
   public void testGetAuNullConfig() throws ArchivalUnit.ConfigurationException {

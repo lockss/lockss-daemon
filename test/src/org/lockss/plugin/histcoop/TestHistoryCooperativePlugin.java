@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryCooperativePlugin.java,v 1.1 2003-11-18 00:07:16 eaalto Exp $
+ * $Id: TestHistoryCooperativePlugin.java,v 1.2 2004-01-03 06:29:34 tlipkis Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ public class TestHistoryCooperativePlugin extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     plugin = new HistoryCooperativePlugin();
-    plugin.initPlugin(null);
+    plugin.initPlugin(getMockLockssDaemon());
   }
 
   public void testGetAuNullConfig() throws ArchivalUnit.ConfigurationException {

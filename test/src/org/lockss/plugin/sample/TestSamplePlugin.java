@@ -1,5 +1,5 @@
 /*
- * $Id: TestSamplePlugin.java,v 1.1 2003-12-15 23:10:57 clairegriffin Exp $
+ * $Id: TestSamplePlugin.java,v 1.2 2004-01-03 06:29:33 tlipkis Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ public class TestSamplePlugin extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     plugin = new SamplePlugin();
-    plugin.initPlugin(null);
+    plugin.initPlugin(getMockLockssDaemon());
   }
 
   public void testGetAUNullConfig() throws ArchivalUnit.ConfigurationException {

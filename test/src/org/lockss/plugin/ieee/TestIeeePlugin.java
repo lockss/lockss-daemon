@@ -1,5 +1,5 @@
 /*
- * $Id: TestIeeePlugin.java,v 1.3 2003-11-07 04:12:01 clairegriffin Exp $
+ * $Id: TestIeeePlugin.java,v 1.4 2004-01-03 06:29:33 tlipkis Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ public class TestIeeePlugin extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     plugin = new IeeePlugin();
-    plugin.initPlugin(null);
+    plugin.initPlugin(getMockLockssDaemon());
   }
 
   public void testGetAUNullConfig() throws ArchivalUnit.ConfigurationException {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestAbsinthePlugin.java,v 1.1 2003-09-27 00:35:31 eaalto Exp $
+ * $Id: TestAbsinthePlugin.java,v 1.2 2004-01-03 06:29:34 tlipkis Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ public class TestAbsinthePlugin extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     plugin = new AbsinthePlugin();
-    plugin.initPlugin(null);
+    plugin.initPlugin(getMockLockssDaemon());
   }
 
   public void testGetAuNullConfig() throws ArchivalUnit.ConfigurationException {
