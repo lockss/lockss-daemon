@@ -25,14 +25,14 @@ public class TestPoll
   private static String uprbnd = "test3.doc";
   private static long testduration = 60 * 60 * 60 * 1000; /* 60 min */
 
-  private static String[] testentries = {
-      "test1.doc", "test2.doc", "test3.doc", "test4.doc"};
-  private static String[] testentries1 = {
-      "test1.doc", "test3.doc", "test4.doc"};
   protected static ArchivalUnit testau;
   private static IdentityManager idmgr;
   private static MockLockssDaemon daemon = new MockLockssDaemon(null);
-  static {
+  private String[] agree_entries = makeEntries(10, 50);
+  private String[] disagree_entries = makeEntries(15, 57);
+  private String[] dissenting_entries = makeEntries(7, 50);
+
+ static {
     testau = PollTestPlugin.PTArchivalUnit.createFromListOfRootUrls(rooturls);
     daemon.getPluginManager().registerArchivalUnit(testau);
     TestIdentityManager.configParams("/tmp/iddb", "src/org/lockss/protocol");
@@ -74,7 +74,7 @@ public class TestPoll
             rooturls[i],
             lwrbnd,
             uprbnd,
-            testentries,
+            agree_entries,
             pollmanager.generateRandomBytes(),
             pollmanager.generateRandomBytes(),
             LcapMessage.NAME_POLL_REQ + (i * 2),
@@ -191,68 +191,30 @@ public class TestPoll
     assertEquals(0, p.m_tally.wtDisagree);
   }
 
+
   public void testNamePollTally() {
-    NamePoll np = null;
-    LcapMessage agree_msg = null;
-    LcapMessage disagree_msg = null;
-    String[] agree_entries = makeEntries(10,90);
-    String[] disagree_entries = makeEntries(5, 190);
+    NamePoll np;
+    // test a name poll we won
+    np = makeCompletedNamePoll(4,1,0);
+    assertEquals(5, np.m_tally.numAgree);
+    assertEquals(1, np.m_tally.numDisagree);
+    assertTrue(np.m_tally.didWinPoll());
 
-    try {
-      LcapMessage poll_msg = LcapMessage.makeRequestMsg(
-          rooturls[0],
-          null,
-          null,
-          agree_entries,
-          pollmanager.generateRandomBytes(),
-          pollmanager.generateRandomBytes(),
-          LcapMessage.NAME_POLL_REQ,
-          testduration,
-          testID,
-          testau.getPluginId());
-
-      // make our poll
-      np = (NamePoll)pollmanager.makePoll(poll_msg);
-
-      // add our vote
-      np.m_tally.addVote(np.makeVote(np.getMessage(), true));
-
-      // generate agree vote msg
-      agree_msg = LcapMessage.makeReplyMsg(poll_msg, poll_msg.getHashed(),
-                                           poll_msg.getVerifier(),
-                                           agree_entries,
-                                           LcapMessage.NAME_POLL_REP,
-                                           testduration, testID);
-
-      // generate a disagree vote msg
-      disagree_msg = LcapMessage.makeReplyMsg(poll_msg,
-                                              pollmanager.generateRandomBytes(),
-                                              pollmanager.generateRandomBytes(),
-                                              disagree_entries,
-                                              LcapMessage.NAME_POLL_REP,
-                                              testduration, testID1);
-    }
-    catch (IOException ex) {
-      fail("unable to generate a name poll reply");
-    }
-    np.m_tally.addVote(np.makeVote(agree_msg, true));
-    np.m_tally.addVote(np.makeVote(agree_msg, true));
-
-    np.m_tally.addVote(np.makeVote(disagree_msg, false));
-    np.m_tally.addVote(np.makeVote(disagree_msg, false));
-    np.m_tally.addVote(np.makeVote(disagree_msg, false));
-    np.m_tally.addVote(np.makeVote(disagree_msg, false));
+    // test a name poll we lost with a dissenting vote
+    np = makeCompletedNamePoll(2,4,1);
 
     assertEquals(3, np.m_tally.numAgree);
-    assertEquals(4, np.m_tally.numDisagree);
+    assertEquals(5, np.m_tally.numDisagree);
     assertTrue(!np.m_tally.didWinPoll());
 
     // build a master list
     np.buildPollLists(np.m_tally.pollVotes.iterator());
+
     // these should be different since we lost the poll
     assertTrue(!Arrays.equals(np.m_tally.localEntries, np.m_tally.votedEntries));
+
     // the expected "correct" set is in our disagree msg
-    assertTrue(Arrays.equals(disagree_msg.getEntries(), np.m_tally.votedEntries));
+    assertTrue(Arrays.equals(disagree_entries, np.m_tally.votedEntries));
 
   }
 
@@ -325,6 +287,82 @@ public class TestPoll
     assertEquals(2, p.m_pendingVotes);
   }
 
+  private NamePoll makeCompletedNamePoll(int numAgree,
+                                     int numDisagree,
+                                     int numDissenting) {
+    NamePoll np = null;
+    LcapMessage agree_msg = null;
+    LcapMessage disagree_msg1 = null;
+    LcapMessage disagree_msg2 = null;
+
+    try {
+      LcapMessage poll_msg = LcapMessage.makeRequestMsg(
+          rooturls[0],
+          null,
+          null,
+          null,
+          pollmanager.generateRandomBytes(),
+          pollmanager.generateRandomBytes(),
+          LcapMessage.NAME_POLL_REQ,
+          testduration,
+          testID,
+          testau.getPluginId());
+
+      CachedUrlSet cus = testau.makeCachedUrlSet(poll_msg.getTargetUrl(),
+                                                 poll_msg.getLwrBound(),
+                                                 poll_msg.getUprBound());
+      // make our poll
+      np = (NamePoll) pollmanager.createPoll(poll_msg, cus);
+
+      // generate agree vote msg
+      agree_msg = LcapMessage.makeReplyMsg(poll_msg, poll_msg.getHashed(),
+                                           poll_msg.getVerifier(),
+                                           agree_entries,
+                                           LcapMessage.NAME_POLL_REP,
+                                           testduration, testID);
+
+      // generate a disagree vote msg
+      disagree_msg1 = LcapMessage.makeReplyMsg(poll_msg,
+                                               pollmanager.generateRandomBytes(),
+                                               pollmanager.generateRandomBytes(),
+                                               disagree_entries,
+                                               LcapMessage.NAME_POLL_REP,
+                                               testduration, testID1);
+      // generate a losing disagree vote msg
+      disagree_msg2 = LcapMessage.makeReplyMsg(poll_msg,
+                                               pollmanager.generateRandomBytes(),
+                                               pollmanager.generateRandomBytes(),
+                                               dissenting_entries,
+                                               LcapMessage.NAME_POLL_REP,
+                                               testduration, testID1);
+
+    }
+    catch (IOException ex) {
+      fail("unable to generate a name poll reply");
+    }
+
+    // add our vote
+    np.m_tally.addVote(np.makeVote(np.getMessage(), true));
+
+    // add the agree votes
+    for(int i = 0; i < numAgree; i++) {
+      np.m_tally.addVote(np.makeVote(agree_msg, true));
+    }
+
+    // add the disagree votes
+    for(int i = 0; i < numDisagree; i++) {
+      np.m_tally.addVote(np.makeVote(disagree_msg1, false));
+    }
+
+    // add dissenting disagree vote
+    for(int i = 0; i < numDissenting; i++) {
+      np.m_tally.addVote(np.makeVote(disagree_msg2, false));
+    }
+
+    return np;
+  }
+
+
   public static Poll createCompletedPoll(LcapMessage testmsg, int numAgree,
                                          int numDisagree) throws Exception {
     testau = PollTestPlugin.PTArchivalUnit.createFromListOfRootUrls(rooturls);
@@ -345,6 +383,7 @@ public class TestPoll
     p.m_pollstate = Poll.PS_COMPLETE;
     return p;
   }
+
 
   public static String[] makeEntries(int firstEntry, int lastEntry) {
     int numEntries = lastEntry - firstEntry;

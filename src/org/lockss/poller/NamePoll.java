@@ -1,5 +1,5 @@
 /*
- * $Id: NamePoll.java,v 1.35 2003-02-21 21:53:28 aalto Exp $
+ * $Id: NamePoll.java,v 1.36 2003-02-22 03:01:57 claire Exp $
  */
 
 /*
@@ -28,17 +28,12 @@ package org.lockss.poller;
 
 import java.io.*;
 import java.security.*;
+import java.util.*;
+
 import org.lockss.daemon.*;
 import org.lockss.hasher.*;
 import org.lockss.protocol.*;
 import org.lockss.util.*;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Iterator;
-import gnu.regexp.RE;
-import gnu.regexp.*;
-import java.util.HashSet;
-import java.util.ArrayList;
 
 /**
  * @author Claire Griffin
@@ -147,7 +142,7 @@ public class NamePoll
   }
 
   void tally() {
-    if (!m_tally.didWinPoll()) {
+    if(!m_tally.didWinPoll()) {
       buildPollLists(m_tally.pollVotes.iterator());
     }
     super.tally();
@@ -170,10 +165,11 @@ public class NamePoll
     return m_entries;
   }
 
-  void buildPollLists(Iterator voteIter) {
+  NameVote findWinningVote(Iterator voteIter) {
     ArrayList winners = new ArrayList();
+    NameVoteCounter winningCounter = null;
 
-    // build a list of unique winners
+    // build a list of unique disagree votes
     while (voteIter.hasNext()) {
       NamePoll.NameVote vote = (NamePoll.NameVote) voteIter.next();
       if (!vote.agree) {
@@ -188,9 +184,8 @@ public class NamePoll
       }
     }
 
-    // find the "definitive" list
+    // find the "winner" with the most votes
     Iterator it = winners.iterator();
-    NameVoteCounter winningCounter = null;
     while (it.hasNext()) {
       NameVoteCounter counter = (NameVoteCounter) it.next();
       if (winningCounter != null) {
@@ -203,12 +198,16 @@ public class NamePoll
       }
     }
 
-    // the "definitive" list is in winningCounter
+    return winningCounter;
+  }
 
-    if (winningCounter != null) {
-      m_tally.votedEntries = winningCounter.getKnownEntries();
-      String lwrRem = winningCounter.getLwrRemaining();
-      String uprRem = winningCounter.getUprRemaining();
+  void buildPollLists(Iterator voteIter) {
+    NameVote winningVote = findWinningVote(voteIter);
+
+    if (winningVote != null) {
+      m_tally.votedEntries = winningVote.getKnownEntries();
+      String lwrRem = winningVote.getLwrRemaining();
+      String uprRem = winningVote.getUprRemaining();
 
       if (lwrRem != null) {
         // we call a new poll on the remaining entries and set the regexp
@@ -238,11 +237,16 @@ public class NamePoll
     return new NameVote(msg, agree);
   }
 
-  class NameVote
-      extends Vote {
+  static class NameVote extends Vote {
     private String[] knownEntries;
     private String lwrRemaining;
     private String uprRemaining;
+
+    NameVote(String[] entries, String lwr, String upr) {
+      knownEntries = entries;
+      lwrRemaining = lwr;
+      uprRemaining = upr;
+    }
 
     NameVote(LcapMessage msg, boolean agree) {
       super(msg, agree);
@@ -263,18 +267,24 @@ public class NamePoll
     String getUprRemaining() {
       return uprRemaining;
     }
+
+    public boolean equals(Object obj) {
+      if (obj instanceof NameVote) {
+        return (sameEntries( ( (NameVote) obj).knownEntries));
+      }
+      return false;
+    }
+
+    boolean sameEntries(String[] entries) {
+      return Arrays.equals(knownEntries, entries);
+    }
   }
 
-  static class NameVoteCounter {
-    private String[] knownEntries;
-    private String lwrRemaining;
-    private String uprRemaining;
+  static class NameVoteCounter extends NameVote {
     private int voteCount;
 
     NameVoteCounter(NameVote vote) {
-      knownEntries = vote.getKnownEntries();
-      lwrRemaining = vote.getLwrRemaining();
-      uprRemaining = vote.getUprRemaining();
+      super(vote.getKnownEntries(),vote.getLwrRemaining(),vote.getUprRemaining());
       voteCount = 1;
     }
 
@@ -285,30 +295,6 @@ public class NamePoll
     int getNumVotes() {
       return voteCount++;
     }
-
-    String[] getKnownEntries() {
-      return knownEntries;
-    }
-
-    String getLwrRemaining() {
-      return lwrRemaining;
-    }
-
-    String getUprRemaining() {
-      return uprRemaining;
-    }
-
-    public boolean equals(Object obj) {
-      if (obj instanceof NameVoteCounter) {
-        return (sameEntries( ( (NameVoteCounter) obj).knownEntries));
-      }
-      return false;
-    }
-
-    boolean sameEntries(String[] entries) {
-      return Arrays.equals(knownEntries, entries);
-    }
-
   }
 
 }
