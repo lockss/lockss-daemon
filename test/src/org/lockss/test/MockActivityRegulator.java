@@ -1,5 +1,5 @@
 /*
- * $Id: MockActivityRegulator.java,v 1.4 2003-06-25 21:25:07 eaalto Exp $
+ * $Id: MockActivityRegulator.java,v 1.5 2003-06-26 00:18:24 troberts Exp $
  */
 
 /*
@@ -41,7 +41,6 @@ public class MockActivityRegulator extends ActivityRegulator {
   boolean shouldStartAuActivity = false;
   boolean shouldStartCusActivity = false;
   int finishedAuActivity = -1;
-  ArchivalUnit finishedAu = null;
   int finishedCusActivity = -1;
   CachedUrlSet finishedCus = null;
   Map finishedCusActivities = new HashMap();
@@ -62,7 +61,6 @@ public class MockActivityRegulator extends ActivityRegulator {
 
   public void auActivityFinished(int activity) {
     finishedAuActivity = activity;
-//     finishedAu = au;
   }
 
   public void assertNewContentCrawlFinished() {
@@ -90,13 +88,10 @@ public class MockActivityRegulator extends ActivityRegulator {
 			 +ActivityRegulator.activityCodeToString(activity)
 			 +" not finished"),
 			activity, finishedAuActivity);
-//     Assert.assertSame("Different aus", au, finishedAu);
   }
 
   public void cusActivityFinished(int activity, CachedUrlSet cus) {
     finishedCusActivities.put(cus, new Integer(activity));
-//     finishedCusActivity = activity;
-//     finishedCus = cus;
   }
 
   public void setStartAuActivity(boolean shouldStartAuActivity) {
@@ -114,13 +109,10 @@ public class MockActivityRegulator extends ActivityRegulator {
     } else {
       lockedCuses.add(cus);
     }
-//     cusStates.put(cus, new Boolean(shouldStartCusActivity));
-//     this.shouldStartCusActivity = shouldStartCusActivity;
   }
 
   public Lock startCusActivity(int newActivity, CachedUrlSet cus,
 			       long expireIn) {
     return (lockedCuses.contains(cus) ? null : new Lock(0, expireIn));
-//     return shouldStartCusActivity ? new Lock(0, expireIn) : null;
   }
 }
