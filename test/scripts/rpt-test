@@ -65,7 +65,8 @@ export CLASSPATH
 
 failcnt=0
 
-for (( ix = 1; ix <= $rpt ; ix++)) ; do
+let ix=1
+while [ $ix -le $rpt ]; do
   echo "** iter $ix" >> $stderr
   echo "** iter $ix" >> $stdout
 
@@ -75,6 +76,7 @@ for (( ix = 1; ix <= $rpt ; ix++)) ; do
   else
     [ $showdots = 1 ] && echo -n .
   fi
+  let ix++
 done
 echo
 echo $failcnt failures
