@@ -1,5 +1,5 @@
 /*
-* $Id: Vote.java,v 1.4 2003-02-06 05:16:06 claire Exp $
+* $Id: Vote.java,v 1.5 2003-02-11 23:57:01 claire Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import org.lockss.protocol.LcapMessage;
 import java.util.Arrays;
 import org.lockss.protocol.IdentityManager;
 import java.io.Serializable;
+import org.lockss.app.LockssDaemon;
 
 /**
  * Vote stores the information need to replay a single vote. These are needed
@@ -49,6 +50,8 @@ public class Vote implements Serializable {
   private byte[] challenge;
   private byte[] verifier;
   private byte[] hash;
+
+  protected static IdentityManager theIdentityMgr;
 
   protected Vote() {
   }
@@ -78,7 +81,7 @@ public class Vote implements Serializable {
                  String idStr, boolean agree) {
     Vote vote = new Vote();
     try {
-      vote.id = IdentityManager.getIdentityManager().findIdentity(idStr);
+      vote.id = theIdentityMgr.findIdentity(idStr);
     }
     catch (Exception ex) {
     }
@@ -158,4 +161,9 @@ public class Vote implements Serializable {
   public String getVerifierString() {
     return String.valueOf(B64Code.encode(verifier));
   }
+
+  public static void setIdentityMgr(IdentityManager mgr) {
+    theIdentityMgr = mgr;
+  }
+
 }

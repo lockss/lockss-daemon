@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.46 2003-02-06 05:16:06 claire Exp $
+* $Id: Poll.java,v 1.47 2003-02-11 23:57:01 claire Exp $
  */
 
 /*
@@ -124,7 +124,7 @@ public abstract class Poll implements Serializable {
     m_disagreeVer = ((double)Configuration.getIntParam(PARAM_DISAGREE_VERIFY,
         DEFAULT_DISAGREE_VERIFY)) / 100;
     m_pollmanager = pm;
-    idMgr = pm.getIdentityManager();
+    idMgr = pm.getDaemon().getIdentityManager();
     m_msg = msg;
     m_urlSet = urlSet;
 
@@ -243,7 +243,8 @@ public abstract class Poll implements Serializable {
    * tally the poll results
    */
   void tally() {
-    //NodeManager.updatePollResults(m_urlSet, m_tally);
+    NodeManager nm = m_pollmanager.getDaemon().getNodeManager(m_arcUnit);
+    nm.updatePollResults(m_urlSet, m_tally);
   }
 
   /**

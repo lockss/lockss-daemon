@@ -10,6 +10,7 @@ import org.lockss.daemon.TestConfiguration;
 import org.lockss.util.ListUtil;
 import org.lockss.test.FileUtil;
 import java.io.IOException;
+import org.lockss.test.MockLockssDaemon;
 
 /** JUnitTest case for class: org.lockss.protocol.IdentityManager */
 public class TestIdentityManager extends TestCase {
@@ -26,14 +27,12 @@ public class TestIdentityManager extends TestCase {
                                          "test2.doc", "test3.doc"};
   private static String pluginid = "testplugin 1.0";
 
-  private static IdentityManager idmgr;
+  private static MockLockssDaemon daemon = new MockLockssDaemon(null);
 
   static {
     configParams("/tmp/iddb", "src/org/lockss/protocol");
-    idmgr = new IdentityManager();
-    idmgr.configure();
-
   }
+  private static IdentityManager idmgr = daemon.getIdentityManager();
 
   public TestIdentityManager(String _name) {
     super(_name);

@@ -1,5 +1,5 @@
 /*
-* $Id: IdentityManager.java,v 1.14 2003-02-07 19:15:48 aalto Exp $
+* $Id: IdentityManager.java,v 1.15 2003-02-11 23:57:01 claire Exp $
  */
 
 /*
@@ -50,6 +50,7 @@ import org.exolab.castor.mapping.Mapping;
 import org.exolab.castor.mapping.*;
 import java.io.*;
 import org.lockss.app.*;
+import org.lockss.poller.Vote;
 
 /**
  * <p>Title: </p>
@@ -123,6 +124,8 @@ public class IdentityManager {
       theManager = this;
       configure();
       reloadIdentities();
+      LcapMessage.setIdentityMgr(this);
+      Vote.setIdentityMgr(this);
     }
     else {
       throw new LockssDaemonException("Multiple Instantiation.");
@@ -151,13 +154,6 @@ public class IdentityManager {
   }
 
 
-  public static IdentityManager getIdentityManager()
-  throws IllegalAccessException {
-    if(theManager != null) {
-      return theManager;
-    }
-    throw new IllegalAccessException("Unitialized IdentityManager");
-  }
 
   /**
    * public constructor for the creation of an Identity object

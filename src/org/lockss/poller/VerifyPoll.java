@@ -1,5 +1,5 @@
 /*
-* $Id: VerifyPoll.java,v 1.29 2003-02-06 05:16:06 claire Exp $
+* $Id: VerifyPoll.java,v 1.30 2003-02-11 23:57:01 claire Exp $
  */
 
 /*
@@ -126,7 +126,6 @@ class VerifyPoll extends Poll {
    * tally the poll results
    */
   protected void tally()  {
-    super.tally();
     log.info(m_msg.toString() + " tally " + toString());
     LcapIdentity id = m_caller;
 
@@ -148,7 +147,7 @@ class VerifyPoll extends Poll {
     byte[] challenge = msg.getChallenge();
     byte[] hashed = msg.getHashed();
     MessageDigest hasher = m_pollmanager.getHasher(msg);
-    // check this vote verification hashed in the message should
+    // check that vote verification hashed in the message should
     // hash to the challenge, which is the verifier of the poll
     // thats being verified
 
@@ -161,6 +160,7 @@ class VerifyPoll extends Poll {
 
   private void replyVerify(LcapMessage msg) throws IOException  {
     String url = new String(msg.getTargetUrl());
+    ArchivalUnit au;
     byte[] secret = m_pollmanager.getSecret(msg.getChallenge());
     if(secret == null) {
       log.error("Verify poll reply failed.  Unable to find secret for: "
@@ -178,10 +178,8 @@ class VerifyPoll extends Poll {
 
     LcapIdentity originator = msg.getOriginID();
     log.debug("sending our verification reply to " + originator.toString());
-
-    m_pollmanager.sendMessageTo(repmsg,
-                                m_pollmanager.getPluginManager().findArchivalUnit(url),
-                                originator);
+    au = m_pollmanager.getDaemon().getPluginManager().findArchivalUnit(url);
+    m_pollmanager.sendMessageTo(repmsg, au, originator);
   }
 
   private void startVoteCheck(LcapMessage msg) {

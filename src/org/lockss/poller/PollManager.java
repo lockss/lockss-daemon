@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.29 2003-02-11 19:31:36 claire Exp $
+* $Id: PollManager.java,v 1.30 2003-02-11 23:57:01 claire Exp $
  */
 
 /*
@@ -401,16 +401,8 @@ public class PollManager  implements LockssManager {
     poll.m_pollstate = Poll.PS_WAIT_TALLY;
   }
 
-  PluginManager getPluginManager() {
-    return theDaemon.getPluginManager();
-  }
-
-  HashService getHashService() {
-    return theDaemon.getHashService();
-  }
-
-  IdentityManager getIdentityManager() {
-    return theDaemon.getIdentityManager();
+  LockssDaemon getDaemon() {
+    return theDaemon;
   }
 
   /**

@@ -53,6 +53,7 @@ public class TestLcapIdentity extends TestCase {
           100000,
           fakeId,
           pluginid);
+      testMsg.theIdentityMgr = idmgr;
     }
     catch (Exception ex) {
       fail("message request creation failed.");

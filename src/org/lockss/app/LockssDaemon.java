@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.3 2003-02-11 00:58:16 aalto Exp $
+ * $Id: LockssDaemon.java,v 1.4 2003-02-11 23:57:01 claire Exp $
  */
 
 /*
@@ -61,16 +61,16 @@ public class LockssDaemon {
   private static String MANAGER_PREFIX = Configuration.PREFIX + "manager.";
 
   /* the parameter strings that represent our managers */
-  static String HASH_SERVICE = "HashService";
-  static String COMM_MANAGER = "CommManager";
-  static String IDENTITY_MANAGER = "IdentityManager";
-  static String CRAWL_MANAGER = "CrawlManager";
-  static String PLUGIN_MANAGER = "PluginManager";
-  static String POLL_MANAGER = "PollManager";
-  static String LOCKSS_REPOSITORY = "LockssRepository";
-  static String HISTORY_REPOSITORY = "HistoryRepository";
-  static String NODE_MANAGER = "NodeManager";
-  static String PROXY_HANDLER = "ProxyHandler";
+  public static String HASH_SERVICE = "HashService";
+  public static String COMM_MANAGER = "CommManager";
+  public static String IDENTITY_MANAGER = "IdentityManager";
+  public static String CRAWL_MANAGER = "CrawlManager";
+  public static String PLUGIN_MANAGER = "PluginManager";
+  public static String POLL_MANAGER = "PollManager";
+  public static String LOCKSS_REPOSITORY = "LockssRepository";
+  public static String HISTORY_REPOSITORY = "HistoryRepository";
+  public static String NODE_MANAGER = "NodeManager";
+  public static String PROXY_HANDLER = "ProxyHandler";
 
   /* the default classes that represent our managers */
   private static String DEFAULT_HASH_SERVICE = "org.lockss.hasher.HashService";
@@ -107,8 +107,8 @@ public class LockssDaemon {
   private String cacheDir = null;
   private String configDir = null;
 
-  private Hashtable thePlugins = new Hashtable();
-  private Hashtable theManagers = new Hashtable();
+  private static Hashtable thePlugins = new Hashtable();
+  private static Hashtable theManagers = new Hashtable();
 
   boolean running = false;
 
@@ -138,14 +138,20 @@ public class LockssDaemon {
    * Return a lockss manager this will need to be cast to the appropriate class.
    * @param managerKey the name of the manager
    * @return a lockss manager
+   * @throws IllegalArgumentException if the manager is not available.
    */
-  LockssManager getManager(String managerKey) {
-    return (LockssManager) theManagers.get(managerKey);
+  public static LockssManager getManager(String managerKey) {
+    LockssManager mgr = (LockssManager) theManagers.get(managerKey);
+    if(mgr == null) {
+      throw new IllegalArgumentException("Unavailable manager:" + managerKey);
+    }
+    return mgr;
   }
 
   /**
    * return the hash service instance
    * @return the HashService
+   * @throws IllegalArgumentException if the manager is not available.
    */
   public HashService getHashService() {
     return (HashService) getManager(HASH_SERVICE);
@@ -154,6 +160,7 @@ public class LockssDaemon {
   /**
    * return the poll manager instance
    * @return the PollManager
+   * @throws IllegalArgumentException if the manager is not available.
    */
   public PollManager getPollManager() {
     return (PollManager) getManager(POLL_MANAGER);
@@ -162,8 +169,9 @@ public class LockssDaemon {
   /**
    * return the communication manager instance
    * @return the LcapComm
+   * @throws IllegalArgumentException if the manager is not available.
    */
-  public LcapComm getCommManager() {
+  public LcapComm getCommManager()  {
     return (LcapComm) getManager(COMM_MANAGER);
   }
 
@@ -171,6 +179,7 @@ public class LockssDaemon {
    * get Lockss Repository instance
    * @param au the ArchivalUnit
    * @return the LockssRepository
+   * @throws IllegalArgumentException if the manager is not available.
    */
   public LockssRepository getLockssRepository(ArchivalUnit au) {
     LockssRepository repo = (LockssRepository)getManager(LOCKSS_REPOSITORY);
@@ -180,6 +189,7 @@ public class LockssDaemon {
   /**
    * return the history repository instance
    * @return the HistoryRepository
+   * @throws IllegalArgumentException if the manager is not available.
    */
   public HistoryRepository getHistoryRepository() {
     return (HistoryRepository) getManager(HISTORY_REPOSITORY);
@@ -189,6 +199,7 @@ public class LockssDaemon {
    * return the node manager instance
    * @param au the ArchivalUnit
    * @return the NodeManager
+   * @throws IllegalArgumentException if the manager is not available.
    */
   public NodeManager getNodeManager(ArchivalUnit au) {
     NodeManager nodeMan = (NodeManager)getManager(NODE_MANAGER);
@@ -198,7 +209,8 @@ public class LockssDaemon {
   /**
    * return the proxy handler instance
    * @return the ProxyHandler
-   */
+   * @throws IllegalAccessException if the manager is not available.
+  */
   public ProxyHandler getProxyHandler() {
     return (ProxyHandler) getManager(PROXY_HANDLER);
   }
@@ -206,6 +218,7 @@ public class LockssDaemon {
   /**
    * return the crawl manager instance
    * @return the CrawlManager
+   * @throws IllegalArgumentException if the manager is not available.
    */
   public CrawlManager getCrawlManager() {
     return (CrawlManager) getManager(CRAWL_MANAGER);
@@ -214,6 +227,7 @@ public class LockssDaemon {
   /**
    * return the plugin manager instance
    * @return the PluginManager
+   * @throws IllegalArgumentException if the manager is not available.
    */
   public PluginManager getPluginManager() {
     return (PluginManager) getManager(PLUGIN_MANAGER);
@@ -222,6 +236,7 @@ public class LockssDaemon {
   /**
    * return the Identity Manager
    * @return IdentityManager
+   * @throws IllegalArgumentException if the manager is not available.
    */
 
   public IdentityManager getIdentityManager() {

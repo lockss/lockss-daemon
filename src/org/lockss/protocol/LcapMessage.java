@@ -1,5 +1,5 @@
 /*
-* $Id: LcapMessage.java,v 1.21 2003-02-07 08:35:26 claire Exp $
+* $Id: LcapMessage.java,v 1.22 2003-02-11 23:57:01 claire Exp $
  */
 
 /*
@@ -42,6 +42,7 @@ import java.io.*;
 import org.mortbay.util.B64Code;
 import org.lockss.daemon.Configuration;
 import java.security.*;
+import org.lockss.app.LockssDaemon;
 
 
 /**
@@ -109,6 +110,7 @@ public class LcapMessage implements Serializable {
   protected String   m_RERemaining; // the RegExp of the remaining entries (opt)
   protected String[] m_entries;     // the name poll entry list (opt)
 
+  protected static IdentityManager theIdentityMgr;
   private EncodedProperty m_props;
   private static byte[] signature = {'l','p','m','1'};
   private static Logger log = Logger.getLogger("Message");
@@ -357,11 +359,7 @@ public class LcapMessage implements Serializable {
     port = m_props.getInt("origPort", -1);
     String addr_str = m_props.getProperty("origIP");
     try {
-      m_originID = IdentityManager.getIdentityManager().getIdentity(
-          LcapIdentity.stringToAddr(addr_str));
-    }
-    catch(IllegalAccessException ex) {
-      log.error("Attempt to use unitialized IdentityManager");
+      m_originID = theIdentityMgr.getIdentity(LcapIdentity.stringToAddr(addr_str));
     }
     catch(UnknownHostException ex) {
       log.warning("Unknown originating host:" + addr_str);
@@ -473,12 +471,7 @@ public class LcapMessage implements Serializable {
   }
 
   public boolean isLocal() {
-    try {
-      return IdentityManager.getIdentityManager().isLocalIdentity(m_originID);
-    }
-    catch (IllegalAccessException ex) {
-      return false;
-    }
+    return theIdentityMgr.isLocalIdentity(m_originID);
 
   }
 
@@ -689,5 +682,9 @@ public class LcapMessage implements Serializable {
     } catch (java.security.NoSuchAlgorithmException e) {
       return new byte[0];
     }
+  }
+
+  public static void setIdentityMgr(IdentityManager mgr) {
+    theIdentityMgr = mgr;
   }
 }
