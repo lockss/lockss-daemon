@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollFactory.java,v 1.1.2.6 2004-11-18 15:45:06 dshr Exp $
+ * $Id: V3PollFactory.java,v 1.1.2.7 2004-12-16 22:49:43 dshr Exp $
  */
 
 /*
@@ -104,8 +104,8 @@ public class V3PollFactory implements PollFactory {
    * be created.  When the tree walk needs a new poll a <code>V3Poller</code>
    * object will be created.  Shortly,  <code>callPoll()</code>
    * will be called with the <code>V3Poller</code> as an argument.
-   * The difference is whether the <code>orig</code> parameter is
-   * remote or local.
+   * XXX The difference is whether the <code>verifier</code> parameter is
+   * null (Poller) or not (Voter) XXX this is really bogus
    * @param pollspec the PollSpec for the poll.
    * @param pm the PollManager that called this method
    * @param orig the PeerIdentity of the peer calling the poll
@@ -129,7 +129,7 @@ public class V3PollFactory implements PollFactory {
       throw new ProtocolException("V3PollFactory: bad version " +
 				  pollspec.getPollVersion());
     }
-    if (im.isLocalIdentity(orig)) {
+    if (/* im.isLocalIdentity(orig) */ verifier == null) {
 	ret_poll = new V3Poller(pollspec, pm, orig, challenge, duration, hashAlg);
     } else {
 	ret_poll = new V3Voter(pollspec, pm, orig, challenge, duration, hashAlg);

@@ -1,5 +1,5 @@
 /*
- * $Id: MockLcapStreamRouter.java,v 1.1.2.12 2004-11-29 20:51:15 dshr Exp $
+ * $Id: MockLcapStreamRouter.java,v 1.1.2.13 2004-12-16 22:49:44 dshr Exp $
  */
 
 /*
@@ -130,6 +130,7 @@ public class MockLcapStreamRouter extends LcapStreamRouter
    */
   public void sendTo(V3LcapMessage msg, ArchivalUnit au, PeerIdentity id)
     throws IOException {
+    msg.setDestinationID(id);
     if (loopBackMode) {
       log.debug("mock sendTo(" + msg + ") queued");
       myReceiveQueue.put(msg);

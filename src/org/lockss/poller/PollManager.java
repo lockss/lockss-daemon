@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.142.2.7 2004-11-18 15:44:50 dshr Exp $
+ * $Id: PollManager.java,v 1.142.2.8 2004-12-16 22:49:42 dshr Exp $
  */
 
 /*
@@ -186,7 +186,15 @@ public class PollManager
     } else {
       long duration = pollFact.calcDuration(pollspec, this);
       byte[] challenge = makeVerifier(duration);
-      byte[] verifier = makeVerifier(duration);
+      byte[] verifier;
+      switch (pollspec.getPollVersion()) {
+      case Poll.V1_POLL:
+	  verifier = makeVerifier(duration);
+	  break;
+      default:
+	  verifier = null;
+	  break;
+      }
       int pollVersion = pollspec.getPollVersion();
       theLog.debug("calling a version " + pollVersion + " poll duration " +
 		   duration);

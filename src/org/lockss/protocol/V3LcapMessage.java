@@ -1,5 +1,5 @@
 /*
- * $Id: V3LcapMessage.java,v 1.1.2.8 2004-11-28 23:08:30 dshr Exp $
+ * $Id: V3LcapMessage.java,v 1.1.2.9 2004-12-16 22:49:43 dshr Exp $
  */
 
 /*
@@ -80,6 +80,7 @@ public class V3LcapMessage implements LcapMessage, Serializable {
 
   /* items which are in the property list */
   PeerIdentity m_originatorID; // the peer identity of the originator
+  PeerIdentity m_destinationID;
   protected String m_hashAlgorithm; // the algorithm used to hash
   byte m_ttl; // The original time-to-live
   long m_startTime; // the original start time
@@ -153,6 +154,7 @@ public class V3LcapMessage implements LcapMessage, Serializable {
     m_stopTime = 0;
     m_multicast = false;
     m_originatorID = null;
+    m_destinationID = null;
     m_hopCount = 0;
   }
 
@@ -175,6 +177,7 @@ public class V3LcapMessage implements LcapMessage, Serializable {
     m_entries = entries;
     m_hashAlgorithm = trigger.getHashAlgorithm();
     m_originatorID = localID;
+    m_destinationID = null;
     m_verifier = verifier;
     m_hashed = hashedContent;
     m_opcode = opcode;
@@ -215,6 +218,7 @@ public class V3LcapMessage implements LcapMessage, Serializable {
       msg.m_startTime = TimeBase.nowMs();
       msg.m_stopTime = msg.m_startTime + timeRemaining;
       msg.m_originatorID = localID;
+      msg.m_destinationID = null;
     }
     if (false) {
       // XXX
@@ -539,4 +543,10 @@ public class V3LcapMessage implements LcapMessage, Serializable {
     m_challenge = c;
   }
 
+  public void setDestinationID(PeerIdentity id) {
+    m_destinationID = id;
+  }
+  public PeerIdentity getDestinationID() {
+    return m_destinationID;
+  }
 }
