@@ -1,5 +1,5 @@
 /*
- * $Id: PTestPlugin.java,v 1.19 2004-03-09 23:39:00 tlipkis Exp $
+ * $Id: PTestPlugin.java,v 1.20 2005-01-31 23:14:42 tlipkis Exp $
  */
 
 /*
@@ -106,6 +106,9 @@ public class PTestPlugin {
 
     public CIProperties getProperties() {
       return props;
+    }
+
+    public void release() {
     }
   }
 

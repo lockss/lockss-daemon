@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrl.java,v 1.13 2004-03-18 03:34:22 tlipkis Exp $
+ * $Id: CachedUrl.java,v 1.14 2005-01-31 23:14:46 tlipkis Exp $
  */
 
 /*
@@ -127,4 +127,9 @@ public interface CachedUrl extends CachedUrlSetNode {
    * @return the ArchivalUnit
    */
   public ArchivalUnit getArchivalUnit();
+
+  /**
+   * Release resources.  Temporary.
+   */
+  public void release();
 }

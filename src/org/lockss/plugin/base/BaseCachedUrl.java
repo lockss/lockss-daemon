@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.19 2005-01-29 23:32:55 troberts Exp $
+ * $Id: BaseCachedUrl.java,v 1.20 2005-01-31 23:14:45 tlipkis Exp $
  */
 
 /*
@@ -147,6 +147,12 @@ public class BaseCachedUrl implements CachedUrl {
   public byte[] getUnfilteredContentSize() {
     ensureLeafLoaded();
     return ByteArray.encodeLong(leaf.getContentSize());
+  }
+
+  public void release() {
+    if (rnc != null) {
+      rnc.release();
+    }
   }
 
   private void ensureRnc() {

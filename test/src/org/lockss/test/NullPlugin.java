@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.66 2004-10-13 23:07:38 clairegriffin Exp $
+ * $Id: NullPlugin.java,v 1.67 2005-01-31 23:14:42 tlipkis Exp $
  */
 
 /*
@@ -162,6 +162,9 @@ public class NullPlugin {
 
     public CIProperties getProperties() {
       return new CIProperties();
+    }
+
+    public void release() {
     }
   }
 

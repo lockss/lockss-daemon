@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.43 2005-01-26 00:25:19 troberts Exp $
+ * $Id: BaseUrlCacher.java,v 1.44 2005-01-31 23:14:45 tlipkis Exp $
  */
 
 /*
@@ -181,6 +181,7 @@ public class BaseUrlCacher implements UrlCacher {
 	CIProperties cachedProps = cachedVersion.getProperties();
 	lastModified =
 	  cachedProps.getProperty(CachedUrl.PROPERTY_LAST_MODIFIED);
+	cachedVersion.release();
       }
     }
     return cache(lastModified);
