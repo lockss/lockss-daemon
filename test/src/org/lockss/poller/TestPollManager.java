@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.60 2004-01-20 18:22:50 tlipkis Exp $
+ * $Id: TestPollManager.java,v 1.61 2004-01-31 22:56:09 tlipkis Exp $
  */
 
 /*
@@ -87,43 +87,59 @@ public class TestPollManager extends LockssTestCase {
   }
 
   /** test for method makePoll(..) */
-  public void testMakePoll() {
+  public void testMakePoll() throws Exception {
     // make a name poll
-    try {
-      BasePoll p1 = pollmanager.makePoll(testmsg[0]);
-      // make sure we got the right type of poll here
-      assertTrue(p1 instanceof V1NamePoll);
-    }
-    catch (IOException ex) {
-      fail("unable to make a name poll");
-    }
+    BasePoll p1 = pollmanager.makePoll(testmsg[0]);
+    // make sure we got the right type of poll here
+    assertTrue(p1 instanceof V1NamePoll);
 
     // make a content poll
-    try {
-      BasePoll p2 = pollmanager.makePoll(testmsg[1]);
-      // make sure we got the right type of poll here
-      assertTrue(p2 instanceof V1ContentPoll);
-
-    }
-    catch (IOException ex) {
-      fail("unable to make a content poll");
-    }
-
+    BasePoll p2 = pollmanager.makePoll(testmsg[1]);
+    // make sure we got the right type of poll here
+    assertTrue(p2 instanceof V1ContentPoll);
 
     // make a verify poll
-    try {
-      BasePoll p3 = pollmanager.makePoll(testmsg[2]);
-      // make sure we got the right type of poll here
-      assertTrue(p3 instanceof V1VerifyPoll);
-    }
-    catch (IOException ex) {
-      fail("unable to make a verify poll");
-    }
+    BasePoll p3 = pollmanager.makePoll(testmsg[2]);
+    // make sure we got the right type of poll here
+    assertTrue(p3 instanceof V1VerifyPoll);
+  }
 
+  public void testMakePollDoesntIfPluginMismatch() throws Exception {
+    // Make a string that's different from the plugin's version
+    String bogus = testau.getPlugin().getVersion() + "cruft";
+
+    // make a name poll witha bogus plugin version
+    MockPollSpec spec =
+      new MockPollSpec(testau, urlstr, lwrbnd, uprbnd);
+    spec.setPluginVersion(bogus);
+    LcapMessage msg1 =
+      LcapMessage.makeRequestMsg(spec,
+				 testentries,
+				 pollmanager.generateRandomBytes(),
+				 pollmanager.generateRandomBytes(),
+				 LcapMessage.NAME_POLL_REQ,
+				 testduration,
+				 testID);
+
+    BasePoll p1 = pollmanager.makePoll(msg1);
+    assertNull("Shouldn't create poll with plugin version mismatch", p1);
+
+    // make a content poll witha bogus plugin version
+    LcapMessage msg2 =
+      LcapMessage.makeRequestMsg(spec,
+				 testentries,
+				 pollmanager.generateRandomBytes(),
+				 pollmanager.generateRandomBytes(),
+				 LcapMessage.CONTENT_POLL_REQ,
+				 testduration,
+				 testID);
+
+    BasePoll p2 = pollmanager.makePoll(msg2);
+    assertNull("Shouldn't create poll with plugin version mismatch", p2);
   }
 
   /** test for method makePollRequest(..) */
-  public void testMakePollRequest() {
+  public void testMakePollRequest() throws Exception {
     try {
       CachedUrlSet cus = null;
       Plugin plugin = testau.getPlugin();
@@ -134,9 +150,6 @@ public class TestPollManager extends LockssTestCase {
     }
     catch (IllegalStateException e) {
       // ignore this for now
-    }
-    catch (IOException ex) {
-      fail("unable to make a poll request message");
     }
   }
 
@@ -169,113 +182,89 @@ public class TestPollManager extends LockssTestCase {
   }
 
   /** test for method checkForConflicts(..) */
-  public void testCheckForConflicts() {
+  public void testCheckForConflicts() throws Exception {
     // lets try to run two content polls in the same location
 
    LcapMessage[] sameroot = new LcapMessage[3];
 
-    try {
-      for(int i= 0; i<3; i++) {
-	CachedUrlSetSpec cuss =
-	  new RangeCachedUrlSetSpec(urlstr, lwrbnd, uprbnd);
-	Plugin plugin = testau.getPlugin();
-	PollSpec spec =
-	  new PollSpec(testau.getAuId(),
-		       urlstr,lwrbnd,uprbnd,
-		       plugin.makeCachedUrlSet(testau, cuss));
-        sameroot[i] =  LcapMessage.makeRequestMsg(
-          spec,
-          testentries,
-          pollmanager.generateRandomBytes(),
-          pollmanager.generateRandomBytes(),
-          LcapMessage.NAME_POLL_REQ + (i * 2),
-          testduration,
-          testID);
-      }
-    }
-    catch (IOException ex) {
-      fail("Unable to make test messages");
-    }
+   for(int i= 0; i<3; i++) {
+     PollSpec spec =
+       new MockPollSpec(testau, urlstr, lwrbnd, uprbnd);
+     sameroot[i] =
+       LcapMessage.makeRequestMsg(spec,
+				  testentries,
+				  pollmanager.generateRandomBytes(),
+				  pollmanager.generateRandomBytes(),
+				  LcapMessage.NAME_POLL_REQ + (i * 2),
+				  testduration,
+				  testID);
+   }
 
-    // check content poll conflicts
-    try {
-      BasePoll c1 = pollmanager.makePoll(sameroot[1]);
-      // differnt content poll should be ok
+   // check content poll conflicts
+   BasePoll c1 = pollmanager.makePoll(sameroot[1]);
+   // differnt content poll should be ok
 
-      CachedUrlSet cus = pollmanager.checkForConflicts(testmsg[1],
-          makeCachedUrlSet(testmsg[1]));
-      assertNull("different content poll s/b ok", cus);
+   CachedUrlSet cus =
+     pollmanager.checkForConflicts(testmsg[1],
+				   makeCachedUrlSet(testmsg[1]));
+   assertNull("different content poll s/b ok", cus);
 
-      // same content poll same range s/b a conflict
-      cus = pollmanager.checkForConflicts(sameroot[1],
-          makeCachedUrlSet(sameroot[1]));
-      assertNotNull("same content poll root s/b conflict", cus);
+   // same content poll same range s/b a conflict
+   cus = pollmanager.checkForConflicts(sameroot[1],
+				       makeCachedUrlSet(sameroot[1]));
+   assertNotNull("same content poll root s/b conflict", cus);
 
-      // different name poll should be ok
-      cus = pollmanager.checkForConflicts(testmsg[0],
-          makeCachedUrlSet(testmsg[0]));
-      assertNull("name poll with different root s/b ok", cus);
+   // different name poll should be ok
+   cus = pollmanager.checkForConflicts(testmsg[0],
+				       makeCachedUrlSet(testmsg[0]));
+   assertNull("name poll with different root s/b ok", cus);
 
-      // same name poll s/b conflict
-      cus = pollmanager.checkForConflicts(sameroot[0],
-          makeCachedUrlSet(sameroot[0]));
-      assertNotNull("same name poll root s/b conflict", cus);
+   // same name poll s/b conflict
+   cus = pollmanager.checkForConflicts(sameroot[0],
+				       makeCachedUrlSet(sameroot[0]));
+   assertNotNull("same name poll root s/b conflict", cus);
 
-      // verify poll should be ok
-      cus = pollmanager.checkForConflicts(testmsg[2],
-          makeCachedUrlSet(testmsg[2]));
-      assertNull("verify poll s/b ok", cus);
+   // verify poll should be ok
+   cus = pollmanager.checkForConflicts(testmsg[2],
+				       makeCachedUrlSet(testmsg[2]));
+   assertNull("verify poll s/b ok", cus);
 
-      // remove the poll
-      pollmanager.removePoll(c1.m_key);
-    }
-    catch (IOException ex) {
-      fail("unable to make content poll");
-    }
+   // remove the poll
+   pollmanager.removePoll(c1.m_key);
   }
 
 
   /** test for method closeThePoll(..) */
-  public void testCloseThePoll() {
-    try {
-      BasePoll p1 = pollmanager.makePoll(testmsg[0]);
+  public void testCloseThePoll() throws Exception {
+    BasePoll p1 = pollmanager.makePoll(testmsg[0]);
 
-      // we should now be active
-      assertTrue(pollmanager.isPollActive(p1.m_key));
-      // we should not be closed
-      assertFalse(pollmanager.isPollClosed(p1.m_key));
+    // we should now be active
+    assertTrue(pollmanager.isPollActive(p1.m_key));
+    // we should not be closed
+    assertFalse(pollmanager.isPollClosed(p1.m_key));
 
 
-      pollmanager.closeThePoll(p1.m_key);
-      // we should not be active
-      assertFalse(pollmanager.isPollActive(p1.m_key));
-      // we should now be closed
-      assertTrue(pollmanager.isPollClosed(p1.m_key));
-      // we should reject an attempt to handle a packet with this key
-      pollmanager.handleIncomingMessage(testmsg[0]);
-      assertTrue(pollmanager.isPollClosed(p1.m_key));
-      assertFalse(pollmanager.isPollActive(p1.m_key));
-      pollmanager.closeThePoll(p1.m_key);
-
-   }
-    catch (IOException ex) {
-      fail("unable to make test poll");
-    }
+    pollmanager.closeThePoll(p1.m_key);
+    // we should not be active
+    assertFalse(pollmanager.isPollActive(p1.m_key));
+    // we should now be closed
+    assertTrue(pollmanager.isPollClosed(p1.m_key));
+    // we should reject an attempt to handle a packet with this key
+    pollmanager.handleIncomingMessage(testmsg[0]);
+    assertTrue(pollmanager.isPollClosed(p1.m_key));
+    assertFalse(pollmanager.isPollActive(p1.m_key));
+    pollmanager.closeThePoll(p1.m_key);
   }
-  /** test for method suspendPoll(...) */
 
-  public void testSuspendPoll() {
+  /** test for method suspendPoll(...) */
+  public void testSuspendPoll() throws Exception {
     BasePoll p1 = null;
-    try {
-      p1 = TestPoll.createCompletedPoll(theDaemon, testau, testmsg[0], 7, 2);
-      pollmanager.addPoll(p1);
-      // give it a pointless lock to avoid a null pointer
-      p1.getVoteTally().setActivityLock(
-          theDaemon.getActivityRegulator(testau).getAuActivityLock(-1, 123));
-    }
-    catch (Exception ex) {
-      fail("unable to make a test poll");
-    }
+    p1 = TestPoll.createCompletedPoll(theDaemon, testau, testmsg[0], 7, 2);
+    pollmanager.addPoll(p1);
+    // give it a pointless lock to avoid a null pointer
+    p1.getVoteTally().
+      setActivityLock(theDaemon.getActivityRegulator(testau).
+		      getAuActivityLock(-1, 123));
 
     // check our suspend
     pollmanager.suspendPoll(p1.m_key);
@@ -455,29 +444,19 @@ public class TestPollManager extends LockssTestCase {
     }
   }
 
-  private void initTestMsg() {
-    try {
-      testmsg = new LcapMessage[3];
+  private void initTestMsg() throws Exception {
+    testmsg = new LcapMessage[3];
 
-      Plugin plugin = testau.getPlugin();
-      for(int i= 0; i<3; i++) {
-	CachedUrlSetSpec cuss =
-	  new RangeCachedUrlSetSpec(rooturls[i], lwrbnd, uprbnd);
-        PollSpec spec = new PollSpec(testau.getAuId(),
-                                     rooturls[i],lwrbnd, uprbnd,
-                                     plugin.makeCachedUrlSet(testau, cuss));
-        testmsg[i] =  LcapMessage.makeRequestMsg(
-          spec,
-          testentries,
-          pollmanager.generateRandomBytes(),
-          pollmanager.generateRandomBytes(),
-          LcapMessage.NAME_POLL_REQ + (i * 2),
-          testduration,
-          testID);
-      }
-    }
-    catch (IOException ex) {
-      fail("can't create test message" + ex.toString());
+    for(int i= 0; i<3; i++) {
+      PollSpec spec = new MockPollSpec(testau, rooturls[i], lwrbnd, uprbnd);
+      testmsg[i] =
+	LcapMessage.makeRequestMsg(spec,
+				   testentries,
+				   pollmanager.generateRandomBytes(),
+				   pollmanager.generateRandomBytes(),
+				   LcapMessage.NAME_POLL_REQ + (i * 2),
+				   testduration,
+				   testID);
     }
   }
 
