@@ -1,5 +1,5 @@
 /*
- * $Id: SystemMetrics.java,v 1.16 2003-06-20 22:34:50 claire Exp $
+ * $Id: SystemMetrics.java,v 1.17 2003-09-12 00:37:08 eaalto Exp $
  */
 
 /*
@@ -61,7 +61,7 @@ public class SystemMetrics extends BaseLockssManager {
 
   public static final String PARAM_SLOWEST_RATE = PREFIX + "slowest.hashrate";
 
-  static final long DEFAULT_HASH_TEST_DURATION = 10 * Constants.SECOND;
+  static final long DEFAULT_HASH_TEST_DURATION = 100 * Constants.SECOND;
   static final int DEFAULT_HASH_TEST_BYTE_STEP = 10 * 1024;
 
   static final int DEFAULT_SLOWEST_RATE = 250;
@@ -153,7 +153,7 @@ public class SystemMetrics extends BaseLockssManager {
       Configuration.getTimeIntervalParam(PARAM_HASH_TEST_DURATION,
 					 DEFAULT_HASH_TEST_DURATION);
     int hashStep =
-      Configuration.getIntParam(PARAM_HASH_TEST_BYTE_STEP, 
+      Configuration.getIntParam(PARAM_HASH_TEST_BYTE_STEP,
 				DEFAULT_HASH_TEST_BYTE_STEP);
 
     long startTime = TimeBase.nowMs();
