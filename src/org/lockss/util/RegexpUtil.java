@@ -1,5 +1,5 @@
 /*
- * $Id: RegexpUtil.java,v 1.3 2004-08-04 23:47:56 tlipkis Exp $
+ * $Id: RegexpUtil.java,v 1.4 2005-01-04 03:04:45 tlipkis Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util;
 import java.util.*;
+import org.apache.commons.collections.map.*;
 import org.apache.oro.text.regex.*;
 
 /**
@@ -75,6 +76,27 @@ public class RegexpUtil {
     } catch (MalformedPatternException e) {
       throw new RuntimeException("Malformed RE: " + e.getMessage());
     }
+  }
+
+  // cache of compiled patterns
+  static LRUMap compiledPatterns = new LRUMap(100);
+
+  /** Compile a pattern and perform a match.  Meant to be used in
+   * situations where the caller cannot pre-compile the pattern.  Keeps a
+   * cache of recently compiled patterns.
+   * @param s String to match
+   * @param re regular expression
+   * @throws RuntimeException if re is malformed */
+  public static boolean isMatchRe(String s, String re) {
+    if (re.equals("")) {
+      return false;
+    }
+    Pattern pat = (Pattern)compiledPatterns.get(s);
+    if (pat == null) {
+      pat = uncheckedCompile(re, Perl5Compiler.READ_ONLY_MASK);
+      compiledPatterns.put(re, pat);
+    }
+    return getMatcher().contains(s, pat);
   }
 
   private static class REInst {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestRegexpUtil.java,v 1.1 2004-07-23 16:39:51 tlipkis Exp $
+ * $Id: TestRegexpUtil.java,v 1.2 2005-01-04 03:04:45 tlipkis Exp $
  */
 
 /*
@@ -76,6 +76,18 @@ public class TestRegexpUtil extends LockssTestCase {
     assertNotSame(c1, tcomp);
     assertNotSame(m1, tmatch);
 
+  }
+
+  public void testIsMatchRe() throws Exception {
+    assertTrue(RegexpUtil.isMatchRe("foobar", "ob"));
+    assertTrue(RegexpUtil.isMatchRe("foobar", "bar$"));
+    assertTrue(RegexpUtil.isMatchRe("foobar", "^foobar$"));
+    // repeat to ensure that compiled-pattern caching doesn't break anything
+    // (should also test that cache works)
+    assertTrue(RegexpUtil.isMatchRe("foobar", "^foobar$"));
+    assertFalse(RegexpUtil.isMatchRe("foobar", "^obar"));
+    // repeat
+    assertFalse(RegexpUtil.isMatchRe("foobar", "^obar"));
   }
 
 }
