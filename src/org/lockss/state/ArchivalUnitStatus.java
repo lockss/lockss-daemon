@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.13 2004-07-12 23:01:50 smorabito Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.13.2.1 2004-07-21 07:01:38 tlipkis Exp $
  */
 
 /*
@@ -185,7 +185,7 @@ public class ArchivalUnitStatus extends BaseLockssManager {
 
   static {
 //     DAMAGE_STATE_OK.setColor("green");
-    DAMAGE_STATE_DAMAGED.setColor("yellow");
+//     DAMAGE_STATE_DAMAGED.setColor("yellow");
   }
 
   static class AuStatus implements StatusAccessor {
