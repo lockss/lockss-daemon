@@ -1,5 +1,5 @@
 /*
- * $Id: PTestPlugin.java,v 1.2 2002-08-13 02:20:48 tal Exp $
+ * $Id: PTestPlugin.java,v 1.3 2002-09-19 20:56:06 tal Exp $
  */
 
 /*
@@ -46,21 +46,21 @@ import org.lockss.test.*;
  */
 class PTestPlugin {
 
-  static class PCachedUrl implements CachedUrl {
+  static class CU implements CachedUrl {
     private String url;
     private String contents = null;
     private Properties props = new Properties();
 
-    public PCachedUrl(String url) {
+    public CU(String url) {
       this.url = url;
     }
-    public PCachedUrl(String url, String type, String contents) {
+    public CU(String url, String type, String contents) {
       this.url = url;
       setContents(contents);
       props.setProperty("Content-Type", type);
     }
 
-    public void setContents(String s) {
+    private void setContents(String s) {
       contents = s;
       props.setProperty("Content-Length", ""+s.length());
     }
@@ -73,10 +73,6 @@ class PTestPlugin {
       return contents != null;
     }
 
-    public boolean shouldBeCached() {
-      return false;;
-    }
-
     public InputStream openForReading() {
       return new StringInputStream(contents);
     }
@@ -84,72 +80,21 @@ class PTestPlugin {
     public Properties getProperties() {
       return props;
     }
-
-    public void storeContent(InputStream input,
-			     Properties headers) throws IOException{
-    }
-
-    public InputStream getUncachedInputStream() {
-      return null;
-    }
-  
-    public Properties getUncachedProperties() {
-      return null;
-    }
   }
 
-  static class PCachedUrlSet implements CachedUrlSet {
+  static class CUS extends NullPlugin.CachedUrlSet {
     private Hashtable map = new Hashtable();
 
     public String toString() {
       return "[cus: " + map + "]";
     }
 
-    void storeCachedUrl(CachedUrl cu) {
+    private void storeCachedUrl(CachedUrl cu) {
       map.put(cu.toString(), cu);
-    }
-
-    public void addToList(CachedUrlSetSpec spec) {
-    }
-
-    public boolean removeFromList(CachedUrlSetSpec spec) {
-      return false;
-    }
-
-    public boolean memberOfList(CachedUrlSetSpec spec) {
-      return false;
-    }
-
-    public Enumeration listEnumeration() {
-      return null;
     }
 
     public boolean memberOfSet(String url) {
       return map.containsKey(url);
-    }
-
-    public CachedUrlSetHasher getContentHasher(MessageDigest hasher) {
-      return null;
-    }
-
-    public CachedUrlSetHasher getNameHasher(MessageDigest hasher) {
-      return null;
-    }
-
-    public Enumeration flatEnumeration() {
-      return null;
-    }
-
-    public Enumeration treeEnumeration() {
-      return null;
-    }
-
-    public long hashDuration() {
-      return 0;
-    }
-
-    public long duration(long elapsed, boolean success) {
-      return 0;
     }
 
     public CachedUrl makeCachedUrl(String url) {
@@ -162,14 +107,12 @@ class PTestPlugin {
   }
 
   public static CachedUrlSet makeTest() {
-    PCachedUrlSet cus = new PCachedUrlSet();
-    cus.storeCachedUrl(new PCachedUrl("http://foo.bar/one", "text/plain",
+    CUS cus = new CUS();
+    cus.storeCachedUrl(new CU("http://foo.bar/one", "text/plain",
 				      "this is one text\n"));
-    cus.storeCachedUrl(new PCachedUrl("http://foo.bar/two", "text/html",
+    cus.storeCachedUrl(new CU("http://foo.bar/two", "text/html",
 				      "<html><h3>this is two html</h3></html>"));
     org.lockss.plugin.Plugin.registerCachedUrlSet(cus);
     return cus;
   }
-
-
 }
