@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyIpAccess.java,v 1.3 2004-06-15 21:46:49 tlipkis Exp $
+ * $Id: ProxyIpAccess.java,v 1.4 2004-06-16 19:22:58 tlipkis Exp $
  */
 
 /*
@@ -151,6 +151,13 @@ public class ProxyIpAccess extends IpAccessControl {
     return proxyPort;
   }
 
+  static final String AUDIT_FOOT =
+    "The audit proxy serves <b>only</b> cached content, and never " +
+    "forwards requests to the publisher or any other site.  " +
+    "By configuring a browser to proxy to this port, you can view the " +
+    "content stored on the cache.  All requests for content not on the " +
+    "cache will return a \"404 Not Found\" error.";
+
   protected Composite getAdditionalFormElement() {
     Table tbl = new Table(0, "align=center cellpadding=10");
     tbl.newRow();
@@ -161,7 +168,9 @@ public class ProxyIpAccess extends IpAccessControl {
     }
     setTabOrder(enaElem);
     tbl.add(enaElem);
-    tbl.add("Enable audit proxy on port&nbsp;");
+    tbl.add("Enable audit proxy");
+    tbl.add(addFootnote(AUDIT_FOOT));
+    tbl.add(" on port&nbsp;");
     
     Input portElem = new Input(Input.Text, "audit_port",
 			       getDefaultAuditPort());
