@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.16 2003-04-17 02:16:58 troberts Exp $
+ * $Id: BaseArchivalUnit.java,v 1.17 2003-04-17 02:36:39 aalto Exp $
  */
 
 /*
@@ -73,18 +73,18 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    * Checks that the configuration is legal (doesn't change any of the defining
    * properties), and stores the configuration
    * @param config new Configuration
-   * @throws ConfigurationException if the configuration change is illegal or
-   * for other configuration errors
+   * @throws ArchivalUnit.ConfigurationException if the configuration change is
+   * illegal or for other configuration errors
    */
-  public void setConfiguration(Configuration config) 
-      throws ConfigurationException{
-    if (auConfig != null) { 
+  public void setConfiguration(Configuration config)
+      throws ArchivalUnit.ConfigurationException {
+    if (auConfig != null) {
       checkLegalConfigChange(config);
     }
     auConfig = config;
   }
 
-  private void checkLegalConfigChange(Configuration newConfig) 
+  private void checkLegalConfigChange(Configuration newConfig)
       throws ConfigurationException {
     Collection defKeys = plugin.getDefiningConfigKeys();
     for (Iterator it = defKeys.iterator(); it.hasNext();) {
@@ -142,7 +142,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   /**
    * Creates id by joining the plugin id to the canonical representation of
    * the defining properties as an encoded string
-   * 
+   *
    * @return id by joining the plugin id to the canonical representation of
    * the defining properties as an encoded string
    */
