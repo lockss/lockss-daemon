@@ -1,0 +1,161 @@
+#!/usr/bin/python
+#
+# Sign a plugin jar.
+#
+# The syntax of the java 'jarsigner' tool is hard to remember,
+# this script simply wraps it and prompts for all the required parameters
+# if they haven't been passed in on the command line.
+
+# TODO:
+#
+# (See Issue 1129 in roundup) In order to thwart hash collision
+# attacks, some random bits should be added to plugins received from
+# third parties before we sign them.
+
+from sys import argv, exit
+from getpass import getpass
+from getopt import getopt, GetoptError
+from os import path, environ, popen
+from glob import glob
+
+validArgs = ["help", "jar=", "alias=", "keystore=", "password="]
+args = {}
+
+def usage(help):
+    """ Print usage information """
+    print "Usage: signplugin [--help] [--jar <jarname>] \\\n \
+		 [--alias <alias>] [--keystore <keystore>] \\\n \
+		 [--password <password>]"
+    if (help):
+	print """
+ help         Print this help message.
+ jar          The name of the JAR file to sign.
+ alias        The alias to use when signing the jar.
+ keystore     The keystore holding your signing key.
+ password     Your signing password.
+"""
+
+def file_exists(file):
+    """ Verify that a given file exists. """
+    return path.isfile(file)
+
+#
+# If any arguments have not been supplied on the command-line,
+# prompt for them.
+#
+def gather_input():
+    """ Prompt the user for missing arguments """
+    global args
+
+    while not args.has_key("jar") or len(args["jar"]) == 0:
+	args["jar"] = raw_input("JAR file: ")
+
+    if not file_exists(args["jar"]):
+	print "Jar file %s does not exist!" % args["jar"]
+	exit(1)
+
+    while not args.has_key("alias") or len(args["alias"]) == 0:
+	args["alias"] = raw_input("Signing alias: ")
+
+    while not args.has_key("keystore") or len(args["keystore"]) == 0:
+	args["keystore"] = raw_input("Signing keystore: ")
+
+    if not file_exists(args["keystore"]):
+	print "Keystore %s does not exist!" % args["keystore"]
+	exit(1)
+
+    while not args.has_key("password") or len(args["password"]) == 0:
+	args["password"] = getpass("Signing Password: ")
+
+#
+# Parse passed-in command-line arguments.
+#
+def parse_options(argv):
+    """ Parse command-line options """
+    global args
+
+    if len(argv) == 0:
+	print "For help, use the --help option."
+
+    (opts, vals) = getopt(argv, None, validArgs)
+
+    if len(vals) > 0:
+	usage(0)
+	exit(1)
+
+    for (opt, val) in opts:
+	if opt == "--help":
+	    usage(1)
+	    exit()
+	elif opt == "--jar":
+	    args["jar"] = val
+	elif opt == "--alias":
+	    args["alias"] = val
+	elif opt == "--password":
+	    args["password"] = val
+	elif opt == "--keystore":
+	    args["keystore"] = val
+
+#
+# Sign the plugin
+#
+def sign_plugin():
+    """ Sign an existing plugin JAR """
+    global jarsigner
+    global args
+
+    print ("Signing plugin %s..." % args["jar"])
+
+    commandArgs = " -keystore \'" + args["keystore"] + "\'" + \
+		  " -keypass \'" + args["password"] + "\'" + \
+		  " -storepass \'" + args["password"] + "\'" + \
+		  " " + args["jar"] + \
+		  " " + args["alias"]
+
+    child = popen(jarsigner + commandArgs)
+    output = child.read()
+    err = child.close()
+    if err:
+        print "Signing failed."
+        print output
+    else:
+        print "Plugin jar %s signed successfully." % args["jar"]
+
+def main():
+    """ Main entry point """
+    global jarsigner
+
+    # Make sure 'JAVA_HOME' is set.
+    if not environ.has_key('JAVA_HOME'):
+        print "Can't continue. 'JAVA_HOME' must be defined in your environment."
+        exit(1)
+
+    # Location of the 'jarsigner' command.
+    jarsigner = path.join(environ.get('JAVA_HOME'), 'bin', 'jarsigner')
+
+    # Parse command line options
+    try:
+        parse_options(argv[1:])
+    except GetoptError:
+        usage(0)
+        exit(1)
+
+    # Get missing input
+    try:
+        gather_input()
+    except SyntaxError:
+        print "Problem while parsing input"
+        exit(1)
+
+    # Actually generate the plugin and sign it.
+    sign_plugin()
+
+#
+# Main
+#
+if __name__ == "__main__":
+    try:
+        main()
+    except KeyboardInterrupt:
+        print
+        exit(0)
