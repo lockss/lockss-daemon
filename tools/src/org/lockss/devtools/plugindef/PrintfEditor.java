@@ -384,7 +384,6 @@ public class PrintfEditor extends JDialog
       label.setToolTipText(format);
       StyleConstants.setComponent(style, label);
       doc.insertString(pos, format, style);
-      System.out.println("inserting " + format + " style " + style);
       numParameters++;
     }
     catch (BadLocationException e) {
