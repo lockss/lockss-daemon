@@ -1,0 +1,141 @@
+/*
+ * $Id: TestRangeCachedUrlSetSpec.java,v 1.1 2003-02-13 01:13:15 claire Exp $
+ */
+
+/*
+
+Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
+all rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Except as contained in this notice, the name of Stanford University shall not
+be used in advertising or otherwise to promote the sale, use or other dealings
+in this Software without prior written authorization from Stanford University.
+
+*/
+
+package org.lockss.daemon;
+import java.util.*;
+import junit.framework.TestCase;
+import gnu.regexp.*;
+import org.lockss.daemon.*;
+import org.lockss.test.*;
+import org.lockss.util.*;
+
+/**
+ * This is the test class for org.lockss.daemon.CrawlSpec
+ */
+
+public class TestRangeCachedUrlSetSpec extends LockssTestCase {
+  public TestRangeCachedUrlSetSpec(String msg){
+    super(msg);
+  }
+
+  public void testIllRangeCachedUrlSetSpec() throws REException {
+    try {
+      new RangeCachedUrlSetSpec(null, "foo", "bar");
+      fail("RangeCachedUrlSetSpec with null url should throw");
+    } catch (NullPointerException e) {
+    }
+  }
+
+  public void testRangeCachedUrlSetSpecEquivalence() throws REException {
+    CachedUrlSetSpec cuss1 = new RangeCachedUrlSetSpec("foo", null, null);
+    CachedUrlSetSpec cuss2 = new RangeCachedUrlSetSpec("foo");
+    CachedUrlSetSpec cuss3 = new RangeCachedUrlSetSpec("bar");
+    assertEquals(cuss1, cuss2);
+    assertTrue(!cuss2.equals(cuss3));
+
+    String uprb1 = "xyz";
+    String uprb2 = "zyx";
+    String lwrb1 = "abc";
+    String lwrb2 = "bcd";
+
+    CachedUrlSetSpec cuss4 = new RangeCachedUrlSetSpec("xxx", lwrb1, uprb1);
+    CachedUrlSetSpec cuss5 = new RangeCachedUrlSetSpec("xxx", lwrb2, uprb2);
+    CachedUrlSetSpec cuss6 = new RangeCachedUrlSetSpec("xxx", lwrb1, uprb2);
+    CachedUrlSetSpec cuss7 = new RangeCachedUrlSetSpec("xxx", lwrb2, uprb1);
+    CachedUrlSetSpec cuss8 = new RangeCachedUrlSetSpec("xxx", lwrb1, uprb1);
+
+    assertEquals(cuss4,cuss8);
+
+    assertTrue(!cuss4.equals(cuss5));
+    assertTrue(!cuss5.equals(cuss6));
+    assertTrue(!cuss6.equals(cuss7));
+    assertTrue(!cuss7.equals(cuss4));
+    assertTrue(!cuss7.equals(cuss5));
+    assertTrue(!cuss6.equals(cuss4));
+  }
+
+  public void testRangeCachedUrlSetSpec() throws REException {
+    String lwrb1 = "/abc";
+    String uprb1 = "/xyz";
+
+    // no range anything that begins with foo is a match
+    CachedUrlSetSpec cuss1 = new RangeCachedUrlSetSpec("foo", null, null);
+    assertEquals(ListUtil.list("foo"), cuss1.getPrefixList());
+    assertTrue(cuss1.matches("foo"));
+    assertTrue(cuss1.matches("foobar"));
+    assertTrue(cuss1.matches("foo/bar"));
+    assertTrue(!cuss1.matches("1foo"));
+
+    // has a range must match upper and lower range
+    CachedUrlSetSpec cuss2 = new RangeCachedUrlSetSpec("foo", lwrb1, uprb1);
+    assertTrue(cuss2.matches("foo/camel"));
+    assertTrue(!cuss2.matches("foo/aardvark"));
+    assertTrue(!cuss2.matches("foo/zebra"));
+  }
+
+  public void testHashCode() throws Exception {
+    String lwrb1 = "/abc";
+    String uprb1 = "/xyz";
+
+    String lwrb2 = "/bcd";
+    String uprb2 = "/zyx";
+
+    CachedUrlSetSpec spec1 = new RangeCachedUrlSetSpec("foo", lwrb1, uprb1);
+    CachedUrlSetSpec spec2 = new RangeCachedUrlSetSpec("bar", lwrb1, uprb1);
+    assertTrue(spec1.hashCode() != spec2.hashCode());
+    assertTrue(spec1 != spec2);
+
+    spec2 = new RangeCachedUrlSetSpec("foo", lwrb2, uprb2);
+    assertTrue(spec1.hashCode() != spec2.hashCode());
+    assertTrue(spec1 != spec2);
+
+    spec2 = new RangeCachedUrlSetSpec("foo", lwrb1, uprb1);
+    assertEquals(spec1.hashCode(), spec2.hashCode());
+    assertEquals(spec1, spec2);
+  }
+
+  public void testGetPrimaryUrl() throws Exception {
+    CachedUrlSetSpec spec1 = new RangeCachedUrlSetSpec("foo", null, null);
+    assertEquals("foo", spec1.getPrimaryUrl());
+
+    CachedUrlSetSpec spec2 = new RangeCachedUrlSetSpec("bar", "/abc", "/xyz");
+    Set s = SetUtil.set(spec1, spec2);
+
+    CachedUrlSetSpec any = new AnyCachedUrlSetSpec(s);
+    assertEquals("foo", any.getPrimaryUrl());
+  }
+
+  public static void main(String[] argv) {
+    String[] testCaseList = {TestRangeCachedUrlSetSpec.class.getName()};
+    junit.swingui.TestRunner.main(testCaseList);
+  }
+}
