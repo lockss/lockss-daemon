@@ -1,5 +1,5 @@
 /*
- * $Id: Logger.java,v 1.8 2002-12-02 00:40:40 tal Exp $
+ * $Id: Logger.java,v 1.9 2002-12-04 20:10:16 tal Exp $
  */
 
 /*
@@ -182,6 +182,22 @@ public class Logger {
     }
   }
 
+  /** Get the initial default log level, specified by the
+   * org.lockss.defaultLogLevel system property if present, or DEFAULT_LEVEL
+   */
+  public static int getInitialDefaultLevel() {
+    String s = System.getProperty("org.lockss.defaultLogLevel");
+    int l = DEFAULT_LEVEL;
+    if (s != null && !"".equals(s)) {
+      try {
+	l = levelOf(s);
+      } catch (IllegalArgumentException e) {
+	// no action
+      }
+    }
+    return l;
+  }
+
   /** Return numeric log level (<code>Logger.LEVEL_XXX</code>) for given name.
    */
   static int levelOf(String name) {
@@ -237,20 +253,11 @@ public class Logger {
 
   //private
 
-  /** set the initial default log level to that specified by the
+  /** Set the initial default log level to that specified by the
    * org.lockss.defaultLogLevel system property if present, or DEFAULT_LEVEL
    */
   private static void setInitialDefaultLevel() {
-    String s = System.getProperty("org.lockss.defaultLogLevel");
-    int l = DEFAULT_LEVEL;
-    if (s != null && !"".equals(s)) {
-      try {
-	l = levelOf(s);
-      } catch (IllegalArgumentException e) {
-	// no action
-      }
-    }
-    defaultLevel = l;
+    defaultLevel = getInitialDefaultLevel();
   }
 
   /** Translate an exception's stack trace to a string.
