@@ -1,5 +1,5 @@
 /*
- * $Id: TestHashQueue.java,v 1.15 2003-05-03 00:11:11 tal Exp $
+ * $Id: TestHashQueue.java,v 1.16 2003-05-05 17:47:29 tal Exp $
  */
 
 /*
@@ -267,6 +267,7 @@ public class TestHashQueue extends LockssTestCase {
 
   public void testGetAvailableHashTimeBefore() {
     HashQueue q = new HashQueue();
+    assertEquals(500, q.getAvailableHashTimeBefore(Deadline.in(500)));
     HashQueue.Request r1, r2, r3, r4, r5, r6, r7;
     r1 = simpleReq(200, 100);
     r2 = simpleReq(2000, 1200);
@@ -274,11 +275,17 @@ public class TestHashQueue extends LockssTestCase {
     assertTrue(q.insert(r1));
     assertTrue(q.insert(r2));
     assertTrue(q.insert(r3));
+    assertEquals(100, q.getAvailableHashTimeBefore(Deadline.in(100)));
     assertEquals(400, q.getAvailableHashTimeBefore(Deadline.in(500)));
     assertEquals(700, q.getAvailableHashTimeBefore(Deadline.in(1000)));
     assertEquals(700, q.getAvailableHashTimeBefore(Deadline.in(2000)));
     assertEquals(1200, q.getAvailableHashTimeBefore(Deadline.in(3000)));
     assertEquals(2200, q.getAvailableHashTimeBefore(Deadline.in(4000)));
+    // this will fully commit first 200 ms
+    r4 = simpleReq(200, 100);
+    assertTrue(q.insert(r4));
+    assertEquals(0, q.getAvailableHashTimeBefore(Deadline.in(100)));
+    assertEquals(0, q.getAvailableHashTimeBefore(Deadline.in(0)));
   }
 
   private long getBytesLeft(HashQueue.Request req) {
