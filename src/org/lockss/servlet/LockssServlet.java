@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.39 2004-05-04 22:20:12 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.40 2004-05-12 19:54:12 tlipkis Exp $
  */
 
 /*
@@ -106,6 +106,7 @@ public abstract class LockssServlet extends HttpServlet
 
   private Vector footnotes;
   private int footNumber;
+  private int tabindex;
   ServletDescr _myServletDescr = null;
   private String myName = null;
 
@@ -266,6 +267,7 @@ public abstract class LockssServlet extends HttpServlet
       }
       resp.setContentType("text/html");
       footNumber = 0;
+      tabindex = 1;
       reqURL = new URL(UrlUtil.getRequestURL(req));
       adminAddr = req.getParameter("admin");
       if (adminAddr == null) {
@@ -729,6 +731,13 @@ public abstract class LockssServlet extends HttpServlet
       return txt;
     }
     return "<font color=gray>" + txt + "</font>";
+  }
+
+  /** Set this element next in the tab order.  Returns the element for
+   * easier nesting in expressions. */
+  protected Element setTabOrder(Element ele) {
+    ele.attribute("tabindex", tabindex++);
+    return ele;
   }
 
   /** Store a footnote, assign it a number, return html for footnote
