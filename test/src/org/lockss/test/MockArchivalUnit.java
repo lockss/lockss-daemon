@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.46 2004-01-28 21:09:20 troberts Exp $
+ * $Id: MockArchivalUnit.java,v 1.47 2004-01-29 23:05:43 eaalto Exp $
  */
 
 /*
@@ -32,19 +32,17 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.test;
 
+import java.io.*;
 import java.util.*;
-import java.security.MessageDigest;
 import org.lockss.daemon.*;
 import org.lockss.crawler.*;
 import org.lockss.util.*;
 import org.lockss.state.*;
 import org.lockss.plugin.*;
-import java.io.*;
 
 /**
  * This is a mock version of <code>ArchivalUnit</code> used for testing
  */
-
 public class MockArchivalUnit implements ArchivalUnit {
   private Configuration config;
   private CrawlSpec spec;
@@ -58,6 +56,7 @@ public class MockArchivalUnit implements ArchivalUnit {
   private boolean shouldCallTopLevelPoll = true;
   private static Logger log = Logger.getLogger("MockArchivalUnit");
   private String manifestPage;
+  private boolean canCrawl = true;
 
   private HashSet urlsToCache = new HashSet();
 
@@ -173,7 +172,11 @@ public class MockArchivalUnit implements ArchivalUnit {
   }
 
   public boolean checkCrawlPermission(Reader reader) {
-    return true;
+    return canCrawl;
+  }
+
+  public void setCrawlPermission(boolean canCrawl) {
+    this.canCrawl = canCrawl;
   }
 
   public void setPlugin(Plugin plugin) {

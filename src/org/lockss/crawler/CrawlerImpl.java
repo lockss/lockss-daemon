@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerImpl.java,v 1.6 2004-01-28 21:08:24 troberts Exp $
+ * $Id: CrawlerImpl.java,v 1.7 2004-01-29 23:05:44 eaalto Exp $
  */
 
 /*
@@ -35,7 +35,6 @@ package org.lockss.crawler;
 import java.io.*;
 import java.util.*;
 import java.net.URL;
-import java.net.MalformedURLException;
 import org.lockss.daemon.*;
 import org.lockss.state.*;
 import org.lockss.util.*;
@@ -48,8 +47,6 @@ import org.lockss.plugin.base.*;
  * @author  Thomas S. Robertson
  * @version 0.0
  */
-
-
 public class CrawlerImpl implements Crawler {
   /**
    * TODO
@@ -58,28 +55,21 @@ public class CrawlerImpl implements Crawler {
    * 2) check deadline and die if we run too long
    */
 
-
   private static Logger logger = Logger.getLogger("CrawlerImpl");
 
   private ArchivalUnit au;
 
   private Crawler.Status crawlStatus = null;
 
-  private long startTime = -1;
-  private long endTime = -1;
   private int numUrlsFetched = 0;
-  private int numUrlsParsed = 0;
   private int type;
   private Collection repairUrls = null;
 
   private CrawlSpec spec = null;
 
-  private int crawlError = 0;
   private AuState aus = null;
 
   private Set failedUrls = new HashSet();
-
-  private ContentParser myParser = null;
 
   private static final String PARAM_RETRY_TIMES =
     Configuration.PREFIX + "CrawlerImpl.numCacheRetries";
@@ -280,12 +270,12 @@ public class CrawlerImpl implements Crawler {
       logger.info("Finished crawl of "+au);
     }
 
-    if (au instanceof BaseArchivalUnit) { 	 
-      BaseArchivalUnit bau = (BaseArchivalUnit)au; 	 
+    if (au instanceof BaseArchivalUnit) {
+      BaseArchivalUnit bau = (BaseArchivalUnit)au;
       long cacheHits = bau.getCrawlSpecCacheHits();
       long cacheMisses = bau.getCrawlSpecCacheMisses();
       double per = ((float)cacheHits /
-		    ((float)cacheHits + (float)cacheMisses)); 	 
+		    ((float)cacheHits + (float)cacheMisses));
       logger.info("Had "+cacheHits+" cache hits, with a percentage of "+per);
     }
 
@@ -312,10 +302,13 @@ public class CrawlerImpl implements Crawler {
           crawl_ok = au.checkCrawlPermission(reader);
           if (!crawl_ok) {
             logger.error("Couldn't start crawl due to missing permission.");
+          } else {
+            logger.debug2("Permission granted. Caching permission page.");
+            uc.cache();
           }
         } else {
           logger.debug("Couldn't start crawl due to crawl window restrictions.");
-	  err = Crawler.STATUS_WINDOW_CLOSED;
+          err = Crawler.STATUS_WINDOW_CLOSED;
         }
       } else {
 	logger.debug("Manifest not within CrawlSpec");
@@ -340,6 +333,7 @@ public class CrawlerImpl implements Crawler {
    * been parsed (to make sure we don't loop)
    * @param cus cached url set that the url belongs to
    * @param overWrite true if overwriting is desired
+   * @param reparse true to force reparse
    * @return true if there were no errors
    */
   protected boolean doCrawlLoop(String url, Collection extractedUrls,
@@ -393,7 +387,7 @@ public class CrawlerImpl implements Crawler {
 	    parser.parseForUrls(cu, new MyFoundUrlCallback(parsedPages,
 							   extractedUrls, au));
 	  }
-	  
+
  	  crawlStatus.signalUrlParsed();
 	  parsedPages.add(uc.getUrl());
 	}
@@ -491,9 +485,10 @@ public class CrawlerImpl implements Crawler {
       this.extractedUrls = extractedUrls;
       this.au = au;
     }
-    
+
     /**
      * Check that we should cache this url and haven't already parsed it
+     * @param url the url string
      */
     public void foundUrl(String url) {
       if (isSupportedUrlProtocol(url)

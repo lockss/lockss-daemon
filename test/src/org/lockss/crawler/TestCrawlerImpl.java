@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlerImpl.java,v 1.4 2004-01-28 21:08:55 troberts Exp $
+ * $Id: TestCrawlerImpl.java,v 1.5 2004-01-29 23:05:44 eaalto Exp $
  */
 
 /*
@@ -37,7 +37,6 @@ import java.util.*;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
-import org.lockss.plugin.*;
 
 /**
  * This is the test class for org.lockss.crawler.CrawlerImpl
@@ -58,10 +57,8 @@ public class TestCrawlerImpl extends LockssTestCase {
   public static final String startUrl = "http://www.example.com/index.html";
   private MockCrawlRule crawlRule;
   private MockAuState aus = new MockAuState();
-  
+
   private MockContentParser parser = new MockContentParser();
-
-
 
   private static final String PARAM_RETRY_TIMES =
     Configuration.PREFIX + "CrawlerImpl.numCacheRetries";
@@ -272,7 +269,7 @@ public class TestCrawlerImpl extends LockssTestCase {
     spec = new CrawlSpec(urls, crawlRule);
     crawler =
       CrawlerImpl.makeNewContentCrawler(mau, spec, new MockAuState());
-    
+
     mau.setParser(parser);
 
     crawler.doCrawl(Deadline.MAX);
@@ -372,6 +369,16 @@ public class TestCrawlerImpl extends LockssTestCase {
     assertEquals(expected, cus.getCachedUrls());
   }
 
+  public void testDoesntCacheFailedPermission() {
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    cus.addUrl(startUrl);
+
+    mau.setCrawlPermission(false);
+    crawler.doCrawl(Deadline.MAX);
+    Set expected = SetUtil.set();
+    assertEquals(expected, cus.getCachedUrls());
+  }
+
   public void testAbortedCrawlDoesntStart() {
     String url1= "http://www.example.com/link1.html";
     String url2= "http://www.example.com/link2.html";
@@ -386,7 +393,7 @@ public class TestCrawlerImpl extends LockssTestCase {
 
     crawler.abortCrawl();
     crawler.doCrawl(Deadline.MAX);
-    Set expected = SetUtil.set();
+    Set expected = SetUtil.set(startUrl);
     assertEquals(expected, cus.getCachedUrls());
   }
 
@@ -757,7 +764,7 @@ public class TestCrawlerImpl extends LockssTestCase {
 
     crawler.doCrawl(Deadline.in(2));
     //Set expected = SetUtil.set(startUrl, url1);
-    Collection expected = SetUtil.set(url2, url3);
+    Set expected = SetUtil.set(url1, url2, url3);
     assertSameElements(expected, aus.getCrawlUrls());
   }
 
