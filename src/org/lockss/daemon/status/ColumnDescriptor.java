@@ -1,5 +1,5 @@
 /*
- * $Id: ColumnDescriptor.java,v 1.8 2004-09-28 08:53:18 tlipkis Exp $
+ * $Id: ColumnDescriptor.java,v 1.9 2005-01-07 09:20:40 tlipkis Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ public class ColumnDescriptor {
   public static final int TYPE_INT=0;
 
   /**
-   * Must have meaningful toString() method
+   * Instanceof floating point number (Float, Double, etc.)
    */
   public static final int TYPE_FLOAT=1;
 
