@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.39 2003-07-21 08:34:48 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.40 2003-07-23 06:40:17 tlipkis Exp $
  */
 
 /*
@@ -74,6 +74,7 @@ public class PluginManager extends BaseLockssManager {
     configMgr = getDaemon().getConfigManager();
     statusSvc = getDaemon().getStatusService();
     statusSvc.registerStatusAccessor("AUS", new Status(this));
+    initPluginRegistry();
     resetConfig();
   }
 
@@ -112,19 +113,21 @@ public class PluginManager extends BaseLockssManager {
     } 
   }
 
-  static String pluginNameFromKey(String key) {
-    // tk - needs to do real mapping from IDs obtained from all available
-    // plugins.
-    // for now, treat as class name with |'s instead of .'s
+  /** Convert plugin property key to plugin class name. */
+  public static String pluginNameFromKey(String key) {
     return StringUtil.replaceString(key, "|", ".");
   }
 
-  static String pluginNameFromId(String id) {
-    //For now, plugin ids are the class name
-    return id;
+  /** Convert plugin class name to key suitable for property file. */
+  public static String pluginKeyFromName(String className) {
+    return StringUtil.replaceString(className, ".", "|");
   }
 
-  static String pluginKeyFromId(String id) {
+  /** Convert plugin id to key suitable for property file.  Plugin id is
+   * currently the same as plugin class name, but that may change. */
+  public static String pluginKeyFromId(String id) {
+    // tk - needs to do real mapping from IDs obtained from all available
+    // plugins.
     return StringUtil.replaceString(id, ".", "|");    
   }
 
@@ -147,8 +150,13 @@ public class PluginManager extends BaseLockssManager {
     return pluginKeyFromId(pluginId)+"&"+auKey;
   }
 
+  static String configKeyFromAUId(String auid) {
+    return StringUtil.replaceString(auid, "&", ".");    
+
+  }
+
   /**
-   * Return the plugin with the given id.  Mostly for testing.
+   * Return the plugin with the given id.
    * @param pluginId the plugin id
    * @return the plugin or null
    */
@@ -184,19 +192,59 @@ public class PluginManager extends BaseLockssManager {
     }
   }
 
-  private void configureAU(Plugin plugin, Configuration auConf, String auId)
+  void configureAU(Plugin plugin, Configuration auConf, String auId)
       throws ArchivalUnit.ConfigurationException {
-    ArchivalUnit au = plugin.configureAU(auConf, 
-					 (ArchivalUnit)auMap.get(auId));
-    getDaemon().startAUManagers(au);
-    log.debug("putAuMap(" + au.getAUId() +", " + au);
-    if (!auId.equals(au.getAUId())) {
-      throw new ArchivalUnit.ConfigurationException("Configured AU has "
-						    +"unexpected AUId, "
-						    +"is: "+au.getAUId()
-						    +" expected: "+auId);
+    try {
+      ArchivalUnit au = plugin.configureAU(auConf, 
+					   (ArchivalUnit)auMap.get(auId));
+      log.debug("Configured AU " + au);
+      try {
+	getDaemon().startAUManagers(au);
+      } catch (Exception e) {
+	throw new
+	  ArchivalUnit.ConfigurationException("Couldn't start AU processes",
+					      e);
+      }
+      log.debug("putAuMap(" + au.getAUId() +", " + au);
+      if (!auId.equals(au.getAUId())) {
+	throw new ArchivalUnit.ConfigurationException("Configured AU has "
+						      +"unexpected AUId, "
+						      +"is: "+au.getAUId()
+						      +" expected: "+auId);
+      }
+      putAuInMap(au);
+    } catch (ArchivalUnit.ConfigurationException e) {
+      throw e;
+    } catch (Exception e) {
+      log.error("Error configuring AU", e);
+      throw new
+	ArchivalUnit.ConfigurationException("Unexpected error creating AU", e);
     }
-    putAuInMap(au);
+  }
+
+  ArchivalUnit createAU(Plugin plugin, Configuration auConf)
+      throws ArchivalUnit.ConfigurationException {
+    try {
+      ArchivalUnit au = plugin.createAU(auConf);
+      log.debug("Created AU " + au);
+      try {
+	getDaemon().startAUManagers(au);
+      } catch (Exception e) {
+	log.error("Couldn't start AU processes", e);
+	throw new
+	  ArchivalUnit.ConfigurationException("Couldn't start AU processes",
+					      e);
+      }
+      log.debug("putAuMap(" + au.getAUId() +", " + au);
+      putAuInMap(au);
+      return au;
+    } catch (ArchivalUnit.ConfigurationException e) {
+      throw e;
+    } catch (Exception e) {
+      log.error("Error creating AU", e);
+      throw new
+	ArchivalUnit.ConfigurationException("Unexpected error creating AU", e);
+    }
   }
 
   private void putAuInMap(ArchivalUnit au) {
@@ -231,13 +279,48 @@ public class PluginManager extends BaseLockssManager {
   public void setAndSaveAUConfiguration(ArchivalUnit au,
 					Configuration auConf)
       throws ArchivalUnit.ConfigurationException, IOException {
-    String auid = au.getAUId();
-    String prefix = PARAM_AU_TREE + "." + auid;
-    Configuration fqConfig = auConf.addPrefix(prefix);
+    log.debug("Reconfiguring AU " + au);
     au.setConfiguration(auConf);
+    updateAuConfigFile(au, auConf);
+  }
+
+  private void updateAuConfigFile(ArchivalUnit au, Configuration auConf)
+      throws ArchivalUnit.ConfigurationException, IOException {
+    String auid = au.getAUId();
+    String prefix = PARAM_AU_TREE + "." + configKeyFromAUId(auid);
+    Configuration fqConfig = auConf.addPrefix(prefix);
     configMgr.updateAuConfigFile(fqConfig, prefix);
   }
 
+
+  /** Create an AU and save its configuration in the local config
+   * file.  Need to find a better place for this.
+   * @param plugin the Plugin in which to create the AU
+   * @param auProps the new AU configuration, using simple prop keys (not
+   * prefixed with org.lockss.au.<i>auid</i>)
+   * @return the new AU
+   */
+  public ArchivalUnit createAndSaveAUConfiguration(Plugin plugin,
+						   Properties auProps)
+      throws ArchivalUnit.ConfigurationException, IOException {
+    return createAndSaveAUConfiguration(plugin,
+					ConfigManager.fromProperties(auProps));
+  }
+
+  /** Create an AU and save its configuration in the local config
+   * file.  Need to find a better place for this.
+   * @param plugin the Plugin in which to create the AU
+   * @param auConf the new AU configuration, using simple prop keys (not
+   * prefixed with org.lockss.au.<i>auid</i>)
+   * @return the new AU
+   */
+  public ArchivalUnit createAndSaveAUConfiguration(Plugin plugin,
+						   Configuration auConf)
+      throws ArchivalUnit.ConfigurationException, IOException {
+    ArchivalUnit au = createAU(plugin, auConf);
+    updateAuConfigFile(au, auConf);
+    return au;
+  }
 
 
   /**
@@ -245,7 +328,7 @@ public class PluginManager extends BaseLockssManager {
    * @param pluginKey the key for this plugin
    * @return true if loaded
    */
-  boolean ensurePluginLoaded(String pluginKey) {
+  public boolean ensurePluginLoaded(String pluginKey) {
     if (pluginMap.containsKey(pluginKey)) {
       return true;
     }
@@ -350,6 +433,22 @@ public class PluginManager extends BaseLockssManager {
     }
     if (log.isDebug3()) log.debug3("ret cus: " + cus);
     return cus;
+  }
+
+  // Plugin registry
+  private String builtinPluginNames[] = {
+    "org.lockss.plugin.highwire.HighWirePlugin",
+    "org.lockss.plugin.simulated.SimulatedPlugin",
+  };
+
+  public Collection getRegisteredPlugins() {
+    return pluginMap.values();
+  }
+
+  void initPluginRegistry() {
+    for (int ix = 0; ix < builtinPluginNames.length; ix++) {
+      ensurePluginLoaded(pluginKeyFromName(builtinPluginNames[ix]));
+    }
   }
 
   private class Status implements StatusAccessor {

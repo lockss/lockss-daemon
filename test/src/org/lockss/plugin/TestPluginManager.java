@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.19 2003-07-14 06:46:39 tlipkis Exp $
+ * $Id: TestPluginManager.java,v 1.20 2003-07-23 06:40:16 tlipkis Exp $
  */
 
 /*
@@ -120,6 +120,14 @@ public class TestPluginManager extends LockssTestCase {
     assertEquals("org.lockss.Foo", mgr.pluginNameFromKey("org|lockss|Foo"));
   }
 
+  public void testKeyFromName() {
+    assertEquals("org|lockss|Foo", mgr.pluginKeyFromName("org.lockss.Foo"));
+  }
+
+  public void testKeyFromId() {
+    assertEquals("org|lockss|Foo", mgr.pluginKeyFromId("org.lockss.Foo"));
+  }
+
   public void testEnsurePluginLoaded() throws Exception {
     // non-existent class shouldn't load
     assertFalse(mgr.ensurePluginLoaded("org|lockss|NoSuchClass"));
@@ -176,6 +184,120 @@ public class TestPluginManager extends LockssTestCase {
 
     assertEquals(au1, mgr.getAuFromId(mauauid1));
   }
+
+  public void testCreateAU() throws Exception {
+    mgr.startService();
+    String pid = new ThrowingMockPlugin().getPluginId();
+    String key = mgr.pluginKeyFromId(pid);
+    assertTrue(mgr.ensurePluginLoaded(key));
+    ThrowingMockPlugin mpi = (ThrowingMockPlugin)mgr.getPlugin(key);
+    assertNotNull(mpi);
+    Configuration config = ConfigurationUtil.fromArgs("a", "b");
+    ArchivalUnit au = mgr.createAU(mpi, config);
+
+    // verify put in PluginManager map
+    String auid = au.getAUId();
+    ArchivalUnit aux = mgr.getAuFromId(auid);
+    assertSame(au, aux);
+
+    // verify got right config
+    Configuration auConfig = au.getConfiguration();
+    assertEquals("b", auConfig.get("a"));
+    assertEquals(1, auConfig.keySet().size());
+    assertEquals(mpi, au.getPlugin());
+
+    // verify turns RuntimeException into ArchivalUnit.ConfigurationException
+    mpi.setCfgEx(new ArchivalUnit.ConfigurationException("should be thrown"));
+    try {
+      ArchivalUnit au2 = mgr.createAU(mpi, config);
+      fail("createAU should have thrown ArchivalUnit.ConfigurationException");
+    } catch (ArchivalUnit.ConfigurationException e) {
+    }
+
+    mpi.setRtEx(new NullPointerException("Should be caught"));
+    try {
+      ArchivalUnit au2 = mgr.createAU(mpi, config);
+      fail("createAU should have thrown ArchivalUnit.ConfigurationException");
+    } catch (ArchivalUnit.ConfigurationException e) {
+      // this is what's expected
+    } catch (RuntimeException e) {
+      fail("createAU threw RuntimeException");
+    }
+
+  }
+
+  public void testConfigureAU() throws Exception {
+    mgr.startService();
+    String pid = new ThrowingMockPlugin().getPluginId();
+    String key = mgr.pluginKeyFromId(pid);
+    assertTrue(mgr.ensurePluginLoaded(key));
+    ThrowingMockPlugin mpi = (ThrowingMockPlugin)mgr.getPlugin(key);
+    assertNotNull(mpi);
+    Configuration config = ConfigurationUtil.fromArgs("a", "b");
+    ArchivalUnit au = mgr.createAU(mpi, config);
+
+    String auid = au.getAUId();
+    ArchivalUnit aux = mgr.getAuFromId(auid);
+    assertSame(au, aux);
+
+    // verify can reconfig
+    mgr.configureAU(mpi, ConfigurationUtil.fromArgs("a", "c"), auid);
+    Configuration auConfig = au.getConfiguration();
+    assertEquals("c", auConfig.get("a"));
+    assertEquals(1, auConfig.keySet().size());
+
+    // verify turns RuntimeException into ArchivalUnit.ConfigurationException
+    mpi.setCfgEx(new ArchivalUnit.ConfigurationException("should be thrown"));
+    try {
+      mgr.configureAU(mpi, config, auid);
+      fail("configureAU should have thrown ArchivalUnit.ConfigurationException");
+    } catch (ArchivalUnit.ConfigurationException e) {
+    }
+
+    mpi.setRtEx(new NullPointerException("Should be caught"));
+    try {
+      mgr.configureAU(mpi, config, auid);
+      fail("configureAU should have thrown ArchivalUnit.ConfigurationException");
+    } catch (ArchivalUnit.ConfigurationException e) {
+      // this is what's expected
+    } catch (RuntimeException e) {
+      fail("createAU threw RuntimeException");
+    }
+
+  }
+
+  static class ThrowingMockPlugin extends MockPlugin {
+    RuntimeException rtEx;
+    ArchivalUnit.ConfigurationException cfgEx;;
+
+    public void setRtEx(RuntimeException rtEx) {
+      this.rtEx = rtEx;
+    }
+    public void setCfgEx(ArchivalUnit.ConfigurationException cfgEx) {
+      this.cfgEx = cfgEx;
+    }
+    public ArchivalUnit createAU(Configuration config)
+	throws ArchivalUnit.ConfigurationException {
+      if (rtEx != null) {
+	throw rtEx;
+      } else if (cfgEx != null) {
+	throw cfgEx;
+      } else {
+	return super.createAU(config);
+      }
+    }
+    public ArchivalUnit configureAU(Configuration config, ArchivalUnit au)
+	throws ArchivalUnit.ConfigurationException {
+      if (rtEx != null) {
+	throw rtEx;
+      } else if (cfgEx != null) {
+	throw cfgEx;
+      } else {
+	return super.configureAU(config, au);
+      }
+    }
+  }
+
 
   public void testFindCUS() throws Exception {
     String url = "http://foo.bar/";
@@ -297,4 +419,5 @@ public class TestPluginManager extends LockssTestCase {
     CachedUrlSet cus = new MockCachedUrlSet(au, new AUCachedUrlSetSpec());
     return cus;
   }
+
 }
