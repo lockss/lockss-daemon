@@ -1,5 +1,5 @@
 /*
- * $Id: TestRamParser.java,v 1.1 2004-03-01 23:21:35 troberts Exp $
+ * $Id: TestRamParser.java,v 1.2 2004-03-05 00:51:49 troberts Exp $
  */
 
 /*
@@ -44,7 +44,7 @@ public class TestRamParser extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     MockArchivalUnit mau = new MockArchivalUnit();
-    parser = new RamParser(mau);
+    parser = new RamParser();
     cb = new MyFoundUrlCallback();
   }
 
@@ -103,6 +103,19 @@ public class TestRamParser extends LockssTestCase {
     Set actual = parseSourceForUrls("http://www.example.com/blah.rm\n"+
 				    "http://www.example.com/blah2.rm\n\n"+
 				    "http://www.example.com/blah3.rm\n");
+    assertEquals(expected, actual);
+  }
+
+  public void testTranslateUrls() throws IOException {
+    parser = new RamParser("rtsp://www.example.com/",
+			   "http://www.example.com/media/");
+    
+    Set expected = SetUtil.set("http://www.example.com/media/blah.rm",
+			       "http://www.example.com/blah2.rm",
+			       "http://www.example.com/media/blah3.rm"); 
+    Set actual = parseSourceForUrls("rtsp://www.example.com/blah.rm\n"+
+				    "http://www.example.com/blah2.rm\n\n"+
+				    "rtsp://www.example.com/blah3.rm\n");
     assertEquals(expected, actual);
   }
 

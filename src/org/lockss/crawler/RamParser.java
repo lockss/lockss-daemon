@@ -1,5 +1,5 @@
 /*
- * $Id: RamParser.java,v 1.1 2004-03-01 23:21:34 troberts Exp $
+ * $Id: RamParser.java,v 1.2 2004-03-05 00:51:49 troberts Exp $
  */
 
 /*
@@ -32,12 +32,25 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.crawler;
 import java.io.*;
+import org.lockss.util.*;
 import org.lockss.plugin.*;
 
 public class RamParser implements ContentParser {
   BufferedReader reader = null;
+  String source = null;
+  String dest = null;
 
-  public RamParser(ArchivalUnit au) {
+
+  public RamParser() {
+  }
+
+  /**
+   * Creates a RamParser which will find rtsp:// urls starting with
+   * source and replace that string with dest
+   */
+  public RamParser(String source, String dest) {
+    this.source = source;
+    this.dest = dest;
   }
 
   public void parseForUrls(CachedUrl cu, FoundUrlCallback cb)
@@ -54,6 +67,8 @@ public class RamParser implements ContentParser {
       line = line.trim().toLowerCase();
       if (line.startsWith("http://")) {
 	cb.foundUrl(line);
+      } else if (source != null && dest != null && line.startsWith(source)) {
+	cb.foundUrl(StringUtil.replaceFirst(line, source, dest));
       }
     }
   }
