@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.1 2002-08-31 06:26:35 tal Exp $
+ * $Id: Configuration.java,v 1.2 2002-09-02 04:22:44 tal Exp $
  */
 
 /*
@@ -323,7 +323,7 @@ public abstract class Configuration {
 	ProbabilisticTimer nextReload =
 	  new ProbabilisticTimer(reloadInterval, reloadInterval/4);
 	if (goOn) {
-	  nextReload.snoozeUntil();
+	  nextReload.sleepUntil();
 	}
       }
     }
