@@ -1,5 +1,5 @@
 /*
- * $Id: TestHashQueue.java,v 1.12 2003-03-21 07:32:36 tal Exp $
+ * $Id: TestHashQueue.java,v 1.13 2003-04-30 01:02:01 tal Exp $
  */
 
 /*
@@ -119,8 +119,13 @@ public class TestHashQueue extends LockssTestCase {
     HashQueue q = new HashQueue();
     HashQueue.Request req1 = simpleReq(1000, 100);
     HashQueue.Request req2 = simpleReq(2000, 100);
+    HashQueue.Request req3 = simpleReq(2000, 100);
     assertTrue(req1.runBefore(req2));
     assertFalse(req2.runBefore(req1));
+    // 2 and 3 expire at the same time, so runBefore should be
+    // false in both directions
+    assertFalse(req2.runBefore(req3));
+    assertFalse(req3.runBefore(req2));
   }
 
   public void testOverrunReqOrder() {
@@ -160,22 +165,25 @@ public class TestHashQueue extends LockssTestCase {
   // test insert order
   public void testInsertOrder() throws Exception {
     HashQueue q = new HashQueue();
-    HashQueue.Request r1, r2, r3 ,r4, r5, r6;
+    HashQueue.Request r1, r2, r3, r4, r5, r6, r7;
     r1 = simpleReq(2000, 0);
     r2 = simpleReq(3000, 0);
     r3 = simpleReq(5000, 0);
     r4 = simpleReq(2500, 0);
     r5 = simpleReq(200, 0);
-    r6 = simpleReq(200, 0);
-    // overrun
-    r6.timeUsed = 201;
-    Object ord[] = {r5, r1, r4, r2, r3, r6};
+    r6 = simpleReq(200, 0);		// identical to r5, inserted before it
+					// so should go before it in queue
+    // One that has overrun, should end up last
+    r7 = simpleReq(200, 0);
+    r7.timeUsed = 201;
+    Object ord[] = {r6, r5, r1, r4, r2, r3, r7};
     assertTrue(q.insert(r1));
     assertTrue(q.insert(r2));
     assertTrue(q.insert(r3));
     assertTrue(q.insert(r6));
     assertTrue(q.insert(r4));
     assertTrue(q.insert(r5));
+    assertTrue(q.insert(r7));
     assertIsomorphic(ord, (Collection)PrivilegedAccessor.getValue(q, "qlist"));
   }
 
