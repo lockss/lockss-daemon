@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.26 2005-01-05 09:46:29 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.26.2.1 2005-01-19 01:38:19 tlipkis Exp $
  */
 
 /*
@@ -398,7 +398,7 @@ public class RemoteApi extends BaseLockssDaemonManager {
     Configuration allAuConfig =
       ConfigManager.fromPropertiesUnsealed(allAuProps);
     int ver = checkLegalBackupFile(allAuConfig);
-    return batchAddAus(doCreate, allAuConfig);
+    return batchAddAus(doCreate, false, allAuConfig);
   }
 
   /** Throw InvalidAuConfigBackupFile if the config is of an unknown
@@ -443,6 +443,7 @@ public class RemoteApi extends BaseLockssDaemonManager {
    * operation isn't allowed to modify.
    */
   public BatchAuStatus batchAddAus(boolean doCreate,
+				   boolean isReactivate,
 				   Configuration allAuConfig) {
     Configuration allPlugs = allAuConfig.getConfigTree(PARAM_AU_TREE);
     BatchAuStatus bas = new BatchAuStatus();
@@ -455,7 +456,8 @@ public class RemoteApi extends BaseLockssDaemonManager {
 	String auKey = (String)auIter.next();
 	Configuration auConf = pluginConf.getConfigTree(auKey);
 	String auid = PluginManager.generateAuId(pluginKey, auKey);
-	bas.add(batchProcessOneAu(doCreate, pluginp, auid, auConf));
+	bas.add(batchProcessOneAu(doCreate, isReactivate,
+				  pluginp, auid, auConf));
       }
     }
     return bas;
@@ -464,9 +466,6 @@ public class RemoteApi extends BaseLockssDaemonManager {
   /** Delete a batch of AUs
    * @param auids
    * @return BatchAuStatus object describing the results.
-   * @throws RemoteApi.InvalidAuConfigBackupFile if the backup file is of
-   * an unknown format, unsupported version, or contains keys this
-   * operation isn't allowed to modify.
    */
   public BatchAuStatus deleteAus(List auids) {
     BatchAuStatus bas = new BatchAuStatus();
@@ -482,6 +481,35 @@ public class RemoteApi extends BaseLockssDaemonManager {
 	  stat.setStatus("Deleted", STATUS_ORDER_NORM);
 	} catch (IOException e) {
 	  stat.setStatus("Not Deleted", STATUS_ORDER_WARN);
+	  stat.setExplanation("Error deleting: " + e.getMessage());
+	}
+      } else {
+	stat.setStatus("Not Found", STATUS_ORDER_WARN);
+	stat.setName(auid);
+      }
+      bas.add(stat);
+    }
+    return bas;
+  }
+
+  /** Deactivate a batch of AUs
+   * @param auids
+   * @return BatchAuStatus object describing the results.
+   */
+  public BatchAuStatus deactivateAus(List auids) {
+    BatchAuStatus bas = new BatchAuStatus();
+    for (Iterator iter = auids.iterator(); iter.hasNext(); ) {
+      String auid = (String)iter.next();
+      BatchAuStatus.Entry stat = new BatchAuStatus.Entry();
+      stat.setAuid(auid);
+      ArchivalUnit au = pluginMgr.getAuFromId(auid);
+      if (au != null) {
+	stat.setName(au.getName());
+	try {
+	  pluginMgr.deactivateAu(au);
+	  stat.setStatus("Deactivated", STATUS_ORDER_NORM);
+	} catch (IOException e) {
+	  stat.setStatus("Not Deactivated", STATUS_ORDER_WARN);
 	  stat.setExplanation("Error deleting: " + e.getMessage());
 	}
       } else {
@@ -518,6 +546,7 @@ public class RemoteApi extends BaseLockssDaemonManager {
   }
 
   BatchAuStatus.Entry batchProcessOneAu(boolean doCreate,
+					boolean isReactivate,
 					PluginProxy pluginp,
 					String auid,
 					Configuration auConfig) {
@@ -540,7 +569,15 @@ public class RemoteApi extends BaseLockssDaemonManager {
 			  PluginManager.pluginNameFromAuId(auid));
       return stat;
     }
-
+    if (isReactivate) {
+      // make it look like we are just adding a new one
+      auConfig = oldConfig;
+      if (auConfig.isSealed()) {
+	auConfig = auConfig.copy();
+      }
+      auConfig.put(PluginManager.AU_PARAM_DISABLED, "false");
+      oldConfig = null;
+    }
     if (oldConfig != null && !oldConfig.isEmpty()) {
       // have current config, check for disagreement, never create
       stat.setConfig(oldConfig);
@@ -625,9 +662,18 @@ public class RemoteApi extends BaseLockssDaemonManager {
    * already exists, conflicts, etc.
    */
   public BatchAuStatus findAusInSetsToAdd(Collection sets) {
-    BatchAuStatus ras = new BatchAuStatus();
+    BatchAuStatus bas = new BatchAuStatus();
     Set tcs = findAusInSets(sets);
-    for (Iterator iter = tcs.iterator(); iter.hasNext(); ) {
+    return findAusInSetsToAdd(bas, tcs.iterator());
+  }
+
+  public BatchAuStatus findAusInSetToAdd(TitleSet ts) {
+    BatchAuStatus bas = new BatchAuStatus();
+    return findAusInSetsToAdd(bas, ts.getTitles().iterator());
+  }
+
+  private BatchAuStatus findAusInSetsToAdd(BatchAuStatus bas, Iterator iter) {
+    while (iter.hasNext()) {
       TitleConfig tc = (TitleConfig)iter.next();
       BatchAuStatus.Entry stat;
       String plugName = tc.getPluginName();
@@ -639,15 +685,15 @@ public class RemoteApi extends BaseLockssDaemonManager {
       } else {
 	String auid = pluginMgr.generateAuId(pluginp.getPlugin(),
 					     tc.getConfig());
-	stat = batchProcessOneAu(false, pluginp, auid, tc.getConfig());
+	stat = batchProcessOneAu(false, false, pluginp, auid, tc.getConfig());
       }
       stat.setTitleConfig(tc);
       if ("Unknown".equalsIgnoreCase(stat.getName())) {
 	stat.setName(tc.getDisplayName());
       }
-      ras.add(stat);
+      bas.add(stat);
     }
-    return ras;
+    return bas;
   }
 
   /** Find all AUs in the union of the sets and return a BatchAuStatus with
@@ -655,9 +701,19 @@ public class RemoteApi extends BaseLockssDaemonManager {
    * does not exist, etc.
    */
   public BatchAuStatus findAusInSetsToDelete(Collection sets) {
-    BatchAuStatus ras = new BatchAuStatus();
+    BatchAuStatus bas = new BatchAuStatus();
     Set tcs = findAusInSets(sets);
-    for (Iterator iter = tcs.iterator(); iter.hasNext(); ) {
+    return findAusInSetsToDelete(bas, tcs.iterator());
+  }
+
+  public BatchAuStatus findAusInSetToDelete(TitleSet ts) {
+    BatchAuStatus bas = new BatchAuStatus();
+    return findAusInSetsToDelete(bas, ts.getTitles().iterator());
+  }
+
+  private BatchAuStatus findAusInSetsToDelete(BatchAuStatus bas,
+					      Iterator iter) {
+    while (iter.hasNext()) {
       TitleConfig tc = (TitleConfig)iter.next();
       BatchAuStatus.Entry stat = new BatchAuStatus.Entry();
       String plugName = tc.getPluginName();
@@ -676,17 +732,59 @@ public class RemoteApi extends BaseLockssDaemonManager {
 	  stat.setExplanation("Does not exist");
 	}
       }
-      ras.add(stat);
+      bas.add(stat);
     }
-    return ras;
+    return bas;
+  }
+
+  /** Find all AUs in the union of the sets and return a BatchAuStatus with
+   * a BatchAuStatus.Entry for each AU indicating whether it could be created,
+   * already exists, conflicts, etc.
+   */
+  public BatchAuStatus findAusInSetsToActivate(Collection sets) {
+    BatchAuStatus bas = new BatchAuStatus();
+    Set tcs = findAusInSets(sets);
+    return findAusInSetsToActivate(bas, tcs.iterator());
+  }
+
+  public BatchAuStatus findAusInSetToActivate(TitleSet ts) {
+    BatchAuStatus bas = new BatchAuStatus();
+    return findAusInSetsToActivate(bas, ts.getTitles().iterator());
+  }
+
+  private BatchAuStatus findAusInSetsToActivate(BatchAuStatus bas,
+						Iterator iter) {
+    Collection inactiveAuids = pluginMgr.getInactiveAuIds();
+    while (iter.hasNext()) {
+      TitleConfig tc = (TitleConfig)iter.next();
+      String plugName = tc.getPluginName();
+      PluginProxy pluginp = findPluginProxy(plugName);
+      if (pluginp != null) {
+	String auid = pluginMgr.generateAuId(pluginp.getPlugin(),
+					     tc.getConfig());
+	if (inactiveAuids.contains(auid)) {
+	  BatchAuStatus.Entry stat =
+	    batchProcessOneAu(false, true, pluginp, auid, tc.getConfig());
+	  stat.setTitleConfig(tc);
+	  if ("Unknown".equalsIgnoreCase(stat.getName())) {
+	    stat.setName(tc.getDisplayName());
+	  }
+	  bas.add(stat);
+	}
+      }
+    }
+    return bas;
   }
 
   Set findAusInSets(Collection sets) {
     Set res = new HashSet();
     for (Iterator iter = sets.iterator(); iter.hasNext(); ) {
       TitleSet ts = (TitleSet)iter.next();
-      res.addAll(ts.getTitles());
-      Collection l = ts.getTitles();
+      try {
+	res.addAll(ts.getTitles());
+      } catch (Exception e) {
+ 	log.error("Error evaluating TitleSet", e);
+      }
     }
     return res;
   }
