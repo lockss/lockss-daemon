@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.17 2003-04-03 02:28:31 tal Exp $
+ * $Id: LockssDaemon.java,v 1.18 2003-04-03 11:28:41 tal Exp $
  */
 
 /*
@@ -371,9 +371,9 @@ public class LockssDaemon {
    */
   protected void initProperties() {
     Configuration.startHandler(propUrls);
-    System.err.println("Sleeping so config can get set");
+    log.info("Waiting for config");
     Configuration.waitConfig();
-    System.err.println("Awake");
+    log.info("Config loaded");
 
     // get the properties we're going to store locally
 
