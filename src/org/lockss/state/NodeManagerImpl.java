@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.137 2003-06-20 22:34:52 claire Exp $
+ * $Id: NodeManagerImpl.java,v 1.138 2003-06-25 21:16:34 eaalto Exp $
  */
 
 /*
@@ -1494,4 +1494,45 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
       }
     }
   }
+
+  /**
+   * Factory method to create new NodeManager instances.
+   * @param au the {@link ArchivalUnit}
+   * @return the new NodeManager instance
+   */
+  public static NodeManager createNewNodeManager(ArchivalUnit au) {
+    return new NodeManagerImpl(au);
+  }
+
+
+  /*  XXX fix
+
+   public void startService() {
+    super.startService();
+    // register our status
+    StatusService statusServ = theDaemon.getStatusService();
+    NodeManagerStatus nmStatus = new NodeManagerStatus(theDaemon);
+
+    statusServ.registerStatusAccessor(NodeManagerStatus.SERVICE_STATUS_TABLE_NAME,
+                                      new NodeManagerStatus.ServiceStatus());
+    statusServ.registerStatusAccessor(NodeManagerStatus.MANAGER_STATUS_TABLE_NAME,
+                                      new NodeManagerStatus.ManagerStatus());
+
+    statusServ.registerStatusAccessor(NodeManagerStatus.POLLHISTORY_STATUS_TABLE_NAME,
+                                      new NodeManagerStatus.PollHistoryStatus());
+  }
+
+  public void stopService() {
+    // checkpoint here
+    // unregister our status accessors
+    StatusService statusServ = theDaemon.getStatusService();
+    statusServ.unregisterStatusAccessor(NodeManagerStatus.SERVICE_STATUS_TABLE_NAME);
+    statusServ.unregisterStatusAccessor(NodeManagerStatus.MANAGER_STATUS_TABLE_NAME);
+    statusServ.unregisterStatusAccessor(NodeManagerStatus.POLLHISTORY_STATUS_TABLE_NAME);
+
+    super.stopService();
+  }
+
+      */
+
 }

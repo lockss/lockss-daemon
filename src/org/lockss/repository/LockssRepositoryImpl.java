@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.37 2003-06-20 22:34:52 claire Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.38 2003-06-25 21:16:34 eaalto Exp $
  */
 
 /*
@@ -53,7 +53,29 @@ import java.net.MalformedURLException;
  * finalized (they go to null when the last hard reference is gone, then are
  * removed from the cache on finalize()).
  */
-public class LockssRepositoryImpl implements LockssRepository {
+public class LockssRepositoryImpl extends BaseLockssManager implements LockssRepository {
+  /**
+   * Configuration parameter name for Lockss cache location.
+   */
+  public static final String PARAM_CACHE_LOCATION =
+    Configuration.PREFIX + "cache.location";
+  /**
+   * Name of top directory in which the urls are cached.
+   */
+  public static final String CACHE_ROOT_NAME = "cache";
+
+  // root location of all caches
+  static String cacheLocation = null;
+
+  // used for name mapping
+  static HashMap nameMap = null;
+
+  // starts with a '#' so no possibility of clashing with a URL
+  static final String AU_ID_FILE = "#au_id_file";
+  static final String AU_ID_PROP = "au.id";
+  static final String PLUGIN_ID_PROP = "plugin.id";
+  static String lastPluginDir = ""+(char)('a'-1);
+
   /**
    * Maximum number of node instances to cache.
    */
@@ -72,11 +94,7 @@ public class LockssRepositoryImpl implements LockssRepository {
   private int refHits = 0;
   private int refMisses = 0;
   private static Logger logger = Logger.getLogger("LockssRepository");
-  private static LockssDaemon theDaemon = null;
-  private LockssRepository theRepository = null;
   private String baseDir = null;
-
-  public LockssRepositoryImpl() { }
 
   LockssRepositoryImpl(String rootPath, ArchivalUnit au) {
     rootLocation = rootPath;
@@ -89,34 +107,17 @@ public class LockssRepositoryImpl implements LockssRepository {
     refMap = new ReferenceMap(ReferenceMap.HARD, ReferenceMap.WEAK);
   }
 
-  /**
-   * init the plugin manager.
-   * @param daemon the LockssDaemon instance
-   * @throws LockssDaemonException if we already instantiated this manager
-   * @see org.lockss.app.LockssManager#initService(LockssDaemon daemon)
-   */
-  public void initService(LockssDaemon daemon) throws LockssDaemonException {
-    if (theRepository == null) {
-      theDaemon = daemon;
-      theRepository = this;
-    } else {
-      throw new LockssDaemonException("Multiple Instantiation.");
-    }
-  }
-
-  /**
-   * start the plugin manager.
-   * @see org.lockss.app.LockssManager#startService()
-   */
-  public void startService() {
-  }
-
-  /**
-   * stop the plugin manager
-   * @see org.lockss.app.LockssManager#stopService()
-   */
   public void stopService() {
-    theRepository = null;
+    // mainly important in testing to blank this
+    lastPluginDir = ""+(char)('a'-1);
+    cacheLocation = null;
+    nameMap = null;
+  }
+
+  protected void setConfig(Configuration config, Configuration oldConfig,
+                           Set changedKeys) {
+    // the cacheLocation shouldn't change, so it doesn't update when the
+    // Configuration changes
   }
 
   public RepositoryNode getNode(String url) throws MalformedURLException {
@@ -261,7 +262,8 @@ public class LockssRepositoryImpl implements LockssRepository {
       nodeLocation = rootLocation;
       node = new AuNodeImpl(url, nodeLocation, this);
     } else {
-      nodeLocation = LockssRepositoryServiceImpl.mapUrlToFileLocation(rootLocation, url);
+      nodeLocation = LockssRepositoryImpl.mapUrlToFileLocation(rootLocation,
+          url);
       node = new RepositoryNodeImpl(url, nodeLocation, this);
     }
     if (!create) {
@@ -295,5 +297,205 @@ public class LockssRepositoryImpl implements LockssRepository {
     // manually deactivate
     node.currentVersion = RepositoryNodeImpl.INACTIVE_VERSION;
     node.curProps = null;
+  }
+
+  // static calls
+
+  /**
+   * Factory method to create new LockssRepository instances.
+   * @param au the {@link ArchivalUnit}
+   * @return the new LockssRepository instance
+   */
+  public static LockssRepository createNewLockssRepository(ArchivalUnit au) {
+    // load cacheLocation if not yet loaded
+    if (cacheLocation == null) {
+      cacheLocation = Configuration.getParam(PARAM_CACHE_LOCATION);
+      if (cacheLocation == null) {
+        logger.error("Couldn't get " + PARAM_CACHE_LOCATION +
+                     " from Configuration");
+        throw new LockssRepository.RepositoryStateException(
+            "Couldn't load param.");
+      }
+      cacheLocation = extendCacheLocation(cacheLocation);
+    }
+
+    return new LockssRepositoryImpl(
+        LockssRepositoryImpl.mapAuToFileLocation(cacheLocation, au),
+        au);
+  }
+
+  static String extendCacheLocation(String cacheDir) {
+    StringBuffer buffer = new StringBuffer(cacheDir);
+    if (!cacheDir.endsWith(File.separator)) {
+      buffer.append(File.separator);
+    }
+    buffer.append(CACHE_ROOT_NAME);
+    buffer.append(File.separator);
+    return buffer.toString();
+  }
+
+  /**
+   * mapAuToFileLocation() is the method used to resolve {@link ArchivalUnit}s
+   * into directory names. This maps a given au to directories, using the
+   * cache root as the base.  Given an au with PluginId of 'plugin' and AuId
+   * of 'au', it would return the string '<rootLocation>/plugin/au/'.
+   * @param rootLocation the root for all ArchivalUnits
+   * @param au the ArchivalUnit to resolve
+   * @return the directory location
+   */
+  public static String mapAuToFileLocation(String rootLocation, ArchivalUnit au) {
+    StringBuffer buffer = new StringBuffer(rootLocation);
+    if (!rootLocation.endsWith(File.separator)) {
+      buffer.append(File.separator);
+    }
+    getAuDir(au, buffer);
+    buffer.append(File.separator);
+    return buffer.toString();
+  }
+
+  /**
+   * mapUrlToFileLocation() is the method used to resolve urls into file names.
+   * This maps a given url to a file location, using the au top directory as
+   * the base.  It creates directories which mirror the html string, so
+   * 'http://www.journal.org/issue1/index.html' would be cached in the file:
+   * <rootLocation>/www.journal.org/http/issue1/index.html
+   * @param rootLocation the top directory for ArchivalUnit this URL is in
+   * @param urlStr the url to translate
+   * @return the url file location
+   * @throws java.net.MalformedURLException
+   */
+  public static String mapUrlToFileLocation(String rootLocation, String urlStr) throws
+      MalformedURLException {
+    int totalLength = rootLocation.length() + urlStr.length();
+    URL url = new URL(urlStr);
+    StringBuffer buffer = new StringBuffer(totalLength);
+    buffer.append(rootLocation);
+    if (!rootLocation.endsWith(File.separator)) {
+      buffer.append(File.separator);
+    }
+    buffer.append(url.getHost().toLowerCase());
+    buffer.append(File.separator);
+    buffer.append(url.getProtocol());
+    buffer.append(StringUtil.replaceString(url.getPath(), "/", File.separator));
+    return buffer.toString();
+  }
+
+  // name mapping functions
+
+  static void getAuDir(ArchivalUnit au, StringBuffer buffer) {
+    if (nameMap == null) {
+      loadNameMap(buffer.toString());
+    }
+    String auKey = getAuKey(au);
+    String auDir = (String)nameMap.get(auKey);
+    if (auDir == null) {
+      logger.debug3("Creating new au directory for '" + auKey + "'.");
+      while (true) {
+        auDir = getNewPluginDir();
+        File testDir = new File(buffer.toString() + auDir);
+        if (!testDir.exists()) {
+          break;
+        } else {
+          logger.debug3("Existing directory found at '"+auDir+
+                        "'.  Creating another...");
+        }
+      }
+      logger.debug3("New au directory: "+auDir);
+      nameMap.put(auKey, auDir);
+      String auLocation = buffer.toString() + auDir;
+      Properties idProps = new Properties();
+      idProps.setProperty(AU_ID_PROP, au.getAUId());
+      saveAuIdProperties(auLocation, idProps);
+    }
+    buffer.append(auDir);
+  }
+
+  static void loadNameMap(String rootLocation) {
+    logger.debug3("Loading name map for '" + rootLocation + "'.");
+    nameMap = new HashMap();
+    File rootFile = new File(rootLocation);
+    if (!rootFile.exists()) {
+      rootFile.mkdirs();
+      logger.debug3("Creating root directory at '" + rootLocation + "'.");
+      return;
+    }
+    File[] pluginAus = rootFile.listFiles();
+    for (int ii = 0; ii < pluginAus.length; ii++) {
+      String dirName = pluginAus[ii].getName();
+      if (dirName.compareTo(lastPluginDir) == 1) {
+        lastPluginDir = dirName;
+      }
+
+      Properties idProps = getAuIdProperties(pluginAus[ii].getAbsolutePath());
+      if (idProps==null) {
+        // if no properties were found, just continue
+        continue;
+      }
+      nameMap.put(idProps.getProperty(AU_ID_PROP), dirName);
+    }
+  }
+
+  static String getNewPluginDir() {
+    String newPluginDir = "";
+    boolean charChanged = false;
+    // go through and increment the first non-'z' char
+    for (int ii=lastPluginDir.length()-1; ii>=0; ii--) {
+      char curChar = lastPluginDir.charAt(ii);
+      if (!charChanged) {
+        if (curChar < 'z') {
+          curChar++;
+          charChanged = true;
+          newPluginDir = curChar + newPluginDir;
+        } else {
+          newPluginDir += 'a';
+        }
+      } else {
+        newPluginDir = curChar + newPluginDir;
+      }
+    }
+    if (!charChanged) {
+      newPluginDir += 'a';
+    }
+    lastPluginDir = newPluginDir;
+    return newPluginDir;
+  }
+
+  static Properties getAuIdProperties(String location) {
+    File propFile = new File(location + File.separator + AU_ID_FILE);
+    try {
+      InputStream is = new BufferedInputStream(new FileInputStream(propFile));
+      Properties idProps = new Properties();
+      idProps.load(is);
+      is.close();
+      return idProps;
+    } catch (Exception e) {
+      logger.warning("Error loading au id from " + propFile.getPath() + ".");
+      return null;
+    }
+  }
+
+  static void saveAuIdProperties(String location, Properties props) {
+    File propDir = new File(location);
+    if (!propDir.exists()) {
+      logger.debug("Creating directory '"+propDir.getAbsolutePath()+"'");
+      propDir.mkdirs();
+    }
+    File propFile = new File(propDir, AU_ID_FILE);
+    try {
+      logger.debug3("Saving au id properties at '" + location + "'.");
+      OutputStream os = new BufferedOutputStream(new FileOutputStream(propFile));
+      props.store(os, "ArchivalUnit id info");
+      os.close();
+      propFile.setReadOnly();
+    } catch (IOException ioe) {
+      logger.error("Couldn't write properties for " + propFile.getPath() + ".",
+                   ioe);
+      throw new LockssRepository.RepositoryStateException(
+          "Couldn't write au id properties file.");
+    }
+  }
+
+  static String getAuKey(ArchivalUnit au) {
+    return au.getAUId();
   }
 }

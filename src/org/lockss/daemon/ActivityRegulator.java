@@ -1,5 +1,5 @@
 /*
- * $Id: ActivityRegulator.java,v 1.19 2003-06-20 22:34:50 claire Exp $
+ * $Id: ActivityRegulator.java,v 1.20 2003-06-25 21:16:34 eaalto Exp $
  */
 
 /*
@@ -521,7 +521,15 @@ public class ActivityRegulator extends BaseLockssManager {
     }
   }
 
-    // lock is created for new activity, returned to caller
-    // caller can change activity, prod to keep from expiring, ask if expired
+  // lock is created for new activity, returned to caller
+  // caller can change activity, prod to keep from expiring, ask if expired
 
+  /**
+   * Factory method to create ActivityRegulator instances.
+   * @param au the {@link ArchivalUnit}
+   * @return the ActivityRegulator instance for that au
+   */
+  public static ActivityRegulator createNewActivityRegulator(ArchivalUnit au) {
+    return new ActivityRegulator(au);
+  }
 }
