@@ -1,5 +1,5 @@
 /*
- * $Id: ExtMapBean.java,v 1.1 2003-11-07 04:12:00 clairegriffin Exp $
+ * $Id: ExtMapBean.java,v 1.2 2003-11-19 23:51:10 eaalto Exp $
  */
 
 /*
@@ -34,12 +34,14 @@ package org.lockss.util;
 import java.util.*;
 
 /**
- * ExtMapBean: class to support Castor XML export of a Map
- * @version 1.0
+ * ExtMapBean: class to support Castor XML export of a Map.  Because Castor
+ * is broken, and loses 'key' information when exporting a Map, as well as being
+ * unable to marshall a List of Lists or Object[]s, this class
+ * creates two Lists of keys and values for marshalling.
  */
-
 public class ExtMapBean {
-  public Map map;
+  public ArrayList keyList;
+  public ArrayList valueList;
 
   /**
    * Empty constructor for bean creation during marshalling
@@ -48,18 +50,69 @@ public class ExtMapBean {
   }
 
   /**
-   * Gets the map of ExternalizableMapEntries.
-   * @return a Map of externalizable map entries
+   * Accessor for the intermediate list form of keys.
+   * @return the list
    */
-  public Map getMap() {
+  public ArrayList getKeyList() {
+    return keyList;
+  }
+
+  /**
+   * Setter for the intermediate list form of keys.
+   * @param list the new list
+   */
+  public void setKeyList(ArrayList list) {
+    keyList = list;
+  }
+
+  /**
+   * Accessor for the intermediate list form of values.
+   * @return the list
+   */
+  public ArrayList getValueList() {
+    return valueList;
+  }
+
+  /**
+   * Setter for the intermediate list form of values.
+   * @param list the new list
+   */
+  public void setValueList(ArrayList list) {
+    valueList = list;
+  }
+
+  /**
+   * Constructs the map of ExternalizableMapEntries from the internal lists.
+   * @return a HashMap of externalizable map entries
+   */
+  public HashMap getMapFromLists() {
+    HashMap map = new HashMap();
+    if ((keyList!=null) && (keyList.size() > 0)) {
+      for (int ii=0; ii<keyList.size(); ii++) {
+        if ((valueList==null) || (ii>valueList.size())) {
+          break;
+        }
+        Object value = valueList.get(ii);
+        if (value!=null) {
+          map.put(keyList.get(ii), value);
+        }
+      }
+    }
     return map;
   }
 
   /**
-   * Sets the collection of ExternalizableMapEntries
-   * @param map a a Map of externalizable map entries
+   * Sets the internal lists from a map of ExternalizableMapEntries.
+   * @param map a Map of externalizable map entries
    */
-  public void setMapCollection(Map map) {
-    this.map = map;
+  public void setListsFromMap(Map map) {
+    keyList = new ArrayList();
+    valueList = new ArrayList();
+    Iterator entries = map.entrySet().iterator();
+    while (entries.hasNext()) {
+      Map.Entry entry = (Map.Entry)entries.next();
+      keyList.add(entry.getKey());
+      valueList.add(entry.getValue());
+    }
   }
 }

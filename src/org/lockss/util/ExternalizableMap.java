@@ -1,5 +1,5 @@
 /*
- * $Id: ExternalizableMap.java,v 1.1 2003-11-07 04:12:00 clairegriffin Exp $
+ * $Id: ExternalizableMap.java,v 1.2 2003-11-19 23:51:10 eaalto Exp $
  */
 
 /*
@@ -31,9 +31,10 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.util;
 
-import java.util.*;
-import java.net.*;
 import java.io.*;
+import java.net.*;
+import java.util.*;
+import org.lockss.app.LockssDaemonException;
 
 import org.exolab.castor.xml.Marshaller;
 import org.exolab.castor.xml.Unmarshaller;
@@ -44,10 +45,11 @@ import org.exolab.castor.mapping.Mapping;
  * an external xml file.
  * @version 1.0
  */
-
 public class ExternalizableMap {
-
+  static final String MAPPING_FILE_NAME = "externalmap.xml";
   HashMap descrMap;
+  Mapping mapping = null;
+  private static Logger logger = Logger.getLogger("ExternalizableMap");
 
   public ExternalizableMap() {
     descrMap = new HashMap();
@@ -77,16 +79,15 @@ public class ExternalizableMap {
       Unmarshaller unmarshaller = new Unmarshaller(ExtMapBean.class);
       unmarshaller.setMapping(getMapping());
       ExtMapBean emp = (ExtMapBean)unmarshaller.unmarshal(reader);
-      if (emp.map == null) {
-        emp.map = new HashMap();
-      }
-      descrMap = new HashMap(emp.map);
+      descrMap = emp.getMapFromLists();
       reader.close();
     } catch (org.exolab.castor.xml.MarshalException me) {
       // we have a damaged file
+      logger.error(me.toString());
       descrMap = new HashMap();
     } catch (Exception e) {
       // some other error occured
+      logger.error(e.toString());
       descrMap = new HashMap();
     }
   }
@@ -100,19 +101,46 @@ public class ExternalizableMap {
       File mapFile = new File(mapDir, mapName);
       FileWriter writer = new FileWriter(mapFile);
       ExtMapBean emp = new ExtMapBean();
-      emp.map = descrMap;
+      emp.setListsFromMap(descrMap);
       Marshaller marshaller = new Marshaller(new FileWriter(mapFile));
       marshaller.setMapping(getMapping());
       marshaller.marshal(emp);
       writer.close();
-    }
-    catch (Exception e) {
+    } catch (Exception e) {
       //logger.error("Couldn't store map: ", e);
     }
   }
 
-  private Mapping getMapping() {
-    return null;
+  private void loadMapping() {
+    if (mapping==null) {
+      URL mappingLoc = getClass().getResource(MAPPING_FILE_NAME);
+      if (mappingLoc==null) {
+        logger.error("Couldn't find resource '"+MAPPING_FILE_NAME+"'");
+        throw new LockssDaemonException("Couldn't find mapping file.");
+      }
+
+      mapping = new Mapping();
+      try {
+        mapping.loadMapping(mappingLoc);
+      } catch (Exception e) {
+        logger.error("Couldn't load mapping file '"+mappingLoc+"'", e);
+        throw new LockssDaemonException("Couldn't load mapping file.");
+      }
+    }
+  }
+
+  Mapping getMapping() {
+    if (mapping==null) {
+      loadMapping();
+      if (mapping==null) {
+        logger.error("Mapping file not loaded.");
+        throw new LockssDaemonException("Mapping file not loaded.");
+      }
+    } else if (mapping.getRoot().getClassMappingCount()==0) {
+      logger.error("Mapping file is empty.");
+      throw new LockssDaemonException("Mapping file is empty.");
+    }
+    return mapping;
   }
 
   /*
@@ -121,10 +149,10 @@ public class ExternalizableMap {
    *
    */
 
-  public String  getString(String key, String def) {
+  public String getString(String key, String def) {
     String ret = def;
     String value = (String)getMapElement(key);
-    if(value != null) {
+    if (value != null) {
       ret = value;
     }
     return ret;
@@ -134,10 +162,9 @@ public class ExternalizableMap {
     boolean ret = def;
 
     Boolean value = (Boolean)getMapElement(key);
-
-    if(value != null) {
+    if (value != null) {
       ret = value.booleanValue();
-     }
+    }
     return ret;
   }
 
@@ -147,12 +174,10 @@ public class ExternalizableMap {
 
     try {
       Double value = (Double)getMapElement(key);
-      if(value != null) {
+      if (value != null) {
         ret = value.doubleValue();
       }
-    }
-    catch (NumberFormatException ex) {
-    }
+    } catch (NumberFormatException ex) { }
     return ret;
   }
 
@@ -161,12 +186,10 @@ public class ExternalizableMap {
     float ret = def;
     try {
       Float value = (Float)getMapElement(key);
-      if(value != null) {
+      if (value != null) {
         ret = value.floatValue();
       }
-    }
-    catch (NumberFormatException ex) {
-    }
+    } catch (NumberFormatException ex) { }
     return ret;
   }
 
@@ -175,12 +198,10 @@ public class ExternalizableMap {
     int ret = def;
     try {
       Integer value = (Integer)getMapElement(key);
-      if(value != null) {
+      if (value != null) {
         ret = value.intValue();
       }
-    }
-    catch (NumberFormatException ex) {
-    }
+    } catch (NumberFormatException ex) { }
     return ret;
   }
 
@@ -189,21 +210,22 @@ public class ExternalizableMap {
 
     try {
       Long value = (Long)getMapElement(key);
-      if(value != null) {
+      if (value != null) {
         ret = value.longValue();
       }
-    }
-    catch (NumberFormatException ex) {
-    }
+    } catch (NumberFormatException ex) { }
     return ret;
   }
 
   public URL getUrl(String key, URL def) {
     URL ret = def;
 
-    URL value = (URL) getMapElement(key);
-    if (value != null) {
-      ret = value;
+    String valueStr = (String)getMapElement(key);
+    if (valueStr!=null) {
+      try {
+        URL value = new URL(valueStr);
+        ret = value;
+      } catch (MalformedURLException mue) { }
     }
     return ret;
   }
@@ -211,20 +233,23 @@ public class ExternalizableMap {
   public Collection getCollection(String key, Collection def) {
     Collection ret = def;
     Collection value = (Collection)getMapElement(key);
-    if(value != null) {
+    if (value != null) {
       ret = value;
     }
     return ret;
   }
 
+/* removed because Castor can't marshal Maps properly
+
   public Map getMap(String key, Map def) {
     Map ret = def;
     Map value = (Map)getMapElement(key);
-    if(value != null) {
+    if (value != null) {
       ret = value;
     }
     return ret;
   }
+ */
 
   /*
    *
@@ -257,15 +282,18 @@ public class ExternalizableMap {
   }
 
   public void putUrl(String key, URL url) {
-    setMapElement(key, url);
+    setMapElement(key, url.toString());
   }
 
   public void putCollection(String key, Collection value) {
     setMapElement(key, value);
   }
 
+/* removed because Castor can't marshal Maps properly
+
   public void putMap(String key, Map value) {
     setMapElement(key, value);
   }
+ */
 
 }

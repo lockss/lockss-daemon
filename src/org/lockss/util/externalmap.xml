@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE mapping PUBLIC "-//EXOLAB/Castor Object Mapping DTD Version 1.0//EN"
+                         "http://castor.exolab.org/mapping.dtd">
+
+<mapping>
+        <class name="org.lockss.util.ExtMapBean">
+                <map-to xml="ExternalizableMap"/>
+                <field name="keyList"
+                       type="java.util.ArrayList">
+                        <bind-xml name="MapKeys" node="element"/>
+                </field>
+                <field name="valueList"
+                       type="java.util.ArrayList">
+                        <bind-xml name="MapValues" node="element"/>
+                </field>
+        </class>
+</mapping>
