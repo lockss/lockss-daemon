@@ -4,8 +4,8 @@
     <class name="org.lockss.alert.AlertActionMail">
         <description>Default mapping for class org.lockss.alert.AlertActionMail</description>
         <map-to xml="alertActionMail"/>
-        <field name="addresses" type="java.lang.String">
-            <bind-xml name="addresses" node="element"/>
+        <field name="recipients" type="java.lang.String">
+            <bind-xml name="recipients" node="element"/>
         </field>
     </class>
      <class name="org.lockss.alert.AlertFilter">
