@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.68 2003-04-18 22:44:19 claire Exp $
+* $Id: Poll.java,v 1.69 2003-04-30 18:22:03 troberts Exp $
  */
 
 /*
@@ -139,6 +139,9 @@ public abstract class Poll implements Serializable {
     m_verifier = m_pollmanager.makeVerifier();
     m_caller = idMgr.findIdentity(msg.getOriginAddr());
     m_key = msg.getKey();
+
+    log.debug("I think poll "+m_challenge
+	      +" will take me this long to hash "+m_hashTime);
 
     m_createTime = TimeBase.nowMs();
 

@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.88 2003-04-26 01:14:30 aalto Exp $
+* $Id: PollManager.java,v 1.89 2003-04-30 18:22:03 troberts Exp $
  */
 
 /*
@@ -719,16 +719,40 @@ public class PollManager  extends BaseLockssManager {
 
       case LcapMessage.CONTENT_POLL_REQ:
       case LcapMessage.CONTENT_POLL_REP:
+	theLog.debug3("Estimating time for a content poll on "+cus);
         long estTime = cus.estimatedHashDuration();
-        long my_rate = SystemMetrics.getSystemMetrics().
-            getBytesPerMsHashEstimate();
+	theLog.debug3("It should take me this long to hash the content: "
+		      +estTime);
+        long my_rate = 
+	  SystemMetrics.getSystemMetrics(). getBytesPerMsHashEstimate();
+	theLog.debug3("My hash speed is "+my_rate);
         long slow_rate = SystemMetrics.getSystemMetrics().getSlowestRate();
+	theLog.debug3("The slowest rate is "+slow_rate);
         if (my_rate > slow_rate) {
           estTime = estTime * my_rate / slow_rate;
+	  theLog.debug3("I've corrected the hash estimate to "+estTime);
         }
         ret = estTime * 2 * (quorum + 1);
-        ret = ret < m_minContentPollDuration ? m_minContentPollDuration :
-            (ret > m_maxContentPollDuration ? m_maxContentPollDuration : ret);
+	theLog.debug3("I think the poll should take: "+ret);
+	
+	if (ret < m_minContentPollDuration) {
+	  theLog.error("My poll estimate ("+ret
+		       +") is too low, adjusting to the minimum: "
+		       +m_minContentPollDuration);
+	  ret = m_minContentPollDuration;
+	} else if (ret > m_maxNamePollDuration) {
+	  theLog.error("My poll estimate ("+ret
+		       +") is too high, adjusting to the maximum: "
+		       +m_maxNamePollDuration);
+	  ret = m_maxNamePollDuration;
+	}
+
+// 	theLog.debug3("Minimum content poll duration: "
+// 		      +m_minContentPollDuration);
+// 	theLog.debug3("Max content poll duration: "
+// 		      +m_maxContentPollDuration);
+//         ret = ret < m_minContentPollDuration ? m_minContentPollDuration :
+//             (ret > m_maxContentPollDuration ? m_maxContentPollDuration : ret);
         theLog.debug2("Content Poll duration: " +
                       StringUtil.timeIntervalToString(ret));
         break;
