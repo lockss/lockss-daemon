@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.41 2003-06-26 23:59:02 eaalto Exp $
+ * $Id: CrawlManagerImpl.java,v 1.41.2.1 2003-07-02 22:53:15 troberts Exp $
  */
 
 /*
@@ -142,6 +142,9 @@ public class CrawlManagerImpl extends BaseLockssManager
     // check with regulator and start repair
     Map locks = getRepairLocks(au, urls);
     if (locks != null && locks.size() > 0) {
+      if (locks.size() < urls.size()) {
+	cb = new FailingCallbackWrapper(cb);
+      }
       Crawler crawler = makeCrawler(au, locks.keySet(), Crawler.REPAIR, false);
       CrawlThread crawlThread = new CrawlThread(crawler, Deadline.MAX,
 						ListUtil.list(cb),
@@ -319,6 +322,17 @@ public class CrawlManagerImpl extends BaseLockssManager
 		      +"completed");
 	nodeManager.newContentCrawlFinished();
       }
+    }
+  }
+
+  private static class FailingCallbackWrapper
+    implements CrawlManager.Callback {
+    CrawlManager.Callback cb;
+    public FailingCallbackWrapper(CrawlManager.Callback cb) {
+      this.cb = cb;
+    }
+    public void signalCrawlAttemptCompleted(boolean success, Object cookie) {
+      cb.signalCrawlAttemptCompleted(false, cookie);
     }
   }
 

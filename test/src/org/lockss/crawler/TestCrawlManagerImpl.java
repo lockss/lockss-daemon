@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.26 2003-06-26 23:59:01 eaalto Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.26.2.1 2003-07-02 22:53:16 troberts Exp $
  */
 
 /*
@@ -277,6 +277,29 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     assertTrue("Callback wasn't triggered", cb.wasTriggered());
   }
 
+  public void testRepairCrawlUnsucessfulIfCantGetAllLocks() {
+    String url1 = "http://www.example.com/index1.html";
+    String url2 = "http://www.example.com/index2.html";
+    List urls = ListUtil.list(url1, url2);
+
+    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
+    TestCrawlCB cb = new TestCrawlCB(sem);
+    CachedUrlSet cus1 =
+      mau.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url1));
+    CachedUrlSet cus2 =
+      mau.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url2));
+
+    activityRegulator.setStartCusActivity(cus1, true);
+    activityRegulator.setStartCusActivity(cus2, false);
+
+    crawlManager.scheduleRepair(mau, urls, cb, null);
+
+    assertTrue("Crawl didn't finish in 10 seconds", sem.take(TEN_SECONDS));
+    assertTrue("Callback wasn't triggered", cb.wasTriggered());
+    assertFalse("Crawl was successful even though we couldn't lock everything",
+		cb.wasSuccessful());
+  }
+
   public void testRepairCallbackGetsCookie() {
     String cookie = "test cookie str";
     SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
@@ -333,6 +356,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     SimpleBinarySemaphore sem;
     boolean called = false;
     Object cookie;
+    boolean success;
 
     public TestCrawlCB() {
       this(null);
@@ -343,11 +367,16 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     }
 
     public void signalCrawlAttemptCompleted(boolean success, Object cookie) {
+      this.success = success;
       called = true;
       this.cookie = cookie;
       if (sem != null) {
 	sem.give();
       }
+    }
+
+    public boolean wasSuccessful() {
+      return success;
     }
 
     public void signalCrawlSuspended(Object cookie) {
