@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireArchivalUnit.java,v 1.11 2003-03-08 01:44:32 troberts Exp $
+ * $Id: HighWireArchivalUnit.java,v 1.12 2003-03-08 01:52:54 troberts Exp $
  */
 
 /*
@@ -183,7 +183,7 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
   }
 
   public void pause() {
-    pause((int)pauseMS);
+    pause(pauseMS);
   }
 
   public String getAUId() {
