@@ -1,5 +1,5 @@
 /*
- * $Id: LockssReceivedDatagram.java,v 1.9 2004-01-20 18:22:50 tlipkis Exp $
+ * $Id: LockssReceivedDatagram.java,v 1.10 2004-01-21 08:27:44 tlipkis Exp $
  */
 
 /*
@@ -45,6 +45,7 @@ import org.lockss.util.*;
 public class LockssReceivedDatagram extends LockssDatagram {
 
   private DatagramPacket packet;	// received packet
+  private IPAddr sender = null;		// cache sender IPAddr
 
   // Filled in for received packets.
   // These do not participate in equals() or hashCode().
@@ -65,7 +66,10 @@ public class LockssReceivedDatagram extends LockssDatagram {
 
   /** Return the sender's IPAddr */
   public IPAddr getSender() {
-    return new IPAddr(packet.getAddress());
+    if (sender == null) {
+      sender = new IPAddr(packet.getAddress());
+    }
+    return sender;
   }
 
   /** Return the data portion of the received packet */
@@ -193,6 +197,6 @@ public class LockssReceivedDatagram extends LockssDatagram {
   public String toString() {
     return "[LRDG: proto=" + getProtocol() + ", " +
       (isMulticast() ? "M" : "U") +
-      " from " + packet.getAddress() + "]";
+      " from " + getSender() + "]";
   }
 }
