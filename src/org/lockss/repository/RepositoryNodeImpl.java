@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.52 2004-04-09 06:54:47 tlipkis Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.53 2004-04-10 05:41:32 tlipkis Exp $
  */
 
 /*
@@ -89,9 +89,12 @@ public class RepositoryNodeImpl implements RepositoryNode {
   // such as 'inactive.props' or '1', '2.props', etc.
   static final String CONTENT_DIR = "#content";
   static final String CURRENT_FILENAME = "current";
-  static final String PROPS_FILENAME = "props";
+  static final String PROPS_EXTENSION = ".props";
+  static final String CURRENT_PROPS_FILENAME = "current.props";
   static final String TEMP_FILENAME = "temp";
+  static final String TEMP_PROPS_FILENAME = "temp.props";
   static final String INACTIVE_FILENAME = "inactive";
+  static final String INACTIVE_PROPS_FILENAME = "inactive.props";
   // special-case versions
   static final int INACTIVE_VERSION = -99;
   static final int DELETED_VERSION = -98;
@@ -106,9 +109,12 @@ public class RepositoryNodeImpl implements RepositoryNode {
   private File curInputFile;
   protected Properties curProps;
   protected Properties nodeProps = new Properties();
+  private boolean nodePropsLoaded = false;
   protected int currentVersion = -1;
 
   // convenience file handles
+  private File contentDir = null;
+
   private String contentBufferStr = null;
   protected File nodeRootFile = null;
   protected File nodePropsFile = null;
@@ -178,23 +184,45 @@ public class RepositoryNodeImpl implements RepositoryNode {
     }
 
     // since RepositoryNodes update and cache tree size, efficient to use them
+    int children = 0;
     for (Iterator subNodes = listChildren(filter, false); subNodes.hasNext(); ) {
       // call recursively on all children
       RepositoryNode subNode = (RepositoryNode)subNodes.next();
       totalSize += subNode.getTreeContentSize(null);
+      children++;
     }
 
     if (filter==null) {
-      // store value
+      // cache values
       nodeProps.setProperty(TREE_SIZE_PROPERTY, Long.toString(totalSize));
+      nodeProps.setProperty(CHILD_COUNT_PROPERTY, Integer.toString(children));
       writeNodeProperties();
     }
     return totalSize;
   }
 
   public boolean isLeaf() {
-    // if you have no children, you're a leaf
-    return (getChildCount() == 0);
+    // use cached number of children if available
+    ensureCurrentInfoLoaded();
+    String childCount = nodeProps.getProperty(CHILD_COUNT_PROPERTY);
+    if (isPropValid(childCount)) {
+      // If no children, we're a leaf
+      return Integer.parseInt(childCount) == 0;
+    }
+    // No child count available.  Don't call getChildCount ...xxx
+    // It's a leaf if no subdirs (excluding content dir)
+    if (!nodeRootFile.exists()) {
+      logger.error("No cache directory located for: "+url);
+      throw new LockssRepository.RepositoryStateException("No cache directory located.");
+    }
+    File[] children = nodeRootFile.listFiles();
+    for (int ii=0; ii<children.length; ii++) {
+      File child = children[ii];
+      if (!child.isDirectory()) continue;
+      if (child.getName().equals(cacheLocationFile.getName())) continue;
+      return false;
+    }
+    return true;
   }
 
   public Iterator listChildren(CachedUrlSetSpec filter, boolean includeInactive) {
@@ -243,10 +271,12 @@ public class RepositoryNodeImpl implements RepositoryNode {
           RepositoryNode node = repository.getNode(childUrl);
           // add all nodes which are internal or active leaves
           // deleted nodes never included
-          boolean activeInternal = !node.isLeaf() && !node.isDeleted();
-          boolean activeLeaf = node.isLeaf() && !node.isDeleted() &&
-              (!node.isContentInactive() || includeInactive);
-          if (activeInternal || activeLeaf) {
+//           boolean activeInternal = !node.isLeaf() && !node.isDeleted();
+//           boolean activeLeaf = node.isLeaf() && !node.isDeleted() &&
+//               (!node.isContentInactive() || includeInactive);
+//           if (activeInternal || activeLeaf) {
+	  if (!node.isDeleted() && (!node.isContentInactive() ||
+				    (includeInactive || !node.isLeaf()))) {
             childL.add(repository.getNode(childUrl));
           }
         } catch (MalformedURLException ignore) {
@@ -813,7 +843,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
       // so exit early
       return;
     } else if (currentVersion==-1) {
-      // initialize
+      // XXX happens multiple times for dir nodes with no content, as
+      // currentVersion doesn't get changed.  Fix this.
       initFiles();
 
       // no content, so version 0
@@ -825,7 +856,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
       }
 
       // load the node properties
-      if (nodePropsFile.exists()) {
+      if (!nodePropsLoaded && nodePropsFile.exists()) {
         loadNodeProps();
       }
 
@@ -865,6 +896,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
           new FileInputStream(nodePropsFile));
       nodeProps.load(is);
       is.close();
+      nodePropsLoaded = true;
     } catch (Exception e) {
       logger.error("Error loading properties from "+
                    nodePropsFile.getPath()+".");
@@ -988,42 +1020,27 @@ public class RepositoryNodeImpl implements RepositoryNode {
   // functions to initialize the file handles
 
   private void initCurrentCacheFile() {
-    StringBuffer buffer = getContentDirBuffer();
-    buffer.append(CURRENT_FILENAME);
-    currentCacheFile = new File(buffer.toString());
+    currentCacheFile = new File(getContentDir(), CURRENT_FILENAME);
   }
 
   private void initCurrentPropsFile() {
-    StringBuffer buffer = getContentDirBuffer();
-    buffer.append(CURRENT_FILENAME);
-    buffer.append(".");
-    buffer.append(PROPS_FILENAME);
-    currentPropsFile = new File(buffer.toString());
+    currentPropsFile = new File(getContentDir(), CURRENT_PROPS_FILENAME);
   }
 
   private void initTempCacheFile() {
-    StringBuffer buffer = getContentDirBuffer();
-    buffer.append(TEMP_FILENAME);
-    tempCacheFile = new File(buffer.toString());
+    tempCacheFile = new File(getContentDir(), TEMP_FILENAME);
   }
 
   private void initTempPropsFile() {
-    StringBuffer buffer = getContentDirBuffer();
-    buffer.append(TEMP_FILENAME);
-    buffer.append(".");
-    buffer.append(PROPS_FILENAME);
-    tempPropsFile = new File(buffer.toString());
+    tempPropsFile = new File(getContentDir(), TEMP_PROPS_FILENAME);
   }
 
   private void initNodePropsFile() {
-    StringBuffer buffer = new StringBuffer(nodeLocation);
-    buffer.append(File.separator);
-    buffer.append(NODE_PROPS_FILENAME);
-    nodePropsFile = new File(buffer.toString());
+    nodePropsFile = new File(nodeLocation, NODE_PROPS_FILENAME);
   }
 
   private void initCacheLocation() {
-    cacheLocationFile = new File(getContentDirBuffer().toString());
+    cacheLocationFile = getContentDir();
   }
 
   protected void initNodeRoot() {
@@ -1031,55 +1048,41 @@ public class RepositoryNodeImpl implements RepositoryNode {
   }
 
   File getInactiveCacheFile() {
-    StringBuffer buffer = getContentDirBuffer();
-    buffer.append(INACTIVE_FILENAME);
-    return new File(buffer.toString());
+    return new File(getContentDir(), INACTIVE_FILENAME);
   }
 
   File getInactivePropsFile() {
-    StringBuffer buffer = getContentDirBuffer();
-    buffer.append(INACTIVE_FILENAME);
-    buffer.append(".");
-    buffer.append(PROPS_FILENAME);
-    return new File(buffer.toString());
+    return new File(getContentDir(), INACTIVE_PROPS_FILENAME);
   }
 
-  StringBuffer getContentDirBuffer() {
-    if (contentBufferStr==null) {
-      StringBuffer buffer = new StringBuffer(nodeLocation);
-      buffer.append(File.separator);
-      buffer.append(CONTENT_DIR);
-      buffer.append(File.separator);
-      contentBufferStr = buffer.toString();
+  File getContentDir() {
+    if (contentDir == null) {
+      contentDir = new File(nodeLocation, CONTENT_DIR);
     }
-    return new StringBuffer(contentBufferStr);
+    return contentDir;
   }
 
   // functions to get a 'versioned' content or props file, such as
   // '1', '1.props', or '1.props-123135131' (the dated props)
 
   File getVersionedCacheFile(int version) {
-    StringBuffer buffer = getContentDirBuffer();
-    buffer.append(version);
-    return new File(buffer.toString());
+    return new File(getContentDir(), Integer.toString(version));
   }
 
   File getVersionedPropsFile(int version) {
-    StringBuffer buffer = getContentDirBuffer();
+    StringBuffer buffer = new StringBuffer();
     buffer.append(version);
-    buffer.append(".");
-    buffer.append(PROPS_FILENAME);
-    return new File(buffer.toString());
+    buffer.append(PROPS_EXTENSION);
+    return new File(getContentDir(), buffer.toString());
   }
 
   File getDatedVersionedPropsFile(int version, long date) {
-    StringBuffer buffer = getContentDirBuffer();
+    StringBuffer buffer = new StringBuffer();
     buffer.append(version);
-    buffer.append(".");
-    buffer.append(PROPS_FILENAME);
+    buffer.append(PROPS_EXTENSION);
     buffer.append("-");
     buffer.append(date);
-    return new File(buffer.toString());
+    return new File(getContentDir(), buffer.toString());
   }
 
   public String toString() {

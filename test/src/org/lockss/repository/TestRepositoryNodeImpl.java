@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.39 2004-04-09 06:54:46 tlipkis Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.40 2004-04-10 05:41:32 tlipkis Exp $
  */
 
 /*
@@ -933,8 +933,9 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     RepositoryNodeImpl node = (RepositoryNodeImpl) repo.createNewNode(
         "http://www.example.com/test.url");
     node.initNodeRoot();
-    String contentStr = FileUtil.sysDepPath(node.nodeLocation + "/#content/");
-    assertEquals(contentStr, node.getContentDirBuffer().toString());
+    String contentStr = FileUtil.sysDepPath(node.nodeLocation + "/#content");
+    assertEquals(contentStr, node.getContentDir().toString());
+    contentStr = contentStr + "/";
     String expectedStr = contentStr + "123";
     assertEquals(expectedStr,
                  node.getVersionedCacheFile(123).getAbsolutePath());
@@ -1002,16 +1003,12 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     }
 
     File getDatedVersionedPropsFile(int version, long date) {
-      StringBuffer buffer = getContentDirBuffer();
+      StringBuffer buffer = new StringBuffer();
       buffer.append(version);
-      buffer.append(".");
-      buffer.append(PROPS_FILENAME);
+      buffer.append(PROPS_EXTENSION);
       buffer.append("-");
-      // don't use the passed in date
-      // be careful not to use identical dates here, as it will loop while
-      // trying to increment the 'date' value
       buffer.append(dateValue);
-      return new File(buffer.toString());
+      return new File(getContentDir(), buffer.toString());
     }
   }
 }
