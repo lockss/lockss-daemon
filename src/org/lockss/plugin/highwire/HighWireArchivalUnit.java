@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireArchivalUnit.java,v 1.8 2003-02-28 02:10:33 troberts Exp $
+ * $Id: HighWireArchivalUnit.java,v 1.9 2003-03-01 01:18:49 tal Exp $
  */
 
 /*
@@ -115,6 +115,7 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
   }
 
   public void setConfiguration(Configuration config) {
+    // tk - move configuration here from constructor, call from constructor
   }
 
   public CachedUrlSet cachedUrlSetFactory(ArchivalUnit owner,
