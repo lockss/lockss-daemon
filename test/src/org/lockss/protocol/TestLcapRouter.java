@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapRouter.java,v 1.4 2003-04-17 02:16:58 troberts Exp $
+ * $Id: TestLcapRouter.java,v 1.5 2003-04-24 01:10:26 tal Exp $
  */
 
 /*
@@ -33,14 +33,12 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.protocol;
 
 import java.io.DataInputStream;
-import org.lockss.util.Logger;
-import org.lockss.test.MockCachedUrlSetSpec;
 import java.net.*;
 import java.io.*;
 import java.util.*;
-import org.lockss.test.*;
 import gnu.regexp.*;
-import org.lockss.poller.TestPoll;
+import org.lockss.util.*;
+import org.lockss.test.*;
 import org.lockss.poller.*;
 
 /** JUnitTest case for class: org.lockss.protocol.Message */
@@ -66,6 +64,7 @@ public class TestLcapRouter extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
+    TimeBase.setSimulated();
     rtr = daemon.getRouterManager();
     idmgr = daemon.getIdentityManager();
     rtr.startService();
@@ -75,10 +74,13 @@ public class TestLcapRouter extends LockssTestCase {
   public void testIsEligibleToForward() throws Exception {
 //     LcapMessage msg = createTestMsg("127.0.0.1", 3);
     createTestMsg("1.2.3.4", 3);
+    TimeBase.step(100000);
     assertTrue(rtr.isEligibleToForward(rdg, testmsg));
     createTestMsg("1.2.3.4", 0);
+    TimeBase.step(100000);
     assertFalse(rtr.isEligibleToForward(rdg, testmsg));
     createTestMsg("127.0.0.1", 3);
+    TimeBase.step(100000);
     assertFalse(rtr.isEligibleToForward(rdg, testmsg));
   }
 
