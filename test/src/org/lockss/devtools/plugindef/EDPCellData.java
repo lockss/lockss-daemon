@@ -1,5 +1,5 @@
 /*
- * $Id: EDPCellData.java,v 1.1 2004-05-11 03:43:29 clairegriffin Exp $
+ * $Id: EDPCellData.java,v 1.2 2004-05-14 22:31:27 clairegriffin Exp $
  */
 
 /*
@@ -67,10 +67,10 @@ public class EDPCellData {
       m_data = edp.getAuCrawlRules();
     }
     else if(key.equals(edp.AU_START_URL)) {
-      m_data = new PrintfTemplate(edp.getAuStartUrl(), "\n");
+      m_data = new PrintfTemplate(edp.getAuStartUrl());
     }
     else if(key.equals(edp.AU_NAME)) {
-      m_data = new PrintfTemplate(edp.getAuName(), "\n");
+      m_data = new PrintfTemplate(edp.getAuName());
     }
     else if(key.equals(edp.AU_CRAWL_DEPTH)) {
       m_data = new Integer(edp.getAuCrawlDepth());

@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.4 2004-03-11 01:20:45 troberts Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.5 2004-05-14 22:31:28 clairegriffin Exp $
  */
 
 /*
@@ -51,8 +51,8 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
   private ExternalizableMap map;
   private List configProps = ListUtil.list(ConfigParamDescr.BASE_URL,
                                            ConfigParamDescr.VOLUME_NUMBER);
-  private List crawlRules = ListUtil.list("1\n%s\nbase_url",
-                                          "1\n.*\\.gif");
+  private List crawlRules = ListUtil.list("1,\"%s\", base_url",
+                                          "1,\".*\\.gif\"");
 
   private static String PLUGIN_NAME = "Test Plugin";
   private static String CURRENT_VERSION = "Version 1.0";
@@ -81,27 +81,27 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     map.putInt(DefinableArchivalUnit.CM_AU_SHORT_YEAR_PREFIX +
                ConfigParamDescr.YEAR.getKey(),3);
 
-    String substr = "My Test Integer = %d\nINTEGER";
+    String substr = "\"My Test Integer = %d\", INTEGER";
     String expectedReturn = "My Test Integer = 10";
     String actualReturn = cau.convertVariableString(substr);
     assertEquals("return value", expectedReturn, actualReturn);
 
-    substr = "My Test Boolean = %s\nBOOLEAN";
+    substr = "\"My Test Boolean = %s\", BOOLEAN";
     expectedReturn = "My Test Boolean = true";
     actualReturn = cau.convertVariableString(substr);
     assertEquals("return value", expectedReturn, actualReturn);
 
-    substr = "My Test String = %s\nSTRING";
+    substr = "\"My Test String = %s\", STRING";
     expectedReturn = "My Test String = Yo Mama!";
     actualReturn = cau.convertVariableString(substr);
     assertEquals("return value", expectedReturn, actualReturn);
 
-    substr = "My Test Short Year = %02d\nau_short_year";
+    substr = "\"My Test Short Year = %02d\", au_short_year";
     expectedReturn = "My Test Short Year = 03";
     actualReturn = cau.convertVariableString(substr);
     assertEquals("return value", expectedReturn, actualReturn);
 
-    substr = "My Test Decade = %4.2d\nyear";
+    substr = "\"My Test Decade = %4.2d\", year";
     expectedReturn = "My Test Decade = 2000";
     actualReturn = cau.convertVariableString(substr);
 //    assertEquals("return value", expectedReturn, actualReturn);
@@ -109,8 +109,8 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 
   public void testConvertRule() throws REException {
     map.putString("URL", "http://www.example.com/");
-    String rule1 = "1\n.*\\.gif";
-    String rule2 = "1\n%s\nURL";
+    String rule1 = "1,\".*\\.gif\"";
+    String rule2 = "1,\"%s\",URL";
 
     CrawlRule actualReturn = cau.convertRule(rule1);
     assertEquals(CrawlRule.INCLUDE,
@@ -126,7 +126,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     map.putString("JOURNAL_NAME", "MyJournal");
     map.putInt("VOLUME", 43);
     map.putString(DefinableArchivalUnit.CM_AU_NAME_KEY,
-                  "%s Vol %d\nJOURNAL_NAME\nVOLUME");
+                  "\"%s Vol %d\",JOURNAL_NAME,VOLUME");
     String expectedReturn = "MyJournal Vol 43";
     String actualReturn = cau.makeName();
     assertEquals("return value", expectedReturn, actualReturn);
@@ -147,7 +147,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     map.putInt("VOLUME", 43);
     map.putString("URL", "http://www.example.com/");
     map.putString(DefinableArchivalUnit.CM_AU_START_URL_KEY,
-                  "%slockss-volume/%d.html\nURL\nVOLUME");
+                  "\"%slockss-volume/%d.html\", URL, VOLUME");
 
     String expectedReturn = "http://www.example.com/lockss-volume/43.html";
     String actualReturn = cau.makeStartUrl();
@@ -159,7 +159,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     map.putString("HOST", "www.example.com");
     map.putInt("YEAR", 2003);
     map.putString(DefinableArchivalUnit.CM_AU_MANIFEST_KEY,
-            "http://%s/contents-by-date.%d.shtml\nHOST\nYEAR");
+            "\"http://%s/contents-by-date.%d.shtml\", HOST, YEAR");
     String expectedReturn = "http://www.example.com/contents-by-date.2003.shtml";
     String actualReturn = cau.getManifestPage();
     assertEquals("return valuse", expectedReturn, actualReturn);

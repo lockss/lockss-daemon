@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.4 2004-05-11 04:35:40 clairegriffin Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.5 2004-05-14 22:31:22 clairegriffin Exp $
  */
 
 /*
@@ -246,10 +246,49 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     return strs;
   }
 
+  String convertVariableString(String printfString) {
+    String converted_string = printfString;
+    PrintfUtil.PrintfData p_data = PrintfUtil.stringToPrintf(printfString);
+    String format = p_data.getFormat();
+    Collection p_args = p_data.getArguments();
+    ArrayList substitute_args = new ArrayList(p_args.size());
+
+    boolean has_all_args = true;
+    for (Iterator it = p_args.iterator(); it.hasNext(); ) {
+      String key = (String) it.next();
+      Object val = definitionMap.getMapElement(key);
+      if (val != null) {
+        substitute_args.add(val);
+      }
+      else {
+        log.warning("misssing argument for : " + key);
+        has_all_args = false;
+      }
+    }
+    if (has_all_args) {
+      PrintfFormat pf = new PrintfFormat(format);
+      converted_string = pf.sprintf(substitute_args.toArray());
+    }
+    else {
+      log.warning("missing variable arguments");
+    }
+    return converted_string;
+  }
+
+  CrawlRule convertRule(String printfString) throws REException {
+    String rule = convertVariableString(printfString);
+    String val_str = printfString.substring(0, printfString.indexOf(","));
+    int value = Integer.valueOf(val_str).intValue();
+    return new CrawlRules.RE(rule, value);
+
+  }
+
+/*
   String convertVariableString(String variableString) {
     if (StringUtil.isNullString(variableString)) {
       return variableString;
     }
+
     String[] strs = getStringTokens(variableString);
     String cur_str = strs[0];
     ArrayList args = new ArrayList();
@@ -274,7 +313,8 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     }
     return cur_str;
   }
-
+*/
+/*
   CrawlRule convertRule(String variableString) throws REException {
     String[] strs = getStringTokens(variableString);
     int value = Integer.valueOf(strs[0]).intValue();
@@ -300,7 +340,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     }
     return null;
   }
-
+*/
   public interface ConfigurableCrawlWindow {
     public CrawlWindow makeCrawlWindow();
   }

@@ -2,9 +2,7 @@
 <Elements>
   <MapElement>
     <ElementKey>au_start_url</ElementKey>
-    <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">%slockss/lockss-volume%d.htm
-base_url
-volume</ElementValue>
+    <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%slockss/lockss-volume%d.htm", base_url, volume</ElementValue>
   </MapElement>
   <MapElement>
     <ElementKey>plugin_name</ElementKey>
@@ -13,29 +11,15 @@ volume</ElementValue>
   <MapElement>
     <ElementKey>au_crawlrules</ElementKey>
     <ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <string xsi:type="java:java.lang.String">4
-^%s
-base_url</string>
-      <string xsi:type="java:java.lang.String">1
-%slockss/lockss-volume%d.htm
-base_url
-volume
-</string>
-      <string xsi:type="java:java.lang.String">1
-%slockss_media/v%dn[0-9]*/.*\.rm
-base_url
-volume</string>
-      <string xsi:type="java:java.lang.String">1
-%sv%dn[0-9]*/.*
-base_url
-volume</string>
+      <string xsi:type="java:java.lang.String">4,"^%s", base_url</string>
+      <string xsi:type="java:java.lang.String">1,"%slockss/lockss-volume%d.htm", base_url, volume</string>
+      <string xsi:type="java:java.lang.String">1,"%slockss_media/v%dn[0-9]*/.*\.rm", base_url, volume</string>
+      <string xsi:type="java:java.lang.String">1,"%sv%dn[0-9]*/.*", base_url, volume</string>
     </ElementValue>
   </MapElement>
   <MapElement>
     <ElementKey>au_name</ElementKey>
-    <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">%s, vol. %d
-base_url_host
-volume</ElementValue>
+    <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%s, vol. %d", base_url_host, volume</ElementValue>
   </MapElement>
   <MapElement>
     <ElementKey>plugin_config_props</ElementKey>
@@ -59,7 +43,7 @@ volume</ElementValue>
   </MapElement>
   <MapElement>
     <ElementKey>plugin_version</ElementKey>
-    <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Pre-release</ElementValue>
+    <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">1</ElementValue>
   </MapElement>
   <MapElement>
     <ElementKey>audio/x-pn-realaudio_parser</ElementKey>

@@ -1,28 +1,22 @@
 package org.lockss.devtools.plugindef;
 
 import java.util.*;
+import org.lockss.util.*;
 
 public class PrintfTemplate {
   String m_format = null;
   ArrayList m_tokens = new ArrayList();
-  String m_delimeter = ", ";
 
   public PrintfTemplate() {
   }
 
-  public PrintfTemplate(String templateString, String token) {
+  public PrintfTemplate(String templateString) {
     if (templateString == null) {
       return;
     }
-    this.m_delimeter = token;
-    StringTokenizer st = new StringTokenizer(templateString, token);
-    int num_tokens = st.countTokens();
-    if (num_tokens > 0) {
-      m_format = st.nextToken();
-      while (st.hasMoreTokens()) {
-        m_tokens.add(st.nextToken());
-      }
-    }
+    PrintfUtil.PrintfData data = PrintfUtil.stringToPrintf(templateString);
+    m_format = data.getFormat();
+    m_tokens = new ArrayList(data.getArguments());
   }
 
 
@@ -77,9 +71,11 @@ public class PrintfTemplate {
 
   public String getTemplateString() {
     if(m_format == null) return "";
-    StringBuffer sb = new StringBuffer(m_format);
+    StringBuffer sb = new StringBuffer("\"");
+    sb.append(m_format);
+    sb.append("\"");
     for(Iterator it = m_tokens.iterator(); it.hasNext();) {
-      sb.append(m_delimeter);
+      sb.append(", ");
       sb.append((String)it.next());
     }
     return sb.toString();

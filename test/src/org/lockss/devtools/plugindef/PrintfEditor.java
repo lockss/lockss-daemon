@@ -179,8 +179,6 @@ public class PrintfEditor extends JDialog implements EDPEditor {
     formatTextArea.insert(format, pos);
     pos = parameterTextArea.getCaretPosition();
     parameterTextArea.insert(", " + key, pos);
-
-
   }
 
 

@@ -2,9 +2,7 @@
 <Elements>
   <MapElement>
     <ElementKey>au_start_url</ElementKey>
-    <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">http://%s/contents-by-date.%d.shtml
-base_url_host
-year</ElementValue>
+    <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"http://%s/contents-by-date.%d.shtml", base_url_host, year</ElementValue>
   </MapElement>
   <MapElement>
     <ElementKey>plugin_name</ElementKey>
@@ -17,43 +15,23 @@ year</ElementValue>
   <MapElement>
     <ElementKey>au_crawlrules</ElementKey>
     <ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <string xsi:type="java:java.lang.String">4
-^%s
-base_url</string>
-      <string xsi:type="java:java.lang.String">1
-http://%s/contents-by-date.%d.shtml
-base_url_host
-year</string>
-      <string xsi:type="java:java.lang.String">2
-.*ck=nck.*</string>
-      <string xsi:type="java:java.lang.String">2
-.*adclick.*</string>
-      <string xsi:type="java:java.lang.String">2
-.*/cgi/mailafriend.*</string>
-      <string xsi:type="java:java.lang.String">1
-.*/content/current/.*</string>
-      <string xsi:type="java:java.lang.String">1
-.*/content/vol%d/.*
-volume</string>
-      <string xsi:type="java:java.lang.String">1
-.*/cgi/content/.*/%d/.*
-volume</string>
-      <string xsi:type="java:java.lang.String">1
-.*/cgi/reprint/%d/.*
-volume</string>
-      <string xsi:type="java:java.lang.String">1
-.*/icons.*</string>
-      <string xsi:type="java:java.lang.String">1
-.*/math.*</string>
-      <string xsi:type="java:java.lang.String">2
-http://.*/.*/.*</string>
+      <string xsi:type="java:java.lang.String">4,"^%s", base_url</string>
+      <string xsi:type="java:java.lang.String">1,"http://%s/contents-by-date.%d.shtml", base_url_host, year</string>
+      <string xsi:type="java:java.lang.String">2,".*ck=nck.*"</string>
+      <string xsi:type="java:java.lang.String">2,".*adclick.*"</string>
+      <string xsi:type="java:java.lang.String">2,".*/cgi/mailafriend.*"</string>
+      <string xsi:type="java:java.lang.String">1,".*/content/current/.*"</string>
+      <string xsi:type="java:java.lang.String">1,".*/content/vol%d/.*", volume</string>
+      <string xsi:type="java:java.lang.String">1,".*/cgi/content/.*/%d/.*", volume</string>
+      <string xsi:type="java:java.lang.String">1,".*/cgi/reprint/%d/.*", volume</string>
+      <string xsi:type="java:java.lang.String">1,".*/icons.*"</string>
+      <string xsi:type="java:java.lang.String">1,".*/math.*"</string>
+      <string xsi:type="java:java.lang.String">2,"http://.*/.*/.*"</string>
     </ElementValue>
   </MapElement>
   <MapElement>
     <ElementKey>au_name</ElementKey>
-    <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">%s, vol. %d
-base_url_host
-volume</ElementValue>
+    <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%s, vol. %d", base_url_host, volume</ElementValue>
   </MapElement>
   <MapElement>
     <ElementKey>text/html_filter</ElementKey>
@@ -89,7 +67,7 @@ volume</ElementValue>
   </MapElement>
   <MapElement>
     <ElementKey>plugin_version</ElementKey>
-    <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Pre-release</ElementValue>
+    <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">1</ElementValue>
   </MapElement>
   <MapElement>
     <ElementKey>plugin_cache_result_list</ElementKey>

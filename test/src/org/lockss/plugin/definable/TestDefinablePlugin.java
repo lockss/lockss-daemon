@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinablePlugin.java,v 1.3 2004-03-09 04:15:32 clairegriffin Exp $
+ * $Id: TestDefinablePlugin.java,v 1.4 2004-05-14 22:31:41 clairegriffin Exp $
  */
 
 /*
@@ -66,7 +66,7 @@ public class TestDefinablePlugin extends LockssTestCase {
     p.setProperty("TEST_KEY", "TEST_VALUE");
     p.setProperty(ConfigParamDescr.BASE_URL.getKey(), "http://www.example.com/");
      p.setProperty(BaseArchivalUnit.PAUSE_TIME_KEY,"10000");
-    List rules = ListUtil.list("1\nhttp://www.example.com");
+    List rules = ListUtil.list("1,\"http://www.example.com\"");
     ExternalizableMap map = definablePlugin.getDefinitionMap();
     map.putString(DefinablePlugin.CM_NAME_KEY, "testplugin");
     map.putCollection(DefinablePlugin.CM_CONFIG_PROPS_KEY,
@@ -157,12 +157,12 @@ public class TestDefinablePlugin extends LockssTestCase {
     definablePlugin.initPlugin(daemon, extMapName);
     assertEquals("Absinthe Literary Review",
                  definablePlugin.getPluginName());
-    assertEquals("Pre-release", definablePlugin.getVersion());
+    assertEquals("1", definablePlugin.getVersion());
 
     // check some other field
-    StringBuffer sb = new StringBuffer("%sarchives%02d.htm\n");
+    StringBuffer sb = new StringBuffer("\"%sarchives%02d.htm\", ");
     sb.append(ConfigParamDescr.BASE_URL.getKey());
-    sb.append("\n");
+    sb.append(", ");
     sb.append(ConfigParamDescr.YEAR.getKey());
     ExternalizableMap map = definablePlugin.getDefinitionMap();
     assertEquals(sb.toString(),

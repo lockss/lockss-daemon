@@ -14,23 +14,12 @@ public class CrawlRuleTemplate extends PrintfTemplate {
 
   public CrawlRuleTemplate() {
     m_ruleKind = 1;
-    m_delimeter = "\n";
   }
 
-  public CrawlRuleTemplate(String templateString, String token) {
-    m_delimeter = token;
-    if (templateString == null) {
-      return;
-    }
-    StringTokenizer st = new StringTokenizer(templateString, token);
-    int num_tokens = st.countTokens();
-    if (num_tokens > 0) {
-      m_ruleKind = Integer.parseInt(st.nextToken());
-      m_format = st.nextToken();
-      while (st.hasMoreTokens()) {
-        m_tokens.add(st.nextToken());
-      }
-    }
+  public CrawlRuleTemplate(String templateString) {
+    super(templateString);
+    String val_str = templateString.substring(0, templateString.indexOf(","));
+    m_ruleKind = Integer.valueOf(val_str).intValue();
   }
 
   int getRuleKind() {
@@ -46,7 +35,7 @@ public class CrawlRuleTemplate extends PrintfTemplate {
     sb.append(m_ruleKind);
     String template = getTemplateString();
     if(!StringUtil.isNullString(template)) {
-      sb.append(m_delimeter);
+      sb.append(",");
       sb.append(template);
       return sb.toString();
     }
