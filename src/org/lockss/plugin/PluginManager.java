@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.95 2004-08-18 00:14:57 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.96 2004-08-18 07:08:43 tlipkis Exp $
  */
 
 /*
@@ -214,9 +214,8 @@ public class PluginManager extends BaseLockssDaemonManager {
 			   Configuration.Differences changedKeys) {
 
     if (changedKeys.contains(PARAM_PLUGIN_LOAD_TIMEOUT)) {
-      registryTimeout = Configuration.
-	getCurrentConfig().getTimeIntervalParam(PARAM_PLUGIN_LOAD_TIMEOUT,
-						DEFAULT_PLUGIN_LOAD_TIMEOUT);
+      registryTimeout = config.getTimeInterval(PARAM_PLUGIN_LOAD_TIMEOUT,
+					       DEFAULT_PLUGIN_LOAD_TIMEOUT);
     }
 
     // Must load the xml plugin list *before* the plugin registry
@@ -236,7 +235,10 @@ public class PluginManager extends BaseLockssDaemonManager {
 	initPluginRegistry(config.getList(PARAM_PLUGIN_REGISTRY));
       }
 
-      configureAllPlugins(config);
+      // Process any changed AU config
+      if (changedKeys.contains(PARAM_AU_TREE)) {
+	configureAllPlugins(config);
+      }
     }
   }
 
@@ -428,15 +430,18 @@ public class PluginManager extends BaseLockssDaemonManager {
   void configureAu(Plugin plugin, Configuration auConf, String auId)
       throws ArchivalUnit.ConfigurationException {
     try {
-      ArchivalUnit au = plugin.configureAu(auConf,
-					   (ArchivalUnit)auMap.get(auId));
-      if (!auId.equals(au.getAuId())) {
-	throw new ArchivalUnit.ConfigurationException("Configured AU has "
-						      +"unexpected AUId, "
-						      +"is: "+au.getAuId()
-						      +" expected: "+auId);
+      ArchivalUnit oldAu = (ArchivalUnit)auMap.get(auId);
+      ArchivalUnit au = plugin.configureAu(auConf, oldAu);
+      if (oldAu != null && oldAu != au) {
+	String msg = "Plugin created new AU: " + au +
+	  ", should have reconfigured old AU: " + oldAu;
+	throw new ArchivalUnit.ConfigurationException(msg);
       }
-      log.debug("Configured AU " + au);
+      if (!auId.equals(au.getAuId())) {
+	String msg = "Configured AU has unexpected AUID: " + au.getAuId() +
+	  ", expected: "+ auId;
+	throw new ArchivalUnit.ConfigurationException(msg);
+      }
       try {
 	getDaemon().startOrReconfigureAuManagers(au, auConf);
       } catch (Exception e) {
@@ -444,7 +449,12 @@ public class PluginManager extends BaseLockssDaemonManager {
 	  ArchivalUnit.ConfigurationException("Couldn't configure AU managers",
 					      e);
       }
-      putAuInMap(au);
+      if (oldAu != null) {
+	log.debug("Reconfigured AU " + au);
+      } else {
+	log.debug("Configured AU " + au);
+	putAuInMap(au);
+      }
     } catch (ArchivalUnit.ConfigurationException e) {
       throw e;
     } catch (Exception e) {
@@ -537,7 +547,7 @@ public class PluginManager extends BaseLockssDaemonManager {
 
   public ArchivalUnit getAuFromId(String auId) {
     ArchivalUnit au = (ArchivalUnit)auMap.get(auId);
-    log.debug3("getAu(" + auId + ") = " + au);
+    if (log.isDebug3()) log.debug3("getAu(" + auId + ") = " + au);
     return au;
   }
 
