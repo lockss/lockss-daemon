@@ -1,5 +1,5 @@
 /*
- * $Id: TestTreeWalkHandler.java,v 1.27 2003-07-14 06:46:38 tlipkis Exp $
+ * $Id: TestTreeWalkHandler.java,v 1.28 2003-07-17 19:02:44 eaalto Exp $
  */
 
 /*
@@ -220,68 +220,34 @@ public class TestTreeWalkHandler extends LockssTestCase {
     assertNull(pollMan.getPollStatus(TEST_URL));
     assertNull(crawlMan.getUrlStatus(TEST_URL));
 
-    // these are true iff the pollmanager doesn't know about them
-/*XXX fix
-    checkPollingTest(PollState.RUNNING, 123, true, node);
-    pollMan.thePolls.remove(TEST_URL);
-    checkPollingTest(PollState.SCHEDULED, 234, true, node);
-    pollMan.thePolls.remove(TEST_URL);
-    checkPollingTest(PollState.REPAIRING, 345, true, node);
-    pollMan.thePolls.remove(TEST_URL);
+    // call new content poll
+    checkPollTest(NodeState.NEEDS_POLL, 123, true, true, node);
+    checkPollTest(NodeState.NEEDS_REPLAY_POLL, 123, true, true, node);
 
-    // these are always false
-    checkPollingTestCallsContent(PollState.WON, 456, node);
-    pollMan.thePolls.remove(TEST_URL);
-    checkPollingTestCallsContent(PollState.REPAIRED, 567, node);
-    pollMan.thePolls.remove(TEST_URL);
+    // behavior from treewalk differs due to no results
+    // calls a content poll to clear
+    checkPollTest(NodeState.POSSIBLE_DAMAGE_BELOW, 123, true, true, node);
 
-    // this is true since we're going to try again
-    checkPollingTest(PollState.UNREPAIRABLE, 678, true, node);
-    pollMan.thePolls.remove(TEST_URL);
+    // just calls name polls
+    checkPollTest(NodeState.CONTENT_LOST, 123, true, false, node);
+    checkPollTest(NodeState.WRONG_NAMES, 123, true, false, node);
 
-    // should schedule name poll if last history is LOST or ERR_IO
-    checkPollingTest(PollState.ERR_IO, 789, true, node);
-    pollMan.thePolls.remove(TEST_URL);
-
-    // should schedule a name poll if we lost a content poll
-    checkPollingTest(Poll.CONTENT_POLL, PollState.LOST, 890, true, node);
-    pollMan.thePolls.remove(TEST_URL);
-*/
     TimeBase.setReal();
   }
 
-  private void checkPollingTest(int pollState, long startTime,
-                                boolean shouldSchedule, NodeStateImpl node) {
-    checkPollingTest(Poll.NAME_POLL, pollState, startTime, shouldSchedule,node);
-  }
-
-  private void checkPollingTest(int pollType, int pollState, long startTime,
-                               boolean shouldSchedule, NodeStateImpl node) {
-    PollHistory pollHist = new PollHistory(pollType, "", "",
-                                           pollState, startTime, 1,
-                                           null, true);
-    // doesn't clear old histories, so startTime must be used appropriately
-    node.closeActivePoll(pollHist);
+  private void checkPollTest(int nodeState, long startTime,
+                             boolean shouldSchedule, boolean isContent,
+                             NodeStateImpl node) {
+    node.setState(nodeState);
     assertEquals(!shouldSchedule, treeWalkHandler.checkNodeState(node));
     if (shouldSchedule) {
       assertEquals(pollMan.getPollStatus(node.getCachedUrlSet().getUrl()),
-		   MockPollManager.NAME_REQUESTED);
+		   (isContent ? MockPollManager.CONTENT_REQUESTED :
+                    MockPollManager.NAME_REQUESTED));
+      pollMan.thePolls.remove(TEST_URL);
     } else {
       assertNull(pollMan.getPollStatus(node.getCachedUrlSet().getUrl()));
     }
-    assertNull(crawlMan.getUrlStatus(node.getCachedUrlSet().getUrl()));
-  }
-
-  private void checkPollingTestCallsContent(int pollState, long startTime,
-                                            NodeStateImpl node) {
-    PollHistory pollHist = new PollHistory(Poll.NAME_POLL, "", "",
-                                           pollState, startTime, 1,
-                                           null, true);
-    // doesn't clear old histories, so startTime must be used appropriately
-    node.closeActivePoll(pollHist);
-    assertEquals(false, treeWalkHandler.checkNodeState(node));
-    assertEquals(pollMan.getPollStatus(node.getCachedUrlSet().getUrl()),
-                 MockPollManager.CONTENT_REQUESTED);
     assertNull(crawlMan.getUrlStatus(node.getCachedUrlSet().getUrl()));
   }
 
@@ -292,17 +258,19 @@ public class TestTreeWalkHandler extends LockssTestCase {
     NodeStateImpl node = (NodeStateImpl)nodeManager.getNodeState(cus);
     NodeStateImpl subNode = (NodeStateImpl)nodeManager.getNodeState(subCus);
 
+    // set parent node to be running a poll
     PollHistory pollHist = new PollHistory(Poll.NAME_POLL, "", "",
                                            PollState.RUNNING, 123, 1,
                                            null, true);
     node.closeActivePoll(pollHist);
+    node.setState(NodeState.NAME_RUNNING);
+
     // get lock to avoid null pointer
     treeWalkHandler.activityLock =
         theDaemon.getActivityRegulator(mau).startAuActivity(
         ActivityRegulator.TREEWALK, 10500);
 
-    // should act on the main node's poll state
-/*XXX fix
+    // should act on the parent node
     assertFalse(treeWalkHandler.recurseTreeWalk(cus));
     assertEquals(pollMan.getPollStatus(cus.getUrl()),
                  MockPollManager.NAME_REQUESTED);
@@ -311,18 +279,20 @@ public class TestTreeWalkHandler extends LockssTestCase {
     // reset treewalk
     treeWalkHandler.treeWalkAborted = false;
 
-    // add later one to both nodes
+    // set both nodes to be running a poll
     pollHist = new PollHistory(Poll.NAME_POLL, "", "",
                                PollState.RUNNING, 456, 1,
                                null, true);
     node.closeActivePoll(pollHist);
+    node.setState(NodeState.NAME_RUNNING);
     subNode.closeActivePoll(pollHist);
-    // should act on the sub-node's poll state
+    subNode.setState(NodeState.NAME_RUNNING);
+
+    // should act on the sub-node, not the node
     assertFalse(treeWalkHandler.recurseTreeWalk(cus));
     assertNull(pollMan.getPollStatus(cus.getUrl()));
     assertEquals(pollMan.getPollStatus(subCus.getUrl()),
                  MockPollManager.NAME_REQUESTED);
-*/
 
     TimeBase.setReal();
   }
