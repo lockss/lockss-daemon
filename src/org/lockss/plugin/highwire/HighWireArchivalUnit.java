@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireArchivalUnit.java,v 1.39 2003-12-06 00:53:01 eaalto Exp $
+ * $Id: HighWireArchivalUnit.java,v 1.40 2003-12-11 21:22:22 eaalto Exp $
  */
 
 /*
@@ -151,15 +151,17 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
 
   private CrawlWindow makeCrawlWindow() {
     logger.debug("Creating crawl window...");
-    // allow crawls from 12pm->3pm only
+    // disallow crawls from 6am->9am
     Calendar start = Calendar.getInstance();
-    start.set(Calendar.HOUR_OF_DAY, 12);
+    start.set(Calendar.HOUR_OF_DAY, 6);
     start.set(Calendar.MINUTE, 0);
     Calendar end = Calendar.getInstance();
-    end.set(Calendar.HOUR_OF_DAY, 15);
+    end.set(Calendar.HOUR_OF_DAY, 9);
     end.set(Calendar.MINUTE, 0);
-
-    return new CrawlWindows.Interval(start, end, CrawlWindows.TIME, null);
+    CrawlWindow interval = new CrawlWindows.Interval(start, end,
+        CrawlWindows.TIME, null);
+    // disallow using 'NOT'
+    return new CrawlWindows.Not(interval);
   }
 
   public int getVolumeNumber() {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireArchivalUnit.java,v 1.32 2003-11-07 04:12:00 clairegriffin Exp $
+ * $Id: TestHighWireArchivalUnit.java,v 1.33 2003-12-11 21:22:22 eaalto Exp $
  */
 
 /*
@@ -74,6 +74,7 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
     if (url != null) {
       props.setProperty(HighWirePlugin.AUPARAM_BASE_URL, url.toString());
     }
+    props.setProperty(HighWireArchivalUnit.AUPARAM_USE_CRAWL_WINDOW, ""+true);
     Configuration config = ConfigurationUtil.fromProps(props);
     HighWireArchivalUnit au = new HighWireArchivalUnit(new HighWirePlugin());
     au.getPlugin().initPlugin(theDaemon);
@@ -211,6 +212,28 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
     HighWireArchivalUnit au =
       makeAu(new URL("http://shadow1.stanford.edu/"), 42);
     assertTrue(au.getFilterRule("text/html") instanceof HighWireFilterRule);
+  }
+
+  public void testCrawlWindow() throws Exception {
+    HighWireArchivalUnit au =
+      makeAu(new URL("http://shadow1.stanford.edu/"), 42);
+    CrawlWindow window = au.getCrawlSpec().getCrawlWindow();
+    assertNotNull(window);
+    Calendar cal = Calendar.getInstance();
+    cal.set(Calendar.HOUR_OF_DAY, 5);
+    cal.set(Calendar.MINUTE, 0);
+    assertTrue(window.canCrawl(cal.getTime()));
+
+    cal.set(Calendar.HOUR_OF_DAY, 6);
+    assertFalse(window.canCrawl(cal.getTime()));
+
+    cal.set(Calendar.HOUR_OF_DAY, 8);
+    cal.set(Calendar.MINUTE, 59);
+    assertFalse(window.canCrawl(cal.getTime()));
+
+    cal.set(Calendar.HOUR_OF_DAY, 9);
+    cal.set(Calendar.MINUTE, 0);
+    assertTrue(window.canCrawl(cal.getTime()));
   }
 
   public static void main(String[] argv) {
