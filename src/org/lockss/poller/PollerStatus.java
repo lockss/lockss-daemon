@@ -1,5 +1,5 @@
 /*
-* $Id: PollerStatus.java,v 1.13 2004-05-04 22:19:05 tlipkis Exp $
+* $Id: PollerStatus.java,v 1.14 2004-05-11 23:51:55 tlipkis Exp $
  */
 
 /*
@@ -399,8 +399,20 @@ public class PollerStatus {
     private List getSummary(BasePoll poll){
       PollTally tally = poll.getVoteTally();
       List list = new ArrayList();
+      PollManager.PollManagerEntry entry =
+	pollManager.getPollManagerEntry(poll.getKey());
+
+      list.add(new StatusTable.SummaryInfo("Volume" , STRINGTYPE,
+					   tally.getArchivalUnit().getName()));
+      if (entry != null) {
+	list.add(new StatusTable.SummaryInfo("Status" , STRINGTYPE,
+ 					   entry.getStatusString()));
+      }
+      list.add(new StatusTable.SummaryInfo("Type" , STRINGTYPE,
+					   getPollType(poll)));
       list.add(new StatusTable.SummaryInfo("Target" , STRINGTYPE,
-					   getPollDescription(poll)));
+					   getPollSpecString(poll)));
+
       StatusTable.SummaryInfo s1 =
 	new StatusTable.SummaryInfo("Caller", IPTYPE,
 				    poll.m_caller.getAddress());
@@ -413,6 +425,14 @@ public class PollerStatus {
       list.add(new StatusTable.SummaryInfo("Duration",
 					   ColumnDescriptor.TYPE_TIME_INTERVAL,
 					   new Long(tally.duration)));
+      if (entry != null && entry.pollDeadline != null) {
+	long remain = TimeBase.msUntil(entry.pollDeadline.getExpirationTime());
+	if (remain >= 0) {
+	  list.add(new StatusTable.SummaryInfo("Remaining",
+					       ColumnDescriptor.TYPE_TIME_INTERVAL,
+					       new Long(remain)));
+	}
+      }
       list.add(new StatusTable.SummaryInfo("Quorum", INTTYPE,
 					   new Integer(tally.quorum)));
       list.add(new StatusTable.SummaryInfo("Agree Votes", INTTYPE,
@@ -422,16 +442,20 @@ public class PollerStatus {
       return list;
     }
 
-    private String getPollDescription(BasePoll poll) {
-      StringBuffer sb = new StringBuffer();
-      sb.append(Poll.PollName[poll.getVoteTally().getType()]);
-      sb.append(" poll on ");
-      sb.append(poll.getPollSpec().getUrl());
-      sb.append("[");
-      sb.append(poll.getPollSpec().getRangeString());
-      sb.append("]");
-      return sb.toString();
+    private String getPollType(BasePoll poll) {
+      return Poll.PollName[poll.getVoteTally().getType()];
     }
+
+    private String getPollSpecString(BasePoll poll) {
+      PollSpec spec = poll.getPollSpec();
+      String range = spec.getRangeString();
+      if (range == null) {
+	return spec.getUrl();
+      } else {
+	return spec.getUrl() + "[" + range + "]";
+      }
+    }
+
     // row building methods
     private List getRows(BasePoll poll) {
       PollTally tally = poll.getVoteTally();
