@@ -1,7 +1,7 @@
 #! /bin/bash
 
 # "." here is the test<n> dir
-PROP_URL_LIST="../lockss.txt ../lockss.opt local.txt local.opt"
+PROP_URL_LIST="../../common.txt ../lockss.txt ../lockss.opt local.txt local.opt"
 
 mkdir -p ../lib
 cp ${PROJECT_DIR}/lib/lockss.jar ../lib
