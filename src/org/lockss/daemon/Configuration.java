@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.44 2003-05-06 01:45:45 troberts Exp $
+ * $Id: Configuration.java,v 1.45 2003-05-10 01:59:39 tal Exp $
  */
 
 /*
@@ -64,6 +64,7 @@ public abstract class Configuration {
   static final String PARAM_RELOAD_INTERVAL = MYPREFIX + "reloadInterval";
   static final long DEFAULT_RELOAD_INTERVAL = 30 * Constants.MINUTE;
   static final String PARAM_CONFIG_PATH = MYPREFIX + "configFilePath";
+  static final String DEFAULT_CONFIG_PATH = "config";
 
   /** Common prefix of platform config params */
   static final String PLATFORM = PREFIX + "platform.";
@@ -88,6 +89,13 @@ public abstract class Configuration {
   static final String PARAM_PLATFORM_SMTP_PORT = PLATFORM + "smtpport";
   static final String PARAM_PLATFORM_PIDFILE = PLATFORM + "pidfile";
 
+  public static String CONFIG_FILE_UI_IP_ACCESS = "ui_ip_access.txt";
+
+  /** array of local cache config file names */
+  static String cacheConfigFiles[] = {
+    CONFIG_FILE_UI_IP_ACCESS,
+  };
+			     
 
   // MUST pass in explicit log level to avoid recursive call back to
   // Configuration to get Config log level.  (Others should NOT do this.)
@@ -216,6 +224,8 @@ public abstract class Configuration {
     if (newConfig == null) {
       return false;
     }
+    initCacheConfig(newConfig);
+    loadCacheConfigInto(newConfig);
     newConfig.copyPlatformParams();
     newConfig.seal();
     Configuration oldConfig = currentConfig;
@@ -342,6 +352,14 @@ public abstract class Configuration {
    * @return true iff properties were successfully loaded
    */
   boolean loadList(List urls) {
+    return loadList(urls, false);
+  }
+
+  /**
+   * Try to load config from a list or urls
+   * @return true iff properties were successfully loaded
+   */
+  boolean loadList(List urls, boolean failOk) {
     for (Iterator iter = urls.iterator(); iter.hasNext();) {
       String url = (String)iter.next();
       try {
@@ -352,18 +370,17 @@ public abstract class Configuration {
 	  log.info("Not loading props from nonexistent optional file: " + url);
 	} else {
 	  // This load failed.  Fail the whole thing.
-	  log.warning("Couldn't load props from " + url + ": " + e.toString());
-	  reset();			// ensure config is empty
+	  if (!failOk) {
+	    log.warning("Couldn't load props from " + url + ": " +
+			e.toString());
+	    reset();			// ensure config is empty
+	  }
 	  return false;
 	}
       }
     }
     return true;
   }
-
-//    (curFileName.startsWith("http:") ?
-//     HttpUtil.openInputStream(curFileName) :
-//     new FileInputStream(curFileName))
 
   void load(String url) throws IOException {
     InputStream istr;
@@ -380,27 +397,83 @@ public abstract class Configuration {
   abstract boolean load(InputStream istr)
       throws IOException;
 
-  private void initCacheConfig() {
-    String space = Configuration.getParam(PARAM_PLATFORM_DISK_SPACE_LIST);
-    Vector v = StringUtil.breakAt(space, ';');
-    if (v.size() == 0) {
+  static void resetForTesting() {
+    cacheConfigInited = false;
+    cacheConfigDir = null;
+  }
+
+  static boolean cacheConfigInited = false;
+  static String cacheConfigDir = null;
+
+  static boolean isUnitTesting() {
+    return Boolean.getBoolean("org.lockss.unitTesting");
+  }
+
+  private static void initCacheConfig(Configuration newConfig) {
+    if (cacheConfigInited) return;
+    String dspace = newConfig.get(PARAM_PLATFORM_DISK_SPACE_LIST);
+    String relConfigPath = newConfig.get(PARAM_CONFIG_PATH,
+					 DEFAULT_CONFIG_PATH);
+    Vector v = StringUtil.breakAt(dspace, ';');
+    if (!isUnitTesting() && v.size() == 0) {
       log.error(PARAM_PLATFORM_DISK_SPACE_LIST +
-		" not specified, not configuring");
+		" not specified, not configuring local cache config dir");
       return;
     }
     for (Iterator iter = v.iterator(); iter.hasNext(); ) {
       String path = (String)iter.next();
-      initConfigDir(path);
+      File configDir = new File(path, relConfigPath);
+      if (configDir.exists()) {
+	cacheConfigDir = configDir.toString();
+	break;
+      }
+    }
+    if (cacheConfigDir == null) {
+      if (v.size() >= 1) {
+	String path = (String)v.get(0);
+	File dir = new File(path, relConfigPath);
+	if (dir.mkdirs()) {
+	  cacheConfigDir = dir.toString();
+	}
+      }
+    }
+    cacheConfigInited = true;
+  }
+
+//   private void initConfigDir(String path) {
+//     String configPath = Configuration.getParam(PARAM_CONFIG_PATH, "config");
+//     File dir = new File(path, configPath);
+//     if (!dir.exists()) {
+//       dir.mkdirs();
+//     }
+//   }
+
+  static void loadCacheConfigInto(Configuration config) {
+    if (cacheConfigDir == null) {
+      return;
+    }
+    for (int ix = 0; ix < cacheConfigFiles.length; ix++) {
+      File cfile = new File(cacheConfigDir, cacheConfigFiles[ix]);
+      boolean gotIt = config.loadList(ListUtil.list(cfile.toString()), true);
     }
   }
 
-  private void initConfigDir(String path) {
-    String configPath = Configuration.getParam(PARAM_CONFIG_PATH, "config");
-    File dir = new File(path, configPath);
-    if (!dir.exists()) {
-      dir.mkdirs();
+  public static void writeCacheConfigFile(Properties props,
+					  String cacheConfigFileName,
+					  String header)
+      throws IOException {
+    if (cacheConfigDir == null) {
+      log.warning("Attempting to write cache config file: " +
+		  cacheConfigFileName + ", but no cache config dir exists");
+      throw new RuntimeException("No cache config dir");
     }
-    
+    File cfile = new File(cacheConfigDir, cacheConfigFileName);
+    OutputStream os = new FileOutputStream(cfile);
+    props.store(os, header);
+    os.close();
+    if (handlerThread != null) {
+      handlerThread.forceReload();
+    }
   }
 
   /** Return the set of keys whose values differ.
@@ -802,6 +875,7 @@ public abstract class Configuration {
   private static class HandlerThread extends Thread {
     private long lastReload = 0;
     private boolean goOn = false;
+    private Deadline nextReload;
 
     private HandlerThread(String name) {
       super(name);
@@ -826,9 +900,8 @@ public abstract class Configuration {
 				    
 	}
 	long reloadRange = reloadInterval/4;
-	Deadline nextReload =
-	  Deadline.inRandomRange(reloadInterval - reloadRange,
-				 reloadInterval + reloadRange);
+	nextReload = Deadline.inRandomRange(reloadInterval - reloadRange,
+					    reloadInterval + reloadRange);
 	log.debug2(nextReload.toString());
 	if (goOn) {
 	  try {
@@ -843,6 +916,12 @@ public abstract class Configuration {
     private void stopHandler() {
       goOn = false;
       this.interrupt();
+    }
+
+    void forceReload() {
+      if (nextReload != null) {
+	nextReload.expire();
+      }
     }
   }
 

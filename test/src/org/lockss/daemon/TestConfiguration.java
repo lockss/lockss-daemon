@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfiguration.java,v 1.19 2003-05-06 01:45:46 troberts Exp $
+ * $Id: TestConfiguration.java,v 1.20 2003-05-10 01:59:38 tal Exp $
  */
 
 /*
@@ -47,10 +47,16 @@ public class TestConfiguration extends LockssTestCase {
     org.lockss.daemon.Configuration.class
   };
 
-
-  public TestConfiguration(String msg) {
-    super(msg);
+  public void setUp() throws Exception {
+    super.setUp();
   }
+
+  public void tearDown() throws Exception {
+    Configuration.resetForTesting();
+    super.tearDown();
+  }
+
+  static Logger log = Logger.getLogger("TestConfig");
 
   private static final String c1 = "prop1=12\nprop2=foobar\nprop3=true\n" +
     "prop5=False\n";
@@ -370,4 +376,41 @@ public class TestConfiguration extends LockssTestCase {
 		 config.get("org.lockss.log.target.MailTarget.smtpport"));
   }
 
+  public void testPlatformConfigDirSetup() throws Exception {
+    String tmpdir = getTempDir().toString();
+    Properties props = new Properties();
+    props.put(Configuration.PARAM_PLATFORM_DISK_SPACE_LIST, tmpdir);
+    ConfigurationUtil.setCurrentConfigFromProps(props);
+    String relConfigPath =
+      Configuration.getParam(Configuration.PARAM_CONFIG_PATH,
+			     Configuration.DEFAULT_CONFIG_PATH);
+    File cdir = new File(tmpdir, relConfigPath);
+    assertTrue(cdir.exists());
+    Configuration config = Configuration.getCurrentConfig();
+  }
+
+  public void testPlatformConfigIpAccess() throws Exception {
+    String tmpdir = getTempDir().toString();
+    Properties props = new Properties();
+    props.put(Configuration.PARAM_PLATFORM_DISK_SPACE_LIST, tmpdir);
+    ConfigurationUtil.setCurrentConfigFromProps(props);
+    String relConfigPath =
+      Configuration.getParam(Configuration.PARAM_CONFIG_PATH,
+			     Configuration.DEFAULT_CONFIG_PATH);
+    File cdir = new File(tmpdir, relConfigPath);
+    assertTrue(cdir.exists());
+    Properties acprops = new Properties();
+    acprops.put("foo.bar" , "12345");
+    Configuration.writeCacheConfigFile(acprops,
+				       Configuration.CONFIG_FILE_UI_IP_ACCESS,
+				       "this is a header");
+    File acfile = new File(cdir, Configuration.CONFIG_FILE_UI_IP_ACCESS);
+    log.info("wrote ac file");
+    assertTrue(acfile.exists());
+    Configuration config = Configuration.getCurrentConfig();
+    assertNull(config.get("foo.bar"));
+    ConfigurationUtil.setCurrentConfigFromProps(props);
+    Configuration config2 = Configuration.getCurrentConfig();
+    assertEquals("12345", config2.get("foo.bar"));
+  }
 }
