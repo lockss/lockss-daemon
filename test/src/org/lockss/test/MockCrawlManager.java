@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawlManager.java,v 1.12 2003-06-26 23:59:01 eaalto Exp $
+ * $Id: MockCrawlManager.java,v 1.13 2003-07-02 00:56:43 troberts Exp $
  */
 
 /*
@@ -55,8 +55,8 @@ public class MockCrawlManager implements CrawlManager, LockssManager {
     scheduledCrawls = new HashMap();
   }
 
-  public void scheduleRepair(ArchivalUnit au, Collection urls,
-			     CrawlManager.Callback cb, Object cookie) {
+  public void startRepair(ArchivalUnit au, Collection urls,
+			  CrawlManager.Callback cb, Object cookie) {
     Iterator urlIt = urls.iterator();
     while (urlIt.hasNext()) {
       scheduledRepairs.put(urlIt.next(), SCHEDULED);

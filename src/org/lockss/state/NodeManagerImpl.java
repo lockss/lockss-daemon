@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.141 2003-06-26 23:59:01 eaalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.142 2003-07-02 00:56:42 troberts Exp $
  */
 
 /*
@@ -1316,9 +1316,9 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     } else {
       logger.debug2("scheduling "+urls.size()+" repairs");
     }
-    theDaemon.getCrawlManager().scheduleRepair(managedAu, urls,
-                                               new ContentRepairCallback(),
-                                               pollKey);
+    theDaemon.getCrawlManager().startRepair(managedAu, urls,
+					    new ContentRepairCallback(),
+					    pollKey);
   }
 
   private void deleteNode(CachedUrlSet cus) throws IOException {
