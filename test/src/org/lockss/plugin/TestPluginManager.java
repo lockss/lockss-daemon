@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.41 2004-08-02 03:04:47 tlipkis Exp $
+ * $Id: TestPluginManager.java,v 1.42 2004-08-18 22:37:25 smorabito Exp $
  */
 
 /*
@@ -114,8 +114,8 @@ public class TestPluginManager extends LockssTestCase {
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     ConfigurationUtil.setFromArgs(LockssRepositoryImpl.PARAM_CACHE_LOCATION,
 				  tempDirPath,
-                                  HistoryRepositoryImpl.PARAM_HISTORY_LOCATION,
-                                  tempDirPath);
+				  HistoryRepositoryImpl.PARAM_HISTORY_LOCATION,
+				  tempDirPath);
   }
 
   public void testNameFromKey() {
@@ -130,9 +130,35 @@ public class TestPluginManager extends LockssTestCase {
     assertEquals("org|lockss|Foo", PluginManager.pluginKeyFromId("org.lockss.Foo"));
   }
 
+  public void testGetPreferredPluginType() throws Exception {
+    // Prefer XML plugins.
+    ConfigurationUtil.setFromArgs(PluginManager.PARAM_PREFERRED_PLUGIN_TYPE,
+				  "xml");
+    assertEquals(PluginManager.PREFER_XML_PLUGIN,
+		 mgr.getPreferredPluginType());
+
+    // Prefer CLASS plugins.
+    ConfigurationUtil.setFromArgs(PluginManager.PARAM_PREFERRED_PLUGIN_TYPE,
+				  "class");
+    assertEquals(PluginManager.PREFER_CLASS_PLUGIN,
+		 mgr.getPreferredPluginType());
+
+    // Illegal type.
+    ConfigurationUtil.setFromArgs(PluginManager.PARAM_PREFERRED_PLUGIN_TYPE,
+				  "foo");
+    assertEquals(PluginManager.PREFER_XML_PLUGIN,
+		 mgr.getPreferredPluginType());
+
+    // No type specified.
+    ConfigurationUtil.setFromArgs("foo", "bar");
+    assertEquals(PluginManager.PREFER_XML_PLUGIN,
+		 mgr.getPreferredPluginType());
+  }
+
   public void testEnsurePluginLoaded() throws Exception {
     // non-existent class shouldn't load
     String key = "org|lockss|NoSuchClass";
+    // OK if this logs FileNotFoundException in the log.
     assertFalse(mgr.ensurePluginLoaded(key));
     assertNull(mgr.getPlugin(key));
     // MockPlugin should load
@@ -170,19 +196,8 @@ public class TestPluginManager extends LockssTestCase {
     assertTrue(mgr.getPlugin(mgr.pluginKeyFromName(n1)) instanceof MockPlugin);
   }
 
-  public void testXmlPluginRegistry() {
-    String n1 = "org.lockss.test.MockPlugin";
-    String n2 = ThrowingMockPlugin.class.getName();
-    assertEmpty(mgr.getXmlPlugins());
-    ConfigurationUtil.setFromArgs(PluginManager.PARAM_PLUGIN_XML_PLUGINS,
-				  n1 + ";" + n2);
-    assertEquals(ListUtil.list(n1, n2), mgr.getXmlPlugins());
-  }
-
   public void testEnsurePluginLoadedXml() throws Exception {
-    String pname = "org.lockss.foo.BarPlugin";
-    ConfigurationUtil.setFromArgs(PluginManager.PARAM_PLUGIN_XML_PLUGINS,
-				  pname);
+    String pname = "org.lockss.test.TestXmlPlugin";
     String key = PluginManager.pluginKeyFromId(pname);
     assertTrue(mgr.ensurePluginLoaded(key));
     Plugin p = mgr.getPlugin(key);
@@ -345,7 +360,7 @@ public class TestPluginManager extends LockssTestCase {
     List getAuMgrsStarted() {
       return auMgrsStarted;
     }
-    
+
   }
 
   static class MockPluginManager extends PluginManager {
@@ -358,11 +373,9 @@ public class TestPluginManager extends LockssTestCase {
     private List initArgs = new ArrayList();
 
     public void initPlugin(LockssDaemon daemon, String extMapName, ClassLoader loader)
-    throws FileNotFoundException {
+	throws FileNotFoundException {
       initArgs.add(ListUtil.list(daemon, extMapName, loader));
-
-     // super.initPlugin(daemon, extMapName);
-
+      super.initPlugin(daemon, extMapName, loader);
     }
 
     List getInitArgs() {
@@ -539,26 +552,26 @@ public class TestPluginManager extends LockssTestCase {
   public void testWrappedAu() {
     if (!WrapperState.isUsingWrapping()) {
       try {
-        String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-        Properties p = new Properties();
-        p.setProperty(p1a1param + MockPlugin.CONFIG_PROP_1, "val1");
-        p.setProperty(p1a1param + MockPlugin.CONFIG_PROP_2, "val2");
-        p.setProperty(p1a1param + "reserved.wrapper", "true");
-        p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-        p.setProperty(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION, tempDirPath);
-        ConfigurationUtil.setCurrentConfigFromProps(p);
-        ArchivalUnit wau = (ArchivalUnit) mgr.getAuFromId(
-            mauauid1);
-        Plugin wplug = (Plugin) wau.getPlugin();
-        MockPlugin mock = (MockPlugin) WrapperState.getOriginal(wplug);
-        assertSame(mock,wplug);
-        MockArchivalUnit mau = (MockArchivalUnit) WrapperState.getOriginal(wau);
-        assertSame(mock, mau.getPlugin());
-        assertSame(mau,wau);
+	String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+	Properties p = new Properties();
+	p.setProperty(p1a1param + MockPlugin.CONFIG_PROP_1, "val1");
+	p.setProperty(p1a1param + MockPlugin.CONFIG_PROP_2, "val2");
+	p.setProperty(p1a1param + "reserved.wrapper", "true");
+	p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+	p.setProperty(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION, tempDirPath);
+	ConfigurationUtil.setCurrentConfigFromProps(p);
+	ArchivalUnit wau = (ArchivalUnit) mgr.getAuFromId(
+	    mauauid1);
+	Plugin wplug = (Plugin) wau.getPlugin();
+	MockPlugin mock = (MockPlugin) WrapperState.getOriginal(wplug);
+	assertSame(mock,wplug);
+	MockArchivalUnit mau = (MockArchivalUnit) WrapperState.getOriginal(wau);
+	assertSame(mock, mau.getPlugin());
+	assertSame(mau,wau);
       } catch (IOException e) {
-        fail(e.getMessage());
+	fail(e.getMessage());
       } catch (ClassCastException e) {
-        fail("WrappedArchivalUnit not found.");
+	fail("WrappedArchivalUnit not found.");
       }
     }
   }
