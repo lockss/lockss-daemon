@@ -1,5 +1,5 @@
 /*
- * $Id: ResourceManager.java,v 1.1 2004-10-18 03:35:12 tlipkis Exp $
+ * $Id: ResourceManager.java,v 1.2 2004-12-08 00:50:09 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -35,10 +35,8 @@ import org.lockss.config.Configuration;
 import org.lockss.util.*;
 
 /** ResourceManager arbitrates ownership of resources such as tcp listen
- * ports. 
-
-*/
-
+ * ports.
+ */
 public class ResourceManager extends BaseLockssManager  {
   protected static Logger log = Logger.getLogger("ResourceManager");
 
