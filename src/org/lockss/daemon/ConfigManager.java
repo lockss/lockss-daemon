@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.7 2003-07-30 05:35:47 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.8 2003-08-27 23:02:24 eaalto Exp $
  */
 
 /*
@@ -94,7 +94,7 @@ public class ConfigManager implements LockssManager {
     CONFIG_FILE_PROXY_IP_ACCESS,
     CONFIG_FILE_AU_CONFIG,
   };
-			     
+
 
   // MUST pass in explicit log level to avoid recursive call back to
   // Configuration to get Config log level.  (Others should NOT do this.)
@@ -398,7 +398,7 @@ public class ConfigManager implements LockssManager {
       }
     }
   }
-      
+
   /**
    * Unregister a <code>Configuration.Callback</code>.
    * @param c <code>Configuration.Callback</code> to remove.
@@ -497,7 +497,7 @@ public class ConfigManager implements LockssManager {
     try {
       auConfig = readCacheConfigFile(CONFIG_FILE_AU_CONFIG);
     } catch (IOException e) {
-      log.warning("Couldn't read AU config file", e);
+      log.warning("Couldn't read AU config file: " + e.getMessage());
       auConfig = newConfiguration();
     }
     return auConfig;
@@ -723,9 +723,9 @@ public class ConfigManager implements LockssManager {
 	  }
 	  lastReload = TimeBase.nowMs();
 	  //  	stopAndOrStartThings(true);
-	  reloadInterval = getTimeIntervalParam(PARAM_RELOAD_INTERVAL, 
+	  reloadInterval = getTimeIntervalParam(PARAM_RELOAD_INTERVAL,
 						DEFAULT_RELOAD_INTERVAL);
-				    
+
 	}
 	long reloadRange = reloadInterval/4;
 	nextReload = Deadline.inRandomRange(reloadInterval - reloadRange,
