@@ -1,5 +1,5 @@
 /*
- * $Id: Crawler.java,v 1.18 2004-01-13 02:36:27 troberts Exp $
+ * $Id: Crawler.java,v 1.19 2004-02-09 22:09:14 tlipkis Exp $
  */
 
 /*
@@ -90,6 +90,12 @@ public interface Crawler {
    */
   public void abortCrawl();
 
+
+  /**
+   * Set a watchdog that should be poked periodically by the crawl
+   * @param wdog the watchdog
+   */
+  public void setWatchdog(LockssWatchdog wdog);
 
   /**
    * Returns an int representing the status of this crawler

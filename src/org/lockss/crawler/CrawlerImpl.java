@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerImpl.java,v 1.8 2004-02-03 03:12:31 troberts Exp $
+ * $Id: CrawlerImpl.java,v 1.9 2004-02-09 22:09:14 tlipkis Exp $
  */
 
 /*
@@ -173,6 +173,9 @@ public abstract class CrawlerImpl implements Crawler {
     catch (Exception ex) {
     }
     return false;
+  }
+
+  public void setWatchdog(LockssWatchdog wdog) {
   }
 
   public String toString() {
