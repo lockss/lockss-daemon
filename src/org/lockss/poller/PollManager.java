@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.20 2003-01-28 02:10:20 claire Exp $
+* $Id: PollManager.java,v 1.21 2003-01-30 03:19:05 claire Exp $
  */
 
 /*
@@ -45,14 +45,18 @@ import org.lockss.protocol.ProtocolException;
 import org.lockss.util.*;
 import org.mortbay.util.*;
 import gnu.regexp.*;
-
+/*
+ TODO: use correct algorithm for determining deadlines for polls
+ TODO: move checkForConflict into the appropriate poll class
+ TODO: replace checkForConflict url position with call to NodeManager
+ */
 public class PollManager {
-  static final String PARAM_RECENT_EXPIRATION = Configuration.PREFIX + "poll.expire_recent";
+  static final String PARAM_RECENT_EXPIRATION = Configuration.PREFIX +
+      "poll.expireRecent";
   static final String PARAM_REPLAY_EXPIRATION = Configuration.PREFIX +
-      "poll.expire_replay";
+      "poll.expireReplay";
   static final String PARAM_VERIFY_EXPIRATION = Configuration.PREFIX +
-      "poll.expire_verifier";
-
+      "poll.expireVerifier";
 
 
   static final long DEFAULT_RECENT_EXPIRATION = 24 * 60 * 60 * 1000; // 1 day
@@ -61,10 +65,9 @@ public class PollManager {
 
   private static PollManager theManager = null;
   private static Logger theLog=Logger.getLogger("PollManager");
+
   private static HashMap thePolls = new HashMap();
-  private static HashMap theRecentPolls = new HashMap();
   private static HashMap theVerifiers = new HashMap();
-  private static HashMap theSuspended = new HashMap();
 
   private static Random theRandom = new Random();
   private static LcapComm theComm = null;
@@ -89,80 +92,6 @@ public class PollManager {
     return theManager;
   }
 
-  /**
-   * return the default MessageDigest hasher
-   * @return MessageDigest the hasher
-   */
-  public MessageDigest getHasher() {
-    return getHasher(null);
-  }
-
-
-  /**
-   * make a new poll of the type defined by the incoming message.
-   * @param msg <code>Message</code> to use for
-   * @return a new Poll object of the required type
-   * @throws IOException if message opcode is unknown or if new poll would
-   * conflict with currently running poll.
-   */
-  Poll makePoll(LcapMessage msg) throws IOException {
-    Poll ret_poll;
-    ArchivalUnit au;
-    CachedUrlSet cus;
-
-    // check for presence of item in the cache
-    try {
-      au = Plugin.findArchivalUnit(msg.getTargetUrl());
-      cus = au.makeCachedUrlSet(msg.getTargetUrl(), msg.getRegExp());
-    }
-    catch (Exception ex) {
-      theLog.debug(msg.getTargetUrl() + " not in this cache.");
-      return null;
-    }
-
-    // check for conflicts
-    CachedUrlSet conflict = checkForConflicts(msg);
-    if(conflict != null) {
-      String err = msg.toString() + " conflicts with " + conflict.toString() +
-                   " in makeElection()";
-      theLog.debug(err);
-      throw new ProtocolException(err);
-    }
-
-    // create the appropriate message type
-    switch(msg.getOpcode()) {
-      case LcapMessage.CONTENT_POLL_REP:
-      case LcapMessage.CONTENT_POLL_REQ:
-        theLog.debug("Making a content poll on "+cus);
-        ret_poll = new ContentPoll(msg, cus, this);
-        break;
-      case LcapMessage.NAME_POLL_REP:
-      case LcapMessage.NAME_POLL_REQ:
-        theLog.debug("Making a name poll on "+cus);
-        ret_poll = new NamePoll(msg, cus, this);
-        break;
-      case LcapMessage.VERIFY_POLL_REP:
-      case LcapMessage.VERIFY_POLL_REQ:
-        theLog.debug("Checking for multicast verfiy poll...");
-        String key = makeKey(msg.getChallenge());
-        ret_poll = (Poll)thePolls.get(key);
-        if( ret_poll == null) {
-          theLog.debug("Making a verify poll on "+cus);
-          ret_poll = new VerifyPoll(msg, cus, this);
-        }
-        break;
-      default:
-        throw new ProtocolException("Unknown opcode:" +
-        msg.getOpcode());
-    }
-
-    if(ret_poll != null && thePolls.get(ret_poll.m_key) == null) {
-      thePolls.put(ret_poll.m_key, ret_poll);
-    }
-
-    return ret_poll;
-  }
-
 
   /**
    * make an election by sending a request packet.  This is only
@@ -173,7 +102,7 @@ public class PollManager {
    * @param duration the time this poll has to run
    * @throws IOException thrown if Message construction fails.
    */
-  public void makePollRequest(String url,
+  public void requestPoll(String url,
                               String regexp,
                               int opcode,
                               long duration)
@@ -194,24 +123,11 @@ public class PollManager {
 
 
   /**
-   * Find the poll defined by the <code>Message</code>.  If the poll
-   * does not exist this will create a new poll
-   * @param msg <code>Message</code>
-   * @return <code>Poll</code> which matches the message opcode.
-   * @throws IOException if message opcode is unknown or if new poll would
-   * conflict with currently running poll.
-   * @see <code>Poll.createPoll</code>
+   * return the default MessageDigest hasher
+   * @return MessageDigest the hasher
    */
-  Poll findPoll(LcapMessage msg) throws IOException {
-    String key = makeKey(msg.getChallenge());
-    Poll ret = (Poll)thePolls.get(key);
-    if(ret == null) {
-      theLog.info("Making new poll: "+ key);
-      ret = makePoll(msg);
-      theLog.info("Done making new poll: "+ key);
-      ret.startPoll();
-    }
-    return ret;
+  public MessageDigest getHasher() {
+    return getHasher(null);
   }
 
   /**
@@ -224,35 +140,110 @@ public class PollManager {
    */
   void handleMessage(LcapMessage msg) throws IOException {
     theLog.info("Got a message: " + msg);
-    String key = makeKey(msg.getChallenge());
-    if(isPollClosed(key)) {
-      theLog.info("Message received after poll was closed." + msg.toString());
-      return;
-    }
-    if(isPollSuspended(key)) {
-      theLog.info("Message received while poll was suspended." + msg.toString());
-      return;
+    String key = msg.getKey();
+    PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
+    if(pme != null) {
+      if(pme.isPollCompleted() || pme.isPollSuspended()) {
+        theLog.info("Message received after poll was closed." + msg.toString());
+        return;
+      }
     }
     Poll p = findPoll(msg);
-    if (p == null) {
-      theLog.error("Unable to create poll for Message: " + msg.toString());
-      throw new ProtocolException("Failed to create poll for "
-                                  + msg.toString());
+    if (p != null) {
+      p.receiveMessage(msg);
+      // NodeManager.updatePollState(???);
     }
-    // XXX - we need to notify someone that this poll is running in this node!!!
-    p.receiveMessage(msg);
+    else {
+      theLog.info("Unable to create poll for Message: " + msg.toString());
+    }
   }
 
 
   /**
-   * remove the poll represented by the given key from the poll table and
-   * return it.
-   * @param key the String representation of the polls key
-   * @return Poll the poll if found or null
+   * Find the poll defined by the <code>Message</code>.  If the poll
+   * does not exist this will create a new poll
+   * @param msg <code>Message</code>
+   * @return <code>Poll</code> which matches the message opcode.
+   * @throws IOException if message opcode is unknown or if new poll would
+   * conflict with currently running poll.
+   * @see <code>Poll.createPoll</code>
    */
-  Poll removePoll(String key) {
-    return (Poll)thePolls.remove(key);
+  synchronized Poll findPoll(LcapMessage msg) throws IOException {
+    String key = msg.getKey();
+    Poll ret = null;
+
+    PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
+    if(pme == null) {
+      theLog.info("Making new poll: "+ key);
+      ret = makePoll(msg);
+      theLog.info("Done making new poll: "+ key);
+    }
+    else {
+      ret = pme.poll;
+    }
+    return ret;
   }
+
+  /**
+   * make a new poll of the type defined by the incoming message.
+   * @param msg <code>Message</code> to use for
+   * @return a new Poll object of the required type
+   * @throws ProtocolException if message opcode is unknown or if new poll would
+   * conflict with currently running poll.
+   */
+  Poll makePoll(LcapMessage msg) throws ProtocolException {
+    Poll ret_poll;
+    ArchivalUnit au;
+    CachedUrlSet cus;
+
+    // check for presence of item in the cache
+    try {
+      au = Plugin.findArchivalUnit(msg.getTargetUrl());
+      cus = au.makeCachedUrlSet(msg.getTargetUrl(), msg.getRegExp());
+    }
+    catch (Exception ex) {
+      theLog.debug(msg.getTargetUrl() + " not in this cache.");
+      return null;
+    }
+
+    // check for conflicts
+    CachedUrlSet conflict = checkForConflicts(msg);
+    if(conflict != null) {
+      String err = msg.toString() + " conflicts with " + conflict.toString() +
+                   " in makeElection()";
+      theLog.debug(err);
+      return null;
+    }
+
+    // create the appropriate message type
+    switch(msg.getOpcode()) {
+      case LcapMessage.CONTENT_POLL_REP:
+      case LcapMessage.CONTENT_POLL_REQ:
+        theLog.debug("Making a content poll on "+cus);
+        ret_poll = new ContentPoll(msg, cus, this);
+        break;
+      case LcapMessage.NAME_POLL_REP:
+      case LcapMessage.NAME_POLL_REQ:
+        theLog.debug("Making a name poll on "+cus);
+        ret_poll = new NamePoll(msg, cus, this);
+        break;
+      case LcapMessage.VERIFY_POLL_REP:
+      case LcapMessage.VERIFY_POLL_REQ:
+        theLog.debug("Making a verify poll on "+cus);
+        ret_poll = new VerifyPoll(msg, cus, this);
+        break;
+      default:
+        throw new ProtocolException("Unknown opcode:" + msg.getOpcode());
+    }
+
+    if(ret_poll != null) {
+      thePolls.put(ret_poll.m_key, new PollManagerEntry(ret_poll));
+      ret_poll.startPoll();
+    }
+
+    return ret_poll;
+  }
+
 
   /**
    * send a message to the multicast address for this archival unit
@@ -303,14 +294,13 @@ public class PollManager {
     boolean isRegExp = regexp != null;
 
     // verify polls are never conflicts
-    if((opcode == LcapMessage.VERIFY_POLL_REP)||
-       (opcode == LcapMessage.VERIFY_POLL_REQ)) {
+    if(msg.isVerifyPoll()) {
       return null;
     }
 
     Iterator iter = thePolls.values().iterator();
     while(iter.hasNext()) {
-      Poll p = (Poll)iter.next();
+      Poll p = ((PollManagerEntry)iter.next()).poll;
 
       LcapMessage p_msg = p.getMessage();
       String  p_url = p_msg.getTargetUrl();
@@ -319,10 +309,10 @@ public class PollManager {
       boolean p_isRegExp = p_regexp != null;
 
       // eliminate verify polls
-      if((p_opcode == LcapMessage.VERIFY_POLL_REP)||
-         (p_opcode == LcapMessage.VERIFY_POLL_REQ)) {
+      if(p_msg.isVerifyPoll()) {
         continue;
       }
+      // int position = NodeManager.getRelativePosition(cus1, cus2);
       //XXX this should be handled by something else
       boolean alongside = p_url.equals(url);
       boolean below = (p_url.startsWith(url) &&
@@ -331,8 +321,7 @@ public class PollManager {
                        p_url.endsWith(File.separator));
 
       // check for content poll conflicts
-      if((opcode == LcapMessage.CONTENT_POLL_REP) ||
-         (opcode == LcapMessage.CONTENT_POLL_REQ)) {
+      if(msg.isContentPoll()) {
 
         if(alongside) { // only verify polls are allowed
           theLog.debug("conflict new content or name poll alongside content poll");
@@ -340,8 +329,7 @@ public class PollManager {
         }
 
         if(above || below) { // verify and regexp polls are allowed
-          if((p_opcode == LcapMessage.CONTENT_POLL_REP) ||
-             (p_opcode == LcapMessage.CONTENT_POLL_REQ)) {
+          if(p_msg.isContentPoll()) {
             if(p_isRegExp) {
               continue;
             }
@@ -352,15 +340,13 @@ public class PollManager {
       }
 
       // check for name poll conflicts
-      if((opcode == LcapMessage.NAME_POLL_REP) ||
-         (opcode == LcapMessage.NAME_POLL_REQ)) {
+      if(msg.isNamePoll()) {
         if(alongside) { // only verify polls are allowed
           theLog.debug("conflict new content or name poll alongside name poll");
           return p.getCachedUrlSet();
         }
         if(above) { // only reg exp polls are allowed
-          if((p_opcode == LcapMessage.CONTENT_POLL_REP) ||
-             (p_opcode == LcapMessage.CONTENT_POLL_REQ)) {
+          if(p_msg.isContentPoll()) {
             if(p_isRegExp) {
               continue;
             }
@@ -379,48 +365,23 @@ public class PollManager {
     return null;
   }
 
-  boolean isPollActive(String key) {
-    return thePolls.containsKey(key);
-  }
-
-
-
-  /**
-   * is this a poll that has been recently closed
-   * @param key the String identifying the poll
-   * @return true if closed
-   */
-  boolean isPollClosed(String key) {
-
-    return (theRecentPolls.containsKey(key));
-  }
-
-  /**
-   * is this a poll that has been suspended
-   * @param key the String identifying the poll
-   * @return true if suspended
-   */
-  boolean isPollSuspended(String key) {
-     return (theSuspended.containsKey(key));
-  }
 
   /**
    * close the poll from any further voting
    * @param key the poll signature
    */
   void closeThePoll(String key)  {
-    // remove the poll from the active poll table
-    synchronized(thePolls) {
-      thePolls.remove(key);
-    }
-    // add the key to the recent polls table with an expiration time
     long expiration = TimeBase.nowMs() +
-                      Configuration.getLongParam(PARAM_REPLAY_EXPIRATION,
-                      DEFAULT_REPLAY_EXPIRATION);
+                      Configuration.getLongParam(PARAM_RECENT_EXPIRATION,
+                      DEFAULT_RECENT_EXPIRATION);
     Deadline d = Deadline.in(expiration);
     TimerQueue.schedule(d, new ExpireRecentCallback(), key);
-    theRecentPolls.put(key, d);
-
+    synchronized(thePolls) {
+      PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
+      if(pme != null) {
+        pme.setPollCompleted(d);
+      }
+    }
   }
 
   /**
@@ -429,48 +390,46 @@ public class PollManager {
    */
   void suspendPoll(Poll p) {
     synchronized(thePolls) {
-      thePolls.remove(p.m_key);
-    }
-
-    synchronized(theRecentPolls) {
-      Deadline d = (Deadline)theRecentPolls.remove(p.m_key);
-      if(d != null) {
-        d.expire();
+      PollManagerEntry pme = (PollManagerEntry)thePolls.get(p.m_key);
+      if(pme != null) {
+        if(pme.deadline != null) {
+          pme.deadline.expire();
+        }
       }
+      else {
+        pme = new PollManagerEntry(p);
+        thePolls.put(p.m_key, pme);
+      }
+      pme.setPollSuspended();
     }
 
-    synchronized(theSuspended) {
-      theSuspended.put(p.m_key, p);
-    }
   }
+
 
   /**
    * resume a poll that had been suspended for a repair and check the repair
    * @param key the key of the suspended poll
    */
   void resumePoll(Object key) {
-    Poll p = null;
+    synchronized(thePolls) {
+      PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
+      if(pme != null) {
+        Poll p = pme.poll;
+        long expiration = TimeBase.nowMs() +
+                          Configuration.getLongParam(PARAM_REPLAY_EXPIRATION,
+                          DEFAULT_REPLAY_EXPIRATION);
+        Deadline d = Deadline.in(expiration);
+        p.getVoteTally().startReplay(d);
 
-    synchronized(theSuspended) {
-      p = (Poll)theSuspended.remove(key);
+        // now we want to make sure we add it to the recent polls.
+        expiration += Configuration.getLongParam(PARAM_RECENT_EXPIRATION,
+            DEFAULT_RECENT_EXPIRATION);
+
+        d = Deadline.in(expiration);
+        TimerQueue.schedule(d, new ExpireRecentCallback(), (String)key);
+        pme.setPollCompleted(d);
+      }
     }
-
-    if(p != null) {
-      long expiration = TimeBase.nowMs() +
-                        Configuration.getLongParam(PARAM_REPLAY_EXPIRATION,
-                        DEFAULT_REPLAY_EXPIRATION);
-      Deadline d = Deadline.in(expiration);
-      p.getVoteTally().replayAllVotes(d);
-
-      // now we want to make sure we add it to the recent polls.
-      expiration += Configuration.getLongParam(PARAM_RECENT_EXPIRATION,
-          DEFAULT_RECENT_EXPIRATION);
-
-      d = Deadline.in(expiration);
-      TimerQueue.schedule(d, new ExpireRecentCallback(), (String)key);
-      theRecentPolls.put(key, d);
-    }
-
   }
 
   void requestVerifyPoll(String url, String regexp, long duration, Vote vote)
@@ -480,7 +439,7 @@ public class PollManager {
 
     LcapMessage reqmsg = LcapMessage.makeRequestMsg(url,
         regexp,
-        new String[0],
+        null,
         vote.getVerifier(),
         makeVerifier(),
         LcapMessage.VERIFY_POLL_REQ,
@@ -495,6 +454,23 @@ public class PollManager {
     Poll poll = findPoll(reqmsg);
     poll.m_pollstate = Poll.PS_WAIT_TALLY;
   }
+
+  /**
+   * Called by verify polls to get the array of bytes that represents the
+   * secret used to generate the verifier bytes.
+   * @param verifier the array of bytes that is a hash of the secret.
+   * @return the array of bytes representing the secret or if no matching
+   * verifier is found, null.
+   */
+  byte[] getSecret(byte[] verifier) {
+    String ver = String.valueOf(B64Code.encode(verifier));
+    String sec = (String)theVerifiers.get(ver);
+    if (sec != null && sec.length() > 0) {
+      return (B64Code.decode(sec.toCharArray()));
+    }
+    return null;
+  }
+
 
 
   /**
@@ -523,16 +499,6 @@ public class PollManager {
 
 
   /**
-   * return a key from an array of bytes.
-   * @param keyBytes the array of bytes to use
-   * @return a base64 string representation of the byte array
-   */
-  String makeKey(byte[] keyBytes) {
-    return String.valueOf(B64Code.encode(keyBytes));
-  }
-
-
-  /**
    * make a verifier by generating a secret and hashing it. Then store the
    * verifier/secret pair in the verifiers table.
    * @return the array of bytes representing the verifier
@@ -546,22 +512,6 @@ public class PollManager {
     return v_bytes;
   }
 
-
-  /**
-   * get the array of bytes that represents the secret used to generate the
-   * verifier bytes.  This extracts the secret from the table of verifiers.
-   * @param verifier the array of bytes that is a hash of the secret.
-   * @return the array of bytes representing the secret or if no matching
-   * verifier is found, null.
-   */
-  byte[] getSecret(byte[] verifier) {
-    String ver = String.valueOf(B64Code.encode(verifier));
-    String sec = (String)theVerifiers.get(ver);
-    if (sec != null && sec.length() > 0) {
-      return (B64Code.decode(sec.toCharArray()));
-    }
-    return null;
-  }
 
 
   /**
@@ -602,6 +552,36 @@ public class PollManager {
     }
   }
 
+
+//-------------- TestPollManager Accessors ----------------------------
+  /**
+   * remove the poll represented by the given key from the poll table and
+   * return it.
+   * @param key the String representation of the polls key
+   * @return Poll the poll if found or null
+   */
+  synchronized Poll removePoll(String key) {
+    PollManagerEntry pme = (PollManagerEntry)thePolls.remove(key);
+    return (pme != null) ? pme.poll : null;
+  }
+
+  boolean isPollActive(String key) {
+    PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
+    return (pme != null) ? pme.isPollActive() : false;
+  }
+
+  boolean isPollClosed(String key) {
+    PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
+    return (pme != null) ? pme.isPollCompleted() : false;
+  }
+
+  boolean isPollSuspended(String key) {
+    PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
+    return (pme != null) ? pme.isPollSuspended() : false;
+  }
+
+
+// ----------------  Callbacks -----------------------------------
   static class CommMessageHandler implements LcapComm.MessageHandler {
 
     public void handleMessage(LockssReceivedDatagram rd) {
@@ -623,8 +603,8 @@ public class PollManager {
      * @param cookie  data supplied by caller to schedule()
      */
     public void timerExpired(Object cookie) {
-      synchronized(theRecentPolls) {
-        theRecentPolls.remove(cookie);
+      synchronized(thePolls) {
+        thePolls.remove(cookie);
       }
     }
   }
@@ -640,4 +620,57 @@ public class PollManager {
       }
     }
   }
+
+  /**
+   * <p>PollManagerEntry: </p>
+   * <p>Description: Class to represent the data store in the polls table.
+   * @version 1.0
+   */
+
+  static class PollManagerEntry {
+    static final int ACTIVE = 0;
+    static final int COMPLETED = 1;
+    static final int SUSPENDED = 2;
+
+    Poll poll;
+    Deadline deadline;
+    int status;
+
+    PollManagerEntry(Poll p) {
+      poll = p;
+      deadline = null;
+      status = ACTIVE;
+    }
+
+    boolean isPollActive() {
+      return status == ACTIVE;
+    }
+
+    boolean isPollCompleted() {
+      return status == COMPLETED;
+    }
+
+    boolean isPollSuspended() {
+      return status == SUSPENDED;
+    }
+
+
+    void setPollCompleted(Deadline d) {
+      poll = null;
+      deadline = d;
+      status = COMPLETED;
+    }
+
+    void setPollSuspended() {
+      if(status == SUSPENDED) {
+        if(deadline != null) {
+          deadline.expire();
+          deadline = null;
+        }
+      }
+       status = SUSPENDED;
+    }
+
+  }
+
 }

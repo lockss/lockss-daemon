@@ -46,8 +46,9 @@ public class TestPoll extends TestCase {
   }
 
   /** setUp method for test case */
-  protected void setUp() {
-    //HashService.start();
+  protected void setUp() throws Exception {
+    super.setUp();
+    HashService.start();
     pollmanager = PollManager.getPollManager();
     try {
       testaddr = InetAddress.getByName("127.0.0.1");
@@ -92,6 +93,7 @@ public class TestPoll extends TestCase {
    * @throws Exception if removePoll failed
    */
   protected void tearDown() throws Exception {
+    HashService.stop();
     for(int i= 0; i< 3; i++) {
       pollmanager.removePoll(testpolls[i].m_key);
     }
@@ -288,6 +290,7 @@ public class TestPoll extends TestCase {
     p.m_tally.wtDisagree = 200;
     p.m_tally.localEntries = new String[] { "entry 1", "entry 2", "entry 5" };
     p.m_tally.votedEntries = new String[] { "entry 1", "entry 3", "entry 4", "entry 5"};
+    p.m_pollstate = Poll.PS_COMPLETE;
     return p;
   }
 

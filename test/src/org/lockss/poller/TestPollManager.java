@@ -11,6 +11,7 @@ import org.lockss.util.*;
 import org.mortbay.util.*;
 import gnu.regexp.*;
 import junit.framework.TestCase;
+import org.lockss.hasher.HashService;
 
 /** JUnitTest case for class: org.lockss.poller.PollManager */
 public class TestPollManager extends TestCase {
@@ -40,7 +41,9 @@ public class TestPollManager extends TestCase {
   }
 
   /** setUp method for test case */
-  protected void setUp() {
+  protected void setUp() throws Exception {
+    super.setUp();
+    HashService.start();
     pollmanager = PollManager.getPollManager();
     try {
       testaddr = InetAddress.getByName("127.0.0.1");
@@ -71,8 +74,9 @@ public class TestPollManager extends TestCase {
 
   /** tearDown method for test case */
   protected void tearDown() throws Exception {
+    HashService.stop();
     for(int i=0; i<3; i++) {
-      pollmanager.removePoll(pollmanager.makeKey(testmsg[i].getChallenge()));
+      pollmanager.removePoll(testmsg[i].getKey());
     }
     super.tearDown();
   }
@@ -116,7 +120,7 @@ public class TestPollManager extends TestCase {
   /** test for method makePollRequest(..) */
   public void testMakePollRequest() {
     try {
-      pollmanager.makePollRequest(urlstr,regexp,LcapMessage.VERIFY_POLL_REQ,
+      pollmanager.requestPoll(urlstr,regexp,LcapMessage.VERIFY_POLL_REQ,
                                   testduration);
     }
     catch (IllegalStateException e) {
@@ -250,6 +254,7 @@ public class TestPollManager extends TestCase {
   public void testCloseThePoll() {
     try {
       Poll p1 = pollmanager.makePoll(testmsg[0]);
+
       // we should now be active
       assertTrue(pollmanager.isPollActive(p1.m_key));
       // we should not be closed
@@ -314,19 +319,6 @@ public class TestPollManager extends TestCase {
     byte[] verifier_check = md.digest();
     assertTrue("secret does not match verifier",
                Arrays.equals(verifier, verifier_check));
-
-  }
-
-  /** test for method makeKey(..) */
-  public void testMakeKey() {
-
-    byte[] key_bytes = pollmanager.generateRandomBytes();
-    String key_str = pollmanager.makeKey(key_bytes);
-
-    // the key str reconverted as bytes
-    byte[] str_bytes = B64Code.decode(key_str.toCharArray());
-
-    assertTrue(Arrays.equals(key_bytes, str_bytes));
 
   }
 

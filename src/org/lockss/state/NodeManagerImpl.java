@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.14 2003-01-30 02:05:16 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.15 2003-01-30 03:19:05 claire Exp $
  */
 
 /*
@@ -329,7 +329,7 @@ public class NodeManagerImpl implements NodeManager {
                   nodeState);
         long duration = calculateNamePollDuration(nodeState.getCachedUrlSet());
         try {
-          PollManager.getPollManager().makePollRequest(results.getUrl(),
+          PollManager.getPollManager().requestPoll(results.getUrl(),
               results.getRegExp(), LcapMessage.NAME_POLL_REQ, duration);
         } catch (IOException ioe) {
           logger.error("Couldn't make name poll request.", ioe);
@@ -474,7 +474,7 @@ public class NodeManagerImpl implements NodeManager {
     while (children.hasNext()) {
       CachedUrlSet child = (CachedUrlSet)children.next();
       long duration = calculateContentPollDuration(child);
-      PollManager.getPollManager().makePollRequest(child.getPrimaryUrl(), null,
+      PollManager.getPollManager().requestPoll(child.getPrimaryUrl(), null,
           LcapMessage.CONTENT_POLL_REQ, duration);
     }
   }

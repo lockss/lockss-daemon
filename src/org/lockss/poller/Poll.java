@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.43 2003-01-28 02:10:20 claire Exp $
+* $Id: Poll.java,v 1.44 2003-01-30 03:19:05 claire Exp $
  */
 
 /*
@@ -141,7 +141,7 @@ public abstract class Poll implements Serializable {
     m_challenge = msg.getChallenge();
     m_verifier = m_pollmanager.makeVerifier();
     m_caller = msg.getOriginID();
-    m_key = m_pollmanager.makeKey(m_challenge);
+    m_key = msg.getKey();
     m_pollstate = PS_INITING;
   }
 
@@ -648,7 +648,7 @@ public abstract class Poll implements Serializable {
      * replay all of the votes in a previously held poll.
      * @param deadline the deadline by which the replay must be complete
      */
-    public void replayAllVotes(Deadline deadline) {
+    public void startReplay(Deadline deadline) {
       originalVotes = pollVotes;
       pollVotes = new ArrayList(originalVotes.size());
       replayIter =  originalVotes.iterator();
@@ -691,6 +691,15 @@ public abstract class Poll implements Serializable {
       return numAgree + numDisagree >= quorum;
     }
 
+    boolean hasVoted(LcapIdentity voterID) {
+      Iterator it = pollVotes.iterator();
+      while(it.hasNext()) {
+        LcapIdentity id = (LcapIdentity) it.next();
+        if(id.isEqual(voterID))
+          return true;
+      }
+      return false;
+    }
 
     void addVote(Vote vote) {
       LcapIdentity id = vote.getIdentity();

@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapMessage.java,v 1.6 2003-01-28 02:22:38 claire Exp $
+ * $Id: TestLcapMessage.java,v 1.7 2003-01-30 03:19:05 claire Exp $
  */
 
 /*
@@ -196,6 +196,12 @@ public class TestLcapMessage extends TestCase {
     testmsg.m_entries = null;
     byte[] msgbytes = testmsg.encodeMsg();
     new LcapMessage(msgbytes);
+  }
+
+  /** test for method makeKey(..) */
+  public void testGetKey() {
+
+
   }
 
   /** Executes the test case */

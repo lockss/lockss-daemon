@@ -1,5 +1,5 @@
 /*
-* $Id: LcapMessage.java,v 1.18 2003-01-28 02:22:38 claire Exp $
+* $Id: LcapMessage.java,v 1.19 2003-01-30 03:19:05 claire Exp $
  */
 
 /*
@@ -70,6 +70,8 @@ public class LcapMessage implements Serializable {
     "ContentReq", "ContentRep",
     "VerifyReq", "VerifyRep"};
 
+  public static final String[] POLL_NAMES = {"NamePoll", "ContentPoll", "VerfiyPoll"};
+
   public static final int MAX_HOP_COUNT = 16;
   public static final int SHA_LENGTH = 20;
   public static final int MAX_PACKET_SIZE = 1024; // Don't exceed 1450 - 28
@@ -109,6 +111,7 @@ public class LcapMessage implements Serializable {
   private static byte[] signature = {'l','p','m','1'};
   private static Logger log = Logger.getLogger("Message");
   private static byte theSendHopcount = -1;
+  private String m_key = null;
 
   private static IdentityManager theIdentityMgr
       = IdentityManager.getIdentityManager();
@@ -450,6 +453,18 @@ public class LcapMessage implements Serializable {
 
   }
 
+  public boolean isNamePoll() {
+    return m_opcode == NAME_POLL_REQ || m_opcode == NAME_POLL_REP;
+  }
+
+  public boolean isContentPoll() {
+    return m_opcode == CONTENT_POLL_REQ || m_opcode == CONTENT_POLL_REP;
+  }
+
+  public boolean isVerifyPoll() {
+    return m_opcode == VERIFY_POLL_REQ || m_opcode == VERIFY_POLL_REP;
+  }
+
   /* methods to support data access */
   public long getStartTime() {
     return m_startTime;
@@ -522,6 +537,13 @@ public class LcapMessage implements Serializable {
 
   public String getHashAlgorithm() {
     return m_hashAlgorithm;
+  }
+
+  public String getKey() {
+    if(m_key == null) {
+      m_key = String.valueOf(B64Code.encode(m_challenge));
+    }
+    return m_key;
   }
 
   static byte sendHopCount() {

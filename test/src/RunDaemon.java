@@ -1,5 +1,5 @@
 /*
- * $Id: RunDaemon.java,v 1.12 2003-01-10 23:03:33 claire Exp $
+ * $Id: RunDaemon.java,v 1.13 2003-01-30 03:19:05 claire Exp $
  */
 
 /*
@@ -108,7 +108,7 @@ public class RunDaemon {
     if (shouldCallPoll) {
       try {
 	Thread.currentThread().sleep(1000);
-	pollManager.makePollRequest("http://www.example.com/", ".*",
+	pollManager.requestPoll("http://www.example.com/", ".*",
 				    poll_type,
 				    3 * 60 * 1000);
       } catch (Exception e) {
