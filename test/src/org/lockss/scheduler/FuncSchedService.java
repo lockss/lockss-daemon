@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSchedService.java,v 1.1 2003-11-11 20:30:59 tlipkis Exp $
+ * $Id: FuncSchedService.java,v 1.2 2003-11-13 11:16:57 tlipkis Exp $
  */
 
 /*
@@ -66,7 +66,86 @@ public class FuncSchedService extends LockssTestCase {
     super.tearDown();
   }
 
-  public void test1() {
+  void waitUntilDone() throws Exception {
+    Interrupter intr = null;
+    try {
+      intr = interruptMeIn(TIMEOUT_SHOULDNT);
+      while (!svc.isIdle()) {
+	TimerUtil.guaranteedSleep(100);
+      }
+      intr.cancel();
+    } finally {
+      if (intr.did()) {
+	fail("Hasher timed out");
+      }
+    }
+  }    
+
+  BackgroundTask btask(long start, long end, double loadFactor,
+		      TaskCallback cb) {
+    return new BackgroundTask(Deadline.in(start), Deadline.in(end),
+			   loadFactor, cb);
   }
+
+  SchedulableTask taskToAbort = null;
+
+  public void testOneBack() throws Exception {
+    final List rec = new ArrayList();
+    TaskCallback cb = new TaskCallback() {
+	public void taskEvent(SchedulableTask task, Schedule.EventType event)
+	    throws TaskCallback.Abort {
+	  rec.add(new BERec(Deadline.in(0), (BackgroundTask)task, event));
+	  if (event == Schedule.EventType.START) {
+	    if (task == taskToAbort) {
+	      throw new TaskCallback.Abort();
+	    }
+	  }
+	}};
+  
+    BackgroundTask task = btask(100, 200, .1, cb);
+    assertTrue(svc.scheduleTask(task));
+    waitUntilDone();
+    List exp = ListUtil.list(new BERec(task, Schedule.EventType.START),
+			     new BERec(task, Schedule.EventType.FINISH));
+    assertEquals(exp, rec);
+    //    t1.taskIsFinished();
+  }
+ 
+  
+  
+  // Background event record
+  class BERec {
+    Deadline when;
+    BackgroundTask task;
+    Schedule.EventType event;
+    BERec(Deadline when, BackgroundTask task, Schedule.EventType event) {
+      this.when = when;
+      this.task = task;
+      this.event = event;
+    }
+    BERec(long when, BackgroundTask task, Schedule.EventType event) {
+      this.when = Deadline.at(when);
+      this.task = task;
+      this.event = event;
+    }
+    BERec(BackgroundTask task, Schedule.EventType event) {
+      this.when = Deadline.EXPIRED;
+      this.task = task;
+      this.event = event;
+    }
+    public boolean equals(Object obj) {
+      if (obj instanceof BERec) {
+	BERec o = (BERec)obj;
+	return (!TimeBase.isSimulated() || when.equals(o.when)) &&
+	  task.equals(o.task) &&
+	  event == o.event;
+      }
+      return false;
+    }
+    public String toString() {
+      return "[BERec: " + event + ", " + when + ", " + task + "]";
+    }
+  }
+
 
 }
