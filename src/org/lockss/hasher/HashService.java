@@ -1,5 +1,5 @@
 /*
- * $Id: HashService.java,v 1.13 2003-03-29 20:22:57 tal Exp $
+ * $Id: HashService.java,v 1.14 2003-04-03 11:31:43 tal Exp $
  */
 
 /*
@@ -72,20 +72,19 @@ public class HashService extends BaseLockssManager {
   public HashService() {}
 
   /**
-   * start the plugin manager.
+   * start the hash service.
    * @see org.lockss.app.LockssManager#startService()
    */
   public void startService() {
     super.startService();
     theQueue = new HashQueue();
     theQueue.init();
-    registerDefaultConfigCallback();
     getDaemon().getStatusService().registerStatusAccessor("HashQ",
 							  theQueue.getStatusAccessor());
   }
 
   /**
-   * stop the plugin manager
+   * stop the hash service
    * @see org.lockss.app.LockssManager#stopService()
    */
   public void stopService() {
@@ -99,7 +98,7 @@ public class HashService extends BaseLockssManager {
     super.stopService();
   }
 
-  protected void setConfig(Configuration config, Configuration oldConfig,
+  protected void setConfig(Configuration config, Configuration prevConfig,
 			   Set changedKeys) {
     estPadConstant = config.getLong(PARAM_ESTIMATE_PAD_CONSTANT,
 				    DEFAULT_ESTIMATE_PAD_CONSTANT);
