@@ -9,9 +9,21 @@ public interface Poll {
   public static final int NAME_POLL = 0;
 
   public static final int CONTENT_POLL = 1;
-
   public static final int VERIFY_POLL = 2;
 
+  /**
+   * Error was return by hasher while attempting schedule hash - this
+   * usually indicates the hasher is busy but may mean hash time was invalid
+   */
+  public static final int ERR_SCHEDULE_HASH = -1;
+  /**
+   * Error was returned by hasher via the callback interface.
+   */
+  public static final int ERR_HASHING = -2;
+  /**
+   * Error occured when attempting to send a reply or request packet
+   */
+  public static final int ERR_IO = -3;
   /**
    * Returns true if the poll belongs to this Identity
    * @return true if  we called the poll

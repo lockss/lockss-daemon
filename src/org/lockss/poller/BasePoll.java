@@ -1,5 +1,5 @@
 /*
-* $Id: BasePoll.java,v 1.1 2003-07-09 19:25:18 clairegriffin Exp $
+* $Id: BasePoll.java,v 1.2 2003-07-09 19:36:53 clairegriffin Exp $
  */
 
 /*
@@ -60,9 +60,6 @@ public abstract class BasePoll implements Poll, Serializable {
   static final String[] ERROR_STRINGS = {"Poll Complete","Hasher Busy",
       "Hashing Error", "IO Error"
   };
-  public static final int ERR_SCHEDULE_HASH = -1;
-  public static final int ERR_HASHING = -2;
-  public static final int ERR_IO = -3;
 
   static final int PS_INITING = 0;
   static final int PS_WAIT_HASH = 1;

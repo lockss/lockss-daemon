@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.92 2003-07-09 19:25:19 clairegriffin Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.93 2003-07-09 19:36:53 clairegriffin Exp $
  */
 
 /*
@@ -206,11 +206,11 @@ public class TestNodeManagerImpl extends LockssTestCase {
 
   public void testMapErrorCodes() {
     assertEquals(PollState.ERR_HASHING,
-                 nodeManager.mapResultsErrorToPollError(BasePoll.ERR_HASHING));
+                 nodeManager.mapResultsErrorToPollError(Poll.ERR_HASHING));
     assertEquals(PollState.ERR_IO,
-                 nodeManager.mapResultsErrorToPollError(BasePoll.ERR_IO));
+                 nodeManager.mapResultsErrorToPollError(Poll.ERR_IO));
     assertEquals(PollState.ERR_SCHEDULE_HASH,
-                 nodeManager.mapResultsErrorToPollError(BasePoll.ERR_SCHEDULE_HASH));
+                 nodeManager.mapResultsErrorToPollError(Poll.ERR_SCHEDULE_HASH));
     assertEquals(PollState.ERR_UNDEFINED,
                  nodeManager.mapResultsErrorToPollError(1));
   }
