@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.104 2004-09-01 02:19:52 tlipkis Exp $
+ $Id: build.xml,v 1.105 2004-09-02 01:56:18 smorabito Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -849,8 +849,8 @@ java -classpath &quot;${tmp.ptool.clspth.unix}&quot; org.lockss.devtools.plugind
   </target>
 
   <!-- ==================================================================== -->
-  <target name="javadoc" depends="jar-tests,-load-build-info"
-   description="Build the LOCKSS javadoc">
+  <target name="prepare-javadoc"
+	  description="Prepare the javadoc directory.">
     <mkdir dir="${javadoc}"/>
     <!-- Old files can result in misleading stuff in the docs.  Since
          javadoc regenerates everything from scratch each time anyway,
@@ -858,6 +858,11 @@ java -classpath &quot;${tmp.ptool.clspth.unix}&quot; org.lockss.devtools.plugind
     <delete>
       <fileset dir="${javadoc}" defaultexcludes="no" />
     </delete>
+  </target>
+
+  <!-- ==================================================================== -->
+  <target name="javadoc" depends="prepare-javadoc,jar-tests,-load-build-info"
+   description="Build the LOCKSS javadoc">
     <property name="javadoc.header"
               value="Built ${build.timestamp} on ${build.host}" />
     <!-- Write the text param doc into the doc tree -->
@@ -883,8 +888,8 @@ java -classpath &quot;${tmp.ptool.clspth.unix}&quot; org.lockss.devtools.plugind
     </javadoc>
   </target>
 
-  <!-- ==================================================================== -->  
-  <target name="param-docs" depends="jar-tools"
+  <!-- ==================================================================== -->
+  <target name="param-docs" depends="prepare-javadoc,jar-tools"
    description="Generate an HTMl summary of LOCKSS configuration parameters.">
     <!-- Write the HTML param doc into the doc tree -->
     <mkdir dir="${javadoc}"/>
@@ -897,6 +902,11 @@ java -classpath &quot;${tmp.ptool.clspth.unix}&quot; org.lockss.devtools.plugind
 	     classpathref="tools.run.classpath"
 	     access="package"/>
   </target> 
+
+  <!-- ==================================================================== -->
+  <target name="param-docs-javadoc" depends="param-docs,javadoc"
+	  description="Run the param docs and JavaDoc in the right order">
+  </target>
 
   <!-- ==================================================================== -->
   <target name="javadoc-test" depends="compile-tests,-load-build-info"
