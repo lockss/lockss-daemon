@@ -1,5 +1,5 @@
 /*
- * $Id: SingleCrawlStatus.java,v 1.1 2005-01-11 01:56:42 troberts Exp $
+ * $Id: SingleCrawlStatus.java,v 1.2 2005-01-12 02:13:28 troberts Exp $
  */
 
 /*
@@ -43,10 +43,18 @@ public class SingleCrawlStatus implements StatusAccessor {
   private CrawlManagerStatus cmStatus = null;
 
   private static final String URL = "url";
-  private static List colDescs =
+  private static final String CRAWL_ERROR = "crawl_error";
+
+  private static List colDescsFetched =
     ListUtil.list(new ColumnDescriptor(URL, "URL Fetched",
 				       ColumnDescriptor.TYPE_STRING));
     
+  private static List colDescsError =
+    ListUtil.list(new ColumnDescriptor(URL, "URL",
+				       ColumnDescriptor.TYPE_STRING),
+		  new ColumnDescriptor(CRAWL_ERROR, "Error",
+				       ColumnDescriptor.TYPE_STRING));
+
   public SingleCrawlStatus(CrawlManagerStatus cmStatus) {
     this.cmStatus = cmStatus;
   }
@@ -57,11 +65,22 @@ public class SingleCrawlStatus implements StatusAccessor {
     } else if (table.getKey() == null) {
       throw new IllegalArgumentException("SingleCrawlStatus requires a key");
     }
-    table.setColumnDescriptors(colDescs);
     String key = table.getKey();
+    table.setColumnDescriptors(getColDescs(key));
     Crawler.Status status = getStatusObj(key);
     // 	(Crawler.Status)crawlStatusMap.get(table.getKey());
     table.setRows(makeRows(status, key));
+  }
+
+  private List getColDescs(String key) {
+    String tableName = key.substring(0, key.indexOf(";"));
+
+    if ("fetched".equals(tableName)) {
+      return colDescsFetched;
+    } else if ("error".equals(tableName)) {
+      return colDescsError;
+    }
+    return null;
   }
 
   private Crawler.Status getStatusObj(String key) {
@@ -71,24 +90,42 @@ public class SingleCrawlStatus implements StatusAccessor {
 
   private List makeRows(Crawler.Status status, String key) {
     String tableName = key.substring(0, key.indexOf(";"));
-    Set urls = null;
+    List rows = null;
+
     if ("fetched".equals(tableName)) {
-      urls = status.getUrlsFetched();
+      Set urls = status.getUrlsFetched();
+      rows = new ArrayList(urls.size());
+      for (Iterator it = urls.iterator(); it.hasNext();) {
+	String url = (String)it.next(); 
+	rows.add(makeRow(url));
+      }
     } else if ("error".equals(tableName)) {
-      urls = status.getUrlsFetched();
-    }
-    List rows = new ArrayList(urls.size());
-    for (Iterator it = urls.iterator(); it.hasNext();) {
-      Map row = new HashMap();
-      String url = (String)it.next(); 
-      row.put(URL, url);   
-      rows.add(row);
+      Map errorMap = status.getUrlsWithErrors();
+      Set errorUrls = errorMap.keySet();
+      rows = new ArrayList(errorUrls.size());
+      for (Iterator it = errorUrls.iterator(); it.hasNext();) {
+	String url = (String)it.next();
+// 	rows.add(makeRow(url));
+ 	rows.add(makeRow(url, (String)errorMap.get(url)));
+      }
     }
     return rows;
   }
     
+  private Map makeRow(String url) {
+    Map row = new HashMap();
+    row.put(URL, url);   
+    return row;
+  }
+
+  private Map makeRow(String url, String error) {
+    Map row = makeRow(url);
+    row.put(CRAWL_ERROR, error);   
+    return row;
+  }
+
   public String getDisplayName() {
-    return "URLs Fetched";
+    return "Single Crawl Status";
   }
 
   public boolean requiresKey() {
