@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.27 2003-08-06 06:27:10 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.28 2003-08-15 21:31:39 tlipkis Exp $
  */
 
 /*
@@ -71,7 +71,7 @@ public abstract class LockssServlet extends HttpServlet
 
   /** Format to display date/time in headers */
   public static final DateFormat headerDf =
-    new SimpleDateFormat("MM/dd/yy HH:mm:ss");
+    new SimpleDateFormat("MM/dd/yy HH:mm:ss z");
 
   static final String BACKGROUND_COLOR = "#FFFFFF";
   static final Image IMAGE_LOGO_LARGE = image("lockss-logo-large.gif",
@@ -683,30 +683,11 @@ public abstract class LockssServlet extends HttpServlet
   public Element getFooter() {
     Composite comp = new Composite();
 
+    String vDaemon = BuildInfo.getBuildInfoString();
     String vPlatform = Configuration.getParam(PARAM_PLATFORM_VERSION);
-    String buildTimeStamp =
-      BuildInfo.getBuildProperty(BuildInfo.BUILD_TIMESTAMP);
-    String buildHost = BuildInfo.getBuildProperty(BuildInfo.BUILD_HOST);
-    String releaseName =
-      BuildInfo.getBuildProperty(BuildInfo.BUILD_RELEASENAME);
-
-    StringBuffer sb = new StringBuffer();
-    sb.append("Daemon ");
-    if (releaseName != null) {
-      sb.append(releaseName);
-      sb.append(" ");
-    }
-    sb.append("built ");
-    sb.append(buildTimeStamp);
-    if (buildHost != null) {
-      sb.append(" on ");
-      sb.append(buildHost);
-    }
     if (vPlatform != null) {
-      sb.append(", CD ");
-      sb.append(vPlatform);
+      vDaemon = vDaemon + ", CD " + vPlatform;
     }
-    String vDaemon = sb.toString();
 
     addNotes(comp);
     comp.add("<p>");
