@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescr.java,v 1.17 2004-09-28 08:53:19 tlipkis Exp $
+ * $Id: ConfigParamDescr.java,v 1.18 2004-10-01 22:56:26 clairegriffin Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.daemon;
 import java.net.*;
 
 import org.lockss.util.*;
+import java.util.*;
 
 /**
  * Descriptor for a configuration parameter, and instances of descriptors
@@ -54,9 +55,16 @@ public class ConfigParamDescr implements Comparable {
   public static final int TYPE_BOOLEAN = 5;
   /** Value is a positive integer */
   public static final int TYPE_POS_INT = 6;
+  /** Value is a range string */
+  public static final int TYPE_RANGE = 7;
+  /** Value is a numeric range string */
+  public static final int TYPE_NUM_RANGE = 8;
+  /** Value is a set string */
+  public static final int TYPE_SET = 9;
 
   public static final String[] TYPE_STRINGS = {
-      "String", "Integer", "URL", "Year", "Boolean", "Positive Integer" };
+      "String", "Integer", "URL", "Year", "Boolean", "Positive Integer",
+      "Range", "Numeric Range", "Set"};
 
   public static final ConfigParamDescr VOLUME_NUMBER = new ConfigParamDescr();
   static {
@@ -70,8 +78,27 @@ public class ConfigParamDescr implements Comparable {
   static {
     ISSUE_RANGE.setKey("issue_range");
     ISSUE_RANGE.setDisplayName("Issue Range");
-    ISSUE_RANGE.setType(TYPE_STRING);
+    ISSUE_RANGE.setType(TYPE_RANGE);
     ISSUE_RANGE.setSize(20);
+    ISSUE_RANGE.setDescription("A Range of issues in the form: aaa-zzz");
+  }
+
+  public static final ConfigParamDescr NUM_ISSUE_RANGE = new ConfigParamDescr();
+  static {
+    NUM_ISSUE_RANGE.setKey("num_issue_range");
+    NUM_ISSUE_RANGE.setDisplayName("Numeric Issue Range");
+    NUM_ISSUE_RANGE.setType(TYPE_RANGE);
+    NUM_ISSUE_RANGE.setSize(20);
+    NUM_ISSUE_RANGE.setDescription("A Range of issues in the form: min-max");
+  }
+
+  public static final ConfigParamDescr ISSUE_SET = new ConfigParamDescr();
+  static {
+    ISSUE_SET.setKey("issue_set");
+    ISSUE_SET.setDisplayName("Issue Set");
+    ISSUE_SET.setType(TYPE_SET);
+    ISSUE_SET.setSize(20);
+    ISSUE_SET.setDescription("A comma delimited list of issues. (eg issue1, issue2)");
   }
 
   public static final ConfigParamDescr YEAR = new ConfigParamDescr();
@@ -130,7 +157,8 @@ public class ConfigParamDescr implements Comparable {
   }
 
   public static final ConfigParamDescr[] DEFAULT_DESCR_ARRAY = {
-      BASE_URL, VOLUME_NUMBER, YEAR, JOURNAL_ID, PUBLISHER_NAME, ISSUE_RANGE
+      BASE_URL, VOLUME_NUMBER, YEAR, JOURNAL_ID,
+      PUBLISHER_NAME, ISSUE_RANGE, NUM_ISSUE_RANGE, ISSUE_SET
   };
 
 
@@ -331,6 +359,28 @@ public class ConfigParamDescr implements Comparable {
         }
         else
           throw new InvalidFormatException("Invalid Boolean: " + val);
+        break;
+      case TYPE_RANGE:
+        ret_val = StringUtil.breakAt(val,'-',2,true, true);
+        String s_min = (String)((Vector)ret_val).firstElement();
+        String s_max = (String)((Vector)ret_val).lastElement();
+        try {
+          Long l_min = Long.getLong(s_min);
+          Long l_max = Long.getLong(s_max);
+          if(l_min.compareTo(l_max) < 0) {
+            ((Vector)ret_val).setElementAt(l_min, 0);
+            ((Vector)ret_val).setElementAt(l_max, 1);
+            break;
+          }
+        }
+        catch (NumberFormatException ex1) {
+          if(s_min.compareTo(s_max) < 0) {
+            break;
+          }
+        }
+        throw new InvalidFormatException("Invalid Range: " + val);
+      case TYPE_SET:
+        ret_val = StringUtil.breakAt(val,',', 50, true, true);
         break;
       default:
         throw new InvalidFormatException("Unknown type: " + type);

@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.19 2004-09-27 22:39:11 smorabito Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.20 2004-10-01 22:56:27 clairegriffin Exp $
  */
 
 /*
@@ -50,6 +50,7 @@ import org.lockss.plugin.definable.DefinablePlugin.*;
  */
 public class DefinableArchivalUnit extends BaseArchivalUnit {
   static final public String AU_SHORT_YEAR_PREFIX = "au_short_";
+  static final public String AU_NUMERIC_PREFIX = "numeric_";
   static final public String AU_HOST_SUFFIX = "_host";
   static final public String AU_PATH_SUFFIX = "_path";
   static final public int DEFAULT_AU_CRAWL_DEPTH = 1;
@@ -66,7 +67,8 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   protected ClassLoader classLoader;
   protected ExternalizableMap definitionMap;
   static Logger log = Logger.getLogger("ConfigurableArchivalUnit");
-
+  public static final String RANGE_SUBSTITUTION_STRING = "(.*)";
+  public static final String NUM_SUBSTITUTION_STRING = "(\\d+)";
 
   protected DefinableArchivalUnit(Plugin myPlugin) {
     super(myPlugin);
@@ -133,7 +135,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
             definitionMap.putString(key+AU_PATH_SUFFIX, url.getPath());
           }
         }
-      }
+     }
       catch (Exception ex) {
         throw new ConfigurationException("Error configuring: " + key, ex);
       }
@@ -288,8 +290,19 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     for (Iterator it = p_args.iterator(); it.hasNext(); ) {
       String key = (String) it.next();
       Object val = definitionMap.getMapElement(key);
-      if (val != null) {
-        substitute_args.add(val);
+      if (val != null){
+        if (val instanceof Vector) {
+          Vector vec = (Vector) val;
+          if(vec.elementAt(0) instanceof Long) {
+            substitute_args.add(NUM_SUBSTITUTION_STRING);
+          }
+          else {
+            substitute_args.add(RANGE_SUBSTITUTION_STRING);
+          }
+        }
+        else {
+          substitute_args.add(val);
+        }
       }
       else {
         log.warning("misssing argument for : " + key);
@@ -311,6 +324,28 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     String rule = convertVariableString(printfString);
     String val_str = printfString.substring(0, printfString.indexOf(","));
     int value = Integer.valueOf(val_str).intValue();
+    Vector vec;
+    if (rule.indexOf(RANGE_SUBSTITUTION_STRING) != -1 ||
+        rule.indexOf(NUM_SUBSTITUTION_STRING) != -1) {
+      // check for one range or set
+      vec = (Vector) definitionMap.getMapElement(ConfigParamDescr.ISSUE_RANGE.
+                                                 getKey());
+      if (vec != null) {
+        return new CrawlRules.REMatchRange(rule, value,
+                                           (String) vec.elementAt(0),
+                                           (String) vec.elementAt(1));
+      }
+      else if ( (vec = (Vector) definitionMap.getMapElement(
+          ConfigParamDescr.ISSUE_SET.getKey())) != null) {
+        return new CrawlRules.REMatchSet(rule, value, new HashSet(vec));
+      }
+      else if ( (vec = (Vector) definitionMap.getMapElement(
+          ConfigParamDescr.NUM_ISSUE_RANGE.getKey())) != null) {
+        return new CrawlRules.REMatchRange(rule, value,
+                                           ( (Long) vec.elementAt(0)).longValue(),
+                                           ( (Long) vec.elementAt(1)).longValue());
+      }
+    }
     return new CrawlRules.RE(rule, value);
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestEditableDefinablePlugin.java,v 1.4 2004-09-28 00:50:37 clairegriffin Exp $
+ * $Id: TestEditableDefinablePlugin.java,v 1.5 2004-10-01 22:56:29 clairegriffin Exp $
  */
 
 /*
@@ -193,6 +193,8 @@ public class TestEditableDefinablePlugin
     set.add(ConfigParamDescr.JOURNAL_ID);
     set.add(ConfigParamDescr.PUBLISHER_NAME);
     set.add(ConfigParamDescr.ISSUE_RANGE);
+    set.add(ConfigParamDescr.NUM_ISSUE_RANGE);
+    set.add(ConfigParamDescr.ISSUE_SET);
 
     Collection actualReturn = edPlugin.getKnownConfigParamDescrs();
     assertIsomorphic("default descrs", set, actualReturn);

@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.13 2004-09-02 23:51:39 troberts Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.14 2004-10-01 22:56:28 clairegriffin Exp $
  */
 
 /*
@@ -73,6 +73,43 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     super.tearDown();
   }
 
+  public void testConverVariableStringWithNumRange() {
+    Vector vec = new Vector(2);
+    String key = ConfigParamDescr.NUM_ISSUE_RANGE.getKey();
+    vec.add(0, new Long(10));
+    vec.add(1, new Long(20));
+    map.setMapElement(key, vec);
+    String substr = "\"My Test Range = %s\", " + key;
+    String expectedReturn = "My Test Range = (\\d+)";
+    String actualReturn = cau.convertVariableString(substr);
+    assertEquals("return value", expectedReturn, actualReturn);
+  }
+
+  public void testConverVariableStringWithRange() {
+    Vector vec = new Vector(2);
+    String key = ConfigParamDescr.ISSUE_RANGE.getKey();
+    vec.add(0, "aaa");
+    vec.add(1, "zzz");
+    map.setMapElement(key, vec);
+    String substr = "\"My Test Range = %s\", " + key;
+    String expectedReturn = "My Test Range = (.*)";
+    String actualReturn = cau.convertVariableString(substr);
+    assertEquals("return value", expectedReturn, actualReturn);
+  }
+
+  public void testConvertVariableStringWithSet() {
+    Vector vec = new Vector();
+    String key = ConfigParamDescr.ISSUE_SET.getKey();
+    vec.add("apple");
+    vec.add("bananna");
+    vec.add("grape");
+    map.setMapElement(key, vec);
+    String substr = "\"My Test Range = %s\", " + key;
+    String expectedReturn = "My Test Range = (.*)";
+    String actualReturn = cau.convertVariableString(substr);
+    assertEquals("return value", expectedReturn, actualReturn);
+  }
+
   public void testConvertVariableString() {
     map.putInt("INTEGER", 10);
     map.putBoolean("BOOLEAN", true);
@@ -100,11 +137,6 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     expectedReturn = "My Test Short Year = 03";
     actualReturn = cau.convertVariableString(substr);
     assertEquals("return value", expectedReturn, actualReturn);
-
-    substr = "\"My Test Decade = %4.2d\", year";
-    expectedReturn = "My Test Decade = 2000";
-    actualReturn = cau.convertVariableString(substr);
-//    assertEquals("return value", expectedReturn, actualReturn);
   }
 
   public void testConvertRule() throws LockssRegexpException {
@@ -121,6 +153,48 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
                  actualReturn.match("http://www.example.com/"));
   }
 
+  public void testConvertRangeRule() throws LockssRegexpException {
+    Vector vec = new Vector(2);
+    String key = ConfigParamDescr.ISSUE_RANGE.getKey();
+    vec.add(0, "aaa");
+    vec.add(1, "hhh");
+    map.setMapElement(key, vec);
+    String rule = "1,\"http://www.example.com/%sissue.html\", " + key;
+    CrawlRule actualReturn = cau.convertRule(rule);
+    assertEquals(CrawlRule.INCLUDE,
+                 actualReturn.match("http://www.example.com/abxissue.html"));
+    assertEquals(CrawlRule.IGNORE,
+                 actualReturn.match("http://www.example.com/zylophoneissue.html"));
+  }
+  public void testConvertNumRangeRule() throws LockssRegexpException {
+    Vector vec = new Vector(2);
+    String key = ConfigParamDescr.NUM_ISSUE_RANGE.getKey();
+    vec.add(0, new Long(10));
+    vec.add(1, new Long(20));
+    map.setMapElement(key, vec);
+    String rule = "1,\"http://www.example.com/issue%s.html\", " + key;
+    CrawlRule actualReturn = cau.convertRule(rule);
+    assertEquals(CrawlRule.INCLUDE,
+                 actualReturn.match("http://www.example.com/issue13.html"));
+    assertEquals(CrawlRule.IGNORE,
+                 actualReturn.match("http://www.example.com/issue44.html"));
+  }
+
+  public void testConvertSetRule() throws LockssRegexpException {
+    Vector vec = new Vector();
+    String key = ConfigParamDescr.ISSUE_SET.getKey();
+    vec.add("apple");
+    vec.add("bananna");
+    vec.add("grape");
+    vec.add("fig");
+    map.setMapElement(key, vec);
+    String rule = "1,\"http://www.example.com/%sissue.html\", " + key;
+    CrawlRule actualReturn = cau.convertRule(rule);
+    assertEquals(CrawlRule.INCLUDE,
+                 actualReturn.match("http://www.example.com/appleissue.html"));
+    assertEquals(CrawlRule.IGNORE,
+                 actualReturn.match("http://www.example.com/orangeissue.html"));
+  }
 
   public void testMakeName() {
     map.putString("JOURNAL_NAME", "MyJournal");

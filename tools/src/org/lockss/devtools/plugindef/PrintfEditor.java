@@ -1,5 +1,5 @@
 /*
- * $Id: PrintfEditor.java,v 1.15 2004-09-01 23:36:52 clairegriffin Exp $
+ * $Id: PrintfEditor.java,v 1.16 2004-10-01 22:56:29 clairegriffin Exp $
  */
 
 /*
@@ -91,7 +91,7 @@ public class PrintfEditor extends JDialog
   JTextPane editorPane = new JTextPane();
   JScrollPane editorPanel = new JScrollPane();
   int selectedPane = 0;
-  private boolean m_needsMatchPanel = false;
+  private boolean m_isCrawlRuleEditor = false;
   private static final String STRING_LITERAL = "String Literal";
 
   public PrintfEditor(Frame frame, String title) {
@@ -115,7 +115,7 @@ public class PrintfEditor extends JDialog
     matchesKeys.put("Anything", ".*");
     matchesKeys.put("Start", "^");
     matchesKeys.put("End", "$");
-    for(Iterator it = matchesKeys.keySet().iterator(); it.hasNext();) {
+   for(Iterator it = matchesKeys.keySet().iterator(); it.hasNext();) {
       matchComboBox.addItem(it.next());
     }
   }
@@ -226,10 +226,10 @@ public class PrintfEditor extends JDialog
     paramKeys = data.getPlugin().getPrintfDescrs();
     data.getPlugin().addParamListener(this);
     setTemplate( (PrintfTemplate) data.getData());
-    m_needsMatchPanel = data.getKey().equals(EditableDefinablePlugin.AU_RULES);
+    m_isCrawlRuleEditor = data.getKey().equals(EditableDefinablePlugin.AU_RULES);
     // initialize the combobox
     updateParams(data);
-    if(m_needsMatchPanel) {
+    if(m_isCrawlRuleEditor) {
       matchPanel.setVisible(true);
     }
     else {
@@ -309,6 +309,10 @@ public class PrintfEditor extends JDialog
           else {
             format = "%d";
           }
+        case ConfigParamDescr.TYPE_RANGE:
+        case ConfigParamDescr.TYPE_SET:
+          format = "%s";
+          break;
       }
       if (selectedPane == 0) {
         insertParameter(descr, format, editorPane.getSelectionStart());
@@ -499,12 +503,16 @@ public class PrintfEditor extends JDialog
   private void updateParams(EDPCellData data) {
     paramComboBox.removeAllItems();
     paramKeys = data.getPlugin().getPrintfDescrs();
-    if(!m_needsMatchPanel) {
+    if(!m_isCrawlRuleEditor) {
       paramComboBox.addItem(STRING_LITERAL);
     }
 
     for (Iterator it = paramKeys.values().iterator(); it.hasNext(); ) {
       ConfigParamDescr descr = (ConfigParamDescr)it.next();
+      int type = descr.getType();
+      if(!m_isCrawlRuleEditor && (type == ConfigParamDescr.TYPE_SET
+         || type == ConfigParamDescr.TYPE_RANGE))
+        continue;
       paramComboBox.addItem(descr);
     }
     paramComboBox.setEnabled(true);
