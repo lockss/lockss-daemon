@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingHtmlParser.java,v 1.14 2004-03-18 03:34:22 tlipkis Exp $
+ * $Id: TestGoslingHtmlParser.java,v 1.14.2.1 2004-04-17 20:00:23 tlipkis Exp $
  */
 
 /*
@@ -298,6 +298,42 @@ public class TestGoslingHtmlParser extends LockssTestCase {
       "<html><head><title>Test</title></head><body>"+
       "<a href=\""+url+"\">link3</a>";
     assertEquals(SetUtil.set(url), parseSingleSource(source));
+  }
+
+  public void testGetAttribute() throws IOException {
+    // no value found
+    assertEquals(null, parser.getAttributeValue("href", "a bar=foo"));
+    assertEquals(null, parser.getAttributeValue("href", "a href"));
+    assertEquals(null, parser.getAttributeValue("href", "a href="));
+    assertEquals(null, parser.getAttributeValue("href", "a href= "));
+    // find proper attribute
+    assertEquals("foo", parser.getAttributeValue("tag", "a tag=foo tag=bar"));
+    assertEquals("bar", parser.getAttributeValue("tag", "a ta=foo tag=bar"));
+    assertEquals("bar", parser.getAttributeValue("tag", "a xy=foo\n tag=bar"));
+    // whitespace
+    assertEquals("foo", parser.getAttributeValue("href", "a href=foo"));
+    assertEquals("foo", parser.getAttributeValue("href", "a href =foo"));
+    assertEquals("foo", parser.getAttributeValue("href", "a href = foo"));
+    assertEquals("foo", parser.getAttributeValue("href", "a href = foo\n"));
+    assertEquals("foo", parser.getAttributeValue("href", "a href= foo"));
+    assertEquals("foo", parser.getAttributeValue("href", "a href\t  = \n foo"));
+    // quoted strings & whitespace
+    assertEquals("foo", parser.getAttributeValue("href", "a href=\"foo\""));
+    assertEquals("foo", parser.getAttributeValue("href", "a href=\"foo\""));
+    assertEquals("fo o", parser.getAttributeValue("href", "a href  =\"fo o\""));
+    assertEquals("fo'o", parser.getAttributeValue("href", "a href=  \"fo'o\""));
+    assertEquals("foo", parser.getAttributeValue("href", "a href  =\"foo\""));
+    assertEquals("foo", parser.getAttributeValue("href", "a href='foo'"));
+    assertEquals("foo", parser.getAttributeValue("href", "a href='foo'"));
+    assertEquals("fo o", parser.getAttributeValue("href", "a href  ='fo o'"));
+    assertEquals("fo\"o", parser.getAttributeValue("href", "a href=  'fo\"o'"));
+    assertEquals("foo", parser.getAttributeValue("href", "a href  ='foo'"));
+    // empty quoted strings
+    assertEquals("", parser.getAttributeValue("href", "a href=\"\""));
+    assertEquals("", parser.getAttributeValue("href", "a href=''"));
+    // dangling quoted strings
+    assertEquals("", parser.getAttributeValue("href", "a href=\""));
+    assertEquals("xy", parser.getAttributeValue("href", "a href=\"xy"));
   }
 
   public void testEmptyAttribute() throws IOException {

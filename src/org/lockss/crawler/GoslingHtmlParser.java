@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlParser.java,v 1.17 2004-03-23 20:53:58 tlipkis Exp $
+ * $Id: GoslingHtmlParser.java,v 1.17.2.1 2004-04-17 20:00:25 tlipkis Exp $
  */
 
 /*
@@ -99,8 +99,8 @@ public class GoslingHtmlParser implements ContentParser {
   private static final String HTTP_EQUIV_CONTENT = "content";
   private static final String HTTP_EQUIV_URL = "url";
 
-  private static final String NEWLINE = "\n";
-  private static final String CARRIAGE_RETURN = "\r";
+  private static final char NEWLINE_CHAR = '\n';
+  private static final char CARRIAGE_RETURN_CHAR = '\r';
 
   //smallest size any of the tags we're interested in can be; <a href=
   private static final int MIN_TAG_LENGTH = 5;
@@ -327,56 +327,102 @@ public class GoslingHtmlParser implements ContentParser {
     return returnStr;
   }
 
-  private static String getAttributeValue(String attribute, StringBuffer sb) {
+  static String getAttributeValue(String attribute, StringBuffer sb) {
     return getAttributeValue(attribute, sb.toString());
   }
 
-  private static String getAttributeValue(String attribute, String src) {
+  static String getAttributeValue(String attribute, String src) {
     if (logger.isDebug3()) {
       logger.debug3("looking for "+attribute+" in "+src);
     }
     //  we need to allow for all whitespace in our tokenizer;
     StringTokenizer st = new StringTokenizer(src, "\n\t\r '=\"", true);
-    String lastToken = null;
+    String prevNonWhite = null;
+    // search for "attribute ="
     while (st.hasMoreTokens()) {
       String token = st.nextToken();
-      if (!token.equals("=")) {
-	if (!token.equals(" ") && !token.equals("\"")) {
-	  lastToken = token;
-	}
+      if (isWhitespace(token)) {
+	continue;
+      }
+      if (token.equals("=") && attribute.equalsIgnoreCase(prevNonWhite)) {
+	break;
+      }
+      prevNonWhite = token;
+    }
+    // extract the attribute value
+    while (st.hasMoreTokens()) {
+      String token = st.nextToken();
+      if (isWhitespace(token)) {
+	continue;
+      }
+      if (token.equals("\"")) {
+	return getTokensUntil(st, "\"", null);
+      } else if (token.equals("'")){
+	return getTokensUntil(st, "'", null);
       } else {
-        if (attribute.equalsIgnoreCase(lastToken)){
-	  if (st.hasMoreTokens()) {
-	    String firstToken = st.nextToken();
-	    if (firstToken.equals("\"")) {
-	      return getTokensUntil(st, "\"");
-	    } else if (firstToken.equals("'")){
-	      return getTokensUntil(st, "'");
-	    } else {
-	      StringBuffer sb = new StringBuffer(firstToken);
-	      sb.append(getTokensUntil(st, " "));
-	      return sb.toString();
-	    }
-	  }
-	}
+	StringBuffer sb = new StringBuffer(token);
+	return getTokensUntilWhite(st, sb);
       }
     }
     return null;
   }
 
-    private static String getTokensUntil(StringTokenizer st, String endStr) {
-      StringBuffer sb = new StringBuffer();
-      while (st.hasMoreTokens()) {
-	String token = st.nextToken();
-	if (token.equals(endStr)) {
-	  break; //we've hit the end of the attribute value
-	} else if (!token.equals(NEWLINE) && !token.equals(CARRIAGE_RETURN)) {
-	sb.append(token);
+  static String getTokensUntil(StringTokenizer st, String endStr,
+			       StringBuffer sb) {
+    if (sb == null) {
+      sb = new StringBuffer();
+    }
+    while (st.hasMoreTokens()) {
+      String token = st.nextToken();
+      if (token.equals(endStr)) {
+	break; //we've hit the end of the attribute value
+      } else {
+	// browsers discard newlines in quoted urls
+	if (!isNewline(token)) {
+	  sb.append(token);
 	}
       }
-      return sb.toString();
     }
+
+    return sb.toString();
+  }
   
+  private static String getTokensUntilWhite(StringTokenizer st,
+					    StringBuffer sb) {
+    if (sb == null) {
+      sb = new StringBuffer();
+    }
+    while (st.hasMoreTokens()) {
+      String token = st.nextToken();
+      if (isWhitespace(token)) {
+	break;
+      }
+      sb.append(token);
+    }
+    return sb.toString();
+  }
+  
+
+  static boolean isWhitespace(String token) {
+    if (Character.isWhitespace(token.charAt(0))) {
+      if (token.length() != 1) {
+	logger.warning("Multi-char token begins with white: " + token);
+      }
+      return true;
+    }
+    return false;
+  }
+
+  static boolean isNewline(String token) {
+    char ch = token.charAt(0);
+    if (ch == NEWLINE_CHAR || ch == CARRIAGE_RETURN_CHAR) {
+      if (token.length() != 1) {
+	logger.warning("Multi-char token begins with newline: " + token);
+      }
+      return true;
+    }
+    return false;
+  }
 
 //   private static String extractScriptUrl(String src) {
 //     int begin = src.indexOf("'");
@@ -385,7 +431,5 @@ public class GoslingHtmlParser implements ContentParser {
 //       return src.substring(begin+1,end);
 //     return src;
 //   }
-
-
 
 }
