@@ -1,5 +1,5 @@
 /*
- * $Id: PollTestPlugin.java,v 1.1 2002-10-23 06:33:29 claire Exp $
+ * $Id: PollTestPlugin.java,v 1.2 2002-11-12 23:42:54 claire Exp $
  */
 
 /*
@@ -52,7 +52,10 @@ public class PollTestPlugin {
     public PTCachedUrlSet(ArchivalUnit owner, CachedUrlSetSpec spec) {
       super(owner,spec);
     }
-    /** Set the duration that will be returned by estimatedHashDuration() */
+    /**
+     * Set the duration that will be returned by estimatedHashDuration()
+     * @param duration ths estimated hash duration
+     */
     public void setHashEstimate(long duration) {
       this.duration = duration;
     }

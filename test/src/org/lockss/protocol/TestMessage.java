@@ -1,5 +1,5 @@
 /*
- * $Id: TestMessage.java,v 1.1 2002-10-06 00:16:56 claire Exp $
+ * $Id: TestMessage.java,v 1.2 2002-11-12 23:42:54 claire Exp $
  */
 
 /*
@@ -49,8 +49,8 @@ public class TestMessage extends TestCase {
   private static String[] testentries = {"test1.doc", "test2.doc", "test3.doc"};
 
   protected InetAddress testaddr;
-  protected Identity testID;
-  protected Message testmsg;
+  protected LcapIdentity testID;
+  protected LcapMessage testmsg;
 
   public TestMessage(String _name) {
     super(_name);
@@ -66,7 +66,7 @@ public class TestMessage extends TestCase {
       fail("can't open test host");
     }
     try {
-      testmsg = new Message();
+      testmsg = new LcapMessage();
     }
     catch (IOException ex) {
       fail("can't create test message");
@@ -74,9 +74,9 @@ public class TestMessage extends TestCase {
     // assign the data
     testmsg.m_targetUrl = urlstr;
     testmsg.m_regExp = regexp;
-    testID = new Identity(testaddr,0);
+    testID = new LcapIdentity(testaddr,0);
 
-    testmsg.m_originID = new Identity(testaddr,0);
+    testmsg.m_originID = new LcapIdentity(testaddr,0);
 
     testmsg.m_startTime = 123456789;
     testmsg.m_stopTime = 987654321;
@@ -88,7 +88,7 @@ public class TestMessage extends TestCase {
     testmsg.m_challenge = testbytes;
     testmsg.m_verifier = testbytes;
     testmsg.m_hashed = testbytes;
-    testmsg.m_opcode = Message.CONTENT_POLL_REQ;
+    testmsg.m_opcode = LcapMessage.CONTENT_POLL_REQ;
     testmsg.m_entries = testentries;
 
   }
@@ -101,13 +101,13 @@ public class TestMessage extends TestCase {
 
 
   public void testReplyMessageCreation() {
-    Message rep_msg = null;
+    LcapMessage rep_msg = null;
 
     try {
-      rep_msg = Message.makeReplyMsg(testmsg,
+      rep_msg = LcapMessage.makeReplyMsg(testmsg,
                                      testbytes,
                                      testbytes,
-                                     Message.CONTENT_POLL_REP,
+                                     LcapMessage.CONTENT_POLL_REP,
                                      100000,
                                      testID);
     }
@@ -119,7 +119,7 @@ public class TestMessage extends TestCase {
     assertTrue(rep_msg.m_group.getHostAddress().equals(testaddr.getHostAddress()));
     assertTrue(rep_msg.m_originID.isEqual(testID));
     assertEquals(rep_msg.m_ttl,5);
-    assertEquals(rep_msg.m_opcode,Message.CONTENT_POLL_REP);
+    assertEquals(rep_msg.m_opcode,LcapMessage.CONTENT_POLL_REP);
     // TODO: figure out how to test time
     assertEquals(rep_msg.m_multicast ,false);
     assertEquals(rep_msg.m_hopCount,2);
@@ -132,16 +132,16 @@ public class TestMessage extends TestCase {
   }
 
   public void testRequestMessageCreation() {
-    Message req_msg = null;
+    LcapMessage req_msg = null;
     try {
-      req_msg = Message.makeRequestMsg(urlstr,
+      req_msg = LcapMessage.makeRequestMsg(urlstr,
                                        regexp,
                                        testentries,
                                        testaddr,
                                        (byte)5,
                                        testbytes,
                                        testbytes,
-                                       Message.CONTENT_POLL_REQ,
+                                       LcapMessage.CONTENT_POLL_REQ,
                                        100000,
                                        testID);
     }
@@ -151,7 +151,7 @@ public class TestMessage extends TestCase {
     assertTrue(req_msg.m_originID.isEqual(testID));
     assertTrue(req_msg.m_group.getHostAddress().equals(testaddr.getHostAddress()));
     assertEquals(req_msg.m_ttl,5);
-    assertEquals(req_msg.m_opcode,Message.CONTENT_POLL_REQ);
+    assertEquals(req_msg.m_opcode,LcapMessage.CONTENT_POLL_REQ);
     assertEquals(req_msg.m_multicast ,false);
     assertEquals(req_msg.m_hopCount,5);
 
@@ -173,12 +173,12 @@ public class TestMessage extends TestCase {
     }
 
     try {
-      Message msg = new Message(msgbytes);
+      LcapMessage msg = new LcapMessage(msgbytes);
       // now test to see if we got back what we started with
       assertTrue(msg.m_group.getHostAddress().equals(testaddr.getHostAddress()));
       assertTrue(msg.m_originID.isEqual(testmsg.m_originID));
       assertEquals(msg.m_ttl,5);
-      assertEquals(msg.m_opcode,Message.CONTENT_POLL_REQ);
+      assertEquals(msg.m_opcode,LcapMessage.CONTENT_POLL_REQ);
       // TODO: figure out how to test time
       assertEquals(msg.m_multicast ,false);
       assertEquals(msg.m_hopCount,1); // we decremented this on decode

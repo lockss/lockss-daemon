@@ -11,12 +11,12 @@ import java.io.*;
 public class TestIdentity extends TestCase {
 
   static String fakeIdString = "123.145.167";
-  static Identity fakeId = new Identity(fakeIdString);
+  static LcapIdentity fakeId = new LcapIdentity(fakeIdString);
   InetAddress testAddress;
   int testPort;
   int testReputation;
   Object testIdKey;
-  Message testMsg= null;
+  LcapMessage testMsg= null;
   private static String urlstr = "http://www.test.org";
   private static String regexp = "*.doc";
   private static byte[] testbytes = {1,2,3,4,5,6,7,8,9,10};
@@ -35,17 +35,17 @@ public class TestIdentity extends TestCase {
       fail("can't open test host");
     }
     testPort = 0;
-    testReputation = Identity.INITIAL_REPUTATION;
-    testIdKey = Identity.makeIdKey(testAddress,testPort);
+    testReputation = LcapIdentity.INITIAL_REPUTATION;
+    testIdKey = LcapIdentity.makeIdKey(testAddress,testPort);
     try {
-      testMsg = Message.makeRequestMsg(urlstr,
+      testMsg = LcapMessage.makeRequestMsg(urlstr,
                                        regexp,
                                        testentries,
                                        testAddress,
                                        (byte)5,
                                        testbytes,
                                        testbytes,
-                                       Message.CONTENT_POLL_REQ,
+                                       LcapMessage.CONTENT_POLL_REQ,
                                        100000,
                                        fakeId);
     }
@@ -56,10 +56,10 @@ public class TestIdentity extends TestCase {
 
   /** test for method getIdentity(..) */
   public void testGetIdentity() {
-    Identity id1 = Identity.getIdentity(testAddress,testPort);
+    LcapIdentity id1 = LcapIdentity.getIdentity(testAddress,testPort);
     assertTrue(id1 != null);
     // try and get the identity we just added
-    Identity id2 = Identity.findIdentity(id1.m_idKey);
+    LcapIdentity id2 = LcapIdentity.findIdentity(id1.m_idKey);
     assertTrue(id2.isEqual(id1));
   }
 
@@ -73,8 +73,8 @@ public class TestIdentity extends TestCase {
 
   /** test for method isEqual(..) */
   public void testIsEqual() {
-    Identity id1 = Identity.getIdentity(testAddress,testPort);
-    Identity id2 = Identity.findIdentity(id1.m_idKey);
+    LcapIdentity id1 = LcapIdentity.getIdentity(testAddress,testPort);
+    LcapIdentity id2 = LcapIdentity.findIdentity(id1.m_idKey);
     assertEquals((String)id1.m_idKey,(String)id2.m_idKey);
   }
 
@@ -102,7 +102,7 @@ public class TestIdentity extends TestCase {
   public void testAgreeWithVote() {
     int rep = fakeId.getReputation();
     fakeId.agreeWithVote();
-    checkReputation(rep, Identity.AGREE_DELTA, fakeId.getReputation());
+    checkReputation(rep, LcapIdentity.AGREE_DELTA, fakeId.getReputation());
 
   }
 
@@ -110,56 +110,56 @@ public class TestIdentity extends TestCase {
   public void testDisagreeWithVote() {
     int rep = fakeId.getReputation();
     fakeId.disagreeWithVote();
-    checkReputation(rep, Identity.DISAGREE_DELTA, fakeId.getReputation());
+    checkReputation(rep, LcapIdentity.DISAGREE_DELTA, fakeId.getReputation());
   }
 
   /** test for method callInternalPoll(..) */
   public void testCallInternalPoll() {
     int rep = fakeId.getReputation();
     fakeId.callInternalPoll();
-    checkReputation(rep, Identity.CALL_INTERNAL_DELTA, fakeId.getReputation());
+    checkReputation(rep, LcapIdentity.CALL_INTERNAL_DELTA, fakeId.getReputation());
   }
 
   /** test for method spoofDetected(..) */
   public void testSpoofDetected() {
     int rep = fakeId.getReputation();
     fakeId.spoofDetected();
-    checkReputation(rep, Identity.SPOOF_DETECTED, fakeId.getReputation());
+    checkReputation(rep, LcapIdentity.SPOOF_DETECTED, fakeId.getReputation());
   }
 
   /** test for method replayDected(..) */
   public void testReplayDected() {
     int rep = fakeId.getReputation();
     fakeId.replayDetected();
-    checkReputation(rep, Identity.REPLAY_DETECTED, fakeId.getReputation());
+    checkReputation(rep, LcapIdentity.REPLAY_DETECTED, fakeId.getReputation());
   }
 
   /** test for method acttackDetected(..) */
   public void testActtackDetected() {
     int rep = fakeId.getReputation();
     fakeId.attackDetected();
-    checkReputation(rep, Identity.ATTACK_DETECTED, fakeId.getReputation());
+    checkReputation(rep, LcapIdentity.ATTACK_DETECTED, fakeId.getReputation());
   }
 
   /** test for method voteNotVerify(..) */
   public void testVoteNotVerify() {
     int rep = fakeId.getReputation();
     fakeId.voteNotVerify();
-    checkReputation(rep, Identity.VOTE_NOT_VERIFIED, fakeId.getReputation());
+    checkReputation(rep, LcapIdentity.VOTE_NOT_VERIFIED, fakeId.getReputation());
   }
 
   /** test for method voteVerify(..) */
   public void testVoteVerify() {
     int rep = fakeId.getReputation();
     fakeId.voteVerify();
-    checkReputation(rep, Identity.VOTE_VERIFIED, fakeId.getReputation());
+    checkReputation(rep, LcapIdentity.VOTE_VERIFIED, fakeId.getReputation());
   }
 
   /** test for method voteDisown(..) */
   public void testVoteDisown() {
     int rep = fakeId.getReputation();
     fakeId.voteDisown();
-    checkReputation(rep, Identity.VOTE_DISOWNED, fakeId.getReputation());
+    checkReputation(rep, LcapIdentity.VOTE_DISOWNED, fakeId.getReputation());
   }
 
   /** test for method changeReputation(..) */
@@ -174,11 +174,11 @@ public class TestIdentity extends TestCase {
 
     // test upper and lower bounds
     rep = fakeId.getReputation();
-    fakeId.changeReputation(Identity.MAX_REPUTATION_DELTA * 10);
-    assertTrue(fakeId.getReputation() <= rep +Identity.MAX_REPUTATION_DELTA);
+    fakeId.changeReputation(LcapIdentity.MAX_REPUTATION_DELTA * 10);
+    assertTrue(fakeId.getReputation() <= rep +LcapIdentity.MAX_REPUTATION_DELTA);
     rep = fakeId.getReputation();
-    fakeId.changeReputation(-Identity.MAX_REPUTATION_DELTA * 10);
-    assertTrue(fakeId.getReputation() >= rep - Identity.MAX_REPUTATION_DELTA);
+    fakeId.changeReputation(-LcapIdentity.MAX_REPUTATION_DELTA * 10);
+    assertTrue(fakeId.getReputation() >= rep - LcapIdentity.MAX_REPUTATION_DELTA);
   }
 
   /** test for method rememberActive(..) */
