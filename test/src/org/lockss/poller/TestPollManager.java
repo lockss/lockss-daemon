@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.52 2003-07-31 00:46:04 eaalto Exp $
+ * $Id: TestPollManager.java,v 1.53 2003-08-26 23:33:40 clairegriffin Exp $
  */
 
 /*
@@ -251,7 +251,9 @@ public class TestPollManager extends LockssTestCase {
       assertTrue(pollmanager.isPollClosed(p1.m_key));
       // we should reject an attempt to handle a packet with this key
       pollmanager.handleIncomingMessage(testmsg[0]);
+      assertTrue(pollmanager.isPollClosed(p1.m_key));
       assertFalse(pollmanager.isPollActive(p1.m_key));
+      pollmanager.closeThePoll(p1.m_key);
 
    }
     catch (IOException ex) {

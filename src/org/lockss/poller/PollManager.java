@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.112 2003-07-31 00:46:04 eaalto Exp $
+* $Id: PollManager.java,v 1.113 2003-08-26 23:33:40 clairegriffin Exp $
  */
 
 /*
@@ -427,6 +427,10 @@ public class PollManager  extends BaseLockssManager {
     PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
     if(pme== null || pme.poll == null) {
       theLog.warning("Attempt to close unknown poll : " + key);
+      return;
+    }
+    if(pme.isPollCompleted()) {
+      theLog.warning("Attempt to close- previously closed poll: " + key);
       return;
     }
     // mark the poll completed because if we need to call a repair poll
