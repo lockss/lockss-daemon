@@ -14,7 +14,7 @@ import org.lockss.util.*;
 public class TestLcapIdentity extends TestCase {
 
   static String fakeIdString = "123.145.167";
-  static LcapIdentity fakeId = new LcapIdentity(fakeIdString);
+  static LcapIdentity fakeId = null;
   InetAddress testAddress;
   int testReputation;
   Object testIdKey;
@@ -32,6 +32,7 @@ public class TestLcapIdentity extends TestCase {
   /** setUp method for test case */
   protected void setUp() {
     try {
+      fakeId = new LcapIdentity(InetAddress.getByName(fakeIdString));
       testAddress = InetAddress.getByName("127.0.0.1");
     }
     catch (UnknownHostException ex) {
@@ -74,6 +75,8 @@ public class TestLcapIdentity extends TestCase {
 
     LcapIdentity ident = LcapIdentity.getLocalIdentity();
     assertEquals(host, ident.toHost());
+    assertNotNull(ident.getAddress());
+    assertEquals(host, ident.getAddress().getHostAddress());
   }
 
   /** test for method isLocalIdentity(..) */
