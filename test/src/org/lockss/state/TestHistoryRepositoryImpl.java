@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.2 2003-01-03 03:07:58 claire Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.3 2003-02-05 23:32:57 aalto Exp $
  */
 
 /*
@@ -40,7 +40,7 @@ import java.util.ArrayList;
 import org.lockss.test.*;
 import org.lockss.daemon.CachedUrlSet;
 import org.lockss.daemon.TestConfiguration;
-import org.lockss.util.ListUtil;
+import org.lockss.util.*;
 import org.exolab.castor.mapping.Mapping;
 import java.util.Collection;
 import org.lockss.protocol.LcapIdentity;
@@ -70,9 +70,11 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
         new MockCachedUrlSetSpec("http://www.example.com", null);
     MockCachedUrlSet mcus = new MockCachedUrlSet(mau, mspec);
     String location = repository.getNodeLocation(mcus);
-    String expected = tempDirPath + repository.HISTORY_ROOT_NAME +
-                      File.separator + mau.getPluginId() + File.separator +
-                      mau.getAUId() + File.separator + "www.example.com/http";
+    String expected = tempDirPath + repository.HISTORY_ROOT_NAME;
+    expected = FileLocationUtil.mapAuToFileLocation(expected, mau);
+    expected = FileLocationUtil.mapUrlToFileLocation(expected,
+        "http://www.example.com");
+
     assertEquals(expected, location);
   }
 
@@ -90,8 +92,11 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
                                    createPollHistoryBean(3));
     nodeState.setPollHistoryBeanList(histories);
     repository.storePollHistories(nodeState);
-    File xmlFile = new File(tempDirPath +
-                            "cache/mock/none/www.example.com/http/history.xml");
+    String filePath = FileLocationUtil.mapAuToFileLocation(tempDirPath +
+        HistoryRepositoryImpl.HISTORY_ROOT_NAME, new MockArchivalUnit());
+    filePath = FileLocationUtil.mapUrlToFileLocation(filePath,
+        "http://www.example.com/history.xml");
+    File xmlFile = new File(filePath);
     assertTrue(xmlFile.exists());
 
     nodeState.setPollHistoryBeanList(new ArrayList());
