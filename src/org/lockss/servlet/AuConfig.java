@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.28 2004-07-23 20:57:05 smorabito Exp $
+ * $Id: AuConfig.java,v 1.29 2004-08-02 05:27:17 tlipkis Exp $
  */
 
 /*
@@ -171,12 +171,20 @@ public class AuConfig extends LockssServlet {
   /** Serve the contents of the local AU config file, as
    * application/binary */
   private void doSaveAll() throws IOException {
-    PrintWriter wrtr = resp.getWriter();
-    resp.setContentType("application/binary");
-    InputStream is = remoteApi.getAuConfigBackupStream(getMachineName());
-    Reader rdr = new InputStreamReader(is, Constants.DEFAULT_ENCODING);
-    StreamUtil.copy(rdr, wrtr);
-    rdr.close();
+    try {
+      InputStream is = remoteApi.getAuConfigBackupStream(getMachineName());
+      Reader rdr = new InputStreamReader(is, Constants.DEFAULT_ENCODING);
+      PrintWriter wrtr = resp.getWriter();
+      resp.setContentType("application/binary");
+      StreamUtil.copy(rdr, wrtr);
+      rdr.close();
+    } catch (FileNotFoundException e) {
+      errMsg = "No AUs have been configured - nothing to backup";
+      displayAuSummary();
+    } catch (IOException e) {
+      log.warning("doSaveAll()", e);
+      throw e;
+    }
   }
 
   /** Display the RestoreAll page */
