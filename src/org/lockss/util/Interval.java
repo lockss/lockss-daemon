@@ -1,5 +1,5 @@
 /*
- * $Id: Interval.java,v 1.1 2003-09-08 19:27:12 tlipkis Exp $
+ * $Id: Interval.java,v 1.2 2003-11-03 18:14:45 tlipkis Exp $
  */
 
 /*
@@ -34,9 +34,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 
 import java.io.*;
-import java.util.*;
-import java.math.*;
-import org.lockss.daemon.*;
 import org.lockss.util.*;
 
 
@@ -44,8 +41,8 @@ import org.lockss.util.*;
  * bound.  (If other varieties are needed, this could either be made
  * abtsract or given a mode selector.) */
 public class Interval implements Serializable {
-  private Comparable lb;
-  private Comparable ub;
+  private Comparable lb;		// lower bound
+  private Comparable ub;		// upper bound
 
   /** Create an interval between the lower bound (inclusive) and the upper
    * bound (exclusive).  The only type restriction on the bounds is that

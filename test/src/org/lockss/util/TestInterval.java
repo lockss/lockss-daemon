@@ -1,5 +1,5 @@
 /*
- * $Id: TestInterval.java,v 1.1 2003-09-08 19:27:12 tlipkis Exp $
+ * $Id: TestInterval.java,v 1.2 2003-11-03 18:14:45 tlipkis Exp $
  */
 
 /*
@@ -33,8 +33,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 
 import java.util.*;
-import java.net.*;
-import junit.framework.TestCase;
 import org.lockss.test.*;
 
 /**
