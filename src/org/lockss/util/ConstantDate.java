@@ -1,5 +1,5 @@
 /*
- * $Id: ConstantDate.java,v 1.2 2003-06-20 22:34:53 claire Exp $
+ * $Id: ConstantDate.java,v 1.3 2003-11-11 20:26:33 tlipkis Exp $
  */
 
 /*
@@ -22,7 +22,7 @@ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
 STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
 WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
-IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
 
 Except as contained in this notice, the name of Stanford University shall not
 be used in advertising or otherwise to promote the sale, use or other dealings
@@ -44,8 +44,7 @@ public class ConstantDate extends Date {
     super(date);
   }
 
-  /** Return the next pseudorandom number with <code>bits</code> random
-   * bits. */
+  /** @throws UnsupportedOperationException */
   public void setTime(long time) {
     throw new UnsupportedOperationException("Can't change constant date");
   }
