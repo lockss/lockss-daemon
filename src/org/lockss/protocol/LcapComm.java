@@ -1,5 +1,5 @@
 /*
- * $Id: LcapComm.java,v 1.11 2002-12-16 22:29:44 tal Exp $
+ * $Id: LcapComm.java,v 1.12 2002-12-16 23:29:40 tal Exp $
  */
 
 /*
@@ -47,10 +47,11 @@ import org.apache.commons.collections.LRUMap;
 public class LcapComm {
 
   static final String PREFIX = Configuration.PREFIX + "comm.";
-  static final String PARAM_MULTIGROUP = PREFIX + "multicast.group";
-  static final String PARAM_MULTIPORT = PREFIX + "multicast.port";
-  static final String PARAM_UNIPORT = PREFIX + "unicast.port";
-  static final String PARAM_UNIPORT_SEND = PREFIX + "unicast.sendToPort";
+  static final String PARAM_MULTI_GROUP = PREFIX + "multicast.group";
+  static final String PARAM_MULTI_PORT = PREFIX + "multicast.port";
+  static final String PARAM_UNI_PORT = PREFIX + "unicast.port";
+  static final String PARAM_UNI_PORT_SEND = PREFIX + "unicast.sendToPort";
+  static final String PARAM_UNI_ADDR_SEND = PREFIX + "unicast.sendToAddr";
   static final String PARAM_VERIFY_MULTICAST = PREFIX + "verifyMulticast";
 
   static Logger log = Logger.getLogger("Comm");
@@ -60,12 +61,14 @@ public class LcapComm {
   private boolean verifyMulticast = false;
 
   // These may change if/when we use multiple groups/ports
-  private String groupName;		// multicast group
   private InetAddress group;
   private int multiPort = -1;		// multicast port
   private int uniPort = -1;		// unicast port
   private int uniSendToPort = -1;       // unicast send-to port, for testing
 					// multiple instances on one machine
+  private InetAddress uniSendToAddr = null; // unicast send-to addr, for
+					    // testing multiple instances on
+					    // one machine
 
   private SocketFactory sockFact;
 
@@ -98,13 +101,15 @@ public class LcapComm {
 
   /** Set communication parameters from configuration */
   public void configure(Configuration config) {
+    String groupName = null;
+    String uniSendToName = null;
     try {
-      groupName = config.get(PARAM_MULTIGROUP);
-      multiPort = config.getInt(PARAM_MULTIPORT);
-      uniPort = config.getInt(PARAM_UNIPORT); // 
-      uniSendToPort = config.getInt(PARAM_UNIPORT_SEND, uniPort);
-      verifyMulticast =
-	config.getBoolean(PARAM_VERIFY_MULTICAST, false);
+      groupName = config.get(PARAM_MULTI_GROUP);
+      multiPort = config.getInt(PARAM_MULTI_PORT);
+      uniPort = config.getInt(PARAM_UNI_PORT); // 
+      uniSendToPort = config.getInt(PARAM_UNI_PORT_SEND, uniPort);
+      uniSendToName = config.get(PARAM_UNI_ADDR_SEND);
+      verifyMulticast = config.getBoolean(PARAM_VERIFY_MULTICAST, false);
     } catch (Configuration.InvalidParam e) {
       log.critical("Config error, not started", e);
     }
@@ -119,6 +124,14 @@ public class LcapComm {
     } catch (UnknownHostException e) {
       log.critical("Can't get group addr, not started", e);
     }
+    try {
+      if (uniSendToName != null) {
+	uniSendToAddr = InetAddress.getByName(uniSendToName);
+      }
+    } catch (UnknownHostException e) {
+      log.critical("Can't get unicast send-to addr, not started", e);
+    }
+	
     if (log.isDebug()) {
       log.debug("groupName = " + groupName);
       log.debug("multiPort = " + multiPort);
@@ -154,7 +167,9 @@ public class LcapComm {
     if (uniSendToPort < 0) {
       throw new IllegalStateException("Unicast port not configured");
     }
-    sendTo(ld, id.getAddress(), uniSendToPort);
+    sendTo(ld,
+	   (uniSendToAddr == null ? id.getAddress() : uniSendToAddr),
+	   uniSendToPort);
   }
 
   void sendTo(LockssDatagram ld, InetAddress addr, int port)
