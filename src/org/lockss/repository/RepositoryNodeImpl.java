@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.23 2003-04-02 23:28:37 tal Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.24 2003-04-22 01:02:02 aalto Exp $
  */
 
 /*
@@ -104,6 +104,61 @@ public class RepositoryNodeImpl implements RepositoryNode {
     return currentCacheFile.length();
   }
 
+  public long getTreeContentSize(CachedUrlSetSpec filter) {
+    // do direct directory traversal, rather than creating RepositoryNodes
+    long totalSize = 0;
+    if (hasContent()) {
+      totalSize = currentCacheFile.length();
+    }
+
+    // filter the immediate level
+    File[] children = nodeRootFile.listFiles();
+    for (int ii=0; ii<children.length; ii++) {
+      File child = children[ii];
+      if ((!child.isDirectory()) || (child.getName().equals(CONTENT_DIR))) {
+        continue;
+      }
+      // check if in initial spec
+      int bufMaxLength = url.length() + child.getName().length() + 1;
+      StringBuffer buffer = new StringBuffer(bufMaxLength);
+      buffer.append(url);
+      if (!url.endsWith(File.separator)) {
+        buffer.append(File.separator);
+      }
+      buffer.append(child.getName());
+
+      String childUrl = buffer.toString();
+      if ( (filter == null) || (filter.matches(childUrl))) {
+        totalSize += recurseDirContentSize(child);
+      }
+    }
+
+    return totalSize;
+  }
+
+  private long recurseDirContentSize(File nodeDir) {
+    // add size of this dir, if any
+    long subSize = 0;
+    File contentFile = new File(nodeDir, CONTENT_DIR + File.separator +
+                                nodeDir.getName() + CURRENT_SUFFIX);
+    if (contentFile.exists()) {
+      subSize = contentFile.length();
+    }
+
+    // recurse on children
+    File[] children = nodeDir.listFiles();
+    for (int ii=0; ii<children.length; ii++) {
+      File child = children[ii];
+      if ((!child.isDirectory()) || (child.getName().equals(CONTENT_DIR))) {
+        continue;
+      }
+      subSize += recurseDirContentSize(child);
+    }
+
+    //XXX store here?
+    return subSize;
+  }
+
   public Properties getState() {
     //XXX implement
     return null;
@@ -142,8 +197,9 @@ public class RepositoryNodeImpl implements RepositoryNode {
     ArrayList childL = new ArrayList(Math.min(40, children.length));
     for (int ii=0; ii<children.length; ii++) {
       File child = children[ii];
-      if (!child.isDirectory()) continue;
-      if (child.getName().equals(cacheLocationFile.getName())) continue;
+      if ((!child.isDirectory()) || (child.getName().equals(CONTENT_DIR))) {
+        continue;
+      }
       int bufMaxLength = url.length() + child.getName().length() + 1;
       StringBuffer buffer = new StringBuffer(bufMaxLength);
       buffer.append(url);

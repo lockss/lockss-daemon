@@ -1,5 +1,5 @@
 /*
- * $Id: MockRepositoryNode.java,v 1.3 2003-04-18 21:34:45 aalto Exp $
+ * $Id: MockRepositoryNode.java,v 1.4 2003-04-22 01:02:02 aalto Exp $
  */
 
 /*
@@ -75,6 +75,10 @@ public class MockRepositoryNode implements RepositoryNode {
 
   public long getContentSize() {
     return contentSize;
+  }
+
+  public long getTreeContentSize(CachedUrlSetSpec filter) {
+    throw new UnsupportedOperationException("Not supported.");
   }
 
   public Properties getState() {

@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrlSet.java,v 1.32 2003-04-18 21:34:45 aalto Exp $
+ * $Id: GenericFileCachedUrlSet.java,v 1.33 2003-04-22 01:02:02 aalto Exp $
  */
 
 /*
@@ -63,7 +63,7 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
   private NodeManager nodeManager;
   protected static Logger logger = Logger.getLogger("CachedUrlSet");
 
-  int contentNodeCount = 0;
+ // int contentNodeCount = 0;
   long totalNodeSize = 0;
 
   public GenericFileCachedUrlSet(ArchivalUnit owner, CachedUrlSetSpec spec) {
@@ -125,8 +125,8 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
    * @return an {@link Iterator}
    */
   public Iterator contentHashIterator() {
-    contentNodeCount = 0;
-    totalNodeSize = 0;
+ //   contentNodeCount = 0;
+ //   totalNodeSize = 0;
 
     if (spec instanceof SingleNodeCachedUrlSetSpec) {
       // return only this node
@@ -168,10 +168,11 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
               rSpec);
           treeSet.add(newSet);
         }
-        if (child.hasContent()) {
+       /* if (child.hasContent()) {
           contentNodeCount++;
           totalNodeSize += child.getContentSize();
         }
+        */
         recurseLeafFetch(child, treeSet);
       }
     } catch (MalformedURLException mue) {
@@ -199,10 +200,11 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
             rSpec);
         set.add(newSet);
       }
-      if (child.hasContent()) {
+     /* if (child.hasContent()) {
         contentNodeCount++;
         totalNodeSize += child.getContentSize();
       }
+      */
       recurseLeafFetch(child, set);
     }
   }
@@ -237,8 +239,8 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
           return lastDuration;
         }
       }
-      // determine number of content nodes and total size
-      calculateNodeCountAndSize();
+      // determine total size
+      calculateNodeSize();
       MessageDigest hasher = LcapMessage.getDefaultHasher();
       CachedUrlSetHasher cush = contentHasherFactory(this, hasher);
       long bytesPerMs = 0;
@@ -253,7 +255,10 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
         logger.warning("Couldn't estimate hash time: getting 0");
         return totalNodeSize * BYTES_PER_MS_DEFAULT;
       }
-      return (long) (totalNodeSize / bytesPerMs);
+      lastDuration = (long) (totalNodeSize / bytesPerMs);
+      // store hash estimate
+      nodeManager.hashFinished(this, lastDuration);
+      return lastDuration;
     }
   }
 
@@ -274,10 +279,14 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
     return new GenericNameHasher(owner, hasher);
   }
 
-  private void calculateNodeCountAndSize() {
-    if ((contentNodeCount==0)||(totalNodeSize==0)) {
-      // leafIterator calculates these when running
-      contentHashIterator();
+  void calculateNodeSize() {
+    if (totalNodeSize==0) {
+      try {
+        totalNodeSize = repository.getNode(spec.getUrl()).getTreeContentSize(spec);
+      } catch (MalformedURLException mue) {
+        // this shouldn't happen
+        logger.error("Malformed URL exception on "+spec.getUrl());
+      }
     }
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.20 2003-03-24 23:52:24 aalto Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.21 2003-04-22 01:02:02 aalto Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.*;
 import java.util.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
+import org.lockss.daemon.RangeCachedUrlSetSpec;
 
 /**
  * This is the test class for org.lockss.repostiory.RepositoryNodeImpl
@@ -360,6 +361,26 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
         "test stream", null);
     assertTrue(leaf.hasContent());
     assertEquals(11, (int)leaf.getContentSize());
+  }
+
+  public void testTreeSize() throws Exception {
+    createLeaf("http://www.example.com/testDir", "test", null);
+    createLeaf("http://www.example.com/testDir/test1", "test1", null);
+    createLeaf("http://www.example.com/testDir/test2", "test2", null);
+    createLeaf("http://www.example.com/testDir/test3/branch1",
+               "test33", null);
+    createLeaf("http://www.example.com/testDir/test3/branch2",
+               "test33", null);
+
+    RepositoryNode leaf = repo.getNode("http://www.example.com/testDir");
+    assertEquals(26, leaf.getTreeContentSize(null));
+    leaf = repo.getNode("http://www.example.com/testDir/test1");
+    assertEquals(5, leaf.getTreeContentSize(null));
+    leaf = repo.getNode("http://www.example.com/testDir/test3");
+    assertEquals(12, leaf.getTreeContentSize(null));
+    assertEquals(6, leaf.getTreeContentSize(new RangeCachedUrlSetSpec(
+        "http://www.example.com/testDir/test3", "/branch1", "/branch1")));
+
   }
 
   public void testDeactivate() throws Exception {

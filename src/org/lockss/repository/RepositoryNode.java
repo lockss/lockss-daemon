@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNode.java,v 1.8 2003-02-21 21:53:28 aalto Exp $
+ * $Id: RepositoryNode.java,v 1.9 2003-04-22 01:02:02 aalto Exp $
  */
 
 /*
@@ -67,6 +67,14 @@ public interface RepositoryNode {
    * @throws UnsupportedOperationException
    */
   public long getContentSize();
+
+  /**
+   * Returns the size of the content tree under (and including) this cache, in
+   * bytes.
+   * @param filter a spec to determine which urls to return
+   * @return size
+   */
+  public long getTreeContentSize(CachedUrlSetSpec filter);
 
   /**
    * Returns the state information for the node.
