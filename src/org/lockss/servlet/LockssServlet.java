@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.23 2003-07-23 06:40:57 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.24 2003-07-27 01:42:20 tlipkis Exp $
  */
 
 /*
@@ -650,6 +650,14 @@ public abstract class LockssServlet extends HttpServlet
     return new Image("/images/" + file, w, h, border);
   }
 
+  /** Add html tags to grey the text if isGrey is true */
+  protected String greyText(String txt, boolean isGrey) {
+    if (!isGrey) {
+      return txt;
+    }
+    return "<font color=grey>" + txt + "</font>";
+  }
+
   /** Store a footnote, assign it a number, return html for footnote
    * reference. */
   protected String addFootnote(String s) {
@@ -744,54 +752,4 @@ public abstract class LockssServlet extends HttpServlet
       myName = null;
     }
   }
-
-  // unused code
-
-//   // root of admin files on disk
-//   protected String getAdminDir() {
-//     if (adminDir == null) {
-//       adminDir = context.getRealPath("/");
-//     }
-//     return adminDir;
-//   }
-
-//   protected static final String clientPropFile = "local.txt";
-
-//   protected File getClientDir(String client) {
-//     return new File(getAdminDir() + File.separator + client);
-//   }
-
-//   protected File getClientPropFile(String client) {
-//     return new File(getClientDir(client), clientPropFile);
-//   }
-
-
-
-//   // Load property tree from file
-//   public PropertyTree loadTree(String filename) throws IOException {
-//     PropertyTree tree = new PropertyTree();
-//     InputStream istr = new FileInputStream(filename);
-//     tree.load(istr);
-//     istr.close();
-//     return tree;
-//   }
-
-//   // Save property tree to file
-//   public void saveTree(PropertyTree t, String filename, String  header)
-//       throws IOException {
-//     FileWriter fw = new FileWriter(filename);
-//     if (header != null) {
-//       fw.write("#" + header + "\n");
-//     }
-//     Enumeration e = t.keys();
-//     while (e.hasMoreElements()){
-//       String key = (String)e.nextElement();
-//       String val = ((String) t.get(key)).trim();
-//       if (val != null)
-//         fw.write(key.trim() + "=" + val  + "\n");
-//       else
-//         fw.write(key.trim() + "=\n");
-//     }
-//     fw.close();
-//   }
 }
