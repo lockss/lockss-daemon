@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.13 2003-03-12 22:13:57 tal Exp $
+ * $Id: LockssDaemon.java,v 1.14 2003-03-13 18:54:55 troberts Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.app;
 import java.util.*;
 import org.lockss.util.Logger;
 import org.lockss.daemon.*;
+import org.lockss.daemon.status.*;
 import org.lockss.hasher.*;
 import org.lockss.plugin.*;
 import org.lockss.poller.*;
@@ -71,6 +72,7 @@ public class LockssDaemon {
   public static String NODE_MANAGER_SERVICE = "NodeManagerService";
   public static String PROXY_MANAGER = "ProxyManager";
   public static String SERVLET_MANAGER = "ServletManager";
+  public static String STATUS_SERVICE = "StatusService";
 
   /* the default classes that represent our managers */
   private static String DEFAULT_HASH_SERVICE = "org.lockss.hasher.HashService";
@@ -92,6 +94,8 @@ public class LockssDaemon {
     "org.lockss.proxy.ProxyManager";
   private static String DEFAULT_SERVLET_MANAGER =
     "org.lockss.servlet.ServletManager";
+  private static String DEFAULT_STATUS_SERVICE =
+    "org.lockss.daemon.status.StatusServiceImpl";
 
 
   private static String DEFAULT_CACHE_LOCATION = "./cache";
@@ -123,6 +127,7 @@ public class LockssDaemon {
     new ManagerDesc(PLUGIN_MANAGER, DEFAULT_PLUGIN_MANAGER),
     // start proxy and servlets after plugin manager
     new ManagerDesc(SERVLET_MANAGER, DEFAULT_SERVLET_MANAGER),
+    new ManagerDesc(STATUS_SERVICE, DEFAULT_STATUS_SERVICE),
     new ManagerDesc(PROXY_MANAGER, DEFAULT_PROXY_MANAGER),
   };
 
@@ -286,6 +291,17 @@ public class LockssDaemon {
   public CrawlManager getCrawlManager() {
     return (CrawlManager) getManager(CRAWL_MANAGER);
   }
+
+  /**
+   * return the {@link org.lockss.daemon.status.StatusService} instance
+   * @returns {@link org.lockss.daemon.status.StatusService} instance
+   * @throws IllegalArgumentException if the manager is not available.
+   */
+  public StatusService getStatusService() {
+    return (StatusService) getManager(STATUS_SERVICE);
+  }
+
+
 
   /**
    * return the plugin manager instance
