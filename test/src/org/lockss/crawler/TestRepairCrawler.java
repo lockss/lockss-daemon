@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepairCrawler.java,v 1.20 2005-01-07 01:23:29 troberts Exp $
+ * $Id: TestRepairCrawler.java,v 1.21 2005-03-18 18:12:53 troberts Exp $
  */
 
 /*
@@ -64,6 +64,8 @@ public class TestRepairCrawler extends LockssTestCase {
   private MockIdentityManager idm;
   private MockLockssDaemon theDaemon = getMockLockssDaemon();
 
+  private String permissionPage = "http://example.com/permission.html";
+
 
   private String url1 = "http://example.com/blah.html";
 
@@ -79,14 +81,19 @@ public class TestRepairCrawler extends LockssTestCase {
     crawlRule = new MockCrawlRule();
 
     crawlRule.addUrlToCrawl(url1);
+    crawlRule.addUrlToCrawl(permissionPage);
 
-    spec = new SpiderCrawlSpec(startUrls, crawlRule);
+    spec = new SpiderCrawlSpec(startUrls, ListUtil.list(permissionPage), crawlRule, 1);
+
 
     mau.addUrl(url1);
+    mau.addUrl(permissionPage);
+
     mau.setPlugin(new MockPlugin());
 
     List repairUrls = ListUtil.list(url1);
     crawler = new RepairCrawler(mau, spec, aus, repairUrls, 0);
+    ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MockPermissionChecker(1));
   }
 
   public void testMrcThrowsForNullAu() {
@@ -509,6 +516,14 @@ public class TestRepairCrawler extends LockssTestCase {
     Map errorUrls = crawlStatus.getUrlsWithErrors();
     assertEquals(Crawler.STATUS_FETCH_ERROR, (String)errorUrls.get(repairUrl));
     assertEquals(SetUtil.set(), crawlStatus.getUrlsFetched());
+  }
+
+  public void testGetPermissionMap() throws MalformedURLException {
+    PermissionMap pMap = crawler.getPermissionMap();
+    assertNotNull(pMap);
+    assertEquals(PermissionMap.PERMISSION_OK, 
+		 pMap.getStatus("http://example.com/blah.html"));
+    
   }
   
 
