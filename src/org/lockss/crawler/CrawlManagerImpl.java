@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.18 2003-03-29 01:44:03 troberts Exp $
+ * $Id: CrawlManagerImpl.java,v 1.19 2003-04-02 23:28:37 tal Exp $
  */
 
 /*
@@ -123,7 +123,7 @@ public class CrawlManagerImpl implements CrawlManager, LockssManager {
 
     CrawlThread crawlThread =
       new CrawlThread(au, ListUtil.list(url.toString()),
-		      false, Deadline.NEVER, ListUtil.list(cb), cookie);
+		      false, Deadline.MAX, ListUtil.list(cb), cookie);
     crawlThread.start();
   }
 
@@ -167,7 +167,7 @@ public class CrawlManagerImpl implements CrawlManager, LockssManager {
 
     CrawlThread crawlThread =
       new CrawlThread(au, au.getNewContentCrawlUrls(),
-		      true, Deadline.NEVER, callBackList, cookie);
+		      true, Deadline.MAX, callBackList, cookie);
     crawlThread.start();
     addNewContentCrawl(au, crawlThread.getCrawler());
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestTreeWalkHandler.java,v 1.4 2003-04-02 19:32:30 aalto Exp $
+ * $Id: TestTreeWalkHandler.java,v 1.5 2003-04-02 23:28:37 tal Exp $
  */
 
 /*
@@ -242,7 +242,7 @@ public class TestTreeWalkHandler extends LockssTestCase {
 
     // should ignore if active poll
     PollState pollState = new PollState(1, "", "", PollState.RUNNING, 1,
-                                        Deadline.NEVER);
+                                        Deadline.MAX);
     node.addPollState(pollState);
     treeWalkHandler.checkNodeState(node);
     // no poll in manager since we just created a PollState

@@ -1,5 +1,5 @@
 /*
- * $Id: TimeBase.java,v 1.6 2003-03-28 23:40:03 tal Exp $
+ * $Id: TimeBase.java,v 1.7 2003-04-02 23:28:37 tal Exp $
  */
 
 /*
@@ -45,8 +45,8 @@ import java.util.*;
  * quickly and predictably.
  */
 public class TimeBase {
-  /** A long time from now (but not really never). */
-  public static final long NEVER = Long.MAX_VALUE;
+  /** A long time from now. */
+  public static final long MAX = Long.MAX_VALUE;
 
   private static volatile boolean isSimulated = false;
   private static volatile long simulatedTime;

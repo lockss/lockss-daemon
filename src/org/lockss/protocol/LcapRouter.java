@@ -1,5 +1,5 @@
 /*
- * $Id: LcapRouter.java,v 1.13 2003-04-02 10:51:35 tal Exp $
+ * $Id: LcapRouter.java,v 1.14 2003-04-02 23:28:37 tal Exp $
  */
 
 /*
@@ -81,7 +81,7 @@ public class LcapRouter extends BaseLockssManager {
   private long beaconInterval = 0;
   private int initialHopCount = LcapMessage.MAX_HOP_COUNT_LIMIT;
 
-  private Deadline beaconDeadline = Deadline.at(TimeBase.NEVER);;
+  private Deadline beaconDeadline = Deadline.at(TimeBase.MAX);;
   private PartnerList partnerList = new PartnerList();
   private List messageHandlers = new ArrayList();
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestDeadline.java,v 1.8 2003-03-21 07:30:25 tal Exp $
+ * $Id: TestDeadline.java,v 1.9 2003-04-02 23:28:37 tal Exp $
  */
 
 /*
@@ -97,7 +97,7 @@ public class TestDeadline extends LockssTestCase {
   }
 
   public void testNever() {
-    Deadline never = Deadline.NEVER;
+    Deadline never = Deadline.MAX;
     try {
       never.expire();
       fail("Constant deadline allowed modification");

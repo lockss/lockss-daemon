@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.30 2003-04-02 02:04:18 tal Exp $
+ * $Id: Configuration.java,v 1.31 2003-04-02 23:28:37 tal Exp $
  */
 
 /*
@@ -108,7 +108,7 @@ public abstract class Configuration {
   /** Wait until the system is configured.  (<i>Ie</i>, until the first
    * time a configuration has been loaded.) */
   public static boolean waitConfig() {
-    return waitConfig(Deadline.NEVER);
+    return waitConfig(Deadline.MAX);
   }
 
   static void setCurrentConfig(Configuration newConfig) {

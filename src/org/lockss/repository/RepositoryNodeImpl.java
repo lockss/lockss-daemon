@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.22 2003-04-01 00:08:12 aalto Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.23 2003-04-02 23:28:37 tal Exp $
  */
 
 /*
@@ -73,7 +73,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
   protected static Logger logger = Logger.getLogger("RepositoryNode");
   protected LockssRepositoryImpl repository;
   // preset so testIllegalOperations() doesn't null pointer
-  private Deadline versionTimeout = Deadline.NEVER;
+  private Deadline versionTimeout = Deadline.MAX;
 
   RepositoryNodeImpl(String url, String nodeLocation,
                      LockssRepositoryImpl repository) {

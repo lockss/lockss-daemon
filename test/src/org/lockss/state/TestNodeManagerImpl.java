@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.55 2003-04-02 19:05:04 aalto Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.56 2003-04-02 23:28:37 tal Exp $
  */
 
 /*
@@ -191,7 +191,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
                                         spec.getUprBound(),
                                         PollState.RUNNING,
                                         results.getStartTime(),
-                                        Deadline.NEVER);
+                                        Deadline.MAX);
     nodeManager.handleContentPoll(pollState, results, nodeState);
     assertEquals(PollState.WON, pollState.getStatus());
     reputationChangeTest(results);
@@ -202,7 +202,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
                               spec.getUprBound(),
                               PollState.REPAIRING,
                               results.getStartTime(),
-                              Deadline.NEVER);
+                              Deadline.MAX);
     spec = results.getPollSpec();
     nodeManager.handleContentPoll(pollState, results, nodeState);
     assertEquals(PollState.REPAIRED, pollState.getStatus());
@@ -219,7 +219,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
 
                               PollState.REPAIRING,
                               results.getStartTime(),
-                              Deadline.NEVER);
+                              Deadline.MAX);
     nodeManager.handleContentPoll(pollState, results, nodeState);
     assertEquals(PollState.UNREPAIRABLE, pollState.getStatus());
     reputationChangeTest(results);
@@ -231,7 +231,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
                               spec.getUprBound(),
                               PollState.RUNNING,
                               results.getStartTime(),
-                              Deadline.NEVER);
+                              Deadline.MAX);
     nodeManager.handleContentPoll(pollState, results, nodeState);
     assertEquals(PollState.LOST, pollState.getStatus());
     // assert name poll requested
@@ -247,7 +247,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
                               spec.getUprBound(),
                               PollState.RUNNING,
                               results.getStartTime(),
-                              Deadline.NEVER);
+                              Deadline.MAX);
     nodeManager.handleContentPoll(pollState, results, nodeState);
     assertEquals(PollState.REPAIRING, pollState.getStatus());
     // assert repair call scheduled
@@ -272,7 +272,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
                                         spec.getUprBound(),
                                         PollState.RUNNING,
                                         results.getStartTime(),
-                                        Deadline.NEVER);
+                                        Deadline.MAX);
     MockCachedUrlSet mcus = (MockCachedUrlSet)results.getCachedUrlSet();
     Vector subFiles = new Vector(2);
     subFiles.add(getCUS(mau, TEST_URL + "/branch2/file1.doc"));
@@ -303,7 +303,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
 
                               PollState.RUNNING,
                               results.getStartTime(),
-                              Deadline.NEVER);
+                              Deadline.MAX);
     RepositoryNode repoNode = theDaemon.getLockssRepository(mau).createNewNode(
         deleteUrl);
     assertFalse(repoNode.isInactive());
@@ -346,7 +346,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
                                         spec.getUprBound(),
                                         PollState.RUNNING,
                                         results.getStartTime(),
-                                        Deadline.NEVER);
+                                        Deadline.MAX);
     nodeState.addPollState(pollState);
     nodeManager.updateState(nodeState, results);
     assertEquals(PollState.WON, pollState.getStatus());
@@ -371,7 +371,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
                                         spec.getUprBound(),
                                         PollState.RUNNING,
                                         results.getStartTime(),
-                                        Deadline.NEVER);
+                                        Deadline.MAX);
     nodeState.addPollState(pollState);
     nodeManager.updateState(nodeState, results);
     assertEquals(PollState.WON, pollState.getStatus());
