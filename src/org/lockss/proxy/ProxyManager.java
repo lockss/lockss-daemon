@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyManager.java,v 1.16 2004-02-10 07:53:09 tlipkis Exp $
+ * $Id: ProxyManager.java,v 1.17 2004-02-27 00:21:57 tlipkis Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.proxy;
 import java.util.*;
 import org.lockss.app.*;
 import org.lockss.util.*;
+import org.lockss.util.urlconn.*;
 import org.lockss.daemon.*;
 import org.lockss.jetty.*;
 import org.mortbay.util.*;
@@ -60,6 +61,14 @@ public class ProxyManager extends JettyManager {
   public static final String PARAM_LOG_FORBIDDEN =
     IP_ACCESS_PREFIX + "logForbidden";
   public static final boolean DEFAULT_LOG_FORBIDDEN = true;
+
+  public static final String PARAM_PROXY_MAX_TOTAL_CONN =
+    PREFIX + "connectionPool.max";
+  public static final int DEFAULT_PROXY_MAX_TOTAL_CONN = 15;
+
+  public static final String PARAM_PROXY_MAX_CONN_PER_HOST =
+    PREFIX + "connectionPool.maxPerHost";
+  public static final int DEFAULT_PROXY_MAX_CONN_PER_HOST = 2;
 
   private int port;
   private boolean start;
@@ -149,13 +158,21 @@ public class ProxyManager extends JettyManager {
       context.addHandler(accessHandler);
 
       // Add a proxy handler to the context
-      HttpHandler handler = new org.lockss.proxy.ProxyHandler(getDaemon());
+      LockssUrlConnectionPool connPool = new LockssUrlConnectionPool();
+      int tot = Configuration.getIntParam(PARAM_PROXY_MAX_TOTAL_CONN,
+					  DEFAULT_PROXY_MAX_TOTAL_CONN);
+      int perHost = Configuration.getIntParam(PARAM_PROXY_MAX_CONN_PER_HOST,
+					      DEFAULT_PROXY_MAX_CONN_PER_HOST);
+      connPool.setMultiThreaded(tot, perHost);
+
+      HttpHandler handler = new org.lockss.proxy.ProxyHandler(getDaemon(),
+							      connPool);
       context.addHandler(handler);
 
       // Add a CuResourceHandler to handle requests for locally cached
       // content that the proxy handler modified and passed on.
       context.setBaseResource(new CuUrlResource());
-      ResourceHandler rHandler = new CuResourceHandler();
+      LockssResourceHandler rHandler = new CuResourceHandler();
 //       rHandler.setDirAllowed(false);
 //       rHandler.setPutAllowed(false);
 //       rHandler.setDelAllowed(false);
