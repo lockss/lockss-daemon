@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.39 2003-10-07 22:22:14 troberts Exp $
+ * $Id: LockssTestCase.java,v 1.40 2003-11-07 00:50:11 troberts Exp $
  */
 
 /*
@@ -640,6 +640,24 @@ public class LockssTestCase extends TestCase {
       failEquals(message, new Float(expected), new Float(actual));
     }
   }
+
+  public static void assertEmpty(Collection coll) {
+    assertEmpty(null, coll);
+  }
+
+  public static void assertEmpty(String message, Collection coll) {
+    if (coll.size() > 0) {
+      StringBuffer sb = new StringBuffer();
+      if (message != null) {
+	sb.append(message);
+	sb.append(" ");
+      }
+      sb.append("Expected empty Collection, but containted ");
+      sb.append(coll);
+      fail(sb.toString());
+    }
+  }
+
 
   private static void failEquals(String message,
 				 Object expected, Object actual) {
