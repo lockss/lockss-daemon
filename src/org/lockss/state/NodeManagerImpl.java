@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.13 2003-01-28 02:06:13 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.14 2003-01-30 02:05:16 aalto Exp $
  */
 
 /*
@@ -177,15 +177,20 @@ public class NodeManagerImpl implements NodeManager {
       Iterator nodesIt = nodeMap.entrySet().iterator();
       String deleteSub = null;
       int NUMBER_OF_NODES_TO_TEST = 200; //XXX fix
+      int numberNodesTested = 0;
       //XXX do for set time?
       for (int ii=0; ii<NUMBER_OF_NODES_TO_TEST; ii++) {
+        if (!nodesIt.hasNext()) {
+          break;
+        }
         Map.Entry entry = (Map.Entry)nodesIt.next();
-        deleteSub = walkEntry(entry, deleteSub);
+        walkEntry(entry);
+        numberNodesTested++;
       }
       long elapsedTime = TimeBase.nowMs() - startTime;
 
       // calculate
-      double nodesPerMs = ((double)elapsedTime / NUMBER_OF_NODES_TO_TEST);
+      double nodesPerMs = ((double)elapsedTime / numberNodesTested);
       estimateL = new Long((long)(nodeCount * nodesPerMs));
 
       auEstimateMap.put(managerAu, estimateL);
@@ -194,6 +199,7 @@ public class NodeManagerImpl implements NodeManager {
   }
 
   private void doTreeWalk() {
+    //XXX check if ok with CrawlManager
     long startTime = TimeBase.nowMs();
     nodeTreeWalk(nodeMap);
     long elapsedTime = TimeBase.nowMs() - startTime;
@@ -215,47 +221,36 @@ public class NodeManagerImpl implements NodeManager {
 
   private void nodeTreeWalk(TreeMap nodeMap) {
     Iterator nodesIt = nodeMap.entrySet().iterator();
-    String deleteStr = null;
     while (nodesIt.hasNext()) {
       Map.Entry entry = (Map.Entry)nodesIt.next();
-      // the deleteStr string is used to keep track of when the next
-      // entry is a sub-node of a deleted one
-      // -if it is, deleteStr stays the same and the entry is skipped
-      // -if it isn't, but the entry itself is deleted, deleteStr = entry key
-      // -otherwise, deleteStr is null
-      deleteStr = walkEntry(entry, deleteStr);
+      walkEntry(entry);
     }
   }
 
-  private String walkEntry(Map.Entry entry, String deleteStr) {
+  private void walkEntry(Map.Entry entry) {
     String key = (String)entry.getKey();
     NodeState node = (NodeState)entry.getValue();
+    CrawlState crawlState = node.getCrawlState();
 
-    // if it is in a directory under a deleted directory, skip it
-    if ((deleteStr!=null) && (key.startsWith(deleteStr))) {
-      //XXX mark deleted?
-      // still under same 'deleteStr'
-      return deleteStr;
-    }
     // at each node, check for crawl state
-    switch (node.getCrawlState().getType()) {
+    switch (crawlState.getType()) {
       case CrawlState.NODE_DELETED:
-        if (!key.endsWith(File.separator)) {
-          key += File.separator;
-        }
-        // the new 'deleteStr'
-        return key;
+        // skip node if deleted
+        return;
       case CrawlState.BACKGROUND_CRAWL:
       case CrawlState.NEW_CONTENT_CRAWL:
       case CrawlState.REPAIR_CRAWL:
-
-        //XXX schedule crawls if it's been too long
-        // check with plugin for scheduling
+        if (crawlState.getStatus()==CrawlState.FINISHED) {
+          //XXX schedule crawls if it's been too long
+          // unless some sort of poll is currently running.
+          // check with plugin for scheduling
+          // should pass in PollManager and CrawlManager for easier testing
+        }
     }
+    Iterator historyIt = node.getPollHistories();
+    //XXX check recent histories to see if something needs fixing
     // permanently store poll histories
     repository.storePollHistories(node);
-    // null 'deleteStr'
-    return null;
   }
 
   private void loadStateTree() {
@@ -299,7 +294,8 @@ public class NodeManagerImpl implements NodeManager {
     } else if (results.getType() == Poll.NAME_POLL) {
       handleNamePoll(pollState, results, state);
     } else {
-      logger.error("Updating state for invalid results type: "+results.getType());
+      logger.error("Updating state for invalid results type: " +
+                   results.getType());
       throw new UnsupportedOperationException("Updating state for invalid results type.");
     }
   }
@@ -346,11 +342,7 @@ public class NodeManagerImpl implements NodeManager {
           markNodeForRepair(nodeState.getCachedUrlSet(), pollState);
           closePoll(pollState, results.getDuration(), results.getPollVotes(),
                     nodeState);
-          //XXX PollManager.suspendPoll(pollState);
-          // callback from fetch queue
-          // PollManager.resumePoll(poll info);
-          //  -Deadline deadline = Deadline.in(results.getDuration() * 2);
-          //  -results.replayAllVotes(deadline);
+          //XXX results.suspend(nodeState.getCachedUrlSet().getPrimaryUrl());
         } catch (IOException ioe) {
           logger.error("Repair attempt failed.", ioe);
           //XXX schedule something?
@@ -421,7 +413,8 @@ public class NodeManagerImpl implements NodeManager {
         }
       }
       pollState.status = PollState.REPAIRED;
-      closePoll(pollState, results.getDuration(), results.getPollVotes(), nodeState);
+      closePoll(pollState, results.getDuration(), results.getPollVotes(),
+                nodeState);
     }
   }
 
@@ -470,7 +463,8 @@ public class NodeManagerImpl implements NodeManager {
   private void deleteNode(CachedUrlSet cus) throws IOException {
     // delete the node from the LockssRepository
     //XXX change to get from RunDaemon
-    LockssRepository repository = LockssRepositoryImpl.repositoryFactory(cus.getArchivalUnit());
+    LockssRepository repository =
+        LockssRepositoryImpl.repositoryFactory(cus.getArchivalUnit());
     repository.deleteNode(cus.getPrimaryUrl());
   }
 

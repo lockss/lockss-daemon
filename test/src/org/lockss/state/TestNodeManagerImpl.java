@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.7 2003-01-28 02:10:20 claire Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.8 2003-01-30 02:05:16 aalto Exp $
  */
 
 /*
@@ -221,6 +221,14 @@ public class TestNodeManagerImpl extends LockssTestCase {
       "type=4:start=250"
     };
     assertIsomorphic(expectedA, histL);
+  }
+
+  public void testTreeWalk() {
+
+  }
+
+  public void testEstimatedTreeWalk() {
+
   }
 
   public void testMapErrorCodes() {
