@@ -1,5 +1,5 @@
 /*
- * $Id: AdminIpAccess.java,v 1.3 2004-09-27 22:39:06 smorabito Exp $
+ * $Id: AdminIpAccess.java,v 1.4 2005-01-20 04:25:42 tlipkis Exp $
  */
 
 /*
@@ -38,10 +38,6 @@ import org.lockss.daemon.*;
 /** Display and update admin UI IP access control lists.
  */
 public class AdminIpAccess extends IpAccessControl {
-  static final String AC_PREFIX = ServletManager.IP_ACCESS_PREFIX;
-  public static final String PARAM_IP_INCLUDE = AC_PREFIX + "include";
-  public static final String PARAM_IP_EXCLUDE = AC_PREFIX + "exclude";
-
   private static final String exp =
     "Enter the list of IP addresses that should be allowed to access the " +
     "administrative user interface on this cache.  " +
@@ -51,12 +47,8 @@ public class AdminIpAccess extends IpAccessControl {
     return exp;
   }
 
-  protected String getIncludeParam() {
-    return PARAM_IP_INCLUDE;
-  }
-
-  protected String getExcludeParam() {
-    return PARAM_IP_EXCLUDE;
+  protected String getParamPrefix() {
+    return ServletManager.IP_ACCESS_PREFIX;
   }
 
   protected String getConfigFileName() {

@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.11 2005-01-16 00:05:01 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.12 2005-01-20 04:25:43 tlipkis Exp $
  */
 
 /*
@@ -522,11 +522,17 @@ public class ConfigManager implements LockssManager {
     conditionalPlatformOverride(config, PARAM_PLATFORM_SMTP_HOST,
 				SmtpMailService.PARAM_SMTPHOST);
 
+    // Add platform access subnet to access lists iff they are not set
+    // locally (i.e., they came from global config).
     String platformSubnet = config.get(PARAM_PLATFORM_ACCESS_SUBNET);
-    appendPlatformAccess(config, ServletManager.PARAM_IP_INCLUDE,
-			 platformSubnet);
-    appendPlatformAccess(config, ProxyManager.PARAM_IP_INCLUDE,
-			 platformSubnet);
+    if (!config.getBoolean(ServletManager.PARAM_IP_ISSET, false)) {
+      appendPlatformAccess(config, ServletManager.PARAM_IP_INCLUDE,
+			   platformSubnet);
+    }
+    if (!config.getBoolean(ProxyManager.PARAM_IP_ISSET, false)) {
+      appendPlatformAccess(config, ProxyManager.PARAM_IP_INCLUDE,
+			   platformSubnet);
+    }
 
     String space = config.get(PARAM_PLATFORM_DISK_SPACE_LIST);
     if (!StringUtil.isNullString(space)) {

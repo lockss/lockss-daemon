@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyManager.java,v 1.30 2004-11-10 20:07:27 smorabito Exp $
+ * $Id: ProxyManager.java,v 1.31 2005-01-20 04:25:42 tlipkis Exp $
  */
 
 /*
@@ -60,6 +60,7 @@ public class ProxyManager extends BaseProxyManager {
   public static final String IP_ACCESS_PREFIX = PREFIX + "access.ip.";
   public static final String PARAM_IP_INCLUDE = IP_ACCESS_PREFIX + "include";
   public static final String PARAM_IP_EXCLUDE = IP_ACCESS_PREFIX + "exclude";
+  public static final String PARAM_IP_ISSET = IP_ACCESS_PREFIX + "isSet";
   public static final String PARAM_LOG_FORBIDDEN =
     IP_ACCESS_PREFIX + "logForbidden";
   public static final boolean DEFAULT_LOG_FORBIDDEN = true;
