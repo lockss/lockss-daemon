@@ -1,5 +1,5 @@
 /*
- * $Id: ListUtil.java,v 1.1 2002-08-31 06:39:29 tal Exp $
+ * $Id: ListUtil.java,v 1.2 2002-10-16 03:43:16 tal Exp $
  *
 
 Copyright (c) 2000-2002 Board of Trustees of Leland Stanford Jr. University,
@@ -189,4 +189,49 @@ public class ListUtil {
 	}
 	return res;
     }
+
+  /** Check that all elements of the list are of the specified type, and
+   * return an unmodifiable copy of the list.
+   * @param list the list.
+   * @param type the class with which all items of the list
+   * must be assignment-compatible.
+   * @throws NullPointerException if the list is null or if any element
+   * is null
+   * @throws ClassCastException if an item is not of the proper type
+   */
+  public static List immutableListOfType(List list, Class type) {
+    return immutableListOfType(list, type, false);
+  }
+
+  /** Check that all elements of the list are either of the specified type
+   * or null, and
+   * return an unmodifiable copy of the list.
+   * @param list the list.
+   * @param type the class with which all items of the list
+   * must be assignment-compatible.
+   * @throws NullPointerException if the list is null
+   * @throws ClassCastException if an item is not of the proper type
+   */
+  public static List immutableListOfTypeOrNull(List list, Class type) {
+    return immutableListOfType(list, type, true);
+  }
+
+  private static List immutableListOfType(List list, Class type,
+					  boolean nullOk) {
+    List l = new ArrayList(list.size());
+    for (Iterator iter = list.iterator(); iter.hasNext(); ) {
+      Object item = iter.next();
+      if (item == null) {
+	if (!nullOk) {
+	  throw new NullPointerException("item of list is null");
+	}
+      } else if (!type.isInstance(item)) {
+	throw new ClassCastException("item <" + item +
+				     "> of list is not an instance of "
+				     + type);
+      }
+      l.add(item);
+    }
+    return Collections.unmodifiableList(l);
+  }
 }
