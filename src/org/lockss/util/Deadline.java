@@ -1,5 +1,5 @@
 /*
- * $Id: Deadline.java,v 1.14 2002-12-30 20:44:02 tal Exp $
+ * $Id: Deadline.java,v 1.15 2003-02-05 00:14:56 tal Exp $
  */
 
 /*
@@ -318,6 +318,9 @@ public class Deadline implements Comparable {
    * thread is otherwise interrupted.
    */
   public void sleep() throws InterruptedException {
+    if (expired()) {
+      return;
+    }
     final Thread thread = Thread.currentThread();
     Callback cb = new Callback() {
 	public void changed(Deadline deadline) {
