@@ -1,5 +1,5 @@
 /*
- * $Id: TestHttpClientUrlConnection.java,v 1.2 2004-02-24 07:15:59 tlipkis Exp $
+ * $Id: TestHttpClientUrlConnection.java,v 1.3 2004-03-07 08:39:29 tlipkis Exp $
  */
 
 /*
@@ -204,7 +204,43 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     eprops.put("x_date", datestr);
     eprops.put("x_content-encoding", "text/html");
     assertEquals(eprops, props);
+  }
 
+  public void testRedirect() throws Exception {
+    String redir = "http://redirected.com/foo.bar";
+
+    client.setRes(301, 301);
+    method.setResponseHeader("location", redir);
+
+    MyMockGetMethod meth2 = new MyMockGetMethod(null);
+    meth2.setRes(200);
+    conn.addMethod(meth2);
+
+    conn.execute();
+    assertEquals(200, conn.getResponseCode());
+    MyMockGetMethod cmeth = conn.getMockMethod();
+    assertSame(meth2, cmeth);
+    assertEquals(redir, cmeth.getUrl());
+  }
+
+  public void testMaxRedirect() throws Exception {
+    String redir = "http://redirected.com/foo.bar";
+
+    client.setRes(301, 301);
+    method.setResponseHeader("location", redir);
+
+    for (int ix=0; ix < ( 1 + HttpClientUrlConnection.MAX_REDIRECTS); ix++) {
+      MyMockGetMethod meth2 = new MyMockGetMethod(null);
+      meth2.setRes(301);
+      meth2.setResponseHeader("location", redir);
+      conn.addMethod(meth2);
+    }
+    MyMockGetMethod meth2 = new MyMockGetMethod(null);
+    meth2.setRes(200);
+    conn.addMethod(meth2);
+
+    conn.execute();
+    assertEquals(301, conn.getResponseCode());
   }
 
 
@@ -215,18 +251,29 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
 
     public int executeMethod(HttpMethod method)
         throws IOException, HttpException  {
-      return res1;
+      int mres = -1;
+      if (method instanceof MyMockGetMethod) {
+	mres = ((MyMockGetMethod)method).getRes();
+      }
+      return (mres < 0) ? res1 : mres;
     }
+
     public int executeMethod(HostConfiguration hostConfiguration,
 			     HttpMethod method)
         throws IOException, HttpException {
       hc = hostConfiguration;
-      return res2;
+      int mres = -1;
+      if (method instanceof MyMockGetMethod) {
+	mres = ((MyMockGetMethod)method).getRes();
+      }
+      return (mres < 0) ? res2 : mres;
     }    
+
     void setRes(int res1, int res2) {
       this.res1 = res1;
       this.res2 = res2;
     }
+
     public HostConfiguration getHostConfiguration() {
       return hc;
     }
@@ -240,6 +287,8 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     Properties respProps = new Properties();
     String statusText;
     int contentLength = -1;
+    boolean released = false;
+    int res = -1;
 
     public MyMockGetMethod(String url) {
       super();
@@ -247,8 +296,29 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
       getMeth = new HttpClientUrlConnection.LockssGetMethodImpl(url);
     }
 
+    // this doesn't set the url in getMeth, but that isn't used for
+    // anything in testing
+    void setUrl(String url) {
+      this.url = url;
+    }
+
+    String getUrl() {
+      return url;
+    }
+
+    void setRes(int res) {
+      this.res = res;
+    }
+    int getRes() {
+      return res;
+    }
+
     public void setRequestHeader(String headerName, String headerValue) {
       getMeth.setRequestHeader(headerName, headerValue);
+    }
+
+    public void setRequestHeader(Header header) {
+      getMeth.setRequestHeader(header.getName(), header.getValue());
     }
 
     public Header getRequestHeader(String headerName) {
@@ -266,11 +336,15 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     public String getStatusText() {
       return statusText;
     }
+
+    public void releaseConnection() {
+      released = true;
+    }
+
     void setStatusText(String s) {
       statusText = s;
     }
     void setResponseHeader(String name, String value) {
-      log.info("put: " + name + ": " + value);
       respProps.put(name.toLowerCase(), value);
     }
     public Header getResponseHeader(String headerName) {        
@@ -281,6 +355,16 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
       }
       return null;
     }
+    public Header[] getRequestHeaders() { 
+      Header[] res = new Header[respProps.size()];
+      int ix = 0;
+      for (Iterator iter = respProps.keySet().iterator(); iter.hasNext(); ) {
+	String key = (String)iter.next();
+	res[ix++] = new Header(key, (String)respProps.get(key));
+      }
+      return res;
+    }
+
     public Header[] getResponseHeaders() {
       List keys = new ArrayList(respProps.keySet());
       int n = keys.size();
@@ -303,13 +387,19 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
 
   class MockHttpClientUrlConnection extends HttpClientUrlConnection {
     MyMockGetMethod mockMeth;
+    List methods = new ArrayList();
 
     MockHttpClientUrlConnection(String urlString, MockHttpClient client)
 	throws IOException {
       super(urlString, client);
-    }	
+    }
     protected LockssGetMethod newLockssGetMethodImpl(String urlString) {
-      mockMeth = new MyMockGetMethod(urlString);
+      if (methods == null || methods.isEmpty()) {
+	mockMeth = new MyMockGetMethod(urlString);
+      } else {
+	mockMeth = (MyMockGetMethod)methods.remove(0);
+      }
+      mockMeth.setUrl(urlString);
       return mockMeth;
     }
     MyMockGetMethod getMockMethod() {
@@ -320,6 +410,9 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
       return mockMeth.getFollowRedirects();
     }
 
+    void addMethod(HttpMethod nextMethod) {
+      methods.add(nextMethod);
+    }
   }
 
 

@@ -1,5 +1,5 @@
 /*
- * $Id: HttpClientUrlConnection.java,v 1.4 2004-02-27 04:28:49 tlipkis Exp $
+ * $Id: HttpClientUrlConnection.java,v 1.5 2004-03-07 08:39:29 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -45,7 +45,7 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
   private static Logger log = Logger.getLogger("HttpClientUrlConnection");
 
   /** Maximum number of redirects that will be followed */
-  private static final int MAX_REDIRECTS = 10;
+  static final int MAX_REDIRECTS = 10;
 
   private HttpClient client;
   private HttpMethod method;
@@ -64,10 +64,11 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
       throws IOException {
     this.urlString = urlString;
     this.client = client != null ? client : new HttpClient();
+    this.methodCode = methodCode;
     method = createMethod(methodCode, urlString);
   }
 
-  private HttpMethod createMethod(int methodCode, String Urlstring)
+  private HttpMethod createMethod(int methodCode, String urlString)
       throws IOException {
     try {
       switch (methodCode) {
@@ -129,11 +130,6 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
 
   public boolean canProxy() {
     return true;
-  }
-
-  public void setUserAgent(String value) {
-    assertNotExecuted();
-    setRequestProperty("user-agent", value);
   }
 
   public void setRequestProperty(String key, String value) {
@@ -349,14 +345,13 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     }
     method.releaseConnection();
 
-
     urlString = newUrlString;
     method = newMeth;
 //    setQueryString(redirectUri.getEscapedQuery());
 
     if (log.isDebug3()) {
       log.debug3("Redirecting from '" + currentUri.getEscapedURI()
-                + "' to '" + redirectUri.getEscapedURI());
+                + "' to '" + redirectUri.getEscapedURI() + "'");
     }
     
     return true;
