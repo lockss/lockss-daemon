@@ -32,7 +32,6 @@ org.lockss.noplifetime=60000
 org.lockss.ournoplifetime=60000
 org.lockss.parameterReloadInterval=1200000
 org.lockss.port=3456
-org.lockss.quorum=3
 org.lockss.reallydamage=false
 org.lockss.sendhopcount=3
 org.lockss.sendversion=2
@@ -41,8 +40,6 @@ org.lockss.shrinkinterval=300000
 org.lockss.shrinkrange=60000
 org.lockss.ttl=2
 org.lockss.verbose=false
-org.lockss.votedelay=300000
-org.lockss.voterange=50000
 org.lockss.walkDuration=1200000
 org.lockss.walkInterval=400000
 org.lockss.maxelections=12
@@ -51,11 +48,10 @@ org.lockss.log.default.level=info
 org.lockss.log.Poll.level=debug
 org.lockss.log.Comm.level=debug
 org.lockss.log.Message.level=debug
+org.lockss.log.GenericHasher.level=info
 
-org.lockss.agreeVerifyPercent=5
 org.lockss.defaultPartnerPort=1025
 org.lockss.actAsRouter=false
-org.lockss.disagreeVerifyPercent=75
 org.lockss.packetInterval=15000
 org.lockss.packetsPerInterval=30
 org.lockss.suppressStandardOut=false
@@ -63,140 +59,12 @@ org.lockss.recentInterval=3456000000
 org.lockss.talliedPollMax=24
 org.lockss.logDeniedHttpAccesses=true
 
-# LOCAL PROPERTIES
+# poll settings
+org.lockss.poll.quorum=3
+org.lockss.poll.agreeVerify=20
+org.lockss.poll.disagreeVerify=90
+org.lockss.poll.type=2
+org.lockss.votedelay=300000
+org.lockss.voterange=50000
 
-org.lockss.adminaddress=127.0.0.1
-org.lockss.volumeHeader=dummy-journal
-org.lockss.volumeTrailer=.html
-
-# mail configuration
-# To allow the cache to send mail (not necessary for demo)
-# uncomment this and set it to the name of an smtp relay host.
-#org.lockss.smtpHost=
-
-# Envelope-from for smtp mail sent by cache
-org.lockss.sysAdminEmail=postmaster@localhost.localdomain
-# Email addr in Contact Us link in UI
-org.lockss.contactAddr=lockss@users.sourceforge.net
-
-org.lockss.debugInfo=no
-
-
-# ======================================================================== 
-# Jetty config
-# ------------------------------------------------------------------------
-
-SERVERS : org.lockss.admin;org.lockss.proxy
-
-#
-# "admin" server runs UI servlets
-#
-org.lockss.admin.CLASS					: com.mortbay.HTTP.HttpServer
-org.lockss.admin.STACKS					: root
-org.lockss.admin.EXCEPTIONS				: defaultEx
-org.lockss.admin.PROPERTY.SessionMaxInactiveInterval	: 3600
-org.lockss.admin.PROPERTY.MinListenerThreads		: 1
-org.lockss.admin.PROPERTY.MaxListenerThreads		: 20
-org.lockss.admin.PROPERTY.MaxListenerThreadIdleMs	: 60000
-org.lockss.admin.PROPERTY.HTTP1_0_KeepAlive		: True
-org.lockss.admin.PROPERTY.MimeMap			: ../test/Mime.prp
-org.lockss.admin.LISTENER.all.CLASS			: com.mortbay.HTTP.HttpListener
-org.lockss.admin.LISTENER.all.ADDRS			: 0.0.0.0:8081
-
-
-org.lockss.admin.root.HANDLERS		: Log;Auth;Param;File;Dynamic;NotFound
-org.lockss.admin.root.PATHS		: /
-
-org.lockss.admin.root.Log.CLASS				: com.mortbay.HTTP.Handler.LogHandler
-# Set in testn/local.txt
-#org.lockss.admin.root.Log.PROPERTY.File		: ../logs/admin.log
-org.lockss.admin.root.Log.PROPERTY.Append		: True
-org.lockss.admin.root.Log.PROPERTY.LongForm		: True
-org.lockss.admin.root.Log.PROPERTY.CountContentLength	: True
-
-org.lockss.admin.root.Auth.CLASS			: org.lockss.jetty.BasicAuthHandler
-org.lockss.admin.root.Auth.PROPERTY.user.LABEL		: demo
-org.lockss.admin.root.Auth.PROPERTY.user.PATHS		: /
-org.lockss.admin.root.Auth.PROPERTY.user.PROPERTY.demo	: demo
-
-org.lockss.admin.root.Param.CLASS			: com.mortbay.HTTP.Handler.ParamHandler
-org.lockss.admin.root.Param.PROPERTY.CookiesAsParameters  : False
-
-org.lockss.admin.root.File.CLASS			: com.mortbay.HTTP.Handler.FileHandler
-org.lockss.admin.root.File.PROPERTY.AllowPut		: False
-org.lockss.admin.root.File.PROPERTY.AllowDelete		: False
-org.lockss.admin.root.File.PROPERTY.Indexes		: index.html;index.htm
-org.lockss.admin.root.File.PROPERTY.FILES.FileBase.PATHS	: /;
-org.lockss.admin.root.File.PROPERTY.FILES.FileBase.DIRECTORY	: ../admin.html
-
-org.lockss.admin.root.Dynamic.CLASS : com.mortbay.HTTP.Handler.ServletHandler
-
-org.lockss.admin.root.Dynamic.PROPERTY.SERVLET.Admin.CLASS : org.lockss.servlet.Admin
-org.lockss.admin.root.Dynamic.PROPERTY.SERVLET.Admin.PATHS : /Admin
-
-org.lockss.admin.root.Dynamic.PROPERTY.SERVLET.JournalSettings.CLASS : org.lockss.servlet.JournalSettings
-org.lockss.admin.root.Dynamic.PROPERTY.SERVLET.JournalSettings.PATHS : /JournalSettings
-
-org.lockss.admin.root.Dynamic.PROPERTY.SERVLET.UpdateIps.CLASS : org.lockss.servlet.UpdateIps
-org.lockss.admin.root.Dynamic.PROPERTY.SERVLET.UpdateIps.PATHS : /UpdateIps 
-
-org.lockss.admin.root.Dynamic.PROPERTY.SERVLET.JournalStatus.CLASS : org.lockss.servlet.JournalStatus
-org.lockss.admin.root.Dynamic.PROPERTY.SERVLET.JournalStatus.PATHS : /JournalStatus
-
-org.lockss.admin.root.Dynamic.PROPERTY.SERVLET.DaemonStatus.CLASS : org.lockss.servlet.DaemonStatus
-org.lockss.admin.root.Dynamic.PROPERTY.SERVLET.DaemonStatus.PATHS : /DaemonStatus 
-
-org.lockss.admin.root.Dynamic.PROPERTY.SERVLET.ClientProps.CLASS : org.lockss.servlet.ClientProps
-org.lockss.admin.root.Dynamic.PROPERTY.SERVLET.ClientProps.PATHS : /ClientProps 
-
-org.lockss.admin.defaultEx.PATHS		: /
-org.lockss.admin.defaultEx.HANDLERS	        : DefaultEx
-org.lockss.admin.defaultEx.DefaultEx.CLASS	: com.mortbay.HTTP.Handler.DefaultExceptionHandler
-
-org.lockss.admin.root.NotFound.CLASS		: com.mortbay.HTTP.Handler.NotFoundHandler
-
-#
-# proxy server
-#
-
-org.lockss.proxy.CLASS			: com.mortbay.HTTP.HttpServer
-org.lockss.proxy.STACKS			: root
-org.lockss.proxy.EXCEPTIONS		: defaultEx
-org.lockss.proxy.PROPERTY.SessionMaxInactiveInterval	: 3600
-org.lockss.proxy.PROPERTY.MinListenerThreads		: 1
-org.lockss.proxy.PROPERTY.MaxListenerThreads		: 20
-org.lockss.proxy.PROPERTY.MaxListenerThreadIdleMs	: 60000
-org.lockss.proxy.PROPERTY.HTTP1_0_KeepAlive		: True
-
-org.lockss.proxy.PROPERTY.MimeMap	: ../test/Mime.prp
-
-org.lockss.proxy.LISTENER.all.CLASS	: com.mortbay.HTTP.HttpListener
-org.lockss.proxy.LISTENER.all.ADDRS	: 0.0.0.0:8080
-
-org.lockss.proxy.root.HANDLERS		: Log;Proxy;File;Param;NotFound
-org.lockss.proxy.root.PATHS		: /
-
-org.lockss.proxy.root.Log.CLASS		: com.mortbay.HTTP.Handler.LogHandler
-# Set in testn/local.txt
-#org.lockss.proxy.root.Log.PROPERTY.File	: ../logs/proxy.log
-org.lockss.proxy.root.Log.PROPERTY.Append	: True
-org.lockss.proxy.root.Log.PROPERTY.LongForm	: True
-org.lockss.proxy.root.Log.PROPERTY.CountContentLength : True
-
-org.lockss.proxy.root.Param.CLASS : com.mortbay.HTTP.Handler.ParamHandler
-org.lockss.proxy.root.Param.PROPERTY.CookiesAsParameters : False
-
-org.lockss.proxy.root.File.CLASS			: com.mortbay.HTTP.Handler.FileHandler
-org.lockss.proxy.root.File.PROPERTY.AllowPut		: False
-org.lockss.proxy.root.File.PROPERTY.AllowDelete		: False
-org.lockss.proxy.root.File.PROPERTY.Indexes		: index.html;index.htm
-
-org.lockss.proxy.root.Proxy.CLASS		: org.lockss.jetty.LockssProxyHandler
-org.lockss.proxy.root.Proxy.PROPERTY.PATHS	: http
-
-org.lockss.proxy.root.NotFound.CLASS		: com.mortbay.HTTP.Handler.NotFoundHandler
-
-org.lockss.proxy.defaultEx.PATHS		: /
-org.lockss.proxy.defaultEx.HANDLERS		: DefaultEx
-org.lockss.proxy.defaultEx.DefaultEx.CLASS	: com.mortbay.HTTP.Handler.DefaultExceptionHandler
 

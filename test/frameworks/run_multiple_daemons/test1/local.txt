@@ -1,3 +1,5 @@
 org.lockss.localIPAddress=1.1.1.1
-org.lockss.cache.location=/home/troberts/4_way_new/lcap/test1
+org.lockss.poll.agreeVerify=100
+org.lockss.unicastport=9000
+org.lockss.cache.location=/home/claire/projects/lockss-gamma/test/frameworks/run_multiple_daemons/test1
 org.lockss.shouldCallPoll=true

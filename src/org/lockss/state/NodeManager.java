@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManager.java,v 1.1 2002-12-04 23:59:25 aalto Exp $
+ * $Id: NodeManager.java,v 1.2 2002-12-06 19:36:45 claire Exp $
  */
 
 /*
@@ -55,7 +55,7 @@ public interface NodeManager {
    * @param cus the cached url set used to identify the node
    * @param results the poll results
    */
-  public void updatePollResults(CachedUrlSet cus, Poll.PollResults results);
+  public void updatePollResults(CachedUrlSet cus, Poll.VoteTally results);
 
   /**
    * Return the node represented by a given Cached Url Set
