@@ -1,5 +1,5 @@
 /*
- * $Id: TestEmlsPlugin.java,v 1.1 2003-10-14 22:45:21 eaalto Exp $
+ * $Id: TestEmlsPlugin.java,v 1.2 2003-10-14 22:51:00 eaalto Exp $
  */
 
 /*
@@ -81,7 +81,7 @@ public class TestEmlsPlugin extends LockssTestCase {
       throws ArchivalUnit.ConfigurationException, MalformedURLException {
     Properties props = new Properties();
     props.setProperty(EmlsPlugin.AUPARAM_BASE_URL,
-                      "http://www.example.com/");
+                      "http://www.example.com/emls/");
     props.setProperty(EmlsPlugin.AUPARAM_VOL, "3");
 
     EmlsArchivalUnit au = makeAuFromProps(props);
