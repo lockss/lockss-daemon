@@ -1,5 +1,5 @@
 /*
- * $Id: StringFilter.java,v 1.2 2003-12-11 22:36:50 eaalto Exp $
+ * $Id: StringFilter.java,v 1.3 2004-04-05 07:58:18 tlipkis Exp $
  */
 
 /*
@@ -39,7 +39,7 @@ import org.lockss.daemon.Configuration;
 
 public class StringFilter extends Reader {
 
-  public static final int DEFAULT_BUFFER_CAPACITY = 256;
+  public static final int DEFAULT_BUFFER_CAPACITY = 4096;
   public static final String PARAM_BUFFER_CAPACITY =
     Configuration.PREFIX + "filter.buffer_capacity";
 
@@ -48,12 +48,16 @@ public class StringFilter extends Reader {
 
   private int bufferCapacity;
 
-  private FilterCharRing charBuffer = null;
+  private CharRing charBuffer = null;
+  private int ringSize;
   private Reader reader;
   private String str;
   private String replaceStr = null;
+  private int strlen;
+  private int replaceLen;
   private boolean ignoreCase = false;
-  private int replaceIndex = -1;
+  private int toReplace = 0;
+  private boolean isTrace = logger.isDebug3();
 
   public StringFilter(Reader reader) {
     if (reader == null) {
@@ -63,17 +67,39 @@ public class StringFilter extends Reader {
   }
 
   public StringFilter(Reader reader, String str) {
-    this(reader);
-    if (str == null) {
-      throw new IllegalArgumentException("Called with a null string");
-    }
-    this.str = str;
-    init();
+    this(reader, -1, str, null);
+  }
+
+  public StringFilter(Reader reader, int bufferCapacity, String str) {
+    this(reader, bufferCapacity, str, null);
   }
 
   public StringFilter(Reader reader, String origStr, String replaceStr) {
-    this(reader, origStr);
+    this(reader, -1, origStr, replaceStr);
+  }
+
+  public StringFilter(Reader reader, int bufferCapacity,
+		      String origStr, String replaceStr) {
+    if (reader == null) {
+      throw new IllegalArgumentException("Called with a null reader");
+    }
+    this.reader = reader;
+    if (origStr == null) {
+      throw new IllegalArgumentException("Called with a null string");
+    }
+    this.str = origStr;
+    strlen = str.length();
+    if (bufferCapacity < 0) {
+      bufferCapacity = Configuration.getIntParam(PARAM_BUFFER_CAPACITY,
+						 DEFAULT_BUFFER_CAPACITY);
+    }    
+    this.bufferCapacity = bufferCapacity;
     this.replaceStr = replaceStr;
+    if (replaceStr != null) {
+      replaceLen = replaceStr.length();
+    }
+    charBuffer = new CharRing(bufferCapacity);
+    ringSize = charBuffer.size();
   }
 
   public void setIgnoreCase(boolean ignoreCase) {
@@ -163,13 +189,6 @@ public class StringFilter extends Reader {
 //     return len;
 //   }
 
-  private void init() {
-    bufferCapacity = Configuration.getIntParam(PARAM_BUFFER_CAPACITY,
-					       DEFAULT_BUFFER_CAPACITY);
-    bufferCapacity = Math.max(str.length(), bufferCapacity);
-    charBuffer = new FilterCharRing(bufferCapacity);
-  }
-
   public boolean ready() {
     throw new UnsupportedOperationException("Not Implemented");
   }
@@ -182,73 +201,57 @@ public class StringFilter extends Reader {
     throw new UnsupportedOperationException("Not Implemented");
   }
 
-  public int read(char[] outputBuf, int off, int len) throws IOException {
-    if (logger.isDebug3()) {
-      logger.debug3("Read array called with: ");
-      logger.debug3("off: "+off);
-      logger.debug3("len: "+len);
-    }
-
-    if ((off < 0) || (len < 0) || ((off + len) > outputBuf.length)) {
+  public int read(char[] outputBuf, int off, int bufSize) throws IOException {
+    if (isTrace) logger.debug3("read(buf, " + off + ", " + bufSize + ")");
+    int bufPtrPlusFree = off + bufSize;
+    if ((off < 0) || (bufSize < 0) || (bufPtrPlusFree > outputBuf.length)) {
       throw new IndexOutOfBoundsException();
-    } else if (len == 0) {
-      return 0;
     }
 
-    int numLeft = len;
-    boolean matchedStr = false;
-    while (numLeft > 0 &&
-           (!streamDone || (charBuffer.size() > 0) || (replaceIndex >=0))) {
+    int bufFree = bufSize;
+    while (bufFree > 0 &&
+	   (!streamDone || (ringSize > 0) || (toReplace > 0))) {
       // if we need to insert the replacement string
-      if (replaceIndex >= 0) {
-        // work through the replace string until either it's done
-        // or we've done enough chars
-        while (numLeft > 0 && (replaceIndex < replaceStr.length())) {
-          outputBuf[off + (len - numLeft)] = replaceStr.charAt(replaceIndex++);
-          numLeft--;
-        }
-        // reset the index if done with the replace string
-        if (replaceIndex >= replaceStr.length()) {
-          replaceIndex = -1;
-        }
+      if (toReplace > 0) {
+	// store all or part of the replace string in the output
+	int replaceIndex = replaceLen - toReplace;
+	int n = bufFree < toReplace ? bufFree : toReplace;
+	replaceStr.getChars(replaceIndex, replaceIndex + n,
+			    outputBuf, bufPtrPlusFree - bufFree);
+	toReplace -= n;
+	bufFree -= n;
+	if (bufFree == 0) {
+	  return bufSize;
+	}
       }
-
-      if (charBuffer.size() < str.length()) {
-	streamDone = charBuffer.refillBuffer(reader);
-      }
-      if (charBuffer.size() < str.length()) {
-	logger.debug3("Refill only returned "+charBuffer.size()+" elements, "+
-		      "which is less than the str length("
-		      +str.length()+"), returning");
-	int numToReturn =
-	  numLeft < charBuffer.size() ? numLeft : charBuffer.size();
-	charBuffer.remove(outputBuf, off + (len - numLeft), numToReturn);
-	numLeft -= numToReturn;
+      if (ringSize < strlen && !streamDone) {
+	if (!streamDone) {
+	  streamDone = charBuffer.refillBuffer(reader);
+	  ringSize = charBuffer.size();
+	}
       } else {
-	int idx = 0;
-	while (!matchedStr && idx < numLeft
-	       && idx+str.length() <= charBuffer.size()) {
-	  matchedStr = charBuffer.startsWith(idx, str, ignoreCase);
-	  if (!matchedStr) {
-	    idx++;
-	  }
+	int idx = charBuffer.indexOf(str, bufFree, ignoreCase);
+	int ncopy;
+	if (idx >= 0) {
+	  ncopy = idx;
+	} else {
+	  int max = streamDone ? ringSize : (ringSize - (strlen - 1));
+	  ncopy = bufFree < max ? bufFree : max;
 	}
-	if (idx > 0) {
-	  charBuffer.remove(outputBuf, off + (len - numLeft), idx);
-	}
-	numLeft -= idx;
-	if (matchedStr) {
-	  charBuffer.clear(str.length());
+	charBuffer.remove(outputBuf, bufPtrPlusFree - bufFree, ncopy);
+	ringSize -= ncopy;
+	bufFree -= ncopy;
+	if (idx >= 0) {
+	  charBuffer.skip(strlen);
+	  ringSize -= strlen;
           if (replaceStr!=null) {
             // set the replace index to the start of the string
-            replaceIndex = 0;
+	    toReplace = replaceLen;
           }
-	  matchedStr = false;
 	}
       }
     }
-
-    int numRead = len - numLeft;
+    int numRead = bufSize - bufFree;
     return numRead == 0 ? -1 : numRead;
   }
 

@@ -1,10 +1,6 @@
 /*
- * $Id: WhiteSpaceFilter.java,v 1.2 2003-12-11 22:37:21 eaalto Exp $
+ * $Id: WhiteSpaceFilter.java,v 1.3 2004-04-05 07:58:03 tlipkis Exp $
  */
-
-package org.lockss.filter;
-import java.util.*;
-import java.io.*;
 
 /*
 
@@ -34,33 +30,48 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-// A FilterInputStream that removes HTML markup.  Idea is to remove all
-// variable content (e.g., advertisement URLs), leaving only journal text
-// to feed to hasher.
-// XXX Curently too simplistic and easily fooled, but works well enough
-// XXX for beta test.
-// XXX Need to generalize and make part of journal definition API.
+package org.lockss.filter;
+import java.util.*;
+import java.io.*;
+import org.lockss.util.*;
+import org.lockss.daemon.*;
+
+/** A FilterInputStream that canonicalizes white space.
+ */
 
 public class WhiteSpaceFilter extends FilterInputStream {
-  boolean inWhiteSpace;
-  boolean hitEOF;
+  static final int DEFAULT_BUFFER_CAPACITY = 4096;
   static final byte asciiSpace = 32;
 
+  boolean inWhiteSpace;
+  boolean hitEOF;
+
+  int bufsize;
+  byte[] buf;
+  int bufrem = 0;
+  int bufptr = 0;
+
   // Create filtered stream, initialize state.
-  public WhiteSpaceFilter(InputStream fis) {
-    super(fis);
+  public WhiteSpaceFilter(InputStream is) {
+    this(is, DEFAULT_BUFFER_CAPACITY);
+  }
+
+  // Create filtered stream, initialize state.
+  public WhiteSpaceFilter(InputStream is, int bufsize) {
+    super(is);
     inWhiteSpace = false;
     hitEOF = false;
+    this.bufsize = bufsize;
+    buf = new byte[bufsize];
   }
 
   // Read one byte
   public int read() throws IOException {
-    byte[] buf = new byte[1];
-    int ret = read(buf, 0, 1);
+    byte[] b = new byte[1];
+    int ret = read(b, 0, 1);
     if (ret >= 0)
-      return ((int)buf[0]);
-    else
-      return (ret);
+      return ((int)b[0]);
+    return ret;
   }
 
   // Read bytes into array
@@ -72,29 +83,35 @@ public class WhiteSpaceFilter extends FilterInputStream {
   public int read(byte[] b, int off, int len) throws IOException {
     if (hitEOF)
       return -1;
+    int endoff = off + len;
     int ptr = off;
-    while (ptr < len) {
-      // we still haven't found enough bytes
-      int next = super.read();
-      if (next == -1) {
-	// we just hit EOF
-	hitEOF = true;
-	break;
-      }
-
-      // handle whitespace - collapse multiple whitespace to single space
-      if (inWhiteSpace) {
-	if (isWhiteSpace(next))
-	  continue;
-	inWhiteSpace = false;
-      } else {
-	if (isWhiteSpace(next)) {
-	  inWhiteSpace = true;
-	  next = asciiSpace;
+    int rem = len;
+    while (ptr < endoff) {
+      if (bufptr >= bufrem) {
+	bufrem = super.read(buf, 0, bufsize);
+	if (bufrem == -1) {
+	  hitEOF = true;
+	  return (ptr == off) ? -1 : ptr - off;
 	}
+	bufptr = 0;
       }
-      // not whitespace - output the character
-      b[ptr++] = (byte) next;
+      while (ptr < endoff && bufptr < bufrem) {
+	int next = buf[bufptr++];
+	// handle whitespace - collapse multiple whitespace to single space
+	if ((next >= 0 && next <= asciiSpace) || next == 127) {
+	  if (inWhiteSpace) {
+	    continue;
+	  } else {
+	    inWhiteSpace = true;
+	    next = asciiSpace;
+	  }
+	} else {
+	  if (inWhiteSpace)
+	    inWhiteSpace = false;
+	}
+	// output non-white or first white character
+	b[ptr++] = (byte)next;
+      }
     }
     return (ptr - off);
   }

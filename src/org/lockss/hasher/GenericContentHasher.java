@@ -1,5 +1,5 @@
 /*
- * $Id: GenericContentHasher.java,v 1.19 2003-09-17 06:09:59 troberts Exp $
+ * $Id: GenericContentHasher.java,v 1.20 2004-04-05 07:58:02 tlipkis Exp $
  */
 
 /*
@@ -53,14 +53,15 @@ public class GenericContentHasher extends GenericHasher {
   private byte[] contentBytes = null;
   private int nameIdx = -1;
 
+  private Plugin plugin;
+  private CachedUrl cu = null;
   private InputStream is = null;
-  private boolean hashedRootCus = false;
-
   private long hashedContentSize = 0;
 
 
   public GenericContentHasher(CachedUrlSet cus, MessageDigest digest) {
     super(cus, digest);
+    plugin = cus.getArchivalUnit().getPlugin();
     iterator = cus.contentHashIterator();
     if (iterator == null) {
       throw new IllegalArgumentException("Called with a CachedUrlSet that "+
@@ -68,50 +69,44 @@ public class GenericContentHasher extends GenericHasher {
     }
   }
 
-  protected int hashElementUpToNumBytes(CachedUrlSetNode element, int numBytes)
+  protected int hashElementUpToNumBytes(int numBytes)
       throws IOException {
-    CachedUrl cu = null;
-    switch (element.getType()) {
+    if (cu == null) {
+      switch (curElement.getType()) {
       case CachedUrlSetNode.TYPE_CACHED_URL_SET:
-        CachedUrlSet cus = (CachedUrlSet)element;
-        cu = cus.getArchivalUnit().getPlugin().makeCachedUrl(cus,
-							     cus.getUrl());
+        CachedUrlSet cus = (CachedUrlSet)curElement;
+        cu = plugin.makeCachedUrl(cus, cus.getUrl());
         break;
       case CachedUrlSetNode.TYPE_CACHED_URL:
-        cu = (CachedUrl)element;
+        cu = (CachedUrl)curElement;
         break;
+      }
     }
-
     int totalHashed = 0;
     if (hashState == HASHING_NAME) {
-      totalHashed += hashName(cu, numBytes);
+      totalHashed += hashName(numBytes);
       if (totalHashed >= numBytes) {
 	return totalHashed;
       }
     }
     if (hashState == HASHING_CONTENT) {
-      totalHashed += hashContent(cu, numBytes);
+      totalHashed += hashContent(numBytes);
     }
     return totalHashed;
   }
 
-  private int hashName(CachedUrl cu, int numBytes) {
+  private int hashName(int numBytes) {
     int totalHashed = 0;
-    log.debug3("Hashing name");
+    if (isTrace) log.debug3("Hashing name");
     if (nameBytes == null) {
-      String url = cu.getUrl();
-      StringBuffer sb = new StringBuffer(url.length());
-      sb.append(url);
-      String nameStr = sb.toString();
+      String nameStr = cu.getUrl();
       nameBytes = nameStr.getBytes();
       nameIdx = 0;
-      if (log.isDebug3()) {
-	log.debug3("got new name to hash: "+nameStr);
-      }
+      if (isTrace) log.debug3("got new name to hash: "+nameStr);
 
 //       if (cu.hasContent()) {
 // 	byte[] sizeBytes = cu.getUnfilteredContentSize();
-// 	if (log.isDebug3()) {
+// 	if (isTrace) {
 // 	  log.debug3("sizeBytes has length of "+sizeBytes.length);
 // 	}
 // //  	digest.update((byte)sizeBytes.length);
@@ -126,63 +121,51 @@ public class GenericContentHasher extends GenericHasher {
     int bytesRemaining = nameBytes.length - nameIdx;
     int len = numBytes < bytesRemaining ? numBytes : bytesRemaining;
 
-    if (log.isDebug3()) {
-      log.debug3("Going to hash "+len+" name bytes");
-    }
+    if (isTrace) log.debug3("Going to hash "+len+" name bytes");
     digest.update(nameBytes, nameIdx, len);
     nameIdx += len;
     if (nameIdx >= nameBytes.length) {
-      if (log.isDebug3()) {
-	log.debug3("done hashing name: "+cu);
-      }
+      if (isTrace) log.debug3("done hashing name: "+cu);
       hashState = HASHING_CONTENT;
       nameBytes = null;
     }
     totalHashed += len;
-    if (log.isDebug3()) {
-      log.debug3(totalHashed+" bytes hashed in this step");
-    }
+    if (isTrace) log.debug3(totalHashed+" bytes hashed in this step");
     return totalHashed;
   }
 
-  private int hashContent(CachedUrl cu, int numBytes) throws IOException {
+  private int hashContent(int numBytes) throws IOException {
     int totalHashed = 0;
-    log.debug3("hashing content");
-    if(is == null) {
+    if (isTrace) log.debug3("hashing content");
+    if (is == null) {
       if (cu.hasContent()) {
-	if (log.isDebug3()) {
-	  log.debug3("opening "+cu+" for hashing");
-	}
+	if (isTrace) log.debug3("opening "+cu+" for hashing");
 	is = cu.openForHashing();
       } else {
-	if (log.isDebug3()) {
-	  log.debug3(cu+" has no content, not hashing");
-	}
+	if (isTrace) log.debug3(cu+" has no content, not hashing");
 	digest.update(NO_CONTENT);
 	totalHashed++;
 
 	hashState = HASHING_NAME;
-	shouldGetNextElement = true;
+	curElement = null;
+	cu = null;
 	return totalHashed;
       }
     }
     int bytesLeftToHash = numBytes - totalHashed;
     if (contentBytes == null || contentBytes.length < (bytesLeftToHash)) {
-      contentBytes = new byte[numBytes];
+      contentBytes = new byte[numBytes + 100];
     }
     int bytesHashed = is.read(contentBytes, 0, bytesLeftToHash);
-    if (log.isDebug3()) {
+    if (isTrace)
       log.debug3("Read "+bytesHashed+" bytes from the input stream");
-    }
     if (bytesHashed >= 0) {
       digest.update(contentBytes, 0, bytesHashed);
       totalHashed += bytesHashed;
       hashedContentSize += bytesHashed;
-    }
-    if (bytesHashed != 0 && bytesHashed < bytesLeftToHash) {
-      if (log.isDebug3()) {
-	log.debug3("done hashing content: "+cu);
-      }
+    } else {
+//     if (bytesHashed != 0 && bytesHashed < bytesLeftToHash) {
+      if (isTrace) log.debug3("done hashing content: "+cu);
       byte[] sizeBytes =
 	(new BigInteger(Long.toString(hashedContentSize)).toByteArray());
       digest.update((byte)sizeBytes.length);
@@ -191,13 +174,12 @@ public class GenericContentHasher extends GenericHasher {
 
       hashedContentSize = 0;
       hashState = HASHING_NAME;
-      shouldGetNextElement = true;
+      curElement = null;
+      cu = null;
       is.close();
       is = null;
     }
-    if (log.isDebug3()) {
-      log.debug3(totalHashed+" bytes hashed in this step");
-    }
+    if (isTrace) log.debug3(totalHashed+" bytes hashed in this step");
     return totalHashed;
   }
 

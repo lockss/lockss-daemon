@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringFilter.java,v 1.4 2003-12-11 22:36:50 eaalto Exp $
+ * $Id: TestStringFilter.java,v 1.5 2004-04-05 07:58:01 tlipkis Exp $
  */
 
 /*
@@ -127,18 +127,14 @@ public class TestStringFilter extends LockssTestCase {
   //Series of tests where the buffer size is the same size as the
   //filtered string
   public void testFiltersOneStringSameSizeAsBuff() throws IOException {
-    String config = "org.lockss.filter.buffer_capacity=6";
-    ConfigurationUtil.setCurrentConfigFromString(config);
     String str = "REMOVEThis is a test string";
-    StringFilter sf = new StringFilter(new StringReader(str), "REMOVE");
+    StringFilter sf = new StringFilter(new StringReader(str), 6, "REMOVE");
     assertReaderMatchesString("This is a test string", sf);
   }
 
   public void testFiltersOneStringOverflowBuffer() throws IOException {
-    String config = "org.lockss.filter.buffer_capacity=6";
-    ConfigurationUtil.setCurrentConfigFromString(config);
     String str = "ThisREMOVE is a test string";
-    StringFilter sf = new StringFilter(new StringReader(str), "REMOVE");
+    StringFilter sf = new StringFilter(new StringReader(str), 6, "REMOVE");
     assertReaderMatchesString("This is a test string", sf);
   }
 
@@ -241,18 +237,16 @@ public class TestStringFilter extends LockssTestCase {
 
   //small buffer
   public void testReplacesOneStringSameSizeAsBuff() throws IOException {
-    String config = "org.lockss.filter.buffer_capacity=6";
-    ConfigurationUtil.setCurrentConfigFromString(config);
     String str = "REMOVEThis is a test string";
-    StringFilter sf = new StringFilter(new StringReader(str), "REMOVE", "REPLACE");
+    StringFilter sf =
+      new StringFilter(new StringReader(str), 6, "REMOVE", "REPLACE");
     assertReaderMatchesString("REPLACEThis is a test string", sf);
   }
 
   public void testReplacesOneStringOverflowBuffer() throws IOException {
-    String config = "org.lockss.filter.buffer_capacity=6";
-    ConfigurationUtil.setCurrentConfigFromString(config);
     String str = "ThisREMOVE is a test string";
-    StringFilter sf = new StringFilter(new StringReader(str), "REMOVE", "REPLACE");
+    StringFilter sf =
+      new StringFilter(new StringReader(str), 6, "REMOVE", "REPLACE");
     assertReaderMatchesString("ThisREPLACE is a test string", sf);
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: GenericNameHasher.java,v 1.11 2003-06-20 22:34:51 claire Exp $
+ * $Id: GenericNameHasher.java,v 1.12 2004-04-05 07:58:02 tlipkis Exp $
  */
 
 /*
@@ -56,20 +56,17 @@ public class GenericNameHasher extends GenericHasher {
     }
   }
 
-  protected int hashElementUpToNumBytes(CachedUrlSetNode element, 
-					int numBytes) {
+  protected int hashElementUpToNumBytes(int numBytes) {
     int totalHashed = 0;
     if (nameBytes == null) {
-      String nameStr = element.getUrl();
-      if (log.isDebug3()) {
+      String nameStr = curElement.getUrl();
+      if (isTrace) {
 	log.debug3("Getting new name: "+nameStr);
       }
-      StringBuffer sb = new StringBuffer(nameStr.length()+1);
-      sb.append(nameStr);
-      nameBytes = (sb.toString().getBytes());
+      nameBytes = nameStr.getBytes();
       nameIdx = 0;
 
-      if (element.hasContent()) {
+      if (curElement.hasContent()) {
  	digest.update(CONTENT);
       } else {
 	digest.update(NO_CONTENT);
@@ -87,11 +84,10 @@ public class GenericNameHasher extends GenericHasher {
     nameIdx += len;
     totalHashed += len;
     if (nameIdx >= nameBytes.length) {
-      shouldGetNextElement = true;
-      element = null;
+      curElement = null;
       nameBytes = null;
     }
-    if (log.isDebug3()) {
+    if (isTrace) {
       log.debug3("Hashed "+totalHashed+" bytes in this step");
     }
     return totalHashed;

@@ -1,5 +1,5 @@
 /*
- * $Id: ReaderInputStream.java,v 1.7 2003-10-07 22:32:18 troberts Exp $
+ * $Id: ReaderInputStream.java,v 1.8 2004-04-05 07:58:01 tlipkis Exp $
  */
 
 /*
@@ -38,38 +38,43 @@ import java.io.*;
  */
 
 public class ReaderInputStream extends InputStream {
+  static final int DEFAULT_BUFFER_CAPACITY = 4096;
+
   Reader reader = null;
-  StringBuffer sb = new StringBuffer();
   protected static Logger logger = Logger.getLogger("ReaderInputStream");
-  char[] charBuffer = new char[1024];
-  
+  int bufsize;
+  char[] charBuffer;
 
   public ReaderInputStream(Reader reader) {
+    this(reader, DEFAULT_BUFFER_CAPACITY);
+  }
+
+  public ReaderInputStream(Reader reader, int bufsize) {
     if (reader == null) {
       throw new IllegalArgumentException("Called with a null reader");
     }
     this.reader = reader;
+    this.bufsize = bufsize;
+    charBuffer = new char[bufsize];
   }
 
   public int read() throws IOException {
-    logger.debug3("Calling read");
     int kar = reader.read();
-    logger.debug3("Read called");
     if (kar == -1) {
-      logger.debug3("Reader is done");
       return kar;
     }
-    sb.append((char)kar);
-    return charToByte((char)kar);
+//     return charToByte((char)kar);
+    return (byte)kar;
   }
 
   public int read(byte[] outputBuf, int off, int len) throws IOException {
-    if (len > 1024) {
-      len = 1024;
+    if (len > bufsize) {
+      len = bufsize;
     }
     int numRead = reader.read(charBuffer, 0, len);
     for (int ix=0; ix<numRead; ix++) {
-      outputBuf[off+ix] = charToByte(charBuffer[ix]);
+//       outputBuf[off+ix] = charToByte(charBuffer[ix]);
+      outputBuf[off+ix] = (byte)charBuffer[ix];
     }
     return numRead;
   }

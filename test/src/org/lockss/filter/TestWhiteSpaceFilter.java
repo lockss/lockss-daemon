@@ -1,5 +1,5 @@
 /*
- * $Id: TestWhiteSpaceFilter.java,v 1.1 2003-09-02 20:12:12 troberts Exp $
+ * $Id: TestWhiteSpaceFilter.java,v 1.2 2004-04-05 07:58:01 tlipkis Exp $
  */
 
 /*
@@ -54,6 +54,13 @@ public class TestWhiteSpaceFilter extends LockssTestCase {
     assertEquals("Test test test test", inputStreamToString(is));
   }
 
+  // Ensure test buffer refill
+  public void testSmallBuffer() throws IOException {
+    String testString = "Test   test         test\n     test";
+    InputStream is = new WhiteSpaceFilter(new StringInputStream(testString),
+					  3);
+    assertEquals("Test test test test", inputStreamToString(is));
+  }
   
   private String inputStreamToString(InputStream is) throws IOException {
     StringBuffer sb = new StringBuffer();

@@ -1,5 +1,5 @@
 /*
- * $Id: GenericHasher.java,v 1.15 2003-06-20 22:34:50 claire Exp $
+ * $Id: GenericHasher.java,v 1.16 2004-04-05 07:58:02 tlipkis Exp $
  */
 
 /*
@@ -42,13 +42,14 @@ import org.lockss.plugin.*;
  * General class to handle content hashing
  */
 public abstract class GenericHasher implements CachedUrlSetHasher {
+  protected static Logger log = Logger.getLogger("GenericHasher");
+
   protected CachedUrlSet cus = null;
   protected MessageDigest digest = null;
-  private CachedUrlSetNode curElement = null;
+  protected CachedUrlSetNode curElement = null;
   protected Iterator iterator = null;
   protected boolean isFinished = false;
-  protected boolean shouldGetNextElement = true;
-  protected static Logger log = Logger.getLogger("GenericHasher");
+  protected boolean isTrace = log.isDebug3();
 
   protected GenericHasher(CachedUrlSet cus, MessageDigest digest) {
     if (digest == null) {
@@ -79,26 +80,23 @@ public abstract class GenericHasher implements CachedUrlSetHasher {
       return 0;
     }
 
-    if (log.isDebug3()) {
-      log.debug3(numBytes+" bytes left to hash in this step");
-    }
+    if (isTrace) log.debug3(numBytes+" bytes left to hash in this step");
 
     int totalBytesHashed = 0;
     while (bytesLeftToHash > 0) {
-      if (curElement == null || shouldGetNextElement) {
-	shouldGetNextElement = false;
+      if (curElement == null) {
 	curElement = getNextElement();
 	if (curElement != null) {
-	  log.debug3("Getting next element to hash");
+	  if (isTrace) log.debug3("Getting next element to hash");
 	}
 	else {
-	  log.debug3("No more elements to hash");
+	  if (isTrace) log.debug3("No more elements to hash");
 	  this.isFinished = true;
 	  return numBytes - bytesLeftToHash;
 	}
       }
       int numBytesHashed =
-	hashElementUpToNumBytes(curElement, bytesLeftToHash);
+	hashElementUpToNumBytes(bytesLeftToHash);
       bytesLeftToHash -= numBytesHashed;
       totalBytesHashed += numBytesHashed;
     }
@@ -108,8 +106,7 @@ public abstract class GenericHasher implements CachedUrlSetHasher {
   /*
    * Subclasses should override this to correctly hash the specified element
    */
-  protected abstract int hashElementUpToNumBytes(CachedUrlSetNode element, 
-						 int numBytes)
+  protected abstract int hashElementUpToNumBytes(int numBytes)
       throws IOException;
 
   protected CachedUrlSetNode getNextElement() {
