@@ -1,5 +1,5 @@
 /*
- * $Id: RegistryArchivalUnit.java,v 1.10 2004-10-26 00:31:48 smorabito Exp $
+ * $Id: RegistryArchivalUnit.java,v 1.11 2004-12-12 23:01:31 tlipkis Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import org.lockss.state.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
 import org.lockss.config.Configuration;
+import org.lockss.config.*;
 import org.lockss.crawler.*;
 
 /**
@@ -49,6 +50,23 @@ import org.lockss.crawler.*;
  */
 
 public class RegistryArchivalUnit extends BaseArchivalUnit {
+  /** The interval between recrawls of the loadable plugin
+      registry AUs.  */
+  static final String PARAM_REGISTRY_CRAWL_INTERVAL =
+    Configuration.PREFIX + "plugin.registries.crawlInterval";
+  static final long DEFAULT_REGISTRY_CRAWL_INTERVAL = Constants.DAY;
+
+  /** Limits fetch rate of registry crawls */
+  static final String PARAM_REGISTRY_FETCH_DELAY =
+    Configuration.PREFIX + "plugin.registries.fetchDelay";
+  static final long DEFAULT_REGISTRY_FETCH_DELAY = 500;
+
+  /** Delay after startup for registry treewalks.  Can be much longer than
+   * for normal AUs, as a crawl is automatically run on startup */
+  static final String PARAM_REGISTRY_TREEWALK_START =
+    Configuration.PREFIX + "plugin.registries.treewalk.start.delay";
+  static final long DEFAULT_REGISTRY_TREEWALK_START = 12 * Constants.HOUR;
+
   private String m_registryUrl = null;
   private int m_maxRefetchDepth = NewContentCrawler.DEFAULT_MAX_CRAWL_DEPTH;
   private List m_permissionCheckers = null;
@@ -67,6 +85,23 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
     // Now we can construct a valid CC permission checker.
     m_permissionCheckers =
       ListUtil.list(new CreativeCommonsPermissionChecker(m_registryUrl));
+
+    paramMap.putLong(TreeWalkManager.PARAM_TREEWALK_START_DELAY,
+		     ConfigManager
+		     .getTimeIntervalParam(PARAM_REGISTRY_TREEWALK_START,
+					   DEFAULT_REGISTRY_TREEWALK_START));
+    paramMap.putLong(AU_NEW_CRAWL_INTERVAL,
+		     ConfigManager
+		     .getTimeIntervalParam(PARAM_REGISTRY_CRAWL_INTERVAL,
+					   DEFAULT_REGISTRY_CRAWL_INTERVAL));
+    if (log.isDebug2()) {
+      log.debug2("Setting Registry AU recrawl interval to " +
+		 StringUtil.timeIntervalToString(paramMap.getLong(AU_NEW_CRAWL_INTERVAL)));
+    }
+    paramMap.putLong(AU_FETCH_DELAY,
+		     ConfigManager
+		     .getTimeIntervalParam(PARAM_REGISTRY_FETCH_DELAY,
+					   DEFAULT_REGISTRY_FETCH_DELAY));
   }
 
   /**
