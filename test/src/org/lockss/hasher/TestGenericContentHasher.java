@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericContentHasher.java,v 1.20 2003-09-26 23:49:02 eaalto Exp $
+ * $Id: TestGenericContentHasher.java,v 1.21 2004-01-17 00:14:35 troberts Exp $
  */
 
 /*
@@ -178,7 +178,8 @@ public class TestGenericContentHasher extends LockssTestCase {
     Vector files = new Vector();
     files.add(cu);
     MockCachedUrlSet cus = new MockCachedUrlSet(TEST_URL_BASE);
-    cus.addUrl(TEST_FILE_CONTENT+" base", TEST_URL_BASE, true, true);
+    cus.addUrl(TEST_URL_BASE, true, true);
+    cus.addContent(TEST_URL_BASE,  TEST_FILE_CONTENT+" base");
     cus.setHashItSource(files);
 
     byte[] bytes = getExpectedCusBytes(cus);
@@ -190,14 +191,16 @@ public class TestGenericContentHasher extends LockssTestCase {
 
   public void testHashConsistant() throws IOException {
     MockCachedUrlSet cus = makeFakeCachedUrlSet(3);
-    cus.addUrl("blah", TEST_URL_BASE, true, true);
+    cus.addUrl(TEST_URL_BASE, true, true);
+    cus.addContent(TEST_URL_BASE,  "blah");
     GenericContentHasher hasher = new GenericContentHasher(cus, dig);
 
     hashToEnd(hasher, 10);
 
     MockMessageDigest dig2 = new MockMessageDigest();
     cus = makeFakeCachedUrlSet(3);
-    cus.addUrl("blah", TEST_URL_BASE, true, true);
+    cus.addUrl(TEST_URL_BASE, true, true);
+    cus.addContent(TEST_URL_BASE,  "blah");
     hasher = new GenericContentHasher(cus, dig2);
 
     hashToEnd(hasher, 15);
@@ -208,7 +211,8 @@ public class TestGenericContentHasher extends LockssTestCase {
 
   public void testNoContentHashedDifferentThan0Content() throws IOException {
     MockCachedUrlSet cus = new MockCachedUrlSet(TEST_URL_BASE);
-    cus.addUrl("", TEST_URL_BASE, false, true);
+    cus.addUrl(TEST_URL_BASE, false, true);
+    cus.addContent(TEST_URL_BASE,  "");
     ArrayList list = new ArrayList(1);
     list.add(cus.makeCachedUrl(TEST_URL_BASE));
     cus.setHashItSource(list);
@@ -218,7 +222,8 @@ public class TestGenericContentHasher extends LockssTestCase {
 
     MockMessageDigest dig2 = new MockMessageDigest();
     cus = new MockCachedUrlSet(TEST_URL_BASE);
-    cus.addUrl("", TEST_URL_BASE, true, true);
+    cus.addUrl(TEST_URL_BASE, true, true);
+    cus.addContent(TEST_URL_BASE,  "");
     list = new ArrayList(1);
     list.add(cus.makeCachedUrl(TEST_URL_BASE));
     cus.setHashItSource(list);
@@ -239,7 +244,8 @@ public class TestGenericContentHasher extends LockssTestCase {
     Vector files = new Vector();
     files.add(cu);
     MockCachedUrlSet cus = new MockCachedUrlSet(TEST_URL_BASE);
-    cus.addUrl(TEST_FILE_CONTENT+" base", TEST_URL_BASE, true, true);
+    cus.addUrl(TEST_URL_BASE, true, true);
+    cus.addContent(TEST_URL_BASE,  TEST_FILE_CONTENT+" base");
     cus.setHashIterator(files.iterator());
 
     GenericContentHasher hasher = new GenericContentHasher(cus, dig);
@@ -260,7 +266,8 @@ public class TestGenericContentHasher extends LockssTestCase {
     Vector files = new Vector();
     files.add(cu);
     MockCachedUrlSet cus = new MockCachedUrlSet(TEST_URL_BASE);
-    cus.addUrl(TEST_FILE_CONTENT+" base", TEST_URL_BASE, true, true);
+    cus.addUrl(TEST_URL_BASE, true, true);
+    cus.addContent(TEST_URL_BASE,  TEST_FILE_CONTENT+" base");
     cus.setHashItSource(files);
 
     byte[] expectedBytes = getExpectedCusBytes(cus);
@@ -330,7 +337,8 @@ public class TestGenericContentHasher extends LockssTestCase {
     Vector files = new Vector(numFiles+1);
 
     MockCachedUrlSet cus = new MockCachedUrlSet(TEST_URL_BASE);
-    cus.addUrl(TEST_FILE_CONTENT+" base", TEST_URL_BASE, true, true);
+    cus.addUrl(TEST_URL_BASE, true, true);
+    cus.addContent(TEST_URL_BASE,  TEST_FILE_CONTENT+" base");
 
     for (int ix=0; ix < numFiles; ix++) {
       String url = TEST_URL+ix;

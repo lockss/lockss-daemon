@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.101 2004-01-12 06:22:55 tlipkis Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.102 2004-01-17 00:14:35 troberts Exp $
  */
 
 /*
@@ -1100,11 +1100,13 @@ public class TestNodeManagerImpl extends LockssTestCase {
         MockCachedUrlSet subMcus = new MockCachedUrlSet(mau,
             new RangeCachedUrlSetSpec(f_url));
         subBranches.add(subMcus);
-        subMcus.addUrl("test string" + ix, f_url);
+//         subMcus.addUrl("test string" + ix, f_url);
+        subMcus.addUrl(f_url);
         subMcus.setFlatItSource(new ArrayList());
         subMcus.setHashItSource(new ArrayList());
       }
-      mcus.addUrl("test string" + ib, b_url);
+//       mcus.addUrl("test string" + ib, b_url);
+      mcus.addUrl(b_url);
       mcus.setFlatItSource(subBranches);
       mcus.setHashItSource(subFiles);
       branches.add(mcus);
@@ -1112,7 +1114,8 @@ public class TestNodeManagerImpl extends LockssTestCase {
     MockCachedUrlSet cus = new MockCachedUrlSet(mau,
                                                 new RangeCachedUrlSetSpec(
         startUrl));
-    cus.addUrl("test string", startUrl);
+//     cus.addUrl("test string", startUrl);
+    cus.addUrl(startUrl);
     cus.setHashItSource(files);
     cus.setFlatItSource(branches);
     return cus;
@@ -1137,7 +1140,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
       treeV.addElement(treeIt.next());
     }
 
-    auCus.addUrl(null, AuUrl.PROTOCOL_COLON, false, false, null);
+    auCus.addUrl(AuUrl.PROTOCOL_COLON, false, false, null);
     auCus.setHashItSource(treeV);
     auCus.setFlatItSource(childV);
     return auCus;

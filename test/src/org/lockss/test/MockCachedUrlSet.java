@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrlSet.java,v 1.42 2004-01-09 01:15:53 troberts Exp $
+ * $Id: MockCachedUrlSet.java,v 1.43 2004-01-17 00:14:35 troberts Exp $
  */
 
 /*
@@ -253,6 +253,13 @@ public class MockCachedUrlSet implements CachedUrlSet {
 
   //methods used to generate proper mock objects
 
+  public void addContent(String url, String content) {
+    MockCachedUrl cu = (MockCachedUrl)makeCachedUrl(url);
+    if (cu != null) {
+      cu.setContent(content);
+    }
+  }
+
   /**
    * Sets up a cached url and url cacher for this url
    * @param source content to associate with this url
@@ -261,18 +268,18 @@ public class MockCachedUrlSet implements CachedUrlSet {
    * @param shouldCache whether this url should say to cache it or not
    * @param props Properties to be associated with this url
    */
-  public void addUrl(String source, String url,
+  public void addUrl(String url,
 		     boolean exists, boolean shouldCache,
 		     Properties props) {
-    addUrl(source, url, exists, shouldCache, props, null, 0);
+    addUrl(url, exists, shouldCache, props, null, 0);
   }
 
-  private void addUrl(String source, String url,
+  private void addUrl(String url,
 		      boolean exists, boolean shouldCache,
 		      Properties props, IOException cacheException,
 		      int timesToThrow) {
     MockCachedUrl cu = new MockCachedUrl(url);
-    cu.setContent(source);
+//     cu.setContent(source);
     cu.setProperties(props);
     cu.setExists(exists);
 
@@ -305,7 +312,7 @@ public class MockCachedUrlSet implements CachedUrlSet {
    */
   public void addUrl(String url,
 		     IOException cacheException, int timesToThrow) {
-    addUrl("", url, false, true, new Properties(),
+    addUrl(url, false, true, new Properties(),
 	   cacheException, timesToThrow);
   }
 
@@ -315,15 +322,15 @@ public class MockCachedUrlSet implements CachedUrlSet {
    * @param source the content
    * @param url the url
    */
-  public void addUrl(String source, String url) {
-    addUrl(source, url, false, true);
+  public void addUrl(String url) {
+    addUrl(url, false, true);
   }
 
-  public void addUrl(String source, String url,
+  public void addUrl(String url,
 		     boolean exists, boolean shouldCache) {
     Properties props = new Properties();
     props.setProperty("content-type", "text/html");
-    addUrl(source, url, exists, shouldCache, props);
+    addUrl(url, exists, shouldCache, props);
   }
 
   public String getUrl() {

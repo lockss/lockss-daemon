@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.32 2004-01-14 22:51:09 tlipkis Exp $
+ * $Id: TestPluginManager.java,v 1.33 2004-01-17 00:14:35 troberts Exp $
  */
 
 /*
@@ -448,7 +448,8 @@ public class TestPluginManager extends LockssTestCase {
     assertNull(mgr.findMostRecentCachedUrl(url1));
     CachedUrlSetSpec cuss = new MockCachedUrlSetSpec(prefix, null);
     MockCachedUrlSet mcuss = new MockCachedUrlSet(au1, cuss);
-    mcuss.addUrl("foo", url1, true, true, null);
+//     mcuss.addUrl("foo", url1, true, true, null);
+    mcuss.addUrl(url1, true, true, null);
     au1.setAuCachedUrlSet(mcuss);
     CachedUrl cu = mgr.findMostRecentCachedUrl(url1);
     assertNotNull(cu);
