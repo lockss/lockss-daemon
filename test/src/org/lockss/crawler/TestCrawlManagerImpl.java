@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.23 2003-06-26 00:19:10 troberts Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.24 2003-06-26 00:19:52 troberts Exp $
  */
 
 /*
@@ -222,7 +222,6 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     crawlManager.startNewContentCrawl(mau, cb, null);
     assertTrue("Crawl didn't start in 10 seconds", sem1.take(TEN_SECONDS));
     //we know that doCrawl started
-    TimerUtil.guaranteedSleep(2000);
 
     //if the callback was triggered, the crawl completed
     assertFalse("Callback was triggered", cb.wasTriggered());
