@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.73 2003-05-02 18:22:41 tal Exp $
+* $Id: Poll.java,v 1.74 2003-05-03 00:10:37 claire Exp $
  */
 
 /*
@@ -217,12 +217,13 @@ public abstract class Poll implements Serializable {
    * only interested in how long we have remaining.
    */
   void scheduleVote() {
-    long remainingTime = m_deadline.getRemainingTime();
-    long minTime = TimeBase.nowMs() + (remainingTime/2) - (remainingTime/4);
-    long maxTime = TimeBase.nowMs() + (remainingTime/2) + (remainingTime/4);
-    m_voteTime = Deadline.atRandomRange(minTime, maxTime);
-    log.debug("Waiting until " + m_voteTime.toString() + " to vote");
-    TimerQueue.schedule(m_voteTime, new VoteTimerCallback(), this);
+    if(m_voteTime.expired()) {
+      voteInPoll();
+    }
+    else {
+      log.debug("Waiting until " + m_voteTime.toString() + " to vote");
+      TimerQueue.schedule(m_voteTime, new VoteTimerCallback(), this);
+    }
   }
 
 
@@ -308,22 +309,52 @@ public abstract class Poll implements Serializable {
    * start the poll.
    */
   void startPoll() {
-    if(m_pollstate != PS_INITING)
+    if (m_pollstate != PS_INITING)
       return;
     log.debug3("scheduling poll to complete by " + m_deadline);
     TimerQueue.schedule(m_deadline, new PollTimerCallback(), this);
-    scheduleVote();
-
-    Deadline pt = Deadline.in(m_voteTime.getRemainingTime() - 1000);
-    MessageDigest hasher = getInitedHasher(m_challenge, m_verifier);
     m_pollstate = PS_WAIT_HASH;
-    if(!scheduleHash(hasher, pt, m_msg, new PollHashCallback())) {
+
+    if (!scheduleOurHash()) {
       m_pollstate = ERR_SCHEDULE_HASH;
-      log.debug("couldn't schedule our hash:" + pt.getExpirationTime()
-                + " stopping poll");
+      log.debug("couldn't schedule our hash:" + m_voteTime + ", stopping poll.");
       stopPoll();
       return;
     }
+  }
+
+  /**
+   * attempt to schedule our hash.  This will try 3 times to get a deadline
+   * that will is successfully scheduled
+   * @return boolean true if we sucessfully schedule hash; false otherwise.
+   */
+  boolean scheduleOurHash() {
+    MessageDigest hasher = getInitedHasher(m_challenge, m_verifier);
+
+    boolean scheduled = false;
+    long now = TimeBase.nowMs();
+    long remainingTime = m_deadline.getRemainingTime();
+    long minTime = now + (remainingTime / 2) - (remainingTime / 4);
+    long maxTime = now + (remainingTime / 2) + (remainingTime / 4);
+    long lastHashTime = now + (m_hashTime * (m_tally.quorum + 1));
+
+    for (int i = 0; !scheduled && i < 2; i++) {
+      m_voteTime = Deadline.atRandomRange(minTime, maxTime);
+      long curTime = m_voteTime.getExpirationTime();
+      log.debug3("Trying to schedule our hash at " + m_voteTime);
+      scheduled = scheduleHash(hasher, m_voteTime, m_msg, new PollHashCallback());
+      if (!scheduled) {
+        if (curTime < lastHashTime) {
+          maxTime += curTime - minTime;
+          minTime = curTime;
+        }
+        else {
+          log.debug("Unable to schedule our hash before " + lastHashTime);
+          break;
+        }
+      }
+    }
+    return scheduled;
   }
 
   /**
@@ -503,6 +534,7 @@ public abstract class Poll implements Serializable {
         log.debug2("Hash on " + urlset + " complete: "+
                   String.valueOf(B64Code.encode(m_hash)));
         m_pollstate = PS_WAIT_VOTE;
+        scheduleVote();
 
       }
       else {

@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.114 2003-05-01 00:56:29 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.115 2003-05-03 00:10:37 claire Exp $
  */
 
 /*
@@ -496,6 +496,17 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
       case PollState.REPAIRED:
         // if this is a poll with a range make sure we don't have
         // a lost poll lurking underneath this one.
+        if (lastHistory.getType() == Poll.CONTENT_POLL) {
+          if (shouldRecallLastPoll) {
+            if (lastHistory.lwrBound != null && lastHistory.uprBound != null) {
+              // look at the polls below this one for a range poll that failed
+              Iterator history_it = node.getPollHistories();
+              while(history_it.hasNext()) {
+                PollHistory history = (PollHistory) history_it.next();
+              }
+            }
+          }
+        }
         break;
       case PollState.LOST:
         // for name polls the important poll is just below this so it's

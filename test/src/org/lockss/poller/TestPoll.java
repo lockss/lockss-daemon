@@ -42,6 +42,7 @@ public class TestPoll extends LockssTestCase {
 
   protected void setUp() throws Exception {
     super.setUp();
+    TimeBase.setSimulated();
 
     initRequiredServices();
     initTestAddr();
@@ -57,6 +58,8 @@ public class TestPoll extends LockssTestCase {
     theDaemon.getHashService().stopService();
     theDaemon.getLockssRepositoryService().stopService();
     theDaemon.getRouterManager().stopService();
+    theDaemon.getSystemMetrics().stopService();
+    TimeBase.setReal();
     for(int i=0; i<3; i++) {
       pollmanager.removePoll(testmsg[i].getKey());
     }
@@ -186,6 +189,7 @@ public class TestPoll extends LockssTestCase {
     catch (IllegalStateException e) {
       // the socket isn't inited and should squack
     }
+    p.m_pollstate = Poll.PS_COMPLETE;
   }
 
   /** test for method voteInPoll(..) */
@@ -211,6 +215,25 @@ public class TestPoll extends LockssTestCase {
     catch (NullPointerException npe) {
       // the socket isn't inited and should squack
     }
+    p.m_pollstate = Poll.PS_COMPLETE;
+  }
+
+  public void testStartPoll() {
+    Poll p = testpolls[0];
+    p.startPoll();
+    assertEquals(Poll.PS_WAIT_HASH, p.m_pollstate);
+    p.m_pollstate = Poll.PS_COMPLETE;
+  }
+
+  public void testScheduleOurHash() {
+    Poll p = testpolls[0];
+    p.m_pollstate = Poll.PS_WAIT_HASH;
+    assertTrue(p.scheduleOurHash());
+    TimeBase.step(p.m_deadline.getRemainingTime()/2);
+    assertTrue(p.scheduleOurHash());
+    TimeBase.step(p.m_deadline.getRemainingTime()- 1000);
+    assertFalse(p.scheduleOurHash());
+    p.m_pollstate = Poll.PS_COMPLETE;
 
   }
 
@@ -233,6 +256,7 @@ public class TestPoll extends LockssTestCase {
     p.m_pendingVotes = 3;
     p.startVoteCheck();
     assertEquals(4, p.m_pendingVotes);
+    p.m_pollstate = Poll.PS_COMPLETE;
   }
 
   /** test for method stopVote(..) */
@@ -241,6 +265,7 @@ public class TestPoll extends LockssTestCase {
     p.m_pendingVotes = 3;
     p.stopVoteCheck();
     assertEquals(2, p.m_pendingVotes);
+    p.m_pollstate = Poll.PS_COMPLETE;
   }
 
   private NamePoll makeCompletedNamePoll(int numAgree,
@@ -318,6 +343,7 @@ public class TestPoll extends LockssTestCase {
     for(int i = 0; i < numDissenting; i++) {
       np.m_tally.addVote(np.makeVote(disagree_msg2, false), id, false);
     }
+    np.m_pollstate = Poll.PS_COMPLETE;
     np.m_tally.tallyVotes();
     return np;
   }
@@ -395,7 +421,7 @@ public class TestPoll extends LockssTestCase {
     theDaemon.getHashService().startService();
     theDaemon.getLockssRepositoryService().startService();
     theDaemon.getRouterManager().startService();
-
+    theDaemon.getSystemMetrics().startService();
     theDaemon.setNodeManagerService(new MockNodeManagerService());
     theDaemon.setNodeManager(new MockNodeManager(),testau);
     pollmanager.startService();
@@ -418,17 +444,19 @@ public class TestPoll extends LockssTestCase {
       testmsg = new LcapMessage[3];
 
       for(int i= 0; i<3; i++) {
+        CachedUrlSet cus = testau.makeCachedUrlSet(
+            new RangeCachedUrlSetSpec(rooturls[i], lwrbnd, uprbnd));
         PollSpec spec = new PollSpec(testau.getAUId(),
                                      rooturls[i],lwrbnd, uprbnd,
-                                     testau.makeCachedUrlSet(
-            new RangeCachedUrlSetSpec(rooturls[i], lwrbnd, uprbnd)));
+                                     cus);
+        int opcode = LcapMessage.NAME_POLL_REQ + (i * 2);
         testmsg[i] =  LcapMessage.makeRequestMsg(
           spec,
           agree_entries,
           pollmanager.generateRandomBytes(),
           pollmanager.generateRandomBytes(),
-          LcapMessage.NAME_POLL_REQ + (i * 2),
-          testduration,
+          opcode,
+          pollmanager.calcDuration(opcode,cus),
           testID);
       }
     }

@@ -36,6 +36,7 @@ public class TestPollManager extends LockssTestCase {
 
   protected void setUp() throws Exception {
     super.setUp();
+    TimeBase.setSimulated();
     initRequiredServices();
     initTestAddr();
     initTestMsg();
@@ -47,9 +48,7 @@ public class TestPollManager extends LockssTestCase {
     theDaemon.getHashService().stopService();
     theDaemon.getLockssRepositoryService().stopService();
     theDaemon.getRouterManager().stopService();
-    for(int i=0; i<3; i++) {
-      pollmanager.removePoll(testmsg[i].getKey());
-    }
+    TimeBase.setReal();
     super.tearDown();
   }
 

@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.91 2003-05-01 00:21:41 tal Exp $
+* $Id: PollManager.java,v 1.92 2003-05-03 00:10:37 claire Exp $
  */
 
 /*
@@ -76,6 +76,7 @@ public class PollManager  extends BaseLockssManager {
   static final long DEFAULT_REPLAY_EXPIRATION = DEFAULT_RECENT_EXPIRATION/2;
   static final long DEFAULT_VERIFY_EXPIRATION = Constants.DAY;
 
+  private static final long POLL_DURATION_MULTIPLIER = 4;
 
   private static PollManager theManager = null;
   private static Logger theLog=Logger.getLogger("PollManager");
@@ -86,6 +87,7 @@ public class PollManager  extends BaseLockssManager {
   private static HashService theHashService;
   private static LockssRandom theRandom = new LockssRandom();
   private static LcapRouter theRouter = null;
+  private static SystemMetrics theSystemMetrics = null;
 
   // our configuration variables
   private static long m_minContentPollDuration;
@@ -115,6 +117,8 @@ public class PollManager  extends BaseLockssManager {
     m_msgHandler =  new RouterMessageHandler();
     theRouter.registerMessageHandler(m_msgHandler);
 
+    // get System Metrics
+    theSystemMetrics = theDaemon.getSystemMetrics();
     // register our status
     StatusService statusServ = theDaemon.getStatusService();
     PollerStatus pStatus = new PollerStatus(this);
@@ -145,7 +149,8 @@ public class PollManager  extends BaseLockssManager {
     // null anything which might cause problems
     theIDManager = null;
     theHashService = null;
-
+    theSystemMetrics = null;
+    thePolls.clear();
     super.stopService();
   }
 
@@ -421,6 +426,10 @@ public class PollManager  extends BaseLockssManager {
    */
   void closeThePoll(String key)  {
     PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
+    if(pme== null || pme.poll == null) {
+      theLog.warning("Attempt to close unknown poll : " + key);
+      return;
+    }
     // mark the poll completed because if we need to call a repair poll
     // we don't want this one to be in conflict with it.
     PollTally tally = pme.poll.getVoteTally();
@@ -719,48 +728,42 @@ public class PollManager  extends BaseLockssManager {
 
       case LcapMessage.CONTENT_POLL_REQ:
       case LcapMessage.CONTENT_POLL_REP:
-	SystemMetrics metrics = SystemMetrics.getSystemMetrics();
-	theLog.debug3("Estimating time for a content poll on "+cus);
-        long estTime = cus.estimatedHashDuration();
-	theLog.debug3("It should take me this long to hash the content: "
-		      +estTime);
+        long slow_rate = theSystemMetrics.getSlowestHashSpeed();
         long my_rate;
-	try {
-	  my_rate = metrics.getBytesPerMsHashEstimate();
-	} catch (SystemMetrics.NoHashEstimateAvailableException e) {
-	  // if can't get my rate, use slowest rate to prevent adjustment
-	  theLog.warning("No hash estimate available, " +
-			 "not adjusting poll for slow machines");
-	  my_rate = metrics.getSlowestHashSpeed();
-	}
-        long slow_rate = metrics.getSlowestHashSpeed();
-	theLog.debug3("My hash speed is "+my_rate);
-	theLog.debug3("The slowest rate is "+slow_rate);
+        long estTime = cus.estimatedHashDuration();
+        theLog.debug3("Estimated hash duration : " + estTime);
+        try {
+          my_rate = theSystemMetrics.getBytesPerMsHashEstimate();
+        }
+        catch (SystemMetrics.NoHashEstimateAvailableException e) {
+          // if can't get my rate, use slowest rate to prevent adjustment
+          theLog.warning("No hash estimate available, " +
+                         "not adjusting poll for slow machines");
+          my_rate = slow_rate;
+        }
+        theLog.debug3("My hash speed is " + my_rate + ". Slow speed is " +
+                      slow_rate);
+
         if (my_rate > slow_rate) {
           estTime = estTime * my_rate / slow_rate;
-	  theLog.debug3("I've corrected the hash estimate to "+estTime);
+          theLog.debug3("I've corrected the hash estimate to " + estTime);
         }
-        ret = estTime * 2 * (quorum + 1);
-	theLog.debug3("I think the poll should take: "+ret);
-	
-	if (ret < m_minContentPollDuration) {
-	  theLog.error("My poll estimate ("+ret
-		       +") is too low, adjusting to the minimum: "
-		       +m_minContentPollDuration);
-	  ret = m_minContentPollDuration;
-	} else if (ret > m_maxContentPollDuration) {
-	  theLog.error("My poll estimate ("+ret
-		       +") is too high, adjusting to the maximum: "
-		       +m_maxContentPollDuration);
-	  ret = m_maxContentPollDuration;
-	}
+        ret = estTime * POLL_DURATION_MULTIPLIER * (quorum + 1);
+        theLog.debug3("I think the poll should take: " + ret);
 
-// 	theLog.debug3("Minimum content poll duration: "
-// 		      +m_minContentPollDuration);
-// 	theLog.debug3("Max content poll duration: "
-// 		      +m_maxContentPollDuration);
-//         ret = ret < m_minContentPollDuration ? m_minContentPollDuration :
-//             (ret > m_maxContentPollDuration ? m_maxContentPollDuration : ret);
+        if (ret < m_minContentPollDuration) {
+          theLog.info("My poll estimate (" + ret
+                       + ") is too low, adjusting to the minimum: "
+                       + m_minContentPollDuration);
+          ret = m_minContentPollDuration;
+        }
+        else if (ret > m_maxContentPollDuration) {
+          theLog.info("My poll estimate (" + ret
+                       + ") is too high, adjusting to the maximum: "
+                       + m_maxContentPollDuration);
+          ret = m_maxContentPollDuration;
+        }
+
         theLog.debug2("Content Poll duration: " +
                       StringUtil.timeIntervalToString(ret));
         break;
