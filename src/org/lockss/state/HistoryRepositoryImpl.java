@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.45 2004-02-07 06:52:48 eaalto Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.46 2004-02-11 23:50:14 eaalto Exp $
  */
 
 /*
@@ -136,6 +136,7 @@ public class HistoryRepositoryImpl
       logger.debug3("Loading state for CUS '" + cus.getUrl() + "'");
       NodeStateBean nsb = (NodeStateBean)load(fileName, NodeStateBean.class);
       if (nsb==null) {
+        logger.debug3("No node state file for node '"+cus.getUrl()+"'");
         return new NodeStateImpl(cus, -1,
                                  new CrawlState(-1, CrawlState.FINISHED, 0),
                                  new ArrayList(), this);
@@ -223,6 +224,7 @@ public class HistoryRepositoryImpl
           rootLocation + IDENTITY_AGREEMENT_FILE_NAME,
           IdentityAgreementList.class);
       if (idList==null) {
+        logger.debug2("No identities file for AU '"+storedAu.getName()+"'");
         return new ArrayList();
       }
       return idList.getList();
@@ -257,6 +259,7 @@ public class HistoryRepositoryImpl
       AuStateBean asb = (AuStateBean)load(rootLocation + AU_FILE_NAME,
           AuStateBean.class);
       if (asb==null) {
+        logger.debug2("No au state file for AU '"+storedAu.getName()+"'");
         return new AuState(storedAu, -1, -1, -1, null, this);
       }
       // does not load in an old treewalk time, so that one will be run
@@ -294,6 +297,7 @@ public class HistoryRepositoryImpl
       DamagedNodeSet damNodes = (DamagedNodeSet)load(
           rootLocation + DAMAGED_NODES_FILE_NAME, DamagedNodeSet.class);
       if (damNodes==null) {
+        logger.debug2("No damaged node file for AU '"+storedAu.getName()+"'");
         return new DamagedNodeSet(storedAu, this);
       }
       damNodes.theAu = storedAu;
