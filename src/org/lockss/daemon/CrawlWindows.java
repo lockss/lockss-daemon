@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlWindows.java,v 1.2 2003-10-24 07:40:25 eaalto Exp $
+ * $Id: CrawlWindows.java,v 1.3 2003-10-28 23:59:25 eaalto Exp $
  */
 
 /*
@@ -302,34 +302,19 @@ public class CrawlWindows {
     }
   }
 
-
   /**
-   * Base 'set' class for AND and OR (used by NOT).
+   * The 'AND' operation window.  It takes a set of CrawlWindows, which can be
+   * empty (returns true).  Otherwise, it does an 'AND' operation on their
+   * 'canCrawl()' functions.
    */
-  private static class WindowSet implements CrawlWindow {
+  public static class AND implements CrawlWindow {
     protected Set windows;
-    protected int type;
 
-    /** the 'AND' type operation */
-    static final int AND_TYPE = 0;
-    /** the 'OR' type operation */
-    static final int OR_TYPE = 1;
-    /** the 'NOT' type operation */
-    static final int NOT_TYPE = 2;
-
-    /**
-     * Create a window that matches against the given list of windows, with a
-     * particular boolean operation.
-     * @param windows set of {@link CrawlWindow}s
-     * @param type the type of operation
-     * @throws NullPointerException if the list is null.
-     */
-    public WindowSet(Set windows, int type) {
-      if (windows == null) {
-        throw new NullPointerException("CrawlWindows.WindowSet with null set");
+    public AND(Set windowSet) {
+      if (windowSet == null) {
+        throw new NullPointerException("CrawlWindows.AND with null set");
       }
-      this.windows = SetUtil.immutableSetOfType(windows, CrawlWindow.class);
-      this.type = type;
+      this.windows = SetUtil.immutableSetOfType(windowSet, CrawlWindow.class);
     }
 
     public boolean canCrawl() {
@@ -337,56 +322,17 @@ public class CrawlWindows {
     }
 
     public boolean canCrawl(Date serverDate) {
-      if (windows.size()==0) {
-        switch (type) {
-          case AND_TYPE:
-            // 'AND' with no arguments traditionally returns true
-            return true;
-          case OR_TYPE:
-          default:
-            return false;
+      for (Iterator iter = windows.iterator(); iter.hasNext(); ) {
+        CrawlWindow cw = (CrawlWindow)iter.next();
+        if (!cw.canCrawl(serverDate)) {
+          return false;
         }
       }
-
-      Iterator iter = windows.iterator();
-      while (iter.hasNext()) {
-        boolean match = ((CrawlWindow)iter.next()).canCrawl(serverDate);
-        switch (type) {
-          case NOT_TYPE:
-            // NOT only evaluates the first window
-            return !match;
-          case AND_TYPE:
-            // exit early if false found
-            if (!match) {
-              return false;
-            }
-            break;
-          case OR_TYPE:
-            // exit early if true found
-            if (match) {
-              return true;
-            }
-            break;
-        }
-      }
-
-      // if didn't exit previously, true for AND and false for OR
-      return (type==AND_TYPE);
+      return true;
     }
 
     public String toString() {
-      return "[CrawlWindows.WindowSet: type " + type +", "+ windows + "]";
-    }
-  }
-
-  /**
-   * The 'AND' operation window.  It takes a set of CrawlWindows, which can be
-   * empty (returns true).  Otherwise, it does an 'AND' operation on their
-   * 'canCrawl()' functions.
-   */
-  public static class AND extends WindowSet {
-    public AND(Set windowSet) {
-      super(windowSet, AND_TYPE);
+      return "[CrawlWindows.AND: " + windows + "]";
     }
   }
 
@@ -395,9 +341,32 @@ public class CrawlWindows {
    * empty (returns false).  Otherwise, it does an 'OR' operation on their
    * 'canCrawl()' functions.
    */
-  public static class OR extends WindowSet {
+  public static class OR implements CrawlWindow {
+    protected Set windows;
+
     public OR(Set windowSet) {
-      super(windowSet, OR_TYPE);
+      if (windowSet == null) {
+        throw new NullPointerException("CrawlWindows.OR with null set");
+      }
+      this.windows = SetUtil.immutableSetOfType(windowSet, CrawlWindow.class);
+    }
+
+    public boolean canCrawl() {
+      return canCrawl(TimeBase.nowDate());
+    }
+
+    public boolean canCrawl(Date serverDate) {
+      for (Iterator iter = windows.iterator(); iter.hasNext(); ) {
+        CrawlWindow cw = (CrawlWindow)iter.next();
+        if (cw.canCrawl(serverDate)) {
+          return true;
+        }
+      }
+      return false;
+    }
+
+    public String toString() {
+      return "[CrawlWindows.OR: " + windows + "]";
     }
   }
 
@@ -405,9 +374,26 @@ public class CrawlWindows {
    * The 'NOT' operation window.  It takes a single CrawlWindow, and does a
    * 'NOT' operation on its 'canCrawl()' function.
    */
-  public static class NOT extends WindowSet {
+  public static class NOT implements CrawlWindow {
+    CrawlWindow window;
+
     public NOT(CrawlWindow window) {
-      super(SetUtil.set(window), NOT_TYPE);
+      if (window == null) {
+        throw new NullPointerException("CrawlWindows.NOT with null window");
+      }
+      this.window = window;
+    }
+
+    public boolean canCrawl() {
+      return canCrawl(TimeBase.nowDate());
+    }
+
+    public boolean canCrawl(Date serverDate) {
+      return !window.canCrawl(serverDate);
+    }
+
+    public String toString() {
+      return "[CrawlWindows.NOT: " + window + "]";
     }
   }
 }
