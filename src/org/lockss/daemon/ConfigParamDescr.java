@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescr.java,v 1.18 2004-10-01 22:56:26 clairegriffin Exp $
+ * $Id: ConfigParamDescr.java,v 1.19 2004-10-05 00:31:58 clairegriffin Exp $
  */
 
 /*
@@ -365,8 +365,8 @@ public class ConfigParamDescr implements Comparable {
         String s_min = (String)((Vector)ret_val).firstElement();
         String s_max = (String)((Vector)ret_val).lastElement();
         try {
-          Long l_min = Long.getLong(s_min);
-          Long l_max = Long.getLong(s_max);
+          Long l_min = Long.valueOf(s_min);
+          Long l_max = Long.valueOf(s_max);
           if(l_min.compareTo(l_max) < 0) {
             ((Vector)ret_val).setElementAt(l_min, 0);
             ((Vector)ret_val).setElementAt(l_max, 1);

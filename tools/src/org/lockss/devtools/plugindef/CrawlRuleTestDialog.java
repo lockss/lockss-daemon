@@ -12,16 +12,13 @@ import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.ArchivalUnit.*;
+import org.lockss.util.*;
 
 /**
- * <p>Title: </p>
+ * <p>CrawlRuleTestDialog: </p>
  * <p>@author Claire Griffin</p>
  * <p>@version 1.0</p>
- * <p> </p>
- *  not attributable
- *
  */
-
 public class CrawlRuleTestDialog extends JDialog {
   EditableDefinablePlugin m_plugin;
   HashMap m_descrMap;
@@ -142,7 +139,9 @@ public class CrawlRuleTestDialog extends JDialog {
     for (Iterator it = m_descrMap.keySet().iterator(); it.hasNext(); ) {
       String key = (String) it.next();
       String value = ( (JTextField) m_descrMap.get(key)).getText();
-      props.put(key, value);
+      if(!StringUtil.isNullString(value)) {
+        props.put(key, value);
+      }
     }
     Configuration config = ConfigManager.fromProperties(props);
     ArchivalUnit au = null;

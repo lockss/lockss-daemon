@@ -1,5 +1,5 @@
 /*
- * $Id: ExternalizableMap.java,v 1.13 2004-09-01 23:36:50 clairegriffin Exp $
+ * $Id: ExternalizableMap.java,v 1.14 2004-10-05 00:31:58 clairegriffin Exp $
  */
 
 /*
@@ -56,13 +56,19 @@ public class ExternalizableMap extends TypedEntryMap {
       "/org/lockss/util/externalmap.xml";
   private static Logger logger = Logger.getLogger("ExternalizableMap");
   XmlMarshaller marshaller = new XmlMarshaller();
+  private String loadErr = "";
+
+  public String getLoadErr() {
+    return loadErr;
+  }
 
   public void loadMapFromResource(String mapLocation, ClassLoader loader)
       throws FileNotFoundException {
+    loadErr = null;
     InputStream mapStream = loader.getResourceAsStream(mapLocation);
     if (mapStream == null) {
-      String err = "Unable to load:" + mapLocation;
-      throw new FileNotFoundException(err);
+      loadErr = "Unable to load:" + mapLocation;
+      throw new FileNotFoundException(loadErr);
     }
     try {
       Reader reader = new BufferedReader(new InputStreamReader(mapStream));
@@ -75,16 +81,19 @@ public class ExternalizableMap extends TypedEntryMap {
     }
     catch (XmlMarshaller.MarshallingException me) {
       // we have a damaged file
-      throw new FileNotFoundException("Damaged XML file: " + me.toString());
+      loadErr = "Exception parsing XML file: " + me.toString();
+      throw new FileNotFoundException(loadErr);
     }
     catch (Exception e) {
       // some other error occured
       e.printStackTrace();
-      throw new FileNotFoundException("Error: " + e.toString());
+      loadErr = "Exception Loading XML file: " + e.toString();
+      throw new FileNotFoundException(loadErr);
     }
   }
 
   public void loadMap(String mapLocation, String mapName, String mapFileName) {
+    loadErr = null;
     String mapFile = mapLocation + File.separator + mapName;
     try {
       ExtMapBean em;
@@ -97,14 +106,17 @@ public class ExternalizableMap extends TypedEntryMap {
       m_map = em.getMap();
    } catch (XmlMarshaller.MarshallingException me) {
       // we have a damaged file
-      logger.error(me.toString());
+      loadErr = "Exception parsing XML file: " + me.toString();
+      logger.error(loadErr);
     } catch (Exception e) {
       // some other error occured
-      logger.error(e.toString());
+      loadErr = "Exception Loading XML file: " + e.toString();
+      logger.error(loadErr);
     }
   }
 
   public void storeMap(String mapLocation, String mapName, String mapFileName) {
+    loadErr = null;
     try {
       mapFileName = mapFileName == null ? MAPPING_FILE_NAME : mapFileName;
       ExtMapBean em = new ExtMapBean(m_map);
@@ -112,7 +124,8 @@ public class ExternalizableMap extends TypedEntryMap {
 
     }
     catch (Exception e) {
-      logger.error("Couldn't store map: ", e);
+      loadErr = "Exception storing map : " + e.toString();
+      logger.error(loadErr);
     }
   }
 

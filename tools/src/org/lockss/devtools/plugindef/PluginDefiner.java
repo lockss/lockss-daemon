@@ -1,5 +1,5 @@
 /*
- * $Id: PluginDefiner.java,v 1.8 2004-09-28 00:50:37 clairegriffin Exp $
+ * $Id: PluginDefiner.java,v 1.9 2004-10-05 00:31:58 clairegriffin Exp $
  */
 
 /*
@@ -243,9 +243,15 @@ public class PluginDefiner extends JFrame {
       name = jFileChooser1.getSelectedFile().getName();
       location = jFileChooser1.getSelectedFile().getParent();
       edp = new EditableDefinablePlugin();
-      edp.loadMap(location, name);
-      // update the table
-      inspectorModel.setPluginData(edp);
+      try {
+        edp.loadMap(location, name);
+        // update the table
+        inspectorModel.setPluginData(edp);
+      }
+      catch (Exception ex) {
+        JOptionPane.showMessageDialog(this,ex.toString(),"Load File Error",
+                                      JOptionPane.ERROR_MESSAGE);
+      }
     }
   }
 
@@ -262,14 +268,19 @@ public class PluginDefiner extends JFrame {
         name = name + ".xml";
       }
     }
-
     // write the file
-    edp.writeMap(location, name);
+    try {
+      edp.writeMap(location, name);
+    }
+    catch (Exception ex) {
+      JOptionPane.showMessageDialog(this,ex.toString(),"Write File Error",
+                                    JOptionPane.ERROR_MESSAGE);
+    }
   }
 
   void jMenuFileNew_actionPerformed(ActionEvent e) {
     if(edp != null && edp.getMapName() != null) {
-      edp.writeMap(location, name);
+      checkSaveFile();
     }
     edp = new EditableDefinablePlugin();
     name = null;
@@ -280,8 +291,8 @@ public class PluginDefiner extends JFrame {
     if(edp != null) {
       int option =
           JOptionPane.showConfirmDialog(this,
-                                        "Save current plugin before exiting?",
-                                        "Exit Plugin Definer",
+                                        "Save current plugin?",
+                                        "Close Plugin ",
                                         JOptionPane.YES_NO_OPTION);
       if(option == JOptionPane.YES_OPTION) {
         if (edp.getMapName() == null) {
@@ -295,7 +306,13 @@ public class PluginDefiner extends JFrame {
             name = name + ".xml";
           }
         }
-        edp.writeMap(location, name);
+        try {
+          edp.writeMap(location, name);
+        }
+        catch (Exception ex) {
+          JOptionPane.showMessageDialog(this,ex.toString(),"Write File Error",
+                                        JOptionPane.ERROR_MESSAGE);
+        }
       }
     }
   }

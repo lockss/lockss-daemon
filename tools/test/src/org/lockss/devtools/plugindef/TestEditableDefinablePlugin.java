@@ -1,5 +1,5 @@
 /*
- * $Id: TestEditableDefinablePlugin.java,v 1.5 2004-10-01 22:56:29 clairegriffin Exp $
+ * $Id: TestEditableDefinablePlugin.java,v 1.6 2004-10-05 00:31:59 clairegriffin Exp $
  */
 
 /*
@@ -211,7 +211,7 @@ public class TestEditableDefinablePlugin
     assertIsomorphic("+ user defined", set, actualReturn);
   }
 
-  public void testLoadAndWriteMap() {
+  public void testLoadAndWriteMap() throws Exception {
     String name = "edMap";
     // load the configuration map from jar file
     String mapFile = name.replace('.', '/') + ".xml";

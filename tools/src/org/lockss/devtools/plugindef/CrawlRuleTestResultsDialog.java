@@ -7,6 +7,7 @@ import org.lockss.devtools.*;
 import javax.swing.text.*;
 import org.lockss.util.*;
 import java.awt.event.*;
+import java.beans.*;
 
 /**
  * <p>Title: </p>
@@ -77,7 +78,9 @@ public class CrawlRuleTestResultsDialog extends JDialog {
   public CrawlRuleTestResultsDialog(ArchivalUnit au) {
     this();
     m_au = au;
-    startUrlTextField.setText((String)m_au.getNewContentCrawlUrls().get(0));
+    String startUrl = (String)m_au.getNewContentCrawlUrls().get(0);
+    startUrlTextField.setText(startUrl);
+    checkButton.setEnabled(!StringUtil.isNullString(startUrl));
   }
 
   private void jbInit() throws Exception {
@@ -95,7 +98,9 @@ public class CrawlRuleTestResultsDialog extends JDialog {
     startUrlTextField.setMinimumSize(new Dimension(200, 19));
     startUrlTextField.setPreferredSize(new Dimension(290, 19));
     startUrlTextField.setToolTipText("Enter URL from which to start check.");
-    startUrlTextField.setText("http://");
+    startUrlTextField.setText("");
+    startUrlTextField.addKeyListener(new CrawlRuleTestResultsDialog_startUrlTextField_keyAdapter(this));
+
     infoPanel.setMinimumSize(new Dimension(300, 80));
     infoPanel.setPreferredSize(new Dimension(400, 90));
     infoPanel.setLayout(gridBagLayout1);
@@ -152,6 +157,13 @@ public class CrawlRuleTestResultsDialog extends JDialog {
 
   void checkButton_actionPerformed(ActionEvent e) {
     String startUrl = startUrlTextField.getText();
+    if(StringUtil.isNullString(startUrl)){
+      JOptionPane.showMessageDialog(this,
+                                    "Missing starting url.",
+                                    "CrawlRule TestError",
+                                    JOptionPane.ERROR_MESSAGE);
+      return;
+    }
     int depth = Integer.parseInt(depthTextField.getText());
     long delay = Integer.parseInt(delayTextField.getText()) * Constants.SECOND;
     outputTextPane.setText("");
@@ -177,6 +189,13 @@ public class CrawlRuleTestResultsDialog extends JDialog {
     setVisible(false);
   }
 
+  void startUrlTextField_keyReleased(KeyEvent e) {
+    String startUrl = startUrlTextField.getText();
+    boolean has_startUrl = !StringUtil.isNullString(startUrl);
+    checkButton.setEnabled(has_startUrl);
+
+  }
+
   private class myMessageHandler implements CrawlRuleTester.MessageHandler {
     /**
      * outputMessage
@@ -195,5 +214,17 @@ public class CrawlRuleTestResultsDialog extends JDialog {
         ex.printStackTrace();
       }
     }
+  }
+
+}
+
+class CrawlRuleTestResultsDialog_startUrlTextField_keyAdapter extends java.awt.event.KeyAdapter {
+  CrawlRuleTestResultsDialog adaptee;
+
+  CrawlRuleTestResultsDialog_startUrlTextField_keyAdapter(CrawlRuleTestResultsDialog adaptee) {
+    this.adaptee = adaptee;
+  }
+  public void keyReleased(KeyEvent e) {
+    adaptee.startUrlTextField_keyReleased(e);
   }
 }
