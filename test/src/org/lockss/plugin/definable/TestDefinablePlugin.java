@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinablePlugin.java,v 1.6 2004-09-21 21:24:59 dshr Exp $
+ * $Id: TestDefinablePlugin.java,v 1.7 2004-09-22 00:16:07 troberts Exp $
  */
 
 /*
@@ -173,11 +173,11 @@ public class TestDefinablePlugin extends LockssTestCase {
   public void testInstallCacheExceptionHandler() {
     DefinablePlugin plugin = new DefinablePlugin();
     ExternalizableMap map = plugin.getDefinitionMap();
-    String name = new MyMockHttpResultHandler().getClass().getName();
+    String name = new MockHttpResultHandler().getClass().getName();
     // test using a special class
     map.putString(DefinablePlugin.CM_EXCEPTION_HANDLER_KEY,name);
     plugin.installCacheExceptionHandler();
-    assertTrue(plugin.getCacheResultHandler() instanceof MyMockHttpResultHandler);
+    assertTrue(plugin.getCacheResultHandler() instanceof MockHttpResultHandler);
 
   }
 
@@ -200,18 +200,18 @@ public class TestDefinablePlugin extends LockssTestCase {
     assertEquals(expected, found);
   }
 
-  static public class MyMockHttpResultHandler implements CacheResultHandler {
-   public MyMockHttpResultHandler() {
-   }
+//   static public class MyMockHttpResultHandler implements CacheResultHandler {
+//    public MyMockHttpResultHandler() {
+//    }
 
-   public void init(CacheResultMap crmap) {
-     ((HttpResultMap)crmap).storeMapEntry(200, this.getClass());
-   }
+//    public void init(CacheResultMap crmap) {
+//      ((HttpResultMap)crmap).storeMapEntry(200, this.getClass());
+//    }
 
-   public CacheException handleResult(int code,
-                                      LockssUrlConnection connection) {
-     return null;
-   }
+//    public CacheException handleResult(int code,
+//                                       LockssUrlConnection connection) {
+//      return null;
+//    }
 
- }
+//  }
 }
