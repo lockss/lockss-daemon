@@ -18,7 +18,7 @@ public class CrawlRuleTester extends Thread {
   public static final int TEST_SUMMARY_MESSAGE = 4;
 
   public static long DEFAULT_DELAY =
-      BaseArchivalUnit.DEFAULT_MILLISECONDS_BETWEEN_CRAWL_HTTP_REQUESTS;
+      BaseArchivalUnit.DEFAULT_FETCH_DELAY;
 
   private String m_baseUrl;
   private CrawlSpec m_crawlSpec;

@@ -1,5 +1,5 @@
 /*
- * $Id: EditableDefinablePlugin.java,v 1.11 2004-10-23 01:38:22 clairegriffin Exp $
+ * $Id: EditableDefinablePlugin.java,v 1.12 2005-02-14 03:31:29 tlipkis Exp $
  */
 
 /*
@@ -328,7 +328,7 @@ public class EditableDefinablePlugin
 
   public long getAuPauseTime() {
     return definitionMap.getLong(AU_PAUSE_TIME,
-            DefinableArchivalUnit.DEFAULT_MILLISECONDS_BETWEEN_CRAWL_HTTP_REQUESTS);
+            DefinableArchivalUnit.DEFAULT_FETCH_DELAY);
   }
 
   public void removeAuPauseTime() {

@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.26 2005-02-02 09:42:28 tlipkis Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.27 2005-02-14 03:31:30 tlipkis Exp $
  */
 
 /*
@@ -147,7 +147,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     }
     // override any defaults
     defaultFetchDelay = definitionMap.getLong(AU_DEFAULT_PAUSE_TIME,
-        DEFAULT_MILLISECONDS_BETWEEN_CRAWL_HTTP_REQUESTS);
+        DEFAULT_FETCH_DELAY);
 
     defaultContentCrawlIntv = definitionMap.getLong(AU_DEFAULT_NC_CRAWL_KEY,
         DEFAULT_NEW_CONTENT_CRAWL_INTERVAL);
