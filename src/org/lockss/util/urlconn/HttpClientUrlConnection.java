@@ -1,5 +1,5 @@
 /*
- * $Id: HttpClientUrlConnection.java,v 1.8.2.4 2004-03-27 05:52:46 tlipkis Exp $
+ * $Id: HttpClientUrlConnection.java,v 1.8.2.5 2004-03-27 06:20:29 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -33,6 +33,7 @@ package org.lockss.util.urlconn;
 import java.io.*;
 import java.util.*;
 import org.lockss.util.*;
+import org.lockss.daemon.*;
 import org.apache.commons.httpclient.*;
 import org.apache.commons.httpclient.methods.*;
 import org.apache.commons.httpclient.util.*;
@@ -277,9 +278,17 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     return (header != null) ? header.getValue() : null;
   }
 
+  static final String PARAM_DISABLE_WRAPPER_STREAM =
+    Configuration.PREFIX + "urlconn.disableWrapperStream";
+  static final boolean DEFAULT_DISABLE_WRAPPER_STREAM = false;
+
   public InputStream getResponseInputStream() throws IOException {
     assertExecuted();
     InputStream in = method.getResponseBodyAsStream();
+    if (Configuration.getBooleanParam(PARAM_DISABLE_WRAPPER_STREAM,
+				      DEFAULT_DISABLE_WRAPPER_STREAM)) {
+      return in;
+    }
     if (in == null) {
       return null;
     }

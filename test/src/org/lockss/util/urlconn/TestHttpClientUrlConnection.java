@@ -1,5 +1,5 @@
 /*
- * $Id: TestHttpClientUrlConnection.java,v 1.4.2.3 2004-03-27 05:52:46 tlipkis Exp $
+ * $Id: TestHttpClientUrlConnection.java,v 1.4.2.4 2004-03-27 06:20:29 tlipkis Exp $
  */
 
 /*
@@ -203,6 +203,8 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     assertTrue(conn.isExecuted());
     assertEquals(200, conn.getResponseCode());
     InputStream is = conn.getResponseInputStream();
+    assertTrue(is instanceof
+	       HttpClientUrlConnection.EofMonitoringInputStream);
     String res = StringUtil.fromInputStream(is);
     assertEquals(test, res);
     assertEquals(0, is.available());
@@ -217,6 +219,21 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     assertTrue(conn.isExecuted());
     assertEquals(200, conn.getResponseCode());
     assertNull(conn.getResponseInputStream());
+  }
+
+  public void testResponseStreamNoWrapper() throws Exception {
+    ConfigurationUtil.setFromArgs(HttpClientUrlConnection.
+				  PARAM_DISABLE_WRAPPER_STREAM, "true");
+    client.setRes(200, 200);
+    String test = "foo123";
+    StringInputStream sis = new StringInputStream(test);
+    method.setResponseStream(sis);
+    conn.execute();
+    assertTrue(conn.isExecuted());
+    assertEquals(200, conn.getResponseCode());
+    InputStream is = conn.getResponseInputStream();
+    assertFalse(is instanceof
+		HttpClientUrlConnection.EofMonitoringInputStream);
   }
 
   public void testExecuteProxy() throws Exception {
@@ -518,6 +535,4 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
       methods.add(nextMethod);
     }
   }
-
-
 }
