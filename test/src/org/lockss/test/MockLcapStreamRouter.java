@@ -1,5 +1,5 @@
 /*
- * $Id: MockLcapStreamRouter.java,v 1.1.2.1 2004-09-30 01:06:33 dshr Exp $
+ * $Id: MockLcapStreamRouter.java,v 1.1.2.2 2004-10-27 14:55:48 dshr Exp $
  */
 
 /*
@@ -30,7 +30,8 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.protocol;
+package org.lockss.test;
+import org.lockss.protocol.*;
 import java.util.*;
 import java.io.IOException;
 import org.lockss.app.*;
@@ -51,14 +52,19 @@ public class MockLcapStreamRouter extends LcapStreamRouter
 
   boolean goOn = false;
   Thread myThread = null;
-  FifoQueue theReceiveQueue = null;
-  FifoQueue theSendQueue = null;
+  FifoQueue myReceiveQueue = null;
+  FifoQueue mySendQueue = null;
+
+  public MockLcapStreamRouter(FifoQueue recv, FifoQueue send) {
+    myReceiveQueue = recv;
+    mySendQueue = send;
+  }
 
 
   public void startService() {
-    super.startService();
-    theReceiveQueue = new FifoQueue();
-    theSendQueue = new FifoQueue();
+    if (false) {
+      super.startService();
+    }
     goOn = true;
     myThread = new Thread(this);
     myThread.start();
@@ -67,10 +73,12 @@ public class MockLcapStreamRouter extends LcapStreamRouter
   public void stopService() {
     goOn = false;
     // XXX wake up myThread
-    super.stopService();
+    if (false) {
+      super.stopService();
+    }
     myThread = null;
-    theReceiveQueue = null;
-    theSendQueue = null;
+    myReceiveQueue = null;
+    mySendQueue = null;
   }
 
   public void run() {
@@ -78,7 +86,7 @@ public class MockLcapStreamRouter extends LcapStreamRouter
     while (goOn) {
       Deadline dl = Deadline.in(10000);
       try {
-	msg = (LcapMessage) theReceiveQueue.get(dl);
+	msg = (LcapMessage) myReceiveQueue.get(dl);
       } catch (InterruptedException ex) {
 	// No action intended
       }
@@ -93,7 +101,7 @@ public class MockLcapStreamRouter extends LcapStreamRouter
    */
   
   public void receiveMessage(LcapMessage msg) {
-    theReceiveQueue.put(msg);
+    myReceiveQueue.put(msg);
   }
 
   /** Simulate unicasting a message to a single cache.
@@ -105,9 +113,17 @@ public class MockLcapStreamRouter extends LcapStreamRouter
    */
   public void sendTo(LcapMessage msg, ArchivalUnit au, PeerIdentity id)
       throws IOException {
-    log.debug2("sendTo(" + msg + ", " + id + ")");
-    theSendQueue.put(msg);
-    origRateLimiter.event();
+    mySendQueue.put(msg);
+    if (origRateLimiter != null) {
+      origRateLimiter.event();
+    }
+  }
+
+  public FifoQueue getReceiveQueue() {
+    return myReceiveQueue;
+  }
+  public FifoQueue getSendQueue() {
+    return mySendQueue;
   }
 
 }
