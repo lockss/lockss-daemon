@@ -12,12 +12,12 @@ org.lockss.cache.location=.
 
 #test settings
 org.lockss.test.treewalk=true
-org.lockss.treewalk.auId=/tmp/localA
+org.lockss.treewalk.auId=localA
 
 org.lockss.test.poll=true
 org.lockss.poll.type=2
 org.lockss.pollspec.pluginId=org|lockss|plugin|simulated|SimulatedPlugin
-org.lockss.pollspec.auId=/tmp/localA
+org.lockss.pollspec.auId=localA
 org.lockss.pollspec.url=LOCKSSAU:
 #org.lockss.pollspec.lwrBound=
 #org.lockss.pollspec.uprBound=

@@ -1,5 +1,6 @@
 # LOCKSS & LCAP tuning parameters
 org.lockss.log.default.level=info
+org.lockss.log.PollManager.level=debug
 org.lockss.log.Poll.level=debug
 org.lockss.log.Comm.level=debug
 org.lockss.log.NodeManager.level=debug
@@ -10,10 +11,10 @@ org.lockss.log.USock_9001_Rcv.level=debug
 org.lockss.log.USock_9000_Rcv.level=debug
 
 #au config settings
-org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin./tmp/localA.root=./
-#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.<dir>.depth=<n>
-#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.<dir>.branch=<n>
-#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.<dir>.numFiles=<n>
+org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.localA.root=localA
+org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.localA.depth=2
+org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.localA.branch=2
+#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.localA.numFiles=3
 #org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.<dir>.binFileSize=<n>
 #org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.<dir>.maxFileName=<n>
 #org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.<dir>.fileTypes=<n>

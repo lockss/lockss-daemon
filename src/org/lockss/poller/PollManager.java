@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.35 2003-02-27 04:04:28 tal Exp $
+* $Id: PollManager.java,v 1.36 2003-03-01 00:01:51 claire Exp $
  */
 
 /*
@@ -142,7 +142,7 @@ public class PollManager  implements LockssManager {
     long duration = calcDuration(opcode, cus);
     byte[] challenge = makeVerifier();
     byte[] verifier = makeVerifier();
-    IdentityManager idmgr = theDaemon.getIdentityManager();    
+    IdentityManager idmgr = theDaemon.getIdentityManager();
     LcapMessage msg =
       LcapMessage.makeRequestMsg(pollspec,
 				 null,
@@ -226,7 +226,7 @@ public class PollManager  implements LockssManager {
 
     // check for presence of item in the cache
     cus = spec.getCachedUrlSet();
-
+    theLog.debug("making poll from: " + spec);
     if(cus == null) {
       theLog.debug(msg.getTargetUrl() + " not in this cache.");
       return null;
