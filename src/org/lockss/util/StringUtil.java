@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.41 2004-06-10 22:03:55 tyronen Exp $
+ * $Id: StringUtil.java,v 1.42 2004-07-12 06:26:15 tlipkis Exp $
  */
 
 /*
@@ -47,53 +47,54 @@ import gnu.regexp.*;
 public class StringUtil {
 
   /**
-   * Replace all occurances of oldstr in line with newstr
-   * @param line string to be modified
+   * Replace all occurances of oldstr in source with newstr
+   * @param source string to be modified
    * @param oldstr string to be replace
    * @param newstr string to replace oldstr
    * @return new string with oldstr replaced by newstr
    */
-  public static String replaceString(String line,
+  public static String replaceString(String source,
 				     String oldstr, String newstr) {
     int oldLen = oldstr.length();
     if (oldLen == 0 || oldstr.equals(newstr)) {
-      return line;
+      return source;
     }
-    int thisIdx = line.indexOf(oldstr);
+    int thisIdx = source.indexOf(oldstr);
     if (thisIdx < 0) {
-      return line;
+      return source;
     }
-    int lineLen = line.length();
-    StringBuffer sb = new StringBuffer(lineLen);
+    int sourceLen = source.length();
+    StringBuffer sb = new StringBuffer(sourceLen);
     int oldIdx = 0;
     do {
       for (int ix = oldIdx; ix < thisIdx; ix++) {
-	sb.append(line.charAt(ix));
+	sb.append(source.charAt(ix));
       }
       sb.append(newstr);
       oldIdx = thisIdx + oldLen;
-    } while ((thisIdx = line.indexOf(oldstr, oldIdx)) >= 0);
-    for (int ix = oldIdx; ix < lineLen; ix++) {
-      sb.append(line.charAt(ix));
+    } while ((thisIdx = source.indexOf(oldstr, oldIdx)) >= 0);
+    for (int ix = oldIdx; ix < sourceLen; ix++) {
+      sb.append(source.charAt(ix));
     }
     return sb.toString();
   }
 
-  public static String replaceFirst(String line, String oldstr, String newstr) {
+  public static String replaceFirst(String source,
+				    String oldstr, String newstr) {
     int oldLen = oldstr.length();
     if (oldLen == 0 || oldstr.equals(newstr)) {
-      return line;
+      return source;
     }
-    int index = line.indexOf(oldstr);
+    int index = source.indexOf(oldstr);
     if (index < 0) {
-      return line;
+      return source;
     } else {
-      int lineLen = line.length();
-      StringBuffer sb = new StringBuffer(lineLen);
-      sb.append(line.substring(0, index));
+      int sourceLen = source.length();
+      StringBuffer sb = new StringBuffer(sourceLen);
+      sb.append(source.substring(0, index));
       sb.append(newstr);
-      if (index + oldLen < lineLen) {
-        sb.append(line.substring(index + oldLen));
+      if (index + oldLen < sourceLen) {
+        sb.append(source.substring(index + oldLen));
       }
       return sb.toString();
     }
