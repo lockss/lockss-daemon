@@ -1,5 +1,5 @@
 /*
- * $Id: LcapComm.java,v 1.20 2003-03-21 19:40:52 tal Exp $
+ * $Id: LcapComm.java,v 1.21 2003-03-21 20:44:43 tal Exp $
  */
 
 /*
@@ -234,6 +234,7 @@ public class LcapComm implements LockssManager {
     if (uniSendToPort < 0) {
       throw new IllegalStateException("Unicast port not configured");
     }
+    log.debug("sendTo(" + ld + ", " + id + ")");
     sendTo(ld,
 	   (uniSendToAddr == null ? id.getAddress() : uniSendToAddr),
 	   uniSendToPort);
