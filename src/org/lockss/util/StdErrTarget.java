@@ -29,6 +29,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 
 import java.text.*;
+import java.io.PrintStream;
 import java.util.Date;
 
 /** A <code>LogTarget</code> implementation that outputs to System.err
@@ -37,6 +38,20 @@ public class StdErrTarget implements LogTarget {
 //    static final DateFormat df = DateFormat.getTimeInstance();
   static final DateFormat df = new SimpleDateFormat("HH:mm:ss.SSS");
 
+  private static long lastTimestamp = 0;
+
+  private PrintStream stream;
+
+  /** Create a log target that outputs to System.err */
+  public StdErrTarget() {
+    this(System.err);
+  }
+
+  /** Create a log target that outputs to the supplied PrintStream */
+  StdErrTarget(PrintStream toStream) {
+    this.stream = toStream;
+  }
+
   public void init() {
   }
 
@@ -44,11 +59,22 @@ public class StdErrTarget implements LogTarget {
   // println will probably not get interleaved with another thread.
   // If need to explicitly synchronize, do so on the class, not instance,
   // as there could be multiple instances of this.  (Even that's not right,
-  // as it should synchronize with all other uses of System.err)
+  // as it should synchronize with all other uses of the stream)
 
-/** A <code>LogTarget</code> implementation that outputs to System.err
- */
+  /** Write the message to stdout, prefaced by a timestamp if more than one
+   * day has passed since the last timestamp
+   */
   public void handleMessage(Logger log, int msgLevel, String message) {
+    if (TimeBase.msSince(lastTimestamp) >= Constants.DAY &&
+	!TimeBase.isSimulated()) {
+      lastTimestamp = TimeBase.nowMs();
+      writeMessage(log, "Timestamp", TimeBase.nowDate().toString());
+    }
+    writeMessage(log, log.nameOf(msgLevel), message);
+  }
+
+  /** Write the message to stdout */
+  void writeMessage(Logger log, String msgLevel, String message) {
     StringBuffer sb = new StringBuffer();
     sb.append(df.format(new Date()));
     if (TimeBase.isSimulated()) {
@@ -57,9 +83,9 @@ public class StdErrTarget implements LogTarget {
       sb.append(")");
     }
     sb.append(": ");
-    sb.append(log.nameOf(msgLevel));
+    sb.append(msgLevel);
     sb.append(": ");
     sb.append(message);
-    System.err.println(sb.toString());
+    stream.println(sb.toString());
   }
 }

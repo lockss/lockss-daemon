@@ -1,5 +1,5 @@
 // ========================================================================
-// $Id: DaemonStatus.java,v 1.10 2003-03-26 23:12:04 tal Exp $
+// $Id: DaemonStatus.java,v 1.11 2003-04-02 10:52:03 tal Exp $
 // ========================================================================
 
 /*
@@ -264,7 +264,7 @@ public class DaemonStatus extends LockssServlet {
       String str = dispString2(aval.getValue(), type);
       String color = aval.getColor();
       if (color != null) {
-	str = "<font color=red>" + str + "</font>";
+	str = "<font color=" + color + ">" + str + "</font>";
       }
       return str;
     } else {
@@ -295,7 +295,11 @@ public class DaemonStatus extends LockssServlet {
 	} else {
 	  return val.toString();
 	}
-	return df.format(d);
+	if (d.getTime() == 0) {
+	  return "never";
+	} else {
+	  return df.format(d);
+	}
       case ColumnDescriptor.TYPE_IP_ADDRESS:
 	return ((InetAddress)val).getHostAddress();
       case ColumnDescriptor.TYPE_TIME_INTERVAL:
