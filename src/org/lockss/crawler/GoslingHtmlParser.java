@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlParser.java,v 1.3 2004-01-22 23:49:03 troberts Exp $
+ * $Id: GoslingHtmlParser.java,v 1.4 2004-01-27 00:48:54 troberts Exp $
  */
 
 /*
@@ -131,10 +131,10 @@ public class GoslingHtmlParser implements ContentParser {
     //XXX try to extract encoding from source
     Reader reader = new InputStreamReader(is, Constants.DEFAULT_ENCODING); //should do this elsewhere
     URL srcUrl = new URL(cuStr);
-    logger.debug2("Extracting urls from srcUrl");
+    logger.debug3("Extracting urls from srcUrl");
     String nextUrl = null;
     while ((nextUrl = extractNextLink(reader, srcUrl)) != null) {
-      logger.debug2("Extracted "+nextUrl);
+      logger.debug3("Extracted "+nextUrl);
       cb.foundUrl(nextUrl);
     }
   }
@@ -276,17 +276,17 @@ public class GoslingHtmlParser implements ContentParser {
     }
     if (returnStr != null) {
       returnStr = StringUtil.trimAfterChars(returnStr, " #\"");
-      logger.debug2("Generating url from: " + srcUrl + " and " + returnStr);
+      logger.debug3("Generating url from: " + srcUrl + " and " + returnStr);
       URL retUrl = new URL(srcUrl, returnStr);
       returnStr = retUrl.toString();
-      logger.debug2("Parsed: " + returnStr);
+      logger.debug3("Parsed: " + returnStr);
      return returnStr;
     }
     return null;
   }
 
   private static String getAttributeValue(String attribute, String src) {
-    logger.debug2("looking for "+attribute+" in "+src);
+    logger.debug3("looking for "+attribute+" in "+src);
 //  we need to allow for all whitespace in our tokenizer;
     StringTokenizer st = new StringTokenizer(src, "\n\t\r =\"", true);
     String lastToken = null;
