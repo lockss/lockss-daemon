@@ -1,5 +1,5 @@
 // ========================================================================
-// $Id: DaemonStatus.java,v 1.12 2003-04-03 11:34:53 tal Exp $
+// $Id: DaemonStatus.java,v 1.13 2003-04-04 08:40:33 tal Exp $
 // ========================================================================
 
 /*
@@ -49,21 +49,18 @@ import org.lockss.daemon.status.*;
 /** DaemonStatus servlet
  */
 public class DaemonStatus extends LockssServlet {
-  private static final String cellContrastColor = "#DDDDDD";
-  private static final String bAddRem = "Add/Remove Cluster Clients";
-  private static final String bDelete = "Delete";
-  private static final String bAdd = "Add";
+
+  /** Format to display date/time in tables */
+  public static final DateFormat df =
+  new SimpleDateFormat("MM/dd/yy HH:mm:ss");
+
 //   public static final DateFormat df =
 //     DateFormat.getDateTimeInstance(DateFormat.SHORT, DateFormat.SHORT);
-  public static final DateFormat df =
-    new SimpleDateFormat("MM/dd/yy HH:mm:ss");
 
   private String tableName;
   private String key;
 
-  private boolean isForm = false;
   private boolean html = false;
-  private String errorMsg = null;
   private StatusService statSvc;
 
   public void init(ServletConfig config) throws ServletException {
@@ -71,13 +68,23 @@ public class DaemonStatus extends LockssServlet {
     statSvc = getLockssDaemon().getStatusService();
   }
 
-
+  /** Handle a request */
   public void lockssHandle() throws IOException {
-    PrintWriter wrtr = resp.getWriter();
     Page page = null;
     Date now = new Date();
 
+    PrintWriter wrtr = null;
     html = req.getParameter("text") == null;
+
+    // After resp.getWriter() has been called, throwing an exception will
+    // result in a blank page, so don't call it until the end
+    // (unless producing a text page, where we use it as we go along).
+    //  (HttpResponse.sendError() calls getOutputStream(), and only one of
+    //  getWriter() or getOutputStream() may be called.)
+
+    if (!html) {
+      wrtr = resp.getWriter();
+    }
 
     resp.setContentType(html ? "text/html" : "text/plain");
 
@@ -110,7 +117,7 @@ public class DaemonStatus extends LockssServlet {
     doStatusTable(page, wrtr, tableName, key);
     if (html) {
       page.add(getFooter());
-      page.write(wrtr);
+      page.write(resp.getWriter());
     }
   }
 
@@ -123,8 +130,21 @@ public class DaemonStatus extends LockssServlet {
       statTable = statSvc.getTable(tableName, tableKey);
     } catch (StatusService.NoSuchTableException e) {
       if (html) {
-	page.add("Can't get table: ");
+	page.add("No such table: ");
 	page.add(e.toString());
+      } else {
+	wrtr.println("No table: " + e.toString());
+      }
+      return;
+    } catch (Exception e) {
+      if (html) {
+	page.add("Error getting table: ");
+	String emsg = e.toString();
+	page.add(emsg);
+	page.add("<br><pre>    ");
+	page.add(StringUtil.trimStackTrace(emsg,
+					   StringUtil.stackTraceString(e)));
+	page.add("</pre>");
       } else {
 	wrtr.println("Error getting table: " + e.toString());
       }
@@ -146,12 +166,10 @@ public class DaemonStatus extends LockssServlet {
 //       table = new Table(0, "CELLSPACING=2 CELLPADDING=0 WIDTH=\"100%\"");
       table = new Table(0, "ALIGN=CENTER CELLSPACING=2 CELLPADDING=0");
       if (html) {
-	// ensure title footnote numbered before ColDesc.HEADs
 	String title = title0 + addFootnote(titleFoot);
 
 	table.newRow();
-	table.addHeading(title, "ALIGN=CENTER COLSPAN=" +
-			   (cols * 2 - 1));
+	table.addHeading(title, "ALIGN=CENTER COLSPAN=" + (cols * 2 - 1));
 	table.newRow();
 	java.util.List summary = statTable.getSummaryInfo();
 	if (summary != null && !summary.isEmpty()) {
@@ -171,6 +189,7 @@ public class DaemonStatus extends LockssServlet {
 	  table.newRow();
 	}
 
+	// output column headings
 	for (int ix = 0; ix < cols; ix++) {
 	  ColumnDescriptor cd = cds[ix];
 	  String head = cd.getTitle() + addFootnote(cd.getFootNote());
@@ -190,6 +209,7 @@ public class DaemonStatus extends LockssServlet {
       }
 
     }
+    // output rows
     while (rowIter.hasNext()) {
       Map rowMap = (Map)rowIter.next();
       if (html) {
@@ -197,7 +217,6 @@ public class DaemonStatus extends LockssServlet {
 	for (int ix = 0; ix < cols; ix++) {
 	  ColumnDescriptor cd = cds[ix];
 	  Object val = rowMap.get(cd.getColumnName());
-	  String disp;
 
 	  table.newCell("align=" + getColAlignment(cd));
 	  table.add(dispString(rowMap.get(cd.getColumnName()), cd.getType()));
@@ -222,6 +241,7 @@ public class DaemonStatus extends LockssServlet {
       page.add(table);
       page.add("<br>");
       String heading = getHeading();
+      // put table name in page title so appears in browser title & tabs
       page.title("LOCKSS: " + title0 + " - " + heading);
     }
   }
@@ -242,6 +262,7 @@ public class DaemonStatus extends LockssServlet {
   }
 
 
+  // turn References into html links
   private String dispString(Object val, int type) {
     if (val instanceof StatusTable.Reference) {
       StatusTable.Reference ref = (StatusTable.Reference)val;
@@ -260,6 +281,7 @@ public class DaemonStatus extends LockssServlet {
     }
   }
 
+  // add display attributes from a DisplayedValue
   private String dispString1(Object val, int type) {
     if (val instanceof StatusTable.DisplayedValue) {
       StatusTable.DisplayedValue aval = (StatusTable.DisplayedValue)val;
@@ -274,6 +296,7 @@ public class DaemonStatus extends LockssServlet {
     }
   }
 
+  // turn a value into a display string
   private String dispString2(Object val, int type) {
     if (val == null) {
       return "";
@@ -320,7 +343,7 @@ public class DaemonStatus extends LockssServlet {
     }
   }
 
-  // don't make me a link in nav table if I'm displaying table of all tables
+  // make me a link in nav table unless I'm displaying table of all tables
   protected boolean includeMeInNav() {
     return !StatusService.ALL_TABLES_TABLE.equals(tableName);
   }
