@@ -1,5 +1,5 @@
 /*
- * $Id: MockPlugin.java,v 1.19 2004-10-06 23:53:06 clairegriffin Exp $
+ * $Id: MockPlugin.java,v 1.20 2005-01-04 03:07:29 tlipkis Exp $
  */
 
 /*
@@ -55,7 +55,9 @@ public class MockPlugin extends BasePlugin implements PluginTestable {
   private int initCtr = 0;
   private int stopCtr = 0;
   private Configuration auConfig;
-  private String pluginVer = null;
+  private String pluginVer = "MockVersion";
+  private List auConfigDescrs = ListUtil.list(ConfigParamDescr.BASE_URL,
+					      ConfigParamDescr.VOLUME_NUMBER);
 
   public MockPlugin(){
     super();
@@ -80,12 +82,7 @@ public class MockPlugin extends BasePlugin implements PluginTestable {
   }
 
   public String getPluginId() {
-/*    if (pluginId == null) {
-      return this.getClass().getName();
-//       return super.getPluginId();
-    } else {*/
-      return pluginId;
-    //}
+    return pluginId;
   }
 
   public void setPluginId(String id) {
@@ -93,10 +90,7 @@ public class MockPlugin extends BasePlugin implements PluginTestable {
   }
 
   public String getVersion() {
-    if (pluginVer != null) {
-      return pluginVer;
-    }
-    return "MockVersion";
+    return pluginVer;
   }
 
   public void setVersion(String ver) {
@@ -123,8 +117,11 @@ public class MockPlugin extends BasePlugin implements PluginTestable {
    * which values are needed in order to configure an AU
    */
   public List getAuConfigDescrs() {
-    return ListUtil.list(ConfigParamDescr.BASE_URL,
-			 ConfigParamDescr.VOLUME_NUMBER);
+    return auConfigDescrs;
+  }
+
+  public void setAuConfigDescrs(List descrs) {
+    auConfigDescrs = descrs;
   }
 
   /**
