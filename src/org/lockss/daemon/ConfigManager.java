@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.27.2.1 2004-07-16 22:32:57 smorabito Exp $
+ * $Id: ConfigManager.java,v 1.27.2.2 2004-07-19 08:26:42 tlipkis Exp $
  */
 
 /*
@@ -87,7 +87,8 @@ public class ConfigManager implements LockssManager {
     PLATFORM + "diskSpacePaths";
 
   static final String PARAM_PLATFORM_VERSION = PLATFORM + "version";
-  static final String PARAM_PLATFORM_ADMIN_EMAIL = PLATFORM + "sysadminemail";
+  public static final String PARAM_PLATFORM_ADMIN_EMAIL =
+    PLATFORM + "sysadminemail";
   static final String PARAM_PLATFORM_LOG_DIR = PLATFORM + "logdirectory";
   static final String PARAM_PLATFORM_LOG_FILE = PLATFORM + "logfile";
 
