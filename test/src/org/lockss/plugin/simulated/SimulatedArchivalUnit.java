@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.38 2003-11-07 04:12:01 clairegriffin Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.39 2003-11-11 23:30:50 clairegriffin Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
+import java.net.*;
 
 /**
  * This is ArchivalUnit of the simulated plugin, used for testing purposes.
@@ -80,62 +81,6 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
     this(new SimulatedPlugin());
   }
 
-  public void setConfiguration(Configuration config)
-      throws ArchivalUnit.ConfigurationException {
-    super.setConfiguration(config);
-    // tk - not right, generator might have been created already with
-    // different root?
-    try {
-      fileRoot = config.get(SimulatedPlugin.AU_PARAM_ROOT);
-      if (fileRoot == null) {
-	throw new
-	  ArchivalUnit.ConfigurationException("Missing configuration value for: "+
-					      SimulatedPlugin.AU_PARAM_ROOT);
-      }
-      SimulatedContentGenerator gen = getContentGenerator();
-      if (config.containsKey(SimulatedPlugin.AU_PARAM_DEPTH)) {
-        gen.setTreeDepth(config.getInt(SimulatedPlugin.AU_PARAM_DEPTH));
-      }
-      if (config.containsKey(SimulatedPlugin.AU_PARAM_BRANCH)) {
-        gen.setNumBranches(config.getInt(SimulatedPlugin.AU_PARAM_BRANCH));
-      }
-      if (config.containsKey(SimulatedPlugin.AU_PARAM_NUM_FILES)) {
-        gen.setNumFilesPerBranch(config.getInt(
-                   SimulatedPlugin.AU_PARAM_NUM_FILES));
-      }
-      if (config.containsKey(SimulatedPlugin.AU_PARAM_BIN_FILE_SIZE)) {
-        gen.setBinaryFileSize(config.getInt(
-                   SimulatedPlugin.AU_PARAM_BIN_FILE_SIZE));
-      }
-      if (config.containsKey(SimulatedPlugin.AU_PARAM_MAXFILE_NAME)) {
-        gen.setMaxFilenameLength(config.getInt(
-                   SimulatedPlugin.AU_PARAM_MAXFILE_NAME));
-      }
-      if (config.containsKey(SimulatedPlugin.AU_PARAM_FILE_TYPES)) {
-        gen.setFileTypes(config.getInt(SimulatedPlugin.AU_PARAM_FILE_TYPES));
-      }
-      if (config.containsKey(SimulatedPlugin.AU_PARAM_ODD_BRANCH_CONTENT)) {
-        gen.setOddBranchesHaveContent(config.getBoolean(
-            SimulatedPlugin.AU_PARAM_ODD_BRANCH_CONTENT));
-      }
-      if (config.containsKey(SimulatedPlugin.AU_PARAM_BAD_FILE_LOC) &&
-          config.containsKey(SimulatedPlugin.AU_PARAM_BAD_FILE_NUM)) {
-        gen.setAbnormalFile(config.get(SimulatedPlugin.AU_PARAM_BAD_FILE_LOC),
-			    config.getInt(SimulatedPlugin.AU_PARAM_BAD_FILE_NUM));
-      }
-      if (config.containsKey(SimulatedPlugin.AU_PARAM_BAD_CACHED_FILE_LOC) &&
-          config.containsKey(SimulatedPlugin.AU_PARAM_BAD_CACHED_FILE_NUM)) {
-        toBeDamaged.add(scgen.getUrlFromLoc(config.get(
-          SimulatedPlugin.AU_PARAM_BAD_CACHED_FILE_LOC),
-          config.get(
-          SimulatedPlugin.AU_PARAM_BAD_CACHED_FILE_NUM)));
-      }
-      resetContentTree();
-    } catch (Configuration.InvalidParam e) {
-      throw new ArchivalUnit.ConfigurationException("Bad config value", e);
-    }
-    this.crawlSpec = new CrawlSpec(SIMULATED_URL_START, null);
-  }
 
   public String getName() {
     return makeName();
@@ -152,6 +97,7 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
   public String getManifestPage() {
     return SIMULATED_URL_START;
   }
+
 
   // public methods
 
@@ -245,7 +191,72 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
 
   protected void setAuParams(Configuration config) throws
       ConfigurationException {
-    // Ok to ignore
+    try {
+      fileRoot = config.get(SimulatedPlugin.AU_PARAM_ROOT);
+      if (fileRoot == null) {
+        throw new
+          ArchivalUnit.ConfigurationException("Missing configuration value for: "+
+                                              SimulatedPlugin.AU_PARAM_ROOT);
+      }
+      SimulatedContentGenerator gen = getContentGenerator();
+      if (config.containsKey(SimulatedPlugin.AU_PARAM_DEPTH)) {
+        gen.setTreeDepth(config.getInt(SimulatedPlugin.AU_PARAM_DEPTH));
+      }
+      if (config.containsKey(SimulatedPlugin.AU_PARAM_BRANCH)) {
+        gen.setNumBranches(config.getInt(SimulatedPlugin.AU_PARAM_BRANCH));
+      }
+      if (config.containsKey(SimulatedPlugin.AU_PARAM_NUM_FILES)) {
+        gen.setNumFilesPerBranch(config.getInt(
+                   SimulatedPlugin.AU_PARAM_NUM_FILES));
+      }
+      if (config.containsKey(SimulatedPlugin.AU_PARAM_BIN_FILE_SIZE)) {
+        gen.setBinaryFileSize(config.getInt(
+                   SimulatedPlugin.AU_PARAM_BIN_FILE_SIZE));
+      }
+      if (config.containsKey(SimulatedPlugin.AU_PARAM_MAXFILE_NAME)) {
+        gen.setMaxFilenameLength(config.getInt(
+                   SimulatedPlugin.AU_PARAM_MAXFILE_NAME));
+      }
+      if (config.containsKey(SimulatedPlugin.AU_PARAM_FILE_TYPES)) {
+        gen.setFileTypes(config.getInt(SimulatedPlugin.AU_PARAM_FILE_TYPES));
+      }
+      if (config.containsKey(SimulatedPlugin.AU_PARAM_ODD_BRANCH_CONTENT)) {
+        gen.setOddBranchesHaveContent(config.getBoolean(
+            SimulatedPlugin.AU_PARAM_ODD_BRANCH_CONTENT));
+      }
+      if (config.containsKey(SimulatedPlugin.AU_PARAM_BAD_FILE_LOC) &&
+          config.containsKey(SimulatedPlugin.AU_PARAM_BAD_FILE_NUM)) {
+        gen.setAbnormalFile(config.get(SimulatedPlugin.AU_PARAM_BAD_FILE_LOC),
+                            config.getInt(SimulatedPlugin.AU_PARAM_BAD_FILE_NUM));
+      }
+      if (config.containsKey(SimulatedPlugin.AU_PARAM_BAD_CACHED_FILE_LOC) &&
+          config.containsKey(SimulatedPlugin.AU_PARAM_BAD_CACHED_FILE_NUM)) {
+        toBeDamaged.add(scgen.getUrlFromLoc(config.get(
+          SimulatedPlugin.AU_PARAM_BAD_CACHED_FILE_LOC),
+          config.get(
+          SimulatedPlugin.AU_PARAM_BAD_CACHED_FILE_NUM)));
+      }
+      resetContentTree();
+    } catch (Configuration.InvalidParam e) {
+      throw new ArchivalUnit.ConfigurationException("Bad config value", e);
+    }
+  }
+
+  protected void setBaseAuParams(Configuration config)
+      throws ConfigurationException {
+    try {
+      baseUrl = new URL(SIMULATED_URL_START);
+    }
+    catch (MalformedURLException murle) {
+      throw new ConfigurationException("Bad URL for " + SIMULATED_URL_START, murle);
+    }
+    fetchDelay = 0;
+    newContentCrawlIntv = config.getTimeInterval(NEW_CONTENT_CRAWL_KEY,
+                                                 defaultContentCrawlIntv);
+    crawlSpec = new CrawlSpec(SIMULATED_URL_START, null);
+    startUrlString = makeStartUrl();
+    auName = makeName();
+
   }
 
   boolean isUrlToBeDamaged(String url) {
