@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.24 2003-03-17 08:35:05 tal Exp $
+ * $Id: Configuration.java,v 1.25 2003-03-21 07:23:18 tal Exp $
  */
 
 /*
@@ -52,10 +52,10 @@ public abstract class Configuration {
   /** The common prefix string of all LOCKSS configuration parameters. */
   public static final String PREFIX = "org.lockss.";
 
-  static final String MYPREFIX = PREFIX + ".config";
+  static final String MYPREFIX = PREFIX + "config.";
 
-  static final String PARAM_RELOAD_INTERVAL = MYPREFIX + "reloadInterval";
-  static final String PARAM_DISK_SPACE_LIST = MYPREFIX + "diskSpaceList";
+  static final String PARAM_RELOAD_INTERVAL = PREFIX + "config.reloadInterval";
+  static final String PARAM_DISK_SPACE_LIST = PREFIX + "diskSpaceList";
   static final String PARAM_CONFIG_PATH = MYPREFIX + "configPath";
 
   // MUST pass in explicit log level to avoid recursive call back to
@@ -647,7 +647,7 @@ public abstract class Configuration {
 
     public void run() {
       Thread.currentThread().setPriority(Thread.MIN_PRIORITY);
-      long reloadInterval = 600000;
+      long reloadInterval = 10 * Constants.MINUTE;
       goOn = true;
 
       // repeat every 10ish minutes until first successful load, then
@@ -660,7 +660,8 @@ public abstract class Configuration {
 	  }
 	  lastReload = TimeBase.nowMs();
 	  //  	stopAndOrStartThings(true);
-	  reloadInterval = getLongParam(PARAM_RELOAD_INTERVAL, 1800000);
+	  reloadInterval = getLongParam(PARAM_RELOAD_INTERVAL,
+					30 * Constants.MINUTE);
 	}
 	long reloadRange = reloadInterval/4;
 	Deadline nextReload =
