@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedStatusAccessor.java,v 1.4 2003-03-15 00:56:45 tal Exp $
+ * $Id: SimulatedStatusAccessor.java,v 1.5 2003-03-15 02:31:20 troberts Exp $
  */
 
 /*
@@ -62,21 +62,21 @@ public class SimulatedStatusAccessor {
     }
 
     int ctype[] = {
-      StatusTable.TYPE_STRING,
-      StatusTable.TYPE_INT,
-      StatusTable.TYPE_PERCENT,
-      StatusTable.TYPE_TIME_INTERVAL,
-      StatusTable.TYPE_FLOAT,
-      StatusTable.TYPE_IP_ADDRESS,
-      StatusTable.TYPE_DATE,
+      ColumnDescriptor.TYPE_STRING,
+      ColumnDescriptor.TYPE_INT,
+      ColumnDescriptor.TYPE_PERCENT,
+      ColumnDescriptor.TYPE_TIME_INTERVAL,
+      ColumnDescriptor.TYPE_FLOAT,
+      ColumnDescriptor.TYPE_IP_ADDRESS,
+      ColumnDescriptor.TYPE_DATE,
     };
 
     private List makeColumns(int ncols) {
       List columns = new ArrayList(ncols);
       for (int ix = 1; ix <= ncols; ix++) {
-	columns.add(new StatusTable.ColumnDescriptor(coltag(ix),
-						     "Column " + ix, 
-						     coltype(ix-1)));
+	columns.add(new ColumnDescriptor(coltag(ix),
+					 "Column " + ix, 
+					 coltype(ix-1)));
       }
       return columns;
     }
@@ -91,24 +91,24 @@ public class SimulatedStatusAccessor {
 
     private Object colval(int row, int col) {
       switch (coltype(col-1)) {
-      case StatusTable.TYPE_STRING:
+      case ColumnDescriptor.TYPE_STRING:
       default:
 	return "xyzzy_" + row;
-      case StatusTable.TYPE_INT:
+      case ColumnDescriptor.TYPE_INT:
 	return new Integer(row);
-      case StatusTable.TYPE_PERCENT:
+      case ColumnDescriptor.TYPE_PERCENT:
 	return new Float(1.0 / row);
-      case StatusTable.TYPE_TIME_INTERVAL:
+      case ColumnDescriptor.TYPE_TIME_INTERVAL:
 	return new Integer((59 << row) * Constants.SECOND);
-      case StatusTable.TYPE_FLOAT:
+      case ColumnDescriptor.TYPE_FLOAT:
 	return new Float(1.0 / row);
-      case StatusTable.TYPE_IP_ADDRESS:
+      case ColumnDescriptor.TYPE_IP_ADDRESS:
 	try {
 	  return InetAddress.getByName("10.1.0.42");
 	} catch (UnknownHostException e) {
 	  return null;
 	}
-      case StatusTable.TYPE_DATE:
+      case ColumnDescriptor.TYPE_DATE:
 	return new Date(TimeBase.nowMs() + (Constants.DAY * row));
       }
     }

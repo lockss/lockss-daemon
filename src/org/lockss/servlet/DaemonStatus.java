@@ -1,5 +1,5 @@
 // ========================================================================
-// $Id: DaemonStatus.java,v 1.4 2003-03-15 01:51:42 tal Exp $
+// $Id: DaemonStatus.java,v 1.5 2003-03-15 02:31:20 troberts Exp $
 // ========================================================================
 
 /*
@@ -135,8 +135,8 @@ public class DaemonStatus extends LockssServlet {
 
     Table table = null;
 
-    StatusTable.ColumnDescriptor cds[] =
-      (StatusTable.ColumnDescriptor [])colList.toArray(new StatusTable.ColumnDescriptor[0]);
+    ColumnDescriptor cds[] =
+      (ColumnDescriptor [])colList.toArray(new ColumnDescriptor[0]);
     int cols = cds.length;
     Iterator rowIter = rowList.iterator();
     if (true || rowIter.hasNext()) {
@@ -153,7 +153,7 @@ public class DaemonStatus extends LockssServlet {
 	table.newRow();
 
 	for (int ix = 0; ix < cols; ix++) {
-	  StatusTable.ColumnDescriptor cd = cds[ix];
+	  ColumnDescriptor cd = cds[ix];
 	  String head = cd.getTitle() + addFootnote(null/*cd.getFootnote()*/);
 	  table.addHeading(head, "align=" + getColAlignment(cd));
 	  if (ix < cols) {
@@ -174,7 +174,7 @@ public class DaemonStatus extends LockssServlet {
       if (html) {
 	table.newRow();
 	for (int ix = 0; ix < cols; ix++) {
-	  StatusTable.ColumnDescriptor cd = cds[ix];
+	  ColumnDescriptor cd = cds[ix];
 	  Object val = rowMap.get(cd.getColumnName());
 	  String disp;
 
@@ -203,23 +203,23 @@ public class DaemonStatus extends LockssServlet {
     }
   }
 
-  private String getColAlignment(StatusTable.ColumnDescriptor cd) {
+  private String getColAlignment(ColumnDescriptor cd) {
     switch (cd.getType()) {
-    case StatusTable.TYPE_STRING:
-    case StatusTable.TYPE_FLOAT:	// tk - should align decimal points?
-    case StatusTable.TYPE_DATE:
-    case StatusTable.TYPE_IP_ADDRESS:
-    case StatusTable.TYPE_TIME_INTERVAL:
+    case ColumnDescriptor.TYPE_STRING:
+    case ColumnDescriptor.TYPE_FLOAT:	// tk - should align decimal points?
+    case ColumnDescriptor.TYPE_DATE:
+    case ColumnDescriptor.TYPE_IP_ADDRESS:
+    case ColumnDescriptor.TYPE_TIME_INTERVAL:
     default:
       return "LEFT";
-    case StatusTable.TYPE_INT:
-    case StatusTable.TYPE_PERCENT:
+    case ColumnDescriptor.TYPE_INT:
+    case ColumnDescriptor.TYPE_PERCENT:
       return "RIGHT";
     }
   }
 
 
-  private String dispString(Object val, StatusTable.ColumnDescriptor cd) {
+  private String dispString(Object val, ColumnDescriptor cd) {
     if (val instanceof StatusTable.Reference) {
       StatusTable.Reference ref = (StatusTable.Reference)val;
       StringBuffer sb = new StringBuffer();
@@ -237,26 +237,26 @@ public class DaemonStatus extends LockssServlet {
     }
   }
 
-  private String dispString1(Object val, StatusTable.ColumnDescriptor cd) {
+  private String dispString1(Object val, ColumnDescriptor cd) {
     if (val == null) {
       return "";
     }
     try {
       switch (cd.getType()) {
-      case StatusTable.TYPE_STRING:
-      case StatusTable.TYPE_FLOAT:
-      case StatusTable.TYPE_INT:
+      case ColumnDescriptor.TYPE_STRING:
+      case ColumnDescriptor.TYPE_FLOAT:
+      case ColumnDescriptor.TYPE_INT:
       default:
 	return val.toString();
-      case StatusTable.TYPE_PERCENT:
+      case ColumnDescriptor.TYPE_PERCENT:
 	float fv = ((Number)val).floatValue();
 	return Integer.toString(Math.round(fv * 100)) + "%";
-      case StatusTable.TYPE_DATE:
+      case ColumnDescriptor.TYPE_DATE:
 	long lv = ((Number)val).longValue();
 	return df.format(new Date(lv));
-      case StatusTable.TYPE_IP_ADDRESS:
+      case ColumnDescriptor.TYPE_IP_ADDRESS:
 	return ((InetAddress)val).getHostAddress();
-      case StatusTable.TYPE_TIME_INTERVAL:
+      case ColumnDescriptor.TYPE_TIME_INTERVAL:
 	long millis = ((Number)val).longValue();
 	StringBuffer sb = new StringBuffer();
 	long days = millis / Constants.DAY;
