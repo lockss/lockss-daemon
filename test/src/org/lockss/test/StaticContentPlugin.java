@@ -1,5 +1,5 @@
 /*
- * $Id: StaticContentPlugin.java,v 1.14 2003-08-30 00:35:30 clairegriffin Exp $
+ * $Id: StaticContentPlugin.java,v 1.15 2003-09-13 00:47:50 troberts Exp $
  */
 
 /*
@@ -149,6 +149,10 @@ public class StaticContentPlugin extends BasePlugin implements PluginTestable {
       throw new UnsupportedOperationException("Not Implemented");
     }
 
+    public FilterRule getFilterRule(String mimeType) {
+      throw new UnsupportedOperationException("Not implemented");
+    }
+
     /**
      * Create a CU with content and store it in AU
      * @param owner the CUS owner
@@ -216,6 +220,10 @@ public class StaticContentPlugin extends BasePlugin implements PluginTestable {
 
     public InputStream openForHashing() {
       return openForReading();
+    }
+
+    protected InputStream getFilteredStream() {
+      throw new UnsupportedOperationException("Not implemented");
     }
 
     public Reader getReader() {

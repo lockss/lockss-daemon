@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.16 2003-08-30 00:35:30 clairegriffin Exp $
+ * $Id: ArchivalUnit.java,v 1.17 2003-09-13 00:47:49 troberts Exp $
  */
 
 /*
@@ -194,6 +194,16 @@ public interface ArchivalUnit {
    * @return true if we should do a top level poll
    */
   public boolean shouldCallTopLevelPoll(AuState aus);
+
+
+  /**
+   * Return the {@link FilterRule} for the given mimeType or null if there
+   * is none
+   * @param mimeType mime type of the content we are going to filter
+   * @return {@link FilterRule} for the given mimeType or null if there
+   * is none
+   */ 
+  public FilterRule getFilterRule(String mimeType);
 
   public class ConfigurationException extends Exception {
     private Throwable nestedException;

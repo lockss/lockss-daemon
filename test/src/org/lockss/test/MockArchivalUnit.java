@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.35 2003-08-30 00:35:30 clairegriffin Exp $
+ * $Id: MockArchivalUnit.java,v 1.36 2003-09-13 00:47:50 troberts Exp $
  */
 
 /*
@@ -239,6 +239,10 @@ public class MockArchivalUnit implements ArchivalUnit {
 
   public void setShouldCallTopLevelPoll(boolean val) {
     shouldCallTopLevelPoll = val;
+  }
+
+  public FilterRule getFilterRule(String mimeType) {
+    throw new UnsupportedOperationException("Not implemented");
   }
 
   public String toString() {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArchivalUnit.java,v 1.6 2003-08-30 00:35:30 clairegriffin Exp $
+ * $Id: TestBaseArchivalUnit.java,v 1.7 2003-09-13 00:47:50 troberts Exp $
  */
 
 /*
@@ -191,6 +191,10 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     }
 
     public String getManifestPage() {
+      throw new UnsupportedOperationException("Not implemented");
+    }
+
+    public FilterRule getFilterRule(String mimeType) {
       throw new UnsupportedOperationException("Not implemented");
     }
 

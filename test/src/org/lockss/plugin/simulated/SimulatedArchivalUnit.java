@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.31 2003-08-30 00:35:30 clairegriffin Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.32 2003-09-13 00:47:50 troberts Exp $
  */
 
 /*
@@ -242,6 +242,11 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
 
   public Collection getUrlStems() {
     return ListUtil.list(SIMULATED_URL_STEM);
+  }
+
+  public FilterRule getFilterRule(String mimeType) {
+    //no filtering
+    return null;
   }
 
   boolean isURLToBeDamaged(String url) {

@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.41 2003-08-30 00:35:30 clairegriffin Exp $
+ * $Id: NullPlugin.java,v 1.42 2003-09-13 00:47:50 troberts Exp $
  */
 
 /*
@@ -372,6 +372,9 @@ public class NullPlugin {
       return false;
     }
 
+    public FilterRule getFilterRule(String mimeType) {
+      throw new UnsupportedOperationException("Not implemented");
+    }
   }
 
   /**
