@@ -18,9 +18,9 @@ year</MapValues>
 ^%s
 base_url</string>
     <string xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">1
-%slockss-volume%d.shtml
-base_url
-volume</string>
+http://%s/contents-by-date.%d.shtml
+base_url_host
+year</string>
     <string xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2
 .*ck=nck.*</string>
     <string xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2
