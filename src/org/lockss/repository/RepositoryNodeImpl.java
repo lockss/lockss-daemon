@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.54 2004-04-14 23:46:17 eaalto Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.55 2004-05-16 08:44:57 tlipkis Exp $
  */
 
 /*
@@ -994,15 +994,6 @@ public class RepositoryNodeImpl implements RepositoryNode {
    * Writes the node properties to disk.
    */
   private void writeNodeProperties() {
-    if (currentVersion == 0) {
-      if (!contentDir.exists()) {
-        if (!contentDir.mkdirs()) {
-          logger.error("Couldn't create cache directory for '"+
-                       contentDir.getAbsolutePath()+"'");
-          throw new LockssRepository.RepositoryStateException("Couldn't create cache directory.");
-        }
-      }
-    }
     try {
       OutputStream os = new BufferedOutputStream(new FileOutputStream(nodePropsFile));
       nodeProps.store(os, "Node properties");
