@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedContentGenerator.java,v 1.4 2002-12-03 23:07:06 aalto Exp $
+ * $Id: SimulatedContentGenerator.java,v 1.5 2003-01-07 02:03:29 aalto Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.simulated;
 
 import java.io.*;
+import java.util.Arrays;
 import org.lockss.util.StringUtil;
 import org.lockss.test.*;
 
@@ -85,6 +86,10 @@ public class SimulatedContentGenerator {
    * File-type value for jpeg files.  Independent bitwise from the other file-types.
    */
   public static final int FILE_TYPE_JPEG = 8;
+  /**
+   * File-type value for binary files.  Independent bitwise from the other file-types.
+   */
+  public static final int FILE_TYPE_BIN = 16;
 
   // how deep the tree extends
   private int treeDepth = 4;
@@ -93,6 +98,7 @@ public class SimulatedContentGenerator {
   // number of files per node
   private int numFilesPerBranch = 10;
   private int maxFilenameLength = 20;
+  private int binaryFileSize = 256;
   private boolean fillOutFilenames = false;
   private int fileTypes = FILE_TYPE_TXT;
 
@@ -140,6 +146,14 @@ public class SimulatedContentGenerator {
    * @param newNumFiles new number of files per internal node
    */
   public void setNumFilesPerBranch(int newNumFiles) { numFilesPerBranch = newNumFiles; }
+  /**
+   * @return the size binary files will be created as
+   */
+  public int getBinaryFileSize() { return binaryFileSize; }
+  /**
+   * @param newBinarySize new binary file size
+   */
+  public void setBinaryFileSize(int newBinarySize) { binaryFileSize = newBinarySize; }
   /**
    * @return maximum length for a file name
    */
@@ -300,6 +314,9 @@ public class SimulatedContentGenerator {
     if ((getFileTypes() & FILE_TYPE_JPEG) > 0) {
       createJpegFile(parentDir, fileNum, depth, branchNum, isAbnormal);
     }
+    if ((getFileTypes() & FILE_TYPE_BIN) > 0) {
+      createBinaryFile(parentDir, fileNum, binaryFileSize);
+    }
   }
 
   private void createTxtFile(File parentDir, int fileNum, int depth, int branchNum, boolean isAbnormal) {
@@ -358,6 +375,19 @@ public class SimulatedContentGenerator {
     } catch (Exception e) { System.err.println(e); }
   }
 
+
+  private void createBinaryFile(File parentDir, int fileNum, int size) {
+      try {
+        String fileName = getFileName(fileNum, FILE_TYPE_BIN);
+        File file = new File(parentDir, fileName);
+        FileOutputStream fos = new FileOutputStream(file);
+        byte[] bytes = new byte[size];
+        Arrays.fill(bytes, (byte)1);
+        fos.write(bytes);
+        fos.close();
+      } catch (Exception e) { System.err.println(e); }
+  }
+
   /**
    * Generates standard text content for a file (text or html types only).
    * @param fileNum local file number
@@ -397,7 +427,8 @@ public class SimulatedContentGenerator {
    * Generates index file for a directory, in html form with each sibling
    * file or sub-directory index file as a link.  This is to allow crawling.
    *
-   * @param File directory to generate index content for
+   * @param directory to generate index content for
+   * @param filename the name of the index file
    * @return index file content
    */
 
@@ -443,6 +474,9 @@ public class SimulatedContentGenerator {
         break;
       case FILE_TYPE_JPEG:
         fileName += ".jpg";
+        break;
+      case FILE_TYPE_BIN:
+        fileName += ".bin";
         break;
     }
     return fileName;

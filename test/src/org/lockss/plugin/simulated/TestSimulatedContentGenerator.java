@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimulatedContentGenerator.java,v 1.9 2002-12-03 23:08:15 aalto Exp $
+ * $Id: TestSimulatedContentGenerator.java,v 1.10 2003-01-07 02:03:29 aalto Exp $
  */
 
 /*
@@ -61,6 +61,10 @@ public class TestSimulatedContentGenerator extends LockssTestCase {
     scgen = new SimulatedContentGenerator(tempDirPath);
   }
 
+  public void tearDown() {
+
+  }
+
   public void testAccessors() {
     scgen = new SimulatedContentGenerator("test");
     scgen.setTreeDepth(5);
@@ -70,6 +74,9 @@ public class TestSimulatedContentGenerator extends LockssTestCase {
     scgen.setNumFilesPerBranch(15);
     assertEquals("setNumFilesPerBranch() failed.", 15,
                  scgen.getNumFilesPerBranch());
+    scgen.setBinaryFileSize(128);
+    assertEquals("setBinaryFileSize() failed.", 128,
+                 scgen.getBinaryFileSize());
     scgen.setMaxFilenameLength(25);
     assertEquals("setMaxFilenameLength() failed.", 25,
                  scgen.maxFilenameLength());
@@ -199,10 +206,6 @@ public class TestSimulatedContentGenerator extends LockssTestCase {
     assertTrue("Depth 2 directory not found.",
                depth2Dir.exists() && depth2Dir.isDirectory());
     File[] depth2Children = depth2Dir.listFiles();
-    for (int i=0; i<depth2Children.length; i++) {
-      System.out.println(depth2Children[i].getName());
-    }
-
     assertEquals("depth2 has subdirectories.", 1, depth2Children.length);
   }
 
@@ -250,6 +253,19 @@ public class TestSimulatedContentGenerator extends LockssTestCase {
     String expectedContent = scgen.getHtmlFileContent(scgen.getFileName(1,
         scgen.FILE_TYPE_HTML), 1, 0, 0, false);
     assertEquals("content incorrect.", expectedContent, content);
+  }
+
+  public void testBinaryFileSize() throws Exception {
+    scgen.setTreeDepth(0);
+    scgen.setBinaryFileSize(128);
+    scgen.setNumFilesPerBranch(1);
+    scgen.setFileTypes(scgen.FILE_TYPE_BIN);
+    scgen.generateContentTree();
+    String childName = scgen.getContentRoot() + File.separator +
+                       scgen.getFileName(1, scgen.FILE_TYPE_BIN);
+    File child = new File(childName);
+    assertTrue("File not found.", child.exists() && !child.isDirectory());
+    assertEquals(128, child.length());
   }
 
   public void testAbnormalFileContent() throws Exception {
