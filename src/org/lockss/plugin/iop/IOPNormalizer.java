@@ -1,5 +1,5 @@
 /*
- * $Id: IOPNormalizer.java,v 1.1 2004-11-30 00:49:41 troberts Exp $
+ * $Id: IOPNormalizer.java,v 1.2 2004-12-01 18:45:03 troberts Exp $
  */
 
 /*
@@ -36,16 +36,27 @@ import org.lockss.plugin.*;
 import org.lockss.util.*;
 
 public class IOPNormalizer implements UrlNormalizer {
+
+  private static final String host = "http://www.iop.org/";
+
   public String normalizeUrl(String url, ArchivalUnit au) {
     if (url == null) {
       return null;
     }
+    if (!StringUtil.startsWithIgnoreCase(url, host)) {
+      return url;
+    }
+    int startIdx = StringUtil.nthIndexOf(7, url, "/");
+    int endIdx = StringUtil.nthIndexOf(8, url, "/");
+    if (startIdx < 0 || endIdx < 0) {
+      return url;
+    }
+
     StringBuffer sb = new StringBuffer(url.length());
-    sb.append(url.substring(0, StringUtil.nthIndexOf(7, url, "/")));
-    sb.append(url.substring(StringUtil.nthIndexOf(8, url, "/")));
+    sb.append(url.substring(0, startIdx));
+    sb.append(url.substring(endIdx));
 
     return sb.toString();
-//     http://www.iop.org/EJ/S/3/418/SXFqtUP87MBWu6AwxR,8Hw/toc/0266-5611/20/6
   }
 
 }
