@@ -1,5 +1,5 @@
 /*
- * $Id: MockUrlCacher.java,v 1.15 2004-03-09 23:37:52 tlipkis Exp $
+ * $Id: MockUrlCacher.java,v 1.16 2004-03-11 09:44:06 tlipkis Exp $
  */
 
 /*
@@ -104,7 +104,7 @@ public class MockUrlCacher implements UrlCacher {
     this.forceRefetch = force;
   }
 
-  public void setRedirectScheme(int scheme) {
+  public void setRedirectScheme(RedirectScheme scheme) {
   }
 
   public void setupCachedUrl(String contents) {
@@ -132,6 +132,13 @@ public class MockUrlCacher implements UrlCacher {
 			   CIProperties headers) throws IOException{
     cachedIS = input;
     cachedProp = headers;
+    if (cus != null) {
+      if (forceRefetch) {
+	cus.addForceCachedUrl(url);
+      } else {
+	cus.addCachedUrl(url);
+      }
+    }
   }
 
   public void setCachingException(IOException e, int numTimesToThrow) {
