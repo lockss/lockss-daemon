@@ -1,5 +1,5 @@
 /*
- * $Id: StreamUtil.java,v 1.5 2003-06-20 22:34:53 claire Exp $
+ * $Id: StreamUtil.java,v 1.6 2003-07-17 19:20:43 tyronen Exp $
  */
 
 /*
@@ -63,7 +63,7 @@ public class StreamUtil {
     }
     os.flush();
   }
-  
+
   /**
    * This function copies the contents of a Reader to a Writer
    * It buffers the copying, and closes neither.
@@ -82,5 +82,19 @@ public class StreamUtil {
     }
     writer.flush();
   }
+
+  /** Reads in the entire contents of a file into a string */
+  public static String readFile(String path) throws IOException {
+    BufferedReader rd = new BufferedReader(new FileReader(path));
+    StringBuffer buf = new StringBuffer();
+    int chr;
+    while ( (chr = rd.read()) != -1) {
+      buf.append( (char) chr);
+    }
+    rd.close();
+    return buf.toString();
+  }
+
+
 }
 

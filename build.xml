@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.50 2003-07-17 05:20:05 tlipkis Exp $
+ $Id: build.xml,v 1.51 2003-07-17 19:20:42 tyronen Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -90,6 +90,10 @@ Args:
   <property name="doclet"           value="${basedir}/doclet"/>
   <property name="doclet.src"       value="${doclet}/src"/>
   <property name="doclet.classes"   value="${doclet}/classes" />
+  
+  <property name="doclet.test"      value="${doclet}/test"/>
+  <property name="doclet.test.src"  value="${doclet.test}/src"/>
+  <property name="doclet.test.classes" value="${doclet.test}/classes"/>
 
   <property name="javadoc"        value="${basedir}/javadoc"/>
   <property name="test.javadoc"   value="${test}/javadoc"/>
@@ -118,6 +122,7 @@ Args:
   <property name="lockss.test.jar" value="${test.lib}/lockss-test.jar"/>
   <property name="lockss.ant.jar" value="${lib}/lockss-ant.jar"/>
   <property name="lockss.doclet.jar" value="${lib}/lockss-doclet.jar"/>
+  <property name="lockss.doclet.test.jar" value="${lib}/lockss-doclet-test.jar"/>
 
   <property name="ant-contrib.jar"      value="${lib}/ant-contrib-0.1.jar"/>
 
@@ -132,6 +137,10 @@ Args:
 
   <property name="ant-contrib.resource"
                           value="net/sf/antcontrib/antcontrib.properties"/>
+
+  <!-- Unit tests of files using the XML interfaces must be handled differently -->
+  <property name="class.using.xml" value="org.lockss.util.TestXmlDoc" />
+  <property name="file.using.xml" value="org/lockss/util/TestXmlDoc.java" />
 
   <!--  Compiler options -->
   <property name="javac.debug"             value="on" />
@@ -170,13 +179,28 @@ Args:
 
   <path id="doclet.compile.classpath">
     <path refid="compile.classpath" />
+    <pathelement path="${lockss.jar}" />
     <pathelement path="${tools.jar}" />
   </path>
 
   <path id="doclet.run.classpath">
+    <path refid="test.run.classpath" />
     <pathelement path="${lockss.doclet.jar}" />
   </path>
 
+  <path id="doclet.test.compile.classpath">
+    <path refid="test.compile.classpath" />
+    <pathelement path="${lockss.doclet.jar}" />
+    <pathelement path="${lockss.test.jar}" />
+    <pathelement path="${tools.jar}" />
+  </path>
+
+  <path id="doclet.test.run.classpath">
+    <path refid="doclet.test.compile.classpath" />
+    <pathelement path="${lockss.ant.jar}" />
+    <pathelement path="${lockss.doclet.test.jar}" />
+  </path>
+  
   <path id="ant-contrib.classpath">
     <pathelement location="${ant-contrib.jar}"/>
   </path>
@@ -261,6 +285,7 @@ Args:
     <delete dir="${test.classes}" quiet="true"/>
     <delete dir="${ant.classes}" quiet="true"/>
     <delete dir="${doclet.classes}" quiet="true"/>
+    <delete dir="${doclet.test.classes}" quiet="true"/>
     <delete dir="${depend.cache}" quiet="true"/>
     <delete dir="${test.results}" quiet="true"/>
     <delete dir="${javadoc}" quiet="true"/>
@@ -269,10 +294,11 @@ Args:
     <delete file="${lockss.test.jar}" quiet="true"/>
     <delete file="${lockss.ant.jar}" quiet="true"/>
     <delete file="${lockss.doclet.jar}" quiet="true"/>
+    <delete file="${lockss.doclet.test.jar}" quiet="true"/>
     <delete file="${test.classpath.file}" quiet="true"/>
     <delete file="${production.classpath.file}" quiet="true"/>
   </target>
-
+  
   <target name="clean-tempbuild"
    description="Delete temporary build dirs" >
     <delete dir="${temp.build}" quiet="true"/>
@@ -344,7 +370,7 @@ Args:
   </target>
 
   <!-- ==================================================================== -->
-  <target name="compile-doclet" depends=""
+  <target name="compile-doclet" depends="jar-lockss"
    description="Compile the LOCKSS doclets" >
     <mkdir dir="${doclet.classes}" />
     <javac srcdir="${doclet.src}"
@@ -355,6 +381,21 @@ Args:
            fork="${forkc}"
            >
        <classpath refid="doclet.compile.classpath" />
+       <include name="**/*.java"/>
+    </javac>
+  </target>
+  
+  <target name="compile-doclet-tests" depends="jar-doclet,jar-tests"
+   description="Compile the LOCKSS test classes for doclets" >
+    <mkdir dir="${doclet.test.classes}" />
+    <javac srcdir="${doclet.test.src}"
+           destdir="${doclet.test.classes}"
+	   debug="${javac.debug}"
+           optimize="${javac.optimize}"
+           deprecation="${javac.deprecation}"
+           fork="${forkc}"
+           >
+       <classpath refid="doclet.test.compile.classpath" />
        <include name="**/*.java"/>
     </javac>
   </target>
@@ -432,6 +473,14 @@ Args:
   <target name="jar-doclet" depends="compile-doclet"
    description="Jar the doclet classes" >
     <jar jarfile="${lockss.doclet.jar}" basedir="${doclet.classes}" >
+       <include name="**/" />
+    </jar>
+  </target>
+
+  <!-- ==================================================================== -->
+  <target name="jar-doclet-tests" depends="compile-doclet-tests"
+   description="Jar the doclet test classes" >
+    <jar jarfile="${lockss.doclet.test.jar}" basedir="${doclet.test.classes}" >
        <include name="**/" />
     </jar>
   </target>
@@ -620,11 +669,28 @@ Test results in ${test.results}
     </echo>
     <property name="include" value="**/Test*.java" />
     <delete file="${test.results}/*" quiet="true" />
+    <!-- JUnit test classes using XML must be forked, 
+         else will fail due to a JUnit bug. --> 
+    <junit1 fork="yes" printsummary="yes" haltonerror="yes" haltonfailure="yes">
+      <test todir="${test.results}" name="${class.using.xml}" />
+      <formatter type="plain" usefile="true" />
+      <classpath>
+         <path refid="test.run.classpath" />
+      </classpath>        
+      <sysproperty key="java.library.path" value="${test.native}"/>
+      <sysproperty key="org.lockss.unitTesting" value="true"/>
+      <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
+      <!-- AntTaskTarget doesn't support running junit1 in a separate VM -->
+      <sysproperty key="org.lockss.defaultLogTarget" value=""/>
+      <sysproperty key="org.lockss.keepTempFiles" value="${keeptempfiles}"/>
+      <sysproperty key="org.lockss.test.timeout.shouldnt" value="${timeout}"/>
+    </junit1>
     <junit1 fork="no" printsummary="yes" haltonerror="yes" haltonfailure="yes">
-      <batchtest fork="${fork}" todir="${test.results}">
+     <batchtest fork="${fork}" todir="${test.results}">
         <fileset dir="${test.src}">
           <include name="${include}" />
           <exclude name="${exclude}" />
+          <exclude name="${file.using.xml}" />
         </fileset>
       </batchtest>
       <formatter type="plain" usefile="true" />
@@ -638,7 +704,7 @@ Test results in ${test.results}
       <sysproperty key="org.lockss.keepTempFiles" value="${keeptempfiles}"/>
       <sysproperty key="org.lockss.test.timeout.shouldnt" value="${timeout}"/>
     </junit1>
-  </target>
+   </target>
 
   <!-- ==================================================================== -->
   <target name="func-all"
@@ -745,6 +811,36 @@ Test results in ${test.results}
     </junit1>
   </target>
 
+  <!-- ==================================================================== -->
+  <target name="test-doclets"
+   depends="prepare.run.test,check.junit,jar-doclet-tests"
+   description="Run all the doclet tests (doclet/test/src/**/Test*.class" >
+    <echo>
+Test results in ${test.results}
+    </echo>
+    <delete file="${test.results}/*" quiet="true" />
+    <junit1 fork="no" printsummary="yes" haltonerror="yes" haltonfailure="yes"
+         filtertrace="yes"
+         showoutput="${showoutput}">
+      <batchtest fork="${fork}" todir="${test.results}">
+        <fileset dir="${doclet.test.src}">
+          <include name="**/Test*.java" />
+        </fileset>
+      </batchtest>
+      <formatter type="plain" usefile="true" />
+      <classpath>
+         <path refid="doclet.test.run.classpath" />
+      </classpath>        
+      <sysproperty key="java.library.path" value="${test.native}"/>
+      <sysproperty key="org.lockss.unitTesting" value="true"/>
+      <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
+      <sysproperty key="org.lockss.defaultLogTarget" value="${logtarget}"/>
+      <sysproperty key="org.lockss.keepTempFiles" value="${keeptempfiles}"/>
+      <sysproperty key="org.lockss.test.timeout.shouldnt" value="${timeout}"/>
+    </junit1>
+  </target>
+      
+  
   <!-- ==================================================================== -->
   <target name="rebuild-all"
    depends="clean,test-all,javadoc,javadoc-test"

@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.23 2003-06-20 22:34:53 claire Exp $
+ * $Id: StringUtil.java,v 1.24 2003-07-17 19:20:43 tyronen Exp $
  */
 
 /*
@@ -196,7 +196,7 @@ public class StringUtil {
   }
 
   /** Break a string at a separator char, returning a vector of at most
-   * maxItems strings.  
+   * maxItems strings.
    * @param discardEmptyStrings if true, empty strings (caused by delimiters
    * at the start or end of the string, or adjacent delimiters) will not be
    * included in the result.
@@ -237,7 +237,7 @@ public class StringUtil {
   }
 
   /** Break a string at a separator char, returning a vector of at most
-   * maxItems strings.  
+   * maxItems strings.
    * @param discardEmptyStrings if true, empty strings (caused by delimiters
    * at the start or end of the string, or adjacent delimiters) will not be
    * included in the result. */
@@ -447,6 +447,19 @@ public class StringUtil {
     }
   }
 
+  /** Trim leading and trailing blank lines from a block of text */
+  public static String trimBlankLines(String txt) {
+    StringBuffer buf = new StringBuffer(txt);
+    while (buf.charAt(0) == '\n') {
+      buf.deleteCharAt(0);
+    }
+    while (buf.charAt(buf.length() - 1) == '\n') {
+      buf.deleteCharAt(buf.length() - 1);
+    }
+    return buf.toString();
+  }
+
+
   // Unit Descriptor
   private static class UD {
     String str;				// suffix string
@@ -535,5 +548,19 @@ public class StringUtil {
     return sw.toString();
   }
 
-}
+  /** Convert the first character and every character that follows a space
+   *   to uppercase.
+   */
+  public static String titleCase(String txt) {
+    StringBuffer buf = new StringBuffer(txt);
+    int len = buf.length();
+    buf.setCharAt(0,Character.toUpperCase(buf.charAt(0)));
+    for (int i=1; i<len; i++) {
+      if (buf.charAt(i-1)==' ') {
+        buf.setCharAt(i,Character.toUpperCase(buf.charAt(i)));
+      }
+    }
+    return buf.toString();
+  }
 
+}

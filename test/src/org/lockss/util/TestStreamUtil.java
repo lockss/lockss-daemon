@@ -1,5 +1,5 @@
 /*
- * $Id: TestStreamUtil.java,v 1.4 2003-06-20 22:34:56 claire Exp $
+ * $Id: TestStreamUtil.java,v 1.5 2003-07-17 19:20:43 tyronen Exp $
  */
 
 /*
@@ -38,7 +38,7 @@ import junit.framework.TestCase;
 import org.lockss.test.*;
 
 /**
- * This is the test class for org.lockss.util.ListUtil
+ * This is the test class for org.lockss.util.StreamUtil
  */
 public class TestStreamUtil extends LockssTestCase {
   public TestStreamUtil(String msg) {
@@ -91,5 +91,21 @@ public class TestStreamUtil extends LockssTestCase {
     String resultStr = writer.toString();
     writer.close();
     assertTrue(resultStr.equals("test string"));
+  }
+
+  public void testReadFile() {
+   try {
+     String txt = "Here is some weird text.\nIt has !@#$%^&*()214 in it.";
+     String path = getTempDir().getAbsolutePath() + File.separator + "test.txt";
+     FileWriter fw = new FileWriter(path);
+     fw.write(txt);
+     fw.close();
+     String readtxt = StreamUtil.readFile(path);
+     assertEquals(txt,readtxt);
+     File fl = new File(path);
+     fl.delete();
+   } catch (IOException e) {
+     fail(e.getMessage());
+   }
   }
 }
