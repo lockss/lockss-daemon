@@ -22,7 +22,8 @@ org.lockss.plugin.registry=\
     org.lockss.plugin.clogic.CulturalLogicPlugin;\
     org.lockss.plugin.simulated.SimulatedPlugin;\
     org.lockss.plugin.othervoices.OtherVoicesPlugin;\
-    org.lockss.plugin.bepress.BePressPlugin;
+    org.lockss.plugin.bepress.BePressPlugin;\
+    org.lockss.plugin.ojs.OJSPlugin;
 
 # List of plugins that should be loaded as ConfigurablePlugins with an xml
 # file.  These should still be included in the registry above, unless you
@@ -39,7 +40,8 @@ org.lockss.plugin.xmlPlugins=\
     org.lockss.plugin.absinthe.AbsinthePlugin;\
     org.lockss.plugin.clogic.CulturalLogicPlugin;\
     org.lockss.plugin.othervoices.OtherVoicesPlugin;\
-    org.lockss.plugin.bepress.BePressPlugin;
+    org.lockss.plugin.bepress.BePressPlugin;\
+    org.lockss.plugin.ojs.OJSPlugin;
 
 # Title database
 
