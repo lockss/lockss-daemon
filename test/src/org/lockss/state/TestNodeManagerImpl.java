@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.62 2003-04-15 01:27:00 aalto Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.63 2003-04-15 02:21:22 claire Exp $
  */
 
 /*
@@ -145,8 +145,6 @@ public class TestNodeManagerImpl
                  nodeManager.mapResultsErrorToPollError(Poll.ERR_HASHING));
     assertEquals(PollState.ERR_IO,
                  nodeManager.mapResultsErrorToPollError(Poll.ERR_IO));
-    assertEquals(PollState.ERR_NO_QUORUM,
-                 nodeManager.mapResultsErrorToPollError(Poll.ERR_NO_QUORUM));
     assertEquals(PollState.ERR_SCHEDULE_HASH,
                  nodeManager.mapResultsErrorToPollError(Poll.ERR_SCHEDULE_HASH));
     assertEquals(PollState.ERR_UNDEFINED,

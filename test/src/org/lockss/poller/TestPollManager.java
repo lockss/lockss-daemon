@@ -95,7 +95,7 @@ public class TestPollManager extends LockssTestCase {
       CachedUrlSet cus = null;
       cus = testau.makeCachedUrlSet(new RangeCachedUrlSetSpec(rooturls[1]));
       PollSpec spec = new PollSpec(cus, lwrbnd, uprbnd);
-      pollmanager.requestPoll(LcapMessage.VERIFY_POLL_REQ, spec);
+      pollmanager.sendPollRequest(LcapMessage.VERIFY_POLL_REQ, spec);
     }
     catch (IllegalStateException e) {
       // ignore this for now

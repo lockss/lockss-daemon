@@ -1,5 +1,5 @@
 /*
-* $Id: MockPollManager.java,v 1.7 2003-04-10 01:09:54 claire Exp $
+* $Id: MockPollManager.java,v 1.8 2003-04-15 02:21:22 claire Exp $
  */
 
 /*
@@ -65,7 +65,7 @@ public class MockPollManager extends PollManager {
     thePolls = new Hashtable();
   }
 
-  public void requestPoll(int opcode, PollSpec ps) throws IOException {
+  public void sendPollRequest(int opcode, PollSpec ps) throws IOException {
     // note: uses a different key than the other two, since we're not
     // creating an actual challenge and verifier to key off of.
     if (opcode == LcapMessage.CONTENT_POLL_REQ) {
@@ -94,7 +94,7 @@ public class MockPollManager extends PollManager {
 
   public Poll createPoll(LcapMessage msg, PollSpec pollspec) throws ProtocolException {
     try {
-      requestPoll(msg.getOpcode(), pollspec);
+      sendPollRequest(msg.getOpcode(), pollspec);
     }
     catch (IOException ex) {
     }

@@ -1,5 +1,5 @@
 /*
-* $Id: VerifyPoll.java,v 1.34 2003-03-26 23:39:39 claire Exp $
+* $Id: VerifyPoll.java,v 1.35 2003-04-15 02:21:22 claire Exp $
  */
 
 /*
@@ -54,6 +54,11 @@ class VerifyPoll extends Poll {
     m_replyOpcode = LcapMessage.VERIFY_POLL_REP;
     m_tally.quorum = 1;
     m_tally.type = VERIFY_POLL;
+    if(idMgr.isLocalIdentity(m_caller)) {
+       // if we've called the poll, we aren't going to vote
+       // so we set our state to wait for a tally.
+       m_pollstate = PS_WAIT_TALLY;
+    }
   }
 
 

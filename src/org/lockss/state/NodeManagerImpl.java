@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.96 2003-04-15 01:27:00 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.97 2003-04-15 02:21:22 claire Exp $
  */
 
 /*
@@ -453,7 +453,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     PollSpec spec = new PollSpec(managedAu.getAUCachedUrlSet());
     try {
       logger.debug2("Calling a top level poll on " + spec);
-      pollManager.requestPoll(LcapMessage.CONTENT_POLL_REQ, spec);
+      pollManager.sendPollRequest(LcapMessage.CONTENT_POLL_REQ, spec);
     }
     catch (IOException ioe) {
       logger.error("Exception calling top level poll on " + spec, ioe);
@@ -510,8 +510,6 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
         return PollState.ERR_HASHING;
       case Poll.ERR_IO:
         return PollState.ERR_IO;
-      case Poll.ERR_NO_QUORUM:
-        return PollState.ERR_NO_QUORUM;
       case Poll.ERR_SCHEDULE_HASH:
         return PollState.ERR_SCHEDULE_HASH;
     }
@@ -577,7 +575,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     }
     PollSpec spec = new PollSpec(cus, lwr, upr);
     logger.debug2("Calling a content poll on " + spec);
-    pollManager.requestPoll(LcapMessage.CONTENT_POLL_REQ, spec);
+    pollManager.sendPollRequest(LcapMessage.CONTENT_POLL_REQ, spec);
   }
 
   private void callSingleNodeContentPoll(CachedUrlSet cus) throws IOException {
@@ -586,7 +584,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
         new SingleNodeCachedUrlSetSpec(cus.getUrl()));
     PollSpec spec = new PollSpec(newCus);
     logger.debug2("Calling a content poll on " + spec);
-    pollManager.requestPoll(LcapMessage.CONTENT_POLL_REQ, spec);
+    pollManager.sendPollRequest(LcapMessage.CONTENT_POLL_REQ, spec);
   }
 
 
@@ -594,11 +592,11 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     try {
       if (lastPoll.type == Poll.CONTENT_POLL) {
         logger.debug2("Calling a content poll on " + spec);
-        pollManager.requestPoll(LcapMessage.CONTENT_POLL_REQ, spec);
+        pollManager.sendPollRequest(LcapMessage.CONTENT_POLL_REQ, spec);
       }
       else if (lastPoll.type == Poll.NAME_POLL) {
         logger.debug2("Calling a name poll on " + spec);
-        pollManager.requestPoll(LcapMessage.NAME_POLL_REQ, spec);
+        pollManager.sendPollRequest(LcapMessage.NAME_POLL_REQ, spec);
       }
     }
     catch (IOException ioe) {
@@ -610,7 +608,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
   private void callNamePoll(PollSpec spec) {
     try {
       logger.debug2("Calling a name poll on " + spec);
-      pollManager.requestPoll(LcapMessage.NAME_POLL_REQ, spec);
+      pollManager.sendPollRequest(LcapMessage.NAME_POLL_REQ, spec);
     }
     catch (IOException ioe) {
       logger.error("Excption calling name poll on " + spec, ioe);

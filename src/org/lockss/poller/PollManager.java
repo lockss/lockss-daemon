@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.72 2003-04-15 01:27:00 aalto Exp $
+* $Id: PollManager.java,v 1.73 2003-04-15 02:21:22 claire Exp $
  */
 
 /*
@@ -88,14 +88,14 @@ public class PollManager  extends BaseLockssManager {
   private static LcapRouter theRouter = null;
 
   // our configuration variables
-  private long m_minContentPollDuration;
-  private long m_maxContentPollDuration;
-  private long m_minNamePollDuration;
-  private long m_maxNamePollDuration;
-  private long m_recentPollExpireTime;
-  private long m_replayPollExpireTime;
-  private long m_verifierExpireTime;
-  private int m_quorum;
+  private static long m_minContentPollDuration;
+  private static long m_maxContentPollDuration;
+  private static long m_minNamePollDuration;
+  private static long m_maxNamePollDuration;
+  private static long m_recentPollExpireTime;
+  private static long m_replayPollExpireTime;
+  private static long m_verifierExpireTime;
+  private static int m_quorum;
 
 
 
@@ -119,7 +119,6 @@ public class PollManager  extends BaseLockssManager {
 
     // register our status
     StatusService statusServ = theDaemon.getStatusService();
-    PollerStatus pollerStatus = new PollerStatus(this);
     statusServ.registerStatusAccessor(PollerStatus.MANAGER_STATUS_TABLE_NAME,
                                       new PollerStatus.ManagerStatus());
     statusServ.registerStatusAccessor(PollerStatus.POLL_STATUS_TABLE_NAME,
@@ -138,8 +137,6 @@ public class PollManager  extends BaseLockssManager {
     StatusService statusServ = theDaemon.getStatusService();
     statusServ.unregisterStatusAccessor(PollerStatus.MANAGER_STATUS_TABLE_NAME);
     statusServ.unregisterStatusAccessor(PollerStatus.POLL_STATUS_TABLE_NAME);
-    statusServ.unregisterObjectReferenceAccessor(
-        PollerStatus.MANAGER_STATUS_TABLE_NAME, ArchivalUnit.class);
 
     // unregister our router
     theRouter.unregisterMessageHandler(m_msgHandler);
@@ -160,7 +157,7 @@ public class PollManager  extends BaseLockssManager {
    * @param pollspec the PollSpec used to define the range and location of poll
    * @throws IOException thrown if Message construction fails.
    */
-  public void requestPoll(int opcode, PollSpec pollspec)
+  public void sendPollRequest(int opcode, PollSpec pollspec)
       throws IOException {
     theLog.debug("sending a request for poll of type: " + opcode +
                  " for spec " + pollspec);
@@ -237,14 +234,10 @@ public class PollManager  extends BaseLockssManager {
       d = Deadline.in(expiration);
       tally.startReplay(d);
     }
-
-    // now we want to make sure we add it to the recent polls.
-    expiration += m_recentPollExpireTime;
-
-    d = Deadline.in(expiration);
-    TimerQueue.schedule(d, new ExpireRecentCallback(), (String) key);
-    pme.setPollCompleted(d);
-    theLog.debug2("completed resume poll " + (String) key);
+    else {
+      pme.setPollCompleted();
+    }
+    theLog.debug3("completed resume poll " + (String) key);
   }
 
 
@@ -362,12 +355,10 @@ public class PollManager  extends BaseLockssManager {
      * @param key the poll signature
      */
     void closeThePoll(String key)  {
-      Deadline d = Deadline.in(m_recentPollExpireTime);
-      TimerQueue.schedule(d, new ExpireRecentCallback(), key);
       PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
       // mark the poll completed because if we need to call a repair poll
       // we don't want this one to be in conflict with it.
-      pme.setPollCompleted(d);
+      pme.setPollCompleted();
       PollTally tally = pme.poll.getVoteTally();
       if(tally.getType() != Poll.VERIFY_POLL) {
         NodeManager nm = theDaemon.getNodeManager(tally.getArchivalUnit());
@@ -484,8 +475,8 @@ public class PollManager  extends BaseLockssManager {
     CachedUrlSet cus = pollspec.getCachedUrlSet();
     LcapMessage reqmsg = LcapMessage.makeRequestMsg(pollspec,
         null,
-        vote.getVerifier(),
-        makeVerifier(),
+        vote.getVerifier(), // the challenge  becomes the verifier
+        makeVerifier(),     // we get a new verifier for this poll
         LcapMessage.VERIFY_POLL_REQ,
         duration,
         theIDManager.getLocalIdentity());
@@ -493,10 +484,8 @@ public class PollManager  extends BaseLockssManager {
     LcapIdentity originator =  theIDManager.findIdentity(vote.getIDAddress());
     theLog.debug2("sending our verification request to " + originator.toString());
     sendMessageTo(reqmsg, cus.getArchivalUnit(), originator);
-
-    theLog.debug3("Creating a local poll instance...");
-    Poll poll = findPoll(reqmsg);
-    poll.m_pollstate = Poll.PS_WAIT_TALLY;
+    // since we won't be getting this message make sure we create our own poll
+    Poll poll = makePoll(reqmsg);
   }
 
 
@@ -608,8 +597,19 @@ public class PollManager  extends BaseLockssManager {
   }
 
   private boolean isDuplicateMessage(LcapMessage msg) {
+    byte[] verifier = msg.getVerifier();
+    String ver = String.valueOf(B64Code.encode(verifier));
     synchronized (theVerifiers) {
-      return theVerifiers.containsKey(msg.getVerifier());
+      String secret = (String)theVerifiers.get(ver);
+      // if we have a secret and we don't have a poll this pkt is ok
+      if(!StringUtil.isNullString(secret) &&
+         !thePolls.contains(msg.getKey())) {
+        return false;
+      }
+      else if(secret == null) { // this isn't our poll and we haven't seen this
+        rememberVerifier(verifier,null);
+      }
+      return secret != null;   //
     }
   }
 
@@ -804,8 +804,9 @@ public class PollManager  extends BaseLockssManager {
       return status == SUSPENDED;
     }
 
-    synchronized void setPollCompleted(Deadline d) {
-      deadline = d;
+    synchronized void setPollCompleted() {
+      Deadline d = Deadline.in(m_recentPollExpireTime);
+      TimerQueue.schedule(d, new ExpireRecentCallback(), (String) key);
       status = poll.getVoteTally().didWinPoll() ? WON : LOST;
     }
 

@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.63 2003-04-10 01:06:51 claire Exp $
+* $Id: Poll.java,v 1.64 2003-04-15 02:21:22 claire Exp $
  */
 
 /*
@@ -68,17 +68,19 @@ public abstract class Poll implements Serializable {
       "poll.disagreeVerify";
   static final String PARAM_MARGIN = Configuration.PREFIX +
       "poll.margin";
+  static final String PARAM_TRUSTED_MARGIN = Configuration.PREFIX +
+      "poll.trustedMargin";
 
-  static final int DEFAULT_MARGIN = 60;
-  static final int DEFAULT_AGREE_VERIFY = 20;
+  static final int DEFAULT_MARGIN = 75;
+  static final int DEFAULT_TRUSTED_MARGIN = 10;
+  static final int DEFAULT_AGREE_VERIFY = 10;
   static final int DEFAULT_DISAGREE_VERIFY = 90;
   static final String[] ERROR_STRINGS = {"Poll Complete","Hash Schedule Error",
-      "Hashing Error", "No Quroum", "IO Error"
+      "Hashing Error", "IO Error"
   };
   public static final int ERR_SCHEDULE_HASH = -1;
   public static final int ERR_HASHING = -2;
-  public static final int ERR_NO_QUORUM = -3;
-  public static final int ERR_IO = -4;
+  public static final int ERR_IO = -3;
 
   static final int PS_INITING = 0;
   static final int PS_WAIT_HASH = 1;
@@ -93,6 +95,7 @@ public abstract class Poll implements Serializable {
   double m_agreeVer = 0;     // the max percentage of time we will verify
   double m_disagreeVer = 0;  // the max percentage of time we will verify
   double m_margin = 0;    // the margin by which we must win or lose
+  double m_trustedMargin = 0;// the margin by which a lost poll reputations
   CachedUrlSet m_cus;     // the cached url set retrieved from the archival unit
   PollSpec m_pollspec;
   byte[] m_challenge;     // The caller's challenge string
@@ -179,6 +182,8 @@ public abstract class Poll implements Serializable {
     m_disagreeVer = ((double)Configuration.getIntParam(PARAM_DISAGREE_VERIFY,
         DEFAULT_DISAGREE_VERIFY)) / 100;
 
+    m_trustedMargin = ((double)Configuration.getIntParam(PARAM_TRUSTED_MARGIN,
+        DEFAULT_TRUSTED_MARGIN)) / 100;
     m_margin = ((double)Configuration.getIntParam(PARAM_MARGIN,
         DEFAULT_MARGIN)) / 100;
 
@@ -324,11 +329,11 @@ public abstract class Poll implements Serializable {
    * and prevent any more activity in this poll.
    */
   void stopPoll() {
-    if(!isErrorState()) {
-      m_pollstate = m_tally.haveQuorum() ? PS_COMPLETE : ERR_NO_QUORUM;
-    }
     if(isErrorState()) {
       log.debug("poll stopped with error: " + ERROR_STRINGS[ -m_pollstate]);
+    }
+    else {
+      m_pollstate = Poll.PS_COMPLETE;
     }
     m_pollmanager.closeThePoll(m_key);
     log.debug3("closed the poll:" + m_key);

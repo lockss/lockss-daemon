@@ -1,5 +1,5 @@
 /*
- * $Id: RunDaemon.java,v 1.33 2003-04-02 02:20:56 aalto Exp $
+ * $Id: RunDaemon.java,v 1.34 2003-04-15 02:21:22 claire Exp $
  */
 
 /*
@@ -168,7 +168,7 @@ public class RunDaemon
     CachedUrlSet cus = getPluginManager().findCachedUrlSet(spec);
     try {
       Thread.currentThread().sleep(10000);
-      getPollManager().requestPoll(poll_type, new PollSpec(cus));
+      getPollManager().sendPollRequest(poll_type, new PollSpec(cus));
     }
     catch (Exception e) {
       e.printStackTrace();

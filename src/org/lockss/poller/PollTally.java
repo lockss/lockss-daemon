@@ -16,10 +16,17 @@ import org.lockss.state.NodeManager;
 import org.lockss.daemon.status.*;
 
 /**
- * VoteTally is a struct-like class which maintains the current state of
+ * PollTally is a struct-like class which maintains the current state of
  * votes within a poll.
  */
 public class PollTally {
+  static final int STATE_POLLING = 0;
+  static final int STATE_ERROR = 1;
+  static final int STATE_NOQUORUM = 2;
+  static final int STATE_INCONCLUSIVE = 3;
+  static final int STATE_WON = 4;
+  static final int STATE_LOST = 5;
+
   PollSpec pollSpec;
   String key;
   Poll poll;
@@ -31,6 +38,7 @@ public class PollTally {
   int wtAgree;      // The weight of the votes that agree with us
   int wtDisagree;   // The weight of the votes that disagree with us
   int quorum;       // The # of votes needed to have a quorum
+  int status;
   ArrayList pollVotes;
   String hashAlgorithm; // the algorithm used to hash this poll
   long m_createTime;       // poll creation time
@@ -42,7 +50,7 @@ public class PollTally {
   private ArrayList originalVotes = null;
   private static IdentityManager idManager = null;
 
-  static Logger log=Logger.getLogger("VoteTally");
+  static Logger log=Logger.getLogger("PollTally");
 
   PollTally(int type, long startTime, long duration, int numAgree,
             int numDisagree, int wtAgree, int wtDisagree, int quorum,
@@ -78,9 +86,16 @@ public class PollTally {
     sbuf.append(" disagree:" + numDisagree);
     sbuf.append("-wt-" + wtDisagree);
     sbuf.append(" quorum:" + quorum);
+    sbuf.append(" status:" + getStatusString());
     sbuf.append("]");
     return sbuf.toString();
   }
+
+
+  public int getPollStatus() {
+    return status;
+  }
+
 
   /**
    * did we win or lose the last poll.
@@ -90,10 +105,8 @@ public class PollTally {
    * agree votes.
    */
   public boolean didWinPoll() {
-    if(!isErrorState()) {
-      if(isWithinMargin()) {
-        return (numAgree > numDisagree) && (wtAgree >= wtDisagree);
-      }
+    if (!isErrorState() && haveQuorum()) {
+      return (numAgree > numDisagree);
     }
     return false;
   }
@@ -115,6 +128,11 @@ public class PollTally {
       return false;
     }
     return true;
+  }
+
+  public boolean isTrustedResults() {
+    double act_margin = (double)wtDisagree/ (double)(wtAgree + wtDisagree);
+    return act_margin >= poll.m_trustedMargin;
   }
 
   /**
@@ -223,12 +241,31 @@ public class PollTally {
         return "Error scheduling hash";
       case Poll.ERR_HASHING:
         return "Error hashing";
-      case Poll.ERR_NO_QUORUM:
-        return "Error no quorum";
       case Poll.ERR_IO:
         return "Error I/0";
       default:
         return "Undefined";
+    }
+  }
+
+  public String getStatusString() {
+    switch (status) {
+      case STATE_ERROR:
+        return getErrString();
+      case STATE_NOQUORUM:
+        return "No Quorum";
+      case STATE_INCONCLUSIVE:
+        if (!isTrustedResults()) {
+          return "Untrusted";
+        }
+        return "Too Close";
+      case STATE_WON:
+        return "Won";
+      case STATE_LOST:
+        return "Lost";
+      default:
+        return "Active";
+
     }
   }
 
@@ -260,6 +297,28 @@ public class PollTally {
     else {
       Vote vote = (Vote)replayIter.next();
       replayVoteCheck(vote, replayDeadline);
+    }
+  }
+
+  void setPollStatus() {
+    // if it's an error
+    if (isErrorState()) {
+      status = STATE_ERROR;
+    }
+    else if (!haveQuorum()) {
+      status = STATE_NOQUORUM;
+    }
+    else if (!isWithinMargin()) {
+      status = STATE_INCONCLUSIVE;
+    }
+    else {
+      boolean won = numAgree > numDisagree;
+      if (!won && !isTrustedResults()) {
+        status = STATE_INCONCLUSIVE;
+      }
+      else {
+        status = won ? STATE_WON : STATE_LOST;
+      }
     }
   }
 
