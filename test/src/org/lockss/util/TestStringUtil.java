@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.24 2003-08-04 07:58:46 tlipkis Exp $
+ * $Id: TestStringUtil.java,v 1.25 2003-08-06 06:30:05 tlipkis Exp $
  */
 
 /*
@@ -371,6 +371,5 @@ public class TestStringUtil extends LockssTestCase {
     catch (IOException e) {
       fail(e.getMessage());
     }
-}
-
+  }
 }
