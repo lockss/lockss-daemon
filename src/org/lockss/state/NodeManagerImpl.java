@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.177 2004-06-02 18:10:19 clairegriffin Exp $
+ * $Id: NodeManagerImpl.java,v 1.178 2004-07-12 23:41:43 clairegriffin Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import org.lockss.plugin.*;
 import org.lockss.protocol.*;
 import org.lockss.repository.*;
 import org.lockss.crawler.CrawlManager;
+import org.lockss.alert.*;
 
 /**
  * Implementation of the NodeManager.
@@ -73,6 +74,7 @@ public class NodeManagerImpl
 
   // the various necessary managers
   HistoryRepository historyRepo;
+  AlertManager alertMgr;
   private LockssRepository lockssRepo;
   PollManager pollManager;
   ActivityRegulator regulator;
@@ -700,6 +702,11 @@ public class NodeManagerImpl
         case PollState.REPAIRING:
           // if repair poll, we're repaired
           logger.debug2("won repair poll, state = repaired.");
+          alertMgr.raiseAlert(Alert.auAlert(Alert.REPAIR_COMPLETE,managedAu)
+                    .setAttribute(Alert.ATTR_TEXT,"Repair of " +
+                                  results.getCachedUrlSet().getUrl()
+                                  + " successful"));
+
           pollState.status = PollState.REPAIRED;
       }
 
@@ -733,6 +740,10 @@ public class NodeManagerImpl
         logger.debug2("lost repair content poll, state = unrepairable");
         // if repair poll, can't be repaired and we leave it our damaged table
         pollState.status = PollState.UNREPAIRABLE;
+        alertMgr.raiseAlert(Alert.auAlert(Alert.PERSISTENT_DAMAGE,managedAu)
+                            .setAttribute(Alert.ATTR_TEXT,"Repair of " +
+                                          results.getCachedUrlSet().getUrl()
+                                          + " fails to resolve poll."));
         updateReputations(results);
       } else {
         // otherwise, schedule repair (if SNCUS) or name poll

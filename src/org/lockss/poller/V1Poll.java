@@ -1,5 +1,5 @@
 /*
-* $Id: V1Poll.java,v 1.8 2004-02-07 06:51:19 eaalto Exp $
+* $Id: V1Poll.java,v 1.9 2004-07-12 23:41:42 clairegriffin Exp $
  */
 
 /*
@@ -446,12 +446,10 @@ public abstract class V1Poll extends BasePoll {
                   String.valueOf(B64Code.encode(m_hash)));
         m_pollstate = PS_WAIT_VOTE;
         scheduleVote();
-
       }
       else {
         log.debug("Hash failed : " + e.getMessage());
         m_pollstate = ERR_HASHING;
-
       }
     }
   }

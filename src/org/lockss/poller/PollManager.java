@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.126 2004-05-11 23:51:14 tlipkis Exp $
+ * $Id: PollManager.java,v 1.127 2004-07-12 23:41:42 clairegriffin Exp $
  */
 
 /*
@@ -46,6 +46,8 @@ import org.lockss.hasher.HashService;
 import org.lockss.daemon.status.*;
 import org.lockss.state.*;
 import org.mortbay.util.B64Code;
+import org.lockss.alert.AlertManager;
+import org.lockss.alert.*;
 
 /**
  * <p>Class that manages the polling process.</p>
@@ -98,6 +100,7 @@ public class PollManager  extends BaseLockssManager {
   private static HashService theHashService;
   private static LockssRandom theRandom = new LockssRandom();
   private static LcapRouter theRouter = null;
+  private AlertManager theAlertManager = null;
   private static SystemMetrics theSystemMetrics = null;
 
   // our configuration variables
@@ -112,6 +115,7 @@ public class PollManager  extends BaseLockssManager {
   protected static int m_minDurationMultiplier;
   protected static int m_maxDurationMultiplier;
 
+
   public PollManager() {
   }
 
@@ -124,6 +128,7 @@ public class PollManager  extends BaseLockssManager {
     // the services we use on an ongoing basis
     theIDManager = theDaemon.getIdentityManager();
     theHashService = theDaemon.getHashService();
+    theAlertManager = theDaemon.getAlertManager();
 
     // register a message handler with the router
     theRouter = theDaemon.getRouterManager();
@@ -567,6 +572,10 @@ public class PollManager  extends BaseLockssManager {
         throw new ProtocolException("Unknown opcode:" + msg.getOpcode());
     }
     return ret_poll;
+  }
+
+  void raiseAlert(Alert alert) {
+    theAlertManager.raiseAlert(alert);
   }
 
   /**
