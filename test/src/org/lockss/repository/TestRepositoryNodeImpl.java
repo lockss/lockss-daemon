@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.6 2002-11-27 22:56:17 aalto Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.7 2002-12-03 23:08:15 aalto Exp $
  */
 
 /*
@@ -42,6 +42,7 @@ import org.lockss.util.*;
  */
 public class TestRepositoryNodeImpl extends LockssTestCase {
   private LockssRepository repo;
+  private String tempDirPath;
 
   public TestRepositoryNodeImpl(String msg) {
     super(msg);
@@ -49,7 +50,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     TestLockssRepositoryImpl.configCacheLocation(tempDirPath);
     MockArchivalUnit mau = new MockArchivalUnit(null);
     repo = LockssRepositoryImpl.repositoryFactory(mau);
@@ -73,6 +74,48 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
 
   public void testStoreState() {
     //XXX implement
+  }
+
+  public void testFileLocation() throws Exception {
+    createLeaf("http://www.example.com/testDir/branch1/leaf1", "test stream",
+               null);
+    MockArchivalUnit mau = new MockArchivalUnit(null);
+    tempDirPath += LockssRepositoryImpl.CACHE_ROOT_NAME + "/" +
+                   mau.getPluginId() + "/" + mau.getAUId() +
+                   "/www.example.com/http/testDir/branch1/leaf1/";
+    File testFile = new File(tempDirPath);
+    assertTrue(testFile.exists());
+    testFile = new File(tempDirPath + "leaf1.content/leaf1.current");
+    assertTrue(testFile.exists());
+    testFile = new File(tempDirPath + "leaf1.content/leaf1.props.current");
+    assertTrue(testFile.exists());
+  }
+
+  public void testVersionFileLocation() throws Exception {
+    RepositoryNode leaf =
+        createLeaf("http://www.example.com/testDir/branch1/leaf1",
+        "test stream", null);
+    MockArchivalUnit mau = new MockArchivalUnit();
+    tempDirPath += LockssRepositoryImpl.CACHE_ROOT_NAME + "/" +
+                   mau.getPluginId() + "/" + mau.getAUId() +
+                   "/www.example.com/http/testDir/branch1/leaf1/";
+    File testFile = new File(tempDirPath + "leaf1.content/leaf1.1");
+    assertTrue(!testFile.exists());
+    testFile = new File(tempDirPath + "leaf1.content/leaf1.props.1");
+    assertTrue(!testFile.exists());
+
+    leaf.makeNewVersion();
+    OutputStream os = leaf.getNewOutputStream();
+    InputStream is = new StringInputStream("test stream");
+    StreamUtil.copy(is, os);
+    is.close();
+    os.close();
+    leaf.setNewProperties(new Properties());
+    leaf.sealNewVersion();
+    testFile = new File(tempDirPath + "leaf1.content/leaf1.1");
+    assertTrue(testFile.exists());
+    testFile = new File(tempDirPath + "leaf1.content/leaf1.props.1");
+    assertTrue(testFile.exists());
   }
 
   public void testListEntries() throws Exception {

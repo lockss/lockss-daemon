@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimulatedContentGenerator.java,v 1.8 2002-11-27 20:29:12 aalto Exp $
+ * $Id: TestSimulatedContentGenerator.java,v 1.9 2002-12-03 23:08:15 aalto Exp $
  */
 
 /*
@@ -49,6 +49,7 @@ import java.net.*;
 
 public class TestSimulatedContentGenerator extends LockssTestCase {
   private SimulatedContentGenerator scgen;
+  private String tempDirPath;
 
   public TestSimulatedContentGenerator(String msg) {
     super(msg);
@@ -56,7 +57,7 @@ public class TestSimulatedContentGenerator extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     scgen = new SimulatedContentGenerator(tempDirPath);
   }
 
@@ -149,6 +150,31 @@ public class TestSimulatedContentGenerator extends LockssTestCase {
         SimulatedContentGenerator.FILE_TYPE_JPEG));
     expectedStr = SimulatedContentGenerator.BRANCH_PREFIX + "15";
     assertEquals(expectedStr, SimulatedContentGenerator.getDirectoryName(15));
+  }
+
+  public void testFileLocation() throws IOException {
+    tempDirPath += "simcontent/";
+    File testDir = new File(tempDirPath);
+    assertTrue(!testDir.exists());
+    scgen.setTreeDepth(1);
+    scgen.setNumFilesPerBranch(1);
+    scgen.generateContentTree();
+    assertTrue(testDir.exists());
+    String testStr = tempDirPath + "file1.txt";
+    testDir = new File(testStr);
+    assertTrue(testDir.exists());
+    testStr = tempDirPath + "index.html";
+    testDir = new File(testStr);
+    assertTrue(testDir.exists());
+    testStr = tempDirPath + "branch1";
+    testDir = new File(testStr);
+    assertTrue(testDir.exists());
+    testStr = tempDirPath + "branch1/file1.txt";
+    testDir = new File(testStr);
+    assertTrue(testDir.exists());
+    testStr = tempDirPath + "branch1/index.html";
+    testDir = new File(testStr);
+    assertTrue(testDir.exists());
   }
 
   public void testTreeExistence() {
