@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingCrawlerImpl.java,v 1.8 2003-01-07 01:55:32 troberts Exp $
+ * $Id: GoslingCrawlerImpl.java,v 1.9 2003-01-08 01:51:38 aalto Exp $
  */
 
 /*
@@ -114,10 +114,10 @@ public class GoslingCrawlerImpl implements Crawler {
    * Main method of the crawler; it loops through crawling and caching
    * urls.
    *
-   * @param au ArchivalUnit which this crawl is within 
-   * @param spec CachedUrlSet encapsulating the starting point of the
-   * crawl and the rules for which urls to cache
-   *
+   * @param au ArchivalUnit which this crawl is within
+   * @param urls List of urls to crawl
+   * @param followLinks whether or not to extract and follow links
+   * @param deadline when to terminate by
    */
   public void doCrawl(ArchivalUnit au, List urls, boolean followLinks,
 		       Deadline deadline) {
@@ -136,35 +136,35 @@ public class GoslingCrawlerImpl implements Crawler {
 
     Iterator it = urls.iterator();
     while (it.hasNext() && !deadline.expired()) {
-      doCrawlLoop((String)it.next(), extractedUrls, parsedPages, 
+      doCrawlLoop((String)it.next(), extractedUrls, parsedPages,
 		  au, cus, true, followLinks);
     }
 
     while (!extractedUrls.isEmpty() && !deadline.expired()) {
       String url = (String)extractedUrls.remove(0);
-      doCrawlLoop(url, extractedUrls, parsedPages, au, cus, 
+      doCrawlLoop(url, extractedUrls, parsedPages, au, cus,
 		  false, followLinks);
     }
   }
 
 
   /**
-   * This is the meat of the crawl.  Fetches the specified url and adds 
+   * This is the meat of the crawl.  Fetches the specified url and adds
    * any urls it harvests from it to extractedUrls
-   * @param String url url to fetch
-   * @param List extractedUrls list to write harvested urls to
-   * @param Set parsedPages set containing all the pages that have already 
+   * @param url url to fetch
+   * @param extractedUrls list to write harvested urls to
+   * @param parsedPages set containing all the pages that have already
    * been parsed (to make sure we don't loop)
-   * @param ArchivalUnit au archival unit that the url belongs to; 
+   * @param au archival unit that the url belongs to;
    * used to get the pause() method
-   * @param CachedUrlSet cus cached url set that the url belongs to
-   * @param boolean overWrite whether we should overwrite the page if it 
-   * already has been cached 
-   * @param boolean shouldParse whether we should extract links from this 
+   * @param cus cached url set that the url belongs to
+   * @param overWrite whether we should overwrite the page if it
+   * already has been cached
+   * @param shouldParse whether we should extract links from this
    * page if we cache it
    */
-  protected void doCrawlLoop(String url, List extractedUrls, Set parsedPages, 
-			     ArchivalUnit au, CachedUrlSet cus, 
+  protected void doCrawlLoop(String url, List extractedUrls, Set parsedPages,
+			     ArchivalUnit au, CachedUrlSet cus,
 			     boolean overWrite, boolean shouldParse) {
     logger.debug("Dequeued url from list: "+url);
     UrlCacher uc = cus.makeUrlCacher(url);
@@ -182,11 +182,11 @@ public class GoslingCrawlerImpl implements Crawler {
       else {
 	logger.info(uc+" exists, not caching");
       }
-      try{
+      try {
 	if (shouldParse && !parsedPages.contains(uc.getUrl())) {
 	  CachedUrl cu = uc.getCachedUrl();
 
-	  //XXX quick fix; if statement should be removed when we rework 
+	  //XXX quick fix; if statement should be removed when we rework
 	  //handling of error condition
 	  if (cu.exists()) {
 	    addUrlsToList(cu, extractedUrls);//IOException if the CU can't be read
@@ -206,8 +206,9 @@ public class GoslingCrawlerImpl implements Crawler {
    * Method which will parse the html file represented by cu and add all
    * urls on it to list
    *
-   *@param cu object representing a html file in the local file system
-   *@param list list to which all the urs in cu should be added
+   * @param cu object representing a html file in the local file system
+   * @param list list to which all the urs in cu should be added
+   * @throws IOException
    */
   protected static void addUrlsToList(CachedUrl cu, List list)
       throws IOException {
@@ -223,11 +224,11 @@ public class GoslingCrawlerImpl implements Crawler {
       URL srcUrl = new URL(cuStr);
       logger.debug("Extracting urls from srcUrl");
       String nextUrl = null;
-      while ((nextUrl = ExtractNextLink(reader, srcUrl)) != null) {
+      while ((nextUrl = extractNextLink(reader, srcUrl)) != null) {
 	logger.debug("Extracted "+nextUrl);
 
 	//should check if this is something we should cache first
-	if (!list.contains(nextUrl)) { 
+	if (!list.contains(nextUrl)) {
 	  list.add(nextUrl);
 	}
       }
@@ -268,8 +269,10 @@ public class GoslingCrawlerImpl implements Crawler {
    * @param srcUrl URL object representing the page we are looking at
    * (for resolving relative links)
    * @return String representing the next url in reader
+   * @throws IOException
+   * @throws MalformedURLException
    */
-  protected static String ExtractNextLink(Reader reader, URL srcUrl)
+  protected static String extractNextLink(Reader reader, URL srcUrl)
       throws IOException, MalformedURLException {
     if (reader == null) {
       return null;
@@ -295,7 +298,7 @@ public class GoslingCrawlerImpl implements Crawler {
 	    pos = 0;
 	    int lc1 = 0;
 	    int lc2 = 0;
-	    while((c = reader.read()) >= 0 
+	    while((c = reader.read()) >= 0
 		  && (c != '>' || lc1 != '-' || lc2 != '-')) {
 	      lc1 = lc2;
 	      lc2 = c;
@@ -312,7 +315,7 @@ public class GoslingCrawlerImpl implements Crawler {
 	  inscript = false;
 	  //}
 	} else if (lineBuf.length() >= 5) { //see if the lineBuf has a link tag
-	  nextLink = ParseLink(lineBuf, srcUrl);
+	  nextLink = parseLink(lineBuf, srcUrl);
 	}
 	lineBuf = new StringBuffer();
       }
@@ -333,59 +336,60 @@ public class GoslingCrawlerImpl implements Crawler {
    * @param srcUrl URL object representing the page on which this
    * url was taken from (for resolving relative tags)
    * @return string representation of the url from the link tag
+   * @throws MalformedURLException
    */
-  protected static String ParseLink(StringBuffer link, URL srcUrl)
+  protected static String parseLink(StringBuffer link, URL srcUrl)
       throws MalformedURLException {
     String returnStr = null;
 
     switch (link.charAt(0)) {
     case 'a': //<a href=http://www.yahoo.com>
     case 'A':
-      if (StringUtil.getIndexIgnoringCase(link.toString(), 
+      if (StringUtil.getIndexIgnoringCase(link.toString(),
 					  ATAG+" ") == 0) {
 	returnStr = getAttributeValue(ASRC, link.toString());
       }
       break;
     case 'f': //<frame src=frame1.html>
     case 'F':
-      if (StringUtil.getIndexIgnoringCase(link.toString(), 
+      if (StringUtil.getIndexIgnoringCase(link.toString(),
 					  FRAMETAG+" ") == 0) {
 	returnStr = getAttributeValue(SRC, link.toString());
       }
       break;
     case 'i': //<img src=image.gif>
     case 'I':
-      if (StringUtil.getIndexIgnoringCase(link.toString(), 
+      if (StringUtil.getIndexIgnoringCase(link.toString(),
 					  IMGTAG+" ") == 0) {
 	returnStr = getAttributeValue(SRC, link.toString());
       }
       break;
     case 'l': //<link href=blah.css>
     case 'L':
-      if (StringUtil.getIndexIgnoringCase(link.toString(), 
+      if (StringUtil.getIndexIgnoringCase(link.toString(),
 					  LINKTAG+" ") == 0) {
 	returnStr = getAttributeValue(ASRC, link.toString());
       }
       break;
     case 'b': //<body backgroung=background.gif>
     case 'B':
-      if (StringUtil.getIndexIgnoringCase(link.toString(), 
+      if (StringUtil.getIndexIgnoringCase(link.toString(),
 					  BODYTAG+" ") == 0) {
 	returnStr = getAttributeValue(BACKGROUNDSRC, link.toString());
       }
       break;
     case 's': //<script src=blah.js>
     case 'S':
-      if (StringUtil.getIndexIgnoringCase(link.toString(), 
+      if (StringUtil.getIndexIgnoringCase(link.toString(),
 					  SCRIPTTAG+" ") == 0) {
 	returnStr = getAttributeValue(SRC, link.toString());
       }
       break;
     case 't': //<tc background=back.gif> or <table background=back.gif>
     case 'T':
-      if (StringUtil.getIndexIgnoringCase(link.toString(), 
+      if (StringUtil.getIndexIgnoringCase(link.toString(),
 					  TABLETAG+" ") == 0 ||
-	  StringUtil.getIndexIgnoringCase(link.toString(), 
+	  StringUtil.getIndexIgnoringCase(link.toString(),
 					  TDTAG+" ") == 0) {
 	  returnStr = getAttributeValue(BACKGROUNDSRC, link.toString());
 	}
@@ -396,7 +400,7 @@ public class GoslingCrawlerImpl implements Crawler {
 
     if (returnStr != null) {
       returnStr = StringUtil.trimAfterChars(returnStr, " #\"");
-      logger.debug("Generationg url from: "+srcUrl+" and "+returnStr);
+      logger.debug("Generating url from: "+srcUrl+" and "+returnStr);
       URL retUrl = new URL(srcUrl, returnStr);
       returnStr = retUrl.toString();
       logger.debug("Parsed: "+returnStr);
