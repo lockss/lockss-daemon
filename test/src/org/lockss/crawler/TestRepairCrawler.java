@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepairCrawler.java,v 1.10 2004-07-12 18:19:02 dcfok Exp $
+ * $Id: TestRepairCrawler.java,v 1.11 2004-07-12 18:59:10 dcfok Exp $
  */
 
 /*
@@ -66,7 +66,7 @@ public class TestRepairCrawler extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    new MockLockssDaemon().getAlertManager();
+    getMockLockssDaemon().getAlertManager();
 
     mau = new MockArchivalUnit();
     crawlRule = new MockCrawlRule();
@@ -203,7 +203,7 @@ public class TestRepairCrawler extends LockssTestCase {
   }
 
   public void testFetchFromACacheOnly() throws UnknownHostException {
-    MockLockssDaemon theDaemon = new MockLockssDaemon();
+    MockLockssDaemon theDaemon = getMockLockssDaemon();
     MockIdentityManager idm = new MockIdentityManager();
     String id = "127.0.0.1";
     Map map = new HashMap();
@@ -228,7 +228,7 @@ public class TestRepairCrawler extends LockssTestCase {
   }
 
   public void testFetchFromOtherCachesOnlyWithoutRetryLimit() throws UnknownHostException {
-    MockLockssDaemon theDaemon = new MockLockssDaemon();
+    MockLockssDaemon theDaemon = getMockLockssDaemon();
     MockIdentityManager idm = new MockIdentityManager();
     String id1 = "127.0.0.1";
     String id2 = "127.0.0.2";
@@ -257,7 +257,7 @@ public class TestRepairCrawler extends LockssTestCase {
   }
 
   public void testFetchFromOtherCachesOnlyWithRetryLimit() throws UnknownHostException {
-    MockLockssDaemon theDaemon = new MockLockssDaemon();
+    MockLockssDaemon theDaemon = getMockLockssDaemon();
     MockIdentityManager idm = new MockIdentityManager();
     String id1 = "127.0.0.1";
     String id2 = "127.0.0.2";
@@ -303,7 +303,7 @@ public class TestRepairCrawler extends LockssTestCase {
   }
 
   public void testFetchFromOtherCachesThenPublisher() throws UnknownHostException {
-    MockLockssDaemon theDaemon = new MockLockssDaemon();
+    MockLockssDaemon theDaemon = getMockLockssDaemon();
     MockIdentityManager idm = new MockIdentityManager();
     String id1 = "127.0.0.1";
     String id2 = "127.0.0.2";
@@ -334,7 +334,7 @@ public class TestRepairCrawler extends LockssTestCase {
   }
 
   public void testFetchFromPublisherThenOtherCaches() throws UnknownHostException {
-    MockLockssDaemon theDaemon = new MockLockssDaemon();
+    MockLockssDaemon theDaemon = getMockLockssDaemon();
     MockIdentityManager idm = new MockIdentityManager();
     String id1 = "127.0.0.1";
     String id2 = "127.0.0.2";
