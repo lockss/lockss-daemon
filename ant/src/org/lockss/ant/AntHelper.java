@@ -1,5 +1,5 @@
 /*
- * $Id: AntHelper.java,v 1.1 2003-05-26 03:47:10 tal Exp $
+ * $Id: AntHelper.java,v 1.2 2003-07-17 05:20:29 tlipkis Exp $
  */
 
 /*
@@ -46,8 +46,8 @@ public class AntHelper {
 
   /** Create instance, get current Ant task from where LoggingJUnitTask
    * stashed it.
-   * @throw IllegalStateException is no Ant task found (means we're not
-   * running in one of our customized Ant tasks. */
+   * @throw IllegalStateException if no Ant task found (means we're not
+   * running in one of our customized Ant tasks). */
   public AntHelper() {
     Properties pr = System.getProperties();
     task = (Task)pr.get(LoggingJUnitTask.TASK_PROPERTY);
