@@ -1,5 +1,5 @@
 /*
-* $Id: NamePoll.java,v 1.8 2002-11-12 23:41:29 claire Exp $
+* $Id: NamePoll.java,v 1.9 2002-11-14 03:58:09 claire Exp $
  */
 
 /*
@@ -30,14 +30,14 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.poller;
 
-import org.lockss.daemon.CachedUrlSet;
-import org.lockss.protocol.LcapMessage;
 import java.security.*;
+import java.util.*;
+
+
+import org.lockss.daemon.*;
 import org.lockss.hasher.*;
-import java.util.Hashtable;
-import java.util.Arrays;
-import gnu.regexp.*;
-import org.lockss.util.ProbabilisticTimer;
+import org.lockss.protocol.*;
+import org.lockss.util.*;
 
 /**
  * @author Claire Griffin
@@ -51,8 +51,8 @@ public class NamePoll extends Poll {
   int m_namesSent;
   int m_seq;
 
-  public NamePoll(LcapMessage msg) {
-    super(msg);
+  public NamePoll(LcapMessage msg, CachedUrlSet urlSet) {
+    super(msg, urlSet);
     our_expansion = new Hashtable();
     all_expansion = new Hashtable();
     m_voterState = new Hashtable();
@@ -62,23 +62,6 @@ public class NamePoll extends Poll {
     m_thread = new Thread(this, "NamePoll-" + m_seq);
   }
 
-  /**
-   * tally the poll results
-   */
-  protected void tally() {
-    int yes;
-    int no;
-    int yesWt;
-    int noWt;
-    synchronized (this) {
-      yes = m_agree;
-      no = m_disagree;
-      yesWt = m_agreeWt;
-      noWt = m_disagreeWt;
-    }
-    thePolls.remove(m_key);
-    //recordTally(m_urlset, this, yes, no, yesWt, noWt, m_replyOpcode);
-  }
 
   /**
    * prepare to run a poll.  This should check any conditions that might
@@ -108,9 +91,9 @@ public class NamePoll extends Poll {
       return false;
     }
 
-    String key = makeKey(msg.getTargetUrl(),
-                                msg.getRegExp(),
-                                msg.getOpcode());
+    String key = PollManager.makeKey(msg.getTargetUrl(),
+                                     msg.getRegExp(),
+                                     msg.getOpcode());
     if (!m_key.equals(key)) {
       log.debug(m_key + " target mismatch: " + key);
       return false;
@@ -154,7 +137,7 @@ public class NamePoll extends Poll {
 
     MessageDigest hasher = null;
     try {
-      hasher = MessageDigest.getInstance(HASH_ALGORITHM);
+      hasher = MessageDigest.getInstance(PollManager.HASH_ALGORITHM);
     } catch (NoSuchAlgorithmException ex) {
       return false;
     }

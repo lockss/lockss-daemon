@@ -1,5 +1,5 @@
 /*
-* $Id: VerifyPoll.java,v 1.8 2002-11-12 23:41:29 claire Exp $
+* $Id: VerifyPoll.java,v 1.9 2002-11-14 03:58:09 claire Exp $
  */
 
 /*
@@ -30,16 +30,15 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.poller;
 
-import org.lockss.daemon.CachedUrlSet;
-import org.lockss.protocol.LcapMessage;
-import java.io.IOException;
-import org.lockss.util.ProbabilisticChoice;
-import org.lockss.protocol.*;
+import java.io.*;
+import java.security.*;
 import java.util.*;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-import org.lockss.plugin.Plugin;
-import org.lockss.util.ProbabilisticTimer;
+
+
+import org.lockss.daemon.*;
+import org.lockss.plugin.*;
+import org.lockss.protocol.*;
+import org.lockss.util.*;
 
 
 /**
@@ -49,8 +48,8 @@ import org.lockss.util.ProbabilisticTimer;
 class VerifyPoll extends Poll implements Runnable {
   private static int m_seq = 0;
 
-  public VerifyPoll(LcapMessage msg) {
-    super(msg);
+  public VerifyPoll(LcapMessage msg, CachedUrlSet urlSet) {
+    super(msg, urlSet);
     m_replyOpcode = LcapMessage.VERIFY_POLL_REP;
     m_quorum = 1;
     m_seq++;
@@ -74,7 +73,7 @@ class VerifyPoll extends Poll implements Runnable {
       }
       else {			// someone else called this poll
         replyVerify(m_msg);
-        thePolls.remove(m_key);
+        PollManager.removePoll(m_key);
       }
     } catch (OutOfMemoryError e) {
       System.exit(-11);
@@ -93,8 +92,9 @@ class VerifyPoll extends Poll implements Runnable {
   protected static void randomRequestVerify(LcapMessage msg, int pct)
       throws IOException {
     double prob = ((double) pct) / 100.0;
-    if (ProbabilisticChoice.choose(prob))
+    if (ProbabilisticChoice.choose(prob)) {
       requestVerify(msg);
+    }
   }
 
   /**
@@ -118,14 +118,7 @@ class VerifyPoll extends Poll implements Runnable {
    * tally the poll results
    */
   protected void tally()  {
-    int yes;
-    int no;
-
-    synchronized(this)  {
-      yes = m_agree;
-      no = m_disagree;
-    }
-    thePolls.remove(m_key);
+    super.tally();
     log.info(m_msg.toString() + " tally " + toString());
     LcapIdentity id = m_msg.getOriginID();
     if ((m_agree + m_disagree) < 1) {
@@ -135,7 +128,6 @@ class VerifyPoll extends Poll implements Runnable {
     } else {
       id.voteDisown();
     }
-    //recordTally(m_urlset, Message.VERIFY_REQ, yes, no, agreeWt, disagreeWt);
   }
 
   /**
@@ -170,7 +162,7 @@ class VerifyPoll extends Poll implements Runnable {
     // hash to the challenge, which is the verifier of the poll
     // thats being verified
     try {
-      hasher = MessageDigest.getInstance(HASH_ALGORITHM);
+      hasher = MessageDigest.getInstance(PollManager.HASH_ALGORITHM);
     }
     catch (NoSuchAlgorithmException ex) {
       log.error(m_key + "failed to find hash algorithm");
@@ -192,8 +184,8 @@ class VerifyPoll extends Poll implements Runnable {
     String url = new String(msg.getTargetUrl());
     String regexp = new String(msg.getRegExp());
     int opcode = LcapMessage.VERIFY_POLL_REQ;
-    Poll p = null;
-    byte[] verifier = makeVerifier(p);
+
+    byte[] verifier = PollManager.makeVerifier();
     LcapMessage reqmsg = LcapMessage.makeRequestMsg(url,
         regexp,
         new String[0],
@@ -206,14 +198,14 @@ class VerifyPoll extends Poll implements Runnable {
         LcapIdentity.getLocalIdentity());
     LcapIdentity originator = msg.getOriginID();
     LcapComm.sendMessageTo(msg,Plugin.findArchivalUnit(url),originator);
-    Poll poll = findPoll(reqmsg);
+    Poll poll = PollManager.findPoll(reqmsg);
     poll.startPoll();
   }
 
   private void replyVerify(LcapMessage msg) throws IOException  {
     Poll p = null;
-    byte[] secret = findSecret(msg);
-    byte[] verifier = makeVerifier(p);
+    byte[] secret = PollManager.getSecret(msg.getChallenge());
+    byte[] verifier = PollManager.makeVerifier();
     LcapMessage repmsg = LcapMessage.makeReplyMsg(msg,
         secret,
         verifier,

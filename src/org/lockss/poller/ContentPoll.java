@@ -1,5 +1,5 @@
 /*
-* $Id: ContentPoll.java,v 1.8 2002-11-12 23:41:29 claire Exp $
+* $Id: ContentPoll.java,v 1.9 2002-11-14 03:58:09 claire Exp $
  */
 
 /*
@@ -32,14 +32,15 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.poller;
 
-import org.lockss.daemon.CachedUrlSet;
-import org.lockss.protocol.LcapMessage;
-import java.security.*;
-import org.lockss.hasher.*;
 import java.io.*;
-import gnu.regexp.*;
-import java.util.Arrays;
-import org.lockss.util.ProbabilisticTimer;
+import java.security.*;
+import java.util.*;
+
+
+import org.lockss.daemon.*;
+import org.lockss.hasher.*;
+import org.lockss.protocol.*;
+import org.lockss.util.*;
 
 /**
  * class which represents a content poll
@@ -51,8 +52,8 @@ public class ContentPoll extends Poll implements Runnable {
 
   private static int seq = 0;
 
-  ContentPoll(LcapMessage msg) throws IOException {
-    super(msg);
+  ContentPoll(LcapMessage msg, CachedUrlSet urlSet) {
+    super(msg, urlSet);
     m_replyOpcode = LcapMessage.CONTENT_POLL_REP;
     seq++;
 
@@ -60,23 +61,6 @@ public class ContentPoll extends Poll implements Runnable {
   }
 
 
-  /**
-   * tally the poll results
-   */
-  protected void tally() {
-    int yes;
-    int no;
-    int yesWt;
-    int noWt;
-    synchronized (this) {
-      yes = m_agree;
-      no = m_disagree;
-      yesWt = m_agreeWt;
-      noWt = m_disagreeWt;
-    }
-    thePolls.remove(m_key);
-    //recordTally(m_arcUnit, this, yes, no, yesWt, noWt, m_replyOpcode);
-  }
 
   /**
    * prepare to run a poll.  This should check any conditions that might
@@ -106,9 +90,9 @@ public class ContentPoll extends Poll implements Runnable {
       return false;
     }
 
-    String key = makeKey(msg.getTargetUrl(),
-                                msg.getRegExp(),
-                                msg.getOpcode());
+    String key = PollManager.makeKey(msg.getTargetUrl(),
+                                     msg.getRegExp(),
+                                     msg.getOpcode());
     if (!m_key.equals(key)) {
       log.debug(m_key + " target mismatch: " + key);
       return false;
@@ -151,7 +135,7 @@ public class ContentPoll extends Poll implements Runnable {
     MessageDigest hasher = null;
     CachedUrlSet urlset = null;
     try {
-      hasher = MessageDigest.getInstance(HASH_ALGORITHM);
+      hasher = MessageDigest.getInstance(PollManager.HASH_ALGORITHM);
     } catch (NoSuchAlgorithmException ex) {
       return false;
     }
