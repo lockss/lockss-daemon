@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.63 2004-01-12 06:19:05 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.64 2004-01-13 02:39:28 tlipkis Exp $
  */
 
 /*
@@ -381,6 +381,9 @@ public class PluginManager extends BaseLockssManager {
     // remove from map first, so no new activity can start (poll messages,
     // RemoteAPI, etc.)
     auMap.remove(auid);
+
+    theDaemon.getPollManager().cancelAuPolls(au);
+    theDaemon.getCrawlManager().cancelAuCrawls(au);
 
     try {
 //     Plugin plugin = au.getPlugin();
