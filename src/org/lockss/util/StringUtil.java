@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.21 2003-04-14 07:31:44 tal Exp $
+ * $Id: StringUtil.java,v 1.22 2003-05-10 02:00:47 tal Exp $
  */
 
 /*
@@ -199,9 +199,13 @@ public class StringUtil {
    * maxItems strings.  
    * @param discardEmptyStrings if true, empty strings (caused by delimiters
    * at the start or end of the string, or adjacent delimiters) will not be
-   * included in the result. */
+   * included in the result.
+   * @param trimEachString is true, each string in the result will be trim()ed
+   */
   public static Vector breakAt(String s, char sep,
-			       int maxItems, boolean discardEmptyStrings) {
+			       int maxItems,
+			       boolean discardEmptyStrings,
+			       boolean trimEachString) {
     Vector res = new Vector();
     int len;
     if (s == null || (len = s.length()) == 0) {
@@ -219,11 +223,28 @@ public class StringUtil {
 	end = len;
       }
       if (!discardEmptyStrings || pos != end) {
-	res.addElement((Object) s.substring(pos, end));
+	String str = s.substring(pos, end);
+	if (trimEachString) {
+	  str = str.trim();
+	}
+	if (!discardEmptyStrings || str.length() != 0) {
+	  res.addElement(str);
+	}
       }
       pos = end + 1;
     }
     return res;
+  }
+
+  /** Break a string at a separator char, returning a vector of at most
+   * maxItems strings.  
+   * @param discardEmptyStrings if true, empty strings (caused by delimiters
+   * at the start or end of the string, or adjacent delimiters) will not be
+   * included in the result. */
+  public static Vector breakAt(String s, char sep,
+			       int maxItems,
+			       boolean discardEmptyStrings) {
+    return breakAt(s, sep, maxItems, discardEmptyStrings, false);
   }
 
   /** Break a string at a separator char, returning a vector of strings.

@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.19 2003-04-14 07:31:44 tal Exp $
+ * $Id: TestStringUtil.java,v 1.20 2003-05-10 02:00:47 tal Exp $
  */
 
 /*
@@ -213,6 +213,14 @@ public class TestStringUtil extends LockssTestCase {
 		     StringUtil.breakAt("foo+", '+', -1, false));
     assertIsomorphic(ListUtil.list("foo"),
 		     StringUtil.breakAt("foo+", '+', -1, true));
+    assertIsomorphic(ListUtil.list("foo "),
+		     StringUtil.breakAt("foo +", '+', -1, true, false));
+    assertIsomorphic(ListUtil.list("foo"),
+		     StringUtil.breakAt("foo +", '+', -1, true, true));
+    assertIsomorphic(ListUtil.list("foo"),
+		     StringUtil.breakAt("foo + ", '+', -1, true, true));
+    assertIsomorphic(ListUtil.list("foo ", " "),
+		     StringUtil.breakAt("foo + ", '+', -1, true, false));
 
   }
 
