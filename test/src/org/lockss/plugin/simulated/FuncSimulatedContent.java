@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSimulatedContent.java,v 1.37 2003-06-25 21:19:58 eaalto Exp $
+ * $Id: FuncSimulatedContent.java,v 1.38 2003-07-24 02:19:17 tyronen Exp $
  */
 
 /*
@@ -268,7 +268,7 @@ public class FuncSimulatedContent
     /* Cache the file again; this time the damage should be gone */
     String file = sau.SIMULATED_URL_ROOT + DAMAGED_CACHED_URL;
     UrlCacher uc = sau.urlCacherFactory(sau.getAUCachedUrlSet(),file);
-    uc.cache();
+    uc.forceCache();
     checkUrlContent(DAMAGED_CACHED_URL, 2, 2, 2, false, false);
   }
 
