@@ -1,5 +1,5 @@
 /*
- * $Id: SystemMetrics.java,v 1.4 2002-12-31 22:44:34 aalto Exp $
+ * $Id: SystemMetrics.java,v 1.5 2003-01-03 00:12:04 aalto Exp $
  */
 
 /*
@@ -54,8 +54,8 @@ public class SystemMetrics {
    */
   public static final String PARAM_HASH_TEST_BYTE_STEP =
       Configuration.PREFIX + "hashtest.bytestep";
-  static final String DEFAULT_HASH_DURATION = "1000";
-  static final String DEFAULT_HASH_STEP = "1024";
+  static final int DEFAULT_HASH_DURATION = 1000;
+  static final int DEFAULT_HASH_STEP = 1024;
 
 
   private static SystemMetrics metrics = null;
@@ -94,11 +94,11 @@ public class SystemMetrics {
       long bytesHashed = 0;
       boolean earlyFinish = false;
       int hashDuration =
-          Integer.parseInt(Configuration.getParam(PARAM_HASH_TEST_DURATION,
-          DEFAULT_HASH_DURATION));
+          Configuration.getIntParam(PARAM_HASH_TEST_DURATION,
+          DEFAULT_HASH_DURATION);
       int hashStep =
-          Integer.parseInt(Configuration.getParam(PARAM_HASH_TEST_BYTE_STEP,
-          DEFAULT_HASH_STEP));
+          Configuration.getIntParam(PARAM_HASH_TEST_BYTE_STEP,
+          DEFAULT_HASH_STEP);
 
       long startTime = TimeBase.nowMs();
       Deadline deadline = Deadline.in(hashDuration);
