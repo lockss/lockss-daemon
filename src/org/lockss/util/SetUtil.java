@@ -1,5 +1,5 @@
 /*
- * $Id: SetUtil.java,v 1.1 2002-08-31 06:39:29 tal Exp $
+ * $Id: SetUtil.java,v 1.2 2002-12-17 20:49:11 troberts Exp $
  *
 
 Copyright (c) 2000-2002 Board of Trustees of Leland Stanford Jr. University,
@@ -174,6 +174,15 @@ public class SetUtil {
     Set l = set();
     for (int i = 0; i < array.length; i++) {
       l.add(array[i]);
+    }
+    return l;
+  }
+
+  /** Create a set containing the elements of an array */
+  public static Set fromList(List list) {
+    Set l = set();
+    for (int i = 0; i < list.size(); i++) {
+      l.add(list.get(i));
     }
     return l;
   }
