@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.1.2.11 2004-10-05 18:30:40 dshr Exp $
+ * $Id: V3Voter.java,v 1.1.2.12 2004-10-07 02:17:05 dshr Exp $
  */
 
 /*
@@ -41,7 +41,7 @@ import org.lockss.plugin.*;
 import org.lockss.protocol.*;
 import org.lockss.util.*;
 
-import org.mortbay.util.*;  // For B64 encoding stuff?
+// import org.mortbay.util.*;  // For B64 encoding stuff?
 
 /**
  * <p>This classs represents the participation of this peer as a voter
@@ -228,6 +228,7 @@ public class V3Voter extends V3Poll {
   }
 
   private boolean passAdmissionControl(V3LcapMessage msg) {
+    //  XXX
     return true;
   }
 
@@ -241,7 +242,7 @@ public class V3Voter extends V3Poll {
     }
     //  Start by verifying the effort proof in the message
     EffortService.ProofCallback cb =
-      new PollProofEffortCallback(m_pollmanager);
+      new VoteEffortCallback(m_pollmanager);
     EffortService.Proof ep = null;
     EffortService es = null;
     if (false) {
@@ -403,14 +404,14 @@ public class V3Voter extends V3Poll {
     }
   }
 
-  class PollProofEffortCallback implements EffortService.ProofCallback {
+  class VoteEffortCallback implements EffortService.ProofCallback {
     private PollManager pollMgr = null;
-    PollProofEffortCallback(PollManager pm) {
+    VoteEffortCallback(PollManager pm) {
       pollMgr = pm;
     }
     /**
      * Called to indicate generation of a proof of effort for
-     * the PollProof message is complete.
+     * the Vote message is complete.
      * @param ep the EffortProof in question
      * @param cookie used to disambiguate callbacks
      * @param e the exception that caused the effort proof to fail

@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.1.2.3 2004-10-06 00:26:23 dshr Exp $
+ * $Id: TestV3Poller.java,v 1.1.2.4 2004-10-07 02:17:05 dshr Exp $
  */
 
 /*
@@ -154,7 +154,7 @@ public class TestV3Poller extends LockssTestCase {
     assertTrue(votes.isEmpty());
   }
 
-  public void dontTestNormalVoterStateTransitions() {
+  public void testNormalVoterStateTransitions() {
     //  Set up effort service stuff
     MockEffortService es = (MockEffortService)theDaemon.getEffortService();
     es.setGenerateProofResult(true);
@@ -170,7 +170,7 @@ public class TestV3Poller extends LockssTestCase {
     //  Check starting conditions
     V3Poller poll = (V3Poller)testV3polls[0];
     String key = poll.getKey();
-    assertEquals("Poll " + poll + " should be in Initializing",
+    assertEquals("Poll " + poll + " should be in SendingPoll",
 		 V3Poller.STATE_INITIALIZING,
 		 poll.getPollState());
     assertTrue("Poll " + poll + " should be active",
@@ -179,7 +179,28 @@ public class TestV3Poller extends LockssTestCase {
 		pollmanager.isPollClosed(key));
     assertFalse("Poll " + poll + " should not be suspended",
 		pollmanager.isPollSuspended(key));
-    TimeBase.step(1000);
+    TimeBase.step(500);
+    poll.solicitVoteFrom(testID1);
+    assertEquals("Poll " + poll + " should be in SendingPoll",
+		 V3Poller.STATE_SENDING_POLL,
+		 poll.getPollState());
+    assertTrue("Poll " + poll + " should be active",
+	       pollmanager.isPollActive(key));
+    assertFalse("Poll " + poll + " should not be closed",
+		pollmanager.isPollClosed(key));
+    assertFalse("Poll " + poll + " should not be suspended",
+		pollmanager.isPollSuspended(key));
+    TimeBase.step(500);
+    assertEquals("Poll " + poll + " should be in WaitingPollAck",
+		 V3Poller.STATE_WAITING_POLL_ACK,
+		 poll.getPollState());
+    assertTrue("Poll " + poll + " should be active",
+	       pollmanager.isPollActive(key));
+    assertFalse("Poll " + poll + " should not be closed",
+		pollmanager.isPollClosed(key));
+    assertFalse("Poll " + poll + " should not be suspended",
+		pollmanager.isPollSuspended(key));
+    TimeBase.step(500);
   }
 
   //  Support methods
