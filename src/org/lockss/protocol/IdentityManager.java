@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManager.java,v 1.45 2004-09-20 14:20:37 dshr Exp $
+ * $Id: IdentityManager.java,v 1.46 2004-09-22 02:43:13 tlipkis Exp $
  */
 
 /*
@@ -185,7 +185,6 @@ public class IdentityManager
 							  new Status());
     Vote.setIdentityManager(this); 
     LcapMessage.setIdentityManager(this);
-    PartnerList.setIdentityManager(this);
     IdentityAgreement.setIdentityManager(this);
   }
 
@@ -202,7 +201,6 @@ public class IdentityManager
     super.stopService();
     Vote.setIdentityManager(null);
     LcapMessage.setIdentityManager(null);
-    PartnerList.setIdentityManager(null);
   }
 
   /**

@@ -1,5 +1,5 @@
 /*
- * $Id: LcapRouter.java,v 1.38 2004-09-20 14:20:37 dshr Exp $
+ * $Id: LcapRouter.java,v 1.39 2004-09-22 02:43:12 tlipkis Exp $
  */
 
 /*
@@ -89,18 +89,19 @@ public class LcapRouter
   private int initialHopCount = LcapMessage.MAX_HOP_COUNT_LIMIT;
 
   private Deadline beaconDeadline = Deadline.at(TimeBase.MAX);;
-  private PartnerList partnerList = new PartnerList();
+  private PartnerList partnerList;
   private List messageHandlers = new ArrayList();
   private LRUMap recentVerifiers = new LRUMap(DEFAULT_DUP_MSG_HASH_SIZE);
   private Object verObj = new Object();
 
   public void startService() {
     super.startService();
-    comm = getDaemon().getCommManager();
-    idMgr = getDaemon().getIdentityManager();
-    pollMgr = getDaemon().getPollManager();
-    partnerList.setIdentityManager(idMgr);
-
+    LockssDaemon daemon = getDaemon();
+    comm = daemon.getCommManager();
+    idMgr = daemon.getIdentityManager();
+    pollMgr = daemon.getPollManager();
+    partnerList = new PartnerList(idMgr);
+    resetConfig();
     comm.registerMessageHandler(LockssDatagram.PROTOCOL_LCAP,
 				new LcapComm.MessageHandler() {
 				    public void
@@ -147,8 +148,9 @@ public class LcapRouter
       recentVerifiers.setMaximumSize(dupSize);
     }
 
-    partnerList.setConfig(config, oldConfig, changedKeys);
-
+    if (partnerList != null) {
+      partnerList.setConfig(config, oldConfig, changedKeys);
+    }
   }
 
   /** Multicast a message to all caches holding the ArchivalUnit.  All
