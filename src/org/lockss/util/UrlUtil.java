@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.6 2003-06-20 22:34:53 claire Exp $
+ * $Id: UrlUtil.java,v 1.7 2003-07-13 20:57:03 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -84,6 +84,31 @@ public class UrlUtil {
     URL url = new URL(urlStr);
     URL url2 = new URL(url.getProtocol(), url.getHost(), url.getPort(), "");
     return url2.toString();
+  }
+
+  /**
+   * @param urlStr string representation of a url
+   * @return the host portion of the url
+   * @throws MalformedURLException if urlStr is not a well formed URL
+   */
+  public static String getHost(String urlStr) throws MalformedURLException {
+    URL url = new URL(urlStr);
+    return url.getHost();
+  }
+
+  /**
+   * @param urlStr string representation of a url
+   * @return the domain portion of the hostname
+   * @throws MalformedURLException if urlStr is not a well formed URL
+   */
+  public static String getDomain(String urlStr) throws MalformedURLException {
+    String host = getHost(urlStr);
+    int pos = host.indexOf('.');
+    if (pos == -1 || pos == (host.length() - 1)) {
+      return host;
+    } else {
+      return host.substring(pos + 1);
+    }
   }
 
   /** Reconstructs the URL the client used to make the request, using

@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlUtil.java,v 1.3 2003-06-20 22:34:57 claire Exp $
+ * $Id: TestUrlUtil.java,v 1.4 2003-07-13 20:57:03 tlipkis Exp $
  */
 
 /*
@@ -76,6 +76,30 @@ public class TestUrlUtil extends TestCase{
   public void testGetUrlPrefixPrefixUrl() throws MalformedURLException{
     String root = "http://shadow8.stanford.edu";
     assertEquals(root, UrlUtil.getUrlPrefix(root));
+  }
+
+  public void testGetHost() throws Exception {
+    assertEquals("xx.foo.bar", UrlUtil.getHost("http://xx.foo.bar/123"));
+    assertEquals("foo", UrlUtil.getHost("http://foo/123"));
+    assertEquals("foo.", UrlUtil.getHost("http://foo./123"));
+    try{
+      UrlUtil.getHost("garbage://xx.foo.bar/123");
+      fail("Should have thrown MalformedURLException");
+    }
+    catch (MalformedURLException mue) {
+    }
+  }
+
+  public void testGetDomain() throws Exception {
+    assertEquals("foo.bar", UrlUtil.getDomain("http://xx.foo.bar/123"));
+    assertEquals("foo", UrlUtil.getDomain("http://foo/123"));
+    assertEquals("foo.", UrlUtil.getDomain("http://foo./123"));
+    try{
+      UrlUtil.getDomain("garbage://xx.foo.bar/123");
+      fail("Should have thrown MalformedURLException");
+    }
+    catch (MalformedURLException mue) {
+    }
   }
 
 }
