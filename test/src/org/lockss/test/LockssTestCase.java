@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.52 2004-04-05 08:01:58 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.53 2004-07-12 06:28:05 tlipkis Exp $
  */
 
 /*
@@ -98,15 +98,13 @@ public class LockssTestCase extends TestCase {
    * if necessary.
    */
   public synchronized MockLockssDaemon getMockLockssDaemon() {
-    if (mockDaemon == null) {
-      mockDaemon = new MockLockssDaemon();
-    }
     return mockDaemon;
   }
 
   /** Create a fresh config manager, MockLockssDaemon */
   protected void setUp() throws Exception {
-    mockDaemon = null;
+//     Logger.resetLogs();
+    mockDaemon = new MockLockssDaemon();
     super.setUp();
     disableThreadWatchdog();
     ConfigManager.makeConfigManager();
@@ -141,8 +139,7 @@ public class LockssTestCase extends TestCase {
     TimerQueue.stopTimerQueue();
 
     // delete temp dirs
-    boolean leave = Boolean.getBoolean("org.lockss.keepTempFiles");
-    if (tmpDirs != null && !leave) {
+    if (tmpDirs != null && !isKeepTempFiles()) {
       for (ListIterator iter = tmpDirs.listIterator(); iter.hasNext(); ) {
 	File dir = (File)iter.next();
 	if (FileTestUtil.delTree(dir)) {
@@ -159,6 +156,10 @@ public class LockssTestCase extends TestCase {
       TimerUtil.guaranteedSleep(1000);
     }
     enableThreadWatchdog();
+  }
+
+  public static boolean isKeepTempFiles() {
+    return Boolean.getBoolean("org.lockss.keepTempFiles");
   }
 
   protected void disableThreadWatchdog() {
