@@ -1,5 +1,5 @@
 /*
- * $Id: AuditProxyManager.java,v 1.3 2004-08-18 00:14:55 tlipkis Exp $
+ * $Id: AuditProxyManager.java,v 1.4 2004-08-18 07:08:18 tlipkis Exp $
  */
 
 /*
@@ -57,9 +57,7 @@ public class AuditProxyManager extends BaseProxyManager {
   protected void setConfig(Configuration config, Configuration prevConfig,
 			   Configuration.Differences changedKeys) {
     super.setConfig(config, prevConfig, changedKeys);
-    if (changedKeys.contains(ProxyManager.PARAM_IP_INCLUDE) ||
-	changedKeys.contains(ProxyManager.PARAM_IP_EXCLUDE) ||
-	changedKeys.contains(ProxyManager.PARAM_LOG_FORBIDDEN)) {
+    if (changedKeys.contains(ProxyManager.PREFIX)) {
       includeIps = config.get(ProxyManager.PARAM_IP_INCLUDE, "");
       excludeIps = config.get(ProxyManager.PARAM_IP_EXCLUDE, "");
       logForbidden = config.getBoolean(ProxyManager.PARAM_LOG_FORBIDDEN,
@@ -68,15 +66,14 @@ public class AuditProxyManager extends BaseProxyManager {
 		", excl: " + excludeIps);
       setIpFilter();
     }
-    port = config.getInt(PARAM_PORT, -1);
-    start = config.getBoolean(PARAM_START, DEFAULT_START);
-    if (changedKeys.contains(PARAM_PORT) ||
-	changedKeys.contains(PARAM_START)) {
+    if (changedKeys.contains(PREFIX)) {
+      port = config.getInt(PARAM_PORT, -1);
+      start = config.getBoolean(PARAM_START, DEFAULT_START);
       if (start) {
-	if (getDaemon().isDaemonRunning()) {
+	if (!isServerRunning() && getDaemon().isDaemonRunning()) {
 	  startProxy();
 	}
-      } else {
+      } else if (isServerRunning()) {
 	stopProxy();
       }
     }

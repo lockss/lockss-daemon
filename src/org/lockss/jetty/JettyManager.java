@@ -1,5 +1,5 @@
 /*
- * $Id: JettyManager.java,v 1.12 2004-08-18 00:14:58 tlipkis Exp $
+ * $Id: JettyManager.java,v 1.13 2004-08-18 07:08:19 tlipkis Exp $
  */
 
 /*
@@ -122,7 +122,7 @@ public abstract class JettyManager extends BaseLockssManager {
 	  return true;
 	} catch (org.mortbay.util.MultiException e) {
 	  log.debug("multi", e);
-	  log.debug("first", e.getException(0));
+	  log.debug2("first", e.getException(0));
 	  log.warning("Addr in use, sleeping " +
 		      StringUtil.timeIntervalToString(delayTime[ix]));
 	  Deadline.in(delayTime[ix]).sleep();
@@ -155,6 +155,10 @@ public abstract class JettyManager extends BaseLockssManager {
       portsInUse.add(new Integer(port));
       runningOnPort = port;
     }
+  }
+
+  protected boolean isServerRunning() {
+    return (runningOnPort > 0);
   }
 
   public static boolean isPortInUse(int port) {

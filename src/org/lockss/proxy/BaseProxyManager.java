@@ -1,5 +1,5 @@
 /*
- * $Id: BaseProxyManager.java,v 1.5 2004-08-18 00:14:55 tlipkis Exp $
+ * $Id: BaseProxyManager.java,v 1.6 2004-08-18 07:08:18 tlipkis Exp $
  */
 
 /*
@@ -62,6 +62,8 @@ public abstract class BaseProxyManager extends JettyManager {
    */
   public void startService() {
     super.startService();
+    resetConfig();			// run setConfig() unconditionally
+					// to set defaults in subclasses
     if (start) {
       startProxy();
     }

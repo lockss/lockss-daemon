@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyManager.java,v 1.22 2004-08-18 00:14:55 tlipkis Exp $
+ * $Id: ProxyManager.java,v 1.23 2004-08-18 07:08:18 tlipkis Exp $
  */
 
 /*
@@ -91,9 +91,7 @@ public class ProxyManager extends BaseProxyManager {
   protected void setConfig(Configuration config, Configuration prevConfig,
 			   Configuration.Differences changedKeys) {
     super.setConfig(config, prevConfig, changedKeys);
-    if (changedKeys.contains(PARAM_IP_INCLUDE) ||
-	changedKeys.contains(PARAM_IP_EXCLUDE) ||
-	changedKeys.contains(PARAM_LOG_FORBIDDEN)) {
+    if (changedKeys.contains(PREFIX)) {
       includeIps = config.get(PARAM_IP_INCLUDE, "");
       excludeIps = config.get(PARAM_IP_EXCLUDE, "");
       logForbidden = config.getBoolean(PARAM_LOG_FORBIDDEN,
@@ -101,16 +99,14 @@ public class ProxyManager extends BaseProxyManager {
       log.debug("Installing new ip filter: incl: " + includeIps +
 		", excl: " + excludeIps);
       setIpFilter();
-    }
-    port = config.getInt(PARAM_PORT, DEFAULT_PORT);
-    start = config.getBoolean(PARAM_START, DEFAULT_START);
-    if (changedKeys.contains(PARAM_PORT) ||
-	changedKeys.contains(PARAM_START)) {
+
+      port = config.getInt(PARAM_PORT, DEFAULT_PORT);
+      start = config.getBoolean(PARAM_START, DEFAULT_START);
       if (start) {
-	if (getDaemon().isDaemonRunning()) {
+	if (!isServerRunning() && getDaemon().isDaemonRunning()) {
 	  startProxy();
 	}
-      } else {
+      } else if (isServerRunning()) {
 	stopProxy();
       }
     }
