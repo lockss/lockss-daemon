@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.3 2002-11-15 02:48:20 aalto Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.4 2002-11-20 01:18:58 aalto Exp $
  */
 
 /*
@@ -187,7 +187,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
     }
     ensureReadInfoLoaded();
     try {
-      return new FileInputStream(curInputFile);
+      return new BufferedInputStream(new FileInputStream(curInputFile));
     } catch (FileNotFoundException fnfe) {
       logger.error("Couldn't get inputstream for '"+curInputFile.getAbsolutePath()+"'");
       return null;
@@ -210,7 +210,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
       return newVersionOutput;
     }
     try {
-      newVersionOutput = new FileOutputStream(tempCacheFile);
+      newVersionOutput = new BufferedOutputStream(new FileOutputStream(tempCacheFile));
       return newVersionOutput;
     } catch (FileNotFoundException fnfe) {
       logger.error("No new version file for "+tempCacheFile.getAbsolutePath()+".");
@@ -224,7 +224,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
     }
     if (newProps!=null) {
       try {
-        OutputStream os = new FileOutputStream(tempPropsFile);
+        OutputStream os = new BufferedOutputStream(new FileOutputStream(tempPropsFile));
         newProps.setProperty("version_number", ""+(currentVersion+1));
         newProps.store(os, "HTTP headers for " + url);
         os.close();
@@ -248,7 +248,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
         }
         if (curProps==null) {
           try {
-            InputStream is = new FileInputStream(currentPropsFile);
+            InputStream is = new BufferedInputStream(new FileInputStream(currentPropsFile));
             curProps = new Properties();
             curProps.load(is);
             is.close();
@@ -278,7 +278,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
       synchronized (this) {
         if (currentPropsFile.exists()) {
           try {
-            InputStream is = new FileInputStream(currentPropsFile);
+            InputStream is = new BufferedInputStream(new FileInputStream(currentPropsFile));
             curProps = new Properties();
             curProps.load(is);
             is.close();

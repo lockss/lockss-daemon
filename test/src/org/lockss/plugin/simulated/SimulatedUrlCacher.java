@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedUrlCacher.java,v 1.2 2002-11-07 02:15:30 aalto Exp $
+ * $Id: SimulatedUrlCacher.java,v 1.3 2002-11-20 01:18:58 aalto Exp $
  */
 
 /*
@@ -59,7 +59,7 @@ public class SimulatedUrlCacher extends GenericFileUrlCacher {
   public InputStream getUncachedInputStream() {
     if (contentFile!=null) {
       try {
-        return new FileInputStream(contentFile);
+        return new BufferedInputStream(new FileInputStream(contentFile));
       } catch (FileNotFoundException fnfe) {
         logger.error("Couldn't find content file '"+contentFile.getAbsolutePath()+"'");
         return null;
@@ -75,7 +75,7 @@ public class SimulatedUrlCacher extends GenericFileUrlCacher {
     }
     contentFile = new File(contentName);
     try {
-      return new FileInputStream(contentFile);
+      return new BufferedInputStream(new FileInputStream(contentFile));
     } catch (FileNotFoundException fnfe) {
       logger.error("Couldn't find content file '"+contentFile.getAbsolutePath()+"'");
       return null;
