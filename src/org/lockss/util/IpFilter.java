@@ -1,5 +1,5 @@
 /*
- * $Id: IpFilter.java,v 1.5 2004-06-24 20:24:47 tlipkis Exp $
+ * $Id: IpFilter.java,v 1.6 2004-07-12 06:22:54 tlipkis Exp $
  */
 
 /*
@@ -191,6 +191,7 @@ public class IpFilter {
 	      if (en.hasMoreTokens()) {
 		throw new MalformedException("Junk at end", s);
 	      }
+	      // if fewer than 4 bytes, simulate enough 0 bytes
 	      addr <<= (4 - n) * 8;
 	      n = 4;
 	    }
