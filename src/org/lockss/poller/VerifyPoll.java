@@ -1,5 +1,5 @@
 /*
-* $Id: VerifyPoll.java,v 1.20 2002-12-16 19:44:18 tal Exp $
+* $Id: VerifyPoll.java,v 1.21 2002-12-17 02:24:00 claire Exp $
  */
 
 /*
@@ -49,8 +49,8 @@ import org.mortbay.util.B64Code;
  */
 class VerifyPoll extends Poll {
 
-  public VerifyPoll(LcapMessage msg, CachedUrlSet urlSet) {
-    super(msg, urlSet);
+  public VerifyPoll(LcapMessage msg, CachedUrlSet urlSet, PollManager pm) {
+    super(msg, urlSet, pm);
     m_replyOpcode = LcapMessage.VERIFY_POLL_REP;
     m_tally.quorum = 1;
   }
@@ -63,7 +63,7 @@ class VerifyPoll extends Poll {
   void receiveMessage(LcapMessage msg) {
     log.debug("receiving verify message" + msg.toString());
     int opcode = msg.getOpcode();
-     if(!m_caller.isLocalIdentity()) {
+    if(opcode == LcapMessage.VERIFY_POLL_REP) {
       startVote(msg);
     }
   }
@@ -90,9 +90,14 @@ class VerifyPoll extends Poll {
    */
   void startPoll() {
     log.debug("Starting new verify poll:" + m_key);
+    Deadline pt;
 
-    Deadline pt = Deadline.at(m_deadline.getExpirationTime());
-
+    if(m_msg.isLocal()) {
+      pt = Deadline.in(m_deadline.getRemainingTime());
+    }
+    else {
+      pt = Deadline.atRandomBefore(m_deadline);
+    }
     TimerQueue.schedule(pt, new PollTimerCallback(), this);
   }
 
@@ -102,7 +107,7 @@ class VerifyPoll extends Poll {
    */
   void stopPoll() {
     // if we didn't call the poll
-    if(!m_caller.isLocalIdentity()) {
+    if(m_pollstate != PS_WAIT_TALLY) {
       try {
         // send our reply message
         replyVerify(m_msg);
@@ -111,6 +116,7 @@ class VerifyPoll extends Poll {
         m_pollstate = ERR_IO;
       }
     }
+    // this will call tally
     super.stopPoll();
   }
 
@@ -123,10 +129,13 @@ class VerifyPoll extends Poll {
     log.info(m_msg.toString() + " tally " + toString());
     LcapIdentity id = m_caller;
     if ((m_tally.numYes + m_tally.numNo) < 1) {
+      log.debug("vote failed to verify");
       id.voteNotVerify();
     } else if (m_tally.numYes > 0 && m_tally.numNo == 0) {
+      log.debug("vote sucessfully verified");
       id.voteVerify();
     } else {
+      log.debug("vote disowned.");
       id.voteDisown();
     }
   }
@@ -136,7 +145,7 @@ class VerifyPoll extends Poll {
     int weight = msg.getOriginID().getReputation();
     byte[] challenge = msg.getChallenge();
     byte[] hashed = msg.getHashed();
-    MessageDigest hasher = PollManager.getHasher();
+    MessageDigest hasher = m_pollmanager.getHasher();
     // check this vote verification hashed in the message should
     // hash to the challenge, which is the verifier of the poll
     // thats being verified
@@ -150,13 +159,13 @@ class VerifyPoll extends Poll {
 
   private void replyVerify(LcapMessage msg) throws IOException  {
     String url = new String(msg.getTargetUrl());
-    byte[] secret = PollManager.getSecret(msg.getChallenge());
+    byte[] secret = m_pollmanager.getSecret(msg.getChallenge());
     if(secret == null) {
       log.error("Verify poll reply failed.  Unable to find secret for: "
                 + B64Code.encode(msg.getChallenge()));
       return;
     }
-    byte[] verifier = PollManager.makeVerifier();
+    byte[] verifier = m_pollmanager.makeVerifier();
     LcapMessage repmsg = LcapMessage.makeReplyMsg(msg,
         secret,
         verifier,
@@ -166,9 +175,7 @@ class VerifyPoll extends Poll {
 
     LcapIdentity originator = msg.getOriginID();
     log.debug("sending our verification reply to " + originator.toString());
-    //LcapComm.sendMessage(repmsg, Plugin.findArchivalUnit(url));
-    LcapComm.sendMessageTo(repmsg, Plugin.findArchivalUnit(url), originator);
-
+    m_pollmanager.sendMessageTo(repmsg, Plugin.findArchivalUnit(url), originator);
   }
 
   private void startVote(LcapMessage msg) {
@@ -192,7 +199,6 @@ class VerifyPoll extends Poll {
         log.debug("I should verify ");
         LcapMessage msg = (LcapMessage) cookie;
         performHash(msg);
-        log.debug("Just sent verification.");
         stopVote();
       }
     }

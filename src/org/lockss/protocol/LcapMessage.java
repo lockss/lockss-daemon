@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessage.java,v 1.11 2002-12-16 19:45:16 tal Exp $
+ * $Id: LcapMessage.java,v 1.12 2002-12-17 02:24:00 claire Exp $
  */
 
 /*
@@ -266,7 +266,7 @@ public class LcapMessage implements Serializable {
    * @return a new Message object
    * @throws IOException
    */
-  static LcapMessage decodeToMsg(byte[] data,
+  static public LcapMessage decodeToMsg(byte[] data,
 				 boolean mcast) throws IOException {
     LcapMessage msg = new LcapMessage(data);
     if(msg != null) {

@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.26 2002-12-16 19:44:18 tal Exp $
+* $Id: Poll.java,v 1.27 2002-12-17 02:24:00 claire Exp $
  */
 
 /*
@@ -100,9 +100,9 @@ public abstract class Poll implements Serializable {
   long m_createTime;       // poll creation time
   String m_key;            // the string we use to store this poll
   int m_pollstate;         // one of state constants above
-
   int m_pendingVotes;      // the number of votes waiting to be tallied
   VoteTally m_tally;       // the vote tallier
+  PollManager m_pollmanager; // the pollmanager which should be used by this poll.
 
   /**
    * create a new poll from a message
@@ -110,14 +110,15 @@ public abstract class Poll implements Serializable {
    * @param msg the <code>Message</code> which contains the information
    * @param urlSet the CachedUrlSet on which this poll will operate
    * needed to create this poll.
+   * @param pm the pollmanager
    */
-  Poll(LcapMessage msg, CachedUrlSet urlSet) {
+  Poll(LcapMessage msg, CachedUrlSet urlSet, PollManager pm) {
     /* initialize with our parameters */
     m_agreeVer = ((double)Configuration.getIntParam(PARAM_AGREE_VERIFY,
         DEFAULT_AGREE_VERIFY)) / 100;
     m_disagreeVer = ((double)Configuration.getIntParam(PARAM_DISAGREE_VERIFY,
         DEFAULT_DISAGREE_VERIFY)) / 100;
-
+    m_pollmanager = pm;
     m_msg = msg;
     m_urlSet = urlSet;
 
@@ -131,9 +132,9 @@ public abstract class Poll implements Serializable {
     m_hashTime = m_urlSet.estimatedHashDuration();
     m_deadline = Deadline.in(msg.getDuration());
     m_challenge = msg.getChallenge();
-    m_verifier = PollManager.makeVerifier();
+    m_verifier = m_pollmanager.makeVerifier();
     m_caller = msg.getOriginID();
-    m_key = PollManager.makeKey(m_challenge);
+    m_key = m_pollmanager.makeKey(m_challenge);
     m_pollstate = PS_INITING;
   }
 
@@ -199,8 +200,8 @@ public abstract class Poll implements Serializable {
 
     boolean agree = Arrays.equals(hashed, hashResult);
     m_tally.addVote(new Vote(msg, agree));
-    if(msg.getOriginID().isLocalIdentity()) {
-      randomVerify(msg, true);
+    if(!msg.isLocal()) {
+      randomVerify(msg, agree);
     }
   }
 
@@ -215,7 +216,6 @@ public abstract class Poll implements Serializable {
     int max = id.getMaxReputaion();
     int weight = id.getReputation();
     double verify;
-
     if(isAgreeVote) {
       verify = ((double)(max - weight)) / max * m_agreeVer;
     }
@@ -224,7 +224,7 @@ public abstract class Poll implements Serializable {
     }
     try {
       if(ProbabilisticChoice.choose(verify)) {
-        PollManager.requestVerifyPoll(msg);
+        m_pollmanager.requestVerifyPoll(msg);
       }
     }
     catch (IOException ex) {
@@ -250,7 +250,7 @@ public abstract class Poll implements Serializable {
       msg = LcapMessage.makeReplyMsg(m_msg, m_hash, m_verifier, m_replyOpcode,
                                      remainingTime, local_id);
       log.debug("vote:" + msg.toString());
-      LcapComm.sendMessage(msg,m_arcUnit);
+      m_pollmanager.sendMessage(msg,m_arcUnit);
     }
     catch(IOException ex) {
       //XXX how serious is this
@@ -310,7 +310,7 @@ public abstract class Poll implements Serializable {
     else if(m_pollstate == PS_WAIT_TALLY){
       tally();
     }
-    PollManager.closeThePoll(m_key);
+    m_pollmanager.closeThePoll(m_key);
     log.debug("closed the poll:" + m_key);
   }
 
@@ -365,7 +365,7 @@ public abstract class Poll implements Serializable {
    * @return a MessageDigest
    */
   MessageDigest getInitedHasher(byte[] challenge, byte[] verifier) {
-    MessageDigest hasher = PollManager.getHasher();
+    MessageDigest hasher = m_pollmanager.getHasher();
     hasher.update(challenge, 0, challenge.length);
     hasher.update(verifier, 0, verifier.length);
     log.debug("hashing: C[" +String.valueOf(B64Code.encode(challenge)) + "] "
@@ -471,13 +471,12 @@ public abstract class Poll implements Serializable {
     public int type;
     public long startTime;
     public long duration;
-    public int numYes;        // The # of votes that agree with us
-    public int numNo;         // The # of votes that disagree with us
-    public int wtYes;         // The weight of the votes that agree with us
-    public int wtNo;          // The weight of the votes that disagree with us
+    public int numYes;       // The # of votes that agree with us
+    public int numNo;        // The # of votes that disagree with us
+    public int wtYes;        // The weight of the votes that agree with us
+    public int wtNo;         // The weight of the votes that disagree with us
+    public int quorum;       // The # of votes needed to have a quorum
     public ArrayList pollVotes;
-
-    int quorum;       // The # of votes needed to have a quorum
 
     VoteTally(int type, long startTime, long duration, int numYes,
               int numNo, int wtYes, int wtNo) {
@@ -503,7 +502,6 @@ public abstract class Poll implements Serializable {
     boolean haveQuorum() {
       return numYes + numNo >= quorum;
     }
-
 
     void addVote(Vote vote) {
       LcapIdentity id = vote.getIdentity();

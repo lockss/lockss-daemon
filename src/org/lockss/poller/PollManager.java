@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.13 2002-12-16 06:04:28 claire Exp $
+* $Id: PollManager.java,v 1.14 2002-12-17 02:24:00 claire Exp $
  */
 
 /*
@@ -52,13 +52,30 @@ public class PollManager {
   static final long EXPIRATION_TIME = 24 * 60 * 60 * 1000; // 1 day
   static final long VERIFIER_EXPIRATION_TIME = 24 * 60 * 60 * 1000;
 
+  private static PollManager theManager = null;
   private static Logger theLog=Logger.getLogger("PollManager");
   private static HashMap thePolls = new HashMap();
   private static HashMap theRecentPolls = new HashMap();
   private static HashMap theVerifiers = new HashMap();
   private static Random theRandom = new Random();
+  private static LcapComm theComm = null;
 
-  public PollManager() {
+  private PollManager() {
+  }
+
+  public static PollManager getPollManager() {
+    if(theManager == null) {
+      theManager = new PollManager();
+      try {
+      theComm = LcapComm.getComm();
+      theComm.registerMessageHandler(LockssDatagram.PROTOCOL_LCAP,
+                                  new CommMessageHandler());
+      }
+      catch(Exception ex) {
+        theLog.warning("Unitialized Comm!", ex);
+      }
+    }
+    return theManager;
   }
 
   /**
@@ -68,7 +85,7 @@ public class PollManager {
    * @throws IOException if message opcode is unknown or if new poll would
    * conflict with currently running poll.
    */
-  public static Poll makePoll(LcapMessage msg) throws IOException {
+  Poll makePoll(LcapMessage msg) throws IOException {
     Poll ret_poll;
     ArchivalUnit au;
     CachedUrlSet cus;
@@ -97,12 +114,12 @@ public class PollManager {
       case LcapMessage.CONTENT_POLL_REP:
       case LcapMessage.CONTENT_POLL_REQ:
         theLog.debug("Making a content poll on "+cus);
-        ret_poll = new ContentPoll(msg, cus);
+        ret_poll = new ContentPoll(msg, cus, this);
         break;
       case LcapMessage.NAME_POLL_REP:
       case LcapMessage.NAME_POLL_REQ:
         theLog.debug("Making a name poll on "+cus);
-        ret_poll = new NamePoll(msg, cus);
+        ret_poll = new NamePoll(msg, cus, this);
         break;
       case LcapMessage.VERIFY_POLL_REP:
       case LcapMessage.VERIFY_POLL_REQ:
@@ -111,7 +128,7 @@ public class PollManager {
         ret_poll = (Poll)thePolls.get(key);
         if( ret_poll == null) {
           theLog.debug("Making a verify poll on "+cus);
-          ret_poll = new VerifyPoll(msg, cus);
+          ret_poll = new VerifyPoll(msg, cus, this);
         }
         break;
       default:
@@ -137,7 +154,7 @@ public class PollManager {
    * @param voteRange the probabilistic vote range
    * @throws IOException thrown if Message construction fails.
    */
-  public static void makePollRequest(String url,
+  public void makePollRequest(String url,
                                      String regexp,
                                      int opcode,
                                      int timeToLive,
@@ -159,7 +176,7 @@ public class PollManager {
         LcapIdentity.getLocalIdentity());
 
     theLog.debug("send: " +  msg.toString());
-    LcapComm.sendMessage(msg, Plugin.findArchivalUnit(url));
+    sendMessage(msg, Plugin.findArchivalUnit(url));
   }
 
 
@@ -172,7 +189,7 @@ public class PollManager {
    * conflict with currently running poll.
    * @see <code>Poll.createPoll</code>
    */
-  public static Poll findPoll(LcapMessage msg) throws IOException {
+  Poll findPoll(LcapMessage msg) throws IOException {
     String key = makeKey(msg.getChallenge());
     Poll ret = (Poll)thePolls.get(key);
     if(ret == null) {
@@ -193,7 +210,7 @@ public class PollManager {
    * @param msg the message used to generate the poll
    * @throws IOException thrown if the poll was unsucessfully created
    */
-  public static void handleMessage(LcapMessage msg) throws IOException {
+  void handleMessage(LcapMessage msg) throws IOException {
     theLog.info("Got a message: " + msg);
     if(isPollClosed(msg.getChallenge())) {
       theLog.info("Message received after poll was closed." + msg.toString());
@@ -217,10 +234,45 @@ public class PollManager {
    * @param key the String representation of the polls key
    * @return Poll the poll if found or null
    */
-  static Poll removePoll(String key) {
+  Poll removePoll(String key) {
     return (Poll)thePolls.remove(key);
   }
 
+  /**
+   * send a message to the multicast address for this archival unit
+   * @param msg the LcapMessage to send
+   * @param au the ArchivalUnit for this message
+   * @throws IOException
+   */
+  void sendMessage(LcapMessage msg, ArchivalUnit au) throws IOException {
+    LockssDatagram ld = new LockssDatagram(LockssDatagram.PROTOCOL_LCAP,
+        msg.encodeMsg());
+    if(theComm != null) {
+      theComm.send(ld, au);
+    }
+    else {
+      theLog.warning("Uninitialized comm.");
+    }
+  }
+
+  /**
+   * send a message to the unicast address given by an identity
+   * @param msg the LcapMessage to send
+   * @param au the ArchivalUnit for this message
+   * @param id the LcapIdentity of the identity to send to
+   * @throws IOException
+   */
+  void sendMessageTo(LcapMessage msg, ArchivalUnit au, LcapIdentity id)
+      throws IOException {
+    LockssDatagram ld = new LockssDatagram(LockssDatagram.PROTOCOL_LCAP,
+        msg.encodeMsg());
+    if(theComm != null) {
+      theComm.sendTo(ld, au, id);
+    }
+    else {
+      theLog.warning("Uninitialized comm.");
+    }
+  }
 
   /**
    * check for conflicts between the poll defined by the Message and any
@@ -228,7 +280,7 @@ public class PollManager {
    * @param msg the <code>Message</code> to check
    * @return the CachedUrlSet of the conflicting poll.
    */
-  static CachedUrlSet checkForConflicts(LcapMessage msg) {
+  CachedUrlSet checkForConflicts(LcapMessage msg) {
     String url = msg.getTargetUrl();
     String regexp = msg.getRegExp();
     int    opcode = msg.getOpcode();
@@ -316,7 +368,7 @@ public class PollManager {
    * @param challenge the challenge identifying the poll
    * @return true
    */
-  static boolean isPollClosed(byte[] challenge) {
+  boolean isPollClosed(byte[] challenge) {
     String key = makeKey(challenge);
     synchronized(theRecentPolls) {
       return (theRecentPolls.containsKey(key));
@@ -327,7 +379,7 @@ public class PollManager {
    * close the poll from any further voting
    * @param key the poll signature
    */
-  static void closeThePoll(String key)  {
+  void closeThePoll(String key)  {
     // remove the poll from the active poll table
     synchronized(thePolls) {
       thePolls.remove(key);
@@ -340,7 +392,7 @@ public class PollManager {
 
   }
 
-  static MessageDigest getHasher() {
+  MessageDigest getHasher() {
     MessageDigest hasher = null;
     try {
       hasher = MessageDigest.getInstance(PollManager.HASH_ALGORITHM);
@@ -351,7 +403,7 @@ public class PollManager {
     return hasher;
   }
 
-  static void requestVerifyPoll(LcapMessage msg) throws IOException {
+  void requestVerifyPoll(LcapMessage msg) throws IOException {
     String url = new String(msg.getTargetUrl());
     String regexp = new String(msg.getRegExp());
 
@@ -370,7 +422,8 @@ public class PollManager {
 
     LcapIdentity originator = msg.getOriginID();
     theLog.debug("sending our verification request to " + originator.toString());
-    LcapComm.sendMessageTo(reqmsg, Plugin.findArchivalUnit(url), originator);
+    sendMessageTo(reqmsg, Plugin.findArchivalUnit(url), originator);
+
     theLog.debug("Creating a local poll instance...");
     Poll poll = findPoll(reqmsg);
     poll.m_pollstate = Poll.PS_WAIT_TALLY;
@@ -381,7 +434,7 @@ public class PollManager {
    * @param keyBytes the array of bytes to use
    * @return a base64 string representation of the byte array
    */
-  static String makeKey(byte[] keyBytes) {
+  String makeKey(byte[] keyBytes) {
     return String.valueOf(B64Code.encode(keyBytes));
   }
 
@@ -391,7 +444,7 @@ public class PollManager {
    * verifier/secret pair in the verifiers table.
    * @return the array of bytes representing the verifier
    */
-  static byte[] makeVerifier() {
+  byte[] makeVerifier() {
     byte[] s_bytes = generateRandomBytes();
     byte[] v_bytes = generateVerifier(s_bytes);
     if(v_bytes != null) {
@@ -408,7 +461,7 @@ public class PollManager {
    * @return the array of bytes representing the secret or if no matching
    * verifier is found, null.
    */
-  static byte[] getSecret(byte[] verifier) {
+  byte[] getSecret(byte[] verifier) {
     String ver = String.valueOf(B64Code.encode(verifier));
     String sec = (String)theVerifiers.get(ver);
     if (sec != null && sec.length() > 0) {
@@ -422,7 +475,7 @@ public class PollManager {
    * generate a random array of 20 bytes
    * @return the array of bytes
    */
-  static byte[] generateRandomBytes() {
+  byte[] generateRandomBytes() {
     byte[] secret = new byte[20];
     theRandom.nextBytes(secret);
     return secret;
@@ -434,7 +487,7 @@ public class PollManager {
    * @param secret the bytes representing a secret to be hashed
    * @return an array of bytes representing a verifier
    */
-  static byte[] generateVerifier(byte[] secret) {
+  byte[] generateVerifier(byte[] secret) {
     byte[] verifier = null;
     MessageDigest hasher = getHasher();
     hasher.update(secret, 0, secret.length);
@@ -444,7 +497,7 @@ public class PollManager {
   }
 
 
-  static private void rememberVerifier(byte[] verifier,
+  private void rememberVerifier(byte[] verifier,
                                        byte[] secret) {
     String ver = String.valueOf(B64Code.encode(verifier));
     String sec = secret == null ? "" : String.valueOf(B64Code.encode(secret));
@@ -453,6 +506,21 @@ public class PollManager {
     TimerQueue.schedule(d, new ExpireVerifierCallback(), ver);
     synchronized (theVerifiers) {
       theVerifiers.put(ver, sec);
+    }
+  }
+
+  static class CommMessageHandler implements LcapComm.MessageHandler {
+
+    public void handleMessage(LockssReceivedDatagram rd) {
+      theLog.debug("handling incoming message:" + rd.toString());
+      byte[] msgBytes = rd.getData();
+      try {
+        LcapMessage msg = LcapMessage.decodeToMsg(msgBytes, rd.isMulticast());
+        theManager.handleMessage(msg);
+      }
+      catch (IOException ex) {
+        theLog.error("handle incoming message failed.");
+      }
     }
   }
 

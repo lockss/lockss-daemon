@@ -1,5 +1,5 @@
 /*
-* $Id: NamePoll.java,v 1.18 2002-12-16 19:44:18 tal Exp $
+* $Id: NamePoll.java,v 1.19 2002-12-17 02:24:00 claire Exp $
  */
 
 /*
@@ -46,8 +46,8 @@ import org.lockss.util.*;
 
 public class NamePoll extends Poll {
 
-  public NamePoll(LcapMessage msg, CachedUrlSet urlSet) {
-    super(msg, urlSet);
+  public NamePoll(LcapMessage msg, CachedUrlSet urlSet, PollManager pm) {
+    super(msg, urlSet, pm);
     m_replyOpcode = LcapMessage.NAME_POLL_REP;
   }
 

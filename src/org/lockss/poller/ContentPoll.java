@@ -1,5 +1,5 @@
 /*
-* $Id: ContentPoll.java,v 1.19 2002-12-16 19:44:18 tal Exp $
+* $Id: ContentPoll.java,v 1.20 2002-12-17 02:24:00 claire Exp $
  */
 
 /*
@@ -48,11 +48,10 @@ import org.mortbay.util.B64Code;
  * @author Claire Griffin
  * @version 1.0
  */
-
 public class ContentPoll extends Poll {
 
-  ContentPoll(LcapMessage msg, CachedUrlSet urlSet) {
-    super(msg, urlSet);
+  ContentPoll(LcapMessage msg, CachedUrlSet urlSet, PollManager pm) {
+    super(msg, urlSet, pm);
     m_replyOpcode = LcapMessage.CONTENT_POLL_REP;
   }
 
