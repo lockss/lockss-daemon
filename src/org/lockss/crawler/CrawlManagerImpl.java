@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.67 2004-02-26 19:22:27 troberts Exp $
+ * $Id: CrawlManagerImpl.java,v 1.68 2004-03-03 00:37:13 troberts Exp $
  */
 
 /*
@@ -173,7 +173,7 @@ public class CrawlManagerImpl extends BaseLockssManager
             makeRepairCrawler(au, au.getCrawlSpec(),
                               locks.keySet(), percentRepairFromCache);
         CrawlThread crawlThread =
-            new CrawlThread(crawler, Deadline.MAX, cb, cookie, locks.values());
+            new CrawlThread(crawler, cb, cookie, locks.values());
         crawlHistory.put(au.getAuId(), crawler.getStatus());
         synchronized (runningCrawls) {
           runningCrawls.put(au, crawler);
@@ -299,8 +299,7 @@ public class CrawlManagerImpl extends BaseLockssManager
     try {
       CrawlSpec spec = au.getCrawlSpec();
       Crawler crawler = makeNewContentCrawler(au, spec);
-      crawlThread = new CrawlThread(crawler, Deadline.MAX, cb, cookie,
-                                    SetUtil.set(lock));
+      crawlThread = new CrawlThread(crawler, cb, cookie, SetUtil.set(lock));
       crawlHistory.put(au.getAuId(), crawler.getStatus());
       synchronized (runningCrawls) {
         runningCrawls.put(au, crawler);
@@ -330,17 +329,14 @@ public class CrawlManagerImpl extends BaseLockssManager
   }
 
   public class CrawlThread extends LockssThread {
-    private Deadline deadline;
     private Object cookie;
     private Crawler crawler;
     private CrawlManager.Callback cb;
     private Collection locks;
 
-    private CrawlThread(Crawler crawler, Deadline deadline,
-			CrawlManager.Callback cb, Object cookie,
-                        Collection locks) {
+    private CrawlThread(Crawler crawler, CrawlManager.Callback cb,
+			Object cookie, Collection locks) {
       super(crawler.toString());
-      this.deadline = deadline;
       this.cb = cb;
       this.cookie = cookie;
       this.crawler = crawler;
@@ -356,7 +352,7 @@ public class CrawlManagerImpl extends BaseLockssManager
         startWDog(WDOG_PARAM_CRAWLER, WDOG_DEFAULT_CRAWLER);
         nowRunning();
 
-	crawlSuccessful = crawler.doCrawl(deadline);
+	crawlSuccessful = crawler.doCrawl();
 
         if (crawler.getType() == Crawler.NEW_CONTENT) {
           if (crawlSuccessful) {
