@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.17 2004-01-27 04:07:07 tlipkis Exp $
+ * $Id: AuConfig.java,v 1.18 2004-04-27 19:39:59 tlipkis Exp $
  */
 
 /*
@@ -346,8 +346,7 @@ public class AuConfig extends LockssServlet {
 //     frm.add("<center>");
     Table tbl = new Table(0, "align=center cellspacing=4 cellpadding=0");
 
-    ArrayList titles = new ArrayList(remoteApi.findAllTitles());
-    Collections.sort(titles);
+    java.util.List titles = remoteApi.findAllTitles();
     if (!titles.isEmpty()) {
       boolean includePluginInTitleSelect =
 	configMgr.getBooleanParam(PARAM_INCLUDE_PLUGIN_IN_TITLE_SELECT,

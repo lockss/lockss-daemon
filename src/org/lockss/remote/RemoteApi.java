@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.3 2004-01-12 06:20:26 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.4 2004-04-27 19:40:00 tlipkis Exp $
  */
 
 /*
@@ -47,6 +47,7 @@ import org.apache.commons.collections.ReferenceMap;
  */
 public class RemoteApi extends BaseLockssManager {
   private static Logger log = Logger.getLogger("RemoteApi");
+  private Comparator auProxyComparator = new AuProxyOrderComparator();
 
   private PluginManager pluginMgr;
 
@@ -260,11 +261,12 @@ public class RemoteApi extends BaseLockssManager {
       String auid = (String)iter.next();
       res.add(new InactiveAuProxy(auid, this));
     }
+    Collections.sort(res, auProxyComparator);
     return res;
   }
 
   /** Return all the known titles from the title db */
-  public Collection findAllTitles() {
+  public List findAllTitles() {
     return pluginMgr.findAllTitles();
   }
 
@@ -291,4 +293,26 @@ public class RemoteApi extends BaseLockssManager {
   String pluginIdFromAuId(String auid) {
     return pluginMgr.pluginNameFromAuId(auid);
   }
+
+  /** Comparator for sorting AuProxy lists.  Not suitable for use in a
+   * TreeSet unless changed to never return 0. */
+  class AuProxyOrderComparator implements Comparator {
+    CatalogueOrderComparator coc = new CatalogueOrderComparator();
+    public int compare(Object o1, Object o2) {
+      if (!((o1 instanceof AuProxy)
+	   && (o2 instanceof AuProxy))) {
+	throw new IllegalArgumentException("AuProxyOrderComparator(" +
+					   o1.getClass() + "," +
+					   o2.getClass() + ")");
+      }
+      AuProxy a1 = (AuProxy)o1;
+      AuProxy a2 = (AuProxy)o2;
+      int res = coc.compare(a1.getName(), a2.getName());
+      if (res == 0) {
+	res = coc.compare(a1.getAuId(), a2.getAuId());
+      }
+      return res;
+    }
+  }
+
 }
