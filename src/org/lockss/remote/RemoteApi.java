@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.11 2004-07-12 23:01:51 smorabito Exp $
+ * $Id: RemoteApi.java,v 1.11.2.1 2004-07-21 23:30:35 tlipkis Exp $
  */
 
 /*
@@ -487,6 +487,9 @@ public class RemoteApi extends BaseLockssManager {
 	stat.setStatus("I/O Error");
 	stat.setExplanation(e.getMessage());
       }
+    }
+    if (stat.getName() == null) {
+      stat.setName("Unknown");
     }
   }
 
