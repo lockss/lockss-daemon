@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrl.java,v 1.18 2003-03-04 00:16:12 aalto Exp $
+ * $Id: GenericFileCachedUrl.java,v 1.19 2003-05-30 00:32:48 troberts Exp $
  */
 
 /*
@@ -32,10 +32,11 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin;
 
-import java.io.InputStream;
+import java.io.*;
 import java.util.Properties;
 import java.net.MalformedURLException;
 import org.lockss.app.*;
+import org.lockss.crawler.HtmlTagFilter;
 import org.lockss.daemon.*;
 import org.lockss.repository.*;
 import org.lockss.util.*;
@@ -53,6 +54,9 @@ public class GenericFileCachedUrl extends BaseCachedUrl {
   private LockssRepository repository;
   private RepositoryNode leaf = null;
   protected static Logger logger = Logger.getLogger("CachedUrl");
+
+  private static final String PARAM_SHOULD_FILTER_HASH_STREAM = 
+    Configuration.PREFIX+".genericFileCachedUrl.filterHashStream";
 
   public GenericFileCachedUrl(CachedUrlSet owner, String url) {
     super(owner, url);
@@ -73,7 +77,18 @@ public class GenericFileCachedUrl extends BaseCachedUrl {
    * @return an InputStream
    */
   public InputStream openForHashing() {
-    return openForReading();
+    if (Configuration.getBooleanParam(PARAM_SHOULD_FILTER_HASH_STREAM,
+ 				      false)) {
+      HtmlTagFilter.TagPair tagPair = new HtmlTagFilter.TagPair("<", ">");
+      Reader filteredReader = new HtmlTagFilter(getReader(), tagPair);
+      return new ReaderInputStream(filteredReader);
+    } else {
+      return openForReading();
+    }
+  }
+
+  public Reader getReader() {
+    return new InputStreamReader(openForReading());
   }
 
   public Properties getProperties() {

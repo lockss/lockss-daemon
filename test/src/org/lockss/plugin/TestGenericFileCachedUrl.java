@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericFileCachedUrl.java,v 1.8 2003-05-03 00:45:51 aalto Exp $
+ * $Id: TestGenericFileCachedUrl.java,v 1.9 2003-05-30 00:32:48 troberts Exp $
  */
 
 /*
@@ -138,14 +138,40 @@ public class TestGenericFileCachedUrl extends LockssTestCase {
     assertEquals("", baos.toString());
   }
 
-  public void testOpenForHashing() throws Exception {
-    createLeaf("http://www.example.com/testDir/leaf1", "test stream", null);
+  public void testOpenForHashingDefaultsToNoFiltering() throws Exception {
+    createLeaf("http://www.example.com/testDir/leaf1", "<test stream>", null);
 
     CachedUrl url = cus.makeCachedUrl("http://www.example.com/testDir/leaf1");
     InputStream urlIs = url.openForReading();
     ByteArrayOutputStream baos = new ByteArrayOutputStream(11);
     StreamUtil.copy(urlIs, baos);
-    assertEquals("test stream", baos.toString());
+    assertEquals("<test stream>", baos.toString());
+  }
+
+  public void testOpenForHashingCanFilter() throws Exception {
+    String config = 
+      "org.lockss.genericFileCachedUrl.filterHashStream=true";
+    TestConfiguration.setCurrentConfigFromString(config);
+    createLeaf("http://www.example.com/testDir/leaf1", "<test stream>", null);
+
+    CachedUrl url = cus.makeCachedUrl("http://www.example.com/testDir/leaf1");
+    InputStream urlIs = url.openForHashing();
+    ByteArrayOutputStream baos = new ByteArrayOutputStream(11);
+    StreamUtil.copy(urlIs, baos);
+    assertEquals("", baos.toString());
+  }
+
+  public void testOpenForHashingWontFilterIfConfigedNotTo() throws Exception {
+    String config = 
+      "org.lockss.genericFileCachedUrl.filterHashStream=false";
+    TestConfiguration.setCurrentConfigFromString(config);
+    createLeaf("http://www.example.com/testDir/leaf1", "<test stream>", null);
+
+    CachedUrl url = cus.makeCachedUrl("http://www.example.com/testDir/leaf1");
+    InputStream urlIs = url.openForReading();
+    ByteArrayOutputStream baos = new ByteArrayOutputStream(11);
+    StreamUtil.copy(urlIs, baos);
+    assertEquals("<test stream>", baos.toString());
   }
 
   public void testGetProperties() throws Exception {
@@ -158,6 +184,16 @@ public class TestGenericFileCachedUrl extends LockssTestCase {
     Properties urlProps = url.getProperties();
     assertEquals("value", urlProps.getProperty("test"));
     assertEquals("value2", urlProps.getProperty("test2"));
+  }
+
+   public void testGetReader() throws Exception {
+    createLeaf("http://www.example.com/testDir/leaf1", "test stream", null);
+  
+    CachedUrl cu = cus.makeCachedUrl("http://www.example.com/testDir/leaf1");
+    Reader reader = cu.getReader();
+    CharArrayWriter writer = new CharArrayWriter(11);
+    StreamUtil.copy(reader, writer);
+    assertEquals("test stream", writer.toString());
   }
 
   private RepositoryNode createLeaf(String url, String content,
