@@ -1,5 +1,5 @@
 /*
- * $Id: Constants.java,v 1.6 2003-10-06 23:31:33 eaalto Exp $
+ * $Id: Constants.java,v 1.7 2004-03-14 01:05:30 tlipkis Exp $
  */
 
 /*
@@ -57,5 +57,8 @@ public interface Constants {
 
   /** The default encoding used when none is detected */
   public static String DEFAULT_ENCODING = "ISO-8859-1";
+
+  /** LOCKSS home page */
+  public static String LOCKSS_HOME_URL = "http://www.lockss.org/";
 
 }
