@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.47 2004-03-03 00:38:44 troberts Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.47.14.1 2004-10-19 06:23:14 tlipkis Exp $
  */
 
 /*
@@ -203,6 +203,107 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 
     waitForCrawlToFinish(sem);
     assertFalse("doCrawl() called", crawler.doCrawlCalled());
+  }
+
+
+  private void setNewContentRateLimit(int events, long interval) {
+    ConfigurationUtil.
+      setFromArgs(CrawlManagerImpl.PARAM_MAX_NEW_CONTENT_CRAWLS_PER_INTERVAL,
+		  events+"",
+		  CrawlManagerImpl.PARAM_MAX_NEW_CONTENT_CRAWLS_INTERVAL,
+		  interval+"");
+  }
+
+  private void setRepairRateLimit(int events, long interval) {
+    ConfigurationUtil.
+      setFromArgs(CrawlManagerImpl.PARAM_MAX_REPAIR_CRAWLS_PER_INTERVAL,
+		  events+"",
+		  CrawlManagerImpl.PARAM_MAX_REPAIR_CRAWLS_INTERVAL,
+		  interval+"");
+  }
+
+  private void assertDoesCrawlNew() {
+    crawler.setDoCrawlCalled(false);
+    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
+    crawlManager.startNewContentCrawl(mau, new TestCrawlCB(sem), null, null);
+    waitForCrawlToFinish(sem);
+    assertTrue("doCrawl() not called at time " + TimeBase.nowMs(),
+	       crawler.doCrawlCalled());
+  }
+
+  private void assertDoesNotCrawlNew() {
+    crawler.setDoCrawlCalled(false);
+    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
+    crawlManager.startNewContentCrawl(mau, new TestCrawlCB(sem), null, null);
+    waitForCrawlToFinish(sem);
+    assertFalse("doCrawl() called at time " + TimeBase.nowMs(),
+		crawler.doCrawlCalled());
+  }
+
+  private void assertDoesCrawlRepair() {
+    crawler.setDoCrawlCalled(false);
+    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
+    crawlManager.startRepair(mau, ListUtil.list(GENERIC_URL),
+			     new TestCrawlCB(sem), null, null);
+    waitForCrawlToFinish(sem);
+    assertTrue("doCrawl() not called at time " + TimeBase.nowMs(),
+	       crawler.doCrawlCalled());
+  }
+
+  private void assertDoesNotCrawlRepair() {
+    crawler.setDoCrawlCalled(false);
+    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
+    crawlManager.startRepair(mau, ListUtil.list(GENERIC_URL),
+			     new TestCrawlCB(sem), null, null);
+    waitForCrawlToFinish(sem);
+    assertFalse("doCrawl() called at time " + TimeBase.nowMs(),
+		crawler.doCrawlCalled());
+  }
+
+  public void testNewContentRateLimiter() {
+    TimeBase.setSimulated(100);
+    setNewContentRateLimit(4, 100);
+    activityRegulator.setStartAuActivity(true);
+    for (int ix = 1; ix <= 4; ix++) {
+      assertDoesCrawlNew();
+      TimeBase.step(10);
+    }
+    assertDoesNotCrawlNew();
+    TimeBase.step(10);
+    assertDoesNotCrawlNew();
+    TimeBase.step(50);
+    assertDoesCrawlNew();
+    TimeBase.step(500);
+    // ensure RateLimiter changes when config does
+    setNewContentRateLimit(2, 5);
+    assertDoesCrawlNew();
+    assertDoesCrawlNew();
+    assertDoesNotCrawlNew();
+    TimeBase.step(5);
+    assertDoesCrawlNew();
+  }
+
+  public void testRepairRateLimiter() {
+    TimeBase.setSimulated(100);
+    setRepairRateLimit(6, 200);
+    activityRegulator.setStartAuActivity(true);
+    for (int ix = 1; ix <= 6; ix++) {
+      assertDoesCrawlRepair();
+      TimeBase.step(10);
+    }
+    assertDoesNotCrawlRepair();
+    TimeBase.step(10);
+    assertDoesNotCrawlRepair();
+    TimeBase.step(130);
+    assertDoesCrawlRepair();
+    TimeBase.step(500);
+    // ensure RateLimiter changes when config does
+    setRepairRateLimit(2, 5);
+    assertDoesCrawlRepair();
+    assertDoesCrawlRepair();
+    assertDoesNotCrawlRepair();
+    TimeBase.step(5);
+    assertDoesCrawlRepair();
   }
 
 

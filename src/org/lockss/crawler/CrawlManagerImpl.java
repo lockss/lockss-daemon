@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.72.2.1 2004-10-14 07:53:08 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.72.2.2 2004-10-19 06:23:15 tlipkis Exp $
  */
 
 /*
@@ -66,9 +66,9 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 
 
   /** Set false to prevent all crawl activity */ 
-  public static final String PARAM_ALLOW_CRAWLS =
-    Configuration.PREFIX + "crawler.allowCrawls";
-  static final boolean DEFAULT_ALLOW_CRAWLS = true;
+  public static final String PARAM_CRAWLER_ENABLED =
+    Configuration.PREFIX + "crawler.enabled";
+  static final boolean DEFAULT_CRAWLER_ENABLED = true;
 
   static final String WDOG_PARAM_CRAWLER = "Crawler";
   static final long WDOG_DEFAULT_CRAWLER = 2 * Constants.HOUR;
@@ -91,6 +91,24 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 
   public static final float DEFAULT_REPAIR_FROM_CACHE_PERCENT = 0;
 
+  static final String MAX_REPAIR_RATE_PREFIX =
+    Configuration.PREFIX + "crawler.maxRapairRate.";
+  public static final String PARAM_MAX_REPAIR_CRAWLS_PER_INTERVAL =
+    MAX_REPAIR_RATE_PREFIX + "crawls";
+  public static final int DEFAULT_MAX_REPAIR_CRAWLS_PER_INTERVAL = 50;
+  public static final String PARAM_MAX_REPAIR_CRAWLS_INTERVAL =
+    MAX_REPAIR_RATE_PREFIX + "interval";
+  public static final long DEFAULT_MAX_REPAIR_CRAWLS_INTERVAL = Constants.DAY;
+
+  static final String MAX_NEW_CONTENT_RATE_PREFIX =
+    Configuration.PREFIX + "crawler.maxNewContentRate.";
+  public static final String PARAM_MAX_NEW_CONTENT_CRAWLS_PER_INTERVAL =
+    MAX_NEW_CONTENT_RATE_PREFIX + "crawls";
+  public static final int DEFAULT_MAX_NEW_CONTENT_CRAWLS_PER_INTERVAL = 1;
+  public static final String PARAM_MAX_NEW_CONTENT_CRAWLS_INTERVAL =
+    MAX_NEW_CONTENT_RATE_PREFIX + "interval";
+  public static final long DEFAULT_MAX_NEW_CONTENT_CRAWLS_INTERVAL =
+    18 * Constants.HOUR;
 
   //Tracking crawls for the status info
   private MultiMap crawlHistory = new MultiHashMap();
@@ -101,9 +119,10 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   private long contentCrawlExpiration;
   private long repairCrawlExpiration;
   private float percentRepairFromCache;
-  private boolean allowCrawls = DEFAULT_ALLOW_CRAWLS;
+  private boolean crawlerEnabled = DEFAULT_CRAWLER_ENABLED;
   private static Logger logger = Logger.getLogger("CrawlManager");
-
+  private Map repairRateLimiters = new HashMap();
+  private Map newContentRateLimiters = new HashMap();
 
   /**
    * start the plugin manager.
@@ -142,8 +161,23 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     percentRepairFromCache =
       newConfig.getPercentage(PARAM_REPAIR_FROM_CACHE_PERCENT,
 			      DEFAULT_REPAIR_FROM_CACHE_PERCENT);
-    allowCrawls =
-      newConfig.getBooleanParam(PARAM_ALLOW_CRAWLS, DEFAULT_ALLOW_CRAWLS);
+    crawlerEnabled =
+      newConfig.getBooleanParam(PARAM_CRAWLER_ENABLED,
+				DEFAULT_CRAWLER_ENABLED);
+    if (changedKeys.contains(MAX_REPAIR_RATE_PREFIX)) {
+      resetRateLimiters(newConfig, repairRateLimiters,
+			PARAM_MAX_REPAIR_CRAWLS_PER_INTERVAL,
+			DEFAULT_MAX_REPAIR_CRAWLS_PER_INTERVAL,
+			PARAM_MAX_REPAIR_CRAWLS_INTERVAL,
+			DEFAULT_MAX_REPAIR_CRAWLS_INTERVAL);
+    }
+    if (changedKeys.contains(MAX_NEW_CONTENT_RATE_PREFIX)) {
+      resetRateLimiters(newConfig, newContentRateLimiters,
+			PARAM_MAX_NEW_CONTENT_CRAWLS_PER_INTERVAL,
+			DEFAULT_MAX_NEW_CONTENT_CRAWLS_PER_INTERVAL,
+			PARAM_MAX_NEW_CONTENT_CRAWLS_INTERVAL,
+			DEFAULT_MAX_NEW_CONTENT_CRAWLS_INTERVAL);
+    }
   }
 
   public void cancelAuCrawls(ArchivalUnit au) {
@@ -155,6 +189,55 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	  Crawler crawler = (Crawler)it.next();
 	  crawler.abortCrawl();
 	}
+      }
+    }
+  }
+
+  /** Return true if the rate limiter for au in rateLimiterMap does not
+   * allow at event at the current time.  If the rate limiter allows an
+   * event, signal the event and return false. */
+  private boolean isRateLimitExceeded(ArchivalUnit au,
+				      Map rateLimiterMap,
+				      String maxEventsParam,
+				      int maxEvantDefault,
+				      String intervalParam,
+				      long intervalDefault) {
+    RateLimiter limiter;
+    synchronized (rateLimiterMap) {
+      limiter = (RateLimiter)rateLimiterMap.get(au);
+      if (limiter == null) {
+	limiter =
+	  RateLimiter.getConfiguredRateLimiter(ConfigManager.getCurrentConfig(),
+					       null,
+					       maxEventsParam, maxEvantDefault,
+					       intervalParam, intervalDefault);
+	rateLimiterMap.put(au, limiter);
+      }
+    }
+    if (limiter.isEventOk()) {
+      limiter.event();
+      return false;
+    }
+    return true;
+  }
+      
+  /** Reset the parameters of all the rate limiters in the map. */
+  private void resetRateLimiters(Configuration config,
+				 Map rateLimiterMap,
+				 String maxEventsParam,
+				 int maxEvantDefault,
+				 String intervalParam,
+				 long intervalDefault) {
+    synchronized (rateLimiterMap) {
+      for (Iterator iter = rateLimiterMap.entrySet().iterator();
+	   iter.hasNext(); ) {
+	Map.Entry entry = (Map.Entry)iter.next();
+	RateLimiter limiter = (RateLimiter)entry.getValue();
+	RateLimiter newLimiter =
+	  RateLimiter.getConfiguredRateLimiter(config, limiter,
+					       maxEventsParam, maxEvantDefault,
+					       intervalParam, intervalDefault);
+	entry.setValue(newLimiter);
       }
     }
   }
@@ -172,39 +255,44 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 
     // check with regulator and start repair
     Map locks = getRepairLocks(au, urls, lock);
-    if (locks.size() > 0) {
-      try {
-        if (locks.size() < urls.size()) {
-          cb = new FailingCallbackWrapper(cb);
-        }
-        Crawler crawler =
-            makeRepairCrawler(au, au.getCrawlSpec(),
-                              locks.keySet(), percentRepairFromCache);
-        CrawlThread crawlThread =
-            new CrawlThread(crawler, cb, cookie, locks.values());
-        crawlHistory.put(au.getAuId(), crawler.getStatus());
-        synchronized (runningCrawls) {
-          runningCrawls.put(au, crawler);
-          crawlThread.start();
-        }
-      } catch (RuntimeException re) {
-        logger.debug("Freeing repair locks...");
-        Iterator lockIt = locks.values().iterator();
-        while (lockIt.hasNext()) {
-          ActivityRegulator.Lock deadLock =
-              (ActivityRegulator.Lock)lockIt.next();
-          deadLock.expire();
-        }
-        lock.expire();
-        throw re;
-      }
-    } else {
+    if (locks.isEmpty()) {
       logger.debug("Repair aborted due to activity lock.");
-      try {
-	cb.signalCrawlAttemptCompleted(false, cookie);
-      } catch (Exception e) {
-	logger.error("Callback threw", e);
+      callCallback(cb, cookie, false);
+      return;
+    }
+    if (isRateLimitExceeded(au, repairRateLimiters,
+			    PARAM_MAX_REPAIR_CRAWLS_PER_INTERVAL,
+			    DEFAULT_MAX_REPAIR_CRAWLS_PER_INTERVAL,
+			    PARAM_MAX_REPAIR_CRAWLS_INTERVAL,
+			    DEFAULT_MAX_REPAIR_CRAWLS_INTERVAL)) {
+      logger.debug("Repair aborted due to rate limiter.");
+      callCallback(cb, cookie, false);
+      return;
+    }
+    try {
+      if (locks.size() < urls.size()) {
+	cb = new FailingCallbackWrapper(cb);
       }
+      Crawler crawler =
+	makeRepairCrawler(au, au.getCrawlSpec(),
+			  locks.keySet(), percentRepairFromCache);
+      CrawlThread crawlThread =
+	new CrawlThread(crawler, cb, cookie, locks.values());
+      crawlHistory.put(au.getAuId(), crawler.getStatus());
+      synchronized (runningCrawls) {
+	runningCrawls.put(au, crawler);
+	crawlThread.start();
+      }
+    } catch (RuntimeException re) {
+      logger.debug("Freeing repair locks...");
+      Iterator lockIt = locks.values().iterator();
+      while (lockIt.hasNext()) {
+	ActivityRegulator.Lock deadLock =
+	  (ActivityRegulator.Lock)lockIt.next();
+	deadLock.expire();
+      }
+      lock.expire();
+      throw re;
     }
   }
 
@@ -257,16 +345,25 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       lock.setNewActivity(ActivityRegulator.NEW_CONTENT_CRAWL,
                           contentCrawlExpiration);
     }
-    if (lock != null) {
-      try {
-	scheduleNewContentCrawl(au, cb, cookie, lock);
-      } catch (Exception e) {
-	logger.error("scheduleNewContentCrawl threw", e);
-      }
-    } else {
+    if (lock == null) {
       logger.debug("Couldn't schedule new content crawl due "+
 		   "to activity lock.");
       callCallback(cb, cookie, false);
+      return;
+    }
+    if (isRateLimitExceeded(au, newContentRateLimiters,
+			    PARAM_MAX_NEW_CONTENT_CRAWLS_PER_INTERVAL,
+			    DEFAULT_MAX_NEW_CONTENT_CRAWLS_PER_INTERVAL,
+			    PARAM_MAX_NEW_CONTENT_CRAWLS_INTERVAL,
+			    DEFAULT_MAX_NEW_CONTENT_CRAWLS_INTERVAL)) {
+      logger.debug("New content aborted due to rate limiter.");
+      callCallback(cb, cookie, false);
+      return;
+    }
+    try {
+      scheduleNewContentCrawl(au, cb, cookie, lock);
+    } catch (Exception e) {
+      logger.error("scheduleNewContentCrawl threw", e);
     }
   }
 
@@ -348,7 +445,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       //pull out of thread
       boolean crawlSuccessful = false;
       try {
-	if (!allowCrawls) {
+	if (!crawlerEnabled) {
 	  nowRunning();
 	  try {
 	    Deadline.in(Constants.HOUR).sleep();
