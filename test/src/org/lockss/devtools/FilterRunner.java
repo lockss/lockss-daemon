@@ -1,5 +1,5 @@
 /*
- * $Id: FilterRunner.java,v 1.7 2003-10-14 18:16:47 troberts Exp $
+ * $Id: FilterRunner.java,v 1.8 2004-05-13 02:21:49 clairegriffin Exp $
  */
 
 /*
@@ -32,13 +32,9 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.devtools;
 import java.io.*;
-import java.util.*;
-import org.lockss.crawler.*;
-import org.lockss.plugin.FilterRule;
-import org.lockss.plugin.highwire.HighWireFilterRule;
-import org.lockss.filter.*;
+
+import org.lockss.plugin.*;
 import org.lockss.util.*;
-import org.lockss.test.*;
 
 /**
  */
@@ -57,7 +53,7 @@ public class FilterRunner {
       throw new IllegalArgumentException("Called with null dest directory");
     } else if (destDir.exists() && !destDir.isDirectory()) {
       throw new IllegalArgumentException("Called with dest that isn't a directory: "+destDir);
-    } 
+    }
 
     if (!destDir.exists()) {
       destDir.mkdir();
@@ -93,7 +89,7 @@ public class FilterRunner {
       String file = src.getPath();
       file = file.substring(file.lastIndexOf(File.separator));
       dest = new File(dest, file);
-    } 
+    }
 //     System.out.println("Filtering "+src+" to "+dest);
     Reader reader = new FileReader(src);
     dest.createNewFile();
@@ -112,7 +108,7 @@ public class FilterRunner {
     String src = args[0];
     String dest = args[1];
     String filterStr = args[2];
-    
+
     try {
       FilterRule filter = filterRuleFromString(filterStr);
       filterDirectory(filter, new File(src), new File(dest));

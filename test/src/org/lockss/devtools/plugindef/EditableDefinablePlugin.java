@@ -1,5 +1,5 @@
 /*
- * $Id: EditableDefinablePlugin.java,v 1.1 2004-05-11 03:43:29 clairegriffin Exp $
+ * $Id: EditableDefinablePlugin.java,v 1.2 2004-05-13 02:21:49 clairegriffin Exp $
  */
 
 /*
@@ -107,7 +107,6 @@ public class EditableDefinablePlugin
       mapName = name + MAP_SUFFIX;
     }
   }
-
 
   public void setAuStartURL(String startUrl) {
     definitionMap.putString(AU_START_URL, startUrl);
