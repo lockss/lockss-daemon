@@ -1,4 +1,8 @@
 /*
+ * $Id: TestLogger.java,v 1.3 2002-08-31 07:04:32 tal Exp $
+ */
+
+/*
 
 Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -28,10 +32,12 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util;
 
-import java.util.Enumeration;
-import java.util.Properties;
+import java.util.*;
+import java.io.*;
 import junit.framework.TestCase;
-import org.lockss.test.MockLogTarget;
+import org.lockss.daemon.*;
+import org.lockss.util.*;
+import org.lockss.test.*;
 
 
 /**
@@ -42,6 +48,10 @@ import org.lockss.test.MockLogTarget;
  */
 
 public class TestLogger extends TestCase{
+  public static Class testedClasses[] = {
+    org.lockss.util.Logger.class
+  };
+
 
   //expected debugging levels, in ascending order of seriousness
   private static final String[] levels = {
@@ -57,126 +67,106 @@ public class TestLogger extends TestCase{
   }
 
   public void setUp(){
-//     baos = new ByteArrayOutputStream();
-//     System.setErr(new PrintStream(baos));
   }
 
-  //test that the severity levels are correctly relative to each other
-  public void testSeverityHierarchy(){
-    for (int ix=0; ix < levels.length; ix++){
-      for (int jx=0; jx < levels.length; jx++){
-	if (ix >= jx){ 
-	  assertTrue(levels[ix]+" not above "+levels[jx]+" threshold",
-		     Logger.isLevelAboveThreshold(levels[ix], levels[jx]));
-	}
-	else{
-	  assertTrue(levels[ix]+" above "+levels[jx]+" threshold",
-		     !Logger.isLevelAboveThreshold(levels[ix], levels[jx]));
-	  
-	}
-      }
+  public void testNames() {
+    assertEquals("Critical", Logger.nameOf(Logger.LEVEL_CRITICAL));
+    assertEquals("Info", Logger.nameOf(Logger.LEVEL_INFO));
+    assertEquals(Logger.LEVEL_WARNING, Logger.levelOf("warning"));
+    assertEquals(Logger.LEVEL_DEBUG, Logger.levelOf("debug"));
+  }
+
+  public void testLevels() {
+    Logger l = Logger.getLogger("test-log");
+    l.setLevel(Logger.LEVEL_WARNING);
+    assertTrue(l.isLevel(Logger.LEVEL_WARNING));
+    assertTrue(l.isLevel(Logger.LEVEL_ERROR));
+    assertTrue(l.isLevel(Logger.LEVEL_CRITICAL));
+    assertTrue( ! l.isLevel(Logger.LEVEL_INFO));
+    assertTrue( ! l.isLevel(Logger.LEVEL_DEBUG));
+  }
+
+  public void testLevelFilter() {
+    Logger l = Logger.getLogger("test-log");
+    MockLogTarget target = new MockLogTarget();
+    l.setTarget(target);
+    l.setLevel(Logger.LEVEL_WARNING);
+    target.resetMessages();
+    assertEquals(0, target.messageCount());
+    l.info("no");
+    assertEquals(0, target.messageCount());
+    l.warning("yes");
+    assertEquals(1, target.messageCount());
+    l.error("yes");
+    assertEquals(2, target.messageCount());
+    l.setLevel(Logger.LEVEL_CRITICAL);
+    l.error("yes");
+    assertEquals(2, target.messageCount());
+    l.defaultTarget();
+  }
+
+  static String testOutputOutput[] = {
+    "Warning: test-log: msg2 warning",
+    "Error: test-log: msg3 error",
+  };
+
+  public void testOutput() {
+    Logger l = Logger.getLogger("test-log");
+    MockLogTarget target = new MockLogTarget();
+    l.setTarget(target);
+    l.setLevel(Logger.LEVEL_WARNING);
+    target.resetMessages();
+    l.info("msg1 info");
+    l.warning("msg2 warning");
+    l.error("msg3 error");
+    l.setLevel(Logger.LEVEL_CRITICAL);
+    l.error("msg4 error");
+    Iterator iter = target.messageIterator();
+    while (iter.hasNext()) {
+      System.err.println((String)iter.next());
     }
+    assertTrue(CollectionUtil.
+	       equalCollections(target.messageIterator(),
+				new ArrayIterator(testOutputOutput)));
+    l.defaultTarget();
   }
 
- //  public void testOutputStringFormat()
-//   throws REException{
-//     Properties props = System.getProperties();
-//     props.setProperty("org.lockss.log.level.default", "debug");
-//     ByteArrayOutputStream baos = new ByteArrayOutputStream();
-//     PrintStream ps = new PrintStream(baos);
-//     Logger.setGlobalErrorStream(ps);
-//     String callerId = "caller-id";
-//     String errorMessage = "error message";
-//     Logger.error(callerId, errorMessage);
+  private static final String c1 = "prop1=12\nprop2=foobar\nprop3=true\n"; 
+  private static final String c1a = "prop2=xxx\nprop4=yyy\n"; 
 
-//     RE regExp = 
-//       new RE("\\d(\\d)?:\\d\\d:\\d\\d (A|P)M: error: "+callerId+" "+errorMessage+"\n");
-//     String debugString = baos.toString();
-//     assertTrue("Debug string: \""+debugString+"\" not of correct format."+
-// 	       " Should be <time>: <error-level>: <caller-id> <error message>",
-// 	       regExp.isMatch(debugString));
-//   }
+  // Load a config with desired log level.
+  // Set default to critical to suppress Config log, which would change
+  // expected output.
+  private void configLogLevel(String logName, int level)
+      throws IOException {
+    String s =
+      "org.lockss.log." + logName + ".level=" + Logger.nameOf(level) + "\n" +
+      "org.lockss.log.default.level=critical\n";
+    TestConfiguration.
+      setCurrentConfigFromUrlList(ListUtil.list(FileUtil.urlOfString(s)));
+  }
 
-  public void testStaticLoggingAboveThreshold(){
-    Properties props = System.getProperties();
-    props.setProperty("org.lockss.log.level.default", "debug");
-    Logger.loadProps();
+  public void testLevelconfig()
+      throws IOException {
+    String lName = "test-log";
+    Logger l = Logger.getLogger(lName);
     MockLogTarget target = new MockLogTarget();
-    Logger.addTarget(target);
-
-    String callerId = "caller-id";
-    String errorMessage = "error message";
-    Logger.error(callerId, errorMessage);
-
-    Enumeration enum = target.getMessages();
-    String[] logInfo = (String[]) enum.nextElement();
-    
-    assertEquals(callerId, logInfo[0]);
-    assertEquals(errorMessage, logInfo[1]);
-    assertEquals(Logger.ERROR, logInfo[2]);
-
-    assertTrue("More than one message sent to target", !enum.hasMoreElements());
+    l.setTarget(target);
+    configLogLevel(lName, Logger.LEVEL_WARNING);
+    target.resetMessages();
+    l.info("msg1 info");
+    l.warning("msg2 warning");
+    l.error("msg3 error");
+    configLogLevel(lName, Logger.LEVEL_CRITICAL);
+    l.error("msg4 error");
+    Iterator iter = target.messageIterator();
+    while (iter.hasNext()) {
+      System.err.println((String)iter.next());
+    }
+    assertTrue(CollectionUtil.
+	       equalCollections(target.messageIterator(),
+				new ArrayIterator(testOutputOutput)));
+    l.defaultTarget();
   }
-
-  public void testStaticLoggingBelowThreshold(){
-    Properties props = System.getProperties();
-    props.setProperty("org.lockss.log.level.default", "critical");
-    Logger.loadProps();
-    MockLogTarget target = new MockLogTarget();
-    Logger.addTarget(target);
-
-    String callerId = "caller-id";
-    String errorMessage = "error message";
-    Logger.error(callerId, errorMessage);
-
-    Enumeration enum = target.getMessages();
-    
-    assertTrue("Should have no messages", !enum.hasMoreElements());
-  }
-
-  public void testObjectLoggingNullId(){
-    Logger logger = Logger.getLogger(null);
-    assertNull(logger);
-  }
-
-  public void testObjectLoggingBelowThreshold(){
-    Properties props = System.getProperties();
-    props.setProperty("org.lockss.log.level.test_id", "critical");
-    MockLogTarget target = new MockLogTarget();
-    Logger.addTarget(target);
-    String callerId = "test_id";
-
-    Logger logger = Logger.getLogger(callerId);
-    String errorMessage = "error message";
-    logger.error(errorMessage);
-
-    Enumeration enum = target.getMessages();
-    
-    assertTrue("Should have no messages", !enum.hasMoreElements());
-  }
-
-  public void testObjectLoggingAboveThreshold(){
-    Properties props = System.getProperties();
-    props.setProperty("org.lockss.log.level.test_id", "warning");
-    MockLogTarget target = new MockLogTarget();
-    Logger.addTarget(target);
-    String callerId = "test_id";
-
-    Logger logger = Logger.getLogger(callerId);
-
-    String errorMessage = "error message";
-    logger.error(errorMessage);
-
-    Enumeration enum = target.getMessages();
-    String[] logInfo = (String[]) enum.nextElement();
-    assertTrue(logInfo != null);
-    assertEquals(callerId, logInfo[0]);
-    assertEquals(errorMessage, logInfo[1]);
-    assertEquals(Logger.ERROR, logInfo[2]);
-
-    assertTrue("More than one message sent to target", !enum.hasMoreElements());
-  }
-  //tests to write:
-  //tests for stderr target
 }
 
