@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerImpl.java,v 1.11 2004-02-23 09:12:07 tlipkis Exp $
+ * $Id: CrawlerImpl.java,v 1.12 2004-03-03 00:37:26 troberts Exp $
  */
 
 /*
@@ -84,7 +84,7 @@ public abstract class CrawlerImpl implements Crawler {
 
   protected LockssWatchdog wdog = null;
 
-  protected abstract boolean doCrawl0(Deadline deadline);
+  protected abstract boolean doCrawl0();
   public abstract int getType();
 
   protected CrawlerImpl(ArchivalUnit au, CrawlSpec spec, AuState aus) {
@@ -131,12 +131,9 @@ public abstract class CrawlerImpl implements Crawler {
    * @param deadline when to terminate by
    * @return true if no errors
    */
-  public boolean doCrawl(Deadline deadline) {
-    if (deadline == null) {
-      throw new IllegalArgumentException("Called with a null Deadline");
-    }
+  public boolean doCrawl() {
     try {
-      return doCrawl0(deadline);
+      return doCrawl0();
     } finally {
       crawlStatus.signalCrawlEnded();
     }
