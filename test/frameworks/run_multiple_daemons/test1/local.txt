@@ -11,19 +11,19 @@ org.lockss.comm.unicast.sendToAddr=127.0.0.1
 org.lockss.cache.location=.
 
 #au config settings
-org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.localA.badFileLoc=1
+org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.localA.badFileLoc=0
 org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.localA.badFileNum=1
 
 #test settings
-org.lockss.test.treewalk=false
-org.lockss.treewalk.pluginId=org|lockss|plugin|simulated|SimulatedPlugin
-org.lockss.treewalk.auId=localA
+org.lockss.test.doTreewalk=false
+org.lockss.test.treewalk.pluginId=org|lockss|plugin|simulated|SimulatedPlugin
+org.lockss.test.treewalk.auId=localA
 
-org.lockss.test.poll=false
-org.lockss.poll.type=2
-org.lockss.pollspec.pluginId=org|lockss|plugin|simulated|SimulatedPlugin
-org.lockss.pollspec.auId=localA
-org.lockss.pollspec.url=lockssAU:
-#org.lockss.pollspec.lwrBound=
-#org.lockss.pollspec.uprBound=
+org.lockss.test.doPoll=false
+org.lockss.test.polltype=2
+org.lockss.test.pollspec.pluginId=org|lockss|plugin|simulated|SimulatedPlugin
+org.lockss.test.pollspec.auId=localA
+org.lockss.test.pollspec.url=lockssAU:
+#org.lockss.test.pollspec.lwrBound=
+#org.lockss.test.pollspec.uprBound=
 #org.lockss.hasher.historySize=4

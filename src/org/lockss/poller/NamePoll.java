@@ -1,5 +1,5 @@
 /*
- * $Id: NamePoll.java,v 1.41 2003-03-20 02:13:11 claire Exp $
+ * $Id: NamePoll.java,v 1.42 2003-03-27 01:13:22 claire Exp $
  */
 
 /*
@@ -71,28 +71,6 @@ public class NamePoll
     }
   }
 
-  /**
-   * prepare to run a poll.  This should check any conditions that might
-   * make running a poll unneccessary.
-   * @param msg the message which is triggering the poll
-   * @return boolean true if the poll should run, false otherwise
-   */
-  boolean prepareVoteCheck(LcapMessage msg) {
-
-    // make sure our vote will actually matter
-    if (m_tally.isLeadEnough()) {
-      log.info(m_key + " lead is enough.");
-      return false;
-    }
-
-    // are we too busy
-    if (tooManyPending()) {
-      log.info(m_key + " too busy to count " + m_pendingVotes + " votes");
-      return false;
-    }
-
-    return true;
-  }
 
   /**
    * handle a message which may be a incoming vote
@@ -129,7 +107,7 @@ public class NamePoll
   void startVoteCheck(LcapMessage msg) {
     super.startVoteCheck();
 
-    if (prepareVoteCheck(msg)) {
+    if (shouldCheckVote(msg)) {
       Vote vote = new NameVote(msg, false);
       long dur = msg.getDuration();
       MessageDigest hasher = getInitedHasher(msg.getChallenge(),

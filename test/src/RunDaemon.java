@@ -1,5 +1,5 @@
 /*
- * $Id: RunDaemon.java,v 1.31 2003-03-26 23:04:32 troberts Exp $
+ * $Id: RunDaemon.java,v 1.32 2003-03-27 01:13:22 claire Exp $
  */
 
 /*
@@ -50,21 +50,29 @@ public class RunDaemon
   static final String PARAM_CACHE_LOCATION =
       LockssRepositoryServiceImpl.PARAM_CACHE_LOCATION;
 
-  static final String PARAM_REG_SIMUL_STATUS_ACCESSOR = 
+  static final String PARAM_REG_SIMUL_STATUS_ACCESSOR =
     Configuration.PREFIX + "shouldRegisterSimSA";
-  
-  static final String PARAM_CALL_POLL = Configuration.PREFIX + "test.poll";
-  static final String PARAM_RUN_TREEWALK = Configuration.PREFIX + "test.treewalk";
 
-  static final String PARAM_TREEWALK_AUID = 
-    Configuration.PREFIX + "treewalk.auId";
-  static final String PARAM_TREEWALK_PLUGINID = Configuration.PREFIX + "treewalk.pluginId";
-  static final String PARAM_POLL_TYPE = Configuration.PREFIX + "poll.type";
-  static final String PARAM_PS_PLUGINID = Configuration.PREFIX + "pollspec.pluginId";
-  static final String PARAM_PS_AUID = Configuration.PREFIX + "pollspec.auId";
-  static final String PARAM_PS_URL = Configuration.PREFIX + "pollspec.url";
-  static final String PARAM_PS_LWRBND = Configuration.PREFIX + "pollspec.lwrBound";
-  static final String PARAM_PS_UPRBND = Configuration.PREFIX + "pollspec.uprBound";
+  static final String PARAM_CALL_POLL = Configuration.PREFIX
+      + "test.doPoll";
+  static final String PARAM_RUN_TREEWALK = Configuration.PREFIX
+      + "test.doTreewalk";
+  static final String PARAM_TREEWALK_AUID = Configuration.PREFIX
+      + "test.treewalk.auId";
+  static final String PARAM_TREEWALK_PLUGINID = Configuration.PREFIX
+      + "test.treewalk.pluginId";
+  static final String PARAM_POLL_TYPE = Configuration.PREFIX
+      + "test.polltype";
+  static final String PARAM_PS_PLUGINID = Configuration.PREFIX
+      + "test.pollspec.pluginId";
+  static final String PARAM_PS_AUID = Configuration.PREFIX
+      + "test.pollspec.auId";
+  static final String PARAM_PS_URL = Configuration.PREFIX
+      + "test.pollspec.url";
+  static final String PARAM_PS_LWRBND = Configuration.PREFIX
+      + "test.pollspec.lwrBound";
+  static final String PARAM_PS_UPRBND = Configuration.PREFIX
+      + "test.pollspec.uprBound";
 
   private static Logger log = Logger.getLogger("RunDaemon");
 
@@ -96,7 +104,7 @@ public class RunDaemon
     boolean testTreeWalk = Configuration.getBooleanParam(PARAM_RUN_TREEWALK,
         false);
 
-    boolean registerSimulatedStatusAccessor = 
+    boolean registerSimulatedStatusAccessor =
       Configuration.getBooleanParam(PARAM_REG_SIMUL_STATUS_ACCESSOR, false);
 
     if (registerSimulatedStatusAccessor) {

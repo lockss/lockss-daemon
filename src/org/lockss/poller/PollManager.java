@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.57 2003-03-26 23:39:39 claire Exp $
+* $Id: PollManager.java,v 1.58 2003-03-27 01:13:22 claire Exp $
  */
 
 /*
@@ -74,7 +74,7 @@ public class PollManager  implements LockssManager {
 
   static final long DEFAULT_RECENT_EXPIRATION = Constants.DAY;
   static final long DEFAULT_REPLAY_EXPIRATION = DEFAULT_RECENT_EXPIRATION/2;
-  static final long DEFAULT_VERIFIER_EXPIRATION = Constants.DAY;
+  static final long DEFAULT_VERIFY_EXPIRATION = Constants.DAY;
 
   public static final String MANAGER_STATUS_TABLE_NAME = "PollManagerTable";
   public static final String POLL_STATUS_TABLE_NAME = "PollTable";
@@ -344,8 +344,7 @@ public class PollManager  implements LockssManager {
    * @param key the poll signature
    */
   void closeThePoll(String key)  {
-    long expiration = TimeBase.nowMs() +
-                      Configuration.getLongParam(PARAM_RECENT_EXPIRATION,
+    long expiration = Configuration.getLongParam(PARAM_RECENT_EXPIRATION,
                       DEFAULT_RECENT_EXPIRATION);
     Deadline d = Deadline.in(expiration);
     TimerQueue.schedule(d, new ExpireRecentCallback(), key);
@@ -386,9 +385,8 @@ public class PollManager  implements LockssManager {
     Deadline d;
     if (replayNeeded) {
       theLog.debug2("replaying poll " + (String) key);
-      expiration = TimeBase.nowMs() +
-          Configuration.getLongParam(PARAM_REPLAY_EXPIRATION,
-                                     DEFAULT_REPLAY_EXPIRATION);
+      expiration = Configuration.getLongParam(PARAM_REPLAY_EXPIRATION,
+                                              DEFAULT_REPLAY_EXPIRATION);
       d = Deadline.in(expiration);
       p.getVoteTally().startReplay(d);
     }
@@ -545,7 +543,8 @@ public class PollManager  implements LockssManager {
                                 byte[] secret) {
     String ver = String.valueOf(B64Code.encode(verifier));
     String sec = secret == null ? "" : String.valueOf(B64Code.encode(secret));
-    long expiration = TimeBase.nowMs() + DEFAULT_VERIFIER_EXPIRATION;
+    long expiration = Configuration.getLongParam(PARAM_VERIFY_EXPIRATION,
+                                            DEFAULT_VERIFY_EXPIRATION);
     Deadline d = Deadline.in(expiration);
     TimerQueue.schedule(d, new ExpireVerifierCallback(), ver);
     synchronized (theVerifiers) {

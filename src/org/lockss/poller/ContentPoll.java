@@ -1,5 +1,5 @@
 /*
-* $Id: ContentPoll.java,v 1.27 2003-03-05 23:47:07 claire Exp $
+* $Id: ContentPoll.java,v 1.28 2003-03-27 01:13:22 claire Exp $
  */
 
 /*
@@ -59,30 +59,6 @@ public class ContentPoll extends Poll {
 
 
   /**
-   * prepare to check a vote in a poll.  This should check any conditions that
-   *  might make running a vote check unneccessary.
-   * @param msg the message which is triggering the poll
-   * @return boolean true if the poll should run, false otherwise
-   */
-  boolean prepareVoteCheck(LcapMessage msg) {
-
-    // make sure our vote will actually matter
-    if(m_tally.isLeadEnough())  {
-      log.info(m_key + " lead is enough");
-      return false;
-    }
-
-    // are we too busy
-    if(tooManyPending())  {
-      log.info(m_key + " too busy to count " + m_pendingVotes + " votes");
-      return false;
-    }
-
-    return true;
-  }
-
-
-  /**
    * handle a message which may be a incoming vote
    * @param msg the Message to handle
    */
@@ -118,7 +94,7 @@ public class ContentPoll extends Poll {
   void startVoteCheck(LcapMessage msg) {
     super.startVoteCheck();
 
-    if (prepareVoteCheck(msg)) {
+    if (shouldCheckVote(msg)) {
       Vote vote = new Vote(msg, false);
 
       long dur = msg.getDuration();

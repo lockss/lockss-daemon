@@ -89,9 +89,30 @@ public class PollTally {
    */
   public boolean didWinPoll() {
     if(!poll.isErrorState()) {
-      return (numAgree > numDisagree) && (wtAgree >= wtDisagree);
+      if(isWithinMargin()) {
+        return (numAgree > numDisagree) && (wtAgree >= wtDisagree);
+      }
     }
     return false;
+  }
+
+  public boolean isWithinMargin() {
+    double num_votes = numAgree + numDisagree;
+    double req_margin = poll.getMargin();
+    double act_margin;
+
+    if (numAgree > numDisagree) {
+      act_margin = (double) numAgree / num_votes;
+    }
+    else {
+      act_margin = (double) numDisagree / num_votes;
+    }
+    if (act_margin < req_margin) {
+      log.warning("Poll results too close.  Required vote margin is " +
+                req_margin + ". This poll's margin is " + act_margin);
+      return false;
+    }
+    return true;
   }
 
   /**

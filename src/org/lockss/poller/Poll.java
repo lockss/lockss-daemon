@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.58 2003-03-26 23:39:39 claire Exp $
+* $Id: Poll.java,v 1.59 2003-03-27 01:13:22 claire Exp $
  */
 
 /*
@@ -66,7 +66,10 @@ public abstract class Poll implements Serializable {
       "poll.agreeVerify";
   static final String PARAM_DISAGREE_VERIFY = Configuration.PREFIX +
       "poll.disagreeVerify";
+  static final String PARAM_MARGIN = Configuration.PREFIX +
+      "poll.margin";
 
+  static final int DEFAULT_MARGIN = 60;
   static final int DEFAULT_AGREE_VERIFY = 20;
   static final int DEFAULT_DISAGREE_VERIFY = 90;
   static final String[] ERROR_STRINGS = {"Poll Complete","Hash Schedule Error",
@@ -89,7 +92,7 @@ public abstract class Poll implements Serializable {
 
   double m_agreeVer = 0;     // the max percentage of time we will verify
   double m_disagreeVer = 0;  // the max percentage of time we will verify
-
+  double m_margin = 0;    // the margin by which we must win or lose
   ArchivalUnit m_arcUnit; // the url as an archival unit
   CachedUrlSet m_urlSet;  // the cached url set retrieved from the archival unit
   PollSpec m_pollspec;
@@ -126,6 +129,10 @@ public abstract class Poll implements Serializable {
         DEFAULT_AGREE_VERIFY)) / 100;
     m_disagreeVer = ((double)Configuration.getIntParam(PARAM_DISAGREE_VERIFY,
         DEFAULT_DISAGREE_VERIFY)) / 100;
+
+    m_margin = ((double)Configuration.getIntParam(PARAM_MARGIN,
+        DEFAULT_MARGIN)) / 100;
+
     m_pollmanager = pm;
     idMgr = pm.getDaemon().getIdentityManager();
     m_msg = msg;
@@ -335,6 +342,35 @@ public abstract class Poll implements Serializable {
   }
 
   /**
+   * prepare to check a vote in a poll.  This should check any conditions that
+   *  might make running a vote check unneccessary.
+   * @param msg the message which is triggering the poll
+   * @return boolean true if the poll should run, false otherwise
+   */
+  boolean shouldCheckVote(LcapMessage msg) {
+    LcapIdentity voter = idMgr.findIdentity(msg.getOriginAddr());
+
+    // make sure we haven't already voted
+    if(m_tally.hasVoted(voter)) {
+      log.warning("Ignoring multiple vote from " + voter);
+    }
+
+    // make sure our vote will actually matter
+    if(m_tally.isLeadEnough())  {
+      log.info(m_key + " lead is enough");
+      return false;
+    }
+
+    // are we too busy
+    if(tooManyPending())  {
+      log.info(m_key + " too busy to count " + m_pendingVotes + " votes");
+      return false;
+    }
+
+    return true;
+  }
+
+  /**
    * start the hash required for a vote cast in this poll
    */
   void startVoteCheck() {
@@ -401,6 +437,10 @@ public abstract class Poll implements Serializable {
 
   public String getKey() {
     return m_key;
+  }
+
+  double getMargin() {
+    return m_margin;
   }
 
   /**

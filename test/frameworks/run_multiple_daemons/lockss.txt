@@ -56,6 +56,7 @@ org.lockss.poll.maxpolls=20
 org.lockss.poll.quorum=3
 org.lockss.poll.agreeVerify=0
 org.lockss.poll.disagreeVerify=0
+org.lockss.poll.margin=51
 org.lockss.poll.namepoll.deadline=300000
 org.lockss.poll.contentpoll.min=180000
 org.lockss.poll.contentpoll.max=300000
