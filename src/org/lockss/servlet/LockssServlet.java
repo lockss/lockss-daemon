@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.34 2004-01-21 08:28:04 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.35 2004-03-04 19:20:53 tlipkis Exp $
  */
 
 /*
@@ -109,6 +109,13 @@ public abstract class LockssServlet extends HttpServlet
   ServletDescr _myServletDescr = null;
   private String myName = null;
 
+
+  /** Marker for servlets whose class can't be found */
+  static class UnavailableServletMarker {
+  }
+  static Class UNAVAILABLE_SERVLET_MARKER = UnavailableServletMarker.class;
+
+
   // Servlet descriptor.
   static class ServletDescr {
     public Class cls;
@@ -134,11 +141,13 @@ public abstract class LockssServlet extends HttpServlet
 	   cls.getName().substring(cls.getName().lastIndexOf('.') + 1),
 	   flags);
     }
+
     public ServletDescr(Class cls, String heading) {
       this(cls, heading, 0);
     }
-    public ServletDescr(String className, String heading) {
-      this(classForName(className), heading);
+
+    public ServletDescr(String className, String heading, String name) {
+      this(classForName(className), heading, name, 0);
     }
 
     public ServletDescr(String className, String heading, int flags) {
@@ -149,7 +158,7 @@ public abstract class LockssServlet extends HttpServlet
       try {
 	return Class.forName(className);
       } catch (ClassNotFoundException e) {
-	return null;
+	return UnavailableServletMarker.class;
       }	
     }
     boolean isPerClient() {
@@ -219,7 +228,7 @@ public abstract class LockssServlet extends HttpServlet
   static {
     for (int i = 0; i < servletDescrs.length; i++) {
       ServletDescr d = servletDescrs[i];
-      if (d.cls != null) {
+      if (d.cls != null && d.cls != UNAVAILABLE_SERVLET_MARKER) {
 	servletToDescr.put(d.cls, d);
       }
     }
@@ -538,6 +547,7 @@ public abstract class LockssServlet extends HttpServlet
 
   protected boolean isServletInNav(ServletDescr d) {
     if (!isDebugUser() && d.isDebugOnly()) return false;
+    if (d.cls == UNAVAILABLE_SERVLET_MARKER) return false;
     return d.isInNavTable() && (!d.isPerClient() || isPerClient());
   }
 
