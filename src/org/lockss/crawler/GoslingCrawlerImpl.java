@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingCrawlerImpl.java,v 1.53 2004-01-09 23:24:49 eaalto Exp $
+ * $Id: GoslingCrawlerImpl.java,v 1.54 2004-01-10 00:53:57 troberts Exp $
  */
 
 /*
@@ -78,7 +78,7 @@ import org.lockss.daemon.*;
 import org.lockss.state.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.base.BaseUrlCacher;
+import org.lockss.plugin.base.*;
 
 /**
  * The crawler.
@@ -358,6 +358,16 @@ public class GoslingCrawlerImpl implements Crawler {
     } else {
       logger.info("Finished crawl of "+au);
     }
+
+    if (au instanceof BaseArchivalUnit) { 	 
+      BaseArchivalUnit bau = (BaseArchivalUnit)au; 	 
+      long cacheHits = bau.getCrawlSpecCacheHits();
+      long cacheMisses = bau.getCrawlSpecCacheMisses();
+      double per = ((float)cacheHits /
+		    ((float)cacheHits + (float)cacheMisses)); 	 
+      logger.info("Had "+cacheHits+" cache hits, with a percentage of "+per);
+    }
+
     return (crawlStatus.getCrawlError() == 0);
   }
 
@@ -424,10 +434,15 @@ public class GoslingCrawlerImpl implements Crawler {
     // don't cache if already cached, unless overwriting
     if (overWrite || !uc.getCachedUrl().hasContent()) {
       try {
-	cacheWithRetries(uc, type,
-			 Configuration.getIntParam(PARAM_RETRY_TIMES,
-						   DEFAULT_RETRY_TIMES));
-	numUrlsFetched++;
+	if (failedUrls.contains(uc.getUrl())) {
+	  //skip if it's already failed
+	  logger.debug3("Already failed to cache "+uc+". Not retrying.");
+	} else {
+	  cacheWithRetries(uc, type,
+			   Configuration.getIntParam(PARAM_RETRY_TIMES,
+						     DEFAULT_RETRY_TIMES));
+	  numUrlsFetched++;
+	}
       } catch (FileNotFoundException e) {
 	logger.warning(uc+" not found on publisher's site");
       } catch (IOException ioe) {
@@ -470,10 +485,6 @@ public class GoslingCrawlerImpl implements Crawler {
 
   private void cacheWithRetries(UrlCacher uc, int type, int maxRetries)
       throws IOException {
-    if (failedUrls.contains(uc.getUrl())) {
-      logger.debug3("Already failed to cache "+uc+". Not retrying.");
-      return;
-    }
     int numRetries = 0;
     while (true) {
       try {
