@@ -1,5 +1,5 @@
 /*
- * $Id: MockLcapStreamRouter.java,v 1.1.2.7 2004-11-24 21:33:22 dshr Exp $
+ * $Id: MockLcapStreamRouter.java,v 1.1.2.8 2004-11-25 00:34:56 dshr Exp $
  */
 
 /*
@@ -55,6 +55,7 @@ public class MockLcapStreamRouter extends LcapStreamRouter
   MockLcapStreamRouter partner = null;
   FifoQueue myReceiveQueue = null;
   FifoQueue mySendQueue = null;
+  byte[] myKey = null;
   static Logger log = Logger.getLogger("MockLcapStreamRouter");
 
   public MockLcapStreamRouter(FifoQueue recv, FifoQueue send) {
@@ -95,6 +96,7 @@ public class MockLcapStreamRouter extends LcapStreamRouter
 	// No action intended
       }
       if (msg != null && !msg.isNoOp()) {
+	setKey(msg);
 	log.debug("Pulled " + msg + " from receive Q");
 	runHandlers(msg);
       }
@@ -119,6 +121,7 @@ public class MockLcapStreamRouter extends LcapStreamRouter
    */
   public void sendTo(V3LcapMessage msg, ArchivalUnit au, PeerIdentity id)
     throws IOException {
+    setKey(msg);
     log.debug("mock sendTo(" + msg + ")");
     if (mySendQueue != null) {
       mySendQueue.put(msg);
@@ -165,4 +168,15 @@ public class MockLcapStreamRouter extends LcapStreamRouter
   public boolean sendQueueEmpty() {
     return (mySendQueue.isEmpty());
   }
+
+  private void setKey(V3LcapMessage msg) {
+    if (myKey != null) {
+      msg.setKey(myKey);
+    }
+  }
+
+  public void setKey(byte[] key) {
+    myKey = key;
+  }
+
 }

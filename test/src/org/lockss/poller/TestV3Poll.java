@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poll.java,v 1.1.2.16 2004-11-22 22:27:21 dshr Exp $
+ * $Id: TestV3Poll.java,v 1.1.2.17 2004-11-25 00:34:56 dshr Exp $
  */
 
 /*
@@ -248,6 +248,7 @@ public class TestV3Poll extends LockssTestCase {
     byte[] challenge = pollmanager.makeVerifier(duration);
     pollSpec = spec;
     // Make the voter
+    ((MockLcapStreamRouter)voterRouter).setKey(challenge);
     theDaemon.setStreamRouterManager(voterRouter);
     p = pollmanager.makePoll(pollSpec,
 			     duration,
@@ -260,6 +261,8 @@ public class TestV3Poll extends LockssTestCase {
     voter = (V3Voter) p;
     log.debug3("initTestPoll: voter " + p.toString());
     // Make the poller
+    challenge = pollmanager.makeVerifier(duration);
+    ((MockLcapStreamRouter)pollerRouter).setKey(challenge);
     theDaemon.setStreamRouterManager(pollerRouter);
     p = pollmanager.makePoll(pollSpec,
 			     duration,
