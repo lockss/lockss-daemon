@@ -1,5 +1,5 @@
 /*
- * $Id: HttpResultMap.java,v 1.1 2004-02-23 09:21:22 tlipkis Exp $
+ * $Id: HttpResultMap.java,v 1.2 2004-03-07 08:40:02 tlipkis Exp $
  */
 
 /*
@@ -105,7 +105,7 @@ public class HttpResultMap implements CacheResultMap {
     try {
       int code = connection.getResponseCode();
       String msg = connection.getResponseMessage();
-      return mapException(connection, code, "response " + code + ": " + msg);
+      return mapException(connection, code, msg);
     }
     catch (Exception ex) {
       return getHostException(ex);
@@ -122,7 +122,15 @@ public class HttpResultMap implements CacheResultMap {
     if (exceptionClass == CacheSuccess.MARKER) {
       return null;
     }
-
+    if (exceptionClass == null) {
+      if (message != null) {
+	return new CacheException.UnknownCodeException(
+          "Unknown result code: " + resultCode + ": " + message);
+      } else {
+	return new CacheException.UnknownCodeException(
+          "Unknown result code: " + resultCode);
+      }
+    }
     try {
       Object exception = exceptionClass.newInstance();
       CacheException cacheException;
@@ -133,7 +141,9 @@ public class HttpResultMap implements CacheResultMap {
       }
       else {
         cacheException = (CacheException)exception;
-        cacheException.initMessage(message);
+        cacheException.initMessage((message != null)
+				   ? (resultCode + " " + message)
+				   : Integer.toString(resultCode));
       }
       return cacheException;
     }
