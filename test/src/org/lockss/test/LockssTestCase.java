@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.53 2004-07-12 06:28:05 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.53.2.1 2004-07-21 07:03:09 tlipkis Exp $
  */
 
 /*
@@ -783,7 +783,7 @@ public class LockssTestCase extends TestCase {
   }
 
   // tk do a better job of printing collections
-  static private void failNotEquals(String message,
+  static protected void failNotEquals(String message,
 				    Object expected, Object actual) {
     String formatted= "";
     if (message != null)
@@ -791,7 +791,7 @@ public class LockssTestCase extends TestCase {
     fail(formatted+"expected:<"+expected+"> but was:<"+actual+">");
   }
 
-  static private void failNotEquals(String message,
+  static protected void failNotEquals(String message,
 				    int[] expected, int[] actual) {
     String formatted= "";
     if (message != null)
