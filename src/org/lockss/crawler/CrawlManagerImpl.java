@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.27 2003-04-27 08:51:53 tal Exp $
+ * $Id: CrawlManagerImpl.java,v 1.28 2003-05-02 18:12:42 troberts Exp $
  */
 
 /*
@@ -63,6 +63,12 @@ public class CrawlManagerImpl extends BaseLockssManager
       Configuration.PREFIX + "crawler.repair.expiration";
 
   /**
+   * The priority that the crawl thread should run at
+   */
+  public static final String PARAM_PRIORITY =
+      Configuration.PREFIX + "crawler.priority";
+
+  /**
    * ToDo:
    * 1)make a crawl to the AU to decide if I should do a new content crawl
    * 2)handle background crawls
@@ -82,6 +88,7 @@ public class CrawlManagerImpl extends BaseLockssManager
 
   private long contentCrawlExpiration;
   private long repairCrawlExpiration;
+  private int crawlPriority = -1;
   private static Logger logger = Logger.getLogger("CrawlManagerImpl");
 
 
@@ -112,11 +119,14 @@ public class CrawlManagerImpl extends BaseLockssManager
 
   protected void setConfig(Configuration newConfig, Configuration prevConfig,
 			   Set changedKeys) {
-    contentCrawlExpiration = newConfig.getTimeInterval(
-        PARAM_NEW_CONTENT_CRAWL_EXPIRATION,
-        DEFAULT_NEW_CONTENT_CRAWL_EXPIRATION);
-    repairCrawlExpiration = newConfig.getTimeInterval(
-        PARAM_REPAIR_CRAWL_EXPIRATION, DEFAULT_REPAIR_CRAWL_EXPIRATION);
+    contentCrawlExpiration = 
+      newConfig.getTimeInterval(PARAM_NEW_CONTENT_CRAWL_EXPIRATION,
+				DEFAULT_NEW_CONTENT_CRAWL_EXPIRATION);
+    repairCrawlExpiration = 
+      newConfig.getTimeInterval(PARAM_REPAIR_CRAWL_EXPIRATION, 
+				DEFAULT_REPAIR_CRAWL_EXPIRATION);
+
+    crawlPriority = newConfig.getInt(PARAM_PRIORITY, Thread.NORM_PRIORITY-1);
   }
 
   /**
@@ -252,6 +262,13 @@ public class CrawlManagerImpl extends BaseLockssManager
     }
 
     public void run() {
+      if (crawlPriority > 0) {
+	logger.debug("Setting crawl thread priority to "+crawlPriority);
+	Thread.currentThread().setPriority(crawlPriority);
+      } else {
+	logger.warning("Crawl thread priority less than zero, not set: "
+		       +crawlPriority);
+      }
       boolean crawlSucessful = crawler.doCrawl(deadline);
       activeCrawls.remove(au);
 
