@@ -1,5 +1,5 @@
 /*
- * $Id: LcapComm.java,v 1.47 2004-06-01 08:35:06 tlipkis Exp $
+ * $Id: LcapComm.java,v 1.48 2004-06-28 22:25:06 tlipkis Exp $
  */
 
 /*
@@ -490,6 +490,7 @@ public class LcapComm extends BaseLockssManager {
 	      timeout.expireIn(sleep);
 	    }
 	  }
+	  if (log.isDebug3()) log.debug3("socketInQ.get(" + timeout + ")");
 	  Object qObj = socketInQ.get(timeout);
 	  if (qObj != null) {
 	    if (qObj instanceof LockssReceivedDatagram) {
