@@ -1,5 +1,5 @@
 /*
- * $Id: FuncHashService.java,v 1.1 2003-11-11 20:34:38 tlipkis Exp $
+ * $Id: FuncHashService.java,v 1.2 2003-11-12 21:10:08 tlipkis Exp $
  */
 
 /*
@@ -57,7 +57,7 @@ public class FuncHashService extends LockssTestCase {
   protected MockLockssDaemon theDaemon;
 
   private HashService svc;
-  MockCachedUrlSet cus;
+  MockCUS cus;
   static final String hashAlgorithm = "SHA-1";
   static MessageDigest dig;
   List work;
@@ -76,7 +76,7 @@ public class FuncHashService extends LockssTestCase {
     if (dig == null) {
       dig = MessageDigest.getInstance(hashAlgorithm);
     }
-    cus = new MockCachedUrlSet(null, null);
+    cus = new MockCUS();
     work = new ArrayList();
 //     TimeBase.setSimulated();
   }
@@ -132,14 +132,25 @@ public class FuncHashService extends LockssTestCase {
     assertTrue(svc.canHashBeScheduledBefore(10000, Deadline.in(20000)));
   }
 
-  public void testOne() throws Exception {
+  public void testOneStepWork() throws Exception {
     hashContent("1", 300, 100, 500, hashCB());
     waitUntilDone();
     assertEquals(ListUtil.list(new Work("1", stepBytes(), 1000),
 			       new Work("1", stepBytes(), 1000),
 			       new Work("1", stepBytes(), 1000)),
 		 work);
+  }
 
+  public void testActualCallbackValues() throws Exception {
+    TimeBase.setSimulated();
+    hashContent("1", 300, -100, 500, hashCB());
+    waitUntilDone();
+    assertEquals(ListUtil.list(new Work(0, "1", stepBytes(), 1000),
+			       new Work(100, "1", stepBytes(), 1000),
+			       new Work(200, "1", stepBytes(), 1000)),
+		 work);
+    assertEquals(300, cus.actualHashDuration);
+    assertNull(cus.actualHashException);
   }
 
   int stepBytes() {
@@ -157,16 +168,19 @@ public class FuncHashService extends LockssTestCase {
     Work(Deadline when, String cookie,
 	 int numBytes, int eachStepBytes) {
       this.when = when;
+      log.debug("when: " + when);
       this.cookie = cookie;
       this.numBytes = numBytes;
       this.eachStepBytes = eachStepBytes;
     }
 
+    Work(long when, String cookie,
+	 int numBytes, int eachStepBytes) {
+      this(Deadline.at(when), cookie, numBytes, eachStepBytes);
+    }
+
     Work(String cookie, int numBytes, int eachStepBytes) {
-      this.when = Deadline.EXPIRED;
-      this.cookie = cookie;
-      this.numBytes = numBytes;
-      this.eachStepBytes = eachStepBytes;
+      this(Deadline.EXPIRED, cookie, numBytes, eachStepBytes);
     }
 
     public boolean equals(Object obj) {
@@ -190,6 +204,20 @@ public class FuncHashService extends LockssTestCase {
     work.add(new Work(when, cookie, numBytes, eachStepBytes));
   }
 
+
+  public class MockCUS extends MockCachedUrlSet {
+    long actualHashDuration;
+    Exception actualHashException;
+
+    public MockCUS() {
+      super(null, null);
+    }
+
+    public void storeActualHashDuration(long elapsed, Exception err) {
+      actualHashDuration = elapsed;
+      actualHashException = err;
+    }
+  }
 
   public class MockCUSH implements CachedUrlSetHasher {
     int eachStepTime;
