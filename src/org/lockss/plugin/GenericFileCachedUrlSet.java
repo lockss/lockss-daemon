@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrlSet.java,v 1.39 2003-04-30 22:36:42 aalto Exp $
+ * $Id: GenericFileCachedUrlSet.java,v 1.40 2003-05-01 16:47:04 tal Exp $
  */
 
 /*
@@ -141,23 +141,30 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
       return;
     }
     // don't adjust for exceptions, except time-out exceptions
-    long lastDuration =
+    long currentEstimate =
       nodeManager.getNodeState(this).getAverageHashDuration();
     long newEst;
 
     lastException = err;
     if (err!=null) {
       if (err instanceof HashService.Timeout) {
-        // timed out - Guess 50% longer next time
-	newEst = (long)(Math.max(elapsed, lastDuration) * TIMEOUT_INCREASE);
+        // timed out - guess 50% longer next time
+	if (currentEstimate > elapsed) {
+	  // But if the current estimate is longer than this one took, we
+	  // must have already adjusted it after this one was scheduled.
+	  // Don't adjust it again, to avoid it becoming huge due to a series
+	  // of timeouts
+	  return;
+	}
+	newEst = (long)(elapsed * TIMEOUT_INCREASE);
       } else {
 	// other error - don't update estimate
 	return;
       }
     } else {
       //average with current estimate to minimize effect of extreme results
-      if (lastDuration > 0) {
-        newEst = (lastDuration + elapsed) / 2;
+      if (currentEstimate > 0) {
+        newEst = (currentEstimate + elapsed) / 2;
       }
       else {
         newEst = elapsed;
