@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManager.java,v 1.4 2003-02-06 01:00:42 troberts Exp $
+ * $Id: CrawlManager.java,v 1.5 2003-02-10 23:45:45 troberts Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.crawler;
 import java.net.URL;
 import org.lockss.daemon.*;
+import org.lockss.state.*;
 
 /**
  * This is the interface for the object which will sit between the crawler
@@ -62,7 +63,7 @@ public interface CrawlManager {
    * @return true if the tree walk can begin now, false otherwise
    */
 
-  public boolean canTreeWalkStart(ArchivalUnit au, 
+  public boolean canTreeWalkStart(ArchivalUnit au, AuState aus,
 				  CrawlManager.Callback cb, Object cookie);
 
   public interface Callback {
