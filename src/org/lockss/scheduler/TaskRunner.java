@@ -1,5 +1,5 @@
 /*
- * $Id: TaskRunner.java,v 1.16 2004-04-29 10:12:25 tlipkis Exp $
+ * $Id: TaskRunner.java,v 1.17 2004-05-04 22:19:24 tlipkis Exp $
  */
 
 /*
@@ -143,7 +143,7 @@ class TaskRunner implements Serializable {
       log.debug("Scheduled task: " + task);
       return true;
     } else {
-      log.debug("Can't schedule task: " + task);
+      log.debug2("Can't schedule task: " + task);
       addStats(task, STAT_REFUSED);
       return false;
     }
