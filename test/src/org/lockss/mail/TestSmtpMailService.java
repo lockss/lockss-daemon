@@ -1,5 +1,5 @@
 /*
- * $Id: TestSmtpMailService.java,v 1.1 2004-07-12 06:11:23 tlipkis Exp $
+ * $Id: TestSmtpMailService.java,v 1.2 2004-07-19 08:28:44 tlipkis Exp $
  */
 
 /*
@@ -85,7 +85,7 @@ public class TestSmtpMailService extends LockssTestCase {
 
   public void testDequeue() throws IOException, InterruptedException {
     svc.setRunThread(true);
-    SimpleBinarySemaphore sem = client.getSem();
+    SimpleBinarySemaphore sem = client.getSentSem();
     svc.sendMail("fff", "ttt", "bbb");
     sem.take(TIMEOUT_SHOULDNT);
     assertEquals("fff", client.sender);
@@ -100,26 +100,18 @@ public class TestSmtpMailService extends LockssTestCase {
 				  "10");
     TimeBase.setSimulated(100);
     svc.setRunThread(true);
-    SimpleBinarySemaphore sem = client.getSem();
+    SimpleBinarySemaphore sem = client.getSentSem();
     svc.sendMail("m1", "t", "b");
     svc.sendMail("m2", "t", "b");
     svc.sendMail("m3", "t", "b");
     svc.sendMail("m4", "t", "b");
-    while (client.senders.size() < 3) {
-      if (! sem.take(TIMEOUT_SHOULDNT)) {
-	fail("only " + client.senders.size() + " messages arrived");
-      }
-    }
+    waitNSent(sem, 3);
     sem.take(100);
     if (client.senders.size() > 3) {
       fail(client.senders.size() + " messages arrived, only 3 should have");
     }
     TimeBase.step(10);
-    while (client.senders.size() < 4) {
-      if (! sem.take(TIMEOUT_SHOULDNT)) {
-	fail("only " + client.senders.size() + " messages arrived");
-      }
-    }
+    waitNSent(sem, 4);
   }
 
   public void testRetry() throws IOException, InterruptedException {
@@ -127,13 +119,13 @@ public class TestSmtpMailService extends LockssTestCase {
 				  "101");
     TimeBase.setSimulated(100);
     svc.setRunThread(true);
-    SimpleBinarySemaphore sem = client.getSem();
-    client.setResult(SmtpClient.RESULT_RETRY);
+    SimpleBinarySemaphore sem = client.getSentSem();
+    int[] results = {SmtpClient.RESULT_RETRY, SmtpClient.RESULT_OK};
+    client.setResults(results);
     assertEquals(0, client.senders.size());
     svc.sendMail("m1", "t", "b");
     assertTrue("message wasn't sent", sem.take(TIMEOUT_SHOULDNT));
     assertEquals(1, client.senders.size());
-    client.setResult(SmtpClient.RESULT_OK);
     svc.sendMail("m2", "t", "b");
     assertTrue("message wasn't sent", sem.take(TIMEOUT_SHOULDNT));
     assertEquals(2, client.senders.size());
@@ -151,7 +143,7 @@ public class TestSmtpMailService extends LockssTestCase {
 				  "2");
     TimeBase.setSimulated(100);
     Queue q = svc.getQueue();
-    SimpleBinarySemaphore sem = client.getSem();
+    SimpleBinarySemaphore sem = client.getSentSem();
     assertTrue(svc.sendMail("m1", "t", "b"));
     assertTrue(svc.sendMail("m2", "t", "b"));
     assertEquals(2, q.size());
@@ -160,12 +152,22 @@ public class TestSmtpMailService extends LockssTestCase {
     // can't try to add another to queue until certain at least one of the
     // previous ones has been removed (which happens after send semaphore
     // is posted), so must wait until *second* is sent
-    while (client.senders.size() < 2) {
+    waitNSent(sem, 2);
+    assertTrue(svc.sendMail("m4", "t", "b"));
+  }
+
+  void waitNSent(SimpleBinarySemaphore sem, int n) {
+    waitNSent(sem, n, null);
+  }
+
+  void waitNSent(SimpleBinarySemaphore sem, int n,
+		 SimpleBinarySemaphore postSem) {
+    while (client.senders.size() < n) {
+      if (postSem != null) postSem.give();
       if (! sem.take(TIMEOUT_SHOULDNT)) {
 	fail("only " + client.senders.size() + " messages arrived");
       }
     }
-    assertTrue(svc.sendMail("m4", "t", "b"));
   }
 
   static class MockSmtpMailService extends SmtpMailService {
@@ -208,35 +210,53 @@ public class TestSmtpMailService extends LockssTestCase {
     volatile String sender;
     volatile String recipient;
     volatile String body;
-    volatile int result = SmtpClient.RESULT_OK;
-    SimpleBinarySemaphore sem;
+    int[] results;
+    int resIx;
+    SimpleBinarySemaphore sentSem;
+    SimpleBinarySemaphore waitSem;
     List senders = new ArrayList();
+    RuntimeException e;
 
     MockSmtpClient() throws IOException {
       super();
     }
 
     public int sendMsg(String sender, String recipient, String body) {
+      if (e != null) throw e;
+      if (waitSem != null) {
+	if (!waitSem.take()) {
+	  throw new RuntimeException("interrupted");
+	}
+      }
       senders.add(sender);
       this.sender = sender;
       this.recipient = recipient;
       this.body = body;
-      // must grab intended result *before* posting semaphore, as main may
-      // then go on and change result for next one
-      int res = result;
-
-      if (sem != null) sem.give();
-      return res;
+      if (sentSem != null) sentSem.give();
+      if (results != null && resIx < results.length) {
+	return results[resIx++];
+      }
+      return SmtpClient.RESULT_OK;
     }
 
-    SimpleBinarySemaphore getSem() {
-      sem = new SimpleBinarySemaphore();
-      return sem;
+    SimpleBinarySemaphore getSentSem() {
+      sentSem = new SimpleBinarySemaphore();
+      return sentSem;
     }
 
-    void setResult(int result) {
-      this.result = result;
-    }      
+    SimpleBinarySemaphore getWaitSem() {
+      waitSem = new SimpleBinarySemaphore();
+      return waitSem;
+    }
+
+    void setException(RuntimeException e) {
+      this.e = e;
+    }
+
+    void setResults(int[] results) {
+      this.results = results;
+      resIx = 0;
+    }
 
   }
 }
