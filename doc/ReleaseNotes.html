@@ -47,13 +47,16 @@
     <h3> Future Releases</h3>
     <h4>Daemon 1.4 (freeze early September, release late September)</h4>
     <ul>
-      <li>fixes for AU scaling problems seen around 60 AUs
       <li>further support for downloadable plug-ins</li>
-      <li> URL canonicalization (for IOP and HighWire)</li>
-      <li> define AU by issue ranges</li>
-      <li> refactoring of plug-in code</li>
-      <li> LockssApp pulled out of LockssDaemon</li>
-      <li> minor improvements to UI for adding many AUs</li>
+      <li>URL canonicalization (for IOP and HighWire)</li>
+      <li>define AU by issue ranges</li>
+      <li>refactoring of plug-in code</li>
+      <li>LockssApp pulled out of LockssDaemon</li>
+      <li>Crawler will not follow cross-host redirects without checking for permission statement on new host</li>
+      <li>Crawl permission check moved out of plug-in framework, into crawler</li>
+      <li>Improvements to handling of polls in which all caches have damage</li>
+      <li>removed need for org.lockss.plugin.xmlPlugins configuration setting</li>
+      <li>list of agreeing caches exported to UI</li>
     </ul>
 
     <h4>Daemon 1.5 (freeze mid October, release early November)</h4>
