@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlTagFilter.java,v 1.4 2003-05-29 00:55:26 troberts Exp $
+ * $Id: HtmlTagFilter.java,v 1.5 2003-06-02 23:48:08 troberts Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.crawler;
 import java.io.*;
 import java.util.*;
+import org.apache.commons.collections.*;
 import org.lockss.util.*;
 
 /**
@@ -49,7 +50,8 @@ public class HtmlTagFilter extends Reader {
 
   Reader reader = null;
   TagPair pair = null;
-  List charBuffer = null;
+//   List charBuffer = null;
+  Buffer charBuffer = null;
   int bufferCapacity = 0;
   boolean streamDone = false;
   boolean withinIgnoredTag = false;
@@ -62,7 +64,6 @@ public class HtmlTagFilter extends Reader {
       throw new IllegalArgumentException("Called with a null reader");
     }
     this.reader = reader;
-    charBuffer = new LinkedList();
   }
 
   /**
@@ -78,6 +79,7 @@ public class HtmlTagFilter extends Reader {
     }
     this.pair = pair;
     bufferCapacity = pair.getMaxTagLength();
+    charBuffer = new BoundedFifoBuffer(bufferCapacity);
   }
   /**
    * Create a filter with multiple tags.  When filtering with multiple tags
@@ -100,6 +102,7 @@ public class HtmlTagFilter extends Reader {
     }
     this.pair = (TagPair) pairs.get(pairs.size()-1);
     bufferCapacity = pair.getMaxTagLength();
+    charBuffer = new BoundedFifoBuffer(bufferCapacity);
     if (pairs.size() >= 2) {
       this.reader = new HtmlTagFilter(reader, 
 				      pairs.subList(0,pairs.size()-1));
@@ -131,8 +134,10 @@ public class HtmlTagFilter extends Reader {
       logger.debug3("Read Returning -1, spot b");
       return -1;
     }
-    char returnChar = ((Character)charBuffer.remove(0)).charValue();
-    logger.debug3("Read returning "+returnChar);
+    char returnChar = ((Character)charBuffer.remove()).charValue();
+    if (logger.isDebug3()) {
+      logger.debug3("Read returning "+returnChar);
+    }
     return returnChar;
   }
 
@@ -144,46 +149,49 @@ public class HtmlTagFilter extends Reader {
    * @return false if there were not enough chars on the reader to do this
    * @throws IOException if the reader it's constructed with throws
    */
-  private boolean addCharToBuffer(List charBuffer,
-				  Reader reader)
+  private boolean addCharToBuffer(Buffer charBuffer, Reader reader)
       throws IOException {
     int curKar;
     if ((curKar = reader.read()) == -1) {
       streamDone = true;
       return false;
     } else {
-      logger.debug("Adding "+(char)curKar+" to charBuffer");
+      if (logger.isDebug3()) {
+	logger.debug3("Adding "+(char)curKar+" to charBuffer");
+      }
       charBuffer.add(new Character((char)curKar));
     }
     return true;
   }
 
 
-  private boolean startsWithTag(List charBuffer, String tag) {
+  private boolean startsWithTag(Buffer charBuffer, String tag) {
     //XXX reimplement with DNA searching algorithm
 
-    logger.debug("checking if "+charBuffer+" starts with "+tag);
-
+    if (logger.isDebug3()) {
+      logger.debug3("checking if "+charBuffer+" starts with "+tag);
+    }
     //less common case than first char not match, but we have to check for 
     //size before that anyway
     if (charBuffer.size() < tag.length()) {
       return false;
     }
-    char firstChar = ((Character)charBuffer.get(0)).charValue();
+    char firstChar = ((Character)charBuffer.get()).charValue();
     if (!charEqualsIgnoreCase(firstChar, tag.charAt(0))) {
       return false;
     }
-    Iterator it = charBuffer.listIterator();
+    //XXX don't use an iterator, slow
+    Iterator it = charBuffer.iterator();
     int charPos = 0;
     while (it.hasNext() && charPos < tag.length()) {
       char curChar = ((Character)it.next()).charValue();
       if (!charEqualsIgnoreCase(curChar, tag.charAt(charPos))) {
-	logger.debug("It doesn't");
+	logger.debug3("It doesn't");
 	return false;
       }
       charPos++;
     }
-    logger.debug("It does");
+    logger.debug3("It does");
     return true;
   }
 
@@ -192,13 +200,17 @@ public class HtmlTagFilter extends Reader {
   }
 
 
-  private void readThroughTag(List charBuffer, Reader reader,
+  private void readThroughTag(Buffer charBuffer, Reader reader,
 			      TagPair pair)
   throws IOException {
     int tagNesting = 0;
-    logger.debug("reading through tag pair "+pair+" in "+charBuffer);
+    if (logger.isDebug3()) {
+      logger.debug3("reading through tag pair "+pair+" in "+charBuffer);
+    }
     do {
-      logger.debug("tagNesting: "+tagNesting);
+      if (logger.isDebug3()) {
+	logger.debug3("tagNesting: "+tagNesting);
+      }
       if (startsWithTag(charBuffer, pair.getStart())) {
 	if (!removeAndReplaceChars(charBuffer,
 				   reader, pair.getStart().length())) {
@@ -220,16 +232,18 @@ public class HtmlTagFilter extends Reader {
     } while (tagNesting > 0);
   }
 
-  private boolean removeAndReplaceChars(List charBuffer,
+  private boolean removeAndReplaceChars(Buffer charBuffer,
 					Reader reader, int numChars)
   throws IOException {
     for (int ix=0; ix<numChars; ix++) {
-      logger.debug("One loop: "+charBuffer);
+      if (logger.isDebug3()) {
+	logger.debug3("One loop: "+charBuffer);
+      }
       if (charBuffer.size() == 0) {
-	logger.debug("removeAndReplaceChars ran out of chars, returning");
+	logger.debug3("removeAndReplaceChars ran out of chars, returning");
 	return false;
       }
-      charBuffer.remove(0);
+      charBuffer.remove();
       addCharToBuffer(charBuffer, reader);
     }
     return true;
@@ -261,7 +275,9 @@ public class HtmlTagFilter extends Reader {
       outputBuf[size] = (char)curKar;
       size++;
     }
-    logger.debug3("Read array returning "+size);
+    if (logger.isDebug3()) {
+      logger.debug3("Read array returning "+size);
+    }
     return size == 0 ? -1 : size;
   }
   
