@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrlSet.java,v 1.13 2003-01-16 01:44:45 aalto Exp $
+ * $Id: MockCachedUrlSet.java,v 1.14 2003-01-23 01:27:00 aalto Exp $
  */
 
 /*
@@ -53,6 +53,8 @@ public class MockCachedUrlSet implements CachedUrlSet {
   private Vector urls = null;
   private Iterator flatIterator = null;
   private Iterator leafIterator = null;
+  private Collection flatSource = null;
+  private Collection leafSource = null;
 
   private Hashtable ucHash = new Hashtable();
   private Hashtable cuHash = new Hashtable();
@@ -86,6 +88,9 @@ public class MockCachedUrlSet implements CachedUrlSet {
   }
 
   public Iterator flatSetIterator() {
+    if (flatSource!=null) {
+      return flatSource.iterator();
+    }
     return flatIterator;
   }
 
@@ -93,17 +98,25 @@ public class MockCachedUrlSet implements CachedUrlSet {
     flatIterator = it;
   }
 
-  public Iterator treeSetIterator() {
-    return null;
+  public void setFlatItSource(Collection col) {
+    flatSource = col;
   }
 
   public Iterator leafIterator() {
+    if (leafSource!=null) {
+      return leafSource.iterator();
+    }
     return leafIterator;
   }
 
   public void setLeafIterator(Iterator it) {
     leafIterator = it;
   }
+
+  public void setLeafItSource(Collection col) {
+    leafSource = col;
+  }
+
 
   // Methods used by the poller
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeStateImpl.java,v 1.1 2002-12-18 00:11:59 aalto Exp $
+ * $Id: TestNodeStateImpl.java,v 1.2 2003-01-23 01:27:00 aalto Exp $
  */
 
 /*
@@ -35,8 +35,9 @@ package org.lockss.state;
 
 import java.util.*;
 import org.lockss.daemon.CachedUrlSet;
-import org.lockss.test.LockssTestCase;
+import org.lockss.test.*;
 import org.lockss.util.CollectionUtil;
+import java.io.*;
 
 public class TestNodeStateImpl extends LockssTestCase {
   private NodeStateImpl state;
@@ -47,11 +48,20 @@ public class TestNodeStateImpl extends LockssTestCase {
   }
 
   public void setUp() throws Exception {
+    super.setUp();
+    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    TestHistoryRepositoryImpl.configHistoryParams(tempDirPath);
+    MockArchivalUnit mau = new MockArchivalUnit();
+    MockCachedUrlSetSpec mspec =
+        new MockCachedUrlSetSpec("http://www.example.com", null);
+    MockCachedUrlSet mcus = new MockCachedUrlSet(mau, mspec);
+
     polls = new ArrayList(3);
     polls.add(new PollState(1, "none1", 1, 0, null));
     polls.add(new PollState(2, "none2", 1, 0, null));
     polls.add(new PollState(3, "none3", 1, 0, null));
-    state = new NodeStateImpl(null, null, polls, null);
+    state = new NodeStateImpl(mcus, null, polls,
+                              new HistoryRepositoryImpl(tempDirPath));
   }
 
   public void testActivePollImmutability() {
@@ -63,7 +73,50 @@ public class TestNodeStateImpl extends LockssTestCase {
   }
 
   public void testGetPollHistories() {
+    Iterator pollIt = state.getPollHistories();
+    assertTrue(!pollIt.hasNext());
 
+    PollHistory history = new PollHistory(1, "test", 0, 0, 0, null);
+    state.pollHistories = new ArrayList(1);
+    state.pollHistories.add(history);
+    pollIt = state.getPollHistories();
+    assertTrue(pollIt.hasNext());
+    history = (PollHistory)pollIt.next();
+    assertEquals(1, history.type);
+    assertEquals("test", history.regExp);
+    assertTrue(!pollIt.hasNext());
+
+    history = new PollHistory(2, "test2", 0, 0, 0, null);
+    state.pollHistories.add(history);
+    pollIt = state.getPollHistories();
+    assertTrue(pollIt.hasNext());
+    pollIt.next();
+    assertTrue(pollIt.hasNext());
+    history = (PollHistory)pollIt.next();
+    assertEquals(2, history.type);
+    assertEquals("test2", history.regExp);
+    assertTrue(!pollIt.hasNext());
+  }
+
+  public void testCloseActivePoll() {
+    Iterator pollIt = state.getPollHistories();
+    assertTrue(!pollIt.hasNext());
+
+    PollHistory history = new PollHistory(1, "none1", 0, 0, 0, null);
+    state.closeActivePoll(history);
+
+    pollIt = state.getActivePolls();
+    while (pollIt.hasNext()) {
+      PollState pollState = (PollState)pollIt.next();
+      assertTrue(!pollState.equals(history));
+    }
+
+    pollIt = state.getPollHistories();
+    assertTrue(pollIt.hasNext());
+    history = (PollHistory)pollIt.next();
+    assertEquals(1, history.type);
+    assertEquals("none1", history.regExp);
+    assertTrue(!pollIt.hasNext());
   }
 
   public void testGetActivePolls() {
@@ -81,10 +134,6 @@ public class TestNodeStateImpl extends LockssTestCase {
 
     Iterator pollIter = state.getActivePolls();
     assertTrue(CollectionUtil.isIsomorphic(expectedIter, pollIter));
-  }
-
-  public void testCloseActivePoll() {
-
   }
 
   public static void main(String[] argv) {

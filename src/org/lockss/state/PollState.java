@@ -1,5 +1,5 @@
 /*
- * $Id: PollState.java,v 1.7 2003-01-09 01:56:26 aalto Exp $
+ * $Id: PollState.java,v 1.8 2003-01-23 01:27:00 aalto Exp $
  */
 
 /*
@@ -121,6 +121,10 @@ public class PollState implements Comparable {
     } else {
       throw new UnsupportedOperationException("Comparing a PollState to a non-PollState object");
     }
+  }
+
+  public boolean equals(Object obj) {
+    return compareTo(obj)==0;
   }
 
 }

@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.38 2003-01-22 06:11:41 claire Exp $
+* $Id: Poll.java,v 1.39 2003-01-23 01:27:00 aalto Exp $
  */
 
 /*
@@ -368,6 +368,14 @@ public abstract class Poll implements Serializable {
    */
   CachedUrlSet getCachedUrlSet() {
     return m_urlSet;
+  }
+
+  /**
+   * get the VoteTally for this Poll
+   * @return VoteTally for this poll
+   */
+  public VoteTally getVoteTally() {
+    return m_tally;
   }
 
 

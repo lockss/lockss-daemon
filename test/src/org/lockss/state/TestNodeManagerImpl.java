@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.2 2003-01-16 01:44:45 aalto Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.3 2003-01-23 01:27:00 aalto Exp $
  */
 
 /*
@@ -32,21 +32,24 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.state;
 
-import org.lockss.poller.Poll;
-import org.lockss.daemon.*;
-import org.lockss.test.*;
-import java.util.*;
-import org.lockss.util.TimeBase;
-import org.lockss.util.ListUtil;
 import java.io.*;
+import java.net.*;
+import java.util.*;
+import org.lockss.test.*;
+import org.lockss.util.*;
+import org.lockss.daemon.*;
 import org.lockss.plugin.Plugin;
-import org.lockss.util.Deadline;
+import org.lockss.poller.*;
+import org.lockss.protocol.*;
 
 public class TestNodeManagerImpl extends LockssTestCase {
   public static final String TEST_URL = "http://www.example.com";
   private MockArchivalUnit mau = null;
   private NodeManagerImpl nodeManager;
   private List urlList = null;
+  private Poll namePoll = null;
+  private Poll contentPoll = null;
+  private Random random = new Random();
 
   public TestNodeManagerImpl(String msg) {
     super(msg);
@@ -62,6 +65,19 @@ public class TestNodeManagerImpl extends LockssTestCase {
     Plugin.registerArchivalUnit(mau);
 
     nodeManager = new NodeManagerImpl();
+  }
+
+  public void tearDown() throws Exception {
+    super.tearDown();
+    Iterator auIt = Plugin.getArchivalUnits();
+    ArrayList auList = new ArrayList(Plugin.getNumArchivalUnits());
+    while (auIt.hasNext()) {
+      auList.add(auIt.next());
+    }
+    auIt = auList.iterator();
+    while (auIt.hasNext()) {
+      Plugin.unregisterArchivalUnit((ArchivalUnit)auIt.next());
+    }
   }
 
   public void testGetNodeManager() {
@@ -82,7 +98,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     assertNotNull(node);
     assertTrue(cusEquals(cus, node.getCachedUrlSet()));
 
-    cus = getCUS("http://www.example.com/branch2/file2");
+    cus = getCUS("http://www.example.com/branch2/file2.doc");
     node = nodeManager.getNodeState(cus);
     assertNotNull(node);
     assertTrue(cusEquals(cus, node.getCachedUrlSet()));
@@ -100,7 +116,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     NodeState node = nodeManager.getNodeState(cus);
     node.getCrawlState().type = CrawlState.NEW_CONTENT_CRAWL;
     node.getCrawlState().status = CrawlState.SCHEDULED;
-    cus = getCUS("http://www.example.com/branch2/file1");
+    cus = getCUS("http://www.example.com/branch2/file1.doc");
     node = nodeManager.getNodeState(cus);
     node.getCrawlState().type = CrawlState.BACKGROUND_CRAWL;
     node.getCrawlState().status = CrawlState.RUNNING;
@@ -112,7 +128,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     }
     String[] expectedA = new String[] {
       "http://www.example.com/branch1",
-      "http://www.example.com/branch2/file1"
+      "http://www.example.com/branch2/file1.doc"
     };
     assertIsomorphic(expectedA, nodeL);
   }
@@ -126,7 +142,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     NodeState node = nodeManager.getNodeState(cus);
     ((NodeStateImpl)node).addPollState(new PollState(Poll.CONTENT_POLL, "",
         PollState.RUNNING, 123, null));
-    cus = getCUS("http://www.example.com/branch2/file1");
+    cus = getCUS("http://www.example.com/branch2/file1.doc");
     node = nodeManager.getNodeState(cus);
     ((NodeStateImpl)node).addPollState(new PollState(Poll.NAME_POLL, "",
         PollState.WON, 123, null));
@@ -139,7 +155,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     }
     String[] expectedA = new String[] {
       "http://www.example.com/branch1",
-      "http://www.example.com/branch2/file1"
+      "http://www.example.com/branch2/file1.doc"
     };
     assertIsomorphic(expectedA, nodeL);
 
@@ -225,6 +241,79 @@ public class TestNodeManagerImpl extends LockssTestCase {
     assertEquals(PollState.ERR_UNDEFINED, nodeManager.mapResultsErrorToPollError(1));
   }
 
+  public void testHandleContentPoll() throws Exception {
+    contentPoll = createPoll(TEST_URL, true, 10, 5);
+    Poll.VoteTally results = contentPoll.getVoteTally();
+    NodeState nodeState = nodeManager.getNodeState(getCUS(TEST_URL));
+    // won content poll
+    // - running
+    PollState pollState = new PollState(results.type, results.getRegExp(),
+                                        PollState.RUNNING,
+                                        results.startTime,
+                                        null);
+    nodeManager.handleContentPoll(pollState, results, nodeState);
+    assertEquals(PollState.WON, pollState.getStatus());
+    // - repairing
+    pollState = new PollState(results.type, results.getRegExp(),
+                              PollState.REPAIRING,
+                              results.startTime,
+                              null);
+    nodeManager.handleContentPoll(pollState, results, nodeState);
+    assertEquals(PollState.REPAIRED, pollState.getStatus());
+
+    // lost content poll
+    contentPoll = createPoll(TEST_URL+"/branch1", true, 5, 10);
+    results = contentPoll.getVoteTally();
+    // - repairing
+    pollState = new PollState(results.type, results.getRegExp(),
+                              PollState.REPAIRING,
+                              results.startTime,
+                              null);
+    nodeManager.handleContentPoll(pollState, results, nodeState);
+    assertEquals(PollState.UNREPAIRABLE, pollState.getStatus());
+    // - internal
+    pollState = new PollState(results.type, results.getRegExp(),
+                              PollState.RUNNING,
+                              results.startTime,
+                              null);
+    nodeManager.handleContentPoll(pollState, results, nodeState);
+    assertEquals(PollState.LOST, pollState.getStatus());
+    // - leaf
+    nodeState = nodeManager.getNodeState(getCUS(TEST_URL+"/branch1/file1.doc"));
+    pollState = new PollState(results.type, results.getRegExp(),
+                              PollState.RUNNING,
+                              results.startTime,
+                              null);
+    nodeManager.handleContentPoll(pollState, results, nodeState);
+    assertEquals(PollState.REPAIRING, pollState.getStatus());
+  }
+
+  public void testHandleNamePoll() throws Exception {
+    contentPoll = createPoll(TEST_URL+"/branch2", false, 10, 5);
+    Poll.VoteTally results = contentPoll.getVoteTally();
+    NodeState nodeState = nodeManager.getNodeState(getCUS(TEST_URL));
+    // won name poll
+    PollState pollState = new PollState(results.type, results.getRegExp(),
+                                        PollState.RUNNING,
+                                        results.startTime,
+                                        null);
+    nodeManager.handleNamePoll(pollState, results, nodeState);
+    // since it will try to call a content poll and fail, this becomes an error
+    assertEquals(PollState.ERR_IO, pollState.getStatus());
+
+    // lost name poll
+    contentPoll = createPoll(TEST_URL+"/branch2/file1.doc", false, 5, 10);
+    results = contentPoll.getVoteTally();
+    pollState = new PollState(results.type, results.getRegExp(),
+                              PollState.RUNNING,
+                              results.startTime,
+                              null);
+    nodeManager.handleNamePoll(pollState, results, nodeState);
+    // since there are no entries in the results object, nothing much will
+    // happen and it should be marked 'REPAIRED'
+    assertEquals(PollState.REPAIRED, pollState.getStatus());
+  }
+
   private boolean cusEquals(CachedUrlSet cus1, CachedUrlSet cus2) {
     String url1 = (String)cus1.getSpec().getPrefixList().get(0);
     String url2 = (String)cus2.getSpec().getPrefixList().get(0);
@@ -247,26 +336,58 @@ public class TestNodeManagerImpl extends LockssTestCase {
       Vector subFiles = new Vector(numFiles);
       Vector subBranches = new Vector(numFiles);
       for (int ix=1; ix <= numFiles; ix++) {
-        String f_url = b_url + File.separator + "file"+ ix;
+        String f_url = b_url + File.separator + "file" + ix + ".doc";
         MockCachedUrl cu = new MockCachedUrl(f_url);
         files.add(cu);
         subFiles.add(cu);
         MockCachedUrlSet subMcus = new MockCachedUrlSet(mau,
             new RECachedUrlSetSpec(f_url, (String)null));
         subBranches.add(subMcus);
-        subMcus.setFlatIterator(new ArrayList().iterator());
-        subMcus.setLeafIterator(new ArrayList().iterator());
+        subMcus.addUrl("test string"+ix, f_url);
+        subMcus.setFlatItSource(new ArrayList());
+        subMcus.setLeafItSource(new ArrayList());
       }
-      mcus.setFlatIterator(subBranches.iterator());
-      mcus.setLeafIterator(subFiles.iterator());
+      mcus.addUrl("test string"+ib, b_url);
+      mcus.setFlatItSource(subBranches);
+      mcus.setLeafItSource(subFiles);
       branches.add(mcus);
     }
     MockCachedUrlSet cus = new MockCachedUrlSet(mau,
         new RECachedUrlSetSpec(startUrl, (String)null));
-    cus.setLeafIterator(files.iterator());
-    cus.setFlatIterator(branches.iterator());
+    cus.addUrl("test string", startUrl);
+    cus.setLeafItSource(files);
+    cus.setFlatItSource(branches);
     return cus;
   }
+
+  private Poll createPoll(String url, boolean isContentPoll, int numAgree, int numDisagree)
+      throws Exception {
+    LcapIdentity testID = null;
+    LcapMessage testmsg = null;
+    try {
+      InetAddress testAddr = InetAddress.getByName("127.0.0.1");
+      testID = IdentityManager.getIdentityManager().getIdentity(testAddr);
+    } catch (UnknownHostException ex) {
+      fail("can't open test host");
+    }
+    byte[] bytes = new byte[20];
+    random.nextBytes(bytes);
+    try {
+      testmsg =  LcapMessage.makeRequestMsg(
+        url,
+        "*.doc",
+        null,
+        bytes,
+        bytes,
+        (isContentPoll ? LcapMessage.CONTENT_POLL_REQ : LcapMessage.NAME_POLL_REQ),
+        123321,
+        testID);
+    } catch (IOException ex) {
+      fail("can't create test name message" + ex.toString());
+    }
+    return TestPoll.createCompletedPoll(testmsg, numAgree, numDisagree);
+  }
+
 
   public static void main(String[] argv) {
     String[] testCaseList = {TestNodeManagerImpl.class.getName()};

@@ -221,9 +221,23 @@ public class TestPoll extends TestCase {
     Poll p = testpolls[1];
     p.m_pendingVotes = 3;
     p.stopVoteCheck();
-    assertEquals(2,p.m_pendingVotes);
+    assertEquals(2, p.m_pendingVotes);
   }
 
+  public static Poll createCompletedPoll(LcapMessage testmsg, int numAgree,
+                                int numDisagree) throws Exception {
+    testau = PollTestPlugin.PTArchivalUnit.createFromListOfRootUrls(rooturls);
+    org.lockss.plugin.Plugin.registerArchivalUnit(testau);
+    Poll p = PollManager.getPollManager().makePoll(testmsg);
+    p.m_tally.quorum = numAgree + numDisagree;
+    p.m_tally.numAgree = numAgree;
+    p.m_tally.numDisagree = numDisagree;
+    p.m_tally.wtAgree = 2000;
+    p.m_tally.wtDisagree = 200;
+    p.m_tally.localEntries = new String[] { "entry 1", "entry 2" };
+    p.m_tally.votedEntries = new String[] { "entry 1", "entry 3" };
+    return p;
+  }
 
   /** Executes the test case
    * @param argv array of Strings containing command line arguments
