@@ -1,25 +1,34 @@
 #!/bin/bash
 
-TEST_TYPE=$1
-HOST=`hostname`
-run=0
-ADDRESS=troberts@stanford.edu
 
-LOG_FILE=log.txt
+usage() {
+  echo "usage: $0 <test type> <email address>"
+  echo "  Runs the <test type> test until it fails, then emails <email address>"
+  exit 2
+}
+
+[ "$#" -ne "2" ] && usage
+
+host=`hostname`
+
+
+test_type=$1
+address=$2
+
+log_file=log.txt
 
 trap "exit 1" 2 
 
-#while [ `python testsuite.py $TEST_TYPE` ]
 while [ true ]
 do
-    python testsuite.py $TEST_TYPE > $LOG_FILE 2>&1 
+    python testsuite.py $test_type > $log_file 2>&1 
     if [ $? -ne 0 ]
     then
-	mail $ADDRESS -s "Test failed on $HOST" < $LOG_FILE
+	mail $address -s "Test failed on $host" < $log_file
 	exit 1
     fi
   echo "run finished, removing log files"
-  rm  $LOG_FILE
+  rm  $log_file
   ./clean.sh
 done
 
