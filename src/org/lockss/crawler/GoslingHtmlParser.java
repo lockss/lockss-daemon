@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlParser.java,v 1.9 2004-03-05 23:09:25 troberts Exp $
+ * $Id: GoslingHtmlParser.java,v 1.10 2004-03-06 00:02:23 troberts Exp $
  */
 
 /*
@@ -96,16 +96,7 @@ public class GoslingHtmlParser implements ContentParser {
   private static final String REFRESH = "refresh";
 
   private static Logger logger = Logger.getLogger("GoslingHtmlParser");
-  private ArchivalUnit au = null;
 
-
-  public GoslingHtmlParser(ArchivalUnit au) {
-    if (au == null) {
-      throw new IllegalArgumentException("Can't construct a GoslingHtmlParser"+
-					 " with a null ArchivalUnit");
-    }
-    this.au = au;
-  }
 
   /**
    * Method which will parse the html file represented by cu call

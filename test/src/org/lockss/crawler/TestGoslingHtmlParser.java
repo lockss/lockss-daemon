@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingHtmlParser.java,v 1.8 2004-03-05 23:09:25 troberts Exp $
+ * $Id: TestGoslingHtmlParser.java,v 1.9 2004-03-06 00:02:24 troberts Exp $
  */
 
 /*
@@ -55,7 +55,7 @@ public class TestGoslingHtmlParser extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     MockArchivalUnit mau = new MockArchivalUnit();
-    parser = new GoslingHtmlParser(mau);
+    parser = new GoslingHtmlParser();
     cb = new MyFoundUrlCallback();
   }
 
@@ -75,13 +75,13 @@ public class TestGoslingHtmlParser extends LockssTestCase {
     }
   }
 
-  public void testThrowsOnNullAu() {
-    try {
-      GoslingHtmlParser parser = new GoslingHtmlParser(null);
-      fail("Trying to construct a GoslingHtmlParser with a null AU should throw");
-    } catch (IllegalArgumentException iae) {
-    }
-  }
+//   public void testThrowsOnNullAu() {
+//     try {
+//       GoslingHtmlParser parser = new GoslingHtmlParser(null);
+//       fail("Trying to construct a GoslingHtmlParser with a null AU should throw");
+//     } catch (IllegalArgumentException iae) {
+//     }
+//   }
 
   public void testParsesHref() throws IOException {
     singleTagShouldParse("http://www.example.com/web_link.html",
