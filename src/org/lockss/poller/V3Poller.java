@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.1.2.14 2004-11-18 15:45:06 dshr Exp $
+ * $Id: V3Poller.java,v 1.1.2.15 2004-11-23 02:05:26 dshr Exp $
  */
 
 /*
@@ -428,10 +428,9 @@ public class V3Poller extends V3Poll {
 	changePollState(STATE_SENDING_POLL);
 	Properties props = null;
 	//  XXX put effort etc into Properties for message
-	if (false) try {
-	  PollSpec pollspec = null; // XXX
+	try {
 	  LcapMessage msg =
-	    V3LcapMessage.makeRequestMsg(pollspec, props, m_challenge,
+	    V3LcapMessage.makeRequestMsg(m_pollspec, props, m_challenge,
 					 V3LcapMessage.MSG_POLL,
 					 m_deadline.getRemainingTime(),
 					 m_callerID, "SHA-1");
@@ -441,8 +440,6 @@ public class V3Poller extends V3Poll {
 	  log.error("sending message to " + m_currentVoter.toString() +
 		    " threw " + ex.toString());
 	  nextVoter(cookie, false);
-	} else {
-	  changePollState(STATE_WAITING_POLL_ACK);
 	}
       }
     }

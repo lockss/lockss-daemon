@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.1.2.16 2004-11-22 22:27:21 dshr Exp $
+ * $Id: TestV3Poller.java,v 1.1.2.17 2004-11-23 02:05:31 dshr Exp $
  */
 
 /*
@@ -324,6 +324,14 @@ public class TestV3Poller extends LockssTestCase {
 		  pollmanager.isPollClosed(key));
       assertFalse("Poll " + poll + " vote " + i + " should not be suspended",
 		  pollmanager.isPollSuspended(key));
+      {
+	// Check that the poll sent a MSG_POLL
+	MockLcapStreamRouter router =
+	  (MockLcapStreamRouter)theDaemon.getStreamRouterManager();
+	Deadline dl = Deadline.in(10);
+	V3LcapMessage msg = router.getSentMessage(dl);
+	assertEquals(msg.getOpcode(), V3LcapMessage.MSG_POLL);
+      }
       TimeBase.step(500);
       //  Receive a PollAck message, go to SendingPollProof
       try {
