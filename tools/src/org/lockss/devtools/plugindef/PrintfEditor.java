@@ -322,15 +322,13 @@ public class PrintfEditor extends JDialog
     Element el = doc.getCharacterElement(pos);
     AttributeSet attr = el.getAttributes();
     String el_name = (String) attr.getAttribute(StyleConstants.NameAttribute);
-    System.out.println("Element at " + pos +": " + el + " name: " + el_name);
-    if(e.getKeyChar() == '\b' && el_name.startsWith("Parameter")) {
+    if(e.getKeyChar() == '\b' && el_name.startsWith("Parameter")
+    && StyleConstants.getComponent(attr) != null){
       try {
         doc.remove(el.getStartOffset(), el.getEndOffset() -  el.getStartOffset());
       }
       catch (BadLocationException ex) {
       }
-    }
-    else {
     }
   }
 
