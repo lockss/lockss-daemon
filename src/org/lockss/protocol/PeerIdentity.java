@@ -1,5 +1,5 @@
 /*
- * $Id: PeerIdentity.java,v 1.2 2004-09-28 08:47:27 tlipkis Exp $
+ * $Id: PeerIdentity.java,v 1.3 2004-09-29 06:39:14 tlipkis Exp $
  */
 
 /*
@@ -43,59 +43,10 @@ import org.lockss.util.*;
  */
 public class PeerIdentity {
   static Logger theLog=Logger.getLogger("PeerIdentity");
-  private static HashMap instances = new HashMap();
   private String key;
 
-  /** Don't allow others to create */
-  private PeerIdentity(String newKey) {
+  PeerIdentity(String newKey) {
     key = newKey;
-  }
-
-  /**
-   * ipAddrToIdentity returns the instance representing this peer's
-   * identity, creating it if necessary.  This method should be used
-   * only by the IdentityManager.
-   * @param addr the IPAddr of the peer
-   * @param port the port of the peer
-   * @return the PeerIdentity of the peer
-   */
-  static PeerIdentity ipAddrToIdentity(IPAddr addr, int port) {
-    String key = (port == 0)
-      ? addr.toString()
-      : addr.toString() + ":" + String.valueOf(port);
-    return stringToIdentity(key);
-  }
-
-  /**
-   * stringToIdentity returns the instance representing this peer's
-   * identity, creating it if necessary.  This method should be used
-   * only by the IdentityManager.
-   * @param key the String representing the IP address and optional port
-   * @return the PeerIdentity of the peer
-   */
-  static synchronized PeerIdentity stringToIdentity(String key) {
-    PeerIdentity id = (PeerIdentity)instances.get(key);
-    if (id == null) {
-      id = new PeerIdentity(key);
-      instances.put(key, id);
-    }
-    return id;
-  }
-
-  /**
-   * stringToIdentity returns an instance representing a (the) local
-   * identity, creating it if necessary.  This method should be used only
-   * by the IdentityManager.
-   * @param key the String representing the local IP address and optional port
-   * @return the PeerIdentity of the local peer
-   */
-  static synchronized PeerIdentity stringToLocalIdentity(String key) {
-    PeerIdentity id = (PeerIdentity)instances.get(key);
-    if (id == null) {
-      id = new LocalPeerIdentity(key);
-      instances.put(key, id);
-    }
-    return id;
   }
 
   /**
@@ -107,30 +58,27 @@ public class PeerIdentity {
   }
 
   /**
-   * getIdString results in a string describing the peer that is
+   * getIdString returns a string describing the peer that is
    * parseable and convertable into a PeerIdentity object.  At
    * present this is a dotted-quad IP address optionally followed
-   * by a colon and a numberic port number
+   * by a colon and a nuberic port number
    */
   public String getIdString() {
     return key;
   }
 
-  /** Return true iff this is the local PeerIdentity.  (Note this allows
-   * for multiple local identities.  Is that a bad thing, or might that be
-   * useful to multiple interfaces, etc.?)
-   * @return false
+  /** Return true iff this is a local PeerIdentity.
    */
   public boolean isLocalIdentity() {
     return false;
   }
 
-  static class LocalPeerIdentity extends PeerIdentity {
-    private LocalPeerIdentity(String key) {
+  static class LocalIdentity extends PeerIdentity {
+    LocalIdentity(String key) {
       super(key);
     }
 
-    /** Return true iff this is the local PeerIdentity
+    /** Return true iff this is a local PeerIdentity
      * @return true
      */
     public boolean isLocalIdentity() {

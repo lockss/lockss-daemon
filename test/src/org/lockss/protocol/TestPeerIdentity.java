@@ -1,5 +1,5 @@
 /*
- * $Id: TestPeerIdentity.java,v 1.1 2004-09-28 08:47:25 tlipkis Exp $
+ * $Id: TestPeerIdentity.java,v 1.2 2004-09-29 06:39:14 tlipkis Exp $
  */
 
 /*
@@ -68,27 +68,11 @@ public class TestPeerIdentity extends LockssTestCase {
     assertEquals(System.identityHashCode(id3), id3.hashCode());
   }
 
-  public void testFromString() throws Exception {
-    PeerIdentity id1 = PeerIdentity.stringToIdentity("k1");
-    PeerIdentity id2 = PeerIdentity.stringToIdentity("k1");
-    PeerIdentity id3 = PeerIdentity.stringToIdentity("k3");
-    assertSame(id1, id2);
-    assertEquals("k1", id1.getIdString());
-    assertEquals("k3", id3.getIdString());
-  }
-
-  public void testLocal() throws Exception {
-    PeerIdentity id1 = PeerIdentity.stringToLocalIdentity("k88");
-    PeerIdentity id2 = PeerIdentity.stringToIdentity("k2");
-    assertTrue("isLocal() s.b. true", id1.isLocalIdentity());
-    assertFalse("isLocal() s.b. false", id2.isLocalIdentity());
-  }
-
   public void testIsLocal() throws Exception {
-    PeerIdentity id1 = newPI("key1");
-    PeerIdentity id2 = (PeerIdentity)PrivilegedAccessor.
-      invokeConstructor(PeerIdentity.LocalPeerIdentity.class.getName(), "lkey");
-
+    PeerIdentity id1 = new PeerIdentity("key1");
+    PeerIdentity id2 = new PeerIdentity.LocalIdentity("key2");
+    assertFalse(id1.isLocalIdentity());
+    assertTrue(id2.isLocalIdentity());
   }
 
 }
