@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.56 2004-01-27 01:03:43 clairegriffin Exp $
+ * $Id: Configuration.java,v 1.57 2004-02-23 09:13:40 tlipkis Exp $
  */
 
 /*
@@ -56,7 +56,8 @@ public abstract class Configuration {
   // MUST pass in explicit log level to avoid recursive call back to
   // Configuration to get Config log level.  (Others should NOT do this.)
   protected static Logger log =
-    Logger.getLogger("Config", Logger.getInitialDefaultLevel());
+    Logger.getLoggerWithInitialLevel("Config",
+				     Logger.getInitialDefaultLevel());
 
   /** Return current configuration */
   public static Configuration getCurrentConfig() {
@@ -148,13 +149,16 @@ public abstract class Configuration {
   void load(String url) throws IOException {
     InputStream istr;
     try {
+      URL u = new URL(url);
       istr = UrlUtil.openInputStream(url);
       log.debug2("load URL: " + url);
     } catch (MalformedURLException e) {
       istr = new FileInputStream(url);
       log.debug2("load file: " + url);
     }
-    load(new BufferedInputStream(istr));
+    InputStream bis = new BufferedInputStream(istr);
+    load(bis);
+    bis.close();
   }
 
   abstract boolean load(InputStream istr)
