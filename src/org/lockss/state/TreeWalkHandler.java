@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkHandler.java,v 1.35 2003-08-28 20:52:55 eaalto Exp $
+ * $Id: TreeWalkHandler.java,v 1.35.2.1 2003-09-05 22:46:07 eaalto Exp $
  */
 
 /*
@@ -144,6 +144,8 @@ public class TreeWalkHandler {
           long elapsedTime = TimeBase.msSince(startTime);
           updateEstimate(elapsedTime);
         }
+      } catch (Exception e) {
+        logger.error("Error in treewalk: ", e);
       }
       finally {
         if (!treeWalkAborted) {
