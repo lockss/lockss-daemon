@@ -1,5 +1,5 @@
 /*
- * $Id: PollSpec.java,v 1.4 2003-03-15 03:24:05 claire Exp $
+ * $Id: PollSpec.java,v 1.5 2003-03-15 07:47:13 claire Exp $
  */
 
 /*
@@ -144,6 +144,12 @@ public class PollSpec {
 
   public String getRangeString() {
     if(lwrBound != null || uprBound != null) {
+      if(lwrBound.startsWith("/")) {
+        lwrBound = lwrBound.substring(1);
+      }
+      if(uprBound.startsWith("/")) {
+        uprBound = uprBound.substring(1);
+      }
       return lwrBound + " - " + uprBound;
     }
     return null;

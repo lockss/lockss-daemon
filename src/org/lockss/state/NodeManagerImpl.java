@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.59 2003-03-15 02:53:29 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.60 2003-03-15 07:47:13 claire Exp $
  */
 
 /*
@@ -651,8 +651,9 @@ public class NodeManagerImpl implements NodeManager {
     while (polls.hasNext()) {
       PollState pollState = (PollState)polls.next();
       PollSpec spec = results.getPollSpec();
-      if ((pollState.getLwrBound() == spec.getLwrBound()) &&
-          (pollState.getUprBound() == spec.getUprBound()) &&
+      logger.debug2("Getting poll state for spec: " + spec);
+      if (StringUtil.equalStrings(pollState.getLwrBound(),spec.getLwrBound()) &&
+          StringUtil.equalStrings(pollState.getUprBound(),spec.getUprBound()) &&
           (pollState.getType() == results.getType())) {
         return pollState;
       }
@@ -693,7 +694,7 @@ public class NodeManagerImpl implements NodeManager {
       throws IOException {
     ArrayList childList = new ArrayList();
 
-    Iterator children = state.getCachedUrlSet().flatSetIterator();
+    Iterator children = results.getCachedUrlSet().flatSetIterator();
     while (children.hasNext()) {
       CachedUrlSetNode child = (CachedUrlSetNode)children.next();
       CachedUrlSet cus = null;

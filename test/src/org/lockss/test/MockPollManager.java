@@ -1,5 +1,5 @@
 /*
-* $Id: MockPollManager.java,v 1.5 2003-02-27 04:04:28 tal Exp $
+* $Id: MockPollManager.java,v 1.6 2003-03-15 07:47:13 claire Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import org.lockss.app.*;
 import org.lockss.plugin.*;
 import org.lockss.poller.*;
 import org.lockss.protocol.LcapMessage;
+import org.lockss.protocol.ProtocolException;
 
 /**
  * Mock override of the PollManager
@@ -86,4 +87,15 @@ public class MockPollManager extends PollManager {
   public String getPollStatus(String key) {
     return (String)thePolls.get(key);
   }
+
+  public Poll createPoll(LcapMessage msg, PollSpec pollspec) throws ProtocolException {
+    try {
+      requestPoll(msg.getOpcode(), pollspec);
+    }
+    catch (IOException ex) {
+    }
+    return super.createPoll(msg, pollspec);
+
+  }
+
 }

@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.46 2003-03-15 03:24:05 claire Exp $
+* $Id: PollManager.java,v 1.47 2003-03-15 07:47:13 claire Exp $
  */
 
 /*
@@ -306,9 +306,10 @@ public class PollManager  implements LockssManager {
 
     Iterator iter = thePolls.values().iterator();
     while(iter.hasNext()) {
-      Poll p = ((PollManagerEntry)iter.next()).poll;
+      PollManagerEntry entry = (PollManagerEntry)iter.next();
+      Poll p = entry.poll;
 
-      if(p != null && !p.getMessage().isVerifyPoll()) { // eliminate running verify polls
+      if(!entry.isPollCompleted() && !p.getMessage().isVerifyPoll()) { // eliminate running verify polls
         CachedUrlSet pcus = p.getPollSpec().getCachedUrlSet();
 	ArchivalUnit au = cus.getArchivalUnit();
 	LockssRepository repo = theDaemon.getLockssRepository(au);
@@ -491,7 +492,7 @@ public class PollManager  implements LockssManager {
     return verifier;
   }
 
-  Poll createPoll(LcapMessage msg, PollSpec pollspec) throws ProtocolException {
+  protected Poll createPoll(LcapMessage msg, PollSpec pollspec) throws ProtocolException {
     Poll ret_poll = null;
 
     switch(msg.getOpcode()) {
@@ -655,9 +656,10 @@ public class PollManager  implements LockssManager {
 
   static class PollManagerEntry {
     static final int ACTIVE = 0;
-    static final int COMPLETED = 1;
-    static final int SUSPENDED = 2;
-    static final String[] StatusStrings = { "Active", "Complete", "Suspended"};
+    static final int WON = 1;
+    static final int LOST = 2;
+    static final int SUSPENDED = 3;
+    static final String[] StatusStrings = { "Active", "Won","Lost", "Suspended"};
     Poll poll;
     PollSpec spec;
     int type;
@@ -681,7 +683,7 @@ public class PollManager  implements LockssManager {
     }
 
     boolean isPollCompleted() {
-      return status == COMPLETED;
+      return status == WON || status == LOST;
     }
 
     boolean isPollSuspended() {
@@ -691,7 +693,7 @@ public class PollManager  implements LockssManager {
     synchronized void setPollCompleted(Deadline d) {
 //      poll = null;
       deadline = d;
-      status = COMPLETED;
+      status = poll.getVoteTally().didWinPoll() ? WON : LOST;
     }
 
     synchronized void setPollSuspended() {
@@ -725,6 +727,7 @@ public class PollManager  implements LockssManager {
     ColumnDescriptor.TYPE_DATE, STRINGTYPE};
 
     private static String[] preferredOrder =  { "Plugin", "AU", "URL", "Deadline"};
+    private static boolean[] ascendPref = { true, true, true, false };
 
     public List getColumnDescriptors(String key) throws StatusService.NoSuchTableException {
       checkKey(key);
@@ -757,7 +760,7 @@ public class PollManager  implements LockssManager {
 
       ArrayList rulesL = new ArrayList(preferredOrder.length);
       for(int i=0; i< preferredOrder.length; i++) {
-        rulesL.add(new StatusTable.SortRule(preferredOrder[i], true));
+        rulesL.add(new StatusTable.SortRule(preferredOrder[i], ascendPref[i]));
       }
 
       return rulesL;
@@ -885,7 +888,7 @@ public class PollManager  implements LockssManager {
     private static int[] columnTypes =
         { IPTYPE, INTTYPE, STRINGTYPE, STRINGTYPE, STRINGTYPE, STRINGTYPE};
 
-    private static String[] preferredOrder =  { "Identity" };
+    private static String[] preferredOrder =  { "Agree" };
 
 
     public List getColumnDescriptors(String key) throws StatusService.NoSuchTableException {
@@ -905,7 +908,7 @@ public class PollManager  implements LockssManager {
       Iterator it = tally.pollVotes.iterator();
       while(it.hasNext()) {
         Vote vote = (Vote)it.next();
-        l.add(makeRow(poll, vote));
+        l.add(makeRow(vote));
       }
       return l;
     }
@@ -949,11 +952,11 @@ public class PollManager  implements LockssManager {
       return poll;
     }
 
-    private Map makeRow(Poll poll, Vote vote) {
+    private Map makeRow(Vote vote) {
       HashMap rowMap = new HashMap();
 
       rowMap.put("Identity", vote.getIDAddress());
-      LcapIdentity id = poll.idMgr.findIdentity(vote.getIDAddress());
+      LcapIdentity id = theDaemon.getIdentityManager().findIdentity(vote.getIDAddress());
       rowMap.put("Reputation", String.valueOf(id.getReputation()));
       rowMap.put("Agree", String.valueOf(vote.agree));
       rowMap.put("Challenge", vote.getChallengeString());
