@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.27 2005-02-14 03:31:30 tlipkis Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.28 2005-03-04 01:24:19 troberts Exp $
  */
 
 /*
@@ -106,7 +106,9 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     }
     List permission_list = new ArrayList();
     for(Iterator it = templateList.iterator(); it.hasNext();) {
-      permission_list.add(convertVariableString((String)it.next()));
+      String permissionPage = convertVariableString((String)it.next());
+      log.debug3("Adding permission page: "+permissionPage);
+      permission_list.add(permissionPage);
     }
     return permission_list;
   }
@@ -226,7 +228,9 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     }
     else  { // for now use the default spider crawl spec
       int depth = definitionMap.getInt(AU_CRAWL_DEPTH, DEFAULT_AU_CRAWL_DEPTH);
-      return new SpiderCrawlSpec(startUrlString, rule, depth);
+      //XXX change to a list
+      return new SpiderCrawlSpec(ListUtil.list(startUrlString),
+				 getPermissionPages(), rule, depth);
     }
   }
 
