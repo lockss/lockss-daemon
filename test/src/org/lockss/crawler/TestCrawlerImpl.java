@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlerImpl.java,v 1.1 2004-01-13 01:02:35 troberts Exp $
+ * $Id: TestCrawlerImpl.java,v 1.2 2004-01-13 02:57:48 troberts Exp $
  */
 
 /*
@@ -680,6 +680,30 @@ public class TestCrawlerImpl extends LockssTestCase {
     crawler.doCrawl(Deadline.in(2));
     Set expected = SetUtil.set(startUrl, url1);
 //    Set expected = SetUtil.set(startUrl);
+    assertEquals(expected, cus.getCachedUrls());
+  }
+
+  public void testAbortedCrawlDoesntStart() {
+    String url1= "http://www.example.com/link1.html";
+    String url2= "http://www.example.com/link2.html";
+    String url3= "http://www.example.com/link3.html";
+
+    String source =
+      "<html><head><title>Test</title></head><body>"+
+      "<a href=http://www.example.com/link1.html>link1</a>"+
+      "Filler, with <b>bold</b> tags and<i>others</i>"+
+      "<a href=http://www.example.com/link2.html>link2</a>"+
+      "<a href=http://www.example.com/link3.html>link3</a>";
+
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    cus.addUrl(source, startUrl);
+    cus.addUrl(LINKLESS_PAGE, url1);
+    cus.addUrl(LINKLESS_PAGE, url2);
+    cus.addUrl(LINKLESS_PAGE, url3);
+
+    crawler.abortCrawl();
+    crawler.doCrawl(Deadline.MAX);
+    Set expected = SetUtil.set();
     assertEquals(expected, cus.getCachedUrls());
   }
 

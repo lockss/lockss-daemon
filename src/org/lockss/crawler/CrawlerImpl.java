@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerImpl.java,v 1.2 2004-01-13 02:36:27 troberts Exp $
+ * $Id: CrawlerImpl.java,v 1.3 2004-01-13 02:57:48 troberts Exp $
  */
 
 /*
@@ -85,6 +85,8 @@ public class CrawlerImpl implements Crawler {
     Configuration.PREFIX + "CrawlerImpl.numCacheRetries";
   private static final int DEFAULT_RETRY_TIMES = 3;
 
+  private boolean crawlAborted = false;
+
   public static final String PARAM_RETRY_PAUSE =
     Configuration.PREFIX + "CrawlerImpl.retryPause";
   public static final long DEFAULT_RETRY_PAUSE = 10*Constants.SECOND;
@@ -167,7 +169,7 @@ public class CrawlerImpl implements Crawler {
 
 
   public void abortCrawl() {
-//     throw new UnsupportedOperationException("not implemented");
+    crawlAborted = true;
   }
 
   /**
@@ -213,7 +215,7 @@ public class CrawlerImpl implements Crawler {
     }
     for (int ix=0; ix<refetchDepth; ix++) {
       extractedUrls = new HashSet();
-      while (it.hasNext() && !deadline.expired()) {
+      while (it.hasNext() && !deadline.expired() && !crawlAborted) {
 	String url = (String)it.next();
 	//catch and warn if there's a url in the start urls
 	//that we shouldn't cache
@@ -253,7 +255,8 @@ public class CrawlerImpl implements Crawler {
     }
 
 
-    while (!urlsToCrawl.isEmpty() && !deadline.expired() && !windowClosed) {
+    while (!urlsToCrawl.isEmpty() && !deadline.expired()
+	   && !windowClosed && !crawlAborted) {
       String nextUrl = (String)CollectionUtil.removeElement(urlsToCrawl);
       // check crawl window during crawl
       if ((spec!=null) && (!spec.canCrawl())) {
