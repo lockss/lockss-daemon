@@ -1,5 +1,5 @@
 /*
- * $Id: StartProxy.java,v 1.5 2003-02-06 05:16:07 claire Exp $
+ * $Id: StartProxy.java,v 1.6 2003-03-12 22:12:45 tal Exp $
  */
 
 /*
@@ -40,9 +40,9 @@ import org.lockss.app.*;
 public class StartProxy {
   public static void main(String args[]) {
     PTestPlugin.makeTest();
-    ProxyHandler handler = new ProxyHandler();
+    ProxyManager manager = new ProxyManager();
     try {
-      handler.initService(null);
+      manager.initService(null);
     }
     catch (LockssDaemonException ex) {
       System.err.println("Init called twice!");
@@ -50,7 +50,7 @@ public class StartProxy {
 //    System.out.println("pm.findArchivalUnit(http://foo.bar/one) = " +
 //		       pm.findArchivalUnit("http://foo.bar/one"));
 
-    handler.startProxy();
+    manager.startProxy();
     System.err.println("Proxy started");
   }
 }

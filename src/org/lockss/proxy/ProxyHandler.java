@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.12 2003-03-11 23:30:29 tal Exp $
+ * $Id: ProxyHandler.java,v 1.13 2003-03-12 22:12:18 tal Exp $
  */
 
 /*
@@ -37,84 +37,20 @@ import java.util.*;
 import java.net.*;
 import org.mortbay.util.*;
 import org.mortbay.http.*;
-//import org.mortbay.jetty.servlet.*;
 import org.mortbay.http.handler.*;
-//import org.mortbay.servlet.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.app.*;
 
-/* ------------------------------------------------------------ */
 /** LOCKSS proxy handler.
- *
  */
-public class ProxyHandler extends NullHandler implements LockssManager {
-  // this should be moved, as it applies to both proxy and servlet ports
-  public static final String PARAM_START_NET_SERVERS =
-    Configuration.PREFIX + "startNetServers";
-
+public class ProxyHandler extends NullHandler {
   private static LockssDaemon theDaemon = null;
-  private static ProxyHandler theManager = null;
   private static PluginManager pluginMgr = null;
 
-  /**
-   * init the plugin manager.
-   * @param daemon the LockssDaemon instance
-   * @throws LockssDaemonException if we already instantiated this manager
-   * @see org.lockss.app.LockssManager#initService(LockssDaemon daemon)
-   */
-  public void initService(LockssDaemon daemon) throws LockssDaemonException {
-    if(theManager == null) {
-      theDaemon = daemon;
-      theManager = this;
-    }
-    else {
-      throw new LockssDaemonException("Multiple Instantiation.");
-    }
-  }
-
-  /**
-   * start the proxy.
-   * @see org.lockss.app.LockssManager#startService()
-   */
-  public void startService() {
+  ProxyHandler(LockssDaemon daemon) {
+    theDaemon = daemon;
     pluginMgr = theDaemon.getPluginManager();
-    if (Configuration.getBooleanParam(PARAM_START_NET_SERVERS, true)) {
-      startProxy();
-    }
-  }
-
-  /**
-   * stop the plugin manager
-   * @see org.lockss.app.LockssManager#stopService()
-   */
-  public void stopService() {
-    // XXX undo whatever we did in start proxy.
-
-    theManager = null;
-  }
-
-
-  public void startProxy() {
-    try {
-      // Create the server
-      HttpServer server = new HttpServer();
-
-      // Create a port listener
-      HttpListener listener = server.addListener(new InetAddrPort (9090));
-
-      // Create a context
-      HttpContext context = server.getContext(null, "/");
-
-      // Create a servlet container
-      HttpHandler handler = theManager;
-      context.addHandler(handler);
-
-      // Start the http server
-      server.start ();
-    } catch (Exception e) {
-      e.printStackTrace();
-    }
   }
 
   /* ------------------------------------------------------------ */
