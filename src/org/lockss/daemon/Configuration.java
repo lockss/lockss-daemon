@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.42 2003-04-30 23:38:51 tal Exp $
+ * $Id: Configuration.java,v 1.43 2003-05-05 17:45:21 tal Exp $
  */
 
 /*
@@ -354,10 +354,10 @@ public abstract class Configuration {
     InputStream istr;
     try {
       istr = UrlUtil.openInputStream(url);
-      log.debug("load URL: " + istr);
+      log.debug2("load URL: " + url);
     } catch (MalformedURLException e) {
       istr = new FileInputStream(url);
-      log.debug("load file: " + url);
+      log.debug2("load file: " + url);
     }
     load(new BufferedInputStream(istr));
   }
@@ -813,7 +813,7 @@ public abstract class Configuration {
 	Deadline nextReload =
 	  Deadline.inRandomRange(reloadInterval - reloadRange,
 				 reloadInterval + reloadRange);
-	log.debug(nextReload.toString());
+	log.debug2(nextReload.toString());
 	if (goOn) {
 	  try {
 	    nextReload.sleep();
