@@ -1,5 +1,5 @@
 /*
- * $Id: NodeStateImpl.java,v 1.3 2002-12-21 01:15:45 aalto Exp $
+ * $Id: NodeStateImpl.java,v 1.4 2003-01-16 01:44:45 aalto Exp $
  */
 
 /*
@@ -96,6 +96,9 @@ public class NodeStateImpl implements NodeState {
   }
 
   protected List getPollHistoryBeanList() {
+    if (pollHistories==null) {
+      return Collections.EMPTY_LIST;
+    }
     List histBeans = new ArrayList(pollHistories.size());
     Iterator histIter = pollHistories.iterator();
     while (histIter.hasNext()) {
@@ -104,4 +107,5 @@ public class NodeStateImpl implements NodeState {
     }
     return histBeans;
   }
+
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlState.java,v 1.1 2002-12-13 23:51:32 aalto Exp $
+ * $Id: CrawlState.java,v 1.2 2003-01-16 01:44:45 aalto Exp $
  */
 
 /*
@@ -38,13 +38,13 @@ import org.lockss.daemon.CachedUrlSet;
 import org.lockss.util.Deadline;
 
 /**
- * PollState contains the state information for a poll current to a node.
- * There may be more than one active poll per node.
+ * CrawlState contains the crawl-related state information for a node.
  */
 public class CrawlState {
   public static final int NEW_CONTENT_CRAWL = 1;
   public static final int REPAIR_CRAWL = 2;
   public static final int BACKGROUND_CRAWL = 4;
+  public static final int NODE_DELETED = 8;
 
   public static final int SCHEDULED = 1;
   public static final int RUNNING = 2;
@@ -60,16 +60,15 @@ public class CrawlState {
     this.startTime = startTime;
   }
   /**
-   * Returns the poll type.
+   * Returns the crawl type.
    * @return an int representing the type
-   * @see org.lockss.protocol.LcapMessage
    */
   public int getType() {
     return type;
   }
 
   /**
-   * Returns the status of the poll.
+   * Returns the status of the crawl.
    * @return an int representing the current status
    */
   public int getStatus() {
@@ -77,7 +76,7 @@ public class CrawlState {
   }
 
   /**
-   * Returns the start time of the poll.
+   * Returns the start time of the crawl.
    * @return the start time in ms
    */
   public long getStartTime() {

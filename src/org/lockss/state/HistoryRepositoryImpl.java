@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.2 2002-12-31 00:14:02 aalto Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.3 2003-01-16 01:44:45 aalto Exp $
  */
 
 /*
@@ -103,6 +103,11 @@ public class HistoryRepositoryImpl implements HistoryRepository {
     try {
       File nodeFile = new File(getNodeLocation(cus) + File.separator +
                                HISTORY_FILE_NAME);
+      if (!nodeFile.exists()) {
+        ((NodeStateImpl)nodeState).setPollHistoryBeanList(new ArrayList());
+        logger.warning("No history file found.");
+        return;
+      }
       Unmarshaller unmarshaller = new Unmarshaller(NodeHistoryBean.class);
       unmarshaller.setMapping(getMapping());
       NodeHistoryBean nhb = (NodeHistoryBean)unmarshaller.unmarshal(new FileReader(nodeFile));

@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.6 2003-01-15 17:37:50 claire Exp $
+ * $Id: NodeManagerImpl.java,v 1.7 2003-01-16 01:44:45 aalto Exp $
  */
 
 /*
@@ -33,26 +33,21 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.state;
 
 import java.util.*;
-import org.lockss.daemon.CachedUrlSet;
-import org.lockss.poller.Poll;
-import org.lockss.daemon.ArchivalUnit;
-import org.lockss.util.Deadline;
-import org.lockss.plugin.Plugin;
-import org.lockss.util.Logger;
-import org.lockss.poller.PollManager;
-import org.lockss.protocol.LcapMessage;
-import java.net.InetAddress;
-import java.io.IOException;
-import org.lockss.poller.Vote;
-import org.lockss.protocol.IdentityManager;
-import org.lockss.daemon.UrlCacher;
-import org.lockss.util.ListUtil;
-import org.lockss.util.SetUtil;
 import gnu.regexp.*;
-import org.lockss.repository.LockssRepositoryImpl;
+import java.io.IOException;
+import java.net.InetAddress;
+import org.lockss.util.*;
+import org.lockss.daemon.*;
+import org.lockss.poller.*;
+import org.lockss.plugin.Plugin;
+import org.lockss.protocol.LcapMessage;
+import org.lockss.protocol.IdentityManager;
 import org.lockss.repository.LockssRepository;
+import org.lockss.repository.LockssRepositoryImpl;
+import java.io.File;
 
 /**
+ * Implementation of the NodeManager.
  */
 public class NodeManagerImpl implements NodeManager {
   private static NodeManager nodeManager = null;
@@ -71,7 +66,7 @@ public class NodeManagerImpl implements NodeManager {
     return nodeManager;
   }
 
-  private NodeManagerImpl() {
+  NodeManagerImpl() {
     repository = HistoryRepositoryImpl.getHistoryRepository();
     loadStateTree();
   }
@@ -84,6 +79,7 @@ public class NodeManagerImpl implements NodeManager {
 
   public NodeState getNodeState(CachedUrlSet cus) {
     TreeMap auMap = (TreeMap)auMaps.get(getAuKey(cus.getArchivalUnit()));
+    if (auMap==null) return null;
     return (NodeState)auMap.get(getCusKey(cus));
   }
 
@@ -114,7 +110,7 @@ public class NodeManagerImpl implements NodeManager {
         Iterator polls = state.getActivePolls();
         while (polls.hasNext()) {
           PollState pollState = (PollState)polls.next();
-          if ((pollState.getStatus() & filter) == 1) {
+          if ((pollState.getStatus() & filter) != 0) {
             stateV.addElement(state);
             break;
           }
@@ -174,13 +170,52 @@ public class NodeManagerImpl implements NodeManager {
   }
 
   private void doTreeWalk() {
-    // traverse the tree
-    // at each node, check for crawl state
-    // schedule crawls if it's been too long
-    // check with plugin for scheduling
-    // convert finished polls to histories?
-    // update poll states?
+    Iterator nodeMapIt = auMaps.entrySet().iterator();
+    while (nodeMapIt.hasNext()) {
+      TreeMap nodeMap = (TreeMap)nodeMapIt.next();
+      nodeTreeWalk(nodeMap);
+    }
+  }
 
+  private void nodeTreeWalk(TreeMap nodeMap) {
+    Iterator nodesIt = nodeMap.entrySet().iterator();
+    String deleteSub = null;
+    while (nodesIt.hasNext()) {
+      Map.Entry entry = (Map.Entry)nodesIt.next();
+      String key = (String)entry.getKey();
+      NodeState node = (NodeState)entry.getValue();
+
+      // if it
+      if ((deleteSub!=null) && (key.startsWith(deleteSub))) {
+        //XXX mark deleted?
+        continue;
+      } else {
+        deleteSub = null;
+      }
+      // at each node, check for crawl state
+      switch (node.getCrawlState().getType()) {
+        case CrawlState.NODE_DELETED:
+          deleteSub = key;
+          if (!deleteSub.endsWith(File.separator)) {
+            deleteSub += File.separator;
+          }
+          continue;
+          //XXX schedule crawls if it's been too long
+          // check with plugin for scheduling
+      }
+      repository.storePollHistories(node);
+      Iterator pollsIt = node.getActivePolls();
+      while (pollsIt.hasNext()) {
+        PollState poll = (PollState)pollsIt.next();
+        if ((poll.getStatus()==PollState.LOST) ||
+            (poll.getStatus()==PollState.REPAIRED) ||
+            (poll.getStatus()==PollState.UNREPAIRABLE) ||
+            (poll.getStatus()==PollState.WON)) {
+
+          //XXX update poll states?
+        }
+      }
+    }
   }
 
   private void loadStateTree() {
@@ -198,11 +233,8 @@ public class NodeManagerImpl implements NodeManager {
   }
 
   private void recurseLoadCachedUrlSets(CachedUrlSet cus, TreeMap nodeMap) {
-    // get the nodeState for this cus
-    NodeState state = new NodeStateImpl(cus, new CrawlState(
-        CrawlState.NEW_CONTENT_CRAWL, CrawlState.FINISHED, 0), new ArrayList(),
-        repository);
-    nodeMap.put(getCusKey(cus), state);
+    // add the nodeState for this cus
+    addNewNodeState(cus, nodeMap);
     // recurse the set's children
     Iterator children = cus.flatSetIterator();
     while (children.hasNext()) {
@@ -211,12 +243,27 @@ public class NodeManagerImpl implements NodeManager {
     }
   }
 
-  private String getAuKey(ArchivalUnit au) {
+  private void addNewNodeState(CachedUrlSet cus, TreeMap nodeMap) {
+    NodeState state = new NodeStateImpl(cus, new CrawlState(-1,
+        CrawlState.FINISHED, 0), new ArrayList(), repository);
+    nodeMap.put(getCusKey(cus), state);
+  }
+
+  private void addNewNodeState(CachedUrlSet cus) {
+    TreeMap nodeMap = (TreeMap)auMaps.get(getAuKey(cus.getArchivalUnit()));
+    addNewNodeState(cus, nodeMap);
+  }
+
+  static String getAuKey(ArchivalUnit au) {
     return au.getPluginId() + ":" + au.getAUId();
   }
 
-  private String getCusKey(CachedUrlSet cus) {
-    return (String)cus.getSpec().getPrefixList().get(0);
+  static String getCusKey(CachedUrlSet cus) {
+    String key = (String)cus.getSpec().getPrefixList().get(0);
+    if (key.endsWith(File.separator)) {
+      key = key.substring(0, key.length()-1);
+    }
+    return key;
   }
 
   private void updateState(NodeState state, Poll.VoteTally results) {
@@ -252,16 +299,19 @@ public class NodeManagerImpl implements NodeManager {
         // if repair poll, we're repaired
         pollState.status = PollState.REPAIRED;
       }
+      closePoll(pollState, results.duration, results.pollVotes, nodeState);
       updateReputations(results);
     } else {
       // if disagree
       if (pollState.getStatus() == PollState.REPAIRING) {
         // if repair poll, can't be repaired
         pollState.status = PollState.UNREPAIRABLE;
+        closePoll(pollState, results.duration, results.pollVotes, nodeState);
         updateReputations(results);
       } else if (isInternalNode(nodeState)) {
         // if internal node, we need to call a name poll
         pollState.status = PollState.LOST;
+        closePoll(pollState, results.duration, results.pollVotes, nodeState);
         long duration = calculateDuration(nodeState.getCachedUrlSet(), false);
         try {
           PollManager.getPollManager().makePollRequest(results.getUrl(),
@@ -302,24 +352,28 @@ public class NodeManagerImpl implements NodeManager {
         // if poll is not mine stop - set to WON
         pollState.status = PollState.WON;
       }
+      closePoll(pollState, results.duration, results.pollVotes, nodeState);
     } else {
       // if disagree
       pollState.status = PollState.REPAIRING;
-      // iterate through master list
       Iterator masterIt = results.getEntries();
-      // compare against my list
       Iterator localIt = nodeState.getCachedUrlSet().flatSetIterator();
       Set localSet = createUrlSetFromCusIterator(localIt);
       ArchivalUnit au = nodeState.getCachedUrlSet().getArchivalUnit();
+      // iterate through master list
       while (masterIt.hasNext()) {
         String url = (String)masterIt.next();
+        // compare against my list
         if (localSet.contains(url)) {
           // removing from the set to leave only files for deletion
           localSet.remove(url);
         } else {
           // if not found locally, fetch
           try {
-            repairNode(au.makeCachedUrlSet(url, null));
+            CachedUrlSet newCus = au.makeCachedUrlSet(url, null);
+            repairNode(newCus);
+            //add to NodeState list
+            addNewNodeState(newCus);
           } catch (Exception e) {
             logger.error("Couldn't fetch new node.", e);
             //XXX schedule something
@@ -331,14 +385,25 @@ public class NodeManagerImpl implements NodeManager {
         // for extra items - deletion
         String url = (String)localIt.next();
         try {
-          deleteNode(au.makeCachedUrlSet(url, null));
+          CachedUrlSet oldCus = au.makeCachedUrlSet(url, null);
+          deleteNode(oldCus);
+          //set crawl status to DELETED
+          NodeState oldState = getNodeState(oldCus);
+          oldState.getCrawlState().type = CrawlState.NODE_DELETED;
         } catch (Exception e) {
           logger.error("Couldn't delete node.", e);
           //XXX schedule something
         }
       }
       pollState.status = PollState.REPAIRED;
+      closePoll(pollState, results.duration, results.pollVotes, nodeState);
     }
+  }
+
+  private void closePoll(PollState pollState, long duration, Collection votes,
+                         NodeState nodeState) {
+    PollHistory history = new PollHistory(pollState, duration, votes);
+    ((NodeStateImpl)nodeState).closeActivePoll(history);
   }
 
   private PollState getPollState(NodeState state, Poll.VoteTally results) {
@@ -358,7 +423,7 @@ public class NodeManagerImpl implements NodeManager {
     return children.hasNext();
   }
 
-  private int mapResultsErrorToPollError(int resultsErr) {
+  static int mapResultsErrorToPollError(int resultsErr) {
     switch (resultsErr) {
       case Poll.ERR_HASHING:
         return PollState.ERR_HASHING;
@@ -374,13 +439,12 @@ public class NodeManagerImpl implements NodeManager {
 
   private void repairNode(CachedUrlSet cus) throws IOException {
     // fetch new version; automatically backs up old version
-    String url = (String)cus.getSpec().getPrefixList().get(0);
-    cus.makeUrlCacher(url).cache();
+    cus.makeUrlCacher(getCusKey(cus)).cache();
   }
 
   private void deleteNode(CachedUrlSet cus) throws IOException {
     // delete the node from the LockssRepository
-    String url = (String)cus.getSpec().getPrefixList().get(0);
+    String url = getCusKey(cus);
     //XXX change to get from RunDaemon
     LockssRepository repository = LockssRepositoryImpl.repositoryFactory(cus.getArchivalUnit());
     repository.deleteNode(url);
@@ -391,7 +455,7 @@ public class NodeManagerImpl implements NodeManager {
     Iterator children = state.getCachedUrlSet().flatSetIterator();
     while (children.hasNext()) {
       CachedUrlSet child = (CachedUrlSet)children.next();
-      String url = (String)child.getSpec().getPrefixList().get(0);
+      String url = getCusKey(child);
       long duration = calculateDuration(child, true);
       PollManager.getPollManager().makePollRequest(url, null,
           LcapMessage.CONTENT_POLL_REQ, duration);
@@ -420,7 +484,7 @@ public class NodeManagerImpl implements NodeManager {
     Set set = new HashSet();
     while (cusIt.hasNext()) {
       CachedUrlSet cus = (CachedUrlSet)cusIt.next();
-      set.add(cus.getSpec().getPrefixList().get(0));
+      set.add(getCusKey(cus));
     }
     return set;
   }

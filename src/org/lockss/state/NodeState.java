@@ -1,5 +1,5 @@
 /*
- * $Id: NodeState.java,v 1.2 2002-12-13 23:51:32 aalto Exp $
+ * $Id: NodeState.java,v 1.3 2003-01-16 01:44:45 aalto Exp $
  */
 
 /*
@@ -48,7 +48,8 @@ public interface NodeState {
   public CachedUrlSet getCachedUrlSet();
 
   /**
-   * Returns the current crawl state.
+   * Returns the current crawl state.  If the node has been deleted, it will
+   * have a CrawlState with type 'NODE_DELETED'.
    * @return a CrawlState
    */
   public CrawlState getCrawlState();

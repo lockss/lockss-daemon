@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrlSet.java,v 1.12 2003-01-05 18:13:44 tal Exp $
+ * $Id: MockCachedUrlSet.java,v 1.13 2003-01-16 01:44:45 aalto Exp $
  */
 
 /*
@@ -77,7 +77,7 @@ public class MockCachedUrlSet implements CachedUrlSet {
   }
 
   public boolean containsUrl(String url) {
-    return urls.contains(url);
+    return url.startsWith((String)spec.getPrefixList().get(0));
   }
 
   public boolean isCached(String url) {
@@ -166,7 +166,7 @@ public class MockCachedUrlSet implements CachedUrlSet {
    * @param shouldCache whether this url should say to cache it or not
    * @param props Properties to be associated with this url
    */
-  public void addUrl(String source, String url, 
+  public void addUrl(String source, String url,
 		     boolean exists, boolean shouldCache,
 		     Properties props) {
     MockCachedUrl cu = new MockCachedUrl(url);
@@ -192,7 +192,7 @@ public class MockCachedUrlSet implements CachedUrlSet {
     addUrl(source, url, false, true);
   }
 
-  public void addUrl(String source, String url, 
+  public void addUrl(String source, String url,
 		     boolean exists, boolean shouldCache) {
     Properties props = new Properties();
     props.setProperty("content-type", "text/html");
