@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedPlugin.java,v 1.13 2003-08-02 00:16:04 eaalto Exp $
+ * $Id: SimulatedPlugin.java,v 1.14 2003-08-06 06:29:18 tlipkis Exp $
  */
 
 /*
@@ -150,7 +150,8 @@ public class SimulatedPlugin extends BasePlugin implements PluginTestable {
    * @return a List of Strings
    */
   public List getSupportedTitles() {
-    return ListUtil.list("SimulatedSupportedTitle");
+    return ListUtil.list("SimulatedSupportedTitle",
+			 "odd </html>chars");
   }
 
   /**
