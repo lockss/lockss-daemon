@@ -1,5 +1,5 @@
 /*
- * $Id: LcapRouter.java,v 1.11 2003-04-02 02:04:55 tal Exp $
+ * $Id: LcapRouter.java,v 1.12 2003-04-02 02:41:53 tal Exp $
  */
 
 /*
@@ -315,7 +315,7 @@ public class LcapRouter extends BaseLockssManager {
    */
   void doUnicast(LockssDatagram dg, RateLimiter limiter,
 		 InetAddress sender, InetAddress originator) {
-    Set partners = partnerList.getPartners();
+    Collection partners = partnerList.getPartners();
     if (partners.contains(getLocalIdentityAddr())) {
       log.warning("Local IP found in partner list: " + getLocalIdentityAddr());
       partners.remove(getLocalIdentityAddr());
