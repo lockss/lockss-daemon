@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.138 2003-06-25 21:16:34 eaalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.139 2003-06-26 01:05:56 eaalto Exp $
  */
 
 /*
@@ -516,7 +516,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
   boolean handleWrongNames(Iterator masterIt, List localList, NodeState nodeState,
                            PollTally results) {
     // iterate through master list
-    boolean repairMarked = false;
+    List repairList = new ArrayList();
     while (masterIt.hasNext()) {
       PollTally.NameListEntry entry =
           (PollTally.NameListEntry) masterIt.next();
@@ -544,16 +544,12 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
             // doesn't have content, and should, so repair
             logger.debug("marking content-less node for repair: " + url);
             CachedUrlSet faultyCus = getChildCus(url, nodeState);
-            if (!repairMarked) {
-              // run a repair crawl
-              markNodeForRepair(faultyCus, results.getPollKey());
-              // only try one repair per poll
-              //XXX instead, allow multi-URL repair crawls and schedule one
-              // from a list of repairs
-              repairMarked = true;
-            } else {
-              logger.debug("Skipping repair crawl on '" + faultyCus.getUrl() +
-                            "' due to limit of one repair per poll.");
+            // add to repair crawl list
+            try {
+              repairList.add(new URL(faultyCus.getUrl()));
+            } catch (MalformedURLException mue) {
+              // this shouldn't happen
+              // if it does, let the tree walk catch the repair
             }
           }
         } else {
@@ -570,17 +566,12 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
         // check content status, and only mark for repair if
         // should have content.  Else just create in repository.
         if (hasContent) {
-          // only one content repair per name poll
-          if (!repairMarked) {
-            // run a repair crawl
-            markNodeForRepair(newCus, results.getPollKey());
-            // only try one repair per poll
-            //XXX instead, allow multi-URL repair crawls and schedule one
-            // from a list of repairs
-            repairMarked = true;
-          } else {
-            logger.debug("Skipping repair crawl on '" + newCus.getUrl() +
-                          "' due to limit of one repair per poll.");
+          // add to repair crawl list
+          try {
+            repairList.add(new URL(newCus.getUrl()));
+          } catch (MalformedURLException mue) {
+            // this shouldn't happen
+            // if it does, let the tree walk catch the repair
           }
         } else {
           // create node in repository and (eventually) call name poll on it
@@ -594,6 +585,11 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
           }
         }
       }
+    }
+
+    // schedule repair crawls if needed
+    if (repairList.size() > 0) {
+      markNodesForRepair(repairList, results.getPollKey());
     }
 
     // check for deletion
@@ -616,7 +612,9 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
         // the treewalk will fix this eventually
       }
     }
-    return repairMarked;
+
+    // return false if any repairs were scheduled
+    return (repairList.size() > 0);
   }
 
   private CachedUrlSet getChildCus(String url, NodeState nodeState) {
@@ -967,7 +965,13 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
           logger.debug2("scheduling repair");
           //XXX make new poll ahead of time?
           String pollKey = (results==null ? null : results.getPollKey());
-          markNodeForRepair(nodeState.getCachedUrlSet(), pollKey);
+          try {
+            markNodeForRepair(new URL(nodeState.getCachedUrlSet().getUrl()),
+                              pollKey);
+          } catch (MalformedURLException mue) {
+            // this shouldn't happen
+            // if it does, let the tree walk catch the repair
+          }
         }
         return true;
       case NodeState.UNREPAIRABLE_SNCUSS:
@@ -1280,24 +1284,26 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     return PollState.ERR_UNDEFINED;
   }
 
+  private void markNodeForRepair(URL url, String pollKey) {
+    markNodesForRepair(ListUtil.list(url), pollKey);
+  }
 
-  private void markNodeForRepair(CachedUrlSet cus, String pollKey) {
+  private void markNodesForRepair(List urlList, String pollKey) {
     if (pollKey!=null) {
       logger.debug2("suspending poll " + pollKey);
       pollManager.suspendPoll(pollKey);
     } else {
       logger.debug2("no poll found to suspend");
     }
-    logger.debug2("scheduling repair");
-    try {
-      theDaemon.getCrawlManager().scheduleRepair(managedAu,
-                                                 new URL(cus.getUrl()),
-                                                 new ContentRepairCallback(),
-                                                 pollKey);
-    } catch (MalformedURLException mue) {
-      // this shouldn't happen
-      // if it does, let the tree walk catch the repair
+
+    if (urlList.size() == 1) {
+      logger.debug2("scheduling repair");
+    } else {
+      logger.debug2("scheduling "+urlList.size()+" repairs");
     }
+    theDaemon.getCrawlManager().scheduleRepair(managedAu, urlList,
+                                               new ContentRepairCallback(),
+                                               pollKey);
   }
 
   private void deleteNode(CachedUrlSet cus) throws IOException {
