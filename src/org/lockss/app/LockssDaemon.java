@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.4 2003-02-11 23:57:01 claire Exp $
+ * $Id: LockssDaemon.java,v 1.5 2003-02-13 00:00:54 aalto Exp $
  */
 
 /*
@@ -209,7 +209,7 @@ public class LockssDaemon {
   /**
    * return the proxy handler instance
    * @return the ProxyHandler
-   * @throws IllegalAccessException if the manager is not available.
+   * @throws IllegalArgumentException if the manager is not available.
   */
   public ProxyHandler getProxyHandler() {
     return (ProxyHandler) getManager(PROXY_HANDLER);
