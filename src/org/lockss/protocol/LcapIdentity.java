@@ -1,5 +1,5 @@
 /*
- * $Id: LcapIdentity.java,v 1.17 2003-06-20 22:34:52 claire Exp $
+ * $Id: LcapIdentity.java,v 1.18 2003-09-05 02:45:20 dshr Exp $
  */
 
 /*
@@ -78,7 +78,8 @@ public class LcapIdentity implements Serializable {
 
   static Logger theLog=Logger.getLogger("Identity");
 
-  LcapIdentity(String idKey, int reputation) throws UnknownHostException {
+  public LcapIdentity(String idKey, int reputation)
+    throws UnknownHostException {
     m_idKey = idKey;
     m_reputation = reputation;
     m_address = stringToAddr(idKey);

@@ -1,5 +1,5 @@
 /*
- * $Id: MBF2.java,v 1.7 2003-08-29 03:01:10 dshr Exp $
+ * $Id: MBF2.java,v 1.8 2003-09-05 02:45:20 dshr Exp $
  */
 
 /*
@@ -242,7 +242,18 @@ public class MBF2 extends MemoryBoundFunctionSPI {
     BigInteger hashOfA = new BigInteger(hasher.digest(A));
     lowBit = hashOfA.getLowestSetBit();
     logger.debug("Finish " + k + " at " + c + " lowBit " + lowBit +
-		" >= " + ourE);
+		" >= " + ourE + " - " + n);
+    // Remember the final value - XXX actually the next value that
+    // would have been fetched if the path had continued
+    boolean proofFailed = false;
+    traceArrayList.add(new Integer(wordAt(T, c)));
+    if (mbf.proof == null) {
+      logger.debug("numPath " + numPath + " max " + mbf.maxPath +
+		   " proof null ");
+    } else {
+      logger.debug("numPath " + numPath + " max " + mbf.maxPath +
+		   " length " + mbf.proof.length);
+    }
     if (mbf.verify) {
       if (mbf.proof.length > 0) {
 	// We are verifying a non-empty proof - any mis-match means invalid.
@@ -254,7 +265,7 @@ public class MBF2 extends MemoryBoundFunctionSPI {
 	    logger.debug("\t" + i + "\t" + mbf.proof[i]);
 	  }
 	  mbf.finished = true;
-	  mbf.proof = null;
+	  proofFailed = true;
 	} else if (numPath >= mbf.maxPath || numPath >= mbf.proof.length) {
 	  // XXX should check inter-proof spaces too
 	  mbf.finished = true;
@@ -269,7 +280,7 @@ public class MBF2 extends MemoryBoundFunctionSPI {
 	if (match()) {
 	  logger.debug("proof invalid");
 	  mbf.finished = true;
-	  mbf.proof = null;
+	  proofFailed = true;
 	} else if (k >= mbf.e) {
 	  mbf.finished = true;
 	  logger.debug("proof valid");
@@ -277,9 +288,6 @@ public class MBF2 extends MemoryBoundFunctionSPI {
 	  pathIndex = -1;
       }
     } else {
-      // Remember the final value - XXX actually the next value that
-      // would have been fetched if the path had continued
-      traceArrayList.add(new Integer(wordAt(T, c)));
       // We are generating - accumulate matches
       if (match()) {
 	// Its a match.
@@ -288,28 +296,20 @@ public class MBF2 extends MemoryBoundFunctionSPI {
       if (k >= mbf.e) {
 	mbf.finished = true;
 	Object[] proofEntries = ret.toArray();
-	Object[] traceEntries = traceArrayList.toArray();
 	mbf.proof = new int[proofEntries.length];
 	if (proofEntries.length > 0) {
 	  // Non-empty proof
-	  mbf.trace = new int[proofEntries.length];
 	  for (int i = 0; i < proofEntries.length; i++) {
 	    int proofEntry = ((Integer)proofEntries[i]).intValue();
 	    mbf.proof[i] = proofEntry;
-	    if (proofEntry <= 0 || proofEntry > traceEntries.length)
+	    if (proofEntry <= 0 || proofEntry > traceArrayList.size())
 	      throw new MemoryBoundFunctionException("proof entry " +
 						     proofEntry +
 						     " range " +
 						     proofEntries.length +
 						     " / " +
-						     traceEntries.length);
-	    mbf.trace[i] = ((Integer)traceEntries[proofEntry-1]).intValue();
+						     traceArrayList.size());
 	  }
-	} else {
-	  // Empty proof
-	  mbf.trace = new int[traceEntries.length];
-	  for (int i = 0; i <traceEntries.length; i++)
-	    mbf.trace[i] = ((Integer)traceEntries[i]).intValue();
 	}
 	logger.debug("proof geenrated");
 	for (int i = 0; i < mbf.proof.length; i++) {
@@ -317,6 +317,43 @@ public class MBF2 extends MemoryBoundFunctionSPI {
 	}
       } else
 	pathIndex = -1;
+    }
+    if (mbf.finished && !proofFailed) {
+      int[] proofs = mbf.proof;
+      Object[] traceEntries = traceArrayList.toArray();
+      if (proofs.length > 0) {
+	// Non-empty proof
+	mbf.trace = new int[proofs.length];
+	for (int i = 0; i < proofs.length; i++) {
+	  logger.debug("proof entry " + i + " is " + proofs[i]);
+	  int proofEntry = -1;
+	  // If we are verifying,  traceEntry only contains entries
+	  // corresponding to valid paths.  If we are generating,  it
+	  // contains entries for every index value.
+	  if (mbf.verify)
+	    proofEntry = i + 1;
+	  else
+	    proofEntry = proofs[i];
+	  if (proofEntry <= 0 || proofEntry > traceEntries.length)
+	    throw new MemoryBoundFunctionException("proof trace entry " +
+						   proofEntry +
+						   " range " +
+						   proofs.length +
+						   " / " +
+						   traceEntries.length);
+	  mbf.trace[i] = ((Integer)traceEntries[proofEntry-1]).intValue();
+	  logger.debug("trace entry " + i + " is " + mbf.trace[i]);
+	}
+      } else {
+	// Empty proof
+	mbf.trace = new int[traceEntries.length];
+	for (int i = 0; i <traceEntries.length; i++) {
+	  mbf.trace[i] = ((Integer)traceEntries[i]).intValue();
+	  logger.debug("trace entry " + i + " is " + mbf.trace[i]);
+	}
+      }
+      if (mbf.verify && proofFailed)
+	mbf.proof = null;
     }
   }
 

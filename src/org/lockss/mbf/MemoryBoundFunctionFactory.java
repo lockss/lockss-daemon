@@ -1,10 +1,10 @@
 /*
- * $Id: MemoryBoundFunctionFactory.java,v 1.1 2003-08-11 18:44:52 dshr Exp $
+ * $Id: MemoryBoundFunctionFactory.java,v 1.2 2003-09-05 02:45:20 dshr Exp $
  */
 
 /*
 
-Copyright (c) 2000-2002 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2003 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

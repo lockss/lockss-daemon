@@ -1,5 +1,5 @@
 /*
- * $Id: MemoryBoundFunctionVoteFactory.java,v 1.1 2003-08-24 22:38:25 dshr Exp $
+ * $Id: MemoryBoundFunctionVoteFactory.java,v 1.2 2003-09-05 02:45:20 dshr Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.mbf;
 import java.security.NoSuchAlgorithmException;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
+import org.lockss.protocol.*;
 
 /**
  * @author David S. H. Rosenthal
@@ -84,20 +85,24 @@ public class MemoryBoundFunctionVoteFactory {
    * @param nVal a byte array containing the nonce
    * @param eVal the effort sizer (# of low-order zeros in destination)
    * @param cusVal the CachedUrlSet to be hashed as part of the vote
+   * @param pollID the byte array ID of the poll
+   * @param voterID the LcapIdentity of the voter
    * @throws MemoryBoundFunctionException failure to create object
    * @throws NoSuchAlgorithmException no such implementation
    */
   public MemoryBoundFunctionVote generator(MemoryBoundFunctionFactory fact,
 					   byte[] nVal,
 					   int eVal,
-					   CachedUrlSet cusVal)
+					   CachedUrlSet cusVal,
+					   byte[] pollID,
+					   LcapIdentity voterID)
     throws NoSuchAlgorithmException, MemoryBoundFunctionException {
     MemoryBoundFunctionVote ret = null;
     try {
       if (classToUse == null)
 	throw new NoSuchAlgorithmException();
       ret = (MemoryBoundFunctionVote) classToUse.newInstance();
-      ret.setupGeneration(fact, nVal, eVal, cusVal);
+      ret.setupGeneration(fact, nVal, eVal, cusVal, pollID, voterID);
     } catch (InstantiationException ex) {
       throw new MemoryBoundFunctionException(implToUse + ": " + ex.toString());
     } catch (IllegalAccessException ex) {
@@ -115,6 +120,8 @@ public class MemoryBoundFunctionVoteFactory {
    * @param cusVal the CachedUrlSet to be hashed as part of the vote
    * @param sVals the array of arrray of ints forming the proof
    * @param hashVals the array of hashes
+   * @param pollID the byte array ID of the poll
+   * @param voterID the LcapIdentity of the voter
    * @throws MemoryBoundFunctionException failure to create object
    * @throws NoSuchAlgorithmException no such implementation
    */
@@ -123,14 +130,17 @@ public class MemoryBoundFunctionVoteFactory {
 					  int eVal,
 					  CachedUrlSet cusVal,
 					  int[][] sVals,
-					  byte[][] hashVals)
+					  byte[][] hashVals,
+					  byte[] pollID,
+					  LcapIdentity voterID)
     throws NoSuchAlgorithmException, MemoryBoundFunctionException {
     MemoryBoundFunctionVote ret = null;
     try {
       if (classToUse == null)
 	throw new NoSuchAlgorithmException();
       ret = (MemoryBoundFunctionVote) classToUse.newInstance();
-      ret.setupVerification(fact, nVal, eVal, cusVal, sVals, hashVals);
+      ret.setupVerification(fact, nVal, eVal, cusVal, sVals, hashVals,
+			    pollID, voterID);
     } catch (InstantiationException ex) {
       throw new MemoryBoundFunctionException(implToUse + ": " + ex.toString());
     } catch (IllegalAccessException ex) {

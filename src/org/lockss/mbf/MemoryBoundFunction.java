@@ -1,5 +1,5 @@
 /*
- * $Id: MemoryBoundFunction.java,v 1.9 2003-08-29 03:01:10 dshr Exp $
+ * $Id: MemoryBoundFunction.java,v 1.10 2003-09-05 02:45:20 dshr Exp $
  */
 
 /*
@@ -113,7 +113,7 @@ public class MemoryBoundFunction {
 
   /**
    * Obtain the trace of the MBF.  If this object has not yet finished,
-   * or is verifying a proof throw MemoryBoundFunction Exception.
+   * throw MemoryBoundFunction Exception.
    * The array returned contains the final value fetched from the
    * basis array for each path included in the proof (for a non-empty
    * proof) or for each path searched (for an empty proof).
@@ -123,8 +123,6 @@ public class MemoryBoundFunction {
   public int[] traceArray() throws MemoryBoundFunctionException {
     if (!finished)
       throw new MemoryBoundFunctionException("not finished");
-    if (verify)
-      throw new MemoryBoundFunctionException("not generating");
     return (trace);
   }
 

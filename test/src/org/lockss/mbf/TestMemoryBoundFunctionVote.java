@@ -1,5 +1,5 @@
 /*
- * $Id: TestMemoryBoundFunctionVote.java,v 1.7 2003-08-29 03:01:10 dshr Exp $
+ * $Id: TestMemoryBoundFunctionVote.java,v 1.8 2003-09-05 02:45:20 dshr Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.mbf;
 
+import java.net.UnknownHostException;
 import java.io.*;
 import java.security.*;
 import java.util.*;
@@ -39,6 +40,8 @@ import org.lockss.test.*;
 import org.lockss.plugin.*;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
+import org.lockss.util.*;
+import org.lockss.protocol.*;
 
 /**
  * JUnitTest case for class: org.lockss.mbf.MemoryBoundFunctionVote and
@@ -72,6 +75,8 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
   };
   private static byte[] goodContent = null;
   private static byte[] badContent = null;
+  private static byte[] pollID = null;
+  private static LcapIdentity voterID = null;
 
   protected void setUp() throws Exception {
     super.setUp();
@@ -122,6 +127,13 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
 	}
       }
     }
+    pollID = new byte[20];
+    rand.nextBytes(pollID);
+    try {
+      voterID = new LcapIdentity("127.0.0.1", 1);
+    } catch (UnknownHostException ex) {
+      fail("LcapIdentity throws: " + ex.toString());
+    }
   }
 
   /** tearDown method for test case
@@ -142,7 +154,12 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
       for (int i = 0; i < MBFfactory.length; i++) {
 	try {
 	  MemoryBoundFunctionVote mbfv =
-	    MBFVfactory[j].generator(MBFfactory[i], nonce, 3, cus);
+	    MBFVfactory[j].generator(MBFfactory[i],
+				     nonce,
+				     3,
+				     cus,
+				     pollID,
+				     voterID);
 	} catch (MemoryBoundFunctionException ex) {
 	  fail("MBFVfactory for " + MBFVnames[j] + ":" + MBFnames[i] +
 	       " threw " + ex.toString());
@@ -159,8 +176,14 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
       for (int i = 0; i < MBFfactory.length; i++) {
 	try {
 	  MemoryBoundFunctionVote mbfv =
-	    MBFVfactory[j].verifier(MBFfactory[i], nonce, 3,
-				    cus, sVals, hashVals);
+	    MBFVfactory[j].verifier(MBFfactory[i],
+				    nonce,
+				    3,
+				    cus,
+				    sVals,
+				    hashVals,
+				    pollID,
+				    voterID);
 	} catch (MemoryBoundFunctionException ex) {
 	  fail("MBFVfactory for " + MBFVnames[j] + ":" + MBFnames[i] +
 	       " threw " + ex.toString());
@@ -342,7 +365,12 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
       fail("generator() - no CUS");
     MemoryBoundFunctionVote ret = null;
     try {
-      ret = MBFVfactory[j].generator(MBFfactory[i], nonce, 3, cus);
+      ret = MBFVfactory[j].generator(MBFfactory[i],
+				     nonce,
+				     3,
+				     cus,
+				     pollID,
+				     voterID);
     } catch (MemoryBoundFunctionException ex) {
       fail("MBFVfactory for " + MBFVnames[j] + ":" + MBFnames[i] +
 	   " threw " + ex.toString());
@@ -399,8 +427,14 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
 				   byte[][] hashArray) {
     MemoryBoundFunctionVote ret = null;
     try {
-      ret = MBFVfactory[j].verifier(MBFfactory[i], nonce, 3, cus,
-				    proofArray, hashArray);
+      ret = MBFVfactory[j].verifier(MBFfactory[i],
+				    nonce,
+				    3,
+				    cus,
+				    proofArray,
+				    hashArray,
+				    pollID,
+				    voterID);
     } catch (MemoryBoundFunctionException ex) {
       fail("MBFVfactory for " + MBFVnames[j] + ":" + MBFnames[i] +
 	   " threw " + ex.toString());
@@ -440,7 +474,7 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
     {
       ArchivalUnit au = cus.getArchivalUnit();
       if (au == null)
-	fail("generator() - null AU");
+	fail("verifier() - null AU");
       String auid = au.getAUId();
       if (auid == null)
 	fail("verifier() - null auID " + MBFnames[i] + "," + MBFVnames[j]);

@@ -1,5 +1,5 @@
 /*
- * $Id: MemoryBoundFunctionVote.java,v 1.6 2003-08-28 16:46:14 dshr Exp $
+ * $Id: MemoryBoundFunctionVote.java,v 1.7 2003-09-05 02:45:20 dshr Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ import java.io.*;
 import java.util.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
+import org.lockss.protocol.*;
 
 /**
  * @author David S. H. Rosenthal
@@ -57,6 +58,8 @@ public abstract class MemoryBoundFunctionVote {
   protected boolean agreeing;
   protected int numBlocks;
   protected MemoryBoundFunctionFactory factory;
+  protected byte[] poll;
+  protected byte[] voter;
 
   /**
    * Public constructor for an object that will compute a vote
@@ -72,16 +75,20 @@ public abstract class MemoryBoundFunctionVote {
    * @param nVal a byte array containing the nonce
    * @param eVal the effort sizer (# of low-order zeros in destination)
    * @param cus the CachedUrlSet containing the content to be voted on
+   * @param pollID the byte array ID of the poll
+   * @param voterID the LcapIdentity of the voter
    *
    */
   protected void setupGeneration(MemoryBoundFunctionFactory fact,
-			      byte[] nVal,
-			      int eVal,
-			      CachedUrlSet cusVal)
+				 byte[] nVal,
+				 int eVal,
+				 CachedUrlSet cusVal,
+				 byte[] pollID,
+				 LcapIdentity voterID)
     throws MemoryBoundFunctionException {
     if (fact == null)
       throw new MemoryBoundFunctionException("no factory");
-    setup(fact, nVal, eVal, cusVal);
+    setup(fact, nVal, eVal, cusVal, pollID, voterID);
     proofs = new ArrayList();
     hashes = new ArrayList();
     verify = false;
@@ -98,18 +105,22 @@ public abstract class MemoryBoundFunctionVote {
    * @param cus the CachedUrlSet containing the content to be voted on
    * @param sVals the starting points chosen by the prover for each block
    * @param hashes the hashes of each block
+   * @param pollID the byte array ID of the poll
+   * @param voterID the LcapIdentity of the voter
    * 
    */
   protected void setupVerification(MemoryBoundFunctionFactory fact,
-				byte[] nVal,
-				int eVal,
-				CachedUrlSet cusVal,
-				int[][] sVals,
-				byte[][] hashVals)
+				   byte[] nVal,
+				   int eVal,
+				   CachedUrlSet cusVal,
+				   int[][] sVals,
+				   byte[][] hashVals,
+				   byte[] pollID,
+				   LcapIdentity voterID)
     throws MemoryBoundFunctionException {
     if (fact == null)
       throw new MemoryBoundFunctionException("no factory");
-    setup(fact, nVal, eVal, cusVal);
+    setup(fact, nVal, eVal, cusVal, pollID, voterID);
     verify = true;
     if (sVals.length != hashVals.length)
       throw new MemoryBoundFunctionException("length mismatch");
@@ -123,7 +134,11 @@ public abstract class MemoryBoundFunctionVote {
   }
 
   private void setup(MemoryBoundFunctionFactory fact,
-		     byte[] nVal, int eVal, CachedUrlSet cusVal) {
+		     byte[] nVal,
+		     int eVal,
+		     CachedUrlSet cusVal,
+		     byte[] pollID,
+		     LcapIdentity voterID) {
     factory = fact;
     nonce = nVal;
     e = eVal;
@@ -132,6 +147,8 @@ public abstract class MemoryBoundFunctionVote {
     valid = true;
     agreeing = true;
     cus = cusVal;
+    poll = pollID;
+    voter = voterID.getIdKey().getBytes();
   }
 
   /**
