@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.79 2003-04-01 01:02:57 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.80 2003-04-01 03:10:47 claire Exp $
  */
 
 /*
@@ -53,7 +53,7 @@ import org.lockss.daemon.status.*;
 /**
  * Implementation of the NodeManager.
  */
-public class NodeManagerImpl implements NodeManager {
+public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
   /**
    * This parameter indicates the size of the {@link NodeStateCache} used by the
    * node manager.
@@ -61,12 +61,9 @@ public class NodeManagerImpl implements NodeManager {
   public static final String PARAM_NODESTATE_CACHE_SIZE =
       Configuration.PREFIX + "state.cache.size";
   static final int DEFAULT_MAP_SIZE = 100;
-
-  private static LockssDaemon theDaemon;
-  private NodeManager theManager = null;
   static HistoryRepository historyRepo;
   private LockssRepository lockssRepo;
-  PollManager pollManager;
+  static PollManager pollManager;
 
   ArchivalUnit managedAu;
   AuState auState;
@@ -75,27 +72,8 @@ public class NodeManagerImpl implements NodeManager {
   private static Logger logger = Logger.getLogger("NodeManager");
   TreeWalkHandler treeWalkHandler;
 
-  Configuration.Callback configCallback;
-
   NodeManagerImpl(ArchivalUnit au) {
     managedAu = au;
-  }
-
-  /**
-   * init the plugin manager.
-   * @param daemon the LockssDaemon instance
-   * @throws LockssDaemonException if we already instantiated this manager
-   * @see org.lockss.app.LockssManager#initService(LockssDaemon daemon)
-   */
-  public void initService(LockssDaemon daemon) throws LockssDaemonException {
-    logger.debug("NodeManager being inited");
-    if (theManager == null) {
-      theDaemon = daemon;
-      theManager = this;
-    } else {
-      throw new LockssDaemonException("Multiple Instantiation.");
-    }
-    logger.debug("NodeManager sucessfully initied");
   }
 
   /**
@@ -103,17 +81,9 @@ public class NodeManagerImpl implements NodeManager {
    * @see org.lockss.app.LockssManager#startService()
    */
   public void startService() {
+    super.startService();
     logger.debug("NodeManager being started");
-
-    configCallback = new Configuration.Callback() {
-        public void configurationChanged(Configuration newConfig,
-                                         Configuration oldConfig,
-                                         Set changedKeys) {
-          setConfig(newConfig, oldConfig);
-        }
-      };
-    Configuration.registerConfigurationCallback(configCallback);
-
+    registerDefaultConfigCallback();
     historyRepo = theDaemon.getHistoryRepository();
     lockssRepo = theDaemon.getLockssRepository(managedAu);
     pollManager = theDaemon.getPollManager();
@@ -138,14 +108,15 @@ public class NodeManagerImpl implements NodeManager {
       treeWalkHandler.end();
       treeWalkHandler = null;
     }
-    Configuration.unregisterConfigurationCallback(configCallback);
-    theManager = null;
+    super.stopService();
     logger.debug("NodeManager sucessfully stopped");
   }
 
-  private void setConfig(Configuration config, Configuration oldConfig) {
-    maxMapSize = config.getInt(this.PARAM_NODESTATE_CACHE_SIZE,
-                               DEFAULT_MAP_SIZE);
+
+  public void startTreeWalk() {
+    logger.info("Starting treewalk");
+    treeWalkHandler = new TreeWalkHandler(this, theDaemon.getCrawlManager());
+    treeWalkHandler.doTreeWalk();
   }
 
   public void startPoll(CachedUrlSet cus, PollTally state) {
@@ -214,90 +185,10 @@ public class NodeManagerImpl implements NodeManager {
     return auState;
   }
 
-  public Iterator getActiveCrawledNodes(CachedUrlSet cus) {
+  Iterator getEntries() {
     //XXX this only returns nodes currently in the LRUMap
     //XXX use snapshot method
-    Iterator entries = nodeCache.lruMap.entrySet().iterator();
-    Vector stateV = new Vector();
-    while (entries.hasNext()) {
-      Map.Entry entry = (Map.Entry)entries.next();
-      String key = (String)entry.getKey();
-      if (cus.containsUrl(key)) {
-        NodeState state = (NodeState)entry.getValue();
-        int status = state.getCrawlState().getStatus();
-        if ((status != CrawlState.FINISHED) &&
-            (status != CrawlState.NODE_DELETED)) {
-          stateV.addElement(state);
-        }
-      }
-    }
-    return stateV.iterator();
-  }
-
-  public Iterator getFilteredPolledNodes(CachedUrlSet cus, int filter) {
-    //XXX this only returns nodes currently in the LRUMap
-    Iterator entries = nodeCache.lruMap.entrySet().iterator();
-    Vector stateV = new Vector();
-    while (entries.hasNext()) {
-      Map.Entry entry = (Map.Entry)entries.next();
-      String key = (String)entry.getKey();
-      if (cus.containsUrl(key)) {
-        NodeState state = (NodeState)entry.getValue();
-        Iterator polls = state.getActivePolls();
-        while (polls.hasNext()) {
-          PollState pollState = (PollState)polls.next();
-          if ((pollState.getStatus() & filter) != 0) {
-            stateV.addElement(state);
-            break;
-          }
-        }
-      }
-    }
-    return stateV.iterator();
-  }
-
-  public Iterator getNodeHistories(CachedUrlSet cus, int maxNumber) {
-    //XXX this only returns nodes currently in the LRUMap
-    Iterator entries = nodeCache.lruMap.entrySet().iterator();
-    Vector historyV = new Vector();
-    while (entries.hasNext()) {
-      Map.Entry entry = (Map.Entry)entries.next();
-      String key = (String)entry.getKey();
-      if (cus.containsUrl(key)) {
-        NodeState state = (NodeState)entry.getValue();
-        Iterator pollHistories = state.getPollHistories();
-        while (pollHistories.hasNext()) {
-          PollHistory history = (PollHistory)pollHistories.next();
-          historyV.addElement(history);
-          if (historyV.size() >= maxNumber) {
-            return historyV.iterator();
-          }
-        }
-      }
-    }
-    return historyV.iterator();
-  }
-
-  public Iterator getNodeHistoriesSince(CachedUrlSet cus, Deadline since) {
-    //XXX this only returns nodes currently in the LRUMap
-    Iterator entries = nodeCache.lruMap.entrySet().iterator();
-    Vector historyV = new Vector();
-    while (entries.hasNext()) {
-      Map.Entry entry = (Map.Entry)entries.next();
-      String key = (String)entry.getKey();
-      if (cus.containsUrl(key)) {
-        NodeState state = (NodeState)entry.getValue();
-        Iterator pollHistories = state.getPollHistories();
-        while (pollHistories.hasNext()) {
-          PollHistory history = (PollHistory)pollHistories.next();
-          Deadline started = Deadline.at(history.getStartTime());
-          if (!started.before(since)) {
-            historyV.addElement(history);
-          }
-        }
-      }
-    }
-    return historyV.iterator();
+    return nodeCache.lruMap.entrySet().iterator();
   }
 
   void updateState(NodeState state, PollTally results) {
@@ -514,6 +405,13 @@ public class NodeManagerImpl implements NodeManager {
     return null;
   }
 
+  protected void setConfig(Configuration newConfig,
+                           Configuration oldConfig,
+                           Set changedKeys) {
+    maxMapSize = newConfig.getInt(PARAM_NODESTATE_CACHE_SIZE,
+                                  DEFAULT_MAP_SIZE);
+  }
+
   static int mapResultsErrorToPollError(int resultsErr) {
     switch (resultsErr) {
       case Poll.ERR_HASHING:
@@ -674,13 +572,7 @@ public class NodeManagerImpl implements NodeManager {
      */
     public void signalCrawlAttemptCompleted(boolean success, Object cookie) {
       logger.debug("Content crawl completed repair on " + cookie);
-      theDaemon.getPollManager().resumePoll(success, cookie);
+      pollManager.resumePoll(success, cookie);
     }
-  }
-
-  public void startTreeWalk() {
-    logger.info("Starting treewalk");
-    treeWalkHandler = new TreeWalkHandler(this, theDaemon.getCrawlManager());
-    treeWalkHandler.doTreeWalk();
   }
 }

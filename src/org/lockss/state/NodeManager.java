@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManager.java,v 1.18 2003-04-01 00:08:12 aalto Exp $
+ * $Id: NodeManager.java,v 1.19 2003-04-01 03:10:47 claire Exp $
  */
 
 /*
@@ -86,7 +86,7 @@ public interface NodeManager extends LockssManager {
    * @param cus the cached url set used to identify the top node
    * @return an Iterator of NodeStates
    */
-  public Iterator getActiveCrawledNodes(CachedUrlSet cus);
+ // public Iterator getActiveCrawledNodes(CachedUrlSet cus);
 
   /**
    * Returns an iterator of all node states in which a poll is running,
@@ -95,7 +95,7 @@ public interface NodeManager extends LockssManager {
    * @param filter the bitwise state filter
    * @return an Iterator of NodeStates
    */
-  public Iterator getFilteredPolledNodes(CachedUrlSet cus, int filter);
+  //public Iterator getFilteredPolledNodes(CachedUrlSet cus, int filter);
 
   /**
    * Returns an iterator of node poll histories for a CachedUrlSet, up to
@@ -104,7 +104,7 @@ public interface NodeManager extends LockssManager {
    * @param maxNumber the maximum number to fetch
    * @return an Iterator of PollHistory objects
    */
-  public Iterator getNodeHistories(CachedUrlSet cus, int maxNumber);
+ // public Iterator getNodeHistories(CachedUrlSet cus, int maxNumber);
 
   /**
    * Returns an iterator of the node poll histories for a CachedUrlSet since a
@@ -113,7 +113,7 @@ public interface NodeManager extends LockssManager {
    * @param since histories after this time (in ms)
    * @return an Iterator of PollHistory objects
    */
-  public Iterator getNodeHistoriesSince(CachedUrlSet cus, Deadline since);
+  //public Iterator getNodeHistoriesSince(CachedUrlSet cus, Deadline since);
 
   /**
    * Do one tree walk.  XXX this should probably be handled by making the
