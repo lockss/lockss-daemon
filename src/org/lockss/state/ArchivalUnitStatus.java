@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.27 2005-01-04 02:50:39 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.28 2005-01-07 09:22:57 tlipkis Exp $
  */
 
 /*
@@ -100,7 +100,10 @@ public class ArchivalUnitStatus
     private static final List columnDescriptors = ListUtil.list(
       new ColumnDescriptor("AuName", "Volume", ColumnDescriptor.TYPE_STRING),
 //       new ColumnDescriptor("AuNodeCount", "Nodes", ColumnDescriptor.TYPE_INT),
-      new ColumnDescriptor("AuSize", "Size", ColumnDescriptor.TYPE_INT),
+      new ColumnDescriptor("AuSize", "Content Size",
+			   ColumnDescriptor.TYPE_INT),
+      new ColumnDescriptor("DiskUsage", "Disk Usage (MB)",
+			   ColumnDescriptor.TYPE_FLOAT),
       new ColumnDescriptor("Peers", "Peers", ColumnDescriptor.TYPE_INT),
       new ColumnDescriptor("AuPolls", "Polls",
                            ColumnDescriptor.TYPE_STRING),
@@ -171,6 +174,7 @@ public class ArchivalUnitStatus
       rowMap.put("AuName", AuStatus.makeAuRef(au.getName(), au.getAuId()));
 //       rowMap.put("AuNodeCount", new Integer(-1));
       rowMap.put("AuSize", new Long(AuUtil.getAuContentSize(au)));
+      rowMap.put("DiskUsage", new Double(((double)AuUtil.getAuDiskUsage(au)) / (1024*1024)));
       rowMap.put("AuLastCrawl", new Long(auState.getLastCrawlTime()));
       rowMap.put("Peers", PeersAgreement.makeAuRef("peers", au.getAuId()));
       rowMap.put("AuPolls",
@@ -462,8 +466,13 @@ public class ArchivalUnitStatus
                                         au.getName()),
 //             new StatusTable.SummaryInfo("Nodes", ColumnDescriptor.TYPE_INT,
 //                                         new Integer(-1)),
-            new StatusTable.SummaryInfo("Size", ColumnDescriptor.TYPE_INT,
+            new StatusTable.SummaryInfo("Content Size",
+					ColumnDescriptor.TYPE_INT,
                                         new Long(AuUtil.getAuContentSize(au))),
+            new StatusTable.SummaryInfo("Disk Usage (MB)",
+					ColumnDescriptor.TYPE_FLOAT,
+                                        new Float(AuUtil.getAuContentSize(au) /
+						  (float)(1024 * 1024))),
             new StatusTable.SummaryInfo("Last Crawl Time",
                                         ColumnDescriptor.TYPE_DATE,
                                         new Long(state.getLastCrawlTime())),

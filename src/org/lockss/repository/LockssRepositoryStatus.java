@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryStatus.java,v 1.17 2005-01-05 09:46:13 tlipkis Exp $
+ * $Id: LockssRepositoryStatus.java,v 1.18 2005-01-07 09:23:12 tlipkis Exp $
  */
 
 /*
@@ -80,12 +80,15 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
   static class RepoStatusAccessor implements StatusAccessor {
     private static LockssDaemon daemon;
     private PluginManager pluginMgr;
+    private RepositoryManager repoMgr;
 
     private static final List columnDescriptors = ListUtil.list
       (new ColumnDescriptor("dir", "Dir", ColumnDescriptor.TYPE_STRING),
        new ColumnDescriptor("au", "AU", ColumnDescriptor.TYPE_STRING)
        .setComparator(CatalogueOrderComparator.SINGLETON),
        new ColumnDescriptor("status", "Status", ColumnDescriptor.TYPE_STRING),
+       new ColumnDescriptor("diskusage", "Disk Usage (MB)",
+			    ColumnDescriptor.TYPE_FLOAT),
        new ColumnDescriptor("plugin", "Plugin", ColumnDescriptor.TYPE_STRING),
        new ColumnDescriptor("params", "Params", ColumnDescriptor.TYPE_STRING)
        .setSortable(false)
@@ -98,6 +101,7 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
     RepoStatusAccessor(LockssDaemon daemon) {
       this.daemon = daemon;
       pluginMgr = daemon.getPluginManager();
+      repoMgr = daemon.getRepositoryManager();
     }
 
     public String getDisplayName() {
@@ -130,7 +134,8 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
       roots.add(getDefaultRepositoryLocation());
       for (Iterator iter = roots.iterator(); iter.hasNext(); ) {
 	String root = (String)iter.next();
-	addRows(rows, LockssRepositoryImpl.extendCacheLocation(root), includeInternalAus);
+	addRows(rows, LockssRepositoryImpl.extendCacheLocation(root),
+		includeInternalAus);
       }
       return rows;
     }
@@ -139,7 +144,8 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
       return Configuration.getParam(LockssRepositoryImpl.PARAM_CACHE_LOCATION);
     }
 
-    private void addRows(Collection rows, String root, boolean includeInternalAus) {
+    private void addRows(Collection rows, String root,
+			 boolean includeInternalAus) {
       File dir = new File(root);
       File[] subs = dir.listFiles();
       if (subs != null) {
@@ -165,8 +171,9 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
     }
 
     Map makeRow(File dir, String auid) {
+      String dirString = dir.toString();
       Map row = new HashMap();
-      row.put("dir", dir.toString());
+      row.put("dir", dirString);
       if (auid == null) {
 	row.put("status", "No AUID");
       } else {
@@ -180,21 +187,21 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
 	  Configuration auConfig = au.getConfiguration();
 	  String repoSpec = auConfig.get(PluginManager.AU_PARAM_REPOSITORY);
 	  if (repoSpec == null) {
-	    if (!dir.toString().startsWith(getDefaultRepositoryLocation())) {
+	    if (!dirString.startsWith(getDefaultRepositoryLocation())) {
 	      au = null;
 	    }
 	  } else {
 	    String root =
 	      LockssRepositoryImpl.getLocalRepositoryPath(repoSpec);
-	    if (root != null && !dir.toString().startsWith(root)) {
+	    if (root != null && !dirString.startsWith(root)) {
 	      au = null;
 	    }
 	  }
 	}
 
-
 	if (au != null) {
 	  row.put("status", "Active");
+	  addDu(row, AuUtil.getAuDiskUsage(au));
 	  row.put("au", new StatusTable.Reference(name,
 						  AU_STATUS_TABLE_NAME,
 						  auid));
@@ -202,6 +209,11 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
 	  row.put("params", config);
 	} else {
 	  row.put("au", "");
+	  LockssRepositoryImpl repo =
+	    repoMgr.getRepositoryFromPath(dirString);
+	  if (repo != null) {
+	    addDu(row, repoMgr.getRepoDiskUsage(dirString));
+	  }
 	  Configuration config = pluginMgr.getStoredAuConfiguration(auid);
 	  Properties auidProps = null;
 	  try {
@@ -233,6 +245,12 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
       }
       return row;
     }
+
+    void addDu(Map row, long size) {
+      if (size >= 0) {
+	row.put("diskusage", new Float((float)size / (1024 * 1024)));
+      }
+    }    
 
     boolean isOrphaned(String auid, Properties auidProps) {
       String pluginKey = 
