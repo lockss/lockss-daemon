@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingCrawlerImpl.java,v 1.15 2003-03-05 20:55:37 troberts Exp $
+ * $Id: GoslingCrawlerImpl.java,v 1.16 2003-03-27 22:05:03 troberts Exp $
  */
 
 /*
@@ -111,42 +111,82 @@ public class GoslingCrawlerImpl implements Crawler {
 
   private static Logger logger = Logger.getLogger("GoslingCrawlerImpl");
 
+  private ArchivalUnit au;
+  private List startUrls;
+  private boolean followLinks;
+
+  private long startTime = -1;
+  private long endTime = -1;
+  private int numUrlsFetched = 0;
+  private int numUrlsParsed = 0;
+
+
+  /**
+   * Construct a crawl object; does NOT start the crawl
+   * @param au {@link ArchivalUnit} that this crawl will happen on
+   * @param urls List of Strings representing the starting urls for this crawl
+   * @param followLinks whether or not to extract and follow links
+   */  
+  public GoslingCrawlerImpl(ArchivalUnit au, List startUrls, 
+			    boolean followLinks) {
+    if (au == null) {
+      throw new IllegalArgumentException("Called with a null ArchivalUnit");
+    } else if (startUrls == null) {
+      throw new IllegalArgumentException("Called with a null start url list");
+    }
+    this.au = au;
+    this.startUrls = startUrls;
+    this.followLinks = followLinks;
+  }
+
+  public long getNumFetched() {
+    return numUrlsFetched;
+  }
+
+  public long getNumParsed() {
+    return numUrlsParsed;
+  }
+
+  public long getStartTime() {
+    return startTime;
+  }
+
+  public long getEndTime() {
+    return endTime;
+  }
+  
+  public ArchivalUnit getAU() {
+    return au;
+  }
+
   /**
    * Main method of the crawler; it loops through crawling and caching
    * urls.
    *
-   * @param au ArchivalUnit which this crawl is within
-   * @param urls List of urls to crawl
-   * @param followLinks whether or not to extract and follow links
    * @param deadline when to terminate by
    */
-  public void doCrawl(ArchivalUnit au, List urls, boolean followLinks,
-		       Deadline deadline) {
-    if (au == null) {
-      throw new IllegalArgumentException("Called with a null ArchivalUnit");
-    } else if (urls == null) {
-      throw new IllegalArgumentException("Called with a null CrawlSpec");
-    } else if (deadline == null) {
+  public void doCrawl(Deadline deadline) {
+    if (deadline == null) {
       throw new IllegalArgumentException("Called with a null Deadline");
     }
     logger.info("Beginning crawl of "+au);
+    startTime = TimeBase.nowMs();
     CachedUrlSet cus = au.getAUCachedUrlSet();
     Set parsedPages = new HashSet();
 
     List extractedUrls = new LinkedList();
 
-    Iterator it = urls.iterator();
+    Iterator it = startUrls.iterator();
     while (it.hasNext() && !deadline.expired()) {
-      doCrawlLoop((String)it.next(), extractedUrls, parsedPages,
-		  au, cus, true, followLinks);
+      doCrawlLoop((String)it.next(), extractedUrls, parsedPages, cus, true);
     }
 
     while (!extractedUrls.isEmpty() && !deadline.expired()) {
       String url = (String)extractedUrls.remove(0);
-      doCrawlLoop(url, extractedUrls, parsedPages, au, cus,
-		  false, followLinks);
+      doCrawlLoop(url, extractedUrls, parsedPages, cus, false);
     }
     logger.info("Finished crawl of "+au);
+    endTime = TimeBase.nowMs();
   }
 
 
@@ -157,17 +197,11 @@ public class GoslingCrawlerImpl implements Crawler {
    * @param extractedUrls list to write harvested urls to
    * @param parsedPages set containing all the pages that have already
    * been parsed (to make sure we don't loop)
-   * @param au archival unit that the url belongs to;
-   * used to get the pause() method
    * @param cus cached url set that the url belongs to
-   * @param overWrite whether we should overwrite the page if it
-   * already has been cached
-   * @param shouldParse whether we should extract links from this
-   * page if we cache it
    */
-  protected void doCrawlLoop(String url, List extractedUrls, Set parsedPages,
-			     ArchivalUnit au, CachedUrlSet cus,
-			     boolean overWrite, boolean shouldParse) {
+  protected void doCrawlLoop(String url, List extractedUrls, 
+			     Set parsedPages, CachedUrlSet cus,
+			     boolean overWrite) {
     logger.debug("Dequeued url from list: "+url);
     UrlCacher uc = cus.makeUrlCacher(url);
     if (uc.shouldBeCached()) {
@@ -176,6 +210,7 @@ public class GoslingCrawlerImpl implements Crawler {
 	try {
 	  logger.debug("caching "+uc);
 	  uc.cache(); //IOException if there is a caching problem
+	  numUrlsFetched++;
 	} catch (IOException ioe) {
 	  //XXX handle this better.  Requeue?
 	  logger.error("Problem caching "+uc+". Ignoring", ioe);
@@ -188,7 +223,7 @@ public class GoslingCrawlerImpl implements Crawler {
 	}
       }
       try {
-	if (shouldParse && !parsedPages.contains(uc.getUrl())) {
+	if (followLinks && !parsedPages.contains(uc.getUrl())) {
 	  CachedUrl cu = uc.getCachedUrl();
 
 	  //XXX quick fix; if statement should be removed when we rework
@@ -196,6 +231,7 @@ public class GoslingCrawlerImpl implements Crawler {
 	  if (cu.hasContent()) {
 	    addUrlsToList(cu, extractedUrls);//IOException if the CU can't be read
 	    parsedPages.add(uc.getUrl());
+	    numUrlsParsed++;
 	  }
 	}
       } catch (IOException ioe) {

@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.14 2003-03-26 21:30:26 troberts Exp $
+ * $Id: CrawlManagerImpl.java,v 1.15 2003-03-27 22:05:03 troberts Exp $
  */
 
 /*
@@ -159,10 +159,8 @@ public class CrawlManagerImpl implements CrawlManager, LockssManager {
   private void scheduleNewContentCrawl(ArchivalUnit au,
 				       CrawlManager.Callback cb,
 				       Object cookie) {
-    NewContentCrawlInfo crawlInfo = new NewContentCrawlInfo(au);
     List callBackList =
-      ListUtil.list(new UpdateNewCrawlTimeCB(theDaemon.getNodeManager(au),
-					     crawlInfo));
+      ListUtil.list(new UpdateNewCrawlTimeCB(theDaemon.getNodeManager(au)));
     if (cb != null) {
       callBackList.add(cb);
     }
@@ -171,19 +169,17 @@ public class CrawlManagerImpl implements CrawlManager, LockssManager {
       new CrawlThread(au, au.getNewContentCrawlUrls(),
 		      true, Deadline.NEVER, callBackList, cookie);
     crawlThread.start();
-    crawlInfo.crawlStarted();
-    addNewContentCrawlInfo(au, crawlInfo);
+    addNewContentCrawl(au, crawlThread.getCrawler());
   }
 
-  private void addNewContentCrawlInfo(ArchivalUnit au, 
-				      NewContentCrawlInfo crawlInfo) {
+  private void addNewContentCrawl(ArchivalUnit au, Crawler crawler) {
     synchronized (newContentCrawls) {
       List crawlsForAu = (List)newContentCrawls.get(au.getGloballyUniqueId());
       if (crawlsForAu == null) {
 	crawlsForAu = new ArrayList();
 	newContentCrawls.put(au.getGloballyUniqueId(), crawlsForAu);
       }
-      crawlsForAu.add(crawlInfo);
+      crawlsForAu.add(crawler);
     }
   }
 
@@ -197,41 +193,6 @@ public class CrawlManagerImpl implements CrawlManager, LockssManager {
     }
   }
 
-  private static class NewContentCrawlInfo {
-    private Long startTime;
-    private Long endTime;
-    private int crawlStatus;
-    private ArchivalUnit au;
-
-    public NewContentCrawlInfo(ArchivalUnit au) {
-      this.au = au;
-    }
-
-    public ArchivalUnit getAu() {
-      return au;
-    }
-
-    public void crawlStarted() {
-      this.startTime = new Long(TimeBase.nowMs());
-    }
-
-    public void crawlEnded() {
-      this.endTime = new Long(TimeBase.nowMs());
-    }
-
-    public void setStatus(int crawlStatus) {
-      this.crawlStatus = crawlStatus;
-    }
-
-    public Long getStartTime() {
-      return startTime;
-    }
-
-    public Long getEndTime() {
-      return endTime;
-    }
-   }
-
   public class CrawlThread extends Thread {
     private ArchivalUnit au;
     private List urls;
@@ -239,6 +200,7 @@ public class CrawlManagerImpl implements CrawlManager, LockssManager {
     private Deadline deadline;
     private List callbacks;
     private Object cookie;
+    private Crawler crawler;
 
     private CrawlThread(ArchivalUnit au, List urls,
 			boolean followLinks, Deadline deadline,
@@ -250,11 +212,11 @@ public class CrawlManagerImpl implements CrawlManager, LockssManager {
       this.deadline = deadline;
       this.callbacks = callbacks;
       this.cookie = cookie;
+      crawler = new GoslingCrawlerImpl(au, urls, followLinks);
     }
 
     public void run() {
-      Crawler crawler = new GoslingCrawlerImpl();
-      crawler.doCrawl(au, urls, followLinks, deadline);
+      crawler.doCrawl(deadline);
       if (callbacks != null) {
 	Iterator it = callbacks.iterator();
 	while (it.hasNext()) {
@@ -263,22 +225,21 @@ public class CrawlManagerImpl implements CrawlManager, LockssManager {
 	}
       }
     }
+    public Crawler getCrawler() {
+      return crawler;
+    }
   }
 
   private class UpdateNewCrawlTimeCB implements CrawlManager.Callback {
     NodeManager nodeManager;
-    NewContentCrawlInfo crawlInfo;
 
-    public UpdateNewCrawlTimeCB(NodeManager nodeManager, 
-				NewContentCrawlInfo crawlInfo) {
+    public UpdateNewCrawlTimeCB(NodeManager nodeManager) {
       this.nodeManager = nodeManager;
-      this.crawlInfo = crawlInfo;
     }
 
     public void signalCrawlAttemptCompleted(boolean success, Object cookie) {
       if (success) {
 	nodeManager.newContentCrawlFinished();
-	crawlInfo.crawlEnded();
       }
     }
   }
@@ -289,6 +250,8 @@ public class CrawlManagerImpl implements CrawlManager, LockssManager {
     private static final String AU_COL_NAME = "au";
     private static final String START_TIME_COL_NAME = "start";
     private static final String END_TIME_COL_NAME = "end";
+    private static final String NUM_URLS_PARSED = "num_urls_parsed";
+    private static final String NUM_URLS_FETCHED = "num_urls_fetched";
 
     private List colDescs = 
       ListUtil.list(
@@ -297,7 +260,11 @@ public class CrawlManagerImpl implements CrawlManager, LockssManager {
 		    new ColumnDescriptor(START_TIME_COL_NAME, "Start Time",
 					 ColumnDescriptor.TYPE_DATE),
 		    new ColumnDescriptor(END_TIME_COL_NAME, "End Time",
-					 ColumnDescriptor.TYPE_DATE)
+					 ColumnDescriptor.TYPE_DATE),
+		    new ColumnDescriptor(NUM_URLS_FETCHED, "Num URLs fetched",
+					 ColumnDescriptor.TYPE_INT),
+		    new ColumnDescriptor(NUM_URLS_PARSED, "Num URLs parsed",
+					 ColumnDescriptor.TYPE_INT)
 		    );
     
     
@@ -313,7 +280,7 @@ public class CrawlManagerImpl implements CrawlManager, LockssManager {
 	if (crawlsForAu != null) {
 	  Iterator it = crawlsForAu.iterator();
 	  while (it.hasNext()) {
-	    rows.add(makeRow((NewContentCrawlInfo) it.next()));
+	    rows.add(makeRow((Crawler) it.next()));
 	  }
 	}
       }
@@ -328,18 +295,20 @@ public class CrawlManagerImpl implements CrawlManager, LockssManager {
 	  List crawls = (List)newContentCrawls.get((String)keys.next());
 	  Iterator it = crawls.iterator();
 	  while (it.hasNext()) {
-	    rows.add(makeRow((NewContentCrawlInfo)it.next()));
+	    rows.add(makeRow((Crawler)it.next()));
 	  }
 	}
       }
       return rows;
     }
 
-    private Map makeRow(NewContentCrawlInfo crawlInfo) {
+    private Map makeRow(Crawler crawler) {
       Map row = new HashMap();
-      row.put(AU_COL_NAME, crawlInfo.getAu().getName());
-      row.put(START_TIME_COL_NAME, crawlInfo.getStartTime());
-      row.put(END_TIME_COL_NAME, crawlInfo.getEndTime());
+      row.put(AU_COL_NAME, crawler.getAU().getName());
+      row.put(START_TIME_COL_NAME, new Long(crawler.getStartTime()));
+      row.put(END_TIME_COL_NAME, new Long(crawler.getEndTime()));
+      row.put(NUM_URLS_FETCHED, new Long(crawler.getNumFetched()));
+      row.put(NUM_URLS_PARSED, new Long(crawler.getNumParsed()));
       return row;
     }
 

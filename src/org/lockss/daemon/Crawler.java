@@ -1,5 +1,5 @@
 /*
- * $Id: Crawler.java,v 1.6 2003-02-24 22:13:41 claire Exp $
+ * $Id: Crawler.java,v 1.7 2003-03-27 22:05:03 troberts Exp $
  */
 
 /*
@@ -46,15 +46,41 @@ import org.lockss.plugin.*;
  * @version 0.0
  */
 public interface Crawler {
+
   /**
    * Initiate a crawl starting with all the urls in urls
-   * @param au ArchivalUnit that we are doing this crawl for
-   * @param urls urls to start the crawl at; these will be refetched even
-   * if they already exist
-   * @param followLinks if true, we'll parse fetched urls to harvest more
    * @param deadline maximum time to spend on this crawl
    */
+  public void doCrawl(Deadline deadline);
 
-  public void doCrawl(ArchivalUnit au, List urls,
-		      boolean followLinks, Deadline deadline);
+  /**
+   * Return the number of urls that have been fetched by this crawler
+   * @return number of urls that have been fetched by this crawler
+   */
+  public long getNumFetched();
+
+  /**
+   * Return the number of urls that have been parsed by this crawler
+   * @return number of urls that have been parsed by this crawler
+   */
+  public long getNumParsed();
+
+  /**
+   * Return the time at which this crawl began
+   * @return time at which this crawl began or -1 if it hadn't yet
+   */
+  public long getStartTime();
+
+  /**
+   * Return the time at which this crawl ended
+   * @return time at which this crawl ended or -1 if it hadn't yet
+   */
+  public long getEndTime();
+
+  /**
+   * Return the AU that this crawler is crawling within
+   * @return the AU that this crawler is crawling within
+   */
+  public ArchivalUnit getAU();
+
 }
