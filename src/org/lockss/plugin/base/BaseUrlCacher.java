@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.23 2004-02-23 09:12:06 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.24 2004-02-23 21:17:02 tlipkis Exp $
  */
 
 /*
@@ -210,7 +210,7 @@ public class BaseUrlCacher implements UrlCacher {
       }
       input = conn.getResponseInputStream();
     } finally {
-      if (input == null) {
+      if (conn != null && input == null) {
 	conn.release();
       }
     }
@@ -267,6 +267,9 @@ public class BaseUrlCacher implements UrlCacher {
       catch (IOException ex) {
 	logger.warning("openConnection", ex);
         throw resultMap.getHostException(ex);
+      } catch (RuntimeException e) {
+ 	logger.warning("openConnection: unexpected exception", e);
+	throw e;
       }
       checkConnectException(conn);
     }
