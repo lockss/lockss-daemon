@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrl.java,v 1.16 2003-02-25 22:56:16 aalto Exp $
+ * $Id: GenericFileCachedUrl.java,v 1.17 2003-02-26 18:51:00 troberts Exp $
  */
 
 /*
@@ -35,11 +35,10 @@ package org.lockss.plugin;
 import java.io.InputStream;
 import java.util.Properties;
 import java.net.MalformedURLException;
-import java.math.BigInteger;
 import org.lockss.app.*;
 import org.lockss.daemon.*;
 import org.lockss.repository.*;
-import org.lockss.util.Logger;
+import org.lockss.util.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
 
@@ -84,10 +83,7 @@ public class GenericFileCachedUrl extends BaseCachedUrl {
 
   public byte[] getContentSize() {
     ensureLeafLoaded();
-    BigInteger bigI = new BigInteger(Long.toString(leaf.getContentSize()));
-    // note that this byte array has a sign bit, which should be removed
-    // for optimization
-    return bigI.toByteArray();
+    return ByteArray.encodeLong(leaf.getContentSize());
   }
 
   private void ensureLeafLoaded() {
