@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigurableArchivalUnit.java,v 1.1 2004-01-13 04:46:27 clairegriffin Exp $
+ * $Id: TestConfigurableArchivalUnit.java,v 1.2 2004-01-27 01:03:51 clairegriffin Exp $
  */
 
 /*
@@ -79,6 +79,9 @@ public class TestConfigurableArchivalUnit extends LockssTestCase {
     map.putInt("INTEGER", 10);
     map.putBoolean("BOOLEAN", true);
     map.putString("STRING", "Yo Mama!");
+    map.putInt(ConfigParamDescr.YEAR.getKey(), 2003);
+    map.putInt(ConfigurableArchivalUnit.CM_AU_SHORT_YEAR_KEY +
+               ConfigParamDescr.YEAR.getKey(),3);
 
     String substr = "My Test Integer = %d\nINTEGER";
     String expectedReturn = "My Test Integer = 10";
@@ -94,6 +97,16 @@ public class TestConfigurableArchivalUnit extends LockssTestCase {
     expectedReturn = "My Test String = Yo Mama!";
     actualReturn = cau.convertVariableString(substr);
     assertEquals("return value", expectedReturn, actualReturn);
+
+    substr = "My Test Short Year = %02d\nau_short_year";
+    expectedReturn = "My Test Short Year = 03";
+    actualReturn = cau.convertVariableString(substr);
+    assertEquals("return value", expectedReturn, actualReturn);
+
+    substr = "My Test Decade = %4.2d\nyear";
+    expectedReturn = "My Test Decade = 2000";
+    actualReturn = cau.convertVariableString(substr);
+//    assertEquals("return value", expectedReturn, actualReturn);
   }
 
   public void testConvertRule() throws REException {
@@ -141,12 +154,6 @@ public class TestConfigurableArchivalUnit extends LockssTestCase {
     String expectedReturn = "http://www.example.com/lockss-volume/43.html";
     String actualReturn = cau.makeStartUrl();
     assertEquals("return value", expectedReturn, actualReturn);
-  }
-
-  public void testSetAuParams() throws ArchivalUnit.ConfigurationException {
-    Configuration config = null;
-    cau.setAuParams(config);
-    /**@todo fill in the test code*/
   }
 
 }

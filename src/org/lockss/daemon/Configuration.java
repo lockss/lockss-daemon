@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.55 2003-09-03 18:00:37 tlipkis Exp $
+ * $Id: Configuration.java,v 1.56 2004-01-27 01:03:43 clairegriffin Exp $
  */
 
 /*
@@ -32,17 +32,11 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.daemon;
 
-import java.util.*;
 import java.io.*;
 import java.net.*;
-import java.text.*;
-import org.mortbay.tools.*;
+import java.util.*;
+
 import org.lockss.util.*;
-import org.lockss.servlet.*;
-import org.lockss.proxy.*;
-import org.lockss.protocol.*;
-import org.lockss.repository.*;
-import org.lockss.state.*;
 
 /** <code>Configuration</code> provides access to the LOCKSS configuration
  * parameters.  Instances of (concrete subclasses of)

@@ -1,5 +1,5 @@
 /*
- * $Id: ProjectMuseArchivalUnit.java,v 1.19 2004-01-23 00:00:05 eaalto Exp $
+ * $Id: ProjectMuseArchivalUnit.java,v 1.20 2004-01-27 01:03:49 clairegriffin Exp $
  */
 
 /*
@@ -33,11 +33,13 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.projmuse;
 
 import java.util.*;
+
 import org.lockss.daemon.*;
-import org.lockss.util.*;
 import org.lockss.plugin.*;
-import gnu.regexp.REException;
+import org.lockss.plugin.ArchivalUnit.*;
 import org.lockss.plugin.configurable.*;
+import org.lockss.util.*;
+import gnu.regexp.*;
 
 /**
  * This is a first cut at making a Project Muse plugin
@@ -176,19 +178,19 @@ public class ProjectMuseArchivalUnit extends ConfigurableArchivalUnit {
 
     List rules = new ArrayList();
     //rules.add(new CrawlRules.RE("^" + rootUrl, CrawlRules.RE.NO_MATCH_EXCLUDE));
-    sb = new StringBuffer(CrawlRules.RE.NO_MATCH_EXCLUDE);
+    sb = new StringBuffer(String.valueOf(CrawlRules.RE.NO_MATCH_EXCLUDE));
     sb.append("\n^%s\n");
     sb.append(ConfigParamDescr.BASE_URL.getKey());
     rules.add(sb.toString());
     //rules.add(new CrawlRules.RE(startUrlString, incl));
-    sb = new StringBuffer(CrawlRules.RE.MATCH_INCLUDE);
+    sb = new StringBuffer(String.valueOf(CrawlRules.RE.MATCH_INCLUDE));
     sb.append("\n");
     sb.append(starturl);
     rules.add(sb.toString());
     //rules.add(new CrawlRules.RE(urlRoot +
     //                            "journals/"+journalDir+"/toc/[a-zA-Z]*" + volume +
     //                            "\\..*", incl));
-    sb = new StringBuffer(CrawlRules.RE.MATCH_INCLUDE);
+    sb = new StringBuffer(String.valueOf(CrawlRules.RE.MATCH_INCLUDE));
     sb.append("\n%sjournals/%s/toc/[a-zA-Z]*%d\\..*\n");
     sb.append(ConfigParamDescr.BASE_URL.getKey());
     sb.append("\n");
@@ -197,8 +199,8 @@ public class ProjectMuseArchivalUnit extends ConfigurableArchivalUnit {
     sb.append(ConfigParamDescr.VOLUME_NUMBER.getKey());
     rules.add(sb.toString());
     //rules.add(new CrawlRules.RE(urlRoot + "images/.*", incl));
-    sb = new StringBuffer(CrawlRules.RE.MATCH_INCLUDE);
-    sb.append("\n%simages/.*");
+    sb = new StringBuffer(String.valueOf(CrawlRules.RE.MATCH_INCLUDE));
+    sb.append("\n%simages/.*\n");
     sb.append(ConfigParamDescr.BASE_URL.getKey());
     rules.add(sb.toString());
     configurationMap.putCollection(CM_AU_RULES_KEY, rules);

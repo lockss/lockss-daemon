@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWirePlugin.java,v 1.16 2004-01-14 23:48:56 clairegriffin Exp $
+ * $Id: TestHighWirePlugin.java,v 1.17 2004-01-27 01:03:53 clairegriffin Exp $
  */
 
 /*
@@ -93,8 +93,8 @@ public class TestHighWirePlugin extends LockssTestCase {
       HighWireArchivalUnit au = makeAuFromProps(props);
       fail ("Didn't throw InstantiationException when given a bad url");
     } catch (ArchivalUnit.ConfigurationException auie) {
-      MalformedURLException murle =
-	(MalformedURLException)auie.getNestedException();
+      ConfigParamDescr.InvalidFormatException murle =
+        (ConfigParamDescr.InvalidFormatException)auie.getNestedException();
       assertNotNull(auie.getNestedException());
     }
   }

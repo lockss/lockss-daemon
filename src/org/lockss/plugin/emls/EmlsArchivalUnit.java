@@ -1,5 +1,5 @@
 /*
- * $Id: EmlsArchivalUnit.java,v 1.4 2004-01-13 04:46:25 clairegriffin Exp $
+ * $Id: EmlsArchivalUnit.java,v 1.5 2004-01-27 01:03:46 clairegriffin Exp $
  */
 
 /*
@@ -31,15 +31,14 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.plugin.emls;
 
-import java.net.*;
 import java.util.*;
-import org.lockss.util.*;
+
 import org.lockss.daemon.*;
-import org.lockss.state.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.base.*;
-import gnu.regexp.REException;
+import org.lockss.plugin.ArchivalUnit.*;
 import org.lockss.plugin.configurable.*;
+import org.lockss.util.*;
+import gnu.regexp.*;
 
 /**
  * EmlsArchivalUnit: The Archival Unit Class for Early Modern Literary

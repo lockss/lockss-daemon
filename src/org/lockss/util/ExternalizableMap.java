@@ -1,5 +1,5 @@
 /*
- * $Id: ExternalizableMap.java,v 1.4 2004-01-17 00:55:27 clairegriffin Exp $
+ * $Id: ExternalizableMap.java,v 1.5 2004-01-27 01:03:50 clairegriffin Exp $
  */
 
 /*
@@ -62,7 +62,12 @@ public class ExternalizableMap {
 
   public void setMapElement(String descrKey, Object descrElement) {
     synchronized(descrMap) {
-      descrMap.put(descrKey, descrElement);
+      if(descrElement instanceof URL) {
+        descrMap.put(descrKey, descrElement.toString());
+      }
+      else {
+        descrMap.put(descrKey, descrElement);
+      }
     }
   }
 

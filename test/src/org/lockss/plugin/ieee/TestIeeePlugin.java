@@ -1,5 +1,5 @@
 /*
- * $Id: TestIeeePlugin.java,v 1.4 2004-01-03 06:29:33 tlipkis Exp $
+ * $Id: TestIeeePlugin.java,v 1.5 2004-01-27 01:03:53 clairegriffin Exp $
  */
 
 /*
@@ -71,8 +71,8 @@ public class TestIeeePlugin extends LockssTestCase {
       IeeeArchivalUnit au = makeAuFromProps(props);
       fail ("Didn't throw InstantiationException when given a bad url");
     } catch (ArchivalUnit.ConfigurationException auie) {
-      MalformedURLException murle =
-	(MalformedURLException)auie.getNestedException();
+      ConfigParamDescr.InvalidFormatException murle =
+        (ConfigParamDescr.InvalidFormatException)auie.getNestedException();
       assertNotNull(auie.getNestedException());
     }
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestAbsintheArchivalUnit.java,v 1.2 2003-11-07 04:12:00 clairegriffin Exp $
+ * $Id: TestAbsintheArchivalUnit.java,v 1.3 2004-01-27 01:03:50 clairegriffin Exp $
  */
 
 /*
@@ -171,14 +171,9 @@ public class TestAbsintheArchivalUnit extends LockssTestCase {
   public void testStartUrlConstruction() throws Exception {
     URL url = new URL(ROOT_URL);
 
-    // 2 digit
-    String expectedStr = ROOT_URL+"archives03.htm";
-    AbsintheArchivalUnit pmAu = makeAu(url, "03");
-    assertEquals(expectedStr, pmAu.makeStartUrl());
-
     // 4 digit
-    expectedStr = ROOT_URL+"archives04.htm";
-    pmAu = makeAu(url, "2004");
+    String expectedStr = ROOT_URL+"archives04.htm";
+    AbsintheArchivalUnit pmAu = makeAu(url, "2004");
     assertEquals(expectedStr, pmAu.makeStartUrl());
   }
 
@@ -220,8 +215,6 @@ public class TestAbsintheArchivalUnit extends LockssTestCase {
   public void testGetName() throws Exception {
     AbsintheArchivalUnit au = makeAu(new URL(ROOT_URL), "2003");
     assertEquals("absinthe-literary-review.com, 2003", au.getName());
-    au = makeAu(new URL(ROOT_URL), "04");
-    assertEquals("absinthe-literary-review.com, '04", au.getName());
     au = makeAu(new URL("http://www.bmj.com/"), "2005");
     assertEquals("www.bmj.com, 2005", au.getName());
   }

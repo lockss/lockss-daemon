@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.17 2004-01-13 04:46:25 clairegriffin Exp $
+ * $Id: BasePlugin.java,v 1.18 2004-01-27 01:03:45 clairegriffin Exp $
  */
 
 /*
@@ -54,7 +54,8 @@ public abstract class BasePlugin
   protected LockssDaemon theDaemon;
   protected PluginManager pluginMgr;
   protected Collection aus = new ArrayList();
-  protected Map titleConfigMap;/**
+  protected Map titleConfigMap;
+  /**
    * Must invoke this constructor in plugin subclass.
    */
   protected BasePlugin() {

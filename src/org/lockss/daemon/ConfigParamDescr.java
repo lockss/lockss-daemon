@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescr.java,v 1.8 2004-01-22 01:34:39 clairegriffin Exp $
+ * $Id: ConfigParamDescr.java,v 1.9 2004-01-27 01:03:43 clairegriffin Exp $
  */
 
 /*
@@ -32,11 +32,9 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.daemon;
 
-import java.io.*;
-import java.util.*;
+import java.net.*;
+
 import org.lockss.util.*;
-import java.net.MalformedURLException;
-import java.net.URL;
 
 /**
  * Descriptor for a configuration parameter, and instances of descriptors
@@ -67,7 +65,7 @@ public class ConfigParamDescr implements Comparable {
   static {
     YEAR.setKey("year");
     YEAR.setDisplayName("Year");
-    YEAR.setType(TYPE_INT);
+    YEAR.setType(TYPE_YEAR);
     YEAR.setSize(4);
     YEAR.setDescription("Must be four digits eg 2003.");
   }

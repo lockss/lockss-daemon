@@ -1,5 +1,5 @@
 /*
- * $Id: TestProjectMusePlugin.java,v 1.7 2004-01-14 23:48:56 clairegriffin Exp $
+ * $Id: TestProjectMusePlugin.java,v 1.8 2004-01-27 01:03:54 clairegriffin Exp $
  */
 
 /*
@@ -87,8 +87,8 @@ public class TestProjectMusePlugin extends LockssTestCase {
       ProjectMuseArchivalUnit au = makeAuFromProps(props);
       fail ("Didn't throw InstantiationException when given a bad url");
     } catch (ArchivalUnit.ConfigurationException auie) {
-      MalformedURLException murle =
-	(MalformedURLException)auie.getNestedException();
+      ConfigParamDescr.InvalidFormatException murle =
+        (ConfigParamDescr.InvalidFormatException)auie.getNestedException();
       assertNotNull(auie.getNestedException());
     }
   }

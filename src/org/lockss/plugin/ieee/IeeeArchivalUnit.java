@@ -28,7 +28,7 @@ public class IeeeArchivalUnit extends ConfigurableArchivalUnit {
    * Configuration parameter for pause time between fetchs.
    */
   public static final String AUPARAM_PAUSE_TIME = PAUSE_TIME_KEY;
-  private static final long DEFAULT_PAUSE_TIME = 10 * Constants.SECOND;
+
 
   protected Logger logger = Logger.getLogger("IeeeArchivalUnit");
 
@@ -49,7 +49,7 @@ public class IeeeArchivalUnit extends ConfigurableArchivalUnit {
     }
 
     puYear = configurationMap.getInt(IeeePlugin.AUPARAM_YEAR, -1);
-    if (puYear < 2003) {
+    if (puYear < 0) {
       throw new ConfigurationException("Volume Year - Out of Range.");
     }
 

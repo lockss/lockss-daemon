@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurableArchivalUnit.java,v 1.2 2004-01-17 00:55:27 clairegriffin Exp $
+ * $Id: ConfigurableArchivalUnit.java,v 1.3 2004-01-27 01:03:46 clairegriffin Exp $
  */
 
 /*
@@ -30,7 +30,6 @@
  */
 package org.lockss.plugin.configurable;
 
-import java.net.*;
 import java.util.*;
 
 import org.lockss.daemon.*;
@@ -53,9 +52,13 @@ public class ConfigurableArchivalUnit
   static final protected String CM_AU_NAME_KEY = "au_name";
   static final protected String CM_AU_RULES_KEY = "au_crawlrules";
   static final protected String CM_AU_PARAMS_KEY = "au_params";
+  static final protected String CM_AU_SHORT_YEAR_KEY = "au_short_";
+
+  static final protected String AUPARAM_USE_CRAWL_WINDOW = USE_CRAWL_WINDOW;
 
   protected ExternalizableMap configurationMap;
   static Logger log = Logger.getLogger("ConfigurableArchivalUnit");
+
 
   protected ConfigurableArchivalUnit(Plugin myPlugin) {
     super(myPlugin);
@@ -67,7 +70,9 @@ public class ConfigurableArchivalUnit
 
   protected String makeStartUrl() {
     String startstr = configurationMap.getString(CM_AU_START_URL_KEY, "");
-    return convertVariableString(startstr);
+    String convstr = convertVariableString(startstr);
+    log.debug2("setting start url " + convstr);
+    return convstr;
   }
 
   protected void loadDefiningConfig(Configuration config) throws
@@ -76,51 +81,27 @@ public class ConfigurableArchivalUnit
     for (Iterator it = descrList.iterator(); it.hasNext(); ) {
       ConfigParamDescr descr = (ConfigParamDescr) it.next();
       String key = descr.getKey();
-      switch (descr.getType()) {
-        case ConfigParamDescr.TYPE_INT:
-          int i_val = loadConfigInt(descr, config);
-          configurationMap.putInt(key, i_val);
-          break;
-        case ConfigParamDescr.TYPE_STRING:
-          String s_val = loadConfigString(descr, config);
-          configurationMap.putString(key, s_val);
-          break;
-        case ConfigParamDescr.TYPE_URL:
-          URL u_val = loadConfigUrl(descr, config);
-          configurationMap.putUrl(key, u_val);
-          break;
-      }
-    }
-  }
 
-  protected void setAuParams(Configuration config) throws
-      org.lockss.plugin.ArchivalUnit.ConfigurationException {
-    List paramsList = (List) configurationMap.getCollection(CM_AU_PARAMS_KEY,
-        Collections.EMPTY_LIST);
-    for (Iterator it = paramsList.iterator(); it.hasNext(); ) {
-      Object next = it.next();
-      ConfigParamDescr descr = (ConfigParamDescr) next;
-      String key = descr.getKey();
-      switch (descr.getType()) {
-        case ConfigParamDescr.TYPE_INT:
-          int i_val = loadConfigInt(descr, config);
-          configurationMap.putInt(key, i_val);
-          break;
-        case ConfigParamDescr.TYPE_STRING:
-          String s_val = loadConfigString(descr, config);
-          configurationMap.putString(key, s_val);
-          break;
-        case ConfigParamDescr.TYPE_URL:
-          URL u_val = loadConfigUrl(descr, config);
-          configurationMap.putUrl(key, u_val);
-          break;
+      try {
+        Object val = descr.getValueOfType(config.get(key));
+        // we store years in two formats - short and long
+        if (descr.getType() == ConfigParamDescr.TYPE_YEAR) {
+          int year = Integer.parseInt(((Integer) val).toString().substring(2));
+          configurationMap.putInt(CM_AU_SHORT_YEAR_KEY+key,year);
+        }
+        configurationMap.setMapElement(key, val);
+      }
+      catch (Exception ex) {
+        throw new ConfigurationException("Error configuring: " + key, ex);
       }
     }
   }
 
   protected String makeName() {
     String namestr = configurationMap.getString(CM_AU_NAME_KEY, "");
-    return convertVariableString(namestr);
+    String convstr = convertVariableString(namestr);
+    log.debug2("setting name string: " + convstr);
+    return convstr;
   }
 
   protected CrawlRule makeRules() throws gnu.regexp.REException {
@@ -168,6 +149,7 @@ public class ConfigurableArchivalUnit
     return strs;
   }
 
+
   String convertVariableString(String variableString) {
     if(StringUtil.isNullString(variableString)) {
       return variableString;
@@ -198,7 +180,6 @@ public class ConfigurableArchivalUnit
 
   CrawlRule convertRule(String variableString) throws REException {
     String[] strs = getStringTokens(variableString);
-
     int value = Integer.valueOf(strs[0]).intValue();
     String rule = strs[1];
     ArrayList args = new ArrayList();
@@ -216,6 +197,7 @@ public class ConfigurableArchivalUnit
     if(has_all_args) {
       PrintfFormat pf = new PrintfFormat(rule);
       rule = pf.sprintf(args.toArray());
+      log.debug2("Adding crawl rule: " + rule);
       return new CrawlRules.RE(rule, value);
     }
     return null;

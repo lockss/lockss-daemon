@@ -1,5 +1,5 @@
 /*
- * $Id: TestAbsinthePlugin.java,v 1.3 2004-01-14 23:48:56 clairegriffin Exp $
+ * $Id: TestAbsinthePlugin.java,v 1.4 2004-01-27 01:03:50 clairegriffin Exp $
  */
 
 /*
@@ -51,8 +51,8 @@ public class TestAbsinthePlugin extends LockssTestCase {
 
   public void testCreateAu() {
     Properties props = new Properties();
-    props.setProperty(AbsinthePlugin.AUPARAM_BASE_URL, "http://www.example.com/");
-    props.setProperty(AbsinthePlugin.AUPARAM_YEAR, "2003");
+    //props.setProperty(AbsinthePlugin.AUPARAM_BASE_URL, "http://www.example.com/");
+    //props.setProperty(AbsinthePlugin.AUPARAM_YEAR, "2003");
 
     AbsintheArchivalUnit au = null;
     try {
@@ -85,8 +85,8 @@ public class TestAbsinthePlugin extends LockssTestCase {
       AbsintheArchivalUnit au = makeAuFromProps(props);
       fail ("Didn't throw InstantiationException when given a bad url");
     } catch (ArchivalUnit.ConfigurationException auie) {
-      MalformedURLException murle =
-        (MalformedURLException)auie.getNestedException();
+      ConfigParamDescr.InvalidFormatException murle =
+        (ConfigParamDescr.InvalidFormatException)auie.getNestedException();
       assertNotNull(auie.getNestedException());
     }
   }

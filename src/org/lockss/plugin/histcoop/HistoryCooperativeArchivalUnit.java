@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryCooperativeArchivalUnit.java,v 1.3 2004-01-13 04:46:26 clairegriffin Exp $
+ * $Id: HistoryCooperativeArchivalUnit.java,v 1.4 2004-01-27 01:03:48 clairegriffin Exp $
  */
 
 /*
@@ -32,15 +32,14 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.histcoop;
 
-import java.net.*;
 import java.util.*;
+
 import org.lockss.daemon.*;
-import org.lockss.util.*;
 import org.lockss.plugin.*;
-import org.lockss.state.AuState;
-import org.lockss.plugin.base.BaseArchivalUnit;
-import gnu.regexp.REException;
+import org.lockss.plugin.ArchivalUnit.*;
 import org.lockss.plugin.configurable.*;
+import org.lockss.util.*;
+import gnu.regexp.*;
 
 /**
  * This is a first cut at making a Project Muse plugin
@@ -54,7 +53,6 @@ public class HistoryCooperativeArchivalUnit extends ConfigurableArchivalUnit {
    * Configuration parameter for new content crawl interval
    */
   static final String AUPARAM_NEW_CONTENT_CRAWL = NEW_CONTENT_CRAWL_KEY;
-  private static final long DEFAULT_NEW_CONTENT_CRAWL = 2 * Constants.WEEK;
 
   /**
    * Configuration parameter for pause time between fetchs.

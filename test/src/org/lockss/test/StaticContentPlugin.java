@@ -1,5 +1,5 @@
 /*
- * $Id: StaticContentPlugin.java,v 1.19 2004-01-13 04:46:27 clairegriffin Exp $
+ * $Id: StaticContentPlugin.java,v 1.20 2004-01-27 01:03:55 clairegriffin Exp $
  */
 
 /*
@@ -119,11 +119,6 @@ public class StaticContentPlugin extends BasePlugin implements PluginTestable {
 
     protected String makeStartUrl() {
       throw new UnsupportedOperationException("Not Implemented");
-    }
-
-    protected void setAuParams(Configuration config)
-        throws ConfigurationException {
-     // do nothing - don't throw
     }
 
     public boolean shouldBeCached(String url) {

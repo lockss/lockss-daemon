@@ -1,5 +1,5 @@
 /*
- * $Id: TestAcsPlugin.java,v 1.6 2004-01-13 04:46:27 clairegriffin Exp $
+ * $Id: TestAcsPlugin.java,v 1.7 2004-01-27 01:03:50 clairegriffin Exp $
  */
 
 /*
@@ -67,11 +67,11 @@ public class TestAcsPlugin extends LockssTestCase {
       AcsArchivalUnit au = makeAuFromProps(props);
       fail ("Didn't throw InstantiationException when given a bad url");
     } catch (ArchivalUnit.ConfigurationException auie) {
-      MalformedURLException murle =
-	(MalformedURLException)auie.getNestedException();
+      ConfigParamDescr.InvalidFormatException murle =
+        (ConfigParamDescr.InvalidFormatException)auie.getNestedException();
       assertNotNull(auie.getNestedException());
     }
-  }
+ }
 
   public void testGetAuConstructsProperAU()
       throws ArchivalUnit.ConfigurationException, MalformedURLException {

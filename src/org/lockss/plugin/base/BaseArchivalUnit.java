@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.50 2004-01-13 04:46:25 clairegriffin Exp $
+ * $Id: BaseArchivalUnit.java,v 1.51 2004-01-27 01:03:45 clairegriffin Exp $
  */
 
 /*
@@ -96,6 +96,9 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   private static final long
     DEFAULT_MILLISECONDS_BETWEEN_CRAWL_HTTP_REQUESTS = 10 * Constants.SECOND;
 
+  public static final String USE_CRAWL_WINDOW = "use_crawl_window";
+  private static final boolean DEFAULT_USE_CRAWL_WINDOW = false;
+
   public static final String NEW_CONTENT_CRAWL_KEY = "nc_interval";
   public static final String PAUSE_TIME_KEY = "pause_time";
 
@@ -185,6 +188,9 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     fetchDelay = config.getTimeInterval(PAUSE_TIME_KEY, defaultFetchDelay);
     fetchDelay = Math.max(fetchDelay, minFetchDelay);
     logger.debug2("Set fetch delay to " + fetchDelay);
+
+    useCrawlWindow = config.getBoolean(USE_CRAWL_WINDOW,
+                                       DEFAULT_USE_CRAWL_WINDOW);
 
     // get the new content crawl interval
     newContentCrawlIntv = config.getTimeInterval(NEW_CONTENT_CRAWL_KEY,
@@ -300,6 +306,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   }
 
   private Deadline nextFetchTime = Deadline.in(0);
+  protected boolean useCrawlWindow;
 
   public void pauseBeforeFetch() {
     if (!nextFetchTime.expired()) {
@@ -355,8 +362,10 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    * @throws ConfigurationException should be thrown if the information needed
    * is not found or is invalid.
    */
-  abstract protected void setAuParams(Configuration config)
-      throws ConfigurationException;
+  protected void setAuParams(Configuration config)
+      throws ConfigurationException {
+
+  }
 
   abstract protected void loadDefiningConfig(Configuration config) throws
       ConfigurationException;

@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurablePlugin.java,v 1.5 2004-01-17 00:55:27 clairegriffin Exp $
+ * $Id: ConfigurablePlugin.java,v 1.6 2004-01-27 01:03:46 clairegriffin Exp $
  */
 
 /*
@@ -53,6 +53,7 @@ public class ConfigurablePlugin extends BasePlugin {
   static final protected String CM_CONFIG_PROPS_KEY = "plugin_config_props";
   static final protected String CM_DEFINING_CONFIG_PROPS_KEY =
       "plugin_defining_props";
+
 
   String mapName = null;
 

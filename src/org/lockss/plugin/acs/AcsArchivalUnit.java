@@ -1,5 +1,5 @@
 /*
- * $Id: AcsArchivalUnit.java,v 1.11 2004-01-13 04:46:25 clairegriffin Exp $
+ * $Id: AcsArchivalUnit.java,v 1.12 2004-01-27 01:03:45 clairegriffin Exp $
  */
 
 /*
@@ -87,15 +87,16 @@ public class AcsArchivalUnit extends ConfigurableArchivalUnit {
     journalKey = configurationMap.getString(AcsPlugin.AUPARAM_JOURNAL_KEY, null);
 
     // get the volume string
-    volume = loadConfigInt(AcsPlugin.PD_VOL, config);
+
+    volume = configurationMap.getInt(AcsPlugin.AUPARAM_VOL, -1);
     if (volume < 0) {
       throw new ConfigurationException("Negative volume");
     }
 
     // get the volume year
-    year = loadConfigInt(AcsPlugin.PD_YEAR, config);
-    if (year < 1900) {
-      throw new ConfigurationException("Year out of range - must be after 1900");
+    year = configurationMap.getInt(AcsPlugin.AUPARAM_YEAR, -1);
+    if (year <= 0) {
+      throw new ConfigurationException("Year Out of Range: " + year);
     }
 
     defaultFetchDelay = DEFAULT_PAUSE_TIME;

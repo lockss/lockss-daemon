@@ -1,5 +1,5 @@
 /*
- * $Id: AbsintheArchivalUnit.java,v 1.7 2004-01-13 04:46:25 clairegriffin Exp $
+ * $Id: AbsintheArchivalUnit.java,v 1.8 2004-01-27 01:03:44 clairegriffin Exp $
  */
 
 /*
@@ -59,7 +59,6 @@ public class AbsintheArchivalUnit extends ConfigurableArchivalUnit {
    * Configuration parameter for pause time between fetchs.
    */
   public static final String AUPARAM_PAUSE_TIME = PAUSE_TIME_KEY;
-  private static final long DEFAULT_PAUSE_TIME = 10 * Constants.SECOND;
 
   protected Logger logger = Logger.getLogger("AbsinthePlugin");
 
@@ -71,25 +70,17 @@ public class AbsintheArchivalUnit extends ConfigurableArchivalUnit {
 
   protected void setAuParams(Configuration config) throws
       ConfigurationException {
-    if (config == null) {
-      throw new ConfigurationException("Null configInfo");
+    int i_year = configurationMap.getInt(AbsinthePlugin.AUPARAM_YEAR, -1);
+    if (i_year < 0) {
+      throw new ConfigurationException("Year Out of Range: " + i_year);
     }
-    // get the year string
-    year = config.get(AbsinthePlugin.AUPARAM_YEAR);
-    // turn them into appropriate types
-    if ( (year.length() != 4) && (year.length() != 2)) {
-      throw new ConfigurationException("Invalid year: " + year);
-    }
+    year = Integer.toString(i_year);
 
   }
 
   protected String makeName() {
     StringBuffer name = new StringBuffer(baseUrl.getHost());
     name.append(", ");
-    if (year.length()==2) {
-      // convert to '03
-      name.append("'");
-    }
     name.append(year);
     return name.toString();
   }
@@ -99,11 +90,7 @@ public class AbsintheArchivalUnit extends ConfigurableArchivalUnit {
     StringBuffer sb = new StringBuffer();
     sb.append(baseUrl.toString());
     sb.append("archives");
-    if (year.length()==4) {
-      sb.append(year.substring(year.length()-2));
-    } else if (year.length()==2) {
-      sb.append(year);
-    }
+    sb.append(year.substring(year.length()-2));
     sb.append(".htm");
     ret = sb.toString();
     logger.debug("starting url is " + ret);
@@ -133,10 +120,11 @@ public class AbsintheArchivalUnit extends ConfigurableArchivalUnit {
     StringBuffer sb = new StringBuffer("%sarchives%02d.htm\n");
     sb.append(ConfigParamDescr.BASE_URL.getKey());
     sb.append("\n");
-    sb.append(ConfigParamDescr.YEAR.getKey());
-    configurationMap.putString(CM_AU_START_URL_KEY,sb.toString());
+    sb.append(CM_AU_SHORT_YEAR_KEY+ ConfigParamDescr.YEAR.getKey());
+    String starturl = sb.toString();
+    configurationMap.putString(CM_AU_START_URL_KEY,starturl);
 
-    sb = new StringBuffer("%s, %02d\n");
+    sb = new StringBuffer("%s, %d\n");
     sb.append(ConfigParamDescr.BASE_URL.getKey());
     sb.append("\n");
     sb.append(ConfigParamDescr.YEAR.getKey());
@@ -144,44 +132,42 @@ public class AbsintheArchivalUnit extends ConfigurableArchivalUnit {
 
     List rules = new ArrayList();
     //rules.add(new CrawlRules.RE("^" + rootUrl, CrawlRules.RE.NO_MATCH_EXCLUDE));
-    sb = new StringBuffer(CrawlRules.RE.NO_MATCH_EXCLUDE);
+    sb = new StringBuffer(String.valueOf(CrawlRules.RE.NO_MATCH_EXCLUDE));
     sb.append("\n^%s\n");
     sb.append(ConfigParamDescr.BASE_URL.getKey());
     rules.add(sb.toString());
     //rules.add(new CrawlRules.RE(startUrlString, incl));
-    sb = new StringBuffer(CrawlRules.RE.MATCH_INCLUDE);
-    sb.append("\n%sarchives%02d.htm\n");
-    sb.append(ConfigParamDescr.BASE_URL.getKey());
+    sb = new StringBuffer(String.valueOf(CrawlRules.RE.MATCH_INCLUDE));
     sb.append("\n");
-    sb.append(ConfigParamDescr.YEAR.getKey());
+    sb.append(starturl);
     rules.add(sb.toString());
     //rules.add(new CrawlRules.RE(rootUrl + "stories/.*", incl));
-    sb = new StringBuffer(CrawlRules.RE.MATCH_INCLUDE);
+    sb = new StringBuffer(String.valueOf(CrawlRules.RE.MATCH_INCLUDE));
     sb.append("\n%sstories/.*\n");
     sb.append(ConfigParamDescr.BASE_URL.getKey());
     rules.add(sb.toString());
     //rules.add(new CrawlRules.RE(rootUrl + "poetics/.*", incl));
-    sb = new StringBuffer(CrawlRules.RE.MATCH_INCLUDE);
+    sb = new StringBuffer(String.valueOf(CrawlRules.RE.MATCH_INCLUDE));
     sb.append("\n%spoetics/.*\n");
     sb.append(ConfigParamDescr.BASE_URL.getKey());
     rules.add(sb.toString());
     //rules.add(new CrawlRules.RE(rootUrl + "archives/.*", incl));
-    sb = new StringBuffer(CrawlRules.RE.MATCH_INCLUDE);
+    sb = new StringBuffer(String.valueOf(CrawlRules.RE.MATCH_INCLUDE));
     sb.append("\n%sarchives/.*\n");
     sb.append(ConfigParamDescr.BASE_URL.getKey());
     rules.add(sb.toString());
     //rules.add(new CrawlRules.RE(rootUrl + "book_reviews/book_reviews.htm", excl));
-    sb = new StringBuffer(CrawlRules.RE.MATCH_EXCLUDE);
+    sb = new StringBuffer(String.valueOf(CrawlRules.RE.MATCH_EXCLUDE));
     sb.append("\n%sbook_reviews/book_reviews.htm\n");
     sb.append(ConfigParamDescr.BASE_URL.getKey());
     rules.add(sb.toString());
     //rules.add(new CrawlRules.RE(rootUrl + "book_reviews/.*", incl));
-    sb = new StringBuffer(CrawlRules.RE.MATCH_INCLUDE);
+    sb = new StringBuffer(String.valueOf(CrawlRules.RE.MATCH_INCLUDE));
     sb.append("\n%sbook_reviews/.*\n");
     sb.append(ConfigParamDescr.BASE_URL.getKey());
     rules.add(sb.toString());
     //rules.add(new CrawlRules.RE(rootUrl + "images/.*", incl));
-    sb = new StringBuffer(CrawlRules.RE.MATCH_INCLUDE);
+    sb = new StringBuffer(String.valueOf(CrawlRules.RE.MATCH_INCLUDE));
     sb.append("\n%simages/.*\n");
     sb.append(ConfigParamDescr.BASE_URL.getKey());
     rules.add(sb.toString());

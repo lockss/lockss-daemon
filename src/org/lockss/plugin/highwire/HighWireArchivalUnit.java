@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireArchivalUnit.java,v 1.41 2004-01-13 04:46:26 clairegriffin Exp $
+ * $Id: HighWireArchivalUnit.java,v 1.42 2004-01-27 01:03:47 clairegriffin Exp $
  */
 
 /*
@@ -34,13 +34,13 @@ package org.lockss.plugin.highwire;
 
 import java.net.*;
 import java.util.*;
-import gnu.regexp.*;
+
 import org.lockss.daemon.*;
-import org.lockss.util.*;
 import org.lockss.plugin.*;
-import org.lockss.state.*;
-import org.lockss.plugin.base.*;
+import org.lockss.plugin.ArchivalUnit.*;
 import org.lockss.plugin.configurable.*;
+import org.lockss.util.*;
+import gnu.regexp.*;
 
 /**
  * This is a first cut at making a HighWire plugin
@@ -55,23 +55,17 @@ public class HighWireArchivalUnit extends ConfigurableArchivalUnit {
    * Configuration parameter for pause time in Highwire crawling.
    */
   public static final String AUPARAM_PAUSE_TIME = PAUSE_TIME_KEY;
-  private static final long DEFAULT_PAUSE_TIME = 10 * Constants.SECOND;
 
   /**
    * Test parameter to activate use of crawl window in highwire.
    */
-  public static final String AUPARAM_USE_CRAWL_WINDOW = "use_crawl_window";
-  private static final boolean DEFAULT_USE_CRAWL_WINDOW = false;
-
+  public static final String AUPARAM_USE_CRAWL_WINDOW = USE_CRAWL_WINDOW;
 
   protected Logger logger = Logger.getLogger(LOG_NAME);
 
-  private int volume;
-
   public static final String AUPARAM_NEW_CONTENT_CRAWL = NEW_CONTENT_CRAWL_KEY;
-  private static final long DEFAULT_NEW_CONTENT_CRAWL = 14 * Constants.DAY;;
 
-  private boolean useCrawlWindow;
+  private int volume;
 
   /**
    * Standard constructor for HighWireArchivalUnit.
@@ -96,8 +90,6 @@ public class HighWireArchivalUnit extends ConfigurableArchivalUnit {
     if (volume < 0) {
       throw new ConfigurationException("Negative volume");
     }
-    useCrawlWindow = config.getBoolean(AUPARAM_USE_CRAWL_WINDOW,
-                                       DEFAULT_USE_CRAWL_WINDOW);
     logger.debug3("Setting 'use crawl window' to " + useCrawlWindow);
   }
 

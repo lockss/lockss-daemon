@@ -1,5 +1,5 @@
 /*
- * $Id: TestEmlsPlugin.java,v 1.3 2004-01-03 06:29:34 tlipkis Exp $
+ * $Id: TestEmlsPlugin.java,v 1.4 2004-01-27 01:03:52 clairegriffin Exp $
  */
 
 /*
@@ -71,8 +71,8 @@ public class TestEmlsPlugin extends LockssTestCase {
       EmlsArchivalUnit au = makeAuFromProps(props);
       fail ("Didn't throw InstantiationException when given a bad url");
     } catch (ArchivalUnit.ConfigurationException auie) {
-      MalformedURLException murle =
-        (MalformedURLException)auie.getNestedException();
+      ConfigParamDescr.InvalidFormatException murle =
+        (ConfigParamDescr.InvalidFormatException)auie.getNestedException();
       assertNotNull(auie.getNestedException());
     }
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigurablePlugin.java,v 1.3 2004-01-14 23:48:56 clairegriffin Exp $
+ * $Id: TestConfigurablePlugin.java,v 1.4 2004-01-27 01:03:52 clairegriffin Exp $
  */
 
 /*
@@ -158,7 +158,7 @@ public class TestConfigurablePlugin extends LockssTestCase {
     }
     assertEquals("ConfigurablePlugin", configurablePlugin.getPluginName());
 
-    extMapName = "org.lockss.plugin.absinthe.AbsinthePlugin";
+    extMapName = "org.lockss.plugin.configurable.AbsinthePlugin";
     configurablePlugin.initPlugin(daemon, extMapName);
     assertEquals("Absinthe Literary Review",
                  configurablePlugin.getPluginName());
