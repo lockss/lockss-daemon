@@ -1,5 +1,5 @@
 /*
- * $Id: StatusTable.java,v 1.37 2004-10-19 10:17:15 tlipkis Exp $
+ * $Id: StatusTable.java,v 1.38 2005-01-19 18:10:38 tlipkis Exp $
  */
 
 /*
@@ -79,6 +79,9 @@ public class StatusTable {
   }
 
   private List makeDefaultSortRules() {
+    if (columnDescriptors == null || columnDescriptors.isEmpty()) {
+      return Collections.EMPTY_LIST;
+    }
     ColumnDescriptor firstCol = (ColumnDescriptor)columnDescriptors.get(0);
     SortRule sortRule = new SortRule(firstCol.getColumnName(), true);
     return ListUtil.list(sortRule);
@@ -223,10 +226,7 @@ public class StatusTable {
     if (rows == null) {
       return Collections.EMPTY_LIST;
     }
-    if (defaultSortRules == null) {
-      defaultSortRules = makeDefaultSortRules();
-    }      
-    return getSortedRows(defaultSortRules);
+    return getSortedRows(getDefaultSortRules());
   }
 
   /**
@@ -278,6 +278,9 @@ public class StatusTable {
    * Gets the default {@link StatusTable.SortRule}s for this table
    */
   public List getDefaultSortRules() {
+    if (defaultSortRules == null) {
+      defaultSortRules = makeDefaultSortRules();
+    }      
     return defaultSortRules;
   }
 

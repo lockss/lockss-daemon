@@ -1,5 +1,5 @@
 /*
- * $Id: TestStatusTable.java,v 1.6 2004-10-19 10:17:14 tlipkis Exp $
+ * $Id: TestStatusTable.java,v 1.7 2005-01-19 18:10:37 tlipkis Exp $
  */
 
 /*
@@ -65,7 +65,9 @@ public class TestStatusTable extends LockssTestCase {
     tbl.setSummaryInfo(lst);
     assertSame(lst, tbl.getSummaryInfo());
 
-    assertNull(tbl.getDefaultSortRules());
+    assertEmpty(tbl.getDefaultSortRules());
+    tbl.setColumnDescriptors(Collections.EMPTY_LIST);
+    assertEmpty(tbl.getDefaultSortRules());
     List rules = new ArrayList();
     tbl.setDefaultSortRules(rules);
     assertSame(rules, tbl.getDefaultSortRules());
