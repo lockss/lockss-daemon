@@ -1,0 +1,34 @@
+## Polling test suite properties file.
+##
+## $Id: testsuite.props,v 1.1.2.1 2004-12-04 00:41:07 smorabito Exp $
+##
+
+## Number of daemons to start (default 1)
+daemonCount = 4
+
+## Servlet UI username and password (optional)
+# username = <username>
+# password = <properties>
+
+## Top level work directory (default './')
+# workDir = /path/to/workdir
+
+## Debug level (default 'debug')
+debugLevel = debug3
+
+## projectDir is a top-level lockss-daemon project (if
+## none is provided, walk up the path from current directory
+## trying to find build.xml)
+# projectDir = /path/to/lockss-daemon
+
+deleteAfterSuccess = True
+
+## Timeout, in seconds.  Maximum time to wait for any event.
+timeout = 28800 # eight hours
+
+##
+## Extra properties.  Anything starting with 'org.lockss.' will
+## be passed to the daemon config.
+##
+
+#org.lockss.daemon.foo = bar
