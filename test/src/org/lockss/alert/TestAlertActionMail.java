@@ -1,5 +1,5 @@
 /*
- * $Id: TestAlertActionMail.java,v 1.1 2004-07-12 06:09:41 tlipkis Exp $
+ * $Id: TestAlertActionMail.java,v 1.1.2.1 2004-07-19 08:24:33 tlipkis Exp $
  */
 
 /*
@@ -47,6 +47,15 @@ import org.lockss.plugin.*;
 public class TestAlertActionMail extends LockssTestCase {
   private static Logger log = Logger.getLogger("TestAlertActionMail");
 
+  MyMockMailService mgr;
+
+  public void setUp() throws Exception {
+    super.setUp();
+    mgr = new MyMockMailService();
+    getMockLockssDaemon().setMailService(mgr);
+  }
+
+
   public void testEquals() {
     AlertActionMail a1 = new AlertActionMail("to@here");
     AlertActionMail a2 = new AlertActionMail("to@here");
@@ -63,4 +72,73 @@ public class TestAlertActionMail extends LockssTestCase {
     AlertActionMail a3 = new AlertActionMail("to@there");
     assertEquals(a1.hashCode(), a2.hashCode());
   }
+
+  public void testRecordOne() {
+    Properties p = new Properties();
+    p.put("org.lockss.alert.action.mail.sender", "sender");
+    p.put("org.lockss.alert.action.mail.enabled", "true");
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+    Alert a1 = new Alert("AName");
+    a1.setAttribute(Alert.ATTR_CACHE, "cachename");
+    a1.setAttribute(Alert.ATTR_SEVERITY, Alert.SEVERITY_WARNING);
+    AlertActionMail act1 = new AlertActionMail("recipient");
+    act1.record(getMockLockssDaemon(), a1);
+    String[] msg = (String[])mgr.getMsgs().get(0);
+    assertEquals("sender", msg[0]);
+    assertEquals("recipient", msg[1]);
+    String[] body =
+      (String[])StringUtil.breakAt(msg[2], '\n').toArray(new String[0]);
+    int line = 0;
+    assertEquals("From: LOCKSS cache cachename <sender>", body[line++]);
+    assertEquals("To: recipient", body[line++]);
+    String date = body[line++];
+    assertTrue(date.startsWith("Date: "));
+    assertEquals("Subject: LOCKSS cache warning: AName", body[line++]);
+    assertEquals("X-Mailer: LOCKSS daemon", body[line++]);
+    assertEquals("", body[line++]);
+  }
+
+  public void testRecordList() {
+    Properties p = new Properties();
+    p.put("org.lockss.alert.action.mail.sender", "sender");
+    p.put("org.lockss.alert.action.mail.enabled", "true");
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+    Alert a1 = new Alert("AName");
+    a1.setAttribute(Alert.ATTR_CACHE, "cachename");
+    a1.setAttribute(Alert.ATTR_SEVERITY, Alert.SEVERITY_WARNING);
+    Alert a2 = new Alert("A Nother Name");
+    a2.setAttribute(Alert.ATTR_CACHE, "cachename");
+    a2.setAttribute(Alert.ATTR_SEVERITY, Alert.SEVERITY_ERROR);
+    AlertActionMail act1 = new AlertActionMail("recipient");
+    act1.record(getMockLockssDaemon(), ListUtil.list(a1, a2));
+    String[] msg = (String[])mgr.getMsgs().get(0);
+    assertEquals("sender", msg[0]);
+    assertEquals("recipient", msg[1]);
+    String[] body =
+      (String[])StringUtil.breakAt(msg[2], '\n').toArray(new String[0]);
+    int line = 0;
+    assertEquals("From: LOCKSS cache cachename <sender>", body[line++]);
+    assertEquals("To: recipient", body[line++]);
+    String date = body[line++];
+    assertTrue(date.startsWith("Date: "));
+    assertEquals("Subject: LOCKSS cache warning: AName (multiple)",
+		 body[line++]);
+    assertEquals("X-Mailer: LOCKSS daemon", body[line++]);
+    assertEquals("", body[line++]);
+  }
+
+  static class MyMockMailService extends MockMailService {
+    List msgs = new ArrayList();
+
+    public boolean sendMail(String sender, String recipient, String body) {
+      String[] msg = {sender, recipient, body};
+      msgs.add(msg);
+      return true;
+    }
+
+    List getMsgs() {
+      return msgs;
+    }
+  }
+
 }
