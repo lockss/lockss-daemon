@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.59 2004-10-11 08:09:38 tlipkis Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.60 2004-10-18 03:41:12 tlipkis Exp $
  */
 
 /*
@@ -214,15 +214,16 @@ public class RepositoryNodeImpl implements RepositoryNode {
     }
     // No child count available.  Don't call getChildCount ...xxx
     // It's a leaf if no subdirs (excluding content dir)
-    if (!nodeRootFile.exists()) {
-      logger.error("No cache directory located for: "+url);
-      throw new LockssRepository.RepositoryStateException("No cache directory located.");
-    }
     File[] children = nodeRootFile.listFiles();
+    if (children == null) {
+      String msg = "No cache directory located for: " + url;
+      logger.error(msg);
+      throw new LockssRepository.RepositoryStateException(msg);
+    }
     for (int ii=0; ii<children.length; ii++) {
       File child = children[ii];
-      if (!child.isDirectory()) continue;
       if (child.getName().equals(contentDir.getName())) continue;
+      if (!child.isDirectory()) continue;
       return false;
     }
     return true;
@@ -241,12 +242,13 @@ public class RepositoryNodeImpl implements RepositoryNode {
    */
   protected List getNodeList(CachedUrlSetSpec filter, boolean includeInactive) {
     if (nodeRootFile==null) initNodeRoot();
-    if (!nodeRootFile.exists()) {
-      logger.error("No cache directory located for: "+url);
-      throw new LockssRepository.RepositoryStateException("No cache directory located.");
-    }
     if (contentDir==null) getContentDir();
     File[] children = nodeRootFile.listFiles();
+    if (children == null) {
+      String msg = "No cache directory located for: " + url;
+      logger.error(msg);
+      throw new LockssRepository.RepositoryStateException(msg);
+    }
     // sorts alphabetically relying on File.compareTo()
     Arrays.sort(children, new FileComparator());
     int listSize;
@@ -262,7 +264,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
     ArrayList childL = new ArrayList(listSize);
     for (int ii=0; ii<children.length; ii++) {
       File child = children[ii];
-      if ((!child.isDirectory()) || (child.getName().equals(CONTENT_DIR))) {
+      if ((child.getName().equals(CONTENT_DIR)) || (!child.isDirectory())) {
         // all children are in their own directories, and the content dir
         // must be ignored
         continue;
@@ -855,8 +857,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
       initFiles();
 
       // load the node properties
-      if (!nodePropsLoaded && nodePropsFile.exists()) {
-        loadNodeProps();
+      if (!nodePropsLoaded) {
+	loadNodeProps(true);
       }
 
       // no content, so version 0
@@ -895,7 +897,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
   /**
    * Load the node properties.
    */
-  void loadNodeProps() {
+  void loadNodeProps(boolean okIfNotThere) {
     try {
       // check properties to see if deleted
       InputStream is =
@@ -903,9 +905,15 @@ public class RepositoryNodeImpl implements RepositoryNode {
       nodeProps.load(is);
       is.close();
       nodePropsLoaded = true;
+    } catch (FileNotFoundException e) {
+      if (!okIfNotThere) {
+	String msg = "No node props file: " + nodePropsFile.getPath();
+	logger.error(msg);
+	throw new LockssRepository.RepositoryStateException(msg);
+      }
     } catch (Exception e) {
-      logger.error("Error loading properties from "+
-                   nodePropsFile.getPath()+".");
+      logger.error("Error loading node props from " + nodePropsFile.getPath(),
+		   e);
       throw new LockssRepository.RepositoryStateException("Couldn't load properties file.");
     }
   }
@@ -920,24 +928,24 @@ public class RepositoryNodeImpl implements RepositoryNode {
         curInputFile = currentCacheFile;
       }
       if (curProps==null) {
-        if (currentPropsFile.exists()) {
-          try {
-            InputStream is =
-                new BufferedInputStream(new FileInputStream(currentPropsFile));
-            curProps = new Properties();
-            curProps.load(is);
-            is.close();
-          } catch (Exception e) {
-            logger.error("Error loading version from "+
-                          currentPropsFile.getPath()+".");
-            throw new LockssRepository.RepositoryStateException("Couldn't load version from properties file.");
-          }
-        }
+	try {
+	  InputStream is =
+	    new BufferedInputStream(new FileInputStream(currentPropsFile));
+	  curProps = new Properties();
+	  curProps.load(is);
+	  is.close();
+	} catch (FileNotFoundException e) {
+	  // No error if file not found, just don't load props
+	} catch (Exception e) {
+	  logger.error("Error loading version from "+
+		       currentPropsFile.getPath()+".");
+	  throw new LockssRepository.RepositoryStateException("Couldn't load version from properties file.");
+	}
       }
     }
     if (curProps!=null) {
       currentVersion =
-          Integer.parseInt(curProps.getProperty(LOCKSS_VERSION_NUMBER, "-1"));
+	Integer.parseInt(curProps.getProperty(LOCKSS_VERSION_NUMBER, "-1"));
       if (currentVersion <= 0) {
         logger.error("Bad content version found: "+currentVersion);
         repository.deactivateInconsistentNode(this);
@@ -965,11 +973,15 @@ public class RepositoryNodeImpl implements RepositoryNode {
       curProps = null;
       return true;
     }
-    if ((!currentCacheFile.exists()) && (getInactiveCacheFile().exists())) {
-      currentVersion = INACTIVE_VERSION;
-      curInputFile = null;
-      curProps = null;
-      return true;
+    // XXX This happens a lot.  Does it maybe need to check files only if
+    // props aren't loaded, not if neither value is true?
+    if (!nodePropsLoaded) {
+      if ((getInactiveCacheFile().exists()) && (!currentCacheFile.exists())) {
+	currentVersion = INACTIVE_VERSION;
+	curInputFile = null;
+	curProps = null;
+	return true;
+      }
     }
     return false;
   }
@@ -1060,7 +1072,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
     // -if node properties exists, check that it's readable
     if (nodePropsFile.exists()) {
       try {
-        loadNodeProps();
+        loadNodeProps(false);
       } catch (LockssRepositoryImpl.RepositoryStateException rse) {
         logger.warning("Renaming faulty 'nodeProps' to 'nodeProps.ERROR'");
         // as long as the rename goes correctly, we can proceed
@@ -1177,6 +1189,11 @@ public class RepositoryNodeImpl implements RepositoryNode {
   void checkChildCountCacheAccuracy() {
     int count = 0;
     File[] children = nodeRootFile.listFiles();
+    if (children == null) {
+      String msg = "No cache directory located for: " + url;
+      logger.error(msg);
+      throw new LockssRepository.RepositoryStateException(msg);
+    }
     for (int ii=0; ii<children.length; ii++) {
       File child = children[ii];
       if (!child.isDirectory()) continue;

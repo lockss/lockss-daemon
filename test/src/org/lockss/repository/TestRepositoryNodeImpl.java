@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.43 2004-09-29 18:57:57 tlipkis Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.44 2004-10-18 03:41:12 tlipkis Exp $
  */
 
 /*
@@ -71,6 +71,22 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     repo.stopService();
     theDaemon.stopDaemon();
     super.tearDown();
+  }
+
+  // RepositoryNodeImpl relies on nonexistent dir.listFiles() returning
+  // null, not empty list.
+  public void testFileAssumptions() throws Exception {
+    // empty dir returns empty list
+    File dir1 = getTempDir();
+    assertNotNull(null, dir1.listFiles());
+    assertEquals(new File[0], dir1.listFiles());
+    // nonexistent dir returns null
+    File dir2 = new File(dir1, "bacds");
+    assertNull(null, dir2.listFiles());
+    // dir list of non-dir returns null
+    File file1 = File.createTempFile("xxx", ".tmp", dir1);
+    assertTrue(file1.exists());
+    assertNull(null, file1.listFiles());
   }
 
   public void testGetNodeUrl() {
@@ -225,6 +241,16 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertTrue(curPropsFile.exists());
     assertFalse(inactFile.exists());
     assertFalse(inactPropsFile.exists());
+  }
+
+  public void testListEntriesNonexistentDir() throws Exception {
+    RepositoryNode node = new RepositoryNodeImpl("foo-no-url", "foo-no-dir",
+						 null);
+    try {
+      node.listChildren(null, false);
+      fail("listChildren() is nonexistent dir should throw");
+    } catch (LockssRepository.RepositoryStateException e) {
+    }
   }
 
   public void testListEntries() throws Exception {
@@ -1231,11 +1257,11 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
       return new File(getContentDir(), buffer.toString());
     }
 
-    void loadNodeProps() {
+    void loadNodeProps(boolean okIfNotThere) {
       if (failPropsLoad) {
         throw new LockssRepository.RepositoryStateException("Couldn't load properties file.");
       } else {
-        super.loadNodeProps();
+        super.loadNodeProps(okIfNotThere);
       }
     }
 
