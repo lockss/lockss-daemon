@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.12 2003-02-13 06:28:51 claire Exp $
+ * $Id: ArchivalUnit.java,v 1.13 2003-02-20 22:26:05 tal Exp $
  */
 
 /*
@@ -47,6 +47,12 @@ import org.lockss.state.*;
  * <code>BaseArchivalUnit</code>).
  */
 public interface ArchivalUnit {
+
+  /**
+   * Supply (possibly changed) configuration information to an existing AU.
+   */
+  public void setConfiguration(Configuration config);
+
   /**
    * Determine whether the url falls within the CrawlSpec.
    * @param url the url to test
@@ -79,14 +85,15 @@ public interface ArchivalUnit {
   public CrawlSpec getCrawlSpec();
 
   /**
-   * Returns a fixed string identifier for the Plugin.
-   * @return a fixed plugin id
+   * Returns a unique string identifier for the Plugin.
+   * @return a unique id
    */
   public String getPluginId();
 
   /**
    * Returns a unique string identifier for the ArchivalUnit instance
-   * within the Plugin.
+   * within the Plugin.  This must be completely determined by the subset of
+   * the AU's configuration info that's necessary to identify the AU.
    * @return a unique id
    */
   public String getAUId();
@@ -94,6 +101,7 @@ public interface ArchivalUnit {
   /**
    * Sleeps for the interval needed between requests to the server
    */
+  // tk - shouldn't be here
   public void pause();
 
   /**
@@ -125,15 +133,15 @@ public interface ArchivalUnit {
    */
   public boolean shouldCrawlForNewContent(AuState aus);
 
-  public class InstantiationException extends Exception {
+  public class ConfigurationException extends Exception {
     private String msg;
     private Throwable nestedException;
 
-    public InstantiationException(String msg) {
+    public ConfigurationException(String msg) {
       this(msg, null);
     }
 
-    public InstantiationException(String msg, Throwable e) {
+    public ConfigurationException(String msg, Throwable e) {
       this.msg = msg;
       this.nestedException = e;
     }
