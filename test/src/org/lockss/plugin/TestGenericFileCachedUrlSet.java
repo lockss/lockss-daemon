@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericFileCachedUrlSet.java,v 1.9 2002-12-12 23:17:38 aalto Exp $
+ * $Id: TestGenericFileCachedUrlSet.java,v 1.10 2002-12-17 23:29:53 aalto Exp $
  */
 
 /*
@@ -150,6 +150,44 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
     assertIsomorphic(expectedA, childL);
   }
 
+  public void testNodeCounting() throws Exception {
+    createLeaf("http://www.example.com/testDir/branch1/leaf1",
+               "test streamAA", null);
+    createLeaf("http://www.example.com/testDir/branch1/leaf2",
+               "test stream", null);
+    createLeaf("http://www.example.com/testDir/branch2/leaf3",
+               "test streamB", null);
+    createLeaf("http://www.example.com/testDir/leaf4", "test streamC", null);
+
+    CachedUrlSetSpec rSpec =
+        new RECachedUrlSetSpec("http://www.example.com/testDir");
+    CachedUrlSet fileSet = mau.makeCachedUrlSet(rSpec);
+    fileSet.leafIterator();
+    assertEquals(4, ((GenericFileCachedUrlSet)fileSet).contentNodeCount);
+    assertEquals(48, ((GenericFileCachedUrlSet)fileSet).totalNodeSize);
+  }
+
+  public void testHashEstimation() throws Exception {
+    byte[] bytes = new byte[10000];
+    Arrays.fill(bytes, (byte)1);
+    String testString = new String(bytes);
+    for (int ii=0; ii<100; ii++) {
+      createLeaf("http://www.example.com/testDir/leaf"+ii, testString, null);
+    }
+    CachedUrlSetSpec rSpec =
+        new RECachedUrlSetSpec("http://www.example.com/testDir");
+    CachedUrlSet fileSet = mau.makeCachedUrlSet(rSpec);
+    long estimate = fileSet.estimatedHashDuration();
+    assertTrue(estimate > 0);
+    fileSet.storeActualHashDuration(estimate, null);
+    // test return of stored duration
+    long estimate2 = fileSet.estimatedHashDuration();
+    assertEquals(estimate, estimate2);
+    // test averaging of durations
+    fileSet.storeActualHashDuration(estimate2 + 200, null);
+    long estimate3 = fileSet.estimatedHashDuration();
+    assertEquals(estimate2 + 100, estimate3);
+  }
 
   private RepositoryNode createLeaf(String url, String content,
                                     Properties props) throws Exception {

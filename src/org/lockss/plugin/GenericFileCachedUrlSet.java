@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrlSet.java,v 1.11 2002-12-12 23:17:38 aalto Exp $
+ * $Id: GenericFileCachedUrlSet.java,v 1.12 2002-12-17 23:29:53 aalto Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin;
 
+import java.io.*;
 import java.util.*;
 import java.security.MessageDigest;
 import java.net.MalformedURLException;
@@ -39,6 +40,8 @@ import org.lockss.daemon.*;
 import org.lockss.hasher.*;
 import org.lockss.repository.*;
 import org.lockss.util.Logger;
+import org.lockss.poller.PollManager;
+import org.lockss.util.TimeBase;
 
 /**
  * This is an abstract CachedUrlSet implementation which uses the {@link LockssRepository}.
@@ -47,10 +50,15 @@ import org.lockss.util.Logger;
  * @version 0.0
  */
 public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
+  private static final int BYTES_PER_MS_DEFAULT = 100;
+
   private long lastDuration = 0;
   private Exception lastException = null;
   private LockssRepository repository;
   protected static Logger logger = Logger.getLogger("CachedUrlSet");
+
+  int contentNodeCount = 0;
+  long totalNodeSize = 0;
 
   public GenericFileCachedUrlSet(ArchivalUnit owner, CachedUrlSetSpec spec) {
     super(owner, spec);
@@ -94,6 +102,8 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
       logger.error("More than one prefix found in CachedUrlSetSpec.");
       throw new UnsupportedOperationException("More than one prefix found in CachedUrlSetSpec.");
     }
+    contentNodeCount = 0;
+    totalNodeSize = 0;
     TreeSet leafSet = new TreeSet(new UrlComparator());
     if (nodes.size()==1) {
       String prefix = (String)nodes.get(0);
@@ -106,6 +116,8 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
             CachedUrl newUrl = ((BaseArchivalUnit)au).cachedUrlFactory(this,
                 child.getNodeUrl());
             leafSet.add(newUrl);
+            contentNodeCount++;
+            totalNodeSize += child.getContentSize();
           }
           // internal nodes could have content, so always recurse
           recurseLeafFetch(child, leafSet);
@@ -128,6 +140,8 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
         CachedUrl newUrl = ((BaseArchivalUnit)au).cachedUrlFactory(this,
             child.getNodeUrl());
         set.add(newUrl);
+        contentNodeCount++;
+        totalNodeSize += child.getContentSize();
       }
       // internal nodes could have content, so always recurse
       recurseLeafFetch(child, set);
@@ -143,21 +157,31 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
   }
 
   public void storeActualHashDuration(long elapsed, Exception err) {
-    lastDuration = elapsed;
+    //average with current estimate to minimize effect of extreme results
+    if (lastDuration > 0) {
+      lastDuration = (lastDuration + elapsed) / 2;
+    } else {
+      lastDuration = elapsed;
+    }
     lastException = err;
   }
 
   public long estimatedHashDuration() {
     if (lastDuration>0) return lastDuration;
     else {
-      // determine number of internal nodes
-      // determine number of content nodes
-      // determine average content node size
-      // create a temp node of average size
-      // open, hash
-      // multiply result
+      // determine number of content nodes and total size
+      calculateNodeCountAndSize();
+      MessageDigest hasher = PollManager.getPollManager().getHasher();
+      CachedUrlSetHasher cush = contentHasherFactory(this, hasher);
+      long bytesPerMs = 0;
+      try {
+        bytesPerMs = cush.getBytesPerMsEstimate();
+      } catch (IOException ie) {
+        logger.error("Couldn't finish estimating hash time: "+ie);
+        return totalNodeSize * BYTES_PER_MS_DEFAULT;
+      }
+      return (long)(totalNodeSize / bytesPerMs);
     }
-    return 1000;
   }
 
   public CachedUrl makeCachedUrl(String url) {
@@ -175,6 +199,29 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
   protected CachedUrlSetHasher nameHasherFactory(CachedUrlSet owner,
 						 MessageDigest hasher) {
     return new GenericNameHasher(owner, hasher);
+  }
+
+  private void calculateNodeCountAndSize() {
+    if ((contentNodeCount==0)||(totalNodeSize==0)) {
+      // leafIterator calculates these when running
+      leafIterator();
+    }
+  }
+
+  private File createTempFile(String location, int size) {
+    File tempFile = new File(location);
+    return null;
+  }
+
+  private String getTempFileLocation(String file_name) {
+    StringBuffer buffer = new StringBuffer();
+    String location = "";
+    buffer.append(location);
+    if (!location.endsWith(File.separator)) {
+      buffer.append(File.separator);
+    }
+    buffer.append(file_name);
+    return buffer.toString();
   }
 
   private class UrlComparator implements Comparator {
