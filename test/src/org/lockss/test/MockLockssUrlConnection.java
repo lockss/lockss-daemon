@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssUrlConnection.java,v 1.3 2004-03-07 08:43:46 tlipkis Exp $
+ * $Id: MockLockssUrlConnection.java,v 1.4 2004-03-10 00:07:54 tlipkis Exp $
  */
 
 /*
@@ -168,8 +168,10 @@ public class MockLockssUrlConnection extends BaseLockssUrlConnection {
   public void storeResponseHeaderInto(Properties props, String prefix) {
     for (Iterator iter = respHeaders.keySet().iterator(); iter.hasNext(); ) {
       String key = (String)iter.next();
-      props.setProperty(prefix + key,
-			respHeaders.getProperty(key.toLowerCase()));
+      if (prefix != null) {
+	key = prefix + key;
+      }
+      props.setProperty(key, respHeaders.getProperty(key.toLowerCase()));
     }
   }
 
