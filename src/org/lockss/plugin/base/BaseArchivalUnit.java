@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.55 2004-01-29 01:49:54 eaalto Exp $
+ * $Id: BaseArchivalUnit.java,v 1.56 2004-01-29 22:47:42 eaalto Exp $
  */
 
 /*
@@ -174,9 +174,11 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 	String oldVal = auConfig.get(key);
 	String newVal = newConfig.get(key);
 	if (!StringUtil.equalStrings(oldVal, newVal)) {
-	  throw new ConfigurationException("Attempt to modify defining property "
-				       +"of existing ArchivalUnit: "+ key
-				       +". old: "+oldVal+" new: "+newVal);
+	  throw new ConfigurationException(
+              "Attempt to modify defining property " +
+              "of existing ArchivalUnit: " + key +
+              ". old: "+oldVal+" new: "+newVal
+              );
 	}
       }
     }
@@ -518,11 +520,11 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    */
   public FilterRule getFilterRule(String mimeType) {
     if (mimeType!=null) {
-      FilterRule rule = (FilterRule)filterMap.get(mimeType.toLowerCase());
+      FilterRule rule = (FilterRule)filterMap.get(mimeType);
       if (rule==null) {
-        rule = constructFilterRule(mimeType.toLowerCase());
+        rule = constructFilterRule(mimeType);
         if (rule != null) {
-          filterMap.put(mimeType.toLowerCase(), rule);
+          filterMap.put(mimeType, rule);
         }
       }
       return rule;
