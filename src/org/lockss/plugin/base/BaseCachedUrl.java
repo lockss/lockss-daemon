@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.16 2004-10-13 23:07:18 clairegriffin Exp $
+ * $Id: BaseCachedUrl.java,v 1.17 2005-01-27 23:01:32 troberts Exp $
  */
 
 /*
@@ -174,9 +174,21 @@ public class BaseCachedUrl implements CachedUrl {
     }
   }
 
+  private String trimMime(String mimeType) {
+    if (mimeType == null) {
+      return null;
+    }
+    int idx = mimeType.indexOf(";");
+    if (idx < 0) {
+      return mimeType;
+    }
+    return mimeType.substring(0, idx);
+  }
+
+
   private InputStream getFilteredStream() {
     CIProperties props = getProperties();
-    String mimeType = props.getProperty(PROPERTY_CONTENT_TYPE);
+    String mimeType = trimMime(props.getProperty(PROPERTY_CONTENT_TYPE));
     FilterRule fr = au.getFilterRule(mimeType);
     if (fr != null) {
       Reader rd = fr.createFilteredReader(openForReading());
