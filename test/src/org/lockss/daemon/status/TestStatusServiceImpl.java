@@ -1,5 +1,5 @@
 /*
- * $Id: TestStatusServiceImpl.java,v 1.7 2003-03-17 08:26:29 tal Exp $
+ * $Id: TestStatusServiceImpl.java,v 1.8 2003-03-17 21:48:36 troberts Exp $
  */
 
 /*
@@ -26,6 +26,7 @@
 
 package org.lockss.daemon.status;
 import java.util.*;
+import java.net.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 
@@ -501,6 +502,40 @@ public class TestStatusServiceImpl extends LockssTestCase {
     assertRowsEqual(expectedRows, table.getSortedRows());
   }
 
+  private static final Object[][] inetAddrColArray = {
+    {"address", "Address", new Integer(ColumnDescriptor.TYPE_IP_ADDRESS)},
+    {"name", "Name", new Integer(ColumnDescriptor.TYPE_STRING)}
+  };
+ 
+  public void testSortsInetAddresses() 
+      throws UnknownHostException, StatusService.NoSuchTableException {
+    Object[][] inetAddrRowArray = {
+      {InetAddress.getByName("127.0.0.2"), "A"},
+      {InetAddress.getByName("127.0.0.1"), "B"},
+      {InetAddress.getByName("127.0.0.4"), "C"},
+      {InetAddress.getByName("127.0.0.3"), "D"}
+    };    
+    String key = "key1";
+    MockStatusAccessor statusAccessor = 
+      generateStatusAccessor(inetAddrColArray, inetAddrRowArray, key);
+    List rules = ListUtil.list(new StatusTable.SortRule("address", true));
+    statusAccessor.setDefaultSortRules(rules, key);
+
+    statusService.registerStatusAccessor("table1", statusAccessor);
+    
+    StatusTable table = statusService.getTable("table1", key);
+
+    List expectedColumns = makeColumnDescriptorsFromArray(inetAddrColArray);
+
+    Object[][] expectedRowsArray = new Object[4][];
+    expectedRowsArray[0] = inetAddrRowArray[1];
+    expectedRowsArray[1] = inetAddrRowArray[0];
+    expectedRowsArray[2] = inetAddrRowArray[3];
+    expectedRowsArray[3] = inetAddrRowArray[2];
+
+    List expectedRows = makeRowsFromArray(expectedColumns, expectedRowsArray);
+    assertRowsEqual(expectedRows, table.getSortedRows());
+  }
 
 
 

@@ -1,5 +1,5 @@
 /*
- * $Id: StatusTable.java,v 1.10 2003-03-15 02:32:11 troberts Exp $
+ * $Id: StatusTable.java,v 1.11 2003-03-17 21:48:36 troberts Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.daemon.status;
 
 import java.util.*;
+import java.net.*;
 import org.lockss.util.*;
 
 /**
@@ -126,7 +127,8 @@ public class StatusTable {
    * in the sort order specified by sortRules 
    */
   public List getSortedRows(List sortRules) {
-    Collections.sort(rows, new SortRuleComparator(sortRules));
+    Collections.sort(rows, 
+		     new SortRuleComparator(sortRules, columnDescriptors));
     return rows;
   }
 
@@ -146,9 +148,21 @@ public class StatusTable {
 
   private static class SortRuleComparator implements Comparator {
     List sortRules;
+    Map colTypeHash;
 
-    public SortRuleComparator(List sortRules) {
+    public SortRuleComparator(List sortRules, List columnDescriptors) {
       this.sortRules = sortRules;
+      this.colTypeHash = getTypeHash(columnDescriptors);
+    }
+
+    private HashMap getTypeHash(List columnDescriptors) {
+      HashMap typeHash = new HashMap(columnDescriptors.size());
+      Iterator it = columnDescriptors.iterator();
+      while (it.hasNext()) {
+	ColumnDescriptor col = (ColumnDescriptor) it.next();
+	typeHash.put(col.getColumnName(), new Integer(col.getType()));
+      }
+      return typeHash;
     }
 
     public int compare(Object a, Object b) {
@@ -159,28 +173,49 @@ public class StatusTable {
 
       while (returnVal == 0 && it.hasNext()){
 	SortRule sortRule = (SortRule)it.next();
-	Comparable val1 = (Comparable)rowA.get(sortRule.getColumnName());
-	Comparable val2 = (Comparable)rowB.get(sortRule.getColumnName());
-	returnVal = compareHandlingNulls(sortRule.sortAscending, val1, val2);
+	String colName = sortRule.getColumnName();
+	Object valA = rowA.get(colName);
+	Object valB = rowB.get(colName);
+
+	int curType = ((Integer)colTypeHash.get(colName)).intValue();
+
+	switch (curType) {
+	case ColumnDescriptor.TYPE_IP_ADDRESS:
+	  returnVal = compareInetAddresses((InetAddress)valA, 
+					   (InetAddress)valB);
+	  break;
+	case ColumnDescriptor.TYPE_INT:
+	case ColumnDescriptor.TYPE_FLOAT:
+	case ColumnDescriptor.TYPE_PERCENT:
+	case ColumnDescriptor.TYPE_TIME_INTERVAL:
+	case ColumnDescriptor.TYPE_STRING:
+	default: //if we don't know the type, assume comparable
+	  returnVal = compareHandlingNulls((Comparable)valA, (Comparable)valB);
+	  break;
+	}
+	returnVal = sortRule.sortAscending ? returnVal : -returnVal;
+      }
+      return returnVal;
+    }
+    
+    private int compareInetAddresses(InetAddress addr1, InetAddress addr2) {
+      return (addr1.getHostAddress().compareTo(addr2.getHostAddress()));
+    }
+
+    private static int compareHandlingNulls(Comparable val1,
+					    Comparable val2) {
+      int returnVal = 0;
+      if (val1 == null) {
+	returnVal = val2 == null ? 0 : -1;
+      } else if (val2 == null) {
+	returnVal = 1;
+      } else {
+	returnVal = val1.compareTo(val2);
       }
       return returnVal;
     }
   }
 
-  private static int compareHandlingNulls(boolean sortAscending, 
-					  Comparable val1,
-					  Comparable val2) {
-    int returnVal = 0;
-    if (val1 == null) {
-      returnVal = val2 == null ? 0 : -1;
-    } else if (val2 == null) {
-      returnVal = 1;
-    } else {
-      returnVal = val1.compareTo(val2);
-    }
-    return sortAscending ? returnVal : -returnVal;
-  }
-  
   /**
    * Encapsulation of the info needed to sort on a single field
    */
@@ -272,7 +307,8 @@ public class StatusTable {
       //true iff both strings are equal or null
       return StringUtil.equalStrings(key, ref.getKey());
     }
-      
-
   }
+
+
+
 }
