@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlUtil.java,v 1.5 2003-07-23 23:29:55 troberts Exp $
+ * $Id: TestUrlUtil.java,v 1.6 2004-01-22 02:01:34 tlipkis Exp $
  */
 
 /*
@@ -37,12 +37,28 @@ import junit.framework.TestCase;
 import org.lockss.test.*;
 import org.lockss.util.*;
 
-public class TestUrlUtil extends TestCase{
+public class TestUrlUtil extends LockssTestCase {
 
-  public TestUrlUtil(String msg){
-    super(msg);
+  public void testEqualUrls() throws MalformedURLException {
+    assertTrue(UrlUtil.equalUrls(new URL("http://foo.bar/xyz#tag"),
+				 new URL("http://foo.bar/xyz#tag")));
+    assertTrue(UrlUtil.equalUrls(new URL("http://foo.bar/xyz#tag"),
+				 new URL("HTTP://FOO.bar/xyz#tag")));
+    assertFalse(UrlUtil.equalUrls(new URL("http://foo.bar/xyz#tag"),
+				  new URL("ftp://foo.bar/xyz#tag")));
+    assertFalse(UrlUtil.equalUrls(new URL("http://foo.bar/xyz#tag"),
+				  new URL("http://foo.baz/xyz#tag")));
+    assertFalse(UrlUtil.equalUrls(new URL("http://foo.bar/xyz#tag"),
+				  new URL("http://foo.bar/xyzz#tag")));
+    assertFalse(UrlUtil.equalUrls(new URL("http://foo.bar/xyz#tag"),
+				  new URL("http://foo.bar/xYz#tag")));
+    assertFalse(UrlUtil.equalUrls(new URL("http://foo.bar/xyz#tag"),
+				  new URL("http://foo.bar/xyz#tag2")));
+    assertFalse(UrlUtil.equalUrls(new URL("http://foo.bar/xyz#tag"),
+				  new URL("http://foo.bar/xyz#Tag")));
+    assertFalse(UrlUtil.equalUrls(new URL("http:80//foo.bar/xyz#tag"),
+				  new URL("http:81//foo.bar/xyz#tag")));
   }
-
 
   public void testGetUrlPrefixNullUrl(){
     try{

@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.8 2003-07-23 23:29:55 troberts Exp $
+ * $Id: UrlUtil.java,v 1.9 2004-01-22 02:01:34 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -46,6 +46,24 @@ public class UrlUtil {
    * The separator char for URLs.
    */
   public static final char URL_PATH_SEPARATOR_CHAR = '/';
+
+  /** Compare two URLs for equality.  Unlike URL.equals(), this does not
+   * cause DNS lookups.
+   * @param u1 a URL
+   * @param u2 a nother URL
+   * @return true iff the URLs have the same protocol (case-independent),
+   * the same host (case-independent), the same port number on the host,
+   * and the same file and anchor on the host.
+   */
+
+  public static boolean equalUrls(URL u1, URL u2) {
+    return
+      u1.getPort() == u2.getPort() &&
+      StringUtil.equalStringsIgnoreCase(u1.getProtocol(), u2.getProtocol()) &&
+      StringUtil.equalStringsIgnoreCase(u1.getHost(), u2.getHost()) &&
+      StringUtil.equalStrings(u1.getFile(), u2.getFile()) &&
+      StringUtil.equalStrings(u1.getRef(), u2.getRef());
+  }
 
   /** Return input stream for url iff 200 response code, else throw.
    * In Java 1.1.7, URL.openStream() returns an InputStream in some cases
