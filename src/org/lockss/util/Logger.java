@@ -1,5 +1,5 @@
 /*
- * $Id: Logger.java,v 1.20 2003-04-14 07:28:47 tal Exp $
+ * $Id: Logger.java,v 1.21 2003-04-17 04:04:40 tal Exp $
  */
 
 /*
@@ -52,6 +52,9 @@ public class Logger {
   static final String PARAM_DEFAULT_LEVEL = PREFIX + "default.level";
   static final String PARAM_LOG_LEVEL = PREFIX + "<logname>.level";
   static final String PARAM_LOG_TARGETS = PREFIX + "targets";
+
+  /** prefix for target-specific params */
+  public static final String TARGET_PREFIX = PREFIX + "target.";
 
   /** Critical errors require immediate attention from a human. */
   public static final int LEVEL_CRITICAL = 1;
