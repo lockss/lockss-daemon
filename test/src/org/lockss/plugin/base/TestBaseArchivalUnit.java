@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArchivalUnit.java,v 1.24 2004-12-12 23:02:38 tlipkis Exp $
+ * $Id: TestBaseArchivalUnit.java,v 1.25 2005-01-29 19:59:37 troberts Exp $
  */
 
 /*
@@ -414,8 +414,13 @@ public class TestBaseArchivalUnit extends LockssTestCase {
 	       instanceof org.lockss.crawler.GoslingHtmlParser);
   }
 
+  public void testGetContentParserReturnsGoslingHtmlParserSpaces() {
+    assertTrue(mbau.getContentParser(" text/html ")
+	       instanceof org.lockss.crawler.GoslingHtmlParser);
+  }
+
   public void testReturnsGHPWithJunkAfterContentType() {
-    assertTrue(mbau.getContentParser("text/html blah")
+    assertTrue(mbau.getContentParser("text/html ; random content")
 	       instanceof org.lockss.crawler.GoslingHtmlParser);
   }
 
@@ -573,6 +578,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     }
 
   }
+  
   static class MyMockBaseArchivalUnit extends BaseArchivalUnit {
     private String auId = null;
     private String m_name = "MockBaseArchivalUnit";
@@ -581,6 +587,8 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     private CrawlRule m_rules = null;
     private String m_startUrl ="http://www.example.com/index.html";
     private boolean setAuParams = false;
+
+    private String mimeTypeCalledWith = null;
 
     MyMockBaseArchivalUnit(Plugin plugin, String name, CrawlRule rules,
 			   String startUrl) {
@@ -604,6 +612,10 @@ public class TestBaseArchivalUnit extends LockssTestCase {
 
     protected String makeName() {
       return m_name;
+    }
+
+    public String getMimeTypeCalledWith() {
+      return mimeTypeCalledWith;
     }
 
     protected CrawlRule makeRules() {

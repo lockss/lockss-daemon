@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.88 2005-01-27 23:00:16 troberts Exp $
+ * $Id: BaseArchivalUnit.java,v 1.89 2005-01-29 19:59:36 troberts Exp $
  */
 
 /*
@@ -561,18 +561,17 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   /**
    * Currently the only ContentParser we have is GoslingHtmlParser, so this
    * gets returned for any string that starts with "test/html".  Null otherwise
-   * @param mimeType mime type to get a content parser for
-   * @return GoslingHtmlParser if mimeType starts with "test/html",
+   * @param contentType content type to get a content parser for
+   * @return GoslingHtmlParser if contentType starts with "test/html",
    * null otherwise
    */
-  public ContentParser getContentParser(String mimeType) {
-    if (mimeType != null) {
-      if (StringUtil.startsWithIgnoreCase(mimeType, "text/html")) {
-	if (goslingHtmlParser == null) {
-	  goslingHtmlParser = new GoslingHtmlParser();
-	}
-	return goslingHtmlParser;
+  public ContentParser getContentParser(String contentType) {
+    String mimeType = HeaderUtil.getMimeTypeFromContentType(contentType);
+    if ("text/html".equalsIgnoreCase(mimeType)) {
+      if (goslingHtmlParser == null) {
+	goslingHtmlParser = new GoslingHtmlParser();
       }
+      return goslingHtmlParser;
     }
     return null;
   }
@@ -582,36 +581,36 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 
   /**
    * Returns a filter rule from the cache if found, otherwise calls
-   * 'constructFilterRule()' and caches the result if non-null.  Mime-type
-   * is converted to lowercase.  If mimetype is null, returns null.
-   * @param mimeType the mime type
+   * 'constructFilterRule()' and caches the result if non-null.  Content-type
+   * is converted to lowercase.  If contenttype is null, returns null.
+   * @param contentType the content type
    * @return the FilterRule
    */
-  public FilterRule getFilterRule(String mimeType) {
-    logger.debug3("Trying to find filter for "+mimeType);
-    if (mimeType!=null) {
-      FilterRule rule = (FilterRule)filterMap.get(mimeType);
+  public FilterRule getFilterRule(String contentType) {
+    logger.debug3("Trying to find filter for "+contentType);
+    if (contentType != null) {
+      FilterRule rule = (FilterRule)filterMap.get(contentType);
       if (rule==null) {
-        rule = constructFilterRule(mimeType);
+        rule = constructFilterRule(contentType);
         if (rule != null) {
 	  logger.debug3("Found one: "+rule);
-          filterMap.put(mimeType, rule);
+          filterMap.put(contentType, rule);
         } else {
 	  logger.debug3("Didn't find one");
 	}
       }
       return rule;
     }
-    logger.debug3("Mime type was null");
+    logger.debug3("Content type was null");
     return null;
   }
 
   /**
    * Override to provide proper filter rules.
-   * @param mimeType the mime type
+   * @param contentType content type
    * @return null, since we don't filter by default
    */
-  protected FilterRule constructFilterRule(String mimeType) {
+  protected FilterRule constructFilterRule(String contentType) {
     logger.debug3("BaseArchivalUnit - returning default value of null");
     return null;
   }
