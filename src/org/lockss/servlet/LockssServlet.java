@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.52 2005-01-05 09:47:21 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.53 2005-01-19 04:18:40 tlipkis Exp $
  */
 
 /*
@@ -72,6 +72,7 @@ public abstract class LockssServlet extends HttpServlet
   // performed when the form is submitted.  (Not always the submit button.)
   public static final String ACTION_TAG = "lockssAction";
 
+  public static final String ATTR_INCLUDE_SCRIPT = "IncludeScript";
   public static final String JAVASCRIPT_RESOURCE =
     "org/lockss/htdocs/admin.js";
 
@@ -275,11 +276,6 @@ public abstract class LockssServlet extends HttpServlet
      SERVLET_RAISE_ALERT,
      LINK_CONTACT,
      LINK_HELP,
-//      SERVLET_ADMIN_HOME,
-//      SERVLET_JOURNAL_STATUS,
-//      SERVLET_JOURNAL_SETUP,
-//      SERVLET_DAEMON_STATUS,
-//      SERVLET_ACCESS_CONTROL,
   };
 
   // Create mapping from servlet class to ServletDescr
@@ -693,18 +689,11 @@ public abstract class LockssServlet extends HttpServlet
 	navTable.add("</font>");
       }
     }
-//     navTable.newRow();
-//     navTable.newCell();
-//     navTable.cell().attribute("COLSPAN=\"3\"");
-//     String contactAddr =
-//       Configuration.getParam(PARAM_CONTACT_ADDR, DEFAULT_CONTACT_ADDR);
-//     navTable.add("<font size=-1>");
-//     navTable.add(new Link("mailto:" + contactAddr, "Contact Us"));
     navTable.add("</font>");
     return navTable;
   }
 
-  protected Table getExplanationBlock(String text) {
+  protected Table getExplanationBlock(Object text) {
     Table exp = new Table(0, "width=\"85%\"");
     exp.center();
     exp.newCell("align=center");
@@ -986,8 +975,26 @@ public abstract class LockssServlet extends HttpServlet
     elem.add("</font></ol>");
   }
 
+  /** Add javascript to page.  Normally adds a link to the script file, but
+   * can be told to include the script directly in the page, to accomodate
+   * unit testing of individual servlets, when other fetches won't work. */
   protected void addJavaScript(Composite comp) {
+    String include = (String)context.getAttribute(ATTR_INCLUDE_SCRIPT);
+    if (StringUtil.isNullString(include)) {
+      linkToJavaScript(comp);
+    } else {
+      includeJavaScript0(comp);
+    }
+  }
+
+  private void includeJavaScript0(Composite comp) {
     Script script = new Script(getJavascript());
+    comp.add(script);
+  }
+
+  private void linkToJavaScript(Composite comp) {
+    Script script = new Script("");
+    script.attribute("src", "admin.js");
     comp.add(script);
   }
 
