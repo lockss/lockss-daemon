@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.78 2004-04-07 20:23:04 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.79 2004-04-09 06:53:00 tlipkis Exp $
  */
 
 /*
@@ -95,7 +95,7 @@ public class PluginManager extends BaseLockssManager {
     super.startService();
     configMgr = getDaemon().getConfigManager();
     statusSvc = getDaemon().getStatusService();
-    statusSvc.registerStatusAccessor("AUS", new Status());
+//     statusSvc.registerStatusAccessor("AUS", new Status());
     resetConfig();   // causes setConfig to think previous config was empty
   }
 
