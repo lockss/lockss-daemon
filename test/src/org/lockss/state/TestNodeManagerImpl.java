@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.38 2003-03-06 00:13:28 aalto Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.39 2003-03-08 00:44:34 troberts Exp $
  */
 
 /*
@@ -50,7 +50,9 @@ public class TestNodeManagerImpl extends LockssTestCase {
   private Poll contentPoll = null;
   private Random random = new Random();
 
-  private MockLockssDaemon theDaemon = new MockLockssDaemon(null);
+//  private MockLockssDaemon theDaemon = new MockLockssDaemon(null);
+  private MockLockssDaemon theDaemon;
+  //  private MockCrawlManager crawlManager;
 
   public TestNodeManagerImpl(String msg) {
     super(msg);
@@ -58,6 +60,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
+    theDaemon = new MockLockssDaemon();
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     TestHistoryRepositoryImpl.configHistoryParams(tempDirPath);
 
@@ -65,7 +68,9 @@ public class TestNodeManagerImpl extends LockssTestCase {
     mau.setAUCachedUrlSet(makeFakeCachedUrlSet(TEST_URL, 2, 2));
     theDaemon.getPluginManager();
     PluginUtil.registerArchivalUnit(mau);
+
     theDaemon.setCrawlManager(new MockCrawlManager());
+
     pollManager = new MockPollManager();
     theDaemon.setPollManager(pollManager);
     theDaemon.setIdentityManager(new MockIdentityManager());
@@ -372,18 +377,44 @@ public class TestNodeManagerImpl extends LockssTestCase {
     assertFalse(thread.treeWalkRunning);
     assertEquals(auState.lastTreeWalk, thread.lastRun);
 
-    nodeManager.stopService();
-    assertNull(nodeManager.treeWalkThread);
-/*
-    crawlMan.setShouldCrawlNewContent(false);
-    // the thread should trigger a treewalk, and the treewalk should
-    // trigger a crawl scheduled
-    auState.lastTreeWalk = -123;
+//     nodeManager.stopService();
+//     assertNull(nodeManager.treeWalkThread);
+// /*
+//     crawlMan.setShouldCrawlNewContent(false);
+//     // the thread should trigger a treewalk, and the treewalk should
+//     // trigger a crawl scheduled
+//     auState.lastTreeWalk = -123;
+//     nodeManager.startService();
+//     assertTrue(crawlMan.getAuStatus(mau)==MockCrawlManager.SCHEDULED);
+//  */
+//     nodeManager.stopService();
+//     crawlMan.stopService();
+//   }
+  }
+
+  public void testTreeWalkShouldStartIfNoneHaveRun() {
+    assertTrue(nodeManager.shouldTreeWalkStart());
+  }
+
+  public void testTreeWalkShouldntStartIfOneJustRan() throws IOException {
     nodeManager.startService();
-    assertTrue(crawlMan.getAuStatus(mau)==MockCrawlManager.SCHEDULED);
- */
+    String configString = "org.lockss.treewalk.interval=12w";
+    TestConfiguration.setCurrentConfigFromString(configString);
+    nodeManager.doTreeWalk();
+    assertFalse(nodeManager.shouldTreeWalkStart());
     nodeManager.stopService();
-    crawlMan.stopService();
+  }
+
+  public void testTreeWalkShouldStartIfIntervalElapsed() throws IOException {
+    nodeManager.startService();
+    String configString = "org.lockss.treewalk.interval=100";
+    TestConfiguration.setCurrentConfigFromString(configString);
+    nodeManager.doTreeWalk();
+
+    TimerUtil.guaranteedSleep(100);
+
+    assertTrue(nodeManager.shouldTreeWalkStart());
+    nodeManager.stopService();
   }
 
   public void testWalkNodeStateCrawling() throws Exception {
@@ -407,7 +438,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     // should schedule background crawl if no recent crawl (time < 0)
     testWalkCrawling(CrawlState.NEW_CONTENT_CRAWL, CrawlState.FINISHED, -123,
                      true, node);
-
+    
     theDaemon.getPollManager().stopService();
     ((MockCrawlManager)theDaemon.getCrawlManager()).stopService();
   }
@@ -484,12 +515,14 @@ public class TestNodeManagerImpl extends LockssTestCase {
 
   public void testEstimatedTreeWalk() {
     //XXX fix using simulated time
+    nodeManager.startService();
     long estimate = nodeManager.getEstimatedTreeWalkDuration();
     assertTrue(estimate > 0);
     long newEstimate = 100;
     nodeManager.updateEstimate(newEstimate);
     long expectedEst = (estimate + newEstimate) / 2;
     assertEquals(expectedEst, nodeManager.getEstimatedTreeWalkDuration());
+    nodeManager.stopService();
   }
 
   public void testMapErrorCodes() {
@@ -798,6 +831,21 @@ public class TestNodeManagerImpl extends LockssTestCase {
 					  testmsg, numAgree, numDisagree);
     TestHistoryRepositoryImpl.configHistoryParams(tempDirPath);
     return p;
+  }
+  
+  /**
+   * Used to kick off a doTreeWalk in another thread, for testing behavior when
+   * a treewalk is running
+   */
+  class SimpleDoTreeWalkThread extends Thread {
+    NodeManagerImpl nodeManager;
+    SimpleDoTreeWalkThread(NodeManagerImpl nodeManager) {
+      this.nodeManager = nodeManager;
+    }
+    
+    public void run() {
+      nodeManager.doTreeWalk();
+    }
   }
 
   public static void main(String[] argv) {
