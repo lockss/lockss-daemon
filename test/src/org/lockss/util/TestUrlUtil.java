@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlUtil.java,v 1.12 2004-03-11 09:43:13 tlipkis Exp $
+ * $Id: TestUrlUtil.java,v 1.13 2004-04-19 02:43:24 tlipkis Exp $
  */
 
 /*
@@ -127,6 +127,18 @@ public class TestUrlUtil extends LockssTestCase {
     }
     catch (MalformedURLException mue) {
     }
+  }
+
+  public void testMinimallyEncode() throws Exception {
+    try {
+      assertEquals(null, UrlUtil.minimallyEncodeUrl(null));
+      fail("minimallyEncodeUrl(null) didn't throw");
+    } catch (NullPointerException e) {}    
+    assertEquals("", UrlUtil.minimallyEncodeUrl(""));
+    assertEquals("foo", UrlUtil.minimallyEncodeUrl("foo"));
+    assertEquals("foo%20", UrlUtil.minimallyEncodeUrl("foo "));
+    assertEquals("f%22oo%20", UrlUtil.minimallyEncodeUrl("f\"oo "));
+    assertEquals("%20foo%7c", UrlUtil.minimallyEncodeUrl(" foo|"));
   }
 
   public void testResolveUrl() throws Exception {

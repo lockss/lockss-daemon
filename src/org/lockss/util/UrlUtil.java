@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.18 2004-03-16 23:01:40 tlipkis Exp $
+ * $Id: UrlUtil.java,v 1.19 2004-04-19 02:43:25 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -151,6 +151,13 @@ public class UrlUtil {
     return sb.toString();
   }
 
+  public static String minimallyEncodeUrl(String url) {
+    url = StringUtil.replaceString(url, " ", "%20");
+    url = StringUtil.replaceString(url, "\"", "%22");
+    url = StringUtil.replaceString(url, "|", "%7c");
+    return url;
+  }
+
   /** Resolve possiblyRelativeUrl relative to baseUrl.
    * @param baseUrl The base URL relative to which to resolve
    * @param possiblyRelativeUrl resolved relative to baseUrl
@@ -158,24 +165,41 @@ public class UrlUtil {
    */
   public static String resolveUri(String baseUrl, String possiblyRelativeUrl)
       throws MalformedURLException {
-    possiblyRelativeUrl =
-      StringUtil.replaceString(possiblyRelativeUrl.trim(), " ", "%20");
-    possiblyRelativeUrl =
-      StringUtil.replaceString(possiblyRelativeUrl.trim(), "\"", "%22");
-    try {
-      org.apache.commons.httpclient.URI resultURI =
-	new org.apache.commons.httpclient.URI(possiblyRelativeUrl.toCharArray());
-      if (resultURI.isRelativeURI()) {
-	//location is incomplete, use base values for defaults
-	org.apache.commons.httpclient.URI baseURI =
-	  new org.apache.commons.httpclient.URI(baseUrl.toCharArray());
-	resultURI = new org.apache.commons.httpclient.URI(baseURI, resultURI);
-      }
-      return resultURI.toString();
-    } catch (URIException e) {
-      throw new MalformedURLException(e.toString());
-    }
+    return resolveUri(new URL(baseUrl), possiblyRelativeUrl);
   }
+
+  public static String resolveUri(URL baseUrl, String possiblyRelativeUrl)
+      throws MalformedURLException {
+    String encodedUri = minimallyEncodeUrl(possiblyRelativeUrl.trim());
+    URL url = new URL(baseUrl, encodedUri);
+    return url.toString();
+  }
+
+  // resolveUri() using HttpClient URI.  Allows all protocols (no
+  // StreamHandler required), but is more picky about allowable characters,
+  // and quite a bit slower.
+//   /** Resolve possiblyRelativeUrl relative to baseUrl.
+//    * @param baseUrl The base URL relative to which to resolve
+//    * @param possiblyRelativeUrl resolved relative to baseUrl
+//    * @return The URL formed by combining the two URLs
+//    */
+//   public static String resolveUri(String baseUrl, String possiblyRelativeUrl)
+//       throws MalformedURLException {
+//     try {
+//       String encodedUri = minimallyEncodeUrl(possiblyRelativeUrl);
+//       org.apache.commons.httpclient.URI resultURI =
+// 	new org.apache.commons.httpclient.URI(encodedUri.toCharArray());
+//       if (resultURI.isRelativeURI()) {
+// 	//location is incomplete, use base values for defaults
+// 	org.apache.commons.httpclient.URI baseURI =
+// 	  new org.apache.commons.httpclient.URI(baseUrl.toCharArray());
+// 	resultURI = new org.apache.commons.httpclient.URI(baseURI, resultURI);
+//       }
+//       return resultURI.toString();
+//     } catch (URIException e) {
+//       throw new MalformedURLException(e.toString());
+//     }
+//   }
 
   public static boolean isAbsoluteUrl(String url) {
     if (url != null) {
