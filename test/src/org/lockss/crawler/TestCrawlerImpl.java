@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingCrawlerImpl.java,v 1.34 2004-01-09 01:16:32 troberts Exp $
+ * $Id: TestCrawlerImpl.java,v 1.1 2004-01-13 01:02:35 troberts Exp $
  */
 
 /*
@@ -40,16 +40,16 @@ import org.lockss.test.*;
 import org.lockss.plugin.*;
 
 /**
- * This is the test class for org.lockss.crawler.GoslingCrawlerImpl
+ * This is the test class for org.lockss.crawler.CrawlerImpl
  *
  * @author  Thomas S. Robertson
  * @version 0.0
  */
-public class TestGoslingCrawlerImpl extends LockssTestCase {
+public class TestCrawlerImpl extends LockssTestCase {
   private MockArchivalUnit mau = null;
   private List startUrls = null;
 
-  private GoslingCrawlerImpl crawler = null;
+  private CrawlerImpl crawler = null;
   private CrawlSpec spec = null;
 
   public static final String EMPTY_PAGE = "";
@@ -60,11 +60,11 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
   private MockAuState aus = new MockAuState();
 
   private static final String PARAM_RETRY_TIMES =
-    Configuration.PREFIX + "GoslingCrawlerImpl.numCacheRetries";
+    Configuration.PREFIX + "CrawlerImpl.numCacheRetries";
   private static final int DEFAULT_RETRY_TIMES = 3;
 
   public static Class testedClasses[] = {
-    org.lockss.crawler.GoslingCrawlerImpl.class
+    org.lockss.crawler.CrawlerImpl.class
   };
 
   public static Class prerequisites[] = {
@@ -86,10 +86,10 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     crawlRule.addUrlToCrawl(startUrl);
     spec = new CrawlSpec(startUrls, crawlRule);
     crawler =
-      GoslingCrawlerImpl.makeNewContentCrawler(mau, spec, aus);
+      CrawlerImpl.makeNewContentCrawler(mau, spec, aus);
 
     Properties p = new Properties();
-    p.setProperty(GoslingCrawlerImpl.PARAM_RETRY_PAUSE, "0");
+    p.setProperty(CrawlerImpl.PARAM_RETRY_PAUSE, "0");
     ConfigurationUtil.setCurrentConfigFromProps(p);
   }
 
@@ -97,7 +97,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
   public void testMnccThrowsForNullAu() {
     try {
       crawler =
-	GoslingCrawlerImpl.makeNewContentCrawler(null, spec,
+	CrawlerImpl.makeNewContentCrawler(null, spec,
 						 new MockAuState());
       fail("Calling makeNewContentCrawler with a null ArchivalUnit"
 	   +" should throw an IllegalArgumentException");
@@ -108,7 +108,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
   public void testMnccThrowsForNullCrawlSpec() {
     try {
       crawler =
-	GoslingCrawlerImpl.makeNewContentCrawler(mau, null, new MockAuState());
+	CrawlerImpl.makeNewContentCrawler(mau, null, new MockAuState());
       fail("Calling makeNewContentCrawler with a null CrawlSpec"
 	   +" should throw an IllegalArgumentException");
     } catch (IllegalArgumentException iae) {
@@ -118,7 +118,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
   public void testMnccThrowsForNullAuState() {
     try {
       crawler =
-	GoslingCrawlerImpl.makeNewContentCrawler(mau, spec, null);
+	CrawlerImpl.makeNewContentCrawler(mau, spec, null);
       fail("Calling makeNewContentCrawler with a null CrawlSpec"
 	   +" should throw an IllegalArgumentException");
     } catch (IllegalArgumentException iae) {
@@ -578,7 +578,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
 
     spec = new CrawlSpec(urls, crawlRule);
     crawler =
-      GoslingCrawlerImpl.makeNewContentCrawler(mau, spec, new MockAuState());
+      CrawlerImpl.makeNewContentCrawler(mau, spec, new MockAuState());
     crawler.doCrawl(Deadline.MAX);
     Set expected = SetUtil.fromList(urls);
     assertEquals(expected, cus.getCachedUrls());
@@ -596,7 +596,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
   public void testOverwritesStartingUrlsMultipleLevels() {
     spec = new CrawlSpec(startUrls, crawlRule, 2);
     crawler =
-      GoslingCrawlerImpl.makeNewContentCrawler(mau, spec, new MockAuState());
+      CrawlerImpl.makeNewContentCrawler(mau, spec, new MockAuState());
 
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     String url1= "http://www.example.com/link1.html";
@@ -779,7 +779,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
 	       +"DEFAULT_RETRY_TIMES", retryNum > DEFAULT_RETRY_TIMES);
     Properties p = new Properties();
     p.setProperty(PARAM_RETRY_TIMES, String.valueOf(retryNum));
-    p.setProperty(GoslingCrawlerImpl.PARAM_RETRY_PAUSE, "0");
+    p.setProperty(CrawlerImpl.PARAM_RETRY_PAUSE, "0");
     ConfigurationUtil.setCurrentConfigFromProps(p);
 
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
@@ -797,7 +797,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     int retryNum = 3;
     Properties p = new Properties();
     p.setProperty(PARAM_RETRY_TIMES, String.valueOf(retryNum));
-    p.setProperty(GoslingCrawlerImpl.PARAM_RETRY_PAUSE, "0");
+    p.setProperty(CrawlerImpl.PARAM_RETRY_PAUSE, "0");
     ConfigurationUtil.setCurrentConfigFromProps(p);
 
     MyMockCachedUrlSet cus = (MyMockCachedUrlSet)mau.getAuCachedUrlSet();
@@ -904,7 +904,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
   public void testMrcThrowsForNullAu() {
     try {
       crawler =
-	GoslingCrawlerImpl.makeRepairCrawler(null, spec, aus, testUrlList);
+	CrawlerImpl.makeRepairCrawler(null, spec, aus, testUrlList);
       fail("Calling makeRepairCrawler with a null ArchivalUnit"
 	   +" should throw an IllegalArgumentException");
     } catch (IllegalArgumentException iae) {
@@ -914,7 +914,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
   public void testMrcThrowsForNullSpec() {
     try {
       crawler =
-	GoslingCrawlerImpl.makeRepairCrawler(mau, null, aus, testUrlList);
+	CrawlerImpl.makeRepairCrawler(mau, null, aus, testUrlList);
       fail("Calling makeRepairCrawler with a null CrawlSpec"
 	   +" should throw an IllegalArgumentException");
     } catch (IllegalArgumentException iae) {
@@ -924,7 +924,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
   public void testMrcThrowsForNullList() {
     try {
       crawler =
-	GoslingCrawlerImpl.makeRepairCrawler(mau, spec, aus, null);
+	CrawlerImpl.makeRepairCrawler(mau, spec, aus, null);
       fail("Calling makeRepairCrawler with a null repair list"
 	   +" should throw an IllegalArgumentException");
     } catch (IllegalArgumentException iae) {
@@ -934,7 +934,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
   public void testMrcThrowsForEmptyList() {
     try {
       crawler =
-	GoslingCrawlerImpl.makeRepairCrawler(mau, spec, aus, ListUtil.list());
+	CrawlerImpl.makeRepairCrawler(mau, spec, aus, ListUtil.list());
       fail("Calling makeRepairCrawler with a empty repair list"
 	   +" should throw an IllegalArgumentException");
     } catch (IllegalArgumentException iae) {
@@ -949,7 +949,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
 
     List repairUrls = ListUtil.list(repairUrl);
     spec = new CrawlSpec(startUrls, crawlRule, 1);
-    crawler = GoslingCrawlerImpl.makeRepairCrawler(mau, spec, aus, repairUrls);
+    crawler = CrawlerImpl.makeRepairCrawler(mau, spec, aus, repairUrls);
 
     crawler.doCrawl(Deadline.MAX);
 
@@ -983,7 +983,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
 
     List repairUrls = ListUtil.list(repairUrl1, repairUrl2);
     spec = new CrawlSpec(startUrls, crawlRule, 1);
-    crawler = GoslingCrawlerImpl.makeRepairCrawler(mau, spec, aus, repairUrls);
+    crawler = CrawlerImpl.makeRepairCrawler(mau, spec, aus, repairUrls);
 
     crawler.doCrawl(Deadline.MAX);
 
@@ -1018,7 +1018,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
 
 
     crawler =
-      GoslingCrawlerImpl.makeNewContentCrawler(mau, spec, new MockAuState());
+      CrawlerImpl.makeNewContentCrawler(mau, spec, new MockAuState());
     crawler.doCrawl(Deadline.MAX);
     // only gets 2 urls because start url is fetched twice (manifest & parse)
     Set expected = SetUtil.set(startUrl, url1);
@@ -1157,7 +1157,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
   }
 
   public static void main(String[] argv) {
-   String[] testCaseList = {TestGoslingCrawlerImpl.class.getName()};
+   String[] testCaseList = {TestCrawlerImpl.class.getName()};
    junit.textui.TestRunner.main(testCaseList);
   }
 }

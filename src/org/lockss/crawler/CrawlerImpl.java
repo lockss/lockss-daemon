@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingCrawlerImpl.java,v 1.55 2004-01-13 00:45:48 troberts Exp $
+ * $Id: CrawlerImpl.java,v 1.1 2004-01-13 01:02:35 troberts Exp $
  */
 
 /*
@@ -30,44 +30,6 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-/*
- * Some portions of this code are:
- * Copyright (c) 2000-2003 Sun Microsystems. All Rights Reserved.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are
- * met:
- *
- * - Redistributions of source code must retain the above copyright
- *   notice, this list of conditions and the following disclaimer.
- *
- * - Redistribution in binary form must reproduct the above copyright
- *   notice, this list of conditions and the following disclaimer in the
- *   documentation and/or other materials provided with the distribution.
- *
- * Neither the name of Sun Microsystems or the names of contributors may
- * be used to endorse or promote products derived from this software
- * without specific prior written permission.
- *
- *   This software is provided "AS IS," without a warranty of any
- *   kind. ALL EXPRESS OR IMPLIED CONDITIONS, REPRESENTATIONS AND
- *   WARRANTIES, INCLUDING ANY IMPLIED WARRANTY OF MERCHANTABILITY,
- *   FITNESS FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT, ARE HEREBY
- *   EXCLUDED. SUN MICROSYSTEMS AND ITS LICENSORS SHALL NOT BE LIABLE
- *   FOR ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT OF USING,
- *   MODIFYING OR DISTRIBUTING THE SOFTWARE OR ITS DERIVATIVES. IN NO
- *   EVENT WILL SUN MICROSYSTEMS OR ITS LICENSORS BE LIABLE FOR ANY
- *   LOST REVENUE, PROFIT OR DATA, OR FOR DIRECT, INDIRECT, SPECIAL,
- *   CONSEQUENTIAL, INCIDENTAL OR PUNITIVE DAMAGES, HOWEVER CAUSED AND
- *   REGARDLESS OF THE THEORY OF LIABILITY, ARISING OUT OF THE USE OF
- *   OR INABILITY TO USE SOFTWARE, EVEN IF SUN MICROSYSTEMS
- *   HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
- *
- * You acknowledge that Software is not designed, licensed or intended for
- * use in the design, construction, operation or maintenance of any
- * nuclear facility.
- */
-
 package org.lockss.crawler;
 
 import java.io.*;
@@ -88,7 +50,7 @@ import org.lockss.plugin.base.*;
  */
 
 
-public class GoslingCrawlerImpl implements Crawler {
+public class CrawlerImpl implements Crawler {
   /**
    * TODO
    * 1) write state to harddrive using whatever system we come up for for the
@@ -97,7 +59,7 @@ public class GoslingCrawlerImpl implements Crawler {
    */
 
 
-  private static Logger logger = Logger.getLogger("GoslingCrawlerImpl");
+  private static Logger logger = Logger.getLogger("CrawlerImpl");
 
   private ArchivalUnit au;
 
@@ -120,11 +82,11 @@ public class GoslingCrawlerImpl implements Crawler {
   private GoslingHtmlParser htmlParser = null;
 
   private static final String PARAM_RETRY_TIMES =
-    Configuration.PREFIX + "GoslingCrawlerImpl.numCacheRetries";
+    Configuration.PREFIX + "CrawlerImpl.numCacheRetries";
   private static final int DEFAULT_RETRY_TIMES = 3;
 
   public static final String PARAM_RETRY_PAUSE =
-    Configuration.PREFIX + "GoslingCrawlerImpl.retryPause";
+    Configuration.PREFIX + "CrawlerImpl.retryPause";
   public static final long DEFAULT_RETRY_PAUSE = 10*Constants.SECOND;
 
 
@@ -135,7 +97,7 @@ public class GoslingCrawlerImpl implements Crawler {
    * @param aus {@link AuState} for the AU
    * @return new content crawl object
    */
-  public static GoslingCrawlerImpl makeNewContentCrawler(ArchivalUnit au,
+  public static CrawlerImpl makeNewContentCrawler(ArchivalUnit au,
 							 CrawlSpec spec,
 							 AuState aus) {
     if (au == null) {
@@ -145,7 +107,7 @@ public class GoslingCrawlerImpl implements Crawler {
     } else if (aus == null) {
       throw new IllegalArgumentException("Called with null AuState");
     }
-    return new GoslingCrawlerImpl(au, spec, aus, Crawler.NEW_CONTENT);
+    return new CrawlerImpl(au, spec, aus, Crawler.NEW_CONTENT);
   }
 
   /**
@@ -156,7 +118,7 @@ public class GoslingCrawlerImpl implements Crawler {
    * @param repairUrls list of URLs to crawl for the repair
    * @return repair crawl object
    */
-  public static GoslingCrawlerImpl makeRepairCrawler(ArchivalUnit au,
+  public static CrawlerImpl makeRepairCrawler(ArchivalUnit au,
 						     CrawlSpec spec,
 						     AuState aus,
 						     Collection repairUrls) {
@@ -169,10 +131,10 @@ public class GoslingCrawlerImpl implements Crawler {
      } else if (repairUrls.size() == 0) {
        throw new IllegalArgumentException("Called with empty repair list");
      }
-     return new GoslingCrawlerImpl(au, spec, aus, Crawler.REPAIR, repairUrls);
+     return new CrawlerImpl(au, spec, aus, Crawler.REPAIR, repairUrls);
   }
 
-  private GoslingCrawlerImpl(ArchivalUnit au, CrawlSpec spec,
+  private CrawlerImpl(ArchivalUnit au, CrawlSpec spec,
 			     AuState aus, int type) {
     this.au = au;
     this.spec = spec;
@@ -182,7 +144,7 @@ public class GoslingCrawlerImpl implements Crawler {
     htmlParser = new GoslingHtmlParser(au);
   }
 
-  private GoslingCrawlerImpl(ArchivalUnit au, CrawlSpec spec,
+  private CrawlerImpl(ArchivalUnit au, CrawlSpec spec,
 			     AuState aus, int type, Collection repairUrls) {
     this(au, spec, aus, type);
     this.repairUrls = repairUrls;
@@ -509,7 +471,7 @@ public class GoslingCrawlerImpl implements Crawler {
 
   public String toString() {
     StringBuffer sb = new StringBuffer();
-    sb.append("[GoslingCrawlerImpl: ");
+    sb.append("[CrawlerImpl: ");
     sb.append(au.toString());
     sb.append("]");
     return sb.toString();
