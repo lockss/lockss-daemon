@@ -1,5 +1,5 @@
 /*
-* $Id: PollState.java,v 1.2 2002-12-05 00:06:36 aalto Exp $
+ * $Id: PollState.java,v 1.3 2002-12-06 20:43:10 aalto Exp $
  */
 
 /*
@@ -41,11 +41,12 @@ import org.lockss.daemon.CachedUrlSet;
  * There may be more than one active poll per node.
  */
 public class PollState {
-  public static final int SCHEDULED = 0;
-  public static final int RUNNING = 1;
-  public static final int REPAIRING = 2;
-  public static final int WON = 3;
-  public static final int LOST = 4;
+  public static final int SCHEDULED = 1;
+  public static final int RUNNING = 2;
+  public static final int REPAIRING = 4;
+  public static final int WON = 8;
+  public static final int LOST = 16;
+  public static final int UNREPAIRABLE = 32;
 
   int type;
   String regexp;

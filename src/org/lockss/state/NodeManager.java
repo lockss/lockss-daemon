@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManager.java,v 1.2 2002-12-06 19:36:45 claire Exp $
+ * $Id: NodeManager.java,v 1.3 2002-12-06 20:43:10 aalto Exp $
  */
 
 /*
@@ -45,12 +45,6 @@ import org.lockss.daemon.ArchivalUnit;
 public interface NodeManager {
 
   /**
-   * Factory method to retrieve NodeManager.
-   * @return the current NodeManager
-   */
-  public NodeManager getNodeManager();
-
-  /**
    * update a node state with current poll results
    * @param cus the cached url set used to identify the node
    * @param results the poll results
@@ -58,7 +52,7 @@ public interface NodeManager {
   public void updatePollResults(CachedUrlSet cus, Poll.VoteTally results);
 
   /**
-   * Return the node represented by a given Cached Url Set
+   * Return the node represented by a given CachedUrlSet
    * @param cus the cached url set used to identify the top node
    * @return the NodeState
    */
@@ -72,17 +66,37 @@ public interface NodeManager {
   public Iterator getCrawledNodes(CachedUrlSet cus);
 
   /**
-   * Returns an interator of all node states in which a poll is running
+   * Returns an iterator of all node states in which a poll is running,
+   * filtered by bitwise addition of states.
    * @param cus the cached url set used to identify the top node
+   * @param filter the bitwise state filter
    * @return an Iterator of NodeStates
    */
-  public Iterator getPolledNodes(CachedUrlSet cus);
+  public Iterator getPolledNodes(CachedUrlSet cus, int filter);
+
+  /**
+   * Returns an iterator of node histories for an ArchivalUnit, up to
+   * a maximum number.
+   * @param au the ArchivalUnit to fetch histories for
+   * @param maxNumber the maximum number to fetch
+   * @return an Iterator of PollHistory objects
+   */
+  public Iterator getNodeHistories(ArchivalUnit au, int maxNumber);
+
+  /**
+   * Returns an iterator of the node histories for an ArchivalUnit since a
+   * specific time.
+   * @param au the ArchivalUnit to fetch histories for
+   * @param since histories after this time (in ms)
+   * @return an Iterator of PollHistory objects
+   */
+  public Iterator getNodeHistories(ArchivalUnit au, long since);
 
   /**
    * Returns the estimated time it will take to walk a given
    * {@link ArchivalUnit}.  This can be used to finetune the tree walk
    * parameter settings in the Configuration.
-   * @param au the au to treewalk
+   * @param au the ArchivalUnit to treewalk
    * @return estimated time in ms
    */
   public long getEstimatedTreeWalkDuration(ArchivalUnit au);
