@@ -1,5 +1,5 @@
 /*
- * $Id: JettyManager.java,v 1.10 2004-07-26 23:37:18 tlipkis Exp $
+ * $Id: JettyManager.java,v 1.11 2004-08-02 03:06:51 tlipkis Exp $
  */
 
 /*
@@ -36,10 +36,14 @@ import java.util.*;
 import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
+import org.mortbay.http.*;
 import org.mortbay.util.Code;
 
 /**
- * Abstract base class for LOCKSS managers that use/start Jetty services
+ * Abstract base class for LOCKSS managers that use/start Jetty services.
+ * Note: this class may be used in an environment where the LOCKSS app is
+ * not running (<i>e.g.</i>, for {@link org.lockss.servlet.TinyUi}), so it
+ * must not rely on any non-static app services, nor any other managers.
  */
 public abstract class JettyManager extends BaseLockssManager {
   static final String PREFIX = Configuration.PREFIX + "jetty.debug";
@@ -57,6 +61,7 @@ public abstract class JettyManager extends BaseLockssManager {
   private static boolean jettyLogInited = false;
   private static Set portsInUse = Collections.synchronizedSet(new HashSet());
 
+  protected HttpServer runningServer;
   protected int runningOnPort = -1;
 
   public JettyManager() {
@@ -105,15 +110,50 @@ public abstract class JettyManager extends BaseLockssManager {
     }
   }
 
+  long[] delayTime = {10 * Constants.SECOND, 60 * Constants.SECOND, 0};
+
+  protected boolean startServer(HttpServer server, int port) {
+    try {
+      for (int ix = 0; ix < delayTime.length; ix++) {
+	try {
+	  server.start();
+	  runningServer = server;
+	  runningOnPort(port);
+	  return true;
+	} catch (org.mortbay.util.MultiException e) {
+	  log.debug("multi", e);
+	  log.debug("first", e.getException(0));
+	  log.warning("Addr in use, sleeping " +
+		      StringUtil.timeIntervalToString(delayTime[ix]));
+	  Deadline.in(delayTime[ix]).sleep();
+	}
+      }
+    } catch (Exception e) {
+      log.warning("Couldn't start servlets", e);
+    }
+    return false;
+  }
+
+  public void stopServer() {
+    try {
+      if (runningServer != null) {
+	runningOnPort(-1);
+	runningServer.stop();
+	runningServer = null;
+      }
+    } catch (InterruptedException e) {
+      log.warning("Interrupted while stopping server");
+    }
+  }
+
   protected void runningOnPort(int port) {
+    if (runningOnPort > 0) {
+      portsInUse.remove(new Integer(runningOnPort));
+      runningOnPort = -1;
+    }
     if (port > 0) {
       portsInUse.add(new Integer(port));
       runningOnPort = port;
-    } else {
-      if (runningOnPort > 0) {
-	portsInUse.remove(new Integer(runningOnPort));
-	runningOnPort = -1;
-      }
     }
   }
 

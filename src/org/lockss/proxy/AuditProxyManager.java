@@ -1,5 +1,5 @@
 /*
- * $Id: AuditProxyManager.java,v 1.1 2004-06-15 21:45:45 tlipkis Exp $
+ * $Id: AuditProxyManager.java,v 1.2 2004-08-02 03:06:51 tlipkis Exp $
  */
 
 /*
@@ -73,7 +73,7 @@ public class AuditProxyManager extends BaseProxyManager {
     if (changedKeys.contains(PARAM_PORT) ||
 	changedKeys.contains(PARAM_START)) {
       if (start) {
-	if (theDaemon.isDaemonRunning()) {
+	if (getDaemon().isDaemonRunning()) {
 	  startProxy();
 	}
       } else {

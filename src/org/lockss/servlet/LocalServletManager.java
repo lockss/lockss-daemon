@@ -1,10 +1,10 @@
 /*
- * $Id: TinyUi.java,v 1.4 2004-08-02 03:06:51 tlipkis Exp $
+ * $Id: LocalServletManager.java,v 1.1 2004-08-02 03:06:51 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2004 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -42,46 +42,17 @@ import org.lockss.jetty.*;
 import org.mortbay.http.*;
 import org.mortbay.http.handler.*;
 import org.mortbay.jetty.servlet.*;
-import javax.servlet.*;
-import javax.servlet.http.*;
-import org.mortbay.html.*;
 
 /**
- * Starts a tiny context running a tiny servlet that says the cache isn't
- * up, and displays an error mesage from the context.  This is run before
- * the application is running, so must not reply on any services.
+ * Local UI servlet starter
  */
-public class TinyUi extends BaseServletManager {
-  private static Logger log = Logger.getLogger("TinyUi");
+public class LocalServletManager extends BaseServletManager {
+  private static Logger log = Logger.getLogger("ServletMgr");
 
   private HashUserRealm realm;
-  private String[] tinyData;
 
-  public TinyUi() {
-    super("TinyUI");
-  }
-
-  public TinyUi(String[] tinyData) {
-    this();
-    this.tinyData = tinyData;
-  }
-
-  /** Entry point to start tiny UI without general daemon startup  */
-  public void startTiny() {
-    log.debug("Starting");
-    Configuration config = ConfigManager.getCurrentConfig();
-    setConfig(config, ConfigManager.EMPTY_CONFIGURATION, config.keySet());
-    startServlets();
-  }
-
-  public void stopTiny() {
-    log.debug("Stopping");
-    stopServer();
-  }
-
-  void setIpFilter(IpAccessHandler ah) {
-    super.setIpFilter(ah);
-    ah.setLogForbidden(true);
+  public LocalServletManager() {
+    super("UI");
   }
 
   public void startServlets() {
@@ -109,11 +80,11 @@ public class TinyUi extends BaseServletManager {
 	}
 	setConfiguredPasswords(realm);
 	if (realm.isEmpty()) {
-	  log.warning("No users created, tiny UI is effectively disabled.");
+	  log.warning("No users created, UI is effectively disabled.");
 	}
       }
 
-      configureTinyContexts(server);
+      configureAdminContexts(server);
 
       // Start the http server
       startServer(server, port);
@@ -122,16 +93,27 @@ public class TinyUi extends BaseServletManager {
     }
   }
 
-  public void configureTinyContexts(HttpServer server) {
+  public void configureAdminContexts(HttpServer server) {
     try {
-      setupTinyContext(server);
-      setupImageContext(server);
+      if (true || logdir != null) {
+	// Create a context
+	setupLogContext(server, realm, "/log/", logdir);
+      }
+      // info currently has same auth as /, but could be different
+      setupInfoContext(server);
+
+      setupAdminContext(server);
+
+      // no separate image context for now.  (Use if want different
+      // access control or auth from / context
+      // setupImageContext(server);
+
     } catch (Exception e) {
-      log.warning("Couldn't start tiny UI contexts", e);
+      log.warning("Couldn't create admin UI contexts", e);
     }
   }
 
-  void setupTinyContext(HttpServer server) throws MalformedURLException {
+  void setupAdminContext(HttpServer server) throws MalformedURLException {
     HttpContext context = makeContext(server, "/");
 
     // add handlers in the order they should be tried.
@@ -139,10 +121,41 @@ public class TinyUi extends BaseServletManager {
     // user authentication handler
     setContextAuthHandler(context, realm);
 
-    // Add a servlet handler for TinyServlet
+    // Create a servlet container
     ServletHandler handler = new ServletHandler();
-    handler.addServlet("Tiny", "/", TinyServlet.class.getName());
+
+    // Request dump servlet
+    handler.addServlet("Dump", "/Dump", "org.mortbay.servlet.Dump");
+    // Daemon status servlet
+    handler.addServlet("JournalConfig", "/AuConfig",
+		       "org.lockss.servlet.AuConfig");
+    handler.addServlet("DaemonStatus", "/DaemonStatus",
+		       "org.lockss.servlet.DaemonStatus");
+    handler.addServlet("AdminIpAccess", "/AdminIpAccess",
+		       "org.lockss.servlet.AdminIpAccess");
+    handler.addServlet("ProxyIpAccess", "/ProxyIpAccess",
+		       "org.lockss.servlet.ProxyIpAccess");
+    handler.addServlet("Hash CUS", "/HashCUS",
+		       "org.lockss.servlet.HashCUS");
+    handler.addServlet("Raise Alert", "/RaiseAlert",
+		       "org.lockss.servlet.RaiseAlert");
+    addServletIfAvailable(handler, "ThreadDump", "/ThreadDump",
+			  "org.lockss.servlet.ThreadDump");
+    addServletIfAvailable(handler, "Api", "/Api",
+			  "org.lockss.ui.servlet.Api");
     context.addHandler(handler);
+
+    // ResourceHandler should come after servlets
+    // find the htdocs directory, set as resource base
+    ClassLoader loader = Thread.currentThread().getContextClassLoader();
+    URL resourceUrl=loader.getResource("org/lockss/htdocs/");
+    log.debug("Resource URL: " + resourceUrl);
+
+    context.setResourceBase(resourceUrl.toString());
+    LockssResourceHandler rHandler = new LockssResourceHandler();
+    rHandler.setDirAllowed(false);
+    //       rHandler.setAcceptRanges(true);
+    context.addHandler(rHandler);
 
     // NotFoundHandler
     context.addHandler(new NotFoundHandler());
@@ -162,9 +175,26 @@ public class TinyUi extends BaseServletManager {
     log.debug("Images resource URL: " + resourceUrl);
 
     context.setResourceBase(resourceUrl.toString());
-    ResourceHandler rHandler = new ResourceHandler();
-    rHandler.setDirAllowed(false);
+    LockssResourceHandler rHandler = new LockssResourceHandler();
     context.addHandler(rHandler);
+
+    // NotFoundHandler
+    context.addHandler(new NotFoundHandler());
+  }
+
+  void setupInfoContext(HttpServer server) {
+    HttpContext context = makeContext(server, "/info");
+
+    // add handlers in the order they should be tried.
+
+    // user authentication handler
+    setContextAuthHandler(context, realm);
+
+    // Create a servlet container
+    ServletHandler handler = new ServletHandler();
+    handler.addServlet("ProxyInfo", "/ProxyInfo",
+		       "org.lockss.servlet.ProxyConfig");
+    context.addHandler(handler);
 
     // NotFoundHandler
     context.addHandler(new NotFoundHandler());
@@ -175,64 +205,14 @@ public class TinyUi extends BaseServletManager {
   // doesn't add AuthHandler as not all contexts want it
   HttpContext makeContext(HttpServer server, String path) {
     HttpContext context = server.getContext(path);
-    context.setAttribute("TinyData", tinyData);
+    context.setAttribute("LockssDaemon", theApp);
     // In this environment there is no point in consuming memory with
     // cached resources
     context.setMaxCachedFileSize(0);
 
     // IpAccessHandler is always first handler
-//     addAccessHandler(context);
+    addAccessHandler(context);
     return context;
   }
 
-  public static class TinyServlet extends HttpServlet {
-    private ServletContext context;
-    private String[] tinyData;
-
-    public void init(ServletConfig config) throws ServletException {
-      super.init(config);
-      context = config.getServletContext();
-      tinyData = (String[])context.getAttribute("TinyData");
-    }
-
-    public void doGet(HttpServletRequest request,
-		      HttpServletResponse response)
-	throws ServletException, IOException {
-      Page page= new Page();
-      page.title("LOCKSS cache");
-      page.addHeader("");
-
-      Table table = new Table(0, "cellspacing=0 cellpadding=0 align=center");
-      table.newRow();
-      table.newCell("valign=top align=center");
-      table.add(new Link(Constants.LOCKSS_HOME_URL,
-			 LockssServlet.IMAGE_LOGO_LARGE));
-      table.add(LockssServlet.IMAGE_TM);
-
-      Composite b = new Font(1, true);
-      b.add("<br>This LOCKSS cache");
-      Configuration pc = Configuration.getPlatformConfig();
-      String name = Configuration.getPlatformHostname();
-      if (name != null) {
-	b.add(" (");
-	b.add(name);
-	b.add(")");
-      }
-      b.add(" has not started because ");
-      b.add("it is unable to load configuration data.<br>");
-      if (tinyData[0] != null) {
-	b.add(tinyData[0]);
-      }
-      table.newRow();
-      table.newCell("valign=top align=left");
-      table.add(b);
-      page.add(table);
-      response.setContentType("text/html");
-      response.setHeader("Pragma", "no-cache");
-      response.setHeader("Cache-Control", "no-cache,no-store");
-      Writer writer=response.getWriter();
-      page.write(writer);
-      writer.flush();
-    }
-  }
 }
