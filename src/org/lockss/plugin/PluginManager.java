@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.58 2003-12-17 02:09:46 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.59 2003-12-23 00:34:32 tlipkis Exp $
  */
 
 /*
@@ -53,6 +53,8 @@ public class PluginManager extends BaseLockssManager {
 
   static String PARAM_PLUGIN_REGISTRY =
     Configuration.PREFIX + "plugin.registry";
+
+  static String PARAM_TITLE_DB = Configuration.PREFIX + "title";
 
   static final String AU_PARAM_WRAPPER = "reserved.wrapper";
   public static final String AU_PARAM_DISABLED = "reserved.disabled";
@@ -115,10 +117,13 @@ public class PluginManager extends BaseLockssManager {
       }
       currentAllPlugs = allPlugs;
 
-      // process the plugin registry after configuring AUs
+      // process the plugin registry and title db
+      // (do this after configuring AUs, so plugin regsitry will reflect
+      // plugins loaded by AUs but not in registry param)
       if (changedKeys.contains(PARAM_PLUGIN_REGISTRY)) {
 	initPluginRegistry(config.get(PARAM_PLUGIN_REGISTRY));
       }
+      initTitleDB(config.getConfigTree(PARAM_TITLE_DB));
     }
   }
 
@@ -272,10 +277,10 @@ public class PluginManager extends BaseLockssManager {
 					   (ArchivalUnit)auMap.get(auId));
       log.debug("Configured AU " + au);
       try {
-	getDaemon().startAuManagers(au);
+	getDaemon().startOrReconfigureAuManagers(au, auConf);
       } catch (Exception e) {
 	throw new
-	  ArchivalUnit.ConfigurationException("Couldn't start AU processes",
+	  ArchivalUnit.ConfigurationException("Couldn't configure AU managers",
 					      e);
       }
       log.debug("putAuMap(" + au.getAuId() +", " + au);
@@ -314,7 +319,7 @@ public class PluginManager extends BaseLockssManager {
       ArchivalUnit au = plugin.createAu(auConf);
       log.debug("Created AU " + au);
       try {
-	getDaemon().startAuManagers(au);
+	getDaemon().startOrReconfigureAuManagers(au, auConf);
       } catch (Exception e) {
 	log.error("Couldn't start AU processes", e);
 	throw new
@@ -686,6 +691,19 @@ public class PluginManager extends BaseLockssManager {
     }
   }
 
+  void initTitleDB(Configuration allTitles) {
+    for (Iterator iter = allTitles.nodeIterator(); iter.hasNext(); ) {
+      String titleKey = (String)iter.next();
+      Configuration titleConfig = allTitles.getConfigTree(titleKey);
+      log.info("titleKey: " + titleKey);
+      log.info("titleConfig: " + titleConfig);
+      initOneTitle(titleConfig);
+    }
+  }
+
+  void initOneTitle(Configuration titleConfig) {
+  }
+
   private class Status implements StatusAccessor {
     private final List sortRules =
       ListUtil.list(new StatusTable.SortRule("au", true));
@@ -694,15 +712,19 @@ public class PluginManager extends BaseLockssManager {
       ListUtil.list(
 		    new ColumnDescriptor("au", "Journal Volume",
 					 ColumnDescriptor.TYPE_STRING),
-		    new ColumnDescriptor("auid", "AUID",
-					 ColumnDescriptor.TYPE_STRING),
 		    new ColumnDescriptor("poll", "Poll Status",
 					 ColumnDescriptor.TYPE_STRING),
 		    new ColumnDescriptor("crawl", "Crawl Status",
+					 ColumnDescriptor.TYPE_STRING),
+		    new ColumnDescriptor("auid", "AUID",
 					 ColumnDescriptor.TYPE_STRING)
 		    );
 
     Status() {
+    }
+
+    public String getDisplayName() {
+      return "Archival Units";
     }
 
     public List getColumnDescriptors(String key) {
@@ -732,13 +754,8 @@ public class PluginManager extends BaseLockssManager {
       return false;
     }
 
-    public String getTitle(String key) {
-      return "Archival Units";
-    }
-
     public void populateTable(StatusTable table) {
       String key = table.getKey();
-      table.setTitle(getTitle(key));
       table.setColumnDescriptors(getColumnDescriptors(key));
       table.setDefaultSortRules(getDefaultSortRules(key));
       table.setRows(getRows(key));
