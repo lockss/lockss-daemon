@@ -1,5 +1,5 @@
 /*
- * $Id: TestHashQueue.java,v 1.13 2003-04-30 01:02:01 tal Exp $
+ * $Id: TestHashQueue.java,v 1.14 2003-04-30 04:56:14 tal Exp $
  */
 
 /*
@@ -86,7 +86,8 @@ public class TestHashQueue extends LockssTestCase {
 
   HashQueue.Request simpleReq(long deadlineIn, int duration) {
     return new HashQueue.Request(cus, dig, Deadline.in(deadlineIn),
-				 null, null, null, duration, null);
+				 null, null, null, duration,
+				 HashService.CONTENT_HASH);
   }
 
   HashQueue.Request req(long deadlineIn,
@@ -111,7 +112,7 @@ public class TestHashQueue extends LockssTestCase {
       new HashQueue.Request(cus, dig, Deadline.in(deadlineIn),
 			    callback, cookie,
 			    cus.getContentHasher(dig),
-			    duration, null);
+			    duration, HashService.CONTENT_HASH);
     return req;
   }
 

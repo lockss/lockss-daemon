@@ -1,5 +1,5 @@
 /*
- * $Id: HashQueue.java,v 1.33 2003-04-29 01:07:33 tal Exp $
+ * $Id: HashQueue.java,v 1.34 2003-04-30 04:52:56 tal Exp $
  */
 
 /*
@@ -116,7 +116,10 @@ class HashQueue implements Serializable {
       log.debug(msg + ((req.e != null) ? (req.e + ": ") : "") + req);
     }
     iter.remove();
-    req.urlset.storeActualHashDuration(req.timeUsed, req.e);
+    if (req.type == HashService.CONTENT_HASH) {
+      // tk - need to change interface to tell CUS what type of hash finished
+      req.urlset.storeActualHashDuration(req.timeUsed, req.e);
+    }
     done.add(req);
     synchronized (completed) {
       completed.add(req);
@@ -244,7 +247,7 @@ class HashQueue implements Serializable {
     HashService.Callback callback;
     Object cookie;
     CachedUrlSetHasher urlsetHasher;
-    String type;
+    int type;
     int sched;
     int finish;
     long origEst;
@@ -260,7 +263,7 @@ class HashQueue implements Serializable {
 	    Object cookie,
 	    CachedUrlSetHasher urlsetHasher,
 	    long estimatedDuration,
-	    String type) {
+	    int type) {
       this.urlset = urlset;
       this.hasher = hasher;
       this.deadline = deadline;
@@ -527,7 +530,7 @@ class HashQueue implements Serializable {
       row.put("state", getState(req, done));
       row.put("au", req.urlset.getArchivalUnit().getName());
       row.put("cus", req.urlset.getSpec());
-      row.put("type", req.type);
+      row.put("type", getType(req));
       row.put("deadline", req.deadline.getExpiration());
       row.put("estimate", new Long(req.origEst));
       Object used = new Long(req.timeUsed);
@@ -539,6 +542,14 @@ class HashQueue implements Serializable {
       row.put("timeused", used);
       row.put("bytesHashed", new Long(req.bytesHashed));
       return row;
+    }
+
+    private String getType(Request req) {
+      switch (req.type) {
+      case HashService.CONTENT_HASH: return "C";
+      case HashService.NAME_HASH: return "N";
+      default: return "?";
+      }
     }
 
     private Object getState(Request req, boolean done) {

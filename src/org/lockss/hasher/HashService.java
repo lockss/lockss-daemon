@@ -1,5 +1,5 @@
 /*
- * $Id: HashService.java,v 1.14 2003-04-03 11:31:43 tal Exp $
+ * $Id: HashService.java,v 1.15 2003-04-30 04:52:56 tal Exp $
  */
 
 /*
@@ -58,6 +58,9 @@ public class HashService extends BaseLockssManager {
 
   private static final int DEFAULT_ESTIMATE_PAD_CONSTANT = 10;
   private static final int DEFAULT_ESTIMATE_PAD_PERCENT = 10;
+
+  public static final int CONTENT_HASH = 1;
+  public static final int NAME_HASH = 2;
 
   protected static Logger log = Logger.getLogger("HashService");
 
@@ -135,7 +138,7 @@ public class HashService extends BaseLockssManager {
 			    callback, cookie,
 			    urlset.getContentHasher(hasher),
 			    padEstimate(urlset.estimatedHashDuration()),
-			    "C");
+			    CONTENT_HASH);
     return scheduleReq(req);
   }
 
@@ -167,7 +170,7 @@ public class HashService extends BaseLockssManager {
       new HashQueue.Request(urlset, hasher, deadline,
 			    callback, cookie,
 			    // tk - get better duration estimate
-			    urlset.getNameHasher(hasher), 1000, "N");
+			    urlset.getNameHasher(hasher), 1000, NAME_HASH);
     return scheduleReq(req);
   }
 
