@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawlManager.java,v 1.5 2003-03-03 19:36:54 troberts Exp $
+ * $Id: MockCrawlManager.java,v 1.6 2003-03-03 23:23:44 troberts Exp $
  */
 
 /*
@@ -48,6 +48,7 @@ public class MockCrawlManager implements CrawlManager, LockssManager {
   public HashMap scheduledRepairs = new HashMap();
   public HashMap scheduledCrawls = new HashMap();
   public static final String SCHEDULED = "scheduled";
+  public boolean shouldCrawlNewContent = true;
 
   public void initService(LockssDaemon daemon) throws LockssDaemonException { }
   public void startService() { }
@@ -72,8 +73,16 @@ public class MockCrawlManager implements CrawlManager, LockssManager {
    */
   public boolean canTreeWalkStart(ArchivalUnit au, 
 				  CrawlManager.Callback cb, Object cookie) {
-    scheduleNewContentCrawl(au, cb, cookie);
-    return false;
+    if (shouldCrawlNewContent) {
+      scheduleNewContentCrawl(au, cb, cookie);
+      return false;
+    }
+    return true;
+
+  }
+
+  public void setShouldCrawlNewContent(boolean shouldCrawlNewContent) {
+    this.shouldCrawlNewContent = shouldCrawlNewContent;
   }
 
   /**
