@@ -8,12 +8,15 @@ import javax.swing.*;
 
 import org.lockss.daemon.*;
 import javax.swing.border.*;
+import javax.swing.event.*;
 
-public class PrintfEditor extends JDialog implements EDPEditor {
+public class PrintfEditor extends JDialog
+    implements EDPEditor {
   protected PrintfTemplate originalTemplate;
   protected transient PrintfTemplate editTemplate;
   private EDPCellData m_data;
   private HashMap paramKeys;
+  private HashMap matchesKeys = new HashMap();
 
   JPanel formatPanel = new JPanel();
   ButtonGroup buttonGroup = new ButtonGroup();
@@ -29,17 +32,16 @@ public class PrintfEditor extends JDialog implements EDPEditor {
   JButton insertButton = new JButton();
   JComboBox paramComboBox = new JComboBox();
   GridBagLayout gridBagLayout1 = new GridBagLayout();
-  JLabel fieldWidthLabel = new JLabel();
-  JTextField widthTextField = new JTextField();
-  JRadioButton spacesRadioButton = new JRadioButton();
-  JRadioButton zeroRadioButton = new JRadioButton();
   ButtonGroup buttonGroup1 = new ButtonGroup();
-  JPanel paddingPanel = new JPanel();
-  JRadioButton noneRadioButton = new JRadioButton();
-  TitledBorder paddingBorder;
+
   TitledBorder titledBorder2;
-  GridBagLayout gridBagLayout2 = new GridBagLayout();
   GridBagLayout gridBagLayout3 = new GridBagLayout();
+  JComboBox matchComboBox = new JComboBox();
+  GridBagLayout gridBagLayout4 = new GridBagLayout();
+  JButton insertMatchButton = new JButton();
+  JPanel matchPanel = new JPanel();
+  JPanel InsertPanel = new JPanel();
+  GridLayout gridLayout1 = new GridLayout();
 
   public PrintfEditor() {
     originalTemplate = new PrintfTemplate();
@@ -47,14 +49,26 @@ public class PrintfEditor extends JDialog implements EDPEditor {
 
     try {
       jbInit();
+      initMatches();
     }
     catch (Exception e) {
       e.printStackTrace();
     }
   }
 
+  private void initMatches() {
+    matchesKeys.put("String Literal", "");
+    matchesKeys.put("Any Number", "[0-9][0-9]*");
+    matchesKeys.put("Anything", ".*");
+    matchesKeys.put("Start", "^");
+    matchesKeys.put("End", "$");
+    for(Iterator it = matchesKeys.keySet().iterator(); it.hasNext();) {
+      matchComboBox.addItem(it.next());
+    }
+  }
+
   private void jbInit() throws Exception {
-    paddingBorder = new TitledBorder("");
+
     saveButton.setText("Save");
     saveButton.addActionListener(new
                                  PrintfTemplateEditor_saveButton_actionAdapter(this));
@@ -87,74 +101,49 @@ public class PrintfEditor extends JDialog implements EDPEditor {
     formatTextArea.setMinimumSize(new Dimension(100, 25));
     formatTextArea.setPreferredSize(new Dimension(200, 15));
     formatTextArea.setText("");
-    parameterPanel.setBorder(BorderFactory.createEtchedBorder());
-    parameterPanel.setMinimumSize(new Dimension(100, 160));
-    parameterPanel.setPreferredSize(new Dimension(370, 160));
-    fieldWidthLabel.setToolTipText("minimum number of digits");
-    fieldWidthLabel.setText("field width:");
-    widthTextField.setMinimumSize(new Dimension(10, 19));
-    widthTextField.setPreferredSize(new Dimension(10, 19));
-    widthTextField.setRequestFocusEnabled(true);
-    widthTextField.setToolTipText("");
-    widthTextField.setText("0");
-    widthTextField.setSelectionStart(1);
-    spacesRadioButton.setToolTipText(
-        "Insert number with leading space, if less than field width.(3 => " +
-        " 3).");
-    spacesRadioButton.setText("pad with spaces");
-    zeroRadioButton.setToolTipText(
-        "Insert number with leading 0, if less than field width.(3 => 03).");
-    zeroRadioButton.setSelected(false);
-    zeroRadioButton.setText("pad with zeros");
-    paramComboBox.addActionListener(new
-                                    PrintfEditor_paramComboBox_actionAdapter(this));
-    paddingPanel.setLayout(gridBagLayout2);
-    noneRadioButton.setToolTipText("Insert number as-is (3 => 3).");
-    noneRadioButton.setSelected(true);
-    noneRadioButton.setText("do not pad");
-    paddingPanel.setBorder(paddingBorder);
-    paddingPanel.setMinimumSize(new Dimension(300, 70));
-    paddingPanel.setPreferredSize(new Dimension(380, 150));
-    paddingBorder.setTitleFont(new java.awt.Font("DialogInput", 0, 12));
-    paddingBorder.setTitle("Numeric Padding");
-    paddingPanel.add(noneRadioButton,
-                     new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0
-                                            , GridBagConstraints.CENTER,
-                                            GridBagConstraints.NONE,
-                                            new Insets(0, 4, 0, 0), 33, 0));
-    paddingPanel.add(zeroRadioButton,
-                     new GridBagConstraints(0, 1, 1, 1, 0.0, 0.0
-                                            , GridBagConstraints.CENTER,
-                                            GridBagConstraints.NONE,
-                                            new Insets(0, 4, 0, 0), 8, 0));
-    paddingPanel.add(spacesRadioButton,
-                     new GridBagConstraints(0, 2, 1, 1, 0.0, 0.0
-                                            , GridBagConstraints.CENTER,
-                                            GridBagConstraints.NONE,
-                                            new Insets(0, 4, 2, 0), 2, 0));
-    paddingPanel.add(widthTextField,
-                     new GridBagConstraints(2, 1, 1, 1, 1.0, 0.0
-                                            , GridBagConstraints.WEST,
-                                            GridBagConstraints.HORIZONTAL,
-                                            new Insets(0, 12, 0, 52), 30, 9));
-    paddingPanel.add(fieldWidthLabel,
-                     new GridBagConstraints(1, 1, 1, 1, 0.0, 0.0
-                                            , GridBagConstraints.WEST,
-                                            GridBagConstraints.NONE,
-                                            new Insets(6, 57, 0, 0), 0, 0));
-    parameterPanel.add(paramComboBox,
-                       new GridBagConstraints(1, 0, 1, 1, 1.0, 0.0
+    parameterPanel.setBorder(null);
+    parameterPanel.setMinimumSize(new Dimension(60, 60));
+    parameterPanel.setPreferredSize(new Dimension(300, 60));
+    insertMatchButton.addActionListener(new
+       PrintfTemplateEditor_insertMatchButton_actionAdapter(this));
+    insertMatchButton.setText("Insert Match");
+    insertMatchButton.setToolTipText("insert the match in the format string and add parameter to list.");
+    insertMatchButton.setPreferredSize(new Dimension(136, 20));
+    insertMatchButton.setMinimumSize(new Dimension(136, 20));
+    insertMatchButton.setMaximumSize(new Dimension(136, 20));
+    matchPanel.setPreferredSize(new Dimension(300, 100));
+    matchPanel.setBorder(null);
+    matchPanel.setMinimumSize(new Dimension(60, 60));
+    matchPanel.setLayout(gridBagLayout4);
+    InsertPanel.setLayout(gridLayout1);
+    gridLayout1.setColumns(1);
+    gridLayout1.setRows(2);
+    gridLayout1.setVgap(0);
+    InsertPanel.setBorder(BorderFactory.createEtchedBorder());
+    InsertPanel.setMinimumSize(new Dimension(100, 100));
+    InsertPanel.setPreferredSize(new Dimension(380, 120));
+    parameterPanel.add(paramComboBox, new GridBagConstraints(1, 0, 1, 1, 1.0, 0.0
                                               , GridBagConstraints.CENTER,
                                               GridBagConstraints.HORIZONTAL,
                                               new Insets(4, 8, 0, 5), 190, 11));
-    parameterPanel.add(paddingPanel,
-                       new GridBagConstraints(0, 1, 2, 1, 1.0, 1.0
+    parameterPanel.add(insertButton, new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0
                                               , GridBagConstraints.CENTER,
-                                              GridBagConstraints.BOTH,
-                                              new Insets(6, 6, 7, 5), -8, -51));
+                                              GridBagConstraints.NONE,
+                                              new Insets(4, 6, 0, 0), 0, 10));
     buttonPanel.add(cancelButton, null);
     buttonPanel.add(saveButton, null);
-    this.getContentPane().add(formatPanel, BorderLayout.NORTH);
+    matchPanel.add(matchComboBox, new GridBagConstraints(1, 0, 1, 1, 1.0, 0.0
+                                              , GridBagConstraints.CENTER,
+                                              GridBagConstraints.HORIZONTAL,
+                                              new Insets(4, 8, 0, 5), 190, 11));
+    matchPanel.add(insertMatchButton, new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0
+                                              , GridBagConstraints.CENTER,
+                                              GridBagConstraints.NONE,
+                                              new Insets(4, 6, 0, 0), 0, 10));
+    this.getContentPane().add(InsertPanel,  BorderLayout.CENTER);
+    InsertPanel.add(parameterPanel, null);
+    InsertPanel.add(matchPanel, null);
+    this.getContentPane().add(formatPanel,  BorderLayout.NORTH);
     formatPanel.add(parameterLabel, new GridBagConstraints(0, 2, 1, 1, 0.0, 0.0
         , GridBagConstraints.WEST, GridBagConstraints.NONE,
         new Insets(7, 5, 0, 5), 309, 0));
@@ -169,16 +158,9 @@ public class PrintfEditor extends JDialog implements EDPEditor {
                                            , GridBagConstraints.CENTER,
                                            GridBagConstraints.BOTH,
                                            new Insets(6, 5, 6, 5), 300, 34));
-    this.getContentPane().add(parameterPanel, BorderLayout.CENTER);
     this.getContentPane().add(buttonPanel, BorderLayout.SOUTH);
     buttonGroup.add(cancelButton);
-    buttonGroup1.add(spacesRadioButton);
-    buttonGroup1.add(zeroRadioButton);
-    parameterPanel.add(insertButton,
-                       new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0
-                                              , GridBagConstraints.CENTER,
-                                              GridBagConstraints.NONE,
-                                              new Insets(4, 6, 0, 0), 0, 10));
+
   }
 
   void saveButton_actionPerformed(ActionEvent e) {
@@ -207,13 +189,14 @@ public class PrintfEditor extends JDialog implements EDPEditor {
         break;
       case ConfigParamDescr.TYPE_INT:
       case ConfigParamDescr.TYPE_POS_INT:
+        NumericPaddingDialog dialog = new NumericPaddingDialog();
+        Point pos = this.getLocationOnScreen();
+        dialog.setLocation(pos.x, pos.y);
+        dialog.pack();
+        dialog.show();
         StringBuffer fbuf = new StringBuffer("%");
-        boolean is_zero = zeroRadioButton.isSelected();
-        String width_str = widthTextField.getText();
-        int width = 0;
-        if ( (width_str != null) && (width_str.length() > 0)) {
-          width = Integer.parseInt(widthTextField.getText());
-        }
+        int width = dialog.getPaddingSize();
+        boolean is_zero = dialog.useZero();
         if (width > 0) {
           fbuf.append(".");
           if (is_zero) {
@@ -232,6 +215,22 @@ public class PrintfEditor extends JDialog implements EDPEditor {
     formatTextArea.insert(format, pos);
     pos = parameterTextArea.getCaretPosition();
     parameterTextArea.insert(", " + key, pos);
+  }
+
+
+  void insertMatchButton_actionPerformed(ActionEvent e) {
+    String key = (String) matchComboBox.getSelectedItem();
+    String format = (String)matchesKeys.get(key);
+    if(key.equals("String Literal")) {
+     format = (String) JOptionPane.showInputDialog(this,
+         "Enter the string you wish to match",
+         "String Literal Input",
+         JOptionPane.OK_CANCEL_OPTION);
+    }
+
+    // add the combobox data value to the edit box
+    int pos = formatTextArea.getCaretPosition();
+    formatTextArea.insert(format, pos);
   }
 
   /**
@@ -259,7 +258,12 @@ public class PrintfEditor extends JDialog implements EDPEditor {
       insertButton.setEnabled(false);
       paramComboBox.setEnabled(false);
       paramComboBox.setToolTipText("No configuration parameters available.");
-      paddingPanel.setVisible(false);
+    }
+    if(data.getKey().equals(EditableDefinablePlugin.AU_RULES)) {
+      matchPanel.setVisible(true);
+    }
+    else {
+      matchPanel.setVisible(false);
     }
   }
 
@@ -272,25 +276,6 @@ public class PrintfEditor extends JDialog implements EDPEditor {
     }
     formatTextArea.setText(template.m_format);
     parameterTextArea.setText(template.getTokenString());
-  }
-
-  void paramComboBox_actionPerformed(ActionEvent e) {
-    String cmd = e.getActionCommand();
-    String key = (String) paramComboBox.getSelectedItem();
-    Object param = paramKeys.get(key);
-    if (param == null) {
-      paddingPanel.setVisible(false);
-      return;
-    }
-    int type = ( (Integer) param).intValue();
-    if ( (type == ConfigParamDescr.TYPE_INT) ||
-        (type == ConfigParamDescr.TYPE_POS_INT)) {
-      paddingPanel.setVisible(true);
-    }
-    else {
-      paddingPanel.setVisible(false);
-    }
-
   }
 
 }
@@ -334,15 +319,15 @@ class PrintfTemplateEditor_insertButton_actionAdapter
   }
 }
 
-class PrintfEditor_paramComboBox_actionAdapter
+class PrintfTemplateEditor_insertMatchButton_actionAdapter
     implements java.awt.event.ActionListener {
   PrintfEditor adaptee;
 
-  PrintfEditor_paramComboBox_actionAdapter(PrintfEditor adaptee) {
+  PrintfTemplateEditor_insertMatchButton_actionAdapter(PrintfEditor adaptee) {
     this.adaptee = adaptee;
   }
 
   public void actionPerformed(ActionEvent e) {
-    adaptee.paramComboBox_actionPerformed(e);
+    adaptee.insertMatchButton_actionPerformed(e);
   }
 }

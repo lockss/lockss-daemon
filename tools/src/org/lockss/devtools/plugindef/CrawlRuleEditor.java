@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRuleEditor.java,v 1.2 2004-06-01 22:38:38 clairegriffin Exp $
+ * $Id: CrawlRuleEditor.java,v 1.3 2004-06-03 02:44:32 clairegriffin Exp $
  */
 
 /*
@@ -49,6 +49,7 @@ import javax.swing.table.*;
  */
 
 public class CrawlRuleEditor extends JDialog implements EDPEditor{
+
   JPanel rulesPanel = new JPanel();
   BorderLayout borderLayout1 = new BorderLayout();
   JPanel buttonPanel = new JPanel();
@@ -57,7 +58,7 @@ public class CrawlRuleEditor extends JDialog implements EDPEditor{
   JButton cancelButton = new JButton();
 
   CrawlRuleModel m_model = new CrawlRuleModel();
-  JTable rulesTable = new JTable();
+  JTable rulesTable = new JTable(m_model);
   JButton addButton = new JButton();
   JComboBox m_kindBox = new JComboBox(CrawlRuleTemplate.RULE_KIND_STRINGS);
   JButton upButton = new JButton();
@@ -76,7 +77,7 @@ public class CrawlRuleEditor extends JDialog implements EDPEditor{
   }
 
   public CrawlRuleEditor() {
-    this(null, "", false);
+    this(null, "Crawl Rule Editor", false);
   }
 
   private void jbInit() throws Exception {
@@ -109,6 +110,7 @@ public class CrawlRuleEditor extends JDialog implements EDPEditor{
     buttonPanel.add(deleteButton, null);
     buttonPanel.add(okButton, null);
     buttonPanel.add(cancelButton, null);
+
   }
 
   void deleteButton_actionPerformed(ActionEvent e) {
@@ -157,7 +159,6 @@ public class CrawlRuleEditor extends JDialog implements EDPEditor{
    */
   public void setCellData(EDPCellData data) {
     m_model.setData(data);
-
     TableColumn col = rulesTable.getColumnModel().getColumn(0);
     col.setCellEditor(new DefaultCellEditor(m_kindBox));
     col = rulesTable.getColumnModel().getColumn(1);
@@ -165,6 +166,8 @@ public class CrawlRuleEditor extends JDialog implements EDPEditor{
   }
 
   class CrawlRuleModel extends AbstractTableModel {
+    String[] m_columns = {"Action", "Pattern"};
+
     EDPCellData m_data;
     Collection m_rules = Collections.EMPTY_LIST;
     Vector m_tableData;
@@ -181,7 +184,7 @@ public class CrawlRuleEditor extends JDialog implements EDPEditor{
 
       for (Iterator it = m_rules.iterator(); it.hasNext(); ) {
         CrawlRuleTemplate crt = new CrawlRuleTemplate((String) it.next());
-        entry = new Object[2];
+        entry = new Object[m_columns.length];
         entry[0] = crt.getKindString();
         entry[1] = crt;
         m_tableData.add(entry);
@@ -209,7 +212,11 @@ public class CrawlRuleEditor extends JDialog implements EDPEditor{
      * @return int
      */
     public int getColumnCount() {
-      return 2;
+      return m_columns.length;
+    }
+
+    public String getColumnName(int col) {
+      return m_columns[col];
     }
 
     /**
@@ -236,16 +243,16 @@ public class CrawlRuleEditor extends JDialog implements EDPEditor{
       return true;
     }
 
-    /*
-     * Don't need to implement this method unless your table's
-     * data can change.
-     */
-    public void setValueAt(Object value, int row, int col) {
+   public void setValueAt(Object value, int row, int col) {
       if(m_tableData.size() > row && row >=0) {
         Object[] data = (Object[]) m_tableData.get(row);
         data[col] = value;
       }
       fireTableCellUpdated(row, col);
+    }
+
+    public Class getColumnClass(int c) {
+      return getValueAt(0, c).getClass();
     }
 
     public void addRowData(int row , Object[] data) {
@@ -295,6 +302,7 @@ public class CrawlRuleEditor extends JDialog implements EDPEditor{
       }
     }
   }
+
 
   class CrawlRuleCellEditor
       extends AbstractCellEditor
@@ -376,7 +384,6 @@ public class CrawlRuleEditor extends JDialog implements EDPEditor{
     }
   }
 
-
 }
 
 
@@ -441,7 +448,9 @@ class CrawlRuleEditor_dnButton_actionAdapter implements java.awt.event.ActionLis
   CrawlRuleEditor_dnButton_actionAdapter(CrawlRuleEditor adaptee) {
     this.adaptee = adaptee;
   }
+
   public void actionPerformed(ActionEvent e) {
     adaptee.dnButton_actionPerformed(e);
   }
+
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: EDPInspectorTableModel.java,v 1.1 2004-05-25 00:17:45 clairegriffin Exp $
+ * $Id: EDPInspectorTableModel.java,v 1.2 2004-06-03 02:44:33 clairegriffin Exp $
  */
 
 /*
@@ -58,22 +58,22 @@ public class EDPInspectorTableModel extends AbstractTableModel
                          "Plugin Version", null),
       new InspectorEntry(EditableDefinablePlugin.PLUGIN_PROPS,
                          "Configuration Parameters", inspectorCellEditor),
-      new InspectorEntry(EditableDefinablePlugin.AU_RULES, "Crawl Rules",
+      new InspectorEntry(EditableDefinablePlugin.AU_NAME, "AU Name Template",
                          inspectorCellEditor),
       new InspectorEntry(EditableDefinablePlugin.AU_START_URL,
                          "Start URL Template", inspectorCellEditor),
-      new InspectorEntry(EditableDefinablePlugin.AU_NAME, "AU Name Template",
+      new InspectorEntry(EditableDefinablePlugin.AU_RULES, "Crawl Rules",
                          inspectorCellEditor),
+      new InspectorEntry(EditableDefinablePlugin.AU_PAUSE_TIME,
+                         "Pause Time Between Fetches", inspectorCellEditor),
+      new InspectorEntry( EditableDefinablePlugin.AU_NEWCONTENT_CRAWL,
+                         "New Content Crawl Interval", inspectorCellEditor),
       new InspectorEntry(EditableDefinablePlugin.AU_CRAWL_DEPTH,
                          "Default Crawl Depth", null),
       new InspectorEntry(EditableDefinablePlugin.AU_CRAWL_WINDOW,
                          "Crawl Window Class", null),
       new InspectorEntry(EditableDefinablePlugin.AU_FILTER_SUFFIX,
                          "Filter Class", inspectorCellEditor),
-      new InspectorEntry(EditableDefinablePlugin.AU_PAUSE_TIME,
-                         "Pause Time Between Fetches", inspectorCellEditor),
-      new InspectorEntry(EditableDefinablePlugin.AU_NEWCONTENT_CRAWL,
-                         "New Content Crawl Interval", inspectorCellEditor),
       new InspectorEntry(EditableDefinablePlugin.PLUGIN_EXCEPTION_HANDLER,
                          "Crawl Exception Class", null),
       new InspectorEntry(EditableDefinablePlugin.CM_EXCEPTION_LIST_KEY,
@@ -86,12 +86,16 @@ public class EDPInspectorTableModel extends AbstractTableModel
                          "Plugin Version", null),
       new InspectorEntry(EditableDefinablePlugin.PLUGIN_PROPS,
                          "Configuration Parameters", inspectorCellEditor),
-      new InspectorEntry(EditableDefinablePlugin.AU_RULES, "Crawl Rules",
-                         inspectorCellEditor),
+      new InspectorEntry(EditableDefinablePlugin.AU_NAME, "AU Name Template",
+                        inspectorCellEditor),
       new InspectorEntry(EditableDefinablePlugin.AU_START_URL,
                          "Start URL Template", inspectorCellEditor),
-      new InspectorEntry(EditableDefinablePlugin.AU_NAME, "AU Name Template",
+      new InspectorEntry(EditableDefinablePlugin.AU_RULES, "Crawl Rules",
                          inspectorCellEditor),
+      new InspectorEntry(EditableDefinablePlugin.AU_PAUSE_TIME,
+                         "Pause Time Between Fetches", inspectorCellEditor),
+      new InspectorEntry( EditableDefinablePlugin.AU_NEWCONTENT_CRAWL,
+                         "New Content Crawl Interval", inspectorCellEditor)
   };
 
   boolean isExpertMode = false;

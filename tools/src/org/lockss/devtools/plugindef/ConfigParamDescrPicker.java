@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescrPicker.java,v 1.1 2004-05-25 00:17:44 clairegriffin Exp $
+ * $Id: ConfigParamDescrPicker.java,v 1.2 2004-06-03 02:44:32 clairegriffin Exp $
  */
 
 /*
@@ -99,6 +99,7 @@ public class ConfigParamDescrPicker
     availableBorder = new TitledBorder("");
     mainPanel.setLayout(gridBagLayout1);
     AssignedPanel.setLayout(borderLayout1);
+    RemoveButton.setToolTipText("Remove Parameter from assigned parameter list.");
     RemoveButton.setText("Remove");
     RemoveButton.addActionListener(new
         ConfigParamDescrPicker_RemoveButton_actionAdapter(this));
@@ -106,7 +107,8 @@ public class ConfigParamDescrPicker
     OkButton.setText("OK");
     OkButton.addActionListener(new
                                ConfigParamDescrPicker_OkButton_actionAdapter(this));
-    CreateButton.setText("Create...");
+    CreateButton.setToolTipText("Create a custom Configuration Parameter.");
+    CreateButton.setText("Custom...");
     CreateButton.addActionListener(new
         ConfigParamDescrPicker_CreateButton_actionAdapter(this));
     CancelButton.setText("Cancel");
@@ -119,18 +121,20 @@ public class ConfigParamDescrPicker
     editButton.setText("Edit");
     editButton.addActionListener(new
         ConfigParamDescrPicker_editButton_actionAdapter(this));
+    viewButton.setToolTipText("View Configuration Parmameter.");
     viewButton.setText("View");
     viewButton.addActionListener(new
         ConfigParamDescrPicker_viewButton_actionAdapter(this));
+    addButton.setToolTipText("Add parameter to assigned parameter list.");
     addButton.setText("Add");
     addButton.addActionListener(new
                                 ConfigParamDescrPicker_addButton_actionAdapter(this));
     AssignedPanel.setBorder(assignedBorder);
     AssignedPanel.setMinimumSize(new Dimension(155, 150));
-    AssignedPanel.setPreferredSize(new Dimension(155, 200));
+    AssignedPanel.setPreferredSize(new Dimension(180, 200));
     AvailablePanel.setBorder(availableBorder);
     AvailablePanel.setMinimumSize(new Dimension(155, 150));
-    AvailablePanel.setPreferredSize(new Dimension(155, 200));
+    AvailablePanel.setPreferredSize(new Dimension(180, 200));
     assignedBorder.setTitle("Plugin Parameters");
     assignedBorder.setBorder(BorderFactory.createEtchedBorder());
     assignedBorder.setTitleFont(new java.awt.Font("Dialog", 0, 12));
@@ -138,10 +142,10 @@ public class ConfigParamDescrPicker
     availableBorder.setBorder(BorderFactory.createEtchedBorder());
     availableBorder.setTitleFont(new java.awt.Font("Dialog", 0, 12));
     mainPanel.setMinimumSize(new Dimension(400, 220));
-    mainPanel.setPreferredSize(new Dimension(400, 250));
+    mainPanel.setPreferredSize(new Dimension(480, 250));
+    ButtonPanel.add(CreateButton, null);
     ButtonPanel.add(OkButton, null);
     ButtonPanel.add(CancelButton, null);
-    ButtonPanel.add(CreateButton, null);
     mainPanel.add(AssignedPanel,        new GridBagConstraints(0, 0, 1, 1, 1.0, 1.0
             ,GridBagConstraints.CENTER, GridBagConstraints.BOTH, new Insets(5, 5, 0, 0), 0, 0));
     getContentPane().add(mainPanel, BorderLayout.CENTER);
@@ -163,7 +167,6 @@ public class ConfigParamDescrPicker
     Collection knownList = plugin.getKnownConfigParamDescrs();
     Collection pluginList = plugin.getConfigParamDescrs();
     Iterator it;
-
     // add current plugin parameters
 
     DefaultListModel dlm = new DefaultListModel();

@@ -1,5 +1,5 @@
 /*
- * $Id: EditableDefinablePlugin.java,v 1.1 2004-05-25 00:17:45 clairegriffin Exp $
+ * $Id: EditableDefinablePlugin.java,v 1.2 2004-06-03 02:44:33 clairegriffin Exp $
  */
 
 /*
@@ -138,7 +138,13 @@ public class EditableDefinablePlugin
   }
 
   public Collection getAuCrawlRules() {
-    return definitionMap.getCollection(AU_RULES, Collections.EMPTY_LIST);
+    Collection defaultCrawlRule = new ArrayList();
+    defaultCrawlRule.add("4,\"^%s\",base_url");
+    String startUrl = getAuStartUrl();
+    if(startUrl != null) {
+      defaultCrawlRule.add("1," + startUrl);
+    }
+    return definitionMap.getCollection(AU_RULES, defaultCrawlRule);
   }
 
   public void removeAuCrawlRules() {
@@ -464,8 +470,9 @@ public class EditableDefinablePlugin
   }
 
   public Collection getConfigParamDescrs() {
+    List defaultConfigParam = ListUtil.list(getConfigParamDescr("base_url"));
     List descrlist = (List) definitionMap.getCollection(PLUGIN_PROPS,
-        Collections.EMPTY_LIST);
+        defaultConfigParam);
     return SetUtil.fromList(descrlist);
   }
 
