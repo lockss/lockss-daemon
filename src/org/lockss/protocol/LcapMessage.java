@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessage.java,v 1.8 2002-11-26 02:21:36 claire Exp $
+ * $Id: LcapMessage.java,v 1.9 2002-11-26 03:06:14 aalto Exp $
  */
 
 /*
@@ -197,7 +197,7 @@ public class LcapMessage {
    * @param opcode
    * @param timeRemaining
    * @param localID
-   * @return
+   * @return message
    * @throws IOException
    */
   static public LcapMessage makeRequestMsg(String targetUrl,
