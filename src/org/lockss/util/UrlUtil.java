@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.2 2002-10-23 01:04:00 troberts Exp $
+ * $Id: UrlUtil.java,v 1.3 2002-10-23 17:40:47 troberts Exp $
  *
 
 Copyright (c) 2000-2002 Board of Trustees of Leland Stanford Jr. University,
@@ -69,15 +69,8 @@ public class UrlUtil {
    */
   public static String getUrlPrefix(String urlStr) throws MalformedURLException{
     URL url = new URL(urlStr);
-    StringBuffer sb = new StringBuffer();
-    sb.append(url.getProtocol());
-    sb.append("://");
-    sb.append(url.getHost());
-    if (url.getPort() != -1){
-      sb.append(':');
-      sb.append(url.getPort());
-    }
-    return sb.toString();
+    URL url2 = new URL(url.getProtocol(), url.getHost(), url.getPort(), "");
+    return url2.toString();
   }
 
 
