@@ -1,5 +1,5 @@
 /*
-* $Id: ContentPoll.java,v 1.30 2003-05-01 20:28:10 claire Exp $
+* $Id: ContentPoll.java,v 1.31 2003-05-02 18:22:41 tal Exp $
  */
 
 /*
@@ -97,13 +97,12 @@ public class ContentPoll extends Poll {
     if (shouldCheckVote(msg)) {
       Vote vote = new Vote(msg, false);
 
-      long dur = m_deadline.getRemainingTime() * 95 /100;
-
       MessageDigest hasher = getInitedHasher(msg.getChallenge(),
                                              msg.getVerifier());
 
-      if (!scheduleHash(hasher, Deadline.in(dur), vote, new VoteHashCallback())) {
-        log.info(m_key + " no time to hash vote " + dur + ":" + m_hashTime);
+      if (!scheduleHash(hasher, m_hashDeadline, vote,
+			new VoteHashCallback())) {
+        log.info(m_key + " no time to hash vote by " + m_hashDeadline);
         stopVoteCheck();
       }
     }

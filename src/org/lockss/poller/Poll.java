@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.72 2003-05-01 22:24:15 claire Exp $
+* $Id: Poll.java,v 1.73 2003-05-02 18:22:41 tal Exp $
  */
 
 /*
@@ -104,6 +104,7 @@ public abstract class Poll implements Serializable {
 
   Deadline m_voteTime;    // when to vote
   Deadline m_deadline;    // when election is over
+  Deadline m_hashDeadline; // when our hashes must finish by
 
   LcapIdentity m_caller;   // who called the poll
   int m_replyOpcode = -1;  // opcode used to reply to poll
@@ -135,6 +136,9 @@ public abstract class Poll implements Serializable {
     // now copy the msg elements we need
     m_hashTime = m_cus.estimatedHashDuration();
     m_deadline = Deadline.in(msg.getDuration());
+    m_hashDeadline =
+      Deadline.at(m_deadline.getExpirationTime() - Constants.MINUTE);
+
     m_challenge = msg.getChallenge();
     m_verifier = m_pollmanager.makeVerifier();
     m_caller = idMgr.findIdentity(msg.getOriginAddr());
@@ -213,7 +217,7 @@ public abstract class Poll implements Serializable {
    * only interested in how long we have remaining.
    */
   void scheduleVote() {
-    long remainingTime = m_deadline.getRemainingTime() *95/100;
+    long remainingTime = m_deadline.getRemainingTime();
     long minTime = TimeBase.nowMs() + (remainingTime/2) - (remainingTime/4);
     long maxTime = TimeBase.nowMs() + (remainingTime/2) + (remainingTime/4);
     m_voteTime = Deadline.atRandomRange(minTime, maxTime);

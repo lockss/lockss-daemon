@@ -1,5 +1,5 @@
 /*
- * $Id: NamePoll.java,v 1.48 2003-05-01 20:28:10 claire Exp $
+ * $Id: NamePoll.java,v 1.49 2003-05-02 18:22:41 tal Exp $
  */
 
 /*
@@ -110,13 +110,13 @@ public class NamePoll
     if (shouldCheckVote(msg)) {
       Vote vote = new NameVote(msg, false);
       log.debug3("created a new NameVote instead of a Vote");
-      long dur = m_deadline.getRemainingTime() * 95 /100;
 
       MessageDigest hasher = getInitedHasher(msg.getChallenge(),
                                              msg.getVerifier());
 
-      if (!scheduleHash(hasher, Deadline.in(dur), vote, new VoteHashCallback())) {
-        log.info(m_key + " no time to hash vote " + dur + ":" + m_hashTime);
+      if (!scheduleHash(hasher, m_hashDeadline, vote,
+			new VoteHashCallback())) {
+        log.info(m_key + " no time to hash vote by " + m_hashDeadline);
         stopVoteCheck();
       }
     }
