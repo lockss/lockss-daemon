@@ -1,5 +1,5 @@
 /*
- * $Id: NodeStateMap.java,v 1.1 2003-03-15 02:45:28 aalto Exp $
+ * $Id: NodeStateMap.java,v 1.2 2003-03-20 00:01:35 aalto Exp $
  */
 
 /*
@@ -100,7 +100,9 @@ public class NodeStateMap extends LRUMap {
    * @param urlKey the reference key url
    */
   synchronized void removeReference(String urlKey) {
-    refMap.remove(urlKey);
+    if (refMap!=null) {
+      refMap.remove(urlKey);
+    }
   }
 
   int getCacheHits() { return cacheHits; }

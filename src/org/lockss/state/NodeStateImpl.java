@@ -1,5 +1,5 @@
 /*
- * $Id: NodeStateImpl.java,v 1.7 2003-03-15 02:53:29 aalto Exp $
+ * $Id: NodeStateImpl.java,v 1.8 2003-03-20 00:01:35 aalto Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.state;
 
 import java.util.*;
 import org.lockss.plugin.CachedUrlSet;
+import org.apache.commons.collections.TreeBag;
 
 /**
  * NodeState contains the current state information for a node, as well as the
@@ -91,8 +92,23 @@ public class NodeStateImpl implements NodeState {
   public Iterator getPollHistories() {
     if (pollHistories==null) {
       repository.loadPollHistories(this);
+      Collections.sort(pollHistories);
     }
     return Collections.unmodifiableList(pollHistories).iterator();
+  }
+
+  public PollHistory getLastPollHistory() {
+    if (pollHistories==null) {
+      repository.loadPollHistories(this);
+      Collections.sort(pollHistories);
+    }
+    // history list is sorted
+    Iterator historyIt = pollHistories.iterator();
+    if (historyIt.hasNext()) {
+      return (PollHistory)historyIt.next();
+    } else {
+      return null;
+    }
   }
 
   public boolean isInternalNode() {
@@ -105,23 +121,44 @@ public class NodeStateImpl implements NodeState {
 
   protected void addPollState(PollState new_poll) {
     polls.add(new_poll);
+    if (nodeMan!=null) {
+      nodeMan.bumpLRUMap(this);
+    }
   }
 
   protected void closeActivePoll(PollHistory finished_poll) {
     if (pollHistories==null) {
       repository.loadPollHistories(this);
+      Collections.sort(pollHistories);
     }
-    pollHistories.add(finished_poll);
+    // since the list is sorted, find the right place to add
+    Comparator comp = new HistoryComparator();
+    boolean added = false;
+    for (int ii=0; ii<pollHistories.size(); ii++) {
+      if (comp.compare(finished_poll, pollHistories.get(ii))<0) {
+        pollHistories.add(ii, finished_poll);
+        added = true;
+        break;
+      }
+    }
+    if (!added) {
+      pollHistories.add(finished_poll);
+    }
     polls.remove(finished_poll);
+    if (nodeMan!=null) {
+      nodeMan.bumpLRUMap(this);
+    }
   }
 
   protected void setPollHistoryBeanList(List new_histories) {
+    // create new sorted list
     pollHistories = new ArrayList(new_histories.size());
     Iterator beanIter = new_histories.iterator();
     while (beanIter.hasNext()) {
       PollHistoryBean bean = (PollHistoryBean)beanIter.next();
       pollHistories.add(bean.getPollHistory());
     }
+    Collections.sort(pollHistories);
   }
 
   protected List getPollHistoryBeanList() {
@@ -135,6 +172,29 @@ public class NodeStateImpl implements NodeState {
       histBeans.add(new PollHistoryBean(history));
     }
     return histBeans;
+  }
+
+  static class HistoryComparator implements Comparator {
+    // sorts in reverse order, with largest startTime first
+    public int compare(Object o1, Object o2) {
+      long startTime1;
+      long startTime2;
+      if ((o1 instanceof PollHistory) && (o2 instanceof PollHistory)) {
+        startTime1 = ((PollHistory)o1).getStartTime();
+        startTime2 = ((PollHistory)o2).getStartTime();
+      } else {
+        throw new IllegalStateException("Bad object in iterator: " +
+                                        o1.getClass() + "," +
+                                        o2.getClass());
+      }
+      if (startTime1>startTime2) {
+        return -1;
+      } else if (startTime1<startTime2) {
+        return 1;
+      } else {
+        return 0;
+      }
+    }
   }
 
 }

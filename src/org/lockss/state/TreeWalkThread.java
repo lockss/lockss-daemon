@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkThread.java,v 1.1 2003-03-18 01:28:57 aalto Exp $
+ * $Id: TreeWalkThread.java,v 1.2 2003-03-20 00:01:35 aalto Exp $
  */
 
 /*
@@ -256,15 +256,7 @@ public class TreeWalkThread extends Thread {
     }
     // check recent histories to see if something needs fixing
     // if there are no current polls
-    Iterator historyIt = node.getPollHistories();
-    PollHistory lastHistory = null;
-    while (historyIt.hasNext()) {
-      PollHistory thisHistory = (PollHistory) historyIt.next();
-      if ( (lastHistory == null) ||
-          (thisHistory.startTime > lastHistory.startTime)) {
-        lastHistory = thisHistory;
-      }
-    }
+    PollHistory lastHistory = node.getLastPollHistory();
     if (lastHistory != null) {
       switch (lastHistory.status) {
         // if latest is PollState.LOST or PollState.REPAIRING
@@ -275,6 +267,9 @@ public class TreeWalkThread extends Thread {
                                        lastHistory.lwrBound,
                                        lastHistory.uprBound);
           manager.callNamePoll(spec.getCachedUrlSet());
+          return false;
+        case PollState.UNREPAIRABLE:
+          //XXX determine what to do
           return false;
         default:
           break;

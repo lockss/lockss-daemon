@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.61 2003-03-18 01:28:57 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.62 2003-03-20 00:01:35 aalto Exp $
  */
 
 /*
@@ -336,6 +336,7 @@ public class NodeManagerImpl implements NodeManager {
       throw new UnsupportedOperationException("Updating state for invalid "
                                               +"results type.");
     }
+    bumpLRUMap(state);
   }
 
   void handleContentPoll(PollState pollState, Poll.VoteTally results,
@@ -611,8 +612,16 @@ public class NodeManagerImpl implements NodeManager {
     return set;
   }
 
+  void bumpLRUMap(NodeState node) {
+    if (nodeMap!=null) {
+      nodeMap.put(node.getCachedUrlSet().getUrl(), node);
+    }
+  }
+
   void removeReference(String urlKey) {
-//XXX    nodeMap.remove(urlKey);
+    if (nodeMap!=null) {
+      nodeMap.remove(urlKey);
+    }
   }
 
   static class ContentRepairCallback implements CrawlManager.Callback {

@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrlSet.java,v 1.3 2003-03-18 02:27:41 aalto Exp $
+ * $Id: CachedUrlSet.java,v 1.4 2003-03-20 00:01:35 aalto Exp $
  */
 
 /*
@@ -102,7 +102,8 @@ public interface CachedUrlSet extends CachedUrlSetNode {
    * Return an {@link Iterator} of {@link CachedUrlSetNode}
    * objects representing all the nodes of the tree rooted at this
    * <code>CachedUrlSet</code>.  These are CachedUrlSets for internal nodes
-   * and CachedUrls for leaf nodes.
+   * and {@link CachedUrl}s for leaf nodes.  If this CachedUrlSet has content,
+   * it is added as a {@link CachedUrl}.
    * @return an {@link Iterator} of {@link CachedUrlSetNode}s
    *         for all the nodes matching the members of the
    *         {@link CachedUrlSetSpec} list.

@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeStateImpl.java,v 1.6 2003-03-04 01:02:05 aalto Exp $
+ * $Id: TestNodeStateImpl.java,v 1.7 2003-03-20 00:01:35 aalto Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ import org.lockss.plugin.CachedUrlSet;
 import org.lockss.test.*;
 import org.lockss.util.CollectionUtil;
 import java.io.*;
+import org.apache.commons.collections.TreeBag;
 
 public class TestNodeStateImpl
     extends LockssTestCase {
@@ -72,8 +73,8 @@ public class TestNodeStateImpl
     Iterator pollIt = state.getPollHistories();
     assertFalse(pollIt.hasNext());
 
-    PollHistory history = new PollHistory(1, "test1lwr", "test1upr", 0, 0, 0, null);
-    state.pollHistories = new ArrayList(1);
+    PollHistory history = new PollHistory(1, "test1lwr", "test1upr", 0, 321, 0, null);
+    state.pollHistories = new ArrayList(3);
     state.pollHistories.add(history);
     pollIt = state.getPollHistories();
     assertTrue(pollIt.hasNext());
@@ -83,7 +84,7 @@ public class TestNodeStateImpl
     assertEquals("test1upr", history.uprBound);
     assertFalse(pollIt.hasNext());
 
-    history = new PollHistory(2, "test2lwr", "test2upr", 0, 0, 0, null);
+    history = new PollHistory(2, "test2lwr", "test2upr", 0, 123, 0, null);
     state.pollHistories.add(history);
     pollIt = state.getPollHistories();
     assertTrue(pollIt.hasNext());
@@ -100,7 +101,7 @@ public class TestNodeStateImpl
     Iterator pollIt = state.getPollHistories();
     assertFalse(pollIt.hasNext());
 
-    PollHistory history = new PollHistory(1, "lwr1", "upr1", 0, 0, 0, null);
+    PollHistory history = new PollHistory(1, "lwr1", "upr1", 0, 456, 0, null);
     state.closeActivePoll(history);
 
     pollIt = state.getActivePolls();
@@ -116,6 +117,53 @@ public class TestNodeStateImpl
     assertEquals("lwr1", history.lwrBound);
     assertEquals("upr1", history.uprBound);
     assertFalse(pollIt.hasNext());
+
+    // test proper insert
+    history = new PollHistory(1, "test1lwr", "test1upr", 0, 234, 0, null);
+    state.pollHistories.add(history);
+    history = new PollHistory(1, "test2lwr", "test2upr", 0, 123, 0, null);
+    state.pollHistories.add(history);
+    history = new PollHistory(1, "test1lwr", "test1upr", 0, 345, 0, null);
+    state.closeActivePoll(history);
+
+    Iterator histIt = state.getPollHistories();
+    ArrayList histL = new ArrayList(4);
+    while (histIt.hasNext()) {
+      PollHistory hist = (PollHistory)histIt.next();
+      histL.add("starttime=" + hist.startTime);
+    }
+    String[] expectedA = new String[] {
+        "starttime=456",
+        "starttime=345",
+        "starttime=234",
+        "starttime=123",
+    };
+    assertIsomorphic(expectedA, histL);
+  }
+
+  public void testGetLastPollHistory() {
+    assertNull(state.getLastPollHistory());
+
+    PollHistory history = new PollHistory(1, "test1lwr", "test1upr", 0, 123, 0, null);
+    state.pollHistories = new ArrayList(3);
+    state.pollHistories.add(history);
+    history = state.getLastPollHistory();
+    assertNotNull(history);
+    assertEquals(1, history.type);
+    assertEquals("test1lwr", history.lwrBound);
+    assertEquals("test1upr", history.uprBound);
+    assertEquals(123, history.startTime);
+
+    history = new PollHistory(1, "test1lwr", "test1upr", 0, 789, 0, null);
+    state.closeActivePoll(history);
+    history = new PollHistory(2, "test2lwr", "test2upr", 0, 456, 0, null);
+    state.closeActivePoll(history);
+    history = state.getLastPollHistory();
+    assertNotNull(history);
+    assertEquals(1, history.type);
+    assertEquals("test1lwr", history.lwrBound);
+    assertEquals("test1upr", history.uprBound);
+    assertEquals(789, history.startTime);
   }
 
   public void testGetActivePolls() {

@@ -1,5 +1,5 @@
 /*
- * $Id: NodeState.java,v 1.5 2003-02-24 22:13:42 claire Exp $
+ * $Id: NodeState.java,v 1.6 2003-03-20 00:01:35 aalto Exp $
  */
 
 /*
@@ -42,29 +42,35 @@ import org.lockss.plugin.CachedUrlSet;
  */
 public interface NodeState {
   /**
-   * Get the CachedUrlSet with which this NodeState is associated.
-   * @return the CachedUrlSet
+   * Get the {@link CachedUrlSet} with which this NodeState is associated.
+   * @return the {@link CachedUrlSet}
    */
   public CachedUrlSet getCachedUrlSet();
 
   /**
    * Returns the current crawl state.  If the node has been deleted, it will
-   * have a CrawlState with type 'NODE_DELETED'.
-   * @return a CrawlState
+   * have a {@link CrawlState} with type 'NODE_DELETED'.
+   * @return a {@link CrawlState}
    */
   public CrawlState getCrawlState();
 
   /**
-   * Returns an Iterator of the polls active on this node, if any.
-   * @return an Iterator of PollStates
+   * Returns an {@link Iterator} of the polls active on this node, if any.
+   * @return an {@link Iterator} of {@link PollState}s
    */
   public Iterator getActivePolls();
 
   /**
-   * Returns an Iterator of the polls histories for this node, if any.
-   * @return an Iterator of PollHistory objects.
+   * Returns an {@link Iterator} of the polls histories for this node, if any.
+   * @return an {@link Iterator} of {@link PollHistory} objects.
    */
   public Iterator getPollHistories();
+
+  /**
+   * Returns the most recent history.
+   * @return the most recent {@link PollHistory}
+   */
+  public PollHistory getLastPollHistory();
 
   /**
    * Returns true if it's an internal node.
