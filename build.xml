@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.75.4.1 2004-04-15 00:27:06 tlipkis Exp $
+ $Id: build.xml,v 1.75.4.2 2004-04-15 00:42:18 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -1148,7 +1148,6 @@ Test results in ${tools.test.results}
          regexp="\$\Name: *([^ ]*) *\$"
          replace="\1"
          defaultValue="" />
-      <echo>cvs.co.tag: |${cvs.co.tag}|</echo>
     </then>
     <else>
       <property name="cvs.co.tag" value="${cvstag}"/>
