@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.75 2004-02-23 09:08:43 tlipkis Exp $
+ $Id: build.xml,v 1.75.4.1 2004-04-15 00:27:06 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -1129,27 +1129,80 @@ Test results in ${tools.test.results}
   </target>
 
   <!-- ==================================================================== -->
+  <!-- Set up cvs.co.tag from cvstag arg if set, or cvs tag under which
+       this file was checked out -->
+  <target name="get.cvs.tag" depends="check.contrib" >
+   <property name="cvstag" value="" />
+   <if>
+    <equals arg1="${cvstag}" arg2="" />
+    <then>
+      <!-- cvs.name.tag will get a value that looks like either
+	   "$ Name: branch_tag $" (or "$ Name: $" or $ Name$ for no tag).
+           (Except that there is no space between the $ and Name.)
+           The prefix and suffix are removed to yield the actual tag.
+           (The \ before Name in the pattern is to prevent cvs from expanding
+           the keyword on that line.) -->
+      <property name="cvs.name.tag" value="$Name: not supported by cvs2svn $"/>
+      <propertyregex property="cvs.co.tag"
+         input="${cvs.name.tag}"
+         regexp="\$\Name: *([^ ]*) *\$"
+         replace="\1"
+         defaultValue="" />
+      <echo>cvs.co.tag: |${cvs.co.tag}|</echo>
+    </then>
+    <else>
+      <property name="cvs.co.tag" value="${cvstag}"/>
+    </else>
+   </if>
+  </target>
+
+  <!-- ==================================================================== -->
   <target name="checkout-and-build"
-     depends="check.contrib"
+     depends="check.contrib,get.cvs.tag"
      description="Checkout current cvs into temp dir, build and test all." >
    <property name="cvstag" value="" />
    <mkdir dir="${temp.build}" />
    <tempfile property="temp.build.dir" destdir="${temp.build}" prefix="build"/>
    <mkdir dir="${temp.build.dir}" />
+   <property name="temp.proj.dir" value="${temp.build.dir}/${cvs.project}" />
+
    <trycatch property="recursive.error.msg">
     <try>
      <if>
-      <equals arg1="${cvstag}" arg2="" />
+      <equals arg1="${cvs.co.tag}" arg2="" />
       <then>
-       <echo>Checking out to ${temp.build.dir}</echo>
+       <echo>Checking out MAIN BRANCH
+  to ${temp.build.dir}</echo>
       </then>
       <else>
-       <echo>Checking out tag "${cvstag}"
+       <echo>Checking out BRANCH TAG: ${cvs.co.tag}
   to ${temp.build.dir}</echo>
       </else>
      </if>
-     <cvs command="-z3 -Q checkout" package="lockss-daemon" dest="${temp.build.dir}"
-       tag="${cvstag}" failonerror="true"/>
+     <if>
+      <isfalse value="${nocvs}" />
+      <then>
+	<cvs command="-z3 -Q checkout" package="lockss-daemon"
+	     dest="${temp.build.dir}" tag="${cvs.co.tag}" failonerror="true"/>
+      </then>
+      <else>
+	<echo>No cvs, copying from ${basedir}</echo>
+	<mkdir dir="${temp.proj.dir}" />
+	<copy todir="${temp.proj.dir}" >
+	  <fileset dir="${basedir}" >
+	    <include name="build.xml"/>
+	    <include name="lib/"/>
+	    <include name="src/"/>
+	    <include name="test/src/"/>
+	    <include name="ant/src/"/>
+	    <include name="doclet/"/>
+	    <include name="tools/"/>
+	    <include name="generated/test/"/>
+	    <exclude name="**/classes/**"/>
+	  </fileset>
+	</copy>
+      </else>
+     </if>
      <echo>Building and testing in ${temp.build.dir}</echo>
 <!--
 	Would prefer to run build in separate jvm, but ant task doesn't
@@ -1160,7 +1213,7 @@ Test results in ${tools.test.results}
         Passing in ant-contrib.loaded accomplishes that, but isn't really
         right.
 -->
-     <ant dir="${temp.build.dir}/${cvs.project}"
+     <ant dir="${temp.proj.dir}"
 	   target="test-all"
 	   inheritAll="false">
        <property name="ant-contrib.loaded" value="${ant-contrib.loaded}" />
