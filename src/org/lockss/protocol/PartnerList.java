@@ -1,5 +1,5 @@
 /*
- * $Id: PartnerList.java,v 1.9 2003-04-02 02:41:53 tal Exp $
+ * $Id: PartnerList.java,v 1.10 2003-04-03 11:34:29 tal Exp $
  */
 
 /*
@@ -174,8 +174,10 @@ class PartnerList {
   }
 
   void addFromDefaultList() {
-    int ix = random.nextInt(defaultPartnerList.size());
-    partners.put(defaultPartnerList.get(ix), nowLong());
+    if (!defaultPartnerList.isEmpty()) {
+      int ix = random.nextInt(defaultPartnerList.size());
+      partners.put(defaultPartnerList.get(ix), nowLong());
+    }
   }
 
   Long nowLong() {

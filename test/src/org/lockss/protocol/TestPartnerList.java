@@ -1,5 +1,5 @@
 /*
- * $Id: TestPartnerList.java,v 1.5 2003-04-02 02:43:43 tal Exp $
+ * $Id: TestPartnerList.java,v 1.6 2003-04-03 11:34:29 tal Exp $
  */
 
 /*
@@ -199,6 +199,20 @@ public class TestPartnerList extends LockssTestCase {
     assertEquals(1, p.size());
     assertTrue(p.equals(SetUtil.set(inet1)) ||
 	       p.equals(SetUtil.set(inet2)));
+  }
+
+  public void testAddFromDefaultWhenEmpty() {
+    pl = new PartnerList();
+    pl.setConfig(getConfig(DEF_MIN_PARTNER_REMOVE_INTERVAL, DEF_MAX_PARTNERS,
+			   DEF_MULTICAST_INTERVAL, ""));
+    removeAll();
+    assertEquals(EMPTY_SET, setOf(pl.getPartners()));
+    // make sure past lastPartnerRemoveTime
+    TimeBase.step(1000);
+    // adding this should then remove it, then add one from the default list
+    // which is empty, leaving the partner list empty, and not throwing
+    pl.addPartner(inet3);
+    assertEquals(EMPTY_SET, setOf(pl.getPartners()));
   }
 
 }
