@@ -1,5 +1,5 @@
 /*
- * $Id: LcapComm.java,v 1.40 2003-07-14 06:43:47 tlipkis Exp $
+ * $Id: LcapComm.java,v 1.41 2003-07-17 05:20:56 tlipkis Exp $
  */
 
 /*
@@ -356,6 +356,18 @@ public class LcapComm extends BaseLockssManager {
   }
 
   synchronized void stop() {
+    if (uSock != null) {
+      uSock.stop();
+      uSock = null;
+    }
+    if (mSock1 != null) {
+      mSock1.stop();
+      mSock1 = null;
+    }
+    if (mSock2 != null) {
+      mSock2.stop();
+      mSock2 = null;
+    }
     if (rcvThread != null) {
       log.info("Stopping Q runner");
       rcvThread.stopRcvThread();
