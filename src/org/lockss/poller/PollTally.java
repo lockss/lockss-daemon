@@ -262,7 +262,8 @@ public class PollTally {
         status = won ? STATE_WON : STATE_LOST;
       }
     }
-    if((type == Poll.NAME_POLL) && (status == STATE_LOST)) {
+    if((type == Poll.NAME_POLL) && (status != STATE_WON)) {
+      log.info("lost a name poll, building poll list");
       ((NamePoll)poll).buildPollLists(pollVotes.iterator());
     }
 
@@ -370,7 +371,6 @@ public class PollTally {
   }
 
 
-
 /**
  * replay a previously checked vote
  * @param vote the vote to recheck
@@ -379,10 +379,11 @@ public class PollTally {
 
 void replayVoteCheck(Vote vote, Deadline deadline) {
   MessageDigest hasher = poll.getInitedHasher(vote.getChallenge(),
-      vote.getVerifier());
+                                              vote.getVerifier());
+  Vote newVote;
 
-  if(!poll.scheduleHash(hasher, deadline, new Vote(vote),
-                   new ReplayVoteCallback())) {
+  if (!poll.scheduleHash(hasher, deadline, poll.copyVote(vote, vote.agree),
+                         new ReplayVoteCallback())) {
     poll.m_pollstate = poll.ERR_SCHEDULE_HASH;
     log.debug("couldn't schedule hash - stopping replay poll");
   }
@@ -405,12 +406,11 @@ class ReplayVoteCallback implements HashService.Callback {
                                 Exception e) {
       boolean hash_completed = e == null ? true : false;
 
-      if(hash_completed)  {
-        Vote v = (Vote)cookie;
+      if (hash_completed) {
+        Vote v = (Vote) cookie;
         LcapIdentity id = idManager.findIdentity(v.getIDAddress());
-        if(idManager.isLocalIdentity(id)) {
-          v = new Vote(v.getChallenge(),v.getVerifier(),hasher.digest(),
-                       v.getIDAddress(),true);
+        if (idManager.isLocalIdentity(id)) {
+          poll.copyVote(v,true);
         }
         else {
           v.setAgreeWithHash(hasher.digest());

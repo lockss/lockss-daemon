@@ -1,5 +1,5 @@
 /*
- * $Id: NamePoll.java,v 1.45 2003-04-16 01:18:14 claire Exp $
+ * $Id: NamePoll.java,v 1.46 2003-04-18 22:44:19 claire Exp $
  */
 
 /*
@@ -109,6 +109,7 @@ public class NamePoll
 
     if (shouldCheckVote(msg)) {
       Vote vote = new NameVote(msg, false);
+      log.debug3("created a new NameVote instead of a Vote");
       long dur = msg.getDuration();
       MessageDigest hasher = getInitedHasher(msg.getChallenge(),
                                              msg.getVerifier());
@@ -126,15 +127,18 @@ public class NamePoll
       Iterator it = m_cus.flatSetIterator();
       ArrayList alist = new ArrayList();
       String baseUrl = m_cus.getSpec().getUrl();
+      log.debug2("getting a list of entries for base url " + baseUrl);
       while(it.hasNext()) {
         String name = ((CachedUrlSetNode)it.next()).getUrl();
         if(name.startsWith(baseUrl)) {
           name = name.substring(baseUrl.length());
         }
+        log.debug3("adding file name: " + name);
         alist.add(name);
       }
       m_entries = alist;
     }
+    log.debug2("sucessfully added " + m_entries.size() + " items to list");
     return m_entries;
   }
 
@@ -144,7 +148,13 @@ public class NamePoll
 
     // build a list of unique disagree votes
     while (voteIter.hasNext()) {
-      NamePoll.NameVote vote = (NamePoll.NameVote) voteIter.next();
+      Object obj = voteIter.next();
+      if (! (obj instanceof NameVote)) {
+        log.error("Expected class NameVote found class " +
+                  obj.getClass().getName());
+        continue;
+      }
+      NameVote vote = (NameVote) obj;
       if (!vote.agree) {
         NameVoteCounter counter = new NameVoteCounter(vote);
         if (winners.contains(counter)) {
@@ -176,7 +186,7 @@ public class NamePoll
 
   void buildPollLists(Iterator voteIter) {
     NameVote winningVote = findWinningVote(voteIter);
-
+    log.debug("found winning vote: " + winningVote);
     if (winningVote != null) {
       m_tally.votedEntries = winningVote.getKnownEntries();
       String lwrRem = winningVote.getLwrRemaining();
@@ -209,8 +219,20 @@ public class NamePoll
     }
   }
 
+  /**
+   * make a NameVote
+   * @param msg the message needed to make the vote
+   * @param agree a boolean set true if this is an agree vote, false otherwise.
+   * @return the newly create NameVote object
+   */
   NameVote makeVote(LcapMessage msg, boolean agree) {
     return new NameVote(msg, agree);
+  }
+
+  Vote copyVote(Vote vote, boolean agree) {
+    NameVote v =  new NameVote((NameVote)vote);
+    v.agree = agree;
+    return v;
   }
 
   static class NameVote extends Vote {
@@ -218,10 +240,12 @@ public class NamePoll
     private String lwrRemaining;
     private String uprRemaining;
 
-    NameVote(Object[] entries, String lwr, String upr) {
-      knownEntries = entries;
-      lwrRemaining = lwr;
-      uprRemaining = upr;
+
+    NameVote(NameVote vote) {
+      super(vote);
+      knownEntries = vote.getKnownEntries();
+      lwrRemaining = vote.getLwrRemaining();
+      uprRemaining = vote.getUprRemaining();
     }
 
     NameVote(LcapMessage msg, boolean agree) {
@@ -257,11 +281,10 @@ public class NamePoll
   }
 
   static class NameVoteCounter extends NameVote {
-    private int voteCount;
+    private int voteCount = 1;
 
     NameVoteCounter(NameVote vote) {
-      super(vote.getKnownEntries(),vote.getLwrRemaining(),vote.getUprRemaining());
-      voteCount = 1;
+      super(vote);
     }
 
     void addVote() {
@@ -269,7 +292,7 @@ public class NamePoll
     }
 
     int getNumVotes() {
-      return voteCount++;
+      return voteCount;
     }
   }
 

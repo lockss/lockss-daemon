@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.67 2003-04-17 00:51:17 claire Exp $
+* $Id: Poll.java,v 1.68 2003-04-18 22:44:19 claire Exp $
  */
 
 /*
@@ -67,7 +67,7 @@ public abstract class Poll implements Serializable {
   static final String PARAM_DISAGREE_VERIFY = Configuration.PREFIX +
       "poll.disagreeVerify";
   static final String PARAM_MARGIN = Configuration.PREFIX +
-      "poll.margin";
+      "poll.voteMargin";
   static final String PARAM_TRUSTED_MARGIN = Configuration.PREFIX +
       "poll.trustedMargin";
 
@@ -405,6 +405,12 @@ public abstract class Poll implements Serializable {
    */
   boolean tooManyPending() {
     return m_pendingVotes > m_tally.quorum + 1;
+  }
+
+  Vote copyVote(Vote vote, boolean agree) {
+    Vote v = new Vote(vote);
+    v.agree = agree;
+    return v;
   }
 
   /**

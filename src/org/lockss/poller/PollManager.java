@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.79 2003-04-17 00:51:17 claire Exp $
+* $Id: PollManager.java,v 1.80 2003-04-18 22:44:19 claire Exp $
  */
 
 /*
@@ -208,7 +208,7 @@ public class PollManager  extends BaseLockssManager {
       return;
     }
     pme.setPollSuspended();
-    theLog.debug2("suspended poll " + key);
+    theLog.debug("suspended poll " + key);
   }
 
 
@@ -223,14 +223,14 @@ public class PollManager  extends BaseLockssManager {
       theLog.debug2("ignoring resume request for unknown key " + key);
       return;
     }
-    theLog.debug2("resuming poll " + key);
+    theLog.debug("resuming poll " + key);
     PollTally tally = pme.poll.getVoteTally();
     long expiration = 0;
     Deadline d;
     if (replayNeeded) {
       NodeManager nm = theDaemon.getNodeManager(tally.getArchivalUnit());
       nm.startPoll(tally.getCachedUrlSet(), tally, true);
-      theLog.debug2("replaying poll " + (String) key);
+      theLog.debug2("starting replay of poll " + key);
       expiration = m_replayPollExpireTime;
       d = Deadline.in(expiration);
       tally.startReplay(d);
@@ -361,10 +361,10 @@ public class PollManager  extends BaseLockssManager {
       }
 
       thePolls.put(ret_poll.m_key, new PollManagerEntry(ret_poll));
-      ret_poll.startPoll();
       if (!msg.isVerifyPoll()) {
         nm.startPoll(cus, ret_poll.getVoteTally(), false);
       }
+      ret_poll.startPoll();
       theLog.debug2("Started new poll: " + ret_poll.m_key);
       return ret_poll;
     }
