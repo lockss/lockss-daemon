@@ -1,5 +1,5 @@
 /*
- * $Id: TestTreeWalkThread.java,v 1.4 2003-03-22 01:15:19 aalto Exp $
+ * $Id: TestTreeWalkThread.java,v 1.5 2003-03-24 23:52:24 aalto Exp $
  */
 
 /*
@@ -80,7 +80,7 @@ public class TestTreeWalkThread extends LockssTestCase {
     pollMan = new MockPollManager();
     theDaemon.setPollManager(pollMan);
     theDaemon.setIdentityManager(new MockIdentityManager());
-    theDaemon.useMockLockssService(true);
+    theDaemon.setLockssRepositoryService(new MockLockssRepositoryService());
     pollMan.initService(theDaemon);
     pollMan.startService();
 

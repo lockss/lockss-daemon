@@ -40,17 +40,16 @@ import org.lockss.plugin.*;
 import org.lockss.repository.TestLockssRepositoryServiceImpl;
 
 public class TestHighWireArchivalUnit extends LockssTestCase {
-  private MockLockssDaemon theDaemon = new MockLockssDaemon();
+  private MockLockssDaemon theDaemon;
   private MockArchivalUnit mau;
-
-  public TestHighWireArchivalUnit(String msg) {
-    super(msg);
-  }
 
   public void setUp() throws Exception {
     super.setUp();
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     TestLockssRepositoryServiceImpl.configCacheLocation(tempDirPath);
+
+    theDaemon = new MockLockssDaemon();
+    theDaemon.getLockssRepositoryService().startService();
   }
 
   public void testGetVolumeNum() {
@@ -102,6 +101,7 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
     URL base = new URL("http://shadow1.stanford.edu/");
     int volume = 322;
     ArchivalUnit hwAu = makeAU(base, volume);
+    theDaemon.getLockssRepository(hwAu);
     CachedUrlSetSpec spec = new RangeCachedUrlSetSpec(base.toString());
     GenericFileCachedUrlSet cus = new GenericFileCachedUrlSet(hwAu, spec);
     UrlCacher uc =
@@ -168,4 +168,10 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
       makeAU(new URL("http://www.bmj.com/"), 42);
     assertEquals("bmj, vol. 42", au1.getName());
   }
+
+  public static void main(String[] argv) {
+    String[] testCaseList = {TestHighWireArchivalUnit.class.getName()};
+    junit.swingui.TestRunner.main(testCaseList);
+  }
+
 }

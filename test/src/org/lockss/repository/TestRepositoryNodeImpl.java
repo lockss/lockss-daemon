@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.19 2003-03-08 02:45:02 aalto Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.20 2003-03-24 23:52:24 aalto Exp $
  */
 
 /*
@@ -41,20 +41,19 @@ import org.lockss.util.*;
  * This is the test class for org.lockss.repostiory.RepositoryNodeImpl
  */
 public class TestRepositoryNodeImpl extends LockssTestCase {
-  private MockLockssDaemon theDaemon = new MockLockssDaemon();
+  private MockLockssDaemon theDaemon;
   private LockssRepository repo;
   private String tempDirPath;
   MockArchivalUnit mau;
-
-  public TestRepositoryNodeImpl(String msg) {
-    super(msg);
-  }
 
   public void setUp() throws Exception {
     super.setUp();
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     TestLockssRepositoryServiceImpl.configCacheLocation(tempDirPath);
     mau = new MockArchivalUnit();
+
+    theDaemon = new MockLockssDaemon();
+    theDaemon.getLockssRepositoryService().startService();
     repo = theDaemon.getLockssRepository(mau);
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollHistoryImpl.java,v 1.4 2003-02-27 22:36:58 troberts Exp $
+ * $Id: TestPollHistoryImpl.java,v 1.5 2003-03-24 23:52:24 aalto Exp $
  */
 
 /*
@@ -41,10 +41,6 @@ import org.lockss.poller.Poll;
 public class TestPollHistoryImpl extends LockssTestCase {
   private PollHistory history;
 
-  public TestPollHistoryImpl(String msg) {
-    super(msg);
-  }
-
   public void setUp() throws Exception {
     super.setUp();
     PollState state = new PollState(1, "none", null, 1, 0, null);
@@ -71,8 +67,7 @@ public class TestPollHistoryImpl extends LockssTestCase {
   }
 
   public static void main(String[] argv) {
-    String[] testCaseList = {
-        TestPollHistoryImpl.class.getName()};
+    String[] testCaseList = {TestPollHistoryImpl.class.getName()};
     junit.swingui.TestRunner.main(testCaseList);
   }
 

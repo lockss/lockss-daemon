@@ -27,9 +27,6 @@ public class MockLockssDaemon extends LockssDaemon {
   NodeManagerService nodeManagerService = null;
   StatusService statusService = null;
 
-  boolean useMockNodeService = false;
-  boolean useMockLockssService = false;
-
   public MockLockssDaemon() {
     this(null);
   }
@@ -53,15 +50,6 @@ public class MockLockssDaemon extends LockssDaemon {
     identityManager = null;
     nodeManagerService = null;
   }
-
-  public void useMockLockssService(boolean useMockLockssService) {
-    this.useMockLockssService = useMockLockssService;
-  }
-
-  public void useMockNodeService(boolean useMockNodeService) {
-    this.useMockNodeService = useMockNodeService;
-  }
-
 
   /**
    * return the hash service instance
@@ -137,11 +125,7 @@ public class MockLockssDaemon extends LockssDaemon {
    */
   public LockssRepositoryService getLockssRepositoryService() {
     if (lockssRepositoryService == null) {
-      if (useMockLockssService) {
-        lockssRepositoryService = new MockLockssRepositoryService();
-      } else {
-        lockssRepositoryService = new LockssRepositoryServiceImpl();
-      }
+      lockssRepositoryService = new LockssRepositoryServiceImpl();
       try {
         lockssRepositoryService.initService(this);
       } catch (LockssDaemonException ex) { }
@@ -184,11 +168,7 @@ public class MockLockssDaemon extends LockssDaemon {
    */
   public NodeManagerService getNodeManagerService() {
     if (nodeManagerService == null) {
-      if (useMockNodeService) {
-        nodeManagerService = new MockNodeManagerService();
-      } else {
-        nodeManagerService = new NodeManagerServiceImpl();
-      }
+      nodeManagerService = new NodeManagerServiceImpl();
       try {
         nodeManagerService.initService(this);
       }

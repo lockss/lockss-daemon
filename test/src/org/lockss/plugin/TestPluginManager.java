@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.10 2003-03-15 02:53:29 aalto Exp $
+ * $Id: TestPluginManager.java,v 1.11 2003-03-24 23:52:24 aalto Exp $
  */
 
 /*
@@ -82,8 +82,8 @@ public class TestPluginManager extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
 
-    theDaemon.useMockLockssService(true);
-    theDaemon.useMockNodeService(true);
+    theDaemon.setLockssRepositoryService(new MockLockssRepositoryService());
+    theDaemon.setNodeManagerService(new MockNodeManagerService());
 
     mgr = new PluginManager();
     mgr.initService(theDaemon);

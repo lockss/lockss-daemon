@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryServiceImpl.java,v 1.7 2003-03-15 02:53:29 aalto Exp $
+ * $Id: LockssRepositoryServiceImpl.java,v 1.8 2003-03-24 23:52:24 aalto Exp $
  */
 
 /*
@@ -78,14 +78,6 @@ public class LockssRepositoryServiceImpl implements LockssRepositoryService {
     if (theManager == null) {
       theDaemon = daemon;
       theManager = this;
-
-      cacheLocation = Configuration.getParam(PARAM_CACHE_LOCATION);
-      if (cacheLocation==null) {
-        logger.error("Couldn't get "+PARAM_CACHE_LOCATION+" from Configuration");
-        throw new LockssRepository.RepositoryStateException("Couldn't load param.");
-      }
-      cacheLocation = extendCacheLocation(cacheLocation);
-      logger.info("Setting cache location to " + cacheLocation);
     } else {
       throw new LockssDaemonException("Multiple Instantiation.");
     }
@@ -99,6 +91,10 @@ public class LockssRepositoryServiceImpl implements LockssRepositoryService {
         setConfig(newConfig, oldConfig);
       }
     });
+    if (cacheLocation==null) {
+      logger.error("Couldn't get "+PARAM_CACHE_LOCATION+" from Configuration");
+      throw new LockssRepository.RepositoryStateException("Couldn't load param.");
+    }
   }
 
   public void stopService() {
@@ -108,12 +104,7 @@ public class LockssRepositoryServiceImpl implements LockssRepositoryService {
   }
 
   private void setConfig(Configuration config, Configuration oldConfig) {
-    cacheLocation = config.getParam(PARAM_CACHE_LOCATION);
-    if (cacheLocation==null) {
-      logger.error("Couldn't get "+PARAM_CACHE_LOCATION+" from Configuration");
-      throw new LockssRepository.RepositoryStateException("Couldn't load param.");
-    }
-    cacheLocation = extendCacheLocation(cacheLocation);
+    cacheLocation = extendCacheLocation(config.getParam(PARAM_CACHE_LOCATION));
     logger.info("Setting cache location to " + cacheLocation);
   }
 
@@ -148,15 +139,10 @@ public class LockssRepositoryServiceImpl implements LockssRepositoryService {
   public synchronized void addLockssRepository(ArchivalUnit au) {
     LockssRepository lockssRepo = (LockssRepository)auMap.get(au);
     if (lockssRepo==null) {
-      if (cacheLocation==null) {
-        cacheLocation = Configuration.getParam(PARAM_CACHE_LOCATION);
         if (cacheLocation==null) {
           logger.error("Couldn't get "+PARAM_CACHE_LOCATION+" from Configuration");
           throw new LockssRepository.RepositoryStateException("Couldn't load param.");
         }
-        cacheLocation = extendCacheLocation(cacheLocation);
-        logger.info("Setting cache location to " + cacheLocation);
-      }
       lockssRepo = new LockssRepositoryImpl(
             LockssRepositoryServiceImpl.mapAuToFileLocation(cacheLocation, au),
             au);

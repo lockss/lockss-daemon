@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.48 2003-03-22 01:15:19 aalto Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.49 2003-03-24 23:52:24 aalto Exp $
  */
 
 /*
@@ -73,7 +73,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     pollManager = new MockPollManager();
     theDaemon.setPollManager(pollManager);
     theDaemon.setIdentityManager(new MockIdentityManager());
-    theDaemon.useMockLockssService(true);
+    theDaemon.setLockssRepositoryService(new MockLockssRepositoryService());
     pollManager.initService(theDaemon);
     pollManager.startService();
 

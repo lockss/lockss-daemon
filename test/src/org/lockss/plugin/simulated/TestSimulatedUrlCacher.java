@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimulatedUrlCacher.java,v 1.12 2003-03-18 01:28:57 aalto Exp $
+ * $Id: TestSimulatedUrlCacher.java,v 1.13 2003-03-24 23:52:24 aalto Exp $
  */
 
 /*
@@ -48,17 +48,17 @@ import java.io.File;
 
 
 public class TestSimulatedUrlCacher extends LockssTestCase {
-  private MockLockssDaemon theDaemon = new MockLockssDaemon(null);
+  private MockLockssDaemon theDaemon;
   private MockArchivalUnit mau;
-
-  public TestSimulatedUrlCacher(String msg) {
-    super(msg);
-  }
 
   public void setUp() throws Exception {
     super.setUp();
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     TestLockssRepositoryServiceImpl.configCacheLocation(tempDirPath);
+
+    theDaemon = new MockLockssDaemon();
+    theDaemon.getLockssRepositoryService().startService();
+
     mau = new MockArchivalUnit();
     theDaemon.getLockssRepository(mau);
   }
@@ -94,6 +94,11 @@ public class TestSimulatedUrlCacher extends LockssTestCase {
     Properties prop = suc.getUncachedProperties();
     assertEquals("image/jpeg", prop.getProperty("content-type"));
     assertEquals(testStr, prop.getProperty("content-url"));
+  }
+
+  public static void main(String[] argv) {
+    String[] testCaseList = {TestSimulatedUrlCacher.class.getName()};
+    junit.swingui.TestRunner.main(testCaseList);
   }
 
 }

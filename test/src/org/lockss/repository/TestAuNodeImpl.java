@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuNodeImpl.java,v 1.4 2003-03-15 02:53:29 aalto Exp $
+ * $Id: TestAuNodeImpl.java,v 1.5 2003-03-24 23:52:24 aalto Exp $
  */
 
 /*
@@ -42,21 +42,20 @@ import org.lockss.plugin.AuUrl;
  * This is the test class for org.lockss.repostiory.RepositoryNodeImpl
  */
 public class TestAuNodeImpl extends LockssTestCase {
+  private MockLockssDaemon theDaemon;
   private LockssRepository repo;
   private String tempDirPath;
-
-  public TestAuNodeImpl(String msg) {
-    super(msg);
-  }
 
   public void setUp() throws Exception {
     super.setUp();
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     TestLockssRepositoryServiceImpl.configCacheLocation(tempDirPath);
-    MockArchivalUnit mau = new MockArchivalUnit(null);
-    LockssRepositoryServiceImpl lrsi = new LockssRepositoryServiceImpl();
-    lrsi.addLockssRepository(mau);
-    repo = lrsi.getLockssRepository(mau);
+
+    MockArchivalUnit mau = new MockArchivalUnit();
+
+    theDaemon = new MockLockssDaemon();
+    theDaemon.getLockssRepositoryService().startService();
+    repo = theDaemon.getLockssRepository(mau);
   }
 
   public void testListEntries() throws Exception {
@@ -101,4 +100,10 @@ public class TestAuNodeImpl extends LockssTestCase {
       fail("Cannot deactivate AuNode.");
     } catch (UnsupportedOperationException uoe) { }
   }
+
+  public static void main(String[] argv) {
+    String[] testCaseList = { TestAuNodeImpl.class.getName()};
+    junit.swingui.TestRunner.main(testCaseList);
+  }
+
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeStateImpl.java,v 1.7 2003-03-20 00:01:35 aalto Exp $
+ * $Id: TestNodeStateImpl.java,v 1.8 2003-03-24 23:52:24 aalto Exp $
  */
 
 /*
@@ -34,14 +34,9 @@ import org.lockss.util.CollectionUtil;
 import java.io.*;
 import org.apache.commons.collections.TreeBag;
 
-public class TestNodeStateImpl
-    extends LockssTestCase {
+public class TestNodeStateImpl extends LockssTestCase {
   private NodeStateImpl state;
   private List polls;
-
-  public TestNodeStateImpl(String msg) {
-    super(msg);
-  }
 
   public void setUp() throws Exception {
     super.setUp();

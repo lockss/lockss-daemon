@@ -27,31 +27,30 @@ public class TestPollManager extends LockssTestCase {
 
   private static String[] testentries = {"test1.doc", "test2.doc", "test3.doc"};
   protected static ArchivalUnit testau;
-  private static MockLockssDaemon daemon = new MockLockssDaemon(null);
+  private static MockLockssDaemon theDaemon = new MockLockssDaemon();
 
   protected InetAddress testaddr;
   protected LcapIdentity testID;
   protected LcapMessage[] testmsg;
-  protected PollManager pollmanager = daemon.getPollManager();
-
-  public TestPollManager(String _name) {
-    super(_name);
-  }
+  protected PollManager pollmanager = theDaemon.getPollManager();
 
   protected void setUp() throws Exception {
     super.setUp();
-    daemon.getPluginManager();
+
+    theDaemon.getPluginManager();
     testau = PollTestPlugin.PTArchivalUnit.createFromListOfRootUrls(rooturls);
     PluginUtil.registerArchivalUnit(testau);
     String cacheStr = LockssRepositoryServiceImpl.PARAM_CACHE_LOCATION +"=/tmp";
     TestIdentityManager.configParams("/tmp/iddb", "src/org/lockss/protocol",
                                      cacheStr);
-    daemon.getHashService().startService();
-    daemon.setNodeManagerService(new MockNodeManagerService());
-    daemon.setNodeManager(new MockNodeManager(),testau);
+    theDaemon.getHashService().startService();
+    theDaemon.getLockssRepositoryService().startService();
+
+    theDaemon.setNodeManagerService(new MockNodeManagerService());
+    theDaemon.setNodeManager(new MockNodeManager(),testau);
     try {
       testaddr = InetAddress.getByName("127.0.0.1");
-      testID = daemon.getIdentityManager().findIdentity(testaddr);
+      testID = theDaemon.getIdentityManager().findIdentity(testaddr);
     }
     catch (UnknownHostException ex) {
       fail("can't open test host");
@@ -81,7 +80,7 @@ public class TestPollManager extends LockssTestCase {
   }
 
   public void tearDown() throws Exception {
-    daemon.getHashService().stopService();
+    theDaemon.getHashService().stopService();
     for(int i=0; i<3; i++) {
       pollmanager.removePoll(testmsg[i].getKey());
     }
@@ -263,7 +262,7 @@ public class TestPollManager extends LockssTestCase {
   public void testSuspendPoll() {
     Poll p1 = null;
     try {
-      p1 = TestPoll.createCompletedPoll(daemon, testau, testmsg[0], 7, 2);
+      p1 = TestPoll.createCompletedPoll(theDaemon, testau, testmsg[0], 7, 2);
       pollmanager.addPoll(p1);
 
     }
@@ -311,7 +310,7 @@ public class TestPollManager extends LockssTestCase {
 
     try {
       PollSpec ps = new PollSpec(msg);
-      return daemon.getPluginManager().findCachedUrlSet(ps);
+      return theDaemon.getPluginManager().findCachedUrlSet(ps);
     }
     catch (Exception ex) {
       return null;

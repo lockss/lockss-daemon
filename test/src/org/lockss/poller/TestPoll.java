@@ -26,7 +26,7 @@ public class TestPoll extends LockssTestCase {
 
   protected static ArchivalUnit testau;
   private static IdentityManager idmgr;
-  private static MockLockssDaemon daemon = new MockLockssDaemon(null);
+  private static MockLockssDaemon theDaemon = new MockLockssDaemon();
   private String[] agree_entries = makeEntries(10, 50);
   private String[] disagree_entries = makeEntries(15, 57);
   private String[] dissenting_entries = makeEntries(7, 50);
@@ -37,28 +37,27 @@ public class TestPoll extends LockssTestCase {
   protected LcapIdentity testID1;
   protected LcapMessage[] testmsg;
   protected Poll[] testpolls;
-  protected PollManager pollmanager;
-
-  public TestPoll(String _name) {
-    super(_name);
-  }
+  protected PollManager pollmanager = theDaemon.getPollManager();
 
   /** setUp method for test case
    * @throws Exception
    */
   protected void setUp() throws Exception {
     super.setUp();
-    daemon.getPluginManager();
+
+    theDaemon.getPluginManager();
     testau = PollTestPlugin.PTArchivalUnit.createFromListOfRootUrls(rooturls);
     PluginUtil.registerArchivalUnit(testau);
     String cacheStr = LockssRepositoryServiceImpl.PARAM_CACHE_LOCATION +"=/tmp";
     TestIdentityManager.configParams("/tmp/iddb", "src/org/lockss/protocol",
                                      cacheStr);
-    idmgr = daemon.getIdentityManager();
-    daemon.getHashService().startService();
-    daemon.setNodeManagerService(new MockNodeManagerService());
-    daemon.setNodeManager(new MockNodeManager(),testau);
-    pollmanager = daemon.getPollManager();
+    idmgr = theDaemon.getIdentityManager();
+    theDaemon.getHashService().startService();
+    theDaemon.getLockssRepositoryService().startService();
+
+    theDaemon.setNodeManagerService(new MockNodeManagerService());
+    theDaemon.setNodeManager(new MockNodeManager(), testau);
+  //  pollmanager = theDaemon.getPollManager();
     try {
       testaddr = InetAddress.getByName("127.0.0.1");
       testID = idmgr.findIdentity(testaddr);
@@ -107,7 +106,7 @@ public class TestPoll extends LockssTestCase {
    * @throws Exception if removePoll failed
    */
   public void tearDown() throws Exception {
-    daemon.getHashService().stopService();
+    theDaemon.getHashService().stopService();
     for (int i = 0; i < 3; i++) {
       pollmanager.removePoll(testpolls[i].m_key);
     }
@@ -140,7 +139,7 @@ public class TestPoll extends LockssTestCase {
     }
     Poll p = null;
     try {
-      p = createCompletedPoll(daemon, testau, msg, 8,2);
+      p = createCompletedPoll(theDaemon, testau, msg, 8,2);
     }
     catch (Exception ex2) {
     }
