@@ -7,7 +7,7 @@
 <body>
 <h2 style="text-align: center;">Using The LOCKSS Plugin Generation Tool</h2>
 <h3 style="text-align: center;">The LOCKSS Team</h3>
-<h3 style="text-align: center;">6/7/04</h3>
+<h3 style="text-align: center;">DRAFT 6/15/04</h3>
 <h4>Introduction</h4>
 Every journal that LOCKSS might preserve has some peculiarities; some
 are more peculiar than others. The LOCKSS daemon gets its knowledge of
@@ -59,10 +59,8 @@ inserted.</li>
     <li>On Linux/x86 you should navigate to the linux folder on the CD
 and click on the runtool icon.</li>
   </ul>
-  <li>You can download two versions: <a
- href="file:///home/dshr/gamma/lockss-daemon/doc/PluginToolCourse/plugintool.tgz">plugintool.tgz</a>
-for Unix and <a
- href="file:///home/dshr/gamma/lockss-daemon/doc/PluginToolCourse/plugintool.zip">plugintool.zip</a>
+  <li>You can download two versions: <a href="plugintool.tgz">plugintool.tgz</a>
+for Unix and <a href="plugintool.zip">plugintool.zip</a>
 for Windows.
 Download and unpack the appropriate one into a directory (folder) and
 invoke the script in that directory that runs the tool, <span
@@ -441,7 +439,8 @@ As.&nbsp; Submit the
 resulting file to the LOCKSS team for testing and inclusion
 in the distribution.</li>
 </ul>
-<h4>Improving the Design of the Example Plugin</h4>
+<h4><a name="Improving_the_Design_of_the_Example"></a>Improving the
+Design of the Example Plugin</h4>
 Although the plugin we just defined includes and excludes the correct
 files, it does so by explicitly specifying the files on the publisher's
 site to include. In most cases it will be better to explicitly specify
@@ -688,7 +687,115 @@ Reviewing this rather long list, it appears that the crawl rules are
 now including and excluding the correct files. Note that among the
 files included are programs for Windows and the Mac, .gif and .jpg
 images and .wrl files.<br>
+<h4>Evaluating your Journal</h4>
+Now you are ready to evaluate your chosen journal and collect the
+information you need to create a plugin for it.&nbsp; In this section
+you will collect the information, in following sections we cover some
+of the issues you may run in to that we haven't covered so far. Point
+your browser at your journal's home page and start answering the
+questions below:<br>
+<br>
+<ol>
+  <li>What is the URL of the journal's home page?</li>
+  <li>Is the journal structured as years, volumes, a sequence of
+issues, or some other way?</li>
+  <li>If there is a volume table of contents page:</li>
+  <ol>
+    <li>What is the URL for the volume before the current one?</li>
+    <li>Does this page link to all other volumes, to the next and
+previous volumes, or to no other volumes?</li>
+    <li>Chose a typical issue in this volume.<br>
+    </li>
+  </ol>
+  <li>If there is a year table of contents page:</li>
+  <ol>
+    <li>What is the URL for the year 2003?</li>
+    <li>Does this page link to all other years, to the next and
+previous years, or to no other years?<br>
+    </li>
+    <li>Choose a typical issue from 2003.</li>
+  </ol>
+  <li>Is there a table of contents page for your chosen issue? If so:</li>
+  <ol>
+    <li>What is its URL?</li>
+    <li>Does this page link to all other issues, all other issues in
+this volume or year, the next and previous issues, or to no other
+issues?<br>
+    </li>
+  </ol>
+  <li>Is there a publisher manifest page? If there is, what is its URL?
+You will not be able to finish specifying a plugin for the journal or
+test the plugin you have specified until the publisher manifest page is
+in place.<br>
+  </li>
+  <li>Choose a typical article in your chosen issue. What is its URL?</li>
+  <li>Check the format in which the article is delivered (e.g. PDF,
+HTML, ...).</li>
+  <li>If the article format is HTML does it contain:</li>
+  <ol>
+    <li>Advertisements? If so, what is the URL for a typical
+advertisement?<br>
+    </li>
+    <li>Personalizations? If so, what do they look like?<br>
+    </li>
+    <li>Images? If so, what is the URL for a typical image? (NB sites
+often use images for mathematical and other non-standard characters).<br>
+    </li>
+    <li>Links to cited articles in the same journal? If so, what is the
+URL for a typical intra-journal citation?</li>
+    <li>Links to cited articles in other journals? If so, what is the
+URL for a typical inter-journal citation?</li>
+    <li>Links to sound clips? If so:</li>
+    <ol>
+      <li>What is the URL for a typical sound clip?</li>
+      <li>Is the sound streamed or downloaded?</li>
+      <li>What format is used?<br>
+      </li>
+    </ol>
+    <li>Links to movies? If so:</li>
+    <ol>
+      <li>What is the URL for a typical movie?</li>
+      <li>Is the movie streamed or downloaded?</li>
+      <li>What format is used?<br>
+      </li>
+    </ol>
+    <li>Javascript? If so, what does the Javascript implement (e.g
+search button).</li>
+    <li>Links to all other articles in the same volume, year or issue,
+the next and previous articles, or to no other articles (except for
+citations).</li>
+    <li>Hit refresh. Identify any elements on the page that have
+changed.<br>
+    </li>
+  </ol>
+  <li>Review your answers above. If you have pages that link to all
+other similar pages rather than simply next and previous similar pages,
+or if you have advertisements, personalizations or page elements that
+changed on refresh the plugin for your journal is beyond the current
+capabilities of the plugin tool (see <a href="#Limitations">below</a>).
+Please discuss your findings with the LOCKSS team. Otherwise you can
+proceed to analyze your journal's URL structure.<br>
+  </li>
+</ol>
 <h4>Article-ID Journal Structure</h4>
+Some journals encode the volume and issue in their URLs for articles.
+An example we used above is EMLS, whose article URLs are like <a
+ href="http://www.shu.ac.uk/emls/09-3/finntabl.htm">http://www.shu.ac.uk/emls/09-3/finntabl.htm</a>,
+which includes the volume (09) and issue(3).&nbsp; In this case the
+crawl rules should&nbsp; include everything that matches Start followed
+by
+<span style="font-weight: bold;">base_url</span> followed by volume
+padded with zeros to a field width of 2
+followed by a literal string of <span style="font-weight: bold;">-</span>
+followed by Any Number followed by a string literal of <span
+ style="font-weight: bold;">/</span> followed by Anything followed by
+End.<br>
+Some journals encode the issue but not the year or volume in their URLs
+for articles. An example we used above is Disputatio, whose article
+URLs are like <a href="http://disputatio.com/articles/016-3.pdf">http://disputatio.com/articles/016-3.pdf</a>
+- it is the third article in issue number 16 of the journal. In this
+case we want to use the exclusionary crawl rules described <a
+ href="#Improving_the_Design_of_the_Example">above</a>.<br>
 Some journals use parameters on their URLs for articles. An example is
 Studies in Nolinear Dynamics and Econometrics, hosted on BePress. A
 typical article has a URL like <a
@@ -703,7 +810,11 @@ want to exclude everything that doesn't match <span
  style="font-weight: bold;">http://www.bepress.com/</span>) followed by
 <span style="font-weight: bold;">cgi/viewcontent.cgi?</span> followed
 by anything followed by <span style="font-weight: bold;">context=snde</span>.<br>
-XXX need example - how to deal with intra-article links? XXX<br>
+In some cases of a publisher platform that hosts multiple journals, it
+may not be possible to tell from the article URLs whether the article
+is part of the journal of interest or not. If this is the case your
+journal is beyond the current capabilities of the plugin tool (see
+below). Please discuss your findings with the LOCKSS team.<br>
 <h4>Archival Unit Design</h4>
 So far, we've assumed that the publisher manifest file is a given. In
 practice, its typically the result of a negotiation between the library
@@ -794,7 +905,7 @@ then excluding everything that doesn't match&nbsp; <span
  style="font-weight: bold;">volume</span> is a good approach.</li>
   <li>If the journal uses parameters in the URL and they include the
 volume or year, write rules that exclude everything that doesn't have
-the appropriate parameters. XXX need an example.</li>
+the appropriate parameters.</li>
   <li>If the journal has a flat structure, with everything in a single
 directory, write rules that include the files that are actually needed.
 For example, if the URL looks like <a
@@ -805,11 +916,9 @@ by a number followed by <span style="font-weight: bold;">-</span>
 followed by a number followed by anything is a good approach.</li>
   <li>If the journal uses parameters in the URL and they don't include
 the volume or year, write rules that include the files that are
-actually needed. XXX need to explain the BePress example.</li>
+actually needed.</li>
 </ul>
-<h4>Your Own Example</h4>
-XXX provide fill-in-the-blank forms to collect the data. XXX<br>
-<h4>What are the plugin generator's limits?</h4>
+<h4><a name="Limitations"></a>What are the plugin generator's limits?</h4>
 The plugin generation tool has limitations; the plugins for many more
 complex journals will exceed them. In general, any plugin that requires
 knowledge of the Java classes in the daemon is likely to fall into this
