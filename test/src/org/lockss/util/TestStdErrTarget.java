@@ -1,4 +1,8 @@
 /*
+ * $Id: TestStdErrTarget.java,v 1.2 2002-08-31 07:05:15 tal Exp $
+ */
+
+/*
 
 Copyright (c) 2000-2002 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -34,27 +38,33 @@ import gnu.regexp.REException;
 import junit.framework.TestCase;
 
 public class TestStdErrTarget extends TestCase{
-  public TestStdErrTarget(String msg){
+  public static Class testedClasses[] = {
+    org.lockss.util.StdErrTarget.class
+  };
+
+  public TestStdErrTarget(String msg) {
     super(msg);
   }
 
   public void testOutputStringFormat()
-      throws REException{
+      throws REException {
     StdErrTarget seTarget = new StdErrTarget();
     ByteArrayOutputStream baos = new ByteArrayOutputStream();
     PrintStream ps = new PrintStream(baos);
     System.setErr(ps);
     //    System.err.println("test");
-    String callerId = "caller-id";
+    String name = "log-id";
     String errorMessage = "error message";
 
-    seTarget.handleMessage(callerId, errorMessage, "error");
+    seTarget.handleMessage(new Logger(Logger.LEVEL_DEBUG, name),
+			   Logger.LEVEL_ERROR,
+			   errorMessage);
     
     RE regExp = 
-      new RE("\\d(\\d)?:\\d\\d:\\d\\d (A|P)M: error: "+callerId+" "+errorMessage+"\n");
+      new RE("\\d(\\d)?:\\d\\d:\\d\\d (A|P)M: Error: "+errorMessage+"\n");
     String debugString = baos.toString();
     assertTrue("Debug string: \""+debugString+"\" not of correct format."+
-	       " Should be <time>: <error-level>: <caller-id> <error message>",
+	       " Should be <time>: <error-level>: <error message>",
 	       regExp.isMatch(debugString));
   }
   
