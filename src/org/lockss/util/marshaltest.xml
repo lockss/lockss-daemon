@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE mapping PUBLIC "-//EXOLAB/Castor Object Mapping DTD Version 1.0//EN"
+                         "http://castor.exolab.org/mapping.dtd">
+
+<mapping>
+        <class name="org.lockss.util.TestXmlMarshaller$Tester">
+          <map-to xml="Tester"/>
+                <field name="string"
+                       type="java.lang.String">
+                </field>
+                <field name="int"
+                       type="integer">
+                </field>
+                <field name="list"
+                       type="java.util.ArrayList"
+                       collection="arraylist" lazy="true">
+                </field>
+        </class>
+</mapping>
