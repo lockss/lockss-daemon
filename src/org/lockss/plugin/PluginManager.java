@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.98 2004-08-22 02:05:54 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.99 2004-08-23 18:43:11 smorabito Exp $
  */
 
 /*
@@ -1604,7 +1604,7 @@ public class PluginManager
    * A simple class that wraps information about a loadable plugin,
    * used during the loading process.
    */
-  private class PluginInfo {
+  private static class PluginInfo {
     private Plugin plugin;
     private PluginVersion version;
     private ClassLoader classLoader;
