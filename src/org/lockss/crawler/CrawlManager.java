@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManager.java,v 1.7 2003-02-24 22:13:41 claire Exp $
+ * $Id: CrawlManager.java,v 1.8 2003-03-03 19:34:58 troberts Exp $
  */
 
 /*
@@ -66,7 +66,7 @@ public interface CrawlManager {
    * @return true if the tree walk can begin now, false otherwise
    */
 
-  public boolean canTreeWalkStart(ArchivalUnit au, AuState aus,
+  public boolean canTreeWalkStart(ArchivalUnit au, 
 				  CrawlManager.Callback cb, Object cookie);
 
   public interface Callback {
