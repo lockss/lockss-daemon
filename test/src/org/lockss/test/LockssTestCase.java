@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.26 2003-03-17 08:33:40 tal Exp $
+ * $Id: LockssTestCase.java,v 1.27 2003-03-25 01:53:19 aalto Exp $
  */
 
 /*
@@ -69,11 +69,13 @@ public class LockssTestCase extends TestCase {
     }
   }
 
-  /** Create and return the name of a temp dir.  The dir is created within
+  /**
+   * Create and return the name of a temp dir.  The dir is created within
    * the default temp file dir.
    * It will be deleted following the test, by tearDown().  (So if you
    * override tearDown(), be sure to call <code>super.tearDown()</code>.)
    * @return The newly created directory
+   * @throws IOException
    */
   public File getTempDir() throws IOException {
     File tmpdir = FileUtil.createTempDir("locksstest", null);
@@ -86,7 +88,10 @@ public class LockssTestCase extends TestCase {
     return tmpdir;
   }
 
-  /** Remove any temp dirs, cancel any outstanding {@link DoLater}s */
+  /**
+   * Remove any temp dirs, cancel any outstanding {@link LockssTestCase.DoLater}s
+   * @throws Exception
+   */
   public void tearDown() throws Exception {
     boolean leave = Boolean.getBoolean("org.lockss.keepTempFiles");
     if (tmpDirs != null && !leave) {
@@ -114,8 +119,13 @@ public class LockssTestCase extends TestCase {
     super.tearDown();
   }
 
-  /** Asserts that two Maps are equal (contain the same mappings).
-   * If they are not an AssertionFailedError is thrown. */
+  /**
+   * Asserts that two Maps are equal (contain the same mappings).
+   * If they are not an AssertionFailedError is thrown.
+   * @param message the message to give on failure
+   * @param expected the expected value
+   * @param actual the actual value
+   */
   static public void assertEqual(String message, Map expected, Map actual) {
     if (expected == null && actual == null) {
       return;
@@ -125,15 +135,24 @@ public class LockssTestCase extends TestCase {
     }
     failNotEquals(message, expected, actual);
   }
-  
-  /** Asserts that two Maps are equal (contain the same mappings).
-   * If they are not an AssertionFailedError is thrown. */
+
+  /**
+   * Asserts that two Maps are equal (contain the same mappings).
+   * If they are not an AssertionFailedError is thrown.
+   * @param expected the expected value
+   * @param actual the actual value
+   */
   static public void assertEqual(Map expected, Map actual) {
     assertEqual(null, expected, actual);
   }
 
-  /** Asserts that two collections are isomorphic. If they are not
-   * an AssertionFailedError is thrown. */
+  /**
+   * Asserts that two collections are isomorphic. If they are not
+   * an AssertionFailedError is thrown.
+   * @param message the message to give on failure
+   * @param expected the expected value
+   * @param actual the actual value
+   */
   static public void assertIsomorphic(String message,
 				      Collection expected, Collection actual) {
     if (CollectionUtil.isIsomorphic(expected, actual)) {
@@ -141,15 +160,24 @@ public class LockssTestCase extends TestCase {
     }
     failNotEquals(message, expected, actual);
   }
-  
-  /** Asserts that two collections are isomorphic. If they are not
-   * an AssertionFailedError is thrown. */
+
+  /**
+   * Asserts that two collections are isomorphic. If they are not
+   * an AssertionFailedError is thrown.
+   * @param expected the expected value
+   * @param actual the actual value
+   */
   static public void assertIsomorphic(Collection expected, Collection actual) {
     assertIsomorphic(null, expected, actual);
   }
 
-  /** Asserts that the array is isomorphic with the collection. If not
-   * an AssertionFailedError is thrown. */
+  /**
+   * Asserts that the array is isomorphic with the collection. If not
+   * an AssertionFailedError is thrown.
+   * @param message the message to give on failure
+   * @param expected the expected value
+   * @param actual the actual value
+   */
   static public void assertIsomorphic(String message,
 				      Object expected[], Collection actual) {
     if (CollectionUtil.isIsomorphic(expected, actual)) {
@@ -157,15 +185,24 @@ public class LockssTestCase extends TestCase {
     }
     failNotEquals(message, expected, actual);
   }
-  
-  /** Asserts that the array is isomorphic with the collection. If not
-   * an AssertionFailedError is thrown. */
+
+  /**
+   * Asserts that the array is isomorphic with the collection. If not
+   * an AssertionFailedError is thrown.
+   * @param expected the expected value
+   * @param actual the actual value
+   */
   static public void assertIsomorphic(Object expected[], Collection actual) {
     assertIsomorphic(null, expected, actual);
   }
 
-  /** Asserts that the array is isomorphic with the collection behind the
-   * iterator. If not an AssertionFailedError is thrown. */
+  /**
+   * Asserts that the array is isomorphic with the collection behind the
+   * iterator. If not an AssertionFailedError is thrown.
+   * @param message the message to give on failure
+   * @param expected the expected value
+   * @param actual the actual value
+   */
   static public void assertIsomorphic(String message,
 				      Object expected[], Iterator actual) {
     if (CollectionUtil.isIsomorphic(new ArrayIterator(expected), actual)) {
@@ -173,19 +210,32 @@ public class LockssTestCase extends TestCase {
     }
     failNotEquals(message, expected, actual);
   }
-  
-  /** Asserts that the array is isomorphic with the collection behind the
-   * iterator. If not an AssertionFailedError is thrown. */
+
+  /**
+   * Asserts that the array is isomorphic with the collection behind the
+   * iterator. If not an AssertionFailedError is thrown.
+   * @param expected the expected value
+   * @param actual the actual value
+   */
   static public void assertIsomorphic(Object expected[], Iterator actual) {
     assertIsomorphic(null, expected, actual);
   }
 
-  /** Asserts that the two boolean arrays have equal contents */
+  /**
+   * Asserts that the two boolean arrays have equal contents
+   * @param expected the expected value
+   * @param actual the actual value
+   */
   public static void assertEquals(boolean[] expected, boolean[] actual) {
     assertEquals(null, expected, actual);
   }
 
-  /** Asserts that the two boolean arrays have equal contents */
+  /**
+   * Asserts that the two boolean arrays have equal contents
+   * @param message the message to give on failure
+   * @param expected the expected value
+   * @param actual the actual value
+   */
   public static void assertEquals(String message,
 				  boolean[] expected, boolean[] actual) {
     if (Arrays.equals(expected, actual)) {
@@ -194,12 +244,21 @@ public class LockssTestCase extends TestCase {
     failNotEquals(message, expected, actual);
   }
 
-  /** Asserts that the two byte arrays have equal contents */
+  /**
+   * Asserts that the two byte arrays have equal contents
+   * @param expected the expected value
+   * @param actual the actual value
+   */
   public static void assertEquals(byte[] expected, byte[] actual) {
     assertEquals(null, expected, actual);
   }
 
-  /** Asserts that the two byte arrays have equal contents */
+  /**
+   * Asserts that the two byte arrays have equal contents
+   * @param message the message to give on failure
+   * @param expected the expected value
+   * @param actual the actual value
+   */
   public static void assertEquals(String message,
 				  byte[] expected, byte[] actual) {
     if (Arrays.equals(expected, actual)) {
@@ -208,12 +267,21 @@ public class LockssTestCase extends TestCase {
     failNotEquals(message, expected, actual);
   }
 
-  /** Asserts that the two char arrays have equal contents */
+  /**
+   * Asserts that the two char arrays have equal contents
+   * @param expected the expected value
+   * @param actual the actual value
+   */
   public static void assertEquals(char[] expected, char[] actual) {
     assertEquals(null, expected, actual);
   }
 
-  /** Asserts that the two char arrays have equal contents */
+  /**
+   * Asserts that the two char arrays have equal contents
+   * @param message the message to give on failure
+   * @param expected the expected value
+   * @param actual the actual value
+   */
   public static void assertEquals(String message,
 				  char[] expected, char[] actual) {
     if (Arrays.equals(expected, actual)) {
@@ -222,12 +290,21 @@ public class LockssTestCase extends TestCase {
     failNotEquals(message, expected, actual);
   }
 
-  /** Asserts that the two double arrays have equal contents */
+  /**
+   * Asserts that the two double arrays have equal contents
+   * @param expected the expected value
+   * @param actual the actual value
+   */
   public static void assertEquals(double[] expected, double[] actual) {
     assertEquals(null, expected, actual);
   }
 
-  /** Asserts that the two double arrays have equal contents */
+  /**
+   * Asserts that the two double arrays have equal contents
+   * @param message the message to give on failure
+   * @param expected the expected value
+   * @param actual the actual value
+   */
   public static void assertEquals(String message,
 				  double[] expected, double[] actual) {
     if (Arrays.equals(expected, actual)) {
@@ -236,12 +313,21 @@ public class LockssTestCase extends TestCase {
     failNotEquals(message, expected, actual);
   }
 
-  /** Asserts that the two float arrays have equal contents */
+  /**
+   * Asserts that the two float arrays have equal contents
+   * @param expected the expected value
+   * @param actual the actual value
+   */
   public static void assertEquals(float[] expected, float[] actual) {
     assertEquals(null, expected, actual);
   }
 
-  /** Asserts that the two float arrays have equal contents */
+  /**
+   * Asserts that the two float arrays have equal contents
+   * @param message the message to give on failure
+   * @param expected the expected value
+   * @param actual the actual value
+   */
   public static void assertEquals(String message,
 				  float[] expected, float[] actual) {
     if (Arrays.equals(expected, actual)) {
@@ -250,12 +336,21 @@ public class LockssTestCase extends TestCase {
     failNotEquals(message, expected, actual);
   }
 
-  /** Asserts that the two int arrays have equal contents */
+  /**
+   * Asserts that the two int arrays have equal contents
+   * @param expected the expected value
+   * @param actual the actual value
+   */
   public static void assertEquals(int[] expected, int[] actual) {
     assertEquals(null, expected, actual);
   }
 
-  /** Asserts that the two int arrays have equal contents */
+  /**
+   * Asserts that the two int arrays have equal contents
+   * @param message the message to give on failure
+   * @param expected the expected value
+   * @param actual the actual value
+   */
   public static void assertEquals(String message,
 				  int[] expected, int[] actual) {
     if (Arrays.equals(expected, actual)) {
@@ -264,12 +359,21 @@ public class LockssTestCase extends TestCase {
     failNotEquals(message, expected, actual);
   }
 
-  /** Asserts that the two short arrays have equal contents */
+  /**
+   * Asserts that the two short arrays have equal contents
+   * @param expected the expected value
+   * @param actual the actual value
+   */
   public static void assertEquals(short[] expected, short[] actual) {
     assertEquals(null, expected, actual);
   }
 
-  /** Asserts that the two short arrays have equal contents */
+  /**
+   * Asserts that the two short arrays have equal contents
+   * @param message the message to give on failure
+   * @param expected the expected value
+   * @param actual the actual value
+   */
   public static void assertEquals(String message,
 				  short[] expected, short[] actual) {
     if (Arrays.equals(expected, actual)) {
@@ -278,12 +382,21 @@ public class LockssTestCase extends TestCase {
     failNotEquals(message, expected, actual);
   }
 
-  /** Asserts that the two long arrays have equal contents */
+  /**
+   * Asserts that the two long arrays have equal contents
+   * @param expected the expected value
+   * @param actual the actual value
+   */
   public static void assertEquals(long[] expected, long[] actual) {
     assertEquals(null, expected, actual);
   }
 
-  /** Asserts that the two long arrays have equal contents */
+  /**
+   * Asserts that the two long arrays have equal contents
+   * @param message the message to give on failure
+   * @param expected the expected value
+   * @param actual the actual value
+   */
   public static void assertEquals(String message,
 				  long[] expected, long[] actual) {
     if (Arrays.equals(expected, actual)) {
@@ -292,12 +405,21 @@ public class LockssTestCase extends TestCase {
     failNotEquals(message, expected, actual);
   }
 
-  /** Asserts that the two Object arrays have equal contents */
+  /**
+   * Asserts that the two Object arrays have equal contents
+   * @param expected the expected value
+   * @param actual the actual value
+   */
   public static void assertEquals(Object[] expected, Object[] actual) {
     assertEquals(null, expected, actual);
   }
 
-  /** Asserts that the two Object arrays have equal contents */
+  /**
+   * Asserts that the two Object arrays have equal contents
+   * @param message the message to give on failure
+   * @param expected the expected value
+   * @param actual the actual value
+   */
   public static void assertEquals(String message,
 				  Object[] expected, Object[] actual) {
     if (Arrays.equals(expected, actual)) {
@@ -309,28 +431,33 @@ public class LockssTestCase extends TestCase {
   /**
    * Asserts that two objects are not equal. If they are not
    * an AssertionFailedError is thrown with the given message.
+   * @param message the message to give on failure
+   * @param expected the expected value
+   * @param actual the actual value
    */
-  static public void assertNotEquals(String message, 
+  public static void assertNotEquals(String message,
 				     Object expected, Object actual) {
-    if ((expected == null && actual == null) || 
+    if ((expected == null && actual == null) ||
 	(expected != null && expected.equals(actual))) {
       failEquals(message, expected, actual);
     }
   }
-  
+
   /**
    * Asserts that two objects are not equal. If they are not
    * an AssertionFailedError is thrown with the given message.
+   * @param expected the expected value
+   * @param actual the actual value
    */
-  static public void assertNotEquals(Object expected, Object actual) {
+  public static void assertNotEquals(Object expected, Object actual) {
     assertNotEquals(null, expected, actual);
   }
-  
+
   public static void assertNotEquals(long expected, long actual) {
     assertNotEquals(null, expected, actual);
   }
 
-  public static void assertNotEquals(String message, 
+  public static void assertNotEquals(String message,
 				     long expected, long actual) {
     assertNotEquals(message, new Long(expected), new Long(actual));
   }
@@ -339,7 +466,7 @@ public class LockssTestCase extends TestCase {
     assertNotEquals(null, expected, actual);
   }
 
-  public static void assertNotEquals(String message, 
+  public static void assertNotEquals(String message,
 				     int expected, int actual) {
     assertNotEquals(message, new Integer(expected), new Integer(actual));
   }
@@ -348,7 +475,7 @@ public class LockssTestCase extends TestCase {
     assertNotEquals(null, expected, actual);
   }
 
-  public static void assertNotEquals(String message, 
+  public static void assertNotEquals(String message,
 				     short expected, short actual) {
     assertNotEquals(message, new Short(expected), new Short(actual));
   }
@@ -357,7 +484,7 @@ public class LockssTestCase extends TestCase {
     assertNotEquals(null, expected, actual);
   }
 
-  public static void assertNotEquals(String message, 
+  public static void assertNotEquals(String message,
 				     byte expected, byte actual) {
     assertNotEquals(message, new Byte(expected), new Byte(actual));
   }
@@ -366,7 +493,7 @@ public class LockssTestCase extends TestCase {
     assertNotEquals(null, expected, actual);
   }
 
-  public static void assertNotEquals(String message, 
+  public static void assertNotEquals(String message,
 				     char expected, char actual) {
     assertNotEquals(message, new Character(expected), new Character(actual));
   }
@@ -375,19 +502,19 @@ public class LockssTestCase extends TestCase {
     assertNotEquals(null, expected, actual);
   }
 
-  public static void assertNotEquals(String message, 
+  public static void assertNotEquals(String message,
 				     boolean expected, boolean actual) {
     assertNotEquals(message, new Boolean(expected), new Boolean(actual));
   }
 
-  public static void assertNotEquals(double expected, double actual, 
+  public static void assertNotEquals(double expected, double actual,
 				     double delta) {
     assertNotEquals(null, expected, actual, delta);
   }
 
-  public static void assertNotEquals(String message, double expected, 
+  public static void assertNotEquals(String message, double expected,
 				     double actual, double delta) {
-    // handle infinity specially since subtracting to infinite 
+    // handle infinity specially since subtracting to infinite
     //values gives NaN and the the following test fails
     if (Double.isInfinite(expected)) {
       if (expected == actual){
@@ -399,14 +526,14 @@ public class LockssTestCase extends TestCase {
     }
   }
 
-  public static void assertNotEquals(float expected, float actual, 
+  public static void assertNotEquals(float expected, float actual,
 				     float delta) {
     assertNotEquals(null, expected, actual, delta);
   }
 
-  public static void assertNotEquals(String message, float expected, 
+  public static void assertNotEquals(String message, float expected,
 				     float actual, float delta) {
-    // handle infinity specially since subtracting to infinite 
+    // handle infinity specially since subtracting to infinite
     //values gives NaN and the the following test fails
     if (Double.isInfinite(expected)) {
       if (expected == actual){
@@ -490,7 +617,11 @@ public class LockssTestCase extends TestCase {
 		  actual);
   }
 
-  /** Asserts that the two DatagramPackets have equal contents */
+  /**
+   * Asserts that the two DatagramPackets have equal contents
+   * @param expected the expected value
+   * @param actual the actual value
+   */
   public static void assertEquals(DatagramPacket expected,
 				  DatagramPacket actual) {
     assertEquals(expected.getAddress(), actual.getAddress());
@@ -530,7 +661,7 @@ public class LockssTestCase extends TestCase {
    *      thread.interrupt();
    *    }
    *  }
-   * 
+   *
    *  public Interrupter interruptMeIn(long ms) {
    *    Interrupter i = new Interrupter(ms, Thread.currentThread());
    *    i.start();
@@ -565,7 +696,10 @@ public class LockssTestCase extends TestCase {
     /** Must override this to perform desired action */
     protected abstract void doit();
 
-    /** Return true iff action was taken */
+    /**
+     * Return true iff action was taken
+     * @returns true iff taken
+     */
     public boolean did() {
       return did;
     }
@@ -634,14 +768,23 @@ public class LockssTestCase extends TestCase {
     }
   }
 
-  /** Interrupt current thread in a while */
+  /**
+   * Interrupt current thread in a while
+   * @param ms interval to wait before interrupting
+   * @return an Interrupter
+   */
   public Interrupter interruptMeIn(long ms) {
     Interrupter i = new Interrupter(ms, Thread.currentThread());
     i.start();
     return i;
   }
-  
-  /** Interrupt current thread in a while, first printing a thread dump */
+
+  /**
+   * Interrupt current thread in a while, first printing a thread dump
+   * @param ms interval to wait before interrupting
+   * @param threadDump true if thread dump wanted
+   * @return an Interrupter
+   */
   public Interrupter interruptMeIn(long ms, boolean threadDump) {
     Interrupter i = new Interrupter(ms, Thread.currentThread());
     if (threadDump) {
@@ -650,5 +793,5 @@ public class LockssTestCase extends TestCase {
     i.start();
     return i;
   }
-  
+
 }
