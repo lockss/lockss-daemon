@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.12 2002-11-19 23:26:16 tal Exp $
+* $Id: Poll.java,v 1.13 2002-11-20 21:26:58 claire Exp $
  */
 
 /*
@@ -115,10 +115,12 @@ public abstract class Poll {
 
   }
 
-  abstract void receiveMessage(LcapMessage msg);
 
 
-
+  /**
+   * create a human readable string representation of this poll
+   * @return a String
+   */
   public String toString() {
     StringBuffer sb = new StringBuffer(m_url);
     sb.append(" ");
@@ -262,30 +264,8 @@ public abstract class Poll {
     }
   }
 
+  abstract void receiveMessage(LcapMessage msg);
 
-  /**
-   * get the message used to define this Poll
-   * @return <code>Message</code>
-   */
-  LcapMessage getMessage() {
-    return m_msg;
-  }
-
-  /**
-   * get the Archival Unit used by this poll.
-   * @return the <code>ArchivalUnit</code>
-   */
-  ArchivalUnit getArchivalUnit() {
-    return m_arcUnit;
-  }
-
-  /**
-   * get the Cached Url Set on which this poll is running
-   * @return CachedUrlSet for this poll
-   */
-  CachedUrlSet getCachedUrlSet() {
-    return m_urlSet;
-  }
 
 
   /**
@@ -328,24 +308,44 @@ public abstract class Poll {
     }
   }
 
+  /**
+   * start the hash required for a vote cast in this poll
+   */
   void startVote() {
   }
 
+  /**
+   * stop and record a vote cast in this poll
+   */
   void stopVote() {
     m_counting--;
   }
 
 
-  MessageDigest getHasher() {
-    MessageDigest hasher = null;
-    try {
-      hasher = MessageDigest.getInstance(PollManager.HASH_ALGORITHM);
-    } catch (NoSuchAlgorithmException ex) {
-      log.error("Unable to run - no hasher");
-    }
-
-    return hasher;
+  /**
+   * get the message used to define this Poll
+   * @return <code>Message</code>
+   */
+  LcapMessage getMessage() {
+    return m_msg;
   }
+
+  /**
+   * get the Archival Unit used by this poll.
+   * @return the <code>ArchivalUnit</code>
+   */
+  ArchivalUnit getArchivalUnit() {
+    return m_arcUnit;
+  }
+
+  /**
+   * get the Cached Url Set on which this poll is running
+   * @return CachedUrlSet for this poll
+   */
+  CachedUrlSet getCachedUrlSet() {
+    return m_urlSet;
+  }
+
 
   class PollHashCallback implements HashService.Callback {
 

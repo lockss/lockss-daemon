@@ -1,5 +1,5 @@
 /*
-* $Id: ContentPoll.java,v 1.12 2002-11-19 23:26:16 tal Exp $
+* $Id: ContentPoll.java,v 1.13 2002-11-20 21:26:58 claire Exp $
  */
 
 /*
@@ -103,7 +103,7 @@ public class ContentPoll extends Poll {
    */
   boolean scheduleHash(Deadline timer, Object key,
                                 HashService.Callback callback) {
-    MessageDigest hasher = getHasher();
+    MessageDigest hasher = PollManager.getHasher();
     hasher.update(m_challenge, 0, m_challenge.length);
     hasher.update(m_verifier, 0, m_verifier.length);
     return HashService.hashContent( m_urlSet, hasher, timer,

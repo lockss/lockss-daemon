@@ -316,12 +316,32 @@ public class PollManager {
     // XXX implement this
   }
 
+  static MessageDigest getHasher() {
+    MessageDigest hasher = null;
+    try {
+      hasher = MessageDigest.getInstance(PollManager.HASH_ALGORITHM);
+    } catch (NoSuchAlgorithmException ex) {
+      theLog.error("Unable to run - no hasher");
+    }
+
+    return hasher;
+  }
 
 
+  /**
+   * return a key from an array of bytes.
+   * @param keyBytes the array of bytes to use
+   * @return a base64 string representation of the byte array
+   */
   static String makeKey(byte[] keyBytes) {
     return String.valueOf(B64Code.encode(keyBytes));
   }
 
+  /**
+   * make a verifier by generating a secret and hashing it. Then store the
+   * verifier/secret pair in the verifiers table.
+   * @return the array of bytes representing the verifier
+   */
   static byte[] makeVerifier() {
     byte[] s_bytes = generateSecret();
     byte[] v_bytes = generateVerifier(s_bytes);
@@ -332,6 +352,13 @@ public class PollManager {
   }
 
 
+  /**
+   * get the array of bytes that represents the secret used to generate the
+   * verifier bytes.  This extracts the secret from the table of verifiers.
+   * @param verifier the array of bytes that is a hash of the secret.
+   * @return the array of bytes representing the secret or if no matching
+   * verifier is found, null.
+   */
   static byte[] getSecret(byte[] verifier) {
     String ver = String.valueOf(B64Code.encode(verifier));
     String sec = (String)theVerifiers.get(ver);
@@ -341,12 +368,21 @@ public class PollManager {
     return null;
   }
 
+  /**
+   * generate a random array of bytes which constitute a secret
+   * @return the array of bytes
+   */
   static byte[] generateSecret() {
     byte[] secret = new byte[20];
     theRandom.nextBytes(secret);
     return secret;
   }
 
+  /**
+   * generate a verifier from a array of bytes representing a secret
+   * @param secret the bytes representing a secret to be hashed
+   * @return an array of bytes representing a verifier
+   */
   static byte[] generateVerifier(byte[] secret) {
     byte[] verifier = null;
 
