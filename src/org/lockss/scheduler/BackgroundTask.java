@@ -1,5 +1,5 @@
 /*
- * $Id: BackgroundTask.java,v 1.1 2003-11-11 20:29:45 tlipkis Exp $
+ * $Id: BackgroundTask.java,v 1.2 2003-11-12 01:49:09 troberts Exp $
  */
 
 /*
@@ -57,7 +57,7 @@ public class BackgroundTask extends SchedulableTask {
   }
 
   public Deadline getStart() {
-    return getEarlistStart();;
+    return getEarlistStart();
   }
 
   public Deadline getFinish() {
