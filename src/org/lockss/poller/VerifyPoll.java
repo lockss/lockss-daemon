@@ -1,5 +1,5 @@
 /*
-* $Id: VerifyPoll.java,v 1.4 2002-11-07 03:30:31 claire Exp $
+* $Id: VerifyPoll.java,v 1.5 2002-11-07 07:40:26 claire Exp $
  */
 
 /*
@@ -184,11 +184,11 @@ class VerifyPoll extends Poll implements Runnable {
   }
 
   public void run() {
-
-    checkVote();
     try {
       if (m_caller == null) {   // we called this poll
-        m_deadline.sleepUntil();
+        while(!m_deadline.expired()) {
+          m_deadline.sleepUntil();
+        }
         closeThePoll(m_urlSet, m_challenge);
         tally();
       }
@@ -211,6 +211,62 @@ class VerifyPoll extends Poll implements Runnable {
     }
 
     public void run() {
+      if(!m_keepGoing) {
+        return;
+      }
+      Thread.currentThread().setPriority(Thread.NORM_PRIORITY);
+      try {
+        // Is this is a replay of a local packet?
+        if (m_msg.isLocal()) {
+          if (m_poll.m_voteChecked) {
+            m_poll.log.debug(m_poll.m_key + "local replay ignored");
+            return;
+          }
+          m_poll.m_voteChecked = true;
+        }
+        // make sure we have the right poll
+        byte[] C = m_msg.getChallenge();
+
+        if(C.length != m_poll.m_challenge.length)  {
+          m_poll.log.debug(m_poll.m_key + " challenge length mismatch");
+          return;
+        }
+
+        if(!Arrays.equals(C, m_poll.m_challenge))  {
+          m_poll.log.debug(m_poll.m_key + " challenge mismatch");
+          return;
+        }
+
+        //  Check this vote verification - the H in the packet should hash
+        //  to the challenge,  which is the verifier of the vote that's
+        //  being verified.
+        MessageDigest hasher;
+        try {
+          hasher = MessageDigest.getInstance(HASH_ALGORITHM);
+        }
+        catch (NoSuchAlgorithmException ex) {
+          log.error(m_poll.m_key + "failed to find hash algorithm");
+          return;
+        }
+
+        byte [] H = m_msg.getHashed();
+        hasher.update(H, 0, H.length);
+        byte [] HofH = hasher.digest();
+        if(!Arrays.equals(C, HofH))  {
+          m_poll.handleDisagreeVote(m_msg);
+        }
+        else  {
+          m_poll.handleAgreeVote(m_msg);
+        }
+      } catch (Exception e) {
+        m_poll.log.error(m_poll.m_key + "vote check fail" + e);
+      }
+      finally {
+        synchronized (m_poll) {
+          m_poll.m_voteCheckers.remove(this);
+          m_poll.m_counting--;
+        }
+      }
     }
   }
 

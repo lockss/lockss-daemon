@@ -1,5 +1,5 @@
 /*
-* $Id: NamePoll.java,v 1.4 2002-11-07 03:30:31 claire Exp $
+* $Id: NamePoll.java,v 1.5 2002-11-07 07:40:26 claire Exp $
  */
 
 /*
@@ -113,7 +113,7 @@ public class NamePoll extends Poll {
                                  hasher,
                                  timer,
                                  new HashCallback(),
-                                 m_verifier);
+                                 this);
  }
 
   static class NPVoteChecker extends VoteChecker {
@@ -149,14 +149,7 @@ public class NamePoll extends Poll {
           return;
         }
 
-        String key = m_poll.makeKey(m_msg.getTargetUrl(),
-                                    m_msg.getRegExp(),
-                                    m_msg.getOpcode());
-        if (!m_poll.m_key.equals(key)) {
-          m_poll.log.debug(m_poll.m_key + " page set mismatch: " + key);
-          return;
-        }
-        // make sure our vote will actually matter
+       // make sure our vote will actually matter
         int vote_margin =  m_poll.m_agree - m_poll.m_disagree;
         if(vote_margin > m_poll.m_quorum)  {
           m_poll.log.info(m_poll.m_key + " " +  vote_margin + " lead is enough");

@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.4 2002-11-07 03:30:31 claire Exp $
+* $Id: Poll.java,v 1.5 2002-11-07 07:40:26 claire Exp $
  */
 
 /*
@@ -173,6 +173,43 @@ public abstract class Poll implements Runnable {
     return ret_poll;
 
   }
+  /**
+   * make an election by sending a request packet.  This is only
+   * called from the tree walk. The poll remains pending in the
+   * @param url the String representing the url for this poll
+   * @param regexp the String representing the regexp for this poll
+   * @param opcode the poll message opcode
+   * @param timeToLive the time to live for the new message
+   * @param grpAddr the InetAddress used to construct the message
+   * @param duration the time this poll has to run
+   * @param voteRange the probabilistic vote range
+   * @throws IOException thrown if Message construction fails.
+   */
+  public static void createPoll(String url,
+                                String regexp,
+                                int opcode,
+                                int timeToLive,
+                                InetAddress grpAddr,
+                                long duration,
+                                long voteRange) throws IOException {
+    if (voteRange > (duration/4))
+      voteRange = duration/4;
+    ProbabilisticTimer deadline = new ProbabilisticTimer(duration, voteRange);
+    long timeUntilCount = deadline.getRemainingTime();
+    byte[] C = makeVerifier(null);
+    byte[] V = makeVerifier(null);
+    Message msg = Message.makeRequestMsg(url,regexp,null,grpAddr,
+        (byte)timeToLive,
+        C,V,opcode,timeUntilCount,
+        Identity.getLocalIdentity());
+    ArchivalUnit conflict = checkForConflicts(msg);
+    if (conflict != null)
+      throw new Message.ProtocolException(makeKey(url,regexp,opcode) +
+          " conflicts with " + conflict +
+          " in createElection()");
+    log.debug("send" +  msg.toString());
+    LcapComm.sendMessage(msg,Plugin.findArchivalUnit(url));
+  }
 
   /**
    * Find the poll defined by the <code>Message</code>.  If the poll
@@ -210,7 +247,7 @@ public abstract class Poll implements Runnable {
         break;
       case Message.VERIFY_POLL_REP:
         vc = new VerifyPoll.VPVoteChecker(this,msg,m_urlSet, hashTime);
-         break;
+        break;
     }
     // start the reply polls and increment our poll counter
     if(vc != null) {

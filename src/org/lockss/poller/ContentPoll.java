@@ -1,5 +1,5 @@
 /*
-* $Id: ContentPoll.java,v 1.4 2002-11-07 03:30:31 claire Exp $
+* $Id: ContentPoll.java,v 1.5 2002-11-07 07:40:26 claire Exp $
  */
 
 /*
@@ -106,7 +106,7 @@ public class ContentPoll extends Poll implements Runnable {
     hasher.update(C, 0, C.length);
     hasher.update(V, 0, V.length);
     return HashService.hashContent( urlSet, hasher, timer,
-                                    new HashCallback(), V);
+                                    new HashCallback(), this);
   }
 
   static class CPVoteChecker extends VoteChecker {
