@@ -1,5 +1,5 @@
 /*
-* $Id: V1VerifyPoll.java,v 1.4 2003-07-09 19:25:19 clairegriffin Exp $
+* $Id: V1VerifyPoll.java,v 1.5 2004-03-17 05:56:42 clairegriffin Exp $
  */
 
 /*
@@ -153,7 +153,7 @@ class V1VerifyPoll extends V1Poll {
     byte[] HofHashed = hasher.digest();
     boolean agree = Arrays.equals(challenge, HofHashed);
     if(isMyPoll())
-      updateReputation();
+      updateReputation(agree);
     m_tally.addVote(new Vote(msg, agree),
                     id, idMgr.isLocalIdentity(id));
   }
@@ -161,15 +161,22 @@ class V1VerifyPoll extends V1Poll {
   /**
    * tally the poll results
    */
-  private void updateReputation()  {
+  private void updateReputation(boolean voteAgreed)  {
     log.info(m_msg.toString() + " tally " + toString());
     LcapIdentity id = m_caller;
     int oldRep = id.getReputation();
-
-    if ((m_tally.numAgree + m_tally.numDisagree) < 1) {
+    int agree = m_tally.numAgree;
+    int disagree = m_tally.numDisagree;
+    if(voteAgreed) {
+      agree += 1;
+    }
+    else {
+      disagree += 1;
+    }
+    if ((agree + disagree) < 1) {
       log.debug("vote failed to verify");
       idMgr.changeReputation(id, IdentityManager.VOTE_NOTVERIFIED);
-    } else if (m_tally.numAgree > 0 && m_tally.numDisagree == 0) {
+    } else if (agree > 0 && disagree == 0) {
       log.debug("vote successfully verified");
       idMgr.changeReputation(id, IdentityManager.VOTE_VERIFIED);
     } else {
