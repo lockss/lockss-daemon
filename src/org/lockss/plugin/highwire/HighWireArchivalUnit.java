@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireArchivalUnit.java,v 1.28 2003-09-02 20:35:17 troberts Exp $
+ * $Id: HighWireArchivalUnit.java,v 1.28.2.1 2003-09-11 07:49:08 tlipkis Exp $
  */
 
 /*
@@ -99,7 +99,7 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
     String volStr = config.get(HighWirePlugin.AUPARAM_VOL);
     if (volStr == null) {
       throw new
-	ArchivalUnit.ConfigurationException("No Configuration value for "+
+	ArchivalUnit.ConfigurationException("No configuration value for "+
 					    HighWirePlugin.AUPARAM_VOL);
     }
 
@@ -109,9 +109,10 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
 
     } catch (MalformedURLException murle) {
       throw new
-	ArchivalUnit.ConfigurationException(HighWirePlugin.AUPARAM_BASE_URL+
-					    " set to a bad url "+
-					    urlStr, murle);
+	ArchivalUnit.ConfigurationException("Bad base URL", murle);
+    } catch (NumberFormatException e) {
+      throw new
+	ArchivalUnit.ConfigurationException("Bad volume number", e);
     }
     if (base == null) {
       throw new ArchivalUnit.ConfigurationException("Null base url");

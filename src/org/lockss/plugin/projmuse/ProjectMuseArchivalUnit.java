@@ -1,5 +1,5 @@
 /*
- * $Id: ProjectMuseArchivalUnit.java,v 1.5 2003-08-30 00:35:30 clairegriffin Exp $
+ * $Id: ProjectMuseArchivalUnit.java,v 1.5.2.1 2003-09-11 07:49:08 tlipkis Exp $
  */
 
 /*
@@ -154,9 +154,10 @@ public class ProjectMuseArchivalUnit extends BaseArchivalUnit {
       volume = Integer.parseInt(volStr);
 
     } catch (MalformedURLException murle) {
-      exception = ProjectMusePlugin.AUPARAM_BASE_URL +
-          " set to a bad url " + urlStr;
-      throw new ConfigurationException(exception, murle);
+      throw new ConfigurationException("Bad base URL", murle);
+    } catch (NumberFormatException e) {
+      throw new
+	ArchivalUnit.ConfigurationException("Bad volume number", e);
     }
 
     if (baseUrl == null) {
