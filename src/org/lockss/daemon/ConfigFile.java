@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigFile.java,v 1.3 2004-07-12 06:14:12 tlipkis Exp $
+ * $Id: ConfigFile.java,v 1.3.2.1 2004-07-16 22:32:57 smorabito Exp $
  */
 
 /*
@@ -124,6 +124,57 @@ public class ConfigFile {
   }
 
   /**
+   * KLUDGE: Part of the XML configuration file transition.
+   *
+   * Given a URL, return a version that ends with ".xml".  For
+   * example, "lockss.txt" -> "lockss.xml", "foobar" -> "foobar.xml"
+   */
+  private String makeXmlUrl(String url) {
+    return StringUtil.upToFinal(url, ".") + ".xml";
+  }
+
+  /**
+   * KLUDGE: Part of the XML configuration file transition.
+   *
+   * Given a URL, attempt to open an input stream.
+   */
+  private Reader getUrlInputStream(String url)
+      throws IOException, MalformedURLException {
+    Reader in = null;
+
+    URL u = new URL(url);
+    LockssUrlConnection conn = UrlUtil.openConnection(url);
+
+    if (m_lastModified != null) {
+      log.debug2("Setting request if-modified-since to: " + m_lastModified);
+      conn.setIfModifiedSince(m_lastModified);
+    }
+
+    conn.execute();
+
+    if (conn.isHttp()) {
+      log.debug2(url + " request got response: " + conn.getResponseCode());
+      if (conn.getResponseCode() == HTTP_OK) {
+	m_loadError = null;
+	m_lastModified = conn.getResponseHeaderValue("last-modified");
+	log.debug2("Storing this config's last-modified as: " + m_lastModified);
+	in = new InputStreamReader(conn.getResponseInputStream());
+	log.debug2("New file, or file changed.  Loading file from " +
+		   "remote connection:" + url);
+      } else {
+	m_loadError = conn.getResponseCode() + ": " +
+	  conn.getResponseMessage();
+	log.info("m_loadError: " + m_loadError);
+	log.debug2("Error, or file has not changed and not reloading.");
+      }
+    } else {
+      in = new InputStreamReader(conn.getResponseInputStream());
+      m_loadError = null;
+    }
+    return in;
+  }
+
+  /**
    * Load a URL or file.  If there is no current "last modified"
    * time, try to load it unconditionally.  Otherwise, send a
    * conditional GET with an "if-modified-since" header.
@@ -132,7 +183,6 @@ public class ConfigFile {
     m_lastAttempt = TimeBase.nowMs();
     Reader in = null;
     Writer out = new StringWriter();
-    LockssUrlConnection conn = null;
     m_fileUrl = url;
 
     // TODO: This check may or may not even be necessary.  If it
@@ -147,32 +197,38 @@ public class ConfigFile {
     m_IOException = null;
     // Open an output stream to write to our string
     try {
-      URL u = new URL(url);
-      conn = UrlUtil.openConnection(url);
-
-      if (m_lastModified != null) {
-	 conn.setIfModifiedSince(m_lastModified);
-      }
-
-      conn.execute();
-
-      if (conn.isHttp()) {
-	if (conn.getResponseCode() == HTTP_OK) {
-	  m_loadError = null;
-	  m_lastModified = conn.getResponseHeaderValue("last-modified");
-	  in = new InputStreamReader(conn.getResponseInputStream());
-	  log.debug2("New file, or file changed.  Loading file from " +
-		     "remote connection:" + url);
-	} else {
-	  m_loadError = conn.getResponseCode() + ": " +
-	    conn.getResponseMessage();
-	  log.info("m_loadError: " + m_loadError);
-	}
+      // KLUDGE: Part of the XML config file transition.  If the file
+      // is already an XML file, just try to open it.
+      //
+      // Otherwise, first XML-ize the URL and try to open it.  If that
+      // doesn't work, try opening the original URL.
+      //
+      // This logic can and should go away when we're no longer in a
+      // transition period, and the platform knows about XML config
+      // files.
+      if (m_fileType == XML_FILE) {
+	in = getUrlInputStream(url);
       } else {
-	in = new InputStreamReader(conn.getResponseInputStream());
-	m_loadError = null;
+	String xmlUrl = makeXmlUrl(url);
+
+	try {
+	  in = getUrlInputStream(xmlUrl);
+	  log.debug2("First pass: Trying to load XML-ized URL: " + xmlUrl);
+	} catch (Exception ignore) {;}
+	
+	if (in != null) {
+	  // This is really an XML file, deceitfully set the URL and
+	  // file type for when we reload.
+	  m_fileType = XML_FILE;
+	  m_fileUrl = xmlUrl;
+	} else {
+	  // This is not an XML file, try to load the real URL name.
+	  in = getUrlInputStream(url);
+	  log.debug2("Second pass: That didn't work, trying to " +
+		     "load original URL: " + url);
+	}
+
       }
-      log.debug2("File not changed, not reloading: " + url);
     } catch (MalformedURLException ex) {
       in = new InputStreamReader(new FileInputStream(url));
       log.debug2("Loading local file unconditionally: " + url);

@@ -1,5 +1,5 @@
 /*
- * $Id: ExternalizableMap.java,v 1.11 2004-07-12 23:01:49 smorabito Exp $
+ * $Id: ExternalizableMap.java,v 1.11.2.1 2004-07-16 22:32:58 smorabito Exp $
  */
 
 /*
@@ -144,6 +144,7 @@ public class ExternalizableMap {
       logger.error("Couldn't store map: ", e);
     }
   }
+
 
   /*
    *

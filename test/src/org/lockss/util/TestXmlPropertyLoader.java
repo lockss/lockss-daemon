@@ -1,5 +1,5 @@
 /*
- * $Id: TestXmlPropertyLoader.java,v 1.4 2004-06-23 19:31:04 smorabito Exp $
+ * $Id: TestXmlPropertyLoader.java,v 1.4.4.1 2004-07-16 22:32:59 smorabito Exp $
  */
 
 /*
@@ -127,24 +127,15 @@ public class TestXmlPropertyLoader extends LockssTestCase {
    * Test getting a list out of the config.
    */
   public void testGetList() throws IOException {
-    List l = null;
-
-    try {
-      l = (List)m_props.get("org.lockss.d");
-    } catch (ClassCastException ex) {
-      fail("Class cast exception while getting list from properties.");
-    }
-
-    assertEquals(5, l.size());
-    assertNotNull(l);
-
-    Collections.sort(l);
-
-    assertEquals("1", (String)l.get(0));
-    assertEquals("2", (String)l.get(1));
-    assertEquals("3", (String)l.get(2));
-    assertEquals("4", (String)l.get(3));
-    assertEquals("5", (String)l.get(4));
+    String s = m_props.getProperty("org.lockss.d");
+    assertNotNull(s);
+    Vector v = StringUtil.breakAt(s, ';', -1, true, true);
+    Collections.sort(v);
+    assertEquals("1", (String)v.get(0));
+    assertEquals("2", (String)v.get(1));
+    assertEquals("3", (String)v.get(2));
+    assertEquals("4", (String)v.get(3));
+    assertEquals("5", (String)v.get(4));
   }
 
   public void testDaemonVersionEquals() throws IOException {

@@ -92,14 +92,15 @@ public class FuncNewContentCrawler extends LockssTestCase {
                       ""+SimulatedContentGenerator.FILE_TYPE_BIN);
     props.setProperty("org.lockss.au." + auId + "." +
                       SimulatedPlugin.AU_PARAM_BIN_FILE_SIZE, ""+fileSize);
-    ConfigurationUtil.setCurrentConfigFromProps(props);
 
 //     theDaemon = new MockLockssDaemon();
     theDaemon = getMockLockssDaemon();
     theDaemon.getAlertManager();
-    theDaemon.getPluginManager();
+    theDaemon.getPluginManager().setLoadablePluginsReady(true);
     theDaemon.setDaemonInited(true);
     theDaemon.getPluginManager().startService();
+
+    ConfigurationUtil.setCurrentConfigFromProps(props);
 
     sau =
         (SimulatedArchivalUnit)theDaemon.getPluginManager().getAllAus().get(0);
