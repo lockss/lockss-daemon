@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManager.java,v 1.10 2003-01-23 03:01:15 claire Exp $
+ * $Id: IdentityManager.java,v 1.11 2003-01-29 20:19:51 claire Exp $
  */
 
 /*
@@ -246,7 +246,8 @@ public class IdentityManager {
         iddbDir.mkdirs();
       }
       File iddbFile = new File(iddbDir, IDDB_FILENAME);
-      if((iddbFile != null) && iddbFile.canWrite()) {
+
+      if((iddbFile != null) && iddbFile.createNewFile() && iddbFile.canWrite()) {
         IdentityListBean idlb = getIdentityListBean();
         Marshaller marshaller = new Marshaller(new FileWriter(iddbFile));
         marshaller.setMapping(getMapping());
@@ -336,7 +337,12 @@ public class IdentityManager {
 
     if (mapping==null) {
       String mappingFile = Configuration.getParam(PARAM_IDDB_MAP_DIR)
-                           + File.separator + IDDB_MAP_FILENAME;
+                         + File.separator + IDDB_MAP_FILENAME;
+      File mpFile =  mpFile = new File(mappingFile);
+      if(mpFile == null || !mpFile.exists()) {
+        theLog.error("Unable to find mapping file: " + mpFile.getName());
+        return null;
+      }
 
       Mapping map = new Mapping();
       try {
