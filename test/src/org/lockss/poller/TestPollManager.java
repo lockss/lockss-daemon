@@ -257,7 +257,7 @@ public class TestPollManager extends LockssTestCase {
   /** test for method makeVerifier(..) */
   public void testMakeVerifier() {
     // test for make verifier - this will also store the verify/secret pair
-    byte[] verifier = pollmanager.makeVerifier();
+    byte[] verifier = pollmanager.makeVerifier(10000);
     assertNotNull("unable to make and store a verifier", verifier);
 
     // retrieve our secret

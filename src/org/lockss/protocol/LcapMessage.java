@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessage.java,v 1.36 2003-05-08 01:19:41 claire Exp $
+ * $Id: LcapMessage.java,v 1.37 2003-05-08 05:53:28 claire Exp $
  */
 
 /*
@@ -639,7 +639,8 @@ public class LcapMessage
 
     while (tokenizer.hasMoreTokens()) {
       String name = tokenizer.nextToken();
-      boolean hasContent = tokenizer.nextToken() == "\r" ? true : false;
+      String mark = tokenizer.nextToken();
+      boolean hasContent = mark.equals("\r") ? true : false;
       entries.add(new PollTally.NameListEntry(hasContent, name));
     }
     return entries;

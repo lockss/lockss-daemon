@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapMessage.java,v 1.24 2003-05-08 01:19:41 claire Exp $
+ * $Id: TestLcapMessage.java,v 1.25 2003-05-08 05:53:28 claire Exp $
  */
 
 /*
@@ -101,10 +101,23 @@ public class TestLcapMessage extends LockssTestCase {
 
   }
 
+  private boolean hasSameEntries(List entries1, List entries2) {
+    if(entries1.size() != entries2.size()) return false;
+
+    for(int i=0; i< entries1.size(); i++) {
+      PollTally.NameListEntry entry1 = (PollTally.NameListEntry)entries1.get(i);
+      PollTally.NameListEntry entry2 = (PollTally.NameListEntry)entries2.get(i);
+      if(!entry1.equals(entry2) ||
+         (entry1.hasContent != entry2.hasContent))
+        return false;
+    }
+    return true;
+  }
+
   public void testEntriesTranslation() {
     String encstr = testmsg.entriesToString(10000);
     ArrayList decoded = testmsg.stringToEntries(encstr);
-    assertIsomorphic(testmsg.m_entries, decoded);
+    assertTrue(hasSameEntries(testmsg.m_entries,decoded));
 
     //test our entries remainder by artificially setting our size to very small
     encstr = testmsg.entriesToString(50);
@@ -204,7 +217,7 @@ public class TestLcapMessage extends LockssTestCase {
     assertTrue(Arrays.equals(rep_msg.m_challenge,testmsg.m_challenge));
     assertTrue(Arrays.equals(rep_msg.m_verifier,testmsg.m_verifier));
     assertTrue(Arrays.equals(rep_msg.m_hashed,testmsg.m_hashed));
-    assertIsomorphic(rep_msg.m_entries,testentries);
+    assertTrue(hasSameEntries(rep_msg.m_entries,testentries));
 
   }
 
@@ -230,7 +243,7 @@ public class TestLcapMessage extends LockssTestCase {
     assertTrue(Arrays.equals(req_msg.m_challenge,testbytes));
     assertTrue(Arrays.equals(req_msg.m_verifier,testbytes));
     assertEquals(null,req_msg.m_hashed);
-    assertIsomorphic(req_msg.m_entries,testentries);
+    assertTrue(hasSameEntries(req_msg.m_entries,testentries));
     assertEquals(req_msg.m_lwrBound, lwrbnd);
     assertEquals(req_msg.m_uprBound, uprbnd);
 
@@ -259,7 +272,7 @@ public class TestLcapMessage extends LockssTestCase {
       assertTrue(Arrays.equals(msg.m_challenge,testbytes));
       assertTrue(Arrays.equals(msg.m_verifier,testbytes));
       assertTrue(Arrays.equals(msg.m_hashed,testbytes));
-      assertIsomorphic(msg.m_entries,testentries);
+      assertTrue(hasSameEntries(msg.m_entries,testentries));
       assertEquals(msg.m_lwrBound, lwrbnd);
       assertEquals(msg.m_uprBound, uprbnd);
     }

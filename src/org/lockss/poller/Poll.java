@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.77 2003-05-08 01:19:41 claire Exp $
+* $Id: Poll.java,v 1.78 2003-05-08 05:53:28 claire Exp $
  */
 
 /*
@@ -145,7 +145,7 @@ public abstract class Poll implements Serializable {
     m_challenge = msg.getChallenge();
     m_key = msg.getKey();
     if(!isMyPoll()) {
-      m_verifier = m_pollmanager.makeVerifier();
+      m_verifier = m_pollmanager.makeVerifier(msg.getDuration());
     }
     else {
       m_verifier = msg.getVerifier();
@@ -275,7 +275,7 @@ public abstract class Poll implements Serializable {
       verify = ((double)(max - weight)) / max * m_agreeVer;
     }
     else {
-      verify = ((double)weight) / max * m_disagreeVer;
+      verify = (((double)weight) / (2*max)) * m_disagreeVer;
     }
     log.debug2("probablitiy of verifying this vote = " + verify);
     try {

@@ -1,5 +1,5 @@
 /*
-* $Id: VerifyPoll.java,v 1.41 2003-05-08 01:19:41 claire Exp $
+* $Id: VerifyPoll.java,v 1.42 2003-05-08 05:53:28 claire Exp $
  */
 
 /*
@@ -188,7 +188,7 @@ class VerifyPoll extends Poll {
                 + chal);
       return;
     }
-    byte[] verifier = m_pollmanager.makeVerifier();
+    byte[] verifier = m_pollmanager.makeVerifier(msg.getDuration());
     LcapMessage repmsg = LcapMessage.makeReplyMsg(msg,
         secret,
         verifier,

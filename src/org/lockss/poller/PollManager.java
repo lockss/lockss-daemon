@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.95 2003-05-07 22:12:38 claire Exp $
+* $Id: PollManager.java,v 1.96 2003-05-08 05:53:28 claire Exp $
  */
 
 /*
@@ -64,6 +64,8 @@ public class PollManager  extends BaseLockssManager {
       "poll.contentpoll.max";
 
   static final String PARAM_QUORUM = Configuration.PREFIX + "poll.quorum";
+  static final String PARAM_DURATION_MULTIPLIER= Configuration.PREFIX +
+      "poll.duration.multiplier";
 
   static long DEFAULT_NAMEPOLL_DEADLINE =  10 * Constants.MINUTE;
   static long DEFAULT_CONTENTPOLL_MIN = 3 * Constants.MINUTE;
@@ -73,7 +75,7 @@ public class PollManager  extends BaseLockssManager {
   static final long DEFAULT_RECENT_EXPIRATION = Constants.DAY;
   static final long DEFAULT_VERIFY_EXPIRATION = Constants.DAY;
 
-  private static final long POLL_DURATION_MULTIPLIER = 4;
+  static final int DEFAULT_DURATION_MULTIPLIER = 4;
 
   private static PollManager theManager = null;
   private static Logger theLog=Logger.getLogger("PollManager");
@@ -94,6 +96,7 @@ public class PollManager  extends BaseLockssManager {
   private static long m_recentPollExpireTime;
   private static long m_verifierExpireTime;
   private static int m_quorum;
+  private static int m_durationMultiplier;
 
   public PollManager() {
   }
@@ -171,8 +174,8 @@ public class PollManager  extends BaseLockssManager {
                    " for spec " + pollspec + "not enough hash time.");
       return;
     }
-    byte[] challenge = makeVerifier();
-    byte[] verifier = makeVerifier();
+    byte[] challenge = makeVerifier(duration);
+    byte[] verifier = makeVerifier(duration);
     LcapMessage msg =
       LcapMessage.makeRequestMsg(pollspec,
 				 null,
@@ -339,9 +342,18 @@ public class PollManager  extends BaseLockssManager {
       theLog.debug(err);
       return null;
     }
-
+    if (msg.isVerifyPoll()) {
+      // if we didn't call the poll and we don't have the verifier ignore this
+      if((getSecret(msg.getChallenge())== null) &&
+        !theIDManager.isLocalIdentity(msg.getOriginAddr())) {
+       String ver = String.valueOf(B64Code.encode(msg.getChallenge()));
+       theLog.debug("ignoring verify request from " + msg.getOriginAddr()
+        + " on unknown verifier " + ver);
+       return null;
+     }
+    }
     // check with regulator if not verify poll
-    if (!msg.isVerifyPoll()) {
+    else {
       // get expiration time for the lock
       long expiration = 2 * msg.getDuration();
       if (AuUrl.isAuUrl(cus.getUrl())) {
@@ -560,8 +572,8 @@ public class PollManager  extends BaseLockssManager {
     CachedUrlSet cus = pollspec.getCachedUrlSet();
     LcapMessage reqmsg = LcapMessage.makeRequestMsg(pollspec,
         null,
-        vote.getVerifier(), // the challenge  becomes the verifier
-        makeVerifier(),     // we get a new verifier for this poll
+        vote.getVerifier(),         // the challenge  becomes the verifier
+        makeVerifier(duration),     // we get a new verifier for this poll
         LcapMessage.VERIFY_POLL_REQ,
         duration,
         theIDManager.getLocalIdentity());
@@ -620,13 +632,14 @@ public class PollManager  extends BaseLockssManager {
   /**
    * make a verifier by generating a secret and hashing it. Then store the
    * verifier/secret pair in the verifiers table.
+   * @param the duration the item we're verifying is expected to take.
    * @return the array of bytes representing the verifier
    */
-  byte[] makeVerifier() {
+  byte[] makeVerifier(long duration) {
     byte[] s_bytes = generateRandomBytes();
     byte[] v_bytes = generateVerifier(s_bytes);
     if(v_bytes != null) {
-      rememberVerifier(v_bytes, s_bytes);
+      rememberVerifier(v_bytes, s_bytes, duration);
     }
     return v_bytes;
   }
@@ -671,10 +684,11 @@ public class PollManager  extends BaseLockssManager {
   }
 
   private void rememberVerifier(byte[] verifier,
-                                byte[] secret) {
+                                byte[] secret,
+                                long duration) {
     String ver = String.valueOf(B64Code.encode(verifier));
     String sec = secret == null ? "" : String.valueOf(B64Code.encode(secret));
-    Deadline d = Deadline.in(m_verifierExpireTime);
+    Deadline d = Deadline.in(m_verifierExpireTime + duration);
     TimerQueue.schedule(d, new ExpireVerifierCallback(), ver);
     synchronized (theVerifiers) {
       theVerifiers.put(ver, sec);
@@ -686,15 +700,16 @@ public class PollManager  extends BaseLockssManager {
     String ver = String.valueOf(B64Code.encode(verifier));
     synchronized (theVerifiers) {
       String secret = (String)theVerifiers.get(ver);
-      // if we have a secret and we don't have a poll this pkt is ok
+      // if we have a secret and we don't have a poll
+      // we made the original message but haven't made a poll yet
       if(!StringUtil.isNullString(secret) &&
          !thePolls.contains(msg.getKey())) {
         return false;
       }
-      else if(secret == null) { // this isn't our poll and we haven't seen this
-        rememberVerifier(verifier,null);
+      else if(secret == null) { // we didn't make the verifier-we don't have a secret
+        rememberVerifier(verifier,null, msg.getDuration());
       }
-      return secret != null;   //
+      return secret != null;   // we made the verifier-we should have a secret
     }
   }
 
@@ -714,6 +729,8 @@ public class PollManager  extends BaseLockssManager {
 
     m_quorum = newConfig.getIntParam(PARAM_QUORUM, DEFAULT_QUORUM);
 
+    m_durationMultiplier = newConfig.getIntParam(PARAM_DURATION_MULTIPLIER,
+                                                 DEFAULT_DURATION_MULTIPLIER);
     m_recentPollExpireTime = newConfig.getTimeInterval(PARAM_RECENT_EXPIRATION,
         DEFAULT_RECENT_EXPIRATION);
     m_verifierExpireTime = newConfig.getTimeInterval(PARAM_VERIFY_EXPIRATION,
@@ -740,7 +757,7 @@ public class PollManager  extends BaseLockssManager {
         estTime = getAdjustedEstimate(estTime);
         theLog.debug3("My adjusted hash duration = " + estTime);
 
-        ret = estTime * POLL_DURATION_MULTIPLIER * (quorum + 1);
+        ret = estTime * m_durationMultiplier * (quorum + 1);
         theLog.debug3("I think the poll should take: " + ret);
 
         if (ret < m_minContentPollDuration) {
