@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigManager.java,v 1.7 2004-01-21 08:26:30 tlipkis Exp $
+ * $Id: TestConfigManager.java,v 1.8 2004-05-12 17:45:42 tlipkis Exp $
  */
 
 /*
@@ -217,6 +217,17 @@ public class TestConfigManager extends LockssTestCase {
 		 config.get("org.lockss.ui.access.ip.include"));
     assertEquals("1.2.3.*;1.2.3.0/21",
 		 config.get("org.lockss.proxy.access.ip.include"));
+  }
+
+  public void testGetRepositoryList() throws Exception {
+    assertEmpty(mgr.getRepositoryList());
+    ConfigurationUtil.setFromArgs("org.lockss.platform.diskSpacePaths",
+				  "/foo/bar");
+    assertEquals(ListUtil.list("local:/foo/bar"), mgr.getRepositoryList());
+    ConfigurationUtil.setFromArgs("org.lockss.platform.diskSpacePaths",
+				  "/foo/bar;/cache2");
+    assertEquals(ListUtil.list("local:/foo/bar", "local:/cache2"),
+		 mgr.getRepositoryList());
   }
 
   public void testPlatformSpace1() throws Exception {

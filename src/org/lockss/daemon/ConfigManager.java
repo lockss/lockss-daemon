@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.20 2004-04-29 10:10:40 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.21 2004-05-12 17:45:43 tlipkis Exp $
  */
 
 /*
@@ -208,14 +208,20 @@ public class ConfigManager implements LockssManager {
     currentConfig = newConfig;
   }
 
-  /** Create a Configuration object from a Properties */
+  /** Create a sealed Configuration object from a Properties */
   public static Configuration fromProperties(Properties props) {
+    Configuration config = fromPropertiesUnsealed(props);
+    config.seal();
+    return config;
+  }
+
+  /** Create an unsealed Configuration object from a Properties */
+  public static Configuration fromPropertiesUnsealed(Properties props) {
     Configuration config = new ConfigurationPropTreeImpl();
     for (Iterator iter = props.keySet().iterator(); iter.hasNext(); ) {
       String key = (String)iter.next();
       config.put(key, props.getProperty(key));
     }
-    config.seal();
     return config;
   }
 
@@ -479,6 +485,22 @@ public class ConfigManager implements LockssManager {
 
   boolean isUnitTesting() {
     return Boolean.getBoolean("org.lockss.unitTesting");
+  }
+
+  List getDiskSpacePaths() {
+    String dspace = currentConfig.get(PARAM_PLATFORM_DISK_SPACE_LIST);
+    return StringUtil.breakAt(dspace, ';');
+  }
+
+  public List getRepositoryList() {
+    List res = new ArrayList();
+    List paths = getDiskSpacePaths();
+    if (paths != null) {
+      for (Iterator iter = paths.iterator(); iter.hasNext(); ) {
+	res.add("local:" + (String)iter.next());
+      }
+    }
+    return res;
   }
 
   private void initCacheConfig(Configuration newConfig) {
