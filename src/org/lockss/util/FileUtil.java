@@ -1,5 +1,5 @@
 /*
- * $Id: FileUtil.java,v 1.3 2003-12-18 03:01:47 eaalto Exp $
+ * $Id: FileUtil.java,v 1.4 2004-06-17 06:06:18 eaalto Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -173,6 +173,26 @@ public class FileUtil {
       if (fis2!=null) {
         fis2.close();
       }
+    }
+  }
+
+  /**
+   * Checks to see if a FileOutputStream can be created to a file containing
+   * the given char.  For example, '?' is illegal on Windows but not Unix.
+   * This function does not actually write to the output stream.
+   * @param location the location to attempt file creation in.
+   * @param testChar the char to test
+   * @return boolean true iff an output stream can be created
+   */
+  public static boolean canWriteToFileWithChar(String location, char testChar) {
+    File file = new File(location, "test"+testChar+"test");
+    try {
+      // should throw if this is an illegal destination
+      FileOutputStream fos = new FileOutputStream(file);
+      fos.close();
+      return true;
+    } catch (IOException ioe) {
+      return false;
     }
   }
 }
