@@ -348,15 +348,4 @@ public class Crawler{
     return retUrl.toString();
   } 
 
-  public static void main(String args[]){
-    String start = args[0];
-    CachedUrlSet cus = new org.lockss.plugin.HighWirePlugin("http://shadow3.stanford.edu", 324);
-    CachedUrlSetSpec cuss = 
-      //      new org.lockss.test.MockCachedUrlSetSpec("http://shadow1.stanford.edu:8080/content/vol322/issue7277/", "");
-      new org.lockss.plugin.GenericCachedUrlSetSpec(start, "");
-    cus.addToList(cuss);
-    Crawler.doCrawl(cus);
-  }
-
-
 }
