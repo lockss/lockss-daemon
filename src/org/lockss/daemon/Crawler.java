@@ -1,5 +1,5 @@
 /*
- * $Id: Crawler.java,v 1.24 2005-01-07 01:22:35 troberts Exp $
+ * $Id: Crawler.java,v 1.25 2005-01-12 02:13:59 troberts Exp $
  */
 
 /*
@@ -179,6 +179,10 @@ public interface Crawler {
      */
     public Map getUrlsWithErrors() {
       return urlsWithErrors;
+    }
+
+    public long getNumUrlsWithErrors() {
+      return urlsWithErrors.size();
     }
 
     public Set getUrlsFetched() {
