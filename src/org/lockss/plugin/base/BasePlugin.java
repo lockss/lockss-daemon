@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.14 2003-11-07 04:11:59 clairegriffin Exp $
+ * $Id: BasePlugin.java,v 1.15 2004-01-03 06:22:26 tlipkis Exp $
  */
 
 /*
@@ -40,15 +40,29 @@ public abstract class BasePlugin
     implements Plugin {
   static Logger log = Logger.getLogger("BasePlugin");
 
+  static final String PARAM_TITLE_DB = ConfigManager.PARAM_TITLE_DB;
+
+  // Below org.lockss.title.xxx.
+  static final String TITLE_PARAM_TITLE = "title";
+  static final String TITLE_PARAM_PLUGIN = "plugin";
+  static final String TITLE_PARAM_PARAM = "param";
+  // Below org.lockss.title.xxx.param.n.
+  static final String TITLE_PARAM_PARAM_KEY = "key";
+  static final String TITLE_PARAM_PARAM_VALUE = "value";
+  static final String TITLE_PARAM_PARAM_DEFAULT = "default";
+
   static final protected String CM_NAME_KEY = "plugin_name";
   static final protected String CM_VERSION_KEY = "plugin_version";
-  static final protected String CM_TITLE_SPEC_KEY = "title_spec";
+
+  static final protected String CM_TITLE_MAP_KEY = "title_map";
   static final protected String CM_CONFIG_PROPS_KEY = "au_config_props";
   static final protected String CM_DEFINING_CONFIG_PROPS_KEY =
       "au_defining_props";
+
   protected LockssDaemon theDaemon;
+  protected PluginManager pluginMgr;
   protected Collection aus = new ArrayList();
-  protected Map titleConfig;
+  protected Map titleConfigMap;
   protected ExternalizableMap configurationMap = new ExternalizableMap();
 
   /**
@@ -59,11 +73,15 @@ public abstract class BasePlugin
 
   public void initPlugin(LockssDaemon daemon) {
     theDaemon = daemon;
-    String[][] titles = (String[][]) configurationMap.getMapElement(
-        CM_TITLE_SPEC_KEY);
-    if (titles != null) {
-      setTitleConfig(titles);
-    }
+    pluginMgr = theDaemon.getPluginManager();
+
+    Configuration.registerConfigurationCallback(new Configuration.Callback() {
+	public void configurationChanged(Configuration newConfig,
+					 Configuration prevConfig,
+					 Set changedKeys) {
+	  setConfig(newConfig, prevConfig, changedKeys);
+	}});
+
   }
 
   public void stopPlugin() {
@@ -86,54 +104,124 @@ public abstract class BasePlugin
   }
 
   /**
-   * Default implementation collects keys from titleConfig map.
+   * Default implementation collects keys from titleConfigMap.
    * @return a List
    */
   public List getSupportedTitles() {
-    if (titleConfig == null) {
+    if (titleConfigMap == null) {
       return Collections.EMPTY_LIST;
     }
-    List res = new ArrayList(20);
-    for (Iterator iter = titleConfig.keySet().iterator(); iter.hasNext(); ) {
-      res.add( (String) iter.next());
-    }
-    return res;
+    return new ArrayList(titleConfigMap.keySet());
   }
 
   /**
-   * Default implementation looks in titleConfig map.
-   * @param title the title String
-   * @return a Configuration (null if none)
+   * Default implementation looks in titleConfigMap.
    */
-  public Configuration getConfigForTitle(String title) {
-    if (titleConfig == null) {
+  public TitleConfig getTitleConfig(String title) {
+    if (titleConfigMap == null) {
       return null;
     }
-    return (Configuration) titleConfig.get(title);
+    return (TitleConfig)titleConfigMap.get(title);
   }
 
-  protected void setTitleConfig(Map titleConfig) {
-    this.titleConfig = titleConfig;
-  }
-
-  /** Set title config map from array of arrays of
-   * [title, key1, val1, keyn, valn]
-   * @param titleSpecs the array of arrays
+  /** Set up our titleConfigMap from the title definitions in the
+   * Configuration.  Each title config looks like:<pre>
+   * org.lockss.title.uid.title=Sample Title
+   * org.lockss.title.uid.plugin=org.lockss.plugin.sample.SamplePlugin
+   * org.lockss.title.uid.param.1.key=base_url
+   * org.lockss.title.uid.param.1.value=http\://sample.org/
+   * org.lockss.title.uid.param.2.key=year
+   * org.lockss.title.uid.param.2.value=2003
+   * org.lockss.title.uid.param.2.default=true</pre> where <code>uid</code>
+   * is an identifier that is unique for each title.  Parameters for which
+   * <code>default</code> is true (<i>eg</i>, <code>year</code>) are
+   * expected to be edited by the user to select a related AU.  <br>See
+   * TitleParams (and test/scripts/title-params) for an easy way to create
+   * these property files.
    */
-  protected void setTitleConfig(String titleSpecs[][]) {
-    Map map = new HashMap();
-    for (int tix = 0; tix < titleSpecs.length; tix++) {
-      String titleSpec[] = titleSpecs[tix];
-      String title = titleSpec[0];
-      Configuration config = ConfigManager.newConfiguration();
-      for (int pix = 1; pix < titleSpec.length; pix += 2) {
-        String key = titleSpec[pix];
-        String val = titleSpec[pix + 1];
-        config.put(key, val);
+  protected void setConfig(Configuration newConfig,
+			   Configuration prevConfig,
+			   Set changedKeys) {
+    setTitleConfigFromConfig(newConfig.getConfigTree(PARAM_TITLE_DB));
+  }
+
+  private void setTitleConfigFromConfig(Configuration allTitles) {
+    String myName = getPluginId();
+    Map titleMap = new HashMap();
+    for (Iterator iter = allTitles.nodeIterator(); iter.hasNext(); ) {
+      String titleKey = (String)iter.next();
+      Configuration titleConfig = allTitles.getConfigTree(titleKey);
+      log.debug3("titleKey: " + titleKey);
+      log.debug3("titleConfig: " + titleConfig);
+      String pluginName = titleConfig.get(TITLE_PARAM_PLUGIN);
+      if (myName.equals(pluginName)) {
+	String title = titleConfig.get(TITLE_PARAM_TITLE);
+	TitleConfig tc = initOneTitle(titleConfig);
+	titleMap.put(title, tc);
       }
-      map.put(title, config);
     }
-    setTitleConfig(map);
+    if (titleMap.isEmpty()) {
+      // XXX find better way
+      // allow plugin to specify its own titles if none in config
+      setTitleConfigFromPluginConfigMap();
+    } else {
+      setTitleConfigMap(titleMap);
+    }
+  }
+
+  TitleConfig initOneTitle(Configuration titleConfig) {
+    String pluginName = titleConfig.get(TITLE_PARAM_PLUGIN);
+    String title = titleConfig.get(TITLE_PARAM_TITLE);
+    TitleConfig tc = new TitleConfig(title, this);
+    List params = new ArrayList();
+    Configuration allParams = titleConfig.getConfigTree(TITLE_PARAM_PARAM);
+    for (Iterator iter = allParams.nodeIterator(); iter.hasNext(); ) {
+      Configuration oneParam = allParams.getConfigTree((String)iter.next());
+      String key = oneParam.get(TITLE_PARAM_PARAM_KEY);
+      String val = oneParam.get(TITLE_PARAM_PARAM_VALUE);
+      ConfigParamDescr descr = findParamDescr(key);
+      if (descr != null) {
+	ConfigParamAssignment cpa = new ConfigParamAssignment(descr, val);
+	if (oneParam.getBoolean(TITLE_PARAM_PARAM_DEFAULT, false)) {
+	  cpa.setDefault(true);
+	}
+	params.add(cpa);
+      } else {
+	log.warning("Unknown parameter key: " + key + " in title: " + title);
+	log.debug("   title config: " + titleConfig);
+      }
+    }
+    tc.setParams(params);
+    return tc;
+
+  }
+
+  private void setTitleConfigFromPluginConfigMap() {
+    Map map = (Map)configurationMap.getMapElement(CM_TITLE_MAP_KEY);
+    if (map != null) {
+      setTitleConfigMap(map);
+    }
+  }
+
+  protected void setTitleConfigMap(Map titleConfigMap) {
+    this.titleConfigMap = titleConfigMap;
+    pluginMgr.resetTitles();
+  }
+
+  /**
+   * Find the ConfigParamDescr that this plugin uses for the specified key.
+   * @return the element of {@link #getAuConfigProperties()} whose key
+   * matches <code>key</code>, or null if none.
+   */
+  protected ConfigParamDescr findParamDescr(String key) {
+    List descrs = getAuConfigProperties();
+    for (Iterator iter = descrs.iterator(); iter.hasNext(); ) {
+      ConfigParamDescr descr = (ConfigParamDescr)iter.next();
+      if (descr.getKey().equals(key)) {
+	return descr;
+      }
+    }
+    return null;
   }
 
   protected ExternalizableMap getConfigurationMap() {
