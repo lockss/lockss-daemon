@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.36 2003-09-08 23:12:45 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.37 2003-09-11 21:02:43 tlipkis Exp $
  */
 
 /*
@@ -192,7 +192,7 @@ public class LockssTestCase extends TestCase {
 	}
       }
     } finally {
-      if (failures > 0) {
+      if (successMaxFailures > 0 && failures > 0) {
 	System.err.println(getName() + " failed " + failures +
 			   " of " + rpt + " tries, " +
 			   ((failures > successMaxFailures) ? "not " : "") +
