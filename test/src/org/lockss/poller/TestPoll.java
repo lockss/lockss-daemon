@@ -26,7 +26,7 @@ public class TestPoll
   private static long testduration = 60 * 60 * 60 * 1000; /* 60 min */
 
   private static String[] testentries = {
-      "test1.doc", "test2.doc", "test3.doc"};
+      "test1.doc", "test2.doc", "test3.doc", "test4.doc"};
   private static String[] testentries1 = {
       "test1.doc", "test3.doc", "test4.doc"};
   protected static ArchivalUnit testau;
@@ -59,9 +59,9 @@ public class TestPoll
     daemon.getHashService().startService();
     try {
       testaddr = InetAddress.getByName("127.0.0.1");
-      testID = idmgr.getIdentity(testaddr);
+      testID = idmgr.findIdentity(testaddr);
       testaddr1 = InetAddress.getByName("123.3.4.5");
-      testID1 = idmgr.getIdentity(testaddr1);
+      testID1 = idmgr.findIdentity(testaddr1);
     }
     catch (UnknownHostException ex) {
       fail("can't open test host");
@@ -139,7 +139,7 @@ public class TestPoll
     }
     catch (Exception ex2) {
     }
-    LcapIdentity id = msg.getOriginID();
+    LcapIdentity id = idmgr.findIdentity(msg.getOriginAddr());
 
     int rep = p.m_tally.wtAgree + id.getReputation();
 
@@ -192,23 +192,43 @@ public class TestPoll
   }
 
   public void testNamePollTally() {
-    NamePoll np = (NamePoll) testpolls[0];
-    LcapMessage agree_msg = np.getMessage();
+    NamePoll np = null;
+    LcapMessage agree_msg = null;
     LcapMessage disagree_msg = null;
-
-    // add our vote
-    np.m_tally.addVote(np.makeVote(np.getMessage(), true));
+    String[] agree_entries = makeEntries(10,90);
+    String[] disagree_entries = makeEntries(5, 190);
 
     try {
-      agree_msg = LcapMessage.makeReplyMsg(agree_msg, agree_msg.getHashed(),
-                                           agree_msg.getVerifier(), testentries,
+      LcapMessage poll_msg = LcapMessage.makeRequestMsg(
+          rooturls[0],
+          null,
+          null,
+          agree_entries,
+          pollmanager.generateRandomBytes(),
+          pollmanager.generateRandomBytes(),
+          LcapMessage.NAME_POLL_REQ,
+          testduration,
+          testID,
+          testau.getPluginId());
+
+      // make our poll
+      np = (NamePoll)pollmanager.makePoll(poll_msg);
+
+      // add our vote
+      np.m_tally.addVote(np.makeVote(np.getMessage(), true));
+
+      // generate agree vote msg
+      agree_msg = LcapMessage.makeReplyMsg(poll_msg, poll_msg.getHashed(),
+                                           poll_msg.getVerifier(),
+                                           agree_entries,
                                            LcapMessage.NAME_POLL_REP,
                                            testduration, testID);
 
-      disagree_msg = LcapMessage.makeReplyMsg(agree_msg,
+      // generate a disagree vote msg
+      disagree_msg = LcapMessage.makeReplyMsg(poll_msg,
                                               pollmanager.generateRandomBytes(),
                                               pollmanager.generateRandomBytes(),
-                                              testentries1,
+                                              disagree_entries,
                                               LcapMessage.NAME_POLL_REP,
                                               testduration, testID1);
     }
@@ -226,11 +246,17 @@ public class TestPoll
     assertEquals(3, np.m_tally.numAgree);
     assertEquals(4, np.m_tally.numDisagree);
     assertTrue(!np.m_tally.didWinPoll());
+
+    // build a master list
     np.buildPollLists(np.m_tally.pollVotes.iterator());
+    // these should be different since we lost the poll
     assertTrue(!Arrays.equals(np.m_tally.localEntries, np.m_tally.votedEntries));
-    assertTrue(Arrays.equals(testentries1, np.m_tally.votedEntries));
+    // the expected "correct" set is in our disagree msg
+    assertTrue(Arrays.equals(disagree_msg.getEntries(), np.m_tally.votedEntries));
 
   }
+
+
 
   /** test for method vote(..) */
   public void testVote() {
@@ -319,6 +345,18 @@ public class TestPoll
     p.m_pollstate = Poll.PS_COMPLETE;
     return p;
   }
+
+  public static String[] makeEntries(int firstEntry, int lastEntry) {
+    int numEntries = lastEntry - firstEntry;
+    String[] ret_arry = new String[numEntries];
+
+    for(int i=0; i < numEntries; i++) {
+      ret_arry[i] = "testentry" + (firstEntry + i) + ".html";
+    }
+
+    return ret_arry;
+  }
+
 
   /** Executes the test case
    * @param argv array of Strings containing command line arguments

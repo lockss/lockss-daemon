@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapMessage.java,v 1.10 2003-02-13 06:28:52 claire Exp $
+ * $Id: TestLcapMessage.java,v 1.11 2003-02-20 00:57:28 claire Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import java.util.*;
 import junit.framework.TestCase;
 import org.lockss.test.*;
 import gnu.regexp.*;
+import org.lockss.poller.TestPoll;
 
 /** JUnitTest case for class: org.lockss.protocol.Message */
 public class TestLcapMessage extends TestCase {
@@ -49,9 +50,7 @@ public class TestLcapMessage extends TestCase {
   private static byte[] testbytes = {1,2,3,4,5,6,7,8,9,10};
   private static String lwrbnd = "test1.doc";
   private static String uprbnd = "test3.doc";
-  private static String[] testentries = {"test1.doc",
-                                         "test2.doc",
-                                         "test3.doc"};
+  private static String[] testentries;
 
   private static MockLockssDaemon daemon = new MockLockssDaemon(null);
   private IdentityManager idmgr = daemon.getIdentityManager();
@@ -85,7 +84,7 @@ public class TestLcapMessage extends TestCase {
     testmsg.m_uprBound = uprbnd;
     testID = new LcapIdentity(testaddr);
 
-    testmsg.m_originID = new LcapIdentity(testaddr);
+    testmsg.m_originAddr = testaddr;
     testmsg.m_hashAlgorithm = LcapMessage.getDefaultHashAlgorithm();
     testmsg.m_startTime = 123456789;
     testmsg.m_stopTime = 987654321;
@@ -97,15 +96,29 @@ public class TestLcapMessage extends TestCase {
     testmsg.m_verifier = testbytes;
     testmsg.m_hashed = testbytes;
     testmsg.m_opcode = LcapMessage.CONTENT_POLL_REQ;
-    testmsg.m_entries = testentries;
+    testmsg.m_entries = testentries = TestPoll.makeEntries(1, 25);
     testmsg.m_pluginID = pluginID;
 
   }
 
   public void testEntriesTranslation() {
-    String encstr = testmsg.entriesToString(500);
+    String encstr = testmsg.entriesToString(10000);
     String[] decoded = testmsg.stringToEntries(encstr);
     assertTrue(Arrays.equals(testmsg.m_entries,decoded));
+
+    //test our entries remainder by artificially setting our size to very small
+    encstr = testmsg.entriesToString(50);
+    decoded = testmsg.stringToEntries(encstr);
+    assertNotNull(decoded);
+    assertNotNull(testmsg.m_lwrRem);
+    assertNotNull(testmsg.m_uprRem);
+
+    encstr = testmsg.entriesToString(0);
+    decoded = testmsg.stringToEntries(encstr);
+    assertNull(decoded);
+    assertEquals(testentries[0], testmsg.m_lwrRem);
+    assertEquals(testmsg.m_uprBound, testmsg.m_uprRem);
+
   }
 
 
@@ -126,7 +139,8 @@ public class TestLcapMessage extends TestCase {
     }
 
     // now test to see if we got back what we expected
-    assertTrue(rep_msg.m_originID.isEqual(testID));
+
+    assertEquals(rep_msg.m_originAddr, testaddr);
     assertEquals(rep_msg.m_ttl,5);
     assertEquals(rep_msg.m_opcode,LcapMessage.CONTENT_POLL_REP);
     assertEquals(rep_msg.m_hashAlgorithm,testmsg.m_hashAlgorithm);
@@ -159,7 +173,7 @@ public class TestLcapMessage extends TestCase {
     catch (Exception ex) {
       fail("message request creation failed.");
     }
-    assertTrue(req_msg.m_originID.isEqual(testID));
+    assertEquals(req_msg.m_originAddr, testaddr);
     assertEquals(req_msg.m_opcode,LcapMessage.CONTENT_POLL_REQ);
     assertEquals(req_msg.m_multicast ,false);
     assertEquals(req_msg.m_pluginID, pluginID);
@@ -169,10 +183,6 @@ public class TestLcapMessage extends TestCase {
     assertTrue(Arrays.equals(req_msg.m_entries,testentries));
     assertEquals(req_msg.m_lwrBound, lwrbnd);
     assertEquals(req_msg.m_uprBound, uprbnd);
-
-  }
-
-  public void testSetRERemaining() {
 
   }
 
@@ -189,7 +199,7 @@ public class TestLcapMessage extends TestCase {
     try {
       LcapMessage msg = new LcapMessage(msgbytes);
       // now test to see if we got back what we started with
-      assertTrue(msg.m_originID.isEqual(testmsg.m_originID));
+      assertEquals(msg.m_originAddr, testaddr);
       assertEquals(msg.m_ttl,5);
       assertEquals(msg.m_opcode,LcapMessage.CONTENT_POLL_REQ);
       // TODO: figure out how to test time
@@ -208,18 +218,44 @@ public class TestLcapMessage extends TestCase {
     }
   }
 
-  public void testMessageEncodingHandlesNullEntries() throws IOException {
+  public void testMessageEncodingHandlesAllowableNulls(){
     testmsg.m_entries = null;
     testmsg.m_lwrBound = null;
     testmsg.m_uprBound = null;
-    testmsg.encodeMsg();
+    testmsg.m_lwrRem = null;
+    testmsg.m_uprRem = null;
+    try {
+      testmsg.encodeMsg();
+    }
+    catch (IOException ex) {
+      assertTrue("message encode with nulls failed!", true);
+    }
 
   }
 
-  public void testMessageDecodingHandlesNullEntries() throws IOException {
+  public void testMessageDecodingHandlesAllowableNulls() throws IOException {
     testmsg.m_entries = null;
+    testmsg.m_lwrBound = null;
+    testmsg.m_uprBound = null;
+    testmsg.m_lwrRem = null;
+    testmsg.m_uprRem = null;
     byte[] msgbytes = testmsg.encodeMsg();
-    new LcapMessage(msgbytes);
+
+    LcapMessage msg = null;
+    try {
+      msg = new LcapMessage(msgbytes);
+    }
+    catch (IOException ex) {
+      assertTrue("message decode with nulls failed!", true);
+    }
+
+    // now make sure we're still null
+    assertNull(msg.m_entries);
+    assertNull(msg.m_lwrBound);
+    assertNull(msg.m_uprBound);
+    assertNull(msg.m_lwrRem);
+    assertNull(msg.m_uprRem);
+
   }
 
 

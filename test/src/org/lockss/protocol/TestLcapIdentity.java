@@ -55,7 +55,6 @@ public class TestLcapIdentity extends TestCase {
           100000,
           fakeId,
           pluginid);
-      testMsg.theIdentityMgr = idmgr;
     }
     catch (Exception ex) {
       fail("message request creation failed.");
@@ -64,10 +63,10 @@ public class TestLcapIdentity extends TestCase {
 
   /** test for method getIdentity(..) */
   public void testGetIdentity() {
-    LcapIdentity id1 = idmgr.getIdentity(testAddress);
+    LcapIdentity id1 = idmgr.findIdentity(testAddress);
     assertTrue(id1 != null);
     // try and get the identity we just added
-    LcapIdentity id2 = idmgr.findIdentity(id1.m_idKey);
+    LcapIdentity id2 = idmgr.getIdentity(id1.m_idKey);
     assertTrue(id2.isEqual(id1));
   }
 
@@ -90,8 +89,8 @@ public class TestLcapIdentity extends TestCase {
 
   /** test for method isEqual(..) */
   public void testIsEqual() {
-    LcapIdentity id1 = idmgr.getIdentity(testAddress);
-    LcapIdentity id2 = idmgr.findIdentity(id1.m_idKey);
+    LcapIdentity id1 = idmgr.findIdentity(testAddress);
+    LcapIdentity id2 = idmgr.getIdentity(id1.m_idKey);
     assertEquals((String)id1.m_idKey,(String)id2.m_idKey);
   }
 

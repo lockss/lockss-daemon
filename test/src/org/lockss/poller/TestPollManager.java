@@ -49,7 +49,7 @@ public class TestPollManager extends TestCase {
     daemon.getHashService().startService();
     try {
       testaddr = InetAddress.getByName("127.0.0.1");
-      testID = daemon.getIdentityManager().getIdentity(testaddr);
+      testID = daemon.getIdentityManager().findIdentity(testaddr);
     }
     catch (UnknownHostException ex) {
       fail("can't open test host");

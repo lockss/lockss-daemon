@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.31 2003-02-13 06:28:52 claire Exp $
+* $Id: PollManager.java,v 1.32 2003-02-20 00:57:28 claire Exp $
  */
 
 /*
@@ -383,6 +383,7 @@ public class PollManager  implements LockssManager {
       throws IOException {
 
     theLog.debug("Calling a verify poll...");
+    IdentityManager idmgr = theDaemon.getIdentityManager();
     ArchivalUnit au = theDaemon.getPluginManager().findArchivalUnit(url);
     LcapMessage reqmsg = LcapMessage.makeRequestMsg(url,
         lwrBound,
@@ -392,12 +393,12 @@ public class PollManager  implements LockssManager {
         makeVerifier(),
         LcapMessage.VERIFY_POLL_REQ,
         duration,
-        theDaemon.getIdentityManager().getLocalIdentity(),
+        idmgr.getLocalIdentity(),
         au.getPluginId());
 
-    LcapIdentity originator = vote.getIdentity();
+    LcapIdentity originator =  idmgr.findIdentity(vote.getIDAddress());
     theLog.debug("sending our verification request to " + originator.toString());
-    sendMessageTo(reqmsg,au, originator);
+    sendMessageTo(reqmsg, au, originator);
 
     theLog.debug("Creating a local poll instance...");
     Poll poll = findPoll(reqmsg);

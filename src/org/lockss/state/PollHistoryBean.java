@@ -1,5 +1,5 @@
 /*
- * $Id: PollHistoryBean.java,v 1.6 2003-02-19 00:38:06 aalto Exp $
+ * $Id: PollHistoryBean.java,v 1.7 2003-02-20 00:57:28 claire Exp $
  */
 
 /*
@@ -36,6 +36,8 @@ package org.lockss.state;
 import java.util.*;
 import org.lockss.protocol.LcapIdentity;
 import org.lockss.poller.Vote;
+import java.net.*;
+import org.lockss.util.Logger;
 
 /**
  * PollHistoryBean is a settable version of PollHistory used purely for
@@ -43,6 +45,7 @@ import org.lockss.poller.Vote;
  */
 public class PollHistoryBean extends PollHistory {
   public Collection voteBeans;
+  static Logger log=Logger.getLogger("PollHistoryBean");
 
   public PollHistoryBean() {
     voteBeans = new ArrayList();
@@ -149,7 +152,12 @@ public class PollHistoryBean extends PollHistory {
     Iterator beanIter = voteBeans.iterator();
     while (beanIter.hasNext()) {
       VoteBean bean = (VoteBean)beanIter.next();
-      votes.add(bean.getVote());
+      try {
+        votes.add(bean.getVote());
+      }
+      catch (UnknownHostException ex) {
+        log.error("invalid address in Vote Bean");
+      }
     }
   }
 

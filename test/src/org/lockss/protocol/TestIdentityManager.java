@@ -42,7 +42,7 @@ public class TestIdentityManager extends TestCase {
   protected void setUp() {
 
     try {
-      fakeId = idmgr.getIdentity(LcapIdentity.stringToAddr(fakeIdString));
+      fakeId = idmgr.findIdentity(LcapIdentity.stringToAddr(fakeIdString));
       testAddress = InetAddress.getByName("127.0.0.1");
     }
     catch (UnknownHostException ex) {
@@ -68,9 +68,10 @@ public class TestIdentityManager extends TestCase {
   }
 
   /** test for method getIdentity(..) */
-  public void testGetIdentity() {
+  public void testFindIdentity() {
     try {
-      assertEquals(fakeId,idmgr.getIdentity(fakeId.getAddress()));
+      assertNotNull(fakeId);
+      assertEquals(fakeId, idmgr.findIdentity(fakeId.getAddress()));
     }
     catch (UnknownHostException ex) {
       fail("Invalid host:" + fakeId);
@@ -79,8 +80,8 @@ public class TestIdentityManager extends TestCase {
   }
 
   /** test for method findIdentity(..) */
-  public void testFindIdentity() {
-    assertTrue(idmgr.findIdentity(fakeId.getIdKey()) != null);
+  public void testGetIdentity() {
+    assertTrue(idmgr.getIdentity(fakeId.getIdKey()) != null);
   }
 
   public void testGetMapping() {
@@ -200,20 +201,15 @@ public class TestIdentityManager extends TestCase {
                rep -IdentityManager.MAX_DELTA);
   }
 
-  public void testStoreIdentities() {
+  public void testStoreIdentities() throws UnknownHostException {
     String fakeIdString1 = "213.239.33.100";
     String fakeIdString2 = "213.239.33.101";
     String fakeIdString3 = "213.239.33.102";
 
     try {
-      try {
-        assertNotNull(idmgr.getIdentity(LcapIdentity.stringToAddr(fakeIdString1)));
-        assertNotNull(idmgr.getIdentity(LcapIdentity.stringToAddr(fakeIdString2)));
-        assertNotNull(idmgr.getIdentity(LcapIdentity.stringToAddr(fakeIdString3)));
-      }
-      catch (UnknownHostException ex) {
-        fail("can't open test host");
-      }
+      assertNotNull(idmgr.findIdentity(LcapIdentity.stringToAddr(fakeIdString1)));
+      assertNotNull(idmgr.findIdentity(LcapIdentity.stringToAddr(fakeIdString2)));
+      assertNotNull(idmgr.findIdentity(LcapIdentity.stringToAddr(fakeIdString3)));
       idmgr.storeIdentities();
     }
     catch (ProtocolException ex) {

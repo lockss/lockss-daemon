@@ -1,5 +1,5 @@
 /*
- * $Id: LcapIdentity.java,v 1.11 2003-02-06 05:16:06 claire Exp $
+ * $Id: LcapIdentity.java,v 1.12 2003-02-20 00:57:28 claire Exp $
  */
 
 /*
@@ -155,7 +155,7 @@ public class LcapIdentity implements Serializable {
     }
     m_incrPackets++;
     m_totalPackets++;
-    if (msg.getOriginID() == this) {
+    if (msg.getOriginAddr().equals(this.m_address)) {
       char[] encoded = B64Code.encode(msg.getVerifier());
 
       String verifier = String.valueOf(encoded);
@@ -214,12 +214,12 @@ public class LcapIdentity implements Serializable {
    * @param addr the address to turn into a string
    * @return the address as dotted quartet sting
    */
-  static String addrToString(InetAddress addr)  {
+  public static String addrToString(InetAddress addr)  {
     String ret = addr.getHostAddress();
     return ret;
   }
 
-  static InetAddress stringToAddr(String addr) throws UnknownHostException {
+  public static InetAddress stringToAddr(String addr) throws UnknownHostException {
     InetAddress ret = InetAddress.getByName(addr);
     return ret;
   }

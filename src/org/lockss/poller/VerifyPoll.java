@@ -1,5 +1,5 @@
 /*
-* $Id: VerifyPoll.java,v 1.30 2003-02-11 23:57:01 claire Exp $
+* $Id: VerifyPoll.java,v 1.31 2003-02-20 00:57:28 claire Exp $
  */
 
 /*
@@ -93,7 +93,7 @@ class VerifyPoll extends Poll {
     log.debug("Starting new verify poll:" + m_key);
     Deadline pt;
 
-    if(m_msg.isLocal()) {
+    if(idMgr.isLocalIdentity(m_caller)) {
       pt = Deadline.in(m_deadline.getRemainingTime());
     }
     else {
@@ -143,7 +143,7 @@ class VerifyPoll extends Poll {
 
 
   private void performHash(LcapMessage msg) {
-    int weight = msg.getOriginID().getReputation();
+    int weight = idMgr.findIdentity(msg.getOriginAddr()).getReputation();
     byte[] challenge = msg.getChallenge();
     byte[] hashed = msg.getHashed();
     MessageDigest hasher = m_pollmanager.getHasher(msg);
@@ -176,7 +176,7 @@ class VerifyPoll extends Poll {
         msg.getDuration(),
         idMgr.getLocalIdentity());
 
-    LcapIdentity originator = msg.getOriginID();
+    LcapIdentity originator = idMgr.findIdentity(msg.getOriginAddr());
     log.debug("sending our verification reply to " + originator.toString());
     au = m_pollmanager.getDaemon().getPluginManager().findArchivalUnit(url);
     m_pollmanager.sendMessageTo(repmsg, au, originator);

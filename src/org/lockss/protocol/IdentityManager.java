@@ -1,5 +1,5 @@
 /*
-* $Id: IdentityManager.java,v 1.15 2003-02-11 23:57:01 claire Exp $
+* $Id: IdentityManager.java,v 1.16 2003-02-20 00:57:28 claire Exp $
  */
 
 /*
@@ -124,8 +124,6 @@ public class IdentityManager {
       theManager = this;
       configure();
       reloadIdentities();
-      LcapMessage.setIdentityMgr(this);
-      Vote.setIdentityMgr(this);
     }
     else {
       throw new LockssDaemonException("Multiple Instantiation.");
@@ -161,14 +159,14 @@ public class IdentityManager {
    * @param addr the InetAddress
    * @return a newly constructed Identity
    */
-  public LcapIdentity getIdentity(InetAddress addr) {
+  public LcapIdentity findIdentity(InetAddress addr) {
     LcapIdentity ret;
 
     if(addr == null)  {
       ret = getLocalIdentity();
     }
     else  {
-      ret = findIdentity(LcapIdentity.makeIdKey(addr));
+      ret = getIdentity(LcapIdentity.makeIdKey(addr));
       if(ret == null)  {
         ret = new LcapIdentity(addr);
         theIdentities.put(ret.getIdKey(), ret);
@@ -179,7 +177,12 @@ public class IdentityManager {
   }
 
 
-  public LcapIdentity findIdentity(Object idKey)  {
+  /**
+   * get and return an already created identity
+   * @param idKey the key for the identity we want to find
+   * @return the LcapIdentity or null
+   */
+  public LcapIdentity getIdentity(Object idKey)  {
     return (LcapIdentity)theIdentities.get(idKey);
   }
 
@@ -222,7 +225,18 @@ public class IdentityManager {
     return id.isEqual(theLocalIdentity);
   }
 
-
+  /**
+   * returns true if the InetAddress is the same as the InetAddress for our
+   * local host
+   * @param addr the address to check
+   * @return boolean true if the this is InetAddress is considered local
+   */
+  public boolean isLocalIdentity(InetAddress addr) {
+    if (theLocalIdentity == null)  {
+      getLocalIdentity();
+    }
+    return theLocalIdentity.m_address.equals(addr);
+  }
 
   /**
    * return the max value of an Identity's reputation

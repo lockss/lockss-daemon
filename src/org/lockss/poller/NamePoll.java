@@ -1,32 +1,28 @@
 /*
-* $Id: NamePoll.java,v 1.31 2003-02-13 06:28:51 claire Exp $
+ * $Id: NamePoll.java,v 1.32 2003-02-20 00:57:28 claire Exp $
  */
 
 /*
-Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
-all rights reserved.
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
-STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
-IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-Except as contained in this notice, the name of Stanford University shall not
-be used in advertising or otherwise to promote the sale, use or other dealings
-in this Software without prior written authorization from Stanford University.
-*/
+ Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
+ all rights reserved.
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+ STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ Except as contained in this notice, the name of Stanford University shall not
+ be used in advertising or otherwise to promote the sale, use or other dealings
+ in this Software without prior written authorization from Stanford University.
+ */
 
 package org.lockss.poller;
 
@@ -49,9 +45,10 @@ import java.util.ArrayList;
  * @version 1.0
  */
 
-public class NamePoll extends Poll {
+public class NamePoll
+    extends Poll {
 
-  String [] m_entries;
+  String[] m_entries;
 
   public NamePoll(LcapMessage msg, CachedUrlSet urlSet, PollManager pm) {
     super(msg, urlSet, pm);
@@ -68,17 +65,15 @@ public class NamePoll extends Poll {
     long remainingTime = m_deadline.getRemainingTime();
     try {
       msg = LcapMessage.makeReplyMsg(m_msg, m_hash, m_verifier,
-                                     getEntries(),m_replyOpcode,
+                                     getEntries(), m_replyOpcode,
                                      remainingTime, local_id);
       log.debug("vote:" + msg.toString());
-      m_pollmanager.sendMessage(msg,m_arcUnit);
+      m_pollmanager.sendMessage(msg, m_arcUnit);
     }
-    catch(IOException ex) {
-      //XXX how serious is this
+    catch (IOException ex) {
       log.info("unable to cast our vote.", ex);
     }
   }
-
 
   /**
    * prepare to run a poll.  This should check any conditions that might
@@ -89,20 +84,19 @@ public class NamePoll extends Poll {
   boolean prepareVoteCheck(LcapMessage msg) {
 
     // make sure our vote will actually matter
-    if(m_tally.isLeadEnough())  {
+    if (m_tally.isLeadEnough()) {
       log.info(m_key + " lead is enough.");
       return false;
     }
 
     // are we too busy
-    if(tooManyPending())  {
+    if (tooManyPending()) {
       log.info(m_key + " too busy to count " + m_pendingVotes + " votes");
       return false;
     }
 
     return true;
   }
-
 
   /**
    * handle a message which may be a incoming vote
@@ -111,11 +105,10 @@ public class NamePoll extends Poll {
   void receiveMessage(LcapMessage msg) {
     int opcode = msg.getOpcode();
 
-    if(opcode == LcapMessage.NAME_POLL_REP) {
+    if (opcode == LcapMessage.NAME_POLL_REP) {
       startVoteCheck(msg);
     }
   }
-
 
   /**
    * schedule the hash for this poll.
@@ -127,12 +120,11 @@ public class NamePoll extends Poll {
    * @return true if hash successfully completed.
    */
   boolean scheduleHash(MessageDigest hasher, Deadline timer, Serializable key,
-                                HashService.Callback callback) {
+                       HashService.Callback callback) {
 
     HashService hs = m_pollmanager.getDaemon().getHashService();
     return hs.hashNames(m_urlSet, hasher, timer, callback, key);
   }
-
 
   /**
    * start the hash required for a vote cast in this poll
@@ -141,13 +133,13 @@ public class NamePoll extends Poll {
   void startVoteCheck(LcapMessage msg) {
     super.startVoteCheck();
 
-    if(prepareVoteCheck(msg)) {
+    if (prepareVoteCheck(msg)) {
       long dur = msg.getDuration();
       MessageDigest hasher = getInitedHasher(msg.getChallenge(),
-          msg.getVerifier());
+                                             msg.getVerifier());
 
-     if(!scheduleHash(hasher, Deadline.in(dur), new NameVote(msg,false),
-                      new VoteHashCallback())) {
+      if (!scheduleHash(hasher, Deadline.in(dur), new NameVote(msg, false),
+                        new VoteHashCallback())) {
         log.info(m_key + " no time to hash vote " + dur + ":" + m_hashTime);
         stopVoteCheck();
       }
@@ -155,26 +147,26 @@ public class NamePoll extends Poll {
   }
 
   void tally() {
-    if(!m_tally.didWinPoll()) {
+    if (!m_tally.didWinPoll()) {
       buildPollLists(m_tally.pollVotes.iterator());
     }
     super.tally();
   }
 
   String[] getEntries() {
-    if(m_entries == null) {
+    if (m_entries == null) {
       Iterator it = m_urlSet.flatSetIterator();
       ArrayList alist = new ArrayList();
       String baseUrl = m_urlSet.getSpec().getPrimaryUrl();
-      while(it.hasNext()) {
+      while (it.hasNext()) {
         CachedUrlSet cus = (CachedUrlSet) it.next();
-        String name = (String)cus.getPrimaryUrl();
-        if(name.startsWith(baseUrl)) {
+        String name = (String) cus.getPrimaryUrl();
+        if (name.startsWith(baseUrl)) {
           name = name.substring(name.length());
         }
         alist.add(name);
       }
-       m_entries = (String[])alist.toArray(new String[alist.size()]);
+      m_entries = (String[]) alist.toArray(new String[alist.size()]);
     }
     return m_entries;
 
@@ -184,12 +176,12 @@ public class NamePoll extends Poll {
     ArrayList winners = new ArrayList();
 
     // build a list of unique winners
-    while(voteIter.hasNext()) {
+    while (voteIter.hasNext()) {
       NamePoll.NameVote vote = (NamePoll.NameVote) voteIter.next();
-      if(!vote.agree) {
+      if (!vote.agree) {
         NameVoteCounter counter = new NameVoteCounter(vote);
-        if(winners.contains(counter)) {
-          counter = (NameVoteCounter)winners.get(winners.indexOf(counter));
+        if (winners.contains(counter)) {
+          counter = (NameVoteCounter) winners.get(winners.indexOf(counter));
           counter.addVote();
         }
         else {
@@ -201,10 +193,10 @@ public class NamePoll extends Poll {
     // find the "definitive" list
     Iterator it = winners.iterator();
     NameVoteCounter winningCounter = null;
-    while(it.hasNext()) {
-      NameVoteCounter counter = (NameVoteCounter)it.next();
-      if(winningCounter != null) {
-        if(winningCounter.getNumVotes() < counter.getNumVotes()) {
+    while (it.hasNext()) {
+      NameVoteCounter counter = (NameVoteCounter) it.next();
+      if (winningCounter != null) {
+        if (winningCounter.getNumVotes() < counter.getNumVotes()) {
           winningCounter = counter;
         }
       }
@@ -215,12 +207,12 @@ public class NamePoll extends Poll {
 
     // the "definitive" list is in winningCounter
 
-    if(winningCounter != null) {
+    if (winningCounter != null) {
       m_tally.votedEntries = winningCounter.getKnownEntries();
       String lwrRem = winningCounter.getLwrRemaining();
       String uprRem = winningCounter.getUprRemaining();
 
-      if(lwrRem != null) {
+      if (lwrRem != null) {
         // we call a new poll on the remaining entries and set the regexp
         try {
           m_pollmanager.requestPoll(m_urlSet, lwrRem, uprRem,
@@ -245,13 +237,14 @@ public class NamePoll extends Poll {
   }
 
   NameVote makeVote(LcapMessage msg, boolean agree) {
-    return new NameVote(msg,agree);
+    return new NameVote(msg, agree);
   }
 
-  class NameVote extends Vote {
+  class NameVote
+      extends Vote {
     private String[] knownEntries;
-    private String   lwrRemaining;
-    private String   uprRemaining;
+    private String lwrRemaining;
+    private String uprRemaining;
 
     NameVote(LcapMessage msg, boolean agree) {
       super(msg, agree);
@@ -274,11 +267,10 @@ public class NamePoll extends Poll {
     }
   }
 
-
   static class NameVoteCounter {
     private String[] knownEntries;
-    private String   lwrRemaining;
-    private String   uprRemaining;
+    private String lwrRemaining;
+    private String uprRemaining;
     private int voteCount;
 
     NameVoteCounter(NameVote vote) {
@@ -309,8 +301,8 @@ public class NamePoll extends Poll {
     }
 
     public boolean equals(Object obj) {
-      if(obj instanceof NameVoteCounter) {
-        return (sameEntries(((NameVoteCounter)obj).knownEntries));
+      if (obj instanceof NameVoteCounter) {
+        return (sameEntries( ( (NameVoteCounter) obj).knownEntries));
       }
       return false;
     }

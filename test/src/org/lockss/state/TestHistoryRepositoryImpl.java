@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.6 2003-02-13 06:28:52 claire Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.7 2003-02-20 00:57:28 claire Exp $
  */
 
 /*
@@ -143,7 +143,7 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
     assertEquals(mau.getAUId(), auState.getArchivalUnit().getAUId());
   }
 
-  private PollHistoryBean createPollHistoryBean(int voteCount) {
+  private PollHistoryBean createPollHistoryBean(int voteCount) throws Exception {
     PollState state = new PollState(1, "lwr", "upr", 2, 5, null);
     List votes = new ArrayList(voteCount);
     for (int ii=0; ii<voteCount; ii++) {
@@ -159,7 +159,7 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
   }
 
   private String createIdentityKey() throws Exception {
-    theDaemon.getIdentityManager().getIdentity(InetAddress.getByName("127.0.0.1"));
+    theDaemon.getIdentityManager().findIdentity(InetAddress.getByName("127.0.0.1"));
     return "127.0.0.1";
   }
 

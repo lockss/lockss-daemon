@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.30 2003-02-19 00:38:06 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.31 2003-02-20 00:57:28 claire Exp $
  */
 
 /*
@@ -587,13 +587,23 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
   private void updateReputations(Poll.VoteTally results) {
     IdentityManager idManager = theDaemon.getIdentityManager();
     Iterator voteIt = results.getPollVotes().iterator();
+    int agreeChange;
+    int disagreeChange;
+
+    if(results.didWinPoll()) {
+      agreeChange = IdentityManager.AGREE_VOTE;
+      disagreeChange = IdentityManager.DISAGREE_VOTE;
+    }
+    else {
+      agreeChange = IdentityManager.DISAGREE_VOTE;
+      disagreeChange = IdentityManager.AGREE_VOTE;
+    }
     while (voteIt.hasNext()) {
       Vote vote = (Vote)voteIt.next();
-      int repChange = IdentityManager.AGREE_VOTE;
-      if (!vote.isAgreeVote()) {
-        repChange = IdentityManager.DISAGREE_VOTE;
-      }
-      idManager.changeReputation(vote.getIdentity(), repChange);
+      int repChange = vote.isAgreeVote() ? agreeChange : disagreeChange;
+
+      idManager.changeReputation(idManager.findIdentity(vote.getIDAddress()),
+                                 repChange);
     }
   }
 

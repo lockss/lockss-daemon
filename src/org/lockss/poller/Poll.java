@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.48 2003-02-13 06:28:52 claire Exp $
+* $Id: Poll.java,v 1.49 2003-02-20 00:57:28 claire Exp $
  */
 
 /*
@@ -140,7 +140,7 @@ public abstract class Poll implements Serializable {
     m_deadline = Deadline.in(msg.getDuration());
     m_challenge = msg.getChallenge();
     m_verifier = m_pollmanager.makeVerifier();
-    m_caller = msg.getOriginID();
+    m_caller = idMgr.findIdentity(msg.getOriginAddr());
     m_key = msg.getKey();
     m_pollstate = PS_INITING;
   }
@@ -208,7 +208,7 @@ public abstract class Poll implements Serializable {
     boolean agree = vote.setAgreeWithHash(hashResult);
     m_tally.addVote(vote);
 
-    if(!idMgr.isLocalIdentity(vote.getIdentity())) {
+    if(!idMgr.isLocalIdentity(vote.getIDAddress())) {
       randomVerify(vote, agree);
     }
   }
@@ -220,7 +220,7 @@ public abstract class Poll implements Serializable {
    * @param isAgreeVote true if this vote agreed with ours, false otherwise
    */
   void randomVerify(Vote vote, boolean isAgreeVote) {
-    LcapIdentity id = vote.getIdentity(); // should this be original ID.
+    LcapIdentity id = idMgr.findIdentity(vote.getIDAddress());
     int max = idMgr.getMaxReputaion();
     int weight = id.getReputation();
     double verify;
@@ -576,7 +576,7 @@ public abstract class Poll implements Serializable {
      * @return true if this Identity
      */
     public boolean isMyPoll() {
-      return idMgr.isLocalIdentity(m_msg.getOriginID());
+      return idMgr.isLocalIdentity(m_msg.getOriginAddr());
     }
 
     /**
@@ -710,7 +710,7 @@ public abstract class Poll implements Serializable {
     }
 
     void addVote(Vote vote) {
-      LcapIdentity id = vote.getIdentity();
+      LcapIdentity id = idMgr.findIdentity(vote.getIDAddress());
 
       int weight = id.getReputation();
 

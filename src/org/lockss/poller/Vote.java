@@ -1,5 +1,5 @@
 /*
-* $Id: Vote.java,v 1.5 2003-02-11 23:57:01 claire Exp $
+* $Id: Vote.java,v 1.6 2003-02-20 00:57:28 claire Exp $
  */
 
 /*
@@ -36,30 +36,29 @@ import org.mortbay.util.B64Code;
 import org.lockss.protocol.LcapIdentity;
 import org.lockss.protocol.LcapMessage;
 import java.util.Arrays;
-import org.lockss.protocol.IdentityManager;
 import java.io.Serializable;
 import org.lockss.app.LockssDaemon;
+import java.net.InetAddress;
 
 /**
  * Vote stores the information need to replay a single vote. These are needed
  * to run a repair poll.
  */
 public class Vote implements Serializable {
-  private LcapIdentity id;
+  private InetAddress voteAddr;
   protected boolean agree;
   private byte[] challenge;
   private byte[] verifier;
   private byte[] hash;
 
-  protected static IdentityManager theIdentityMgr;
 
   protected Vote() {
   }
 
 
   Vote(byte[] challenge, byte[] verifier, byte[] hash,
-       LcapIdentity id, boolean agree) {
-    this.id = id;
+       InetAddress addr, boolean agree) {
+    this.voteAddr = addr;
     this.agree = agree;
     this.challenge = challenge;
     this.verifier = verifier;
@@ -68,23 +67,19 @@ public class Vote implements Serializable {
 
   Vote(Vote vote) {
     this(vote.getChallenge(),vote.getVerifier(),vote.getHash(),
-         vote.getIdentity(),vote.agree);
+         vote.getIDAddress(),vote.agree);
   }
 
   Vote(LcapMessage msg, boolean agree) {
     this(msg.getChallenge(), msg.getVerifier(), msg.getHashed(),
-         msg.getOriginID(), agree);
+         msg.getOriginAddr(), agree);
   }
 
 
   protected Vote makeVote(String challengeStr, String verifierStr, String hashStr,
-                 String idStr, boolean agree) {
+                 String idStr, boolean agree) throws java.net.UnknownHostException{
     Vote vote = new Vote();
-    try {
-      vote.id = theIdentityMgr.findIdentity(idStr);
-    }
-    catch (Exception ex) {
-    }
+    vote.voteAddr = LcapIdentity.stringToAddr(idStr);
     vote.agree = agree;
     vote.challenge = B64Code.decode(challengeStr.toCharArray());
     vote.verifier = B64Code.decode(verifierStr.toCharArray());
@@ -102,8 +97,8 @@ public class Vote implements Serializable {
    * Return the Identity of the voter
    * @return <code>LcapIdentity</code> the id
    */
-  public LcapIdentity getIdentity() {
-    return id;
+  public InetAddress getIDAddress() {
+    return voteAddr;
   }
 
   /**
@@ -160,10 +155,6 @@ public class Vote implements Serializable {
    */
   public String getVerifierString() {
     return String.valueOf(B64Code.encode(verifier));
-  }
-
-  public static void setIdentityMgr(IdentityManager mgr) {
-    theIdentityMgr = mgr;
   }
 
 }

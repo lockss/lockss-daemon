@@ -1,5 +1,5 @@
 /*
-* $Id: LcapMessage.java,v 1.23 2003-02-13 06:28:52 claire Exp $
+* $Id: LcapMessage.java,v 1.24 2003-02-20 00:57:28 claire Exp $
  */
 
 /*
@@ -95,7 +95,7 @@ public class LcapMessage implements Serializable {
   int                m_length;      // length of remaining packet
 
   /* items which are in the property list */
-  LcapIdentity       m_originID;    // the address of the originator
+  InetAddress        m_originAddr;    // the address of the originator
   protected String   m_hashAlgorithm; // the algorithm used to hash
   byte               m_ttl;         // The original time-to-live
   long               m_startTime;   // the original start time
@@ -112,7 +112,6 @@ public class LcapMessage implements Serializable {
   protected String   m_uprRem;      // the remaining entries upr bound (opt)
   protected String[] m_entries;     // the name poll entry list (opt)
 
-  protected static IdentityManager theIdentityMgr;
   private EncodedProperty m_props;
   private static byte[] signature = {'l','p','m','1'};
   private static Logger log = Logger.getLogger("Message");
@@ -161,7 +160,7 @@ public class LcapMessage implements Serializable {
     m_startTime = 0;
     m_stopTime = 0;
     m_multicast = false;
-    m_originID = null;
+    m_originAddr = null;
     m_hopCount = 0;
   }
 
@@ -183,7 +182,7 @@ public class LcapMessage implements Serializable {
     m_pluginID = trigger.getPluginID();
     m_entries = entries;
     m_hashAlgorithm = trigger.getHashAlgorithm();
-    m_originID = localID;
+    m_originAddr = localID.getAddress();
     m_verifier = verifier;
     m_hashed = hashedContent;
     m_opcode = opcode;
@@ -261,7 +260,7 @@ public class LcapMessage implements Serializable {
     if (msg != null) {
       msg.m_startTime = TimeBase.nowMs();
       msg.m_stopTime = msg.m_startTime + timeRemaining;
-      msg.m_originID = localID;
+      msg.m_originAddr = localID.getAddress();
       msg.m_hopCount = sendHopCount();
       msg.m_pluginID = pluginID;
     }
@@ -366,13 +365,12 @@ public class LcapMessage implements Serializable {
     port = m_props.getInt("origPort", -1);
     String addr_str = m_props.getProperty("origIP");
     try {
-      m_originID = theIdentityMgr.getIdentity(LcapIdentity.stringToAddr(addr_str));
+      m_originAddr = LcapIdentity.stringToAddr(addr_str);
     }
     catch(UnknownHostException ex) {
       log.warning("Unknown originating host:" + addr_str);
     }
 
-    addr_str = m_props.getProperty("group");
     m_hashAlgorithm = m_props.getProperty("hashAlgorithm");
     m_ttl = (byte) m_props.getInt("ttl", 0);
     duration = m_props.getInt("duration", 0) * 1000;
@@ -385,9 +383,7 @@ public class LcapMessage implements Serializable {
     m_challenge = m_props.getByteArray("challenge", new byte[0]);
     m_verifier = m_props.getByteArray("verifier", new byte[0]);
     m_hashed = m_props.getByteArray("hashed", new byte[0]);
-    if (m_props.getProperty("entries") != null) {
-      m_entries = stringToEntries(m_props.getProperty("entries"));
-    }
+    m_entries = stringToEntries(m_props.getProperty("entries"));
     m_lwrRem = m_props.getProperty("lwrRem");
     m_uprRem = m_props.getProperty("uprRem");
     // calculate start and stop times
@@ -404,8 +400,7 @@ public class LcapMessage implements Serializable {
   public byte[] encodeMsg() throws IOException {
     // make sure the props table is up to date
     try {
-      m_props.setProperty("origIP",
-                          LcapIdentity.addrToString(m_originID.getAddress()));
+      m_props.setProperty("origIP", LcapIdentity.addrToString(m_originAddr));
     }
     catch(NullPointerException npe) {
       throw new ProtocolException("encode - null origin host address.");
@@ -489,11 +484,6 @@ public class LcapMessage implements Serializable {
     return (m_opcode % 2 == 1) ? true : false;
   }
 
-  public boolean isLocal() {
-    return theIdentityMgr.isLocalIdentity(m_originID);
-
-  }
-
   public boolean isNamePoll() {
     return m_opcode == NAME_POLL_REQ || m_opcode == NAME_POLL_REP;
   }
@@ -519,8 +509,8 @@ public class LcapMessage implements Serializable {
     return m_ttl;
   }
 
-  public LcapIdentity getOriginID(){
-    return m_originID;
+  public InetAddress getOriginAddr(){
+    return m_originAddr;
   }
 
   public int getOpcode() {
@@ -610,6 +600,9 @@ public class LcapMessage implements Serializable {
   String entriesToString(int maxBufSize) {
     StringBuffer buf = new StringBuffer(maxBufSize);
 
+    m_lwrRem = null;
+    m_uprRem = null;
+
     for(int i= 0; i< m_entries.length; i++) {
       // if the length of this entry < max buffer
       byte[] cur_bytes = m_props.encodeString(buf.toString());
@@ -628,22 +621,10 @@ public class LcapMessage implements Serializable {
     return buf.toString();
   }
 
-  void setRemainder(int lastEntry) {
-
-  }
-
-  int firstDifferentChar(String s1, String s2) {
-    for(int i=0; i< s1.length() && i < s2.length(); i++) {
-      if(s1.charAt(i) != s2.charAt(i)) {
-        return i+1;
-      }
-    }
-    return -1;
-  }
-
-
-
   String[] stringToEntries(String estr) {
+    if(estr == null || estr.length() <= 0) {
+      return null;
+    }
     StringTokenizer tokenizer = new StringTokenizer(estr,"\n");
     String[] ret = new String[tokenizer.countTokens()];
     int i = 0;
@@ -704,7 +685,4 @@ public class LcapMessage implements Serializable {
     }
   }
 
-  public static void setIdentityMgr(IdentityManager mgr) {
-    theIdentityMgr = mgr;
-  }
 }
