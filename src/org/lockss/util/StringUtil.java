@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.14 2003-03-11 23:28:00 tal Exp $
+ * $Id: StringUtil.java,v 1.15 2003-03-14 01:40:17 tal Exp $
  */
 
 /*
@@ -315,6 +315,15 @@ public class StringUtil {
       sb.append(buf, 0, len);
     }
     return sb.toString();
+  }
+
+  /**
+   * Test whether a string is null or the empty string
+   * @param s the string
+   * @return true if s is null or the empty string
+   */
+  public static boolean isNullString(String s) {
+    return s == null || "".equals(s);
   }
 
   /**
