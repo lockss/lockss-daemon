@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrlSet.java,v 1.11 2003-01-02 19:40:10 troberts Exp $
+ * $Id: MockCachedUrlSet.java,v 1.12 2003-01-05 18:13:44 tal Exp $
  */
 
 /*
@@ -124,14 +124,6 @@ public class MockCachedUrlSet implements CachedUrlSet {
 
   public CachedUrlSetHasher getNameHasher(MessageDigest hasher) {
     return nameHasher;
-  }
-
-  public Enumeration flatEnumeration() {
-    return null;
-  }
-
-  public Enumeration treeEnumeration() {
-    return null;
   }
 
   long hashEstimate = 0;
