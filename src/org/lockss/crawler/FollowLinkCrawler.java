@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.4 2004-10-13 23:07:16 clairegriffin Exp $
+ * $Id: FollowLinkCrawler.java,v 1.5 2004-10-18 03:34:17 tlipkis Exp $
  */
 
 /*
@@ -40,7 +40,6 @@ import org.lockss.util.urlconn.*;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.base.*;
 import org.lockss.state.*;
 
 /**
@@ -223,15 +222,7 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
       logger.info("Finished crawl of "+au.getName());
     }
 
-    if (au instanceof BaseArchivalUnit) {
-      BaseArchivalUnit bau = (BaseArchivalUnit)au;
-      long cacheHits = bau.getCrawlSpecCacheHits();
-      long cacheMisses = bau.getCrawlSpecCacheMisses();
-      double per = ((float)cacheHits /
-		  ((float)cacheHits + (float)cacheMisses));
-      logger.info("Had "+cacheHits+" cache hits, with a percentage of "+ (per*100) );
-    }
-
+    logCrawlSpecCacheRate();
     return (crawlStatus.getCrawlError() == null);
   }
 
@@ -344,9 +335,6 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
       if (wdog != null) {
 	wdog.pokeWDog();
       }
-      if (!parsedPages.contains(uc.getUrl())) {
-	logger.debug2(uc+" exists, not caching");
-      }
       if (!reparse) {
 	logger.debug2(uc+" exists, not reparsing");
 	parsedPages.add(uc.getUrl());
@@ -369,10 +357,9 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
 	    if (extractedUrls.remove(url)){
 	      logger.debug3("Removing self reference in "+url+" from the extracted list");
 	    }
+	    crawlStatus.signalUrlParsed();
+	    parsedPages.add(uc.getUrl());
 	  }
-
- 	  crawlStatus.signalUrlParsed();
-	  parsedPages.add(uc.getUrl());
 	}
       }
     } catch (IOException ioe) {

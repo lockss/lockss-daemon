@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerImpl.java,v 1.35 2004-10-13 23:07:16 clairegriffin Exp $
+ * $Id: CrawlerImpl.java,v 1.36 2004-10-18 03:34:17 tlipkis Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.base.*;
 import org.lockss.state.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
@@ -357,11 +358,25 @@ public abstract class CrawlerImpl implements Crawler {
     }
   }
 
+  protected void logCrawlSpecCacheRate() {
+    if (au instanceof BaseArchivalUnit) {
+      BaseArchivalUnit bau = (BaseArchivalUnit)au;
+      long cacheHits = bau.getCrawlSpecCacheHits();
+      long cacheMisses = bau.getCrawlSpecCacheMisses();
+      if (cacheHits == 0) {
+	logger.info(cacheHits + "/" + cacheMisses + " cache hits");
+      } else {
+	float per = (float)cacheHits / (float)(cacheHits + cacheMisses);
+	logger.info(cacheHits + "/" + cacheMisses + " cache hits (" +
+		    Integer.toString(Math.round(per * 100)) + "%)");
+      }
+    }
+  }
+
   /** All UrlCachers should be made via this method, so they get their
    * connection pool set. */
   protected UrlCacher makeUrlCacher(String url) {
     UrlCacher uc = au.makeUrlCacher(url);
-    System.out.println("\n" + au +" returned " + uc + " for " + url);
     uc.setConnectionPool(connectionPool);
     //uc.setPermissionMap(permission
     return uc;

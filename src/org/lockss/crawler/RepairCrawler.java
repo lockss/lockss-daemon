@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.31 2004-10-15 23:49:50 clairegriffin Exp $
+ * $Id: RepairCrawler.java,v 1.32 2004-10-18 03:34:17 tlipkis Exp $
  */
 
 /*
@@ -42,7 +42,6 @@ import org.lockss.daemon.*;
 import org.lockss.protocol.*;
 import org.lockss.proxy.ProxyManager;
 import org.lockss.plugin.*;
-import org.lockss.plugin.base.*;
 import org.lockss.state.*;
 
 /**
@@ -203,15 +202,7 @@ public class RepairCrawler extends CrawlerImpl {
     } else {
       logger.info("Finished crawl of "+au);
     }
-
-    if (au instanceof BaseArchivalUnit) {
-      BaseArchivalUnit bau = (BaseArchivalUnit)au;
-      long cacheHits = bau.getCrawlSpecCacheHits();
-      long cacheMisses = bau.getCrawlSpecCacheMisses();
-      double per = ((float)cacheHits /
-		    ((float)cacheHits + (float)cacheMisses));
-      logger.info("Had "+cacheHits+" cache hits, with a percentage of "+(per*100));
-    }
+    logCrawlSpecCacheRate();
     return (crawlStatus.getCrawlError() == null);
   }
 
