@@ -1,5 +1,5 @@
 /*
-* $Id: PsmException.java,v 1.2 2005-02-24 04:25:59 tlipkis Exp $
+* $Id: PsmException.java,v 1.3 2005-03-19 09:08:56 tlipkis Exp $
  */
 
 /*
@@ -73,18 +73,18 @@ public class PsmException extends RuntimeException {
   /** Print the nested excpetion's stack track is preference to ours. */
   public void printStackTrace(java.io.PrintStream s) {
     if (nestedException != null) {
-      nestedException.printStackTrace();
+      nestedException.printStackTrace(s);
     } else {
-      super.printStackTrace();
+      super.printStackTrace(s);
     }
   }
 
   /** Print the nested excpetion's stack track is preference to ours. */
   public void printStackTrace(java.io.PrintWriter s) {
     if (nestedException != null) {
-      nestedException.printStackTrace();
+      nestedException.printStackTrace(s);
     } else {
-      super.printStackTrace();
+      super.printStackTrace(s);
     }
   }
 
