@@ -33,7 +33,7 @@ org.lockss.parameterReloadInterval = 600000
 #org.lockss.hasher.stepBytes
 
 #identity manager settings
-org.lockss.id.database.dir=/tmp/iddb
+org.lockss.id.database.dir=./iddb
 
 #lockss state settings
 org.lockss.history.location=./history

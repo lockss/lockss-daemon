@@ -1,5 +1,5 @@
 /*
-* $Id: IdentityManager.java,v 1.22 2003-04-02 10:50:55 tal Exp $
+* $Id: IdentityManager.java,v 1.23 2003-04-02 23:46:56 aalto Exp $
  */
 
 /*
@@ -90,7 +90,7 @@ public class IdentityManager extends BaseLockssManager {
   static final int INITIAL_REPUTATION = 500;
   static final int REPUTATION_NUMERATOR = 1000;
 
-  static Logger theLog=Logger.getLogger("IdentityManager");
+  static Logger theLog = Logger.getLogger("IdentityManager");
   static Random theRandom = new Random();
 
   static String localIdentityStr = null;
@@ -262,8 +262,13 @@ public class IdentityManager extends BaseLockssManager {
 
   void reloadIdentities() {
     try {
-      String fn = Configuration.getParam(PARAM_IDDB_DIR, "/tmp/iddb")
-                + File.separator + IDDB_FILENAME;
+      String iddbDir = Configuration.getParam(PARAM_IDDB_DIR);
+      if (iddbDir==null) {
+        theLog.warning("No value found for config parameter '" +
+                       PARAM_IDDB_DIR+"'");
+        return;
+      }
+      String fn = iddbDir + File.separator + IDDB_FILENAME;
       File iddbFile = new File(fn);
       if((iddbFile != null) && iddbFile.canRead()) {
         Unmarshaller unmarshaller = new Unmarshaller(IdentityListBean.class);
@@ -284,6 +289,11 @@ public class IdentityManager extends BaseLockssManager {
   void storeIdentities() throws ProtocolException {
     try {
       String fn = Configuration.getParam(PARAM_IDDB_DIR);
+      if (fn==null) {
+        theLog.warning("No value found for config parameter '" +
+                       PARAM_IDDB_DIR+"'");
+        return;
+      }
 
       File iddbDir = new File(fn);
       if (!iddbDir.exists()) {

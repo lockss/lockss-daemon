@@ -22,7 +22,7 @@ org.lockss.parameterReloadInterval = 600000
 #org.lockss.hasher.stepBytes
 
 #identity manager settings
-org.lockss.id.database.dir=/tmp/iddb
+org.lockss.id.database.dir=./iddb
 
 #lockss state settings
 org.lockss.history.location=./history
@@ -45,6 +45,7 @@ org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.localA.root=localA
 org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.localA.depth=2
 org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.localA.branch=2
 org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.localA.numFiles=4
+org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.localA.oddBranchContent=true
 #org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.<dir>.binFileSize=<n>
 #org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.<dir>.maxFileName=<n>
 #org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.<dir>.fileTypes=<n>

@@ -32,7 +32,7 @@ public class TestIdentityManager extends LockssTestCase {
     super.setUp();
 
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    configParams(tempDirPath + "iddb", "src/org/lockss/protocol");
+    configParams(tempDirPath + "iddb");
 
     theDaemon = new MockLockssDaemon();
     idmgr = theDaemon.getIdentityManager();
@@ -197,10 +197,10 @@ public class TestIdentityManager extends LockssTestCase {
     }
   }
 
-  public static void configParams(String dbDir, String mapDir) {
-    configParams(dbDir, mapDir, null);
+  public static void configParams(String dbDir) {
+    configParams(dbDir, null);
   }
-  public static void configParams(String dbDir, String mapDir, String addParams) {
+  public static void configParams(String dbDir, String addParams) {
     String s = IdentityManager.PARAM_IDDB_DIR + "=" + dbDir;
     if (addParams!=null) {
       s += "\n" + addParams;

@@ -376,8 +376,7 @@ public class TestPoll extends LockssTestCase {
 
     String cacheStr = LockssRepositoryServiceImpl.PARAM_CACHE_LOCATION +"=" +
         tempDirPath;
-    TestIdentityManager.configParams(tempDirPath + "iddb",
-                                     "src/org/lockss/protocol", cacheStr);
+    TestIdentityManager.configParams(tempDirPath + "iddb", cacheStr);
     idmgr = theDaemon.getIdentityManager();
     theDaemon.getHashService().startService();
     theDaemon.getLockssRepositoryService().startService();
