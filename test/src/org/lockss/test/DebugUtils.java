@@ -1,5 +1,5 @@
 /*
- * $Id: DebugUtils.java,v 1.4 2003-01-02 06:48:06 tal Exp $
+ * $Id: DebugUtils.java,v 1.5 2003-04-18 16:41:53 tal Exp $
  */
 
 /*
@@ -50,6 +50,9 @@ public class DebugUtils {
       String os = System.getProperty("os.name");
       if ("linux".equalsIgnoreCase(os)) {
 	instance = new Linux();
+      }
+      if ("openbsd".equalsIgnoreCase(os)) {
+	instance = new OpenBSD();
       }
       if (instance == null) {
 	log.warning("No OS-specific DebugUtils for '" + os + "'");
@@ -202,6 +205,56 @@ public class DebugUtils {
       System.out.println(s);
       System.out.println(StringUtil.breakAt(s, '\n').size());
       return StringUtil.breakAt(s, '\n');
+    }
+  }
+
+  /** OpenBSD implementation of platform-specific code */
+  public static class OpenBSD extends DebugUtils {
+    // offsets into /proc/<n>/stat
+    static final int STAT_OFFSET_CMD = 1;
+    static final int STAT_OFFSET_PID = 1;
+    static final int STAT_OFFSET_PPID = 2;
+
+    /** Get PID of current process */
+    public int getPid() throws UnsupportedException {
+      return getProcPid();
+    }
+
+    /** Get PID of main java process */
+    public int getMainPid() throws UnsupportedException {
+      return getProcPid();
+    }
+
+    /** Get PID from linux /proc/surproc/status */
+    private int getProcPid() throws UnsupportedException {
+      Vector v = getMyProcStats();
+      String pid = (String)v.elementAt(STAT_OFFSET_PID);
+      return Integer.parseInt(pid);
+    }
+
+    /** Get stat vector of this java process from /proc/self/stat .
+   * Read the stat file with java code so the executing process (self) is
+   * java. */
+    Vector getMyProcStats() throws UnsupportedException {
+      return getProcStats("curproc");
+    }
+
+    /** Get stat vector for specified process from /proc/<n>/stat .
+     * @param pid the process for which to get stats, or "self"
+     * @return vector of strings of values in stat file
+     */
+    public Vector getProcStats(String pid) throws UnsupportedException {
+      String filename = "/proc/" + pid + "/status";
+      try {
+	Reader r = new FileReader(new File(filename));
+	String s = StringUtil.fromReader(r);
+	Vector v = StringUtil.breakAt(s, ' ');
+	return v;
+      } catch (FileNotFoundException e) {
+	throw new UnsupportedException("Can't open " + filename, e);
+      } catch (IOException e) {
+	throw new UnsupportedException("Error reading " + filename, e);
+      }      
     }
   }
 
