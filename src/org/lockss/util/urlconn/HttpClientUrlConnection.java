@@ -1,5 +1,5 @@
 /*
- * $Id: HttpClientUrlConnection.java,v 1.8 2004-03-11 09:43:45 tlipkis Exp $
+ * $Id: HttpClientUrlConnection.java,v 1.8.2.1 2004-03-11 22:13:08 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -47,6 +47,8 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
   /** Maximum number of redirects that will be followed */
   static final int MAX_REDIRECTS = 10;
 
+  private static MethodRetryHandler retryHandler = null;
+
   private HttpClient client;
   private HttpMethod method;
   private int methodCode;
@@ -77,6 +79,7 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
       case LockssUrlConnection.METHOD_PROXY:
 	return new LockssProxyGetMethodImpl(urlString);
       }      
+      throw new RuntimeException("Unknown url method: " + methodCode);
     } catch (IllegalArgumentException e) {
       // HttpMethodBase throws IllegalArgumentException on illegal URLs
       // Canonicalize that to Java's MalformedURLException
@@ -86,7 +89,6 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
       // Canonicalize that to Java's MalformedURLException
       throw new java.net.MalformedURLException(urlString);
     }
-    throw new RuntimeException("Unknown url method: " + methodCode);
   }  
 
   /** for testing */
@@ -383,6 +385,26 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     method.releaseConnection();
   }
 
+  /** Return a MethodRetryHandler that says to retry even if the request
+   * has been set.  (Default behavior is not to.)  This is necessary
+   * because, if we try to reuse a connection that the server has closed,
+   * the error won't occur until flushRequestOutputStream() is called.
+   * This safe because we only handle GET requests.  (Wouldn't be safe For
+   * PUT, POST, etc. because server *might* have received request.  How to
+   * tell that's not what really happened?) */
+
+  // retryHandler is static because we only need one.  No locking needed,
+  // as no harm if two threads create one, but be careful to put it in the
+  // right state before updating the variable.
+  private static MethodRetryHandler getRetryHandler() {
+    if (retryHandler == null) {
+      DefaultMethodRetryHandler h = new DefaultMethodRetryHandler();
+      h.setRequestSentRetryEnabled(true);
+      retryHandler = h;
+    }
+    return retryHandler;
+  }
+
   /** Subinterface adding missing method(s) to HttpMethod */
   interface LockssGetMethod extends HttpMethod {
     int getResponseContentLength();
@@ -395,6 +417,8 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
 
     public LockssGetMethodImpl(String url) {
       super(url);
+      // Establish our retry handler
+      setMethodRetryHandler(getRetryHandler());
     }
 
     public int getResponseContentLength() {
