@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.7 2002-11-21 20:23:45 tal Exp $
+ * $Id: Configuration.java,v 1.8 2002-11-22 17:43:02 tal Exp $
  */
 
 /*
@@ -63,6 +63,7 @@ public abstract class Configuration {
   // Current configuration instance.
   // Start with an empty one to avoid errors in the static accessors.
   private static Configuration currentConfig = newConfiguration();
+  private static boolean haveConfig = false;
 
   private static HandlerThread handlerThread; // reload handler thread
 
@@ -76,24 +77,51 @@ public abstract class Configuration {
     return currentConfig;
   }
 
+  /** Wait until the system is configured.  (<i>Ie</i>, until the first
+   * time a configuration has been loaded.) */
+  public static boolean waitConfig(/*Deadline*/) {
+    while (!haveConfig) {
+      // tk - need real semaphore here, but don't have right kind
+      try {
+	Deadline.in(200).sleep();
+      } catch (InterruptedException e) {
+	// ignore, just keep waiting
+      }
+    }
+    return haveConfig;;
+  }
+
   static void setCurrentConfig(Configuration newConfig) {
     if (newConfig == null) {
       log.warning("attempt to install null Configuration");
     }
     currentConfig = newConfig;
+    haveConfig = true;
+  }
+
+  static void runCallback(Callback cb,
+			  Configuration oldConfig,
+			  Configuration newConfig,
+			  Set diffs) {
+    try {
+      cb.configurationChanged(oldConfig, newConfig, diffs);
+    } catch (Exception e) {
+      log.error("callback threw", e);
+    }
+  }
+
+  static void runCallback(Callback cb,
+			  Configuration oldConfig,
+			  Configuration newConfig) {
+    runCallback(cb, oldConfig, newConfig, newConfig.differentKeys(oldConfig));
   }
 
   static void runCallbacks(Configuration oldConfig,
 			   Configuration newConfig) {
+    Set diffs = newConfig.differentKeys(oldConfig);
     for (Iterator iter = configChangedCallbacks.iterator();
 	 iter.hasNext();) {
-      Callback c = (Callback)iter.next();
-      try {
-	c.configurationChanged(oldConfig, newConfig,
-			       newConfig.differentKeys(oldConfig));
-      } catch (Exception e) {
-	log.error("callback threw", e);
-      }
+      runCallback((Callback)iter.next(), oldConfig, newConfig, diffs);
     }
   }
 
@@ -144,14 +172,18 @@ public abstract class Configuration {
   }
 
   /**
-   * Register a <code>Configuration.Callback</code>, which will be
-   * called whenever the current configuration has changed.
-   * @param c <code>Configuration.Callback</code> to add.
-   */
+   * Register a {@link Configuration.Callback}, which will be called
+   * whenever the current configuration has changed.  If a configuration is
+   * present when a callback is registered, the callback will be called
+   * immediately.
+   * @param c <code>Configuration.Callback</code> to add.  */
   public static void
     registerConfigurationCallback(Callback c) {
     if (!configChangedCallbacks.contains(c)) {
       configChangedCallbacks.add(c);
+      if (haveConfig) {
+	runCallback(c, null, currentConfig);
+      }
     }
   }
       
@@ -193,6 +225,9 @@ public abstract class Configuration {
   abstract boolean load(InputStream istr)
       throws IOException;
 
+  /** Return the set of keys whose values differ.
+   * @param otherConfig the config to compare with.  May be null.
+   */
   abstract Set differentKeys(Configuration otherConfig);
 
   /** Return true iff config has no keys/ */
@@ -480,12 +515,16 @@ public abstract class Configuration {
    */
   public interface Callback {
     /**
-     * Called to indicate that something in the configuration has changed.
-     * It is called after the new config is installed as current.
+     * Callback used to inform clients that something in the configuration
+     * has changed.  It is called after the new config is installed as
+     * current, as well as upon registration (if there is a current
+     * configuration at the time).  It is thus safe to rely solely on a
+     * configuration callback to receive configuration information.
      * @param newConfig  the new (just installed) <code>Configuration</code>.
-     * @param oldConfig  the previous <code>Configuration</code>.
+     * @param oldConfig  the previous <code>Configuration</code>, or null
+     *                   if there was no previous config.
      * @param changedKeys  the set of keys whose value has changed.
-     */
+     * @see Configuration#registerConfigurationCallback */
     public void configurationChanged(Configuration oldConfig,
 				     Configuration newConfig,
 				     Set changedKeys);
