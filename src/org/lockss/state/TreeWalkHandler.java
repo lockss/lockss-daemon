@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkHandler.java,v 1.11 2003-04-07 23:38:06 aalto Exp $
+ * $Id: TreeWalkHandler.java,v 1.12 2003-04-15 01:27:00 aalto Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import org.lockss.plugin.*;
 import org.lockss.crawler.CrawlManager;
 import org.lockss.poller.PollSpec;
 import org.lockss.daemon.Configuration;
+import org.lockss.daemon.RangeCachedUrlSetSpec;
 
 /**
  * The treewalk thread handler in the NodeManager.  This starts a thread which
@@ -169,7 +170,7 @@ public class TreeWalkHandler {
       } else if (node.getType()==CachedUrlSetNode.TYPE_CACHED_URL) {
         // open a new state for the leaf and walk
         state = manager.getNodeState(
-            theAu.makeCachedUrlSet(node.getUrl(), null, null));
+            theAu.makeCachedUrlSet(new RangeCachedUrlSetSpec(node.getUrl())));
         checkNodeState(state);
       }
     }
@@ -256,7 +257,7 @@ public class TreeWalkHandler {
    */
   void forceTreeWalk() {
     boolean threadWasNull = false;
-    if (treeWalkThread!=null) {
+    if (treeWalkThread==null) {
       treeWalkThread = new TreeWalkThread();
       threadWasNull = true;
     }

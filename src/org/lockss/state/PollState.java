@@ -1,5 +1,5 @@
 /*
- * $Id: PollState.java,v 1.16 2003-04-10 01:06:51 claire Exp $
+ * $Id: PollState.java,v 1.17 2003-04-15 01:27:00 aalto Exp $
  */
 
 /*
@@ -30,6 +30,7 @@ package org.lockss.state;
 import java.util.Iterator;
 import org.lockss.plugin.CachedUrlSet;
 import org.lockss.util.Deadline;
+import org.lockss.poller.PollSpec;
 
 /**
  * PollState contains the state information for a poll current to a node.
@@ -121,6 +122,9 @@ public class PollState implements Comparable {
   }
 
   public String getRangeString() {
+    if ((lwrBound!=null) && (lwrBound.equals(PollSpec.SINGLE_NODE_LWRBOUND))) {
+      return "single node";
+    }
     if(lwrBound != null || uprBound != null) {
       return "[" + lwrBound + " - " + uprBound + "]";
     }

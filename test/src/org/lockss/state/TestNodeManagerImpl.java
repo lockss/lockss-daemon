@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.61 2003-04-10 04:29:45 claire Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.62 2003-04-15 01:27:00 aalto Exp $
  */
 
 /*
@@ -160,7 +160,7 @@ public class TestNodeManagerImpl
     CachedUrlSet cus = results.getCachedUrlSet();
     Vector subFiles = new Vector(2);
     subFiles.add(getCUS(mau, TEST_URL));
-    ( (MockCachedUrlSet) cus).setTreeItSource(subFiles);
+    ( (MockCachedUrlSet) cus).setHashItSource(subFiles);
     NodeState node = nodeManager.getNodeState(cus);
     for (int i = 0; i < 3; i++) {
       ( (NodeStateImpl) node).closeActivePoll(new PollHistory(Poll.CONTENT_POLL,
@@ -268,9 +268,9 @@ public class TestNodeManagerImpl
                  ( (MockPollManager) theDaemon.getPollManager()).getPollStatus(
         results.getPollKey()));
 
-    // - internal with '.' range
+    // - internal SingleNodeCachedUrlSetSpec
     contentPoll = createPoll(TEST_URL + "/branch1",
-                             RangeCachedUrlSetSpec.SINGLE_NODE_RANGE, null,
+                             PollSpec.SINGLE_NODE_LWRBOUND, null,
                              true, true, 5, 10);
     results = contentPoll.getVoteTally();
     spec = results.getPollSpec();
@@ -320,11 +320,11 @@ public class TestNodeManagerImpl
     assertEquals(MockPollManager.CONTENT_REQUESTED,
                  ( (MockPollManager) theDaemon.getPollManager()).getPollStatus(
         TEST_URL + "/branch2/file2.doc"));
+
     // and single node call
     assertEquals(MockPollManager.CONTENT_REQUESTED,
                  ((MockPollManager)theDaemon.getPollManager()).getPollStatus(
         TEST_URL + "/branch2"));
-
     assertEquals(PollState.WON, pollState.getStatus());
 
     // lost name poll (these are the artificial results)
@@ -523,18 +523,18 @@ public class TestNodeManagerImpl
         subBranches.add(subMcus);
         subMcus.addUrl("test string" + ix, f_url);
         subMcus.setFlatItSource(new ArrayList());
-        subMcus.setTreeItSource(new ArrayList());
+        subMcus.setHashItSource(new ArrayList());
       }
       mcus.addUrl("test string" + ib, b_url);
       mcus.setFlatItSource(subBranches);
-      mcus.setTreeItSource(subFiles);
+      mcus.setHashItSource(subFiles);
       branches.add(mcus);
     }
     MockCachedUrlSet cus = new MockCachedUrlSet(mau,
                                                 new RangeCachedUrlSetSpec(
         startUrl));
     cus.addUrl("test string", startUrl);
-    cus.setTreeItSource(files);
+    cus.setHashItSource(files);
     cus.setFlatItSource(branches);
     return cus;
   }

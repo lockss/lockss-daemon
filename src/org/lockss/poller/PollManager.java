@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.71 2003-04-11 05:37:51 claire Exp $
+* $Id: PollManager.java,v 1.72 2003-04-15 01:27:00 aalto Exp $
  */
 
 /*
@@ -119,6 +119,7 @@ public class PollManager  extends BaseLockssManager {
 
     // register our status
     StatusService statusServ = theDaemon.getStatusService();
+    PollerStatus pollerStatus = new PollerStatus(this);
     statusServ.registerStatusAccessor(PollerStatus.MANAGER_STATUS_TABLE_NAME,
                                       new PollerStatus.ManagerStatus());
     statusServ.registerStatusAccessor(PollerStatus.POLL_STATUS_TABLE_NAME,
@@ -137,6 +138,8 @@ public class PollManager  extends BaseLockssManager {
     StatusService statusServ = theDaemon.getStatusService();
     statusServ.unregisterStatusAccessor(PollerStatus.MANAGER_STATUS_TABLE_NAME);
     statusServ.unregisterStatusAccessor(PollerStatus.POLL_STATUS_TABLE_NAME);
+    statusServ.unregisterObjectReferenceAccessor(
+        PollerStatus.MANAGER_STATUS_TABLE_NAME, ArchivalUnit.class);
 
     // unregister our router
     theRouter.unregisterMessageHandler(m_msgHandler);

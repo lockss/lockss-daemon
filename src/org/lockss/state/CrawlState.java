@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlState.java,v 1.5 2003-04-03 05:22:02 claire Exp $
+ * $Id: CrawlState.java,v 1.6 2003-04-15 01:27:00 aalto Exp $
  */
 
 /*
@@ -97,7 +97,7 @@ public class CrawlState {
         str = "Node Deleted";
         break;
       default:
-        str = "Undefined";
+        str = "None";
     }
     return str;
   }

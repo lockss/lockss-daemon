@@ -93,7 +93,7 @@ public class TestPollManager extends LockssTestCase {
   public void testMakePollRequest() {
     try {
       CachedUrlSet cus = null;
-      cus = testau.makeCachedUrlSet(rooturls[1], null, null);
+      cus = testau.makeCachedUrlSet(new RangeCachedUrlSetSpec(rooturls[1]));
       PollSpec spec = new PollSpec(cus, lwrbnd, uprbnd);
       pollmanager.requestPoll(LcapMessage.VERIFY_POLL_REQ, spec);
     }
@@ -145,7 +145,8 @@ public class TestPollManager extends LockssTestCase {
 	  new PollSpec(testau.getPluginId(),
 		       testau.getAUId(),
 		       urlstr,lwrbnd,uprbnd,
-		       testau.makeCachedUrlSet(urlstr,lwrbnd,uprbnd));
+		       testau.makeCachedUrlSet(new RangeCachedUrlSetSpec(urlstr,
+          lwrbnd, uprbnd)));
         sameroot[i] =  LcapMessage.makeRequestMsg(
           spec,
           testentries,
@@ -317,8 +318,8 @@ public class TestPollManager extends LockssTestCase {
         PollSpec spec = new PollSpec(testau.getPluginId(),
                                      testau.getAUId(),
                                      rooturls[i],lwrbnd, uprbnd,
-                                     testau.makeCachedUrlSet(rooturls[i],
-                                                             lwrbnd,uprbnd));
+                                     testau.makeCachedUrlSet(
+            new RangeCachedUrlSetSpec(rooturls[i], lwrbnd, uprbnd)));
         testmsg[i] =  LcapMessage.makeRequestMsg(
           spec,
           testentries,

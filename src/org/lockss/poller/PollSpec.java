@@ -1,5 +1,5 @@
 /*
- * $Id: PollSpec.java,v 1.7 2003-04-10 03:30:49 claire Exp $
+ * $Id: PollSpec.java,v 1.8 2003-04-15 01:27:00 aalto Exp $
  */
 
 /*
@@ -42,6 +42,13 @@ import org.lockss.protocol.*;
 import org.lockss.app.*;
 
 public class PollSpec {
+  /**
+   * A lower bound value which indicates the poll should use a
+   * {@link SingleNodeCachedUrlSetSpec} instead of a
+   * {@link RangeCachedUrlSetSpec}.
+   */
+  public static final String SINGLE_NODE_LWRBOUND = ".";
+
   private String auId;
   private String pluginId;
   private String url;
@@ -102,6 +109,10 @@ public class PollSpec {
       RangeCachedUrlSetSpec rcuss = (RangeCachedUrlSetSpec)cuss;
       lwrBound = rcuss.getLowerBound();
       uprBound = rcuss.getUpperBound();
+    } else if (cuss instanceof SingleNodeCachedUrlSetSpec) {
+      // not used, but needs to be set to allow this poll to overlap with
+      // other ranged polls
+      lwrBound = SINGLE_NODE_LWRBOUND;
     }
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: GenericContentHasher.java,v 1.12 2003-04-10 01:24:35 aalto Exp $
+ * $Id: GenericContentHasher.java,v 1.13 2003-04-15 01:27:01 aalto Exp $
  */
 
 /*
@@ -57,10 +57,10 @@ public class GenericContentHasher extends GenericHasher {
 
   public GenericContentHasher(CachedUrlSet cus, MessageDigest digest) {
     super(cus, digest);
-    iterator = cus.treeIterator();
+    iterator = cus.contentHashIterator();
     if (iterator == null) {
       throw new IllegalArgumentException("Called with a CachedUrlSet that "+
-					 "gave me a null treeIterator");
+					 "gave me a null contentHashIterator");
     }
   }
 
@@ -163,32 +163,5 @@ public class GenericContentHasher extends GenericHasher {
     log.debug3(totalHashed+" bytes hashed in this step");
     return totalHashed;
   }
-
-  protected CachedUrlSetNode getNextElement() {
-    // check to add root cus properly
-    if (!hashedRootCus) {
-      hashedRootCus = true;
-      if ((cus.getSpec() instanceof RangeCachedUrlSetSpec)) {
-        RangeCachedUrlSetSpec rSpec = (RangeCachedUrlSetSpec)cus.getSpec();
-        if (rSpec.getLowerBound()==null) {
-          // add the root cus if the poll hasn't already divided into ranges
-          return cus.makeCachedUrl(cus.getUrl());
-        } else if (rSpec.getLowerBound().equals(".")) {
-          // if range is specifically '.', ignore the iterator and do a hash
-          // only on this node
-          iterator = CollectionUtil.EMPTY_ITERATOR;
-          return cus.makeCachedUrl(cus.getUrl());
-        } else {
-          // otherwise use iterator normally
-          hashedRootCus = true;
-          return super.getNextElement();
-        }
-      } else {
-        return cus.makeCachedUrl(cus.getUrl());
-      }
-    }
-    return super.getNextElement();
-  }
-
 
 }

@@ -255,7 +255,7 @@ public class TestPoll extends LockssTestCase {
 	new PollSpec(testau.getPluginId(),
 		     testau.getAUId(),
 		     rooturls[0],null,null,
-		     testau.makeCachedUrlSet(rooturls[0],null,null));
+		     testau.makeCachedUrlSet(new RangeCachedUrlSetSpec(rooturls[0])));
       LcapMessage poll_msg = LcapMessage.makeRequestMsg(
           spec,
           null,
@@ -327,9 +327,16 @@ public class TestPoll extends LockssTestCase {
 					 LcapMessage testmsg, int numAgree,
                                          int numDisagree) throws Exception {
     log.debug("daemon = " + daemon);
-    CachedUrlSet cus = au.makeCachedUrlSet(testmsg.getTargetUrl(),
-                                               testmsg.getLwrBound(),
-                                               testmsg.getUprBound());
+    CachedUrlSetSpec cusSpec = null;
+    if ((testmsg.getLwrBound()!=null) &&
+        (testmsg.getLwrBound().equals(PollSpec.SINGLE_NODE_LWRBOUND))) {
+      cusSpec = new SingleNodeCachedUrlSetSpec(testmsg.getTargetUrl());
+    } else {
+      cusSpec = new RangeCachedUrlSetSpec(testmsg.getTargetUrl(),
+                                       testmsg.getLwrBound(),
+                                       testmsg.getUprBound());
+    }
+    CachedUrlSet cus = au.makeCachedUrlSet(cusSpec);
     PollSpec spec = new PollSpec(cus);
     Poll p = daemon.getPollManager().createPoll(testmsg, spec);
     p.m_tally.quorum = numAgree + numDisagree;
@@ -407,8 +414,8 @@ public class TestPoll extends LockssTestCase {
         PollSpec spec = new PollSpec(testau.getPluginId(),
                                      testau.getAUId(),
                                      rooturls[i],lwrbnd, uprbnd,
-                                     testau.makeCachedUrlSet(rooturls[i],
-                                                             lwrbnd,uprbnd));
+                                     testau.makeCachedUrlSet(
+            new RangeCachedUrlSetSpec(rooturls[i], lwrbnd, uprbnd)));
         testmsg[i] =  LcapMessage.makeRequestMsg(
           spec,
           agree_entries,

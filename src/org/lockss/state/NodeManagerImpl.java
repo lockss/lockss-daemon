@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.95 2003-04-10 05:47:31 claire Exp $
+ * $Id: NodeManagerImpl.java,v 1.96 2003-04-15 01:27:00 aalto Exp $
  */
 
 /*
@@ -47,11 +47,9 @@ import org.lockss.daemon.status.*;
 /**
  * Implementation of the NodeManager.
  */
-public class NodeManagerImpl
-    extends BaseLockssManager
-    implements NodeManager {
+public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
   /**
-       * This parameter indicates the size of the {@link NodeStateCache} used by the
+   * This parameter indicates the size of the {@link NodeStateCache} used by the
    * node manager.
    */
   public static final String PARAM_NODESTATE_CACHE_SIZE =
@@ -124,7 +122,8 @@ public class NodeManagerImpl
     }
   }
 
-  public void startPoll(CachedUrlSet cus, PollTally state, boolean isReplayPoll) {
+  public void startPoll(CachedUrlSet cus, PollTally state,
+                        boolean isReplayPoll) {
     NodeState nodeState = getNodeState(cus);
     PollSpec spec = state.getPollSpec();
     int status = isReplayPoll ? PollState.REPAIRING : PollState.RUNNING;
@@ -289,19 +288,9 @@ public class NodeManagerImpl
         // otherwise, schedule repair or name poll
         boolean doRepair = true;
         if (nodeState.isInternalNode()) {
-          // if internal node, probably don't do repair
-          doRepair = false;
-          CachedUrlSetSpec spec = results.getCachedUrlSet().getSpec();
-          if (spec instanceof RangeCachedUrlSetSpec) {
-            RangeCachedUrlSetSpec rSpec = (RangeCachedUrlSetSpec)spec;
-            if ((rSpec.getLowerBound()!=null) &&
-                (rSpec.getLowerBound().equals(
-                RangeCachedUrlSetSpec.SINGLE_NODE_RANGE))) {
-              // repair only if this was a content poll with range '.', which
-              // indicates a single-node content poll
-              doRepair = true;
-            }
-          }
+          // if internal node, repair only if a 'single node' spec
+          doRepair = (results.getCachedUrlSet().getSpec()
+                      instanceof SingleNodeCachedUrlSetSpec);
         }
         if (doRepair) {
           logger.debug2("lost content poll, state = repairing, marking for repair.");
@@ -327,10 +316,14 @@ public class NodeManagerImpl
         // if poll is mine
         logger.debug2("won name poll, calling content poll on subnodes.");
         try {
-          // call a content poll for this node's content
-          logger.debug2("calling content poll on node's contents");
-          callContentPoll(results.getCachedUrlSet(),
-                          RangeCachedUrlSetSpec.SINGLE_NODE_RANGE, null);
+          // call a content poll for this node's content if we haven't started
+          // sub-dividing yet
+          CachedUrlSetSpec spec = results.getCachedUrlSet().getSpec();
+          if ((spec instanceof RangeCachedUrlSetSpec) &&
+              (((RangeCachedUrlSetSpec)spec).getLowerBound()==null)) {
+            logger.debug2("calling content poll on node's contents");
+            callSingleNodeContentPoll(results.getCachedUrlSet());
+          }
           // call a content poll on this node's subnodes
           callContentPollsOnSubNodes(nodeState, results.getCachedUrlSet());
           pollState.status = PollState.WON;
@@ -365,7 +358,8 @@ public class NodeManagerImpl
         else {
           // if not found locally, fetch
           logger.debug2("marking missing node for repair: " + url);
-          CachedUrlSet newCus = au.makeCachedUrlSet(baseUrl + url, null, null);
+          CachedUrlSet newCus = au.makeCachedUrlSet(
+              new RangeCachedUrlSetSpec(baseUrl + url));
           markNodeForRepair(newCus, results);
         }
       }
@@ -375,7 +369,8 @@ public class NodeManagerImpl
         String url = (String) localIt.next();
         logger.debug2("deleting node: " + url);
         try {
-          CachedUrlSet oldCus = au.makeCachedUrlSet(baseUrl + url, null, null);
+          CachedUrlSet oldCus = au.makeCachedUrlSet(
+              new RangeCachedUrlSetSpec(baseUrl + url));
           deleteNode(oldCus);
           //set crawl status to DELETED
           NodeState oldState = getNodeState(oldCus);
@@ -585,6 +580,16 @@ public class NodeManagerImpl
     pollManager.requestPoll(LcapMessage.CONTENT_POLL_REQ, spec);
   }
 
+  private void callSingleNodeContentPoll(CachedUrlSet cus) throws IOException {
+    // create a 'single node' CachedUrlSet
+    CachedUrlSet newCus = cus.getArchivalUnit().makeCachedUrlSet(
+        new SingleNodeCachedUrlSetSpec(cus.getUrl()));
+    PollSpec spec = new PollSpec(newCus);
+    logger.debug2("Calling a content poll on " + spec);
+    pollManager.requestPoll(LcapMessage.CONTENT_POLL_REQ, spec);
+  }
+
+
   private void callLastPoll(PollSpec spec, PollState lastPoll) {
     try {
       if (lastPoll.type == Poll.CONTENT_POLL) {
@@ -637,7 +642,7 @@ public class NodeManagerImpl
     Iterator childIt = null;
     switch (pollType) {
       case Poll.CONTENT_POLL:
-        childIt = cus.treeIterator();
+        childIt = cus.contentHashIterator();
         break;
       case Poll.NAME_POLL:
         childIt = cus.flatSetIterator();

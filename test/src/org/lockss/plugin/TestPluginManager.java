@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.13 2003-04-04 08:40:01 tal Exp $
+ * $Id: TestPluginManager.java,v 1.14 2003-04-15 01:27:00 aalto Exp $
  */
 
 /*
@@ -44,6 +44,7 @@ import org.lockss.util.*;
 import org.lockss.test.*;
 import org.lockss.repository.TestLockssRepositoryImpl;
 import org.lockss.repository.LockssRepositoryServiceImpl;
+import org.lockss.poller.PollSpec;
 
 /**
  * Test class for org.lockss.plugin.PluginManager
@@ -204,7 +205,26 @@ public class TestPluginManager extends LockssTestCase {
     assertTrue(aucuss instanceof AUCachedUrlSetSpec);
   }
 
+  public void testFindSingleNodeCUS() throws Exception {
+    String url = "http://foo.bar/";
+    String lower = PollSpec.SINGLE_NODE_LWRBOUND;
 
+    doConfig();
+    MockPlugin mpi = (MockPlugin)mgr.getPlugin(mockPlugId);
+
+    // make a PollSpec with info from a manually created CUS, which should
+    // match one of the registered AUs
+    CachedUrlSet protoCus = makeCUS(mockPlugId, mauauid1, url, lower, null);
+    PollSpec ps1 = new PollSpec(protoCus);
+
+    // verify PluginManager can make a CUS for the PollSpec
+    CachedUrlSet cus = mgr.findCachedUrlSet(ps1);
+    assertNotNull(cus);
+    // verify the CUS's CUSS
+    CachedUrlSetSpec cuss = cus.getSpec();
+    assertTrue(cuss instanceof SingleNodeCachedUrlSetSpec);
+    assertEquals(url, cuss.getUrl());
+  }
 
   public void testFindMostRecentCachedUrl() throws Exception {
     String prefix = "http://foo.bar/";

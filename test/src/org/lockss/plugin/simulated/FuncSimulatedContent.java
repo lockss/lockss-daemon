@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSimulatedContent.java,v 1.31 2003-04-02 23:28:37 tal Exp $
+ * $Id: FuncSimulatedContent.java,v 1.32 2003-04-15 01:27:00 aalto Exp $
  */
 
 /*
@@ -173,7 +173,7 @@ public class FuncSimulatedContent extends LockssTestCase {
     String parent = sau.SIMULATED_URL_ROOT + "/branch1";
     CachedUrlSetSpec spec = new RangeCachedUrlSetSpec(parent);
     CachedUrlSet set = sau.cachedUrlSetFactory(sau, spec);
-    Iterator setIt = set.treeIterator();
+    Iterator setIt = set.contentHashIterator();
     ArrayList childL = new ArrayList(15);
     while (setIt.hasNext()) {
       childL.add(((CachedUrlSetNode)setIt.next()).getUrl());

@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.31 2003-04-11 05:37:51 claire Exp $
+ * $Id: PluginManager.java,v 1.32 2003-04-15 01:27:01 aalto Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import org.lockss.daemon.status.*;
 import org.lockss.util.*;
 import org.lockss.app.*;
 import org.lockss.poller.*;
+import org.lockss.poller.PollSpec;
 
 /**
  * Plugin global functionality
@@ -307,8 +308,12 @@ public class PluginManager extends BaseLockssManager {
     CachedUrlSet cus;
     if (AuUrl.isAuUrl(url)) {
       cus = au.getAUCachedUrlSet();
+    } else if ((spec.getLwrBound()!=null) &&
+               (spec.getLwrBound().equals(PollSpec.SINGLE_NODE_LWRBOUND))) {
+      cus = au.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url));
     } else {
-      cus = au.makeCachedUrlSet(url, spec.getLwrBound(), spec.getUprBound());
+      cus = au.makeCachedUrlSet(new RangeCachedUrlSetSpec(url,
+          spec.getLwrBound(), spec.getUprBound()));
     }
     log.debug3("ret cus: " + cus);
     return cus;
@@ -331,8 +336,12 @@ public class PluginManager extends BaseLockssManager {
     CachedUrlSet cus;
     if (AuUrl.isAuUrl(url)) {
       cus = au.getAUCachedUrlSet();
+    } else if ((spec.getLwrBound()!=null) &&
+               (spec.getLwrBound().equals(PollSpec.SINGLE_NODE_LWRBOUND))) {
+      cus = au.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url));
     } else {
-      cus = au.makeCachedUrlSet(url, spec.getLwrBound(), spec.getUprBound());
+      cus = au.makeCachedUrlSet(new RangeCachedUrlSetSpec(url,
+          spec.getLwrBound(), spec.getUprBound()));
     }
     log.debug3("ret cus: " + cus);
     return cus;
