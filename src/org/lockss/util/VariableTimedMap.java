@@ -31,7 +31,7 @@ package org.lockss.util;
 import java.util.*;
 
 /**
- * Variant of TimedMap each entry has its own interval
+ * Variant of TimedMap where each entry has its own interval
  * and will expire accordingly.
  * @author Tyrone Nicholas
  * @version 1.0

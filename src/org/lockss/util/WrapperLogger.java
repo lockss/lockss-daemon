@@ -1,5 +1,5 @@
 /*
- * $Id: WrapperLogger.java,v 1.2 2003-09-04 23:11:17 tyronen Exp $
+ * $Id: WrapperLogger.java,v 1.3 2003-12-17 02:49:59 tlipkis Exp $
  */
 
 /*
@@ -31,12 +31,12 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.util;
 
+import java.util.*;
+
 /**
- * <p>Title: WrapperLogger</p>
- * <p>Description: Static class for use in the wrapper layer</p>
+ * Static class for use in the wrapper layer.
  * @author Tyrone Nicholas
  */
-import java.util.*;
 
 public class WrapperLogger {
 

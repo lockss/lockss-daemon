@@ -1,5 +1,5 @@
 /*
- * $Id: ClassUtil.java,v 1.1 2003-07-25 00:34:07 tyronen Exp $
+ * $Id: ClassUtil.java,v 1.2 2003-12-17 02:49:59 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -30,17 +30,11 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util;
 
-/**
- * <p>Title: </p>
- * <p>Description: Miscellaneous utility methods that don't fit anywhere
- * else.</p>
- * <p>Copyright: Copyright (c) 2003</p>
- * <p>Company: </p>
- * @author not attributable
- * @version 1.0
- */
-
 import java.util.*;
+
+/**
+ * Utilities for dealing with classes.
+ */
 
 public class ClassUtil {
 
