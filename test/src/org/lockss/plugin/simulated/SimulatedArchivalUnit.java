@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.4 2002-11-07 02:15:29 aalto Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.5 2002-11-08 00:11:43 aalto Exp $
  */
 
 /*
@@ -123,6 +123,13 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
   }
 
   /**
+   * deleteContentTree() deletes the simulated content.
+   */
+  public void deleteContentTree() {
+    scgen.deleteContentTree();
+  }
+
+  /**
    * Returns the {@link SimulatedContentGenerator} for setting
    * parameters.
    * @return the generator
@@ -130,6 +137,10 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
 
   public SimulatedContentGenerator getContentGenerator() {
     return scgen;
+  }
+
+  public void pause() {
+    // no pauses since this is a test unit
   }
 
   /**
