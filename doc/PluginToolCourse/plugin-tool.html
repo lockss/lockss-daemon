@@ -7,7 +7,7 @@
 <body>
 <h2 style="text-align: center;">Using The LOCKSS Plugin Generation Tool</h2>
 <h3 style="text-align: center;">The LOCKSS Team</h3>
-<h3 style="text-align: center;">DRAFT 6/29/04</h3>
+<h3 style="text-align: center;">7/21/04</h3>
 <h4>Introduction</h4>
 Every journal that LOCKSS might preserve has some peculiarities; some
 are more peculiar than others. The LOCKSS daemon gets its knowledge of
@@ -83,7 +83,7 @@ and run the command <span style="font-weight: bold;">ant run-tool
 <h4>Before You Start Clicking<br>
 </h4>
 <img src="initial-window.gif" title="" alt="Initial window"
- style="width: 370px; height: 293px;" align="right">When the generator
+ style="width: 390px; height: 373px;" align="right">When the generator
 starts you will see a window which contains the
 fields needed to define the
 plug-in, like this: <br clear="all">
@@ -166,7 +166,7 @@ Click on the NONE and type it, substituting your DNS name for <span
   <li>We are defining version 1 of the Disputatio plugin, so make sure
 the version field is 1.</li>
   <li><img src="configuration.gif" title=""
- alt="Default configuration window" style="width: 480px; height: 250px;"
+ alt="Default configuration window" style="width: 490px; height: 282px;"
  align="right">Now click on the row of dots beside "Configuration
 Parameters". A
 window pops up looking like this: In this case, the only
@@ -188,14 +188,14 @@ Add.<br clear="all">
 <ul>
   <li><img src="configuration2.gif" title=""
  alt="Configuration window filled in"
- style="width: 480px; height: 250px;" align="right">The window should
+ style="width: 490px; height: 282px;" align="right">The window should
 look like this: Now click OK.<br clear="all">
   </li>
 </ul>
 <br>
 <ul>
   <li><img src="url-template.gif" title=""
- alt="URL template initial state" style="width: 380px; height: 315px;"
+ alt="URL template initial state" style="width: 395px; height: 374px;"
  align="right">Now we use these
 parameters to define the Start URL Template, which
 tells the
@@ -207,18 +207,18 @@ window pops up, looking like this:<br clear="all">
 <br>
 <ul>
   <li><img src="url-template2.gif" title=""
- alt="URL Name template filled in" style="width: 380px; height: 315px;"
- align="right">Click "Insert Parameter", click
-in the upper box, type
-lockss, pull down to <span style="font-weight: bold;">year</span>,
-click "Insert Parameter" and the window
-looks like this:
-The string in the upper box is a printf format string into which the
-parameters in the lower box are
+ alt="URL Name template filled in" style="width: 395px; height: 374px;"
+ align="right">Choose "Base URL" from the pull-down menu and click
+"Insert Parameter". Choose "String Literal" and click "Insert
+Parameter"; type <span style="font-weight: bold;">lockss</span> into
+the popup then click "OK". Choose "year" from the pull-down menu and
+click "Insert Parameter".&nbsp; Choose "String Literal" and click
+"Insert Parameter"; type <span style="font-weight: bold;">.html</span>
+into the popup then click "OK". The "Editor View" tab shows you the
+resulting format string into which the
+parameters in blue are
 substituted to obtain, in our case, <span style="font-weight: bold;">http://disputatio.com/lockss2004.html</span>
-etc. Details on printf format strings can be found <a
- href="http://www.mkssoftware.com/docs/man1/printf.1.asp">here</a> (see
-Roundup issue 992).
+etc.&nbsp;
 Click Save.<br clear="all">
   </li>
 </ul>
@@ -228,7 +228,7 @@ Click Save.<br clear="all">
 <ul>
   <li><img src="au-name.gif" title=""
  alt="AU Name template initial state"
- style="width: 380px; height: 315px;" align="right">Next we specify the
+ style="width: 395px; height: 374px;" align="right">Next we specify the
 name that each AU
 captured
 by this plugin will have in the LOCKSS Administrative user interface.
@@ -239,14 +239,16 @@ window that looks like this:<br clear="all">
 <br>
 <ul>
   <li><img src="au-name2.gif" title="" alt="AU Name Template filled in"
- style="width: 380px; height: 315px;" align="right">We want
+ style="width: 395px; height: 374px;" align="right">We want
 the name of the 2004 AU to be <span style="font-weight: bold;">http://disputatio.com
 2004</span>, i.e. the <span style="font-weight: bold;">base_url</span>
 followed by a space
 followed by the <span style="font-weight: bold;">year</span>.
-Click&nbsp; "Insert Parameter", click in the upper box, type a space,
-pull-down the menu beside "Insert Parameter" and choose <span
- style="font-weight: bold;">year</span>, click "Insert Parameter" and
+Choose "Base URL" from the pull-down menu, click "Insert Parameter".
+Choose "String Literal" from the pull-down menu, click "Insert
+Parameter", type a space in the popup then click "OK". Choose <span
+ style="font-weight: bold;">year</span> from the pull-down menu, click
+"Insert Parameter" and
 the
 window looks like this:&nbsp;
 The <span style="font-weight: bold;">base_url</span> parameter is
@@ -265,7 +267,7 @@ pages, and so on. Click on the row of dots beside to get a window that
 looks
 like this:<img src="crawl-template.gif" title=""
  alt="Crawl rule template initial state"
- style="width: 440px; height: 140px;" align="right">&nbsp; The left
+ style="width: 450px; height: 132px;" align="right">&nbsp; The left
 column contains actions that are taken if the URL matches the pattern
 in the right column (see Roundup issue 993). Two rules are
 pre-specified for
@@ -295,7 +297,7 @@ typical URL we want to include is <a
 followed by the text <span style="font-weight: bold;">articles/</span>
 followed by anything followed by <span style="font-weight: bold;">.pdf</span>.</li>
   <li><img src="crawl-template2.gif" title=""
- alt="Pattern editor initial state" style="width: 380px; height: 315px;"
+ alt="Pattern editor initial state" style="width: 395px; height: 374px;"
  align="right">Click Add to get a default rule to edit. It will have
 the
 Include action, which is what we want, and the NONE pattern, which we
@@ -305,7 +307,8 @@ edit by clicking on it to get a window that looks like this:<br
 </ul>
 <ul>
   <li><img src="crawl-template3.gif" title="" alt="Crawl rule stage 1"
- style="width: 380px; height: 315px;" align="right">Click on "Insert
+ style="width: 395px; height: 374px;" align="right">Choose "Base URL"
+from the "Insert Parameter" pull-down menu and click on "Insert
 Parameter" to
 start the pattern with <span style="font-weight: bold;">base_url</span>,
 like this:<br clear="all">
@@ -315,7 +318,7 @@ like this:<br clear="all">
 <br>
 <ul>
   <li><img src="crawl-template4.gif" title=""
- alt="Pattern editor stage 2" style="width: 380px; height: 315px;"
+ alt="Pattern editor stage 2" style="width: 395px; height: 374px;"
  align="right">Now pull down the menu by
 "Insert Match" and choose "String Literal". Click "Insert Match" and a
 box pops up into which you type the text you want to match, in the case
@@ -326,7 +329,7 @@ pattern editor window looks like this:<br clear="all">
 <br>
 <ul>
   <li><img src="crawl-template5.gif" title=""
- alt="Pattern editor stage 4" style="width: 380px; height: 315px;"
+ alt="Pattern editor stage 4" style="width: 395px; height: 374px;"
  align="right">Next we want to match anything, so pull down the menu by
 "Insert
 Match", choose&nbsp; "Anything" and click "Insert Match". The pattern
@@ -343,7 +346,7 @@ characters, specifically in our case strings like <span
 <br>
 <ul>
   <li><img src="crawl-template6.gif" title=""
- alt="Pattern editor stage 5" style="width: 380px; height: 315px;"
+ alt="Pattern editor stage 5" style="width: 395px; height: 374px;"
  align="right">Next we want to match <span style="font-weight: bold;">.pdf</span>.
 Pull down the menu by "Insert Match", choose "String Literal" and click
 Insert Match. A box pops up into which you type <span
@@ -360,7 +363,7 @@ meta characters automatically.<br clear="all">
 <ul>
   <li><img src="crawl-template7.gif" title=""
  alt="Crawl rule window with third rule"
- style="width: 440px; height: 140px;" align="right">Now we're done with
+ style="width: 450px; height: 232px;" align="right">Now we're done with
 this rule, so click Save. The Crawl Rule
 window now looks like this: <br clear="all">
   </li>
@@ -368,7 +371,7 @@ window now looks like this: <br clear="all">
 <br>
 <ul>
   <li><img src="base-window2.gif" title="" alt="Base window after edits"
- style="width: 370px; height: 293px;" align="right">We're done for now,
+ style="width: 390px; height: 373px;" align="right">We're done for now,
 so click OK. The base plugin editor
 window
 now looks like:<br clear="all">
@@ -378,7 +381,7 @@ now looks like:<br clear="all">
 <ul>
   <li><img src="test-crawl.gif" title=""
  alt="First stage of crawl rule test"
- style="width: 400px; height: 131px;" align="right">We are now ready to
+ style="width: 410px; height: 160px;" align="right">We are now ready to
 start testing the plugin.&nbsp; Pull
 down the
 "Plugin" menu and choose "Test Crawl Rules ...". A window pops up that
@@ -386,14 +389,15 @@ allows you to provide the configuration parameters you decided earlier
 that were needed to identify an AU. Type
 values for the configuration parameters, in our case <span
  style="font-weight: bold;">base_url</span> http://disputatio.com/ and <span
- style="font-weight: bold;">year</span> 2004. Click "Check AU".<br
+ style="font-weight: bold;">year</span> 2004. Note the trailing / on
+the <span style="font-weight: bold;">base_url</span>. Click "Check AU".<br
  clear="all">
   </li>
 </ul>
 <br>
 <ul>
   <li><img src="test-crawl2.gif" title="" alt="Before crawl rule test"
- style="width: 400px; height: 400px;" align="right">Now a window
+ style="width: 410px; height: 432px;" align="right">Now a window
 looking like this pops up with pre-loaded fields for the publisher
 manifest page you
 want to start testing from, in our case
@@ -406,7 +410,7 @@ seconds to pause between fetching pages): <br clear="all">
 <br>
 <ul>
   <li><img src="test-crawl3.gif" title="" alt="Results of test"
- style="width: 400px; height: 400px;" align="right">Click "Check URL"
+ style="width: 410px; height: 432px;" align="right">Click "Check URL"
 to start the test. The test results appear in the scrolling text pane:<br
  clear="all">
   </li>
@@ -416,13 +420,15 @@ to start the test. The test results appear in the scrolling text pane:<br
   <li>In our case the results pane ends
 up containing <a href="disputatio1.txt">this</a>. <img
  src="crawl-template8.gif" title="" alt="Final crawl rules"
- style="width: 438px; height: 172px;" align="right">You will see that
+ style="width: 450px; height: 217px;" align="right">You will see that
 our rules correctly included all the
 articles
 and correctly excluded http://lockss.stanford.edu/, but there were some
 files excluded that should have been included. We need to add rules
 including <span style="font-weight: bold;">base_url</span> followed by
-anything followed by <span style="font-weight: bold;">.js</span> and <span
+anything followed by <span style="font-weight: bold;">.js</span>, <span
+ style="font-weight: bold;">base_url</span> followed by anything
+followed by <span style="font-weight: bold;">.css</span> and <span
  style="font-weight: bold;">base_url</span> followed by <span
  style="font-weight: bold;">images/</span> followed by anything
 followed by <span style="font-weight: bold;">.gif</span>. Click on the
@@ -518,7 +524,7 @@ choose:</li>
 <br>
 <ul>
   <li><img src="crawl-template9.gif" title=""
- alt="Alternate crawl rules" style="width: 440px; height: 140px;"
+ alt="Alternate crawl rules" style="width: 450px; height: 217px;"
  align="right">The Crawl Rule
 window will look like this:&nbsp; Note
 the backslashes before the periods in the .html string literals in the
@@ -544,7 +550,7 @@ choose:</li>
 <br>
 <ul>
   <li><img src="crawl-template10.gif" title=""
- alt="Improved crawl rules" style="width: 441px; height: 164px;"
+ alt="Improved crawl rules" style="width: 450px; height: 217px;"
  align="right">Now the Crawl Rule
 window will look like this:&nbsp; You
 may need to expand the window to see it all (see Roundup issue 990).
@@ -580,7 +586,7 @@ the Plugin ID to <span style="font-weight: bold;">uk.ac.shu.plugin.emls.emlsPlug
 of configuration parameters, we need it because it is part of the
 publisher manifest page URL.</li>
   <li><img src="emls-url.gif" title="" alt="EMLS Start URL dialog"
- style="width: 380px; height: 315px;" align="right">Pop up the Start
+ style="width: 395px; height: 374px;" align="right">Pop up the Start
 URL dialog. Insert <span style="font-weight: bold;">base_url</span>,
 type <span style="font-weight: bold;">lockss-volume</span>, insert <span
  style="font-weight: bold;">volume</span>, type <span
@@ -590,7 +596,7 @@ type <span style="font-weight: bold;">lockss-volume</span>, insert <span
 <br>
 <ul>
   <li><img src="emls-pad.gif" title="" alt="Numeric padding selection"
- style="width: 390px; height: 195px;" align="right">When you insert <span
+ style="width: 400px; height: 227px;" align="right">When you insert <span
  style="font-weight: bold;">volume</span> you will be asked to set the
 padding. In this case we need "do not pad" to get, in our case, just
 the 9.<br clear="all">
@@ -599,7 +605,7 @@ the 9.<br clear="all">
 <br>
 <ul>
   <li><img src="emls-au-name.gif" title="" alt="EMLS AU name"
- style="width: 380px; height: 315px;" align="right">Pop up the AU Name
+ style="width: 395px; height: 374px;" align="right">Pop up the AU Name
 Template dialog. Insert base_url, type space <span
  style="font-weight: bold;">vol</span> space, insert volume and set the
 padding to "no padding".&nbsp; The AU name will look like <span
@@ -610,7 +616,7 @@ padding to "no padding".&nbsp; The AU name will look like <span
 <br>
 <ul>
   <li><img src="emls-crawl1.gif" title="" alt="EMLS initial crawl rule"
- style="width: 440px; height: 140px;" align="right">Pop up the Crawl
+ style="width: 450px; height: 164px;" align="right">Pop up the Crawl
 Rules dialog. Include everything that matches Start followed by
 base_url followed by volume padded with zeros to a field width of 2
 followed by a literal string of <span style="font-weight: bold;">-</span>
@@ -622,7 +628,7 @@ End.<br clear="all">
 <br>
 <ul>
   <li><img src="emls-crawl2.gif" title="" alt="First EMLS crawl test"
- style="width: 400px; height: 131px;" align="right">Now test this crawl
+ style="width: 410px; height: 160px;" align="right">Now test this crawl
 rule. Configure the AU with the base_url <a
  href="http://www.shu.ac.uk/emls/">http://www.shu.ac.uk/emls/</a> and
 the volume 9. Start with the default depth of 1.<br clear="all">
@@ -642,7 +648,7 @@ be collected at depth 2 or more.</li>
 <ul>
   <li><img src="emls-crawl4.gif" title=""
  alt="Including the special edition"
- style="width: 440px; height: 140px;" align="right">Pop up the Crawl
+ style="width: 450px; height: 188px;" align="right">Pop up the Crawl
 Rules dialog and add a rule that includes the special issue table of
 contents for the special issue by including anything that matches Start
 followed by <span style="font-weight: bold;">base_url</span> followed
@@ -655,7 +661,7 @@ End.<br clear="all">
 <br>
 <ul>
   <li><img src="emls-crawl3.gif" title="" alt="EMLS crawl rule test"
- style="width: 400px; height: 400px;" align="right">Now test these
+ style="width: 410px; height: 432px;" align="right">Now test these
 crawl rules. Configure the AU with the base_url <a
  href="http://www.shu.ac.uk/emls/">http://www.shu.ac.uk/emls/</a> and
 the volume 9. Set the depth to 2. The test will take a while as it
@@ -667,7 +673,7 @@ waits the 6 seconds between fetching each page. The results are <a
 <br>
 <ul>
   <li><img src="emls-crawl6.gif" title="" alt="Addition rule for .gif"
- style="width: 440px; height: 140px;" align="right">Note that we are
+ style="width: 450px; height: 201px;" align="right">Note that we are
 still excluding some .gif files that should be included. Pop up the
 Crawl Rules dialog and add a rule that matches <span
  style="font-weight: bold;">base_url</span> followed by Anything
@@ -679,7 +685,7 @@ followed by End,<br clear="all">
 <ul>
   <li><img src="emls-crawl5.gif" title=""
  alt="Third test of EMLS crawl rules"
- style="width: 400px; height: 400px;" align="right">Now test these
+ style="width: 410px; height: 432px;" align="right">Now test these
 crawl rules again. Configure the AU with the base_url <a
  href="http://www.shu.ac.uk/emls/">http://www.shu.ac.uk/emls/</a>
 and the volume 9. Set the depth to 3. The test will take 5 minutes or
