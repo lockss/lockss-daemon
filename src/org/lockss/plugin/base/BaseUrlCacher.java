@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.31 2004-03-11 09:42:16 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.31.2.1 2004-03-18 03:30:39 tlipkis Exp $
  */
 
 /*
@@ -200,31 +200,34 @@ public class BaseUrlCacher implements UrlCacher {
     if (otherNames != null &&
 	isRedirectOption(REDIRECT_OPTION_STORE_ALL)) {
       CachedUrl cu = getCachedUrl();
-      for (Iterator iter = otherNames.iterator(); iter.hasNext(); ) {
-	String name = (String)iter.next();
+      CIProperties headerCopy  = CIProperties.fromProperties(headers);
+      int last = otherNames.size() - 1;
+      for (int ix = 0; ix <= last; ix++) {
+	String name = (String)otherNames.get(ix);
 	if (logger.isDebug2())
 	  logger.debug2("Storing in redirected-to url '"+ name +"'");
 	InputStream is = cu.getUnfilteredInputStream();
-	if (name.equals(fetchUrl)) {
-	  // This one was not redirected, don't store a redirected-to
-	  // property.  (This is "last in list", except if a directory
-	  // (slash) redirection was last, in which case name is the
-	  // unslashed name, and a redirected to will be written
-	  // effectively pointing to (the slashed version of) itself.  The
-	  // proxy must be aware of this.  (It can't rely on this property
-	  // being present, becuase foo/ might later be fetched, not due to
-	  // a redirect from foo.)
-	  CIProperties newHeaders  = new CIProperties();
-	  for (Iterator pi = headers.keySet().iterator(); pi.hasNext(); ) {
-	    String key = (String)pi.next();
-	    if (!key.equalsIgnoreCase(CachedUrl.PROPERTY_REDIRECTED_TO)) {
-	      newHeaders.setProperty(key, headers.getProperty(key));
-	    }
-	  }
-	  storeContentIn(name, is, newHeaders);
+	if (ix < last) {
+	  // this one was redirected, set its redirected-to prop to the
+	  // next in the list.
+	  headerCopy.setProperty(CachedUrl.PROPERTY_REDIRECTED_TO,
+				 (String)otherNames.get(ix + 1));
+	} else if (!name.equals(fetchUrl)) {
+	  // Last in list.  If not same as fetchUrl, means the final
+	  // redirection was a directory(slash) redirection, which we don't
+	  // store as a different name or put on otherNames.  Indicate the
+	  // redirection to the slashed version.  The proxy must be aware
+	  // of this.  (It can't rely on this property being present,
+	  // becuase foo/ might later be fetched, not due to a redirect
+	  // from foo.)
+	  headerCopy.setProperty(CachedUrl.PROPERTY_REDIRECTED_TO, fetchUrl);
 	} else {
-	  storeContentIn(name, is, headers);
+	  // This is the name that finally got fetched, don't store
+	  // redirect prop or content-url
+	  headerCopy.remove(CachedUrl.PROPERTY_REDIRECTED_TO);
+	  headerCopy.remove(CachedUrl.PROPERTY_CONTENT_URL);
 	}
+	storeContentIn(name, is, headerCopy);
       }
     }
   }
@@ -308,6 +311,12 @@ public class BaseUrlCacher implements UrlCacher {
       conn.storeResponseHeaderInto(props, CachedUrl.HEADER_PREFIX);
       String actualURL = conn.getActualUrl();
       if (!origUrl.equals(actualURL)) {
+	props.setProperty(CachedUrl.PROPERTY_CONTENT_URL, actualURL);
+      }
+      if (otherNames != null) {
+	props.setProperty(CachedUrl.PROPERTY_REDIRECTED_TO,
+			  (String)otherNames.get(0));
+      } else if (!origUrl.equals(actualURL)) {
 	props.setProperty(CachedUrl.PROPERTY_REDIRECTED_TO, actualURL);
       }
       uncachedProperties = props;
@@ -364,6 +373,7 @@ public class BaseUrlCacher implements UrlCacher {
     }
   }
 
+  /** Overridable so testing code can return a MockLockssUrlConnection */
   protected LockssUrlConnection makeConnection(String url,
 					       LockssUrlConnectionPool pool)
       throws IOException {
@@ -395,6 +405,9 @@ public class BaseUrlCacher implements UrlCacher {
     checkConnectException(conn);
   }
 
+  /** Handle a single redirect response: determine whether it should be
+   * followed and change the state (fetchUrl) to set up for the next fetch.
+   * @return true if another request should be issued, false if not. */
   private boolean processRedirectResponse() {
     //get the location header to find out where to redirect to
     String location = conn.getResponseHeaderValue("location");
@@ -411,7 +424,7 @@ public class BaseUrlCacher implements UrlCacher {
     // update the current location with the redirect location.
     try {
       String newUrlString = UrlUtil.resolveUri(fetchUrl, location);
-      if (isRedirectOption(REDIRECT_OPTION_STORE_ALL)) {
+      if (isRedirectOption(REDIRECT_OPTION_IF_CRAWL_SPEC)) {
 	if (!getArchivalUnit().shouldBeCached(newUrlString)) {
 	  logger.warning("Redirect not in crawl spec: " + newUrlString +
 			 " from: " + origUrl);
@@ -421,10 +434,6 @@ public class BaseUrlCacher implements UrlCacher {
       conn.release();
       conn = null;
 
-      if (otherNames == null) {
-	otherNames = new ArrayList();
-      }
-
       // XXX
       // The names .../foo and .../foo/ map to the same repository node, so
       // the case of a slash-appending redirect requires special handling.
@@ -432,6 +441,9 @@ public class BaseUrlCacher implements UrlCacher {
       // another entry for the slash redirection.
 
       if (!UrlUtil.isDirectoryRedirection(fetchUrl, newUrlString)) {
+	if (otherNames == null) {
+	  otherNames = new ArrayList();
+	}
 	otherNames.add(newUrlString);
       }
       fetchUrl = newUrlString;

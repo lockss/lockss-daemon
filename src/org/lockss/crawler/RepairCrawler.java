@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.17.2.2 2004-03-16 00:23:33 troberts Exp $
+ * $Id: RepairCrawler.java,v 1.17.2.3 2004-03-18 03:30:40 tlipkis Exp $
  */
 
 /*
@@ -240,6 +240,7 @@ public class RepairCrawler extends CrawlerImpl {
     if (!url.equals(actualURL)) {
       logger.info("setProperty(\"redirected-to\", " + actualURL + ")");
       props.setProperty(CachedUrl.PROPERTY_REDIRECTED_TO, actualURL);
+      props.setProperty(CachedUrl.PROPERTY_CONTENT_URL, actualURL);
     }
     return props;
   }

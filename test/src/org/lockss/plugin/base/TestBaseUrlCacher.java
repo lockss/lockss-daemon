@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.21 2004-03-11 09:42:16 tlipkis Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.21.2.1 2004-03-18 03:30:39 tlipkis Exp $
  */
 
 /*
@@ -289,6 +289,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
     // check the CU contents and properties
     assertCuContents(TEST_URL, "foo");
     assertCuProperty(TEST_URL, null, CachedUrl.PROPERTY_REDIRECTED_TO);
+    assertCuProperty(TEST_URL, null, CachedUrl.PROPERTY_CONTENT_URL);
   }
 
   // Should throw exception derived from response code
@@ -342,6 +343,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
     CIProperties p = muc.getUncachedProperties();
     assertNull(p.getProperty("location"));
     assertEquals(redTo, p.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO));
+    assertEquals(redTo, p.getProperty(CachedUrl.PROPERTY_CONTENT_URL));
     assertReaderMatchesString("bar", new InputStreamReader(is));
     // Make sure the UrlCacher still has the original URL
     assertEquals(TEST_URL, muc.getUrl());
@@ -367,21 +369,24 @@ public class TestBaseUrlCacher extends LockssTestCase {
 
   // Should follow redirection to URL in crawl spec
   public void testRedirectChain() throws Exception {
+    String redTo1 = "http://2.2/a";
+    String redTo2 = "http://2.2/b";
     String redTo = "http://somewhere.else/foo";
     MockConnectionMockBaseUrlCacher muc =
       new MockConnectionMockBaseUrlCacher(mcus, TEST_URL);
-    muc.addConnection(makeConn(301, "Moved to Spain", "http://2.2/a"));
-    muc.addConnection(makeConn(301, "Moved to Spain", "http://2.2/b"));
+    muc.addConnection(makeConn(301, "Moved to Spain", redTo1));
+    muc.addConnection(makeConn(301, "Moved to Spain", redTo2));
     muc.addConnection(makeConn(301, "Moved to Spain", redTo));
     muc.addConnection(makeConn(200, "Ok", null, "bar"));
     muc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_STORE_ALL_IN_SPEC);
-    mau.addUrlToBeCached("http://2.2/a");
-    mau.addUrlToBeCached("http://2.2/b");
+    mau.addUrlToBeCached(redTo1);
+    mau.addUrlToBeCached(redTo2);
     mau.addUrlToBeCached(redTo);
     InputStream is = muc.getUncachedInputStream();
     CIProperties p = muc.getUncachedProperties();
     assertNull(p.getProperty("location"));
-    assertEquals(redTo, p.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO));
+    assertEquals(redTo1, p.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO));
+    assertEquals(redTo, p.getProperty(CachedUrl.PROPERTY_CONTENT_URL));
     assertReaderMatchesString("bar", new InputStreamReader(is));
   }
 
@@ -419,13 +424,17 @@ public class TestBaseUrlCacher extends LockssTestCase {
     CIProperties p = muc.getUncachedProperties();
     assertNull(p.getProperty("location"));
     assertEquals(redTo, p.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO));
+    assertEquals(redTo, p.getProperty(CachedUrl.PROPERTY_CONTENT_URL));
 
     assertCuContents(TEST_URL, "bar");
     assertCuProperty(TEST_URL, redTo, CachedUrl.PROPERTY_REDIRECTED_TO);
+    assertCuProperty(TEST_URL, redTo, CachedUrl.PROPERTY_CONTENT_URL);
     // final CU should have same contents
     assertCuContents(redTo, "bar");
     // but should *not* have a redirected-to property
     assertCuProperty(redTo, null, CachedUrl.PROPERTY_REDIRECTED_TO);
+    // nor a content-url property
+    assertCuProperty(redTo, null, CachedUrl.PROPERTY_CONTENT_URL);
   }
 
   public void testRedirectWritesAll() throws Exception {
@@ -447,7 +456,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
     muc.cache();
     CIProperties p = muc.getUncachedProperties();
     assertNull(p.getProperty("location"));
-    assertEquals(redTo3, p.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO));
+    assertEquals(redTo1, p.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO));
 
     // verify all have the correct contents, and all but the last have a
     // redirected-to header
@@ -455,10 +464,41 @@ public class TestBaseUrlCacher extends LockssTestCase {
     assertCuContents(redTo1, content);
     assertCuContents(redTo2, content);
     assertCuContents(redTo3, content);
-    assertCuProperty(TEST_URL, redTo3, CachedUrl.PROPERTY_REDIRECTED_TO);
-    assertCuProperty(redTo1, redTo3, CachedUrl.PROPERTY_REDIRECTED_TO);
+    assertCuProperty(TEST_URL, redTo1, CachedUrl.PROPERTY_REDIRECTED_TO);
+    assertCuProperty(redTo1, redTo2, CachedUrl.PROPERTY_REDIRECTED_TO);
     assertCuProperty(redTo2, redTo3, CachedUrl.PROPERTY_REDIRECTED_TO);
     assertCuProperty(redTo3, null, CachedUrl.PROPERTY_REDIRECTED_TO);
+
+    assertCuProperty(TEST_URL, redTo3, CachedUrl.PROPERTY_CONTENT_URL);
+    assertCuProperty(redTo1, redTo3, CachedUrl.PROPERTY_CONTENT_URL);
+    assertCuProperty(redTo2, redTo3, CachedUrl.PROPERTY_CONTENT_URL);
+    assertCuProperty(redTo3, null, CachedUrl.PROPERTY_CONTENT_URL);
+  }
+
+  public void testSimpleDirRedirect() throws Exception {
+    String content = "oft redirected content";
+    plugin.returnRealCachedUrl = true;
+    String url = "http://a.b/bar";
+    String redTo = url + "/";
+    MockConnectionMockBaseUrlCacher muc =
+      new MockConnectionMockBaseUrlCacher(mcus, url);
+    muc.addConnection(makeConn(301, "Moved to Spain", redTo));
+    muc.addConnection(makeConn(200, "Ok", null, content));
+    muc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_STORE_ALL_IN_SPEC);
+    mau.addUrlToBeCached(redTo);
+    muc.cache();
+    CIProperties p = muc.getUncachedProperties();
+    assertNull(p.getProperty("location"));
+    assertEquals(redTo, p.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO));
+
+    // verify the correct contents and redirected-to header
+    // (these are the same node)
+    assertCuContents(url, content);
+    assertCuContents(redTo, content);
+    assertCuProperty(url, redTo, CachedUrl.PROPERTY_REDIRECTED_TO);
+    assertCuProperty(redTo, redTo, CachedUrl.PROPERTY_REDIRECTED_TO);
+    assertCuProperty(url, redTo, CachedUrl.PROPERTY_CONTENT_URL);
+    assertCuProperty(redTo, redTo, CachedUrl.PROPERTY_CONTENT_URL);
   }
 
   public void testDirRedirect() throws Exception {
@@ -478,16 +518,21 @@ public class TestBaseUrlCacher extends LockssTestCase {
     muc.cache();
     CIProperties p = muc.getUncachedProperties();
     assertNull(p.getProperty("location"));
-    assertEquals(redTo2, p.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO));
+    assertEquals(redTo1, p.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO));
 
-    // verify all have the correct contents, and all but the last have a
-    // redirected-to header
+    // verify all have the correct contents, and all but the last have
+    // redirected-to and content-url headers
     assertCuContents(url, content);
     assertCuContents(redTo1, content);
     assertCuContents(redTo2, content);
-    assertCuProperty(url, redTo2, CachedUrl.PROPERTY_REDIRECTED_TO);
+    assertCuProperty(url, redTo1, CachedUrl.PROPERTY_REDIRECTED_TO);
+    // these are the same node
     assertCuProperty(redTo1, redTo2, CachedUrl.PROPERTY_REDIRECTED_TO);
     assertCuProperty(redTo2, redTo2, CachedUrl.PROPERTY_REDIRECTED_TO);
+
+    assertCuProperty(url, redTo2, CachedUrl.PROPERTY_CONTENT_URL);
+    assertCuProperty(redTo1, redTo2, CachedUrl.PROPERTY_CONTENT_URL);
+    assertCuProperty(redTo2, redTo2, CachedUrl.PROPERTY_CONTENT_URL);
   }
 
   void assertCuContents(String url, String contents) throws IOException {
