@@ -1,5 +1,5 @@
 /*
- * $Id: TestDeadline.java,v 1.13 2003-10-13 20:16:16 tlipkis Exp $
+ * $Id: TestDeadline.java,v 1.14 2003-11-11 20:25:30 tlipkis Exp $
  */
 
 /*
@@ -172,6 +172,26 @@ public class TestDeadline extends LockssTestCase {
     } catch (UnsupportedOperationException e) {
     }
     assertTrue(never.expired());
+  }
+
+  public void testEarliest() {
+    TimeBase.setSimulated();
+    Deadline p1 = Deadline.in(100);
+    Deadline p2 = Deadline.in(200);
+    assertEquals(Deadline.in(100), Deadline.earliest(p1, p2));
+    assertEquals(Deadline.in(100), Deadline.earliest(p2, p1));
+    assertEquals(Deadline.in(100), Deadline.earliest(p1, p1));
+    assertEquals(Deadline.in(100), Deadline.earliest(Deadline.MAX, p1));
+  }
+
+  public void testLatest() {
+    TimeBase.setSimulated();
+    Deadline p1 = Deadline.in(100);
+    Deadline p2 = Deadline.in(200);
+    assertEquals(Deadline.in(200), Deadline.latest(p1, p2));
+    assertEquals(Deadline.in(200), Deadline.latest(p2, p1));
+    assertEquals(Deadline.in(100), Deadline.latest(p1, p1));
+    assertEquals(Deadline.MAX, Deadline.latest(Deadline.MAX, p1));
   }
 
   public void testSleep() {
