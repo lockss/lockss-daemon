@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArchivalUnit.java,v 1.7 2003-09-13 00:47:50 troberts Exp $
+ * $Id: TestBaseArchivalUnit.java,v 1.8 2003-09-14 18:49:05 tlipkis Exp $
  */
 
 /*
@@ -67,6 +67,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
   }
 
   public void testCheckNextPollInterval() {
+    TimeBase.setSimulated();
     for (int ii=0; ii<10; ii++) {
       mbau.nextPollInterval = -1;
       mbau.checkNextPollInterval();
