@@ -1,5 +1,5 @@
 /*
- * $Id: NewContentCrawler.java,v 1.42 2004-10-13 23:07:16 clairegriffin Exp $
+ * $Id: NewContentCrawler.java,v 1.43 2004-10-20 18:41:21 dcfok Exp $
  */
 
 /*
@@ -42,9 +42,12 @@ import org.lockss.state.*;
 public class NewContentCrawler extends FollowLinkCrawler {
 
   private static Logger logger = Logger.getLogger("NewContentCrawler");
+  
+  private SpiderCrawlSpec spec;
 
-  public NewContentCrawler(ArchivalUnit au, CrawlSpec spec, AuState aus) {
-    super(au, spec, aus);
+  public NewContentCrawler(ArchivalUnit au, CrawlSpec crawlSpec, AuState aus) {
+    super(au, crawlSpec, aus);
+    spec = (SpiderCrawlSpec) crawlSpec;
     crawlStatus = new Crawler.Status(au, spec.getStartingUrls(), getType());
   }
 

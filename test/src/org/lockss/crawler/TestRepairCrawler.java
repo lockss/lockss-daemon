@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepairCrawler.java,v 1.16 2004-10-18 03:39:14 tlipkis Exp $
+ * $Id: TestRepairCrawler.java,v 1.17 2004-10-20 18:41:16 dcfok Exp $
  */
 
 /*
@@ -79,7 +79,7 @@ public class TestRepairCrawler extends LockssTestCase {
 
     crawlRule.addUrlToCrawl(url1);
 
-    spec = new CrawlSpec(startUrls, crawlRule);
+    spec = new SpiderCrawlSpec(startUrls, crawlRule);
 
     mau.addUrl(url1);
     mau.setPlugin(new MockPlugin());
@@ -129,7 +129,7 @@ public class TestRepairCrawler extends LockssTestCase {
   }
 
   public void testRepairCrawlCallsForceCache() {
-    spec = new CrawlSpec(startUrls, startUrls, crawlRule, 1);
+    spec = new SpiderCrawlSpec(startUrls, startUrls, crawlRule, 1);
 
     crawler.doCrawl();
 
@@ -161,7 +161,7 @@ public class TestRepairCrawler extends LockssTestCase {
     MockLockssWatchdog wdog = new MockLockssWatchdog();
 
     List repairUrls = ListUtil.list(repairUrl1, repairUrl2, repairUrl3);
-    spec = new CrawlSpec(startUrls, startUrls, crawlRule, 1);
+    spec = new SpiderCrawlSpec(startUrls, startUrls, crawlRule, 1);
     crawler = new RepairCrawler(mau, spec, aus, repairUrls, 0);
     crawler.setWatchdog(wdog);
     crawler.doCrawl();
@@ -186,7 +186,7 @@ public class TestRepairCrawler extends LockssTestCase {
     crawlRule.addUrlToCrawl(url2);
 
     List repairUrls = ListUtil.list(repairUrl1, repairUrl2);
-    spec = new CrawlSpec(startUrls, startUrls, crawlRule, 1);
+    spec = new SpiderCrawlSpec(startUrls, startUrls, crawlRule, 1);
     crawler = new RepairCrawler(mau, spec, aus, repairUrls, 0);
 
     crawler.doCrawl();
@@ -200,7 +200,7 @@ public class TestRepairCrawler extends LockssTestCase {
     mau.addUrl(repairUrl, new ExpectedRuntimeException("Test exception"), 0);
     List repairUrls = ListUtil.list(repairUrl);
      crawlRule.addUrlToCrawl(repairUrl);
-    spec = new CrawlSpec(startUrls, startUrls, crawlRule, 1);
+    spec = new SpiderCrawlSpec(startUrls, startUrls, crawlRule, 1);
     crawler = new RepairCrawler(mau, spec, aus, repairUrls, 0);
 
     assertFalse(crawler.doCrawl());

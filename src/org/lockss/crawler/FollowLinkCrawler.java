@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.5 2004-10-18 03:34:17 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.6 2004-10-20 18:41:22 dcfok Exp $
  */
 
 /*
@@ -91,9 +91,8 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
   protected Set parsedPages;
   protected Set extractedUrls;
 
-  public FollowLinkCrawler(ArchivalUnit au, CrawlSpec spec, AuState aus) {
-    super(au, spec, aus);
-    crawlStatus = new Crawler.Status(au, spec.getStartingUrls(), getType());
+  public FollowLinkCrawler(ArchivalUnit au, CrawlSpec crawlSpec, AuState aus) {
+    super(au, crawlSpec, aus);
   }
 
   /**
@@ -141,6 +140,7 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
     List permissionList = spec.getPermissionPages();
     if (permissionList == null || permissionList.size() == 0){
       logger.error("spec.getPermissionPages() return null list or nothing in the list!");
+      crawlStatus.setCrawlError("Nothing in permission list");
       return aborted();
     }
 
@@ -242,7 +242,7 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
     Iterator permissionUrls = permissionList.iterator();
     while (permissionUrls.hasNext()) {
       String permissionPage = (String)permissionUrls.next();
-      // it is the real think that do the checking of permission, crawlPermission dwell in CrawlerImpl.java
+      // it is the real thing that do the checking of permission, crawlPermission dwell in CrawlerImpl.java
       int permissionStatus = crawlPermission(permissionPage);
       // if permission status is something other than OK and the abortWhilePermissionOtherThanOk flag is on
        if (permissionStatus != PermissionMap.PERMISSION_OK &&
@@ -257,7 +257,9 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
 	// set permissionMap
 	permissionMap.putStatus(permissionPage,permissionStatus);
       } catch (MalformedURLException e){
+	//XXX should catch this inside the permissionMap ?
 	logger.error("The permissionPage's URL is Malformed : "+ permissionPage);
+	crawlStatus.setCrawlError("Malformed permission page url");
       }
     }
     return true;
@@ -424,7 +426,9 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
       urlPermissionStatus = permissionMap.getStatus(url);
       urlPermissionUrl = permissionMap.getPermissionUrl(url);
     } catch (MalformedURLException e) {
+      //XXX should catch this in PermissionMap ?
       logger.error("The url is malformed :" + url);
+      crawlStatus.setCrawlError("Malformed Url: " + url);
     }
     boolean printFailedWarning = true;
     switch (urlPermissionStatus) {
@@ -439,6 +443,7 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
 	case PermissionMap.PERMISSION_NOT_OK:
 	  logger.error("Abort crawl. No permission statement is found at: " +
 		       urlPermissionUrl);
+	  crawlStatus.setCrawlError("No permission statement at: " + urlPermissionUrl);
 	  //abort crawl or skip all the page with this host ?
 	  return false;
 	case PermissionMap.PERMISSION_UNCHECKED:
@@ -458,13 +463,16 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
 	      permissionMap.putStatus(urlPermissionUrl,
 				      crawlPermission(urlPermissionUrl));
 	    } catch (MalformedURLException e){
+	      //XXX should catch in PermissionMap ?
 	      logger.error("Malformed urlPermissionUrl", e);
+	      crawlStatus.setCrawlError("MalFormedUrl :"+ urlPermissionUrl);
 	      return false;
 	    }
 	    return checkHostPermission(url,false);
 	  } else {
 	    //abort crawl or skip all the page with this host ?
 	    logger.error("Abort crawl. Cannot fetch permission page");
+	    crawlStatus.setCrawlError("Cannot fetch permission page" + urlPermissionUrl);
 	    return false;
 	  }
 	default :

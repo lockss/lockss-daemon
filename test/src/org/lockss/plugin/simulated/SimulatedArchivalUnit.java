@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.51 2004-10-13 23:07:24 clairegriffin Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.52 2004-10-20 18:41:14 dcfok Exp $
  */
 
 /*
@@ -297,7 +297,7 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
     newContentCrawlIntv = config.getTimeInterval(NEW_CONTENT_CRAWL_KEY,
                                                  defaultContentCrawlIntv);
     paramMap.putLong(AU_NEW_CRAWL_INTERVAL, newContentCrawlIntv);
-    crawlSpec = new CrawlSpec(SIMULATED_URL_START, null);
+    crawlSpec = new SpiderCrawlSpec(SIMULATED_URL_START, null);
     paramMap.setMapElement(AU_CRAWL_SPEC, crawlSpec);
     startUrlString = makeStartUrl();
     paramMap.putString(AU_START_URL, startUrlString);

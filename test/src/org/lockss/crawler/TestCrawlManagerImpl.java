@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.52 2004-10-19 19:18:00 tlipkis Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.53 2004-10-20 18:41:17 dcfok Exp $
  */
 
 /*
@@ -65,7 +65,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     super.setUp();
     mau = new MockArchivalUnit();
     mau.setPlugin(new MockPlugin());
-    mau.setCrawlSpec(new CrawlSpec("blah", null));
+    mau.setCrawlSpec(new SpiderCrawlSpec("blah", new MockCrawlRule()));
     plugin = mau.getPlugin();
 
     crawlManager = new TestableCrawlManagerImpl();
@@ -648,7 +648,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     crawlManager.startRepair(mau, ListUtil.list(GENERIC_URL),
 			     new TestCrawlCB(sem1), null, null);
     MockArchivalUnit mau2 = new MockArchivalUnit();
-    mau2.setCrawlSpec(new CrawlSpec("blah", null));
+    mau2.setCrawlSpec(new SpiderCrawlSpec("blah", new MockCrawlRule()));
 
     theDaemon.setNodeManager(nodeManager, mau2);
     MockActivityRegulator activityRegulator2 = new MockActivityRegulator(mau2);
@@ -711,7 +711,8 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     private MockCrawler mockCrawler;
     protected Crawler makeNewContentCrawler(ArchivalUnit au, CrawlSpec spec) {
       mockCrawler.setAu(au);
-      mockCrawler.setUrls(spec.getStartingUrls());
+      SpiderCrawlSpec cs = (SpiderCrawlSpec) spec;
+      mockCrawler.setUrls(cs.getStartingUrls());
       mockCrawler.setFollowLinks(true);
       mockCrawler.setType(CrawlerImpl.NEW_CONTENT);
       return mockCrawler;

@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlSpec.java,v 1.11 2004-07-23 16:45:55 tlipkis Exp $
+ * $Id: TestSpiderCrawlSpec.java,v 1.1 2004-10-20 18:41:16 dcfok Exp $
  */
 
 /*
@@ -41,37 +41,40 @@ import org.lockss.util.*;
  * This is the test class for org.lockss.daemon.CrawlSpec
  */
 
-public class TestCrawlSpec extends LockssTestCase {
-  public TestCrawlSpec(String msg){
+public class TestSpiderCrawlSpec extends LockssTestCase {
+
+  private CrawlRule rule = new MockCrawlRule();
+  
+  public TestSpiderCrawlSpec(String msg){
     super(msg);
   }
 
-  public void testEmptySpec() throws LockssRegexpException {
+  public void testNullStaringUrls() throws LockssRegexpException {
     try {
-      CrawlSpec cs = new CrawlSpec((String)null, null);
-      fail("CrawlSpec with null starting point should throw");
+      SpiderCrawlSpec cs = new SpiderCrawlSpec((String)null, rule);
+      fail("SpiderCrawlSpec with null starting point should throw");
     } catch (NullPointerException e) { }
     try {
-      CrawlSpec cs = new CrawlSpec((List)null, null);
-      fail("CrawlSpec with null starting point should throw");
+      SpiderCrawlSpec cs = new SpiderCrawlSpec((List)null, rule);
+      fail("SpiderCrawlSpec with null starting point should throw");
     } catch (NullPointerException e) { }
     try {
-      CrawlSpec cs = new CrawlSpec(Collections.EMPTY_LIST, null);
-      fail("CrawlSpec with null starting point should throw");
+      SpiderCrawlSpec cs = new SpiderCrawlSpec(Collections.EMPTY_LIST, rule);
+      fail("SpiderCrawlSpec with null starting point should throw");
     } catch (IllegalArgumentException e) { }
     String foo[] = {"foo"};
-    CrawlSpec cs1 = new CrawlSpec(foo[0], null);
+    SpiderCrawlSpec cs1 = new SpiderCrawlSpec(foo[0], rule);
     assertIsomorphic(foo, cs1.getStartingUrls());
-    CrawlSpec cs2 = new CrawlSpec(ListUtil.fromArray(foo), null);
+    SpiderCrawlSpec cs2 = new SpiderCrawlSpec(ListUtil.fromArray(foo), rule);
     assertIsomorphic(foo, cs2.getStartingUrls());
     String foobar[] = {"foo", "bar"};
-    CrawlSpec cs3 = new CrawlSpec(ListUtil.fromArray(foobar), null);
+    SpiderCrawlSpec cs3 = new SpiderCrawlSpec(ListUtil.fromArray(foobar), rule);
     assertIsomorphic(foobar, cs3.getStartingUrls());
   }
 
   public void testNoModify() {
     List l1 = ListUtil.list("one", "two");
-    CrawlSpec cs = new CrawlSpec(l1, null);
+    SpiderCrawlSpec cs = new SpiderCrawlSpec(l1, rule);
     List l2 = cs.getStartingUrls();
     assertEquals(l1, l2);
     try {
@@ -83,40 +86,9 @@ public class TestCrawlSpec extends LockssTestCase {
 		 l2, cs.getStartingUrls());
   }
 
-  public void testNullRule() throws LockssRegexpException {
-    CrawlSpec cs1 = new CrawlSpec("foo", null);
-    assertTrue(cs1.isIncluded(null));
-    assertTrue(cs1.isIncluded("foo"));
-    assertTrue(cs1.isIncluded("bar"));
-  }
-
-  public void testIncluded() throws LockssRegexpException {
-    CrawlSpec cs1 =
-      new CrawlSpec("foo",
-                    new CrawlRules.RE("foo[12]*", CrawlRules.RE.MATCH_INCLUDE));
-    try {
-      assertFalse(cs1.isIncluded(null));
-      fail("CrawlSpec.inIncluded(null) should throw");
-    } catch (NullPointerException e) { }
-    assertTrue(cs1.isIncluded("foo"));
-    assertTrue(cs1.isIncluded("foo22"));
-    assertFalse(cs1.isIncluded("bar"));
-  }
-
-  public void testCrawlWindow() throws LockssRegexpException {
-    MockCrawlWindow window = new MockCrawlWindow();
-    CrawlSpec cs1 =
-      new CrawlSpec("foo",
-                    new CrawlRules.RE("foo[12]*", CrawlRules.RE.MATCH_INCLUDE));
-    cs1.setCrawlWindow(window);
-    assertTrue(cs1.canCrawl());
-    window.setAllowCrawl(false);
-    assertFalse(cs1.canCrawl());
-  }
-
   public void testThrowsIfRecrawlDepthLessThanOne() {
     try {
-      CrawlSpec cs = new CrawlSpec("blah", null, 0);
+      SpiderCrawlSpec cs = new SpiderCrawlSpec("blah", rule, 0);
       fail("Trying to construct a CrawlSpec with a RecrawlDepth less "
 	   +"than 1 should have thrown");
     } catch (IllegalArgumentException e) {
@@ -124,7 +96,7 @@ public class TestCrawlSpec extends LockssTestCase {
   }
 
   public void testRecrawlDepthDefaultsTo1() {
-    CrawlSpec cs = new CrawlSpec("blah", null);
+    SpiderCrawlSpec cs = new SpiderCrawlSpec("blah", rule);
     assertEquals(1, cs.getRefetchDepth());
   }
 }

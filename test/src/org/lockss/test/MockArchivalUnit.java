@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.58 2004-10-18 03:42:50 tlipkis Exp $
+ * $Id: MockArchivalUnit.java,v 1.59 2004-10-20 18:41:12 dcfok Exp $
  */
 
 /*
@@ -180,7 +180,7 @@ public class MockArchivalUnit implements ArchivalUnit {
    * @return MockArchivalUnit with urls in rootUrls in its list
    */
   public static MockArchivalUnit createFromListOfRootUrls(String[] rootUrls){
-    CrawlSpec rootSpec = new CrawlSpec(ListUtil.fromArray(rootUrls), null);
+    CrawlSpec rootSpec = new SpiderCrawlSpec(ListUtil.fromArray(rootUrls), null);
     return new MockArchivalUnit(rootSpec);
   }
 

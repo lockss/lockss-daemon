@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlSpec.java,v 1.12 2004-10-20 18:41:21 dcfok Exp $
+ * $Id: TestOaiCrawlSpec.java,v 1.1 2004-10-20 18:41:16 dcfok Exp $
  */
 
 /*
@@ -33,56 +33,44 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.daemon;
 
 import java.util.*;
+import org.lockss.daemon.*;
+import org.lockss.test.*;
 import org.lockss.util.*;
+import org.lockss.oai.*;
 
 /**
- * This interface is implemented by BaseCrawlSpec. 
- * Specification for a crawl: 
- * a list of starting URLs or an OaiHandler Url (for Oai Crawl) and 
- * a rule that determines whether a candidate URL should be included in the crawl.
+ * This is the test class for org.lockss.daemon.CrawlSpec
  */
-public interface CrawlSpec { 
 
-  /**
-   * Returns the CrawlWindow, or null.
-   * @return the {@link CrawlWindow}
-   */
-  public CrawlWindow getCrawlWindow();
+public class TestOaiCrawlSpec extends LockssTestCase {
 
-  /**
-   * Sets the CrawlWindow (null for none) to determine when crawling is
-   * permitted.  A null window always allows.
-   * @param window the {@link CrawlWindow}
-   */
-  public void setCrawlWindow(CrawlWindow window);
+  private List pList = ListUtil.list("pList");
+  private List cList = ListUtil.list("cList");
+  private CrawlRule rule = new MockCrawlRule();
 
-  /**
-   * Gets the permission pages list
-   * @return a list of permission pages URLS, as Strings
-   */
-  public List getPermissionPages();
+  public TestOaiCrawlSpec(String msg){
+    super(msg);
+  }
 
-
-  /**
-   * Determine whether a url is part of this CrawlSpec.
-   * @param url The url to test
-   * @return true iff the url matches the rule
-   * @throws NullPointerException if the url is null.
-   */
-  public boolean isIncluded(String url);
-
-  /** 
-   * Checks the crawlWindow to see if it is a good time to crawl
-   * @return true iff the crawl time falls into the crawl window
-   */
-  public boolean canCrawl();
-
-  /**
-   * Gets the list of permission checkers
-   * @return a list of permission checkers
-   */
-  public List getPermissionCheckers();
+  public void testNullOaiHandlerUrl() throws LockssRegexpException {
+    try {
+      OaiCrawlSpec cs = new OaiCrawlSpec(null, pList, cList, rule, false);
+      fail("OaiCrawlSpec with null oaiRequestData should throw");
+    } catch (IllegalArgumentException e) { }
+  }
+  
+  public void testSimpleContruction() {
+    boolean follow = true;
+    OaiRequestData oaiData = new OaiRequestData("handler","ns","tag","setSpec","prefix");
+    OaiCrawlSpec cs2 = new OaiCrawlSpec(oaiData, pList, cList, rule, follow);
+    OaiRequestData myOaiData = cs2.getOaiRequestData();
+    assertEquals("handler", myOaiData.getOaiRequestHandlerUrl());
+    assertEquals("ns", myOaiData.getMetadataNamespaceUrl());
+    assertEquals("tag", myOaiData.getUrlContainerTagName());
+    assertEquals("setSpec", myOaiData.getAuSetSpec());
+    assertEquals("prefix", myOaiData.getMetadataPrefix());
+    assertTrue(cs2.getFollowLinkFlag());
+  }
 
 }
-
 

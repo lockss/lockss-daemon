@@ -1,5 +1,5 @@
 /*
- * $Id: FuncNewContentCrawler.java,v 1.9 2004-10-13 23:07:18 clairegriffin Exp $
+ * $Id: FuncNewContentCrawler.java,v 1.10 2004-10-20 18:41:18 dcfok Exp $
  */
 
 /*
@@ -170,7 +170,7 @@ public class FuncNewContentCrawler extends LockssTestCase {
 
   private void crawlContent() {
     System.out.println("Crawling tree...");
-    CrawlSpec spec = new CrawlSpec(sau.SIMULATED_URL_START, null);
+    CrawlSpec spec = new SpiderCrawlSpec(sau.SIMULATED_URL_START, null);
     Crawler crawler = new NewContentCrawler(sau, spec, new MockAuState());
     crawler.doCrawl();
   }

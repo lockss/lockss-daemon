@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.24 2004-10-13 23:07:18 clairegriffin Exp $
+ * $Id: TestNewContentCrawler.java,v 1.25 2004-10-20 18:41:17 dcfok Exp $
  */
 
 /*
@@ -74,7 +74,7 @@ public class TestNewContentCrawler extends LockssTestCase {
 
     crawlRule = new MockCrawlRule();
     crawlRule.addUrlToCrawl(startUrl);
-    spec = new CrawlSpec(startUrls, startUrls, crawlRule, 1);
+    spec = new SpiderCrawlSpec(startUrls, startUrls, crawlRule, 1);
     crawler = new NewContentCrawler(mau, spec, aus);
     ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MyMockPermissionChecker(1));
 
@@ -175,7 +175,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     }
 
 
-    spec = new CrawlSpec(urls, ListUtil.list(startUrl), crawlRule, 1);
+    spec = new SpiderCrawlSpec(urls, ListUtil.list(startUrl), crawlRule, 1);
     crawler = new NewContentCrawler(mau, spec, new MockAuState());
     ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MyMockPermissionChecker(1));
 
@@ -405,7 +405,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     String url2 = "http://www.example.com/link2.html";
     String url3 = "http://www.example.com/link3.html";
 
-    CrawlSpec spec = new CrawlSpec(startUrl, crawlRule);
+    CrawlSpec spec = new SpiderCrawlSpec(startUrl, crawlRule);
     spec.setCrawlWindow(new MockCrawlWindowThatCountsDown(3));
     mau.setCrawlSpec(spec);
 
@@ -442,7 +442,7 @@ public class TestNewContentCrawler extends LockssTestCase {
 
 
   public void testOverwritesStartingUrlsMultipleLevels() {
-    spec = new CrawlSpec(startUrls, startUrls, crawlRule, 2);
+    spec = new SpiderCrawlSpec(startUrls, startUrls, crawlRule, 2);
     crawler = new NewContentCrawler(mau, spec, new MockAuState());
     ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MyMockPermissionChecker(1));
 
@@ -865,7 +865,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     }
 
     //set Crawl spec
-    spec = new CrawlSpec(urlsToCrawl, permissionPages, crawlRule, 1);
+    spec = new SpiderCrawlSpec(urlsToCrawl, permissionPages, crawlRule, 1);
 
     //set Crawler
     crawler = new NewContentCrawler(mmau, spec, new MockAuState());

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.85 2004-10-13 23:07:18 clairegriffin Exp $
+ * $Id: BaseArchivalUnit.java,v 1.86 2004-10-20 18:41:20 dcfok Exp $
  */
 
 /*
@@ -243,9 +243,10 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     paramMap.putString(AU_START_URL, startUrlString);
     // make our crawl spec
     try {
-      crawlSpec = makeCrawlSpec();
+      crawlSpec = makeCrawlSpec();      
       if (useCrawlWindow) {
         CrawlWindow window = makeCrawlWindow();
+	//XXX need to get rid of setCrawlWindow and set that in constructor
         crawlSpec.setCrawlWindow(window);
       }
     } catch (LockssRegexpException e) {
@@ -435,13 +436,21 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   /**
    * Use the starting url and the crawl rules to make the crawl spec needed
    * to crawl this au.
+   * 
+   * By default, it is assumed we are doing a new content crawl, thus this method
+   * will return SpiderCrawlSpec which implements CrawlSpec.
+   * If people are using the plugin tools and configurate it to do an Oai Crawl
+   * the DefinableArchivalUnit is overriding this method to return an OaiCrawlSpec
+   * which also implements CrawlSpec.
+   * If one is not using plugin tools, but want to do an Oai crawl, he should
+   * change this method to return OaiCrawlSpec instead of SpiderCrawlSpec
    * @return the CrawlSpec need by this au.
    * @throws LockssRegexpException if the CrawlRules contain an invalid
    * regular expression
    */
   protected CrawlSpec makeCrawlSpec() throws LockssRegexpException {
     CrawlRule rule = makeRules();
-    return new CrawlSpec(startUrlString, rule);
+    return new SpiderCrawlSpec(startUrlString, rule);
   }
 
   protected CrawlWindow makeCrawlWindow() {

@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.20 2004-10-01 22:56:27 clairegriffin Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.21 2004-10-20 18:41:18 dcfok Exp $
  */
 
 /*
@@ -200,7 +200,11 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 
     CrawlRule rule = makeRules();
     int depth = definitionMap.getInt(AU_CRAWL_DEPTH, DEFAULT_AU_CRAWL_DEPTH);
-    return new CrawlSpec(startUrlString, rule, depth);
+    //XXX this change is to make things compile,
+    // what needs to be done:
+    // get from the plugin tool that what kind of crawl we are going to have 
+    // and create and return the appropriate CrawlSpec (SpiderCrawlSpec or OaiCrawlSpec)
+    return new SpiderCrawlSpec(startUrlString, rule, depth);
   }
 
   protected CrawlWindow makeCrawlWindow() {

@@ -1,5 +1,5 @@
 /*
- * $Id: PollTestPlugin.java,v 1.12 2004-10-06 23:53:05 clairegriffin Exp $
+ * $Id: PollTestPlugin.java,v 1.13 2004-10-20 18:41:13 dcfok Exp $
  */
 
 /*
@@ -126,7 +126,7 @@ public class PollTestPlugin {
 
     public static MockArchivalUnit createFromListOfRootUrls(String[] rootUrls) {
       CrawlSpec rootSpec =
-	new CrawlSpec(ListUtil.fromArray(rootUrls), null);
+	new SpiderCrawlSpec(ListUtil.fromArray(rootUrls), null);
       return new PTArchivalUnit(rootSpec);
     }
 

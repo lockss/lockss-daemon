@@ -1,5 +1,5 @@
 /*
- * $Id: Crawler.java,v 1.22 2004-09-01 02:27:20 tlipkis Exp $
+ * $Id: Crawler.java,v 1.23 2004-10-20 18:41:21 dcfok Exp $
  */
 
 /*
@@ -51,6 +51,7 @@ public interface Crawler {
   public static final int NEW_CONTENT = 0;
   public static final int REPAIR = 1;
   public static final int BACKGROUND = 2;
+  public static final int OAI = 3;
 
   public static final String STATUS_INCOMPLETE = "Active";
   public static final String STATUS_SUCCESSFUL = "Successful";

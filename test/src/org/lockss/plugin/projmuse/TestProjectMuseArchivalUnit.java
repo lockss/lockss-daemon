@@ -1,5 +1,5 @@
 /*
- * $Id: TestProjectMuseArchivalUnit.java,v 1.22 2004-10-13 23:07:23 clairegriffin Exp $
+ * $Id: TestProjectMuseArchivalUnit.java,v 1.23 2004-10-20 18:41:14 dcfok Exp $
  */
 
 /*
@@ -244,7 +244,8 @@ public class TestProjectMuseArchivalUnit extends LockssTestCase {
 
   public void testRefetchDepth() throws Exception {
     DefinableArchivalUnit au = makeAu(new URL(ROOT_URL), 60, DIR);
-    assertEquals(2, au.getCrawlSpec().getRefetchDepth());
+    SpiderCrawlSpec cs = (SpiderCrawlSpec) au.getCrawlSpec();
+    assertEquals(2, cs.getRefetchDepth());
   }
 
   public static void main(String[] argv) {
