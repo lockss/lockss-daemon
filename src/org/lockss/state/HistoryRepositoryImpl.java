@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.24 2003-04-03 01:37:43 aalto Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.25 2003-04-03 01:57:13 aalto Exp $
  */
 
 /*
@@ -238,7 +238,7 @@ public class HistoryRepositoryImpl implements HistoryRepository, LockssManager {
     try {
       File auFile = new File(getAuLocation(au) + File.separator + AU_FILE_NAME);
       if (!auFile.exists()) {
-        logger.warning("No au file found.");
+        logger.debug3("No au file found.");
         return new AuState(au, -1, -1, -1, this);
       }
       Unmarshaller unmarshaller = new Unmarshaller(AuStateBean.class);
