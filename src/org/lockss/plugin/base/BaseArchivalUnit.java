@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.90 2005-02-14 03:30:48 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.91 2005-03-23 17:25:44 troberts Exp $
  */
 
 /*
@@ -757,7 +757,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   protected static class ParamHandlerMap extends TypedEntryMap {
     HashMap handlerMap = new HashMap();
 
-    private ParamHandlerMap() {
+    protected ParamHandlerMap() {
       super();
     }
 
