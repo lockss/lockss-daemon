@@ -1,5 +1,5 @@
 /*
- * $Id: AlertActionMail.java,v 1.3 2004-07-19 08:25:03 tlipkis Exp $
+ * $Id: AlertActionMail.java,v 1.4 2004-08-09 02:54:59 tlipkis Exp $
  */
 
 /*
@@ -74,10 +74,10 @@ public class AlertActionMail extends AbstractAlertAction {
     this.recipients = to;
   }
 
-  /** Create an action that mails to a list of recipients */
-  public AlertActionMail(List recipients) {
-    this(StringUtil.separatedString(recipients, ", "));
-  }
+//   /** Create an action that mails to a list of recipients */
+//   public AlertActionMail(List recipients) {
+//     this(StringUtil.separatedString(recipients, ", "));
+//   }
 
   /** Return the recipients */
   public String getRecipients() {

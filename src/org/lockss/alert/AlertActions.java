@@ -1,5 +1,5 @@
 /*
- * $Id: AlertActions.java,v 1.1 2004-07-12 06:09:41 tlipkis Exp $
+ * $Id: AlertActions.java,v 1.2 2004-08-09 02:54:59 tlipkis Exp $
  */
 
 /*
@@ -52,8 +52,8 @@ public class AlertActions {
     return new AlertActionMail(to);
   }
 
-  public static AlertAction Mail(List addressees) {
-    return new AlertActionMail(addressees);
-  }
+//   public static AlertAction Mail(List addressees) {
+//     return new AlertActionMail(addressees);
+//   }
 
 }
