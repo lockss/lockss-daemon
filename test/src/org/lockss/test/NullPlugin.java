@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.61 2004-09-01 23:36:51 clairegriffin Exp $
+ * $Id: NullPlugin.java,v 1.62 2004-09-22 02:44:02 tlipkis Exp $
  */
 
 /*
@@ -234,6 +234,10 @@ public class NullPlugin {
     }
 
     public void setConnectionPool(LockssUrlConnectionPool connectionPool) {
+      throw new UnsupportedOperationException();
+    }
+
+    public void setProxy(String proxyHost, int proxyPort) {
       throw new UnsupportedOperationException();
     }
 

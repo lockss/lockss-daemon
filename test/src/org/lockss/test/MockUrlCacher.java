@@ -1,5 +1,5 @@
 /*
- * $Id: MockUrlCacher.java,v 1.18 2004-09-01 02:27:18 tlipkis Exp $
+ * $Id: MockUrlCacher.java,v 1.19 2004-09-22 02:44:02 tlipkis Exp $
  */
 
 /*
@@ -101,6 +101,9 @@ public class MockUrlCacher implements UrlCacher {
   public void setConnectionPool(LockssUrlConnectionPool connectionPool) {
   }
 
+  public void setProxy(String proxyHost, int proxyPort) {
+  }
+
   public void setForceRefetch(boolean force) {
     this.forceRefetch = force;
   }
@@ -179,7 +182,7 @@ public class MockUrlCacher implements UrlCacher {
     return CACHE_RESULT_FETCHED;
   }
 
-  public InputStream getUncachedInputStream(){
+  public InputStream getUncachedInputStream() throws IOException {
     return uncachedIS;
   }
 

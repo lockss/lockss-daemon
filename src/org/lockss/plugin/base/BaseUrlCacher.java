@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.37 2004-09-01 02:27:19 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.38 2004-09-22 02:44:02 tlipkis Exp $
  */
 
 /*
@@ -79,6 +79,8 @@ public class BaseUrlCacher implements UrlCacher {
   private CacheResultMap resultMap;
   private CIProperties uncachedProperties;
   private PermissionMap permissionMap;
+  private String proxyHost = null;
+  private int proxyPort;
 
   public BaseUrlCacher(CachedUrlSet owner, String url) {
     this.cus = owner;
@@ -145,6 +147,11 @@ public class BaseUrlCacher implements UrlCacher {
 
   public void setConnectionPool(LockssUrlConnectionPool connectionPool) {
     this.connectionPool = connectionPool;
+  }
+
+  public void setProxy(String proxyHost, int proxyPort) {
+    this.proxyHost = proxyHost;
+    this.proxyPort = proxyPort;
   }
 
   public void setForceRefetch(boolean force) {
@@ -402,6 +409,11 @@ public class BaseUrlCacher implements UrlCacher {
   private void openOneConnection(String lastModified) throws IOException {
     try {
       conn = makeConnection(fetchUrl, connectionPool);
+      if (proxyHost != null) {
+	if (logger.isDebug3()) logger.debug3("Proxying through " + proxyHost
+					     + ":" + proxyPort);
+	conn.setProxy(proxyHost, proxyPort);
+      }
       conn.setFollowRedirects(isRedirectOption(REDIRECT_OPTION_FOLLOW_AUTO));
       conn.setRequestProperty("user-agent", LockssDaemon.getUserAgent());
       if (lastModified != null) {

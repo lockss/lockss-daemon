@@ -1,5 +1,5 @@
 /*
- * $Id: UrlCacher.java,v 1.14 2004-09-01 02:27:20 tlipkis Exp $
+ * $Id: UrlCacher.java,v 1.15 2004-09-22 02:44:02 tlipkis Exp $
  */
 
 /*
@@ -113,6 +113,9 @@ public interface UrlCacher {
 
   /** Set the shared connection pool object to be used by this UrlCacher */
   public void setConnectionPool(LockssUrlConnectionPool connectionPool);
+
+  /** Set the host and port the UrlCache should proxy through */
+  public void setProxy(String proxyHost, int proxyPort);
 
   /** Determines whether content will be refetched even if already present
    * and up-to-date.  The default behavior is to not refetch if not
