@@ -9,7 +9,7 @@ import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
 import org.lockss.util.*;
 
-public class CrawlRuleTester {
+public class CrawlRuleTester extends Thread {
   /* Message Types */
   public static final int ERROR_MESSAGE = 0;
   public static final int WARNING_MESSAGE = 1;
@@ -37,6 +37,7 @@ public class CrawlRuleTester {
 
   public CrawlRuleTester(int crawlDepth, long crawlDelay, String baseUrl,
                          CrawlSpec crawlSpec) {
+    super("crawlrule tester");
     m_crawlDepth = crawlDepth;
     m_crawlDelay = Math.max(crawlDelay, DEFAULT_DELAY);
     m_baseUrl = baseUrl;
@@ -91,7 +92,7 @@ public class CrawlRuleTester {
     m_msgHandler = msgHandler;
   }
 
-  public void runTest() {
+  public void run() {
     if(m_outWriter == null && m_msgHandler == null) {
       useLocalWriter = true;
     }
@@ -106,6 +107,7 @@ public class CrawlRuleTester {
       closeOutputFile();
     }
   }
+
 
   private void openOutputFile() {
     if (m_outputFile != null) {
@@ -264,6 +266,7 @@ public class CrawlRuleTester {
                   "    Fetch Rate: " + fetchRate + " p/m", PLAIN_MESSAGE);
   }
 
+
   public interface MessageHandler {
 
     void outputMessage(String message, int messageType);
@@ -276,6 +279,7 @@ public class CrawlRuleTester {
     }
 
     public void foundUrl(String url) {
+
       if (!m_extracted.contains(url)) {
         m_extracted.add(url);
         if (CrawlerImpl.isSupportedUrlProtocol(url) &&
@@ -286,6 +290,7 @@ public class CrawlRuleTester {
           m_excls.add(url);
         }
       }
+
     }
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRuleTestApp.java,v 1.1 2004-05-25 00:17:45 clairegriffin Exp $
+ * $Id: CrawlRuleTestApp.java,v 1.2 2004-07-09 16:43:24 clairegriffin Exp $
  */
 
 /*
@@ -118,7 +118,7 @@ public class CrawlRuleTestApp {
                                      config.getInt("BASE_CRAWL_DEPTH", 1));
       CrawlRuleTester tester = new CrawlRuleTester(output_file, crawl_depth,
           delay, base_url, spec);
-      tester.runTest();
+      tester.run();
     }
     catch (Exception ex) {
       System.err.println("Error occured while processing properties:" + ex);

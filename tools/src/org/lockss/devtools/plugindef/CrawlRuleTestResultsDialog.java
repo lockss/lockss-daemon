@@ -159,12 +159,14 @@ public class CrawlRuleTestResultsDialog extends JDialog {
     try {
       CrawlRuleTester tester = new CrawlRuleTester(m_msgHandler, depth, delay,
           startUrl, m_au.getCrawlSpec());
-      tester.runTest();
+      tester.start();
     }
     catch (Exception ex) {
+      String msg = ex.getCause() !=
+          null ? ex.getCause().getMessage() : ex.getMessage();
       JOptionPane.showMessageDialog(this,
                                     "Error occured while checking crawl rules:\n"
-                                    + ex.getCause().getMessage(),
+                                    + msg,
                                     "CrawlRule Test Error",
                                     JOptionPane.ERROR_MESSAGE);
       ex.printStackTrace();
@@ -187,7 +189,6 @@ public class CrawlRuleTestResultsDialog extends JDialog {
         outputTextPane.getDocument().insertString(
             outputTextPane.getDocument().getLength(), message,
             m_attributes[messageType]);
-        outputTextPane.update(outputTextPane.getGraphics());
         outputTextPane.scrollToReference(message);
       }
       catch (BadLocationException ex) {
