@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManager.java,v 1.53 2004-11-19 00:21:18 troberts Exp $
+ * $Id: IdentityManager.java,v 1.54 2004-12-02 14:48:26 troberts Exp $
  */
 
 /*
@@ -154,6 +154,9 @@ public class IdentityManager
 
   private Object identityMapLock = new Object();
 
+  private IdentityManagerStatus status;
+
+
 
   public IdentityManager() { }
 
@@ -219,8 +222,10 @@ public class IdentityManager
     if (localPeerIdentities[Poll.V3_POLL] != null) {
       log.info("Local V3 identity: " + getLocalPeerIdentity(Poll.V3_POLL));
     }
+    status = new IdentityManagerStatus(theIdentities);
     getDaemon().getStatusService().registerStatusAccessor("Identities",
-							  new Status());
+							  status);
+
     Vote.setIdentityManager(this);
     LcapMessage.setIdentityManager(this);
     IdentityAgreement.setIdentityManager(this);
@@ -797,42 +802,6 @@ public class IdentityManager
         config.getInt(PARAM_VOTE_DISOWNED, DEFAULT_VOTE_DISOWNED);
   }
 
-  private static final List statusSortRules =
-    ListUtil.list(new StatusTable.SortRule("ip", true));
-
-  private static final List statusColDescs =
-    ListUtil.list(
-		  new ColumnDescriptor("ip", "IP",
-				       ColumnDescriptor.TYPE_STRING),
-		  new ColumnDescriptor("lastPkt", "Last Pkt",
-				       ColumnDescriptor.TYPE_DATE,
-				       "Last time a packet that originated " +
-				       "at IP was received"),
-		  new ColumnDescriptor("lastOp", "Last Op",
-				       ColumnDescriptor.TYPE_DATE,
-				       "Last time a non-NoOp packet that " +
-				       "originated at IP was received"),
-		  new ColumnDescriptor("origTot", "Orig Tot",
-				       ColumnDescriptor.TYPE_INT,
-				       "Total packets received that " +
-				       "originated at IP."),
-		  new ColumnDescriptor("origOp", "Orig Op",
-				       ColumnDescriptor.TYPE_INT,
-				       "Total non-noop packets received that "+
-				       "originated at IP."),
-		  new ColumnDescriptor("sendOrig", "1 Hop",
-				       ColumnDescriptor.TYPE_INT,
-				       "Packets arriving from originator " +
-				       "in one hop."),
-		  new ColumnDescriptor("sendFwd", "Fwd",
-				       ColumnDescriptor.TYPE_INT,
-				       "Packets forwarded by IP to us."),
-		  new ColumnDescriptor("dup", "Dup",
-				       ColumnDescriptor.TYPE_INT,
-				       "Duplicate packets received from IP."),
-		  new ColumnDescriptor("reputation", "Reputation",
-				       ColumnDescriptor.TYPE_INT)
-		  );
 
   public static class IdentityAgreement {
     private long lastAgree = 0;
@@ -932,67 +901,6 @@ public class IdentityManager
     }
   }
 
-  private class Status implements StatusAccessor {
-
-    public String getDisplayName() {
-      return "Cache Identities";
-    }
-
-    public void populateTable(StatusTable table) {
-      String key = table.getKey();
-      table.setColumnDescriptors(statusColDescs);
-      table.setDefaultSortRules(statusSortRules);
-      table.setRows(getRows(key));
-//       table.setSummaryInfo(getSummaryInfo(key));
-    }
-
-    public boolean requiresKey() {
-      return false;
-    }
-
-    private List getRows(String key) {
-      List table = new ArrayList();
-      for (Iterator iter = theIdentities.values().iterator();
-	   iter.hasNext();) {
-	table.add(makeRow((LcapIdentity)iter.next()));
-      }
-      return table;
-    }
-
-    private Map makeRow(LcapIdentity id) {
-      Map row = new HashMap();
-      String idKey = id.getIdKey();
-      PeerIdentity pid = id.getPeerIdentity();
-      if (isLocalIdentity(pid)) {
-	StatusTable.DisplayedValue val =
-	  new StatusTable.DisplayedValue(pid.getIdString());
-	val.setBold(true);
-	row.put("ip", val);
-      } else {
-	row.put("ip", pid.getIdString());
-      }
-      row.put("lastPkt", new Long(id.getLastActiveTime()));
-      row.put("lastOp", new Long(id.getLastOpTime()));
-      row.put("origTot", new Long(id.getEventCount(LcapIdentity.EVENT_ORIG)));
-      row.put("origOp",
-	      new Long(id.getEventCount(LcapIdentity.EVENT_ORIG_OP)));
-      row.put("sendOrig",
-	      new Long(id.getEventCount(LcapIdentity.EVENT_SEND_ORIG)));
-      row.put("sendFwd",
-	      new Long(id.getEventCount(LcapIdentity.EVENT_SEND_FWD)));
-      row.put("dup", new Long(id.getEventCount(LcapIdentity.EVENT_DUPLICATE)));
-      row.put("reputation", new Long(id.getReputation()));
-      return row;
-    }
-
-    private List getSummaryInfo(String key) {
-      List res = new ArrayList();
-//       res.add(new StatusTable.SummaryInfo("Total bytes hashed",
-// 					  ColumnDescriptor.TYPE_INT,
-// 					  new Integer(0)));
-      return res;
-    }
-  }
 
   /** Exception thrown for illegal identity keys. */
   public static class MalformedIdentityKeyException extends IOException {
