@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedContentGenerator.java,v 1.11 2003-08-30 00:35:30 clairegriffin Exp $
+ * $Id: SimulatedContentGenerator.java,v 1.12 2003-09-16 23:43:03 eaalto Exp $
  */
 
 /*
@@ -34,7 +34,7 @@ package org.lockss.plugin.simulated;
 
 import java.io.*;
 import java.util.*;
-import org.lockss.util.StringUtil;
+import org.lockss.util.*;
 import org.lockss.test.*;
 import org.lockss.plugin.base.*;
 
@@ -298,7 +298,7 @@ public class SimulatedContentGenerator {
    * Deletes the generated content tree.
    */
   public void deleteContentTree() {
-    FileUtil.delTree(new File(contentRoot));
+    FileTestUtil.delTree(new File(contentRoot));
   }
 /**
  * Generates a content tree using the current parameters.  Depth of 0 is
@@ -554,6 +554,7 @@ public class SimulatedContentGenerator {
    *
    * @param directory to generate index content for
    * @param filename the name of the index file
+   * @param permission permission string
    * @return index file content
    */
 
@@ -583,7 +584,8 @@ public class SimulatedContentGenerator {
       if (subLink.equals(DIR_CONTENT_NAME)) {
         subLink = ".";
       }
-      file_content += "<BR><A HREF=\"" + subLink + "\">" + subLink + "</A>";
+      file_content += "<BR><A HREF=\"" + FileUtil.sysIndepPath(subLink) +
+          "\">" + subLink + "</A>";
     }
     file_content += "</BODY></HTML>";
     return file_content;
@@ -630,7 +632,7 @@ public class SimulatedContentGenerator {
    * @param fileLoc Represents the branch number and depth, separated by a
    * comma
    * @param fileNum Actual file number
-   * @return
+   * @return the url
    */
   public String getUrlFromLoc(String fileLoc, String fileNum) {
     StringTokenizer tok = new StringTokenizer(fileLoc,",");

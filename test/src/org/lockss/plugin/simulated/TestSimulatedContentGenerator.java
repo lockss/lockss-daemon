@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimulatedContentGenerator.java,v 1.18 2003-09-04 23:11:18 tyronen Exp $
+ * $Id: TestSimulatedContentGenerator.java,v 1.19 2003-09-16 23:43:03 eaalto Exp $
  */
 
 /*
@@ -32,12 +32,11 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.simulated;
 
-import org.lockss.daemon.*;
-import org.lockss.util.StreamUtil;
-import org.lockss.util.StringUtil;
-import org.lockss.test.*;
 import java.io.*;
 import java.net.*;
+import org.lockss.daemon.*;
+import org.lockss.util.*;
+import org.lockss.test.*;
 
 /**
  * This is the test class for org.lockss.plugin.simulated.SimulatedCachedUrl
@@ -114,8 +113,12 @@ public class TestSimulatedContentGenerator extends LockssTestCase {
     //test for correct links
     assertTrue(content.indexOf("<a href=\"file1.txt\">file1.txt</a>")>=0);
     assertTrue(content.indexOf("<a href=\"file2.html\">file2.html</a>")>=0);
-    assertTrue(content.indexOf("<a href=\"branch1/index.html\">branch1/index.html</a>")>=0);
-    assertTrue(content.indexOf("<a href=\"branch2/index.html\">branch2/index.html</a>")>=0);
+    assertTrue(content.indexOf("<a href=\"branch1/index.html\">"+
+                               FileUtil.sysDepPath("branch1/index.html")+
+                               "</a>")>=0);
+    assertTrue(content.indexOf("<a href=\"branch2/index.html\">"+
+                               FileUtil.sysDepPath("branch2/index.html")+
+                               "</a>")>=0);
     assertTrue(content.indexOf("<a href=\".\">.</a>")>=0);
     //test for no extra links
     assertEquals(5, StringUtil.countOccurences(content, "<a href="));
