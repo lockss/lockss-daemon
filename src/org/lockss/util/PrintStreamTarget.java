@@ -1,5 +1,5 @@
 /*
- * $Id: PrintStreamTarget.java,v 1.1 2003-04-17 04:05:35 tal Exp $
+ * $Id: PrintStreamTarget.java,v 1.2 2003-04-21 05:41:49 tal Exp $
  */
 
 /*
@@ -90,5 +90,6 @@ public class PrintStreamTarget implements LogTarget {
     sb.append(": ");
     sb.append(message);
     stream.println(sb.toString());
+    stream.flush();
   }
 }
