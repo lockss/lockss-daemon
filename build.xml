@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.101 2004-08-17 01:29:53 smorabito Exp $
+ $Id: build.xml,v 1.102 2004-08-17 01:59:43 smorabito Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -847,7 +847,7 @@ java -classpath &quot;${tmp.ptool.clspth.unix}&quot; org.lockss.devtools.plugind
   </target>
 
   <!-- ==================================================================== -->
-  <target name="javadoc" depends="jar-tests,jar-tools,-load-build-info"
+  <target name="javadoc" depends="jar-tests,-load-build-info"
    description="Build the LOCKSS javadoc">
     <mkdir dir="${javadoc}"/>
     <!-- Old files can result in misleading stuff in the docs.  Since
@@ -863,15 +863,6 @@ java -classpath &quot;${tmp.ptool.clspth.unix}&quot; org.lockss.devtools.plugind
        <classpath refid="test.run.classpath" />
        <arg line="-o ${javadoc}/paramdoc.txt lockss.jar" />
     </java>
-    <!-- Write the HTML param doc into the doc tree -->
-    <javadoc sourcepath="${src}"
-	     packagenames="org.lockss.*"
-	     failonerror="true"
-	     doclet="org.lockss.doclet.ParamDoclet"
-	     docletpathref="tools.run.classpath"
-	     additionalparam="-d ${javadoc} -o paramdoc.html"
-	     classpathref="tools.run.classpath"
-	     access="package"/>
     <javadoc
 	     failonerror="true"
              packagenames="org.lockss.*"
@@ -889,6 +880,21 @@ java -classpath &quot;${tmp.ptool.clspth.unix}&quot; org.lockss.devtools.plugind
        <classpath refid="compile.classpath" />
     </javadoc>
   </target>
+
+  <!-- ==================================================================== -->  
+  <target name="param-docs" depends="jar-tools"
+   description="Generate an HTMl summary of LOCKSS configuration parameters.">
+    <!-- Write the HTML param doc into the doc tree -->
+    <mkdir dir="${javadoc}"/>
+    <javadoc sourcepath="${src}"
+	     packagenames="org.lockss.*"
+	     failonerror="true"
+	     doclet="org.lockss.doclet.ParamDoclet"
+	     docletpathref="tools.run.classpath"
+	     additionalparam="-d ${javadoc} -o paramdoc.html"
+	     classpathref="tools.run.classpath"
+	     access="package"/>
+  </target> 
 
   <!-- ==================================================================== -->
   <target name="javadoc-test" depends="compile-tests,-load-build-info"
