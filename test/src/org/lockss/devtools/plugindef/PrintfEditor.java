@@ -155,7 +155,11 @@ public class PrintfEditor extends JDialog implements EDPEditor {
       case ConfigParamDescr.TYPE_POS_INT:
         StringBuffer fbuf = new StringBuffer("%");
         boolean is_zero = zeroRadioButton.isSelected();
-        int width = Integer.parseInt(widthTextField.getText());
+        String width_str = widthTextField.getText();
+        int width = 0;
+        if((width_str != null) && (width_str.length() > 0)) {
+          width = Integer.parseInt(widthTextField.getText());
+        }
         if(width > 0) {
           fbuf.append(".");
           if(is_zero) {
