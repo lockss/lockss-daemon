@@ -1,5 +1,5 @@
 /*
- * $Id: XmlPropertyLoader.java,v 1.10 2004-08-20 02:56:43 smorabito Exp $
+ * $Id: XmlPropertyLoader.java,v 1.11 2004-09-01 23:38:59 smorabito Exp $
  */
 
 /*
@@ -170,6 +170,10 @@ public class XmlPropertyLoader {
     public LockssConfigHandler(PropertyTree props) {
       super();
       m_props = props;
+      log.debug2("Conditionals: {platformVer=" + m_sysPlatformVer + "}, " +
+		 "{daemonVer=" + m_sysDaemonVer + "}, " +
+		 "{group=" + m_sysGroup + "}, " +
+		 "{hostname=" + m_sysHostname + "}");
     }
 
     /**
@@ -579,13 +583,17 @@ public class XmlPropertyLoader {
       /*
        * Daemon version checking.
        */
-      returnVal &= compareVersion(m_sysDaemonVer, daemonMin, daemonMax);
-
+      if (daemonMin != null && daemonMax != null) {
+	returnVal &= compareVersion(m_sysDaemonVer, daemonMin, daemonMax);
+      }
+      
       /*
        * Platform version checking.
        */
-      returnVal &= compareVersion(m_sysPlatformVer, platformMin, platformMax);
-
+      if (platformMin != null && platformMax != null) {
+	returnVal &= compareVersion(m_sysPlatformVer, platformMin, platformMax);
+      }
+      
       return returnVal;
     }
 
