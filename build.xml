@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.34 2003-03-20 20:25:28 tal Exp $
+ $Id: build.xml,v 1.35 2003-03-27 19:40:17 tal Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
@@ -304,7 +304,18 @@ Args:
   </target>
 
   <!-- ==================================================================== -->
-  <target name="build-info" >
+  <target name="build-info-if-needed">
+    <!-- Set jar.is.up.to.date if jar doesn't need to be rebuilt.  Otherwise,
+         build-info will write prop file, causing a new jar to be built, when
+         nothing has really changed.  Isn't there an easier way to do this? -->
+    <uptodate property="jar.is.up.to.date" targetfile="${lockss.jar}">
+      <srcfiles dir="${classes}" />
+    </uptodate>
+  </target>
+
+  <!-- ==================================================================== -->
+  <target name="build-info" depends="build-info-if-needed"
+       unless="jar.is.up.to.date">
     <!--  The prop names used here are also known to
           org.lockss.util.BuildInfo class -->
     <propertyfile comment="Build Information"
