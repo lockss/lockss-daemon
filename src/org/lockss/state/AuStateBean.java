@@ -1,5 +1,5 @@
 /*
- * $Id: AuStateBean.java,v 1.1 2003-02-06 00:51:45 aalto Exp $
+ * $Id: AuStateBean.java,v 1.2 2003-02-11 00:58:16 aalto Exp $
  */
 
 /*
@@ -41,7 +41,7 @@ import org.lockss.daemon.ArchivalUnit;
  */
 public class AuStateBean extends AuState {
   public AuStateBean() {
-    super(null, 0);
+    super(null, -1);
   }
 
   AuStateBean(AuState auState) {

@@ -47,7 +47,9 @@ public class TestPoll extends TestCase {
     super(_name);
   }
 
-  /** setUp method for test case */
+  /** setUp method for test case
+   * @throws Exception
+   */
   protected void setUp() throws Exception {
     super.setUp();
     daemon.getHashService().startService();

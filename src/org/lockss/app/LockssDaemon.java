@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.2 2003-02-06 05:16:06 claire Exp $
+ * $Id: LockssDaemon.java,v 1.3 2003-02-11 00:58:16 aalto Exp $
  */
 
 /*
@@ -47,6 +47,7 @@ import org.lockss.proxy.*;
 import org.lockss.crawler.CrawlManager;
 import java.util.Iterator;
 import org.lockss.protocol.IdentityManager;
+import org.lockss.daemon.ArchivalUnit;
 
 /**
  * @author Claire Griffin
@@ -168,10 +169,12 @@ public class LockssDaemon {
 
   /**
    * get Lockss Repository instance
+   * @param au the ArchivalUnit
    * @return the LockssRepository
    */
-  public LockssRepository getLockssRepository() {
-    return (LockssRepository) getManager(LOCKSS_REPOSITORY);
+  public LockssRepository getLockssRepository(ArchivalUnit au) {
+    LockssRepository repo = (LockssRepository)getManager(LOCKSS_REPOSITORY);
+    return repo.repositoryFactory(au);
   }
 
   /**
@@ -184,10 +187,12 @@ public class LockssDaemon {
 
   /**
    * return the node manager instance
+   * @param au the ArchivalUnit
    * @return the NodeManager
    */
-  public NodeManager getNodeManager() {
-    return  (NodeManager) getManager(NODE_MANAGER);
+  public NodeManager getNodeManager(ArchivalUnit au) {
+    NodeManager nodeMan = (NodeManager)getManager(NODE_MANAGER);
+    return nodeMan.managerFactory(au);
   }
 
   /**

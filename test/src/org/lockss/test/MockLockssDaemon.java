@@ -11,6 +11,7 @@ import org.lockss.proxy.*;
 import org.lockss.crawler.*;
 import org.lockss.plugin.*;
 import org.lockss.app.*;
+import org.lockss.daemon.ArchivalUnit;
 
 public class MockLockssDaemon extends LockssDaemon {
   HashService hashService = null;
@@ -33,6 +34,16 @@ public class MockLockssDaemon extends LockssDaemon {
   }
 
   public void stopDaemon() {
+    hashService = null;
+    pollManager = null;
+    commManager = null;
+    lockssRepository = null;
+    historyRepository = null;
+    nodeManager = null;
+    proxyHandler = null;
+    crawlManager = null;
+    pluginManager = null;
+    identityManager = null;
   }
 
   /**
@@ -84,11 +95,14 @@ public class MockLockssDaemon extends LockssDaemon {
   }
 
   /**
-   * get Lockss Repository instance
+   * get a Lockss Repository instance.  This is broken and not AU specific,
+   * because using the proper factory method required Configuration parameters
+   * which weren't always set in the tests.
+   * @param au the ArchivalUnit (ignored)
    * @return the LockssRepository
    */
-  public LockssRepository getLockssRepository() {
-    if(lockssRepository == null) {
+  public LockssRepository getLockssRepository(ArchivalUnit au) {
+    if (lockssRepository == null) {
       LockssRepositoryImpl impl= new LockssRepositoryImpl();
       try {
         impl.initService(this);
@@ -119,9 +133,10 @@ public class MockLockssDaemon extends LockssDaemon {
 
   /**
    * return the node manager instance
+   * @param au the ArchivalUnit
    * @return the NodeManager
    */
-  public NodeManager getNodeManager() {
+  public NodeManager getNodeManager(ArchivalUnit au) {
     if(nodeManager == null) {
       NodeManagerImpl impl = new NodeManagerImpl();
       try {
@@ -131,7 +146,7 @@ public class MockLockssDaemon extends LockssDaemon {
       }
       nodeManager = impl;
     }
-    return nodeManager;
+    return nodeManager.managerFactory(au);
   }
 
   /**

@@ -1,5 +1,5 @@
 /*
- * $Id: MockGenericFileArchivalUnit.java,v 1.1 2002-11-05 01:49:54 aalto Exp $
+ * $Id: MockGenericFileArchivalUnit.java,v 1.2 2003-02-11 00:58:16 aalto Exp $
  */
 
 /*
@@ -44,8 +44,8 @@ import org.lockss.plugin.*;
  */
 
 public class MockGenericFileArchivalUnit extends BaseArchivalUnit {
-  private String pluginId = "mock";
-  private String auId = "null";
+  private String pluginId = "mock-file";
+  private String auId = "none-file";
 
   public MockGenericFileArchivalUnit(CrawlSpec spec) {
     super(spec);

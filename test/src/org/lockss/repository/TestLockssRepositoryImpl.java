@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.15 2003-02-05 23:33:29 aalto Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.16 2003-02-11 00:58:16 aalto Exp $
  */
 
 /*
@@ -47,6 +47,7 @@ import org.lockss.daemon.*;
 
 public class TestLockssRepositoryImpl extends LockssTestCase {
   private LockssRepository repo;
+  private MockArchivalUnit mau;
   private String tempDirPath;
 
   public TestLockssRepositoryImpl(String msg) {
@@ -57,8 +58,20 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     super.setUp();
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     configCacheLocation(tempDirPath);
-    MockArchivalUnit mau = new MockArchivalUnit();
-    repo = LockssRepositoryImpl.repositoryFactory(mau);
+    mau = new MockArchivalUnit();
+    repo = (new LockssRepositoryImpl()).repositoryFactory(mau);
+  }
+
+  public void testRepositoryFactory() {
+    String auId = mau.getAUId();
+    LockssRepository repo1 = repo.repositoryFactory(mau);
+    assertNotNull(repo1);
+    mau.setAuId(auId + "test");
+    LockssRepository repo2 = repo.repositoryFactory(mau);
+    assertTrue(repo1 != repo2);
+    mau.setAuId(auId);
+    repo2 = repo.repositoryFactory(mau);
+    assertEquals(repo1, repo2);
   }
 
   public void testFileLocation() throws Exception {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.11 2003-02-05 23:32:57 aalto Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.12 2003-02-11 00:58:16 aalto Exp $
  */
 
 /*
@@ -53,7 +53,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     TestLockssRepositoryImpl.configCacheLocation(tempDirPath);
     MockArchivalUnit mau = new MockArchivalUnit(null);
-    repo = LockssRepositoryImpl.repositoryFactory(mau);
+    repo = (new LockssRepositoryImpl()).repositoryFactory(mau);
   }
 
   public void tearDown() throws Exception {

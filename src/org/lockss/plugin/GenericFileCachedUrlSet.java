@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrlSet.java,v 1.16 2003-02-06 05:16:06 claire Exp $
+ * $Id: GenericFileCachedUrlSet.java,v 1.17 2003-02-11 00:58:16 aalto Exp $
  */
 
 /*
@@ -64,7 +64,8 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
 
   public GenericFileCachedUrlSet(ArchivalUnit owner, CachedUrlSetSpec spec) {
     super(owner, spec);
-    repository = LockssRepositoryImpl.repositoryFactory(owner);
+    //XXX fix to use demon
+    repository = (new LockssRepositoryImpl()).repositoryFactory(owner);
   }
 
   public Iterator flatSetIterator() {

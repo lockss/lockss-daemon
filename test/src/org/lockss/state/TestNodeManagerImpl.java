@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.16 2003-02-07 08:36:27 claire Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.17 2003-02-11 00:58:16 aalto Exp $
  */
 
 /*
@@ -54,7 +54,6 @@ public class TestNodeManagerImpl extends LockssTestCase {
   private Random random = new Random();
 
   private MockLockssDaemon theDaemon = new MockLockssDaemon(null);
-  NodeManager mgr = theDaemon.getNodeManager();
 
   public TestNodeManagerImpl(String msg) {
     super(msg);
@@ -70,6 +69,8 @@ public class TestNodeManagerImpl extends LockssTestCase {
     theDaemon.getPluginManager().registerArchivalUnit(mau);
 
     nodeManager = new NodeManagerImpl(mau);
+    nodeManager.initService(theDaemon);
+    nodeManager.startService();
     nodeManager.repository = new HistoryRepositoryImpl(tempDirPath);
   }
 
@@ -83,12 +84,21 @@ public class TestNodeManagerImpl extends LockssTestCase {
     while (auIt.hasNext()) {
       theDaemon.getPluginManager().unregisterArchivalUnit((ArchivalUnit)auIt.next());
     }
+    nodeManager.stopService();
     theDaemon.stopDaemon();
     super.tearDown();
   }
 
-  public void testGetNodeManager() {
-    assertNotNull(NodeManagerImpl.getNodeManager(mau));
+  public void testManagerFactory() {
+    String auId = mau.getAUId();
+    NodeManager node1 = nodeManager.managerFactory(mau);
+    assertNotNull(node1);
+    mau.setAuId(auId + "test");
+    NodeManager node2 = nodeManager.managerFactory(mau);
+    assertTrue(node1 != node2);
+    mau.setAuId(auId);
+    node2 = nodeManager.managerFactory(mau);
+    assertEquals(node1, node2);
   }
 
   public void testGetNodeState() throws Exception {

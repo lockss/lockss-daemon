@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrl.java,v 1.11 2003-01-08 01:51:38 aalto Exp $
+ * $Id: GenericFileCachedUrl.java,v 1.12 2003-02-11 00:58:16 aalto Exp $
  */
 
 /*
@@ -72,7 +72,9 @@ public class GenericFileCachedUrl extends BaseCachedUrl {
 
   private void ensureLeafLoaded() {
     if (repository==null) {
-      repository = LockssRepositoryImpl.repositoryFactory(cus.getArchivalUnit());
+      //XXX fix to use demon
+      repository = (new LockssRepositoryImpl()).repositoryFactory(
+          cus.getArchivalUnit());
     }
     if (leaf==null) {
       try {

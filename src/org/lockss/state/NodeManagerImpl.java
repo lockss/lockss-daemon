@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.23 2003-02-07 19:15:47 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.24 2003-02-11 00:58:16 aalto Exp $
  */
 
 /*
@@ -47,6 +47,7 @@ import org.lockss.protocol.IdentityManager;
 import org.lockss.repository.LockssRepository;
 import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.app.*;
+import java.net.URL;
 
 /**
  * Implementation of the NodeManager.
@@ -58,13 +59,14 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
   static HistoryRepository repository;
   private static HashMap auMaps = new HashMap();
   private static HashMap auEstimateMap = new HashMap();
+  private static CrawlManager theCrawlManager = null;
 
   private ArchivalUnit managerAu;
   private AuState auState;
   private TreeMap nodeMap = new TreeMap();
   private static Logger logger = Logger.getLogger("NodeManager");
 
-  public NodeManagerImpl() {}
+  public NodeManagerImpl() { }
 
   /**
    * init the plugin manager.
@@ -73,7 +75,7 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
    * @see org.lockss.app.LockssManager#initService(LockssDaemon daemon)
    */
   public void initService(LockssDaemon daemon) throws LockssDaemonException {
-    if(theManager == null) {
+    if (theManager == null) {
       theDaemon = daemon;
       theManager = this;
     }
@@ -87,6 +89,7 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
    * @see org.lockss.app.LockssManager#startService()
    */
   public void startService() {
+    theCrawlManager = theDaemon.getCrawlManager();
     repository = theDaemon.getHistoryRepository();
   }
 
@@ -105,7 +108,7 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
    * @param au the ArchivalUnit being managed
    * @return the current NodeManager
    */
-  public synchronized static NodeManager getNodeManager(ArchivalUnit au) {
+  public synchronized NodeManager managerFactory(ArchivalUnit au) {
     nodeManager = (NodeManager)auMaps.get(au);
     if (nodeManager==null) {
       nodeManager = new NodeManagerImpl(au);
@@ -117,6 +120,14 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
   NodeManagerImpl(ArchivalUnit au) {
     managerAu = au;
     loadStateTree();
+  }
+
+  public void startPoll(CachedUrlSet cus, Poll.VoteTally state) {
+    NodeState nodeState = getNodeState(cus);
+    PollState pollState = new PollState(state.getType(), state.getRegExp(),
+                                        PollState.RUNNING, state.getStartTime(),
+                                        null);
+    ((NodeStateImpl)nodeState).addPollState(pollState);
   }
 
   public void updatePollResults(CachedUrlSet cus, Poll.VoteTally results) {
@@ -245,12 +256,12 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
   }
 
   void doTreeWalk() {
-    //XXX check if ok with CrawlManager
-    // if CrawlManager.canTreeWalkStart(managerAu, null, null);
-    long startTime = TimeBase.nowMs();
-    nodeTreeWalk(nodeMap);
-    long elapsedTime = TimeBase.nowMs() - startTime;
-    updateEstimate(elapsedTime);
+    if (theCrawlManager.canTreeWalkStart(managerAu, getAuState(), null, null)) {
+      long startTime = TimeBase.nowMs();
+      nodeTreeWalk(nodeMap);
+      long elapsedTime = TimeBase.nowMs() - startTime;
+      updateEstimate(elapsedTime);
+    }
   }
 
   void updateEstimate(long elapsedTime) {
@@ -285,6 +296,10 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
       case CrawlState.NEW_CONTENT_CRAWL:
       case CrawlState.REPAIR_CRAWL:
         if (crawlState.getStatus()==CrawlState.FINISHED) {
+          if (node.getCachedUrlSet().isCached(
+              node.getCachedUrlSet().getPrimaryUrl())) {
+
+          }
           //XXX has content
           // if node.getCachedUrlSet().hasContent();
           // unless some sort of poll is currently running.
@@ -510,18 +525,16 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
 
   private void markNodeForRepair(CachedUrlSet cus, Poll.VoteTally tally)
       throws IOException {
-    //theDaemon.getPollManager().suspendPoll(tally.getPollKey());
-    //CrawlManger.scheduleRepair(new URL(cus.getPrimaryUrl()),
-    //                           new ContentRepairCallback(),
-    //                             tally.getPollKey());
-    //cus.makeUrlCacher(cus.getPrimaryUrl()).cache();
+    theDaemon.getPollManager().suspendPoll(tally.getPollKey());
+    theCrawlManager.scheduleRepair(managerAu, new URL(cus.getPrimaryUrl()),
+                                   new ContentRepairCallback(),
+                                   tally.getPollKey());
   }
 
   private void deleteNode(CachedUrlSet cus) throws IOException {
     // delete the node from the LockssRepository
-    //XXX change to get from RunDaemon
     LockssRepository repository =
-        LockssRepositoryImpl.repositoryFactory(cus.getArchivalUnit());
+        theDaemon.getLockssRepository(managerAu).repositoryFactory(cus.getArchivalUnit());
     repository.deleteNode(cus.getPrimaryUrl());
   }
 

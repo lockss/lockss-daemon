@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.15 2003-02-07 19:15:48 aalto Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.16 2003-02-11 00:58:16 aalto Exp $
  */
 
 /*
@@ -82,6 +82,11 @@ public class LockssRepositoryImpl implements LockssRepository, LockssManager {
   private static Logger logger = Logger.getLogger("LockssRepository");
   private static LockssDaemon theDaemon = null;
   private static LockssRepository theRepository = null;
+  // these are specifically non-static to allow the tests to work
+  // in practice, the singleton nature of theDaemon's repository
+  // allows these to act as if static
+  private String baseDir = null;
+  private HashMap repoMap = new HashMap();
 
   public LockssRepositoryImpl() { }
 
@@ -231,24 +236,26 @@ public class LockssRepositoryImpl implements LockssRepository, LockssManager {
   int getRefHits() { return refHits; }
   int getRefMisses() { return refMisses; }
 
-  /**
-   * Creates a LockssRepository for the given {@link ArchivalUnit} at
-   * a cache location specific to that archive.
-   * @param au ArchivalUnit to be cached
-   * @return a repository for the archive
-   */
-  public static LockssRepository repositoryFactory(ArchivalUnit au) {
-    String rootLocation = Configuration.getParam(PARAM_CACHE_LOCATION);
-    if (rootLocation==null) {
-      logger.error("Couldn't get "+PARAM_CACHE_LOCATION+" from Configuration");
-      throw new LockssRepository.RepositoryStateException("Couldn't load param.");
-    }
-    StringBuffer buffer = new StringBuffer(rootLocation);
-    if (!rootLocation.endsWith(File.separator)) {
+  public synchronized LockssRepository repositoryFactory(ArchivalUnit au) {
+    if (baseDir==null) {
+      baseDir = Configuration.getParam(PARAM_CACHE_LOCATION);
+      if (baseDir==null) {
+        logger.error("Couldn't get "+PARAM_CACHE_LOCATION+" from Configuration");
+        throw new LockssRepository.RepositoryStateException("Couldn't load param.");
+      }
+      StringBuffer buffer = new StringBuffer(baseDir);
+      if (!baseDir.endsWith(File.separator)) {
+        buffer.append(File.separator);
+      }
+      buffer.append(CACHE_ROOT_NAME);
       buffer.append(File.separator);
+      baseDir = buffer.toString();
     }
-    buffer.append(CACHE_ROOT_NAME);
-    buffer.append(File.separator);
-    return new LockssRepositoryImpl(FileLocationUtil.mapAuToFileLocation(buffer.toString(), au));
+    LockssRepository repo = (LockssRepository)repoMap.get(au);
+    if (repo==null) {
+      repo = new LockssRepositoryImpl(FileLocationUtil.mapAuToFileLocation(baseDir, au));
+      repoMap.put(au, repo);
+    }
+    return repo;
   }
 }
