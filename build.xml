@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.23 2002-12-21 00:03:34 aalto Exp $
+ $Id: build.xml,v 1.24 2003-01-06 19:56:42 tal Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
@@ -39,6 +39,9 @@ Args:
   -Dargs="args ..."         Supply cmd line args to run-class
   -Dloglevel=debug          Set default log level to debug for
                                test-all, test-one, test-class, run-class
+  -Dfile=path/to/file       Specify file to print or index.  File must be
+                               relative to project base dir
+  -Dtimeout=msecs           Override the default test failure timeout.
 </description>
 
   <!-- Set to yes (on command line) to see output as it happens -->
@@ -85,7 +88,7 @@ Args:
   <property name="jettytools.jar" value="${lib}/org.mortbay.tools.jar"/>
   <property name="servlet.jar"    value="${lib}/javax.servlet.jar"/>
   <property name="jaxp.jar"       value="${lib}/javax.xml.jaxp.jar"/>
-  <property name="xml.jar"        value="${lib}/org.apache.crimson.jar"/>
+<!--    <property name="xml.jar"  value="${lib}/org.apache.crimson.jar"/> -->
 <!--    <property name="regexp.jar"     value="${lib}/gnu-regexp.jar"/> -->
   <property name="regexp.jar"     value="${lib}/gnu-regexp-1.1.4.jar"/>
   <property name="commons.collections.jar"
@@ -483,6 +486,7 @@ Args:
    depends="prepare.test,check.junit,jar-tests"
    description="Run all the junit tests (test/src/**/Test*.class" >
     <property name="loglevel" value="" />
+    <property name="timeout" value="" />
     <echo>
 Test results in ${test.results}
     </echo>
@@ -498,6 +502,7 @@ Test results in ${test.results}
          <path refid="test.run.classpath" />
       </classpath>        
       <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
+      <sysproperty key="org.lockss.test.timeout.shouldnt" value="${timeout}"/>
     </junit>
   </target>
 
@@ -563,6 +568,7 @@ Test results in ${test.results}
    depends="prepare.test,check.junit,jar-tests"
    description="Run a single test class, named by the 'class' property" >
     <property name="loglevel" value="" />
+    <property name="timeout" value="" />
     <junit fork="no" printsummary="yes" haltonerror="yes" haltonfailure="yes"
          showoutput="${showoutput}">
       <test fork="no" name="${class}" />
@@ -571,6 +577,7 @@ Test results in ${test.results}
          <path refid="test.run.classpath" />
       </classpath>        
       <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
+      <sysproperty key="org.lockss.test.timeout.shouldnt" value="${timeout}"/>
     </junit>
   </target>
 
