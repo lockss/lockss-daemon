@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.61 2004-01-04 06:14:53 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.62 2004-01-08 22:42:58 tlipkis Exp $
  */
 
 /*
@@ -58,6 +58,7 @@ public class PluginManager extends BaseLockssManager {
 
   static final String AU_PARAM_WRAPPER = "reserved.wrapper";
   public static final String AU_PARAM_DISABLED = "reserved.disabled";
+  public static final String AU_PARAM_DISPLAY_NAME = "reserved.displayName";
 
   private static Logger log = Logger.getLogger("PluginMgr");
 
@@ -68,6 +69,7 @@ public class PluginManager extends BaseLockssManager {
   // maps plugin key(not id) to plugin
   private Map pluginMap = Collections.synchronizedMap(new HashMap());
   private Map auMap = new HashMap();
+  private Set inactiveAuIds = new HashSet();
 
   public PluginManager() {
   }
@@ -185,6 +187,14 @@ public class PluginManager extends BaseLockssManager {
     return pluginKeyFromId(pluginId)+"&"+auKey;
   }
 
+  public static String pluginIdFromAuId(String auid) {
+    int pos = auid.indexOf("&");
+    if (pos < 0) {
+      throw new IllegalArgumentException("Illegal AuId: " + auid);
+    }
+    return auid.substring(0, pos);
+  }
+
   public static String configKeyFromAuId(String auid) {
     return StringUtil.replaceFirst(auid, "&", ".");
   }
@@ -220,12 +230,17 @@ public class PluginManager extends BaseLockssManager {
 			       Configuration oldPluginConf) {
     for (Iterator iter = pluginConf.nodeIterator(); iter.hasNext(); ) {
       String auKey = (String)iter.next();
+      String auId = generateAuId(pluginKey, auKey);
       try {
 	Configuration auConf = pluginConf.getConfigTree(auKey);
 	Configuration oldAuConf = oldPluginConf.getConfigTree(auKey);
 	if (auConf.getBoolean(AU_PARAM_DISABLED, false)) {
 	  // tk should actually remove AU?
 	  log.debug("Not configuring disabled AU id: " + auKey);
+	  if (auMap.get(auId) == null) {
+	    // don't add to inactive if it's still running
+	    inactiveAuIds.add(auId);
+	  }
 	} else if (!auConf.equals(oldAuConf)) {
 	  log.debug("Configuring AU id: " + auKey);
 	  if (!isAuWrapped(auConf)) {
@@ -235,7 +250,7 @@ public class PluginManager extends BaseLockssManager {
 	      if (WrapperState.isWrappedPlugin(plugin)) {
 		throw new ArchivalUnit.ConfigurationException("An attempt was made to have load unwrapped " + auKey + " from plugin " + pluginKey + " which is already wrapped.");
 	      }
-	      configureAu(plugin, auConf, generateAuId(pluginKey, auKey));
+	      configureAu(plugin, auConf, auId);
 	    } else {
 	      log.warning("Not configuring AU " + auKey);
 	    }
@@ -254,10 +269,10 @@ public class PluginManager extends BaseLockssManager {
 	    } else {
 	      setPlugin(pluginKey,wrappedPlugin);
 	      Configuration wrappedAuConf = removeWrapper(auConf);
-	      configureAu(wrappedPlugin, wrappedAuConf,
-			  generateAuId(pluginKey, auKey));
+	      configureAu(wrappedPlugin, wrappedAuConf, auId);
 	    }
 	  }
+	  inactiveAuIds.remove(generateAuId(pluginKey, auKey));
 	} else {
 	  log.debug("AU already configured, not reconfiguring: " + auKey);
 	}
@@ -301,7 +316,7 @@ public class PluginManager extends BaseLockssManager {
 
   ArchivalUnit createAu(Plugin plugin, Configuration auConf)
       throws ArchivalUnit.ConfigurationException {
-    String auid;
+    String auid = null;
     ArchivalUnit oldAu = null;
     try {
       auid = generateAuId(plugin, auConf);
@@ -312,10 +327,12 @@ public class PluginManager extends BaseLockssManager {
       // can assume it means the AU doesn't already exist.
     }
     if (oldAu != null) {
+      inactiveAuIds.remove(oldAu.getAuId());
       throw new ArchivalUnit.ConfigurationException("Cannot create that AU because it already exists");
     }
     try {
       ArchivalUnit au = plugin.createAu(auConf);
+      inactiveAuIds.remove(au.getAuId());
       log.debug("Created AU " + au);
       try {
 	getDaemon().startOrReconfigureAuManagers(au, auConf);
@@ -448,6 +465,7 @@ public class PluginManager extends BaseLockssManager {
     log.debug("Deactivating AU: " + au);
     Configuration config = getStoredAuConfiguration(au);
     config.put(AU_PARAM_DISABLED, "true");
+    config.put(AU_PARAM_DISPLAY_NAME, au.getName());
     updateAuConfigFile(au, config);
   }
 
@@ -609,6 +627,10 @@ public class PluginManager extends BaseLockssManager {
    */
   public List getAllAus() {
     return new ArrayList(auMap.values());
+  }
+
+  public Collection getInactiveAuIds() {
+    return inactiveAuIds;
   }
 
   /** Return all the known titles from the title db */
