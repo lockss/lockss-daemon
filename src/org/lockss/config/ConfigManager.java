@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.6 2004-10-22 07:01:59 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.7 2005-01-04 02:49:19 tlipkis Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.*;
 import java.util.*;
 
 import org.lockss.app.*;
+import org.lockss.daemon.*;
 import org.lockss.hasher.*;
 import org.lockss.mail.*;
 import org.lockss.plugin.*;
@@ -57,8 +58,12 @@ public class ConfigManager implements LockssManager {
   static final String MYPREFIX = PREFIX + "config.";
   static final String PARAM_RELOAD_INTERVAL = MYPREFIX + "reloadInterval";
   static final long DEFAULT_RELOAD_INTERVAL = 30 * Constants.MINUTE;
-  static final String PARAM_CONFIG_PATH = MYPREFIX + "configFilePath";
-  static final String DEFAULT_CONFIG_PATH = "config";
+
+  static final String WDOG_PARAM_CONFIG = "Config";
+  static final long WDOG_DEFAULT_CONFIG = Constants.HOUR;
+
+  public static final String PARAM_CONFIG_PATH = MYPREFIX + "configFilePath";
+  public static final String DEFAULT_CONFIG_PATH = "config";
 
   /** Config param written to local config files to indicate file version */
   static final String PARAM_CONFIG_FILE_VERSION =
@@ -84,7 +89,7 @@ public class ConfigManager implements LockssManager {
   public static final String PARAM_PLATFORM_ACCESS_SUBNET =
     PLATFORM + "accesssubnet";
 
-  static final String PARAM_PLATFORM_DISK_SPACE_LIST =
+  public static final String PARAM_PLATFORM_DISK_SPACE_LIST =
     PLATFORM + "diskSpacePaths";
 
   static final String PARAM_PLATFORM_VERSION = PLATFORM + "version";
@@ -959,9 +964,9 @@ public class ConfigManager implements LockssManager {
     }
   }
 
-  // Handler thread, periodicially reloads config
+  // Handler thread, periodically reloads config
 
-  private class HandlerThread extends Thread {
+  private class HandlerThread extends LockssThread {
     private long lastReload = 0;
     private boolean goOn = false;
     private Deadline nextReload;
@@ -970,13 +975,16 @@ public class ConfigManager implements LockssManager {
       super(name);
     }
 
-    public void run() {
+    public void lockssRun() {
       Thread.currentThread().setPriority(Thread.NORM_PRIORITY + 1);
       goOn = true;
+      startWDog(WDOG_PARAM_CONFIG, WDOG_DEFAULT_CONFIG);
+      triggerWDogOnExit(true);
 
       // repeat every 10ish minutes until first successful load, then
       // according to org.lockss.parameterReloadInterval, or 30 minutes.
       while (goOn) {
+	pokeWDog();
 	if (updateConfig()) {
 	  if (tiny != null) {
 	    stopTinyUi();
