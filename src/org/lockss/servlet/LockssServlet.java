@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.9 2003-04-09 23:46:29 aalto Exp $
+ * $Id: LockssServlet.java,v 1.10 2003-04-10 21:50:01 tal Exp $
  */
 
 /*
@@ -127,7 +127,17 @@ public abstract class LockssServlet extends HttpServlet
     public ServletDescr(Class cls, String heading) {
       this(cls, heading, 0);
     }
+    public ServletDescr(String className, String heading) {
+      this(classForName(className), heading);
+    }
 
+    static Class classForName(String className) {
+      try {
+	return Class.forName(className);
+      } catch (ClassNotFoundException e) {
+	return null;
+      }	
+    }
     boolean isPerClient() {
       return (flags & PER_CLIENT) != 0;
     }
@@ -145,6 +155,8 @@ public abstract class LockssServlet extends HttpServlet
   // Descriptors for all servlets.
   protected static ServletDescr SERVLET_DAEMON_STATUS =
     new ServletDescr(DaemonStatus.class, "Daemon Status");
+  protected static ServletDescr SERVLET_THREAD_DUMP =
+    new ServletDescr("org.lockss.servlet.ThreadDump", "Thread Dump");
 //    protected static ServletDescr SERVLET_ADMIN_HOME =
 //      new ServletDescr(Admin.class, "Admin Home", ServletDescr.LARGE_LOGO);
 //    protected static ServletDescr SERVLET_JOURNAL_STATUS =
@@ -163,6 +175,7 @@ public abstract class LockssServlet extends HttpServlet
   // Order of descrs determines order in nav table.
   static ServletDescr servletDescrs[] = {
      SERVLET_DAEMON_STATUS,
+     SERVLET_THREAD_DUMP,
 //      SERVLET_ADMIN_HOME,
 //      SERVLET_JOURNAL_STATUS,
 //      SERVLET_JOURNAL_SETUP,
