@@ -1,5 +1,5 @@
 /*
- * $Id: TestTaskRunner.java,v 1.2 2003-11-19 08:46:45 tlipkis Exp $
+ * $Id: TestTaskRunner.java,v 1.3 2003-12-09 02:33:23 tlipkis Exp $
  */
 
 /*
@@ -439,7 +439,7 @@ public class TestTaskRunner extends LockssTestCase {
 			     new BERec(151, t3, Schedule.EventType.START),
 			     new BERec(201, t1, Schedule.EventType.FINISH),
 			     new BERec(201, t3, Schedule.EventType.FINISH),
-			     new BERec(202, t2, Schedule.EventType.FINISH));
+			     new BERec(201, t2, Schedule.EventType.FINISH));
     assertEquals(exp, rec);
   }
 

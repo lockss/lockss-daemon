@@ -1,5 +1,5 @@
 /*
- * $Id: TaskRunner.java,v 1.6 2003-12-08 06:52:32 tlipkis Exp $
+ * $Id: TaskRunner.java,v 1.7 2003-12-09 02:33:24 tlipkis Exp $
  */
 
 /*
@@ -160,7 +160,7 @@ class TaskRunner implements Serializable {
     boolean res = scheduler.createSchedule();
     log.debug2((res ? "Task is schedulable: " : "Task is not schedulable: ")
 	       + task);
-    return scheduler.createSchedule();
+    return res;
   }
 
   private Collection getCombinedTasks(SchedulableTask newTask) {
@@ -206,12 +206,16 @@ class TaskRunner implements Serializable {
       new Schedule.BackgroundEvent(task, Deadline.in(0),
 				   Schedule.EventType.FINISH);
     log.debug2("Background task finished early: " + task);
-    // put the event where the stepper thread will find it
-    extraBackgroundEvents.add(event);
-    if (stepThread != null) {
-      // Avoid starting thread in unit tests.  In practice, the thread will
-      // have been created if any background tasks are running.
-      pokeThread();
+    if (true) {
+      backgroundTaskEvent(event);
+    } else {
+      // put the event where the stepper thread will find it
+      extraBackgroundEvents.add(event);
+      if (stepThread != null) {
+	// Avoid starting thread in unit tests.  In practice, the thread will
+	// have been created if any background tasks are running.
+	pokeThread();
+      }
     }
   }
 
