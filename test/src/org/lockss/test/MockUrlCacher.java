@@ -1,5 +1,5 @@
 /*
- * $Id: MockUrlCacher.java,v 1.1 2002-10-16 04:50:54 tal Exp $
+ * $Id: MockUrlCacher.java,v 1.2 2002-11-26 18:00:56 troberts Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ import org.lockss.daemon.*;
  */
 
 public class MockUrlCacher implements UrlCacher {
-  private CachedUrlSet cus;
+  private MockCachedUrlSet cus = null;
   private CachedUrl cu;
   private String url;
   private InputStream cachedIS;
@@ -58,8 +58,13 @@ public class MockUrlCacher implements UrlCacher {
     this.url = url;
   }
 
+  public MockUrlCacher(String url, MockCachedUrlSet cus){
+    this(url);
+    this.cus = cus;
+  }
+
   public String getUrl() {
-    return null;
+    return url;
   }
 
   public CachedUrlSet getCachedUrlSet() {
@@ -115,6 +120,9 @@ public class MockUrlCacher implements UrlCacher {
   }
 
   public void cache() throws IOException {
+    if (cus != null) {
+      cus.addCachedUrl(url);
+    } 
   }
 
   public InputStream getUncachedInputStream(){
@@ -141,6 +149,14 @@ public class MockUrlCacher implements UrlCacher {
 
   public void setUncachedProperties(Properties prop){
     uncachedProp = prop;
+  }
+
+  public String toString() {
+    StringBuffer sb = new StringBuffer(url.length()+17);
+    sb.append("[MockUrlCacher: ");
+    sb.append(url);
+    sb.append("]");
+    return sb.toString();
   }
 
 }
