@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.76 2004-03-18 20:13:45 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.77 2004-03-26 17:58:49 tlipkis Exp $
  */
 
 /*
@@ -580,8 +580,8 @@ public class PluginManager extends BaseLockssManager {
   }
 
   /**
-   * Return the config tree for an AU id (from the loaded config, not the
-   * au itself).
+   * Return the config tree for an AU id (from the local au config file,
+   * not the au itself).
    * @param auid the AU's id.
    * @return the AU's Configuration, with unprefixed keys.
    */
