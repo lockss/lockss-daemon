@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingCrawlerImpl.java,v 1.38 2003-10-08 21:20:52 troberts Exp $
+ * $Id: GoslingCrawlerImpl.java,v 1.39 2003-10-09 22:56:15 eaalto Exp $
  */
 
 /*
@@ -129,6 +129,7 @@ public class GoslingCrawlerImpl implements Crawler {
    * @param startUrls Collection of Strings representing the starting urls for crawl
    * @param type the crawler type
    * @param followLinks whether or not to extract and follow links
+   * @param refetchDepth depth to always refetch
    */
   public GoslingCrawlerImpl(ArchivalUnit au, Collection startUrls,
 			    int type, boolean followLinks, int refetchDepth) {
@@ -189,17 +190,18 @@ public class GoslingCrawlerImpl implements Crawler {
       throw new IllegalArgumentException("Called with a null Deadline");
     }
     boolean wasError = false;
+    boolean windowClosed = false;
     logger.info("Beginning crawl of "+au);
     startTime = TimeBase.nowMs();
     CachedUrlSet cus = au.getAuCachedUrlSet();
+    CrawlSpec spec = au.getCrawlSpec();
     Set parsedPages = new HashSet();
 
     Set extractedUrls = null;
 
-
     if (!deadline.expired() &&
         (type == Crawler.NEW_CONTENT)  && !crawlPermission(cus)) {
-      logger.error("Attempt to crawl AU without permission - aborting crawl!");
+      logger.debug("Crawling AU not permitted - aborting crawl!");
       return false;
     }
     Iterator it = startUrls.iterator();
@@ -209,27 +211,48 @@ public class GoslingCrawlerImpl implements Crawler {
 	String url = (String)it.next();
 	//catch and warn if there's a url in the start urls
 	//that we shouldn't cache
+        // check crawl window during crawl
+        if ((spec!=null) && (!spec.canCrawl())) {
+          logger.debug("Crawl canceled: outside of crawl window");
+          windowClosed = true;
+          // break from while loop
+          break;
+        }
 	if (au.shouldBeCached(url)) {
 	  if (!doCrawlLoop(url, extractedUrls, parsedPages, cus, true)) {
 	    wasError = true;
 	  }
 	} else {
-	  logger.warning("Called with a starting url we aren't suppose to "
-			 +"cache: "+url);
+	  logger.warning("Called with a starting url we aren't suppose to "+
+			 "cache: "+url);
 	}
+      }
+      if (windowClosed) {
+        // break from for loop
+        break;
       }
       it = extractedUrls.iterator();
     }
 
-    while (!extractedUrls.isEmpty() && !deadline.expired()) {
+    while (!extractedUrls.isEmpty() && !deadline.expired() && !windowClosed) {
       String url = (String)extractedUrls.iterator().next();
       extractedUrls.remove(url);
+      // check crawl window during crawl
+      if ((spec!=null) && (!spec.canCrawl())) {
+        logger.debug("Crawl canceled: outside of crawl window");
+        windowClosed = true;
+        break;
+      }
       if (!doCrawlLoop(url, extractedUrls, parsedPages, cus, false)) {
 	wasError = true;
       }
     }
     logger.info("Finished crawl of "+au);
     endTime = TimeBase.nowMs();
+    // unsuccessful crawl if window closed
+    if (windowClosed) {
+      wasError = true;
+    }
     return !wasError;
   }
 
@@ -241,15 +264,23 @@ public class GoslingCrawlerImpl implements Crawler {
     Plugin plugin = au.getPlugin();
     UrlCacher uc = plugin.makeUrlCacher(ownerCus, manifest);
     try {
-      if(au.shouldBeCached(manifest)) {
-        uc.cache();
-        // check for the permission on the page
-        CachedUrl cu = plugin.makeCachedUrl(ownerCus, manifest);
-        InputStream is = cu.openForReading();
-        // set the reader to our default encoding
-        //XXX try to extract encoding from source
-        Reader reader = new InputStreamReader(is, Constants.DEFAULT_ENCODING);
-        crawl_ok = au.checkCrawlPermission(reader);
+      if (au.shouldBeCached(manifest)) {
+        // check for proper crawl window
+        if ((au.getCrawlSpec()==null) || (au.getCrawlSpec().canCrawl())) {
+          uc.cache();
+          // check for the permission on the page
+          CachedUrl cu = plugin.makeCachedUrl(ownerCus, manifest);
+          InputStream is = cu.openForReading();
+          // set the reader to our default encoding
+          //XXX try to extract encoding from source
+          Reader reader = new InputStreamReader(is, Constants.DEFAULT_ENCODING);
+          crawl_ok = au.checkCrawlPermission(reader);
+          if (!crawl_ok) {
+            logger.error("Couldn't start crawl due to missing permission.");
+          }
+        } else {
+          logger.debug("Couldn't start crawl due to crawl window restrictions.");
+        }
       }
     } catch (IOException ex) {
       logger.warning("Exception reading manifest: "+ex);
@@ -278,6 +309,7 @@ public class GoslingCrawlerImpl implements Crawler {
     logger.debug2("Dequeued url from list: "+url);
     Plugin plugin = au.getPlugin();
     UrlCacher uc = plugin.makeUrlCacher(cus, url);
+
     // don't cache if already cached, unless overwriting
     if (overWrite || !uc.getCachedUrl().hasContent()) {
       try {
