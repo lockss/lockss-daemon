@@ -1,5 +1,5 @@
 /*
- * $Id: TestPoll.java,v 1.70 2003-09-26 23:47:46 eaalto Exp $
+ * $Id: TestPoll.java,v 1.71 2003-12-12 00:56:29 tlipkis Exp $
  */
 
 /*
@@ -530,7 +530,7 @@ public class TestPoll extends LockssTestCase {
           pollmanager.generateRandomBytes(),
           pollmanager.generateRandomBytes(),
           opcode,
-          spec.calcDuration(opcode,cus,pollmanager),
+          pollmanager.calcDuration(opcode,cus),
           testID);
       }
 
@@ -553,7 +553,7 @@ public class TestPoll extends LockssTestCase {
           pollmanager.generateRandomBytes(),
           pollmanager.generateRandomBytes(),
           opcode,
-          spec.calcDuration(opcode,cus,pollmanager),
+          pollmanager.calcDuration(opcode,cus),
           testID);
 	testV2msg[i].setVersion(2);
       }

@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.116 2003-11-11 20:33:31 tlipkis Exp $
+* $Id: PollManager.java,v 1.117 2003-12-12 00:56:29 tlipkis Exp $
  */
 
 /*
@@ -70,8 +70,16 @@ public class PollManager  extends BaseLockssManager {
       "poll.contentpoll.max";
 
   static final String PARAM_QUORUM = Configuration.PREFIX + "poll.quorum";
-  static final String PARAM_DURATION_MULTIPLIER= Configuration.PREFIX +
-      "poll.duration.multiplier";
+  static final String PARAM_DURATION_MULTIPLIER_MIN = Configuration.PREFIX +
+      "poll.duration.multiplier.min";
+  static final String PARAM_DURATION_MULTIPLIER_MAX = Configuration.PREFIX +
+      "poll.duration.multiplier.max";
+
+  // tk - temporary until real name hash estimates
+  static final String PARAM_NAME_HASH_ESTIMATE =
+    HashService.PARAM_NAME_HASH_ESTIMATE;
+  static final long DEFAULT_NAME_HASH_ESTIMATE =
+    HashService.DEFAULT_NAME_HASH_ESTIMATE;
 
   static long DEFAULT_NAMEPOLL_DEADLINE =  10 * Constants.MINUTE;
   static long DEFAULT_CONTENTPOLL_MIN = 3 * Constants.MINUTE;
@@ -81,7 +89,8 @@ public class PollManager  extends BaseLockssManager {
   static final long DEFAULT_RECENT_EXPIRATION = Constants.DAY;
   static final long DEFAULT_VERIFY_EXPIRATION = Constants.DAY;
 
-  static final int DEFAULT_DURATION_MULTIPLIER = 4;
+  static final int DEFAULT_DURATION_MULTIPLIER_MIN = 3;
+  static final int DEFAULT_DURATION_MULTIPLIER_MAX = 7;
 
   private static PollManager theManager = null;
   private static Logger theLog=Logger.getLogger("PollManager");
@@ -99,10 +108,12 @@ public class PollManager  extends BaseLockssManager {
   protected static long m_maxContentPollDuration;
   protected static long m_minNamePollDuration;
   protected static long m_maxNamePollDuration;
+  protected static long m_nameHashEstimate;
   protected static long m_recentPollExpireTime;
   protected static long m_verifierExpireTime;
   protected static int m_quorum;
-  protected static int m_durationMultiplier;
+  protected static int m_minDurationMultiplier;
+  protected static int m_maxDurationMultiplier;
 
   public PollManager() {
   }
@@ -173,7 +184,7 @@ public class PollManager  extends BaseLockssManager {
                  + LcapMessage.POLL_OPCODES[opcode] +
                  " for spec " + pollspec);
     CachedUrlSet cus = pollspec.getCachedUrlSet();
-    long duration = pollspec.calcDuration(opcode, cus, this);
+    long duration = calcDuration(opcode, cus);
     if(duration <=0) {
       theLog.debug("not sending request for polltype: "
                    + LcapMessage.POLL_OPCODES[opcode] +
@@ -744,6 +755,11 @@ public class PollManager  extends BaseLockssManager {
     m_minNamePollDuration = aveDuration - aveDuration / 4;
     m_maxNamePollDuration = aveDuration + aveDuration / 4;
 
+    // tk - temporary until real name hash estimates
+    m_nameHashEstimate = newConfig.getTimeInterval(PARAM_NAME_HASH_ESTIMATE,
+						   DEFAULT_NAME_HASH_ESTIMATE);
+
+
     m_minContentPollDuration = newConfig.getTimeInterval(PARAM_CONTENTPOLL_MIN,
         DEFAULT_CONTENTPOLL_MIN);
     m_maxContentPollDuration = newConfig.getTimeInterval(PARAM_CONTENTPOLL_MAX,
@@ -751,13 +767,128 @@ public class PollManager  extends BaseLockssManager {
 
     m_quorum = newConfig.getIntParam(PARAM_QUORUM, DEFAULT_QUORUM);
 
-    m_durationMultiplier = newConfig.getIntParam(PARAM_DURATION_MULTIPLIER,
-                                                 DEFAULT_DURATION_MULTIPLIER);
+    m_minDurationMultiplier =
+      newConfig.getIntParam(PARAM_DURATION_MULTIPLIER_MIN,
+			    DEFAULT_DURATION_MULTIPLIER_MIN);
+    m_maxDurationMultiplier =
+      newConfig.getIntParam(PARAM_DURATION_MULTIPLIER_MAX,
+			    DEFAULT_DURATION_MULTIPLIER_MAX);
     m_recentPollExpireTime = newConfig.getTimeInterval(PARAM_RECENT_EXPIRATION,
         DEFAULT_RECENT_EXPIRATION);
     m_verifierExpireTime = newConfig.getTimeInterval(PARAM_VERIFY_EXPIRATION,
                                         DEFAULT_VERIFY_EXPIRATION);
   }
+
+  // Poll time calculation
+  long calcDuration(int opcode, CachedUrlSet cus) {
+    int quorum = getQuorum();
+    switch (opcode) {
+    case LcapMessage.NAME_POLL_REQ:
+    case LcapMessage.NAME_POLL_REP: {
+      long minPoll = (m_minNamePollDuration +
+		      theRandom.nextLong(m_maxNamePollDuration -
+					 m_minNamePollDuration));
+
+      return findSchedulableDuration(m_nameHashEstimate,
+				     minPoll, m_maxNamePollDuration,
+				     m_nameHashEstimate);
+    }
+    case LcapMessage.CONTENT_POLL_REQ:
+    case LcapMessage.CONTENT_POLL_REP: {
+      long hashEst = cus.estimatedHashDuration();
+      theLog.debug3("CUS estimated hash duration: " + hashEst);
+
+      hashEst = getAdjustedEstimate(hashEst);
+      theLog.debug3("My adjusted hash duration: " + hashEst);
+
+      long totalHash = hashEst * (quorum + 1);
+      long minPoll = Math.max(totalHash * m_minDurationMultiplier,
+			      m_minContentPollDuration);
+      long maxPoll = Math.max(Math.min(totalHash * m_maxDurationMultiplier,
+				       m_maxContentPollDuration),
+			      m_minContentPollDuration);
+      return findSchedulableDuration(totalHash, minPoll, maxPoll, totalHash);
+    }
+    default:
+      return -1;
+    }
+  }
+
+  // try poll durations between min and max at increments of incr.
+  // return duration in which all hashing can be scheduled, or -1 if not.
+
+  // tk - multiplicative padding factor to avoid poll durations that nearly
+  // completely fill the schedule.
+
+  long findSchedulableDuration(long hashTime, long min, long max, long incr) {
+    // loop goes maybe one more because we don't want to stop before
+    // reaching max
+    for (long dur = min; dur <= (max + incr - 1); dur += incr) {
+      if (dur > max) {
+	dur = max;
+      }
+      theLog.debug3("Trying to schedule poll of duration: " + dur);
+      if (canSchedulePoll(dur, hashTime)) {
+	theLog.debug2("Poll duration: " +
+		      StringUtil.timeIntervalToString(dur));
+	return dur;
+      }
+      if (dur >= max) {
+	// Complete paranoia here.  This shouldn't be necessary, because if
+	// we've reset dur to max, the loop will exit on the next iteration
+	// because (max + incr) > (max + incr - 1).  But because we might
+	// reduce dur in the loop the possibility of an infinite loop has
+	// been raised; this is insurance against that.
+	break;
+      }
+    }
+    theLog.info("Can't schedule poll within " +
+		StringUtil.timeIntervalToString(max));
+    return -1;
+  }
+
+  boolean canSchedulePoll(long pollTime, long hashTime) {
+    if (hashTime > pollTime) {
+      theLog.warning("Total hash time " +
+		     StringUtil.timeIntervalToString(hashTime) +
+		     " greater than max poll time " +
+		     StringUtil.timeIntervalToString(pollTime));
+      return false;
+    }		     
+    Deadline when = Deadline.in(pollTime);
+    return canHashBeScheduledBefore(hashTime, when);
+  }
+
+  boolean canHashBeScheduledBefore(long duration, Deadline when) {
+    return theHashService.canHashBeScheduledBefore(duration, when);
+  }
+
+  long getAdjustedEstimate(long estTime) {
+    long my_estimate = estTime;
+    long my_rate;
+    long slow_rate = getSlowestHashSpeed();
+    try {
+      my_rate = getBytesPerMsHashEstimate();
+    }
+    catch (SystemMetrics.NoHashEstimateAvailableException e) {
+      // if can't get my rate, use slowest rate to prevent adjustment
+      theLog.warning("No hash estimate available, " +
+                     "not adjusting poll for slow machines");
+      my_rate = slow_rate;
+    }
+    theLog.debug3("My hash speed is " + my_rate
+                  + ". Slow speed is " + slow_rate);
+
+
+    if (my_rate > slow_rate) {
+      my_estimate = estTime * my_rate / slow_rate;
+      theLog.debug3("I've corrected the hash estimate to " + my_estimate);
+    }
+    return my_estimate;
+  }
+
+
+
 
 //--------------- PollerStatus Accessors -----------------------------
   Iterator getPolls() {
@@ -813,17 +944,13 @@ public class PollManager  extends BaseLockssManager {
     return theManager.makePoll(msg);
   }
 
-  static long getSlowestHashSpeed() {
+  long getSlowestHashSpeed() {
     return theSystemMetrics.getSlowestHashSpeed();
   }
 
-  static long getBytesPerMsHashEstimate()
-  throws SystemMetrics.NoHashEstimateAvailableException {
+  long getBytesPerMsHashEstimate()
+      throws SystemMetrics.NoHashEstimateAvailableException {
     return theSystemMetrics.getBytesPerMsHashEstimate();
-  }
-
-  static boolean canHashBeScheduledBefore(long duration, Deadline when) {
-    return theHashService.canHashBeScheduledBefore(duration, when);
   }
 
 // ----------------  Callbacks -----------------------------------

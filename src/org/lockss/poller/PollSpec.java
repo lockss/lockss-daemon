@@ -1,5 +1,5 @@
 /*
- * $Id: PollSpec.java,v 1.20 2003-12-10 18:37:52 tlipkis Exp $
+ * $Id: PollSpec.java,v 1.21 2003-12-12 00:56:29 tlipkis Exp $
  */
 
 /*
@@ -206,94 +206,6 @@ public class PollSpec {
 
   public int getVersion() {
     return version;
-  }
-
-  long calcDuration(int opcode, CachedUrlSet cus, PollManager pm) {
-    long ret = 0;
-    int quorum = pm.getQuorum();
-    switch (opcode) {
-      case LcapMessage.NAME_POLL_REQ:
-      case LcapMessage.NAME_POLL_REP:
-        ret = pm.m_minNamePollDuration +
-            theRandom.nextLong(pm.m_maxNamePollDuration -
-			       pm.m_minNamePollDuration);
-        theLog.debug2("Name Poll duration: " +
-                      StringUtil.timeIntervalToString(ret));
-        break;
-
-      case LcapMessage.CONTENT_POLL_REQ:
-      case LcapMessage.CONTENT_POLL_REP:
-        long estTime = cus.estimatedHashDuration();
-        theLog.debug3("CUS estimated hash duration = " + estTime);
-
-        estTime = getAdjustedEstimate(estTime, pm);
-        theLog.debug3("My adjusted hash duration = " + estTime);
-
-        ret = estTime * pm.m_durationMultiplier * (quorum + 1);
-        theLog.debug3("I think the poll should take: " + ret);
-
-        if (ret < pm.m_minContentPollDuration) {
-          theLog.info("My poll estimate (" + ret
-                       + ") is too low, adjusting to the minimum: "
-                       + pm.m_minContentPollDuration);
-          ret = pm.m_minContentPollDuration;
-        }
-        else if (ret > pm.m_maxContentPollDuration) {
-          theLog.warning("My poll estimate (" + ret
-                       + ") is too high, adjusting to the maximum: "
-                       + pm.m_maxContentPollDuration);
-          ret = pm.m_maxContentPollDuration;
-        }
-        if(!canSchedulePoll(ret, estTime * (quorum+1), pm)) {
-           ret = -1;
-           theLog.info("Can't schedule this poll returning -1");
-        }
-        else {
-          theLog.debug2("Content Poll duration: " +
-                        StringUtil.timeIntervalToString(ret));
-        }
-        break;
-
-      default:
-    }
-
-    return ret;
-  }
-
-  boolean canSchedulePoll(long pollTime, long neededTime, PollManager pm) {
-    if (neededTime > pollTime) {
-      theLog.warning("Total hash time " +
-		     StringUtil.timeIntervalToString(neededTime) +
-		     " greater than max poll time " +
-		     StringUtil.timeIntervalToString(pollTime));
-      return false;
-    }		     
-    Deadline when = Deadline.in(pollTime);
-    return pm.canHashBeScheduledBefore(neededTime, when);
-  }
-
-  long getAdjustedEstimate(long estTime, PollManager pm) {
-    long my_estimate = estTime;
-    long my_rate;
-    long slow_rate = pm.getSlowestHashSpeed();
-    try {
-      my_rate = pm.getBytesPerMsHashEstimate();
-    }
-    catch (SystemMetrics.NoHashEstimateAvailableException e) {
-      // if can't get my rate, use slowest rate to prevent adjustment
-      theLog.warning("No hash estimate available, " +
-                     "not adjusting poll for slow machines");
-      my_rate = slow_rate;
-    }
-    theLog.debug3("My hash speed is " + my_rate
-                  + ". Slow speed is " + slow_rate);
-
-
-    if (my_rate > slow_rate) {
-      my_estimate = estTime * my_rate / slow_rate;
-      theLog.debug3("I've corrected the hash estimate to " + my_estimate);
-    }
-    return my_estimate;
   }
 
   private PluginManager getPluginManager() {

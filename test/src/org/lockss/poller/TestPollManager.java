@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.55 2003-09-26 23:47:46 eaalto Exp $
+ * $Id: TestPollManager.java,v 1.56 2003-12-12 00:56:29 tlipkis Exp $
  */
 
 /*
@@ -315,17 +315,101 @@ public class TestPollManager extends LockssTestCase {
 
   }
 
+  public void testMockPollManager() {
+    // This ensures that MockPollManager.canHashBeScheduledBefore() does
+    // what I intended
+    MockPollManager mpm = new MockPollManager();
+
+    mpm.setMinPollDeadline(Deadline.in(1000));
+    assertFalse(mpm.canHashBeScheduledBefore(100, Deadline.in(0)));
+    assertTrue(mpm.canHashBeScheduledBefore(100, Deadline.in(1000)));
+    assertTrue(mpm.canHashBeScheduledBefore(100, Deadline.in(1001)));
+
+  }
+
   public void testCanSchedulePoll() {
+    MockPollManager mpm = new MockPollManager();
 
-   long pollTime = Constants.DAY;
-   long neededTime = pollTime/4;
+    // Accept polls that finish no earlier than this
+    mpm.setMinPollDeadline(Deadline.in(1000));
+    // this one can't
+    assertFalse(mpm.canSchedulePoll(500, 100));
+    // can
+    assertTrue(mpm.canSchedulePoll(2000, 100));
+    // neededTime > duration
+    assertFalse(mpm.canSchedulePoll(500, 600));
+  }
 
-   Plugin plugin = testau.getPlugin();
-   CachedUrlSet cus =
-     plugin.makeCachedUrlSet(testau, new RangeCachedUrlSetSpec(rooturls[1]));
-   PollSpec spec = new PollSpec(cus, lwrbnd, uprbnd);
-   assertTrue(spec.canSchedulePoll(pollTime,neededTime,pollmanager));
+  void configPollTimes() {
+    Properties p = new Properties();
+    addRequiredConfig(p);
+    p.setProperty(PollManager.PARAM_NAMEPOLL_DEADLINE, "10000");
+    p.setProperty(PollManager.PARAM_CONTENTPOLL_MIN, "1000");
+    p.setProperty(PollManager.PARAM_CONTENTPOLL_MAX, "4100");
+    p.setProperty(PollManager.PARAM_QUORUM, "5");
+    p.setProperty(PollManager.PARAM_DURATION_MULTIPLIER_MIN, "3");
+    p.setProperty(PollManager.PARAM_DURATION_MULTIPLIER_MAX, "7");
+    p.setProperty(PollManager.PARAM_NAME_HASH_ESTIMATE, "1s");
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+  }
 
+  public void testCalcDuration() {
+    MockCachedUrlSet mcus =
+      new MockCachedUrlSet((MockArchivalUnit)testau,
+			   new RangeCachedUrlSetSpec("", "", ""));
+    PollSpec ps = new PollSpec(mcus);
+    MockPollManager mpm = new MockPollManager();
+
+    configPollTimes();
+    mpm.setBytesPerMsHashEstimate(100);
+    mpm.setSlowestHashSpeed(100);
+
+    mcus.setEstimatedHashDuration(100);
+    mpm.setMinPollDeadline(Deadline.in(1000));
+    assertEquals(1800, mpm.calcDuration(LcapMessage.CONTENT_POLL_REQ, mcus));
+    mpm.setMinPollDeadline(Deadline.in(2000));
+    assertEquals(2400, mpm.calcDuration(LcapMessage.CONTENT_POLL_REQ, mcus));
+    // this one should be limited by max content poll
+    mpm.setMinPollDeadline(Deadline.in(4000));
+    assertEquals(4100, mpm.calcDuration(LcapMessage.CONTENT_POLL_REQ, mcus));
+    mpm.setMinPollDeadline(Deadline.in(5000));
+    assertEquals(-1, mpm.calcDuration(LcapMessage.CONTENT_POLL_REQ, mcus));
+
+    // calulated poll time will be less than min, should be adjusted up to min
+    mcus.setEstimatedHashDuration(10);
+    mpm.setMinPollDeadline(Deadline.in(100));
+    assertEquals(1000, mpm.calcDuration(LcapMessage.CONTENT_POLL_REQ, mcus));
+
+    // name poll duration is randomized so less predictable, but should
+    // always be between min and max.
+    long ndur = mpm.calcDuration(LcapMessage.NAME_POLL_REQ, mcus);
+    assertTrue(ndur >= mpm.m_minNamePollDuration);
+    assertTrue(ndur <= mpm.m_maxNamePollDuration);
+  }
+
+  static class MockPollManager extends PollManager {
+    long bytesPerMsHashEstimate = 0;
+    long slowestHashSpeed = 0;
+    Deadline minPollDeadline = Deadline.EXPIRED;
+
+    boolean canHashBeScheduledBefore(long duration, Deadline when) {
+      return !when.before(minPollDeadline);
+    }
+    void setMinPollDeadline(Deadline when) {
+      minPollDeadline = when;
+    }
+    long getSlowestHashSpeed() {
+      return slowestHashSpeed;
+    }
+    void setSlowestHashSpeed(long speed) {
+      slowestHashSpeed = speed;
+    }
+    long getBytesPerMsHashEstimate() {
+      return bytesPerMsHashEstimate;
+    }
+    void setBytesPerMsHashEstimate(long est) {
+      bytesPerMsHashEstimate = est;
+    }
   }
 
   private void initRequiredServices() {
@@ -337,18 +421,8 @@ public class TestPollManager extends LockssTestCase {
     ((MockArchivalUnit)testau).setPlugin(new MyMockPlugin());
     PluginUtil.registerArchivalUnit(testau);
 
-    String tempDirPath = null;
-    try {
-      tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    }
-    catch (IOException ex) {
-      fail("unable to create a temporary directory");
-    }
-
     Properties p = new Properties();
-    p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
-    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-    p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
+    addRequiredConfig(p);
     ConfigurationUtil.setCurrentConfigFromProps(p);
 
     theDaemon.getHashService().startService();
@@ -357,6 +431,19 @@ public class TestPollManager extends LockssTestCase {
 
     theDaemon.setNodeManager(new MockNodeManager(), testau);
     pollmanager.startService();
+  }
+
+  private void addRequiredConfig(Properties p) {
+    String tempDirPath = null;
+    try {
+      tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    }
+    catch (IOException ex) {
+      fail("unable to create a temporary directory");
+    }
+    p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
+    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
   }
 
   private void initTestAddr() {
