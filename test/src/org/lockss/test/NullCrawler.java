@@ -1,5 +1,5 @@
 /*
- * $Id: NullCrawler.java,v 1.6 2004-02-09 22:09:13 tlipkis Exp $
+ * $Id: NullCrawler.java,v 1.7 2004-03-03 00:38:44 troberts Exp $
  */
 
 /*
@@ -38,7 +38,7 @@ import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.Deadline;
 
 public class NullCrawler implements Crawler {
-  public boolean doCrawl(Deadline deadline) {
+  public boolean doCrawl() {
     throw new UnsupportedOperationException("Not implemented");
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.10 2004-03-01 23:21:56 troberts Exp $
+ * $Id: RepairCrawler.java,v 1.11 2004-03-03 00:38:43 troberts Exp $
  */
 
 /*
@@ -81,7 +81,7 @@ public class RepairCrawler extends CrawlerImpl {
   }
 
 
-  protected boolean doCrawl0(Deadline deadline) {
+  protected boolean doCrawl0() {
     boolean windowClosed = false;
     logger.info("Beginning crawl of "+au);
     crawlStatus.signalCrawlStarted();
@@ -89,7 +89,7 @@ public class RepairCrawler extends CrawlerImpl {
 
     Iterator it = getStartingUrls();
     
-    while (it.hasNext() && !deadline.expired() && !crawlAborted) {
+    while (it.hasNext() && !crawlAborted) {
       String url = (String)it.next();
       //catch and warn if there's a url in the start urls
       //that we shouldn't cache
@@ -157,11 +157,11 @@ public class RepairCrawler extends CrawlerImpl {
 	  logger.debug3("Trying to fetch from a cache");
 	  fetchFromCache(uc);
 	} catch (CantProxyException e) {
-	  logger.debug3("Failed, so trying to fetch from a cache");
+	  logger.debug3("Failed, so trying to fetch from publisher");
 	  cache(uc);
 	}
       } else {
-	logger.debug3("Trying to fetch from a cache");
+	logger.debug3("Trying to fetch from publisher");
 	cache(uc);
       }
       numUrlsFetched++;

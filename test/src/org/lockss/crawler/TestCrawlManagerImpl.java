@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.46 2004-02-26 19:23:25 troberts Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.47 2004-03-03 00:38:44 troberts Exp $
  */
 
 /*
@@ -126,14 +126,14 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     }
   }
 
-  public void testNewCrawlDeadlineIsMax() {
-    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
+//   public void testNewCrawlDeadlineIsMax() {
+//     SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
 
-    crawlManager.startNewContentCrawl(mau, new TestCrawlCB(sem), null, null);
+//     crawlManager.startNewContentCrawl(mau, new TestCrawlCB(sem), null, null);
 
-    waitForCrawlToFinish(sem);
-    assertEquals(Deadline.MAX, crawler.getDeadline());
-  }
+//     waitForCrawlToFinish(sem);
+//     assertEquals(Deadline.MAX, crawler.getDeadline());
+//   }
 
   public void testStoppingCrawlAbortsNewContentCrawl() {
     SimpleBinarySemaphore finishedSem = new SimpleBinarySemaphore();
@@ -631,7 +631,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       this.sem2 = sem2;
     }
 
-    public boolean doCrawl(Deadline deadline) {
+    public boolean doCrawl() {
       sem1.give();
       sem2.take();
       return true;
@@ -644,7 +644,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       this.sem = sem;
     }
 
-    public boolean doCrawl(Deadline deadline) {
+    public boolean doCrawl() {
       sem.give();
       return true;
     }

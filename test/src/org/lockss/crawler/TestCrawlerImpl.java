@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlerImpl.java,v 1.7 2004-02-23 21:15:52 tlipkis Exp $
+ * $Id: TestCrawlerImpl.java,v 1.8 2004-03-03 00:38:44 troberts Exp $
  */
 
 /*
@@ -97,21 +97,21 @@ public class TestCrawlerImpl extends LockssTestCase {
     ConfigurationUtil.setCurrentConfigFromProps(p);
   }
 
-  public void testDoCrawlThrowsForNullDeadline() {
-    try {
-      crawler.doCrawl(null);
-      fail("Calling doCrawl with a null Deadline should throw "+
-	   "an IllegalArgumentException");
-    } catch (IllegalArgumentException iae) {
-    }
-  }
+//   public void testDoCrawlThrowsForNullDeadline() {
+//     try {
+//       crawler.doCrawl(null);
+//       fail("Calling doCrawl with a null Deadline should throw "+
+// 	   "an IllegalArgumentException");
+//     } catch (IllegalArgumentException iae) {
+//     }
+//   }
 
   public void testDoesntCacheFailedPermission() {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     cus.addUrl(startUrl);
 
     mau.setCrawlPermission(false);
-    crawler.doCrawl(Deadline.MAX);
+    crawler.doCrawl();
     Set expected = SetUtil.set();
     assertEquals(expected, cus.getCachedUrls());
   }
@@ -129,7 +129,7 @@ public class TestCrawlerImpl extends LockssTestCase {
     cus.addUrl(url3);
 
     crawler.abortCrawl();
-    crawler.doCrawl(Deadline.MAX);
+    crawler.doCrawl();
     Set expected = SetUtil.set(startUrl);
     assertEquals(expected, cus.getCachedUrls());
 //     assertFalse(crawler.doCrawl0Called());
@@ -142,7 +142,7 @@ public class TestCrawlerImpl extends LockssTestCase {
     parser.addUrlSetToReturn(startUrl, SetUtil.set(url1));
     cus.addUrl(url1, false, true);
 
-    assertTrue(crawler.doCrawl(Deadline.MAX));
+    assertTrue(crawler.doCrawl());
    }
 
   public void testReturnsFalseWhenExceptionThrown() {
@@ -153,7 +153,7 @@ public class TestCrawlerImpl extends LockssTestCase {
     cus.addUrl(url1, new IOException("Test exception"), DEFAULT_RETRY_TIMES);
     crawlRule.addUrlToCrawl(url1);
 
-    assertFalse(crawler.doCrawl(Deadline.MAX));
+    assertFalse(crawler.doCrawl());
   }
 
   public void testReturnsRetriesWhenExceptionThrown() {
@@ -164,7 +164,7 @@ public class TestCrawlerImpl extends LockssTestCase {
     cus.addUrl(url1, new IOException("Test exception"), DEFAULT_RETRY_TIMES-1);
     crawlRule.addUrlToCrawl(url1);
 
-    crawler.doCrawl(Deadline.MAX);
+    crawler.doCrawl();
     Set expected = SetUtil.set(startUrl, url1);
     assertEquals(expected, cus.getCachedUrls());
   }
@@ -185,7 +185,7 @@ public class TestCrawlerImpl extends LockssTestCase {
     cus.addUrl(url1, new IOException("Test exception"), retryNum-1);
     crawlRule.addUrlToCrawl(url1);
 
-    crawler.doCrawl(Deadline.MAX);
+    crawler.doCrawl();
     Set expected = SetUtil.set(startUrl, url1);
     assertEquals(expected, cus.getCachedUrls());
   }
@@ -213,7 +213,7 @@ public class TestCrawlerImpl extends LockssTestCase {
     crawlRule.addUrlToCrawl(url2);
     crawlRule.addUrlToCrawl(url3);
 
-    crawler.doCrawl(Deadline.MAX);
+    crawler.doCrawl();
     assertEquals(retryNum, cus.getNumCacheAttempts(url1));
   }
 
@@ -226,7 +226,7 @@ public class TestCrawlerImpl extends LockssTestCase {
     cus.addUrl(url1, new FileNotFoundException("Test exception"), 0);
     crawlRule.addUrlToCrawl(url1);
 
-    assertTrue(crawler.doCrawl(Deadline.MAX));
+    assertTrue(crawler.doCrawl());
   }
 
   public void testPluginThrowsRuntimeException() {
@@ -237,7 +237,7 @@ public class TestCrawlerImpl extends LockssTestCase {
     cus.addUrl(url1, new ExpectedRuntimeException("Test exception"), 0);
     crawlRule.addUrlToCrawl(url1);
 
-    assertFalse(crawler.doCrawl(Deadline.MAX));
+    assertFalse(crawler.doCrawl());
   }
 
   public void testGetStatusCrawlNotStarted() {
@@ -269,7 +269,7 @@ public class TestCrawlerImpl extends LockssTestCase {
     crawlRule.addUrlToCrawl(url3);
 
     long expectedStart = TimeBase.nowMs();
-    crawler.doCrawl(Deadline.MAX);
+    crawler.doCrawl();
     long expectedEnd = TimeBase.nowMs();
     Crawler.Status crawlStatus = crawler.getStatus();
     assertEquals(expectedStart, crawlStatus.getStartTime());
@@ -286,7 +286,7 @@ public class TestCrawlerImpl extends LockssTestCase {
   public void testGetStatusSuccessful() {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     cus.addUrl(startUrl);
-    crawler.doCrawl(Deadline.MAX);
+    crawler.doCrawl();
     assertEquals(Crawler.STATUS_SUCCESSFUL,
 		 crawler.getStatus().getCrawlStatus());
   }
@@ -299,7 +299,7 @@ public class TestCrawlerImpl extends LockssTestCase {
     cus.addUrl(url1, new IOException("Test exception"), DEFAULT_RETRY_TIMES);
     crawlRule.addUrlToCrawl(url1);
 
-    crawler.doCrawl(Deadline.MAX);
+    crawler.doCrawl();
     assertEquals(Crawler.STATUS_ERROR,
 		 crawler.getStatus().getCrawlStatus());
   }
@@ -326,7 +326,7 @@ public class TestCrawlerImpl extends LockssTestCase {
 
     crawler = new NewContentCrawler(mau, spec, new MockAuState());
     mau.setParser(parser);
-    crawler.doCrawl(Deadline.MAX);
+    crawler.doCrawl();
     // only gets 2 urls because start url is fetched twice (manifest & parse)
     Set expected = SetUtil.set(startUrl, url1);
     assertEquals(expected, cus.getCachedUrls());

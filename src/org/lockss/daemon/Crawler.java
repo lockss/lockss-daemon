@@ -1,5 +1,5 @@
 /*
- * $Id: Crawler.java,v 1.19 2004-02-09 22:09:14 tlipkis Exp $
+ * $Id: Crawler.java,v 1.20 2004-03-03 00:38:43 troberts Exp $
  */
 
 /*
@@ -64,7 +64,7 @@ public interface Crawler {
    * @return true if the crawl was successful
    * @param deadline maximum time to spend on this crawl
    */
-  public boolean doCrawl(Deadline deadline);
+  public boolean doCrawl();
 
 
   /**

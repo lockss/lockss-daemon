@@ -1,5 +1,5 @@
 /*
- * $Id: DoHighwireCrawl.java,v 1.27 2004-03-01 06:10:40 clairegriffin Exp $
+ * $Id: DoHighwireCrawl.java,v 1.28 2004-03-03 00:38:44 troberts Exp $
  */
 
 /*
@@ -95,7 +95,7 @@ public class DoHighwireCrawl {
     }
     if (crawlFlg) {
       Crawler crawler = new NewContentCrawler(au, au.getCrawlSpec(), null);
-      crawler.doCrawl(Deadline.MAX);
+      crawler.doCrawl();
     }
   }
 }
