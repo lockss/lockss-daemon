@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepository.java,v 1.10 2004-02-07 06:52:48 eaalto Exp $
+ * $Id: HistoryRepository.java,v 1.11 2004-02-23 09:16:59 tlipkis Exp $
  */
 
 /*
@@ -70,13 +70,15 @@ public interface HistoryRepository extends LockssAuManager {
 
   /**
    * Stores IdentityAgreement list
-  * @param list the list of {@link IdentityAgreement}s
+   * @param list the list of {@link
+   * org.lockss.protocol.IdentityManager.IdentityAgreement}s
    */
   public void storeIdentityAgreements(List list);
 
   /**
    * Loads and returns IdentityAgreement list
-   * @return List the list of {@link IdentityAgreement}s
+   * @return List the list {@link
+   * org.lockss.protocol.IdentityManager.IdentityAgreement}s
    */
   public List loadIdentityAgreements();
 
