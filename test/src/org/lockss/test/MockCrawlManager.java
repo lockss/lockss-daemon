@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawlManager.java,v 1.14 2003-07-31 00:45:01 eaalto Exp $
+ * $Id: MockCrawlManager.java,v 1.15 2003-09-26 23:47:45 eaalto Exp $
  */
 
 /*
@@ -72,7 +72,7 @@ public class MockCrawlManager implements CrawlManager, LockssManager {
    * @param cookie the cookie
    * @return true if a crawl is running on this AU
    */
-  public boolean isCrawlingAU(ArchivalUnit au,
+  public boolean isCrawlingAu(ArchivalUnit au,
 			      CrawlManager.Callback cb, Object cookie) {
     if (shouldCrawlNewContent) {
       scheduleNewContentCrawl(au, cb, cookie);

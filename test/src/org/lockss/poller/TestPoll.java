@@ -1,5 +1,5 @@
 /*
- * $Id: TestPoll.java,v 1.69 2003-09-17 06:10:01 troberts Exp $
+ * $Id: TestPoll.java,v 1.70 2003-09-26 23:47:46 eaalto Exp $
  */
 
 /*
@@ -337,7 +337,7 @@ public class TestPoll extends LockssTestCase {
     try {
       Plugin plugin = testau.getPlugin();
       PollSpec spec =
-	new PollSpec(testau.getAUId(),
+	new PollSpec(testau.getAuId(),
 		     rootV1urls[0],null,null,
 		     plugin.makeCachedUrlSet(testau,
 					     new RangeCachedUrlSetSpec(rootV1urls[0])));
@@ -519,7 +519,7 @@ public class TestPoll extends LockssTestCase {
 	CachedUrlSetSpec cuss =
 	  new RangeCachedUrlSetSpec(rootV1urls[i], lwrbnd, uprbnd);
 	CachedUrlSet cus = plugin.makeCachedUrlSet(testau, cuss);
-        PollSpec spec = new PollSpec(testau.getAUId(),
+        PollSpec spec = new PollSpec(testau.getAuId(),
                                      rootV1urls[i],lwrbnd, uprbnd,
                                      cus);
         ((MockCachedUrlSet)spec.getCachedUrlSet()).setHasContent(false);
@@ -540,7 +540,7 @@ public class TestPoll extends LockssTestCase {
 	CachedUrlSetSpec cuss =
 	  new RangeCachedUrlSetSpec(rootV2urls[i], lwrbnd, uprbnd);
         CachedUrlSet cus = plugin.makeCachedUrlSet(testau, cuss);
-        PollSpec spec = new PollSpec(testau.getAUId(),
+        PollSpec spec = new PollSpec(testau.getAuId(),
                                      rootV2urls[i],lwrbnd, uprbnd,
                                      cus);
         ((MockCachedUrlSet)spec.getCachedUrlSet()).setHasContent(false);

@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingCrawlerImpl.java,v 1.34 2003-09-17 06:09:59 troberts Exp $
+ * $Id: GoslingCrawlerImpl.java,v 1.35 2003-09-26 23:52:18 eaalto Exp $
  */
 
 /*
@@ -162,7 +162,7 @@ public class GoslingCrawlerImpl implements Crawler {
     return endTime;
   }
 
-  public ArchivalUnit getAU() {
+  public ArchivalUnit getAu() {
     return au;
   }
 
@@ -188,7 +188,7 @@ public class GoslingCrawlerImpl implements Crawler {
     boolean wasError = false;
     logger.info("Beginning crawl of "+au);
     startTime = TimeBase.nowMs();
-    CachedUrlSet cus = au.getAUCachedUrlSet();
+    CachedUrlSet cus = au.getAuCachedUrlSet();
     Set parsedPages = new HashSet();
 
     Set extractedUrls = new HashSet();

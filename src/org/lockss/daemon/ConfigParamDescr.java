@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescr.java,v 1.3 2003-09-11 07:46:15 tlipkis Exp $
+ * $Id: ConfigParamDescr.java,v 1.4 2003-09-26 23:52:17 eaalto Exp $
  */
 
 /*
@@ -54,6 +54,14 @@ public class ConfigParamDescr implements Comparable {
     VOLUME_NUMBER.setDisplayName("Volume No.");
     VOLUME_NUMBER.setType(TYPE_INT);
     VOLUME_NUMBER.setSize(8);
+  }
+
+  public static final ConfigParamDescr YEAR = new ConfigParamDescr();
+  static {
+    YEAR.setKey("year");
+    YEAR.setDisplayName("Year");
+    YEAR.setType(TYPE_INT);
+    YEAR.setSize(4);
   }
 
   public static final ConfigParamDescr BASE_URL = new ConfigParamDescr();

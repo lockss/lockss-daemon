@@ -1,5 +1,5 @@
 /*
- * $Id: TestWrapperLogger.java,v 1.1 2003-09-04 23:11:18 tyronen Exp $
+ * $Id: TestWrapperLogger.java,v 1.2 2003-09-26 23:47:45 eaalto Exp $
  */
 
 /*
@@ -167,7 +167,7 @@ public class TestWrapperLogger extends LockssTestCase {
     assertEquals(tgt.messageCount(),1);
   }
 
-  public void testConfigureAU() {
+  public void testConfigureAu() {
     tgt.resetMessages();
     WrapperLogger.record_throwable("Plugin","configureAU",new NullPointerException());
     assertEquals(tgt.messageCount(),1);

@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.50 2003-09-22 23:52:01 clairegriffin Exp $
+ * $Id: PluginManager.java,v 1.51 2003-09-26 23:52:17 eaalto Exp $
  */
 
 /*
@@ -152,19 +152,19 @@ public class PluginManager extends BaseLockssManager {
    * @param auDefProps defining properties for the au
    * {@see Plugin.getDefiningConfigKeys}
    */
-  public static String generateAUId(String pluginId, Properties auDefProps) {
+  public static String generateAuId(String pluginId, Properties auDefProps) {
     return generateAuId(pluginId,
 			PropUtil.propsToCanonicalEncodedString(auDefProps));
   }
 
-  public static String generateAUId(Plugin plugin, Configuration auConf) {
+  public static String generateAuId(Plugin plugin, Configuration auConf) {
     Collection defKeys = plugin.getDefiningConfigKeys();
     Properties props = new Properties();
     for (Iterator it = defKeys.iterator(); it.hasNext();) {
       String curKey = (String)it.next();
       props.setProperty(curKey, auConf.get(curKey));
     }
-    return generateAUId(plugin.getPluginId(), props);
+    return generateAuId(plugin.getPluginId(), props);
   }
 
   static String generateAuId(String pluginId, String auKey) {
@@ -186,7 +186,11 @@ public class PluginManager extends BaseLockssManager {
 
   static final String PARAM_WRAPPER = "reserved.wrapper";
 
-  /** Returns true if the reserved.wrapper key is true */
+  /** 
+   * Returns true if the reserved.wrapper key is true 
+   * @param auConf the Configuration
+   * @return true if wrapped
+   */
   private boolean isAuWrapped(Configuration auConf) {
     try {
       return WrapperState.isUsingWrapping() &&
@@ -263,21 +267,21 @@ public class PluginManager extends BaseLockssManager {
   void configureAu(Plugin plugin, Configuration auConf, String auId)
       throws ArchivalUnit.ConfigurationException {
     try {
-      ArchivalUnit au = plugin.configureAU(auConf,
+      ArchivalUnit au = plugin.configureAu(auConf,
 					   (ArchivalUnit)auMap.get(auId));
       log.debug("Configured AU " + au);
       try {
-	getDaemon().startAUManagers(au);
+	getDaemon().startAuManagers(au);
       } catch (Exception e) {
 	throw new
 	  ArchivalUnit.ConfigurationException("Couldn't start AU processes",
 					      e);
       }
-      log.debug("putAuMap(" + au.getAUId() +", " + au);
-      if (!auId.equals(au.getAUId())) {
+      log.debug("putAuMap(" + au.getAuId() +", " + au);
+      if (!auId.equals(au.getAuId())) {
 	throw new ArchivalUnit.ConfigurationException("Configured AU has "
 						      +"unexpected AUId, "
-						      +"is: "+au.getAUId()
+						      +"is: "+au.getAuId()
 						      +" expected: "+auId);
       }
       putAuInMap(au);
@@ -295,7 +299,7 @@ public class PluginManager extends BaseLockssManager {
     String auid;
     ArchivalUnit oldAu = null;
     try {
-      auid = generateAUId(plugin, auConf);
+      auid = generateAuId(plugin, auConf);
       oldAu = getAuFromId(auid);
     } catch (Exception e) {
       // no action.  Bad/missing config value might cause getAuFromId() to
@@ -306,17 +310,17 @@ public class PluginManager extends BaseLockssManager {
       throw new ArchivalUnit.ConfigurationException("Cannot create that AU because it already exists");
     }
     try {
-      ArchivalUnit au = plugin.createAU(auConf);
+      ArchivalUnit au = plugin.createAu(auConf);
       log.debug("Created AU " + au);
       try {
-	getDaemon().startAUManagers(au);
+	getDaemon().startAuManagers(au);
       } catch (Exception e) {
 	log.error("Couldn't start AU processes", e);
 	throw new
 	  ArchivalUnit.ConfigurationException("Couldn't start AU processes",
 					      e);
       }
-      log.debug("putAuMap(" + au.getAUId() +", " + au);
+      log.debug("putAuMap(" + au.getAuId() +", " + au);
       putAuInMap(au);
       return au;
     } catch (ArchivalUnit.ConfigurationException e) {
@@ -329,7 +333,7 @@ public class PluginManager extends BaseLockssManager {
   }
 
   private void putAuInMap(ArchivalUnit au) {
-    auMap.put(au.getAUId(), au);
+    auMap.put(au.getAuId(), au);
   }
 
   public ArchivalUnit getAuFromId(String auId) {
@@ -348,10 +352,10 @@ public class PluginManager extends BaseLockssManager {
    * @throws ArchivalUnit.ConfigurationException
    * @throws IOException
    */
-  public void setAndSaveAUConfiguration(ArchivalUnit au,
+  public void setAndSaveAuConfiguration(ArchivalUnit au,
 					Properties auProps)
       throws ArchivalUnit.ConfigurationException, IOException {
-    setAndSaveAUConfiguration(au, ConfigManager.fromProperties(auProps));
+    setAndSaveAuConfiguration(au, ConfigManager.fromProperties(auProps));
   }
 
   /**
@@ -363,7 +367,7 @@ public class PluginManager extends BaseLockssManager {
    * @throws ArchivalUnit.ConfigurationException
    * @throws IOException
    */
-  public void setAndSaveAUConfiguration(ArchivalUnit au,
+  public void setAndSaveAuConfiguration(ArchivalUnit au,
 					Configuration auConf)
       throws ArchivalUnit.ConfigurationException, IOException {
     log.debug("Reconfiguring AU " + au);
@@ -373,7 +377,7 @@ public class PluginManager extends BaseLockssManager {
 
   private void updateAuConfigFile(ArchivalUnit au, Configuration auConf)
       throws ArchivalUnit.ConfigurationException, IOException {
-    String auid = au.getAUId();
+    String auid = au.getAuId();
     String prefix = PARAM_AU_TREE + "." + configKeyFromAuId(auid);
     Configuration fqConfig = auConf.addPrefix(prefix);
     configMgr.updateAuConfigFile(fqConfig, prefix);
@@ -390,10 +394,10 @@ public class PluginManager extends BaseLockssManager {
    * @throws ArchivalUnit.ConfigurationException
    * @throws IOException
    */
-  public ArchivalUnit createAndSaveAUConfiguration(Plugin plugin,
+  public ArchivalUnit createAndSaveAuConfiguration(Plugin plugin,
 						   Properties auProps)
       throws ArchivalUnit.ConfigurationException, IOException {
-    return createAndSaveAUConfiguration(plugin,
+    return createAndSaveAuConfiguration(plugin,
 					ConfigManager.fromProperties(auProps));
   }
 
@@ -407,7 +411,7 @@ public class PluginManager extends BaseLockssManager {
    * @throws ArchivalUnit.ConfigurationException
    * @throws IOException
    */
-  public ArchivalUnit createAndSaveAUConfiguration(Plugin plugin,
+  public ArchivalUnit createAndSaveAuConfiguration(Plugin plugin,
 						   Configuration auConf)
       throws ArchivalUnit.ConfigurationException, IOException {
     ArchivalUnit au = createAu(plugin, auConf);
@@ -422,7 +426,7 @@ public class PluginManager extends BaseLockssManager {
    * @throws ArchivalUnit.ConfigurationException
    * @throws IOException
    */
-  public void deleteAUConfiguration(ArchivalUnit au)
+  public void deleteAuConfiguration(ArchivalUnit au)
       throws ArchivalUnit.ConfigurationException, IOException {
     log.debug("Deleting AU config: " + au);
     updateAuConfigFile(au, ConfigManager.EMPTY_CONFIGURATION);
@@ -436,7 +440,7 @@ public class PluginManager extends BaseLockssManager {
    */
   public Configuration getStoredAuConfiguration(ArchivalUnit au) {
     Configuration config = configMgr.readAuConfigFile();
-    String auid = au.getAUId();
+    String auid = au.getAuId();
     String prefix = PARAM_AU_TREE + "." + configKeyFromAuId(auid);
     return config.getConfigTree(prefix);
   }
@@ -514,11 +518,11 @@ public class PluginManager extends BaseLockssManager {
    */
   public CachedUrl findMostRecentCachedUrl(String url) {
     CachedUrl best = null;
-    for (Iterator iter = getAllAUs().iterator(); iter.hasNext();) {
+    for (Iterator iter = getAllAus().iterator(); iter.hasNext();) {
       ArchivalUnit au = (ArchivalUnit)iter.next();
       Plugin plugin = au.getPlugin();
       if (au.shouldBeCached(url)) {
-	CachedUrl cu = plugin.makeCachedUrl(au.getAUCachedUrlSet(), url);
+	CachedUrl cu = plugin.makeCachedUrl(au.getAuCachedUrlSet(), url);
 	if (cu != null && cu.hasContent() && cuNewerThan(cu, best)) {
 	  best = cu;
 	}
@@ -542,7 +546,7 @@ public class PluginManager extends BaseLockssManager {
    * Return a list of all configured ArchivalUnits.
    * @return the List of aus
    */
-  public List getAllAUs() {
+  public List getAllAus() {
     return new ArrayList(auMap.values());
   }
 
@@ -585,7 +589,7 @@ public class PluginManager extends BaseLockssManager {
    */
   public CachedUrlSet findCachedUrlSet(PollSpec spec) {
     if (log.isDebug3()) log.debug3(this +".findCachedUrlSet2("+spec+")");
-    String auId = spec.getAUId();
+    String auId = spec.getAuId();
     ArchivalUnit au = getAuFromId(auId);
     if (log.isDebug3()) log.debug3("au: " + au);
     if (au == null) return null;
@@ -593,7 +597,7 @@ public class PluginManager extends BaseLockssManager {
     String url = spec.getUrl();
     CachedUrlSet cus;
     if (AuUrl.isAuUrl(url)) {
-      cus = au.getAUCachedUrlSet();
+      cus = au.getAuCachedUrlSet();
     } else if ((spec.getLwrBound()!=null) &&
                (spec.getLwrBound().equals(PollSpec.SINGLE_NODE_LWRBOUND))) {
       cus = plugin.makeCachedUrlSet(au, new SingleNodeCachedUrlSetSpec(url));
@@ -657,11 +661,11 @@ public class PluginManager extends BaseLockssManager {
 
     public List getRows(String key) {
       List table = new ArrayList();
-      for (Iterator iter = mgr.getAllAUs().iterator(); iter.hasNext();) {
+      for (Iterator iter = mgr.getAllAus().iterator(); iter.hasNext();) {
 	Map row = new HashMap();
 	ArchivalUnit au = (ArchivalUnit)iter.next();
 	row.put("au", au.getName());
-	row.put("auid", au.getAUId());
+	row.put("auid", au.getAuId());
 	row.put("poll",
 		statusSvc.getReference(PollerStatus.MANAGER_STATUS_TABLE_NAME,
 				       au));

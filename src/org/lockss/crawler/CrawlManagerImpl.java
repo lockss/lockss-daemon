@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.45 2003-09-17 06:09:58 troberts Exp $
+ * $Id: CrawlManagerImpl.java,v 1.46 2003-09-26 23:52:17 eaalto Exp $
  */
 
 /*
@@ -149,7 +149,7 @@ public class CrawlManagerImpl extends BaseLockssManager
       CrawlThread crawlThread =
 	new CrawlThread(crawler, Deadline.MAX, cb, cookie, locks.values());
       crawlThread.start();
-      crawlHistory.put(au.getAUId(), crawler);
+      crawlHistory.put(au.getAuId(), crawler);
     } else {
       logger.debug3("Repair aborted due to activity lock.");
       cb.signalCrawlAttemptCompleted(false, cookie);
@@ -236,7 +236,7 @@ public class CrawlManagerImpl extends BaseLockssManager
     CrawlThread crawlThread =
       new CrawlThread(crawler, Deadline.MAX, cb, cookie, SetUtil.set(lock));
     crawlThread.start();
-    crawlHistory.put(au.getAUId(), crawler);
+    crawlHistory.put(au.getAuId(), crawler);
   }
 
   private void addCrawl(Map crawlMap, ArchivalUnit au, Crawler crawler) {
@@ -287,7 +287,7 @@ public class CrawlManagerImpl extends BaseLockssManager
 
       if (crawler.getType() == Crawler.NEW_CONTENT) {
 	if (crawlSuccessful) {
-	  NodeManager nodeManager = theDaemon.getNodeManager(crawler.getAU());
+	  NodeManager nodeManager = theDaemon.getNodeManager(crawler.getAu());
 	  nodeManager.newContentCrawlFinished();
 	}
       }
@@ -321,7 +321,7 @@ public class CrawlManagerImpl extends BaseLockssManager
   }
 
   //CrawlManager.StatusSource methods
-  public Collection getActiveAUs() {
+  public Collection getActiveAus() {
     return crawlHistory.keySet();
   }
 

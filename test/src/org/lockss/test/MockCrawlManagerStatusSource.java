@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawlManagerStatusSource.java,v 1.1 2003-07-02 00:57:15 troberts Exp $
+ * $Id: MockCrawlManagerStatusSource.java,v 1.2 2003-09-26 23:47:45 eaalto Exp $
  */
 
 /*
@@ -37,22 +37,22 @@ import org.lockss.plugin.*;
 import org.lockss.crawler.*;
 
 public class MockCrawlManagerStatusSource
-  implements CrawlManager.StatusSource {
-   private Collection activeAUs;
+    implements CrawlManager.StatusSource {
+  private Collection activeAus;
   private Map map = new HashMap();
 
-  public Collection getActiveAUs() {
-    return activeAUs;
+  public Collection getActiveAus() {
+    return activeAus;
   }
 
-  public void setActiveAUs(Collection activeAUs) {
-    this.activeAUs = activeAUs;
+  public void setActiveAus(Collection activeAus) {
+    this.activeAus = activeAus;
   }
 
   public Collection getCrawls(String auid) {
     return (Collection) map.get(auid);
   }
-  
+
   public void setCrawls(Collection crawls, String auid) {
     map.put(auid, crawls);
   }

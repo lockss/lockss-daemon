@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.33 2003-09-17 06:10:01 troberts Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.34 2003-09-26 23:47:46 eaalto Exp $
  */
 
 /*
@@ -231,7 +231,7 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
     return ListUtil.list(SIMULATED_URL_STEM);
   }
 
-  boolean isURLToBeDamaged(String url) {
+  boolean isUrlToBeDamaged(String url) {
     String file = StringUtil.replaceString(url,SIMULATED_URL_ROOT,"");
     if (toBeDamaged.contains(file)) {
       boolean x = toBeDamaged.remove(file);

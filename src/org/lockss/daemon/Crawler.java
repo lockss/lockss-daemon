@@ -1,5 +1,5 @@
 /*
- * $Id: Crawler.java,v 1.11 2003-06-26 23:59:02 eaalto Exp $
+ * $Id: Crawler.java,v 1.12 2003-09-26 23:52:17 eaalto Exp $
  */
 
 /*
@@ -86,7 +86,7 @@ public interface Crawler {
    * Return the AU that this crawler is crawling within
    * @return the AU that this crawler is crawling within
    */
-  public ArchivalUnit getAU();
+  public ArchivalUnit getAu();
 
   /**
    * Returns the type of crawl

@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.39 2003-09-16 23:36:11 eaalto Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.40 2003-09-26 23:47:45 eaalto Exp $
  */
 
 /*
@@ -257,8 +257,8 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     assertEquals(LockssRepository.SAME_LEVEL_NO_OVERLAP, repo.cusCompare(cus2, cus1));
 
     // test for Au urls
-    spec1 = new AUCachedUrlSetSpec();
-    spec2 = new AUCachedUrlSetSpec();
+    spec1 = new AuCachedUrlSetSpec();
+    spec2 = new AuCachedUrlSetSpec();
     cus1 = new MockCachedUrlSet(mau, spec1);
     cus2 = new MockCachedUrlSet(mau, spec2);
     assertEquals(LockssRepository.SAME_LEVEL_OVERLAP, repo.cusCompare(cus1, cus2));
@@ -317,7 +317,7 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
   // test static naming calls
 
   public void testAuKey() {
-    String expectedStr = mau.getAUId();
+    String expectedStr = mau.getAuId();
     assertEquals(expectedStr, LockssRepositoryImpl.getAuKey(mau));
   }
 
@@ -358,7 +358,7 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
 
   public void testSaveAndLoadNames() {
     Properties newProps = new Properties();
-    newProps.setProperty(LockssRepositoryImpl.AU_ID_PROP, mau.getAUId());
+    newProps.setProperty(LockssRepositoryImpl.AU_ID_PROP, mau.getAuId());
 
     HashMap newNameMap = new HashMap();
     newNameMap.put(LockssRepositoryImpl.getAuKey(mau), "testDir");
@@ -372,13 +372,13 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
 
     newProps = LockssRepositoryImpl.getAuIdProperties(location);
     assertNotNull(newProps);
-    assertEquals(mau.getAUId(),
+    assertEquals(mau.getAuId(),
                  newProps.getProperty(LockssRepositoryImpl.AU_ID_PROP));
   }
 
   public void testLoadNameMap() {
     Properties newProps = new Properties();
-    newProps.setProperty(LockssRepositoryImpl.AU_ID_PROP, mau.getAUId());
+    newProps.setProperty(LockssRepositoryImpl.AU_ID_PROP, mau.getAuId());
     String location = LockssRepositoryImpl.cacheLocation + "ab";
     LockssRepositoryImpl.saveAuIdProperties(location, newProps);
 

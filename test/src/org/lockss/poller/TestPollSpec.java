@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollSpec.java,v 1.9 2003-09-17 06:10:01 troberts Exp $
+ * $Id: TestPollSpec.java,v 1.10 2003-09-26 23:47:46 eaalto Exp $
  */
 
 /*
@@ -81,7 +81,7 @@ public class TestPollSpec extends LockssTestCase {
 								      lower,
 								      upper));
     PollSpec ps = new PollSpec(cus);
-    assertEquals(auid, ps.getAUId());
+    assertEquals(auid, ps.getAuId());
     assertEquals(url, ps.getUrl());
     assertEquals(lower, ps.getLwrBound());
     assertEquals(upper, ps.getUprBound());
@@ -123,7 +123,7 @@ public class TestPollSpec extends LockssTestCase {
       fail("can't make request message");
     }
     ps = new PollSpec(msg);
-    assertEquals(auid, ps.getAUId());
+    assertEquals(auid, ps.getAuId());
     assertEquals(url, ps.getUrl());
     assertEquals(lower, ps.getLwrBound());
     assertEquals(upper, ps.getUprBound());

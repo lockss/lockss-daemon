@@ -1,5 +1,5 @@
 /*
- * $Id: MBFV2.java,v 1.10 2003-09-09 03:54:04 dshr Exp $
+ * $Id: MBFV2.java,v 1.11 2003-09-26 23:52:17 eaalto Exp $
  */
 
 /*
@@ -82,7 +82,7 @@ public class MBFV2 extends MemoryBoundFunctionVote {
   private int[][] ourProofs;
   private byte[][] ourHashes;
   private byte[] firstProofNonce;
-  
+
   /**
    * No-argument constructor for use with Class.newInstance().
    */
@@ -124,7 +124,7 @@ public class MBFV2 extends MemoryBoundFunctionVote {
 				 int eVal,
 				 CachedUrlSet cusVal,
 				 byte[] pollID,
-				 LcapIdentity voterID) 
+				 LcapIdentity voterID)
     throws MemoryBoundFunctionException {
     super.setupGeneration(fact, nVal, eVal, cusVal, pollID, voterID);
     setup(nVal, eVal, cusVal, pollID, voterID);
@@ -142,7 +142,7 @@ public class MBFV2 extends MemoryBoundFunctionVote {
    * @param cus the CachedUrlSet containing the content to be voted on
    * @param sVals the starting points chosen by the prover for each block
    * @param hashes the hashes of each block
-   * 
+   *
    */
   public void setupVerification(MemoryBoundFunctionFactory fact,
 				byte[] nVal,
@@ -204,7 +204,7 @@ public class MBFV2 extends MemoryBoundFunctionVote {
    * Do "n" steps of the underlying hash or effort proof generation
    * @param n number of steps to move.
    * @return true if there is more work to do
-   * 
+   *
    */
   public boolean computeSteps(int n) throws MemoryBoundFunctionException {
     logger.debug("computeSteps: block " + index + " steps " + n + " state " +
@@ -269,7 +269,7 @@ range of the proof,  the final value fetched from the
 basis array T during traversal of the path.
 
 Both arrays of 32-bit ints can be created only by following the
-paths in the range. 
+paths in the range.
 */
 
   private byte[] makeFirstBlockProofNonce()
@@ -278,8 +278,8 @@ paths in the range.
     proofDigest.update(poll);   // The poll ID
     if (cus != null) {
       ArchivalUnit au = cus.getArchivalUnit();
-      String AUid = au.getAUId();
-      proofDigest.update(AUid.getBytes());  // The AU ID
+      String auId = au.getAuId();
+      proofDigest.update(auId.getBytes());  // The AU ID
     } else {
       throw new MemoryBoundFunctionException("no CUS");
     }
@@ -601,7 +601,7 @@ paths in the range.
       if (index < 1)
 	throw new MemoryBoundFunctionException("index should be > 0" + " in " +
 					     stateName[currentState]);
-      
+
       // Second or subsequent block - nonce is previous hash and
       // previous proof.
       byte[] nonce1 = makeSubsequentBlockProofNonce(ourHashes[index-1],
@@ -700,7 +700,7 @@ paths in the range.
       logger.debug("proof " + proofToString(ourProofs));
     if (ourHashes != null)
       logger.debug("hashes " + hashesToString(ourHashes));
-		  
+
   }
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: SingleNodeCachedUrlSetSpec.java,v 1.7 2003-06-26 23:59:33 eaalto Exp $
+ * $Id: SingleNodeCachedUrlSetSpec.java,v 1.8 2003-09-26 23:52:17 eaalto Exp $
  */
 
 /*
@@ -69,7 +69,7 @@ public class SingleNodeCachedUrlSetSpec implements CachedUrlSetSpec {
   }
 
   /** @return false */
-  public boolean isAU() {
+  public boolean isAu() {
     return false;
   }
 
@@ -91,7 +91,7 @@ public class SingleNodeCachedUrlSetSpec implements CachedUrlSetSpec {
     if (spec.isSingleNode()) {
       return !equals(spec);
     }
-    if (spec.isAU()) {
+    if (spec.isAu()) {
       return false;
     }
     return !spec.subsumes(this);

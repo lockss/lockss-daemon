@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatus.java,v 1.2 2003-07-18 22:18:24 troberts Exp $
+ * $Id: CrawlManagerStatus.java,v 1.3 2003-09-26 23:52:18 eaalto Exp $
  */
 
 /*
@@ -118,7 +118,7 @@ public class CrawlManagerStatus implements StatusAccessor {
   }
 
   private List getAllCrawls() {
-    Collection aus = statusSource.getActiveAUs();
+    Collection aus = statusSource.getActiveAus();
     List crawls = new ArrayList();
     if (aus != null) {
       for (Iterator it = aus.iterator(); it.hasNext();) {
@@ -157,7 +157,7 @@ public class CrawlManagerStatus implements StatusAccessor {
   private Map makeRow(Crawler crawler) {
     String type = getTypeString(crawler.getType());
     Map row = new HashMap();
-    ArchivalUnit au = crawler.getAU();
+    ArchivalUnit au = crawler.getAu();
     row.put(AU_COL_NAME, au.getName());
     row.put(CRAWL_TYPE, type);
     row.put(START_TIME_COL_NAME, new Long(crawler.getStartTime()));
@@ -179,7 +179,7 @@ public class CrawlManagerStatus implements StatusAccessor {
 
   private Map makeRow(String type, Crawler crawler) {
     Map row = new HashMap();
-    ArchivalUnit au = crawler.getAU();
+    ArchivalUnit au = crawler.getAu();
     row.put(AU_COL_NAME, au.getName());
     row.put(CRAWL_TYPE, type);
     row.put(START_TIME_COL_NAME, new Long(crawler.getStartTime()));

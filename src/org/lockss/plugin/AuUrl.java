@@ -1,5 +1,5 @@
 /*
-* $Id: AuUrl.java,v 1.5 2003-06-20 22:34:51 claire Exp $
+* $Id: AuUrl.java,v 1.6 2003-09-26 23:52:17 eaalto Exp $
  */
 
 /*
@@ -65,6 +65,7 @@ public class AuUrl {
    * @param auId the plugin-specific AU Id string.
    * @return a URL with the LOCKSSAU protocol and the supplied AU Id
    * string.
+   * @throws MalformedURLException
    */
   public static URL fromAuId(String auId)
       throws MalformedURLException {

@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedUrlCacher.java,v 1.12 2003-09-19 22:39:52 eaalto Exp $
+ * $Id: SimulatedUrlCacher.java,v 1.13 2003-09-26 23:47:46 eaalto Exp $
  */
 
 /*
@@ -131,7 +131,7 @@ public class SimulatedUrlCacher extends BaseUrlCacher {
   private boolean toBeDamaged() {
     try {
       SimulatedArchivalUnit unit = (SimulatedArchivalUnit) getArchivalUnit();
-      return unit.isURLToBeDamaged(url);
+      return unit.isUrlToBeDamaged(url);
     } catch (ClassCastException e ) {
       return false;
     }

@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePlugin.java,v 1.26 2003-09-12 01:35:51 tlipkis Exp $
+ * $Id: HighWirePlugin.java,v 1.27 2003-09-26 23:52:16 eaalto Exp $
  */
 
 /*
@@ -80,7 +80,7 @@ public class HighWirePlugin extends BasePlugin {
     return "HighWire Press";
   }
 
-  public List getAUConfigProperties() {
+  public List getAuConfigProperties() {
     return ListUtil.list(PD_BASE, PD_VOL);
   }
   
@@ -88,7 +88,7 @@ public class HighWirePlugin extends BasePlugin {
     return ListUtil.list(AUPARAM_BASE_URL, AUPARAM_VOL);
   }
 
-  public ArchivalUnit createAU(Configuration configInfo) 
+  public ArchivalUnit createAu(Configuration configInfo) 
       throws ArchivalUnit.ConfigurationException {
     ArchivalUnit au = new HighWireArchivalUnit(this);
     au.setConfiguration(configInfo);

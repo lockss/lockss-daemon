@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.32 2003-06-25 21:19:55 eaalto Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.33 2003-09-26 23:47:45 eaalto Exp $
  */
 
 /*
@@ -233,7 +233,7 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
     assertEquals(321, auState.getLastTopLevelPollTime());
     // doesn't store last treewalk time, so should reset to -1
     assertEquals(-1, auState.getLastTreeWalkTime());
-    assertEquals(mau.getAUId(), auState.getArchivalUnit().getAUId());
+    assertEquals(mau.getAuId(), auState.getArchivalUnit().getAuId());
   }
 
   public void testStoreDamagedNodeSet() throws Exception {
@@ -256,7 +256,7 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
     assertTrue(damNodes.contains("test1"));
     assertTrue(damNodes.contains("test2"));
     assertFalse(damNodes.contains("test3"));
-    assertEquals(mau.getAUId(), damNodes.theAu.getAUId());
+    assertEquals(mau.getAuId(), damNodes.theAu.getAuId());
   }
 
   public void testStoreOverwrite() throws Exception {
@@ -278,7 +278,7 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
     auState = repository.loadAuState(mau);
     assertEquals(1234, auState.getLastCrawlTime());
     assertEquals(4321, auState.getLastTopLevelPollTime());
-    assertEquals(mau.getAUId(), auState.getArchivalUnit().getAUId());
+    assertEquals(mau.getAuId(), auState.getArchivalUnit().getAuId());
 
     auState = new AuState(mau, 123, 321, -1, repository);
     repository.storeAuState(auState);

@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrlSetSpec.java,v 1.10 2003-06-20 22:34:55 claire Exp $
+ * $Id: MockCachedUrlSetSpec.java,v 1.11 2003-09-26 23:47:45 eaalto Exp $
  */
 
 /*
@@ -73,7 +73,7 @@ public class MockCachedUrlSetSpec implements CachedUrlSetSpec {
     throw new UnsupportedOperationException("Not Implemented");
   }
 
-  public boolean isAU() {
+  public boolean isAu() {
     throw new UnsupportedOperationException("Not Implemented");
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: AuSpecificManagerHandler.java,v 1.3 2003-09-04 23:11:17 tyronen Exp $
+ * $Id: AuSpecificManagerHandler.java,v 1.4 2003-09-26 23:52:18 eaalto Exp $
  */
 
 /*
@@ -63,7 +63,7 @@ public class AuSpecificManagerHandler {
    * Starts any managers necessary to handle the ArchivalUnit.
    * @param au the ArchivalUnit
    */
-  public void startAUManagers(ArchivalUnit au) {
+  public void startAuManagers(ArchivalUnit au) {
     // this order can't be changed, as the other two use the ActivityRegulator
     // and the NodeManager uses the LockssRepository
     addAuSpecificManager(LockssDaemon.ACTIVITY_REGULATOR, au);
@@ -73,7 +73,7 @@ public class AuSpecificManagerHandler {
 
   protected LockssManager addAuSpecificManager(String managerKey,
                                                ArchivalUnit au) {
-    HashMap managerMap = getAUSpecificManagerMap(managerKey);
+    HashMap managerMap = getAuSpecificManagerMap(managerKey);
     LockssManager manager = (LockssManager)managerMap.get(au);
     if (manager == null) {
       manager = getNewManager(managerKey, au);
@@ -109,8 +109,8 @@ public class AuSpecificManagerHandler {
    * @param au the ArchivalUnit
    * @return the LockssManager
    */
-  public LockssManager getAUSpecificManager(String managerKey, ArchivalUnit au) {
-    return (LockssManager)getAUSpecificManagerMap(managerKey).get(au);
+  public LockssManager getAuSpecificManager(String managerKey, ArchivalUnit au) {
+    return (LockssManager)getAuSpecificManagerMap(managerKey).get(au);
   }
 
   /**
@@ -119,7 +119,7 @@ public class AuSpecificManagerHandler {
    * @return an Iterator of Map.Entry objects
    */
   public Iterator getEntries(String managerKey) {
-    return getAUSpecificManagerMap(managerKey).entrySet().iterator();
+    return getAuSpecificManagerMap(managerKey).entrySet().iterator();
   }
 
   /**
@@ -140,7 +140,7 @@ public class AuSpecificManagerHandler {
     auSpecificManagers.clear();
   }
 
-  protected HashMap getAUSpecificManagerMap(String managerKey) {
+  protected HashMap getAuSpecificManagerMap(String managerKey) {
     HashMap map = (HashMap)auSpecificManagers.get(managerKey);
     if (map==null) {
       log.debug3("Initializing hashmap for "+managerKey);

@@ -1,5 +1,5 @@
 /*
- * $Id: ProjectMusePlugin.java,v 1.5 2003-09-12 01:35:51 tlipkis Exp $
+ * $Id: ProjectMusePlugin.java,v 1.6 2003-09-26 23:52:17 eaalto Exp $
  */
 
 /*
@@ -64,7 +64,7 @@ public class ProjectMusePlugin extends BasePlugin {
     AUPARAM_JOURNAL_DIR, "american_imago" }
   };
 
-  public ArchivalUnit createAU(Configuration auConfig)
+  public ArchivalUnit createAu(Configuration auConfig)
       throws ArchivalUnit.ConfigurationException {
     ArchivalUnit au = new ProjectMuseArchivalUnit(this);
     au.setConfiguration(auConfig);
@@ -84,7 +84,7 @@ public class ProjectMusePlugin extends BasePlugin {
     return CURRENT_VERSION;
   }
 
-  public List getAUConfigProperties() {
+  public List getAuConfigProperties() {
     return ListUtil.list(PD_BASE, PD_DIR, PD_VOL);
   }
 

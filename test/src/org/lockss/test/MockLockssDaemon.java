@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssDaemon.java,v 1.29 2003-09-23 07:44:47 eaalto Exp $
+ * $Id: MockLockssDaemon.java,v 1.30 2003-09-26 23:47:45 eaalto Exp $
  */
 
 /*
@@ -295,7 +295,7 @@ public class MockLockssDaemon extends LockssDaemon {
 
   public ActivityRegulator getActivityRegulator(ArchivalUnit au) {
     ActivityRegulator regulator =
-        (ActivityRegulator)mockHandler.getAUSpecificManager(
+        (ActivityRegulator)mockHandler.getAuSpecificManager(
         ACTIVITY_REGULATOR, au);
     if (regulator==null) {
       regulator = (ActivityRegulator)mockHandler.addAuSpecificManager(
@@ -306,7 +306,7 @@ public class MockLockssDaemon extends LockssDaemon {
 
   public LockssRepository getLockssRepository(ArchivalUnit au) {
     LockssRepository repository =
-        (LockssRepository)mockHandler.getAUSpecificManager(
+        (LockssRepository)mockHandler.getAuSpecificManager(
         LOCKSS_REPOSITORY, au);
     if (repository==null) {
       repository = (LockssRepository)mockHandler.addAuSpecificManager(
@@ -317,7 +317,7 @@ public class MockLockssDaemon extends LockssDaemon {
 
   public NodeManager getNodeManager(ArchivalUnit au) {
     NodeManager manager =
-        (NodeManager)mockHandler.getAUSpecificManager(NODE_MANAGER, au);
+        (NodeManager)mockHandler.getAuSpecificManager(NODE_MANAGER, au);
     if (manager==null) {
       manager = (NodeManager)mockHandler.addAuSpecificManager(
           LockssDaemon.NODE_MANAGER, au);
@@ -495,7 +495,7 @@ public class MockLockssDaemon extends LockssDaemon {
 
     public LockssManager addAuSpecificManager(String managerKey,
                                                  ArchivalUnit au) {
-      HashMap managerMap = getAUSpecificManagerMap(managerKey);
+      HashMap managerMap = getAuSpecificManagerMap(managerKey);
       LockssManager manager = (LockssManager)managerMap.get(au);
       if (manager == null) {
         manager = getNewManager(managerKey, au);
@@ -507,18 +507,18 @@ public class MockLockssDaemon extends LockssDaemon {
 
     void setActivityRegulator(ActivityRegulator regulator,
                                            ArchivalUnit au) {
-      getAUSpecificManagerMap(LockssDaemon.ACTIVITY_REGULATOR).put(au,
+      getAuSpecificManagerMap(LockssDaemon.ACTIVITY_REGULATOR).put(au,
           regulator);
     }
 
     void setLockssRepository(LockssRepository repository,
                                            ArchivalUnit au) {
-      getAUSpecificManagerMap(LockssDaemon.LOCKSS_REPOSITORY).put(au,
+      getAuSpecificManagerMap(LockssDaemon.LOCKSS_REPOSITORY).put(au,
           repository);
     }
 
     void setNodeManager(NodeManager manager, ArchivalUnit au) {
-      getAUSpecificManagerMap(LockssDaemon.NODE_MANAGER).put(au, manager);
+      getAuSpecificManagerMap(LockssDaemon.NODE_MANAGER).put(au, manager);
     }
 
     public void clear() {

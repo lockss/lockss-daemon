@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.36 2003-08-15 21:31:51 tlipkis Exp $
+ * $Id: LockssDaemon.java,v 1.37 2003-09-26 23:52:18 eaalto Exp $
  */
 
 /*
@@ -260,9 +260,9 @@ public class LockssDaemon {
    * @return an au-specific lockss manager
    * @throws IllegalArgumentException if the manager is not available.
    */
-  public static LockssManager getAUSpecificManager(String managerKey,
+  public static LockssManager getAuSpecificManager(String managerKey,
       ArchivalUnit au) {
-    LockssManager mgr = auSpecificManagers.getAUSpecificManager(managerKey, au);
+    LockssManager mgr = auSpecificManagers.getAuSpecificManager(managerKey, au);
     if (mgr == null) {
       throw new IllegalArgumentException("Unavailable manager:" + managerKey);
     }
@@ -273,9 +273,9 @@ public class LockssDaemon {
    * Starts any managers necessary to handle the ArchivalUnit.
    * @param au the ArchivalUnit
    */
-  public void startAUManagers(ArchivalUnit au) {
+  public void startAuManagers(ArchivalUnit au) {
     log.debug2("Adding au-specific managers for au '"+au+"'");
-    auSpecificManagers.startAUManagers(au);
+    auSpecificManagers.startAuManagers(au);
   }
 
   /**
@@ -340,7 +340,7 @@ public class LockssDaemon {
    */
   public LockssRepository getLockssRepository(ArchivalUnit au) {
     LockssRepository repository =
-        (LockssRepository)auSpecificManagers.getAUSpecificManager(
+        (LockssRepository)auSpecificManagers.getAuSpecificManager(
         LOCKSS_REPOSITORY, au);
     if (repository==null) {
       log.error("LockssRepository not found for au: " + au);
@@ -365,7 +365,7 @@ public class LockssDaemon {
    * @throws IllegalArgumentException if the manager is not available.
    */
   public NodeManager getNodeManager(ArchivalUnit au) {
-    NodeManager manager = (NodeManager)auSpecificManagers.getAUSpecificManager(
+    NodeManager manager = (NodeManager)auSpecificManagers.getAuSpecificManager(
         NODE_MANAGER, au);
     if (manager==null) {
       log.error("NodeManager not found for au: " + au);
@@ -446,7 +446,7 @@ public class LockssDaemon {
    */
   public ActivityRegulator getActivityRegulator(ArchivalUnit au) {
     ActivityRegulator regulator =
-        (ActivityRegulator)auSpecificManagers.getAUSpecificManager(
+        (ActivityRegulator)auSpecificManagers.getAuSpecificManager(
         ACTIVITY_REGULATOR, au);
     if (regulator==null) {
       log.error("ActivityRegulator not found for au: " + au);

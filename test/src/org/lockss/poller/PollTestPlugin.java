@@ -1,5 +1,5 @@
 /*
- * $Id: PollTestPlugin.java,v 1.7 2003-09-17 06:10:01 troberts Exp $
+ * $Id: PollTestPlugin.java,v 1.8 2003-09-26 23:47:46 eaalto Exp $
  */
 
 /*
@@ -80,11 +80,11 @@ public class PollTestPlugin {
     }
 
     public CachedUrlSetHasher getContentHasher(MessageDigest hasher) {
-      return new CUSHasher(duration, bytes);
+      return new CusHasher(duration, bytes);
     }
 
     public CachedUrlSetHasher getNameHasher(MessageDigest hasher) {
-      return new CUSHasher(duration, bytes);
+      return new CusHasher(duration, bytes);
     }
   }
 
@@ -92,12 +92,12 @@ public class PollTestPlugin {
  * CachedUrlSetHasher that takes a programmable time to process a
  * programmable number of bytes.
  */
-  static class CUSHasher extends NullPlugin.CachedUrlSetHasher {
+  static class CusHasher extends NullPlugin.CachedUrlSetHasher {
 
     long duration;
     int bytes;
 
-    public CUSHasher(long duration, int bytes) {
+    public CusHasher(long duration, int bytes) {
       this.duration = duration;
       this.bytes = bytes;
     }

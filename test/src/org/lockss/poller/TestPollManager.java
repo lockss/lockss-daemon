@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.54 2003-09-17 06:10:01 troberts Exp $
+ * $Id: TestPollManager.java,v 1.55 2003-09-26 23:47:46 eaalto Exp $
  */
 
 /*
@@ -182,7 +182,7 @@ public class TestPollManager extends LockssTestCase {
 	  new RangeCachedUrlSetSpec(urlstr, lwrbnd, uprbnd);
 	Plugin plugin = testau.getPlugin();
 	PollSpec spec =
-	  new PollSpec(testau.getAUId(),
+	  new PollSpec(testau.getAuId(),
 		       urlstr,lwrbnd,uprbnd,
 		       plugin.makeCachedUrlSet(testau, cuss));
         sameroot[i] =  LcapMessage.makeRequestMsg(
@@ -377,7 +377,7 @@ public class TestPollManager extends LockssTestCase {
       for(int i= 0; i<3; i++) {
 	CachedUrlSetSpec cuss =
 	  new RangeCachedUrlSetSpec(rooturls[i], lwrbnd, uprbnd);
-        PollSpec spec = new PollSpec(testau.getAUId(),
+        PollSpec spec = new PollSpec(testau.getAuId(),
                                      rooturls[i],lwrbnd, uprbnd,
                                      plugin.makeCachedUrlSet(testau, cuss));
         testmsg[i] =  LcapMessage.makeRequestMsg(

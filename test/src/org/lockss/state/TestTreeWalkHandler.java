@@ -1,5 +1,5 @@
 /*
- * $Id: TestTreeWalkHandler.java,v 1.30 2003-09-17 06:10:03 troberts Exp $
+ * $Id: TestTreeWalkHandler.java,v 1.31 2003-09-26 23:47:45 eaalto Exp $
  */
 
 /*
@@ -67,7 +67,7 @@ public class TestTreeWalkHandler extends LockssTestCase {
 
     mau = new MockArchivalUnit();
     mau.setPlugin(new MockPlugin());
-    mau.setAUCachedUrlSet(TestNodeManagerImpl.makeFakeAuCachedUrlSet(mau,
+    mau.setAuCachedUrlSet(TestNodeManagerImpl.makeFakeAuCus(mau,
         TEST_URL, 2, 2));
     theDaemon.getPluginManager();
     PluginUtil.registerArchivalUnit(mau);
@@ -121,7 +121,7 @@ public class TestTreeWalkHandler extends LockssTestCase {
 
     treeWalkHandler.doTreeWalk();
     assertNull(crawlMan.getAuStatus(mau));
-    assertNull(pollMan.getPollStatus(mau.getAUCachedUrlSet().getUrl()));
+    assertNull(pollMan.getPollStatus(mau.getAuCachedUrlSet().getUrl()));
   }
 
   public void testTreeWalkStartNoCrawlYesPoll() {
@@ -132,7 +132,7 @@ public class TestTreeWalkHandler extends LockssTestCase {
     treeWalkHandler.doTreeWalk();
     assertNull(crawlMan.getAuStatus(mau));
     assertEquals(MockPollManager.CONTENT_REQUESTED,
-		 pollMan.getPollStatus(mau.getAUCachedUrlSet().getUrl()));
+		 pollMan.getPollStatus(mau.getAuCachedUrlSet().getUrl()));
   }
 
   public void testTreeWalkSkipTopLevelPoll() {
@@ -143,7 +143,7 @@ public class TestTreeWalkHandler extends LockssTestCase {
 
     // set up damage in tree
     CachedUrlSet subCus = (CachedUrlSet)
-        mau.getAUCachedUrlSet().flatSetIterator().next();
+        mau.getAuCachedUrlSet().flatSetIterator().next();
     NodeState node = nodeManager.getNodeState(subCus);
     node.setState(NodeState.CONTENT_LOST);
 
@@ -153,7 +153,7 @@ public class TestTreeWalkHandler extends LockssTestCase {
     assertEquals(pollMan.getPollStatus(subCus.getUrl()),
                  MockPollManager.NAME_REQUESTED);
     // no top-level poll run
-    assertNull(pollMan.getPollStatus(mau.getAUCachedUrlSet().getUrl()));
+    assertNull(pollMan.getPollStatus(mau.getAuCachedUrlSet().getUrl()));
 
     TimeBase.setReal();
   }
@@ -192,7 +192,7 @@ public class TestTreeWalkHandler extends LockssTestCase {
 
   public void testCheckNodeStateCrawling() throws Exception {
     NodeStateImpl node = (NodeStateImpl)nodeManager.getNodeState(
-        TestNodeManagerImpl.getCUS(mau, TEST_URL));
+        TestNodeManagerImpl.getCus(mau, TEST_URL));
 
     treeWalkHandler.checkNodeState(node);
     assertNull(pollMan.getPollStatus(node.getCachedUrlSet().getUrl()));
@@ -214,7 +214,7 @@ public class TestTreeWalkHandler extends LockssTestCase {
         ActivityRegulator.TREEWALK, 123321);
 
     NodeStateImpl node = (NodeStateImpl)nodeManager.getNodeState(
-        TestNodeManagerImpl.getCUS(mau, TEST_URL));
+        TestNodeManagerImpl.getCus(mau, TEST_URL));
 
     // should ignore if active poll
     PollState pollState = new PollState(Poll.NAME_POLL, "", "",
@@ -265,7 +265,7 @@ public class TestTreeWalkHandler extends LockssTestCase {
         theDaemon.getActivityRegulator(mau).getAuActivityLock(
         ActivityRegulator.TREEWALK, 123321);
 
-    CachedUrlSet cus = mau.getAUCachedUrlSet();
+    CachedUrlSet cus = mau.getAuCachedUrlSet();
     CachedUrlSet subCus = (CachedUrlSet)cus.flatSetIterator().next();
     NodeStateImpl node = (NodeStateImpl)nodeManager.getNodeState(cus);
     NodeStateImpl subNode = (NodeStateImpl)nodeManager.getNodeState(subCus);
@@ -333,7 +333,7 @@ public class TestTreeWalkHandler extends LockssTestCase {
     try {
 
       testmsg = LcapMessage.makeRequestMsg(
-          new PollSpec(mau.getAUId(),
+          new PollSpec(mau.getAuId(),
                        url, "lwr", "upr", null),
           null,
           bytes,

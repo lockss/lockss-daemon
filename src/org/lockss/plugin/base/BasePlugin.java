@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.12 2003-09-19 22:34:02 eaalto Exp $
+ * $Id: BasePlugin.java,v 1.13 2003-09-26 23:52:16 eaalto Exp $
  */
 
 /*
@@ -63,6 +63,7 @@ public abstract class BasePlugin implements Plugin {
 
   /**
    * Default implementation collects keys from titleConfig map.
+   * @return a List
    */
   public List getSupportedTitles() {
     if (titleConfig == null) {
@@ -77,6 +78,8 @@ public abstract class BasePlugin implements Plugin {
 
   /**
    * Default implementation looks in titleConfig map.
+   * @param title the title String
+   * @return a Configuration (null if none)
    */
   public Configuration getConfigForTitle(String title) {
     if (titleConfig == null) {
@@ -91,7 +94,8 @@ public abstract class BasePlugin implements Plugin {
 
   /** Set title config map from array of arrays of
    * [title, key1, val1, keyn, valn]
-  */
+   * @param titleSpecs the array of arrays
+   */
   protected void setTitleConfig(String titleSpecs[][]) {
     Map map = new HashMap();
     for (int tix = 0; tix < titleSpecs.length; tix++) {
@@ -114,17 +118,17 @@ public abstract class BasePlugin implements Plugin {
     return this.getClass().getName();
   }
 
-  public Collection getAllAUs() {
+  public Collection getAllAus() {
     log.debug2("getAllAus: aus: " + aus);
     return aus;
   }
 
-  public ArchivalUnit configureAU(Configuration config, ArchivalUnit au)
+  public ArchivalUnit configureAu(Configuration config, ArchivalUnit au)
       throws ArchivalUnit.ConfigurationException {
     if (au != null) {
       au.setConfiguration(config);
     } else {
-      au = createAU(config);
+      au = createAu(config);
       aus.add(au);
     }
     return au;

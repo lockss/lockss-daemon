@@ -1,5 +1,5 @@
 /*
- * $Id: Plugin.java,v 1.15 2003-09-17 06:09:59 troberts Exp $
+ * $Id: Plugin.java,v 1.16 2003-09-26 23:52:17 eaalto Exp $
  */
 
 /*
@@ -97,7 +97,7 @@ public interface Plugin {
    * @return a {@link List} of strings which are the names of the properties for
    * which values are needed in order to configure an AU
    */
-  public List getAUConfigProperties();
+  public List getAuConfigProperties();
 
   /**
    * Return the keys for the config values that define the AU
@@ -109,12 +109,12 @@ public interface Plugin {
    * Create or (re)configure an {@link ArchivalUnit} from the specified
    * configuration.
    * @param config {@link Configuration} object with values for all properties
-   * returned by {@link #getAUConfigProperties()}
+   * returned by {@link #getAuConfigProperties()}
    * @param au {@link ArchivalUnit} if one already exists
    * @return a configured {@link ArchivalUnit}
    * @throws ArchivalUnit.ConfigurationException if unable to configure au
    */
-  public ArchivalUnit configureAU(Configuration config, ArchivalUnit au)
+  public ArchivalUnit configureAu(Configuration config, ArchivalUnit au)
       throws ArchivalUnit.ConfigurationException;
 
   /**
@@ -125,7 +125,7 @@ public interface Plugin {
    * @return an {@link ArchivalUnit}
    * @throws ArchivalUnit.ConfigurationException
    */
-  public ArchivalUnit createAU(Configuration auConfig)
+  public ArchivalUnit createAu(Configuration auConfig)
       throws ArchivalUnit.ConfigurationException;
 
   /**
@@ -133,7 +133,7 @@ public interface Plugin {
    * plugin.
    * @return a {@link Collection} of AUs
    */
-  public Collection getAllAUs();
+  public Collection getAllAus();
 
   /**
    * Return the LockssDaemon instance

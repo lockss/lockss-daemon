@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.98 2003-09-17 06:10:01 troberts Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.99 2003-09-26 23:47:45 eaalto Exp $
  */
 
 /*
@@ -70,7 +70,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
 
     mau = new MockArchivalUnit();
     mau.setPlugin(new MockPlugin());
-    mau.setAUCachedUrlSet(makeFakeCachedUrlSet(mau, TEST_URL, 2, 2));
+    mau.setAuCachedUrlSet(makeFakeCus(mau, TEST_URL, 2, 2));
     theDaemon.getPluginManager();
     PluginUtil.registerArchivalUnit(mau);
 
@@ -116,7 +116,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
   }
 
   public void testGetNodeState() throws Exception {
-    CachedUrlSet cus = getCUS(mau, TEST_URL);
+    CachedUrlSet cus = getCus(mau, TEST_URL);
     NodeState node = nodeManager.getNodeState(cus);
     assertNotNull(node);
     assertEquals(cus, node.getCachedUrlSet());
@@ -127,13 +127,13 @@ public class TestNodeManagerImpl extends LockssTestCase {
     NodeState node2 = nodeManager.getNodeState(cus);
     assertSame(node, node2);
 
-    cus = getCUS(mau, TEST_URL + "/branch1");
+    cus = getCus(mau, TEST_URL + "/branch1");
     node = nodeManager.getNodeState(cus);
     assertNotNull(node);
     assertEquals(cus, node.getCachedUrlSet());
 
     // null, since not in repository
-    cus = getCUS(mau, TEST_URL + "/branch3");
+    cus = getCus(mau, TEST_URL + "/branch3");
     node = nodeManager.getNodeState(cus);
     assertNull(node);
 
@@ -144,7 +144,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
   }
 
   public void testLoadingFromHistoryRepository() throws Exception {
-    CachedUrlSet cus = getCUS(mau, TEST_URL + "/branch3");
+    CachedUrlSet cus = getCus(mau, TEST_URL + "/branch3");
     // add to lockss repository
     theDaemon.getLockssRepository(mau).createNewNode(TEST_URL + "/branch3");
     // store in history repository
@@ -160,7 +160,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
   }
 
   public void testDeadPollRemoval() throws Exception {
-    CachedUrlSet cus = getCUS(mau, TEST_URL + "/branch3");
+    CachedUrlSet cus = getCus(mau, TEST_URL + "/branch3");
     // add to lockss repository
     theDaemon.getLockssRepository(mau).createNewNode(TEST_URL + "/branch3");
     // store in history repository
@@ -179,7 +179,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     assertEquals(1, node.polls.size());
     assertFalse(node.getPollHistories().hasNext());
 
-    cus = getCUS(mau, TEST_URL + "/branch4");
+    cus = getCus(mau, TEST_URL + "/branch4");
     // add to lockss repository
     theDaemon.getLockssRepository(mau).createNewNode(TEST_URL + "/branch4");
     // store in history repository
@@ -202,7 +202,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
 
   public void testGetAuState() {
     AuState auState = nodeManager.getAuState();
-    assertEquals(mau.getAUId(), auState.getArchivalUnit().getAUId());
+    assertEquals(mau.getAuId(), auState.getArchivalUnit().getAuId());
   }
 
   public void testMapErrorCodes() {
@@ -223,7 +223,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     // let's generate some history
     CachedUrlSet cus = results.getCachedUrlSet();
     Vector subFiles = new Vector(2);
-    subFiles.add(getCUS(mau, TEST_URL));
+    subFiles.add(getCus(mau, TEST_URL));
     ( (MockCachedUrlSet) cus).setHashItSource(subFiles);
     NodeState node = nodeManager.getNodeState(cus);
     for (int i = 0; i < 3; i++) {
@@ -235,7 +235,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     assertTrue(nodeManager.shouldStartPoll(cus, results));
 
     // if we haven't got one we should return false
-    assertFalse(nodeManager.shouldStartPoll(getCUS(mau, TEST_URL + "/bogus"),
+    assertFalse(nodeManager.shouldStartPoll(getCus(mau, TEST_URL + "/bogus"),
                                             results));
 
     // if we have a damaged node we return false
@@ -251,7 +251,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     // let's generate some history
     CachedUrlSet cus = results.getCachedUrlSet();
     Vector subFiles = new Vector(2);
-    subFiles.add(getCUS(mau, TEST_URL));
+    subFiles.add(getCus(mau, TEST_URL));
     ( (MockCachedUrlSet) cus).setHashItSource(subFiles);
 
     assertNull(nodeManager.activeNodes.get(results.getPollKey()));
@@ -263,7 +263,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
   }
 
   public void testHandleStandardContentPoll() throws Exception {
-    NodeState nodeState = nodeManager.getNodeState(getCUS(mau, TEST_URL));
+    NodeState nodeState = nodeManager.getNodeState(getCus(mau, TEST_URL));
 
     // won content poll
     contentPoll = createPoll(TEST_URL, true, true, 15, 5);
@@ -369,7 +369,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
   }
 
   public void testHandleSingleNodeContentPoll() throws Exception {
-    NodeState nodeState = nodeManager.getNodeState(getCUS(mau, TEST_URL));
+    NodeState nodeState = nodeManager.getNodeState(getCus(mau, TEST_URL));
     // won poll (not mine)
     contentPoll = createPoll(TEST_URL + "/branch1",
                              PollSpec.SINGLE_NODE_LWRBOUND, null,
@@ -475,7 +475,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
   }
 
   public void testHandleNamePoll() throws Exception {
-    NodeState nodeState = nodeManager.getNodeState(getCUS(mau, TEST_URL));
+    NodeState nodeState = nodeManager.getNodeState(getCus(mau, TEST_URL));
 
     // won name poll (not mine)
     namePoll = createPoll(TEST_URL, false, false, 15, 5);
@@ -638,7 +638,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     entry = new PollTally.NameListEntry(true, deleteUrl);
     localL.add(entry);
 
-    NodeState nodeState = nodeManager.getNodeState(getCUS(mau, TEST_URL));
+    NodeState nodeState = nodeManager.getNodeState(getCus(mau, TEST_URL));
     namePoll = createPoll(TEST_URL, false, true, 15, 5);
     PollTally results = namePoll.getVoteTally();
     // create node to be deleted
@@ -667,11 +667,11 @@ public class TestNodeManagerImpl extends LockssTestCase {
   public void testHandleAuPolls() throws Exception {
     // have to change the AUCUS for the MockArchivalUnit here
     // to properly test handling AuNode content polls
-    MockCachedUrlSet mcus = (MockCachedUrlSet) getCUS(mau,
-        new AUCachedUrlSetSpec());
+    MockCachedUrlSet mcus = (MockCachedUrlSet) getCus(mau,
+        new AuCachedUrlSetSpec());
     Vector auChildren = new Vector();
     mcus.setFlatItSource(auChildren);
-    mau.setAUCachedUrlSet(mcus);
+    mau.setAuCachedUrlSet(mcus);
 
     nodeManager.createNodeState(mcus);
 
@@ -716,8 +716,8 @@ public class TestNodeManagerImpl extends LockssTestCase {
     assertEquals(TimeBase.nowMs(), auState.getLastTopLevelPollTime());
 
     // add some fake children
-    auChildren.add(getCUS(mau, "testDir1"));
-    auChildren.add(getCUS(mau, "testDir2"));
+    auChildren.add(getCus(mau, "testDir1"));
+    auChildren.add(getCus(mau, "testDir2"));
     mcus.setFlatItSource(auChildren);
 
     // test that won name poll calls content polls on Au children
@@ -725,8 +725,8 @@ public class TestNodeManagerImpl extends LockssTestCase {
     results = contentPoll.getVoteTally();
     MockCachedUrlSet mcus2 = (MockCachedUrlSet) results.getCachedUrlSet();
     Vector subFiles = new Vector(2);
-    subFiles.add(getCUS(mau, "testDir1"));
-    subFiles.add(getCUS(mau, "testDir2"));
+    subFiles.add(getCus(mau, "testDir1"));
+    subFiles.add(getCus(mau, "testDir2"));
     mcus2.setFlatItSource(subFiles);
     pollState = new PollState(results.getType(),
                               spec.getLwrBound(),
@@ -748,7 +748,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
 
   public void testUpdateInconclusivePolls() throws Exception {
     NodeStateImpl nodeState =
-        (NodeStateImpl)nodeManager.getNodeState(getCUS(mau, TEST_URL));
+        (NodeStateImpl)nodeManager.getNodeState(getCus(mau, TEST_URL));
 
     // inconclusive poll
     namePoll = createPoll(TEST_URL, false, true, 5, 5);
@@ -790,7 +790,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
   public void testCheckLastHistory() throws Exception {
     TimeBase.setSimulated(10000);
 
-    NodeState nodeState = nodeManager.getNodeState(getCUS(mau, TEST_URL));
+    NodeState nodeState = nodeManager.getNodeState(getCus(mau, TEST_URL));
 
     // these are true if the pollmanager doesn't know about them
     historyCheckTestName(PollState.SCHEDULED, nodeState, true, true);
@@ -833,7 +833,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
   public void testCheckCurrentState() throws Exception {
     TimeBase.setSimulated(10000);
     NodeStateImpl nodeState = (NodeStateImpl)nodeManager.getNodeState(
-        getCUS(mau, TEST_URL));
+        getCus(mau, TEST_URL));
 
     // no action for following:
     stateCheckTest(nodeState, Poll.CONTENT_POLL, false, false, false, false, true);
@@ -1033,15 +1033,15 @@ public class TestNodeManagerImpl extends LockssTestCase {
     }
   }
 
-  static CachedUrlSet getCUS(MockArchivalUnit mau, String url) {
+  static CachedUrlSet getCus(MockArchivalUnit mau, String url) {
     return new MockCachedUrlSet(mau, new RangeCachedUrlSetSpec(url));
   }
 
-  static CachedUrlSet getCUS(MockArchivalUnit mau, CachedUrlSetSpec spec) {
+  static CachedUrlSet getCus(MockArchivalUnit mau, CachedUrlSetSpec spec) {
     return new MockCachedUrlSet(mau, spec);
   }
 
-  static CachedUrlSet makeFakeCachedUrlSet(MockArchivalUnit mau,
+  static CachedUrlSet makeFakeCus(MockArchivalUnit mau,
                                            String startUrl,
                                            int numBranches,
                                            int numFiles) throws Exception {
@@ -1080,14 +1080,14 @@ public class TestNodeManagerImpl extends LockssTestCase {
     return cus;
   }
 
-  static CachedUrlSet makeFakeAuCachedUrlSet(MockArchivalUnit mau,
+  static CachedUrlSet makeFakeAuCus(MockArchivalUnit mau,
                                              String startUrl,
                                              int numBranches, int numFiles)
       throws Exception {
     MockCachedUrlSet auCus = new MockCachedUrlSet(mau,
-                                                  new AUCachedUrlSetSpec());
+                                                  new AuCachedUrlSetSpec());
 
-    CachedUrlSet mcus = makeFakeCachedUrlSet(mau, startUrl, numBranches,
+    CachedUrlSet mcus = makeFakeCus(mau, startUrl, numBranches,
                                              numFiles);
     Vector childV = new Vector(1);
     childV.addElement(mcus);
@@ -1107,7 +1107,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
 
   static void loadNodeStates(ArchivalUnit au, NodeManagerImpl nodeManager) {
     // recurse through au cachedurlsets
-    CachedUrlSet cus = au.getAUCachedUrlSet();
+    CachedUrlSet cus = au.getAuCachedUrlSet();
     recurseLoadCachedUrlSets(nodeManager, cus, au);
   }
 
@@ -1160,7 +1160,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     try {
 
       testmsg = LcapMessage.makeRequestMsg(
-          new PollSpec(mau.getAUId(),
+          new PollSpec(mau.getAuId(),
                        url, lwrBound, uprBound, null),
           null,
           bytes,

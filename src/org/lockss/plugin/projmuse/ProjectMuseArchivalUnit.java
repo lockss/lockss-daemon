@@ -1,5 +1,5 @@
 /*
- * $Id: ProjectMuseArchivalUnit.java,v 1.11 2003-09-19 22:39:52 eaalto Exp $
+ * $Id: ProjectMuseArchivalUnit.java,v 1.12 2003-09-26 23:52:17 eaalto Exp $
  */
 
 /*
@@ -188,14 +188,14 @@ public class ProjectMuseArchivalUnit extends BaseArchivalUnit {
     return makeStartUrl(baseUrl, journalDir, volume);
   }
 
-
-  //Todo: return the correct starting url here
   String makeStartUrl(URL base, String journal, int volume) {
     String ret;
     StringBuffer sb = new StringBuffer();
     sb.append(base.toString());
     // always 3 digit?
-    sb.append("journals/"+journal+"/v");
+    sb.append("journals/");
+    sb.append(journal);
+    sb.append("/v");
     if (volume < 100) {
       // make 'v66' into 'v066' and 'v1' into 'v001'
       if (volume < 10) {
@@ -217,35 +217,11 @@ public class ProjectMuseArchivalUnit extends BaseArchivalUnit {
     final int incl = CrawlRules.RE.MATCH_INCLUDE;
     final int excl = CrawlRules.RE.MATCH_EXCLUDE;
     rules.add(new CrawlRules.RE("^" + urlRoot.toString(), CrawlRules.RE.NO_MATCH_EXCLUDE));
-    StringBuffer volBuff = new StringBuffer(urlRoot.toString());
-    volBuff.append("journals/");
-    volBuff.append(journal);
-    volBuff.append("/v");
-
-    // pad out the 'vXXX' to 3 digits
-    if (volume < 100) {
-      if (volume < 10) {
-        volBuff.append("00");
-      } else {
-        volBuff.append("0");
-      }
-    }
-    volBuff.append(volume);
-    volBuff.append("/.*");
-    rules.add(new CrawlRules.RE(volBuff.toString(), incl));
+    rules.add(new CrawlRules.RE(makeStartUrl(urlRoot, journal, volume), incl));
     rules.add(new CrawlRules.RE(urlRoot.toString() +
                                 "journals/"+journal+"/toc/[a-zA-Z]*" + volume +
                                 "\\..*", incl));
     rules.add(new CrawlRules.RE(urlRoot.toString() + "images/.*", incl));
-    //rules.add(new CrawlRules.RE(".*ck=nck.*", excl));
-    //rules.add(new CrawlRules.RE(".*ck=nck.*", excl));
-    //rules.add(new CrawlRules.RE(".*adclick.*", excl));
-    //rules.add(new CrawlRules.RE(".*/cgi/mailafriend.*", excl));
-    //rules.add(new CrawlRules.RE(".*/content/current/.*", incl));
-    //rules.add(new CrawlRules.RE(".*/content/vol"+volume+"/.*", incl));
-    //rules.add(new CrawlRules.RE(".*/cgi/content/.*/"+volume+"/.*", incl));
-    //rules.add(new CrawlRules.RE(".*/cgi/reprint/"+volume+"/.*", incl));
-
     return new CrawlRules.FirstMatch(rules);
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyInfo.java,v 1.2 2003-07-17 23:38:57 tlipkis Exp $
+ * $Id: ProxyInfo.java,v 1.3 2003-09-26 23:52:17 eaalto Exp $
  */
 
 /*
@@ -95,7 +95,7 @@ public class ProxyInfo {
   private Collection getAus() {
     PluginManager pmgr =
       (PluginManager)LockssDaemon.getManager(LockssDaemon.PLUGIN_MANAGER);
-    return pmgr.getAllAUs();
+    return pmgr.getAllAus();
   }
 
   /** Convenience method to get URL stem map for all AUs */
@@ -110,7 +110,7 @@ public class ProxyInfo {
     Map map = new HashMap();
     PluginManager pmgr =
       (PluginManager)LockssDaemon.getManager(LockssDaemon.PLUGIN_MANAGER);
-    for (Iterator iter = pmgr.getAllAUs().iterator(); iter.hasNext(); ) {
+    for (Iterator iter = pmgr.getAllAus().iterator(); iter.hasNext(); ) {
       ArchivalUnit au = (ArchivalUnit)iter.next();
       for (Iterator urlIter = au.getUrlStems().iterator();
 	   urlIter.hasNext(); ) {

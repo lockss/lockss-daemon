@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.35 2003-09-17 06:09:59 troberts Exp $
+ * $Id: BaseArchivalUnit.java,v 1.36 2003-09-26 23:52:16 eaalto Exp $
  */
 
 /*
@@ -162,7 +162,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    * @return id by joining the plugin id to the canonical representation of
    * the defining properties as an encoded string
    */
-  public final String getAUId() {
+  public final String getAuId() {
     if (auId == null) {
       Collection defKeys = getPlugin().getDefiningConfigKeys();
       Properties props = new Properties();
@@ -170,7 +170,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 	String curKey = (String)it.next();
 	props.setProperty(curKey, auConfig.get(curKey));
       }
-      auId = PluginManager.generateAUId(getPluginId(), props);
+      auId = PluginManager.generateAuId(getPluginId(), props);
     }
     return auId;
   }
@@ -237,9 +237,9 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    * of this AU
    * @return the CachedUrlSet
    */
-  public CachedUrlSet getAUCachedUrlSet() {
+  public CachedUrlSet getAuCachedUrlSet() {
     // tk - use singleton instance?
-    return getPlugin().makeCachedUrlSet(this, new AUCachedUrlSetSpec());
+    return getPlugin().makeCachedUrlSet(this, new AuCachedUrlSetSpec());
   }
 
   private Deadline nextFetchTime = Deadline.in(0);
@@ -260,7 +260,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   }
 
   public String toString() {
-    return "[BAU: "+getAUId()+"]";
+    return "[BAU: "+getAuId()+"]";
   }
 
   /**
@@ -282,15 +282,22 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     int p_index = 0;
     String matchstr = PERMISSION_STRING.toLowerCase();
 
+String str = "";
+    String closest = "";
     try {
       do {
         ch = reader.read();
         if(matchstr.charAt(p_index) == Character.toLowerCase((char)ch)) {
+          str += ch;
+          if (p_index > closest.length()) {
+            closest = str;
+          }
           if(++p_index == PERMISSION_STRING.length()) {
             return true;
           }
         }
         else {
+          str = "";
           p_index = 0;
         }
 
@@ -301,7 +308,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
                      + ex.toString());
     }
 
-
+System.out.println("closest: "+closest);
     return crawl_ok;
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManager.java,v 1.16 2003-07-31 00:45:00 eaalto Exp $
+ * $Id: CrawlManager.java,v 1.17 2003-09-26 23:52:18 eaalto Exp $
  */
 
 /*
@@ -88,7 +88,7 @@ public interface CrawlManager {
      * @return collection of AUs that have crawl history (either active or
      * completed crawls)
      */
-    public Collection getActiveAUs();
+    public Collection getActiveAus();
 
     /**
      * return a <code>Collection</code> of {@link Crawler}s doing repair

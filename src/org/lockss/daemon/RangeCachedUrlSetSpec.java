@@ -1,5 +1,5 @@
 /*
- * $Id: RangeCachedUrlSetSpec.java,v 1.15 2003-06-20 22:34:50 claire Exp $
+ * $Id: RangeCachedUrlSetSpec.java,v 1.16 2003-09-26 23:52:17 eaalto Exp $
  */
 
 /*
@@ -114,7 +114,7 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
   }
 
   /** @return false */
-  public boolean isAU() {
+  public boolean isAu() {
     return false;
   }
 
@@ -137,7 +137,7 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
     if (spec.isSingleNode()) {
       return !matches(spec.getUrl());
     }
-    if (spec.isAU()) {
+    if (spec.isAu()) {
       return false;
     }
     if (spec instanceof RangeCachedUrlSetSpec) {
@@ -166,7 +166,7 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
     if (spec.isSingleNode()) {
       return matches(spec.getUrl());
     }
-    if (spec.isAU()) {
+    if (spec.isAu()) {
       return false;
     }
     if (spec instanceof RangeCachedUrlSetSpec) {

@@ -1,5 +1,5 @@
 /*
-* $Id: CuUrl.java,v 1.7 2003-09-17 06:09:59 troberts Exp $
+* $Id: CuUrl.java,v 1.8 2003-09-26 23:52:17 eaalto Exp $
  */
 
 /*
@@ -81,7 +81,7 @@ public class CuUrl {
    */
   public static URL fromCu(ArchivalUnit au, CachedUrl cu)
       throws MalformedURLException {
-    String auId = au.getAUId();
+    String auId = au.getAuId();
     String url = cu.getUrl();
     if (log.isDebug3()) {
       log.debug3("fromCu("+cu+"): auid: " + auId +", url: " + url);
@@ -140,7 +140,7 @@ public class CuUrl {
 	  throw new FileNotFoundException(urlString);
 	}
 	Plugin plugin = au.getPlugin();
-	cu = plugin.makeCachedUrl(au.getAUCachedUrlSet(), cachedUrlString);
+	cu = plugin.makeCachedUrl(au.getAuCachedUrlSet(), cachedUrlString);
 	if (cu == null || !cu.hasContent()) {
 	  throw new FileNotFoundException(urlString);
 	}

@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrlSetSpec.java,v 1.11 2003-06-20 22:34:50 claire Exp $
+ * $Id: CachedUrlSetSpec.java,v 1.12 2003-09-26 23:52:17 eaalto Exp $
  */
 
 /*
@@ -69,7 +69,7 @@ public interface CachedUrlSetSpec {
   /**
    * Return true if this set is disjoint from the argument set.  It is not
    * meaningful to compare CUSSes belonging to different AUs.
-   * @arg spec the set to test disjointness with
+   * @param spec the set to test disjointness with
    * @return true if the two sets are disjoint
    */
   public boolean isDisjoint(CachedUrlSetSpec spec);
@@ -77,7 +77,7 @@ public interface CachedUrlSetSpec {
   /**
    * Return true if this set completely contains the argument set.  It is
    * not meaningful to compare CUSSes belonging to different AUs.
-   * @arg spec the set to test subsumption of
+   * @param spec the set to test subsumption of
    * @return true if the set specified by <code>spec</code> is subsumed by
    * this one.
    */
@@ -87,7 +87,7 @@ public interface CachedUrlSetSpec {
    * Return true if the CachedUrlSetSpec specifies an entire AU.
    * @return true if an AUCUSS
    */
-  public boolean isAU();
+  public boolean isAu();
 
   /**
    * Return true if the CachedUrlSetSpec specifies the content at a single

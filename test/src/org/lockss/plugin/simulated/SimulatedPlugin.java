@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedPlugin.java,v 1.15 2003-09-17 06:10:01 troberts Exp $
+ * $Id: SimulatedPlugin.java,v 1.16 2003-09-26 23:47:46 eaalto Exp $
  */
 
 /*
@@ -160,7 +160,7 @@ public class SimulatedPlugin extends BasePlugin implements PluginTestable {
    * @return a List of strings which are the names of the properties for
    * which values are needed in order to configure an AU
    */
-  public List getAUConfigProperties() {
+  public List getAuConfigProperties() {
     return ListUtil.list(AU_PARAM_ROOT, AU_PARAM_DEPTH,
 			 AU_PARAM_BRANCH, AU_PARAM_NUM_FILES,
 			 AU_PARAM_BIN_FILE_SIZE, AU_PARAM_MAXFILE_NAME,
@@ -176,7 +176,7 @@ public class SimulatedPlugin extends BasePlugin implements PluginTestable {
    * @throws ArchivalUnit.ConfigurationException if the configuration is
    * illegal in any way.
    */
-  public ArchivalUnit createAU(Configuration auConfig)
+  public ArchivalUnit createAu(Configuration auConfig)
       throws ArchivalUnit.ConfigurationException {
     log.debug("createAU(" + auConfig + ")");
     ArchivalUnit au = new SimulatedArchivalUnit(this);

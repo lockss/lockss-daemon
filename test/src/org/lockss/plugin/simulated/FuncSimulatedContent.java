@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSimulatedContent.java,v 1.43 2003-09-23 07:47:52 eaalto Exp $
+ * $Id: FuncSimulatedContent.java,v 1.44 2003-09-26 23:47:46 eaalto Exp $
  */
 
 /*
@@ -96,7 +96,7 @@ public class FuncSimulatedContent extends LockssTestCase {
     metrics.setHashSpeed(100);
     theDaemon.setSystemMetrics(metrics);
     sau =
-        (SimulatedArchivalUnit) theDaemon.getPluginManager().getAllAUs().get(0);
+        (SimulatedArchivalUnit) theDaemon.getPluginManager().getAllAus().get(0);
 
     theDaemon.getLockssRepository(sau);
     theDaemon.getNodeManager(sau).initService(theDaemon);
@@ -124,19 +124,19 @@ public class FuncSimulatedContent extends LockssTestCase {
   public void testDualContentHash() throws Exception {
     createContent();
     crawlContent();
-    CachedUrlSet set = sau.getAUCachedUrlSet();
+    CachedUrlSet set = sau.getAuCachedUrlSet();
     byte[] nameH = getHash(set, true);
     byte[] contentH = getHash(set, false);
 
     sau =
-        (SimulatedArchivalUnit)theDaemon.getPluginManager().getAllAUs().get(1);
+        (SimulatedArchivalUnit)theDaemon.getPluginManager().getAllAus().get(1);
     theDaemon.getLockssRepository(sau);
     theDaemon.getNodeManager(sau).initService(theDaemon);
     theDaemon.getNodeManager(sau).startService();
 
     createContent();
     crawlContent();
-    set = sau.getAUCachedUrlSet();
+    set = sau.getAuCachedUrlSet();
     byte[] nameH2 = getHash(set, true);
     byte[] contentH2 = getHash(set, false);
     assertTrue(Arrays.equals(nameH, nameH2));
@@ -175,7 +175,7 @@ public class FuncSimulatedContent extends LockssTestCase {
   }
 
   private void checkRoot() {
-    CachedUrlSet set = sau.getAUCachedUrlSet();
+    CachedUrlSet set = sau.getAuCachedUrlSet();
     Iterator setIt = set.flatSetIterator();
     ArrayList childL = new ArrayList(1);
     CachedUrlSet cus = null;
@@ -244,7 +244,7 @@ public class FuncSimulatedContent extends LockssTestCase {
                                boolean isDamaged) throws IOException {
     String file = SimulatedArchivalUnit.SIMULATED_URL_ROOT + path;
     CachedUrl url =
-      sau.getPlugin().makeCachedUrl(sau.getAUCachedUrlSet(), file);
+      sau.getPlugin().makeCachedUrl(sau.getAuCachedUrlSet(), file);
     String content = getUrlContent(url);
     String expectedContent;
     if (path.endsWith(".html")) {
@@ -273,7 +273,7 @@ public class FuncSimulatedContent extends LockssTestCase {
   private void doDamageRemoveTest() throws Exception {
     /* Cache the file again; this time the damage should be gone */
     String file = SimulatedArchivalUnit.SIMULATED_URL_ROOT + DAMAGED_CACHED_URL;
-    UrlCacher uc = sau.getPlugin().makeUrlCacher(sau.getAUCachedUrlSet(),file);
+    UrlCacher uc = sau.getPlugin().makeUrlCacher(sau.getAuCachedUrlSet(),file);
     uc.forceCache();
     checkUrlContent(DAMAGED_CACHED_URL, 2, 2, 2, false, false);
   }
@@ -285,7 +285,7 @@ public class FuncSimulatedContent extends LockssTestCase {
     } catch (NoSuchAlgorithmException ex) {
       fail("No algorithm.");
     }
-    CachedUrlSet set = sau.getAUCachedUrlSet();
+    CachedUrlSet set = sau.getAuCachedUrlSet();
     CachedUrlSetHasher hasher = set.getContentHasher(dig);
     SystemMetrics metrics = theDaemon.getSystemMetrics();
     int estimate = metrics.getBytesPerMsHashEstimate(hasher, dig);
@@ -305,7 +305,7 @@ public class FuncSimulatedContent extends LockssTestCase {
   }
 
   private void hashSet(boolean namesOnly) throws IOException {
-    CachedUrlSet set = sau.getAUCachedUrlSet();
+    CachedUrlSet set = sau.getAuCachedUrlSet();
     byte[] hash = getHash(set, namesOnly);
     byte[] hash2 = getHash(set, namesOnly);
     assertTrue(Arrays.equals(hash, hash2));

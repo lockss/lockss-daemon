@@ -1,5 +1,5 @@
 /*
- * $Id: RunDaemon.java,v 1.38 2003-06-25 21:19:58 eaalto Exp $
+ * $Id: RunDaemon.java,v 1.39 2003-09-26 23:52:47 eaalto Exp $
  */
 
 /*
@@ -130,7 +130,7 @@ public class RunDaemon
       }
     }
     else {
-      Iterator iter = pluginMgr.getAllAUs().iterator();
+      Iterator iter = pluginMgr.getAllAus().iterator();
       while(iter.hasNext()) {
         au = (ArchivalUnit) iter.next();
         startWalk(au);

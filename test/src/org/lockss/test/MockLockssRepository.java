@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssRepository.java,v 1.5 2003-07-31 00:48:37 eaalto Exp $
+ * $Id: MockLockssRepository.java,v 1.6 2003-09-26 23:47:45 eaalto Exp $
  */
 
 /*
@@ -105,10 +105,10 @@ public class MockLockssRepository implements LockssRepository {
     String url2 = cus2.getUrl();
 
     // check for top-level urls
-    if (spec1.isAU() || spec2.isAU()) {
+    if (spec1.isAu() || spec2.isAu()) {
       if (spec1.equals(spec2)) {
         return LockssRepository.SAME_LEVEL_OVERLAP;
-      } else if (spec1.isAU()) {
+      } else if (spec1.isAu()) {
         return LockssRepository.ABOVE;
       } else {
         return LockssRepository.BELOW;
