@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.17 2003-03-08 02:45:02 aalto Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.18 2003-03-14 22:20:02 troberts Exp $
  */
 
 /*
@@ -329,13 +329,16 @@ public class RepositoryNodeImpl implements RepositoryNode {
     curProps = null;
   }
 
-  public synchronized RepositoryNodeContents getNodeContents() {
+  public synchronized RepositoryNode.RepositoryNodeContents getNodeContents() {
     if (!hasContent()) {
       throw new UnsupportedOperationException("No content for url '"+url+"'");
     }
     try {
-      InputStream is = new BufferedInputStream(new FileInputStream(curInputFile));
-      return new RepositoryNodeContents(is, (Properties)curProps.clone());
+      InputStream is = 
+	new BufferedInputStream(new FileInputStream(curInputFile));
+      return new 
+	RepositoryNode.RepositoryNodeContents(is, 
+					      (Properties)curProps.clone());
     } catch (FileNotFoundException fnfe) {
       logger.error("Couldn't get inputstream for '"+curInputFile.getPath()+"'");
       throw new LockssRepository.RepositoryStateException("Couldn't get info for node.");
