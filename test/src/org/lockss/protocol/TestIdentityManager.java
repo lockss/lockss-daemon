@@ -35,7 +35,7 @@ public class TestIdentityManager extends LockssTestCase {
     super(_name);
   }
 
-  protected void setUp() {
+  protected void setUp() throws Exception {
     super.setUp();
     try {
       fakeId = idmgr.findIdentity(LcapIdentity.stringToAddr(fakeIdString));
