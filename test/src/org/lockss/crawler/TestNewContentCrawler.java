@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.26 2004-11-11 01:32:06 dcfok Exp $
+ * $Id: TestNewContentCrawler.java,v 1.27 2004-11-29 23:42:02 troberts Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.crawler;
 import java.util.*;
+import java.net.*;
 import java.io.*;
 
 import org.lockss.config.ConfigManager;
@@ -487,6 +488,16 @@ public class TestNewContentCrawler extends LockssTestCase {
     String url1 = "https://www.example.com/link1.html";
     List startUrls = ListUtil.list(startUrl);
 
+    //See if we're running in a version of java that throws on trying
+    //to construct a https URL
+    boolean httpsUrlThrows = false;
+    try {
+      URL url = new URL(startUrl);
+    } catch (Exception e) {
+      httpsUrlThrows = true;
+    }
+
+
     spec = new SpiderCrawlSpec(startUrls, ListUtil.list(permissionPage), crawlRule, 1);
     crawler = new NewContentCrawler(mau, spec, aus);
     ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MyMockPermissionChecker(100));
@@ -498,10 +509,20 @@ public class TestNewContentCrawler extends LockssTestCase {
     crawlRule.addUrlToCrawl(url1);
     
     mau.setParser(parser);
-    assertFalse(crawler.doCrawl());
+    if (httpsUrlThrows) {
+      assertFalse("Crawler shouldn't succeed when trying system can't construct a https URL", crawler.doCrawl());
+    } else {
+      assertTrue("Crawler should succeed when system can construct a https URL",
+		crawler.doCrawl());
+    }
     
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
-    assertEquals(SetUtil.set(permissionPage), cus.getCachedUrls());
+    Set expectedSet = SetUtil.set(permissionPage);
+    
+    if (!httpsUrlThrows) {
+      expectedSet.add(startUrl);
+    }    
+    assertEquals(expectedSet, cus.getCachedUrls());
   }
 
   private static void setProperty(String prop, String value) {
