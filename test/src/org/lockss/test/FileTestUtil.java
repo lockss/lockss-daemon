@@ -1,5 +1,5 @@
 /*
- * $Id: FileTestUtil.java,v 1.4 2004-07-12 06:27:43 tlipkis Exp $
+ * $Id: FileTestUtil.java,v 1.5 2005-01-04 03:06:32 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -70,12 +70,15 @@ public class FileTestUtil {
   public static File writeTempFile(String prefix, String suffix, String contents)
       throws IOException {
     File file = tempFile(prefix, suffix, null);
-    FileWriter fw = new FileWriter(file);
-    fw.write(contents);
-    fw.close();
+    writeFile(file, contents);
     return file;
   }
 
+  public static void writeFile(File file, String contents) throws IOException {
+    FileWriter fw = new FileWriter(file);
+    fw.write(contents);
+    fw.close();
+  }
 
   /** Store the string in a temp file and return a file: url for it */
   public static String urlOfString(String s) throws IOException {
