@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurationUtil.java,v 1.7 2003-09-16 23:28:35 eaalto Exp $
+ * $Id: ConfigurationUtil.java,v 1.8 2004-06-14 03:08:45 smorabito Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -144,6 +144,7 @@ public class ConfigurationUtil {
   /** Install the supplied Configuration as the current configuration.
    */
   public static boolean installConfig(Configuration config) {
+    ConfigCache.reset();  // For testing, always start with a clean cache.
     try {
       PrivilegedAccessor.invokeMethod(mgr(), "installConfig", config);
     } catch (Exception e) {

@@ -1,9 +1,10 @@
 /*
- * $Id: Version.java,v 1.2 2004-06-14 03:08:44 smorabito Exp $
+ * $Id: MockXmlPropertyLoader.java,v 1.1 2004-06-14 03:08:45 smorabito Exp $
  */
 
 /*
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+
+Copyright (c) 2001-2003 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -29,11 +30,26 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.util;
+package org.lockss.test;
 
-public interface Version {
-  /**
-   * Return an integer representation of this version.
-   */
-  public long toLong();
+import org.lockss.util.*;
+
+public class MockXmlPropertyLoader extends XmlPropertyLoader {
+  // Override getXXXVersion() methods to return known values for
+  // unit testing.
+  public Version getDaemonVersion() {
+    return new DaemonVersion("1.2.8");
+  }
+
+  public Version getPlatformVersion() {
+    return new PlatformVersion("135");
+  }
+
+  public String getPlatformHostname() {
+    return "testhost";
+  }
+
+  public String getPlatformGroup() {
+    return "beta";
+  }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigManager.java,v 1.8 2004-05-12 17:45:42 tlipkis Exp $
+ * $Id: TestConfigManager.java,v 1.9 2004-06-14 03:08:44 smorabito Exp $
  */
 
 /*
@@ -75,7 +75,7 @@ public class TestConfigManager extends LockssTestCase {
 
   public void testParam() throws IOException, Configuration.InvalidParam {
     Configuration config = mgr.newConfiguration();
-    config.load(FileTestUtil.urlOfString(c2));
+    config.load(new ConfigFile(FileTestUtil.urlOfString(c2)));
     mgr.setCurrentConfig(config);
     assertEquals("12", ConfigManager.getParam("prop.p1"));
     assertEquals("foobar", ConfigManager.getParam("prop.p2"));
@@ -153,16 +153,19 @@ public class TestConfigManager extends LockssTestCase {
 	  diffSet = changedKeys;
 	}
       });
+    ConfigCache.reset(); // Used for testing only...
     assertTrue(setCurrentConfigFromUrlList(ListUtil.
 					   list(FileTestUtil.urlOfString(c1a),
 						FileTestUtil.urlOfString(c1))));
     assertEquals(SetUtil.set("prop2"), diffSet);
     System.out.println(mgr.getCurrentConfig().toString());
+    ConfigCache.reset();
     assertTrue(setCurrentConfigFromUrlList(ListUtil.
 					   list(FileTestUtil.urlOfString(c1),
 						FileTestUtil.urlOfString(c1))));
     assertEquals(SetUtil.set("prop4"), diffSet);
     System.out.println(mgr.getCurrentConfig().toString());
+    ConfigCache.reset();
     assertTrue(setCurrentConfigFromUrlList(ListUtil.
 					   list(FileTestUtil.urlOfString(c1),
 						FileTestUtil.urlOfString(c1a))));

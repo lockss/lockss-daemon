@@ -1,0 +1,145 @@
+<!--
+  This file is used by TestXmlPropertyLoader - do not change one
+  without changing the other.
+-->
+<lockss-config>
+  <property name="a" value="foo"/>
+  <property name="b">
+    <property name="c" value="foo"/>
+  </property>
+
+  <!-- For testing purposes, override version information -->
+  <property name="org.lockss.daemon.version" value="1.2.8" />
+  <property name="org.lockss.platform.version" value="135" />
+  <property name="org.lockss.platform.group" value="beta" />
+  <property name="org.lockss.platform.hostname" value="testhost" />
+
+  <property name="org.lockss">
+    <property name="d">
+      <list>
+	<value>1</value>
+	<value>2</value>
+	<value>3</value>
+	<value>4</value>
+	<value>5</value>
+      </list>
+    </property>
+
+    <!-- Test equivalence of Daemon Version... -->
+    <if daemonVersion="1.2.7">
+      <property name="test.a" value="foo"/>
+    </if>
+    <if daemonVersion="1.2.8">
+      <property name="test.b" value="foo"/>
+    </if>
+
+    <!-- Test max Daemon Version -->
+    <if daemonVersionMax="1.2.7">
+      <property name="test.c" value="foo"/>
+    </if>
+    <if daemonVersionMax="1.2.9">
+      <property name="test.d" value="foo"/>
+    </if>
+
+    <!-- Test min Daemon Version -->
+    <if daemonVersionMin="1.2.7">
+      <property name="test.e" value="foo"/>
+    </if>
+    <if daemonVersionMin="1.2.9">
+      <property name="test.f" value="foo"/>
+    </if>
+
+    <!-- Test max and min daemon Version -->
+    <if daemonVersionMin="1.2.7" daemonVersionMax="1.2.9">
+      <property name="test.g" value="foo"/>
+    </if>
+    <if daemonVersionMin="1.2.0" daemonVersionMax="1.2.7">
+      <property name="test.h" value="foo"/>
+    </if>
+
+    <!-- Test equivalence of Platform Version... -->
+    <if platformVersion="135">
+      <property name="test.i" value="foo"/>
+    </if>
+    <if platformVersion="136">
+      <property name="test.j" value="foo"/>
+    </if>
+
+    <!-- Test max Platform Version -->
+    <if platformVersionMax="134">
+      <property name="test.k" value="foo"/>
+    </if>
+    <if platformVersionMax="136">
+      <property name="test.l" value="foo"/>
+    </if>
+
+    <!-- Test min Platform Version -->
+    <if platformVersionMin="134">
+      <property name="test.m" value="foo"/>
+    </if>
+    <if platformVersionMin="136">
+      <property name="test.n" value="foo"/>
+    </if>
+
+    <!-- Test max and min Platform Version -->
+    <if platformVersionMin="134" platformVersionMax="136">
+      <property name="test.o" value="foo"/>
+    </if>
+    <if platformVersionMin="130" platformVersionMax="134">
+      <property name="test.p" value="foo"/>
+    </if>
+
+    <!-- Test group -->
+    <if group="beta">
+      <property name="test.q" value="foo"/>
+    </if>
+    <if group="dev">
+      <property name="test.r" value="foo"/>
+    </if>
+
+    <!-- Test hostname -->
+    <if hostname="testhost">
+      <property name="test.s" value="foo"/>
+    </if>
+    <if hostname="badhost">
+      <property name="test.t" value="foo"/>
+    </if>
+
+    <!-- Test then/else -->
+    <if group="beta">
+      <then>
+	<property name="test.u" value="foo"/>
+      </then>
+      <else>
+	<property name="test.u" value="bar"/>
+      </else>
+    </if>
+    <if group="dev">
+      <then>
+	<property name="test.v" value="foo"/>
+      </then>
+      <else>
+	<property name="test.v" value="bar"/>
+      </else>
+    </if>
+
+    <!-- Test a combination of conditionals -->
+    <if platformVersion="134" group="beta">
+      <then>
+	<property name="test.w" value="foo"/>
+      </then>
+      <else>
+	<property name="test.w" value="bar"/>
+      </else>
+    </if>
+    <if platformVersion="135" group="beta">
+      <then>
+	<property name="test.x" value="foo"/>
+      </then>
+      <else>
+	<property name="test.x" value="bar"/>
+      </else>
+    </if>
+  </property>
+
+</lockss-config>

@@ -1,5 +1,5 @@
 /*
- * $Id: FileTestUtil.java,v 1.2 2004-01-03 06:30:05 tlipkis Exp $
+ * $Id: FileTestUtil.java,v 1.3 2004-06-14 03:08:45 smorabito Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -44,12 +44,17 @@ public class FileTestUtil {
    */
   public static File tempFile(String prefix)
       throws IOException {
-    return tempFile(prefix, null);
+    return tempFile(prefix, null, null);
   }
 
   public static File tempFile(String prefix, File dir)
       throws IOException {
-    File f = File.createTempFile(prefix, null, dir);
+    return tempFile(prefix, null, dir);
+  }
+
+  public static File tempFile(String prefix, String suffix, File dir)
+      throws IOException {
+    File f = File.createTempFile(prefix, suffix, dir);
     f.deleteOnExit();
     return f;
   }
@@ -57,16 +62,28 @@ public class FileTestUtil {
   /** Write  a temp file containing string and return its name */
   public static File writeTempFile(String prefix, String contents)
       throws IOException {
-    File file = tempFile(prefix);
+    return writeTempFile(prefix, null, contents);
+  }
+
+  public static File writeTempFile(String prefix, String suffix, String contents)
+      throws IOException {
+    File file = tempFile(prefix, suffix, null);
     FileWriter fw = new FileWriter(file);
     fw.write(contents);
     fw.close();
     return file;
   }
 
+
   /** Store the string in a temp file and return a file: url for it */
   public static String urlOfString(String s) throws IOException {
     File file = FileTestUtil.writeTempFile("test", s);
+    return file.toURL().toString();
+  }
+
+  /** Store the string in a temp file and return a file: url for it */
+  public static String urlOfString(String s, String suffix) throws IOException {
+    File file = FileTestUtil.writeTempFile("test", suffix, s);
     return file.toURL().toString();
   }
 
@@ -75,6 +92,7 @@ public class FileTestUtil {
     File file = new File(s);
     return file.toURL().toString();
   }
+
 
   private static final Object tmpFileLock = new Object();
   private static int tmpFileCnt = -1; /* Protected by tmpFileLock */
@@ -159,7 +177,7 @@ public class FileTestUtil {
       List list = new ArrayList();
       File[] files = file.listFiles();
       for (int ix=0; ix< files.length; ix++) {
- 	list.addAll(enumerateFiles(files[ix]));
+	list.addAll(enumerateFiles(files[ix]));
       }
       return list;
     }

@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.60 2004-05-28 04:57:30 smorabito Exp $
+ * $Id: Configuration.java,v 1.61 2004-06-14 03:08:43 smorabito Exp $
  */
 
 /*
@@ -52,6 +52,12 @@ public abstract class Configuration {
   public static final String PREFIX = "org.lockss.";
 
   public static final String PLATFORM = PREFIX + "platform.";
+  public static final String DAEMON = PREFIX + "daemon.";
+
+  public static final String PROP_DAEMON_VERSION = DAEMON + "version";
+  public static final String PROP_PLATFORM_VERSION = PLATFORM + "version";
+  public static final String PROP_PLATFORM_GROUP = PLATFORM + "group";
+  public static final String PROP_PLATFORM_HOSTNAME = PLATFORM + "hostname";
 
   // MUST pass in explicit log level to avoid recursive call back to
   // Configuration to get Config log level.  (Others should NOT do this.)
@@ -80,6 +86,34 @@ public abstract class Configuration {
    */
   public static void unregisterConfigurationCallback(Callback c) {
     ConfigManager.getConfigManager().unregisterConfigurationCallback(c);
+  }
+
+  /**
+   * Convenience methods for getting useful platform settings.
+   */
+  public static Version getDaemonVersion() {
+    DaemonVersion daemon = null;
+
+    String ver = BuildInfo.getBuildProperty(BuildInfo.BUILD_RELEASENAME);
+    // If BuildInfo doesn't give us a value, see if we already have it
+    // in the props.  Useful for testing.
+    if (ver == null) {
+      ver = ConfigManager.getCurrentConfig().get(PROP_DAEMON_VERSION);
+    }
+    return ver == null ? null : new DaemonVersion(ver);
+  }
+
+  public static Version getPlatformVersion() {
+    String ver = ConfigManager.getCurrentConfig().get(PROP_PLATFORM_VERSION);
+    return ver == null ? null : new PlatformVersion(ver);
+  }
+
+  public static String getPlatformGroup() {
+    return ConfigManager.getCurrentConfig().get(PROP_PLATFORM_GROUP);
+  }
+
+  public static String getPlatformHostname() {
+    return ConfigManager.getCurrentConfig().get(PROP_PLATFORM_HOSTNAME);
   }
 
   // instance methods
@@ -124,10 +158,22 @@ public abstract class Configuration {
    * @return true iff properties were successfully loaded
    */
   boolean loadList(List urls, boolean failOk) {
+    // First load all the configuration files into the cache
+    // (it will only update file contents if necessary)
     for (Iterator iter = urls.iterator(); iter.hasNext();) {
       String url = (String)iter.next();
       try {
-	load(url);
+	ConfigCache.load(url);
+	// Here's something of a kluge.  If the url ends with
+	// "local.txt" we want to load the contents immediately so we
+	// can get access to platform version, platform group and
+	// hostname during the rest of the parsing process.  This file
+	// will be reloaded again _after_ loading the remote files, so
+	// that we're sure local values will still override remote
+	// values.
+	if (StringUtil.endsWithIgnoreCase(url, "local.txt")) {
+	  load(ConfigCache.get(url));
+	}
       } catch (IOException e) {
 	if (e instanceof FileNotFoundException &&
 	    StringUtil.endsWithIgnoreCase(url.toString(), ".opt")) {
@@ -137,27 +183,42 @@ public abstract class Configuration {
 	  if (!failOk) {
 	    log.warning("Couldn't load props from " + url + ": " +
 			e.toString());
-	    reset();			// ensure config is empty
+	    reset();  // ensure config is empty
 	  }
 	  return false;
 	}
       }
     }
+
+    try {
+      // Load each remote file.
+      List remoteFiles = ConfigCache.getRemoteConfigFiles();
+      for (Iterator iter = remoteFiles.iterator(); iter.hasNext(); ) {
+	load((ConfigFile)iter.next());
+      }
+
+      // Load each local file, so that local values can override
+      // remote values.
+      List localFiles = ConfigCache.getLocalConfigFiles();
+      for (Iterator iter = localFiles.iterator(); iter.hasNext(); ) {
+	load((ConfigFile)iter.next());
+      }
+    } catch (IOException e) {
+      if (!failOk) {
+	log.warning("Couldn't load config file: " + e.toString());
+	reset();  // ensure config is empty
+      }
+      return false;
+    }
     return true;
   }
 
-  void load(String url) throws IOException {
-    InputStream istr;
-    try {
-      URL u = new URL(url);
-      istr = UrlUtil.openInputStream(url);
-      log.debug2("load URL: " + url);
-    } catch (MalformedURLException e) {
-      istr = new FileInputStream(url);
-      log.debug2("load file: " + url);
-    }
-    InputStream bis = new BufferedInputStream(istr);
-    if (url.toLowerCase().endsWith(".xml")) {
+  /**
+   * Given a ConfigFile, parse and load its properties.
+   */
+  void load(ConfigFile conf) throws IOException {
+    InputStream bis = new BufferedInputStream(conf.getInputStream());
+    if (conf.getFileType() == ConfigFile.XML_FILE) {
       loadXmlProperties(bis);
     } else {
       loadTextProperties(bis);
@@ -282,8 +343,10 @@ public abstract class Configuration {
 
   /**
    * Return a list of values for the specified key.
+   * @throws Configuration.InvalidParam if the value is not castable to
+   * a list.
    */
-  public abstract List getList(String key);
+  public abstract List getList(String key) throws InvalidParam;
 
   /** Return the config value as a long.
    * @throws Configuration.InvalidParam if the value is missing or
