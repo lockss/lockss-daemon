@@ -1,4 +1,8 @@
 /*
+ * $Id: MockDatagramSocket.java,v 1.4 2002-11-06 21:17:40 tal Exp $
+ */
+
+/*
 
 Copyright (c) 2000-2002 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -31,7 +35,8 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 
-public class MockDatagramSocket extends DatagramSocket{
+public class MockDatagramSocket
+  extends DatagramSocket implements MockDatagramSocketExtras {
   /**
    * This class is a mock implementation of DatagramSocket to be used for unit testing
    */
