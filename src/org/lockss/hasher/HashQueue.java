@@ -1,5 +1,5 @@
 /*
- * $Id: HashQueue.java,v 1.41 2003-12-23 00:34:06 tlipkis Exp $
+ * $Id: HashQueue.java,v 1.42 2004-01-13 01:33:35 tlipkis Exp $
  */
 
 /*
@@ -92,6 +92,10 @@ class HashQueue implements Serializable {
     return qlist.isEmpty() ? null : (Request)qlist.getFirst();
   }
 
+  /** Not implemented */
+  void cancelAuHashes(ArchivalUnit au) {
+  }
+
   boolean isIdle() {
     return qlist.isEmpty();
   }
@@ -142,8 +146,10 @@ class HashQueue implements Serializable {
     for (Iterator iter = list.iterator(); iter.hasNext();) {
       Request req = (Request)iter.next();
       try {
-	req.callback.hashingFinished(req.urlset, req.cookie,
-				     req.hasher, req.e);
+	if (req.callback != null) {
+	  req.callback.hashingFinished(req.urlset, req.cookie,
+				       req.hasher, req.e);
+	}
       } catch (Exception e) {
 	log.error("Hash callback threw", e);
       }

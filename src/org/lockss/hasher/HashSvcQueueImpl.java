@@ -1,5 +1,5 @@
 /*
- * $Id: HashSvcQueueImpl.java,v 1.2 2003-11-20 01:07:56 tlipkis Exp $
+ * $Id: HashSvcQueueImpl.java,v 1.3 2004-01-13 01:33:35 tlipkis Exp $
  */
 
 /*
@@ -162,6 +162,17 @@ public class HashSvcQueueImpl
 			    // tk - get better duration estimate
 			    urlset.getNameHasher(hasher), 1000, NAME_HASH);
     return scheduleReq(req);
+  }
+
+  /** Cancel all hashes on the specified AU.  Temporary until a better
+   * cancel mechanism is implemented.
+   * @param au the AU
+   */
+  public void cancelAuHashes(ArchivalUnit au) {
+    if (theQueue == null) {
+      throw new IllegalStateException("HashService has not been initialized");
+    }
+    theQueue.cancelAuHashes(au);
   }
 
   /** Return the average hash speed, or -1 if not known.

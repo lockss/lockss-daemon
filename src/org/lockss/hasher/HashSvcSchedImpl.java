@@ -1,5 +1,5 @@
 /*
- * $Id: HashSvcSchedImpl.java,v 1.6 2003-12-23 00:34:06 tlipkis Exp $
+ * $Id: HashSvcSchedImpl.java,v 1.7 2004-01-13 01:33:35 tlipkis Exp $
  */
 
 /*
@@ -166,6 +166,22 @@ public class HashSvcSchedImpl
     return scheduleTask(task);
   }
 
+  /** Cancel all hashes on the specified AU.  Temporary until a better
+   * cancel mechanism is implemented.
+   * @param au the AU
+   */
+  public void cancelAuHashes(ArchivalUnit au) {
+    synchronized (queue) {
+      for (Iterator iter = queue.listIterator(); iter.hasNext(); ) {
+	HashTask task = (HashTask)iter.next();
+	if (task.urlset.getArchivalUnit() == au) {
+	  task.cancel();
+	  iter.remove();
+	}
+      }
+    }
+  }
+
   /** Return the average hash speed, or -1 if not known.
    * @param digest the hashing algorithm
    * @return hash speed in bytes/ms, or -1 if not known
@@ -193,8 +209,8 @@ public class HashSvcSchedImpl
     }
     task.setOverrunAllowed(true);
     if (sched.scheduleTask(task)) {
-      synchronized (completed) {
-	task.hashReqSeq = ++reqCtr;
+      task.hashReqSeq = ++reqCtr;
+      synchronized (queue) {
 	queue.add(task);
       }
       return true;
@@ -277,7 +293,7 @@ public class HashSvcSchedImpl
 	unaccountedBytesHashed += res;
 	return res;
       } catch (Exception e) {
-	log.error("Hash callback threw", e);
+	log.error("hashStep threw", e);
 	throw new RuntimeException(e.toString());
       }
     }
@@ -300,7 +316,9 @@ public class HashSvcSchedImpl
 	  // tk - change interface to tell CUS what type of hash finished
 	  urlset.storeActualHashDuration(getTimeUsed(), getExcption());
 	}
-	callback.hashingFinished(urlset, cookie, hasher, e);
+	if (callback != null) {
+	  callback.hashingFinished(urlset, cookie, hasher, e);
+	}
       } catch (Exception e) {
 	log.error("Hash callback threw", e);
       }
@@ -309,8 +327,10 @@ public class HashSvcSchedImpl
       callback = null;
       cookie = null;
       urlsetHasher = null;
-      synchronized (completed) {
+      synchronized (queue) {
 	queue.remove(this);
+      }
+      synchronized (completed) {
 	completed.add(this);
       }
     }

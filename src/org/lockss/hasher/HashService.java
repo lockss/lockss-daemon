@@ -1,5 +1,5 @@
 /*
- * $Id: HashService.java,v 1.20 2003-11-20 01:07:56 tlipkis Exp $
+ * $Id: HashService.java,v 1.21 2004-01-13 01:33:35 tlipkis Exp $
  */
 
 /*
@@ -146,6 +146,12 @@ public interface HashService extends LockssManager {
   /** Return true if the HashService has nothing to do.  Useful in unit
    * tests. */
   public boolean isIdle();
+
+  /** Cancel all hashes on the specified AU.  Temporary until a better
+   * cancel mechanism is implemented.
+   * @param au the AU
+   */
+  public void cancelAuHashes(ArchivalUnit au);
 
   /**
    * <code>HashService.Callback</code> is used to notify hash requestors
