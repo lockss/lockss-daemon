@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.115 2004-10-13 23:58:44 tlipkis Exp $
+ $Id: build.xml,v 1.116 2004-10-18 02:57:51 smorabito Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -156,6 +156,8 @@ Args:
   				value="${lib}/commons-httpclient-2.0.jar"/>
   <property name="concurrent.jar" value="${lib}/concurrent.jar"/>
   <property name="htmlparser.jar"  value="${lib}/htmlparser.jar"/>
+  <property name="jena.jar" value="${lib}/jena.jar"/> <!-- Jena RDF parser -->
+  <property name="icu4j.jar" value="${lib}/icu4j.jar"/> <!-- Jena RDF parser -->
   <property name="junit.jar"      value="${test.lib}/junit.jar"/>
   <property name="junit.addons.jar" value="${test.lib}/junit-addons-1.4.jar"/>
   <property name="httpunit.jar"    value="${test.lib}/httpunit.jar"/>
@@ -211,6 +213,8 @@ Args:
     <pathelement path="${xmlparser.jar}" />
     <pathelement path="${oro.jar}" />
     <pathelement path="${htmlparser.jar}" />
+    <pathelement path="${jena.jar}" />
+    <pathelement path="${icu4j.jar}" />
   </path>
 
   <path id="run.classpath">

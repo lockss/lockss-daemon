@@ -1,5 +1,5 @@
 /*
- * $Id: RegistryArchivalUnit.java,v 1.7 2004-09-27 22:39:12 smorabito Exp $
+ * $Id: RegistryArchivalUnit.java,v 1.8 2004-10-18 02:57:49 smorabito Exp $
  */
 
 /*
@@ -52,7 +52,8 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
   private String m_registryUrl = null;
   private int m_maxRefetchDepth = NewContentCrawler.DEFAULT_MAX_CRAWL_DEPTH;
 
-  private List m_permissionCheckers;
+  private List m_permissionCheckers = 
+    ListUtil.list(new CreativeCommonsPermissionChecker());
 
   protected Logger log = Logger.getLogger("RegistryArchivalUnit");
 
@@ -102,7 +103,7 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
     CrawlRule rule = makeRules();
     List startUrls = ListUtil.list(startUrlString);
     return new CrawlSpec(startUrls, startUrls, rule,
-			 m_maxRefetchDepth);
+			 m_maxRefetchDepth, m_permissionCheckers);
   }
 
   /**
