@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.29 2003-07-11 23:31:28 tlipkis Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.30 2003-07-23 06:42:31 tlipkis Exp $
  */
 
 /*
@@ -87,6 +87,11 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
     // different root?
     try {
       fileRoot = config.get(SimulatedPlugin.AU_PARAM_ROOT);
+      if (fileRoot == null) {
+	throw new
+	  ArchivalUnit.ConfigurationException("Missing configuration value for: "+
+					      SimulatedPlugin.AU_PARAM_ROOT);
+      }
       SimulatedContentGenerator gen = getContentGenerator();
       if (config.containsKey(SimulatedPlugin.AU_PARAM_DEPTH)) {
         gen.setTreeDepth(config.getInt(SimulatedPlugin.AU_PARAM_DEPTH));

@@ -1,5 +1,5 @@
 /*
- * $Id: MockPlugin.java,v 1.8 2003-07-22 00:33:51 tlipkis Exp $
+ * $Id: MockPlugin.java,v 1.9 2003-07-23 06:42:31 tlipkis Exp $
  */
 
 /*
@@ -76,7 +76,8 @@ public class MockPlugin extends BasePlugin implements PluginTestable {
 
   public String getPluginId() {
     if (pluginId == null) {
-      return super.getPluginId();
+      return this.getClass().getName();
+//       return super.getPluginId();
     } else {
       return pluginId;
     }
