@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.33 2004-11-12 23:29:02 troberts Exp $
+ * $Id: RepairCrawler.java,v 1.34 2004-12-07 17:55:03 troberts Exp $
  */
 
 /*
@@ -105,9 +105,7 @@ public class RepairCrawler extends CrawlerImpl {
 		       AuState aus, Collection repairUrls,
 		       float percentFetchFromCache) {
     super(au, spec, aus);
-    if (repairUrls == null) {
-      throw new IllegalArgumentException("Called with null repairUrls");
-    } else if (repairUrls.size() == 0) {
+    if (repairUrls.size() == 0) {
       throw new IllegalArgumentException("Called with empty repairUrls list");
     }
     this.repairUrls = repairUrls;
@@ -159,7 +157,7 @@ public class RepairCrawler extends CrawlerImpl {
       //catch and warn if there's a url in the start urls
       //that we shouldn't cache
       // check crawl window during crawl
-      if ((spec!=null) && (!spec.canCrawl())) {
+      if (!spec.inCrawlWindow()) {
 	logger.debug("Crawl canceled: outside of crawl window");
 	windowClosed = true;
 	// break from while loop
@@ -182,10 +180,6 @@ public class RepairCrawler extends CrawlerImpl {
 	logger.warning("Called with a starting url we aren't suppose to "+
 		       "cache: "+url);
       }
-      if (windowClosed) {
-	// break from for loop
-	break;
-      }
     }
     if (crawlAborted) {
       logger.info("Crawl aborted: "+au);
@@ -193,8 +187,7 @@ public class RepairCrawler extends CrawlerImpl {
 	crawlStatus.setCrawlError(Crawler.STATUS_INCOMPLETE);
       }
       return false;
-    }
-    if (windowClosed) {
+    } else if (windowClosed) {
       // unsuccessful crawl if window closed
       crawlStatus.setCrawlError(Crawler.STATUS_WINDOW_CLOSED);
     }
