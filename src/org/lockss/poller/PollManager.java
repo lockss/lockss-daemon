@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.89 2003-04-30 18:22:03 troberts Exp $
+* $Id: PollManager.java,v 1.90 2003-04-30 23:40:21 tal Exp $
  */
 
 /*
@@ -719,14 +719,22 @@ public class PollManager  extends BaseLockssManager {
 
       case LcapMessage.CONTENT_POLL_REQ:
       case LcapMessage.CONTENT_POLL_REP:
+	SystemMetrics metrics = SystemMetrics.getSystemMetrics();
 	theLog.debug3("Estimating time for a content poll on "+cus);
         long estTime = cus.estimatedHashDuration();
 	theLog.debug3("It should take me this long to hash the content: "
 		      +estTime);
-        long my_rate = 
-	  SystemMetrics.getSystemMetrics(). getBytesPerMsHashEstimate();
+        long my_rate;
+	try {
+	  my_rate = metrics.getBytesPerMsHashEstimate();
+	} catch (SystemMetrics.NoHashEstimateAvailableException e) {
+	  // if can't get my rate, use slowest rate to prevent adjustment
+	  theLog.warning("No hash estimate available, " +
+			 "not adjusting poll for slow machines");
+	  my_rate = metrics.getSlowestHashSpeed();
+	}
+        long slow_rate = metrics.getSlowestHashSpeed();
 	theLog.debug3("My hash speed is "+my_rate);
-        long slow_rate = SystemMetrics.getSystemMetrics().getSlowestRate();
 	theLog.debug3("The slowest rate is "+slow_rate);
         if (my_rate > slow_rate) {
           estTime = estTime * my_rate / slow_rate;
