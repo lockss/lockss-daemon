@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.30 2004-10-20 18:41:14 dcfok Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.30.2.1 2004-11-11 00:55:02 troberts Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.base;
 
 import java.io.*;
+import java.net.*;
 import java.util.*;
 import java.text.*;
 import org.lockss.plugin.*;
@@ -243,6 +244,19 @@ public class TestBaseUrlCacher extends LockssTestCase {
     return mconn;
   }
 
+  public void testMalformedUrlException() throws IOException {
+    MockConnectionMockBaseUrlCacher muc =
+      new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
+    ThrowingMockLockssUrlConnection mconn =
+      new ThrowingMockLockssUrlConnection(new MalformedURLException());
+    muc.addConnection(mconn);
+    try {
+      muc.cache();
+      fail("Should have thrown");
+    } catch (CacheException.MalformedURLException ex) {
+    }
+  }
+
   public void testNoProxy() throws Exception {
     MockConnectionMockBaseUrlCacher muc =
       new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
@@ -329,6 +343,20 @@ public class TestBaseUrlCacher extends LockssTestCase {
 
   // Should throw exception derived from response code
   public void testConnectionError() throws Exception {
+    MockConnectionMockBaseUrlCacher muc =
+      new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
+    MockLockssUrlConnection mconn = makeConn(404, "Not fond", null);
+    muc.addConnection(mconn);
+    try {
+      InputStream is = muc.getUncachedInputStream();
+      fail("Should have thrown ExpectedNoRetryException");
+    } catch (CacheException.ExpectedNoRetryException e) {
+      assertEquals("404 Not fond", e.getMessage());
+    }
+  }
+
+  //the url connection may throw a MalformedUrlException
+  public void testMalformedUrlError() throws Exception {
     MockConnectionMockBaseUrlCacher muc =
       new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
     MockLockssUrlConnection mconn = makeConn(404, "Not fond", null);
@@ -779,6 +807,19 @@ public class TestBaseUrlCacher extends LockssTestCase {
     public void setProxy(String host, int port) {
       proxyHost = host;
       proxyPort = port;
+    }
+  }
+
+  private class ThrowingMockLockssUrlConnection
+    extends MockLockssUrlConnection {
+    IOException ex;
+
+    public ThrowingMockLockssUrlConnection(IOException ex) {
+      this.ex = ex;
+    }
+
+    public void execute() throws IOException {
+      throw ex;
     }
   }
 

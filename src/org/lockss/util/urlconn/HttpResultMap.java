@@ -1,5 +1,5 @@
 /*
- * $Id: HttpResultMap.java,v 1.4 2004-03-26 23:29:53 clairegriffin Exp $
+ * $Id: HttpResultMap.java,v 1.4.16.1 2004-11-11 00:55:02 troberts Exp $
  */
 
 /*
@@ -97,6 +97,10 @@ public class HttpResultMap implements CacheResultMap {
 
   public CacheException getHostException(Exception nestedException) {
     return new CacheException.HostException(nestedException);
+  }
+
+  public CacheException getMalformedURLException(Exception nestedException) {
+    return new CacheException.MalformedURLException(nestedException);
   }
 
   public CacheException getRepositoryException(Exception nestedException) {
