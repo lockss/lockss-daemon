@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.22 2003-04-17 00:51:17 claire Exp $
+ * $Id: LockssDaemon.java,v 1.23 2003-04-21 05:36:50 tal Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.app;
 
 import java.util.*;
-import org.lockss.util.Logger;
+import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
 import org.lockss.hasher.*;
@@ -366,23 +366,6 @@ public class LockssDaemon {
   }
 
   /**
-   * stop the daemon
-   */
-  protected void stop() {
-    daemonRunning = false;
-    // stop the managers in the reverse order of starting
-    LockssManager lm;
-    while (true) {
-      lm = (LockssManager)theManagers.getLastValue();
-      if (lm==null) {
-        break;
-      } else {
-        lm.stopService();
-      }
-    }
-  }
-
-  /**
    * init our configuration and extract any parameters we will use locally
    */
   protected void initProperties() {
@@ -413,9 +396,33 @@ public class LockssDaemon {
     Iterator it = theManagers.values().iterator();
     while(it.hasNext()) {
       LockssManager lm = (LockssManager)it.next();
-      lm.startService();
+      try {
+	lm.startService();
+      } catch (Exception e) {
+	log.error("Couldn't start service " + lm, e);
+	// don't try to start remaining managers
+	throw e;
+      }
     }
     daemonRunning = true;
+  }
+
+  /**
+   * Stop the daemon, by stopping the managers in the reverse order of
+   * starting.
+   */
+  protected void stop() {
+    daemonRunning = false;
+    List rkeys = ListUtil.reverseCopy(theManagers.sequence());
+    for (Iterator it = rkeys.iterator(); it.hasNext(); ) {
+      String key = (String)it.next();
+      LockssManager lm = (LockssManager)theManagers.get(key);
+      try {
+	lm.stopService();
+      } catch (Exception e) {
+	log.warning("Couldn't stop service " + lm, e);
+      }
+    }
   }
 
   /**
@@ -434,7 +441,7 @@ public class LockssDaemon {
       return mgr;
     }
     catch (Exception ex) {
-      System.err.println("Unable to instantiate Lockss Manager "+ managerName);
+      log.error("Unable to instantiate Lockss Manager "+ managerName, ex);
       throw(ex);
     }
   }
