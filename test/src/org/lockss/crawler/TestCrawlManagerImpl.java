@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.17 2003-04-18 22:31:02 troberts Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.18 2003-05-07 20:36:46 tal Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import org.lockss.util.*;
 import org.lockss.test.*;
 import org.lockss.state.*;
 import org.lockss.plugin.*;
+import org.lockss.daemon.*;
 
 /**
  */
@@ -178,15 +179,12 @@ public class TestCrawlManagerImpl extends LockssTestCase {
   }
 
   public void testKicksOffNewThread() {
-    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
+    MockCachedUrlSet cus = new MyMockCachedUrlSet(mau, null);
+    mau.setAUCachedUrlSet(cus);
+
     TestCrawlCB cb = new TestCrawlCB();
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
 
     cus.addUrl(LINKLESS_PAGE, startUrl);
-
-    WaitOnSemaphoreCallback pauseCB = new WaitOnSemaphoreCallback(sem);
-
-    mau.setPauseCallback(pauseCB);
 
     crawlManager.isCrawlingAU(mau, cb, null);
 
@@ -336,15 +334,13 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 
 
   public void testDontScheduleTwoCrawlsOnAU() {
+    MockCachedUrlSet cus = new MyMockCachedUrlSet(mau, null);
+    mau.setAUCachedUrlSet(cus);
     SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
 
     TestCrawlCB cb = new TestCrawlCB(sem);
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
 
     cus.addUrl(LINKLESS_PAGE, startUrl);
-
-    WaitOnSemaphoreCallback pauseCB = new WaitOnSemaphoreCallback(sem);
-    mau.setPauseCallback(pauseCB);
 
     assertTrue(crawlManager.isCrawlingAU(mau, null, null));
     assertTrue(crawlManager.isCrawlingAU(mau, cb, null));
@@ -389,6 +385,26 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     }
   }
 
+
+  private class MyMockCachedUrlSet extends MockCachedUrlSet {
+    public MyMockCachedUrlSet(MockArchivalUnit owner, CachedUrlSetSpec spec) {
+      super(owner, spec);
+    }
+    protected MockUrlCacher makeMockUrlCacher(String url,
+					      MockCachedUrlSet parent) {
+      return new MockUrlCacherThatStepsTimebase(url, parent);
+    }
+  }
+  private class MockUrlCacherThatStepsTimebase extends MockUrlCacher {
+    public MockUrlCacherThatStepsTimebase(String url, MockCachedUrlSet cus) {
+      super(url, cus);
+    }
+    public void cache() throws IOException {
+      SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
+      sem.take();
+      super.cache();
+    }
+  }
   /**
    * Callback to wait on a semaphore before returning.
    */
@@ -400,7 +416,6 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     }
 
     public void callback() {
-      sem.take();
     }
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingCrawlerImpl.java,v 1.12 2003-04-18 22:31:02 troberts Exp $
+ * $Id: TestGoslingCrawlerImpl.java,v 1.13 2003-05-07 20:36:46 tal Exp $
  */
 
 /*
@@ -78,10 +78,9 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     TimeBase.setSimulated(10);
 
     mau = new MockArchivalUnit();
-    mau.setPauseCallback(new expireDeadlineCallback());
 
     urlList = ListUtil.list(startUrl);
-    MockCachedUrlSet cus = new MockCachedUrlSet(mau, null);
+    MockCachedUrlSet cus = new MyMockCachedUrlSet(mau, null);
     mau.setAUCachedUrlSet(cus);
     crawler = new GoslingCrawlerImpl(mau, urlList, true);
   }
@@ -727,12 +726,22 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     assertEquals(4, crawler.getNumParsed());
   }
 
-  private class expireDeadlineCallback implements MockObjectCallback {
-    public expireDeadlineCallback() {
+  private class MyMockCachedUrlSet extends MockCachedUrlSet {
+    public MyMockCachedUrlSet(MockArchivalUnit owner, CachedUrlSetSpec spec) {
+      super(owner, spec);
     }
-   
-    public void callback() {
+    protected MockUrlCacher makeMockUrlCacher(String url,
+					      MockCachedUrlSet parent) {
+      return new MockUrlCacherThatStepsTimebase(url, parent);
+    }
+  }
+  private class MockUrlCacherThatStepsTimebase extends MockUrlCacher {
+    public MockUrlCacherThatStepsTimebase(String url, MockCachedUrlSet cus) {
+      super(url, cus);
+    }
+    public void cache() throws IOException {
       TimeBase.step();
+      super.cache();
     }
   }
 }

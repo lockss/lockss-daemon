@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrlSet.java,v 1.34 2003-04-23 23:24:52 troberts Exp $
+ * $Id: MockCachedUrlSet.java,v 1.35 2003-05-07 20:36:46 tal Exp $
  */
 
 /*
@@ -217,7 +217,7 @@ public class MockCachedUrlSet implements CachedUrlSet {
     return cu;
   }
 
-  public UrlCacher makeUrlCacher(String url) {
+ public UrlCacher makeUrlCacher(String url) {
     UrlCacher uc = null;
     if (ucHash != null) {
       uc = (UrlCacher)ucHash.get(url);
@@ -252,7 +252,7 @@ public class MockCachedUrlSet implements CachedUrlSet {
     cu.setProperties(props);
     cu.setExists(exists);
 
-    MockUrlCacher uc = new MockUrlCacher(url, this);
+    MockUrlCacher uc = makeMockUrlCacher(url, this);
     uc.setShouldBeCached(shouldCache);
     if (shouldCache && au != null) {
       au.addUrlToBeCached(url);
@@ -266,6 +266,11 @@ public class MockCachedUrlSet implements CachedUrlSet {
 
     cuHash.put(url, cu);
     ucHash.put(url, uc);
+  }
+
+  protected MockUrlCacher makeMockUrlCacher(String url,
+					    MockCachedUrlSet parent) {
+    return new MockUrlCacher(url, this);
   }
 
   /**
