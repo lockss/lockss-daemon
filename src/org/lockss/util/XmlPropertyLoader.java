@@ -1,5 +1,5 @@
 /*
- * $Id: XmlPropertyLoader.java,v 1.6.4.1 2004-07-16 22:32:58 smorabito Exp $
+ * $Id: XmlPropertyLoader.java,v 1.6.4.2 2004-08-04 22:08:59 smorabito Exp $
  */
 
 /*
@@ -154,6 +154,10 @@ public class XmlPropertyLoader {
     // The property tree we're adding to.
     private PropertyTree m_props;
 
+    // A stringbuffer to hold current character data until it's all
+    // been read.
+    private StringBuffer m_charBuffer;
+
     // Save the current running daemon and platform version
     private Version m_sysPlatformVer = getPlatformVersion();
     private Version m_sysDaemonVer = getDaemonVersion();
@@ -262,23 +266,10 @@ public class XmlPropertyLoader {
      */
     public void characters(char[] ch, int start, int length)
 	throws SAXException {
-
-      if (doEval()) {
-	String s = (new String(ch, start, length)).trim();
-
-	// The only character data in the property file should be
-	// inside "value" tags!  It doesn't belong anywhere else.
-	if (m_inValue) {
-	  if (m_inList) {
-	    // If we're inside a list, we need to add this value to the
-	    // current temporary property list.
-	    m_propList.add(s);
-	  } else {
-	    // Otherwise, just add the property key and value to the prop
-	    // tree.
-	    setProperty(s);
-	  }
-	}
+      // m_charBuffer shouldn't be null at this point, but
+      // just in case...
+      if (doEval() && m_charBuffer != null) {
+	m_charBuffer.append(ch, start, length);
       }
     }
 
@@ -345,6 +336,10 @@ public class XmlPropertyLoader {
       if (doEval()) {
 	// Inside a "value" element.
 	m_inValue = true;
+
+	// Prepare a buffer to hold character data, which may be
+	// chunked across several characters() calls
+	m_charBuffer = new StringBuffer();
       }
     }
 
@@ -429,9 +424,27 @@ public class XmlPropertyLoader {
      * Handle encountering the end of a "value" tag.
      */
     private void endValueTag() {
-      if (doEval()) {
-	m_inValue = false;
+      // The only character data in the property file should be
+      // inside "value" tags!  It doesn't belong anywhere else.
+      if (doEval() && m_inValue && m_charBuffer != null) {
+	if (m_inList) {
+	  // If we're inside a list, we need to add this value to the
+	  // current temporary property list.
+	  if (log.isDebug2()) {
+	    log.debug2("Adding '" + m_charBuffer.toString().trim() + "' to " +
+		       getPropname() + " prop list");
+	  }
+	  m_propList.add(m_charBuffer.toString().trim());
+	} else {
+	  // Otherwise, just add the property key and value to the prop
+	  // tree.
+	  setProperty(m_charBuffer.toString().trim());
+	}
       }
+
+      m_inValue = false;
+      // reset the char buffer
+      m_charBuffer = null;
     }
 
     /**

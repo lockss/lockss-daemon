@@ -1,5 +1,5 @@
 /*
- * $Id: TestXmlPropertyLoader.java,v 1.4.4.1 2004-07-16 22:32:59 smorabito Exp $
+ * $Id: TestXmlPropertyLoader.java,v 1.4.4.2 2004-08-04 22:09:00 smorabito Exp $
  */
 
 /*
@@ -136,6 +136,18 @@ public class TestXmlPropertyLoader extends LockssTestCase {
     assertEquals("3", (String)v.get(2));
     assertEquals("4", (String)v.get(3));
     assertEquals("5", (String)v.get(4));
+  }
+
+  /**
+   * Test to be sure that XML entities don't split list
+   * entries.
+   */
+  public void testListEntities() throws IOException {
+    String s = m_props.getProperty("org.lockss.listtest");
+    assertNotNull(s);
+    Vector v = StringUtil.breakAt(s, ';', -1, true, true);
+    assertEquals(1, v.size());
+    assertEquals("this&should&be&one&value", v.get(0));
   }
 
   public void testDaemonVersionEquals() throws IOException {

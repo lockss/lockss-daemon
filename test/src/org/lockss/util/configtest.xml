@@ -25,6 +25,13 @@
       </list>
     </property>
 
+    <!-- Test for character chunking problems with list values -->
+    <property name="listtest">
+      <list>
+	<value>this&amp;should&amp;be&amp;one&amp;value</value>
+      </list>
+    </property>
+
     <!-- Test equivalence of Daemon Version... -->
     <if daemonVersion="1.2.7">
       <property name="test.a" value="foo"/>
