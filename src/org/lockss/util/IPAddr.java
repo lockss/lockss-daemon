@@ -1,5 +1,5 @@
 /*
- * $Id: IPAddr.java,v 1.1 2004-01-20 18:19:16 tlipkis Exp $
+ * $Id: IPAddr.java,v 1.2 2004-01-20 19:23:00 tlipkis Exp $
  */
 
 /*
@@ -115,7 +115,7 @@ public class IPAddr implements java.io.Serializable {
     InetAddress[] all = InetAddress.getAllByName(host);
     int len = all.length;
     IPAddr[] res = new IPAddr[len];
-    for (int ix = 0; ix <= len; ix++) {
+    for (int ix = 0; ix < len; ix++) {
       res[ix] = new IPAddr(all[ix]);
     }
     return res;

@@ -1,5 +1,5 @@
 /*
- * $Id: TestIPAddr.java,v 1.1 2004-01-20 18:19:16 tlipkis Exp $
+ * $Id: TestIPAddr.java,v 1.2 2004-01-20 19:22:59 tlipkis Exp $
  */
 
 /*
@@ -67,5 +67,11 @@ public class TestIPAddr extends LockssTestCase {
     assertEquals(a1, a2);
     assertNotEquals(a1, a3);
     assertNotEquals(a1, "1.2.3.4");
+  }
+
+  public void testGetAllByName() throws Exception {
+    IPAddr a[] = IPAddr.getAllByName("1.2.3.4");
+    assertEquals(ListUtil.list(IPAddr.getByName("1.2.3.4")),
+		 ListUtil.fromArray(a));
   }
 }
