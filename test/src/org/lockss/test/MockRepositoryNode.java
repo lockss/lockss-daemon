@@ -1,5 +1,5 @@
 /*
- * $Id: MockRepositoryNode.java,v 1.1 2003-03-15 02:45:28 aalto Exp $
+ * $Id: MockRepositoryNode.java,v 1.2 2003-03-17 22:05:02 troberts Exp $
  */
 
 /*
@@ -137,7 +137,7 @@ public class MockRepositoryNode implements RepositoryNode {
     throw new UnsupportedOperationException("Not supported.");
   }
 
-  public synchronized RepositoryNodeContents getNodeContents() {
+  public synchronized RepositoryNode.RepositoryNodeContents getNodeContents() {
     if (!hasContent()) {
       throw new UnsupportedOperationException("No content for url '"+url+"'");
     }
