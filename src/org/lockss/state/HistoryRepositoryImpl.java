@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.36 2003-06-25 21:19:58 eaalto Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.37 2003-07-17 00:20:48 tlipkis Exp $
  */
 
 /*
@@ -392,7 +392,7 @@ public class HistoryRepositoryImpl
       try {
         mapping.loadMapping(mappingLoc);
       } catch (Exception e) {
-        logger.error("Couldn't load mapping file '"+mappingLoc+"'");
+        logger.error("Couldn't load mapping file '"+mappingLoc+"'", e);
         throw new LockssDaemonException("Couldn't load mapping file.");
       }
     }
