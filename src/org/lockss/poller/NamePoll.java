@@ -1,5 +1,5 @@
 /*
- * $Id: NamePoll.java,v 1.46 2003-04-18 22:44:19 claire Exp $
+ * $Id: NamePoll.java,v 1.47 2003-04-18 23:44:28 aalto Exp $
  */
 
 /*
@@ -138,7 +138,7 @@ public class NamePoll
       }
       m_entries = alist;
     }
-    log.debug2("sucessfully added " + m_entries.size() + " items to list");
+    log.debug2("successfully added " + m_entries.size() + " items to list");
     return m_entries;
   }
 
@@ -191,7 +191,6 @@ public class NamePoll
       m_tally.votedEntries = winningVote.getKnownEntries();
       String lwrRem = winningVote.getLwrRemaining();
       String uprRem = winningVote.getUprRemaining();
-
       if (lwrRem != null) {
         // we call a new poll on the remaining entries and set the regexp
         try {
@@ -199,7 +198,7 @@ public class NamePoll
           m_pollmanager.sendPollRequest(LcapMessage.NAME_POLL_REQ, spec);
         }
         catch (IOException ex) {
-          log.error("Unable to create new poll request", ex);
+          log.error("unable to create new poll request", ex);
         }
         // we make our list from whatever is in our
         // master list that doesn't match the remainder;
@@ -215,6 +214,8 @@ public class NamePoll
           }
         }
         m_tally.localEntries = localSet.toArray();
+      } else {
+        m_tally.localEntries = getEntries().toArray();
       }
     }
   }
