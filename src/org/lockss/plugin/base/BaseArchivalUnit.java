@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.76 2004-09-02 23:51:38 troberts Exp $
+ * $Id: BaseArchivalUnit.java,v 1.77 2004-09-09 00:51:19 clairegriffin Exp $
  */
 
 /*
@@ -101,6 +101,8 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 
   public static final String NEW_CONTENT_CRAWL_KEY = "nc_interval";
   public static final String PAUSE_TIME_KEY = "pause_time";
+  static final public String AU_DEFAULT_NC_CRAWL_KEY = "au_def_new_content_crawl";
+  static final public String AU_DEFAULT_PAUSE_TIME = "au_def_pause_time";
 
   public static final long
       DEFAULT_NEW_CONTENT_CRAWL_INTERVAL = 2 * Constants.WEEK;
@@ -110,15 +112,15 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   static Logger logger = Logger.getLogger("BaseArchivalUnit");
   static SimpleDateFormat sdf = new SimpleDateFormat();
 
-  protected long maxAuSize = 0;
-  protected long maxAuFileSize = 0;
+  protected static final long DEFAULT_AU_MAX_SIZE = 0;
+  protected static final long DEFAULT_AU_MAX_FILE_SIZE = 0;
+
   protected long minFetchDelay = 6 * Constants.SECOND;
-  protected long fetchDelay;
   protected long defaultFetchDelay = DEFAULT_MILLISECONDS_BETWEEN_CRAWL_HTTP_REQUESTS;
   protected String startUrlString;
   protected long newContentCrawlIntv;
   protected long defaultContentCrawlIntv = DEFAULT_NEW_CONTENT_CRAWL_INTERVAL;
-  protected URL baseUrl;     // the base Url for the volume
+
   protected String auName;   // the name of the AU (constructed by plugin)
   protected TitleConfig titleConfig;   // matching entry from titledb, if any
   protected String auTitle;   // the title of the AU (from titledb, if any)
@@ -138,7 +140,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 
   protected BaseArchivalUnit(Plugin myPlugin) {
     plugin = myPlugin;
-    paramMap = new TypedEntryMap();
+    paramMap = new ParamHandlerMap();
   }
 
   /**
@@ -148,6 +150,10 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    */
   public TypedEntryMap getProperties() {
     return paramMap;
+  }
+
+  protected ParamHandlerMap getParamMap() {
+    return (ParamHandlerMap) paramMap;
   }
 
   /**
@@ -198,11 +204,11 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
       throws ConfigurationException {
 
     // get the base url
-    baseUrl = loadConfigUrl(ConfigParamDescr.BASE_URL, config);
+    URL baseUrl = loadConfigUrl(ConfigParamDescr.BASE_URL, config);
     paramMap.putUrl(AU_BASE_URL, baseUrl);
 
     // get the fetch delay
-    fetchDelay = config.getTimeInterval(PAUSE_TIME_KEY, defaultFetchDelay);
+    long fetchDelay = config.getTimeInterval(PAUSE_TIME_KEY, defaultFetchDelay);
     fetchDelay = Math.max(fetchDelay, minFetchDelay);
     logger.debug2("Set fetch delay to " + fetchDelay);
     paramMap.putLong(AU_FETCH_DELAY, fetchDelay);
@@ -246,6 +252,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     }
     auName = makeName();
     paramMap.putString(AU_TITLE, auTitle != null ? auTitle : auName);
+
   }
 
   TitleConfig findTitleConfig(Configuration config) {
@@ -378,7 +385,8 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   }
 
   public long getFetchDelay() {
-    return paramMap.getLong(AU_FETCH_DELAY, fetchDelay);
+    return paramMap.getLong(AU_FETCH_DELAY,
+                            DEFAULT_MILLISECONDS_BETWEEN_CRAWL_HTTP_REQUESTS);
   }
 
   public String toString() {
@@ -684,5 +692,31 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
       curProb = topLevelPollProbMax;
     }
     return curProb;
+  }
+
+  protected static class ParamHandlerMap extends TypedEntryMap {
+    HashMap handlerMap = new HashMap();
+
+    private ParamHandlerMap() {
+      super();
+    }
+
+    protected void addParamHandler(String paramKey, ParamHandler handler) {
+      handlerMap.put(paramKey, handler);
+    }
+
+    public Object getMapElement(String paramKey) {
+      synchronized (handlerMap) {
+        ParamHandler handler = (ParamHandler)handlerMap.get(paramKey);
+        if(handler != null) {
+          return handler.getParamValue(paramKey);
+        }
+      }
+      return super.getMapElement(paramKey);
+    }
+  }
+
+  public interface ParamHandler {
+    public Object getParamValue(String paramKey);
   }
 }

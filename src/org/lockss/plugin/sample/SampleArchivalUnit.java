@@ -1,5 +1,5 @@
 /*
- * $Id: SampleArchivalUnit.java,v 1.9 2004-09-02 00:40:07 clairegriffin Exp $
+ * $Id: SampleArchivalUnit.java,v 1.10 2004-09-09 00:51:32 clairegriffin Exp $
  */
 
 /*
@@ -33,12 +33,12 @@ package org.lockss.plugin.sample;
 
 import java.net.*;
 import java.util.*;
-import org.lockss.util.*;
+
 import org.lockss.daemon.*;
-import org.lockss.state.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.base.*;
+import org.lockss.plugin.ArchivalUnit.*;
 import org.lockss.plugin.definable.*;
+import org.lockss.util.*;
 
 /**
  * <p>SampleArchivalUnit: The Archival Unit Class for SamplePlugin.  This archival unit

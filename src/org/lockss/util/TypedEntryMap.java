@@ -152,6 +152,95 @@ public class TypedEntryMap {
     return ret;
   }
 
+  /*
+     methods for return typed date which will throw an exception if item is not
+     found
+   */
+  public String getString(String key) {
+    String value = (String)getMapElement(key);
+    if (value != null) {
+      return value;
+    }
+    throw new NoSuchElementException("String element for " + key + " not found.");
+  }
+
+  public boolean getBoolean(String key) {
+    Boolean value = (Boolean)getMapElement(key);
+    if (value != null) {
+      return value.booleanValue();
+    }
+    throw new NoSuchElementException("Boolean element for " + key + " not found.");
+  }
+
+
+  public double getDouble(String key) {
+    try {
+      Double value = (Double)getMapElement(key);
+      if (value != null) {
+        return value.doubleValue();
+      }
+    } catch (NumberFormatException ex) { }
+    throw new NoSuchElementException("Double element for " + key + " not found.");
+  }
+
+
+  public float getFloat(String key) {
+    try {
+      Float value = (Float)getMapElement(key);
+      if (value != null) {
+        return value.floatValue();
+      }
+    } catch (NumberFormatException ex) { }
+    throw new NoSuchElementException("Float element for " + key + " not found.");
+  }
+
+
+  public int getInt(String key) {
+    try {
+      Integer value = (Integer)getMapElement(key);
+      if (value != null) {
+        return value.intValue();
+      }
+    } catch (NumberFormatException ex) { }
+    throw new NoSuchElementException("Integer element for " + key + " not found.");
+  }
+
+  public long getLong(String key) {
+    try {
+      Long value = (Long)getMapElement(key);
+      if (value != null) {
+        return value.longValue();
+      }
+    } catch (NumberFormatException ex) { }
+    throw new NoSuchElementException("Long element for " + key + " not found.");
+  }
+
+  public URL getUrl(String key) {
+    String valueStr = (String)getMapElement(key);
+    if (valueStr!=null) {
+      try {
+        URL value = new URL(valueStr);
+        return value;
+      } catch (MalformedURLException mue) { }
+    }
+    throw new NoSuchElementException("Url element for " + key + " not found.");
+  }
+
+  public Collection getCollection(String key) {
+    Collection value = (Collection)getMapElement(key);
+    if (value != null) {
+      return value;
+    }
+    throw new NoSuchElementException("Collection element for " + key + " not found.");
+  }
+
+  public Map getMap(String key) {
+    Map value = (Map)getMapElement(key);
+    if (value != null) {
+      return value;
+    }
+    throw new NoSuchElementException("Map element for " + key + " not found.");
+  }
 
   /*
    *

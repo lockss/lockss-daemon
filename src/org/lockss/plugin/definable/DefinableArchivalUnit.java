@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.15 2004-09-02 01:22:50 troberts Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.16 2004-09-09 00:51:32 clairegriffin Exp $
  */
 
 /*
@@ -57,10 +57,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   static final public String AU_CRAWL_WINDOW_KEY = "au_crawlwindow";
   static final public String AU_EXPECTED_PATH = "au_expected_base_path";
   static final public String AU_CRAWL_DEPTH = "au_crawl_depth";
-  static final public String AU_DEFAULT_NC_CRAWL_KEY = "au_def_new_content_crawl";
-  static final public String AU_DEFAULT_PAUSE_TIME = "au_def_pause_time";
   static final public String AU_MANIFEST_KEY = "au_manifest";
-
   static final public String AU_URL_NORMALIZER_KEY = "au_url_normalizer";
 
 
@@ -112,10 +109,6 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     return convstr;
   }
 
-  public String getStartUrl() {
-    return startUrlString;
-  }
-
   protected UrlNormalizer makeUrlNormalizer() {
     UrlNormalizer urlNormalizer = null;
 
@@ -123,14 +116,14 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
       (String)definitionMap.getMapElement(AU_URL_NORMALIZER_KEY);
 
     if (normalizerClass != null) {
-    
+
       try {
 	urlNormalizer =
 	  (UrlNormalizer) Class.forName(normalizerClass, true,
 					classLoader).newInstance();
       } catch (Exception e) {
 	throw new DefinablePlugin.InvalidDefinitionException(auName +
-							     " unable to create url normalizer: " + normalizerClass, e);
+        " unable to create url normalizer: " + normalizerClass, e);
       }
     }
     return urlNormalizer;
@@ -164,16 +157,23 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
         throw new ConfigurationException("Error configuring: " + key, ex);
       }
     }
-    // now load any specialized parameters
-    defaultFetchDelay =
-        definitionMap.getLong(AU_DEFAULT_PAUSE_TIME,
-                         DEFAULT_MILLISECONDS_BETWEEN_CRAWL_HTTP_REQUESTS);
-    defaultContentCrawlIntv =
-        definitionMap.getLong(AU_DEFAULT_NC_CRAWL_KEY,
-                                 DEFAULT_NEW_CONTENT_CRAWL_INTERVAL);
+    // override any defaults
+    defaultFetchDelay = definitionMap.getLong(AU_DEFAULT_PAUSE_TIME,
+        DEFAULT_MILLISECONDS_BETWEEN_CRAWL_HTTP_REQUESTS);
 
-    maxAuSize = definitionMap.getLong(AU_MAX_SIZE_KEY, 0);
-    maxAuFileSize = definitionMap.getLong(AU_MAX_FILE_SIZE_KEY, 0);
+    defaultContentCrawlIntv = definitionMap.getLong(AU_DEFAULT_NC_CRAWL_KEY,
+        DEFAULT_NEW_CONTENT_CRAWL_INTERVAL);
+
+    // install any other values - should these be config params?
+    long l_val;
+    l_val = definitionMap.getLong(AU_MAX_SIZE_KEY,
+                                  DEFAULT_AU_MAX_SIZE);
+    paramMap.putLong(AU_MAX_SIZE_KEY, l_val);
+
+    l_val = definitionMap.getLong(AU_MAX_FILE_SIZE_KEY,
+                                  DEFAULT_AU_MAX_FILE_SIZE);
+    paramMap.putLong(AU_MAX_FILE_SIZE_KEY, l_val);
+
   }
 
   protected String makeName() {
@@ -202,10 +202,10 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     if(rule instanceof List) {
       List templates = (List) rule;
       Iterator it = templates.iterator();
-      
+
       while (it.hasNext()) {
 	String rule_template = (String) it.next();
-	
+
 	rules.add(convertRule(rule_template));
       }
     }

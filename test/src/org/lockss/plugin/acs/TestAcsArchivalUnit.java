@@ -1,5 +1,5 @@
 /*
- * $Id: TestAcsArchivalUnit.java,v 1.13 2004-08-12 23:15:16 clairegriffin Exp $
+ * $Id: TestAcsArchivalUnit.java,v 1.14 2004-09-09 00:51:33 clairegriffin Exp $
  */
 
 /*
@@ -161,7 +161,8 @@ public class TestAcsArchivalUnit
         new RangeCachedUrlSetSpec(base_url.toString()));
 
     // start url - should be cached
-    shouldCacheTest(acsAu.getStartUrl(), true, acsAu, cus);
+    shouldCacheTest(acsAu.getProperties().getString(acsAu.AU_START_URL, null),
+                    true, acsAu, cus);
 
     // issue index page - should be cached
     url = b_root +"acs/journals/toc.page?incoden=" +
@@ -222,7 +223,7 @@ public class TestAcsArchivalUnit
     URL a_url = new URL(ARTICLE_ROOT);
     URL base = new URL(ROOT_URL);
     DefinableArchivalUnit acsAu = makeAu(base, a_url, JOURNAL_KEY, VOL_ID, VOL_YEAR);
-    assertEquals(expected, (String)acsAu.getStartUrl());
+    assertEquals(expected, acsAu.getProperties().getString(acsAu.AU_START_URL, null));
   }
 
   public void testGetUrlStems() throws Exception {
