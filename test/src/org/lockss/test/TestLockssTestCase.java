@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssTestCase.java,v 1.8 2004-01-27 00:41:50 tyronen Exp $
+ * $Id: TestLockssTestCase.java,v 1.9 2004-08-04 23:46:29 tlipkis Exp $
  */
 
 /*
@@ -313,5 +313,13 @@ public class TestLockssTestCase extends LockssTestCase {
       fail("assertContainsAll should have thrown an AssertionFailedException");
     } catch (AssertionFailedError afe) {
     }
+  }
+
+  public void testAssertMatchesRE() {
+    assertMatchesRE("", "foo");
+    assertNotMatchesRE("^$", "foo");
+    assertMatchesRE(".*", "foo");
+    assertMatchesRE("bar", "foobar");
+    assertNotMatchesRE("bar", "baz");
   }
 }

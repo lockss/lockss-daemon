@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.54 2004-07-21 07:06:59 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.55 2004-08-04 23:46:29 tlipkis Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import org.lockss.util.*;
 import org.lockss.daemon.*;
 import junit.framework.TestCase;
 import junit.framework.TestResult;
+import org.apache.oro.text.regex.*;
 
 
 public class LockssTestCase extends TestCase {
@@ -921,8 +922,48 @@ public class LockssTestCase extends TestCase {
     assertEquals(expected, actual.toString());
   }
 
+  /**
+   * Asserts that a string matches a regular expression.  The match is
+   * unanchored; use "^...$" to ensure that the entire string is matched.
+   */
+  public static void assertMatchesRE(String regexp, String string) {
+    assertMatchesRE(null, regexp, string);
+  }
+
+  /**
+   * Asserts that a string matches a regular expression.  The match is
+   * unanchored; use "^...$" to ensure that the entire string is matched.
+   */
+  public static void assertMatchesRE(String msg,
+				     String regexp, String string) {
+    Pattern pat = RegexpUtil.uncheckedCompile(regexp);
+    if (msg == null) {
+      msg = "String \"" + string + "\" does not match RE: " + regexp;
+    }
+    assertTrue(msg , RegexpUtil.getMatcher().contains(string, pat));
+  }
+
+  /**
+   * Asserts that a string does not match a regular expression
+   */
+  public static void assertNotMatchesRE(String regexp, String string) {
+    assertNotMatchesRE(null, regexp, string);
+  }
+
+  /**
+   * Asserts that a string does not match a regular expression
+   */
+  public static void assertNotMatchesRE(String msg,
+				     String regexp, String string) {
+    Pattern pat = RegexpUtil.uncheckedCompile(regexp);
+    if (msg == null) {
+      msg = "String \"" + string + "\" should not match RE: " + regexp;
+    }
+    assertFalse(msg , RegexpUtil.getMatcher().contains(string, pat));
+  }
+
   /** Abstraction to do something in another thread, after a delay,
-   * unless cancelled.  If the sceduled activity is still pending when the
+   * unless cancelled.  If the scheduled activity is still pending when the
    * test completes, it is cancelled by tearDown().
    * <br>For one-off use:<pre>
    *  final Object obj = ...;
