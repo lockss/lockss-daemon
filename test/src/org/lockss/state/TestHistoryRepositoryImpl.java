@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.41 2004-02-03 02:48:39 eaalto Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.42 2004-02-05 02:18:02 eaalto Exp $
  */
 
 /*
@@ -125,7 +125,7 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
 
   public void testLoadMapping() throws Exception {
     assertNotNull(repository.mapping);
-    assertNotNull(repository.getMapping());
+    assertNotNull(repository.getPollMapping());
   }
 
   public void testStorePollHistories() throws Exception {
@@ -247,11 +247,13 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
 
   public void testStoreDamagedNodeSet() throws Exception {
     DamagedNodeSet damNodes = new DamagedNodeSet(mau, repository);
-    damNodes.nodes.add("test1");
-    damNodes.nodes.add("test2");
-    assertTrue(damNodes.contains("test1"));
-    assertTrue(damNodes.contains("test2"));
-    assertFalse(damNodes.contains("test3"));
+    damNodes.nodesWithDamage.add("test1");
+    damNodes.nodesWithDamage.add("test2");
+    damNodes.cusToRepair.put("cus1", ListUtil.list("cus1-1", "cus1-2"));
+    damNodes.cusToRepair.put("cus2", ListUtil.list("cus2-1"));
+    assertTrue(damNodes.containsWithDamage("test1"));
+    assertTrue(damNodes.containsWithDamage("test2"));
+    assertFalse(damNodes.containsWithDamage("test3"));
 
     repository.storeDamagedNodeSet(damNodes);
     String filePath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath +
@@ -262,10 +264,28 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
 
     damNodes = null;
     damNodes = repository.loadDamagedNodeSet();
-    assertTrue(damNodes.contains("test1"));
-    assertTrue(damNodes.contains("test2"));
-    assertFalse(damNodes.contains("test3"));
+    // check damage
+    assertTrue(damNodes.containsWithDamage("test1"));
+    assertTrue(damNodes.containsWithDamage("test2"));
+    assertFalse(damNodes.containsWithDamage("test3"));
+
+    MockCachedUrlSet mcus1 = new MockCachedUrlSet("cus1");
+    MockCachedUrlSet mcus2 = new MockCachedUrlSet("cus2");
+
+    // check repairs
+    assertTrue(damNodes.containsToRepair(mcus1, "cus1-1"));
+    assertTrue(damNodes.containsToRepair(mcus1, "cus1-2"));
+    assertFalse(damNodes.containsToRepair(mcus1, "cus2-1"));
+    assertTrue(damNodes.containsToRepair(mcus2, "cus2-1"));
     assertEquals(mau.getAuId(), damNodes.theAu.getAuId());
+
+    // check remove
+    damNodes.removeFromRepair(mcus1, "cus1-1");
+    assertFalse(damNodes.containsToRepair(mcus1, "cus1-1"));
+    assertTrue(damNodes.containsToRepair(mcus1, "cus1-2"));
+    damNodes.removeFromRepair(mcus1, "cus1-2");
+    assertFalse(damNodes.containsToRepair(mcus1, "cus1-2"));
+    assertNull(damNodes.cusToRepair.get(mcus1));
   }
 
   public void testStoreOverwrite() throws Exception {

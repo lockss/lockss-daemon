@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.164 2004-02-03 02:48:39 eaalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.165 2004-02-05 02:18:01 eaalto Exp $
  */
 
 /*
@@ -252,7 +252,7 @@ public class NodeManagerImpl
       return false;
     }
 
-    if (!state.isMyPoll() && hasDamage(cus, state.getType())) {
+    if (!state.isMyPoll() && hasDamage(cus)) {
       logger.info("CUS has damage, not starting poll: " + cus);
       return false;
     }
@@ -678,10 +678,10 @@ public class NodeManagerImpl
           case NodeState.CONTENT_RUNNING:
           case NodeState.CONTENT_REPLAYING:
             nodeState.setState(NodeState.OK);
-            if (damagedNodes.contains(nodeState.getCachedUrlSet().getUrl())) {
+            if (damagedNodes.containsWithDamage(nodeState.getCachedUrlSet().getUrl())) {
               // nodes are no longer damaged when a normal content poll succeeds
               logger.debug2("removing from damaged node list");
-              damagedNodes.remove(nodeState.getCachedUrlSet().getUrl());
+              damagedNodes.removeFromDamage(nodeState.getCachedUrlSet().getUrl());
             }
             break;
           case NodeState.SNCUSS_POLL_RUNNING:
@@ -725,7 +725,7 @@ public class NodeManagerImpl
             nodeState.setState(NodeState.CONTENT_LOST);
             // nodes are damaged when a normal content poll fails
             logger.debug2("adding to damaged node list");
-            damagedNodes.add(nodeState.getCachedUrlSet().getUrl());
+            damagedNodes.addToDamage(nodeState.getCachedUrlSet().getUrl());
             break;
           case NodeState.CONTENT_REPLAYING:
             nodeState.setState(NodeState.DAMAGE_AT_OR_BELOW);
@@ -1323,9 +1323,8 @@ public class NodeManagerImpl
     return PollState.ERR_UNDEFINED;
   }
 
-  private void markNodesForRepair(Collection urls, String pollKey,
-                                  CachedUrlSet cus, boolean isNamePoll,
-                                  ActivityRegulator.Lock lock) {
+  void markNodesForRepair(Collection urls, String pollKey,
+      CachedUrlSet cus, boolean isNamePoll, ActivityRegulator.Lock lock) {
     if (pollKey!=null) {
       logger.debug2("suspending poll " + pollKey);
       pollManager.suspendPoll(pollKey);
@@ -1339,10 +1338,21 @@ public class NodeManagerImpl
       logger.debug2("scheduling "+urls.size()+" repairs");
     }
 
-    PollCookie cookie = new PollCookie(cus, pollKey, isNamePoll);
-    theDaemon.getCrawlManager().startRepair(managedAu, urls,
-					    new ContentRepairCallback(),
-					    cookie, lock);
+    if (logger.isDebug2()) {
+      Iterator iter = urls.iterator();
+      while (iter.hasNext()) {
+        String url = (String)iter.next();
+        if (!damagedNodes.containsToRepair(cus, url)) {
+          logger.debug2("Adding '" + url + "' to repair list...");
+        }
+      }
+    }
+    damagedNodes.addToRepair(cus, urls);
+
+    PollCookie cookie = new PollCookie(cus, pollKey, isNamePoll, urls);
+ //   theDaemon.getCrawlManager().startRepair(managedAu, urls,
+//					    new ContentRepairCallback(),
+//					    cookie, lock);
   }
 
   private void deleteNode(CachedUrlSet cus) throws IOException {
@@ -1367,27 +1377,27 @@ public class NodeManagerImpl
       int mid = childList.size() / 2;
 
       // the first half of the list
-      String lwr = ( (CachedUrlSet) childList.get(0)).getUrl();
-      String upr = ( (CachedUrlSet) childList.get(mid)).getUrl();
+      String lwr = ((CachedUrlSet) childList.get(0)).getUrl();
+      String upr = ((CachedUrlSet) childList.get(mid)).getUrl();
       callContentPoll(cus, lwr, upr);
 
       // the second half of the list
-      lwr = ( (CachedUrlSet) childList.get(mid + 1)).getUrl();
-      upr = ( (CachedUrlSet) childList.get(childList.size() - 1)).getUrl();
+      lwr = ((CachedUrlSet) childList.get(mid + 1)).getUrl();
+      upr = ((CachedUrlSet) childList.get(childList.size() - 1)).getUrl();
       callContentPoll(cus, lwr, upr);
     }
     else if (childList.size() > 0) {
       logger.debug2("less than 4 children, calling content poll on each.");
       for (int i = 0; i < childList.size(); i++) {
-        callContentPoll((CachedUrlSet) childList.get(i), null, null);
+        callContentPoll((CachedUrlSet)childList.get(i), null, null);
       }
     } else {
       logger.debug2("0 children, calling no content polls.");
     }
   }
 
-  private void callContentPoll(CachedUrlSet cus, String lwr, String upr) throws
-      IOException {
+  private void callContentPoll(CachedUrlSet cus, String lwr, String upr)
+      throws IOException {
     String base = cus.getUrl();
     if(lwr != null) {
       lwr = lwr.startsWith(base) ? lwr.substring(base.length()) : lwr;
@@ -1475,13 +1485,13 @@ public class NodeManagerImpl
     return childList;
   }
 
-  private boolean hasDamage(CachedUrlSet cus, int pollType) {
+  private boolean hasDamage(CachedUrlSet cus) {
     boolean hasDamage = false;
     synchronized (damagedNodes) {
-      if (damagedNodes.contains(cus.getUrl())) {
+      if (damagedNodes.containsWithDamage(cus.getUrl())) {
         return true;
       }
-      Iterator damagedIt = damagedNodes.iterator();
+      Iterator damagedIt = damagedNodes.damageIterator();
       while (damagedIt.hasNext()) {
         String url = (String) damagedIt.next();
         if (cus.containsUrl(url)) {
@@ -1527,6 +1537,27 @@ public class NodeManagerImpl
     return (spec.isAu() && (type == Poll.CONTENT_POLL));
   }
 
+  public boolean repairsNeeded() {
+    return !damagedNodes.getNodesToRepair().isEmpty();
+  }
+
+  public void scheduleRepairs(ActivityRegulator.Lock activityLock) {
+    HashMap repairs = damagedNodes.getNodesToRepair();
+    if (!repairs.isEmpty()) {
+      logger.debug("Found nodes needing repair; scheduling repairs...");
+      Iterator cusKeys = repairs.keySet().iterator();
+      while (cusKeys.hasNext()) {
+        String cusUrl = (String)cusKeys.next();
+        CachedUrlSet cus = managedAu.getPlugin().makeCachedUrlSet(managedAu,
+            new RangeCachedUrlSetSpec(cusUrl));
+        Collection localCol = new ArrayList((Collection)repairs.get(cusUrl));
+        NodeState node = getNodeState(cus);
+        boolean isNamePoll = (node.getState() == NodeState.WRONG_NAMES);
+        markNodesForRepair(localCol, null, cus, isNamePoll, activityLock);
+      }
+    }
+  }
+
   class ContentRepairCallback implements CrawlManager.Callback {
     /**
      * @param success whether the repair was successful or not
@@ -1535,10 +1566,18 @@ public class NodeManagerImpl
      */
     public void signalCrawlAttemptCompleted(boolean success, Object cookie) {
       PollCookie pollCookie = (PollCookie)cookie;
-      logger.debug("Content crawl completed repair on " +
-                   pollCookie.cus.getUrl());
+      CachedUrlSet cus = pollCookie.cus;
+
+      Iterator urlIter = pollCookie.urlsToRepair.iterator();
+      while (urlIter.hasNext()) {
+        String url = (String)urlIter.next();
+        logger.debug2("Removing '"+url+"' from repair list...");
+        damagedNodes.removeFromRepair(cus, url);
+      }
+
+      logger.debug("Content crawl completed repair on " + cus.getUrl());
       // set state properly
-      NodeState state = getNodeState(pollCookie.cus);
+      NodeState state = getNodeState(cus);
 
       // resume poll (or call new one)
       if (pollCookie.pollKey!=null) {
@@ -1554,14 +1593,14 @@ public class NodeManagerImpl
         if (pollCookie.isNamePoll) {
           logger.debug("Calling new name poll...");
           state.setState(NodeState.WRONG_NAMES);
-          callNamePoll(new PollSpec(pollCookie.cus));
+          callNamePoll(new PollSpec(cus));
         } else {
           logger.debug("Calling new SNCUSS poll...");
           state.setState(NodeState.POSSIBLE_DAMAGE_HERE);
           try {
-            callSingleNodeContentPoll(pollCookie.cus);
+            callSingleNodeContentPoll(cus);
           } catch (IOException ie) {
-            logger.warning("Couldn't recall poll: "+ie);
+            logger.warning("Couldn't recall poll: " + ie);
             // the treewalk will recall this if it happens
           }
         }
@@ -1573,11 +1612,14 @@ public class NodeManagerImpl
     CachedUrlSet cus;
     String pollKey;
     boolean isNamePoll;
+    Collection urlsToRepair;
 
-    PollCookie(CachedUrlSet cus, String pollKey, boolean isNamePoll) {
+    PollCookie(CachedUrlSet cus, String pollKey, boolean isNamePoll,
+        Collection urlsToRepair) {
       this.cus = cus;
       this.pollKey = pollKey;
       this.isNamePoll = isNamePoll;
+      this.urlsToRepair = urlsToRepair;
     }
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: MockNodeManager.java,v 1.14 2003-12-23 00:26:14 tlipkis Exp $
+ * $Id: MockNodeManager.java,v 1.15 2004-02-05 02:18:02 eaalto Exp $
  */
 
 /*
@@ -136,5 +136,12 @@ public class MockNodeManager implements NodeManager {
     throw new UnsupportedOperationException("Not implemented");
   }
 
+  public boolean repairsNeeded() {
+    return false;
+  }
+
+  public void scheduleRepairs(ActivityRegulator.Lock activityLock) {
+    throw new UnsupportedOperationException("Not implemented");
+  }
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.42 2004-02-03 02:48:39 eaalto Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.43 2004-02-05 02:18:01 eaalto Exp $
  */
 
 /*
@@ -126,7 +126,7 @@ public class HistoryRepositoryImpl
       File nodeFile = new File(nodeDir, NODE_FILE_NAME);
       FileWriter writer = new FileWriter(nodeFile);
       Marshaller marshaller = new Marshaller(writer);
-      marshaller.setMapping(getMapping());
+      marshaller.setMapping(getPollMapping());
       marshaller.marshal(new NodeStateBean(nodeState));
       writer.close();
     } catch (Exception e) {
@@ -148,7 +148,7 @@ public class HistoryRepositoryImpl
       logger.debug3("Loading state for CUS '" + cus.getUrl() + "'");
       FileReader reader = new FileReader(nodeFile);
       Unmarshaller unmarshaller = new Unmarshaller(NodeStateBean.class);
-      unmarshaller.setMapping(getMapping());
+      unmarshaller.setMapping(getPollMapping());
       NodeStateBean nsb = (NodeStateBean)unmarshaller.unmarshal(reader);
       reader.close();
       return new NodeStateImpl(cus, nsb, this);
@@ -180,7 +180,7 @@ public class HistoryRepositoryImpl
       NodeHistoryBean nhb = new NodeHistoryBean();
       nhb.historyBeans = ((NodeStateImpl)nodeState).getPollHistoryBeanList();
       Marshaller marshaller = new Marshaller(new FileWriter(nodeFile));
-      marshaller.setMapping(getMapping());
+      marshaller.setMapping(getPollMapping());
       marshaller.marshal(nhb);
       writer.close();
     } catch (Exception e) {
@@ -204,7 +204,7 @@ public class HistoryRepositoryImpl
       logger.debug3("Loading histories for CUS '"+cus.getUrl()+"'");
       FileReader reader = new FileReader(nodeFile);
       Unmarshaller unmarshaller = new Unmarshaller(NodeHistoryBean.class);
-      unmarshaller.setMapping(getMapping());
+      unmarshaller.setMapping(getPollMapping());
       NodeHistoryBean nhb = (NodeHistoryBean)unmarshaller.unmarshal(reader);
       if (nhb.historyBeans==null) {
         logger.debug3("Empty history list loaded.");
@@ -235,7 +235,7 @@ public class HistoryRepositoryImpl
       File auFile = new File(nodeDir, AU_FILE_NAME);
       FileWriter writer = new FileWriter(auFile);
       Marshaller marshaller = new Marshaller(writer);
-      marshaller.setMapping(getMapping());
+      marshaller.setMapping(getPollMapping());
       marshaller.marshal(new AuStateBean(auState));
       writer.close();
     } catch (Exception e) {
@@ -255,7 +255,7 @@ public class HistoryRepositoryImpl
       logger.debug3("Loading state for AU '" + storedAu.getName() + "'");
       FileReader reader = new FileReader(auFile);
       Unmarshaller unmarshaller = new Unmarshaller(AuStateBean.class);
-      unmarshaller.setMapping(getMapping());
+      unmarshaller.setMapping(getPollMapping());
       AuStateBean asb = (AuStateBean) unmarshaller.unmarshal(reader);
       // does not load in an old treewalk time, so that one will be run
       // immediately
@@ -286,7 +286,7 @@ public class HistoryRepositoryImpl
       File damFile = new File(nodeDir, DAMAGED_NODES_FILE_NAME);
       FileWriter writer = new FileWriter(damFile);
       Marshaller marshaller = new Marshaller(writer);
-      marshaller.setMapping(getMapping());
+      marshaller.setMapping(getPollMapping());
       marshaller.marshal(nodeSet);
       writer.close();
     } catch (Exception e) {
@@ -306,7 +306,7 @@ public class HistoryRepositoryImpl
       logger.debug3("Loading state for AU '" + storedAu.getName() + "'");
       FileReader reader = new FileReader(damFile);
       Unmarshaller unmarshaller = new Unmarshaller(DamagedNodeSet.class);
-      unmarshaller.setMapping(getMapping());
+      unmarshaller.setMapping(getPollMapping());
       DamagedNodeSet damNodes = (DamagedNodeSet) unmarshaller.unmarshal(reader);
       reader.close();
       damNodes.theAu = storedAu;
@@ -367,7 +367,7 @@ public class HistoryRepositoryImpl
         throw new LockssDaemonException("Couldn't find mapping file.");
       }
 
-      mapping = new Mapping();
+      mapping = (new ExternalizableMap()).getExtMapMapping();
       try {
         mapping.loadMapping(mappingLoc);
       } catch (Exception e) {
@@ -377,7 +377,7 @@ public class HistoryRepositoryImpl
     }
   }
 
-  Mapping getMapping() {
+  public Mapping getPollMapping() {
     if (mapping==null) {
       logger.error("Mapping file not loaded.");
       throw new LockssDaemonException("Mapping file not loaded.");

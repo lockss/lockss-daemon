@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkHandler.java,v 1.55 2004-02-02 23:13:31 eaalto Exp $
+ * $Id: TreeWalkHandler.java,v 1.56 2004-02-05 02:18:01 eaalto Exp $
  */
 
 /*
@@ -215,8 +215,13 @@ public class TreeWalkHandler {
         // check with crawl manager
         if (theAu.shouldCrawlForNewContent(manager.getAuState())) {
           treeWalkAborted = true;
+          logger.debug("Requesting new content crawl.  Aborting...");
           theCrawlManager.startNewContentCrawl(theAu, null, null, activityLock);
-          logger.debug("Requested new content crawl.  Aborting...");
+        } else if (manager.repairsNeeded()) {
+          // schedule repairs if needed
+          treeWalkAborted = true;
+          logger.debug("Requesting node manager repairs.  Aborting...");
+          manager.scheduleRepairs(activityLock);
         } else {
           // do the actual treewalk
           logger.debug("Tree walk started: " + theAu.getName());

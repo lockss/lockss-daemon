@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.106 2004-02-03 02:48:39 eaalto Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.107 2004-02-05 02:18:02 eaalto Exp $
  */
 
 /*
@@ -237,9 +237,9 @@ public class TestNodeManagerImpl extends LockssTestCase {
                                             results));
 
     // if we have a damaged node we return false
-    nodeManager.damagedNodes.add(cus.getUrl());
+    nodeManager.damagedNodes.addToDamage(cus.getUrl());
     assertFalse(nodeManager.shouldStartPoll(cus, results));
-    nodeManager.damagedNodes.remove(cus.getUrl());
+    nodeManager.damagedNodes.removeFromDamage(cus.getUrl());
     TimeBase.setReal();
   }
 
@@ -684,19 +684,52 @@ public class TestNodeManagerImpl extends LockssTestCase {
     assertNull(theDaemon.getLockssRepository(mau).getNode(TEST_URL +
         createUrl));
 
+    // make sure repair list is empty
+    assertTrue(nodeManager.damagedNodes.getNodesToRepair().isEmpty());
+
+    // handle names
     assertTrue(nodeManager.handleWrongNames(masterV.iterator(), localL,
                                             nodeState, results));
     // first repair scheduled
-    assertEquals(MockCrawlManager.SCHEDULED, crawlManager.getUrlStatus(
-        TEST_URL + repairUrl));
+    assertEquals(MockCrawlManager.SCHEDULED,
+        crawlManager.getUrlStatus(TEST_URL + repairUrl));
     // second repair scheduled
-    assertEquals(MockCrawlManager.SCHEDULED, crawlManager.getUrlStatus(
-        TEST_URL + repairUrl2));
+    assertEquals(MockCrawlManager.SCHEDULED,
+        crawlManager.getUrlStatus(TEST_URL + repairUrl2));
+
+    // check that both registered for repair
+    assertIsomorphic(ListUtil.list(TEST_URL+repairUrl, TEST_URL+repairUrl2),
+        (Collection)nodeManager.damagedNodes.getNodesToRepair().get(TEST_URL));
+
     // node created
     assertNotNull(theDaemon.getLockssRepository(mau).getNode(TEST_URL +
         createUrl));
     // node deleted
     assertTrue(delNode.isDeleted());
+  }
+
+  public void testRepairOnStart() throws Exception {
+    String url1 = TEST_URL + "test1";
+    String url2 = TEST_URL + "test2";
+
+    HashMap repairNodes = nodeManager.damagedNodes.getNodesToRepair();
+    // repair list empty
+    assertTrue(repairNodes.isEmpty());
+    // nothing scheduled
+    assertNull(crawlManager.getUrlStatus(url1));
+    assertNull(crawlManager.getUrlStatus(url2));
+
+    // populate list
+    repairNodes.put(TEST_URL, ListUtil.list(url1, url2));
+
+    nodeManager.markNodesForRepair(ListUtil.list(url1, url2), null,
+        new MockCachedUrlSet(TEST_URL), true, null);
+
+    // first repair scheduled
+    assertEquals(MockCrawlManager.SCHEDULED, crawlManager.getUrlStatus(url1));
+    // second repair scheduled
+    assertEquals(MockCrawlManager.SCHEDULED, crawlManager.getUrlStatus(url2));
+
   }
 
   public void testHandleAuPolls() throws Exception {
@@ -994,13 +1027,13 @@ public class TestNodeManagerImpl extends LockssTestCase {
                      pollManager.getPollStatus(TEST_URL));
       } else if (shouldRepair) {
         if (node.getState()==NodeState.NEEDS_REPAIR) {
-          assertEquals(MockCrawlManager.SCHEDULED, crawlManager.getUrlStatus(
-              TEST_URL));
+          assertEquals(MockCrawlManager.SCHEDULED,
+              crawlManager.getUrlStatus(TEST_URL));
         } else if (node.getState()==NodeState.WRONG_NAMES) {
           String repairUrl = TEST_URL + "/testentry4.html";
           String repairUrl2 = TEST_URL + "/testentry5.html";
-          assertEquals(MockCrawlManager.SCHEDULED, crawlManager.getUrlStatus(
-              repairUrl));
+          assertEquals(MockCrawlManager.SCHEDULED,
+              crawlManager.getUrlStatus(repairUrl));
           assertNull(crawlManager.getUrlStatus(repairUrl2));
         }
       }

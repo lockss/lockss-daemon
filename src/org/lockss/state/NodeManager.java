@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManager.java,v 1.26 2003-12-23 00:26:14 tlipkis Exp $
+ * $Id: NodeManager.java,v 1.27 2004-02-05 02:18:01 eaalto Exp $
  */
 
 /*
@@ -32,11 +32,10 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.state;
 
-import java.util.Iterator;
 import org.lockss.plugin.*;
 import org.lockss.poller.*;
-import org.lockss.util.*;
 import org.lockss.app.*;
+import org.lockss.daemon.ActivityRegulator;
 
 /**
  * NodeManager handles all nodes in a given system.  It retrieves and stores
@@ -94,6 +93,19 @@ public interface NodeManager extends LockssAuManager {
    * @param hashDuration the duration, in ms
    */
   public void hashFinished(CachedUrlSet cus, long hashDuration);
+
+  /**
+   * Returns true if the node manager has scheduled repairs which were never
+   * completed.
+   * @return boolean iff repairs needed
+   */
+  public boolean repairsNeeded();
+
+  /**
+   * Schedules any necessary repairs.
+   * @param activityLock the Activity lock
+   */
+  public void scheduleRepairs(ActivityRegulator.Lock activityLock);
 
   /**
    * For testing only.  Forces the NodeManager to run a treewalk, if none

@@ -1,5 +1,5 @@
 /*
- * $Id: DamagedNodeSet.java,v 1.3 2003-06-20 22:34:52 claire Exp $
+ * $Id: DamagedNodeSet.java,v 1.4 2004-02-05 02:18:01 eaalto Exp $
  */
 
 /*
@@ -34,25 +34,32 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.state;
 
 import java.util.*;
-import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.*;
+import org.lockss.util.ExtMapBean;
 
 /**
  * DamagedNodeMap is a write-through persistent wrapper for a hashmap.
  */
 public class DamagedNodeSet {
-  HashSet nodes;
+  HashSet nodesWithDamage;
+  // the form of this map is key: url String, value: ArrayList url Strings
+  // while it is logical to use a Set instead of an ArrayList, it is not
+  // possible due to Castor's inability to marshall groups of Sets correctly.
+  HashMap cusToRepair;
   HistoryRepository repository;
   ArchivalUnit theAu;
 
   public DamagedNodeSet() {
     // initialize here so that if there's no set to load, it's not null
-    nodes = new HashSet();
+    nodesWithDamage = new HashSet();
+    cusToRepair = new HashMap();
   }
 
   public DamagedNodeSet(ArchivalUnit au, HistoryRepository repository) {
     this.theAu = au;
     this.repository = repository;
-    nodes = new HashSet();
+    nodesWithDamage = new HashSet();
+    cusToRepair = new HashMap();
   }
 
   public ArchivalUnit getArchivalUnit() {
@@ -60,33 +67,84 @@ public class DamagedNodeSet {
   }
 
   public void clear() {
-    nodes.clear();
+    nodesWithDamage.clear();
+    cusToRepair.clear();
   }
 
-  public boolean contains(String nodeUrl) {
-    return (nodes.contains(nodeUrl));
+  public boolean containsWithDamage(String nodeUrl) {
+    return nodesWithDamage.contains(nodeUrl);
   }
 
-  public void add(String nodeUrl) {
-    nodes.add(nodeUrl);
+  public boolean containsToRepair(CachedUrlSet cus, String nodeUrl) {
+    ArrayList urlArray = (ArrayList)cusToRepair.get(cus.getUrl());
+    if (urlArray!=null) {
+      return urlArray.contains(nodeUrl);
+    }
+    return false;
+  }
+
+  public void addToDamage(String nodeUrl) {
+    nodesWithDamage.add(nodeUrl);
     repository.storeDamagedNodeSet(this);
   }
 
-  public void remove(String nodeUrl) {
-    nodes.remove(nodeUrl);
+  public void addToRepair(CachedUrlSet cus, Collection nodeUrls) {
+    ArrayList urlArray = (ArrayList)cusToRepair.get(cus.getUrl());
+    // merge the urls with any already stored
+    if (urlArray==null) {
+      urlArray = new ArrayList(nodeUrls.size());
+    }
+    Iterator iter = nodeUrls.iterator();
+    while (iter.hasNext()) {
+      Object url = iter.next();
+      if (!urlArray.contains(url)) {
+        urlArray.add(url);
+      }
+    }
+
+    cusToRepair.put(cus.getUrl(), urlArray);
     repository.storeDamagedNodeSet(this);
   }
 
-  public Iterator iterator() {
-    return nodes.iterator();
+  public void removeFromDamage(String nodeUrl) {
+    nodesWithDamage.remove(nodeUrl);
+    repository.storeDamagedNodeSet(this);
+  }
+
+  public void removeFromRepair(CachedUrlSet cus, String nodeUrl) {
+    Collection urls = (Collection)cusToRepair.get(cus.getUrl());
+    if (urls!=null) {
+      urls.remove(nodeUrl);
+      if (urls.isEmpty()) {
+        cusToRepair.remove(cus.getUrl());
+      }
+    }
+    repository.storeDamagedNodeSet(this);
+  }
+
+  public Iterator damageIterator() {
+    return nodesWithDamage.iterator();
   }
 
   public HashSet getDamagedNodes() {
-    return nodes;
+    return nodesWithDamage;
   }
 
   public void setDamagedNodes(HashSet nodes) {
-    this.nodes = nodes;
+    this.nodesWithDamage = nodes;
   }
 
+  public HashMap getNodesToRepair() {
+    return cusToRepair;
+  }
+
+  public ExtMapBean getRepairNodeBean() {
+    ExtMapBean bean = new ExtMapBean();
+    bean.setListsFromMap(cusToRepair);
+    return bean;
+  }
+
+  public void setRepairNodeBean(ExtMapBean mapBean) {
+    cusToRepair = mapBean.getMapFromLists();
+  }
 }

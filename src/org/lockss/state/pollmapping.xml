@@ -93,6 +93,10 @@
                        type="java.util.Set"
                        collection="set" lazy="true">
                 </field>
+                <field name="repairNodeBean"
+                       type="org.lockss.util.ExtMapBean">
+                        <bind-xml name="ExternalMap" node="element"/>
+                </field>
         </class>
         <class name="org.lockss.state.NodeStateBean">
                 <map-to xml="NodeState"/>
