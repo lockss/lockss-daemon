@@ -1,5 +1,5 @@
 /*
- * $Id: MockRepositoryNode.java,v 1.5 2003-06-02 21:39:50 troberts Exp $
+ * $Id: MockRepositoryNode.java,v 1.5.2.1 2003-06-09 20:15:12 aalto Exp $
  */
 
 /*
@@ -47,6 +47,7 @@ public class MockRepositoryNode implements RepositoryNode {
   public boolean newOutputCalled = false;
   public boolean newPropsSet = false;
   public boolean inactive = false;
+  public boolean deleted = false;
   public Vector children = null;
   public long contentSize = 0;
   public InputStream curInput;
@@ -72,6 +73,18 @@ public class MockRepositoryNode implements RepositoryNode {
 
   public boolean isInactive() {
     return inactive;
+  }
+
+  public boolean isDeleted() {
+    return deleted;
+  }
+
+  public void markAsDeleted() {
+    deleted = true;
+  }
+
+  public void markAsNotDeleted() {
+    deleted = false;
   }
 
   public long getContentSize() {
@@ -128,7 +141,7 @@ public class MockRepositoryNode implements RepositoryNode {
     newVersionOpen = false;
   }
 
-  public synchronized void deactivate() {
+  public synchronized void deactivateContent() {
     if (newVersionOpen) {
       throw new UnsupportedOperationException("Can't deactivate while new version open.");
     }

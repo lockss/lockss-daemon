@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.32 2003-06-03 21:10:46 aalto Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.32.2.1 2003-06-09 20:15:12 aalto Exp $
  */
 
 /*
@@ -154,8 +154,19 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
 
     RepositoryNode node = repo.getNode("http://www.example.com/test1");
     assertTrue(node.hasContent());
-    assertFalse(node.isInactive());
+    assertFalse(node.isDeleted());
     repo.deleteNode("http://www.example.com/test1");
+    assertFalse(node.hasContent());
+    assertTrue(node.isDeleted());
+  }
+
+  public void testDeactivateNode() throws Exception {
+    createLeaf("http://www.example.com/test1", "test stream", null);
+
+    RepositoryNode node = repo.getNode("http://www.example.com/test1");
+    assertTrue(node.hasContent());
+    assertFalse(node.isInactive());
+    repo.deactivateNode("http://www.example.com/test1");
     assertFalse(node.hasContent());
     assertTrue(node.isInactive());
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.83 2003-06-03 21:10:46 aalto Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.83.2.1 2003-06-09 20:15:12 aalto Exp $
  */
 
 /*
@@ -516,7 +516,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     RepositoryNode delNode = TestRepositoryNodeImpl.createLeaf(
         theDaemon.getLockssRepository(mau), TEST_URL + deleteUrl,
         "test stream", null);
-    assertFalse(delNode.isInactive());
+    assertFalse(delNode.isDeleted());
     assertNull(theDaemon.getLockssRepository(mau).getNode(TEST_URL +
         createUrl));
 
@@ -531,7 +531,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     assertNotNull(theDaemon.getLockssRepository(mau).getNode(TEST_URL +
         createUrl));
     // node deleted
-    assertTrue(delNode.isInactive());
+    assertTrue(delNode.isDeleted());
   }
 
   public void testHandleAuPolls() throws Exception {
@@ -706,7 +706,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
         theDaemon.getLockssRepository(mau), deleteUrl, "test stream", null);
     nodeState.setState(NodeState.WRONG_NAMES);
     stateCheckTest(nodeState, Poll.NAME_POLL, false, false, true,  false);
-    assertTrue(delNode.isInactive());
+    assertTrue(delNode.isDeleted());
 
     // history only, so recall name poll
     nodeState.setState(NodeState.WRONG_NAMES);

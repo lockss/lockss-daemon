@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.23 2003-05-07 23:46:30 aalto Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.23.6.1 2003-06-09 20:15:13 aalto Exp $
  */
 
 /*
@@ -81,8 +81,9 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
   }
 
   public void testFileLocation() throws Exception {
-    createLeaf("http://www.example.com/testDir/branch1/leaf1", "test stream",
-               null);
+    RepositoryNode leaf =
+        createLeaf("http://www.example.com/testDir/branch1/leaf1",
+                   "test stream", null);
     tempDirPath += LockssRepositoryServiceImpl.CACHE_ROOT_NAME;
     tempDirPath = LockssRepositoryServiceImpl.mapAuToFileLocation(tempDirPath, mau);
     tempDirPath = LockssRepositoryServiceImpl.mapUrlToFileLocation(tempDirPath,
@@ -92,6 +93,10 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     testFile = new File(tempDirPath + "/#content/current");
     assertTrue(testFile.exists());
     testFile = new File(tempDirPath + "/#content/current.props");
+    assertTrue(testFile.exists());
+    testFile = new File(tempDirPath + "/#content/node_props");
+    assertFalse(testFile.exists());
+    leaf.deactivateContent();
     assertTrue(testFile.exists());
   }
 
@@ -233,7 +238,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     } catch (UnsupportedOperationException uoe) { }
     leaf.makeNewVersion();
     try {
-      leaf.deactivate();
+      leaf.deactivateContent();
       fail("Cannot deactivate if currently open for writing.");
     } catch (UnsupportedOperationException uoe) { }
     writeToLeaf(leaf, "test stream");
@@ -398,15 +403,52 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
   }
 
   public void testDeactivate() throws Exception {
-    RepositoryNode leaf =
-        createLeaf("http://www.example.com/test1", "test stream", null);
+    RepositoryNodeImpl leaf =
+        (RepositoryNodeImpl)createLeaf("http://www.example.com/test1",
+                                       "test stream", null);
     assertTrue(leaf.hasContent());
     assertFalse(leaf.isInactive());
     assertEquals(1, leaf.getCurrentVersion());
-    leaf.deactivate();
+    assertNull(leaf.nodeProps.getProperty(leaf.INACTIVE_CONTENT_PROPERTY));
+
+    leaf.deactivateContent();
     assertFalse(leaf.hasContent());
     assertTrue(leaf.isInactive());
     assertEquals(RepositoryNodeImpl.INACTIVE_VERSION, leaf.getCurrentVersion());
+    assertEquals("true", leaf.nodeProps.getProperty(leaf.INACTIVE_CONTENT_PROPERTY));
+  }
+
+  public void testDelete() throws Exception {
+    RepositoryNodeImpl leaf =
+        (RepositoryNodeImpl)createLeaf("http://www.example.com/test1",
+                                       "test stream", null);
+    assertTrue(leaf.hasContent());
+    assertFalse(leaf.isDeleted());
+    assertEquals(1, leaf.getCurrentVersion());
+    assertNull(leaf.nodeProps.getProperty(leaf.DELETION_PROPERTY));
+
+    leaf.markAsDeleted();
+    assertFalse(leaf.hasContent());
+    assertTrue(leaf.isDeleted());
+    assertEquals(RepositoryNodeImpl.DELETED_VERSION, leaf.getCurrentVersion());
+    assertEquals("true", leaf.nodeProps.getProperty(leaf.DELETION_PROPERTY));
+  }
+
+  public void testUnDelete() throws Exception {
+    RepositoryNodeImpl leaf =
+        (RepositoryNodeImpl)createLeaf("http://www.example.com/test1",
+                                       "test stream", null);
+    leaf.markAsDeleted();
+    assertTrue(leaf.isDeleted());
+    assertEquals(RepositoryNodeImpl.DELETED_VERSION, leaf.getCurrentVersion());
+
+    leaf.markAsNotDeleted();
+    assertFalse(leaf.isInactive());
+    assertFalse(leaf.isDeleted());
+    assertEquals(1, leaf.getCurrentVersion());
+    assertEquals("false", leaf.nodeProps.getProperty(leaf.DELETION_PROPERTY));
+    String resultStr = getLeafContent(leaf);
+    assertEquals("test stream", resultStr);
   }
 
   public void testRestoreLastVersion() throws Exception {
@@ -434,15 +476,17 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
   }
 
   public void testReactivateViaRestore() throws Exception {
-    RepositoryNode leaf =
-        createLeaf("http://www.example.com/test1", "test stream", null);
-    leaf.deactivate();
+    RepositoryNodeImpl leaf =
+        (RepositoryNodeImpl)createLeaf("http://www.example.com/test1",
+                                       "test stream", null);
+    leaf.deactivateContent();
     assertTrue(leaf.isInactive());
     assertEquals(RepositoryNodeImpl.INACTIVE_VERSION, leaf.getCurrentVersion());
 
     leaf.restoreLastVersion();
     assertFalse(leaf.isInactive());
     assertEquals(1, leaf.getCurrentVersion());
+    assertEquals("false", leaf.nodeProps.getProperty(leaf.INACTIVE_CONTENT_PROPERTY));
     String resultStr = getLeafContent(leaf);
     assertEquals("test stream", resultStr);
   }
@@ -450,7 +494,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
   public void testReactivateViaNewVersion() throws Exception {
     RepositoryNode leaf =
         createLeaf("http://www.example.com/test1", "test stream", null);
-    leaf.deactivate();
+    leaf.deactivateContent();
     assertTrue(leaf.isInactive());
     assertEquals(RepositoryNodeImpl.INACTIVE_VERSION, leaf.getCurrentVersion());
 
@@ -472,6 +516,8 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     createLeaf("http://www.example.com/testDir/test3", "test stream", null);
     createLeaf("http://www.example.com/testDir/branch1", "test stream", null);
     createLeaf("http://www.example.com/testDir/branch1/test4", "test stream", null);
+    createLeaf("http://www.example.com/testDir/branch2", "test stream", null);
+    createLeaf("http://www.example.com/testDir/branch2/test5", "test stream", null);
 
     RepositoryNode dirEntry = repo.getNode("http://www.example.com/testDir");
     Iterator childIt = dirEntry.listNodes(null, false);
@@ -482,6 +528,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     }
     String[] expectedA = new String[] {
       "http://www.example.com/testDir/branch1",
+      "http://www.example.com/testDir/branch2",
       "http://www.example.com/testDir/test1",
       "http://www.example.com/testDir/test2",
       "http://www.example.com/testDir/test3"
@@ -489,10 +536,14 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertIsomorphic(expectedA, childL);
 
     RepositoryNode leaf = repo.getNode("http://www.example.com/testDir/test2");
-    leaf.deactivate();
+    leaf.deactivateContent();
     // this next shouldn't be excluded since it isn't a leaf node
     leaf = repo.getNode("http://www.example.com/testDir/branch1");
-    leaf.deactivate();
+    leaf.deactivateContent();
+    // this next should be excluded because it's deleted
+    leaf = repo.getNode("http://www.example.com/testDir/branch2");
+    leaf.markAsDeleted();
+
     childIt = dirEntry.listNodes(null, false);
     childL = new ArrayList(2);
     while (childIt.hasNext()) {
