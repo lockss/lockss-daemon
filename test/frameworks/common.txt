@@ -174,3 +174,23 @@ org.lockss.title.cl1.param.1.key=base_url
 org.lockss.title.cl1.param.1.value=http\://eserver.org/clogic/
 org.lockss.title.cl1.param.2.key=year
 org.lockss.title.cl1.param.2.value=2003
+#OJS
+org.lockss.title.ojs1.title=Electronic Communications In Probability
+org.lockss.title.ojs1.journalTitle=Electronic Communications In Probability
+org.lockss.title.ojs1.plugin=org.lockss.plugin.ojs.OJSPlugin
+org.lockss.title.ojs1.param.1.key=base_url
+org.lockss.title.ojs1.param.1.value=http://www.math.washington.edu/~ejpecp/ECP/
+org.lockss.title.ojs1.param.2.key=year
+org.lockss.title.ojs1.param.2.value=
+org.lockss.title.ojs1.param.2.editable=true
+
+
+org.lockss.title.ojs2.title=Electronic Journal Of Probability
+org.lockss.title.ojs2.journalTitle=Electronic Journal Of Probability
+org.lockss.title.ojs2.plugin=org.lockss.plugin.ojs.OJSPlugin
+org.lockss.title.ojs2.param.1.key=base_url
+org.lockss.title.ojs2.param.1.value=http://www.math.washington.edu/~ejpecp/
+org.lockss.title.ojs2.param.2.key=year
+org.lockss.title.ojs2.param.2.value=
+org.lockss.title.ojs2.param.2.editable=
+
