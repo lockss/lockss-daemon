@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigFile.java,v 1.4 2004-10-22 07:01:59 tlipkis Exp $
+ * $Id: ConfigFile.java,v 1.5 2005-01-04 02:48:38 tlipkis Exp $
  */
 
 /*
@@ -112,13 +112,15 @@ public abstract class ConfigFile {
       throws IOException;
 
   protected void setConfigFrom(InputStream in) throws IOException {
-    m_config = new ConfigurationPropTreeImpl();
+    ConfigurationPropTreeImpl newConfig = new ConfigurationPropTreeImpl();
     // Load the configuration
     if (m_fileType == XML_FILE) {
-      XmlPropertyLoader.load(m_config.getPropertyTree(), in);
+      XmlPropertyLoader.load(newConfig.getPropertyTree(), in);
     } else {
-      m_config.getPropertyTree().load(in);
+      newConfig.getPropertyTree().load(in);
     }
+    // update stored configuration atomically
+    m_config = newConfig;
   }
 
   /**
