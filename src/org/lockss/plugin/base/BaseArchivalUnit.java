@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.3 2003-02-28 01:53:04 troberts Exp $
+ * $Id: BaseArchivalUnit.java,v 1.4 2003-02-28 02:10:33 troberts Exp $
  */
 
 /*
@@ -171,10 +171,6 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    */
   public int hashCode() {
     return getPluginId().hashCode() + getAUId().hashCode();
-  }
-
-  public List getNewContentCrawlUrls() {
-    return null;
   }
 
   /**

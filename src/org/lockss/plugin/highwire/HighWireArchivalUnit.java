@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireArchivalUnit.java,v 1.7 2003-02-24 22:13:42 claire Exp $
+ * $Id: HighWireArchivalUnit.java,v 1.8 2003-02-28 02:10:33 troberts Exp $
  */
 
 /*
@@ -205,6 +205,10 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
       return true;
     }
     return false;
+  }
+
+  public List getNewContentCrawlUrls() {
+    return ListUtil.list(getBaseUrl());
   }
 
 

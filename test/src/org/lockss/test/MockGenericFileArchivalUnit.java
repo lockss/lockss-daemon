@@ -1,5 +1,5 @@
 /*
- * $Id: MockGenericFileArchivalUnit.java,v 1.5 2003-02-24 22:13:43 claire Exp $
+ * $Id: MockGenericFileArchivalUnit.java,v 1.6 2003-02-28 02:10:33 troberts Exp $
  */
 
 /*
@@ -98,6 +98,10 @@ public class MockGenericFileArchivalUnit extends BaseArchivalUnit {
 
   public void setAuId(String newId) {
     auId = newId;
+  }
+
+  public List getNewContentCrawlUrls() {
+    throw new UnsupportedOperationException("Not implemented");
   }
 
   // Methods used by the crawler
