@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Voter.java,v 1.1.2.5 2004-11-22 22:27:21 dshr Exp $
+ * $Id: TestV3Voter.java,v 1.1.2.6 2004-11-24 23:37:47 dshr Exp $
  */
 
 /*
@@ -215,6 +215,17 @@ public class TestV3Voter extends LockssTestCase {
 		pollmanager.isPollClosed(key));
     assertFalse("Poll " + poll + " should not be suspended",
 		pollmanager.isPollSuspended(key));
+    {
+      // Check that the poll sent a MSG_POLL_ACK
+      MockLcapStreamRouter router =
+	(MockLcapStreamRouter)theDaemon.getStreamRouterManager();
+      Deadline dl = Deadline.in(10);
+      V3LcapMessage msg = router.getSentMessage(dl);
+      assertNotNull(msg);
+      assertEquals(msg.getOpcode(), V3LcapMessage.MSG_POLL_ACK);
+      assertTrue("Send queue should be empty after PollAck",
+		 router.sendQueueEmpty());
+    }
     //  Receive a PollProof message, go to SendingVote
     try {
       pollmanager.handleIncomingMessage(testV3msg[2]);
@@ -250,6 +261,17 @@ public class TestV3Voter extends LockssTestCase {
 		pollmanager.isPollClosed(key));
     assertFalse("Poll " + poll + " should not be suspended",
 		pollmanager.isPollSuspended(key));
+    {
+      // Check that the poll sent a MSG_VOTE
+      MockLcapStreamRouter router =
+	(MockLcapStreamRouter)theDaemon.getStreamRouterManager();
+      Deadline dl = Deadline.in(10);
+      V3LcapMessage msg = router.getSentMessage(dl);
+      assertNotNull(msg);
+      assertEquals(msg.getOpcode(), V3LcapMessage.MSG_VOTE);
+      assertTrue("Send queue should be empty after PollAck",
+		 router.sendQueueEmpty());
+    }
     //  Receive a RepairReq message, go to SendingRepair
     try {
       pollmanager.handleIncomingMessage(testV3msg[4]);
@@ -410,6 +432,17 @@ public class TestV3Voter extends LockssTestCase {
 		pollmanager.isPollClosed(key));
     assertFalse("Poll " + poll + " should not be suspended",
 		pollmanager.isPollSuspended(key));
+    {
+      // Check that the poll sent a MSG_POLL_ACK
+      MockLcapStreamRouter router =
+	(MockLcapStreamRouter)theDaemon.getStreamRouterManager();
+      Deadline dl = Deadline.in(10);
+      V3LcapMessage msg = router.getSentMessage(dl);
+      assertNotNull(msg);
+      assertEquals(msg.getOpcode(), V3LcapMessage.MSG_POLL_ACK);
+      assertTrue("Send queue should be empty after PollAck",
+		 router.sendQueueEmpty());
+    }
     //  Receive a RepairReq message, go to Error
     try {
       pollmanager.handleIncomingMessage(testV3msg[4]);
@@ -490,6 +523,17 @@ public class TestV3Voter extends LockssTestCase {
 		pollmanager.isPollClosed(key));
     assertFalse("Poll " + poll + " should not be suspended",
 		pollmanager.isPollSuspended(key));
+    {
+      // Check that the poll sent a MSG_POLL_ACK
+      MockLcapStreamRouter router =
+	(MockLcapStreamRouter)theDaemon.getStreamRouterManager();
+      Deadline dl = Deadline.in(10);
+      V3LcapMessage msg = router.getSentMessage(dl);
+      assertNotNull(msg);
+      assertEquals(msg.getOpcode(), V3LcapMessage.MSG_POLL_ACK);
+      assertTrue("Send queue should be empty after PollAck",
+		 router.sendQueueEmpty());
+    }
     //  Receive a PollProof message, go to SendingVote
     try {
       pollmanager.handleIncomingMessage(testV3msg[2]);
@@ -525,6 +569,17 @@ public class TestV3Voter extends LockssTestCase {
 		pollmanager.isPollClosed(key));
     assertFalse("Poll " + poll + " should not be suspended",
 		pollmanager.isPollSuspended(key));
+    {
+      // Check that the poll sent a MSG_VOTE
+      MockLcapStreamRouter router =
+	(MockLcapStreamRouter)theDaemon.getStreamRouterManager();
+      Deadline dl = Deadline.in(10);
+      V3LcapMessage msg = router.getSentMessage(dl);
+      assertNotNull(msg);
+      assertEquals(msg.getOpcode(), V3LcapMessage.MSG_VOTE);
+      assertTrue("Send queue should be empty after PollAck",
+		 router.sendQueueEmpty());
+    }
     //  Receive a RepairReq message, go to SendingRepair
     try {
       pollmanager.handleIncomingMessage(testV3msg[4]);
@@ -686,6 +741,17 @@ public class TestV3Voter extends LockssTestCase {
 		pollmanager.isPollClosed(key));
     assertFalse("Poll " + poll + " should not be suspended",
 		pollmanager.isPollSuspended(key));
+    {
+      // Check that the poll sent a MSG_POLL_ACK
+      MockLcapStreamRouter router =
+	(MockLcapStreamRouter)theDaemon.getStreamRouterManager();
+      Deadline dl = Deadline.in(10);
+      V3LcapMessage msg = router.getSentMessage(dl);
+      assertNotNull(msg);
+      assertEquals(msg.getOpcode(), V3LcapMessage.MSG_POLL_ACK);
+      assertTrue("Send queue should be empty after PollAck",
+		 router.sendQueueEmpty());
+    }
     //  Receive a PollProof message, go to SendingVote
     es.setVerifyProofResult(false);
     try {
@@ -899,6 +965,17 @@ public class TestV3Voter extends LockssTestCase {
 		pollmanager.isPollClosed(key));
     assertFalse("Poll " + poll + " should not be suspended",
 		pollmanager.isPollSuspended(key));
+    {
+      // Check that the poll sent a MSG_POLL_ACK
+      MockLcapStreamRouter router =
+	(MockLcapStreamRouter)theDaemon.getStreamRouterManager();
+      Deadline dl = Deadline.in(10);
+      V3LcapMessage msg = router.getSentMessage(dl);
+      assertNotNull(msg);
+      assertEquals(msg.getOpcode(), V3LcapMessage.MSG_POLL_ACK);
+      assertTrue("Send queue should be empty after PollAck",
+		 router.sendQueueEmpty());
+    }
     //  Receive a PollProof message, go to SendingVote
     es.setProofException(new Exception("bad verify"));
     try {
@@ -990,6 +1067,17 @@ public class TestV3Voter extends LockssTestCase {
 		pollmanager.isPollClosed(key));
     assertFalse("Poll " + poll + " should not be suspended",
 		pollmanager.isPollSuspended(key));
+    {
+      // Check that the poll sent a MSG_POLL_ACK
+      MockLcapStreamRouter router =
+	(MockLcapStreamRouter)theDaemon.getStreamRouterManager();
+      Deadline dl = Deadline.in(10);
+      V3LcapMessage msg = router.getSentMessage(dl);
+      assertNotNull(msg);
+      assertEquals(msg.getOpcode(), V3LcapMessage.MSG_POLL_ACK);
+      assertTrue("Send queue should be empty after PollAck",
+		 router.sendQueueEmpty());
+    }
     //  Receive a PollProof message, go to SendingVote
     es.setVoteException(new Exception("bad vote generation"));
     try {
