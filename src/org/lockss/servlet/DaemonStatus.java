@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.38 2004-05-26 07:01:26 tlipkis Exp $
+ * $Id: DaemonStatus.java,v 1.39 2004-06-01 08:35:20 tlipkis Exp $
  */
 
 /*
@@ -250,10 +250,21 @@ public class DaemonStatus extends LockssServlet {
     }
     java.util.List colList = statTable.getColumnDescriptors();
     java.util.List rowList;
+    java.util.List rules = null;
     if (sortKey != null) {
-      StatusTable.SortRule sortRule = new StatusTable.SortRule(sortKey, true);
-      java.util.List rules = ListUtil.list(sortRule);
-      rowList = statTable.getSortedRows(rules);
+      try {
+	rules = makeSortRules(statTable, sortKey);
+	rowList = statTable.getSortedRows(rules);
+      } catch (Exception e) {
+	// There are lots of ways a user-specified sort can fail if the
+	// table creator isn't careful.  Fall back to default if that
+	// happens.
+	log.warning("Error sorting table by: " + rules, e);
+	// XXX should display some sort of error msg
+	rowList = statTable.getSortedRows();
+	rules = null;		  // prevent column titles from indicating
+				  // the sort order that didn't work
+      }
     } else {
       rowList = statTable.getSortedRows();
     }
@@ -290,14 +301,9 @@ public class DaemonStatus extends LockssServlet {
 	  // output column headings
 	  for (int ix = 0; ix < cols; ix++) {
 	    ColumnDescriptor cd = cds[ix];
-	    String colTitle = cd.getTitle();
-	    if (true && statTable.isResortable() && cd.isSortable()) {
-	      colTitle = srvLink(myServletDescr(), colTitle,
-				 modifyParams("sort", cd.getColumnName()));
-	    }
-	    String head = colTitle + addFootnote(cd.getFootnote());
-	    table.addHeading(head, "valign=bottom align=" +
-			     ((cols == 1) ? "center" : getColAlignment(cd)));
+	    table.newCell("class=colhead valign=bottom align=" +
+			  ((cols == 1) ? "center" : getColAlignment(cd)));
+	    table.add(getColumnTitleElement(statTable, cd, rules));
 	    if (ix < (cols - 1)) {
 	      table.newCell("width=8");
 	      table.add("&nbsp;");
@@ -357,13 +363,144 @@ public class DaemonStatus extends LockssServlet {
       }
     }
     if (outputFmt == OUTPUT_HTML && table != null) {
-      page.add(table);
+      Form frm = new Form(srvURL(myServletDescr(), null));
+      // use GET so user can refresh in browser
+      frm.method("GET");
+      frm.add(table);
+      page.add(frm);
       page.add("<br>");
       String heading = getHeading();
       // put table name in page title so appears in browser title & tabs
       page.title("LOCKSS: " + title0 + " - " + heading);
     }
   }
+
+  static final Image UPARROW1 = image("uparrow1blue.gif", 16, 16, 0,
+				      "Primary sort column, ascending");
+  static final Image UPARROW2 = image("uparrow2blue.gif", 16, 16, 0,
+				      "Secondary sort column, ascending");
+  static final Image DOWNARROW1 = image("downarrow1blue.gif", 16, 16, 0,
+					"Primary sort column, descending");
+  static final Image DOWNARROW2 = image("downarrow2blue.gif", 16, 16, 0,
+					"Secondary sort column, descending");
+
+  /** Create a column heading element:<ul>
+   *   <li> plain text if not sortable
+   *   <li> if sortable, link with sortkey set to solumn name,
+   *        descending if was previous primary ascending key
+   *   <li> plus a possible secondary sort key set to previous sort column
+   *   <li> if is current primary or secondary sort colume, display an up or
+   *        down arrow.</ul>
+   * @param statTable
+   * @param cd
+   * @param rules the SortRules used to sort the currently displayed table
+   */
+  Composite getColumnTitleElement(StatusTable statTable, ColumnDescriptor cd,
+				  java.util.List rules) {
+    Composite elem = new Composite();
+    Image sortArrow = null;
+    boolean ascending = true;
+    String colTitle = cd.getTitle();
+    if (true && statTable.isResortable() && cd.isSortable()) {
+      String ruleParam;
+      if (rules != null && !rules.isEmpty()) {
+	StatusTable.SortRule rule1 = (StatusTable.SortRule)rules.get(0);
+	if (cd.getColumnName().equals(rule1.getColumnName())) {
+	  // This column is the current primary sort; link to reverse order
+	  ascending = !rule1.sortAscending();
+	  // and display a primary arrow
+	  sortArrow = rule1.sortAscending() ? UPARROW1 : DOWNARROW1;
+	  if (rules.size() > 1) {
+	    // keep same secondary sort key if there was one
+	    StatusTable.SortRule rule2 = (StatusTable.SortRule)rules.get(1);
+	    ruleParam = ruleParam(cd, ascending) + "," + ruleParam(rule2);
+	  } else {
+	    ruleParam = ruleParam(cd, ascending);
+	  }
+	} else {
+	  if (rules.size() > 1) {
+	    StatusTable.SortRule rule2 = (StatusTable.SortRule)rules.get(1);
+	    if (cd.getColumnName().equals(rule2.getColumnName())) {
+	      // This is the secondary sort column; display secondary arrow
+	      sortArrow = rule2.sortAscending() ? UPARROW2 : DOWNARROW2;
+	    }
+	  }
+	  // primary sort is this column, secondary is previous primary
+	  ruleParam = ruleParam(cd, ascending) + "," + ruleParam(rule1);
+	}
+      } else {
+	// no previous, sort by column
+	ruleParam = ruleParam(cd, ascending);
+      }
+      Link link = new Link(srvURL(myServletDescr(),
+				  modifyParams("sort", ruleParam)),
+			   colTitle);
+      link.attribute("class", "colhead");
+      elem.add(link);
+      String foot = cd.getFootnote();
+      if (foot != null) {
+	elem.add(addFootnote(foot));
+      }
+      if (sortArrow != null) {
+	elem.add(sortArrow);
+      }
+    } else {
+      elem.add(colTitle);
+      elem.add(addFootnote(cd.getFootnote()));
+    }
+    return elem;
+  }
+
+  String ruleParam(ColumnDescriptor cd, boolean ascending) {
+    return (ascending ? "A" : "D") + cd.getColumnName();
+  }
+
+  String ruleParam(StatusTable.SortRule rule) {
+    return (rule.sortAscending() ? "A" : "D") + rule.getColumnName();
+  }
+
+  java.util.List makeSortRules(StatusTable statTable, String sortKey) {
+    Map columnDescriptorMap = statTable.getColumnDescriptorMap();
+    java.util.List cols = StringUtil.breakAt(sortKey, ',');
+    java.util.List res = new ArrayList();
+    for (Iterator iter = cols.iterator(); iter.hasNext(); ) {
+      String spec = (String)iter.next();
+      boolean ascending = spec.charAt(0) == 'A';
+      String col = spec.substring(1);
+      StatusTable.SortRule defaultRule =
+	getDefaultRuleForColumn(statTable, col);
+      StatusTable.SortRule rule;
+      Comparator comparator = null;
+      if (columnDescriptorMap.containsKey(col)) {
+	ColumnDescriptor cd = (ColumnDescriptor)columnDescriptorMap.get(col);
+	comparator = cd.getComparator();
+      }
+      if (defaultRule != null && defaultRule.getComparator() != null) {
+	comparator = defaultRule.getComparator();
+      }
+      if (comparator != null) {
+	rule = new StatusTable.SortRule(col, comparator, ascending);
+      } else {
+	rule = new StatusTable.SortRule(col, ascending);
+      }
+      res.add(rule);
+    }
+    log.debug2("rules: " + res);
+    return res;
+  }
+
+  private StatusTable.SortRule getDefaultRuleForColumn(StatusTable statTable,
+						       String col) {
+    java.util.List defaults = statTable.getDefaultSortRules();
+    for (Iterator iter = defaults.iterator(); iter.hasNext(); ) {
+      StatusTable.SortRule rule = (StatusTable.SortRule)iter.next();
+      if (col.equals(rule.getColumnName())) {
+	return rule;
+      }
+    }
+    return null;
+  }
+
 
   private void addSummaryInfo(Table table, StatusTable statTable, int cols) {
     java.util.List summary = statTable.getSummaryInfo();
