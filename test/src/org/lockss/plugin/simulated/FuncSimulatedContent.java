@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSimulatedContent.java,v 1.19 2003-02-24 22:13:42 claire Exp $
+ * $Id: FuncSimulatedContent.java,v 1.20 2003-02-26 03:22:39 aalto Exp $
  */
 
 /*
@@ -66,6 +66,7 @@ public class FuncSimulatedContent extends LockssTestCase {
       FileUtil.urlOfString(s2), FileUtil.urlOfString(s3)));
     theDaemon = new MockLockssDaemon(ListUtil.list(FileUtil.urlOfString(s),
       FileUtil.urlOfString(s2), FileUtil.urlOfString(s3)));
+    theDaemon.getLockssRepository(new MockArchivalUnit());
   }
 
   public void testPluginRegistration() {
@@ -167,11 +168,13 @@ public class FuncSimulatedContent extends LockssTestCase {
       childL.add(((CachedUrlSetNode)setIt.next()).getUrl());
     }
     String[] expectedA = new String[] {
+      parent+"/branch1",
       parent+"/branch1/file1.html",
       parent+"/branch1/file1.txt",
       parent+"/branch1/file2.html",
       parent+"/branch1/file2.txt",
       parent+"/branch1/index.html",
+      parent+"/branch2",
       parent+"/branch2/file1.html",
       parent+"/branch2/file1.txt",
       parent+"/branch2/file2.html",
@@ -272,5 +275,11 @@ public class FuncSimulatedContent extends LockssTestCase {
     baos.close();
     return contentStr;
   }
+
+  public static void main(String[] argv) {
+    String[] testCaseList = {FuncSimulatedContent.class.getName()};
+    junit.swingui.TestRunner.main(testCaseList);
+  }
+
 
 }
