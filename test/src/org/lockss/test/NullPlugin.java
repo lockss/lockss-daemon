@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.44 2003-09-26 23:49:01 eaalto Exp $
+ * $Id: NullPlugin.java,v 1.45 2004-01-03 06:18:50 tlipkis Exp $
  */
 
 /*
@@ -83,7 +83,7 @@ public class NullPlugin {
       return null;
     }
 
-    public Configuration getConfigForTitle(String title) {
+    public TitleConfig getTitleConfig(String title) {
       return null;
     }
 
