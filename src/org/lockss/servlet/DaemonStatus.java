@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.17 2003-04-29 00:13:06 tal Exp $
+ * $Id: DaemonStatus.java,v 1.18 2003-05-01 23:30:07 tal Exp $
  */
 
 /*
@@ -166,7 +166,6 @@ public class DaemonStatus extends LockssServlet {
     int cols = cds.length;
     if (true || !rowList.isEmpty()) {
       // if table not empty, output column headings
-//       table = new Table(0, "CELLSPACING=2 CELLPADDING=0 WIDTH=\"100%\"");
 
       // Make the table.  Make a narrow empty column between real columns,
       // for spacing.  Resulting table will have 2*cols-1 columns
@@ -183,9 +182,8 @@ public class DaemonStatus extends LockssServlet {
 	for (int ix = 0; ix < cols; ix++) {
 	  ColumnDescriptor cd = cds[ix];
 	  String head = cd.getTitle() + addFootnote(cd.getFootNote());
-	  table.addHeading(head, "align=" + ((cols != 1) ?
-					     getColAlignment(cd)
-					     : "center" ));
+	  table.addHeading(head, "valign=bottom align=" +
+			   ((cols == 1) ? "center" : getColAlignment(cd)));
 	  if (ix < (cols - 1)) {
 	    table.newCell("width = 8");
 	  }
