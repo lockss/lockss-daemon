@@ -1,5 +1,5 @@
 /*
- * $Id: TestBinarySemaphore.java,v 1.6 2002-12-30 20:39:40 tal Exp $
+ * $Id: TestBinarySemaphore.java,v 1.7 2003-05-30 22:56:55 tal Exp $
  */
 
 /*
@@ -223,15 +223,16 @@ public class TestBinarySemaphore extends LockssTestCase {
     sem.give();
     Interrupter intr = null;
     try {
-      Date start = new Date();
       intr = interruptMeIn(TIMEOUT_SHOULDNT, true);
+      Date start = new Date();
       if (!sem.take(Deadline.in(1000))) {
 	fail("take(1000) of full returned false");
       }
       long delay = TimerUtil.timeSince(start);
-      if (delay > 750) {
-	fail("take(1000) of full timed out in " + delay);
-      }
+      // bogus - it returned true; ok if it took longer than expected
+//       if (delay > 750) {
+// 	fail("take(1000) of full timed out in " + delay);
+//       }
       intr.cancel();
     } catch (InterruptedException e) {
     } finally {
@@ -245,9 +246,9 @@ public class TestBinarySemaphore extends LockssTestCase {
     BinarySemaphore sem = new BinarySemaphore();
     Interrupter intr = null;
     try {
-      Date start = new Date();
       intr = interruptMeIn(TIMEOUT_SHOULDNT, true);
       giveIn(100, sem);
+      Date start = new Date();
       if (!sem.take(Deadline.in(1000))) {
 	fail("take(1000) of semaphore given() after 100 returned false");
       }
@@ -255,9 +256,10 @@ public class TestBinarySemaphore extends LockssTestCase {
       if (delay < 80) {
 	fail("take(1000), given in 100, returned early in " + delay);
       }
-      if (delay > 750) {
-	fail("take(1000), given in 100, timed out in " + delay );
-      }
+      // bogus - it returned true; ok if it took longer than expected
+//       if (delay > 750) {
+// 	fail("take(1000), given in 100, timed out in " + delay );
+//       }
       intr.cancel();
     } catch (InterruptedException e) {
     } finally {
