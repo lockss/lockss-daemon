@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.28 2003-03-28 23:27:21 aalto Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.29 2003-04-24 01:22:26 aalto Exp $
  */
 
 /*
@@ -239,6 +239,18 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     cus1 = new MockCachedUrlSet(spec1);
     cus2 = new MockCachedUrlSet(spec2);
     assertEquals(LockssRepository.NO_RELATION, repo.cusCompare(cus1, cus2));
+
+    spec1 = new SingleNodeCachedUrlSetSpec("http://www.example.com");
+    spec2 = new RangeCachedUrlSetSpec("http://www.example.com/test");
+    cus1 = new MockCachedUrlSet(spec1);
+    cus2 = new MockCachedUrlSet(spec2);
+    assertEquals(LockssRepository.SAME_LEVEL_NO_OVERLAP, repo.cusCompare(cus1, cus2));
+
+    spec1 = new RangeCachedUrlSetSpec("http://www.example.com/test");
+    spec2 = new SingleNodeCachedUrlSetSpec("http://www.example.com");
+    cus1 = new MockCachedUrlSet(spec1);
+    cus2 = new MockCachedUrlSet(spec2);
+    assertEquals(LockssRepository.SAME_LEVEL_NO_OVERLAP, repo.cusCompare(cus1, cus2));
   }
 
   public void testConsistencyCheck() throws Exception {

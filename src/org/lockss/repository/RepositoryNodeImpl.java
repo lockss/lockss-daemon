@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.24 2003-04-22 01:02:02 aalto Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.25 2003-04-24 01:22:26 aalto Exp $
  */
 
 /*
@@ -46,10 +46,10 @@ public class RepositoryNodeImpl implements RepositoryNode {
   static final long VERSION_TIMEOUT = 5 * Constants.HOUR; // 5 hours
   static final String LOCKSS_VERSION_NUMBER = "org.lockss.version.number";
   static final String CONTENT_DIR = "#content";
-  static final String CURRENT_SUFFIX = ".current";
-  static final String PROPS_SUFFIX = ".props";
-  static final String TEMP_SUFFIX = ".temp";
-  static final String INACTIVE_SUFFIX = ".inactive";
+  static final String CURRENT_FILENAME = "current";
+  static final String PROPS_FILENAME = "props";
+  static final String TEMP_FILENAME = "temp";
+  static final String INACTIVE_FILENAME = "inactive";
   static final int INACTIVE_VERSION = -99;
 
   private boolean newVersionOpen = false;
@@ -57,7 +57,6 @@ public class RepositoryNodeImpl implements RepositoryNode {
   private boolean newPropsSet = false;
   private File curInputFile;
   protected Properties curProps;
-  private String versionName;
   protected int currentVersion = -1;
 
   private String contentBufferStr = null;
@@ -140,7 +139,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
     // add size of this dir, if any
     long subSize = 0;
     File contentFile = new File(nodeDir, CONTENT_DIR + File.separator +
-                                nodeDir.getName() + CURRENT_SUFFIX);
+                                CURRENT_FILENAME);
     if (contentFile.exists()) {
       subSize = contentFile.length();
     }
@@ -516,31 +515,29 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
   private void loadCurrentCacheFile() {
     StringBuffer buffer = getContentDirBuffer();
-    buffer.append(versionName);
-    buffer.append(CURRENT_SUFFIX);
+    buffer.append(CURRENT_FILENAME);
     currentCacheFile = new File(buffer.toString());
   }
 
   private void loadCurrentPropsFile() {
     StringBuffer buffer = getContentDirBuffer();
-    buffer.append(versionName);
-    buffer.append(PROPS_SUFFIX);
-    buffer.append(CURRENT_SUFFIX);
+    buffer.append(CURRENT_FILENAME);
+    buffer.append(".");
+    buffer.append(PROPS_FILENAME);
     currentPropsFile = new File(buffer.toString());
   }
 
   private void loadTempCacheFile() {
     StringBuffer buffer = getContentDirBuffer();
-    buffer.append(versionName);
-    buffer.append(TEMP_SUFFIX);
+    buffer.append(TEMP_FILENAME);
     tempCacheFile = new File(buffer.toString());
   }
 
   private void loadTempPropsFile() {
     StringBuffer buffer = getContentDirBuffer();
-    buffer.append(versionName);
-    buffer.append(PROPS_SUFFIX);
-    buffer.append(TEMP_SUFFIX);
+    buffer.append(TEMP_FILENAME);
+    buffer.append(".");
+    buffer.append(PROPS_FILENAME);
     tempPropsFile = new File(buffer.toString());
   }
 
@@ -550,38 +547,33 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
   protected void loadNodeRoot() {
     nodeRootFile = new File(nodeLocation);
-    versionName = nodeRootFile.getName();
   }
 
   File getVersionedCacheFile(int version) {
     StringBuffer buffer = getContentDirBuffer();
-    buffer.append(versionName);
-    buffer.append(".");
     buffer.append(version);
     return new File(buffer.toString());
   }
 
   File getVersionedPropsFile(int version) {
     StringBuffer buffer = getContentDirBuffer();
-    buffer.append(versionName);
-    buffer.append(PROPS_SUFFIX);
-    buffer.append(".");
     buffer.append(version);
+    buffer.append(".");
+    buffer.append(PROPS_FILENAME);
     return new File(buffer.toString());
   }
 
   File getInactiveCacheFile() {
     StringBuffer buffer = getContentDirBuffer();
-    buffer.append(versionName);
-    buffer.append(INACTIVE_SUFFIX);
+    buffer.append(INACTIVE_FILENAME);
     return new File(buffer.toString());
   }
 
   File getInactivePropsFile() {
     StringBuffer buffer = getContentDirBuffer();
-    buffer.append(versionName);
-    buffer.append(PROPS_SUFFIX);
-    buffer.append(INACTIVE_SUFFIX);
+    buffer.append(INACTIVE_FILENAME);
+    buffer.append(".");
+    buffer.append(PROPS_FILENAME);
     return new File(buffer.toString());
   }
 

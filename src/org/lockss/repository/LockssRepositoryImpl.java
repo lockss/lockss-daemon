@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.31 2003-04-18 21:34:45 aalto Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.32 2003-04-24 01:22:26 aalto Exp $
  */
 
 /*
@@ -155,10 +155,18 @@ public class LockssRepositoryImpl implements LockssRepository {
       return LockssRepository.SAME_LEVEL_NO_OVERLAP;
     } else if (url1.startsWith(url2)) {
       // url1 is a sub-directory of url2
-      return LockssRepository.BELOW;
+      if (cus2.getSpec() instanceof SingleNodeCachedUrlSetSpec) {
+        return LockssRepository.SAME_LEVEL_NO_OVERLAP;
+      } else {
+        return LockssRepository.BELOW;
+      }
     } else if (url2.startsWith(url1)) {
       // url2 is a sub-directory of url1
-      return LockssRepository.ABOVE;
+      if (cus1.getSpec() instanceof SingleNodeCachedUrlSetSpec) {
+        return LockssRepository.SAME_LEVEL_NO_OVERLAP;
+      } else {
+        return LockssRepository.ABOVE;
+      }
     } else {
       // no connection between the two urls
       return LockssRepository.NO_RELATION;

@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.21 2003-04-22 01:02:02 aalto Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.22 2003-04-24 01:22:26 aalto Exp $
  */
 
 /*
@@ -89,9 +89,9 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
         "http://www.example.com/testDir/branch1/leaf1");
     File testFile = new File(tempDirPath);
     assertTrue(testFile.exists());
-    testFile = new File(tempDirPath + "/#content/leaf1.current");
+    testFile = new File(tempDirPath + "/#content/current");
     assertTrue(testFile.exists());
-    testFile = new File(tempDirPath + "/#content/leaf1.props.current");
+    testFile = new File(tempDirPath + "/#content/current.props");
     assertTrue(testFile.exists());
   }
 
@@ -103,9 +103,9 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     tempDirPath = LockssRepositoryServiceImpl.mapAuToFileLocation(tempDirPath, mau);
     tempDirPath = LockssRepositoryServiceImpl.mapUrlToFileLocation(tempDirPath,
         "http://www.example.com/testDir/branch1/leaf1");
-    File testFile = new File(tempDirPath + "/#content/leaf1.1");
+    File testFile = new File(tempDirPath + "/#content/1");
     assertFalse(testFile.exists());
-    testFile = new File(tempDirPath + "/#content/leaf1.props.1");
+    testFile = new File(tempDirPath + "/#content/1.props");
     assertFalse(testFile.exists());
 
     leaf.makeNewVersion();
@@ -116,9 +116,9 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     os.close();
     leaf.setNewProperties(new Properties());
     leaf.sealNewVersion();
-    testFile = new File(tempDirPath + "/#content/leaf1.1");
+    testFile = new File(tempDirPath + "/#content/1");
     assertTrue(testFile.exists());
-    testFile = new File(tempDirPath + "/#content/leaf1.props.1");
+    testFile = new File(tempDirPath + "/#content/1.props");
     assertTrue(testFile.exists());
   }
 
@@ -513,15 +513,15 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     node.loadNodeRoot();
     String contentStr = node.nodeLocation + "/#content/";
     assertEquals(contentStr, node.getContentDirBuffer().toString());
-    String expectedStr = contentStr + "test.url.123";
+    String expectedStr = contentStr + "123";
     assertEquals(expectedStr,
                  node.getVersionedCacheFile(123).getAbsolutePath());
-    expectedStr = contentStr + "test.url.props.123";
+    expectedStr = contentStr + "123.props";
     assertEquals(expectedStr,
                  node.getVersionedPropsFile(123).getAbsolutePath());
-    expectedStr = contentStr + "test.url.inactive";
+    expectedStr = contentStr + "inactive";
     assertEquals(expectedStr, node.getInactiveCacheFile().getAbsolutePath());
-    expectedStr = contentStr + "test.url.props.inactive";
+    expectedStr = contentStr + "inactive.props";
     assertEquals(expectedStr, node.getInactivePropsFile().getAbsolutePath());
   }
 
