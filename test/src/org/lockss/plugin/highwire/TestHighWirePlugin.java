@@ -101,4 +101,9 @@ public class TestHighWirePlugin extends LockssTestCase {
 
     assertSame(au1, au2);
   }
+
+  public void testGetPluginName() {
+    assertEquals("org.lockss.plugin.highwire.HighWirePlugin", 
+		 plugin.getPluginName());
+  }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePlugin.java,v 1.14 2003-02-07 01:07:07 troberts Exp $
+ * $Id: HighWirePlugin.java,v 1.15 2003-02-10 23:47:11 troberts Exp $
  */
 
 /*
@@ -66,7 +66,7 @@ public class HighWirePlugin implements LockssPlugin {
   }
 
   public String getPluginName() {
-    return "HighWire plugin";
+    return this.getClass().getName();
   }
 
   public String getVersion() {
@@ -113,7 +113,7 @@ public class HighWirePlugin implements LockssPlugin {
 
   private synchronized ArchivalUnit findAU(URL url, int vol) 
       throws REException {
-    String key = makeKey(url, vol);
+    String key = HighWireArchivalUnit.getAUId(url, vol);
     HighWireArchivalUnit au = (HighWireArchivalUnit)archivalUnits.get(key);
     if (au == null) {
       au = new HighWireArchivalUnit(url, vol);
@@ -121,13 +121,4 @@ public class HighWirePlugin implements LockssPlugin {
     }
     return au;
   }
-
-  private String makeKey(URL url, int vol) {
-    StringBuffer sb = new StringBuffer();
-    sb.append(url.toString());
-    sb.append("||");
-    sb.append(vol);
-    return sb.toString();
-  }
-  
 }
