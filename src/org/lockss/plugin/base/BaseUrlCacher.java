@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.12.2.1 2003-10-09 21:49:45 clairegriffin Exp $
+ * $Id: BaseUrlCacher.java,v 1.12.2.2 2003-10-15 19:58:59 clairegriffin Exp $
  */
 
 /*
@@ -58,7 +58,7 @@ public class BaseUrlCacher implements UrlCacher {
    * output of the software is used solely for the purpose of populating a
    * certified LOCKSS cache from a web server that has granted permission for
    * the LOCKSS system to collect material.  You may not remove or delete any
-   * refernce to LOCKSS in the software indicating that LOCKSS is a mark owned
+   * reference to LOCKSS in the software indicating that LOCKSS is a mark owned
    * by Stanford University.  No other permission is granted you to use the
    * LOCKSS trademark or any other trademark of Stanford University.  Without
    * limiting the foregoing, if you adapt or use the software for any other
