@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingCrawlerImpl.java,v 1.43 2003-11-07 23:58:14 troberts Exp $
+ * $Id: GoslingCrawlerImpl.java,v 1.44 2003-11-11 01:48:19 troberts Exp $
  */
 
 /*
@@ -451,6 +451,8 @@ public class GoslingCrawlerImpl implements Crawler {
 			 +" when trying to cache.  Skipping");
 	  throw e;
 	}
+	Plugin plugin = uc.getCachedUrlSet().getArchivalUnit().getPlugin();
+	uc = plugin.makeUrlCacher(uc.getCachedUrlSet(), uc.getUrl());
       }
     }
   }
