@@ -194,7 +194,8 @@ The string in the upper box is a printf format string into which the
 parameters in the lower box are
 substituted to obtain, in our case, <span style="font-weight: bold;">http://disputatio.com/lockss2004.html</span>
 etc. Details on printf format strings can be found <a
- href="http://www.mkssoftware.com/docs/man1/printf.1.asp">here</a>.
+ href="http://www.mkssoftware.com/docs/man1/printf.1.asp">here</a> (see
+Roundup issue 992).
 Click Save.<br clear="all">
   </li>
 </ul>
@@ -233,12 +234,17 @@ the %d to achieve what we want. Click Save.<br clear="all">
   </li>
 </ul>
 <ul>
-  <li>Next we need to specify a series of crawl rules that are applied
-in order. Click on the row of dots beside to get a window that looks
+  <li>Next we need to specify a series of crawl rules that the crawler
+applies
+in order to each URL, starting with the publisher manifest page's URL
+and continuing with the URLs found in it, and the URLs found in those
+pages, and so on. Click on the row of dots beside to get a window that
+looks
 like this:<img src="crawl-template.gif" title=""
  alt="Crawl rule template initial state"
- style="width: 440px; height: 140px;" align="right"> XXX the columns of
-this window should be labeled Action and Pattern XXX Two rules are
+ style="width: 440px; height: 140px;" align="right">&nbsp; The left
+column contains actions that are taken if the URL matches the pattern
+in the right column (see Roundup issue 993). Two rules are
 pre-specified for
 you; they will be needed in almost every case. The first says that
 anything that doesn't start with base_url (in our case, <a
@@ -517,8 +523,8 @@ choose:</li>
  alt="Improved crawl rules" style="width: 441px; height: 164px;"
  align="right">Now the Crawl Rule
 window will look like this:&nbsp; You
-may need to expand the window to see it all XXX the list should scroll
-if it doesn't all fit in the window XXX. The result of testing this set
+may need to expand the window to see it all (see Roundup issue 990).
+The result of testing this set
 of crawl rules is <a href="disputatio4.txt">this</a>, which is
 correct, and less likely than the original example to break as
 the publisher changes their site.<br clear="all">
@@ -662,7 +668,14 @@ waits the 6 seconds between fetching each page. The results are <a
 Reviewing this rather long list, it appears that the crawl rules are
 now including and excluding the correct files. Note that among the
 files included are programs for Windows and the Mac, .gif and .jpg
-images and .wrl files. XXX which are what? XXX<br>
+images and .wrl files.<br>
+<br>
+<h4>Archival Unit Design</h4>
+XXX need an example of a complex AU design XXX<br>
+XXX what principles to apply and what parameters to choose? XXX<br>
+<h4>Crawl Rule Design</h4>
+XXX need an example of complex crawl rules and principles behind them
+XXX<br>
 <h4>What are the plugin generator's limits?</h4>
 The plugin generation tool has limitations; the plugins for many more
 complex journals will exceed them. In general, any plugin that requires
