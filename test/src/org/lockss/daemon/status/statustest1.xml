@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<st:table st:version="version" xmlns:st="http://lockss.org/statusui">
+    <st:name>table</st:name>
+    <st:key>key</st:key>
+    <st:title>Splunge</st:title>
+    <st:footnote>title foot</st:footnote>
+    <st:columndescriptor>
+        <st:name>intCol</st:name>
+        <st:type>0</st:type>
+        <st:title>title1</st:title>
+    </st:columndescriptor>
+    <st:columndescriptor>
+        <st:name>strCol</st:name>
+        <st:type>4</st:type>
+        <st:title>title2</st:title>
+        <st:footnote>c2foot</st:footnote>
+    </st:columndescriptor>
+    <st:row>
+        <st:cell>
+            <st:columnname>intCol</st:columnname>
+            <st:value>123</st:value>
+        </st:cell>
+        <st:cell>
+            <st:columnname>strCol</st:columnname>
+            <st:value>row1 string</st:value>
+        </st:cell>
+    </st:row>
+    <st:row>
+        <st:cell>
+            <st:columnname>intCol</st:columnname>
+            <st:value st:bold="true" st:color="color1">456</st:value>
+        </st:cell>
+        <st:cell>
+            <st:columnname>strCol</st:columnname>
+            <st:value>
+                <st:reference>
+                    <st:name>table2</st:name>
+                    <st:key>key2</st:key>
+                    <st:value>row2 string</st:value>
+                </st:reference>
+            </st:value>
+        </st:cell>
+    </st:row>
+    <st:row>
+        <st:rowseparator/>
+        <st:cell>
+            <st:columnname>intCol</st:columnname>
+            <st:value>99997</st:value>
+        </st:cell>
+        <st:cell>
+            <st:columnname>strCol</st:columnname>
+        </st:cell>
+    </st:row>
+    <st:row>
+        <st:cell>
+            <st:columnname>intCol</st:columnname>
+            <st:value>99998</st:value>
+        </st:cell>
+    </st:row>
+    <st:row>
+        <st:cell>
+            <st:columnname>intCol</st:columnname>
+            <st:value>99999</st:value>
+        </st:cell>
+        <st:cell>
+            <st:columnname>strCol</st:columnname>
+            <st:value>cc</st:value>
+            <st:value>
+                <st:reference>
+                    <st:name>tt</st:name>
+                    <st:key>k42</st:key>
+                    <st:value>x1</st:value>
+                </st:reference>
+            </st:value>
+        </st:cell>
+    </st:row>
+    <st:summaryinfo>
+        <st:title>summary</st:title>
+        <st:type>4</st:type>
+        <st:footnote>s1foot</st:footnote>
+        <st:value>sum value</st:value>
+    </st:summaryinfo>
+    <st:summaryinfo>
+        <st:title>s2</st:title>
+        <st:type>4</st:type>
+        <st:value st:color="blue">v1</st:value>
+        <st:value>
+            <st:reference>
+                <st:name>t2</st:name>
+                <st:value>v2</st:value>
+            </st:reference>
+        </st:value>
+    </st:summaryinfo>
+    <st:summaryinfo>
+        <st:title>Empty List</st:title>
+        <st:type>4</st:type>
+    </st:summaryinfo>
+</st:table>

@@ -1,5 +1,5 @@
 /*
- * $Id: XmlStatusTable.java,v 1.7 2004-05-04 22:18:01 tlipkis Exp $
+ * $Id: XmlStatusTable.java,v 1.8 2004-05-14 08:39:55 tlipkis Exp $
  */
 
 /*
@@ -68,7 +68,7 @@ public class XmlStatusTable {
    */
   public Document getTableDocument() throws XmlDomBuilder.XmlDomException {
     if (tableDocument==null) {
-      createDocument();
+      tableDocument = createDocument();
     }
     return tableDocument;
   }
@@ -78,8 +78,8 @@ public class XmlStatusTable {
    * @return the Document
    * @throws XmlDomBuilder.XmlDomException
    */
-  public Document createDocument() throws XmlDomBuilder.XmlDomException {
-    tableDocument = xmlBuilder.createDocument();
+  Document createDocument() throws XmlDomBuilder.XmlDomException {
+    Document doc = xmlBuilder.createDocument();
 
     Element rootElem = null;
     Element element = null;
@@ -87,13 +87,17 @@ public class XmlStatusTable {
     try {
       String value;
       // create root element
-      rootElem = xmlBuilder.createRoot(tableDocument,
-          XmlStatusConstants.TABLE);
+      rootElem = xmlBuilder.createRoot(doc,
+				       XmlStatusConstants.TABLE);
 
       addTextElement(rootElem, XmlStatusConstants.NAME, statusTable.getName());
       addTextElement(rootElem, XmlStatusConstants.KEY, statusTable.getKey());
       addTextElement(rootElem, XmlStatusConstants.TITLE,
 		     statusTable.getTitle());
+      if (statusTable.getTitleFootnote() != null) {
+	addTextElement(rootElem, XmlStatusConstants.FOOTNOTE,
+		       statusTable.getTitleFootnote());
+      }
       /*
        * Column descriptor, row, and summary information
        */
@@ -103,8 +107,9 @@ public class XmlStatusTable {
 	addRows(rootElem, colDesc);
       }
       addSummaryInformation(rootElem, statusTable.getSummaryInfo());
-      return tableDocument;
+      return doc;
     } catch (Exception e) {
+      logger.warning("Error building XML status table", e);
       throw new XmlDomBuilder.XmlDomException(e.getMessage());
     }
   }
@@ -120,14 +125,18 @@ public class XmlStatusTable {
     String value;
     while (colIter.hasNext()) {
       ColumnDescriptor cd = (ColumnDescriptor)colIter.next();
-      Element cdElement = xmlBuilder.createElement(rootElem,
-          XmlStatusConstants.COLUMNDESCRIPTOR);
+      Element cdElement =
+	xmlBuilder.createElement(rootElem,
+				 XmlStatusConstants.COLUMNDESCRIPTOR);
 
       addTextElement(cdElement, XmlStatusConstants.NAME, cd.getColumnName());
       addTextElement(cdElement, XmlStatusConstants.TYPE,
 		     Integer.toString(cd.getType()));
       addTextElement(cdElement, XmlStatusConstants.TITLE, cd.getTitle());
-      addTextElement(cdElement, XmlStatusConstants.FOOTNOTE, cd.getFootnote());
+      if (cd.getFootnote() != null) {
+	addTextElement(cdElement,
+		       XmlStatusConstants.FOOTNOTE, cd.getFootnote());
+      }
     }
   }
 
@@ -141,8 +150,6 @@ public class XmlStatusTable {
     if (rowList == null) {
       return;
     }
-    Iterator rowIter = rowList.iterator();
-
     int colSize = colList.size();
     String[] colNames = new String[colSize];
     int[] colTypes = new int[colSize];
@@ -152,22 +159,24 @@ public class XmlStatusTable {
       colTypes[ii] = cd.getType();
     }
 
+    Iterator rowIter = rowList.iterator();
     while (rowIter.hasNext()) {
       Map rowMap = (Map)rowIter.next();
-      Element element;
 
       // create row element
-      Element rowElement = xmlBuilder.createElement(rootElem,
-          XmlStatusConstants.ROW);
+      Element rowElement =
+	xmlBuilder.createElement(rootElem, XmlStatusConstants.ROW);
 
+      if (rowMap.get(StatusTable.ROW_SEPARATOR) != null) {
+	xmlBuilder.createElement(rowElement, XmlStatusConstants.ROW_SEPARATOR);
+      }
       for (int ii=0; ii<colNames.length; ii++) {
         // get the value for each column
         String colName = colNames[ii];
-        int type = colTypes[ii];
         Object object = rowMap.get(colName);
-	logger.info("Object: " + object);
-
-	addValueElement(rowElement, object, colName, type);
+	if (object != null) {
+	  addCellElement(rowElement, object, colName, colTypes[ii]);
+	}
       }
     }
   }
@@ -178,63 +187,82 @@ public class XmlStatusTable {
    * @param summaryInfo the List of summary info
    */
   private void addSummaryInformation(Element rootElem, List summaryInfo) {
-    if (summaryInfo == null) {
-      // This should not be necessary in the final implementation
-      logger.info("StatusTable.getSummaryInfo() returned null");
+    if (summaryInfo == null || summaryInfo.isEmpty()) {
       return;
     }
 
     Iterator sumIter = summaryInfo.iterator();
     while (sumIter.hasNext()) {
       StatusTable.SummaryInfo si = (StatusTable.SummaryInfo)sumIter.next();
-      Element siElement = xmlBuilder.createElement(rootElem,
-          XmlStatusConstants.SUMMARYINFO);
+      Element siElement =
+	xmlBuilder.createElement(rootElem, XmlStatusConstants.SUMMARYINFO);
 
       addTextElement(siElement, XmlStatusConstants.TITLE, si.getTitle());
       addTextElement(siElement, XmlStatusConstants.TYPE,
 		     Integer.toString(si.getType()));
-      addDisplayValueElement(siElement, si.getValue(), si.getType());
+      if (si.getFootnote() != null) {
+	addTextElement(siElement,
+		       XmlStatusConstants.FOOTNOTE, si.getFootnote());
+      }
+      addValueElement(siElement, si.getValue(), si.getType());
     }
   }
 
-  Element addTextElement(Element parent, String name, String value) {
-    Element element =
-      xmlBuilder.createElement(parent, name);
+  /** Add element of type to parent, with text value  */
+  Element addTextElement(Element parent, String type, String value) {
+    Element element = xmlBuilder.createElement(parent, type);
     if (value != null) {
       xmlBuilder.addText(element, value);
     }
     return element;
   }
 
-  Element addValueElement(Element parent, Object value,
-			  String colName, int type) {
-    Element element = addReferenceValueElement(parent, value, type);
+  /** Add cell element to parent, with embedded value */
+  Element addCellElement(Element parent, Object value,
+			 String colName, int type) {
+    Element element =
+      xmlBuilder.createElement(parent, XmlStatusConstants.CELL);
     addTextElement(element, XmlStatusConstants.COLUMN_NAME, colName);
+    addValueElement(element, value, type);
     return element;
   }
 
-  Element addReferenceValueElement(Element parent, Object value,
-				   int type) {
+  /** Add value element to parent.  If list, add multiple values  */
+  Element addValueElement(Element parent, Object value, int type) {
+    if (value instanceof List) {
+      for (Iterator iter = ((List)value).iterator(); iter.hasNext(); ) {
+	addReferenceValueElement(parent, iter.next(), type);
+      }
+    } else {
+      addReferenceValueElement(parent, value, type);
+    }
+    return parent;
+  }
+
+  /** Add value element to parent, possibly embedding in reference element */
+  Element addReferenceValueElement(Element parent, Object value, int type) {
     if (value instanceof StatusTable.Reference) {
       // Reference
       Element element =
-	xmlBuilder.createElement(parent, XmlStatusConstants.REFERENCE_ELEM);
-      StatusTable.Reference reference = (StatusTable.Reference)value;
+	xmlBuilder.createElement(parent, XmlStatusConstants.VALUE);
+      Element refElement =
+	xmlBuilder.createElement(element, XmlStatusConstants.REFERENCE_ELEM);
 
-      addTextElement(element, XmlStatusConstants.NAME,
+      StatusTable.Reference reference = (StatusTable.Reference)value;
+      addTextElement(refElement, XmlStatusConstants.NAME,
 		     reference.getTableName());
-      addTextElement(element, XmlStatusConstants.KEY, reference.getKey());
-      addDisplayValueElement(element, reference.getValue(), type);
+      if (reference.getKey() != null) {
+	addTextElement(refElement, XmlStatusConstants.KEY, reference.getKey());
+      }
+      addNonRefValueElement(refElement, reference.getValue(), type);
       return element;
     } else {
-      Element element =
-	xmlBuilder.createElement(parent, XmlStatusConstants.STANDARD_ELEM);
-      addDisplayValueElement(element, value, type);
-      return element;
+      return addNonRefValueElement(parent, value, type);
     }
   }
 
-  Element addDisplayValueElement(Element parent, Object value, int type) {
+  /** Add value element to parent, with any display attributes */
+  Element addNonRefValueElement(Element parent, Object value, int type) {
     Element element =
       xmlBuilder.createElement(parent, XmlStatusConstants.VALUE);
     if (value instanceof StatusTable.DisplayedValue) {
