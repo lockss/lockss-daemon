@@ -1,5 +1,5 @@
 /*
- * $Id: TestIdentityManager.java,v 1.31 2004-12-02 23:53:54 troberts Exp $
+ * $Id: TestIdentityManager.java,v 1.32 2004-12-06 21:58:54 tlipkis Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.net.UnknownHostException;
 import org.lockss.util.*;
 import org.lockss.daemon.status.*;
 import org.lockss.poller.*;
+import org.lockss.repository.*;
 import org.lockss.test.*;
 
 /** Test cases for org.lockss.protocol.IdentityManager that assume the
@@ -59,6 +60,7 @@ public class TestIdentityManager extends LockssTestCase {
 
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     Properties p = new Properties();
+    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
     p.setProperty(IdentityManager.PARAM_LOCAL_IP, LOCAL_IP);
     ConfigurationUtil.setCurrentConfigFromProps(p);
