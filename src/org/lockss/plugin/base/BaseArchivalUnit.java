@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.44 2003-12-17 02:09:46 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.45 2004-01-04 06:15:37 tlipkis Exp $
  */
 
 /*
@@ -189,15 +189,15 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
       String key = descr.getKey();
       switch (descr.getType()) {
         case ConfigParamDescr.TYPE_INT:
-          int i_val = loadConfigInt(key, config);
+          int i_val = loadConfigInt(descr, config);
           configMap.putInt(key, i_val);
           break;
         case ConfigParamDescr.TYPE_STRING:
-          String s_val = loadConfigString(key, config);
+          String s_val = loadConfigString(descr, config);
           configMap.putString(key, s_val);
           break;
         case ConfigParamDescr.TYPE_URL:
-          URL u_val = loadConfigUrl(key, config);
+          URL u_val = loadConfigUrl(descr, config);
           configMap.putUrl(key, u_val);
           break;
       }
@@ -521,22 +521,24 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    * @throws ConfigurationException thrown if there is no matching entry or
    * the url is malformed or the url does not match the expectedUrlPath.
    */
-  protected URL loadConfigUrl(String urlKey, Configuration config) throws
-      ConfigurationException {
+  protected URL loadConfigUrl(ConfigParamDescr descr, Configuration config)
+    throws ConfigurationException {
+    String key = descr.getKey();
     URL url = null;
 
-    String urlStr = config.get(urlKey);
+    String urlStr = config.get(key);
     if (urlStr == null) {
-      throw new ConfigurationException("No configuration value for " + urlKey);
+      throw new ConfigurationException("No configuration value for " +
+				       paramString(descr));
     }
     try {
       url = new URL(urlStr);
     }
     catch (MalformedURLException murle) {
-      throw new ConfigurationException("Bad URL for " + urlKey, murle);
+      throw new ConfigurationException("Bad URL for " + paramString(descr), murle);
     }
     if (url == null) {
-      throw new ConfigurationException("Null url for " + urlKey);
+      throw new ConfigurationException("Null url for " + paramString(descr));
     }
     if (!expectedUrlPath.equals(url.getPath())) {
       throw new ConfigurationException("Url has illegal path: " +
@@ -556,15 +558,17 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    * @throws ConfigurationException thrown if the key is not found or the entry
    * is not an int.
    */
-  protected int loadConfigInt(String intKey, Configuration config) throws
-      ConfigurationException {
+  protected int loadConfigInt(ConfigParamDescr descr,
+			      Configuration config)
+      throws ConfigurationException {
+    String key = descr.getKey();
     int value = -1;
     try {
-      value = config.getInt(intKey);
+      value = config.getInt(key);
     }
     catch (InvalidParam ip) {
-      String msg = "Invalid config param: " + ip.getMessage();
-      throw new ConfigurationException(msg);
+      throw new ConfigurationException("Bad integer for " +
+				       paramString(descr));
     }
     return value;
   }
@@ -578,14 +582,21 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    * @throws ConfigurationException thrown if the configuration does not contain
    * the key.
    */
-  protected String loadConfigString(String strKey, Configuration config) throws
-      ConfigurationException {
+  protected String loadConfigString(ConfigParamDescr descr,
+				    Configuration config)
+      throws ConfigurationException {
+    String key = descr.getKey();
     String value = null;
-    value = config.get(strKey);
-    if(value == null) {
-      throw new ConfigurationException("Null String for " + strKey);
+    value = config.get(key);
+    if (value == null) {
+      throw new ConfigurationException("Null String for " +
+				       paramString(descr));
     }
     return value;
+  }
+
+  String paramString(ConfigParamDescr descr) {
+    return "\"" + descr.getDisplayName() + "\"";
   }
 
   void checkNextPollInterval() {
