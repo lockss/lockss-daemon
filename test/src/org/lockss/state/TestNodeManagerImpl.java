@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.3 2003-01-23 01:27:00 aalto Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.4 2003-01-23 02:00:50 claire Exp $
  */
 
 /*
@@ -247,16 +247,16 @@ public class TestNodeManagerImpl extends LockssTestCase {
     NodeState nodeState = nodeManager.getNodeState(getCUS(TEST_URL));
     // won content poll
     // - running
-    PollState pollState = new PollState(results.type, results.getRegExp(),
+    PollState pollState = new PollState(results.getType(), results.getRegExp(),
                                         PollState.RUNNING,
-                                        results.startTime,
+                                        results.getStartTime(),
                                         null);
     nodeManager.handleContentPoll(pollState, results, nodeState);
     assertEquals(PollState.WON, pollState.getStatus());
     // - repairing
-    pollState = new PollState(results.type, results.getRegExp(),
+    pollState = new PollState(results.getType(), results.getRegExp(),
                               PollState.REPAIRING,
-                              results.startTime,
+                              results.getStartTime(),
                               null);
     nodeManager.handleContentPoll(pollState, results, nodeState);
     assertEquals(PollState.REPAIRED, pollState.getStatus());
@@ -265,24 +265,24 @@ public class TestNodeManagerImpl extends LockssTestCase {
     contentPoll = createPoll(TEST_URL+"/branch1", true, 5, 10);
     results = contentPoll.getVoteTally();
     // - repairing
-    pollState = new PollState(results.type, results.getRegExp(),
+    pollState = new PollState(results.getType(), results.getRegExp(),
                               PollState.REPAIRING,
-                              results.startTime,
+                              results.getStartTime(),
                               null);
     nodeManager.handleContentPoll(pollState, results, nodeState);
     assertEquals(PollState.UNREPAIRABLE, pollState.getStatus());
     // - internal
-    pollState = new PollState(results.type, results.getRegExp(),
+    pollState = new PollState(results.getType(), results.getRegExp(),
                               PollState.RUNNING,
-                              results.startTime,
+                              results.getStartTime(),
                               null);
     nodeManager.handleContentPoll(pollState, results, nodeState);
     assertEquals(PollState.LOST, pollState.getStatus());
     // - leaf
     nodeState = nodeManager.getNodeState(getCUS(TEST_URL+"/branch1/file1.doc"));
-    pollState = new PollState(results.type, results.getRegExp(),
+    pollState = new PollState(results.getType(), results.getRegExp(),
                               PollState.RUNNING,
-                              results.startTime,
+                              results.getStartTime(),
                               null);
     nodeManager.handleContentPoll(pollState, results, nodeState);
     assertEquals(PollState.REPAIRING, pollState.getStatus());
@@ -293,9 +293,9 @@ public class TestNodeManagerImpl extends LockssTestCase {
     Poll.VoteTally results = contentPoll.getVoteTally();
     NodeState nodeState = nodeManager.getNodeState(getCUS(TEST_URL));
     // won name poll
-    PollState pollState = new PollState(results.type, results.getRegExp(),
+    PollState pollState = new PollState(results.getType(), results.getRegExp(),
                                         PollState.RUNNING,
-                                        results.startTime,
+                                        results.getStartTime(),
                                         null);
     nodeManager.handleNamePoll(pollState, results, nodeState);
     // since it will try to call a content poll and fail, this becomes an error
@@ -304,9 +304,9 @@ public class TestNodeManagerImpl extends LockssTestCase {
     // lost name poll
     contentPoll = createPoll(TEST_URL+"/branch2/file1.doc", false, 5, 10);
     results = contentPoll.getVoteTally();
-    pollState = new PollState(results.type, results.getRegExp(),
+    pollState = new PollState(results.getType(), results.getRegExp(),
                               PollState.RUNNING,
-                              results.startTime,
+                              results.getStartTime(),
                               null);
     nodeManager.handleNamePoll(pollState, results, nodeState);
     // since there are no entries in the results object, nothing much will

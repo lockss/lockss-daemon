@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.39 2003-01-23 01:27:00 aalto Exp $
+* $Id: Poll.java,v 1.40 2003-01-23 02:00:50 claire Exp $
  */
 
 /*
@@ -46,7 +46,6 @@ import org.lockss.protocol.*;
 import org.lockss.util.*;
 import org.lockss.state.PollHistory;
 import org.lockss.state.NodeManager;
-import java.util.HashMap;
 
 
 /**
@@ -515,16 +514,16 @@ public abstract class Poll implements Serializable {
    * votes within a poll.
    */
   public class VoteTally {
-    public int type;
-    public long startTime;
-    public long duration;
-    public int numAgree;     // The # of votes that agree with us
-    public int numDisagree;  // The # of votes that disagree with us
-    public int wtAgree;      // The weight of the votes that agree with us
-    public int wtDisagree;   // The weight of the votes that disagree with us
-    public int quorum;       // The # of votes needed to have a quorum
-    public ArrayList pollVotes;
-    public String hashAlgorithm; // the algorithm used to hash this poll
+    int type;
+    long startTime;
+    long duration;
+    int numAgree;     // The # of votes that agree with us
+    int numDisagree;  // The # of votes that disagree with us
+    int wtAgree;      // The weight of the votes that agree with us
+    int wtDisagree;   // The weight of the votes that disagree with us
+    int quorum;       // The # of votes needed to have a quorum
+    ArrayList pollVotes;
+    String hashAlgorithm; // the algorithm used to hash this poll
 
     String[] localEntries = null;  // the local entries less the remaining RegExp
     String[] votedEntries = null;  // entries which match the won votes in a poll
@@ -564,6 +563,8 @@ public abstract class Poll implements Serializable {
       return false;
     }
 
+
+
     /**
      * Returns true if the poll belongs to this Identity
      * @return true if this Identity
@@ -586,6 +587,40 @@ public abstract class Poll implements Serializable {
      */
     public String getRegExp() {
       return m_regExp;
+    }
+
+    /**
+     * Returns poll type constant - one of Poll.NamePoll, Poll.ContentPoll,
+     * Poll.VerifyPoll
+     * @return integer constant for this poll
+     */
+    public int getType() {
+      return type;
+    }
+
+    /**
+     * returns the poll start time
+     * @return start time as a long
+     */
+    public long getStartTime() {
+      return startTime;
+    }
+
+    /**
+     * returns the poll duration
+     * @return the duration as a long
+     */
+    public long getDuration() {
+      return duration;
+    }
+
+    /**
+     * return the votes cast in this poll
+     * @return
+     */
+
+    public List getPollVotes() {
+      return Collections.unmodifiableList(pollVotes);
     }
 
     /**

@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.9 2003-01-23 01:27:00 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.10 2003-01-23 02:00:50 claire Exp $
  */
 
 /*
@@ -282,12 +282,12 @@ public class NodeManagerImpl implements NodeManager {
       return;
     }
 
-    if (results.type == Poll.CONTENT_POLL) {
+    if (results.getType() == Poll.CONTENT_POLL) {
       handleContentPoll(pollState, results, state);
-    } else if (results.type == Poll.NAME_POLL) {
+    } else if (results.getType() == Poll.NAME_POLL) {
       handleNamePoll(pollState, results, state);
     } else {
-      logger.error("Updating state for invalid results type: "+results.type);
+      logger.error("Updating state for invalid results type: "+results.getType());
       throw new UnsupportedOperationException("Updating state for invalid results type.");
     }
   }
@@ -303,19 +303,19 @@ public class NodeManagerImpl implements NodeManager {
         // if repair poll, we're repaired
         pollState.status = PollState.REPAIRED;
       }
-      closePoll(pollState, results.duration, results.pollVotes, nodeState);
+      closePoll(pollState, results.getDuration(), results.getPollVotes(), nodeState);
       updateReputations(results);
     } else {
       // if disagree
       if (pollState.getStatus() == PollState.REPAIRING) {
         // if repair poll, can't be repaired
         pollState.status = PollState.UNREPAIRABLE;
-        closePoll(pollState, results.duration, results.pollVotes, nodeState);
+        closePoll(pollState, results.getDuration(), results.getPollVotes(), nodeState);
         updateReputations(results);
       } else if (isInternalNode(nodeState)) {
         // if internal node, we need to call a name poll
         pollState.status = PollState.LOST;
-        closePoll(pollState, results.duration, results.pollVotes, nodeState);
+        closePoll(pollState, results.getDuration(), results.getPollVotes(), nodeState);
         long duration = calculateDuration(nodeState.getCachedUrlSet(), false);
         try {
           PollManager.getPollManager().makePollRequest(results.getUrl(),
@@ -329,7 +329,7 @@ public class NodeManagerImpl implements NodeManager {
         pollState.status = PollState.REPAIRING;
         try {
           repairNode(nodeState.getCachedUrlSet());
-          Deadline deadline = Deadline.in(results.duration * 2);
+          Deadline deadline = Deadline.in(results.getDuration() * 2);
           results.replayAllVotes(deadline);
         } catch (IOException ioe) {
           logger.error("Repair attempt failed.", ioe);
@@ -356,7 +356,7 @@ public class NodeManagerImpl implements NodeManager {
         // if poll is not mine stop - set to WON
         pollState.status = PollState.WON;
       }
-      closePoll(pollState, results.duration, results.pollVotes, nodeState);
+      closePoll(pollState, results.getDuration(), results.getPollVotes(), nodeState);
     } else {
       // if disagree
       pollState.status = PollState.REPAIRING;
@@ -400,7 +400,7 @@ public class NodeManagerImpl implements NodeManager {
         }
       }
       pollState.status = PollState.REPAIRED;
-      closePoll(pollState, results.duration, results.pollVotes, nodeState);
+      closePoll(pollState, results.getDuration(), results.getPollVotes(), nodeState);
     }
   }
 
@@ -415,7 +415,7 @@ public class NodeManagerImpl implements NodeManager {
     while (polls.hasNext()) {
       PollState pollState = (PollState)polls.next();
       if ((pollState.getRegExp() == results.getRegExp()) &&
-          (pollState.getType() == results.type)) {
+          (pollState.getType() == results.getType())) {
         return pollState;
       }
     }
@@ -473,7 +473,7 @@ public class NodeManagerImpl implements NodeManager {
 
   private void updateReputations(Poll.VoteTally results) {
     IdentityManager idManager = IdentityManager.getIdentityManager();
-    Iterator voteIt = results.pollVotes.iterator();
+    Iterator voteIt = results.getPollVotes().iterator();
     while (voteIt.hasNext()) {
       Vote vote = (Vote)voteIt.next();
       int repChange = IdentityManager.AGREE_VOTE;
