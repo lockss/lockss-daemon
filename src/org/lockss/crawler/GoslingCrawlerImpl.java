@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingCrawlerImpl.java,v 1.39 2003-10-09 22:56:15 eaalto Exp $
+ * $Id: GoslingCrawlerImpl.java,v 1.40 2003-10-30 23:57:27 troberts Exp $
  */
 
 /*
@@ -112,42 +112,64 @@ public class GoslingCrawlerImpl implements Crawler {
   private static Logger logger = Logger.getLogger("GoslingCrawlerImpl");
 
   private ArchivalUnit au;
-  private Collection startUrls;
-  private boolean followLinks;
 
   private long startTime = -1;
   private long endTime = -1;
   private int numUrlsFetched = 0;
   private int numUrlsParsed = 0;
   private int type;
-  private int refetchDepth = -1;
+  private Collection repairUrls = null;
 
+  private CrawlSpec spec = null;
 
   /**
-   * Construct a crawl object; does NOT start the crawl
+   * Construct a new content crawl object; does NOT start the crawl
    * @param au {@link ArchivalUnit} that this crawl will happen on
-   * @param startUrls Collection of Strings representing the starting urls for crawl
-   * @param type the crawler type
-   * @param followLinks whether or not to extract and follow links
-   * @param refetchDepth depth to always refetch
+   * @param spec {@link CrawlSpec} that defines the crawl
+   * @return new content crawl object
    */
-  public GoslingCrawlerImpl(ArchivalUnit au, Collection startUrls,
-			    int type, boolean followLinks, int refetchDepth) {
+  public static GoslingCrawlerImpl makeNewContentCrawler(ArchivalUnit au,
+							 CrawlSpec spec) {
     if (au == null) {
-      throw new IllegalArgumentException("Called with a null ArchivalUnit");
-    } else if (startUrls == null) {
-      throw new IllegalArgumentException("Called with a null start url list");
+      throw new IllegalArgumentException("Called with null AU");
+    } else if (spec == null) {
+      throw new IllegalArgumentException("Called with null spec");
     }
-    this.au = au;
-    this.startUrls = startUrls;
-    this.followLinks = followLinks;
-    this.type = type;
-    this.refetchDepth = refetchDepth;
+    return new GoslingCrawlerImpl(au, spec, Crawler.NEW_CONTENT);
   }
 
-  public GoslingCrawlerImpl(ArchivalUnit au, Collection startUrls,
-			    boolean followLinks, int refetchDepth) {
-    this(au, startUrls, Crawler.NEW_CONTENT, followLinks, refetchDepth);
+  /**
+   * Construct a repair crawl object; does NOT start the crawl
+   * @param au {@link ArchivalUnit} that this crawl will happen on
+   * @param spec {@link CrawlSpec} that defines the crawl
+   * @param repairUrls list of URLs to crawl for the repair
+   * @return repair crawl object
+   */
+  public static GoslingCrawlerImpl makeRepairCrawler(ArchivalUnit au,
+						     CrawlSpec spec,
+						     Collection repairUrls) {
+     if (au == null) {
+       throw new IllegalArgumentException("Called with null AU");
+     } else if (spec == null) {
+       throw new IllegalArgumentException("Called with null spec");
+     } else if (repairUrls == null) {
+       throw new IllegalArgumentException("Called with null repair coll");
+     } else if (repairUrls.size() == 0) {
+       throw new IllegalArgumentException("Called with empty repair list");
+     }
+     return new GoslingCrawlerImpl(au, spec, Crawler.REPAIR, repairUrls);
+  }
+
+  private GoslingCrawlerImpl(ArchivalUnit au, CrawlSpec spec, int type) {
+    this.au = au;
+    this.spec = spec;
+    this.type = type;
+  }
+
+  private GoslingCrawlerImpl(ArchivalUnit au, CrawlSpec spec,
+			     int type, Collection repairUrls) {
+    this(au, spec, type);
+    this.repairUrls = repairUrls;
   }
 
   public long getNumFetched() {
@@ -171,7 +193,7 @@ public class GoslingCrawlerImpl implements Crawler {
   }
 
   public Collection getStartUrls() {
-    return startUrls;
+    return spec.getStartingUrls();
   }
 
   public int getType() {
@@ -194,7 +216,6 @@ public class GoslingCrawlerImpl implements Crawler {
     logger.info("Beginning crawl of "+au);
     startTime = TimeBase.nowMs();
     CachedUrlSet cus = au.getAuCachedUrlSet();
-    CrawlSpec spec = au.getCrawlSpec();
     Set parsedPages = new HashSet();
 
     Set extractedUrls = null;
@@ -204,7 +225,15 @@ public class GoslingCrawlerImpl implements Crawler {
       logger.debug("Crawling AU not permitted - aborting crawl!");
       return false;
     }
-    Iterator it = startUrls.iterator();
+
+    int refetchDepth = spec.getRefetchDepth();
+    Iterator it = null;
+    if (type == Crawler.NEW_CONTENT) {
+      Collection startUrls = spec.getStartingUrls();
+      it = startUrls.iterator();
+    } else {
+      it = repairUrls.iterator();
+    }
     for (int ix=0; ix<refetchDepth; ix++) {
       extractedUrls = new HashSet();
       while (it.hasNext() && !deadline.expired()) {
@@ -218,7 +247,7 @@ public class GoslingCrawlerImpl implements Crawler {
           // break from while loop
           break;
         }
-	if (au.shouldBeCached(url)) {
+ 	if (spec.isIncluded(url)) {
 	  if (!doCrawlLoop(url, extractedUrls, parsedPages, cus, true)) {
 	    wasError = true;
 	  }
@@ -335,7 +364,8 @@ public class GoslingCrawlerImpl implements Crawler {
       }
     }
     try {
-      if (followLinks && !parsedPages.contains(uc.getUrl())) {
+      if (type == Crawler.NEW_CONTENT && !parsedPages.contains(uc.getUrl())) {
+	logger.debug3("Parsing "+uc);
 	CachedUrl cu = uc.getCachedUrl();
 
 	//XXX quick fix; if statement should be removed when we rework
