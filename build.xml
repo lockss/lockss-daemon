@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.35 2003-03-27 19:40:17 tal Exp $
+ $Id: build.xml,v 1.36 2003-03-29 20:21:50 tal Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
@@ -177,13 +177,10 @@ Args:
   </target>
 
   <!-- ==================================================================== -->
-  <target name="prepare.test" depends="prepare">
+  <target name="prepare.test"
+       depends="prepare,-set.junit.task.available,-set.junit.available">
     <mkdir dir="${test.classes}" />
     <mkdir dir="${test.results}" />
-    <available property="junit.task.available" 
-               classname="org.apache.tools.ant.taskdefs.optional.junit.JUnitTask" />
-    <available property="junit.available" 
-               classname="junit.framework.Test" />
     <condition property="class.arg.specified">
       <and>
         <isset property="class" />
@@ -199,6 +196,16 @@ Args:
                resource="${ant-contrib.resource}">
 	 <classpath refid="ant-contrib.classpath" />
     </available>
+  </target>
+
+  <target name="-set.junit.task.available" unless="junit.task.available">
+    <available property="junit.task.available" 
+         classname="org.apache.tools.ant.taskdefs.optional.junit.JUnitTask" />
+  </target>
+
+  <target name="-set.junit.available" unless="junit.available">
+    <available property="junit.available" 
+               classname="junit.framework.Test" />
   </target>
 
   <!-- ==================================================================== -->
