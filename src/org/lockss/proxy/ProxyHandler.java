@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.24 2004-03-11 09:42:45 tlipkis Exp $
+ * $Id: ProxyHandler.java,v 1.24.2.1 2004-03-14 01:03:21 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.24 2004-03-11 09:42:45 tlipkis Exp $
+// $Id: ProxyHandler.java,v 1.24.2.1 2004-03-14 01:03:21 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -361,7 +361,6 @@ public class ProxyHandler extends AbstractHttpHandler {
 		CachedUrl cu) throws IOException {
 
     boolean isInCache = cu != null && cu.hasContent();
-    log.debug3("isInCache: " + isInCache);
 
     LockssUrlConnection conn = null;
     try {
@@ -417,8 +416,10 @@ public class ProxyHandler extends AbstractHttpHandler {
       if (isInCache) {
 	CIProperties cuprops = cu.getProperties();
 	String cuLast = cuprops.getProperty(CachedUrl.PROPERTY_LAST_MODIFIED);
-	log.debug3("ifModified: " + ifModified);
-	log.debug3("cuLast: " + cuLast);
+	if (log.isDebug3()) {
+	  log.debug3("ifModified: " + ifModified);
+	  log.debug3("cuLast: " + cuLast);
+	}
 	if (cuLast != null) {
 	  if (ifModified == null) {
 	    ifModified = cuLast;
@@ -445,55 +446,39 @@ public class ProxyHandler extends AbstractHttpHandler {
 				request.getRemoteAddr());
 
       }
-//       // a little bit of cache control
-//       String cache_control = request.getField(HttpFields.__CacheControl);
-//       if (cache_control!=null &&
-// 	  (cache_control.indexOf("no-cache")>=0 ||
-// 	   cache_control.indexOf("no-store")>=0))
-// 	connection.setUseCaches(false);
 
-//       // customize Connection
-//       customizeConnection(pathInContext,pathParams,request,connection);
+      // If we ever handle input, this is (more-or-less) the HttpClient way
+      // to do it
 
-// 	connection.setDoInput(true);
-//      // do input thang!
-// 	InputStream in=request.getInputStream();
-// 	if (hasContent) {
-// 	  connection.setDoOutput(true);
-// 	  IO.copy(in,connection.getOutputStream());
-// 	}
-
-//    httpclient way
-//     if (method instanceof EntityEnclosingMethod) {
-//       EntityEnclosingMethod emethod = (EntityEnclosingMethod) method;
-//       emethod.setRequestBody(conn.getInputStream());
-//     }
+      // if (method instanceof EntityEnclosingMethod) {
+      //   EntityEnclosingMethod emethod = (EntityEnclosingMethod) method;
+      //   emethod.setRequestBody(conn.getInputStream());
+      // }
                 
       // Send the request
 
       try {
 	conn.execute();
       } catch (IOException e) {
+	// if we get any error and it's in the cache, serve it from there
 	if (isInCache) {
-	  serveFromCache(pathInContext, pathParams, request,
-			 response, cu);
-	  return;
+	  serveFromCache(pathInContext, pathParams, request, response, cu);
+	} else {
+	  // else generate an error page
+	  sendProxyErrorPage(e, request, response);
+	  request.setHandled(true);
 	}
-	// XXX should distunguish between timeout (504) and no dns, conn
-	// refused, etc. (503?)
-	response.sendError(HttpResponse.__504_Gateway_Timeout);
 	return;
       }
-
-      int code=conn.getResponseCode();
+      // We got a response, should we prefer it to what's in the cache?
       if (isInCache && preferCacheOverPubResponse(cu, conn)) {
 	serveFromCache(pathInContext, pathParams, request,
 		       response, cu);
 	return;
       }	
 
-      // return response from server connection
-      response.setStatus(code);
+      // return response from server
+      response.setStatus(conn.getResponseCode());
       response.setReason(conn.getResponseMessage());
 
       InputStream proxy_in = conn.getResponseInputStream();
@@ -707,9 +692,6 @@ public class ProxyHandler extends AbstractHttpHandler {
    * @throws IOException
    */
   // XXX Should this use jetty's request forwarding mechanism instead?
-
-  // XXX XXX if redirected-to, send redirect, not contents (ignore if-modified)
-
   private void serveFromCache(String pathInContext,
 			      String pathParams,
 			      HttpRequest request,
@@ -729,5 +711,96 @@ public class ProxyHandler extends AbstractHttpHandler {
     }
     // Return without handling the request, next in chain is
     // LockssResourceHandler.  (There must be a better way to do this.)
+  }
+
+  void sendProxyErrorPage(IOException e,
+			  HttpRequest request,
+			  HttpResponse response)
+      throws IOException {
+    URI uri = request.getURI();
+    if (e instanceof java.net.UnknownHostException) {
+      // DNS failure
+      sendErrorPage(request, response, 502,
+		    "Unable to connect to", uri.getHost(), "Unknown host");
+      return;
+    }
+    if (e instanceof java.net.NoRouteToHostException) {
+      sendErrorPage(request, response, 502,
+		    "Unable to connect to", uri.getHost(), "No route to host");
+      return;
+    }
+    if (e instanceof LockssUrlConnection.ConnectionTimeoutException) {
+      sendErrorPage(request, response, 504,
+		    "Unable to connect to", uri.getHost(),
+		    "Host not responding");
+      return;
+    }
+    if (e instanceof java.net.ConnectException) {
+      sendErrorPage(request, response, 502, "Unable to connect to",
+		    uri.getHost() +
+		    (uri.getPort() != 80 ? (":" + uri.getPort()) : ""),
+		    "Connection refused");
+      return;
+    }
+    if (e instanceof java.io.InterruptedIOException) {
+      sendErrorPage(request, response, 504,
+		    "Timeout waiting for data from", uri.getHost(),
+		    "Server not responding");
+      return;
+    }
+    if (e instanceof java.io.IOException) {
+      sendErrorPage(request, response, 502,
+		    "Error communicating with", uri.getHost(), e.getMessage());
+      return;
+    }
+  }
+
+  void sendErrorPage(HttpRequest request,
+		     HttpResponse response,
+		     int code, String msg, String host, String reason)
+      throws HttpException, IOException {
+    response.setStatus(code);
+    Integer codeInt = new Integer(code);
+    String respMsg = (String)HttpResponse.__statusMsg.get(codeInt);
+    if (respMsg == null) {
+      respMsg = Integer.toString(code);
+    }
+    response.setReason(respMsg);
+
+    response.setContentType(HttpFields.__TextHtml);
+    ByteArrayISO8859Writer writer = new ByteArrayISO8859Writer(2048);
+
+    host = HtmlUtil.htmlEncode(host);
+    reason = HtmlUtil.htmlEncode(reason);
+    URI uri = request.getURI();
+
+    writer.write("<html>\n<head>\n<title>Error ");
+    writer.write(Integer.toString(code));
+    writer.write(' ');
+    writer.write(respMsg);
+    writer.write("</title>\n<body>\n<h2>Proxy Error (");
+    writer.write(code + " " + respMsg);
+    writer.write(")</h2>");
+    writer.write("<font size=+1>");
+    writer.write(msg);
+    writer.write(" <b>");
+    writer.write(host);
+    writer.write("</b>: ");
+    writer.write(reason);
+    writer.write("<br>Attempting to proxy request for <b>");
+    writer.write(uri.toString());
+    writer.write("</b>");
+    writer.write("</font>");
+    writer.write("<br>");
+    writer.write("</p>\n<p><i><small>");
+    writer.write("<a href=\"" + Constants.LOCKSS_HOME_URL +
+		 "\">LOCKSS proxy</a>, ");
+    writer.write("<a href=\"http://jetty.mortbay.org/\">powered by Jetty</a>");
+    writer.write("</small></i></p>");
+    writer.write("\n</body>\n</html>\n");
+    writer.flush();
+    response.setContentLength(writer.size());
+    writer.writeTo(response.getOutputStream());
+    writer.destroy();
   }
 }
