@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.16 2004-09-09 00:51:32 clairegriffin Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.17 2004-09-21 00:03:32 clairegriffin Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
 import org.lockss.util.*;
+import org.lockss.plugin.definable.DefinablePlugin.*;
 
 /**
  * <p>ConfigurableArchivalUnit: An implementatation of Base Archival Unit used
@@ -109,27 +110,6 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     return convstr;
   }
 
-  protected UrlNormalizer makeUrlNormalizer() {
-    UrlNormalizer urlNormalizer = null;
-
-    String normalizerClass =
-      (String)definitionMap.getMapElement(AU_URL_NORMALIZER_KEY);
-
-    if (normalizerClass != null) {
-
-      try {
-	urlNormalizer =
-	  (UrlNormalizer) Class.forName(normalizerClass, true,
-					classLoader).newInstance();
-      } catch (Exception e) {
-	throw new DefinablePlugin.InvalidDefinitionException(auName +
-        " unable to create url normalizer: " + normalizerClass, e);
-      }
-    }
-    return urlNormalizer;
-  }
-
-
   protected void loadAuConfigDescrs(Configuration config) throws
       ConfigurationException {
     List descrList = plugin.getAuConfigDescrs();
@@ -187,16 +167,9 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     Object rule = definitionMap.getMapElement(AU_RULES_KEY);
 
     if (rule instanceof String) {
-      try {
-	CrawlRuleFromAuFactory fact =
-	  (CrawlRuleFromAuFactory) Class.forName((String)rule, true,
-						 classLoader).newInstance();
+	CrawlRuleFromAuFactory fact = (CrawlRuleFromAuFactory)
+            loadClass((String) rule, "CrawlRule");
 	return fact.createCrawlRule(this);
-      } catch (Exception e) {
-	throw new DefinablePlugin.InvalidDefinitionException(auName +
-							     " unable to create crawl rule: "
-							     + rule, e);
-      }
     }
     List rules = new LinkedList();
     if(rule instanceof List) {
@@ -233,35 +206,33 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     window_class = definitionMap.getString(AU_CRAWL_WINDOW_KEY,
                                               null);
     if (window_class != null) {
-      try {
-        ConfigurableCrawlWindow ccw = (ConfigurableCrawlWindow)
-            Class.forName(window_class, true, classLoader).newInstance();
-        window = ccw.makeCrawlWindow();
-      }
-      catch (Exception ex) {
-        throw new DefinablePlugin.InvalidDefinitionException(
-       auName + " failed to create crawl window from " + window_class, ex);
-      }
-    }
+      ConfigurableCrawlWindow ccw =
+          (ConfigurableCrawlWindow) loadClass(window_class, "CrawlWindow");
+       window = ccw.makeCrawlWindow();
+     }
     return window;
+  }
+
+  protected UrlNormalizer makeUrlNormalizer() {
+    UrlNormalizer urlNormalizer = null;
+    String normalizerClass = definitionMap.getString(AU_URL_NORMALIZER_KEY, null);
+    if (normalizerClass != null) {
+      urlNormalizer = (UrlNormalizer)loadClass(normalizerClass, "UrlNormalizer");
+    }
+    return urlNormalizer;
   }
 
   protected FilterRule constructFilterRule(String mimeType) {
     Object filter_el = definitionMap.getMapElement(mimeType
         + AU_FILTER_SUFFIX);
-    try {
-      if (filter_el instanceof String) {
-	return (FilterRule) Class.forName( (String) filter_el, true, classLoader).newInstance();
-      }
-      else if (filter_el instanceof List) {
-        if ( ( (List) filter_el).size() > 0) {
-          return new DefinableFilterRule((List) filter_el);
-        }
-      }
+
+    if (filter_el instanceof String) {
+      return (FilterRule) loadClass( (String) filter_el, "FilterRule");
     }
-    catch (Exception ex) {
-      throw new DefinablePlugin.InvalidDefinitionException(
-          auName + " unable to create FilterRule: " + filter_el, ex);
+    else if (filter_el instanceof List) {
+      if ( ( (List) filter_el).size() > 0) {
+        return new DefinableFilterRule( (List) filter_el);
+      }
     }
     return super.constructFilterRule(mimeType);
   }
@@ -278,17 +249,24 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     String parser_cl = definitionMap.getString(mimeType + AU_PARSER_SUFFIX,
                                                null);
     if (parser_cl != null) {
-      try {
-        return (ContentParser) Class.forName(parser_cl, true, classLoader).newInstance();
-      }
-      catch (Exception ex) {
-        throw new DefinablePlugin.InvalidDefinitionException(
-       auName + " unable to create ContentParser: " + parser_cl, ex);
-      }
+      return (ContentParser) loadClass(parser_cl, "ContentParser");
     }
     return super.getContentParser(mimeType);
   }
 
+// ---------------------------------------------------------------------
+//   CLASS LOADING SUPPORT ROUTINES
+// ---------------------------------------------------------------------
+
+  Object loadClass(String className, String description) {
+    try {
+      return Class.forName(className, true, classLoader).newInstance();
+    }
+    catch (Throwable t) {
+      throw new InvalidDefinitionException(
+          auName + " unable to create " + description + ": " + className, t);
+    }
+  }
 
 // ---------------------------------------------------------------------
 //   VARIABLE ARGUMENT REPLACEMENT SUPPORT ROUTINES

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.79 2004-09-20 18:54:37 clairegriffin Exp $
+ * $Id: BaseArchivalUnit.java,v 1.80 2004-09-21 00:03:32 clairegriffin Exp $
  */
 
 /*
@@ -325,6 +325,8 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
                          baseUrl.getPort(), "");
       return ListUtil.list(stem.toString());
     } catch (Exception e) {
+      // TODO: This should throw an exception. ProxyInfo assumes that a
+      // collection will be returned and makes no attempt to catch exceptions
       return Collections.EMPTY_LIST;
     }
   }
