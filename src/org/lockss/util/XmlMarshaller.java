@@ -1,5 +1,5 @@
 /*
- * $Id: XmlMarshaller.java,v 1.1 2004-02-07 06:45:57 eaalto Exp $
+ * $Id: XmlMarshaller.java,v 1.1.2.1 2004-02-11 23:46:46 eaalto Exp $
  */
 
 /*
@@ -144,7 +144,7 @@ public class XmlMarshaller {
       throws IOException, MarshallingException {
     File loadFile = new File(fileLoc);
     if (!loadFile.exists()) {
-      logger.debug("File '"+fileLoc+"' not found.");
+      logger.debug3("File '"+fileLoc+"' not found.");
       return null;
     }
 
