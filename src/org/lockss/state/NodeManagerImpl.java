@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.130 2003-06-03 21:10:46 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.131 2003-06-04 23:31:25 tal Exp $
  */
 
 /*
@@ -250,7 +250,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     }
 
     if (!state.isMyPoll() && hasDamage(cus, state.getType())) {
-      logger.info("Poll has damaged node: " + cus);
+      logger.info("CUS has damage, not starting poll: " + cus);
       return false;
     }
 
