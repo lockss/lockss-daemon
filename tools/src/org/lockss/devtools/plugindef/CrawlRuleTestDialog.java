@@ -148,8 +148,8 @@ public class CrawlRuleTestDialog extends JDialog {
       au = m_plugin.createAu(config);
     }
     catch (Exception ex) {
-      JOptionPane.showMessageDialog(this,"Unable to create an Archival Unit:\n"
-                                    + ex.getCause().getMessage(),
+      JOptionPane.showMessageDialog(this,"Unable to create an Archival Unit.\n"
+                                    +"Invalid Parameter",
                                     "CrawlRule Test Error",
                                     JOptionPane.ERROR_MESSAGE);
     }
