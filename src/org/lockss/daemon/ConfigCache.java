@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigCache.java,v 1.1 2004-06-14 03:08:43 smorabito Exp $
+ * $Id: ConfigCache.java,v 1.2 2004-06-29 18:58:22 smorabito Exp $
  */
 
 /*
@@ -35,7 +35,7 @@ package org.lockss.daemon;
 import java.util.*;
 import java.io.*;
 import java.net.*;
-
+import org.apache.commons.collections.SequencedHashMap;
 import org.lockss.util.*;
 
 /**
@@ -45,14 +45,10 @@ import org.lockss.util.*;
  */
 public class ConfigCache {
 
-  private static HashMap m_remoteFileMap = new HashMap();
-  private static HashMap m_localFileMap = new HashMap();
-  // When (if) we migrate to a Java >1.4 environment, these will no
-  // longer be necessary -- they are only here to impose
-  // insertion-order on the HashMaps.  In 1.4 we could use a
-  // LinkedHashMap
-  private static List m_remoteFileList = new ArrayList();
-  private static List m_localFileList = new ArrayList();
+  private static SequencedHashMap m_remoteFileMap =
+    new SequencedHashMap();
+  private static SequencedHashMap m_localFileMap =
+    new SequencedHashMap();
 
   private static Logger log = Logger.getLogger("ConfigCache");
 
@@ -80,9 +76,9 @@ public class ConfigCache {
     try {
       // Store the configuration in the right hashmap
       if (UrlUtil.isHttpUrl(url)) {
-	put(m_remoteFileMap, m_remoteFileList, url);
+	put(m_remoteFileMap, url);
       } else {
-	put(m_localFileMap, m_localFileList, url);
+	put(m_localFileMap, url);
       }
     } catch (IOException ex) {
       // If we catch any IO exception, remove the offending
@@ -94,16 +90,10 @@ public class ConfigCache {
   }
 
   public static synchronized void remove(String url) {
-    try {
-      if (UrlUtil.isHttpUrl(url)) {
-	m_remoteFileMap.remove(url);
-      } else {
-	m_localFileMap.remove(url);
-      }
-    } catch (Exception ex) {
-      // Log this, but otherwise do nothing
-      log.warning("Failed to remove file from the configuration cache (" +
-		  url + "): " + ex);
+    if (UrlUtil.isHttpUrl(url)) {
+      m_remoteFileMap.remove(url);
+    } else {
+      m_localFileMap.remove(url);
     }
   }
 
@@ -112,7 +102,7 @@ public class ConfigCache {
    * cache.  If the ConfigFile is already in the cache, just ask it to
    * reload its content.
    */
-  private static synchronized void put(Map map, List list, String url)
+  private static synchronized void put(Map map, String url)
       throws IOException {
     if (map.containsKey(url)) {
       log.debug2("put: cache hit, reloading.");
@@ -121,7 +111,6 @@ public class ConfigCache {
       log.debug2("put: cache miss, adding new file.");
       ConfigFile cf = new ConfigFile(url);
       map.put(url, cf);
-      list.add(cf);
     }
   }
 
@@ -129,22 +118,22 @@ public class ConfigCache {
    * Return all remotely-loaded config files.
    */
   public static List getRemoteConfigFiles() {
-    return m_remoteFileList;
+    return new ArrayList(m_remoteFileMap.values());
   }
 
   /**
    * Return all locally-loaded config files.
    */
   public static List getLocalConfigFiles() {
-    return m_localFileList;
+    return new ArrayList(m_localFileMap.values());
   }
 
   /**
    * Return all config files.
    */
   public static List getConfigFiles() {
-    List allConfigFiles = m_remoteFileList;
-    allConfigFiles.addAll(m_localFileList);
+    List allConfigFiles = new ArrayList(m_localFileMap.values());
+    allConfigFiles.addAll(m_remoteFileMap.values());
     return allConfigFiles;
   }
 
@@ -153,12 +142,10 @@ public class ConfigCache {
    */
   public static synchronized void reset() {
     m_localFileMap.clear();
-    m_localFileList.clear();
     m_remoteFileMap.clear();
-    m_remoteFileList.clear();
   }
 
   public static int size() {
-    return m_localFileList.size() + m_remoteFileList.size();
+    return m_localFileMap.size() + m_remoteFileMap.size();
   }
 }

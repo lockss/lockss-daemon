@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurationPropTreeImpl.java,v 1.14 2004-06-17 22:47:20 smorabito Exp $
+ * $Id: ConfigurationPropTreeImpl.java,v 1.15 2004-06-29 18:58:22 smorabito Exp $
  */
 
 /*
@@ -73,7 +73,7 @@ public class ConfigurationPropTreeImpl extends Configuration {
    * Load LOCKSS XML properties
    */
   boolean loadXmlProperties(InputStream istr) throws IOException {
-    return (new XmlPropertyLoader()).load(props, istr);
+    return XmlPropertyLoader.load(props, istr);
   }
 
   boolean store(OutputStream ostr, String header) throws IOException {
@@ -116,7 +116,7 @@ public class ConfigurationPropTreeImpl extends Configuration {
   /**
    * Return a list of values for the given key.
    */
-  public List getList(String key) throws Configuration.InvalidParam {
+  public List getList(String key) {
     List propList = null;
 
     try {
@@ -131,7 +131,7 @@ public class ConfigurationPropTreeImpl extends Configuration {
     } catch (ClassCastException ex) {
       // The client requested a list of something that wasn't actually a list.
       // Throw a Config exception
-      throw new InvalidParam("Key does not hold a list value: " + key);
+      throw new IllegalArgumentException("Key does not hold a list value: " + key);
     }
     return propList;
   }

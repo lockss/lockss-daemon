@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigFile.java,v 1.1 2004-06-14 03:08:43 smorabito Exp $
+ * $Id: ConfigFile.java,v 1.2 2004-06-29 18:58:22 smorabito Exp $
  */
 
 /*
@@ -151,11 +151,7 @@ public class ConfigFile {
     }
 
     if (in != null) {
-      char[] buf = new char[1024];
-      int len;
-      while ((len = in.read(buf)) > 0) {
-	out.write(buf, 0, len);
-      }
+      StreamUtil.copy(in, out);
 
       out.flush();
       m_fileContents = out.toString();
