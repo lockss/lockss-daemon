@@ -1,5 +1,5 @@
 /*
- * $Id: BuildInfo.java,v 1.3 2003-06-20 22:34:53 claire Exp $
+ * $Id: BuildInfo.java,v 1.4 2003-08-15 21:31:26 tlipkis Exp $
  */
 
 /*
@@ -80,6 +80,27 @@ public class BuildInfo {
     return null;
   }
 
+  /** Return a string with all relevant build info */
+  public static String getBuildInfoString() {
+    String buildTimeStamp = getBuildProperty(BUILD_TIMESTAMP);
+    String buildHost = getBuildProperty(BUILD_HOST);
+    String releaseName = getBuildProperty(BUILD_RELEASENAME);
+
+    StringBuffer sb = new StringBuffer();
+    sb.append("Daemon ");
+    if (releaseName != null) {
+      sb.append(releaseName);
+      sb.append(" ");
+    }
+    sb.append("built ");
+    sb.append(buildTimeStamp);
+    if (buildHost != null) {
+      sb.append(" on ");
+      sb.append(buildHost);
+    }
+    return sb.toString();
+  }
+
   private static synchronized Properties findBuildProps() {
     if (buildProps == null) {
       Properties props = new Properties();
@@ -87,7 +108,7 @@ public class BuildInfo {
 	ClassLoader loader = Thread.currentThread().getContextClassLoader();
 	InputStream istr = loader.getResourceAsStream(PROPERTY_RESOURCE);
 	props.load(istr);
-	log.info(props.toString());
+	log.debug2(props.toString());
 	istr.close();
       } catch (Exception e) {
 	log.warning("Can't load build info", e);
