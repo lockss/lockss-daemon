@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.67 2003-12-09 19:45:21 tlipkis Exp $
+ $Id: build.xml,v 1.68 2003-12-17 02:05:37 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -440,11 +440,9 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
     </javac>
     <copy todir="${classes}" >
        <fileset dir="${src}" >
-          <include name="**/*.js"/>
-          <include name="**/*.xml"/>
+          <include name="**/*.xml"/>   <!-- mapping files in various dirs -->
           <include name="**/*.props"/>
-          <include name="**/*.gif"/>  <!-- should be more selective.  now -->
-          <include name="**/*.html"/>  <!-- gets files in gimp-created dirs -->
+          <include name="org/lockss/htdocs/**/*"/>
        </fileset>
     </copy>
   </target>
