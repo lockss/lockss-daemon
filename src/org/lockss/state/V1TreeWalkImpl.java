@@ -1,5 +1,5 @@
 /*
- * $Id: V1TreeWalkImpl.java,v 1.1 2004-08-21 06:52:51 tlipkis Exp $
+ * $Id: V1TreeWalkImpl.java,v 1.2 2004-08-21 07:10:33 tlipkis Exp $
  */
 
 /*
@@ -44,7 +44,7 @@ import org.lockss.app.LockssDaemon;
  * scheduling or threading mechanisms.
  */
 public class V1TreeWalkImpl implements TreeWalker {
-  private static Logger logger = Logger.getLogger("TreeWalkImpl");
+  private static Logger log = Logger.getLogger("TreeWalkImpl");
 
   // Managers, AU.  (All but the PluginManager are required for testing.)
   TreeWalkManager twm;
@@ -111,24 +111,24 @@ public class V1TreeWalkImpl implements TreeWalker {
 					   twm.paramLoadFactor);
     treeWalkAborted = false;
 
-    logger.debug("Attempting tree walk: " + theAu.getName());
+    log.debug("Attempting tree walk: " + theAu.getName());
 
     // check with regulator to see if treewalk can proceed
     activityLock =
       actRegulator.getAuActivityLock(ActivityRegulator.TREEWALK,
 				     2 * estDuration);
     if (activityLock == null) {
-      logger.debug2("Treewalk couldn't start due to activity lock.");
+      log.debug2("Treewalk couldn't start due to activity lock.");
       return false;
     }
     try {
       // do we need to do a new content crawl?
       if (theAu.shouldCrawlForNewContent(nodeMgr.getAuState())) {
 	treeWalkAborted = true;
-	logger.debug("Starting new content crawl.  Ending treewalk.");
+	log.debug("Starting new content crawl.  Ending treewalk.");
 	RegistryCallback rc = null;
 	if (theAu instanceof RegistryArchivalUnit) {
-	  logger.debug("AU " + theAu.getName() +
+	  log.debug("AU " + theAu.getName() +
 		       " is a registry, adding callback.");
 	  rc = new RegistryCallback(theAu);
 	}
@@ -136,16 +136,16 @@ public class V1TreeWalkImpl implements TreeWalker {
       } else if (nodeMgr.repairsNeeded()) {
 	// schedule repairs if needed
 	treeWalkAborted = true;
-	logger.debug("Requesting node nodeMgr repairs.  Aborting...");
+	log.debug("Requesting node nodeMgr repairs.  Ending treewalk.");
 	nodeMgr.scheduleRepairs(activityLock);
       } else {
 	// do the actual treewalk
-	logger.debug("Tree walk started: " + theAu.getName());
+	log.debug("Tree walk started: " + theAu.getName());
 	nodeTreeWalk();
 	didFullTreewalk = !treeWalkAborted;
       }
     } catch (Exception e) {
-      logger.error("Error in treewalk: ", e);
+      log.error("Exception in treewalk", e);
     } finally {
       // release the lock on the treewalk
       // need to check, since it may have been passed to the crawler
@@ -156,7 +156,7 @@ public class V1TreeWalkImpl implements TreeWalker {
     }
     //alert the AuState (it writes through)
     nodeMgr.getAuState().setLastTreeWalkTime();
-    logger.debug("Tree walk finished.");
+    log.debug("Tree walk finished: " + theAu.getName());
     return true;
   }
 
@@ -180,7 +180,7 @@ public class V1TreeWalkImpl implements TreeWalker {
   boolean recurseTreeWalk(CachedUrlSet cus) {
     if (activityLock.isExpired()) {
       // lost lock, so abort treewalk
-      logger.debug("Lost activity lock, aborting");
+      log.debug("Lost activity lock, aborting");
       treeWalkAborted = true;
     }
     if (treeWalkAborted) {
@@ -195,7 +195,7 @@ public class V1TreeWalkImpl implements TreeWalker {
 
     boolean pContinue = true;
     // get the node state for the cus
-    logger.debug3("Recursing treewalk on cus: "+cus.getUrl());
+    if (log.isDebug3()) log.debug3("Visiting node: " + cus.getUrl());
     NodeState parent = nodeMgr.getNodeState(cus);
     // walk the node's children first to process deepest damage first
     Iterator children = cus.flatSetIterator();
@@ -268,7 +268,8 @@ public class V1TreeWalkImpl implements TreeWalker {
     try {
       if (nodeMgr.checkCurrentState(lastHistory, node)) {
 	// mark node for action
-	logger.debug2("Found necessary poll; saving node and ending treewalk");
+	log.debug2("Need poll.  Ending, will do deferred action on: " +
+		   node.getCachedUrlSet().getUrl());
 	cachedHistory = lastHistory;
 	cachedNode = node;
 
@@ -277,7 +278,7 @@ public class V1TreeWalkImpl implements TreeWalker {
 	return false;
       }
     } catch (java.io.IOException ie) {
-      logger.error("Error in checkCurrentState: ", ie);
+      log.error("Error in checkCurrentState", ie);
     }
     return true;
   }
@@ -293,12 +294,12 @@ public class V1TreeWalkImpl implements TreeWalker {
    */
   public void doDeferredAction() {
     if (cachedNode != null) {
-      logger.debug2("Calling poll on node '" +
-		    cachedNode.getCachedUrlSet().getUrl() + "'");
+      log.debug2("Calling poll on node '" +
+		 cachedNode.getCachedUrlSet().getUrl() + "'");
       try {
 	nodeMgr.callNecessaryPolls(cachedHistory, cachedNode);
       } catch (Exception e) {
-	logger.error("Error calling poll: ", e);
+	log.error("Error calling poll", e);
       }
       // null these values for next treewalk
       cachedHistory = null;
@@ -316,7 +317,7 @@ public class V1TreeWalkImpl implements TreeWalker {
 
     public void signalCrawlAttemptCompleted(boolean success, Object cookie) {
       if (success) {
-	logger.debug2("Registry crawl completed successfully, loading new plugins (if any)...");
+	log.debug2("Registry crawl completed successfully, loading new plugins (if any)...");
 	pluginMgr.processRegistryAus(ListUtil.list(registryAu));
       }
     }

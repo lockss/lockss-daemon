@@ -1,5 +1,5 @@
 /*
- * $Id: AuTreeWalkManager.java,v 1.1 2004-08-21 06:52:51 tlipkis Exp $
+ * $Id: AuTreeWalkManager.java,v 1.2 2004-08-21 07:10:33 tlipkis Exp $
  */
 
 /*
@@ -185,7 +185,7 @@ public class AuTreeWalkManager
     }
 
     public synchronized void abort() {
-      log.debug("Runner.abort()");
+      log.debug2("Runner.abort()");
       triggerWDogOnExit(false);
       if (walkerRunning && walker != null) {
 	walker.abort();
@@ -234,8 +234,8 @@ public class AuTreeWalkManager
 	  }
 	};
       task.setLatestStart(Deadline.in(twm.paramMaxFutureSched));
-      if (log.isDebug2()) {
-	log.debug2("Scheduling " + task);
+      if (log.isDebug3()) {
+	log.debug3("Scheduling " + task);
       }
       if (schedSvc.scheduleTask(task)) {
 	// task is scheduled. this.taskEvent() will be called at the start
@@ -246,7 +246,7 @@ public class AuTreeWalkManager
 	  if (curTask == null) {
 	    curTask = task;
 	  } else {
-	    log.debug("Someone else beat us to it, cancelling", new Throwable());
+	    log.debug("Someone else beat us to it, cancelling");
 	    task.cancel();
 	  }
 	}
@@ -289,7 +289,6 @@ public class AuTreeWalkManager
   long chooseTimeToRun() {
     long now = TimeBase.nowMs();
     long lastTreeWalkTime = nodeMgr.getAuState().getLastTreeWalkTime();
-    log.debug("last: " + lastTreeWalkTime);
 //     if (lastTreeWalkTime <= 0) {
 //       log.debug("First time");
 //       return now + twm.paramStartDelay;
@@ -324,7 +323,6 @@ public class AuTreeWalkManager
    * @param elapsedTime the time the treewalk actually took
    */
   void updateEstimate(long elapsedTime) {
-    log.debug("updateEstimate: " + elapsedTime);
     // no averaging, just padding
     treeWalkEstimate = (long)(twm.paramEstPadding * elapsedTime);
     if (treeWalkEstimate < twm.paramMinSchedDuration) {

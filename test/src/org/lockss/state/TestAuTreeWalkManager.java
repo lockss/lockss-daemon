@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuTreeWalkManager.java,v 1.1 2004-08-21 06:52:49 tlipkis Exp $
+ * $Id: TestAuTreeWalkManager.java,v 1.2 2004-08-21 07:10:33 tlipkis Exp $
  */
 
 /*
@@ -240,7 +240,6 @@ public class TestAuTreeWalkManager extends LockssTestCase {
   }
 
   public void testWalkerRunsTooLong() {
-    log.debug("testWalkerRunsTooLong");
     TimeBase.setSimulated(1000);
     autwm.initService(theDaemon);
     autwm.walkWaitSem.take();
