@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.51 2003-07-21 08:33:12 tlipkis Exp $
+ * $Id: Configuration.java,v 1.52 2003-07-23 06:39:09 tlipkis Exp $
  */
 
 /*
@@ -160,7 +160,7 @@ public abstract class Configuration {
   /** Return the set of keys whose values differ.
    * @param otherConfig the config to compare with.  May be null.
    */
-  abstract Set differentKeys(Configuration otherConfig);
+  public abstract Set differentKeys(Configuration otherConfig);
 
   /** Return true iff config has no keys/ */
   public boolean isEmpty() {
@@ -380,7 +380,7 @@ public abstract class Configuration {
   }
 
   String quoteVal(String val) {
-    return "\"" + val + "\"";
+    return val == null ? "(null)" : "\"" + val + "\"";
   }
 
   // must be implemented by implementation subclass
