@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.55 2004-01-14 00:06:52 troberts Exp $
+ * $Id: CrawlManagerImpl.java,v 1.55.2.1 2004-01-20 23:23:10 troberts Exp $
  */
 
 /*
@@ -165,11 +165,11 @@ public class CrawlManagerImpl extends BaseLockssManager
 	makeRepairCrawler(au, au.getCrawlSpec(), locks.keySet());
       CrawlThread crawlThread =
 	new CrawlThread(crawler, Deadline.MAX, cb, cookie, locks.values());
-      crawlThread.start();
       crawlHistory.put(au.getAuId(), crawler.getStatus());
       synchronized(runningCrawls) {
 	runningCrawls.put(au, crawler);
       }
+      crawlThread.start();
     } else {
       logger.debug3("Repair aborted due to activity lock.");
       try {
@@ -263,11 +263,11 @@ public class CrawlManagerImpl extends BaseLockssManager
     Crawler crawler = makeNewContentCrawler(au, spec);
     CrawlThread crawlThread =
       new CrawlThread(crawler, Deadline.MAX, cb, cookie, SetUtil.set(lock));
-    crawlThread.start();
     crawlHistory.put(au.getAuId(), crawler.getStatus());
     synchronized(runningCrawls) {
       runningCrawls.put(au, crawler);
     }
+    crawlThread.start();
   }
 
   protected Crawler makeNewContentCrawler(ArchivalUnit au, CrawlSpec spec) {
