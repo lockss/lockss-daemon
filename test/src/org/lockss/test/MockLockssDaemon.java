@@ -24,6 +24,10 @@ public class MockLockssDaemon extends LockssDaemon {
   IdentityManager identityManager = null;
   NodeManagerService nodeManagerService = null;
 
+  public MockLockssDaemon() {
+    this(null);
+  }
+
   public MockLockssDaemon(List urls) {
     super(urls);
   }
