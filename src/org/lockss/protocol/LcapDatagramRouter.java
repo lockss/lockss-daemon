@@ -1,5 +1,5 @@
 /*
- * $Id: LcapDatagramRouter.java,v 1.8 2005-02-16 00:41:20 tlipkis Exp $
+ * $Id: LcapDatagramRouter.java,v 1.9 2005-03-01 03:51:34 tlipkis Exp $
  */
 
 /*
@@ -75,15 +75,21 @@ public class LcapDatagramRouter
   static final String DEFAULT_FWD_PKT_RATE = "40/1s";
 
   static final String PARAM_BEACON_INTERVAL = PREFIX + "beacon.interval";
+  static final int DEFAULT_BEACON_INTERVAL = 0;
+
   static final String PARAM_INITIAL_HOPCOUNT = PREFIX + "maxHopCount";
+  static final int DEFAULT_INITIAL_HOPCOUNT = 2;
+
   static final String PARAM_PROB_PARTNER_ADD =
     PREFIX + "partnerAddProbability";
-  static final String PARAM_DUP_MSG_HASH_SIZE = PREFIX + "dupMsgHashSize";
-
   static final double DEFAULT_PROB_PARTNER_ADD = 0.5;
+
+  static final String PARAM_PARTNER_REFRESH_INTERVAL =
+    PREFIX + "partnerRefreshInterval";
+  static final long DEFAULT_PARTNER_REFRESH_INTERVAL = 4 * Constants.HOUR;
+
+  static final String PARAM_DUP_MSG_HASH_SIZE = PREFIX + "dupMsgHashSize";
   static final int DEFAULT_DUP_MSG_HASH_SIZE = 100;
-  static final int DEFAULT_INITIAL_HOPCOUNT = 2;
-  static final int DEFAULT_BEACON_INTERVAL = 0;
 
   static final String PRIORITY_PARAM_BEACON = "Beacon";
   static final int PRIORITY_DEFAULT_BEACON = -1;
@@ -104,6 +110,8 @@ public class LcapDatagramRouter
 
   private Deadline beaconDeadline = Deadline.at(TimeBase.MAX);;
   private PartnerList partnerList;
+  private Deadline refreshPartnersAt;
+  private long partnerRefreshInterval = DEFAULT_PARTNER_REFRESH_INTERVAL;
   private List messageHandlers = new ArrayList();
   private LRUMap recentVerifiers = new LRUMap(DEFAULT_DUP_MSG_HASH_SIZE);
   private Object verObj = new Object();
@@ -116,6 +124,7 @@ public class LcapDatagramRouter
     pollMgr = daemon.getPollManager();
     partnerList = new PartnerList(idMgr);
     resetConfig();
+    refreshPartnersAt = Deadline.in(partnerRefreshInterval);;
     comm.registerMessageHandler(LockssDatagram.PROTOCOL_LCAP,
 				new LcapDatagramComm.MessageHandler() {
 				    public void
@@ -162,6 +171,10 @@ public class LcapDatagramRouter
 					     PARAM_ORIG_MSG_RATE,
 					     DEFAULT_ORIG_MSG_RATE);
     }
+    partnerRefreshInterval =
+      config.getTimeInterval(PARAM_PARTNER_REFRESH_INTERVAL,
+			     DEFAULT_PARTNER_REFRESH_INTERVAL);
+
     if (changedKeys.contains(PARAM_BEACON_INTERVAL)) {
       beaconInterval = config.getTimeInterval(PARAM_BEACON_INTERVAL,
 					      DEFAULT_BEACON_INTERVAL);
@@ -195,6 +208,7 @@ public class LcapDatagramRouter
    * @throws IOException if message couldn't be sent
    */
   public void send(LcapMessage msg, ArchivalUnit au) throws IOException {
+    checkStalePartners();
     msg.setHopCount(initialHopCount);
     log.debug2("send(" + msg + ")");
     if (origMsgRateLimiter.isEventOk()) {
@@ -247,6 +261,12 @@ public class LcapDatagramRouter
       log.error("Couldn't decode incoming message", e);
       return;
     }
+    PeerIdentity senderID = idMgr.ipAddrToPeerIdentity(dg.getSender());
+
+    if (!didIOriginateOrSend(dg, msg) && !partnerList.isPartner(senderID)) {
+      refreshPartnersAt.expireIn(partnerRefreshInterval);
+    }
+
     if (!isDuplicate(dg, msg)) {
       routeIncomingMessage(dg, msg);
       // if not a no-op, give to incoming message handlers
@@ -279,6 +299,17 @@ public class LcapDatagramRouter
       return true;
     }
     return false;
+  }
+
+  // if a long time since any message received from id not on partner list,
+  // add a random default partner
+  void checkStalePartners() {
+    if (refreshPartnersAt.expired()) {
+      log.debug2("Refreshing partner list: no recent non-partner packets");
+      partnerList.addFromDefaultList();
+      // don't do this again for beacon interval
+      refreshPartnersAt.expireIn(beaconInterval);
+    }
   }
 
   // decide where to forward incoming message

@@ -1,5 +1,5 @@
 /*
- * $Id: TestPartnerList.java,v 1.15 2004-09-29 18:57:57 tlipkis Exp $
+ * $Id: TestPartnerList.java,v 1.16 2005-03-01 03:51:33 tlipkis Exp $
  */
 
 /*
@@ -54,6 +54,7 @@ public class TestPartnerList extends LockssTestCase {
   static final Set EMPTY_SET = Collections.EMPTY_SET;
   static final int DEF_MIN_PARTNER_REMOVE_INTERVAL = 10;
   static final int DEF_MAX_PARTNERS = 3;
+  static final int DEF_MIN_PARTNERS = 1;
   static final int DEF_MULTICAST_INTERVAL = 10;
   static final String IP1 = "1.1.1.1";
   static final String IP2 = "1.1.1.2";
@@ -100,7 +101,8 @@ public class TestPartnerList extends LockssTestCase {
     peer3 = idmgr.stringToPeerIdentity("1.1.1.3");
     peer4 = idmgr.stringToPeerIdentity("1.1.1.4");
     pl = new PartnerList(idmgr);
-    setConfig(pl, getConfig(DEF_MIN_PARTNER_REMOVE_INTERVAL, DEF_MAX_PARTNERS,
+    setConfig(pl, getConfig(DEF_MIN_PARTNER_REMOVE_INTERVAL,
+			    DEF_MIN_PARTNERS, DEF_MAX_PARTNERS,
 			    DEF_MULTICAST_INTERVAL, DEF_PARTNERS));
   }
 
@@ -110,12 +112,14 @@ public class TestPartnerList extends LockssTestCase {
   }
 
   private Configuration getConfig(int minPartnerRemoveInterval,
+				  int minPartners,
 				  int maxPartners,
 				  int multicastInterval,
 				  String defaultPartners) {
     Properties prop = new Properties();
     prop.put(PartnerList.PARAM_MIN_PARTNER_REMOVE_INTERVAL,
 	     Integer.toString(minPartnerRemoveInterval));
+    prop.put(PartnerList.PARAM_MIN_PARTNERS, Integer.toString(minPartners));
     prop.put(PartnerList.PARAM_MAX_PARTNERS, Integer.toString(maxPartners));
     prop.put(PartnerList.PARAM_RECENT_MULTICAST_INTERVAL,
 	     Integer.toString(multicastInterval));
@@ -146,6 +150,14 @@ public class TestPartnerList extends LockssTestCase {
     assertEquals(SetUtil.set(peer1, peer2), setOf(pl.getPartners()));
     pl.removePartner(peer1);
     assertEquals(SetUtil.set(peer2), setOf(pl.getPartners()));
+  }
+
+  public void testIsPartner() {
+    assertTrue(pl.isPartner(peer1));
+    assertTrue(pl.isPartner(peer2));
+    pl.removePartner(peer1);
+    assertFalse(pl.isPartner(peer1));
+    assertTrue(pl.isPartner(peer2));
   }
 
   public void testNoAddMulticastPartner() {
@@ -232,7 +244,8 @@ public class TestPartnerList extends LockssTestCase {
 
   public void testAddFromDefaultWhenEmpty() {
     pl = new PartnerList(idmgr);
-    setConfig(pl, getConfig(DEF_MIN_PARTNER_REMOVE_INTERVAL, DEF_MAX_PARTNERS,
+    setConfig(pl, getConfig(DEF_MIN_PARTNER_REMOVE_INTERVAL,
+			    DEF_MIN_PARTNERS, DEF_MAX_PARTNERS,
 			    DEF_MULTICAST_INTERVAL, ""));
     removeAll();
     assertEquals(EMPTY_SET, setOf(pl.getPartners()));

@@ -1,5 +1,5 @@
 /*
- * $Id: PartnerList.java,v 1.26 2004-10-11 00:56:58 tlipkis Exp $
+ * $Id: PartnerList.java,v 1.27 2005-03-01 03:51:33 tlipkis Exp $
  */
 
 /*
@@ -46,16 +46,22 @@ import org.apache.commons.collections.map.LRUMap;
  */
 class PartnerList {
   static final String PREFIX = LcapDatagramRouter.PREFIX;
+  static final String PARAM_DEFAULT_LIST = PREFIX + "defaultPartnerList";
+
   static final String PARAM_MIN_PARTNER_REMOVE_INTERVAL =
     PREFIX + "minPartnerRemoveInterval";
+  static final long DEFAULT_MIN_PARTNER_REMOVE_INTERVAL = Constants.HOUR;
+
   static final String PARAM_MAX_PARTNERS = PREFIX + "maxPartners";
-  static final String PARAM_DEFAULT_LIST = PREFIX + "defaultPartnerList";
+  static final int DEFAULT_MAX_PARTNERS = 3;
+
+  static final String PARAM_MIN_PARTNERS = PREFIX + "minPartners";
+  static final int DEFAULT_MIN_PARTNERS = 1;
+
   static final String PARAM_RECENT_MULTICAST_INTERVAL =
     PREFIX + "recentMulticastInterval";
-
-  static final long DEFAULT_MIN_PARTNER_REMOVE_INTERVAL = Constants.HOUR;
-  static final int DEFAULT_MAX_PARTNERS = 3;
   static final long DEFAULT_RECENT_MULTICAST_INTERVAL = 90 * Constants.MINUTE;
+
 
   static Logger log = Logger.getLogger("PartnerList");
 
@@ -71,6 +77,7 @@ class PartnerList {
   long recentMulticastInterval;
   long minPartnerRemoveInterval;
   int maxPartners;
+  int minPartners;
   private IdentityManager idMgr;
 
   /** Create a PartnerList */
@@ -82,6 +89,9 @@ class PartnerList {
   public void setConfig(Configuration config, Configuration oldConfig,
 			Configuration.Differences changedKeys) {
     maxPartners = config.getInt(PARAM_MAX_PARTNERS, DEFAULT_MAX_PARTNERS);
+    minPartners = Math.min(maxPartners,
+			   config.getInt(PARAM_MIN_PARTNERS,
+					 DEFAULT_MIN_PARTNERS));
     if (maxPartners != partners.maxSize()) {
       LRUMap newPartners = new PartnersLRUMap(maxPartners);
       newPartners.putAll(partners);
@@ -125,6 +135,13 @@ class PartnerList {
     lastMulticastReceived.put(id, nowLong());
   }
 
+  /** Return true if the id is currently on the partner list
+   * @param ip the address of the packet sender
+   */
+  public boolean isPartner(PeerIdentity id) {
+    return partners.containsKey(id);
+  }
+
   /** Possibly add a partner to the list
    * @param partnerIP the address of the partner
    * @probability the probability of adding the partner
@@ -147,14 +164,14 @@ class PartnerList {
 	(TimeBase.msSince(lastRcv.longValue()) < recentMulticastInterval)) {
       return;
     }
-    if (log.isDebug() && !partners.containsKey(id)) {
+    if (log.isDebug() && !isPartner(id)) {
       log.debug("Adding partner " + id);
     }
     partners.put(id, nowLong());
     if (TimeBase.msSince(lastPartnerRemoveTime) > minPartnerRemoveInterval) {
       removeLeastRecent();
     }
-    if (partners.isEmpty()) {
+    if (partners.size() < minPartners) {
       addFromDefaultList();
     }
   }
@@ -181,7 +198,7 @@ class PartnerList {
    * @param partnerIP the partner to remove
    */
   public void removePartner(PeerIdentity id) {
-    if (partners.containsKey(id)) {
+    if (isPartner(id)) {
       log.debug("Removing partner " + id);
       partners.remove(id);
       lastPartnerRemoveTime = TimeBase.nowMs();
@@ -190,8 +207,16 @@ class PartnerList {
 
   void addFromDefaultList() {
     if (!defaultPartnerList.isEmpty()) {
-      int ix = random.nextInt(defaultPartnerList.size());
-      addPartner((PeerIdentity)defaultPartnerList.get(ix));
+      // randomly permute the defaultPartnerList
+      Collections.shuffle(defaultPartnerList);
+      // then add the first one that isn't already in list
+      for (Iterator iter = defaultPartnerList.iterator(); iter.hasNext(); ) {
+	PeerIdentity id = (PeerIdentity)iter.next();
+	if (!isPartner(id)) {
+	  addPartner(id);
+	  return;
+	}
+      }
     }
   }
 
