@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.22 2005-01-31 23:14:46 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.23 2005-03-18 18:09:43 troberts Exp $
  */
 
 /*
@@ -76,12 +76,6 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
   //testing max. crawl Depth of a site, subject to be changed
   public static final int DEFAULT_MAX_CRAWL_DEPTH = 1000;
 
-  public static final String PARAM_ABORT_WHILE_PERMISSION_OTHER_THAN_OK =
-    Configuration.PREFIX + "CrawlerImpl.abortWhilePermissionOtherThanOk";
-  public static final boolean DEFAULT_ABORT_WHILE_PERMISSION_OTHER_THAN_OK = false;
-
-  private PermissionMap permissionMap = new PermissionMap();
-
   private boolean alwaysReparse = DEFAULT_REPARSE_ALL;
   private boolean usePersistantList = DEFAULT_PERSIST_CRAWL_LIST;
   protected int maxDepth = DEFAULT_MAX_CRAWL_DEPTH;
@@ -132,6 +126,7 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
     maxDepth = newMax;
   }
 
+
   protected boolean doCrawl0() {
     if (crawlAborted) {
       return aborted();
@@ -141,18 +136,10 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
     cus = au.getAuCachedUrlSet();
     parsedPages = new HashSet();
 
-    // get the permission list from crawl spec
-    List permissionList = spec.getPermissionPages();
-    if (permissionList == null || permissionList.size() == 0){
-      logger.error("spec.getPermissionPages() return null list or nothing in the list!");
-      crawlStatus.setCrawlError("Nothing in permission list");
+    if (!populatePermissionMap()) {
       return aborted();
     }
 
-    if (!checkPermissionList(permissionList)){
-      return aborted();
-    }
- 
     // get the Urls to follow from either NewContentCrawler or OaiCrawler
     extractedUrls = getUrlsToFollow();
     logger.debug3("Urls extracted from getUrlsToFollow() : "
@@ -255,45 +242,6 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
     AuUtil.getAuDiskUsage(au);
   }
 
-  /**
-   * Check the permission of each url in the permission list, then save the result
-   * in the permission map.
-   *
-   * @param permissionList permission pages url list of an AU
-   * @return if all permission pages grant permission to crawl
-   */
-  protected boolean checkPermissionList(List permissionList) {
-    boolean abortWhilePermissionOtherThanOk =
-      Configuration.getBooleanParam(PARAM_ABORT_WHILE_PERMISSION_OTHER_THAN_OK,
-				    DEFAULT_ABORT_WHILE_PERMISSION_OTHER_THAN_OK);
-
-    logger.info("Checking permission on host(s) of " + au);
-    Iterator permissionUrls = permissionList.iterator();
-    while (permissionUrls.hasNext()) {
-      String permissionPage = (String)permissionUrls.next();
-      // it is the real thing that do the checking of permission, crawlPermission dwell in CrawlerImpl.java
-      int permissionStatus = crawlPermission(permissionPage);
-      // if permission status is something other than OK and the abortWhilePermissionOtherThanOk flag is on
-       if (permissionStatus != PermissionMap.PERMISSION_OK &&
-	  abortWhilePermissionOtherThanOk) {
-	logger.info("One or more host(s) of AU do not grant crawling permission - aborting crawl!");
-	return false;
-      }
-      try {
-	if (permissionStatus == PermissionMap.PERMISSION_OK) {
-	  logger.debug3("Permission granted on host: " + UrlUtil.getHost(permissionPage));
-	}
-	// set permissionMap
-	permissionMap.putStatus(permissionPage,permissionStatus);
-      } catch (MalformedURLException e){
-	//XXX should catch this inside the permissionMap ?
-	logger.error("The permissionPage's URL is Malformed : "+ permissionPage);
-	crawlStatus.setCrawlError("Malformed permission page url");
-      }
-    }
-    return true;
-  }
-
   protected boolean aborted() {
     logger.info("Crawl aborted: "+au);
     if (crawlStatus.getCrawlError() == null) {
@@ -314,7 +262,7 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
   protected UrlCacher makeUrlCacher(String url) {
     UrlCacher uc = super.makeUrlCacher(url);
     uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_STORE_ALL_IN_SPEC);
-    uc.setPermissionMap(permissionMap);
+    uc.setPermissionMapSource(this);
     if (proxyHost != null) {
       uc.setProxy(proxyHost, proxyPort);
     }
