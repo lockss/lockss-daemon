@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.2 2003-07-16 00:03:59 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.3 2003-07-17 23:38:31 tlipkis Exp $
  */
 
 /*
@@ -66,6 +66,8 @@ public class ConfigManager implements LockssManager {
   public static final String PARAM_PLATFORM_IP_ADDRESS =
     PLATFORM + "localIPAddress";
 
+  public static final String PARAM_PLATFORM_FQDN = PLATFORM + "fqdn";
+
   /** Local subnet set during config */
   public static final String PARAM_PLATFORM_ACCESS_SUBNET =
     PLATFORM + "accesssubnet";
@@ -83,11 +85,13 @@ public class ConfigManager implements LockssManager {
   static final String PARAM_PLATFORM_PIDFILE = PLATFORM + "pidfile";
 
   public static String CONFIG_FILE_UI_IP_ACCESS = "ui_ip_access.txt";
+  public static String CONFIG_FILE_PROXY_IP_ACCESS = "proxy_ip_access.txt";
   public static String CONFIG_FILE_AU_CONFIG = "au.txt";
 
   /** array of local cache config file names */
   static String cacheConfigFiles[] = {
     CONFIG_FILE_UI_IP_ACCESS,
+    CONFIG_FILE_PROXY_IP_ACCESS,
   };
 			     
 
