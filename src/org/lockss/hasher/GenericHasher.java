@@ -1,5 +1,5 @@
 /*
- * $Id: GenericHasher.java,v 1.1 2002-11-06 18:33:26 troberts Exp $
+ * $Id: GenericHasher.java,v 1.2 2002-11-23 01:31:20 troberts Exp $
  */
 
 /*
@@ -35,6 +35,8 @@ import java.io.*;
 import java.util.*;
 import java.security.*;
 import org.lockss.daemon.*;
+import org.lockss.util.*;
+
 /**
  * General class to handle content hashing
  */
@@ -45,7 +47,7 @@ public abstract class GenericHasher implements CachedUrlSetHasher {
   protected Iterator iterator = null;
   protected boolean isFinished = false;
   protected boolean shouldGetNextElement = true;
-
+  protected static Logger log = Logger.getLogger("GenericHasher");
 
 
   protected GenericHasher(CachedUrlSet cus, MessageDigest digest) {
@@ -67,18 +69,22 @@ public abstract class GenericHasher implements CachedUrlSetHasher {
    */
   public int hashStep(int numBytes) throws IOException {
     if (digest == null || cus == null || iterator == null) {
+      log.warning("Called with a null value for digest, cus, or iterator");
       isFinished = true;
       return 0;
     }
     int bytesLeftToHash = numBytes;
+    log.debug(numBytes+" bytes left to hash in this step");
 
     while (bytesLeftToHash > 0) {
       if (curElement == null || shouldGetNextElement) {
 	shouldGetNextElement = false;
 	if (iterator.hasNext()) {
+	  log.debug("Getting next element to hash");
 	  curElement = iterator.next();
 	}
 	else {
+	  log.debug("No more elements to hash");
 	  this.isFinished = true;
 	  return numBytes - bytesLeftToHash;
 	}
