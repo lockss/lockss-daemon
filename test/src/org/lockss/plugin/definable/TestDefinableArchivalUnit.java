@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.11 2004-09-02 18:32:55 troberts Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.12 2004-09-02 19:56:21 troberts Exp $
  */
 
 /*
@@ -224,6 +224,18 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 		  "org.lockss.plugin.definable.TestDefinableArchivalUnit$MyNormalizer");
     UrlNormalizer urlNormalizer = cau.makeUrlNormalizer();
     assertTrue(urlNormalizer instanceof org.lockss.plugin.definable.TestDefinableArchivalUnit.MyNormalizer);
+  }
+
+  public void testMakeUrlNormalizerThrowsOnBadClass()
+      throws LockssRegexpException {
+    map.putString(DefinableArchivalUnit.AU_URL_NORMALIZER_KEY,
+		  "org.lockss.bogus.FakeClass");
+
+    try {
+      UrlNormalizer urlNormalizer = cau.makeUrlNormalizer();
+      fail("Should have thrown on a non-existant class");
+    } catch (DefinablePlugin.InvalidDefinitionException e){
+    }
   }
 
   public static class NegativeCrawlRuleFactory
