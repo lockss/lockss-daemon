@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerImpl.java,v 1.13 2004-03-09 23:24:31 troberts Exp $
+ * $Id: CrawlerImpl.java,v 1.14 2004-03-11 09:39:47 tlipkis Exp $
  */
 
 /*
@@ -66,6 +66,8 @@ public abstract class CrawlerImpl implements Crawler {
     Configuration.PREFIX + "crawler.timeout.data";
   public static long DEFAULT_DATA_TIMEOUT = 30 * Constants.MINUTE;
 
+  // Max amount we'll buffer up to avoid refetching the permissions page
+  static final int PERM_BUFFER_MAX = 16 * 1024;
 
   protected ArchivalUnit au;
 
@@ -146,21 +148,31 @@ public abstract class CrawlerImpl implements Crawler {
     // fetch and cache the manifest page
     String manifest = au.getManifestPage();
     UrlCacher uc = makeUrlCacher(ownerCus, manifest);
+    uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW);
     try {
       if (au.shouldBeCached(manifest)) {
         // check for proper crawl window
         if ((au.getCrawlSpec()==null) || (au.getCrawlSpec().canCrawl())) {
-          // check for the permission on the page without caching it
-          InputStream is = uc.getUncachedInputStream();
+          // check for the permission on the page without storing
+          InputStream is =
+	    new BufferedInputStream(uc.getUncachedInputStream());
+	  // allow us to reread contents if reasonable size
+	  is.mark(PERM_BUFFER_MAX);
           // set the reader to our default encoding
           //XXX try to extract encoding from source
-          Reader reader = new InputStreamReader(is, Constants.DEFAULT_ENCODING);
+          Reader reader =
+	    new InputStreamReader(is, Constants.DEFAULT_ENCODING);
           crawl_ok = au.checkCrawlPermission(reader);
           if (!crawl_ok) {
             logger.error("Couldn't start crawl due to missing permission.");
           } else {
             logger.debug2("Permission granted. Caching permission page.");
-            uc.cache();
+	    try {
+	      is.reset();
+	      uc.storeContent(is, uc.getUncachedProperties());
+	    } catch (IOException e) {
+	      uc.cache();
+	    }
           }
         } else {
           logger.debug("Couldn't start crawl due to crawl window restrictions.");
@@ -171,10 +183,10 @@ public abstract class CrawlerImpl implements Crawler {
       }
     } catch (IOException ex) {
       logger.warning("Exception reading manifest: "+ex);
-      crawlStatus.setCrawlError(Crawler.STATUS_FETCH_ERROR);
+      err = Crawler.STATUS_FETCH_ERROR;
     }
     if (!crawl_ok) {
-      crawlStatus.setCrawlError(Crawler.STATUS_FETCH_ERROR);
+      crawlStatus.setCrawlError(err);
     }
     return crawl_ok;
   }
