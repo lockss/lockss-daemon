@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.19 2003-02-26 02:19:27 aalto Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.20 2003-02-28 22:20:07 aalto Exp $
  */
 
 /*
@@ -181,8 +181,14 @@ public class LockssRepositoryImpl implements LockssRepository, LockssManager {
 
   private synchronized RepositoryNode getNode(String url, boolean create)
       throws MalformedURLException {
+    String urlKey = url;
+    boolean isAuUrl = false;
+    if (AuUrl.isAuUrl(url)) {
+      urlKey = AuUrl.PROTOCOL;
+      isAuUrl = true;
+    }
     // check LRUMap cache for node
-    RepositoryNode node = (RepositoryNode)nodeCache.get(url);
+    RepositoryNode node = (RepositoryNode)nodeCache.get(urlKey);
     if (node!=null) {
       cacheHits++;
       return node;
@@ -191,21 +197,23 @@ public class LockssRepositoryImpl implements LockssRepository, LockssManager {
     }
 
     // check weak reference map for node
-    node = (RepositoryNode)refMap.get(url);
+    node = (RepositoryNode)refMap.get(urlKey);
     if (node!=null) {
       refHits++;
-      nodeCache.put(url, node);
+      nodeCache.put(urlKey, node);
       return node;
     } else {
       refMisses++;
     }
 
     String nodeLocation;
-    if (AuUrl.isAuUrl(url)) {
+    if (isAuUrl) {
       // base directory of ArchivalUnit
       nodeLocation = rootLocation;
+      node = new AuNodeImpl(url, nodeLocation, this);
     } else {
       nodeLocation = FileLocationUtil.mapUrlToFileLocation(rootLocation, url);
+      node = new RepositoryNodeImpl(url, nodeLocation, this);
     }
     if (!create) {
       // if not creating, check for existence
@@ -218,16 +226,10 @@ public class LockssRepositoryImpl implements LockssRepository, LockssManager {
         throw new LockssRepository.RepositoryStateException("Invalid cache file.");
       }
     }
-    if (AuUrl.isAuUrl(url)) {
-      // base directory of ArchivalUnit
-      node = new AuNodeImpl(url, nodeLocation, this);
-    } else {
-      node = new RepositoryNodeImpl(url, nodeLocation, this);
-    }
 
     // add to node cache and weak reference cache
-    nodeCache.put(url, node);
-    refMap.put(url, node);
+    nodeCache.put(urlKey, node);
+    refMap.put(urlKey, node);
     return node;
   }
 
@@ -236,8 +238,8 @@ public class LockssRepositoryImpl implements LockssRepository, LockssManager {
    * of {@link RepositoryNodeImpl}.
    * @param url the reference key url
    */
-  synchronized void removeReference(String url) {
-    refMap.remove(url);
+  synchronized void removeReference(String urlKey) {
+    refMap.remove(urlKey);
   }
 
   int getCacheHits() { return cacheHits; }

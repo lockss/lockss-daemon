@@ -1,5 +1,5 @@
 /*
- * $Id: AuState.java,v 1.5 2003-02-26 03:06:21 aalto Exp $
+ * $Id: AuState.java,v 1.6 2003-02-28 22:20:07 aalto Exp $
  */
 
 /*
@@ -77,14 +77,14 @@ public class AuState {
   /**
    * Sets the last crawl time to the current time.
    */
-  public void newCrawlFinished() {
+  void newCrawlFinished() {
     lastCrawlTime = TimeBase.nowMs();
   }
 
   /**
    * Sets the last poll time to the current time.
    */
-  public void newPollFinished() {
+  void newPollFinished() {
     lastTopLevelPoll = TimeBase.nowMs();
   }
 

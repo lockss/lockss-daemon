@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManager.java,v 1.10 2003-02-28 00:24:37 troberts Exp $
+ * $Id: NodeManager.java,v 1.11 2003-02-28 22:20:07 aalto Exp $
  */
 
 /*
@@ -59,7 +59,7 @@ public interface NodeManager {
   public void startPoll(CachedUrlSet cus, Poll.VoteTally state);
 
   /**
-   * update a node state with current poll results
+   * Update a node state with current poll results
    * @param cus the cached url set used to identify the node
    * @param results the poll results
    */
@@ -128,4 +128,8 @@ public interface NodeManager {
    */
   public void startTreeWalk();
 
+  /**
+   * Alerts the NodeManager that a new top-level content crawl has finished.
+   */
+  public void newTopLevelCrawlFinished();
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: AuNodeImpl.java,v 1.1 2003-02-26 02:19:27 aalto Exp $
+ * $Id: AuNodeImpl.java,v 1.2 2003-02-28 22:20:07 aalto Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import org.lockss.util.Logger;
 import org.lockss.daemon.CachedUrlSetSpec;
 import org.lockss.util.Deadline;
 import java.net.URL;
+import org.lockss.plugin.AuUrl;
 
 /**
  * AuNode is used to represent the top-level contents of an ArchivalUnit.
@@ -49,6 +50,12 @@ public class AuNodeImpl extends RepositoryNodeImpl {
                      LockssRepositoryImpl repository) {
     super(url, nodeLocation, repository);
   }
+
+  public void finalize() {
+    url = AuUrl.PROTOCOL;
+    super.finalize();
+  }
+
 
   /**
    * Overriden to return false.
