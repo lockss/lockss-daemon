@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.131 2005-02-23 00:41:38 smorabito Exp $
+ $Id: build.xml,v 1.131.2.1 2005-03-02 22:59:27 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -254,14 +254,10 @@ Args:
     <pathelement path="${lockss.ant.jar}" />
   </path>
 
-  <!-- Classpath exported to production environment includes UI jar so API
-  servlet can be run if jar is present. -->
-  <!-- The UI jar is not actually available to any targets in this build,
-  so it doesn't make sense to use this classpath for any other purpose. -->
-
+  <!-- Classpath exported to production environment. -->
   <path id="prod.run.classpath">
-    <path refid="test.run.classpath" />
-<!--    <pathelement path="${lib}/lockss-ui.jar" /> -->
+<!--     <path refid="test.run.classpath" /> -->
+    <path refid="run.classpath" />
   </path> 
 
   <path id="tools.compile.classpath">
