@@ -1,5 +1,5 @@
 /*
-* $Id: V2NamePoll.java,v 1.1 2003-07-16 17:34:39 dshr Exp $
+* $Id: V2NamePoll.java,v 1.2 2004-01-31 22:57:36 tlipkis Exp $
  */
 
 /*
@@ -53,8 +53,8 @@ public class V2NamePoll extends V2Poll {
 
   V2NamePoll(LcapMessage msg, PollSpec pollspec, PollManager pm) {
     super(msg, pollspec, pm);
-    log.warning("V2 name poll constructor: " + msg.toString() + " " +
-		pollspec.toString() + " " + pm.toString());
+    log.debug("V2 name poll constructor: " + msg + " " +
+	      pollspec + " " + pm);
   }
 
 

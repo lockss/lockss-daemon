@@ -1,5 +1,5 @@
 /*
-* $Id: V2ContentPoll.java,v 1.1 2003-07-16 17:34:39 dshr Exp $
+* $Id: V2ContentPoll.java,v 1.2 2004-01-31 22:57:36 tlipkis Exp $
  */
 
 /*
@@ -53,8 +53,8 @@ public class V2ContentPoll extends V2Poll {
 
   V2ContentPoll(LcapMessage msg, PollSpec pollspec, PollManager pm) {
     super(msg, pollspec, pm);
-    log.warning("V2 content poll constructor: " + msg.toString() + " " +
-		pollspec.toString() + " " + pm.toString());
+    log.debug("V2 content poll constructor: " + msg + " " +
+	      pollspec + " " + pm);
   }
 
 
