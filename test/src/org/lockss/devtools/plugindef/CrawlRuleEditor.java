@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRuleEditor.java,v 1.2 2004-05-14 22:31:27 clairegriffin Exp $
+ * $Id: CrawlRuleEditor.java,v 1.3 2004-05-15 01:23:24 clairegriffin Exp $
  */
 
 /*
@@ -31,12 +31,13 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.devtools.plugindef;
 
-import java.awt.*;
-import javax.swing.*;
-import java.awt.event.*;
 import java.util.*;
-import javax.swing.table.*;
+
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
 import javax.swing.event.*;
+import javax.swing.table.*;
 
 /**
  * <p>Title: </p>
@@ -110,7 +111,8 @@ public class CrawlRuleEditor extends JDialog implements EDPEditor{
 
   void addButton_actionPerformed(ActionEvent e) {
     CrawlRuleModel model = (CrawlRuleModel) rulesTable.getModel();
-    model.addRow();
+    int row = rulesTable.getSelectedRow();
+    model.addNewRow(row);
   }
 
   void okButton_actionPerformed(ActionEvent e) {
@@ -220,17 +222,27 @@ public class CrawlRuleEditor extends JDialog implements EDPEditor{
       fireTableCellUpdated(row, col);
     }
 
-    public void addRowData(Object[] data) {
-      m_tableData.add(data);
+    public void addRowData(int row , Object[] data) {
+      if(row < 0) {
+        m_tableData.add(data);
+      }
+      else {
+        m_tableData.add(row, data);
+      }
       fireTableDataChanged();
     }
 
-    public void addRow() {
+   /**
+     * addRow
+     *
+     * @param row int
+     */
+    private void addNewRow(int row) {
       Object[] entry = new Object[2];
       CrawlRuleTemplate crt = new CrawlRuleTemplate();
       entry[0] = crt.getKindString();
       entry[1] = crt;
-      addRowData(entry);
+      addRowData(row, entry);
     }
 
     public void removeRowData(int row) {
@@ -239,6 +251,7 @@ public class CrawlRuleEditor extends JDialog implements EDPEditor{
       }
       fireTableDataChanged();
     }
+
   }
 
   class CrawlRuleCellEditor
