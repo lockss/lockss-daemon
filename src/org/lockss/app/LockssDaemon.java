@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.19 2003-04-10 21:35:56 tal Exp $
+ * $Id: LockssDaemon.java,v 1.20 2003-04-16 05:50:48 aalto Exp $
  */
 
 /*
@@ -146,14 +146,13 @@ public class LockssDaemon {
   // Need to preserve order so managers are started and stopped in the
   // right order.  This does not need to be synchronized.
   protected static Map theManagers = new SequencedHashMap();
+  protected static ActivityRegulator regulator = new ActivityRegulator();
 
-
-  protected LockssDaemon(List propUrls){
+  protected LockssDaemon(List propUrls) {
     this.propUrls = propUrls;
   }
 
   public static void main(String[] args) {
-
     Vector urls = new Vector();
 
     for (int i=0; i<args.length; i++) {
@@ -316,8 +315,6 @@ public class LockssDaemon {
     return (StatusService) getManager(STATUS_SERVICE);
   }
 
-
-
   /**
    * return the plugin manager instance
    * @return the PluginManager
@@ -335,6 +332,10 @@ public class LockssDaemon {
 
   public IdentityManager getIdentityManager() {
     return (IdentityManager) getManager(IDENTITY_MANAGER);
+  }
+
+  public static ActivityRegulator getActivityRegulator() {
+    return regulator;
   }
 
   public void stopDaemon() {
@@ -355,7 +356,6 @@ public class LockssDaemon {
     initManagers();
   }
 
-
   /**
    * stop the daemon
    */
@@ -368,6 +368,9 @@ public class LockssDaemon {
       LockssManager lm = (LockssManager)it.next();
       lm.stopService();
     }
+
+    // release all locks in the ActivityRegulator
+    regulator.freeAllLocks();
   }
 
   /**
@@ -382,7 +385,6 @@ public class LockssDaemon {
     // get the properties we're going to store locally
 
   }
-
 
   /**
    * init all of the managers that support the daemon.
@@ -408,7 +410,7 @@ public class LockssDaemon {
   }
 
   /**
-   * load the managers with the manager class name
+   * Load the managers with the manager class name
    * @param managerName the class name of the manager to load
    * @return the manager that has been loaded
    * @throws Exception if load fails
@@ -428,12 +430,16 @@ public class LockssDaemon {
     }
   }
 
-  /** Return true iff all managers have been inited */
+  /**
+   * True iff all managers were inited.
+   * @return true iff all managers have been inited */
   public boolean isDaemonInited() {
     return daemonInited;
   }
 
-  /** Return true iff all managers have been started */
+  /**
+   * True if all managers were started.
+   * @return true iff all managers have been started */
   public boolean isDaemonRunning() {
     return daemonRunning;
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseLockssManager.java,v 1.6 2003-04-03 11:28:18 tal Exp $
+ * $Id: BaseLockssManager.java,v 1.7 2003-04-16 05:50:48 aalto Exp $
  */
 
 /*
@@ -46,10 +46,14 @@ public abstract class BaseLockssManager implements LockssManager {
   private Configuration.Callback configCallback;
   private static Logger log=Logger.getLogger("BaseLockssManager");
 
-  /** Called to initialize each service in turn.  Service should extend
+  /**
+   * Called to initialize each service in turn.  Service should extend
    * this to perform any internal initialization necessary before service
    * can be called from outside.  No calls to other services may be made in
-   * this method. */
+   * this method.
+   * @param daemon the {@link LockssDaemon}
+   * @throws LockssDaemonException
+   */
   public void initService(LockssDaemon daemon) throws LockssDaemonException {
     if(theManager == null) {
       theDaemon = daemon;
@@ -79,7 +83,10 @@ public abstract class BaseLockssManager implements LockssManager {
     return theDaemon;
   }
 
-  /** Return true iff all the daemon services have been initialized. */
+  /**
+   * Return true iff all the daemon services have been initialized.
+   * @return true if the daemon is inited
+   */
   protected boolean isDaemonInited() {
     return theDaemon.isDaemonInited();
   }
@@ -115,7 +122,11 @@ public abstract class BaseLockssManager implements LockssManager {
   /** Managers must implement this method.  It is called once at daemon
    * init time (during initService()) and again whenever the current
    * configuration changes.  This method should not invoke other services
-   * unless isDaemonInited() is true. */
+   * unless isDaemonInited() is true.
+   * @param newConfig the new {@link Configuration}
+   * @param prevConfig the previous {@link Configuration}
+   * @param changedKeys the {@link Set} of changed keys
+   */
   protected abstract void setConfig(Configuration newConfig,
 				    Configuration prevConfig,
 				    Set changedKeys);

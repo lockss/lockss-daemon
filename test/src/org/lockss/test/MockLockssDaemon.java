@@ -51,6 +51,8 @@ public class MockLockssDaemon extends LockssDaemon {
     nodeManagerService = null;
     statusService = null;
     //super.stopDaemon();
+
+    regulator.freeAllLocks();
   }
 
   /**
