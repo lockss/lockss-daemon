@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.32 2004-03-18 03:34:22 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.33 2004-03-23 08:26:41 tlipkis Exp $
  */
 
 /*
@@ -244,13 +244,21 @@ public class BaseUrlCacher implements UrlCacher {
       StreamUtil.copy(input, os);
       input.close();
       os.close();
+      headers.setProperty(CachedUrl.PROPERTY_NODE_URL, url);
+      leaf.setNewProperties(headers);
+      leaf.sealNewVersion();
     }
-    catch (IOException ex) {
+    catch (Exception ex) {
+      logger.debug("storeContentIn", ex);
+      if (leaf != null) {
+	try {
+	  leaf.abandonNewVersion();
+	} catch (Exception e) {
+	  // just being paranoid
+	}
+      }
       throw resultMap.getRepositoryException(ex);
     }
-    headers.setProperty(CachedUrl.PROPERTY_NODE_URL, url);
-    leaf.setNewProperties(headers);
-    leaf.sealNewVersion();
   }
 
   public InputStream getUncachedInputStream() throws IOException {
