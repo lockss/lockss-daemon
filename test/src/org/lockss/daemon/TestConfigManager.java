@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigManager.java,v 1.11 2004-07-15 05:08:48 smorabito Exp $
+ * $Id: TestConfigManager.java,v 1.12 2004-07-21 18:10:38 smorabito Exp $
  */
 
 /*
@@ -142,9 +142,6 @@ public class TestConfigManager extends LockssTestCase {
   }
 
   public void testCallbackDiffs() throws IOException {
-    // There is only one ConfigCache per manager, so we must
-    // reset the configuration.
-    mgr.resetConfigCache();
     setCurrentConfigFromUrlList(ListUtil.list(FileTestUtil.urlOfString(c1),
 					      FileTestUtil.urlOfString(c1a)));
     System.out.println(mgr.getCurrentConfig().toString());
@@ -156,19 +153,16 @@ public class TestConfigManager extends LockssTestCase {
 	  diffSet = changedKeys;
 	}
       });
-    mgr.resetConfigCache();
     assertTrue(setCurrentConfigFromUrlList(ListUtil.
 					   list(FileTestUtil.urlOfString(c1a),
 						FileTestUtil.urlOfString(c1))));
     assertEquals(SetUtil.set("prop2"), diffSet);
     System.out.println(mgr.getCurrentConfig().toString());
-    mgr.resetConfigCache();
     assertTrue(setCurrentConfigFromUrlList(ListUtil.
 					   list(FileTestUtil.urlOfString(c1),
 						FileTestUtil.urlOfString(c1))));
     assertEquals(SetUtil.set("prop4"), diffSet);
     System.out.println(mgr.getCurrentConfig().toString());
-    mgr.resetConfigCache();
     assertTrue(setCurrentConfigFromUrlList(ListUtil.
 					   list(FileTestUtil.urlOfString(c1),
 						FileTestUtil.urlOfString(c1a))));
