@@ -1,5 +1,5 @@
 /*
- * $Id: ActivityRegulator.java,v 1.10 2003-04-18 22:08:02 aalto Exp $
+ * $Id: ActivityRegulator.java,v 1.11 2003-04-24 01:21:27 aalto Exp $
  */
 
 /*
@@ -85,9 +85,14 @@ public class ActivityRegulator extends BaseLockssManager {
   public static final int STANDARD_CONTENT_POLL = 13;
 
   /**
+   * Integer representing the single node content poll activity.  CUS level.
+   */
+  public static final int SINGLE_NODE_CONTENT_POLL = 14;
+
+  /**
    * Integer representing the name poll activity.  CUS level.
    */
-  public static final int STANDARD_NAME_POLL = 14;
+  public static final int STANDARD_NAME_POLL = 15;
 
   /**
    * Integer representing no activity. AU or CUS level.
@@ -262,7 +267,7 @@ public class ActivityRegulator extends BaseLockssManager {
         }
         if (!isAllowedOnCus(activity, value.activity, relation)) {
           String relationStr = (relation==RELATION_CHILD ? "Child" : "Parent");
-          logger.debug2(relationStr + " CUS '" + cus.getUrl() + "' busy with " +
+          logger.debug2(relationStr + " CUS busy with " +
                         activityCodeToString(value.activity) +
                         ". Couldn't start " + activityCodeToString(activity) +
                         " on CUS '" + cus.getUrl() + "'");
@@ -337,6 +342,18 @@ public class ActivityRegulator extends BaseLockssManager {
           return ((cusActivity==STANDARD_NAME_POLL) &&
                   ((newActivity==STANDARD_CONTENT_POLL) ||
                    (newActivity==REPAIR_CRAWL)));
+        } else {
+          // if this CUS is a child, only crawls allowed
+          return ((newActivity==BACKGROUND_CRAWL) ||
+                  (newActivity==REPAIR_CRAWL));
+        }
+      case SINGLE_NODE_CONTENT_POLL:
+        if (relation==RELATION_SAME) {
+          // only one action on a CUS at a time unless it's a name poll
+          return (newActivity==REPAIR_CRAWL);
+        } else if (relation==RELATION_PARENT) {
+          // if this CUS is a parent, allow anything below
+          return true;
         } else {
           // if this CUS is a child, only crawls allowed
           return ((newActivity==BACKGROUND_CRAWL) ||
@@ -447,6 +464,8 @@ public class ActivityRegulator extends BaseLockssManager {
         return "Top Level Poll";
       case STANDARD_CONTENT_POLL:
         return "Content Poll";
+      case SINGLE_NODE_CONTENT_POLL:
+        return "Single Node Content Poll";
       case STANDARD_NAME_POLL:
         return "Name Poll";
       case TREEWALK:
@@ -477,6 +496,7 @@ public class ActivityRegulator extends BaseLockssManager {
       case BACKGROUND_CRAWL:
       case REPAIR_CRAWL:
       case STANDARD_CONTENT_POLL:
+      case SINGLE_NODE_CONTENT_POLL:
       case STANDARD_NAME_POLL:
       case NO_ACTIVITY:
         return true;

@@ -1,5 +1,5 @@
 /*
- * $Id: TestActivityRegulator.java,v 1.8 2003-04-18 22:08:02 aalto Exp $
+ * $Id: TestActivityRegulator.java,v 1.9 2003-04-24 01:21:27 aalto Exp $
  */
 
 /*
@@ -226,6 +226,9 @@ public class TestActivityRegulator extends LockssTestCase {
   }
 
   public void testIsAllowedOnAu() {
+    // using NO_ACTIVITY as a generic activity marker, since this functions
+    // don't specifically handle it
+
     // nothing allowed on these
     assertFalse(allower.isAllowedOnAu(allower.NO_ACTIVITY, allower.NEW_CONTENT_CRAWL));
     assertFalse(allower.isAllowedOnAu(allower.NO_ACTIVITY, allower.TREEWALK));
@@ -245,6 +248,9 @@ public class TestActivityRegulator extends LockssTestCase {
   }
 
   public void testIsAllowedOnCus() {
+    // using NO_ACTIVITY as a generic activity marker, since this functions
+    // don't specifically handle it
+
     // if a crawl-
     //   allow only name poll if same
     assertFalse(allower.isAllowedOnCus(allower.NO_ACTIVITY, allower.BACKGROUND_CRAWL, allower.RELATION_SAME));
@@ -267,7 +273,14 @@ public class TestActivityRegulator extends LockssTestCase {
     //   allow only crawls if child
     assertFalse(allower.isAllowedOnCus(allower.NO_ACTIVITY, allower.STANDARD_CONTENT_POLL, allower.RELATION_CHILD));
     assertTrue(allower.isAllowedOnCus(allower.REPAIR_CRAWL, allower.STANDARD_CONTENT_POLL, allower.RELATION_CHILD));
-
+    //   for single node polls, allow only repair crawl if same
+    assertFalse(allower.isAllowedOnCus(allower.STANDARD_NAME_POLL, allower.SINGLE_NODE_CONTENT_POLL, allower.RELATION_SAME));
+    assertTrue(allower.isAllowedOnCus(allower.REPAIR_CRAWL, allower.SINGLE_NODE_CONTENT_POLL, allower.RELATION_SAME));
+    //   allow anything if parent
+    assertTrue(allower.isAllowedOnCus(allower.NO_ACTIVITY, allower.SINGLE_NODE_CONTENT_POLL, allower.RELATION_PARENT));
+    //   allow only crawls if child
+    assertFalse(allower.isAllowedOnCus(allower.STANDARD_NAME_POLL, allower.SINGLE_NODE_CONTENT_POLL, allower.RELATION_CHILD));
+    assertTrue(allower.isAllowedOnCus(allower.REPAIR_CRAWL, allower.SINGLE_NODE_CONTENT_POLL, allower.RELATION_CHILD));
   }
 
   public void testAuExpiration() {
