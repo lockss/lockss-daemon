@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfiguration.java,v 1.4 2005-01-04 02:49:45 tlipkis Exp $
+ * $Id: TestConfiguration.java,v 1.5 2005-01-20 04:36:10 tlipkis Exp $
  */
 
 /*
@@ -442,6 +442,15 @@ public class TestConfiguration extends LockssTestCase {
     assertEquals(2, c3.keySet().size());
     assertEquals("a", c3.get("foo.bar.p1"));
     assertEquals("b", c3.get("foo.bar.p2"));
+  }
+
+  public void testGroup() throws Exception {
+    Properties props = new Properties();
+    ConfigurationUtil.setCurrentConfigFromProps(props);
+    assertEquals("nogroup", Configuration.getPlatformGroup());
+    props.put(Configuration.PARAM_DAEMON_GROUP, "foog");
+    ConfigurationUtil.setCurrentConfigFromProps(props);
+    assertEquals("foog", Configuration.getPlatformGroup());
   }
 
   private ConfigFile loadFCF(String url) throws IOException {
