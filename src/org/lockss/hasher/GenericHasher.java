@@ -1,5 +1,5 @@
 /*
- * $Id: GenericHasher.java,v 1.2 2002-11-23 01:31:20 troberts Exp $
+ * $Id: GenericHasher.java,v 1.3 2002-12-17 02:06:53 aalto Exp $
  */
 
 /*
@@ -41,6 +41,10 @@ import org.lockss.util.*;
  * General class to handle content hashing
  */
 public abstract class GenericHasher implements CachedUrlSetHasher {
+  static final int HASH_TEST_DURATION = 1000;
+  static final int HASH_TEST_BYTE_STEP = 1024;
+  static final int MIN_BYTES_TO_HASH = 100;
+
   private CachedUrlSet cus = null;
   protected MessageDigest digest = null;
   private Object curElement = null;
@@ -48,6 +52,7 @@ public abstract class GenericHasher implements CachedUrlSetHasher {
   protected boolean isFinished = false;
   protected boolean shouldGetNextElement = true;
   protected static Logger log = Logger.getLogger("GenericHasher");
+  private static int bytesPerMsEst = 0;
 
 
   protected GenericHasher(CachedUrlSet cus, MessageDigest digest) {
@@ -64,8 +69,9 @@ public abstract class GenericHasher implements CachedUrlSetHasher {
 
   /**
    * @param numBytes maximum number of bytes to hash (counting delimiters)
-   * @return number of bytes actually hashed.  This will only be less than 
+   * @return number of bytes actually hashed.  This will only be less than
    * numBytes if there is nothing left to hash.
+   * @throws IOException
    */
   public int hashStep(int numBytes) throws IOException {
     if (digest == null || cus == null || iterator == null) {
@@ -89,16 +95,30 @@ public abstract class GenericHasher implements CachedUrlSetHasher {
 	  return numBytes - bytesLeftToHash;
 	}
       }
-      int numBytesHashed = 
+      int numBytesHashed =
 	hashElementUpToNumBytes(curElement, bytesLeftToHash);
       bytesLeftToHash -= numBytesHashed;
     }
     return numBytes;
   }
 
+  public int getBytesPerMsEstimate() throws IOException {
+    if (bytesPerMsEst == 0) {
+      long timeTaken = 0;
+      long bytesHashed = 0;
+      while (timeTaken<HASH_TEST_DURATION) {
+        long startTime = TimeBase.nowMs();
+        bytesHashed += hashStep(HASH_TEST_BYTE_STEP);
+        timeTaken += TimeBase.nowMs() - startTime;
+      }
+      bytesPerMsEst = (int)(bytesHashed / timeTaken);
+    }
+    return bytesPerMsEst;
+  }
+
   /*
    * Subclasses should override this to correctly hash the specified element
    */
-  protected abstract int hashElementUpToNumBytes(Object element, int numBytes) 
+  protected abstract int hashElementUpToNumBytes(Object element, int numBytes)
       throws IOException;
 }

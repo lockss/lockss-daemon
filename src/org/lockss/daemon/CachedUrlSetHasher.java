@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrlSetHasher.java,v 1.2 2002-07-09 13:40:13 dshr Exp $
+ * $Id: CachedUrlSetHasher.java,v 1.3 2002-12-17 02:06:53 aalto Exp $
  */
 
 /*
@@ -52,4 +52,12 @@ public interface CachedUrlSetHasher {
      * @return <code>true</code> if there is nothing left to hash.
      */
     public boolean finished();
+
+    /**
+     * Returns an estimate on the hashed bytes per ms for this hasher.
+     * Tests by hashing the CachedUrlSet for a small period of time.
+     * @returns an int for estimated bytes/ms
+     * @throws IOException
+     */
+    public int getBytesPerMsEstimate() throws IOException;
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericContentHasher.java,v 1.1 2002-11-06 18:33:26 troberts Exp $
+ * $Id: TestGenericContentHasher.java,v 1.2 2002-12-17 02:06:53 aalto Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.io.*;
 import junit.framework.TestCase;
 import org.lockss.test.*;
 import org.lockss.daemon.*;
+import org.lockss.util.TimeBase;
 
 public class TestGenericContentHasher extends LockssTestCase {
   private static final char DELIMITER='&';
@@ -64,30 +65,13 @@ public class TestGenericContentHasher extends LockssTestCase {
 
     assertEquals(0, hasher.hashStep(1));
     assertTrue(hasher.finished());
-    
+
     assertEquals(-1, dig.getUpdatedByte());
   }
 
   public void testHashSingleFile() throws IOException, FileNotFoundException {
     CachedUrlSet cus = makeFakeCachedUrlSet(1);
     byte[] bytes = getFakeCUBytes(1);
-    
-    GenericContentHasher hasher = new GenericContentHasher(cus, dig);
-
-    assertEquals(bytes.length, hasher.hashStep(bytes.length));
-    assertEquals(0, hasher.hashStep(1));
-    assertTrue(hasher.finished());
-
-    for (int ix=0; ix<bytes.length; ix++) {
-      assertEquals(bytes[ix], dig.getUpdatedByte());
-    }
-  }
-
-  public void testHashMultipleFiles() 
-      throws IOException, FileNotFoundException {
-    CachedUrlSet cus = makeFakeCachedUrlSet(5);
-    byte[] bytes = getFakeCUBytes(5);
-    
 
     GenericContentHasher hasher = new GenericContentHasher(cus, dig);
 
@@ -100,11 +84,28 @@ public class TestGenericContentHasher extends LockssTestCase {
     }
   }
 
-  public void testHashMultipleFilesSmallSteps() 
+  public void testHashMultipleFiles()
       throws IOException, FileNotFoundException {
     CachedUrlSet cus = makeFakeCachedUrlSet(5);
     byte[] bytes = getFakeCUBytes(5);
-    
+
+
+    GenericContentHasher hasher = new GenericContentHasher(cus, dig);
+
+    assertEquals(bytes.length, hasher.hashStep(bytes.length));
+    assertEquals(0, hasher.hashStep(1));
+    assertTrue(hasher.finished());
+
+    for (int ix=0; ix<bytes.length; ix++) {
+      assertEquals(bytes[ix], dig.getUpdatedByte());
+    }
+  }
+
+  public void testHashMultipleFilesSmallSteps()
+      throws IOException, FileNotFoundException {
+    CachedUrlSet cus = makeFakeCachedUrlSet(5);
+    byte[] bytes = getFakeCUBytes(5);
+
 
     GenericContentHasher hasher = new GenericContentHasher(cus, dig);
     int totalHashed = 0;
@@ -118,11 +119,11 @@ public class TestGenericContentHasher extends LockssTestCase {
     }
   }
 
-  public void testHashMultipleFilesStepsLargerThanCU() 
+  public void testHashMultipleFilesStepsLargerThanCU()
       throws IOException, FileNotFoundException {
     CachedUrlSet cus = makeFakeCachedUrlSet(5);
     byte[] bytes = getFakeCUBytes(5);
-    
+
 
     GenericContentHasher hasher = new GenericContentHasher(cus, dig);
     int totalHashed = 0;
@@ -136,11 +137,11 @@ public class TestGenericContentHasher extends LockssTestCase {
     }
   }
 
-  public void testHashMultipleFilesTooLargeStep() 
+  public void testHashMultipleFilesTooLargeStep()
       throws IOException, FileNotFoundException {
     CachedUrlSet cus = makeFakeCachedUrlSet(5);
     byte[] bytes = getFakeCUBytes(5);
-    
+
 
     GenericContentHasher hasher = new GenericContentHasher(cus, dig);
     int totalHashed = 0;
@@ -152,6 +153,16 @@ public class TestGenericContentHasher extends LockssTestCase {
     for (int ix=0; ix<bytes.length; ix++) {
       assertEquals(bytes[ix], dig.getUpdatedByte());
     }
+  }
+
+  public void testHashEstimation() throws IOException {
+    CachedUrlSet cus = makeFakeCachedUrlSet(5);
+    GenericContentHasher hasher = new GenericContentHasher(cus, dig);
+    long startTime = TimeBase.nowMs();
+    long estimate = hasher.getBytesPerMsEstimate();
+    long endTime = TimeBase.nowMs();
+    assertTrue(estimate > 0);
+    assertTrue(endTime - startTime > GenericHasher.HASH_TEST_DURATION);
   }
 
   private Vector cachedUrlSetToBytes(CachedUrlSet cus) throws IOException {
@@ -176,7 +187,7 @@ public class TestGenericContentHasher extends LockssTestCase {
 
   private byte[] getFakeCUBytes(int numFiles) {
     int fileSize = TEST_URL.length()+TEST_FILE_CONTENT.length()+4;
-    int size = fileSize*numFiles; 
+    int size = fileSize*numFiles;
     byte[] bytes = new byte[size];
     int curByteIdx = 0;
     for (int ix=0; ix<numFiles; ix++) {
@@ -195,18 +206,18 @@ public class TestGenericContentHasher extends LockssTestCase {
     return bytes;
   }
 
-  private CachedUrlSet makeFakeCachedUrlSet(int numFiles) 
+  private CachedUrlSet makeFakeCachedUrlSet(int numFiles)
       throws IOException, FileNotFoundException {
     Vector files = new Vector(numFiles);
     for (int ix=0; ix < numFiles; ix++) {
       String url = TEST_URL+ix;
       MockCachedUrl cu = new MockCachedUrl(url);
-      
-      File testFile = 
+
+      File testFile =
 	FileUtil.writeTempFile(tmpDir.getName(), TEST_FILE_CONTENT+ix);
 
       cu.setInputStream(new FileInputStream(testFile));
-      
+
       files.add(cu);
     }
     MockCachedUrlSet cus = new MockCachedUrlSet(null, null);

@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrlSetHasher.java,v 1.1 2002-11-25 21:34:02 tal Exp $
+ * $Id: MockCachedUrlSetHasher.java,v 1.2 2002-12-17 02:06:53 aalto Exp $
  */
 
 /*
@@ -66,6 +66,10 @@ public class MockCachedUrlSetHasher implements CachedUrlSetHasher {
     numBytes = Math.max(1, Math.min(bytes, numBytes));
     bytes -= numBytes;
     return numBytes;
+  }
+
+  public int getBytesPerMsEstimate() {
+    return 100;
   }
 
   public void setNumBytes(int n) {
