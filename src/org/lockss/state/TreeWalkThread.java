@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkThread.java,v 1.3 2003-03-20 01:53:21 aalto Exp $
+ * $Id: TreeWalkThread.java,v 1.4 2003-03-20 02:00:07 aalto Exp $
  */
 
 /*
@@ -334,6 +334,7 @@ public class TreeWalkThread extends Thread {
                        nodesWalked + " nodes.");
         // set to a harmless constant
         treeWalkEstimate = 1;
+        return;
       }
       // calculate
       double nodesPerMs = ( (double) timeTaken / nodesWalked);
