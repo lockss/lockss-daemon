@@ -1,5 +1,5 @@
 /*
- * $Id: StatusTable.java,v 1.25 2003-12-17 02:09:47 tlipkis Exp $
+ * $Id: StatusTable.java,v 1.26 2003-12-23 00:32:12 tlipkis Exp $
  */
 
 /*
@@ -46,7 +46,7 @@ public class StatusTable {
 
   private String name;
   private String key;
-  private String title;
+  private String title = null;
   private String titleFootnote;
   private List columnDescriptors;
   private List rows;

@@ -1,5 +1,5 @@
 /*
- * $Id: StatusAccessor.java,v 1.13 2003-12-17 02:09:47 tlipkis Exp $
+ * $Id: StatusAccessor.java,v 1.14 2003-12-23 00:32:12 tlipkis Exp $
  */
 
 /*
@@ -52,6 +52,18 @@ public interface StatusAccessor {
    */
   public void populateTable(StatusTable table) 
       throws StatusService.NoSuchTableException;
+
+  /**
+   * The name of the table in links, menus, etc.  The StatusAccessor may
+   * set a different title for any particular table, using {@link
+   * StatusTable#setTitle(String)}.  If it does not, this name will also be
+   * used for the table title.  This method will only be called for tables
+   * that are included in the table of all tables, <i>ie</i>, those that do
+   * not require a key.
+   * @return the name of the table
+   */
+  public String getDisplayName();
+
   /**
    * @return true if a key is required
    */

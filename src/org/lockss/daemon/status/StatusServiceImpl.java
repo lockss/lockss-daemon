@@ -1,5 +1,5 @@
 /*
- * $Id: StatusServiceImpl.java,v 1.19 2003-06-20 22:34:50 claire Exp $
+ * $Id: StatusServiceImpl.java,v 1.20 2003-12-23 00:32:12 tlipkis Exp $
  */
 
 /*
@@ -74,6 +74,13 @@ public class StatusServiceImpl
     } 
     StatusTable table = new StatusTable(tableName, key);
     statusAccessor.populateTable(table);
+    if (table.getTitle() == null) {
+      try {
+	table.setTitle(statusAccessor.getDisplayName());
+      } catch (Exception e) {
+	// ignored
+      }
+    }
     return table;
   }
 
@@ -190,6 +197,10 @@ public class StatusServiceImpl
       sortRules = ListUtil.list(sortRule);
     }
 
+    public String getDisplayName() {
+      return ALL_TABLE_TITLE;
+    }
+
     private List getRows() {
       synchronized(statusAccessors) {
 	Set tables = statusAccessors.keySet();
@@ -204,9 +215,7 @@ public class StatusServiceImpl
 	    Map row = new HashMap(1); //will only have the one key-value pair
 	    String title = null;
  	    try {
-	      StatusTable table = new StatusTable(tableName);
-	      statusAccessor.populateTable(table);
-	      title = table.getTitle();
+	      title = statusAccessor.getDisplayName();
  	    } catch (Exception e) {
  	      // no action, title is null here
  	    }
@@ -238,7 +247,6 @@ public class StatusServiceImpl
      * that don't require a key
      */
     public void populateTable(StatusTable table) {
-      table.setTitle(ALL_TABLE_TITLE);
       table.setColumnDescriptors(columns);
       table.setDefaultSortRules(sortRules);
       table.setRows(getRows());
