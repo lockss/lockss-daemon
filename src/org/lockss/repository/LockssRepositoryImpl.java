@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.49 2004-04-10 05:40:59 tlipkis Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.50 2004-04-13 22:21:25 eaalto Exp $
  */
 
 /*
@@ -180,10 +180,7 @@ public class LockssRepositoryImpl
       // create a canonical path, handling all illegal path traversal
       urlKey = canonicalizePath(url);
     }
-    // XXX canonicalize "dir" and "dir/"
-    if (urlKey.endsWith("/")) {
-      urlKey = urlKey.substring(0, urlKey.length()-1);
-    }
+
     // check LRUMap cache for node
     RepositoryNode node = (RepositoryNode)nodeCache.get(urlKey);
     if (node!=null) {
@@ -300,6 +297,13 @@ public class LockssRepositoryImpl
       logger.error("Error testing URL: "+ie);
       throw new MalformedURLException ("Error testing URL.");
     }
+
+    // canonicalize "dir" and "dir/"
+    // XXX if these are ever two separate nodes, this is wrong
+    if (canonUrl.endsWith("/")) {
+      canonUrl = canonUrl.substring(0, canonUrl.length()-1);
+    }
+
     return canonUrl;
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.46 2004-04-10 05:40:59 tlipkis Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.47 2004-04-13 22:21:26 eaalto Exp $
  */
 
 /*
@@ -122,7 +122,6 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     assertEquals("http://www.example.com/testDir?leaf=2", node.getNodeUrl());
   }
 
-
   public void testDotUrlHandling() throws Exception {
     //testing correction of nodes with bad '..'-including urls,
     //filtering the first '..' but resolving the second
@@ -143,6 +142,12 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
       node = repo.createNewNode("http://www.example.com/test/../../test2");
       fail("Should have thrown MalformedURLException.");
     } catch (MalformedURLException mue) { }
+  }
+
+  public void testSlashRemoval() throws Exception {
+    String testUrl = "http://www.example.com/test/";
+    String expected = "http://www.example.com/test";
+    assertEquals(expected, LockssRepositoryImpl.canonicalizePath(testUrl));
   }
 
   public void testGetAuNode() throws Exception {
