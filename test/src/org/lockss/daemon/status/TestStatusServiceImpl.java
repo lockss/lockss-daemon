@@ -1,9 +1,11 @@
 /*
- * $Id: TestStatusServiceImpl.java,v 1.9 2003-03-18 01:04:18 tal Exp $
+ * $Id: TestStatusServiceImpl.java,v 1.10 2003-03-18 22:27:41 troberts Exp $
  */
 
 /*
+
  Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
+
  all rights reserved.
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
@@ -11,18 +13,22 @@
  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  copies of the Software, and to permit persons to whom the Software is
  furnished to do so, subject to the following conditions:
+
  The above copyright notice and this permission notice shall be included in
  all copies or substantial portions of the Software.
+
  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
  STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
  WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
  IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
  Except as contained in this notice, the name of Stanford University shall not
  be used in advertising or otherwise to promote the sale, use or other dealings
  in this Software without prior written authorization from Stanford University.
- */
+
+*/
 
 package org.lockss.daemon.status;
 import java.util.*;
@@ -202,6 +208,55 @@ public class TestStatusServiceImpl extends LockssTestCase {
     statusService.registerStatusAccessor("table1", statusAccessor);
     StatusTable table = statusService.getTable("table1", key);
     assertEquals(tableTitle, table.getTitle());
+  }
+
+  static final Object[][] headers = {
+    {"Header1", new Integer(ColumnDescriptor.TYPE_STRING), "Header value one"},
+    {"Header2", new Integer(ColumnDescriptor.TYPE_INT), new Integer(2)},
+    {"Header3", new Integer(ColumnDescriptor.TYPE_STRING), "Header value 3"}
+  };
+
+  public void testGetTableHeaders() 
+      throws StatusService.NoSuchTableException {
+    String key = "theKey";
+    MockStatusAccessor statusAccessor = 
+      generateStatusAccessor(colArray1, rowArray1, key, headers);
+
+    statusAccessor.setDefaultSortRules(sortRules1, key);
+    statusService.registerStatusAccessor("table1", statusAccessor); 
+
+    StatusTable table = statusService.getTable("table1", key);
+    List expectedHeaders = makeHeadersFromArray(headers);
+    assertNotNull(table.getHeaders());
+    assertHeadersEqual(expectedHeaders, table.getHeaders());
+  }
+
+  private void assertHeadersEqual(List expected, List actual) {
+    assertEquals("Lists had different sizes", expected.size(), actual.size());
+    Iterator expectedIt = expected.iterator();
+    Iterator actualIt = actual.iterator();
+    while(expectedIt.hasNext()) {
+      StatusTable.Header expectedHead = 
+	(StatusTable.Header)expectedIt.next();
+      StatusTable.Header actualHead = 
+	(StatusTable.Header)actualIt.next();
+      assertEquals(expectedHead.getTitle(), actualHead.getTitle());
+      assertEquals(expectedHead.getType(), actualHead.getType());
+      assertEquals(expectedHead.getValue(), actualHead.getValue());
+    }
+    assertFalse(actualIt.hasNext());
+  }
+  
+  private List makeHeadersFromArray(Object[][] headerArray) {
+    List list = new ArrayList(headerArray.length);
+    for (int ix = 0; ix < headerArray.length; ix++) {
+      StatusTable.Header header = 
+	new StatusTable.Header((String)headerArray[ix][0], 
+			       ((Integer)headerArray[ix][1]).intValue(),
+			       headerArray[ix][2]);
+      list.add(header);
+    }
+    return list;
   }
 
   public void testGetTableWithKey() 
@@ -640,6 +695,16 @@ public class TestStatusServiceImpl extends LockssTestCase {
     statusAccessor.setColumnDescriptors(columns, key);
     statusAccessor.setRows(rows, key);
 
+    return statusAccessor;
+  }
+
+  private MockStatusAccessor generateStatusAccessor(Object[][]colArray, 
+						    Object[][]rowArray,
+						    String key,
+						    Object[][]headers) {
+    MockStatusAccessor statusAccessor = 
+      generateStatusAccessor(colArray, rowArray, key);
+    statusAccessor.setHeaders(key, makeHeadersFromArray(headers));
     return statusAccessor;
   }
 

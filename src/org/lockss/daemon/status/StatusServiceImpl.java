@@ -1,5 +1,5 @@
 /*
- * $Id: StatusServiceImpl.java,v 1.11 2003-03-18 01:04:18 tal Exp $
+ * $Id: StatusServiceImpl.java,v 1.12 2003-03-18 22:27:41 troberts Exp $
  */
 
 /*
@@ -72,6 +72,7 @@ public class StatusServiceImpl
 		      statusAccessor.getColumnDescriptors(key),
 		      statusAccessor.getDefaultSortRules(key),
 		      statusAccessor.getRows(key));
+    table.setHeaders(statusAccessor.getHeaders(key));
     return table;
   }
 
@@ -190,15 +191,14 @@ public class StatusServiceImpl
     /**
      * Ignores key
      */
-    public List getColumnDescriptors(String key) 
-	throws StatusService.NoSuchTableException {
+    public List getColumnDescriptors(String key) {
       return columns;
     }
 
     /**
      * Ignores key
      */
-    public List getRows(String key) throws StatusService.NoSuchTableException {
+    public List getRows(String key) {
       synchronized(statusAccessors) {
 	Set tables = statusAccessors.keySet();
 	Iterator it = tables.iterator();
@@ -232,17 +232,22 @@ public class StatusServiceImpl
     /**
      * Ignores key
      */
-    public List getDefaultSortRules(String key) 
-	throws StatusService.NoSuchTableException {
+    public List getDefaultSortRules(String key) {
       return sortRules;
     }
 
     /**
      * Ignores key
      */
-    public String getTitle(String key) 
-	throws StatusService.NoSuchTableException {
+    public String getTitle(String key) {
       return ALL_TABLE_TITLE;
+    }
+
+    /**
+     * Always returns null
+     */
+    public List getHeaders(String key) {
+      return null;
     }
 
     public boolean requiresKey() {

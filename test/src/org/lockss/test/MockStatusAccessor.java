@@ -1,5 +1,5 @@
 /*
- * $Id: MockStatusAccessor.java,v 1.6 2003-03-15 00:27:22 troberts Exp $
+ * $Id: MockStatusAccessor.java,v 1.7 2003-03-18 22:27:41 troberts Exp $
  */
 
 /*
@@ -41,13 +41,8 @@ public class MockStatusAccessor implements StatusAccessor {
   private Map rows = new HashMap();
   private Map defaultSortRules = new HashMap();
   private Map titles = new HashMap();
+  private Map headers = new HashMap();
 
-
-//   public MockStatusAccessor() {
-//     columnDescriptors = new HashMap();
-//     rows = new HashMap();
-//     defaultSortRules = new HashMap();
-//   }
 
   public List getColumnDescriptors(String key) 
       throws StatusService.NoSuchTableException{
@@ -93,5 +88,13 @@ public class MockStatusAccessor implements StatusAccessor {
 
   public String getTitle(String key) {
     return (String)titles.get(key);
+  }
+
+  public List getHeaders(String key) {
+    return (List)headers.get(key);
+  }
+
+  public void setHeaders(String key, List headers) {
+    this.headers.put(key, headers);
   }
 }
