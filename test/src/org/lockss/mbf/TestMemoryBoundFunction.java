@@ -1,5 +1,5 @@
 /*
- * $Id: TestMBF2.java,v 1.6 2003-08-11 00:04:32 dshr Exp $
+ * $Id: TestMemoryBoundFunction.java,v 1.1 2003-08-11 18:44:53 dshr Exp $
  */
 
 /*
@@ -39,11 +39,12 @@ import org.lockss.test.*;
 import org.lockss.util.*;
 
 /**
- * JUnitTest case for class: org.lockss.mbf.MBF2
+ * JUnitTest case for class: org.lockss.mbf.MemoryBoundFunction and its
+ * implementations.
  * @author David S. H. Rosenthal
  * @version 1.0
  */
-public class TestMBF2 extends LockssTestCase {
+public class TestMemoryBoundFunction extends LockssTestCase {
   private static Logger log = null;
   private static Random rand = null;
   private static File f = null;
@@ -54,10 +55,11 @@ public class TestMBF2 extends LockssTestCase {
     "MBF1",
     "MBF2",
   };
+  private static MemoryBoundFunctionFactory[] factory = null;
 
   protected void setUp() throws Exception {
     super.setUp();
-    log = Logger.getLogger("TestMBF2");
+    log = Logger.getLogger("TestMemoryBoundFunction");
     if (false)
       rand = new Random(100);
     else 
@@ -88,26 +90,66 @@ public class TestMBF2 extends LockssTestCase {
   // XXX separate timing tests etc into Func
 
   /**
+   * Test factory
+   */
+  public void testFactory() {
+    boolean gotException = false;
+    try {
+      MemoryBoundFunctionFactory tmp = new MemoryBoundFunctionFactory("BOGUS");
+    } catch (NoSuchAlgorithmException ex) {
+      gotException = true;
+    }
+    if (!gotException)
+      fail("BOGUS didn't throw NoSuchAlgorithmException");
+    if (factory == null) {
+      factory = new MemoryBoundFunctionFactory[names.length];
+      for (int i = 0; i < names.length; i++) {
+	try {
+	  factory[i] = new MemoryBoundFunctionFactory(names[i]);
+	} catch (NoSuchAlgorithmException ex) {
+	  fail(names[i] + " threw " + ex.toString());
+	}
+      }
+    }
+    byte[] nonce = new byte[4];
+    rand.nextBytes(nonce);
+    for (int i = 0; i < factory.length; i++) {
+      try {
+	MemoryBoundFunction tmp = factory[i].make(nonce, 3, 2048, null, 0);
+	if (tmp == null)
+	  fail(names[i] + " (generate) returned null");
+      } catch (NoSuchAlgorithmException ex) {
+	fail(names[i] + " (generate) threw " + ex.toString());
+      } catch (MemoryBoundFunctionException ex) {
+	fail(names[i] + " (generate) threw " + ex.toString());
+      }
+    }
+    for (int i = 0; i < factory.length; i++) {
+      int[] good = new int[1];
+      good[0] = 1;
+      try {
+	MemoryBoundFunction tmp = factory[i].make(nonce, 3, 2048, good, 2048);
+	if (tmp == null)
+	  fail(names[i] + " (verify) returned null");
+      } catch (NoSuchAlgorithmException ex) {
+	fail(names[i] + " (verify) threw " + ex.toString());
+      } catch (MemoryBoundFunctionException ex) {
+	fail(names[i] + " (verify) threw " + ex.toString());
+      }
+    }
+  }
+
+  /**
    * Test exceptions
    */
   public void testExceptions() {
     byte[] nonce = new byte[4];
     rand.nextBytes(nonce);
-    try {
-      int[] bad = new int[0];
-      MemoryBoundFunction mbf =
-	MemoryBoundFunction.getInstance("BOGUS", nonce, 3, 2048, bad, 9); 
-      fail("BOGUS" + ": didn't throw");
-    } catch (MemoryBoundFunctionException ex) {
-      fail("BOGUS" + ": threw " + ex.toString());
-    } catch (NoSuchAlgorithmException ex) {
-      // No action intended
-    }
-    for (int i = 0; i < names.length; i++) {
+    for (int i = 0; i < factory.length; i++) {
       try {
 	int[] bad = new int[0];
 	MemoryBoundFunction mbf =
-	  MemoryBoundFunction.getInstance(names[i], nonce, 3, 2048, bad, 9);
+	  factory[i].make(nonce, 3, 2048, bad, 9);
 	fail(names[i] + ": didn't throw exception on empty proof");
       } catch (MemoryBoundFunctionException ex) {
 	// No action intended
@@ -117,7 +159,7 @@ public class TestMBF2 extends LockssTestCase {
       try {
 	int[] bad = new int[12];
 	MemoryBoundFunction mbf =
-	  MemoryBoundFunction.getInstance(names[i], nonce, 3, 2048, bad, 9);
+	  factory[i].make(nonce, 3, 2048, bad, 9);
 	fail(names[i] + ": didn't throw exception on too-long proof");
       } catch (MemoryBoundFunctionException ex) {
 	// No action intended
@@ -132,7 +174,7 @@ public class TestMBF2 extends LockssTestCase {
    */
   public void testOnce() throws IOException {
     for (int i = 0; i < names.length; i++)
-      onePair(names[i], 63, 2048);
+      onePair(i, 63, 2048);
   }
 
   /*
@@ -141,7 +183,7 @@ public class TestMBF2 extends LockssTestCase {
   public void dontTestMultiple() throws IOException {
     for (int i = 0; i < names.length; i++)
       for (int j = 0; j < 64; j++) {
-	onePair(names[i], 31, 32);
+	onePair(i, 31, 32);
       }
   }
 
@@ -152,7 +194,7 @@ public class TestMBF2 extends LockssTestCase {
    * * Increasing e increases the factor by which generate is more
    *   costly than verify.
    */
-  public void TimingOne(String name) throws IOException {
+  public void TimingOne(int index) throws IOException {
     byte[] nonce = new byte[24];
     int e;
     int l;
@@ -168,20 +210,20 @@ public class TestMBF2 extends LockssTestCase {
     for (int i = 0; i < numTries; i++) {
       rand.nextBytes(nonce);
       long startTime = System.currentTimeMillis();
-      proof = generate(name, nonce, e, l, l);
+      proof = generate(index, nonce, e, l, l);
       long endTime = System.currentTimeMillis();
       totalGenerateTime += (endTime - startTime);
       startTime = endTime;
-      verify(name, nonce, e, l, proof, l);
+      verify(index, nonce, e, l, proof, l);
       endTime = System.currentTimeMillis();
       totalVerifyTime += (endTime - startTime);
     }
-    log.info(name + " timing(" + e + "," + l + ") test " +
+    log.info(names[index] + " timing(" + e + "," + l + ") test " +
 	     totalGenerateTime + " > " + totalVerifyTime + " msec");
     assertTrue(totalGenerateTime > totalVerifyTime);
   }
 
-  public void TimingTwo(String name) throws IOException {
+  public void TimingTwo(int index) throws IOException {
     byte[] nonce = new byte[24];
     int e = 63;
     int[] l = { 64, 256, 1024, 4096 };
@@ -196,20 +238,20 @@ public class TestMBF2 extends LockssTestCase {
       for (int i = 0; i < numTries; i++) {
 	rand.nextBytes(nonce);
 	long startTime = System.currentTimeMillis();
-	proof = generate(name, nonce, e, l[j], l[j]);
+	proof = generate(index, nonce, e, l[j], l[j]);
 	long endTime = System.currentTimeMillis();
 	totalGenerateTime[j] += (endTime - startTime);
 	startTime = endTime;
-	verify(name, nonce, e, l[j], proof, l[j]);
+	verify(index, nonce, e, l[j], proof, l[j]);
 	endTime = System.currentTimeMillis();
 	totalVerifyTime[j] += (endTime - startTime);
-	log.debug(name + " generate l " + l[j] + " " + totalGenerateTime[j] +
+	log.debug(names[index] + " generate l " + l[j] + " " + totalGenerateTime[j] +
 		 " msec verify " + totalVerifyTime[j] + " msec");
       }
       if (j > 0) {
-	log.info(name + " timing(" + e + ",[" + l[j] + "," + l[j-1] + "]) test " +
+	log.info(names[index] + " timing(" + e + ",[" + l[j] + "," + l[j-1] + "]) test " +
 		 totalGenerateTime[j] + " > " + totalGenerateTime[j-1] + " msec");
-	log.info(name + " timing(" + e + ",[" + l[j] + "," + l[j-1] + "]) test " +
+	log.info(names[index] + " timing(" + e + ",[" + l[j] + "," + l[j-1] + "]) test " +
 		 totalVerifyTime[j] + " > " + totalVerifyTime[j-1] + " msec");
 	assertTrue(totalGenerateTime[j] > totalGenerateTime[j-1]);
 	if (true) {
@@ -220,7 +262,7 @@ public class TestMBF2 extends LockssTestCase {
     }
   }
 
-  public void TimingThree(String name) throws IOException {
+  public void TimingThree(int index) throws IOException {
     byte[] nonce = new byte[24];
     int[] e = { 3, 15, 63 };
     int l = 64;
@@ -235,18 +277,18 @@ public class TestMBF2 extends LockssTestCase {
       for (int i = 0; i < numTries; i++) {
 	rand.nextBytes(nonce);
 	long startTime = System.currentTimeMillis();
-	proof = generate(name, nonce, e[j], l, 2*l);
+	proof = generate(index, nonce, e[j], l, 2*l);
 	long endTime = System.currentTimeMillis();
 	totalGenerateTime[j] += (endTime - startTime);
 	startTime = endTime;
-	verify(name, nonce, e[j], l, proof, 2*l);
+	verify(index, nonce, e[j], l, proof, 2*l);
 	endTime = System.currentTimeMillis();
 	totalVerifyTime[j] += (endTime - startTime);
-	log.debug(name + "generate e " + e[j] + " " + totalGenerateTime[j] +
+	log.debug(names[index] + "generate e " + e[j] + " " + totalGenerateTime[j] +
 		 " msec verify " + totalVerifyTime[j] + " msec");
       }
       if (j > 0) {
-	log.info(name + " timing([" + e[j] + "," + e[j-1] + "]," + l + ") test " +
+	log.info(names[index] + " timing([" + e[j] + "," + e[j-1] + "]," + l + ") test " +
 		 totalGenerateTime[j] + " > " + totalGenerateTime[j-1] + " msec");
 	// Increasing e increases generation cost
 	assertTrue(totalGenerateTime[j] > totalGenerateTime[j-1]);
@@ -256,14 +298,14 @@ public class TestMBF2 extends LockssTestCase {
 	  ((float) totalVerifyTime[j-1]);
 	float newFactor = ((float) totalGenerateTime[j]) /
 	  ((float) totalVerifyTime[j]);
-	log.info(name + " timing([" + e[j] + "," + e[j-1] + "]," + l + ") test " +
+	log.info(names[index] + " timing([" + e[j] + "," + e[j-1] + "]," + l + ") test " +
 		 newFactor + " > " + oldFactor);
 	assertTrue(newFactor > oldFactor);
       }
     }
   }    
 
-  public void VerifyRandom(String name) throws IOException {
+  public void VerifyRandom(int index) throws IOException {
     byte[] nonce = new byte[24];
     int e = 7;
     int l = 32;
@@ -277,19 +319,19 @@ public class TestMBF2 extends LockssTestCase {
     for (int i = 0; i < numTries; i++) {
       rand.nextBytes(nonce);
       proof[0] = i;
-      if (verify(name, nonce, e, l, proof, 64))
+      if (verify(index, nonce, e, l, proof, 64))
 	numYes++;
       else
 	numNo++;
     }
     assertTrue(numYes > 0);
     float factor = ((float)(numYes + numNo)) / ((float)numYes);
-    log.info(name + " random verify yes " + numYes + " no " + numNo +
+    log.info(names[index] + " random verify yes " + numYes + " no " + numNo +
 	      " factor " + factor);
     assertTrue(factor > 6.5 && factor < 9.5);
   }
 
-  private int[] generate(String name,
+  private int[] generate(int index,
 			 byte[] nonce,
 			 int e,
 			 int l,
@@ -298,7 +340,7 @@ public class TestMBF2 extends LockssTestCase {
     int[] res = null;
     try{
       MemoryBoundFunction mbf =
-	MemoryBoundFunction.getInstance(name, nonce, e, l, null, 0);
+	factory[index].make(nonce, e, l, null, 0);
       pathsTried = 0;
       while (mbf.computeSteps(steps)) {
 	assertFalse(mbf.done());
@@ -308,25 +350,28 @@ public class TestMBF2 extends LockssTestCase {
       res = mbf.result();
       if (res.length > 0) {
 	for (int i = 0; i < res.length; i++) {
-	  log.debug(name + "generate [" + i + "] "  + res[i] +
+	  log.debug(names[index] + "generate [" + i + "] "  + res[i] +
 		    " tries " + pathsTried);
 	  if (res[i] < 0)
-	    fail(name + ": proof < 0");
+	    fail(names[index] + ": proof < 0");
 	  if (res[i] >= MemoryBoundFunction.basisSize())
-	    fail(name + ": proof " + res[i] + " >= " +
+	    fail(names[index] + ": proof " + res[i] + " >= " +
 		 MemoryBoundFunction.basisSize());
 	}
       } else {
-	log.debug("generate [" + res.length + "]  tries " + pathsTried);
+	log.debug(names[index] + " generate [" + res.length + "]  tries "
+		  + pathsTried);
 	res = null;
       }
     } catch (NoSuchAlgorithmException ex) {
-      fail(name + " threw " + ex.toString());
+      fail(names[index] + " threw " + ex.toString());
+    } catch (MemoryBoundFunctionException ex) {
+      fail(names[index] + " threw " + ex.toString());
     }
     return (res);
   }
 
-  private boolean verify(String name,
+  private boolean verify(int index,
 			 byte[] nonce,
 			 int e,
 			 int l,
@@ -339,7 +384,7 @@ public class TestMBF2 extends LockssTestCase {
       assertTrue(proof.length >= 1);
       try {
 	MemoryBoundFunction mbf2 =
-	  MemoryBoundFunction.getInstance(name, nonce, e, l, proof, e);
+	  factory[index].make(nonce, e, l, proof, e);
 	while (mbf2.computeSteps(steps)) {
 	  assertFalse(mbf2.done());
 	  pathsTried += steps;
@@ -355,7 +400,9 @@ public class TestMBF2 extends LockssTestCase {
 	  }
 	}
       } catch (NoSuchAlgorithmException ex) {
-	fail(name + " threw " + ex.toString());
+	fail(names[index] + " threw " + ex.toString());
+      } catch (MemoryBoundFunctionException ex) {
+	fail(names[index] + " threw " + ex.toString());
       }
     }      
     return (ret);
@@ -364,7 +411,7 @@ public class TestMBF2 extends LockssTestCase {
   /**
    * Functional test of generate/verify pair
    */
-  private void onePair(String name, int e, int l) throws IOException {
+  private void onePair(int index, int e, int l) throws IOException {
     // Make sure its configured
     assertTrue(f != null);
     assertTrue(MemoryBoundFunction.basisSize() > 0);
@@ -374,19 +421,19 @@ public class TestMBF2 extends LockssTestCase {
     int[] proof = null;
     int numNulls = 0;
     for (int i = 0; i < 100 && proof == null; i++) {
-      proof = generate(name, nonce, e, l, 8);
+      proof = generate(index, nonce, e, l, 8);
       numNulls++;
     }
     assertTrue(proof != null);
     assertTrue(proof.length > 0);
-    boolean ret = verify(name, nonce, e, l, proof, 8);
+    boolean ret = verify(index, nonce, e, l, proof, 8);
     assertTrue(ret);
     if (numNulls > 2) {
-      log.info(name + " onePair(" + e + "," + l + ") took " +
+      log.info(names[index] + " onePair(" + e + "," + l + ") took " +
 	     (System.currentTimeMillis() - startTime) + " msec " +
 	       numNulls + " retries");
     } else {
-      log.debug(name + " onePair(" + e + "," + l + ") took " +
+      log.debug(names[index] + " onePair(" + e + "," + l + ") took " +
 		(System.currentTimeMillis() - startTime) + " msec");
     }
   }

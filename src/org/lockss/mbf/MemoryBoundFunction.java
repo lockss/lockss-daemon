@@ -1,5 +1,5 @@
 /*
- * $Id: MemoryBoundFunction.java,v 1.6 2003-08-09 16:40:12 dshr Exp $
+ * $Id: MemoryBoundFunction.java,v 1.7 2003-08-11 18:44:52 dshr Exp $
  */
 
 /*
@@ -44,17 +44,6 @@ public class MemoryBoundFunction {
   protected static File basisFile = null;
   protected static long basisLength = 0;
 
-  private static String[] names = {
-    "MBF1",
-    "MBF2",
-    "MOCK"
-  };
-  private static String[] impls = {
-    "org.lockss.mbf.MBF1",
-    "org.lockss.mbf.MBF2",
-    "org.lockss.mbf.MockMemoryBoundFunction"
-  };
-
   protected byte[] nonce;
   protected long e;
   protected int[] proof;
@@ -64,45 +53,7 @@ public class MemoryBoundFunction {
   protected long maxPath;
   protected MemoryBoundFunctionSPI implSPI;
 
-  /**
-   * Returns an instance of the type of MBF indicated by "version"
-   * @param version A string selecting the type of MBF
-   * @param nVal a byte array containing the nonce
-   * @param eVal the effort sizer (# of low-order zeros in destination)
-   * @param sVal an array of ints containing the proof
-   * @param maxPathVal maximum number of steps to verify
-   * @throws NoSuchAlgorithmException no algorithm of type "version"
-   */
-  public static MemoryBoundFunction getInstance(String version,
-						byte[] nVal,
-						int eVal,
-						int lVal,
-						int[] sVal,
-						long  maxPathVal)
-    throws NoSuchAlgorithmException, MemoryBoundFunctionException {
-    for (int i = 0; i < names.length; i++) {
-      if (names[i].equals(version)) {
-	// Found it
-	try {
-	  Class cl = Class.forName(impls[i]);
-	  MemoryBoundFunctionSPI spi =
-	    (MemoryBoundFunctionSPI) cl.newInstance();
-	  MemoryBoundFunction ret =
-	    new MemoryBoundFunction(spi, nVal, eVal, lVal, sVal, maxPathVal);
-	  return (ret);
-	} catch (ClassNotFoundException ex) {
-	  throw new NoSuchAlgorithmException(impls[i]);
-	} catch (InstantiationException ex) {
-	  throw new NoSuchAlgorithmException(impls[i] + ": " + ex.toString());
-	} catch (IllegalAccessException ex) {
-	  throw new NoSuchAlgorithmException(impls[i] + ": " + ex.toString());
-	}
-      }
-    }
-    throw new NoSuchAlgorithmException(version);
-  }
-
-  private MemoryBoundFunction(MemoryBoundFunctionSPI spi,
+  protected MemoryBoundFunction(MemoryBoundFunctionSPI spi,
 			      byte[] nVal,
 			      long eVal,
 			      int lVal,
