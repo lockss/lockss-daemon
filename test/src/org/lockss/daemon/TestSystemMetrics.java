@@ -1,5 +1,5 @@
 /*
- * $Id: TestSystemMetrics.java,v 1.6 2003-04-04 23:50:11 aalto Exp $
+ * $Id: TestSystemMetrics.java,v 1.7 2003-04-18 21:37:07 aalto Exp $
  */
 
 /*
@@ -54,15 +54,35 @@ public class TestSystemMetrics extends LockssTestCase {
   }
 
   public void testHashEstimation() throws IOException {
-    MockCachedUrlSetHasher hasher = new MockCachedUrlSetHasher(10000);
-    hasher.setHashStepDelay(10);
-    long startTime = TimeBase.nowMs();
-    int estimate = metrics.getBytesPerMsHashEstimate(hasher, new MockMessageDigest());
-    long endTime = TimeBase.nowMs();
-    assertTrue(estimate > 0);
-    //XXX fix using simulated time
-    int expectedTime = (10000 * 10) / SystemMetrics.DEFAULT_HASH_STEP;
-    assertTrue(endTime - startTime > expectedTime);
+    int byteCount = SystemMetrics.DEFAULT_HASH_STEP * 10;
+    int estimate = byteCount;
+    long duration;
+
+
+    while (true) {
+      MockCachedUrlSetHasher hasher = new MockCachedUrlSetHasher(byteCount);
+      hasher.setHashStepDelay(10);
+
+      long startTime = TimeBase.nowMs();
+      estimate = metrics.getBytesPerMsHashEstimate(hasher,
+         new MockMessageDigest());
+      duration = TimeBase.msSince(startTime);
+
+      if (estimate!=byteCount) {
+        // non-zero hash time
+        break;
+      } else {
+        // if hash time is 0, estimate equals # of bytes
+        // we want to run until hashing takes actual time
+        // increase byte count and try again
+        byteCount *= 10;
+      }
+    }
+
+    assertTrue(estimate < byteCount);
+    // minimum amount of time would be delay * number of hash steps
+    int expectedMin = (byteCount * 10) / SystemMetrics.DEFAULT_HASH_STEP;
+    assertTrue(duration > expectedMin);
   }
 
   public void testEstimationCaching() throws IOException {
@@ -76,9 +96,8 @@ public class TestSystemMetrics extends LockssTestCase {
 
   public static void configHashParams(long duration, int step)
       throws IOException {
-    String s = SystemMetrics.PARAM_HASH_TEST_DURATION + "=" + duration;
+    String s = SystemMetrics.PARAM_HASH_TEST_DURATION + "=" + duration + "\n";
     String s2 = SystemMetrics.PARAM_HASH_TEST_BYTE_STEP + "=" + step;
-    TestConfiguration.setCurrentConfigFromUrlList(ListUtil.list(FileUtil.urlOfString(s),
-      FileUtil.urlOfString(s2)));
+    TestConfiguration.setCurrentConfigFromString(s + s2);
   }
 }
