@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfiguration.java,v 1.8 2003-02-26 20:38:54 aalto Exp $
+ * $Id: TestConfiguration.java,v 1.9 2003-02-27 23:28:44 tal Exp $
  */
 
 /*
@@ -93,6 +93,8 @@ public class TestConfiguration extends LockssTestCase {
       fail("getInt(missing) didn't throw");
     } catch (Configuration.InvalidParam e) {
     }
+    assertTrue(config.containsKey("prop1"));
+    assertTrue(! config.containsKey("propnot"));
   }
 
   public void testLoadList() throws IOException {

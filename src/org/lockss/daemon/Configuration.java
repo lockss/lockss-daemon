@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.19 2003-02-26 04:36:08 tal Exp $
+ * $Id: Configuration.java,v 1.20 2003-02-27 23:28:03 tal Exp $
  */
 
 /*
@@ -47,13 +47,16 @@ import org.lockss.util.*;
  * these accessors all have <code>Param</code> in their name.  (If called
  * on a <code>Configuration</code> <i>instance</i>, they will return values
  * from the current configuration, not that instance.  So don't do that.)
- * */
+ */
 public abstract class Configuration {
   /** The common prefix string of all LOCKSS configuration parameters. */
   public static final String PREFIX = "org.lockss.";
 
-  static final String PARAM_RELOAD_INTERVAL =
-    PREFIX + "parameterReloadInterval";
+  static final String MYPREFIX = PREFIX + ".config";
+
+  static final String PARAM_RELOAD_INTERVAL = MYPREFIX + "reloadInterval";
+  static final String PARAM_DISK_SPACE_LIST = MYPREFIX + "diskSpaceList";
+  static final String PARAM_CONFIG_PATH = MYPREFIX + "configPath";
 
   // MUST pass in explicit log level to avoid recursive call back to
   // Configuration to get Config log level.  (Others should NOT do this.)
@@ -271,6 +274,28 @@ public abstract class Configuration {
   abstract boolean load(InputStream istr)
       throws IOException;
 
+  private void initCacheConfig() {
+    String space = Configuration.getParam(PARAM_DISK_SPACE_LIST);
+    Vector v = StringUtil.breakAt(space, ':');
+    if (v.size() == 0) {
+      log.error(PARAM_DISK_SPACE_LIST + " not specified, not configuring");
+      return;
+    }
+    for (Iterator iter = v.iterator(); iter.hasNext(); ) {
+      String path = (String)iter.next();
+      initConfigDir(path);
+    }
+  }
+
+  private void initConfigDir(String path) {
+    String configPath = Configuration.getParam(PARAM_CONFIG_PATH, "config");
+    File dir = new File(path, configPath);
+    if (!dir.exists()) {
+      dir.mkdirs();
+    }
+    
+  }
+
   /** Return the set of keys whose values differ.
    * @param otherConfig the config to compare with.  May be null.
    */
@@ -292,7 +317,7 @@ public abstract class Configuration {
     return val;
   }
 
-  static Map boolStrings = new HashMap();
+  private static Map boolStrings = new HashMap();
   static {
     boolStrings.put("true", Boolean.TRUE);
     boolStrings.put("yes", Boolean.TRUE);
@@ -414,6 +439,12 @@ public abstract class Configuration {
    * with the same values.
    */
   public abstract boolean equals(Object c);
+
+  /** Return true if the key is present
+   * @param key the key to test
+   * @return true if the key is present.
+   */
+  public abstract boolean containsKey(String key);
 
   /** Return the config value associated with <code>key</code>.
    * @return the string, or null if the key is not present

@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurationPropTreeImpl.java,v 1.3 2002-11-22 17:43:42 tal Exp $
+ * $Id: ConfigurationPropTreeImpl.java,v 1.4 2003-02-27 23:28:03 tal Exp $
  */
 
 /*
@@ -86,6 +86,10 @@ public class ConfigurationPropTreeImpl extends Configuration {
     }
     ConfigurationPropTreeImpl oc = (ConfigurationPropTreeImpl)otherConfig;
     return PropUtil. differentKeys(getPropertyTree(), oc.getPropertyTree());
+  }
+
+  public boolean containsKey(String key) {
+    return props.containsKey(key);
   }
 
   public String get(String key) {
