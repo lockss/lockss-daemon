@@ -1,5 +1,5 @@
 /*
- * $Id: StatusTable.java,v 1.20 2003-03-27 23:52:53 tal Exp $
+ * $Id: StatusTable.java,v 1.21 2003-04-05 00:55:55 tal Exp $
  */
 
 /*
@@ -247,6 +247,7 @@ public class StatusTable {
   public static class DisplayedValue implements EmbeddedValue {
     private Object value;
     private String color = null;
+    private boolean bold = false;
 
     /** Create a DisplayedValue with the specified value.  Any value is
      * legal except a Reference or another DisplayedValue. */
@@ -272,6 +273,18 @@ public class StatusTable {
     /** Get the color */
     public String getColor() {
       return color;
+    }
+
+    /** Set bold.
+     * @param bold true if should be bold
+     */
+    public void setBold(boolean bold) {
+      this.bold = bold;
+    }
+
+    /** Get the bold */
+    public boolean getBold() {
+      return bold;
     }
 
   }
