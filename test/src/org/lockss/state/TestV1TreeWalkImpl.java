@@ -1,5 +1,5 @@
 /*
- * $Id: TestV1TreeWalkImpl.java,v 1.2 2004-08-22 02:05:47 tlipkis Exp $
+ * $Id: TestV1TreeWalkImpl.java,v 1.3 2004-09-29 18:57:55 tlipkis Exp $
  */
 
 /*
@@ -49,7 +49,7 @@ public class TestV1TreeWalkImpl extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    theDaemon = new MockLockssDaemon();
+    theDaemon = getMockLockssDaemon();
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     Properties props = new Properties();
     props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);

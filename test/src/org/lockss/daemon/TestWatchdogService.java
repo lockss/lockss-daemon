@@ -1,5 +1,5 @@
 /*
- * $Id: TestWatchdogService.java,v 1.9 2004-02-09 22:09:56 tlipkis Exp $
+ * $Id: TestWatchdogService.java,v 1.10 2004-09-29 18:58:17 tlipkis Exp $
  */
 
 /*
@@ -52,7 +52,7 @@ public class TestWatchdogService extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    daemon = new MockLockssDaemon();
+    daemon = getMockLockssDaemon();
     wdog = daemon.getWatchdogService();
     TimeBase.setSimulated();
   }

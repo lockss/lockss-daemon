@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.54 2004-09-27 22:38:35 smorabito Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.55 2004-09-29 18:57:57 tlipkis Exp $
  */
 
 /*
@@ -54,7 +54,7 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    daemon = new MockLockssDaemon();
+    daemon = getMockLockssDaemon();
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     Properties props = new Properties();
     props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);

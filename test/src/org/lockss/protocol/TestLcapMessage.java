@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapMessage.java,v 1.35 2004-09-20 14:20:40 dshr Exp $
+ * $Id: TestLcapMessage.java,v 1.36 2004-09-29 18:57:57 tlipkis Exp $
  */
 
 /*
@@ -51,23 +51,18 @@ public class TestLcapMessage extends LockssTestCase {
   private static byte[] testbytes = {1,2,3,4,5,6,7,8,9,10};
   private static String lwrbnd = "test1.doc";
   private static String uprbnd = "test3.doc";
-  private static ArrayList testentries;
+  protected static String archivalID = "TestAU_1.0";
 
-  private static MockLockssDaemon daemon = new MockLockssDaemon(null);
+  private ArrayList testentries;
   protected IPAddr testaddr;
   protected PeerIdentity testID;
   protected LcapMessage testmsg;
-  protected static String archivalID = "TestAU_1.0";
-  private static LockssDaemon theDaemon = null;
-
-  public TestLcapMessage(String _name) {
-    super(_name);
-  }
+  private LockssDaemon theDaemon;
 
 
   public void setUp() throws Exception {
     super.setUp();
-    theDaemon = new MockLockssDaemon();
+    theDaemon = getMockLockssDaemon();
     String tempDirPath = null;
     try {
       tempDirPath = getTempDir().getAbsolutePath() + File.separator;

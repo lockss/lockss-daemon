@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapDatagramComm.java,v 1.2 2004-09-27 22:38:37 smorabito Exp $
+ * $Id: TestLcapDatagramComm.java,v 1.3 2004-09-29 18:57:57 tlipkis Exp $
  */
 
 /*
@@ -67,7 +67,7 @@ public class TestLcapDatagramComm extends LockssTestCase {
   static final String PARAM_UNI_PORT_SEND = LcapDatagramComm.PARAM_UNI_PORT_SEND;
   static final String PARAM_MULTI_VERIFY = LcapDatagramComm.PARAM_MULTI_VERIFY;
 
-  private static MockLockssDaemon daemon = new MockLockssDaemon(null);
+  private static MockLockssDaemon daemon;
 
   String testStr = "This is test data";
   byte[] testData;
@@ -96,6 +96,7 @@ public class TestLcapDatagramComm extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
+    daemon = getMockLockssDaemon();
     testData = testStr.getBytes();
     String tempDirPath = null;
     try {

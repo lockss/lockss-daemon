@@ -1,5 +1,5 @@
 /*
- * $Id: TestActivityRegulator.java,v 1.23 2004-03-27 02:33:45 eaalto Exp $
+ * $Id: TestActivityRegulator.java,v 1.24 2004-09-29 18:58:18 tlipkis Exp $
  */
 
 /*
@@ -54,7 +54,7 @@ public class TestActivityRegulator extends LockssTestCase {
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
     mau = new MockArchivalUnit();
-    theDaemon = new MockLockssDaemon();
+    theDaemon = getMockLockssDaemon();
     regulator = theDaemon.getActivityRegulator(mau);
     regulator.startService();
     TimeBase.setSimulated(123);

@@ -1,5 +1,5 @@
 /*
- * $Id: TestOtherVoicesArchivalUnit.java,v 1.12 2004-09-27 22:38:39 smorabito Exp $
+ * $Id: TestOtherVoicesArchivalUnit.java,v 1.13 2004-09-29 18:57:59 tlipkis Exp $
  */
 
 /*
@@ -61,7 +61,7 @@ public class TestOtherVoicesArchivalUnit extends LockssTestCase {
     props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
-    theDaemon = new MockLockssDaemon();
+    theDaemon = getMockLockssDaemon();
     theDaemon.getHashService();
   }
 

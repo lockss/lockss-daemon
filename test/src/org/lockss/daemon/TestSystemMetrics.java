@@ -1,5 +1,5 @@
 /*
- * $Id: TestSystemMetrics.java,v 1.16 2004-08-09 02:59:08 tlipkis Exp $
+ * $Id: TestSystemMetrics.java,v 1.17 2004-09-29 18:58:17 tlipkis Exp $
  */
 
 /*
@@ -46,7 +46,7 @@ public class TestSystemMetrics extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    theDaemon = new MockLockssDaemon();
+    theDaemon = getMockLockssDaemon();
     Properties props = new Properties();
     props.setProperty(SystemMetrics.PARAM_HASH_TEST_DURATION,
                       Long.toString(SystemMetrics.DEFAULT_HASH_TEST_DURATION));

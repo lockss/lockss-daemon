@@ -1,5 +1,5 @@
 /*
- * $Id: TestWrappedPlugin.java,v 1.5 2004-09-27 22:39:17 smorabito Exp $
+ * $Id: TestWrappedPlugin.java,v 1.6 2004-09-29 18:58:19 tlipkis Exp $
  */
 
 /*
@@ -64,7 +64,7 @@ public class TestWrappedPlugin extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    MockLockssDaemon daemon = new MockLockssDaemon();
+    MockLockssDaemon daemon = getMockLockssDaemon();
     DefinablePlugin hplug = new DefinablePlugin();
     hplug.initPlugin(daemon,"org.lockss.plugin.highwire.HighWirePlugin");
     plugin = (WrappedPlugin)WrapperState.getWrapper(hplug);

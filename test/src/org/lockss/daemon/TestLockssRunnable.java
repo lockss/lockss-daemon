@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRunnable.java,v 1.1 2004-08-21 06:48:08 tlipkis Exp $
+ * $Id: TestLockssRunnable.java,v 1.2 2004-09-29 18:58:17 tlipkis Exp $
  */
 
 /*
@@ -52,7 +52,7 @@ public class TestLockssRunnable extends LockssTestCase {
     // LockssTestCase disables the thread watchdog by default.  Enable it
     // for these tests.
     enableThreadWatchdog();
-    daemon = new MockLockssDaemon();
+    daemon = getMockLockssDaemon();
     wdog = daemon.getWatchdogService();
     TimeBase.setSimulated();
 

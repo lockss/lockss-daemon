@@ -1,5 +1,5 @@
 /*
- * $Id: TestHashService.java,v 1.4 2003-06-20 22:34:54 claire Exp $
+ * $Id: TestHashService.java,v 1.5 2004-09-29 18:58:17 tlipkis Exp $
  */
 
 /*
@@ -53,12 +53,13 @@ public class TestHashService extends LockssTestCase {
   private static String PARAM_ESTIMATE_PAD_PERCENT =
     HashService.PARAM_ESTIMATE_PAD_PERCENT;
 
-  private static MockLockssDaemon theDaemon = new MockLockssDaemon();
+  private static MockLockssDaemon theDaemon;
 
   private HashService svc;
 
   public void setUp() throws Exception {
     super.setUp();
+    theDaemon = getMockLockssDaemon();
     svc = theDaemon.getHashService();
     svc.startService();
   }

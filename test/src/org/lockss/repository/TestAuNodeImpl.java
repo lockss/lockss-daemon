@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuNodeImpl.java,v 1.11 2004-03-27 02:37:24 eaalto Exp $
+ * $Id: TestAuNodeImpl.java,v 1.12 2004-09-29 18:57:57 tlipkis Exp $
  */
 
 /*
@@ -54,7 +54,7 @@ public class TestAuNodeImpl extends LockssTestCase {
 
     MockArchivalUnit mau = new MockArchivalUnit();
 
-    theDaemon = new MockLockssDaemon();
+    theDaemon = getMockLockssDaemon();
     repo = theDaemon.getLockssRepository(mau);
   }
 

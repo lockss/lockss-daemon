@@ -1,5 +1,5 @@
 /*
- * $Id: TestMemoryBoundFunctionVote.java,v 1.15 2004-09-29 06:38:13 tlipkis Exp $
+ * $Id: TestMemoryBoundFunctionVote.java,v 1.16 2004-09-29 18:58:03 tlipkis Exp $
  */
 
 /*
@@ -93,7 +93,7 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
   protected void setUp() throws Exception {
     super.setUp();
     log = Logger.getLogger("TestMemoryBoundFunction");
-    LockssDaemon theDaemon = new MockLockssDaemon();
+    LockssDaemon theDaemon = getMockLockssDaemon();
     String tempDirPath = null;
     try {
       tempDirPath = getTempDir().getAbsolutePath() + File.separator;

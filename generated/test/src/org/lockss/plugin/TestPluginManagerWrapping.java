@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManagerWrapping.java,v 1.4 2004-09-27 22:39:17 smorabito Exp $
+ * $Id: TestPluginManagerWrapping.java,v 1.5 2004-09-29 18:58:20 tlipkis Exp $
  */
 
 /*
@@ -85,7 +85,7 @@ public class TestPluginManagerWrapping extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
 
-    theDaemon = new MockLockssDaemon();
+    theDaemon = getMockLockssDaemon();
 
     mgr = new PluginManager();
     theDaemon.setPluginManager(mgr);

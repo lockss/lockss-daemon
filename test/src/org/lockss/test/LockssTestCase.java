@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.56 2004-09-27 22:38:35 smorabito Exp $
+ * $Id: LockssTestCase.java,v 1.57 2004-09-29 18:57:55 tlipkis Exp $
  */
 
 /*
@@ -96,10 +96,10 @@ public class LockssTestCase extends TestCase {
   }
 
   /**
-   * Return the MockLockssDaemon instance for this testcase, creating one
-   * if necessary.
+   * Return the MockLockssDaemon instance for this testcase.  All test code
+   * should use this method rather than creating a MockLockssDaemon.
    */
-  public synchronized MockLockssDaemon getMockLockssDaemon() {
+  public MockLockssDaemon getMockLockssDaemon() {
     return mockDaemon;
   }
 

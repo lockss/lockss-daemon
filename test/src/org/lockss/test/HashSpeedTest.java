@@ -1,5 +1,5 @@
 /*
- * $Id: HashSpeedTest.java,v 1.26 2004-03-03 00:38:44 troberts Exp $
+ * $Id: HashSpeedTest.java,v 1.27 2004-09-29 18:57:55 tlipkis Exp $
  */
 
 /*
@@ -74,7 +74,7 @@ public class HashSpeedTest extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    theDaemon = new MockLockssDaemon();
+    theDaemon = getMockLockssDaemon();
     this.setUp(DEFAULT_DURATION, DEFAULT_BYTESTEP);
   }
 
@@ -101,7 +101,6 @@ public class HashSpeedTest extends LockssTestCase {
                       SimulatedPlugin.AU_PARAM_BIN_FILE_SIZE, ""+fileSize);
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
-    theDaemon = new MockLockssDaemon();
     theDaemon.getPluginManager();
     theDaemon.getSystemMetrics();
     theDaemon.getHashService();

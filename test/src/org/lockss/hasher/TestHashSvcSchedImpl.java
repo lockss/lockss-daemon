@@ -1,5 +1,5 @@
 /*
- * $Id: TestHashSvcSchedImpl.java,v 1.3 2004-09-21 21:24:58 dshr Exp $
+ * $Id: TestHashSvcSchedImpl.java,v 1.4 2004-09-29 18:58:04 tlipkis Exp $
  */
 
 /*
@@ -65,7 +65,7 @@ public class TestHashSvcSchedImpl extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    theDaemon = new MockLockssDaemon();
+    theDaemon = getMockLockssDaemon();
     SchedService schedSvc = this.theDaemon.getSchedService();
     svc = new HashSvcSchedImpl();
     theDaemon.setHashService(svc);

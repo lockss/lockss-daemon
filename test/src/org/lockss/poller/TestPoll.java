@@ -1,5 +1,5 @@
 /*
- * $Id: TestPoll.java,v 1.86 2004-09-29 06:38:13 tlipkis Exp $
+ * $Id: TestPoll.java,v 1.87 2004-09-29 18:57:58 tlipkis Exp $
  */
 
 /*
@@ -456,7 +456,7 @@ public class TestPoll extends LockssTestCase {
   }
 
   private void initRequiredServices() {
-    theDaemon = new MockLockssDaemon();
+    theDaemon = getMockLockssDaemon();
     pollmanager = theDaemon.getPollManager();
 
     theDaemon.getPluginManager();

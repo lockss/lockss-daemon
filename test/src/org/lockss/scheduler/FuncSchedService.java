@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSchedService.java,v 1.2 2003-11-13 11:16:57 tlipkis Exp $
+ * $Id: FuncSchedService.java,v 1.3 2004-09-29 18:57:56 tlipkis Exp $
  */
 
 /*
@@ -51,12 +51,13 @@ public class FuncSchedService extends LockssTestCase {
     org.lockss.scheduler.TaskRunner.class,
   };
 
-  private static MockLockssDaemon theDaemon = new MockLockssDaemon();
+  private MockLockssDaemon theDaemon;
 
   private SchedService svc;
 
   public void setUp() throws Exception {
     super.setUp();
+    theDaemon = getMockLockssDaemon();
     svc = theDaemon.getSchedService();
     svc.startService();
   }

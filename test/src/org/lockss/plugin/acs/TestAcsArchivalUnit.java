@@ -1,5 +1,5 @@
 /*
- * $Id: TestAcsArchivalUnit.java,v 1.15 2004-09-27 22:38:43 smorabito Exp $
+ * $Id: TestAcsArchivalUnit.java,v 1.16 2004-09-29 18:58:02 tlipkis Exp $
  */
 
 /*
@@ -64,7 +64,7 @@ public class TestAcsArchivalUnit
     props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
-    theDaemon = new MockLockssDaemon();
+    theDaemon = getMockLockssDaemon();
     theDaemon.getHashService();
   }
 

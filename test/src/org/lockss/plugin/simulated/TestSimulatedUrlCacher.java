@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimulatedUrlCacher.java,v 1.22 2004-03-09 23:40:02 tlipkis Exp $
+ * $Id: TestSimulatedUrlCacher.java,v 1.23 2004-09-29 18:57:58 tlipkis Exp $
  */
 
 /*
@@ -57,7 +57,7 @@ public class TestSimulatedUrlCacher extends LockssTestCase {
     super.setUp();
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
 
-    theDaemon = new MockLockssDaemon();
+    theDaemon = getMockLockssDaemon();
     mau = new MockArchivalUnit();
     MockPlugin plugin = new MockPlugin();
     plugin.initPlugin(theDaemon);

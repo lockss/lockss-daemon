@@ -1,5 +1,5 @@
 /*
- * $Id: TestIeeeArchivalUnit.java,v 1.13 2004-09-27 22:38:40 smorabito Exp $
+ * $Id: TestIeeeArchivalUnit.java,v 1.14 2004-09-29 18:57:59 tlipkis Exp $
  */
 
 /*
@@ -59,7 +59,7 @@ public class TestIeeeArchivalUnit
     props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
-    theDaemon = new MockLockssDaemon();
+    theDaemon = getMockLockssDaemon();
     theDaemon.getHashService();
   }
 

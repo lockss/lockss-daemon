@@ -1,5 +1,5 @@
 /*
- * $Id: TestWrappedUrlCacher.java,v 1.3 2004-06-10 22:03:54 tyronen Exp $
+ * $Id: TestWrappedUrlCacher.java,v 1.4 2004-09-29 18:58:18 tlipkis Exp $
  */
 
 /*
@@ -58,7 +58,7 @@ public class TestWrappedUrlCacher extends LockssTestCase {
     props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
-    theDaemon = new MockLockssDaemon();
+    theDaemon = getMockLockssDaemon();
     theDaemon.getHashService();
 
 

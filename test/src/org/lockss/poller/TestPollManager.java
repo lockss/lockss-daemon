@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.71 2004-09-29 06:38:13 tlipkis Exp $
+ * $Id: TestPollManager.java,v 1.72 2004-09-29 18:57:57 tlipkis Exp $
  */
 
 /*
@@ -524,7 +524,7 @@ public class TestPollManager extends LockssTestCase {
   }
 
   private void initRequiredServices() {
-    theDaemon = new MockLockssDaemon();
+    theDaemon = getMockLockssDaemon();
     pollmanager = theDaemon.getPollManager();
     idmanager = theDaemon.getIdentityManager();
 

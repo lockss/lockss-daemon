@@ -1,5 +1,5 @@
 /*
- * $Id: TestMailTarget.java,v 1.10 2004-09-20 14:20:42 dshr Exp $
+ * $Id: TestMailTarget.java,v 1.11 2004-09-29 18:57:54 tlipkis Exp $
  */
 
 /*
@@ -65,7 +65,7 @@ public class TestMailTarget extends LockssTestCase {
         FileTestUtil.urlOfString(s5)
 	));
     target = new MailTarget();
-    theDaemon = new MockLockssDaemon();
+    theDaemon = getMockLockssDaemon();
     idmanager = theDaemon.getIdentityManager();
     idmanager.startService();
 

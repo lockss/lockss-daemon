@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCachedUrl.java,v 1.10 2004-09-27 22:38:42 smorabito Exp $
+ * $Id: TestBaseCachedUrl.java,v 1.11 2004-09-29 18:58:02 tlipkis Exp $
  */
 
 /*
@@ -59,7 +59,7 @@ public class TestBaseCachedUrl extends LockssTestCase {
     props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
-    theDaemon = new MockLockssDaemon();
+    theDaemon = getMockLockssDaemon();
     theDaemon.getHashService();
 
     mau = new MockArchivalUnit();

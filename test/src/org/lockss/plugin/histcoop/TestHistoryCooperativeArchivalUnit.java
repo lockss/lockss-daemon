@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryCooperativeArchivalUnit.java,v 1.12 2004-09-27 22:38:40 smorabito Exp $
+ * $Id: TestHistoryCooperativeArchivalUnit.java,v 1.13 2004-09-29 18:58:00 tlipkis Exp $
  */
 
 /*
@@ -62,7 +62,7 @@ public class TestHistoryCooperativeArchivalUnit extends LockssTestCase {
     props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
-    theDaemon = new MockLockssDaemon();
+    theDaemon = getMockLockssDaemon();
     theDaemon.getHashService();
   }
 

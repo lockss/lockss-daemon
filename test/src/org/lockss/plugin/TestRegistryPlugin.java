@@ -1,5 +1,5 @@
 /*
- * $Id: TestRegistryPlugin.java,v 1.2 2004-09-27 22:38:43 smorabito Exp $
+ * $Id: TestRegistryPlugin.java,v 1.3 2004-09-29 18:58:03 tlipkis Exp $
  */
 
 /*
@@ -50,7 +50,7 @@ public class TestRegistryPlugin extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    m_theDaemon = new MockLockssDaemon();
+    m_theDaemon = getMockLockssDaemon();
     m_plugin = new RegistryPlugin();
     m_plugin.initPlugin(m_theDaemon);
   }

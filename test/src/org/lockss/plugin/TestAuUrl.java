@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuUrl.java,v 1.6 2003-06-20 22:34:54 claire Exp $
+ * $Id: TestAuUrl.java,v 1.7 2004-09-29 18:58:03 tlipkis Exp $
  */
 
 /*
@@ -54,10 +54,10 @@ public class TestAuUrl extends LockssTestCase {
 
     // Can't use URLStreamHandlerFactory from two different test classes,
     // because they're loaded using different class loaders.  AuUrl doesn't
-    // need it's URLStreamHandler, so don't test that here, in favor of
+    // need its URLStreamHandler, so don't test that here, in favor of
     // TestCuUrl.
 
-//     theDaemon = new MockLockssDaemon();
+//     theDaemon = getMockLockssDaemon();
 //     pluginMgr = theDaemon.getPluginManager();
 //     uMgr = new UrlManager();
 //     uMgr.initService(theDaemon);

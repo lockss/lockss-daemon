@@ -1,5 +1,5 @@
 /*
- * $Id: TestAlertManagerImpl.java,v 1.4 2004-09-21 21:24:56 dshr Exp $
+ * $Id: TestAlertManagerImpl.java,v 1.5 2004-09-29 18:58:18 tlipkis Exp $
  */
 
 /*
@@ -53,7 +53,7 @@ public class TestAlertManagerImpl extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    daemon = new MockLockssDaemon();
+    daemon = getMockLockssDaemon();
     mgr = new MyMockAlertManagerImpl();
     daemon.setAlertManager(mgr);
     mgr.initService(daemon);

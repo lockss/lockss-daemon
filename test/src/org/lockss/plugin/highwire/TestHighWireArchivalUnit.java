@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireArchivalUnit.java,v 1.47 2004-09-27 22:38:40 smorabito Exp $
+ * $Id: TestHighWireArchivalUnit.java,v 1.48 2004-09-29 18:58:01 tlipkis Exp $
  */
 
 /*
@@ -60,7 +60,7 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
     props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
-    theDaemon = new MockLockssDaemon();
+    theDaemon = getMockLockssDaemon();
     theDaemon.getHashService();
   }
 

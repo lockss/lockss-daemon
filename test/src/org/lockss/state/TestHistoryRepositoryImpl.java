@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.47 2004-09-20 14:20:41 dshr Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.48 2004-09-29 18:57:56 tlipkis Exp $
  */
 
 /*
@@ -56,7 +56,7 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    theDaemon = new MockLockssDaemon();
+    theDaemon = getMockLockssDaemon();
     theDaemon.startDaemon();
     mau = new MockArchivalUnit();
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;

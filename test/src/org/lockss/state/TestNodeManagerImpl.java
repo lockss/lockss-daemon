@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.120 2004-09-29 06:36:19 tlipkis Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.121 2004-09-29 18:57:55 tlipkis Exp $
  */
 
 /*
@@ -57,7 +57,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    theDaemon = new MockLockssDaemon();
+    theDaemon = getMockLockssDaemon();
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     Properties p = new Properties();
     p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);

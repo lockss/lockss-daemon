@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapIdentity.java,v 1.27 2004-09-28 08:47:25 tlipkis Exp $
+ * $Id: TestLcapIdentity.java,v 1.28 2004-09-29 18:57:57 tlipkis Exp $
  */
 
 /*
@@ -61,7 +61,7 @@ public class TestLcapIdentity extends LockssTestCase {
       new PollTally.NameListEntry(true,"test1.doc"),
       new PollTally.NameListEntry(true,"test2.doc"),
       new PollTally.NameListEntry(true,"test3.doc"));
-  private static MockLockssDaemon daemon = new MockLockssDaemon(null);
+  private static MockLockssDaemon daemon;
   private static IdentityManager idmgr;
 
   public TestLcapIdentity(String _name) {
@@ -71,6 +71,7 @@ public class TestLcapIdentity extends LockssTestCase {
   /** setUp method for test case */
   protected void setUp() throws Exception {
     super.setUp();
+    daemon = getMockLockssDaemon();
     String host = "1.2.3.4";
     String prop = "org.lockss.localIPAddress="+host;
     ConfigurationUtil.

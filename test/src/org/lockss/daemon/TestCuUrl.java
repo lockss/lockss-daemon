@@ -1,5 +1,5 @@
 /*
- * $Id: TestCuUrl.java,v 1.6 2003-09-26 23:50:38 eaalto Exp $
+ * $Id: TestCuUrl.java,v 1.7 2004-09-29 18:58:18 tlipkis Exp $
  */
 
 /*
@@ -58,7 +58,7 @@ public class TestCuUrl extends LockssTestCase {
     props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
-    theDaemon = new MockLockssDaemon();
+    theDaemon = getMockLockssDaemon();
 
     // make and init a real Pluginmgr
     pluginMgr = theDaemon.getPluginManager();

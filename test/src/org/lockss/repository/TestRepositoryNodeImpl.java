@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.42 2004-06-17 06:17:26 eaalto Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.43 2004-09-29 18:57:57 tlipkis Exp $
  */
 
 /*
@@ -62,7 +62,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
 
     mau = new MockArchivalUnit();
 
-    theDaemon = new MockLockssDaemon();
+    theDaemon = getMockLockssDaemon();
     repo = theDaemon.getLockssRepository(mau);
   }
 

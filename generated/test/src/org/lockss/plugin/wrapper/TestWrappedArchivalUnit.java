@@ -1,5 +1,5 @@
 /*
- * $Id: TestWrappedArchivalUnit.java,v 1.4 2004-09-27 22:39:17 smorabito Exp $
+ * $Id: TestWrappedArchivalUnit.java,v 1.5 2004-09-29 18:58:19 tlipkis Exp $
  */
 
 /*
@@ -69,7 +69,7 @@ public class TestWrappedArchivalUnit extends LockssTestCase {
     props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
-    theDaemon = new MockLockssDaemon();
+    theDaemon = getMockLockssDaemon();
     theDaemon.getHashService();
   }
 

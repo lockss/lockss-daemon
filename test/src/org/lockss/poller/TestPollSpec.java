@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollSpec.java,v 1.16 2004-09-29 06:38:13 tlipkis Exp $
+ * $Id: TestPollSpec.java,v 1.17 2004-09-29 18:57:57 tlipkis Exp $
  */
 
 /*
@@ -59,7 +59,7 @@ public class TestPollSpec extends LockssTestCase {
     p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
     ConfigurationUtil.setCurrentConfigFromProps(p);
 
-    theDaemon = new MockLockssDaemon();
+    theDaemon = getMockLockssDaemon();
     theDaemon.getIdentityManager();
     theDaemon.getPluginManager();
   }

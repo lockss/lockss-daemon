@@ -1,5 +1,5 @@
 /*
- * $Id: FuncHashService.java,v 1.6 2004-09-27 22:38:44 smorabito Exp $
+ * $Id: FuncHashService.java,v 1.7 2004-09-29 18:58:17 tlipkis Exp $
  */
 
 /*
@@ -70,7 +70,7 @@ public class FuncHashService extends LockssTestCase {
 
   public void setUp(String hashSvcName) throws Exception {
     super.setUp();
-    theDaemon = new MockLockssDaemon();
+    theDaemon = getMockLockssDaemon();
     ConfigurationUtil.setFromArgs("org.lockss.manager.HashService",
 				  hashSvcName);
     svc = theDaemon.getHashService();

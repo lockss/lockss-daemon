@@ -1,5 +1,5 @@
 /*
- * $Id: FuncWrappedSimulatedContent.java,v 1.3 2004-06-10 22:03:54 tyronen Exp $
+ * $Id: FuncWrappedSimulatedContent.java,v 1.4 2004-09-29 18:58:19 tlipkis Exp $
  */
 
 /*
@@ -90,7 +90,7 @@ public class FuncWrappedSimulatedContent extends LockssTestCase {
     super.setUp();
 
     ConfigurationUtil.setCurrentConfigFromString(makeConfig());
-    theDaemon = new MockLockssDaemon();
+    theDaemon = getMockLockssDaemon();
     theDaemon.setDaemonInited(true);
     init();
   }

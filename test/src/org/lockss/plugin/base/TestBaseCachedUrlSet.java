@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCachedUrlSet.java,v 1.9 2004-08-21 06:52:50 tlipkis Exp $
+ * $Id: TestBaseCachedUrlSet.java,v 1.10 2004-09-29 18:58:02 tlipkis Exp $
  */
 
 /*
@@ -69,7 +69,7 @@ public class TestBaseCachedUrlSet extends LockssTestCase {
 		      Integer.toString(HASH_SPEED));
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
-    theDaemon = new MockLockssDaemon();
+    theDaemon = getMockLockssDaemon();
     hashService = theDaemon.getHashService();
     hashService.startService();
     metrics = theDaemon.getSystemMetrics();

@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServletTestCase.java,v 1.2 2004-08-12 19:10:23 tlipkis Exp $
+ * $Id: LockssServletTestCase.java,v 1.3 2004-09-29 18:57:56 tlipkis Exp $
  */
 
 /*
@@ -63,7 +63,7 @@ public class LockssServletTestCase extends LockssTestCase {
 
   protected void setUp() throws Exception {
     super.setUp();
-    theDaemon = new MockLockssDaemon();
+    theDaemon = getMockLockssDaemon();
 //     theDaemon.setDaemonInited(true);
   }
 

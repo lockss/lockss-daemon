@@ -1,5 +1,5 @@
 /*
- * $Id: TestPartnerList.java,v 1.14 2004-09-27 22:38:37 smorabito Exp $
+ * $Id: TestPartnerList.java,v 1.15 2004-09-29 18:57:57 tlipkis Exp $
  */
 
 /*
@@ -66,8 +66,8 @@ public class TestPartnerList extends LockssTestCase {
   PeerIdentity peer2;
   PeerIdentity peer3;
   PeerIdentity peer4;
-  private static MockLockssDaemon daemon = new MockLockssDaemon(null);
-  private static IdentityManager idmgr = null;
+  private MockLockssDaemon daemon;
+  private IdentityManager idmgr = null;
 
   private void setConfig(PartnerList pl, Configuration config) {
     pl.setConfig(config, ConfigManager.EMPTY_CONFIGURATION,
@@ -76,6 +76,7 @@ public class TestPartnerList extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
+    daemon = getMockLockssDaemon();
     TimeBase.setSimulated();
     String tempDirPath = null;
     try {
