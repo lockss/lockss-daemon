@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepairCrawler.java,v 1.1 2004-02-03 03:12:32 troberts Exp $
+ * $Id: TestRepairCrawler.java,v 1.2 2004-02-06 03:11:50 troberts Exp $
  */
 
 /*
@@ -32,9 +32,12 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.crawler;
 import java.util.*;
+import java.net.*;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
+import org.lockss.protocol.*;
+import org.lockss.state.*;
 import org.lockss.test.*;
 
 public class TestRepairCrawler extends LockssTestCase {
@@ -112,7 +115,6 @@ public class TestRepairCrawler extends LockssTestCase {
     List repairUrls = ListUtil.list(repairUrl);
     spec = new CrawlSpec(startUrls, crawlRule, 1);
     crawler = new RepairCrawler(mau, spec, aus, repairUrls);
-//     crawler = CrawlerImpl.makeRepairCrawler(mau, spec, aus, repairUrls);
 
     crawler.doCrawl(Deadline.MAX);
 
@@ -141,11 +143,52 @@ public class TestRepairCrawler extends LockssTestCase {
     List repairUrls = ListUtil.list(repairUrl1, repairUrl2);
     spec = new CrawlSpec(startUrls, crawlRule, 1);
     crawler = new RepairCrawler(mau, spec, aus, repairUrls);
-//     crawler = CrawlerImpl.makeRepairCrawler(mau, spec, aus, repairUrls);
 
     crawler.doCrawl(Deadline.MAX);
 
     Set cachedUrls = cus.getForceCachedUrls();
     assertSameElements(repairUrls, cachedUrls);
+  }
+
+//   public void testFetchFromOtherCache() throws UnknownHostException {
+//     MockLockssDaemon theDaemon = new MockLockssDaemon();
+//     MockIdentityManager idm = new MockIdentityManager();
+//     LcapIdentity id = new LcapIdentity(LcapIdentity.stringToAddr("127.0.0.1"));
+//     Map map = new HashMap();
+//     map.put(id, new Long(10));
+//     idm.setAgeedForAu(mau, map);
+		      
+//     theDaemon.setIdentityManager(idm);
+
+
+//     String repairUrl = "http://example.com/blah.html";
+//     MyRepairCrawler crawler =
+//       new MyRepairCrawler(mau, spec, aus, ListUtil.list(repairUrl));
+
+//     Properties p = new Properties();
+//     p.setProperty(RepairCrawler.PARAM_FETCH_FROM_OTHER_CACHE, "true");
+//     ConfigurationUtil.setCurrentConfigFromProps(p);
+
+//     crawler.doCrawl(Deadline.MAX);
+//     assertEquals(id, crawler.getContentSource(repairUrl));
+//   }
+
+
+  private class MyRepairCrawler extends RepairCrawler {
+    private Map contentMap = new HashMap();
+
+    public MyRepairCrawler(ArchivalUnit au, CrawlSpec spec,
+			   AuState aus, Collection repairUrls) {
+      super(au, spec, aus, repairUrls);
+    }
+
+    protected void fetchFromCache(LcapIdentity id, String url) {
+      contentMap.put(url, id);
+    }
+
+    public LcapIdentity getContentSource(String url) {
+      return (LcapIdentity)contentMap.get(url);
+    }
+
   }
 }
