@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingHtmlParser.java,v 1.15 2004-04-19 02:16:57 tlipkis Exp $
+ * $Id: TestGoslingHtmlParser.java,v 1.16 2004-05-17 17:46:57 troberts Exp $
  */
 
 /*
@@ -560,6 +560,27 @@ public class TestGoslingHtmlParser extends LockssTestCase {
     parser.parseForUrls(mcu, cb);
 
     Set expected = SetUtil.set(url1, url2);
+    assertEquals(expected, cb.getFoundUrls());
+  }
+
+  public void testRelativeLinksWithLeadingSlash() throws IOException {
+    String url1= "http://www.example.com/blah/branch1/index.html";
+    String url2= "http://www.example.com/blah/branch2/index.html";
+    String url3= "http://www.example.com/journals/american_imago/toc/aim60.1.html";
+
+    String source =
+      "<html><head><title>Test</title></head><body>"+
+      "<a href= branch1/index.html>link1</a>"+
+      "Filler, with <b>bold</b> tags and<i>others</i>"+
+      "<a href=\" branch2/index.html\">link2</a>"+
+      "<a href =\" /journals/american_imago/toc/aim60.1.html\">Number 1, Spring 2003</a>";
+
+    MockCachedUrl mcu = new MockCachedUrl("http://www.example.com/blah/");
+    mcu.setContent(source);
+
+    parser.parseForUrls(mcu, cb);
+
+    Set expected = SetUtil.set(url1, url2, url3);
     assertEquals(expected, cb.getFoundUrls());
   }
 
