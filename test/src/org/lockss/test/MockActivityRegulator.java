@@ -1,5 +1,5 @@
 /*
- * $Id: MockActivityRegulator.java,v 1.3 2003-06-25 21:09:57 troberts Exp $
+ * $Id: MockActivityRegulator.java,v 1.4 2003-06-25 21:25:07 eaalto Exp $
  */
 
 /*
@@ -51,7 +51,7 @@ public class MockActivityRegulator extends ActivityRegulator {
   public MockActivityRegulator(ArchivalUnit au) {
     super(au);
   }
-  
+
   public void startService() {
     throw new UnsupportedOperationException("Not implemented");
   }
@@ -78,23 +78,22 @@ public class MockActivityRegulator extends ActivityRegulator {
     if (finishedActivity == null) {
       Assert.fail("No finished activities for "+cus);
     }
-    
-    Assert.assertEquals(("Activity " 
+
+    Assert.assertEquals(("Activity "
 			 +ActivityRegulator.activityCodeToString(activity)
-			 +" not finished on "+cus), 
+			 +" not finished on "+cus),
 			activity, finishedActivity.intValue());
   }
 
   public void assertFinished(int activity) {
-    Assert.assertEquals(("Activity " 
+    Assert.assertEquals(("Activity "
 			 +ActivityRegulator.activityCodeToString(activity)
-			 +" not finished"), 
+			 +" not finished"),
 			activity, finishedAuActivity);
 //     Assert.assertSame("Different aus", au, finishedAu);
   }
 
   public void cusActivityFinished(int activity, CachedUrlSet cus) {
-    System.err.println("cus: "+cus);
     finishedCusActivities.put(cus, new Integer(activity));
 //     finishedCusActivity = activity;
 //     finishedCus = cus;
