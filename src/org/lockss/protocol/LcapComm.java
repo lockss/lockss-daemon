@@ -1,5 +1,5 @@
 /*
- * $Id: LcapComm.java,v 1.10 2002-12-15 00:34:25 tal Exp $
+ * $Id: LcapComm.java,v 1.11 2002-12-16 22:29:44 tal Exp $
  */
 
 /*
@@ -233,7 +233,7 @@ public class LcapComm {
   /** Verify that the packet is one we should process, <i>ie</i>, it is
    * not a spoofed multicast packet */
   private boolean verifyPacket(LockssReceivedDatagram dg) {
-    if (!dg.isMulticast()) {
+    if (!verifyMulticast || !dg.isMulticast()) {
       // Process all packets received on unicast socket.
       return true;
     }
