@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.16 2002-11-06 03:50:52 tal Exp $
+ $Id: build.xml,v 1.17 2002-11-06 04:21:23 tal Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
@@ -31,6 +31,13 @@ in this Software without prior written authorization from Stanford University.
 -->
 
 <project name="LOCKSS Gamma" default="test-all" basedir=".">
+
+<description>
+Args:
+  -Dclass=pack.age.Class    Specify class for test-one, test-class, run-class
+  -Dshowoutput=yes          With test-one, show System.err output as it happens
+  -Dargs="args ..."         Supply cmd line args to run-class
+</description>
 
   <!-- Set to yes (on command line) to see output as it happens -->
   <property name="showoutput" value="no" />
