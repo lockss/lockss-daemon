@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.2 2003-05-06 20:05:28 aalto Exp $
+ * $Id: BaseUrlCacher.java,v 1.3 2003-05-07 20:36:04 tal Exp $
  */
 
 /*
@@ -113,6 +113,7 @@ public abstract class BaseUrlCacher implements UrlCacher {
    * @throws IOException
    */
   public void cache() throws IOException {
+    getArchivalUnit().pauseBeforeFetch();
     InputStream input = getUncachedInputStream();
     Properties headers = getUncachedProperties();
     if (input==null) {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.1 2003-05-06 20:04:10 aalto Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.2 2003-05-07 20:36:03 tal Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.plugin.base;
 import java.io.*;
 import java.util.Properties;
 import org.lockss.plugin.*;
+import org.lockss.daemon.*;
 import org.lockss.test.*;
 
 /**
@@ -45,7 +46,8 @@ import org.lockss.test.*;
  */
 public class TestBaseUrlCacher extends LockssTestCase {
   MockBaseUrlCacher cacher;
-
+  private int pauseBeforeFetchCounter;
+  
   public void setUp() throws Exception {
     super.setUp();
     cacher = new MockBaseUrlCacher(new MockCachedUrlSet("test url"),
@@ -57,6 +59,15 @@ public class TestBaseUrlCacher extends LockssTestCase {
   }
 
   public void testCache() throws IOException {
+    pauseBeforeFetchCounter = 0;
+    cacher.input = new StringInputStream("test stream");
+    cacher.headers = new Properties();
+    cacher.cache();
+    assertTrue(cacher.wasStored);
+    assertEquals(1, pauseBeforeFetchCounter);
+  }
+
+  public void testCacheExceptions() throws IOException {
     cacher.input = new StringInputStream("test stream");
     cacher.headers = null;
     try {
@@ -77,7 +88,6 @@ public class TestBaseUrlCacher extends LockssTestCase {
     cacher.headers = new Properties();
     cacher.cache();
     assertTrue(cacher.wasStored);
-
   }
 
   public static void main(String[] argv) {
@@ -85,13 +95,17 @@ public class TestBaseUrlCacher extends LockssTestCase {
     junit.swingui.TestRunner.main(testCaseList);
   }
 
-  private static class MockBaseUrlCacher extends BaseUrlCacher {
+  private class MockBaseUrlCacher extends BaseUrlCacher {
     InputStream input = null;
     Properties headers = null;
     boolean wasStored = false;
 
     public MockBaseUrlCacher(CachedUrlSet owner, String url) {
       super(owner, url);
+    }
+
+    public ArchivalUnit getArchivalUnit() {
+      return new MyMockArchivalUnit();
     }
 
     public InputStream getUncachedInputStream() {
@@ -107,4 +121,9 @@ public class TestBaseUrlCacher extends LockssTestCase {
     }
   }
 
+  private class MyMockArchivalUnit extends MockArchivalUnit {
+    public void pauseBeforeFetch() {
+      pauseBeforeFetchCounter++;
+    }
+  }
 }
