@@ -1,5 +1,5 @@
 /*
-* $Id: MockIdentityManager.java,v 1.5 2004-01-20 18:22:49 tlipkis Exp $
+* $Id: MockIdentityManager.java,v 1.6 2004-02-06 03:12:07 troberts Exp $
  */
 
 /*
@@ -31,16 +31,19 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.test;
 
-import java.util.HashMap;
+import java.util.*;
 import org.lockss.app.*;
 import org.lockss.protocol.*;
 import org.lockss.util.*;
+import org.lockss.plugin.*;
 
 /**
  * Mock override of IdentityManager.
  */
 public class MockIdentityManager extends IdentityManager {
   public HashMap idMap = new HashMap();
+
+  public Map agreeMap = new HashMap();
 
   public MockIdentityManager() { }
   public void initService(LockssDaemon daemon) throws LockssDaemonException {
@@ -63,5 +66,23 @@ public class MockIdentityManager extends IdentityManager {
     }
     return change.intValue();
   }
+
+  public void signalAgreed(LcapIdentity id, ArchivalUnit au) {
+    throw new UnsupportedOperationException("not implemented");
+  }
+
+  public void signalDisagreed(LcapIdentity id, ArchivalUnit au) {
+    throw new UnsupportedOperationException("not implemented");
+  }
+
+  public Map getAgreed(ArchivalUnit au) {
+    return (Map)agreeMap.get(au);
+  }
+  
+  public void setAgeedForAu(ArchivalUnit au, Map map) {
+    agreeMap.put(au, map);
+  }
+
+  
 
 }
