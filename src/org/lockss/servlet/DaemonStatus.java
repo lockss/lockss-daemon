@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.33 2004-02-23 09:16:42 tlipkis Exp $
+ * $Id: DaemonStatus.java,v 1.34 2004-04-29 10:12:49 tlipkis Exp $
  */
 
 /*
@@ -65,6 +65,7 @@ public class DaemonStatus extends LockssServlet {
   private String tableKey;
   private StatusService statSvc;
   private int outputFmt;
+  private BitSet tableOptions;
 
   public void init(ServletConfig config) throws ServletException {
     super.init(config);
@@ -92,6 +93,19 @@ public class DaemonStatus extends LockssServlet {
 	outputFmt = OUTPUT_TEXT;
       } else {
 	log.warning("Unknown output format: " + outputParam);
+      }
+    }
+    String optionsParam = req.getParameter("options");
+    if (StringUtil.isNullString(optionsParam)) {
+      tableOptions = null;
+    } else {
+      tableOptions = new BitSet();
+      for (Iterator iter = StringUtil.breakAt(optionsParam, ',').iterator();
+	   iter.hasNext(); ) {
+	String s = (String)iter.next();
+	if ("norows".equalsIgnoreCase(s)) {
+	  tableOptions.set(StatusTable.OPTION_NO_ROWS);
+	}
       }
     }
 
@@ -171,9 +185,9 @@ public class DaemonStatus extends LockssServlet {
       throws IOException, XmlDomBuilder.XmlDomException {
     PrintWriter wrtr = resp.getWriter();
     resp.setContentType("text/xml");
-    StatusTable statTable;
     try {
-      statTable = statSvc.getTable(tableName, tableKey);
+      StatusTable statTable = statSvc.getTable(tableName, tableKey,
+					       tableOptions);
       XmlStatusTable xmlTable = new XmlStatusTable(statTable);
       Document xmlTableDoc = xmlTable.getTableDocument();
       xmlTable.getXmlDomBuilder().serialize(xmlTableDoc, wrtr);
@@ -201,12 +215,12 @@ public class DaemonStatus extends LockssServlet {
     }
   }
 
-  // Build the table, addelements to page or writing text to wrtr
+  // Build the table, adding elements to page or writing text to wrtr
   private void doHtmlOrTextStatusTable(Page page, PrintWriter wrtr)
       throws IOException {
     StatusTable statTable;
     try {
-      statTable = statSvc.getTable(tableName, tableKey);
+      statTable = statSvc.getTable(tableName, tableKey, tableOptions);
     } catch (StatusService.NoSuchTableException e) {
       if (outputFmt == OUTPUT_HTML) {
 	page.add("No such table: ");
@@ -237,9 +251,15 @@ public class DaemonStatus extends LockssServlet {
     Table table = null;
 
     // convert list of ColumnDescriptors to array of ColumnDescriptors
-    ColumnDescriptor cds[] =
-      (ColumnDescriptor [])colList.toArray(new ColumnDescriptor[0]);
-    int cols = cds.length;
+    ColumnDescriptor cds[];
+    int cols;
+    if (colList != null) {
+      cds = (ColumnDescriptor [])colList.toArray(new ColumnDescriptor[0]);
+      cols = cds.length;
+    } else {
+      cds = new ColumnDescriptor[0];
+      cols = 1;
+    }
     if (true || !rowList.isEmpty()) {
       // if table not empty, output column headings
 
@@ -254,14 +274,17 @@ public class DaemonStatus extends LockssServlet {
 	table.newRow();
 	addSummaryInfo(table, statTable, cols);
 
-	// output column headings
-	for (int ix = 0; ix < cols; ix++) {
-	  ColumnDescriptor cd = cds[ix];
-	  String head = cd.getTitle() + addFootnote(cd.getFootNote());
-	  table.addHeading(head, "valign=bottom align=" +
-			   ((cols == 1) ? "center" : getColAlignment(cd)));
-	  if (ix < (cols - 1)) {
-	    table.newCell("width = 8");
+	if (colList != null) {
+	  // output column headings
+	  for (int ix = 0; ix < cols; ix++) {
+	    ColumnDescriptor cd = cds[ix];
+	    String head = cd.getTitle() + addFootnote(cd.getFootNote());
+	    table.addHeading(head, "valign=bottom align=" +
+			     ((cols == 1) ? "center" : getColAlignment(cd)));
+	    if (ix < (cols - 1)) {
+	      table.newCell("width=8");
+	      table.add("&nbsp;");
+	    }
 	  }
 	}
       } else {
@@ -274,42 +297,44 @@ public class DaemonStatus extends LockssServlet {
       }
 
     }
-    // output rows
-    for (Iterator rowIter = rowList.iterator(); rowIter.hasNext(); ) {
-      Map rowMap = (Map)rowIter.next();
-      if (outputFmt == OUTPUT_HTML) {
-	if (rowMap.get(StatusTable.ROW_SEPARATOR) != null) {
+    if (rowList != null) {
+      // output rows
+      for (Iterator rowIter = rowList.iterator(); rowIter.hasNext(); ) {
+	Map rowMap = (Map)rowIter.next();
+	if (outputFmt == OUTPUT_HTML) {
+	  if (rowMap.get(StatusTable.ROW_SEPARATOR) != null) {
+	    table.newRow();
+	    table.newCell("align=center colspan=" + (cols * 2 - 1));
+	    table.add("<hr>");
+	  }
 	  table.newRow();
-	  table.newCell("align=center colspan=" + (cols * 2 - 1));
-	  table.add("<hr>");
-	}
-	table.newRow();
-	for (int ix = 0; ix < cols; ix++) {
-	  ColumnDescriptor cd = cds[ix];
-	  Object val = rowMap.get(cd.getColumnName());
+	  for (int ix = 0; ix < cols; ix++) {
+	    ColumnDescriptor cd = cds[ix];
+	    Object val = rowMap.get(cd.getColumnName());
 
-	  table.newCell("align=" + getColAlignment(cd));
-	  table.add(getDisplayString(val, cd.getType()));
-	  if (ix < (cols - 1)) {
-	    table.newCell();	// empty column for spacing
+	    table.newCell("align=" + getColAlignment(cd));
+	    table.add(getDisplayString(val, cd.getType()));
+	    if (ix < (cols - 1)) {
+	      table.newCell();	// empty column for spacing
+	    }
 	  }
-	}
-      } else {
-	for (Iterator iter = rowMap.keySet().iterator(); iter.hasNext(); ) {
-	  Object o = iter.next();
-	  if (!(o instanceof String)) {
-	    // ignore special markers (eg, StatusTable.ROW_SEPARATOR)
-	    continue;
-	  }
-	  String key = (String)o;
-	  Object val = rowMap.get(key);
-	  Object dispVal = StatusTable.getActualValue(val);
-	  String valStr = dispVal != null ? dispVal.toString() : "(null)";
-	  wrtr.print(key + "=" + valStr);
-	  if (iter.hasNext()) {
-	    wrtr.print(",");
-	  } else {
-	    wrtr.println();
+	} else {
+	  for (Iterator iter = rowMap.keySet().iterator(); iter.hasNext(); ) {
+	    Object o = iter.next();
+	    if (!(o instanceof String)) {
+	      // ignore special markers (eg, StatusTable.ROW_SEPARATOR)
+	      continue;
+	    }
+	    String key = (String)o;
+	    Object val = rowMap.get(key);
+	    Object dispVal = StatusTable.getActualValue(val);
+	    String valStr = dispVal != null ? dispVal.toString() : "(null)";
+	    wrtr.print(key + "=" + valStr);
+	    if (iter.hasNext()) {
+	      wrtr.print(",");
+	    } else {
+	      wrtr.println();
+	    }
 	  }
 	}
       }
