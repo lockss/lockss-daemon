@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManager.java,v 1.6 2003-01-09 03:55:44 claire Exp $
+ * $Id: IdentityManager.java,v 1.7 2003-01-11 00:25:02 claire Exp $
  */
 
 /*
@@ -47,6 +47,8 @@ import java.util.Iterator;
 import java.util.Collection;
 import java.util.ArrayList;
 import org.exolab.castor.mapping.Mapping;
+import org.exolab.castor.mapping.*;
+import java.io.*;
 
 /**
  * <p>Title: </p>
@@ -215,9 +217,10 @@ public class IdentityManager {
       File iddbFile = new File(fn);
 
       Unmarshaller unmarshaller = new Unmarshaller(IdentityListBean.class);
+      unmarshaller.setMapping(getMapping());
       IdentityListBean idlb = (IdentityListBean)unmarshaller.unmarshal(
           new FileReader(iddbFile));
-      setIdentities(idlb.getIdentityList());
+      setIdentities(idlb.getIdBeans());
 
     } catch (Exception e) {
       theLog.warning("Couldn't load identity database: " + e.getMessage());
@@ -237,6 +240,7 @@ public class IdentityManager {
 
       IdentityListBean idlb = getIdentityListBean();
       Marshaller marshaller = new Marshaller(new FileWriter(iddbFile));
+      marshaller.setMapping(getMapping());
       marshaller.marshal(idlb);
 
     } catch (Exception e) {
@@ -267,12 +271,12 @@ public class IdentityManager {
       while (beanIter.hasNext()) {
         IdentityBean bean = (IdentityBean)beanIter.next();
         try {
-          LcapIdentity id = new LcapIdentity(bean.getIdKey(), bean.getReputation());
+          LcapIdentity id = new LcapIdentity(bean.getKey(), bean.getReputation());
           theIdentities.put(id.getIdKey(), id);
         }
         catch (UnknownHostException ex) {
           theLog.warning("Error reloading identity-Unknown Host: " +
-                         bean.getIdKey());
+                         bean.getKey());
         }
       }
     }
@@ -313,5 +317,23 @@ public class IdentityManager {
       theLog.debug(id.getIdKey() +" change reputation from " + reputation +
                    " to " + (reputation + delta));
     id.changeReputation(delta);
+  }
+
+  Mapping getMapping() {
+    if (mapping==null) {
+      String mappingFile = Configuration.getParam(PARAM_IDDB_MAP_FILENAME,"/tmp/iddb/idmapping.xml");
+      if (mappingFile==null) {
+        theLog.error("Couldn't get "+PARAM_IDDB_MAP_FILENAME+" from Configuration");
+        return null;
+      }
+      mapping = new Mapping();
+      try {
+        mapping.loadMapping(mappingFile);
+      }
+      catch (Exception ex) {
+        theLog.error("Loading of mapfile failed:" + mappingFile, ex);
+      }
+    }
+    return mapping;
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityBean.java,v 1.1 2003-01-07 03:09:51 claire Exp $
+ * $Id: IdentityBean.java,v 1.2 2003-01-11 00:25:02 claire Exp $
  */
 
 /*
@@ -33,24 +33,24 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.protocol;
 
 public class IdentityBean {
-  public String idKey = "";
-  public int reputation = 0;
+  String key = "";
+  int reputation = 0;
 
 
   public IdentityBean() {
   }
 
-  public IdentityBean(String key, int reputation) {
-    this.idKey = key;
+  IdentityBean(String key, int reputation) {
+    this.key = key;
     this.reputation = reputation;
   }
 
-  public void setIdKey(String key) {
-    this.idKey = key;
+  public void setKey(String key) {
+    this.key = key;
   }
 
-  public String getIdKey() {
-    return idKey;
+  public String getKey() {
+    return key;
   }
 
   public void setReputation(int reputation) {
