@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.35 2004-03-27 02:37:24 eaalto Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.36 2004-03-30 02:09:58 eaalto Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.daemon.RangeCachedUrlSetSpec;
+import org.lockss.plugin.AuUrl;
 
 /**
  * This is the test class for org.lockss.repository.RepositoryNodeImpl
@@ -89,7 +90,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     testFile = new File(tempDirPath + "/#content/current.props");
     assertTrue(testFile.exists());
     testFile = new File(tempDirPath + "/#node_props");
-    assertTrue(testFile.exists());
+    assertFalse(testFile.exists());
   }
 
   public void testVersionFileLocation() throws Exception {
@@ -359,12 +360,12 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
       leaf2.makeNewVersion();
       fail("Can't make new version while version open.");
     } catch (UnsupportedOperationException e) { }
-    TimeBase.step(RepositoryNodeImpl.VERSION_TIMEOUT/2);
+    TimeBase.step(RepositoryNodeImpl.DEFAULT_VERSION_TIMEOUT/2);
     try {
       leaf2.makeNewVersion();
       fail("Can't make new version while version not timed out.");
     } catch (UnsupportedOperationException e) { }
-    TimeBase.step(RepositoryNodeImpl.VERSION_TIMEOUT/2);
+    TimeBase.step(RepositoryNodeImpl.DEFAULT_VERSION_TIMEOUT/2);
     leaf2.makeNewVersion();
   }
 
@@ -595,6 +596,46 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
         "http://www.example.com/testDir/test3", "/branch1", "/branch1")));
   }
 
+  public void testDetermineParentNode() throws Exception {
+    repo.createNewNode("http://www.example.com");
+    repo.createNewNode("http://www.example.com/test");
+    assertNotNull(repo.getNode("http://www.example.com/test"));
+    RepositoryNodeImpl node = (RepositoryNodeImpl)repo.createNewNode(
+      "http://www.example.com/test/branch");
+    assertEquals("http://www.example.com/test/branch", node.getNodeUrl());
+    node = node.determineParentNode();
+    assertEquals("http://www.example.com/test", node.getNodeUrl());
+    node = node.determineParentNode();
+    assertEquals("http://www.example.com", node.getNodeUrl());
+    node = node.determineParentNode();
+    assertEquals(AuUrl.PROTOCOL, node.getNodeUrl());
+    node = node.determineParentNode();
+    assertEquals(AuUrl.PROTOCOL, node.getNodeUrl());
+  }
+
+  public void testCacheInvalidation() throws Exception {
+    RepositoryNodeImpl branch =
+        (RepositoryNodeImpl)createLeaf("http://www.example.com/branch",
+                                       "test", null);
+    RepositoryNodeImpl leaf =
+        (RepositoryNodeImpl)createLeaf("http://www.example.com/branch/leaf",
+                                       "test", null);
+    assertNull(branch.nodeProps.getProperty(leaf.TREE_SIZE_PROPERTY));
+    assertNull(leaf.nodeProps.getProperty(leaf.TREE_SIZE_PROPERTY));
+    branch.nodeProps.setProperty(leaf.TREE_SIZE_PROPERTY, "456");
+    branch.nodeProps.setProperty(leaf.CHILD_COUNT_PROPERTY, "1");
+    leaf.nodeProps.setProperty(leaf.TREE_SIZE_PROPERTY, "123");
+    leaf.nodeProps.setProperty(leaf.CHILD_COUNT_PROPERTY, "0");
+
+    leaf.invalidateCachedValues(true);
+    // cleared
+    assertNull(leaf.nodeProps.getProperty(leaf.TREE_SIZE_PROPERTY));
+    assertNull(leaf.nodeProps.getProperty(leaf.CHILD_COUNT_PROPERTY));
+    // cleared
+    assertNull(branch.nodeProps.getProperty(leaf.TREE_SIZE_PROPERTY));
+    assertNull(branch.nodeProps.getProperty(leaf.CHILD_COUNT_PROPERTY));
+  }
+
   public void testTreeSizeCaching() throws Exception {
     createLeaf("http://www.example.com/testDir", "test", null);
 
@@ -617,8 +658,6 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertNull(leaf.nodeProps.getProperty(leaf.CHILD_COUNT_PROPERTY));
     assertEquals(0, leaf.getChildCount());
     assertEquals("0", leaf.nodeProps.getProperty(leaf.CHILD_COUNT_PROPERTY));
-    //XXX blank child count (until parent's invalidated properly)
-    leaf.markAsDeleted();
 
     createLeaf("http://www.example.com/testDir/test1", "test1", null);
     createLeaf("http://www.example.com/testDir/test2", "test2", null);
@@ -718,8 +757,9 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
   }
 
   public void testReactivateViaNewVersion() throws Exception {
-    RepositoryNode leaf =
-        createLeaf("http://www.example.com/test1", "test stream", null);
+    RepositoryNodeImpl leaf =
+        (RepositoryNodeImpl)createLeaf("http://www.example.com/test1",
+                                       "test stream", null);
     leaf.deactivateContent();
     assertTrue(leaf.isContentInactive());
     assertEquals(RepositoryNodeImpl.INACTIVE_VERSION, leaf.getCurrentVersion());
@@ -734,8 +774,33 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertEquals(2, leaf.getCurrentVersion());
     String resultStr = getLeafContent(leaf);
     assertEquals("test stream 2", resultStr);
+
+    File lastProps = new File(leaf.cacheLocationFile, "1.props");
+    assertTrue(lastProps.exists());
+    InputStream is =
+        new BufferedInputStream(new FileInputStream(lastProps));
+    props.load(is);
+    is.close();
+    // make sure the 'was inactive' property hasn't been lost
+    assertEquals("true", props.getProperty(leaf.NODE_WAS_INACTIVE_PROPERTY));
   }
 
+  public void testAbandonReactivateViaNewVersion() throws Exception {
+    RepositoryNode leaf =
+        createLeaf("http://www.example.com/test1", "test stream", null);
+    leaf.deactivateContent();
+    assertTrue(leaf.isContentInactive());
+    assertEquals(RepositoryNodeImpl.INACTIVE_VERSION, leaf.getCurrentVersion());
+
+    Properties props = new Properties();
+    props.setProperty("test 1", "value 2");
+    leaf.makeNewVersion();
+    leaf.setNewProperties(props);
+    writeToLeaf(leaf, "test stream 2");
+    leaf.abandonNewVersion();
+    assertTrue(leaf.isContentInactive());
+    assertEquals(RepositoryNodeImpl.INACTIVE_VERSION, leaf.getCurrentVersion());
+  }
 
   public void testIsLeaf() throws Exception {
     createLeaf("http://www.example.com/testDir/test1", "test stream", null);
