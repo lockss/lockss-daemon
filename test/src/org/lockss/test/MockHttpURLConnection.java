@@ -20,24 +20,27 @@ public class MockHttpURLConnection extends HttpURLConnection{
     }
 
     public static void setFollowRedirects(boolean set) {
+      throw new UnsupportedOperationException("Not Implemented");
     }
 
     public static boolean getFollowRedirects() {
-	return false;
+      throw new UnsupportedOperationException("Not Implemented");
     }
 
     public void setInstanceFollowRedirects(boolean followRedirects) {
+      throw new UnsupportedOperationException("Not Implemented");
     }
 
     public boolean getInstanceFollowRedirects() {
-	return false;
+      throw new UnsupportedOperationException("Not Implemented");
     }
 
     public void setRequestMethod(String method) throws ProtocolException {
+      throw new UnsupportedOperationException("Not Implemented");
     }
 
     public String getRequestMethod() {
-	return null;
+      throw new UnsupportedOperationException("Not Implemented");
     }
     
     public int getResponseCode() throws IOException {
@@ -45,29 +48,31 @@ public class MockHttpURLConnection extends HttpURLConnection{
     }
 
     public String getResponseMessage() throws IOException {
-	return null;
+      throw new UnsupportedOperationException("Not Implemented");
     }
 
     public long getHeaderFieldDate(String name, long Default) {
-	return 0;
+      throw new UnsupportedOperationException("Not Implemented");
     }
 
 
     public void connect(){
+      throw new UnsupportedOperationException("Not Implemented");
     }
 
     public void disconnect(){
+      throw new UnsupportedOperationException("Not Implemented");
     }
 
     public boolean usingProxy(){
-	return false;
+      throw new UnsupportedOperationException("Not Implemented");
     }
 
     public Permission getPermission() throws IOException {
-	return null;
+      throw new UnsupportedOperationException("Not Implemented");
     }
 
     public InputStream getErrorStream() {
-	return null;
+      throw new UnsupportedOperationException("Not Implemented");
     }
 }

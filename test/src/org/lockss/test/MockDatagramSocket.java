@@ -1,5 +1,5 @@
 /*
- * $Id: MockDatagramSocket.java,v 1.5 2002-12-11 01:26:44 tal Exp $
+ * $Id: MockDatagramSocket.java,v 1.6 2003-02-27 21:29:07 troberts Exp $
  */
 
 /*
@@ -38,10 +38,13 @@ import java.util.*;
 public class MockDatagramSocket
   extends DatagramSocket implements MockDatagramSocketExtras {
   /**
-   * This class is a mock implementation of DatagramSocket to be used for unit testing
+   * This class is a mock implementation of DatagramSocket to be used for 
+   * unit testing
    */
 
   private boolean isClosed = false;
+  private int localPort = -1;
+
   private Vector sentPackets;
   private SimpleQueue.Fifo receiveQueue;
 
@@ -82,61 +85,65 @@ public class MockDatagramSocket
    * Stubbed
    */
   public void connect(InetAddress address, int port){
+    throw new UnsupportedOperationException("Not Implemented");
   }
 
   /**
    * Stubbed
    */
   public void disconnect(){
+    throw new UnsupportedOperationException("Not Implemented");
   }
 
   /**
    * Stubbed
    */
   public InetAddress getInetAddress(){
-    return null;
+    throw new UnsupportedOperationException("Not Implemented");
   }
 
   /**
    * Stubbed
    */
   public InetAddress getLocalAddress(){
-    return null;
+    throw new UnsupportedOperationException("Not Implemented");
   }
 
-  /**
-   * Stubbed
-   */
   public int getLocalPort(){
-    return -1;
+    return localPort;
+  }
+
+  
+  public void setLocalPort(int localPort) {
+    this.localPort=localPort;
   }
 
   /**
    * Stubbed
    */
   public int getPort(){
-    return -1;
+    throw new UnsupportedOperationException("Not Implemented");
   }
 
   /**
    * Stubbed
    */
   public int getReceiverBufferSize(){
-    return -1;
+    throw new UnsupportedOperationException("Not Implemented");
   }
 
   /**
    * Stubbed
    */
   public int getSendBufferSize(){
-    return -1;
+    throw new UnsupportedOperationException("Not Implemented");
   }
 
   /**
    * Stubbed
    */
   public int getSoTimeout(){
-    return -1;
+    throw new UnsupportedOperationException("Not Implemented");
   }
 
   /**
@@ -173,15 +180,19 @@ public class MockDatagramSocket
 
   public static void setDatagramSocketImplFactory(DatagramSocketImplFactory
 						  fac){
+    throw new UnsupportedOperationException("Not Implemented");
   }
 
   public void setReceiveBufferSize(int size){
+    throw new UnsupportedOperationException("Not Implemented");
   }
 
   public void setSendBufferSize(int size){
+    throw new UnsupportedOperationException("Not Implemented");
   }
 
   public void setSoTimeout(int timeout){
+    throw new UnsupportedOperationException("Not Implemented");
   }
 
 
