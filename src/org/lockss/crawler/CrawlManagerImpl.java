@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.15 2003-03-27 22:05:03 troberts Exp $
+ * $Id: CrawlManagerImpl.java,v 1.16 2003-03-28 00:20:50 troberts Exp $
  */
 
 /*
@@ -217,6 +217,7 @@ public class CrawlManagerImpl implements CrawlManager, LockssManager {
 
     public void run() {
       crawler.doCrawl(deadline);
+      activeCrawls.remove(au);
       if (callbacks != null) {
 	Iterator it = callbacks.iterator();
 	while (it.hasNext()) {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.14 2003-03-26 21:30:26 troberts Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.15 2003-03-28 00:20:50 troberts Exp $
  */
 
 /*
@@ -84,7 +84,8 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 
   public void testNullAUForIsCrawlingAU() {
     try {
-      crawlManager.isCrawlingAU(null, new TestCrawlCB(Deadline.NEVER),
+      crawlManager.isCrawlingAU(null, 
+				new TestCrawlCB(new SimpleBinarySemaphore()),
 				"blah");
       fail("Didn't throw an IllegalArgumentException on a null AU");
     } catch (IllegalArgumentException iae) {
@@ -120,18 +121,11 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     cus.addUrl(LINKLESS_PAGE, url2);
     cus.addUrl(LINKLESS_PAGE, url3);
 
-    Deadline deadline = Deadline.in(TEN_SECONDS);
+    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
 
+    assertTrue(crawlManager.isCrawlingAU(mau, new TestCrawlCB(sem), null));
 
-    assertTrue(crawlManager.isCrawlingAU(mau, new TestCrawlCB(deadline),
-					 null));
-
-    while (!deadline.expired()) {
-      try{
- 	deadline.sleep();
-      } catch (InterruptedException ie) {
-      }
-    }
+    assertTrue("Crawl didn't finish in 10 seconds", sem.take(TEN_SECONDS));
 
     Set expected = SetUtil.set(startUrl, url1, url2, url3);
     assertEquals(expected, cus.getCachedUrls());
@@ -139,71 +133,57 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 
 
   public void testTriggersNewContentCallback() {
-    Deadline deadline = Deadline.in(TEN_SECONDS);
+    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
 
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
     cus.addUrl(LINKLESS_PAGE, startUrl);
 
-    TestCrawlCB cb = new TestCrawlCB(deadline);
+    TestCrawlCB cb = new TestCrawlCB(sem);
     crawlManager.isCrawlingAU(mau, cb, null);
 
-    while (!deadline.expired()) {
-      try{
-	deadline.sleep();
-      } catch (InterruptedException ie) {
-      }
-    }
+    assertTrue("Crawl didn't finish in 10 seconds", sem.take(TEN_SECONDS));
     assertTrue("Callback wasn't triggered", cb.wasTriggered());
   }
 
+
   public void testNewContentCrawlCallbackReturnsCookie() {
-    Deadline deadline = Deadline.in(TEN_SECONDS);
+    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
+
     String cookie = "cookie string";
 
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
     cus.addUrl(LINKLESS_PAGE, startUrl);
 
-    TestCrawlCB cb = new TestCrawlCB(deadline);
+    TestCrawlCB cb = new TestCrawlCB(sem);
     crawlManager.isCrawlingAU(mau, cb, cookie);
 
-    while (!deadline.expired()) {
-      try{
-	deadline.sleep();
-      } catch (InterruptedException ie) {
-      }
-    }
+    assertTrue("Crawl didn't finish in 10 seconds", sem.take(TEN_SECONDS));
     assertEquals(cookie, (String)cb.getCookie());
   }
 
   public void testNewContentCrawlCallbackReturnsNullCookie() {
-    Deadline deadline = Deadline.in(TEN_SECONDS);
+    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
     String cookie = null;
 
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
     cus.addUrl(LINKLESS_PAGE, startUrl);
 
-    TestCrawlCB cb = new TestCrawlCB(deadline);
+    TestCrawlCB cb = new TestCrawlCB(sem);
     crawlManager.isCrawlingAU(mau, cb, cookie);
 
-    while (!deadline.expired()) {
-      try{
-	deadline.sleep();
-      } catch (InterruptedException ie) {
-      }
-    }
+    assertTrue("Crawl didn't finish in 10 seconds", sem.take(TEN_SECONDS));
     assertEquals(cookie, (String)cb.getCookie());
   }
 
   public void testKicksOffNewThread() {
-    BinarySemaphore sem = new BinarySemaphore();
-
-    TestCrawlCB cb = new TestCrawlCB(Deadline.NEVER);
+    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
+    TestCrawlCB cb = new TestCrawlCB();
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
 
     cus.addUrl(LINKLESS_PAGE, startUrl);
 
-    WaitOnSemaphoreCallback pauseCB = new WaitOnSemaphoreCallback(sem,
-								  TEN_SECONDS);
+    WaitOnSemaphoreCallback pauseCB = new WaitOnSemaphoreCallback(sem);
+
     mau.setPauseCallback(pauseCB);
 
     crawlManager.isCrawlingAU(mau, cb, null);
@@ -215,7 +195,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
   public void testScheduleRepairNullAU() throws MalformedURLException {
     try{
       crawlManager.scheduleRepair(null, new URL("http://www.example.com"),
-				  new TestCrawlCB(Deadline.NEVER), "blah");
+				  new TestCrawlCB(), "blah");
       fail("Didn't throw IllegalArgumentException on null AU");
     } catch (IllegalArgumentException iae) {
     }
@@ -224,7 +204,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
   public void testScheduleRepairNullUrl() {
     try{
       crawlManager.scheduleRepair(mau, null,
-				  new TestCrawlCB(Deadline.NEVER), "blah");
+				  new TestCrawlCB(), "blah");
       fail("Didn't throw IllegalArgumentException on null URL");
     } catch (IllegalArgumentException iae) {
     }
@@ -248,63 +228,43 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     cus.addUrl(LINKLESS_PAGE, url2);
     cus.addUrl(LINKLESS_PAGE, url3);
 
-    Deadline deadline = Deadline.in(TEN_SECONDS);
+    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
 
     crawlManager.scheduleRepair(mau, new URL(startUrl),
-				new TestCrawlCB(deadline), null);
+				new TestCrawlCB(sem), null);
 
-    while (!deadline.expired()) {
-      try{
- 	deadline.sleep();
-      } catch (InterruptedException ie) {
-      }
-    }
-    Set expected = SetUtil.set(startUrl);
-    assertEquals(expected, cus.getCachedUrls());
+    assertTrue("Crawl didn't finish in 10 seconds", sem.take(TEN_SECONDS));
+    assertEquals(SetUtil.set(startUrl), cus.getCachedUrls());
   }
 
   public void testTriggersRepairCallback() throws MalformedURLException {
-    Deadline deadline = Deadline.in(TEN_SECONDS);
-
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
     cus.addUrl(LINKLESS_PAGE, startUrl);
 
-    TestCrawlCB cb = new TestCrawlCB(deadline);
+    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
+    TestCrawlCB cb = new TestCrawlCB(sem);
 
     crawlManager.scheduleRepair(mau, new URL(startUrl), cb, null);
 
-    while (!deadline.expired()) {
-      try{
-	deadline.sleep();
-      } catch (InterruptedException ie) {
-      }
-    }
+    assertTrue("Crawl didn't finish in 10 seconds", sem.take(TEN_SECONDS));
     assertTrue("Callback wasn't triggered", cb.wasTriggered());
   }
 
   public void testRepairCallbackGetsCookie() throws MalformedURLException {
-    Deadline deadline = Deadline.in(TEN_SECONDS);
     String cookie = "test cookie str";
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
     cus.addUrl(LINKLESS_PAGE, startUrl);
 
-    TestCrawlCB cb = new TestCrawlCB(deadline);
+    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
+    TestCrawlCB cb = new TestCrawlCB(sem);
 
     crawlManager.scheduleRepair(mau, new URL(startUrl), cb, cookie);
 
-    while (!deadline.expired()) {
-      try{
-	deadline.sleep();
-      } catch (InterruptedException ie) {
-      }
-    }
-
+    assertTrue("Crawl didn't finish in 10 seconds", sem.take(TEN_SECONDS));
     assertEquals(cookie, cb.getCookie());
-
   }
 
   public void testCompletedCrawlUpdatesLastCrawlTime() {
-    Deadline deadline = Deadline.in(TEN_SECONDS);
     MockAuState maus = new MockAuState();
     long lastCrawlTime = maus.getLastCrawlTime();
     nodeManager.setAuState(maus);
@@ -312,51 +272,73 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
     cus.addUrl(LINKLESS_PAGE, startUrl);
 
-    TestCrawlCB cb = new TestCrawlCB(deadline);
+    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
+    TestCrawlCB cb = new TestCrawlCB(sem);
     crawlManager.isCrawlingAU(mau, cb, null);
 
-    while (!deadline.expired()) {
-      try{
-	deadline.sleep();
-      } catch (InterruptedException ie) {
-      }
-    }
+    assertTrue("Crawl didn't finish in 10 seconds", sem.take(TEN_SECONDS));
     assertNotEquals(lastCrawlTime, maus.getLastCrawlTime());
   }
 
-  public void testDontScheduleTwoCrawlsOnAU() {
-    BinarySemaphore sem = new BinarySemaphore();
+  public void testCompletedCrawlNoted() {
+    MockAuState maus = new MockAuState();
+    long lastCrawlTime = maus.getLastCrawlTime();
+    nodeManager.setAuState(maus);
 
-    TestCrawlCB cb = new TestCrawlCB(Deadline.NEVER);
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
+    cus.addUrl(LINKLESS_PAGE, startUrl);
+
+    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
+    TestCrawlCB cb = new TestCrawlCB(sem);
+    crawlManager.isCrawlingAU(mau, cb, null);
+
+    assertTrue("Crawl didn't finish in 10 seconds", sem.take(TEN_SECONDS));
+    mau.setShouldCrawlForNewContent(false);
+
+    //crawl has finished and we shouldn't crawl for new content
+    assertFalse(crawlManager.isCrawlingAU(mau, null, null));
+  }
+
+
+  public void testDontScheduleTwoCrawlsOnAU() {
+    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
+
+    TestCrawlCB cb = new TestCrawlCB(sem);
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
 
     cus.addUrl(LINKLESS_PAGE, startUrl);
 
-    WaitOnSemaphoreCallback pauseCB = new WaitOnSemaphoreCallback(sem,
-								  TEN_SECONDS);
+    WaitOnSemaphoreCallback pauseCB = new WaitOnSemaphoreCallback(sem);
     mau.setPauseCallback(pauseCB);
 
     assertTrue(crawlManager.isCrawlingAU(mau, null, null));
     assertTrue(crawlManager.isCrawlingAU(mau, cb, null));
 
     //if the callback was triggered, the second crawl completed
+    //XXX meant to check that a second crawl isn't schedule, bogus
     assertFalse("Callback was triggered", cb.wasTriggered());
   }
 
   private class TestCrawlCB implements CrawlManager.Callback {
-    Deadline timer;
+    SimpleBinarySemaphore sem;
     boolean called = false;
     Object cookie;
 
-    public TestCrawlCB(Deadline timer) {
-      this.timer = timer;
+    public TestCrawlCB() {
+      this(null);
+    }
+
+    public TestCrawlCB(SimpleBinarySemaphore sem) {
+      this.sem = sem;
     }
 
     public void signalCrawlAttemptCompleted(boolean success,
 					    Object cookie) {
       called = true;
       this.cookie = cookie;
-      timer.expire();
+      if (sem != null) {
+	sem.give();
+      }
     }
 
     public void signalCrawlSuspended(Object cookie) {
@@ -376,19 +358,14 @@ public class TestCrawlManagerImpl extends LockssTestCase {
    * Callback to wait on a semaphore before returning.
    */
   private class WaitOnSemaphoreCallback implements MockObjectCallback {
-    BinarySemaphore sem;
-    long maxWaitTime = 0;
+    SimpleBinarySemaphore sem;
 
-    public WaitOnSemaphoreCallback(BinarySemaphore sem, long maxWaitTime) {
+    public WaitOnSemaphoreCallback(SimpleBinarySemaphore sem) {
       this.sem = sem;
-      this.maxWaitTime = maxWaitTime;
     }
 
     public void callback() {
-      try {
-	sem.take(Deadline.in(maxWaitTime));
-      } catch (InterruptedException ie) {
-      }
+      sem.take();
     }
   }
 }
