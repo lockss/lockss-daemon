@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerStatus.java,v 1.6 2003-04-23 22:49:00 claire Exp $
+ * $Id: NodeManagerStatus.java,v 1.7 2003-04-24 17:26:20 tal Exp $
  */
 
 /*
@@ -122,8 +122,8 @@ public class NodeManagerStatus {
       ArchivalUnit au = state.getArchivalUnit();
 
       //"AuID"
-      rowMap.put("AuID", ManagerStatus.makeNodeManagerRef(au.getName(),
-          au.getAUId()));
+      rowMap.put("AuName", ManagerStatus.makeNodeManagerRef(au.getName(),
+							    au.getAUId()));
 
       //"Status"
       rowMap.put("CrawlTime", new Long(state.getLastCrawlTime()));
