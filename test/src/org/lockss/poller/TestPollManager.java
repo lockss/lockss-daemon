@@ -192,27 +192,27 @@ public class TestPollManager extends TestCase {
     try {
       Poll c1 = PollManager.makePoll(sameroot[1]);
       // differnt content poll should be ok
-      ArchivalUnit au = PollManager.checkForConflicts(testmsg[1]);
-      assertNull("different content poll s/b ok", au);
+      CachedUrlSet cus = PollManager.checkForConflicts(testmsg[1]);
+      assertNull("different content poll s/b ok", cus);
 
       // same content poll should be a conflict
-      au = PollManager.checkForConflicts(sameroot[1]);
-      assertNotNull("same content poll root s/b conflict", au);
+      cus = PollManager.checkForConflicts(sameroot[1]);
+      assertNotNull("same content poll root s/b conflict", cus);
 
       // different name poll should be ok
-      au = PollManager.checkForConflicts(testmsg[0]);
-      assertNull("name poll with different root s/b ok", au);
+      cus = PollManager.checkForConflicts(testmsg[0]);
+      assertNull("name poll with different root s/b ok", cus);
 
       // same name poll should be conflict
-      au = PollManager.checkForConflicts(sameroot[0]);
-      assertNotNull("same name poll root s/b conflict", au);
+      cus = PollManager.checkForConflicts(sameroot[0]);
+      assertNotNull("same name poll root s/b conflict", cus);
 
       // different verify poll should be ok
-      au = PollManager.checkForConflicts(testmsg[2]);
-      assertNull("verify poll s/b ok", au);
+      cus = PollManager.checkForConflicts(testmsg[2]);
+      assertNull("verify poll s/b ok", cus);
 
-      au = PollManager.checkForConflicts(sameroot[2]);
-      assertNull("verify poll s/b ok", au);
+      cus = PollManager.checkForConflicts(sameroot[2]);
+      assertNull("verify poll s/b ok", cus);
 
       // remove the poll
       PollManager.removePoll(c1.m_key);
@@ -225,27 +225,27 @@ public class TestPollManager extends TestCase {
     try {
       Poll np = PollManager.makePoll(sameroot[0]);
       // differnt name poll should be ok
-      ArchivalUnit au = PollManager.checkForConflicts(testmsg[0]);
-      assertNull("different name poll s/b ok", au);
+      CachedUrlSet cus = PollManager.checkForConflicts(testmsg[0]);
+      assertNull("different name poll s/b ok", cus);
 
       // same content poll should be a conflict
-      au = PollManager.checkForConflicts(sameroot[0]);
-      assertNotNull("same name poll root s/b conflict", au);
+      cus = PollManager.checkForConflicts(sameroot[0]);
+      assertNotNull("same name poll root s/b conflict", cus);
 
       // different name poll should be ok
-      au = PollManager.checkForConflicts(testmsg[1]);
-      assertNull("content poll with different root s/b ok", au);
+      cus = PollManager.checkForConflicts(testmsg[1]);
+      assertNull("content poll with different root s/b ok", cus);
 
       // same name poll should be conflict
-      au = PollManager.checkForConflicts(sameroot[1]);
-      assertNotNull("content poll root s/b conflict", au);
+      cus = PollManager.checkForConflicts(sameroot[1]);
+      assertNotNull("content poll root s/b conflict", cus);
 
       // different verify poll should be ok
-      au = PollManager.checkForConflicts(testmsg[2]);
-      assertNull("verify poll s/b ok", au);
+      cus = PollManager.checkForConflicts(testmsg[2]);
+      assertNull("verify poll s/b ok", cus);
 
-      au = PollManager.checkForConflicts(sameroot[2]);
-      assertNull("verify poll s/b ok", au);
+      cus = PollManager.checkForConflicts(sameroot[2]);
+      assertNull("verify poll s/b ok", cus);
 
       // remove the poll
       PollManager.removePoll(np.m_key);

@@ -1,5 +1,5 @@
 /*
- * $Id: RunDaemon.java,v 1.2 2002-11-23 01:21:30 troberts Exp $
+ * $Id: RunDaemon.java,v 1.3 2002-11-26 02:22:31 claire Exp $
  */
 
 /*
@@ -67,7 +67,7 @@ public class RunDaemon {
 //        System.exit(0);
     }
   }
-   
+
   RunDaemon(List propUrls){
     this.propUrls = propUrls;
   }
@@ -83,25 +83,28 @@ public class RunDaemon {
 
     dirPath = Configuration.getParam(Configuration.PREFIX+"cache.location",
 				     DEFAULT_DIR_PATH);
-    boolean shouldCallPoll = 
+    boolean shouldCallPoll =
       Configuration.getBooleanParam(Configuration.PREFIX+"shouldCallPoll",
 				    false);
 
     sau = new SimulatedArchivalUnit(dirPath);
     org.lockss.plugin.Plugin.registerArchivalUnit(sau);
 
+    int poll_type = Configuration.getIntParam(Configuration.PREFIX+"poll.type",
+        LcapMessage.CONTENT_POLL_REQ);
+
     createContent();
     crawlContent();
     if (shouldCallPoll) {
       try {
 	Thread.currentThread().sleep(1000);
-	PollManager.makePollRequest("http://www.example.com/", ".*",  
-				    LcapMessage.CONTENT_POLL_REQ,
+	PollManager.makePollRequest("http://www.example.com/", ".*",
+				    poll_type,
 				    5, InetAddress.getByName("239.4.5.6"),
 				    1 * 60 * 1000, 60 * 1000);
       } catch (Exception e) {
 	e.printStackTrace();
-      } 
+      }
     }
     else {
     }

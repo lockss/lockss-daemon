@@ -147,7 +147,13 @@ public class TestPoll extends TestCase {
   /** test for method vote(..) */
   public void testVote() {
     Poll p = testpolls[1];
-    p.vote();
+    p.m_hash = PollManager.generateRandomBytes();
+    try {
+      p.vote();
+    }
+    catch(NullPointerException npe) {
+      // the socket isn't inited and should squack
+    }
   }
 
   /** test for method startPoll(..) */
@@ -162,11 +168,21 @@ public class TestPoll extends TestCase {
     p.m_disagree = 2;
     p.m_agreeWt = 2000;
     p.m_disagreeWt = 200;
-
-    p.voteInPoll();
+    p.m_hash = PollManager.generateRandomBytes();
+    try {
+      p.voteInPoll();
+    }
+    catch(NullPointerException npe) {
+      // the socket isn't inited and should squack
+    }
 
     p.m_agree = 20;
-    p.voteInPoll();
+    try {
+      p.voteInPoll();
+    }
+    catch(NullPointerException npe) {
+      // the socket isn't inited and should squack
+    }
 
   }
 
