@@ -1,5 +1,5 @@
 /*
- * $Id: SortScheduler.java,v 1.3 2003-12-10 18:38:14 tlipkis Exp $
+ * $Id: SortScheduler.java,v 1.4 2004-03-23 20:55:42 tlipkis Exp $
  */
 
 /*
@@ -62,6 +62,7 @@ public class SortScheduler implements Scheduler {
     for (Iterator iter = rawTasks.iterator(); iter.hasNext(); ) {
       SchedulableTask rawTask = (SchedulableTask)iter.next();
       if (!rawTask.isProperWindow()) {
+	log.warning("Task has improper window: " + rawTask);
 	throw new IllegalArgumentException("Task has improper window");
       }
 
