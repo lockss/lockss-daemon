@@ -1,5 +1,5 @@
 /*
- * $Id: TestFileUtil.java,v 1.3 2003-03-04 01:02:05 aalto Exp $
+ * $Id: TestFileUtil.java,v 1.4 2003-03-17 08:33:54 tal Exp $
  */
 
 /*
@@ -112,6 +112,7 @@ public class TestFileUtil extends LockssTestCase {
     assertTrue(new File(d2, "d2f1").createNewFile());
     assertFalse(dir.delete());
     assertTrue(FileUtil.delTree(dir));
+    assertFalse(dir.exists());
   }
 }
 
