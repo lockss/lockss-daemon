@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.15 2003-02-06 05:16:07 claire Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.16 2003-02-07 08:36:27 claire Exp $
  */
 
 /*
@@ -397,7 +397,8 @@ public class TestNodeManagerImpl extends LockssTestCase {
         bytes,
         (isContentPoll ? LcapMessage.CONTENT_POLL_REQ : LcapMessage.NAME_POLL_REQ),
         123321,
-        testID);
+        testID,
+        "testplugin 1.0");
     } catch (IOException ex) {
       fail("can't create test name message" + ex.toString());
     }

@@ -24,7 +24,6 @@ public class TestPoll extends TestCase {
 
   private static String[] testentries = {"test1.doc", "test2.doc", "test3.doc"};
   private static String[] testentries1 = {"test1.doc", "test3.doc", "test4.doc"};
-
   protected static ArchivalUnit testau;
   private static IdentityManager idmgr;
   private static MockLockssDaemon daemon = new MockLockssDaemon(null);
@@ -73,7 +72,8 @@ public class TestPoll extends TestCase {
         pollmanager.generateRandomBytes(),
         LcapMessage.NAME_POLL_REQ + (i * 2),
         testduration,
-        testID);
+        testID,
+        testau.getPluginId());
       }
     }
     catch (IOException ex) {
@@ -284,7 +284,8 @@ public class TestPoll extends TestCase {
                                 int numDisagree) throws Exception {
     testau = PollTestPlugin.PTArchivalUnit.createFromListOfRootUrls(rooturls);
     daemon.getPluginManager().registerArchivalUnit(testau);
-    Poll p = daemon.getPollManager().makePoll(testmsg);
+    CachedUrlSet cus = testau.makeCachedUrlSet(testmsg.getTargetUrl(), testmsg.getRegExp());
+    Poll p = daemon.getPollManager().createPoll(testmsg, cus);
     p.m_tally.quorum = numAgree + numDisagree;
     p.m_tally.numAgree = numAgree;
     p.m_tally.numDisagree = numDisagree;

@@ -24,6 +24,7 @@ public class TestIdentityManager extends TestCase {
   private static byte[] testbytes = {1,2,3,4,5,6,7,8,9,10};
   private static String[] testentries = {"test1.doc",
                                          "test2.doc", "test3.doc"};
+  private static String pluginid = "testplugin 1.0";
 
   private static IdentityManager idmgr;
 
@@ -57,7 +58,8 @@ public class TestIdentityManager extends TestCase {
                                            testbytes,
                                            LcapMessage.CONTENT_POLL_REQ,
                                            100000,
-                                           fakeId);
+                                           fakeId,
+                                           pluginid);
     }
     catch (Exception ex) {
       fail("message request creation failed.");

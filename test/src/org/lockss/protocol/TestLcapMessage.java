@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapMessage.java,v 1.8 2003-02-06 05:16:07 claire Exp $
+ * $Id: TestLcapMessage.java,v 1.9 2003-02-07 08:36:27 claire Exp $
  */
 
 /*
@@ -40,12 +40,13 @@ import java.io.*;
 import java.util.*;
 import junit.framework.TestCase;
 import org.lockss.test.*;
+import gnu.regexp.*;
 
 /** JUnitTest case for class: org.lockss.protocol.Message */
 public class TestLcapMessage extends TestCase {
 
   private static String urlstr = "http://www.test.org";
-  private static String regexp = "*.doc";
+  private static String regexp = "^.*\\.doc";
   private static byte[] testbytes = {1,2,3,4,5,6,7,8,9,10};
   private static String[] testentries = {"test1.doc",
                                          "test2.doc", "test3.doc"};
@@ -55,6 +56,7 @@ public class TestLcapMessage extends TestCase {
   protected InetAddress testaddr;
   protected LcapIdentity testID;
   protected LcapMessage testmsg;
+  protected static String pluginID = "TestPlugin_1.0";
 
   public TestLcapMessage(String _name) {
     super(_name);
@@ -93,6 +95,7 @@ public class TestLcapMessage extends TestCase {
     testmsg.m_hashed = testbytes;
     testmsg.m_opcode = LcapMessage.CONTENT_POLL_REQ;
     testmsg.m_entries = testentries;
+    testmsg.m_pluginID = pluginID;
 
   }
 
@@ -124,6 +127,7 @@ public class TestLcapMessage extends TestCase {
     assertEquals(rep_msg.m_ttl,5);
     assertEquals(rep_msg.m_opcode,LcapMessage.CONTENT_POLL_REP);
     assertEquals(rep_msg.m_hashAlgorithm,testmsg.m_hashAlgorithm);
+    assertEquals(rep_msg.m_pluginID, testmsg.m_pluginID);
     // TODO: figure out how to test time
     assertEquals(rep_msg.m_multicast ,false);
     assertEquals(rep_msg.m_hopCount,2);
@@ -145,7 +149,8 @@ public class TestLcapMessage extends TestCase {
                                            testbytes,
                                            LcapMessage.CONTENT_POLL_REQ,
                                            100000,
-                                           testID);
+                                           testID,
+                                           pluginID);
     }
     catch (Exception ex) {
       fail("message request creation failed.");
@@ -153,10 +158,31 @@ public class TestLcapMessage extends TestCase {
     assertTrue(req_msg.m_originID.isEqual(testID));
     assertEquals(req_msg.m_opcode,LcapMessage.CONTENT_POLL_REQ);
     assertEquals(req_msg.m_multicast ,false);
+    assertEquals(req_msg.m_pluginID, pluginID);
     assertTrue(Arrays.equals(req_msg.m_challenge,testbytes));
     assertTrue(Arrays.equals(req_msg.m_verifier,testbytes));
     assertTrue(Arrays.equals(req_msg.m_hashed,new byte[0]));
     assertTrue(Arrays.equals(req_msg.m_entries,testentries));
+
+  }
+
+  public void testSetRERemaining() {
+    testmsg.setRERemaining(1);
+    StringBuffer strbuf = new StringBuffer();
+    for(int i = 0; i< testentries.length; i++) {
+      strbuf.append(testentries[i]);
+    }
+    String expected = testentries[1] + ".*" + testentries[testentries.length-1];
+    assertEquals(expected,testmsg.m_RERemaining);
+    try {
+      RE testRE = new RE(testmsg.m_RERemaining);
+      REMatch match = testRE.getMatch(strbuf.toString());
+      expected = testentries[1]  + testentries[2];
+      assertEquals(expected, match.toString());
+    }
+    catch (REException ex) {
+      fail("Invalid RE: " + testmsg.m_RERemaining);
+    }
 
   }
 
@@ -193,6 +219,7 @@ public class TestLcapMessage extends TestCase {
   public void testMessageEncodingHandlesNullEntries() throws IOException {
     testmsg.m_entries = null;
     testmsg.encodeMsg();
+
   }
 
   public void testMessageDecodingHandlesNullEntries() throws IOException {
@@ -201,11 +228,6 @@ public class TestLcapMessage extends TestCase {
     new LcapMessage(msgbytes);
   }
 
-  /** test for method makeKey(..) */
-  public void testGetKey() {
-
-
-  }
 
   /** Executes the test case */
   public static void main(String[] argv) {
@@ -213,3 +235,4 @@ public class TestLcapMessage extends TestCase {
     junit.swingui.TestRunner.main(testCaseList);
   }
 }
+

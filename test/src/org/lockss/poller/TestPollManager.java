@@ -65,7 +65,8 @@ public class TestPollManager extends TestCase {
           pollmanager.generateRandomBytes(),
           LcapMessage.NAME_POLL_REQ + (i * 2),
           testduration,
-          testID);
+          testID,
+          testau.getPluginId());
       }
     }
     catch (IOException ex) {
@@ -182,7 +183,8 @@ public class TestPollManager extends TestCase {
           pollmanager.generateRandomBytes(),
           LcapMessage.NAME_POLL_REQ + (i * 2),
           testduration,
-          testID);
+          testID,
+          testau.getPluginId());
       }
     }
     catch (IOException ex) {
@@ -258,6 +260,8 @@ public class TestPollManager extends TestCase {
     Poll p1 = null;
     try {
       p1 = TestPoll.createCompletedPoll(testmsg[0], 7, 2);
+      pollmanager.addPoll(p1);
+
     }
     catch (Exception ex) {
       fail("unable to make a test poll");
