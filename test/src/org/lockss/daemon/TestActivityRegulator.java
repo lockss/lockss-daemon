@@ -1,5 +1,5 @@
 /*
- * $Id: TestActivityRegulator.java,v 1.22 2004-02-26 00:38:44 eaalto Exp $
+ * $Id: TestActivityRegulator.java,v 1.23 2004-03-27 02:33:45 eaalto Exp $
  */
 
 /*
@@ -32,11 +32,12 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.daemon;
 
-import java.io.File;
 import java.util.*;
+import java.io.File;
 import org.lockss.test.*;
-import org.lockss.repository.*;
 import org.lockss.util.*;
+import org.lockss.plugin.CachedUrlSet;
+import org.lockss.repository.LockssRepositoryImpl;
 
 public class TestActivityRegulator extends LockssTestCase {
   private ActivityRegulator regulator;
@@ -354,35 +355,35 @@ public class TestActivityRegulator extends LockssTestCase {
 
     // if a crawl-
     //   allow only name poll if same
-    assertFalse(regulator.isAllowedOnCus(regulator.NO_ACTIVITY, regulator.BACKGROUND_CRAWL, LockssRepository.SAME_LEVEL_OVERLAP));
-//    assertTrue(regulator.isAllowedOnCus(regulator.STANDARD_NAME_POLL, regulator.REPAIR_CRAWL, LockssRepository.SAME_LEVEL_OVERLAP));
+    assertFalse(regulator.isAllowedOnCus(regulator.NO_ACTIVITY, regulator.BACKGROUND_CRAWL, CachedUrlSet.SAME_LEVEL_OVERLAP));
+//    assertTrue(regulator.isAllowedOnCus(regulator.STANDARD_NAME_POLL, regulator.REPAIR_CRAWL, CachedUrlSet.SAME_LEVEL_OVERLAP));
     //   allow anything if parent
-    assertTrue(regulator.isAllowedOnCus(regulator.NO_ACTIVITY, regulator.BACKGROUND_CRAWL, LockssRepository.ABOVE));
+    assertTrue(regulator.isAllowedOnCus(regulator.NO_ACTIVITY, regulator.BACKGROUND_CRAWL, CachedUrlSet.ABOVE));
     //   allow only crawls if child
-    assertFalse(regulator.isAllowedOnCus(regulator.NO_ACTIVITY, regulator.BACKGROUND_CRAWL, LockssRepository.BELOW));
-    assertTrue(regulator.isAllowedOnCus(regulator.REPAIR_CRAWL, regulator.BACKGROUND_CRAWL, LockssRepository.BELOW));
+    assertFalse(regulator.isAllowedOnCus(regulator.NO_ACTIVITY, regulator.BACKGROUND_CRAWL, CachedUrlSet.BELOW));
+    assertTrue(regulator.isAllowedOnCus(regulator.REPAIR_CRAWL, regulator.BACKGROUND_CRAWL, CachedUrlSet.BELOW));
 
     // if a poll-
     //   allow only name poll or repair crawl if same
-    assertFalse(regulator.isAllowedOnCus(regulator.NO_ACTIVITY, regulator.STANDARD_CONTENT_POLL, LockssRepository.SAME_LEVEL_OVERLAP));
-    assertTrue(regulator.isAllowedOnCus(regulator.STANDARD_NAME_POLL, regulator.STANDARD_CONTENT_POLL, LockssRepository.SAME_LEVEL_OVERLAP));
-//    assertTrue(regulator.isAllowedOnCus(regulator.REPAIR_CRAWL, regulator.STANDARD_CONTENT_POLL, LockssRepository.SAME_LEVEL_OVERLAP));
+    assertFalse(regulator.isAllowedOnCus(regulator.NO_ACTIVITY, regulator.STANDARD_CONTENT_POLL, CachedUrlSet.SAME_LEVEL_OVERLAP));
+    assertTrue(regulator.isAllowedOnCus(regulator.STANDARD_NAME_POLL, regulator.STANDARD_CONTENT_POLL, CachedUrlSet.SAME_LEVEL_OVERLAP));
+//    assertTrue(regulator.isAllowedOnCus(regulator.REPAIR_CRAWL, regulator.STANDARD_CONTENT_POLL, CachedUrlSet.SAME_LEVEL_OVERLAP));
     //   allow only content polls and repairs on sub-nodes if parent with name poll
-    assertFalse(regulator.isAllowedOnCus(regulator.NO_ACTIVITY, regulator.STANDARD_CONTENT_POLL, LockssRepository.ABOVE));
-    assertTrue(regulator.isAllowedOnCus(regulator.STANDARD_CONTENT_POLL, regulator.STANDARD_NAME_POLL, LockssRepository.ABOVE));
-    assertTrue(regulator.isAllowedOnCus(regulator.REPAIR_CRAWL, regulator.STANDARD_NAME_POLL, LockssRepository.ABOVE));
+    assertFalse(regulator.isAllowedOnCus(regulator.NO_ACTIVITY, regulator.STANDARD_CONTENT_POLL, CachedUrlSet.ABOVE));
+    assertTrue(regulator.isAllowedOnCus(regulator.STANDARD_CONTENT_POLL, regulator.STANDARD_NAME_POLL, CachedUrlSet.ABOVE));
+    assertTrue(regulator.isAllowedOnCus(regulator.REPAIR_CRAWL, regulator.STANDARD_NAME_POLL, CachedUrlSet.ABOVE));
     //   allow only crawls and single node polls if child
-    assertFalse(regulator.isAllowedOnCus(regulator.NO_ACTIVITY, regulator.STANDARD_CONTENT_POLL, LockssRepository.BELOW));
-    assertTrue(regulator.isAllowedOnCus(regulator.REPAIR_CRAWL, regulator.STANDARD_CONTENT_POLL, LockssRepository.BELOW));
-    assertTrue(regulator.isAllowedOnCus(regulator.SINGLE_NODE_CONTENT_POLL, regulator.STANDARD_CONTENT_POLL, LockssRepository.BELOW));
+    assertFalse(regulator.isAllowedOnCus(regulator.NO_ACTIVITY, regulator.STANDARD_CONTENT_POLL, CachedUrlSet.BELOW));
+    assertTrue(regulator.isAllowedOnCus(regulator.REPAIR_CRAWL, regulator.STANDARD_CONTENT_POLL, CachedUrlSet.BELOW));
+    assertTrue(regulator.isAllowedOnCus(regulator.SINGLE_NODE_CONTENT_POLL, regulator.STANDARD_CONTENT_POLL, CachedUrlSet.BELOW));
     //   for single node polls, allow only repair crawl if same
-    assertFalse(regulator.isAllowedOnCus(regulator.STANDARD_NAME_POLL, regulator.SINGLE_NODE_CONTENT_POLL, LockssRepository.SAME_LEVEL_OVERLAP));
-//    assertTrue(regulator.isAllowedOnCus(regulator.REPAIR_CRAWL, regulator.SINGLE_NODE_CONTENT_POLL, LockssRepository.SAME_LEVEL_OVERLAP));
+    assertFalse(regulator.isAllowedOnCus(regulator.STANDARD_NAME_POLL, regulator.SINGLE_NODE_CONTENT_POLL, CachedUrlSet.SAME_LEVEL_OVERLAP));
+//    assertTrue(regulator.isAllowedOnCus(regulator.REPAIR_CRAWL, regulator.SINGLE_NODE_CONTENT_POLL, CachedUrlSet.SAME_LEVEL_OVERLAP));
     //   allow anything if parent
-    assertTrue(regulator.isAllowedOnCus(regulator.NO_ACTIVITY, regulator.SINGLE_NODE_CONTENT_POLL, LockssRepository.ABOVE));
+    assertTrue(regulator.isAllowedOnCus(regulator.NO_ACTIVITY, regulator.SINGLE_NODE_CONTENT_POLL, CachedUrlSet.ABOVE));
     //   allow only crawls if child
-    assertFalse(regulator.isAllowedOnCus(regulator.STANDARD_NAME_POLL, regulator.SINGLE_NODE_CONTENT_POLL, LockssRepository.BELOW));
-    assertTrue(regulator.isAllowedOnCus(regulator.REPAIR_CRAWL, regulator.SINGLE_NODE_CONTENT_POLL, LockssRepository.BELOW));
+    assertFalse(regulator.isAllowedOnCus(regulator.STANDARD_NAME_POLL, regulator.SINGLE_NODE_CONTENT_POLL, CachedUrlSet.BELOW));
+    assertTrue(regulator.isAllowedOnCus(regulator.REPAIR_CRAWL, regulator.SINGLE_NODE_CONTENT_POLL, CachedUrlSet.BELOW));
   }
 
   public void testAuExpiration() {

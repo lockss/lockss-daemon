@@ -1,5 +1,5 @@
 /*
- * $Id: ActivityRegulator.java,v 1.29 2004-02-26 00:38:45 eaalto Exp $
+ * $Id: ActivityRegulator.java,v 1.30 2004-03-27 02:33:45 eaalto Exp $
  */
 
 /*
@@ -36,7 +36,6 @@ import java.util.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
 import org.lockss.app.*;
-import org.lockss.repository.LockssRepository;
 
 /**
  * The ActivityAllower is queried by the various managers when they wish to
@@ -242,9 +241,8 @@ public class ActivityRegulator
       // check each other cus to see if it's related to this one
       Map.Entry entry = (Map.Entry)cusIt.next();
       CachedUrlSet entryCus = (CachedUrlSet)entry.getKey();
-      int relation =
-          theDaemon.getLockssRepository(au).cusCompare(entryCus, cus);
-      if (relation!=LockssRepository.NO_RELATION) {
+      int relation = entryCus.cusCompare(cus);
+      if (relation!=CachedUrlSet.NO_RELATION) {
         Lock value = (Lock)entry.getValue();
         if (value.isExpired()) {
           logger.debug2("Removing expired " +
@@ -255,16 +253,16 @@ public class ActivityRegulator
         }
         String relationStr = "";
         switch (relation) {
-          case LockssRepository.ABOVE:
+          case CachedUrlSet.ABOVE:
             relationStr = "Parent";
             break;
-          case LockssRepository.BELOW:
+          case CachedUrlSet.BELOW:
             relationStr = "Child";
             break;
-          case LockssRepository.SAME_LEVEL_OVERLAP:
+          case CachedUrlSet.SAME_LEVEL_OVERLAP:
             relationStr = "Overlapping";
             break;
-          case LockssRepository.SAME_LEVEL_NO_OVERLAP:
+          case CachedUrlSet.SAME_LEVEL_NO_OVERLAP:
             relationStr = "Non-overlapping";
         }
         if (!isAllowedOnCus(newActivity, value.activity, relation)) {
@@ -319,53 +317,53 @@ public class ActivityRegulator
       case BACKGROUND_CRAWL:
       case REPAIR_CRAWL:
         switch (relation) {
-          case LockssRepository.SAME_LEVEL_OVERLAP:
+          case CachedUrlSet.SAME_LEVEL_OVERLAP:
             return false;
-          case LockssRepository.ABOVE:
+          case CachedUrlSet.ABOVE:
             // if this CUS is a parent, any action allowed
             return true;
-          case LockssRepository.BELOW:
+          case CachedUrlSet.BELOW:
             return ((newActivity==BACKGROUND_CRAWL) ||
                     (newActivity==REPAIR_CRAWL));
-          case LockssRepository.SAME_LEVEL_NO_OVERLAP:
+          case CachedUrlSet.SAME_LEVEL_NO_OVERLAP:
           default:
             return true;
         }
       case STANDARD_CONTENT_POLL:
       case STANDARD_NAME_POLL:
         switch (relation) {
-          case LockssRepository.SAME_LEVEL_OVERLAP:
+          case CachedUrlSet.SAME_LEVEL_OVERLAP:
             return ((newActivity==STANDARD_NAME_POLL) ||
                     (newActivity==STANDARD_CONTENT_POLL) ||
                     (newActivity==SINGLE_NODE_CONTENT_POLL));
-          case LockssRepository.ABOVE:
+          case CachedUrlSet.ABOVE:
             // if this CUS is a parent, allow content polls and repair crawls on
             // sub-nodes (PollManager should have blocked any truly illegal ones)
             return ((newActivity==STANDARD_CONTENT_POLL) ||
                      (newActivity==REPAIR_CRAWL));
-           case LockssRepository.BELOW:
+           case CachedUrlSet.BELOW:
             // if this CUS is a child, only crawls allowed, and single node
             // content polls
             return ((newActivity==BACKGROUND_CRAWL) ||
                     (newActivity==REPAIR_CRAWL) ||
                     (newActivity==SINGLE_NODE_CONTENT_POLL));
-          case LockssRepository.SAME_LEVEL_NO_OVERLAP:
+          case CachedUrlSet.SAME_LEVEL_NO_OVERLAP:
           default:
             return true;
         }
       case SINGLE_NODE_CONTENT_POLL:
         switch (relation) {
-          case LockssRepository.SAME_LEVEL_OVERLAP:
+          case CachedUrlSet.SAME_LEVEL_OVERLAP:
             // only one action on a CUS at a time unless it's a name poll
             return false;
-          case LockssRepository.ABOVE:
+          case CachedUrlSet.ABOVE:
             // if this CUS is a parent, allow anything below
             return true;
-          case LockssRepository.BELOW:
+          case CachedUrlSet.BELOW:
             // if this CUS is a child, only crawls allowed
             return ((newActivity==BACKGROUND_CRAWL) ||
                     (newActivity==REPAIR_CRAWL));
-          case LockssRepository.SAME_LEVEL_NO_OVERLAP:
+          case CachedUrlSet.SAME_LEVEL_NO_OVERLAP:
           default:
             return true;
 

@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.124 2004-03-17 05:56:42 clairegriffin Exp $
+ * $Id: PollManager.java,v 1.125 2004-03-27 02:33:47 eaalto Exp $
  */
 
 /*
@@ -33,7 +33,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.poller;
 
 import java.io.*;
-import java.net.*;
 import java.security.*;
 import java.util.*;
 
@@ -43,12 +42,10 @@ import org.lockss.plugin.*;
 import org.lockss.protocol.*;
 import org.lockss.protocol.ProtocolException;
 import org.lockss.util.*;
-import org.mortbay.util.B64Code;
-import gnu.regexp.*;
 import org.lockss.hasher.HashService;
-import org.lockss.repository.LockssRepository;
 import org.lockss.daemon.status.*;
 import org.lockss.state.*;
+import org.mortbay.util.B64Code;
 
 /**
  * <p>Class that manages the polling process.</p>
@@ -93,7 +90,7 @@ public class PollManager  extends BaseLockssManager {
   static final int DEFAULT_DURATION_MULTIPLIER_MAX = 7;
 
   private static PollManager theManager = null;
-  private static Logger theLog=Logger.getLogger("PollManager");
+  private static Logger theLog = Logger.getLogger("PollManager");
   private static LcapRouter.MessageHandler  m_msgHandler;
   private static Hashtable thePolls = new Hashtable();
   private static HashMap theVerifiers = new HashMap();
@@ -589,11 +586,9 @@ public class PollManager  extends BaseLockssManager {
       // eliminate completed polls or verify polls
       if(!entry.isPollCompleted() && !p.getMessage().isVerifyPoll()) {
         CachedUrlSet pcus = p.getPollSpec().getCachedUrlSet();
-        ArchivalUnit au = cus.getArchivalUnit();
-        LockssRepository repo = theDaemon.getLockssRepository(au);
-        int rel_pos = repo.cusCompare(cus, pcus);
-        if(rel_pos != LockssRepository.SAME_LEVEL_NO_OVERLAP &&
-           rel_pos != LockssRepository.NO_RELATION) {
+        int rel_pos = cus.cusCompare(pcus);
+        if(rel_pos != CachedUrlSet.SAME_LEVEL_NO_OVERLAP &&
+           rel_pos != CachedUrlSet.NO_RELATION) {
           theLog.debug2("Conflict between new poll '"+cus+"' and running poll '"+
                         pcus+"'");
           return pcus;
