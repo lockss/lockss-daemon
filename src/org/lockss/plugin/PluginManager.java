@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.88.2.1 2004-07-16 22:32:57 smorabito Exp $
+ * $Id: PluginManager.java,v 1.88.2.2 2004-07-21 06:59:31 tlipkis Exp $
  */
 
 /*
@@ -959,6 +959,11 @@ public class PluginManager extends BaseLockssManager {
     // Load the keystore if necessary
     if (!isKeystoreInited()) {
       initKeystore();
+    }
+
+    if (urls.isEmpty()) {
+      // if loop below is empty, it waits on semaphore that's never posted
+      return;
     }
 
     BinarySemaphore bs = new BinarySemaphore();
