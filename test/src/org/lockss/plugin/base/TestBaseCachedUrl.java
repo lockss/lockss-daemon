@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCachedUrl.java,v 1.2 2003-09-19 22:34:02 eaalto Exp $
+ * $Id: TestBaseCachedUrl.java,v 1.3 2004-01-07 01:14:31 troberts Exp $
  */
 
 /*
@@ -164,28 +164,43 @@ public class TestBaseCachedUrl extends LockssTestCase {
      assertEquals("", baos.toString());
    }
 
-   public void testOpenForHashingDefaultsToNoFiltering() throws Exception {
-     createLeaf("http://www.example.com/testDir/leaf1", "<test stream>", null);
+  public void testOpenForHashingDefaultsToNoFiltering() throws Exception {
+    createLeaf("http://www.example.com/testDir/leaf1", "<test stream>", null);
+    InputStream fakeStream = new MockInputStream();
+    mau.setFilterRule(new MyMockFilterRule(fakeStream));
 
-     CachedUrl url =
-       plugin.makeCachedUrl(cus, "http://www.example.com/testDir/leaf1");
-     InputStream urlIs = url.openForReading();
-     ByteArrayOutputStream baos = new ByteArrayOutputStream(11);
-     StreamUtil.copy(urlIs, baos);
-     assertEquals("<test stream>", baos.toString());
-   }
+    CachedUrl url =
+      plugin.makeCachedUrl(cus, "http://www.example.com/testDir/leaf1");
+    InputStream urlIs = url.openForReading();
+    assertNotSame(fakeStream, urlIs);
+  }
 
-   public void testOpenForHashingWontFilterIfConfiguredNotTo() throws Exception {
-     String config = "org.lockss.genericFileCachedUrl.filterHashStream=false";
+  public void testOpenForHashingWontFilterIfConfiguredNotTo()
+      throws Exception {
+    String config = PARAM_SHOULD_FILTER_HASH_STREAM+"=false";
+    ConfigurationUtil.setCurrentConfigFromString(config);
+    createLeaf("http://www.example.com/testDir/leaf1", "<test stream>", null);
+    InputStream fakeStream = new MockInputStream();
+    mau.setFilterRule(new MyMockFilterRule(fakeStream));
+    
+    CachedUrl url =
+      plugin.makeCachedUrl(cus, "http://www.example.com/testDir/leaf1");
+    InputStream urlIs = url.openForHashing();
+    assertNotSame(fakeStream, urlIs);
+  }
+
+   public void testOpenForHashingWillFilterIfConfiguredTo()
+       throws Exception {
+     String config = PARAM_SHOULD_FILTER_HASH_STREAM+"=true";
      ConfigurationUtil.setCurrentConfigFromString(config);
-     createLeaf("http://www.example.com/testDir/leaf1", "<test stream>", null);
+     createLeaf("http://www.example.com/testDir/leaf1", "blah <test stream>", null);
+    InputStream fakeStream = new MockInputStream();
+    mau.setFilterRule(new MyMockFilterRule(fakeStream));
 
      CachedUrl url =
        plugin.makeCachedUrl(cus, "http://www.example.com/testDir/leaf1");
-     InputStream urlIs = url.openForReading();
-     ByteArrayOutputStream baos = new ByteArrayOutputStream(11);
-     StreamUtil.copy(urlIs, baos);
-     assertEquals("<test stream>", baos.toString());
+     InputStream urlIs = url.openForHashing();
+     assertSame(fakeStream, urlIs);
    }
 
    public void testGetProperties() throws Exception {
@@ -232,7 +247,18 @@ public class TestBaseCachedUrl extends LockssTestCase {
      }
    }
 
-   private class MyAu
+  private class MyMockFilterRule implements FilterRule {
+    InputStream stream;
+    public MyMockFilterRule(InputStream stream) {
+      this.stream = stream;
+    }
+
+    public InputStream createFilteredInputStream(Reader reader) {
+      return stream;
+    }
+  }
+    
+    private class MyAu
        extends NullPlugin.ArchivalUnit {
      public FilterRule getFilterRule(String mimeType) {
        return new FilterRule() {
