@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSimulatedContent.java,v 1.4 2002-11-25 23:00:31 aalto Exp $
+ * $Id: FuncSimulatedContent.java,v 1.5 2002-11-26 03:01:52 aalto Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import org.lockss.crawler.Crawler;
 import org.lockss.daemon.*;
 import org.lockss.repository.*;
 import org.lockss.plugin.Plugin;
+import java.security.*;
 
 /**
  * Test class for functional tests on the content.
@@ -210,7 +211,10 @@ public class FuncSimulatedContent extends LockssTestCase {
   }
 
   private byte[] getHash(CachedUrlSet set, boolean namesOnly) throws IOException {
-    MockMessageDigest dig = new MockMessageDigest();
+    MessageDigest dig = null;
+    try {
+      dig = MessageDigest.getInstance("SHA-1");
+    } catch (NoSuchAlgorithmException ex) { fail("No algorithm."); }
     hash(set, dig, namesOnly);
     return dig.digest();
   }

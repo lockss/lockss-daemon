@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.7 2002-11-25 22:01:25 aalto Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.8 2002-11-26 03:01:52 aalto Exp $
  */
 
 /*
@@ -154,7 +154,11 @@ public class RepositoryNodeImpl implements RepositoryNode {
     ensureCurrentInfoLoaded();
     if (currentVersion == 0) {
       if (!cacheLocationFile.exists()) {
-        cacheLocationFile.mkdirs();
+        if (!cacheLocationFile.mkdirs()) {
+          logger.error("Couldn't create cache directory for '"+
+                       cacheLocationFile.getAbsolutePath()+"'");
+          throw new RepositoryStateException("Couldn't create cache directory.");
+        }
       }
     }
     newVersionOpen = true;
@@ -172,11 +176,19 @@ public class RepositoryNodeImpl implements RepositoryNode {
     }
 
     // rename current
-    currentCacheFile.renameTo(getVersionedCacheFile(currentVersion));
-    currentPropsFile.renameTo(getVersionedPropertiesFile(currentVersion));
+    if (currentCacheFile.exists()) {
+      if (!currentCacheFile.renameTo(getVersionedCacheFile(currentVersion)) ||
+          !currentPropsFile.renameTo(getVersionedPropertiesFile(currentVersion))) {
+        logger.error("Couldn't rename current versions: "+url);
+        throw new RepositoryStateException("Couldn't rename current versions.");
+      }
+    }
     // rename new
-    tempCacheFile.renameTo(currentCacheFile);
-    tempPropsFile.renameTo(currentPropsFile);
+    if (!tempCacheFile.renameTo(currentCacheFile) ||
+        !tempPropsFile.renameTo(currentPropsFile)) {
+      logger.error("Couldn't rename temp versions: "+url);
+      throw new RepositoryStateException("Couldn't rename temp versions.");
+    }
 
     currentVersion++;
     curProps = null;
@@ -190,6 +202,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
       throw new UnsupportedOperationException("New version not initialized.");
     }
     // clear temp files
+    // unimportant if this isn't done, as they're overwritten
     tempCacheFile.delete();
     tempPropsFile.delete();
 
