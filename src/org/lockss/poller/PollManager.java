@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.53 2003-03-21 01:11:24 troberts Exp $
+* $Id: PollManager.java,v 1.54 2003-03-21 20:43:41 tal Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ import org.lockss.plugin.*;
 import org.lockss.protocol.*;
 import org.lockss.protocol.ProtocolException;
 import org.lockss.util.*;
-import org.mortbay.util.*;
+import org.mortbay.util.B64Code;
 import gnu.regexp.*;
 import org.lockss.hasher.HashService;
 import org.lockss.repository.LockssRepository;
@@ -85,7 +85,7 @@ public class PollManager  implements LockssManager {
   private static HashMap theVerifiers = new HashMap();
 
   private static LockssRandom theRandom = new LockssRandom();
-  private static LcapComm theComm = null;
+  private static LcapRouter theRouter = null;
   private static LockssDaemon theDaemon;
 
   public PollManager() {
@@ -113,9 +113,18 @@ public class PollManager  implements LockssManager {
    * @see org.lockss.app.LockssManager#startService()
    */
   public void startService() {
-    theComm = theDaemon.getCommManager();
-    theComm.registerMessageHandler(LockssDatagram.PROTOCOL_LCAP,
-                                   new CommMessageHandler());
+    theRouter = theDaemon.getRouterManager();
+    theRouter.registerMessageHandler(new LcapRouter.MessageHandler() {
+	public void handleMessage(LcapMessage msg) {
+	  theLog.debug3("handling incoming message:" + msg.toString());
+	  try {
+	    theManager.handleMessage(msg);
+	  }
+	  catch (IOException ex) {
+	    theLog.error("handle incoming message failed.");
+	  }
+	}
+      });
     // register our status
     StatusService statusServ = theDaemon.getStatusService();
     statusServ.registerStatusAccessor(MANAGER_STATUS_TABLE_NAME,
@@ -275,10 +284,8 @@ public class PollManager  implements LockssManager {
    * @throws IOException
    */
   void sendMessage(LcapMessage msg, ArchivalUnit au) throws IOException {
-    LockssDatagram ld = new LockssDatagram(LockssDatagram.PROTOCOL_LCAP,
-        msg.encodeMsg());
-    if(theComm != null) {
-      theComm.send(ld, au);
+    if(theRouter != null) {
+      theRouter.send(msg, au);
     }
   }
 
@@ -291,9 +298,7 @@ public class PollManager  implements LockssManager {
    */
   void sendMessageTo(LcapMessage msg, ArchivalUnit au, LcapIdentity id)
       throws IOException {
-    LockssDatagram ld = new LockssDatagram(LockssDatagram.PROTOCOL_LCAP,
-        msg.encodeMsg());
-    theComm.sendTo(ld, au, id);
+    theRouter.sendTo(msg, au, id);
   }
 
   /**
@@ -559,7 +564,8 @@ public class PollManager  implements LockssManager {
          long earliest = ret - ret/4;
          long latest = ret + ret/4;
          ret = earliest + theRandom.nextLong(latest - earliest);
-        theLog.debug2("Name Poll duration: " + ret/1000 + " seconds.");
+        theLog.debug2("Name Poll duration: " +
+		      StringUtil.timeIntervalToString(ret));
         break;
 
       case LcapMessage.CONTENT_POLL_REQ:
@@ -570,7 +576,8 @@ public class PollManager  implements LockssManager {
             DEFAULT_CONTENTPOLL_MAX);
         ret = cus.estimatedHashDuration() * 2 * (quorum + 1);
         ret = ret < minContent ? minContent : (ret > maxContent ? maxContent : ret);
-        theLog.debug2("Content Poll duration: " + ret/1000 + " seconds.");
+        theLog.debug2("Content Poll duration: " +
+		      StringUtil.timeIntervalToString(ret));
         break;
 
       default:
@@ -619,20 +626,7 @@ public class PollManager  implements LockssManager {
 
 
 // ----------------  Callbacks -----------------------------------
-  static class CommMessageHandler implements LcapComm.MessageHandler {
 
-    public void handleMessage(LockssReceivedDatagram rd) {
-      theLog.debug3("handling incoming message:" + rd.toString());
-      byte[] msgBytes = rd.getData();
-      try {
-        LcapMessage msg = LcapMessage.decodeToMsg(msgBytes, rd.isMulticast());
-        theManager.handleMessage(msg);
-      }
-      catch (IOException ex) {
-        theLog.error("handle incoming message failed.");
-      }
-    }
-  }
 
   static class ExpireRecentCallback implements TimerQueue.Callback {
     /**
