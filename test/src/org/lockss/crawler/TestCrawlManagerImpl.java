@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.43 2004-02-10 03:31:46 troberts Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.44 2004-02-10 03:49:55 troberts Exp $
  */
 
 /*
@@ -170,7 +170,6 @@ public class TestCrawlManagerImpl extends LockssTestCase {
   }
 
   public void testStoppingCrawlAbortsRepairCrawl() {
-    System.err.println("STOP1");
     String url1 = "http://www.example.com/index1.html";
     String url2 = "http://www.example.com/index2.html";
     List urls = ListUtil.list(url1, url2);
@@ -193,7 +192,6 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     crawlManager.cancelAuCrawls(mau);
 
     assertTrue(crawler.wasAborted());
-    System.err.println("STOP2");
   }
 
 
