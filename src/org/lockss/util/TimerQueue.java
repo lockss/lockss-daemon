@@ -1,5 +1,5 @@
 /*
- * $Id: TimerQueue.java,v 1.5 2002-11-22 17:44:45 tal Exp $
+ * $Id: TimerQueue.java,v 1.6 2002-12-16 06:58:47 tal Exp $
  *
 
 Copyright (c) 2000-2002 Board of Trustees of Leland Stanford Jr. University,
@@ -131,10 +131,9 @@ public class TimerQueue implements Serializable {
 //       }
       goOn = true;
 
-      Deadline timeout = Deadline.in(60000);
       while (goOn) {
 	try {
-	  Request req = (Request)queue.peekWait(timeout);
+	  Request req = (Request)queue.peekWait(Deadline.in(60000));
 	  if (req != null) {
 	    req.deadline.sleep();
 	    if (req.deadline.expired()) {

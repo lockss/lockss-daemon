@@ -1,5 +1,5 @@
 /*
- * $Id: HashQueue.java,v 1.13 2002-12-02 23:17:39 tal Exp $
+ * $Id: HashQueue.java,v 1.14 2002-12-16 06:58:47 tal Exp $
  */
 
 /*
@@ -376,11 +376,10 @@ class HashQueue implements Serializable {
       }
       goOn = Boolean.TRUE;
 
-      Deadline timeout = Deadline.in(60000);
       try {
 	while (goOn.booleanValue()) {
 	  if (!runAndNotify(hashNumSteps, hashStepBytes, goOn)) {
-	    sem.take(timeout);
+	    sem.take(Deadline.in(60000));
 	  }
 	}
       } catch (InterruptedException e) {
