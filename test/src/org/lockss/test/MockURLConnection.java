@@ -157,12 +157,14 @@ public class MockURLConnection extends URLConnection{
 	return null;
     }
 
+  /* deprecated
     public static void setDefaultRequestProperty(String key, String value) {
     }
 
     public static String getDefaultRequestProperty(String key) {
 	return null;
     }
+  */
 
     public static synchronized void setContentHandlerFactory(ContentHandlerFactory fac) {
     }
