@@ -1,5 +1,5 @@
 /*
- * $Id: TestSystemMetrics.java,v 1.13 2003-07-14 06:46:39 tlipkis Exp $
+ * $Id: TestSystemMetrics.java,v 1.14 2003-09-12 00:17:33 eaalto Exp $
  */
 
 /*
@@ -57,18 +57,22 @@ public class TestSystemMetrics extends LockssTestCase {
     int byteCount = SystemMetrics.DEFAULT_HASH_TEST_BYTE_STEP * 10;
     int estimate = byteCount;
     long duration;
-
+    int expectedMin;
 
     while (true) {
       MockCachedUrlSetHasher hasher = new MockCachedUrlSetHasher(byteCount);
       hasher.setHashStepDelay(10);
 
+      // wipe out cached estimate
+      metrics.estimateTable.clear();
       long startTime = TimeBase.nowMs();
       estimate = metrics.getBytesPerMsHashEstimate(hasher,
          new MockMessageDigest());
       duration = TimeBase.msSince(startTime);
+      expectedMin =
+          (byteCount * 10) / SystemMetrics.DEFAULT_HASH_TEST_BYTE_STEP;
 
-      if (estimate!=byteCount) {
+      if ((estimate!=byteCount) && (duration != expectedMin)) {
         // non-zero hash time
         break;
       } else {
@@ -81,14 +85,8 @@ public class TestSystemMetrics extends LockssTestCase {
 
     assertTrue(estimate < byteCount);
     // minimum amount of time would be delay * number of hash steps
-    int expectedMin = 
-      (byteCount * 10) / SystemMetrics.DEFAULT_HASH_TEST_BYTE_STEP;
     assertTrue(duration > expectedMin);
   }
-
-//   public void testDefaultEstimate() throws Exception {
-//     assertEquals(-1, metrics.getBytesPerMsHashEstimate());
-//   }
 
   public void testEstimationCaching() throws IOException {
     MockCachedUrlSetHasher hasher = new MockCachedUrlSetHasher(10000);
