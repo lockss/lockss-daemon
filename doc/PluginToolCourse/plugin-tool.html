@@ -49,16 +49,9 @@ from the journal's web site, how you feed it into the tool to generate
 a suitable plugin, and how you test the plugin to be sure you have the
 information correct.<br>
 <h4>Obtaining and Running The Tool</h4>
-The plugin tool is available in two ways, by download or on CD:<br>
+The plugin tool is available in three ways, on CD, by download or via
+CVS:<br>
 <ul>
-  <li>You can download two versions: <a href="plugintool.tgz">plugintool.tgz</a>
-for Unix and <a href="plugintool.zip">plugintool.zip</a> for Windows.
-Download and unpack the appropriate one into a directory (folder) and
-invoke the script in that directory that runs the tool, <span
- style="font-weight: bold;">runtool</span> for
-Unix and <span style="font-weight: bold;">runtool.bat</span> for
-Windows. You may have to set the JAVA_HOME
-environment variable to point to an installed version of Java 1.4.</li>
   <li>The CD contains versions for Windows and Linux/x86:</li>
   <ul>
     <li>On Windows the tool will automatically run when the CD is
@@ -66,8 +59,22 @@ inserted.</li>
     <li>On Linux/x86 you should navigate to the linux folder on the CD
 and click on the runtool icon.</li>
   </ul>
-</ul>
-<ul>
+  <li>You can download two versions: <a
+ href="file:///home/dshr/gamma/lockss-daemon/doc/PluginToolCourse/plugintool.tgz">plugintool.tgz</a>
+for Unix and <a
+ href="file:///home/dshr/gamma/lockss-daemon/doc/PluginToolCourse/plugintool.zip">plugintool.zip</a>
+for Windows.
+Download and unpack the appropriate one into a directory (folder) and
+invoke the script in that directory that runs the tool, <span
+ style="font-weight: bold;">runtool</span> for
+Unix and <span style="font-weight: bold;">runtool.bat</span> for
+Windows. You may have to set the JAVA_HOME
+environment variable to point to an installed version of Java 1.4.</li>
+  <li>You can check out the <span style="font-weight: bold;">lockss-daemon</span>
+project from <span style="font-weight: bold;">cvs.sourceforge.net:/cvsroot/lockss</span>
+and run the command <span style="font-weight: bold;">ant run-tool
+-Dclass=org.lockss.devtools.plugindef.PluginDefinerApp</span>.<br>
+  </li>
 </ul>
 <h4>Before You Start Clicking<br>
 </h4>
@@ -801,8 +808,7 @@ the volume or year, write rules that include the files that are
 actually needed. XXX need to explain the BePress example.</li>
 </ul>
 <h4>Your Own Example</h4>
-<br>
-XXX<br>
+XXX provide fill-in-the-blank forms to collect the data. XXX<br>
 <h4>What are the plugin generator's limits?</h4>
 The plugin generation tool has limitations; the plugins for many more
 complex journals will exceed them. In general, any plugin that requires
