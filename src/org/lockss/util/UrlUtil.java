@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.15 2004-03-10 01:37:52 troberts Exp $
+ * $Id: UrlUtil.java,v 1.16 2004-03-11 01:19:52 troberts Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -187,6 +187,31 @@ public class UrlUtil {
       }
     }
     return false;
+  }
+
+  /**
+   * Strips the query string off of a url and returns the rest
+   * @param url url string from which to remove the query
+   * @return url with the query string stripped, or null if url isn't absolute
+   * @throws MalformedURLException if we can't parse the url
+   */
+  public static String stripQuery(String url) throws MalformedURLException {
+    if (url != null) {
+      try {
+	URI uri = new URI(url.toCharArray());
+	if (uri.isAbsoluteURI()) {
+	  StringBuffer sb = new StringBuffer();
+	  sb.append(uri.getScheme());
+	  sb.append("://");
+	  sb.append(uri.getHost());
+	  sb.append(uri.getPath());
+	  return sb.toString();
+	} 
+      } catch (URIException e) {
+	throw new MalformedURLException(e.toString());
+      }
+    }
+    return null;
   }
 
   /**

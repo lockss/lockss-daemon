@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlUtil.java,v 1.10 2004-03-10 01:37:52 troberts Exp $
+ * $Id: TestUrlUtil.java,v 1.11 2004-03-11 01:19:53 troberts Exp $
  */
 
 /*
@@ -215,6 +215,17 @@ public class TestUrlUtil extends LockssTestCase {
     assertTrue(UrlUtil.isAbsoluteUrl("http://www.example.com/blah/"));
     assertFalse(UrlUtil.isAbsoluteUrl("www.example.com/"));
     assertFalse(UrlUtil.isAbsoluteUrl("blah/blah"));
+  }
+
+  public void testStripsParams() throws MalformedURLException {
+    assertNull(UrlUtil.stripQuery(null));
+    assertEquals(null, UrlUtil.stripQuery(""));
+    assertEquals("http://www.example.com/",
+		 UrlUtil.stripQuery("http://www.example.com/"));
+    assertEquals("http://www.example.com/blah",
+		 UrlUtil.stripQuery("http://www.example.com/blah?param1=blah"));
+    assertEquals("rtsp://www.example.com/blah",
+		 UrlUtil.stripQuery("rtsp://www.example.com/blah?param1=blah"));
   }
 
 }
