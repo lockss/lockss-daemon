@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManager.java,v 1.51 2004-10-15 23:50:01 clairegriffin Exp $
+ * $Id: IdentityManager.java,v 1.52 2004-10-18 03:39:15 tlipkis Exp $
  */
 
 /*
@@ -140,9 +140,9 @@ public class IdentityManager
   protected PeerIdentity localPeerIdentities[];
 
   // both maps keyed by identity key string
-  private Map theIdentities = new HashMap();		// all known identities (keys are
+  private Map theIdentities;		// all known identities (keys are
 					// PeerIdentitys)
-  private Map thePeerIdentities = new HashMap();// all PeerIdentities (keys are strings)
+  private Map thePeerIdentities;   // all PeerIdentities (keys are strings)
 
   int[] reputationDeltas = new int[10];
 
@@ -162,13 +162,13 @@ public class IdentityManager
 
     // initializing these here makes testing more predictable
     localPeerIdentities = new PeerIdentity[Poll.MAX_POLL_VERSION+1];
-    //theIdentities = new HashMap();
-    //thePeerIdentities = new HashMap();
+    theIdentities = new HashMap();
+    thePeerIdentities = new HashMap();
 
     // Create local PeerIdentity and LcapIdentity instances
     Configuration config = ConfigManager.getCurrentConfig();
     // Find local IP addr and create V1 identity
-    String localV1IdentityStr = config.get(PARAM_LOCAL_IP);
+    String localV1IdentityStr = getLocalIpParam(config);
     if (localV1IdentityStr == null) {
       String msg = "Cannot start: " + PARAM_LOCAL_IP + " is not set";
       log.critical(msg);
@@ -999,5 +999,10 @@ public class IdentityManager
     public MalformedIdentityKeyException(String message) {
       super(message);
     }
+  }
+
+  /** overridable for testing */
+  protected String getLocalIpParam(Configuration config) {
+    return config.get(PARAM_LOCAL_IP);
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepairCrawler.java,v 1.15 2004-10-15 23:50:01 clairegriffin Exp $
+ * $Id: TestRepairCrawler.java,v 1.16 2004-10-18 03:39:14 tlipkis Exp $
  */
 
 /*
@@ -60,15 +60,19 @@ public class TestRepairCrawler extends LockssTestCase {
   private List startUrls = ListUtil.list(startUrl);
   private CrawlerImpl crawler = null;
   private MockContentParser parser = new MockContentParser();
+  private MockIdentityManager idm;
+  private MockLockssDaemon theDaemon = getMockLockssDaemon();
 
 
   private String url1 = "http://example.com/blah.html";
 
-
   public void setUp() throws Exception {
     super.setUp();
-    getMockLockssDaemon().getAlertManager();
-
+    theDaemon = getMockLockssDaemon();
+    theDaemon.getAlertManager();
+    idm = new MockIdentityManager();
+    theDaemon.setIdentityManager(idm);
+    idm.initService(theDaemon);
     mau = new MockArchivalUnit();
     cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     crawlRule = new MockCrawlRule();
@@ -203,15 +207,11 @@ public class TestRepairCrawler extends LockssTestCase {
   }
 
   public void testFetchFromACacheOnly() throws MalformedIdentityKeyException {
-    MockLockssDaemon theDaemon = getMockLockssDaemon();
-    MockIdentityManager idm = new MockIdentityManager();
     PeerIdentity id = idm.stringToPeerIdentity("127.0.0.1");
 
     Map map = new HashMap();
     map.put(id, new Long(10));
     idm.setAgeedForAu(mau, map);
-
-    theDaemon.setIdentityManager(idm);
 
     String repairUrl = "http://example.com/blah.html";
     MyRepairCrawler crawler =
@@ -230,8 +230,6 @@ public class TestRepairCrawler extends LockssTestCase {
 
   public void testFetchFromOtherCachesOnlyWithoutRetryLimit()
       throws MalformedIdentityKeyException {
-    MockLockssDaemon theDaemon = getMockLockssDaemon();
-    MockIdentityManager idm = new MockIdentityManager();
     PeerIdentity id1 = idm.stringToPeerIdentity("127.0.0.1");
     PeerIdentity id2 = idm.stringToPeerIdentity("127.0.0.2");
     PeerIdentity id3 = idm.stringToPeerIdentity("127.0.0.3");
@@ -240,8 +238,6 @@ public class TestRepairCrawler extends LockssTestCase {
     map.put(id2, new Long(11));
     map.put(id3, new Long(12));
     idm.setAgeedForAu(mau, map);
-
-    theDaemon.setIdentityManager(idm);
 
     String repairUrl = "http://example.com/blah.html";
     MyRepairCrawler crawler =
@@ -259,8 +255,6 @@ public class TestRepairCrawler extends LockssTestCase {
   }
 
   public void testFetchFromOtherCachesOnlyWithRetryLimit() throws MalformedIdentityKeyException {
-    MockLockssDaemon theDaemon = getMockLockssDaemon();
-    MockIdentityManager idm = new MockIdentityManager();
     PeerIdentity id1 = idm.stringToPeerIdentity("127.0.0.1");
     PeerIdentity id2 = idm.stringToPeerIdentity("127.0.0.2");
     PeerIdentity id3 = idm.stringToPeerIdentity("127.0.0.3");
@@ -269,8 +263,6 @@ public class TestRepairCrawler extends LockssTestCase {
     map.put(id2, new Long(11));
     map.put(id3, new Long(12));
     idm.setAgeedForAu(mau, map);
-
-    theDaemon.setIdentityManager(idm);
 
     String repairUrl = "http://example.com/blah.html";
     MyRepairCrawler crawler =
@@ -305,8 +297,6 @@ public class TestRepairCrawler extends LockssTestCase {
   }
 
   public void testFetchFromOtherCachesThenPublisher() throws MalformedIdentityKeyException {
-    MockLockssDaemon theDaemon = getMockLockssDaemon();
-    MockIdentityManager idm = new MockIdentityManager();
     PeerIdentity id1 = idm.stringToPeerIdentity("127.0.0.1");
     PeerIdentity id2 = idm.stringToPeerIdentity("127.0.0.2");
     PeerIdentity id3 = idm.stringToPeerIdentity("127.0.0.3");
@@ -315,8 +305,6 @@ public class TestRepairCrawler extends LockssTestCase {
     map.put(id2, new Long(11));
     map.put(id3, new Long(12));
     idm.setAgeedForAu(mau, map);
-
-    theDaemon.setIdentityManager(idm);
 
     String repairUrl = "http://example.com/blah.html";
     MyRepairCrawler crawler =
@@ -336,8 +324,6 @@ public class TestRepairCrawler extends LockssTestCase {
   }
 
   public void testFetchFromPublisherThenOtherCaches() throws MalformedIdentityKeyException {
-    MockLockssDaemon theDaemon = getMockLockssDaemon();
-    MockIdentityManager idm = new MockIdentityManager();
     PeerIdentity id1 = idm.stringToPeerIdentity("127.0.0.1");
     PeerIdentity id2 = idm.stringToPeerIdentity("127.0.0.2");
     PeerIdentity id3 = idm.stringToPeerIdentity("127.0.0.3");
@@ -346,8 +332,6 @@ public class TestRepairCrawler extends LockssTestCase {
     map.put(id2, new Long(11));
     map.put(id3, new Long(12));
     idm.setAgeedForAu(mau, map);
-
-    theDaemon.setIdentityManager(idm);
 
     String repairUrl = "http://example.com/blah.html";
     MyRepairCrawler crawler =
