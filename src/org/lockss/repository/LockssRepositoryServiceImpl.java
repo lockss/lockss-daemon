@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryServiceImpl.java,v 1.14 2003-05-10 02:23:06 aalto Exp $
+ * $Id: LockssRepositoryServiceImpl.java,v 1.15 2003-05-17 00:10:59 aalto Exp $
  */
 
 /*
@@ -32,21 +32,21 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.repository;
 
+import java.io.*;
 import java.util.*;
+import java.net.URL;
+import java.net.MalformedURLException;
 import org.lockss.app.*;
 import org.lockss.daemon.Configuration;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.Logger;
-import java.io.File;
-import java.net.MalformedURLException;
-import java.net.URL;
 import org.lockss.util.StringUtil;
-import java.io.*;
 
 /**
  * Implementation of the NodeManagerService.
  */
-public class LockssRepositoryServiceImpl implements LockssRepositoryService {
+public class LockssRepositoryServiceImpl extends BaseLockssManagerService
+    implements LockssRepositoryService {
   /**
    * Configuration parameter name for Lockss cache location.
    */
@@ -58,8 +58,6 @@ public class LockssRepositoryServiceImpl implements LockssRepositoryService {
   public static final String CACHE_ROOT_NAME = "cache";
 
   private static LockssDaemon theDaemon;
-  private static LockssManager theManager = null;
-  private HashMap auMap = new HashMap();
   private static Logger logger = Logger.getLogger("LockssRepositoryService");
   String cacheLocation = null;
 
@@ -74,31 +72,28 @@ public class LockssRepositoryServiceImpl implements LockssRepositoryService {
 
   public LockssRepositoryServiceImpl() { }
 
-  public void initService(LockssDaemon daemon) throws LockssDaemonException {
-    if (theManager == null) {
-      // blank the name map
-      nameMap = null;
-
-      theDaemon = daemon;
-      theManager = this;
-      cacheLocation = Configuration.getParam(PARAM_CACHE_LOCATION);
-      if (cacheLocation==null) {
-	logger.error("Couldn't get "+PARAM_CACHE_LOCATION+" from Configuration");
-	throw new LockssRepository.RepositoryStateException("Couldn't load param.");
-      }
-      cacheLocation = extendCacheLocation(cacheLocation);
-    } else {
-      throw new LockssDaemonException("Multiple Instantiation.");
-    }
-  }
-
   public void startService() {
+    super.startService();
   }
 
   public void stopService() {
-    // checkpoint here
-    stopAllRepositories();
-    theManager = null;
+    nameMap = null;
+    super.stopService();
+  }
+
+  protected void setConfig(Configuration config, Configuration oldConfig,
+                           Set changedKeys) {
+    // only load the first time
+    if (cacheLocation == null) {
+      cacheLocation = Configuration.getParam(PARAM_CACHE_LOCATION);
+      if (cacheLocation == null) {
+        logger.error("Couldn't get " + PARAM_CACHE_LOCATION +
+                     " from Configuration");
+        throw new LockssRepository.RepositoryStateException(
+            "Couldn't load param.");
+      }
+      cacheLocation = extendCacheLocation(cacheLocation);
+    }
   }
 
   static String extendCacheLocation(String cacheDir) {
@@ -111,35 +106,18 @@ public class LockssRepositoryServiceImpl implements LockssRepositoryService {
     return buffer.toString();
   }
 
-  private void stopAllRepositories() {
-    Iterator entries = auMap.entrySet().iterator();
-    while (entries.hasNext()) {
-      Map.Entry entry = (Map.Entry)entries.next();
-      LockssRepository repo = (LockssRepository)entry.getValue();
-      repo.stopService();
-    }
-  }
-
   public LockssRepository getLockssRepository(ArchivalUnit au) {
-    LockssRepository lockssRepo = (LockssRepository)auMap.get(au);
-    if (lockssRepo==null) {
-      logger.error("LockssRepository not created for au: "+au);
-      throw new IllegalArgumentException("LockssRepository not created for au.");
-    }
-    return lockssRepo;
+    return (LockssRepository)getLockssManager(au);
   }
 
-  public synchronized void addLockssRepository(ArchivalUnit au) {
-    LockssRepository lockssRepo = (LockssRepository)auMap.get(au);
-    if (lockssRepo==null) {
-      lockssRepo = new LockssRepositoryImpl(
-            LockssRepositoryServiceImpl.mapAuToFileLocation(cacheLocation, au),
-            au);
-      auMap.put(au, lockssRepo);
-      logger.debug("Adding LockssRepository for au: "+au);
-      lockssRepo.initService(theDaemon);
-      lockssRepo.startService();
-    }
+  public void addLockssRepository(ArchivalUnit au) {
+    addLockssManager(au);
+  }
+
+  protected LockssManager createNewManager(ArchivalUnit au) {
+    return new LockssRepositoryImpl(
+        LockssRepositoryServiceImpl.mapAuToFileLocation(cacheLocation, au),
+        au);
   }
 
   /**

@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerServiceImpl.java,v 1.7 2003-04-05 04:03:42 claire Exp $
+ * $Id: NodeManagerServiceImpl.java,v 1.8 2003-05-17 00:10:59 aalto Exp $
  */
 
 /*
@@ -42,9 +42,8 @@ import org.lockss.daemon.status.*;
 /**
  * Implementation of the NodeManagerService.
  */
-public class NodeManagerServiceImpl extends BaseLockssManager
+public class NodeManagerServiceImpl extends BaseLockssManagerService
     implements NodeManagerService {
-  private HashMap auMap = new HashMap();
   private static Logger logger = Logger.getLogger("NodeManagerService");
 
   public NodeManagerServiceImpl() { }
@@ -77,36 +76,19 @@ public class NodeManagerServiceImpl extends BaseLockssManager
     statusServ.unregisterStatusAccessor(NodeManagerStatus.MANAGER_STATUS_TABLE_NAME);
     statusServ.unregisterStatusAccessor(NodeManagerStatus.POLLHISTORY_STATUS_TABLE_NAME);
 
-    stopAllManagers();
     super.stopService();
   }
 
-  private void stopAllManagers() {
-    Iterator entries = auMap.entrySet().iterator();
-    while (entries.hasNext()) {
-      Map.Entry entry = (Map.Entry)entries.next();
-      NodeManager manager = (NodeManager)entry.getValue();
-      manager.stopService();
-    }
-  }
-
   public NodeManager getNodeManager(ArchivalUnit au) {
-    NodeManager nodeMan = (NodeManager)auMap.get(au);
-    if (nodeMan==null) {
-      logger.error("NodeManager not found for au: "+au);
-      throw new IllegalArgumentException("NodeManager not found for au.");
-    }
-    return nodeMan;
+    return (NodeManager)getLockssManager(au);
   }
 
   public synchronized void addNodeManager(ArchivalUnit au) {
-    NodeManager nodeManager = (NodeManager)auMap.get(au);
-    if (nodeManager==null) {
-      nodeManager = new NodeManagerImpl(au);
-      auMap.put(au, nodeManager);
-      nodeManager.initService(theDaemon);
-      nodeManager.startService();
-    }
+    addLockssManager(au);
+  }
+
+  protected LockssManager createNewManager(ArchivalUnit au) {
+    return new NodeManagerImpl(au);
   }
 
   // support for status
