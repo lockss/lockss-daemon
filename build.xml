@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.118 2004-10-20 18:51:10 dcfok Exp $
+ $Id: build.xml,v 1.119 2004-10-20 19:56:11 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -136,7 +136,7 @@ Args:
   <property name="depend.cache"   value="${basedir}/.depend"/>
   <property name="temp.build"     value="${basedir}/tempbuild"/>
 
-  <!--  Jars -->
+  <!-- Library jars -->
   <property name="castor.jar"     value="${lib}/castor-0.9.4.1-xml.jar"/>
   <property name="xerces.jar"     value="${lib}/xercesImpl.jar"/>
   <property name="xmlparser.jar"  value="${lib}/xmlParserAPIs.jar"/>
@@ -148,6 +148,7 @@ Args:
 <!--    <property name="xml.jar"  value="${lib}/org.apache.crimson.jar"/> -->
 <!--    <property name="regexp.jar"     value="${lib}/gnu-regexp.jar"/> -->
   <property name="regexp.jar"     value="${lib}/gnu-regexp-1.1.4.jar"/>
+  <property name="log4j.jar" value="${lib}/log4j-1.2.8.jar"/>
   <property name="commons.collections.jar"
   				  value="${lib}/commons-collections-3.1.jar"/>
   <property name="commons.logging.jar"
@@ -158,6 +159,10 @@ Args:
   <property name="htmlparser.jar"  value="${lib}/htmlparser.jar"/>
   <property name="jena.jar" value="${lib}/jena.jar"/> <!-- Jena RDF parser -->
   <property name="icu4j.jar" value="${lib}/icu4j.jar"/> <!-- Jena RDF parser -->
+  <!-- Needed by OAI harvester -->
+  <property name="oai-harvester.jar" value="${lib}/harvester2.jar"/>
+  <property name="xalan.jar" value="${lib}/xalan.jar"/>
+
   <property name="junit.jar"      value="${test.lib}/junit.jar"/>
   <property name="junit.addons.jar" value="${test.lib}/junit-addons-1.4.jar"/>
   <property name="httpunit.jar"    value="${test.lib}/httpunit.jar"/>
@@ -166,7 +171,6 @@ Args:
   <property name="jdk.tools.jar"      value="${java.lib}/tools.jar"/>
   <property name="jcoverage.jar"  value="${test.lib}/jcoverage.jar"/>
   <property name="bcel.jar"  value="${test.lib}/bcel.jar"/>
-  <property name="log4j.jar"  value="${test.lib}/log4j-1.2.8.jar"/>
   <property name="oro.jar"  value="${test.lib}/jakarta-oro-2.0.8.jar"/>
   <property name="getopt.jar"  value="${test.lib}/java-getopt-1.0.9.jar"/>
   <property name="lockss.jar"     value="${lib}/lockss.jar"/>
@@ -181,11 +185,6 @@ Args:
 	    value="${plugins.dir}/plugins.jar"/>
 
   <property name="ant-contrib.jar"      value="${lib}/ant-contrib-0.6.jar"/>
-
-  <!-- jars that need to run the Oai harvester -->
-  <property name="oai-harvester.jar" value="${lib}/harvester2.jar"/>
-  <property name="log4j.jar" value="${lib}/log4j-1.2.8.jar"/>
-  <property name="xalan.jar" value="${lib}/xalan.jar"/>
 
   <!--  Files -->
   <property name="test.classpath.file" value="${test}/test-classpath"/>
@@ -209,6 +208,7 @@ Args:
     <pathelement path="${commons.collections.jar}" />
     <pathelement path="${commons.logging.jar}" />
     <pathelement path="${commons.httpclient.jar}" />
+    <pathelement path="${log4j.jar}" />
     <pathelement path="${concurrent.jar}" />
     <pathelement path="${jetty.jar}" />
     <pathelement path="${jettytools.jar}" />
@@ -222,7 +222,6 @@ Args:
     <pathelement path="${icu4j.jar}" />
     <!-- jars need to run the Oai harvester -->
     <pathelement path="${oai-harvester.jar}" />
-    <pathelement path="${log4j.jar}" />
     <pathelement path="${xalan.jar}" />
   </path>
 
@@ -309,7 +308,6 @@ Args:
   <path id="jcover.run.classpath">
     <path refid="test.run.classpath" />
     <pathelement path="${jcoverage.jar}" />
-    <pathelement path="${log4j.jar}" />
     <pathelement path="${bcel.jar}" />
     <pathelement path="${oro.jar}" />
     <pathelement path="${getopt.jar}" />
