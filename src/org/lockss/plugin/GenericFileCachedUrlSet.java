@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrlSet.java,v 1.24 2003-02-25 03:13:46 claire Exp $
+ * $Id: GenericFileCachedUrlSet.java,v 1.25 2003-02-26 19:33:46 aalto Exp $
  */
 
 /*
@@ -204,6 +204,10 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
         bytesPerMs = metrics.getBytesPerMsHashEstimate(cush, hasher);
       } catch (IOException ie) {
         logger.error("Couldn't finish estimating hash time: "+ie);
+        return totalNodeSize * BYTES_PER_MS_DEFAULT;
+      }
+      if (bytesPerMs==0) {
+        logger.error("Couldn't estimate hash time: getting 0");
         return totalNodeSize * BYTES_PER_MS_DEFAULT;
       }
       return (long)(totalNodeSize / bytesPerMs);
