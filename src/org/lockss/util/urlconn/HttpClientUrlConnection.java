@@ -1,5 +1,5 @@
 /*
- * $Id: HttpClientUrlConnection.java,v 1.8.2.3 2004-03-23 08:29:53 tlipkis Exp $
+ * $Id: HttpClientUrlConnection.java,v 1.8.2.4 2004-03-27 05:52:46 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -279,7 +279,11 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
 
   public InputStream getResponseInputStream() throws IOException {
     assertExecuted();
-    return new EofMonitoringInputStream(method.getResponseBodyAsStream());
+    InputStream in = method.getResponseBodyAsStream();
+    if (in == null) {
+      return null;
+    }
+    return new EofMonitoringInputStream(in);
   }
 
   public void storeResponseHeaderInto(Properties props, String prefix) {
