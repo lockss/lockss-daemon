@@ -1,5 +1,5 @@
 /*
- * $Id: ActivityRegulator.java,v 1.13 2003-05-17 00:12:48 aalto Exp $
+ * $Id: ActivityRegulator.java,v 1.14 2003-05-30 01:46:55 aalto Exp $
  */
 
 /*
@@ -108,7 +108,7 @@ public class ActivityRegulator extends BaseLockssManager {
 
   HashMap cusMap = new HashMap();
   ArchivalUnit au;
-  ActivityEntry curAuActivity = null;
+  Lock curAuActivity = null;
 
   public ActivityRegulator(ArchivalUnit au) {
     this.au = au;
@@ -135,9 +135,9 @@ public class ActivityRegulator extends BaseLockssManager {
    * the state to indicate that the requested activity is now running.
    * @param newActivity the activity int
    * @param expireIn expire in X ms
-   * @return true iff the activity was marked as started
+   * @return the ActivityLock iff the activity was marked as started, else null
    */
-  public synchronized boolean startAuActivity(int newActivity, long expireIn) {
+  public synchronized Lock startAuActivity(int newActivity, long expireIn) {
     // check if the au is free for this activity
     int curActivity = getAuActivity();
     if (!isAllowedOnAu(newActivity, curActivity)) {
@@ -145,13 +145,12 @@ public class ActivityRegulator extends BaseLockssManager {
       logger.debug2("AU '" + au.getName() + "' busy with " +
                     activityCodeToString(curActivity) + ". Couldn't start " +
                     activityCodeToString(newActivity));
-      return false;
+      return null;
     }
 
-    setAuActivity(newActivity, expireIn);
     logger.debug("Started " + activityCodeToString(newActivity) + " on AU '" +
                  au.getName() + "'");
-    return true;
+    return setAuActivity(newActivity, expireIn);
   }
 
   /**
@@ -160,9 +159,9 @@ public class ActivityRegulator extends BaseLockssManager {
    * @param newActivity the activity int
    * @param cus the {@link CachedUrlSet}
    * @param expireIn expire in X ms
-   * @return true iff the activity was marked as started
+   * @return the ActivityLock iff the activity was marked as started, else null
    */
-  public synchronized boolean startCusActivity(int newActivity, CachedUrlSet cus,
+  public synchronized Lock startCusActivity(int newActivity, CachedUrlSet cus,
                                                long expireIn) {
     // first, check if au is busy
     int auActivity = getAuActivity();
@@ -172,7 +171,7 @@ public class ActivityRegulator extends BaseLockssManager {
                     activityCodeToString(auActivity) + ". Couldn't start " +
                     activityCodeToString(newActivity) + " on CUS '" +
                     cus.getUrl() + "'");
-      return false;
+      return null;
     }
     // check if the cus is free for this activity
     int curActivity = getCusActivity(cus);
@@ -181,15 +180,14 @@ public class ActivityRegulator extends BaseLockssManager {
                     activityCodeToString(curActivity) + ". Couldn't start " +
                     activityCodeToString(newActivity) + " on CUS '" +
                     cus.getUrl() + "'");
-      return false;
+      return null;
     }
     if (checkForRelatedCusActivity(newActivity, cus)) {
-      return false;
+      return null;
     }
-    setCusActivity(cus, newActivity, expireIn);
     logger.debug("Started " + activityCodeToString(newActivity) + " on CUS '" +
                  cus.getUrl() + "'");
-    return true;
+    return setCusActivity(cus, newActivity, expireIn);
   }
 
   /**
@@ -220,7 +218,7 @@ public class ActivityRegulator extends BaseLockssManager {
     while (cusIt.hasNext()) {
       // check each other cus to see if it's acting on this AU
       Map.Entry entry = (Map.Entry)cusIt.next();
-      ActivityEntry value = (ActivityEntry)entry.getValue();
+      Lock value = (Lock)entry.getValue();
       if (value.isExpired()) {
         logger.debug3("Removing expired "+activityCodeToString(value.activity) +
                       " on CUS '" + entry.getKey() + "'");
@@ -252,7 +250,7 @@ public class ActivityRegulator extends BaseLockssManager {
       int relation = getRelation(entryKey, cusKey);
       if ((relation!=RELATION_NONE) &&
           (relation!=RELATION_SAME)) {
-        ActivityEntry value = (ActivityEntry)entry.getValue();
+        Lock value = (Lock)entry.getValue();
         if (value.isExpired()) {
           logger.debug3("Removing expired " +
                         activityCodeToString(value.activity) +
@@ -385,8 +383,9 @@ public class ActivityRegulator extends BaseLockssManager {
     }
   }
 
-  void setAuActivity(int activity, long expireIn) {
-    curAuActivity = new ActivityEntry(activity, expireIn);
+  Lock setAuActivity(int activity, long expireIn) {
+    curAuActivity = new Lock(activity, expireIn);
+    return curAuActivity;
   }
 
   void endAuActivity(int activity) {
@@ -403,7 +402,7 @@ public class ActivityRegulator extends BaseLockssManager {
   }
 
   int getCusActivity(CachedUrlSet cus) {
-    ActivityEntry entry = (ActivityEntry)cusMap.get(getCusKey(cus));
+    Lock entry = (Lock)cusMap.get(getCusKey(cus));
     if (entry==null)  {
       return NO_ACTIVITY;
     } else if (entry.isExpired()) {
@@ -416,11 +415,13 @@ public class ActivityRegulator extends BaseLockssManager {
     }
   }
 
-  void setCusActivity(CachedUrlSet cus, int activity, long expireIn) {
+  Lock setCusActivity(CachedUrlSet cus, int activity, long expireIn) {
     // set CUS state
-    cusMap.put(getCusKey(cus), new ActivityEntry(activity, expireIn));
+    Lock cusLock = new Lock(activity, expireIn);
+    cusMap.put(getCusKey(cus), cusLock);
     // set AU state to indicate CUS activity (resets expiration time)
-    curAuActivity = new ActivityEntry(CUS_ACTIVITY, expireIn);
+    curAuActivity = new Lock(CUS_ACTIVITY, expireIn);
+    return cusLock;
   }
 
   void endCusActivity(int activity, CachedUrlSet cus) {
@@ -502,18 +503,21 @@ public class ActivityRegulator extends BaseLockssManager {
     }
   }
 
-  static class ActivityEntry {
-    int activity;
+  public static class Lock {
+    public int activity;
     Deadline expiration;
 
-    ActivityEntry(int activity, long expireIn) {
+    private Lock(int activity, long expireIn) {
       this.activity = activity;
       expiration = Deadline.in(expireIn);
     }
 
-    boolean isExpired() {
+    public boolean isExpired() {
       return expiration.expired();
     }
   }
+
+    // lock is created for new activity, returned to caller
+    // caller can change activity, prod to keep from expiring, ask if expired
 
 }
