@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawlManager.java,v 1.10 2003-06-25 21:55:18 troberts Exp $
+ * $Id: MockCrawlManager.java,v 1.11 2003-06-26 01:03:52 eaalto Exp $
  */
 
 /*
@@ -64,7 +64,11 @@ public class MockCrawlManager implements CrawlManager, LockssManager {
 
   public void scheduleRepair(ArchivalUnit au, List urls,
 			     CrawlManager.Callback cb, Object cookie) {
-    throw new UnsupportedOperationException("Not implemented");
+    Iterator urlIt = urls.iterator();
+    while (urlIt.hasNext()) {
+      URL url = (URL)urlIt.next();
+      scheduledRepairs.put(url.toString(), SCHEDULED);
+    }
   }
 
   /**
