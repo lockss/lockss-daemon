@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.25 2003-12-08 06:55:17 tlipkis Exp $
+ * $Id: TestPluginManager.java,v 1.26 2003-12-23 00:37:32 tlipkis Exp $
  */
 
 /*
@@ -174,6 +174,14 @@ public class TestPluginManager extends LockssTestCase {
     assertTrue(mgr.getPlugin(mgr.pluginKeyFromName(n1)) instanceof MockPlugin);
   }
 
+  public void testInitTitleDB() {
+    Properties p = new Properties();
+    p.put("org.lockss.title.1.foo", "foo1");
+    p.put("org.lockss.title.1.bar", "bar1");
+    p.put("org.lockss.title.2.bar", "bar2");
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+  }
+
   public void testStop() throws Exception {
     doConfig();
     MockPlugin mpi = (MockPlugin)mgr.getPlugin(mockPlugKey);
@@ -244,7 +252,7 @@ public class TestPluginManager extends LockssTestCase {
     } catch (ArchivalUnit.ConfigurationException e) {
     }
 
-    mpi.setRtEx(new NullPointerException("Should be caught. (May be logged)"));
+    mpi.setRtEx(new ExpectedRuntimeException("Ok if in log"));
     try {
       ArchivalUnit au2 = mgr.createAu(mpi, config);
       fail("createAU should have thrown ArchivalUnit.ConfigurationException");
@@ -284,7 +292,7 @@ public class TestPluginManager extends LockssTestCase {
     } catch (ArchivalUnit.ConfigurationException e) {
     }
 
-    mpi.setRtEx(new NullPointerException("Should be caught. (May be logged)"));
+    mpi.setRtEx(new ExpectedRuntimeException("Ok if in log"));
     try {
       mgr.configureAu(mpi, config, auid);
       fail("configureAU should have thrown ArchivalUnit.ConfigurationException");
