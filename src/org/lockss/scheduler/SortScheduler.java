@@ -1,5 +1,5 @@
 /*
- * $Id: SortScheduler.java,v 1.1.2.1 2003-11-17 22:50:15 tlipkis Exp $
+ * $Id: SortScheduler.java,v 1.1.2.2 2003-11-18 01:17:18 tlipkis Exp $
  */
 
 /*
@@ -322,7 +322,7 @@ public class SortScheduler implements Scheduler {
 	    // consistent (repeatable) sort order is useful so unit tests
 	    // can predict which of several possible schedules will be
 	    // created.
-	    res = t2.seq - t1.seq;
+	    res = t1.seq - t2.seq;
 	  }
 	  return res;
 	}};
