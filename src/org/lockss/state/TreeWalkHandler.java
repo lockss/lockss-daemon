@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkHandler.java,v 1.28 2003-05-06 02:23:32 aalto Exp $
+ * $Id: TreeWalkHandler.java,v 1.29 2003-05-09 23:00:57 aalto Exp $
  */
 
 /*
@@ -230,7 +230,7 @@ public class TreeWalkHandler {
   boolean checkNodeState(NodeState node) {
     // at each node, check for recrawl needed
     if (node.getCachedUrlSet().hasContent()) {
-      // if (theCrawlManager.shouldRecrawl(managerAu, node)) {
+      //XXX if (theCrawlManager.shouldRecrawl(managerAu, node)) {
       // then CrawlManager.scheduleBackgroundCrawl()
       // return false;
     }
@@ -246,7 +246,6 @@ public class TreeWalkHandler {
         // take appropriate action
         manager.checkLastHistory(lastHistory, node, false);
         // abort treewalk
-        //XXX ok?
         treeWalkAborted = true;
         return false;
       }
@@ -267,7 +266,8 @@ public class TreeWalkHandler {
     }
     long lastTreeWalkTime = manager.getAuState().getLastTreeWalkTime();
     long timeSinceLastTW = TimeBase.msSince(lastTreeWalkTime);
-    logger.debug3(timeSinceLastTW+" since last treewalk");
+    logger.debug3(StringUtil.timeIntervalToString(timeSinceLastTW) +
+                  " since last treewalk");
     return treeWalkInterval - timeSinceLastTW;
   }
 

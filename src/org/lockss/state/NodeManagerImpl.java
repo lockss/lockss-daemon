@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.124 2003-05-09 20:54:28 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.125 2003-05-09 23:00:57 aalto Exp $
  */
 
 /*
@@ -26,9 +26,10 @@
 
 package org.lockss.state;
 
+import java.io.*;
 import java.net.*;
 import java.util.*;
-import java.io.*;
+import java.text.SimpleDateFormat;
 import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
@@ -39,11 +40,8 @@ import org.lockss.plugin.base.*;
 import org.lockss.protocol.*;
 import org.lockss.crawler.CrawlManager;
 import org.lockss.repository.LockssRepository;
-import org.apache.commons.collections.LRUMap;
 import org.lockss.repository.RepositoryNodeImpl;
-import java.text.SimpleDateFormat;
-import java.text.NumberFormat;
-import java.text.DateFormat;
+import org.apache.commons.collections.LRUMap;
 
 /**
  * Implementation of the NodeManager.
@@ -71,6 +69,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
   private LockssRepository lockssRepo;
   static PollManager pollManager;
   static ActivityRegulator regulator;
+  static SimpleDateFormat sdf = new SimpleDateFormat();
 
   ArchivalUnit managedAu;
   AuState auState;
@@ -472,8 +471,17 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
         } else if (!repairMarked) {
           // if not found locally, fetch
           logger.debug("marking missing node for repair: " + url);
-          CachedUrlSet newCus = au.makeCachedUrlSet(
-              new RangeCachedUrlSetSpec(baseUrl + url));
+          String childUrl;
+          if (AuUrl.isAuUrl(baseUrl)) {
+            // don't append AU url
+            childUrl = url;
+          } else {
+            // append base url
+            childUrl = baseUrl + url;
+          }
+
+          CachedUrlSet newCus =
+              au.makeCachedUrlSet(new RangeCachedUrlSetSpec(childUrl));
           // check content status, and only mark for repair if
           // should have content.  Else just create in repository.
           if (hasContent) {
@@ -556,10 +564,9 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
           if ((lastHistory.isOurPoll())) {
             if (!reportOnly) {
               logger.debug("Re-calling last unfinished poll.");
-              logger.debug2("lastHistory: "+lastHistory.getTypeString() + ", "+
-                           lastHistory.getStatusString() + ", "+
-                           (new SimpleDateFormat()).format(
-                  new Date(lastHistory.startTime)));
+              logger.debug2("lastHistory: "+lastHistory.getTypeString() + ", " +
+                           lastHistory.getStatusString() + ", " +
+                           sdf.format(new Date(lastHistory.startTime)));
               callLastPoll(lastPollSpec, lastHistory);
             }
             return true;
@@ -575,10 +582,9 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
           if ((lastHistory.isOurPoll())) {
             if (!reportOnly) {
               logger.debug("Calling new content poll on won name poll.");
-              logger.debug2("Last history: "+lastHistory.getTypeString() + ", "+
-                            lastHistory.getStatusString() + ", "+
-                            (new SimpleDateFormat()).format(
-                  new Date(lastHistory.startTime)));
+              logger.debug2("lastHistory: "+lastHistory.getTypeString() + ", " +
+                           lastHistory.getStatusString() + ", " +
+                           sdf.format(new Date(lastHistory.startTime)));
               PollSpec newPollSpec = new PollSpec(node.getCachedUrlSet(),
                                                    null, null);
               callContentPoll(newPollSpec);
@@ -604,10 +610,9 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
                 // found the failed poll, rerunning
                 if (!reportOnly) {
                   logger.debug("Re-calling previous poll.");
-                  logger.debug2("Last history: "+lastHistory.getTypeString() + ", "+
-                                                   lastHistory.getStatusString() + ", "+
-                                                   (new SimpleDateFormat()).format(
-                                    new Date(lastHistory.startTime)));
+                  logger.debug2("lastHistory: "+lastHistory.getTypeString() +
+                                ", " + lastHistory.getStatusString() + ", " +
+                               sdf.format(new Date(lastHistory.startTime)));
                   callLastPoll(prevPollSpec, prevHistory);
                 }
                 return true;
@@ -623,10 +628,9 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
         // since we didn't find anything below this, recall the name poll
         if (!reportOnly) {
           logger.debug("Calling name poll for lost poll.");
-          logger.debug2("Last history: "+lastHistory.getTypeString() + ", "+
-                                           lastHistory.getStatusString() + ", "+
-                                           (new SimpleDateFormat()).format(
-                            new Date(lastHistory.startTime)));
+          logger.debug2("lastHistory: "+lastHistory.getTypeString() + ", " +
+                       lastHistory.getStatusString() + ", " +
+                       sdf.format(new Date(lastHistory.startTime)));
           callNamePoll(lastPollSpec);
         }
         return true;
@@ -636,10 +640,9 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
         // fail.
         if (!reportOnly) {
           logger.debug("Re-calling poll on unrepairable node to trigger repair");
-          logger.debug2("Last history: "+lastHistory.getTypeString() + ", "+
-                        lastHistory.getStatusString() + ", "+
-                        (new SimpleDateFormat()).format(
-              new Date(lastHistory.startTime)));
+          logger.debug2("lastHistory: "+lastHistory.getTypeString() + ", " +
+                       lastHistory.getStatusString() + ", " +
+                       sdf.format(new Date(lastHistory.startTime)));
           callLastPoll(lastPollSpec, lastHistory);
         }
         return true;
@@ -653,10 +656,9 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
         if (lastHistory.isOurPoll()) {
           if (!reportOnly) {
             logger.debug("Recalling last unsuccessful poll");
-            logger.debug2("Last history: "+lastHistory.getTypeString() + ", "+
-                          lastHistory.getStatusString() + ", "+
-                          (new SimpleDateFormat()).format(
-                new Date(lastHistory.startTime)));
+            logger.debug2("lastHistory: "+lastHistory.getTypeString() + ", " +
+                         lastHistory.getStatusString() + ", " +
+                         sdf.format(new Date(lastHistory.startTime)));
             callLastPoll(lastPollSpec, lastHistory);
           }
           return true;
