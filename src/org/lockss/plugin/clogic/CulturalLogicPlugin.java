@@ -1,5 +1,5 @@
 /*
- * $Id: CulturalLogicPlugin.java,v 1.5 2004-01-27 04:07:09 tlipkis Exp $
+ * $Id: CulturalLogicPlugin.java,v 1.6 2004-02-17 21:46:00 clairegriffin Exp $
  */
 
 /*
@@ -53,9 +53,9 @@ public class CulturalLogicPlugin extends ConfigurablePlugin {
   public void initPlugin(LockssDaemon daemon){
     //todo: we override initPlugin largely to manually load the values that
     // should be put into the configuration map when we load it from disk
-    configurationMap.putString(CM_NAME_KEY, PLUGIN_NAME);
-    configurationMap.putString(CM_VERSION_KEY, CURRENT_VERSION);
-    configurationMap.putCollection(CM_CONFIG_PROPS_KEY,
+    definitionMap.putString(CM_NAME_KEY, PLUGIN_NAME);
+    definitionMap.putString(CM_VERSION_KEY, CURRENT_VERSION);
+    definitionMap.putCollection(CM_CONFIG_PROPS_KEY,
                                    ListUtil.list(PD_BASE, PD_YEAR));
     // then call the overridden initializaton.
     super.initPlugin(daemon);
@@ -63,7 +63,7 @@ public class CulturalLogicPlugin extends ConfigurablePlugin {
 
   public ArchivalUnit createAu(Configuration auConfig) throws ArchivalUnit.
       ConfigurationException {
-    ArchivalUnit au = new CulturalLogicArchivalUnit(this);
+    ArchivalUnit au = new CulturalLogicArchivalUnit(this, definitionMap);
     au.setConfiguration(auConfig);
     return au;
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: SampleArchivalUnit.java,v 1.3 2004-02-06 23:54:13 clairegriffin Exp $
+ * $Id: SampleArchivalUnit.java,v 1.4 2004-02-17 21:46:03 clairegriffin Exp $
  */
 
 /*
@@ -65,8 +65,9 @@ public class SampleArchivalUnit extends ConfigurableArchivalUnit {
 
   private int volume; // the volume number
 
-  public SampleArchivalUnit(Plugin myPlugin) {
-    super(myPlugin);
+  public SampleArchivalUnit(ConfigurablePlugin myPlugin,
+                            ExternalizableMap map) {
+    super(myPlugin, map);
   }
 
 

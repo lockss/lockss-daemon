@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePlugin.java,v 1.33 2004-02-06 23:54:12 clairegriffin Exp $
+ * $Id: HighWirePlugin.java,v 1.34 2004-02-17 21:46:01 clairegriffin Exp $
  */
 
 /*
@@ -59,9 +59,9 @@ public class HighWirePlugin
   public void initPlugin(LockssDaemon daemon){
     //todo: we override initPlugin largely to manually load the values that
     // should be put into the configuration map when we load it from disk
-    configurationMap.putString(CM_NAME_KEY, PLUGIN_NAME);
-    configurationMap.putString(CM_VERSION_KEY, CURRENT_VERSION);
-    configurationMap.putCollection(CM_CONFIG_PROPS_KEY,
+    definitionMap.putString(CM_NAME_KEY, PLUGIN_NAME);
+    definitionMap.putString(CM_VERSION_KEY, CURRENT_VERSION);
+    definitionMap.putCollection(CM_CONFIG_PROPS_KEY,
                                    ListUtil.list(PD_BASE, PD_VOL));
 
     // then call the overridden initializaton.
@@ -70,7 +70,7 @@ public class HighWirePlugin
 
   public ArchivalUnit createAu(Configuration configInfo) throws ArchivalUnit.
       ConfigurationException {
-    ArchivalUnit au = new HighWireArchivalUnit(this);
+    ArchivalUnit au = new HighWireArchivalUnit(this, definitionMap);
     au.setConfiguration(configInfo);
     return au;
   }

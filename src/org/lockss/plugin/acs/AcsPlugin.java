@@ -1,5 +1,5 @@
 /*
- * $Id: AcsPlugin.java,v 1.10 2004-01-27 04:07:09 tlipkis Exp $
+ * $Id: AcsPlugin.java,v 1.11 2004-02-17 21:46:00 clairegriffin Exp $
  */
 
 /*
@@ -85,9 +85,9 @@ public class AcsPlugin extends ConfigurablePlugin {
   public void initPlugin(LockssDaemon daemon){
     //todo: we override initPlugin largely to manually load the values that
     // should be put into the configuration map when we load it from disk
-    configurationMap.putString(CM_NAME_KEY, PLUGIN_NAME);
-    configurationMap.putString(CM_VERSION_KEY, CURRENT_VERSION);
-    configurationMap.putCollection(CM_CONFIG_PROPS_KEY,
+    definitionMap.putString(CM_NAME_KEY, PLUGIN_NAME);
+    definitionMap.putString(CM_VERSION_KEY, CURRENT_VERSION);
+    definitionMap.putCollection(CM_CONFIG_PROPS_KEY,
                                    ListUtil.list(PD_BASE, PD_ARTICLE, PD_JKEY,
                                                  PD_VOL, PD_YEAR));
     // then call the overridden initializaton.
@@ -96,7 +96,7 @@ public class AcsPlugin extends ConfigurablePlugin {
 
   public ArchivalUnit createAu(Configuration auConfig)
       throws ArchivalUnit.ConfigurationException {
-    ArchivalUnit au = new AcsArchivalUnit(this);
+    ArchivalUnit au = new AcsArchivalUnit(this, definitionMap);
     au.setConfiguration(auConfig);
     return au;
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestAcsArchivalUnit.java,v 1.8 2004-02-12 03:57:46 clairegriffin Exp $
+ * $Id: TestAcsArchivalUnit.java,v 1.9 2004-02-17 21:46:05 clairegriffin Exp $
  */
 
 /*
@@ -68,8 +68,7 @@ public class TestAcsArchivalUnit
                                  URL issueUrl,
                                  String jkey,
                                  int volume,
-                                 int year) throws ArchivalUnit.
-      ConfigurationException {
+                                 int year) throws Exception {
 
     Properties props = new Properties();
 

@@ -35,8 +35,9 @@ public class IeeeArchivalUnit extends ConfigurableArchivalUnit {
   private int puNumber;             // the publication number
   private int puYear;               // the publication year
 
-  protected IeeeArchivalUnit(Plugin myPlugin) {
-    super(myPlugin);
+  protected IeeeArchivalUnit(ConfigurablePlugin myPlugin,
+                             ExternalizableMap map) {
+    super(myPlugin, map);
   }
 
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlackbirdArchivalUnit.java,v 1.6 2004-02-12 03:57:46 clairegriffin Exp $
+ * $Id: TestBlackbirdArchivalUnit.java,v 1.7 2004-02-17 21:46:05 clairegriffin Exp $
  */
 
 /*
@@ -62,7 +62,7 @@ public class TestBlackbirdArchivalUnit extends LockssTestCase {
   }
 
   private ConfigurableArchivalUnit makeAu(URL url, int volume)
-      throws ArchivalUnit.ConfigurationException {
+      throws Exception {
     Properties props = new Properties();
     props.setProperty(BlackbirdPlugin.AUPARAM_VOL, Integer.toString(volume));
     if (url!=null) {

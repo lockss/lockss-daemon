@@ -1,5 +1,5 @@
 /*
- * $Id: IeeePlugin.java,v 1.10 2004-02-12 03:57:44 clairegriffin Exp $
+ * $Id: IeeePlugin.java,v 1.11 2004-02-17 21:46:02 clairegriffin Exp $
  */
 
 /*
@@ -71,9 +71,9 @@ public class IeeePlugin extends ConfigurablePlugin {
   public void initPlugin(LockssDaemon daemon){
     //todo: we override initPlugin largely to manually load the values that
     // should be put into the configuration map when we load it from disk
-    configurationMap.putString(CM_NAME_KEY, PLUGIN_NAME);
-    configurationMap.putString(CM_VERSION_KEY, CURRENT_VERSION);
-    configurationMap.putCollection(CM_CONFIG_PROPS_KEY,
+    definitionMap.putString(CM_NAME_KEY, PLUGIN_NAME);
+    definitionMap.putString(CM_VERSION_KEY, CURRENT_VERSION);
+    definitionMap.putCollection(CM_CONFIG_PROPS_KEY,
                                    ListUtil.list(PD_BASE, PD_PUNUM, PD_YEAR));
     // then call the overridden initializaton.
     super.initPlugin(daemon);
@@ -81,7 +81,7 @@ public class IeeePlugin extends ConfigurablePlugin {
 
   public ArchivalUnit createAu(Configuration auConfig)
       throws ArchivalUnit.ConfigurationException {
-    ArchivalUnit au = new IeeeArchivalUnit(this);
+    ArchivalUnit au = new IeeeArchivalUnit(this, definitionMap);
     au.setConfiguration(auConfig);
     return au;
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: BlackbirdArchivalUnit.java,v 1.6 2004-02-11 21:07:56 eaalto Exp $
+ * $Id: BlackbirdArchivalUnit.java,v 1.7 2004-02-17 21:46:00 clairegriffin Exp $
  */
 
 /*
@@ -65,8 +65,9 @@ public class BlackbirdArchivalUnit extends ConfigurableArchivalUnit {
 
   private int volume; // the volume index
 
-  protected BlackbirdArchivalUnit(Plugin myPlugin) {
-    super(myPlugin);
+  protected BlackbirdArchivalUnit(ConfigurablePlugin myPlugin,
+                                  ExternalizableMap map) {
+    super(myPlugin, map);
     defaultFetchDelay = DEFAULT_PAUSE_TIME;
   }
 

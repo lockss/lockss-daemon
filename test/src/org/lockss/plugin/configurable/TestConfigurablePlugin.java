@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigurablePlugin.java,v 1.6 2004-01-31 22:54:29 tlipkis Exp $
+ * $Id: TestConfigurablePlugin.java,v 1.7 2004-02-17 21:46:07 clairegriffin Exp $
  */
 
 /*
@@ -67,6 +67,9 @@ public class TestConfigurablePlugin extends LockssTestCase {
      p.setProperty(BaseArchivalUnit.PAUSE_TIME_KEY,"10000");
     List rules = ListUtil.list("1\nhttp://www.example.com");
     ExternalizableMap map = configurablePlugin.getConfigurationMap();
+    map.putString(ConfigurablePlugin.CM_NAME_KEY, "testplugin");
+    map.putCollection(ConfigurablePlugin.CM_CONFIG_PROPS_KEY,
+                      Collections.EMPTY_LIST);
     map.putCollection(ConfigurableArchivalUnit.CM_AU_RULES_KEY,rules);
     map.putString("au_start_url", "http://www.example.com/");
     ConfigurationUtil.setCurrentConfigFromProps(p);
@@ -87,7 +90,7 @@ public class TestConfigurablePlugin extends LockssTestCase {
   }
 
   public void testGetConfigurationMap() {
-    ExternalizableMap expectedReturn = configurablePlugin.configurationMap;
+    ExternalizableMap expectedReturn = configurablePlugin.definitionMap;
     ExternalizableMap actualReturn = configurablePlugin.getConfigurationMap();
     assertEquals("return value", expectedReturn, actualReturn);
   }
@@ -122,17 +125,15 @@ public class TestConfigurablePlugin extends LockssTestCase {
 
   }
 
-  public void testGetPluginId() {
+  public void testGetPluginId() throws Exception {
     LockssDaemon daemon = getMockLockssDaemon();
     String extMapName = null;
     try {
       configurablePlugin.initPlugin(daemon, extMapName);
       assertNull(configurablePlugin.mapName);
     }
-    catch (NullPointerException npe) {
+    catch (Exception npe) {
     }
-    assertEquals("org.lockss.plugin.configurable.ConfigurablePlugin",
-                 configurablePlugin.getPluginId());
 
     extMapName = "org.lockss.plugin.absinthe.AbsinthePlugin";
     configurablePlugin.initPlugin(daemon, extMapName);
@@ -140,7 +141,7 @@ public class TestConfigurablePlugin extends LockssTestCase {
                  configurablePlugin.getPluginId());
   }
 
-  public void testInitPlugin() {
+  public void testInitPlugin() throws Exception {
     LockssDaemon daemon = getMockLockssDaemon();
     String extMapName = null;
     try {

@@ -1,5 +1,5 @@
 /*
- * $Id: EmlsArchivalUnit.java,v 1.6 2004-02-06 23:54:12 clairegriffin Exp $
+ * $Id: EmlsArchivalUnit.java,v 1.7 2004-02-17 21:46:01 clairegriffin Exp $
  */
 
 /*
@@ -64,8 +64,9 @@ public class EmlsArchivalUnit extends ConfigurableArchivalUnit {
 
   private int volume; // the volume number
 
-  public EmlsArchivalUnit(Plugin myPlugin) {
-    super(myPlugin);
+  public EmlsArchivalUnit(ConfigurablePlugin myPlugin,
+                          ExternalizableMap map) {
+    super(myPlugin, map);
     expectedUrlPath = "/emls/";
   }
 

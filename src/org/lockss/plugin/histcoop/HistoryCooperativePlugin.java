@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryCooperativePlugin.java,v 1.5 2004-01-27 04:07:08 tlipkis Exp $
+ * $Id: HistoryCooperativePlugin.java,v 1.6 2004-02-17 21:46:02 clairegriffin Exp $
  */
 
 /*
@@ -55,16 +55,16 @@ public class HistoryCooperativePlugin extends ConfigurablePlugin {
   public static final String AUPARAM_VOL = PD_VOL.getKey();
 
   public void initPlugin(LockssDaemon daemon){
-    configurationMap.putString(CM_NAME_KEY, PLUGIN_NAME);
-    configurationMap.putString(CM_VERSION_KEY, CURRENT_VERSION);
-    configurationMap.putCollection(CM_CONFIG_PROPS_KEY,
+    definitionMap.putString(CM_NAME_KEY, PLUGIN_NAME);
+    definitionMap.putString(CM_VERSION_KEY, CURRENT_VERSION);
+    definitionMap.putCollection(CM_CONFIG_PROPS_KEY,
                                    ListUtil.list(PD_BASE, PD_DIR, PD_VOL));
     super.initPlugin(daemon);
   }
 
   public ArchivalUnit createAu(Configuration auConfig) throws ArchivalUnit.
       ConfigurationException {
-    ArchivalUnit au = new HistoryCooperativeArchivalUnit(this);
+    ArchivalUnit au = new HistoryCooperativeArchivalUnit(this, definitionMap);
     au.setConfiguration(auConfig);
     return au;
   }

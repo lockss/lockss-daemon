@@ -1,5 +1,5 @@
 /*
- * $Id: TestIeeeArchivalUnit.java,v 1.6 2004-02-12 03:57:54 clairegriffin Exp $
+ * $Id: TestIeeeArchivalUnit.java,v 1.7 2004-02-17 21:46:10 clairegriffin Exp $
  */
 
 /*
@@ -64,8 +64,7 @@ public class TestIeeeArchivalUnit
 
   private ConfigurableArchivalUnit makeAu(URL volUrl,
                                  int pub,
-                                 int year) throws ArchivalUnit.
-      ConfigurationException {
+                                 int year) throws Exception {
 
     Properties props = new Properties();
 

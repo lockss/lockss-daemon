@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurablePlugin.java,v 1.10 2004-02-10 01:09:08 clairegriffin Exp $
+ * $Id: ConfigurablePlugin.java,v 1.11 2004-02-17 21:46:01 clairegriffin Exp $
  */
 
 /*
@@ -59,61 +59,66 @@ public class ConfigurablePlugin extends BasePlugin {
 
   static Logger log = Logger.getLogger("ConfigurablePlugin");
 
-  protected ExternalizableMap configurationMap = new ExternalizableMap();
+  protected ExternalizableMap definitionMap = new ExternalizableMap();
 
 
-  public void initPlugin(LockssDaemon daemon, String extMapName){
+  public void initPlugin(LockssDaemon daemon, String extMapName)
+      throws FileNotFoundException {
     mapName = extMapName;
     // load the configuration map from jar file
-    String mapFile = "/" + mapName.replace('.','/') + ".xml";
-    try {
-      configurationMap.loadMapFromResource(mapFile);
-    }
-    catch(FileNotFoundException fnfe) {
-      log.warning(fnfe.toString());
-    }
+    String mapFile = "/" + mapName.replace('.', '/') + ".xml";
 
-   // then call the overridden initializaton.
+    definitionMap.loadMapFromResource(mapFile);
+
+    // then call the overridden initializaton.
     super.initPlugin(daemon);
   }
 
   public String getPluginName() {
     String default_name = StringUtil.shortName(getPluginId());
-    return configurationMap.getString(CM_NAME_KEY, default_name);
+    return definitionMap.getString(CM_NAME_KEY, default_name);
   }
 
   public String getVersion() {
-    return configurationMap.getString(CM_VERSION_KEY, DEFAULT_PLUGIN_VERSION);
+    return definitionMap.getString(CM_VERSION_KEY, DEFAULT_PLUGIN_VERSION);
   }
 
-  public List getAuConfigDescrs() {
-    return (List) configurationMap.getCollection(CM_CONFIG_PROPS_KEY,
-                                                 Collections.EMPTY_LIST);
+  public List getAuConfigDescrs() throws InvalidDefinitionException {
+    List auConfigDescrs = (List) definitionMap.getCollection(
+        CM_CONFIG_PROPS_KEY, null);
+    if (auConfigDescrs == null) {
+      throw new InvalidDefinitionException(mapName +
+                                           " missing ConfigParamDescrs");
+    }
+    return auConfigDescrs;
   }
 
   public ArchivalUnit createAu(Configuration auConfig)
       throws ArchivalUnit.ConfigurationException {
-    ArchivalUnit au = new ConfigurableArchivalUnit(this);
+    ConfigurableArchivalUnit au = new ConfigurableArchivalUnit(this,
+        definitionMap);
     au.setConfiguration(auConfig);
     return au;
   }
 
-  protected ExternalizableMap getConfigurationMap() {
-    return configurationMap;
+  ExternalizableMap getConfigurationMap() {
+    return definitionMap;
   }
 
-  protected void installCacheExceptionHandler() {
+  protected void installCacheExceptionHandler()
+      throws InvalidDefinitionException {
     CacheExceptionHandler handler = null;
     String handler_class = null;
-    handler_class = configurationMap.getString(CM_EXCEPTION_HANDLER_KEY,
-                                               null);
+    handler_class = definitionMap.getString(CM_EXCEPTION_HANDLER_KEY, null);
     if (handler_class != null) {
       try {
-        handler = (CacheExceptionHandler) Class.forName(handler_class).
-            newInstance();
+        handler =
+            (CacheExceptionHandler) Class.forName(handler_class).newInstance();
         handler.init(exceptionMap);
       }
       catch (Exception ex) {
+        throw new InvalidDefinitionException(mapName
+        + " has invalid Exception handler: " + handler_class);
       }
     }
   }
@@ -125,6 +130,7 @@ public class ConfigurablePlugin extends BasePlugin {
       class_name = mapName;
     }
     else {
+      //@TODO: eliminate this when we eliminate subclasses
       class_name = this.getClass().getName();
     }
     return class_name;
@@ -133,11 +139,28 @@ public class ConfigurablePlugin extends BasePlugin {
   // for testing writing and reading map files
   public void writeMap(String mapLocation) {
     if(mapName == null) {
-      ConfigurableArchivalUnit au = new ConfigurableArchivalUnit(this);
-      au.initAuKeys();
+      ConfigurableArchivalUnit au = new ConfigurableArchivalUnit(this,
+          definitionMap);
       mapName = getPluginId().replace('.','/') + ".xml";
       // store the configuration map
-      configurationMap.storeMap(mapLocation, mapName);
+      definitionMap.storeMap(mapLocation, mapName);
+    }
+  }
+
+  public static class InvalidDefinitionException extends RuntimeException {
+    private Throwable nestedException;
+
+    public InvalidDefinitionException(String msg) {
+      super(msg);
+    }
+
+    public InvalidDefinitionException(String msg, Throwable e) {
+      super(msg + (e.getMessage() == null ? "" : (": " + e.getMessage())));
+      this.nestedException = e;
+    }
+
+    public Throwable getNestedException() {
+      return nestedException;
     }
   }
 }

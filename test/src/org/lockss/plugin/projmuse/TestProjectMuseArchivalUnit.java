@@ -1,5 +1,5 @@
 /*
- * $Id: TestProjectMuseArchivalUnit.java,v 1.11 2004-02-12 03:57:55 clairegriffin Exp $
+ * $Id: TestProjectMuseArchivalUnit.java,v 1.12 2004-02-17 21:46:11 clairegriffin Exp $
  */
 
 /*
@@ -66,7 +66,7 @@ public class TestProjectMuseArchivalUnit extends LockssTestCase {
   }
 
   private ConfigurableArchivalUnit makeAu(URL url, int volume, String journalDir)
-      throws ArchivalUnit.ConfigurationException {
+      throws Exception {
     Properties props = new Properties();
     props.setProperty(ProjectMusePlugin.AUPARAM_VOL, Integer.toString(volume));
     if (url!=null) {

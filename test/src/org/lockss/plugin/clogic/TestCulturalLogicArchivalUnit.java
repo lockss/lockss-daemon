@@ -1,5 +1,5 @@
 /*
- * $Id: TestCulturalLogicArchivalUnit.java,v 1.3 2004-02-12 03:57:47 clairegriffin Exp $
+ * $Id: TestCulturalLogicArchivalUnit.java,v 1.4 2004-02-17 21:46:06 clairegriffin Exp $
  */
 
 /*
@@ -62,7 +62,7 @@ public class TestCulturalLogicArchivalUnit extends LockssTestCase {
   }
 
   private ConfigurableArchivalUnit makeAu(URL url, String year)
-      throws ArchivalUnit.ConfigurationException {
+      throws Exception {
     Properties props = new Properties();
     props.setProperty(CulturalLogicPlugin.AUPARAM_YEAR, year);
     if (url!=null) {

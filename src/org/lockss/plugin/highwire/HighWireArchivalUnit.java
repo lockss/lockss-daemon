@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireArchivalUnit.java,v 1.45 2004-02-10 01:09:09 clairegriffin Exp $
+ * $Id: HighWireArchivalUnit.java,v 1.46 2004-02-17 21:46:01 clairegriffin Exp $
  */
 
 /*
@@ -72,8 +72,9 @@ public class HighWireArchivalUnit extends ConfigurableArchivalUnit {
    *
    * @param myPlugin owner plugin
    */
-  public HighWireArchivalUnit(Plugin myPlugin) {
-    super(myPlugin);
+  public HighWireArchivalUnit(ConfigurablePlugin myPlugin,
+                              ExternalizableMap map) {
+    super(myPlugin, map);
   }
 
   protected FilterRule constructFilterRule(String mimeType) {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestAbsintheArchivalUnit.java,v 1.5 2004-02-12 03:57:46 clairegriffin Exp $
+ * $Id: TestAbsintheArchivalUnit.java,v 1.6 2004-02-17 21:46:04 clairegriffin Exp $
  */
 
 /*
@@ -60,7 +60,7 @@ public class TestAbsintheArchivalUnit extends LockssTestCase {
   }
 
   private ConfigurableArchivalUnit makeAu(URL url, String year)
-      throws ArchivalUnit.ConfigurationException {
+      throws Exception {
     Properties props = new Properties();
     props.setProperty(AbsinthePlugin.AUPARAM_YEAR, year);
     if (url!=null) {

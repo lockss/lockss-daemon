@@ -1,5 +1,5 @@
 /*
- * $Id: TestEmlsArchivalUnit.java,v 1.4 2004-02-12 03:57:47 clairegriffin Exp $
+ * $Id: TestEmlsArchivalUnit.java,v 1.5 2004-02-17 21:46:08 clairegriffin Exp $
  */
 
 /*
@@ -60,7 +60,7 @@ public class TestEmlsArchivalUnit extends LockssTestCase {
   }
 
   private ConfigurableArchivalUnit makeAu(URL url, int volume)
-      throws ArchivalUnit.ConfigurationException {
+      throws Exception {
     Properties props = new Properties();
     props.setProperty(EmlsPlugin.AUPARAM_VOL, ""+volume);
     if (url!=null) {

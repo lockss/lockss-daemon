@@ -1,5 +1,5 @@
 /*
- * $Id: TestSampleArchivalUnit.java,v 1.1 2003-12-15 23:10:57 clairegriffin Exp $
+ * $Id: TestSampleArchivalUnit.java,v 1.2 2004-02-17 21:46:11 clairegriffin Exp $
  */
 
 /*
@@ -182,9 +182,10 @@ public class TestSampleArchivalUnit extends LockssTestCase {
       props.setProperty(SamplePlugin.AUPARAM_BASE_URL, url.toString());
     }
     Configuration config = ConfigurationUtil.fromProps(props);
-    SampleArchivalUnit au = new SampleArchivalUnit( new SamplePlugin());
-    au.getPlugin().initPlugin(theDaemon);
-    au.setConfiguration(config);
+    SamplePlugin sp = new SamplePlugin();
+    sp.initPlugin(theDaemon);
+    SampleArchivalUnit au = (SampleArchivalUnit)sp.createAu(config);
+
     return au;
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireArchivalUnit.java,v 1.35 2004-02-12 03:57:51 clairegriffin Exp $
+ * $Id: TestHighWireArchivalUnit.java,v 1.36 2004-02-17 21:46:09 clairegriffin Exp $
  */
 
 /*
@@ -69,7 +69,7 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
   }
 
   private ConfigurableArchivalUnit makeAu(URL url, int volume)
-      throws ArchivalUnit.ConfigurationException {
+      throws Exception {
     Properties props = new Properties();
     props.setProperty(HighWirePlugin.AUPARAM_VOL, Integer.toString(volume));
     if (url != null) {

@@ -1,5 +1,5 @@
 /*
- * $Id: AcsArchivalUnit.java,v 1.14 2004-02-10 01:09:08 clairegriffin Exp $
+ * $Id: AcsArchivalUnit.java,v 1.15 2004-02-17 21:45:59 clairegriffin Exp $
  */
 
 /*
@@ -70,8 +70,9 @@ public class AcsArchivalUnit extends ConfigurableArchivalUnit {
   private String journalKey;        // the key used to specify the journal
   private int year;                 // the year of the volume
 
-  protected AcsArchivalUnit(Plugin myPlugin) {
-    super(myPlugin);
+  protected AcsArchivalUnit(ConfigurablePlugin myPlugin,
+                            ExternalizableMap map) {
+    super(myPlugin, map);
   }
 
 

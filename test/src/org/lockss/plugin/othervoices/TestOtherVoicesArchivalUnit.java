@@ -1,5 +1,5 @@
 /*
- * $Id: TestOtherVoicesArchivalUnit.java,v 1.4 2004-02-12 03:57:54 clairegriffin Exp $
+ * $Id: TestOtherVoicesArchivalUnit.java,v 1.5 2004-02-17 21:46:10 clairegriffin Exp $
  */
 
 /*
@@ -66,7 +66,7 @@ public class TestOtherVoicesArchivalUnit extends LockssTestCase {
   }
 
   private ConfigurableArchivalUnit makeAu(URL url, int volume)
-      throws ArchivalUnit.ConfigurationException {
+      throws Exception {
     Properties props = new Properties();
     props.setProperty(OtherVoicesPlugin.AUPARAM_VOL, Integer.toString(volume));
     if (url!=null) {

@@ -1,5 +1,5 @@
 /*
- * $Id: AbsintheArchivalUnit.java,v 1.10 2004-02-10 01:09:08 clairegriffin Exp $
+ * $Id: AbsintheArchivalUnit.java,v 1.11 2004-02-17 21:45:53 clairegriffin Exp $
  */
 
 /*
@@ -63,8 +63,9 @@ public class AbsintheArchivalUnit extends ConfigurableArchivalUnit {
 
   private String year; // the year
 
-  protected AbsintheArchivalUnit(Plugin myPlugin) {
-    super(myPlugin);
+  protected AbsintheArchivalUnit(ConfigurablePlugin myPlugin,
+                                  ExternalizableMap map) {
+    super(myPlugin, map);
   }
 
   protected void loadAuConfigDescrs(Configuration config) throws

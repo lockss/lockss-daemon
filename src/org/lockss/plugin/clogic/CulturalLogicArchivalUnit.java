@@ -1,5 +1,5 @@
 /*
- * $Id: CulturalLogicArchivalUnit.java,v 1.5 2004-02-10 01:09:08 clairegriffin Exp $
+ * $Id: CulturalLogicArchivalUnit.java,v 1.6 2004-02-17 21:46:00 clairegriffin Exp $
  */
 
 /*
@@ -65,8 +65,9 @@ public class CulturalLogicArchivalUnit extends ConfigurableArchivalUnit {
 
   private String year;
 
-  protected CulturalLogicArchivalUnit(Plugin myPlugin) {
-    super(myPlugin);
+  protected CulturalLogicArchivalUnit(ConfigurablePlugin myPlugin,
+                                      ExternalizableMap map) {
+    super(myPlugin, map);
     defaultFetchDelay = DEFAULT_PAUSE_TIME;
     //override 'no path' setting from BaseArchivalUnit
     expectedUrlPath = "/clogic/";

@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigurableArchivalUnit.java,v 1.4 2004-02-12 03:57:47 clairegriffin Exp $
+ * $Id: TestConfigurableArchivalUnit.java,v 1.5 2004-02-17 21:46:07 clairegriffin Exp $
  */
 
 /*
@@ -58,8 +58,9 @@ public class TestConfigurableArchivalUnit extends LockssTestCase {
   protected void setUp() throws Exception {
     super.setUp();
 
-    cau = new ConfigurableArchivalUnit(new ConfigurablePlugin());
-    map = cau.configurationMap;
+    ConfigurablePlugin cp = new ConfigurablePlugin();
+    map = cp.getConfigurationMap();
+    cau = new ConfigurableArchivalUnit(cp, map);
     map.putString(ConfigurablePlugin.CM_NAME_KEY, PLUGIN_NAME);
     map.putString(ConfigurablePlugin.CM_VERSION_KEY, CURRENT_VERSION);
     map.putCollection(ConfigurablePlugin.CM_CONFIG_PROPS_KEY, configProps);

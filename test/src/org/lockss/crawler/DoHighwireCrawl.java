@@ -1,5 +1,5 @@
 /*
- * $Id: DoHighwireCrawl.java,v 1.24 2004-02-03 03:13:54 troberts Exp $
+ * $Id: DoHighwireCrawl.java,v 1.25 2004-02-17 21:46:04 clairegriffin Exp $
  */
 
 /*
@@ -31,25 +31,29 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.crawler;
+import java.net.*;
 import java.util.*;
-import java.net.URL;
+
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.configurable.*;
 import org.lockss.plugin.highwire.*;
-import org.lockss.proxy.ProxyHandler;
-import org.lockss.util.Deadline;
 import org.lockss.test.*;
+import org.lockss.util.*;
 
 public class DoHighwireCrawl {
+  static MockLockssDaemon theDaemon;
 
-  private static HighWireArchivalUnit makeAu(URL url, int volume)
-      throws ArchivalUnit.ConfigurationException, ClassNotFoundException {
+  private static ConfigurableArchivalUnit makeAu(URL url, int volume)
+      throws Exception {
     Properties props = new Properties();
     props.setProperty(HighWirePlugin.AUPARAM_VOL, Integer.toString(volume));
     props.setProperty(HighWirePlugin.AUPARAM_BASE_URL, url.toString());
+    props.setProperty(HighWireArchivalUnit.AUPARAM_USE_CRAWL_WINDOW, ""+true);
     Configuration config = ConfigurationUtil.fromProps(props);
-    HighWireArchivalUnit au = new HighWireArchivalUnit(null);
-    au.setConfiguration(config);
+    ConfigurablePlugin ap = new ConfigurablePlugin();
+    ap.initPlugin(theDaemon, "org.lockss.plugin.highwire.HighWirePlugin");
+    ConfigurableArchivalUnit au = (ConfigurableArchivalUnit)ap.createAu(config);
     return au;
   }
 
@@ -72,10 +76,10 @@ public class DoHighwireCrawl {
     }
     URL base = new URL(args[i]);
     int volume = Integer.parseInt(args[i+1]);
+    theDaemon = new MockLockssDaemon(null);
+    theDaemon.startDaemon();
 
     ArchivalUnit au = makeAu(base, volume);
-    MockLockssDaemon daemon = new MockLockssDaemon(null);
-    daemon.startDaemon();
     PluginUtil.registerArchivalUnit(au);
     if (proxyFlg) {
 //  This should already be started now.

@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurableArchivalUnit.java,v 1.7 2004-02-12 03:57:43 clairegriffin Exp $
+ * $Id: ConfigurableArchivalUnit.java,v 1.8 2004-02-17 21:46:01 clairegriffin Exp $
  */
 
 /*
@@ -64,13 +64,18 @@ public class ConfigurableArchivalUnit
 
   protected ExternalizableMap configurationMap;
   static Logger log = Logger.getLogger("ConfigurableArchivalUnit");
-
+/*
   protected ConfigurableArchivalUnit(Plugin myPlugin) {
     super(myPlugin);
-    if (myPlugin != null) {
-      configurationMap = ( (ConfigurablePlugin) myPlugin).getConfigurationMap();
-      initAuKeys();
-    }
+    throw new UnsupportedOperationException(
+        "ConfigurableArchvialUnit requires ConfigurablePlugin for construction");
+  }
+*/
+
+  protected ConfigurableArchivalUnit(ConfigurablePlugin myPlugin,
+                                     ExternalizableMap definitionMap) {
+    super(myPlugin);
+    configurationMap = definitionMap;
   }
 
   protected String makeStartUrl() {
@@ -92,7 +97,7 @@ public class ConfigurableArchivalUnit
         configurationMap.setMapElement(key, val);
         // we store years in two formats - short and long
         if (descr.getType() == ConfigParamDescr.TYPE_YEAR) {
-          int year = Integer.parseInt( ( (Integer) val).toString().substring(2));
+          int year = ((Integer)val).intValue() % 100;
           configurationMap.putInt(CM_AU_SHORT_YEAR_PREFIX + key, year);
         }
         if (descr.getType() == ConfigParamDescr.TYPE_URL) {
@@ -112,10 +117,10 @@ public class ConfigurableArchivalUnit
     expectedUrlPath = configurationMap.getString(CM_AU_EXPECTED_PATH,"/");
     defaultFetchDelay =
         configurationMap.getLong(CM_AU_DEFAULT_PAUSE_TIME,
-                                 6 * Constants.SECOND);
+                                 DEFAULT_MILLISECONDS_BETWEEN_CRAWL_HTTP_REQUESTS);
     defaultContentCrawlIntv =
         configurationMap.getLong(CM_AU_DEFAULT_NC_CRAWL_KEY,
-                                 2 * Constants.WEEK);
+                                 DEFAULT_NEW_CONTENT_CRAWL_INTERVAL);
   }
 
   protected String makeName() {
@@ -137,7 +142,7 @@ public class ConfigurableArchivalUnit
     if(rules.size() > 0)
       return new CrawlRules.FirstMatch(rules);
     else {
-      log.warning("No crawl rules found for plugin: " + makeName());
+      log.error("No crawl rules found for plugin: " + makeName());
       return null;
     }
   }
@@ -162,23 +167,27 @@ public class ConfigurableArchivalUnit
         window = ccw.makeCrawlWindow();
       }
       catch (Exception ex) {
+        throw new ConfigurablePlugin.InvalidDefinitionException(
+       auName + " failed to create crawl window from " + window_class, ex);
       }
     }
     return window;
   }
 
-  public FilterRule getFilterRule(String mimeType) {
+  protected FilterRule constructFilterRule(String mimeType) {
     String filter = configurationMap.getString(mimeType, null);
     if (filter != null) {
       try {
         return (FilterRule) Class.forName(filter).newInstance();
       }
       catch (Exception ex) {
-        return null;
+        throw new ConfigurablePlugin.InvalidDefinitionException(
+       auName + " failed to create filter rule from " + filter, ex);
+
       }
     }
 
-    return super.getFilterRule(mimeType);
+    return super.constructFilterRule(mimeType);
   }
 
 // ---------------------------------------------------------------------
@@ -247,10 +256,6 @@ public class ConfigurableArchivalUnit
       return new CrawlRules.RE(rule, value);
     }
     return null;
-  }
-
-  protected void initAuKeys() {
-    // does nothing
   }
 
   public interface ConfigurableCrawlWindow {

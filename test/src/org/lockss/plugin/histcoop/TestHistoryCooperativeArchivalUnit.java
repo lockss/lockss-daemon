@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryCooperativeArchivalUnit.java,v 1.4 2004-02-12 03:57:54 clairegriffin Exp $
+ * $Id: TestHistoryCooperativeArchivalUnit.java,v 1.5 2004-02-17 21:46:09 clairegriffin Exp $
  */
 
 /*
@@ -66,7 +66,7 @@ public class TestHistoryCooperativeArchivalUnit extends LockssTestCase {
   }
 
   private ConfigurableArchivalUnit makeAu(URL url, int volume, String journalDir)
-      throws ArchivalUnit.ConfigurationException {
+      throws Exception {
     Properties props = new Properties();
     props.setProperty(HistoryCooperativePlugin.AUPARAM_VOL, Integer.toString(volume));
     if (url!=null) {
