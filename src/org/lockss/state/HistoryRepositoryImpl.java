@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.55 2004-09-27 22:39:06 smorabito Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.56 2004-10-06 04:47:17 tlipkis Exp $
  */
 
 /*
@@ -99,13 +99,9 @@ public class HistoryRepositoryImpl
 
   public void startService() {
     super.startService();
-//     if (rootLocation==null) {
-//       String msg = PARAM_HISTORY_LOCATION + " not configured";
-//       logger.error(msg);
-//       throw new LockssAppException(msg);
-//     }
     // check if file updates are needed
-    checkFileChange();
+    // Disabled 10/5/04, may be needed again
+    //    checkFileChange();
   }
 
   public void stopService() {
@@ -399,6 +395,9 @@ public class HistoryRepositoryImpl
    * converts from 'au_state.xml' to '#au_state.xml', and similarly with
    * the other state files.
    */
+  // XXX This is now here as a model for possible future conversions
+  // XXX This version has the problem that if the au_state file doesn't
+  // exist under either name, the recursion happens at every startup.
   void checkFileChange() {
     if ((theDaemon==null) || (theDaemon.getPluginManager()==null)) {
       // abort if null, for test code
