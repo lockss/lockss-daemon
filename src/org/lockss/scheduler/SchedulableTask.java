@@ -1,5 +1,5 @@
 /*
- * $Id: SchedulableTask.java,v 1.4 2003-12-10 18:38:14 tlipkis Exp $
+ * $Id: SchedulableTask.java,v 1.5 2003-12-12 00:56:59 tlipkis Exp $
  */
 
 /*
@@ -136,7 +136,7 @@ public class SchedulableTask implements Serializable, Cloneable {
     return finishDate != null;
   }
 
-  public void setFinished() {
+  void setFinished() {
     finishDate = TimeBase.nowDate();
   }
 
@@ -160,7 +160,7 @@ public class SchedulableTask implements Serializable, Cloneable {
     return hasBeenNotified;
   }
 
-  public void setNotified() {
+  void setNotified() {
     hasBeenNotified = true;;
   }
 
@@ -168,7 +168,7 @@ public class SchedulableTask implements Serializable, Cloneable {
     return hasStarted;
   }
 
-  public void setStarted() {
+  void setStarted() {
     hasStarted = true;;
   }
 
@@ -203,7 +203,7 @@ public class SchedulableTask implements Serializable, Cloneable {
 	    // tk - This is still not sufficient, as java doesn't guarantee
 	    // that different objects have different hash codes.  As
 	    // currently used these will always have a schedSeq by the time
-	    // they're put in a TreeSet, but this needs a real solutionB
+	    // they're put in a TreeSet, but this needs a real solution
 	    res = System.identityHashCode(t2) - System.identityHashCode(t1);
 	  }
 	}

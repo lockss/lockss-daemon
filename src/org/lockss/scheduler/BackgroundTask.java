@@ -1,5 +1,5 @@
 /*
- * $Id: BackgroundTask.java,v 1.4 2003-11-20 01:08:16 tlipkis Exp $
+ * $Id: BackgroundTask.java,v 1.5 2003-12-12 00:56:59 tlipkis Exp $
  */
 
 /*
@@ -38,7 +38,10 @@ import org.lockss.util.*;
 /** Description of a background task that reduces the CPU time available to
  * a foreground (stepped) task. */
 public class BackgroundTask extends SchedulableTask {
+  public static final int LOAD_MULTIPLIER = 1000;
+
   final double loadFactor;
+//   final int loadFactor0;
   final TaskCallback callback;
   TaskRunner runner = null;
 
@@ -75,6 +78,12 @@ public class BackgroundTask extends SchedulableTask {
   public void taskIsFinished() {
     if (runner != null) {
       runner.backgroundTaskIsFinished(this);
+    }
+  }
+
+  public void cancel() {
+    if (runner != null) {
+      runner.cancelTask(this);
     }
   }
 
