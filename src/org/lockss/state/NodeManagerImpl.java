@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.27 2003-02-13 02:18:13 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.28 2003-02-13 06:28:52 claire Exp $
  */
 
 /*
@@ -132,7 +132,8 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
 
   public void startPoll(CachedUrlSet cus, Poll.VoteTally state) {
     NodeState nodeState = getNodeState(cus);
-    PollState pollState = new PollState(state.getType(), state.getRegExp(),
+    PollState pollState = new PollState(state.getType(), state.getLwrBound(),
+                                        state.getUprBound(),
                                         PollState.RUNNING, state.getStartTime(),
                                         null);
     ((NodeStateImpl)nodeState).addPollState(pollState);
@@ -480,7 +481,7 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
         } else {
           // if not found locally, fetch
           try {
-            CachedUrlSet newCus = au.makeCachedUrlSet(url, null);
+            CachedUrlSet newCus = au.makeCachedUrlSet(url, null, null);
             markNodeForRepair(newCus, results);
             //add to NodeState list
             addNewNodeState(newCus);
@@ -495,7 +496,7 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
         // for extra items - deletion
         String url = (String)localIt.next();
         try {
-          CachedUrlSet oldCus = au.makeCachedUrlSet(url, null);
+          CachedUrlSet oldCus = au.makeCachedUrlSet(url, null, null);
           deleteNode(oldCus);
           //set crawl status to DELETED
           NodeState oldState = getNodeState(oldCus);
@@ -513,7 +514,7 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
 
   private void callNamePoll(CachedUrlSet cus) {
     try {
-      theDaemon.getPollManager().requestPoll(cus, null,
+      theDaemon.getPollManager().requestPoll(cus, null, null,
           LcapMessage.NAME_POLL_REQ);
     } catch (IOException ioe) {
       logger.error("Couldn't make name poll request.", ioe);
@@ -532,7 +533,8 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
     Iterator polls = state.getActivePolls();
     while (polls.hasNext()) {
       PollState pollState = (PollState)polls.next();
-      if ((pollState.getRegExp() == results.getRegExp()) &&
+      if ((pollState.getLwrBound() == results.getLwrBound()) &&
+          (pollState.getUprBound() == results.getUprBound()) &&
           (pollState.getType() == results.getType())) {
         return pollState;
       }
@@ -576,7 +578,7 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
     Iterator children = state.getCachedUrlSet().flatSetIterator();
     while (children.hasNext()) {
       CachedUrlSet child = (CachedUrlSet)children.next();
-      theDaemon.getPollManager().requestPoll(child, null,
+      theDaemon.getPollManager().requestPoll(child, null, null,
           LcapMessage.CONTENT_POLL_REQ);
     }
   }

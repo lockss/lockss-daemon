@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapMessage.java,v 1.9 2003-02-07 08:36:27 claire Exp $
+ * $Id: TestLcapMessage.java,v 1.10 2003-02-13 06:28:52 claire Exp $
  */
 
 /*
@@ -46,10 +46,12 @@ import gnu.regexp.*;
 public class TestLcapMessage extends TestCase {
 
   private static String urlstr = "http://www.test.org";
-  private static String regexp = "^.*\\.doc";
   private static byte[] testbytes = {1,2,3,4,5,6,7,8,9,10};
+  private static String lwrbnd = "test1.doc";
+  private static String uprbnd = "test3.doc";
   private static String[] testentries = {"test1.doc",
-                                         "test2.doc", "test3.doc"};
+                                         "test2.doc",
+                                         "test3.doc"};
 
   private static MockLockssDaemon daemon = new MockLockssDaemon(null);
   private IdentityManager idmgr = daemon.getIdentityManager();
@@ -79,7 +81,8 @@ public class TestLcapMessage extends TestCase {
     }
     // assign the data
     testmsg.m_targetUrl = urlstr;
-    testmsg.m_regExp = regexp;
+    testmsg.m_lwrBound = lwrbnd;
+    testmsg.m_uprBound = uprbnd;
     testID = new LcapIdentity(testaddr);
 
     testmsg.m_originID = new LcapIdentity(testaddr);
@@ -143,7 +146,8 @@ public class TestLcapMessage extends TestCase {
     LcapMessage req_msg = null;
     try {
       req_msg = LcapMessage.makeRequestMsg(urlstr,
-                                           regexp,
+                                           lwrbnd,
+                                           uprbnd,
                                            testentries,
                                            testbytes,
                                            testbytes,
@@ -161,28 +165,14 @@ public class TestLcapMessage extends TestCase {
     assertEquals(req_msg.m_pluginID, pluginID);
     assertTrue(Arrays.equals(req_msg.m_challenge,testbytes));
     assertTrue(Arrays.equals(req_msg.m_verifier,testbytes));
-    assertTrue(Arrays.equals(req_msg.m_hashed,new byte[0]));
+    assertEquals(null,req_msg.m_hashed);
     assertTrue(Arrays.equals(req_msg.m_entries,testentries));
+    assertEquals(req_msg.m_lwrBound, lwrbnd);
+    assertEquals(req_msg.m_uprBound, uprbnd);
 
   }
 
   public void testSetRERemaining() {
-    testmsg.setRERemaining(1);
-    StringBuffer strbuf = new StringBuffer();
-    for(int i = 0; i< testentries.length; i++) {
-      strbuf.append(testentries[i]);
-    }
-    String expected = testentries[1] + ".*" + testentries[testentries.length-1];
-    assertEquals(expected,testmsg.m_RERemaining);
-    try {
-      RE testRE = new RE(testmsg.m_RERemaining);
-      REMatch match = testRE.getMatch(strbuf.toString());
-      expected = testentries[1]  + testentries[2];
-      assertEquals(expected, match.toString());
-    }
-    catch (REException ex) {
-      fail("Invalid RE: " + testmsg.m_RERemaining);
-    }
 
   }
 
@@ -210,6 +200,8 @@ public class TestLcapMessage extends TestCase {
       assertTrue(Arrays.equals(msg.m_verifier,testbytes));
       assertTrue(Arrays.equals(msg.m_hashed,testbytes));
       assertTrue(Arrays.equals(msg.m_entries,testentries));
+      assertEquals(msg.m_lwrBound, lwrbnd);
+      assertEquals(msg.m_uprBound, uprbnd);
     }
     catch (IOException ex) {
       fail("message decode failed");
@@ -218,6 +210,8 @@ public class TestLcapMessage extends TestCase {
 
   public void testMessageEncodingHandlesNullEntries() throws IOException {
     testmsg.m_entries = null;
+    testmsg.m_lwrBound = null;
+    testmsg.m_uprBound = null;
     testmsg.encodeMsg();
 
   }

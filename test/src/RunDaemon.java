@@ -1,5 +1,5 @@
 /*
- * $Id: RunDaemon.java,v 1.16 2003-02-06 05:16:07 claire Exp $
+ * $Id: RunDaemon.java,v 1.17 2003-02-13 06:28:52 claire Exp $
  */
 
 /*
@@ -112,8 +112,8 @@ public class RunDaemon {
 	Thread.currentThread().sleep(1000);
         String url = "http://www.example.com/";
         ArchivalUnit au = daemon.getPluginManager().findArchivalUnit(url);
-        CachedUrlSet cus = au.makeCachedUrlSet(url, null);
-	pollManager.requestPoll(cus, null, poll_type);
+        CachedUrlSet cus = au.makeCachedUrlSet(url, null, null);
+	pollManager.requestPoll(cus, null, null, poll_type);
       } catch (Exception e) {
 	e.printStackTrace();
       }

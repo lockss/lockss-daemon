@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.5 2003-02-06 05:16:07 claire Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.6 2003-02-13 06:28:52 claire Exp $
  */
 
 /*
@@ -109,7 +109,8 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
     PollHistoryBean expect1 = (PollHistoryBean)histories.get(0);
     PollHistoryBean elem1 = (PollHistoryBean)loadedHistory.get(0);
     assertEquals(expect1.type, elem1.type);
-    assertEquals(expect1.regExp, elem1.regExp);
+    assertEquals(expect1.lwrBound, elem1.lwrBound);
+    assertEquals(expect1.uprBound, elem1.uprBound);
     assertEquals(expect1.status, elem1.status);
     assertEquals(expect1.startTime, elem1.startTime);
     assertEquals(expect1.duration, elem1.duration);
@@ -143,7 +144,7 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
   }
 
   private PollHistoryBean createPollHistoryBean(int voteCount) {
-    PollState state = new PollState(1, "none", 2, 5, null);
+    PollState state = new PollState(1, "lwr", "upr", 2, 5, null);
     List votes = new ArrayList(voteCount);
     for (int ii=0; ii<voteCount; ii++) {
       VoteBean bean = new VoteBean();
@@ -166,7 +167,7 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
     throws IOException {
     String s = HistoryRepositoryImpl.PARAM_HISTORY_LOCATION + "=" + rootLocation;
     String s2 = HistoryRepositoryImpl.PARAM_MAPPING_FILE_LOCATION +
-                "=src/org/lockss/state/pollmapping.xml";
+               "=src/org/lockss/state/pollmapping.xml";
     TestConfiguration.setCurrentConfigFromUrlList(ListUtil.list(FileUtil.urlOfString(s),
         FileUtil.urlOfString(s2)));
   }

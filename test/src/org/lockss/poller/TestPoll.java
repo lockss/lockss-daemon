@@ -16,14 +16,19 @@ import org.lockss.test.FileUtil;
 import org.lockss.test.*;
 
 /** JUnitTest case for class: org.lockss.poller.Poll */
-public class TestPoll extends TestCase {
-  private static String[] rooturls = {"http://www.test.org",
-    "http://www.test1.org", "http://www.test2.org"};
-  private static String regexp = "^.*\\.doc";
-  private static long testduration = 60 * 60 *60 *1000; /* 60 min */
+public class TestPoll
+    extends TestCase {
+  private static String[] rooturls = {
+      "http://www.test.org",
+      "http://www.test1.org", "http://www.test2.org"};
+  private static String lwrbnd = "test1.doc";
+  private static String uprbnd = "test3.doc";
+  private static long testduration = 60 * 60 * 60 * 1000; /* 60 min */
 
-  private static String[] testentries = {"test1.doc", "test2.doc", "test3.doc"};
-  private static String[] testentries1 = {"test1.doc", "test3.doc", "test4.doc"};
+  private static String[] testentries = {
+      "test1.doc", "test2.doc", "test3.doc"};
+  private static String[] testentries1 = {
+      "test1.doc", "test3.doc", "test4.doc"};
   protected static ArchivalUnit testau;
   private static IdentityManager idmgr;
   private static MockLockssDaemon daemon = new MockLockssDaemon(null);
@@ -41,7 +46,6 @@ public class TestPoll extends TestCase {
   protected LcapMessage[] testmsg;
   protected Poll[] testpolls;
   static protected PollManager pollmanager = daemon.getPollManager();
-
 
   public TestPoll(String _name) {
     super(_name);
@@ -65,17 +69,18 @@ public class TestPoll extends TestCase {
     try {
       testmsg = new LcapMessage[3];
 
-      for(int i= 0; i<3; i++) {
-        testmsg[i] =  LcapMessage.makeRequestMsg(
-        rooturls[i],
-        regexp,
-        testentries,
-        pollmanager.generateRandomBytes(),
-        pollmanager.generateRandomBytes(),
-        LcapMessage.NAME_POLL_REQ + (i * 2),
-        testduration,
-        testID,
-        testau.getPluginId());
+      for (int i = 0; i < 3; i++) {
+        testmsg[i] = LcapMessage.makeRequestMsg(
+            rooturls[i],
+            lwrbnd,
+            uprbnd,
+            testentries,
+            pollmanager.generateRandomBytes(),
+            pollmanager.generateRandomBytes(),
+            LcapMessage.NAME_POLL_REQ + (i * 2),
+            testduration,
+            testID,
+            testau.getPluginId());
       }
     }
     catch (IOException ex) {
@@ -84,7 +89,7 @@ public class TestPoll extends TestCase {
 
     try {
       testpolls = new Poll[3];
-      for(int i=0; i< 3; i++) {
+      for (int i = 0; i < 3; i++) {
         testpolls[i] = pollmanager.makePoll(testmsg[i]);
       }
     }
@@ -98,12 +103,11 @@ public class TestPoll extends TestCase {
    */
   protected void tearDown() throws Exception {
     daemon.getHashService().stopService();
-    for(int i= 0; i< 3; i++) {
+    for (int i = 0; i < 3; i++) {
       pollmanager.removePoll(testpolls[i].m_key);
     }
     super.tearDown();
   }
-
 
   /** test for method scheduleVote(..) */
   public void testScheduleVote() {
@@ -116,44 +120,61 @@ public class TestPoll extends TestCase {
 
   /** test for method checkVote(..) */
   public void testCheckVote() {
-    Poll p = testpolls[0];
-    LcapMessage msg = p.getMessage();
+    LcapMessage msg = null;
+    try {
+      msg = LcapMessage.makeReplyMsg(
+          testpolls[0].getMessage(),
+          pollmanager.generateRandomBytes(),
+          pollmanager.generateRandomBytes(),
+          null,
+          LcapMessage.NAME_POLL_REP,
+          testduration,
+          testID);
+    }
+    catch (IOException ex1) {
+    }
+    Poll p = null;
+    try {
+      p = createCompletedPoll(msg, 8,2);
+    }
+    catch (Exception ex2) {
+    }
     LcapIdentity id = msg.getOriginID();
-    int rep = id.getReputation();
+
+    int rep = p.m_tally.wtAgree + id.getReputation();
 
     // good vote check
     try {
       p.checkVote(msg.getHashed(), new Vote(msg, false));
     }
-    catch(IllegalStateException ex) {
+    catch (IllegalStateException ex) {
       // unitialized comm
     }
 
-    assertEquals(1, p.m_tally.numAgree);
+    assertEquals(9, p.m_tally.numAgree);
+    assertEquals(2, p.m_tally.numDisagree);
     assertEquals(rep, p.m_tally.wtAgree);
-    assertTrue(rep <= id.getReputation());
 
-    rep = id.getReputation();
+    rep = p.m_tally.wtDisagree + id.getReputation();
     // bad vote check
     try {
       p.checkVote(pollmanager.generateRandomBytes(), new Vote(msg, false));
     }
-    catch(IllegalStateException ex) {
+    catch (IllegalStateException ex) {
       // unitialized comm
     }
-    assertEquals(1, p.m_tally.numDisagree);
+    assertEquals(9, p.m_tally.numAgree);
+    assertEquals(3, p.m_tally.numDisagree);
     assertEquals(rep, p.m_tally.wtDisagree);
-    assertTrue(rep >= id.getReputation());
   }
-
 
   /** test for method tally(..) */
   public void testTally() {
     Poll p = testpolls[0];
     LcapMessage msg = p.getMessage();
-    p.m_tally.addVote(new Vote(msg,false));
-    p.m_tally.addVote(new Vote(msg,false));
-    p.m_tally.addVote(new Vote(msg,false));
+    p.m_tally.addVote(new Vote(msg, false));
+    p.m_tally.addVote(new Vote(msg, false));
+    p.m_tally.addVote(new Vote(msg, false));
     assertEquals(0, p.m_tally.numAgree);
     assertEquals(0, p.m_tally.wtAgree);
     assertEquals(3, p.m_tally.numDisagree);
@@ -161,9 +182,9 @@ public class TestPoll extends TestCase {
 
     p = testpolls[1];
     msg = p.getMessage();
-    p.m_tally.addVote(new Vote(msg,true));
-    p.m_tally.addVote(new Vote(msg,true));
-    p.m_tally.addVote(new Vote(msg,true));
+    p.m_tally.addVote(new Vote(msg, true));
+    p.m_tally.addVote(new Vote(msg, true));
+    p.m_tally.addVote(new Vote(msg, true));
     assertEquals(3, p.m_tally.numAgree);
     assertEquals(1500, p.m_tally.wtAgree);
     assertEquals(0, p.m_tally.numDisagree);
@@ -171,7 +192,7 @@ public class TestPoll extends TestCase {
   }
 
   public void testNamePollTally() {
-    NamePoll np = (NamePoll)testpolls[0];
+    NamePoll np = (NamePoll) testpolls[0];
     LcapMessage agree_msg = np.getMessage();
     LcapMessage disagree_msg = null;
 
@@ -179,15 +200,17 @@ public class TestPoll extends TestCase {
     np.m_tally.addVote(np.makeVote(np.getMessage(), true));
 
     try {
-      agree_msg = LcapMessage.makeReplyMsg(agree_msg,agree_msg.getHashed(),
-          agree_msg.getVerifier(), testentries,LcapMessage.NAME_POLL_REP,
-          testduration, testID);
+      agree_msg = LcapMessage.makeReplyMsg(agree_msg, agree_msg.getHashed(),
+                                           agree_msg.getVerifier(), testentries,
+                                           LcapMessage.NAME_POLL_REP,
+                                           testduration, testID);
 
       disagree_msg = LcapMessage.makeReplyMsg(agree_msg,
-          pollmanager.generateRandomBytes(),
-          pollmanager.generateRandomBytes(),
-           testentries1, LcapMessage.NAME_POLL_REP,
-          testduration, testID1);
+                                              pollmanager.generateRandomBytes(),
+                                              pollmanager.generateRandomBytes(),
+                                              testentries1,
+                                              LcapMessage.NAME_POLL_REP,
+                                              testduration, testID1);
     }
     catch (IOException ex) {
       fail("unable to generate a name poll reply");
@@ -196,19 +219,18 @@ public class TestPoll extends TestCase {
     np.m_tally.addVote(np.makeVote(agree_msg, true));
 
     np.m_tally.addVote(np.makeVote(disagree_msg, false));
-    np.m_tally.addVote(np.makeVote(disagree_msg,false));
     np.m_tally.addVote(np.makeVote(disagree_msg, false));
-    np.m_tally.addVote(np.makeVote(disagree_msg,false));
+    np.m_tally.addVote(np.makeVote(disagree_msg, false));
+    np.m_tally.addVote(np.makeVote(disagree_msg, false));
 
     assertEquals(3, np.m_tally.numAgree);
     assertEquals(4, np.m_tally.numDisagree);
     assertTrue(!np.m_tally.didWinPoll());
     np.buildPollLists(np.m_tally.pollVotes.iterator());
     assertTrue(!Arrays.equals(np.m_tally.localEntries, np.m_tally.votedEntries));
-    assertTrue(Arrays.equals(testentries1,np.m_tally.votedEntries));
+    assertTrue(Arrays.equals(testentries1, np.m_tally.votedEntries));
 
   }
-
 
   /** test for method vote(..) */
   public void testVote() {
@@ -217,11 +239,10 @@ public class TestPoll extends TestCase {
     try {
       p.vote();
     }
-    catch(IllegalStateException e) {
+    catch (IllegalStateException e) {
       // the socket isn't inited and should squack
     }
   }
-
 
   /** test for method voteInPoll(..) */
   public void testVoteInPoll() {
@@ -235,7 +256,7 @@ public class TestPoll extends TestCase {
     try {
       p.voteInPoll();
     }
-    catch(IllegalStateException e) {
+    catch (IllegalStateException e) {
       // the socket isn't inited and should squack
     }
 
@@ -243,7 +264,7 @@ public class TestPoll extends TestCase {
     try {
       p.voteInPoll();
     }
-    catch(NullPointerException npe) {
+    catch (NullPointerException npe) {
       // the socket isn't inited and should squack
     }
 
@@ -278,20 +299,23 @@ public class TestPoll extends TestCase {
     assertEquals(2, p.m_pendingVotes);
   }
 
-
   public static Poll createCompletedPoll(LcapMessage testmsg, int numAgree,
-                                int numDisagree) throws Exception {
+                                         int numDisagree) throws Exception {
     testau = PollTestPlugin.PTArchivalUnit.createFromListOfRootUrls(rooturls);
     daemon.getPluginManager().registerArchivalUnit(testau);
-    CachedUrlSet cus = testau.makeCachedUrlSet(testmsg.getTargetUrl(), testmsg.getRegExp());
+    CachedUrlSet cus = testau.makeCachedUrlSet(testmsg.getTargetUrl(),
+                                               testmsg.getLwrBound(),
+                                               testmsg.getUprBound());
     Poll p = daemon.getPollManager().createPoll(testmsg, cus);
     p.m_tally.quorum = numAgree + numDisagree;
     p.m_tally.numAgree = numAgree;
     p.m_tally.numDisagree = numDisagree;
     p.m_tally.wtAgree = 2000;
     p.m_tally.wtDisagree = 200;
-    p.m_tally.localEntries = new String[] { "entry 1", "entry 2", "entry 5" };
-    p.m_tally.votedEntries = new String[] { "entry 1", "entry 3", "entry 4", "entry 5"};
+    p.m_tally.localEntries = new String[] {
+        "entry 1", "entry 2", "entry 5"};
+    p.m_tally.votedEntries = new String[] {
+        "entry 1", "entry 3", "entry 4", "entry 5"};
     p.m_pollstate = Poll.PS_COMPLETE;
     return p;
   }
@@ -300,7 +324,8 @@ public class TestPoll extends TestCase {
    * @param argv array of Strings containing command line arguments
    * */
   public static void main(String[] argv) {
-    String[] testCaseList = {TestPoll.class.getName()};
+    String[] testCaseList = {
+        TestPoll.class.getName()};
     junit.swingui.TestRunner.main(testCaseList);
   }
 }

@@ -53,87 +53,87 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
   }
 
   public void testGetVolumeNum() {
-    
+
   }
 
   public void testConstructNullUrl() throws REException {
     try {
       new HighWireArchivalUnit(null, 1);
       fail("Should have thrown IllegalArgumentException");
-    } catch(IllegalArgumentException iae) { 
+    } catch(IllegalArgumentException iae) {
     }
   }
 
-  public void testConstructNegativeVolume() 
+  public void testConstructNegativeVolume()
       throws REException, MalformedURLException {
     URL url = new URL("http://www.example.com/");
     try {
       new HighWireArchivalUnit(url, -1);
       fail("Should have thrown IllegalArgumentException");
-    } catch(IllegalArgumentException iae) { 
+    } catch(IllegalArgumentException iae) {
     }
   }
 
-  
-  public void testShouldCacheRootPage() 
+
+  public void testShouldCacheRootPage()
       throws REException, MalformedURLException {
     URL base = new URL("http://shadow1.stanford.edu/");
     int volume = 322;
     ArchivalUnit hwAu = new HighWireArchivalUnit(base, volume);
-    CachedUrlSetSpec spec = new RECachedUrlSetSpec(base.toString());
+    CachedUrlSetSpec spec = new RangeCachedUrlSetSpec(base.toString());
     GenericFileCachedUrlSet cus = new GenericFileCachedUrlSet(hwAu, spec);
     UrlCacher uc =
       cus.makeUrlCacher("http://shadow1.stanford.edu/lockss-volume322.shtml");
     assertTrue(uc.shouldBeCached());
   }
 
-  public void testShouldNotCachePageFromOtherSite() 
+  public void testShouldNotCachePageFromOtherSite()
       throws REException, MalformedURLException {
     URL base = new URL("http://shadow1.stanford.edu/");
     int volume = 322;
     ArchivalUnit hwAu = new HighWireArchivalUnit(base, volume);
-    CachedUrlSetSpec spec = new RECachedUrlSetSpec(base.toString());
+    CachedUrlSetSpec spec = new RangeCachedUrlSetSpec(base.toString());
     GenericFileCachedUrlSet cus = new GenericFileCachedUrlSet(hwAu, spec);
     UrlCacher uc =
       cus.makeUrlCacher("http://shadow2.stanford.edu/lockss-volume322.shtml");
     assertTrue(!uc.shouldBeCached());
   }
 
-  public void testPathInUrlThrowsException() 
+  public void testPathInUrlThrowsException()
       throws REException, MalformedURLException {
     URL url = new URL("http://www.example.com/path");
     try {
       new HighWireArchivalUnit(url, 10);
       fail("Should have thrown IllegalArgumentException");
-    } catch(IllegalArgumentException iae) { 
+    } catch(IllegalArgumentException iae) {
     }
   }
-  
-  public void testShouldDoNewContentCrawlTooEarly() 
+
+  public void testShouldDoNewContentCrawlTooEarly()
       throws REException, MalformedURLException {
-    ArchivalUnit hwAu = 
+    ArchivalUnit hwAu =
       new HighWireArchivalUnit(new URL("http://shadow1.stanford.edu/"), 322);
-    
+
     AuState aus = new MockAuState(null, TimeBase.nowMs());
 
     assertTrue(!hwAu.shouldCrawlForNewContent(aus));
   }
 
-  public void testShouldDoNewContentCrawlFor0() 
+  public void testShouldDoNewContentCrawlFor0()
       throws REException, MalformedURLException {
-    ArchivalUnit hwAu = 
+    ArchivalUnit hwAu =
       new HighWireArchivalUnit(new URL("http://shadow1.stanford.edu/"), 322);
-    
+
     AuState aus = new MockAuState(null, 0);
 
     assertTrue(hwAu.shouldCrawlForNewContent(aus));
   }
 
-  public void testShouldDoNewContentCrawlEachMonth() 
+  public void testShouldDoNewContentCrawlEachMonth()
       throws REException, MalformedURLException {
-    ArchivalUnit hwAu = 
+    ArchivalUnit hwAu =
       new HighWireArchivalUnit(new URL("http://shadow1.stanford.edu/"), 322);
-    
+
     AuState aus = new MockAuState(null, 4 * WEEK_MS);
 
     assertTrue(hwAu.shouldCrawlForNewContent(aus));

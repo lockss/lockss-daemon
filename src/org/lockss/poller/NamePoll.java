@@ -1,5 +1,5 @@
 /*
-* $Id: NamePoll.java,v 1.30 2003-02-11 23:57:01 claire Exp $
+* $Id: NamePoll.java,v 1.31 2003-02-13 06:28:51 claire Exp $
  */
 
 /*
@@ -165,9 +165,13 @@ public class NamePoll extends Poll {
     if(m_entries == null) {
       Iterator it = m_urlSet.flatSetIterator();
       ArrayList alist = new ArrayList();
+      String baseUrl = m_urlSet.getSpec().getPrimaryUrl();
       while(it.hasNext()) {
         CachedUrlSet cus = (CachedUrlSet) it.next();
         String name = (String)cus.getPrimaryUrl();
+        if(name.startsWith(baseUrl)) {
+          name = name.substring(name.length());
+        }
         alist.add(name);
       }
        m_entries = (String[])alist.toArray(new String[alist.size()]);
@@ -213,34 +217,29 @@ public class NamePoll extends Poll {
 
     if(winningCounter != null) {
       m_tally.votedEntries = winningCounter.getKnownEntries();
-      String remainingRE = winningCounter.getRERemainingEntries();
-      if(remainingRE != null) {
+      String lwrRem = winningCounter.getLwrRemaining();
+      String uprRem = winningCounter.getUprRemaining();
+
+      if(lwrRem != null) {
         // we call a new poll on the remaining entries and set the regexp
         try {
-          m_pollmanager.requestPoll(m_urlSet, remainingRE,
+          m_pollmanager.requestPoll(m_urlSet, lwrRem, uprRem,
                                     LcapMessage.NAME_POLL_REQ);
         }
         catch (IOException ex) {
           log.error("Unable to create new poll request", ex);
         }
         // we make our list from whatever is in our
-        // master list that doesn't match the re remaining;
+        // master list that doesn't match the remainder;
         HashSet localSet = new HashSet();
         Iterator localIt = new ArrayIterator(getEntries());
-        try {
-          RE re = new RE(remainingRE);
-          while(localIt.hasNext()) {
-            String url = (String) localIt.next();
-            // if doesn't match our regexp add it to the list
-            if(null == re.getMatch(url)) {
-              localSet.add(url);
-            }
+        while (localIt.hasNext()) {
+          String url = (String) localIt.next();
+          if (url.compareTo(lwrRem) < 0 || url.compareTo(uprRem) > 0) {
+            localSet.add(url);
           }
-          m_tally.localEntries = (String[])localSet.toArray();
         }
-        catch (REException ex) {
-          log.error("invalid reg expression: " + remainingRE);
-        }
+        m_tally.localEntries = (String[]) localSet.toArray();
       }
     }
   }
@@ -251,32 +250,41 @@ public class NamePoll extends Poll {
 
   class NameVote extends Vote {
     private String[] knownEntries;
-    private String   RERemainingEntries;
+    private String   lwrRemaining;
+    private String   uprRemaining;
 
     NameVote(LcapMessage msg, boolean agree) {
       super(msg, agree);
       knownEntries = msg.getEntries();
-      RERemainingEntries = msg.getRERemaining();
+
+      lwrRemaining = msg.getLwrRemain();
+      uprRemaining = msg.getUprRemain();
     }
 
     String[] getKnownEntries() {
       return knownEntries;
     }
 
-    String getRERemainingEntries() {
-      return RERemainingEntries;
+    String getLwrRemaining() {
+      return lwrRemaining;
+    }
+
+    String getUprRemaining() {
+      return uprRemaining;
     }
   }
 
 
   static class NameVoteCounter {
     private String[] knownEntries;
-    private String   RERemainingEntries;
+    private String   lwrRemaining;
+    private String   uprRemaining;
     private int voteCount;
 
     NameVoteCounter(NameVote vote) {
       knownEntries = vote.getKnownEntries();
-      RERemainingEntries = vote.getRERemainingEntries();
+      lwrRemaining = vote.getLwrRemaining();
+      uprRemaining = vote.getUprRemaining();
       voteCount = 1;
     }
 
@@ -292,8 +300,12 @@ public class NamePoll extends Poll {
       return knownEntries;
     }
 
-    String getRERemainingEntries() {
-      return RERemainingEntries;
+    String getLwrRemaining() {
+      return lwrRemaining;
+    }
+
+    String getUprRemaining() {
+      return uprRemaining;
     }
 
     public boolean equals(Object obj) {

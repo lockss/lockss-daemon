@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericFileCachedUrlSet.java,v 1.12 2003-02-11 00:58:16 aalto Exp $
+ * $Id: TestGenericFileCachedUrlSet.java,v 1.13 2003-02-13 06:28:52 claire Exp $
  */
 
 /*
@@ -74,7 +74,7 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
                null, null);
 
     CachedUrlSetSpec rSpec =
-        new RECachedUrlSetSpec("http://www.example.com/testDir");
+        new RangeCachedUrlSetSpec("http://www.example.com/testDir");
     CachedUrlSet fileSet = mau.makeCachedUrlSet(rSpec);
     Iterator setIt = fileSet.flatSetIterator();
     ArrayList childL = new ArrayList(3);
@@ -101,7 +101,7 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
                "test stream", null);
 
     CachedUrlSetSpec rSpec =
-        new RECachedUrlSetSpec("http://www.example.com/testDir");
+        new RangeCachedUrlSetSpec("http://www.example.com/testDir");
     CachedUrlSet fileSet = mau.makeCachedUrlSet(rSpec);
     Iterator setIt = fileSet.leafIterator();
     ArrayList childL = new ArrayList(4);
@@ -131,7 +131,7 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
                "test stream", null);
 
     CachedUrlSetSpec rSpec =
-        new RECachedUrlSetSpec("http://www.example.com/testDir");
+        new RangeCachedUrlSetSpec("http://www.example.com/testDir");
     CachedUrlSet fileSet = mau.makeCachedUrlSet(rSpec);
     Iterator setIt = fileSet.leafIterator();
     ArrayList childL = new ArrayList(4);
@@ -160,7 +160,7 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
     createLeaf("http://www.example.com/testDir/leaf4", "test streamC", null);
 
     CachedUrlSetSpec rSpec =
-        new RECachedUrlSetSpec("http://www.example.com/testDir");
+        new RangeCachedUrlSetSpec("http://www.example.com/testDir");
     CachedUrlSet fileSet = mau.makeCachedUrlSet(rSpec);
     fileSet.leafIterator();
     assertEquals(4, ((GenericFileCachedUrlSet)fileSet).contentNodeCount);
@@ -175,7 +175,7 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
       createLeaf("http://www.example.com/testDir/leaf"+ii, testString, null);
     }
     CachedUrlSetSpec rSpec =
-        new RECachedUrlSetSpec("http://www.example.com/testDir");
+        new RangeCachedUrlSetSpec("http://www.example.com/testDir");
     CachedUrlSet fileSet = mau.makeCachedUrlSet(rSpec);
     long estimate = fileSet.estimatedHashDuration();
     assertTrue(estimate > 0);

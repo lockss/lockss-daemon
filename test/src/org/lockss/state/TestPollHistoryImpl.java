@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollHistoryImpl.java,v 1.1 2002-12-18 00:11:59 aalto Exp $
+ * $Id: TestPollHistoryImpl.java,v 1.2 2003-02-13 06:28:52 claire Exp $
  */
 
 /*
@@ -46,7 +46,7 @@ public class TestPollHistoryImpl extends LockssTestCase {
   }
 
   public void setUp() throws Exception {
-    PollState state = new PollState(1, "none", 1, 0, null);
+    PollState state = new PollState(1, "none", null, 1, 0, null);
     Collection votes = new ArrayList();
     votes.add(new String("test"));
     history = new PollHistory(state, 0, votes);
@@ -61,12 +61,18 @@ public class TestPollHistoryImpl extends LockssTestCase {
   }
 
   public void testCompareTo() {
-    PollState state = new PollState(1, "none", 1, 0, null);
-    PollState state2 = new PollState(2, "none2", 1, 0, null);
-    PollState state3 = new PollState(1, "non", 1, 0, null);
+    PollState state = new PollState(1, "none", null, 1, 0, null);
+    PollState state2 = new PollState(2, "none2", null, 1, 0, null);
+    PollState state3 = new PollState(1, "non", null, 1, 0, null);
     assertEquals(-1, state.compareTo(state2));
     assertEquals(0, history.compareTo(state));
     assertEquals(1, state.compareTo(state3));
+  }
+
+  public static void main(String[] argv) {
+    String[] testCaseList = {
+        TestPollHistoryImpl.class.getName()};
+    junit.swingui.TestRunner.main(testCaseList);
   }
 
 }

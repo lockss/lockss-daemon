@@ -21,7 +21,8 @@ public class TestIdentityManager extends TestCase {
   Object testIdKey;
   LcapMessage testMsg= null;
   private static String urlstr = "http://www.test.org";
-  private static String regexp = "*.doc";
+  private static String lwrbnd = "test1.doc";
+  private static String uprbnd = "test3.doc";
   private static byte[] testbytes = {1,2,3,4,5,6,7,8,9,10};
   private static String[] testentries = {"test1.doc",
                                          "test2.doc", "test3.doc"};
@@ -51,7 +52,8 @@ public class TestIdentityManager extends TestCase {
     testIdKey = LcapIdentity.makeIdKey(testAddress);
     try {
       testMsg = LcapMessage.makeRequestMsg(urlstr,
-                                           regexp,
+                                           lwrbnd,
+                                           uprbnd,
                                            testentries,
                                            testbytes,
                                            testbytes,

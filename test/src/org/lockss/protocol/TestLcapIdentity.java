@@ -20,7 +20,8 @@ public class TestLcapIdentity extends TestCase {
   Object testIdKey;
   LcapMessage testMsg= null;
   private static String urlstr = "http://www.test.org";
-  private static String regexp = "*.doc";
+  private static String lwrbnd = "test1.doc";
+  private static String uprbnd = "test3.doc";
   private static String pluginid = "testplugin 1.0";
   private static byte[] testbytes = {1,2,3,4,5,6,7,8,9,10};
   private static String[] testentries = {"test1.doc",
@@ -45,7 +46,8 @@ public class TestLcapIdentity extends TestCase {
     testIdKey = LcapIdentity.makeIdKey(testAddress);
     try {
       testMsg = LcapMessage.makeRequestMsg(urlstr,
-          regexp,
+          lwrbnd,
+          uprbnd,
           testentries,
           testbytes,
           testbytes,

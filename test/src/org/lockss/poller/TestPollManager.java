@@ -22,7 +22,8 @@ public class TestPollManager extends TestCase {
     "http://www.test2.org"};
 
   private static String urlstr = "http://www.test3.org";
-  private static String regexp = "^.*\\.doc";
+  private static String lwrbnd = "test1.doc";
+  private static String uprbnd = "test3.doc";
   private static long testduration = 60 * 60 *60 *1000; /* 60 min */
 
   private static String[] testentries = {"test1.doc", "test2.doc", "test3.doc"};
@@ -59,7 +60,8 @@ public class TestPollManager extends TestCase {
       for(int i= 0; i<3; i++) {
         testmsg[i] =  LcapMessage.makeRequestMsg(
           rooturls[i],
-          regexp,
+          lwrbnd,
+          uprbnd,
           testentries,
           pollmanager.generateRandomBytes(),
           pollmanager.generateRandomBytes(),
@@ -123,13 +125,8 @@ public class TestPollManager extends TestCase {
   public void testMakePollRequest() {
     try {
       CachedUrlSet cus = null;
-      try {
-        cus = testau.makeCachedUrlSet(rooturls[1], null);
-      }
-      catch (REException ex) {
-        // should never be thrown
-      }
-      pollmanager.requestPoll(cus,regexp,LcapMessage.VERIFY_POLL_REQ);
+      cus = testau.makeCachedUrlSet(rooturls[1], null, null);
+      pollmanager.requestPoll(cus, lwrbnd, uprbnd, LcapMessage.VERIFY_POLL_REQ);
     }
     catch (IllegalStateException e) {
       // ignore this for now
@@ -177,7 +174,8 @@ public class TestPollManager extends TestCase {
       for(int i= 0; i<3; i++) {
         sameroot[i] =  LcapMessage.makeRequestMsg(
           urlstr,
-          regexp,
+          lwrbnd,
+          uprbnd,
           testentries,
           pollmanager.generateRandomBytes(),
           pollmanager.generateRandomBytes(),
@@ -200,20 +198,20 @@ public class TestPollManager extends TestCase {
           makeCachedUrlSet(testmsg[1]));
       assertNull("different content poll s/b ok", cus);
 
-      // same content poll should be a conflict different entries no conflict
+      // same content poll same range s/b a conflict
       cus = pollmanager.checkForConflicts(sameroot[1],
           makeCachedUrlSet(sameroot[1]));
-      assertNull("same content poll root s/b conflict", cus);
+      assertNotNull("same content poll root s/b conflict", cus);
 
       // different name poll should be ok
       cus = pollmanager.checkForConflicts(testmsg[0],
           makeCachedUrlSet(testmsg[0]));
       assertNull("name poll with different root s/b ok", cus);
 
-      // same name poll different entries no conflict
+      // same name poll s/b conflict
       cus = pollmanager.checkForConflicts(sameroot[0],
           makeCachedUrlSet(sameroot[0]));
-      assertNull("same name poll root s/b conflict", cus);
+      assertNotNull("same name poll root s/b conflict", cus);
 
       // verify poll should be ok
       cus = pollmanager.checkForConflicts(testmsg[2],
@@ -307,7 +305,8 @@ public class TestPollManager extends TestCase {
 
     try {
       ArchivalUnit au = daemon.getPluginManager().findArchivalUnit(msg.getTargetUrl());
-      return au.makeCachedUrlSet(msg.getTargetUrl(), msg.getRegExp());
+      return au.makeCachedUrlSet(msg.getTargetUrl(), msg.getLwrBound(),
+                                 msg.getUprBound());
     }
     catch (Exception ex) {
       return null;

@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.16 2003-02-11 00:58:16 aalto Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.17 2003-02-13 06:28:52 claire Exp $
  */
 
 /*
@@ -171,20 +171,20 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
   }
 
   public void testCusCompare() throws Exception {
-    CachedUrlSetSpec spec1 = new RECachedUrlSetSpec("http://www.example.com/test");
-    CachedUrlSetSpec spec2 = new RECachedUrlSetSpec("http://www.example.com");
+    CachedUrlSetSpec spec1 = new RangeCachedUrlSetSpec("http://www.example.com/test");
+    CachedUrlSetSpec spec2 = new RangeCachedUrlSetSpec("http://www.example.com");
     MockCachedUrlSet cus1 = new MockCachedUrlSet(spec1);
     MockCachedUrlSet cus2 = new MockCachedUrlSet(spec2);
     assertEquals(LockssRepository.BELOW, repo.cusCompare(cus1, cus2));
 
-    spec1 = new RECachedUrlSetSpec("http://www.example.com/test");
-    spec2 = new RECachedUrlSetSpec("http://www.example.com/test/subdir");
+    spec1 = new RangeCachedUrlSetSpec("http://www.example.com/test");
+    spec2 = new RangeCachedUrlSetSpec("http://www.example.com/test/subdir");
     cus1 = new MockCachedUrlSet(spec1);
     cus2 = new MockCachedUrlSet(spec2);
     assertEquals(LockssRepository.ABOVE, repo.cusCompare(cus1, cus2));
 
-    spec1 = new RECachedUrlSetSpec("http://www.example.com/test");
-    spec2 = new RECachedUrlSetSpec("http://www.example.com/test/");
+    spec1 = new RangeCachedUrlSetSpec("http://www.example.com/test");
+    spec2 = new RangeCachedUrlSetSpec("http://www.example.com/test/");
     cus1 = new MockCachedUrlSet(spec1);
     cus2 = new MockCachedUrlSet(spec2);
     Vector v = new Vector(2);
@@ -200,8 +200,8 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     cus2.setFlatIterator(v2.iterator());
     assertEquals(LockssRepository.SAME_LEVEL_OVERLAP, repo.cusCompare(cus1, cus2));
 
-    spec1 = new RECachedUrlSetSpec("http://www.example.com/test/subdir2");
-    spec2 = new RECachedUrlSetSpec("http://www.example.com/subdir");
+    spec1 = new RangeCachedUrlSetSpec("http://www.example.com/test/subdir2");
+    spec2 = new RangeCachedUrlSetSpec("http://www.example.com/subdir");
     cus1 = new MockCachedUrlSet(spec1);
     cus2 = new MockCachedUrlSet(spec2);
     assertEquals(LockssRepository.NO_RELATION, repo.cusCompare(cus1, cus2));

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.9 2003-02-10 23:46:51 troberts Exp $
+ * $Id: BaseArchivalUnit.java,v 1.10 2003-02-13 06:28:51 claire Exp $
  */
 
 /*
@@ -123,14 +123,13 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   /**
    * Create a CachedUrlSet representing the content in this AU
    * that matches the url and regexp.
-   * @param url the string
-   * @param regexp the regexp
-   * @return the CachedUrlSet
-   * @throws REException
+   * @param url the url string
+   * @param lwrBound the lower boundary of our match range
+   * @param uprBound the upper boundary of our match range
+   * @return the newly created CachedUrlSet
    */
-  public CachedUrlSet makeCachedUrlSet(String url, String regexp)
-      throws REException {
-    return makeCachedUrlSet(new RECachedUrlSetSpec(url, regexp));
+  public CachedUrlSet makeCachedUrlSet(String url, String lwrBound, String uprBound) {
+    return makeCachedUrlSet(new RangeCachedUrlSetSpec(url, lwrBound, uprBound));
   }
 
   /**

@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.11 2003-02-10 23:46:51 troberts Exp $
+ * $Id: MockArchivalUnit.java,v 1.12 2003-02-13 06:28:52 claire Exp $
  */
 
 /*
@@ -104,12 +104,8 @@ public class MockArchivalUnit implements ArchivalUnit {
     return new MockCachedUrlSet(this, cuss);
   }
 
-  public CachedUrlSet makeCachedUrlSet(String url, String regexp) {
-    try {
-      return makeCachedUrlSet(new RECachedUrlSetSpec(url, regexp));
-    } catch (REException ex) {
-      return null;
-    }
+  public CachedUrlSet makeCachedUrlSet(String url, String lwrBound, String uprBound) {
+    return makeCachedUrlSet(new RangeCachedUrlSetSpec(url, lwrBound, uprBound));
   }
 
   public boolean shouldBeCached(String url) {

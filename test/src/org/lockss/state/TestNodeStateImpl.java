@@ -1,34 +1,28 @@
 /*
- * $Id: TestNodeStateImpl.java,v 1.3 2003-01-25 02:22:20 aalto Exp $
+ * $Id: TestNodeStateImpl.java,v 1.4 2003-02-13 06:28:52 claire Exp $
  */
 
 /*
-
-Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
-all rights reserved.
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
-STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
-IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-Except as contained in this notice, the name of Stanford University shall not
-be used in advertising or otherwise to promote the sale, use or other dealings
-in this Software without prior written authorization from Stanford University.
-
-*/
+ Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
+ all rights reserved.
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+ STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ Except as contained in this notice, the name of Stanford University shall not
+ be used in advertising or otherwise to promote the sale, use or other dealings
+ in this Software without prior written authorization from Stanford University.
+ */
 
 
 package org.lockss.state;
@@ -39,7 +33,8 @@ import org.lockss.test.*;
 import org.lockss.util.CollectionUtil;
 import java.io.*;
 
-public class TestNodeStateImpl extends LockssTestCase {
+public class TestNodeStateImpl
+    extends LockssTestCase {
   private NodeStateImpl state;
   private List polls;
 
@@ -57,9 +52,9 @@ public class TestNodeStateImpl extends LockssTestCase {
     MockCachedUrlSet mcus = new MockCachedUrlSet(mau, mspec);
 
     polls = new ArrayList(3);
-    polls.add(new PollState(1, "none1", 1, 0, null));
-    polls.add(new PollState(2, "none2", 1, 0, null));
-    polls.add(new PollState(3, "none3", 1, 0, null));
+    polls.add(new PollState(1, "lwr1", "upr1", 1, 0, null));
+    polls.add(new PollState(2, "lwr2", "upr3", 1, 0, null));
+    polls.add(new PollState(3, "lwr3", "upr3", 1, 0, null));
     state = new NodeStateImpl(mcus, null, polls,
                               new HistoryRepositoryImpl(tempDirPath));
   }
@@ -69,32 +64,35 @@ public class TestNodeStateImpl extends LockssTestCase {
     try {
       pollIter.remove();
       fail("Iterator should be immutable.");
-    } catch (Exception e) { }
+    }
+    catch (Exception e) {}
   }
 
   public void testGetPollHistories() {
     Iterator pollIt = state.getPollHistories();
     assertTrue(!pollIt.hasNext());
 
-    PollHistory history = new PollHistory(1, "test", 0, 0, 0, null);
+    PollHistory history = new PollHistory(1, "test1lwr", "test1upr", 0, 0, 0, null);
     state.pollHistories = new ArrayList(1);
     state.pollHistories.add(history);
     pollIt = state.getPollHistories();
     assertTrue(pollIt.hasNext());
-    history = (PollHistory)pollIt.next();
+    history = (PollHistory) pollIt.next();
     assertEquals(1, history.type);
-    assertEquals("test", history.regExp);
+    assertEquals("test1lwr", history.lwrBound);
+    assertEquals("test1upr", history.uprBound);
     assertTrue(!pollIt.hasNext());
 
-    history = new PollHistory(2, "test2", 0, 0, 0, null);
+    history = new PollHistory(2, "test2lwr", "test2upr", 0, 0, 0, null);
     state.pollHistories.add(history);
     pollIt = state.getPollHistories();
     assertTrue(pollIt.hasNext());
     pollIt.next();
     assertTrue(pollIt.hasNext());
-    history = (PollHistory)pollIt.next();
+    history = (PollHistory) pollIt.next();
     assertEquals(2, history.type);
-    assertEquals("test2", history.regExp);
+    assertEquals("test2lwr", history.lwrBound);
+    assertEquals("test2upr", history.uprBound);
     assertTrue(!pollIt.hasNext());
   }
 
@@ -102,20 +100,21 @@ public class TestNodeStateImpl extends LockssTestCase {
     Iterator pollIt = state.getPollHistories();
     assertTrue(!pollIt.hasNext());
 
-    PollHistory history = new PollHistory(1, "none1", 0, 0, 0, null);
+    PollHistory history = new PollHistory(1, "lwr1", "upr1", 0, 0, 0, null);
     state.closeActivePoll(history);
 
     pollIt = state.getActivePolls();
     while (pollIt.hasNext()) {
-      PollState pollState = (PollState)pollIt.next();
+      PollState pollState = (PollState) pollIt.next();
       assertTrue(!pollState.equals(history));
     }
 
     pollIt = state.getPollHistories();
     assertTrue(pollIt.hasNext());
-    history = (PollHistory)pollIt.next();
+    history = (PollHistory) pollIt.next();
     assertEquals(1, history.type);
-    assertEquals("none1", history.regExp);
+    assertEquals("lwr1", history.lwrBound);
+    assertEquals("upr1", history.uprBound);
     assertTrue(!pollIt.hasNext());
   }
 
@@ -127,7 +126,7 @@ public class TestNodeStateImpl extends LockssTestCase {
   }
 
   public void testAddPollState() {
-    PollState state4 = new PollState(4, "none4", 1, 0, null);
+    PollState state4 = new PollState(4, "lwr4", "upr4", 1, 0, null);
     polls.add(state4);
     state.addPollState(state4);
     Iterator expectedIter = polls.iterator();
@@ -149,7 +148,8 @@ public class TestNodeStateImpl extends LockssTestCase {
   }
 
   public static void main(String[] argv) {
-    String[] testCaseList = {TestNodeStateImpl.class.getName()};
+    String[] testCaseList = {
+        TestNodeStateImpl.class.getName()};
     junit.swingui.TestRunner.main(testCaseList);
   }
 

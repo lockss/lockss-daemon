@@ -1,5 +1,5 @@
 /*
-* $Id: LcapMessage.java,v 1.22 2003-02-11 23:57:01 claire Exp $
+* $Id: LcapMessage.java,v 1.23 2003-02-13 06:28:52 claire Exp $
  */
 
 /*
@@ -103,11 +103,13 @@ public class LcapMessage implements Serializable {
   int                m_opcode;      // the kind of packet
   protected String   m_pluginID;    // the archival unit
   protected String   m_targetUrl;   // the target URL
-  protected String   m_regExp;      // the target regexp
+  protected String   m_lwrBound;    // the boundary for the url range (opt)
+  protected String   m_uprBound;    // the boundary for the url range (opt)
   protected byte[]   m_challenge;   // the challenge bytes
   protected byte[]   m_verifier;    // th verifier bytes
   protected byte[]   m_hashed;      // the hash of content
-  protected String   m_RERemaining; // the RegExp of the remaining entries (opt)
+  protected String   m_lwrRem;      // the remaining entries lwr bound (opt)
+  protected String   m_uprRem;      // the remaining entries upr bound (opt)
   protected String[] m_entries;     // the name poll entry list (opt)
 
   protected static IdentityManager theIdentityMgr;
@@ -135,7 +137,8 @@ public class LcapMessage implements Serializable {
   }
 
   protected LcapMessage(String targetUrl,
-                        String regExp,
+                        String lwrBound,
+                        String uprBound,
                         String[] entries,
                         byte ttl,
                         byte[] challenge,
@@ -145,7 +148,8 @@ public class LcapMessage implements Serializable {
     this();
     // assign the data
     m_targetUrl = targetUrl;
-    m_regExp = regExp;
+    m_uprBound = uprBound;
+    m_lwrBound = lwrBound;
     m_ttl = ttl;
     m_challenge = challenge;
     m_verifier = verifier;
@@ -174,7 +178,8 @@ public class LcapMessage implements Serializable {
     m_ttl = trigger.getTimeToLive();
     m_challenge = trigger.getChallenge();
     m_targetUrl = trigger.getTargetUrl();
-    m_regExp = trigger.getRegExp();
+    m_uprBound = trigger.getUprBound();
+    m_lwrBound = trigger.getLwrBound();
     m_pluginID = trigger.getPluginID();
     m_entries = entries;
     m_hashAlgorithm = trigger.getHashAlgorithm();
@@ -227,7 +232,8 @@ public class LcapMessage implements Serializable {
   /**
    * make a message to request a poll
    * @param targetUrl the url of the target poll
-   * @param regExp the reg expression for the target poll
+   * @param lwrBound the lower boundary of the range
+   * @param uprBound the upper boundary of the range
    * @param entries the array of entries found in the name poll
    * @param challenge the challange bytes
    * @param verifier the verifier bytes
@@ -239,18 +245,19 @@ public class LcapMessage implements Serializable {
    * @throws IOException if unable to creae message
    */
   static public LcapMessage makeRequestMsg(String targetUrl,
-      String regExp,
-      String[] entries,
-      byte[] challenge,
-      byte[] verifier,
-      int opcode,
-      long timeRemaining,
-      LcapIdentity localID,
-      String pluginID)
-      throws IOException {
+                                           String lwrBound,
+                                           String uprBound,
+                                           String[] entries,
+                                           byte[] challenge,
+                                           byte[] verifier,
+                                           int opcode,
+                                           long timeRemaining,
+                                           LcapIdentity localID,
+                                           String pluginID) throws IOException {
 
-    LcapMessage msg = new LcapMessage(targetUrl,regExp,entries,(byte)0,
-                                      challenge,verifier,new byte[0],opcode);
+    LcapMessage msg = new LcapMessage(targetUrl, lwrBound, uprBound, entries,
+                                      (byte) 0,
+                                      challenge, verifier, null, opcode);
     if (msg != null) {
       msg.m_startTime = TimeBase.nowMs();
       msg.m_stopTime = msg.m_startTime + timeRemaining;
@@ -373,14 +380,16 @@ public class LcapMessage implements Serializable {
     m_opcode = m_props.getInt("opcode", -1);
     m_pluginID = m_props.getProperty("plugin", "UNKNOWN");
     m_targetUrl = m_props.getProperty("url");
-    m_regExp = m_props.getProperty("regexp");
+    m_lwrBound = m_props.getProperty("lwrBnd");
+    m_uprBound = m_props.getProperty("uprBnd");
     m_challenge = m_props.getByteArray("challenge", new byte[0]);
     m_verifier = m_props.getByteArray("verifier", new byte[0]);
     m_hashed = m_props.getByteArray("hashed", new byte[0]);
     if (m_props.getProperty("entries") != null) {
       m_entries = stringToEntries(m_props.getProperty("entries"));
     }
-    m_RERemaining = m_props.getProperty("remaining");
+    m_lwrRem = m_props.getProperty("lwrRem");
+    m_uprRem = m_props.getProperty("uprRem");
     // calculate start and stop times
     long now = TimeBase.nowMs();
     m_startTime = now - elapsed;
@@ -408,9 +417,15 @@ public class LcapMessage implements Serializable {
     m_props.putInt("elapsed",(int)(getElapsed()/1000));
     m_props.putInt("opcode",m_opcode);
     m_props.setProperty("url", m_targetUrl);
-    if(m_regExp != null) {
-      m_props.setProperty("regexp",m_regExp);
+
+    if(m_lwrBound != null) {
+      m_props.setProperty("lwrBnd", m_lwrBound);
     }
+
+    if(m_uprBound != null) {
+      m_props.setProperty("uprBnd", m_uprBound);
+    }
+
     if(m_pluginID == null) {
       m_pluginID = "UNKNOWN";
     }
@@ -430,8 +445,12 @@ public class LcapMessage implements Serializable {
       m_props.setProperty("entries",entriesToString(remaining_bytes));
     }
 
-    if(m_RERemaining != null) {
-      m_props.put("remaining", m_RERemaining);
+    if(m_lwrRem != null) {
+      m_props.setProperty("lwrRem", m_lwrRem);
+    }
+
+    if(m_uprRem != null) {
+      m_props.setProperty("uprRem", m_uprRem);
     }
 
     byte[] prop_bytes = m_props.encode();
@@ -528,8 +547,20 @@ public class LcapMessage implements Serializable {
     return m_entries;
   }
 
-  public String getRERemaining() {
-    return m_RERemaining;
+  public String getLwrRemain() {
+    return m_lwrRem;
+  }
+
+  public String getUprRemain() {
+    return m_uprRem;
+  }
+
+  public String getLwrBound() {
+    return m_lwrBound;
+  }
+
+  public String getUprBound() {
+    return m_uprBound;
   }
 
   public byte getHopCount() {
@@ -557,9 +588,6 @@ public class LcapMessage implements Serializable {
     return m_targetUrl;
   }
 
-  public String getRegExp() {
-    return m_regExp;
-  }
 
   public String getHashAlgorithm() {
     return m_hashAlgorithm;
@@ -592,26 +620,16 @@ public class LcapMessage implements Serializable {
       }
       else {
         // we need to set RERemaining and break
-        setRERemaining(i);
+        m_lwrRem = m_entries[i];
+        m_uprRem = m_uprBound;
         break;
       }
     }
     return buf.toString();
   }
 
-  void setRERemaining(int firstIndex) {
-    String last_entry = m_entries[firstIndex - 1];
-    String first_extra = m_entries[firstIndex];
-    String last_extra = m_entries[m_entries.length - 1];
-    StringBuffer buf = new StringBuffer();
-    // everything from the first to last entry
-//    String rem = first_extra.substring(0,firstDifferentChar(last_entry,first_extra));
-//    buf.append(rem);
+  void setRemainder(int lastEntry) {
 
-    buf.append(first_extra);
-    buf.append(".*");
-    buf.append(last_extra);
-    m_RERemaining = buf.toString();
   }
 
   int firstDifferentChar(String s1, String s2) {
@@ -641,7 +659,9 @@ public class LcapMessage implements Serializable {
     sb.append("[LcapMessage: ");
     sb.append(m_targetUrl);
     sb.append(" ");
-    sb.append(m_regExp);
+    sb.append(m_lwrBound);
+    sb.append("-");
+    sb.append(m_uprBound);
     sb.append(" ");
     sb.append(POLL_OPCODES[m_opcode]);
     sb.append(" C:");

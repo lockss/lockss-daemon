@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.30 2003-02-11 23:57:01 claire Exp $
+* $Id: PollManager.java,v 1.31 2003-02-13 06:28:52 claire Exp $
  */
 
 /*
@@ -137,14 +137,15 @@ public class PollManager  implements LockssManager {
    * @param opcode the poll message opcode
    * @throws IOException thrown if Message construction fails.
    */
-  public void requestPoll(CachedUrlSet cus, String regexp, int opcode)
+  public void requestPoll(CachedUrlSet cus, String lwrBound, String uprBound, int opcode)
       throws IOException {
     long duration = calcDuration(opcode, cus);
     ArchivalUnit au = cus.getArchivalUnit();
     byte[] challenge = makeVerifier();
     byte[] verifier = makeVerifier();
     LcapMessage msg = LcapMessage.makeRequestMsg(cus.getPrimaryUrl(),
-        regexp,
+        lwrBound,
+        uprBound,
         null,
         challenge,
         verifier,
@@ -229,7 +230,8 @@ public class PollManager  implements LockssManager {
     // check for presence of item in the cache
     try {
       au = theDaemon.getPluginManager().findArchivalUnit(msg.getTargetUrl());
-      cus = au.makeCachedUrlSet(msg.getTargetUrl(), msg.getRegExp());
+      cus = au.makeCachedUrlSet(msg.getTargetUrl(), msg.getLwrBound(),
+                                msg.getUprBound());
     }
     catch (Exception ex) {
       theLog.debug(msg.getTargetUrl() + " not in this cache.");
@@ -377,13 +379,14 @@ public class PollManager  implements LockssManager {
     }
   }
 
-  void requestVerifyPoll(String url, String regexp, long duration, Vote vote)
+  void requestVerifyPoll(String url, String lwrBound, String uprBound, long duration, Vote vote)
       throws IOException {
 
     theLog.debug("Calling a verify poll...");
     ArchivalUnit au = theDaemon.getPluginManager().findArchivalUnit(url);
     LcapMessage reqmsg = LcapMessage.makeRequestMsg(url,
-        regexp,
+        lwrBound,
+        uprBound,
         null,
         vote.getVerifier(),
         makeVerifier(),

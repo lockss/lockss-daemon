@@ -17,9 +17,13 @@
                         <bind-xml name="Type" node="element"/>
                 </field>
 
-                <field name="regExp"
+                <field name="lwrBound"
                        type="java.lang.String">
-                        <bind-xml name="RegExp" node="element"/>
+                        <bind-xml name="LwrBound" node="element"/>
+                </field>
+                <field name="uprBound"
+                       type="java.lang.String">
+                        <bind-xml name="UprBound" node="element"/>
                 </field>
                 <field name="status"
                        type="integer">

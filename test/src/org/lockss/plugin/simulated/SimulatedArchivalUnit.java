@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.5 2002-11-08 00:11:43 aalto Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.6 2003-02-13 06:28:52 claire Exp $
  */
 
 /*
@@ -85,7 +85,7 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
 
   public CachedUrlSet getAUCachedUrlSet() {
     return new GenericFileCachedUrlSet(this,
-               new RECachedUrlSetSpec(SIMULATED_URL_ROOT));
+               new RangeCachedUrlSetSpec(SIMULATED_URL_ROOT));
   }
 
   public String getPluginId() {

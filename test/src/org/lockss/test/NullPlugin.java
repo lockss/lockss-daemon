@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.12 2003-02-10 23:46:51 troberts Exp $
+ * $Id: NullPlugin.java,v 1.13 2003-02-13 06:28:52 claire Exp $
  */
 
 /*
@@ -204,7 +204,8 @@ public class NullPlugin {
     implements org.lockss.daemon.ArchivalUnit {
 
     public org.lockss.daemon.CachedUrlSet makeCachedUrlSet(String url,
-							   String regexp) {
+							   String lwrBound,
+                                                           String uprBound) {
       return null;
     }
 
@@ -237,7 +238,7 @@ public class NullPlugin {
     public List getNewContentCrawlUrls() {
       return null;
     }
-    
+
     public boolean shouldCrawlForNewContent(AuState aus) {
       return false;
     }

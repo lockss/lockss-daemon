@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.47 2003-02-11 23:57:01 claire Exp $
+* $Id: Poll.java,v 1.48 2003-02-13 06:28:52 claire Exp $
  */
 
 /*
@@ -88,8 +88,8 @@ public abstract class Poll implements Serializable {
   ArchivalUnit m_arcUnit; // the url as an archival unit
   CachedUrlSet m_urlSet;  // the cached url set retrieved from the archival unit
   String m_url;           // the url for this poll
-  String m_regExp;        // the regular expression for the poll
-
+  String m_uprBound;      // the upper boundary for the poll
+  String m_lwrBound;      // the lower boundary for the poll
   byte[] m_challenge;     // The caller's challenge string
   byte[] m_verifier;      // Our verifier string - hash of secret
   byte[] m_hash;          // Our hash of challenge, verifier and content(S)
@@ -129,9 +129,10 @@ public abstract class Poll implements Serializable {
     m_urlSet = urlSet;
 
     m_url = msg.getTargetUrl();
-    m_regExp = msg.getRegExp();
+    m_uprBound = msg.getUprBound();
+    m_lwrBound = msg.getLwrBound();
     m_createTime = TimeBase.nowMs();
-    m_tally = new VoteTally(-1, m_url, m_regExp, msg.getDuration());
+    m_tally = new VoteTally(-1, m_url, msg.getDuration());
 
     // now copy the msg elements we need
     m_arcUnit = m_urlSet.getArchivalUnit();
@@ -231,7 +232,7 @@ public abstract class Poll implements Serializable {
     }
     try {
       if(ProbabilisticChoice.choose(verify)) {
-        m_pollmanager.requestVerifyPoll(m_url, m_regExp, m_tally.duration, vote);
+        m_pollmanager.requestVerifyPoll(m_url, m_lwrBound, m_uprBound, m_tally.duration, vote);
       }
     }
     catch (IOException ex) {
@@ -544,7 +545,7 @@ public abstract class Poll implements Serializable {
       hashAlgorithm = m_msg.getHashAlgorithm();
     }
 
-    VoteTally(int type, String url, String regExp, long duration) {
+    VoteTally(int type, String url, long duration) {
       this(type, m_createTime, duration, 0, 0, 0, 0);
     }
 
@@ -586,12 +587,12 @@ public abstract class Poll implements Serializable {
       return m_url;
     }
 
-    /**
-     * Returns the reg expression
-     * @return String the reg expression filter for this poll
-     */
-    public String getRegExp() {
-      return m_regExp;
+    public String getLwrBound() {
+      return m_lwrBound;
+    }
+
+    public String getUprBound() {
+      return m_uprBound;
     }
 
     /**

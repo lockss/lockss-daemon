@@ -1,5 +1,5 @@
 /*
- * $Id: PollHistoryBean.java,v 1.4 2002-12-21 01:15:45 aalto Exp $
+ * $Id: PollHistoryBean.java,v 1.5 2003-02-13 06:28:52 claire Exp $
  */
 
 /*
@@ -49,7 +49,7 @@ public class PollHistoryBean extends PollHistory {
   }
 
   PollHistoryBean(PollHistory history) {
-    super(history.type, history.regExp, history.status, history.startTime,
+    super(history.type, history.lwrBound, history.uprBound, history.status, history.startTime,
           history.duration, history.votes);
     voteBeans = new ArrayList();
     convertVotesToVoteBeans();
@@ -57,7 +57,7 @@ public class PollHistoryBean extends PollHistory {
 
   PollHistory getPollHistory() {
     convertVoteBeansToVotes();
-    return new PollHistory(type, regExp, status, startTime, duration, votes);
+    return new PollHistory(type, lwrBound, uprBound, status, startTime, duration, votes);
   }
 
   /**
@@ -69,14 +69,21 @@ public class PollHistoryBean extends PollHistory {
   }
 
   /**
-   * Sets the regular expression.
-   * @param regExp the new regexp
+   * Sets the lower boundar of the range.
+   * @param lwrBound the new lower boundary
    */
-  public void setRegExp(String regExp) {
-    super.regExp = regExp;
+  public void setLwrBound(String lwrBound) {
+    super.lwrBound = lwrBound;
   }
 
   /**
+  * Sets the upper boundary of the range
+  * @param uprBound the new upper boundary
+  */
+ public void setUprBound(String uprBound) {
+   super.uprBound = uprBound;
+ }
+ /**
    * Sets the status.
    * @param status the new status
    */
