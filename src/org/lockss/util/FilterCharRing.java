@@ -1,5 +1,5 @@
 /*
- * $Id: FilterCharRing.java,v 1.1 2003-09-10 22:59:32 troberts Exp $
+ * $Id: FilterCharRing.java,v 1.2 2003-12-17 02:09:45 tlipkis Exp $
  */
 
 /*
@@ -109,7 +109,7 @@ public class FilterCharRing extends CharRing {
    * Refill the buffer from the specified reader
    * @param reader reader from which to refill the charBuffer
    * @return true if we've read through the reader, false otherwise
-   * @IllegalArgumentException if called with a null reader
+   * @throws IllegalArgumentException if called with a null reader
    */
   public boolean refillBuffer(Reader reader) 
       throws IOException {

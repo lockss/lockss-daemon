@@ -1,5 +1,5 @@
 /*
- * $Id: MockDatagramSocket.java,v 1.8 2003-06-20 22:34:55 claire Exp $
+ * $Id: MockDatagramSocket.java,v 1.9 2003-12-17 02:09:44 tlipkis Exp $
  */
 
 /*
@@ -66,7 +66,7 @@ public class MockDatagramSocket
   /**
    * @param port this is ignored and only here to override the 
    * DatagramSocket contructor
-   * @param host ditto
+   * @param laddr ditto.
    */
   public MockDatagramSocket(int port, InetAddress laddr)
       throws SocketException{

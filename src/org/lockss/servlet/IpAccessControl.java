@@ -1,5 +1,5 @@
 /*
- * $Id: IpAccessControl.java,v 1.8 2003-07-30 05:37:47 tlipkis Exp $
+ * $Id: IpAccessControl.java,v 1.9 2003-12-17 02:09:45 tlipkis Exp $
  */
 
 /*
@@ -262,7 +262,6 @@ public abstract class IpAccessControl extends LockssServlet {
    * Save the ip addresses to the cluster.txt property file
    * @param incIPsList vector of ip addresses to include
    * @param excIPsList vector of ip addresses to exclude
-   * @param realpath path to the cluster.txt file
    * @return whether the save was successful
    */
   public void saveIPChanges(Vector incIPsList, Vector excIPsList)

@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRules.java,v 1.2 2003-06-20 22:34:50 claire Exp $
+ * $Id: CrawlRules.java,v 1.3 2003-12-17 02:09:47 tlipkis Exp $
  */
 
 /*
@@ -137,7 +137,7 @@ public class CrawlRules {
     }
   
     /**
-     * @param str String to check against this rule
+     * @param url URL string to check against this rule
      * @return FETCH if the string matches and should be fetched, IGNORE 
      * if str matches and should not be fetched, IGNORE if str doesn't
      * match.

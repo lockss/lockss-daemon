@@ -1,5 +1,5 @@
 /*
- * $Id: StatusAccessor.java,v 1.12 2003-06-20 22:34:50 claire Exp $
+ * $Id: StatusAccessor.java,v 1.13 2003-12-17 02:09:47 tlipkis Exp $
  */
 
 /*
@@ -53,7 +53,7 @@ public interface StatusAccessor {
   public void populateTable(StatusTable table) 
       throws StatusService.NoSuchTableException;
   /**
-   * @returns true if a key is required
+   * @return true if a key is required
    */
   public boolean requiresKey();
 }

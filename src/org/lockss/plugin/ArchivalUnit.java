@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.20 2003-11-07 00:52:47 troberts Exp $
+ * $Id: ArchivalUnit.java,v 1.21 2003-12-17 02:09:47 tlipkis Exp $
  */
 
 /*
@@ -156,9 +156,8 @@ public interface ArchivalUnit {
   public List getNewContentCrawlUrls();
 
   /**
-   * Query the {@link AuSb
-tate} object to determine if this is the proper time to
-   * do a new content crawl.
+   * Query the {@link AuState} object to determine if this is the proper
+   * time to do a new content crawl.
    * @param aus {@link AuState} object for this archival unit
    * @return true if we should do a new content crawl
    */

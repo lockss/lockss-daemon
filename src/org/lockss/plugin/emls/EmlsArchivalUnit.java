@@ -1,5 +1,5 @@
 /*
- * $Id: EmlsArchivalUnit.java,v 1.2 2003-11-07 04:12:00 clairegriffin Exp $
+ * $Id: EmlsArchivalUnit.java,v 1.3 2003-12-17 02:09:46 tlipkis Exp $
  */
 
 /*
@@ -41,8 +41,8 @@ import org.lockss.plugin.base.*;
 import gnu.regexp.REException;
 
 /**
- * <p>EmlsArchivalUnit: The Archival Unit Class for Early Modern Literary
- * Studies</p>
+ * EmlsArchivalUnit: The Archival Unit Class for Early Modern Literary
+ * Studies
  * @author Emil Aalto
  * @version 1.0
  */

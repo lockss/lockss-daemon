@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.43 2003-12-11 23:11:11 eaalto Exp $
+ * $Id: BaseArchivalUnit.java,v 1.44 2003-12-17 02:09:46 tlipkis Exp $
  */
 
 /*
@@ -463,7 +463,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 
   /**
    * Simplified implementation which gets the poll interval parameter
-   * and compares now vs. the last poll time.
+   * and determine whether that much time has elapsed since the last poll time.
    * @param aus the {@link AuState}
    * @return true iff a top level poll should be called
    */

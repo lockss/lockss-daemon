@@ -1,5 +1,5 @@
 /*
- * $Id: MemoryBoundFunctionVote.java,v 1.8 2003-09-09 03:54:04 dshr Exp $
+ * $Id: MemoryBoundFunctionVote.java,v 1.9 2003-12-17 02:09:47 tlipkis Exp $
  */
 
 /*
@@ -71,10 +71,10 @@ public abstract class MemoryBoundFunctionVote {
    * depend on the preceeding hash and proof.  The effort sizer e
    * is constant for all rounds.  The path length l is set equal to
    * the block size for that round.
-   * @param name String name of MBF implementaiton to use
+   * @param fact MemoryBoundFunctionFactory for MBF implementation to use
    * @param nVal a byte array containing the nonce
    * @param eVal the effort sizer (# of low-order zeros in destination)
-   * @param cus the CachedUrlSet containing the content to be voted on
+   * @param cusVal the CachedUrlSet containing the content to be voted on
    * @param pollID the byte array ID of the poll
    * @param voterID the LcapIdentity of the voter
    *
@@ -99,12 +99,12 @@ public abstract class MemoryBoundFunctionVote {
    * using hashing and memory bound functions.  It accepts as
    * input a nonce,  a cachedUrlSet,  and arrays of proofs
    * and hashes.
-   * @param name String name of MBF implementation to use
+   * @param fact MemoryBoundFunctionFactory for MBF implementation to use
    * @param nVal a byte array containing the nonce
    * @param eVal the effort sizer (# of low-order zeros in destination)
-   * @param cus the CachedUrlSet containing the content to be voted on
+   * @param cusVal the CachedUrlSet containing the content to be voted on
    * @param sVals the starting points chosen by the prover for each block
-   * @param hashes the hashes of each block
+   * @param hashVals the hashes of each block
    * @param pollID the byte array ID of the poll
    * @param voterID the LcapIdentity of the voter
    * 

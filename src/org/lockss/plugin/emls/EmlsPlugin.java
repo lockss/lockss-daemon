@@ -1,5 +1,5 @@
 /*
- * $Id: EmlsPlugin.java,v 1.3 2003-11-17 23:55:53 clairegriffin Exp $
+ * $Id: EmlsPlugin.java,v 1.4 2003-12-17 02:09:46 tlipkis Exp $
  */
 
 /*
@@ -40,7 +40,7 @@ import org.lockss.app.LockssDaemon;
 import java.util.List;
 
 /**
- * <p>EmlsPlugin: Plugin class for the Early Modern Literary Studies Plugin</p>
+ * EmlsPlugin: Plugin class for the Early Modern Literary Studies Plugin
  * @author Emil Aalto
  * @version 1.0
  */

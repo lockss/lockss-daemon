@@ -1,5 +1,5 @@
 /*
- * $Id: StatusTable.java,v 1.24 2003-06-20 22:34:50 claire Exp $
+ * $Id: StatusTable.java,v 1.25 2003-12-17 02:09:47 tlipkis Exp $
  */
 
 /*
@@ -80,7 +80,7 @@ public class StatusTable {
 
   /**
    * Get the name of this table
-   * @returns name of this table
+   * @return name of this table
    */
   public String getName() {
     return name;
@@ -92,7 +92,7 @@ public class StatusTable {
 
   /**
    * Get the key for this table
-   * @returns key for this table
+   * @return key for this table
    */
   public String getKey() {
     return key;
@@ -100,7 +100,7 @@ public class StatusTable {
 
   /**
    * Get the title for this table
-   * @returns title for this table
+   * @return title for this table
    */
   public String getTitle() {
     return title;
@@ -115,7 +115,7 @@ public class StatusTable {
 
   /**
    * Get the title footnote for this table
-   * @returns title footnote for this table
+   * @return title footnote for this table
    */
   public String getTitleFootnote() {
     return titleFootnote;
@@ -123,7 +123,7 @@ public class StatusTable {
 
   /**
    * Set the title footnote for this table
-   * @paramfootnote the title footnote for this table
+   * @param footnote the title footnote for this table
    */
   public void setTitleFootnote(String footnote) {
     this.titleFootnote = footnote;
@@ -149,7 +149,7 @@ public class StatusTable {
   /**
    * Gets a list of {@link ColumnDescriptor}s representing the 
    * columns in this table in their preferred display order.
-   * @returns list of {@link ColumnDescriptor}s the columns in 
+   * @return list of {@link ColumnDescriptor}s the columns in 
    * the table in the preferred display order
    */
   public List getColumnDescriptors() {
@@ -169,7 +169,7 @@ public class StatusTable {
   /**
    * Gets a list of {@link java.util.Map} objects for all the rows in the 
    * table in their default sort order.
-   * @returns list of {@link java.util.Map}s representing rows in the table 
+   * @return list of {@link java.util.Map}s representing rows in the table 
    * in their default sort order 
    */
   public List getSortedRows() {
@@ -184,7 +184,7 @@ public class StatusTable {
    * specified in sortRules
    * @param sortRules list of {@link StatusTable.SortRule} objects describing
    *  how to sort  the rows
-   * @returns list of {@link java.util.Map}s representing rows in the table 
+   * @return list of {@link java.util.Map}s representing rows in the table 
    * in the sort order specified by sortRules 
    */
   public List getSortedRows(List sortRules) {
@@ -477,21 +477,21 @@ public class StatusTable {
       this.columnType = columnType;
     }
     /**
-     * @returns name of the field to sort on
+     * @return name of the field to sort on
      */
     public String getColumnName(){
       return columnName;
     }
     
     /**
-     * @returns the value type for the column
+     * @return the value type for the column
      */
     public int getColumnType(){
       return columnType;
     }
     
     /**
-     * @returns true if this column should be sorted in ascending order,
+     * @return true if this column should be sorted in ascending order,
      * false if it should be sorted in descending order
      */
     public boolean sortAscending(){

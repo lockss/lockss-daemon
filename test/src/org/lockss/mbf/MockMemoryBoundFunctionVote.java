@@ -1,5 +1,5 @@
 /*
- * $Id: MockMemoryBoundFunctionVote.java,v 1.3 2003-09-05 02:45:20 dshr Exp $
+ * $Id: MockMemoryBoundFunctionVote.java,v 1.4 2003-12-17 02:09:45 tlipkis Exp $
  */
 
 /*
@@ -71,7 +71,9 @@ public class MockMemoryBoundFunctionVote extends MemoryBoundFunctionVote {
    * the block size for that round.
    * @param nVal a byte array containing the nonce
    * @param eVal the effort sizer (# of low-order zeros in destination)
-   * @param cus the CachedUrlSet containing the content to be voted on
+   * @param cusVal the CachedUrlSet containing the content to be voted on
+   * @param pollID the byte array ID for the poll
+   * @param voterID the LcapIdentity of the voter
    *
    */
   protected void setupGeneration(MemoryBoundFunctionFactory fact,
@@ -92,7 +94,7 @@ public class MockMemoryBoundFunctionVote extends MemoryBoundFunctionVote {
    * and hashes.
    * @param nVal a byte array containing the nonce
    * @param eVal the effort sizer (# of low-order zeros in destination)
-   * @param cus the CachedUrlSet containing the content to be voted on
+   * @param cusVal the CachedUrlSet containing the content to be voted on
    * @param sVals the starting points chosen by the prover for each block
    * @param hashes the hashes of each block
    * @param pollID the byte array ID for the poll

@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlTagFilter.java,v 1.1 2003-10-28 23:43:41 eaalto Exp $
+ * $Id: HtmlTagFilter.java,v 1.2 2003-12-17 02:09:47 tlipkis Exp $
  */
 
 /*
@@ -40,7 +40,7 @@ import org.lockss.daemon.Configuration;
 
 /**
  * This class is used to filter all content from a reader between two string
- * (for instance "<!--" and "-->"
+ * (for instance "<&excl;-- and "-->"
  */
 public class HtmlTagFilter extends Reader {
   /**

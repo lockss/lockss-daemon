@@ -1,5 +1,5 @@
 /*
- * $Id: NodeState.java,v 1.11 2003-06-20 22:34:52 claire Exp $
+ * $Id: NodeState.java,v 1.12 2003-12-17 02:09:45 tlipkis Exp $
  */
 
 /*
@@ -125,8 +125,8 @@ public interface NodeState {
   public static final int UNREPAIRABLE_NAMES_NEEDS_POLL = 19;
 
   /**
-   * Returns the last hash duration.  -1 if no hash yet.
-   * @return the hash duration
+   * Returns the last hash duration.
+   * @return the hash duration, or -1 if no hash yet.
    */
   public long getAverageHashDuration();
 

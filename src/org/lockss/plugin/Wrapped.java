@@ -1,5 +1,5 @@
 /*
- * $Id: Wrapped.java,v 1.1 2003-09-04 23:11:17 tyronen Exp $
+ * $Id: Wrapped.java,v 1.2 2003-12-17 02:09:46 tlipkis Exp $
  */
 
 /*
@@ -33,9 +33,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin;
 
 /**
- * <p>Title: Wrapped</p>
- * <p>Description: Wrapped classes must implement this interface.  This serves
- * as a convenient way to identify them, and to retrieve basic information. </p>
+ * Wrapped classes must implement this interface.  This serves as a
+ * convenient way to identify them, and to retrieve basic information.
  * @author Tyrone Nicholas
  */
 

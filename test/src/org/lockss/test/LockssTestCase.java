@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.42 2003-11-13 19:51:48 troberts Exp $
+ * $Id: LockssTestCase.java,v 1.43 2003-12-17 02:09:44 tlipkis Exp $
  */
 
 /*
@@ -98,7 +98,8 @@ public class LockssTestCase extends TestCase {
   }
 
   /**
-   * Remove any temp dirs, cancel any outstanding {@link LockssTestCase.DoLater}s
+   * Remove any temp dirs, cancel any outstanding {@link
+   * org.lockss.test.LockssTestCase.DoLater}s
    * @throws Exception
    */
   protected void tearDown() throws Exception {
@@ -893,7 +894,7 @@ public class LockssTestCase extends TestCase {
 
     /**
      * Return true iff action was taken
-     * @returns true iff taken
+     * @return true iff taken
      */
     public boolean did() {
       return did;

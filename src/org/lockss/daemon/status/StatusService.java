@@ -1,5 +1,5 @@
 /*
- * $Id: StatusService.java,v 1.8 2003-06-20 22:34:50 claire Exp $
+ * $Id: StatusService.java,v 1.9 2003-12-17 02:09:47 tlipkis Exp $
  */
 
 /*
@@ -50,7 +50,7 @@ public interface StatusService {
    * and key specified.
    * @param tableName name of the table to get
    * @param key object which further specifies the needed table
-   * @returns StatusTable object with specified name
+   * @return StatusTable object with specified name
    * @throws  StatusService.NoSuchTableException if there is no status table 
    * with that name-key combination
    */
@@ -83,7 +83,7 @@ public interface StatusService {
    * table for the object.
    * @param tableName the table for which a reference is desired
    * @param obj the object for which a reference is desired
-   * @returns a reference to the supplied object, or null if no method to
+   * @return a reference to the supplied object, or null if no method to
    * create one has been registered.
    */
   public StatusTable.Reference getReference(String tableName, Object obj);
@@ -94,7 +94,7 @@ public interface StatusService {
    * virtue of its class) and ask each one to create a reference to their
    * table for the object.
    * @param obj the object for which references are desired
-   * @returns list of {@link StatusTable.Reference}s to tables for the
+   * @return list of {@link StatusTable.Reference}s to tables for the
    * supplied object.  Returns null or an empty list if there are none.
    */
   public List getReferences(Object obj);

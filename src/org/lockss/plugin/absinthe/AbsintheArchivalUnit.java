@@ -1,5 +1,5 @@
 /*
- * $Id: AbsintheArchivalUnit.java,v 1.5 2003-11-07 04:11:59 clairegriffin Exp $
+ * $Id: AbsintheArchivalUnit.java,v 1.6 2003-12-17 02:09:46 tlipkis Exp $
  */
 
 /*
@@ -41,8 +41,8 @@ import org.lockss.plugin.base.*;
 import gnu.regexp.REException;
 
 /**
- * <p>AbsintheArchivalUnit: The Archival Unit Class for Absinthe Literary
- * Review</p>
+ * AbsintheArchivalUnit: The Archival Unit Class for Absinthe Literary
+ * Review
  * @author Emil Aalto
  * @version 1.0
  */

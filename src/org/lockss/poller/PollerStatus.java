@@ -1,5 +1,5 @@
 /*
-* $Id: PollerStatus.java,v 1.9 2003-09-26 23:50:39 eaalto Exp $
+* $Id: PollerStatus.java,v 1.10 2003-12-17 02:09:45 tlipkis Exp $
  */
 
 /*
@@ -39,8 +39,8 @@ import org.lockss.plugin.*;
 import org.lockss.protocol.*;
 
 /**
- * <p>Description: Provides support for the PollManager and Polls to present
- * the current status information</p>
+ * Description: Provides support for the PollManager and Polls to present
+ * the current status information
  * @author Claire Griffin
  * @version 1.0
  */

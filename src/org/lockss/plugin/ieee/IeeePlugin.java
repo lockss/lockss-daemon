@@ -1,5 +1,5 @@
 /*
- * $Id: IeeePlugin.java,v 1.4 2003-11-17 23:55:53 clairegriffin Exp $
+ * $Id: IeeePlugin.java,v 1.5 2003-12-17 02:09:46 tlipkis Exp $
  */
 
 /*
@@ -41,7 +41,7 @@ import java.util.Collection;
 import org.lockss.app.*;
 
 /**
- * <p>IeeePlugin: Plugin class for the Ieee Explore Plugin</p>
+ * IeeePlugin: Plugin class for the Ieee Explore Plugin
  * @author Claire Griffin
  * @version 1.0
  */

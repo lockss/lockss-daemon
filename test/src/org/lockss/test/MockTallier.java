@@ -1,5 +1,5 @@
 /*
-* $Id: MockTallier.java,v 1.5 2003-07-31 00:46:05 eaalto Exp $
+* $Id: MockTallier.java,v 1.6 2003-12-17 02:09:44 tlipkis Exp $
  */
 
 /*
@@ -40,10 +40,7 @@ import org.lockss.poller.*;
 import org.lockss.daemon.ActivityRegulator;
 
 /**
- * <p>Title: </p>
- * <p>Description: </p>
- * <p>Copyright: Copyright (c) 2003</p>
- * <p>Company: </p>
+ * Mock vote tallier.
  * @author Claire Griffin
  * @version 1.0
  */

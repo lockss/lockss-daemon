@@ -1,5 +1,5 @@
 /*
-* $Id: TimedIteratorExpiredException.java,v 1.2 2003-06-20 22:34:53 claire Exp $
+* $Id: TimedIteratorExpiredException.java,v 1.3 2003-12-17 02:09:45 tlipkis Exp $
  */
 
 /*
@@ -32,11 +32,10 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 
 /**
- * <p>Title: TimedIteratorExpiredException</p>
- * <p>Description: Thrown by an iterator to a <code>TimedMap</code> class if
+ * Thrown by an iterator to a {@link org.lockss.util.TimedMap} if
  * an entry in the timed map expires while the iterator is in use.  This is
  * in accordance with the general contract for iterators, whose behavior
- * is undefined if the underlying collection changes.</p>
+ * is undefined if the underlying collection changes.
  * @author Tyrone Nicholas
  * @version 1.0
  */

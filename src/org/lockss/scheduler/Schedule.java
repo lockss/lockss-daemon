@@ -1,5 +1,5 @@
 /*
- * $Id: Schedule.java,v 1.3 2003-11-19 08:46:47 tlipkis Exp $
+ * $Id: Schedule.java,v 1.4 2003-12-17 02:09:45 tlipkis Exp $
  */
 
 /*
@@ -36,7 +36,7 @@ import java.util.*;
 import org.lockss.util.*;
 
 /** A Schedule describes a sequence of task executions.  It is created by a
- * @{link Scheduler}, and interpreted by the TaskRunner. */
+ * {@link Scheduler}, and interpreted by the TaskRunner. */
 public class Schedule {
   protected static Logger log = Logger.getLogger("Schedule");
 
@@ -52,7 +52,7 @@ public class Schedule {
     this.overrunTasks = overrunTasks;
   }
 
-  /** Return the list of {@link Schedule.Event}s */
+  /** Return the list of {@link org.lockss.scheduler.Schedule.Event}s */
   public List getEvents() {
     return events;
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: MBFV2.java,v 1.11 2003-09-26 23:52:17 eaalto Exp $
+ * $Id: MBFV2.java,v 1.12 2003-12-17 02:09:47 tlipkis Exp $
  */
 
 /*
@@ -139,7 +139,7 @@ public class MBFV2 extends MemoryBoundFunctionVote {
    * and hashes.
    * @param nVal a byte array containing the nonce
    * @param eVal the effort sizer (# of low-order zeros in destination)
-   * @param cus the CachedUrlSet containing the content to be voted on
+   * @param cusVal the CachedUrlSet containing the content to be voted on
    * @param sVals the starting points chosen by the prover for each block
    * @param hashes the hashes of each block
    *

@@ -12,7 +12,7 @@ import gnu.regexp.*;
 import org.lockss.state.*;
 
 /**
- * <p>IeeeArchivalUnit: The Archival Unit Class for IEEE Plugin</p>
+ * IeeeArchivalUnit: The Archival Unit Class for IEEE Plugin
  * @author Claire Griffin
  * @version 1.0
  */

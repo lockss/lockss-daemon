@@ -1,5 +1,5 @@
 /*
- * $Id: LockssManager.java,v 1.5 2003-06-20 22:34:50 claire Exp $
+ * $Id: LockssManager.java,v 1.6 2003-12-17 02:09:47 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.app;
 
 /**
- * <p>Interface used to standardize a lockss manager </p>
+ * Interface used to standardize a lockss manager
  * @author Claire Griffin
  * @version 1.0
  */

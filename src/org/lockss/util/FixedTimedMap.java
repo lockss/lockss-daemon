@@ -1,5 +1,5 @@
 /*
- * $Id: FixedTimedMap.java,v 1.2 2003-06-20 22:34:53 claire Exp $
+ * $Id: FixedTimedMap.java,v 1.3 2003-12-17 02:09:45 tlipkis Exp $
  */
 
 /*
@@ -36,13 +36,12 @@ import java.util.*;
 import org.apache.commons.collections.*;
 
 /**
- * <p>Title: FixedTimedMap</p>
- * <p>Description: This class implements the Map interface.  It has the
+ * FixedTimedMap implements the Map interface.  It has the
  * additional property that entries expire on an interval specified
  * by a parameter to the constructor.  The interval is calculated from the
  * time at which the entry was added to the map.  This map is a hash map; as
  * such, classes used as keys should have a defined <code>hashCode</code>
- * method that obeys the contract for hash codes.</p>
+ * method that obeys the contract for hash codes.
  * @author Tyrone Nicholas
  * @version 1.0
  */

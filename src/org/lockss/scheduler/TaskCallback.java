@@ -1,5 +1,5 @@
 /*
- * $Id: TaskCallback.java,v 1.1 2003-11-11 20:29:45 tlipkis Exp $
+ * $Id: TaskCallback.java,v 1.2 2003-12-17 02:09:45 tlipkis Exp $
  */
 
 /*
@@ -43,7 +43,8 @@ public interface TaskCallback extends Serializable {
    * Called to indicate that a task has changed state.  Normally
    * implemented by the task creator.
    * @param task the task
-   * @param event one of START, FINISH
+   * @param type one of {@link Schedule.EventType#START}, {@link
+   * Schedule.EventType#FINISH}
    */
   public void taskEvent(SchedulableTask task, Schedule.EventType type)
       throws Abort;

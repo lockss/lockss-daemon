@@ -1,5 +1,5 @@
 /*
- * $Id: PollTally.java,v 1.22 2003-07-31 00:46:04 eaalto Exp $
+ * $Id: PollTally.java,v 1.23 2003-12-17 02:09:45 tlipkis Exp $
  */
 
 /*
@@ -255,8 +255,7 @@ public abstract class PollTally implements Tallier{
   abstract void adjustReputation(LcapIdentity voterID, int repDelta);
 
   /**
-   * <p>PollTally.NameListEntry </p>
-   * <p>Description: a class for the entries returned in a Name poll </p>
+   * Description: a class for the entries returned in a Name poll
    */
   public static class NameListEntry {
     public boolean hasContent;

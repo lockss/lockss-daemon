@@ -1,5 +1,5 @@
 /*
- * $Id: AcsArchivalUnit.java,v 1.8 2003-11-07 04:11:59 clairegriffin Exp $
+ * $Id: AcsArchivalUnit.java,v 1.9 2003-12-17 02:09:46 tlipkis Exp $
  */
 
 /*
@@ -44,8 +44,8 @@ import org.lockss.state.*;
 import org.lockss.daemon.Configuration.*;
 
 /**
- * <p>AcsArchivalUnit: The Archival Unit Class for American Chemical Society
- * Plugin</p>
+ * AcsArchivalUnit: The Archival Unit Class for American Chemical Society
+ * Plugin
  * @author Claire Griffin
  * @version 1.0
  */

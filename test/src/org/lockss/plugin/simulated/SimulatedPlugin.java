@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedPlugin.java,v 1.16 2003-09-26 23:47:46 eaalto Exp $
+ * $Id: SimulatedPlugin.java,v 1.17 2003-12-17 02:09:45 tlipkis Exp $
  */
 
 /*
@@ -171,7 +171,7 @@ public class SimulatedPlugin extends BasePlugin implements PluginTestable {
   /**
    * Create an ArchivalUnit for the AU specified by the configuration.
    * @param auConfig Configuration object with values for all properties
-   * returned by {@link #getAUConfigProperties()}
+   * returned by {@link #getDefiningConfigKeys()}
    * @return an {@link ArchivalUnit}
    * @throws ArchivalUnit.ConfigurationException if the configuration is
    * illegal in any way.

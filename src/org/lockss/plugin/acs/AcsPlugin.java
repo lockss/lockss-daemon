@@ -1,5 +1,5 @@
 /*
- * $Id: AcsPlugin.java,v 1.6 2003-11-17 23:55:52 clairegriffin Exp $
+ * $Id: AcsPlugin.java,v 1.7 2003-12-17 02:09:46 tlipkis Exp $
  */
 
 /*
@@ -41,7 +41,7 @@ import java.util.Collection;
 import org.lockss.app.*;
 
 /**
- * <p>AcsPlugin: Plugin class for the American Chemical Society Plugin</p>
+ * AcsPlugin: Plugin class for the American Chemical Society Plugin
  * @author Claire Griffin
  * @version 1.0
  */

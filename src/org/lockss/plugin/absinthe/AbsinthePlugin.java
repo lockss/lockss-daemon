@@ -1,5 +1,5 @@
 /*
- * $Id: AbsinthePlugin.java,v 1.3 2003-11-17 23:55:52 clairegriffin Exp $
+ * $Id: AbsinthePlugin.java,v 1.4 2003-12-17 02:09:46 tlipkis Exp $
  */
 
 /*
@@ -33,7 +33,7 @@ import org.lockss.util.ListUtil;
 import org.lockss.app.LockssDaemon;
 
 /**
- * <p>AbsinthePlugin: Plugin class for the Absinthe Literary Review Plugin</p>
+ * AbsinthePlugin: Plugin class for the Absinthe Literary Review Plugin
  * @author Emil Aalto
  * @version 1.0
  */

@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManager.java,v 1.24 2003-07-17 22:58:48 clairegriffin Exp $
+ * $Id: NodeManager.java,v 1.25 2003-12-17 02:09:45 tlipkis Exp $
  */
 
 /*
@@ -48,7 +48,7 @@ public interface NodeManager extends LockssManager {
    * Starts a new poll on a particular CachedUrlSet.
    * @param cus the CachedUrlSet being polled
    * @param state the new PollState
-   * @param boolean true if we are replaying the previous poll.
+   * @param isReplayPoll true if we are replaying the previous poll.
    */
   public void startPoll(CachedUrlSet cus, Tallier state, boolean isReplayPoll);
 
@@ -57,7 +57,7 @@ public interface NodeManager extends LockssManager {
    * @param cus the cached url set that represents the poll we want
    * to run.
    * @param state the polly tally representing the poll state
-   * @returns false if the poll has no matching node state or
+   * @return false if the poll has no matching node state or
    * the poll would include damaged content.
    */
   public boolean shouldStartPoll(CachedUrlSet cus, Tallier state);

@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatus.java,v 1.8 2003-12-13 01:28:27 troberts Exp $
+ * $Id: CrawlManagerStatus.java,v 1.9 2003-12-17 02:09:47 tlipkis Exp $
  */
 
 /*
@@ -168,6 +168,7 @@ public class CrawlManagerStatus implements StatusAccessor {
   }
   
   /**
+   * Fill in the crawl status table.
    * @param table StatusTable to populate
    * @throws IllegalArgumentException if called with a null StatusTable
    */

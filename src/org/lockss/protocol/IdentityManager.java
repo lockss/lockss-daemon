@@ -1,5 +1,5 @@
 /*
-* $Id: IdentityManager.java,v 1.32 2003-06-20 22:34:51 claire Exp $
+* $Id: IdentityManager.java,v 1.33 2003-12-17 02:09:45 tlipkis Exp $
  */
 
 /*
@@ -45,10 +45,7 @@ import org.exolab.castor.mapping.Mapping;
 import org.exolab.castor.mapping.*;
 
 /**
- * <p>Title: </p>
- * <p>Description: </p>
- * <p>Copyright: Copyright (c) 2000-2003</p>
- * <p>Company: </p>
+ * Abstraction for identity of a LOCKSS cache.  Currently wraps an IP address.
  * @author Claire Griffin
  * @version 1.0
  */
