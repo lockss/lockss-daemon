@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.40 2004-10-19 10:16:08 tlipkis Exp $
+ * $Id: TestStringUtil.java,v 1.41 2004-11-30 00:48:19 troberts Exp $
  */
 
 /*
@@ -520,6 +520,15 @@ System.out.println("s: "+s);
     assertEquals("foo.a", StringUtil.upToFinal("foo.a.bar", "."));
     assertEquals("foo", StringUtil.upToFinal("foo", "."));
     assertEquals("", StringUtil.upToFinal(".foo", "."));
+  }
+
+  public void testNthIndexOf() {
+    assertEquals(-1, StringUtil.nthIndexOf(1, "xyz", "q"));
+    assertEquals(0, StringUtil.nthIndexOf(1, "xyz", "x"));
+    assertEquals(1, StringUtil.nthIndexOf(2, "xxyz", "x"));
+
+    assertEquals(7, StringUtil.nthIndexOf(4, "xyzxyzxxxyz", "x"));
+    assertEquals(9, StringUtil.nthIndexOf(2, "xyzzzzzysxyz", "xyz"));
   }
 
 }

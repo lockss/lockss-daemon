@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.46 2004-10-19 10:16:17 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.47 2004-11-30 00:48:19 troberts Exp $
  */
 
 /*
@@ -744,4 +744,18 @@ public class StringUtil {
       super(message);
     }
   }    
+
+  /**
+   * Returns the index of the nth occurance of searchStr in sourceStr or -1
+   * if there aren't n instances of searchStr in sourceStr
+   */
+  public static int nthIndexOf(int n, String sourceStr, String searchStr) {
+    int idx = -1;
+    for (int ix = 0; ix < n; ix++) {
+      idx = sourceStr.indexOf(searchStr, idx+1); 
+    }
+    return idx;
+  }
+
+
 }
