@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapComm.java,v 1.1 2002-12-13 02:26:08 tal Exp $
+ * $Id: TestLcapComm.java,v 1.2 2002-12-16 23:30:07 tal Exp $
  */
 
 /*
@@ -57,17 +57,17 @@ public class TestLcapComm extends LockssTestCase {
   static Logger log = Logger.getLogger("SockTest");
   static int TIMEOUT = 1000;
 
-  static final String PARAM_MULTIGROUP = LcapComm.PARAM_MULTIGROUP;
-  static final String PARAM_MULTIPORT = LcapComm.PARAM_MULTIPORT;
-  static final String PARAM_UNIPORT = LcapComm.PARAM_UNIPORT;
-  static final String PARAM_UNIPORT_SEND = LcapComm.PARAM_UNIPORT_SEND;
+  static final String PARAM_MULTI_GROUP = LcapComm.PARAM_MULTI_GROUP;
+  static final String PARAM_MULTI_PORT = LcapComm.PARAM_MULTI_PORT;
+  static final String PARAM_UNI_PORT = LcapComm.PARAM_UNI_PORT;
+  static final String PARAM_UNI_PORT_SEND = LcapComm.PARAM_UNI_PORT_SEND;
   static final String PARAM_VERIFY_MULTICAST = LcapComm.PARAM_VERIFY_MULTICAST;
 
   private static final String c1 =
-    PARAM_MULTIGROUP + "=239.3.4.5" + "\n" +
-    PARAM_MULTIPORT + "=5432" + "\n" +
-    PARAM_UNIPORT + "=2345" + "\n" +
-//     PARAM_UNIPORT_SEND + "=" + "\n" +
+    PARAM_MULTI_GROUP + "=239.3.4.5" + "\n" +
+    PARAM_MULTI_PORT + "=5432" + "\n" +
+    PARAM_UNI_PORT + "=2345" + "\n" +
+//     PARAM_UNI_PORT_SEND + "=" + "\n" +
     PARAM_VERIFY_MULTICAST + "=yes";
 
   String testStr = "This is test data";
@@ -139,9 +139,9 @@ public class TestLcapComm extends LockssTestCase {
     assertTrue(ssock.getSentPackets().isEmpty());
     comm.send(testSend, (ArchivalUnit)null);
     DatagramPacket sent = (DatagramPacket)ssock.getSentPackets().elementAt(0);
-    assertEquals(InetAddress.getByName(config.get(PARAM_MULTIGROUP)),
+    assertEquals(InetAddress.getByName(config.get(PARAM_MULTI_GROUP)),
 		 sent.getAddress());
-    assertEquals(config.getInt(PARAM_MULTIPORT), sent.getPort());
+    assertEquals(config.getInt(PARAM_MULTI_PORT), sent.getPort());
     assertEquals(testPktData, sent.getData());
   }
   
