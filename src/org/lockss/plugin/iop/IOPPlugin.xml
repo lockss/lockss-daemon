@@ -1,2 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Elements><MapElement><ElementKey>au_url_normalizer</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">org.lockss.plugin.iop.IOPNormalizer</ElementValue></MapElement><MapElement><ElementKey>plugin_identifier</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">org.lockss.plugin.iop.IOPPlugin</ElementValue></MapElement><MapElement><ElementKey>au_name</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"IOP %s %d", journal_id, volume</ElementValue></MapElement><MapElement><ElementKey>plugin_name</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">IOP</ElementValue></MapElement><MapElement><ElementKey>au_crawlrules</ElementKey><ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><string xsi:type="java:java.lang.String">4,"^%s", base_url</string><string xsi:type="java:java.lang.String">1,"%svolume/-lockss=1/%s/%d", base_url, journal_id, volume</string><string xsi:type="java:java.lang.String">2,".*/(help|login)/.*"</string><string xsi:type="java:java.lang.String">1,"%s(abstract|refs|article|mmedia|toc)/%s/%d/.*", base_url, journal_id, volume</string></ElementValue></MapElement><MapElement><ElementKey>au_start_url</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%svolume/-lockss=1/%s/%d", base_url, journal_id, volume</ElementValue></MapElement><MapElement><ElementKey>plugin_config_props</ElementKey><ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><ConfigParamDescr><Key>base_url</Key><DisplayName>Base URL</DisplayName><Description>Usually of the form http://&lt;journal-name&gt;.com/</Description><Type>3</Type><Size>40</Size><Definitional>true</Definitional></ConfigParamDescr><ConfigParamDescr><Key>volume</Key><DisplayName>Volume No.</DisplayName><Type>6</Type><Size>8</Size><Definitional>true</Definitional></ConfigParamDescr><ConfigParamDescr><Key>journal_id</Key><DisplayName>Journal Identifier</DisplayName><Description>Identifier for journal (often used as part of file names)</Description><Type>1</Type><Size>40</Size><Definitional>true</Definitional></ConfigParamDescr></ElementValue></MapElement></Elements>
+<Elements>
+<MapElement>
+<ElementKey>au_url_normalizer</ElementKey>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">org.lockss.plugin.iop.IOPNormalizer</ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>plugin_identifier</ElementKey>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">org.lockss.plugin.iop.IOPPlugin</ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>au_name</ElementKey>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"IOP %s %d", journal_id, volume</ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>plugin_name</ElementKey>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">IOP</ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>au_crawlrules</ElementKey>
+<ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<string xsi:type="java:java.lang.String">4,"^%s", base_url</string>
+<string xsi:type="java:java.lang.String">1,"%svolume/-lockss=1/%s/%d", base_url, journal_id, volume</string>
+<string xsi:type="java:java.lang.String">2,".*/(help|login)/.*"</string>
+<string xsi:type="java:java.lang.String">1,"%s(abstract|refs|article|mmedia|toc)/%s/%d/.*", base_url, journal_id, volume</string>
+</ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>au_start_url</ElementKey>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%svolume/-lockss=1/%s/%d", base_url, journal_id, volume</ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>plugin_config_props</ElementKey>
+<ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ConfigParamDescr>
+<Key>base_url</Key>
+<DisplayName>Base URL</DisplayName>
+<Description>Usually of the form http://&lt;journal-name&gt;.com/</Description>
+<Type>3</Type>
+<Size>40</Size>
+<Definitional>true</Definitional>
+</ConfigParamDescr>
+<ConfigParamDescr>
+<Key>volume</Key>
+<DisplayName>Volume No.</DisplayName>
+<Type>6</Type>
+<Size>8</Size>
+<Definitional>true</Definitional>
+</ConfigParamDescr>
+<ConfigParamDescr>
+<Key>journal_id</Key>
+<DisplayName>Journal Identifier</DisplayName>
+<Description>Identifier for journal (often used as part of file names)</Description>
+<Type>1</Type>
+<Size>40</Size>
+<Definitional>true</Definitional>
+</ConfigParamDescr>
+</ElementValue>
+</MapElement>
+</Elements>
