@@ -1,5 +1,5 @@
 /*
- * $Id: HttpClientUrlConnection.java,v 1.5 2004-03-07 08:39:29 tlipkis Exp $
+ * $Id: HttpClientUrlConnection.java,v 1.6 2004-03-09 23:41:34 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -228,7 +228,10 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
       if (value!=null) {
         // only store headers with values
         // qualify header names to avoid conflict with our properties
-	String propKey = (key != null) ? (prefix + key) : (prefix + ix);
+	String propKey = (key != null) ? key : ("header_" + ix);
+	if (prefix != null) {
+	  propKey = prefix + propKey;
+	}
 	props.setProperty(propKey, value);
       }
     }

@@ -1,5 +1,5 @@
 /*
- * $Id: LockssUrlConnection.java,v 1.3 2004-02-27 04:28:49 tlipkis Exp $
+ * $Id: LockssUrlConnection.java,v 1.4 2004-03-09 23:41:34 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -74,6 +74,9 @@ public interface LockssUrlConnection {
 
   /** Set the If-Modified-Since request header */
   public void setIfModifiedSince(long time);
+
+  /** Set the If-Modified-Since request header */
+  public void setIfModifiedSince(String time);
 
   /** Set a request header to a time value */
   public void setRequestPropertyDate(String key, long time);
