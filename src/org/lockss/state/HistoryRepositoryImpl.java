@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.37 2003-07-17 00:20:48 tlipkis Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.38 2003-08-07 00:48:41 eaalto Exp $
  */
 
 /*
@@ -158,7 +158,7 @@ public class HistoryRepositoryImpl
       return new NodeStateImpl(cus, nsb, this);
     } catch (org.exolab.castor.xml.MarshalException me) {
       logger.error("Marshalling exception on nodestate for '" +
-                   cus.getUrl() + "' ", me);
+                   cus.getUrl() + "': " + me.getMessage());
       // continue
       return new NodeStateImpl(cus, -1,
                                new CrawlState(-1, CrawlState.FINISHED, 0),
@@ -268,7 +268,8 @@ public class HistoryRepositoryImpl
                          asb.getLastTopLevelPollTime(),
                          -1, this);
     } catch (org.exolab.castor.xml.MarshalException me) {
-      logger.error("Marshalling exception for austate '"+au.getName()+"': "+me);
+      logger.error("Marshalling exception for austate '"+au.getName()+"': " +
+                   me.getMessage());
       // continue
       return new AuState(au, -1, -1, -1, this);
     } catch (Exception e) {
@@ -318,7 +319,7 @@ public class HistoryRepositoryImpl
       return damNodes;
     } catch (org.exolab.castor.xml.MarshalException me) {
       logger.error("Marshalling exception for damaged nodes for '"+
-                   au.getName()+"': "+me);
+                   au.getName()+"': " + me.getMessage());
       // continue
       return new DamagedNodeSet(au, this);
     } catch (Exception e) {
