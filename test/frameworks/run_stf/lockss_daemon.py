@@ -345,16 +345,14 @@ class Client:
         return False
 
     def isAuRepaired(self, au):
-        table = self.__getStatusTable('ArchivalUnitTable', au.getAuId())
-        node = self.getAuNode(au, 'lockssau')
-        url = node.url
-        for row in table:
-            rowUrl = row['NodeName']
-            if url == rowUrl:
-                # A repaired (non-damaged) node simply will not have
-                # a 'NodeStatus' key.
-                return (not row.has_key('NodeStatus'))
-        # au wasn't found.
+        """ Return true if the top level of the AU has been repaired. """
+        tab = self.getAuPolls(au)
+        for row in tab:
+            if (row.has_key('Range') or not row['PollType'] == 'C'):
+                continue
+            if (row['URL'] == 'lockssau:'):
+                return row['Status'] == 'Repaired'
+        # Poll wasn't found.
         return False
 
     def isContentRepaired(self, au, node):
@@ -365,10 +363,8 @@ class Client:
                 continue
             if not (row['PollType'] == 'C' and row['Range'] == 'single node'):
                 continue
-            rowUrl = row['URL']
-            rowStatus = row['Status']
-            if rowUrl == node.url:
-                return rowStatus == 'Repaired'
+            if row['URL'] == node.url:
+                return row['Status'] == 'Repaired'
         # Poll wasn't found
         return False
 
