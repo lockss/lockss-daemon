@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessage.java,v 1.26 2003-03-20 02:13:11 claire Exp $
+ * $Id: LcapMessage.java,v 1.27 2003-03-22 03:04:44 tal Exp $
  */
 
 /*
@@ -57,8 +57,6 @@ public class LcapMessage
 
   public static final String PARAM_HASH_ALGORITHM = Configuration.PREFIX +
       "protocol.hashAlgorithm";
-  public static final String PARAM_SEND_HOPCOUNT = Configuration.PREFIX +
-      "protocol.sendHopcount";
 
   public static final String DEFAULT_HASH_ALGORITM = "SHA-1";
 
@@ -70,7 +68,7 @@ public class LcapMessage
   public static final String[] POLL_NAMES = {
       "NamePoll", "ContentPoll", "VerfiyPoll"};
 
-  public static final int MAX_HOP_COUNT = 16;
+  public static final int MAX_MAX_HOP_COUNT = 16;
   public static final int SHA_LENGTH = 20;
   public static final int MAX_PACKET_SIZE = 1024; // Don't exceed 1450 - 28
 
@@ -113,7 +111,6 @@ public class LcapMessage
   private static byte[] signature = {
       'l', 'p', 'm', '1'};
   private static Logger log = Logger.getLogger("LcapMessage");
-  private static byte theSendHopcount = -1;
   private String m_key = null;
 
   protected LcapMessage() throws IOException {
@@ -256,7 +253,6 @@ public class LcapMessage
       msg.m_startTime = TimeBase.nowMs();
       msg.m_stopTime = msg.m_startTime + timeRemaining;
       msg.m_originAddr = localID.getAddress();
-      msg.m_hopCount = sendHopCount();
     }
     return msg;
 
@@ -340,7 +336,6 @@ public class LcapMessage
     if (!hopCountInRange(m_hopCount)) {
       throw new ProtocolException("Hop count out of range.");
     }
-    m_hopCount--;
 
     int prop_len = dis.readShort();
     byte[] hash_bytes = new byte[SHA_LENGTH];
@@ -562,6 +557,11 @@ public class LcapMessage
   }
 
   public void setHopCount(int hopCount) {
+    if (hopCount < 0) {
+      hopCount = 0;
+    } else if (hopCount > MAX_MAX_HOP_COUNT) {
+      hopCount = MAX_MAX_HOP_COUNT;
+    }
     m_hopCount = (byte) hopCount;
   }
 
@@ -590,13 +590,6 @@ public class LcapMessage
       m_key = String.valueOf(B64Code.encode(m_challenge));
     }
     return m_key;
-  }
-
-  static byte sendHopCount() {
-    if (theSendHopcount == -1) {
-      theSendHopcount = (byte) Configuration.getIntParam(PARAM_SEND_HOPCOUNT, 5);
-    }
-    return theSendHopcount;
   }
 
   String entriesToString(int maxBufSize) {
@@ -664,8 +657,8 @@ public class LcapMessage
     return sb.toString();
   }
 
-  private boolean hopCountInRange(byte hopCount) {
-    if (hopCount < 0 || hopCount > MAX_HOP_COUNT)
+  private boolean hopCountInRange(int hopCount) {
+    if (hopCount < 0 || hopCount > MAX_MAX_HOP_COUNT)
       return false;
     return true;
   }

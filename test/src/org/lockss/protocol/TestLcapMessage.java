@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapMessage.java,v 1.16 2003-03-20 02:13:12 claire Exp $
+ * $Id: TestLcapMessage.java,v 1.17 2003-03-22 03:04:44 tal Exp $
  */
 
 /*
@@ -149,7 +149,7 @@ public class TestLcapMessage extends LockssTestCase {
     assertEquals(rep_msg.m_pluginID, testmsg.m_pluginID);
     // TODO: figure out how to test time
     assertEquals(rep_msg.m_multicast ,false);
-    assertEquals(rep_msg.m_hopCount,2);
+    assertEquals(2, rep_msg.m_hopCount);
 
     assertTrue(Arrays.equals(rep_msg.m_challenge,testmsg.m_challenge));
     assertTrue(Arrays.equals(rep_msg.m_verifier,testmsg.m_verifier));
@@ -206,7 +206,7 @@ public class TestLcapMessage extends LockssTestCase {
       assertEquals(msg.m_opcode,LcapMessage.CONTENT_POLL_REQ);
       // TODO: figure out how to test time
       assertEquals(msg.m_multicast ,false);
-      assertEquals(msg.m_hopCount,1); // we decremented this on decode
+      assertEquals(2, msg.m_hopCount);
 
       assertTrue(Arrays.equals(msg.m_challenge,testbytes));
       assertTrue(Arrays.equals(msg.m_verifier,testbytes));
@@ -258,6 +258,20 @@ public class TestLcapMessage extends LockssTestCase {
     assertNull(msg.m_lwrRem);
     assertNull(msg.m_uprRem);
 
+  }
+
+  public void testHopCount() {
+    int max = LcapMessage.MAX_MAX_HOP_COUNT;
+    testmsg.setHopCount(0);
+    assertEquals(0, testmsg.getHopCount());
+    testmsg.setHopCount(-40);
+    assertEquals(0, testmsg.getHopCount());
+    testmsg.setHopCount(max);
+    assertEquals(max, testmsg.getHopCount());
+    testmsg.setHopCount(max + 1);
+    assertEquals(max, testmsg.getHopCount());
+    testmsg.setHopCount(max - 1);
+    assertEquals(max - 1, testmsg.getHopCount());
   }
 
   public static void main(String[] argv) {
