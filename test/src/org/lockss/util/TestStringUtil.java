@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.31 2004-01-28 05:23:10 tlipkis Exp $
+ * $Id: TestStringUtil.java,v 1.32 2004-01-28 05:31:50 tlipkis Exp $
  */
 
 /*
@@ -395,7 +395,7 @@ System.out.println("s: "+s);
     assertEquals(st2, StringUtil.trimStackTrace(s1, st2));
   }
 
-  public void testEndsWithIgnoreCaase() {
+  public void testEndsWithIgnoreCase() {
     assertTrue(StringUtil.endsWithIgnoreCase("", ""));
     assertTrue(StringUtil.endsWithIgnoreCase("1", ""));
     assertTrue(StringUtil.endsWithIgnoreCase("1", "1"));
@@ -406,7 +406,7 @@ System.out.println("s: "+s);
     assertFalse(StringUtil.endsWithIgnoreCase("foo.opt", "xopt"));
   }
 
-  public void testStartsWithIgnoreCaase() {
+  public void testStartsWithIgnoreCase() {
     assertTrue(StringUtil.startsWithIgnoreCase("", ""));
     assertTrue(StringUtil.startsWithIgnoreCase("1", ""));
     assertTrue(StringUtil.startsWithIgnoreCase("1", "1"));
