@@ -1,5 +1,5 @@
 /*
- * $Id: PlatformInfo.java,v 1.4 2004-06-20 00:03:52 tlipkis Exp $
+ * $Id: PlatformInfo.java,v 1.5 2004-08-02 03:24:07 tlipkis Exp $
  */
 
 /*
@@ -67,7 +67,7 @@ public class PlatformInfo {
 
   public DF getDF(String path) throws UnsupportedException {
     String cmd = "df -k -P " + path + "";
-    log.debug2("cmd: " + cmd);
+    if (log.isDebug2()) log.debug2("cmd: " + cmd);
     try {
       Process p = rt().exec(cmd);
       Reader rdr =
@@ -87,8 +87,10 @@ public class PlatformInfo {
       }
 
       List lines = StringUtil.breakAt(s, '\n');
-      for (Iterator iter = lines.iterator(); iter.hasNext(); ) {
-	log.debug2("DF: " + (String)iter.next());
+      if (log.isDebug2()) {
+	for (Iterator iter = lines.iterator(); iter.hasNext(); ) {
+	  log.debug2("DF: " + (String)iter.next());
+	}
       }
       if (lines == null || lines.size() < 2) {
 	return null;
@@ -125,6 +127,7 @@ public class PlatformInfo {
       df.percent = percentFmt.parse(df.percentString).doubleValue();
     } catch (ParseException e) {
     }
+    if (log.isDebug2()) log.debug2(df.toString());
     return df;
   }
 
@@ -175,6 +178,9 @@ public class PlatformInfo {
     public String getMnt() {
       return mnt;
     }
+    public String toString() {
+      return "[DF: " + fs + "]";
+    }
   }
 
   /** Hack to get thread dump, using DebugUtils in test hierarchy, if it's
@@ -184,7 +190,7 @@ public class PlatformInfo {
     try {
       Class dbg = Class.forName("org.lockss.test.DebugUtils");
       Method meth = dbg.getDeclaredMethod("staticThreadDump", new Class[0]);
-      log.info("meth: " + meth);
+      if (log.isDebug2()) log.debug2("meth: " + meth);
       meth.invoke(null, null);
     } catch (Exception e) {
       log.warning("threadDump threw", e);
