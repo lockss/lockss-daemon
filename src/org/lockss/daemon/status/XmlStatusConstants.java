@@ -1,5 +1,5 @@
 /*
- * $Id: XmlStatusConstants.java,v 1.2 2004-02-21 02:06:48 eaalto Exp $
+ * $Id: XmlStatusConstants.java,v 1.3 2004-03-06 00:42:59 eaalto Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.daemon.status;
 
 public class XmlStatusConstants {
   public static final String COLUMNDESCRIPTOR = "columndescriptor";
+  public static final String COLUMN_NAME = "columnname";
   public static final String NAME = "name";
   public static final String KEY = "key";
   public static final String TABLE = "table";

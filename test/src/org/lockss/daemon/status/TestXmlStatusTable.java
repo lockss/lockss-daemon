@@ -1,5 +1,5 @@
 /*
- * $Id: TestXmlStatusTable.java,v 1.3 2004-02-21 02:06:49 eaalto Exp $
+ * $Id: TestXmlStatusTable.java,v 1.4 2004-03-06 00:42:58 eaalto Exp $
  */
 
 /*
@@ -33,11 +33,9 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.daemon.status;
 
 import java.util.*;
-import java.text.DateFormat;
 
 import org.lockss.test.*;
 import org.lockss.util.*;
-import org.lockss.servlet.DaemonStatus;
 
 import org.w3c.dom.*;
 
@@ -124,10 +122,17 @@ public class TestXmlStatusTable extends LockssTestCase {
                                              XmlStatusConstants.STANDARD_ELEM);
     assertEquals(2, values.getLength());
     // standard values 1 & 2
-    Node value1 = values.item(0);
-    assertEquals("123", builder.getText(value1));
-    Node value2 = values.item(1);
-    assertEquals("row1 string", builder.getText(value2));
+    Element elem1 = (Element)values.item(0);
+    Element valueElem = builder.getElement(elem1, XmlStatusConstants.VALUE);
+    Element colElem = builder.getElement(elem1,
+                                         XmlStatusConstants.COLUMN_NAME);
+    assertEquals("123", builder.getText(valueElem));
+    assertEquals("intCol", builder.getText(colElem));
+    Element elem2 = (Element)values.item(1);
+    valueElem = builder.getElement(elem2, XmlStatusConstants.VALUE);
+    colElem = builder.getElement(elem2, XmlStatusConstants.COLUMN_NAME);
+    assertEquals("row1 string", builder.getText(valueElem));
+    assertEquals("strCol", builder.getText(colElem));
 
     // row 2
     Element rowElem2 = (Element)rowElements.item(1);
@@ -136,11 +141,14 @@ public class TestXmlStatusTable extends LockssTestCase {
     assertEquals(1, values.getLength());
     // display value
     Element dispValue = (Element)values.item(0);
-    assertEquals("456", builder.getText(dispValue));
-    assertEquals("color1", builder.getAttribute(dispValue,
+    valueElem = builder.getElement(dispValue, XmlStatusConstants.VALUE);
+    colElem = builder.getElement(dispValue, XmlStatusConstants.COLUMN_NAME);
+    assertEquals("456", builder.getText(valueElem));
+    assertEquals("color1", builder.getAttribute(valueElem,
                                                 XmlStatusConstants.COLOR));
-    assertEquals("true", builder.getAttribute(dispValue,
+    assertEquals("true", builder.getAttribute(valueElem,
                                               XmlStatusConstants.BOLD));
+    assertEquals("intCol", builder.getText(colElem));
 
     // 1 reference value
     values = builder.getElementList(rowElem2,
@@ -153,6 +161,8 @@ public class TestXmlStatusTable extends LockssTestCase {
     assertEquals("key2", builder.getText(key));
     Element value = builder.getElement(refValue, XmlStatusConstants.VALUE);
     assertEquals("row2 string", builder.getText(value));
+    colElem = builder.getElement(refValue, XmlStatusConstants.COLUMN_NAME);
+    assertEquals("strCol", builder.getText(colElem));
   }
 
   private void testHasSummaryInformation(Element rootElem) {

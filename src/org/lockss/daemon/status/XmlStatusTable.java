@@ -1,5 +1,5 @@
 /*
- * $Id: XmlStatusTable.java,v 1.4 2004-02-21 02:06:48 eaalto Exp $
+ * $Id: XmlStatusTable.java,v 1.5 2004-03-06 00:42:59 eaalto Exp $
  */
 
 /*
@@ -33,7 +33,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.daemon.status;
 
 import java.util.*;
-import java.text.DateFormat;
 
 import org.lockss.util.*;
 import org.lockss.servlet.DaemonStatus;
@@ -180,8 +179,9 @@ public class XmlStatusTable {
 
       for (int ii=0; ii<colNames.length; ii++) {
         // get the value for each column
-        Object object = rowMap.get(colNames[ii]);
+        String colName = colNames[ii];
         int type = colTypes[ii];
+        Object object = rowMap.get(colName);
 
         if (object instanceof StatusTable.Reference) {
           // Reference
@@ -190,6 +190,10 @@ public class XmlStatusTable {
 
           Element referenceElement = xmlBuilder.createElement(rowElement,
               XmlStatusConstants.REFERENCE_ELEM);
+
+          element = xmlBuilder.createElement(referenceElement,
+              XmlStatusConstants.COLUMN_NAME);
+          xmlBuilder.addText(element, colName);
 
           element = xmlBuilder.createElement(referenceElement,
               XmlStatusConstants.NAME);
@@ -238,8 +242,16 @@ public class XmlStatusTable {
             object = dv.getValue();
           }
           // save display charactistics as required
-          element = xmlBuilder.createElement(rowElement,
+          Element stanElement = xmlBuilder.createElement(rowElement,
               XmlStatusConstants.STANDARD_ELEM);
+          // set column id
+          element = xmlBuilder.createElement(stanElement,
+              XmlStatusConstants.COLUMN_NAME);
+          xmlBuilder.addText(element, colName);
+
+          // set value
+          element = xmlBuilder.createElement(stanElement,
+              XmlStatusConstants.VALUE);
           if (color != null) {
             xmlBuilder.setAttribute(element, XmlStatusConstants.COLOR, color);
           }
