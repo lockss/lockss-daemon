@@ -1,5 +1,5 @@
 /*
- * $Id: BatchAuConfig.java,v 1.4 2005-01-19 04:17:43 tlipkis Exp $
+ * $Id: BatchAuConfig.java,v 1.5 2005-01-19 23:31:02 tlipkis Exp $
  */
 
 /*
@@ -194,23 +194,19 @@ public class BatchAuConfig extends LockssServlet {
     Table tbl = new Table(0, "align=center cellspacing=2 cellpadding=4");
     addMenuItem(tbl, "Add Titles", ACTION_SELECT_SETS_TO_ADD,
 		"Add one or more groups of titles");
-    if (numInactive > 0 || isDebugUser() ) {
-      addMenuItem(tbl, "Reactivate Titles", ACTION_SELECT_SETS_TO_REACT,
-		  "Reactivate selected titles", numInactive > 0);
-    }
     if (numActive > 0 || isDebugUser() ) {
       addMenuItem(tbl, "Remove Titles", ACTION_SELECT_SETS_TO_DEL,
 		  "Remove selected titles", numActive > 0);
     }
-    if (numActive > 0 || isDebugUser() ) {
+    if (isDebugUser() ) {
       addMenuItem(tbl, "Deactivate Titles", ACTION_SELECT_SETS_TO_DEACT,
 		  "Deactivate selected titles", numActive > 0);
+      addMenuItem(tbl, "Reactivate Titles", ACTION_SELECT_SETS_TO_REACT,
+		  "Reactivate selected titles", numInactive > 0);
     }
-    if (numActive > 0 || numInactive > 0 || isDebugUser() ) {
-      addMenuItem(tbl, "Backup", ACTION_BACKUP,
-		  "Backup cache config to a file on your workstation",
-		  numActive > 0 || numInactive > 0);
-    }
+    addMenuItem(tbl, "Backup", ACTION_BACKUP,
+		"Backup cache config to a file on your workstation",
+		numActive > 0 || numInactive > 0);
     addMenuItem(tbl, "Restore", ACTION_RESTORE,
 		"Restore cache config from a file on your workstation");
     addMenuItem(tbl, "Manual Add/Edit", "Add, Edit or Delete an individual AU",
@@ -277,7 +273,7 @@ public class BatchAuConfig extends LockssServlet {
 	  tbl.add(ts.getName());
 	  tbl.add(" (");
 	  tbl.add(Integer.toString(numOk));
-	  tbl.add("}");
+	  tbl.add(")");
 	}
       }
     }
@@ -411,11 +407,9 @@ public class BatchAuConfig extends LockssServlet {
 			  Map auConfs) {
     Table tbl = new Table(0, "align=center cellspacing=4 cellpadding=0");
 
-    if (isLongTable(bas)) {
-      tbl.newRow();
-      tbl.newCell();
-      tbl.add(getSelectAllButtons());
-    }
+    tbl.newRow();
+    tbl.newCell();
+    tbl.add(getSelectAllButtons());
     tbl.newRow();
     tbl.addHeading(verb.cap + "?", "align=right rowSpan=2");
     boolean repoFlg = verb.isAdd && repos.size() > 1;
@@ -483,9 +477,11 @@ public class BatchAuConfig extends LockssServlet {
       }
     }
 
-    tbl.newRow();
-    tbl.newCell();
-    tbl.add(getSelectAllButtons());
+    if (isLongTable(bas)) {
+      tbl.newRow();
+      tbl.newCell();
+      tbl.add(getSelectAllButtons());
+    }
 
     if (repoFootElement != null && isAnyAssignedRepo) {
       repoFootElement.add(addFootnote(FOOT_REPO_CHOICE));
