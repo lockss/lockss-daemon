@@ -1,5 +1,5 @@
 /*
- * $Id: MailTarget.java,v 1.1 2003-01-07 02:06:31 aalto Exp $
+ * $Id: MailTarget.java,v 1.2 2003-01-07 20:12:37 aalto Exp $
  */
 
 /*
@@ -35,8 +35,11 @@ package org.lockss.util;
 
 import java.io.*;
 import java.net.*;
+import java.util.*;
 import org.lockss.protocol.IdentityManager;
 import org.lockss.daemon.Configuration;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 
 /**
  * Simple SMTP client.
@@ -55,24 +58,25 @@ public class MailTarget {
   /**
    * Configuration parameter for the log email 'to' address.
    */
-  public static final String PARAM_LOG_EMAIL_TARGET = Configuration.PREFIX +
-      "log.email.target";
+  public static final String PARAM_LOG_EMAIL_TO = Configuration.PREFIX +
+      "log.email.to";
 
   /**
    * Configuration parameter for the log email 'from' address.
    */
-  public static final String PARAM_LOG_EMAIL_SOURCE = Configuration.PREFIX +
-      "log.email.source";
+  public static final String PARAM_LOG_EMAIL_FROM = Configuration.PREFIX +
+      "log.email.from";
 
   /**
    * Configuration parameter to enable email logging.
    */
-  public static final String PARAM_LOG_EMAIL_ACTIVE = Configuration.PREFIX +
-      "log.email.active";
+  public static final String PARAM_LOG_EMAIL_ENABLED = Configuration.PREFIX +
+      "log.email.enabled";
 
   static final int DEFAULT_SMTPPORT = 25;
   static final boolean DEFAULT_ENABLING = true;
   static final String ERROR_SUBJECT = "Error on machine ";
+  static final DateFormat df = new SimpleDateFormat("HH:mm:ss.SSS");
 
   static String smtpHost = null;
   static int smtpPort;
@@ -83,7 +87,12 @@ public class MailTarget {
   protected static Logger logger = Logger.getLogger("MailTarget");
 
   public void init() {
-    loadConfiguration();
+    Configuration.registerConfigurationCallback(new Configuration.Callback() {
+        public void configurationChanged(Configuration oldConfig,
+                                         Configuration newConfig,
+                                         Set changedKeys) {
+          loadConfiguration();
+        }});
     localHostName = IdentityManager.getIdentityManager().getLocalHostName();
 
     if (localHostName == null) {
@@ -99,14 +108,16 @@ public class MailTarget {
   }
 
   public void handleMessage(Logger logger, int level, String message) {
+    String levelStr = Logger.nameOf(level) + ": ";
+    String subject = levelStr + ERROR_SUBJECT + localHostName;
+    String body = df.format(new Date()) + ":\n" + levelStr + message;
     if (!emailEnabled) {
-      this.logger.warning("Email logging not enabled; message discarded: "+message);
+      this.logger.warning("Email logging not enabled; message discarded: " +
+                          levelStr + message);
       return;
     }
-
-    String subject = ERROR_SUBJECT + localHostName;
     try {
-      SmtpMailer.sendMail(toAddr, fromAddr, subject, message, smtpHost,
+      SmtpMailer.sendMail(toAddr, fromAddr, subject, body, smtpHost,
                           smtpPort, localHostName);
     } catch (IOException ioe) {
       this.logger.error("Couldn't send mail correctly.", ioe);
@@ -117,22 +128,24 @@ public class MailTarget {
    * Load the configuration parameters.
    * If set in props use that, else load from ssmtp config file.
    */
-  private static void loadConfiguration() {
+  private void loadConfiguration() {
     smtpHost = Configuration.getParam(PARAM_SMTPHOST);
     smtpPort = Configuration.getIntParam(PARAM_SMTPPORT, DEFAULT_SMTPPORT);
-    toAddr = Configuration.getParam(PARAM_LOG_EMAIL_TARGET);
-    fromAddr = Configuration.getParam(PARAM_LOG_EMAIL_SOURCE);
-    emailEnabled = Configuration.getBooleanParam(PARAM_LOG_EMAIL_ACTIVE,
+    toAddr = Configuration.getParam(PARAM_LOG_EMAIL_TO);
+    fromAddr = Configuration.getParam(PARAM_LOG_EMAIL_FROM);
+    emailEnabled = Configuration.getBooleanParam(PARAM_LOG_EMAIL_ENABLED,
         DEFAULT_ENABLING);
     if ((smtpHost==null) || (toAddr==null) || (fromAddr==null)) {
       String parameter = PARAM_SMTPHOST;
       if (toAddr==null) {
-        parameter = PARAM_LOG_EMAIL_TARGET;
+        parameter = PARAM_LOG_EMAIL_TO;
       } else if (fromAddr==null) {
-        parameter = PARAM_LOG_EMAIL_SOURCE;
+        parameter = PARAM_LOG_EMAIL_FROM;
       }
-      logger.error("Couldn't determine "+parameter+" from Configuration.");
-      throw new IllegalStateException("Couldn't determine "+parameter+" from Configuration");
+      logger.error("Couldn't determine "+parameter+
+                   " from Configuration.  Disabling email logging...");
+      emailEnabled = false;
+
     }
   }
 }
