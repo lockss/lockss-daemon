@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManager.java,v 1.4 2003-01-04 03:31:42 claire Exp $
+ * $Id: IdentityManager.java,v 1.5 2003-01-07 03:09:51 claire Exp $
  */
 
 /*
@@ -42,6 +42,10 @@ import org.exolab.castor.xml.Unmarshaller;
 import org.exolab.castor.xml.Marshaller;
 import java.io.FileWriter;
 import java.io.FileReader;
+import java.util.List;
+import java.util.Iterator;
+import java.util.Collection;
+import java.util.ArrayList;
 
 /**
  * <p>Title: </p>
@@ -199,26 +203,24 @@ public class IdentityManager {
     reputationDeltas[VOTE_DISOWNED] = Configuration.getIntParam(PARAM_VOTE_DISOWNED, -400);
   }
 
-  void reloadIdentities()  {
- /*   try {
-      String fn = Configuration.getParam(PARAM_IDENTITY_DB, "/tmp/iddb")
-                  + File.separator + IDENTITY_DB_FILENAME;
+  void reloadIdentities() {
+    try {
+      String fn = Configuration.getParam(PARAM_IDENTITY_DB_DIR, "/tmp/iddb")
+                + File.separator + IDENTITY_DB_FILENAME;
       File iddbFile = new File(fn);
 
       Unmarshaller unmarshaller = new Unmarshaller(IdentityBean.class);
-      IdentityBean nhb = (IdentityBean)unmarshaller.unmarshal(new FileReader(iddbFile));
-      //XXX TODO  convert to our hashmap
-      //((NodeStateImpl)nodeState).setPollHistoryBeanList(new ArrayList(nhb.historyBeans));
+      IdentityListBean idlb = (IdentityListBean)unmarshaller.unmarshal(
+          new FileReader(iddbFile));
+      setIdentities(idlb.getIdentityList());
+
     } catch (Exception e) {
-      theLog.error("Couldn't load identity history: ", e);
-      throw new ProtocolException("Unable to load Identity Database XML");
+      theLog.warning("Couldn't load identity database: " + e.getMessage());
+      theIdentities =  new HashMap();
     }
-*/
-    theIdentities = new HashMap();
   }
 
-  void storeIdentities()  {
-/*
+  void storeIdentities() throws ProtocolException {
     try {
       String fn = Configuration.getParam(PARAM_IDENTITY_DB_DIR,"/tmp/iddb");
 
@@ -226,17 +228,51 @@ public class IdentityManager {
       if (!iddbDir.exists()) {
         iddbDir.mkdirs();
       }
-      File iddbFile = new File(iddb, IDENTITY_DB_FILENAME);
-      IdentityBean nhb = new IdentityBean();
-     //XXX TODO: convert our hashmap
+      File iddbFile = new File(iddbDir, IDENTITY_DB_FILENAME);
+      IdentityListBean idlb = getIdentityListBean();
       Marshaller marshaller = new Marshaller(new FileWriter(iddbFile));
-      marshaller.marshal(nhb);
+      marshaller.marshal(idlb);
+
     } catch (Exception e) {
-      theLog.error("Couldn't store poll history: ", e);
-      throw new ProtocolException("Unable to store Identity Database XML");
+      theLog.error("Couldn't store identity database: ", e);
+      throw new ProtocolException("Unable to store identity database.");
     }
-*/
   }
+
+  IdentityListBean getIdentityListBean() {
+    IdentityListBean listBean = new IdentityListBean();
+
+    synchronized(theIdentities) {
+      List beanList = new ArrayList(theIdentities.size());
+      Iterator mapIter = theIdentities.values().iterator();
+      while(mapIter.hasNext()) {
+        LcapIdentity id = (LcapIdentity) mapIter.next();
+        IdentityBean bean = new IdentityBean(id.getIdKey(),id.getReputation());
+        beanList.add(bean);
+      }
+      listBean.setIdentityList(beanList);
+      return listBean;
+    }
+  }
+
+  void setIdentities(Collection idList) {
+    theIdentities = new HashMap();
+    Iterator beanIter = idList.iterator();
+    synchronized(theIdentities) {
+      while (beanIter.hasNext()) {
+        IdentityBean bean = (IdentityBean)beanIter.next();
+        try {
+          LcapIdentity id = new LcapIdentity(bean.getIdKey(), bean.getReputation());
+          theIdentities.put(id.getIdKey(), id);
+        }
+        catch (UnknownHostException ex) {
+          theLog.warning("Error reloading identity-Unknown Host: " +
+                         bean.getIdKey());
+        }
+      }
+    }
+  }
+
 
   //
   public void changeReputation(LcapIdentity id, int changeKind) {
