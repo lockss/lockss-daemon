@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.20 2003-06-20 22:34:53 claire Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.21 2003-06-25 21:09:39 troberts Exp $
  */
 
 /*
@@ -52,6 +52,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
   private MockNodeManager nodeManager;
   private MockActivityRegulator activityRegulator;
   private MockCrawler crawler;
+  private CachedUrlSet cus;
 
   public TestCrawlManagerImpl(String msg) {
     super(msg);
@@ -71,8 +72,10 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 
     crawlManager.initService(theDaemon);
     crawlManager.startService();
-
-    activityRegulator.setStartCusActivity(true);
+    
+    cus = mau.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(GENERIC_URL));
+    activityRegulator.setStartCusActivity(cus, true);
+//     activityRegulator.setStartCusActivity(true);
     activityRegulator.setStartAuActivity(true);
     crawler = new MockCrawler();
     crawlManager.setTestCrawler(crawler);
@@ -141,12 +144,34 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       throws MalformedURLException {
     SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
     TestCrawlCB cb = new TestCrawlCB(sem);
-    CachedUrlSet cus =
-      mau.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(GENERIC_URL));
+
     crawlManager.scheduleRepair(mau, new URL(GENERIC_URL), cb, null);
 
     assertTrue("Crawl didn't finish in 10 seconds", sem.take(TEN_SECONDS));
     activityRegulator.assertRepairCrawlFinished(cus);
+  }
+
+  public void testRepairCrawlSignalsActivityRegulatorWhenDoneMultiUrls() 
+      throws MalformedURLException {
+    URL url1 = new URL("http://www.example.com/index1.html");
+    URL url2 = new URL("http://www.example.com/index2.html");
+    List urls = ListUtil.list(url1, url2);
+
+    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
+    TestCrawlCB cb = new TestCrawlCB(sem);
+    CachedUrlSet cus1 =
+      mau.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url1.toString()));
+    CachedUrlSet cus2 =
+      mau.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url2.toString()));
+
+    activityRegulator.setStartCusActivity(cus1, true);
+    activityRegulator.setStartCusActivity(cus2, true);
+
+    crawlManager.scheduleRepair(mau, urls, cb, null);
+
+    assertTrue("Crawl didn't finish in 10 seconds", sem.take(TEN_SECONDS));
+    activityRegulator.assertRepairCrawlFinished(cus1);
+    activityRegulator.assertRepairCrawlFinished(cus2);
   }
 
 
@@ -203,15 +228,24 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 
   public void testScheduleRepairNullUrl() {
     try{
-      crawlManager.scheduleRepair(mau, null,
+      crawlManager.scheduleRepair(mau, (URL)null,
 				  new TestCrawlCB(), "blah");
       fail("Didn't throw IllegalArgumentException on null URL");
     } catch (IllegalArgumentException iae) {
     }
   }
 
+  public void testScheduleRepairNullUrlList() {
+    try{
+      crawlManager.scheduleRepair(mau, (List)null,
+				  new TestCrawlCB(), "blah");
+      fail("Didn't throw IllegalArgumentException on null URL list");
+    } catch (IllegalArgumentException iae) {
+    }
+  }
+
   public void testNoRepairIfNotAllowed() throws MalformedURLException {
-    activityRegulator.setStartCusActivity(false);
+    activityRegulator.setStartCusActivity(cus, false);
     SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
     TestCrawlCB cb = new TestCrawlCB(sem);
 
@@ -219,6 +253,30 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 
     assertTrue("Crawl didn't finish in 10 seconds", sem.take(TEN_SECONDS));
     assertFalse("doCrawl() called", crawler.doCrawlCalled());
+  }
+
+  public void testNoRepairIfNotAllowedMultiUrls()
+      throws MalformedURLException {
+    URL url1 = new URL("http://www.example.com/index1.html");
+    URL url2 = new URL("http://www.example.com/index2.html");
+    List urls = ListUtil.list(url1, url2);
+
+    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
+    TestCrawlCB cb = new TestCrawlCB(sem);
+    CachedUrlSet cus1 =
+      mau.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url1.toString()));
+    CachedUrlSet cus2 =
+      mau.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url2.toString()));
+
+
+    activityRegulator.setStartCusActivity(cus1, true);
+    activityRegulator.setStartCusActivity(cus2, false);
+
+    crawlManager.scheduleRepair(mau, urls, cb, null);
+
+    assertTrue("Crawl didn't finish in 10 seconds", sem.take(TEN_SECONDS));
+    assertTrue("doCrawl() called", crawler.doCrawlCalled());
+    assertEquals(ListUtil.list(url1.toString()), crawler.getStartUrls());
   }
 
   public void testBasicRepairCrawl() throws MalformedURLException {
