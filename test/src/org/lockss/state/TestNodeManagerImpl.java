@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.89 2003-06-25 21:19:55 eaalto Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.90 2003-06-26 01:05:24 eaalto Exp $
  */
 
 /*
@@ -654,8 +654,9 @@ public class TestNodeManagerImpl extends LockssTestCase {
     // first repair scheduled
     assertEquals(MockCrawlManager.SCHEDULED, crawlManager.getUrlStatus(
         TEST_URL + repairUrl));
-    // only one repair per poll
-    assertNull(crawlManager.getUrlStatus(TEST_URL + repairUrl2));
+    // second repair scheduled
+    assertEquals(MockCrawlManager.SCHEDULED, crawlManager.getUrlStatus(
+        TEST_URL + repairUrl2));
     // node created
     assertNotNull(theDaemon.getLockssRepository(mau).getNode(TEST_URL +
         createUrl));
@@ -1123,48 +1124,8 @@ public class TestNodeManagerImpl extends LockssTestCase {
     return p;
   }
 
-/* XXX move to test of Daemon
-  public void testGetNodeManager() throws Exception {
-    String auId = mau.getAUId();
-
-    try {
-      nms.getNodeManager(mau);
-      fail("Should throw IllegalArgumentException.");
-    } catch (IllegalArgumentException iae) { }
-
-    nms.addNodeManager(mau);
-    NodeManager node1 = nms.getNodeManager(mau);
-    assertNotNull(node1);
-
-    mau = new MockArchivalUnit();
-    theDaemon.getLockssRepository(mau).createNewNode(TEST_URL);
-
-    nms.addNodeManager(mau);
-    NodeManager node2 = nms.getNodeManager(mau);
-    assertNotSame(node1, node2);
-
-    mau = new MockArchivalUnit();
-    try {
-      nms.getNodeManager(mau);
-      fail("Should throw IllegalArgumentException.");
-    } catch (IllegalArgumentException iae) { }
-  }
-
-  public void testNodeManagerStartAndStop() {
-    nms.addNodeManager(mau);
-    NodeManagerImpl node = (NodeManagerImpl)nms.getNodeManager(mau);
-    // if the NodeManagerImpl has started, the thread is non-null
-    assertNotNull(node.treeWalkHandler);
-
-    nms.stopService();
-    // once stopped, the thread should be null
-    assertNull(node.treeWalkHandler);
-  }
-*/
-
   public static void main(String[] argv) {
-    String[] testCaseList = {
-        TestNodeManagerImpl.class.getName()};
+    String[] testCaseList = { TestNodeManagerImpl.class.getName()};
     junit.swingui.TestRunner.main(testCaseList);
   }
 }

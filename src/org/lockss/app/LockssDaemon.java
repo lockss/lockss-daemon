@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.32 2003-06-25 21:16:34 eaalto Exp $
+ * $Id: LockssDaemon.java,v 1.33 2003-06-26 01:05:24 eaalto Exp $
  */
 
 /*
@@ -154,7 +154,7 @@ public class LockssDaemon {
     new ManagerDesc(WATCHDOG_SERVICE, DEFAULT_WATCHDOG_SERVICE),
   };
 
-  private static String[] auSpecificManagerKeys = {
+  static String[] auSpecificManagerKeys = {
       ACTIVITY_REGULATOR,
       LOCKSS_REPOSITORY,
       NODE_MANAGER
@@ -173,13 +173,12 @@ public class LockssDaemon {
   // Need to preserve order so managers are started and stopped in the
   // right order.  This does not need to be synchronized.
   protected static SequencedHashMap theManagers = new SequencedHashMap();
-
-  // order is unimportant here.  This is a hashmap of hashmaps.
-  protected static HashMap auSpecificManagers =
-      new HashMap(auSpecificManagerKeys.length);
+  protected static AuSpecificManagerHandler auSpecificManagers;
 
   protected LockssDaemon(List propUrls) {
     this.propUrls = propUrls;
+    auSpecificManagers = new AuSpecificManagerHandler(this,
+        auSpecificManagerKeys.length);
   }
 
   public static void main(String[] args) {
@@ -252,22 +251,11 @@ public class LockssDaemon {
    */
   public static LockssManager getAUSpecificManager(String managerKey,
       ArchivalUnit au) {
-    HashMap auMap = getAUSpecificManagerMap(managerKey);
-    LockssManager mgr = (LockssManager)auMap.get(au);
+    LockssManager mgr = auSpecificManagers.getAUSpecificManager(managerKey, au);
     if (mgr == null) {
       throw new IllegalArgumentException("Unavailable manager:" + managerKey);
     }
     return mgr;
-  }
-
-  protected static HashMap getAUSpecificManagerMap(String managerKey) {
-    HashMap map = (HashMap)auSpecificManagers.get(managerKey);
-    if (map==null) {
-      log.debug3("Initializing hashmap for "+managerKey);
-      map = new HashMap();
-      auSpecificManagers.put(managerKey, map);
-    }
-    return map;
   }
 
   /**
@@ -275,49 +263,8 @@ public class LockssDaemon {
    * @param au the ArchivalUnit
    */
   public void startAUManagers(ArchivalUnit au) {
-    // this order can't be changed, as the other two use the ActivityRegulator
-    // and the NodeManager uses the LockssRepository
     log.debug2("Adding au-specific managers for au '"+au+"'");
-    addActivityRegulator(au);
-    addLockssRepository(au);
-    addNodeManager(au);
-  }
-
-  protected void addActivityRegulator(ArchivalUnit au) {
-    HashMap activityRegulatorMap = getAUSpecificManagerMap(ACTIVITY_REGULATOR);
-    ActivityRegulator regulator =
-        (ActivityRegulator)activityRegulatorMap.get(au);
-    if (regulator == null) {
-      log.debug2("Adding new activity regulator...");
-      regulator = ActivityRegulator.createNewActivityRegulator(au);
-      activityRegulatorMap.put(au, regulator);
-      regulator.initService(this);
-      regulator.startService();
-    }
-  }
-
-  protected void addLockssRepository(ArchivalUnit au) {
-    HashMap lockssRepositoryMap = getAUSpecificManagerMap(LOCKSS_REPOSITORY);
-    LockssRepository repository = (LockssRepository)lockssRepositoryMap.get(au);
-    if (repository == null) {
-      log.debug2("Adding new lockss repository...");
-      repository = LockssRepositoryImpl.createNewLockssRepository(au);
-      lockssRepositoryMap.put(au, repository);
-      repository.initService(this);
-      repository.startService();
-    }
-  }
-
-  protected void addNodeManager(ArchivalUnit au) {
-    HashMap nodeManagerMap = getAUSpecificManagerMap(NODE_MANAGER);
-    NodeManager manager = (NodeManager)nodeManagerMap.get(au);
-    if (manager == null) {
-      log.debug2("Adding new node manager...");
-      manager = NodeManagerImpl.createNewNodeManager(au);
-      nodeManagerMap.put(au, manager);
-      manager.initService(this);
-      manager.startService();
-    }
+    auSpecificManagers.startAUManagers(au);
   }
 
   /**
@@ -372,8 +319,9 @@ public class LockssDaemon {
    * @throws IllegalArgumentException if the manager is not available.
    */
   public LockssRepository getLockssRepository(ArchivalUnit au) {
-    HashMap lockssRepositoryMap = getAUSpecificManagerMap(LOCKSS_REPOSITORY);
-    LockssRepository repository = (LockssRepository)lockssRepositoryMap.get(au);
+    LockssRepository repository =
+        (LockssRepository)auSpecificManagers.getAUSpecificManager(
+        LOCKSS_REPOSITORY, au);
     if (repository==null) {
       log.error("LockssRepository not found for au: " + au);
       throw new IllegalArgumentException("LockssRepository not found for au.");
@@ -397,8 +345,8 @@ public class LockssDaemon {
    * @throws IllegalArgumentException if the manager is not available.
    */
   public NodeManager getNodeManager(ArchivalUnit au) {
-    HashMap nodeManagerMap = getAUSpecificManagerMap(NODE_MANAGER);
-    NodeManager manager = (NodeManager)nodeManagerMap.get(au);
+    NodeManager manager = (NodeManager)auSpecificManagers.getAUSpecificManager(
+        NODE_MANAGER, au);
     if (manager==null) {
       log.error("NodeManager not found for au: " + au);
       throw new IllegalArgumentException("NodeManager not found for au.");
@@ -477,8 +425,9 @@ public class LockssDaemon {
    * @throws IllegalArgumentException if the manager is not available.
    */
   public ActivityRegulator getActivityRegulator(ArchivalUnit au) {
-    HashMap activityRegulatorMap = getAUSpecificManagerMap(ACTIVITY_REGULATOR);
-    ActivityRegulator regulator = (ActivityRegulator) activityRegulatorMap.get(au);
+    ActivityRegulator regulator =
+        (ActivityRegulator)auSpecificManagers.getAUSpecificManager(
+        ACTIVITY_REGULATOR, au);
     if (regulator==null) {
       log.error("ActivityRegulator not found for au: " + au);
       throw new IllegalArgumentException("ActivityRegulator not found for au.");
@@ -491,7 +440,7 @@ public class LockssDaemon {
    * @return an Iterator of Map.Entry objects
    */
   public Iterator getActivityRegulatorEntries() {
-    return getAUSpecificManagerMap(ACTIVITY_REGULATOR).entrySet().iterator();
+    return auSpecificManagers.getEntries(ACTIVITY_REGULATOR);
   }
 
   /**
@@ -499,7 +448,7 @@ public class LockssDaemon {
    * @return an Iterator of Map.Entry objects
    */
   public Iterator getLockssRepositoryEntries() {
-    return getAUSpecificManagerMap(LOCKSS_REPOSITORY).entrySet().iterator();
+    return auSpecificManagers.getEntries(LOCKSS_REPOSITORY);
   }
 
   /**
@@ -507,7 +456,7 @@ public class LockssDaemon {
    * @return an Iterator of Map.Entry objects
    */
   public Iterator getNodeManagerEntries() {
-    return getAUSpecificManagerMap(NODE_MANAGER).entrySet().iterator();
+    return auSpecificManagers.getEntries(NODE_MANAGER);
   }
 
   public void stopDaemon() {
@@ -632,7 +581,7 @@ public class LockssDaemon {
     daemonRunning = false;
 
     // stop all au-specific managers
-    stopAllAuSpecificManagers();
+    auSpecificManagers.stopAllManagers();
 
     // stop all single managers
     List rkeys = ListUtil.reverseCopy(theManagers.sequence());
@@ -646,22 +595,6 @@ public class LockssDaemon {
       }
     }
   }
-
-  private void stopAllAuSpecificManagers() {
-    Iterator managerEntries = auSpecificManagers.entrySet().iterator();
-    while (managerEntries.hasNext()) {
-      Map.Entry entry = (Map.Entry)managerEntries.next();
-      log.debug2("Stopping all " + entry.getKey() + " instances...");
-      HashMap auMap = (HashMap)entry.getValue();
-      Iterator values = auMap.values().iterator();
-      while (values.hasNext()) {
-        LockssManager manager = (LockssManager) values.next();
-        manager.stopService();
-      }
-    }
-    auSpecificManagers.clear();
-  }
-
 
   /**
    * Load the managers with the manager class name
