@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.1 2004-01-04 06:18:35 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.2 2004-01-08 22:43:48 tlipkis Exp $
  */
 
 /*
@@ -92,6 +92,10 @@ public class RemoteApi extends BaseLockssManager {
       auProxies.put(au, aup);
     }
     return aup;
+  }
+
+  public synchronized InactiveAuProxy findInactiveAuProxy(String auid) {
+    return new InactiveAuProxy(auid, this);
   }
 
   /** Create or return a PluginProxy for the Plugin corresponding to the id.
@@ -217,8 +221,7 @@ public class RemoteApi extends BaseLockssManager {
    * @return the AU's Configuration, with unprefixed keys.
    */
   public Configuration getStoredAuConfiguration(AuProxy aup) {
-    ArchivalUnit au = aup.getAu();
-    return pluginMgr.getStoredAuConfiguration(au.getAuId());
+    return pluginMgr.getStoredAuConfiguration(aup.getAuId());
   }
 
   /**
@@ -227,6 +230,19 @@ public class RemoteApi extends BaseLockssManager {
    */
   public List getAllAus() {
     return mapAusToProxies(pluginMgr.getAllAus());
+  }
+
+  public List getInactiveAus() {
+    Collection inactiveAuIds = pluginMgr.getInactiveAuIds();
+    if (inactiveAuIds == null || inactiveAuIds.isEmpty()) {
+      return Collections.EMPTY_LIST;
+    }
+    List res = new ArrayList();
+    for (Iterator iter = inactiveAuIds.iterator(); iter.hasNext(); ) {
+      String auid = (String)iter.next();
+      res.add(new InactiveAuProxy(auid, this));
+    }
+    return res;
   }
 
   /** Return all the known titles from the title db */
@@ -252,5 +268,9 @@ public class RemoteApi extends BaseLockssManager {
 
   Plugin getPluginFromId(String pluginid) {
     return pluginMgr.getPlugin(pluginKeyFromId(pluginid));
+  }
+
+  String pluginIdFromAuId(String auid) {
+    return pluginMgr.pluginIdFromAuId(auid);
   }
 }
