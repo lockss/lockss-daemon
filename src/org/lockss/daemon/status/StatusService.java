@@ -1,5 +1,5 @@
 /*
- * $Id: StatusService.java,v 1.5 2003-03-15 00:27:22 troberts Exp $
+ * $Id: StatusService.java,v 1.6 2003-03-15 02:32:11 troberts Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ public interface StatusService {
   /**
    * Name of the table that contains references to all tables
    */
-  public static final String ALL_TABLES_TABLE = "table of all tables";
+  public static final String ALL_TABLES_TABLE = "table_of_all_tables";
 
   /**
    * Returns the StatusService.Table object identified by the tableName 

@@ -1,5 +1,5 @@
 /*
- * $Id: StatusTable.java,v 1.9 2003-03-15 00:26:45 troberts Exp $
+ * $Id: StatusTable.java,v 1.10 2003-03-15 02:32:11 troberts Exp $
  */
 
 /*
@@ -39,43 +39,6 @@ import org.lockss.util.*;
  * Returned by {@link StatusService#getTable(String, String)} 
  */
 public class StatusTable {
-  /**
-   * Must have meaningful toString() method
-   */
-  public static final int TYPE_INT=0;
-
-  /**
-   * Must have meaningful toString() method
-   */
-  public static final int TYPE_FLOAT=1;
-
-  /**
-   * Instanceof floating point number (Float, Double, etc.) and floatValue() 
-   * must return between 0 and 1, inclusive
-   */
-  public static final int TYPE_PERCENT=2;
-
-  /**
-   * Instanceof number (Integer, Long, Float, etc.)
-   */
-  public static final int TYPE_TIME_INTERVAL=3;
-
-  /**
-   * Objects of this type must have meaningful toString() method
-   */
-  public static final int TYPE_STRING=4;  
-  
-  /**
-   * Instanceof InetAddress
-   */
-  public static final int TYPE_IP_ADDRESS=5;
-
-  /**
-   * Instanceof number (Integer, Long, Float, etc.)
-   */
-  public static final int TYPE_DATE=6;
-
-
   private String name;
   private String key;
   private String title;
@@ -95,20 +58,19 @@ public class StatusTable {
   protected StatusTable(String name, String key, String title,
 			List columnDescriptors, 
 			List defaultSortRules, List rows) {
-    if (defaultSortRules == null) {
-      throw new IllegalArgumentException("Created with an null list of "
-					 +"sort rules");
-    }
-    if (defaultSortRules.size() == 0) {
-      throw new IllegalArgumentException("Created with an empty list of "
-					 +"sort rules");
-    }
     this.name = name;
     this.columnDescriptors = columnDescriptors;
     this.rows = rows;
-    this.defaultSortRules = defaultSortRules;
+    this.defaultSortRules = 
+      defaultSortRules == null ? makeDefaultSortRules() : defaultSortRules;
     this.key = key;
     this.title = title;
+  }
+
+  private List makeDefaultSortRules() {
+    ColumnDescriptor firstCol = (ColumnDescriptor)columnDescriptors.get(0);
+    SortRule sortRule = new SortRule(firstCol.getColumnName(), true);
+    return ListUtil.list(sortRule);
   }
 
   /**
@@ -136,10 +98,10 @@ public class StatusTable {
   }
 
   /**
-   * Gets a list of {@link StatusTable.ColumnDescriptor}s representing the 
+   * Gets a list of {@link ColumnDescriptor}s representing the 
    * columns in this table in their preferred display order.
-   * @returns list of {@link StatusTable.ColumnDescriptor}s the columns in 
-   * the table in the perferred display order
+   * @returns list of {@link ColumnDescriptor}s the columns in 
+   * the table in the preferred display order
    */
   public List getColumnDescriptors() {
     return columnDescriptors;
@@ -199,13 +161,26 @@ public class StatusTable {
 	SortRule sortRule = (SortRule)it.next();
 	Comparable val1 = (Comparable)rowA.get(sortRule.getColumnName());
 	Comparable val2 = (Comparable)rowB.get(sortRule.getColumnName());
-	returnVal = sortRule.sortAscending() ? 
-	            val1.compareTo(val2) : -val1.compareTo(val2);
+	returnVal = compareHandlingNulls(sortRule.sortAscending, val1, val2);
       }
       return returnVal;
     }
   }
 
+  private static int compareHandlingNulls(boolean sortAscending, 
+					  Comparable val1,
+					  Comparable val2) {
+    int returnVal = 0;
+    if (val1 == null) {
+      returnVal = val2 == null ? 0 : -1;
+    } else if (val2 == null) {
+      returnVal = 1;
+    } else {
+      returnVal = val1.compareTo(val2);
+    }
+    return sortAscending ? returnVal : -returnVal;
+  }
+  
   /**
    * Encapsulation of the info needed to sort on a single field
    */
@@ -231,52 +206,6 @@ public class StatusTable {
     public boolean sortAscending(){
       return sortAscending;
     }
-  }
-
-  /**
-   * Encapsulation of the info needed to describe a single column (name, 
-   * display title, and type)
-   */
-  public static class ColumnDescriptor {
-    private String columnName;
-    private String title;
-    private int type;
-
-    public ColumnDescriptor(String columnName, String title, int type) {
-      this.columnName = columnName;
-      this.title = title;
-      this.type = type;
-    }
-
-    public ColumnDescriptor(String columnName, String title, 
-			    int type, String footNote) {
-      this(columnName,title, type);
-    }
-
-    public String getColumnName() {
-      return columnName;
-    }
-
-    public String getTitle() {
-      return title;
-    }
-
-    public int getType() {
-      return type;
-    }
-
-    public String toString() {
-      StringBuffer sb = new StringBuffer();
-      sb.append("[StatusTable.ColumnDescriptor:");
-      sb.append(columnName);
-      sb.append(", ");
-      sb.append(title);
-      sb.append(", ");
-      sb.append(type);
-      sb.append("]");
-      return sb.toString();
-    }
-
   }
 
   /**

@@ -1,5 +1,5 @@
 /*
- * $Id: StatusAccessor.java,v 1.6 2003-03-15 00:27:22 troberts Exp $
+ * $Id: StatusAccessor.java,v 1.7 2003-03-15 02:32:11 troberts Exp $
  */
 
 /*
@@ -44,9 +44,9 @@ import java.util.*;
 
 public interface StatusAccessor {
   /**
-   * Get the list of {@link StatusTable.ColumnDescriptor}s for this key
+   * Get the list of {@link ColumnDescriptor}s for this key
    * @param key object (such as AUID) designating which table to return 
-   * @return List of {@link StatusTable.ColumnDescriptor}s for the columns 
+   * @return List of {@link ColumnDescriptor}s for the columns 
    * this StatusAccessor supplies.
    * @throws StatusService.NoSuchTableException if we get a key that we don't 
    * recognize or have a table for
