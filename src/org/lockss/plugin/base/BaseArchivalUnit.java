@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.28 2003-05-07 23:45:23 aalto Exp $
+ * $Id: BaseArchivalUnit.java,v 1.29 2003-05-10 02:04:40 aalto Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import org.lockss.plugin.*;
 import org.lockss.state.*;
 import org.lockss.daemon.*;
 import org.apache.commons.collections.LRUMap;
+import java.text.SimpleDateFormat;
 
 /**
  * Abstract base class for ArchivalUnits.
@@ -95,6 +96,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   protected CrawlSpec crawlSpec;
   private String idStr = null;
   static Logger logger = Logger.getLogger("BaseArchivalUnit");
+  static SimpleDateFormat sdf = new SimpleDateFormat();
 
   protected long nextPollInterval = -1;
   protected double curTopLevelPollProb = -1;
@@ -308,11 +310,16 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     checkPollProb();
 
     logger.debug("Deciding whether to call a top level poll");
-    logger.debug3("Last poll at "+ aus.getLastTopLevelPollTime());
+    long lastPoll = aus.getLastTopLevelPollTime();
+    if (lastPoll==-1) {
+      logger.debug3("No previous top level poll.");
+    } else {
+      logger.debug3("Last poll at " + sdf.format(new Date(lastPoll)));
+    }
     logger.debug3("Poll interval: "+StringUtil.timeIntervalToString(
         nextPollInterval));
     logger.debug3("Poll likelihood: "+curTopLevelPollProb);
-    if (TimeBase.msSince(aus.getLastTopLevelPollTime()) >= nextPollInterval) {
+    if (TimeBase.msSince(lastPoll) >= nextPollInterval) {
       // reset poll interval regardless
       nextPollInterval = -1;
       // choose probabilistically whether to call
