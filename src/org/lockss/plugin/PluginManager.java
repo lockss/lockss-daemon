@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.118 2004-10-20 18:32:09 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.119 2004-12-12 23:01:01 tlipkis Exp $
  */
 
 /*
@@ -94,14 +94,6 @@ public class PluginManager
       verification keystore (optional). */
   static final String PARAM_KEYSTORE_PASSWORD = KEYSTORE_PREFIX + "password";
   static final String DEFAULT_KEYSTORE_PASSWORD = "password";
-
-  /** The interval between recrawls of the loadable plugin
-      registry AUs.  (Specified as a string, not a long).  */
-  static final String PARAM_REGISTRY_CRAWL_INTERVAL =
-    Configuration.PREFIX + "plugin.registries.crawlInterval";
-  static final String DEFAULT_REGISTRY_CRAWL_INTERVAL =
-    "1d"; // not specified as a long value because this will be passed as
-	  // a string literal to the AU config.
 
   /** The amount of time to wait when processing loadable plugins.
       This process delays the start of AUs, so the timeout should not
@@ -786,6 +778,25 @@ public class PluginManager
     return ConfigManager.getCurrentConfig().getConfigTree(prefix);
   }
 
+  // This *really* doesn't belong here.  Should there be an AuUtils?
+  /**
+   * Return the size of the AU, calculating it if necessary.
+   * @param au the AU
+   * @return the AU's total content size.
+   */
+  public static long getAuContentSize(ArchivalUnit au) {
+    LockssDaemon daemon = au.getPlugin().getDaemon();
+    LockssRepository repo = daemon.getLockssRepository(au);
+    try {
+      RepositoryNode repoNode = repo.getNode(au.getAuCachedUrlSet().getUrl());
+      return repoNode.getTreeContentSize(null);
+    } catch (MalformedURLException ignore) {
+      return -1;
+    }
+  }
+
+  // Loadable Plugin Support
+
   /**
    * Retrieve a plugin from the specified classloader.  If the
    * clasloader is 'null', this method will use the default
@@ -1116,16 +1127,8 @@ public class PluginManager
       String url = (String)iter.next();
       Configuration auConf = ConfigManager.newConfiguration();
       auConf.put(ConfigParamDescr.BASE_URL.getKey(), url);
-      auConf.put("nc_interval",
-		 Configuration.getCurrentConfig().get(PARAM_REGISTRY_CRAWL_INTERVAL,
-						      DEFAULT_REGISTRY_CRAWL_INTERVAL));
-
       String auId = generateAuId(registryPlugin, auConf);
       String auKey = auKeyFromAuId(auId);
-      if (log.isDebug2()) {
-	log.debug2("Setting Registry AU " + auKey + " recrawl interval to " +
-		   auConf.get("nc_interval"));
-      }
 
       // Only process this registry if it is new.
       if (!auMap.containsKey(auId)) {
