@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.59 2004-10-20 18:41:12 dcfok Exp $
+ * $Id: MockArchivalUnit.java,v 1.60 2004-12-12 22:59:27 tlipkis Exp $
  */
 
 /*
@@ -68,7 +68,7 @@ public class MockArchivalUnit implements ArchivalUnit {
 
   private FilterRule filterRule = null;
   private ContentParser parser = null;
-  private TypedEntryMap propertyMap = null;
+  private TypedEntryMap propertyMap = new TypedEntryMap();
   private static final Logger logger = Logger.getLogger("MockArchivalUnit");
   public MockArchivalUnit(){
   }
