@@ -1,5 +1,5 @@
 /*
- * $Id: FilterRunner.java,v 1.6 2003-10-10 22:16:14 troberts Exp $
+ * $Id: FilterRunner.java,v 1.7 2003-10-14 18:16:47 troberts Exp $
  */
 
 /*
@@ -101,11 +101,20 @@ public class FilterRunner {
     StreamUtil.copy(filter.createFilteredInputStream(reader), os);
   }
 
+  public static FilterRule filterRuleFromString(String filterStr)
+      throws ClassNotFoundException, InstantiationException,
+	     IllegalAccessException {
+    Class filterRuleClass = Class.forName(filterStr);
+    return (FilterRule)filterRuleClass.newInstance();
+  }
+
   public static void main(String args[]) {
     String src = args[0];
     String dest = args[1];
-    FilterRule filter = new HighWireFilterRule();
+    String filterStr = args[2];
+    
     try {
+      FilterRule filter = filterRuleFromString(filterStr);
       filterDirectory(filter, new File(src), new File(dest));
     } catch (Exception e) {
       e.printStackTrace();

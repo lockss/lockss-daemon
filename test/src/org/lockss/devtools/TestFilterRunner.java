@@ -1,5 +1,5 @@
 /*
- * $Id: TestFilterRunner.java,v 1.2 2003-10-10 22:16:14 troberts Exp $
+ * $Id: TestFilterRunner.java,v 1.3 2003-10-14 18:16:47 troberts Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.devtools;
 import java.io.*;
 import java.util.*;
+import org.lockss.plugin.FilterRule;
 import org.lockss.util.*;
 import org.lockss.test.*;
 
@@ -120,6 +121,28 @@ public class TestFilterRunner extends LockssTestCase {
 	   +"on isDirectory() should have thrown");
     } catch (IllegalArgumentException e) {
     }
+  }
+
+  private static String hwFilterRuleStr =
+    "org.lockss.plugin.highwire.HighWireFilterRule";
+
+  private static String mockFilterRuleStr =
+    "org.lockss.test.MockFilterRule";
+
+  public void testFilterRuleFromStringHighWire()
+      throws ClassNotFoundException, InstantiationException,
+	     IllegalAccessException {
+    FilterRule filterRule = FilterRunner.filterRuleFromString(hwFilterRuleStr);
+    assertTrue(filterRule instanceof
+	       org.lockss.plugin.highwire.HighWireFilterRule);
+  }
+
+  public void testFilterRuleFromStringMock()
+      throws ClassNotFoundException, InstantiationException,
+	     IllegalAccessException  {
+    FilterRule filterRule =
+      FilterRunner.filterRuleFromString(mockFilterRuleStr);
+    assertTrue(filterRule instanceof org.lockss.test.MockFilterRule);
   }
 
   public void testOneLevel() throws IOException {
