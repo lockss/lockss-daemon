@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.58 2004-10-11 05:44:47 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.59 2004-12-09 08:22:10 tlipkis Exp $
  */
 
 /*
@@ -208,6 +208,8 @@ public class LockssTestCase extends TestCase {
     try {
       while (true) {
 	try {
+	  // log the name of the test case (testFoo() method)
+	  log.debug("Testcase " + getName());
 	  super.runBare();
 	} catch (Throwable e) {
 	  if (++failures > successMaxFailures) {
@@ -923,6 +925,21 @@ public class LockssTestCase extends TestCase {
     assertEquals(expected, actual.toString());
   }
 
+  /** Convenience method to compile an RE */
+  protected static Pattern compileRe(String re) {
+    return RegexpUtil.uncheckedCompile(re);
+  }
+
+  /** Convenience method to match an RE */
+  protected static boolean isMatchRe(String s, Pattern re) {
+    return RegexpUtil.getMatcher().contains(s, re);
+  }
+
+  /** Convenience method to compile and match an RE */
+  protected static boolean isMatchRe(String s, String re) {
+    return isMatchRe(s, RegexpUtil.uncheckedCompile(re));
+  }
+
   /**
    * Asserts that a string matches a regular expression.  The match is
    * unanchored; use "^...$" to ensure that the entire string is matched.
@@ -937,11 +954,10 @@ public class LockssTestCase extends TestCase {
    */
   public static void assertMatchesRE(String msg,
 				     String regexp, String string) {
-    Pattern pat = RegexpUtil.uncheckedCompile(regexp);
     if (msg == null) {
       msg = "String \"" + string + "\" does not match RE: " + regexp;
     }
-    assertTrue(msg , RegexpUtil.getMatcher().contains(string, pat));
+    assertTrue(msg, isMatchRe(string, regexp));
   }
 
   /**
@@ -955,12 +971,11 @@ public class LockssTestCase extends TestCase {
    * Asserts that a string does not match a regular expression
    */
   public static void assertNotMatchesRE(String msg,
-				     String regexp, String string) {
-    Pattern pat = RegexpUtil.uncheckedCompile(regexp);
+					String regexp, String string) {
     if (msg == null) {
       msg = "String \"" + string + "\" should not match RE: " + regexp;
     }
-    assertFalse(msg , RegexpUtil.getMatcher().contains(string, pat));
+    assertFalse(msg, isMatchRe(string, regexp));
   }
 
   /** Assert that a collection cannot be modified, <i>ie</i>, that all of
