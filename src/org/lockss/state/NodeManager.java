@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManager.java,v 1.9 2003-02-24 22:13:42 claire Exp $
+ * $Id: NodeManager.java,v 1.10 2003-02-28 00:24:37 troberts Exp $
  */
 
 /*
@@ -119,4 +119,13 @@ public interface NodeManager {
    * @return estimated time in ms
    */
   public long getEstimatedTreeWalkDuration();
+
+
+  /**
+   * Do one tree walk.  XXX this should probably be handled by making the
+   * node manager kick off a thread when it starts to run the tree walk every
+   * X minutes
+   */
+  public void startTreeWalk();
+
 }

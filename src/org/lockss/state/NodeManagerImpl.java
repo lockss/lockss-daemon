@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.40 2003-02-27 01:50:48 claire Exp $
+ * $Id: NodeManagerImpl.java,v 1.41 2003-02-28 00:24:37 troberts Exp $
  */
 
 /*
@@ -278,15 +278,21 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
     return estimateL.longValue();
   }
 
+  public void startTreeWalk() {
+    doTreeWalk();
+  }
+
   void doTreeWalk() {
-    if (theCrawlManager.canTreeWalkStart(managerAu, getAuState(), null, null)) {
+    if (theCrawlManager.canTreeWalkStart(managerAu, 
+					 getAuState(), null, null)) {
       long pollInterval =
-          Configuration.getIntParam(PARAM_TOP_LEVEL_POLL_INTERVAL,
-                                    DEFAULT_TOP_LEVEL_POLL_INTERVAL);
+	Configuration.getIntParam(PARAM_TOP_LEVEL_POLL_INTERVAL,
+				  DEFAULT_TOP_LEVEL_POLL_INTERVAL);
       long startTime = TimeBase.nowMs();
       // if it's been too long, start a top level poll
       //XXX ask the Plugin
-      if ((startTime - getAuState().getLastTopLevelPollTime()) > pollInterval) {
+      if ((startTime - getAuState().getLastTopLevelPollTime()) 
+	  > pollInterval) {
         callTopLevelPoll();
       } else {
         nodeTreeWalk(nodeMap);
