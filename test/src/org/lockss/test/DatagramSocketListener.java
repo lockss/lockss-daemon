@@ -38,6 +38,7 @@ import java.util.*;
  */
 
 public class DatagramSocketListener implements Runnable{
+  private static final int BEGINNING_PORT=12000;
   private int port;
   private static final String host = "127.0.0.1";;
   private DatagramSocket socket = null;
@@ -48,6 +49,7 @@ public class DatagramSocketListener implements Runnable{
   private int nextPacket=0;
   private SimpleBinarySemaphore readyToReceive = new SimpleBinarySemaphore();
   private SimpleBinarySemaphore gotPacket = new SimpleBinarySemaphore();
+  private static Random random = new Random();
 
   /**
    * Creates a DatagramSocketListener object.  beginListening() needs to be
@@ -70,7 +72,7 @@ public class DatagramSocketListener implements Runnable{
    * a certain interval.
    */
   public void beginListening()
-    throws DatagramSocketListenerException {
+    throws DatagramSocketListenerException, BindException{
     new Thread(this).start();
     if (numPacketsToGet > 0 && !readyToReceive.take(2000)) {
       throw new DatagramSocketListenerException("Listener thread not ready");
@@ -120,4 +122,37 @@ public class DatagramSocketListener implements Runnable{
       return (DatagramPacket)packets.elementAt(nextPacket++);
     }
   }
+
+  /**
+   * @param numPackets number of packets you want the listener to expect
+   * @returns a new <code>DatagramSocketListener</code> object bound to 
+   * an open port.
+   */
+  public static DatagramSocketListener createOnOpenPort(int numPackets) 
+      throws DatagramSocketListenerException {
+    boolean done = false;
+    DatagramSocketListener dsl = null;
+    while (!done) {
+      done = true;
+      int port = random.nextInt(1000)+BEGINNING_PORT;
+      try{
+	dsl = new DatagramSocketListener(port, numPackets);
+	dsl.beginListening();
+      }
+      catch (BindException be){
+	done = false;
+      }
+    }
+    return dsl;
+  }
+
+  /**
+   * @returns the port that this object is bound to or will bind to when 
+   * <code>beginListening()</code> is called
+   * @see #beginListening()
+   */
+   public int getPort(){
+    return port;
+  }
+
 }

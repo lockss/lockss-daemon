@@ -44,16 +44,17 @@ public class TestDatagramSocketListener extends TestCase{
     super(msg);
   }
    public void testNoPacketSentGivesNull() throws DatagramSocketListenerException {
-     DatagramSocketListener dsl = new DatagramSocketListener(port, 0);
-     dsl.beginListening();
+     DatagramSocketListener dsl = 
+       DatagramSocketListener.createOnOpenPort(0);
+
      DatagramPacket receivePacket = dsl.getPacket();
      assertTrue(receivePacket == null);
    }
 
   public void testSinglePacket() throws Exception{
-    DatagramSocketListener dsl = new DatagramSocketListener(port, 1);
-    dsl.beginListening();
-    
+     DatagramSocketListener dsl = 
+       DatagramSocketListener.createOnOpenPort(1);
+     
     String msg = "blah";
     byte[] msgBytes = msg.getBytes();
     
@@ -61,7 +62,7 @@ public class TestDatagramSocketListener extends TestCase{
       new DatagramPacket(msgBytes,
 			 msg.length(),
 			 InetAddress.getByName(host),
-			 port);
+			 dsl.getPort());
     DatagramSocket socket = new DatagramSocket();
     socket.send(sentPacket);
     socket.close();
@@ -80,8 +81,8 @@ public class TestDatagramSocketListener extends TestCase{
   }
 
   public void testMultiplePackets() throws Exception{
-    DatagramSocketListener dsl = new DatagramSocketListener(port, 3);
-    dsl.beginListening();
+    DatagramSocketListener dsl = 
+      DatagramSocketListener.createOnOpenPort(3);
     
     Vector sentPackets = new Vector();
     for (int ix=0; ix<3; ix++){
@@ -92,7 +93,7 @@ public class TestDatagramSocketListener extends TestCase{
 	new DatagramPacket(msgBytes,
 			   msg.length(),
 			   InetAddress.getByName(host),
-			   port);
+			   dsl.getPort());
       DatagramSocket socket = new DatagramSocket();
       socket.send(sendPacket);
       socket.close();
@@ -112,5 +113,10 @@ public class TestDatagramSocketListener extends TestCase{
       }
     }
   }
+
+  public void testBlah() throws Exception{
+    DatagramSocketListener.createOnOpenPort(5);
+  }
+
 }
 
