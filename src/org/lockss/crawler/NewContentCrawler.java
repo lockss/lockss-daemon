@@ -1,5 +1,5 @@
 /*
- * $Id: NewContentCrawler.java,v 1.12 2004-03-10 21:17:57 troberts Exp $
+ * $Id: NewContentCrawler.java,v 1.13 2004-03-10 23:32:22 clairegriffin Exp $
  */
 
 /*
@@ -53,7 +53,7 @@ public class NewContentCrawler extends CrawlerImpl {
     Configuration.PREFIX + "CrawlerImpl.retryPause";
   public static final long DEFAULT_RETRY_PAUSE = 10*Constants.SECOND;
 
-  
+
   public NewContentCrawler(ArchivalUnit au, CrawlSpec spec, AuState aus) {
     super(au, spec, aus);
     crawlStatus = new Crawler.Status(au, spec.getStartingUrls(), getType());
@@ -82,7 +82,7 @@ public class NewContentCrawler extends CrawlerImpl {
     for (int ix=0; ix<refetchDepth; ix++) {
 
       //don't use clear() or it will empty the iterator
-      extractedUrls = new HashSet(); 
+      extractedUrls = new HashSet();
 
       while (it.hasNext() && !crawlAborted) {
 	String url = (String)it.next();
@@ -193,7 +193,7 @@ public class NewContentCrawler extends CrawlerImpl {
 	  numUrlsFetched++;
 	}
       } catch (CacheException e) {
-	if (e.getAttribute(CacheException.ATTRIBUTE_FAIL)) {
+	if (e.isAttributeSet(CacheException.ATTRIBUTE_FAIL)) {
 	  logger.error("Problem caching "+uc+". Ignoring", e);
 	  error = Crawler.STATUS_FETCH_ERROR;
 	} else {

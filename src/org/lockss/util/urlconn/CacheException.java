@@ -1,5 +1,5 @@
 /*
- * $Id: CacheException.java,v 1.4 2004-03-09 04:15:32 clairegriffin Exp $
+ * $Id: CacheException.java,v 1.5 2004-03-10 23:32:22 clairegriffin Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -85,7 +85,7 @@ public class CacheException extends IOException {
     return nestedException;
   }
 
-  public boolean getAttribute(int attribute) {
+  public boolean isAttributeSet(int attribute) {
     return attributeBits.get(attribute);
   }
 
