@@ -1,5 +1,5 @@
 /*
- * $Id: StdErrTarget.java,v 1.9 2003-06-20 22:34:53 claire Exp $
+ * $Id: StdErrTarget.java,v 1.10 2003-07-17 05:21:16 tlipkis Exp $
  */
 
 /*
@@ -41,6 +41,11 @@ import java.util.Date;
 public class StdErrTarget extends PrintStreamTarget {
   /** Create a log target that outputs to System.err */
   public StdErrTarget() {
-    super(System.err);
+    super(null);
+  }
+
+  /** Refetch System.err on each use, as JUnit changes it between tests. */
+  protected PrintStream getPrintStream() {
+    return System.err;
   }
 }

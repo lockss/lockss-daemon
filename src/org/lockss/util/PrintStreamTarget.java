@@ -1,5 +1,5 @@
 /*
- * $Id: PrintStreamTarget.java,v 1.3 2003-06-20 22:34:53 claire Exp $
+ * $Id: PrintStreamTarget.java,v 1.4 2003-07-17 05:21:16 tlipkis Exp $
  */
 
 /*
@@ -89,7 +89,15 @@ public class PrintStreamTarget implements LogTarget {
     sb.append(msgLevel);
     sb.append(": ");
     sb.append(message);
-    stream.println(sb.toString());
-    stream.flush();
+    PrintStream s = getPrintStream();
+    s.println(sb.toString());
+    s.flush();
   }
+
+  /** Return the stored stream; override this if need to fetch the stream
+      on each call. */
+  protected PrintStream getPrintStream() {
+    return stream;
+  }
+
 }
