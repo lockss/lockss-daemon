@@ -1,5 +1,5 @@
 /*
- * $Id: TestFollowLinkCrawler.java,v 1.3 2004-12-12 23:02:09 tlipkis Exp $
+ * $Id: TestFollowLinkCrawler.java,v 1.4 2005-03-18 18:12:12 troberts Exp $
  */
 
 /*
@@ -76,7 +76,8 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     crawlRule.addUrlToCrawl(startUrl);
     spec = new SpiderCrawlSpec(startUrls, startUrls, crawlRule, 1);
     crawler = new TestableFollowLinkCrawler(mau, spec, aus);
-    ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MyMockPermissionChecker(1));
+    ((CrawlerImpl)crawler).lockssCheckers =
+      ListUtil.list(new MyMockPermissionChecker(1));
 
     mau.setParser(parser);
     Properties p = new Properties();
@@ -301,8 +302,11 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     String url1="http://www.example.com/blah.html";
     String url2="http://www.example.com/alpha.html";
     mau.addUrl(startUrl, false, true);
-    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(SetUtil.set(url1,url2));
-    mau.addUrl(url1, new CacheException.NoRetryDeadLinkException("Test exception"), 1);
+    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(SetUtil.set(url1,
+								     url2));
+    mau.addUrl(url1,
+	       new CacheException.NoRetryDeadLinkException("Test exception"),
+	       1);
     mau.addUrl(url2);
     crawlRule.addUrlToCrawl(url1);
     crawlRule.addUrlToCrawl(url2);
@@ -424,7 +428,8 @@ public class TestFollowLinkCrawler extends LockssTestCase {
   public void testAborted2() {
     String url1= "http://www.example.com/link1.html";
     String url2 = "http://www.example.com/link4.html";
-    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(SetUtil.set(url1,url2));
+    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(SetUtil.set(url1,
+								     url2));
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
 
     mau.addUrl(startUrl, true, true);
@@ -457,8 +462,8 @@ public class TestFollowLinkCrawler extends LockssTestCase {
   }
 
   public void testDoesCollectHttps() {
-    //we will collect https eventually, it is not yet implemented though and this
-    //test is to make sure an https url will not break the whole system
+    //we will collect https eventually, it is not yet implemented though and 
+    //this test is to make sure an https url will not break the whole system
 
     String url1= "http://www.example.com/link1.html";
     String url2= "https://www.example.com/link2.html";
@@ -471,8 +476,9 @@ public class TestFollowLinkCrawler extends LockssTestCase {
   }
 
   public void testDoesCollectFtpAndGopher() {
-    //we will collect ftp and gopher eventually, it is not yet implemented though and this
-    //test is to make sure ftp gopher urls will not break the whole system
+    //we will collect ftp and gopher eventually, it is not yet implemented 
+    //though and this test is to make sure ftp gopher urls will not break
+    //the whole system
 
     String url1= "http://www.example.com/link1.html";
     String url2= "ftp://www.example.com/link2.html";
@@ -656,10 +662,11 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     String url2= "http://www.example.com/link2.html";
     String url3= "http://www.foo.com/link3.html";
     String url4= "http://www.foo.com/link4.html";
-    List urls = ListUtil.list(url1,url2,url3,url4,permissionUrl1,permissionUrl2);
+    List urls =
+      ListUtil.list(url1,url2,url3,url4,permissionUrl1,permissionUrl2);
 
-    MockCachedUrlSet cus = permissionPageTestSetup(permissionList,2,urls,
-        new MyMockArchivalUnit());
+    MockCachedUrlSet cus =
+      permissionPageTestSetup(permissionList,2,urls, new MyMockArchivalUnit());
     
     ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(
         SetUtil.set(url1, url2, url3, url4)); 
@@ -677,10 +684,11 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     String url2= "http://www.example.com/link2.html";
     String url3= "http://www.foo.com/link3.html";
     String url4= "http://www.foo.com/link4.html";
-    List urls = ListUtil.list(url1,url2,url3,url4,permissionUrl1,permissionUrl2);
+    List urls =
+      ListUtil.list(url1,url2,url3,url4,permissionUrl1,permissionUrl2);
 
-    MockCachedUrlSet cus = permissionPageTestSetup(permissionList,1,urls,
-        new MyMockArchivalUnit());
+    MockCachedUrlSet cus =
+      permissionPageTestSetup(permissionList,1,urls, new MyMockArchivalUnit());
     
     ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(
         SetUtil.set(url1, url2, url3, url4)); 
@@ -766,7 +774,8 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     List urls = ListUtil.list(url1,url3,permissionUrl1);
 
     MockCachedUrlSet cus =
-        permissionPageTestSetup(permissionList, 1, urls, new MyMockArchivalUnit());
+        permissionPageTestSetup(permissionList, 1, urls,
+				new MyMockArchivalUnit());
 
     ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(
         SetUtil.set(url1, url3)); 
@@ -799,7 +808,8 @@ public class TestFollowLinkCrawler extends LockssTestCase {
      * Construct a MockCrawlWindow that can set number of time
      * to return true when canCrawl is called.
      * 
-     * @param numTimesToReturnTrue the number of time to return true excluding fetching of permission pages and starting urls.
+     * @param numTimesToReturnTrue the number of time to return true
+     * excluding fetching of permission pages and starting urls.
      *
      */
     public MyMockCrawlWindow(int numTimesToReturnTrue) {
