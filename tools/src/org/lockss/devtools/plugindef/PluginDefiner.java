@@ -1,5 +1,5 @@
 /*
- * $Id: PluginDefiner.java,v 1.6 2004-06-23 22:29:37 clairegriffin Exp $
+ * $Id: PluginDefiner.java,v 1.7 2004-07-10 00:42:01 clairegriffin Exp $
  */
 
 /*
@@ -99,7 +99,7 @@ public class PluginDefiner extends JFrame {
     contentPane.setLayout(borderLayout1);
     this.setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
     this.setSize(new Dimension(380, 320));
-    this.setTitle("Plugin Configuration");
+    this.setTitle("LOCKSS Plugin Definer");
     jMenuFile.setMnemonic('F');
     jMenuFile.setText("File");
     jMenuFileNew.setIcon(newIcon);

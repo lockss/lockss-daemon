@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescrPicker.java,v 1.4 2004-06-15 04:14:43 clairegriffin Exp $
+ * $Id: ConfigParamDescrPicker.java,v 1.5 2004-07-10 00:42:01 clairegriffin Exp $
  */
 
 /*
@@ -39,7 +39,6 @@ import javax.swing.*;
 import javax.swing.border.*;
 
 import org.lockss.daemon.*;
-import javax.swing.event.*;
 
 /**
  * <p>Title: </p>
@@ -171,7 +170,6 @@ public class ConfigParamDescrPicker
     defaultDescrs = plugin.getDefaultConfigParamDescrs();
     Iterator it;
     // add current plugin parameters
-
     DefaultListModel dlm = new DefaultListModel();
     dlm.removeAllElements();
     for (it = pluginList.iterator(); it.hasNext(); ) {
@@ -254,6 +252,7 @@ public class ConfigParamDescrPicker
     // we need to copy the current state of the displayed list to our plugin
 
     DefaultListModel dlm = (DefaultListModel) PluginParamList.getModel();
+    plugin.removePluginConfigDescrs();
     for(int index = 0; index < dlm.size(); index++) {
       String key = (String) dlm.getElementAt(index);
       plugin.addConfigParamDescr(key);

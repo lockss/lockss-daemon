@@ -196,5 +196,4 @@ public class CrawlRuleTestResultsDialog extends JDialog {
       }
     }
   }
-
 }
