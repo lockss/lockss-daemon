@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawlStatus.java,v 1.8 2005-01-14 01:37:41 troberts Exp $
+ * $Id: MockCrawlStatus.java,v 1.9 2005-01-19 18:09:35 tlipkis Exp $
  */
 
 /*
@@ -45,9 +45,9 @@ public class MockCrawlStatus extends Crawler.Status {
   long numErrors = 0;
   long numNotModified = 0;
 
-  Set urlsFetched = null;
-  Set urlsParsed = null;
-  Set urlsNotModified = null;
+  Collection urlsFetched = null;
+  Collection urlsParsed = null;
+  Collection urlsNotModified = null;
   Map errorUrls = null;
 
 
@@ -94,19 +94,19 @@ public class MockCrawlStatus extends Crawler.Status {
     this.numErrors = num;
   }
 
-  public void setUrlsNotModified(Set urlsNotModified) {
+  public void setUrlsNotModified(Collection urlsNotModified) {
     this.urlsNotModified = urlsNotModified;
   }
 
-  public Set getUrlsParsed() {
+  public Collection getUrlsParsed() {
     return urlsParsed;
   }
 
-  public void setUrlsParsed(Set urlsParsed) {
+  public void setUrlsParsed(Collection urlsParsed) {
     this.urlsParsed = urlsParsed;
   }
 
-  public Set getUrlsNotModified() {
+  public Collection getUrlsNotModified() {
     return urlsNotModified;
   }
 
@@ -139,11 +139,11 @@ public class MockCrawlStatus extends Crawler.Status {
     return errorUrls;
   }
 
-  public void setUrlsFetched(Set urlsFetched) {
+  public void setUrlsFetched(Collection urlsFetched) {
     this.urlsFetched = urlsFetched;
   }
 
-  public Set getUrlsFetched() {
+  public Collection getUrlsFetched() {
     return urlsFetched;
   }
 

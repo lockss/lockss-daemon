@@ -1,5 +1,5 @@
 /*
- * $Id: Crawler.java,v 1.26 2005-01-14 01:37:39 troberts Exp $
+ * $Id: Crawler.java,v 1.27 2005-01-19 18:09:36 tlipkis Exp $
  */
 
 /*
@@ -10,7 +10,7 @@ all rights reserved.
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:
 
@@ -34,6 +34,8 @@ package org.lockss.daemon;
 
 import java.io.IOException;
 import java.util.*;
+import org.apache.commons.collections.set.ListOrderedSet;
+import org.apache.commons.collections.map.LinkedMap;
 import org.lockss.util.*;
 import org.lockss.state.*;
 import org.lockss.plugin.*;
@@ -100,6 +102,9 @@ public interface Crawler {
 
 
   public static class Status {
+    private static int ctr = 0;
+
+    private int keyidx;
     protected long startTime = -1;
     protected long endTime = -1;
     protected String crawlError = null;
@@ -107,15 +112,24 @@ public interface Crawler {
     protected ArchivalUnit au = null;
     protected int type = -1;
 
-    protected Map urlsWithErrors = new HashMap();
-    protected Set urlsFetched = new HashSet();
-    protected Set urlsNotModified = new HashSet();
-    protected Set urlsParsed = new HashSet();
+    protected Map urlsWithErrors = new LinkedMap();
+    protected Set urlsFetched = new ListOrderedSet();
+    protected Set urlsNotModified = new ListOrderedSet();
+    protected Set urlsParsed = new ListOrderedSet();
 
     public Status(ArchivalUnit au, Collection startUrls, int type) {
       this.au = au;
       this.startUrls = startUrls;
       this.type = type;
+      keyidx = nextIdx();
+    }
+
+    private static synchronized int nextIdx() {
+      return ++ctr;
+    }
+
+    public String getKey() {
+      return Integer.toString(keyidx);
     }
 
     /**
@@ -146,7 +160,7 @@ public interface Crawler {
      * Return the number of urls that have been fetched by this crawler
      * @return number of urls that have been fetched by this crawler
      */
-    public long getNumFetched() {
+    public synchronized long getNumFetched() {
       return urlsFetched.size();
     }
 
@@ -154,15 +168,15 @@ public interface Crawler {
      * Return the number of urls whose GETs returned 304 not modified
      * @return number of urls whose contents were not modified
      */
-    public long getNumNotModified() {
+    public synchronized long getNumNotModified() {
       return urlsNotModified.size();
     }
 
-    public void signalUrlFetched(String url) {
+    public synchronized void signalUrlFetched(String url) {
       urlsFetched.add(url);
     }
 
-    public void signalUrlNotModified(String url) {
+    public synchronized void signalUrlNotModified(String url) {
       urlsNotModified.add(url);
     }
 
@@ -170,40 +184,60 @@ public interface Crawler {
      * @return hash of the urls that couldn't be fetched due to errors and the
      * error they got
      */
-    public Map getUrlsWithErrors() {
-      return urlsWithErrors;
+    public synchronized Map getUrlsWithErrors() {
+      if (isCrawlActive()) {
+	return new LinkedMap(urlsWithErrors);
+      } else {
+	return urlsWithErrors;
+      }
     }
 
-    public long getNumUrlsWithErrors() {
+    public synchronized long getNumUrlsWithErrors() {
       return urlsWithErrors.size();
     }
 
-    public Set getUrlsFetched() {
-      return urlsFetched;
+    public synchronized Collection getUrlsFetched() {
+      if (isCrawlActive()) {
+	return new ArrayList(urlsFetched);
+      } else {
+	return urlsFetched;
+      }
     }
 
-    public Set getUrlsNotModified() {
-      return urlsNotModified;
+    public synchronized Collection getUrlsNotModified() {
+      if (isCrawlActive()) {
+	return new ArrayList(urlsNotModified);
+      } else {
+	return urlsNotModified;
+      }
     }
 
-    public Set getUrlsParsed() {
-      return urlsParsed;
+    public synchronized Collection getUrlsParsed() {
+      if (isCrawlActive()) {
+	return new ArrayList(urlsParsed);
+      } else {
+	return urlsParsed;
+      }
     }
 
     /**
      * Return the number of urls that have been parsed by this crawler
      * @return number of urls that have been parsed by this crawler
      */
-    public long getNumParsed() {
+    public synchronized long getNumParsed() {
       return urlsParsed.size();
     }
 
-     public void signalUrlParsed(String url) {
+     public synchronized void signalUrlParsed(String url) {
        urlsParsed.add(url);
      }
     
     public Collection getStartUrls() {
       return startUrls;
+    }
+
+    private boolean isCrawlActive() {
+      return getCrawlStatus() == Crawler.STATUS_INCOMPLETE;
     }
 
     public String getCrawlStatus() {
@@ -219,7 +253,7 @@ public interface Crawler {
       this.crawlError = crawlError;
     }
 
-    public void signalErrorForUrl(String url, String error) {
+    public synchronized void signalErrorForUrl(String url, String error) {
       urlsWithErrors.put(url, error);
     }
 
