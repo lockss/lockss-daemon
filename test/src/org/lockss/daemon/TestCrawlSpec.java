@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlSpec.java,v 1.6 2003-10-10 19:21:44 eaalto Exp $
+ * $Id: TestCrawlSpec.java,v 1.7 2003-10-10 21:18:12 troberts Exp $
  */
 
 /*
@@ -124,6 +124,11 @@ public class TestCrawlSpec extends LockssTestCase {
     }
   }
 
+  public void testRecrawlDepthDefaultsTo1() {
+    CrawlSpec cs = new CrawlSpec("blah", null);
+    assertEquals(1, cs.getRecrawlDepth());
+  }
+
   public static class MyMockCrawlWindowRule implements CrawlWindowRule {
     boolean allowCrawl = true;
 
@@ -145,6 +150,5 @@ public class TestCrawlSpec extends LockssTestCase {
       this.allowCrawl = allowCrawl;
     }
   }
-
 }
 
