@@ -1,5 +1,5 @@
 /*
- * $Id: IpAccessControl.java,v 1.4 2003-06-26 23:53:31 eaalto Exp $
+ * $Id: IpAccessControl.java,v 1.5 2003-07-14 06:45:07 tlipkis Exp $
  */
 
 /*
@@ -62,9 +62,12 @@ public class IpAccessControl extends LockssServlet {
 
   static Logger log = Logger.getLogger("IpAcc");
 
-//   public void init(ServletConfig config) throws ServletException {
-//     super.init(config);
-//   }
+  private ConfigManager configMgr;
+
+  public void init(ServletConfig config) throws ServletException {
+    super.init(config);
+    configMgr = getLockssDaemon().getConfigManager();
+  }
 
   public void lockssHandleRequest() throws IOException {
     String action = req.getParameter("action");
@@ -267,9 +270,9 @@ public class IpAccessControl extends LockssServlet {
     Properties acProps = new Properties();
     acProps.put(PARAM_IP_INCLUDE, incStr);
     acProps.put(PARAM_IP_EXCLUDE, excStr);
-    Configuration.writeCacheConfigFile(acProps,
-				       Configuration.CONFIG_FILE_UI_IP_ACCESS,
-				       "UI IP Access Control");
+    configMgr.writeCacheConfigFile(acProps,
+				   ConfigManager.CONFIG_FILE_UI_IP_ACCESS,
+				   "UI IP Access Control");
   }
 
   /**
