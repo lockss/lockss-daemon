@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.5 2002-10-31 01:23:12 troberts Exp $
+ * $Id: TestStringUtil.java,v 1.6 2002-10-31 01:58:54 aalto Exp $
  */
 
 /*
@@ -122,12 +122,12 @@ public class TestStringUtil extends TestCase{
     assertEquals("\\ 1\\.2\\\\3\\?", StringUtil.escapeNonAlphaNum(" 1.2\\3?"));
   }
 
-  public void testSubstringCount() {
-    assertEquals(0, StringUtil.substringCount("", ""));
-    assertEquals(0, StringUtil.substringCount("test", ""));
-    assertEquals(2, StringUtil.substringCount("test.test", "test"));
-    assertEquals(2, StringUtil.substringCount("testtest", "test"));
-    assertEquals(2, StringUtil.substringCount("xxxxxy", "xx"));
+  public void testCountOccurences() {
+    assertEquals(0, StringUtil.countOccurences("", ""));
+    assertEquals(0, StringUtil.countOccurences("test", ""));
+    assertEquals(2, StringUtil.countOccurences("test.test", "test"));
+    assertEquals(2, StringUtil.countOccurences("testtest", "test"));
+    assertEquals(2, StringUtil.countOccurences("xxxxxy", "xx"));
   }
 
   public void testReplaceStringNonExistingSubstring(){
@@ -147,14 +147,14 @@ public class TestStringUtil extends TestCase{
 
   public void testReplacementStringContainsReplacedString(){
     assertEquals("1234456",
-  		 StringUtil.replaceString("123456", "4", "44")); 
+  		 StringUtil.replaceString("123456", "4", "44"));
   }
-  
+
   public void testReplacementStringDiffLength(){
     assertEquals("12347856",
-  		 StringUtil.replaceString("123456", "4", "478")); 
+  		 StringUtil.replaceString("123456", "4", "478"));
   }
-  
+
   public void testReplaceEqualStrings(){
     assertEquals("TestBlahTest",
 		 StringUtil.replaceString("TestBlahTest", "Blah", "Blah"));
