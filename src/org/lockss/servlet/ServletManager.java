@@ -1,5 +1,5 @@
 /*
- * $Id: ServletManager.java,v 1.10 2003-04-14 07:30:35 tal Exp $
+ * $Id: ServletManager.java,v 1.11 2003-04-14 23:15:00 tal Exp $
  */
 
 /*
@@ -58,6 +58,9 @@ public class ServletManager extends JettyManager {
   public static final String PARAM_LOG_FORBIDDEN =
     IP_ACCESS_PREFIX + "logForbidden";
 
+  public static final String PARAM_PLATFORM_ACCESS_SUBNET =
+    Configuration.PARAM_PLATFORM_ACCESS_SUBNET;
+
   public static final boolean DEFAULT_START = true;
   public static final int DEFAULT_PORT = 8081;
 
@@ -105,7 +108,8 @@ public class ServletManager extends JettyManager {
     if (changedKeys.contains(PARAM_IP_INCLUDE) ||
 	changedKeys.contains(PARAM_IP_EXCLUDE) ||
 	changedKeys.contains(PARAM_LOG_FORBIDDEN)) {
-      includeIps = config.get(PARAM_IP_INCLUDE, "");
+      includeIps = config.get(PARAM_IP_INCLUDE,
+			      config.get(PARAM_PLATFORM_ACCESS_SUBNET, ""));
       excludeIps = config.get(PARAM_IP_EXCLUDE, "");
       logForbidden = config.getBoolean(PARAM_LOG_FORBIDDEN, false);
       log.debug("Installing new ip filter: incl: " + includeIps +
