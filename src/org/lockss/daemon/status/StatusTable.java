@@ -1,5 +1,5 @@
 /*
- * $Id: StatusTable.java,v 1.22 2003-05-28 16:12:58 tal Exp $
+ * $Id: StatusTable.java,v 1.23 2003-06-01 20:57:50 tal Exp $
  */
 
 /*
@@ -417,11 +417,10 @@ public class StatusTable {
       while (returnVal == 0 && it.hasNext()){
 	SortRule sortRule = (SortRule)it.next();
 	String colName = sortRule.getColumnName();
-	// Either of both objects might be either a Reference or an
+	// Either object might be either a Reference or an
 	// DisplayedValue.  We want to compare the actual value.
 	Object valA = getActualValue(rowA.get(colName));
 	Object valB = getActualValue(rowB.get(colName));
-
 	
 	switch (sortRule.getColumnType()) {
 	case ColumnDescriptor.TYPE_IP_ADDRESS:
@@ -513,7 +512,7 @@ public class StatusTable {
       }
       // XXX this isn't really an error, just somebody sorting on a
       // column that isn't displayed.
-      logger.warning("Unknown type for sort column: "+ columnName);
+//       logger.warning("Unknown type for sort column: "+ columnName);
       columnType = ColumnDescriptor.TYPE_INT;
     }
   }
