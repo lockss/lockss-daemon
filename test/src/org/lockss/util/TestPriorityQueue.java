@@ -1,5 +1,5 @@
 /*
- * $Id: TestPriorityQueue.java,v 1.4 2002-12-15 00:10:48 tal Exp $
+ * $Id: TestPriorityQueue.java,v 1.5 2002-12-15 00:34:53 tal Exp $
  */
 
 /*
@@ -166,10 +166,10 @@ public class TestPriorityQueue extends LockssTestCase {
       assertEquals(null, q.get(timer(100)));
       long delay = TimerUtil.timeSince(start);
       if (delay < 80) {
-	fail("get(100) returned early");
+	fail("get(100) returned early in " + delay);
       }
       if (delay > 1000) {
-	fail("get(100) returned late");
+	fail("get(100) returned late in " + delay);
       }
       intr.cancel();
     } catch (InterruptedException e) {
