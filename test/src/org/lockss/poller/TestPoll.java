@@ -1,5 +1,5 @@
 /*
- * $Id: TestPoll.java,v 1.60 2003-06-20 22:34:54 claire Exp $
+ * $Id: TestPoll.java,v 1.61 2003-06-23 19:24:00 claire Exp $
  */
 
 /*
@@ -69,7 +69,7 @@ public class TestPoll extends LockssTestCase {
   protected LcapIdentity testID;
   protected LcapIdentity testID1;
   protected LcapMessage[] testmsg;
-  protected VersionOnePoll[] testpolls;
+  protected V1Poll[] testpolls;
   protected PollManager pollmanager;
 
   protected void setUp() throws Exception {
@@ -100,8 +100,8 @@ public class TestPoll extends LockssTestCase {
 
   /** test for method scheduleVote(..) */
   public void testScheduleVote() {
-    VersionOnePoll p = testpolls[1];
-    assertTrue(p instanceof VersionOneContentPoll);
+    V1Poll p = testpolls[1];
+    assertTrue(p instanceof V1ContentPoll);
     log.warning("testScheduleVote 1");
     p.scheduleVote();
     log.warning("testScheduleVote 2");
@@ -128,10 +128,10 @@ public class TestPoll extends LockssTestCase {
     catch (IOException ex1) {
     }
     log.warning("testCheeckVote 2");
-    VersionOnePoll p = null;
+    V1Poll p = null;
     try {
       p = createCompletedPoll(theDaemon, testau, msg, 8,2);
-      assertTrue(p instanceof VersionOneNamePoll);
+      assertTrue(p instanceof V1NamePoll);
     }
     catch (Exception ex2) {
       assertFalse(true);
@@ -170,7 +170,7 @@ public class TestPoll extends LockssTestCase {
 
   /** test for method tally(..) */
   public void testTally() {
-    VersionOnePoll p = testpolls[0];
+    V1Poll p = testpolls[0];
     LcapMessage msg = p.getMessage();
     LcapIdentity id = idmgr.findIdentity(msg.getOriginAddr());
     p.m_tally.addVote(new Vote(msg, false), id, false);
@@ -194,7 +194,7 @@ public class TestPoll extends LockssTestCase {
 
 
   public void testNamePollTally() {
-    VersionOneNamePoll np;
+    V1NamePoll np;
     // test a name poll we won
     np = makeCompletedNamePoll(4,1,0);
     assertEquals(5, np.m_tally.numAgree);
@@ -226,7 +226,7 @@ public class TestPoll extends LockssTestCase {
 
   /** test for method vote(..) */
   public void testVote() {
-    VersionOnePoll p = testpolls[1];
+    V1Poll p = testpolls[1];
     p.m_hash = pollmanager.generateRandomBytes();
     try {
       p.castOurVote();
@@ -239,7 +239,7 @@ public class TestPoll extends LockssTestCase {
 
   /** test for method voteInPoll(..) */
   public void testVoteInPoll() {
-    VersionOnePoll p = testpolls[1];
+    V1Poll p = testpolls[1];
     p.m_tally.quorum = 10;
     p.m_tally.numAgree = 5;
     p.m_tally.numDisagree = 2;
@@ -264,14 +264,14 @@ public class TestPoll extends LockssTestCase {
   }
 
   public void testStartPoll() {
-    VersionOnePoll p = testpolls[0];
+    V1Poll p = testpolls[0];
     p.startPoll();
     assertEquals(Poll.PS_WAIT_HASH, p.m_pollstate);
     p.m_pollstate = Poll.PS_COMPLETE;
   }
 
   public void testScheduleOurHash() {
-    VersionOnePoll p = testpolls[0];
+    V1Poll p = testpolls[0];
     p.m_pollstate = Poll.PS_WAIT_HASH;
     assertTrue(p.scheduleOurHash());
     TimeBase.step(p.m_deadline.getRemainingTime()/2);
@@ -284,7 +284,7 @@ public class TestPoll extends LockssTestCase {
 
   /** test for method stopPoll(..) */
   public void testStopPoll() {
-    VersionOnePoll p = testpolls[1];
+    V1Poll p = testpolls[1];
     p.m_tally.quorum = 10;
     p.m_tally.numAgree = 7;
     p.m_tally.numDisagree = 3;
@@ -297,7 +297,7 @@ public class TestPoll extends LockssTestCase {
 
   /** test for method startVoteCheck(..) */
   public void testStartVote() {
-    VersionOnePoll p = testpolls[0];
+    V1Poll p = testpolls[0];
     p.m_pendingVotes = 3;
     p.startVoteCheck();
     assertEquals(4, p.m_pendingVotes);
@@ -306,17 +306,17 @@ public class TestPoll extends LockssTestCase {
 
   /** test for method stopVote(..) */
   public void testStopVote() {
-    VersionOnePoll p = testpolls[1];
+    V1Poll p = testpolls[1];
     p.m_pendingVotes = 3;
     p.stopVoteCheck();
     assertEquals(2, p.m_pendingVotes);
     p.m_pollstate = Poll.PS_COMPLETE;
   }
 
-  private VersionOneNamePoll makeCompletedNamePoll(int numAgree,
+  private V1NamePoll makeCompletedNamePoll(int numAgree,
                                      int numDisagree,
                                      int numDissenting) {
-    VersionOneNamePoll np = null;
+    V1NamePoll np = null;
     LcapMessage agree_msg = null;
     LcapMessage disagree_msg1 = null;
     LcapMessage disagree_msg2 = null;
@@ -337,7 +337,7 @@ public class TestPoll extends LockssTestCase {
           testID);
 
       // make our poll
-      np = (VersionOneNamePoll) pollmanager.createPoll(poll_msg, spec);
+      np = (V1NamePoll) pollmanager.createPoll(poll_msg, spec);
 
       // generate agree vote msg
       agree_msg = LcapMessage.makeReplyMsg(poll_msg,
@@ -395,7 +395,7 @@ public class TestPoll extends LockssTestCase {
   }
 
 
-  public static VersionOnePoll createCompletedPoll(LockssDaemon daemon,
+  public static V1Poll createCompletedPoll(LockssDaemon daemon,
                                          ArchivalUnit au,
 					 LcapMessage testmsg, int numAgree,
                                          int numDisagree) throws Exception {
@@ -418,8 +418,8 @@ public class TestPoll extends LockssTestCase {
     Poll pp = daemon.getPollManager().createPoll(testmsg, spec);
     log.warning("createCompletedPoll 1");
     assertNotNull(pp);
-    assertTrue(pp instanceof VersionOnePoll);
-    VersionOnePoll p = (VersionOnePoll) pp;
+    assertTrue(pp instanceof V1Poll);
+    V1Poll p = (V1Poll) pp;
     p.m_tally.quorum = numAgree + numDisagree;
     p.m_tally.numAgree = numAgree;
     p.m_tally.numDisagree = numDisagree;
@@ -527,23 +527,23 @@ public class TestPoll extends LockssTestCase {
 
   private void initTestPolls() {
     try {
-     testpolls = new VersionOnePoll[3];
+     testpolls = new V1Poll[3];
      for (int i = 0; i < 3; i++) {
        log.warning("initTestPolls: " + i);
        Poll p = pollmanager.makePoll(testmsg[i]);
-       assertTrue(p instanceof VersionOnePoll);
+       assertTrue(p instanceof V1Poll);
        switch (i) {
        case 0:
-	 assertTrue(p instanceof VersionOneNamePoll);
+	 assertTrue(p instanceof V1NamePoll);
 	 break;
        case 1:
-	 assertTrue(p instanceof VersionOneContentPoll);
+	 assertTrue(p instanceof V1ContentPoll);
 	 break;
        case 2:
-	 assertTrue(p instanceof VersionOneVerifyPoll);
+	 assertTrue(p instanceof V1VerifyPoll);
 	 break;
        }
-       testpolls[i] = (VersionOnePoll)p;
+       testpolls[i] = (V1Poll)p;
        assertNotNull(testpolls[i]);
        log.warning("initTestPolls: " + i + " " + p.toString());
      }
