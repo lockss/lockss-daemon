@@ -1,5 +1,5 @@
 /*
- * $Id: BlackbirdArchivalUnit.java,v 1.4 2004-02-10 01:09:08 clairegriffin Exp $
+ * $Id: BlackbirdArchivalUnit.java,v 1.5 2004-02-11 20:59:52 eaalto Exp $
  */
 
 /*
@@ -92,7 +92,9 @@ public class BlackbirdArchivalUnit extends ConfigurableArchivalUnit {
     String ret;
     StringBuffer sb = new StringBuffer();
     sb.append(baseUrl.toString());
-    sb.append("lockss.htm");
+    sb.append("lockss-volume");
+    sb.append(volume);
+    sb.append(".htm");
     ret = sb.toString();
     logger.debug("starting url is " + ret);
     return ret;
