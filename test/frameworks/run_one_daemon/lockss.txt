@@ -1,5 +1,8 @@
+# Don't make local changes in this file; put local settings in lockss.opt
+
 # LOCKSS & LCAP tuning parameters
-org.lockss.log.default.level=debug3
+
+org.lockss.log.default.level=info
 
 org.lockss.ui.access.ip.logForbidden=true
 org.lockss.proxy.access.ip.logForbidden=true
