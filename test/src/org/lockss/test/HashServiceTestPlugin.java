@@ -1,5 +1,5 @@
 /*
- * $Id: HashServiceTestPlugin.java,v 1.1 2002-09-19 20:54:12 tal Exp $
+ * $Id: HashServiceTestPlugin.java,v 1.2 2002-10-01 06:17:24 tal Exp $
  */
 
 /*
@@ -46,7 +46,7 @@ import org.lockss.test.*;
  */
 public class HashServiceTestPlugin {
 
-  static class CUS extends NullPlugin.CachedUrlSet {
+  public static class CUS extends NullPlugin.CachedUrlSet {
     private long duration = 0;
     private int bytes = 0;
 
@@ -92,7 +92,7 @@ public class HashServiceTestPlugin {
     }
 
     public boolean finished() {
-      return bytes >= 0;
+      return bytes <= 0;
     }
 
     public int hashStep(int numBytes) {
@@ -107,8 +107,7 @@ public class HashServiceTestPlugin {
     }
   }
 
-  public static CachedUrlSet getCUS() {
+  public static CUS getCUS() {
     return new CUS();
   }
-
 }
