@@ -1,5 +1,5 @@
 /*
- * $Id: MockStatusAccessor.java,v 1.12 2003-08-09 20:37:21 tlipkis Exp $
+ * $Id: MockStatusAccessor.java,v 1.13 2003-12-23 00:41:37 tlipkis Exp $
  */
 
 /*
@@ -44,6 +44,10 @@ public class MockStatusAccessor implements StatusAccessor {
   private Map titles = new HashMap();
   private Map summaryInfo = new HashMap();
 
+
+  public String getDisplayName() {
+    return "MockStatusAccessor";
+  }
 
   public void setColumnDescriptors(List columnDescriptors, String key) {
     this.columnDescriptors.put(key, columnDescriptors);
