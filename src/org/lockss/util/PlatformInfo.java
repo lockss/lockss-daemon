@@ -1,5 +1,5 @@
 /*
- * $Id: PlatformInfo.java,v 1.6 2004-09-28 08:53:14 tlipkis Exp $
+ * $Id: PlatformInfo.java,v 1.7 2005-01-07 09:24:01 tlipkis Exp $
  */
 
 /*
@@ -65,8 +65,46 @@ public class PlatformInfo {
     return instance;
   }
 
+  /** Return disk usage below path, in K (du -sk) */
+  public long getDiskUsage(String path) {
+    String cmd = "du -k -s " + path;
+    if (log.isDebug2()) log.debug2("cmd: " + cmd);
+    try {
+      Process p = rt().exec(cmd);
+      Reader rdr =
+	new InputStreamReader(new BufferedInputStream(p.getInputStream()),
+			      Constants.DEFAULT_ENCODING);
+      String s;
+      try {
+	s = StringUtil.fromReader(rdr);
+	int exit = p.waitFor();
+	rdr.close();
+	// any unreadable dirs cause exit=1; process if got any output
+      } catch (IOException e) {
+	log.error("Couldn't read from '" + cmd + "'", e);
+	return -1;
+      }
+      List lines = StringUtil.breakAt(s, '\n');
+      if (log.isDebug2()) {
+	for (Iterator iter = lines.iterator(); iter.hasNext(); ) {
+	  log.debug2("DU: " + (String)iter.next());
+	}
+      }
+      if (lines == null || lines.isEmpty()) {
+	return -1;
+      }
+      String ks = StringUtil.truncateAtAny((String)lines.get(0), " \t\n");
+      return Long.parseLong(ks) * 1024;
+    } catch (Exception e) {
+      log.warning("DU(" + path + ")", e);
+      return -1;
+    }
+
+  }
+
+
   public DF getDF(String path) throws UnsupportedException {
-    String cmd = "df -k -P " + path + "";
+    String cmd = "df -k -P " + path;
     if (log.isDebug2()) log.debug2("cmd: " + cmd);
     try {
       Process p = rt().exec(cmd);

@@ -1,5 +1,5 @@
 /*
- * $Id: TestPlatformInfo.java,v 1.4 2004-06-20 00:03:51 tlipkis Exp $
+ * $Id: TestPlatformInfo.java,v 1.5 2005-01-07 09:24:00 tlipkis Exp $
  */
 
 /*
@@ -49,11 +49,30 @@ public class TestPlatformInfo extends LockssTestCase {
     info = PlatformInfo.getInstance();
   }
 
+  public void testDiskUsageNonexistentPath() throws Exception {
+    long du = info.getDiskUsage("/very_unlik_elyd_irect_oryname/4x2");
+    assertEquals(-1, du);
+  }
+
+  public void testDiskUsage() throws Exception {
+    long du;
+    File tmpdir = getTempDir();
+    du = info.getDiskUsage(tmpdir.toString());
+    assertTrue(du >= 0);
+    StringBuffer sb = new StringBuffer(1500);
+    while (sb.length() < 1200) {
+      sb.append("01234567890123456789012345678901234567890123456789");
+    }
+    FileTestUtil.writeFile(new File(tmpdir, "foobar"), sb.toString());
+    long du2 = info.getDiskUsage(tmpdir.toString());
+    assertTrue(du2 > du);
+  }
+
   public void testNonexistentPathNullDF() throws Exception {
     PlatformInfo.DF df =
       info.getDF(System.getProperty("java.io.tmpdir"));
     assertNotNull(df);
-    df = info.getDF(System.getProperty("/very_unlik_elyd_irect_oryname/4x2"));
+    df = info.getDF("/very_unlik_elyd_irect_oryname/4x3");
     assertNull(df);
   }
 
