@@ -1,5 +1,5 @@
 /*
- * $Id: TestDeadline.java,v 1.3 2002-12-13 23:08:02 tal Exp $
+ * $Id: TestDeadline.java,v 1.4 2002-12-15 00:11:38 tal Exp $
  */
 
 /*
@@ -100,25 +100,29 @@ public class TestDeadline extends LockssTestCase {
     Interrupter intr = null;
     try {
       Date start = new Date();
-      intr = interruptMeIn(2000);
-      Deadline t = Deadline.inRandomRange(450, 550);
+      intr = interruptMeIn(TIMEOUT_SHOULDNT);
+      Deadline t = Deadline.in(100);
       assertTrue(!t.expired());
       while (!t.expired()) {
-	t.sleep();
+	try {
+	  t.sleep();
+	} catch (InterruptedException e) {
+	  if (intr.did()) throw e;
+	}
       }
       long delay = TimerUtil.timeSince(start);
-      if (delay < 200) {
-	fail("sleep(450, 550) returned early in " + delay);
+      if (delay < 80) {
+	fail("sleep(100) returned early in " + delay);
       }
       assertTrue(t.expired());
       if (delay > 800) {
-	fail("sleep(450, 550) returned late in " + delay);
+	fail("sleep(100) returned late in " + delay);
       }
       intr.cancel();
     } catch (InterruptedException e) {
     } finally {
       if (intr.did()) {
-	fail("sleep(450, 550) failed to return within 2 seconds");
+	fail("sleep(100) failed to return within 2 seconds");
       }
     }
   }
@@ -129,60 +133,44 @@ public class TestDeadline extends LockssTestCase {
     try {
       final Deadline t = Deadline.inRandomRange(950, 1050);
       Date start = new Date();
-      intr = interruptMeIn(2000);
-      doer = new DoLater(200) {
+      intr = interruptMeIn(TIMEOUT_SHOULDNT);
+      doer = new DoLater(100) {
 	  protected void doit() {
-	    t.sooner(500);
+	    t.sooner(800);
 	  }
 	};
       doer.start();
       while (!t.expired()) {
-	t.sleep();
+	try {
+	  t.sleep();
+	} catch (InterruptedException e) {
+	  if (intr.did()) throw e;
+	}
       }
       long delay = TimerUtil.timeSince(start);
-      if (delay < 300) {
-	fail("sleep(950, 1050), faster(500) returned early in " + delay);
+      if (delay < 130) {
+	fail("sleep(950, 1050), faster(800) returned early in " + delay);
       }
-      if (delay > 700) {
-	fail("sleep(950, 1050), faster(500) returned late in " + delay);
+      if (delay > 900) {
+	fail("sleep(950, 1050), faster(800) returned late in " + delay);
       }
       intr.cancel();
       doer.cancel();
     } catch (InterruptedException e) {
     } finally {
-      if (!doer.did()) {
-	fail("sleep(950, 1050) returned before doer did faster()");
-      }
-      if (intr.did()) {
-	fail("sleep(950, 1050) failed to return within 2 seconds");
-      }
+      assertTrue("sleep(950, 1050) returned before doer did faster()",
+		 doer.did());
+      assertTrue("sleep(950, 1050) failed to return within 2 seconds",
+		 !intr.did());
     }
   }
 
   public void testSlower() {
-    Interrupter intr = null;
-    try {
-      Deadline t = Deadline.inRandomRange(195, 205);
-      t.later(300);
-      Date start = new Date();
-      intr = interruptMeIn(2000);
-      while (!t.expired()) {
-	t.sleep();
-      }
-      long delay = TimerUtil.timeSince(start);
-      if (delay < 300) {
-	fail("sleep(195, 205), slower(300) returned early in " + delay);
-      }
-      if (delay > 700) {
-	fail("sleep(195, 205), slower(300) returned late in " + delay);
-      }
-      intr.cancel();
-    } catch (InterruptedException e) {
-    } finally {
-      if (intr.did()) {
-	fail("sleep(195, 205) failed to return within 2 seconds");
-      }
-    }
+    TimeBase.setSimulated();
+    Deadline t = Deadline.in(200);
+    t.later(300);
+    assertEquals(500, t.getRemainingTime());
+    TimeBase.setReal();
   }
 
   public void testForceExpire() {
@@ -190,14 +178,18 @@ public class TestDeadline extends LockssTestCase {
     Expirer expr = null;
     try {
       Date start = new Date();
-      intr = interruptMeIn(2000);
+      intr = interruptMeIn(TIMEOUT_SHOULDNT);
       Deadline t = Deadline.inRandomRange(1450, 1550);
-      expr = expireIn(500, t);
+      expr = expireIn(100, t);
       while (!t.expired()) {
-	t.sleep();
+	try {
+	  t.sleep();
+	} catch (InterruptedException e) {
+	  if (intr.did()) throw e;
+	}
       }
       long delay = TimerUtil.timeSince(start);
-      if (delay < 400) {
+      if (delay < 80) {
 	fail("sleep(1450, 1550) expired early in " + delay);
       }
       if (delay > 800) {
