@@ -1,5 +1,5 @@
 /*
- * $Id: FilterRunner.java,v 1.4 2003-09-16 23:37:38 eaalto Exp $
+ * $Id: FilterRunner.java,v 1.5 2003-10-07 22:24:24 troberts Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.devtools;
 import java.io.*;
 import java.util.*;
 import org.lockss.crawler.*;
+import org.lockss.plugin.FilterRule;
 import org.lockss.filter.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
@@ -42,214 +43,59 @@ import org.lockss.test.*;
  */
 public class FilterRunner {
 
-  private static boolean useNullStream = false;
-
-  public static Reader getFilteredReader(String fileName) throws IOException {
-    List tagList =
-      ListUtil.list(
-		    new HtmlTagFilter.TagPair("<script", "</script>", true),
-		    new HtmlTagFilter.TagPair("<table", "</table>", true),
-		    new HtmlTagFilter.TagPair("This article has been cited by",
-					      " other articles:", true),
-		    new HtmlTagFilter.TagPair("[Medline", "]", true),
- 		    new HtmlTagFilter.TagPair("<", ">")
- 		    );
-
-    return HtmlTagFilter.makeNestedFilter(new FileReader(fileName), tagList);
-  }
-
-  public static void printUsageAndExit() {
-    System.out.println("usage");
-    System.exit(0);
-  }
-
-  private static OutputStream getOutputStream(File dest)
-      throws FileNotFoundException {
-    if (useNullStream) {
-      return new NullOutputStream();
-    }
-    return new FileOutputStream(dest);
-  }
-
-  /**
-   * Just copy the file over
-   */
-  private static long filterFile0(File source, File dest) throws IOException {
-    InputStream is = new FileInputStream(source.getAbsolutePath());
-//     OutputStream os = new FileOutputStream(dest);
-//     OutputStream os = new NullOutputStream();
-    OutputStream os = getOutputStream(dest);
-    long bytes = StreamUtil.copy(is, os);
-    is.close();
-    os.close();
-    return bytes;
-  }
-
-  /**
-   * Use HtmlTagFilter (wrapped in a ReaderInputStream)
-   */
-  private static long filterFile1(File source, File dest) throws IOException {
-    InputStream is =
-      new ReaderInputStream(getFilteredReader(source.getAbsolutePath()));
-//     OutputStream os = new FileOutputStream(dest);
-    OutputStream os = getOutputStream(dest);
-    long bytes = StreamUtil.copy(is, os);
-    is.close();
-    os.close();
-    return bytes;
-  }
-
-  /**
-   * Use FileInputStream (wrapped ina InputStreamReader and ReaderInputStream)
-   * To try to vaguely match what the HtmlTagFilter has to do (convert to a
-   * reader and back)
-   */
-  private static long filterFile2(File source, File dest) throws IOException {
-    InputStream filteredInputStream =
-      new LcapFilteredFileInputStream(new FileInputStream(source.getAbsolutePath()));
-    InputStream is =
-      new ReaderInputStream(new InputStreamReader(filteredInputStream));
-//     OutputStream os = new FileOutputStream(dest);
-//     OutputStream os = new NullOutputStream();
-    OutputStream os = getOutputStream(dest);
-    long bytes = StreamUtil.copy(is, os);
-    is.close();
-    os.close();
-    return bytes;
-  }
-
-  /**
-   * Uses an HtmlTagFilter, but doesn't convert it to an InputStream
-   */
-  private static long filterFile3(File source, File dest) throws IOException {
-    Reader reader = getFilteredReader(source.getAbsolutePath());
-//     Writer writer = new FileWriter(dest);
-    Writer writer = new NullWriter();
-    long bytes = StreamUtil.copy(reader, writer);
-    reader.close();
-    writer.close();
-    return bytes;
-  }
-
-  /**
-   * Use an LcapFilteredFileInputStream
-   */
-  private static long filterFile4(File source, File dest) throws IOException {
-    InputStream is =
-      new LcapFilteredFileInputStream(new FileInputStream(source.getAbsolutePath()));
-//     OutputStream os = new FileOutputStream(dest);
-//     OutputStream os = new NullOutputStream();
-    OutputStream os = getOutputStream(dest);
-    long bytes = StreamUtil.copy(is, os);
-    is.close();
-    os.close();
-    return bytes;
-  }
-
-  /**
-   * Use a nested LcapFilteredFileInputStreams
-   */
-  private static long filterFile5(File source, File dest) throws IOException {
-    InputStream is =
-      new LcapFilteredFileInputStream(new LcapFilteredFileInputStream(new FileInputStream(source.getAbsolutePath())));
-//     OutputStream os = new FileOutputStream(dest);
-//     OutputStream os = new NullOutputStream();
-    OutputStream os = getOutputStream(dest);
-    long bytes = StreamUtil.copy(is, os);
-    is.close();
-    os.close();
-    return bytes;
-  }
-
-  /**
-   * Use a nested LcapFilteredFileInputStreams
-   */
-  private static long filterFile6(File source, File dest) throws IOException {
-    InputStream is1 =
-      new ReaderInputStream(getFilteredReader(source.getAbsolutePath()));
-    InputStream is = new WhiteSpaceFilter(is1);
-//     OutputStream os = new FileOutputStream(dest);
-//     OutputStream os = new NullOutputStream();
-    OutputStream os = getOutputStream(dest);
-    long bytes = StreamUtil.copy(is, os);
-    is.close();
-    os.close();
-    return bytes;
-  }
-
-  /**
-   * Use a nested LcapFilteredFileInputStreams
-   */
-  private static long filterFile7(File source, File dest) throws IOException {
-    InputStream is = new WhiteSpaceFilter(new FileInputStream(source.getAbsolutePath()));
-    OutputStream os = getOutputStream(dest);
-    long bytes = StreamUtil.copy(is, os);
-    is.close();
-    os.close();
-    return bytes;
-  }
-
-  private static long filterFile(File source, File dest, int method)
-      throws IOException{
-    switch (method) {
-    case 0:
-      return filterFile0(source, dest);
-    case 1:
-      return filterFile1(source, dest);
-    case 2:
-      return filterFile2(source, dest);
-    case 3:
-      return filterFile3(source, dest);
-    case 4:
-      return filterFile4(source, dest);
-    case 5:
-      return filterFile5(source, dest);
-    case 6:
-      return filterFile6(source, dest);
-    case 7:
-      return filterFile7(source, dest);
-    }
-    return -1;
-  }
-
-  private static File makeDestFile(File file, File sourceDir, File destDir)
-      throws IOException {
-    String relativePath = FileTestUtil.getPathUnderRoot(file, sourceDir);
-    File returnFile = new File(destDir, relativePath);
-    returnFile.getParentFile().mkdirs();
-    returnFile.createNewFile();
-    return returnFile;
-  }
-
-  private static void filterFiles(File sourceDir, File destDir, int method)
-      throws IOException {
-    long startTime = TimeBase.nowMs();
-    List fileList = FileTestUtil.enumerateFiles(sourceDir);
-    int totalBytes = 0;
-    for (Iterator it = fileList.iterator(); it.hasNext();) {
-      File curFile = (File) it.next();
-      totalBytes +=
-	filterFile(curFile, makeDestFile(curFile, sourceDir, destDir), method);
-    }
-    long endTime = TimeBase.nowMs();
-    long totalMS = endTime - startTime;
-    System.out.println("Method: "+method);
-    System.out.println(totalBytes +" processed in "+totalMS+" milliseconds");
-    System.out.println("Rate: "+(totalBytes/totalMS)+ " bytes/ms");
-  }
-
-  public static void main(String args[]) {
-    if (args.length == 3) {
-      try{
-	File source = new File(args[0]);
-	File dest = new File(args[1]);
-	int method = Integer.parseInt(args[2]);
-	filterFiles(source, dest, method);
-      } catch (IOException e) {
-	e.printStackTrace();
+  public static void filterDirectory(FilterRule filter, File srcDir,
+				     File destDir)
+      throws FileNotFoundException, IOException {
+    if (filter == null) {
+      throw new IllegalArgumentException("Called with null filter");
+    } else if (srcDir == null) {
+      throw new IllegalArgumentException("Called with null source dir");
+    } else if (!srcDir.isDirectory()) {
+      throw new IllegalArgumentException("Called with src that isn't a directory: "+srcDir);
+    } else if (destDir == null) {
+      throw new IllegalArgumentException("Called with null dest directory");
+    } else if (!destDir.isDirectory()) {
+      throw new IllegalArgumentException("Called with dest that isn't a directory: "+destDir);
+    } 
+    File children[] = srcDir.listFiles();
+    for (int ix=0; ix<children.length; ix++) {
+      if (children[ix].isFile()) {
+	filterSingleFile(filter, children[ix], destDir);
+      } else if (children[ix].isDirectory()) {
+	String childDir = children[ix].getPath();
+	childDir = childDir.substring(childDir.lastIndexOf(File.separator));
+	File newDestDir = new File(destDir.getPath()+File.separator+childDir);
+	newDestDir.mkdir();
+	filterDirectory(filter, children[ix], newDestDir);
       }
-    } else {
-      printUsageAndExit();
     }
   }
+
+  public static void filterSingleFile(FilterRule filter,
+				      File src, File dest)
+      throws FileNotFoundException, IOException {
+    if (filter == null) {
+      throw new IllegalArgumentException("Called with null filter");
+    } else if (src == null) {
+      throw new IllegalArgumentException("Called with null source file");
+    } else if (dest == null) {
+      throw new IllegalArgumentException("Called with null dest file");
+    } else if (!src.isFile()) {
+      throw new IllegalArgumentException("Called with src that isn't a file");
+    }
+    if (dest.isDirectory()) {
+      String file = src.getPath();
+      file = file.substring(file.lastIndexOf(File.separator));
+      dest = new File(dest, file);
+    } 
+    System.out.println("Filtering "+src+" to "+dest);
+    Reader reader = new FileReader(src);
+    OutputStream os = new FileOutputStream(dest);
+    StreamUtil.copy(filter.createFilteredInputStream(reader), os);
+  }
+
+  public void main(String args[]) {
+    
+  }
+
 }
