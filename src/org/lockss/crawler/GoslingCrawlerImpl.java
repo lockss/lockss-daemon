@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingCrawlerImpl.java,v 1.7 2003-01-06 22:54:07 troberts Exp $
+ * $Id: GoslingCrawlerImpl.java,v 1.8 2003-01-07 01:55:32 troberts Exp $
  */
 
 /*
@@ -120,7 +120,7 @@ public class GoslingCrawlerImpl implements Crawler {
    *
    */
   public void doCrawl(ArchivalUnit au, List urls, boolean followLinks,
-		       boolean overWrite, Deadline deadline) {
+		       Deadline deadline) {
     if (au == null) {
       throw new IllegalArgumentException("Called with a null ArchivalUnit");
     } else if (urls == null) {
@@ -129,60 +129,78 @@ public class GoslingCrawlerImpl implements Crawler {
       throw new IllegalArgumentException("Called with a null Deadline");
     }
 
-
-
-    List list = createInitialList(urls);
+    CachedUrlSet cus = au.getAUCachedUrlSet();
     Set parsedPages = new HashSet();
 
-    CachedUrlSet cus = au.getAUCachedUrlSet();
-    while (!list.isEmpty() && !deadline.expired()) {
-      String url = (String)list.remove(0);
-      logger.debug("Dequeued url from list: "+url);
-      UrlCacher uc = cus.makeUrlCacher(url);
-      if (uc.shouldBeCached()) {
- 	if (overWrite || !cus.isCached(url)) {
-	  try {
-	    logger.info("caching "+uc);
-	    uc.cache(); //IOException if there is a caching problem
-	  } catch (IOException ioe) {
-	    //XXX handle this better.  Requeue?
-	    logger.error("Problem caching "+uc+". Ignoring", ioe);
-	  }
-	  au.pause(); //XXX make sure we throw InterruptedExceptions
-	}
- 	else {
- 	  logger.info(uc+" exists, not caching");
- 	}
-	try{
-	  if (followLinks && !parsedPages.contains(uc.getUrl())) {
-	    CachedUrl cu = uc.getCachedUrl();
+    List extractedUrls = new LinkedList();
 
-	    //XXX quick fix; if statement should be removed when we rework 
-	    //handling of error condition
-	    if (cu.exists()) {
-	      addUrlsToList(cu, list);//IOException if the CU can't be read
-	      parsedPages.add(uc.getUrl());
-	    }
-	  }
-	} catch (IOException ioe) {
-	  //XXX handle this better.  Requeue?
-	  logger.error("Problem parsing "+uc+". Ignoring", ioe);
-	}
-      }
-      logger.debug("Removing from list: "+uc.getUrl());
+    Iterator it = urls.iterator();
+    while (it.hasNext() && !deadline.expired()) {
+      doCrawlLoop((String)it.next(), extractedUrls, parsedPages, 
+		  au, cus, true, followLinks);
+    }
+
+    while (!extractedUrls.isEmpty() && !deadline.expired()) {
+      String url = (String)extractedUrls.remove(0);
+      doCrawlLoop(url, extractedUrls, parsedPages, au, cus, 
+		  false, followLinks);
     }
   }
 
+
   /**
-   * Method to generate a List of urls to start a crawl at from a
-   * CachedUrlSet.
-   *
-   * @param urls List of urls to start the crawl at
-   * @return A modifiable list of the urls (in string form)
+   * This is the meat of the crawl.  Fetches the specified url and adds 
+   * any urls it harvests from it to extractedUrls
+   * @param String url url to fetch
+   * @param List extractedUrls list to write harvested urls to
+   * @param Set parsedPages set containing all the pages that have already 
+   * been parsed (to make sure we don't loop)
+   * @param ArchivalUnit au archival unit that the url belongs to; 
+   * used to get the pause() method
+   * @param CachedUrlSet cus cached url set that the url belongs to
+   * @param boolean overWrite whether we should overwrite the page if it 
+   * already has been cached 
+   * @param boolean shouldParse whether we should extract links from this 
+   * page if we cache it
    */
-  protected static List createInitialList (List urls) {
-    return new LinkedList(urls);
+  protected void doCrawlLoop(String url, List extractedUrls, Set parsedPages, 
+			     ArchivalUnit au, CachedUrlSet cus, 
+			     boolean overWrite, boolean shouldParse) {
+    logger.debug("Dequeued url from list: "+url);
+    UrlCacher uc = cus.makeUrlCacher(url);
+    if (uc.shouldBeCached()) {
+      if (overWrite || !cus.isCached(url)) {
+	try {
+	  logger.info("caching "+uc);
+	  uc.cache(); //IOException if there is a caching problem
+	} catch (IOException ioe) {
+	  //XXX handle this better.  Requeue?
+	  logger.error("Problem caching "+uc+". Ignoring", ioe);
+	}
+	au.pause(); //XXX make sure we throw InterruptedExceptions
+      }
+      else {
+	logger.info(uc+" exists, not caching");
+      }
+      try{
+	if (shouldParse && !parsedPages.contains(uc.getUrl())) {
+	  CachedUrl cu = uc.getCachedUrl();
+
+	  //XXX quick fix; if statement should be removed when we rework 
+	  //handling of error condition
+	  if (cu.exists()) {
+	    addUrlsToList(cu, extractedUrls);//IOException if the CU can't be read
+	    parsedPages.add(uc.getUrl());
+	  }
+	}
+      } catch (IOException ioe) {
+	//XXX handle this better.  Requeue?
+	logger.error("Problem parsing "+uc+". Ignoring", ioe);
+      }
+    }
+    logger.debug("Removing from list: "+uc.getUrl());
   }
+
 
   /**
    * Method which will parse the html file represented by cu and add all
