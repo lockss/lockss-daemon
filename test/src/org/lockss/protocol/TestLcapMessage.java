@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapMessage.java,v 1.30 2004-01-20 18:22:49 tlipkis Exp $
+ * $Id: TestLcapMessage.java,v 1.31 2004-01-31 22:58:38 tlipkis Exp $
  */
 
 /*
@@ -98,7 +98,7 @@ public class TestLcapMessage extends LockssTestCase {
     testmsg.m_opcode = LcapMessage.CONTENT_POLL_REQ;
     testmsg.m_entries = testentries = TestPoll.makeEntries(1, 25);
     testmsg.m_archivalID = archivalID;
-
+    testmsg.m_pluginVersion = "PlugVer42";
   }
 
   private boolean hasSameEntries(List entries1, List entries2) {
@@ -145,21 +145,15 @@ public class TestLcapMessage extends LockssTestCase {
     assertNotEquals(original_maxsize, testmsg.m_maxSize);
   }
 
-  public void testNoOpMessageCreation() {
+  public void testNoOpMessageCreation() throws Exception {
     LcapMessage noop_msg = null;
 
-    try {
-      noop_msg = LcapMessage.makeNoOpMsg(testID, testbytes);
-
-    }
-    catch(IOException ex) {
-      fail("noop message creation failed");
-    }
+    noop_msg = LcapMessage.makeNoOpMsg(testID, testbytes);
 
     // now check the fields we expect to be valid
-    assertEquals(noop_msg.m_originAddr, testaddr);
-    assertEquals(noop_msg.m_opcode,LcapMessage.NO_OP);
-    assertEquals(noop_msg.m_verifier, testbytes);
+    assertEquals(testaddr, noop_msg.m_originAddr);
+    assertEquals(LcapMessage.NO_OP, noop_msg.m_opcode);
+    assertEquals(testbytes, noop_msg.m_verifier);
   }
 
   public void testNoOpMessageToString() throws IOException {
@@ -168,178 +162,128 @@ public class TestLcapMessage extends LockssTestCase {
     noop_msg.toString();
   }
 
-  public void testNoOpEncoding() {
+  public void testNoOpEncoding() throws Exception {
 
     byte[] msgbytes = new byte[0];
     LcapMessage noop_msg = null;
 
-    try {
-      noop_msg = LcapMessage.makeNoOpMsg(testID, testbytes);
-    }
-    catch(IOException ex) {
-      fail("noop message creation failed");
-    }
-    try {
-      msgbytes = noop_msg.encodeMsg();
-    }
-    catch (IOException ex) {
-      fail("encode failed!" + ex.toString());
-    }
+    noop_msg = LcapMessage.makeNoOpMsg(testID, testbytes);
+    msgbytes = noop_msg.encodeMsg();
 
-    try {
-      LcapMessage msg = new LcapMessage(msgbytes);
-      // now test to see if we got back what we started with
-      assertEquals(testaddr, msg.m_originAddr);
-      assertEquals(LcapMessage.NO_OP, msg.m_opcode);
-      assertEquals(testbytes, msg.m_verifier);
-    }
-    catch (IOException ex) {
-      fail("message decode failed");
-    }
+    LcapMessage msg = new LcapMessage(msgbytes);
+    // now test to see if we got back what we started with
+    assertEquals(testaddr, msg.m_originAddr);
+    assertEquals(LcapMessage.NO_OP, msg.m_opcode);
+    assertEquals(testbytes, msg.m_verifier);
   }
 
-  public void testReplyMessageCreation() {
+  public void testReplyMessageCreation() throws Exception {
     LcapMessage rep_msg = null;
 
-    try {
-      rep_msg = LcapMessage.makeReplyMsg(testmsg,
-                                         testbytes,
-                                         testbytes,
-                                         testentries,
-                                         LcapMessage.CONTENT_POLL_REP,
-                                         100000,
-                                         testID);
-    }
-    catch(IOException ex) {
-      fail("message reply creation failed");
-    }
+    rep_msg = LcapMessage.makeReplyMsg(testmsg,
+				       testbytes,
+				       testbytes,
+				       testentries,
+				       LcapMessage.CONTENT_POLL_REP,
+				       100000,
+				       testID);
 
     // now test to see if we got back what we expected
 
-    assertEquals(rep_msg.m_originAddr, testaddr);
-    assertEquals(rep_msg.m_ttl,5);
-    assertEquals(rep_msg.m_opcode,LcapMessage.CONTENT_POLL_REP);
-    assertEquals(rep_msg.m_hashAlgorithm,testmsg.m_hashAlgorithm);
+    assertEquals(testaddr, rep_msg.m_originAddr);
+    assertEquals(5, rep_msg.m_ttl);
+    assertEquals(LcapMessage.CONTENT_POLL_REP, rep_msg.m_opcode);
+    assertEquals(testmsg.m_hashAlgorithm, rep_msg.m_hashAlgorithm);
+    assertEquals(testmsg.m_pluginVersion, rep_msg.m_pluginVersion);
     // TODO: figure out how to test time
-    assertEquals(rep_msg.m_multicast ,false);
+    assertFalse(rep_msg.m_multicast);
     assertEquals(2, rep_msg.m_hopCount);
 
-    assertTrue(Arrays.equals(rep_msg.m_challenge,testmsg.m_challenge));
-    assertTrue(Arrays.equals(rep_msg.m_verifier,testmsg.m_verifier));
-    assertTrue(Arrays.equals(rep_msg.m_hashed,testmsg.m_hashed));
+    assertEquals(testmsg.m_challenge, rep_msg.m_challenge);
+    assertEquals(testmsg.m_verifier, rep_msg.m_verifier);
+    assertEquals(testmsg.m_hashed, rep_msg.m_hashed);
     assertTrue(hasSameEntries(rep_msg.m_entries,testentries));
-
   }
 
-  public void testRequestMessageCreation() {
+  public void testRequestMessageCreation() throws Exception {
     LcapMessage req_msg = null;
-    try {
-      PollSpec spec = new PollSpec(archivalID,urlstr, lwrbnd, uprbnd,null);
-      assertEquals(spec.getVersion(), 1);
-      req_msg = LcapMessage.makeRequestMsg(spec,
-                                           testentries,
-                                           testbytes,
-                                           testbytes,
-                                           LcapMessage.CONTENT_POLL_REQ,
-                                           100000,
-                                           testID);
-      assertEquals(req_msg.getVersion(), 1);
-    }
-    catch (Exception ex) {
-      fail("message request creation failed.");
-    }
-    assertEquals(req_msg.m_originAddr, testaddr);
-    assertEquals(req_msg.m_opcode,LcapMessage.CONTENT_POLL_REQ);
-    assertEquals(req_msg.m_multicast ,false);
-    assertEquals(req_msg.m_archivalID, archivalID);
-    assertTrue(Arrays.equals(req_msg.m_challenge,testbytes));
-    assertTrue(Arrays.equals(req_msg.m_verifier,testbytes));
-    assertEquals(null,req_msg.m_hashed);
+    PollSpec spec =
+      new MockPollSpec(archivalID, urlstr, lwrbnd, uprbnd, "Plug42");
+    req_msg = LcapMessage.makeRequestMsg(spec,
+					 testentries,
+					 testbytes,
+					 testbytes,
+					 LcapMessage.CONTENT_POLL_REQ,
+					 100000,
+					 testID);
+    assertEquals(spec.getPollVersion(), 1);
+    assertEquals(1, req_msg.getPollVersion());
+    assertEquals("Plug42", req_msg.getPluginVersion());
+    assertEquals(testaddr, req_msg.m_originAddr);
+    assertEquals(LcapMessage.CONTENT_POLL_REQ, req_msg.m_opcode);
+    assertFalse(req_msg.m_multicast);
+    assertEquals(archivalID, req_msg.m_archivalID);
+    assertEquals(testbytes, req_msg.m_challenge);
+    assertEquals(testbytes, req_msg.m_verifier);
+    assertNull(req_msg.m_hashed);
     assertTrue(hasSameEntries(req_msg.m_entries,testentries));
-    assertEquals(req_msg.m_lwrBound, lwrbnd);
-    assertEquals(req_msg.m_uprBound, uprbnd);
-
+    assertEquals(lwrbnd, req_msg.m_lwrBound);
+    assertEquals(uprbnd, req_msg.m_uprBound);
   }
 
-  public void testMessageEncoding() {
-
+  public void testMessageEncoding() throws Exception {
     byte[] msgbytes = new byte[0];
-    try {
-      testmsg.storeProps();
-      msgbytes = testmsg.encodeMsg();
-    }
-    catch (IOException ex) {
-      fail("encode failed! " + ex.toString());
-    }
+    testmsg.storeProps();
+    msgbytes = testmsg.encodeMsg();
 
-    try {
-      LcapMessage msg = new LcapMessage(msgbytes);
-      // now test to see if we got back what we started with
-      assertEquals(msg.m_originAddr, testaddr);
-      assertEquals(msg.m_ttl,5);
-      assertEquals(msg.m_opcode,LcapMessage.CONTENT_POLL_REQ);
-      assertEquals(msg.m_multicast ,false);
-      assertEquals(2, msg.m_hopCount);
+    LcapMessage msg = new LcapMessage(msgbytes);
+    // now test to see if we got back what we started with
+    assertEquals(testaddr, msg.m_originAddr);
+    assertEquals(5, msg.m_ttl);
+    assertEquals(LcapMessage.CONTENT_POLL_REQ, msg.m_opcode);
+    assertFalse(msg.m_multicast);
+    assertEquals(2, msg.m_hopCount);
 
-      assertTrue(Arrays.equals(msg.m_challenge,testbytes));
-      assertTrue(Arrays.equals(msg.m_verifier,testbytes));
-      assertTrue(Arrays.equals(msg.m_hashed,testbytes));
-      assertTrue(hasSameEntries(msg.m_entries,testentries));
-      assertEquals(msg.m_lwrBound, lwrbnd);
-      assertEquals(msg.m_uprBound, uprbnd);
-    }
-    catch (IOException ex) {
-      fail("message decode failed");
-    }
+    assertEquals(testbytes, msg.m_challenge);
+    assertEquals(testbytes, msg.m_verifier);
+    assertEquals(testbytes, msg.m_hashed);
+    assertTrue(hasSameEntries(msg.m_entries,testentries));
+    assertEquals(lwrbnd, msg.m_lwrBound);
+    assertEquals(uprbnd, msg.m_uprBound);
+    assertEquals("PlugVer42", msg.getPluginVersion());
   }
 
-  public void testMessageForwarding() {
+  public void testMessageForwarding() throws Exception {
     byte[] msgbytes = new byte[0];
-    try {
-      testmsg.storeProps();
-      msgbytes = testmsg.encodeMsg();
-    }
-    catch (IOException ex) {
-      fail("encode failed! " + ex.toString());
-    }
-    try {
-      LcapMessage msg = new LcapMessage(msgbytes);
-      assertEquals(2, msg.m_hopCount);
-      msg.setHopCount(3);
-      msg = new LcapMessage(msg.encodeMsg());
-      // now test to see if we got back what we started with
-      assertEquals(3,msg.m_hopCount);
-      assertEquals(msg.m_originAddr, testaddr);
-      assertEquals(msg.m_ttl,5);
-      assertEquals(msg.m_opcode,LcapMessage.CONTENT_POLL_REQ);
-      assertEquals(msg.m_multicast ,false);
+    testmsg.storeProps();
+    msgbytes = testmsg.encodeMsg();
+    LcapMessage msg = new LcapMessage(msgbytes);
+    assertEquals(2, msg.m_hopCount);
+    msg.setHopCount(3);
+    msg = new LcapMessage(msg.encodeMsg());
+    // now test to see if we got back what we started with
+    assertEquals(3, msg.m_hopCount);
+    assertEquals(testaddr, msg.m_originAddr);
+    assertEquals(5, msg.m_ttl);
+    assertEquals(LcapMessage.CONTENT_POLL_REQ, msg.m_opcode);
+    assertFalse(msg.m_multicast);
 
-      assertTrue(Arrays.equals(msg.m_challenge,testbytes));
-      assertTrue(Arrays.equals(msg.m_verifier,testbytes));
-      assertTrue(Arrays.equals(msg.m_hashed,testbytes));
-      assertTrue(hasSameEntries(msg.m_entries,testentries));
-      assertEquals(msg.m_lwrBound, lwrbnd);
-      assertEquals(msg.m_uprBound, uprbnd);
-    }
-    catch (IOException ex) {
-      fail("message decode failed");
-    }
-
+    assertEquals(testbytes, msg.m_challenge);
+    assertEquals(testbytes, msg.m_verifier);
+    assertEquals(testbytes, msg.m_hashed);
+    assertTrue(hasSameEntries(msg.m_entries,testentries));
+    assertEquals(lwrbnd, msg.m_lwrBound);
+    assertEquals(uprbnd, msg.m_uprBound);
+    assertEquals("PlugVer42", msg.getPluginVersion());
   }
 
-  public void testMessageEncodingHandlesAllowableNulls(){
+  public void testMessageEncodingHandlesAllowableNulls() throws Exception {
     testmsg.m_entries = null;
     testmsg.m_lwrBound = null;
     testmsg.m_uprBound = null;
     testmsg.m_lwrRem = null;
     testmsg.m_uprRem = null;
-    try {
-      testmsg.storeProps();
-    }
-    catch (IOException ex) {
-      assertTrue("message encode with nulls failed!", true);
-    }
-
+    testmsg.storeProps();
   }
 
   public void testMessageDecodingHandlesAllowableNulls() throws IOException {
@@ -352,12 +296,7 @@ public class TestLcapMessage extends LockssTestCase {
     byte[] msgbytes = testmsg.encodeMsg();
 
     LcapMessage msg = null;
-    try {
-      msg = new LcapMessage(msgbytes);
-    }
-    catch (IOException ex) {
-      assertTrue("message decode with nulls failed!", true);
-    }
+    msg = new LcapMessage(msgbytes);
 
     // now make sure we're still null
     assertNull(msg.m_entries);
@@ -365,7 +304,6 @@ public class TestLcapMessage extends LockssTestCase {
     assertNull(msg.m_uprBound);
     assertNull(msg.m_lwrRem);
     assertNull(msg.m_uprRem);
-
   }
 
   public void testHopCount() {
