@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.102 2003-04-16 23:50:25 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.103 2003-04-17 00:28:10 aalto Exp $
  */
 
 /*
@@ -97,8 +97,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
 
     auState = historyRepo.loadAuState(managedAu);
 
-    treeWalkHandler = new TreeWalkHandler(this, theDaemon.getCrawlManager(),
-                                          regulator);
+    treeWalkHandler = new TreeWalkHandler(this, theDaemon);
     treeWalkHandler.start();
     logger.debug("NodeManager sucessfully started");
   }
@@ -120,8 +119,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
   public void forceTreeWalk() {
     logger.info("Forcing treewalk...");
     if (treeWalkHandler == null) {
-      treeWalkHandler = new TreeWalkHandler(this, theDaemon.getCrawlManager(),
-                                            regulator);
+      treeWalkHandler = new TreeWalkHandler(this, theDaemon);
       treeWalkHandler.start();
     }
     treeWalkHandler.forceTreeWalk();

@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkHandler.java,v 1.15 2003-04-16 23:50:25 aalto Exp $
+ * $Id: TreeWalkHandler.java,v 1.16 2003-04-17 00:28:10 aalto Exp $
  */
 
 /*
@@ -60,6 +60,7 @@ public class TreeWalkHandler {
   static final double MAX_DEVIATION = 0.1;
 
   NodeManagerImpl manager;
+  private static LockssDaemon theDaemon;
   private static CrawlManager theCrawlManager;
   private static ActivityRegulator theRegulator;
   private ArchivalUnit theAu;
@@ -79,11 +80,11 @@ public class TreeWalkHandler {
 
   Configuration.Callback configCallback;
 
-  TreeWalkHandler(NodeManagerImpl manager, CrawlManager theCrawlManager,
-                  ActivityRegulator theRegulator) {
+  TreeWalkHandler(NodeManagerImpl manager, LockssDaemon theDaemon) {
     this.manager = manager;
-    this.theCrawlManager = theCrawlManager;
-    this.theRegulator = theRegulator;
+    this.theCrawlManager = theDaemon.getCrawlManager();
+    this.theRegulator = theDaemon.getActivityRegulator();
+    this.theDaemon = theDaemon;
     theAu = manager.managedAu;
 
     configCallback = new Configuration.Callback() {
@@ -352,6 +353,7 @@ public class TreeWalkHandler {
     private boolean goOn = true;
     boolean doingTreeWalk = false;
     Deadline deadline;
+    private static final long SMALL_SLEEP = Constants.SECOND;
 
     public TreeWalkThread() {
       super("TreeWalk: "+theAu.getName());
@@ -361,9 +363,18 @@ public class TreeWalkHandler {
       while (goOn) {
         long timeToStart = timeUntilTreeWalkStart();
         if (timeToStart <= 0) {
-          doingTreeWalk = true;
-          doTreeWalk();
-          doingTreeWalk = false;
+          if (!theDaemon.isDaemonRunning()) {
+            // if the daemon isn't up yet, do a short sleep
+            logger.debug2("Daemon not running yet. Sleeping...");
+            deadline = Deadline.in(SMALL_SLEEP);
+            try {
+              deadline.sleep();
+            } catch (InterruptedException ie) { }
+          } else {
+            doingTreeWalk = true;
+            doTreeWalk();
+            doingTreeWalk = false;
+          }
         } else {
           long delta = (long) ( (double) MAX_DEVIATION * timeToStart);
           logger.debug3("Creating a deadline for " + timeToStart +
