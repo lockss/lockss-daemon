@@ -98,13 +98,20 @@ public class TestMockDatagramSocket extends TestCase{
     }
   }
   
-  public void testReceiveWithOutSetPacketsThrowsIOE(){
+  public void testReceiveWithOutSetPacketsWaits() {
     DatagramPacket packet = createEmptyPacket(10);
-    try{
+    DoLater.Interrupter intr = null;
+    try {
+      intr = DoLater.interruptMeIn(1000);
       ds.receive(packet);
-      fail("Should have thrown IOException");
-    }
-    catch (IOException ioe){
+      fail("receive() returned when no packets");
+    } catch (IOException e) {
+      // this is what we're expecting
+    } finally {
+      intr.cancel();
+      if (!intr.did()) {
+	fail("get() of empty returned");
+      }
     }
   }
 
