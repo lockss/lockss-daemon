@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.14 2003-03-14 01:40:17 tal Exp $
+ * $Id: TestStringUtil.java,v 1.15 2003-03-17 08:19:41 tal Exp $
  */
 
 /*
@@ -240,5 +240,56 @@ public class TestStringUtil extends LockssTestCase {
     assertEquals("www.com", StringUtil.trimHostName("www.com"));
     // would leave empty string
     assertEquals("www..com", StringUtil.trimHostName("www..com"));
+  }
+
+  static final int SECOND = 1000;
+  static final int MINUTE = 60 * SECOND;
+  static final int HOUR = 60 * MINUTE;
+  static final int DAY = 24 * HOUR;
+  static final int WEEK = 7 * DAY;
+
+  public void testParseTimeInterval() throws Exception {
+    assertEquals(0, StringUtil.parseTimeInterval("0"));
+    assertEquals(0, StringUtil.parseTimeInterval("0s"));
+    assertEquals(0, StringUtil.parseTimeInterval("0m"));
+    assertEquals(0, StringUtil.parseTimeInterval("0h"));
+    assertEquals(0, StringUtil.parseTimeInterval("0d"));
+    assertEquals(0, StringUtil.parseTimeInterval("0w"));
+    assertEquals(1000, StringUtil.parseTimeInterval("1000"));
+    assertEquals(SECOND, StringUtil.parseTimeInterval("1s"));
+    assertEquals(MINUTE, StringUtil.parseTimeInterval("1m"));
+    assertEquals(HOUR, StringUtil.parseTimeInterval("1h"));
+    assertEquals(DAY, StringUtil.parseTimeInterval("1d"));
+    assertEquals(WEEK, StringUtil.parseTimeInterval("1w"));
+    assertEquals(StringUtil.parseTimeInterval("60s"),
+		 StringUtil.parseTimeInterval("1m"));
+    assertEquals(StringUtil.parseTimeInterval("120m"),
+		 StringUtil.parseTimeInterval("2h"));
+    assertEquals(StringUtil.parseTimeInterval("72h"),
+		 StringUtil.parseTimeInterval("3d"));
+    assertEquals(StringUtil.parseTimeInterval("14d"),
+		 StringUtil.parseTimeInterval("2w"));
+    try {
+      StringUtil.parseTimeInterval("2x");
+      fail("should have thrown NumberFormatException");
+    } catch (NumberFormatException e) {
+    }
+    try {
+      StringUtil.parseTimeInterval("");
+      fail("should have thrown NumberFormatException");
+    } catch (NumberFormatException e) {
+    }
+  }
+
+  public void testTimeInterval() throws Exception {
+    assertEquals("0s", StringUtil.timeIntervalToString(0));
+    assertEquals("1s", StringUtil.timeIntervalToString(SECOND));
+    assertEquals("1m0s", StringUtil.timeIntervalToString(MINUTE));
+    assertEquals("1h0m0s", StringUtil.timeIntervalToString(HOUR));
+    assertEquals("2d3h0m",
+		 StringUtil.timeIntervalToString(DAY * 2 + HOUR * 3));
+    assertEquals("20d23h0m",
+		 StringUtil.timeIntervalToString(WEEK * 3 - (HOUR * 1)));
+    assertEquals("3w0d0h", StringUtil.timeIntervalToString(WEEK * 3));
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.15 2003-03-14 01:40:17 tal Exp $
+ * $Id: StringUtil.java,v 1.16 2003-03-17 08:19:41 tal Exp $
  */
 
 /*
@@ -371,6 +371,101 @@ public class StringUtil {
       return hostname;
     }
     return hostname.substring(start, end);
+  }
+
+  /** Parse a string as a time interval.  An interval is specified
+   * as an integer with an optional suffix.  No suffix means milliseconds,
+   * s, m, h, d, w indicates seconds, minutes, hours, days and weeks
+   * respectively.
+   * @param the interval
+   * @return interval in milliseconds
+   */
+  // tk - extend to accept combinations: xxHyyMzzS, etc.
+  public static long parseTimeInterval(String str) {
+    try {
+      int len = str.length();
+      char suffix = str.charAt(len - 1);
+      String numstr;
+      int mult = 1;
+      if (Character.isDigit(suffix)) {
+	numstr = str;
+      } else {
+	numstr = str.substring(0, len - 1);
+	switch (Character.toUpperCase(suffix)) {
+	case 'S': mult = Constants.SECOND; break;
+	case 'M': mult = Constants.MINUTE; break;
+	case 'H': mult = Constants.HOUR; break;
+	case 'D': mult = Constants.DAY; break;
+	case 'W': mult = Constants.WEEK; break;
+	default:
+	  throw new NumberFormatException("Illegal time interval suffix");
+	}
+      }
+      return Long.parseLong(numstr) * mult;
+    } catch (IndexOutOfBoundsException e) {
+      throw new NumberFormatException("empty string");
+    }
+  }
+
+  // Unit Descriptor
+  private static class UD {
+    String str;				// suffix string
+    long millis;			// milliseconds in unit
+    int threshold;			// min units to output
+    String stop;			// last unit to output if this matched
+
+    UD(String str, long millis) {
+      this(str, millis, 1);
+    }
+
+    UD(String str, long millis, int threshold) {
+      this(str, millis, threshold, null);
+    }
+
+    UD(String str, long millis, int threshold, String stop) {
+      this.str = str;
+      this.millis = millis;
+      this.threshold = threshold;
+      this.stop = stop;
+    }
+  }
+
+  static UD units[] = {
+    new UD("w", Constants.WEEK, 3, "h"),
+    new UD("d", Constants.DAY, 1, "m"),
+    new UD("h", Constants.HOUR),
+    new UD("m", Constants.MINUTE),
+    new UD("s", Constants.SECOND, 0),
+  };
+
+  /** Generate a string representing the time interval.
+   * @param millis the time interval in milliseconds
+   * @return a string in the form dDhHmMsS
+   */
+  public static String timeIntervalToString(long millis) {
+    StringBuffer sb = new StringBuffer();
+    boolean force = false;
+    String stop = null;
+    for (int ix = 0; ix < units.length; ix++) {
+      UD iu = units[ix];
+      long n = millis / iu.millis;
+      if (force || n >= iu.threshold) {
+	millis %= iu.millis;
+	sb.append(n);
+	sb.append(iu.str);
+	force = true;
+	if (stop == null) {
+	  if (iu.stop != null) {
+	    stop = iu.stop;
+	  }
+	} else {
+	  if (stop.equals(iu.str)) {
+	    break;
+	  }
+	}
+      }
+    }
+    return sb.toString();
   }
 }
 
