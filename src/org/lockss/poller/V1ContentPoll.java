@@ -1,5 +1,5 @@
 /*
-* $Id: V1ContentPoll.java,v 1.1 2003-06-23 19:24:36 claire Exp $
+* $Id: V1ContentPoll.java,v 1.2 2003-06-30 23:09:09 clairegriffin Exp $
  */
 
 /*
@@ -54,7 +54,12 @@ public class V1ContentPoll extends V1Poll {
   V1ContentPoll(LcapMessage msg, PollSpec pollspec, PollManager pm) {
     super(msg, pollspec, pm);
     m_replyOpcode = LcapMessage.CONTENT_POLL_REP;
-    m_tally.type = CONTENT_POLL;
+    m_tally = new V1PollTally(this,
+                              CONTENT_POLL,
+                              m_createTime,
+                              msg.getDuration(),
+                              pm.getQuorum(),
+                              msg.getHashAlgorithm());
   }
 
 

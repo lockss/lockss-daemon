@@ -1,5 +1,5 @@
 /*
-* $Id: V1VerifyPoll.java,v 1.2 2003-06-26 23:53:34 eaalto Exp $
+* $Id: V1VerifyPoll.java,v 1.3 2003-06-30 23:09:09 clairegriffin Exp $
  */
 
 /*
@@ -55,8 +55,12 @@ class V1VerifyPoll extends V1Poll {
 			      PollSpec pollspec, PollManager pm) {
     super(msg, pollspec, pm);
     m_replyOpcode = LcapMessage.VERIFY_POLL_REP;
-    m_tally.quorum = 1;
-    m_tally.type = VERIFY_POLL;
+    m_tally = new V1PollTally(this,
+                              VERIFY_POLL,
+                              m_createTime,
+                              msg.getDuration(),
+                              1,
+                              msg.getHashAlgorithm());
     if(idMgr.isLocalIdentity(m_caller)) {
        // if we've called the poll, we aren't going to vote
        // so we set our state to wait for a tally.

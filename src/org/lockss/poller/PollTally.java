@@ -1,5 +1,5 @@
 /*
- * $Id: PollTally.java,v 1.17 2003-06-20 22:34:51 claire Exp $
+ * $Id: PollTally.java,v 1.18 2003-06-30 23:09:09 clairegriffin Exp $
  */
 
 /*
@@ -66,7 +66,6 @@ public abstract class PollTally {
 
   PollSpec pollSpec;
   String key;
-  Poll poll;
   int type;
   long startTime;
   long duration;
@@ -102,10 +101,9 @@ public abstract class PollTally {
     this.quorum = quorum;
     pollVotes = new ArrayList(quorum * 2);
     this.hashAlgorithm = hashAlgorithm;
-    log.warning("Constructor type " + type + " " + this.toString());
+    log.debug3("Constructor type " + type + " " + this.toString());
   }
 
-  abstract public String toString();
 
   /**
    * return the unique key for the poll for this tally
@@ -120,7 +118,7 @@ public abstract class PollTally {
    * @return true if this Identity
    */
   public boolean isMyPoll() {
-    return poll.isMyPoll();
+    return getPoll().isMyPoll();
   }
 
   /**
@@ -131,10 +129,18 @@ public abstract class PollTally {
     return pollSpec;
   }
 
+  /**
+   * the cached url set for this poll
+   * @return a CachedUrlSet
+   */
   public CachedUrlSet getCachedUrlSet() {
-    return poll.m_cus;
+    return getPoll().m_cus;
   }
 
+  /**
+   * the archival unit for this poll
+   * @return the ArchivalUnit
+   */
   public ArchivalUnit getArchivalUnit()  {
     return getCachedUrlSet().getArchivalUnit();
   }
@@ -192,36 +198,51 @@ public abstract class PollTally {
   }
 
 
-  abstract public boolean isErrorState();
-
-  abstract public boolean isInconclusiveState();
-
   /**
    * get the error state for this poll
    * @return 0 == NOERR or one of the poll err conditions
    */
   abstract public int getErr();
 
+  /**
+   * get the error as a string
+   * @return the String representation of the error
+   */
   abstract public String getErrString();
 
+
+  /**
+   * get the current value of the poll tally status
+   * @return the status
+   */
   public int getStatus() {
     return status;
   }
 
+  /**
+   * get the current value of the poll tally status
+   * @return the String representation of status
+   */
   abstract public String getStatusString();
 
+
+  /**
+   * return the poll for which we are acting as a tally
+   * @return the Poll.
+   */
+  abstract Poll getPoll();
+
+  /**
+   * tally the votes for this poll
+   */
   abstract void tallyVotes();
 
-  abstract void verifyTally();
 
-  abstract boolean isLeadEnough();
-
-  abstract boolean haveQuorum();
-
-  abstract boolean isWithinMargin();
-
-  abstract public boolean isTrustedResults();
-
+  /**
+   * Determine if the voter with a given ID has voted
+   * @param voterID the LcapIdentity of the voter to check
+   * @return true if a vote can be found for this Identity.
+   */
   boolean hasVoted(LcapIdentity voterID) {
     Iterator it = pollVotes.iterator();
     while(it.hasNext()) {
@@ -232,10 +253,6 @@ public abstract class PollTally {
     }
     return false;
   }
-
-  abstract void adjustReputation(LcapIdentity voterID, int repDelta);
-
-  abstract void addVote(Vote vote, LcapIdentity id, boolean isLocal);
 
   /**
    * replay all of the votes in a previously held poll.
@@ -253,10 +270,14 @@ public abstract class PollTally {
     replayNextVote();
   }
 
+  /**
+   * replay the next vote in a replay poll
+   */
   void replayNextVote() {
     if(replayIter == null) {
       log.warning("Call to replay a poll vote without call to replay all");
     }
+    Poll poll = getPoll();
     if(poll.isErrorState() || !replayIter.hasNext()) {
       replayIter = null;
       poll.stopPoll();
@@ -276,6 +297,17 @@ public abstract class PollTally {
 
   abstract void replayVoteCheck(Vote vote, Deadline deadline);
 
+  /**
+   * adjust the reputation of a user after running a verify poll.
+   * @param voterID the LcapIdentity of the voter to adjust
+   * @param repDelta the amount by which to adjust the reputation.
+   */
+  abstract void adjustReputation(LcapIdentity voterID, int repDelta);
+
+  /**
+   * <p>PollTally.NameListEntry </p>
+   * <p>Description: a class for the entries returned in a Name poll </p>
+   */
   public static class NameListEntry {
     public boolean hasContent;
     public String name;

@@ -1,5 +1,5 @@
 /*
- * $Id: TestPoll.java,v 1.62 2003-06-25 21:19:57 eaalto Exp $
+ * $Id: TestPoll.java,v 1.63 2003-06-30 23:09:09 clairegriffin Exp $
  */
 
 /*
@@ -102,19 +102,19 @@ public class TestPoll extends LockssTestCase {
   public void testScheduleVote() {
     V1Poll p = testpolls[1];
     assertTrue(p instanceof V1ContentPoll);
-    log.warning("testScheduleVote 1");
+    log.debug3("testScheduleVote 1");
     p.scheduleVote();
-    log.warning("testScheduleVote 2");
+    log.debug3("testScheduleVote 2");
     assertNotNull(p.m_voteTime);
     assertTrue(p.m_voteTime.getRemainingTime()
                < p.m_deadline.getRemainingTime());
-    log.warning("at end of testScheduleVote");
+    log.debug3("at end of testScheduleVote");
   }
 
   /** test for method checkVote(..) */
   public void testCheckVote() {
     LcapMessage msg = null;
-    log.warning("starting testCheeckVote");
+    log.debug3("starting testCheeckVote");
     try {
       msg = LcapMessage.makeReplyMsg(
           testpolls[0].getMessage(),
@@ -127,7 +127,7 @@ public class TestPoll extends LockssTestCase {
     }
     catch (IOException ex1) {
     }
-    log.warning("testCheeckVote 2");
+    log.debug3("testCheeckVote 2");
     V1Poll p = null;
     try {
       p = createCompletedPoll(theDaemon, testau, msg, 8,2);
@@ -136,7 +136,7 @@ public class TestPoll extends LockssTestCase {
     catch (Exception ex2) {
       assertFalse(true);
     }
-    log.warning("testCheeckVote 3");
+    log.debug3("testCheeckVote 3");
     assertNotNull(p);
     LcapIdentity id = idmgr.findIdentity(msg.getOriginAddr());
     assertNotNull(id);
@@ -410,13 +410,13 @@ public class TestPoll extends LockssTestCase {
                                        testmsg.getUprBound());
     }
     CachedUrlSet cus = au.makeCachedUrlSet(cusSpec);
-    log.warning("createCompletedPoll 1");
+    log.debug3("createCompletedPoll 1");
     PollSpec spec = new PollSpec(cus);
-    log.warning("createCompletedPoll 1");
+    log.debug3("createCompletedPoll 1");
     ((MockCachedUrlSet)spec.getCachedUrlSet()).setHasContent(false);
-    log.warning("createCompletedPoll 1");
+    log.debug3("createCompletedPoll 1");
     Poll pp = daemon.getPollManager().createPoll(testmsg, spec);
-    log.warning("createCompletedPoll 1");
+    log.debug3("createCompletedPoll 1");
     assertNotNull(pp);
     assertTrue(pp instanceof V1Poll);
     V1Poll p = (V1Poll) pp;
@@ -429,7 +429,7 @@ public class TestPoll extends LockssTestCase {
     p.m_tally.votedEntries = makeEntries(1,5);
     p.m_tally.votedEntries.remove(1);
     p.m_pollstate = Poll.PS_COMPLETE;
-    log.warning("poll " + p.toString());
+    log.debug3("poll " + p.toString());
     try {
       p.m_tally.tallyVotes();
     } catch (Exception e) {
@@ -524,7 +524,7 @@ public class TestPoll extends LockssTestCase {
     try {
      testpolls = new V1Poll[3];
      for (int i = 0; i < 3; i++) {
-       log.warning("initTestPolls: " + i);
+       log.debug3("initTestPolls: " + i);
        Poll p = pollmanager.makePoll(testmsg[i]);
        assertTrue(p instanceof V1Poll);
        switch (i) {
@@ -540,7 +540,7 @@ public class TestPoll extends LockssTestCase {
        }
        testpolls[i] = (V1Poll)p;
        assertNotNull(testpolls[i]);
-       log.warning("initTestPolls: " + i + " " + p.toString());
+       log.debug3("initTestPolls: " + i + " " + p.toString());
      }
    }
    catch (IOException ex) {

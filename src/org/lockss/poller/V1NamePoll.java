@@ -1,5 +1,5 @@
 /*
- * $Id: V1NamePoll.java,v 1.1 2003-06-23 19:24:36 claire Exp $
+ * $Id: V1NamePoll.java,v 1.2 2003-06-30 23:09:09 clairegriffin Exp $
  */
 
 /*
@@ -49,7 +49,12 @@ public class V1NamePoll extends V1Poll {
 			    PollSpec pollspec, PollManager pm) {
     super(msg, pollspec, pm);
     m_replyOpcode = LcapMessage.NAME_POLL_REP;
-    m_tally.type = NAME_POLL;
+    m_tally = new V1PollTally(this,
+                              NAME_POLL,
+                              m_createTime,
+                              msg.getDuration(),
+                              pm.getQuorum(),
+                              msg.getHashAlgorithm());
   }
 
   /**
@@ -189,15 +194,15 @@ public class V1NamePoll extends V1Poll {
   }
 
   void buildPollLists(Iterator voteIter) {
-    log.warning("buildPollLists");
+    log.debug3("buildPollLists");
     NameVote winningVote = findWinningVote(voteIter);
     log.debug("found winning vote: " + winningVote);
     if (winningVote != null) {
-      log.warning("buildPollLists 2");
+      log.debug3("buildPollLists 2");
       m_tally.votedEntries = winningVote.getKnownEntries();
       String lwrRem = winningVote.getLwrRemaining();
       String uprRem = winningVote.getUprRemaining();
-      log.warning("buildPollLists 2");
+      log.debug3("buildPollLists 2");
       if (lwrRem != null) {
         // we call a new poll on the remaining entries and set the regexp
         try {
@@ -207,14 +212,14 @@ public class V1NamePoll extends V1Poll {
         catch (IOException ex) {
           log.error("unable to create new poll request", ex);
         }
-	log.warning("buildPollLists 3");
+	log.debug3("buildPollLists 3");
         // we make our list from whatever is in our
         // master list that doesn't match the remainder;
         ArrayList localSet = new ArrayList();
         Iterator localIt = getEntries().iterator();
-	log.warning("buildPollLists 4");
+	log.debug3("buildPollLists 4");
         while (localIt.hasNext()) {
-	  log.warning("buildPollLists 5");
+	  log.debug3("buildPollLists 5");
           PollTally.NameListEntry entry = (PollTally.NameListEntry) localIt.next();
           String url = entry.name;
           if((lwrRem != null) && url.compareTo(lwrRem) < 0) {

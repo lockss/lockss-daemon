@@ -1,5 +1,5 @@
 /*
-* $Id: PollerStatus.java,v 1.6 2003-06-20 22:34:51 claire Exp $
+* $Id: PollerStatus.java,v 1.7 2003-06-30 23:09:09 clairegriffin Exp $
  */
 
 /*
@@ -275,7 +275,7 @@ public class PollerStatus {
 
     private String getPollDescription(Poll poll) {
       StringBuffer sb = new StringBuffer();
-      sb.append(Poll.PollName[poll.m_tally.getType()]);
+      sb.append(Poll.PollName[poll.getVoteTally().getType()]);
       sb.append(" poll on ");
       sb.append(poll.getPollSpec().getUrl());
       sb.append("[");

@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.106 2003-06-26 23:53:34 eaalto Exp $
+* $Id: PollManager.java,v 1.107 2003-06-30 23:09:09 clairegriffin Exp $
  */
 
 /*
@@ -481,7 +481,7 @@ public class PollManager  extends BaseLockssManager {
     switch(msg.getOpcode()) {
       case LcapMessage.CONTENT_POLL_REP:
       case LcapMessage.CONTENT_POLL_REQ:
-        theLog.warning("Making a content poll on "+ pollspec);
+        theLog.debug3("Making a content poll on "+ pollspec);
 	switch (pollspec.getVersion()) {
 	case 1:
 	  ret_poll = new V1ContentPoll(msg, pollspec, this);
@@ -493,7 +493,7 @@ public class PollManager  extends BaseLockssManager {
         break;
       case LcapMessage.NAME_POLL_REP:
       case LcapMessage.NAME_POLL_REQ:
-        theLog.warning("Making a name poll on "+pollspec);
+        theLog.debug3("Making a name poll on "+pollspec);
 	switch (pollspec.getVersion()) {
 	case 1:
 	  ret_poll = new V1NamePoll(msg, pollspec, this);
@@ -505,7 +505,7 @@ public class PollManager  extends BaseLockssManager {
         break;
       case LcapMessage.VERIFY_POLL_REP:
       case LcapMessage.VERIFY_POLL_REQ:
-        theLog.warning("Making a verify poll on "+pollspec);
+        theLog.debug3("Making a verify poll on "+pollspec);
 	switch (pollspec.getVersion()) {
 	case 1:
 	  ret_poll = new V1VerifyPoll(msg, pollspec, this);

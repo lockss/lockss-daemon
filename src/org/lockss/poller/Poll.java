@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.82 2003-06-26 23:53:34 eaalto Exp $
+* $Id: Poll.java,v 1.83 2003-06-30 23:09:09 clairegriffin Exp $
  */
 
 /*
@@ -62,19 +62,6 @@ public abstract class Poll implements Serializable {
 
   public static final String[] PollName = {"Name", "Content", "Verify"};
 
-  static final String PARAM_AGREE_VERIFY = Configuration.PREFIX +
-      "poll.agreeVerify";
-  static final String PARAM_DISAGREE_VERIFY = Configuration.PREFIX +
-      "poll.disagreeVerify";
-  static final String PARAM_VOTE_MARGIN = Configuration.PREFIX +
-      "poll.voteMargin";
-  static final String PARAM_TRUSTED_WEIGHT = Configuration.PREFIX +
-      "poll.trustedWeight";
-
-  static final int DEFAULT_VOTE_MARGIN = 75;
-  static final int DEFAULT_TRUSTED_WEIGHT = 350;
-  static final int DEFAULT_AGREE_VERIFY = 10;
-  static final int DEFAULT_DISAGREE_VERIFY = 80;
   static final String[] ERROR_STRINGS = {"Poll Complete","Hasher Busy",
       "Hashing Error", "IO Error"
   };
@@ -96,12 +83,11 @@ public abstract class Poll implements Serializable {
   LcapIdentity m_caller;   // who called the poll
   PollManager m_pollmanager; // the pollmanager for this poll.
   IdentityManager idMgr;
-  long m_createTime;       // poll creation time
+  long m_createTime;        // poll creation time
 
-  PollTally m_tally;         // the vote tallier
-  String m_key;            // the string we used to id this poll
-  int m_pollstate;         // one of state constants above
-  Deadline m_deadline;    // when election is over
+  String m_key;             // the string we used to id this poll
+  int m_pollstate;          // one of state constants above
+  Deadline m_deadline;      // when election is over
 
   /**
    * create a new poll from a message
@@ -120,13 +106,10 @@ public abstract class Poll implements Serializable {
     m_cus = pollspec.getCachedUrlSet();
     m_createTime = TimeBase.nowMs();
     m_key = msg.getKey();
-    m_tally = null;
     m_deadline = Deadline.in(msg.getDuration());
     m_pollstate = PS_INITING;
-
   }
 
-  abstract public String toString();
 
   /**
    * Returns true if the poll belongs to this Identity
@@ -135,108 +118,6 @@ public abstract class Poll implements Serializable {
   public boolean isMyPoll() {
     return idMgr.isLocalIdentity(m_caller);
   }
-
-  abstract void getConfigValues();
-
-  abstract void receiveMessage(LcapMessage msg);
-
-
-  /**
-   * schedule the hash for this poll.
-   * @param hasher the MessageDigest used to hash the content
-   * @param timer the Deadline by which we must complete
-   * @param key the Object which will be returned from the hasher. Always the
-   * message which triggered the hash
-   * @param callback the hashing callback to use on return
-   * @return true if hash successfully completed.
-   */
-  abstract boolean scheduleHash(MessageDigest hasher, Deadline timer,
-                                Serializable key,
-                                HashService.Callback callback);
-
-  /**
-   * schedule a vote by a poll.  we've already completed the hash so we're
-   * only interested in how long we have remaining.
-   */
-  abstract void scheduleVote();
-
-  /**
-   * check the hash result obtained by the hasher with one stored in the
-   * originating message.
-   * @param hashResult byte array containing the result of the hasher
-   * @param vote the Vote to check.
-   */
-  abstract void checkVote(byte[] hashResult, Vote vote);
-
-  /**
-   * randomly verify a vote.  The random percentage is determined by
-   * agreement and reputation of the voter.
-   * @param vote the Vote to check
-   * @param isAgreeVote true if this vote agreed with ours, false otherwise
-   * @return true if we called a verify poll, false otherwise.
-   */
-  abstract boolean randomVerify(Vote vote, boolean isAgreeVote);
-
-  /**
-   * cast our vote for this poll
-   */
-  abstract void castOurVote();
-
-  /**
-   * start the poll.
-   */
-  abstract void startPoll();
-
-  /**
-   * attempt to schedule our hash.  This will try 3 times to get a deadline
-   * that will is successfully scheduled
-   * @return boolean true if we successfully schedule hash; false otherwise.
-   */
-  abstract boolean scheduleOurHash();
-
-  /**
-   * cast our vote in the current poll
-   */
-  abstract void voteInPoll();
-
-
-  /**
-   * is our poll currently in an error condition
-   * @return true if the poll state is an error value
-   */
-  abstract boolean isErrorState();
-
-  /**
-   * finish the poll once the deadline has expired. we update our poll record
-   * and prevent any more activity in this poll.
-   */
-  abstract void stopPoll();
-
-  /**
-   * prepare to check a vote in a poll.  This should check any conditions that
-   *  might make running a vote check unneccessary.
-   * @param msg the message which is triggering the poll
-   * @return boolean true if the poll should run, false otherwise
-   */
-  abstract boolean shouldCheckVote(LcapMessage msg);
-
-  /**
-   * start the hash required for a vote cast in this poll
-   */
-  abstract void startVoteCheck();
-
-  /**
-   * stop and record a vote cast in this poll
-   */
-  abstract void stopVoteCheck();
-
-  /**
-   * are there too many votes waiting to be tallied
-   * @return true if we have a quorum worth of votes already pending
-   */
-  abstract boolean tooManyPending();
-
-  abstract Vote copyVote(Vote vote, boolean agree);
 
   /**
    * Return the poll spec used by this poll
@@ -261,38 +142,61 @@ public abstract class Poll implements Serializable {
     return m_msg;
   }
 
-  /**
-   * get the VoteTally for this Poll
-   * @return VoteTally for this poll
-   */
-  public PollTally getVoteTally() {
-    return m_tally;
-  }
 
+
+  /**
+   * get the poll identifier key
+   * @return the key as a String
+   */
   public String getKey() {
     return m_key;
   }
 
-  public String getErrorString() {
-    if(isErrorState()) {
-      return m_tally.getErrString();
-    }
-    return "No Error";
-  }
-
-  abstract double getMargin();
-
 
   /**
-   * Return a hasher preinited with the challenge and verifier
-   * @param challenge the challenge bytes
-   * @param verifier the verifier bytes
-   * @return a MessageDigest
+   * Return the poll's deadline
+   * @return the Deadline object for this poll.
    */
-  abstract MessageDigest getInitedHasher(byte[] challenge, byte[] verifier);
-
   public Deadline getDeadline() {
     return m_deadline;
   }
+
+   /**
+    * get the PollTally for this Poll
+    * @return VoteTally for this poll
+    */
+  abstract public PollTally getVoteTally();
+
+  /**
+   * Recieve and incoming message from the PollManager
+   * @param msg the incoming msg containing a vote for this poll
+   */
+  abstract void receiveMessage(LcapMessage msg);
+
+  /**
+   * start the poll.
+   */
+  abstract void startPoll();
+
+
+  /**
+   * Is our poll currently in an error state
+   * @return true if the poll state is an error value
+   */
+  abstract boolean isErrorState();
+
+  /**
+   * Stop the poll when our deadline expired or our poll has ended in error.
+   */
+  abstract void stopPoll();
+
+  /**
+   * Make a copy of the values in a vote changing only whether we agree or
+   * disagree when replaying a vote in a replay poll.
+   * @param vote the vote to copy
+   * @param agree the Boolean representing the value to set our vote to.
+   * @return the newly created Vote
+   */
+  abstract Vote copyVote(Vote vote, boolean agree);
 
 }

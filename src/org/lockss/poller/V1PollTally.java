@@ -1,5 +1,5 @@
 /*
- * $Id: V1PollTally.java,v 1.1 2003-06-23 19:24:36 claire Exp $
+ * $Id: V1PollTally.java,v 1.2 2003-06-30 23:09:09 clairegriffin Exp $
  */
 
 /*
@@ -64,6 +64,9 @@ public class V1PollTally extends PollTally {
   public static final int STATE_DISOWNED = 9;
   public static final int STATE_SUSPENDED = 10;
 
+  double voteMargin = 0;    // the margin by which we must win or lose
+  double trustedWeight = 0;// the min ave. weight of the winners, when we lose.
+  V1Poll poll;
 
   static Logger log=Logger.getLogger("V1PollTally");
 
@@ -72,7 +75,7 @@ public class V1PollTally extends PollTally {
             String hashAlgorithm) {
     super(type, startTime, duration, numAgree, numDisagree, wtAgree,
 	  wtDisagree, quorum, hashAlgorithm);
-    log.warning("First V1PollTally constructor type " + type + " - " +
+    log.debug3("First V1PollTally constructor type " + type + " - " +
 		toString());
   }
 
@@ -80,17 +83,14 @@ public class V1PollTally extends PollTally {
 		      long duration, int quorum, String hashAlgorithm) {
     this(type, startTime, duration, 0, 0, 0, 0, quorum, hashAlgorithm);
     poll = owner;
-    log.warning("Second V1PollTally constructor type " + type + " - " +
-		toString());
-    if (poll instanceof V1NamePoll && type != Poll.NAME_POLL)
-      log.warning("type not name " + toString());
-    if (poll instanceof V1ContentPoll && type != Poll.CONTENT_POLL)
-      log.warning("type not content " + toString());
-    if (poll instanceof V1VerifyPoll && type != Poll.VERIFY_POLL)
-      log.warning("type not verify " + toString());
+    log.debug3("Second V1PollTally constructor type " + type + " - " + toString());
     pollSpec = poll.getPollSpec();
     idManager = poll.idMgr;
     key = poll.getKey();
+    trustedWeight = (double)Configuration.getIntParam(V1Poll.PARAM_TRUSTED_WEIGHT,
+        V1Poll.DEFAULT_TRUSTED_WEIGHT);
+    voteMargin = ((double)Configuration.getIntParam(V1Poll.PARAM_VOTE_MARGIN,
+        V1Poll.DEFAULT_VOTE_MARGIN)) / 100;
   }
 
   public String toString() {
@@ -176,19 +176,17 @@ public class V1PollTally extends PollTally {
     }
   }
 
+  Poll getPoll() {
+    return poll;
+  }
+
   void tallyVotes() {
-    log.warning("V1PollTally.tallyVotes()");
-    if (poll instanceof V1NamePoll && type != Poll.NAME_POLL)
-      log.warning("type not name " + toString());
-    if (poll instanceof V1ContentPoll && type != Poll.CONTENT_POLL)
-      log.warning("type not content " + toString());
-    if (poll instanceof V1VerifyPoll && type != Poll.VERIFY_POLL)
-      log.warning("type not verify " + toString());
+    log.debug3("checking for tally for verify poll results.");
     if(type == Poll.VERIFY_POLL) {
       verifyTally();
       return;
     }
-    log.warning("V1PollTally.tallyVotes() 2");
+    log.debug3("tallying name or content poll results.");
     // if it's an error
     if (isErrorState()) {
       status = STATE_ERROR;
@@ -208,19 +206,19 @@ public class V1PollTally extends PollTally {
         status = won ? STATE_WON : STATE_LOST;
       }
     }
-    log.warning("V1PollTally.tallyVotes() " + poll.toString());
-    log.warning("agree " + numAgree + " disagree " + numDisagree +
+    log.debug3("V1PollTally.tallyVotes() " + poll.toString());
+    log.debug3("agree " + numAgree + " disagree " + numDisagree +
 		" status " + status);
     if((type == Poll.NAME_POLL) && (status != STATE_WON)) {
       log.debug2("lost a name poll, building poll list");
       if (pollVotes == null)
-	log.warning("V1PollTally.tallyVotes() 4 null");
+	log.debug3("V1PollTally.tallyVotes() 4 null");
       else
-	log.warning("V1PollTally.tallyVotes() 4 non-null");
+	log.debug3("V1PollTally.tallyVotes() 4 non-null");
       ((V1NamePoll)poll).buildPollLists(pollVotes.iterator());
-      log.warning("V1PollTally.tallyVotes() 5");
+      log.debug3("V1PollTally.tallyVotes() 5");
     }
-    log.warning("V1PollTally.tallyVotes() 6");
+    log.debug3("V1PollTally.tallyVotes() 6");
   }
 
   void verifyTally() {
@@ -249,9 +247,14 @@ public class V1PollTally extends PollTally {
     return numAgree + numDisagree >= quorum;
   }
 
+  void setVoteMargin(double margin) {
+    voteMargin = margin;
+  }
+
+
   boolean isWithinMargin() {
     double num_votes = numAgree + numDisagree;
-    double req_margin = poll.getMargin();
+    double req_margin = voteMargin;
     double act_margin;
 
     if (numAgree > numDisagree) {
@@ -268,10 +271,14 @@ public class V1PollTally extends PollTally {
     return true;
   }
 
+  void setTrustedWeight(double weight) {
+    trustedWeight = weight;
+  }
+
   public boolean isTrustedResults() {
 
     return (numDisagree == 0 ||
-	    (wtDisagree/numDisagree >= ((V1Poll)poll).m_trustedWeight));
+	    (wtDisagree/numDisagree >= trustedWeight));
   }
 
 

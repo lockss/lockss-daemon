@@ -1,5 +1,5 @@
 /*
-* $Id: V1Poll.java,v 1.2 2003-06-26 23:53:34 eaalto Exp $
+* $Id: V1Poll.java,v 1.3 2003-06-30 23:09:09 clairegriffin Exp $
  */
 
 /*
@@ -56,10 +56,21 @@ import org.lockss.daemon.status.*;
  */
 
 public abstract class V1Poll extends Poll {
+  static final String PARAM_AGREE_VERIFY = Configuration.PREFIX +
+      "poll.agreeVerify";
+  static final String PARAM_DISAGREE_VERIFY = Configuration.PREFIX +
+      "poll.disagreeVerify";
+  static final String PARAM_VOTE_MARGIN = Configuration.PREFIX +
+      "poll.voteMargin";
+  static final String PARAM_TRUSTED_WEIGHT = Configuration.PREFIX +
+      "poll.trustedWeight";
+
+  static final int DEFAULT_VOTE_MARGIN = 75;
+  static final int DEFAULT_TRUSTED_WEIGHT = 350;
+  static final int DEFAULT_AGREE_VERIFY = 10;
+  static final int DEFAULT_DISAGREE_VERIFY = 80;
   double m_agreeVer = 0;     // the max percentage of time we will verify
   double m_disagreeVer = 0;  // the max percentage of time we will verify
-  double m_margin = 0;    // the margin by which we must win or lose
-  double m_trustedWeight = 0;// the min ave. weight of the winners, when we lose.
   byte[] m_challenge;     // The caller's challenge string
   byte[] m_verifier;      // Our verifier string - hash of secret
   byte[] m_hash;          // Our hash of challenge, verifier and content(S)
@@ -70,6 +81,7 @@ public abstract class V1Poll extends Poll {
   int m_replyOpcode = -1;  // opcode used to reply to poll
   long m_hashTime;         // an estimate of the time it will take to hash
   int m_pendingVotes = 0;  // the number of votes waiting to be tallied
+  V1PollTally m_tally;
 
   /**
    * create a new poll from a message
@@ -96,25 +108,16 @@ public abstract class V1Poll extends Poll {
 	      +" will take me this long to hash "+m_hashTime);
 
     m_createTime = TimeBase.nowMs();
-
-    // make a new vote tally
-    int type = -1;
-    if (msg.isVerifyPoll())
-      type = Poll.VERIFY_POLL;
-    else if (msg.isNamePoll())
-      type = Poll.NAME_POLL;
-    else if (msg.isContentPoll())
-      type = Poll.CONTENT_POLL;
-    else
-      log.warning("bad message type " + msg.toString());
-    log.warning("Making a tally for type " + type);
-    m_tally = new V1PollTally(this, type, m_createTime,
-				      msg.getDuration(),
-				      pm.getQuorum(),
-				      msg.getHashAlgorithm());
     getConfigValues();
   }
 
+  /**
+   * get the VoteTally for this Poll
+   * @return VoteTally for this poll
+   */
+  public PollTally getVoteTally() {
+    return m_tally;
+  }
 
   /**
    * create a human readable string representation of this poll
@@ -140,15 +143,7 @@ public abstract class V1Poll extends Poll {
     m_disagreeVer = ((double)Configuration.getIntParam(PARAM_DISAGREE_VERIFY,
         DEFAULT_DISAGREE_VERIFY)) / 100;
 
-    m_trustedWeight = ((double)Configuration.getIntParam(PARAM_TRUSTED_WEIGHT,
-        DEFAULT_TRUSTED_WEIGHT));
-    m_margin = ((double)Configuration.getIntParam(PARAM_VOTE_MARGIN,
-        DEFAULT_VOTE_MARGIN)) / 100;
-
   }
-
-  abstract void receiveMessage(LcapMessage msg);
-
 
   /**
    * schedule the hash for this poll.
@@ -162,7 +157,6 @@ public abstract class V1Poll extends Poll {
   abstract boolean scheduleHash(MessageDigest hasher, Deadline timer,
                                 Serializable key,
                                 HashService.Callback callback);
-
   /**
    * schedule a vote by a poll.  we've already completed the hash so we're
    * only interested in how long we have remaining.
@@ -406,10 +400,6 @@ public abstract class V1Poll extends Poll {
     Vote v = new Vote(vote);
     v.agree = agree;
     return v;
-  }
-
-  double getMargin() {
-    return m_margin;
   }
 
   /**
