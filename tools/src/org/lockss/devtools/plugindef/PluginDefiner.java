@@ -1,5 +1,5 @@
 /*
- * $Id: PluginDefiner.java,v 1.7 2004-07-10 00:42:01 clairegriffin Exp $
+ * $Id: PluginDefiner.java,v 1.8 2004-09-28 00:50:37 clairegriffin Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.border.*;
+
 import org.lockss.util.*;
 
 public class PluginDefiner extends JFrame {
@@ -81,13 +82,17 @@ public class PluginDefiner extends JFrame {
   JMenuItem filtersTestMenuItem = new JMenuItem();
   JScrollPane jScrollPane1 = new JScrollPane();
   BorderLayout borderLayout1 = new BorderLayout();
+
+  Logger log = Logger.getLogger(PluginDefinerApp.LOG_ROOT + ".PluginDefiner");
   //Construct the frame
   public PluginDefiner() {
     enableEvents(AWTEvent.WINDOW_EVENT_MASK);
+
     try {
       jbInit();
     }
     catch(Exception e) {
+      log.critical("Initialization failed!", e);
       e.printStackTrace();
     }
   }
@@ -206,6 +211,8 @@ public class PluginDefiner extends JFrame {
 
   //File | Exit action performed
   public void jMenuFileExit_actionPerformed(ActionEvent e) {
+    checkSaveFile();
+    log.info("Exiting...");
     System.exit(0);
   }
 
@@ -269,6 +276,29 @@ public class PluginDefiner extends JFrame {
     inspectorModel.setPluginData(edp);
   }
 
+  void checkSaveFile() {
+    if(edp != null) {
+      int option =
+          JOptionPane.showConfirmDialog(this,
+                                        "Save current plugin before exiting?",
+                                        "Exit Plugin Definer",
+                                        JOptionPane.YES_NO_OPTION);
+      if(option == JOptionPane.YES_OPTION) {
+        if (edp.getMapName() == null) {
+          option = jFileChooser1.showSaveDialog(this);
+          if (option != jFileChooser1.APPROVE_OPTION ||
+              jFileChooser1.getSelectedFile() == null)
+            return;
+          name = jFileChooser1.getSelectedFile().getName();
+          location = jFileChooser1.getSelectedFile().getParent();
+          if (!StringUtil.endsWithIgnoreCase(name, ".xml")) {
+            name = name + ".xml";
+          }
+        }
+        edp.writeMap(location, name);
+      }
+    }
+  }
   void expertModeMenuItem_actionPerformed(ActionEvent e) {
     inspectorModel.setExpertMode(expertModeMenuItem.getState());
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: PluginDefinerApp.java,v 1.3 2004-07-08 22:51:35 clairegriffin Exp $
+ * $Id: PluginDefinerApp.java,v 1.4 2004-09-28 00:50:37 clairegriffin Exp $
  */
 
 /*
@@ -33,8 +33,11 @@ package org.lockss.devtools.plugindef;
 
 import java.awt.*;
 import javax.swing.*;
+import java.util.logging.*;
+import java.io.IOException;
 
 public class PluginDefinerApp {
+  static final String LOG_ROOT = "org.lockss.devtools.plugindef";
   boolean packFrame = true;
 
   //Construct the application
@@ -65,9 +68,10 @@ public class PluginDefinerApp {
   //Main method
   public static void main(String[] args) {
     try {
-      //UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
       JFrame.setDefaultLookAndFeelDecorated(true);
       JDialog.setDefaultLookAndFeelDecorated(true);
+      FileHandler fh = new FileHandler("%t/plugindef%u.log");
+      Logger.getLogger(LOG_ROOT).addHandler(fh);
     }
     catch (Exception e) {
       e.printStackTrace();

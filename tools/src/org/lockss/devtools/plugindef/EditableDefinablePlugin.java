@@ -1,5 +1,5 @@
 /*
- * $Id: EditableDefinablePlugin.java,v 1.8 2004-09-01 23:36:52 clairegriffin Exp $
+ * $Id: EditableDefinablePlugin.java,v 1.9 2004-09-28 00:50:37 clairegriffin Exp $
  */
 
 /*
@@ -80,11 +80,14 @@ public class EditableDefinablePlugin
   static public String[] CONFIG_PARAM_TYPES = ConfigParamDescr.TYPE_STRINGS;
 
   static public Map DEFAULT_CONFIG_PARAM_DESCRS = getDefaultConfigParamDescrs();
+  static Logger log = Logger.getLogger(PluginDefinerApp.LOG_ROOT +
+                                       ".editableDefinablePlugin");
 
   public EditableDefinablePlugin() {
   }
   // for reading map files
   public void loadMap(String location, String name) {
+    log.info("loading definition map: " + location + "/" + name);
     String mapFile = ExternalizableMap.MAPPING_FILE_NAME;
     definitionMap.loadMap(location, name, mapFile);
   }
@@ -97,6 +100,7 @@ public class EditableDefinablePlugin
       definitionMap.removeMapElement((String)it.next());
     }
     // store the configuration map
+    log.info("storing definition map: " + location + "/" + name);
     definitionMap.storeMap(location, name, ExternalizableMap.MAPPING_FILE_NAME);
   }
 
@@ -371,8 +375,8 @@ public class EditableDefinablePlugin
       if (type == ConfigParamDescr.TYPE_YEAR) {
         key = DefinableArchivalUnit.AU_SHORT_YEAR_PREFIX + key;
         ConfigParamDescr descr = copyDescr(cpd);
-        descr.setDescription(cpd.getDescription() + " (Abbrev.)");
-        descr.setDisplayName(cpd.getDisplayName() + " (Abbrev.)");
+        descr.setDescription(cpd.getDescription() + " (2 digit)");
+        descr.setDisplayName(cpd.getDisplayName() + " (2 digit)");
         descr.setKey(key);
         pd_map.put(key, descr);
       }
