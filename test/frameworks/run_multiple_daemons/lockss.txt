@@ -3,8 +3,6 @@ org.lockss.log.default.level=debug
 
 #lockss config stuff
 org.lockss.platform.diskSpacePaths=./
-#lockss repository settings
-org.lockss.cache.location=./
 
 org.lockss.config.reloadInterval = 1m
 
@@ -12,12 +10,6 @@ org.lockss.config.reloadInterval = 1m
 #org.lockss.hasher.numSteps
 #org.lockss.hasher.priority
 #org.lockss.hasher.stepBytes
-
-#identity manager settings
-org.lockss.id.database.dir=./iddb
-
-#lockss state settings
-org.lockss.history.location=./history
 
 #comm settings
 org.lockss.ui.start=yes
