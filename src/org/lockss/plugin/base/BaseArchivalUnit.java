@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.71 2004-08-12 23:15:14 clairegriffin Exp $
+ * $Id: BaseArchivalUnit.java,v 1.72 2004-09-01 02:23:56 tlipkis Exp $
  */
 
 /*
@@ -317,6 +317,10 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     return misses;
   }
 
+  /** By default there is no site normalization */
+  public String siteNormalizeUrl(String url) {
+    return url;
+  }
 
   /**
    * Return the CachedUrlSet representing the entire contents

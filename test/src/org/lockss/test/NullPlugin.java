@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.59 2004-08-19 00:02:23 clairegriffin Exp $
+ * $Id: NullPlugin.java,v 1.60 2004-09-01 02:23:44 tlipkis Exp $
  */
 
 /*
@@ -217,7 +217,8 @@ public class NullPlugin {
     public void setRedirectScheme(RedirectScheme scheme) {
     }
 
-    public void cache() throws IOException {
+    public int cache() throws IOException {
+      return CACHE_RESULT_NOT_MODIFIED;
     }
 
     public void storeContent(InputStream input,
@@ -355,6 +356,10 @@ public class NullPlugin {
 
     public boolean shouldBeCached(String url) {
       return false;
+    }
+
+    public String siteNormalizeUrl(String url) {
+      return url;
     }
 
     public Collection getUrlStems() {

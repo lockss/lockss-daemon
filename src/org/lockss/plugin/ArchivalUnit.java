@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.26 2004-08-12 23:15:14 clairegriffin Exp $
+ * $Id: ArchivalUnit.java,v 1.27 2004-09-01 02:23:56 tlipkis Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.*;
 import org.lockss.crawler.*;
 import org.lockss.daemon.*;
 import org.lockss.state.*;
+import org.lockss.plugin.base.*;
 
 /**
  * An <code>ArchivalUnit</code> represents a publication unit
@@ -47,7 +48,7 @@ import org.lockss.state.*;
  * <li>Has a {@link CrawlSpec} that directs the crawler
  * </ul>
  * Plugins must provide a class that implements this (possibly by extending
- * <code>BaseArchivalUnit</code>).
+ * {@link BaseArchivalUnit}).
  */
 public interface ArchivalUnit {
 
@@ -64,6 +65,17 @@ public interface ArchivalUnit {
    * @return a Configuration
    */
   public Configuration getConfiguration();
+
+  /**
+   * Perform site-dependent URL normalization to produce a canonical form
+   * for all URLs that refer to the same entity.  This is necessary if URLs
+   * in links contain any non-locative information, such as session-id.
+   * The host part may not be changed.
+   * @param url the url to normalize
+   * @return canonical form of the URL.  Should return the argument if no
+   * normalization takes place.
+   */
+  public String siteNormalizeUrl(String url);
 
   /**
    * Determine whether the url falls within the CrawlSpec.

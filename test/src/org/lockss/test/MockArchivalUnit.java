@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.52 2004-08-12 23:15:19 clairegriffin Exp $
+ * $Id: MockArchivalUnit.java,v 1.53 2004-09-01 02:23:55 tlipkis Exp $
  */
 
 /*
@@ -56,6 +56,7 @@ public class MockArchivalUnit implements ArchivalUnit {
   private boolean shouldCallTopLevelPoll = true;
   private static Logger log = Logger.getLogger("MockArchivalUnit");
   private List permissionPages;
+  private String urlNormalizeString = null;
 
   private HashSet urlsToCache = new HashSet();
 
@@ -153,6 +154,22 @@ public class MockArchivalUnit implements ArchivalUnit {
 
   public boolean shouldBeCached(String url) {
     return urlsToCache.contains(url);
+  }
+
+  public String siteNormalizeUrl(String url) {
+    log.info("siteNormalizeUrl(), urlNormalizeString = " + urlNormalizeString);
+    if (urlNormalizeString == null) {
+      return url;
+    } else {
+      String res = StringUtil.replaceString(url, urlNormalizeString, "");
+      log.info("siteNormalizeUrl(" + url + ") = " + res);
+      return res;
+    }
+  }
+
+  public void setUrlNormalizeString(String removeString) {
+    log.info("setUrlNormalizeString(" + removeString + ")");
+    urlNormalizeString = removeString;
   }
 
   public Plugin getPlugin() {
