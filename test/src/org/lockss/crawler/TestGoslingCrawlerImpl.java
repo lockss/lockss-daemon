@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingCrawlerImpl.java,v 1.2 2002-11-27 19:50:20 troberts Exp $
+ * $Id: TestGoslingCrawlerImpl.java,v 1.3 2002-12-10 23:03:41 troberts Exp $
  */
 
 /*
@@ -113,6 +113,29 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
   public void testDoCrawlImage() {
     singleTagShouldCrawl("http://www.example.com/web_link.jpg",
 		   "<img src=", "</img>");
+  }
+
+  public void testDoCrawlImageWithSrcInAltTag() {
+    singleTagShouldCrawl("http://www.example.com/web_link.jpg",
+		   "<img alt=src src=", "</img>");
+    singleTagShouldCrawl("http://www.example.com/web_link.jpg",
+		   "<img alt = src src=", "</img>");
+  }
+
+  public void testDoCrawlImageWithSrcInAltTagAfterSrcProper() {
+    String url= "http://www.example.com/link3.html";
+
+    String source = 
+      "<html><head><title>Test</title></head><body>"+
+      "<img src="+url+" alt=src>link3</a>";
+
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
+    cus.addUrl(source, startUrl);
+    cus.addUrl(LINKLESS_PAGE, url);
+    
+    GoslingCrawlerImpl.doCrawl(mau, spec);
+    Set expected = SetUtil.set(startUrl, url);
+    assertEquals(expected, cus.getCachedUrls());
   }
 
   public void testDoCrawlFrame() {
@@ -405,7 +428,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
       "<html><head><title>Test</title></head><body>"+
       "<a href=link1.html>link1</a>"+
       "Filler, with <b>bold</b> tags and<i>others</i>"+
-      "<a blah1=blah href=link2.html blah2=blah>link2#ref</a>"+
+      "<a blah1=blah href=link2.html#ref blah2=blah>link2</a>"+
       "<a href=dir/link3.html>link3</a>";
 
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();

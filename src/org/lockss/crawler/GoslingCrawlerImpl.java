@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingCrawlerImpl.java,v 1.2 2002-11-27 19:50:06 troberts Exp $
+ * $Id: GoslingCrawlerImpl.java,v 1.3 2002-12-10 23:03:41 troberts Exp $
  */
 
 /*
@@ -305,94 +305,92 @@ public class GoslingCrawlerImpl {
   protected static String ParseLink(StringBuffer link, URL srcUrl)
       throws MalformedURLException {
     String returnStr = null;
-    String key = null;
-    String tag = null;
+
     switch (link.charAt(0)) {
     case 'a': //<a href=http://www.yahoo.com>
     case 'A':
       if (StringUtil.getIndexIgnoringCase(link.toString(), 
-					  ATAG+" ") != 0) {
-	return null;
+					  ATAG+" ") == 0) {
+	returnStr = getAttributeValue(ASRC, link.toString());
       }
-      key = ASRC;
       break;
     case 'f': //<frame src=frame1.html>
     case 'F':
       if (StringUtil.getIndexIgnoringCase(link.toString(), 
-					  FRAMETAG+" ") != 0) {
-	return null;
+					  FRAMETAG+" ") == 0) {
+	returnStr = getAttributeValue(SRC, link.toString());
       }
-      key = SRC;
       break;
     case 'i': //<img src=image.gif>
     case 'I':
       if (StringUtil.getIndexIgnoringCase(link.toString(), 
-					  IMGTAG+" ") != 0) {
-	return null;
+					  IMGTAG+" ") == 0) {
+	returnStr = getAttributeValue(SRC, link.toString());
       }
-      key = SRC;
       break;
     case 'l': //<link href=blah.css>
     case 'L':
       if (StringUtil.getIndexIgnoringCase(link.toString(), 
-					  LINKTAG+" ") != 0) {
-	return null;
+					  LINKTAG+" ") == 0) {
+	returnStr = getAttributeValue(ASRC, link.toString());
       }
-      key = ASRC;
       break;
     case 'b': //<body backgroung=background.gif>
     case 'B':
       if (StringUtil.getIndexIgnoringCase(link.toString(), 
-					  BODYTAG+" ") != 0) {
-	return null;
+					  BODYTAG+" ") == 0) {
+	returnStr = getAttributeValue(BACKGROUNDSRC, link.toString());
       }
-      key = BACKGROUNDSRC;
       break;
     case 's': //<script src=blah.js>
     case 'S':
       if (StringUtil.getIndexIgnoringCase(link.toString(), 
-					  SCRIPTTAG+" ") != 0) {
-	return null;
+					  SCRIPTTAG+" ") == 0) {
+	returnStr = getAttributeValue(SRC, link.toString());
       }
-      key = SRC;
       break;
     case 't': //<tc background=back.gif> or <table background=back.gif>
     case 'T':
       if (StringUtil.getIndexIgnoringCase(link.toString(), 
-					  TABLETAG+" ") != 0 &&
+					  TABLETAG+" ") == 0 ||
 	  StringUtil.getIndexIgnoringCase(link.toString(), 
-					  TDTAG+" ") != 0)
+					  TDTAG+" ") == 0)
 	{
-	return null;
-      }
-      key = BACKGROUNDSRC;
+	  returnStr = getAttributeValue(BACKGROUNDSRC, link.toString());
+	}
       break;
     default:
       return null;
     }
-    int linkIdx = StringUtil.getIndexIgnoringCase(link.toString(), key);
-    if (linkIdx < 0) {
-      return null;
-    }
-    int idx = linkIdx + key.length();
-    if (link.charAt(idx) != ' ' && link.charAt(idx) != '=') {
-      //to catch things like <a hrefe=http://www.example.com>blah</a>
-      return null;
-    }
-    while (idx < link.length() &&
-	   (link.charAt(idx) == '"' ||
-	    link.charAt(idx) == ' ' ||
-	    link.charAt(idx) == '=')) {
-      idx++;
-    }
-    if (idx >= link.length()) { //bad key, has no value
-      return null;
-    }
 
-    returnStr = link.substring(idx);
-    returnStr = StringUtil.trimAfterChars(returnStr, " #\"");
-    URL retUrl = new URL(srcUrl, returnStr);
-    return retUrl.toString();
+    if (returnStr != null) {
+      returnStr = StringUtil.trimAfterChars(returnStr, " #\"");
+      URL retUrl = new URL(srcUrl, returnStr);
+      return retUrl.toString();
+    }
+    return null;
   }
 
+  private static String getAttributeValue(String attribute, String src) {
+    logger.debug("looking for "+attribute+" in "+src);
+    StringTokenizer st = new StringTokenizer(src, " =", true);
+    String lastToken = null;
+    while (st.hasMoreTokens()) {
+      String token = st.nextToken();
+      if (!token.equals("=")) {
+	if (!token.equals(" ")) {
+	  lastToken = token;
+	}
+      } else {
+	if (attribute.equalsIgnoreCase(lastToken))
+	  while (st.hasMoreTokens()) {
+	    token = st.nextToken();
+	    if (!token.equals(" ")) {
+	      return token;
+	    }
+	  }
+      }
+    }
+    return null;
+  }
 }
