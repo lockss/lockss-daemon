@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManager.java,v 1.19 2003-12-17 02:09:47 tlipkis Exp $
+ * $Id: CrawlManager.java,v 1.20 2004-01-13 02:37:05 troberts Exp $
  */
 
 /*
@@ -71,6 +71,11 @@ public interface CrawlManager {
                                    Object cookie, ActivityRegulator.Lock lock);
 
 
+  /**
+   * Expires the deadline on all crawls for the au
+   */
+  public void cancelAuCrawls(ArchivalUnit au);
+
   public interface Callback {
     /**
      * Called when the crawl is completed
@@ -100,5 +105,5 @@ public interface CrawlManager {
      * objects for <code>au</code>
      */
     public Collection getCrawlStatus(String auid);
-  }
+  } 
 }
