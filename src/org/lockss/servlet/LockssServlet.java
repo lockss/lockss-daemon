@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.25 2003-07-30 05:37:47 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.26 2003-08-04 07:58:22 tlipkis Exp $
  */
 
 /*
@@ -65,6 +65,9 @@ public abstract class LockssServlet extends HttpServlet
     Configuration.PREFIX + "platform.version";
   static final String PARAM_ADMIN_ADDRESS =
     Configuration.PREFIX + "admin.IPAddress";
+
+  public static final String JAVASCRIPT_RESOURCE =
+    "org/lockss/htdocs/admin.js";
 
   /** Format to display date/time in headers */
   public static final DateFormat headerDf =
@@ -238,6 +241,55 @@ public abstract class LockssServlet extends HttpServlet
     return null;		// shouldn't happen
 				// XXX do something better here
   }
+
+
+  /** Run once when servlet loaded. */
+  public void init(ServletConfig config) throws ServletException {
+    super.init(config);
+    context = config.getServletContext();
+    theDaemon = (LockssDaemon)context.getAttribute("LockssDaemon");
+  }
+
+  /** Servlets must implement this method. */
+  protected abstract void lockssHandleRequest() throws ServletException, IOException;
+
+  /** Common request handling. */
+  public void service(HttpServletRequest req, HttpServletResponse resp)
+      throws ServletException, IOException {
+    try {
+      this.req = req;
+      this.resp = resp;
+      if (log.isDebug()) {
+	logParams();
+      }
+      resp.setContentType("text/html");
+      footNumber = 0;
+      reqURL = new URL(UrlUtil.getRequestURL(req));
+      adminAddr = req.getParameter("admin");
+      if (adminAddr == null) {
+	adminAddr = Configuration.getParam(PARAM_ADMIN_ADDRESS);
+      }
+      adminHost = reqURL.getHost();
+      client = req.getParameter("client");
+      clientAddr = client;
+      if (clientAddr == null) {
+	clientAddr = getLocalIPAddr();
+      }
+      lockssHandleRequest();
+    }
+    finally {
+      // Don't hold on to stuff forever
+      req = null;
+      resp = null;
+      reqURL = null;
+      adminDir = null;
+      localAddr = null;
+      footnotes = null;
+      _myServletDescr = null;
+      myName = null;
+    }
+  }
+
 
   // Return descriptor of running servlet
   protected ServletDescr myServletDescr() {
@@ -531,12 +583,14 @@ public abstract class LockssServlet extends HttpServlet
     navTable.cell().attribute("COLSPAN=\"3\"");
     String contactAddr =
       Configuration.getParam(PARAM_CONTACT_ADDR, DEFAULT_CONTACT_ADDR);
+    navTable.add("<font size=-1>");
     navTable.add(new Link("mailto:" + contactAddr, "Contact Us"));
+    navTable.add("</font>");
     return navTable;
   }
 
   protected Table getExplanationBlock(String text) {
-    Table exp = new Table(0, "width=\"86%\"");
+    Table exp = new Table(0, "width=\"85%\"");
     exp.center();
     exp.newCell("align=center");
     exp.add(text);
@@ -686,7 +740,8 @@ public abstract class LockssServlet extends HttpServlet
   }
 
   /** Store a footnote, assign it a number, return html for footnote
-   * reference. */
+   * reference.  If footnote in null or empty, no footnote is added and am
+   * empty string is returned. */
   protected String addFootnote(String s) {
     if (s == null || s.length() == 0) {
       return "";
@@ -720,13 +775,26 @@ public abstract class LockssServlet extends HttpServlet
     elem.add("</font></ol>");
   }
 
-  /** Run once when servlet loaded. */
-  public void init(ServletConfig config) throws ServletException {
-    super.init(config);
-    context = config.getServletContext();
-    theDaemon = (LockssDaemon)context.getAttribute("LockssDaemon");
+  protected void addJavaScript(Composite comp) {
+    Script script = new Script(getJavascript());
+    comp.add(script);
   }
 
+  private static String jstext = null;
+
+  private static synchronized String getJavascript() {
+    if (jstext == null) {
+      try {
+	ClassLoader loader = Thread.currentThread().getContextClassLoader();
+	InputStream istr = loader.getResourceAsStream(JAVASCRIPT_RESOURCE);
+	jstext = StringUtil.fromInputStream(istr);
+	istr.close();
+      } catch (Exception e) {
+	log.error("Can't load javascript", e);
+      }
+    }
+    return jstext;
+  }
   /** Return the daemon instance. */
   protected LockssDaemon getLockssDaemon() {
     return theDaemon;
@@ -740,43 +808,5 @@ public abstract class LockssServlet extends HttpServlet
     }
   }
 
-  /** Servlets must implement this method. */
-  protected abstract void lockssHandleRequest() throws ServletException, IOException;
 
-  /** Common request handling. */
-  public void service(HttpServletRequest req, HttpServletResponse resp)
-      throws ServletException, IOException {
-    try {
-      this.req = req;
-      this.resp = resp;
-      if (log.isDebug()) {
-	logParams();
-      }
-      resp.setContentType("text/html");
-      footNumber = 0;
-      reqURL = new URL(UrlUtil.getRequestURL(req));
-      adminAddr = req.getParameter("admin");
-      if (adminAddr == null) {
-	adminAddr = Configuration.getParam(PARAM_ADMIN_ADDRESS);
-      }
-      adminHost = reqURL.getHost();
-      client = req.getParameter("client");
-      clientAddr = client;
-      if (clientAddr == null) {
-	clientAddr = getLocalIPAddr();
-      }
-      lockssHandleRequest();
-    }
-    finally {
-      // Don't hold on to stuff forever
-      req = null;
-      resp = null;
-      reqURL = null;
-      adminDir = null;
-      localAddr = null;
-      footnotes = null;
-      _myServletDescr = null;
-      myName = null;
-    }
-  }
 }
