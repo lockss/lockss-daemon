@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.52.2.1 2005-01-19 01:38:46 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.52.2.2 2005-01-19 02:23:01 tlipkis Exp $
  */
 
 /*
@@ -72,6 +72,7 @@ public abstract class LockssServlet extends HttpServlet
   // performed when the form is submitted.  (Not always the submit button.)
   public static final String ACTION_TAG = "lockssAction";
 
+  public static final String ATTR_INCLUDE_SCRIPT = "IncludeScript";
   public static final String JAVASCRIPT_RESOURCE =
     "org/lockss/htdocs/admin.js";
 
@@ -974,12 +975,24 @@ public abstract class LockssServlet extends HttpServlet
     elem.add("</font></ol>");
   }
 
-  protected void addJavaScript0(Composite comp) {
+  /** Add javascript to page.  Normally adds a link to the script file, but
+   * can be told to include the script directly in the page, to accomodate
+   * unit testing of individual servlets, when other fetches won't work. */
+  protected void addJavaScript(Composite comp) {
+    String include = (String)context.getAttribute(ATTR_INCLUDE_SCRIPT);
+    if (StringUtil.isNullString(include)) {
+      linkToJavaScript(comp);
+    } else {
+      includeJavaScript0(comp);
+    }
+  }
+
+  private void includeJavaScript0(Composite comp) {
     Script script = new Script(getJavascript());
     comp.add(script);
   }
 
-  protected void addJavaScript(Composite comp) {
+  private void linkToJavaScript(Composite comp) {
     Script script = new Script("");
     script.attribute("src", "admin.js");
     comp.add(script);
