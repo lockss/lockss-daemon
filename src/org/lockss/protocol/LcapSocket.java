@@ -1,5 +1,5 @@
 /*
- * $Id: LcapSocket.java,v 1.10 2003-04-30 01:02:22 tal Exp $
+ * $Id: LcapSocket.java,v 1.11 2003-05-28 16:13:58 tal Exp $
  */
 
 /*
@@ -52,6 +52,11 @@ public class LcapSocket {
    * Intended for internal use and testing. */
   LcapSocket(DatagramSocket sock) {
     this.sock = sock;
+  }
+
+  /** Return the underlying DatagramSocket */
+  DatagramSocket getSocket() {
+    return sock;
   }
 
   /** Send a packet
