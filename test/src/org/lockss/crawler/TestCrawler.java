@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawler.java,v 1.5 2002-11-06 02:49:15 troberts Exp $
+ * $Id: TestCrawler.java,v 1.6 2002-11-07 22:40:45 troberts Exp $
  */
 
 /*
@@ -337,7 +337,7 @@ public class TestCrawler extends LockssTestCase {
   }
 
 
-  public void testDoOneCrawlCycleOneLink() {
+  public void testCacheAndHarvestLinksOneLink() {
     Vector list = new Vector();
     String source = "<html><head>"+
       "<title>Test</title></head>"+
@@ -352,14 +352,14 @@ public class TestCrawler extends LockssTestCase {
     uc.setUncachedProperties(prop);
     uc.setupCachedUrl(source);
     CachedUrl cu = uc.getCachedUrl();
-    Crawler.doOneCrawlCycle(uc, list);
+    Crawler.cacheAndHarvestLinks(uc, list);
     assertTrue("List didn't contain http://www.test.org/",
 	       list.contains("http://www.test.org/"));
     assertEquals(1, list.size());
     
   }
 
-  public void testDoOneCrawlCycleDoesNotAssLinksForExistingFile() {
+  public void testCacheAndHarvestLinksDoesNotAddLinksForExistingFile() {
     Vector list = new Vector();
     String source = "<html><head>"+
       "<title>Test</title></head>"+
@@ -375,7 +375,7 @@ public class TestCrawler extends LockssTestCase {
     uc.setCachedUrl(cu);
     cu.setExists(true);
 
-    Crawler.doOneCrawlCycle(uc, list);
+    Crawler.cacheAndHarvestLinks(uc, list);
     assertEquals(0, list.size());
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: Crawler.java,v 1.11 2002-11-07 02:14:03 aalto Exp $
+ * $Id: Crawler.java,v 1.12 2002-11-07 22:40:45 troberts Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ import org.lockss.util.*;
  */
 
 
-public class Crawler{
+public class Crawler {
   /**
    * TODO
    * 1) write state to harddrive using whatever system we come up for for the
@@ -81,60 +81,50 @@ public class Crawler{
    * crawl and the rules for which urls to cache
    *
    */
-  public static void doCrawl(ArchivalUnit au, CrawlSpec spec){
+  public static void doCrawl(ArchivalUnit au, CrawlSpec spec) {
     List list = createInitialList(spec);
     CachedUrlSet cus = au.getAUCachedUrlSet();
-    while (!list.isEmpty()){
+    while (!list.isEmpty()) {
       String url = (String)list.get(0);
       UrlCacher uc = cus.makeUrlCacher(url);
-      doOneCrawlCycle(uc, list);
-    }
-  }
-
-  public static void pause(){
-    try{
-      Thread thread = Thread.currentThread();
-      thread.sleep(2500);
-    }
-    catch (InterruptedException ie){
+      if (uc.shouldBeCached()) {
+	if (!uc.getCachedUrl().exists()) {
+	  cacheAndHarvestLinks(uc, list);
+	  au.pause();
+	}
+	else {
+	  logger.info(uc+" exists, not caching");
+	}
+      }
+      list.remove(uc.getUrl());
     }
   }
 
   /**
-   * Do one cycle of the crawl: check if cu should be downloaded, download it,
-   * add the urls in it to the list
+   * Cache the provided uc and harvest the links from it
    *
    * @param uc UrlCacher representing the url to be crawled
    * @param list List object to add new urls to
    */
-  protected static void doOneCrawlCycle(UrlCacher uc, List list) {
-    if (uc.shouldBeCached()){
-      if (!uc.getCachedUrl().exists()) {
-	try{
-//	  pause(); //XXX should get from plugin
-	  logger.info("caching "+uc);
-	  uc.cache();
-	}catch (Exception e){
-	  e.printStackTrace();
-	  //FIXME handle errors
-	  //make sure uc doesn't exist
-	  //if (premanent error)
-	  //  remove from list
-	}
-	try{
-	  CachedUrl cu = uc.getCachedUrl();
-	  addUrlsToList(cu, list);
-	}catch (IOException ioe){
-	  ioe.printStackTrace();
-	  //XXX handle this (probably not too major)
-	  //couldn't open the local file
-	}
-      }
-      else{
-	logger.info(uc+" exists, not fetching");
-      }
+  protected static void cacheAndHarvestLinks(UrlCacher uc, List list) {
+    try {
+      logger.info("caching "+uc);
+      uc.cache();
+    } catch (Exception e) {
+      e.printStackTrace();
+      //FIXME handle errors
+      //make sure uc doesn't exist
+      //if (premanent error)
+      //  remove from list
     }
-    list.remove(uc.getUrl());
+    try {
+      CachedUrl cu = uc.getCachedUrl();
+      addUrlsToList(cu, list);
+    } catch (IOException ioe) {
+      ioe.printStackTrace();
+      //XXX handle this (probably not too major)
+      //couldn't open the local file
+    }
   }
   /**
    * Method to generate a List of urls to start a crawl at from a
@@ -143,7 +133,7 @@ public class Crawler{
    * @param spec CrawlSpec from which the starting points with be fetched.
    * @returns A modifiable list of the urls (in string form)
    */
-  protected static List createInitialList (CrawlSpec spec){
+  protected static List createInitialList (CrawlSpec spec) {
     if (spec == null) {
       return Collections.EMPTY_LIST;
     } else {
@@ -159,28 +149,23 @@ public class Crawler{
    *@param list list to which all the urs in cu should be added
    */
   protected static void addUrlsToList(CachedUrl cu, List list)
-      throws IOException{
+      throws IOException {
     if (cu == null) {
       return;
     }
-    if (cu != null && shouldExtractLinksFromCachedUrl(cu)){
+    if (cu != null && shouldExtractLinksFromCachedUrl(cu)) {
       String cuStr = cu.getUrl();
-      if (cuStr == null){
+      if (cuStr == null) {
 	return;
       }
-//check to see if we should even try to parse the file
-//       if (cuStr.indexOf("html") < 0 &&
-// 	  cuStr.indexOf("htm") < 0){ //XXX hack for now
-// 	return;
-//       }
 
       InputStream is = cu.openForReading();
-      if (is != null){
+      if (is != null) {
 	Reader reader = new InputStreamReader(is);
 	URL srcUrl = new URL(cuStr);
 	String nextUrl = ExtractNextLink(reader, srcUrl);
-	while (nextUrl != null){
-	  if (!list.contains(nextUrl)){
+	while (nextUrl != null) {
+	  if (!list.contains(nextUrl)) {
 	    list.add(nextUrl);
 	  }
 	  nextUrl = ExtractNextLink(reader, srcUrl);
@@ -197,7 +182,7 @@ public class Crawler{
    * @param cu CachedUrl representing the web page we may parse
    * @return true if cu has "content-type" set to "text/html", false otherwise
    */
-  protected static boolean shouldExtractLinksFromCachedUrl(CachedUrl cu){
+  protected static boolean shouldExtractLinksFromCachedUrl(CachedUrl cu) {
     Properties props = cu.getProperties();
     if (props == null){
       return false;
@@ -215,8 +200,8 @@ public class Crawler{
    * @returns String representing the next url in reader
    */
   protected static String ExtractNextLink(Reader reader, URL srcUrl)
-      throws IOException, MalformedURLException{
-    if (reader == null){
+      throws IOException, MalformedURLException {
+    if (reader == null) {
       return null;
     }
     boolean inscript = false; //FIXME or I will break when we look at scripts
@@ -224,11 +209,11 @@ public class Crawler{
     int c = 0;
     StringBuffer lineBuf = new StringBuffer();
 
-    while(nextLink == null && c >=0){
+    while(nextLink == null && c >=0) {
       //skip to the next tag
-      do{
+      do {
 	c = reader.read();
-      }while (c >= 0 && c != '<');
+      } while (c >= 0 && c != '<');
 
       if (c == '<') {
 	int pos = 0;
@@ -240,7 +225,8 @@ public class Crawler{
 	    pos = 0;
 	    int lc1 = 0;
 	    int lc2 = 0;
-	    while((c = reader.read()) >= 0 && (c != '>' || lc1 != '-' || lc2 != '-')) {
+	    while((c = reader.read()) >= 0 
+		  && (c != '>' || lc1 != '-' || lc2 != '-')) {
 	      lc1 = lc2;
 	      lc2 = c;
 	    }
@@ -250,12 +236,12 @@ public class Crawler{
 	  pos++;
 	  c = reader.read();
 	}
-	if(inscript) {
+	if (inscript) {
 	  //FIXME when you deal with the script problems
 	  //	  if(lookingAt(lineBuf, 0, pos, scripttagend)) {
 	  inscript = false;
 	  //}
-	} else if (lineBuf.length() >= 5){ //see if the lineBuf has a link tag
+	} else if (lineBuf.length() >= 5) { //see if the lineBuf has a link tag
 	  nextLink = ParseLink(lineBuf, srcUrl);
 	}
 	lineBuf = new StringBuffer();
@@ -279,8 +265,7 @@ public class Crawler{
    * @returns string representation of the url from the link tag
    */
   protected static String ParseLink(StringBuffer link, URL srcUrl)
-      throws MalformedURLException
-  {
+      throws MalformedURLException {
     String returnStr = null;
     String key = null;
     String tag = null;
@@ -317,17 +302,17 @@ public class Crawler{
       return null;
     }
     int linkIdx = StringUtil.getIndexIgnoringCase(link.toString(), key);
-    if (linkIdx < 0){
+    if (linkIdx < 0) {
       return null;
     }
     int idx = linkIdx + key.length();
     while (idx < link.length() &&
 	   (link.charAt(idx) == '"' ||
 	    link.charAt(idx) == ' ' ||
-	    link.charAt(idx) == '=')){
+	    link.charAt(idx) == '=')) {
       idx++;
     }
-    if (idx >= link.length()){ //bad key, has no value
+    if (idx >= link.length()) { //bad key, has no value
       return null;
     }
 
