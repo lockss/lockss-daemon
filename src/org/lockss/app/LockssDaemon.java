@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.37 2003-09-26 23:52:18 eaalto Exp $
+ * $Id: LockssDaemon.java,v 1.38 2003-11-11 20:35:38 tlipkis Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
 import org.lockss.hasher.*;
+import org.lockss.scheduler.*;
 import org.lockss.plugin.*;
 import org.lockss.poller.*;
 import org.lockss.protocol.*;
@@ -68,12 +69,14 @@ public class LockssDaemon {
   static final String PARAM_PLATFORM_VERSION =
     Configuration.PREFIX + "platform.version";
 
-  private static String MANAGER_PREFIX = Configuration.PREFIX + "manager.";
+  public static final String MANAGER_PREFIX =
+    Configuration.PREFIX + "manager.";
 
   /* the parameter strings that represent our managers */
   public static String ACTIVITY_REGULATOR = "ActivityRegulator";
   public static String WATCHDOG_SERVICE = "WatchdogService";
   public static String HASH_SERVICE = "HashService";
+  public static String SCHED_SERVICE = "SchedService";
   public static String COMM_MANAGER = "CommManager";
   public static String ROUTER_MANAGER = "RouterManager";
   public static String IDENTITY_MANAGER = "IdentityManager";
@@ -94,7 +97,10 @@ public class LockssDaemon {
       "org.lockss.daemon.ConfigManager";
   private static String DEFAULT_ACTIVITY_REGULATOR =
       "org.lockss.daemon.ActivityRegulatorImpl";
-  private static String DEFAULT_HASH_SERVICE = "org.lockss.hasher.HashService";
+  private static String DEFAULT_HASH_SERVICE =
+    "org.lockss.hasher.HashSvcQueueImpl";
+  private static String DEFAULT_SCHED_SERVICE =
+    "org.lockss.scheduler.SchedService";
   private static String DEFAULT_WATCHDOG_SERVICE =
     "org.lockss.daemon.WatchdogService";
   private static String DEFAULT_COMM_MANAGER = "org.lockss.protocol.LcapComm";
@@ -128,22 +134,31 @@ public class LockssDaemon {
   private static String DEFAULT_CACHE_LOCATION = "./cache";
   private static String DEFAULT_CONFIG_LOCATION = "./config";
 
-  private static class ManagerDesc {
-    String key;				// hash key and config param name
-    String defaultClass;		// default class name
+  protected static class ManagerDesc {
+    String key;		// hash key and config param name
+    String defaultClass;	// default class name
 
     ManagerDesc(String key, String defaultClass) {
       this.key = key;
       this.defaultClass = defaultClass;
     }
+
+    public String getKey() {
+      return key;
+    }
+    public String getDefaultClass() {
+      return defaultClass;
+    }
+
   }
 
   // Manager descriptors.  The order of this table determines the order in
   // which managers are initialized and started.  AU specific managers are
   // started as needed.
-  private ManagerDesc[] managerDescs = {
+  protected static final ManagerDesc[] managerDescs = {
     new ManagerDesc(STATUS_SERVICE, DEFAULT_STATUS_SERVICE),
     new ManagerDesc(URL_MANAGER, DEFAULT_URL_MANAGER),
+    new ManagerDesc(SCHED_SERVICE, DEFAULT_SCHED_SERVICE),
     new ManagerDesc(HASH_SERVICE, DEFAULT_HASH_SERVICE),
     new ManagerDesc(SYSTEM_METRICS, DEFAULT_SYSTEM_METRICS),
     new ManagerDesc(IDENTITY_MANAGER, DEFAULT_IDENTITY_MANAGER),
@@ -303,6 +318,15 @@ public class LockssDaemon {
    */
   public HashService getHashService() {
     return (HashService) getManager(HASH_SERVICE);
+  }
+
+  /**
+   * return the sched service instance
+   * @return the SchedService
+   * @throws IllegalArgumentException if the manager is not available.
+   */
+  public SchedService getSchedService() {
+    return (SchedService) getManager(SCHED_SERVICE);
   }
 
   /**
@@ -642,7 +666,7 @@ public class LockssDaemon {
    * @return the manager that has been loaded
    * @throws Exception if load fails
    */
-  LockssManager loadManager(String managerName) throws Exception {
+  protected LockssManager loadManager(String managerName) throws Exception {
     log.debug("Loading manager " + managerName);
     try {
       Class manager_class = Class.forName(managerName);
