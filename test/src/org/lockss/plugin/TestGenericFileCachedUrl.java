@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericFileCachedUrl.java,v 1.14 2003-07-14 06:46:39 tlipkis Exp $
+ * $Id: TestGenericFileCachedUrl.java,v 1.15 2003-07-23 00:16:31 troberts Exp $
  */
 
 /*
@@ -100,15 +100,15 @@ public class TestGenericFileCachedUrl extends LockssTestCase {
     createLeaf("http://www.example.com/testDir/leaf3", "", null);
 
     CachedUrl url = cus.makeCachedUrl("http://www.example.com/testDir/leaf1");
-    BigInteger bi = new BigInteger(url.getContentSize());
+    BigInteger bi = new BigInteger(url.getUnfilteredContentSize());
     assertEquals(11, bi.intValue());
 
     url = cus.makeCachedUrl("http://www.example.com/testDir/leaf2");
-    bi = new BigInteger(url.getContentSize());
+    bi = new BigInteger(url.getUnfilteredContentSize());
     assertEquals(12, bi.intValue());
 
     url = cus.makeCachedUrl("http://www.example.com/testDir/leaf3");
-    bi = new BigInteger(url.getContentSize());
+    bi = new BigInteger(url.getUnfilteredContentSize());
     assertEquals(0, bi.intValue());
   }
 
@@ -147,7 +147,9 @@ public class TestGenericFileCachedUrl extends LockssTestCase {
   }
 
   public void testOpenForHashingCanFilter() throws Exception {
-    String config = "org.lockss.genericFileCachedUrl.filterHashStream=true";
+    String config =
+      "org.lockss.genericFileCachedUrl.filterHashStream=true\n"+
+      "org.lockss.genericFileCachedUrl.useNewFilter=true";
     Properties props = new Properties();
     props.setProperty("content-type", "text/html");
     ConfigurationUtil.setCurrentConfigFromString(config);

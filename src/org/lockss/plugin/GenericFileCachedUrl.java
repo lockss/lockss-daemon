@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrl.java,v 1.22 2003-06-25 21:19:58 eaalto Exp $
+ * $Id: GenericFileCachedUrl.java,v 1.23 2003-07-23 00:16:31 troberts Exp $
  */
 
 /*
@@ -33,10 +33,10 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin;
 
 import java.io.*;
-import java.util.Properties;
+import java.util.*;
 import java.net.MalformedURLException;
 import org.lockss.app.*;
-import org.lockss.crawler.HtmlTagFilter;
+import org.lockss.crawler.*;
 import org.lockss.daemon.*;
 import org.lockss.repository.*;
 import org.lockss.util.*;
@@ -57,6 +57,11 @@ public class GenericFileCachedUrl extends BaseCachedUrl {
 
   private static final String PARAM_SHOULD_FILTER_HASH_STREAM =
     Configuration.PREFIX+".genericFileCachedUrl.filterHashStream";
+
+  private static final String PARAM_SHOULD_USE_NEW_FILTER =
+    Configuration.PREFIX+".genericFileCachedUrl.useNewFilter";
+
+
 
   public GenericFileCachedUrl(CachedUrlSet owner, String url) {
     super(owner, url);
@@ -79,21 +84,51 @@ public class GenericFileCachedUrl extends BaseCachedUrl {
   public InputStream openForHashing() {
      if (Configuration.getBooleanParam(PARAM_SHOULD_FILTER_HASH_STREAM,
   				      false)) {
+       logger.debug3("Filtering on, returning filtered stream");
        return getFilteredStream();
      } else {
+       logger.debug3("Filtering off, returning unfiltered stream");
        return openForReading();
      }
   }
 
   private InputStream getFilteredStream() {
+    if (Configuration.getBooleanParam(PARAM_SHOULD_USE_NEW_FILTER, false)) {
+      logger.debug3("Using new filter");
+      return getFilteredStreamNew();
+    }
+      logger.debug3("Using old filter");
+    return getFilteredStreamOld();
+  }
+
+  private InputStream getFilteredStreamNew() {
     //XXX test me
     Properties props = getProperties();
     if ("text/html".equals(props.getProperty("content-type"))) {
       logger.debug2("Filtering "+url);
-//       return new ReaderInputStream(getReader());
+      List tagList =
+	ListUtil.list(
+		      new HtmlTagFilter.TagPair("<!--", "-->"),
+		      new HtmlTagFilter.TagPair("<script", "</script>"),
+		      new HtmlTagFilter.TagPair("<", ">")
+		      );
+      
+      
       HtmlTagFilter.TagPair tagPair = new HtmlTagFilter.TagPair("<", ">");
-      Reader filteredReader = new HtmlTagFilter(getReader(), tagPair);
+      Reader filteredReader = 
+	HtmlTagFilter.makeNestedFilter(getReader(), tagList);
       return new ReaderInputStream(filteredReader);
+    }
+    logger.debug2("Not filtering "+url);
+    return openForReading();
+  }
+
+  private InputStream getFilteredStreamOld() {
+    //XXX test me
+    Properties props = getProperties();
+    if ("text/html".equals(props.getProperty("content-type"))) {
+      logger.debug2("Filtering "+url);
+      return new LcapFilteredFileInputStream(openForReading());
     }
     logger.debug2("Not filtering "+url);
     return openForReading();
@@ -109,7 +144,7 @@ public class GenericFileCachedUrl extends BaseCachedUrl {
     return leaf.getNodeContents().props;
   }
 
-  public byte[] getContentSize() {
+  public byte[] getUnfilteredContentSize() {
     ensureLeafLoaded();
     return ByteArray.encodeLong(leaf.getContentSize());
   }
