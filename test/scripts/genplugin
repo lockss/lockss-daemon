@@ -115,7 +115,8 @@ def prompt_for_missing_args():
         
     while not args.has_key("titledb"):
         args["titledb"] = raw_input("Title database file to bundle (if any): ")
-        if not args.has_key("titledb") or len(args["titledb"] == 0):
+        if not args.has_key("titledb") or len(args["titledb"]) == 0:
+            args.pop("titledb")
             break
         if not path.isfile(args["titledb"]):
             print("Warning: %s is not a file!" % args["titledb"])
