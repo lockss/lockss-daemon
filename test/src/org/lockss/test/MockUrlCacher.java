@@ -1,5 +1,5 @@
 /*
- * $Id: MockUrlCacher.java,v 1.13 2004-02-23 21:16:22 tlipkis Exp $
+ * $Id: MockUrlCacher.java,v 1.14 2004-03-07 08:43:46 tlipkis Exp $
  */
 
 /*
@@ -56,6 +56,7 @@ public class MockUrlCacher implements UrlCacher {
   private RuntimeException cachingRuntimException = null;
   private int numTimesToThrow = 1;
   private int timesThrown = 0;
+  private boolean forceRefetch = false;
 
 
   public MockUrlCacher(String url){
@@ -98,6 +99,13 @@ public class MockUrlCacher implements UrlCacher {
   public void setConnectionPool(LockssUrlConnectionPool connectionPool) {
   }
 
+  public void setForceRefetch(boolean force) {
+    this.forceRefetch = force;
+  }
+
+  public void setRedirectScheme(int scheme) {
+  }
+
   public void setupCachedUrl(String contents) {
     MockCachedUrl cu = new MockCachedUrl(url);
     cu.setProperties(getUncachedProperties());
@@ -134,26 +142,6 @@ public class MockUrlCacher implements UrlCacher {
     this.cachingRuntimException = e;
   }
   
-  public void forceCache() throws IOException {
-    if (cachingException != null) {
-      timesThrown++;
-      throw cachingException;
-    }
-    if (cachingRuntimException != null) {
-      // Get a stack trace from here, not from the test case where the
-      // exception was created
-      cachingRuntimException.fillInStackTrace();
-      timesThrown++;
-      throw cachingRuntimException;
-    }
-    if (cus != null) {
-      cus.addForceCachedUrl(url);
-    }
-    if (cu != null) {
-      cu.setExists(true);
-    }
-  }
-
   public void cache() throws IOException {
     if (cus != null) {
       cus.signalCacheAttempt(url);
@@ -170,7 +158,11 @@ public class MockUrlCacher implements UrlCacher {
       throw cachingRuntimException;
     }
     if (cus != null) {
-      cus.addCachedUrl(url);
+      if (forceRefetch) {
+	cus.addForceCachedUrl(url);
+      } else {
+	cus.addCachedUrl(url);
+      }
     }
     if (cu != null) {
       cu.setExists(true);

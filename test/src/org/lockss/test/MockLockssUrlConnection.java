@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssUrlConnection.java,v 1.2 2004-02-27 00:24:22 tlipkis Exp $
+ * $Id: MockLockssUrlConnection.java,v 1.3 2004-03-07 08:43:46 tlipkis Exp $
  */
 
 /*
@@ -40,15 +40,29 @@ import org.lockss.util.urlconn.*;
 
 public class MockLockssUrlConnection extends BaseLockssUrlConnection {
 
-  String url;
-  List headerFieldKeys = null;
-  List headerFields = null;
+  int responseCode;
+  String responseMessage;
+  Properties reqHeaders = new Properties();
+  Properties respHeaders = new Properties();
+  InputStream respInputStream = null;
+  String respContentType;
+  String respContentEncoding;
+  long respDate = -1;
 
   public MockLockssUrlConnection() {
   }
 
+  public void setURL(String url) {
+    this.urlString = url;
+  }
+
   public boolean isHttp() {
-    return false;
+    return true;
+  }
+
+  boolean followRedirects = true;
+  public void setFollowRedirects(boolean follow) {
+    this.followRedirects = follow;
   }
 
   public void execute() throws IOException {
@@ -63,20 +77,28 @@ public class MockLockssUrlConnection extends BaseLockssUrlConnection {
     throw new UnsupportedOperationException();
   }
 
-  public void setUserAgent(String value) {
-    throw new UnsupportedOperationException();
+  public void setRequestProperty(String key, String value) {
+    reqHeaders.setProperty(key.toLowerCase(), value);
   }
 
-  public void setRequestProperty(String key, String value) {
-    throw new UnsupportedOperationException();
+  public String getRequestProperty(String key) {
+    return reqHeaders.getProperty(key.toLowerCase());
   }
 
   public int getResponseCode() {
-    throw new UnsupportedOperationException();
+    return responseCode;
   }
 
   public String getResponseMessage() {
-    throw new UnsupportedOperationException();
+    return responseMessage;
+  }
+
+  public void setResponseCode(int responseCode) {
+    this.responseCode = responseCode;
+  }
+
+  public void setResponseMessage(String message) {
+    this.responseMessage = message;
   }
 
   public String getResponseHeaderFieldVal(int n) {
@@ -87,7 +109,14 @@ public class MockLockssUrlConnection extends BaseLockssUrlConnection {
     throw new UnsupportedOperationException();
   }
 
+  public void setResponseDate(long date) {
+    this.respDate = date;
+  }
+
   public long getResponseDate() {
+    if (respDate != -1) {
+      return respDate;
+    }
     throw new UnsupportedOperationException();
   }
 
@@ -95,27 +124,58 @@ public class MockLockssUrlConnection extends BaseLockssUrlConnection {
     throw new UnsupportedOperationException();
   }
 
+  public void setResponseContentType(String type) {
+    this.respContentType = type;
+  }
+
+  public void setResponseContentEncoding(String encoding) {
+    this.respContentEncoding = encoding;
+  }
+
   public String getResponseContentType() {
+    if (respContentType != null) {
+      return respContentType;
+    }
     throw new UnsupportedOperationException();
   }
 
   public String getResponseContentEncoding() {
+    if (respContentEncoding != null) {
+      return respContentEncoding;
+    }
     throw new UnsupportedOperationException();
   }
 
   public String getResponseHeaderValue(String name) {
-    throw new UnsupportedOperationException();
+    return respHeaders.getProperty(name.toLowerCase());
+  }
+
+  public void setResponseHeader(String name, String value) {
+    respHeaders.setProperty(name.toLowerCase(), value);
   }
 
   public InputStream getResponseInputStream() throws IOException {
+    if (respInputStream != null) {
+      return respInputStream;
+    }
     throw new UnsupportedOperationException();
+  }
+
+  public void setResponseInputStream(InputStream stream) {
+    this.respInputStream = stream;
   }
 
   public void storeResponseHeaderInto(Properties props, String prefix) {
-    throw new UnsupportedOperationException();
+    for (Iterator iter = respHeaders.keySet().iterator(); iter.hasNext(); ) {
+      String key = (String)iter.next();
+      props.setProperty(prefix + key,
+			respHeaders.getProperty(key.toLowerCase()));
+    }
   }
 
+  boolean released = false;
   public void release() {
-    throw new UnsupportedOperationException();
+    released = true;
   }
+
 }
