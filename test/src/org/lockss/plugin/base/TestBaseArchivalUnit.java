@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArchivalUnit.java,v 1.23 2004-09-27 22:38:42 smorabito Exp $
+ * $Id: TestBaseArchivalUnit.java,v 1.24 2004-12-12 23:02:38 tlipkis Exp $
  */
 
 /*
@@ -288,7 +288,8 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     assertEquals("return value", url, actualReturn);
   }
 
-  public void testSetBaseAuParams() throws ArchivalUnit.ConfigurationException {
+  public void testSetBaseAuParams()
+      throws ArchivalUnit.ConfigurationException {
     Properties props = new Properties();
     props.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
     props.setProperty(ConfigParamDescr.VOLUME_NUMBER.getKey(), "10");
@@ -304,6 +305,26 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     assertTrue(mbau.getCrawlSpec().getCrawlWindow() instanceof MyMockCrawlWindow);
   }
 
+  // Check that setBaseAuParams() doesn't overwrite values already set in
+  // param map.
+  public void testSetBaseAuParamsWithOverride()
+      throws ArchivalUnit.ConfigurationException {
+    Properties props = new Properties();
+    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
+    props.setProperty(ConfigParamDescr.VOLUME_NUMBER.getKey(), "10");
+    props.setProperty(BaseArchivalUnit.PAUSE_TIME_KEY, "10000");
+    props.setProperty(BaseArchivalUnit.USE_CRAWL_WINDOW, "true");
+    props.setProperty(BaseArchivalUnit.NEW_CONTENT_CRAWL_KEY, "10000");
+    Configuration config = ConfigurationUtil.fromProps(props);
+    mbau.doSetAuParams(true);
+    mbau.loadAuConfigDescrs(config);
+    mbau.setBaseAuParams(config);
+    assertEquals(54321, mbau.getFetchDelay());
+    assertEquals(12345, mbau.newContentCrawlIntv);
+    assertEquals(auName,mbau.getName());
+    assertEquals(ListUtil.list(startUrl), mbau.getNewContentCrawlUrls());
+    assertNull(mbau.getCrawlSpec().getCrawlWindow());
+  }
 
   public void testCheckNextPollInterval() {
     TimeBase.setSimulated();
@@ -464,6 +485,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     props.setProperty(BaseArchivalUnit.PAUSE_TIME_KEY, "10000");
     props.setProperty(BaseArchivalUnit.USE_CRAWL_WINDOW, "true");
     props.setProperty(BaseArchivalUnit.NEW_CONTENT_CRAWL_KEY, "10000");
+
     Configuration config = ConfigurationUtil.fromProps(props);
     mbau.setBaseAuParams(config);
     // test that the ParamHandlerMap and the properties are the same
@@ -558,8 +580,10 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     FilterRule rule = null;
     private CrawlRule m_rules = null;
     private String m_startUrl ="http://www.example.com/index.html";
+    private boolean setAuParams = false;
 
-    MyMockBaseArchivalUnit(Plugin plugin, String name, CrawlRule rules, String startUrl) {
+    MyMockBaseArchivalUnit(Plugin plugin, String name, CrawlRule rules,
+			   String startUrl) {
       super(plugin);
       m_name = name;
       m_startUrl = startUrl;
@@ -597,7 +621,16 @@ public class TestBaseArchivalUnit extends LockssTestCase {
       return new MyMockCrawlWindow();
     }
 
+    void doSetAuParams(boolean ena) {
+      setAuParams = ena;
+    }
+
     protected void loadAuConfigDescrs(Configuration config) {
+      if (setAuParams) {
+	paramMap.putLong(AU_NEW_CRAWL_INTERVAL, 12345);
+	paramMap.putLong(AU_FETCH_DELAY, 54321);
+	paramMap.putBoolean(AU_USE_CRAWL_WINDOW, false);
+      }
     }
 
     protected FilterRule constructFilterRule(String mimeType) {

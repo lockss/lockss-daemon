@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.86 2004-10-20 18:41:20 dcfok Exp $
+ * $Id: BaseArchivalUnit.java,v 1.87 2004-12-12 23:02:39 tlipkis Exp $
  */
 
 /*
@@ -213,6 +213,15 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     }
   }
 
+  // This pattern
+  //   T value =
+  //     paramMap.getT(PARAM_MAP_KEY, config.getT(CONFIG_KEY, defaultValue));
+  //   paramMap.putT(PARAM_MAP_KEY, value);
+  // is used to give precedence to the first of these values that is present:
+  //  - value already in paramMap (presumably stored by loadAuConfigDescrs)
+  //  - value in AU's config
+  //  - default value
+
   protected void setBaseAuParams(Configuration config)
       throws ConfigurationException {
 
@@ -221,19 +230,19 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     paramMap.putUrl(AU_BASE_URL, baseUrl);
 
     // get the fetch delay
-    long fetchDelay = config.getTimeInterval(PAUSE_TIME_KEY, defaultFetchDelay);
-    fetchDelay = Math.max(fetchDelay, minFetchDelay);
+    long fetchDelay =
+      paramMap.getLong(AU_FETCH_DELAY,
+		       Math.max(config.getTimeInterval(PAUSE_TIME_KEY,
+						       defaultFetchDelay),
+				minFetchDelay));
     logger.debug2("Set fetch delay to " + fetchDelay);
     paramMap.putLong(AU_FETCH_DELAY, fetchDelay);
 
-    // get crawl window setting
-    boolean useCrawlWindow = config.getBoolean(USE_CRAWL_WINDOW,
-                                       DEFAULT_USE_CRAWL_WINDOW);
-    paramMap.putBoolean(AU_USE_CRAWL_WINDOW, useCrawlWindow);
-
     // get the new content crawl interval
-    newContentCrawlIntv = config.getTimeInterval(NEW_CONTENT_CRAWL_KEY,
-                                                 defaultContentCrawlIntv);
+    newContentCrawlIntv =
+      paramMap.getLong(AU_NEW_CRAWL_INTERVAL,
+		       config.getTimeInterval(NEW_CONTENT_CRAWL_KEY,
+					      defaultContentCrawlIntv));
     logger.debug2("Setting new content crawl interval to " +
 		  StringUtil.timeIntervalToString(newContentCrawlIntv));
     paramMap.putLong(AU_NEW_CRAWL_INTERVAL, newContentCrawlIntv);
@@ -241,6 +250,14 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     // make the start url
     startUrlString = makeStartUrl();
     paramMap.putString(AU_START_URL, startUrlString);
+
+    // get crawl window setting
+    boolean useCrawlWindow = 
+      paramMap.getBoolean(AU_USE_CRAWL_WINDOW,
+			  config.getBoolean(USE_CRAWL_WINDOW,
+					    DEFAULT_USE_CRAWL_WINDOW));
+    paramMap.putBoolean(AU_USE_CRAWL_WINDOW, useCrawlWindow);
+
     // make our crawl spec
     try {
       crawlSpec = makeCrawlSpec();      
@@ -253,7 +270,6 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
       throw new ConfigurationException("Illegal RE", e);
     }
     paramMap.setMapElement(AU_CRAWL_SPEC, crawlSpec);
-
 
     //make our url normalizer
     urlNormalizer = makeUrlNormalizer();
