@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.42 2004-01-31 02:54:26 eaalto Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.43 2004-01-31 02:57:47 eaalto Exp $
  */
 
 /*
@@ -302,9 +302,6 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
   public synchronized void sealNewVersion() {
     try {
-      if (!newVersionOpen) {
-        throw new UnsupportedOperationException("New version not initialized.");
-      }
       if (curOutputStream==null) {
          throw new UnsupportedOperationException("getNewOutputStream() not called.");
       } else {
@@ -313,6 +310,9 @@ public class RepositoryNodeImpl implements RepositoryNode {
           curOutputStream.close();
         } catch (IOException ignore) { }
         curOutputStream = null;
+      }
+      if (!newVersionOpen) {
+        throw new UnsupportedOperationException("New version not initialized.");
       }
       if (!newPropsSet) {
         throw new UnsupportedOperationException("setNewProperties() not called.");
