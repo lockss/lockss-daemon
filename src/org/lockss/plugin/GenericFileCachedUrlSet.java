@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrlSet.java,v 1.36 2003-04-28 23:48:12 aalto Exp $
+ * $Id: GenericFileCachedUrlSet.java,v 1.37 2003-04-29 02:21:00 tal Exp $
  */
 
 /*
@@ -148,7 +148,8 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
         // increment current estimate by 50%, so as to avoid future timeouts
         if (lastDuration > 0) {
           nodeManager.hashFinished(this,
-                                   (long)(lastDuration * TIMEOUT_INCREASE));
+                                   (long)(Math.max(elapsed, lastDuration) *
+					  TIMEOUT_INCREASE));
         }
       }
     } else {
