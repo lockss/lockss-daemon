@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyConfig.java,v 1.3 2004-06-01 08:30:51 tlipkis Exp $
+ * $Id: ProxyConfig.java,v 1.4 2004-06-07 19:29:59 tlipkis Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import java.net.*;
 import java.text.*;
 import org.mortbay.html.*;
 import org.mortbay.tools.*;
+import org.mortbay.servlet.MultiPartRequest;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
@@ -50,13 +51,20 @@ import org.lockss.plugin.*;
  */
 public class ProxyConfig extends LockssServlet {
 
-  private String format;
+  private String action;
   private PrintWriter wrtr = null;
   private String encapsulate;
   private ProxyInfo pi;
   private Map urlStems;
+  private boolean pacform;
 
   private PluginManager pluginMgr;
+
+  // don't hold onto objects after request finished
+  protected void resetLocals() {
+    wrtr = null;
+    super.resetLocals();
+  }
 
   public void init(ServletConfig config) throws ServletException {
     super.init(config);
@@ -68,16 +76,30 @@ public class ProxyConfig extends LockssServlet {
    * @throws IOException
    */
   public void lockssHandleRequest() throws IOException {
-    format = req.getParameter("format");
-    if (StringUtil.isNullString(format)) {
-      generateHelpPage();
+    action = getParameter("action");
+    if (StringUtil.isNullString(action)) {
+      try {
+	getMultiPartRequest(100000);
+	action = getParameter("action");
+      } catch (FormDataTooLongException e) {
+	displayForm("Uploaded file too large: " + e.getMessage());
+	return;
+      }
+    }
+    pacform = !StringUtil.isNullString(getParameter("pacform"));
+    if (StringUtil.isNullString(action)) {
+      displayForm();
+      return;
+    } else if (action.equals("pacform")) {
+      generateEncapForm(null);
       return;
     }
 
+    // assume will send text.  Error & form display will override.
     resp.setContentType("text/plain");
 
     try {
-      generateProxyFile(format);
+      generateProxyFile(action);
     } catch (IOException e) {
       if (wrtr != null) {
 	// Error occurred after we created writer, default error page won't
@@ -94,6 +116,18 @@ public class ProxyConfig extends LockssServlet {
     }
   }
 
+  void displayForm() throws IOException {
+    displayForm(null);
+  }
+
+  void displayForm(String error) throws IOException {
+    if (pacform) {
+      generateEncapForm(error);
+    } else {
+      generateHelpPage(error);
+    }
+  }
+
   void generateProxyFile(String format) throws IOException {
     pi = new ProxyInfo(getMachineName());
     urlStems = pi.getUrlStemMap();
@@ -106,7 +140,7 @@ public class ProxyConfig extends LockssServlet {
       }
       return;
     }
-    if (format.equalsIgnoreCase("pac_encap")) {
+    if (format.equalsIgnoreCase("Combined PAC")) {
       generateEncapsulatedPacFile();
       return;
     }
@@ -119,7 +153,7 @@ public class ProxyConfig extends LockssServlet {
       }
       return;
     }
-    generateHelpPage("Unknown proxy config format: " + format);
+    displayForm("Unknown proxy config format: " + format);
   }
 
   void generatePacFile() throws IOException {
@@ -127,7 +161,7 @@ public class ProxyConfig extends LockssServlet {
     wrtr = resp.getWriter();
 
     // Serve as PAC mime type if requested
-    String mime = req.getParameter("mime");
+    String mime = getParameter("mime");
     if ("pac".equalsIgnoreCase(mime)) {
       resp.setContentType("application/x-ns-proxy-autoconfig");
     }
@@ -136,28 +170,47 @@ public class ProxyConfig extends LockssServlet {
   }
 
   void generateEncapsulatedPacFile() throws IOException {
-    String url = req.getParameter("encapsulated_url");
-    if (StringUtil.isNullString(url)) {
-      generateHelpPage("Combined PAC file requires URL");
-      return;
-    }
+    String url = getParameter("encapsulated_url");
+    String pac;
     try {
-      String pac = pi.encapsulatePacFileFromURL(urlStems, url);
+      if (StringUtil.isNullString(url)) {
+	if (!pacform) {
+	  displayForm("Combined PAC file requires URL");
+	  return;
+	}
+	String encap = getParameter("pac_contents1");
+	if (StringUtil.isNullString(encap)) {
+	  encap = getParameter("pac_contents2");
+	}
+	if (StringUtil.isNullString(encap)) {
+	  displayForm("Please provide an existing PAC file in one of the three fields below");
+	  return;
+	}
+	pac = pi.encapsulatePacFile(urlStems, encap, null);
+      } else {
+	try {
+	  pac = pi.encapsulatePacFileFromURL(urlStems, url);
+	} catch (UnknownHostException e) {
+	  displayForm("Error reading PAC file from URL: " + url +
+		      "<br>No such host: " + e.getMessage());
+	  return;
+	} catch (IOException e) {
+	  displayForm("Error reading PAC file from URL: " + url +
+		      "<br>" + e.toString());
+	  return;
+	}
+      }
       wrtr = resp.getWriter();
-
+      
       // Serve as PAC mime type if requested
-      String mime = req.getParameter("mime");
+      String mime = getParameter("mime");
       if ("pac".equalsIgnoreCase(mime)) {
 	resp.setContentType("application/x-ns-proxy-autoconfig");
       }
       wrtr.print(pac);
-    } catch (IOException e) {
-      generateHelpPage("Error reading PAC file from URL: " + url +
-		       ": " + e.toString());
-      return;
     } catch (Exception e) {
-      generateHelpPage("Error generating combined PAC file from URL: " + url +
-		       ": " + e.toString());
+      displayForm("Error generating combined PAC file from URL: " + url +
+		  "<br>" + e.toString());
       return;
     }
   }
@@ -165,12 +218,7 @@ public class ProxyConfig extends LockssServlet {
   void generateEZProxyFile() throws IOException {
     String ez = pi.generateEZProxyFragment(urlStems);
     wrtr = resp.getWriter();
-    resp.setContentType("text/plain");
     wrtr.print(ez);
-  }
-
-  void generateHelpPage() throws IOException {
-    generateHelpPage(null);
   }
 
   void generateHelpPage(String error) throws IOException {
@@ -178,7 +226,7 @@ public class ProxyConfig extends LockssServlet {
     resp.setContentType("text/html");
     //    table = new Table(0, "ALIGN=CENTER CELLSPACING=2 CELLPADDING=0");
     Form frm = new Form(srvURL(myServletDescr(), null));
-    // use GET so user can refresh in browser
+    // use GET so user can copy parameterized URL
     frm.method("GET");
     frm.add("<p>This page is used to obtain proxy configuration " +
 	     "information for browsers and other proxies, " +
@@ -197,12 +245,17 @@ public class ProxyConfig extends LockssServlet {
 	       "Automatic proxy configuration for browsers. " +
 	       "Place the contents of this file on a server for your users " +
 	       "to configure their browsers (#)" +
-	       srvAbsLink(myServletDescr(), ".", "format=pac&mime=pac"));
+	       srvAbsLink(myServletDescr(), ".", "action=pac&mime=pac"));
     Composite urlform = new Composite();
     urlform.add("PAC file that combines rules in an existing PAC file with the rules for this cache.<br>PAC file URL: ");
-    urlform.add(new Input(Input.Text, "encapsulated_url"));
-    urlform.add(new Input(Input.Submit, "format", "pac_encap"));
-    addFmtElement(frm, "Combined PAC file", "pac_encap", urlform);
+    String url = getParameter("encapsulated_url");
+    Input urlin = new Input(Input.Text, "encapsulated_url",
+			    (url != null ? url : ""));
+    urlin.setSize(40);
+    urlform.add(urlin);
+    urlform.add(new Input(Input.Submit, "action", "Combined PAC"));
+
+    addFmtElement(frm, "Combined PAC file", "pacform", urlform);
     page.add(frm);
     page.add(getFooter());
     page.write(resp.getWriter());
@@ -211,7 +264,7 @@ public class ProxyConfig extends LockssServlet {
   void addFmtElement(Composite comp, String title, String format,
 		     String text) {
     ServletDescr desc = myServletDescr();
-    String fmt = "format=" + format;
+    String fmt = "action=" + format;
     String absUrl = "<code>" + srvAbsURL(desc, fmt) + "</code>";
     Composite elem = new Composite();
     elem.add(StringUtil.replaceString(text, "#", absUrl.toString()));
@@ -221,12 +274,68 @@ public class ProxyConfig extends LockssServlet {
   void addFmtElement(Composite comp, String title, String format,
 		     Element elem) {
     ServletDescr desc = myServletDescr();
-    String fmt = "format=" + format;
+    String fmt = "action=" + format;
     comp.add("<li>");
     comp.add(srvLink(desc, title, fmt));
     comp.add(". ");
     comp.add(elem);
     comp.add("</li>");
+  }
+
+  void generateEncapForm(String error) throws IOException {
+    Page page = newPage();;
+    resp.setContentType("text/html");
+    Form frm = new Form(srvURL(myServletDescr(), null));
+    frm.method("POST");
+    frm.attribute("enctype", "multipart/form-data");
+    frm.add(new Input(Input.Hidden, "pacform", "1"));
+    frm.add(new Input(Input.Hidden, "action", "Combined PAC"));
+//     frm.add(new Input(Input.Hidden, ACTION_TAG));
+    Table tbl = new Table(0, "align=center cellspacing=16 cellpadding=0");
+    tbl.newRow();
+    tbl.newCell("align=center");
+    tbl.add("Generate a PAC file that combines the rules from an existing PAC file with the rules for this cache.");
+    if (error != null) {
+      tbl.newRow();
+      tbl.newCell("align=center");
+      tbl.add("<font color=red>");
+      tbl.add(error);
+      tbl.add("</font>");
+    }
+    tbl.newRow();
+    tbl.newCell("align=center");
+
+    String url = getParameter("encapsulated_url");
+    Input urlin = new Input(Input.Text, "encapsulated_url",
+			    (url != null ? url : ""));
+    urlin.setSize(40);
+    tbl.add("Enter the URL of a remote PAC file:<br>");
+    tbl.add(urlin);
+
+    tbl.newRow();
+    tbl.newCell("align=center");
+    tbl.add("or the name of a local PAC file:<br>");
+    tbl.add(new Input(Input.File, "pac_contents1"));
+
+    tbl.newRow();
+    tbl.newCell("align=center");
+    tbl.add(new Input(Input.Submit, "dummy", "Generate Combined PAC"));
+
+    tbl.newRow();
+    tbl.newCell("align=center");
+    tbl.add("or enter PAC file contents here:<br>");
+    TextArea txt = new TextArea("pac_contents2");
+    txt.setSize(80, 20);
+    tbl.add(txt);
+
+    tbl.newRow();
+    tbl.newCell("align=center");
+    tbl.add(new Input(Input.Submit, "dummy", "Generate Combined PAC"));
+
+    frm.add(tbl);
+    page.add(frm);
+    page.add(getFooter());
+    page.write(resp.getWriter());
   }
 
 }
