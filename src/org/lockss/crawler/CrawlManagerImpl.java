@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.66 2004-02-25 21:18:25 troberts Exp $
+ * $Id: CrawlManagerImpl.java,v 1.67 2004-02-26 19:22:27 troberts Exp $
  */
 
 /*
@@ -250,17 +250,22 @@ public class CrawlManagerImpl extends BaseLockssManager
                           contentCrawlExpiration);
     }
     if (lock != null) {
-      scheduleNewContentCrawl(au, cb, cookie, lock);
+      try {
+	scheduleNewContentCrawl(au, cb, cookie, lock);
+      } catch (Exception e) {
+	logger.error("scheduleNewContentCrawl threw", e);
+      }
     } else {
       logger.debug("Couldn't schedule new content crawl due "+
-		    "to activity lock.");
-      if (cb != null) {
-	try {
-	  cb.signalCrawlAttemptCompleted(false, cookie);
-	} catch (Exception e) {
-	  logger.error("Callback threw", e);
-	}
-      }
+		   "to activity lock.");
+      callCallback(cb, cookie, false);
+//       if (cb != null) {
+// 	try {
+// 	  cb.signalCrawlAttemptCompleted(false, cookie);
+// 	} catch (Exception e) {
+// 	  logger.error("Callback threw", e);
+// 	}
+//       }
     }
   }
 
@@ -273,6 +278,18 @@ public class CrawlManagerImpl extends BaseLockssManager
   public boolean shouldRecrawl(ArchivalUnit au, NodeState ns) {
     //XXX move to AU
     return false;
+  }
+
+  //method that calls the callback and catches any exception
+  private static void callCallback(CrawlManager.Callback cb, Object cookie,
+				   boolean successful) {
+    if (cb != null) {
+      try {
+	cb.signalCrawlAttemptCompleted(successful, cookie);
+      } catch (Exception e) {
+	logger.error("Callback threw", e);
+      }
+    }
   }
 
   private void scheduleNewContentCrawl(ArchivalUnit au,
@@ -292,6 +309,7 @@ public class CrawlManagerImpl extends BaseLockssManager
     } catch (RuntimeException re) {
       logger.warning("Error starting crawl, freeing crawl lock", re);
       lock.expire();
+      callCallback(cb, cookie, false);
       throw re;
     }
     crawlThread.waitRunning();
@@ -330,6 +348,7 @@ public class CrawlManagerImpl extends BaseLockssManager
     }
 
     public void lockssRun() {
+      //pull out of thread
       boolean crawlSuccessful = false;
       try {
         setPriority(PRIORITY_PARAM_CRAWLER, PRIORITY_DEFAULT_CRAWLER);
@@ -360,13 +379,14 @@ public class CrawlManagerImpl extends BaseLockssManager
 	synchronized(runningCrawls) {
 	  runningCrawls.remove(crawler.getAu(), crawler);
 	}
-	if (cb != null) {
-	  try {
-	    cb.signalCrawlAttemptCompleted(crawlSuccessful, cookie);
-	  } catch (Exception e) {
-	    logger.error("Callback threw", e);
-	  }
-	}
+	callCallback(cb, cookie, crawlSuccessful);
+// 	if (cb != null) {
+// 	  try {
+// 	    cb.signalCrawlAttemptCompleted(crawlSuccessful, cookie);
+// 	  } catch (Exception e) {
+// 	    logger.error("Callback threw", e);
+// 	  }
+// 	}
       }
     }
   }
@@ -378,15 +398,16 @@ public class CrawlManagerImpl extends BaseLockssManager
       this.cb = cb;
     }
     public void signalCrawlAttemptCompleted(boolean success, Object cookie) {
-      try {
-	cb.signalCrawlAttemptCompleted(false, cookie);
-      } catch (Exception e) {
-	logger.error("Callback threw", e);
-      }
+      callCallback(cb, cookie, false);
+//       try {
+// 	cb.signalCrawlAttemptCompleted(false, cookie);
+//       } catch (Exception e) {
+// 	logger.error("Callback threw", e);
+//       }
     }
   }
 
-  //CrawlManager.StatusSource methods
+  //CrawlManager.StartSource methods
   public Collection getActiveAus() {
     return crawlHistory.keySet();
   }
