@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.17 2004-03-11 09:40:43 tlipkis Exp $
+ * $Id: RepairCrawler.java,v 1.17.2.1 2004-03-15 21:46:11 troberts Exp $
  */
 
 /*
@@ -173,11 +173,16 @@ public class RepairCrawler extends CrawlerImpl {
 	cache(uc);
       }
       numUrlsFetched++;
-    } catch (FileNotFoundException e) {
-      logger.warning(uc+" not found on publisher's site");
-    } catch (IOException ioe) {
-      //XXX handle this better.  Requeue?
-      logger.error("Problem caching "+uc+". Ignoring", ioe);
+    } catch (CacheException e) {
+      if (e.isAttributeSet(CacheException.ATTRIBUTE_FAIL)) {
+	logger.error("Problem caching "+uc+". Ignoring", e);
+	error = Crawler.STATUS_FETCH_ERROR;
+      } else {
+	logger.warning(uc+" not found on publisher's site", e);
+      }
+    } catch (IOException e) {
+      //XXX not expected
+      logger.critical("Unexpected IOException during crawl", e);
       error = Crawler.STATUS_FETCH_ERROR;
     }
     return (error == 0);
@@ -208,11 +213,11 @@ public class RepairCrawler extends CrawlerImpl {
     if (!conn.canProxy()) {
       throw new CantProxyException();
     }
+    logger.debug("Trying to fetch from "+id);
     conn.setProxy(id, proxyPort);
     conn.setRequestProperty("user-agent", LockssDaemon.getUserAgent());
     conn.execute();
 
-    logger.debug("Trying to fetch from "+id);
     uc.storeContent(conn.getResponseInputStream(),
 		    getPropertiesFromConn(conn, uc.getUrl(), id));
   }
@@ -239,12 +244,8 @@ public class RepairCrawler extends CrawlerImpl {
   }
 
   private void cache(UrlCacher uc) throws IOException {
-    try {
-      uc.setForceRefetch(true);
-      uc.cache();
-    } catch (IOException e) {
-      logger.debug("Exception when trying to cache "+uc, e);
-    }
+    uc.setForceRefetch(true);
+    uc.cache();
   }
 
 
