@@ -1,5 +1,5 @@
 /*
- * $Id: LockssPlugin.java,v 1.1 2003-01-31 09:47:19 claire Exp $
+ * $Id: LockssPlugin.java,v 1.2 2003-02-01 00:26:50 claire Exp $
  */
 
 /*
@@ -33,6 +33,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin;
 
 import org.lockss.daemon.ArchivalUnit;
+import java.util.Properties;
+import java.util.List;
 
 /**
  * Interface required by a plugin to be used by the lockss daemon
@@ -46,19 +48,13 @@ public interface LockssPlugin {
    * called after plugin is loaded to give the plugin time to perform any
    * needed initializations
    */
-  public void init();
-
-  /**
-   * called after the plugin has been registered with the plugin manager.
-   * The plugin can now make requests of other services.
-   */
-  public void start();
+  public void initPlugin();
 
   /**
    * called when the application is stopping to allow the plugin to perform
    * any necessary tasks needed to cleanly halt
    */
-  public void stop();
+  public void stopPlugin();
 
   /**
    * Returns the Archival Unit that is being handled by this plugin.
@@ -70,7 +66,39 @@ public interface LockssPlugin {
    * return a string that represents the identity of this plugin
    * @return a string that identifies this plugin
    */
-  public String getPluginId();
+  public String getPluginName();
 
+  /**
+   * return a string that represents the current version of this plugin
+   * @return a String representing the current version
+   */
+  public String getVersion();
+
+
+  /**
+   * return the list of names of the Archival Units and volranges supported by
+   * this plugin
+   * @return a List of Strings
+   */
+  public List getSupportedAUNames();
+
+  /**
+   * returns the configuration properties for a archival unit with the given
+   * name.
+   * @param AUName the name of the ArchivalUnit - from the list of
+   * supported AU Names;
+   * @return a Property containing the properties need to configure this
+   * archival unit
+   * @see getSupportedAUNames();
+   */
+  public Properties getConfigInfo(String AUName);
+
+
+  /**
+   * return an ArchivalUnit represented by the config Info ???
+   * @param configInfo the properties needed by this Archival Unit
+   * @return the ArchivalUnit
+   */
+  public ArchivalUnit getAUClass(Properties configInfo);
 
 }

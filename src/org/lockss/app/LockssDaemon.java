@@ -1,5 +1,5 @@
 /*
- * $Id: RunDaemon.java,v 1.1 2003-01-31 09:47:19 claire Exp $
+ * $Id: LockssDaemon.java,v 1.1 2003-02-01 00:26:50 claire Exp $
  */
 
 /*
@@ -52,29 +52,32 @@ import java.util.Iterator;
  * @version 1.0
  */
 
-public class RunDaemon {
+public class LockssDaemon {
   private static String PARAM_CACHE_LOCATION = Configuration.PREFIX+ "cacheDir";
   private static String PARAM_PLUGIN_LOCATION = Configuration.PREFIX+ "pluginDir";
 
   private static String MANAGER_PREFIX = Configuration.PREFIX + "manager.";
 
   /* the parameter strings that represent our managers */
-  static String CRAWL_MANAGER = "CrawlManager";
   static String HASH_SERVICE = "HashService";
+  static String COMM_MANAGER = "CommManager";
+  static String IDENTITY_MANAGER = "IdentityManager";
+  static String CRAWL_MANAGER = "CrawlManager";
   static String PLUGIN_MANAGER = "PluginManager";
   static String POLL_MANAGER = "PollManager";
-  static String COMM_MANAGER = "CommManager";
   static String LOCKSS_REPOSITORY = "LockssRepository";
   static String HISTORY_REPOSITORY = "HistoryRepository";
   static String NODE_MANAGER = "NodeManager";
   static String PROXY_HANDLER = "ProxyHandler";
 
   /* the default classes that represent our managers */
-  private static String DEFAULT_CRAWL_MANAGER = "org.lockss.crawler.CrawlManager";
   private static String DEFAULT_HASH_SERVICE = "org.lockss.hasher.HashService";
+  private static String DEFAULT_COMM_MANAGER = "org.lockss.protocol.LcapComm";
+  private static String DEFAULT_IDENTITY_MANAGER
+      = "org.lockss.protocol.IdentityManager";
+  private static String DEFAULT_CRAWL_MANAGER = "org.lockss.crawler.CrawlManager";
   private static String DEFAULT_PLUGIN_MANAGER = "org.lockss.plugin.PluginManager";
   private static String DEFAULT_POLL_MANAGER = "org.lockss.poller.PollManager";
-  private static String DEFAULT_COMM_MANAGER = "org.lockss.protocol.LcapComm";
   private static String DEFAULT_LOCKSS_REPOSITORY
       = "org.lockss.repository.LockssRepository";
   private static String DEFAULT_HISTORY_REPOSITORY
@@ -85,30 +88,34 @@ public class RunDaemon {
 
   private static String DEFAULT_CACHE_LOCATION = "./cache";
   private static String DEFAULT_PLUGIN_LOCATION = "./plugins";
+  private static String DEFAULT_CONFIG_LOCATION = "./config";
+
+  private String[] managerKeys = {HASH_SERVICE, COMM_MANAGER, IDENTITY_MANAGER,
+    PLUGIN_MANAGER, POLL_MANAGER, LOCKSS_REPOSITORY, HISTORY_REPOSITORY,
+    NODE_MANAGER, CRAWL_MANAGER, PROXY_HANDLER};
+
+  private String[] defaultKeys = {DEFAULT_HASH_SERVICE, DEFAULT_COMM_MANAGER,
+    DEFAULT_IDENTITY_MANAGER, DEFAULT_PLUGIN_MANAGER, DEFAULT_POLL_MANAGER,
+    DEFAULT_LOCKSS_REPOSITORY, DEFAULT_HISTORY_REPOSITORY, DEFAULT_NODE_MANAGER,
+    DEFAULT_CRAWL_MANAGER, DEFAULT_PROXY_HANDLER};
 
   private static Logger log = Logger.getLogger("RunDaemon");
   private List propUrls = null;
   private String pluginDir = null;
   private String cacheDir = null;
-
-  private HashService hashService;
-  private PollManager pollManager;
-  private LcapComm    commManager;
-  private LockssRepository lockssRepository;
-  private HistoryRepository historyRepository;
-  private NodeManager   nodeManager;
-  private ProxyHandler proxyHandler;
-  private CrawlManager crawlManager;
-  private PluginManager pluginManager;
+  private String configDir = null;
 
   private Hashtable thePlugins = new Hashtable();
   private Hashtable theManagers = new Hashtable();
 
-  RunDaemon(List propUrls){
+  boolean running = false;
+
+  LockssDaemon(List propUrls){
     this.propUrls = propUrls;
   }
 
   public static void main(String[] args) {
+
     Vector urls = new Vector();
 
     for (int i=0; i<args.length; i++) {
@@ -116,8 +123,9 @@ public class RunDaemon {
     }
 
     try {
-      RunDaemon daemon = new RunDaemon(urls);
+      LockssDaemon daemon = new LockssDaemon(urls);
       daemon.runDaemon();
+      daemon.stop();
     } catch (Throwable e) {
       System.err.println("Exception thrown in main loop:");
       e.printStackTrace();
@@ -138,7 +146,7 @@ public class RunDaemon {
    * @return the HashService
    */
   public HashService getHashService() {
-    return hashService;
+    return (HashService) getManager(HASH_SERVICE);
   }
 
   /**
@@ -146,7 +154,7 @@ public class RunDaemon {
    * @return the PollManager
    */
   public PollManager getPollManager() {
-    return pollManager;
+    return (PollManager) getManager(POLL_MANAGER);
   }
 
   /**
@@ -154,7 +162,7 @@ public class RunDaemon {
    * @return the LcapComm
    */
   public LcapComm getCommManager() {
-    return  commManager;
+    return (LcapComm) getManager(COMM_MANAGER);
   }
 
   /**
@@ -162,7 +170,7 @@ public class RunDaemon {
    * @return the LockssRepository
    */
   public LockssRepository getLockssRepository() {
-    return lockssRepository;
+    return (LockssRepository) getManager(LOCKSS_REPOSITORY);
   }
 
   /**
@@ -170,7 +178,7 @@ public class RunDaemon {
    * @return the HistoryRepository
    */
   public HistoryRepository getHistoryRepository() {
-    return historyRepository;
+    return (HistoryRepository) getManager(HISTORY_REPOSITORY);
   }
 
   /**
@@ -178,7 +186,7 @@ public class RunDaemon {
    * @return the NodeManager
    */
   public NodeManager getNodeManager() {
-    return  nodeManager;
+    return  (NodeManager) getManager(NODE_MANAGER);
   }
 
   /**
@@ -186,7 +194,7 @@ public class RunDaemon {
    * @return the ProxyHandler
    */
   public ProxyHandler getProxyHandler() {
-    return proxyHandler;
+    return (ProxyHandler) getManager(PROXY_HANDLER);
   }
 
   /**
@@ -194,7 +202,7 @@ public class RunDaemon {
    * @return the CrawlManager
    */
   public CrawlManager getCrawlManager() {
-    return crawlManager;
+    return (CrawlManager) getManager(CRAWL_MANAGER);
   }
 
   /**
@@ -202,7 +210,7 @@ public class RunDaemon {
    * @return the PluginManager
    */
   public PluginManager getPluginManager() {
-    return pluginManager;
+    return (PluginManager) getManager(PLUGIN_MANAGER);
   }
 
   /**
@@ -213,11 +221,17 @@ public class RunDaemon {
     return cacheDir;
   }
 
+  public void stopDaemon() {
+    running = false;
+  }
+
   /**
    * run the daemon.  Load our properties, initialize our managers, initialize
    * the plugins.
+   * @throws Exception if the initialization fails
    */
-  void runDaemon() {
+  void runDaemon() throws Exception {
+
     // initialize our properties from the urls given
     initProperties();
 
@@ -226,6 +240,12 @@ public class RunDaemon {
 
     // load in our "plugins"
     initPlugins();
+
+    running = true;
+
+    while(running)
+    ;
+
   }
 
 
@@ -238,14 +258,14 @@ public class RunDaemon {
     Iterator it = thePlugins.values().iterator();
     while(it.hasNext()) {
       LockssPlugin plugin = (LockssPlugin)it.next();
-      plugin.stop();
+      plugin.stopPlugin();
     }
 
     /* stop the managers */
     it = theManagers.values().iterator();
     while(it.hasNext()) {
       LockssManager lm = (LockssManager)it.next();
-      lm.stop();
+      lm.stopService();
     }
   }
 
@@ -269,55 +289,25 @@ public class RunDaemon {
 
   /**
    * init all of the managers that support the daemon.
+   * @throws Exception if initilization fails
    */
-  void initManagers() {
+  void initManagers() throws Exception {
     String mgr_name;
-    //HashService.start();
-    //LcapComm.startComm();
-    //pollManager = PollManager.getPollManager();
+    LockssManager mgr;
 
     // There are eight different services we provide
-    mgr_name = Configuration.getParam(MANAGER_PREFIX+CRAWL_MANAGER,
-                                             DEFAULT_CRAWL_MANAGER);
-    crawlManager = (CrawlManager) loadManager(mgr_name);
-
-    mgr_name = Configuration.getParam(MANAGER_PREFIX+HASH_SERVICE,
-                                             DEFAULT_HASH_SERVICE);
-    hashService = (HashService) loadManager(mgr_name);
-
-    mgr_name = Configuration.getParam(MANAGER_PREFIX+PLUGIN_MANAGER,
-                                             DEFAULT_PLUGIN_MANAGER);
-    pluginManager = (PluginManager) loadManager(mgr_name);
-
-    mgr_name = Configuration.getParam(MANAGER_PREFIX+POLL_MANAGER,
-                                             DEFAULT_POLL_MANAGER);
-    pollManager = (PollManager) loadManager(mgr_name);
-
-    mgr_name = Configuration.getParam(MANAGER_PREFIX+COMM_MANAGER,
-                                             DEFAULT_COMM_MANAGER);
-    commManager = (LcapComm) loadManager(mgr_name);
-
-    mgr_name = Configuration.getParam(MANAGER_PREFIX+LOCKSS_REPOSITORY,
-                                             DEFAULT_LOCKSS_REPOSITORY);
-    lockssRepository = (LockssRepository)loadManager(mgr_name);
-
-    mgr_name = Configuration.getParam(MANAGER_PREFIX+HISTORY_REPOSITORY,
-                                             DEFAULT_HISTORY_REPOSITORY);
-    historyRepository = (HistoryRepository) loadManager(mgr_name);
-
-    mgr_name = Configuration.getParam(MANAGER_PREFIX+NODE_MANAGER,
-                                             DEFAULT_NODE_MANAGER);
-    nodeManager = (NodeManager) loadManager(mgr_name);
-
-    mgr_name = Configuration.getParam(MANAGER_PREFIX+PROXY_HANDLER,
-                                             DEFAULT_PROXY_HANDLER);
-    proxyHandler = (ProxyHandler) loadManager(mgr_name);
+    for(int i=0; i< managerKeys.length; i++) {
+      mgr_name = Configuration.getParam(MANAGER_PREFIX + managerKeys[i],
+      defaultKeys[i]);
+      mgr = loadManager(mgr_name);
+      theManagers.put(managerKeys[i], mgr);
+    }
 
     /* we can now safely start our managers */
     Iterator it = theManagers.values().iterator();
     while(it.hasNext()) {
       LockssManager lm = (LockssManager)it.next();
-      lm.start();
+      lm.startService();
     }
 
   }
@@ -327,21 +317,20 @@ public class RunDaemon {
    * load the managers with the manager class name
    * @param managerName the class name of the manager to load
    * @return the manager that has been loaded
+   * @throws Exception if load fails
    */
-  LockssManager loadManager(String managerName) {
+  LockssManager loadManager(String managerName) throws Exception {
     try {
       Class manager_class = Class.forName(managerName);
       LockssManager mgr = (LockssManager) manager_class.newInstance();
       // call init on the service
-      mgr.init(this);
-      theManagers.put(managerName, mgr);
+      mgr.initService(this);
       return mgr;
     }
     catch (Exception ex) {
-      System.err.println("Unable to instantiate Lockss Manager " + managerName);
-      System.exit(-1);
+      System.err.println("Unable to instantiate Lockss Manager "+ managerName);
+      throw(ex);
     }
-    return null;
   }
 
   /**
@@ -368,15 +357,14 @@ public class RunDaemon {
     try {
       Class plugin_class = Class.forName(pluginName);
       LockssPlugin plugin = (LockssPlugin) plugin_class.newInstance();
-      plugin.init();
-      String id = plugin.getPluginId();
+      plugin.initPlugin();
+      String id = plugin.getPluginName();
       if(thePlugins.contains(id)) {
         System.err.println("Already have plugin registered for " + id);
         return;
       }
       thePlugins.put(id,plugin);
       PluginManager.registerArchivalUnit(plugin.getArchivalUnit());
-      plugin.start();
     }
     catch (ClassNotFoundException cnfe) {
       System.err.println("Unable to load Lockss plugin " + pluginName);

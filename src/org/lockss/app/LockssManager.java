@@ -1,5 +1,5 @@
 /*
- * $Id: LockssManager.java,v 1.1 2003-01-31 09:47:19 claire Exp $
+ * $Id: LockssManager.java,v 1.2 2003-02-01 00:26:50 claire Exp $
  */
 
 /*
@@ -44,16 +44,16 @@ public interface LockssManager {
    * loaded into memory.
    * @param daemon the daemon that can be used to get additional services
    */
-  public void init(RunDaemon daemon);
+  public void initService(LockssDaemon daemon);
 
   /**
    * start the manager.  All managers are inited at this point
    */
-  public void start();
+  public void startService();
 
   /**
    * stop the manager
    */
-  public void stop();
+  public void stopService();
 
 }
