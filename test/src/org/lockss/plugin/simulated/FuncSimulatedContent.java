@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSimulatedContent.java,v 1.57 2004-03-30 19:49:53 eaalto Exp $
+ * $Id: FuncSimulatedContent.java,v 1.58 2004-03-30 19:57:38 eaalto Exp $
  */
 
 /*
@@ -98,7 +98,6 @@ public class FuncSimulatedContent extends LockssTestCase {
 
     sau =
       (SimulatedArchivalUnit)theDaemon.getPluginManager().getAuFromId(auId);
-    List aus = theDaemon.getPluginManager().getAllAus();
 
     theDaemon.getPluginManager().startService();
 
