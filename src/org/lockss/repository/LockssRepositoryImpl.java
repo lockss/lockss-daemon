@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.52 2004-04-14 23:46:17 eaalto Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.53 2004-04-27 19:40:12 tlipkis Exp $
  */
 
 /*
@@ -293,9 +293,12 @@ public class LockssRepositoryImpl
         // clean path, no testing needed
         canonUrl = url;
       }
-    } catch (IOException ie) {
-      logger.error("Error testing URL: "+ie);
-      throw new MalformedURLException ("Error testing URL.");
+    } catch (MalformedURLException e) {
+      logger.warning("Can't canonicalize path: " + e);
+      throw e;
+    } catch (IOException e) {
+      logger.warning("Can't canonicalize path: " + e);
+      throw new MalformedURLException(url);
     }
 
     // canonicalize "dir" and "dir/"
