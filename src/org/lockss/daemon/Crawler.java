@@ -1,5 +1,5 @@
 /*
- * $Id: Crawler.java,v 1.16 2003-12-13 01:29:30 troberts Exp $
+ * $Id: Crawler.java,v 1.17 2003-12-23 00:23:25 tlipkis Exp $
  */
 
 /*
@@ -101,7 +101,8 @@ public interface Crawler {
     protected ArchivalUnit au = null;
     protected int type = -1;
 
-    public Status(Collection startUrls, int type) {
+    public Status(ArchivalUnit au, Collection startUrls, int type) {
+      this.au = au;
       this.startUrls = startUrls;
       this.type = type;
     }

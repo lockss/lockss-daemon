@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingCrawlerImpl.java,v 1.49 2003-12-19 01:33:56 eaalto Exp $
+ * $Id: GoslingCrawlerImpl.java,v 1.50 2003-12-23 00:23:25 tlipkis Exp $
  */
 
 /*
@@ -188,7 +188,7 @@ public class GoslingCrawlerImpl implements Crawler {
     this.spec = spec;
     this.type = type;
     this.aus = aus;
-    crawlStatus = new Crawler.Status(spec.getStartingUrls(), type);
+    crawlStatus = new Crawler.Status(au, spec.getStartingUrls(), type);
   }
 
   private GoslingCrawlerImpl(ArchivalUnit au, CrawlSpec spec,
@@ -197,7 +197,7 @@ public class GoslingCrawlerImpl implements Crawler {
     this.repairUrls = repairUrls;
 
     //XXX hack, since crawlStatus will get set twice
-    crawlStatus = new Crawler.Status(repairUrls, type);
+    crawlStatus = new Crawler.Status(au, repairUrls, type);
   }
 
 //   public long getNumFetched() {
