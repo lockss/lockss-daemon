@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.1 2003-02-24 22:13:42 claire Exp $
+ * $Id: BaseArchivalUnit.java,v 1.2 2003-02-26 04:51:37 tal Exp $
  */
 
 /*
@@ -140,8 +140,10 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    * @param uprBound the upper boundary of our match range
    * @return the newly created CachedUrlSet
    */
-  public CachedUrlSet makeCachedUrlSet(String url, String lwrBound, String uprBound) {
-    return makeCachedUrlSet(new RangeCachedUrlSetSpec(url, lwrBound, uprBound));
+  public CachedUrlSet makeCachedUrlSet(String url, String lwrBound,
+				       String uprBound) {
+    return makeCachedUrlSet(new RangeCachedUrlSetSpec(url,
+						      lwrBound, uprBound));
   }
 
   /**
@@ -150,8 +152,8 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    * @return the CachedUrlSet
    */
   public CachedUrlSet getAUCachedUrlSet() {
-    // tk this needs to compute the top-level CUSS
-    return makeCachedUrlSet(null);
+    // tk - use singleton instance?
+    return makeCachedUrlSet(new AUCachedUrlSetSpec());
   }
 
   public void pause() {
