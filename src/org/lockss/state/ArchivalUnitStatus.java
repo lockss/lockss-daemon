@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.24 2004-10-12 23:44:46 smorabito Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.25 2004-10-19 10:17:55 tlipkis Exp $
  */
 
 /*
@@ -54,13 +54,14 @@ public class ArchivalUnitStatus
 
   public static final String SERVICE_STATUS_TABLE_NAME =
       "ArchivalUnitStatusTable";
+  public static final String AUIDS_TABLE_NAME = "AuIds";
   public static final String AU_STATUS_TABLE_NAME = "ArchivalUnitTable";
   public static final String PEERS_TABLE_NAME = "PeerAgreement";
 
   static final OrderedObject DASH = new OrderedObject("-", new Long(-1));
 
   private static Logger logger = Logger.getLogger("AuStatus");
-  private static int nodesToDisplay;
+  private static int defaultNumRows;
 
   public void startService() {
     super.startService();
@@ -68,6 +69,8 @@ public class ArchivalUnitStatus
     StatusService statusServ = theDaemon.getStatusService();
     statusServ.registerStatusAccessor(SERVICE_STATUS_TABLE_NAME,
                                       new AuSummary(theDaemon));
+    statusServ.registerStatusAccessor(AUIDS_TABLE_NAME,
+                                      new AuIds(theDaemon));
     statusServ.registerStatusAccessor(AU_STATUS_TABLE_NAME,
                                       new AuStatus(theDaemon));
     statusServ.registerStatusAccessor(PEERS_TABLE_NAME,
@@ -87,7 +90,7 @@ public class ArchivalUnitStatus
 
   public void setConfig(Configuration config, Configuration oldConfig,
 			Configuration.Differences changedKeys) {
-    nodesToDisplay = config.getInt(PARAM_MAX_NODES_TO_DISPLAY,
+    defaultNumRows = config.getInt(PARAM_MAX_NODES_TO_DISPLAY,
                                    DEFAULT_MAX_NODES_TO_DISPLAY);
   }
 
@@ -188,6 +191,69 @@ public class ArchivalUnitStatus
     }
   }
 
+  static class AuIds implements StatusAccessor {
+    static final String TABLE_TITLE = "AU Ids";
+
+    private static final List columnDescriptors = ListUtil.list(
+      new ColumnDescriptor("AuName", "Volume", ColumnDescriptor.TYPE_STRING),
+      new ColumnDescriptor("AuId", "AU Id", ColumnDescriptor.TYPE_STRING)
+      );
+
+    private static final List sortRules =
+      ListUtil.list(new
+		    StatusTable.SortRule("AuName",
+					 CatalogueOrderComparator.SINGLETON));
+
+    private LockssDaemon theDaemon;
+
+    AuIds(LockssDaemon theDaemon) {
+      this.theDaemon = theDaemon;
+    }
+
+    public String getDisplayName() {
+      return TABLE_TITLE;
+    }
+
+    public void populateTable(StatusTable table)
+        throws StatusService.NoSuchTableException {
+      table.setColumnDescriptors(columnDescriptors);
+      table.setDefaultSortRules(sortRules);
+      table.setRows(getRows(table));
+    }
+
+    public boolean requiresKey() {
+      return false;
+    }
+
+    private List getRows(StatusTable table) {
+      PluginManager pluginMgr = theDaemon.getPluginManager();
+
+      boolean includeInternalAus =
+	table.getOptions().get(StatusTable.OPTION_INCLUDE_INTERNAL_AUS);
+      List rowL = new ArrayList();
+      for (Iterator iter = pluginMgr.getAllAus().iterator();
+	   iter.hasNext(); ) {
+        ArchivalUnit au = (ArchivalUnit)iter.next();
+	if (!includeInternalAus && pluginMgr.isInternalAu(au)) {
+	  continue;
+	}
+	try {
+	  rowL.add(makeRow(au));
+	} catch (Exception e) {
+	  logger.warning("Unexpected expection building row", e);
+	}
+      }
+      return rowL;
+    }
+
+    private Map makeRow(ArchivalUnit au) {
+      HashMap rowMap = new HashMap();
+      rowMap.put("AuId", au.getAuId());
+      rowMap.put("AuName", au.getName());
+      return rowMap;
+    }
+  }
+
   static final StatusTable.DisplayedValue DAMAGE_STATE_OK =
     new StatusTable.DisplayedValue("Ok");
   static final StatusTable.DisplayedValue DAMAGE_STATE_DAMAGED =
@@ -199,7 +265,6 @@ public class ArchivalUnitStatus
 //   }
 
   abstract static class PerAuTable implements StatusAccessor {
-    static final String KEY_SUFFIX = "&&&";
 
     protected LockssDaemon theDaemon;
 
@@ -218,21 +283,14 @@ public class ArchivalUnitStatus
     public void populateTable(StatusTable table)
 	throws StatusService.NoSuchTableException {
       String key = table.getKey();
-      int startRow = 0;
-      int index = key.lastIndexOf(KEY_SUFFIX);
-      if (index >= 0) {
-        try {
-          String rowStr = key.substring(index + KEY_SUFFIX.length());
-          startRow = Integer.parseInt(rowStr);
-        } catch (NumberFormatException ignore) { }
-        key = key.substring(0, index);
-      }
       try {
 	ArchivalUnit au = theDaemon.getPluginManager().getAuFromId(key);
 	if (au == null) {
 	  throw new StatusService.NoSuchTableException("Unknown auid: " + key);
 	}
-	populateTable(table, au, startRow);
+	populateTable(table, au);
+      } catch (StatusService.NoSuchTableException e) {
+	throw e;
       } catch (Exception e) {
 	logger.warning("Error building table", e);
 	throw new StatusService.
@@ -240,8 +298,7 @@ public class ArchivalUnitStatus
       }
     }
 
-    protected abstract void populateTable(StatusTable table, ArchivalUnit au,
-					  int startRow)
+    protected abstract void populateTable(StatusTable table, ArchivalUnit au)
         throws StatusService.NoSuchTableException;
   }
 
@@ -271,8 +328,7 @@ public class ArchivalUnitStatus
       super(theDaemon);
     }
 
-    protected void populateTable(StatusTable table, ArchivalUnit au,
-				 int startRow)
+    protected void populateTable(StatusTable table, ArchivalUnit au)
         throws StatusService.NoSuchTableException {
       LockssRepository repo = theDaemon.getLockssRepository(au);
       NodeManager nodeMan = theDaemon.getNodeManager(au);
@@ -289,19 +345,38 @@ public class ArchivalUnitStatus
       if (!table.getOptions().get(StatusTable.OPTION_NO_ROWS)) {
 	table.setColumnDescriptors(columnDescriptors);
 	table.setDefaultSortRules(sortRules);
-	table.setRows(getRows(au, repo, nodeMan, startRow));
+	table.setRows(getRows(table, au, repo, nodeMan));
       }
     }
 
-    private List getRows(ArchivalUnit au, LockssRepository repo,
-                         NodeManager nodeMan, int startRow) {
+
+    int getIntProp(StatusTable table, String name) {
+      Properties props = table.getProperties();
+      if (props == null) return -1;
+      String s = props.getProperty(name);
+      if (StringUtil.isNullString(s)) return -1;
+      try {
+	return Integer.parseInt(s);
+      } catch (Exception e) {
+	return -1;
+      }
+    }
+
+    private List getRows(StatusTable table, ArchivalUnit au,
+			 LockssRepository repo, NodeManager nodeMan) {
+      int startRow = Math.max(0, getIntProp(table, "skiprows"));
+      int numRows = getIntProp(table, "numrows");
+      if (numRows <= 0) {
+	numRows = defaultNumRows;
+      }
+
       List rowL = new ArrayList();
       Iterator cusIter = au.getAuCachedUrlSet().contentHashIterator();
-     int endRow1 = startRow + nodesToDisplay; // end row + 1
+     int endRow1 = startRow + numRows; // end row + 1
 
       if (startRow > 0) {
         // add 'previous'
-        int start = startRow - nodesToDisplay;
+        int start = startRow - defaultNumRows;
         if (start < 0) {
           start = 0;
         }
@@ -377,10 +452,11 @@ public class ArchivalUnitStatus
     private Map makeOtherRowsLink(boolean isNext, int startRow, String auKey) {
       HashMap rowMap = new HashMap();
       String label = (isNext ? "Next" : "Previous") + " (" +
-	(startRow + 1) + "-" + (startRow + nodesToDisplay) + ")";
+	(startRow + 1) + "-" + (startRow + defaultNumRows) + ")";
       StatusTable.Reference link =
-          new StatusTable.Reference(label, AU_STATUS_TABLE_NAME,
-                                    auKey + KEY_SUFFIX + startRow);
+          new StatusTable.Reference(label, AU_STATUS_TABLE_NAME, auKey);
+      link.setProperty("skiprows", Integer.toString(startRow));
+      link.setProperty("numrows", Integer.toString(defaultNumRows));
       rowMap.put("NodeName", link);
       rowMap.put("sort", new Integer(isNext ? Integer.MAX_VALUE : -1));
       return rowMap;
@@ -423,8 +499,10 @@ public class ArchivalUnitStatus
     // utility method for making a Reference
     public static StatusTable.Reference makeAuRef(Object value,
                                                   String key) {
-      return new StatusTable.Reference(value, AU_STATUS_TABLE_NAME,
-                                       key + KEY_SUFFIX + "0");
+      StatusTable.Reference ref =
+	new StatusTable.Reference(value, AU_STATUS_TABLE_NAME, key);
+//       ref.setProperty("numrows", Integer.toString(defaultNumRows));
+      return ref;
     }
   }
 
@@ -451,7 +529,7 @@ public class ArchivalUnitStatus
       super(theDaemon);
     }
 
-    public void populateTable(StatusTable table, ArchivalUnit au, int startRow)
+    public void populateTable(StatusTable table, ArchivalUnit au)
         throws StatusService.NoSuchTableException {
       NodeManager nodeMan = theDaemon.getNodeManager(au);
       table.setTitle(getTitle(au));
