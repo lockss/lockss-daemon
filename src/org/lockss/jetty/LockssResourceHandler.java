@@ -1,5 +1,5 @@
 /*
- * $Id: LockssResourceHandler.java,v 1.5 2004-03-11 09:41:04 tlipkis Exp $
+ * $Id: LockssResourceHandler.java,v 1.6 2004-09-01 02:22:47 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Portions of this code are:
 // ===========================================================================
 // Copyright (c) 1996-2002 Mort Bay Consulting Pty. Ltd. All rights reserved.
-// $Id: LockssResourceHandler.java,v 1.5 2004-03-11 09:41:04 tlipkis Exp $
+// $Id: LockssResourceHandler.java,v 1.6 2004-09-01 02:22:47 tlipkis Exp $
 // ---------------------------------------------------------------------------
 
 package org.lockss.jetty;
@@ -390,7 +390,6 @@ public class LockssResourceHandler extends AbstractHttpHandler {
       // so issue the redirect.
       if (!pathInContext.endsWith("/")) {
 	URI nodeUri = new URI(nodeUrl);
-	Code.warning("nodeUri: " + nodeUri);
 	if (nodeUri.getPath().endsWith("/")) {
 	  sendLockssRedirect(request, response, pathInContext,
 			     pathParams, resource, nodeUrl);
