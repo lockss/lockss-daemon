@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkHandler.java,v 1.2 2003-03-27 21:47:17 troberts Exp $
+ * $Id: TreeWalkHandler.java,v 1.3 2003-03-28 22:23:31 aalto Exp $
  */
 
 /*
@@ -134,6 +134,7 @@ public class TreeWalkHandler {
     }
     //alert the AuState
     manager.getAuState().setLastTreeWalkTime();
+    manager.historyRepo.storeAuState(manager.getAuState());
     logger.debug("Tree walk finished.");
   }
 
@@ -245,6 +246,7 @@ public class TreeWalkHandler {
    */
   public void start() {
     logger.debug3("TreeWalkHandler started.");
+    treeWalkAborted = false;
     if (treeWalkThread==null) {
       treeWalkThread = new TreeWalkThread();
       treeWalkThread.start();
@@ -262,8 +264,6 @@ public class TreeWalkHandler {
       while (goOn) {
         long timeToStart = timeUntilTreeWalkStart();
         if (timeToStart <= 0) {
-
-	  treeWalkAborted = false;
           doTreeWalk();
         }
         else {

@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.70 2003-03-27 00:50:23 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.71 2003-03-28 22:23:31 aalto Exp $
  */
 
 /*
@@ -171,6 +171,7 @@ public class NodeManagerImpl implements NodeManager {
 
   public void newContentCrawlFinished() {
     getAuState().newCrawlFinished();
+    historyRepo.storeAuState(getAuState());
   }
 
   public NodeState getNodeState(CachedUrlSet cus) {
@@ -521,6 +522,7 @@ public class NodeManagerImpl implements NodeManager {
     if ((AuUrl.isAuUrl(nodeState.getCachedUrlSet().getUrl())) &&
         (pollState.getType() == Poll.CONTENT_POLL)) {
       getAuState().newPollFinished();
+      historyRepo.storeAuState(getAuState());
       logger.info("Top level poll finished.");
     }
   }
