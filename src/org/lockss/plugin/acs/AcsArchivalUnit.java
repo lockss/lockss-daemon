@@ -1,5 +1,5 @@
 /*
- * $Id: AcsArchivalUnit.java,v 1.2 2003-09-19 22:39:52 eaalto Exp $
+ * $Id: AcsArchivalUnit.java,v 1.3 2003-09-22 23:52:03 clairegriffin Exp $
  */
 
 /*
@@ -73,6 +73,7 @@ public class AcsArchivalUnit extends BaseArchivalUnit {
   private URL articleUrl;           // the base url for the articles
   private int volume;               // the volume index
   private String journalKey;        // the key used to specify the journal
+  private int year;              // the year of the volume
   private long pauseTime;           // the time to pause between fetchs
   private long newContentCrawlIntv; // the new content crawl interval
 
@@ -104,7 +105,7 @@ public class AcsArchivalUnit extends BaseArchivalUnit {
 
 
   public List getNewContentCrawlUrls() {
-    return ListUtil.list(makeStartUrl(baseUrl, journalKey, volume));
+    return ListUtil.list(makeStartUrl(baseUrl, journalKey, volume, year));
   }
 
   public long getFetchDelay() {
@@ -149,11 +150,19 @@ public class AcsArchivalUnit extends BaseArchivalUnit {
       exception = "No Configuration value for " + AcsPlugin.AUPARAM_VOL;
       throw new ConfigurationException(exception);
     }
+    // get the volume year
+    String yearStr = config.get(AcsPlugin.AUPARAM_YEAR);
+    if(yearStr == null) {
+      exception = "No Configuration value for " + AcsPlugin.AUPARAM_YEAR;
+      throw new ConfigurationException(exception);
+    }
+
     // turn them into appropriate types
     try {
       baseUrl = new URL(urlStr);
       articleUrl = new URL(issueStr);
       volume = Integer.parseInt(volStr);
+      year = Integer.parseInt(yearStr);
 
     } catch (MalformedURLException murle) {
       exception = AcsPlugin.AUPARAM_BASE_URL+ " set to a bad url "+ urlStr;
@@ -170,6 +179,9 @@ public class AcsArchivalUnit extends BaseArchivalUnit {
     if (volume < 0) {
       throw new ConfigurationException("Negative volume");
     }
+    if (year < 2003) {
+      throw new ConfigurationException("Year out of range - must be after 2003");
+    }
     if (!EXPECTED_URL_PATH.equals(baseUrl.getPath())) {
       throw new ConfigurationException("Url has illegal path: " +
                                        baseUrl.getPath());
@@ -179,7 +191,7 @@ public class AcsArchivalUnit extends BaseArchivalUnit {
                                        articleUrl.getPath());
     }
     // calculate the starting url string
-    startUrlString = makeStartUrl(baseUrl, journalKey, volume);
+    startUrlString = makeStartUrl(baseUrl, journalKey, volume, year);
 
     // make our crawl spec
     try {
@@ -221,7 +233,7 @@ public class AcsArchivalUnit extends BaseArchivalUnit {
   }
 
 
-  String makeStartUrl(URL base, String jkey, int volume) {
+  String makeStartUrl(URL base, String jkey, int volume, int vol_year) {
     String ret;
     StringBuffer sb = new StringBuffer();
     sb.append(base.toString());
@@ -229,7 +241,8 @@ public class AcsArchivalUnit extends BaseArchivalUnit {
     sb.append(jkey);
     sb.append("&in_volume=");
     sb.append(volume);
-    sb.append("&in_decade=2000");
+    sb.append("&in_decade=");
+    sb.append(vol_year - (vol_year%10));
     ret = sb.toString();
     logger.debug("starting url is "+ ret);
     return ret;
@@ -267,18 +280,17 @@ public class AcsArchivalUnit extends BaseArchivalUnit {
     rules.add(new CrawlRules.RE(artRoot + ".*.jpg", incl)); // jpgs
     rules.add(new CrawlRules.RE(artRoot + ".*.css", incl)); // style sheets
 
-
     // include the articles for this journal and volume
     rules.add(new CrawlRules.RE(artRoot + ".*incoden=" + jkey
                                 + ".*involume=" + volume, incl));
-    rules.add(new CrawlRules.RE(artRoot + ".*article.cgi.*" +jkey
-                                + "/.*/" + volume + "/.*", incl));
-    // exclude the abstracts
-    rules.add(new CrawlRules.RE(".*abstract.cgi.*", excl));
-    // exclude supporting info
-    rules.add(new CrawlRules.RE(".*supporting_information.page.*", excl));
-    // exclude the article payment url
-    rules.add(new CrawlRules.RE(artRoot + ".*/xppview/.*", excl));
+    rules.add(new CrawlRules.RE(artRoot + "cgi-bin/article.cgi.*" +jkey
+                                + "/" + year +"/" + volume + "/.*", incl));
+    // to include the abstracts uncomment this line
+    /*rules.add(new CrawlRules.RE(artRoot +"cgi-bin/abstract.cgi.*"+jkey
+                                + "/" + year +"/" + volume + "/.*", incl));
+     */
+    // to include the supporting info uncomment this line
+    //rules.add(new CrawlRules.RE(".*supporting_information.page.*", excl));
 
     logger.debug("Rules: " + rules);
     return new CrawlRules.FirstMatch(rules);

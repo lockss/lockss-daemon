@@ -1,5 +1,5 @@
 /*
- * $Id: AcsPlugin.java,v 1.1 2003-09-15 22:28:33 clairegriffin Exp $
+ * $Id: AcsPlugin.java,v 1.2 2003-09-22 23:52:03 clairegriffin Exp $
  */
 
 /*
@@ -64,6 +64,16 @@ public class AcsPlugin extends BasePlugin {
     ARTICLE_URL.setSize(40);
     ARTICLE_URL.setDescription("base url for articles");
   }
+
+  public static final ConfigParamDescr JOURNAL_YEAR = new ConfigParamDescr();
+  static {
+    JOURNAL_YEAR.setKey("volume_year");
+    JOURNAL_YEAR.setDisplayName("Volume Year");
+    JOURNAL_YEAR.setType(ConfigParamDescr.TYPE_INT);
+    JOURNAL_YEAR.setSize(4);
+    JOURNAL_YEAR.setDescription("Year of volume in form 2003 not 03");
+  }
+
   private static String PLUGIN_NAME = "ACS";
   private static String CURRENT_VERSION= "Pre-release";
 
@@ -71,18 +81,22 @@ public class AcsPlugin extends BasePlugin {
   static final ConfigParamDescr PD_JKEY = JOURNAL_KEY;
   static final ConfigParamDescr PD_VOL = ConfigParamDescr.VOLUME_NUMBER;
   static final ConfigParamDescr PD_ARTICLE = ARTICLE_URL;
+  static final ConfigParamDescr PD_YEAR = JOURNAL_YEAR;
 
   // public only so test methods can use them
   public static final String AUPARAM_BASE_URL = PD_BASE.getKey();
   public static final String AUPARAM_VOL = PD_VOL.getKey();
   public static final String AUPARAM_JOURNAL_KEY = PD_JKEY.getKey();
   public static final String AUPARAM_ARTICLE_URL = PD_ARTICLE.getKey();
+  public static final String AUPARAM_YEAR = PD_YEAR.getKey();
 
   private static String titleSpec[][] = {
     { "JCICS",
     AUPARAM_BASE_URL, "http://pubs3.acs.org/",
     AUPARAM_ARTICLE_URL, "http://pubs.acs.org/",
-    AUPARAM_JOURNAL_KEY, "jcisd8" }
+    AUPARAM_JOURNAL_KEY, "jcisd8",
+    AUPARAM_VOL, "43",
+    AUPARAM_YEAR, "2003"}
   };
 
   public ArchivalUnit createAU(Configuration auConfig)
@@ -106,12 +120,12 @@ public class AcsPlugin extends BasePlugin {
   }
 
   public List getAUConfigProperties() {
-    return ListUtil.list(PD_BASE, PD_ARTICLE, PD_JKEY, PD_VOL);
+    return ListUtil.list(PD_BASE, PD_ARTICLE, PD_JKEY, PD_VOL, PD_YEAR);
   }
 
   public Collection getDefiningConfigKeys() {
     return ListUtil.list(AUPARAM_BASE_URL, AUPARAM_ARTICLE_URL,
-                         AUPARAM_JOURNAL_KEY, AUPARAM_VOL);
+                         AUPARAM_JOURNAL_KEY, AUPARAM_VOL, AUPARAM_YEAR);
   }
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestAcsPlugin.java,v 1.1 2003-09-15 22:28:33 clairegriffin Exp $
+ * $Id: TestAcsPlugin.java,v 1.2 2003-09-22 23:52:04 clairegriffin Exp $
  */
 
 /*
@@ -68,7 +68,7 @@ public class TestAcsPlugin extends LockssTestCase {
     props.setProperty(AcsPlugin.AUPARAM_ARTICLE_URL, "http://www.example.com/");
     props.setProperty(AcsPlugin.AUPARAM_JOURNAL_KEY,"abcd");
     props.setProperty(AcsPlugin.AUPARAM_BASE_URL, "blah");
-
+    props.setProperty(AcsPlugin.AUPARAM_YEAR, "2003");
     try {
       AcsArchivalUnit au = makeAuFromProps(props);
       fail ("Didn't throw InstantiationException when given a bad url");
@@ -86,6 +86,7 @@ public class TestAcsPlugin extends LockssTestCase {
     props.setProperty(AcsPlugin.AUPARAM_BASE_URL, "http://www.example.com/");
     props.setProperty(AcsPlugin.AUPARAM_ARTICLE_URL, "http://www.example.com/");
     props.setProperty(AcsPlugin.AUPARAM_JOURNAL_KEY,"abcd");
+    props.setProperty(AcsPlugin.AUPARAM_YEAR, "2003");
 
     AcsArchivalUnit au = makeAuFromProps(props);
     assertEquals("www.example.com, abcd, vol. 322", au.getName());
@@ -100,7 +101,8 @@ public class TestAcsPlugin extends LockssTestCase {
     assertEquals(ListUtil.list(ConfigParamDescr.BASE_URL,
                                AcsPlugin.ARTICLE_URL,
                                AcsPlugin.JOURNAL_KEY,
-			       ConfigParamDescr.VOLUME_NUMBER),
+			       ConfigParamDescr.VOLUME_NUMBER,
+                               AcsPlugin.JOURNAL_YEAR),
 		 plugin.getAUConfigProperties());
   }
 
@@ -108,7 +110,8 @@ public class TestAcsPlugin extends LockssTestCase {
     assertEquals(ListUtil.list(ConfigParamDescr.BASE_URL.getKey(),
                                AcsPlugin.ARTICLE_URL.getKey(),
                                AcsPlugin.JOURNAL_KEY.getKey(),
-			       ConfigParamDescr.VOLUME_NUMBER.getKey()),
+			       ConfigParamDescr.VOLUME_NUMBER.getKey(),
+                               AcsPlugin.JOURNAL_YEAR.getKey()),
 		 plugin.getDefiningConfigKeys());
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.49 2003-09-17 06:09:59 troberts Exp $
+ * $Id: PluginManager.java,v 1.50 2003-09-22 23:52:01 clairegriffin Exp $
  */
 
 /*
@@ -613,6 +613,7 @@ public class PluginManager extends BaseLockssManager {
   private String builtinPluginNames[] = {
     "org.lockss.plugin.highwire.HighWirePlugin",
     "org.lockss.plugin.projmuse.ProjectMusePlugin",
+    "org.lockss.plugin.acs.AcsPlugin"
 //     "org.lockss.plugin.simulated.SimulatedPlugin",
   };
 
