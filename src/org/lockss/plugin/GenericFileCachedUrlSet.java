@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrlSet.java,v 1.43 2003-05-03 06:22:19 tal Exp $
+ * $Id: GenericFileCachedUrlSet.java,v 1.44 2003-05-05 21:25:28 aalto Exp $
  */
 
 /*
@@ -176,15 +176,19 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
   }
 
   public long estimatedHashDuration() {
-    return hashService.padHashEstimate(makeHashEstiamte());
+    return hashService.padHashEstimate(makeHashEstimate());
   }
 
-  private long makeHashEstiamte() {
+  private long makeHashEstimate() {
     // if this is a single node spec, don't use standard estimation
     if (spec instanceof SingleNodeCachedUrlSetSpec) {
       long contentSize = 0;
       try {
-        contentSize = repository.getNode(spec.getUrl()).getContentSize();
+        RepositoryNode node = repository.getNode(spec.getUrl());
+        if (!node.hasContent()) {
+          return 0;
+        }
+        contentSize = node.getContentSize();
         MessageDigest hasher = LcapMessage.getDefaultHasher();
         CachedUrlSetHasher cush = contentHasherFactory(this, hasher);
         SystemMetrics metrics = SystemMetrics.getSystemMetrics();
