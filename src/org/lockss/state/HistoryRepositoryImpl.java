@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.32 2003-04-24 01:23:18 aalto Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.33 2003-04-29 01:35:36 aalto Exp $
  */
 
 /*
@@ -76,12 +76,9 @@ public class HistoryRepositoryImpl
   // match the prefix in a url (like '../tmp/')
   private static final String TEST_PREFIX = "/#tmp";
 
-  private static String rootDir;
+  private String rootDir;
   Mapping mapping = null;
   private static Logger logger = Logger.getLogger("HistoryRepository");
-
-  private static LockssDaemon theDaemon;
-  private static HistoryRepositoryImpl theRepository;
 
   HistoryRepositoryImpl(String repository_location) {
     rootDir = repository_location;
@@ -130,9 +127,11 @@ public class HistoryRepositoryImpl
       logger.debug3("Storing state for CUS '" +
                     nodeState.getCachedUrlSet().getUrl() + "'");
       File nodeFile = new File(nodeDir, NODE_FILE_NAME);
-      Marshaller marshaller = new Marshaller(new FileWriter(nodeFile));
+      FileWriter writer = new FileWriter(nodeFile);
+      Marshaller marshaller = new Marshaller(writer);
       marshaller.setMapping(getMapping());
       marshaller.marshal(new NodeStateBean(nodeState));
+      writer.close();
     } catch (Exception e) {
       logger.error("Couldn't store node state: ", e);
       throw new LockssRepository.RepositoryStateException(
@@ -150,10 +149,11 @@ public class HistoryRepositoryImpl
                                  new ArrayList(), this);
       }
       logger.debug3("Loading state for CUS '" + cus.getUrl() + "'");
+      FileReader reader = new FileReader(nodeFile);
       Unmarshaller unmarshaller = new Unmarshaller(NodeStateBean.class);
       unmarshaller.setMapping(getMapping());
-      NodeStateBean nsb = (NodeStateBean)unmarshaller.unmarshal(
-          new FileReader(nodeFile));
+      NodeStateBean nsb = (NodeStateBean)unmarshaller.unmarshal(reader);
+      reader.close();
       return new NodeStateImpl(cus, nsb, this);
     } catch (org.exolab.castor.xml.MarshalException me) {
       logger.error("Marshalling exception on nodestate for '" +
@@ -179,11 +179,13 @@ public class HistoryRepositoryImpl
       }
       logger.debug3("Storing histories for CUS '"+cus.getUrl()+"'");
       File nodeFile = new File(nodeDir, HISTORY_FILE_NAME);
+      FileWriter writer = new FileWriter(nodeFile);
       NodeHistoryBean nhb = new NodeHistoryBean();
       nhb.historyBeans = ((NodeStateImpl)nodeState).getPollHistoryBeanList();
       Marshaller marshaller = new Marshaller(new FileWriter(nodeFile));
       marshaller.setMapping(getMapping());
       marshaller.marshal(nhb);
+      writer.close();
     } catch (Exception e) {
       logger.error("Couldn't store poll history: ", e);
       throw new LockssRepository.RepositoryStateException(
@@ -203,16 +205,17 @@ public class HistoryRepositoryImpl
         return;
       }
       logger.debug3("Loading histories for CUS '"+cus.getUrl()+"'");
+      FileReader reader = new FileReader(nodeFile);
       Unmarshaller unmarshaller = new Unmarshaller(NodeHistoryBean.class);
       unmarshaller.setMapping(getMapping());
-      NodeHistoryBean nhb = (NodeHistoryBean)unmarshaller.unmarshal(
-          new FileReader(nodeFile));
+      NodeHistoryBean nhb = (NodeHistoryBean)unmarshaller.unmarshal(reader);
       if (nhb.historyBeans==null) {
         logger.debug3("Empty history list loaded.");
         nhb.historyBeans = new ArrayList();
       }
       ((NodeStateImpl)nodeState).setPollHistoryBeanList(
           new ArrayList(nhb.historyBeans));
+      reader.close();
     } catch (org.exolab.castor.xml.MarshalException me) {
       logger.error("Parsing exception.  Moving file to '.old'");
       nodeFile.renameTo(new File(nodeFile.getAbsolutePath()+".old"));
@@ -233,9 +236,11 @@ public class HistoryRepositoryImpl
       logger.debug3("Storing state for AU '" +
                     auState.getArchivalUnit().getName() + "'");
       File auFile = new File(nodeDir, AU_FILE_NAME);
-      Marshaller marshaller = new Marshaller(new FileWriter(auFile));
+      FileWriter writer = new FileWriter(auFile);
+      Marshaller marshaller = new Marshaller(writer);
       marshaller.setMapping(getMapping());
       marshaller.marshal(new AuStateBean(auState));
+      writer.close();
     } catch (Exception e) {
       logger.error("Couldn't store au state: ", e);
       throw new LockssRepository.RepositoryStateException(
@@ -251,12 +256,13 @@ public class HistoryRepositoryImpl
         return new AuState(au, -1, -1, -1, this);
       }
       logger.debug3("Loading state for AU '" + au.getName() + "'");
+      FileReader reader = new FileReader(auFile);
       Unmarshaller unmarshaller = new Unmarshaller(AuStateBean.class);
       unmarshaller.setMapping(getMapping());
-      AuStateBean asb = (AuStateBean) unmarshaller.unmarshal(
-          new FileReader(auFile));
+      AuStateBean asb = (AuStateBean) unmarshaller.unmarshal(reader);
       // does not load in an old treewalk time, so that one will be run
       // immediately
+      reader.close();
       return new AuState(au, asb.getLastCrawlTime(),
                          asb.getLastTopLevelPollTime(),
                          -1, this);
