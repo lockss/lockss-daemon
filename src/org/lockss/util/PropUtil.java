@@ -1,5 +1,5 @@
 /*
- * $Id: PropUtil.java,v 1.8 2004-08-18 00:14:53 tlipkis Exp $
+ * $Id: PropUtil.java,v 1.9 2004-08-18 07:11:14 tlipkis Exp $
  */
 /*
 
@@ -132,10 +132,14 @@ public class PropUtil {
   }
 
   /**
-   * Compare two Properties, return the set of keys whose values differ,
+   * Compare two PropertyTrees, return the set of keys whose values differ,
    * including all distinct prefixes of keys whose values differ.
-   * <i>E.g.</i>, if <code>foo.bar.frob</code> is in the set, then both
-   * <code>foo.bar</code> and <code>foo</code> will be in the set.
+   * <i>E.g.</i>, if the key <code>foo.bar.frob</code> is in the difference
+   * set, the result will contain <code>foo.bar.frob</code>,
+   * <code>foo.bar.</code>, <code>foo.bar</code> <code>foo.</code> and
+   * <code>foo</code>.  This somewhat odd behavior is for the convenience
+   * of code that wishes to quickly determine whether any part of a given
+   * subtree has changed.
    * @param p1 first PropertyTree
    * @param p2 second PropertyTree
    * @return Set of keys and prefixes whose values differ.  Returns empty
@@ -169,6 +173,7 @@ public class PropUtil {
     int pos = 0;
     while ((pos = key.indexOf(".", pos + 1)) > 0) {
       set.add(key.substring(0, pos));
+      set.add(key.substring(0, pos + 1));
     }
   }
 
@@ -176,7 +181,7 @@ public class PropUtil {
    * Turns the properties into a canonical string
    * @return a canonical string generated from the props
    * @param props properties
-   */ 
+   */
   public static String propsToCanonicalEncodedString(Properties props) {
     if (props == null || props.isEmpty()) {
       return "";
@@ -200,7 +205,7 @@ public class PropUtil {
    * Turns the canonical string into properties
    * @param s a string returned by propsToCanonicalEncodedString()
    * @return Properties from which the canonical string was generated
-   */ 
+   */
   public static Properties canonicalEncodedStringToProps(String s)
       throws IllegalArgumentException {
     Properties res = new Properties();
