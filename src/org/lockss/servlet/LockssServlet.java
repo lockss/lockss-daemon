@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.50 2004-12-07 05:15:05 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.51 2005-01-04 03:03:49 tlipkis Exp $
  */
 
 /*
@@ -62,6 +62,11 @@ public abstract class LockssServlet extends HttpServlet
     Configuration.PREFIX + "platform.version";
   static final String PARAM_ADMIN_ADDRESS =
     Configuration.PREFIX + "admin.IPAddress";
+
+  /** Inactive HTTP session (cookie) timeout */
+  static final String PARAM_UI_SESSION_TIMEOUT =
+    Configuration.PREFIX + "ui.sessionTimeout";
+  static final long DEFAULT_UI_SESSION_TIMEOUT = Constants.HOUR;
 
   // Name given to form element whose value is the action that should be
   // performed when the form is submitted.  (Not always the submit button.)
@@ -203,7 +208,9 @@ public abstract class LockssServlet extends HttpServlet
     new ServletDescr(UiHome.class, "Cache Administration",
 		     ServletDescr.NOT_IN_NAV + ServletDescr.LARGE_LOGO);
   protected static ServletDescr SERVLET_AU_CONFIG =
-    new ServletDescr(AuConfig.class, "Journal Configuration");
+    new ServletDescr(AuConfig.class, "Manual Journal Configuration");
+  protected static ServletDescr SERVLET_BATCH_AU_CONFIG =
+    new ServletDescr(BatchAuConfig.class, "Journal Configuration");
   protected static ServletDescr SERVLET_DAEMON_STATUS =
     new ServletDescr(DaemonStatus.class, "Daemon Status");
   protected static ServletDescr SERVLET_PROXY_INFO =
@@ -218,7 +225,7 @@ public abstract class LockssServlet extends HttpServlet
   protected static ServletDescr SERVLET_PROXY_ACCESS_CONTROL =
     new ServletDescr(ProxyIpAccess.class, "Proxy Access Control");
   protected static ServletDescr SERVLET_HASH_CUS =
-    new ServletDescr(HashCUS.class, "Hash CUS", ServletDescr.NOT_IN_NAV);
+    new ServletDescr(HashCUS.class, "Hash CUS", ServletDescr.DEBUG_ONLY);
   protected static ServletDescr SERVLET_RAISE_ALERT =
     new ServletDescr(RaiseAlert.class, "Raise Alert",
 		     ServletDescr.NOT_IN_NAV);
@@ -243,7 +250,8 @@ public abstract class LockssServlet extends HttpServlet
   }
 
   static {
-    SERVLET_AU_CONFIG.setExplanation("Add or remove titles from this cache");
+    SERVLET_BATCH_AU_CONFIG.setExplanation("Add or remove titles from this cache");
+    SERVLET_AU_CONFIG.setExplanation("Manually edit single AU configuration");
     SERVLET_ADMIN_ACCESS_CONTROL.setExplanation("Control access to the administrative UI");
     SERVLET_PROXY_ACCESS_CONTROL.setExplanation("Control access to the preserved content");
     SERVLET_PROXY_INFO.setExplanation("Info for configuring browsers and proxies<br>to access preserved content on this cache");
@@ -255,6 +263,7 @@ public abstract class LockssServlet extends HttpServlet
   // Order of descrs determines order in nav table.
   static ServletDescr servletDescrs[] = {
      SERVLET_HOME,
+     SERVLET_BATCH_AU_CONFIG,
      SERVLET_AU_CONFIG,
      SERVLET_ADMIN_ACCESS_CONTROL,
      SERVLET_PROXY_ACCESS_CONTROL,
@@ -360,6 +369,15 @@ public abstract class LockssServlet extends HttpServlet
     _myServletDescr = null;
     myName = null;
     multiReq = null;
+  }
+
+  protected void setSessionTimeout(HttpSession session) {
+    Configuration config = Configuration.getCurrentConfig();
+     long time = config.getTimeInterval(PARAM_UI_SESSION_TIMEOUT,
+					DEFAULT_UI_SESSION_TIMEOUT);
+     if (session.isNew()) {
+       session.setMaxInactiveInterval((int)(time  / Constants.SECOND));
+     }
   }
 
   // Return descriptor of running servlet
@@ -823,17 +841,20 @@ public abstract class LockssServlet extends HttpServlet
     return submitButton(label, action, null, null);
   }
 
+  /** Return a button that invokes javascript when clicked. */
+  Input jsButton(String label, String js) {
+    Input btn = new Input("button", null);
+    btn.attribute("value", label);
+    setTabOrder(btn);
+    btn.attribute("onClick", js);
+    return btn;
+  }
 
   /** Return a button that invokes the javascript submit routine with the
    * specified action, first storing the value in the specified form
    * prop. */
   protected Element submitButton(String label, String action,
 				 String prop, String value) {
-    Tag btn = new Tag("input");
-    btn.attribute("type", "button");
-    btn.attribute("value", label);
-    btn.attribute("id", "lsb." + (++submitButtonNumber));
-    setTabOrder(btn);
     StringBuffer sb = new StringBuffer(40);
     sb.append("lockssButton(this, '");
     sb.append(action);
@@ -846,8 +867,32 @@ public abstract class LockssServlet extends HttpServlet
       sb.append("'");
     }
     sb.append(")");
-    btn.attribute("onClick", sb.toString());
+    Input btn = jsButton(label, sb.toString());
+    btn.attribute("id", "lsb." + (++submitButtonNumber));
     return btn;
+  }
+
+  /** Return a (possibly labelled) checkbox. */
+  Element checkBox(String label, String value, String key, boolean checked) {
+    Input in = new Input(Input.Checkbox, key, value);
+    if (checked) {
+      in.check();
+    }
+    setTabOrder(in);
+    if (StringUtil.isNullString(label)) {
+      return in;
+    } else {
+      Composite c = new Composite();
+      c.add(in);
+      c.add(" ");
+      c.add(label);
+      return c;
+    }
+  }
+
+  /** Add html tags to grey the text */
+  protected String greyText(String txt) {
+    return greyText(txt, true);
   }
 
   /** Add html tags to grey the text if isGrey is true */
@@ -925,6 +970,22 @@ public abstract class LockssServlet extends HttpServlet
     return jstext;
   }
 
+  /** Display a "The cache isn't ready yet, come back later" message if
+   *  not all of the AUs have started yet.
+   */
+  protected void displayNotStarted() throws IOException {
+    Page page = newPage();
+    Composite warning = new Composite();
+    warning.add("<center><font color=red size=+1>");
+    warning.add("This LOCKSS Cache is still starting.  Please ");
+    warning.add(srvLink(myServletDescr(), "try again"));
+    warning.add(" in a moment.");
+    warning.add("</font></center><br>");
+    page.add(warning);
+    page.add(getFooter());
+    page.write(resp.getWriter());
+  }
+
   public MultiPartRequest getMultiPartRequest(int maxLen)
       throws FormDataTooLongException, IOException {
     if (req.getContentType() == null ||
@@ -981,7 +1042,12 @@ public abstract class LockssServlet extends HttpServlet
     Enumeration en = req.getParameterNames();
     while (en.hasMoreElements()) {
       String name = (String)en.nextElement();
-      log.debug(name + " = " + req.getParameter(name));
+      String vals[];
+      if (log.isDebug2() && (vals = req.getParameterValues(name)).length > 1) {
+	log.debug(name + " = " + StringUtil.separatedString(vals, ", "));
+      } else {
+	log.debug(name + " = " + req.getParameter(name));
+      }
     }
   }
 
