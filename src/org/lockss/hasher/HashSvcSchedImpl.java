@@ -1,5 +1,5 @@
 /*
- * $Id: HashSvcSchedImpl.java,v 1.9 2004-04-27 19:37:41 tlipkis Exp $
+ * $Id: HashSvcSchedImpl.java,v 1.10 2004-04-29 10:12:25 tlipkis Exp $
  */
 
 /*
@@ -422,9 +422,11 @@ public class HashSvcSchedImpl
     public void populateTable(StatusTable table) {
       String key = table.getKey();
       table.setTitleFootnote(FOOT_TITLE);
-      table.setColumnDescriptors(statusColDescs);
-      table.setDefaultSortRules(statusSortRules);
-      table.setRows(getRows(key));
+      if (!table.getOptions().get(StatusTable.OPTION_NO_ROWS)) {
+	table.setColumnDescriptors(statusColDescs);
+	table.setDefaultSortRules(statusSortRules);
+	table.setRows(getRows(key));
+      }
       table.setSummaryInfo(getSummaryInfo(key));
     }
 

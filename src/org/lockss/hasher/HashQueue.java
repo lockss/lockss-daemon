@@ -1,5 +1,5 @@
 /*
- * $Id: HashQueue.java,v 1.42 2004-01-13 01:33:35 tlipkis Exp $
+ * $Id: HashQueue.java,v 1.43 2004-04-29 10:12:25 tlipkis Exp $
  */
 
 /*
@@ -573,9 +573,11 @@ class HashQueue implements Serializable {
     public void populateTable(StatusTable table) {
       String key = table.getKey();
       table.setTitleFootnote(FOOT_TITLE);
-      table.setColumnDescriptors(statusColDescs);
-      table.setDefaultSortRules(statusSortRules);
-      table.setRows(getRows(key));
+      if (!table.getOptions().get(StatusTable.OPTION_NO_ROWS)) {
+	table.setColumnDescriptors(statusColDescs);
+	table.setDefaultSortRules(statusSortRules);
+	table.setRows(getRows(key));
+      }
       table.setSummaryInfo(getSummaryInfo(key));
     }
 
