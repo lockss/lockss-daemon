@@ -40,7 +40,7 @@
 
   <!-- enclosing "org.lockss" so we don't have to repeat it -->
   <property name="org.lockss">
-
+    
     <!-- Try to get a thread dump if a thread hangs -->
     <property name="thread.hungThreadDump" value="true"/>
 
@@ -1162,359 +1162,552 @@
 	  <property name="value" value="4" />
 	</property>
       </property>
+
+      <property name="teslej8">
+	<property name="title" value="TESL-EJ Volume 8" />
+	<property name="journalTitle" value="TESL-EJ" />
+	<property name="plugin" value="gov.loc.plugin.TESLEJPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://writing.berkeley.edu/TESL-EJ/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="8" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="num_issue_range" />
+	  <property name="value" value="29-32" />
+	</property>
+      </property>
+
+      <property name="shadowsmall">
+	<property name="title" value="Shadow Small" />
+	<property name="journalTitle" value="Shadow" />
+	<property name="plugin" value="org.lockss.plugin.ShadowPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://shadow1.lockss.org" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="journal_id" />
+	  <property name="value" value="small" />
+	</property>
+      </property>
+
+      <property name="shadowbranched">
+	<property name="title" value="Shadow Branched" />
+	<property name="journalTitle" value="Shadow" />
+	<property name="plugin" value="org.lockss.plugin.ShadowPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://shadow1.lockss.org" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="journal_id" />
+	  <property name="value" value="branched" />
+	</property>
+      </property>
+
+      <property name="shadowflat">
+	<property name="title" value="Shadow Flat" />
+	<property name="journalTitle" value="Shadow" />
+	<property name="plugin" value="org.lockss.plugin.ShadowPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://shadow1.lockss.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="journal_id" />
+	  <property name="value" value="flat" />
+	</property>
+      </property>
+
+      <property name="shadowlong_names">
+	<property name="title" value="Shadow Long Names" />
+	<property name="journalTitle" value="Shadow" />
+	<property name="plugin" value="org.lockss.plugin.ShadowPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://shadow1.lockss.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="journal_id" />
+	  <property name="value" value="long_names" />
+	</property>
+      </property>
+
+      
+      <property name="arkivoc2004">
+	<property name="title" value="Arkivoc 2004" />
+	<property name="journalTitle" value="Arkivoc" />
+	<property name="plugin" value="edu.fcla.plugin.arkivoc.ArkivocPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.arkat-usa.org/ark/journal/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2004" />
+	</property>
+      </property>
+
+      <property name="disputatio2004">
+	<property name="title" value="Disputatio 2004" />
+	<property name="journalTitle" value="Disputatio" />
+	<property name="plugin" value="org.lockss.plugin.disputatio.DisputatioPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://disputatio.com/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2004" />
+	</property>
+      </property>
+
+      <property name="disputatio2003">
+	<property name="title" value="Disputatio 2003" />
+	<property name="journalTitle" value="Disputatio" />
+	<property name="plugin" value="org.lockss.plugin.disputatio.DisputatioPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://disputatio.com/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2003" />
+	</property>
+      </property>
+
+      <property name="molvis9">
+	<property name="title" value="Molecular Vision Volume 9" />
+	<property name="journalTitle" value="Molecular Vision" />
+	<property name="plugin" value="org.molvis.plugin.MolVisPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.molvis.org/molvis/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="9" />
+	</property>
+      </property>
+      <property name="intermarium2004">
+	<property name="title" value="Intermarium 2004" />
+	<property name="journalTitle" value="Intermarium" />
+	<property name="plugin" value="edu.yale.library.lockss.plugin.intermarium.IntermariumPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.columbia.edu/cu/sipa/REGIONAL/ECE/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2004" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="7" />
+	</property>
+      </property>
+
+      <property name="mitejmes2004">
+	<property name="title" value="MIT E-journal of Middle East Studies 2004" />
+	<property name="journalTitle" value="MIT E-journal of Middle East Studies" />
+	<property name="plugin" value="edu.yale.library.lockss.plugin.mitejmes.MITEJMESPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://web.mit.edu/cis/www/mitejmes/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2004" />
+	</property>
+      </property>
+      <property name="pm10">
+	<property name="title" value="Eighteenth-Century Studies Volume 36" />
+	<property name="journalTitle" value="Eighteenth-Century Studies" />
+	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://muse.jhu.edu/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="journal_dir" />
+	  <property name="value" value="eighteenth-century_studies" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="36" />
+	</property>
+      </property>
+
+      <!-- Title: American Imago (Project Muse) -->
+      <!-- Date: Fri Jan 02 14:29:37 PST 2004 -->
+      <property name="pm11">
+	<property name="title" value="ELH Volume 70" />
+	<property name="journalTitle" value="ELH" />
+	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://muse.jhu.edu/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="journal_dir" />
+	  <property name="value" value="elh" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="70" />
+	</property>
+      </property>
+      <!-- Title: American Journal of Mathematics (Project Muse) -->
+      <property name="pm2">
+	<property name="title" value="American Journal of Mathematics Volume 125" />
+	<property name="journalTitle" value="American Journal of Mathematics" />
+	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://muse.jhu.edu/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="journal_dir" />
+	  <property name="value" value="american_journal_of_mathematics" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="125" />
+	</property>
+      </property>
+
+      <!-- Title: American Journal of Philology (Project Muse) -->
+      <property name="pm3">
+	<property name="title" value="American Journal of Philology Volume 124" />
+	<property name="journalTitle" value="American Journal of Philology" />
+	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://muse.jhu.edu/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="journal_dir" />
+	  <property name="value" value="american_journal_of_philology" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="124" />
+	</property>
+      </property>
+
+      <!-- Title: American Quarterly (Project Muse) -->
+      <property name="pm4">
+	<property name="title" value="American Quarterly Volume 55" />
+	<property name="journalTitle" value="American Quarterly" />
+	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://muse.jhu.edu/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="journal_dir" />
+	  <property name="value" value="american_quarterly" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="55" />
+	</property>
+      </property>
+
+      <!-- Title: Arethusa (Project Muse) -->
+      <property name="pm5">
+	<property name="title" value="Arethusa Volume 36" />
+	<property name="journalTitle" value="Arethusa" />
+	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://muse.jhu.edu/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="journal_dir" />
+	  <property name="value" value="arethusa" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="36" />
+	</property>
+      </property>
+      <!-- Title: Bulletin of the History of Medicine (Project Muse) -->
+      <property name="pm6">
+	<property name="title" value="Bulletin of the History of Medicine Volume 77" />
+	<property name="journalTitle" value="Bulletin of the History of Medicine" />
+	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://muse.jhu.edu/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="journal_dir" />
+	  <property name="value" value="bulletin_of_the_history_of_medicine" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="77" />
+	</property>
+      </property>
+
+      <!-- Title: Callaloo (Project Muse) -->
+      <property name="pm7">
+	<property name="title" value="Callaloo Volume 26" />
+	<property name="journalTitle" value="Callaloo" />
+	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://muse.jhu.edu/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="journal_dir" />
+	  <property name="value" value="callaloo" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="26" />
+	</property>
+      </property>
+
+      <!-- Title: Comparative Technology Transfer and Society (Project Muse) -->
+      <property name="pm8">
+	<property name="title" value="Comparative Technology Transfer and Society Volume 1" />
+	<property name="journalTitle" value="Comparative Technology Transfer and Society" />
+	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://muse.jhu.edu/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="journal_dir" />
+	  <property name="value" value="comparative_technology_transfer_and_society" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="1" />
+	</property>
+      </property>
+
+      <!-- Title: Configurations (Project Muse) -->
+      <property name="pm9">
+	<property name="title" value="Configurations Volume 11" />
+	<property name="journalTitle" value="Configurations" />
+	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://muse.jhu.edu/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="journal_dir" />
+	  <property name="value" value="configurations" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="11" />
+	</property>
+      </property>
+
+      <property name="cjpcr13">
+	<property name="title" value="Cyberjournal for Pentecostal-Charismatic Research Issue 13" />
+	<property name="journalTitle" value="Cyberjournal for Pentecostal-Charismatic Research" />
+	<property name="plugin" value="gov.loc.plugin.CJPentecostalCharismaticResearchPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.pctii.org/cyberj/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="13" />
+	</property>
+      </property>
+
+      <property name="jiws">
+	<property name="title" value="Journal of International Women's Studies 2004" />
+	<property name="journalTitle" value="Journal of International Women's Studies" />
+	<property name="plugin" value="edu.columbia.plugin.JiwsPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.bridgew.edu/SoAS/jiws/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2004" />
+	</property>
+      </property>
+
+      <property name="cr2004">
+	<property name="title" value="Cortland Review 2004" />
+	<property name="journalTitle" value="Cortland Review" />
+	<property name="plugin" value="edu.wisc.library.plugin.CortlandReviewPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.cortlandreview.com/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="num_issue_range" />
+	  <property name="value" value="22-24" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="year" />
+	  <property name="value" value="2003" />
+	</property>
+      </property>
+
+      <property name="bb2">
+	<property name="title" value="Big Bridge Volume 2" />
+	<property name="journalTitle" value="Big Bridge" />
+	<property name="plugin" value="edu.wisc.library.plugin.BigBridgePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.bigbridge.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="num_issue_range" />
+	  <property name="value" value="5-8" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="2" />
+	</property>
+      </property>
+      
+
+      <property name="genders2004">
+	<property name="title" value="Genders 2004" />
+	<property name="journalTitle" value="Genders" />
+	<property name="plugin" value="org.lockss.plugin.GendersPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.genders.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2004" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="num_issue_range" />
+	  <property name="value" value="39-40" />
+	</property>
+      </property>
+
+      <property name="genders2003">
+	<property name="title" value="Genders 2003" />
+	<property name="journalTitle" value="Genders" />
+	<property name="plugin" value="org.lockss.plugin.GendersPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.genders.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2003" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="num_issue_range" />
+	  <property name="value" value="37-38" />
+	</property>
+      </property>
+
+      <property name="genders2002">
+	<property name="title" value="Genders 2002" />
+	<property name="journalTitle" value="Genders" />
+	<property name="plugin" value="org.lockss.plugin.GendersPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.genders.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2002" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="num_issue_range" />
+	  <property name="value" value="35-36" />
+	</property>
+      </property>
+
+      <property name="genders2001">
+	<property name="title" value="Genders 2001" />
+	<property name="journalTitle" value="Genders" />
+	<property name="plugin" value="org.lockss.plugin.GendersPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.genders.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2001" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="num_issue_range" />
+	  <property name="value" value="33-34" />
+	</property>
+      </property>
+
+      <property name="genders2000">
+	<property name="title" value="Genders 2000" />
+	<property name="journalTitle" value="Genders" />
+	<property name="plugin" value="org.lockss.plugin.GendersPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.genders.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2000" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="num_issue_range" />
+	  <property name="value" value="31-32" />
+	</property>
+      </property>
+
+      <property name="genders1999">
+	<property name="title" value="Genders 1999" />
+	<property name="journalTitle" value="Genders" />
+	<property name="plugin" value="org.lockss.plugin.GendersPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.genders.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="1999" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="num_issue_range" />
+	  <property name="value" value="29-30" />
+	</property>
+      </property>
+
+      <property name="genders1998">
+	<property name="title" value="Genders 1998" />
+	<property name="journalTitle" value="Genders" />
+	<property name="plugin" value="org.lockss.plugin.GendersPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.genders.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="1998" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="num_issue_range" />
+	  <property name="value" value="27-28" />
+	</property>
+      </property>
+
+
     </property>
 
-    <property name="teslej8">
-      <property name="title" value="TESL-EJ Volume 8" />
-      <property name="journalTitle" value="TESL-EJ" />
-      <property name="plugin" value="gov.loc.plugin.TESLEJPlugin" />
-      <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://writing.berkeley.edu/TESL-EJ/" />
-      </property>
-      <property name="param.2">
-	<property name="key" value="volume" />
-	<property name="value" value="8" />
-      </property>
-      <property name="param.3">
-	<property name="key" value="num_issue_range" />
-	<property name="value" value="29-32" />
-      </property>
-    </property>
-
-    <property name="shadowsmall">
-      <property name="title" value="Shadow Small" />
-      <property name="journalTitle" value="Shadow" />
-      <property name="plugin" value="org.lockss.plugin.ShadowPlugin" />
-      <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://shadow1.lockss.org" />
-      </property>
-      <property name="param.2">
-	<property name="key" value="journal_id" />
-	<property name="value" value="small" />
-      </property>
-    </property>
-
-    <property name="shadowbranched">
-      <property name="title" value="Shadow Branched" />
-      <property name="journalTitle" value="Shadow" />
-      <property name="plugin" value="org.lockss.plugin.ShadowPlugin" />
-      <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://shadow1.lockss.org" />
-      </property>
-      <property name="param.2">
-	<property name="key" value="journal_id" />
-	<property name="value" value="branched" />
-      </property>
-    </property>
-
-    <property name="shadowflat">
-      <property name="title" value="Shadow Flat" />
-      <property name="journalTitle" value="Shadow" />
-      <property name="plugin" value="org.lockss.plugin.ShadowPlugin" />
-      <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://shadow1.lockss.org/" />
-      </property>
-      <property name="param.2">
-	<property name="key" value="journal_id" />
-	<property name="value" value="flat" />
-      </property>
-    </property>
-
-    <property name="shadowlong_names">
-      <property name="title" value="Shadow Long Names" />
-      <property name="journalTitle" value="Shadow" />
-      <property name="plugin" value="org.lockss.plugin.ShadowPlugin" />
-      <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://shadow1.lockss.org/" />
-      </property>
-      <property name="param.2">
-	<property name="key" value="journal_id" />
-	<property name="value" value="long_names" />
-      </property>
-    </property>
-
+    <!-- End title database -->
     
-    <property name="arkivoc2004">
-      <property name="title" value="Arkivoc 2004" />
-      <property name="journalTitle" value="Arkivoc" />
-      <property name="plugin" value="edu.fcla.plugin.arkivoc.ArkivocPlugin" />
-      <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://www.arkat-usa.org/ark/journal/" />
-      </property>
-      <property name="param.2">
-	<property name="key" value="year" />
-	<property name="value" value="2004" />
-      </property>
-    </property>
-
-    <property name="disputatio2004">
-      <property name="title" value="Disputatio 2004" />
-      <property name="journalTitle" value="Disputatio" />
-      <property name="plugin" value="org.lockss.plugin.disputatio.DisputatioPlugin" />
-      <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://disputatio.com/" />
-      </property>
-      <property name="param.2">
-	<property name="key" value="year" />
-	<property name="value" value="2004" />
-      </property>
-    </property>
-
-    <property name="disputatio2003">
-      <property name="title" value="Disputatio 2003" />
-      <property name="journalTitle" value="Disputatio" />
-      <property name="plugin" value="org.lockss.plugin.disputatio.DisputatioPlugin" />
-      <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://disputatio.com/" />
-      </property>
-      <property name="param.2">
-	<property name="key" value="year" />
-	<property name="value" value="2003" />
-      </property>
-    </property>
-
-    <property name="molvis9">
-      <property name="title" value="Molecular Vision Volume 9" />
-      <property name="journalTitle" value="Molecular Vision" />
-      <property name="plugin" value="org.molvis.plugin.MolVisPlugin" />
-      <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://www.molvis.org/molvis/" />
-      </property>
-      <property name="param.2">
-	<property name="key" value="volume" />
-	<property name="value" value="9" />
-      </property>
-    </property>
-    <property name="intermarium2004">
-      <property name="title" value="Intermarium 2004" />
-      <property name="journalTitle" value="Intermarium" />
-      <property name="plugin" value="edu.yale.library.lockss.plugin.intermarium.IntermariumPlugin" />
-      <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://www.columbia.edu/cu/sipa/REGIONAL/ECE/" />
-      </property>
-      <property name="param.2">
-	<property name="key" value="year" />
-	<property name="value" value="2004" />
-      </property>
-      <property name="param.3">
-	<property name="key" value="volume" />
-	<property name="value" value="7" />
-      </property>
-    </property>
-
-    <property name="mitejmes2004">
-      <property name="title" value="MIT E-journal of Middle East Studies 2004" />
-      <property name="journalTitle" value="MIT E-journal of Middle East Studies" />
-      <property name="plugin" value="edu.yale.library.lockss.plugin.mitejmes.MITEJMESPlugin" />
-      <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://web.mit.edu/cis/www/mitejmes/" />
-      </property>
-      <property name="param.2">
-	<property name="key" value="year" />
-	<property name="value" value="2004" />
-      </property>
-    </property>
-    <property name="pm10">
-      <property name="title" value="Eighteenth-Century Studies Volume 36" />
-      <property name="journalTitle" value="Eighteenth-Century Studies" />
-      <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
-      <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://muse.jhu.edu/" />
-      </property>
-      <property name="param.2">
-	<property name="key" value="journal_dir" />
-	<property name="value" value="eighteenth-century_studies" />
-      </property>
-      <property name="param.3">
-	<property name="key" value="volume" />
-	<property name="value" value="36" />
-      </property>
-    </property>
-
-    <!-- Title: American Imago (Project Muse) -->
-    <!-- Date: Fri Jan 02 14:29:37 PST 2004 -->
-    <property name="pm11">
-      <property name="title" value="ELH Volume 70" />
-      <property name="journalTitle" value="ELH" />
-      <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
-      <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://muse.jhu.edu/" />
-      </property>
-      <property name="param.2">
-	<property name="key" value="journal_dir" />
-	<property name="value" value="elh" />
-      </property>
-      <property name="param.3">
-	<property name="key" value="volume" />
-	<property name="value" value="70" />
-      </property>
-    </property>
-    <!-- Title: American Journal of Mathematics (Project Muse) -->
-    <property name="pm2">
-      <property name="title" value="American Journal of Mathematics Volume 125" />
-      <property name="journalTitle" value="American Journal of Mathematics" />
-      <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
-      <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://muse.jhu.edu/" />
-      </property>
-      <property name="param.2">
-	<property name="key" value="journal_dir" />
-	<property name="value" value="american_journal_of_mathematics" />
-      </property>
-      <property name="param.3">
-	<property name="key" value="volume" />
-	<property name="value" value="125" />
-      </property>
-    </property>
-
-    <!-- Title: American Journal of Philology (Project Muse) -->
-    <property name="pm3">
-      <property name="title" value="American Journal of Philology Volume 124" />
-      <property name="journalTitle" value="American Journal of Philology" />
-      <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
-      <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://muse.jhu.edu/" />
-      </property>
-      <property name="param.2">
-	<property name="key" value="journal_dir" />
-	<property name="value" value="american_journal_of_philology" />
-      </property>
-      <property name="param.3">
-	<property name="key" value="volume" />
-	<property name="value" value="124" />
-      </property>
-    </property>
-
-    <!-- Title: American Quarterly (Project Muse) -->
-    <property name="pm4">
-      <property name="title" value="American Quarterly Volume 55" />
-      <property name="journalTitle" value="American Quarterly" />
-      <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
-      <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://muse.jhu.edu/" />
-      </property>
-      <property name="param.2">
-	<property name="key" value="journal_dir" />
-	<property name="value" value="american_quarterly" />
-      </property>
-      <property name="param.3">
-	<property name="key" value="volume" />
-	<property name="value" value="55" />
-      </property>
-    </property>
-
-    <!-- Title: Arethusa (Project Muse) -->
-    <property name="pm5">
-      <property name="title" value="Arethusa Volume 36" />
-      <property name="journalTitle" value="Arethusa" />
-      <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
-      <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://muse.jhu.edu/" />
-      </property>
-      <property name="param.2">
-	<property name="key" value="journal_dir" />
-	<property name="value" value="arethusa" />
-      </property>
-      <property name="param.3">
-	<property name="key" value="volume" />
-	<property name="value" value="36" />
-      </property>
-    </property>
-    <!-- Title: Bulletin of the History of Medicine (Project Muse) -->
-    <property name="pm6">
-      <property name="title" value="Bulletin of the History of Medicine Volume 77" />
-      <property name="journalTitle" value="Bulletin of the History of Medicine" />
-      <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
-      <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://muse.jhu.edu/" />
-      </property>
-      <property name="param.2">
-	<property name="key" value="journal_dir" />
-	<property name="value" value="bulletin_of_the_history_of_medicine" />
-      </property>
-      <property name="param.3">
-	<property name="key" value="volume" />
-	<property name="value" value="77" />
-      </property>
-    </property>
-
-    <!-- Title: Callaloo (Project Muse) -->
-    <property name="pm7">
-      <property name="title" value="Callaloo Volume 26" />
-      <property name="journalTitle" value="Callaloo" />
-      <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
-      <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://muse.jhu.edu/" />
-      </property>
-      <property name="param.2">
-	<property name="key" value="journal_dir" />
-	<property name="value" value="callaloo" />
-      </property>
-      <property name="param.3">
-	<property name="key" value="volume" />
-	<property name="value" value="26" />
-      </property>
-    </property>
-
-    <!-- Title: Comparative Technology Transfer and Society (Project Muse) -->
-    <property name="pm8">
-      <property name="title" value="Comparative Technology Transfer and Society Volume 1" />
-      <property name="journalTitle" value="Comparative Technology Transfer and Society" />
-      <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
-      <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://muse.jhu.edu/" />
-      </property>
-      <property name="param.2">
-	<property name="key" value="journal_dir" />
-	<property name="value" value="comparative_technology_transfer_and_society" />
-      </property>
-      <property name="param.3">
-	<property name="key" value="volume" />
-	<property name="value" value="1" />
-      </property>
-    </property>
-
-    <!-- Title: Configurations (Project Muse) -->
-    <property name="pm9">
-      <property name="title" value="Configurations Volume 11" />
-      <property name="journalTitle" value="Configurations" />
-      <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
-      <property name="param.1">
-	<property name="key" value="base_url" />
-	<property name="value" value="http://muse.jhu.edu/" />
-      </property>
-      <property name="param.2">
-	<property name="key" value="journal_dir" />
-	<property name="value" value="configurations" />
-      </property>
-      <property name="param.3">
-	<property name="key" value="volume" />
-	<property name="value" value="11" />
-      </property>
-    </property>
-
-  <!-- End title database -->
-  
   </property>
 
   <!-- End org.lockss -->
