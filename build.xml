@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.59 2003-09-05 06:02:27 tlipkis Exp $
+ $Id: build.xml,v 1.60 2003-09-18 06:49:28 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -49,6 +49,7 @@ Args:
                               test-all, test-one, test-class, run-class.
   -Dlogtarget=Class        Set default log target.
   -Dshowoutput=yes         With test-one, show System.err output as it happens.
+  -Dfiltertrace=no         Don't filter junit frames from backtrace.
   -Dtimeout=msecs          Override the default test failure timeout.
   -Dlistfiles=true         List the source files that will be compiled.  Use if
                               a compile step runs when nothing should need to
@@ -59,6 +60,7 @@ Args:
   <!-- Defaults -->
   <property name="loglevel" value="" />
   <property name="showoutput" value="no" />
+  <property name="filtertrace" value="yes" />
   <property name="timeout" value="" />
   <property name="keeptempfiles" value="" />
 <!-- Some tests will not work right if fork=no  -->
@@ -257,6 +259,13 @@ Args:
   <!-- ==================================================================== -->
   <target name="prepare">
     <mkdir dir="${classes}" />
+
+    <condition property="detected.os" value="unix">
+      <os family="unix"/>
+    </condition>
+    <condition property="detected.os" value="windows">
+      <os family="dos"/>
+    </condition>
   </target>
 
   <!-- ==================================================================== -->
@@ -355,6 +364,10 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
     <delete file="${lockss.ant.jar}" quiet="true"/>
     <delete file="${test.classpath.file}" quiet="true"/>
     <delete file="${production.classpath.file}" quiet="true"/>
+    <delete quiet="true" verbose="true">
+      <!-- ant-generated files that can get left around if build is aborted -->
+      <fileset dir="${basedir}" includes="files?* junit?*.properties"/>
+    </delete>
   </target>
 
   <target name="clean-tempbuild"
@@ -553,13 +566,13 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
 
     <!-- Concatenate all CVS/Entries files.   Not ideal, as dir names
          must be inferred, but it's fast, done entirely within Ant,
-         and includes files that don't have $Id: build.xml,v 1.59 2003-09-05 06:02:27 tlipkis Exp $ line -->
+         and includes files that don't have $Id: build.xml,v 1.60 2003-09-18 06:49:28 tlipkis Exp $ line -->
     <concat destfile="${build.filerev.file}">
        <fileset dir="${src}" includes="**/CVS/Entries" defaultexcludes="no" />
     </concat>
 <!--
  Some other ways to do this.
-     Extract cvs $Id: build.xml,v 1.59 2003-09-05 06:02:27 tlipkis Exp $ lines from all files, with shell command:
+     Extract cvs $Id: build.xml,v 1.60 2003-09-18 06:49:28 tlipkis Exp $ lines from all files, with shell command:
      sh -c "find . -type f -print0 | xargs -0 '"'egrep '\$Id(:.*)?\$'"'"
     <exec executable="sh" dir="${src}" output="${build.filerev.file}">
       <arg line="-c &quot;find . -type f  -print0 | xargs -0 egrep &apos;&quot;&apos;\$Id(:.*)?\$&apos;&quot;&apos;&quot;" />
@@ -593,10 +606,10 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
     </jar>
     <!-- Write the classpath to a file, so scripts can get it -->
     <pathconvert refid="test.run.classpath" property="tmp.test.clspth"
-      targetos="unix" />
+      targetos="${detected.os}" />
     <echo message="${tmp.test.clspth}" file="${test.classpath.file}"/>
     <pathconvert refid="test.run.classpath" property="tmp.run.clspth"
-      targetos="unix">
+      targetos="${detected.os}">
       <!-- entity codes below are open and close curly brace -->
       <map from="${basedir}/lib" to="$&#x07b;JAVA.LIB.PATH&#x07d;" />
     </pathconvert>
@@ -840,7 +853,7 @@ Test results in ${test.results}
     <delete file="${test.results}/*" quiet="true" />
     <junit1 fork="no" printsummary="yes"
          haltonfailure="${halt}" failureproperty="failed"
-         filtertrace="yes" showoutput="${showoutput}">
+         filtertrace="${filtertrace}" showoutput="${showoutput}">
      <batchtest fork="${fork}" todir="${test.results}">
         <fileset dir="${test.src}">
           <include name="${include}" />
@@ -871,7 +884,7 @@ Test results in ${test.results}
     <delete file="${test.results}/*" quiet="true" />
     <junit1 fork="no" printsummary="yes"
          haltonfailure="${halt}" failureproperty="failed"
-         filtertrace="yes" showoutput="${showoutput}">
+         filtertrace="${filtertrace}" showoutput="${showoutput}">
       <batchtest fork="${fork}" todir="${test.results}">
         <fileset dir="${test.src}">
           <include name="**/Func*.java" />
@@ -953,7 +966,7 @@ Test results in ${test.results}
    depends="prepare.run.test,check.class.arg,check.junit,jar-tests"
    description="Run a single test class, named by the 'class' property" >
     <junit1 fork="no" printsummary="yes" haltonerror="yes" haltonfailure="yes"
-         filtertrace="yes"
+         filtertrace="${filtertrace}"
          showoutput="${showoutput}">
       <jvmarg value="-Xmx128m"/>  <!-- no effect unless both fork=yes -->
       <test fork="${fork}" name="${class}" />
@@ -981,7 +994,7 @@ Test results in ${tools.test.results}
     <delete file="${tools.test.results}/*" quiet="true" />
     <junit1 fork="no" printsummary="yes"
          haltonfailure="${halt}" failureproperty="failed"
-         filtertrace="yes" showoutput="${showoutput}">
+         filtertrace="${filtertrace}" showoutput="${showoutput}">
       <batchtest fork="${fork}" todir="${tools.test.results}">
         <fileset dir="${tools.test.src}">
           <include name="**/Test*.java" />
@@ -1012,7 +1025,7 @@ Test results in ${tools.test.results}
     <delete file="${generated.test.results}/*" quiet="true" />
     <junit1 fork="no" printsummary="yes"
          haltonfailure="${halt}" failureproperty="failed"
-         filtertrace="yes" showoutput="${showoutput}">
+         filtertrace="${filtertrace}" showoutput="${showoutput}">
       <batchtest fork="${fork}" todir="${generated.test.results}">
         <fileset dir="${generated.test.src}">
           <include name="org/lockss/plugin/**/Test*.java" />
