@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerImpl.java,v 1.21 2004-07-13 00:34:43 dcfok Exp $
+ * $Id: CrawlerImpl.java,v 1.21.2.1 2004-07-16 23:10:41 dcfok Exp $
  */
 
 /*
@@ -197,16 +197,25 @@ public abstract class CrawlerImpl implements Crawler {
 	      logger.debug3("Permission granted. Caching permission page.");
 	      storePermissionPage(ownerCus, permissionPage);
 	      crawl_ok = PermissionRecord.PERMISSION_OK;
+	      if (crawlStatus.getCrawlError() == err){
+		crawlStatus.setCrawlError(null);
+	      }
 	    } else {
 	      try {
 		logger.debug3("Permission granted. Storing permission page.");
 		is.reset();
 		uc.storeContent(is, uc.getUncachedProperties());
 		crawl_ok = PermissionRecord.PERMISSION_OK;
+		if (crawlStatus.getCrawlError() == err){
+		  crawlStatus.setCrawlError(null);
+		}
 	      } catch (IOException e) {
 		logger.debug("Couldn't store from existing stream, refetching", e);
 		storePermissionPage(ownerCus, permissionPage);
 		crawl_ok = PermissionRecord.PERMISSION_OK;
+		if (crawlStatus.getCrawlError() == err){
+		  crawlStatus.setCrawlError(null);
+		}
 	      }
 	    }
 	  }
@@ -223,7 +232,6 @@ public abstract class CrawlerImpl implements Crawler {
 				       "\ncould not be fetched. " +
 				       "The error was:\n" +
 				       ex.getMessage() + "\n"));
-      crawlStatus.setCrawlError(Crawler.STATUS_FETCH_ERROR);
       crawl_ok = PermissionRecord.FETCH_PERMISSION_FAILED;
     }
 

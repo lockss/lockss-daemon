@@ -1,4 +1,8 @@
 /*
+ * $Id: TestPermissionRecord.java,v 1.1.2.1 2004-07-16 23:10:41 dcfok Exp $
+ */
+
+/*
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
