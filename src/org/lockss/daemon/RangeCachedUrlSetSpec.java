@@ -1,5 +1,5 @@
 /*
- * $Id: RangeCachedUrlSetSpec.java,v 1.7 2003-04-15 01:27:01 aalto Exp $
+ * $Id: RangeCachedUrlSetSpec.java,v 1.8 2003-06-03 01:52:50 tal Exp $
  */
 
 /*
@@ -87,6 +87,63 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
     return inRange(url);
   }
 
+  public boolean isAU() {
+    return false;
+  }
+
+  public boolean isSingleNode() {
+    return false;
+  }
+
+  public boolean isRangeRestricted() {
+    return lowerBound != null || upperBound != null;
+  }
+
+  public boolean isDisjoint(CachedUrlSetSpec spec) {
+    if (spec.isSingleNode()) {
+      return !subsumes(spec);
+    }
+    if (spec.isAU()) {
+      return false;
+    }
+    if (spec instanceof RangeCachedUrlSetSpec) {
+      RangeCachedUrlSetSpec rspec = (RangeCachedUrlSetSpec)spec;
+      if (prefix.equals(rspec.getUrl())) {
+	String l1 = lowerBound;
+	String u1 = upperBound;
+	String l2 = rspec.getLowerBound();
+	String u2 = rspec.getUpperBound();
+	return (l1 != null && u2 != null && l1.compareTo(u2) > 0) ||
+	  (l2 != null && u1 != null && l2.compareTo(u1) > 0);
+      }
+      return !(matches(rspec.getUrl()) || rspec.matches(prefix));
+    }
+    throw new RuntimeException("Unknown CUSS type: " + spec);
+  }
+
+  public boolean subsumes(CachedUrlSetSpec spec) {
+    if (spec.isSingleNode()) {
+      String specUrl = spec.getUrl();
+      return !prefix.equals(specUrl) && matches(specUrl);
+    }
+    if (spec.isAU()) {
+      return false;
+    }
+    if (spec instanceof RangeCachedUrlSetSpec) {
+      RangeCachedUrlSetSpec rspec = (RangeCachedUrlSetSpec)spec;
+      if (prefix.equals(rspec.getUrl())) {
+	String l1 = lowerBound;
+	String u1 = upperBound;
+	String l2 = rspec.getLowerBound();
+	String u2 = rspec.getUpperBound();
+	return (l1 == null || (l2 != null && l1.compareTo(l2) <= 0)) &&
+	  (u1 == null || (u2 != null && u1.compareTo(u2) >= 0));
+      }
+      return matches(rspec.getUrl());
+    }
+    throw new RuntimeException("Unknown CUSS type: " + spec);
+  }
+
   /**
    * Overrides Object.equals().
    * Compares the lists and REs of the two specs.
@@ -170,6 +227,22 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
     return lowerBound;
   }
 
+  String us;
+  String ls;
+
+  private String getUs() {
+    if (us == null) {
+      us = prefix + upperBound;
+    }
+    return us;
+  }
+
+  private String getLs() {
+    if (ls == null) {
+      ls = prefix + lowerBound;
+    }
+    return ls;
+  }
 
   /**
    * return true if the url is in the bounded range
@@ -177,20 +250,16 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
    * @return true if the url is between upper and lower bound
    */
   boolean inRange(String url) {
-    boolean ret = true;
-
-     if(upperBound != null) {
-      String us = prefix + upperBound;
-      if(us.compareTo(url) < 0) { //url is lexographically greater
-        return false;
+    if (upperBound != null) {
+      if (getUs().compareTo(url) < 0) { //url is lexographically greater
+	return false;
       }
     }
-    if(lowerBound != null) {
-      String ls = prefix + lowerBound;
-      if(ls.compareTo(url) > 0)  {
-        return false;
+    if (lowerBound != null) {
+      if (getLs().compareTo(url) > 0)  {
+	return false;
       }
     }
-    return ret;
+    return true;
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: SingleNodeCachedUrlSetSpec.java,v 1.1 2003-04-12 01:14:29 aalto Exp $
+ * $Id: SingleNodeCachedUrlSetSpec.java,v 1.2 2003-06-03 01:52:50 tal Exp $
  */
 
 /*
@@ -62,6 +62,35 @@ public class SingleNodeCachedUrlSetSpec implements CachedUrlSetSpec {
    */
   public boolean matches(String url) {
     return this.url.equals(url);
+  }
+
+  public boolean isAU() {
+    return false;
+  }
+
+  public boolean isSingleNode() {
+    return true;
+  }
+
+  public boolean isRangeRestricted() {
+    return false;
+  }
+
+  public boolean isDisjoint(CachedUrlSetSpec spec) {
+    if (spec.isSingleNode()) {
+      return !equals(spec);
+    }
+    if (spec.isAU()) {
+      return false;
+    }
+    return !spec.subsumes(this);
+  }
+
+  public boolean subsumes(CachedUrlSetSpec spec) {
+    if (spec.isSingleNode()) {
+      return equals(spec);
+    }
+    return false;
   }
 
   /**

@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrlSetSpec.java,v 1.8 2003-03-04 21:20:41 tal Exp $
+ * $Id: MockCachedUrlSetSpec.java,v 1.9 2003-06-03 01:55:01 tal Exp $
  */
 
 /*
@@ -70,6 +70,27 @@ public class MockCachedUrlSetSpec implements CachedUrlSetSpec {
   }
 
   public boolean matches(String url) {
-    return url.startsWith(root);
+    throw new UnsupportedOperationException("Not Implemented");
   }
+
+  public boolean isAU() {
+    throw new UnsupportedOperationException("Not Implemented");
+  }
+
+  public boolean isSingleNode() {
+    throw new UnsupportedOperationException("Not Implemented");
+  }
+
+  public boolean isRangeRestricted() {
+    throw new UnsupportedOperationException("Not Implemented");
+  }
+
+  public boolean isDisjoint(CachedUrlSetSpec spec) {
+    throw new UnsupportedOperationException("Not Implemented");
+  }
+
+  public boolean subsumes(CachedUrlSetSpec spec) {
+    throw new UnsupportedOperationException("Not Implemented");
+  }
+
 }

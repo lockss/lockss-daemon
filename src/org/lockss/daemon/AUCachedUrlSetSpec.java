@@ -1,5 +1,5 @@
 /*
- * $Id: AUCachedUrlSetSpec.java,v 1.1 2003-02-26 04:49:37 tal Exp $
+ * $Id: AUCachedUrlSetSpec.java,v 1.2 2003-06-03 01:52:50 tal Exp $
  */
 
 /*
@@ -64,6 +64,26 @@ public class AUCachedUrlSetSpec implements CachedUrlSetSpec {
    * @return true
    */
   public boolean matches(String url) {
+    return true;
+  }
+
+  public boolean isAU() {
+    return true;
+  }
+
+  public boolean isSingleNode() {
+    return false;
+  }
+
+  public boolean isRangeRestricted() {
+    return false;
+  }
+
+  public boolean isDisjoint(CachedUrlSetSpec spec) {
+    return false;
+  }
+
+  public boolean subsumes(CachedUrlSetSpec spec) {
     return true;
   }
 
