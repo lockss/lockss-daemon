@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.24 2003-01-06 19:56:42 tal Exp $
+ $Id: build.xml,v 1.25 2003-01-13 17:08:24 tal Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
@@ -39,8 +39,8 @@ Args:
   -Dargs="args ..."         Supply cmd line args to run-class
   -Dloglevel=debug          Set default log level to debug for
                                test-all, test-one, test-class, run-class
-  -Dfile=path/to/file       Specify file to print or index.  File must be
-                               relative to project base dir
+  -Dfile=path/to/file       Specify file for print or index.
+                               File is relative to project base dir
   -Dtimeout=msecs           Override the default test failure timeout.
 </description>
 
@@ -102,6 +102,9 @@ Args:
   <property name="lockss.doclet.jar" value="${lib}/lockss-doclet.jar"/>
 
   <property name="ant-contrib.jar"      value="${lib}/ant-contrib-0.1.jar"/>
+
+  <!--  Files -->
+  <property name="test.classpath.file" value="${test}/test-classpath"/>
   <property name="ant-contrib.resource"
                           value="net/sf/antcontrib/antcontrib.properties"/>
 
@@ -112,14 +115,14 @@ Args:
 
   <!--  Classpaths -->
   <path id="compile.classpath">
-    <pathelement path="${castor.jar}" />
-    <pathelement path="${xerces.jar}" />
-    <pathelement path="${xmlparser.jar}" />
+    <pathelement path="${regexp.jar}" />
+    <pathelement path="${commons.collections.jar}" />
     <pathelement path="${jetty.jar}" />
     <pathelement path="${jettytools.jar}" />
     <pathelement path="${servlet.jar}" />
-    <pathelement path="${regexp.jar}" />
-    <pathelement path="${commons.collections.jar}" />
+    <pathelement path="${castor.jar}" />
+    <pathelement path="${xerces.jar}" />
+    <pathelement path="${xmlparser.jar}" />
   </path>
 
   <path id="run.classpath">
@@ -198,6 +201,7 @@ Args:
     <delete file="${lockss.test.jar}" quiet="true"/>
     <delete file="${lockss.ant.jar}" quiet="true"/>
     <delete file="${lockss.doclet.jar}" quiet="true"/>
+    <delete file="${test.classpath.file}" quiet="true"/>
   </target>
 
   <target name="clean-tempbuild"
@@ -288,6 +292,9 @@ Args:
     <jar jarfile="${lockss.test.jar}" basedir="${test.classes}" >
        <include name="**/" />
     </jar>
+    <pathconvert refid="test.run.classpath" property="tmp.clspth"
+      targetos="unix" />
+    <echo message="${tmp.clspth}" file="${test.classpath.file}"/>
   </target>
 
   <!-- ==================================================================== -->
@@ -467,17 +474,6 @@ Args:
        <classpath refid="test.run.classpath" />
        <arg line="${args}" />
        <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
-    </java>
-  </target>
-
-  <!-- ==================================================================== -->
-  <target name="write-script" depends="jar-tests"
-   description="Write, into the file named by the script property, a command to run the class named by class prop, with args in args prop" >
-    <echo message="java " file="${script}"/>
-    <java classname="${class}" fork="true" jvm="echo"
-      output="${script}" append="true">
-       <classpath refid="test.run.classpath" />
-       <arg line="${args}" />
     </java>
   </target>
 
