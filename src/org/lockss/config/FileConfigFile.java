@@ -1,5 +1,5 @@
 /*
- * $Id: FileConfigFile.java,v 1.3 2005-01-06 02:38:50 tlipkis Exp $
+ * $Id: FileConfigFile.java,v 1.4 2005-02-16 19:39:53 smorabito Exp $
  */
 
 /*
@@ -100,7 +100,6 @@ public class FileConfigFile extends ConfigFile {
 		     "), reloading: " + m_fileUrl);
 	}
       }
-      m_lastModified = Long.toString(m_fileFile.lastModified());
       m_lastAttempt = TimeBase.nowMs();
       InputStream in = null;
       m_IOException = null;
@@ -123,8 +122,16 @@ public class FileConfigFile extends ConfigFile {
       }
 
       if (in != null) {
-	setConfigFrom(in);
-	in.close();
+	try {
+	  setConfigFrom(in);
+	  m_lastModified = Long.toString(m_fileFile.lastModified());
+	  m_loadError = null;
+	} catch (Exception ex) {
+	  log.error("Unable to load configuration. " + ex);
+	  m_loadError = ex.getMessage();
+	} finally {
+	  in.close();
+	} 
       }
     } else {
       log.debug2("File has not changed on disk, not reloading: " + m_fileUrl);

@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigFile.java,v 1.6 2005-01-06 02:38:50 tlipkis Exp $
+ * $Id: ConfigFile.java,v 1.7 2005-02-16 19:39:53 smorabito Exp $
  */
 
 /*
@@ -34,7 +34,8 @@ package org.lockss.config;
 
 import java.io.*;
 import java.net.*;
-
+import javax.xml.parsers.ParserConfigurationException;
+import org.xml.sax.SAXException;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 
@@ -111,14 +112,17 @@ public abstract class ConfigFile {
   protected abstract boolean reload()
       throws IOException;
 
-  protected void setConfigFrom(InputStream in) throws IOException {
+  protected void setConfigFrom(InputStream in)
+      throws ParserConfigurationException, SAXException, IOException {
     ConfigurationPropTreeImpl newConfig = new ConfigurationPropTreeImpl();
+    
     // Load the configuration
     if (m_fileType == XML_FILE) {
       XmlPropertyLoader.load(newConfig.getPropertyTree(), in);
     } else {
       newConfig.getPropertyTree().load(in);
     }
+    
     // update stored configuration atomically
     newConfig.seal();
     m_config = newConfig;

@@ -1,5 +1,5 @@
 /*
- * $Id: JarConfigFile.java,v 1.1 2005-01-10 06:23:33 smorabito Exp $
+ * $Id: JarConfigFile.java,v 1.2 2005-02-16 19:39:52 smorabito Exp $
  */
 
 /*
@@ -76,9 +76,16 @@ public class JarConfigFile extends ConfigFile {
 	throw ex;
       }
       if (in != null && entry != null) {
-	setConfigFrom(in);
-	m_lastModified = Long.toString(entry.getTime());
-	in.close();
+	try {
+	  setConfigFrom(in);
+	  m_lastModified = Long.toString(entry.getTime());
+	  m_loadError = null;
+	} catch (Exception ex) {
+	  log.error("Unable to load configuration. " + ex);
+	  m_loadError = ex.getMessage();
+	} finally {
+	  in.close();
+	}
       }
     }
     return m_IOException == null;

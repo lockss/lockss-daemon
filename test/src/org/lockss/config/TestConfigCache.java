@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigCache.java,v 1.4 2004-10-22 07:01:58 tlipkis Exp $
+ * $Id: TestConfigCache.java,v 1.5 2005-02-16 19:39:48 smorabito Exp $
  */
 
 /*
@@ -70,6 +70,14 @@ public class TestConfigCache extends LockssTestCase {
     "  <property name=\"prop.9\" value=\"baz\" />\n" +
     "</lockss-config>";
 
+  private static final String badConfig =
+    "<lockss-config>\n" +
+    "  <property name=\"prop.10\" value=\"foo\" />\n" +
+    "  <property name=\"prop.11\">\n" +
+    "    <value>bar</value>\n" +
+    "  <!-- missing closing property tag -->\n" +
+    "</lockss-config>";
+
   ConfigCache cache;
 
   public void setUp() throws Exception {
@@ -82,11 +90,37 @@ public class TestConfigCache extends LockssTestCase {
    */
   public void testLoadConfigFile() throws IOException {
     String url = null;
+
+    // Config should not get loaded into the cache if it can't be parsed.
     try {
       url = FileTestUtil.urlOfString(config1);
       ConfigFile cf = cache.get(url);
-      assertNotNull(cf);
+      assertNotNull("ConfigFile should not be null", cf);
+      assertNotNull("ConfigFile.getLastModified should not be null",
+		    cf.getLastModified());
+      assertNotNull("ConfigFile.getConfiguration() should not be null",
+		    cf.getConfiguration());
+      assertTrue("ConfigFile.isLoaded() should not be false",
+		 cf.isLoaded());
       assertSame(cf, cache.justGet(url));
+    } catch (IOException ex) {
+      fail("Unable to load local config file " + url + " :" + ex);
+    }
+  }
+
+  /**
+   * Ensure that malformed XML files are not loaded into the cache,
+   * and that lastModified is not set.
+   */
+  public void testLoadMalformedXml() {
+    String url = null;
+    try {
+      url = FileTestUtil.urlOfString(badConfig, ".xml");
+      ConfigFile cf = cache.get(url);
+      assertFalse("ConfigFile.isLoaded() should be false: " + cf.isLoaded(), cf.isLoaded());
+      assertNull("ConfigFile.getConfiguration() should return null.", cf.getConfiguration());
+      assertNull("ConfigFile.getLastModified() should return null, but was: " +
+		 cf.getLastModified(), cf.getLastModified());
     } catch (IOException ex) {
       fail("Unable to load local config file " + url + " :" + ex);
     }
@@ -109,5 +143,7 @@ public class TestConfigCache extends LockssTestCase {
     assertEquals(3, (cache.getConfigFiles()).size());
 
   }
+
+
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestXmlPropertyLoader.java,v 1.10 2004-11-12 19:29:20 smorabito Exp $
+ * $Id: TestXmlPropertyLoader.java,v 1.11 2005-02-16 19:39:46 smorabito Exp $
  */
 
 /*
@@ -80,7 +80,11 @@ public class TestXmlPropertyLoader extends LockssTestCase {
 
     PropertyTree props = new PropertyTree();
 
-    m_xmlPropertyLoader.loadProperties(props, istr);
+    try {
+      m_xmlPropertyLoader.loadProperties(props, istr);
+    } catch (Throwable t) {
+      fail("Should not have thrown.");
+    }
 
     m_props = props;
   }

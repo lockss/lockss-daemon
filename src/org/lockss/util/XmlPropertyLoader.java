@@ -1,5 +1,5 @@
 /*
- * $Id: XmlPropertyLoader.java,v 1.17 2005-02-02 09:42:22 tlipkis Exp $
+ * $Id: XmlPropertyLoader.java,v 1.18 2005-02-16 19:39:48 smorabito Exp $
  */
 
 /*
@@ -62,41 +62,29 @@ public class XmlPropertyLoader {
 
   private static Logger log = Logger.getLogger("XmlPropertyLoader");
 
-  public static boolean load(PropertyTree props, InputStream istr) {
+  public static void load(PropertyTree props, InputStream istr)
+      throws ParserConfigurationException, SAXException, IOException {
     if (m_instance == null) {
       m_instance = new XmlPropertyLoader();
     }
 
-    return m_instance.loadProperties(props, istr);
+    m_instance.loadProperties(props, istr);
   }
 
   /**
    * Load a set of XML properties from the input stream.
    */
-  boolean loadProperties(PropertyTree props, InputStream istr) {
-    boolean isLoaded = false;
-
-    try {
-      SAXParserFactory factory = SAXParserFactory.newInstance();
-
-      factory.setValidating(true);
-      factory.setNamespaceAware(false);
-
-      SAXParser parser = factory.newSAXParser();
-
-      parser.parse(istr, new LockssConfigHandler(props));
-
-      isLoaded = true;
-    } catch (ParserConfigurationException ex) {
-      // Really shouldn't ever happen.
-      log.warning("parser configuration exception: " + ex);
-    } catch (SAXException ex) {
-      log.warning("SAX Exception: " + ex);
-    } catch (IOException ex) {
-      log.warning("IO Exception: " + ex);
-    }
-
-    return isLoaded;
+  void loadProperties(PropertyTree props, InputStream istr)
+      throws ParserConfigurationException, SAXException, IOException {
+    
+    SAXParserFactory factory = SAXParserFactory.newInstance();
+    
+    factory.setValidating(true);
+    factory.setNamespaceAware(false);
+    
+    SAXParser parser = factory.newSAXParser();
+    
+    parser.parse(istr, new LockssConfigHandler(props));
   }
 
   public Version getDaemonVersion() {

@@ -1,5 +1,5 @@
 /*
- * $Id: HTTPConfigFile.java,v 1.2 2005-02-02 09:42:48 tlipkis Exp $
+ * $Id: HTTPConfigFile.java,v 1.3 2005-02-16 19:39:53 smorabito Exp $
  */
 
 /*
@@ -46,6 +46,8 @@ import org.lockss.util.urlconn.*;
 
 public class HTTPConfigFile extends ConfigFile {
 
+  private String m_httpLastModifiedString = null;
+
   public HTTPConfigFile(String url) throws IOException {
     super(url);
   }
@@ -73,9 +75,7 @@ public class HTTPConfigFile extends ConfigFile {
     switch (resp) {
     case HttpURLConnection.HTTP_OK:
       m_loadError = null;
-      m_lastModified = conn.getResponseHeaderValue("last-modified");
-      log.debug2("Storing this config's last-modified as: " +
-		 m_lastModified);
+      m_httpLastModifiedString = conn.getResponseHeaderValue("last-modified");
       in = conn.getResponseInputStream();
       log.debug2("New file, or file changed.  Loading file from " +
 		 "remote connection:" + url);
@@ -148,8 +148,17 @@ public class HTTPConfigFile extends ConfigFile {
     // "in" will be null if HTTP contents did not change (this is the
     // usual case), or if getUrlInputStream threw an error.
     if (in != null) {
-      setConfigFrom(in);
-      in.close();
+      try {
+	setConfigFrom(in);
+	m_lastModified = m_httpLastModifiedString;
+	log.debug2("Storing this config's last-modified as: " +
+		   m_lastModified);
+      } catch (Exception ex) {
+	log.error("Unable to load configuration. " + ex);
+      } finally {
+	in.close();
+      }
+
     }
 
     return m_IOException == null;
