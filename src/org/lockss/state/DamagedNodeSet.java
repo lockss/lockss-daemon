@@ -1,5 +1,5 @@
 /*
- * $Id: DamagedNodeSet.java,v 1.14 2004-09-01 23:33:35 clairegriffin Exp $
+ * $Id: DamagedNodeSet.java,v 1.15 2004-10-19 10:16:28 tlipkis Exp $
  */
 
 /*
@@ -186,7 +186,7 @@ public class DamagedNodeSet {
    * Remove the url from the damage list.
    * @param nodeUrl url to remove
    */
-  public void removeFromDamage(String nodeUrl) {
+  synchronized public void removeFromDamage(String nodeUrl) {
     nodesWithDamage.remove(nodeUrl);
     repository.storeDamagedNodeSet(this);
   }
@@ -196,7 +196,7 @@ public class DamagedNodeSet {
    * @param cus the repairing CUS
    * @param nodeUrl the repaired url
    */
-  public void removeFromRepair(CachedUrlSet cus, String nodeUrl) {
+  synchronized public void removeFromRepair(CachedUrlSet cus, String nodeUrl) {
     Collection urls = (Collection)cusToRepair.get(cus.getUrl());
     if (urls!=null) {
       urls.remove(nodeUrl);
