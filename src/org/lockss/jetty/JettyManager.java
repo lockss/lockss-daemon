@@ -1,5 +1,5 @@
 /*
- * $Id: JettyManager.java,v 1.5 2003-04-09 18:06:40 tal Exp $
+ * $Id: JettyManager.java,v 1.6 2003-04-10 21:46:17 tal Exp $
  */
 
 /*
@@ -78,11 +78,20 @@ public abstract class JettyManager extends BaseLockssManager {
   protected void setConfig(Configuration config, Configuration prevConfig,
 			   Set changedKeys) {
     if (jettyLogInited) {
-      Properties p = System.getProperties();
-      Code.setDebug(config.getBoolean(PARAM_JETTY_DEBUG, false));
-      Code.setDebugPatterns(config.get(PARAM_JETTY_DEBUG_PATTERNS));
+      if (changedKeys.contains(PARAM_JETTY_DEBUG)) {
+	boolean deb = config.getBoolean(PARAM_JETTY_DEBUG, false);
+	log.info("Turning Jetty DEBUG " + (deb ? "on." : "off."));
+	Code.setDebug(deb);
+      }
+      if (changedKeys.contains(PARAM_JETTY_DEBUG_PATTERNS)) {
+	String pat = config.get(PARAM_JETTY_DEBUG_PATTERNS);
+	log.info("Setting Jetty debug patterns to: " + pat);
+	Code.setDebugPatterns(pat);
+      }
       if (changedKeys.contains(PARAM_JETTY_DEBUG_VERBOSE)) {
-	Code.setVerbose(config.getInt(PARAM_JETTY_DEBUG_VERBOSE, 0));
+	int ver = config.getInt(PARAM_JETTY_DEBUG_VERBOSE, 0);
+	log.info("Setting Jetty verbosity to: " + ver);
+	Code.setVerbose(ver);
       }
     }
   }
