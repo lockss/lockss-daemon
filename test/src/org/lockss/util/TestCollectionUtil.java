@@ -1,5 +1,5 @@
 /*
- * $Id: TestCollectionUtil.java,v 1.4 2003-03-04 01:02:05 aalto Exp $
+ * $Id: TestCollectionUtil.java,v 1.5 2003-03-22 02:05:06 tal Exp $
  */
 
 /*
@@ -48,6 +48,21 @@ public class TestCollectionUtil extends TestCase {
 
   public TestCollectionUtil(String msg) {
     super(msg);
+  }
+
+  public void testEmptyIter() {
+    assertFalse(CollectionUtil.EMPTY_ITERATOR.hasNext());
+    // make sure both next() and remove() throw the advertised exceptions
+    try {
+      CollectionUtil.EMPTY_ITERATOR.next();
+      fail("next() should throw NoSuchElementException");
+    } catch (NoSuchElementException e) {
+    }
+    try {
+      CollectionUtil.EMPTY_ITERATOR.remove();
+      fail("remove() should throw UnsupportedOperationException");
+    } catch (UnsupportedOperationException e) {
+    }
   }
 
   public void testIsoIter() {
