@@ -1,5 +1,5 @@
 /*
- * $Id: PrintfEditor.java,v 1.13 2004-07-14 20:46:03 clairegriffin Exp $
+ * $Id: PrintfEditor.java,v 1.13.2.1 2004-07-17 00:51:09 clairegriffin Exp $
  */
 
 /*
@@ -223,6 +223,7 @@ public class PrintfEditor extends JDialog
    */
   public void setCellData(EDPCellData data) {
     m_data = data;
+    paramKeys = data.getPlugin().getPrintfDescrs();
     data.getPlugin().addParamListener(this);
     setTemplate( (PrintfTemplate) data.getData());
     m_needsMatchPanel = data.getKey().equals(EditableDefinablePlugin.AU_RULES);
