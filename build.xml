@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.119 2004-10-20 19:56:11 tlipkis Exp $
+ $Id: build.xml,v 1.120 2004-10-21 18:35:06 smorabito Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -182,7 +182,7 @@ Args:
   <property name="lockss.generated.test.jar" value="${lib}/lockss-generated-test.jar"/>
   <property name="plugins.dir" value="${basedir}/plugins" />
   <property name="plugins.jar"
-	    value="${plugins.dir}/plugins.jar"/>
+	    value="${lib}/lockss-plugins.jar"/>
 
   <property name="ant-contrib.jar"      value="${lib}/ant-contrib-0.6.jar"/>
 
@@ -239,6 +239,8 @@ Args:
     <pathelement path="${httpunit.jar}" />
     <pathelement path="${nekohtml.jar}" />
     <pathelement path="${js.jar}" />
+    <!-- plugin jar -->
+    <pathelement path="${plugins.jar}" />
   </path>
 
   <path id="test.run.classpath">
@@ -500,7 +502,7 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
   </target>
 
   <!-- ==================================================================== -->
-  <target name="compile-tests" depends="jar-lockss,prepare.test"
+  <target name="compile-tests" depends="jar-plugins,prepare.test"
    description="Compile the LOCKSS test classes" >
     <javac srcdir="${test.src}"
            destdir="${test.classes}"
@@ -684,42 +686,59 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
   <target name="jar-lockss" depends="compile-lockss,build-info"
    description="Jar the LOCKSS classes" >
     <jar jarfile="${lockss.jar}" basedir="${classes}" >
-       <include name="**/" />
+      <include name="**/" />
+      <!-- Kludge to exclude plugin directories.  Remove when plugins are moved
+	   to their own project. -->
+      <exclude name="edu/**" />
+      <exclude name="gov/**" />
+      <exclude name="**/nypl/**" />
+      <exclude name="**/plugin/absinthe/**" />
+      <exclude name="**/plugin/acs/**"  />
+      <exclude name="**/plugin/bepress/**" />
+      <exclude name="**/plugin/bioone/**" />
+      <exclude name="**/plugin/blackbird/**" />
+      <exclude name="**/plugin/clogic/**" />
+      <exclude name="**/plugin/disputatio/**" />
+      <exclude name="**/plugin/emls/**" />
+      <exclude name="**/plugin/highwire/**" />
+      <exclude name="**/plugin/histcoop/**" />
+      <exclude name="**/plugin/ieee/**" />
+      <exclude name="**/plugin/jcjpc/**" />
+      <exclude name="**/plugin/ojs/**" />
+      <exclude name="**/molvis/plugin/**" />
+      <exclude name="**/plugin/othervoices/**" />	
+      <exclude name="**/plugin/projmuse/**" />
+      <exclude name="**/plugin/GendersPlugin.xml" />
     </jar>
   </target>
 
   <!-- ==================================================================== -->
-  <target name="jar-plugins" depends="compile-lockss,build-info,check.contrib"
+  <target name="jar-plugins" depends="jar-lockss,build-info,check.contrib"
 	  description="Jar the LOCKSS plugins" >
-    <mkdir dir="${plugins.dir}" />
-    <condition property="sign.jar.files" value="true" >
-      <and>
-	<isset property="sign-alias" />
-	<isset property="sign-keystore" />
-	<isset property="sign-keypass" />
-	<isset property="sign-storepass" />
-      </and>
-    </condition>
-    
-    <jar jarfile="${tmp.sign.jar}" basedir="${classes}" >
-      <include name="**/plugin/*/*.xml" />
-      <include name="**/plugin/*/*.class" />
-      <exclude name="**/plugin/base/**" />
-      <exclude name="**/plugin/definable/**" />
-      <exclude name="**/plugin/sample/**" />
+    <!-- Temporary kludge to build a jar containing the plugin classes excluded
+         from lockss.jar. To be removed when plugins are moved to their own project. -->
+    <jar jarfile="${plugins.jar}" basedir="${classes}" >
+      <include name="edu/**" />
+      <include name="gov/**" />
+      <include name="**/nypl/**" />
+      <include name="**/plugin/absinthe/**" />
+      <include name="**/plugin/acs/**"  />
+      <include name="**/plugin/bepress/**" />
+      <include name="**/plugin/bioone/**" />
+      <include name="**/plugin/blackbird/**" />
+      <include name="**/plugin/clogic/**" />
+      <include name="**/plugin/disputatio/**" />
+      <include name="**/plugin/emls/**" />
+      <include name="**/plugin/highwire/**" />
+      <include name="**/plugin/histcoop/**" />
+      <include name="**/plugin/ieee/**" />
+      <include name="**/plugin/jcjpc/**" />
+      <include name="**/molvis/plugin/**" />
+      <include name="**/plugin/ojs/**" />
+      <include name="**/plugin/othervoices/**" />	
+      <include name="**/plugin/projmuse/**" />
+      <include name="**/plugin/GendersPlugin.xml" />
     </jar>
-    
-    <if>
-      <isset property="sign.jar.files" />
-      <then>
-	<signjar keystore="${sign-keystore}"
-		 jar="${plugins.jar}"
-		 keypass="${sign-keypass}"
-		 storepass="${sign-storepass}"
-		 alias="${sign-alias}" />
-      </then>
-    </if>
-
   </target>
 
   <!-- ==================================================================== -->

@@ -38,7 +38,8 @@ PROP_URL_LIST="http://props.lockss.org:8001/03042003_dev/lockss.txt local.txt"
 mkdir -p lib
 cp ${PROJECT_DIR}/lib/lockss.jar lib
 cp ${PROJECT_DIR}/lib/lockss-test.jar lib
-CLASSPATH=lib/lockss.jar:lib/lockss-test.jar:`cat ${PROJECT_DIR}/test/test-classpath`
+cp ${PROJECT_DIR}/lib/lockss-plugins.jar lib
+CLASSPATH=lib/lockss.jar:lib/lockss-test.jar:lib/lockss-plugins.jar:`cat ${PROJECT_DIR}/test/test-classpath`
 export CLASSPATH
 #echo CLASSPATH=$CLASSPATH
 JVM_ARGS="-Xmx70m -Dsun.net.inetaddr.ttl=3600"
