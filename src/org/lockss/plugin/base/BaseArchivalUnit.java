@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.40 2003-11-11 23:30:50 clairegriffin Exp $
+ * $Id: BaseArchivalUnit.java,v 1.41 2003-11-13 01:41:54 clairegriffin Exp $
  */
 
 /*
@@ -355,16 +355,48 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     return auName;
   }
 
+  /**
+   * Use the starting url and the crawl rules to make the crawl spec needed
+   * to crawl this au.
+   * @return the CrawlSpec need by this au.
+   * @throws REException if the CrawlRules contain an invalid regular expression
+   */
   protected CrawlSpec makeCrawlSpec() throws REException {
 
     CrawlRule rule = makeRules();
     return new CrawlSpec(startUrlString, rule);
   }
 
+  /**
+   * subclasses should use this method to add any parameters that are not part
+   * of the base plugin.
+   * @param config the Configuration object containing the new configuration
+   * @throws ConfigurationException should be thrown if the information needed
+   * is not found or is invalid.
+   */
   abstract protected void setAuParams(Configuration config)
       throws ConfigurationException;
+
+  /**
+   * subclasses must implement this method to make and return the Crawl Rules
+   * needed to crawl content.
+   * @return CrawlRule object containing the necessary rules
+   * @throws REException thrown if the rules contain an unacceptable regular
+   * expression.
+   */
   abstract protected CrawlRule makeRules() throws REException;
+
+  /**
+   * subclasses must implement to make and return the url from which a crawl of
+   * this au will start.
+   * @return the starting url as a String
+   */
   abstract protected String makeStartUrl();
+
+  /**
+   * subclasses must implement to make and return the name for this au
+   * @return the au name as a String
+   */
   abstract protected String makeName();
 
   /**
@@ -470,6 +502,15 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   }
 
   // utility methods for configuration management
+  /**
+   * Get the URL for a key from the configuration, check for validity and return
+   * it.
+   * @param urlKey the key from the ConfigurationParmDescr of the url to extract
+   * @param config the Configuration object from which to extract the url
+   * @return a URL for the key
+   * @throws ConfigurationException thrown if there is no matching entry or
+   * the url is malformed or the url does not match the expectedUrlPath.
+   */
   protected URL loadConfigUrl(String urlKey, Configuration config) throws
       ConfigurationException {
     URL url = null;
@@ -496,6 +537,15 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     return url;
   }
 
+  /**
+   * Get the integer from the configuration, check for validity and return it.
+   * @param intKey the key from the CofnigurationParamDescr of the integer to
+   * extract.
+   * @param config the Configuration from which to extract the integer
+   * @return an int
+   * @throws ConfigurationException thrown if the key is not found or the entry
+   * is not an int.
+   */
   protected int loadConfigInt(String intKey, Configuration config) throws
       ConfigurationException {
     int value = -1;
@@ -509,6 +559,15 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     return value;
   }
 
+  /**
+   * Get the string from the configuration.
+   * @param strKey the key from rht ConfigurationParamDescr of the string to
+   * extract
+   * @param config the Configuration from which to extract the string
+   * @return the String
+   * @throws ConfigurationException thrown if the configuration does not contain
+   * the key.
+   */
   protected String loadConfigString(String strKey, Configuration config) throws
       ConfigurationException {
     String value = null;
