@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.24 2003-02-06 05:16:06 claire Exp $
+* $Id: PollManager.java,v 1.25 2003-02-07 05:04:40 claire Exp $
  */
 
 /*
@@ -46,6 +46,7 @@ import org.lockss.util.*;
 import org.mortbay.util.*;
 import gnu.regexp.*;
 import org.lockss.hasher.HashService;
+import org.lockss.repository.LockssRepository;
 /*
  TODO: move checkForConflict into the appropriate poll class
  TODO: replace checkForConflict url position with call to NodeManager
@@ -233,7 +234,7 @@ public class PollManager  implements LockssManager {
     }
 
     // check for conflicts
-    CachedUrlSet conflict = checkForConflicts(msg);
+    CachedUrlSet conflict = checkForConflicts(msg, cus);
     if(conflict != null) {
       String err = msg.toString() + " conflicts with " + conflict.toString() +
                    " in makeElection()";
@@ -311,15 +312,12 @@ public class PollManager  implements LockssManager {
    * check for conflicts between the poll defined by the Message and any
    * currently exsiting poll.
    * @param msg the <code>Message</code> to check
+   * @param cus the <code>CachedUrlSet</code> from the url and reg expression
    * @return the CachedUrlSet of the conflicting poll.
    */
-  CachedUrlSet checkForConflicts(LcapMessage msg) {
-    String url = msg.getTargetUrl();
-    String regexp = msg.getRegExp();
-    int    opcode = msg.getOpcode();
-    boolean isRegExp = regexp != null;
+  CachedUrlSet checkForConflicts(LcapMessage msg, CachedUrlSet cus) {
 
-    // verify polls are never conflicts
+    // eliminate incoming verify polls - never conflicts
     if(msg.isVerifyPoll()) {
       return null;
     }
@@ -328,66 +326,15 @@ public class PollManager  implements LockssManager {
     while(iter.hasNext()) {
       Poll p = ((PollManagerEntry)iter.next()).poll;
 
-      LcapMessage p_msg = p.getMessage();
-      String  p_url = p_msg.getTargetUrl();
-      String  p_regexp = p_msg.getRegExp();
-      int     p_opcode = p_msg.getOpcode();
-      boolean p_isRegExp = p_regexp != null;
-
-      // eliminate verify polls
-      if(p_msg.isVerifyPoll()) {
-        continue;
-      }
-      // int position = NodeManager.getRelativePosition(cus1, cus2);
-      //XXX this should be handled by something else
-      boolean alongside = p_url.equals(url);
-      boolean below = (p_url.startsWith(url) &&
-                       url.endsWith(File.separator));
-      boolean above = (url.startsWith(p_url) &&
-                       p_url.endsWith(File.separator));
-
-      // check for content poll conflicts
-      if(msg.isContentPoll()) {
-
-        if(alongside) { // only verify polls are allowed
-          theLog.debug("conflict new content or name poll alongside content poll");
-          return p.getCachedUrlSet();
-        }
-
-        if(above || below) { // verify and regexp polls are allowed
-          if(p_msg.isContentPoll()) {
-            if(p_isRegExp) {
-              continue;
-            }
-          }
-          theLog.debug("conflict new name poll above or below content poll");
-          return p.getCachedUrlSet();
-        }
-      }
-
-      // check for name poll conflicts
-      if(msg.isNamePoll()) {
-        if(alongside) { // only verify polls are allowed
-          theLog.debug("conflict new content or name poll alongside name poll");
-          return p.getCachedUrlSet();
-        }
-        if(above) { // only reg exp polls are allowed
-          if(p_msg.isContentPoll()) {
-            if(p_isRegExp) {
-              continue;
-            }
-          }
-          theLog.debug("conflict new name poll above name poll");
-          return p.getCachedUrlSet();
-        }
-
-        if(below) { // always a conflict
-          theLog.debug("conflict new poll below name poll");
+      if(!p.getMessage().isVerifyPoll()) { // eliminate running verify polls
+        int rel_pos = theDaemon.getLockssRepository().cusCompare(cus,
+          p.getCachedUrlSet());
+        if(rel_pos != LockssRepository.SAME_LEVEL_NO_OVERLAP &&
+           rel_pos != LockssRepository.NO_RELATION) {
           return p.getCachedUrlSet();
         }
       }
     }
-
     return null;
   }
 
