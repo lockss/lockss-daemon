@@ -1,5 +1,5 @@
 /*
-* $Id: V1Poll.java,v 1.17 2004-09-29 01:19:11 dshr Exp $
+* $Id: V1Poll.java,v 1.18 2004-09-29 06:36:20 tlipkis Exp $
  */
 
 /*
@@ -251,7 +251,7 @@ public abstract class V1Poll extends BasePoll {
 				     verifier,
 				     LcapMessage.VERIFY_POLL_REQ,
 				     duration,
-				     idMgr.getLocalPeerIdentity());
+				     idMgr.getLocalPeerIdentity(Poll.V1_POLL));
 
 	PeerIdentity originatorID = vote.getVoterIdentity();
 	log.debug2("sending our verification request to " +
@@ -275,7 +275,7 @@ public abstract class V1Poll extends BasePoll {
    */
   void castOurVote() {
     LcapMessage msg;
-    PeerIdentity local_id = idMgr.getLocalPeerIdentity();
+    PeerIdentity local_id = idMgr.getLocalPeerIdentity(Poll.V1_POLL);
     long remainingTime = m_deadline.getRemainingTime();
     try {
       msg = LcapMessage.makeReplyMsg(m_msg, m_hash, m_verifier, null,

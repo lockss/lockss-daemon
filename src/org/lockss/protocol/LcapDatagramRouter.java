@@ -1,5 +1,5 @@
 /*
- * $Id: LcapDatagramRouter.java,v 1.3 2004-09-27 22:39:09 smorabito Exp $
+ * $Id: LcapDatagramRouter.java,v 1.4 2004-09-29 06:36:20 tlipkis Exp $
  */
 
 /*
@@ -39,7 +39,7 @@ import org.lockss.util.*;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
-import org.lockss.poller.PollManager;
+import org.lockss.poller.*;
 import org.apache.commons.collections.LRUMap;
 import org.mortbay.util.B64Code;
 
@@ -364,7 +364,7 @@ public class LcapDatagramRouter
   void sendNoOp() {
     try {
       LcapMessage noOp =
-	LcapMessage.makeNoOpMsg(idMgr.getLocalPeerIdentity(),
+	LcapMessage.makeNoOpMsg(idMgr.getLocalPeerIdentity(Poll.V1_POLL),
 				pollMgr.generateRandomBytes());
       log.debug2("noop: " + noOp);
       send(noOp, null);

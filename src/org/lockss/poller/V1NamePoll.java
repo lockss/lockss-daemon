@@ -1,5 +1,5 @@
 /*
- * $Id: V1NamePoll.java,v 1.8 2004-09-29 01:19:11 dshr Exp $
+ * $Id: V1NamePoll.java,v 1.9 2004-09-29 06:36:20 tlipkis Exp $
  */
 
 /*
@@ -67,7 +67,7 @@ public class V1NamePoll extends V1Poll {
    */
   void castOurVote() {
     LcapMessage msg;
-    PeerIdentity local_id = idMgr.getLocalPeerIdentity();
+    PeerIdentity local_id = idMgr.getLocalPeerIdentity(Poll.V1_POLL);
     long remainingTime = m_deadline.getRemainingTime();
     log.debug("castOurVote: " + local_id);
     try {
@@ -213,7 +213,8 @@ public class V1NamePoll extends V1Poll {
         // we call a new poll on the remaining entries and set the regexp
 	PollSpec spec = new PollSpec(m_pollspec.getCachedUrlSet(),
 				     lwrRem, uprRem,
-				     Poll.NAME_POLL);
+				     Poll.NAME_POLL,
+				     Poll.V1_POLL);
 	if (m_pollmanager.callPoll(spec)) {
           log.error("unable to call name poll for " + spec);
         }

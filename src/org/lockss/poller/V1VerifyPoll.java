@@ -1,5 +1,5 @@
 /*
-* $Id: V1VerifyPoll.java,v 1.9 2004-09-29 01:19:11 dshr Exp $
+* $Id: V1VerifyPoll.java,v 1.10 2004-09-29 06:36:20 tlipkis Exp $
  */
 
 /*
@@ -210,7 +210,7 @@ class V1VerifyPoll extends V1Poll {
         null,
         LcapMessage.VERIFY_POLL_REP,
         msg.getDuration(),
-        idMgr.getLocalPeerIdentity());
+        idMgr.getLocalPeerIdentity(Poll.V1_POLL));
 
     PeerIdentity originator = msg.getOriginatorID();
     log.debug("sending our verification reply to " + originator.toString());
