@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.4 2002-10-24 23:22:08 aalto Exp $
+ * $Id: StringUtil.java,v 1.5 2002-10-25 02:32:50 aalto Exp $
  */
 
 /*
@@ -250,18 +250,15 @@ public class StringUtil {
    * 2 instances of 'xx', not 4.  Empty string as a substring returns 0.
    */
   public static int substringCount(String str, String subStr) {
-    if (subStr.equals("")) return 0;
-    String copyStr = str;
+    int len = subStr.length();
+    if (len == 0) {
+      return 0;
+    }
+    int pos = 0;
     int count = 0;
-    while (true) {
-      int idx = copyStr.indexOf(subStr);
-      if (idx<0) break;
-      else {
-        count++;
-        if (copyStr.length() > idx+subStr.length()) {
-          copyStr = copyStr.substring(idx + subStr.length());
-        } else break;
-      }
+    while ((pos = str.indexOf(subStr, pos)) >= 0) {
+      count++;
+      pos += len;
     }
     return count;
   }
