@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.9 2002-11-20 00:02:05 tal Exp $
+ * $Id: LockssTestCase.java,v 1.10 2002-11-20 00:26:18 tal Exp $
  */
 
 /*
@@ -81,7 +81,10 @@ public class LockssTestCase extends TestCase {
 	DoLater doer = (DoLater)iter.next();
 	doer.cancel();
       }
-      doLaters = null;
+      // do NOT set doLaters to null here.  It may be referenced by
+      // exiting DoLaters.  It won't hurt anything because the next test
+      // will create a new instance of the test case, and get a different
+      // doLaters list
     }
     super.tearDown();
   }
