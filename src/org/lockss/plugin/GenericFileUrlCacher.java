@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileUrlCacher.java,v 1.20 2003-08-02 00:16:05 eaalto Exp $
+ * $Id: GenericFileUrlCacher.java,v 1.21 2003-08-12 01:10:36 eaalto Exp $
  */
 
 /*
@@ -41,15 +41,14 @@ import org.lockss.plugin.base.*;
 import org.lockss.app.*;
 
 /**
- * This is an abstract file implementation of UrlCacher which uses the
- * {@link LockssRepository}. The source for the content needs to be provided
- * in any extension.
+ * This is a file implementation of BaseUrlCacher which uses the
+ * {@link LockssRepository}.
  *
  * @author  Emil Aalto
  * @version 0.0
  */
 
-public abstract class GenericFileUrlCacher extends BaseUrlCacher {
+public class GenericFileUrlCacher extends BaseUrlCacher {
   private LockssRepository repository;
 
   public GenericFileUrlCacher(CachedUrlSet owner, String url) {
