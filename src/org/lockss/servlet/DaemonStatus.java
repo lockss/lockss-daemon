@@ -1,5 +1,5 @@
 // ========================================================================
-// $Id: DaemonStatus.java,v 1.11 2003-04-02 10:52:03 tal Exp $
+// $Id: DaemonStatus.java,v 1.12 2003-04-03 11:34:53 tal Exp $
 // ========================================================================
 
 /*
@@ -132,7 +132,7 @@ public class DaemonStatus extends LockssServlet {
     }
     java.util.List colList = statTable.getColumnDescriptors();
     java.util.List rowList = statTable.getSortedRows();
-    String title = statTable.getTitle();
+    String title0 = statTable.getTitle();
     String titleFoot = statTable.getTitleFootnote();
 
     Table table = null;
@@ -147,7 +147,7 @@ public class DaemonStatus extends LockssServlet {
       table = new Table(0, "ALIGN=CENTER CELLSPACING=2 CELLPADDING=0");
       if (html) {
 	// ensure title footnote numbered before ColDesc.HEADs
-	title = title + addFootnote(titleFoot);
+	String title = title0 + addFootnote(titleFoot);
 
 	table.newRow();
 	table.addHeading(title, "ALIGN=CENTER COLSPAN=" +
@@ -183,7 +183,7 @@ public class DaemonStatus extends LockssServlet {
 	}
       } else {
 	wrtr.println();
-	wrtr.println("table=" + title);
+	wrtr.println("table=" + title0);
 	if (tableKey != null) {
 	  wrtr.println("key=" + tableKey);
 	}	  
@@ -221,6 +221,8 @@ public class DaemonStatus extends LockssServlet {
     if (html && table != null) {
       page.add(table);
       page.add("<br>");
+      String heading = getHeading();
+      page.title("LOCKSS: " + title0 + " - " + heading);
     }
   }
 
