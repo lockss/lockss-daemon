@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkHandler.java,v 1.41 2003-11-13 11:16:35 tlipkis Exp $
+ * $Id: TreeWalkHandler.java,v 1.42 2003-11-13 22:23:57 eaalto Exp $
  */
 
 /*
@@ -63,6 +63,44 @@ public class TreeWalkHandler {
       TREEWALK_PREFIX + "start.delay";
   static final long DEFAULT_TREEWALK_START_DELAY = Constants.MINUTE;
 
+  /**
+   * Configuration parameter name for initial estimate, in ms.
+   */
+  public static final String PARAM_TREEWALK_INITIAL_ESTIMATE =
+      TREEWALK_PREFIX + "initial.estimate";
+  static final long DEFAULT_TREEWALK_INITIAL_ESTIMATE = 30 * Constants.MINUTE;
+  static final long MIN_TREEWALK_ESTIMATE = 10 * Constants.SECOND;
+
+  /**
+   * Configuration parameter name for padding of first estimates, as multiplier.
+   */
+  public static final String PARAM_TREEWALK_ESTIMATE_PADDING_MULTIPLIER =
+      TREEWALK_PREFIX + "estimate.padding.multiplier";
+  static final double DEFAULT_TREEWALK_ESTIMATE_PADDING_MULTIPLIER = 1.5;
+
+  /**
+   * Configuration parameter name for padding of first estimates, as multiplier.
+   */
+  public static final String PARAM_TREEWALK_USE_SCHEDULER =
+      TREEWALK_PREFIX + "use.scheduler";
+  static final boolean DEFAULT_TREEWALK_USE_SCHEDULER = true;
+
+  /**
+   * Configuration parameter name for occasional sleep interval, when
+   * treewalk rests to maintain a proper load factor (assumes 100% when running).
+   */
+  public static final String PARAM_TREEWALK_SLEEP_INTERVAL =
+      TREEWALK_PREFIX + "sleep.interval";
+  static final long DEFAULT_TREEWALK_SLEEP_INTERVAL = Constants.SECOND;
+  static final long MIN_TREEWALK_SLEEP_INTERVAL = 500;
+
+  /**
+   * Configuration parameter name for overall load factor (assumes 100% when running).
+   */
+  public static final String PARAM_TREEWALK_LOAD_FACTOR =
+      TREEWALK_PREFIX + "load.factor";
+  static final double DEFAULT_TREEWALK_LOAD_FACTOR = .90;
+
   static final double MAX_DEVIATION = 0.4;
 
   NodeManagerImpl manager;
@@ -79,6 +117,14 @@ public class TreeWalkHandler {
   long topPollInterval;
   long treeWalkTestDuration;
   long startDelay;
+  long initialEstimate;
+  float estPadding;
+  boolean useScheduler;
+
+  long sleepInterval;
+  long sleepDuration; // this is calculated
+  Deadline nextSleep;
+  float loadFactor;
 
   boolean treeWalkAborted;
   boolean forceTreeWalk = false;
@@ -109,7 +155,28 @@ public class TreeWalkHandler {
         PARAM_TREEWALK_INTERVAL, DEFAULT_TREEWALK_INTERVAL);
     startDelay = config.getTimeInterval(
         PARAM_TREEWALK_START_DELAY, DEFAULT_TREEWALK_START_DELAY);
+    initialEstimate = config.getTimeInterval(
+        PARAM_TREEWALK_INITIAL_ESTIMATE, DEFAULT_TREEWALK_INITIAL_ESTIMATE);
+    estPadding = config.getPercentage(
+        PARAM_TREEWALK_ESTIMATE_PADDING_MULTIPLIER,
+        DEFAULT_TREEWALK_ESTIMATE_PADDING_MULTIPLIER);
+    useScheduler = config.getBoolean(PARAM_TREEWALK_USE_SCHEDULER,
+        DEFAULT_TREEWALK_USE_SCHEDULER);
+    sleepInterval = config.getTimeInterval(
+        PARAM_TREEWALK_SLEEP_INTERVAL, DEFAULT_TREEWALK_SLEEP_INTERVAL);
+    if (sleepInterval < MIN_TREEWALK_SLEEP_INTERVAL) {
+      sleepInterval = DEFAULT_TREEWALK_SLEEP_INTERVAL;
+    }
+    loadFactor = config.getPercentage(
+        PARAM_TREEWALK_LOAD_FACTOR, DEFAULT_TREEWALK_LOAD_FACTOR);
+    sleepDuration = calculateSleepDuration(sleepInterval, loadFactor);
     logger.debug3("treeWalkInterval reset to "+treeWalkInterval);
+  }
+
+  private long calculateSleepDuration(long interval, double load) {
+    // duration must be sufficient for overall load to equal the load factor
+    // if interval is assumed 100% and sleep duration is 0%
+    return (long)(interval/load) - interval;
   }
 
 /**
@@ -125,8 +192,8 @@ public class TreeWalkHandler {
 
     //get expiration time
     long expiration = treeWalkInterval;
-    if (getAverageTreeWalkDuration() > 0) {
-      expiration = 2 * getAverageTreeWalkDuration();
+    if (getEstimatedTreeWalkDuration() > 0) {
+      expiration = 2 * getEstimatedTreeWalkDuration();
     }
     // check with regulator to see if treewalk can proceed
     activityLock = theRegulator.getAuActivityLock(ActivityRegulator.TREEWALK,
@@ -138,14 +205,16 @@ public class TreeWalkHandler {
           treeWalkAborted = true;
           theCrawlManager.startNewContentCrawl(theAu, null, null, activityLock);
           logger.debug("Requested new content crawl.  Aborting...");
-        }
-        else {
+        } else {
           // do the actual treewalk
           logger.debug("Tree walk started: " + theAu.getName());
           long startTime = TimeBase.nowMs();
           nodeTreeWalk();
           long elapsedTime = TimeBase.msSince(startTime);
-          updateEstimate(elapsedTime);
+          if (!treeWalkAborted) {
+            // only update if a full treewalk occurred.
+            updateEstimate(elapsedTime);
+          }
         }
       } catch (Exception e) {
         logger.error("Error in treewalk: ", e);
@@ -168,6 +237,9 @@ public class TreeWalkHandler {
   }
 
   private void nodeTreeWalk() {
+    // initialize sleep interval
+    nextSleep = Deadline.in(sleepInterval);
+
     CachedUrlSet cus = theAu.getAuCachedUrlSet();
     recurseTreeWalk(cus);
   }
@@ -187,6 +259,7 @@ public class TreeWalkHandler {
       // treewalk has been terminated
       return false;
     }
+
     boolean pContinue = true;
     // get the node state for the cus
     logger.debug3("Recursing treewalk on cus: "+cus.getUrl());
@@ -229,6 +302,14 @@ public class TreeWalkHandler {
    * @return true if treewalk can continue below
    */
   boolean checkNodeState(NodeState node) {
+    // if it's time to sleep, sleep and reset deadline
+    if ((nextSleep!=null) && (nextSleep.expired())) {
+      try {
+        Deadline.in(sleepDuration).sleep();
+      } catch (InterruptedException ie) { }
+      nextSleep = Deadline.in(sleepInterval);
+    }
+
     // at each node, check for recrawl needed
     if (node.getCachedUrlSet().hasContent()) {
       //XXX if (theCrawlManager.shouldRecrawl(managerAu, node)) {
@@ -272,6 +353,31 @@ public class TreeWalkHandler {
     logger.debug3(StringUtil.timeIntervalToString(timeSinceLastTW) +
                   " since last treewalk");
     return treeWalkInterval - timeSinceLastTW;
+  }
+
+  /*
+   * Returns the current treewalk average.  INITIAL_ESTIMATE until a treewalk
+   * is run.
+   * @return the estimate, in ms
+   */
+  long getEstimatedTreeWalkDuration() {
+    // initial estimate from parameter
+    if (treeWalkEstimate < 0) {
+      treeWalkEstimate = initialEstimate;
+    }
+    // always at least minimum estimate
+    if (treeWalkEstimate < MIN_TREEWALK_ESTIMATE) {
+      treeWalkEstimate += MIN_TREEWALK_ESTIMATE;
+    }
+    return treeWalkEstimate;
+  }
+
+  void updateEstimate(long elapsedTime) {
+    // no averaging, just padding
+    treeWalkEstimate = (long)(estPadding * elapsedTime);
+    if (treeWalkEstimate < MIN_TREEWALK_ESTIMATE) {
+      treeWalkEstimate += MIN_TREEWALK_ESTIMATE;
+    }
   }
 
   /**
@@ -325,11 +431,8 @@ public class TreeWalkHandler {
   class TreeWalkThread extends Thread {
     private boolean goOn = true;
     boolean doingTreeWalk = false;
-    boolean randomDelay = true;
     Deadline deadline;
     private static final long SMALL_SLEEP = Constants.SECOND;
-    private static final double TREEWALK_LOAD_FACTOR = .90;
-    private static final long DEFAULT_TREEWALK_LENGTH = 3 * Constants.MINUTE;
     static final long SCHEDULING_PAD_VALUE = 5 * Constants.SECOND;
     private BinarySemaphore treeWalkSemaphore = new BinarySemaphore();
 
@@ -338,51 +441,28 @@ public class TreeWalkHandler {
     }
 
     public void run() {
+      while (!theDaemon.isDaemonRunning()) {
+        // if the daemon isn't up yet, do a short sleep
+        logger.debug2("Daemon not running yet. Sleeping...");
+        try {
+          Deadline.in(SMALL_SLEEP).sleep();
+        } catch (InterruptedException ie) { }
+      }
+      long extraDelay = startDelay;
       while (goOn) {
-        long timeToStart = timeUntilTreeWalkStart();
-        if (randomDelay) {
-          // only random delay the first time, to allow better test communication
-          long delta = (long) ( (double) MAX_DEVIATION * startDelay);
-          deadline = Deadline.inRandomRange(startDelay, startDelay + delta);
-          logger.debug3("Random sleep for " +
-                        StringUtil.timeIntervalToString(
-              deadline.getRemainingTime()));
-          try {
-            deadline.sleep();
-          } catch (InterruptedException ie) { }
-          randomDelay = false;
-        } else if (!theDaemon.isDaemonRunning()) {
-          // if the daemon isn't up yet, do a short sleep
-          logger.debug2("Daemon not running yet. Sleeping...");
-          deadline = Deadline.in(SMALL_SLEEP);
-          try {
-            deadline.sleep();
-          } catch (InterruptedException ie) { }
-        } else {
-          // default 'start now'
-          long start = TimeBase.nowMs() + SCHEDULING_PAD_VALUE;
-          // if starting in the future, create a randomized value
-          if (timeToStart > SCHEDULING_PAD_VALUE) {
-            long delta = (long) ( (double) MAX_DEVIATION * timeToStart);
-            logger.debug3("Creating a deadline for " +
-                          StringUtil.timeIntervalToString(timeToStart) +
-                          " with delta of " +
-                          StringUtil.timeIntervalToString(delta));
-            deadline = Deadline.inRandomRange(timeToStart,
-                                              timeToStart + delta);
-            start = deadline.getExpirationTime();
-          }
+        long start = chooseTimeToRun(extraDelay);
+        extraDelay = 0;
 
-          long est = getAverageTreeWalkDuration();
-          if (est<=0) {
-            est = DEFAULT_TREEWALK_LENGTH;
-          }
-          long end = start + est;
+        long est = getEstimatedTreeWalkDuration();
+        long end = start + est;
 
+        BackgroundTask task = null;
+
+        if (useScheduler) {
+          // using SchedService
           logger.debug2("Scheduling of treewalk...");
           SchedService schedSvc = theDaemon.getSchedService();
           TaskCallback cb = new TreeWalkTaskCallback();
-          BackgroundTask task;
 
           // loop trying to find a time
           while (true) {
@@ -393,10 +473,11 @@ public class TreeWalkHandler {
               logger.debug3("Using estimate of " + est + "ms.");
             }
             task = new BackgroundTask(startDeadline, Deadline.at(end),
-                                      TREEWALK_LOAD_FACTOR, cb) {
-		public String getShortText() {
-		  return "TreeWalk: " + theAu.getName();
-		}};
+                                      loadFactor, cb) {
+              public String getShortText() {
+                return "TreeWalk: " + theAu.getName();
+              }
+            };
             if (schedSvc.scheduleTask(task)) {
               // task is scheduled, your taskEvent callback will be called at the
               // start and end times
@@ -404,33 +485,59 @@ public class TreeWalkHandler {
                             startDeadline.toString());
               break;
             } else {
-              // can't fit into existing schedule.  try another hour in the future
-              start += DEFAULT_TREEWALK_LENGTH;
+              // can't fit into existing schedule.  try adjusting by estimate length
+              start += est;
               end = start + est;
               logger.debug3("Schedule failed.  Trying new time.");
             }
           }
+        } else {
+          // use TimerQueue
+          logger.debug2("Setting treewalk in TimerQueue...");
+          TimerQueue.schedule(Deadline.at(start),
+                              new TreeWalkTimerCallback(), null);
+        }
 
-          doingTreeWalk = true;
-          // wait on the semaphore (the callback will 'give()')
-          try {
-            treeWalkSemaphore.take(Deadline.at(end));
-          } catch (InterruptedException ie) {
-            logger.error("TreeWalkThread semaphore was interrupted:" + ie);
-            continue;
-          }
+        doingTreeWalk = true;
+        // wait on the semaphore (the callback will 'give()')
+        try {
+          treeWalkSemaphore.take(Deadline.at(end));
+        } catch (InterruptedException ie) {
+          logger.error("TreeWalkThread semaphore was interrupted:" + ie);
+          continue;
+        }
 
-          doTreeWalk();
+        doTreeWalk();
 
-          // if background activity finishes before end time, call
-          if (!Deadline.at(end).expired()) {
-            logger.debug3("Ending task early...");
+        // if background activity finishes before end time, call
+        if (!Deadline.at(end).expired()) {
+          logger.debug3("Ending task early...");
+          if (task!=null) {
             task.taskIsFinished();
           }
-
-          doingTreeWalk = false;
         }
+
+        doingTreeWalk = false;
       }
+    }
+
+    private long chooseTimeToRun(long additionalDelay) {
+      long timeToStart = timeUntilTreeWalkStart() + additionalDelay;
+
+      // default 'start now'
+      long newStart = TimeBase.nowMs() + SCHEDULING_PAD_VALUE + additionalDelay;
+      // if starting in the future, create a randomized value
+      if (timeToStart > (SCHEDULING_PAD_VALUE + additionalDelay)) {
+        long delta = (long) ( (double) MAX_DEVIATION * timeToStart);
+        logger.debug3("Creating a deadline for " +
+                      StringUtil.timeIntervalToString(timeToStart) +
+                      " with delta of " +
+                      StringUtil.timeIntervalToString(delta));
+        deadline = Deadline.inRandomRange(timeToStart,
+                                          timeToStart + delta);
+        newStart = deadline.getExpirationTime();
+      }
+      return newStart;
     }
 
     public void end() {
@@ -464,27 +571,22 @@ public class TreeWalkHandler {
             // free the lock
             activityLock.expire();
 	    treeWalkAborted = true;
+            // couldn't finish in time; pad estimate
+            treeWalkEstimate *= estPadding;
           }
         }
       }
     }
-  }
 
-  /*
-   * Returns the current treewalk average.  -1 until a treewalk is run.
-   * @return the estimate, in ms
-   */
-  long getAverageTreeWalkDuration() {
-    return treeWalkEstimate;
-  }
-
-  void updateEstimate(long elapsedTime) {
-    if (treeWalkEstimate==-1) {
-      treeWalkEstimate = elapsedTime;
-    } else {
-      // average with current estimate
-      treeWalkEstimate = (treeWalkEstimate + elapsedTime) / 2;
+    class TreeWalkTimerCallback implements TimerQueue.Callback {
+      /**
+       * Called when the timer expires.
+       * @param cookie data supplied by caller to schedule()
+       */
+      public void timerExpired(Object cookie) {
+        treeWalkSemaphore.give();
+      }
     }
-  }
 
+  }
 }

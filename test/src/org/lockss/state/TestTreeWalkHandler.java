@@ -1,5 +1,5 @@
 /*
- * $Id: TestTreeWalkHandler.java,v 1.31 2003-09-26 23:47:45 eaalto Exp $
+ * $Id: TestTreeWalkHandler.java,v 1.32 2003-11-13 22:23:57 eaalto Exp $
  */
 
 /*
@@ -310,11 +310,19 @@ public class TestTreeWalkHandler extends LockssTestCase {
   }
 
   public void testAverageTreeWalkDuration() {
-    assertEquals(-1, treeWalkHandler.getAverageTreeWalkDuration());
+    // starts with default estimate
+    assertEquals(treeWalkHandler.DEFAULT_TREEWALK_INITIAL_ESTIMATE,
+                 treeWalkHandler.getEstimatedTreeWalkDuration());
     treeWalkHandler.updateEstimate(100);
-    assertEquals(100, treeWalkHandler.getAverageTreeWalkDuration());
-    treeWalkHandler.updateEstimate(200);
-    assertEquals(150, treeWalkHandler.getAverageTreeWalkDuration());
+    // first value gets padded by 1.5 and MIN_TREEWALK_ESTIMATE is added
+    long expectedL = (long)((100 * treeWalkHandler.DEFAULT_TREEWALK_ESTIMATE_PADDING_MULTIPLIER) +
+        treeWalkHandler.MIN_TREEWALK_ESTIMATE);
+    assertEquals(expectedL, treeWalkHandler.getEstimatedTreeWalkDuration());
+    treeWalkHandler.updateEstimate(treeWalkHandler.MIN_TREEWALK_ESTIMATE + 200);
+    // no averaging, so just padded by 1.5
+    expectedL = (long)((treeWalkHandler.MIN_TREEWALK_ESTIMATE + 200) *
+        treeWalkHandler.DEFAULT_TREEWALK_ESTIMATE_PADDING_MULTIPLIER);
+    assertEquals(expectedL, treeWalkHandler.getEstimatedTreeWalkDuration());
   }
 
   private Poll createPoll(String url, boolean isContentPoll, int numAgree,
