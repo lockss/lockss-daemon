@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.171 2004-03-11 02:30:15 eaalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.172 2004-03-19 05:56:38 eaalto Exp $
  */
 
 /*
@@ -254,6 +254,11 @@ public class NodeManagerImpl
 
     if (!state.isMyPoll() && hasDamage(cus)) {
       logger.info("CUS has damage, not starting poll: " + cus);
+      return false;
+    }
+
+    if (managedAu.shouldCrawlForNewContent(auState)) {
+      logger.info("New content crawl needed, not starting poll: " + managedAu);
       return false;
     }
 
