@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.6 2002-10-31 01:23:12 troberts Exp $
+ * $Id: StringUtil.java,v 1.7 2002-10-31 01:56:56 aalto Exp $
  */
 
 /*
@@ -274,7 +274,7 @@ public class StringUtil {
    * This ignores overlap, starting from the left, so 'xxxxxy' would have
    * 2 instances of 'xx', not 4.  Empty string as a substring returns 0.
    */
-  public static int substringCount(String str, String subStr) {
+  public static int countOccurences(String str, String subStr) {
     int len = subStr.length();
     if (len == 0) {
       return 0;
