@@ -1,5 +1,5 @@
 /*
- * $Id: TestMBF1.java,v 1.6 2003-07-26 01:19:30 dshr Exp $
+ * $Id: TestMBF1.java,v 1.7 2003-08-04 21:36:05 dshr Exp $
  */
 
 /*
@@ -84,7 +84,7 @@ public class TestMBF1 extends LockssTestCase {
   /*
    * Test a series of generate/verify pairs
    */
-  public void testMultiple() throws IOException {
+  public void dontTestMultiple() throws IOException {
     for (int i = 0; i < 64; i++) {
       onePair(15, 32);
     }
@@ -101,7 +101,7 @@ public class TestMBF1 extends LockssTestCase {
     byte[] nonce = new byte[24];
     int e;
     int l;
-    long proof;
+    int[] proof;
     int numTries = 10;
     long totalGenerateTime;
     long totalVerifyTime;
@@ -130,7 +130,7 @@ public class TestMBF1 extends LockssTestCase {
     byte[] nonce = new byte[24];
     int e = 63;
     int[] l = { 8, 64, 256 };
-    long proof;
+    int[] proof;
     int numTries = 20;
     long[] totalGenerateTime = new long[l.length];
     long[] totalVerifyTime = new long[l.length];
@@ -169,7 +169,7 @@ public class TestMBF1 extends LockssTestCase {
     byte[] nonce = new byte[24];
     int[] e = { 3, 15, 63 };
     int l = 64;
-    long proof;
+    int[] proof;
     int numTries = 10;
     long[] totalGenerateTime = new long[e.length];
     long[] totalVerifyTime = new long[e.length];
@@ -212,7 +212,7 @@ public class TestMBF1 extends LockssTestCase {
     byte[] nonce = new byte[24];
     int e = 7;
     int l = 32;
-    long proof;
+    int[] proof = new int[1];
     int numTries = 2048;
     int numYes = 0;
     int numNo = 0;
@@ -221,7 +221,8 @@ public class TestMBF1 extends LockssTestCase {
 
     for (int i = 0; i < numTries; i++) {
       rand.nextBytes(nonce);
-      if (verify(nonce, e, l, i, 64) == 0)
+      proof[0] = i;
+      if (verify(nonce, e, l, proof, 64))
 	numYes++;
       else
 	numNo++;
@@ -234,18 +235,18 @@ public class TestMBF1 extends LockssTestCase {
   }
 
   public void dontTestPathlengthHistogram() throws IOException {
-    int[] numberOfProofs = new int[32];
-    int[] costOfProofs = new int[numberOfProofs.length];
+    long[] numberOfProofs = new long[32];
+    long[] costOfProofs = new long[numberOfProofs.length];
     for (int i = 0; i < numberOfProofs.length; i++) {
       numberOfProofs[i] = 0;
       costOfProofs[i] = 0;
     }
-    int sampleSize = 512;
+    int sampleSize = 120; // About 80 s/sample
     byte[] nonce = new byte[24];
-    int[] e = {63, 127, 255, 511, 1023};
-    int l = 8;
-    int steps = 8;
-    int slop = 1000;
+    int[] e = {63, 511, 4095, (4096*8-1)};
+    int l = 2048;
+    int steps = 2048;
+    int slop = 100000;
     int tooLong = 0;
     for (int j = 0; j < e.length; j++) {
       for (int i = 0; i < sampleSize; i++) {
@@ -320,37 +321,45 @@ public class TestMBF1 extends LockssTestCase {
   }
 
 
-  private long generate(byte[] nonce, int e, int l, int steps, int slop)
+  private int[] generate(byte[] nonce, int e, int l, int steps, int slop)
     throws IOException {
     MemoryBoundFunction mbf = new MBF1(nonce, e, l);
     int limit = (e * l * slop);
     pathsTried = 0;
     while (mbf.computeSteps(steps)) {
-      assertEquals(mbf.result(), -1);
+      assertFalse(mbf.finished());
       if (limit <= 0)
 	log.info("stepout e " + e + " l " + l + " steps " + steps);
       assertTrue(limit > 0);
       limit -= steps;
       pathsTried += (steps / l);
     }
-    long res = mbf.result();
-    log.debug("generate " + res);
-    assertTrue(res >= 0 && res < basis.length);
+    int[] res = mbf.result();
+    log.debug("generate [" + res.length + "] first "  + res[0]);
+    assertTrue(res[0] >= 0 && res[0] < basis.length);
     return (res);
   }
 
-  private long verify(byte[] nonce, int e, int l, long proof, int steps)
+  private boolean verify(byte[] nonce, int e, int l, int[] proof, int steps)
     throws IOException {
-    MemoryBoundFunction mbf2 = new MBF1(nonce, e, l, proof);
-    int limit = (l * 10);
-    while (mbf2.computeSteps(steps)) {
-      assertEquals(mbf2.result(), -1);
-      assertTrue(limit > 0);
-      limit -= steps;
-    }
-    long res2 = mbf2.result();
-    log.debug("verify " + proof + " returns " + res2);
-    return res2;
+    boolean ret = false;
+    if (proof != null) {
+      MemoryBoundFunction mbf2 = new MBF1(nonce, e, l, proof);
+      int limit = (l * 10);
+      while (mbf2.computeSteps(steps)) {
+	assertFalse(mbf2.finished());
+	assertTrue(limit > 0);
+	limit -= steps;
+      }
+      int[] res2 = mbf2.result();
+      if (res2 == null)
+	log.debug("verify [" + proof.length + "] first " + proof[0] + " fails");
+      else {
+	ret = true;
+	log.debug("verify [" + proof.length + "] first " + proof[0] + " succeeds");
+      }
+    }      
+    return (ret);
   }
 
   /**
@@ -360,13 +369,14 @@ public class TestMBF1 extends LockssTestCase {
     long startTime = System.currentTimeMillis();
     byte[] nonce = new byte[64];
     rand.nextBytes(nonce);
-    long proof = generate(nonce, e, l, 8, 100);
-    long ret = verify(nonce, e, l, proof, 8);
-    assertTrue(ret == 0);
+    int[] proof = generate(nonce, e, l, 8, 100);
+    boolean ret = verify(nonce, e, l, proof, 8);
+    assertTrue(ret);
     if (false) {
       // XXX we'd like to be able to say this but we can't
-      ret = verify(nonce, e, l, proof + 1, 8);
-      assertTrue(ret > 0);
+      proof[0] += 1;
+      ret = verify(nonce, e, l, proof, 8);
+      assertTrue(ret);
     }
     log.debug("onePair(" + e + "," + l + ") took " +
 	     (System.currentTimeMillis() - startTime) + " msec");

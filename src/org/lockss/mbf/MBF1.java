@@ -1,5 +1,5 @@
 /*
- * $Id: MBF1.java,v 1.4 2003-07-26 01:05:45 dshr Exp $
+ * $Id: MBF1.java,v 1.5 2003-08-04 21:36:05 dshr Exp $
  */
 
 /*
@@ -83,7 +83,8 @@ public class MBF1 extends MemoryBoundFunction {
    * Bound Functions for Fighting Spam", in "Advances in Cryptology
    * (CRYPTO 2003)".
    * @param nVal a byte array containing the nonce
-   * @param eVal the effort sizer (# of low-order zeros in destination)
+   * @param eVal the effort sizer (roundup(log2(e), where e is the
+   *     number of low-order zeros in a successful path)
    *
    */
   public MBF1(byte[] nVal, int eVal, int lVal)
@@ -96,18 +97,19 @@ public class MBF1 extends MemoryBoundFunction {
   /**
    * Public constructor for an object that will verify a proof of effort.
    * @param nVal a byte array containing the nonce
-   * @param eVal the effort sizer (# of low-order zeros in destination)
-   * @param sVal the starting point chosen by the prover
+   * @param eVal the effort sizer (roundup(log2(e), where e is the
+   *     number of low-order zeros in a successful path)
+   * @param sVal a one-entry array with the starting point chosen by the prover
    * 
    */
-  public MBF1(byte[] nVal, int eVal, int lVal, long sVal)
+  public MBF1(byte[] nVal, int eVal, int lVal, int[] sVal)
     throws MemoryBoundFunctionException {
     super(nVal, eVal, lVal, sVal);
     ensureConfigured();
     setup();
   }
 
-  protected boolean match() throws MemoryBoundFunctionException {
+  private boolean match() {
     return (lowBit >= ourE);
   }
 
@@ -161,7 +163,7 @@ public class MBF1 extends MemoryBoundFunction {
   // Path initialization
   private void createPath() throws MemoryBoundFunctionException {
     if (verify)
-      k = (int)arrayIndexStart;
+      k = proof[0];
     else
       k++;
     i = 0;
@@ -230,7 +232,8 @@ public class MBF1 extends MemoryBoundFunction {
 		" >= " + ourE);
     if (lowBit >= ourE) {
       // We got a match, set finished
-      arrayIndexStart = k;
+      proof = new int[1];
+      proof[0] = 1;
       finished = true;
     } else if (verify) {
       finished = true;

@@ -1,5 +1,5 @@
 /*
- * $Id: MemoryBoundFunction.java,v 1.3 2003-07-26 01:05:46 dshr Exp $
+ * $Id: MemoryBoundFunction.java,v 1.4 2003-08-04 21:36:05 dshr Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ public abstract class MemoryBoundFunction {
 
   protected byte[] nonce;
   protected long e;
+  protected int[] proof;
   protected long arrayIndexStart;
   protected boolean verify;
   protected boolean finished;
@@ -50,29 +51,26 @@ public abstract class MemoryBoundFunction {
 
   /**
    * Public constructor for an object that will compute a proof
-   * of effort using a memory-bound function technique due to
-   * Cynthia Dwork, Andrew Goldberg and Moni Naor, "On Memory-
-   * Bound Functions for Fighting Spam", in "Advances in Cryptology
-   * (CRYPTO 2003)".
+   * of effort using a memory-bound function technique.
    * @param nVal a byte array containing the nonce
    * @param eVal the effort sizer (# of low-order zeros in destination)
    *
    */
   public MemoryBoundFunction(byte[] nVal, long eVal, int lVal) {
     setup(nVal, eVal, lVal);
-    arrayIndexStart = -1;
+    proof = null;
   }
 
   /**
    * Public constructor for an object that will verify a proof of effort.
    * @param nVal a byte array containing the nonce
    * @param eVal the effort sizer (# of low-order zeros in destination)
-   * @param sVal the starting point chosen by the prover
+   * @param sVal an array of ints containing the proof
    * 
    */
-  public MemoryBoundFunction(byte[] nVal, long eVal, int lVal, long sVal) {
+  public MemoryBoundFunction(byte[] nVal, long eVal, int lVal, int[] sVal) {
     setup(nVal, eVal, lVal);
-    arrayIndexStart = sVal;
+    proof = sVal;
     verify = true;
   }
 
@@ -85,44 +83,39 @@ public abstract class MemoryBoundFunction {
   }
 
   /**
-   * Obtain the result of the MBF.  If this object has not yet finished,
-   * the result will be -1.  If this object is generating a proof,
-   * the result will be an integer between 0 and the size of the basis file.
-   * If this object is verifying a proof,  the result will be 0 if the
-   * proof is valid, and >0 if it is invalid.
+   * Return true if the proof generation or verification is finished.
+   * @return true if the proof generation or verification is finished.
    */
-  public long result() throws MemoryBoundFunctionException {
-    long ret = -1;
-    if (finished) {
-      logger.debug2("result - finished");
-      if (verify) {
-	if (match())
-	  ret = 0;
-	else
-	  ret = 1;
-      } else {
-	logger.debug2("result " + arrayIndexStart);
-	ret = arrayIndexStart;
-      }
-    }
-    logger.debug("result " + ret);
-    return (ret);
+  public boolean finished() {
+    return (finished);
+  }
+
+  /**
+   * Obtain the result of the MBF.  If this object has not yet finished,
+   * throws MemoryBoundFunction Exception.  If this object is generating
+   * a proof, the result will be an array of ints between 0 and the size
+   * of the basis file.  If this object is verifying a proof,  the result
+   * will be the proof array if the proof is valid, and null if it is invalid.
+   * Generating an empty proof returns null,  validating null returns null
+   * for invalid.
+   * @return array of int containing the proof,  null if invalid
+   * 
+   */
+  public int[] result() throws MemoryBoundFunctionException {
+    if (!finished)
+      throw new MemoryBoundFunctionException("not finished");
+    return (proof);
   }
 
   /**
    * If there is no current path,  choose a starting point and set it
    * as the current path.  Move up to "n" steps along the current path.
-   * At each step, if the set length of the path "l" is exhausted,
-   * unset the current path and check for a match.  If a match is found,
-   * set finished.
+   * Set finished if appropriate.
    * @param n number of steps to move.
    * 
    */
   public abstract boolean computeSteps(int n)
     throws MemoryBoundFunctionException;
-
-  // Return true if the low log2(e) bits of value are zero.
-  protected abstract boolean match() throws MemoryBoundFunctionException;
 
   // configuration
   protected static void configure() {
