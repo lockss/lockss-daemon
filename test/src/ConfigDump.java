@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigDump.java,v 1.7 2005-01-27 00:11:48 smorabito Exp $
+ * $Id: ConfigDump.java,v 1.8 2005-01-27 00:52:24 smorabito Exp $
  */
 
 /*
@@ -131,10 +131,10 @@ public class ConfigDump {
     try {
       File localTxt = new File(FileTestUtil.createTempDir("configdump", null),
 			       "local.txt");
-      FileWriter out = new FileWriter(localTxt);
-      out.write(ConfigManager.PARAM_PLATFORM_FQDN + "=" + hostName);
-      out.flush();
-      out.close();
+      Properties localProps = new Properties();
+      localProps.setProperty(ConfigManager.PARAM_PLATFORM_FQDN,
+			     hostName);
+      localProps.store(new FileOutputStream(localTxt), null);
       result = localTxt.getAbsolutePath();
     } catch (IOException ex) {
       System.err.println("Unable to create local.txt temp file: " + ex);
