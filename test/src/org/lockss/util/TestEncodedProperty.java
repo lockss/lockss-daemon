@@ -1,5 +1,5 @@
 /*
-* $Id: TestEncodedProperty.java,v 1.1 2002-10-04 17:37:40 claire Exp $
+* $Id: TestEncodedProperty.java,v 1.2 2002-10-06 21:27:16 tal Exp $
  */
 
 /*
@@ -41,7 +41,7 @@ import org.lockss.test.*;
 /**
  * Test class for <code>EncodedProperty</code>.
  */
-public class TestEncodedProperty extends TestCase {
+public class TestEncodedProperty extends LockssTestCase {
   public static Class testedClasses[] = {
     org.lockss.util.EncodedProperty.class
   };
@@ -87,7 +87,7 @@ public class TestEncodedProperty extends TestCase {
     catch (IOException ex) {
       fail("prop decoding failed\n");
     }
-    assertTrue(PropUtil.equalProps(props1,props2));
+    assertEquals(props1,props2);
   }
 
   public void testTransformation() {
@@ -106,8 +106,7 @@ public class TestEncodedProperty extends TestCase {
     catch (IOException ex) {
       fail("prop decoding UTF-16 failed\n");
     }
-    assertTrue(PropUtil.equalProps(props1,props2));
-
+    assertEquals(props1,props2);
   }
 
 
