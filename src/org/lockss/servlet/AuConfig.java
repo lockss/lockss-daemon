@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.7.2.1 2003-09-11 07:49:27 tlipkis Exp $
+ * $Id: AuConfig.java,v 1.7.2.2 2003-09-12 01:32:55 tlipkis Exp $
  */
 
 /*
@@ -48,6 +48,10 @@ import org.lockss.daemon.status.*;
 /** Create and update AU configuration.
  */
 public class AuConfig extends LockssServlet {
+
+  static final String PARAM_INCLUDE_PLUGIN_IN_TITLE_SELECT =
+    Configuration.PREFIX + "auconfig.includePluginInTitleSelect";
+  static final boolean DEFAULT_INCLUDE_PLUGIN_IN_TITLE_SELECT = false;
 
   static Logger log = Logger.getLogger("AuConfig");
 
@@ -240,18 +244,26 @@ public class AuConfig extends LockssServlet {
     endPage(page);
   }
 
+  // tk - temporary - should handle more than one plugin for title
+  Plugin getTitlePlugin(String title) {
+    Collection c = pluginMgr.getTitlePlugins(title);
+    if (c == null || c.isEmpty()) {
+      return null;
+    }
+    return (Plugin)c.iterator().next();
+  }
+
   /** Display form to add a new AU */
   private void displayEditNew() throws IOException {
     String title = req.getParameter("Title");
     if (!StringUtil.isNullString(title)) {
-      Collection c = pluginMgr.getTitlePlugins(title);
-      if (c == null || c.isEmpty()) {
+      // tk - need to deal with > 1 plugin for title
+      plugin = getTitlePlugin(title);
+      if (plugin == null) {
 	errMsg = "Unknown title: " + encodeText(title);
 	displayAddAu();
 	return;
       }
-      // tk - need to deal with > 1 plugin for title
-      plugin = (Plugin)c.iterator().next();
       if (formConfig == null) {
 	formConfig = plugin.getConfigForTitle(title);
       }
@@ -313,6 +325,9 @@ public class AuConfig extends LockssServlet {
 
     Collection titles = pluginMgr.findAllTitles();
     if (!titles.isEmpty()) {
+      boolean includePluginInTitleSelect =
+	configMgr.getBooleanParam(PARAM_INCLUDE_PLUGIN_IN_TITLE_SELECT,
+				  DEFAULT_INCLUDE_PLUGIN_IN_TITLE_SELECT);
       tbl.newRow();
       tbl.newCell("colspan=3 align=center");
       tbl.add("Choose a title:<br>");
@@ -320,10 +335,19 @@ public class AuConfig extends LockssServlet {
       sel.add("-no selection-", true, "");
       for (Iterator iter = titles.iterator(); iter.hasNext(); ) {
 	String title = (String)iter.next();
-	sel.add(encodeText(title), false);
+	String selText = encodeText(title);
+	if (includePluginInTitleSelect) {
+	  Plugin titlePlugin = getTitlePlugin(title);
+	  if (titlePlugin != null) {
+	    String plugName = titlePlugin.getPluginName();
+	    String dispText = selText + " (" + plugName + ")";
+	    sel.add(dispText, false, selText);
+	    continue;
+	  }
+	}
+	sel.add(selText, false);
       }
       tbl.add(sel);
-//       frm.add("<br>- or-");
       addOr(tbl);
     }
     SortedMap pMap = new TreeMap();
@@ -359,7 +383,7 @@ public class AuConfig extends LockssServlet {
     tbl.add("Then click to edit parameter values");
     tbl.add("<br>");
     tbl.add(new Input(Input.Hidden, ACTION_TAG, "EditNew"));
-    tbl.add(new Input(Input.Submit, "button", "Edit Parameters"));
+    tbl.add(new Input(Input.Submit, "button", "Continue"));
     frm.add(tbl);
     page.add(frm);
     page.add("</center><br>");

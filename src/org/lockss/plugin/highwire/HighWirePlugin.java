@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePlugin.java,v 1.25 2003-08-04 07:57:49 tlipkis Exp $
+ * $Id: HighWirePlugin.java,v 1.25.4.1 2003-09-12 01:32:55 tlipkis Exp $
  */
 
 /*
@@ -59,7 +59,7 @@ public class HighWirePlugin extends BasePlugin {
   public static final String AUPARAM_VOL = PD_VOL.getKey();
 
   private static String titleSpec[][] = {
-    {"BMJ", AUPARAM_BASE_URL, "http://shadow1.lockss.org/"},
+    {"Test - Shadow1", AUPARAM_BASE_URL, "http://shadow1.lockss.org/"},
     {"JHC", AUPARAM_BASE_URL, "http://www.jhc.org/"},
   };
 

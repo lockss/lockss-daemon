@@ -1,5 +1,5 @@
 /*
- * $Id: ProjectMusePlugin.java,v 1.4 2003-08-28 00:10:56 eaalto Exp $
+ * $Id: ProjectMusePlugin.java,v 1.4.2.1 2003-09-12 01:32:55 tlipkis Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ import org.lockss.app.LockssDaemon;
  */
 
 public class ProjectMusePlugin extends BasePlugin {
-  private static String PLUGIN_NAME = "Project Muse Plugin";
+  private static String PLUGIN_NAME = "Project Muse";
   private static String CURRENT_VERSION = "Pre-release";
 
   static final ConfigParamDescr PD_BASE = ConfigParamDescr.BASE_URL;
