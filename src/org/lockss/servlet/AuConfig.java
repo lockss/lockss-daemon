@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.29 2004-08-02 05:27:17 tlipkis Exp $
+ * $Id: AuConfig.java,v 1.30 2004-08-18 07:09:51 tlipkis Exp $
  */
 
 /*
@@ -728,15 +728,17 @@ public class AuConfig extends LockssServlet {
 	tbl.newRow();
 	tbl.newCell("align=left");
 	tbl.add(radioButton(repo, REPO_TAG, first));
-	tbl.newCell("align=right");
-	tbl.add("&nbsp;");
-	tbl.add(StringUtil.sizeKBToString(df.getSize()));
-	tbl.newCell("align=right");
-	tbl.add("&nbsp;");
-	tbl.add(StringUtil.sizeKBToString(df.getAvail()));
-	tbl.newCell("align=right");
-	tbl.add("&nbsp;");
-	tbl.add(df.getPercentString());
+	if (df != null) {
+	  tbl.newCell("align=right");
+	  tbl.add("&nbsp;");
+	  tbl.add(StringUtil.sizeKBToString(df.getSize()));
+	  tbl.newCell("align=right");
+	  tbl.add("&nbsp;");
+	  tbl.add(StringUtil.sizeKBToString(df.getAvail()));
+	  tbl.newCell("align=right");
+	  tbl.add("&nbsp;");
+	  tbl.add(df.getPercentString());
+	}
 	first = false;
       }
       comp.add(tbl);
