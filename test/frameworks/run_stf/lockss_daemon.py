@@ -409,7 +409,7 @@ class Client:
         for row in tab:
             rowPollType = row['PollType']
             # some rows do not have a range.
-            if not (row.has_key('Range') and rowPollType == 'N'):
+            if row.has_key('Range') or not rowPollType == 'N':
                 continue
             rowUrl = row['URL']
             rowStatus = row['Status']
