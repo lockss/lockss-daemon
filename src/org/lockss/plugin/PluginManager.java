@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.40 2003-07-23 06:40:17 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.41 2003-07-27 01:41:49 tlipkis Exp $
  */
 
 /*
@@ -322,7 +322,30 @@ public class PluginManager extends BaseLockssManager {
     return au;
   }
 
+  /** Delete AU configuration from the local config file.  Need to find a
+   * better place for this.
+   * @param plugin the Plugin in which to create the AU
+   * @param auConf the new AU configuration, using simple prop keys (not
+   * prefixed with org.lockss.au.<i>auid</i>)
+   * @return the new AU
+   */
+  public void deleteAUConfiguration(ArchivalUnit au)
+      throws ArchivalUnit.ConfigurationException, IOException {
+    log.debug("Deleting AU config: " + au);
+    updateAuConfigFile(au, ConfigManager.EMPTY_CONFIGURATION);
+  }
 
+  /** Return the stored config info for an AU (from config file, not from
+   * AU instance).
+    * @return the AU's Configuration, with unprefixed keys.
+   */
+  public Configuration getStoredAuConfiguration(ArchivalUnit au) {
+    Configuration config = configMgr.readAuConfigFile();
+    String auid = au.getAUId();
+    String prefix = PARAM_AU_TREE + "." + configKeyFromAUId(auid);
+    return config.getConfigTree(prefix);
+  }
+  
   /**
    * load a plugin with the given class name from somewhere in our classpath
    * @param pluginKey the key for this plugin
