@@ -1,5 +1,5 @@
 /*
- * $Id: TestPropUtil.java,v 1.5 2003-06-20 22:34:56 claire Exp $
+ * $Id: TestPropUtil.java,v 1.5.20.1 2004-03-18 20:10:50 tlipkis Exp $
  */
 
 /*
@@ -159,4 +159,20 @@ public class TestPropUtil extends TestCase {
     assertEquals(expected, actual);
   }
 
+  void assertEncodedPropsInverse(Properties props) {
+    String s = PropUtil.propsToCanonicalEncodedString(props);    
+    Properties newProps = PropUtil.canonicalEncodedStringToProps(s);    
+    assertEquals(props, newProps);
+  }
+
+  public void testEncodedPropsInverse() {
+    assertEncodedPropsInverse(new Properties());
+
+    Properties props = new Properties();
+    props.setProperty("key&1", "val=1");
+    props.setProperty("key2", "val 2");
+    props.setProperty("key.3", "val:3");
+    props.setProperty("key4", "val.4");
+    assertEncodedPropsInverse(props);
+  }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: PropUtil.java,v 1.5 2003-06-20 22:34:53 claire Exp $
+ * $Id: PropUtil.java,v 1.5.20.1 2004-03-18 20:10:50 tlipkis Exp $
  */
 /*
 
@@ -129,6 +129,38 @@ public class PropUtil {
       }
     }
     return sb.toString();
+  }
+
+  /**
+   * Turns the canonical string into properties
+   * @param s a string returned by propsToCanonicalEncodedString()
+   * @return Properties from which the canonical string was generated
+   */ 
+  public static Properties canonicalEncodedStringToProps(String s)
+      throws IllegalArgumentException {
+    Properties res = new Properties();
+    if (StringUtil.isNullString(s)) {
+      return res;
+    }
+    StringTokenizer tk = new StringTokenizer(s, "~&", true);
+    while (tk.hasMoreElements()) {
+      String key = tk.nextToken();
+      String tok = tk.nextToken();
+      if (!tok.equals("~")) {
+	throw new IllegalArgumentException("Delimiter not \"~\": " + tok);
+      }
+      String val = tk.nextToken();
+      res.setProperty(PropKeyEncoder.decode(key),
+		      PropKeyEncoder.decode(val));
+
+      if (tk.hasMoreElements()) {
+	tok = tk.nextToken();
+	if (!tok.equals("&")) {
+	  throw new IllegalArgumentException("Delimiter not \"&\": " + tok);
+	}
+      }
+    }
+    return res;
   }
 
   /**
