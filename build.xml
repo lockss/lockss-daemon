@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.103 2004-08-21 06:54:05 tlipkis Exp $
+ $Id: build.xml,v 1.104 2004-09-01 02:19:52 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -1532,6 +1532,34 @@ Test results in ${tools.test.results}
    </taskdef>
    <property name="ant-contrib.loaded" value="true" />
   </target>
+
+  <target name="-load.findbugs"
+          unless="findbugs.loaded"
+          depends="-check-if-1.4,check.contrib" >
+   <taskdef name="findbugs"
+            classname="edu.umd.cs.findbugs.anttask.FindBugsTask"/>
+   <property name="findbugs.loaded" value="true" />
+   <if>
+     <isset property="env.FINDBUGS_HOME" />
+     <then>
+       <property name="findbugs.home" value="${env.FINDBUGS_HOME}" />
+     </then>
+     <else>
+       <property name="findbugs.home" value="/usr/local/findbugs" />
+     </else>
+   </if>
+  </target>
+
+  <target name="findbugs" depends="jar-lockss, -load.findbugs"
+   description="Run FindBugs on the main source tree." >
+    <findbugs home="${findbugs.home}"
+              output="emacs" >
+      <auxClasspath refid="run.classpath" />
+      <sourcePath path="${src}" />
+      <class location="${lockss.jar}" />
+    </findbugs>
+  </target>
+
 
 <!--
   <target name="check.ant-contrib.jar" unless="ant-contrib.available" >
