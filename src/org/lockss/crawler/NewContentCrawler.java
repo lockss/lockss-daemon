@@ -1,5 +1,5 @@
 /*
- * $Id: NewContentCrawler.java,v 1.13 2004-03-10 23:32:22 clairegriffin Exp $
+ * $Id: NewContentCrawler.java,v 1.14 2004-03-11 09:40:23 tlipkis Exp $
  */
 
 /*
@@ -167,7 +167,7 @@ public class NewContentCrawler extends CrawlerImpl {
   /** We always want our UrlCacher to store all redirected copies */
   protected UrlCacher makeUrlCacher(CachedUrlSet cus, String url) {
     UrlCacher uc = super.makeUrlCacher(cus, url);
-    uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_STORE_ALL);
+    uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_STORE_ALL_IN_SPEC);
     return uc;
   }
 

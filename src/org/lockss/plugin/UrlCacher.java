@@ -1,5 +1,5 @@
 /*
- * $Id: UrlCacher.java,v 1.9 2004-03-09 23:37:53 tlipkis Exp $
+ * $Id: UrlCacher.java,v 1.10 2004-03-11 09:40:23 tlipkis Exp $
  */
 
 /*
@@ -46,13 +46,27 @@ import org.lockss.util.urlconn.*;
  */
 public interface UrlCacher {
 
-  /** Automatically follow all redirects */
-  public static final int REDIRECT_SCHEME_FOLLOW = 1;
+  /** Follow redirects */
+  public static final int REDIRECT_OPTION_FOLLOW_AUTO = 1;
+  /** Follow redirects only if match crawl spec */
+  public static final int REDIRECT_OPTION_IF_CRAWL_SPEC = 2;
+  /** Store content under all redirected names */
+  public static final int REDIRECT_OPTION_STORE_ALL = 4;
+
   /** Don't follow redirects; throw CacheException.RetryNewUrlException if
    * redirect response received */
-  public static final int REDIRECT_SCHEME_DONT_FOLLOW = 2;
+  public static final RedirectScheme REDIRECT_SCHEME_DONT_FOLLOW =
+    new RedirectScheme(0);
+  /** Automatically follow all redirects */
+  public static final RedirectScheme REDIRECT_SCHEME_FOLLOW =
+    new RedirectScheme(REDIRECT_OPTION_FOLLOW_AUTO);
+  /** Follow redirects only in crawl spec */
+  public static final RedirectScheme REDIRECT_SCHEME_FOLLOW_IN_SPEC =
+    new RedirectScheme(REDIRECT_OPTION_IF_CRAWL_SPEC);
   /** Follow redirects iff within the crawl spec, store under all names */
-  public static final int REDIRECT_SCHEME_STORE_ALL = 3;
+  public static final RedirectScheme REDIRECT_SCHEME_STORE_ALL_IN_SPEC =
+    new RedirectScheme(REDIRECT_OPTION_IF_CRAWL_SPEC +
+		       REDIRECT_OPTION_STORE_ALL);
 
   /**
    * Return the url being represented
@@ -93,7 +107,7 @@ public interface UrlCacher {
   public void setForceRefetch(boolean force);
 
   /** Determines the behavior if a redirect response is received. */
-  public void setRedirectScheme(int scheme);
+  public void setRedirectScheme(RedirectScheme scheme);
 
   /**
    * Copies the content and properties from the source into the cache.
@@ -121,4 +135,13 @@ public interface UrlCacher {
       throws IOException;
 
 
+  public static class RedirectScheme {
+    private int options = 0;
+    public RedirectScheme(int options) {
+      this.options = options;
+    }
+    public int getOptions() {
+      return options;
+    }
+  }
 }
