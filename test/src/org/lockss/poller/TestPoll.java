@@ -109,8 +109,8 @@ public class TestPoll extends TestCase {
       // unitialized comm
     }
 
-    assertEquals(1, p.m_agree);
-    assertEquals(rep, p.m_agreeWt);
+    assertEquals(1, p.m_tally.numYes);
+    assertEquals(rep, p.m_tally.wtYes);
     assertTrue(rep <= id.getReputation());
 
     rep = id.getReputation();
@@ -121,60 +121,33 @@ public class TestPoll extends TestCase {
     catch(IllegalStateException ex) {
       // unitialized comm
     }
-    assertEquals(1, p.m_disagree);
-    assertEquals(rep, p.m_disagreeWt);
+    assertEquals(1, p.m_tally.numNo);
+    assertEquals(rep, p.m_tally.wtNo);
     assertTrue(rep >= id.getReputation());
   }
 
-  /** test for method handleAgreeVote(..) */
-  public void testHandleAgreeVote() {
-    Poll p = testpolls[1];
-    LcapMessage msg = p.getMessage();
-    p.handleAgreeVote(msg);
-    assertEquals(1, p.m_agree);
-  }
-
-  /** test for method handleDisagreeVote(..) */
-  public void testHandleDisagreeVote() {
-    Poll p = testpolls[1];
-    LcapMessage msg = p.getMessage();
-    p.handleDisagreeVote(msg);
-    assertEquals(1, p.m_disagree);
-  }
 
   /** test for method tally(..) */
   public void testTally() {
     Poll p = testpolls[0];
     LcapMessage msg = p.getMessage();
-    p.handleDisagreeVote(msg);
-    p.handleDisagreeVote(msg);
-    p.handleDisagreeVote(msg);
-    try {
-      p.tally();
-    }
-    catch(IllegalStateException ex) {
-      // unitialized comm
-    }
-    assertEquals(0, p.m_agree);
-    assertEquals(0, p.m_agreeWt);
-    assertEquals(3, p.m_disagree);
-    assertEquals(1500, p.m_disagreeWt);
+    p.m_tally.addVote(new Poll.Vote(msg,false));
+    p.m_tally.addVote(new Poll.Vote(msg,false));
+    p.m_tally.addVote(new Poll.Vote(msg,false));
+    assertEquals(0, p.m_tally.numYes);
+    assertEquals(0, p.m_tally.wtYes);
+    assertEquals(3, p.m_tally.numNo);
+    assertEquals(1500, p.m_tally.wtNo);
 
     p = testpolls[1];
     msg = p.getMessage();
-    p.handleAgreeVote(msg);
-    p.handleAgreeVote(msg);
-    p.handleAgreeVote(msg);
-    try {
-      p.tally();
-    }
-    catch(IllegalStateException ex) {
-      // unitialized comm
-    }
-    assertEquals(3, p.m_agree);
-    assertEquals(1500, p.m_agreeWt);
-    assertEquals(0, p.m_disagree);
-    assertEquals(0, p.m_disagreeWt);
+    p.m_tally.addVote(new Poll.Vote(msg,true));
+    p.m_tally.addVote(new Poll.Vote(msg,true));
+    p.m_tally.addVote(new Poll.Vote(msg,true));
+    assertEquals(3, p.m_tally.numYes);
+    assertEquals(1500, p.m_tally.wtYes);
+    assertEquals(0, p.m_tally.numNo);
+    assertEquals(0, p.m_tally.wtNo);
   }
 
   /** test for method vote(..) */
@@ -196,11 +169,11 @@ public class TestPoll extends TestCase {
   /** test for method voteInPoll(..) */
   public void testVoteInPoll() {
     Poll p = testpolls[0];
-    p.m_quorum = 10;
-    p.m_agree = 5;
-    p.m_disagree = 2;
-    p.m_agreeWt = 2000;
-    p.m_disagreeWt = 200;
+    p.m_tally.quorum = 10;
+    p.m_tally.numYes = 5;
+    p.m_tally.numNo = 2;
+    p.m_tally.wtYes = 2000;
+    p.m_tally.wtNo = 200;
     p.m_hash = PollManager.generateRandomBytes();
     try {
       p.voteInPoll();
@@ -209,7 +182,7 @@ public class TestPoll extends TestCase {
       // the socket isn't inited and should squack
     }
 
-    p.m_agree = 20;
+    p.m_tally.numYes = 20;
     try {
       p.voteInPoll();
     }
@@ -232,17 +205,17 @@ public class TestPoll extends TestCase {
   /** test for method startVote(..) */
   public void testStartVote() {
     Poll p = testpolls[0];
-    p.m_counting = 3;
+    p.m_pendingVotes = 3;
     p.startVote();
-    assertEquals(4, p.m_counting);
+    assertEquals(4, p.m_pendingVotes);
   }
 
   /** test for method stopVote(..) */
   public void testStopVote() {
     Poll p = testpolls[1];
-    p.m_counting = 3;
+    p.m_pendingVotes = 3;
     p.stopVote();
-    assertEquals(2,p.m_counting);
+    assertEquals(2,p.m_pendingVotes);
   }
 
   public void testVerifyPoll() {

@@ -1,5 +1,5 @@
 /*
- * $Id: PollTestPlugin.java,v 1.2 2002-11-12 23:42:54 claire Exp $
+ * $Id: PollTestPlugin.java,v 1.3 2002-12-16 06:04:28 claire Exp $
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.24 2002-12-06 01:51:02 claire Exp $
+* $Id: Poll.java,v 1.25 2002-12-16 06:04:28 claire Exp $
  */
 
 /*
@@ -78,14 +78,8 @@ public abstract class Poll {
   static Logger log=Logger.getLogger("Poll");
 
   LcapMessage m_msg;      // The message which triggered the poll
-  int m_quorum = DEFAULT_QUORUM;       // The caller's quorum value
 
-  int m_agree = 0;        // The # of votes we've heard that agree with us
-  int m_agreeWt = 0;      // the sum of the the agree weights
   double m_agreeVer = 0;     // the max percentage of time we will verify
-
-  int m_disagree = 0;     // The # of votes we've heard that disagree with us
-  int m_disagreeWt = 0;   // the sum of the disagree weights
   double m_disagreeVer = 0;  // the max percentage of time we will verify
 
   ArchivalUnit m_arcUnit; // the url as an archival unit
@@ -103,10 +97,12 @@ public abstract class Poll {
   LcapIdentity m_caller;   // who called the poll
   int m_replyOpcode = -1;  // opcode used to reply to poll
   long m_hashTime;         // an estimate of the time it will take to hash
-  int m_counting;          // the number of polls currently active
   long m_createTime;       // poll creation time
   String m_key;            // the string we use to store this poll
   int m_pollstate;         // one of state constants above
+
+  int m_pendingVotes;      // the number of votes waiting to be tallied
+  VoteTally m_tally;       // the vote tallier
 
   /**
    * create a new poll from a message
@@ -117,7 +113,6 @@ public abstract class Poll {
    */
   Poll(LcapMessage msg, CachedUrlSet urlSet) {
     /* initialize with our parameters */
-    m_quorum = Configuration.getIntParam(PARAM_QUORUM, DEFAULT_QUORUM);
     m_agreeVer = ((double)Configuration.getIntParam(PARAM_AGREE_VERIFY,
         DEFAULT_AGREE_VERIFY)) / 100;
     m_disagreeVer = ((double)Configuration.getIntParam(PARAM_DISAGREE_VERIFY,
@@ -127,6 +122,7 @@ public abstract class Poll {
     m_urlSet = urlSet;
 
     m_createTime = TimeBase.nowMs();
+    m_tally = new VoteTally(msg.getOpcode(),msg.getDuration());
 
     // now copy the msg elements we need
     m_url = msg.getTargetUrl();
@@ -199,91 +195,47 @@ public abstract class Poll {
               String.valueOf(B64Code.encode(hashResult))+
               " against "+
               String.valueOf(B64Code.encode(hashed)));
-    if(Arrays.equals(hashed, hashResult)) {
-      handleAgreeVote(msg);
-    }
-    else {
-      handleDisagreeVote(msg);
+
+    boolean agree = Arrays.equals(hashed, hashResult);
+    m_tally.addVote(new Vote(msg, agree));
+    if(msg.getOriginID().isLocalIdentity()) {
+      randomVerify(msg, true);
     }
   }
 
-
   /**
-   * handle an agree vote
-   * @param msg the <code>Message</code> that we agree with
+   * randomly verify a vote.  The random percentage is determined by
+   * agreement and reputation of the voter.
+   * @param msg the LcapMessage to check
+   * @param isAgreeVote true if this vote agreed with ours, false otherwise
    */
-  void handleAgreeVote(LcapMessage msg) {
+  void randomVerify(LcapMessage msg, boolean isAgreeVote) {
     LcapIdentity id = msg.getOriginID();
+    int max = id.getMaxReputaion();
     int weight = id.getReputation();
-    synchronized (this) {
-      m_agree++;
-      m_agreeWt += weight;
-    }
+    double verify;
 
-    log.info("I agree with " + msg.toString() + " rep " + weight);
-    if (!msg.isLocal()) {
-      try {
-        int max = msg.getOriginID().getMaxReputaion();
-        double verify = ((double)(max - weight)) / max * m_agreeVer;
-        VerifyPoll.randomRequestVerify(msg, verify);
-      }
-      catch (IOException ex) {
-        log.debug("attempt to randomly verify failed:", ex);
-      }
-    }
-    // rememberVote(id, true);
-    id.agreeWithVote();
-  }
-
-  /**
-   * handle a disagree vote
-   * @param msg the <code>Message</code> that we disagree with
-   */
-  void handleDisagreeVote(LcapMessage msg) {
-    LcapIdentity id = msg.getOriginID();
-    int weight = id.getReputation();
-    boolean local = msg.isLocal();
-
-    synchronized (this) {
-      m_disagree++;
-      m_disagreeWt += weight;
-    }
-    if (local) {
-      log.error("I disagree with myself about " + msg.toString()
-                + " rep " + weight);
+    if(isAgreeVote) {
+      verify = ((double)(max - weight)) / max * m_agreeVer;
     }
     else {
-      log.info("I disagree with " + msg.toString() + " rep " + weight);
+      verify = ((double)weight) / max * m_disagreeVer;
     }
-    if (!local) {
-      try {
-        int max = msg.getOriginID().getMaxReputaion();
-        double verify = ((double)weight) / max * m_disagreeVer;
-        VerifyPoll.randomRequestVerify(msg, verify );
-      }
-      catch (IOException ex) {
-        log.debug("attempt to verify randomly failed.", ex);
+    try {
+      if(ProbabilisticChoice.choose(verify)) {
+        PollManager.requestVerifyPoll(msg);
       }
     }
-    //rememberVote(id, false);
-    id.disagreeWithVote();
+    catch (IOException ex) {
+      log.debug("attempt to verify vote failed:", ex);
+    }
   }
 
   /**
    * tally the poll results
    */
   protected void tally() {
-    int yes;
-    int no;
-    int yesWt;
-    int noWt;
-    synchronized (this) {
-      yes = m_agree;
-      no = m_disagree;
-      yesWt = m_agreeWt;
-      noWt = m_disagreeWt;
-    }
-    //NodeManager.recordTally(m_arcUnit, this, yes, no, yesWt, noWt, m_replyOpcode);
+    //NodeManager.recordTally(m_tally);
   }
 
   /**
@@ -328,7 +280,7 @@ public abstract class Poll {
    */
   void voteInPoll() {
     //we don't vote if we're winning by a landslide
-    if((m_agree - m_disagree) <= m_quorum) {
+    if(!m_tally.isLeadEnough()) {
       vote();
     }
     m_pollstate = PS_WAIT_TALLY;
@@ -348,8 +300,7 @@ public abstract class Poll {
    * and prevent any more activity in this poll.
    */
   void stopPoll() {
-    boolean have_quorum = (m_agree + m_disagree) >= m_quorum;
-    m_pollstate = have_quorum ? PS_COMPLETE : ERR_NO_QUORUM;
+    m_pollstate = m_tally.haveQuorum() ? PS_COMPLETE : ERR_NO_QUORUM;
 
     if(isErrorState()) {
       // XXX - notify node manager of failed poll
@@ -366,17 +317,20 @@ public abstract class Poll {
    * start the hash required for a vote cast in this poll
    */
   void startVote() {
-    m_counting++;
+    m_pendingVotes++;
   }
 
   /**
    * stop and record a vote cast in this poll
    */
   void stopVote() {
-    m_counting--;
+    m_pendingVotes--;
   }
 
 
+  boolean tooManyPending() {
+    return m_pendingVotes > m_tally.quorum + 1;
+  }
 
   /**
    * get the message used to define this Poll
@@ -403,6 +357,12 @@ public abstract class Poll {
   }
 
 
+  /**
+   * Return a hasher preinited with the challenge and verifier
+   * @param challenge the challenge bytes
+   * @param verifier the verifier bytes
+   * @return a MessageDigest
+   */
   MessageDigest getInitedHasher(byte[] challenge, byte[] verifier) {
     MessageDigest hasher = PollManager.getHasher();
     hasher.update(challenge, 0, challenge.length);
@@ -510,15 +470,16 @@ public abstract class Poll {
     public int type;
     public long startTime;
     public long duration;
-    public int numYes;
-    public int numNo;
-    public int wtYes;
-    public int wtNo;
+    public int numYes;        // The # of votes that agree with us
+    public int numNo;         // The # of votes that disagree with us
+    public int wtYes;         // The weight of the votes that agree with us
+    public int wtNo;          // The weight of the votes that disagree with us
     public ArrayList pollVotes;
 
+    int quorum;       // The # of votes needed to have a quorum
 
     VoteTally(int type, long startTime, long duration, int numYes,
-              int numNo, int wtYes, int wtNo, int quorum) {
+              int numNo, int wtYes, int wtNo) {
       this.type = type;
       this.startTime = startTime;
       this.duration = duration;
@@ -526,14 +487,45 @@ public abstract class Poll {
       this.numNo = numNo;
       this.wtYes = wtYes;
       this.wtNo = wtNo;
+      quorum = Configuration.getIntParam(PARAM_QUORUM, DEFAULT_QUORUM);
       pollVotes = new ArrayList(quorum * 2);
     }
 
     VoteTally(int type, long duration) {
-      this(type, m_createTime, duration, 0, 0, 0, 0, m_quorum);
+      this(type, m_createTime, duration, 0, 0, 0, 0);
     }
 
+    boolean isLeadEnough() {
+      return (numYes - numNo) > quorum;
+    }
+
+    boolean haveQuorum() {
+      return numYes + numNo >= quorum;
+    }
+
+
     void addVote(Vote vote) {
+      LcapIdentity id = vote.getIdentity();
+      int weight = id.getReputation();
+
+      synchronized (this) {
+        if(vote.isAgreeVote()) {
+          numYes++;
+          wtYes += weight;
+          log.info("I agree with " + vote + " rep " + weight);
+        }
+        else {
+          numNo++;
+          wtNo += weight;
+          if (id.isLocalIdentity()) {
+            log.error("I disagree with myself about " + vote + " rep " + weight);
+          }
+          else {
+            log.info("I disagree with " + vote + " rep " + weight);
+          }
+
+        }
+      }
       pollVotes.add(vote);
     }
   }
@@ -543,7 +535,7 @@ public abstract class Poll {
    * Vote stores the information need to replay a single vote. These are needed
    * to run a repair poll.
    */
-  public class Vote {
+  public static class Vote {
     private LcapIdentity id;
     private boolean agree;
     private byte[] challenge;
@@ -562,6 +554,13 @@ public abstract class Poll {
     Vote(LcapMessage msg, boolean agree) {
       this(msg.getChallenge(), msg.getVerifier(), msg.getHashed(),
            msg.getOriginID(), agree);
+    }
+
+
+    boolean setAgreeWithHash(byte[] new_hash) {
+      agree = Arrays.equals(hash, new_hash);
+
+      return agree;
     }
 
     /**

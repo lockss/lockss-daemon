@@ -1,5 +1,5 @@
 /*
-* $Id: VerifyPoll.java,v 1.18 2002-12-03 03:35:59 claire Exp $
+* $Id: VerifyPoll.java,v 1.19 2002-12-16 06:04:28 claire Exp $
  */
 
 /*
@@ -52,23 +52,9 @@ class VerifyPoll extends Poll {
   public VerifyPoll(LcapMessage msg, CachedUrlSet urlSet) {
     super(msg, urlSet);
     m_replyOpcode = LcapMessage.VERIFY_POLL_REP;
-    m_quorum = 1;
+    m_tally.quorum = 1;
   }
 
-
-
-  /**
-   * will request a verify at random based on some percentage.
-   * @param msg the Message to use to request verification
-   * @param prob the percentage of time you should verify
-   * @throws IOException thrown by ProbbilisticChoice
-   */
-  protected static void randomRequestVerify(LcapMessage msg, double prob)
-      throws IOException {
-     if (ProbabilisticChoice.choose(prob)) {
-      requestVerify(msg);
-    }
-  }
 
   /**
    * handle a message which may be a incoming vote
@@ -136,9 +122,9 @@ class VerifyPoll extends Poll {
     super.tally();
     log.info(m_msg.toString() + " tally " + toString());
     LcapIdentity id = m_caller;
-    if ((m_agree + m_disagree) < 1) {
+    if ((m_tally.numYes + m_tally.numNo) < 1) {
       id.voteNotVerify();
-    } else if (m_agree > 0 && m_disagree == 0) {
+    } else if (m_tally.numYes > 0 && m_tally.numNo == 0) {
       id.voteVerify();
     } else {
       id.voteDisown();
@@ -157,47 +143,10 @@ class VerifyPoll extends Poll {
 
     hasher.update(hashed, 0, hashed.length);
     byte[] HofHashed = hasher.digest();
-    if(Arrays.equals(challenge, HofHashed))  {
-      log.debug("verify vote disagreed");
-      m_agree++;
-      m_agreeWt += weight;
-      //handleAgreeVote(msg);
-    }
-    else  {
-      log.debug("verify vote agreed.");
-      m_disagree++;
-      m_disagreeWt += weight;
-      //handleDisagreeVote(msg);
-    }
-
+    boolean agree = Arrays.equals(challenge, HofHashed);
+    m_tally.addVote(new Vote(msg, agree));
   }
 
-  private static void requestVerify(LcapMessage msg) throws IOException {
-    String url = new String(msg.getTargetUrl());
-    String regexp = new String(msg.getRegExp());
-
-    log.debug("Calling a verify poll...");
-
-    LcapMessage reqmsg = LcapMessage.makeRequestMsg(url,
-        regexp,
-        new String[0],
-        msg.getGroupAddress(),
-        msg.getTimeToLive(),
-        msg.getVerifier(),
-        PollManager.makeVerifier(),
-        LcapMessage.VERIFY_POLL_REQ,
-        msg.getDuration(),
-        LcapIdentity.getLocalIdentity());
-
-    LcapIdentity originator = msg.getOriginID();
-    log.debug("sending our verification request to " + originator.toString());
-    //LcapComm.sendMessage(reqmsg, Plugin.findArchivalUnit(url));
-    LcapComm.sendMessageTo(reqmsg, Plugin.findArchivalUnit(url), originator);
-
-    log.debug("Creating a local poll instance...");
-    Poll poll = PollManager.findPoll(reqmsg);
-    poll.m_pollstate = PS_WAIT_TALLY;
-  }
 
   private void replyVerify(LcapMessage msg) throws IOException  {
     String url = new String(msg.getTargetUrl());

@@ -1,5 +1,5 @@
 /*
-* $Id: NamePoll.java,v 1.16 2002-11-27 00:55:49 claire Exp $
+* $Id: NamePoll.java,v 1.17 2002-12-16 06:04:28 claire Exp $
  */
 
 /*
@@ -61,15 +61,14 @@ public class NamePoll extends Poll {
   boolean prepareVoteCheck(LcapMessage msg) {
 
     // make sure our vote will actually matter
-    int vote_margin =  m_agree - m_disagree;
-    if(vote_margin > m_quorum)  {
-      log.info(m_key + " " +  vote_margin + " lead is enough");
+    if(m_tally.isLeadEnough())  {
+      log.info(m_key + " lead is enough.");
       return false;
     }
 
     // are we too busy
-    if((m_counting - 1) > m_quorum)  {
-      log.info(m_key + " too busy to count " + m_counting + " votes");
+    if(tooManyPending())  {
+      log.info(m_key + " too busy to count " + m_pendingVotes + " votes");
       return false;
     }
 
