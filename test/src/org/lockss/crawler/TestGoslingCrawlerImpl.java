@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingCrawlerImpl.java,v 1.16 2003-06-26 23:59:01 eaalto Exp $
+ * $Id: TestGoslingCrawlerImpl.java,v 1.17 2003-08-06 00:32:00 troberts Exp $
  */
 
 /*
@@ -723,6 +723,16 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     assertEquals(4, crawler.getNumParsed());
   }
 
+  public void testRepairCrawlCallsForceCache() {
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
+    cus.addUrl(LINKLESS_PAGE, startUrl);
+    crawler = new GoslingCrawlerImpl(mau, urlSet, Crawler.REPAIR, false);
+    crawler.doCrawl(Deadline.MAX);
+    Set cachedUrls = cus.getForceCachedUrls();
+    assertEquals(1, cachedUrls.size());
+    assertTrue(cachedUrls.contains(startUrl));
+  }
+
   private class MyMockCachedUrlSet extends MockCachedUrlSet {
     public MyMockCachedUrlSet(MockArchivalUnit owner, CachedUrlSetSpec spec) {
       super(owner, spec);
@@ -741,4 +751,8 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
       super.cache();
     }
   }
+//   public static void main(String[] argv) {
+//     String[] testCaseList = {TestGoslingCrawlerImpl.class.getName()};
+//     junit.swingui.TestRunner.main(testCaseList);
+//   }
 }
