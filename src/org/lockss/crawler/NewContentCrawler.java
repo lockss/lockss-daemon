@@ -1,5 +1,5 @@
 /*
- * $Id: NewContentCrawler.java,v 1.29 2004-08-04 21:48:16 dcfok Exp $
+ * $Id: NewContentCrawler.java,v 1.30 2004-08-12 23:15:13 clairegriffin Exp $
  */
 
 /*
@@ -64,7 +64,7 @@ public class NewContentCrawler extends CrawlerImpl {
 
   public static final String PARAM_REFETCH_DEPTH =
     Configuration.PREFIX + "crawler.refetchDepth.au.<auid>";
-  
+
   public static final String PARAM_MAX_CRAWL_DEPTH =
     Configuration.PREFIX + "CrawlerImpl.maxCrawlDepth";
   //testing max. crawl Depth of a site, subject to be changed
@@ -75,7 +75,7 @@ public class NewContentCrawler extends CrawlerImpl {
   public static final boolean DEFAULT_ABORT_WHILE_PERMISSION_OTHER_THAN_OK = false;
 
   private PermissionMap permissionMap = new PermissionMap();
-  
+
   private boolean alwaysReparse;
   private boolean usePersistantList;
 
@@ -101,7 +101,7 @@ public class NewContentCrawler extends CrawlerImpl {
     int maxDepth = Configuration.getIntParam(PARAM_MAX_CRAWL_DEPTH,
 					     DEFAULT_MAX_CRAWL_DEPTH);
 
-    logger.info("Max. crawl depth is set to be " + maxDepth); 
+    logger.info("Max. crawl depth is set to be " + maxDepth);
 
     logger.info("Beginning crawl of "+au);
     crawlStatus.signalCrawlStarted();
@@ -110,13 +110,13 @@ public class NewContentCrawler extends CrawlerImpl {
 
     Set extractedUrls = new HashSet();
 
-    // get the permission list from AU
-    List permissionList = au.getPermissionPages();
+    // get the permission list from crawl spec
+    List permissionList = spec.getPermissionPages();
     if (permissionList == null || permissionList.size() == 0){
-      logger.error("au.getPermissionPages() return null list or nothing in the list!");
+      logger.error("spec.getPermissionPages() return null list or nothing in the list!");
       return aborted();
     }
-    
+
     if (!checkPermissionList(permissionList)){
       return aborted();
     }
@@ -149,7 +149,7 @@ public class NewContentCrawler extends CrawlerImpl {
 	//catch and warn if there's a url in the start urls
 	//that we shouldn't cache
 	logger.debug3("Trying to process " +url);
-	
+
         // check crawl window during crawl
 	if (!withinCrawlWindow()) {
 	  crawlStatus.setCrawlError(Crawler.STATUS_WINDOW_CLOSED);
@@ -184,20 +184,20 @@ public class NewContentCrawler extends CrawlerImpl {
       urlsToCrawl.addAll(extractedUrls);
       extractedUrls.clear();
     } else {
-      urlsToCrawl = extractedUrls; 
+      urlsToCrawl = extractedUrls;
     }
 
-    int lvlCnt = refetchDepth; // count for what level (N) 
+    int lvlCnt = refetchDepth; // count for what level (N)
                                // from the root we are at
 
     while (lvlCnt <= maxDepth && !urlsToCrawl.isEmpty() ) {
-      
+
       logger.debug2("Crawling at level " + lvlCnt);
       extractedUrls = new HashSet(); // level (N+1)'s Urls
-      
+
       while (!urlsToCrawl.isEmpty() && !crawlAborted) {
 	String nextUrl = (String)CollectionUtil.removeElement(urlsToCrawl);
-	
+
 	logger.debug3("Trying to process " + nextUrl);
 
 	// check crawl window during crawl
@@ -220,9 +220,9 @@ public class NewContentCrawler extends CrawlerImpl {
 	if (usePersistantList) {
 	  aus.updatedCrawlUrls(false);
 	}
-        
+
       } // end of inner while
-      
+
       urlsToCrawl = extractedUrls;
       lvlCnt++;
     } // end of outer while
@@ -236,18 +236,18 @@ public class NewContentCrawler extends CrawlerImpl {
     } else {
       logger.info("Site depth = "+ (lvlCnt-1));
     }
-    
+
     if (crawlAborted) {
         return aborted();
     }
-  
+
     if (crawlStatus.getCrawlError() != null) {
       logger.info("Finished crawl (errors) of "+au.getName());
       logger.debug3("Error status = " + crawlStatus.getCrawlError());
     } else {
       logger.info("Finished crawl of "+au.getName());
     }
-  
+
     if (au instanceof BaseArchivalUnit) {
       BaseArchivalUnit bau = (BaseArchivalUnit)au;
       long cacheHits = bau.getCrawlSpecCacheHits();
@@ -256,13 +256,13 @@ public class NewContentCrawler extends CrawlerImpl {
 		  ((float)cacheHits + (float)cacheMisses));
       logger.info("Had "+cacheHits+" cache hits, with a percentage of "+ (per*100) );
     }
-  
-    return (crawlStatus.getCrawlError() == null); 
+
+    return (crawlStatus.getCrawlError() == null);
   }
-  
+
   private boolean checkPermissionList(List permissionList) {
-    boolean abortWhilePermissionOtherThanOk = 
-      Configuration.getBooleanParam(PARAM_ABORT_WHILE_PERMISSION_OTHER_THAN_OK, 
+    boolean abortWhilePermissionOtherThanOk =
+      Configuration.getBooleanParam(PARAM_ABORT_WHILE_PERMISSION_OTHER_THAN_OK,
 				    DEFAULT_ABORT_WHILE_PERMISSION_OTHER_THAN_OK);
 
     logger.info("Checking permission on host(s) of " + au);
@@ -273,7 +273,7 @@ public class NewContentCrawler extends CrawlerImpl {
       String permissionPage = (String)permissionUrls.next();
       int permissionStatus = crawlPermission(permissionPage);
       // if permission status is something other than OK and the abortWhilePermissionOtherThanOk flag is on
-       if (permissionStatus != PermissionMap.PERMISSION_OK && 
+       if (permissionStatus != PermissionMap.PERMISSION_OK &&
 	  abortWhilePermissionOtherThanOk) {
 	logger.info("One or more host(s) of AU do not grant crawling permission - aborting crawl!");
 	return false;
@@ -331,13 +331,13 @@ public class NewContentCrawler extends CrawlerImpl {
 	  //skip if it's already failed
 	  logger.debug3("Already failed to cache "+uc+". Not retrying.");
 	} else {
-	  
+
 	  // checking the crawl permission of the url's host
 	  if (!checkHostPermission(url,true)){
 	    crawlStatus.setCrawlError("Crawl permission not found at "+url );
 	    return false;
 	  }
-	  
+
 	  cacheWithRetries(uc, Configuration.getIntParam(PARAM_RETRY_TIMES,
 							 DEFAULT_RETRY_TIMES));
 	  numUrlsFetched++;
@@ -449,7 +449,7 @@ public class NewContentCrawler extends CrawlerImpl {
 // 	  urlRecord = (PermissionRecord) permissionMap.get(UrlUtil.getHost(url).toLowerCase());
 // 	} catch (MalformedURLException e) {
 // 	  logger.error("The url is malformed :" + url);
-// 	} 
+// 	}
 // 	if (urlRecord == null) {
 // 	  logger.warning("No permission page record on host of "+ url);
 // 	  crawlStatus.setCrawlError("No crawl permission page for host of " +
@@ -466,7 +466,7 @@ public class NewContentCrawler extends CrawlerImpl {
 // 	return true;
 //   }
 
-  //check if the url's host granted a permission 
+  //check if the url's host granted a permission
   private boolean checkHostPermission(String url ,boolean permissionFailedRetry) {
     int urlPermissionStatus = -1;
     String urlPermissionUrl = "";
@@ -475,7 +475,7 @@ public class NewContentCrawler extends CrawlerImpl {
       urlPermissionUrl = permissionMap.getPermissionUrl(url);
     } catch (MalformedURLException e) {
       logger.error("The url is malformed :" + url);
-    } 
+    }
     boolean printFailedWarning = true;
     switch (urlPermissionStatus) {
         case PermissionMap.PERMISSION_MISSING:
@@ -487,13 +487,13 @@ public class NewContentCrawler extends CrawlerImpl {
         case PermissionMap.PERMISSION_OK:
 	  return true;
 	case PermissionMap.PERMISSION_NOT_OK:
-	  logger.error("Abort crawl. No permission statement is found on host : " + 
+	  logger.error("Abort crawl. No permission statement is found on host : " +
 		       urlPermissionUrl);
 	  //abort crawl or skip all the page with this host ?
 	  return false;
 	case PermissionMap.PERMISSION_UNCHECKED:
 	  //should not be in this state as each permissionPage should be checked in the first iteration
-	  logger.warning("permission unchecked on host : "+ urlPermissionUrl); 
+	  logger.warning("permission unchecked on host : "+ urlPermissionUrl);
 	  // fall through, re-fetch permission like FETCH_PERMISSION_FAILED
 	  printFailedWarning = false;
 	case PermissionMap.FETCH_PERMISSION_FAILED:
@@ -514,7 +514,7 @@ public class NewContentCrawler extends CrawlerImpl {
 	    logger.error("Abort crawl. Cannot fetch permission page");
 	    return false;
 	  }
-	default : 
+	default :
 	  logger.error("Unknown Permission Status! Something is going wrong!");
 	  return false;
     }

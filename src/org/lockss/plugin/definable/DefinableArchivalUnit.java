@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.11 2004-08-11 19:41:40 clairegriffin Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.12 2004-08-12 23:15:15 clairegriffin Exp $
  */
 
 /*
@@ -94,16 +94,20 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     this.classLoader = classLoader;
   }
 
-  public List getPermissionPages() {
-    String manifestString =
-        definitionMap.getString(CM_AU_MANIFEST_KEY, null);
-    if(manifestString == null)  {
-     return super.getPermissionPages();
+  protected List getPermissionPages() {
+    Object permission_el = definitionMap.getMapElement(CM_AU_MANIFEST_KEY);
+
+    if (permission_el instanceof String) {
+      String permission_str = convertVariableString((String)permission_el);
+      log.debug2("overriding permission page with " + permission_str);
+      return ListUtil.list(permission_str);
     }
-    manifestString = convertVariableString(manifestString);
-    log.debug2("overriding manifest page with " + manifestString);
-    // TODO: add support for a real list here.
-    return ListUtil.list(manifestString);
+    else if (permission_el instanceof List) {
+      return (List) permission_el;
+    }
+    else {
+      return super.getPermissionPages();
+    }
   }
 
   protected String makeStartUrl() {

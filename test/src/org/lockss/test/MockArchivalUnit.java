@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.51 2004-08-11 19:41:48 clairegriffin Exp $
+ * $Id: MockArchivalUnit.java,v 1.52 2004-08-12 23:15:19 clairegriffin Exp $
  */
 
 /*
@@ -166,13 +166,6 @@ public class MockArchivalUnit implements ArchivalUnit {
     return pluginId;
   }
 
-  public List getPermissionPages() {
-    return permissionPages;
-  }
-
-  public void setPermissionPages(List pageList) {
-    permissionPages = pageList;
-  }
 
   public void setPlugin(Plugin plugin) {
     this.plugin = plugin;

@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlerImpl.java,v 1.17 2004-08-11 19:41:08 clairegriffin Exp $
+ * $Id: TestCrawlerImpl.java,v 1.18 2004-08-12 23:15:15 clairegriffin Exp $
  */
 
 /*
@@ -83,10 +83,9 @@ public class TestCrawlerImpl extends LockssTestCase {
     startUrls = ListUtil.list(startUrl);
     MockCachedUrlSet cus = new MyMockCachedUrlSet(mau, null);
     mau.setAuCachedUrlSet(cus);
-    mau.setPermissionPages(ListUtil.list(startUrl));
     crawlRule = new MockCrawlRule();
     crawlRule.addUrlToCrawl(startUrl);
-    spec = new CrawlSpec(startUrls, crawlRule);
+    spec = new CrawlSpec(startUrls, startUrls, crawlRule, 1);
     new MockLockssDaemon().getAlertManager();
     crawler = new NewContentCrawler(mau, spec, aus);
     // store the orignal checker and replace with a mock checker

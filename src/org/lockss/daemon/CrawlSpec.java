@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlSpec.java,v 1.10 2004-08-11 19:41:44 clairegriffin Exp $
+ * $Id: CrawlSpec.java,v 1.11 2004-08-12 23:15:14 clairegriffin Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.util.*;
  */
 public final class CrawlSpec {
   private List startList;
+  private List permissionList;
   private List permissionCheckers = Collections.EMPTY_LIST;
   private CrawlRule rule;
   private CrawlWindow window;
@@ -57,13 +58,14 @@ public final class CrawlSpec {
    * @throws ClassCastException if any elements of startUrls is not a String.
    */
   public CrawlSpec(List startUrls, CrawlRule rule) throws ClassCastException {
-    this(startUrls, rule, 1);
+    this(startUrls, startUrls, rule, 1);
   }
 
   /**
    * Create a CrawlSpec with the specified start list and rule.
    * @param startUrls a list of Strings specifying starting points
    * for the crawl
+   * @param permissionUrls a list of urls from which permission can be obtained.
    * @param rule filter to determine which URLs encountered in the crawl
    * should themselves be crawled.  A null rule is always true.
    * @param refetchDepth depth to always refetch
@@ -71,25 +73,33 @@ public final class CrawlSpec {
    * @throws NullPointerException if any elements of startUrls is null.
    * @throws ClassCastException if any elements of startUrls is not a String.
    */
-  public CrawlSpec(List startUrls, CrawlRule rule, int refetchDepth)
-      throws ClassCastException {
-    if (startUrls.isEmpty()) {
-      throw
-	new IllegalArgumentException("CrawlSpec startUrls must not be empty");
+  public CrawlSpec(List startUrls, List permissionUrls,
+                   CrawlRule rule, int refetchDepth) throws ClassCastException {
+    if(startUrls.isEmpty()) {
+      throw new
+          IllegalArgumentException("CrawlSpec starting url must not be empty");
     }
-    if (refetchDepth < 1) {
-      throw new IllegalArgumentException("refetchDepth must be at least 1");
+
+    if(refetchDepth < 1) {
+      throw new IllegalArgumentException("Refetch depth must be at least 1");
+    }
+
+    if(permissionUrls.isEmpty()) {
+      throw new IllegalArgumentException("Permission list must not be empty");
     }
     startList = ListUtil.immutableListOfType(startUrls, String.class);
     this.rule = rule;
     this.refetchDepth = refetchDepth;
+    permissionList = ListUtil.immutableListOfType(permissionUrls, String.class);
+
   }
 
   public CrawlSpec(List startUrls,
+                   List permissionUrls,
                    CrawlRule rule,
                    int refetchDepth,
                    List permissionCheckers) {
-    this(startUrls, rule, refetchDepth);
+    this(startUrls, permissionUrls, rule, refetchDepth);
     this.permissionCheckers = permissionCheckers;
   }
 
@@ -114,7 +124,7 @@ public final class CrawlSpec {
    * @throws NullPointerException if the url is null.
    */
   public CrawlSpec(String url, CrawlRule rule, int refetchDepth) {
-    this(ListUtil.list(url), rule, refetchDepth);
+    this(ListUtil.list(url), ListUtil.list(url), rule, refetchDepth);
   }
 
 
@@ -141,6 +151,10 @@ public final class CrawlSpec {
    */
   public List getStartingUrls() {
     return startList;
+  }
+
+  public List getPermissionPages() {
+    return permissionList;
   }
 
   /**

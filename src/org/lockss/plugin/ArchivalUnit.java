@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.25 2004-08-11 19:41:17 clairegriffin Exp $
+ * $Id: ArchivalUnit.java,v 1.26 2004-08-12 23:15:14 clairegriffin Exp $
  */
 
 /*
@@ -123,13 +123,6 @@ public interface ArchivalUnit {
   public String getName();
 
   /**
-   * Returns the list of url for the publisher's permission page
-   * crawl permissions for this AU.
-   * @return a List of url strings;
-   */
-  public List getPermissionPages();
-
-  /**
    * Sleeps for the interval needed between requests to the server
    */
   public void pauseBeforeFetch();
@@ -199,22 +192,11 @@ public interface ArchivalUnit {
 
     public ConfigurationException(String msg, Throwable e) {
       super(msg + (e.getMessage() == null ? "" : (": " + e.getMessage())));
-//       super(msg + ": " + e.toString());
       this.nestedException = e;
     }
 
     public Throwable getNestedException() {
       return nestedException;
     }
-
-//     public String toString() {
-//       StringBuffer sb = new StringBuffer();
-//       sb.append(msg);
-//       if (nestedException != null) {
-// 	sb.append("\nnested exception:\n");
-// 	sb.append(nestedException.toString());
-//       }
-//       return sb.toString();
-//     }
   }
 }

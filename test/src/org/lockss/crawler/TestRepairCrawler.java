@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepairCrawler.java,v 1.11 2004-07-12 18:59:10 dcfok Exp $
+ * $Id: TestRepairCrawler.java,v 1.12 2004-08-12 23:15:16 clairegriffin Exp $
  */
 
 /*
@@ -62,7 +62,7 @@ public class TestRepairCrawler extends LockssTestCase {
 
 
   private String url1 = "http://example.com/blah.html";
-  
+
 
   public void setUp() throws Exception {
     super.setUp();
@@ -125,7 +125,7 @@ public class TestRepairCrawler extends LockssTestCase {
   }
 
   public void testRepairCrawlCallsForceCache() {
-    spec = new CrawlSpec(startUrls, crawlRule, 1);
+    spec = new CrawlSpec(startUrls, startUrls, crawlRule, 1);
 
     crawler.doCrawl();
 
@@ -136,7 +136,7 @@ public class TestRepairCrawler extends LockssTestCase {
 
   public void testRepairCrawlObeysCrawlWindow() {
     spec.setCrawlWindow(new MyMockCrawlWindow());
-    
+
     crawler.doCrawl();
 
     Set cachedUrls = cus.getForceCachedUrls();
@@ -157,7 +157,7 @@ public class TestRepairCrawler extends LockssTestCase {
     MockLockssWatchdog wdog = new MockLockssWatchdog();
 
     List repairUrls = ListUtil.list(repairUrl1, repairUrl2, repairUrl3);
-    spec = new CrawlSpec(startUrls, crawlRule, 1);
+    spec = new CrawlSpec(startUrls, startUrls, crawlRule, 1);
     crawler = new RepairCrawler(mau, spec, aus, repairUrls, 0);
     crawler.setWatchdog(wdog);
     crawler.doCrawl();
@@ -170,7 +170,7 @@ public class TestRepairCrawler extends LockssTestCase {
     String repairUrl2 = "http://www.example.com/link3.html";
     String url1 = "http://www.example.com/link1.html";
     String url2 = "http://www.example.com/link2.html";
-    
+
     cus.addUrl(repairUrl1);
     parser.addUrlSetToReturn(repairUrl1, SetUtil.set(url1, url2, repairUrl2));
     cus.addUrl(repairUrl2);
@@ -182,7 +182,7 @@ public class TestRepairCrawler extends LockssTestCase {
     crawlRule.addUrlToCrawl(url2);
 
     List repairUrls = ListUtil.list(repairUrl1, repairUrl2);
-    spec = new CrawlSpec(startUrls, crawlRule, 1);
+    spec = new CrawlSpec(startUrls, startUrls, crawlRule, 1);
     crawler = new RepairCrawler(mau, spec, aus, repairUrls, 0);
 
     crawler.doCrawl();
@@ -196,7 +196,7 @@ public class TestRepairCrawler extends LockssTestCase {
     cus.addUrl(repairUrl, new ExpectedRuntimeException("Test exception"), 0);
     List repairUrls = ListUtil.list(repairUrl);
      crawlRule.addUrlToCrawl(repairUrl);
-    spec = new CrawlSpec(startUrls, crawlRule, 1);
+    spec = new CrawlSpec(startUrls, startUrls, crawlRule, 1);
     crawler = new RepairCrawler(mau, spec, aus, repairUrls, 0);
 
     assertFalse(crawler.doCrawl());
@@ -209,7 +209,7 @@ public class TestRepairCrawler extends LockssTestCase {
     Map map = new HashMap();
     map.put(id, new Long(10));
     idm.setAgeedForAu(mau, map);
-		      
+
     theDaemon.setIdentityManager(idm);
 
     String repairUrl = "http://example.com/blah.html";
@@ -222,7 +222,7 @@ public class TestRepairCrawler extends LockssTestCase {
 
     crawler.doCrawl();
     assertEquals("Fail! fetch from "+ crawler.getContentSource(repairUrl) ,id, crawler.getContentSource(repairUrl));
-    assertTrue("Fail! fetch from caches occur, fetchCacheCnt = " + 
+    assertTrue("Fail! fetch from caches occur, fetchCacheCnt = " +
 	         crawler.getFetchCacheCnt() , crawler.getFetchCacheCnt() == 1);
     assertTrue("Fail! fetch from publisher occurs", crawler.getFetchPubCnt() == 0);
   }
@@ -238,7 +238,7 @@ public class TestRepairCrawler extends LockssTestCase {
     map.put(id2, new Long(11));
     map.put(id3, new Long(12));
     idm.setAgeedForAu(mau, map);
-		      
+
     theDaemon.setIdentityManager(idm);
 
     String repairUrl = "http://example.com/blah.html";
@@ -250,9 +250,9 @@ public class TestRepairCrawler extends LockssTestCase {
     ConfigurationUtil.setCurrentConfigFromProps(p);
 
     crawler.doCrawl();
-    assertTrue("Fetch from caches occur, fetchCacheCnt = " + 
+    assertTrue("Fetch from caches occur, fetchCacheCnt = " +
 	         crawler.getFetchCacheCnt() , crawler.getFetchCacheCnt() == 3);
-    assertTrue("Fetch from publisher should never occur, yet FetchPubCnt = " + 
+    assertTrue("Fetch from publisher should never occur, yet FetchPubCnt = " +
 	       crawler.getFetchPubCnt(), crawler.getFetchPubCnt() == 0);
   }
 
@@ -267,7 +267,7 @@ public class TestRepairCrawler extends LockssTestCase {
     map.put(id2, new Long(11));
     map.put(id3, new Long(12));
     idm.setAgeedForAu(mau, map);
-		      
+
     theDaemon.setIdentityManager(idm);
 
     String repairUrl = "http://example.com/blah.html";
@@ -280,7 +280,7 @@ public class TestRepairCrawler extends LockssTestCase {
     ConfigurationUtil.setCurrentConfigFromProps(p);
 
     crawler.doCrawl();
-    assertTrue("Fetch from caches occur, fetchCacheCnt = " + 
+    assertTrue("Fetch from caches occur, fetchCacheCnt = " +
 	       crawler.getFetchCacheCnt() , crawler.getFetchCacheCnt() == 2);
     assertTrue("Fetch from publisher never occur", crawler.getFetchPubCnt() == 0);
   }
@@ -296,9 +296,9 @@ public class TestRepairCrawler extends LockssTestCase {
     ConfigurationUtil.setCurrentConfigFromProps(p);
 
     crawler.doCrawl();
-    assertTrue("Fetch from caches occur, fetchCacheCnt = " + 
+    assertTrue("Fetch from caches occur, fetchCacheCnt = " +
 	        crawler.getFetchCacheCnt() , crawler.getFetchCacheCnt() == 0);
-    assertTrue("Fetch from publisher" + 
+    assertTrue("Fetch from publisher" +
 	       crawler.getFetchPubCnt(), crawler.getFetchPubCnt() == 1);
   }
 
@@ -313,7 +313,7 @@ public class TestRepairCrawler extends LockssTestCase {
     map.put(id2, new Long(11));
     map.put(id3, new Long(12));
     idm.setAgeedForAu(mau, map);
-		      
+
     theDaemon.setIdentityManager(idm);
 
     String repairUrl = "http://example.com/blah.html";
@@ -326,9 +326,9 @@ public class TestRepairCrawler extends LockssTestCase {
     ConfigurationUtil.setCurrentConfigFromProps(p);
 
     crawler.doCrawl();
-    assertTrue("Fail fetch from other caches count, fetchCacheCnt = " + 
+    assertTrue("Fail fetch from other caches count, fetchCacheCnt = " +
 	       crawler.getFetchCacheCnt() , crawler.getFetchCacheCnt() == 2);
-    assertTrue("Fail fetch from publisher count, fetchPubCnt = " + 
+    assertTrue("Fail fetch from publisher count, fetchPubCnt = " +
 	       crawler.getFetchPubCnt(), crawler.getFetchPubCnt() == 1);
     assertTrue("Fail: sequence in caching from", crawler.getCacheLastCall() < crawler.getPubLastCall() );
   }
@@ -344,7 +344,7 @@ public class TestRepairCrawler extends LockssTestCase {
     map.put(id2, new Long(11));
     map.put(id3, new Long(12));
     idm.setAgeedForAu(mau, map);
-		      
+
     theDaemon.setIdentityManager(idm);
 
     String repairUrl = "http://example.com/blah.html";
@@ -357,9 +357,9 @@ public class TestRepairCrawler extends LockssTestCase {
     ConfigurationUtil.setCurrentConfigFromProps(p);
 
     crawler.doCrawl();
-    assertTrue("Fail fetch from publisher count, fetchPubCnt = " + 
+    assertTrue("Fail fetch from publisher count, fetchPubCnt = " +
 	       crawler.getFetchPubCnt(), crawler.getFetchPubCnt() == 1);
-    assertTrue("Fail fetch from other caches count, fetchCacheCnt = " + 
+    assertTrue("Fail fetch from other caches count, fetchCacheCnt = " +
 	       crawler.getFetchCacheCnt() , crawler.getFetchCacheCnt() == 2);
     assertTrue("Fail: sequence in caching from", crawler.getCacheLastCall() > crawler.getPubLastCall() );
   }
@@ -408,7 +408,7 @@ public class TestRepairCrawler extends LockssTestCase {
 
       super.fetchFromPublisher(muc);
     }
-    
+
     protected int getFetchPubCnt(){
       return fetchPubCnt;
     }
@@ -422,7 +422,7 @@ public class TestRepairCrawler extends LockssTestCase {
     }
 
     // make the repair fail and then go thru other caches or publisher
-    protected int getProxyPort(){ 
+    protected int getProxyPort(){
       return 8080; //XXX for testing only
     }
 

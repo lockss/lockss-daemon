@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.45 2004-07-07 22:06:03 clairegriffin Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.46 2004-08-12 23:15:19 clairegriffin Exp $
  */
 
 /*
@@ -94,10 +94,6 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
 
   protected String makeStartUrl() {
     return SIMULATED_URL_START;
-  }
-
-  public List getPermissionPages() {
-    return ListUtil.list(SIMULATED_URL_START);
   }
 
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.15 2004-08-11 19:41:08 clairegriffin Exp $
+ * $Id: TestNewContentCrawler.java,v 1.16 2004-08-12 23:15:15 clairegriffin Exp $
  */
 
 /*
@@ -63,10 +63,9 @@ public class TestNewContentCrawler extends LockssTestCase {
     startUrls = ListUtil.list(startUrl);
     MockCachedUrlSet cus = new MyMockCachedUrlSet(mau, null);
     mau.setAuCachedUrlSet(cus);
-    mau.setPermissionPages(ListUtil.list(startUrl));
     crawlRule = new MockCrawlRule();
     crawlRule.addUrlToCrawl(startUrl);
-    spec = new CrawlSpec(startUrls, crawlRule);
+    spec = new CrawlSpec(startUrls, startUrls, crawlRule, 1);
     crawler = new NewContentCrawler(mau, spec, aus);
     ((CrawlerImpl)crawler).permissionCheckers.clear();
     ((CrawlerImpl)crawler).permissionCheckers.add(new MockPermissionChecker(1));
@@ -150,7 +149,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     }
 
 
-    spec = new CrawlSpec(urls, crawlRule);
+    spec = new CrawlSpec(urls, ListUtil.list(startUrl), crawlRule, 1);
     crawler = new NewContentCrawler(mau, spec, new MockAuState());
     ((CrawlerImpl)crawler).permissionCheckers.clear();
     ((CrawlerImpl)crawler).permissionCheckers.add(new MockPermissionChecker(1));
@@ -173,7 +172,7 @@ public class TestNewContentCrawler extends LockssTestCase {
 
 
   public void testOverwritesStartingUrlsMultipleLevels() {
-    spec = new CrawlSpec(startUrls, crawlRule, 2);
+    spec = new CrawlSpec(startUrls, startUrls, crawlRule, 2);
     crawler = new NewContentCrawler(mau, spec, new MockAuState());
     ((CrawlerImpl)crawler).permissionCheckers.clear();
     ((CrawlerImpl)crawler).permissionCheckers.add(new MockPermissionChecker(1));
@@ -556,8 +555,6 @@ public class TestNewContentCrawler extends LockssTestCase {
       int passPermissionCheck, List urlsToCrawl, MockPlugin mp) {
     MockArchivalUnit mmau = new MockArchivalUnit();
 
-    //set permissionPage and set Who to grant how many time
-    mmau.setPermissionPages(permissionPages);
     //mmau.setNumPermissionGranted(passPermissionCheck);
 
     //set plugin
@@ -575,7 +572,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     }
 
     //set Crawl spec
-    spec = new CrawlSpec(urlsToCrawl, crawlRule);
+    spec = new CrawlSpec(urlsToCrawl, permissionPages, crawlRule, 1);
 
     //set Crawler
     crawler = new NewContentCrawler(mmau, spec, new MockAuState());

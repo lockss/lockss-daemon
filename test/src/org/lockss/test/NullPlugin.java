@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.57 2004-08-11 19:41:48 clairegriffin Exp $
+ * $Id: NullPlugin.java,v 1.58 2004-08-12 23:15:19 clairegriffin Exp $
  */
 
 /*
@@ -393,10 +393,6 @@ public class NullPlugin {
 
     public boolean shouldCallTopLevelPoll(AuState aus) {
       return false;
-    }
-
-    public List getPermissionPages() {
-      return null;
     }
 
     public ContentParser getContentParser(String mimeType) {

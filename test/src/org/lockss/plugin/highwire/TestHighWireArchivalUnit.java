@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireArchivalUnit.java,v 1.44 2004-07-29 23:14:56 troberts Exp $
+ * $Id: TestHighWireArchivalUnit.java,v 1.45 2004-08-12 23:15:17 clairegriffin Exp $
  */
 
 /*
@@ -147,7 +147,7 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
     String expectedStr = "http://www.example.com/lockss-manifest/vol_10_manifest.dtl";
 
     DefinableArchivalUnit hwau = makeAu(url, 10);
-    assertEquals(expectedStr, (String)hwau.getPermissionPages().get(0));
+    assertEquals(expectedStr, (String)hwau.getStartUrl());
   }
 
   public void testGetUrlStems() throws Exception {
