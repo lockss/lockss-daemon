@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingCrawlerImpl.java,v 1.20 2003-04-23 23:37:48 troberts Exp $
+ * $Id: GoslingCrawlerImpl.java,v 1.21 2003-05-01 01:42:55 troberts Exp $
  */
 
 /*
@@ -248,7 +248,7 @@ public class GoslingCrawlerImpl implements Crawler {
 	//XXX quick fix; if statement should be removed when we rework
 	//handling of error condition
 	if (cu.hasContent()) {
-	  addUrlsToSet(cu, extractedUrls);//IOException if the CU can't be read
+	  addUrlsToSet(cu, extractedUrls, parsedPages);//IOException if the CU can't be read
 	  parsedPages.add(uc.getUrl());
 	  numUrlsParsed++;
 	}
@@ -269,9 +269,10 @@ public class GoslingCrawlerImpl implements Crawler {
    *
    * @param cu object representing a html file in the local file system
    * @param set set to which all the urs in cu should be added
+   * @param urlsToIgnore urls which should not be added to set
    * @throws IOException
    */
-  protected void addUrlsToSet(CachedUrl cu, Set set)
+  protected void addUrlsToSet(CachedUrl cu, Set set, Set urlsToIgnore)
       throws IOException {
     if (shouldExtractLinksFromCachedUrl(cu)) {
       String cuStr = cu.getUrl();
@@ -289,7 +290,9 @@ public class GoslingCrawlerImpl implements Crawler {
 	logger.debug("Extracted "+nextUrl);
 
 	//should check if this is something we should cache first
- 	if (au.shouldBeCached(nextUrl) && !set.contains(nextUrl)) {
+ 	if (!set.contains(nextUrl)
+	    && !urlsToIgnore.contains(nextUrl)
+	    && au.shouldBeCached(nextUrl)) {
 	  set.add(nextUrl);
 	}
       }
