@@ -1,5 +1,5 @@
 /*
- * $Id: MockMessageDigest.java,v 1.2 2002-10-31 01:46:44 troberts Exp $
+ * $Id: MockMessageDigest.java,v 1.3 2002-11-07 02:27:27 aalto Exp $
  */
 
 /*
@@ -55,8 +55,8 @@ public class MockMessageDigest extends MessageDigest {
    * Mock implementation of the standard Message digest function (stores bytes on a queue for
    * later checking via <code>getUpdatedByte<code> or <code>getUpdatedBytes</code>)
    * @param input byte to hash
-   * @see getUpdatedByte()
-   * @see getUpdatedBytes(byte[])
+   * @see MockMessageDigest.getUpdatedByte()
+   * @see MockMessageDigest.getUpdatedBytes(byte[])
    */
   public void update(byte input){
     inputList.add(new Byte(input));
@@ -66,8 +66,8 @@ public class MockMessageDigest extends MessageDigest {
    * Mock implementation of the standard Message digest function (stores bytes on a queue for
    * later checking via <code>getUpdatedByte<code> or <code>getUpdatedBytes</code>)
    * @param input byte array to hash
-   * @see getUpdatedByte()
-   * @see getUpdatedBytes(byte[])
+   * @see MockMessageDigest.getUpdatedByte()
+   * @see MockMessageDigest.getUpdatedBytes(byte[])
    */
   public void update(byte[] input){
     for (int i=0; i<input.length; i++){
@@ -81,8 +81,8 @@ public class MockMessageDigest extends MessageDigest {
    * @param input byte array to hash
    * @param offset index of first element in array to start hashing
    * @param len number of elements in array to hash
-   * @see getUpdatedByte()
-   * @see getUpdatedBytes(byte[])
+   * @see MockMessageDigest.getUpdatedByte()
+   * @see MockMessageDigest.getUpdatedBytes(byte[])
    */
   public void update(byte[] input, int offset, int len){
     for (int i=offset; i<offset+len; i++){
@@ -95,8 +95,8 @@ public class MockMessageDigest extends MessageDigest {
   /**
    * Method to retrieve bytes fed in by <code>update</code>
    * @return next byte in the queue or -1 if none are left
-   * @see update(byte)
-   * @see update(byte[])
+   * @see MockMessageDigest.update(byte)
+   * @see MockMessageDigest.update(byte[])
    */
   public byte getUpdatedByte(){
     if (inputList.size() <= 0){
@@ -110,8 +110,8 @@ public class MockMessageDigest extends MessageDigest {
    * Method to retrieve bytes fed in by <code>update</code>
    * @param output byte[] to fill with bytes from the queue
    * @return number of bytes written to output
-   * @see update(byte)
-   * @see update(byte[])
+   * @see MockMessageDigest.update(byte)
+   * @see MockMessageDigest.update(byte[])
    */
   public int getUpdatedBytes(byte[] output){
     int length = inputList.size() >= output.length ? output.length : inputList.size();
