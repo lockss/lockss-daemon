@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.105 2003-04-17 05:29:20 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.106 2003-04-17 05:55:26 aalto Exp $
  */
 
 /*
@@ -417,7 +417,6 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
       Iterator masterIt = results.getCorrectEntries();
       Iterator localIt = results.getLocalEntries();
       Set localSet = createUrlSetFromCusIterator(localIt);
-      System.out.println("local size: "+localSet.size());
       ArchivalUnit au = nodeState.getCachedUrlSet().getArchivalUnit();
       // iterate through master list
       boolean repairMarked = false;

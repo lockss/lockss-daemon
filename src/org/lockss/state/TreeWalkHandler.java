@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkHandler.java,v 1.17 2003-04-17 02:13:25 aalto Exp $
+ * $Id: TreeWalkHandler.java,v 1.18 2003-04-17 05:55:26 aalto Exp $
  */
 
 /*
@@ -292,7 +292,7 @@ public class TreeWalkHandler {
     long lastTreeWalkTime = manager.getAuState().getLastTreeWalkTime();
     long timeSinceLastTW = TimeBase.msSince(lastTreeWalkTime);
     logger.debug3(timeSinceLastTW+" since last treewalk");
-    logger.debug("Treewalks should happen every "+treeWalkInterval);
+    logger.debug2("Treewalks should happen every "+treeWalkInterval+"ms");
     return treeWalkInterval - timeSinceLastTW;
   }
 
