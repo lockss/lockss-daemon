@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.26 2003-05-06 22:38:33 aalto Exp $
+ * $Id: BaseArchivalUnit.java,v 1.27 2003-05-07 20:35:42 tal Exp $
  */
 
 /*
@@ -264,8 +264,21 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     return makeCachedUrlSet(new AUCachedUrlSetSpec());
   }
 
-  public void pause() {
-    pause(DEFAULT_MILLISECONDS_BETWEEN_CRAWL_HTTP_REQUESTS);
+  private Deadline nextFetchTime = Deadline.in(0);
+
+  public void pauseBeforeFetch() {
+    if (!nextFetchTime.expired()) {
+      try {
+	nextFetchTime.sleep();
+      } catch (InterruptedException ie) {
+	// no action
+      }
+    }
+    nextFetchTime.expireIn(getFetchDelay());
+  }
+
+  public long getFetchDelay() {
+    return DEFAULT_MILLISECONDS_BETWEEN_CRAWL_HTTP_REQUESTS;
   }
 
   public String toString() {
@@ -367,12 +380,12 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     return curProb;
   }
 
-  protected void pause(long milliseconds) {
-    logger.debug3("Pausing for "+milliseconds+" milliseconds");
-    try {
-      Thread thread = Thread.currentThread();
-      thread.sleep(milliseconds);
-    } catch (InterruptedException ie) {
-    }
-  }
+//   protected void pause(long milliseconds) {
+//     logger.debug3("Pausing for "+milliseconds+" milliseconds");
+//     try {
+//       Thread thread = Thread.currentThread();
+//       thread.sleep(milliseconds);
+//     } catch (InterruptedException ie) {
+//     }
+//   }
 }
