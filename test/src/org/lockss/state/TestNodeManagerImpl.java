@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.12 2003-02-04 02:55:03 claire Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.13 2003-02-05 23:33:57 aalto Exp $
  */
 
 /*
@@ -226,7 +226,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     assertIsomorphic(expectedA, histL);
   }
 
-  public void testWalkEntry() throws Exception {
+  public void testWalkNodeState() throws Exception {
     NodeState node = nodeManager.getNodeState(getCUS(TEST_URL));
     nodeManager.walkNodeState(node);
     //XXX set various CrawlStates, PollHistories
