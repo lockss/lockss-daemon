@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.65 2004-01-13 04:46:25 clairegriffin Exp $
+ * $Id: PluginManager.java,v 1.66 2004-01-13 23:15:10 clairegriffin Exp $
  */
 
 /*
@@ -578,9 +578,8 @@ public class PluginManager extends BaseLockssManager {
     }
     String pluginName = pluginNameFromKey(pluginKey);
     String confFile = null;
-    if(pluginName.startsWith(CONFIGURABLE_PLUGIN_KEY)) {
-      confFile = pluginName.substring(CONFIGURABLE_PLUGIN_KEY.length(),
-                                      pluginName.length());
+    if(pluginName.endsWith(".xml")) {
+      confFile = pluginName;
       pluginName = "org.lockss.plugin.configurable.ConfigurablePlugin";
     }
     Class pluginClass;
@@ -606,7 +605,7 @@ public class PluginManager extends BaseLockssManager {
     }
     log.debug("Instantiating " + pluginClass);
     Plugin plugin = (Plugin) pluginClass.newInstance();
-    if(plugin instanceof ConfigurablePlugin) {
+    if(confFile != null) {
       ((ConfigurablePlugin)plugin).initPlugin(theDaemon, confFile);
     }
     else {

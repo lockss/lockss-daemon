@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurablePlugin.java,v 1.1 2004-01-13 04:46:25 clairegriffin Exp $
+ * $Id: ConfigurablePlugin.java,v 1.2 2004-01-13 23:15:10 clairegriffin Exp $
  */
 
 /*
@@ -59,7 +59,10 @@ public class ConfigurablePlugin extends BasePlugin {
 
   public void initPlugin(LockssDaemon daemon, String extMapName){
     // load the configuration map from disk
-    configurationMap.loadMap(null, extMapName);
+    if(extMapName != null) {
+      configurationMap.loadMap(null, extMapName);
+      log.warning("Attempt to create configurable plugin without map.");
+    }
     // then call the overridden initializaton.
     super.initPlugin(daemon);
   }
