@@ -1,5 +1,5 @@
 /*
- * $Id: RegexpUtil.java,v 1.1 2004-07-23 16:39:51 tlipkis Exp $
+ * $Id: RegexpUtil.java,v 1.2 2004-08-02 03:24:19 tlipkis Exp $
  */
 
 /*
@@ -59,7 +59,7 @@ public class RegexpUtil {
    * exception.  Intended for compiling a constant pattern in a static
    * initializer, where exception handling is awkward, and there is no
    * possibility of the pattern being malformed.
-   * @throw RuntimeException is RE is malformed */
+   * @throws RuntimeException if RE is malformed */
   public static Pattern uncheckedCompile(String re, int options) {
     try {
       return getCompiler().compile(re, options);
