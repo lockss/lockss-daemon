@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.53 2004-04-10 05:41:32 tlipkis Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.54 2004-04-14 23:46:17 eaalto Exp $
  */
 
 /*
@@ -113,12 +113,10 @@ public class RepositoryNodeImpl implements RepositoryNode {
   protected int currentVersion = -1;
 
   // convenience file handles
-  private File contentDir = null;
+  protected File contentDir = null;
 
-  private String contentBufferStr = null;
   protected File nodeRootFile = null;
   protected File nodePropsFile = null;
-  protected File cacheLocationFile;
   protected File currentCacheFile;
   protected File currentPropsFile;
   private File tempCacheFile;
@@ -219,7 +217,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
     for (int ii=0; ii<children.length; ii++) {
       File child = children[ii];
       if (!child.isDirectory()) continue;
-      if (child.getName().equals(cacheLocationFile.getName())) continue;
+      if (child.getName().equals(contentDir.getName())) continue;
       return false;
     }
     return true;
@@ -242,7 +240,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
       logger.error("No cache directory located for: "+url);
       throw new LockssRepository.RepositoryStateException("No cache directory located.");
     }
-    if (cacheLocationFile==null) initCacheLocation();
+    if (contentDir==null) getContentDir();
     File[] children = nodeRootFile.listFiles();
     // sorts alphabetically relying on File.compareTo()
     Arrays.sort(children, new FileComparator());
@@ -431,10 +429,10 @@ public class RepositoryNodeImpl implements RepositoryNode {
     }
     ensureCurrentInfoLoaded();
     if (currentVersion == 0) {
-      if (!cacheLocationFile.exists()) {
-        if (!cacheLocationFile.mkdirs()) {
+      if (!contentDir.exists()) {
+        if (!contentDir.mkdirs()) {
           logger.error("Couldn't create cache directory for '"+
-                       cacheLocationFile.getAbsolutePath()+"'");
+                       contentDir.getAbsolutePath()+"'");
           throw new LockssRepository.RepositoryStateException("Couldn't create cache directory.");
         }
       }
@@ -675,8 +673,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
             "Couldn't deactivate.");
       }
     } else {
-      if (!cacheLocationFile.exists()) {
-        cacheLocationFile.mkdirs();
+      if (!contentDir.exists()) {
+        contentDir.mkdirs();
       }
     }
 
@@ -847,17 +845,17 @@ public class RepositoryNodeImpl implements RepositoryNode {
       // currentVersion doesn't get changed.  Fix this.
       initFiles();
 
+      // load the node properties
+      if (!nodePropsLoaded && nodePropsFile.exists()) {
+        loadNodeProps();
+      }
+
       // no content, so version 0
-      if (!cacheLocationFile.exists()) {
+      if (!contentDir.exists()) {
         currentVersion = 0;
         curInputFile = null;
         curProps = null;
         return;
-      }
-
-      // load the node properties
-      if (!nodePropsLoaded && nodePropsFile.exists()) {
-        loadNodeProps();
       }
 
       // determine if deleted or inactive
@@ -878,7 +876,6 @@ public class RepositoryNodeImpl implements RepositoryNode {
    */
   private void initFiles() {
     initNodeRoot();
-    initCacheLocation();
     initCurrentCacheFile();
     initCurrentPropsFile();
     initTempCacheFile();
@@ -998,10 +995,10 @@ public class RepositoryNodeImpl implements RepositoryNode {
    */
   private void writeNodeProperties() {
     if (currentVersion == 0) {
-      if (!cacheLocationFile.exists()) {
-        if (!cacheLocationFile.mkdirs()) {
+      if (!contentDir.exists()) {
+        if (!contentDir.mkdirs()) {
           logger.error("Couldn't create cache directory for '"+
-                       cacheLocationFile.getAbsolutePath()+"'");
+                       contentDir.getAbsolutePath()+"'");
           throw new LockssRepository.RepositoryStateException("Couldn't create cache directory.");
         }
       }
@@ -1037,10 +1034,6 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
   private void initNodePropsFile() {
     nodePropsFile = new File(nodeLocation, NODE_PROPS_FILENAME);
-  }
-
-  private void initCacheLocation() {
-    cacheLocationFile = getContentDir();
   }
 
   protected void initNodeRoot() {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.47 2004-04-13 22:21:26 eaalto Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.48 2004-04-14 23:46:17 eaalto Exp $
  */
 
 /*
@@ -254,7 +254,7 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
       fail("Should have thrown state exception.");
     } catch (LockssRepository.RepositoryStateException rse) { }
 
-    assertTrue(leaf.cacheLocationFile.exists());
+    assertTrue(leaf.contentDir.exists());
     assertEquals(RepositoryNodeImpl.INACTIVE_VERSION, leaf.getCurrentVersion());
     assertFalse(leaf.hasContent());
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.40 2004-04-10 05:41:32 tlipkis Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.41 2004-04-14 23:46:18 eaalto Exp $
  */
 
 /*
@@ -816,7 +816,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     String resultStr = getLeafContent(leaf);
     assertEquals("test stream 2", resultStr);
 
-    File lastProps = new File(leaf.cacheLocationFile, "1.props");
+    File lastProps = new File(leaf.contentDir, "1.props");
     assertTrue(lastProps.exists());
     InputStream is =
         new BufferedInputStream(new FileInputStream(lastProps));
