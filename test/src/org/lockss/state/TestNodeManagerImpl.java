@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.65 2003-04-16 05:53:27 aalto Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.66 2003-04-16 19:20:42 claire Exp $
  */
 
 /*
@@ -422,6 +422,8 @@ public class TestNodeManagerImpl
         "testDir2"));
   }
   public void testCheckLastHistory() throws Exception {
+    TimeBase.setSimulated(10000);
+
     NodeState nodeState = nodeManager.getNodeState(getCUS(mau, TEST_URL));
 
     // these are true if the pollmanager doesn't know about them
@@ -442,7 +444,9 @@ public class TestNodeManagerImpl
     ( (MockPollManager) theDaemon.getPollManager()).thePolls.remove(TEST_URL);
     historyCheckTest(PollState.REPAIRED, nodeState, false);
     ( (MockPollManager) theDaemon.getPollManager()).thePolls.remove(TEST_URL);
-    historyCheckTest(PollState.UNREPAIRABLE, nodeState, false);
+
+    // this is true because we're going to try and fix unrepairable
+    historyCheckTest(PollState.UNREPAIRABLE, nodeState, true);
     ( (MockPollManager) theDaemon.getPollManager()).thePolls.remove(TEST_URL);
 
     // this true for lost content polls, false for name polls
@@ -454,6 +458,7 @@ public class TestNodeManagerImpl
     // this is true, since we called the poll
     historyCheckTest(PollState.ERR_IO, nodeState, true);
     ( (MockPollManager) theDaemon.getPollManager()).thePolls.remove(TEST_URL);
+    TimeBase.setReal();
   }
 
   private void historyCheckTest(int pollType, int pollState, NodeState node,

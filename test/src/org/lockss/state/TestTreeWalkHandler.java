@@ -1,5 +1,5 @@
 /*
- * $Id: TestTreeWalkHandler.java,v 1.9 2003-04-10 04:29:45 claire Exp $
+ * $Id: TestTreeWalkHandler.java,v 1.10 2003-04-16 19:20:42 claire Exp $
  */
 
 /*
@@ -238,6 +238,7 @@ public class TestTreeWalkHandler extends LockssTestCase {
   }
 
   public void testCheckNodeStatePolling() throws Exception {
+    TimeBase.setSimulated(10000);
     NodeStateImpl node = (NodeStateImpl)nodeManager.getNodeState(
         TestNodeManagerImpl.getCUS(mau, TEST_URL));
 
@@ -264,7 +265,9 @@ public class TestTreeWalkHandler extends LockssTestCase {
     ( (MockPollManager) theDaemon.getPollManager()).thePolls.remove(TEST_URL);
     checkPollingTest(PollState.REPAIRED, 567, false, node);
     ( (MockPollManager) theDaemon.getPollManager()).thePolls.remove(TEST_URL);
-    checkPollingTest(PollState.UNREPAIRABLE, 678, false, node);
+
+    // this is true since we're going to try again
+    checkPollingTest(PollState.UNREPAIRABLE, 678, true, node);
     ( (MockPollManager) theDaemon.getPollManager()).thePolls.remove(TEST_URL);
 
     // should schedule name poll if last history is LOST or ERR_IO
@@ -274,6 +277,8 @@ public class TestTreeWalkHandler extends LockssTestCase {
     // should schedule a name poll if we lost a content poll
     checkPollingTest(Poll.CONTENT_POLL, PollState.LOST, 890, true, node);
     ( (MockPollManager) theDaemon.getPollManager()).thePolls.remove(TEST_URL);
+
+    TimeBase.setReal();
  }
 
  private void checkPollingTest(int pollState, long startTime,
