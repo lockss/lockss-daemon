@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.100 2003-10-16 00:10:10 eaalto Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.101 2004-01-12 06:22:55 tlipkis Exp $
  */
 
 /*
@@ -962,11 +962,12 @@ public class TestNodeManagerImpl extends LockssTestCase {
 
     NodeManagerImpl nodeManager2 = new NodeManagerImpl(new MockArchivalUnit());
     assertTrue(nodeManager2.registeredAccessors);
-    nodeManager2.initService(theDaemon);
-    nodeManager2.startService();
+    // unregister is disabled, so are its tests
+//     nodeManager2.initService(theDaemon);
+//     nodeManager2.startService();
 
-    nodeManager2.stopService();
-    assertFalse(nodeManager2.registeredAccessors);
+//     nodeManager2.stopService();
+//     assertFalse(nodeManager2.registeredAccessors);
   }
 
   private void stateCheckTest(NodeState node, int pollType,

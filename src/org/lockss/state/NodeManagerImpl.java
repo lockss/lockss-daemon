@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.161 2004-01-10 01:06:41 eaalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.162 2004-01-12 06:22:55 tlipkis Exp $
  */
 
 /*
@@ -102,8 +102,7 @@ public class NodeManagerImpl
 
   public void startService() {
     super.startService();
-    if (logger.isDebug()) logger.debug("NodeManager being started for " +
-				       managedAu);
+    if (logger.isDebug()) logger.debug("Starting: " + managedAu);
     historyRepo = theDaemon.getHistoryRepository();
     lockssRepo = theDaemon.getLockssRepository(managedAu);
     pollManager = theDaemon.getPollManager();
@@ -134,21 +133,21 @@ public class NodeManagerImpl
       logger.debug2("Status accessors registered.");
     }
 
-    logger.debug("NodeManager successfully started");
+    logger.debug2("NodeManager successfully started");
   }
 
   public void stopService() {
-    logger.debug("NodeManager being stopped");
-    if (treeWalkHandler != null) {
-      treeWalkHandler.end();
-      treeWalkHandler = null;
-    }
+    if (logger.isDebug()) logger.debug("Stopping: " + managedAu);
+    killTreeWalk();
     activeNodes.clear();
     damagedNodes.clear();
     nodeCache.clear();
 
     // unregister our status accessors
-    if (registeredAccessors) {
+    List nodeMgrs = theDaemon.getAllNodeManagers();
+    // Not appropriate to unregister status accessors just because a single
+    // instance of the AU manager is stopping.
+    if (false && registeredAccessors) {
       StatusService statusServ = theDaemon.getStatusService();
       statusServ.unregisterStatusAccessor(NodeManagerStatus.
                                           SERVICE_STATUS_TABLE_NAME);
@@ -161,7 +160,7 @@ public class NodeManagerImpl
     }
 
     super.stopService();
-    logger.debug("NodeManager successfully stopped");
+    logger.debug2("NodeManager successfully stopped");
   }
 
   protected void setConfig(Configuration newConfig,
@@ -268,6 +267,7 @@ public class NodeManagerImpl
     logger.debug2("Killing treewalk thread...");
     if (treeWalkHandler != null) {
       treeWalkHandler.end();
+      treeWalkHandler = null;
     }
   }
 
