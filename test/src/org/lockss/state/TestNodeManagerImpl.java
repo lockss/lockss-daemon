@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.56 2003-04-02 23:28:37 tal Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.57 2003-04-02 23:50:55 aalto Exp $
  */
 
 /*
@@ -58,9 +58,9 @@ public class TestNodeManagerImpl extends LockssTestCase {
     super.setUp();
     theDaemon = new MockLockssDaemon();
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    String s = LockssRepositoryServiceImpl.PARAM_CACHE_LOCATION + "=" +
-        tempDirPath + "\n" + HistoryRepositoryImpl.PARAM_HISTORY_LOCATION +
-        "=" + tempDirPath;
+    String s = HistoryRepositoryImpl.PARAM_HISTORY_LOCATION +
+        "=" + tempDirPath +"\n" + NodeManagerImpl.PARAM_NODESTATE_CACHE_SIZE +
+        "=10";
     TestConfiguration.setCurrentConfigFromString(s);
 
     mau = new MockArchivalUnit();
@@ -103,30 +103,29 @@ public class TestNodeManagerImpl extends LockssTestCase {
   }
 
   public void testGetNodeState() throws Exception {
-    CachedUrlSet cus = getCUS(mau, "http://www.example.com");
+    CachedUrlSet cus = getCUS(mau, TEST_URL);
     NodeState node = nodeManager.getNodeState(cus);
     assertNotNull(node);
     assertEquals(cus, node.getCachedUrlSet());
     assertNotNull(node.getCrawlState());
-    assertEquals( -1, node.getCrawlState().getType());
+    assertEquals(-1, node.getCrawlState().getType());
     assertEquals(CrawlState.FINISHED, node.getCrawlState().getStatus());
 
     NodeState node2 = nodeManager.getNodeState(cus);
     assertSame(node, node2);
 
-    cus = getCUS(mau, "http://www.example.com/branch1");
+    cus = getCUS(mau, TEST_URL + "/branch1");
     node = nodeManager.getNodeState(cus);
     assertNotNull(node);
     assertEquals(cus, node.getCachedUrlSet());
 
     // null, since not in repository
-    cus = getCUS(mau, "http://www.example.com/branch3");
+    cus = getCUS(mau, TEST_URL + "/branch3");
     node = nodeManager.getNodeState(cus);
     assertNull(node);
 
     // should find it now that it's added
-    theDaemon.getLockssRepository(mau).createNewNode(
-        "http://www.example.com/branch3");
+    theDaemon.getLockssRepository(mau).createNewNode(TEST_URL + "/branch3");
     node = nodeManager.getNodeState(cus);
     assertNotNull(node);
   }

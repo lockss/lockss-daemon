@@ -1,5 +1,5 @@
 /*
- * $Id: TestTreeWalkHandler.java,v 1.5 2003-04-02 23:28:37 tal Exp $
+ * $Id: TestTreeWalkHandler.java,v 1.6 2003-04-02 23:50:55 aalto Exp $
  */
 
 /*
@@ -254,9 +254,10 @@ public class TestTreeWalkHandler extends LockssTestCase {
     checkPollingTest(PollState.SCHEDULED, 234, false, node);
     checkPollingTest(PollState.UNREPAIRABLE, 345, false, node);
     checkPollingTest(PollState.WON, 456, false, node);
-    checkPollingTest(PollState.ERR_IO, 567, false, node);
 
-    // should schedule name poll if last history is LOST or REPAIRING
+    // should schedule name poll if last history is LOST, REPAIRING
+    // or ERR_IO
+    checkPollingTest(PollState.ERR_IO, 567, true, node);
     checkPollingTest(PollState.LOST, 678, true, node);
     checkPollingTest(PollState.REPAIRING, 789, true, node);
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.83 2003-04-02 19:32:30 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.84 2003-04-02 23:50:55 aalto Exp $
  */
 
 /*
@@ -60,7 +60,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
    */
   public static final String PARAM_NODESTATE_CACHE_SIZE =
       Configuration.PREFIX + "state.cache.size";
-  static final int DEFAULT_MAP_SIZE = 100;
+  static final int DEFAULT_CACHE_SIZE = 100;
   static HistoryRepository historyRepo;
   private LockssRepository lockssRepo;
   static PollManager pollManager;
@@ -211,7 +211,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
       if (results.getErr() < 0) {
         pollState.status = mapResultsErrorToPollError(results.getErr());
         logger.info("Poll didn't finish fully.  Error code: "
-                    + pollState.status);
+                    + mapPollErrorToString(pollState.status));
         return;
       }
 
@@ -284,7 +284,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
           callContentPollsOnSubNodes(nodeState, results);
           pollState.status = PollState.WON;
         } catch (IOException e) {
-          logger.error("Error scheduling content polls.", e);
+          logger.error("IO error scheduling content polls.", e);
           pollState.status = PollState.ERR_IO;
         }
       } else {
@@ -345,9 +345,11 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
   boolean checkLastHistory(PollHistory lastHistory, NodeState node) {
     switch (lastHistory.status) {
       // if latest is PollState.LOST or PollState.REPAIRING
-      // call a name poll to finish the repair which ended early
+      // call a name poll to finish the repair which ended early (or had
+      // an IO error)
       case PollState.LOST:
       case PollState.REPAIRING:
+      case PollState.ERR_IO:
         PollSpec spec = new PollSpec(node.getCachedUrlSet(),
                                      lastHistory.lwrBound,
                                      lastHistory.uprBound);
@@ -420,8 +422,10 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
                            Set changedKeys) {
     if (changedKeys.contains(PARAM_NODESTATE_CACHE_SIZE)) {
       maxCacheSize = newConfig.getInt(PARAM_NODESTATE_CACHE_SIZE,
-                                    DEFAULT_MAP_SIZE);
-      nodeCache.setCacheSize(maxCacheSize);
+                                    DEFAULT_CACHE_SIZE);
+      if (nodeCache!=null) {
+        nodeCache.setCacheSize(maxCacheSize);
+      }
     }
   }
 
@@ -437,6 +441,20 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
         return PollState.ERR_SCHEDULE_HASH;
     }
     return PollState.ERR_UNDEFINED;
+  }
+
+  static String mapPollErrorToString(int pollErr) {
+    switch (pollErr) {
+      case PollState.ERR_HASHING:
+        return "Hashing Error";
+      case PollState.ERR_IO:
+        return "IO Error";
+      case PollState.ERR_NO_QUORUM:
+        return "No Quorum";
+      case PollState.ERR_SCHEDULE_HASH:
+        return "Hash Schedule Error";
+    }
+    return "Undefined Error";
   }
 
   private void markNodeForRepair(CachedUrlSet cus, PollTally tally) {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.21 2003-04-01 00:08:12 aalto Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.22 2003-04-02 23:50:55 aalto Exp $
  */
 
 /*
@@ -33,22 +33,19 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.state;
 
-import java.io.File;
-import java.io.IOException;
-import java.net.InetAddress;
+import java.io.*;
 import java.util.*;
+import java.net.InetAddress;
+import java.net.MalformedURLException;
 import org.lockss.test.*;
-import org.lockss.util.ListUtil;
+import org.lockss.util.*;
 import org.lockss.plugin.CachedUrlSet;
 import org.lockss.daemon.TestConfiguration;
-import org.exolab.castor.mapping.Mapping;
+import org.lockss.daemon.RangeCachedUrlSetSpec;
 import org.lockss.protocol.LcapIdentity;
 import org.lockss.protocol.IdentityManager;
 import org.lockss.repository.LockssRepositoryServiceImpl;
-import java.io.*;
-import java.net.MalformedURLException;
-import org.lockss.util.Deadline;
-import org.lockss.daemon.RangeCachedUrlSetSpec;
+import org.exolab.castor.mapping.Mapping;
 
 public class TestHistoryRepositoryImpl extends LockssTestCase {
   private String tempDirPath;
@@ -231,6 +228,7 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
   }
 
   public void testStoreNodeState() throws Exception {
+    TimeBase.setSimulated();
     CachedUrlSet mcus = new MockCachedUrlSet(mau, new RangeCachedUrlSetSpec(
         "http://www.example.com"));
     CrawlState crawl = new CrawlState(1, 2, 123);
@@ -276,8 +274,8 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
     assertEquals(654, loadedPoll.getDeadline().getExpirationTime());
     assertFalse(pollIt.hasNext());
 
+    TimeBase.setReal();
   }
-
 
   private PollHistoryBean createPollHistoryBean(int voteCount) throws Exception {
     PollState state = new PollState(1, "lwr", "upr", 2, 5, null);
