@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.18 2003-02-04 02:55:03 claire Exp $
+ * $Id: NodeManagerImpl.java,v 1.19 2003-02-05 22:38:49 troberts Exp $
  */
 
 /*
@@ -40,7 +40,7 @@ import java.net.InetAddress;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.poller.*;
-import org.lockss.crawler.RepairCallback;
+import org.lockss.crawler.CrawlCallback;
 import org.lockss.plugin.PluginManager;
 import org.lockss.protocol.LcapMessage;
 import org.lockss.protocol.IdentityManager;
@@ -511,14 +511,17 @@ public class NodeManagerImpl implements NodeManager {
     return set;
   }
 
-  static class ContentRepairCallback  implements RepairCallback {
+  static class ContentRepairCallback  implements CrawlCallback {
     /**
      * @param success whether the repair was successful or not
      * @param cookie object used by callback to designate which repair
      * attempt this is
      */
-    public void signalRepairAttemptCompleted(boolean success, Object cookie) {
+    public void signalCrawlAttemptCompleted(boolean success, Object cookie) {
       PollManager.getPollManager().resumePoll(success, cookie);
+    }
+
+    public void signalCrawlSuspended(Object cookie) {
     }
   }
 
