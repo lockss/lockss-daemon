@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescr.java,v 1.13 2004-04-28 22:52:04 clairegriffin Exp $
+ * $Id: ConfigParamDescr.java,v 1.14 2004-07-14 20:43:16 clairegriffin Exp $
  */
 
 /*
@@ -101,6 +101,20 @@ public class ConfigParamDescr implements Comparable {
     JOURNAL_ABBR.setSize(10);
     JOURNAL_ABBR.setDescription("Abbreviation for journal (often used as part of file names).");
   }
+
+  public static final ConfigParamDescr JOURNAL_ID = new ConfigParamDescr();
+  static {
+    JOURNAL_ID.setKey("journal_id");
+    JOURNAL_ID.setDisplayName("Journal Identifier");
+    JOURNAL_ID.setType(TYPE_STRING);
+    JOURNAL_ID.setSize(40);
+    JOURNAL_ID.setDescription("Identifier for journal (often used as part of file names)");
+  }
+
+  public static final ConfigParamDescr[] DEFAULT_DESCR_ARRAY = {
+      BASE_URL, VOLUME_NUMBER, YEAR, JOURNAL_ID
+  };
+
 
   private String key;			// param (prop) key
   private String displayName;		// human readable name
