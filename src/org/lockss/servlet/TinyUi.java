@@ -1,5 +1,5 @@
 /*
- * $Id: TinyUi.java,v 1.2 2004-07-12 22:37:49 tlipkis Exp $
+ * $Id: TinyUi.java,v 1.2.2.1 2004-07-19 08:29:15 tlipkis Exp $
  */
 
 /*
@@ -113,7 +113,6 @@ public class TinyUi extends JettyManager {
     log.debug("Stopping");
     try {
       if (server != null) {
-	log.debug("Stopping2");
 	server.stop();
 	server = null;
       }
@@ -217,9 +216,9 @@ public class TinyUi extends JettyManager {
 	  server.start ();
 	  return true;
 	} catch (org.mortbay.util.MultiException e) {
-	  log.warning("multi", e);
-	  log.warning("first", e.getException(0));
-	  log.warning("Addr in use, sleeping " +
+	  log.debug("multi", e);
+	  log.debug("first", e.getException(0));
+	  log.warning("Couldn't start server, will retry in " +
 		      StringUtil.timeIntervalToString(delayTime[ix]));
 	  Deadline.in(delayTime[ix]).sleep();
 	}
@@ -333,8 +332,15 @@ public class TinyUi extends JettyManager {
       page.title("LOCKSS cache");
       page.addHeader("");
 
+      Table table = new Table(0, "cellspacing=0 cellpadding=0 align=center");
+      table.newRow();
+      table.newCell("valign=top align=center");
+      table.add(new Link(Constants.LOCKSS_HOME_URL,
+			 LockssServlet.IMAGE_LOGO_LARGE));
+      table.add(LockssServlet.IMAGE_TM);
+
       Composite b = new Font(1, true);
-      b.add("LOCKSS cache ");
+      b.add("<br>This LOCKSS cache");
       Configuration pc = Configuration.getPlatformConfig();
       String name = Configuration.getPlatformHostname();
       if (name != null) {
@@ -347,8 +353,10 @@ public class TinyUi extends JettyManager {
       if (tinyData[0] != null) {
 	b.add(tinyData[0]);
       }
-//       page.add(new Block(Block.Bold).add(b));
-      page.add(b);
+      table.newRow();
+      table.newCell("valign=top align=left");
+      table.add(b);
+      page.add(table);
       response.setContentType("text/html");
       response.setHeader("Pragma", "no-cache");
       response.setHeader("Cache-Control", "no-cache,no-store");
