@@ -1,5 +1,5 @@
 /*
- * $Id: TestHttpClientUrlConnection.java,v 1.3 2004-03-07 08:39:29 tlipkis Exp $
+ * $Id: TestHttpClientUrlConnection.java,v 1.4 2004-03-11 09:43:45 tlipkis Exp $
  */
 
 /*
@@ -197,6 +197,7 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     assertEquals(3333, conn.getResponseContentLength());
     assertEquals("text/html", conn.getResponseContentEncoding());
     assertEquals("type1", conn.getResponseContentType());
+    assertEquals(urlString, conn.getActualUrl());
     Properties props = new Properties();
     conn.storeResponseHeaderInto(props, "x_");
     Properties eprops = new Properties();
@@ -218,6 +219,25 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
 
     conn.execute();
     assertEquals(200, conn.getResponseCode());
+    assertEquals(redir, conn.getActualUrl());
+    MyMockGetMethod cmeth = conn.getMockMethod();
+    assertSame(meth2, cmeth);
+    assertEquals(redir, cmeth.getUrl());
+  }
+
+  public void testRedirectWithQuery() throws Exception {
+    String redir = "http://redirected.com/foo.bar?p=v";
+
+    client.setRes(301, 301);
+    method.setResponseHeader("location", redir);
+
+    MyMockGetMethod meth2 = new MyMockGetMethod(null);
+    meth2.setRes(200);
+    conn.addMethod(meth2);
+
+    conn.execute();
+    assertEquals(200, conn.getResponseCode());
+    assertEquals(redir, conn.getActualUrl());
     MyMockGetMethod cmeth = conn.getMockMethod();
     assertSame(meth2, cmeth);
     assertEquals(redir, cmeth.getUrl());
@@ -311,6 +331,24 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     }
     int getRes() {
       return res;
+    }
+
+    public String getPath() {
+      try {
+	URI uri = new URI(url);
+	return uri.getPath();
+      } catch(URIException e) {
+	throw new RuntimeException("getPath couldn't create URI: " + e);
+      }
+    }
+
+    public String getQueryString() {
+      try {
+	URI uri = new URI(url);
+	return uri.getQuery();
+      } catch(URIException e) {
+	throw new RuntimeException("getQueryString couldn't create URI: " + e);
+      }
     }
 
     public void setRequestHeader(String headerName, String headerValue) {
