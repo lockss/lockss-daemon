@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.39 2004-05-24 22:15:56 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.40 2004-06-01 08:36:08 tlipkis Exp $
  */
 
 /*
@@ -406,11 +406,20 @@ public class StringUtil {
 
   /* Return a string with all the characters from a reader */
   public static String fromReader(Reader r) throws IOException {
+    return fromReader(r, -1);
+  }
+
+  /* Return a string with characters from a reader, throwing if more than
+   * maxSize chars */
+  public static String fromReader(Reader r, int maxSize) throws IOException {
     char[] buf = new char[1000];
     StringBuffer sb = new StringBuffer(1000);
     int len;
     while ((len = r.read(buf)) >= 0) {
       sb.append(buf, 0, len);
+      if (maxSize > 0 && sb.length() > maxSize) {
+	throw new FileTooLargeException();
+      }
     }
     return sb.toString();
   }
@@ -419,6 +428,16 @@ public class StringUtil {
   public static String fromInputStream(InputStream in) throws IOException {
     // use our default encoding rather than system default
     return fromReader(new InputStreamReader(in, Constants.DEFAULT_ENCODING));
+  }
+
+  /* Return a string with characters from an InputStream, throwing if more
+   * than maxSize chars */
+  /* Return a string with all the characters from an InputStream */
+  public static String fromInputStream(InputStream in, int maxSize)
+      throws IOException {
+    // use our default encoding rather than system default
+    return fromReader(new InputStreamReader(in, Constants.DEFAULT_ENCODING),
+		      maxSize);
   }
 
   /** Reads in the entire contents of a file into a string */
@@ -677,4 +696,13 @@ public class StringUtil {
     return buf.toString();
   }
 
+  public static class FileTooLargeException extends IOException {
+    public FileTooLargeException() {
+      super();
+    }
+    
+    public FileTooLargeException(String message) {
+      super(message);
+    }
+  }    
 }
