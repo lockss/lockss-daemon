@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.20 2003-03-24 23:52:23 aalto Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.21 2003-04-01 00:08:12 aalto Exp $
  */
 
 /*
@@ -214,7 +214,7 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
 
 
   public void testStoreAuState() throws Exception {
-    AuState auState = new AuState(mau, 123, 321, 456);
+    AuState auState = new AuState(mau, 123, 321, 456, repository);
     repository.storeAuState(auState);
     String filePath = LockssRepositoryServiceImpl.mapAuToFileLocation(tempDirPath +
         HistoryRepositoryImpl.HISTORY_ROOT_NAME, mau);

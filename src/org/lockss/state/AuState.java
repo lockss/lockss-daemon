@@ -1,5 +1,5 @@
 /*
- * $Id: AuState.java,v 1.10 2003-03-28 22:49:04 troberts Exp $
+ * $Id: AuState.java,v 1.11 2003-04-01 00:08:12 aalto Exp $
  */
 
 /*
@@ -45,13 +45,16 @@ public class AuState {
   protected long lastCrawlTime;
   protected long lastTopLevelPoll;
   protected long lastTreeWalk;
+  private HistoryRepository historyRepo;
+
 
   protected AuState(ArchivalUnit au, long lastCrawlTime, long lastTopLevelPoll,
-                    long lastTreeWalk) {
+                    long lastTreeWalk, HistoryRepository historyRepo) {
     this.au = au;
     this.lastCrawlTime = lastCrawlTime;
     this.lastTopLevelPoll = lastTopLevelPoll;
     this.lastTreeWalk = lastTreeWalk;
+    this.historyRepo = historyRepo;
   }
 
   /**
@@ -87,24 +90,27 @@ public class AuState {
   }
 
   /**
-   * Sets the last crawl time to the current time.
+   * Sets the last crawl time to the current time.  Saves itself to disk.
    */
   protected void newCrawlFinished() {
     lastCrawlTime = TimeBase.nowMs();
+    historyRepo.storeAuState(this);
   }
 
   /**
-   * Sets the last poll time to the current time.
+   * Sets the last poll time to the current time.  Saves itself to disk.
    */
   void newPollFinished() {
     lastTopLevelPoll = TimeBase.nowMs();
+    historyRepo.storeAuState(this);
   }
 
   /**
-   * Sets the last treewalk time to the current time.
+   * Sets the last treewalk time to the current time.  Saves itself to disk.
    */
   void setLastTreeWalkTime() {
     lastTreeWalk = TimeBase.nowMs();
+    historyRepo.storeAuState(this);
   }
 
 

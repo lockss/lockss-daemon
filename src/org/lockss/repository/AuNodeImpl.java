@@ -1,5 +1,5 @@
 /*
- * $Id: AuNodeImpl.java,v 1.2 2003-02-28 22:20:07 aalto Exp $
+ * $Id: AuNodeImpl.java,v 1.3 2003-04-01 00:08:12 aalto Exp $
  */
 
 /*
@@ -50,12 +50,6 @@ public class AuNodeImpl extends RepositoryNodeImpl {
                      LockssRepositoryImpl repository) {
     super(url, nodeLocation, repository);
   }
-
-  public void finalize() {
-    url = AuUrl.PROTOCOL;
-    super.finalize();
-  }
-
 
   /**
    * Overriden to return false.

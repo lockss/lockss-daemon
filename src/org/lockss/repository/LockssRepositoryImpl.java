@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.29 2003-03-29 20:25:39 tal Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.30 2003-04-01 00:08:12 aalto Exp $
  */
 
 /*
@@ -109,13 +109,6 @@ public class LockssRepositoryImpl implements LockssRepository {
    * @see org.lockss.app.LockssManager#startService()
    */
   public void startService() {
-    Configuration.registerConfigurationCallback(new Configuration.Callback() {
-        public void configurationChanged(Configuration newConfig,
-                                         Configuration oldConfig,
-                                         Set changedKeys) {
-          setConfig(newConfig, oldConfig);
-        }
-      });
   }
 
   /**
@@ -127,22 +120,11 @@ public class LockssRepositoryImpl implements LockssRepository {
     theRepository = null;
   }
 
-  private void setConfig(Configuration config, Configuration oldConfig) {
-// don't change the config since you'll lose all history
-/*    String cacheLoc = config.get(LockssRepositoryServiceImpl.PARAM_CACHE_LOCATION);
-    if (cacheLoc!=null) {
-      rootLocation = LockssRepositoryServiceImpl.extendCacheLocation(cacheLoc);
-    }
- */
-  }
-
-  public RepositoryNode getNode(String url)
-      throws MalformedURLException {
+  public RepositoryNode getNode(String url) throws MalformedURLException {
     return getNode(url, false);
   }
 
-  public RepositoryNode createNewNode(String url)
-      throws MalformedURLException {
+  public RepositoryNode createNewNode(String url) throws MalformedURLException {
     return getNode(url, true);
   }
 
@@ -261,15 +243,6 @@ public class LockssRepositoryImpl implements LockssRepository {
     nodeCache.put(urlKey, node);
     refMap.put(urlKey, node);
     return node;
-  }
-
-  /**
-   * Removes a weak reference from the reference map.  Called by finalize()
-   * of {@link RepositoryNodeImpl}.
-   * @param urlKey the reference key url
-   */
-  synchronized void removeReference(String urlKey) {
-    refMap.remove(urlKey);
   }
 
   int getCacheHits() { return cacheHits; }

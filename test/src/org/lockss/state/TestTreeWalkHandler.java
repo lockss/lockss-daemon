@@ -1,5 +1,5 @@
 /*
- * $Id: TestTreeWalkHandler.java,v 1.2 2003-03-27 21:47:17 troberts Exp $
+ * $Id: TestTreeWalkHandler.java,v 1.3 2003-04-01 00:08:12 aalto Exp $
  */
 
 /*
@@ -91,7 +91,10 @@ public class TestTreeWalkHandler extends LockssTestCase {
     theDaemon.setHistoryRepository(historyRepo);
 
     // can't call 'startService()' since thread can't start
-    nodeManager.nodeMap = new NodeStateMap(historyRepo, 10);
+    nodeManager.nodeCache = new NodeStateCache(historyRepo, 10);
+    nodeManager.auState = historyRepo.loadAuState(mau);
+    nodeManager.pollManager = pollMan;
+
 
     treeWalkHandler = new TreeWalkHandler(nodeManager,
                                          theDaemon.getCrawlManager());
@@ -238,7 +241,8 @@ public class TestTreeWalkHandler extends LockssTestCase {
         TestNodeManagerImpl.getCUS(mau, TEST_URL));
 
     // should ignore if active poll
-    PollState pollState = new PollState(1, "", "", PollState.RUNNING, 1, null);
+    PollState pollState = new PollState(1, "", "", PollState.RUNNING, 1,
+                                        Deadline.NEVER);
     node.addPollState(pollState);
     treeWalkHandler.checkNodeState(node);
     // no poll in manager since we just created a PollState

@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuStateImpl.java,v 1.4 2003-03-24 23:52:23 aalto Exp $
+ * $Id: TestAuStateImpl.java,v 1.5 2003-04-01 00:08:12 aalto Exp $
  */
 
 /*
@@ -33,10 +33,20 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.state;
 
-import org.lockss.test.LockssTestCase;
+import org.lockss.test.*;
 import org.lockss.util.TimeBase;
 
 public class TestAuStateImpl extends LockssTestCase {
+  MockHistoryRepository historyRepo;
+  MockArchivalUnit mau;
+
+  public void setUp() throws Exception {
+    super.setUp();
+
+    historyRepo = new MockHistoryRepository();
+    mau = new MockArchivalUnit();
+  }
+
 
   public void tearDown() throws Exception {
     TimeBase.setReal();
@@ -44,30 +54,36 @@ public class TestAuStateImpl extends LockssTestCase {
   }
 
   public void testCrawlFinished() {
-    AuState auState = new AuState(null, 123, -1, -1);
+    AuState auState = new AuState(mau, 123, -1, -1, historyRepo);
     assertEquals(123, auState.getLastCrawlTime());
+    assertNull(historyRepo.storedAus.get(auState.getArchivalUnit()));
 
     TimeBase.setSimulated(456);
     auState.newCrawlFinished();
     assertEquals(456, auState.getLastCrawlTime());
+    assertNotNull(historyRepo.storedAus.get(auState.getArchivalUnit()));
   }
 
   public void testPollFinished() {
-    AuState auState = new AuState(null, -1, 123, -1);
+    AuState auState = new AuState(mau, -1, 123, -1, historyRepo);
     assertEquals(123, auState.getLastTopLevelPollTime());
+    assertNull(historyRepo.storedAus.get(auState.getArchivalUnit()));
 
     TimeBase.setSimulated(456);
     auState.newPollFinished();
     assertEquals(456, auState.getLastTopLevelPollTime());
+    assertNotNull(historyRepo.storedAus.get(auState.getArchivalUnit()));
   }
 
   public void testTreeWalkFinished() {
-    AuState auState = new AuState(null, -1, -1, 123);
+    AuState auState = new AuState(mau, -1, -1, 123, historyRepo);
     assertEquals(123, auState.getLastTreeWalkTime());
+    assertNull(historyRepo.storedAus.get(auState.getArchivalUnit()));
 
     TimeBase.setSimulated(456);
     auState.setLastTreeWalkTime();
     assertEquals(456, auState.getLastTreeWalkTime());
+    assertNotNull(historyRepo.storedAus.get(auState.getArchivalUnit()));
   }
 
   public static void main(String[] argv) {

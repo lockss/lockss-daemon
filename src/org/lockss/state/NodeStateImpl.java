@@ -1,5 +1,5 @@
 /*
- * $Id: NodeStateImpl.java,v 1.10 2003-03-27 00:50:23 aalto Exp $
+ * $Id: NodeStateImpl.java,v 1.11 2003-04-01 00:08:12 aalto Exp $
  */
 
 /*
@@ -39,7 +39,8 @@ import org.apache.commons.collections.TreeBag;
 
 /**
  * NodeState contains the current state information for a node, as well as the
- * poll histories.
+ * poll histories.  It automatically writes its state to disk when changed,
+ * though this does not extend to changes in the classes it contains.
  */
 public class NodeStateImpl implements NodeState {
   protected CachedUrlSet cus;
@@ -47,8 +48,6 @@ public class NodeStateImpl implements NodeState {
   protected List polls;
   protected List pollHistories = null;
   protected HistoryRepository repository;
-
-  protected NodeStateMap.Callback callback = null;
 
   // for marshalling only
   NodeStateImpl() { }
@@ -70,12 +69,6 @@ public class NodeStateImpl implements NodeState {
     this.crawlState = crawlState;
     this.polls = polls;
     this.repository = repository;
-  }
-
-  public void finalize() {
-    if (callback!=null) {
-      callback.removeReference(cus.getUrl());
-    }
   }
 
   public CachedUrlSet getCachedUrlSet() {
@@ -116,15 +109,9 @@ public class NodeStateImpl implements NodeState {
     return cus.flatSetIterator().hasNext();
   }
 
-  void setMapCallback(NodeStateMap.Callback callback) {
-    this.callback = callback;
-  }
-
   protected void addPollState(PollState new_poll) {
     polls.add(new_poll);
-    if (callback!=null) {
-      callback.refreshInLRUMap(cus.getUrl(), this);
-    }
+    repository.storeNodeState(this);
   }
 
   protected void closeActivePoll(PollHistory finished_poll) {
@@ -145,10 +132,9 @@ public class NodeStateImpl implements NodeState {
     if (!added) {
       pollHistories.add(finished_poll);
     }
+    //XXX synchronize polls
     polls.remove(finished_poll);
-    if (callback!=null) {
-      callback.refreshInLRUMap(cus.getUrl(), this);
-    }
+    repository.storeNodeState(this);
   }
 
   protected void setPollHistoryBeanList(List new_histories) {

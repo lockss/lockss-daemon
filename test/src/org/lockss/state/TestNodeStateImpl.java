@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeStateImpl.java,v 1.8 2003-03-24 23:52:24 aalto Exp $
+ * $Id: TestNodeStateImpl.java,v 1.9 2003-04-01 00:08:12 aalto Exp $
  */
 
 /*
@@ -27,12 +27,13 @@
 
 package org.lockss.state;
 
+import java.io.*;
 import java.util.*;
 import org.lockss.plugin.CachedUrlSet;
 import org.lockss.test.*;
 import org.lockss.util.CollectionUtil;
-import java.io.*;
 import org.apache.commons.collections.TreeBag;
+import org.lockss.util.Deadline;
 
 public class TestNodeStateImpl extends LockssTestCase {
   private NodeStateImpl state;
@@ -48,10 +49,10 @@ public class TestNodeStateImpl extends LockssTestCase {
     MockCachedUrlSet mcus = new MockCachedUrlSet(mau, mspec);
 
     polls = new ArrayList(3);
-    polls.add(new PollState(1, "lwr1", "upr1", 1, 0, null));
-    polls.add(new PollState(2, "lwr2", "upr3", 1, 0, null));
-    polls.add(new PollState(3, "lwr3", "upr3", 1, 0, null));
-    state = new NodeStateImpl(mcus, null, polls,
+    polls.add(new PollState(1, "lwr1", "upr1", 1, 0, Deadline.NEVER));
+    polls.add(new PollState(2, "lwr2", "upr3", 1, 0, Deadline.NEVER));
+    polls.add(new PollState(3, "lwr3", "upr3", 1, 0, Deadline.NEVER));
+    state = new NodeStateImpl(mcus, new CrawlState(-1, -1, -1), polls,
                               new HistoryRepositoryImpl(tempDirPath));
   }
 
@@ -169,7 +170,7 @@ public class TestNodeStateImpl extends LockssTestCase {
   }
 
   public void testAddPollState() {
-    PollState state4 = new PollState(4, "lwr4", "upr4", 1, 0, null);
+    PollState state4 = new PollState(4, "lwr4", "upr4", 1, 0, Deadline.NEVER);
     polls.add(state4);
     state.addPollState(state4);
     Iterator expectedIter = polls.iterator();
@@ -191,8 +192,7 @@ public class TestNodeStateImpl extends LockssTestCase {
   }
 
   public static void main(String[] argv) {
-    String[] testCaseList = {
-        TestNodeStateImpl.class.getName()};
+    String[] testCaseList = {TestNodeStateImpl.class.getName()};
     junit.swingui.TestRunner.main(testCaseList);
   }
 

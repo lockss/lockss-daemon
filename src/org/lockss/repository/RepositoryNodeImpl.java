@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.21 2003-03-28 23:27:21 aalto Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.22 2003-04-01 00:08:12 aalto Exp $
  */
 
 /*
@@ -80,12 +80,6 @@ public class RepositoryNodeImpl implements RepositoryNode {
     this.url = url;
     this.nodeLocation = nodeLocation;
     this.repository = repository;
-  }
-
-  public void finalize() {
-    if (repository!=null) {
-      repository.removeReference(url);
-    }
   }
 
   public String getNodeUrl() {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.52 2003-03-31 23:31:29 claire Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.53 2003-04-01 00:08:12 aalto Exp $
  */
 
 /*
@@ -169,11 +169,11 @@ public class TestNodeManagerImpl extends LockssTestCase {
     NodeState node = nodeManager.getNodeState(cus);
     ((NodeStateImpl)node).addPollState(new PollState(Poll.CONTENT_POLL, "",
         "",
-        PollState.RUNNING, 123, null));
+        PollState.RUNNING, 123, Deadline.NEVER));
     cus = getCUS(mau, "http://www.example.com/branch1");
     node = nodeManager.getNodeState(cus);
     ((NodeStateImpl)node).addPollState(new PollState(Poll.NAME_POLL, "", "",
-        PollState.WON, 123, null));
+        PollState.WON, 123, Deadline.NEVER));
     nodeIt = nodeManager.getFilteredPolledNodes(mau.getAUCachedUrlSet(),
                                                 PollState.RUNNING +
                                                 PollState.WON);
@@ -230,9 +230,12 @@ public class TestNodeManagerImpl extends LockssTestCase {
   }
 
   public void testGetHistoriesSince() throws Exception {
+    TimeBase.setSimulated();
+
     Iterator histIt = nodeManager.getNodeHistoriesSince(mau.getAUCachedUrlSet(),
         Deadline.at(200));
     assertFalse(histIt.hasNext());
+
 
     CachedUrlSet cus = getCUS(mau, "http://www.example.com/branch1");
     NodeState node = nodeManager.getNodeState(cus);
@@ -256,6 +259,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
         "type=3:start=200"
     };
     assertIsomorphic(expectedA, histL);
+    TimeBase.setReal();
   }
 
   public void testMapErrorCodes() {
@@ -278,7 +282,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     CachedUrlSet cus = results.getCachedUrlSet();
     Vector subFiles = new Vector(2);
     subFiles.add(getCUS(mau, TEST_URL));
-    ((MockCachedUrlSet)cus).setFlatItSource(subFiles);
+    ((MockCachedUrlSet)cus).setTreeItSource(subFiles);
     NodeState node = nodeManager.getNodeState(cus);
     for (int i=0; i < 3; i++) {
       ( (NodeStateImpl) node).closeActivePoll(new PollHistory(Poll.CONTENT_POLL,
@@ -312,7 +316,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
                                         spec.getUprBound(),
                                         PollState.RUNNING,
                                         results.getStartTime(),
-                                        null);
+                                        Deadline.NEVER);
     nodeManager.handleContentPoll(pollState, results, nodeState);
     assertEquals(PollState.WON, pollState.getStatus());
     reputationChangeTest(results);
@@ -323,7 +327,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
                               spec.getUprBound(),
                               PollState.REPAIRING,
                               results.getStartTime(),
-                              null);
+                              Deadline.NEVER);
     spec = results.getPollSpec();
     nodeManager.handleContentPoll(pollState, results, nodeState);
     assertEquals(PollState.REPAIRED, pollState.getStatus());
@@ -340,7 +344,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
 
                               PollState.REPAIRING,
                               results.getStartTime(),
-                              null);
+                              Deadline.NEVER);
     nodeManager.handleContentPoll(pollState, results, nodeState);
     assertEquals(PollState.UNREPAIRABLE, pollState.getStatus());
     reputationChangeTest(results);
@@ -352,7 +356,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
                               spec.getUprBound(),
                               PollState.RUNNING,
                               results.getStartTime(),
-                              null);
+                              Deadline.NEVER);
     nodeManager.handleContentPoll(pollState, results, nodeState);
     assertEquals(PollState.LOST, pollState.getStatus());
     // assert name poll requested
@@ -368,7 +372,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
                               spec.getUprBound(),
                               PollState.RUNNING,
                               results.getStartTime(),
-                              null);
+                              Deadline.NEVER);
     nodeManager.handleContentPoll(pollState, results, nodeState);
     assertEquals(PollState.REPAIRING, pollState.getStatus());
     // assert repair call scheduled
@@ -393,7 +397,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
                                         spec.getUprBound(),
                                         PollState.RUNNING,
                                         results.getStartTime(),
-                                        null);
+                                        Deadline.NEVER);
     MockCachedUrlSet mcus = (MockCachedUrlSet)results.getCachedUrlSet();
     Vector subFiles = new Vector(2);
     subFiles.add(getCUS(mau, TEST_URL + "/branch2/file1.doc"));
@@ -424,7 +428,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
 
                               PollState.RUNNING,
                               results.getStartTime(),
-                              null);
+                              Deadline.NEVER);
     RepositoryNode repoNode = theDaemon.getLockssRepository(mau).createNewNode(
         deleteUrl);
     assertFalse(repoNode.isInactive());
@@ -467,7 +471,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
                                         spec.getUprBound(),
                                         PollState.RUNNING,
                                         results.getStartTime(),
-                                        null);
+                                        Deadline.NEVER);
     nodeState.addPollState(pollState);
     nodeManager.updateState(nodeState, results);
     assertEquals(PollState.WON, pollState.getStatus());
@@ -492,7 +496,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
                                         spec.getUprBound(),
                                         PollState.RUNNING,
                                         results.getStartTime(),
-                                        null);
+                                        Deadline.NEVER);
     nodeState.addPollState(pollState);
     nodeManager.updateState(nodeState, results);
     assertEquals(PollState.WON, pollState.getStatus());

@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManager.java,v 1.17 2003-03-31 23:31:29 claire Exp $
+ * $Id: NodeManager.java,v 1.18 2003-04-01 00:08:12 aalto Exp $
  */
 
 /*
@@ -114,15 +114,6 @@ public interface NodeManager extends LockssManager {
    * @return an Iterator of PollHistory objects
    */
   public Iterator getNodeHistoriesSince(CachedUrlSet cus, Deadline since);
-
-  /**
-   * Returns the estimated time it will take to walk a given
-   * {@link ArchivalUnit}.  This can be used to finetune the tree walk
-   * parameter settings in the Configuration.
-   * @return estimated time in ms
-   */
- // public long getEstimatedTreeWalkDuration();
-
 
   /**
    * Do one tree walk.  XXX this should probably be handled by making the

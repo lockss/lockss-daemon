@@ -1,5 +1,5 @@
 /*
- * $Id: AuStateBean.java,v 1.5 2003-03-01 02:01:24 aalto Exp $
+ * $Id: AuStateBean.java,v 1.6 2003-04-01 00:08:12 aalto Exp $
  */
 
 /*
@@ -41,12 +41,12 @@ import org.lockss.plugin.ArchivalUnit;
  */
 public class AuStateBean extends AuState {
   public AuStateBean() {
-    super(null, -1, -1, -1);
+    super(null, -1, -1, -1, null);
   }
 
   AuStateBean(AuState auState) {
     super(auState.au, auState.lastCrawlTime, auState.lastTopLevelPoll,
-          auState.lastTreeWalk);
+          auState.lastTreeWalk, null);
   }
 
   /**

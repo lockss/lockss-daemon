@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.73 2003-03-31 23:31:29 claire Exp $
+ * $Id: NodeManagerImpl.java,v 1.74 2003-04-01 00:08:12 aalto Exp $
  */
 
 /*
@@ -66,10 +66,11 @@ public class NodeManagerImpl implements NodeManager {
   private NodeManager theManager = null;
   static HistoryRepository historyRepo;
   private LockssRepository lockssRepo;
+  PollManager pollManager;
 
   ArchivalUnit managedAu;
-  private AuState auState;
-  Map nodeMap;
+  AuState auState;
+  NodeStateCache nodeCache;
   int maxMapSize;
   private static Logger logger = Logger.getLogger("NodeManager");
   TreeWalkHandler treeWalkHandler;
@@ -113,9 +114,13 @@ public class NodeManagerImpl implements NodeManager {
       };
     Configuration.registerConfigurationCallback(configCallback);
 
-    nodeMap = new NodeStateMap(historyRepo, maxMapSize);
-    lockssRepo = theDaemon.getLockssRepository(managedAu);
     historyRepo = theDaemon.getHistoryRepository();
+    lockssRepo = theDaemon.getLockssRepository(managedAu);
+    pollManager = theDaemon.getPollManager();
+
+    nodeCache = new NodeStateCache(historyRepo, maxMapSize);
+
+    auState = historyRepo.loadAuState(managedAu);
 
     treeWalkHandler = new TreeWalkHandler(this, theDaemon.getCrawlManager());
     treeWalkHandler.start();
@@ -164,6 +169,7 @@ public class NodeManagerImpl implements NodeManager {
       logger.info("Poll has damaged node: " + cus);
       return false;
     }
+
     return true;
   }
 
@@ -177,10 +183,10 @@ public class NodeManagerImpl implements NodeManager {
     historyRepo.storeAuState(getAuState());
   }
 
-  public NodeState getNodeState(CachedUrlSet cus) {
+  public synchronized NodeState getNodeState(CachedUrlSet cus) {
     String url = cus.getUrl();
     logger.debug3("Getting " + url);
-    NodeState node = (NodeState)nodeMap.get(url);
+    NodeState node = nodeCache.get(url);
     if (node==null) {
       // if in repository, add
       try {
@@ -194,16 +200,23 @@ public class NodeManagerImpl implements NodeManager {
     return node;
   }
 
+  NodeState createNodeState(CachedUrlSet cus) {
+    logger.debug2("Loading NodeState: " + cus.toString());
+    // load from file cache, or get a new one
+    NodeState state = historyRepo.loadNodeState(cus);
+    nodeCache.put(cus.getUrl(), state);
+    return state;
+  }
+
+
   public AuState getAuState() {
-    if (auState==null) {
-      auState = historyRepo.loadAuState(managedAu);
-    }
     return auState;
   }
 
   public Iterator getActiveCrawledNodes(CachedUrlSet cus) {
     //XXX this only returns nodes currently in the LRUMap
-    Iterator entries = nodeMap.entrySet().iterator();
+    //XXX use snapshot method
+    Iterator entries = nodeCache.lruMap.entrySet().iterator();
     Vector stateV = new Vector();
     while (entries.hasNext()) {
       Map.Entry entry = (Map.Entry)entries.next();
@@ -222,7 +235,7 @@ public class NodeManagerImpl implements NodeManager {
 
   public Iterator getFilteredPolledNodes(CachedUrlSet cus, int filter) {
     //XXX this only returns nodes currently in the LRUMap
-    Iterator entries = nodeMap.entrySet().iterator();
+    Iterator entries = nodeCache.lruMap.entrySet().iterator();
     Vector stateV = new Vector();
     while (entries.hasNext()) {
       Map.Entry entry = (Map.Entry)entries.next();
@@ -244,7 +257,7 @@ public class NodeManagerImpl implements NodeManager {
 
   public Iterator getNodeHistories(CachedUrlSet cus, int maxNumber) {
     //XXX this only returns nodes currently in the LRUMap
-    Iterator entries = nodeMap.entrySet().iterator();
+    Iterator entries = nodeCache.lruMap.entrySet().iterator();
     Vector historyV = new Vector();
     while (entries.hasNext()) {
       Map.Entry entry = (Map.Entry)entries.next();
@@ -266,7 +279,7 @@ public class NodeManagerImpl implements NodeManager {
 
   public Iterator getNodeHistoriesSince(CachedUrlSet cus, Deadline since) {
     //XXX this only returns nodes currently in the LRUMap
-    Iterator entries = nodeMap.entrySet().iterator();
+    Iterator entries = nodeCache.lruMap.entrySet().iterator();
     Vector historyV = new Vector();
     while (entries.hasNext()) {
       Map.Entry entry = (Map.Entry)entries.next();
@@ -286,14 +299,6 @@ public class NodeManagerImpl implements NodeManager {
     return historyV.iterator();
   }
 
-  NodeState createNodeState(CachedUrlSet cus) {
-    logger.debug2("Loading NodeState: " + cus.toString());
-    // load from file cache, or get a new one
-    NodeStateImpl state = (NodeStateImpl)historyRepo.loadNodeState(cus);
-    nodeMap.put(cus.getUrl(), state);
-    return state;
-  }
-
   void updateState(NodeState state, PollTally results) {
     PollState pollState = getPollState(state, results);
     if (pollState == null) {
@@ -301,26 +306,30 @@ public class NodeManagerImpl implements NodeManager {
       throw new UnsupportedOperationException("Results updated for a "
                                               +"non-existent poll.");
     }
-    if (results.getErr() < 0) {
-      pollState.status = mapResultsErrorToPollError(results.getErr());
-      logger.info("Poll didn't finish fully.  Error code: "
-                  + pollState.status);
-      return;
-    }
+    try {
+      if (results.getErr() < 0) {
+        pollState.status = mapResultsErrorToPollError(results.getErr());
+        logger.info("Poll didn't finish fully.  Error code: "
+                    + pollState.status);
+        return;
+      }
 
-    if (results.getType() == Poll.CONTENT_POLL) {
-      handleContentPoll(pollState, results, state);
+      if (results.getType() == Poll.CONTENT_POLL) {
+        handleContentPoll(pollState, results, state);
+      }
+      else if (results.getType() == Poll.NAME_POLL) {
+        handleNamePoll(pollState, results, state);
+      }
+      else {
+        logger.error("Updating state for invalid results type: " +
+                     results.getType());
+        throw new UnsupportedOperationException("Updating state for invalid "
+                                                + "results type.");
+      }
+    } finally {
+      // close the poll and update the node state
       closePoll(pollState, results.getDuration(), results.getPollVotes(),
                 state);
-    } else if (results.getType() == Poll.NAME_POLL) {
-      handleNamePoll(pollState, results, state);
-      closePoll(pollState, results.getDuration(), results.getPollVotes(),
-                state);
-    } else {
-      logger.error("Updating state for invalid results type: " +
-                   results.getType());
-      throw new UnsupportedOperationException("Updating state for invalid "
-                                              +"results type.");
     }
   }
 
@@ -329,14 +338,16 @@ public class NodeManagerImpl implements NodeManager {
     logger.debug("handling content poll results: " + results);
     if (results.didWinPoll()) {
       // if agree
-      if (pollState.getStatus() == PollState.RUNNING) {
-        logger.debug2("won content poll, state = won.");
-        // if normal poll, we won!
-        pollState.status = PollState.WON;
-      } else if (pollState.getStatus() == PollState.REPAIRING) {
-        // if repair poll, we're repaired
-        logger.debug2("won repair poll, state = repaired.");
-        pollState.status = PollState.REPAIRED;
+      switch (pollState.getStatus()) {
+        case PollState.RUNNING:
+          // if normal poll, we won!
+          logger.debug2("won content poll, state = won.");
+          pollState.status = PollState.WON;
+          break;
+        case PollState.REPAIRING:
+          // if repair poll, we're repaired
+          logger.debug2("won repair poll, state = repaired.");
+          pollState.status = PollState.REPAIRED;
       }
       updateReputations(results);
     } else {
@@ -369,9 +380,9 @@ public class NodeManagerImpl implements NodeManager {
         // if poll is mine
         try {
           logger.debug2("won name poll, calling content poll on subnodes.");
-          callContentPollOnSubNodes(nodeState, results);
+          callContentPollsOnSubNodes(nodeState, results);
           pollState.status = PollState.WON;
-        } catch (Exception e) {
+        } catch (IOException e) {
           logger.error("Error scheduling content polls.", e);
           pollState.status = PollState.ERR_IO;
         }
@@ -451,7 +462,7 @@ public class NodeManagerImpl implements NodeManager {
 
   void callNamePoll(CachedUrlSet cus) {
     try {
-      theDaemon.getPollManager().requestPoll(LcapMessage.NAME_POLL_REQ,
+      pollManager.requestPoll(LcapMessage.NAME_POLL_REQ,
                                              new PollSpec(cus));
     } catch (IOException ioe) {
       logger.error("Couldn't make name poll request.", ioe);
@@ -461,7 +472,7 @@ public class NodeManagerImpl implements NodeManager {
 
   void callTopLevelPoll() {
     try {
-      theDaemon.getPollManager().requestPoll(LcapMessage.CONTENT_POLL_REQ,
+      pollManager.requestPoll(LcapMessage.CONTENT_POLL_REQ,
       new PollSpec(managedAu.getAUCachedUrlSet()));
       logger.info("Top level poll started.");
     } catch (IOException ioe) {
@@ -474,7 +485,6 @@ public class NodeManagerImpl implements NodeManager {
                          NodeState nodeState) {
     PollHistory history = new PollHistory(pollState, duration, votes);
     ((NodeStateImpl)nodeState).closeActivePoll(history);
-    historyRepo.storePollHistories(nodeState);
     logger.debug2("Closing poll for url '" +
                   nodeState.getCachedUrlSet().getUrl() + " " +
                   pollState.getLwrBound() + "-" + pollState.getUprBound() + "'");
@@ -519,16 +529,16 @@ public class NodeManagerImpl implements NodeManager {
 
   private void markNodeForRepair(CachedUrlSet cus, PollTally tally) {
     logger.debug2("suspending poll " + tally.getPollKey());
-    theDaemon.getPollManager().suspendPoll(tally.getPollKey());
+    pollManager.suspendPoll(tally.getPollKey());
     logger.debug2("scheduling repair");
     try {
       theDaemon.getCrawlManager().scheduleRepair(managedAu,
                                                  new URL(cus.getUrl()),
                                                  new ContentRepairCallback(),
                                                  tally.getPollKey());
-    }
-    catch (MalformedURLException ex) {
-      // ignore and let the tree walk catch the repair
+    } catch (MalformedURLException mue) {
+      // this shouldn't happen
+      // if it does, let the tree walk catch the repair
     }
   }
 
@@ -538,8 +548,7 @@ public class NodeManagerImpl implements NodeManager {
     repository.deleteNode(cus.getUrl());
   }
 
-  private void callContentPollOnSubNodes(NodeState state,
-                                         PollTally results)
+  private void callContentPollsOnSubNodes(NodeState state, PollTally results)
       throws IOException {
 
     Iterator children = results.getCachedUrlSet().flatSetIterator();
@@ -548,23 +557,23 @@ public class NodeManagerImpl implements NodeManager {
     if (childList.size() > 4) {
       String base = results.getCachedUrlSet().getUrl();
       int mid = childList.size() / 2;
-      String lwr = ( (CachedUrlSet) childList.get(0)).getSpec().getUrl();
+      String lwr = ( (CachedUrlSet) childList.get(0)).getUrl();
       lwr = lwr.startsWith(base) ? lwr.substring(base.length()) : lwr;
-      String upr = ( (CachedUrlSet) childList.get(mid)).getSpec().getUrl();
+      String upr = ( (CachedUrlSet) childList.get(mid)).getUrl();
       upr = upr.startsWith(base) ? upr.substring(base.length()) : upr;
       PollSpec pspec = new PollSpec(results.getCachedUrlSet(), lwr, upr);
       logger.debug2("calling first content poll on " + pspec);
-      theDaemon.getPollManager().requestPoll(LcapMessage.CONTENT_POLL_REQ,
+      pollManager.requestPoll(LcapMessage.CONTENT_POLL_REQ,
                                              pspec);
 
-      lwr = ( (CachedUrlSet) childList.get(mid + 1)).getSpec().getUrl();
+      lwr = ( (CachedUrlSet) childList.get(mid + 1)).getUrl();
       lwr = lwr.startsWith(base) ? lwr.substring(base.length()) : lwr;
-      upr = ( (CachedUrlSet) childList.get(childList.size() - 1)).getSpec().
+      upr = ( (CachedUrlSet) childList.get(childList.size() - 1)).
           getUrl();
       upr = upr.startsWith(base) ? upr.substring(base.length()) : upr;
       pspec = new PollSpec(results.getCachedUrlSet(), lwr, upr);
       logger.debug2("calling second content poll on " + pspec);
-      theDaemon.getPollManager().requestPoll(LcapMessage.CONTENT_POLL_REQ,
+      pollManager.requestPoll(LcapMessage.CONTENT_POLL_REQ,
                                              pspec);
     }
     else if (childList.size() > 0) {
@@ -572,7 +581,7 @@ public class NodeManagerImpl implements NodeManager {
       for (int i = 0; i < childList.size(); i++) {
         PollSpec pspec = new PollSpec( (CachedUrlSet) childList.get(i));
         logger.debug2("calling content poll on " + pspec);
-        theDaemon.getPollManager().requestPoll(LcapMessage.CONTENT_POLL_REQ,
+        pollManager.requestPoll(LcapMessage.CONTENT_POLL_REQ,
                                                pspec);
       }
     }
@@ -603,10 +612,10 @@ public class NodeManagerImpl implements NodeManager {
     Iterator it = null;
     switch (pollType) {
       case Poll.CONTENT_POLL:
-        it = cus.flatSetIterator();
+        it = cus.treeIterator();
         break;
       case Poll.NAME_POLL:
-        it = cus.treeIterator();
+        it = cus.flatSetIterator();
         break;
     }
     List childList = convertChildrenToCUSList(it);
@@ -667,77 +676,6 @@ public class NodeManagerImpl implements NodeManager {
       theDaemon.getPollManager().resumePoll(success, cookie);
     }
   }
-/*
-  private static class Status implements StatusAccessor {
-      private static final List sortRules =
-        ListUtil.list(new StatusTable.SortRule("au", true));
-
-      private static final List colDescs =
-        ListUtil.list(
-                      new ColumnDescriptor("au", "Journal Volume",
-                                           ColumnDescriptor.TYPE_STRING),
-                      new ColumnDescriptor("pluginid", "Plugin ID",
-                                           ColumnDescriptor.TYPE_STRING),
-                      new ColumnDescriptor("auid", "AUID",
-                                           ColumnDescriptor.TYPE_STRING),
-                      new ColumnDescriptor("poll", "Poll Status",
-                                           ColumnDescriptor.TYPE_STRING),
-                      new ColumnDescriptor("crawl", "Crawl Status",
-                                           ColumnDescriptor.TYPE_STRING)
-                      );
-
-      // need this because the statics above require this to be a nested,
-      // not inner class.
-      PluginManager mgr;
-
-      Status(PluginManager mgr) {
-        this.mgr = mgr;
-      }
-
-      public List getColumnDescriptors(String key) {
-        return colDescs;
-      }
-
-      public List getRows(String key) {
-        List table = new ArrayList();
-        for (Iterator iter = mgr.getAllAUs().iterator(); iter.hasNext();) {
-          Map row = new HashMap();
-          ArchivalUnit au = (ArchivalUnit)iter.next();
-          row.put("au", au.getName());
-          row.put("pluginid", au.getPluginId());
-          row.put("auid", au.getAUId());
-          row.put("poll",
-                  statusSvc.getReference(PollManager.MANAGER_STATUS_TABLE_NAME,
-                                         au));
-          table.add(row);
-        }
-        return table;
-      }
-
-      public List getDefaultSortRules(String key) {
-        return sortRules;
-      }
-
-      public boolean requiresKey() {
-        return false;
-      }
-
-      public String getTitle(String key) {
-        return "Archival Units";
-      }
-
-      public StatusTable getStatusTable(String key) {
-        StatusTable table = new StatusTable(key, getTitle(key),
-                                            getColumnDescriptors(key),
-                                            getDefaultSortRules(key),
-                                            getRows(key), null);
-        return table;
-      }
-
-
-    }
-
-*/
 
   public void startTreeWalk() {
     logger.info("Starting treewalk");

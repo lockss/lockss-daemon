@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkHandler.java,v 1.5 2003-03-29 20:25:39 tal Exp $
+ * $Id: TreeWalkHandler.java,v 1.6 2003-04-01 00:08:12 aalto Exp $
  */
 
 /*
@@ -48,15 +48,6 @@ public class TreeWalkHandler {
       Configuration.PREFIX + "treewalk.";
 
   /**
-   * Configuration parameter name for duration, in ms, for which the treewalk
-   * estimation should run.
-
-  public static final String PARAM_TREEWALK_ESTIMATE_DURATION =
-      TREEWALK_PREFIX + "estimate.duration";
-  static final long DEFAULT_TREEWALK_ESTIMATE_DURATION = Constants.SECOND;
-   */
-
-  /**
    * Configuration parameter name for interval, in ms, between treewalks.
    */
   public static final String PARAM_TREEWALK_INTERVAL =
@@ -78,8 +69,8 @@ public class TreeWalkHandler {
 
   boolean treeWalkAborted;
 
-//  long treeWalkEstimate = -1;
- // EstimationThread estThread = null;
+  long treeWalkEstimate = -1;
+
 
   Configuration.Callback configCallback;
 
@@ -102,8 +93,6 @@ public class TreeWalkHandler {
     treeWalkInterval = config.getTimeInterval(
         PARAM_TREEWALK_INTERVAL, DEFAULT_TREEWALK_INTERVAL);
     logger.debug3("treeWalkInterval reset to "+treeWalkInterval);
-//    treeWalkTestDuration = config.getTimeInterval(
-  //      PARAM_TREEWALK_ESTIMATE_DURATION, DEFAULT_TREEWALK_ESTIMATE_DURATION);
   }
 
   /**
@@ -115,7 +104,7 @@ public class TreeWalkHandler {
   void doTreeWalk() {
     logger.debug("Attempting tree walk: "+theAu.getName());
     if (!theCrawlManager.isCrawlingAU(theAu, null, null)) {
-//      long startTime = TimeBase.nowMs();
+      long startTime = TimeBase.nowMs();
 
       NodeState topNode = manager.getNodeState(theAu.getAUCachedUrlSet());
       Iterator activePolls = topNode.getActivePolls();
@@ -127,8 +116,8 @@ public class TreeWalkHandler {
         } else {
           logger.debug("Tree walk started: "+theAu.getName());
           nodeTreeWalk();
-       //   long elapsedTime = TimeBase.msSince(startTime);
-       //   updateEstimate(elapsedTime);
+          long elapsedTime = TimeBase.msSince(startTime);
+          updateEstimate(elapsedTime);
         }
       }
     }
@@ -235,9 +224,6 @@ public class TreeWalkHandler {
     if (treeWalkThread!=null) {
       treeWalkThread.end();
     }
-//    if (estThread!=null) {
-  //    estThread.end();
-    //}
     Configuration.unregisterConfigurationCallback(configCallback);
   }
 
@@ -289,28 +275,11 @@ public class TreeWalkHandler {
 
   // Estimation code removed until needed.
 
-  /*
-   * Starts calculating a new estimated treewalk duration by starting up an
-   * EstimationThread.
-
-  synchronized void calculateEstimatedTreeWalkDuration() {
-    if ((estThread==null) && (treeWalkEstimate==-1)) {
-      logger.debug("Estimating treewalk for: " + theAu.getName());
-      estThread = new EstimationThread();
-      estThread.start();
-    } else {
-      if (estThread!=null) {
-        logger.debug3("Calculation already in progress.");
-      } else {
-        logger.debug3("Treewalk estimation already concluded.");
-      }
-    }
-  }
 
   /*
    * Returns the current treewalk estimate.
    * @return the estimate, in ms
-
+   */
   long getEstimatedTreeWalkDuration() {
     return treeWalkEstimate;
   }
@@ -324,75 +293,4 @@ public class TreeWalkHandler {
     }
   }
 
-  // for testing only
-  EstimationThread getTestThread() {
-    return new EstimationThread();
-  }
- */
-  /**
-   * The thread which handles treewalk estimation
-
-  class EstimationThread extends Thread {
-    private Deadline estDeadline = null;
-
-    public void run() {
-      startEstimateCalculation();
-    }
-
-    // estimate via short walk
-    void startEstimateCalculation() {
-      long timeTaken = 0;
-      long startTime = TimeBase.nowMs();
-      // start with top-level cus
-      CachedUrlSet cus = theAu.getAUCachedUrlSet();
-      estDeadline = Deadline.in(treeWalkTestDuration);
-      int nodesWalked = recurseEstimate(cus, 0);
-
-      timeTaken = TimeBase.msSince(startTime);
-      logger.debug("Treewalk estimate finished in time " + timeTaken + "ms with " +
-                   nodesWalked + " nodes walked.");
-      if (timeTaken == 0) {
-        logger.warning("Test finished in zero time after walking " +
-                       nodesWalked + " nodes.");
-        // set to a harmless constant
-        treeWalkEstimate = 1;
-        return;
-      }
-      // calculate
-      double nodesPerMs = ( (double) timeTaken / nodesWalked);
-      // check size (node count) of tree
-      int nodeCount = manager.nodeMap.size();
-      treeWalkEstimate = (long) (nodeCount * nodesPerMs);
-    }
-
-    private int recurseEstimate(CachedUrlSet cus, int nodesWalked) {
-      // get the node state for the cus
-      // this should be the most expensive operation, since there
-      // are likely to be file operations involved
-      logger.debug3("Recursing estimate on cus: "+cus.getUrl());
-      NodeState state = manager.getNodeState(cus);
-      nodesWalked++;
-      Iterator children = cus.flatSetIterator();
-      while (!estDeadline.expired() && children.hasNext()) {
-        CachedUrlSetNode node = (CachedUrlSetNode)children.next();
-        if (node.getType()==CachedUrlSetNode.TYPE_CACHED_URL_SET) {
-          // recurse on the child cus
-          nodesWalked = recurseEstimate((CachedUrlSet)node, nodesWalked);
-        } else if (node.getType()==CachedUrlSetNode.TYPE_CACHED_URL) {
-          // open a new state for the leaf and increment
-          state = manager.getNodeState(
-              theAu.makeCachedUrlSet(node.getUrl(), null, null));
-          nodesWalked++;
-        }
-      }
-      return nodesWalked;
-    }
-
-    void end() {
-      if (estDeadline!=null) {
-        estDeadline.expire();
-      }
-    }
-  }
-      */
 }
