@@ -1,5 +1,5 @@
 /*
- * $Id: TestBinarySemaphore.java,v 1.1 2002-09-02 04:13:08 tal Exp $
+ * $Id: TestBinarySemaphore.java,v 1.2 2002-09-23 02:58:36 tal Exp $
  */
 
 /*
@@ -105,8 +105,8 @@ public class TestBinarySemaphore extends TestCase{
       if (sem.take(new ProbabilisticTimer(0))) {
 	fail("take(0) of empty semaphore returned true");
       }
-    } finally {
       intr.cancel();
+    } finally {
       if (intr.did()) {
 	fail("take(0) of empty didn't return");
       }
@@ -122,8 +122,8 @@ public class TestBinarySemaphore extends TestCase{
       if (!sem.take(new ProbabilisticTimer(0))) {
 	fail("take(0) of full semaphore returned false");
       }
-    } finally {
       intr.cancel();
+    } finally {
       if (intr.did()) {
 	fail("take(0) of full didn't return");
       }
@@ -138,8 +138,8 @@ public class TestBinarySemaphore extends TestCase{
       if (sem.take(null)) {
 	fail("take(0) of empty semaphore returned true");
       }
-    } finally {
       intr.cancel();
+    } finally {
       if (intr.did()) {
 	fail("take(0) of empty didn't return");
       }
@@ -155,8 +155,8 @@ public class TestBinarySemaphore extends TestCase{
       if (!sem.take(null)) {
 	fail("take(0) of full semaphore returned false");
       }
-    } finally {
       intr.cancel();
+    } finally {
       if (intr.did()) {
 	fail("take(0) of full didn't return");
       }
@@ -179,8 +179,8 @@ public class TestBinarySemaphore extends TestCase{
       if (delay > 900) {
 	fail("take(500, 50) of empty returned late in " + delay);
       }
-    } finally {
       intr.cancel();
+    } finally {
       if (intr.did()) {
 	fail("take(500, 50) of empty failed to timeout");
       }
@@ -206,9 +206,9 @@ public class TestBinarySemaphore extends TestCase{
       if (delay > 800) {
 	fail("take(2000, 50) of empty expire()d late in " + delay);
       }
-    } finally {
       expr.cancel();
       intr.cancel();
+    } finally {
       if (intr.did()) {
 	fail("take(2000, 50) of empty failed to timeout");
       }
@@ -229,8 +229,8 @@ public class TestBinarySemaphore extends TestCase{
       if (delay > 750) {
 	fail("take(1000, 50) of full timed out in " + delay);
       }
-    } finally {
       intr.cancel();
+    } finally {
       if (intr.did()) {
 	fail("take(1000, 50) of full failed to return");
       }
@@ -254,8 +254,8 @@ public class TestBinarySemaphore extends TestCase{
       if (delay > 750) {
 	fail("take(1000, 50), given in 500, timed out in " + delay );
       }
-    } finally {
       intr.cancel();
+    } finally {
       if (intr.did()) {
 	fail("take(1000, 50), given in 500, neither returned nor timed out");
       }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimpleBinarySemaphore.java,v 1.1 2002-09-02 04:13:08 tal Exp $
+ * $Id: TestSimpleBinarySemaphore.java,v 1.2 2002-09-23 02:58:14 tal Exp $
  */
 
 /*
@@ -81,8 +81,8 @@ public class TestSimpleBinarySemaphore extends TestCase {
       if (sem.take()) {
 	fail("take() of empty semaphore returned true");
       }
-    } finally {
       intr.cancel();
+    } finally {
       if (!intr.did()) {
 	fail("take() of empty returned");
       }
@@ -98,8 +98,8 @@ public class TestSimpleBinarySemaphore extends TestCase {
       if (!sem.take()) {
 	fail("take() of already full semaphore returned false");
       }
-    } finally {
       intr.cancel();
+    } finally {
       if (intr.did()) {
 	fail("timed out");
       }
@@ -119,8 +119,8 @@ public class TestSimpleBinarySemaphore extends TestCase {
       if (TimerUtil.timeSince(start) < 500) {
 	fail("take() returned before give()");
       }
-    } finally {
       intr.cancel();
+    } finally {
       if (intr.did()) {
 	fail("give() didn't cause take() to return");
       }
@@ -135,8 +135,8 @@ public class TestSimpleBinarySemaphore extends TestCase {
       if (sem.take(0)) {
 	fail("take(0) of empty semaphore returned true");
       }
-    } finally {
       intr.cancel();
+    } finally {
       if (intr.did()) {
 	fail("take(0) of empty didn't return");
       }
@@ -152,8 +152,8 @@ public class TestSimpleBinarySemaphore extends TestCase {
       if (!sem.take(0)) {
 	fail("take(0) of full semaphore returned false");
       }
-    } finally {
       intr.cancel();
+    } finally {
       if (intr.did()) {
 	fail("take(0) of full didn't return");
       }
@@ -176,8 +176,8 @@ public class TestSimpleBinarySemaphore extends TestCase {
       if (delay > 1000) {
 	fail("take(500) returned late");
       }
-    } finally {
       intr.cancel();
+    } finally {
       if (intr.did()) {
 	fail("take(500) of empty failed to timeout");
       }
@@ -198,8 +198,8 @@ public class TestSimpleBinarySemaphore extends TestCase {
       if (delay > 1000) {
 	fail("take(1000) of full timed out");
       }
-    } finally {
       intr.cancel();
+    } finally {
       if (intr.did()) {
 	fail("take(2000) of full failed to return");
       }
@@ -223,8 +223,8 @@ public class TestSimpleBinarySemaphore extends TestCase {
       if (delay > 1000) {
 	fail("take(1000), given in 500, timed out");
       }
-    } finally {
       intr.cancel();
+    } finally {
       if (intr.did()) {
 	fail("take(1000), given in 500, neither returned nor timed out");
       }

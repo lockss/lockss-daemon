@@ -1,5 +1,5 @@
 /*
- * $Id: TestProbabilisticTimer.java,v 1.3 2002-09-19 21:03:31 tal Exp $
+ * $Id: TestProbabilisticTimer.java,v 1.4 2002-09-23 02:58:36 tal Exp $
  */
 
 /*
@@ -105,8 +105,8 @@ public class TestProbabilisticTimer extends TestCase {
       if (delay > 800) {
 	fail("sleepUntil(500, 50) returned late in " + delay);
       }
-    } finally {
       intr.cancel();
+    } finally {
       if (intr.did()) {
 	fail("sleepUntil(500, 50) failed to return within 2 seconds");
       }
@@ -134,9 +134,9 @@ public class TestProbabilisticTimer extends TestCase {
       if (delay > 700) {
 	fail("sleepUntil(1000, 50), faster(500) returned late in " + delay);
       }
-    } finally {
       intr.cancel();
       doer.cancel();
+    } finally {
       if (!doer.did()) {
 	fail("sleepUntil(1000, 50) returned before doer did faster()");
       }
@@ -161,8 +161,8 @@ public class TestProbabilisticTimer extends TestCase {
       if (delay > 700) {
 	fail("sleepUntil(200, 5), slower(300) returned late in " + delay);
       }
-    } finally {
       intr.cancel();
+    } finally {
       if (intr.did()) {
 	fail("sleepUntil(200, 5) failed to return within 2 seconds");
       }
@@ -185,8 +185,8 @@ public class TestProbabilisticTimer extends TestCase {
       if (delay > 800) {
 	fail("sleepUntil(1500, 50) expired late in " + delay);
       }
-    } finally {
       intr.cancel();
+    } finally {
       if (intr.did()) {
 	fail("sleepUntil(1500, 50) failed to expire within 2 seconds");
       }
