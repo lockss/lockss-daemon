@@ -1,5 +1,5 @@
 /*
- * $Id: TestHttpClientUrlConnection.java,v 1.6 2004-03-16 23:01:39 tlipkis Exp $
+ * $Id: TestHttpClientUrlConnection.java,v 1.7 2004-03-23 08:27:13 tlipkis Exp $
  */
 
 /*
@@ -418,7 +418,7 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     }
     public Header getResponseHeader(String headerName) {        
       String val = (String)respProps.get(headerName.toLowerCase());
-      log.info(headerName + ": " + val);
+      log.debug(headerName + ": " + val);
       if (val != null) {
 	return new Header(headerName, val);
       }
@@ -451,6 +451,10 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     void setResponseContentLength(int l) {
       contentLength = l;
     }
+    public HostConfiguration getHostConfiguration() {
+      return new HostConfiguration();
+    }
+
 
   }
 
