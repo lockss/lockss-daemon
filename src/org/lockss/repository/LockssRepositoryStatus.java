@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryStatus.java,v 1.14 2004-10-12 23:44:46 smorabito Exp $
+ * $Id: LockssRepositoryStatus.java,v 1.15 2004-12-12 23:03:07 tlipkis Exp $
  */
 
 /*
@@ -83,7 +83,8 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
 
     private static final List columnDescriptors = ListUtil.list
       (new ColumnDescriptor("dir", "Dir", ColumnDescriptor.TYPE_STRING),
-       new ColumnDescriptor("au", "AU", ColumnDescriptor.TYPE_STRING),
+       new ColumnDescriptor("au", "AU", ColumnDescriptor.TYPE_STRING)
+       .setComparator(CatalogueOrderComparator.SINGLETON),
        new ColumnDescriptor("status", "Status", ColumnDescriptor.TYPE_STRING),
        new ColumnDescriptor("plugin", "Plugin", ColumnDescriptor.TYPE_STRING),
        new ColumnDescriptor("params", "Params", ColumnDescriptor.TYPE_STRING)
@@ -200,6 +201,7 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
 	  Configuration config = au.getConfiguration();
 	  row.put("params", config);
 	} else {
+	  row.put("au", "");
 	  Configuration config = pluginMgr.getStoredAuConfiguration(auid);
 	  Properties auidProps = null;
 	  try {
