@@ -1,5 +1,5 @@
 /*
- * $Id: TestTaskRunner.java,v 1.1 2003-11-11 20:30:59 tlipkis Exp $
+ * $Id: TestTaskRunner.java,v 1.1.2.1 2003-11-17 22:50:43 tlipkis Exp $
  */
 
 /*
@@ -508,6 +508,27 @@ public class TestTaskRunner extends LockssTestCase {
     }
     assertNull(t1.e);
     assertTrue(t1.hasOverrun());
+  }
+
+
+  // test resched with overrun task doesn't lose task.
+  public void testRunStepsWithOverrunAllowedPlusResched() {
+    StepTask t1 = task(100, 500, 30, null, new MockStepper(15, -10));
+    t1.setOverrunAllowed(true);
+    StepTask t2 = task(150, 250, 100, null, new MockStepper(10, -10));
+    tr = new MockTaskRunner(new TaskRunner.SchedulerFactory () {
+	public Scheduler createScheduler(Collection tasks) {
+	  return new SortScheduler(tasks);
+	}});
+    assertTrue(tr.addToSchedule(t1));
+    assertEmpty(tr.getOverrunTasks());
+    TimeBase.setSimulated(101);
+    assertTrue(tr.findTaskToRun());
+    t1.timeUsed = 1000;
+    assertTrue(t1.hasOverrun());
+    assertEmpty(tr.getOverrunTasks());
+    assertTrue(tr.addToSchedule(t2));
+    assertEquals(SetUtil.set(t1), SetUtil.theSet(tr.getOverrunTasks()));
   }
 
   class MockTaskRunner extends TaskRunner {

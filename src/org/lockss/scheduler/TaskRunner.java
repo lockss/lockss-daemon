@@ -1,5 +1,5 @@
 /*
- * $Id: TaskRunner.java,v 1.3 2003-11-13 11:16:16 tlipkis Exp $
+ * $Id: TaskRunner.java,v 1.3.2.1 2003-11-17 22:50:43 tlipkis Exp $
  */
 
 /*
@@ -31,10 +31,8 @@ in this Software without prior written authorization from Stanford University.
 */
 
 // tk - todo
-// status table
 // backgroundLoadFactor is adjusted incrementally; roundoff error will cause
 //   long term drift.  (hack: reset to min when backgroundTasks empty.)
-// resched if nothing to do (if min(accepted step task start) - now > k)
 // OVERHEAD_LOAD_FACTOR (here and in Schedulers (or in Schedule?))
 // don't let expired in acceptedTasks prevent new schedule
 
@@ -50,8 +48,12 @@ class TaskRunner implements Serializable {
   static final String PARAM_PRIORITY = PREFIX + "priority";
   static final int DEFAULT_PRIORITY = Thread.NORM_PRIORITY - 1;
 
-  static final String PARAM_COMPLETED_MAX = PREFIX + "historySize";
-  static final int DEFAULT_COMPLETED_MAX = 50;
+  static final String PARAM_HISTORY_MAX = PREFIX + "historySize";
+  static final int DEFAULT_HISTORY_MAX = 50;
+
+  static final String PARAM_STATS_UPDATE_INTERVAL =
+    PREFIX + "statsUpdateInterval";
+  static final long DEFAULT_STATS_UPDATE_INTERVAL = 10 * Constants.SECOND;
 
   protected static Logger log = Logger.getLogger("TaskRunner");
 
@@ -62,18 +64,25 @@ class TaskRunner implements Serializable {
   private TreeSet overrunTasks =
     new TreeSet(SchedulableTask.latestFinishComparator());
   // last n completed requests
-  private HistoryList completed = new HistoryList(50);
+  private HistoryList history = new HistoryList(DEFAULT_HISTORY_MAX);
   private StepThread stepThread;
   private BinarySemaphore sem = new BinarySemaphore();
   private int stepPriority = -1;
+  private long statsUpdateInterval = DEFAULT_STATS_UPDATE_INTERVAL;;
 
   private int taskCtr = 0;
   private long totalTime = 0;
 
-  private int tasksAccepted = 0;
-  private int tasksRefused = 0;
-  private int tasksFinished = 0;
-  private int tasksOverrun = 0;
+  private static final int STAT_ACCEPTED = 0;
+  private static final int STAT_REFUSED = 1;
+  private static final int STAT_COMPLETED = 2;
+  private static final int STAT_EXPIRED = 3;
+  private static final int STAT_OVERRUN = 4;
+  private static final int NUM_STATS = 5;
+
+  private int backgroundStats[] = new int[NUM_STATS];
+  private int foregroundStats[] = new int[NUM_STATS];
+
 
   TaskRunner(SchedulerFactory schedFactory) {
     if (schedFactory == null) {
@@ -98,10 +107,13 @@ class TaskRunner implements Serializable {
 
   private void setConfig(Configuration config, Set changedKeys) {
     stepPriority = config.getInt(PARAM_PRIORITY, DEFAULT_PRIORITY);
-    int cMax = config.getInt(PARAM_COMPLETED_MAX, DEFAULT_COMPLETED_MAX);
-    if (changedKeys.contains(PARAM_COMPLETED_MAX) ) {
-      synchronized (completed) {
-	completed.setMax(config.getInt(PARAM_COMPLETED_MAX, 50));
+    statsUpdateInterval =
+      config.getTimeInterval(PARAM_STATS_UPDATE_INTERVAL,
+			     DEFAULT_STATS_UPDATE_INTERVAL);
+    int cMax = config.getInt(PARAM_HISTORY_MAX, DEFAULT_HISTORY_MAX);
+    if (changedKeys.contains(PARAM_HISTORY_MAX) ) {
+      synchronized (history) {
+	history.setMax(cMax);
       }
     }
   }
@@ -117,8 +129,16 @@ class TaskRunner implements Serializable {
       return true;
     } else {
       log.debug("Can't schedule task: " + task);
-      tasksRefused++;
+      addStats(task, STAT_REFUSED);
       return false;
+    }
+  }
+
+  private void addStats(SchedulableTask task, int stat) {
+    if (task.isBackgroundTask()) {
+      backgroundStats[stat]++;
+    } else {
+      foregroundStats[stat]++;
     }
   }
 
@@ -145,10 +165,23 @@ class TaskRunner implements Serializable {
     Scheduler scheduler = schedulerFactory.createScheduler(tasks);
     if (scheduler.createSchedule()) {
       currentSchedule = scheduler.getSchedule();
+      acceptedTasks = tasks;
+      Collection schedOverron = currentSchedule.getOverrunTasks();
+      if (schedOverron != null && !schedOverron.isEmpty()) {
+	for (Iterator iter = schedOverron.iterator(); iter.hasNext(); ) {
+	  SchedulableTask otask = (SchedulableTask)iter.next();
+	  if (otask instanceof StepTask) {
+	    if (!overrunTasks.contains(otask)) {
+	      addOverrunner(otask);
+	    }
+	  } else {
+	    log.error("Non step task in Schedule.overrunTasks: " + otask);
+	  }
+	}
+      }
       task.schedSeq = ++taskCtr;
       task.schedDate = TimeBase.nowDate();
-      acceptedTasks = tasks;
-      tasksAccepted++;
+      addStats(task, STAT_ACCEPTED);
       return true;
     } else {
       return false;
@@ -207,9 +240,9 @@ class TaskRunner implements Serializable {
     return overrunTasks;
   }
 
-  List getCompletedSnapshot() {
-    synchronized (completed) {
-      return new ArrayList(completed);
+  List getHistorySnapshot() {
+    synchronized (history) {
+      return new ArrayList(history);
     }
   }
 
@@ -342,9 +375,9 @@ class TaskRunner implements Serializable {
     }
   }
 
-  void addToCompleted(Schedule.Event event) {
-    synchronized (completed) {
-      completed.add(event);
+  void addToHistory(Schedule.Event event) {
+    synchronized (history) {
+      history.add(event);
     }
   }
 
@@ -352,25 +385,36 @@ class TaskRunner implements Serializable {
   void backgroundTaskEvent(Schedule.BackgroundEvent event) {
     BackgroundTask task = event.getTask();
     Schedule.EventType et = event.getType();
+    if (log.isDebug2()) log.debug2("Bkgnd event: " + event);
     if (Schedule.EventType.START == et) {
-      try {
-	task.callback.taskEvent(task, event.getType());
-      } catch (TaskCallback.Abort e) {
-	// task doesn't want to run, don't add to running background tasks
-	event.setError(e);
-	acceptedTasks.remove(task);
-	addToCompleted(event);
-	return;
-      } catch (Exception e) {
-	log.error("Background task start callback threw", e);
-	event.setError(e);
+      // Redundant start events will be generated whenever the schedule is
+      // recalculated after the task has started.  (Which is necessary to
+      // ensure no start events are missed.)
+      if (!backgroundTasks.contains(task) && !task.isFinished()) {
+	// Must provisionally add to backgroundTasks, as it might run and
+	// finish before we get to run again after calling its taskEvent
+	addToBackgroundTasks(task);
+	try {
+	  task.callback.taskEvent(task, event.getType());
+	} catch (TaskCallback.Abort e) {
+	  // task doesn't want to run, remove from backgroundTasks
+	  event.setError(e);
+	  removeFromBackgroundTasks(task);
+	  acceptedTasks.remove(task);
+	  addToHistory(event);
+	  return;
+	} catch (Exception e) {
+	  log.error("Background task start callback threw", e);
+	  event.setError(e);
+	}
+	addToHistory(event);
       }
-      addToBackgroundTasks(task);
-      addToCompleted(event);
     } else if (Schedule.EventType.FINISH == et) {
       acceptedTasks.remove(task);	// do this before callback
       if (removeFromBackgroundTasks(task)) {
-	addToCompleted(event);
+	task.setFinished();
+	addStats(task, STAT_COMPLETED);
+	addToHistory(event);
 	try {
 	  task.callback.taskEvent(task, event.getType());
 	} catch (Exception e) {
@@ -432,7 +476,7 @@ class TaskRunner implements Serializable {
       }
     }
     currentSchedule.removeFirstEvent(chunk);
-    addToCompleted(chunk);
+    addToHistory(chunk);
     if (chunk == runningChunk) {
       runningChunk = null;
     }
@@ -441,7 +485,7 @@ class TaskRunner implements Serializable {
   void addOverrunner(SchedulableTask task) {
     log.debug2("New overrun: " + task);
     overrunTasks.add(task);
-    tasksOverrun++;
+    addStats(task, STAT_OVERRUN);
   }
 
   void removeTask(SchedulableTask task) {
@@ -469,7 +513,11 @@ class TaskRunner implements Serializable {
 
   private void removeAndNotify(SchedulableTask task, String msg) {
     task.setFinished();
-    tasksFinished++;
+    if (task.e instanceof SchedService.Timeout) {
+      addStats(task, STAT_EXPIRED);
+    } else {
+      addStats(task, STAT_COMPLETED);
+    }
     if (log.isDebug()) {
       log.debug(msg + ((task.e != null) ? (task.e + ": ") : "") + task);
     }
@@ -491,7 +539,7 @@ class TaskRunner implements Serializable {
 	log.error("Task callback threw", e);
       }
     }
-    // completed list for status only, don't hold on to caller's objects
+    // history list for status only, don't hold on to caller's objects
     task.callback = null;
     task.cookie = null;
   }
@@ -501,7 +549,8 @@ class TaskRunner implements Serializable {
     Deadline until = runningDeadline;
     boolean overOk = task.isOverrunAllowed();
     long timeDelta = 0;
-    long startTime = TimeBase.nowMs();
+    long statsUpdateTime = TimeBase.nowMs() + statsUpdateInterval;
+    long statsStartTime = TimeBase.nowMs();
 
     task.setStarted();
     try {
@@ -516,29 +565,37 @@ class TaskRunner implements Serializable {
 	 // tk - step size?
 	 task.step(0);
 	 timeDelta =
-	   (long)(TimeBase.msSince(startTime) * (1.0 - backgroundLoadFactor));
+	   (long)(TimeBase.msSince(statsStartTime) *
+		  (1.0 - backgroundLoadFactor));
+	 task.setUnaccountedTime(timeDelta);
 
 	 if (task.isFinished()) {
 	   task.setFinished();
 	   break;
 	 }
-	 if (!overOk && ((task.timeUsed + timeDelta) > task.origEst)) {
+	 if (!overOk && (task.getTimeUsed() > task.origEst)) {
 	   throw
 	     new SchedService.Overrun("task not finished within estimate");
 	 }
-// 	Thread.yield();
-      }
-      if (!task.isFinished() && task.isExpired()) {
-	if (log.isDebug()) log.debug("Expired: " + task);
-	throw
-	  new SchedService.Timeout("task not finished before deadline");
-      }
+	 // 	Thread.yield();
+	 if (TimeBase.nowMs() > statsUpdateTime) {
+	   totalTime += timeDelta;
+	   task.updateStats();
+	   statsStartTime = TimeBase.nowMs();
+	   statsUpdateTime = statsStartTime + statsUpdateInterval;
+	 }
+       }
+       if (!task.isFinished() && task.isExpired()) {
+	 if (log.isDebug()) log.debug("Expired: " + task);
+	 throw
+	   new SchedService.Timeout("task not finished before deadline");
+       }
     } catch (Exception e) {
       // tk - should this catch all Throwable?
       task.e = e;
     }
-    task.timeUsed += timeDelta;
     totalTime += timeDelta;
+    task.updateStats();
 
     if (runningChunk != null) {
       if (runningChunk.getFinish().expired() || task.isFinished()) {
@@ -647,21 +704,21 @@ class TaskRunner implements Serializable {
       int ix = 0;
       for (ListIterator iter = getSchedSnapshot().listIterator();
 	   iter.hasNext();) {
-	Schedule.Event event = (Schedule.Event)iter.next();
+	Schedule.Event event = getDisplayEvent(iter);
 	// tk - hack to prevent finish event of already finished background
-	// tasks from appearing in queue.  Should mark task done instead?
-	if (!event.isBackgroundEvent() ||
-	    acceptedTasks.contains(((Schedule.BackgroundEvent)event).getTask())) {
+	// tasks from appearing in queue.
+	if (!event.isTaskFinished()) {
 	  table.add(makeRow(event, ix++));
 	}
       }
       int seprIx = ix + 1;
-      List complet = getCompletedSnapshot();
+      List complet = getHistorySnapshot();
       Collections.reverse(complet);
-      for (Iterator iter = complet.iterator(); iter.hasNext();) {
-	Map row = makeRow((Schedule.Event)iter.next(), ix++);
+      for (ListIterator iter = complet.listIterator(); iter.hasNext();) {
+	Schedule.Event event = getDisplayEvent(iter);
+	Map row = makeRow(event, ix++);
 	// if both parts of the table are present , add a separator before
-	// the first completed event
+	// the first history event
 	if (ix == seprIx) {
 	  row.put(StatusTable.ROW_SEPARATOR, "");
 	}
@@ -670,17 +727,60 @@ class TaskRunner implements Serializable {
       return table;
     }
 
+    private class CombinedBackgroundEvent extends Schedule.BackgroundEvent {
+      private Deadline finish;
+      private CombinedBackgroundEvent(BackgroundTask task, Deadline start,
+				      Deadline finish) {
+	super(task, start, Schedule.EventType.START);
+	this.finish = finish;
+      }
+
+      Deadline getFinish() {
+	return finish;
+      }
+    }
+
+    private Schedule.Event getDisplayEvent(ListIterator eventIter) {
+      Schedule.Event event = (Schedule.Event)eventIter.next();
+      if (!event.isBackgroundEvent() || !eventIter.hasNext()) {
+	return event;
+      }
+      Schedule.BackgroundEvent bevent = (Schedule.BackgroundEvent)event;
+      Schedule.Event event2 = (Schedule.Event)eventIter.next();
+      if (event2.isBackgroundEvent()) {
+	Schedule.BackgroundEvent bevent2 = (Schedule.BackgroundEvent)event2;
+	if (bevent.getTask().equals(bevent2.getTask()) &&
+	    bevent.getType() != bevent2.getType()) {
+	  if (bevent.getType() == Schedule.EventType.START) {
+	    return new CombinedBackgroundEvent(bevent.getTask(),
+					       bevent.getStart(),
+					       bevent2.getStart());
+	  } else {
+	    return new CombinedBackgroundEvent(bevent.getTask(),
+					       bevent2.getStart(),
+					       bevent.getStart());
+	  }
+	}
+      }
+      eventIter.previous();
+      return event;
+    }
+
     private Map makeRow(Schedule.Event event, int sort) {
       Map row = new HashMap();
       row.put("sort", new Integer(sort));
       if (event.isBackgroundEvent()) {
 	Schedule.BackgroundEvent be = (Schedule.BackgroundEvent)event;
 	BackgroundTask bt = be.getTask();
-	row.put("type", "B");
+	row.put("type", "  Back");
 // 	row.put("tasknum", new Integer(bt.schedSeq));
 	row.put("task", bt.schedSeq + ":" + bt.getShortText());
 	row.put("load", new Double(bt.getLoadFactor()));
-	if (Schedule.EventType.START == be.getType()) {
+	if (be instanceof CombinedBackgroundEvent) {
+	  CombinedBackgroundEvent cbe = (CombinedBackgroundEvent)be;
+	  row.put("start", cbe.getStart());
+	  row.put("stop", cbe.getFinish());
+	} else if (Schedule.EventType.START == be.getType()) {
 	  row.put("start", be.getStart());
 	} else if (Schedule.EventType.FINISH == be.getType()) {
 	  row.put("stop", be.getStart());
@@ -688,7 +788,7 @@ class TaskRunner implements Serializable {
       } else {
 	Schedule.Chunk chunk = (Schedule.Chunk)event;
 	StepTask st = chunk.getTask();
-	row.put("type", "S");
+	row.put("type", "Fore");
 // 	row.put("tasknum", new Integer(st.schedSeq));
 	row.put("task", st.schedSeq + ":" + st.getShortText());
 	row.put("load", new Double(chunk.getLoadFactor()));
@@ -698,23 +798,40 @@ class TaskRunner implements Serializable {
       return row;
     }
 
+    private String combStats(int stat) {
+      StringBuffer sb = new StringBuffer();
+      sb.append(foregroundStats[stat]);
+      sb.append(" foreground, ");
+      sb.append(backgroundStats[stat]);
+      sb.append(" background");
+      return sb.toString();
+    }
+
     private List getSummaryInfo(String key) {
       List res = new ArrayList();
       res.add(new StatusTable.SummaryInfo("Tasks accepted",
-					  ColumnDescriptor.TYPE_INT,
-					  new Long(tasksAccepted)));
+					  ColumnDescriptor.TYPE_STRING,
+					  combStats(STAT_ACCEPTED)));
       res.add(new StatusTable.SummaryInfo("Tasks refused",
-					  ColumnDescriptor.TYPE_INT,
-					  new Long(tasksRefused)));
-      res.add(new StatusTable.SummaryInfo("Tasks finished",
-					  ColumnDescriptor.TYPE_INT,
-					  new Long(tasksFinished)));
+					  ColumnDescriptor.TYPE_STRING,
+					  combStats(STAT_REFUSED)));
+      res.add(new StatusTable.SummaryInfo("Tasks completed",
+					  ColumnDescriptor.TYPE_STRING,
+					  combStats(STAT_COMPLETED)));
+      res.add(new StatusTable.SummaryInfo("Tasks expired",
+					  ColumnDescriptor.TYPE_STRING,
+					  combStats(STAT_EXPIRED)));
       res.add(new StatusTable.SummaryInfo("Tasks overrun",
-					  ColumnDescriptor.TYPE_INT,
-					  new Long(tasksOverrun)));
-      res.add(new StatusTable.SummaryInfo("Total task time",
+					  ColumnDescriptor.TYPE_STRING,
+					  combStats(STAT_OVERRUN)));
+      res.add(new StatusTable.SummaryInfo("Total foreground time",
 					  ColumnDescriptor.TYPE_TIME_INTERVAL,
 					  new Long(totalTime)));
+      if (!overrunTasks.isEmpty()) {
+	res.add(new StatusTable.SummaryInfo("Overrun foreground tasks",
+					    ColumnDescriptor.TYPE_INT,
+					    new Long(overrunTasks.size())));
+      }
       return res;
     }
 
