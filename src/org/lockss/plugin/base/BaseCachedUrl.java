@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.5 2003-10-01 23:06:42 eaalto Exp $
+ * $Id: BaseCachedUrl.java,v 1.6 2004-01-07 19:44:18 troberts Exp $
  */
 
 /*
@@ -51,7 +51,7 @@ public class BaseCachedUrl implements CachedUrl {
   private RepositoryNode leaf = null;
 
   private static final String PARAM_SHOULD_FILTER_HASH_STREAM =
-    Configuration.PREFIX+".baseCachedUrl.filterHashStream";
+    Configuration.PREFIX+"baseCachedUrl.filterHashStream";
 
   public BaseCachedUrl(CachedUrlSet owner, String url) {
     this.cus = owner;

@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCachedUrl.java,v 1.3 2004-01-07 01:14:31 troberts Exp $
+ * $Id: TestBaseCachedUrl.java,v 1.4 2004-01-07 19:44:18 troberts Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ import org.lockss.repository.*;
 
 public class TestBaseCachedUrl extends LockssTestCase {
   private static final String PARAM_SHOULD_FILTER_HASH_STREAM =
-      Configuration.PREFIX+".baseCachedUrl.filterHashStream";
+      Configuration.PREFIX+"baseCachedUrl..filterHashStream";
 
   private LockssRepository repo;
   private MockArchivalUnit mau;
