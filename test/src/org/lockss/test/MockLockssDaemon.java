@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssDaemon.java,v 1.47 2005-02-02 09:42:20 tlipkis Exp $
+ * $Id: MockLockssDaemon.java,v 1.48 2005-02-21 03:06:40 tlipkis Exp $
  */
 
 /*
@@ -137,6 +137,7 @@ public class MockLockssDaemon extends LockssDaemon {
     try {
       return initManager(desc);
     } catch (Exception e) {
+      log.error("Error creating manager", e);
       throw new LockssAppException("Can't load manager: " + e.toString());
     }
   }
@@ -540,8 +541,7 @@ public class MockLockssDaemon extends LockssDaemon {
       return mgr;
     } catch (Exception e) {
       log.error("Error starting au manager", e);
-      throw new LockssAppException("Can't load au manager: " +
-				      e.toString());
+      throw new LockssAppException("Can't load au manager: " + e.toString());
     }
   }
 

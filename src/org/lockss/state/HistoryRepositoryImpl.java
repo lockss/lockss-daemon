@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.56 2004-10-06 04:47:17 tlipkis Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.57 2005-02-21 03:06:41 tlipkis Exp $
  */
 
 /*
@@ -196,8 +196,8 @@ public class HistoryRepositoryImpl
       ((NodeStateImpl)nodeState).setPollHistoryBeanList(
           new ArrayList(nhb.historyBeans));
     } catch (XmlMarshaller.MarshallingException me) {
-      logger.error("Parsing exception.  Moving file to '.old'");
-      // don't delete file, because we don't want to lose any history
+      logger.error("Can't parse poll history: " +nodeFile, me);
+      // Rename file to .old
       nodeFile.renameTo(new File(nodeFile.getAbsolutePath()+".old"));
       // continue with empty list
       ((NodeStateImpl)nodeState).setPollHistoryBeanList(new ArrayList());
