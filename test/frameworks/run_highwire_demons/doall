@@ -1,0 +1,18 @@
+#! /bin/bash
+
+# PROJECT_DIR
+PROJECT_DIR=`( cd ../../../..; pwd )`
+export PROJECT_DIR
+
+for (( i=1 ; i<=4 ; i++ )) ; do
+  (
+    cd test$i
+    if [ "$1" == "start" ] ; then
+	../testrundaemons &
+	echo started in `pwd`
+    else
+	kill `cat dpid`
+        echo stopped in `pwd`
+    fi
+  )
+done
