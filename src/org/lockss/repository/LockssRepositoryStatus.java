@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryStatus.java,v 1.4 2004-05-12 20:21:31 tlipkis Exp $
+ * $Id: LockssRepositoryStatus.java,v 1.4.2.1 2004-05-20 08:56:59 tlipkis Exp $
  */
 
 /*
@@ -31,6 +31,7 @@ import java.io.*;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
 import org.lockss.plugin.*;
+import org.lockss.remote.*;
 import org.lockss.util.*;
 import org.lockss.app.*;
 import org.lockss.state.*;
@@ -40,6 +41,8 @@ import org.lockss.state.*;
  */
 public class LockssRepositoryStatus extends BaseLockssManager {
   public static final String SERVICE_STATUS_TABLE_NAME = "RepositoryTable";
+  public static final String SPACE_TABLE_NAME = "RepositorySpace";
+
   public static final String AU_STATUS_TABLE_NAME =
     ArchivalUnitStatus.AU_STATUS_TABLE_NAME;
 
@@ -60,11 +63,14 @@ public class LockssRepositoryStatus extends BaseLockssManager {
     StatusService statusServ = theDaemon.getStatusService();
     statusServ.registerStatusAccessor(SERVICE_STATUS_TABLE_NAME,
 				      new RepoStatusAccessor(theDaemon));
+    statusServ.registerStatusAccessor(SPACE_TABLE_NAME,
+				      new RepoSpaceStatusAccessor(theDaemon));
   }
 
   public void stopService() {
     StatusService statusServ = theDaemon.getStatusService();
     statusServ.unregisterStatusAccessor(SERVICE_STATUS_TABLE_NAME);
+    statusServ.unregisterStatusAccessor(SPACE_TABLE_NAME);
     super.stopService();
   }
 
@@ -115,7 +121,8 @@ public class LockssRepositoryStatus extends BaseLockssManager {
       List repos = daemon.getConfigManager().getRepositoryList();
       for (Iterator iter = repos.iterator(); iter.hasNext(); ) {
 	String repoSpec = (String)iter.next();
-	if (repoSpec.startsWith("local:")) {
+	String path = LockssRepositoryImpl.getLocalRepositoryPath(repoSpec);
+	if (path != null) {
 	  roots.add(repoSpec.substring(6));
 	}
       }
@@ -171,9 +178,10 @@ public class LockssRepositoryStatus extends BaseLockssManager {
 	    if (!dir.toString().startsWith(getDefaultRepositoryLocation())) {
 	      au = null;
 	    }
-	  } else if (repoSpec.startsWith("local:")) {
-	    String root = repoSpec.substring(6);
-	    if (!dir.toString().startsWith(root)) {
+	  } else {
+	    String root =
+	      LockssRepositoryImpl.getLocalRepositoryPath(repoSpec);
+	    if (root != null && !dir.toString().startsWith(root)) {
 	      au = null;
 	    }
 	  }
@@ -259,6 +267,73 @@ public class LockssRepositoryStatus extends BaseLockssManager {
 
     private String getTitle(String key) {
       return "Repositories";
+    }
+
+    private List getSummaryInfo() {
+      List res = new ArrayList();
+//       res.add(new StatusTable.SummaryInfo("Tasks accepted",
+// 					  ColumnDescriptor.TYPE_STRING,
+// 					  combStats(STAT_ACCEPTED)));
+      return res;
+    }
+  }
+
+  static class RepoSpaceStatusAccessor implements StatusAccessor {
+    private static LockssDaemon daemon;
+    private RemoteApi remoteApi;
+
+    private static final List columnDescriptors = ListUtil.list
+      (new ColumnDescriptor("repo", "Repository",
+			    ColumnDescriptor.TYPE_STRING),
+       new ColumnDescriptor("size", "Size", ColumnDescriptor.TYPE_STRING),
+       new ColumnDescriptor("used", "Used", ColumnDescriptor.TYPE_STRING),
+       new ColumnDescriptor("free", "Free", ColumnDescriptor.TYPE_STRING),
+       new ColumnDescriptor("percent", "%Full", ColumnDescriptor.TYPE_STRING)
+       );
+
+    private static final List sortRules =
+      ListUtil.list(new StatusTable.SortRule("repo", true));
+
+    RepoSpaceStatusAccessor(LockssDaemon daemon) {
+      this.daemon = daemon;
+      remoteApi = daemon.getRemoteApi();
+    }
+
+    public String getDisplayName() {
+      return "Repository Space";
+    }
+
+    public void populateTable(StatusTable table)
+        throws StatusService.NoSuchTableException {
+      table.setColumnDescriptors(columnDescriptors);
+      table.setDefaultSortRules(sortRules);
+      table.setRows(getRows());
+      table.setSummaryInfo(getSummaryInfo());
+    }
+
+    public boolean requiresKey() {
+      return false;
+    }
+
+    private List getRows() {
+      List repos = remoteApi.getRepositoryList();
+      List rows = new ArrayList();
+      for (Iterator iter = repos.iterator(); iter.hasNext(); ) {
+	Map row = new HashMap();
+	String repo = (String)iter.next();
+	PlatformInfo.DF df = remoteApi.getRepositoryDF(repo);
+	row.put("repo", repo);
+	row.put("size", StringUtil.sizeKBToString(df.getSize()));
+	row.put("used", StringUtil.sizeKBToString(df.getUsed()));
+	row.put("free", StringUtil.sizeKBToString(df.getAvail()));
+	row.put("percent", df.getPercent());
+	rows.add(row);
+      }
+      return rows;
+    }
+
+    private String getTitle(String key) {
+      return "Repository Space";
     }
 
     private List getSummaryInfo() {
