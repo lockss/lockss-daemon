@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.116 2004-10-18 02:57:51 smorabito Exp $
+ $Id: build.xml,v 1.117 2004-10-18 03:33:01 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -242,7 +242,7 @@ Args:
   <!-- Classpath exported to production environment includes UI jar so API
   servlet can be run if jar is present. -->
   <!-- The UI jar is not actually available to any targets in this build,
-  so it doens't make sense to use this classpath for any other purpose. -->
+  so it doesn't make sense to use this classpath for any other purpose. -->
 
   <path id="prod.run.classpath">
     <path refid="test.run.classpath" />
