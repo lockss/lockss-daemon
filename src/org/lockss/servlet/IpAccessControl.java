@@ -1,5 +1,5 @@
 /*
- * $Id: IpAccessControl.java,v 1.5 2003-07-14 06:45:07 tlipkis Exp $
+ * $Id: IpAccessControl.java,v 1.6 2003-07-16 00:04:20 tlipkis Exp $
  */
 
 /*
@@ -64,6 +64,11 @@ public class IpAccessControl extends LockssServlet {
 
   private ConfigManager configMgr;
 
+  // Used to insert error messages into the page
+  private Vector inclErrs;
+  private Vector exclErrs;
+  private String errMsg;
+
   public void init(ServletConfig config) throws ServletException {
     super.init(config);
     configMgr = getLockssDaemon().getConfigManager();
@@ -71,27 +76,27 @@ public class IpAccessControl extends LockssServlet {
 
   public void lockssHandleRequest() throws IOException {
     String action = req.getParameter("action");
-    boolean isError = false;
+
+    inclErrs = null;
+    exclErrs = null;
+    errMsg = null;
 
     if ("Update".equals(action)){
       Vector incl = ipStrToVector(req.getParameter("inc_ips"));
       Vector excl = ipStrToVector(req.getParameter("exc_ips"));
-      Vector inclErrs = findInvalidIps(incl);
-      Vector exclErrs = findInvalidIps(excl);
+      inclErrs = findInvalidIps(incl);
+      exclErrs = findInvalidIps(excl);
 
       if (inclErrs.size() > 0 || exclErrs.size() > 0) {
-        displayPage(incl, excl, inclErrs, exclErrs);
+        displayPage(incl, excl);
       } else {
 	try {
 	  saveIPChanges(incl, excl);
 	} catch (Exception e) {
 	  log.error("Error saving changes", e);
-	  // set to null so will display unedited values.
-	  // xxx should display error here
-	  incl = null;
-	  excl = null;
+	  errMsg = "Error: Couldn't save changes:<br>" + e.toString();
 	}
-	displayPage(incl, excl, null, null);
+	displayPage(incl, excl);
       }
     } else {
       displayPage();
@@ -109,7 +114,7 @@ public class IpAccessControl extends LockssServlet {
     if (incl.size() >= 2 && incl.get(0).equals(incl.get(1))) {
       incl.remove(0);
     }
-    displayPage(incl, excl, null, null);
+    displayPage(incl, excl);
   }
 
   private Vector getListFromParam(String param) {
@@ -121,15 +126,11 @@ public class IpAccessControl extends LockssServlet {
    * Display the UpdateIps page.
    * @param incl vector of included ip addresses
    * @param excl vector of excluded ip addresses
-   * @param inclErrs vector of malformed include ip addresses.
-   * @param exclErrs vector of malformed include ip addresses.
    */
-  private void displayPage(Vector incl, Vector excl,
-                           Vector inclErrs, Vector exclErrs)
+  private void displayPage(Vector incl, Vector excl)
       throws IOException {
     Page page = newPage();
-    page.add(getIncludeExcludeElement(incl, excl,
-                                      inclErrs, exclErrs));
+    page.add(getIncludeExcludeElement(incl, excl));
     page.add(getFooter());
     page.write(resp.getWriter());
   }
@@ -139,13 +140,9 @@ public class IpAccessControl extends LockssServlet {
    * ip address table.
    * @param incl vector of included ip addresses
    * @param excl vector of excluded ip addresses
-   * @param inclErrs vector of malformed include ip addresses.
-   * @param exclErrs vector of malformed include ip addresses.
    * @return an html element representing the include/exclude ip address form
    */
-  private Element getIncludeExcludeElement(Vector incl, Vector excl,
-                                           Vector inclErrs,
-                                           Vector exclErrs) {
+  private Element getIncludeExcludeElement(Vector incl, Vector excl) {
     boolean isError = false;
     String incString = null;
     String excString = null;
@@ -158,6 +155,11 @@ public class IpAccessControl extends LockssServlet {
 
     Table table = new Table(1, "BORDER=1 CELLPADDING=0");
     //table.center();
+    if (errMsg != null) {
+      table.newRow();
+      table.newCell("colspan=2");
+      table.add("<font color=red>" + errMsg + "</font>");
+    }
     table.newRow("bgcolor=\"#CCCCCC\"");
     table.newCell("align=center");
     table.add("<font size=+1>Allow Access" + addFootnote(footIP) +
@@ -172,20 +174,9 @@ public class IpAccessControl extends LockssServlet {
       String errorStr = null;
       table.newRow();
       table.newCell();
-      if (inclErrs != null && inclErrs.size() > 0) {
-        errorStr = getIPString(inclErrs);
-        table.add("Please correct the following error: &nbsp;<p><b><font color=\"#FF0000\">Error: Invalid IP Address "+errorStr+"</font></b>");
-      } else {
-        table.add("&nbsp");
-      }
-
+      addIPErrors(table, inclErrs);
       table.newCell();
-      if (exclErrs != null && exclErrs.size() > 0) {
-        errorStr = getIPString(exclErrs);
-        table.add("Please correct the following error: &nbsp;<p><b><font color=\"#FF0000\">Error: Invalid IP Address "+errorStr+"</font></b>");
-      } else {
-        table.add("&nbsp");
-      }
+      addIPErrors(table, exclErrs);
     }
 
     incString = getIPString(incl);
@@ -213,6 +204,17 @@ public class IpAccessControl extends LockssServlet {
     return comp;
   }
 
+  private void addIPErrors(Composite comp, Vector errs) {
+    if (errs != null && errs.size() > 0) {
+      comp.add("<font color=red>The following entries have errors:</font><br>");
+      for (Iterator iter = errs.iterator(); iter.hasNext(); ) {
+	comp.add((String)iter.next());
+	comp.add("<br>");
+      }
+    } else {
+      comp.add("&nbsp");
+      }
+  }
 
   /**
    * Checks the validity of a vector of IP addresses
@@ -229,7 +231,7 @@ public class IpAccessControl extends LockssServlet {
 	try {
 	  ip = new IpFilter.Mask(ipStr, true);
 	} catch (IpFilter.MalformedException e) {
-	  errorIPs.addElement(ipStr);
+	  errorIPs.addElement(ipStr + ":  " + e.getMessage());
 	}
       }
     }
