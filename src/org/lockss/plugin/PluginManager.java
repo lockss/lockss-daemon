@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.44 2003-08-04 07:57:22 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.45 2003-08-27 22:12:40 eaalto Exp $
  */
 
 /*
@@ -32,14 +32,13 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin;
 
-import java.io.*;
 import java.util.*;
+import java.io.IOException;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
-import org.lockss.util.*;
-import org.lockss.app.*;
 import org.lockss.poller.*;
-import org.lockss.poller.PollSpec;
+import org.lockss.util.*;
+import org.lockss.app.BaseLockssManager;
 
 /**
  * Plugin global functionality
@@ -113,18 +112,30 @@ public class PluginManager extends BaseLockssManager {
     }
   }
 
-  /** Convert plugin property key to plugin class name. */
+  /**
+   * Convert plugin property key to plugin class name.
+   * @param key the key
+   * @return the plugin name
+   */
   public static String pluginNameFromKey(String key) {
     return StringUtil.replaceString(key, "|", ".");
   }
 
-  /** Convert plugin class name to key suitable for property file. */
+  /**
+   * Convert plugin class name to key suitable for property file.
+   * @param className the class name
+   * @return the plugin key
+   */
   public static String pluginKeyFromName(String className) {
     return StringUtil.replaceString(className, ".", "|");
   }
 
-  /** Convert plugin id to key suitable for property file.  Plugin id is
-   * currently the same as plugin class name, but that may change. */
+  /**
+   * Convert plugin id to key suitable for property file.  Plugin id is
+   * currently the same as plugin class name, but that may change.
+   * @param id the plugin id
+   * @return String the plugin key
+   */
   public static String pluginKeyFromId(String id) {
     // tk - needs to do real mapping from IDs obtained from all available
     // plugins.
@@ -138,7 +149,7 @@ public class PluginManager extends BaseLockssManager {
    * @return a unique identifier for an au based on its plugin id and defining
    * properties.
    * @param pluginId plugin id (with . not escaped)
-   * @param auDefiningProps defining properties for the au
+   * @param auDefProps defining properties for the au
    * {@see Plugin.getDefiningConfigKeys}
    */
   public static String generateAUId(String pluginId, Properties auDefProps) {
@@ -156,8 +167,8 @@ public class PluginManager extends BaseLockssManager {
   }
 
   /**
-   * Return the plugin with the given id.
-   * @param pluginId the plugin id
+   * Return the plugin with the given key.
+   * @param pluginKey the plugin key
    * @return the plugin or null
    */
   public Plugin getPlugin(String pluginKey) {
@@ -258,11 +269,14 @@ public class PluginManager extends BaseLockssManager {
   }
 
   // These don't belong here
-  /** Reconfigure an AU and save the new configuration in the local config
+  /**
+   * Reconfigure an AU and save the new configuration in the local config
    * file.  Need to find a better place for this.
    * @param au the AU
    * @param auProps the new AU configuration, using simple prop keys (not
    * prefixed with org.lockss.au.<i>auid</i>)
+   * @throws ArchivalUnit.ConfigurationException
+   * @throws IOException
    */
   public void setAndSaveAUConfiguration(ArchivalUnit au,
 					Properties auProps)
@@ -270,11 +284,14 @@ public class PluginManager extends BaseLockssManager {
     setAndSaveAUConfiguration(au, ConfigManager.fromProperties(auProps));
   }
 
-  /** Reconfigure an AU and save the new configuration in the local config
+  /**
+   * Reconfigure an AU and save the new configuration in the local config
    * file.  Need to find a better place for this.
    * @param au the AU
    * @param auConf the new AU configuration, using simple prop keys (not
    * prefixed with org.lockss.au.<i>auid</i>)
+   * @throws ArchivalUnit.ConfigurationException
+   * @throws IOException
    */
   public void setAndSaveAUConfiguration(ArchivalUnit au,
 					Configuration auConf)
@@ -293,12 +310,15 @@ public class PluginManager extends BaseLockssManager {
   }
 
 
-  /** Create an AU and save its configuration in the local config
+  /**
+   * Create an AU and save its configuration in the local config
    * file.  Need to find a better place for this.
    * @param plugin the Plugin in which to create the AU
    * @param auProps the new AU configuration, using simple prop keys (not
    * prefixed with org.lockss.au.<i>auid</i>)
    * @return the new AU
+   * @throws ArchivalUnit.ConfigurationException
+   * @throws IOException
    */
   public ArchivalUnit createAndSaveAUConfiguration(Plugin plugin,
 						   Properties auProps)
@@ -307,12 +327,15 @@ public class PluginManager extends BaseLockssManager {
 					ConfigManager.fromProperties(auProps));
   }
 
-  /** Create an AU and save its configuration in the local config
+  /**
+   * Create an AU and save its configuration in the local config
    * file.  Need to find a better place for this.
    * @param plugin the Plugin in which to create the AU
    * @param auConf the new AU configuration, using simple prop keys (not
    * prefixed with org.lockss.au.<i>auid</i>)
    * @return the new AU
+   * @throws ArchivalUnit.ConfigurationException
+   * @throws IOException
    */
   public ArchivalUnit createAndSaveAUConfiguration(Plugin plugin,
 						   Configuration auConf)
@@ -322,12 +345,12 @@ public class PluginManager extends BaseLockssManager {
     return au;
   }
 
-  /** Delete AU configuration from the local config file.  Need to find a
+  /**
+   * Delete AU configuration from the local config file.  Need to find a
    * better place for this.
-   * @param plugin the Plugin in which to create the AU
-   * @param auConf the new AU configuration, using simple prop keys (not
-   * prefixed with org.lockss.au.<i>auid</i>)
-   * @return the new AU
+   * @param au the ArchivalUnit to be unconfigured
+   * @throws ArchivalUnit.ConfigurationException
+   * @throws IOException
    */
   public void deleteAUConfiguration(ArchivalUnit au)
       throws ArchivalUnit.ConfigurationException, IOException {
@@ -335,9 +358,11 @@ public class PluginManager extends BaseLockssManager {
     updateAuConfigFile(au, ConfigManager.EMPTY_CONFIGURATION);
   }
 
-  /** Return the stored config info for an AU (from config file, not from
+  /**
+   * Return the stored config info for an AU (from config file, not from
    * AU instance).
-    * @return the AU's Configuration, with unprefixed keys.
+   * @param au the ArchivalUnit
+   * @return the AU's Configuration, with unprefixed keys.
    */
   public Configuration getStoredAuConfiguration(ArchivalUnit au) {
     Configuration config = configMgr.readAuConfigFile();
@@ -347,7 +372,7 @@ public class PluginManager extends BaseLockssManager {
   }
 
   /**
-   * load a plugin with the given class name from somewhere in our classpath
+   * Load a plugin with the given class name from somewhere in our classpath
    * @param pluginKey the key for this plugin
    * @return true if loaded
    */
@@ -496,6 +521,7 @@ public class PluginManager extends BaseLockssManager {
   // be included automatically
   private String builtinPluginNames[] = {
     "org.lockss.plugin.highwire.HighWirePlugin",
+    "org.lockss.plugin.projmuse.ProjectMusePlugin",
 //     "org.lockss.plugin.simulated.SimulatedPlugin",
   };
 
