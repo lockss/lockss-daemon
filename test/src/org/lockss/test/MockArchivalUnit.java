@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.15 2003-02-24 22:13:43 claire Exp $
+ * $Id: MockArchivalUnit.java,v 1.16 2003-02-26 04:52:51 tal Exp $
  */
 
 /*
@@ -84,8 +84,10 @@ public class MockArchivalUnit implements ArchivalUnit {
     newContentUrls = urls;
   }
 
-  public void setConfiguration(Configuration config) {
+  public void setConfiguration(Configuration config)
+      throws ArchivalUnit.ConfigurationException {
     this.config = config;
+    auId = new MockPlugin().getAUIdFromConfig(config);
   }
 
   public Configuration getConfiguration() {
