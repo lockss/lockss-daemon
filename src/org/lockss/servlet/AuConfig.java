@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.12 2004-01-03 06:23:57 tlipkis Exp $
+ * $Id: AuConfig.java,v 1.13 2004-01-04 06:19:12 tlipkis Exp $
  */
 
 /*
@@ -42,6 +42,7 @@ import org.mortbay.html.*;
 import org.mortbay.tools.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
+import org.lockss.remote.*;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
 
@@ -55,23 +56,25 @@ public class AuConfig extends LockssServlet {
 
   static Logger log = Logger.getLogger("AuConfig");
 
-  // must not conflict with existing html element properties in browser
+  // Name given to form element whose value is the action that should be
+  // performed when the form is submitted.  (Not always the submit button.)
   static final String ACTION_TAG = "lockssAction";
-  // prefix added to config prop keys when used in form
+  // prefix added to config prop keys when used in form, to avoid
+  // accidental collisions
   static final String FORM_PREFIX = "lfp.";
 
   private ConfigManager configMgr;
-  private PluginManager pluginMgr;
+  private RemoteApi remoteApi;
 
   // Used to insert messages into the page
   private String errMsg;
   private String statusMsg;
 
   String action;			// action request by form
-  Plugin plugin;			// current plugin
+  PluginProxy plugin;			// current plugin
   Configuration auConfig;		// current config from AU
   Configuration formConfig;		// config read from form
-  Configuration titleConfig;		// config specified by title DB
+  TitleConfig titleConfig;		// config specified by title DB
   java.util.List auConfigParams;
   Collection defKeys;			// plugin's definitional keys
   java.util.List editKeys;		// non-definitional keys
@@ -93,7 +96,7 @@ public class AuConfig extends LockssServlet {
   public void init(ServletConfig config) throws ServletException {
     super.init(config);
     configMgr = getLockssDaemon().getConfigManager();
-    pluginMgr = getLockssDaemon().getPluginManager();
+    remoteApi = getLockssDaemon().getRemoteApi();
   }
 
   protected void lockssHandleRequest() throws IOException {
@@ -112,8 +115,8 @@ public class AuConfig extends LockssServlet {
     else {
       // all other actions require AU.  If missing, display summary page
       String auid = req.getParameter("auid");
-      ArchivalUnit au = pluginMgr.getAuFromId(auid);
-      if (au == null) {
+      AuProxy au = getAuProxy(auid);
+      if (au != null) {
 	errMsg = "Invalid AuId: " + auid;
 	displayAuSummary();
       } else if (action.equals("Edit")) displayEditAu(au);
@@ -149,10 +152,10 @@ public class AuConfig extends LockssServlet {
     // make table findable by unit tests
     tbl.attribute("id", "AuSummaryTable");
     addAddAuRow(tbl);
-    Collection allAUs = pluginMgr.getAllAus();
+    Collection allAUs = remoteApi.getAllAus();
     if (!allAUs.isEmpty()) {
       for (Iterator iter = allAUs.iterator(); iter.hasNext(); ) {
-	addAuSummaryRow(tbl, (ArchivalUnit)iter.next());
+	addAuSummaryRow(tbl, (AuProxy)iter.next());
       }
     }
     frm.add(tbl);
@@ -170,8 +173,8 @@ public class AuConfig extends LockssServlet {
   }
 
   /** Add an Edit row to the table */
-  private void addAuSummaryRow(Table tbl, ArchivalUnit au) {
-    Configuration cfg = pluginMgr.getStoredAuConfiguration(au);
+  private void addAuSummaryRow(Table tbl, AuProxy au) {
+    Configuration cfg = remoteApi.getStoredAuConfiguration(au);
     boolean deleted = (cfg.isEmpty() ||
 		       cfg.getBoolean(PluginManager.AU_PARAM_DISABLED, false));
     tbl.newRow();
@@ -183,7 +186,7 @@ public class AuConfig extends LockssServlet {
   }
 
   /** Display form to edit existing AU */
-  private void displayEditAu(ArchivalUnit au) throws IOException {
+  private void displayEditAu(AuProxy au) throws IOException {
     Page page = newPage();
     fetchAuConfig(au);
 
@@ -201,7 +204,7 @@ public class AuConfig extends LockssServlet {
   }
 
   /** Display form to restore unconfigured AU */
-  private void displayRestoreAu(ArchivalUnit au) throws IOException {
+  private void displayRestoreAu(AuProxy au) throws IOException {
     Page page = newPage();
     fetchAuConfig(au);
 
@@ -218,12 +221,12 @@ public class AuConfig extends LockssServlet {
   }
 
   // tk - temporary - should handle more than one plugin for title
-  Plugin getTitlePlugin(String title) {
-    Collection c = pluginMgr.getTitlePlugins(title);
+  PluginProxy getTitlePlugin(String title) {
+    Collection c = remoteApi.getTitlePlugins(title);
     if (c == null || c.isEmpty()) {
       return null;
     }
-    return (Plugin)c.iterator().next();
+    return (PluginProxy)c.iterator().next();
   }
 
   /** Display form to add a new AU */
@@ -237,23 +240,24 @@ public class AuConfig extends LockssServlet {
 	displayAddAu();
 	return;
       }
+      titleConfig = plugin.getTitleConfig(title);
       if (formConfig == null) {
-	TitleConfig tc = plugin.getTitleConfig(title);
-	if (tc != null) {
-	  formConfig = tc.getConfig();
+	if (titleConfig != null) {
+	  formConfig = titleConfig.getConfig();
 	}
       }
     } else {
       String pid = req.getParameter("PluginId");
-      String pKey;
-      if (!StringUtil.isNullString(pid)) {
-	pKey = pluginMgr.pluginKeyFromId(pid);
-      } else {
+      if (StringUtil.isNullString(pid)) {
 	pid = req.getParameter("PluginClass");
-	pKey = pluginMgr.pluginKeyFromName(pid);
+// 	String pclass = req.getParameter("PluginClass");
+// 	if (!StringUtil.isNullString(pclass)) {
+// 	  pid = remoteApi.pluginIdFromName(pclass);
+// 	}
       }
-      if (!pluginMgr.ensurePluginLoaded(pKey)) {
-	if (StringUtil.isNullString(pKey)) {
+      plugin = getPluginProxy(pid);
+      if (plugin == null) {
+	if (StringUtil.isNullString(pid)) {
 	  errMsg = "Please choose a title or a plugin.";
 	} else {
 	  errMsg = "Can't find plugin: " + pid;
@@ -261,9 +265,7 @@ public class AuConfig extends LockssServlet {
 	displayAddAu();
 	return;
       }
-      plugin = pluginMgr.getPlugin(pKey);
-    }
-    
+    }    
     Page page = newPage();
     page.add(getErrBlock());
     page.add(getExplanationBlock((StringUtil.isNullString(title)
@@ -300,7 +302,7 @@ public class AuConfig extends LockssServlet {
 //     frm.add("<center>");
     Table tbl = new Table(0, "align=center cellspacing=4 cellpadding=0");
 
-    ArrayList titles = new ArrayList(pluginMgr.findAllTitles());
+    ArrayList titles = new ArrayList(remoteApi.findAllTitles());
     Collections.sort(titles);
     if (!titles.isEmpty()) {
       boolean includePluginInTitleSelect =
@@ -318,7 +320,7 @@ public class AuConfig extends LockssServlet {
 	String selText = encodeText(title);
 	String dispText = selText;
 	if (includePluginInTitleSelect) {
-	  Plugin titlePlugin = getTitlePlugin(title);
+	  PluginProxy titlePlugin = getTitlePlugin(title);
 	  if (titlePlugin != null) {
 	    String plugName = titlePlugin.getPluginName();
 	    dispText = selText + " (" + plugName + ")";
@@ -332,7 +334,7 @@ public class AuConfig extends LockssServlet {
       addOr(tbl);
     }
 
-    SortedMap pMap = pluginMgr.getPluginNameMap();
+    Map pMap = getPluginNameMap();
     if (!pMap.isEmpty()) {
       tbl.newRow();
       tbl.newCell("colspan=3 align=center");
@@ -344,7 +346,7 @@ public class AuConfig extends LockssServlet {
       sel.add("-no selection-", true, "");
       for (Iterator iter = pMap.keySet().iterator(); iter.hasNext(); ) {
 	String pName = (String)iter.next();
-	Plugin p = (Plugin)pMap.get(pName);
+	PluginProxy p = (PluginProxy)pMap.get(pName);
 	sel.add(encodeText(pName), false, p.getPluginId());
       }
       tbl.add(sel);
@@ -371,6 +373,19 @@ public class AuConfig extends LockssServlet {
     endPage(page);
   }
 
+  SortedMap getPluginNameMap() {
+    SortedMap pMap = new TreeMap();
+    for (Iterator iter = remoteApi.getRegisteredPlugins().iterator();
+	 iter.hasNext(); ) {
+      PluginProxy plugin = (PluginProxy)iter.next();
+      String name = plugin.getPluginName();
+      if (name != null) {
+	pMap.put(name, plugin);
+      }
+    }
+    return pMap;
+  }
+
   void addOr(Table tbl) {
     tbl.newRow();
     tbl.newCell("align=right");
@@ -388,7 +403,7 @@ public class AuConfig extends LockssServlet {
    * @param editable true if the form should be editable.  (Not all the
    * fields will be editable in any case).
    */
-  private Form createAuEditForm(java.util.List actions, ArchivalUnit au,
+  private Form createAuEditForm(java.util.List actions, AuProxy au,
 				boolean editable)
       throws IOException {
     boolean isNew = au == null;
@@ -396,8 +411,8 @@ public class AuConfig extends LockssServlet {
     Configuration initVals;
     Collection noEditKeys = Collections.EMPTY_SET;
     if (titleConfig != null) {
-      initVals = titleConfig;
-      noEditKeys = titleConfig.keySet();
+      initVals = titleConfig.getConfig();
+      noEditKeys = titleConfig.getUnEditableKeys();
     } else if (formConfig != null) {
       initVals = formConfig;
     } else if (auConfig != null) {
@@ -415,13 +430,13 @@ public class AuConfig extends LockssServlet {
     tbl.add("Archival Unit Definition");
 //     tbl.add(isNew ? "Defining Properties" : "Fixed Properties");
 
-    addPropRows(tbl, getDefKeys(), initVals,
-		(isNew ? getDefKeys() : null));
 //     addPropRows(tbl, getDefKeys(), initVals,
-// 		(isNew
-// 		 ? (org.apache.commons.collections.CollectionUtils.
-// 		    subtract(getDefKeys(), noEditKeys))
-// 		 : null));
+// 		(isNew ? getDefKeys() : null));
+    addPropRows(tbl, getDefKeys(), initVals,
+ 		(isNew
+ 		 ? (org.apache.commons.collections.CollectionUtils.
+ 		    subtract(getDefKeys(), noEditKeys))
+ 		 : null));
 
     tbl.newRow();
     tbl.newRow();
@@ -476,6 +491,7 @@ public class AuConfig extends LockssServlet {
       tbl.newCell();
       tbl.add(encodeText(descr.getDisplayName()));
       tbl.add(addFootnote(encodeText(descr.getDescription())));
+      tbl.add(": ");
       tbl.newCell();
       String val = initVals != null ? initVals.get(key) : null;
       if (editableKeys != null && editableKeys.contains(key)) {
@@ -496,17 +512,16 @@ public class AuConfig extends LockssServlet {
   /** Process the Create button */
   private void createAu() throws IOException {
     String pid = req.getParameter("PluginId");
-    String pKey = pluginMgr.pluginKeyFromId(pid);
-    if (!pluginMgr.ensurePluginLoaded(pKey)) {
+    plugin = getPluginProxy(pid);
+    if (plugin == null) {
       errMsg = "Can't find plugin: " + pid;
       displayAddAu();
       return;
     }
-    plugin = pluginMgr.getPlugin(pKey);
     formConfig = getAuConfigFromForm(true);
     try {
-      ArchivalUnit au =
-	pluginMgr.createAndSaveAuConfiguration(plugin, formConfig);
+      AuProxy au =
+	remoteApi.createAndSaveAuConfiguration(plugin, formConfig);
       statusMsg = "Archival Unit created.";
       displayEditAu(au);
     } catch (ArchivalUnit.ConfigurationException e) {
@@ -522,13 +537,13 @@ public class AuConfig extends LockssServlet {
   }
 
   /** Process the Update button */
-  private void updateAu(ArchivalUnit au) throws IOException {
+  private void updateAu(AuProxy au) throws IOException {
     fetchAuConfig(au);
     Configuration formConfig = getAuConfigFromForm(false);
     if (isChanged(auConfig, formConfig) ||
-	isChanged(pluginMgr.getStoredAuConfiguration(au), formConfig)) {
+	isChanged(remoteApi.getStoredAuConfiguration(au), formConfig)) {
       try {
-	pluginMgr.setAndSaveAuConfiguration(au, formConfig);
+	remoteApi.setAndSaveAuConfiguration(au, formConfig);
 	statusMsg = "Archival Unit configuration saved.";
       } catch (ArchivalUnit.ConfigurationException e) {
 	log.error("Couldn't reconfigure AU", e);
@@ -545,7 +560,7 @@ public class AuConfig extends LockssServlet {
   }
     
   /** Display the Confirm Unconfigure  page */
-  private void confirmUnconfigureAu(ArchivalUnit au) throws IOException {
+  private void confirmUnconfigureAu(AuProxy au) throws IOException {
     String unconfigureFoot =
       "Unconfigure will not take effect until the next daemon restart." +
       "  At that point the Archival Unit will be inactive, but its contents" +
@@ -568,9 +583,9 @@ public class AuConfig extends LockssServlet {
   }
 
   /** Process the Confirm Unconfigure button */
-  private void doUnconfigureAu(ArchivalUnit au) throws IOException {
+  private void doUnconfigureAu(AuProxy au) throws IOException {
     try {
-      pluginMgr.deleteAuConfiguration(au);
+      remoteApi.deleteAuConfiguration(au);
       statusMsg = "Archival Unit configuration removed.";
     } catch (ArchivalUnit.ConfigurationException e) {
       log.error("Can't happen", e);
@@ -583,7 +598,7 @@ public class AuConfig extends LockssServlet {
   }
 
   /** Display the Confirm Deactivate  page */
-  private void confirmDeactivateAu(ArchivalUnit au) throws IOException {
+  private void confirmDeactivateAu(AuProxy au) throws IOException {
     String deactivateFoot =
       "Deactivate will not take effect until the next daemon restart." +
       "  At that point the Archival Unit will be inactive, but its contents" +
@@ -604,9 +619,9 @@ public class AuConfig extends LockssServlet {
   }
 
   /** Process the Confirm Deactivate button */
-  private void doDeactivateAu(ArchivalUnit au) throws IOException {
+  private void doDeactivateAu(AuProxy au) throws IOException {
     try {
-      pluginMgr.deactivateAuConfiguration(au);
+      remoteApi.deactivateAuConfiguration(au);
       statusMsg = "Archival Unit deactivated.";
     } catch (ArchivalUnit.ConfigurationException e) {
       log.error("Can't happen", e);
@@ -724,13 +739,13 @@ public class AuConfig extends LockssServlet {
   }
 
   /** Add auid to form in a hidden field */
-  private void addAuId(Composite comp, ArchivalUnit au) {
+  private void addAuId(Composite comp, AuProxy au) {
     comp.add(new Input(Input.Hidden, "auid",
 		       au != null ? au.getAuId() : ""));
   }
 
   /** Add plugin id to form in a hidden field */
-  private void addPlugId(Composite comp, Plugin plugin) {
+  private void addPlugId(Composite comp, PluginProxy plugin) {
     comp.add(new Input(Input.Hidden, "PluginId", plugin.getPluginId()));
   }
 
@@ -746,7 +761,7 @@ public class AuConfig extends LockssServlet {
   }
 
   /** Return AU name, encoded for html text */
-  String encodedAuName(ArchivalUnit au) {
+  String encodedAuName(AuProxy au) {
     return encodeText(au.getName());
   }
 
@@ -755,7 +770,7 @@ public class AuConfig extends LockssServlet {
     return action != null;
   }
 
-  private void fetchAuConfig(ArchivalUnit au) {
+  private void fetchAuConfig(AuProxy au) {
     auConfig = au.getConfiguration();
     log.debug("auConfig: " + auConfig);
     plugin = au.getPlugin();
@@ -811,4 +826,19 @@ public class AuConfig extends LockssServlet {
     return formKey.substring(FORM_PREFIX.length());
   }
 
+  private AuProxy getAuProxy(String auid) {
+    try {
+      return remoteApi.findAuProxy(auid);
+    } catch (Exception e) {
+      return null;
+    }
+  }
+
+  private PluginProxy getPluginProxy(String pid) {
+    try {
+      return remoteApi.findPluginProxy(pid);
+    } catch (Exception e) {
+      return null;
+    }
+  }
 }

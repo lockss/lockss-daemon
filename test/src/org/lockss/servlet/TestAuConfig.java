@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuConfig.java,v 1.3 2003-09-11 07:47:50 tlipkis Exp $
+ * $Id: TestAuConfig.java,v 1.4 2004-01-04 06:19:12 tlipkis Exp $
  */
 
 /*
@@ -57,6 +57,7 @@ public class TestAuConfig extends LockssServletTestCase {
     PluginManager mgr = new PluginManager();
     theDaemon.setPluginManager(mgr);
     theDaemon.setDaemonInited(true);
+    theDaemon.getRemoteApi().startService();
     mgr.initService(theDaemon);
     mgr.startService();
 
@@ -83,6 +84,7 @@ public class TestAuConfig extends LockssServletTestCase {
       new GetMethodWebRequest("http://null/AuConfig" );
 //     request.setParameter( "color", "red" );
     WebResponse resp1 = sClient.getResponse(request);
+    log.debug2("Response 1: " + resp1.getText());
     assertResponseOk(resp1);
     assertEquals("Content type", "text/html", resp1.getContentType());
 
@@ -101,7 +103,7 @@ public class TestAuConfig extends LockssServletTestCase {
     // This form must be submitted via the javascript invoked by this button,
     btn.click();
     WebResponse resp2 = sClient.getCurrentPage();
+    log.debug2("Response 2: " + resp2.getText());
     assertResponseOk(resp2);
-     log.info(resp2.getText());
   }
 }
