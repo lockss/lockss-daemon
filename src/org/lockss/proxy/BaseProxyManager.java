@@ -1,5 +1,5 @@
 /*
- * $Id: BaseProxyManager.java,v 1.1 2004-06-15 21:45:45 tlipkis Exp $
+ * $Id: BaseProxyManager.java,v 1.2 2004-07-12 06:17:00 tlipkis Exp $
  */
 
 /*
@@ -131,9 +131,7 @@ public abstract class BaseProxyManager extends JettyManager {
       // content that the proxy handler modified and passed on.
       context.setBaseResource(new CuUrlResource());
       LockssResourceHandler rHandler = new CuResourceHandler();
-//       rHandler.setDirAllowed(false);
-//       rHandler.setPutAllowed(false);
-//       rHandler.setDelAllowed(false);
+      rHandler.setDirAllowed(false);
 //       rHandler.setAcceptRanges(true);
       context.addHandler(rHandler);
       // Requests shouldn't get this far, so dump them
