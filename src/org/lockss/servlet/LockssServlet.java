@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.49 2004-09-28 08:53:15 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.49.4.1 2004-11-30 01:06:04 tlipkis Exp $
  */
 
 /*
@@ -57,10 +57,6 @@ public abstract class LockssServlet extends HttpServlet
 
   // Constants
   static final String PARAM_LOCAL_IP = Configuration.PREFIX + "localIPAddress";
-
-  static final String PARAM_CONTACT_ADDR =
-    Configuration.PREFIX + "admin.contactEmail";
-  static final String DEFAULT_CONTACT_ADDR = "contactnotset@notset";
 
   static final String PARAM_PLATFORM_VERSION =
     Configuration.PREFIX + "platform.version";
@@ -126,10 +122,12 @@ public abstract class LockssServlet extends HttpServlet
 
 
   // Servlet descriptor.
+  // also used for non-servlet links.  should be refactored.
   static class ServletDescr {
     public Class cls;
     public String heading;	// display name
     public String name;		// url path component to invoke servlet
+    public String expl;
     public int flags = 0;
     // flags
     public static int ON_CLIENT = 1;	// runs on client (else on admin)
@@ -137,6 +135,7 @@ public abstract class LockssServlet extends HttpServlet
     public static int NOT_IN_NAV = 4;	// no link in nav table
     public static int LARGE_LOGO = 8;	// use large LOCKSS logo
     public static int DEBUG_ONLY = 0x10; // debug user only
+    public static int NAME_IS_URL = 0x20; // debug user only
     public static int STATUS = ON_CLIENT | PER_CLIENT; // shorthand
 
     public ServletDescr(Class cls, String heading, String name, int flags) {
@@ -170,6 +169,15 @@ public abstract class LockssServlet extends HttpServlet
 	return UNAVAILABLE_SERVLET_MARKER;
       }	
     }
+
+    String getExplanation() {
+      return expl;
+    }
+
+    void setExplanation(String s) {
+      expl = s;
+    }
+
     boolean isPerClient() {
       return (flags & PER_CLIENT) != 0;
     }
@@ -185,9 +193,15 @@ public abstract class LockssServlet extends HttpServlet
     boolean isLargeLogo() {
       return (flags & LARGE_LOGO) != 0;
     }
+    boolean isNameIsUrl() {
+      return (flags & NAME_IS_URL) != 0;
+    }
   }
 
   // Descriptors for all servlets.
+  protected static ServletDescr SERVLET_HOME =
+    new ServletDescr(UiHome.class, "Cache Administration",
+		     ServletDescr.NOT_IN_NAV + ServletDescr.LARGE_LOGO);
   protected static ServletDescr SERVLET_AU_CONFIG =
     new ServletDescr(AuConfig.class, "Journal Configuration");
   protected static ServletDescr SERVLET_DAEMON_STATUS =
@@ -204,15 +218,43 @@ public abstract class LockssServlet extends HttpServlet
   protected static ServletDescr SERVLET_PROXY_ACCESS_CONTROL =
     new ServletDescr(ProxyIpAccess.class, "Proxy Access Control");
   protected static ServletDescr SERVLET_HASH_CUS =
-    new ServletDescr(HashCUS.class, "Hash CUS");
+    new ServletDescr(HashCUS.class, "Hash CUS", ServletDescr.NOT_IN_NAV);
   protected static ServletDescr SERVLET_RAISE_ALERT =
     new ServletDescr(RaiseAlert.class, "Raise Alert",
 		     ServletDescr.NOT_IN_NAV);
+  protected static ServletDescr LINK_HELP =
+    new ServletDescr(null, "Help", LocalServletManager.DEFAULT_HELP_URL,
+		     ServletDescr.NAME_IS_URL);
+  protected static ServletDescr LINK_CONTACT =
+    new ServletDescr(null, "Contact Us",
+		     mailtoUrl(LocalServletManager.DEFAULT_CONTACT_ADDR),
+		     ServletDescr.NAME_IS_URL);
 
+  static void setHelpUrl(String url) {
+    LINK_HELP.name = url;
+  }
 
-  // All servlets must be listed here (even if not in van table).
+  static void setContactAddr(String addr) {
+    LINK_CONTACT.name = mailtoUrl(addr);
+  }
+
+  static String mailtoUrl(String addr) {
+    return "mailto:" + addr;
+  }
+
+  static {
+    SERVLET_AU_CONFIG.setExplanation("Add or remove titles from this cache");
+    SERVLET_ADMIN_ACCESS_CONTROL.setExplanation("Control access to the administrative UI");
+    SERVLET_PROXY_ACCESS_CONTROL.setExplanation("Control access to the preserved content");
+    SERVLET_PROXY_INFO.setExplanation("Info for configuring browsers and proxies<br>to access preserved content on this cache");
+    SERVLET_DAEMON_STATUS.setExplanation("Status of cache contents and operation");
+    LINK_HELP.setExplanation("Online help, FAQs, credits");
+  }
+
+  // All servlets must be listed here (even if not in nav table).
   // Order of descrs determines order in nav table.
   static ServletDescr servletDescrs[] = {
+     SERVLET_HOME,
      SERVLET_AU_CONFIG,
      SERVLET_ADMIN_ACCESS_CONTROL,
      SERVLET_PROXY_ACCESS_CONTROL,
@@ -222,6 +264,8 @@ public abstract class LockssServlet extends HttpServlet
      LINK_LOGS,
      SERVLET_THREAD_DUMP,
      SERVLET_RAISE_ALERT,
+     LINK_CONTACT,
+     LINK_HELP,
 //      SERVLET_ADMIN_HOME,
 //      SERVLET_JOURNAL_STATUS,
 //      SERVLET_JOURNAL_SETUP,
@@ -431,7 +475,8 @@ public abstract class LockssServlet extends HttpServlet
 
   // user predicates
   protected boolean isDebugUser() {
-    return req.isUserInRole("debugRole");
+    return req.isUserInRole("debugRole") &&
+      StringUtil.isNullString(req.getParameter("nodebug"));
   }
 
   // Called when a servlet doesn't get the parameters it expects/needs
@@ -471,6 +516,9 @@ public abstract class LockssServlet extends HttpServlet
    *  browsers will prompt again for login
    */
   String srvURL(String host, ServletDescr d, String params) {
+    if (d.isNameIsUrl()) {
+      return d.name;
+    }
     StringBuffer sb = new StringBuffer();
     StringBuffer paramsb = new StringBuffer();
 
@@ -591,7 +639,7 @@ public abstract class LockssServlet extends HttpServlet
   }
 
   // Build servlet navigation table
-  private Table getNavTable() {
+  protected Table getNavTable() {
     Table navTable = new Table(0, " CELLSPACING=2 CELLPADDING=0 ");
     boolean clientTitle = false;
 
@@ -627,13 +675,13 @@ public abstract class LockssServlet extends HttpServlet
 	navTable.add("</font>");
       }
     }
-    navTable.newRow();
-    navTable.newCell();
-    navTable.cell().attribute("COLSPAN=\"3\"");
-    String contactAddr =
-      Configuration.getParam(PARAM_CONTACT_ADDR, DEFAULT_CONTACT_ADDR);
-    navTable.add("<font size=-1>");
-    navTable.add(new Link("mailto:" + contactAddr, "Contact Us"));
+//     navTable.newRow();
+//     navTable.newCell();
+//     navTable.cell().attribute("COLSPAN=\"3\"");
+//     String contactAddr =
+//       Configuration.getParam(PARAM_CONTACT_ADDR, DEFAULT_CONTACT_ADDR);
+//     navTable.add("<font size=-1>");
+//     navTable.add(new Link("mailto:" + contactAddr, "Contact Us"));
     navTable.add("</font>");
     return navTable;
   }
@@ -681,7 +729,7 @@ public abstract class LockssServlet extends HttpServlet
   }
 
   // Common page header
-  private Composite getHeader() {
+  protected Composite getHeader() {
     String heading = getHeading();
     if (heading == null) {
       heading = "Cache Administration";
