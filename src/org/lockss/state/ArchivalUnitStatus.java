@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.18 2004-08-22 02:05:50 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.19 2004-09-15 22:56:32 tlipkis Exp $
  */
 
 /*
@@ -33,7 +33,8 @@ import org.lockss.daemon.status.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
 import org.lockss.app.*;
-import org.lockss.poller.PollerStatus;
+import org.lockss.poller.*;
+import org.lockss.protocol.*;
 import org.lockss.repository.*;
 
 /**
@@ -52,6 +53,7 @@ public class ArchivalUnitStatus
   public static final String SERVICE_STATUS_TABLE_NAME =
       "ArchivalUnitStatusTable";
   public static final String AU_STATUS_TABLE_NAME = "ArchivalUnitTable";
+  public static final String PEERS_TABLE_NAME = "PeerAgreement";
 
   static final OrderedObject DASH = new OrderedObject("-", new Long(-1));
 
@@ -63,21 +65,21 @@ public class ArchivalUnitStatus
 
     StatusService statusServ = theDaemon.getStatusService();
     statusServ.registerStatusAccessor(SERVICE_STATUS_TABLE_NAME,
-                                      new ServiceStatus(theDaemon));
+                                      new AuSummary(theDaemon));
     statusServ.registerStatusAccessor(AU_STATUS_TABLE_NAME,
                                       new AuStatus(theDaemon));
+    statusServ.registerStatusAccessor(PEERS_TABLE_NAME,
+                                      new PeersAgreement(theDaemon));
     logger.debug2("Status accessors registered.");
   }
 
   public void stopService() {
     // unregister our status accessors
     StatusService statusServ = theDaemon.getStatusService();
-    statusServ.unregisterStatusAccessor(
-      ArchivalUnitStatus.SERVICE_STATUS_TABLE_NAME);
-    statusServ.unregisterStatusAccessor(
-      ArchivalUnitStatus.AU_STATUS_TABLE_NAME);
+    statusServ.unregisterStatusAccessor(SERVICE_STATUS_TABLE_NAME);
+    statusServ.unregisterStatusAccessor(AU_STATUS_TABLE_NAME);
+    statusServ.unregisterStatusAccessor(PEERS_TABLE_NAME);
     logger.debug2("Status accessors unregistered.");
-
     super.stopService();
   }
 
@@ -87,36 +89,34 @@ public class ArchivalUnitStatus
                                    DEFAULT_MAX_NODES_TO_DISPLAY);
   }
 
-  private static ArchivalUnit getArchivalUnit(String auId,
-      LockssDaemon theDaemon) {
-    return theDaemon.getPluginManager().getAuFromId(auId);
-  }
-
-  static class ServiceStatus implements StatusAccessor {
+  static class AuSummary implements StatusAccessor {
     static final String TABLE_TITLE = "Archival Units";
 
     private static final List columnDescriptors = ListUtil.list(
       new ColumnDescriptor("AuName", "Volume", ColumnDescriptor.TYPE_STRING),
 //       new ColumnDescriptor("AuNodeCount", "Nodes", ColumnDescriptor.TYPE_INT),
       new ColumnDescriptor("AuSize", "Size", ColumnDescriptor.TYPE_INT),
-      new ColumnDescriptor("AuLastCrawl", "Last Crawl",
-                           ColumnDescriptor.TYPE_DATE),
-      new ColumnDescriptor("AuLastTreeWalk", "Last TreeWalk",
-                           ColumnDescriptor.TYPE_DATE),
-      new ColumnDescriptor("AuLastPoll", "Last Poll",
-                           ColumnDescriptor.TYPE_DATE),
+      new ColumnDescriptor("Peers", "Peers", ColumnDescriptor.TYPE_INT),
       new ColumnDescriptor("AuPolls", "Polls",
                            ColumnDescriptor.TYPE_STRING),
       new ColumnDescriptor("Damaged", "Status",
-                           ColumnDescriptor.TYPE_STRING)
+                           ColumnDescriptor.TYPE_STRING),
+      new ColumnDescriptor("AuLastPoll", "Last Poll",
+                           ColumnDescriptor.TYPE_DATE),
+      new ColumnDescriptor("AuLastCrawl", "Last Crawl",
+                           ColumnDescriptor.TYPE_DATE),
+      new ColumnDescriptor("AuLastTreeWalk", "Last TreeWalk",
+                           ColumnDescriptor.TYPE_DATE)
       );
 
     private static final List sortRules =
-      ListUtil.list(new StatusTable.SortRule("AuName", CatalogueOrderComparator.SINGLETON));
+      ListUtil.list(new
+		    StatusTable.SortRule("AuName",
+					 CatalogueOrderComparator.SINGLETON));
 
-    private static LockssDaemon theDaemon;
+    private LockssDaemon theDaemon;
 
-    ServiceStatus(LockssDaemon theDaemon) {
+    AuSummary(LockssDaemon theDaemon) {
       this.theDaemon = theDaemon;
     }
 
@@ -128,14 +128,16 @@ public class ArchivalUnitStatus
         throws StatusService.NoSuchTableException {
       table.setColumnDescriptors(columnDescriptors);
       table.setDefaultSortRules(sortRules);
-      table.setRows(getRows(table.getOptions().get(StatusTable.OPTION_INCLUDE_INTERNAL_AUS)));
+      table.setRows(getRows(table));
     }
 
     public boolean requiresKey() {
       return false;
     }
 
-    private List getRows(boolean includeInternalAus) {
+    private List getRows(StatusTable table) {
+      boolean includeInternalAus =
+	table.getOptions().get(StatusTable.OPTION_INCLUDE_INTERNAL_AUS);
       List rowL = new ArrayList();
       for (Iterator iter = theDaemon.getPluginManager().getAllAus().iterator();
 	   iter.hasNext(); ) {
@@ -143,15 +145,19 @@ public class ArchivalUnitStatus
 	if (!includeInternalAus && (au instanceof RegistryArchivalUnit)) {
 	  continue;
 	}
-	NodeManager nodeMan = theDaemon.getNodeManager(au);
-	LockssRepository repo = theDaemon.getLockssRepository(au);
-	CachedUrlSet auCus = au.getAuCachedUrlSet();
-	NodeState topNodeState = nodeMan.getNodeState(auCus);
-	RepositoryNode repoNode = null;
 	try {
-	  repoNode = repo.getNode(au.getAuCachedUrlSet().getUrl());
-	} catch (MalformedURLException ignore) { }
-	rowL.add(makeRow(au, nodeMan.getAuState(), topNodeState, repoNode));
+	  NodeManager nodeMan = theDaemon.getNodeManager(au);
+	  LockssRepository repo = theDaemon.getLockssRepository(au);
+	  CachedUrlSet auCus = au.getAuCachedUrlSet();
+	  NodeState topNodeState = nodeMan.getNodeState(auCus);
+	  RepositoryNode repoNode = null;
+	  try {
+	    repoNode = repo.getNode(au.getAuCachedUrlSet().getUrl());
+	  } catch (MalformedURLException ignore) { }
+	  rowL.add(makeRow(au, nodeMan.getAuState(), topNodeState, repoNode));
+	} catch (Exception e) {
+	  logger.warning("Unexpected expection building row", e);
+	}
       }
       return rowL;
     }
@@ -161,13 +167,11 @@ public class ArchivalUnitStatus
                         RepositoryNode repoNode) {
       HashMap rowMap = new HashMap();
       //"AuID"
-      rowMap.put("AuName", AuStatus.makeAuRef(au.getName(),
-          au.getAuId()));
-      //XXX start caching this info
+      rowMap.put("AuName", AuStatus.makeAuRef(au.getName(), au.getAuId()));
 //       rowMap.put("AuNodeCount", new Integer(-1));
       rowMap.put("AuSize", new Long(repoNode.getTreeContentSize(null)));
       rowMap.put("AuLastCrawl", new Long(auState.getLastCrawlTime()));
-      Object ref = 
+      rowMap.put("Peers", PeersAgreement.makeAuRef("peers", au.getAuId()));
       rowMap.put("AuPolls",
 		 theDaemon.getStatusService().
 		 getReference(PollerStatus.MANAGER_STATUS_TABLE_NAME,
@@ -185,14 +189,54 @@ public class ArchivalUnitStatus
   static final StatusTable.DisplayedValue DAMAGE_STATE_DAMAGED =
     new StatusTable.DisplayedValue("Repairing");
 
-  static {
+//   static {
 //     DAMAGE_STATE_OK.setColor("green");
 //     DAMAGE_STATE_DAMAGED.setColor("yellow");
+//   }
+
+  abstract static class PerAuTable implements StatusAccessor {
+    static final String KEY_SUFFIX = "&&&";
+
+    protected LockssDaemon theDaemon;
+
+    PerAuTable(LockssDaemon theDaemon) {
+      this.theDaemon = theDaemon;
+    }
+
+    public boolean requiresKey() {
+      return true;
+    }
+
+    public String getDisplayName() {
+      throw new UnsupportedOperationException("Au table has no generic title");
+    }
+
+    public void populateTable(StatusTable table)
+	throws StatusService.NoSuchTableException {
+      String key = table.getKey();
+      int startRow = 0;
+      int index = key.lastIndexOf(KEY_SUFFIX);
+      if (index >= 0) {
+        try {
+          String rowStr = key.substring(index + KEY_SUFFIX.length());
+          startRow = Integer.parseInt(rowStr);
+        } catch (NumberFormatException ignore) { }
+        key = key.substring(0, index);
+      }
+      try {
+	ArchivalUnit au = theDaemon.getPluginManager().getAuFromId(key);
+	populateTable(table, au, startRow);
+      } catch (Exception e) {
+	throw new StatusService.NoSuchTableException("Unknown auid: " + key);
+      }
+    }
+
+    protected abstract void populateTable(StatusTable table, ArchivalUnit au,
+					  int startRow)
+        throws StatusService.NoSuchTableException;
   }
 
-  static class AuStatus implements StatusAccessor {
-    static final String TABLE_TITLE = "Archival Unit Status";
-    static final String KEY_SUFFIX = "&&&";
+  static class AuStatus extends PerAuTable {
 
     private static final List columnDescriptors = ListUtil.list(
       new ColumnDescriptor("NodeName", "Node Url",
@@ -211,36 +255,16 @@ public class ArchivalUnitStatus
                            ColumnDescriptor.TYPE_STRING)
       );
 
-    private static final List sortRules = ListUtil.list(
-      new StatusTable.SortRule("sort", true)
-      );
-
-    private static LockssDaemon theDaemon;
+    private static final List sortRules =
+      ListUtil.list(new StatusTable.SortRule("sort", true));
 
     AuStatus(LockssDaemon theDaemon) {
-      this.theDaemon = theDaemon;
+      super(theDaemon);
     }
 
-    public String getDisplayName() {
-      throw new
-	UnsupportedOperationException("Au table has no generic title");
-    }
-
-    public void populateTable(StatusTable table)
+    protected void populateTable(StatusTable table, ArchivalUnit au,
+				 int startRow)
         throws StatusService.NoSuchTableException {
-      String key = table.getKey();
-      int index = key.lastIndexOf(KEY_SUFFIX);
-      int startRow = 0;
-      if (index >= 0) {
-        try {
-          String rowStr = key.substring(index + KEY_SUFFIX.length());
-          startRow = Integer.parseInt(rowStr);
-        } catch (NumberFormatException ignore) { }
-
-        key = key.substring(0, index);
-      }
-
-      ArchivalUnit au = getArchivalUnit(key, theDaemon);
       LockssRepository repo = theDaemon.getLockssRepository(au);
       NodeManager nodeMan = theDaemon.getNodeManager(au);
 
@@ -258,10 +282,6 @@ public class ArchivalUnitStatus
 	table.setDefaultSortRules(sortRules);
 	table.setRows(getRows(au, repo, nodeMan, startRow));
       }
-    }
-
-    public boolean requiresKey() {
-      return true;
     }
 
     private List getRows(ArchivalUnit au, LockssRepository repo,
@@ -396,6 +416,162 @@ public class ArchivalUnitStatus
                                                   String key) {
       return new StatusTable.Reference(value, AU_STATUS_TABLE_NAME,
                                        key + KEY_SUFFIX + "0");
+    }
+  }
+
+  static class PeersAgreement extends PerAuTable {
+    private static final List columnDescriptors = ListUtil.list(
+      new ColumnDescriptor("Cache", "Cache",
+                           ColumnDescriptor.TYPE_STRING),
+      new ColumnDescriptor("Last", "Last",
+                           ColumnDescriptor.TYPE_STRING),
+      new ColumnDescriptor("Polls", "Polls",
+                           ColumnDescriptor.TYPE_INT),
+      new ColumnDescriptor("Agree", "Agree",
+                           ColumnDescriptor.TYPE_INT),
+      new ColumnDescriptor("LastAgree", "Last Agree",
+                           ColumnDescriptor.TYPE_DATE),
+      new ColumnDescriptor("LastDisagree", "Last Disagree",
+                           ColumnDescriptor.TYPE_DATE)
+      );
+
+    private static final List sortRules =
+      ListUtil.list(new StatusTable.SortRule("Cache", true));
+
+    private IdentityManager idManager;
+
+    PeersAgreement(LockssDaemon theDaemon) {
+      super(theDaemon);
+      idManager = theDaemon.getIdentityManager();
+    }
+
+    public void populateTable(StatusTable table, ArchivalUnit au, int startRow)
+        throws StatusService.NoSuchTableException {
+      NodeManager nodeMan = theDaemon.getNodeManager(au);
+      table.setTitle(getTitle(au));
+      int totalPeers = 0;
+      int totalAgreement = 0;
+      if (!table.getOptions().get(StatusTable.OPTION_NO_ROWS)) {
+	table.setColumnDescriptors(columnDescriptors);
+	table.setDefaultSortRules(sortRules);
+	Map statsMap = buildCacheStats(au, nodeMan);
+	List rowL = new ArrayList();
+	for (Iterator iter = statsMap.keySet().iterator(); iter.hasNext(); ) {
+	  String identity = (String)iter.next();
+	  CacheStats stats = (CacheStats)statsMap.get(identity);
+	  if (! idManager.isLocalIdentity(stats.identity)) {
+	    totalPeers++;
+	    if (stats.mostRecentVote.isAgreeVote()) {
+	      totalAgreement++;
+	    }
+	  }
+	  Map row = makeRow(stats);
+	  rowL.add(row);
+	}
+	table.setRows(rowL);
+      }
+      table.setSummaryInfo(getSummaryInfo(au, totalPeers, totalAgreement));
+    }
+
+    public Map buildCacheStats(ArchivalUnit au, NodeManager nodeMan) {
+      Map statsMap = new HashMap();
+      NodeState node = nodeMan.getNodeState(au.getAuCachedUrlSet());
+      for (Iterator history_it = node.getPollHistories();
+	   history_it.hasNext(); ) {
+	PollHistory history = (PollHistory)history_it.next();
+	long histTime = history.getStartTime();
+	for (Iterator votes_it = history.getVotes(); votes_it.hasNext(); ) {
+	  Vote vote = (Vote)votes_it.next();
+	  String identity = vote.getIdentityKey();
+	  CacheStats stats = (CacheStats)statsMap.get(identity);
+	  if (stats == null) {
+	    stats = new CacheStats(identity);
+	    statsMap.put(identity, stats);
+	  }
+	  if (stats.mostRecentVote == null ||
+	      histTime > stats.mostRecentVoteTime) {
+	    stats.mostRecentVote = vote;
+	    stats.mostRecentVoteTime = histTime;
+	  }
+	  stats.totalPolls++;
+	  if (vote.isAgreeVote()) {
+	    stats.agreePolls++;
+	    if (stats.lastAgree == null ||
+		histTime > stats.lastAgreeTime) {
+	      stats.lastAgree = vote;
+	      stats.lastAgreeTime = histTime;
+	    }
+	  } else {
+	    if (stats.lastDisagree == null ||
+		histTime > stats.lastDisagreeTime) {
+	      stats.lastDisagree = vote;
+	      stats.lastDisagreeTime = histTime;
+	    }
+	  }
+	}
+      }
+      return statsMap;
+    }
+
+    static class CacheStats {
+      String identity;
+      Vote mostRecentVote;
+      long mostRecentVoteTime = 0;
+      int totalPolls = 0;
+      int agreePolls = 0;
+      Vote lastAgree;
+      long lastAgreeTime = 0;
+      Vote lastDisagree;
+      long lastDisagreeTime = 0;
+
+      CacheStats(String identity) {
+	this.identity = identity;
+      }
+    }
+
+    private Map makeRow(CacheStats stats) {
+      HashMap rowMap = new HashMap();
+
+      Object id = stats.identity;
+      if (idManager.isLocalIdentity(stats.identity)) {
+	StatusTable.DisplayedValue val =
+	  new StatusTable.DisplayedValue(id);
+	val.setBold(true);
+	id = val;
+      }
+      rowMap.put("Cache", id);
+
+      rowMap.put("Last",
+		 stats.mostRecentVote.isAgreeVote() ? "Agree" : "Disagree");
+      rowMap.put("Polls", new Long(stats.totalPolls));
+      rowMap.put("Agree", new Long(stats.agreePolls));
+      rowMap.put("LastAgree", new Long(stats.lastAgreeTime));
+      rowMap.put("LastDisagree", new Long(stats.lastDisagreeTime));
+      return rowMap;
+    }
+
+    private String getTitle(ArchivalUnit au) {
+      return "All caches voting on AU: " + au.getName();
+    }
+
+    private List getSummaryInfo(ArchivalUnit au,
+				int totalPeers, int totalAgreement) {
+      List summaryList =  ListUtil.list(
+            new StatusTable.SummaryInfo("Peers holding AU",
+					ColumnDescriptor.TYPE_INT,
+                                        new Integer(totalPeers)),
+            new StatusTable.SummaryInfo("Agreeing peers",
+					ColumnDescriptor.TYPE_INT,
+                                        new Integer(totalAgreement))
+            );
+      return summaryList;
+    }
+
+    // utility method for making a Reference
+    public static StatusTable.Reference makeAuRef(Object value,
+                                                  String key) {
+      return new StatusTable.Reference(value, PEERS_TABLE_NAME,
+                                       key);
     }
   }
 }
