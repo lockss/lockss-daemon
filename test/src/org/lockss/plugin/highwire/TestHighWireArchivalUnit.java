@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireArchivalUnit.java,v 1.34.2.1 2004-02-12 04:36:45 clairegriffin Exp $
+ * $Id: TestHighWireArchivalUnit.java,v 1.34.2.2 2004-03-04 21:06:57 troberts Exp $
  */
 
 /*
@@ -68,14 +68,15 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
 
   }
 
-  private ConfigurableArchivalUnit makeAu(URL url, int volume)
-      throws ArchivalUnit.ConfigurationException {
+  private ConfigurableArchivalUnit makeAu(URL url, int volume, int year)
+      throws Exception {
     Properties props = new Properties();
     props.setProperty(HighWirePlugin.AUPARAM_VOL, Integer.toString(volume));
     if (url != null) {
       props.setProperty(HighWirePlugin.AUPARAM_BASE_URL, url.toString());
     }
     props.setProperty(HighWireArchivalUnit.AUPARAM_USE_CRAWL_WINDOW, ""+true);
+    props.setProperty(ConfigParamDescr.YEAR.getKey(), String.valueOf(year));
     Configuration config = ConfigurationUtil.fromProps(props);
     ConfigurablePlugin ap = new ConfigurablePlugin();
     ap.initPlugin(theDaemon, "org.lockss.plugin.highwire.HighWirePlugin");
@@ -85,7 +86,7 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
 
   public void testConstructNullUrl() throws Exception {
     try {
-      makeAu(null, 1);
+      makeAu(null, 1, 2004);
       fail("Should have thrown ArchivalUnit.ConfigurationException");
     } catch (ArchivalUnit.ConfigurationException e) {
     }
@@ -105,21 +106,21 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
   public void testShouldCacheRootPage() throws Exception {
     URL base = new URL("http://shadow1.stanford.edu/");
     int volume = 322;
-    ArchivalUnit hwAu = makeAu(base, volume);
+    ArchivalUnit hwAu = makeAu(base, volume, 2004);
     Plugin plugin = hwAu.getPlugin();
     theDaemon.getLockssRepository(hwAu);
     theDaemon.getNodeManager(hwAu);
     CachedUrlSetSpec spec = new RangeCachedUrlSetSpec(base.toString());
     BaseCachedUrlSet cus = new BaseCachedUrlSet(hwAu, spec);
     UrlCacher uc =
-        plugin.makeUrlCacher(cus, "http://shadow1.stanford.edu/lockss-volume322.shtml");
+        plugin.makeUrlCacher(cus, "http://shadow1.stanford.edu/contents-by-date.2004.shtml");
     assertTrue(uc.shouldBeCached());
   }
 
   public void testShouldNotCachePageFromOtherSite() throws Exception {
     URL base = new URL("http://shadow1.stanford.edu/");
     int volume = 322;
-    ArchivalUnit hwAu = makeAu(base, volume);
+    ArchivalUnit hwAu = makeAu(base, volume, 2004);
     Plugin plugin = hwAu.getPlugin();
     theDaemon.getLockssRepository(hwAu);
     theDaemon.getNodeManager(hwAu);
@@ -130,17 +131,25 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
     assertFalse(uc.shouldBeCached());
   }
 
-  public void testStartUrlConstruction() throws Exception {
+//   public void testStartUrlConstruction() throws Exception {
+//     URL url = new URL("http://www.example.com/");
+//     String expectedStr = "http://www.example.com/contents-by-date.2004.shtml";
+//     ConfigurableArchivalUnit hwau = makeAu(url, 10, 2004);
+//     assertEquals(expectedStr, hwau.getStartUrl());
+//   }
+
+  public void testManifextConstruction() throws Exception {
     URL url = new URL("http://www.example.com/");
-    String expectedStr = "http://www.example.com/lockss-volume10.shtml";
-    ConfigurableArchivalUnit hwau = makeAu(url, 10);
+    String expectedStr = "http://www.example.com/contents-by-date.2004.shtml";
+
+    ConfigurableArchivalUnit hwau = makeAu(url, 10, 2004);
     assertEquals(expectedStr, hwau.getManifestPage());
   }
 
   public void testPathInUrlThrowsException() throws Exception {
     URL url = new URL("http://www.example.com/path");
     try {
-      makeAu(url, 10);
+      makeAu(url, 10, 2004);
       fail("Should have thrown ArchivalUnit.ConfigurationException");
     } catch(ArchivalUnit.ConfigurationException e) {
     }
@@ -148,23 +157,23 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
 
   public void testGetUrlStems() throws Exception {
     String stem1 = "http://www.example.com";
-    ConfigurableArchivalUnit hwau1 = makeAu(new URL(stem1 + "/"), 10);
+    ConfigurableArchivalUnit hwau1 = makeAu(new URL(stem1 + "/"), 10, 2004);
     assertEquals(ListUtil.list(stem1), hwau1.getUrlStems());
     String stem2 = "http://www.example.com:8080";
-    ConfigurableArchivalUnit hwau2 = makeAu(new URL(stem2 + "/"), 10);
+    ConfigurableArchivalUnit hwau2 = makeAu(new URL(stem2 + "/"), 10, 2004);
     assertEquals(ListUtil.list(stem2), hwau2.getUrlStems());
   }
 
   public void testGetNewContentCrawlUrls() throws Exception {
     URL url = new URL("http://www.example.com/");
-    String expectedStr = "http://www.example.com/lockss-volume10.shtml";
-    ConfigurableArchivalUnit hwau = makeAu(url, 10);
+    String expectedStr = "http://www.example.com/contents-by-date.2004.shtml";
+    ConfigurableArchivalUnit hwau = makeAu(url, 10, 2004);
     assertEquals(expectedStr, hwau.getNewContentCrawlUrls().get(0));
   }
 
   public void testShouldDoNewContentCrawlTooEarly() throws Exception {
     ArchivalUnit hwAu =
-      makeAu(new URL("http://shadow1.stanford.edu/"), 322);
+      makeAu(new URL("http://shadow1.stanford.edu/"), 322, 2004);
 
     AuState aus = new MockAuState(null, TimeBase.nowMs(), -1, -1, null);
 
@@ -173,7 +182,7 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
 
   public void testShouldDoNewContentCrawlFor0() throws Exception {
     ArchivalUnit hwAu =
-      makeAu(new URL("http://shadow1.stanford.edu/"), 322);
+      makeAu(new URL("http://shadow1.stanford.edu/"), 322, 2004);
 
     AuState aus = new MockAuState(null, 0, -1, -1, null);
 
@@ -182,7 +191,7 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
 
   public void testShouldDoNewContentCrawlEachMonth() throws Exception {
     ArchivalUnit hwAu =
-      makeAu(new URL("http://shadow1.stanford.edu/"), 322);
+      makeAu(new URL("http://shadow1.stanford.edu/"), 322, 2004);
 
     AuState aus = new MockAuState(null, 4 * Constants.WEEK, -1, -1, null);
 
@@ -191,34 +200,34 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
 
   public void testgetName() throws Exception {
     ConfigurableArchivalUnit au =
-      makeAu(new URL("http://shadow1.stanford.edu/"), 42);
+      makeAu(new URL("http://shadow1.stanford.edu/"), 42, 2004);
     assertEquals("shadow1.stanford.edu, vol. 42", au.getName());
     ConfigurableArchivalUnit au1 =
-      makeAu(new URL("http://www.bmj.com/"), 42);
+      makeAu(new URL("http://www.bmj.com/"), 42, 2004);
     assertEquals("www.bmj.com, vol. 42", au1.getName());
   }
 
  public void testGetFilterRuleNoContentType() throws Exception {
     ConfigurableArchivalUnit au =
-      makeAu(new URL("http://shadow1.stanford.edu/"), 42);
+      makeAu(new URL("http://shadow1.stanford.edu/"), 42, 2004);
     assertNull(au.getFilterRule(null));
   }
 
   public void testGetFilterRuleNonHtmlContentType() throws Exception {
     ConfigurableArchivalUnit au =
-      makeAu(new URL("http://shadow1.stanford.edu/"), 42);
+      makeAu(new URL("http://shadow1.stanford.edu/"), 42, 2004);
     assertNull(au.getFilterRule("jpg"));
   }
 
   public void testGetFilterRuleHtmlContentType() throws Exception {
     ConfigurableArchivalUnit au =
-      makeAu(new URL("http://shadow1.stanford.edu/"), 42);
+      makeAu(new URL("http://shadow1.stanford.edu/"), 42, 2004);
     assertTrue(au.getFilterRule("text/html") instanceof HighWireFilterRule);
   }
 
   public void testCrawlWindow() throws Exception {
     ConfigurableArchivalUnit au =
-      makeAu(new URL("http://shadow1.stanford.edu/"), 42);
+      makeAu(new URL("http://shadow1.stanford.edu/"), 42, 2004);
     CrawlWindow window = au.getCrawlSpec().getCrawlWindow();
     assertNotNull(window);
     Calendar cal = Calendar.getInstance();

@@ -8,9 +8,9 @@
   <MapKeys xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">text/html</MapKeys>
   <MapKeys xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">plugin_config_props</MapKeys>
   <MapKeys xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">plugin_version</MapKeys>
-  <MapValues xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">%slockss-volume%d.shtml
-base_url
-volume</MapValues>
+  <MapValues xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">http://%s/contents-by-date.%d.shtml
+base_url_host
+year</MapValues>
   <MapValues xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">HighWire Press</MapValues>
   <MapValues xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">org.lockss.plugin.highwire.HighwireCrawlWindow</MapValues>
   <MapValues>
@@ -18,9 +18,9 @@ volume</MapValues>
 ^%s
 base_url</string>
     <string xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">1
-%slockss-volume%d.shtml
-base_url
-volume</string>
+http://%s/contents-by-date.%d.shtml
+base_url_host
+year</string>
     <string xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2
 .*ck=nck.*</string>
     <string xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2
@@ -63,6 +63,14 @@ volume</MapValues>
       <DisplayName>Volume No.</DisplayName>
       <Type>6</Type>
       <Size>8</Size>
+      <Definitional>true</Definitional>
+    </ConfigParamDescr>
+    <ConfigParamDescr>
+      <Key>year</Key>
+      <DisplayName>Year</DisplayName>
+      <Description>Four digit year (e.g., 2004)</Description>
+      <Type>4</Type>
+      <Size>4</Size>
       <Definitional>true</Definitional>
     </ConfigParamDescr>
   </MapValues>
