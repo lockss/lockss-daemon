@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.54 2004-03-18 20:13:30 tlipkis Exp $
+ * $Id: LockssDaemon.java,v 1.54.4.1 2004-06-16 06:46:04 tlipkis Exp $
  */
 
 /*
@@ -111,6 +111,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   public static String HISTORY_REPOSITORY = "HistoryRepository";
   public static String NODE_MANAGER = "NodeManager";
   public static String PROXY_MANAGER = "ProxyManager";
+  public static String AUDIT_PROXY_MANAGER = "AuditProxyManager";
   public static String SERVLET_MANAGER = "ServletManager";
   public static String STATUS_SERVICE = "StatusService";
   public static String SYSTEM_METRICS = "SystemMetrics";
@@ -141,6 +142,8 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   private static String DEFAULT_POLL_MANAGER = "org.lockss.poller.PollManager";
   private static String DEFAULT_PROXY_MANAGER =
     "org.lockss.proxy.ProxyManager";
+  private static String DEFAULT_AUDIT_PROXY_MANAGER =
+    "org.lockss.proxy.AuditProxyManager";
   private static String DEFAULT_SERVLET_MANAGER =
     "org.lockss.servlet.ServletManager";
   private static String DEFAULT_STATUS_SERVICE =
@@ -203,6 +206,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     new ManagerDesc(REMOTE_API, DEFAULT_REMOTE_API),
     new ManagerDesc(SERVLET_MANAGER, DEFAULT_SERVLET_MANAGER),
     new ManagerDesc(PROXY_MANAGER, DEFAULT_PROXY_MANAGER),
+    new ManagerDesc(AUDIT_PROXY_MANAGER, DEFAULT_AUDIT_PROXY_MANAGER),
     // comm layer at end so don't process messages until other services ready
     new ManagerDesc(COMM_MANAGER, DEFAULT_COMM_MANAGER),
     new ManagerDesc(ROUTER_MANAGER, DEFAULT_ROUTER_MANAGER),
