@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.46 2005-02-21 03:05:43 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.47 2005-03-04 23:54:09 troberts Exp $
  */
 
 /*
@@ -197,17 +197,35 @@ public class BaseUrlCacher implements UrlCacher {
       return CACHE_RESULT_NOT_MODIFIED;
     }
     try {
-      CIProperties headers = getUncachedProperties();
-      if (headers == null) {
-	String err = "Received null headers for url '" + origUrl + "'.";
-	logger.error(err);
-	throw new NullPointerException(err);
+      CIProperties headers = getHeaders();
+      if (headers.get("Set-Cookie") != null) {
+	logger.debug3("Found set-cookie header, refetching");
+	input.close();
+	input = getUncachedInputStream(lastModified);
+	if (input == null) {
+	  //this is odd if it happens.
+	  logger.warning("Got null input stream on second call to getUncachedInputStream");
+	  return CACHE_RESULT_NOT_MODIFIED;
+	}
+	headers = getHeaders();
       }
       storeContent(input, headers);
       return CACHE_RESULT_FETCHED;
     } finally {
-      input.close();
+      if (input != null) {
+	input.close();
+      }
     }
+  }
+
+  private CIProperties getHeaders() throws IOException {
+    CIProperties headers = getUncachedProperties();
+    if (headers == null) {
+      String err = "Received null headers for url '" + origUrl + "'.";
+      logger.error(err);
+      throw new NullPointerException(err);
+    }
+    return headers;
   }
 
   /** Store into the repository the content and headers from a successful
