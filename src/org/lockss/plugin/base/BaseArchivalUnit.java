@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.47 2004-01-10 01:06:19 eaalto Exp $
+ * $Id: BaseArchivalUnit.java,v 1.48 2004-01-12 06:19:23 tlipkis Exp $
  */
 
 /*
@@ -344,7 +344,15 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   }
 
   public String toString() {
-    return "[BAU: "+getAuId()+"]";
+    StringBuffer sb = new StringBuffer(80);
+    sb.append("[AU: ");
+    if (StringUtil.isNullString(auName)) {
+      sb.append(getAuId());
+    } else {
+      sb.append(auName);
+    }
+    sb.append("]");
+    return sb.toString();
   }
 
   public String getManifestPage() {
