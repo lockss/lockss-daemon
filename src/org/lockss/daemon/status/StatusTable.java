@@ -1,5 +1,5 @@
 /*
- * $Id: StatusTable.java,v 1.2 2003-03-13 02:00:36 troberts Exp $
+ * $Id: StatusTable.java,v 1.3 2003-03-13 18:55:10 troberts Exp $
  */
 
 /*
@@ -222,6 +222,39 @@ public class StatusTable {
 
     public int getType() {
       return type;
+    }
+  }
+
+  /**
+   * Object which refers to another table
+   */
+  public static class Reference {
+    private Object value;
+    private String tableName;
+    private Object key;
+
+    /**
+     * @param value value to be displayed
+     * @param tableName name of the {@link StatusTable} that this 
+     * links to
+     * @param key object further specifying the table this links to
+     */
+    public Reference(Object value, String tableName, Object key){
+      this.value = value;
+      this.tableName = tableName;
+      this.key = key;
+    }
+
+    public Object getValue() {
+      return value;
+    }
+    
+    public String getTableName() {
+      return tableName;
+    }
+
+    public Object getKey() {
+      return key;
     }
   }
 }
