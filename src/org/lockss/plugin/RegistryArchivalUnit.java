@@ -1,5 +1,5 @@
 /*
- * $Id: RegistryArchivalUnit.java,v 1.2 2004-07-23 16:45:56 tlipkis Exp $
+ * $Id: RegistryArchivalUnit.java,v 1.3 2004-08-02 20:04:34 smorabito Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import org.lockss.daemon.*;
 import org.lockss.state.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
+import org.lockss.crawler.*;
 
 /**
  * <p>PluginArchivalUnit: The Archival Unit Class for PluginPlugin.
@@ -48,11 +49,16 @@ import org.lockss.plugin.base.*;
 
 public class RegistryArchivalUnit extends BaseArchivalUnit {
   private String m_registryUrl = null;
-
+  private int m_maxRefetchDepth = -1;
+  
   protected Logger log = Logger.getLogger("RegistryArchivalUnit");
 
   public RegistryArchivalUnit(RegistryPlugin plugin) {
     super(plugin);
+    m_maxRefetchDepth =
+      Configuration.getIntParam(NewContentCrawler.PARAM_MAX_CRAWL_DEPTH,
+				NewContentCrawler.DEFAULT_MAX_CRAWL_DEPTH);
+
   }
 
   public void loadAuConfigDescrs(Configuration config)
@@ -82,6 +88,12 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
    */
   public boolean shouldCallTopLevelPoll(AuState aus) {
     return false;
+  }
+
+  protected CrawlSpec makeCrawlSpec() throws LockssRegexpException {
+    CrawlRule rule = makeRules();
+    // Return a new CrawlSpec with the maximum refetch depth
+    return new CrawlSpec(startUrlString, rule, m_maxRefetchDepth);
   }
 
   /**
