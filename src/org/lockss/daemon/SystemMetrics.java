@@ -1,5 +1,5 @@
 /*
- * $Id: SystemMetrics.java,v 1.9 2003-04-04 23:50:11 aalto Exp $
+ * $Id: SystemMetrics.java,v 1.10 2003-04-07 19:04:34 tal Exp $
  */
 
 /*
@@ -94,7 +94,7 @@ public class SystemMetrics {
       long bytesHashed = 0;
       boolean earlyFinish = false;
       long hashDuration =
-          Configuration.getLongParam(PARAM_HASH_TEST_DURATION,
+          Configuration.getTimeIntervalParam(PARAM_HASH_TEST_DURATION,
           DEFAULT_HASH_DURATION);
       int hashStep =
           Configuration.getIntParam(PARAM_HASH_TEST_BYTE_STEP,
