@@ -27,7 +27,7 @@ public class TestLcapIdentity extends LockssTestCase {
   private static String[] testentries = {"test1.doc",
                                          "test2.doc", "test3.doc"};
   private static MockLockssDaemon daemon = new MockLockssDaemon(null);
-  private static IdentityManager idmgr = daemon.getIdentityManager();
+  private static IdentityManager idmgr;
 
   public TestLcapIdentity(String _name) {
     super(_name);
@@ -36,6 +36,11 @@ public class TestLcapIdentity extends LockssTestCase {
   /** setUp method for test case */
   protected void setUp() throws Exception {
     super.setUp();
+    String host = "1.2.3.4";
+    String prop = "org.lockss.localIPAddress="+host;
+    TestConfiguration.
+      setCurrentConfigFromUrlList(ListUtil.list(FileUtil.urlOfString(prop)));
+    idmgr = daemon.getIdentityManager();
     try {
       fakeId = new LcapIdentity(InetAddress.getByName(fakeIdString));
       testAddress = InetAddress.getByName("127.0.0.1");
@@ -74,9 +79,6 @@ public class TestLcapIdentity extends LockssTestCase {
    */
   public void testGetLocalIdentity() throws IOException {
     String host = "1.2.3.4";
-    String prop = "org.lockss.localIPAddress="+host;
-    TestConfiguration.
-      setCurrentConfigFromUrlList(ListUtil.list(FileUtil.urlOfString(prop)));
 
     LcapIdentity ident = idmgr.getLocalIdentity();
     assertEquals(host, ident.toHost());

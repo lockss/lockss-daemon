@@ -385,7 +385,12 @@ public class TestPoll extends LockssTestCase {
 
     String cacheStr = LockssRepositoryServiceImpl.PARAM_CACHE_LOCATION +"=" +
         tempDirPath;
-    TestIdentityManager.configParams(tempDirPath + "iddb", cacheStr);
+    Properties p = new Properties();
+    p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
+    p.setProperty(LockssRepositoryServiceImpl.PARAM_CACHE_LOCATION,
+		  tempDirPath);
+    p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
+    ConfigurationUtil.setCurrentConfigFromProps(p);
     idmgr = theDaemon.getIdentityManager();
     theDaemon.getHashService().startService();
     theDaemon.getLockssRepositoryService().startService();

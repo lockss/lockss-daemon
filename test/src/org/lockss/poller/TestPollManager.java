@@ -287,9 +287,13 @@ public class TestPollManager extends LockssTestCase {
       fail("unable to create a temporary directory");
     }
 
-    String cacheStr = LockssRepositoryServiceImpl.PARAM_CACHE_LOCATION +"=" +
-        tempDirPath;
-    TestIdentityManager.configParams(tempDirPath + "iddb", cacheStr);
+    Properties p = new Properties();
+    p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
+    p.setProperty(LockssRepositoryServiceImpl.PARAM_CACHE_LOCATION,
+		  tempDirPath);
+    p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+
     theDaemon.getHashService().startService();
     theDaemon.getLockssRepositoryService().startService();
     theDaemon.getRouterManager().startService();

@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.71 2003-04-23 23:24:52 troberts Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.72 2003-04-24 22:08:52 tal Exp $
  */
 
 /*
@@ -55,15 +55,20 @@ public class TestNodeManagerImpl
   private Random random = new Random();
 
   private MockLockssDaemon theDaemon;
+  MockIdentityManager idManager;
 
   public void setUp() throws Exception {
     super.setUp();
     theDaemon = new MockLockssDaemon();
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    String s = HistoryRepositoryImpl.PARAM_HISTORY_LOCATION +
-        "=" + tempDirPath + "\n" + NodeManagerImpl.PARAM_NODESTATE_CACHE_SIZE +
-        "=10";
-    TestConfiguration.setCurrentConfigFromString(s);
+    Properties p = new Properties();
+    p.setProperty(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION, tempDirPath);
+    p.setProperty(NodeManagerImpl.PARAM_NODESTATE_CACHE_SIZE, "10");
+    p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.1.2.3");
+//     String s = HistoryRepositoryImpl.PARAM_HISTORY_LOCATION +
+//         "=" + tempDirPath + "\n" + NodeManagerImpl.PARAM_NODESTATE_CACHE_SIZE +
+//         "=10";
+    ConfigurationUtil.setCurrentConfigFromProps(p);
 
     mau = new MockArchivalUnit();
     mau.setAUCachedUrlSet(makeFakeCachedUrlSet(mau, TEST_URL, 2, 2));
@@ -74,7 +79,9 @@ public class TestNodeManagerImpl
 
     pollManager = new MockPollManager();
     theDaemon.setPollManager(pollManager);
-    theDaemon.setIdentityManager(new MockIdentityManager());
+    idManager = new MockIdentityManager();
+    idManager.initService(theDaemon);
+    theDaemon.setIdentityManager(idManager);
     theDaemon.setLockssRepositoryService(new MockLockssRepositoryService());
     pollManager.initService(theDaemon);
     pollManager.startService();
@@ -546,8 +553,6 @@ public class TestNodeManagerImpl
 
   private void reputationChangeTest(PollTally results) {
     Iterator voteIt = results.getPollVotes().iterator();
-    MockIdentityManager idManager =
-        (MockIdentityManager) theDaemon.getIdentityManager();
     while (voteIt.hasNext()) {
       Vote vote = (Vote) voteIt.next();
       int repChange = IdentityManager.AGREE_VOTE;
@@ -638,12 +643,12 @@ public class TestNodeManagerImpl
     LcapIdentity testID = null;
     LcapMessage testmsg = null;
     if (isLocal) {
-      testID = theDaemon.getIdentityManager().getLocalIdentity();
+      testID = idManager.getLocalIdentity();
     }
     else {
       try {
         InetAddress testAddr = InetAddress.getByName("123.3.4.5");
-        testID = theDaemon.getIdentityManager().findIdentity(testAddr);
+        testID = idManager.findIdentity(testAddr);
       }
       catch (UnknownHostException ex) {
         fail("can't open test host");

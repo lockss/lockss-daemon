@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapMessage.java,v 1.22 2003-04-24 02:15:14 claire Exp $
+ * $Id: TestLcapMessage.java,v 1.23 2003-04-24 22:08:52 tal Exp $
  */
 
 /*
@@ -53,7 +53,6 @@ public class TestLcapMessage extends LockssTestCase {
   private static String[] testentries;
 
   private static MockLockssDaemon daemon = new MockLockssDaemon(null);
-  private IdentityManager idmgr = daemon.getIdentityManager();
   protected InetAddress testaddr;
   protected LcapIdentity testID;
   protected LcapMessage testmsg;
@@ -165,9 +164,9 @@ public class TestLcapMessage extends LockssTestCase {
     try {
       LcapMessage msg = new LcapMessage(msgbytes);
       // now test to see if we got back what we started with
-      assertEquals(msg.m_originAddr, testaddr);
-      assertEquals(msg.m_opcode,LcapMessage.NO_OP);
-      assertEquals(msg.m_verifier,testbytes);
+      assertEquals(testaddr, msg.m_originAddr);
+      assertEquals(LcapMessage.NO_OP, msg.m_opcode);
+      assertEquals(testbytes, msg.m_verifier);
     }
     catch (IOException ex) {
       fail("message decode failed");

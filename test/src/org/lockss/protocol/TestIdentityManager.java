@@ -1,7 +1,7 @@
 package org.lockss.protocol;
 
 import java.io.IOException;
-import java.util.Random;
+import java.util.*;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import org.lockss.daemon.Configuration;
@@ -31,7 +31,10 @@ public class TestIdentityManager extends LockssTestCase {
     super.setUp();
 
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    configParams(tempDirPath + "iddb");
+    Properties p = new Properties();
+    p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
+    p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.1.2.3");
+    ConfigurationUtil.setCurrentConfigFromProps(p);
 
     theDaemon = new MockLockssDaemon();
     idmgr = theDaemon.getIdentityManager();
@@ -193,22 +196,6 @@ public class TestIdentityManager extends LockssTestCase {
     }
     catch (ProtocolException ex) {
       fail("identity db store failed");
-    }
-  }
-
-  public static void configParams(String dbDir) {
-    configParams(dbDir, null);
-  }
-  public static void configParams(String dbDir, String addParams) {
-    String s = IdentityManager.PARAM_IDDB_DIR + "=" + dbDir;
-    if (addParams!=null) {
-      s += "\n" + addParams;
-    }
-
-    try {
-      TestConfiguration.setCurrentConfigFromString(s);
-    } catch (IOException ex) {
-      fail("Unable to initialize configuration parameters.");
     }
   }
 

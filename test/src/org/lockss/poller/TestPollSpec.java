@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollSpec.java,v 1.5 2003-04-17 02:16:58 troberts Exp $
+ * $Id: TestPollSpec.java,v 1.6 2003-04-24 22:08:52 tal Exp $
  */
 
 /*
@@ -52,9 +52,12 @@ public class TestPollSpec extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
 
+
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    TestIdentityManager.configParams(tempDirPath + "iddb",
-                                     "src/org/lockss/protocol");
+    Properties p = new Properties();
+    p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
+    p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
+    ConfigurationUtil.setCurrentConfigFromProps(p);
 
     theDaemon = new MockLockssDaemon();
     theDaemon.getIdentityManager();
