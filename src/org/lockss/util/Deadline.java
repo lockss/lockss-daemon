@@ -1,5 +1,5 @@
 // ========================================================================
-// $Id: Deadline.java,v 1.1 2002-09-19 20:42:43 tal Exp $
+// $Id: Deadline.java,v 1.2 2002-09-23 02:51:57 tal Exp $
 // ========================================================================
 
 /*
@@ -59,6 +59,11 @@ public class Deadline {
     return expiration.getTime();
   }
 
+  /** Return the expiration time as a Date */
+  public Date getExpiration() {
+    return expiration;
+  }
+
   /** Return the time remaining until expiration, in milliseconds */
   public synchronized long getRemainingTime() {
 //      return (expired() ? 0 : expiration.getTime() - now().getTime());
@@ -93,8 +98,9 @@ public class Deadline {
     return System.currentTimeMillis();
   }
 
+  // tk - should include "+n days" or some such
+  private static DateFormat df = DateFormat.getTimeInstance();
   public String toString() {
-    DateFormat df = DateFormat.getTimeInstance();
-    return "[Deadline at " + df.format(expiration) + "]";
+    return "['til:" + df.format(expiration) + "]";
   }
 }
