@@ -1,5 +1,5 @@
 /*
- * $Id: FuncClock.java,v 1.1 2005-01-18 19:42:53 tlipkis Exp $
+ * $Id: FuncClock.java,v 1.2 2005-01-25 09:15:06 tlipkis Exp $
  */
 
 /*
@@ -77,5 +77,25 @@ public class FuncClock extends LockssTestCase {
       }
     }
     if (fail > 0) fail(fail + " sleeps returned early");
+  }
+
+  public void testSleepIntr() {
+    Thread t = Thread.currentThread();
+    long sleeps[] = {200, 400, 1000, 60000};
+    int fail = 0;
+    for (int ix = 0, len = sleeps.length; ix < len; ix++) {
+      long sleep = sleeps[ix];
+      long start = System.currentTimeMillis();
+      Interrupter intr = null;
+      try {
+	intr = interruptMeIn(100);
+	t.sleep(sleep);
+	intr.cancel();
+      } catch (InterruptedException e) {
+	long slept = System.currentTimeMillis() - start;
+	if (slept < sleep) return;
+      }
+    }
+    fail("sleep() was not interrupted");
   }
 }
