@@ -1,5 +1,5 @@
 /*
- * $Id: XmlPropertyLoader.java,v 1.15 2004-10-01 17:50:07 smorabito Exp $
+ * $Id: XmlPropertyLoader.java,v 1.16 2004-11-12 19:29:20 smorabito Exp $
  */
 
 /*
@@ -124,10 +124,8 @@ public class XmlPropertyLoader {
     // the property tree is.
     private Stack m_propStack = new Stack();
 
-    // Stack to indicate what level of nesting the currently
-    // evaluated boolean is at.  The top of the stack is always
-    // the Boolean value of that level of nesting.
-    private Stack m_testStack = new Stack();
+    // The current state of the test.
+    private boolean m_testEval = false;
 
     // When building a list of configuration values for a single key.
     private List m_propList = null;
@@ -375,10 +373,10 @@ public class XmlPropertyLoader {
 
 
     /**
-     * Push the value of the test onto the test stack.
+     * Set the state of the test evaluation boolean.
      */
     private void startTestTag(Attributes attrs) {
-      m_testStack.push(new Boolean(evaluateAttributes(attrs)));
+      m_testEval = evaluateAttributes(attrs);
     }
 
     /**
@@ -479,11 +477,16 @@ public class XmlPropertyLoader {
      */
     private void endTestTag() {
       if (m_inAnd) {
-	m_evalIf &= ((Boolean)m_testStack.pop()).booleanValue();
+	m_evalIf &= m_testEval;
       } else if (m_inOr) {
-	m_evalIf |= ((Boolean)m_testStack.pop()).booleanValue();
+	m_evalIf |= m_testEval;
       } else if (m_inNot) {
-	m_evalIf &= !((Boolean)m_testStack.pop()).booleanValue();
+	m_evalIf &= !m_testEval;
+      } else {
+	// If we're not in a conditional at all, this should be a single
+	// <test>, i.e. <if><test foo="bar"/><then>...</then></if>. Just
+	// apply the current test results
+	m_evalIf = m_testEval;
       }
     }
 
