@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.47 2003-03-04 00:16:12 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.48 2003-03-05 19:07:33 troberts Exp $
  */
 
 /*
@@ -112,6 +112,7 @@ public class NodeManagerImpl implements NodeManager {
    * @see org.lockss.app.LockssManager#initService(LockssDaemon daemon)
    */
   public void initService(LockssDaemon daemon) throws LockssDaemonException {
+    logger.debug("NodeManager being inited");
     if (theManager == null) {
       theDaemon = daemon;
       theManager = this;
@@ -128,6 +129,7 @@ public class NodeManagerImpl implements NodeManager {
     } else {
       throw new LockssDaemonException("Multiple Instantiation.");
     }
+    logger.debug("NodeManager sucessfully initied");
   }
 
   /**
@@ -135,6 +137,7 @@ public class NodeManagerImpl implements NodeManager {
    * @see org.lockss.app.LockssManager#startService()
    */
   public void startService() {
+    logger.debug("NodeManager being started");
     Configuration.registerConfigurationCallback(new Configuration.Callback() {
       public void configurationChanged(Configuration oldConfig,
                                        Configuration newConfig,
@@ -146,6 +149,8 @@ public class NodeManagerImpl implements NodeManager {
     treeWalkThread = new TreeWalkThread(managerAu.getPluginId() + ":" +
                                         managerAu.getAUId() + ":TreeWalkThread",
                                         getAuState().getLastTreeWalkTime());
+    treeWalkThread.start();
+    logger.debug("NodeManager sucessfully started");
   }
 
   /**
@@ -153,12 +158,14 @@ public class NodeManagerImpl implements NodeManager {
    * @see org.lockss.app.LockssManager#stopService()
    */
   public void stopService() {
+    logger.debug("NodeManager being stopped");
     // checkpoint here
     if (treeWalkThread!=null) {
       treeWalkThread.interrupt();
       treeWalkThread = null;
     }
     theManager = null;
+    logger.debug("NodeManager sucessfully stopped");
   }
 
   private void setConfig(Configuration config, Configuration oldConfig) {
