@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapSocket.java,v 1.7 2002-12-15 00:10:48 tal Exp $
+ * $Id: TestLcapSocket.java,v 1.8 2002-12-30 20:40:05 tal Exp $
  */
 
 /*
@@ -108,7 +108,7 @@ public class TestLcapSocket extends LockssTestCase {
     LcapSocket.Unicast lskt = new LcapSocket.Unicast(rcvQ, dskt);
     dskt.addToReceiveQueue(testPacket);
     Interrupter intr;
-    intr = interruptMeIn(TIMEOUT_SHOULDNT);
+    intr = interruptMeIn(TIMEOUT_SHOULDNT, true);
     PrivilegedAccessor.invokeMethod(lskt, "receivePacket");
     assertTrue(!rcvQ.isEmpty());
     LockssReceivedDatagram rcvd =
