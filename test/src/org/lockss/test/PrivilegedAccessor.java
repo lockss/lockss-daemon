@@ -1,5 +1,5 @@
 /*
- * $Id: PrivilegedAccessor.java,v 1.4 2002-09-11 01:11:39 tal Exp $
+ * $Id: PrivilegedAccessor.java,v 1.5 2002-09-19 20:56:40 tal Exp $
  */
 
 /*
@@ -294,16 +294,12 @@ public class PrivilegedAccessor {
      */
     public Instance(Class cls, Object value) {
       if (value != null && !cls.isInstance(value)) {
-	throw new ClassCastException();
+	throw new
+	  ClassCastException("Instance value must be assignable to class");
       }
       this.cls = cls;
       this.value = value;
     }
-    
-//      public Instance(String className, Object value)
-//  	throws ClassNotFoundException {
-//        this(Class.forName(className), value);
-//      }
     
     Class getInstanceClass() {
       return cls;
