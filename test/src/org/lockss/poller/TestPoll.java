@@ -40,7 +40,7 @@ public class TestPoll extends TestCase {
 
   /** setUp method for test case */
   protected void setUp() {
-    HashService.start();
+    //HashService.start();
     pollmanager = PollManager.getPollManager();
     try {
       testaddr = InetAddress.getByName("127.0.0.1");
