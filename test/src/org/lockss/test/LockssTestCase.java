@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.21 2003-02-27 23:29:57 tal Exp $
+ * $Id: LockssTestCase.java,v 1.22 2003-03-03 22:47:51 troberts Exp $
  */
 
 /*
@@ -295,6 +295,122 @@ public class LockssTestCase extends TestCase {
       return;
     }
     failNotEquals(message, expected, actual);
+  }
+
+  /**
+   * Asserts that two objects are not equal. If they are not
+   * an AssertionFailedError is thrown with the given message.
+   */
+  static public void assertNotEquals(String message, 
+				     Object expected, Object actual) {
+    if ((expected == null && actual == null) || 
+	(expected != null && expected.equals(actual))) {
+      failEquals(message, expected, actual);
+    }
+  }
+  
+  public static void assertNotEquals(long expected, long actual) {
+    assertNotEquals(null, expected, actual);
+  }
+
+  public static void assertNotEquals(String message, 
+				     long expected, long actual) {
+    assertNotEquals(message, new Long(expected), new Long(actual));
+  }
+
+  public static void assertNotEquals(int expected, int actual) {
+    assertNotEquals(null, expected, actual);
+  }
+
+  public static void assertNotEquals(String message, 
+				     int expected, int actual) {
+    assertNotEquals(message, new Integer(expected), new Integer(actual));
+  }
+
+  public static void assertNotEquals(short expected, short actual) {
+    assertNotEquals(null, expected, actual);
+  }
+
+  public static void assertNotEquals(String message, 
+				     short expected, short actual) {
+    assertNotEquals(message, new Short(expected), new Short(actual));
+  }
+
+  public static void assertNotEquals(byte expected, byte actual) {
+    assertNotEquals(null, expected, actual);
+  }
+
+  public static void assertNotEquals(String message, 
+				     byte expected, byte actual) {
+    assertNotEquals(message, new Byte(expected), new Byte(actual));
+  }
+
+  public static void assertNotEquals(char expected, char actual) {
+    assertNotEquals(null, expected, actual);
+  }
+
+  public static void assertNotEquals(String message, 
+				     char expected, char actual) {
+    assertNotEquals(message, new Character(expected), new Character(actual));
+  }
+
+  public static void assertNotEquals(boolean expected, boolean actual) {
+    assertNotEquals(null, expected, actual);
+  }
+
+  public static void assertNotEquals(String message, 
+				     boolean expected, boolean actual) {
+    assertNotEquals(message, new Boolean(expected), new Boolean(actual));
+  }
+
+  public static void assertNotEquals(double expected, double actual, 
+				     double delta) {
+    assertNotEquals(null, expected, actual, delta);
+  }
+
+  public static void assertNotEquals(String message, double expected, 
+				     double actual, double delta) {
+    // handle infinity specially since subtracting to infinite 
+    //values gives NaN and the the following test fails
+    if (Double.isInfinite(expected)) {
+      if (expected == actual){
+	failEquals(message, new Double(expected), new Double(actual));
+      }
+    } else if ((Math.abs(expected-actual) <= delta)) {
+    // Because comparison with NaN always returns false
+      failEquals(message, new Double(expected), new Double(actual));
+    }
+  }
+
+  public static void assertNotEquals(float expected, float actual, 
+				     float delta) {
+    assertNotEquals(null, expected, actual, delta);
+  }
+
+  public static void assertNotEquals(String message, float expected, 
+				     float actual, float delta) {
+    // handle infinity specially since subtracting to infinite 
+    //values gives NaN and the the following test fails
+    if (Double.isInfinite(expected)) {
+      if (expected == actual){
+	failEquals(message, new Float(expected), new Float(actual));
+      }
+    } else if ((Math.abs(expected-actual) <= delta)) {
+    // Because comparison with NaN always returns false
+      failEquals(message, new Float(expected), new Float(actual));
+    }
+  }
+
+  private static void failEquals(String message,
+				 Object expected, Object actual) {
+    StringBuffer sb = new StringBuffer();
+    if (message != null) {
+      sb.append(message);
+      sb.append(" ");
+    }
+    sb.append("expected not equals, but both were ");
+    sb.append(expected);
+    fail(sb.toString());
   }
 
   // tk do a better job of printing collections
