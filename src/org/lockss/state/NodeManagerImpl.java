@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.163 2004-01-29 01:46:30 eaalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.164 2004-02-03 02:48:39 eaalto Exp $
  */
 
 /*
@@ -33,7 +33,6 @@ import java.text.SimpleDateFormat;
 import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
-import org.lockss.daemon.status.*;
 import org.lockss.poller.*;
 import org.lockss.plugin.*;
 import org.lockss.protocol.*;
@@ -78,8 +77,6 @@ public class NodeManagerImpl
   ActivityRegulator regulator;
   static SimpleDateFormat sdf = new SimpleDateFormat();
 
-  static boolean registeredAccessors = false;
-
   ArchivalUnit managedAu;
   AuState auState;
   NodeStateCache nodeCache;
@@ -103,7 +100,7 @@ public class NodeManagerImpl
   public void startService() {
     super.startService();
     if (logger.isDebug()) logger.debug("Starting: " + managedAu);
-    historyRepo = theDaemon.getHistoryRepository();
+    historyRepo = theDaemon.getHistoryRepository(managedAu);
     lockssRepo = theDaemon.getLockssRepository(managedAu);
     pollManager = theDaemon.getPollManager();
     regulator = theDaemon.getActivityRegulator(managedAu);
@@ -111,8 +108,8 @@ public class NodeManagerImpl
     nodeCache = new NodeStateCache(maxCacheSize);
     activeNodes = new HashMap();
 
-    auState = historyRepo.loadAuState(managedAu);
-    damagedNodes = historyRepo.loadDamagedNodeSet(managedAu);
+    auState = historyRepo.loadAuState();
+    damagedNodes = historyRepo.loadDamagedNodeSet();
 
     treeWalkHandler = new TreeWalkHandler(this, theDaemon);
     treeWalkHandler.start();

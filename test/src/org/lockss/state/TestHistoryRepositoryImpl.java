@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.40 2004-02-02 22:56:53 eaalto Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.41 2004-02-03 02:48:39 eaalto Exp $
  */
 
 /*
@@ -58,7 +58,8 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
     mau = new MockArchivalUnit();
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     configHistoryParams(tempDirPath);
-    repository = new HistoryRepositoryImpl(tempDirPath);
+    repository = (HistoryRepositoryImpl)
+        HistoryRepositoryImpl.createNewHistoryRepository(mau);
     repository.startService();
     idKey = createIdentityKey();
   }
@@ -229,7 +230,7 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
     assertTrue(xmlFile.exists());
 
     auState = null;
-    auState = repository.loadAuState(mau);
+    auState = repository.loadAuState();
     assertEquals(123, auState.getLastCrawlTime());
     assertEquals(321, auState.getLastTopLevelPollTime());
     // doesn't store last treewalk time, so should reset to -1
@@ -260,7 +261,7 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
     assertTrue(xmlFile.exists());
 
     damNodes = null;
-    damNodes = repository.loadDamagedNodeSet(mau);
+    damNodes = repository.loadDamagedNodeSet();
     assertTrue(damNodes.contains("test1"));
     assertTrue(damNodes.contains("test2"));
     assertFalse(damNodes.contains("test3"));
@@ -283,7 +284,7 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
     repository.storeAuState(auState);
 
     auState = null;
-    auState = repository.loadAuState(mau);
+    auState = repository.loadAuState();
     assertEquals(1234, auState.getLastCrawlTime());
     assertEquals(4321, auState.getLastTopLevelPollTime());
     assertEquals(mau.getAuId(), auState.getArchivalUnit().getAuId());

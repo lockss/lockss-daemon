@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSimulatedContent.java,v 1.51 2004-01-13 01:02:35 troberts Exp $
+ * $Id: FuncSimulatedContent.java,v 1.52 2004-02-03 02:48:39 eaalto Exp $
  */
 
 /*
@@ -29,7 +29,6 @@ package org.lockss.plugin.simulated;
 import java.util.*;
 import java.io.*;
 import java.security.*;
-import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
 import org.lockss.daemon.*;
@@ -45,8 +44,6 @@ import junit.framework.*;
 public class FuncSimulatedContent extends LockssTestCase {
   private SimulatedArchivalUnit sau;
   private MockLockssDaemon theDaemon;
-
-  private boolean firstTestRun = false;
 
   private static String DAMAGED_CACHED_URL = "/branch2/branch2/file2.txt";
 
@@ -85,7 +82,6 @@ public class FuncSimulatedContent extends LockssTestCase {
 
     theDaemon = new MockLockssDaemon();
     theDaemon.getPluginManager();
-    theDaemon.getHistoryRepository();
     theDaemon.getHashService();
     MockSystemMetrics metrics = new MyMockSystemMetrics();
     metrics.initService(theDaemon);
@@ -99,15 +95,13 @@ public class FuncSimulatedContent extends LockssTestCase {
 
     theDaemon.getPluginManager().startService();
 
-    theDaemon.getHistoryRepository().startService();
     theDaemon.getHashService().startService();
     metrics.startService();
     metrics.setHashSpeed(100);
 
+    theDaemon.getHistoryRepository(sau).startService();
     theDaemon.getLockssRepository(sau);
     theDaemon.getNodeManager(sau).startService();
-
-
   }
 
   public void tearDown() throws Exception {

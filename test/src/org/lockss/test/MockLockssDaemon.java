@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssDaemon.java,v 1.34 2004-01-04 06:12:29 tlipkis Exp $
+ * $Id: MockLockssDaemon.java,v 1.35 2004-02-03 02:48:39 eaalto Exp $
  */
 
 /*
@@ -59,7 +59,6 @@ public class MockLockssDaemon extends LockssDaemon {
   PollManager pollManager = null;
   LcapComm commManager = null;
   LcapRouter routerManager = null;
-  HistoryRepository historyRepository = null;
   ProxyManager proxyManager = null;
   CrawlManager crawlManager = null;
   PluginManager pluginManager = null;
@@ -86,7 +85,6 @@ public class MockLockssDaemon extends LockssDaemon {
     schedService = null;
     pollManager = null;
     commManager = null;
-    historyRepository = null;
     proxyManager = null;
     crawlManager = null;
     pluginManager = null;
@@ -218,19 +216,6 @@ public class MockLockssDaemon extends LockssDaemon {
   }
 
   /**
-   * return the history repository instance
-   * @return the HistoryRepository
-   */
-  public HistoryRepository getHistoryRepository() {
-    if (historyRepository == null) {
-      historyRepository =
-	(HistoryRepository)newManager(LockssDaemon.HISTORY_REPOSITORY);
-      theManagers.put(LockssDaemon.HISTORY_REPOSITORY, historyRepository);
-    }
-    return historyRepository;
-  }
-
-  /**
    * return the proxy manager instance
    * @return the ProxyManager
    */
@@ -355,15 +340,6 @@ public class MockLockssDaemon extends LockssDaemon {
   }
 
   /**
-   * Set the HistoryRepository
-   * @param histRepo the new repository
-   */
-  public void setHistoryRepository(HistoryRepository histRepo) {
-    historyRepository = histRepo;
-    theManagers.put(LockssDaemon.HISTORY_REPOSITORY, historyRepository);
-  }
-
-  /**
    * Set the IdentityManager
    * @param idMan the new manager
    */
@@ -462,7 +438,7 @@ public class MockLockssDaemon extends LockssDaemon {
     } catch (IllegalArgumentException e) {
       return (ActivityRegulator)newAuManager(LockssDaemon.ACTIVITY_REGULATOR,
 					     au);
-    }      
+    }
   }
 
   /** Return LockssRepository for AU */
@@ -472,7 +448,7 @@ public class MockLockssDaemon extends LockssDaemon {
     } catch (IllegalArgumentException e) {
       return (LockssRepository)newAuManager(LockssDaemon.LOCKSS_REPOSITORY,
 					    au);
-    }      
+    }
   }
 
   /** Return NodeManager for AU */
@@ -481,7 +457,17 @@ public class MockLockssDaemon extends LockssDaemon {
       return super.getNodeManager(au);
     } catch (IllegalArgumentException e) {
       return (NodeManager)newAuManager(LockssDaemon.NODE_MANAGER, au);
-    }      
+    }
+  }
+
+  /** Return HistoryRepository for AU */
+  public HistoryRepository getHistoryRepository(ArchivalUnit au) {
+    try {
+      return super.getHistoryRepository(au);
+    } catch (IllegalArgumentException e) {
+      return (HistoryRepository)newAuManager(LockssDaemon.HISTORY_REPOSITORY,
+          au);
+    }
   }
 
   /**
@@ -510,6 +496,16 @@ public class MockLockssDaemon extends LockssDaemon {
   public void setNodeManager(NodeManager nodeMan, ArchivalUnit au) {
     setAuManager(NODE_MANAGER, au, nodeMan);
   }
+
+  /**
+   * Set the HistoryRepository for a given AU.
+   * @param histRepo the new repository
+   * @param au the ArchivalUnit
+   */
+  public void setHistoryRepository(HistoryRepository histRepo, ArchivalUnit au) {
+    setAuManager(HISTORY_REPOSITORY, au, histRepo);
+  }
+
 
 
   private boolean daemonInited = false;

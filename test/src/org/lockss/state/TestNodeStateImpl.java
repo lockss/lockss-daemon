@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeStateImpl.java,v 1.22 2004-02-02 22:56:54 eaalto Exp $
+ * $Id: TestNodeStateImpl.java,v 1.23 2004-02-03 02:48:39 eaalto Exp $
  */
 
 /*
@@ -56,7 +56,7 @@ public class TestNodeStateImpl extends LockssTestCase {
     MockCachedUrlSetSpec mspec =
         new MockCachedUrlSetSpec("http://www.example.com", null);
     MockCachedUrlSet mcus = new MockCachedUrlSet(mau, mspec);
-    historyRepo = new HistoryRepositoryImpl(tempDirPath);
+    historyRepo = new HistoryRepositoryImpl(mau, tempDirPath);
     historyRepo.startService();
 
     polls = new ArrayList(3);

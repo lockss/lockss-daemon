@@ -1,5 +1,5 @@
 /*
- * $Id: TestTreeWalkHandler.java,v 1.36 2004-01-20 18:22:49 tlipkis Exp $
+ * $Id: TestTreeWalkHandler.java,v 1.37 2004-02-03 02:48:39 eaalto Exp $
  */
 
 /*
@@ -27,26 +27,22 @@
 package org.lockss.state;
 
 import java.io.*;
-import java.net.*;
 import java.util.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.poller.*;
-import org.lockss.protocol.*;
 import org.lockss.repository.*;
 
 public class TestTreeWalkHandler extends LockssTestCase {
   public static final String TEST_URL = "http://www.example.com";
-  private static Logger log = Logger.getLogger("TestNMI");
   private String tempDirPath;
   private MockArchivalUnit mau = null;
   private NodeManagerImpl nodeManager;
   private TreeWalkHandler treeWalkHandler;
   private MockPollManager pollMan;
   private MockCrawlManager crawlMan;
-  private Random random = new Random();
 
   private MockLockssDaemon theDaemon;
 
@@ -82,10 +78,10 @@ public class TestTreeWalkHandler extends LockssTestCase {
 
     nodeManager = new NodeManagerImpl(mau);
     nodeManager.initService(theDaemon);
-    HistoryRepository historyRepo = new HistoryRepositoryImpl(tempDirPath);
+    HistoryRepository historyRepo = new HistoryRepositoryImpl(mau, tempDirPath);
     historyRepo.startService();
     nodeManager.historyRepo = historyRepo;
-    theDaemon.setHistoryRepository(historyRepo);
+    theDaemon.setHistoryRepository(historyRepo, mau);
 
     theDaemon.getActivityRegulator(mau).startService();
 
@@ -93,7 +89,7 @@ public class TestTreeWalkHandler extends LockssTestCase {
     nodeManager.nodeCache = new NodeStateCache(10);
     nodeManager.activeNodes = new HashMap();
     nodeManager.damagedNodes = new DamagedNodeSet(mau, historyRepo);
-    nodeManager.auState = historyRepo.loadAuState(mau);
+    nodeManager.auState = historyRepo.loadAuState();
     nodeManager.pollManager = pollMan;
 
     treeWalkHandler = new TreeWalkHandler(nodeManager, theDaemon);

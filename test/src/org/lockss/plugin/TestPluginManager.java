@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.33 2004-01-17 00:14:35 troberts Exp $
+ * $Id: TestPluginManager.java,v 1.34 2004-02-03 02:48:40 eaalto Exp $
  */
 
 /*
@@ -37,17 +37,16 @@ import java.util.*;
 import junit.framework.*;
 import org.lockss.app.*;
 import org.lockss.daemon.*;
-import org.lockss.plugin.*;
 import org.lockss.plugin.configurable.*;
 import org.lockss.poller.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
 import org.lockss.repository.*;
+import org.lockss.state.HistoryRepositoryImpl;
 
 /**
  * Test class for org.lockss.plugin.PluginManager
  */
-
 public class TestPluginManager extends LockssTestCase {
   private MockLockssDaemon theDaemon;
 
@@ -65,7 +64,6 @@ public class TestPluginManager extends LockssTestCase {
   static String mauauid1 = mockPlugKey+"&"+ mauauidKey1;
   //  static String m
 
-
   static String mauauidKey2 = PropUtil.propsToCanonicalEncodedString(props2);
   static String mauauid2 = mockPlugKey+"&"+mauauidKey2;
 
@@ -74,16 +72,6 @@ public class TestPluginManager extends LockssTestCase {
 
   static String p1a1param = p1param + mauauidKey1 + ".";
   static String p1a2param = p1param + mauauidKey2 + ".";
-
-  static String configStr =
-    p1a1param + MockPlugin.CONFIG_PROP_1 + "=val1\n" +
-    p1a1param + MockPlugin.CONFIG_PROP_2 + "=val2\n" +
-    p1a2param + MockPlugin.CONFIG_PROP_1 + "=val1\n" +
-    p1a2param + MockPlugin.CONFIG_PROP_2 + "=va.l3\n" + // value contains a dot
-// needed to allow PluginManager to register AUs
-// leave value blank to allow 'doConfig()' to fill it in dynamically
-    LockssRepositoryImpl.PARAM_CACHE_LOCATION + "=";
-
 
   PluginManager mgr;
 
@@ -110,16 +98,24 @@ public class TestPluginManager extends LockssTestCase {
 
   private void doConfig() throws Exception {
     mgr.startService();
-    String localConfig = configStr + getTempDir().getAbsolutePath() +
-        File.separator;
-    ConfigurationUtil.setCurrentConfigFromString(localConfig);
+    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    Properties p = new Properties();
+    p.setProperty(p1a1param+MockPlugin.CONFIG_PROP_1, "val1");
+    p.setProperty(p1a1param+MockPlugin.CONFIG_PROP_2, "val2");
+    p.setProperty(p1a2param+MockPlugin.CONFIG_PROP_1, "val1");
+    p.setProperty(p1a2param+MockPlugin.CONFIG_PROP_2, "va.l3");
+    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    p.setProperty(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION, tempDirPath);
+    ConfigurationUtil.setCurrentConfigFromProps(p);
   }
 
   private void minimalConfig() throws Exception {
     mgr.startService();
+    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     ConfigurationUtil.setFromArgs(LockssRepositoryImpl.PARAM_CACHE_LOCATION,
-				  getTempDir().getAbsolutePath() +
-				  File.separator);
+				  tempDirPath,
+                                  HistoryRepositoryImpl.PARAM_HISTORY_LOCATION,
+                                  tempDirPath);
   }
 
   public void testNameFromKey() {
@@ -221,7 +217,6 @@ public class TestPluginManager extends LockssTestCase {
     ArchivalUnit au2 = mgr.getAuFromId(mauauid2);
 
     // verify the plugin's set of all AUs is {au1, au2}
-    Collection aus = mpi.getAllAus();
     assertEquals(SetUtil.set(au1, au2), new HashSet(mgr.getAllAus()));
 
     // verify au1's configuration
@@ -509,19 +504,19 @@ public class TestPluginManager extends LockssTestCase {
     return cus;
   }
 
-  private static String wkey = "org|lockss|plugin|wrapper|WrappedPlugin";
-
   // ensure that wrapper is harmless when not enabled
   public void testWrappedAu() {
     if (!WrapperState.isUsingWrapping()) {
       try {
         mgr.startService();
-        String localConfig = p1a1param + MockPlugin.CONFIG_PROP_1 + "=val1\n" +
-            p1a1param + MockPlugin.CONFIG_PROP_2 + "=val2\n" +
-            p1a1param + "reserved.wrapper=true\n" +
-            LockssRepositoryImpl.PARAM_CACHE_LOCATION + "=" +
-            getTempDir().getAbsolutePath() + File.separator + "\n";
-        ConfigurationUtil.setCurrentConfigFromString(localConfig);
+        String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+        Properties p = new Properties();
+        p.setProperty(p1a1param + MockPlugin.CONFIG_PROP_1, "val1");
+        p.setProperty(p1a1param + MockPlugin.CONFIG_PROP_2, "val2");
+        p.setProperty(p1a1param + "reserved.wrapper", "true");
+        p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+        p.setProperty(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION, tempDirPath);
+        ConfigurationUtil.setCurrentConfigFromProps(p);
         ArchivalUnit wau = (ArchivalUnit) mgr.getAuFromId(
             mauauid1);
         Plugin wplug = (Plugin) wau.getPlugin();

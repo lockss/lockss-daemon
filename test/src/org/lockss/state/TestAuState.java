@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuState.java,v 1.1 2003-11-19 04:19:18 eaalto Exp $
+ * $Id: TestAuState.java,v 1.2 2004-02-03 02:48:39 eaalto Exp $
  */
 
 /*
@@ -57,23 +57,23 @@ public class TestAuState extends LockssTestCase {
   public void testCrawlFinished() {
     AuState auState = new AuState(mau, 123, -1, -1, null, historyRepo);
     assertEquals(123, auState.getLastCrawlTime());
-    assertNull(historyRepo.storedAus.get(auState.getArchivalUnit()));
+    assertNull(historyRepo.theAuState);
 
     TimeBase.setSimulated(456);
     auState.newCrawlFinished();
     assertEquals(456, auState.getLastCrawlTime());
-    assertNotNull(historyRepo.storedAus.get(auState.getArchivalUnit()));
+    assertNotNull(historyRepo.theAuState);
   }
 
   public void testPollFinished() {
     AuState auState = new AuState(mau, -1, 123, -1, null, historyRepo);
     assertEquals(123, auState.getLastTopLevelPollTime());
-    assertNull(historyRepo.storedAus.get(auState.getArchivalUnit()));
+    assertNull(historyRepo.theAuState);
 
     TimeBase.setSimulated(456);
     auState.newPollFinished();
     assertEquals(456, auState.getLastTopLevelPollTime());
-    assertNotNull(historyRepo.storedAus.get(auState.getArchivalUnit()));
+    assertNotNull(historyRepo.theAuState);
   }
 
   public void testTreeWalkFinished() {
@@ -101,40 +101,40 @@ public class TestAuState extends LockssTestCase {
   public void testUpdateUrls() {
     AuState auState =
       new AuState(mau, -1, -1, 123, new HashSet(), historyRepo);
-    assertTrue(historyRepo.storedAus.isEmpty());
+    assertNull(historyRepo.theAuState);
 
     Collection col = auState.getCrawlUrls();
     for (int ii=1; ii<auState.URL_UPDATE_LIMIT; ii++) {
       col.add("test" + ii);
       auState.updatedCrawlUrls(false);
       assertEquals(ii, auState.urlUpdateCntr);
-      assertTrue(historyRepo.storedAus.isEmpty());
+      assertNull(historyRepo.theAuState);
     }
     col.add("test-limit");
     auState.updatedCrawlUrls(false);
     assertEquals(0, auState.urlUpdateCntr);
-    assertFalse(historyRepo.storedAus.isEmpty());
+    assertNotNull(historyRepo.theAuState);
 
     // clear, and check that counter is reset
-    historyRepo.storedAus.clear();
+    historyRepo.theAuState = null;
     if (auState.URL_UPDATE_LIMIT > 1) {
       col.add("test");
       auState.updatedCrawlUrls(false);
-      assertTrue(historyRepo.storedAus.isEmpty());
+      assertNull(historyRepo.theAuState);
     }
   }
 
   public void testForceUpdateUrls() {
     AuState auState =
       new AuState(mau, -1, -1, 123, new HashSet(), historyRepo);
-    assertTrue(historyRepo.storedAus.isEmpty());
+    assertNull(historyRepo.theAuState);
 
     Collection col = auState.getCrawlUrls();
     if (auState.URL_UPDATE_LIMIT > 1) {
       col.add("test");
       auState.updatedCrawlUrls(true);
       assertEquals(0, auState.urlUpdateCntr);
-      assertFalse(historyRepo.storedAus.isEmpty());
+      assertNotNull(historyRepo.theAuState);
     }
   }
 

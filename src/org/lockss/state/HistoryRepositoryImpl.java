@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.41 2003-11-07 19:12:42 troberts Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.42 2004-02-03 02:48:39 eaalto Exp $
  */
 
 /*
@@ -34,21 +34,18 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.state;
 
 import java.io.*;
-import java.net.MalformedURLException;
+import java.net.*;
 import java.util.*;
 
 import org.exolab.castor.xml.Marshaller;
 import org.exolab.castor.xml.Unmarshaller;
 import org.exolab.castor.mapping.Mapping;
 
+import org.lockss.app.*;
 import org.lockss.util.*;
+import org.lockss.plugin.*;
 import org.lockss.repository.*;
 import org.lockss.daemon.Configuration;
-import org.lockss.app.*;
-import org.lockss.plugin.*;
-import java.net.URL;
-import org.xml.sax.InputSource;
-
 
 /**
  * HistoryRepository is an inner layer of the NodeManager which handles the actual
@@ -68,43 +65,43 @@ public class HistoryRepositoryImpl
    */
   public static final String HISTORY_ROOT_NAME = "cache";
 
+  // resource file
   static final String MAPPING_FILE_NAME = "pollmapping.xml";
-  static final String HISTORY_FILE_NAME = "history.xml";
-  static final String NODE_FILE_NAME = "nodestate.xml";
-  static final String AU_FILE_NAME = "au_state.xml";
-  static final String DAMAGED_NODES_FILE_NAME = "damaged_nodes.xml";
+  // these share space with content, so must be prefaced by '#'
+  static final String HISTORY_FILE_NAME = "#history.xml";
+  static final String NODE_FILE_NAME = "#nodestate.xml";
+  static final String AU_FILE_NAME = "#au_state.xml";
+  static final String DAMAGED_NODES_FILE_NAME = "#damaged_nodes.xml";
   // this contains a '#' so that it's not defeatable by strings which
   // match the prefix in a url (like '../tmp/')
   private static final String TEST_PREFIX = "/#tmp";
 
-  private String rootDir;
+  private ArchivalUnit storedAu;
+
+  private String rootLocation;
   Mapping mapping = null;
   private static Logger logger = Logger.getLogger("HistoryRepository");
 
-  HistoryRepositoryImpl(String repository_location) {
-    rootDir = repository_location;
+  HistoryRepositoryImpl(ArchivalUnit au, String rootPath) {
+    storedAu = au;
+    rootLocation = rootPath;
+    if (!rootLocation.endsWith(File.separator)) {
+      // this shouldn't happen
+      rootLocation += File.separator;
+    }
   }
 
-  public HistoryRepositoryImpl() { }
-
-  /**
-   * start the plugin manager.
-   * @see org.lockss.app.LockssManager#startService()
-   */
   public void startService() {
     super.startService();
-    if (rootDir==null) {
+    if (rootLocation==null) {
       String msg = PARAM_HISTORY_LOCATION + " not configured";
       logger.error(msg);
       throw new LockssDaemonException(msg);
     }
     loadMapping();
+    checkFileChange();
   }
 
-  /**
-   * stop the plugin manager
-   * @see org.lockss.app.LockssManager#stopService()
-   */
   public void stopService() {
     // we want to checkpoint here
     mapping = null;
@@ -113,10 +110,9 @@ public class HistoryRepositoryImpl
 
   protected void setConfig(Configuration config, Configuration oldConfig,
 			   Set changedKeys) {
-    // don't reset this once it's set
-    if (rootDir==null) {
-      rootDir = config.getParam(PARAM_HISTORY_LOCATION);
-    }
+  }
+
+  public void setAuConfig(Configuration auConfig) {
   }
 
   public void storeNodeState(NodeState nodeState) {
@@ -230,7 +226,7 @@ public class HistoryRepositoryImpl
 
   public void storeAuState(AuState auState) {
     try {
-      File nodeDir = new File(getAuLocation(auState.getArchivalUnit()));
+      File nodeDir = new File(rootLocation);
       if (!nodeDir.exists()) {
         nodeDir.mkdirs();
       }
@@ -249,14 +245,14 @@ public class HistoryRepositoryImpl
     }
   }
 
-  public AuState loadAuState(ArchivalUnit au) {
+  public AuState loadAuState() {
     try {
-      File auFile = new File(getAuLocation(au) + File.separator + AU_FILE_NAME);
+      File auFile = new File(rootLocation + AU_FILE_NAME);
       if (!auFile.exists()) {
         logger.debug3("No au file found.");
-        return new AuState(au, -1, -1, -1, null, this);
+        return new AuState(storedAu, -1, -1, -1, null, this);
       }
-      logger.debug3("Loading state for AU '" + au.getName() + "'");
+      logger.debug3("Loading state for AU '" + storedAu.getName() + "'");
       FileReader reader = new FileReader(auFile);
       Unmarshaller unmarshaller = new Unmarshaller(AuStateBean.class);
       unmarshaller.setMapping(getMapping());
@@ -264,14 +260,14 @@ public class HistoryRepositoryImpl
       // does not load in an old treewalk time, so that one will be run
       // immediately
       reader.close();
-      return new AuState(au, asb.getLastCrawlTime(),
+      return new AuState(storedAu, asb.getLastCrawlTime(),
                          asb.getLastTopLevelPollTime(),
                          -1, asb.getCrawlUrls(), this);
     } catch (org.exolab.castor.xml.MarshalException me) {
-      logger.error("Marshalling exception for austate '"+au.getName()+"': " +
+      logger.error("Marshalling exception for austate '"+storedAu.getName()+"': " +
                    me.getMessage());
       // continue
-      return new AuState(au, -1, -1, -1, null, this);
+      return new AuState(storedAu, -1, -1, -1, null, this);
     } catch (Exception e) {
       logger.error("Couldn't load au state: ", e);
       throw new LockssRepository.RepositoryStateException(
@@ -281,7 +277,7 @@ public class HistoryRepositoryImpl
 
   public void storeDamagedNodeSet(DamagedNodeSet nodeSet) {
     try {
-      File nodeDir = new File(getAuLocation(nodeSet.theAu));
+      File nodeDir = new File(rootLocation);
       if (!nodeDir.exists()) {
         nodeDir.mkdirs();
       }
@@ -300,28 +296,27 @@ public class HistoryRepositoryImpl
     }
   }
 
-  public DamagedNodeSet loadDamagedNodeSet(ArchivalUnit au) {
+  public DamagedNodeSet loadDamagedNodeSet() {
     try {
-      File damFile = new File(getAuLocation(au) + File.separator +
-                             DAMAGED_NODES_FILE_NAME);
+      File damFile = new File(rootLocation + DAMAGED_NODES_FILE_NAME);
       if (!damFile.exists()) {
         logger.debug3("No au file found.");
-        return new DamagedNodeSet(au, this);
+        return new DamagedNodeSet(storedAu, this);
       }
-      logger.debug3("Loading state for AU '" + au.getName() + "'");
+      logger.debug3("Loading state for AU '" + storedAu.getName() + "'");
       FileReader reader = new FileReader(damFile);
       Unmarshaller unmarshaller = new Unmarshaller(DamagedNodeSet.class);
       unmarshaller.setMapping(getMapping());
       DamagedNodeSet damNodes = (DamagedNodeSet) unmarshaller.unmarshal(reader);
       reader.close();
-      damNodes.theAu = au;
+      damNodes.theAu = storedAu;
       damNodes.repository = this;
       return damNodes;
     } catch (org.exolab.castor.xml.MarshalException me) {
       logger.error("Marshalling exception for damaged nodes for '"+
-                   au.getName()+"': " + me.getMessage());
+                   storedAu.getName()+"': " + me.getMessage());
       // continue
-      return new DamagedNodeSet(au, this);
+      return new DamagedNodeSet(storedAu, this);
     } catch (Exception e) {
       logger.error("Couldn't load damaged nodes: ", e);
       throw new LockssRepository.RepositoryStateException(
@@ -332,17 +327,9 @@ public class HistoryRepositoryImpl
 
   protected String getNodeLocation(CachedUrlSet cus)
       throws MalformedURLException {
-    StringBuffer buffer = new StringBuffer(rootDir);
-    if (!rootDir.endsWith(File.separator)) {
-      buffer.append(File.separator);
-    }
-    buffer.append(HISTORY_ROOT_NAME);
-    buffer.append(File.separator);
-    String auLoc = LockssRepositoryImpl.mapAuToFileLocation(
-        buffer.toString(), cus.getArchivalUnit());
     String urlStr = (String)cus.getUrl();
     if (AuUrl.isAuUrl(urlStr)) {
-      return auLoc;
+      return rootLocation;
     } else {
       try {
         URL testUrl = new URL(urlStr);
@@ -368,19 +355,8 @@ public class HistoryRepositoryImpl
         logger.error("Error testing URL: "+ie);
         throw new MalformedURLException ("Error testing URL.");
       }
-      return LockssRepositoryImpl.mapUrlToFileLocation(auLoc, urlStr);
+      return LockssRepositoryImpl.mapUrlToFileLocation(rootLocation, urlStr);
     }
-  }
-
-  protected String getAuLocation(ArchivalUnit au) {
-    StringBuffer buffer = new StringBuffer(rootDir);
-    if (!rootDir.endsWith(File.separator)) {
-      buffer.append(File.separator);
-    }
-    buffer.append(HISTORY_ROOT_NAME);
-    buffer.append(File.separator);
-    return LockssRepositoryImpl.mapAuToFileLocation(buffer.toString(),
-        au);
   }
 
   private void loadMapping() {
@@ -412,4 +388,98 @@ public class HistoryRepositoryImpl
       return mapping;
     }
   }
+
+  // These functions are for repository name changes and the like.
+  // They should be used when necessary, then commented out until the next
+  // implementation is required.
+
+  void checkFileChange() {
+    if ((theDaemon==null) || (theDaemon.getPluginManager()==null)) {
+      // abort if null, for test code
+      return;
+    }
+    File topDir = new File(rootLocation);
+    File topDirState = new File(topDir, AU_FILE_NAME);
+    // if the new version doesn't exist, post-order recurse
+    if (!topDirState.exists()) {
+      logger.info("Older file versions being used; updating to current names");
+      try {
+        File auCusDir = new File(getNodeLocation(storedAu.getAuCachedUrlSet()));
+        if (auCusDir.isDirectory()) {
+          recurseFileChange(auCusDir);
+        }
+      } catch (MalformedURLException mue) {
+        logger.error("Error updating from old state filenames: "+mue);
+        return;
+      }
+    }
+    // finish by fixing top level values
+    File oldDamageFile = new File(topDir, "damaged_nodes.xml");
+    if (oldDamageFile.exists()) {
+      oldDamageFile.renameTo(new File(topDir, DAMAGED_NODES_FILE_NAME));
+    }
+    File oldAuState = new File(topDir, "au_state.xml");
+    if (oldAuState.exists()) {
+      oldAuState.renameTo(topDirState);
+    }
+    logger.debug("Finished updating.");
+  }
+
+  void recurseFileChange(File nodeDir) throws MalformedURLException {
+    File[] children = nodeDir.listFiles();
+    for (int ii=0; ii<children.length; ii++) {
+      // post-order recursion
+      if (children[ii].isDirectory()) {
+        recurseFileChange(children[ii]);
+      }
+    }
+
+    // finish by fixing own values
+    File oldNodeState = new File(nodeDir, "nodestate.xml");
+    if (oldNodeState.exists()) {
+      oldNodeState.renameTo(new File(nodeDir, NODE_FILE_NAME));
+    }
+    File oldHistoryFile = new File(nodeDir, "history.xml");
+    if (oldHistoryFile.exists()) {
+      oldHistoryFile.renameTo(new File(nodeDir, HISTORY_FILE_NAME));
+    }
+  }
+
+  /**
+   * Factory method to create new HistoryRepository instances.
+   * @param au the {@link ArchivalUnit}
+   * @return the new HistoryRepository instance
+   */
+  public static HistoryRepository createNewHistoryRepository(ArchivalUnit au) {
+    // XXX needs to handle multiple disks/repository locations
+
+    String historyLocation = Configuration.getParam(PARAM_HISTORY_LOCATION);
+    if (historyLocation == null) {
+      logger.error("Couldn't get " + PARAM_HISTORY_LOCATION +
+          " from Configuration");
+      throw new LockssRepository.RepositoryStateException(
+          "Couldn't load param.");
+    }
+    historyLocation = extendCacheLocation(historyLocation);
+
+    return new HistoryRepositoryImpl(au,
+        LockssRepositoryImpl.mapAuToFileLocation(historyLocation, au));
+  }
+
+  static String extendCacheLocation(String cacheDir) {
+    StringBuffer buffer = new StringBuffer(cacheDir);
+    if (!cacheDir.endsWith(File.separator)) {
+      buffer.append(File.separator);
+    }
+    buffer.append(HISTORY_ROOT_NAME);
+    buffer.append(File.separator);
+    return buffer.toString();
+  }
+
+  public static class Factory implements LockssAuManager.Factory {
+  public LockssAuManager createAuManager(ArchivalUnit au) {
+    return createNewHistoryRepository(au);
+  }
+}
+
 }

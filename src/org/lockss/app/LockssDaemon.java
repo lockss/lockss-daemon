@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.49 2004-01-29 01:46:46 eaalto Exp $
+ * $Id: LockssDaemon.java,v 1.50 2004-02-03 02:48:40 eaalto Exp $
  */
 
 /*
@@ -137,8 +137,6 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   private static String DEFAULT_PLUGIN_MANAGER =
     "org.lockss.plugin.PluginManager";
   private static String DEFAULT_POLL_MANAGER = "org.lockss.poller.PollManager";
-  private static String DEFAULT_HISTORY_REPOSITORY =
-    "org.lockss.state.HistoryRepositoryImpl";
   private static String DEFAULT_PROXY_MANAGER =
     "org.lockss.proxy.ProxyManager";
   private static String DEFAULT_SERVLET_MANAGER =
@@ -161,6 +159,8 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     "org.lockss.repository.LockssRepositoryImpl$Factory";
   private static String DEFAULT_NODE_MANAGER =
     "org.lockss.state.NodeManagerImpl$Factory";
+  private static String DEFAULT_HISTORY_REPOSITORY =
+    "org.lockss.state.HistoryRepositoryImpl$Factory";
 
 
   protected static class ManagerDesc {
@@ -189,7 +189,6 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     new ManagerDesc(HASH_SERVICE, DEFAULT_HASH_SERVICE),
     new ManagerDesc(SYSTEM_METRICS, DEFAULT_SYSTEM_METRICS),
     new ManagerDesc(IDENTITY_MANAGER, DEFAULT_IDENTITY_MANAGER),
-    new ManagerDesc(HISTORY_REPOSITORY, DEFAULT_HISTORY_REPOSITORY),
     new ManagerDesc(POLL_MANAGER, DEFAULT_POLL_MANAGER),
     new ManagerDesc(CRAWL_MANAGER, DEFAULT_CRAWL_MANAGER),
     // start plugin manager after generic services
@@ -209,9 +208,11 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   // are started in this order.
   protected static final ManagerDesc[] auManagerDescs = {
     new ManagerDesc(ACTIVITY_REGULATOR, DEFAULT_ACTIVITY_REGULATOR),
-    // Repository uses ActivityRegulator
+    // LockssRepository uses ActivityRegulator
     new ManagerDesc(LOCKSS_REPOSITORY, DEFAULT_LOCKSS_REPOSITORY),
-    // NodeManager uses Repository and ActivityRegulator
+    // HistoryRepository needs no extra managers
+    new ManagerDesc(HISTORY_REPOSITORY, DEFAULT_HISTORY_REPOSITORY),
+    // NodeManager uses LockssRepository, HistoryRepository, and ActivityRegulator
     new ManagerDesc(NODE_MANAGER, DEFAULT_NODE_MANAGER),
   };
 
@@ -365,15 +366,6 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   }
 
   /**
-   * return the history repository instance
-   * @return the HistoryRepository
-   * @throws IllegalArgumentException if the manager is not available.
-   */
-  public HistoryRepository getHistoryRepository() {
-    return (HistoryRepository) getManager(HISTORY_REPOSITORY);
-  }
-
-  /**
    * return the proxy handler instance
    * @return the ProxyManager
    * @throws IllegalArgumentException if the manager is not available.
@@ -500,6 +492,16 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     return (NodeManager)getAuManager(NODE_MANAGER, au);
   }
 
+
+  /**
+   * Return the HistoryRepository instance
+   * @param au the ArchivalUnit
+   * @return the HistoryRepository
+   * @throws IllegalArgumentException if the manager is not available.
+   */
+  public HistoryRepository getHistoryRepository(ArchivalUnit au) {
+    return (HistoryRepository)getAuManager(HISTORY_REPOSITORY, au);
+  }
   /**
    * Return ActivityRegulator instance
    * @param au the ArchivalUnit

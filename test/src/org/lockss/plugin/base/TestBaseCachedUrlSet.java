@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCachedUrlSet.java,v 1.5 2004-01-27 04:07:06 tlipkis Exp $
+ * $Id: TestBaseCachedUrlSet.java,v 1.6 2004-02-03 02:48:39 eaalto Exp $
  */
 
 /*
@@ -34,16 +34,12 @@ package org.lockss.plugin.base;
 
 import java.io.*;
 import java.util.*;
-import java.net.MalformedURLException;
 import org.lockss.daemon.*;
 import org.lockss.repository.*;
 import org.lockss.state.*;
 import org.lockss.test.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.simulated.SimulatedArchivalUnit;
-import org.lockss.util.StreamUtil;
 import org.lockss.hasher.HashService;
-import java.security.MessageDigest;
 
 /**
  * This is the test class for
@@ -69,12 +65,11 @@ public class TestBaseCachedUrlSet extends LockssTestCase {
     Properties props = new Properties();
     props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     props.setProperty(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION, tempDirPath);
-    props.setProperty(SystemMetrics.PARAM_DEFAULT_HASH_SPEED, 
+    props.setProperty(SystemMetrics.PARAM_DEFAULT_HASH_SPEED,
 		      Integer.toString(HASH_SPEED));
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
     theDaemon = new MockLockssDaemon();
-    theDaemon.getHistoryRepository().startService();
     hashService = theDaemon.getHashService();
     hashService.startService();
     metrics = theDaemon.getSystemMetrics();
@@ -85,6 +80,7 @@ public class TestBaseCachedUrlSet extends LockssTestCase {
     plugin.initPlugin(theDaemon);
     mau.setPlugin(plugin);
 
+    theDaemon.getHistoryRepository(mau).startService();
     repo = theDaemon.getLockssRepository(mau);
     nodeMan = theDaemon.getNodeManager(mau);
     nodeMan.startService();
@@ -95,7 +91,7 @@ public class TestBaseCachedUrlSet extends LockssTestCase {
     repo.stopService();
     nodeMan.stopService();
     hashService.stopService();
-    theDaemon.getHistoryRepository().stopService();
+    theDaemon.getHistoryRepository(mau).stopService();
     theDaemon.stopDaemon();
     super.tearDown();
   }

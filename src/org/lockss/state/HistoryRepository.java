@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepository.java,v 1.7 2003-06-20 22:34:52 claire Exp $
+ * $Id: HistoryRepository.java,v 1.8 2004-02-03 02:48:39 eaalto Exp $
  */
 
 /*
@@ -30,19 +30,16 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-
 package org.lockss.state;
 
-import java.util.List;
-import org.lockss.daemon.*;
 import org.lockss.plugin.*;
-import org.lockss.app.LockssManager;
+import org.lockss.app.LockssAuManager;
 
 /**
  * HistoryRepository is an inner layer of the NodeManager which handles the actual
  * storage of NodeStates.
  */
-public interface HistoryRepository extends LockssManager {
+public interface HistoryRepository extends LockssAuManager {
 
   /**
    * Stores the current node state info, except the histories.
@@ -71,29 +68,27 @@ public interface HistoryRepository extends LockssManager {
   public void loadPollHistories(NodeState nodeState);
 
   /**
-   * Stores the AuState for a particular ArchivalUnit
+   * Stores the AuState for this ArchivalUnit
    * @param auState the state to store
    */
   public void storeAuState(AuState auState);
 
   /**
-   * Loads the AuState for a particular ArchivalUnit
-   * @param au the ArchivalUnit state to load
+   * Loads the AuState for this ArchivalUnit
    * @return the {@link AuState}
    */
-  public AuState loadAuState(ArchivalUnit au);
+  public AuState loadAuState();
 
   /**
-   * Stores the DamagedNodeSet for a particular ArchivalUnit
+   * Stores the DamagedNodeSet for this ArchivalUnit
    * @param nodeSet the set to store
    */
   public void storeDamagedNodeSet(DamagedNodeSet nodeSet);
 
   /**
-   * Loads the DamagedNodeSet for a particular ArchivalUnit
-   * @param au the ArchivalUnit state to load
+   * Loads the DamagedNodeSet for this ArchivalUnit
    * @return the {@link DamagedNodeSet}
    */
-  public DamagedNodeSet loadDamagedNodeSet(ArchivalUnit au);
+  public DamagedNodeSet loadDamagedNodeSet();
 
 }

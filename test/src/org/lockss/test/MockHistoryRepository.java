@@ -1,5 +1,5 @@
 /*
- * $Id: MockHistoryRepository.java,v 1.5 2003-06-20 22:34:55 claire Exp $
+ * $Id: MockHistoryRepository.java,v 1.6 2004-02-03 02:48:39 eaalto Exp $
  */
 
 /*
@@ -37,15 +37,16 @@ import java.util.HashMap;
 import org.lockss.app.*;
 import org.lockss.state.*;
 import org.lockss.plugin.*;
+import org.lockss.daemon.Configuration;
 
 /**
  * MockHistoryRepository is a mock implementation of the HistoryRepository.
  */
-public class MockHistoryRepository implements HistoryRepository, LockssManager {
+public class MockHistoryRepository implements HistoryRepository {
   public HashMap storedHistories = new HashMap();
-  public HashMap storedAus = new HashMap();
+  public AuState theAuState;
+  public DamagedNodeSet theDamagedNodeSet;
   public HashMap storedNodes = new HashMap();
-  public HashMap storedDamage = new HashMap();
 
   public MockHistoryRepository() { }
 
@@ -53,9 +54,11 @@ public class MockHistoryRepository implements HistoryRepository, LockssManager {
   public void startService() { }
   public void stopService() {
     storedHistories = new HashMap();
-    storedAus = new HashMap();
+    theAuState = null;
+    theDamagedNodeSet = null;
     storedNodes = new HashMap();
-    storedDamage = new HashMap();
+  }
+  public void setAuConfig(Configuration auConfig) {
   }
 
   public void storePollHistories(NodeState nodeState) {
@@ -71,19 +74,19 @@ public class MockHistoryRepository implements HistoryRepository, LockssManager {
   }
 
   public void storeAuState(AuState auState) {
-    storedAus.put(auState.getArchivalUnit(), auState);
+    theAuState = auState;
   }
 
-  public AuState loadAuState(ArchivalUnit au) {
-    return (AuState)storedAus.get(au);
+  public AuState loadAuState() {
+    return theAuState;
   }
 
   public void storeDamagedNodeSet(DamagedNodeSet nodeSet) {
-    storedDamage.put(nodeSet.getArchivalUnit(), nodeSet);
+    theDamagedNodeSet = nodeSet;
   }
 
-  public DamagedNodeSet loadDamagedNodeSet(ArchivalUnit au) {
-    return (DamagedNodeSet)storedDamage.get(au);
+  public DamagedNodeSet loadDamagedNodeSet() {
+    return theDamagedNodeSet;
   }
 
 
