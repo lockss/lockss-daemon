@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManager.java,v 1.8 2003-03-03 19:34:58 troberts Exp $
+ * $Id: CrawlManager.java,v 1.9 2003-03-20 21:48:29 troberts Exp $
  */
 
 /*
@@ -55,19 +55,19 @@ public interface CrawlManager {
 
 
   /**
-   * Called at the beginning of each tree walk.  The crawler checks if there
-   * is anything it needs to do on the AU (such as a new content crawl)
-   * before the treewalk begins.
+   * Returns true if there is an active crawl on the AU; can also trigger the
+   * beginning of a new content crawl if one hasn't happened recently.
    *
    * @param au ArchivalUnit that the crawl manager should check
    * @param aus AuState that the crawl manager should use
-   * @param cb callback to be called when treewalk can start, if not now
+   * @param cb callback to be called when the crawler is done with the AU, 
+   * if not now
    * @param cookie cookie for the callback
-   * @return true if the tree walk can begin now, false otherwise
+   * @return true if there is a crawl going on for that AU, false otherwise
    */
 
-  public boolean canTreeWalkStart(ArchivalUnit au, 
-				  CrawlManager.Callback cb, Object cookie);
+  public boolean isCrawlingAU(ArchivalUnit au, 
+			      CrawlManager.Callback cb, Object cookie);
 
   public interface Callback {
     /**

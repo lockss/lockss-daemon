@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.10 2003-03-20 02:29:18 troberts Exp $
+ * $Id: CrawlManagerImpl.java,v 1.11 2003-03-20 21:48:29 troberts Exp $
  */
 
 /*
@@ -59,7 +59,9 @@ public class CrawlManagerImpl implements CrawlManager, LockssManager {
   private static LockssDaemon theDaemon = null;
   private static final String CRAWL_STATUS_TABLE_NAME = "crawl_status_table";
   private Map newContentCrawls = new HashMap();
-  
+  private Set activeCrawls = new HashSet();
+  private static Logger logger = Logger.getLogger("CrawlManagerImpl");
+
 
 
   /**
@@ -111,6 +113,7 @@ public class CrawlManagerImpl implements CrawlManager, LockssManager {
    */
   public void scheduleRepair(ArchivalUnit au, URL url,
 			     CrawlManager.Callback cb, Object cookie){
+    //XXX check to make sure no other crawls are running and queue if they are
     if (au == null) {
       throw new IllegalArgumentException("Called with null AU");
     } if (url == null) {
@@ -124,17 +127,23 @@ public class CrawlManagerImpl implements CrawlManager, LockssManager {
     crawlThread.start();
   }
 
-  public boolean canTreeWalkStart(ArchivalUnit au, CrawlManager.Callback cb,
+  public boolean isCrawlingAU(ArchivalUnit au, CrawlManager.Callback cb,
 				  Object cookie){
     if (au == null) {
       throw new IllegalArgumentException("Called with null AU");
     }
     NodeManager nodeManager = theDaemon.getNodeManager(au);
     if (au.shouldCrawlForNewContent(nodeManager.getAuState())) {
-      scheduleNewContentCrawl(au, cb, cookie);
-      return false;
+      synchronized (activeCrawls) {
+	if (!activeCrawls.contains(au)) {
+	  logger.debug3("No crawls for "+au+", scheduling new content crawl");
+	  activeCrawls.add(au);
+	  scheduleNewContentCrawl(au, cb, cookie);
+	  return true;
+	}
+      }
     }
-    return true;
+    return false;
   }
 
   public boolean shouldRecrawl(ArchivalUnit au, NodeState ns) {

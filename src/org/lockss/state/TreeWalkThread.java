@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkThread.java,v 1.4 2003-03-20 02:00:07 aalto Exp $
+ * $Id: TreeWalkThread.java,v 1.5 2003-03-20 21:48:29 troberts Exp $
  */
 
 /*
@@ -154,7 +154,7 @@ public class TreeWalkThread extends Thread {
   void doTreeWalk() {
     treeWalkRunning = true;
     logger.debug("Attempting tree walk: "+theAu.getName());
-    if (theCrawlManager.canTreeWalkStart(theAu, null, null)) {
+    if (!theCrawlManager.isCrawlingAU(theAu, null, null)) {
       long startTime = TimeBase.nowMs();
 
       NodeState topNode = manager.getNodeState(theAu.getAUCachedUrlSet());

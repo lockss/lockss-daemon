@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.10 2003-03-15 03:16:46 aalto Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.11 2003-03-20 21:48:29 troberts Exp $
  */
 
 /*
@@ -81,10 +81,10 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     super.tearDown();
   }
 
-  public void testNullAUForCanTreeWalkStart() {
+  public void testNullAUForIsCrawlingAU() {
     try {
-      crawlManager.canTreeWalkStart(null, new TestCrawlCB(Deadline.NEVER),
-				    "blah");
+      crawlManager.isCrawlingAU(null, new TestCrawlCB(Deadline.NEVER),
+				"blah");
       fail("Didn't throw an IllegalArgumentException on a null AU");
     } catch (IllegalArgumentException iae) {
     }
@@ -92,13 +92,13 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 
   public void testDoesNotStartCrawlIfShouldNot() {
     mau.setShouldCrawlForNewContent(false);
-    assertTrue(crawlManager.canTreeWalkStart(mau, null, null));
+    assertFalse(crawlManager.isCrawlingAU(mau, null, null));
   }
 
-  public void testNullCallbackForCanTreeWalkStart() {
+  public void testNullCallbackForIsCrawlingAU() {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
     cus.addUrl(LINKLESS_PAGE, startUrl);
-    crawlManager.canTreeWalkStart(mau, null, "blah");
+    crawlManager.isCrawlingAU(mau, null, "blah");
   }
 
   public void testDoesNewContentCrawl() {
@@ -122,8 +122,8 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     Deadline deadline = Deadline.in(1000 * 10);
 
 
-    assertFalse(crawlManager.canTreeWalkStart(mau, new TestCrawlCB(deadline),
-					      null));
+    assertTrue(crawlManager.isCrawlingAU(mau, new TestCrawlCB(deadline),
+					 null));
 
     while (!deadline.expired()) {
       try{
@@ -144,7 +144,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     cus.addUrl(LINKLESS_PAGE, startUrl);
 
     TestCrawlCB cb = new TestCrawlCB(deadline);
-    crawlManager.canTreeWalkStart(mau, cb, null);
+    crawlManager.isCrawlingAU(mau, cb, null);
 
     while (!deadline.expired()) {
       try{
@@ -163,7 +163,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     cus.addUrl(LINKLESS_PAGE, startUrl);
 
     TestCrawlCB cb = new TestCrawlCB(deadline);
-    crawlManager.canTreeWalkStart(mau, cb, cookie);
+    crawlManager.isCrawlingAU(mau, cb, cookie);
 
     while (!deadline.expired()) {
       try{
@@ -182,7 +182,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     cus.addUrl(LINKLESS_PAGE, startUrl);
 
     TestCrawlCB cb = new TestCrawlCB(deadline);
-    crawlManager.canTreeWalkStart(mau, cb, cookie);
+    crawlManager.isCrawlingAU(mau, cb, cookie);
 
     while (!deadline.expired()) {
       try{
@@ -205,7 +205,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 								  1000 * 10);
     mau.setPauseCallback(pauseCB);
 
-    crawlManager.canTreeWalkStart(mau, cb, null);
+    crawlManager.isCrawlingAU(mau, cb, null);
 
     //if the callback was triggered, the crawl completed
     assertFalse("Callback was triggered", cb.wasTriggered());
@@ -312,7 +312,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     cus.addUrl(LINKLESS_PAGE, startUrl);
 
     TestCrawlCB cb = new TestCrawlCB(deadline);
-    crawlManager.canTreeWalkStart(mau, cb, null);
+    crawlManager.isCrawlingAU(mau, cb, null);
 
     while (!deadline.expired()) {
       try{
@@ -323,6 +323,24 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     assertNotEquals(lastCrawlTime, maus.getLastCrawlTime());
   }
 
+  public void testDontScheduleTwoCrawlsOnAU() {
+    BinarySemaphore sem = new BinarySemaphore();
+
+    TestCrawlCB cb = new TestCrawlCB(Deadline.NEVER);
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
+
+    cus.addUrl(LINKLESS_PAGE, startUrl);
+
+    WaitOnSemaphoreCallback pauseCB = new WaitOnSemaphoreCallback(sem,
+								  1000 * 10);
+    mau.setPauseCallback(pauseCB);
+
+    assertTrue(crawlManager.isCrawlingAU(mau, null, null));
+    assertFalse(crawlManager.isCrawlingAU(mau, cb, null));
+
+    //if the callback was triggered, the second crawl completed
+    assertFalse("Callback was triggered", cb.wasTriggered());
+  }
 
   private class TestCrawlCB implements CrawlManager.Callback {
     Deadline timer;
