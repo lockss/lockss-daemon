@@ -1,5 +1,5 @@
 /*
- * $Id: HashService.java,v 1.9 2003-02-24 22:13:41 claire Exp $
+ * $Id: HashService.java,v 1.10 2003-03-17 08:27:12 tal Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ import java.io.*;
 import java.util.*;
 import java.security.MessageDigest;
 import org.lockss.daemon.*;
+import org.lockss.daemon.status.*;
 import org.lockss.util.*;
 import org.lockss.app.*;
 import org.lockss.plugin.*;
@@ -81,6 +82,8 @@ public class HashService implements LockssManager {
   public void startService() {
     theQueue = new HashQueue();
     theQueue.init();
+    theDaemon.getStatusService().registerStatusAccessor("HashQ",
+							theQueue.getStatusAccessor());
   }
 
   /**
@@ -90,6 +93,7 @@ public class HashService implements LockssManager {
   public void stopService() {
     // TODO: checkpoint here.
     if (theQueue != null) {
+      theDaemon.getStatusService().unregisterStatusAccessor("HashQ");
       theQueue.stop();
     }
     theQueue = null;

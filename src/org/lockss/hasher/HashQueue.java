@@ -1,5 +1,5 @@
 /*
- * $Id: HashQueue.java,v 1.16 2003-02-26 02:07:26 tal Exp $
+ * $Id: HashQueue.java,v 1.17 2003-03-17 08:27:12 tal Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import java.util.*;
 import java.text.*;
 import java.security.MessageDigest;
 import org.lockss.daemon.*;
+import org.lockss.daemon.status.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
 
@@ -399,4 +400,60 @@ class HashQueue implements Serializable {
       this.interrupt();
     }
   }
+
+  StatusAccessor getStatusAccessor() {
+    return new Status();
+  }
+
+  private static final List statusSortRules =
+    ListUtil.list(new StatusTable.SortRule("deadline", true));
+
+  private static final List statusColDescs =
+    ListUtil.list(
+		  new ColumnDescriptor("au", "Volume",
+				       ColumnDescriptor.TYPE_STRING),
+		  new ColumnDescriptor("cus", "Cached Url Set",
+				       ColumnDescriptor.TYPE_STRING),
+		  new ColumnDescriptor("deadline", "Deadline",
+				       ColumnDescriptor.TYPE_DATE),
+		  new ColumnDescriptor("estimate", "Estimated Time",
+				       ColumnDescriptor.TYPE_TIME_INTERVAL),
+		  new ColumnDescriptor("timeused", "Time Used",
+				       ColumnDescriptor.TYPE_TIME_INTERVAL)
+		  );
+		    
+
+  private class Status implements StatusAccessor {
+    public List getColumnDescriptors(String key) {
+      return statusColDescs;
+    }
+
+    public List getRows(String key) {
+      List table = new ArrayList();
+      for (ListIterator iter = qlist.listIterator(); iter.hasNext();) {
+	Request req = (Request)iter.next();
+	Map row = new HashMap();
+	row.put("au", req.urlset.getArchivalUnit().getName());
+	row.put("cus", req.urlset);
+	row.put("deadline", req.deadline.getExpiration());
+	row.put("estimate", new Long(req.origEst));
+	row.put("timeused", new Long(req.timeUsed));
+	table.add(row);
+      }
+      return table;
+    }
+
+    public List getDefaultSortRules(String key) {
+      return statusSortRules;
+    }
+
+    public boolean requiresKey() {
+      return false;
+    }
+
+    public String getTitle(String key) {
+      return "Hash Queue";
+    }
+  }
+
 }

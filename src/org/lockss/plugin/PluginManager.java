@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.17 2003-03-04 21:47:08 tal Exp $
+ * $Id: PluginManager.java,v 1.18 2003-03-17 08:27:12 tal Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.plugin;
 
 import java.util.*;
 import org.lockss.daemon.*;
+import org.lockss.daemon.status.*;
 import org.lockss.util.*;
 import org.lockss.app.*;
 import org.lockss.poller.*;
@@ -89,6 +90,8 @@ public class PluginManager implements LockssManager {
 	  setConfig(newConfig, oldConfig);
 	}
       });
+    theDaemon.getStatusService().registerStatusAccessor("AUS",
+							new Status(this));
   }
 
   /**
@@ -284,7 +287,61 @@ public class PluginManager implements LockssManager {
     return cus;
   }
 
+  private static class Status implements StatusAccessor {
+    private static final List sortRules =
+      ListUtil.list(new StatusTable.SortRule("au", true));
 
+    private static final List colDescs =
+      ListUtil.list(
+		    new ColumnDescriptor("au", "Journal Volume",
+					 ColumnDescriptor.TYPE_STRING),
+		    new ColumnDescriptor("pluginid", "Plugin ID",
+					 ColumnDescriptor.TYPE_STRING),
+		    new ColumnDescriptor("auid", "AUID",
+					 ColumnDescriptor.TYPE_STRING),
+		    new ColumnDescriptor("poll", "Poll Status",
+					 ColumnDescriptor.TYPE_STRING),
+		    new ColumnDescriptor("crawl", "Crawl Status",
+					 ColumnDescriptor.TYPE_STRING)
+		    );
+		    
+    // need this because the statics above require this to be a nested,
+    // not inner class.
+    PluginManager mgr;
+
+    Status(PluginManager mgr) {
+      this.mgr = mgr;
+    }
+
+    public List getColumnDescriptors(String key) {
+      return colDescs;
+    }
+
+    public List getRows(String key) {
+      List table = new ArrayList();
+      for (Iterator iter = mgr.getAllAUs().iterator(); iter.hasNext();) {
+	Map row = new HashMap();
+	ArchivalUnit au = (ArchivalUnit)iter.next();
+	row.put("au", au.getName());
+	row.put("pluginid", au.getPluginId());
+	row.put("auid", au.getAUId());
+	table.add(row);
+      }
+      return table;
+    }
+
+    public List getDefaultSortRules(String key) {
+      return sortRules;
+    }
+
+    public boolean requiresKey() {
+      return false;
+    }
+
+    public String getTitle(String key) {
+      return "Archival Units";
+    }
+  }
 //   protected void initPlugins() {
 //     /* grab our 3rd party plugins and load them using security manager */
 //     String[] files = new java.io.File(pluginDir).list();
