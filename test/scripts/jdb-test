@@ -9,7 +9,8 @@ fi
 
 PROJECT_DIR=.
 
-CLASSPATH=$tmplib/lockss.jar:$tmplib/lockss-test.jar:`cat test/test-classpath`
+CLASSPATH=`cat test/test-classpath`
+export CLASSPATH
 
 while true ; do
   case "$1" in
@@ -38,12 +39,5 @@ done
 
 class=$1
 shift
-
-# local copy of lockss jars allows recompile while we're running
-tmplib=tmplib
-mkdir -p $tmplib
-cp ${PROJECT_DIR}/lib/lockss.jar $tmplib
-cp ${PROJECT_DIR}/lib/lockss-test.jar $tmplib
-export CLASSPATH
 
 jdb junit.textui.TestRunner -Dxorg.lockss.defaultLogLevel=warning $class
