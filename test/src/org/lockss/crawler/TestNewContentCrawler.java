@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.14 2004-07-19 22:34:39 dcfok Exp $
+ * $Id: TestNewContentCrawler.java,v 1.15 2004-08-11 19:41:08 clairegriffin Exp $
  */
 
 /*
@@ -68,6 +68,8 @@ public class TestNewContentCrawler extends LockssTestCase {
     crawlRule.addUrlToCrawl(startUrl);
     spec = new CrawlSpec(startUrls, crawlRule);
     crawler = new NewContentCrawler(mau, spec, aus);
+    ((CrawlerImpl)crawler).permissionCheckers.clear();
+    ((CrawlerImpl)crawler).permissionCheckers.add(new MockPermissionChecker(1));
 
     mau.setParser(parser);
     Properties p = new Properties();
@@ -150,6 +152,8 @@ public class TestNewContentCrawler extends LockssTestCase {
 
     spec = new CrawlSpec(urls, crawlRule);
     crawler = new NewContentCrawler(mau, spec, new MockAuState());
+    ((CrawlerImpl)crawler).permissionCheckers.clear();
+    ((CrawlerImpl)crawler).permissionCheckers.add(new MockPermissionChecker(1));
 
     mau.setParser(parser);
 
@@ -171,6 +175,8 @@ public class TestNewContentCrawler extends LockssTestCase {
   public void testOverwritesStartingUrlsMultipleLevels() {
     spec = new CrawlSpec(startUrls, crawlRule, 2);
     crawler = new NewContentCrawler(mau, spec, new MockAuState());
+    ((CrawlerImpl)crawler).permissionCheckers.clear();
+    ((CrawlerImpl)crawler).permissionCheckers.add(new MockPermissionChecker(1));
 
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     String url1= "http://www.example.com/link1.html";
@@ -275,6 +281,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     String url2 = "http://www.example.com/link4.html";
     parser.addUrlSetToReturn(startUrl, SetUtil.set(url1, url2));
     MyMockCachedUrlSet cus = (MyMockCachedUrlSet)mau.getAuCachedUrlSet();
+
     cus.addUrl(startUrl, true, true);
     cus.addUrl(url1);
     cus.addUrl(url2);
@@ -444,7 +451,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     List urls = ListUtil.list(url1,url2,url3,url4,permissionUrl1,permissionUrl2);
 
     MockCachedUrlSet cus = permissionPageTestSetup(permissionList,2,urls, new MockPlugin());
-    
+
     assertTrue(crawler.doCrawl());
     Set expected = SetUtil.fromList(urls);
     assertEquals(expected, cus.getCachedUrls());
@@ -454,7 +461,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     String permissionUrl1 = "http://www.example.com/index.html";
     String permissionUrl2 = "http://www.foo.com/index.html";
     List permissionList = ListUtil.list(permissionUrl1,permissionUrl2);
-    
+
     String url1= "http://www.example.com/link1.html";
     String url2= "http://www.example.com/link2.html";
     String url3= "http://www.foo.com/link3.html";
@@ -462,7 +469,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     List urls = ListUtil.list(url1,url2,url3,url4,permissionUrl1,permissionUrl2);
 
     MockCachedUrlSet cus = permissionPageTestSetup(permissionList,1,urls, new MockPlugin());
-    
+
     assertFalse(crawler.doCrawl());
     Set expected = SetUtil.set(permissionUrl1, url1, url2);
     assertEquals(expected, cus.getCachedUrls());
@@ -472,7 +479,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     String permissionUrl1 = "http://www.example.com/index.html";
     String permissionUrl2 = "http://www.foo.com/index.html";
     List permissionList = ListUtil.list(permissionUrl1,permissionUrl2);
-    
+
     String url1= "http://www.example.com/link1.html";
     String url3= "http://www.foo.com/link3.html";
     List urls = ListUtil.list(url1,url3,permissionUrl1,permissionUrl2);
@@ -480,7 +487,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     MockCachedUrlSet cus = permissionPageTestSetup(permissionList,1,urls, new MockPlugin());
 
     setProperty(NewContentCrawler.PARAM_ABORT_WHILE_PERMISSION_OTHER_THAN_OK,""+true);
-    
+
     assertFalse(crawler.doCrawl());
     Set expected = SetUtil.set(permissionUrl1);
     assertEquals(expected, cus.getCachedUrls());
@@ -489,13 +496,13 @@ public class TestNewContentCrawler extends LockssTestCase {
   public void testPermissionPageShouldFailAsFetchPermissionFailTwice(){
     String permissionUrl1 = "http://www.example.com/index.html";
     List permissionList = ListUtil.list(permissionUrl1);
-    
+
     String url1= "http://www.example.com/link1.html";
     String url2= "http://www.example.com/link2.html";
     List urls = ListUtil.list(url1,url2,permissionUrl1);
-    
+
     HashMap hMap = new HashMap();
-    // makeUrlCacher in MyMockPlugin will get call 2 time, before a 
+    // makeUrlCacher in MyMockPlugin will get call 2 time, before a
     // uc.cache() is called
     hMap.put((String) permissionUrl1.toLowerCase(),new Integer(4));
 
@@ -510,13 +517,13 @@ public class TestNewContentCrawler extends LockssTestCase {
   public void testPermissionPageFailOnceAndOkAfterRefetch(){
     String permissionUrl1 = "http://www.example.com/index.html";
     List permissionList = ListUtil.list(permissionUrl1);
-    
+
     String url1= "http://www.example.com/link1.html";
     String url2= "http://www.example.com/link2.html";
     List urls = ListUtil.list(url1,url2,permissionUrl1);
-    
+
     HashMap hMap = new HashMap();
-    // makeUrlCacher in MyMockPlugin will get call 2 time, before a 
+    // makeUrlCacher in MyMockPlugin will get call 2 time, before a
     // uc.cache() is called
     hMap.put((String) permissionUrl1.toLowerCase(),new Integer(2));
 
@@ -532,25 +539,26 @@ public class TestNewContentCrawler extends LockssTestCase {
   public void testPermissionPageMissing(){
     String permissionUrl1 = "http://www.example.com/index.html";
     List permissionList = ListUtil.list(permissionUrl1);
-    
+
     String url1= "http://www.example.com/link1.html";
     String url3= "http://www.foo.com/link3.html";
     List urls = ListUtil.list(url1,url3,permissionUrl1);
 
-    MockCachedUrlSet cus = permissionPageTestSetup(permissionList,1,urls, new MockPlugin());
+    MockCachedUrlSet cus =
+        permissionPageTestSetup(permissionList, 1, urls, new MockPlugin());
 
     assertFalse(crawler.doCrawl());
     Set expected = SetUtil.set(permissionUrl1, url1);
     assertEquals(expected, cus.getCachedUrls());
   }
 
-  private MockCachedUrlSet permissionPageTestSetup(List permissionPages, int passPermissionCheck, 
-						   List urlsToCrawl, MockPlugin mp){
-    MyMockArchivalUnit mmau = new MyMockArchivalUnit();
-    
+  private MockCachedUrlSet permissionPageTestSetup(List permissionPages,
+      int passPermissionCheck, List urlsToCrawl, MockPlugin mp) {
+    MockArchivalUnit mmau = new MockArchivalUnit();
+
     //set permissionPage and set Who to grant how many time
     mmau.setPermissionPages(permissionPages);
-    mmau.setNumPermissionGranted(passPermissionCheck);
+    //mmau.setNumPermissionGranted(passPermissionCheck);
 
     //set plugin
     mmau.setPlugin(mp);
@@ -559,7 +567,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     MockCachedUrlSet cus = new MyMockCachedUrlSet(mmau, null);
     mmau.setAuCachedUrlSet(cus);
     crawlRule = new MockCrawlRule();
-    
+
     for (int ix=0; ix<urlsToCrawl.size(); ix++) {
       String curUrl = (String)urlsToCrawl.get(ix);
       cus.addUrl(curUrl);
@@ -567,14 +575,17 @@ public class TestNewContentCrawler extends LockssTestCase {
     }
 
     //set Crawl spec
-    spec = new CrawlSpec(urlsToCrawl, crawlRule); 
+    spec = new CrawlSpec(urlsToCrawl, crawlRule);
 
     //set Crawler
     crawler = new NewContentCrawler(mmau, spec, new MockAuState());
-    
+    ((CrawlerImpl)crawler).permissionCheckers.clear();
+    ((CrawlerImpl)crawler).permissionCheckers.add(
+        new MockPermissionChecker(passPermissionCheck));
+
     //set parser
     mmau.setParser(parser);
-    
+
     return cus;
   }
 
@@ -582,27 +593,6 @@ public class TestNewContentCrawler extends LockssTestCase {
     Properties p = new Properties();
     p.setProperty(prop, value);
     ConfigurationUtil.setCurrentConfigFromProps(p);
-  }
-
-  private class MyMockArchivalUnit extends MockArchivalUnit {
-    
-    public MyMockArchivalUnit(){
-      super();
-    }
-
-    int numPermissionGranted=0;
-
-    public void setNumPermissionGranted(int num){
-      numPermissionGranted = num;
-    }
-    
-    public boolean checkCrawlPermission(Reader reader) {
-      if (numPermissionGranted-- > 0) {
-	return true;
-      } else {
-	return false;
-      }
-    }
   }
 
   private class MyMockPlugin extends MockPlugin {
@@ -673,7 +663,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     }
 
   }
- 
+
   private class MyMockUrlCacher extends MockUrlCacher {
     private boolean abortCrawl = false;
 
@@ -693,7 +683,34 @@ public class TestNewContentCrawler extends LockssTestCase {
       if (abortCrawl) {
 	crawler.abortCrawl();
       }
-    }  
+    }
+  }
+
+  private class MockPermissionChecker implements PermissionChecker{
+    int numPermissionGranted=0;
+
+    MockPermissionChecker(int numPermissionGranted) {
+      this.numPermissionGranted = numPermissionGranted;
+    }
+
+    public void setNumPermissionGranted(int num){
+      numPermissionGranted = num;
+    }
+
+   /**
+     * checkPermission
+     *
+     * @param reader Reader
+     * @return boolean
+     */
+    public boolean checkPermission(Reader reader) {
+        if (numPermissionGranted-- > 0) {
+          return true;
+        } else {
+          return false;
+        }
+
+    }
   }
 
   public static void main(String[] argv) {

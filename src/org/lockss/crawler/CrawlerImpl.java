@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerImpl.java,v 1.25 2004-07-28 22:49:28 dcfok Exp $
+ * $Id: CrawlerImpl.java,v 1.26 2004-08-11 19:41:52 clairegriffin Exp $
  */
 
 /*
@@ -34,14 +34,14 @@ package org.lockss.crawler;
 
 import java.io.*;
 import java.util.*;
-import java.net.URL;
-import org.lockss.daemon.*;
-import org.lockss.state.*;
+
 import org.lockss.alert.*;
+import org.lockss.daemon.*;
+import org.lockss.filter.*;
+import org.lockss.plugin.*;
+import org.lockss.state.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
-import org.lockss.plugin.*;
-import org.lockss.plugin.base.*;
 
 /**
  * The crawler.
@@ -72,6 +72,9 @@ public abstract class CrawlerImpl implements Crawler {
     Configuration.PREFIX + "crawler.storePermissionsRefetch";
   public static final boolean DEFAULT_REFETCH_PERMISSIONS_PAGE = false;
 
+  public static final String LOCKSS_PERMISSION_STRING =
+  "LOCKSS system has permission to collect, preserve, and serve this Archival Unit";
+
   // Max amount we'll buffer up to avoid refetching the permissions page
   static final int PERM_BUFFER_MAX = 16 * 1024;
 
@@ -95,6 +98,7 @@ public abstract class CrawlerImpl implements Crawler {
   protected abstract boolean doCrawl0();
   public abstract int getType();
 
+  protected ArrayList permissionCheckers = new ArrayList();
   protected AlertManager alertMgr;
 
   protected CrawlerImpl(ArchivalUnit au, CrawlSpec spec, AuState aus) {
@@ -108,6 +112,11 @@ public abstract class CrawlerImpl implements Crawler {
     this.au = au;
     this.spec = spec;
     this.aus = aus;
+    StringPermissionChecker spc = new StringPermissionChecker(
+        LOCKSS_PERMISSION_STRING, new CrawlerFilterRule());
+    spc.setFlag(StringPermissionChecker.IGNORE_CASE, true);
+    permissionCheckers.add(spc);
+    permissionCheckers.addAll(spec.getPermissionCheckers());
     connectionPool = new LockssUrlConnectionPool();
 
     long connectTimeout =
@@ -151,15 +160,10 @@ public abstract class CrawlerImpl implements Crawler {
   }
 
   int crawlPermission(String permissionPage) {
-    
+
     int crawl_ok = PermissionMap.PERMISSION_UNCHECKED;
     String err = Crawler.STATUS_PUB_PERMISSION;
-    CachedUrlSet ownerCus = au.getAuCachedUrlSet();
-
-    // fetch and cache the permission pages
-    UrlCacher uc = makeUrlCacher(ownerCus, permissionPage);
     logger.debug("Checking for permissions on " + permissionPage);
-    uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW_ON_HOST);
     try {
       if (!au.shouldBeCached(permissionPage)) {
 // 	alertMgr.raiseAlert(Alert.auAlert(Alert.PERMISSION_PAGE_FETCH_ERROR,
@@ -167,71 +171,42 @@ public abstract class CrawlerImpl implements Crawler {
 // 			    setAttribute(ATTR_TEXT, "Permission page " +
 // 					 permissionPage +
 // 					 " is not within the crawl spec"));
-	logger.warning("Permission page not within CrawlSpec");
-      } else if ((au.getCrawlSpec()!=null) && !au.getCrawlSpec().canCrawl()) {
-	logger.debug("Couldn't start crawl due to crawl window.");
-	err = Crawler.STATUS_WINDOW_CLOSED;
-      } else {
-	// check for the permission on the page without storing
-	InputStream is = new BufferedInputStream(uc.getUncachedInputStream());
-	try {
-	  // allow us to reread contents if reasonable size
-	  is.mark(PERM_BUFFER_MAX);
-	  // set the reader to our default encoding
-	  //XXX try to extract encoding from source
-	  Reader reader =
-	    new InputStreamReader(is, Constants.DEFAULT_ENCODING);
-	  if (!au.checkCrawlPermission(reader)) {
-	    logger.error("No crawl permission on " + permissionPage);
-	    crawl_ok = PermissionMap.PERMISSION_NOT_OK;
-	    alertMgr.raiseAlert(Alert.auAlert(Alert.NO_CRAWL_PERMISSION,
-					      au).
-				setAttribute(Alert.ATTR_TEXT,
-					     "The page at " + permissionPage +
-					     "\ndoes not contain the " +
-					     "LOCKSS permission statement.\n" +
-					     "No collection was done."));
-	  } else {
-	    if (Configuration.getBooleanParam(PARAM_REFETCH_PERMISSIONS_PAGE,
-					      DEFAULT_REFETCH_PERMISSIONS_PAGE)) {
-	      logger.debug3("Permission granted. Caching permission page.");
-	      storePermissionPage(ownerCus, permissionPage);
-	      crawl_ok = PermissionMap.PERMISSION_OK;
-	      if (crawlStatus.getCrawlError() == err){
-		crawlStatus.setCrawlError(null);
-	      }
-	    } else {
-	      try {
-		logger.debug3("Permission granted. Storing permission page.");
-		is.reset();
-		uc.storeContent(is, uc.getUncachedProperties());
-		crawl_ok = PermissionMap.PERMISSION_OK;
-		if (crawlStatus.getCrawlError() == err){
-		  crawlStatus.setCrawlError(null);
-		}
-	      } catch (IOException e) {
-		logger.debug("Couldn't store from existing stream, refetching", e);
-		storePermissionPage(ownerCus, permissionPage);
-		crawl_ok = PermissionMap.PERMISSION_OK;
-		if (crawlStatus.getCrawlError() == err){
-		  crawlStatus.setCrawlError(null);
-		}
-	      }
-	    }
-	  }
-	} finally {
-	  is.close();
-	}
+        logger.warning("Permission page not within CrawlSpec");
       }
-    } catch (Exception ex) {
+      else if ( (au.getCrawlSpec() != null) && !au.getCrawlSpec().canCrawl()) {
+        logger.debug("Couldn't start crawl due to crawl window.");
+        err = Crawler.STATUS_WINDOW_CLOSED;
+      }
+      else {
+        if(checkPermission(permissionPage)) {
+          crawl_ok = PermissionMap.PERMISSION_OK;
+           if (crawlStatus.getCrawlError() == err) {
+             crawlStatus.setCrawlError(null);
+           }
+        }
+        else {
+          logger.error("No crawl permission on " + permissionPage);
+          crawl_ok = PermissionMap.PERMISSION_NOT_OK;
+          alertMgr.raiseAlert(Alert.auAlert(Alert.NO_CRAWL_PERMISSION,
+                                            au).
+                              setAttribute(Alert.ATTR_TEXT,
+                                           "The page at " + permissionPage +
+                                           "\ndoes not contain the " +
+                                           "LOCKSS permission statement.\n" +
+                                           "No collection was done."));
+
+        }
+      }
+    }
+    catch (Exception ex) {
       logger.error("Exception reading permission page", ex);
       alertMgr.raiseAlert(Alert.auAlert(Alert.PERMISSION_PAGE_FETCH_ERROR, au).
-			  setAttribute(Alert.ATTR_TEXT,
-				       "The LOCKSS permission page at " +
-				       permissionPage +
-				       "\ncould not be fetched. " +
-				       "The error was:\n" +
-				       ex.getMessage() + "\n"));
+                          setAttribute(Alert.ATTR_TEXT,
+                                       "The LOCKSS permission page at " +
+                                       permissionPage +
+                                       "\ncould not be fetched. " +
+                                       "The error was:\n" +
+                                       ex.getMessage() + "\n"));
       crawl_ok = PermissionMap.FETCH_PERMISSION_FAILED;
     }
 
@@ -239,6 +214,62 @@ public abstract class CrawlerImpl implements Crawler {
       crawlStatus.setCrawlError(err);
     }
     return crawl_ok;
+  }
+
+  /**
+   * checkPermission check the permission page for all of the required permission
+   * objects.
+   *
+   * @param permissionPage String
+   * @param checker PermissionChecker
+   * @return boolean iff permission was found for each object on the page.
+   */
+  protected boolean checkPermission(String permissionPage) throws
+      IOException {
+
+    PermissionChecker checker;
+    // fetch and cache the permission page
+    CachedUrlSet ownerCus = au.getAuCachedUrlSet();
+    UrlCacher uc = makeUrlCacher(ownerCus, permissionPage);
+    uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW_ON_HOST);
+
+    InputStream is = new BufferedInputStream(uc.getUncachedInputStream());
+    // allow us to reread contents if reasonable size
+    try {
+      for (Iterator it = permissionCheckers.iterator(); it.hasNext(); ) {
+        is.mark(PERM_BUFFER_MAX);
+        checker = (PermissionChecker) it.next();
+        Reader reader = new InputStreamReader(is, Constants.DEFAULT_ENCODING);
+        if (!checker.checkPermission(reader)) {
+          logger.error("No crawl permission on " + permissionPage);
+          is.close();
+          return false;
+        }
+        else {
+          try {
+            is.reset();
+          }
+          catch (IOException e) {
+            uc = makeUrlCacher(ownerCus, permissionPage);
+            uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW_ON_HOST);
+            is = new BufferedInputStream(uc.getUncachedInputStream());
+          }
+        }
+      }
+      if (Configuration.getBooleanParam(PARAM_REFETCH_PERMISSIONS_PAGE,
+                                        DEFAULT_REFETCH_PERMISSIONS_PAGE)) {
+        logger.debug3("Permission granted. Caching permission page.");
+        storePermissionPage(au.getAuCachedUrlSet(), permissionPage);
+      }
+      else {
+        uc.storeContent(is, uc.getUncachedProperties());
+      }
+    }
+    finally {
+      is.close();
+    }
+
+    return true;
   }
 
   void storePermissionPage(CachedUrlSet ownerCus, String permissionPage)
@@ -291,4 +322,11 @@ public abstract class CrawlerImpl implements Crawler {
     return sb.toString();
   }
 
+  static public class CrawlerFilterRule implements FilterRule {
+    public InputStream createFilteredInputStream(Reader reader) {
+      Reader filteredReader = StringFilter.makeNestedFilter(reader,
+          new String[][] { {"<br>", " "} , {"&nbsp;", " "} } , true);
+      return new WhiteSpaceFilter(new ReaderInputStream(filteredReader));
+    }
+  }
 }

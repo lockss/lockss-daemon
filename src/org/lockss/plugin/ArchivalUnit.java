@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.24 2004-07-12 22:37:25 tlipkis Exp $
+ * $Id: ArchivalUnit.java,v 1.25 2004-08-11 19:41:17 clairegriffin Exp $
  */
 
 /*
@@ -128,14 +128,6 @@ public interface ArchivalUnit {
    * @return a List of url strings;
    */
   public List getPermissionPages();
-
-  /**
-   * Returns true if this AU has permission to crawl based on the manifest page
-   * @param reader the Reader for the manifest page which should contain the
-   * permission statement.
-   * @return true iff the PERMISSION_STRING is found.
-   */
-  public boolean checkCrawlPermission(Reader reader);
 
   /**
    * Sleeps for the interval needed between requests to the server

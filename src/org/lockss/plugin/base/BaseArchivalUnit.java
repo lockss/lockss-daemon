@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.69 2004-08-09 19:19:49 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.70 2004-08-11 19:41:24 clairegriffin Exp $
  */
 
 /*
@@ -102,9 +102,6 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   public static final String NEW_CONTENT_CRAWL_KEY = "nc_interval";
   public static final String PAUSE_TIME_KEY = "pause_time";
 
-  public static final String PERMISSION_STRING =
-  "LOCKSS system has permission to collect, preserve, and serve this Archival Unit";
-
   public static final long
       DEFAULT_NEW_CONTENT_CRAWL_INTERVAL = 2 * Constants.WEEK;
   protected Plugin plugin;
@@ -112,6 +109,8 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   static Logger logger = Logger.getLogger("BaseArchivalUnit");
   static SimpleDateFormat sdf = new SimpleDateFormat();
 
+  protected long maxAuSize = 0;
+  protected long maxAuFileSize = 0;
   protected long minFetchDelay = 6 * Constants.SECOND;
   protected long fetchDelay;
   protected long defaultFetchDelay = DEFAULT_MILLISECONDS_BETWEEN_CRAWL_HTTP_REQUESTS;
@@ -424,49 +423,6 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     return false;
   }
 
-  public boolean checkCrawlPermission(Reader reader) {
-    boolean crawl_ok = false;
-    int ch;
-    int p_index = 0;
-    String matchstr = PERMISSION_STRING.toLowerCase();
-    boolean wasWhiteSpace = false;  // last char was ws
-
-    try {
-      Reader filteredReader = getCrawlPermissionFilter(reader);
-      do {
-        ch = filteredReader.read();
-        char nextChar = matchstr.charAt(p_index);
-
-        if ((nextChar == Character.toLowerCase((char)ch))) {
-          // match precisely, or any whitespace with any other
-          if (++p_index == PERMISSION_STRING.length()) {
-            return true;
-          }
-        } else {
-          p_index = 0;
-        }
-      } while (ch != -1); // while not eof
-    } catch (IOException ex) {
-      logger.warning("Exception occured while checking for permission", ex);
-    }
-
-    return crawl_ok;
-  }
-
-  private Reader getCrawlPermissionFilter(Reader reader) throws IOException {
-    // convert html tags to whitespace
-    Reader replaceReader = StringFilter.makeNestedFilter(reader,
-        new String[][] {
-        { "<br>", " " },
-        { "&nbsp;", " " }
-    },
-        true);
-
-    // condense whitespace
-    InputStream wsIs =
-        new WhiteSpaceFilter(new ReaderInputStream(replaceReader));
-    return new InputStreamReader(wsIs, Constants.DEFAULT_ENCODING);
-  }
 
   /**
    * Simplified implementation which gets the poll interval parameter

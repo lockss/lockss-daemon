@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlSpec.java,v 1.9 2004-03-07 08:34:47 tlipkis Exp $
+ * $Id: CrawlSpec.java,v 1.10 2004-08-11 19:41:44 clairegriffin Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.util.*;
  */
 public final class CrawlSpec {
   private List startList;
+  private List permissionCheckers = Collections.EMPTY_LIST;
   private CrawlRule rule;
   private CrawlWindow window;
   private int refetchDepth = -1;
@@ -82,6 +83,14 @@ public final class CrawlSpec {
     startList = ListUtil.immutableListOfType(startUrls, String.class);
     this.rule = rule;
     this.refetchDepth = refetchDepth;
+  }
+
+  public CrawlSpec(List startUrls,
+                   CrawlRule rule,
+                   int refetchDepth,
+                   List permissionCheckers) {
+    this(startUrls, rule, refetchDepth);
+    this.permissionCheckers = permissionCheckers;
   }
 
   /**
@@ -157,5 +166,7 @@ public final class CrawlSpec {
     return refetchDepth;
   }
 
-
+  public List getPermissionCheckers() {
+    return permissionCheckers;
+  }
 }

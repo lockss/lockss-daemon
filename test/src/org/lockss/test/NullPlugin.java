@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.56 2004-07-12 22:37:24 tlipkis Exp $
+ * $Id: NullPlugin.java,v 1.57 2004-08-11 19:41:48 clairegriffin Exp $
  */
 
 /*
@@ -399,10 +399,6 @@ public class NullPlugin {
       return null;
     }
 
-    public boolean checkCrawlPermission(Reader reader) {
-      return false;
-    }
-
     public ContentParser getContentParser(String mimeType) {
       throw new UnsupportedOperationException("not implemented");
     }
@@ -410,6 +406,7 @@ public class NullPlugin {
     public FilterRule getFilterRule(String mimeType) {
       throw new UnsupportedOperationException("Not implemented");
     }
+
   }
 
   /**

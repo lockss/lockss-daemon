@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArchivalUnit.java,v 1.18 2004-07-12 22:37:24 tlipkis Exp $
+ * $Id: TestBaseArchivalUnit.java,v 1.19 2004-08-11 19:41:36 clairegriffin Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import org.lockss.test.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
 import org.lockss.daemon.Configuration;
+import org.lockss.crawler.*;
 
 /**
  * This is the test class for org.lockss.plugin.simulated.GenericFileUrlCacher
@@ -138,126 +139,6 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     TimeBase.setReal();
   }
 
-  public void testCheckCrawlPermission() {
-    StringBuffer sb = new StringBuffer("laa-dee-dah-LOCK-KCOL\n\n");
-    sb.append(BaseArchivalUnit.PERMISSION_STRING);
-    sb.append("\n\nTheEnd!");
-    String s_ok = sb.toString();
-    String s_rev = sb.reverse().toString();
-    String s_case = s_ok.toUpperCase();
-
-    Reader reader = new StringReader(s_ok);
-    assertTrue(mbau.checkCrawlPermission(reader));
-
-    reader = new StringReader(s_case);
-    assertTrue(mbau.checkCrawlPermission(reader));
-
-    reader = new StringReader(s_rev);
-    assertFalse(mbau.checkCrawlPermission(reader));
-  }
-
-  public void testCheckCrawlPermissionWithTrailingPeriod() {
-    StringBuffer sb = new StringBuffer("");
-    sb.append(BaseArchivalUnit.PERMISSION_STRING);
-    sb.append(".");
-    String s_ok = sb.toString();
-    String s_rev = sb.reverse().toString();
-    String s_case = s_ok.toUpperCase();
-
-    Reader reader = new StringReader(s_ok);
-    assertTrue(mbau.checkCrawlPermission(reader));
-
-    reader = new StringReader(s_case);
-    assertTrue(mbau.checkCrawlPermission(reader));
-
-    reader = new StringReader(s_rev);
-    assertFalse(mbau.checkCrawlPermission(reader));
-  }
-
-  public void testCheckCrawlPermissionWithWhitespace() {
-    int firstWS = BaseArchivalUnit.PERMISSION_STRING.indexOf(' ');
-    if (firstWS <=0) {
-      fail("No spaces in permission string, or starts with space");
-    }
-
-    String subStr1 = BaseArchivalUnit.PERMISSION_STRING.substring(0, firstWS);
-    String subStr2 = BaseArchivalUnit.PERMISSION_STRING.substring(firstWS+1);
-
-    // standard
-    StringBuffer sb = new StringBuffer("laa-dee-dah-LOCK-KCOL\n\n");
-    sb.append(subStr1);
-    sb.append(' ');
-    sb.append(subStr2);
-    sb.append("\n\nTheEnd!");
-    String testStr = sb.toString();
-
-    Reader reader = new StringReader(testStr);
-    assertTrue(mbau.checkCrawlPermission(reader));
-
-    // different whitespace
-    sb = new StringBuffer("laa-dee-dah-LOCK-KCOL\n\n");
-    sb.append(subStr1);
-    sb.append("\n");
-    sb.append(subStr2);
-    sb.append("\n\nTheEnd!");
-    testStr = sb.toString();
-
-    reader = new StringReader(testStr);
-    assertTrue(mbau.checkCrawlPermission(reader));
-
-    // extra whitespace
-    sb = new StringBuffer("laa-dee-dah-LOCK-KCOL\n\n");
-    sb.append(subStr1);
-    sb.append(" \n\r\t ");
-    sb.append(subStr2);
-    sb.append("\n\nTheEnd!");
-    testStr = sb.toString();
-
-    reader = new StringReader(testStr);
-    assertTrue(mbau.checkCrawlPermission(reader));
-
-    // missing whitespace
-    sb = new StringBuffer("laa-dee-dah-LOCK-KCOL\n\n");
-    sb.append(subStr1);
-    sb.append(subStr2);
-    sb.append("\n\nTheEnd!");
-    testStr = sb.toString();
-
-    reader = new StringReader(testStr);
-    assertFalse(mbau.checkCrawlPermission(reader));
-  }
-
-  public void testCheckCrawlPermissionWithHtml() {
-    int firstWS = BaseArchivalUnit.PERMISSION_STRING.indexOf(' ');
-    if (firstWS <= 0) {
-      fail("No spaces in permission string, or starts with space");
-    }
-
-    String subStr1 = BaseArchivalUnit.PERMISSION_STRING.substring(0, firstWS);
-    String subStr2 = BaseArchivalUnit.PERMISSION_STRING.substring(firstWS+1);
-
-    // single
-    StringBuffer sb = new StringBuffer("laa-dee-dah-LOCK-KCOL\n\n");
-    sb.append(subStr1);
-    sb.append("<br>");
-    sb.append(subStr2);
-    sb.append("\n\nTheEnd!");
-    String testStr = sb.toString();
-
-    Reader reader = new StringReader(testStr);
-    assertTrue(mbau.checkCrawlPermission(reader));
-
-    // multiple, with mixed case
-    sb = new StringBuffer("laa-dee-dah-LOCK-KCOL\n\n");
-    sb.append(subStr1);
-    sb.append("<BR>&nbsp;");
-    sb.append(subStr2);
-    sb.append("\n\nTheEnd!");
-    testStr = sb.toString();
-
-    reader = new StringReader(testStr);
-    assertTrue(mbau.checkCrawlPermission(reader));
-  }
 
   public void testGetContentParserReturnsNullForNullMimeTupe() {
     assertNull(mbau.getContentParser(null));

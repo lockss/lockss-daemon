@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.34 2004-07-28 18:20:06 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.35 2004-08-11 19:41:28 clairegriffin Exp $
  */
 
 /*
@@ -49,6 +49,7 @@ import org.lockss.util.urlconn.*;
  * extend this to achieve, <i>eg</i>, specialized host connection or
  * authentication.  The redirection semantics offered here must be
  * preserved.
+ * @todo remove use of CachedUrlSet and replace with ArchivalUnit
  */
 public class BaseUrlCacher implements UrlCacher {
   protected static Logger logger = Logger.getLogger("UrlCacher");
@@ -440,6 +441,8 @@ public class BaseUrlCacher implements UrlCacher {
 	  return false;
 	}
       }
+      // TODO: swap isSameHost with isRedirectOption and
+      // add permission check on same level as redirectOption.
       if (isRedirectOption(REDIRECT_OPTION_ON_HOST_ONLY)) {
 	if (!UrlUtil.isSameHost(fetchUrl, newUrlString)) {
 	  logger.warning("Redirect to different host: " + newUrlString +

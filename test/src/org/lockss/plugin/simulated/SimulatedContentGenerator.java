@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedContentGenerator.java,v 1.13 2004-06-04 21:52:30 tlipkis Exp $
+ * $Id: SimulatedContentGenerator.java,v 1.14 2004-08-11 19:41:32 clairegriffin Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
 import org.lockss.plugin.base.*;
+import org.lockss.crawler.*;
 
 /**
  * This is a convenience class which takes care of handling the content
@@ -329,7 +330,7 @@ public class SimulatedContentGenerator {
       generateFile(treeRoot, jj, 0, 0,
 		   (alterFile && (jj==getAbnormalFileNumber())));
     }
-    generateIndexFile(treeRoot, BaseArchivalUnit.PERMISSION_STRING);
+    generateIndexFile(treeRoot, CrawlerImpl.LOCKSS_PERMISSION_STRING);
     return treeRoot.toString();
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlerImpl.java,v 1.16 2004-08-09 02:57:02 tlipkis Exp $
+ * $Id: TestCrawlerImpl.java,v 1.17 2004-08-11 19:41:08 clairegriffin Exp $
  */
 
 /*
@@ -48,6 +48,8 @@ import org.lockss.test.*;
  * @version 0.0
  */
 public class TestCrawlerImpl extends LockssTestCase {
+  static final String PERMISSION_STRING = CrawlerImpl.LOCKSS_PERMISSION_STRING;
+  private PermissionChecker checker;
   private MockArchivalUnit mau = null;
   private List startUrls = null;
 
@@ -87,6 +89,10 @@ public class TestCrawlerImpl extends LockssTestCase {
     spec = new CrawlSpec(startUrls, crawlRule);
     new MockLockssDaemon().getAlertManager();
     crawler = new NewContentCrawler(mau, spec, aus);
+    // store the orignal checker and replace with a mock checker
+    checker = (PermissionChecker)((CrawlerImpl)crawler).permissionCheckers.get(0);
+    ((CrawlerImpl)crawler).permissionCheckers.clear();
+    ((CrawlerImpl)crawler).permissionCheckers.add(new MockPermissionChecker(true));
 //     crawler = new MyCrawler(mau, spec, aus);
 
     mau.setParser(parser);
@@ -104,14 +110,125 @@ public class TestCrawlerImpl extends LockssTestCase {
 //     }
 //   }
 
-  public void testDoesntCacheFailedPermission() {
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
-    cus.addUrl(startUrl);
+  public void testCheckCrawlPermission() {
+    StringBuffer sb = new StringBuffer("laa-dee-dah-LOCK-KCOL\n\n");
+    sb.append(PERMISSION_STRING);
+    sb.append("\n\nTheEnd!");
+    String s_ok = sb.toString();
+    String s_rev = sb.reverse().toString();
+    String s_case = s_ok.toUpperCase();
 
-    mau.setCrawlPermission(false);
-    crawler.doCrawl();
-    Set expected = SetUtil.set();
-    assertEquals(expected, cus.getCachedUrls());
+    Reader reader = new StringReader(s_ok);
+    assertTrue(checker.checkPermission(reader));
+
+    reader = new StringReader(s_case);
+    assertTrue(checker.checkPermission(reader));
+
+    reader = new StringReader(s_rev);
+    assertFalse(checker.checkPermission(reader));
+  }
+
+  public void testCheckCrawlPermissionWithTrailingPeriod() {
+    StringBuffer sb = new StringBuffer("");
+    sb.append(PERMISSION_STRING);
+    sb.append(".");
+    String s_ok = sb.toString();
+    String s_rev = sb.reverse().toString();
+    String s_case = s_ok.toUpperCase();
+
+    Reader reader = new StringReader(s_ok);
+    assertTrue(checker.checkPermission(reader));
+
+    reader = new StringReader(s_case);
+    assertTrue(checker.checkPermission(reader));
+
+    reader = new StringReader(s_rev);
+    assertFalse(checker.checkPermission(reader));
+  }
+
+  public void testCheckCrawlPermissionWithWhitespace() {
+    int firstWS = PERMISSION_STRING.indexOf(' ');
+    if (firstWS <=0) {
+      fail("No spaces in permission string, or starts with space");
+    }
+
+    String subStr1 = PERMISSION_STRING.substring(0, firstWS);
+    String subStr2 = PERMISSION_STRING.substring(firstWS+1);
+
+    // standard
+    StringBuffer sb = new StringBuffer("laa-dee-dah-LOCK-KCOL\n\n");
+    sb.append(subStr1);
+    sb.append(' ');
+    sb.append(subStr2);
+    sb.append("\n\nTheEnd!");
+    String testStr = sb.toString();
+
+    Reader reader = new StringReader(testStr);
+    assertTrue(checker.checkPermission(reader));
+
+    // different whitespace
+    sb = new StringBuffer("laa-dee-dah-LOCK-KCOL\n\n");
+    sb.append(subStr1);
+    sb.append("\n");
+    sb.append(subStr2);
+    sb.append("\n\nTheEnd!");
+    testStr = sb.toString();
+
+    reader = new StringReader(testStr);
+    assertTrue(checker.checkPermission(reader));
+
+    // extra whitespace
+    sb = new StringBuffer("laa-dee-dah-LOCK-KCOL\n\n");
+    sb.append(subStr1);
+    sb.append(" \n\r\t ");
+    sb.append(subStr2);
+    sb.append("\n\nTheEnd!");
+    testStr = sb.toString();
+
+    reader = new StringReader(testStr);
+    assertTrue(checker.checkPermission(reader));
+
+    // missing whitespace
+    sb = new StringBuffer("laa-dee-dah-LOCK-KCOL\n\n");
+    sb.append(subStr1);
+    sb.append(subStr2);
+    sb.append("\n\nTheEnd!");
+    testStr = sb.toString();
+
+    reader = new StringReader(testStr);
+    assertFalse(checker.checkPermission(reader));
+  }
+
+  public void testCheckCrawlPermissionWithHtml() {
+    int firstWS = PERMISSION_STRING.indexOf(' ');
+    if (firstWS <= 0) {
+      fail("No spaces in permission string, or starts with space");
+    }
+
+    String subStr1 = PERMISSION_STRING.substring(0, firstWS);
+    String subStr2 = PERMISSION_STRING.substring(firstWS+1);
+
+    // single
+    StringBuffer sb = new StringBuffer("laa-dee-dah-LOCK-KCOL\n\n");
+    sb.append(subStr1);
+    sb.append("<br>");
+    sb.append(subStr2);
+    sb.append("\n\nTheEnd!");
+    String testStr = sb.toString();
+
+    Reader reader = new StringReader(testStr);
+    assertTrue(checker.checkPermission(reader));
+
+    // multiple, with mixed case
+    sb = new StringBuffer("laa-dee-dah-LOCK-KCOL\n\n");
+    sb.append(subStr1);
+    sb.append("<BR>&nbsp;");
+    sb.append(subStr2);
+    sb.append("\n\nTheEnd!");
+    testStr = sb.toString();
+
+    reader = new StringReader(testStr);
+    assertTrue(checker.checkPermission(reader));
   }
 
   public void testAbortedCrawlDoesntStart() {
@@ -376,6 +493,9 @@ public class TestCrawlerImpl extends LockssTestCase {
 
 
     crawler = new NewContentCrawler(mau, spec, new MockAuState());
+    ((CrawlerImpl)crawler).permissionCheckers.clear();
+    ((CrawlerImpl)crawler).permissionCheckers.add(new MockPermissionChecker(true));
+
     mau.setParser(parser);
     crawler.doCrawl();
     // only gets 2 urls because start url is fetched twice (manifest & parse)
@@ -394,7 +514,7 @@ public class TestCrawlerImpl extends LockssTestCase {
       return counter;
     }
 
-    public boolean canCrawl() { 
+    public boolean canCrawl() {
       if (counter > 0) {
         counter--;
         return true;
@@ -411,6 +531,27 @@ public class TestCrawlerImpl extends LockssTestCase {
     }
   }
 
+  private class MockPermissionChecker implements PermissionChecker{
+    boolean permission = false;
+
+    MockPermissionChecker(boolean permission) {
+      this.permission = permission;
+    }
+
+    /**
+     * checkPermission
+     *
+     * @param reader Reader
+     * @return boolean
+     */
+    public boolean checkPermission(Reader reader) {
+      return permission;
+    }
+
+    public void setPermission(boolean permission) {
+      this.permission = permission;
+    }
+  }
   private class MockCacheException
     extends CacheException {
     public MockCacheException(String msg) {
