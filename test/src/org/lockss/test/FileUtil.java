@@ -1,5 +1,5 @@
 /*
- * $Id: FileUtil.java,v 1.2 2002-10-25 21:46:55 tal Exp $
+ * $Id: FileUtil.java,v 1.3 2003-04-07 21:34:25 troberts Exp $
  *
 
 Copyright (c) 2000-2002 Board of Trustees of Leland Stanford Jr. University,
@@ -43,7 +43,12 @@ public class FileUtil {
    */
   public static File tempFile(String prefix)
       throws IOException {
-    File f = File.createTempFile(prefix, null, null);
+    return tempFile(prefix, null);
+  }
+
+  public static File tempFile(String prefix, File dir) 
+      throws IOException {
+    File f = File.createTempFile(prefix, null, dir);
     f.deleteOnExit();
     return f;
   }
