@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.19 2002-11-07 00:06:48 tal Exp $
+ $Id: build.xml,v 1.20 2002-11-12 18:15:58 tal Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
@@ -52,10 +52,11 @@ Args:
   <property name="cvs.project"    value="lockss-gamma" />
 
   <!--  Directories -->
+  <property name="java.lib"       value="${env.JAVA_HOME}/lib" />
+
   <property name="src"            value="${basedir}/src" />
   <property name="classes"        value="${basedir}/classes" />
   <property name="lib"            value="${basedir}/lib"/>
-
   <property name="test"           value="${basedir}/test"/>
   <property name="test.src"       value="${test}/src"/>
   <property name="test.classes"   value="${test}/classes" />
@@ -66,6 +67,10 @@ Args:
   <property name="ant"           value="${basedir}/ant"/>
   <property name="ant.src"       value="${ant}/src"/>
   <property name="ant.classes"   value="${ant}/classes" />
+
+  <property name="doclet"           value="${basedir}/doclet"/>
+  <property name="doclet.src"       value="${doclet}/src"/>
+  <property name="doclet.classes"   value="${doclet}/classes" />
 
   <property name="javadoc"        value="${basedir}/javadoc"/>
   <property name="test.javadoc"   value="${test}/javadoc"/>
@@ -83,10 +88,12 @@ Args:
   <property name="commons.collections.jar"
   				  value="${lib}/commons-collections.jar"/>
   <property name="junit.jar"      value="${test.lib}/junit.jar"/>
+  <property name="tools.jar"      value="${java.lib}/tools.jar"/>
 
   <property name="lockss.jar"     value="${lib}/lockss.jar"/>
   <property name="lockss.test.jar" value="${test.lib}/lockss-test.jar"/>
   <property name="lockss.ant.jar" value="${lib}/lockss-ant.jar"/>
+  <property name="lockss.doclet.jar" value="${lib}/lockss-doclet.jar"/>
 
   <property name="ant-contrib.jar"      value="${lib}/ant-contrib-0.1.jar"/>
   <property name="ant-contrib.resource"
@@ -120,6 +127,15 @@ Args:
   <path id="test.run.classpath">
     <path refid="test.compile.classpath" />
     <pathelement path="${lockss.test.jar}" />
+  </path>
+
+  <path id="doclet.compile.classpath">
+    <path refid="compile.classpath" />
+    <pathelement path="${tools.jar}" />
+  </path>
+
+  <path id="doclet.run.classpath">
+    <pathelement path="${lockss.doclet.jar}" />
   </path>
 
   <path id="ant-contrib.classpath">
@@ -164,6 +180,7 @@ Args:
     <delete dir="${classes}" quiet="true"/>
     <delete dir="${test.classes}" quiet="true"/>
     <delete dir="${ant.classes}" quiet="true"/>
+    <delete dir="${doclet.classes}" quiet="true"/>
     <delete dir="${depend.cache}" quiet="true"/>
     <delete dir="${test.results}" quiet="true"/>
     <delete dir="${javadoc}" quiet="true"/>
@@ -171,6 +188,7 @@ Args:
     <delete file="${lockss.jar}" quiet="true"/>
     <delete file="${lockss.test.jar}" quiet="true"/>
     <delete file="${lockss.ant.jar}" quiet="true"/>
+    <delete file="${lockss.doclet.jar}" quiet="true"/>
   </target>
 
   <target name="clean-tempbuild"
@@ -233,6 +251,21 @@ Args:
   </target>
 
   <!-- ==================================================================== -->
+  <target name="compile-doclet" depends=""
+   description="Compile the LOCKSS doclets" >
+    <mkdir dir="${doclet.classes}" />
+    <javac srcdir="${doclet.src}"
+           destdir="${doclet.classes}"
+           debug="${javac.debug}"
+           optimize="${javac.optimize}"
+           deprecation="${javac.deprecation}"
+           >
+       <classpath refid="doclet.compile.classpath" />
+       <include name="**/*.java"/>
+    </javac>
+  </target>
+
+  <!-- ==================================================================== -->
   <target name="jar-lockss" depends="compile-lockss"
    description="Jar the LOCKSS classes" >
     <jar jarfile="${lockss.jar}" basedir="${classes}" >
@@ -244,6 +277,14 @@ Args:
   <target name="jar-tests" depends="compile-tests"
    description="Jar the LOCKSS test classes" >
     <jar jarfile="${lockss.test.jar}" basedir="${test.classes}" >
+       <include name="**/" />
+    </jar>
+  </target>
+
+  <!-- ==================================================================== -->
+  <target name="jar-doclet" depends="compile-doclet"
+   description="Jar the doclet classes" >
+    <jar jarfile="${lockss.doclet.jar}" basedir="${doclet.classes}" >
        <include name="**/" />
     </jar>
   </target>
@@ -276,7 +317,7 @@ Args:
              destdir="${javadoc}"
              author="true"
              version="true"
-             protected="true"
+	     access="protected"
              windowtitle="LOCKSS API"
              doctitle="LOCKSS"
              bottom="Copyright &#169; 2002 Board of Trustees of Leland Stanford Jr. University, all rights reserved.">
@@ -323,6 +364,64 @@ Args:
     <exec executable="./jdftp" dir="${basedir}">
     </exec>
   </target>
+
+  <!-- ==================================================================== -->
+  <target name="index" depends="jar-doclet"
+   description="Print an index for a .java file">
+    <tempfile property="index.file" destdir="${java.io.tmpdir}"
+       prefix="index"/>
+    <property name="copies" value="1" />
+    <basename property="indexname" file="${file}" suffix=".java" />
+    <javadoc 
+       sourcepath="${src}"
+       sourcefiles="${file}"
+       destdir="${javadoc}"
+       failonerror="true"
+       access="private">
+      <doclet name="org.lockss.doclet.Indexer"
+              path="${lockss.doclet.jar}">
+	<param name="-o" value="${index.file}" />
+<!--  	<param name="-dots" value="0" /> -->
+      </doclet>
+      <classpath refid="compile.classpath" />
+    </javadoc>
+    <apply executable="a2ps" dir="${basedir}"
+           parallel="true">
+      <arg value="-3"/>
+      <arg value="--header="/>
+      <arg value="--center-title=${indexname} Index"/>
+      <arg value="--footer=${file}"/>
+      <arg value="-l"/>
+      <arg value="50"/>
+      <arg value="--copies=${copies}"/>
+<!--        <arg value="-prologue=matrix"/> -->
+<!--        <arg value="-o"/> -->
+<!--        <arg value="foo.ps"/> -->
+      <arg value="${index.file}"/>
+      <fileset dir="${basedir}" excludes="* **/*"/>
+    </apply>
+     <delete file="${index.file}" quiet="true"/>
+  </target>
+
+  <!-- ==================================================================== -->
+  <target name="print"
+   description="Print a .java file">
+    <property name="copies" value="1" />
+    <apply executable="a2ps" dir="${basedir}"
+           relative="true"
+           parallel="true">
+      <arg value="-C"/>
+      <arg value="--header="/>
+      <arg value="--copies=${copies}"/>
+      <arg value="-S Collate:true"/>
+<!--        <arg value="-o"/> -->
+<!--        <arg value="foo.ps"/> -->
+      <arg value="${file}"/>
+      <fileset dir="${basedir}" excludes="* **/*"/>
+    </apply>
+<!--       <delete file="${index.file}" quiet="true"/> -->
+  </target>
+
   <!-- ==================================================================== -->
 <!--  Once we have more files this will fail due to command line length.
       It should pipe the names to etags as in:
