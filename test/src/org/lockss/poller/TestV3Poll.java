@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poll.java,v 1.1.2.22 2004-11-29 23:58:08 dshr Exp $
+ * $Id: TestV3Poll.java,v 1.1.2.23 2004-12-12 22:46:19 dshr Exp $
  */
 
 /*
@@ -234,17 +234,17 @@ public class TestV3Poll extends LockssTestCase {
     while (poller.getPollState() != V3Poller.STATE_FINALIZING ||
 	   voter.getPollState() != V3Voter.STATE_FINALIZING) {
       Thread.yield();
-      if (true) {
-	stepTimeUntilPollStateChanges(poller, voter, "testing");
-      } else {
-	TimeBase.step(100);
-      }
+      stepTimeUntilPollStateChanges(poller, voter, "testing");
       log.debug("poller state " + poller.getPollStateName(poller.getPollState()) +
 		" voter state " + voter.getPollStateName(voter.getPollState()));
       steps--;
       assertTrue("Too many steps", steps > 0);
       Thread.yield();
     }
+    PollTally pollerTally = poller.getVoteTally();
+    assertEquals(pollerTally.getTallyResult(), Tallier.RESULT_NOQUORUM);
+    PollTally voterTally = poller.getVoteTally();
+    assertEquals(voterTally.getTallyResult(), Tallier.RESULT_NOQUORUM);
   }
 
   //  Support methods
