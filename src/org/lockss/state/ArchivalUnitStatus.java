@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.1 2004-03-02 03:41:22 eaalto Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.2 2004-03-11 02:30:15 eaalto Exp $
  */
 
 /*
@@ -27,11 +27,13 @@
 package org.lockss.state;
 
 import java.util.*;
+import java.net.MalformedURLException;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
 import org.lockss.app.*;
+import org.lockss.repository.*;
 
 /**
  * Collect and report the status of the ArchivalUnits
@@ -51,7 +53,7 @@ public class ArchivalUnitStatus extends BaseLockssManager {
     statusServ.registerStatusAccessor(ArchivalUnitStatus.SERVICE_STATUS_TABLE_NAME,
                                       new ArchivalUnitStatus.ServiceStatus(theDaemon));
     statusServ.registerStatusAccessor(ArchivalUnitStatus.AU_STATUS_TABLE_NAME,
-                                      new ArchivalUnitStatus.AtStatus(theDaemon));
+                                      new ArchivalUnitStatus.AuStatus(theDaemon));
     logger.debug2("Status accessors registered.");
   }
 
@@ -129,7 +131,7 @@ public class ArchivalUnitStatus extends BaseLockssManager {
     private Map makeRow(ArchivalUnit au, AuState state) {
       HashMap rowMap = new HashMap();
       //"AuID"
-      rowMap.put("AuName", AtStatus.makeAuRef(au.getName(),
+      rowMap.put("AuName", AuStatus.makeAuRef(au.getName(),
           au.getAuId()));
       //XXX start caching this info
       rowMap.put("AuNodeCount", new Integer(-1));
@@ -142,21 +144,33 @@ public class ArchivalUnitStatus extends BaseLockssManager {
     }
   }
 
-  static class AtStatus implements StatusAccessor {
+  static class AuStatus implements StatusAccessor {
     static final String TABLE_TITLE = "AU Status Table";
 
     private static final List columnDescriptors = ListUtil.list(
-      new ColumnDescriptor("AuNodeName", "Node Name",
-                           ColumnDescriptor.TYPE_STRING)
+      new ColumnDescriptor("NodeName", "Node Url",
+                           ColumnDescriptor.TYPE_STRING),
+      new ColumnDescriptor("NodeStatus", "Status",
+                           ColumnDescriptor.TYPE_STRING),
+      new ColumnDescriptor("NodeHasContent", "Content",
+                           ColumnDescriptor.TYPE_STRING),
+      new ColumnDescriptor("NodeVersion", "Version",
+                           ColumnDescriptor.TYPE_INT),
+      new ColumnDescriptor("NodeContentSize", "Size",
+                           ColumnDescriptor.TYPE_INT),
+      new ColumnDescriptor("NodeChildCount", "Children",
+                           ColumnDescriptor.TYPE_INT),
+      new ColumnDescriptor("NodeTreeSize", "Tree Size",
+                           ColumnDescriptor.TYPE_INT)
       );
 
     private static final List sortRules = ListUtil.list(
-      new StatusTable.SortRule("CrawlTime", false)
+      new StatusTable.SortRule("NodeName", false)
       );
 
     private static LockssDaemon theDaemon;
 
-    AtStatus(LockssDaemon theDaemon) {
+    AuStatus(LockssDaemon theDaemon) {
       this.theDaemon = theDaemon;
     }
 
@@ -168,22 +182,39 @@ public class ArchivalUnitStatus extends BaseLockssManager {
     public void populateTable(StatusTable table)
         throws StatusService.NoSuchTableException {
       ArchivalUnit au = getArchivalUnit(table.getKey(), theDaemon);
+      LockssRepository repo = theDaemon.getLockssRepository(au);
+      NodeManager nodeMan = theDaemon.getNodeManager(au);
 
       table.setTitle(getTitle(au.getName()));
+      table.setSummaryInfo(getSummaryInfo(au, nodeMan.getAuState()));
       table.setColumnDescriptors(columnDescriptors);
       table.setDefaultSortRules(sortRules);
-      table.setRows(getRows(au));
-
-      NodeManager nodeMan = theDaemon.getNodeManager(au);
-      table.setSummaryInfo(getSummaryInfo(au, nodeMan.getAuState()));
+      table.setRows(getRows(au, repo, nodeMan));
     }
 
     public boolean requiresKey() {
       return true;
     }
 
-    private List getRows(ArchivalUnit au) {
-      return ListUtil.list(makeRow(au));
+    private List getRows(ArchivalUnit au, LockssRepository repo,
+                         NodeManager nodeMan) {
+      List rowL = new ArrayList();
+      Iterator cusIter = au.getAuCachedUrlSet().contentHashIterator();
+      while (cusIter.hasNext()) {
+        CachedUrlSetNode cusn = (CachedUrlSetNode)cusIter.next();
+        CachedUrlSet cus;
+        if (cusn.getType() == cusn.TYPE_CACHED_URL_SET) {
+          cus = (CachedUrlSet)cusn;
+        } else {
+          CachedUrlSetSpec spec = new RangeCachedUrlSetSpec(cusn.getUrl());
+          cus = au.getPlugin().makeCachedUrlSet(au, spec);
+        }
+        try {
+          rowL.add(makeRow(repo.getNode(cus.getUrl()),
+                           nodeMan.getNodeState(cus)));
+        } catch (MalformedURLException ignore) { }
+      }
+      return rowL;
     }
 
     private String getTitle(String key) {
@@ -217,10 +248,37 @@ public class ArchivalUnitStatus extends BaseLockssManager {
         return summaryList;
     }
 
-    private Map makeRow(ArchivalUnit au) {
+    private Map makeRow(RepositoryNode node, NodeState state) {
       HashMap rowMap = new HashMap();
-      // CrawlTime
-      rowMap.put("AuNodeName", au.getAuCachedUrlSet().getUrl());
+      rowMap.put("NodeName", node.getNodeUrl());
+
+      String status;
+      if (node.isDeleted()) {
+        status = "Deleted";
+      } else if (node.isInactive()) {
+        status = "Inactive";
+      } else if (state.hasDamage()) {
+        status = "Damaged";
+      } else {
+        status = "Active";
+      }
+      rowMap.put("NodeStatus", status);
+      boolean content = node.hasContent();
+      Object versionObj = "-";
+      Object sizeObj = "-";
+      if (content) {
+        versionObj = new Integer(node.getCurrentVersion());
+        sizeObj = new Long(node.getContentSize());
+      }
+      rowMap.put("NodeHasContent", (content ? "yes" : "no"));
+      rowMap.put("NodeVersion", versionObj);
+      rowMap.put("NodeContentSize", sizeObj);
+      Object childObj = "-";
+      if (!node.isLeaf()) {
+        childObj = new Integer(node.getChildCount());
+      }
+      rowMap.put("NodeChildCount", childObj);
+      rowMap.put("NodeContentSize", new Long(node.getTreeContentSize(null)));
 
       return rowMap;
     }

@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.170 2004-02-10 00:43:58 troberts Exp $
+ * $Id: NodeManagerImpl.java,v 1.171 2004-03-11 02:30:15 eaalto Exp $
  */
 
 /*
@@ -1484,7 +1484,7 @@ public class NodeManagerImpl
     return childList;
   }
 
-  private boolean hasDamage(CachedUrlSet cus) {
+  boolean hasDamage(CachedUrlSet cus) {
     boolean hasDamage = false;
     synchronized (damagedNodes) {
       if (damagedNodes.containsWithDamage(cus.getUrl())) {
@@ -1524,7 +1524,7 @@ public class NodeManagerImpl
       if (results.getTallyResult() == Tallier.RESULT_WON) {
 	if (vote.isAgreeVote()) {
 	  //check if is top level poll
-	  if (results.getCachedUrlSet().getSpec().isAu()) { 
+	  if (results.getCachedUrlSet().getSpec().isAu()) {
 	    idManager.signalAgreed(id.toHost(), managedAu);
  	  }
 	} else {

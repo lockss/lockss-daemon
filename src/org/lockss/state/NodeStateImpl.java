@@ -1,5 +1,5 @@
 /*
- * $Id: NodeStateImpl.java,v 1.23 2004-02-02 22:56:54 eaalto Exp $
+ * $Id: NodeStateImpl.java,v 1.24 2004-03-11 02:30:15 eaalto Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.state;
 
 import java.util.*;
 import org.lockss.util.*;
+import org.lockss.app.LockssDaemon;
 import org.lockss.plugin.CachedUrlSet;
 import org.lockss.daemon.Configuration;
 
@@ -196,6 +197,13 @@ public class NodeStateImpl implements NodeState {
     return !cus.isLeaf();
   }
 
+  public boolean hasDamage() {
+    NodeManagerImpl nodeMan =
+        (NodeManagerImpl)LockssDaemon.getAuManager(LockssDaemon.NODE_MANAGER,
+                                                   cus.getArchivalUnit());
+    return nodeMan.hasDamage(cus);
+  }
+
   protected void addPollState(PollState new_poll) {
     polls.add(new_poll);
     repository.storeNodeState(this);
@@ -261,6 +269,7 @@ public class NodeStateImpl implements NodeState {
   /**
    * Trims histories which exceed maximum count or age.
    * Sorts the list if not sorted.
+   * @param isSorted true iff sorted, for efficiency
    */
   void trimHistoriesIfNeeded(boolean isSorted) {
     if (pollHistories.size() > 0) {
