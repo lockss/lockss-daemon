@@ -1,5 +1,5 @@
 /*
- * $Id: ClassTestSelector.java,v 1.1 2002-07-24 04:48:16 tal Exp $
+ * $Id: ClassTestSelector.java,v 1.2 2002-07-24 04:58:44 tal Exp $
  */
 
 /*
@@ -33,9 +33,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.ant;
 
 import java.io.File;
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.lang.reflect.*;
 
@@ -45,8 +42,9 @@ import org.apache.tools.ant.types.selectors.*;
 import org.apache.tools.ant.BuildException;
 
 /**
- * Selector that filters files based on whether they contain a
- * particular string.
+ * Selector that filters classes that have a
+ * <pre>public static Class testedClasses[]</pre>
+ * array that includes the named class (passed in as 'class' property)
  *
  * @author tal
  */
@@ -65,7 +63,7 @@ public class ClassTestSelector extends BaseExtendSelector {
   }
 
   /**
-   * The name of the class to test.
+   * Set the name of the class to test.
    *
    * @param className
    */
@@ -96,8 +94,8 @@ public class ClassTestSelector extends BaseExtendSelector {
 
   /**
    * Checks to make sure all settings are kosher. In this case, it
-   * means that the pattern attribute has been set.
-   *
+   * means that the className has been set, and corresponds to a
+   * loadable class
    */
   public void verifySettings() {
     if (className == null) {
@@ -112,6 +110,9 @@ public class ClassTestSelector extends BaseExtendSelector {
     }
   }
 
+  /**
+   * Transoform a filename into a class name and attempt to load the class
+   */
   private Class classFromFilename(String filename) {
     int dot = filename.lastIndexOf('.');
     String noext = (dot == 0
@@ -134,10 +135,10 @@ public class ClassTestSelector extends BaseExtendSelector {
    * @param basedir the base directory the scan is being done from
    * @param filename is the name of the file to check
    * @param file is a java.io.File object the selector can use
-   * @return whether the file should be selected or not
+   * @return true if the named file corresponds to a class whose
+   * testedClasses array includes the class named by the 'class' parameter
    */
   public boolean isSelected(File basedir, String filename, File file) {
-
     // throw BuildException on error
     validate();
 
@@ -153,16 +154,18 @@ public class ClassTestSelector extends BaseExtendSelector {
       Field fld = candidateClass.getDeclaredField("testedClasses");
       Class testedClasses[] = (Class [])(fld.get(null));
       for (int ix = 0; ix < testedClasses.length; ix++) {
-	Class tc = testedClasses[ix];
-	if (tc == classToTest) {
+	if (classToTest == testedClasses[ix]) {
 	  return true;
 	}
       }
     } catch (NoSuchFieldException e) {
+      // Test class doesn't have testedClasses field, no error
       return false;
     } catch (IllegalAccessException e) {
+      // If it has the field, complain if it isn't accessible
       setError(candidateClass.getName() + ".testedClasses is inaccessible");
     } catch (ClassCastException e) {
+      // or is of the wrong type
       setError(candidateClass + ".testedClasses is not an array of classes");
     }
     return false;
