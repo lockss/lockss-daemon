@@ -1,5 +1,5 @@
 /*
- * $Id: TestHtmlTagFilter.java,v 1.1 2002-12-10 02:20:35 troberts Exp $
+ * $Id: TestHtmlTagFilter.java,v 1.2 2002-12-17 20:54:38 troberts Exp $
  */
 
 /*
@@ -120,10 +120,6 @@ public class TestHtmlTagFilter extends LockssTestCase {
 			new HtmlTagFilter.TagPair(startTag, endTag));
     
     assertReaderMatchesString(expectedContent, reader);
-//     for (int ix=0; ix<expectedContent.length(); ix++) {
-//       assertEquals(expectedContent.charAt(ix), reader.read());
-//     }
-//     assertEquals(-1, reader.read());
   }
 
   public void testFiltersSingleTagsNesting() throws IOException {
@@ -139,10 +135,6 @@ public class TestHtmlTagFilter extends LockssTestCase {
 			new HtmlTagFilter.TagPair(startTag, endTag));
     
     assertReaderMatchesString(expectedContent, reader);
-//     for (int ix=0; ix<expectedContent.length(); ix++) {
-//       assertEquals(expectedContent.charAt(ix), reader.read());
-//     }
-//     assertEquals(-1, reader.read());
   }
 
 
@@ -166,10 +158,6 @@ public class TestHtmlTagFilter extends LockssTestCase {
 			ListUtil.list(pair1, pair2));
     
     assertReaderMatchesString(expectedContent, reader);
-//     for (int ix=0; ix<expectedContent.length(); ix++) {
-//       assertEquals(expectedContent.charAt(ix), reader.read());
-//     }
-//     assertEquals(-1, reader.read());
   }
 
    public void testFiltersMultipleTagsComplexNesting() throws IOException {
