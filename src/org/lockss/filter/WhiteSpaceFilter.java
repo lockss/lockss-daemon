@@ -1,5 +1,5 @@
 /*
- * $Id: WhiteSpaceFilter.java,v 1.6 2005-02-02 09:42:45 tlipkis Exp $
+ * $Id: WhiteSpaceFilter.java,v 1.7 2005-02-21 03:03:23 tlipkis Exp $
  */
 
 /*
@@ -31,89 +31,49 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.filter;
-import java.util.*;
 import java.io.*;
-import org.lockss.util.*;
-import org.lockss.config.Configuration;
-import org.lockss.daemon.*;
 
-/** A FilterInputStream that canonicalizes white space.
+/** A Reader that canonicalizes white space.
  */
-
 public class WhiteSpaceFilter extends Reader {
-  public static final int DEFAULT_BUFFER_CAPACITY = 4096;
-  public static final String PARAM_BUFFER_CAPACITY =
-    Configuration.PREFIX + "filter.buffer_capacity";
-
   static final byte asciiSpace = 32;
 
-  boolean inWhiteSpace;
-  boolean hitEOF;
   Reader reader;
-  int bufrem = 0;
-  int bufptr = 0;
+  boolean inWhiteSpace = false;
+  boolean hitEOF = false;
+  boolean isClosed = false;
+  char[] charbuf;
+
 
   // Create filtered stream, initialize state.
   public WhiteSpaceFilter(Reader reader) {
-    this(reader, DEFAULT_BUFFER_CAPACITY);
-  }
-
-  // Create filtered stream, initialize state.
-  public WhiteSpaceFilter(Reader reader, int bufsize) {
     if (reader == null) {
       throw new IllegalArgumentException("Called with a null reader");
     }
     this.reader = reader;
-    inWhiteSpace = false;
-    hitEOF = false;
-  }
-
-  // Read one byte
-  public int read() throws IOException {
-    char[] buf = new char[1];
-    int ret = read(buf, 0, 1);
-    if (ret >= 0)
-      return ((int)buf[0]);
-    return ret;
-  }
-
-  // Read bytes into array
-  public int read(char[] buf) throws IOException {
-    return (read(buf, 0, buf.length));
-  }
-  public boolean ready() {
-    throw new UnsupportedOperationException("Not Implemented");
-  }
-
-  public void reset() {
-    throw new UnsupportedOperationException("Not Implemented");
-  }
-
-  public long skip(long n) {
-    throw new UnsupportedOperationException("Not Implemented");
   }
 
   public void close() throws IOException {
     reader.close();
+    isClosed = true;
   }
 
   public int read(char[] buf, int off, int len) throws IOException {
+    if (isClosed) throw new IOException("Read from closed WhiteSpaceFilter");
     if (hitEOF)
       return -1;
-    int endoff = off + len;
-    int ptr = off;
+    int optr = off;
     int rem = len;
-    while (ptr < endoff) {
-      if (bufptr >= bufrem) {
-	bufrem = reader.read(buf, 0, len);
-	if (bufrem == -1) {
-	  hitEOF = true;
-	  return (ptr == off) ? -1 : ptr - off;
-	}
-	bufptr = 0;
+    while (rem > 0) {
+      int nread = reader.read(buf, optr, rem);
+      if (nread == -1) {
+	hitEOF = true;
+	return (optr == off) ? -1 : optr - off;
       }
-      while (ptr < endoff && bufptr < bufrem) {
-	int next = buf[bufptr++];
+      int iptr = optr;
+      int endin = iptr + nread;
+      while (rem > 0 && iptr < endin) {
+	int next = buf[iptr++];
 	// handle whitespace - collapse multiple whitespace to single space
 	if ((next >= 0 && next <= asciiSpace) || next == 127) {
 	  if (inWhiteSpace) {
@@ -127,10 +87,11 @@ public class WhiteSpaceFilter extends Reader {
 	    inWhiteSpace = false;
 	}
 	// output non-white or first white character
-	buf[ptr++] = (char)next;
+	buf[optr++] = (char)next;
+	rem--;
       }
     }
-    return (ptr - off);
+    return (optr - off);
   }
 
   private static boolean isWhiteSpace(int b) {

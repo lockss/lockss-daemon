@@ -1,5 +1,5 @@
 /*
- * $Id: TestWhiteSpaceFilter.java,v 1.3 2004-08-19 00:02:21 clairegriffin Exp $
+ * $Id: TestWhiteSpaceFilter.java,v 1.4 2005-02-21 03:03:23 tlipkis Exp $
  */
 
 /*
@@ -39,29 +39,85 @@ import org.lockss.util.*;
 public class TestWhiteSpaceFilter extends LockssTestCase {
 
 
+  /** Check that the filtered string matches expected.  Test with varying
+   * buffer lengths */
+  private void assertFilterString(String expected, String input)
+      throws IOException {
+    for (int len = 1; len <= input.length() * 2; len++) {
+      Reader reader = new WhiteSpaceFilter(new StringReader(input));
+      assertReaderMatchesString(expected, reader, len);
+      assertEquals(-1, reader.read());
+    }
+    for (int len = 1; len <= input.length() * 2; len++) {
+      Reader reader = new WhiteSpaceFilter(new StringReader(input));
+      assertOffsetReaderMatchesString(expected, reader, len);
+      assertEquals(-1, reader.read());
+    }
+    Reader reader = new WhiteSpaceFilter(new StringReader(input));
+    assertReaderMatchesStringSlow(expected, reader);
+    assertEquals(-1, reader.read());
+  }
+
+  public void testReadReturnsNegOneWhenEmpty() throws IOException {
+    Reader reader = new WhiteSpaceFilter(new StringReader(""));
+    char[] buf = new char[10];
+    assertEquals(-1, reader.read());
+    assertEquals(-1, reader.read(buf));
+    reader = new WhiteSpaceFilter(new StringReader("Test  test"));
+    assertEquals("Test test", StringUtil.fromReader(reader));
+    assertEquals(-1, reader.read());
+    assertEquals(-1, reader.read(buf));
+  }
+
   public void testCollapseWhiteSpace() throws IOException {
     Reader reader = new WhiteSpaceFilter(new StringReader("Test  test"));
-    assertEquals("Test test", StringUtil.fromReader(reader));
+    assertFilterString("Test frob", "Test  frob");
+    assertFilterString(" Test frob ", "   Test  frob   ");
   }
 
   public void testDoesntCollapseSingleSpace() throws IOException {
-    Reader reader = new WhiteSpaceFilter(new StringReader("Test test"));
-    assertEquals("Test test", StringUtil.fromReader(reader));
+    assertFilterString("Test frob", "Test frob");
+    assertFilterString(" Test frob ", " Test frob ");
   }
 
-  public void testHandlesMultipleChunks() throws IOException {
-    String testString = "Test   test         test\n     test";
-    Reader reader = new WhiteSpaceFilter(new StringReader(testString));
-    assertEquals("Test test test test", StringUtil.fromReader(reader));
+  public void testOtherChars() throws IOException {
+    String testString = "Test   frob \t  \177      hop\n     skip";
+    assertFilterString("Test frob hop skip", testString);
+    assertFilterString("Test frob foo bar ", "Test frob\tfoo\b\tbar\n");
   }
 
-  // Ensure test buffer refill
-  public void testSmallBuffer() throws IOException {
-    String testString = "Test   test         test\n     test";
-    Reader reader = new WhiteSpaceFilter(new StringReader(testString),
-					  3);
-    assertEquals("Test test test test", StringUtil.fromReader(reader));
+  public void testTrailingWhitespace() throws IOException {
+    assertFilterString(" Test frob jump ",
+		       "  Test       frob\n     jump      ");
   }
 
+  public void testClose() throws IOException {
+    String testStr = "Test string";
+    InstrumentedStringReader reader = new InstrumentedStringReader(testStr);
+    Reader filt = new WhiteSpaceFilter(reader);
+    assertEquals('T', filt.read());
+    assertFalse(reader.isClosed());
+    filt.close();
+    assertTrue(reader.isClosed());
+    try {
+      int c = filt.read();
+      fail("StringFilter shouldn't be readable after close()");
+    } catch (IOException e) {
+    }
+  }
 
+  public void testCloseAtEof() throws IOException {
+    String testStr = "Test string";
+    InstrumentedStringReader reader = new InstrumentedStringReader(testStr);
+    Reader filt = new WhiteSpaceFilter(reader);
+    assertReaderMatchesString("Test string", filt);
+    assertFalse(reader.isClosed());
+    filt.close();
+    assertTrue(reader.isClosed());
+    try {
+      int c = filt.read();
+      fail("StringFilter shouldn't be readable after close()");
+    } catch (IOException e) {
+    }
+  }
 }

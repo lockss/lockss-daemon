@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlTagFilter.java,v 1.5 2004-09-27 22:39:14 smorabito Exp $
+ * $Id: HtmlTagFilter.java,v 1.6 2005-02-21 03:03:23 tlipkis Exp $
  */
 
 /*
@@ -69,6 +69,7 @@ public class HtmlTagFilter extends Reader {
   int minTagLen;
   int bufferCapacity;
   boolean streamDone = false;
+  private boolean isClosed = false;
   private boolean isTrace = logger.isDebug3();
 
 
@@ -143,9 +144,11 @@ public class HtmlTagFilter extends Reader {
 
   public int read(char[] outputBuf, int off, int bufSize) throws IOException {
     if (isTrace) logger.debug3("read(buf, " + off + ", " + bufSize + ")");
+    if (isClosed) throw new IOException("Read from closed HtmlTagFilter");
     int bufPtrPlusFree = off + bufSize;
     if ((off < 0) || (bufSize < 0) || (bufPtrPlusFree > outputBuf.length)) {
-      throw new IndexOutOfBoundsException();
+      throw new IndexOutOfBoundsException("char["+outputBuf.length+"], "+off+
+					  ", "+bufSize);
     }
 
     int bufFree = bufSize;
@@ -215,23 +218,8 @@ public class HtmlTagFilter extends Reader {
     }
   }
 
-  public void mark(int readAheadLimit) {
-    throw new UnsupportedOperationException("Not Implemented");
-  }
-
-  public boolean ready() {
-    throw new UnsupportedOperationException("Not Implemented");
-  }
-
-  public void reset() {
-    throw new UnsupportedOperationException("Not Implemented");
-  }
-
-  public long skip(long n) {
-    throw new UnsupportedOperationException("Not Implemented");
-  }
-
   public void close() throws IOException {
+    isClosed = true;
     reader.close();
   }
 

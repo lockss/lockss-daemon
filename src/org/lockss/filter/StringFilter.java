@@ -1,5 +1,5 @@
 /*
- * $Id: StringFilter.java,v 1.6 2005-02-02 09:42:46 tlipkis Exp $
+ * $Id: StringFilter.java,v 1.7 2005-02-21 03:03:23 tlipkis Exp $
  */
 
 /*
@@ -56,6 +56,7 @@ public class StringFilter extends Reader {
   private int replaceLen;
   private boolean ignoreCase = false;
   private int toReplace = 0;
+  private boolean isClosed = false;
   private boolean isTrace = logger.isDebug3();
 
   public StringFilter(Reader reader) {
@@ -160,47 +161,9 @@ public class StringFilter extends Reader {
     return (StringFilter)curReader;
   }
 
-
-//   /**
-//    * @param reader Reader to filter
-//    * @param str String to filter out of reader
-//    */
-//   public StringFilter(Reader reader, List strs) {
-//     this(reader);
-//     if (strs == null) {
-//       throw new IllegalArgumentException("Called with a null list");
-//     } else if (strs.size() == 0) {
-//       throw new IllegalArgumentException("Called with a empty list");
-//     }
-//     this.str = (String)strs.get(0);
-//     minBufferSize = getMaxStringLength(strs);
-//     init();
-//   }
-
-//   private int getMaxStringLength(String[] strs) {
-//     int len = 0;
-//     for(int ix=0; ix<strs.length; ix++) {
-//       if (len < strs[ix].length()) {
-// 	len = strs[ix].length();
-//       }
-//     }
-//     return len;
-//   }
-
-  public boolean ready() {
-    throw new UnsupportedOperationException("Not Implemented");
-  }
-
-  public void reset() {
-    throw new UnsupportedOperationException("Not Implemented");
-  }
-
-  public long skip(long n) {
-    throw new UnsupportedOperationException("Not Implemented");
-  }
-
   public int read(char[] outputBuf, int off, int bufSize) throws IOException {
     if (isTrace) logger.debug3("read(buf, " + off + ", " + bufSize + ")");
+    if (isClosed) throw new IOException("Read from closed StringFilter");
     int bufPtrPlusFree = off + bufSize;
     if ((off < 0) || (bufSize < 0) || (bufPtrPlusFree > outputBuf.length)) {
       throw new IndexOutOfBoundsException();
@@ -254,6 +217,7 @@ public class StringFilter extends Reader {
   }
 
   public void close() throws IOException {
-    throw new UnsupportedOperationException("Not Implemented");
+    isClosed = true;
+    reader.close();
   }
 }
