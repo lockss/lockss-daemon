@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrlSet.java,v 1.37 2003-06-20 22:34:55 claire Exp $
+ * $Id: MockCachedUrlSet.java,v 1.37.8.1 2003-08-06 00:35:38 troberts Exp $
  */
 
 /*
@@ -58,7 +58,9 @@ public class MockCachedUrlSet implements CachedUrlSet {
   private boolean hasContentIsSet = false;
   private boolean hasContent = false;
 
-  private HashSet cachedUrls = new HashSet();
+  private Set cachedUrls = new HashSet();
+  private Set forceCachedUrls = new HashSet();
+
   private Vector urls = null;
   private Iterator flatIterator = null;
   private Iterator hashIterator = null;
@@ -314,8 +316,16 @@ public class MockCachedUrlSet implements CachedUrlSet {
     cachedUrls.add(url);
   }
 
+  public void addForceCachedUrl(String url) {
+    forceCachedUrls.add(url);
+  }
+
   public Set getCachedUrls() {
     return cachedUrls;
+  }
+
+  public Set getForceCachedUrls() {
+    return forceCachedUrls;
   }
 
   public int hashCode() {
