@@ -1,5 +1,5 @@
 /*
- * $Id: LockssThread.java,v 1.6 2004-02-27 00:20:14 tlipkis Exp $
+ * $Id: LockssThread.java,v 1.7 2004-05-18 14:35:01 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -39,6 +39,9 @@ import org.lockss.util.*;
  * only from the thread.
  */
 public abstract class LockssThread extends Thread implements LockssWatchdog {
+  static final int EXIT_CODE_THREAD_HUNG = 1;
+  static final int EXIT_CODE_THREAD_EXIT = 2;
+
   static final String PREFIX = Configuration.PREFIX + "thread.";
 
   static final String PARAM_THREAD_WDOG_EXIT_IMM =
@@ -209,17 +212,18 @@ public abstract class LockssThread extends Thread implements LockssWatchdog {
    * able to take some less drastic corrective action (e.g., close socket
    * for hung socket reads.) */
   protected void threadHung() {
-    exitDaemon("Thread hung for " + StringUtil.timeIntervalToString(interval));
+    exitDaemon(EXIT_CODE_THREAD_HUNG,
+	       "Thread hung for " + StringUtil.timeIntervalToString(interval));
   }
 
   /** Called if thread exited unexpectedly.  Default action is to exit the
    * daemon; can be overridden is thread is able to take some less drastic
    * corrective action. */
   protected void threadExited() {
-    exitDaemon("Thread exited");
+    exitDaemon(EXIT_CODE_THREAD_EXIT, "Thread exited");
   }
 
-  private void exitDaemon(String msg) {
+  private void exitDaemon(int exitCode, String msg) {
     boolean exitImm = true;
     try {
       WatchdogService wdog = (WatchdogService)
@@ -235,7 +239,7 @@ public abstract class LockssThread extends Thread implements LockssWatchdog {
       }
     } finally {
       if (exitImm) {
-	System.exit(1);
+	System.exit(exitCode);
       }
     }
   }
@@ -280,7 +284,7 @@ public abstract class LockssThread extends Thread implements LockssWatchdog {
   public final void run() {
     try {
       lockssRun();
-    } catch (RuntimeException e) {
+    } catch (Exception e) {
       log.warning("Thread threw", e);
     } finally {
       if (triggerOnExit) {
