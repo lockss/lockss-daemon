@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryStatus.java,v 1.5 2004-05-24 22:21:54 tlipkis Exp $
+ * $Id: LockssRepositoryStatus.java,v 1.6 2004-05-26 07:02:16 tlipkis Exp $
  */
 
 /*
@@ -87,7 +87,9 @@ public class LockssRepositoryStatus extends BaseLockssManager {
        new ColumnDescriptor("au", "AU", ColumnDescriptor.TYPE_STRING),
        new ColumnDescriptor("status", "Status", ColumnDescriptor.TYPE_STRING),
        new ColumnDescriptor("plugin", "Plugin", ColumnDescriptor.TYPE_STRING),
-       new ColumnDescriptor("params", "Params", ColumnDescriptor.TYPE_STRING)
+       new ColumnDescriptor("params", "Params", ColumnDescriptor.TYPE_STRING) {
+	 { sortable=false; }
+       }
 //        new ColumnDescriptor("auid", "AU Key", ColumnDescriptor.TYPE_STRING)
        );
 
@@ -288,7 +290,7 @@ public class LockssRepositoryStatus extends BaseLockssManager {
        new ColumnDescriptor("size", "Size", ColumnDescriptor.TYPE_STRING),
        new ColumnDescriptor("used", "Used", ColumnDescriptor.TYPE_STRING),
        new ColumnDescriptor("free", "Free", ColumnDescriptor.TYPE_STRING),
-       new ColumnDescriptor("percent", "%Full", ColumnDescriptor.TYPE_STRING)
+       new ColumnDescriptor("percent", "%Full", ColumnDescriptor.TYPE_PERCENT)
        );
 
     private static final List sortRules =
@@ -323,13 +325,17 @@ public class LockssRepositoryStatus extends BaseLockssManager {
 	String repo = (String)iter.next();
 	PlatformInfo.DF df = remoteApi.getRepositoryDF(repo);
 	row.put("repo", repo);
-	row.put("size", StringUtil.sizeKBToString(df.getSize()));
-	row.put("used", StringUtil.sizeKBToString(df.getUsed()));
-	row.put("free", StringUtil.sizeKBToString(df.getAvail()));
-	row.put("percent", df.getPercent());
+	row.put("size", orderedKBObj(df.getSize()));
+	row.put("used", orderedKBObj(df.getUsed()));
+	row.put("free", orderedKBObj(df.getAvail()));
+	row.put("percent", new Double(df.getPercent()));
 	rows.add(row);
       }
       return rows;
+    }
+
+    OrderedObject orderedKBObj(long kb) {
+      return new OrderedObject(StringUtil.sizeKBToString(kb), new Long(kb));
     }
 
     private String getTitle(String key) {
