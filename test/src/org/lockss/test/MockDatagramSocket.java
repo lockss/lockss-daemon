@@ -1,5 +1,5 @@
 /*
- * $Id: MockDatagramSocket.java,v 1.4 2002-11-06 21:17:40 tal Exp $
+ * $Id: MockDatagramSocket.java,v 1.5 2002-12-11 01:26:44 tal Exp $
  */
 
 /*
@@ -162,11 +162,12 @@ public class MockDatagramSocket
    */
   public void send(DatagramPacket p){
     // enqueue a copy, as that's what a real DatagramSocket would do
-    DatagramPacket qPkt = new DatagramPacket(p.getData(),
-					     p.getOffset(),
-					     p.getLength(),
-					     p.getAddress(),
-					     p.getPort());
+    DatagramPacket qPkt =
+      new DatagramPacket(new String(p.getData()).getBytes(),
+			 p.getOffset(),
+			 p.getLength(),
+			 p.getAddress(),
+			 p.getPort());
     sentPackets.add(qPkt);
   }
 
