@@ -1,5 +1,5 @@
 /*
- * $Id: Deadline.java,v 1.23 2003-05-15 21:54:11 tyronen Exp $
+ * $Id: Deadline.java,v 1.24 2003-05-24 01:14:37 tal Exp $
  */
 
 /*
@@ -40,6 +40,9 @@ public class Deadline implements Comparable {
   /** A long time from now. */
   public static final Deadline MAX =
     new Deadline(new ConstantDate(TimeBase.MAX));
+
+  /** An expired Deadline. */
+  public static final Deadline EXPIRED = new Deadline(new ConstantDate(0));
 
   protected static Logger log = Logger.getLogger("Deadline");
 
