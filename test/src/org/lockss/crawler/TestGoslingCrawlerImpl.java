@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingCrawlerImpl.java,v 1.4 2002-12-17 20:59:04 troberts Exp $
+ * $Id: TestGoslingCrawlerImpl.java,v 1.5 2003-01-02 19:40:34 troberts Exp $
  */
 
 /*
@@ -66,7 +66,11 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
   }
 
   public void setUp() {
+    TimeBase.setSimulated();
+
     mau = new MockArchivalUnit();
+    mau.setPauseCallback(new expireDeadlineCallback());
+
     urlList = ListUtil.list(startUrl);
     MockCachedUrlSet cus = new MockCachedUrlSet(mau, null);
     mau.setAUCachedUrlSet(cus);
@@ -108,7 +112,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
   public static final String LINKLESS_PAGE = "Nothing here";
 
   public static final String startUrl = 
-    "http://www.example.com/lockss-index123.html";
+    "http://www.example.com/index.html";
 
 
   public void testDoCrawlOnePageNoLinks() {
@@ -392,6 +396,22 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
   }
 
 
+  public void testParsesFileWithQuotedUrls() {
+    String url= "http://www.example.com/link3.html";
+
+    String source = 
+      "<html><head><title>Test</title></head><body>"+
+      "<a href=\"http://www.example.com/link3.html\">link3</a>";
+
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
+    cus.addUrl(source, startUrl);
+    cus.addUrl(LINKLESS_PAGE, url);
+    
+    crawler.doCrawl(mau, urlList, true, false, Deadline.NEVER);
+    Set expected = SetUtil.set(startUrl, url);
+    assertEquals(expected, cus.getCachedUrls());
+  }
+
   public void testSkipsComments() {
     String url= "http://www.example.com/link3.html";
 
@@ -418,10 +438,10 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
 
     String source = 
       "<html><head><title>Test</title></head><body>"+
-      "<a href=http://www.example.com/link1.html>link1</a>"+
+      "<a href="+url1+">link1</a>"+
       "Filler, with <b>bold</b> tags and<i>others</i>"+
-      "<a href=http://www.example.com/link2.html>link2</a>"+
-      "<a href=http://www.example.com/link3.html>link3</a>";
+      "<a href="+url2+">link2</a>"+
+      "<a href="+url3+">link3</a>";
 
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
     cus.addUrl(source, startUrl);
@@ -454,6 +474,26 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     
     crawler.doCrawl(mau, urlList, true, false, Deadline.NEVER);
     Set expected = SetUtil.set(startUrl, url1, url2, url3);
+    assertEquals(expected, cus.getCachedUrls());
+  }
+
+  public void testRelativeLinksWithSameName() {
+    String url1= "http://www.example.com/branch1/index.html";
+    String url2= "http://www.example.com/branch2/index.html";
+
+    String source = 
+      "<html><head><title>Test</title></head><body>"+
+      "<a href=branch1/index.html>link1</a>"+
+      "Filler, with <b>bold</b> tags and<i>others</i>"+
+      "<a href=branch2/index.html>link2</a>";
+
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
+    cus.addUrl(source, startUrl);
+    cus.addUrl(LINKLESS_PAGE, url1);
+    cus.addUrl(LINKLESS_PAGE, url2);
+    
+    crawler.doCrawl(mau, urlList, true, false, Deadline.NEVER);
+    Set expected = SetUtil.set(startUrl, url1, url2);
     assertEquals(expected, cus.getCachedUrls());
   }
 
@@ -542,9 +582,6 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
   }
 
   public void testCrawlingWithDeadlineThatExpires() {
-    TimeBase.setSimulated();
-    mau.setPauseCallback(new expireDeadlineCallback());
-
     String url1= "http://www.example.com/link1.html";
     String url2= "http://www.example.com/link2.html";
     String url3= "http://www.example.com/link3.html";
@@ -566,7 +603,64 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     Set expected = SetUtil.set(startUrl, url1);
     assertEquals(expected, cus.getCachedUrls());
   }
+  
+  public void testDoesNotLoopOnSelfReferentialPage() {
+    System.err.println("START");
+    String url1= "http://www.example.com/link1.html";
+    String url2= "http://www.example.com/link2.html";
+    String url3= "http://www.example.com/link3.html";
 
+    String source = 
+      "<html><head><title>Test</title></head><body>"+
+      "<a href="+url1+">link1</a>"+
+      "Filler, with <b>bold</b> tags and<i>others</i>"+
+      "<a href="+url2+">link2</a>"+
+      "<a href="+url3+">link3</a>"+
+      "<a href="+startUrl+">start page</a>";
+
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
+    cus.addUrl(source, startUrl);
+    cus.addUrl(LINKLESS_PAGE, url1);
+    cus.addUrl(LINKLESS_PAGE, url2);
+    cus.addUrl(LINKLESS_PAGE, url3);
+    
+    crawler.doCrawl(mau, urlList, true, false, Deadline.NEVER);
+    Set expected = SetUtil.set(startUrl, url1, url2, url3);
+    assertEquals(expected, cus.getCachedUrls());
+    System.err.println("STOP");
+  }
+
+  public void testDoesNotLoopOnSelfReferentialLoop() {
+    System.err.println("START2");
+    String url1= "http://www.example.com/link1.html";
+    String url2= "http://www.example.com/link2.html";
+    String url3= "http://www.example.com/link3.html";
+
+    String source1 = 
+      "<html><head><title>Test</title></head><body>"+
+      "<a href="+url1+">link1</a>"+
+      "Filler, with <b>bold</b> tags and<i>others</i>"+
+      "<a href="+url2+">link2</a>"+
+      "<a href="+startUrl+">start page</a>"+
+      "<a href="+url3+">link3</a>";
+
+    String source2 = 
+      "<html><head><title>Test</title></head><body>"+
+      "<a href="+startUrl+">link1</a>";
+
+
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
+    cus.addUrl(source1, startUrl);
+    cus.addUrl(source2, url1);
+    cus.addUrl(LINKLESS_PAGE, url2);
+    cus.addUrl(LINKLESS_PAGE, url3);
+    
+    crawler.doCrawl(mau, urlList, true, false, Deadline.NEVER);
+    Set expected = SetUtil.set(startUrl, url1, url2, url3);
+    assertEquals(expected, cus.getCachedUrls());
+    System.err.println("STOP2");
+  }
+  
   private class expireDeadlineCallback implements MockObjectCallback {
     public expireDeadlineCallback() {
     }

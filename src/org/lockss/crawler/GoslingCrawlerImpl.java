@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingCrawlerImpl.java,v 1.5 2002-12-30 23:04:29 tal Exp $
+ * $Id: GoslingCrawlerImpl.java,v 1.6 2003-01-02 19:40:34 troberts Exp $
  */
 
 /*
@@ -110,7 +110,6 @@ public class GoslingCrawlerImpl implements Crawler {
 
   private static Logger logger = Logger.getLogger("GoslingCrawlerImpl");
 
-
   /**
    * Main method of the crawler; it loops through crawling and caching
    * urls.
@@ -133,11 +132,14 @@ public class GoslingCrawlerImpl implements Crawler {
 
 
     List list = createInitialList(urls);
+    Set parsedPages = new HashSet();
+
     CachedUrlSet cus = au.getAUCachedUrlSet();
     while (!list.isEmpty() && !deadline.expired()) {
       String url = (String)list.remove(0);
       logger.debug("Dequeued url from list: "+url);
       UrlCacher uc = cus.makeUrlCacher(url);
+      logger.debug(url);
       if (uc.shouldBeCached()) {
  	if (overWrite || !cus.isCached(url)) {
 	  try {
@@ -153,9 +155,10 @@ public class GoslingCrawlerImpl implements Crawler {
  	  logger.info(uc+" exists, not caching");
  	}
 	try{
-	  if (followLinks) {
+	  if (followLinks && !parsedPages.contains(uc.getUrl())) {
 	    CachedUrl cu = uc.getCachedUrl();
 	    addUrlsToList(cu, list);//IOException if the CU can't be read
+	    parsedPages.add(uc.getUrl());
 	  }
 	} catch (IOException ioe) {
 	  //XXX handle this better.  Requeue?
@@ -371,27 +374,30 @@ public class GoslingCrawlerImpl implements Crawler {
 
     if (returnStr != null) {
       returnStr = StringUtil.trimAfterChars(returnStr, " #\"");
+      logger.debug("Generationg url from: "+srcUrl+" and "+returnStr);
       URL retUrl = new URL(srcUrl, returnStr);
-      return retUrl.toString();
+      returnStr = retUrl.toString();
+      logger.debug("Parsed: "+returnStr);
+      return returnStr;
     }
     return null;
   }
 
   private static String getAttributeValue(String attribute, String src) {
     logger.debug("looking for "+attribute+" in "+src);
-    StringTokenizer st = new StringTokenizer(src, " =", true);
+    StringTokenizer st = new StringTokenizer(src, " =\"", true);
     String lastToken = null;
     while (st.hasMoreTokens()) {
       String token = st.nextToken();
       if (!token.equals("=")) {
-	if (!token.equals(" ")) {
+	if (!token.equals(" ") && !token.equals("\"")) {
 	  lastToken = token;
 	}
       } else {
 	if (attribute.equalsIgnoreCase(lastToken))
 	  while (st.hasMoreTokens()) {
 	    token = st.nextToken();
-	    if (!token.equals(" ")) {
+	    if (!token.equals(" ") && !token.equals("\"")) {
 	      return token;
 	    }
 	  }
