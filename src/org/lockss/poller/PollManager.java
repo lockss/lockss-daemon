@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.44 2003-03-11 04:20:16 claire Exp $
+* $Id: PollManager.java,v 1.45 2003-03-13 03:27:08 claire Exp $
  */
 
 /*
@@ -170,7 +170,7 @@ public class PollManager  implements LockssManager {
     PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
     if(pme != null) {
       if(pme.isPollCompleted() || pme.isPollSuspended()) {
-        theLog.debug("Message received after poll was closed." + msg.toString());
+        theLog.debug("Message received after poll was closed." + msg);
         return;
       }
     }
@@ -179,7 +179,7 @@ public class PollManager  implements LockssManager {
       p.receiveMessage(msg);
     }
     else {
-      theLog.info("Unable to create poll for Message: " + msg.toString());
+      theLog.info("Unable to create poll for Message: " + msg);
     }
   }
 
@@ -244,6 +244,7 @@ public class PollManager  implements LockssManager {
     if(ret_poll != null) {
       thePolls.put(ret_poll.m_key, new PollManagerEntry(ret_poll));
       ret_poll.startPoll();
+      theLog.debug2("Started new poll: " + ret_poll.m_key);
     }
 
     return ret_poll;
@@ -278,12 +279,12 @@ public class PollManager  implements LockssManager {
       throws IOException {
     LockssDatagram ld = new LockssDatagram(LockssDatagram.PROTOCOL_LCAP,
         msg.encodeMsg());
-    if(theComm != null) {
+//    if(theComm != null) {
       theComm.sendTo(ld, au, id);
-    }
-    else {
-      theLog.warning("Uninitialized comm.");
-    }
+//    }
+//    else {
+//      theLog.warning("Uninitialized comm.");
+//    }
   }
 
   /**
@@ -331,6 +332,7 @@ public class PollManager  implements LockssManager {
     TimerQueue.schedule(d, new ExpireRecentCallback(), key);
     PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
     pme.setPollCompleted(d);
+    theLog.debug2("completed poll " + key);
   }
 
   /**
@@ -340,6 +342,7 @@ public class PollManager  implements LockssManager {
   public void suspendPoll(String key) {
     PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
     pme.setPollSuspended();
+    theLog.debug2("suspended poll " + key);
   }
 
 
@@ -355,6 +358,7 @@ public class PollManager  implements LockssManager {
       long expiration = 0;
       Deadline d;
       if(replayNeeded) {
+        theLog.debug2("replaying poll " + (String) key);
         expiration = TimeBase.nowMs() +
                      Configuration.getLongParam(PARAM_REPLAY_EXPIRATION,
                      DEFAULT_REPLAY_EXPIRATION);
@@ -369,6 +373,7 @@ public class PollManager  implements LockssManager {
       d = Deadline.in(expiration);
       TimerQueue.schedule(d, new ExpireRecentCallback(), (String)key);
       pme.setPollCompleted(d);
+      theLog.debug2("completed suspended poll " + (String)key);
     }
   }
 
@@ -390,7 +395,7 @@ public class PollManager  implements LockssManager {
     theLog.debug2("sending our verification request to " + originator.toString());
     sendMessageTo(reqmsg, cus.getArchivalUnit(), originator);
 
-    theLog.debug2("Creating a local poll instance...");
+    theLog.debug3("Creating a local poll instance...");
     Poll poll = findPoll(reqmsg);
     poll.m_pollstate = Poll.PS_WAIT_TALLY;
   }
@@ -539,7 +544,7 @@ public class PollManager  implements LockssManager {
          long earliest = ret - ret/4;
          long latest = ret + ret/4;
          ret = earliest + theRandom.nextLong(latest - earliest);
-        theLog.debug3("Name Poll duration: " + ret/1000 + " seconds.");
+        theLog.debug2("Name Poll duration: " + ret/1000 + " seconds.");
         break;
 
       case LcapMessage.CONTENT_POLL_REQ:
@@ -550,7 +555,7 @@ public class PollManager  implements LockssManager {
             DEFAULT_CONTENTPOLL_MAX);
         ret = cus.estimatedHashDuration() * 2 * (quorum + 1);
         ret = ret < minContent ? minContent : (ret > maxContent ? maxContent : ret);
-        theLog.debug3("Content Poll duration: " + ret/1000 + " seconds.");
+        theLog.debug2("Content Poll duration: " + ret/1000 + " seconds.");
         break;
 
       default:
@@ -602,7 +607,7 @@ public class PollManager  implements LockssManager {
   static class CommMessageHandler implements LcapComm.MessageHandler {
 
     public void handleMessage(LockssReceivedDatagram rd) {
-      theLog.debug("handling incoming message:" + rd.toString());
+      theLog.debug3("handling incoming message:" + rd.toString());
       byte[] msgBytes = rd.getData();
       try {
         LcapMessage msg = LcapMessage.decodeToMsg(msgBytes, rd.isMulticast());

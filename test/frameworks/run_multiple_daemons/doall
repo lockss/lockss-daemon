@@ -10,6 +10,11 @@ for (( i=1 ; i<=4 ; i++ )) ; do
     if [ "$1" == "start" ] ; then
 	../testrundaemons &
 	echo started in `pwd`
+    elif [ "$1" == "clean" ] ; then
+       rm -rf cache
+       rm -rf history
+       rm -rf localA
+       rm test.out
     else
 	kill `cat dpid`
         echo stopped in `pwd`

@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.57 2003-03-12 21:30:28 claire Exp $
+ * $Id: NodeManagerImpl.java,v 1.58 2003-03-13 03:27:08 claire Exp $
  */
 
 /*
@@ -197,6 +197,10 @@ public class NodeManagerImpl implements NodeManager {
 
   public void startPoll(CachedUrlSet cus, Poll.VoteTally state) {
     NodeState nodeState = getNodeState(cus);
+    if(nodeState == null) {
+      logger.error("Failed to find a valid node state for: " + cus);
+      return;
+    }
     PollSpec spec = state.getPollSpec();
     PollState pollState = new PollState(state.getType(), spec.getLwrBound(),
                                         spec.getUprBound(),
@@ -215,7 +219,7 @@ public class NodeManagerImpl implements NodeManager {
   }
 
   public NodeState getNodeState(CachedUrlSet cus) {
-    logger.debug("Getting " + cus.getUrl());
+    logger.debug3("Getting " + cus.getUrl());
     return (NodeState)nodeMap.get(cus.getUrl());
   }
 
@@ -432,7 +436,10 @@ public class NodeManagerImpl implements NodeManager {
         // call a name poll to finish the repair which ended early
         case PollState.LOST:
         case PollState.REPAIRING:
-          callNamePoll(node.getCachedUrlSet());
+          PollSpec spec = new PollSpec(node.getCachedUrlSet(),
+                                       lastHistory.lwrBound,
+                                       lastHistory.uprBound);
+          callNamePoll(spec.getCachedUrlSet());
           break;
         default:
           break;
@@ -443,6 +450,7 @@ public class NodeManagerImpl implements NodeManager {
 
   private void loadStateTree() {
     // recurse through au cachedurlsets
+    logger.debug("loading state tree");
     CachedUrlSet cus = managedAu.getAUCachedUrlSet();
     recurseLoadCachedUrlSets(cus);
   }
@@ -468,7 +476,7 @@ public class NodeManagerImpl implements NodeManager {
   }
 
   private void addNewNodeState(CachedUrlSet cus) {
-    logger.debug("Adding NewNodeState: " + cus.toString());
+    logger.debug3("Adding NewNodeState: " + cus.toString());
     NodeState state =
       new NodeStateImpl(cus,
                         new CrawlState(-1, CrawlState.FINISHED, 0),
@@ -512,29 +520,29 @@ public class NodeManagerImpl implements NodeManager {
     if (results.didWinPoll()) {
       // if agree
       if (pollState.getStatus() == PollState.RUNNING) {
-        logger.debug2("setting poll state to won.");
+        logger.debug2("won content poll, state = won.");
         // if normal poll, we won!
         pollState.status = PollState.WON;
       } else if (pollState.getStatus() == PollState.REPAIRING) {
         // if repair poll, we're repaired
-        logger.debug2("setting poll state to repaired.");
+        logger.debug2("won repair poll, state = repaired.");
         pollState.status = PollState.REPAIRED;
       }
       updateReputations(results);
     } else {
       // if disagree
       if (pollState.getStatus() == PollState.REPAIRING) {
-        logger.debug2("setting poll state to unrepairable.");
+        logger.debug2("lost repair poll, state = unrepairable");
         // if repair poll, can't be repaired
         pollState.status = PollState.UNREPAIRABLE;
         updateReputations(results);
       } else if (nodeState.isInternalNode()) {
-        logger.debug2("setting poll state to lost, calling name poll.");
+        logger.debug2("lost content poll, state = lost, calling name poll.");
         // if internal node, we need to call a name poll
         pollState.status = PollState.LOST;
-        callNamePoll(nodeState.getCachedUrlSet());
+        callNamePoll(results.getCachedUrlSet());
       } else {
-        logger.debug2("setting poll state to repairing, marking node for repair.");
+        logger.debug2("lost content poll, state = repairing, node marked for repair.");
         // if leaf node, we need to repair
         pollState.status = PollState.REPAIRING;
         try {
@@ -738,7 +746,7 @@ public class NodeManagerImpl implements NodeManager {
                                              pspec);
     }
     else {
-      logger.debug2("calling content poll on all items.");
+      logger.debug2("less than 4 items, calling content poll on all items.");
       for(int i=0; i< childList.size(); i++) {
         theDaemon.getPollManager().requestPoll(LcapMessage.CONTENT_POLL_REQ,
         new PollSpec((CachedUrlSet)childList.get(i)));

@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryServiceImpl.java,v 1.5 2003-03-12 02:43:29 aalto Exp $
+ * $Id: LockssRepositoryServiceImpl.java,v 1.6 2003-03-13 03:27:08 claire Exp $
  */
 
 /*
@@ -85,6 +85,7 @@ public class LockssRepositoryServiceImpl implements LockssRepositoryService {
         throw new LockssRepository.RepositoryStateException("Couldn't load param.");
       }
       cacheLocation = extendCacheLocation(cacheLocation);
+      logger.info("Setting cache location to " + cacheLocation);
     } else {
       throw new LockssDaemonException("Multiple Instantiation.");
     }
@@ -113,6 +114,7 @@ public class LockssRepositoryServiceImpl implements LockssRepositoryService {
       throw new LockssRepository.RepositoryStateException("Couldn't load param.");
     }
     cacheLocation = extendCacheLocation(cacheLocation);
+    logger.info("Setting cache location to " + cacheLocation);
   }
 
   static String extendCacheLocation(String cacheDir) {
@@ -153,6 +155,7 @@ public class LockssRepositoryServiceImpl implements LockssRepositoryService {
           throw new LockssRepository.RepositoryStateException("Couldn't load param.");
         }
         cacheLocation = extendCacheLocation(cacheLocation);
+        logger.info("Setting cache location to " + cacheLocation);
       }
       lockssRepo = new LockssRepositoryImpl(
             LockssRepositoryServiceImpl.mapAuToFileLocation(cacheLocation, au),

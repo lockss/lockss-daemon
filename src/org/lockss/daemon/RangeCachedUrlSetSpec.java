@@ -1,5 +1,5 @@
 /*
- * $Id: RangeCachedUrlSetSpec.java,v 1.3 2003-02-26 04:39:16 tal Exp $
+ * $Id: RangeCachedUrlSetSpec.java,v 1.4 2003-03-13 03:27:08 claire Exp $
  */
 
 /*
@@ -177,7 +177,7 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
 
      if(upperBound != null) {
       String us = prefix + upperBound;
-      if(us.compareTo(url) < 0) {
+      if(us.compareTo(url) < 0) { //url is lexographically greater
         return false;
       }
     }
