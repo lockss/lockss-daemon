@@ -803,6 +803,15 @@ def all():
     suite.addTest(randomTests())
     return suite
 
+def postTagTests():
+    suite = unittest.TestSuite()
+    suite.addTest(SimpleDamageTestCase())
+    suite.addTest(SimpleDeleteTestCase())
+    suite.addTest(SimpleExtraFileTestCase())
+    suite.addTest(RangedNamePollDeleteTestCase())
+    suite.addTest(RangedNamePollExtraFileTestCase())
+    return suite
+
 def simpleTests():
     suite = unittest.TestSuite()
     suite.addTest(SimpleDamageTestCase())
