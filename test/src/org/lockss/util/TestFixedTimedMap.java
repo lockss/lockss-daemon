@@ -1,5 +1,5 @@
 /*
- * $Id: TestTimedHashMap.java,v 1.2 2003-05-22 20:49:34 tyronen Exp $
+ * $Id: TestFixedTimedMap.java,v 1.1 2003-06-16 23:47:59 tyronen Exp $
  */
 
 /*
@@ -37,16 +37,16 @@ import junit.framework.*;
 import org.lockss.test.LockssTestCase;
 
 /**
- * <p>Title: TestTimedHashMap </p>
- * <p>Description: A set of unit test for the TimedHashMap class.</p>
+ * <p>Title: TestFixedTimedMap </p>
+ * <p>Description: A set of unit test for the FixedTimedMap class.</p>
  * @author Tyrone Nicholas
  * @version 1.0
  */
 
-public class TestTimedHashMap extends LockssTestCase {
+public class TestFixedTimedMap extends LockssTestCase {
 
   public static Class testedClasses[] = {
-    org.lockss.util.TimedHashMap.class
+    org.lockss.util.FixedTimedMap.class
   };
 
   protected void setUp() throws Exception {
@@ -64,9 +64,9 @@ public class TestTimedHashMap extends LockssTestCase {
   Object keys[] = { new Integer(3),"foo",new Double(4.0) };
   Object values[] = { "three","bar",new Integer(4) };
 
-  TimedHashMap makeGeneric()
+  FixedTimedMap makeGeneric()
   {
-    TimedHashMap map = new TimedHashMap(timeout);
+    FixedTimedMap map = new FixedTimedMap(timeout);
     map.put(keys[0],values[0]);
     assertTrue(timeout>10);
     TimeBase.step(timeout/10);
@@ -77,7 +77,7 @@ public class TestTimedHashMap extends LockssTestCase {
 
   public void testTimeout()
   {
-    TimedHashMap map = makeGeneric();
+    FixedTimedMap map = makeGeneric();
     TimeBase.step(timeout*9/10-1);
     Object value = map.get(keys[0]);
     assertSame(value,values[0]);
@@ -88,28 +88,28 @@ public class TestTimedHashMap extends LockssTestCase {
 
   public void testClear()
   {
-    TimedHashMap map = makeGeneric();
+    FixedTimedMap map = makeGeneric();
     assertFalse(map.isEmpty());
     map.clear();
     assertTrue(map.isEmpty());
   }
 
   public void testPutGet() {
-    TimedHashMap map = makeGeneric();
+    FixedTimedMap map = makeGeneric();
     assertEquals(keys.length,values.length);
     for (int i=0; i<keys.length; i++)
-      assertEquals(map.get(keys[i]),values[i]);
+      assertSame(map.get(keys[i]),values[i]);
   }
 
   public void testOverwrite() {
-    TimedHashMap map = makeGeneric();
+    FixedTimedMap map = makeGeneric();
     map.put(keys[1],"joe");
     String joe = (String)map.get(keys[1]);
     assertSame(joe,"joe");
   }
 
   public void testUpdate() {
-    TimedHashMap map = makeGeneric();
+    FixedTimedMap map = makeGeneric();
     TimeBase.step(timeout-1);
     map.put(keys[1],values[1]);
     TimeBase.step(timeout-1);
@@ -118,18 +118,16 @@ public class TestTimedHashMap extends LockssTestCase {
 
   public void testEqualityHash() {
     TimeBase.setSimulated();
-    TimedHashMap map = makeGeneric();
+    FixedTimedMap map = makeGeneric();
     TimeBase.setSimulated();
-    TimedHashMap map3 = makeGeneric();
-    TimedHashMap map2 = new TimedHashMap(timeout);
+    FixedTimedMap map3 = makeGeneric();
+    FixedTimedMap map2 = new FixedTimedMap(timeout);
     map2.putAll(map);
-    /*assertNotEquals(map,map2);
-    assertEquals(map,map3);*/
     assertEquals(map.hashCode(),map3.hashCode());
   }
 
   public void testSizeRemove() {
-    TimedHashMap map = makeGeneric();
+    FixedTimedMap map = makeGeneric();
     assertEquals(map.size(),keys.length);
     map.put("joe","sue");
     assertEquals(map.size(),keys.length+1);
@@ -138,7 +136,7 @@ public class TestTimedHashMap extends LockssTestCase {
   }
 
   public void testPutAll() {
-    TimedHashMap map = makeGeneric();
+    FixedTimedMap map = makeGeneric();
     Map t = new HashMap();
     t.put("hack","burn");
     t.put(new Integer(18),"eighteen");
@@ -157,11 +155,11 @@ public class TestTimedHashMap extends LockssTestCase {
     Iterator it = coll.iterator();
     assertEquals(coll.size(), objs.length);
     while (it.hasNext()) {
-      assertEquals(it.next(), objs[loc++]);
+      assertSame(it.next(), objs[loc++]);
     }
   }
   public void testSets() {
-    TimedHashMap map = makeGeneric();
+    FixedTimedMap map = makeGeneric();
 
     Set keyset = map.keySet();
     checkCollection(keyset,keys);
@@ -171,7 +169,7 @@ public class TestTimedHashMap extends LockssTestCase {
   }
 
   public void testEntrySet() {
-    TimedHashMap map = makeGeneric();
+    FixedTimedMap map = makeGeneric();
     int loc = 0;
     Set entryset = map.entrySet();
     Iterator it = entryset.iterator();
@@ -179,12 +177,64 @@ public class TestTimedHashMap extends LockssTestCase {
     assertEquals(entryset.size(), values.length);
     while (it.hasNext()) {
       Map.Entry entry = (Map.Entry) it.next();
-      assertEquals(entry.getKey(), keys[loc]);
-      assertEquals(entry.getValue(), values[loc++]);
+      assertSame(entry.getKey(), keys[loc]);
+      assertSame(entry.getValue(), values[loc++]);
     }
   }
 
+  public void testIteratorExpiry() {
+    FixedTimedMap map = makeGeneric();
+    Set entryset = map.entrySet();
+    Iterator entryit = entryset.iterator();
+    TimeBase.step(timeout + 1);
+    Object obj;
+    try {
+      obj = entryit.next();
+      fail("Should have thrown TimedIteratorExpiredException");
+    }
+    catch (TimedIteratorExpiredException e) {
+      Iterator keyit = map.keySet().iterator();
+      TimeBase.step(timeout);
+      try {
+        obj = keyit.next();
+        fail("Should have thrown TimedIteratorExpiredException");
+      }
+      catch (TimedIteratorExpiredException f) {
+        Iterator valueit = map.values().iterator();
+        TimeBase.step(timeout);
+        try {
+          obj = valueit.next();
+          fail("Should have thrown TimedIteratorExpiredException");
+        }
+        catch (TimedIteratorExpiredException g) {
+        }
+      }
+    }
+  }
+
+  void verifyIteratorInList(Iterator it, List list) {
+    while (it.hasNext()) {
+      assertTrue(list.contains(it.next()));
+    }
+  }
+
+  public void testIterators() {
+    FixedTimedMap map = makeGeneric();
+    Iterator entryit = map.entrySet().iterator();
+    Iterator keyit = map.keySet().iterator();
+    Iterator valueit = map.values().iterator();
+    List keylist = Arrays.asList(keys);
+    List valuelist = Arrays.asList(values);
+    while (entryit.hasNext()) {
+      Map.Entry entry = (Map.Entry)entryit.next();
+      assertTrue(keylist.contains(entry.getKey()));
+      assertTrue(valuelist.contains(entry.getValue()));
+    }
+    verifyIteratorInList(keyit,keylist);
+    verifyIteratorInList(valueit,valuelist);
+  }
+
   public static Test suite() {
-    return new TestSuite(TestTimedHashMap.class);
+    return new TestSuite(TestFixedTimedMap.class);
   }
 }

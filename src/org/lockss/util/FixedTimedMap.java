@@ -1,5 +1,5 @@
 /*
- * $Id: TimedHashMap.java,v 1.2 2003-05-22 20:49:34 tyronen Exp $
+ * $Id: FixedTimedMap.java,v 1.1 2003-06-16 23:47:59 tyronen Exp $
  */
 
 /*
@@ -36,7 +36,7 @@ import java.util.*;
 import org.apache.commons.collections.*;
 
 /**
- * <p>Title: TimedHashMap</p>
+ * <p>Title: FixedTimedMap</p>
  * <p>Description: This class implements the Map interface.  It has the
  * additional property that entries expire on an interval specified
  * by a parameter to the constructor.  The interval is calculated from the
@@ -47,34 +47,28 @@ import org.apache.commons.collections.*;
  * @version 1.0
  */
 
-public class TimedHashMap implements Map
+public class FixedTimedMap extends TimedMap implements Map
 {
 
   /** Amount of time each entry has before it will be deleted */
   int interval;
 
-  /** Stores times of all the keys */
-  Map keytimes;
-
-  /** Delegates actual entries */
-  SequencedHashMap entries;
-
   /** Constructor.
    * @param interval Interval after which entries expire, in milliseconds.
    */
 
-  public TimedHashMap(int interval)
+  public FixedTimedMap(int interval)
   {
     this.interval = interval;
     this.keytimes = new HashMap();
     this.entries = new SequencedHashMap();
   }
 
-  protected void updateEntries()
+  void updateEntries()
   {
     while (!entries.isEmpty())
     {
-      Object obj = entries.getFirstKey();
+      Object obj = ((SequencedHashMap)entries).getFirstKey();
       Deadline entry = (Deadline)keytimes.get(obj);
       if (entry.expired())
       {
@@ -86,51 +80,21 @@ public class TimedHashMap implements Map
     }
   }
 
-  public void clear()
-  {
-    entries.clear();
-    keytimes.clear();
+  boolean areThereExpiredEntries() {
+    if (entries.isEmpty()) {
+      return false;
+    }
+    Object obj = ((SequencedHashMap)entries).getFirstKey();
+    Deadline first = (Deadline)keytimes.get(obj);
+    return first.expired();
   }
 
-  public boolean containsKey(Object key)
-  {
+
+
+  public Object remove(Object key) {
     updateEntries();
-    return entries.containsKey(key);
-  }
-
-  public boolean containsValue(Object value)
-  {
-    updateEntries();
-    return entries.containsKey(value);
-  }
-
-  public Set entrySet()
-  {
-    updateEntries();
-    return entries.entrySet();
-  }
-
-  public Object get(Object key)
-  {
-    updateEntries();
-    return entries.get(key);
-  }
-
-  public int hashCode()
-  {
-    return entries.hashCode() + interval + keytimes.hashCode();
-  }
-
-  public boolean isEmpty()
-  {
-    updateEntries();
-    return entries.isEmpty();
-  }
-
-  public Set keySet()
-  {
-    updateEntries();
-    return entries.keySet();
+    keytimes.remove(key);
+    return entries.remove(key);
   }
 
   public Object put(Object key, Object value)
@@ -156,51 +120,4 @@ public class TimedHashMap implements Map
       put(entry.getKey(), entry.getValue());
     }
   }
-
-  public Object remove(Object key)
-  {
-    updateEntries();
-    keytimes.remove(key);
-    return entries.remove(key);
-  }
-
-  public int size()
-  {
-    updateEntries();
-    return entries.size();
-  }
-
-  public Collection values()
-  {
-    updateEntries();
-    return entries.values();
-  }
-
-  /** Not implemented.  Throws an <code>UnsupportedOperationException</code>.
-   * See the source code for details.
-   * @param obj Object being compared to.
-   */
-
-  public boolean equals(Object obj)
-  {
-    /*
-    This code is not implemented because of uncertainty on whether
-    objects with the same entries but different deadlines should be considered
-    "equal" or not.  Code below considered them unequal.
-
-    try {
-      updateEntries();
-      TimedHashMap other = (TimedHashMap) obj;
-      other.updateEntries();
-      return (interval == other.interval &&
-          entries.equals(other.entries) &&
-          keytimes.equals(other.keytimes));
-    }
-    catch (ClassCastException e) {
-      return false;
-    }*/
-    throw new UnsupportedOperationException("Equals operation not yet " +
-                                            "implemented for this class.");
-  }
-
 }
