@@ -1,5 +1,5 @@
 /*
- * $Id: MockNodeManager.java,v 1.1 2003-03-03 19:33:50 troberts Exp $
+ * $Id: MockNodeManager.java,v 1.2 2003-03-05 01:59:56 claire Exp $
  */
 
 /*
@@ -44,7 +44,7 @@ public class MockNodeManager implements NodeManager, LockssManager {
 
   private MockAuState aus;
 
-  public void initService(LockssDaemon daemon) 
+  public void initService(LockssDaemon daemon)
       throws LockssDaemonException {
     throw new UnsupportedOperationException("Not implemented");
   }
@@ -62,11 +62,11 @@ public class MockNodeManager implements NodeManager, LockssManager {
   }
 
   public void startPoll(CachedUrlSet cus, Poll.VoteTally state) {
-    throw new UnsupportedOperationException("Not implemented");
+    logger.debug3("starting poll for cus: " + cus);
   }
 
   public void updatePollResults(CachedUrlSet cus, Poll.VoteTally results) {
-    throw new UnsupportedOperationException("Not implemented");
+    logger.debug3("updating poll for cus " + cus + " with results " + results);
   }
 
   public NodeState getNodeState(CachedUrlSet cus) {

@@ -37,7 +37,7 @@ public class TestPoll extends LockssTestCase {
   protected LcapIdentity testID1;
   protected LcapMessage[] testmsg;
   protected Poll[] testpolls;
-  static protected PollManager pollmanager = daemon.getPollManager();
+  protected PollManager pollmanager;
 
   public TestPoll(String _name) {
     super(_name);
@@ -56,6 +56,9 @@ public class TestPoll extends LockssTestCase {
                                      cacheStr);
     idmgr = daemon.getIdentityManager();
     daemon.getHashService().startService();
+    daemon.setNodeManagerService(new MockNodeManagerService());
+    daemon.setNodeManager(new MockNodeManager(),testau);
+    pollmanager = daemon.getPollManager();
     try {
       testaddr = InetAddress.getByName("127.0.0.1");
       testID = idmgr.findIdentity(testaddr);

@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.38 2003-03-04 00:59:04 claire Exp $
+* $Id: PollManager.java,v 1.39 2003-03-05 01:59:56 claire Exp $
  */
 
 /*
@@ -83,7 +83,7 @@ public class PollManager  implements LockssManager {
   private static Hashtable thePolls = new Hashtable();
   private static HashMap theVerifiers = new HashMap();
 
-  private static Random theRandom = new Random();
+  private static LockssRandom theRandom = new LockssRandom();
   private static LcapComm theComm = null;
   private static LockssDaemon theDaemon;
 
@@ -178,9 +178,6 @@ public class PollManager  implements LockssManager {
     Poll p = findPoll(msg);
     if (p != null) {
       p.receiveMessage(msg);
-      CachedUrlSet cus = p.getPollSpec().getCachedUrlSet();
-      theDaemon.getNodeManager(cus.getArchivalUnit()).startPoll(cus,
-          p.getVoteTally());
     }
     else {
       theLog.info("Unable to create poll for Message: " + msg.toString());
@@ -539,10 +536,11 @@ public class PollManager  implements LockssManager {
       case LcapMessage.NAME_POLL_REP:
          ret = Configuration.getLongParam(PARAM_NAMEPOLL_DEADLINE,
             DEFAULT_NAMEPOLL_DEADLINE);
-         long range = ret/4;
-         Deadline d = Deadline.inRandomRange(ret-range, ret+range);
-         ret = d.getExpirationTime() * 2 * (quorum +1);
-
+         long earliest = ret - ret/4;
+         long latest = ret + ret/4;
+         ret = earliest + theRandom.nextLong(latest - earliest);
+         ret = ret * 2 * (quorum +1);
+        theLog.debug("Name Poll duration: " + ret);
         break;
 
       case LcapMessage.CONTENT_POLL_REQ:

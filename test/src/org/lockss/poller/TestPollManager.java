@@ -12,6 +12,7 @@ import org.lockss.test.*;
 import org.mortbay.util.*;
 import org.lockss.hasher.HashService;
 import org.lockss.repository.TestLockssRepositoryServiceImpl;
+import org.lockss.repository.*;
 /** JUnitTest case for class: org.lockss.poller.PollManager */
 public class TestPollManager extends LockssTestCase {
 
@@ -39,12 +40,15 @@ public class TestPollManager extends LockssTestCase {
 
   protected void setUp() throws Exception {
     super.setUp();
-    daemon.getHashService().startService();
     daemon.getPluginManager();
     testau = PollTestPlugin.PTArchivalUnit.createFromListOfRootUrls(rooturls);
-    TestLockssRepositoryServiceImpl.configCacheLocation("/tmp");
-    daemon.getLockssRepository(testau);
     PluginUtil.registerArchivalUnit(testau);
+    String cacheStr = LockssRepositoryServiceImpl.PARAM_CACHE_LOCATION +"=/tmp";
+    TestIdentityManager.configParams("/tmp/iddb", "src/org/lockss/protocol",
+                                     cacheStr);
+    daemon.getHashService().startService();
+    daemon.setNodeManagerService(new MockNodeManagerService());
+    daemon.setNodeManager(new MockNodeManager(),testau);
     try {
       testaddr = InetAddress.getByName("127.0.0.1");
       testID = daemon.getIdentityManager().findIdentity(testaddr);

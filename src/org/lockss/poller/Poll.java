@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.51 2003-02-27 04:04:28 tal Exp $
+* $Id: Poll.java,v 1.52 2003-03-05 01:59:56 claire Exp $
  */
 
 /*
@@ -101,7 +101,7 @@ public abstract class Poll implements Serializable {
   long m_createTime;       // poll creation time
   String m_key;            // the string we use to store this poll
   int m_pollstate;         // one of state constants above
-  int m_pendingVotes;      // the number of votes waiting to be tallied
+  int m_pendingVotes = 0;      // the number of votes waiting to be tallied
 
   VoteTally m_tally;       // the vote tallier
   PollManager m_pollmanager; // the pollmanager which should be used by this poll.
@@ -241,6 +241,7 @@ public abstract class Poll implements Serializable {
    */
   void tally() {
     NodeManager nm = m_pollmanager.getDaemon().getNodeManager(m_arcUnit);
+    log.debug("sending NodeManager results " + m_tally);
     nm.updatePollResults(m_urlSet, m_tally);
   }
 
@@ -258,7 +259,6 @@ public abstract class Poll implements Serializable {
       m_pollmanager.sendMessage(msg,m_arcUnit);
     }
     catch(IOException ex) {
-      //XXX how serious is this
       log.info("unable to cast our vote.", ex);
     }
   }
@@ -269,6 +269,8 @@ public abstract class Poll implements Serializable {
   void startPoll() {
     if(m_pollstate != PS_INITING)
       return;
+    NodeManager nm = m_pollmanager.getDaemon().getNodeManager(m_arcUnit);
+    nm.startPoll(m_urlSet, m_tally);
     Deadline pt = Deadline.in(m_msg.getDuration());
     MessageDigest hasher = getInitedHasher(m_challenge, m_verifier);
     if(!scheduleHash(hasher, pt, m_msg, new PollHashCallback())) {
@@ -306,14 +308,11 @@ public abstract class Poll implements Serializable {
    * and prevent any more activity in this poll.
    */
   void stopPoll() {
-    m_pollstate = m_tally.haveQuorum() ? PS_COMPLETE : ERR_NO_QUORUM;
-
     if(!isErrorState()) {
-      if(m_pollstate == PS_WAIT_TALLY){
-        tally();
-      }
+      m_pollstate = m_tally.haveQuorum() ? PS_COMPLETE : ERR_NO_QUORUM;
     }
-
+    log.debug("stopping poll with state = " + m_pollstate);
+    tally();
     m_pollmanager.closeThePoll(m_key);
     log.debug("closed the poll:" + m_key);
   }
@@ -323,6 +322,7 @@ public abstract class Poll implements Serializable {
    */
   void startVoteCheck() {
     m_pendingVotes++;
+    log.debug3("Number pending votes = " + m_pendingVotes);
   }
 
   /**
@@ -330,6 +330,7 @@ public abstract class Poll implements Serializable {
    */
   void stopVoteCheck() {
     m_pendingVotes--;
+    log.debug3("Number pending votes = " + m_pendingVotes);
   }
 
 
@@ -438,6 +439,7 @@ public abstract class Poll implements Serializable {
         byte[] out_hash = hasher.digest();
         Vote vote = (Vote)cookie;
         checkVote(out_hash, vote);
+        stopVoteCheck();
       }
     }
   }
@@ -535,6 +537,20 @@ public abstract class Poll implements Serializable {
 
     VoteTally(int type, long duration) {
       this(type, m_createTime, duration, 0, 0, 0, 0);
+    }
+
+    public String toString() {
+      StringBuffer sbuf = new StringBuffer();
+      sbuf.append("[Tally:");
+      sbuf.append(" type:" + type);
+      sbuf.append("-(" + m_key);
+      sbuf.append(") agree:" + numAgree);
+      sbuf.append("-wt-" + wtAgree);
+      sbuf.append(" disagree:" + numDisagree);
+      sbuf.append("-wt-" + wtDisagree);
+      sbuf.append(" quorum:" + quorum);
+      sbuf.append("]");
+      return sbuf.toString();
     }
 
     /**

@@ -1,5 +1,5 @@
 /*
-* $Id: Vote.java,v 1.6 2003-02-20 00:57:28 claire Exp $
+* $Id: Vote.java,v 1.7 2003-03-05 01:59:56 claire Exp $
  */
 
 /*
@@ -93,6 +93,17 @@ public class Vote implements Serializable {
     return agree;
   }
 
+  public String toString() {
+    StringBuffer sbuf = new StringBuffer();
+    sbuf.append("[Vote: ");
+    sbuf.append("from " + voteAddr);
+    sbuf.append(" C(" + getChallengeString());
+    sbuf.append(") V(" + getVerifierString());
+    sbuf.append(") H(" + getHashString());
+    sbuf.append(")]");
+    return sbuf.toString();
+  }
+
   /**
    * Return the Identity of the voter
    * @return <code>LcapIdentity</code> the id
@@ -138,7 +149,11 @@ public class Vote implements Serializable {
    * @return a String representing the hash
    */
   public String getHashString() {
-    return String.valueOf(B64Code.encode(hash));
+    if(hash != null) {
+      return String.valueOf(B64Code.encode(hash));
+    }
+    else
+      return null;
   }
 
   /**
