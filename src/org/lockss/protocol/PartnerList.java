@@ -1,5 +1,5 @@
 /*
- * $Id: PartnerList.java,v 1.11 2003-04-23 20:33:39 tal Exp $
+ * $Id: PartnerList.java,v 1.12 2003-04-24 01:00:22 tal Exp $
  */
 
 /*
@@ -114,6 +114,15 @@ class PartnerList {
     return new ArrayList(partners.keySet());
   }
 
+  /** Called from LcapRouter.doUnicast(), check that localIP isn't in
+   * partner list */
+  void checkLocalIp(InetAddress local) {
+    if (partners.containsKey(local)) {
+      log.warning("Local IP found in partner list: " + local);
+      removePartner(local);
+    }
+  }
+
   /** Inform the PartnerList that a multicast packet was received.
    * @param ip the address of the packet sender
    */
@@ -153,6 +162,7 @@ class PartnerList {
   }
 
   void addDefaultPartners() {
+    lastPartnerRemoveTime = TimeBase.nowMs();
     for (Iterator iter = defaultPartnerList.iterator(); iter.hasNext(); ) {
       InetAddress ip = (InetAddress)iter.next();
       addPartner(ip);
@@ -180,7 +190,7 @@ class PartnerList {
   void addFromDefaultList() {
     if (!defaultPartnerList.isEmpty()) {
       int ix = random.nextInt(defaultPartnerList.size());
-      partners.put(defaultPartnerList.get(ix), nowLong());
+      addPartner((InetAddress)defaultPartnerList.get(ix));
     }
   }
 

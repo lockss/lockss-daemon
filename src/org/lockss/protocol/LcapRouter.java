@@ -1,5 +1,5 @@
 /*
- * $Id: LcapRouter.java,v 1.17 2003-04-17 04:03:01 tal Exp $
+ * $Id: LcapRouter.java,v 1.18 2003-04-24 01:00:22 tal Exp $
  */
 
 /*
@@ -248,19 +248,25 @@ public class LcapRouter extends BaseLockssManager {
     log.debug2("incoming orig: " + originator + " , sender: " + sender);
     if (isEligibleToForward(dg, msg)) {
       msg.setHopCount(msg.getHopCount() - 1);
-      if (dg.isMulticast()) {
-	partnerList.multicastPacketReceivedFrom(sender);
-	if (!sender.equals(originator)) {
-	  partnerList.addPartner(originator, probAddPartner);
+      try {
+	LockssDatagram fwddg = new LockssDatagram(dg.getProtocol(),
+						  msg.encodeMsg());
+	if (dg.isMulticast()) {
+	  partnerList.multicastPacketReceivedFrom(sender);
+	  if (!sender.equals(originator)) {
+	    partnerList.addPartner(originator, probAddPartner);
+	  }
+	  doUnicast(fwddg, fwdRateLimiter, sender, originator);
+	} else {
+	  partnerList.addPartner(sender, 1.0);
+	  if (!sender.equals(originator)) {
+	    partnerList.addPartner(originator, probAddPartner);
+	  }
+	  doMulticast(fwddg, fwdRateLimiter, null);
+	  doUnicast(fwddg, fwdRateLimiter, sender, originator);
 	}
-	doUnicast(dg, fwdRateLimiter, sender, originator);
-      } else {
-	partnerList.addPartner(sender, 1.0);
-	if (!sender.equals(originator)) {
-	  partnerList.addPartner(originator, probAddPartner);
-	}
-	doMulticast(dg, fwdRateLimiter, null);
-	doUnicast(dg, fwdRateLimiter, sender, originator);
+      } catch (IOException e) {
+	log.warning("Couldn't forward message", e);
       }
     }
   }
@@ -275,22 +281,29 @@ public class LcapRouter extends BaseLockssManager {
   boolean isEligibleToForward(LockssReceivedDatagram dg, LcapMessage msg) {
     // Don't forward if ...
     if (msg.getHopCount() <= 0) {	// forwarded enough times already
+      log.debug3("Not forwarding, hopcount = 0");
       return false;
     }
     if (isUnicastOpcode(msg)) {
+      log.debug3("Not forwarding, is unicast opcode");
       return false;
     }
     if (didISend(dg, msg)) {
+      log.debug3("Not forwarding, I sent it");
       return false;
     }
 
     if (!fwdRateLimiter.isEventOk()) {	// exceeded max send packet rate
-      log.debug("Message forwarding rate exceeded, not forwarding" + msg);
+      log.debug("Not forwarding, forwarding rate exceeded");
       return false;
     }
-     if (msg.getStopTime() >= TimeBase.nowMs()) { // poll has ended
-       return false;
-     }
+
+    if (!msg.isNoOp() && msg.getStopTime() <= TimeBase.nowMs()) {
+      // poll has ended
+      log.debug3("Not forwarding, poll over");
+      return false;
+    }
+    log.debug3("Forwarding msg");
 
     return true;
   }
@@ -324,11 +337,8 @@ public class LcapRouter extends BaseLockssManager {
    */
   void doUnicast(LockssDatagram dg, RateLimiter limiter,
 		 InetAddress sender, InetAddress originator) {
+    partnerList.checkLocalIp(getLocalIdentityAddr());
     Collection partners = partnerList.getPartners();
-    if (partners.contains(getLocalIdentityAddr())) {
-      log.warning("Local IP found in partner list: " + getLocalIdentityAddr());
-      partners.remove(getLocalIdentityAddr());
-    }
     for (Iterator iter = partners.iterator(); iter.hasNext(); ) {
       InetAddress part = (InetAddress)iter.next();
       // *** Either or both of sender and originator may be null here,
@@ -356,8 +366,13 @@ public class LcapRouter extends BaseLockssManager {
     }
   }
 
+  private InetAddress localIp;
+
   InetAddress getLocalIdentityAddr() {
-    return idMgr.getLocalIdentity().getAddress();
+    if (localIp == null) {
+      localIp = idMgr.getLocalIdentity().getAddress();
+    }
+    return localIp;
   }
 
   void sendNoOp() {
