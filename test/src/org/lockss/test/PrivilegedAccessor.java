@@ -1,5 +1,5 @@
 /*
- * $Id: PrivilegedAccessor.java,v 1.9 2003-06-20 22:34:56 claire Exp $
+ * $Id: PrivilegedAccessor.java,v 1.10 2004-09-01 02:25:19 tlipkis Exp $
  */
 
 /*
@@ -280,7 +280,7 @@ public class PrivilegedAccessor {
       }
     }
     if (l.isEmpty()) {
-      throw new NoSuchMethodException(methodName);
+      throw new NoSuchMethodException(o.toString() + "." + methodName);
     }
     if (l.size() == 1) {
       return (Method)l.get(0);
