@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.22 2004-03-08 19:31:24 tlipkis Exp $
+ * $Id: ProxyHandler.java,v 1.23 2004-03-10 08:51:09 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.22 2004-03-08 19:31:24 tlipkis Exp $
+// $Id: ProxyHandler.java,v 1.23 2004-03-10 08:51:09 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -54,6 +54,7 @@ import org.lockss.util.urlconn.*;
 import org.lockss.app.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.apache.commons.httpclient.util.*;
 
 /* ------------------------------------------------------------ */
 /** Proxy request handler.  A HTTP/1.1 Proxy with special handling for
@@ -66,7 +67,9 @@ import org.lockss.plugin.*;
  * @author tal
  */
 public class ProxyHandler extends AbstractHttpHandler {
-  private static Logger log = Logger.getLogger("Proxy");
+  private static Logger log = Logger.getLogger("ProxyHandler");
+
+  static final String LOCKSS_PROXY_ID = "1.1 (LOCKSS/jetty)";
 
   private LockssDaemon theDaemon = null;
   private PluginManager pluginMgr = null;
@@ -153,30 +156,29 @@ public class ProxyHandler extends AbstractHttpHandler {
 
     String urlString = uri.toString();
     CachedUrl cu = pluginMgr.findMostRecentCachedUrl(urlString);
-    if (log.isDebug2()) {
-      log.debug2("cu: " + cu);
-    }
     boolean isRepairRequest =
       org.lockss.util.StringUtil.equalStrings(request.getField("user-agent"),
 					      LockssDaemon.getUserAgent());
-    if (cu != null && cu.hasContent()) {
-      serveFromCache(pathInContext, pathParams, request,
-		     response, cu);
-      return;
+    if (log.isDebug2()) {
+      log.debug2("cu: " + (isRepairRequest ? "(repair) " : "") + cu);
     }
-
     if (isRepairRequest) {
+      if (cu != null && cu.hasContent()) {
+	serveFromCache(pathInContext, pathParams, request,
+		       response, cu);
+	return;
+      } else {
       // This should never happen, as it should have been caught by the
       // ProcyAccessHandler.  But we never want to forward repair request
       // from another LOCKSS cache, so we check here just to make sure.
-      response.sendError(HttpResponse.__404_Not_Found);
-      request.setHandled(true);
-      return; 
+	response.sendError(HttpResponse.__404_Not_Found);
+	request.setHandled(true);
+	return; 
+      }
     }
-
     if (UrlUtil.isHttpUrl(urlString)) {
       if (HttpRequest.__GET.equals(request.getMethod())) {
-	doLockss(pathInContext, pathParams, request, response, urlString);
+	doLockss(pathInContext, pathParams, request, response, urlString, cu);
 	return;
       }
     }
@@ -250,7 +252,7 @@ public class ProxyHandler extends AbstractHttpHandler {
       }
 
       // Proxy headers
-      connection.setRequestProperty("Via","1.1 (LOCKSS/jetty)");
+      connection.setRequestProperty("Via", LOCKSS_PROXY_ID);
       if (!xForwardedFor) {
 	// XXX Should be addRequest... , but that doesn't exist in 1.3
 	// connection.addRequestProperty(HttpFields.__XForwardedFor,
@@ -320,7 +322,7 @@ public class ProxyHandler extends AbstractHttpHandler {
 	hdr=connection.getHeaderFieldKey(h);
 	val=connection.getHeaderField(h);
       }
-      response.setField("Via","1.1 (LOCKSS/jetty)");
+      response.setField("Via", LOCKSS_PROXY_ID);
 
       // Handled
       request.setHandled(true);
@@ -340,7 +342,11 @@ public class ProxyHandler extends AbstractHttpHandler {
 		String pathParams,
 		HttpRequest request,
 		HttpResponse response,
-		String urlString) throws IOException {
+		String urlString,
+		CachedUrl cu) throws IOException {
+
+    boolean isInCache = cu != null && cu.hasContent();
+    log.debug3("isInCache: " + isInCache);
 
     try {
       LockssUrlConnection conn =
@@ -360,7 +366,7 @@ public class ProxyHandler extends AbstractHttpHandler {
       // copy request headers into new request
       boolean xForwardedFor=false;
       boolean hasContent=false;
-      String userIfModified = null;
+      String ifModified = null;
 
       for (Enumeration enum = request.getFieldNames();
 	   enum.hasMoreElements(); ) {
@@ -374,12 +380,12 @@ public class ProxyHandler extends AbstractHttpHandler {
 
 	xForwardedFor |= HttpFields.__XForwardedFor.equalsIgnoreCase(hdr);
 
-// 	if (cu != null) {
-// 	  if (HttpFields.__IfModifiedSince.equalsIgnoreCase(hdr)) {
-// 	    userIfModified = request.getField(hdr);
-// 	    continue;
-// 	  }
-// 	}
+	if (isInCache) {
+	  if (HttpFields.__IfModifiedSince.equalsIgnoreCase(hdr)) {
+	    ifModified = request.getField(hdr);
+	    continue;
+	  }
+	}
 
 	Enumeration vals = request.getFieldValues(hdr);
 	while (vals.hasMoreElements()) {
@@ -390,15 +396,34 @@ public class ProxyHandler extends AbstractHttpHandler {
 	}
       }
 
-//       if (cu != null) {
-// 	if (userIfModified != null) {
-// 	}
-//       }
+      // Use the cu's last-modified date, if any, unless the user's
+      // if-modified-since is later.
+      if (isInCache) {
+	CIProperties cuprops = cu.getProperties();
+	String cuLast = cuprops.getProperty(CachedUrl.PROPERTY_LAST_MODIFIED);
+	log.debug3("cuLast: " + cuLast);
+	if (ifModified != null) {
+	  log.debug3("ifModified: " + ifModified);
+	  try {
+	    if (isEarlier(ifModified, cuLast)) {
+	      ifModified = cuLast;
+	    }
+	  } catch (DateParseException e) {
+	    // preserve user's header if parse failure
+	  }
+	} else {
+	  ifModified = cuLast;
+	}
+      }
+
+      if (ifModified != null) {
+	conn.setRequestProperty(HttpFields.__IfModifiedSince, ifModified);
+      }
 
       // Proxy-specifix headers
-      conn.setRequestProperty("Via","1.1 (LOCKSS/jetty)");
+      conn.setRequestProperty("Via", LOCKSS_PROXY_ID);
       if (!xForwardedFor) {
-	conn.setRequestProperty(HttpFields.__XForwardedFor,
+	conn.addRequestProperty(HttpFields.__XForwardedFor,
 				request.getRemoteAddr());
 
       }
@@ -428,26 +453,34 @@ public class ProxyHandler extends AbstractHttpHandler {
                 
       // Send the request
 
-      conn.execute();
-
-      InputStream proxy_in = null;
-
-      // handle status codes etc.
-                
-// 	proxy_in = http.getErrorStream();
-//       if (proxy_in==null) {
-// 	try {proxy_in=connection.getInputStream();}
-// 	catch (Exception e) {
-// 	  Code.ignore(e);
-// 	  proxy_in = http.getErrorStream();
-// 	}
-//       }
+      try {
+	conn.execute();
+      } catch (IOException e) {
+	safeReleaseConn(conn);
+	if (isInCache) {
+	  serveFromCache(pathInContext, pathParams, request,
+			 response, cu);
+	  return;
+	}
+	// XXX should distunguish between timeout (504) and no dns, conn
+	// refused, etc. (503?)
+	response.sendError(HttpResponse.__504_Gateway_Timeout);
+	return;
+      }
 
       int code=conn.getResponseCode();
+      if (isInCache && preferCacheOverPubResponse(cu, conn)) {
+	safeReleaseConn(conn);
+	serveFromCache(pathInContext, pathParams, request,
+		       response, cu);
+	return;
+      }	
+
+      // return response from server connection
       response.setStatus(code);
       response.setReason(conn.getResponseMessage());
 
-      proxy_in = conn.getResponseInputStream();
+      InputStream proxy_in = conn.getResponseInputStream();
             
       // clear response defaults.
       response.removeField(HttpFields.__Date);
@@ -465,7 +498,7 @@ public class ProxyHandler extends AbstractHttpHandler {
 	  response.addField(hdr,val);
 	}
       }
-      response.setField("Via","1.1 (LOCKSS/jetty)");
+      response.setField("Via", LOCKSS_PROXY_ID);
 
       // Handled
       request.setHandled(true);
@@ -478,6 +511,44 @@ public class ProxyHandler extends AbstractHttpHandler {
 	response.sendError(HttpResponse.__500_Internal_Server_Error);
     }
   }
+
+  void safeReleaseConn(LockssUrlConnection conn) {
+    try {
+      conn.release();
+    } catch (Exception e) {}
+  }
+    
+  boolean isEarlier(String datestr1, String datestr2)
+      throws DateParseException {
+    // common case, no conversion necessary
+    if (datestr1.equalsIgnoreCase(datestr2)) return false;
+    long d1 = DateParser.parseDate(datestr1).getTime();
+    long d2 = DateParser.parseDate(datestr2).getTime();
+    return d1 < d2;
+  }
+
+  // return true to pass the request along to the resource handler to
+  // (conditionally) serve from the CachedUrl, false to return the server's
+  // response to the user.
+  boolean preferCacheOverPubResponse(CachedUrl cu, LockssUrlConnection conn) {
+    if (cu == null || !cu.hasContent()) {
+      return false;
+    }
+    int code=conn.getResponseCode();
+    switch (code) {
+    case HttpResponse.__304_Not_Modified:
+      // server doesn't have newer content, see if cache does
+      return true;
+    case HttpResponse.__404_Not_Found:
+      // content not available from publisher
+      return true;
+    case HttpResponse.__200_OK:
+      // if server returned content, always serve it
+      return false;
+    }
+    return false;
+  }
+
     
   /* ------------------------------------------------------------ */
   public void handleConnect(String pathInContext,
