@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArchivalUnit.java,v 1.1 2003-05-06 20:04:10 aalto Exp $
+ * $Id: TestBaseArchivalUnit.java,v 1.2 2003-05-06 22:38:33 aalto Exp $
  */
 
 /*
@@ -66,12 +66,22 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     super.tearDown();
   }
 
-  public void testGetNextPollInterval() {
+  public void testCheckNextPollInterval() {
     for (int ii=0; ii<10; ii++) {
-      long nextInterval = mbau.getNextPollInterval();
-      assertTrue(nextInterval >= 5000);
-      assertTrue(nextInterval <= 10000);
+      mbau.nextPollInterval = -1;
+      mbau.checkNextPollInterval();
+      assertTrue(mbau.nextPollInterval >= 5000);
+      assertTrue(mbau.nextPollInterval <= 10000);
     }
+
+    Properties props = new Properties();
+    props.setProperty(BaseArchivalUnit.PARAM_TOP_LEVEL_POLL_INTERVAL_MIN, "1s");
+    props.setProperty(BaseArchivalUnit.PARAM_TOP_LEVEL_POLL_INTERVAL_MAX, "2s");
+    ConfigurationUtil.setCurrentConfigFromProps(props);
+
+    mbau.checkNextPollInterval();
+    assertTrue(mbau.nextPollInterval >= 1000);
+    assertTrue(mbau.nextPollInterval <= 2000);
   }
 
   public void testIncrementPollProb() {
@@ -80,6 +90,20 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     // shouldn't increment past max
     assertEquals(0.85, mbau.incrementPollProb(0.83), 0.001);
     assertEquals(0.85, mbau.incrementPollProb(0.85), 0.001);
+  }
+
+  public void testCheckPollProb() {
+    mbau.curTopLevelPollProb = -1.0;
+    mbau.checkPollProb();
+    assertEquals(0.50, mbau.curTopLevelPollProb, 0.001);
+
+    mbau.curTopLevelPollProb = .35;
+    mbau.checkPollProb();
+    assertEquals(0.50, mbau.curTopLevelPollProb, 0.001);
+
+    mbau.curTopLevelPollProb = .90;
+    mbau.checkPollProb();
+    assertEquals(0.85, mbau.curTopLevelPollProb, 0.001);
   }
 
   public void testShouldCallTopLevelPoll() throws IOException {

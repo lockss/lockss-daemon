@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.25 2003-05-06 20:05:28 aalto Exp $
+ * $Id: BaseArchivalUnit.java,v 1.26 2003-05-06 22:38:33 aalto Exp $
  */
 
 /*
@@ -292,14 +292,8 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    * @return true iff a top level poll should be called
    */
   public boolean shouldCallTopLevelPoll(AuState aus) {
-    if (nextPollInterval==-1) {
-      nextPollInterval = getNextPollInterval();
-    }
-    if (curTopLevelPollProb==-1) {
-      // reset to initial prob
-      curTopLevelPollProb = Configuration.getCurrentConfig().getPercentage(
-          PARAM_TOPLEVEL_POLL_PROB_INITIAL, DEFAULT_TOPLEVEL_POLL_PROB_INITIAL);
-    }
+    checkNextPollInterval();
+    checkPollProb();
 
     logger.debug("Deciding whether to call a top level poll");
     logger.debug3("Last poll at "+ aus.getLastTopLevelPollTime());
@@ -323,7 +317,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     return false;
   }
 
-  long getNextPollInterval() {
+  void checkNextPollInterval() {
     Configuration config = Configuration.getCurrentConfig();
     long minPollInterval =
         config.getTimeInterval(PARAM_TOP_LEVEL_POLL_INTERVAL_MIN,
@@ -334,8 +328,26 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     if (maxPollInterval <= minPollInterval) {
       maxPollInterval = 2 * minPollInterval;
     }
-    return Deadline.inRandomRange(minPollInterval,
-                                  maxPollInterval).getRemainingTime();
+    if ((nextPollInterval < minPollInterval) ||
+        (nextPollInterval > maxPollInterval)) {
+      nextPollInterval =
+          Deadline.inRandomRange(minPollInterval,
+                                 maxPollInterval).getRemainingTime();
+    }
+  }
+
+  void checkPollProb() {
+    Configuration config = Configuration.getCurrentConfig();
+    double initialProb = config.getPercentage(
+        PARAM_TOPLEVEL_POLL_PROB_INITIAL, DEFAULT_TOPLEVEL_POLL_PROB_INITIAL);
+    double maxProb = config.getPercentage(
+        PARAM_TOPLEVEL_POLL_PROB_MAX, DEFAULT_TOPLEVEL_POLL_PROB_MAX);
+    if (curTopLevelPollProb < initialProb) {
+      // reset to initial prob
+      curTopLevelPollProb = initialProb;
+    } else if (curTopLevelPollProb > maxProb) {
+      curTopLevelPollProb = maxProb;
+    }
   }
 
   double incrementPollProb(double curProb) {
@@ -348,9 +360,9 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
       curProb += config.getPercentage(
           PARAM_TOPLEVEL_POLL_PROB_INCREMENT,
           DEFAULT_TOPLEVEL_POLL_PROB_INCREMENT);
-      if (curProb > topLevelPollProbMax) {
-        curProb = topLevelPollProbMax;
-      }
+    }
+    if (curProb > topLevelPollProbMax) {
+      curProb = topLevelPollProbMax;
     }
     return curProb;
   }
