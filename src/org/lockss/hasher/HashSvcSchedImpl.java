@@ -1,5 +1,5 @@
 /*
- * $Id: HashSvcSchedImpl.java,v 1.1 2003-11-11 20:33:02 tlipkis Exp $
+ * $Id: HashSvcSchedImpl.java,v 1.2 2003-11-12 21:08:40 tlipkis Exp $
  */
 
 /*
@@ -59,6 +59,7 @@ public class HashSvcSchedImpl
   private HistoryList completed = new HistoryList(50);
   private int hashStepBytes = 10000;
   private BigInteger totalBytesHashed = BigInteger.valueOf(0);
+  private int reqCtr = 0;
   private long totalTime = 0;
 
   public HashSvcSchedImpl() {}
@@ -190,6 +191,7 @@ public class HashSvcSchedImpl
     task.setOverrunAllowed(true);
     if (sched.scheduleTask(task)) {
       synchronized (completed) {
+	task.hashReqSeq = ++reqCtr;
 	queue.add(task);
       }
       return true;
@@ -231,6 +233,7 @@ public class HashSvcSchedImpl
     MessageDigest hasher;
     HashService.Callback callback;
     CachedUrlSetHasher urlsetHasher;
+    int hashReqSeq = -1;
     int type;
     int sched;
     int finish;
@@ -284,6 +287,10 @@ public class HashSvcSchedImpl
 	totalBytesHashed.add(BigInteger.valueOf(bytesHashed));
       totalTime += getTimeUsed();
       try {
+	if (type == HashService.CONTENT_HASH) {
+	  // tk - change interface to tell CUS what type of hash finished
+	  urlset.storeActualHashDuration(getTimeUsed(), getExcption());
+	}
 	callback.hashingFinished(urlset, cookie, hasher, e);
       } catch (Exception e) {
 	log.error("Hash callback threw", e);
@@ -296,6 +303,14 @@ public class HashSvcSchedImpl
       synchronized (completed) {
 	queue.remove(this);
 	completed.add(this);
+      }
+    }
+
+    public String getShortText() {
+      if (hashReqSeq != -1) {
+	return "Hash " + hashReqSeq;
+      } else {
+	return "Hash";
       }
     }
 
@@ -399,7 +414,7 @@ public class HashSvcSchedImpl
     private Map makeRow(HashTask task, boolean done, int qpos) {
       Map row = new HashMap();
       row.put("sort", new Long(done ? -task.getFinishDate().getTime() : qpos));
-      row.put("sched", new Integer(task.getSchedSeq()));
+      row.put("sched", new Integer(task.hashReqSeq));
       row.put("state", getState(task, done));
       row.put("au", task.urlset.getArchivalUnit().getName());
       row.put("cus", task.urlset.getSpec());
@@ -427,11 +442,11 @@ public class HashSvcSchedImpl
 
     private Object getState(HashTask task, boolean done) {
       if (!done) {
-	return (task.getTimeUsed() > 0) ? TASK_STATE_RUN : TASK_STATE_WAIT;
+	return (task.hasStarted()) ? TASK_STATE_RUN : TASK_STATE_WAIT;
       }
       if (task.getExcption() == null) {
 	return TASK_STATE_DONE;
-      } else if (task.getExcption() instanceof HashService.Timeout) {
+      } else if (task.getExcption() instanceof SchedService.Timeout) {
 	return TASK_STATE_TIMEOUT;
       } else {
 	return TASK_STATE_ERROR;
