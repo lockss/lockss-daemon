@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.46 2004-09-03 21:23:09 smorabito Exp $
+ * $Id: TestPluginManager.java,v 1.47 2004-09-08 01:25:47 smorabito Exp $
  */
 
 /*
@@ -76,9 +76,8 @@ public class TestPluginManager extends LockssTestCase {
 
   private String pluginDir;
   private String pluginJar;
-  private KeyStore pubKeystore;
-  private KeyStore privKeystore;
   private String signAlias = "goodguy";
+  private String pubKeystore = "org/lockss/test/public.keystore";
   private String password = "f00bar";
 
   PluginManager mgr;
@@ -629,56 +628,40 @@ public class TestPluginManager extends LockssTestCase {
     }
   }
 
-  // sethm - commented out tests, these need to be reworked for daemon
-  // 1.4
+  private KeyStore getKeystoreResource(String name, String pass)
+      throws Exception {
+    KeyStore ks = KeyStore.getInstance("JKS", "SUN");
+    ks.load(ClassLoader.getSystemClassLoader().
+	    getResourceAsStream(name), pass.toCharArray());
+    return ks;
+  }
 
-//   private KeyStore getKeystoreResource(String name, String pass)
-//       throws Exception {
-//     KeyStore ks = KeyStore.getInstance("JKS", "SUN");
-//     ks.load(ClassLoader.getSystemClassLoader().
-// 	    getResourceAsStream(name), pass.toCharArray());
-//     return ks;
-//   }
-
-//   private void prepareLoadablePluginTests() throws Exception {
-//     pluginJar = pluginDir + "plugin.jar";
-//     pubKeystore =
-//       getKeystoreResource("org/lockss/test/public.keystore", password);
-//     privKeystore =
-//       getKeystoreResource("org/lockss/test/goodguy.keystore", password);
-
-//     String xmlFile = "org/lockss/test/MockConfigurablePlugin.xml";
-//     Map resourceMap = new HashMap();
-//     resourceMap.put(xmlFile, xmlFile);
-//     JarTestUtils.createResourceJar(pluginJar, resourceMap, true);
-
-//     JarSigner js = new JarSigner(privKeystore, signAlias, password);
-//     js.signJar(pluginJar);
-
-//     Properties p = new Properties();
-//     p.setProperty(PluginManager.PARAM_KEYSTORE_LOCATION,
-// 		  "org/lockss/test/public.keystore");
-//     p.setProperty(PluginManager.PARAM_KEYSTORE_PASSWORD,
-// 		  password);
-//     ConfigurationUtil.setCurrentConfigFromProps(p);
-//   }
+  private void prepareLoadablePluginTests() throws Exception {
+    pluginJar = "org/lockss/test/good-plugin.jar";
+    Properties p = new Properties();
+    p.setProperty(PluginManager.PARAM_KEYSTORE_LOCATION,
+		  pubKeystore);
+    p.setProperty(PluginManager.PARAM_KEYSTORE_PASSWORD,
+		  password);
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+  }
 
 
-//   /** Test loading a loadable plugin. */
-//   public void testLoadLoadablePlugin() throws Exception {
-//     prepareLoadablePluginTests();
-//     String pluginKey = "org|lockss|test|MockConfigurablePlugin";
-//     // Set up a MockRegistryArchivalUnit with the right data.
-//     List plugins =
-//       ListUtil.list(pluginJar);
-//     List registryAus =
-//       ListUtil.list(new MockRegistryArchivalUnit(plugins));
-//     assertNull(mgr.getPlugin(pluginKey));
-//     mgr.processRegistryAus(registryAus);
-//     Plugin mockPlugin = mgr.getPlugin(pluginKey);
-//     assertNotNull(mockPlugin);
-//     assertEquals("1", mockPlugin.getVersion());
-//   }
+  /** Test loading a loadable plugin. */
+  public void testLoadLoadablePlugin() throws Exception {
+    prepareLoadablePluginTests();
+    String pluginKey = "org|lockss|test|MockConfigurablePlugin";
+    // Set up a MockRegistryArchivalUnit with the right data.
+    List plugins =
+      ListUtil.list(pluginJar);
+    List registryAus =
+      ListUtil.list(new MockRegistryArchivalUnit(plugins));
+    assertNull(mgr.getPlugin(pluginKey));
+    mgr.processRegistryAus(registryAus);
+    Plugin mockPlugin = mgr.getPlugin(pluginKey);
+    assertNotNull(mockPlugin);
+    assertEquals("1", mockPlugin.getVersion());
+  }
 
   public static Test suite() {
     TestSuite suite = new TestSuite();
@@ -686,44 +669,44 @@ public class TestPluginManager extends LockssTestCase {
     return suite;
   }
 
-//   /**
-//    * a mock Archival Unit used for testing loadable plugin loading.
-//    */
-//   private static class MockRegistryArchivalUnit extends MockArchivalUnit {
-//     private MockRegistryCachedUrlSet cus;
+  /**
+   * a mock Archival Unit used for testing loadable plugin loading.
+   */
+  private static class MockRegistryArchivalUnit extends MockArchivalUnit {
+    private MockRegistryCachedUrlSet cus;
 
-//     public MockRegistryArchivalUnit(List jarFiles) {
-//       super(null);
-//       cus = new MockRegistryCachedUrlSet();
-//       int n = 0;
-//       for (Iterator iter = jarFiles.iterator(); iter.hasNext(); ) {
-// 	n++;
-// 	cus.addCu(new MockCachedUrl("http://foo.bar/test" + n + ".jar",
-// 					(String)iter.next()));
-//       }
-//     }
+    public MockRegistryArchivalUnit(List jarFiles) {
+      super(null);
+      cus = new MockRegistryCachedUrlSet();
+      int n = 0;
+      for (Iterator iter = jarFiles.iterator(); iter.hasNext(); ) {
+	n++;
+	cus.addCu(new MockCachedUrl("http://foo.bar/test" + n + ".jar",
+				    (String)iter.next(), true));
+      }
+    }
 
-//     public CachedUrlSet getAuCachedUrlSet() {
-//       return cus;
-//     }
-//   }
+    public CachedUrlSet getAuCachedUrlSet() {
+      return cus;
+    }
+  }
 
-//   /**
-//    * a mock CachedUrlSet used for testing loadable plugin loading.
-//    */
-//   private static class MockRegistryCachedUrlSet extends MockCachedUrlSet {
-//     List cuList;
+  /**
+   * a mock CachedUrlSet used for testing loadable plugin loading.
+   */
+  private static class MockRegistryCachedUrlSet extends MockCachedUrlSet {
+    List cuList;
 
-//     public MockRegistryCachedUrlSet() {
-//       cuList = new ArrayList();
-//     }
+    public MockRegistryCachedUrlSet() {
+      cuList = new ArrayList();
+    }
 
-//     public void addCu(MockCachedUrl cu) {
-//       cuList.add(cu);
-//     }
+    public void addCu(MockCachedUrl cu) {
+      cuList.add(cu);
+    }
 
-//     public Iterator contentHashIterator() {
-//       return cuList.iterator();
-//     }
-//   }
+    public Iterator contentHashIterator() {
+      return cuList.iterator();
+    }
+  }
 }

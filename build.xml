@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.107 2004-09-07 07:25:11 tlipkis Exp $
+ $Id: build.xml,v 1.108 2004-09-08 01:25:47 smorabito Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -494,6 +494,7 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
        <fileset dir="${test.src}" >
           <include name="**/*.xml"/>   <!-- mapping files in various dirs -->
           <include name="**/*.keystore"/> <!-- test keystores -->
+	  <include name="**/*.jar"/> <!-- test jar files -->
        </fileset>
     </copy>
   </target>

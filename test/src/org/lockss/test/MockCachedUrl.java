@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrl.java,v 1.24 2004-09-01 20:14:44 smorabito Exp $
+ * $Id: MockCachedUrl.java,v 1.25 2004-09-08 01:25:47 smorabito Exp $
  */
 
 /*
@@ -54,7 +54,8 @@ public class MockCachedUrl implements CachedUrl {
   private boolean doesExist = false;
   private String content = null;
   private Reader reader = null;
-  private File cachedFile = null;
+  private String cachedFile = null;
+  private boolean isResource;
 
   public MockCachedUrl(String url) {
     this.url = url;
@@ -67,13 +68,16 @@ public class MockCachedUrl implements CachedUrl {
 
   /**
    * Construct a mock cached URL that is backed by a file.
+   *
+   * @param url
+   * @param file The name of the file to load.
+   * @param isResource If true, load the file name as a 
+   * resource.  If false, load as a file.
    */
-  public MockCachedUrl(String url, String file) {
+  public MockCachedUrl(String url, String file, boolean isResource) {
     this(url);
-    cachedFile = new File(file);
-    if (!cachedFile.exists()) {
-      throw new RuntimeException("Unable to load file: " + file);
-    }
+    this.isResource = isResource;
+    cachedFile = file;
   }
 
   public ArchivalUnit getArchivalUnit() {
@@ -122,12 +126,17 @@ public class MockCachedUrl implements CachedUrl {
   // Read interface - used by the proxy.
 
   public InputStream getUnfilteredInputStream() {
-    if (cachedFile != null) {
-      try {
-	return new FileInputStream(cachedFile);
-      } catch (IOException ex) {
-	return null;
+    try {
+      if (cachedFile != null) {
+	if (isResource) {
+	  return ClassLoader.getSystemClassLoader().
+	    getResourceAsStream(cachedFile);
+	} else {  
+	  return new FileInputStream(cachedFile);
+	}
       }
+    } catch (IOException ex) {
+      return null;
     }
     if (content != null) {
       return new StringInputStream(content);
