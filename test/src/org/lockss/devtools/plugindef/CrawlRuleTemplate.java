@@ -1,6 +1,5 @@
 package org.lockss.devtools.plugindef;
 
-import java.util.*;
 import org.lockss.util.*;
 
 public class CrawlRuleTemplate extends PrintfTemplate {
@@ -30,6 +29,17 @@ public class CrawlRuleTemplate extends PrintfTemplate {
     m_ruleKind = kind;
   }
 
+  void setRuleKind(String kindString) {
+    m_ruleKind = 0;
+    for (int i=0; i< RULE_KIND_STRINGS.length; i++) {
+      if(RULE_KIND_STRINGS[i].equals(kindString)) {
+        m_ruleKind = i;
+        break;
+      }
+    }
+
+  }
+
   public String getCrawlRuleString() {
     StringBuffer sb = new StringBuffer();
     sb.append(m_ruleKind);
@@ -48,4 +58,5 @@ public class CrawlRuleTemplate extends PrintfTemplate {
     }
     return RULE_KIND_STRINGS[m_ruleKind];
   }
+
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRuleEditor.java,v 1.3 2004-05-15 01:23:24 clairegriffin Exp $
+ * $Id: CrawlRuleEditor.java,v 1.4 2004-05-17 20:45:43 clairegriffin Exp $
  */
 
 /*
@@ -59,6 +59,8 @@ public class CrawlRuleEditor extends JDialog implements EDPEditor{
   CrawlRuleModel m_model = new CrawlRuleModel();
   JTable rulesTable = new JTable();
   JButton addButton = new JButton();
+  JComboBox m_kindBox = new JComboBox(CrawlRuleTemplate.RULE_KIND_STRINGS);
+
 
   public CrawlRuleEditor(Frame frame, String title, boolean modal) {
     super(frame, title, modal);
@@ -135,8 +137,7 @@ public class CrawlRuleEditor extends JDialog implements EDPEditor{
     m_model.setData(data);
 
     TableColumn col = rulesTable.getColumnModel().getColumn(0);
-    JComboBox kind_box = new JComboBox(CrawlRuleTemplate.RULE_KIND_STRINGS);
-    col.setCellEditor(new DefaultCellEditor(kind_box));
+    col.setCellEditor(new DefaultCellEditor(m_kindBox));
     col = rulesTable.getColumnModel().getColumn(1);
     col.setCellEditor(new CrawlRuleCellEditor());
   }
@@ -169,8 +170,11 @@ public class CrawlRuleEditor extends JDialog implements EDPEditor{
       Collection rules = new ArrayList(m_tableData.size());
       for(int i=0 ; i < m_tableData.size(); i++) {
         Object[] entry = (Object[])m_tableData.elementAt(i);
-        String crawl_rule = ((CrawlRuleTemplate)entry[1]).getCrawlRuleString();
-        if(crawl_rule != null) {
+        CrawlRuleTemplate crt = (CrawlRuleTemplate)entry[1];
+        // update the kind string;
+        crt.setRuleKind((String)entry[0]);
+        String crawl_rule = crt.getCrawlRuleString();
+        if(crt.getRuleKind() > 0 && crawl_rule != null) {
           rules.add(crawl_rule);
         }
       }
@@ -293,6 +297,10 @@ public class CrawlRuleEditor extends JDialog implements EDPEditor{
                                          null);
       m_data.addChangeListener(this);
       m_editor.setCellData(m_data);
+      Rectangle r = table.getCellRect(row, column, true);
+      Dimension dlgSize = m_editor.getPreferredSize();
+      m_editor.setLocation(r.x  + dlgSize.width, r.y  + dlgSize.height);
+      m_editor.pack();
       m_button.setText(template.getTemplateString());
       /* position dialog */
       return m_button;
