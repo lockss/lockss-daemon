@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.33 2004-03-23 08:26:41 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.34 2004-07-28 18:20:06 tlipkis Exp $
  */
 
 /*
@@ -343,7 +343,7 @@ public class BaseUrlCacher implements UrlCacher {
 	// The stack below here is misleading.  Makes more sense for it
 	// to reflect the point at which it's thrown
 	c_ex.fillInStackTrace();
-        throw c_ex;
+	throw c_ex;
       }
     }
   }
@@ -355,7 +355,8 @@ public class BaseUrlCacher implements UrlCacher {
    */
   private void openConnection(String lastModified) throws IOException {
     if (conn==null) {
-      if (isRedirectOption(REDIRECT_OPTION_IF_CRAWL_SPEC)) {
+      if (isRedirectOption(REDIRECT_OPTION_IF_CRAWL_SPEC +
+			   REDIRECT_OPTION_ON_HOST_ONLY)) {
 	openWithRedirects(lastModified);
       } else {
 	openOneConnection(lastModified);
@@ -439,6 +440,13 @@ public class BaseUrlCacher implements UrlCacher {
 	  return false;
 	}
       }
+      if (isRedirectOption(REDIRECT_OPTION_ON_HOST_ONLY)) {
+	if (!UrlUtil.isSameHost(fetchUrl, newUrlString)) {
+	  logger.warning("Redirect to different host: " + newUrlString +
+			 " from: " + origUrl);
+	  return false;
+	}
+      }
       conn.release();
       conn = null;
 
@@ -462,6 +470,9 @@ public class BaseUrlCacher implements UrlCacher {
       return false;
     }
   }
+
+  /** Return true iff there are options in common between the argument and
+   * redirectOptions */
   private boolean isRedirectOption(int option) {
     return (redirectOptions & option) != 0;
   }

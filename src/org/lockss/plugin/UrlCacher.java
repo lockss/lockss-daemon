@@ -1,5 +1,5 @@
 /*
- * $Id: UrlCacher.java,v 1.11 2004-03-23 08:25:39 tlipkis Exp $
+ * $Id: UrlCacher.java,v 1.12 2004-07-28 18:20:06 tlipkis Exp $
  */
 
 /*
@@ -52,6 +52,8 @@ public interface UrlCacher {
   public static final int REDIRECT_OPTION_IF_CRAWL_SPEC = 2;
   /** Store content under all redirected names */
   public static final int REDIRECT_OPTION_STORE_ALL = 4;
+  /** Follow redirects only within same host */
+  public static final int REDIRECT_OPTION_ON_HOST_ONLY = 8;
 
   /** Don't follow redirects; throw CacheException.RetryNewUrlException if
    * redirect response received */
@@ -63,6 +65,13 @@ public interface UrlCacher {
   /** Follow redirects only in crawl spec */
   public static final RedirectScheme REDIRECT_SCHEME_FOLLOW_IN_SPEC =
     new RedirectScheme(REDIRECT_OPTION_IF_CRAWL_SPEC);
+  /** Follow redirects only on same host */
+  public static final RedirectScheme REDIRECT_SCHEME_FOLLOW_ON_HOST =
+    new RedirectScheme(REDIRECT_OPTION_ON_HOST_ONLY);
+  /** Follow redirects only in crawl spec and on host */
+  public static final RedirectScheme REDIRECT_SCHEME_FOLLOW_IN_SPEC_ON_HOST =
+    new RedirectScheme(REDIRECT_OPTION_IF_CRAWL_SPEC +
+		       REDIRECT_OPTION_ON_HOST_ONLY);
   /** Follow redirects iff within the crawl spec, store under all names */
   public static final RedirectScheme REDIRECT_SCHEME_STORE_ALL_IN_SPEC =
     new RedirectScheme(REDIRECT_OPTION_IF_CRAWL_SPEC +

@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.22 2004-03-18 03:34:22 tlipkis Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.23 2004-07-28 18:20:03 tlipkis Exp $
  */
 
 /*
@@ -411,6 +411,80 @@ public class TestBaseUrlCacher extends LockssTestCase {
     }
   }
 
+  // Should follow redirection to URL on same host
+  public void testRedirectInSpecOnHost() throws Exception {
+    String redTo = "http://www.example.com/foo";
+    MockConnectionMockBaseUrlCacher muc =
+      new MockConnectionMockBaseUrlCacher(mcus, TEST_URL);
+    muc.addConnection(makeConn(301, "Moved to Spain", redTo));
+    muc.addConnection(makeConn(200, "Ok", null, "bar"));
+    muc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW_IN_SPEC_ON_HOST);
+    mau.addUrlToBeCached(redTo);
+    InputStream is = muc.getUncachedInputStream();
+    CIProperties p = muc.getUncachedProperties();
+    assertNull(p.getProperty("location"));
+    assertEquals(redTo, p.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO));
+    assertEquals(redTo, p.getProperty(CachedUrl.PROPERTY_CONTENT_URL));
+    assertReaderMatchesString("bar", new InputStreamReader(is));
+    // Make sure the UrlCacher still has the original URL
+    assertEquals(TEST_URL, muc.getUrl());
+  }
+
+  // Should not follow redirection to URL on different host
+  public void testRedirectInSpecNotOnHost() throws Exception {
+    String redTo = "http://somewhere.else/foo";
+    MockConnectionMockBaseUrlCacher muc =
+      new MockConnectionMockBaseUrlCacher(mcus, TEST_URL);
+    muc.addConnection(makeConn(301, "Moved to Spain", redTo));
+    muc.addConnection(makeConn(200, "Ok", null, "bar"));
+    muc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW_IN_SPEC_ON_HOST);
+    mau.addUrlToBeCached(redTo);
+    try {
+      InputStream is = muc.getUncachedInputStream();
+      fail("Should have thrown NoRetryNewUrlException");
+    } catch (CacheException.NoRetryNewUrlException e) {
+      assertEquals("301 Moved to Spain", e.getMessage());
+      CIProperties p = muc.getUncachedProperties();
+      assertEquals(redTo, p.getProperty("location"));
+    }
+  }
+
+  // Should follow redirection to URL on same host
+  public void testRedirectOnHost() throws Exception {
+    String redTo = "http://www.example.com/foo";
+    MockConnectionMockBaseUrlCacher muc =
+      new MockConnectionMockBaseUrlCacher(mcus, TEST_URL);
+    muc.addConnection(makeConn(301, "Moved to Spain", redTo));
+    muc.addConnection(makeConn(200, "Ok", null, "bar"));
+    muc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW_ON_HOST);
+    InputStream is = muc.getUncachedInputStream();
+    CIProperties p = muc.getUncachedProperties();
+    assertNull(p.getProperty("location"));
+    assertEquals(redTo, p.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO));
+    assertEquals(redTo, p.getProperty(CachedUrl.PROPERTY_CONTENT_URL));
+    assertReaderMatchesString("bar", new InputStreamReader(is));
+    // Make sure the UrlCacher still has the original URL
+    assertEquals(TEST_URL, muc.getUrl());
+  }
+
+  // Should not follow redirection to URL on different host
+  public void testRedirectNotOnHost() throws Exception {
+    String redTo = "http://somewhere.else/foo";
+    MockConnectionMockBaseUrlCacher muc =
+      new MockConnectionMockBaseUrlCacher(mcus, TEST_URL);
+    muc.addConnection(makeConn(301, "Moved to Spain", redTo));
+    muc.addConnection(makeConn(200, "Ok", null, "bar"));
+    muc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW_ON_HOST);
+    try {
+      InputStream is = muc.getUncachedInputStream();
+      fail("Should have thrown NoRetryNewUrlException");
+    } catch (CacheException.NoRetryNewUrlException e) {
+      assertEquals("301 Moved to Spain", e.getMessage());
+      CIProperties p = muc.getUncachedProperties();
+      assertEquals(redTo, p.getProperty("location"));
+    }
+  }
+
   public void testRedirectWritesBoth() throws Exception {
     plugin.returnRealCachedUrl = true;
     String redTo = "http://somewhere.else/foo";
@@ -556,7 +630,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
     boolean returnRealCachedUrl = false;
 
     public CachedUrlSet makeCachedUrlSet(ArchivalUnit owner,
-                                         CachedUrlSetSpec cuss) {
+					 CachedUrlSetSpec cuss) {
       return new BaseCachedUrlSet(owner, cuss);
     }
 
@@ -618,9 +692,9 @@ public class TestBaseUrlCacher extends LockssTestCase {
 	}
       }
       if (last < TimeBase.nowMs()) {
-        return _input;
+	return _input;
       } else {
-        return null;
+	return null;
       }
     }
 
@@ -629,7 +703,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
     }
 
     public void storeContent(InputStream input, CIProperties headers)
-        throws IOException {
+	throws IOException {
       super.storeContent(input, headers);
       wasStored = true;
     }
