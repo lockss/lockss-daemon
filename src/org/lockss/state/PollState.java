@@ -1,5 +1,5 @@
 /*
- * $Id: PollState.java,v 1.17 2003-04-15 01:27:00 aalto Exp $
+ * $Id: PollState.java,v 1.18 2003-04-16 01:18:14 claire Exp $
  */
 
 /*
@@ -44,9 +44,9 @@ public class PollState implements Comparable {
   public static final int LOST = 16;
   public static final int REPAIRED = 32;
   public static final int UNREPAIRABLE = 64;
-  public static final int ERR_SCHEDULE_HASH = 128;
-  public static final int ERR_HASHING = 256;
-  public static final int ERR_NO_QUORUM = 512;
+  public static final int INCONCLUSIVE = 128;
+  public static final int ERR_SCHEDULE_HASH = 256;
+  public static final int ERR_HASHING = 512;
   public static final int ERR_IO = 1024;
   public static final int ERR_UNDEFINED = 2048;
 
@@ -171,8 +171,6 @@ public class PollState implements Comparable {
         return "Error scheduling hash";
       case ERR_HASHING:
         return "Error hashing";
-      case ERR_NO_QUORUM:
-        return "Error no quorum";
       case ERR_IO:
         return "Error I/0";
       case ERR_UNDEFINED:
@@ -215,7 +213,6 @@ public class PollState implements Comparable {
   public boolean isErrorState() {
     return ((status==ERR_SCHEDULE_HASH) ||
             (status==ERR_HASHING) ||
-            (status==ERR_NO_QUORUM) ||
             (status==ERR_IO) ||
             (status==ERR_UNDEFINED));
   }

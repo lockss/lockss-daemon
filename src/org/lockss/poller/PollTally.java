@@ -20,12 +20,14 @@ import org.lockss.daemon.status.*;
  * votes within a poll.
  */
 public class PollTally {
-  static final int STATE_POLLING = 0;
-  static final int STATE_ERROR = 1;
-  static final int STATE_NOQUORUM = 2;
-  static final int STATE_INCONCLUSIVE = 3;
-  static final int STATE_WON = 4;
-  static final int STATE_LOST = 5;
+  public static final int STATE_POLLING = 0;
+  public static final int STATE_ERROR = 1;
+  public static final int STATE_NOQUORUM = 2;
+  public static final int STATE_RESULTS_TOO_CLOSE = 3;
+  public static final int STATE_RESULTS_UNTRUSTED = 4;
+  public static final int STATE_WON = 5;
+  public static final int STATE_LOST = 6;
+  public static final int STATE_SUSPENDED = 10;
 
   PollSpec pollSpec;
   String key;
@@ -91,49 +93,6 @@ public class PollTally {
     return sbuf.toString();
   }
 
-
-  public int getPollStatus() {
-    return status;
-  }
-
-
-  /**
-   * did we win or lose the last poll.
-   * @return true iff only if number of agree votes exceeds the number of
-   * disagree votes and the reputation of the ids we agreed with >= with those
-   * we disagreed with. false if we had and error or disagree votes exceed
-   * agree votes.
-   */
-  public boolean didWinPoll() {
-    if (!isErrorState() && haveQuorum()) {
-      return (numAgree > numDisagree);
-    }
-    return false;
-  }
-
-  public boolean isWithinMargin() {
-    double num_votes = numAgree + numDisagree;
-    double req_margin = poll.getMargin();
-    double act_margin;
-
-    if (numAgree > numDisagree) {
-      act_margin = (double) numAgree / num_votes;
-    }
-    else {
-      act_margin = (double) numDisagree / num_votes;
-    }
-    if (act_margin < req_margin) {
-      log.warning("Poll results too close.  Required vote margin is " +
-                req_margin + ". This poll's margin is " + act_margin);
-      return false;
-    }
-    return true;
-  }
-
-  public boolean isTrustedResults() {
-    double act_margin = (double)wtDisagree/ (double)(wtAgree + wtDisagree);
-    return act_margin >= poll.m_trustedMargin;
-  }
 
   /**
    * return the unique key for the poll for this tally
@@ -224,6 +183,17 @@ public class PollTally {
     return poll.m_pollstate < 0;
   }
 
+  public boolean isInconclusiveState() {
+    switch(status) {
+      case STATE_NOQUORUM:
+      case STATE_RESULTS_UNTRUSTED:
+      case STATE_RESULTS_TOO_CLOSE:
+        return true;
+      default:
+        return false;
+    }
+  }
+
   /**
    * get the error state for this poll
    * @return 0 == NOERR or one of the poll err conditions
@@ -248,16 +218,19 @@ public class PollTally {
     }
   }
 
+  public int getStatus() {
+    return status;
+  }
+
   public String getStatusString() {
     switch (status) {
       case STATE_ERROR:
         return getErrString();
       case STATE_NOQUORUM:
         return "No Quorum";
-      case STATE_INCONCLUSIVE:
-        if (!isTrustedResults()) {
-          return "Untrusted";
-        }
+      case STATE_RESULTS_UNTRUSTED:
+          return "Untrusted Peers";
+      case STATE_RESULTS_TOO_CLOSE:
         return "Too Close";
       case STATE_WON:
         return "Won";
@@ -269,38 +242,7 @@ public class PollTally {
     }
   }
 
-  /**
-   * replay all of the votes in a previously held poll.
-   * @param deadline the deadline by which the replay must be complete
-   */
-  public void startReplay(Deadline deadline) {
-    originalVotes = pollVotes;
-    pollVotes = new ArrayList(originalVotes.size());
-    replayIter =  originalVotes.iterator();
-    replayDeadline = deadline;
-    numAgree = 0;
-    numDisagree = 0;
-    wtAgree = 0;
-    wtDisagree = 0;
-    replayNextVote();
-  }
-
-  void replayNextVote() {
-    if(replayIter == null) {
-      log.warning("Call to replay a poll vote without call to replay all");
-    }
-    if(poll.isErrorState() || !replayIter.hasNext()) {
-      replayDeadline = null;
-      replayIter = null;
-      poll.stopPoll();
-    }
-    else {
-      Vote vote = (Vote)replayIter.next();
-      replayVoteCheck(vote, replayDeadline);
-    }
-  }
-
-  void setPollStatus() {
+  void tallyVotes() {
     // if it's an error
     if (isErrorState()) {
       status = STATE_ERROR;
@@ -309,17 +251,21 @@ public class PollTally {
       status = STATE_NOQUORUM;
     }
     else if (!isWithinMargin()) {
-      status = STATE_INCONCLUSIVE;
+      status = STATE_RESULTS_TOO_CLOSE;
     }
     else {
       boolean won = numAgree > numDisagree;
       if (!won && !isTrustedResults()) {
-        status = STATE_INCONCLUSIVE;
+        status = STATE_RESULTS_UNTRUSTED;
       }
       else {
         status = won ? STATE_WON : STATE_LOST;
       }
     }
+    if((type == Poll.NAME_POLL) && (status == STATE_LOST)) {
+      ((NamePoll)poll).buildPollLists(pollVotes.iterator());
+    }
+
   }
 
   boolean isLeadEnough() {
@@ -329,6 +275,31 @@ public class PollTally {
   boolean haveQuorum() {
     return numAgree + numDisagree >= quorum;
   }
+
+  boolean isWithinMargin() {
+    double num_votes = numAgree + numDisagree;
+    double req_margin = poll.getMargin();
+    double act_margin;
+
+    if (numAgree > numDisagree) {
+      act_margin = (double) numAgree / num_votes;
+    }
+    else {
+      act_margin = (double) numDisagree / num_votes;
+    }
+    if (act_margin < req_margin) {
+      log.warning("Poll results too close.  Required vote margin is " +
+                req_margin + ". This poll's margin is " + act_margin);
+      return false;
+    }
+    return true;
+  }
+
+  public boolean isTrustedResults() {
+    double act_margin = (double)wtDisagree/ (double)(wtAgree + wtDisagree);
+    return act_margin >= poll.m_trustedMargin;
+  }
+
 
   boolean hasVoted(LcapIdentity voterID) {
     Iterator it = pollVotes.iterator();
@@ -361,8 +332,44 @@ public class PollTally {
         }
       }
     }
-    pollVotes.add(vote);
+    synchronized(pollVotes) {
+      pollVotes.add(vote);
+    }
   }
+
+
+  /**
+   * replay all of the votes in a previously held poll.
+   * @param deadline the deadline by which the replay must be complete
+   */
+  public void startReplay(Deadline deadline) {
+    originalVotes = pollVotes;
+    pollVotes = new ArrayList(originalVotes.size());
+    replayIter =  originalVotes.iterator();
+    replayDeadline = deadline;
+    numAgree = 0;
+    numDisagree = 0;
+    wtAgree = 0;
+    wtDisagree = 0;
+    replayNextVote();
+  }
+
+  void replayNextVote() {
+    if(replayIter == null) {
+      log.warning("Call to replay a poll vote without call to replay all");
+    }
+    if(poll.isErrorState() || !replayIter.hasNext()) {
+      replayDeadline = null;
+      replayIter = null;
+      poll.stopPoll();
+    }
+    else {
+      Vote vote = (Vote)replayIter.next();
+      replayVoteCheck(vote, replayDeadline);
+    }
+  }
+
+
 
 /**
  * replay a previously checked vote

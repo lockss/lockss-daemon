@@ -153,14 +153,15 @@ public class TestPoll extends LockssTestCase {
     np = makeCompletedNamePoll(4,1,0);
     assertEquals(5, np.m_tally.numAgree);
     assertEquals(1, np.m_tally.numDisagree);
-    assertTrue(np.m_tally.didWinPoll());
+
+    assertEquals(PollTally.STATE_WON, np.m_tally.getStatus());
 
     // test a name poll we lost with a dissenting vote
-    np = makeCompletedNamePoll(2,4,1);
+    np = makeCompletedNamePoll(1,8,1);
 
-    assertEquals(3, np.m_tally.numAgree);
-    assertEquals(5, np.m_tally.numDisagree);
-    assertFalse(np.m_tally.didWinPoll());
+    assertEquals(2, np.m_tally.numAgree);
+    assertEquals(9, np.m_tally.numDisagree);
+    assertEquals(PollTally.STATE_LOST, np.m_tally.getStatus());
 
     // build a master list
     np.buildPollLists(np.m_tally.pollVotes.iterator());
@@ -317,7 +318,7 @@ public class TestPoll extends LockssTestCase {
     for(int i = 0; i < numDissenting; i++) {
       np.m_tally.addVote(np.makeVote(disagree_msg2, false), id, false);
     }
-
+    np.m_tally.tallyVotes();
     return np;
   }
 
@@ -350,6 +351,7 @@ public class TestPoll extends LockssTestCase {
         "/testentry1.html", "/testentry3.html",
         "/testentry4.html", "/testentry5.html"};
     p.m_pollstate = Poll.PS_COMPLETE;
+    p.m_tally.tallyVotes();
     return p;
   }
 

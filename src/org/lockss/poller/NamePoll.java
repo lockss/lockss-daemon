@@ -1,5 +1,5 @@
 /*
- * $Id: NamePoll.java,v 1.44 2003-04-15 02:21:22 claire Exp $
+ * $Id: NamePoll.java,v 1.45 2003-04-16 01:18:14 claire Exp $
  */
 
 /*
@@ -120,16 +120,6 @@ public class NamePoll
     }
   }
 
-  /**
-   * finish the poll once the deadline has expired. we update our poll record
-   * and prevent any more activity in this poll.
-   */
-  void stopPoll() {
-    if(!m_tally.didWinPoll()) {
-      buildPollLists(m_tally.pollVotes.iterator());
-    }
-    super.stopPoll();
-  }
 
   ArrayList getEntries() {
     if (m_entries == null) {

@@ -1,5 +1,5 @@
 /*
-* $Id: VerifyPoll.java,v 1.35 2003-04-15 02:21:22 claire Exp $
+* $Id: VerifyPoll.java,v 1.36 2003-04-16 01:18:14 claire Exp $
  */
 
 /*
@@ -48,6 +48,8 @@ import org.mortbay.util.B64Code;
  * @version 1.0
  */
 class VerifyPoll extends Poll {
+
+  Poll originalPoll;
 
   public VerifyPoll(LcapMessage msg, PollSpec pollspec, PollManager pm) {
     super(msg, pollspec, pm);
@@ -144,6 +146,8 @@ class VerifyPoll extends Poll {
       log.debug("vote disowned.");
       idMgr.changeReputation(id, IdentityManager.VOTE_DISOWNED);
     }
+    // now we need to update the tally for the poll which triggered this verify
+
   }
 
 

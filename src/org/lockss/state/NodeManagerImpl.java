@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.97 2003-04-15 02:21:22 claire Exp $
+ * $Id: NodeManagerImpl.java,v 1.98 2003-04-16 01:18:14 claire Exp $
  */
 
 /*
@@ -229,24 +229,37 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
                                               + "non-existent poll.");
     }
     try {
-      if (results.isErrorState()) {
-        pollState.status = mapResultsErrorToPollError(results.getErr());
-        logger.info("Poll didn't finish fully.  Error: "
-                    + results.getErrString());
-        return;
-      }
-
-      if (results.getType() == Poll.CONTENT_POLL) {
-        handleContentPoll(pollState, results, state);
-      }
-      else if (results.getType() == Poll.NAME_POLL) {
-        handleNamePoll(pollState, results, state);
-      }
-      else {
-        String err = "Request to update state for unknown type: " +
-            results.getType();
-        logger.error(err);
-        throw new UnsupportedOperationException(err);
+      switch(results.getStatus()) {
+        case PollTally.STATE_ERROR:
+          pollState.status = mapResultsErrorToPollError(results.getErr());
+          logger.info("Poll didn't finish fully.  Error: "
+                      + results.getErrString());
+          break;
+        case PollTally.STATE_NOQUORUM:
+          pollState.status = PollState.INCONCLUSIVE;
+          logger.info("Poll finished without qurorm");
+          break;
+        case PollTally.STATE_RESULTS_TOO_CLOSE:
+        case PollTally.STATE_RESULTS_UNTRUSTED:
+          pollState.status = PollState.INCONCLUSIVE;
+          logger.warning("Poll concluded with suspect result - "
+                         + pollState.getStatusString());
+          break;
+        case PollTally.STATE_LOST:
+        case PollTally.STATE_WON:
+          if (results.getType() == Poll.CONTENT_POLL) {
+            handleContentPoll(pollState, results, state);
+          }
+          else if (results.getType() == Poll.NAME_POLL) {
+            handleNamePoll(pollState, results, state);
+          }
+          else {
+            String err = "Request to update state for unknown type: " +
+                         results.getType();
+            logger.error(err);
+            throw new UnsupportedOperationException(err);
+          }
+          break;
       }
     }
     finally {
@@ -260,7 +273,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
                          NodeState nodeState) {
     logger.debug("handling content poll results: " + results);
 
-    if (results.didWinPoll()) {
+    if (results.getStatus() == PollTally.STATE_WON) {
       // if agree
       switch (pollState.getStatus()) {
         case PollState.RUNNING:
@@ -310,7 +323,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
   void handleNamePoll(PollState pollState, PollTally results,
                       NodeState nodeState) {
     logger.debug2("handling name poll results " + results);
-    if (results.didWinPoll()) {
+    if (results.getStatus() == PollTally.STATE_WON) {
       // if agree
       if (results.isMyPoll()) {
         // if poll is mine
@@ -423,15 +436,15 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
       case PollState.UNREPAIRABLE:
         // we need to do something here
         break;
+      case PollState.INCONCLUSIVE:
       case PollState.ERR_SCHEDULE_HASH:
       case PollState.ERR_HASHING:
-      case PollState.ERR_NO_QUORUM:
       case PollState.ERR_IO:
       case PollState.ERR_UNDEFINED:
         // if we ended with an error and it was our poll,
         // we need to recall this poll.
         if (lastHistory.getOurPoll()) {
-          logger.debug2("treewalk - re-calling last error poll");
+          logger.debug2("treewalk - re-calling last unsucessful poll");
           callLastPoll(lastPollSpec, lastHistory);
           return true;
         }
@@ -673,7 +686,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     int agreeChange;
     int disagreeChange;
 
-    if (results.didWinPoll()) {
+    if (results.getStatus() == PollTally.STATE_WON) {
       agreeChange = IdentityManager.AGREE_VOTE;
       disagreeChange = IdentityManager.DISAGREE_VOTE;
     }

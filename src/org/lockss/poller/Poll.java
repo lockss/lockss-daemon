@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.64 2003-04-15 02:21:22 claire Exp $
+* $Id: Poll.java,v 1.65 2003-04-16 01:18:14 claire Exp $
  */
 
 /*
@@ -224,6 +224,7 @@ public abstract class Poll implements Serializable {
    * @param vote the Vote to check.
    */
   void checkVote(byte[] hashResult, Vote vote)  {
+    boolean verify = false;
     byte[] hashed = vote.getHash();
     log.debug3("Checking "+
               String.valueOf(B64Code.encode(hashResult))+
@@ -232,11 +233,11 @@ public abstract class Poll implements Serializable {
 
     boolean agree = vote.setAgreeWithHash(hashResult);
     LcapIdentity id = idMgr.findIdentity(vote.getIDAddress());
-    m_tally.addVote(vote, id, idMgr.isLocalIdentity(id));
 
     if(!idMgr.isLocalIdentity(vote.getIDAddress())) {
-      randomVerify(vote, agree);
+      verify = randomVerify(vote, agree);
     }
+    m_tally.addVote(vote, id, idMgr.isLocalIdentity(id));
   }
 
   /**
@@ -244,12 +245,15 @@ public abstract class Poll implements Serializable {
    * agreement and reputation of the voter.
    * @param vote the Vote to check
    * @param isAgreeVote true if this vote agreed with ours, false otherwise
+   * @return true if we called a verify poll, false otherwise.
    */
-  void randomVerify(Vote vote, boolean isAgreeVote) {
+  boolean randomVerify(Vote vote, boolean isAgreeVote) {
     LcapIdentity id = idMgr.findIdentity(vote.getIDAddress());
     int max = idMgr.getMaxReputaion();
     int weight = id.getReputation();
     double verify;
+    boolean callVerifyPoll = false;
+
     if(isAgreeVote) {
       verify = ((double)(max - weight)) / max * m_agreeVer;
     }
@@ -257,13 +261,15 @@ public abstract class Poll implements Serializable {
       verify = ((double)weight) / max * m_disagreeVer;
     }
     try {
-      if(ProbabilisticChoice.choose(verify)) {
+     if(ProbabilisticChoice.choose(verify)) {
         m_pollmanager.requestVerifyPoll(m_pollspec, m_tally.duration, vote);
+        callVerifyPoll = true;
       }
     }
     catch (IOException ex) {
       log.debug("attempt to verify vote failed:", ex);
     }
+    return callVerifyPoll;
   }
 
   /**

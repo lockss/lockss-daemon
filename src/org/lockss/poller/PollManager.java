@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.73 2003-04-15 02:21:22 claire Exp $
+* $Id: PollManager.java,v 1.74 2003-04-16 01:18:14 claire Exp $
  */
 
 /*
@@ -358,8 +358,9 @@ public class PollManager  extends BaseLockssManager {
       PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
       // mark the poll completed because if we need to call a repair poll
       // we don't want this one to be in conflict with it.
-      pme.setPollCompleted();
       PollTally tally = pme.poll.getVoteTally();
+      tally.tallyVotes();
+      pme.setPollCompleted();
       if(tally.getType() != Poll.VERIFY_POLL) {
         NodeManager nm = theDaemon.getNodeManager(tally.getArchivalUnit());
         theLog.debug("sending completed poll results " + tally);
@@ -769,17 +770,12 @@ public class PollManager  extends BaseLockssManager {
    */
 
   static class PollManagerEntry {
-    static final int ACTIVE = 0;
-    static final int WON = 1;
-    static final int LOST = 2;
-    static final int SUSPENDED = 3;
-    static final String[] StatusStrings = { "Active", "Won","Lost", "Suspended"};
     Poll poll;
     PollSpec spec;
     int type;
     Deadline pollDeadline;
     Deadline deadline;
-    int status;
+    int status = 0;
     String key;
 
     PollManagerEntry(Poll p) {
@@ -789,29 +785,30 @@ public class PollManager  extends BaseLockssManager {
       key = p.getKey();
       pollDeadline = p.m_deadline;
       deadline = null;
-      status = ACTIVE;
     }
 
     boolean isPollActive() {
-      return status == ACTIVE;
+      return status == PollTally.STATE_POLLING;
     }
 
     boolean isPollCompleted() {
-      return status == WON || status == LOST;
+      return status != PollTally.STATE_POLLING
+                     && status != PollTally.STATE_SUSPENDED;
     }
 
     boolean isPollSuspended() {
-      return status == SUSPENDED;
+      return status == PollTally.STATE_SUSPENDED;
     }
 
     synchronized void setPollCompleted() {
       Deadline d = Deadline.in(m_recentPollExpireTime);
       TimerQueue.schedule(d, new ExpireRecentCallback(), (String) key);
-      status = poll.getVoteTally().didWinPoll() ? WON : LOST;
+      poll.getVoteTally().tallyVotes();
+      status = poll.getVoteTally().getStatus();
     }
 
     synchronized void setPollSuspended() {
-      status = SUSPENDED;
+      status = PollTally.STATE_SUSPENDED;
       if(deadline != null) {
         deadline.expire();
         deadline = null;
@@ -819,9 +816,10 @@ public class PollManager  extends BaseLockssManager {
     }
 
     String getStatusString() {
-      if(poll.isErrorState())
-        return poll.getErrorString();
-      return StatusStrings[status];
+      if(status == PollTally.STATE_SUSPENDED) {
+        return "Suspended";
+      }
+      return poll.getVoteTally().getStatusString();
     }
 
     String getTypeString() {
