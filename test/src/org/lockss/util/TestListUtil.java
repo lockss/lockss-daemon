@@ -1,5 +1,5 @@
 /*
- * $Id: TestListUtil.java,v 1.1 2002-10-16 04:59:15 tal Exp $
+ * $Id: TestListUtil.java,v 1.2 2003-04-21 05:41:27 tal Exp $
  */
 
 /*
@@ -99,5 +99,13 @@ public class TestListUtil extends LockssTestCase {
       fail("immutableListOfType accepted null");
     } catch (NullPointerException e) {
     }
+  }
+
+  public void testReverseCopy() {
+    assertEquals(0, ListUtil.reverseCopy(new ArrayList()).size());
+    List l0 = ListUtil.list("foo", "bar", new Integer(7));
+    List r0 = ListUtil.reverseCopy(l0);
+    assertNotSame(l0, r0);
+    assertEquals(ListUtil.list(new Integer(7), "bar", "foo"), r0);
   }
 }
