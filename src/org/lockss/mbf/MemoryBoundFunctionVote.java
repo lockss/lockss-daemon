@@ -1,5 +1,5 @@
 /*
- * $Id: MemoryBoundFunctionVote.java,v 1.5 2003-08-26 20:27:51 dshr Exp $
+ * $Id: MemoryBoundFunctionVote.java,v 1.6 2003-08-28 16:46:14 dshr Exp $
  */
 
 /*
@@ -162,6 +162,7 @@ public abstract class MemoryBoundFunctionVote {
       ret = new int[spa.length][];
       for (int i = 0; i < spa.length; i++) {
 	ret[i] = ((savedProof)spa[i]).getProof();
+	logger.debug("proof " + i + " entries " + ret[i].length);
       }
       logger.debug("getProofArray: " + spa.length + " entries");
     }
@@ -221,9 +222,9 @@ public abstract class MemoryBoundFunctionVote {
     } else {
       proofs.add(sp);
     }
-    logger.info("saveProof: index " + index + " entries " + proof.length);
+    logger.debug("saveProof: index " + index + " entries " + proof.length);
     for (int i = 0; i < proof.length; i++)
-      logger.info("\tproof entry " + i + " = " + proof[i]);
+      logger.debug("\tproof entry " + i + " = " + proof[i]);
   }
   protected void saveHash(int index, byte[] hash) {
     savedHash sh = new savedHash(hash);
@@ -239,7 +240,7 @@ public abstract class MemoryBoundFunctionVote {
       if (i < (hash.length - 1))
 	sb.append(",");
     }
-    logger.info("saveHash: index " + index + " bytes " + hash.length + " [" +
+    logger.debug("saveHash: index " + index + " bytes " + hash.length + " [" +
 		sb.toString() + "]");
   }
   class savedProof {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestMemoryBoundFunction.java,v 1.2 2003-08-26 01:08:20 dshr Exp $
+ * $Id: TestMemoryBoundFunction.java,v 1.3 2003-08-28 16:46:14 dshr Exp $
  */
 
 /*
@@ -147,16 +147,6 @@ public class TestMemoryBoundFunction extends LockssTestCase {
     rand.nextBytes(nonce);
     for (int i = 0; i < factory.length; i++) {
       try {
-	int[] bad = new int[0];
-	MemoryBoundFunction mbf =
-	  factory[i].make(nonce, 3, 2048, bad, 9);
-	fail(names[i] + ": didn't throw exception on empty proof");
-      } catch (MemoryBoundFunctionException ex) {
-	// No action intended
-      } catch (NoSuchAlgorithmException ex) {
-	fail(names[i] + ": threw " + ex.toString());
-      }
-      try {
 	int[] bad = new int[12];
 	MemoryBoundFunction mbf =
 	  factory[i].make(nonce, 3, 2048, bad, 9);
@@ -170,12 +160,38 @@ public class TestMemoryBoundFunction extends LockssTestCase {
   }
 
   /**
-   * Test one generate/verify pair
+   * Test one generate/verify pair for valid
    */
-  public void testOnce() throws IOException {
+  public void testGoodProofAndNonce() throws IOException {
     for (int i = 0; i < names.length; i++)
-      onePair(i, 63, 2048);
+      onePair(i, 63, 2048, true, true);
   }
+
+  /**
+   * Test one generate/verify pair for invalid proof
+   */
+  public void testBadProofGoodNonce() throws IOException {
+    for (int i = 0; i < names.length; i++)
+      onePair(i, 63, 2048, true, false);
+  }
+
+
+  /**
+   * Test one generate/verify pair for invalid nonce
+   */
+  public void testGoodProofBadNonce() throws IOException {
+    for (int i = 0; i < names.length; i++)
+      onePair(i, 63, 2048, false, true);
+  }
+
+  /**
+   * Test one generate/verify pair for invalid nonce & proof
+   */
+  public void testBadProofBadNonce() throws IOException {
+    for (int i = 0; i < names.length; i++)
+      onePair(i, 63, 2048, false, false);
+  }
+
 
   /*
    * Test a series of generate/verify pairs
@@ -183,7 +199,7 @@ public class TestMemoryBoundFunction extends LockssTestCase {
   public void dontTestMultiple() throws IOException {
     for (int i = 0; i < names.length; i++)
       for (int j = 0; j < 64; j++) {
-	onePair(i, 31, 32);
+	onePair(i, 31, 32, true, true);
       }
   }
 
@@ -409,30 +425,60 @@ public class TestMemoryBoundFunction extends LockssTestCase {
   }
 
   static int[] goodProof = {
-    1, 2,
+    1, 3,
   };
 
   /**
    * Functional test of generate/verify pair
    */
-  private void onePair(int index, int e, int l) throws IOException {
+  private void onePair(int index, int e, int l, boolean nonceOK,
+		       boolean proofOK) throws IOException {
     // Make sure its configured
     assertTrue(f != null);
     assertTrue(MemoryBoundFunction.basisSize() > 0);
-    MockMemoryBoundFunction.setProof(goodProof);
     long startTime = System.currentTimeMillis();
-    byte[] nonce = new byte[64];
-    rand.nextBytes(nonce);
+    byte[] nonce1 = new byte[64];
+    rand.nextBytes(nonce1);
+    byte[] nonce2 = new byte[64];
+    rand.nextBytes(nonce2);
+    if (MessageDigest.isEqual(nonce1, nonce2))
+      fail(names[index] + ": nonces match");
+    MockMemoryBoundFunction.setProof(goodProof);
+    MockMemoryBoundFunction.setNonce(nonce1);
     int[] proof = null;
     int numNulls = 0;
     for (int i = 0; i < 100 && proof == null; i++) {
-      proof = generate(index, nonce, e, l, 8);
+      proof = generate(index, nonce1, e, l, 8);
       numNulls++;
     }
     assertTrue(proof != null);
     assertTrue(proof.length > 0);
-    boolean ret = verify(index, nonce, e, l, proof, 8);
-    assertTrue(ret);
+    if (!proofOK) {
+      // Butcher the proof
+      boolean butchered = false;
+      if (proof[0] != 1) {
+	proof[0] = 1;
+	butchered = true;
+	log.debug(names[index] + ": proof[0] = 1");
+      } else for (int i = 1; i < proof.length; i++) {
+	if (proof[i] > (proof[i-1] + 1)) {
+	  proof[i] = proof[i-1] + 1;
+	  butchered = true;
+	  log.debug(names[index] + ": proof[" + i + "] = " + (proof[i-1]+1));
+	}
+      }
+      if (!butchered)
+	fail(names[index] + ": could not butcher proof");
+    }
+    boolean ret = verify(index, (nonceOK ? nonce1 : nonce2), e, l, proof, 8);
+    if (nonceOK && proofOK && !ret)
+      fail(names[index] + ": Valid proof declared invalid");
+    if (nonceOK && !proofOK && ret)
+      fail(names[index] + ": Invalid proof declared valid");
+    if (!nonceOK && proofOK && ret)
+      fail(names[index] + ": Invalid nonce declared valid");
+    if (!nonceOK && !proofOK && ret)
+      fail(names[index] + ": Invalid nonce & proof declared valid");
     if (numNulls > 2) {
       log.info(names[index] + " onePair(" + e + "," + l + ") took " +
 	     (System.currentTimeMillis() - startTime) + " msec " +

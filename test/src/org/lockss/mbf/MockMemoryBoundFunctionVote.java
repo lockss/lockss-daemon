@@ -1,5 +1,5 @@
 /*
- * $Id: MockMemoryBoundFunctionVote.java,v 1.1 2003-08-24 22:38:25 dshr Exp $
+ * $Id: MockMemoryBoundFunctionVote.java,v 1.2 2003-08-28 16:46:14 dshr Exp $
  */
 
 /*
@@ -118,8 +118,11 @@ public class MockMemoryBoundFunctionVote extends MemoryBoundFunctionVote {
    */
   public boolean computeSteps(int n) throws MemoryBoundFunctionException {
     stepLimit -= n;
-    if (stepLimit <= 0)
+    if (stepLimit <= 0) {
+      logger.info("MockMemoryBoundFunctionVote: valid " + valid +
+		  " agreeing " + agreeing);
       finished = true;
+    }
     return (!finished);
   }
 

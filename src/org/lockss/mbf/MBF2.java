@@ -1,5 +1,5 @@
 /*
- * $Id: MBF2.java,v 1.5 2003-08-26 20:27:51 dshr Exp $
+ * $Id: MBF2.java,v 1.6 2003-08-28 16:46:14 dshr Exp $
  */
 
 /*
@@ -101,11 +101,16 @@ public class MBF2 extends MemoryBoundFunctionSPI {
     ensureConfigured();
     setup();
     ret = new ArrayList();
-    n = 4; // XXX should be parameter
+    n = 4;  // XXX should be parameter
+    if (ourE < n)
+      n = ourE - 1;
+    logger.debug("MBF2: ourE " + ourE + " n " + n);
   }
 
   private boolean match() {
-    return (lowBit >= (ourE - n));
+    boolean ret = lowBit >= (ourE - n);
+    logger.debug("match " + lowBit + " >= (" + ourE + " - " + n + ") " + ret);
+    return (ret);
   }
 
   /**
@@ -156,7 +161,7 @@ public class MBF2 extends MemoryBoundFunctionSPI {
   // Choose the next path to try
   private void choosePath() {
     // Set k to the index of the next path to try
-    if (mbf.verify) {
+    if (mbf.verify && mbf.proof.length > 0) {
       // XXX - should choose paths in random order
       k = mbf.proof[numPath];
     } else {
@@ -232,25 +237,38 @@ public class MBF2 extends MemoryBoundFunctionSPI {
     logger.debug("Finish " + k + " at " + c + " lowBit " + lowBit +
 		" >= " + ourE);
     if (mbf.verify) {
-      // We are verifying - any mis-match means invalid.
-      if (!match()) {
-	// This is supposed to be a match but isn't,
-	// verification failed.
-	logger.info("proof invalid");
-	for (int i = 0; i < mbf.proof.length; i++) {
-	  logger.info("\t" + i + "\t" + mbf.proof[i]);
-	}
-	mbf.finished = true;
-	mbf.proof = null;
-      } else if (numPath >= mbf.maxPath || numPath >= mbf.proof.length) {
-	// XXX should check inter-proof spaces too
-	mbf.finished = true;
-	logger.info("proof valid");
-	for (int i = 0; i < mbf.proof.length; i++) {
-	  logger.info("\t" + i + "\t" + mbf.proof[i]);
-	}
-      } else
-	pathIndex = -1;
+      if (mbf.proof.length > 0) {
+	// We are verifying a non-empty proof - any mis-match means invalid.
+	if (!match()) {
+	  // This is supposed to be a match but isn't,
+	  // verification failed.
+	  logger.debug("proof invalid");
+	  for (int i = 0; i < mbf.proof.length; i++) {
+	    logger.debug("\t" + i + "\t" + mbf.proof[i]);
+	  }
+	  mbf.finished = true;
+	  mbf.proof = null;
+	} else if (numPath >= mbf.maxPath || numPath >= mbf.proof.length) {
+	  // XXX should check inter-proof spaces too
+	  mbf.finished = true;
+	  logger.debug("proof valid");
+	  for (int i = 0; i < mbf.proof.length; i++) {
+	    logger.debug("\t" + i + "\t" + mbf.proof[i]);
+	  }
+	} else
+	  pathIndex = -1;
+      } else {
+	// We are verifying an empty proof - any match means invalid
+	if (match()) {
+	  logger.debug("proof invalid");
+	  mbf.finished = true;
+	  mbf.proof = null;
+	} else if (k >= mbf.e) {
+	  mbf.finished = true;
+	  logger.debug("proof valid");
+	} else
+	  pathIndex = -1;
+      }
     } else {
       // We are generating - accumulate matches
       if (match()) {
@@ -264,6 +282,10 @@ public class MBF2 extends MemoryBoundFunctionSPI {
 	for (int i = 0; i < tmp.length; i++) {
 	  mbf.proof[i] = ((Integer)tmp[i]).intValue();
 	}
+	logger.debug("proof geenrated");
+	for (int i = 0; i < mbf.proof.length; i++) {
+	  logger.debug("\t" + i + "\t" + mbf.proof[i]);
+	}
       } else
 	pathIndex = -1;
     }
@@ -272,12 +294,14 @@ public class MBF2 extends MemoryBoundFunctionSPI {
   // Instance initialization
   private void setup() throws MemoryBoundFunctionException {
     if (mbf.verify) {
-      if (mbf.proof == null ||
-	  mbf.proof.length == 0 ||
-	  mbf.proof.length > mbf.e)
-	throw new MemoryBoundFunctionException("bad proof");
+      if (mbf.proof == null)
+	throw new MemoryBoundFunctionException("MBF2: null proof");
+      if (mbf.proof.length > mbf.e)
+	throw new MemoryBoundFunctionException("MBF2: bad proof length " +
+					       mbf.proof.length + "/" + mbf.e);
       if (mbf.maxPath < 1)
-	throw new MemoryBoundFunctionException("too few paths");
+	throw new MemoryBoundFunctionException("MBF2: too few paths " +
+					       mbf.maxPath);
     }
     A = null;
     i = -1;

@@ -1,5 +1,5 @@
 /*
- * $Id: MockMemoryBoundFunction.java,v 1.4 2003-08-26 20:27:52 dshr Exp $
+ * $Id: MockMemoryBoundFunction.java,v 1.5 2003-08-28 16:46:14 dshr Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.mbf;
 import java.io.*;
-import java.security.NoSuchAlgorithmException.*;
+import java.security.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
 
@@ -43,6 +43,7 @@ import org.lockss.test.*;
 public class MockMemoryBoundFunction extends MemoryBoundFunctionSPI {
   private long stepsDone;
   private long stepsToDo;
+  private static byte[] mockNonce = null;
   private static int[] mockProof = null;
 
   /**
@@ -66,13 +67,12 @@ public class MockMemoryBoundFunction extends MemoryBoundFunctionSPI {
     stepsToDo = mbf.e * mbf.pathLen;
     if (mbf.verify) {
       if (mbf.proof == null ||
-	  mbf.proof.length == 0 ||
 	  mbf.proof.length > mbf.e)
 	throw new MemoryBoundFunctionException("bad proof");
       if (mbf.maxPath < 1)
 	throw new MemoryBoundFunctionException("too few paths");
     }
-    logger.info("e " + mbf.e + " pathLen " + mbf.pathLen + " verify " +
+    logger.debug("e " + mbf.e + " pathLen " + mbf.pathLen + " verify " +
 		mbf.verify + " steps " + stepsToDo);
   }
 
@@ -91,16 +91,18 @@ public class MockMemoryBoundFunction extends MemoryBoundFunctionSPI {
 	// We're verifying
 	boolean match = (mockProof != null &&
 			 mockProof.length == mbf.proof.length);
+	if (mockNonce != null && !MessageDigest.isEqual(mockNonce, mbf.nonce))
+	  match = false;
 	for (int i = 0; i < mockProof.length; i++)
 	  if (match && mockProof[i] != mbf.proof[i]) {
 	    match = false;
 	  } else {
-	    logger.info("proof check " + i + " " + mockProof[i] +
+	    logger.debug("proof check " + i + " " + mockProof[i] +
 			" = " + mbf.proof[i]);
 	  }
 	if (!match)
 	  mbf.proof = null;  // Proof invalid
-	logger.info("proof is " + (mbf.proof != null ? " valid" : "invalid"));
+	logger.debug("proof is " + (mbf.proof != null ? " valid" : "invalid"));
       } else {
 	// We're generating
 	mbf.proof = new int[mockProof.length];
@@ -117,6 +119,14 @@ public class MockMemoryBoundFunction extends MemoryBoundFunctionSPI {
    */
   public static void setProof(int[] p) {
     mockProof = p;
+  }
+  
+  /**
+   * Set the nonce to be compared with nonce supplied
+   * @param p an array of byte containing the nonce
+   */
+  public static void setNonce(byte[] p) {
+    mockNonce = p;
   }
   
 }

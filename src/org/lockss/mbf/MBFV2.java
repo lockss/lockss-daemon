@@ -1,5 +1,5 @@
 /*
- * $Id: MBFV2.java,v 1.4 2003-08-25 23:58:49 dshr Exp $
+ * $Id: MBFV2.java,v 1.5 2003-08-28 16:46:14 dshr Exp $
  */
 
 /*
@@ -120,6 +120,7 @@ public class MBFV2 extends MemoryBoundFunctionVote {
     super.setupGeneration(fact, nVal, eVal, cusVal);
     setup(nVal, eVal, cusVal);
     setState(StartingGeneration);
+    logParams();
   }
 
   /**
@@ -149,6 +150,8 @@ public class MBFV2 extends MemoryBoundFunctionVote {
     if (ourProofs.length != ourHashes.length)
       throw new MemoryBoundFunctionException("proofs " + ourProofs.length +
 					     " != hashes " + ourHashes.length);
+
+    logParams();
   }
 
   private void setup(byte[] nVal, int eVal, CachedUrlSet cusVal) throws
@@ -174,9 +177,11 @@ public class MBFV2 extends MemoryBoundFunctionVote {
   }
 
   private void setState(int newState) {
-    logger.info("Change state from " + stateName[currentState] + " to " +
+    logger.debug("Change state from " + stateName[currentState] + " to " +
 		stateName[newState]);
     currentState = newState;
+    if (currentState == Finished)
+      logger.info("MBFV2: valid " + valid + " agreeing " + agreeing);
   }
 
   /**
@@ -289,7 +294,9 @@ public class MBFV2 extends MemoryBoundFunctionVote {
       throw new MemoryBoundFunctionException("mbf should be null" + " in " +
 					     stateName[currentState]);
     try{
-      mbf = factory.make(proofDigest.digest(),
+      byte[] nonce1 = proofDigest.digest();
+      logger.debug("MBFV2: nonce " + byteArrayToString(nonce1));
+      mbf = factory.make(nonce1,
 			 e,
 			 1,
 			 null,
@@ -367,12 +374,20 @@ public class MBFV2 extends MemoryBoundFunctionVote {
       // Second or subsequent block - nonce is previous hash and
       // previous proof.
       proofDigest.update(thisHash);
-      for (int i = 0; i < thisProof.length; i++)
-	proofDigest.update(intToByteArray(thisProof[i]));
+      logger.debug("block " + index + " hash " + byteArrayToString(thisHash));
+      if (thisProof.length > 0)
+	for (int i = 0; i < thisProof.length; i++)
+	  proofDigest.update(intToByteArray(thisProof[i]));
+      else {
+	logger.debug("block " + index + " 0-length proof");
+	proofDigest.update(nonce);
+      }
       logger.debug("generateSteps: index " + index);
       thisHash = null;
       thisProof = null;
-      mbf = factory.make(proofDigest.digest(),
+      byte[] nonce1 = proofDigest.digest();
+      logger.debug("MBFV2: nonce " + byteArrayToString(nonce1));
+      mbf = factory.make(nonce1,
 			 e,
 			 (1 << index),
 			 null,
@@ -395,6 +410,9 @@ public class MBFV2 extends MemoryBoundFunctionVote {
       logger.debug("generateSteps: proof finished");
       // Finished
       thisProof = mbf.result();
+      if (thisProof == null)
+	throw new MemoryBoundFunctionException("Null proof in " +
+					       stateName[currentState]);
       saveProof(index, thisProof);
       bytesToGo = (1 << index);
       setState(BlockHashGeneration);
@@ -421,7 +439,9 @@ public class MBFV2 extends MemoryBoundFunctionVote {
     thisProof = ourProofs[index];
     thisHash = null;
     try{
-      mbf = factory.make(proofDigest.digest(),
+      byte[] nonce1 = proofDigest.digest();
+      logger.debug("MBFV2: nonce " + byteArrayToString(nonce1));
+      mbf = factory.make(nonce1,
 			 e,
 			 (1 << index),
 			 thisProof,
@@ -473,7 +493,7 @@ public class MBFV2 extends MemoryBoundFunctionVote {
 	    if (i < (newHash.length - 1))
 	      ver.append(",");
 	  }
-	  logger.info("verifySteps: [" + gen.toString() + "] != [" +
+	  logger.debug("verifySteps: [" + gen.toString() + "] != [" +
 		      ver.toString() + "]");
 	  agreeing = false;
 	}
@@ -507,13 +527,26 @@ public class MBFV2 extends MemoryBoundFunctionVote {
       throw new MemoryBoundFunctionException("thisHash should be null" + " in " +
 					     stateName[currentState]);
     if (mbf == null) try {
+      if (index < 1)
+	throw new MemoryBoundFunctionException("index should be > 0" + " in " +
+					     stateName[currentState]);
+      
       // Second or subsequent block - nonce is previous hash and
       // previous proof.
-      proofDigest.update(ourHashes[index]);
-      for (int i = 0; i < ourProofs[index].length; i++)
-	proofDigest.update(intToByteArray(ourProofs[index][i]));
+      proofDigest.update(ourHashes[index-1]);
+      logger.debug("block " + (index-1) + " hash " + byteArrayToString(ourHashes[index-1]));
+      int[] prevProof = ourProofs[index-1];
       thisProof = ourProofs[index];
-      mbf = factory.make(proofDigest.digest(),
+      if (prevProof.length > 0)
+	for (int i = 0; i < prevProof.length; i++)
+	  proofDigest.update(intToByteArray(prevProof[i]));
+      else {
+	logger.debug("block " + (index-1) + " 0-length proof");
+	proofDigest.update(nonce);
+      }
+      byte[] nonce1 = proofDigest.digest();
+      logger.debug("MBFV2: nonce " + byteArrayToString(nonce1));
+      mbf = factory.make(nonce1,
 			 e,
 			 (1 << index),
 			 thisProof,
@@ -531,7 +564,7 @@ public class MBFV2 extends MemoryBoundFunctionVote {
     if (mbf.done()) {
       // Finished
       if (mbf.result() == null) {
-	logger.info("verifySteps: proof invalid");
+	logger.debug("verifySteps: proof invalid");
 	valid = false;
       }
       thisProof = null;
@@ -547,5 +580,54 @@ public class MBFV2 extends MemoryBoundFunctionVote {
     ret[2] = (byte)((b >> 16) & 0xff);
     ret[3] = (byte)((b >> 24) & 0xff);
     return (ret);
+  }
+
+  private String proofToString(int[][] arr) {
+    StringBuffer sb = new StringBuffer();
+    sb.append("{");
+    for (int i = 0; i < arr.length; i++) {
+      sb.append("{");
+      for (int j = 0; j < arr[i].length; j++) {
+	sb.append(arr[i][j]);
+	if (j < (arr[i].length - 1))
+	  sb.append(",");
+      }
+      if (i < (arr.length - 1))
+	sb.append("},");
+      else
+	sb.append("}");
+    }
+    sb.append("}");
+    return sb.toString();
+  }
+
+  private String hashesToString(byte[][] arr) {
+    StringBuffer sb = new StringBuffer();
+    sb.append("{");
+    for (int i = 0; i < arr.length; i++)
+      sb.append(byteArrayToString(arr[i]));
+    sb.append("}");
+    return sb.toString();
+  }
+
+  private String byteArrayToString(byte[] arr) {
+    StringBuffer sb = new StringBuffer();
+    sb.append("{");
+    for (int i = 0; i < arr.length; i++) {
+      sb.append(arr[i]);
+      if (i < (arr.length -1))
+	sb.append(",");
+    }
+    sb.append("}");
+    return sb.toString();
+  }
+
+  private void logParams() {
+    logger.debug("nonce " + byteArrayToString(nonce));
+    if (ourProofs != null)
+      logger.debug("proof " + proofToString(ourProofs));
+    if (ourHashes != null)
+      logger.debug("hashes " + hashesToString(ourHashes));
+		  
   }
 }

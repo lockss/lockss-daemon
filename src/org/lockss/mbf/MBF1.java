@@ -1,5 +1,5 @@
 /*
- * $Id: MBF1.java,v 1.8 2003-08-24 22:38:25 dshr Exp $
+ * $Id: MBF1.java,v 1.9 2003-08-28 16:46:13 dshr Exp $
  */
 
 /*
@@ -224,10 +224,11 @@ public class MBF1 extends MemoryBoundFunctionSPI {
     if (lowBit >= ourE) {
       // We got a match, set finished
       mbf.proof = new int[1];
-      mbf.proof[0] = 1;
+      mbf.proof[0] = k;
       mbf.finished = true;
     } else if (mbf.verify) {
       mbf.finished = true;
+      mbf.proof = null;
     } else {
       i = -1;
       j = -1;
@@ -240,10 +241,14 @@ public class MBF1 extends MemoryBoundFunctionSPI {
   // Instance initialization
   private void setup() throws MemoryBoundFunctionException {
     if (mbf.verify) {
-      if (mbf.proof == null || mbf.proof.length != 1)
-	throw new MemoryBoundFunctionException("bad proof");
+      if (mbf.proof == null)
+	throw new MemoryBoundFunctionException("MBF1: null proof");
+      if (mbf.proof.length != 1)
+	throw new MemoryBoundFunctionException("MBF1: bad proof length " +
+					       mbf.proof.length);
       if (mbf.maxPath < 1)
-	throw new MemoryBoundFunctionException("too few paths");
+	throw new MemoryBoundFunctionException("MBF1: too few paths " +
+					       mbf.maxPath);
     }
     A = null;
     i = -1;
