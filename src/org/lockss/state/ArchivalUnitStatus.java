@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.4 2004-03-24 02:31:39 eaalto Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.5 2004-03-24 02:37:31 eaalto Exp $
  */
 
 /*
@@ -133,19 +133,25 @@ public class ArchivalUnitStatus extends BaseLockssManager {
 	   iter.hasNext(); ) {
         ArchivalUnit au = (ArchivalUnit)iter.next();
         NodeManager nodeMan = theDaemon.getNodeManager(au);
-        rowL.add(makeRow(au, nodeMan.getAuState()));
+        LockssRepository repo = theDaemon.getLockssRepository(au);
+        RepositoryNode repoNode = null;
+        try {
+          repoNode = repo.getNode(au.getAuCachedUrlSet().getUrl());
+        } catch (MalformedURLException ignore) { }
+        rowL.add(makeRow(au, nodeMan.getAuState(), repoNode));
       }
       return rowL;
     }
 
-    private Map makeRow(ArchivalUnit au, AuState state) {
+    private Map makeRow(ArchivalUnit au, AuState state,
+                        RepositoryNode repoNode) {
       HashMap rowMap = new HashMap();
       //"AuID"
       rowMap.put("AuName", AuStatus.makeAuRef(au.getName(),
           au.getAuId()));
       //XXX start caching this info
       rowMap.put("AuNodeCount", new Integer(-1));
-      rowMap.put("AuSize", new Integer(-1));
+      rowMap.put("AuSize", new Long(repoNode.getTreeContentSize(null)));
       rowMap.put("AuLastCrawl", new Long(state.getLastCrawlTime()));
       rowMap.put("AuLastPoll", new Long(state.getLastTopLevelPollTime()));
       rowMap.put("AuLastTreeWalk", new Long(state.getLastTreeWalkTime()));
