@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurationPropTreeImpl.java,v 1.18 2004-08-18 00:14:59 tlipkis Exp $
+ * $Id: ConfigurationPropTreeImpl.java,v 1.19 2004-08-22 02:11:40 tlipkis Exp $
  */
 
 /*
@@ -98,7 +98,7 @@ public class ConfigurationPropTreeImpl extends Configuration {
    * @param otherConfig the config to compare with.  May be null.
    */
   public Configuration.Differences differences(Configuration otherConfig) {
-    if (otherConfig == null) {
+    if (otherConfig == null || otherConfig.isEmpty()) {
       return Configuration.DIFFERENCES_ALL;
     }
     ConfigurationPropTreeImpl oc = (ConfigurationPropTreeImpl)otherConfig;
