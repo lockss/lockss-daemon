@@ -1,5 +1,5 @@
 /*
- * $Id: TestIpFilter.java,v 1.2 2003-06-20 22:34:56 claire Exp $
+ * $Id: TestIpFilter.java,v 1.3 2003-11-13 00:25:43 tlipkis Exp $
  */
 
 /*
@@ -49,7 +49,7 @@ public class TestIpFilter extends LockssTestCase {
     filt = new IpFilter();
   }
 
-  private static void shouldFail(String s, boolean maskOk) {
+  private static void assertMalformed(String s, boolean maskOk) {
     try {
       IpFilter.Mask ip = new IpFilter.Mask(s, maskOk);
       fail(s + " should have failed, didn't: " + ip);
@@ -57,12 +57,22 @@ public class TestIpFilter extends LockssTestCase {
     }
   }
 
-  private static void shouldSucceed(String s, boolean maskOk) {
+  private static void assertOk(String s, boolean maskOk) {
     try {
       IpFilter.Mask ip = new IpFilter.Mask(s, maskOk);
     } catch (IpFilter.MalformedException e) {
       fail(s + " failed: " + e);
     }
+  }
+
+  public void assertMatch(String s1, String s2)
+      throws IpFilter.MalformedException {
+    checkMatch(s1, s2, true);
+  }
+
+  public void assertNoMatch(String s1, String s2)
+      throws IpFilter.MalformedException {
+    checkMatch(s1, s2, false);
   }
 
   public void checkMatch(String s1, String s2, boolean shouldMatch)
@@ -76,6 +86,14 @@ public class TestIpFilter extends LockssTestCase {
     }
   }
 
+  public void assertAllowed(String s) throws IpFilter.MalformedException {
+    checkFilter(s, true);
+  }
+
+  public void assertNotAllowed(String s) throws IpFilter.MalformedException {
+    checkFilter(s, false);
+  }
+
   public void checkFilter(String s, boolean shouldBeAllowed)
       throws IpFilter.MalformedException {
     IpFilter.Addr ip = new IpFilter.Addr(s);
@@ -87,39 +105,56 @@ public class TestIpFilter extends LockssTestCase {
   }
 
   public void testConstructor() throws Exception {
-    shouldSucceed("127.0.0.1", false);
-    shouldFail("127.0.1.0/24", false);
-    shouldSucceed("127.0.1.0/24", true);
-    shouldFail("123.45.12.*", false);
-    shouldSucceed("123.45.12.*", true);
-    shouldSucceed("123.45.*.*", true);
+    assertOk("127.0.0.1", false);
+    assertMalformed("127.0.1.0/24", false);
+    assertOk("127.0.1.0/24", true);
+    assertMalformed("123.45.12.*", false);
+    assertOk("123.45.12.*", true);
+    assertOk("123.45.*.*", true);
 
-    shouldFail("36.48.*.0", true);
-    shouldFail("36.48.0.23/33", true);
-    shouldFail("36.48.0.4/29", true);
-    shouldFail("36.48.0.a", false);
-    shouldFail("36.48.0.2.3", false);
-    shouldFail("36.48.0.2/", true);
+    assertMalformed("36.48.*.0", true);
+    assertMalformed("36.48.0.23/33", true);
+    assertMalformed("36.48.0.4/29", true);
+    assertMalformed("36.48.0.a", false);
+    assertMalformed("36.48.0.2.3", false);
+    assertMalformed("36.48.0.2/", true);
   }
 
   public void testMatch() throws Exception {
-    checkMatch("127.0.1.0/24", "127.0.1.0/24", true);
-    checkMatch("127.0.1.0/24", "127.0.1.0", true);
-    checkMatch("127.0.1.0/24", "127.0.1.255", true);
-    checkMatch("127.0.1.255", "127.0.1.0/24", true);
-    checkMatch("127.0.1.0/24", "127.2.1.0", false);
+    assertMatch("127.0.1.0/24", "127.0.1.0/24");
+    assertMatch("127.0.1.0/24", "127.0.1.0");
+    assertMatch("127.0.1.0/24", "127.0.1.255");
+    assertMatch("127.0.1.255", "127.0.1.0/24");
+    assertNoMatch("127.0.1.0/24", "127.2.1.0");
   }
 
   public void testFilter() throws Exception {
-    filt.setFilters("172.16.25.*;10.0.4.1","172.16.25.128/25", ';');
-    checkFilter("10.0.4.13", false);
-    checkFilter("10.0.4.1", true);
-    checkFilter("172.16.25.1", true);
-    checkFilter("172.16.25.131", false);
+    filt.setFilters("172.16.25.*;10.0.4.1", "172.16.25.128/25", ';');
+    assertNotAllowed("10.0.4.13");
+    assertAllowed("10.0.4.1");
+    assertAllowed("172.16.25.1");
+    assertNotAllowed("172.16.25.131");
+  }
+
+  // this will generate a log error message
+  public void testMalformedIncludeFilter() throws Exception {
+    filt.setFilters("x;172.16.25.*;10.0.4.1", "172.16.25.128/25", ';');
+    assertNotAllowed("10.0.4.13");
+    assertAllowed("10.0.4.1");
+    assertAllowed("172.16.25.1");
+    assertNotAllowed("172.16.25.131");
+  }
+
+  public void testMalformedExcludeFilter() throws Exception {
+    try {
+      filt.setFilters("172.16.25.*;10.0.4.1", "xx;172.16.25.128/25", ';');
+      fail("Malformed entry in exclude list didn't throw");
+    } catch (IpFilter.MalformedException e) {
+    }
   }
 
   public void testDefault() throws Exception {
     // default is to match nothing
-    checkFilter("1.1.1.1", false);
+    assertNotAllowed("1.1.1.1");
   }
 }

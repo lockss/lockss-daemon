@@ -1,5 +1,5 @@
 /*
- * $Id: IpFilter.java,v 1.3 2003-07-16 00:04:33 tlipkis Exp $
+ * $Id: IpFilter.java,v 1.4 2003-11-13 00:25:43 tlipkis Exp $
  */
 
 /*
@@ -44,6 +44,7 @@ import org.lockss.app.*;
  * and lookups.
  */
 public class IpFilter {
+  private static Logger log = Logger.getLogger("IpFilter");
 
   private Mask[] inclFilters;
   private Mask[] exclFilters;
@@ -56,7 +57,11 @@ public class IpFilter {
 	       StringUtil.breakAt(excludeList, delim));
   }
 
-  /** Set include and exclude access lists from vectors of Mask strings
+  /** Set include and exclude access lists from vectors of Mask strings.
+   * Malformed entries in the include list are ignored (and logged),
+   * malformed entries in the exclude list cause failure, as omitting an
+   * exclude entry could be dangerous.
+   * @throws MalformedException
    */
   public void setFilters(Vector inclVec, Vector exclVec)
       throws MalformedException {
@@ -64,7 +69,19 @@ public class IpFilter {
     exclFilters = new Mask[exclVec.size()];
     int i = 0;
     for (Iterator iter = inclVec.iterator(); iter.hasNext();) {
-      inclFilters[i++] = new Mask((String)iter.next(), true);
+      try {
+	// must be separate statements to ensure i doesn't get incremented
+	// if Mask constructor throws
+	Mask mask = new Mask((String)iter.next(), true);
+	inclFilters[i++] = mask;
+      } catch (MalformedException e) {
+	log.warning("Malformed IP filter in include list, ignoring: " +
+		    e.getMalformedIp(), e);
+	// make the array shorter by one.
+	Mask[] tmp = new Mask[inclFilters.length - 1];
+	System.arraycopy(inclFilters, 0, tmp, 0, i);
+	inclFilters = tmp;
+      }
     }
     i = 0;
     for (Iterator iter = exclVec.iterator(); iter.hasNext();) {
@@ -250,6 +267,11 @@ public class IpFilter {
       super(msg);
       this.ip = ip;
     }
+
+    public String getMalformedIp() {
+      return ip;
+    }
+
     public String toString() {
       return super.toString() +": \"" + ip + "\"";
     }
