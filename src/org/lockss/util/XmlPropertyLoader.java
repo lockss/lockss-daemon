@@ -1,5 +1,5 @@
 /*
- * $Id: XmlPropertyLoader.java,v 1.11 2004-09-01 23:38:59 smorabito Exp $
+ * $Id: XmlPropertyLoader.java,v 1.12 2004-09-02 01:13:24 smorabito Exp $
  */
 
 /*
@@ -583,14 +583,14 @@ public class XmlPropertyLoader {
       /*
        * Daemon version checking.
        */
-      if (daemonMin != null && daemonMax != null) {
+      if (daemonMin != null || daemonMax != null) {
 	returnVal &= compareVersion(m_sysDaemonVer, daemonMin, daemonMax);
       }
       
       /*
        * Platform version checking.
        */
-      if (platformMin != null && platformMax != null) {
+      if (platformMin != null || platformMax != null) {
 	returnVal &= compareVersion(m_sysPlatformVer, platformMin, platformMax);
       }
       
