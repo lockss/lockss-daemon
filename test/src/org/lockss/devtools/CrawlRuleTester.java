@@ -1,11 +1,45 @@
+/*
+ * $Id: CrawlRuleTester.java,v 1.9 2004-04-19 19:03:03 tlipkis Exp $
+ */
+
+/*
+
+Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+all rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Except as contained in this notice, the name of Stanford University shall not
+be used in advertising or otherwise to promote the sale, use or other dealings
+in this Software without prior written authorization from Stanford University.
+
+*/
+
 package org.lockss.devtools;
 
-import org.lockss.daemon.*;
 import java.net.*;
 import java.util.*;
 import java.io.*;
 import gnu.regexp.*;
 import org.lockss.util.*;
+import org.lockss.daemon.*;
+import org.lockss.crawler.*;
+import org.lockss.test.*;
 
 /**
  * CrawlRuleTester: test application for CrawlRules.
@@ -19,10 +53,10 @@ public class CrawlRuleTester {
   }
 
   static private void displayHelpAndExit() {
-    System.out.println("\nUsage: java CrawlRuleTester " +
+    System.err.println("\nUsage: java CrawlRuleTester " +
                        "-p <property file>" +
                        "[-o <output file>] [-d <crawl depth>]");
-    System.exit(0);
+    System.exit(1);
   }
 
   static private void processArgs(String[] args) {
@@ -33,502 +67,291 @@ public class CrawlRuleTester {
     if (args.length < 2) {
       displayHelpAndExit();
     }
-    for (int i = 0; i < args.length; i++) {
-      if (args[i].equals("-p")) { // prop file to process
-        prop_file = args[++i];
+    try {
+      for (int ix = 0; ix < args.length; ix++) {
+	String arg = args[ix];
+	if (arg.equals("-p")) { // prop file to process
+	  prop_file = args[++ix];
+	}
+	else if (arg.equals("-o")) { // output file
+	  output_file = args[++ix];
+	}
+	else if (arg.equals("-d")) { // crawl depth
+	  crawl_depth = Integer.parseInt(args[++ix]);
+	}
       }
-      else if (args[i].equals("-o")) { // output file
-        output_file = args[++i];
-      }
-      else if (args[i].equals("-d")) { // crawl depth
-        crawl_depth = Integer.parseInt(args[++i]);
-      }
+    } catch (ArrayIndexOutOfBoundsException e) {
+      displayHelpAndExit();
     }
-    if (prop_file != null) {
-      RuleTester tester = new RuleTester(prop_file, output_file, crawl_depth);
-      tester.runTest();
+      
+    if (prop_file == null) {
+      displayHelpAndExit();
     }
+    Properties props = new Properties();
+    try {
+      InputStream is = new BufferedInputStream(new FileInputStream(prop_file));
+      props.load(is);
+    } catch (IOException e) {
+      System.err.println("Error reading prop file: " + e.toString());
+      System.exit(1);
+    }
+    RuleTester tester = new RuleTester(props, output_file, crawl_depth);
+    tester.runTest();
   }
 
   public static void main(String[] args) {
-    CrawlRuleTester crawlRuleTester1 = new CrawlRuleTester();
     processArgs(args);
   }
-}
 
-class RuleTester {
-  private static final String IMGTAG = "img";
-  private static final String ATAG = "a";
-  private static final String FRAMETAG = "frame";
-  private static final String LINKTAG = "link";
-  private static final String SCRIPTTAG = "script";
-  private static final String SCRIPTTAGEND = "/script";
-  private static final String BODYTAG = "body";
-  private static final String TABLETAG = "table";
-  private static final String TDTAG = "tc";
+  static class RuleTester {
+    private static String OUT_FILE_PROP = "OutputFile";
+    private static String CRAWL_DEPTH_PROP = "CrawlDepth";
+    private static String BASE_URL_PROP = "BaseUrl";
+    private static String CRAWL_DELAY_PROP="CrawlDelay";
+    private static final long DEFAULT_CRAWL_DELAY = 10 * Constants.SECOND;
 
-  private static final String JSCRIPTTAG = "javascript";
-  private static final String ASRC = "href";
-  private static final String SRC = "src";
-  private static final String BACKGROUNDSRC = "background";
-  private static String OUT_FILE_PROP = "OutputFile";
-  private static String CRAWL_DEPTH_PROP = "CrawlDepth";
-  private static String BASE_URL_PROP = "BaseUrl";
-  private static String CRAWL_DELAY_PROP="CrawlDelay";
-  private static final long DEFAULT_CRAWL_DELAY = 10 * Constants.SECOND;
+    private String m_baseUrl;
+    private CrawlSpec m_crawlSpec;
+    private int m_crawlDepth;
+    private long m_crawlDelay;
+    private String m_outputFile;
+    private Configuration m_config;
+    private static BufferedWriter m_outWriter;
 
-  private String m_baseUrl;
-  private CrawlSpec m_crawlSpec;
-  private int m_crawlDepth;
-  private long m_crawlDelay;
-  private String m_outputFile;
-  private String m_propFile;
-  private static BufferedWriter m_outWriter;
+    private TreeSet m_extracted = new TreeSet();
+    private TreeSet m_incls = new TreeSet();
+    private TreeSet m_excls = new TreeSet();
 
-  RuleTester(String propFile, String outFile, int crawlDepth) {
-    m_propFile = propFile;
-    m_outputFile = outFile == null ? propFile +".out" : outFile;
-    m_crawlDepth = crawlDepth;
-  }
-
-  void runTest() {
-    loadProps();
-    checkRules();
-    closeOutputFile();
-  }
-
-  private void openOutputFile() {
-    try {
-      m_outWriter = new BufferedWriter(new FileWriter(m_outputFile,false));
+    RuleTester(Properties props, String outFile, int crawlDepth) {
+      m_config = ConfigManager.fromProperties(props);
+      m_outputFile =
+	(outFile != null) ? outFile : props.getProperty(OUT_FILE_PROP);
+      m_crawlDepth = crawlDepth;
     }
-    catch (Exception ex) {
-      System.out.println("Unable to write to output file, writing to stdout");
-      m_outWriter = new BufferedWriter(new OutputStreamWriter(System.out));
-    }
-  }
 
-  private void closeOutputFile() {
-    try {
-      if(m_outWriter != null) {
-        m_outWriter.close();
-      }
-    }
-    catch (IOException ex) {
-      System.err.println("Error closing output file.");
-    }
-  }
-
-  private void loadProps() {
-    Properties props = new Properties();
-    try {
-      FileInputStream fis = new FileInputStream(m_propFile);
-      props.load(fis);
-
-      // initialize the output file
-      if (m_outputFile == null) {
-        m_outputFile = props.getProperty(OUT_FILE_PROP, m_outputFile);
-      }
+    void runTest() {
       openOutputFile();
-
-      // initialize the crawl depth
-      if (m_crawlDepth == -1) {
-        m_crawlDepth = Integer.parseInt(props.getProperty(CRAWL_DEPTH_PROP, "0"));
-      }
-
-      // initialize the crawl delay
-      m_crawlDelay = Math.max(Long.parseLong(props.getProperty(CRAWL_DELAY_PROP,
-          String.valueOf(DEFAULT_CRAWL_DELAY))), DEFAULT_CRAWL_DELAY);
-
-     // initialize the base url
-      m_baseUrl = props.getProperty(BASE_URL_PROP);
-
-      // initialize the base crawl depth
-      int baseCrawlDepth = Integer.parseInt(
-          props.getProperty("BASE_CRAWL_DEPTH", "1"));
-
-      // now load the crawl rules
-      m_crawlSpec = new CrawlSpec(m_baseUrl, makeRules(props), baseCrawlDepth);
+      loadProps();
+      checkRules();
+      closeOutputFile();
     }
-    catch (IOException ex) {
-      exitOnError("Error processing prop file: ", ex);
-    }
-  }
 
-  private void checkRules() {
-    TreeSet crawled = new TreeSet();
-    TreeSet crawlList = new TreeSet();
-    TreeSet incls = new TreeSet();
-    TreeSet excls = new TreeSet();
-
-    // inialize with the baseUrl
-    crawlList.add(m_baseUrl);
-    long start_time = TimeBase.nowMs();
-    for (int i = 0; i < m_crawlDepth; i++) {
-      String[] urls = (String[]) crawlList.toArray(new String[0]);
-      crawlList.clear();
-      for (int u_count = 0; u_count < urls.length; u_count++) {
-        pauseBeforeFetch();
-        String urlstr = urls[u_count];
-        crawled.add(urlstr);
-        try {
-          URL url = new URL(urlstr);
-          // crawl the page
-          buildUrlSets(url, incls, excls, crawled);
-          // output incl/excl results
-          outputUrlResults(urlstr, incls, excls);
-          // add the incls to the crawlList for next crawl depth loop
-          Iterator it = incls.iterator();
-          while(it.hasNext()) {
-            crawlList.add(it.next());
-          }
-          incls.clear();
-          excls.clear();
-        }
-        catch (MalformedURLException ex) {
-          outputErrResults(urlstr, ex.getMessage());
-        }
+    private void openOutputFile() {
+      if (m_outputFile != null) {
+	try {
+	  m_outWriter = new BufferedWriter(new FileWriter(m_outputFile,false));
+	  return;
+	}
+	catch (Exception ex) {
+	  System.err.println("Error opening output file, writing to stdout: "
+			     + ex);
+	}
+	m_outWriter = new BufferedWriter(new OutputStreamWriter(System.out));
       }
     }
-    long elapsed_time = TimeBase.nowMs() - start_time;
-    outputSummary(m_baseUrl, crawled, elapsed_time);
-  }
 
-
-  private CrawlRule makeRules(Properties props) {
-    List rules = new LinkedList();
-    final int incl = CrawlRules.RE.MATCH_INCLUDE;
-    final int excl = CrawlRules.RE.MATCH_EXCLUDE;
-    String root = m_baseUrl.toString();
-
-    Enumeration enum = props.propertyNames();
-    while (enum.hasMoreElements()) {
-      String value = (String) enum.nextElement();
-      String regexp = props.getProperty(value);
+    private void closeOutputFile() {
       try {
-        if (value.startsWith("incl"))
-          rules.add(new CrawlRules.RE(regexp, incl));
-        else if(value.startsWith("excl"))
-          rules.add(new CrawlRules.RE(regexp, excl));
+	if(m_outWriter != null) {
+	  m_outWriter.close();
+	}
       }
-      catch (REException ex) {
-        exitOnError("Error creating crawl rule: ", ex);
-      }
-    }
-    outputMessage("\nChecking " + root + " using rules:\n" + rules);
-    return new CrawlRules.FirstMatch(rules);
-  }
-
-  private void exitOnError(String msg, Exception ex) {
-    outputMessage(msg + ex.toString());
-    closeOutputFile();
-    System.exit(2);
-  }
-
-  private int fetchCount;
-  private void buildUrlSets(URL srcUrl,
-                            Set fetchSet,
-                            Set ignoreSet,
-
-                            Set crawledSet) {
-    try {
-      URLConnection conn = srcUrl.openConnection();
-      fetchCount++;
-      String type = conn.getContentType();
-      type = conn.getHeaderField("content-type");
-      String encoding = conn.getContentEncoding();
-      if (type == null || !type.toLowerCase().startsWith("text/html"))
-        return;
-      InputStreamReader reader = new InputStreamReader(conn.getInputStream());
-      String nextUrl = null;
-      while ( (nextUrl = extractNextLink(reader, srcUrl)) != null) {
-        if (!crawledSet.contains(nextUrl)) {
-          crawledSet.add(nextUrl);
-          if (isSupportedUrlProtocol(srcUrl, nextUrl) &&
-              m_crawlSpec.isIncluded(nextUrl)) {
-            fetchSet.add(nextUrl);
-          }
-          else {
-            ignoreSet.add(nextUrl);
-          }
-        }
+      catch (IOException ex) {
+	System.err.println("Error closing output file.");
       }
     }
-    catch (Exception ex) {
-      outputErrResults(srcUrl.toString(), ex.getMessage());
-    }
-  }
 
-  private Deadline fetchDeadline = Deadline.in(0);
+    private void loadProps() {
+      try {
+	// initialize the crawl depth
+	if (m_crawlDepth == -1) {
+	  m_crawlDepth = m_config.getInt(CRAWL_DEPTH_PROP, 0);
+	}
 
-  private void pauseBeforeFetch() {
-  if (!fetchDeadline.expired()) {
-    try {
-      fetchDeadline.sleep();
-    } catch (InterruptedException ie) {
-      // no action
-    }
-  }
-  fetchDeadline.expireIn(m_crawlDelay);
-}
+	// initialize the crawl delay
+	m_crawlDelay =
+	  Math.max(m_config.getLong(CRAWL_DELAY_PROP, DEFAULT_CRAWL_DELAY),
+		   DEFAULT_CRAWL_DELAY);
 
-  private static void outputMessage(String msg) {
-    try {
-      m_outWriter.write(msg);
-      m_outWriter.newLine();
-    }
-    catch (Exception ex) {
-      System.err.println(msg);
-    }
-  }
+	// initialize the base url
+	m_baseUrl = m_config.get(BASE_URL_PROP);
 
-  private void outputErrResults(String url, String errMsg) {
-    outputMessage("Error: " + errMsg + " occured while processing " + url);
-  }
+	// initialize the base crawl depth
+	int baseCrawlDepth = m_config.getInt("BASE_CRAWL_DEPTH", 1);
 
-  private void outputUrlResults(String url, Set inclSet, Set exclSet) {
-    outputMessage("\nProcessed: " + url);
-
-    Iterator it = inclSet.iterator();
-    if (it.hasNext()) {
-      outputMessage("\nUrl's included:");
-    }
-    while (it.hasNext()) {
-      outputMessage(it.next().toString());
-    }
-
-    it = exclSet.iterator();
-    if (it.hasNext())
-      outputMessage("\nUrl's excluded:");
-    while (it.hasNext()) {
-      outputMessage(it.next().toString());
-    }
-    try {
-      m_outWriter.flush();
-    }
-    catch (IOException ex) {
-    }
-  }
-
-  private void outputSummary(String baseUrl, Set crawledSet, long elapsedTime) {
-    outputMessage("\n\nSummary for base Url:" + baseUrl +
-                       " at depth " + m_crawlDepth);
-    outputMessage("\nUrls checked: " + crawledSet.size() +
-                       "    Urls fetched: " + fetchCount);
-    long secs = elapsedTime / Constants.SECOND;
-    long fetchRate = fetchCount * 60 * Constants.SECOND / elapsedTime;
-    outputMessage("Elapsed Time: " + secs + " secs." +
-              "    Fetch Rate: " + fetchRate + " p/m" );
-  }
-
-  /**
-   * Read through the reader stream, extract and return the next url found
-   *
-   * @param reader Reader object to extract the link from
-   * @param srcUrl URL object representing the page we are looking at
-   * (for resolving relative links)
-   * @return String representing the next url in reader
-   * @throws IOException
-   * @throws MalformedURLException
-   */
-  protected static String extractNextLink(Reader reader, URL srcUrl) throws
-      IOException, MalformedURLException {
-    boolean inscript = false; //FIXME or I will break when we look at scripts
-    String nextLink = null;
-    int c = 0;
-    StringBuffer lineBuf = new StringBuffer();
-
-    while (nextLink == null && c >= 0) {
-      //skip to the next tag
-      do {
-        c = reader.read();
+	// now load the crawl rules
+	m_crawlSpec = new CrawlSpec(m_baseUrl, makeRules(m_config),
+				    baseCrawlDepth);
       }
-      while (c >= 0 && c != '<');
-
-      if (c == '<') {
-        int pos = 0;
-        c = reader.read();
-        while (c >= 0 && c != '>') {
-          if (pos == 2 && c == '-' && lineBuf.charAt(0) == '!'
-              && lineBuf.charAt(1) == '-') {
-            // we're in a HTML comment
-            pos = 0;
-            int lc1 = 0;
-            int lc2 = 0;
-            StringBuffer skipBuffer = new StringBuffer();
-            while ( (c = reader.read()) >= 0
-                   && (c != '>' || lc1 != '-' || lc2 != '-')) {
-              lc1 = lc2;
-              lc2 = c;
-              skipBuffer.append((char) c);
-            }
-            String skipped = skipBuffer.toString();
-            break;
-          }
-
-          lineBuf.append( (char) c);
-          pos++;
-          c = reader.read();
-        }
-        String line = lineBuf.toString();
-        if (inscript) {
-          //FIXME when you deal with the script problems
-          //	  if(lookingAt(lineBuf, 0, pos, scripttagend)) {
-          inscript = false;
-          //}
-        }
-        else if (lineBuf.length() >= 5) { //see if the lineBuf has a link tag
-          nextLink = parseLink(lineBuf, srcUrl);
-        }
-        lineBuf = new StringBuffer();
+      catch (Exception ex) {
+	exitOnError("Error processing prop file: ", ex);
       }
     }
-    return nextLink;
-  }
 
-  protected static boolean isSupportedUrlProtocol(URL srcUrl, String url) {
-    try {
-      URL ur = new URL(srcUrl, url);
-      if (StringUtil.getIndexIgnoringCase(url, "https") != 0) {
-        return true;
+    private void checkRules() {
+      TreeSet crawlList = new TreeSet();
+      TreeSet fetched = new TreeSet();
+
+      // inialize with the baseUrl
+      crawlList.add(m_baseUrl);
+      long start_time = TimeBase.nowMs();
+      for (int depth = 0; depth < m_crawlDepth; depth++) {
+	String[] urls = (String[]) crawlList.toArray(new String[0]);
+	crawlList.clear();
+	for (int ix = 0; ix < urls.length; ix++) {
+	  pauseBeforeFetch();
+	  String urlstr = urls[ix];
+
+	  m_incls.clear();
+	  m_excls.clear();
+	  try {
+	    // crawl the page
+	    buildUrlSets(urlstr);
+	    fetched.add(urlstr);
+	    // output incl/excl results
+	    outputUrlResults(urlstr, m_incls, m_excls);
+	    // add the m_incls to the crawlList for next crawl depth loop
+	    crawlList.addAll(m_incls);
+	  }
+	  catch (MalformedURLException ex) {
+	    outputErrResults(urlstr, ex.getMessage());
+	  }
+	}
       }
-    }
-    catch (Exception ex) {
-    }
-    return false;
-  }
-
-  private static boolean beginsWithTag(String s1, String tag) {
-    if( StringUtil.getIndexIgnoringCase(s1,tag) == 0 ) {
-      int len = tag.length();
-      if(s1.length() > len && Character.isWhitespace(s1.charAt(len))) {
-        return true;
-      }
-    }
-    return false;
-  }
-
-  /**
-   * Method to take a link tag, and parse out the URL it points to, returning
-   * a string representation of the url (lifted and rewritten from the Gosling
-   * crawler)
-   *
-   * @param link StringBuffer containing the text of a link tag (everything
-   * between < and > (ie, "a href=http://www.test.org")
-   * @param srcUrl URL object representing the page on which this
-   * url was taken from (for resolving relative tags)
-   * @return string representation of the url from the link tag
-   * @throws MalformedURLException
-   */
-  protected static String parseLink(StringBuffer link, URL srcUrl) throws
-      MalformedURLException {
-    String returnStr = null;
-
-    switch (link.charAt(0)) {
-      case 'a': //<a href=http://www.yahoo.com>
-      case 'A':
-        if (beginsWithTag(link.toString(),ATAG)) {
-          returnStr = getAttributeValue(ASRC, link.toString());
-          if (returnStr.startsWith(JSCRIPTTAG)) {
-            returnStr = extractScriptUrl(returnStr);
-          }
-        }
-        break;
-      case 'f': //<frame src=frame1.html>
-      case 'F':
-        if (beginsWithTag(link.toString(),FRAMETAG)) {
-          returnStr = getAttributeValue(SRC, link.toString());
-        }
-        break;
-      case 'i': //<img src=image.gif>
-      case 'I':
-        if (beginsWithTag(link.toString(),IMGTAG)) {
-          returnStr = getAttributeValue(SRC, link.toString());
-        }
-        break;
-      case 'l': //<link href=blah.css>
-      case 'L':
-        if (beginsWithTag(link.toString(),LINKTAG)) {
-          returnStr = getAttributeValue(ASRC, link.toString());
-        }
-        break;
-      case 'b': //<body backgroung=background.gif>
-      case 'B':
-        if (beginsWithTag(link.toString(),BODYTAG)) {
-          returnStr = getAttributeValue(BACKGROUNDSRC, link.toString());
-        }
-        break;
-      case 's': //<script src=blah.js>
-      case 'S':
-        if (beginsWithTag(link.toString(),SCRIPTTAG)) {
-          returnStr = getAttributeValue(SRC, link.toString());
-        }
-        break;
-      case 't': //<tc background=back.gif> or <table background=back.gif>
-      case 'T':
-        if (beginsWithTag(link.toString(),TABLETAG) ||
-          beginsWithTag(link.toString(),TDTAG)) {
-          returnStr = getAttributeValue(BACKGROUNDSRC, link.toString());
-        }
-        break;
-      default:
-        return null;
+      long elapsed_time = TimeBase.nowMs() - start_time;
+      outputSummary(m_baseUrl, fetched, elapsed_time);
     }
 
-    if (returnStr != null) {
-      returnStr = StringUtil.trimAfterChars(returnStr, " #\"");
-      if (!isSupportedUrlProtocol(srcUrl, returnStr)) {
-        outputMessage("skipping unsupported url " + returnStr);
+
+    private CrawlRule makeRules(Configuration config) {
+      List rules = new LinkedList();
+      final int incl = CrawlRules.RE.MATCH_INCLUDE;
+      final int excl = CrawlRules.RE.MATCH_EXCLUDE;
+      String root = m_baseUrl.toString();
+
+      for (Iterator iter = config.keyIterator(); iter.hasNext(); ) {
+	String key = (String)iter.next();
+	String regexp = config.get(key);
+	try {
+	  if (key.startsWith("incl"))
+	    rules.add(new CrawlRules.RE(regexp, incl));
+	  else if(key.startsWith("excl"))
+	    rules.add(new CrawlRules.RE(regexp, excl));
+	}
+	catch (REException ex) {
+	  exitOnError("Error creating crawl rule: ", ex);
+	}
       }
-      else {
-        URL retUrl = new URL(srcUrl, returnStr);
-        returnStr = retUrl.toString();
-      }
-      return returnStr;
+      outputMessage("\nChecking " + root + " using rules:\n" + rules);
+      return new CrawlRules.FirstMatch(rules);
     }
-    return null;
-  }
 
-  private static String getAttributeValue(String attribute, String src) {
-    StringTokenizer st = new StringTokenizer(src, "\n\t\r =\"", true);
-    String lastToken = null;
+    private void exitOnError(String msg, Exception ex) {
+      outputMessage(msg + ex.toString());
+      closeOutputFile();
+      System.exit(2);
+    }
 
-    while (st.hasMoreTokens()) {
-      String token = st.nextToken();
-      if (!token.equals("=")) {
-        if (!token.equals(" ") && !token.equals("\"")) {
-          lastToken = token;
-        }
+    private void buildUrlSets(String url) throws MalformedURLException {
+      URL srcUrl = new URL(url);
+      try {
+	URLConnection conn = srcUrl.openConnection();
+	String type = conn.getContentType();
+	type = conn.getHeaderField("content-type");
+	String encoding = conn.getContentEncoding();
+	if (type == null || !type.toLowerCase().startsWith("text/html"))
+	  return;
+	MockCachedUrl mcu = new MockCachedUrl(srcUrl.toString());
+	InputStreamReader reader = new InputStreamReader(conn.getInputStream());
+	GoslingHtmlParser parser = new GoslingHtmlParser();
+	parser.parseForUrls(mcu, new MyFoundUrlCallback());
       }
-      else {
-        if (attribute.equalsIgnoreCase(lastToken))
-          while (st.hasMoreTokens()) {
-            token = st.nextToken();
-             // we need to allow for arguments in the url which use '='
-            if (!token.equals(" ") && !token.equals("\"")) {
-              StringBuffer sb = new StringBuffer(token);
-              while (st.hasMoreTokens() &&
-                     !token.equals(" ") && !token.equals("\"")) {
-                token = st.nextToken();
-                sb.append(token);
-              }
-              return sb.toString();
-            }
-          }
+      catch (Exception ex) {
+	outputErrResults(url, ex.getMessage());
       }
     }
-    return null;
+
+    private class MyFoundUrlCallback
+      implements ContentParser.FoundUrlCallback {
+
+      MyFoundUrlCallback() {
+      }
+
+      public void foundUrl(String url) {
+	if (!m_extracted.contains(url)) {
+	  m_extracted.add(url);
+	  if (CrawlerImpl.isSupportedUrlProtocol(url) &&
+	      m_crawlSpec.isIncluded(url)) {
+	    m_incls.add(url);
+	  }
+	  else {
+	    m_excls.add(url);
+	  }
+	}
+      }
+    }
+    private Deadline fetchDeadline = Deadline.in(0);
+
+    private void pauseBeforeFetch() {
+      if (!fetchDeadline.expired()) {
+	try {
+	  fetchDeadline.sleep();
+	} catch (InterruptedException ie) {
+	  // no action
+	}
+      }
+      fetchDeadline.expireIn(m_crawlDelay);
+    }
+
+    private static void outputMessage(String msg) {
+      try {
+	m_outWriter.write(msg);
+	m_outWriter.newLine();
+      }
+      catch (Exception ex) {
+	System.err.println(msg);
+      }
+    }
+
+    private void outputErrResults(String url, String errMsg) {
+      outputMessage("Error: " + errMsg + " occured while processing " + url);
+    }
+
+    private void outputUrlResults(String url, Set m_inclset, Set m_exclset) {
+      outputMessage("\nProcessed: " + url);
+
+      Iterator it = m_inclset.iterator();
+      if (it.hasNext()) {
+	outputMessage("\nUrl's included:");
+      }
+      while (it.hasNext()) {
+	outputMessage(it.next().toString());
+      }
+
+      it = m_exclset.iterator();
+      if (it.hasNext())
+	outputMessage("\nUrl's excluded:");
+      while (it.hasNext()) {
+	outputMessage(it.next().toString());
+      }
+      try {
+	m_outWriter.flush();
+      }
+      catch (IOException ex) {
+      }
+    }
+
+    private void outputSummary(String baseUrl, Set fetched, long elapsedTime) {
+      int fetchCount = fetched.size();
+      outputMessage("\n\nSummary for base Url:" + baseUrl +
+		    " at depth " + m_crawlDepth);
+      outputMessage("\nUrls checked: " + m_extracted.size() +
+		    "    Urls fetched: " + fetchCount);
+      long secs = elapsedTime / Constants.SECOND;
+      long fetchRate = fetchCount * 60 * Constants.SECOND / elapsedTime;
+      outputMessage("Elapsed Time: " + secs + " secs." +
+		    "    Fetch Rate: " + fetchRate + " p/m" );
+    }
+
   }
-
-  private static final String BEGIN_SCRIPT_VALUE = "(";
-  private static final String END_SCRIPT_VALUE = ")";
-
-  private static String extractScriptUrl(String src) {
-    int begin = src.indexOf("'");
-    int end = src.indexOf("'",begin+1);
-    if(end > begin)
-      return src.substring(begin+1,end);
-    return src;
-  }
-
-
 }
