@@ -101,6 +101,9 @@
       <property name="activeaus">
 	<property name="class" value="activeaus" />
       </property>
+      <property name="inactiveaus">
+	<property name="class" value="inactiveaus" />
+      </property>
       <property name="1">
 	<property name="name" value="All Project Muse Titles" />
 	<property name="class" value="xpath" />
