@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.55 2005-01-04 03:00:30 tlipkis Exp $
+ * $Id: TestPluginManager.java,v 1.56 2005-01-13 08:10:44 tlipkis Exp $
  */
 
 /*
@@ -471,7 +471,29 @@ public class TestPluginManager extends LockssTestCase {
     p.setProperty(ts2p+"xpath", path2);
     ConfigurationUtil.setCurrentConfigFromProps(p);
     Map map = mgr.getTitleSetMap();
+    assertEquals(2, map.size());
     assertEquals(new TitleSetXpath(theDaemon, title1, path1), map.get(title1));
+    assertEquals(new TitleSetXpath(theDaemon, title2, path2), map.get(title2));
+  }
+
+  public void testIllTitleSets() throws Exception {
+    String ts1p = PluginManager.PARAM_TITLE_SETS + ".s1.";
+    String ts2p = PluginManager.PARAM_TITLE_SETS + ".s2.";
+    String title1 = "Title Set 1";
+    String title2 = "Set of Titles";
+    // illegal xpath
+    String path1 = "[journalTitle='Dog Journal']]";
+    String path2 = "[journalTitle=\"Dog Journal\" or pluginName=\"plug2\"]";
+    Properties p = new Properties();
+    p.setProperty(ts1p+"class", "xpath");
+    p.setProperty(ts1p+"name", title1);
+    p.setProperty(ts1p+"xpath", path1);
+    p.setProperty(ts2p+"class", "xpath");
+    p.setProperty(ts2p+"name", title2);
+    p.setProperty(ts2p+"xpath", path2);
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+    Map map = mgr.getTitleSetMap();
+    assertEquals(1, map.size());
     assertEquals(new TitleSetXpath(theDaemon, title2, path2), map.get(title2));
   }
 
