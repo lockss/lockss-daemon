@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrl.java,v 1.10 2003-02-24 22:13:43 claire Exp $
+ * $Id: MockCachedUrl.java,v 1.11 2003-02-25 22:07:50 troberts Exp $
  */
 
 /*
@@ -111,9 +111,9 @@ public class MockCachedUrl implements CachedUrl {
 
   //mock specific acessors
 
-//   public void setInputStream(InputStream is){
-//     cachedIS = is;
-//   }
+  public void setInputStream(InputStream is){
+    cachedIS = is;
+  }
 
   public void setContent(String content) {
     this.content = content;
