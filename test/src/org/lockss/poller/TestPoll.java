@@ -44,7 +44,7 @@ public class TestPoll extends TestCase {
     pollmanager = PollManager.getPollManager();
     try {
       testaddr = InetAddress.getByName("127.0.0.1");
-      testID = LcapIdentity.getIdentity(testaddr);
+      testID = IdentityManager.getIdentityManager().getIdentity(testaddr);
     }
     catch (UnknownHostException ex) {
       fail("can't open test host");
