@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrlSet.java,v 1.41 2003-11-07 23:58:14 troberts Exp $
+ * $Id: MockCachedUrlSet.java,v 1.42 2004-01-09 01:15:53 troberts Exp $
  */
 
 /*
@@ -69,6 +69,10 @@ public class MockCachedUrlSet implements CachedUrlSet {
 
   private Hashtable ucHash = new Hashtable();
   private Hashtable cuHash = new Hashtable();
+
+  private Map cacheAttempts = new HashMap();
+
+
 
   private static final Logger logger = Logger.getLogger("MockCachedUrlSet");
 
@@ -355,6 +359,19 @@ public class MockCachedUrlSet implements CachedUrlSet {
     } else {
       return 0;
     }
+  }
+
+  public void signalCacheAttempt(String url) {
+    Integer numTimesCached = (Integer) cacheAttempts.get(url);
+    if (numTimesCached == null) {
+      cacheAttempts.put(url, new Integer(1));
+    } else {
+      cacheAttempts.put(url, new Integer(numTimesCached.intValue()+1));
+    }
+  }
+  public int getNumCacheAttempts(String url) {
+    Integer num = (Integer)cacheAttempts.get(url);
+    return (num == null ? 0 : num.intValue());
   }
 
   public boolean equals(Object obj) {
