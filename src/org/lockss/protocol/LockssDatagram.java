@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDatagram.java,v 1.3 2002-12-16 21:55:33 tal Exp $
+ * $Id: LockssDatagram.java,v 1.4 2003-05-29 01:49:07 tal Exp $
  */
 
 /*
@@ -31,9 +31,12 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.protocol;
+import java.io.*;
 import java.net.*;
 import java.util.*;
+import java.util.zip.*;
 import org.lockss.util.*;
+import org.lockss.daemon.*;
 
 
 /** LockssDatagram describes the datagram packets exchanged between LOCKSS
@@ -42,6 +45,8 @@ import org.lockss.util.*;
  * LockssReceivedDatagram}.
  */
 public class LockssDatagram {
+
+
   /** Maximum data size */
   public static final int MAX_SIZE = 2048;
   public static final int PROTOCOL_TEST = 1;
@@ -65,14 +70,54 @@ public class LockssDatagram {
   }
 
   /** Return a DatagramPacket suitable for sending to a specific address.
+   * The packet will be compressed if compression is configured
+   * (org.lockss.comm.compress) and the payload is long enough (greater
+   * than org.lockss.comm.compress.min).
    * @param addr the destination address (or multicast group)
    * @param port the destination port
    * @return the packet
    */
-  public DatagramPacket makeSendPacket(InetAddress addr, int port) {
+  public DatagramPacket makeSendPacket(InetAddress addr, int port)
+      throws IOException {
+    Configuration config = Configuration.getCurrentConfig();
+    if (config.getBoolean(LcapComm.PARAM_COMPRESS_PACKETS,
+				 LcapComm.DEFAULT_COMPRESS_PACKETS) &&
+	payload.length >= config.getInt(LcapComm.PARAM_COMPRESS_MIN,
+					LcapComm.DEFAULT_COMPRESS_MIN)) {
+      return makeCompressedSendPacket(addr, port);
+    } else {
+      return makeUncmpressedSendPacket(addr, port);
+    }
+  }
+
+  /** Return a DatagramPacket suitable for sending to a specific address.
+   * @param addr the destination address (or multicast group)
+   * @param port the destination port
+   * @return the packet
+   */
+  public DatagramPacket makeUncmpressedSendPacket(InetAddress addr, int port) {
     byte[] pktData = new byte[payload.length + HEADER_LENGTH];
     ByteArray.encodeInt(protocol, pktData, 0);
     System.arraycopy(payload, 0, pktData, HEADER_LENGTH, payload.length);
+    return new DatagramPacket(pktData, pktData.length, addr, port);
+  }
+
+  /** Return a DatagramPacket suitable for sending to a specific address.
+   * The header and payload are compressed before being added to the packet.
+   * @param addr the destination address (or multicast group)
+   * @param port the destination port
+   * @return the packet
+   */
+  public DatagramPacket makeCompressedSendPacket(InetAddress addr, int port)
+      throws IOException {
+    ByteArrayOutputStream baos = new ByteArrayOutputStream();
+    OutputStream gzout = new GZIPOutputStream(baos);
+    byte[] hdrData = new byte[HEADER_LENGTH];
+    ByteArray.encodeInt(protocol, hdrData, 0);
+    gzout.write(hdrData, 0, HEADER_LENGTH);
+    gzout.write(payload, 0, payload.length);
+    gzout.close();
+    byte[] pktData = baos.toByteArray();
     return new DatagramPacket(pktData, pktData.length, addr, port);
   }
 

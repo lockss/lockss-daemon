@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssDatagram.java,v 1.3 2003-03-04 01:02:05 aalto Exp $
+ * $Id: TestLockssDatagram.java,v 1.4 2003-05-29 01:49:07 tal Exp $
  */
 
 /*
@@ -94,8 +94,23 @@ public class TestLockssDatagram extends LockssTestCase {
   public void testEncodeDecode() throws Exception {
     LockssDatagram dg = new LockssDatagram(27, testData);
     InetAddress testAddr = InetAddress.getByName("10.4.111.27");
-    DatagramPacket pkt = dg.makeSendPacket(testAddr, testPort);
+    DatagramPacket pkt = dg.makeUncmpressedSendPacket(testAddr, testPort);
     LockssReceivedDatagram rdg = new LockssReceivedDatagram(pkt);
+    assertFalse(rdg.isCompressed());
+    assertEquals(pkt, rdg.getPacket());
+    assertEquals(testData, rdg.getData());
+    assertEquals(27, rdg.getProtocol());
+    LockssReceivedDatagram rdg2 = new LockssReceivedDatagram(pkt);
+    assertEquals(27, rdg.getProtocol());
+    assertEquals(testData, rdg.getData());
+  }
+
+  public void testCompressedEncodeDecode() throws Exception {
+    LockssDatagram dg = new LockssDatagram(27, testData);
+    InetAddress testAddr = InetAddress.getByName("10.4.111.27");
+    DatagramPacket pkt = dg.makeCompressedSendPacket(testAddr, testPort);
+    LockssReceivedDatagram rdg = new LockssReceivedDatagram(pkt);
+    assertTrue(rdg.isCompressed());
     assertEquals(pkt, rdg.getPacket());
     assertEquals(testData, rdg.getData());
     assertEquals(27, rdg.getProtocol());

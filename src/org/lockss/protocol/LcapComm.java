@@ -1,5 +1,5 @@
 /*
- * $Id: LcapComm.java,v 1.34 2003-05-28 16:13:45 tal Exp $
+ * $Id: LcapComm.java,v 1.35 2003-05-29 01:49:07 tal Exp $
  */
 
 /*
@@ -58,6 +58,11 @@ public class LcapComm extends BaseLockssManager {
   static final String PARAM_UNI_PORT = PREFIX + "unicast.port";
   static final String PARAM_UNI_PORT_SEND = PREFIX + "unicast.sendToPort";
   static final String PARAM_UNI_ADDR_SEND = PREFIX + "unicast.sendToAddr";
+
+  static final String PARAM_COMPRESS_PACKETS = PREFIX + "compress";
+  static final String PARAM_COMPRESS_MIN = PREFIX + "compress.min";
+  static final boolean DEFAULT_COMPRESS_PACKETS = false;
+  static final int DEFAULT_COMPRESS_MIN = 200;
 
   static Logger log = Logger.getLogger("Comm");
 
@@ -484,6 +489,39 @@ public class LcapComm extends BaseLockssManager {
     }
   }
 
+  // Statistics
+
+  private class Stats {
+    int port;
+    int proto;
+    boolean multicast;
+    boolean compressed;
+    int inPkts;
+    long inBytes;
+    int outPkts;
+    long outBytes;
+
+    // multicast sockets see the packets they send, so discount those
+    // XXX this assumes we are guaranteed to receive our multicast packets,
+    // which probably isn't true.  The other way to discount them would be
+    // to not count incoming multicast packets that have us as the sender,
+    // but that could be spoofed.
+    int getInPkts() {
+      if (!multicast) {
+	return inPkts;
+      }
+      return inPkts - outPkts;
+    }
+
+    // multicast sockets see the packets they send, so discount those
+    long getInBytes() {
+      if (!multicast) {
+	return inBytes;
+      }
+      return inBytes - outBytes;
+    }
+  }
+
   private void updateInStats(LockssReceivedDatagram ld) {
     LcapSocket lsock = ld.getReceiveSocket();
     DatagramSocket sock = lsock.getSocket();
@@ -526,33 +564,6 @@ public class LcapComm extends BaseLockssManager {
       statsMap.put(key, stats);
     }
     return stats;
-  }
-
-  private class Stats {
-    int port;
-    int proto;
-    boolean multicast;
-    boolean compressed;
-    int inPkts;
-    long inBytes;
-    int outPkts;
-    long outBytes;
-
-    // multicast sockets see the packets they send, so discount those
-    int getInPkts() {
-      if (!multicast) {
-	return inPkts;
-      }
-      return inPkts - outPkts;
-    }
-
-    // multicast sockets see the packets they send, so discount those
-    long getInBytes() {
-      if (!multicast) {
-	return inBytes;
-      }
-      return inBytes - outBytes;
-    }
   }
 
   private Map statsMap = new HashMap();
@@ -600,6 +611,9 @@ public class LcapComm extends BaseLockssManager {
     public void populateTable(StatusTable table) {
       String key = table.getKey();
       table.setTitle("Comm Statistics");
+      String tfoot = "Statistics are for LCAP traffic only.  " +
+	"Traffic due to fetching content (crawling) is not included.";
+      table.setTitleFootnote(tfoot);
       table.setColumnDescriptors(statusColDescs);
       table.setDefaultSortRules(statusSortRules);
       table.setRows(getRows(key));

@@ -1,5 +1,5 @@
 /*
- * $Id: LockssReceivedDatagram.java,v 1.5 2003-03-21 20:48:45 tal Exp $
+ * $Id: LockssReceivedDatagram.java,v 1.6 2003-05-29 01:49:07 tal Exp $
  */
 
 /*
@@ -31,8 +31,10 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.protocol;
+import java.io.*;
 import java.net.*;
 import java.util.*;
+import java.util.zip.*;
 import org.lockss.util.*;
 
 /**
@@ -82,6 +84,18 @@ public class LockssReceivedDatagram extends LockssDatagram {
   }
 
   private void decodePacket() {
+    if (isCompressed()) {
+      try {
+	decodeCompressedPacket();
+      } catch (IOException e) {
+	throw new RuntimeException("Undecodable compressed packet");
+      }
+    } else {
+      decodeUncompressedPacket();
+    }
+  }
+
+  private void decodeUncompressedPacket() {
     int len = packet.getLength() - HEADER_LENGTH;
     if (len < 0) {
       throw new RuntimeException("short packet");
@@ -91,6 +105,23 @@ public class LockssReceivedDatagram extends LockssDatagram {
     payload = new byte[len];
     System.arraycopy(pktData, HEADER_LENGTH, payload, 0, len);
   }
+
+  private void decodeCompressedPacket()
+      throws IOException {
+    byte[] pktData = packet.getData();
+    InputStream gzin = new GZIPInputStream(new ByteArrayInputStream(pktData));
+    ByteArrayOutputStream baos =
+      new ByteArrayOutputStream(packet.getLength() * 4);
+    byte[] header = new byte[HEADER_LENGTH];
+    int hlen = gzin.read(header, 0, HEADER_LENGTH);
+    if (hlen != HEADER_LENGTH) {
+      throw new RuntimeException("short packet");
+    }
+    StreamUtil.copy(gzin, baos);
+    protocol = ByteArray.decodeInt(header, 0);
+    payload = baos.toByteArray();
+  }
+
 
   /** Return true iff the packet was a multicast packet */
   public boolean isMulticast() {
@@ -111,6 +142,13 @@ public class LockssReceivedDatagram extends LockssDatagram {
   /** Set the received LcapSocket */
   void setReceiveSocket(LcapSocket socket) {
     rcvSocket = socket;
+  }
+
+  /** Return true if the data in the packet is compressed */
+  public boolean isCompressed() {
+    byte[] data = packet.getData();
+    int magic = ((int)(data[1] & 0xff) << 8) | (int)(data[0] & 0xff);
+    return magic == GZIPInputStream.GZIP_MAGIC;
   }
 
   /** Return true iff the underlying packets are the same, ignoring the
