@@ -1,5 +1,5 @@
 /*
- * $Id: AnyCachedUrlSetSpec.java,v 1.3 2003-01-28 00:32:11 aalto Exp $
+ * $Id: AnyCachedUrlSetSpec.java,v 1.4 2003-01-28 02:06:13 aalto Exp $
  */
 
 /*
@@ -39,17 +39,17 @@ import org.lockss.util.*;
  */
 public class AnyCachedUrlSetSpec implements CachedUrlSetSpec {
   private static Logger logger = Logger.getLogger("CachedUrlSetSpec");
-  private List list;
+  private Set set;
 
   /**
    * Create a CachedUrlSetSpec that matches if any of the CachedUrlSetSpecs
    * in the list match.
-   * @param specList list of CachedUrlSetSpecs
+   * @param specSet list of CachedUrlSetSpecs
    * @throws NullPointerException if the list or any element is null.
    * @throws ClassCastException if any element isn't a CachedUrlSetSpec
    */
-  public AnyCachedUrlSetSpec(List specList) throws ClassCastException {
-    this.list = ListUtil.immutableListOfType(specList, CachedUrlSetSpec.class);
+  public AnyCachedUrlSetSpec(Set specSet) throws ClassCastException {
+    this.set = SetUtil.immutableSetOfType(specSet, CachedUrlSetSpec.class);
   }
 
   /**
@@ -58,7 +58,7 @@ public class AnyCachedUrlSetSpec implements CachedUrlSetSpec {
    * @return true if it matches any of the sub-specs
    */
   public boolean matches(String url) {
-    for (Iterator iter = list.iterator(); iter.hasNext(); ) {
+    for (Iterator iter = set.iterator(); iter.hasNext(); ) {
       CachedUrlSetSpec cuss = (CachedUrlSetSpec)iter.next();
       if (cuss.matches(url)) {
 	return true;
@@ -74,7 +74,7 @@ public class AnyCachedUrlSetSpec implements CachedUrlSetSpec {
    */
   public List getPrefixList() {
     List res = new LinkedList();
-    for (Iterator iter = list.iterator(); iter.hasNext(); ) {
+    for (Iterator iter = set.iterator(); iter.hasNext(); ) {
       CachedUrlSetSpec cuss = (CachedUrlSetSpec)iter.next();
       res.addAll(cuss.getPrefixList());
     }
@@ -88,7 +88,7 @@ public class AnyCachedUrlSetSpec implements CachedUrlSetSpec {
    */
   public int hashCode() {
     int hashSum = 0;
-    for (Iterator iter = list.iterator(); iter.hasNext(); ) {
+    for (Iterator iter = set.iterator(); iter.hasNext(); ) {
       CachedUrlSetSpec cuss = (CachedUrlSetSpec)iter.next();
       hashSum += cuss.hashCode();
     }
@@ -97,17 +97,16 @@ public class AnyCachedUrlSetSpec implements CachedUrlSetSpec {
 
   /**
    * Overrides Object.equals().
-   * Returns the id strings.
+   * Compares the CUSS sets.
    * @param obj the object to compare to
-   * @return the hashcode
+   * @return true if the sets are equal
    */
   public boolean equals(Object obj) {
-    if (obj instanceof CachedUrlSetSpec) {
-      CachedUrlSetSpec spec = (CachedUrlSetSpec)obj;
-      return getIdString().equals(spec.getIdString());
+    if (obj instanceof AnyCachedUrlSetSpec) {
+      AnyCachedUrlSetSpec spec = (AnyCachedUrlSetSpec)obj;
+      return set.equals(spec.set);
     } else {
-      logger.error("Trying to compare a spec and a non-spec.");
-      throw new IllegalArgumentException("Trying to compare spec to non-spec.");
+      return false;
     }
   }
 
@@ -115,16 +114,8 @@ public class AnyCachedUrlSetSpec implements CachedUrlSetSpec {
    * Returns a CSV list of the sub-spec id strings.
    * @return the id
    */
-  public String getIdString() {
-    StringBuffer buffer = new StringBuffer();
-    for (Iterator iter = list.iterator(); iter.hasNext(); ) {
-      CachedUrlSetSpec cuss = (CachedUrlSetSpec)iter.next();
-      if (buffer.length()>0) {
-        buffer.append(",");
-      }
-      buffer.append(cuss.getIdString());
-    }
-    return buffer.toString();
+  public String toString() {
+    return "[AnyCUSS: "+StringUtil.separatedString(set, ", ")+"]";
   }
 
   /**
@@ -132,8 +123,8 @@ public class AnyCachedUrlSetSpec implements CachedUrlSetSpec {
    * @return the url
    */
   public String getPrimaryUrl() {
-    if (list.size()>0) {
-      return ((CachedUrlSetSpec)list.get(0)).getPrimaryUrl();
+    if (set.size()>0) {
+      return ((CachedUrlSetSpec)set.iterator().next()).getPrimaryUrl();
     } else {
       return null;
     }

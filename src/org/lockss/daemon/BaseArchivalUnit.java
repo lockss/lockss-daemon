@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.5 2003-01-28 00:32:11 aalto Exp $
+ * $Id: BaseArchivalUnit.java,v 1.6 2003-01-28 02:06:13 aalto Exp $
  */
 
 /*
@@ -42,9 +42,9 @@ import org.lockss.util.*;
 public abstract class BaseArchivalUnit implements ArchivalUnit {
   private static final int
     DEFAULT_MILLISECONDS_BETWEEN_CRAWL_HTTP_REQUESTS = 10000;
-  private static Logger logger = Logger.getLogger("ArchivalUnit");
 
   private CrawlSpec crawlSpec;
+  private String idStr = null;
 
   /**
    * Must invoke this constructor in plugin subclass.
@@ -141,35 +141,32 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     pause(DEFAULT_MILLISECONDS_BETWEEN_CRAWL_HTTP_REQUESTS);
   }
 
-  /**
-   * Concats the plugin id and au id to generate a unique id.
-   * @return the unique id
-   */
-  public String getIdString() {
-    return getPluginId() + ":" + getAUId();
+  public String toString() {
+    return "[BAU: "+getPluginId()+":"+getAUId()+"]";
   }
 
   /**
    * Overrides Object.hashCode();
-   * Returns the hashcode of the id string.
+   * Returns the sum of the hashcodes of the two ids.
    * @return the hashcode
    */
   public int hashCode() {
-    return getIdString().hashCode();
+    return getPluginId().hashCode() + getAUId().hashCode();
   }
 
   /**
    * Overrides Object.equals().
-   * Returns true if the id strings are equal
+   * Returns true if the ids are equal
    * @param obj the object to compare to
-   * @return true if the id strings are equal
+   * @return true if the ids are equal
    */
   public boolean equals(Object obj) {
     if (obj instanceof ArchivalUnit) {
-      return getIdString().equals(((ArchivalUnit)obj).getIdString());
+      ArchivalUnit au = (ArchivalUnit)obj;
+      return ((getPluginId().equals(au.getPluginId())) &&
+              (getAUId().equals(au.getAUId())));
     } else {
-      logger.error("Trying to compare an au and a non-au.");
-      throw new IllegalArgumentException("Trying to compare an au and a non-au.");
+      return false;
     }
   }
 

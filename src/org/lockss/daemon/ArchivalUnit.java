@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.7 2003-01-28 00:32:11 aalto Exp $
+ * $Id: ArchivalUnit.java,v 1.8 2003-01-28 02:06:13 aalto Exp $
  */
 
 /*
@@ -88,13 +88,6 @@ public interface ArchivalUnit {
    * @return a unique id
    */
   public String getAUId();
-
-  /**
-   * Returns a unique string identifier for the ArchivalUnit instance
-   * across all Plugins.
-   * @return a unique id
-   */
-  public String getIdString();
 
   /**
    * Sleeps for the interval needed between requests to the server

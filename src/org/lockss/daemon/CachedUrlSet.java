@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrlSet.java,v 1.10 2003-01-28 00:32:11 aalto Exp $
+ * $Id: CachedUrlSet.java,v 1.11 2003-01-28 02:06:13 aalto Exp $
  */
 
 /*
@@ -148,12 +148,6 @@ public interface CachedUrlSet {
      * @return a <code>UrlCacher</code> object representing the url.
      */
     public UrlCacher makeUrlCacher(String url);
-
-    /**
-     * Returns a unique identifier within the ArchivalUnit
-     * @return the unique id
-     */
-    public String getIdString();
 
     /**
      * Returns the primary url referenced by the CachedUrlSet.

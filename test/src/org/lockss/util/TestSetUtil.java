@@ -1,5 +1,5 @@
 /*
- * $Id: TestSetUtil.java,v 1.1 2003-01-15 18:17:17 tal Exp $
+ * $Id: TestSetUtil.java,v 1.2 2003-01-28 02:06:13 aalto Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ public class TestSetUtil extends LockssTestCase {
   public TestSetUtil(String msg) {
     super(msg);
   }
-  
+
   private Set s1;
 
   public void setUp() throws Exception {
@@ -75,5 +75,47 @@ public class TestSetUtil extends LockssTestCase {
   public void testFromIterator() {
     String arr[] = {"1", "2", "4"};
     assertEquals(s1, SetUtil.fromIterator(new ArrayIterator(arr)));
+  }
+
+  public void testImmutableSetOfType() {
+    String arr[] = {"1", "2", "4"};
+    Set s0 = SetUtil.fromArray(arr);
+    Set s1 = SetUtil.immutableSetOfType(s0, String.class);
+    assertEquals(s0, s1);
+    s0.add("21");
+    assertEquals(s0.size(), s1.size() + 1);
+    assertEquals(SetUtil.fromArray(arr), s1);
+    try {
+      s1.add("d");
+      fail("Shouldn't be able to add to immutable set");
+    } catch (UnsupportedOperationException e) {
+    }
+  }
+
+  public void testImmutableSetOfSuperType() {
+    Set s0 = SetUtil.set(new ArrayList(), new LinkedList());
+    Set s1 = SetUtil.immutableSetOfType(s0, List.class);
+    assertEquals(s0, s1);
+    Set s2 = SetUtil.set(new Error(), new LinkageError());
+    Set s3 = SetUtil.immutableSetOfType(s2, Throwable.class);
+    assertEquals(s2, s3);
+  }
+
+  public void testImmutableSetOfWrongType() {
+    Set s0 = SetUtil.set("foo", "bar", new Integer(7));
+    try {
+      Set s1 = SetUtil.immutableSetOfType(s0, String.class);
+      fail("immutableSetOfType accepted wrong type");
+    } catch (ClassCastException e) {
+    }
+    Integer a2[] = {new Integer(4), null};
+    Set s2 = SetUtil.fromArray(a2);
+    assertIsomorphic(a2,
+                     SetUtil.immutableSetOfTypeOrNull(s2, Integer.class));
+    try {
+      SetUtil.immutableSetOfType(s2, Integer.class);
+      fail("immutableSetOfType accepted null");
+    } catch (NullPointerException e) {
+    }
   }
 }

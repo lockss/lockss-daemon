@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrlSet.java,v 1.6 2003-01-28 00:32:11 aalto Exp $
+ * $Id: BaseCachedUrlSet.java,v 1.7 2003-01-28 02:06:13 aalto Exp $
  */
 
 /*
@@ -41,7 +41,6 @@ import org.lockss.util.*;
  * Plugins may extend this to get some common CachedUrlSet functionality.
  */
 public abstract class BaseCachedUrlSet implements CachedUrlSet {
-  private static Logger logger = Logger.getLogger("CachedUrlSet");
   protected ArchivalUnit au;
   protected CachedUrlSetSpec spec;
 
@@ -100,15 +99,6 @@ public abstract class BaseCachedUrlSet implements CachedUrlSet {
   }
 
   /**
-   * Returns the first url in the prefix list.  Strips the trailing seperator
-   * character ('/'), if any.
-   * @return the unique id
-   */
-  public String getIdString() {
-    return spec.getIdString();
-  }
-
-  /**
    * Returns the main url of the spec.
    * @return the url
    */
@@ -133,10 +123,10 @@ public abstract class BaseCachedUrlSet implements CachedUrlSet {
    */
   public boolean equals(Object obj) {
     if (obj instanceof CachedUrlSet) {
-      return spec.equals(((CachedUrlSet)obj).getSpec());
+      CachedUrlSet cus = (CachedUrlSet)obj;
+      return spec.equals(cus.getSpec());
     } else {
-      logger.error("Trying to compare a set and a non-set.");
-      throw new IllegalArgumentException("Trying to compare a set and a non-set.");
+      return false;
     }
   }
 }

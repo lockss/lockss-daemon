@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.9 2003-01-25 02:21:11 aalto Exp $
+ * $Id: NullPlugin.java,v 1.10 2003-01-28 02:06:13 aalto Exp $
  */
 
 /*
@@ -189,10 +189,6 @@ public class NullPlugin {
       return false;
     }
 
-    public String getIdString() {
-      return "null";
-    }
-
     public int hashCode() {
       return 0;
     }
@@ -233,15 +229,9 @@ public class NullPlugin {
     public void pause() {
     }
 
-    public String getIdString() {
-      return "null";
-    }
-
     public int hashCode() {
       return 0;
     }
-
-
   }
 
 /**
@@ -254,6 +244,7 @@ public class NullPlugin {
     public boolean finished() {
       return false;
     }
+
     public int hashStep(int numBytes) {
       return 0;
     }

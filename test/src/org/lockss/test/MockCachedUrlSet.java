@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrlSet.java,v 1.16 2003-01-28 00:32:11 aalto Exp $
+ * $Id: MockCachedUrlSet.java,v 1.17 2003-01-28 02:06:13 aalto Exp $
  */
 
 /*
@@ -222,14 +222,6 @@ public class MockCachedUrlSet implements CachedUrlSet {
     }
   }
 
-  public String getIdString() {
-    if (spec!=null) {
-      return spec.getIdString();
-    } else {
-      return null;
-    }
-  }
-
   public void addCachedUrl(String url) {
     cachedUrls.add(url);
   }
@@ -248,9 +240,14 @@ public class MockCachedUrlSet implements CachedUrlSet {
 
   public boolean equals(Object obj) {
     if (obj instanceof CachedUrlSet) {
-      return getIdString().equals(((CachedUrlSet)obj).getIdString());
+      CachedUrlSet cus = (CachedUrlSet)obj;
+      if (spec==null) {
+        return (cus.getSpec()==null);
+      } else {
+        return spec.equals(cus.getSpec());
+      }
     } else {
-      throw new IllegalArgumentException("Trying to compare a set and a non-set.");
+      return false;
     }
   }
 }

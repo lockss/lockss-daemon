@@ -1,5 +1,5 @@
 /*
- * $Id: RECachedUrlSetSpec.java,v 1.4 2003-01-28 00:32:11 aalto Exp $
+ * $Id: RECachedUrlSetSpec.java,v 1.5 2003-01-28 02:06:13 aalto Exp $
  */
 
 /*
@@ -41,7 +41,6 @@ import org.lockss.util.*;
  * regular expression
  */
 public class RECachedUrlSetSpec implements CachedUrlSetSpec {
-  private static Logger logger = Logger.getLogger("CachedUrlSetSpec");
   private String prefix;
   private List prefixList;
   private RE re;
@@ -116,17 +115,29 @@ public class RECachedUrlSetSpec implements CachedUrlSetSpec {
 
   /**
    * Overrides Object.equals().
-   * Compares the id strings of the two specs.
+   * Compares the lists and REs of the two specs.
    * @param obj the other spec
-   * @return true if the id strings are equal
+   * @return true if the lists and REs are equal
    */
   public boolean equals(Object obj) {
-    if (obj instanceof CachedUrlSetSpec) {
-      CachedUrlSetSpec spec = (CachedUrlSetSpec)obj;
-      return getIdString().equals(spec.getIdString());
+    if (obj instanceof RECachedUrlSetSpec) {
+      RECachedUrlSetSpec spec = (RECachedUrlSetSpec)obj;
+      if (!prefixList.equals(spec.getPrefixList())) {
+        return false;
+      } else {
+        if (re==null) {
+          return (spec.getRE()==null);
+        } else {
+          RE re2 = spec.getRE();
+          if (re2==null) {
+            return false;
+          } else {
+            return (re.toString().equals(re2.toString()));
+          }
+        }
+      }
     } else {
-      logger.error("Trying to compare a spec and a non-spec.");
-      throw new IllegalArgumentException("Trying to compare spec to non-spec.");
+      return false;
     }
   }
 
@@ -146,14 +157,6 @@ public class RECachedUrlSetSpec implements CachedUrlSetSpec {
     } else {
       return getPrimaryUrl().hashCode();
     }
-  }
-
-  /**
-   * Returns the primary url plus the re ("null" if none).
-   * @return the id string
-   */
-  public String getIdString() {
-    return getPrimaryUrl() + ":" + re;
   }
 
   /**

@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrlSetSpec.java,v 1.5 2003-01-28 00:32:11 aalto Exp $
+ * $Id: CachedUrlSetSpec.java,v 1.6 2003-01-28 02:06:13 aalto Exp $
  */
 
 /*
@@ -63,12 +63,6 @@ public interface CachedUrlSetSpec {
    * @return true if the objects are equal
    */
   public boolean equals(Object obj);
-
-  /**
-   * Returns a unique id string.
-   * @return the unique id
-   */
-  public String getIdString();
 
   /**
    * Returns the primary url referenced by the spec.

@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.12 2003-01-25 02:22:20 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.13 2003-01-28 02:06:13 aalto Exp $
  */
 
 /*
@@ -86,7 +86,7 @@ public class NodeManagerImpl implements NodeManager {
   }
 
   public NodeState getNodeState(CachedUrlSet cus) {
-    return (NodeState)nodeMap.get(cus.getIdString());
+    return (NodeState)nodeMap.get(cus.getPrimaryUrl());
   }
 
   public Iterator getActiveCrawledNodes(CachedUrlSet cus) {
@@ -279,7 +279,7 @@ public class NodeManagerImpl implements NodeManager {
   private void addNewNodeState(CachedUrlSet cus) {
     NodeState state = new NodeStateImpl(cus, new CrawlState(-1,
         CrawlState.FINISHED, 0), new ArrayList(), repository);
-    nodeMap.put(cus.getIdString(), state);
+    nodeMap.put(cus.getPrimaryUrl(), state);
   }
 
   private void updateState(NodeState state, Poll.VoteTally results) {

@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.8 2003-01-28 00:32:11 aalto Exp $
+ * $Id: MockArchivalUnit.java,v 1.9 2003-01-28 02:06:13 aalto Exp $
  */
 
 /*
@@ -124,19 +124,17 @@ public class MockArchivalUnit implements ArchivalUnit {
     auId = newId;
   }
 
-  public String getIdString() {
-    return pluginId + ":" + auId;
-  }
-
   public int hashCode() {
-    return getIdString().hashCode();
+    return getPluginId().hashCode() + getAUId().hashCode();
   }
 
   public boolean equals(Object obj) {
     if (obj instanceof ArchivalUnit) {
-      return getIdString().equals(((ArchivalUnit)obj).getIdString());
+      ArchivalUnit au = (ArchivalUnit)obj;
+      return ((auId.equals(au.getAUId())) &&
+              (pluginId.equals(au.getPluginId())));
     } else {
-      throw new IllegalArgumentException("Trying to compare an au and a non-au.");
+      return false;
     }
   }
 
