@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.13 2003-03-06 00:13:28 aalto Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.14 2003-03-06 01:29:29 aalto Exp $
  */
 
 /*
@@ -45,6 +45,7 @@ import org.exolab.castor.mapping.Mapping;
 import org.lockss.protocol.LcapIdentity;
 import org.lockss.protocol.IdentityManager;
 import org.lockss.repository.LockssRepositoryServiceImpl;
+import java.io.*;
 
 public class TestHistoryRepositoryImpl extends LockssTestCase {
   private String tempDirPath;
@@ -132,6 +133,7 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
     CachedUrlSet mcus = new MockCachedUrlSet(mau, mspec);
     NodeStateImpl nodeState = new NodeStateImpl(mcus, null, null, repository);
     nodeState.setPollHistoryBeanList(new ArrayList());
+    //storing empty vector
     repository.storePollHistories(nodeState);
     String filePath = LockssRepositoryServiceImpl.mapAuToFileLocation(tempDirPath +
         HistoryRepositoryImpl.HISTORY_ROOT_NAME, mau);
@@ -143,6 +145,30 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
     nodeState.setPollHistoryBeanList(new ArrayList());
     repository.loadPollHistories(nodeState);
     assertEquals(0, nodeState.pollHistories.size());
+
+    mspec = new MockCachedUrlSetSpec("http://www.example2.com", null);
+    mcus = new MockCachedUrlSet(mau, mspec);
+    nodeState = new NodeStateImpl(mcus, null, null, repository);
+    filePath = LockssRepositoryServiceImpl.mapAuToFileLocation(tempDirPath +
+        HistoryRepositoryImpl.HISTORY_ROOT_NAME, mau);
+    filePath = LockssRepositoryServiceImpl.mapUrlToFileLocation(filePath,
+        "http://www.example2.com/");
+    xmlFile = new File(filePath);
+    assertFalse(xmlFile.exists());
+    xmlFile.mkdirs();
+    filePath += HistoryRepositoryImpl.HISTORY_FILE_NAME;
+    xmlFile = new File(filePath);
+    OutputStream os = new BufferedOutputStream(new FileOutputStream(xmlFile));
+    os.write(new byte[0]);
+    os.close();
+    assertTrue(xmlFile.exists());
+
+    nodeState.setPollHistoryBeanList(new ArrayList());
+    repository.loadPollHistories(nodeState);
+    assertEquals(0, nodeState.pollHistories.size());
+    assertFalse(xmlFile.exists());
+    xmlFile = new File(filePath + ".old");
+    assertTrue(xmlFile.exists());
   }
 
 

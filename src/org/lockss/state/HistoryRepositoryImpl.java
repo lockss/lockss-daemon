@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.15 2003-03-06 00:13:28 aalto Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.16 2003-03-06 01:29:29 aalto Exp $
  */
 
 /*
@@ -148,8 +148,9 @@ public class HistoryRepositoryImpl implements HistoryRepository, LockssManager {
 
   public void loadPollHistories(NodeState nodeState) {
     CachedUrlSet cus = nodeState.getCachedUrlSet();
+    File nodeFile = null;
     try {
-      File nodeFile = new File(getNodeLocation(cus) + File.separator +
+      nodeFile = new File(getNodeLocation(cus) + File.separator +
                                HISTORY_FILE_NAME);
       if (!nodeFile.exists()) {
         ((NodeStateImpl)nodeState).setPollHistoryBeanList(new ArrayList());
@@ -164,6 +165,10 @@ public class HistoryRepositoryImpl implements HistoryRepository, LockssManager {
         nhb.historyBeans = new ArrayList();
       }
       ((NodeStateImpl)nodeState).setPollHistoryBeanList(new ArrayList(nhb.historyBeans));
+    } catch (org.exolab.castor.xml.MarshalException me) {
+      logger.error("Parsing exception.  Moving file to '.old'");
+      nodeFile.renameTo(new File(nodeFile.getAbsolutePath()+".old"));
+      ((NodeStateImpl)nodeState).setPollHistoryBeanList(new ArrayList());
     } catch (Exception e) {
       logger.error("Couldn't load poll history: ", e);
       throw new LockssRepository.RepositoryStateException("Couldn't load history.");
