@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.6 2003-02-22 03:00:33 tal Exp $
+ * $Id: PluginManager.java,v 1.7 2003-02-24 23:32:43 tal Exp $
  */
 
 /*
@@ -84,7 +84,7 @@ public class PluginManager implements LockssManager {
 	public void configurationChanged(Configuration oldConfig,
 					 Configuration newConfig,
 					 Set changedKeys) {
-	  setConfig(newConfig, changedKeys);
+	  setConfig(newConfig, oldConfig);
 	}
       });
   }
@@ -103,15 +103,18 @@ public class PluginManager implements LockssManager {
     theManager = null;
   }
 
-  private void setConfig(Configuration config, Set changedKeys) {
+  private void setConfig(Configuration config, Configuration oldConfig) {
     pluginDir = config.get(PARAM_PLUGIN_LOCATION, DEFAULT_PLUGIN_LOCATION);
     Configuration allPlugs = config.getConfigTree(PARAM_AU_TREE);
+    Configuration oldAllPlugs = oldConfig.getConfigTree(PARAM_AU_TREE);
     for (Iterator iter = allPlugs.nodeIterator(); iter.hasNext(); ) {
       String pluginId = (String)iter.next();
       log.debug("Configuring plugin id: " + pluginId);
       Configuration pluginConf = allPlugs.getConfigTree(pluginId);
+      Configuration oldPluginConf = oldAllPlugs.getConfigTree(pluginId);
+
       // tk - only if in changedKeys.  (but, compare subkey with whole key?)
-      configurePlugin(pluginId, pluginConf);
+      configurePlugin(pluginId, pluginConf, oldPluginConf);
     }
   }
 
@@ -130,16 +133,20 @@ public class PluginManager implements LockssManager {
     return (Plugin)plugins.get(pluginId);
   }
 
-  private void configurePlugin(String pluginId, Configuration pluginConf) {
+  private void configurePlugin(String pluginId, Configuration pluginConf,
+			       Configuration oldPluginConf) {
     boolean pluginOk = ensurePluginLoaded(pluginId);
     Plugin plugin = getPlugin(pluginId);
-    log.debug("Configuring plugin conf: " + pluginConf);
     for (Iterator iter = pluginConf.nodeIterator(); iter.hasNext(); ) {
       String auKey = (String)iter.next();
       if (pluginOk) {
 	log.debug("Configuring AU id: " + auKey);
 	try {
-	  plugin.configureAU(pluginConf.getConfigTree(auKey));
+	  Configuration auConf = pluginConf.getConfigTree(auKey);
+	  Configuration oldAuConf = oldPluginConf.getConfigTree(auKey);
+	  if (!auConf.equals(oldAuConf)) {
+	    plugin.configureAU(auConf);
+	  }
 	} catch (ArchivalUnit.ConfigurationException e) {
 	  log.error("Failed to configure AU " + auKey, e);
 	}
