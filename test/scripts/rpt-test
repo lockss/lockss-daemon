@@ -3,25 +3,52 @@
 stdout="test_out"
 stderr="test_err"
 
-if [ "$#" == "0" ]; then
- echo "Usage: $0 [-d] <rpt-count> <class-name>"
+usage() {
+ echo "Usage: $0 [-q] [-Dprop=val] <rpt-count> <class-name>"
  echo "Runs <class-name> in junit <rpt-count> times,"
  echo " sending stdout and stderr to $stdout and $stderr."
- echo "With -d, prints a dot for each iteration."
+ echo "-q  suppresses printing a dot for each iteration."
+ echo "Other -flags are passed in to the jvm unmodified."
  echo "Must be run from project base dir."
  exit 1
+}
+
+if [ "$#" == "0" ]; then
+  usage;
 fi
+
+showdots=1
+
+while true ; do
+  case "$1" in
+    "-q" )
+      showdots=0
+      shift; continue;;
+    "-1.4" )
+      if [ -z "$JAVA_14_HOME" ] ; then
+	echo "-1.4 option requires JAVA_14_HOME to point to 1.4 install dir"
+	exit 1;
+      fi
+      JAVA_HOME="${JAVA_14_HOME}"
+      export JAVA_HOME
+      PATH="$JAVA_HOME/bin:$PATH"
+      export PATH
+      echo JAVA_HOME="$JAVA_HOME"
+      shift; continue;;
+    -* )
+      if [ -z "$jvmargs" ] ; then
+	jvmargs="$1"
+      else
+	jvmargs="$jvmargs $1"
+      fi
+      shift; continue;;
+  esac
+  break;
+done
+
+[ "$#" -ne "2" ] && usage
 
 PROJECT_DIR=.
-
-stdout="test_out"
-stderr="test_err"
-
-showdots=0
-if [ $1 = "-d" ]; then
-  showdots=1
-  shift
-fi
 
 rpt=$1
 class=$2
@@ -42,7 +69,7 @@ for (( ix = 1; ix <= $rpt ; ix++)) ; do
   echo "** iter $ix" >> $stderr
   echo "** iter $ix" >> $stdout
 
-  if ! java junit.textui.TestRunner -Dxorg.lockss.defaultLogLevel=warning $class >>$stdout 2>>$stderr; then
+  if ! java $jvmargs junit.textui.TestRunner $class >>$stdout 2>>$stderr; then
     let failcnt++
     [ $showdots = 1 ] && echo -n F
   else
