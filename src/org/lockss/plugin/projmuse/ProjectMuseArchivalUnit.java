@@ -1,5 +1,5 @@
 /*
- * $Id: ProjectMuseArchivalUnit.java,v 1.6 2003-09-11 07:47:30 tlipkis Exp $
+ * $Id: ProjectMuseArchivalUnit.java,v 1.7 2003-09-12 21:08:34 eaalto Exp $
  */
 
 /*
@@ -231,16 +231,22 @@ public class ProjectMuseArchivalUnit extends BaseArchivalUnit {
     final int incl = CrawlRules.RE.MATCH_INCLUDE;
     final int excl = CrawlRules.RE.MATCH_EXCLUDE;
     rules.add(new CrawlRules.RE("^" + urlRoot.toString(), CrawlRules.RE.NO_MATCH_EXCLUDE));
-    String volStr = urlRoot.toString() + "journals/"+journal+"/v";
+    StringBuffer volBuff = new StringBuffer(urlRoot.toString());
+    volBuff.append("journals/");
+    volBuff.append(journal);
+    volBuff.append("/v");
+    
     // pad out the 'vXXX' to 3 digits
     if (volume < 100) {
       if (volume < 10) {
-        volStr += "00";
+        volBuff.append("00");
       } else {
-        volStr += "0";
+        volBuff.append("0");
       }
     }
-    rules.add(new CrawlRules.RE(volStr + volume + "/.*", incl));
+    volBuff.append(volume);
+    volBuff.append("/.*");
+    rules.add(new CrawlRules.RE(volBuff.toString(), incl));
     rules.add(new CrawlRules.RE(urlRoot.toString() +
                                 "journals/"+journal+"/toc/[a-zA-Z]*" + volume +
                                 "\\..*", incl));
