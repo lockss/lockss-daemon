@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.57 2004-09-29 18:57:55 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.58 2004-10-11 05:44:47 tlipkis Exp $
  */
 
 /*
@@ -961,6 +961,52 @@ public class LockssTestCase extends TestCase {
       msg = "String \"" + string + "\" should not match RE: " + regexp;
     }
     assertFalse(msg , RegexpUtil.getMatcher().contains(string, pat));
+  }
+
+  /** Assert that a collection cannot be modified, <i>ie</i>, that all of
+   * the following methods, plus the collection's iterator().remove()
+   * method, throw UnsupportedOperationException: add(), addAll(), clear(),
+   * remove(), removeAll(), retainAll() */
+
+  public void assertUnmodifiable(Collection coll) {
+    List list = ListUtil.list("bar");
+    try {
+      coll.add("foo");
+      fail("add() didn't throw");
+    } catch (UnsupportedOperationException e) {
+    }
+    try {
+      coll.addAll(list);
+      fail("addAll() didn't throw");
+    } catch (UnsupportedOperationException e) {
+    }
+    try {
+      coll.clear();
+      fail("clear() didn't throw");
+    } catch (UnsupportedOperationException e) {
+    }
+    try {
+      coll.remove("foo");
+      fail("remove() didn't throw");
+    } catch (UnsupportedOperationException e) {
+    }
+    try {
+      coll.removeAll(list);
+      fail("removeAll() didn't throw");
+    } catch (UnsupportedOperationException e) {
+    }
+    try {
+      coll.retainAll(list);
+      fail("retainAll() didn't throw");
+    } catch (UnsupportedOperationException e) {
+    }
+    Iterator iter = coll.iterator();
+    iter.next();
+    try {
+      iter.remove();
+      fail("iterator().remove() didn't throw");
+    } catch (UnsupportedOperationException e) {
+    }
   }
 
   /** Abstraction to do something in another thread, after a delay,
