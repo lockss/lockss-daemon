@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.41 2003-05-10 01:58:58 tal Exp $
+ $Id: build.xml,v 1.42 2003-05-26 03:46:04 tal Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
@@ -45,8 +45,13 @@ Args:
   -Dkeeptempfiles=true      Don't delete temp files after tests run.
 </description>
 
-  <!-- Set to yes (on command line) to see output as it happens -->
+  <!-- Defaults -->
+  <property name="loglevel" value="" />
+  <property name="logtarget" value="org.lockss.util.AntTaskTarget" />
   <property name="showoutput" value="no" />
+  <property name="timeout" value="" />
+  <property name="keeptempfiles" value="" />
+  <property name="fork" value="no" />
 
   <property environment="env"/>
   <!--  Ignore system classpath, to ensure consistent builds -->
@@ -132,6 +137,7 @@ Args:
     <pathelement path="${castor.jar}" />
     <pathelement path="${xerces.jar}" />
     <pathelement path="${xmlparser.jar}" />
+    <pathelement path="${lockss.ant.jar}" />
   </path>
 
   <path id="run.classpath">
@@ -179,7 +185,7 @@ Args:
 
   <!-- ==================================================================== -->
   <target name="prepare.test"
-       depends="prepare,-set.junit.task.available,-set.junit.available">
+      depends="prepare,-set.junit.task.available,-set.junit.available,jar-ant">
     <mkdir dir="${test.classes}" />
     <mkdir dir="${test.results}" />
     <condition property="class.arg.specified">
@@ -192,6 +198,10 @@ Args:
     </condition>
   </target>
 
+  <target name="prepare.run.test"
+       depends="prepare.test,-set.junit.logger.task.available">
+  </target>
+
   <target name="prepare.contrib">
     <available property="ant-contrib.available" 
                resource="${ant-contrib.resource}">
@@ -202,6 +212,17 @@ Args:
   <target name="-set.junit.task.available" unless="junit.task.available">
     <available property="junit.task.available" 
          classname="org.apache.tools.ant.taskdefs.optional.junit.JUnitTask" />
+  </target>
+
+  <target name="-set.junit.logger.task.available"
+        unless="junit.logger.task.available">
+    <available property="junit.logger.task.available" 
+         classname="org.lockss.ant.LoggingJUnitTask" />
+    <taskdef name="junit1" classname="org.lockss.ant.LoggingJUnitTask" >
+      <classpath> 
+         <path refid="test.run.classpath" />
+      </classpath>        
+    </taskdef>
   </target>
 
   <target name="-set.junit.available" unless="junit.available">
@@ -548,7 +569,6 @@ Args:
    description="Run a class named by class prop, with args in args prop" >
     <!-- default args empty if not supplied on command line -->
     <property name="args" value="" />
-    <property name="loglevel" value="" />
     <java classname="${class}" fork="true">
        <classpath refid="test.run.classpath" />
        <arg line="${args}" />
@@ -559,17 +579,14 @@ Args:
 
   <!-- ==================================================================== -->
   <target name="test-all"
-   depends="prepare.test,check.junit,jar-tests"
+   depends="prepare.run.test,check.junit,jar-tests"
    description="Run all the junit tests (test/src/**/Test*.class" >
-    <property name="loglevel" value="" />
-    <property name="keeptempfiles" value="" />
-    <property name="timeout" value="" />
     <echo>
 Test results in ${test.results}
     </echo>
     <delete file="${test.results}/*" quiet="true" />
-    <junit fork="yes" printsummary="yes" haltonerror="yes" haltonfailure="yes">
-      <batchtest fork="no" todir="${test.results}">
+    <junit1 fork="no" printsummary="yes" haltonerror="yes" haltonfailure="yes">
+      <batchtest fork="${fork}" todir="${test.results}">
         <fileset dir="${test.src}">
           <include name="**/Test*.java" />
         </fileset>
@@ -581,24 +598,23 @@ Test results in ${test.results}
       <sysproperty key="java.library.path" value="${test.native}"/>
       <sysproperty key="org.lockss.unitTesting" value="true"/>
       <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
+      <sysproperty key="org.lockss.defaultLogTarget" value="${logtarget}"/>
       <sysproperty key="org.lockss.keepTempFiles" value="${keeptempfiles}"/>
       <sysproperty key="org.lockss.test.timeout.shouldnt" value="${timeout}"/>
-    </junit>
+    </junit1>
   </target>
 
   <!-- ==================================================================== -->
   <target name="func-all"
    depends="prepare.test,check.junit,jar-tests"
    description="Run all the functional tests (test/src/**/Func*.class" >
-    <property name="loglevel" value="" />
-    <property name="keeptempfiles" value="" />
-    <property name="timeout" value="" />
     <echo>
 Test results in ${test.results}
     </echo>
     <delete file="${test.results}/*" quiet="true" />
-    <junit fork="yes" printsummary="yes" haltonerror="yes" haltonfailure="yes">
-      <batchtest fork="no" todir="${test.results}">
+    <junit1 fork="yes" printsummary="yes"
+            haltonerror="yes" haltonfailure="yes">
+      <batchtest fork="${fork}" todir="${test.results}">
         <fileset dir="${test.src}">
           <include name="**/Func*.java" />
         </fileset>
@@ -610,9 +626,10 @@ Test results in ${test.results}
       <sysproperty key="java.library.path" value="${test.native}"/>
       <sysproperty key="org.lockss.unitTesting" value="true"/>
       <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
+      <sysproperty key="org.lockss.defaultLogTarget" value="${logtarget}"/>
       <sysproperty key="org.lockss.keepTempFiles" value="${keeptempfiles}"/>
       <sysproperty key="org.lockss.test.timeout.shouldnt" value="${timeout}"/>
-    </junit>
+    </junit1>
   </target>
 
   <!-- ==================================================================== -->
@@ -620,7 +637,6 @@ Test results in ${test.results}
   <target name="test-all-debug"
    depends="prepare.test,check.junit,jar-tests"
    description="Run all the junit tests (test/src/**/Test*.class, under the debugger" >
-    <property name="loglevel" value="" />
     <echo>
 Test results in ${test.results}
     </echo>
@@ -644,7 +660,6 @@ Test results in ${test.results}
   <target name="test-class"
    depends="prepare.test,check.class.arg,check.junit,jar-ant,jar-tests"
    description="Run all tests for a single class, named by the 'class' property" >
-    <property name="loglevel" value="" />
     <echo>
 Running tests for class ${class}
 Test results in ${test.results}
@@ -652,7 +667,7 @@ Test results in ${test.results}
     <delete file="${test.results}/*" quiet="true" />
     <junit fork="yes" printsummary="yes" haltonerror="yes" haltonfailure="yes"
         showoutput="${showoutput}">
-      <batchtest fork="no" todir="${test.results}">
+      <batchtest fork="${fork}" todir="${test.results}">
         <fileset dir="${test.src}">
           <include name="**/Test*.java" />
 	  <custom classname="org.lockss.ant.ClassTestSelector">
@@ -674,16 +689,13 @@ Test results in ${test.results}
 
   <!-- ==================================================================== -->
   <target name="test-one"
-   depends="prepare.test,check.class.arg,check.junit,jar-tests"
+   depends="prepare.run.test,check.class.arg,check.junit,jar-tests"
    description="Run a single test class, named by the 'class' property" >
-    <property name="loglevel" value="" />
-    <property name="timeout" value="" />
-    <property name="keeptempfiles" value="" />
-    <junit fork="no" printsummary="yes" haltonerror="yes" haltonfailure="yes"
+    <junit1 fork="no" printsummary="yes" haltonerror="yes" haltonfailure="yes"
          filtertrace="yes"
          showoutput="${showoutput}">
       <jvmarg value="-Xmx128m"/>  <!-- no effect unless both fork=yes -->
-      <test fork="no" name="${class}" />
+      <test fork="${fork}" name="${class}" />
       <formatter type="plain" usefile="false" />                  
       <classpath> 
          <path refid="test.run.classpath" />
@@ -691,9 +703,10 @@ Test results in ${test.results}
       <sysproperty key="java.library.path" value="${test.native}"/>
       <sysproperty key="org.lockss.unitTesting" value="true"/>
       <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
+      <sysproperty key="org.lockss.defaultLogTarget" value="${logtarget}"/>
       <sysproperty key="org.lockss.keepTempFiles" value="${keeptempfiles}"/>
       <sysproperty key="org.lockss.test.timeout.shouldnt" value="${timeout}"/>
-    </junit>
+    </junit1>
   </target>
 
   <!-- ==================================================================== -->
@@ -788,7 +801,6 @@ Test results in ${test.results}
    <taskdef resource="${ant-contrib.resource}">
     <classpath refid="ant-contrib.classpath"/>
    </taskdef>
-   <property name="ant-contrib.loaded" value="true" />
   </target>
 
   <target name="check.ant-contrib.jar" unless="ant-contrib.available" >
