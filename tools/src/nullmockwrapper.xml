@@ -1,0 +1,14 @@
+<template>
+<package name="org.lockss.test"/>
+<imports>
+  <class_imports/>
+</imports>
+<constructor>
+</constructor>
+<nonvoid>
+return #NULLVAL;
+</nonvoid>
+<void>
+return;
+</void>
+</template>
