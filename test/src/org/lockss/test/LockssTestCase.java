@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.18 2002-12-30 20:37:01 tal Exp $
+ * $Id: LockssTestCase.java,v 1.19 2003-01-15 18:16:57 tal Exp $
  */
 
 /*
@@ -351,14 +351,9 @@ public class LockssTestCase extends TestCase {
 
   static private void failNotEquals(String message,
 				    Object[] expected, Object actual) {
-    StringBuffer sb = new StringBuffer(100);
-    sb.append("[");
-    for (int ix=0; ix<expected.length; ix++) {
-      sb.append(expected[ix]);
-      sb.append(", ");
-    }
-    sb.append("]");
-    failNotEquals(message, sb.toString(), actual);
+    failNotEquals(message,
+		  "[" + StringUtil.separatedString(expected, ", ") + "]",
+		  actual);
   }
 
   /** Asserts that the two DatagramPackets have equal contents */
@@ -370,6 +365,7 @@ public class LockssTestCase extends TestCase {
     assertEquals(expected.getOffset(), actual.getOffset());
     assertTrue(Arrays.equals(expected.getData(), actual.getData()));
   }
+
   /** Abstraction to do something in another thread, after a delay,
    * unless cancelled.  If the sceduled activity is still pending when the
    * test completes, it is cancelled by tearDown().
