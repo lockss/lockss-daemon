@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkHandler.java,v 1.40 2003-11-13 07:43:04 eaalto Exp $
+ * $Id: TreeWalkHandler.java,v 1.41 2003-11-13 11:16:35 tlipkis Exp $
  */
 
 /*
@@ -119,6 +119,8 @@ public class TreeWalkHandler {
  * aborting its treewalk attempt.
  */
   void doTreeWalk() {
+    treeWalkAborted = false;
+
     logger.debug("Attempting tree walk: " + theAu.getName());
 
     //get expiration time
@@ -391,7 +393,10 @@ public class TreeWalkHandler {
               logger.debug3("Using estimate of " + est + "ms.");
             }
             task = new BackgroundTask(startDeadline, Deadline.at(end),
-                                      TREEWALK_LOAD_FACTOR, cb);
+                                      TREEWALK_LOAD_FACTOR, cb) {
+		public String getShortText() {
+		  return "TreeWalk: " + theAu.getName();
+		}};
             if (schedSvc.scheduleTask(task)) {
               // task is scheduled, your taskEvent callback will be called at the
               // start and end times
@@ -458,8 +463,8 @@ public class TreeWalkHandler {
           if (doingTreeWalk) {
             // free the lock
             activityLock.expire();
+	    treeWalkAborted = true;
           }
-          treeWalkAborted = true;
         }
       }
     }
