@@ -1,14 +1,5 @@
 # LOCKSS & LCAP tuning parameters
-org.lockss.log.default.level=debug3
-org.lockss.log.PollManager.level=debug
-org.lockss.log.Poll.level=debug
-org.lockss.log.Comm.level=info
-org.lockss.log.NodeManager.level=debug
-org.lockss.log.Message.level=info
-org.lockss.log.GenericHasher.level=info
-org.lockss.log.MSock_3456_Rcv.level=debug
-org.lockss.log.USock_9001_Rcv.level=debug
-org.lockss.log.USock_9000_Rcv.level=debug
+org.lockss.log.default.level=debug
 
 #au config settings
 org.lockss.au.org|lockss|plugin|highwire|HighWirePlugin.base_url~http%3A%2F%2Fshadow1%2Elockss%2Eorg%2F&volume~322.pause_time=3s
@@ -46,14 +37,19 @@ org.lockss.protocol.ttl=2
 org.lockss.protocol.hashAlgorithm=SHA-1
 
 # poll settings
-org.lockss.poll.maxpolls=12
+org.lockss.poll.maxpolls=20
 org.lockss.poll.quorum=3
 org.lockss.poll.agreeVerify=0
 org.lockss.poll.disagreeVerify=0
-org.lockss.poll.namepoll.deadline=300000
-org.lockss.poll.contentpoll.min=180000
-org.lockss.poll.contentpoll.max=300000
+org.lockss.poll.voteMargin=51
+org.lockss.poll.trustedMargin=51
+org.lockss.poll.namepoll.deadline=5m
+org.lockss.poll.contentpoll.min=3m
+org.lockss.poll.contentpoll.max=5m
 
-#test only settings
+org.lockss.treewalk.interval=5m
+org.lockss.comm.router.beacon.interval=1m
+
+org.lockss.metrics.slowest.hashrate = 250
 
 

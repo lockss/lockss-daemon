@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.75 2003-05-06 03:08:46 claire Exp $
+* $Id: Poll.java,v 1.76 2003-05-06 03:30:49 claire Exp $
  */
 
 /*
@@ -136,8 +136,10 @@ public abstract class Poll implements Serializable {
     // now copy the msg elements we need
     m_hashTime = m_cus.estimatedHashDuration();
     m_deadline = Deadline.in(msg.getDuration());
-    m_hashDeadline =
-      Deadline.at(m_deadline.getExpirationTime() - Constants.MINUTE);
+    if(!msg.isVerifyPoll()) {
+      m_hashDeadline =
+          Deadline.at(m_deadline.getExpirationTime() - Constants.MINUTE);
+    }
 
     m_challenge = msg.getChallenge();
     m_verifier = m_pollmanager.makeVerifier();
