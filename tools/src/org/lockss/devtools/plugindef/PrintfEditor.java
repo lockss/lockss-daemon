@@ -11,6 +11,7 @@ import javax.swing.event.*;
 import org.lockss.daemon.*;
 import javax.swing.text.*;
 import org.lockss.util.*;
+import org.lockss.plugin.definable.*;
 
 
 public class PrintfEditor extends JDialog
@@ -270,7 +271,12 @@ public class PrintfEditor extends JDialog
           format = fbuf.toString();
           break;
         case ConfigParamDescr.TYPE_YEAR:
-          format = "%d";
+          if(key.startsWith(DefinableArchivalUnit.CM_AU_SHORT_YEAR_PREFIX)) {
+            format = "%02d";
+          }
+          else {
+            format = "%d";
+          }
       }
     }
 
@@ -325,7 +331,7 @@ public class PrintfEditor extends JDialog
     if(e.getKeyChar() == '\b' && el_name.startsWith("Parameter")
     && StyleConstants.getComponent(attr) != null){
       try {
-        doc.remove(el.getStartOffset(), el.getEndOffset() -  el.getStartOffset());
+        doc.remove(el.getStartOffset(), el.getEndOffset() -  el.getStartOffset()-1);
       }
       catch (BadLocationException ex) {
       }
@@ -454,17 +460,28 @@ public class PrintfEditor extends JDialog
   private void updateEditorView() {
     editorPane.setText("");
     numParameters = 0;
-    java.util.List elements = editableTemplate.getPrintfElements();
-    for(Iterator it = elements.iterator(); it.hasNext(); ) {
-      PrintfUtil.PrintfElement el = (PrintfUtil.PrintfElement) it.next();
-      if(el.getFormat().equals("\0")) {
-        appendText(el.getElement(), PLAIN_ATTR);
+    try {
+      java.util.List elements = editableTemplate.getPrintfElements();
+      for(Iterator it = elements.iterator(); it.hasNext(); ) {
+        PrintfUtil.PrintfElement el = (PrintfUtil.PrintfElement) it.next();
+        if(el.getFormat().equals("\0")) {
+          appendText(el.getElement(), PLAIN_ATTR);
+        }
+        else {
+         insertParameter(el.getElement(),
+                         el.getFormat(),
+                         editorPane.getDocument().getLength());
+        }
       }
-      else {
-       insertParameter(el.getElement(),
-                       el.getFormat(),
-                       editorPane.getDocument().getLength());
-      }
+    }
+    catch(Exception ex) {
+      JOptionPane.showMessageDialog(this,"Invalid Format:" + ex.getMessage(),
+                                    "Invalid Printf Format",
+                                    JOptionPane.WARNING_MESSAGE);
+
+      selectedPane = 1;
+      printfTabPane.setSelectedIndex(selectedPane);
+      updatePane(selectedPane);
     }
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: EditableDefinablePlugin.java,v 1.4 2004-06-15 04:14:44 clairegriffin Exp $
+ * $Id: EditableDefinablePlugin.java,v 1.5 2004-07-07 19:23:31 clairegriffin Exp $
  */
 
 /*
@@ -202,24 +202,21 @@ public class EditableDefinablePlugin
     definitionMap.removeMapElement(AU_CRAWL_WINDOW);
   }
 
-  // new filter support
-  public void setMimeTypeFilter(String mimetype, Collection rules) {
-
+  public void setAuFilter(String mimetype, List rules) {
+    if (rules.size() > 0) {
+      try {
+        FilterRule rule = new DefinableFilterRule(rules);
+        definitionMap.putCollection(mimetype + AU_FILTER_SUFFIX, rules);
+      }
+      catch (Exception ex) {
+        throw new DefinablePlugin.InvalidDefinitionException(
+        "Unable to create filter from " + rules + " for mimetype " + mimetype);
+      }
+    }
+    else {
+      definitionMap.removeMapElement(mimetype + AU_FILTER_SUFFIX);
+    }
   }
-
-  public Collection getMimeTypeFilter(String mimeType) {
-    return null;
-  }
-
-  public void removeMimeTypeFilter(String mimeType){
-
-  }
-
-  public HashMap getAuMimeTypeFilters() {
-    return null;
-  }
-
-  // old filter support
 
   public void setAuFilter(String mimetype, String filter) {
 
@@ -247,7 +244,7 @@ public class EditableDefinablePlugin
       String key = (String) it.next();
       if(key.endsWith(AU_FILTER_SUFFIX)) {
         String mimetype = key.substring(0,key.lastIndexOf(AU_FILTER_SUFFIX));
-        rules.put(mimetype, definitionMap.getString(key, null));
+        rules.put(mimetype, definitionMap.getMapElement(key));
       }
     }
     return rules;
