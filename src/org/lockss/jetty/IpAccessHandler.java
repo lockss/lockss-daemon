@@ -1,5 +1,5 @@
 /*
- * $Id: IpAccessHandler.java,v 1.2 2003-06-20 22:34:51 claire Exp $
+ * $Id: IpAccessHandler.java,v 1.3 2004-02-10 07:51:44 tlipkis Exp $
  */
 
 /*
@@ -31,23 +31,19 @@ in this Software without prior written authorization from Stanford University.
 */
 // ===========================================================================
 // Copyright (c) 1996-2002 Mort Bay Consulting Pty. Ltd. All rights reserved.
-// $Id: IpAccessHandler.java,v 1.2 2003-06-20 22:34:51 claire Exp $
+// $Id: IpAccessHandler.java,v 1.3 2004-02-10 07:51:44 tlipkis Exp $
 // ---------------------------------------------------------------------------
 
 package org.lockss.jetty;
 
 import java.io.*;
-import java.net.MalformedURLException;
-import java.text.DateFormat;
 import java.util.*;
 import org.mortbay.http.*;
 import org.mortbay.http.handler.*;
-import org.mortbay.util.*;
 import org.lockss.util.*;
 
-/** Extension of ResourceHandler that allows flexibility in finding the
- * Resource.  Mostly copied here because some things in ResourceHandler
- * aren't public or protected. */
+/** Handler that disallows access from IP addresses not allowed by an
+ * IpFilter */
 public class IpAccessHandler extends AbstractHttpHandler {
   private static Logger log = Logger.getLogger("IpAccess");
 
@@ -69,6 +65,10 @@ public class IpAccessHandler extends AbstractHttpHandler {
     this.logForbidden = logForbidden;
   }
 
+  protected boolean isLogForbidden() {
+    return logForbidden;
+  }
+
   public void setAllowLocal(boolean allowLocal) {
     if (localIps == null) {
       localIps = new HashSet();
@@ -78,7 +78,7 @@ public class IpAccessHandler extends AbstractHttpHandler {
     this.allowLocal = allowLocal;
   }
 
-  boolean isAuthorized(String ip) throws IpFilter.MalformedException {
+  boolean isIpAuthorized(String ip) throws IpFilter.MalformedException {
     return (filter.isIpAllowed(ip) || (allowLocal && localIps.contains(ip)));
   }
 
@@ -98,7 +98,7 @@ public class IpAccessHandler extends AbstractHttpHandler {
 
     try	{
       String ip = request.getRemoteAddr();
-      boolean authorized = isAuthorized(ip);
+      boolean authorized = isIpAuthorized(ip);
 		
       if (!authorized) {
 	// The IP is NOT allowed
