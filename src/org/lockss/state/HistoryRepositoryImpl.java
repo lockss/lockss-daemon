@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.23 2003-04-01 00:08:12 aalto Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.24 2003-04-03 01:37:43 aalto Exp $
  */
 
 /*
@@ -193,7 +193,7 @@ public class HistoryRepositoryImpl implements HistoryRepository, LockssManager {
                                HISTORY_FILE_NAME);
       if (!nodeFile.exists()) {
         ((NodeStateImpl)nodeState).setPollHistoryBeanList(new ArrayList());
-        logger.warning("No history file found.");
+        logger.debug3("No history file found.");
         return;
       }
       Unmarshaller unmarshaller = new Unmarshaller(NodeHistoryBean.class);
@@ -201,7 +201,7 @@ public class HistoryRepositoryImpl implements HistoryRepository, LockssManager {
       NodeHistoryBean nhb = (NodeHistoryBean)unmarshaller.unmarshal(
           new FileReader(nodeFile));
       if (nhb.historyBeans==null) {
-        logger.warning("Empty history list loaded.");
+        logger.debug3("Empty history list loaded.");
         nhb.historyBeans = new ArrayList();
       }
       ((NodeStateImpl)nodeState).setPollHistoryBeanList(
