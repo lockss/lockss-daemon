@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.8 2004-04-09 06:53:34 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.9 2004-04-29 10:13:49 tlipkis Exp $
  */
 
 /*
@@ -97,16 +97,18 @@ public class ArchivalUnitStatus extends BaseLockssManager {
       new ColumnDescriptor("AuSize", "Size", ColumnDescriptor.TYPE_INT),
       new ColumnDescriptor("AuLastCrawl", "Last Crawl",
                            ColumnDescriptor.TYPE_DATE),
-      new ColumnDescriptor("AuPolls", "Polls",
-                           ColumnDescriptor.TYPE_STRING),
+      new ColumnDescriptor("AuLastTreeWalk", "Last TreeWalk",
+                           ColumnDescriptor.TYPE_DATE),
       new ColumnDescriptor("AuLastPoll", "Last Poll",
                            ColumnDescriptor.TYPE_DATE),
-      new ColumnDescriptor("AuLastTreeWalk", "Last TreeWalk",
-                           ColumnDescriptor.TYPE_DATE)
+      new ColumnDescriptor("AuPolls", "Polls",
+                           ColumnDescriptor.TYPE_STRING),
+      new ColumnDescriptor("Damaged", "Status",
+                           ColumnDescriptor.TYPE_STRING)
       );
 
     private static final List sortRules =
-      ListUtil.list(new StatusTable.SortRule("AuName", true));
+      ListUtil.list(new StatusTable.SortRule("AuName", CatalogueOrderComparator.SINGLETON));
 
     private static LockssDaemon theDaemon;
 
@@ -136,16 +138,19 @@ public class ArchivalUnitStatus extends BaseLockssManager {
         ArchivalUnit au = (ArchivalUnit)iter.next();
         NodeManager nodeMan = theDaemon.getNodeManager(au);
         LockssRepository repo = theDaemon.getLockssRepository(au);
+	CachedUrlSet auCus = au.getAuCachedUrlSet();
+	NodeState topNodeState = nodeMan.getNodeState(auCus);
         RepositoryNode repoNode = null;
         try {
           repoNode = repo.getNode(au.getAuCachedUrlSet().getUrl());
         } catch (MalformedURLException ignore) { }
-        rowL.add(makeRow(au, nodeMan.getAuState(), repoNode));
+        rowL.add(makeRow(au, nodeMan.getAuState(), topNodeState, repoNode));
       }
       return rowL;
     }
 
-    private Map makeRow(ArchivalUnit au, AuState state,
+    private Map makeRow(ArchivalUnit au, AuState auState,
+			NodeState topNodeState,
                         RepositoryNode repoNode) {
       HashMap rowMap = new HashMap();
       //"AuID"
@@ -154,17 +159,28 @@ public class ArchivalUnitStatus extends BaseLockssManager {
       //XXX start caching this info
 //       rowMap.put("AuNodeCount", new Integer(-1));
       rowMap.put("AuSize", new Long(repoNode.getTreeContentSize(null)));
-      rowMap.put("AuLastCrawl", new Long(state.getLastCrawlTime()));
+      rowMap.put("AuLastCrawl", new Long(auState.getLastCrawlTime()));
       Object ref = 
       rowMap.put("AuPolls",
 		 theDaemon.getStatusService().
 		 getReference(PollerStatus.MANAGER_STATUS_TABLE_NAME,
 			      au));
-      rowMap.put("AuLastPoll", new Long(state.getLastTopLevelPollTime()));
-      rowMap.put("AuLastTreeWalk", new Long(state.getLastTreeWalkTime()));
-
+      rowMap.put("AuLastPoll", new Long(auState.getLastTopLevelPollTime()));
+      rowMap.put("AuLastTreeWalk", new Long(auState.getLastTreeWalkTime()));
+      rowMap.put("Damaged", (topNodeState.hasDamage()
+			     ? DAMAGE_STATE_DAMAGED : DAMAGE_STATE_OK));
       return rowMap;
     }
+  }
+
+  static final StatusTable.DisplayedValue DAMAGE_STATE_OK =
+    new StatusTable.DisplayedValue("Ok");
+  static final StatusTable.DisplayedValue DAMAGE_STATE_DAMAGED =
+    new StatusTable.DisplayedValue("Damaged");
+
+  static {
+    DAMAGE_STATE_OK.setColor("green");
+    DAMAGE_STATE_DAMAGED.setColor("red");
   }
 
   static class AuStatus implements StatusAccessor {
@@ -230,9 +246,11 @@ public class ArchivalUnitStatus extends BaseLockssManager {
       } catch (MalformedURLException ignore) { }
       table.setSummaryInfo(getSummaryInfo(au, nodeMan.getAuState(), topNode,
                                           repoNode));
-      table.setColumnDescriptors(columnDescriptors);
-      table.setDefaultSortRules(sortRules);
-      table.setRows(getRows(au, repo, nodeMan, startRow));
+      if (!table.getOptions().get(StatusTable.OPTION_NO_ROWS)) {
+	table.setColumnDescriptors(columnDescriptors);
+	table.setDefaultSortRules(sortRules);
+	table.setRows(getRows(au, repo, nodeMan, startRow));
+      }
     }
 
     public boolean requiresKey() {
@@ -352,9 +370,11 @@ public class ArchivalUnitStatus extends BaseLockssManager {
             new StatusTable.SummaryInfo("Last Treewalk",
                                         ColumnDescriptor.TYPE_DATE,
                                         new Long(state.getLastTreeWalkTime())),
-            new StatusTable.SummaryInfo("Has Damage",
+            new StatusTable.SummaryInfo("Status",
                                         ColumnDescriptor.TYPE_STRING,
-                                        (topNode.hasDamage() ? "yes" : "no")),
+                                        (topNode.hasDamage()
+					 ? DAMAGE_STATE_DAMAGED
+					 : DAMAGE_STATE_OK)),
             new StatusTable.SummaryInfo("Current Activity",
                                         ColumnDescriptor.TYPE_STRING,
                                         "-")
