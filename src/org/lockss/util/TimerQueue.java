@@ -1,5 +1,5 @@
 /*
- * $Id: TimerQueue.java,v 1.11 2003-04-03 11:35:25 tal Exp $
+ * $Id: TimerQueue.java,v 1.12 2003-05-24 01:15:43 tal Exp $
  *
 
 Copyright (c) 2000-2002 Board of Trustees of Leland Stanford Jr. University,
@@ -60,6 +60,13 @@ public class TimerQueue /*extends BaseLockssManager*/ implements Serializable {
     singleton.cancelReq(req);
   }
 
+  /** Wait until all requests whose time has been reached to execute.
+   * Useful when running in simulated time mode.
+   */
+  public static void runAllExpired() {
+    singleton.runAllExpired0();
+  }
+
   private Request add(Deadline deadline, Callback callback, Object cookie) {
     Request req = new Request(deadline, callback, cookie);
     req.deadline.registerCallback(req.deadlineCb);
@@ -71,7 +78,31 @@ public class TimerQueue /*extends BaseLockssManager*/ implements Serializable {
   private void cancelReq(Request req) {
     if (!req.deadline.expired()) {
       req.cancelled = true;
-      req.deadline.expire();
+      req.deadline = Deadline.EXPIRED;
+    }
+    timerThread.interrupt();
+  }
+
+  private void runAllExpired0() {
+    while (true) {
+      Request req = (Request)queue.peek();
+      if (req == null || !req.deadline.expired()) {
+	return;
+      }
+      // Need to wait until expired requests run.  Easiest way is to put
+      // our own request on the queue (which will come after any with earlier
+      // or equal deadlines) and wait for it to happen.
+      final BinarySemaphore sem = new BinarySemaphore();
+      add(Deadline.in(0),
+	  new Callback() {
+	    public void timerExpired(Object cookie) {
+	      sem.give();
+	    }},
+	  null);
+      try {
+	sem.take(Deadline.in(Constants.SECOND));
+      } catch (InterruptedException e) {
+      }
     }
   }
 
