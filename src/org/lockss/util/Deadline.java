@@ -1,5 +1,5 @@
 // ========================================================================
-// $Id: Deadline.java,v 1.6 2002-11-20 00:02:05 tal Exp $
+// $Id: Deadline.java,v 1.7 2002-11-20 02:02:51 tal Exp $
 // ========================================================================
 
 /*
@@ -46,6 +46,17 @@ public class Deadline implements Comparable {
 					// if/when this Deadline's duration
 					// changes
   
+  /** Create a Deadline that expires at the specified Date, with the
+   * specified duration.  Done this way so factory methods don't risk a
+   * timer tick between getting the current time, and the constructor
+   * computing the duration, which would then be different from what was
+   * specified.
+   */
+  private Deadline(Date at, long duration) {
+    expiration = at;
+    this.duration = duration;
+  }
+  
   /** Create a Deadline that expires at the specified Date. */
   private Deadline(Date at) {
     duration = at.getTime() - nowMs();
@@ -62,7 +73,7 @@ public class Deadline implements Comparable {
 
   /** Create a Deadline that expires in <code>duration</code> milliseconds. */
   public static Deadline in(long duration) {
-    return new Deadline(new Date(nowMs() + duration));
+    return new Deadline(new Date(nowMs() + duration), duration);
   }
 
   /** Create a Deadline representing the specified Date.
