@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlUtil.java,v 1.14 2004-07-28 18:19:32 tlipkis Exp $
+ * $Id: TestUrlUtil.java,v 1.15 2004-09-01 02:24:43 tlipkis Exp $
  */
 
 /*
@@ -38,6 +38,130 @@ import org.lockss.test.*;
 import org.lockss.util.*;
 
 public class TestUrlUtil extends LockssTestCase {
+  private static Logger log = Logger.getLogger("TestUrlUtil");
+
+  // For testing against the behavior of code extracted from Java 1.4 URI class
+  static String normalizePath(String path) {
+    switch (2) {
+    case 1:
+      try {
+	return UrlUtil.normalizePath(path, true);
+      } catch (MalformedURLException e) {
+	throw new RuntimeException(e.toString());
+      }
+    case 2:
+      try {
+	Object urin =
+	  PrivilegedAccessor.invokeConstructor("JavaUriNormalizer");
+	return (String)PrivilegedAccessor.invokeMethod(urin,
+						       "normalizePath",
+						       ListUtil.list(path).toArray());
+      } catch (Exception e) {
+	log.warning("Couldn't invoke JavaUriNormalizer", e);
+	return null;
+      }
+    }
+    throw new RuntimeException();
+  }
+
+  public void assertSameNormalizePath(String s) {
+    assertSame(s, normalizePath(s));
+  }
+
+  public void testNormalizePath() throws Exception {
+    assertSameNormalizePath("");
+    assertSameNormalizePath("a");
+    assertSameNormalizePath("a/");
+    assertSameNormalizePath("/a");
+    assertSameNormalizePath("/");
+    assertSameNormalizePath("/a/b/");
+    assertSameNormalizePath("/a/.b/");
+    assertSameNormalizePath("/a/b./");
+    assertSameNormalizePath("/a/..b/");
+    assertSameNormalizePath("/a/b../");
+    assertSameNormalizePath("/a/.b");
+    assertSameNormalizePath("/a/b.");
+    assertSameNormalizePath("/a/..b");
+    assertSameNormalizePath("/a/b..");
+    assertSameNormalizePath("/a/b/c/");
+
+    assertEquals("", normalizePath("."));
+    assertEquals("..", normalizePath(".."));
+    assertEquals("/", normalizePath("/."));
+    assertEquals("", normalizePath("./"));
+    assertEquals("../", normalizePath("../"));
+    assertEquals("/..", normalizePath("/.."));
+    assertEquals("/..", normalizePath("/a/../.."));
+
+    assertEquals("/a/b", normalizePath("/a/./b"));
+    assertEquals("/a/b", normalizePath("/a/c/../b"));
+    assertEquals("/a/b", normalizePath("//a/b"));
+    assertEquals("/a/b", normalizePath("//a//b"));
+    assertEquals("/a/b", normalizePath("//a///b"));
+
+    assertEquals("/a/b/", normalizePath("/a/./b/"));
+    assertEquals("/a/b/", normalizePath("/a/c/../b/"));
+    assertEquals("/a/b/", normalizePath("//a/b/"));
+    assertEquals("/a/b/", normalizePath("//a//b/"));
+    assertEquals("/a/b/", normalizePath("//a///b/"));
+
+    assertEquals("a/b", normalizePath("a/./b"));
+    assertEquals("a/b", normalizePath("a/c/../b"));
+    assertEquals("a/b", normalizePath("a//b"));
+    assertEquals("a/b", normalizePath("a///b"));
+
+    assertEquals("/", normalizePath("/a/.."));
+    assertEquals("/a/", normalizePath("/a/b/.."));
+    assertEquals("/a/", normalizePath("/a/b/../"));
+    assertEquals("/", normalizePath("/a/b/../.."));
+    assertEquals("/", normalizePath("/a/b/../../"));
+
+    assertEquals("/a/b", normalizePath("/a/c/d/../../b"));
+    assertEquals("/a/", normalizePath("/a/c/d/../../b/../"));
+    assertEquals("/a/", normalizePath("/a/c/d/../../b/.."));
+    assertEquals("/..", normalizePath("/a/c/../../.."));
+    assertEquals("/../..", normalizePath("/a/c/../../../.."));
+    assertEquals("/../", normalizePath("/a/c/../../../"));
+    assertEquals("/../../", normalizePath("/a/c/../../../../"));
+    assertEquals("/", normalizePath("/a/.."));
+    assertEquals("/", normalizePath("/a/.."));
+
+    assertEquals("/../x", normalizePath("/a/c/../../../x"));
+  }
+
+  public void assertSameNormalizeUrl(String s) throws MalformedURLException {
+    assertSame(s, UrlUtil.normalizeUrl(s));
+  }
+
+  public void testNormalizeUrl() throws MalformedURLException {
+    assertSameNormalizeUrl("http://a/b");
+    assertEquals("http://a.com/b", UrlUtil.normalizeUrl("HTTP://A.COM/b"));
+    assertEquals("http://a.com/B", UrlUtil.normalizeUrl("HTTP://A.COM/B"));
+    assertEquals("http://a.com/", UrlUtil.normalizeUrl("http://a.com/"));
+    assertEquals("http://a.com/", UrlUtil.normalizeUrl("http://a.com"));
+    assertEquals("http://a.com/xy", UrlUtil.normalizeUrl("http://a.com/xy"));
+    assertEquals("http://a.com/xy/", UrlUtil.normalizeUrl("http://a.com/xy/"));
+    assertEquals("http://a.com/xy/",
+		 UrlUtil.normalizeUrl("http://a.com/xy/ab/.."));
+    assertEquals("http://a.com/xy/",
+		 UrlUtil.normalizeUrl("http://a.com/xy/ab/../"));
+    assertEquals("http://a.com/",
+		 UrlUtil.normalizeUrl("http://a.com/xy/ab/../../"));
+    try {
+      String s = "http://a.com/xy/ab/../../../";
+      UrlUtil.normalizeUrl(s);
+      fail(s);
+    } catch (MalformedURLException e) {
+    }
+    try {
+      String s = "http://a.com/xy/ab/../../../a/b/c/d";
+      UrlUtil.normalizeUrl(s);
+      fail(s);
+    } catch (MalformedURLException e) {
+    }
+    assertEquals("http://a.com/dd?foo=bar",
+		 UrlUtil.normalizeUrl("http://a.com/dd?foo=bar"));
+  }
 
   public void testEqualUrls() throws MalformedURLException {
     assertTrue(UrlUtil.equalUrls(new URL("http://foo.bar/xyz#tag"),

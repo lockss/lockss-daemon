@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.20 2004-07-28 18:19:32 tlipkis Exp $
+ * $Id: UrlUtil.java,v 1.21 2004-09-01 02:24:44 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -34,6 +34,7 @@ import java.util.*;
 import java.io.*;
 import java.net.*;
 import javax.servlet.http.HttpServletRequest;
+import org.lockss.plugin.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.daemon.Configuration;
 import org.apache.commons.httpclient.*;
@@ -60,6 +61,167 @@ public class UrlUtil {
    * the same host (case-independent), the same port number on the host,
    * and the same file and anchor on the host.
    */
+
+  /** Normalize URL to a canonical form: lowercase scheme and hostname,
+   * normalize path.  Removes any reference part.  XXX need to add
+   * character escaping */
+  public static String normalizeUrl(String urlString)
+      throws MalformedURLException {
+    urlString = urlString.trim();	// remove extra spaces
+    if ("".equals(urlString)) {		// permit empty
+      return urlString;
+    }
+    URL url = new URL(urlString);
+
+    String protocol = url.getProtocol();
+    String host = url.getHost();
+    int port = url.getPort();
+    String file = url.getFile();
+
+    boolean changed = false;
+
+    if (!urlString.startsWith(protocol)) { // protocol was lowercased
+      changed = true;
+    }
+//     if ("http".equals(protocol) || "ftp".equals(protocol)) {
+    if (host != null) {
+      String newHost = host.toLowerCase(); // lowercase host
+      if (!host.equals(newHost)) {
+	host = newHost;
+	changed = true;
+      }
+    }
+
+    if (port == getDefaultPort(protocol)) {	// uses default port
+      port = -1;			// so don't specify it
+      changed = true;
+    }
+
+    if (StringUtil.isNullString(file)) {
+      file = "/";
+      changed = true;
+    } else {
+      String normPath = normalizePath(file);
+      if (!normPath.equals(file)) {
+	file = normPath;
+	changed = true;
+      }
+    }
+
+    if (url.getRef() != null) {		// remove the ref
+      changed = true;
+    }
+//   }
+    if (changed) {
+      urlString = new URL(protocol, host, port, file).toString();
+      String query = url.getQuery();
+      if (query != null) {
+	urlString += "?" + query;
+      }
+    }
+    return urlString;
+  }
+
+  /** Normalize URL to a canonical form for the specified AU.  First
+   * applies any plugin-specific normalization, then generic
+   * normalization. */
+  public static String normalizeUrl(String url, ArchivalUnit au)
+      throws MalformedURLException {
+    String site = au.siteNormalizeUrl(url);
+    if (site != url) {
+      URL origUrl = new URL(url);
+      URL siteUrl = new URL(site);
+      if (! (origUrl.getProtocol().equals(siteUrl.getProtocol()) &&
+	     origUrl.getHost().equals(siteUrl.getHost()) &&
+	     origUrl.getPort() == siteUrl.getPort())) {
+	throw new RuntimeException("siteNormalizeUrl(" + url +
+				   ") altered non-alterable component: " +
+				   site);
+      }      
+    }
+    return normalizeUrl(site);
+  }
+
+  // 1.3 URL doesn't expose this
+  static int getDefaultPort(String protocol) {
+    if ("http".equals(protocol)) return 80;
+    if ("https".equals(protocol)) return 443;
+    if ("ftp".equals(protocol)) return 21;
+    if ("gopher".equals(protocol)) return 70;
+    return -1;
+  }
+
+  /* Normalize the path component.  Replaces multiple consecutive "/" with
+   *  a single "/", removes "." components and resolves ".."  * components.
+   *  Exactly mimics the behavior of Java 1.4 URI.normalize(), becuase we
+   *  don't want the canonical form to change if/when we switch to that. */
+  public static String normalizePath(String path)
+      throws MalformedURLException {
+    return normalizePath(path, false);
+  }
+
+  /* Normalize the path component.  Replaces multiple consecutive "/" with
+   *  a single "/", removes "." components and resolves ".."  * components.
+   *  Exactly mimics the behavior of Java 1.4 URI.normalize(), becuase we
+   *  don't want the canonical form to change if/when we switch to that. */
+  public static String normalizePath(String path, boolean evenIfIllegal)
+      throws MalformedURLException {
+    path = path.trim();
+    // special case compatability with Java 1.4 URI
+    if (path.equals(".") || path.equals("./")) {
+      return "";
+    }
+    // quickly determine whether anything needs to be done
+    if (! (path.endsWith("/.") || path.endsWith("/..") ||
+	   path.indexOf("/./") >= 0 || path.indexOf("/../") >= 0 || 
+	   path.indexOf("//") >= 0)) {
+      return path;
+    }
+
+    StringTokenizer st = new StringTokenizer(path, File.separator);
+    List names = new ArrayList();
+    int dotdotcnt = 0;
+    boolean prevdotdot = false;
+    while (st.hasMoreTokens()) {
+      String comp = st.nextToken();
+      prevdotdot = false;
+      if (comp.equals(".")) {
+	continue;
+      }
+      if (comp.equals("..")) {
+	if (names.size() > 0) {
+	  names.remove(names.size() - 1);
+	  prevdotdot = true;
+	} else {
+	  if (evenIfIllegal) {
+	    dotdotcnt++;
+	  } else {
+	    throw new MalformedURLException(path);
+	  }
+	}
+      } else {
+	names.add(comp);
+      }
+    }
+
+    StringBuffer sb = new StringBuffer();
+    if (path.startsWith("/")) {
+      sb.append("/");
+    }
+    for (int ix = dotdotcnt; ix > 0; ix--) {
+      if (ix > 1 || !names.isEmpty()) {
+	sb.append("../");
+      } else {
+	sb.append("..");
+      }
+    }
+    StringUtil.separatedString(names, "/", sb);
+    if ((path.endsWith("/") || (prevdotdot && !names.isEmpty())) &&
+	!(sb.length() == 1 && path.startsWith("/"))) {
+      sb.append("/");
+    }
+    return sb.toString();
+  }
 
   public static boolean equalUrls(URL u1, URL u2) {
     return
