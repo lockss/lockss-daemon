@@ -1,5 +1,5 @@
 /*
- * $Id: ProjectMusePlugin.java,v 1.8 2003-11-17 23:55:53 clairegriffin Exp $
+ * $Id: ProjectMusePlugin.java,v 1.9 2003-12-23 00:29:35 tlipkis Exp $
  */
 
 /*
@@ -81,14 +81,6 @@ public class ProjectMusePlugin
     ArchivalUnit au = new ProjectMuseArchivalUnit(this);
     au.setConfiguration(auConfig);
     return au;
-  }
-
-  public List getAuConfigProperties() {
-    return ListUtil.list(PD_BASE, PD_DIR, PD_VOL);
-  }
-
-  public Collection getDefiningConfigKeys() {
-    return ListUtil.list(AUPARAM_BASE_URL, AUPARAM_JOURNAL_DIR, AUPARAM_VOL);
   }
 
 }

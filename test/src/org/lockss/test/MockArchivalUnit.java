@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.41 2003-10-10 19:21:44 eaalto Exp $
+ * $Id: MockArchivalUnit.java,v 1.42 2003-12-23 00:29:35 tlipkis Exp $
  */
 
 /*
@@ -207,7 +207,6 @@ public class MockArchivalUnit implements ArchivalUnit {
   }
 
   public void setAuId(String newId) {
-    //    log.warning("*********************************"+newId, new RuntimeException("blah"));
     auId = newId;
   }
 

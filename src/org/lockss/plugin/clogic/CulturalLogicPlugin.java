@@ -1,5 +1,5 @@
 /*
- * $Id: CulturalLogicPlugin.java,v 1.1 2003-12-09 03:05:39 eaalto Exp $
+ * $Id: CulturalLogicPlugin.java,v 1.2 2003-12-23 00:29:35 tlipkis Exp $
  */
 
 /*
@@ -76,14 +76,6 @@ public class CulturalLogicPlugin extends BasePlugin {
     ArchivalUnit au = new CulturalLogicArchivalUnit(this);
     au.setConfiguration(auConfig);
     return au;
-  }
-
-  public List getAuConfigProperties() {
-    return ListUtil.list(PD_BASE, PD_YEAR);
-  }
-
-  public Collection getDefiningConfigKeys() {
-    return ListUtil.list(AUPARAM_BASE_URL, AUPARAM_YEAR);
   }
 
 }

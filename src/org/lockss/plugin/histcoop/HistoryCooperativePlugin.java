@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryCooperativePlugin.java,v 1.1 2003-11-18 00:07:16 eaalto Exp $
+ * $Id: HistoryCooperativePlugin.java,v 1.2 2003-12-23 00:29:35 tlipkis Exp $
  */
 
 /*
@@ -78,14 +78,6 @@ public class HistoryCooperativePlugin extends BasePlugin {
     ArchivalUnit au = new HistoryCooperativeArchivalUnit(this);
     au.setConfiguration(auConfig);
     return au;
-  }
-
-  public List getAuConfigProperties() {
-    return ListUtil.list(PD_BASE, PD_DIR, PD_VOL);
-  }
-
-  public Collection getDefiningConfigKeys() {
-    return ListUtil.list(AUPARAM_BASE_URL, AUPARAM_JOURNAL_DIR, AUPARAM_VOL);
   }
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescr.java,v 1.4 2003-09-26 23:52:17 eaalto Exp $
+ * $Id: ConfigParamDescr.java,v 1.5 2003-12-23 00:29:35 tlipkis Exp $
  */
 
 /*
@@ -38,7 +38,8 @@ import org.lockss.util.*;
 
 /**
  * Descriptor for a configuration parameter, and instances of descriptors
- * for common parameters.
+ * for common parameters.  These have a sort order equal to the sort order
+ * of their displayName.
  */
 public class ConfigParamDescr implements Comparable {
   /** Value is any string */
@@ -102,19 +103,6 @@ public class ConfigParamDescr implements Comparable {
 
   public ConfigParamDescr(String key) {
     setKey(key);
-  }
-
-  /**
-   * Create a new ConfigParamDescr with values from old ConfigParamDescr
-   * @param old the old ConfigParamDescr
-   */
-  public ConfigParamDescr(ConfigParamDescr old) {
-    super();
-    setKey(old.getKey());
-    setDisplayName(old.getDisplayName());
-    setDescription(old.getDescription());
-    setType(old.getType());
-    setSize(old.getSize());
   }
 
   /**

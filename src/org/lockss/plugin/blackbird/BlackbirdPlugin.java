@@ -1,5 +1,5 @@
 /*
- * $Id: BlackbirdPlugin.java,v 1.1 2003-12-06 00:57:25 eaalto Exp $
+ * $Id: BlackbirdPlugin.java,v 1.2 2003-12-23 00:29:35 tlipkis Exp $
  */
 
 /*
@@ -77,14 +77,6 @@ public class BlackbirdPlugin
     ArchivalUnit au = new BlackbirdArchivalUnit(this);
     au.setConfiguration(auConfig);
     return au;
-  }
-
-  public List getAuConfigProperties() {
-    return ListUtil.list(PD_BASE, PD_VOL);
-  }
-
-  public Collection getDefiningConfigKeys() {
-    return ListUtil.list(AUPARAM_BASE_URL, AUPARAM_VOL);
   }
 
 }
