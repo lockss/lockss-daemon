@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.25 2003-04-24 01:22:26 aalto Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.26 2003-05-07 23:46:30 aalto Exp $
  */
 
 /*
@@ -232,6 +232,17 @@ public class RepositoryNodeImpl implements RepositoryNode {
       throw new UnsupportedOperationException("No content to version.");
     }
     return currentVersion;
+  }
+
+  /**
+   * Creates the directory for the node location, if non-existent.
+   */
+  public void createNodeLocation() {
+    ensureCurrentInfoLoaded();
+    if (!nodeRootFile.exists()) {
+      logger.debug3("Creating root directory for CUS '"+url+"'");
+      nodeRootFile.mkdirs();
+    }
   }
 
   public synchronized void makeNewVersion() {

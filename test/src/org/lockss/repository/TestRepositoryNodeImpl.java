@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.22 2003-04-24 01:22:26 aalto Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.23 2003-05-07 23:46:30 aalto Exp $
  */
 
 /*
@@ -283,6 +283,20 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     leaf.sealNewVersion();
     assertTrue(leaf.hasContent());
     assertEquals(1, leaf.getCurrentVersion());
+  }
+
+  public void testMakeNodeLocation() throws Exception {
+    RepositoryNodeImpl leaf = (RepositoryNodeImpl)
+        repo.createNewNode("http://www.example.com/testDir");
+    String nodeLoc = tempDirPath + LockssRepositoryServiceImpl.CACHE_ROOT_NAME;
+    nodeLoc = LockssRepositoryServiceImpl.mapAuToFileLocation(nodeLoc, mau);
+    nodeLoc = LockssRepositoryServiceImpl.mapUrlToFileLocation(nodeLoc,
+        "http://www.example.com/testDir");
+    File testFile = new File(nodeLoc);
+    assertFalse(testFile.exists());
+    leaf.createNodeLocation();
+    assertTrue(testFile.exists());
+    assertTrue(testFile.isDirectory());
   }
 
   public void testMakeNewVersion() throws Exception {
