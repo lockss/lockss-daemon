@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurationUtil.java,v 1.4 2003-06-20 22:34:55 claire Exp $
+ * $Id: ConfigurationUtil.java,v 1.5 2003-07-14 06:47:02 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -36,9 +36,14 @@ import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.mortbay.tools.*;
 
-/** Utilities for Configuration
+/** Utilities for Configuration and ConfigManager
  */
 public class ConfigurationUtil {
+
+  private static ConfigManager mgr() {
+    return ConfigManager.getConfigManager();
+  }
+
   /** Create a Configuration from the supplied property list and install
    * it as the current configuration.
    */
@@ -51,7 +56,7 @@ public class ConfigurationUtil {
    * install it as the current configuration.
    */
   public static boolean setCurrentConfigFromUrlList(List l) {
-    Configuration config = Configuration.readConfig(l);
+    Configuration config = mgr().readConfig(l);
     return installConfig(config);
   }
 
@@ -67,9 +72,10 @@ public class ConfigurationUtil {
    */
   public static boolean installConfig(Configuration config) {
     try {
-      PrivilegedAccessor.invokeMethod(config, "installConfig", config);
+      PrivilegedAccessor.invokeMethod(mgr(), "installConfig", config);
     } catch (Exception e) {
-      throw new RuntimeException(e.toString());
+      //      throw new RuntimeException(e.toString());
+      throw new RuntimeException(StringUtil.stackTraceString(e));
     }
     return true;
   }
@@ -79,7 +85,7 @@ public class ConfigurationUtil {
   public static Configuration fromString(String s)
       throws IOException {
     List l = ListUtil.list(FileUtil.urlOfString(s));
-    return Configuration.readConfig(l);
+    return mgr().readConfig(l);
   }
 
   /** Create a Configuration from the supplied Properties.
