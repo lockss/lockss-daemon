@@ -1,5 +1,5 @@
 /*
- * $Id: TestAlertManagerImpl.java,v 1.1 2004-07-12 06:09:41 tlipkis Exp $
+ * $Id: TestAlertManagerImpl.java,v 1.2 2004-08-02 03:04:13 tlipkis Exp $
  */
 
 /*
@@ -49,15 +49,16 @@ public class TestAlertManagerImpl extends LockssTestCase {
   static Logger log = Logger.getLogger("TestAlertManager");
 
   MockLockssDaemon daemon;
-  AlertManagerImpl mgr;
+  MockAlertManagerImpl mgr;
 
   public void setUp() throws Exception {
     super.setUp();
     daemon = new MockLockssDaemon();
-    mgr = new AlertManagerImpl();
+    mgr = new MockAlertManagerImpl();
     daemon.setAlertManager(mgr);
     mgr.initService(daemon);
     daemon.setDaemonInited(true);
+    mgr.startService();
   }
 
   public void tearDown() throws Exception {
@@ -96,6 +97,102 @@ public class TestAlertManagerImpl extends LockssTestCase {
 //     assertEquals(config, c2);
   }
 
+  public void config(boolean enable) {
+    config(enable, 0, 0, 0);
+  }
+
+  public void config(boolean enable, long init, long incr, long max) {
+    Properties p = new Properties();
+    p.put(AlertManagerImpl.PARAM_ALERTS_ENABLED, enable ? "true" : "false");
+    p.put(AlertManagerImpl.PARAM_DELAY_INITIAL, Long.toString(init));
+    p.put(AlertManagerImpl.PARAM_DELAY_INCR, Long.toString(incr));
+    p.put(AlertManagerImpl.PARAM_DELAY_MAX, Long.toString(max));
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+  }
+
+  public void testRaiseSingleAlerts() throws Exception {
+    log.debug("testRaiseAlert()");
+    config(true);
+    Alert a1 = new Alert("foo");
+    a1.setAttribute(Alert.ATTR_IS_TIME_CRITICAL, true);
+    MockAlertAction action = new MockAlertAction();
+    action.setGroupable(true);
+    AlertConfig conf =
+      new AlertConfig(ListUtil.list(new AlertFilter(AlertPatterns.True(),
+						    action)));
+    mgr.suppressStore(true);
+    mgr.updateConfig(conf);
+    mgr.raiseAlert(a1);
+    List recs = action.getAlerts();
+    assertEquals(ListUtil.list(a1), recs);
+
+    mgr.raiseAlert(a1);
+    recs = action.getAlerts();
+    assertEquals(ListUtil.list(a1, a1), recs);
+  }
+
+  public void testRaiseDelayedAlerts1() throws Exception {
+    TimeBase.setSimulated(1000);
+    log.debug("testRaiseAlert()");
+    config(true, 100, 200, 500);
+    Alert a1 = new Alert("foo");
+    a1.setAttribute(Alert.ATTR_IS_TIME_CRITICAL, false);
+    MockAlertAction action = new MockAlertAction();
+    action.setGroupable(true);
+    action.setMaxPend(10000);
+    AlertConfig conf =
+      new AlertConfig(ListUtil.list(new AlertFilter(AlertPatterns.True(),
+						    action)));
+    mgr.suppressStore(true);
+    mgr.updateConfig(conf);
+    mgr.raiseAlert(a1);
+    assertEquals(ListUtil.list(a1), action.getAlerts());
+
+    TimeBase.step(10);
+    mgr.raiseAlert(a1);
+    assertEquals(ListUtil.list(a1), action.getAlerts());
+    TimeBase.step(10);
+    assertEquals(ListUtil.list(a1), action.getAlerts());
+    TimeBase.step(200);
+    assertEquals(ListUtil.list(a1, a1), action.getAlerts());
+  }
+
+  public void testRaiseDelayedAlerts2() throws Exception {
+    TimeBase.setSimulated(1000);
+    log.debug("testRaiseAlert()");
+    config(true, 100, 200, 500);
+    Alert a1 = new Alert("foo");
+    a1.setAttribute(Alert.ATTR_IS_TIME_CRITICAL, false);
+    MockAlertAction action = new MockAlertAction();
+    action.setGroupable(true);
+    action.setMaxPend(10000);
+    AlertConfig conf =
+      new AlertConfig(ListUtil.list(new AlertFilter(AlertPatterns.True(),
+						    action)));
+    mgr.suppressStore(true);
+    mgr.updateConfig(conf);
+    mgr.raiseAlert(a1);
+    assertEquals(ListUtil.list(a1), action.getAlerts());
+
+    TimeBase.step(10);
+    mgr.raiseAlert(a1);
+    assertEquals(ListUtil.list(a1), action.getAlerts());
+    int cnt = 0;
+    while (cnt < (500 - 10) / 90) {
+      TimeBase.step(90);
+      mgr.raiseAlert(a1);
+      assertEquals(ListUtil.list(a1), action.getAlerts());
+      cnt++;
+    }
+    TimeBase.step(90);
+    assertEquals(2, action.getAlerts().size());
+    Object o1 = action.getAlerts().get(1);
+    assertTrue("Second set of recorded actions should be a list",
+	       o1 instanceof List);
+    List l1 = (List)o1;
+    assertEquals(cnt+1, l1.size());
+  }
+
   class MockAlertPattern implements AlertPattern {
     boolean match;			// determines result
     Alert alert;		   // records the alert we were called with
@@ -113,6 +210,7 @@ public class TestAlertManagerImpl extends LockssTestCase {
   class MockAlertAction implements AlertAction {
     boolean isGroupable;
     List list = new ArrayList();
+    long maxPend = Constants.WEEK;
 
     public void record(LockssDaemon daemon, Alert alert) {
       list.add(alert);
@@ -126,8 +224,16 @@ public class TestAlertManagerImpl extends LockssTestCase {
       return isGroupable;
     }
 
+    public void setGroupable(boolean isGroupable) {
+      this.isGroupable = isGroupable;
+    }
+
     public long getMaxPendTime() {
-      return 100;
+      return maxPend;
+    }
+
+    void setMaxPend(long maxPend) {
+      this.maxPend = maxPend;
     }
 
 //     public boolean equals(Object obj);
@@ -135,6 +241,19 @@ public class TestAlertManagerImpl extends LockssTestCase {
 
     List getAlerts() {
       return list;
+    }
+  }
+
+  class MockAlertManagerImpl extends AlertManagerImpl {
+    boolean suppressStore = false;
+    void storeAlertConfig(File file, AlertConfig alertConfig)
+	throws Exception {
+      if (!suppressStore) {
+	super.storeAlertConfig(file, alertConfig);
+      }
+    }
+    void suppressStore(boolean suppress) {
+      this.suppressStore = suppress;
     }
   }
 
