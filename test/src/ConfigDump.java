@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigDump.java,v 1.4 2004-09-27 22:39:03 smorabito Exp $
+ * $Id: ConfigDump.java,v 1.5 2005-01-21 17:48:50 tlipkis Exp $
  */
 
 /*
@@ -47,9 +47,11 @@ public class ConfigDump {
 
   public static void main(String argv[]) throws Exception {
     List configUrls = new ArrayList();
+    String groupName = null;
     String outputFile = null;
     boolean includeTitles = false;
     boolean xmlHack = false;
+    List excludeBelow = new ArrayList();
 
     if (argv.length == 0) {
       usage();
@@ -59,12 +61,19 @@ public class ConfigDump {
 	String arg = argv[ix];
 	if        (arg.startsWith("-t")) {
 	  includeTitles = true;
-	} else if (arg.startsWith("-nt")) {
-	  includeTitles = false;
-	} else if (arg.startsWith("-x")) {
+	} else if (arg.startsWith("-g")) {
+	  groupName = argv[++ix];
+	} else if (arg.startsWith("-k")) {
 	  xmlHack = true;
-	} else if (arg.startsWith("-nx")) {
-	  xmlHack = false;
+	} else if (arg.startsWith("-x")) {
+	  String exclude = argv[++ix];
+	  if (StringUtil.isNullString(exclude)) {
+	    usage();
+	  }
+	  if (!exclude.endsWith(".")) {
+	    exclude = exclude + ".";
+	  }
+	  excludeBelow.add(exclude);
 	} else if (arg.startsWith("-o")) {
 	  outputFile = argv[++ix];
 	} else if (arg.startsWith("-")) {
@@ -90,10 +99,11 @@ public class ConfigDump {
 
     ConfigManager mgr = ConfigManager.makeConfigManager();
 //     ConfigManager mgr = daemon.getConfigManager();
-    Configuration config = mgr.readConfig(configUrls);
+    Configuration config = mgr.readConfig(configUrls, groupName);
     SortedSet keys = new TreeSet(config.keySet());
     for (Iterator iter = keys.iterator(); iter.hasNext(); ) {
       String key = (String)iter.next();
+//       if (isExcluded(key)
       if (includeTitles || !key.startsWith(ConfigManager.PARAM_TITLE_DB)) {
 	pout.println(key + " = " + (String)config.get(key));
       }
@@ -101,9 +111,10 @@ public class ConfigDump {
   }
 
   static void usage() {
-    System.err.println("Usage: ConfigDump [-t] [-x] [-o outfile] <urls-or-files ...>");
+    System.err.println("Usage: ConfigDump [-t] [-k] [-x excludebelow ] [-o outfile] <urls-or-files ...>");
+    System.err.println("         -g <group>   set daemon group name");
     System.err.println("         -t           include title db entries");
-    System.err.println("         -x           enable .txt -> .xml hack");
+    System.err.println("         -k           enable .txt -> .xml kludge");
     System.err.println("         -o outfile   write to outfile, else stdout");
     System.exit(1);
   }
