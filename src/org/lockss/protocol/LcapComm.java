@@ -1,5 +1,5 @@
 /*
- * $Id: LcapComm.java,v 1.25 2003-03-29 20:22:57 tal Exp $
+ * $Id: LcapComm.java,v 1.26 2003-04-03 11:33:36 tal Exp $
  */
 
 /*
@@ -58,6 +58,8 @@ public class LcapComm extends BaseLockssManager {
 
   static Logger log = Logger.getLogger("Comm");
 
+
+  private OneShot configShot = new OneShot();
   private LRUMap multicastVerifyMap = new LRUMap(100);
   private boolean verifyMulticast = false;
 
@@ -88,8 +90,9 @@ public class LcapComm extends BaseLockssManager {
   }
 
   /** For testing */
-  LcapComm(SocketFactory factory) {
+  LcapComm(SocketFactory factory, Configuration config) {
     sockFact = factory;
+    configure(config);
   }
 
   /**
@@ -98,7 +101,6 @@ public class LcapComm extends BaseLockssManager {
    */
   public void startService() {
     super.startService();
-    configure(Configuration.getCurrentConfig());
     start();
   }
 
@@ -114,10 +116,20 @@ public class LcapComm extends BaseLockssManager {
 
 
   /**
-   * Set communication parameters from configuration.
+   * Set communication parameters from configuration, once only.
+   * This service currently cannot be reconfigured.
    * @param config the Configuration
    */
-  public void configure(Configuration config) {
+  protected void setConfig(Configuration config,
+			   Configuration prevConfig,
+			   Set changedKeys) {
+    if (configShot.once()) {
+      configure(config);
+    }
+  }
+
+  /** Internal config, so can invoke from test constructor  */
+  void configure(Configuration config) {
     String groupName = null;
     String uniSendToName = null;
     try {

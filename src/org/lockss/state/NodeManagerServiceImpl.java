@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerServiceImpl.java,v 1.5 2003-04-03 05:22:02 claire Exp $
+ * $Id: NodeManagerServiceImpl.java,v 1.6 2003-04-03 11:33:36 tal Exp $
  */
 
 /*
@@ -49,6 +49,10 @@ public class NodeManagerServiceImpl extends BaseLockssManager
 
   public NodeManagerServiceImpl() { }
 
+
+  protected void setConfig(Configuration config, Configuration oldConfig,
+			   Set changedKeys) {
+  }
 
   public void startService() {
     super.startService();

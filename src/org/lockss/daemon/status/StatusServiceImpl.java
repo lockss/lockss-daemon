@@ -1,5 +1,5 @@
 /*
- * $Id: StatusServiceImpl.java,v 1.16 2003-03-29 02:15:03 troberts Exp $
+ * $Id: StatusServiceImpl.java,v 1.17 2003-04-03 11:33:36 tal Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.daemon.status;
 
 import java.util.*;
 import org.lockss.app.*;
+import org.lockss.daemon.*;
 import org.lockss.util.*;
 import gnu.regexp.*;
 
@@ -49,6 +50,10 @@ public class StatusServiceImpl
   public void startService() {
     super.startService();
     registerStatusAccessor(ALL_TABLES_TABLE, new AllTableStatusAccessor());
+  }
+
+  protected void setConfig(Configuration config, Configuration prevConfig,
+			   Set changedKeys) {
   }
 
   public StatusTable getTable(String tableName, String key) 

@@ -1,5 +1,5 @@
 /*
- * $Id: LcapRouter.java,v 1.15 2003-04-03 02:28:48 tal Exp $
+ * $Id: LcapRouter.java,v 1.16 2003-04-03 11:33:36 tal Exp $
  */
 
 /*
@@ -89,7 +89,6 @@ public class LcapRouter extends BaseLockssManager {
     super.startService();
     comm = getDaemon().getCommManager();
     idMgr = getDaemon().getIdentityManager();
-    registerDefaultConfigCallback();
     comm.registerMessageHandler(LockssDatagram.PROTOCOL_LCAP,
 				new LcapComm.MessageHandler() {
 				    public void
@@ -97,6 +96,7 @@ public class LcapRouter extends BaseLockssManager {
 				      processIncomingMessage(rd);
 				    }
 				  });
+    startBeacon();
   }
 
   public void stopService() {
@@ -130,12 +130,7 @@ public class LcapRouter extends BaseLockssManager {
 		     DEFAULT_ORIG_PKTS_PER_INTERVAL, DEFAULT_ORIG_PKT_INTERVAL);
     if (changedKeys.contains(PARAM_BEACON_INTERVAL)) {
       beaconInterval = config.getTimeInterval(PARAM_BEACON_INTERVAL, 0);
-      if (beaconInterval != 0) {
-	ensureBeaconRunning();
-	updateBeacon();
-      } else {
-	stopBeacon();
-      }
+      startBeacon();
     }
     probAddPartner = config.getPercentage(PARAM_PROB_PARTNER_ADD,
 					  DEFAULT_PROB_PARTNER_ADD);
@@ -148,19 +143,19 @@ public class LcapRouter extends BaseLockssManager {
     if (localInterfaces == null || changedKeys.contains(PARAM_LOCAL_IPS)) {
       String s = config.get(PARAM_LOCAL_IPS, "");
       List ipStrings = StringUtil.breakAt(s, ';');
-      localInterfaces = new ArrayList();
+      List newList = new ArrayList();
       for (Iterator iter = ipStrings.iterator(); iter.hasNext(); ) {
 	String ip = (String)iter.next();
 	try {
 	  InetAddress inet = InetAddress.getByName(ip);
-	  localInterfaces.add(inet);
+	  newList.add(inet);
 	} catch (UnknownHostException e) {
 	  log.warning("Couldn't parse local interface IP address: " + ip);
 	}
       }
-      // if not specified, assume single interface is same as local identity
-      if (localInterfaces.isEmpty()) {
-	localInterfaces.add(getLocalIdentityAddr());
+      // set localInterfaces only if new list non empty
+      if (!newList.isEmpty()) {
+	localInterfaces = newList;
       }
     }
   }
@@ -200,12 +195,6 @@ public class LcapRouter extends BaseLockssManager {
     comm.sendTo(dg, au, id);
     updateBeacon();
     origRateLimiter.event();
-  }
-
-  private void updateBeacon() {
-    if (beaconInterval != 0) {
-      beaconDeadline.expireIn(beaconInterval);
-    }
   }
 
   // handle received message.  do unicast/multicast routing, then pass msg
@@ -316,15 +305,17 @@ public class LcapRouter extends BaseLockssManager {
     if (msg.getOriginAddr().equals(getLocalIdentityAddr())) {
       return true;
     }
-    if (localInterfaces != null) {
-      InetAddress sender = dg.getSender();
+    InetAddress sender = dg.getSender();
+    if (localInterfaces == null) {
+      return sender.equals(getLocalIdentityAddr());
+    } else {
       for (Iterator iter = localInterfaces.iterator(); iter.hasNext(); ) {
 	if (sender.equals((InetAddress)iter.next())) {
 	  return true;
 	}
       }
+      return false;
     }
-    return false;
   }
 
   /** Unicast to each of our partners.  Don't send the message to either
@@ -379,6 +370,21 @@ public class LcapRouter extends BaseLockssManager {
   }
 
   private BeaconThread beaconThread;
+
+  private void updateBeacon() {
+    if (beaconInterval != 0) {
+      beaconDeadline.expireIn(beaconInterval);
+    }
+  }
+
+  private void startBeacon() {
+    if (beaconInterval != 0 && isDaemonInited()) {
+      ensureBeaconRunning();
+      updateBeacon();
+    } else {
+      stopBeacon();
+    }
+  }
 
   synchronized void stopBeacon() {
     if (beaconThread != null) {

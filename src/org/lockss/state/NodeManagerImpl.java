@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.86 2003-04-03 01:50:17 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.87 2003-04-03 11:33:36 tal Exp $
  */
 
 /*
@@ -83,7 +83,6 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
   public void startService() {
     super.startService();
     logger.debug("NodeManager being started");
-    registerDefaultConfigCallback();
     historyRepo = theDaemon.getHistoryRepository();
     lockssRepo = theDaemon.getLockssRepository(managedAu);
     pollManager = theDaemon.getPollManager();

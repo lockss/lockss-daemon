@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.65 2003-04-03 01:48:00 troberts Exp $
+* $Id: PollManager.java,v 1.66 2003-04-03 11:33:36 tal Exp $
  */
 
 /*
@@ -104,13 +104,8 @@ public class PollManager  extends BaseLockssManager {
   public PollManager() {
   }
 
-  public void initService(LockssDaemon daemon) {
-    super.initService(daemon);
-    super.registerDefaultConfigCallback();
-  }
-
   /**
-   * start the plugin manager.
+   * start the poll manager.
    * @see org.lockss.app.LockssManager#startService()
    */
   public void startService() {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapComm.java,v 1.8 2003-03-26 00:48:51 tal Exp $
+ * $Id: TestLcapComm.java,v 1.9 2003-04-03 11:33:36 tal Exp $
  */
 
 /*
@@ -108,8 +108,7 @@ public class TestLcapComm extends LockssTestCase {
 
     fact = new MockSocketFactory();
     config = Configuration.readConfig(ListUtil.list(FileUtil.urlOfString(c1)));
-    comm = new LcapComm(fact);
-    comm.configure(config);
+    comm = new LcapComm(fact, config);
     comm.start();
     ssock = ((MockDatagramSocket)fact.ssocks.get(0));
     usock = ((MockDatagramSocket)fact.usocks.get(0));

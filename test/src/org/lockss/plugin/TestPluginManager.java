@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.11 2003-03-24 23:52:24 aalto Exp $
+ * $Id: TestPluginManager.java,v 1.12 2003-04-03 11:33:36 tal Exp $
  */
 
 /*
@@ -50,7 +50,7 @@ import org.lockss.repository.LockssRepositoryServiceImpl;
  */
 
 public class TestPluginManager extends LockssTestCase {
-  private MockLockssDaemon theDaemon = new MockLockssDaemon(null);
+  private MockLockssDaemon theDaemon;
 
   static String mockPlugId = "org|lockss|test|MockPlugin";
   static String mauauid1 = "val1|val2";
@@ -82,11 +82,15 @@ public class TestPluginManager extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
 
+    theDaemon = new MockLockssDaemon();
     theDaemon.setLockssRepositoryService(new MockLockssRepositoryService());
     theDaemon.setNodeManagerService(new MockNodeManagerService());
 
     mgr = new PluginManager();
+    theDaemon.setPluginManager(mgr);
+    theDaemon.setDaemonInited(true);
     mgr.initService(theDaemon);
+//     mgr.startService();
   }
 
   public void tearDown() throws Exception {

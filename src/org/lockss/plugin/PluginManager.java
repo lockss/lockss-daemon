@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.25 2003-03-29 20:22:57 tal Exp $
+ * $Id: PluginManager.java,v 1.26 2003-04-03 11:33:36 tal Exp $
  */
 
 /*
@@ -53,8 +53,7 @@ public class PluginManager extends BaseLockssManager {
 
   private static Logger log = Logger.getLogger("PluginMgr");
 
-  private static LockssDaemon theDaemon = null;
-  private static StatusService statusSvc;
+  private StatusService statusSvc;
   private String pluginDir = null;
 
   private Map plugins = new HashMap();
@@ -69,10 +68,9 @@ public class PluginManager extends BaseLockssManager {
    */
   public void startService() {
     super.startService();
-    theDaemon = getDaemon();
-    registerDefaultConfigCallback();
-    statusSvc = theDaemon.getStatusService();
+    statusSvc = getDaemon().getStatusService();
     statusSvc.registerStatusAccessor("AUS", new Status(this));
+    resetConfig();
   }
 
   /**
@@ -88,18 +86,25 @@ public class PluginManager extends BaseLockssManager {
     super.stopService();
   }
 
+  Configuration prevAllPlugs = Configuration.EMPTY_CONFIGURATION;
+
   protected void setConfig(Configuration config, Configuration oldConfig,
 			   Set changedKeys) {
     pluginDir = config.get(PARAM_PLUGIN_LOCATION, DEFAULT_PLUGIN_LOCATION);
-    Configuration allPlugs = config.getConfigTree(PARAM_AU_TREE);
-    Configuration oldAllPlugs = oldConfig.getConfigTree(PARAM_AU_TREE);
-    for (Iterator iter = allPlugs.nodeIterator(); iter.hasNext(); ) {
-      String pluginId = (String)iter.next();
-      log.debug("Configuring plugin id: " + pluginId);
-      Configuration pluginConf = allPlugs.getConfigTree(pluginId);
-      Configuration oldPluginConf = oldAllPlugs.getConfigTree(pluginId);
+    // Don't load and start plugins until the daemon is running.
+    // Because we don't necessarily process the config, we must keep track
+    // of the previous config ourselves.
+    if (isDaemonInited()) {
+      Configuration allPlugs = config.getConfigTree(PARAM_AU_TREE);
+      for (Iterator iter = allPlugs.nodeIterator(); iter.hasNext(); ) {
+	String pluginId = (String)iter.next();
+	log.debug("Configuring plugin id: " + pluginId);
+	Configuration pluginConf = allPlugs.getConfigTree(pluginId);
+	Configuration prevPluginConf = prevAllPlugs.getConfigTree(pluginId);
 
-      configurePlugin(pluginId, pluginConf, oldPluginConf);
+	configurePlugin(pluginId, pluginConf, prevPluginConf);
+      }
+      prevAllPlugs = allPlugs;
     }
   }
 
@@ -138,6 +143,8 @@ public class PluginManager extends BaseLockssManager {
 	  }
 	} catch (ArchivalUnit.ConfigurationException e) {
 	  log.error("Failed to configure AU " + auKey, e);
+	} catch (Exception e) {
+	  log.error("Unexpected exception configuring AU " + auKey, e);
 	}
       } else {
 	log.warning("Not configuring AU " + auKey);
@@ -148,7 +155,7 @@ public class PluginManager extends BaseLockssManager {
   private void configureAU(Plugin plugin, Configuration auConf)
       throws ArchivalUnit.ConfigurationException {
     ArchivalUnit au = plugin.configureAU(auConf);
-    theDaemon.startAUManagers(au);
+    getDaemon().startAUManagers(au);
   }
 
   /**
@@ -268,11 +275,11 @@ public class PluginManager extends BaseLockssManager {
     return cus;
   }
 
-  private static class Status implements StatusAccessor {
-    private static final List sortRules =
+  private class Status implements StatusAccessor {
+    private final List sortRules =
       ListUtil.list(new StatusTable.SortRule("au", true));
 
-    private static final List colDescs =
+    private final List colDescs =
       ListUtil.list(
 		    new ColumnDescriptor("au", "Journal Volume",
 					 ColumnDescriptor.TYPE_STRING),
