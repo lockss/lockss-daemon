@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.176 2004-04-08 01:11:58 eaalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.177 2004-06-02 18:10:19 clairegriffin Exp $
  */
 
 /*
@@ -265,7 +265,7 @@ public class NodeManagerImpl
     }
 
     // make sure not damaged (if not my poll)
-    if (!state.isMyPoll() && hasDamage(cus)) {
+    if (!state.isMyPoll() && damagedNodes.hasDamage(cus)) {
       logger.info("CUS has damage, not starting poll: " + cus);
       return false;
     }
@@ -709,12 +709,8 @@ public class NodeManagerImpl
           case NodeState.CONTENT_RUNNING:
           case NodeState.CONTENT_REPLAYING:
             state = NodeState.OK;
-            if (damagedNodes.containsWithDamage(nodeState.getCachedUrlSet().getUrl())) {
-              // nodes are no longer damaged when a normal content poll succeeds
-              logger.debug2("removing from damaged node list");
-              damagedNodes.removeFromDamage(nodeState.getCachedUrlSet().getUrl());
-            }
-            break;
+            damagedNodes.clearDamage(nodeState.getCachedUrlSet());
+           break;
           case NodeState.SNCUSS_POLL_RUNNING:
           case NodeState.SNCUSS_POLL_REPLAYING:
             if (results.isMyPoll()) {
@@ -1695,22 +1691,7 @@ public class NodeManagerImpl
    * @return boolean true iff has damage.
    */
   boolean hasDamage(CachedUrlSet cus) {
-    boolean hasDamage = false;
-    synchronized (damagedNodes) {
-      // check if this url is damaged
-      if (damagedNodes.containsWithDamage(cus.getUrl())) {
-        return true;
-      }
-      // check if the CUS contains any of the other damaged nodes
-      Iterator damagedIt = damagedNodes.damageIterator();
-      while (damagedIt.hasNext()) {
-        String url = (String) damagedIt.next();
-        if (cus.containsUrl(url)) {
-          return true;
-        }
-      }
-    }
-    return hasDamage;
+    return damagedNodes.hasDamage(cus);
   }
 
   /**
