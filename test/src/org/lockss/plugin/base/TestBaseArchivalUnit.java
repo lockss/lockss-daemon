@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArchivalUnit.java,v 1.17 2004-05-18 22:53:13 troberts Exp $
+ * $Id: TestBaseArchivalUnit.java,v 1.18 2004-07-12 22:37:24 tlipkis Exp $
  */
 
 /*
@@ -312,13 +312,61 @@ public class TestBaseArchivalUnit extends LockssTestCase {
         rule2.createFilteredInputStream(null)));
   }
 
+  TitleConfig makeTitleConfig() {
+    ConfigParamDescr d1 = new ConfigParamDescr("key1");
+    ConfigParamDescr d2 = new ConfigParamDescr("key2");
+    ConfigParamAssignment a1 = new ConfigParamAssignment(d1, "a");
+    ConfigParamAssignment a2 = new ConfigParamAssignment(d2, "foo");
+    a1.setEditable(false);
+    a2.setEditable(false);
+    TitleConfig tc1 = new TitleConfig("a", "b");
+    tc1.setParams(ListUtil.list(a1, a2));
+    return tc1;
+  }
+
+
+  public void testGetTitleConfig() throws IOException {
+    TitleConfig tc = makeTitleConfig();
+    MyMockPlugin plug = new MyMockPlugin();
+    plug.setTitleConfig(tc);
+    plug.setSupportedTitles(ListUtil.list("a", "b"));
+    MyMockBaseArchivalUnit au = new MyMockBaseArchivalUnit(plug);
+    Configuration config = ConfigurationUtil.fromArgs("key1", "a",
+						      "key2", "foo");
+    assertEquals(tc, au.findTitleConfig(config));
+
+    Configuration config2 = ConfigurationUtil.fromArgs("key1", "b",
+						       "key2", "foo");
+    assertNull(au.findTitleConfig(config2));
+  }
+
   public static void main(String[] argv) {
     String[] testCaseList = { TestBaseArchivalUnit.class.getName()};
     junit.swingui.TestRunner.main(testCaseList);
   }
 
-  static class MyMockBaseArchivalUnit extends BaseArchivalUnit {
+  static class MyMockPlugin extends MockPlugin {
+    TitleConfig tc;
+    List titles;
 
+    public TitleConfig getTitleConfig(String title) {
+      return tc;
+    }
+
+    public List getSupportedTitles() {
+      return titles;
+    }
+
+    void setTitleConfig(TitleConfig tc) {
+      this.tc = tc;
+    }
+    void setSupportedTitles(List titles) {
+      this.titles = titles;
+    }
+
+  }
+
+  static class MyMockBaseArchivalUnit extends BaseArchivalUnit {
     private String auId = null;
     private String m_startUrl = "www.example.com/index.html";
     private String m_name = "MockBaseArchivalUnit";
@@ -349,7 +397,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
       return m_startUrl;
     }
 
-     protected void loadAuConfigDescrs(Configuration config) {
+    protected void loadAuConfigDescrs(Configuration config) {
     }
 
     protected FilterRule constructFilterRule(String mimeType) {

@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.23 2004-07-07 22:05:56 clairegriffin Exp $
+ * $Id: ArchivalUnit.java,v 1.24 2004-07-12 22:37:25 tlipkis Exp $
  */
 
 /*
@@ -189,6 +189,14 @@ public interface ArchivalUnit {
    * is none
    */
   public FilterRule getFilterRule(String mimeType);
+
+  /**
+   * Return the {@link TitleConfig} that was (or might have been) used to
+   * configure this AU.
+   * @return the TitleConfig, or null if this AU's configuration does not
+   * match any TitleCOnfig in the title db.
+   */
+  public TitleConfig getTitleConfig();
 
   public class ConfigurationException extends Exception {
     private Throwable nestedException;

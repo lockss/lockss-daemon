@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.55 2004-07-07 22:06:04 clairegriffin Exp $
+ * $Id: NullPlugin.java,v 1.56 2004-07-12 22:37:24 tlipkis Exp $
  */
 
 /*
@@ -366,6 +366,10 @@ public class NullPlugin {
 
     public String getName() {
       return "null_name";
+    }
+
+    public TitleConfig getTitleConfig() {
+      return null;
     }
 
     public void pauseBeforeFetch() {

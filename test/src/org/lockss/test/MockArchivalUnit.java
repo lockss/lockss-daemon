@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.49 2004-07-07 22:06:04 clairegriffin Exp $
+ * $Id: MockArchivalUnit.java,v 1.50 2004-07-12 22:37:24 tlipkis Exp $
  */
 
 /*
@@ -100,6 +100,10 @@ public class MockArchivalUnit implements ArchivalUnit {
 
   public List getNewContentCrawlUrls() {
     return newContentUrls;
+  }
+
+  public TitleConfig getTitleConfig() {
+    throw new UnsupportedOperationException("Not implemented");
   }
 
   public void setNewContentCrawlUrls(List urls) {

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.65 2004-07-07 22:05:56 clairegriffin Exp $
+ * $Id: BaseArchivalUnit.java,v 1.66 2004-07-12 22:37:25 tlipkis Exp $
  */
 
 /*
@@ -121,6 +121,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   protected long defaultContentCrawlIntv = DEFAULT_NEW_CONTENT_CRAWL_INTERVAL;
   protected URL baseUrl;     // the base Url for the volume
   protected String auName;   // the name of the AU (constructed by plugin)
+  protected TitleConfig titleConfig;   // matching entry from titledb, if any
   protected String auTitle;   // the title of the AU (from titledb, if any)
   protected long nextPollInterval = -1;
   protected double curTopLevelPollProb = -1;
@@ -218,20 +219,27 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     }
 
     // make our name
-    auTitle = findTitle(config);
+    titleConfig = findTitleConfig(config);
+    if (titleConfig != null) {
+      auTitle = titleConfig.getDisplayName();
+    }
     auName = makeName();
   }
 
-  String findTitle(Configuration config) {
+  TitleConfig findTitleConfig(Configuration config) {
     for (Iterator iter = plugin.getSupportedTitles().iterator();
 	 iter.hasNext(); ) {
       String title = (String)iter.next();
       TitleConfig tc = plugin.getTitleConfig(title);
       if (tc != null && tc.matchesConfig(config)) {
-	return title;
+	return tc;
       }
     }
     return null;
+  }
+
+  public TitleConfig getTitleConfig() {
+    return titleConfig;
   }
 
   /**

@@ -1,5 +1,5 @@
 /*
- * $Id: AuProxy.java,v 1.2 2004-01-08 22:43:30 tlipkis Exp $
+ * $Id: AuProxy.java,v 1.3 2004-07-12 22:37:25 tlipkis Exp $
  */
 
 /*
@@ -81,6 +81,14 @@ public class AuProxy {
    */
   public Configuration getConfiguration() {
     return au.getConfiguration();
+  }
+
+  /**
+   * Return the AU's TitleConfig, if any.
+   * @return a TitleConfig, or null
+   */
+  public TitleConfig getTitleConfig() {
+    return au.getTitleConfig();
   }
 
   /**
