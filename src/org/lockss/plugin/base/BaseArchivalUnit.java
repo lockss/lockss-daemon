@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.78 2004-09-20 17:47:38 clairegriffin Exp $
+ * $Id: BaseArchivalUnit.java,v 1.79 2004-09-20 18:54:37 clairegriffin Exp $
  */
 
 /*
@@ -706,6 +706,12 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 
     protected void addParamHandler(String paramKey, ParamHandler handler) {
       handlerMap.put(paramKey, handler);
+    }
+
+    protected ParamHandler removeParamHandler(String paramKey) {
+      synchronized (handlerMap) {
+        return (ParamHandler) handlerMap.remove(paramKey);
+      }
     }
 
     public Object getMapElement(String paramKey) {

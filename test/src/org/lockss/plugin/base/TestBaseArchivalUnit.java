@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArchivalUnit.java,v 1.21 2004-09-20 17:47:38 clairegriffin Exp $
+ * $Id: TestBaseArchivalUnit.java,v 1.22 2004-09-20 18:54:37 clairegriffin Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ import org.lockss.crawler.*;
 import org.lockss.plugin.ArchivalUnit.*;
 import java.net.*;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
+import org.lockss.plugin.base.BaseArchivalUnit.*;
 
 /**
  * This is the test class for org.lockss.plugin.simulated.GenericFileUrlCacher
@@ -456,9 +457,57 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     assertNull(mbau.findTitleConfig(config2));
   }
 
+  public void testParamHandlerMap() throws ConfigurationException {
+    Properties props = new Properties();
+    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
+    props.setProperty(ConfigParamDescr.VOLUME_NUMBER.getKey(), "10");
+    props.setProperty(BaseArchivalUnit.PAUSE_TIME_KEY, "10000");
+    props.setProperty(BaseArchivalUnit.USE_CRAWL_WINDOW, "true");
+    props.setProperty(BaseArchivalUnit.NEW_CONTENT_CRAWL_KEY, "10000");
+    Configuration config = ConfigurationUtil.fromProps(props);
+    mbau.setBaseAuParams(config);
+    // test that the ParamHandlerMap and the properties are the same
+    String key = BaseArchivalUnit.AU_NEW_CRAWL_INTERVAL;
+    ParamHandlerMap pmap = mbau.getParamMap();
+    TypedEntryMap temap = mbau.getProperties();
+    assertEquals( (TypedEntryMap) pmap, temap);
+    // check our return before we've added a param handler
+    assertEquals(10000, pmap.getLong(key));
+    // now add the param handler and check the return
+    MyParamHandler handler = new MyParamHandler();
+    handler.addParamAndValue(key, new Long(30000));
+    pmap.addParamHandler(key, handler);
+    assertEquals(30000, pmap.getLong(key));
+    // now check remove works
+    assertEquals(handler, pmap.removeParamHandler(key));
+    assertEquals(10000, pmap.getLong(key));
+  }
+
   public static void main(String[] argv) {
     String[] testCaseList = { MyMockBaseArchivalUnit.class.getName()};
     junit.swingui.TestRunner.main(testCaseList);
+  }
+
+  static class MyParamHandler implements ParamHandler {
+    HashMap m_map = new HashMap();
+
+    /**
+     * getParamValue
+     *
+     * @param paramKey String
+     * @return Object
+     */
+    public Object getParamValue(String paramKey) {
+      return m_map.get(paramKey);
+    }
+
+    public void addParamAndValue(String paramKey, Object value) {
+      m_map.put(paramKey, value);
+    }
+
+    public void removeParamAndValue(String paramKey) {
+      m_map.remove(paramKey);
+    }
   }
 
   static class MyMockPlugin extends MockPlugin {
