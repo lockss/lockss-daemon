@@ -1,5 +1,5 @@
 /*
- * $Id: ParamDoc.java,v 1.1 2002-12-02 00:42:01 tal Exp $
+ * $Id: ParamDoc.java,v 1.2 2003-03-21 07:26:17 tal Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.util.jar.*;
 import org.lockss.util.*;
 
 public class ParamDoc {
+  static final String blanks = "                                                                                ";
   private static Logger log = Logger.getLogger("ParamDoc");
 
   static Map paramMap = new TreeMap();
@@ -68,16 +69,24 @@ public class ParamDoc {
     printMap(paramMap);
   }
 
+  static final int COL = 40;
+
   static void printMap(Map map) {
     for (Iterator keyIter = map.keySet().iterator();
 	 keyIter.hasNext(); ) {
       String key = (String)keyIter.next();
       List list = (List)map.get(key);
-      System.out.println(key);
+      System.out.print(key);
       Collections.sort(list);
+      int len = key.length();
       for (Iterator iter = list.iterator(); iter.hasNext(); ) {
-	System.out.print("                 ");
+	if (len > COL) {
+	  System.out.println();
+	  len = 0;
+	}
+	System.out.print(nblanks(COL - len));
 	System.out.println((String)iter.next());
+	len = 0;
       }
     }
   }
@@ -133,6 +142,10 @@ public class ParamDoc {
     }
     List list = (List)map.get(key);
     list.add(val);
+  }
+
+  static String nblanks(int n) {
+    return blanks.substring(0, n);
   }
 
   public static final String CLASSPATH = System.getProperty("java.class.path");
