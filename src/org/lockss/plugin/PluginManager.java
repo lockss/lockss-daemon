@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.103 2004-09-02 23:23:12 smorabito Exp $
+ * $Id: PluginManager.java,v 1.103.2.1 2004-09-21 01:52:21 smorabito Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import org.lockss.app.*;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
 import org.lockss.poller.*;
+import org.lockss.repository.*;
 import org.lockss.util.*;
 import org.lockss.app.BaseLockssDaemonManager;
 import org.lockss.plugin.definable.DefinablePlugin;
@@ -144,6 +145,7 @@ public class PluginManager
   // maps plugin key(not id) to plugin
   private Map pluginMap = Collections.synchronizedMap(new HashMap());
   private Map auMap = Collections.synchronizedMap(new HashMap());
+  private Map cuNodeVersionMap = Collections.synchronizedMap(new HashMap());
   private Map classloaderMap = Collections.synchronizedMap(new HashMap());
   private Set auSet = Collections.synchronizedSet(new TreeSet(auComparator));
   private Set inactiveAuIds = Collections.synchronizedSet(new HashSet());
@@ -1104,10 +1106,9 @@ public class PluginManager
 
 	loadAus.add(registryAu);
 
+	// Trigger a new content crawl if required.
 	if (registryAu.
 	    shouldCrawlForNewContent(theDaemon.getNodeManager(registryAu).getAuState())) {
-	  // Trigger a new content crawl.  The callback will handle loading
-	  // all the loadable plugins when it is ready.
 	  if (log.isDebug2()) {
 	    log.debug2("Starting a new crawl of AU: " + registryAu.getName());
 	  }
@@ -1115,10 +1116,7 @@ public class PluginManager
 							   url, null);
 
 	} else {
-	  // If we're not going to crawl this AU, signal the callback
-	  // to process its plugins if it is ready.  It will only do so if
-	  // all the new content crawls it's waiting on have finished, or
-	  // if there are no new content crawls are needed.
+	  // If we're not going to crawl this AU, let the callback know.
 	  if (log.isDebug2()) {
 	    log.debug2("Don't need to do a crawl of AU: " + registryAu.getName());
 	  }
@@ -1131,11 +1129,12 @@ public class PluginManager
     }
 
     // Wait for the AU crawls to complete, or for the BinarySemaphore
-    // to time out.
-
+    // to time out, then process all the registries in the load list.
     log.debug("Waiting for loadable plugins to finish loading...");
     try {
-      if (!bs.take(Deadline.in(registryTimeout))) {
+      // The registry crawls may have already completed, in which case there is
+      // no need to wait.
+      if (regCallback.needsWait() && !bs.take(Deadline.in(registryTimeout))) {
 	log.warning("Timed out while waiting for registries to finish loading. " +
 		    "Remaining registry URL list: " + regCallback.getRegistryUrls());
       }
@@ -1356,7 +1355,10 @@ public class PluginManager
     HashMap tmpMap = new HashMap();
 
     for (Iterator iter = registryAus.iterator(); iter.hasNext(); ) {
-      CachedUrlSet cus = ((ArchivalUnit)iter.next()).getAuCachedUrlSet();
+      ArchivalUnit au = (ArchivalUnit)iter.next();
+
+      CachedUrlSet cus = au.getAuCachedUrlSet();
+      LockssRepository repo = theDaemon.getLockssRepository(au);
 
       for (Iterator cusIter = cus.contentHashIterator(); cusIter.hasNext(); ) {
 	CachedUrlSetNode cusn = (CachedUrlSetNode)cusIter.next();
@@ -1374,6 +1376,27 @@ public class PluginManager
 	  String url = cu.getUrl();
 
 	  if (StringUtil.endsWithIgnoreCase(url, ".jar")) {
+	    RepositoryNode repoNode = null;
+	    Integer curVersion = null;
+
+	    try {
+	      repoNode = repo.getNode(url);
+	      curVersion = new Integer(repoNode.getCurrentVersion());
+	    } catch (MalformedURLException ignore) { continue; }
+
+	    if (cuNodeVersionMap.get(url) == null) {
+	      cuNodeVersionMap.put(url, new Integer(-1));
+	    }
+
+	    // If we've already visited this CU, skip it unless the current
+	    // repository node is a different version (older OR newer)
+	    Integer oldVersion = (Integer)cuNodeVersionMap.get(url);
+
+	    if (oldVersion.equals(curVersion)) {
+	      log.debug2(url + ": JAR repository and map versions are identical.  Skipping...");
+	      continue;
+	    }
+
 	    File blessedJar = null;
 	    try {
 	      // Validate and bless the JAR file from the CU.
@@ -1385,6 +1408,9 @@ public class PluginManager
 	      log.error("CachedUrl did not validate.", ex);
 	      continue;
 	    }
+
+	    // Update the cuNodeVersion map now that we have the blessed Jar.
+	    cuNodeVersionMap.put(url, curVersion);
 
 	    if (blessedJar != null) {
 	      // Get the list of plugins to load from this jar.
@@ -1416,7 +1442,6 @@ public class PluginManager
 	      }
 
 	      String pluginName = null;
-
 
 	      for (Iterator pluginIter = loadPlugins.iterator();
 		   pluginIter.hasNext();) {
@@ -1450,27 +1475,34 @@ public class PluginManager
 		  // If it has no currently configured AUs and this
 		  // version is newer, replace it.  Otherwise, skip it
 		  // and go on to the next plugin.
+		  log.debug2("Plugin " + key + " is already in global pluginMap.");
 
-		  Configuration tree = currentAllPlugs.getConfigTree(key);
-
-		  if (tree == null || tree.isEmpty()) {
-		    Plugin otherPlugin = (Plugin)pluginMap.get(key);
-		    PluginVersion otherVer =
-		      new PluginVersion(otherPlugin.getVersion());
-		    if (version.toLong() > otherVer.toLong()) {
-		      log.debug("No AUs currently configured for plugin " +
-				plugin.getPluginId() + " version " +
-				otherVer + " replacing with newer version " +
-				version);
-		      tmpMap.put(key, info);
-		    }
-		  } else {
+		  if (plugin.getAllAus().size() > 0) {
 		    if (log.isDebug2()) {
 		      log.debug2("Plugin " + plugin.getPluginId() +
 				 ": Already being used by " +
 				 "configured AUs.  Skipping.");
 		    }
 		    continue; // skip plugin
+		  } else {
+		    Plugin otherPlugin = (Plugin)pluginMap.get(key);
+		    PluginVersion otherVer =
+		      new PluginVersion(otherPlugin.getVersion());
+		    if (version.toLong() > otherVer.toLong()) {
+		      if (log.isDebug2()) {
+			log.debug2("No AUs currently configured for plugin " +
+				   plugin.getPluginId() + " version " +
+				   otherVer + ", replacing with newer version " +
+				   version);
+		      }
+		      tmpMap.put(key, info);
+		    } else {
+		      if (log.isDebug2()) {
+			log.debug2("No AUs currently configured for plugin " +
+				   plugin.getPluginId() + ", but loadable plugin " +
+				   "version is not newer.  Skipping.");
+		      }
+		    }
 		  }
 		} else if (!tmpMap.containsKey(key)) {
 		  // Plugin doesn't yet exist in the temporary map, add it.
@@ -1508,9 +1540,9 @@ public class PluginManager
       String key = (String)pluginIter.next();
       log.debug2("Adding to plugin map: " + key);
       PluginInfo info = (PluginInfo)tmpMap.get(key);
-      setPlugin(key, info.getPlugin());
       classloaderMap.put(key, info.getClassLoader());
       pluginCus.put(key, info.getCuUrl());
+      setPlugin(key, info.getPlugin());
     }
 
     // Cleanup as a hint to GC.
@@ -1563,6 +1595,14 @@ public class PluginManager
      */
     public List getRegistryUrls() {
       return registryUrls;
+    }
+
+    /**
+     * Returns true if there is any reason to wait for this callback to
+     * give() its binary semephore.
+     */
+    public boolean needsWait() {
+      return (0 != registryUrls.size());
     }
   }
 
