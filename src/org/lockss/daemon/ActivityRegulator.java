@@ -1,5 +1,5 @@
 /*
- * $Id: ActivityRegulator.java,v 1.14 2003-05-30 01:46:55 aalto Exp $
+ * $Id: ActivityRegulator.java,v 1.15 2003-06-03 00:05:20 aalto Exp $
  */
 
 /*
@@ -334,10 +334,9 @@ public class ActivityRegulator extends BaseLockssManager {
                     (newActivity==REPAIR_CRAWL));
           case RELATION_PARENT:
             // if this CUS is a parent, allow content polls and repair crawls on
-            // sub-nodes
-            return ((curActivity==STANDARD_NAME_POLL) &&
-                    ((newActivity==STANDARD_CONTENT_POLL) ||
-                     (newActivity==REPAIR_CRAWL)));
+            // sub-nodes (PollManager should have blocked any truly illegal ones)
+            return ((newActivity==STANDARD_CONTENT_POLL) ||
+                     (newActivity==REPAIR_CRAWL));
           case RELATION_CHILD:
             // if this CUS is a child, only crawls allowed, and single node
             // content polls
