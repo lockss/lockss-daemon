@@ -1,5 +1,5 @@
 /*
- * $Id: LocalServletManager.java,v 1.6 2004-12-09 08:20:05 tlipkis Exp $
+ * $Id: LocalServletManager.java,v 1.7 2005-01-04 03:03:33 tlipkis Exp $
  */
 
 /*
@@ -53,10 +53,10 @@ public class LocalServletManager extends BaseServletManager {
 
   static final String PREFIX = Configuration.PREFIX + "admin.";
 
-  static final String PARAM_CONTACT_ADDR = PREFIX + "admin.contactEmail";
+  static final String PARAM_CONTACT_ADDR = PREFIX + "contactEmail";
   static final String DEFAULT_CONTACT_ADDR = "contactnotset@notset";
 
-  static final String PARAM_HELP_URL = PREFIX + "admin.helpUrl";
+  static final String PARAM_HELP_URL = PREFIX + "helpUrl";
   static final String DEFAULT_HELP_URL =
     "http://documents.lockss.org/publicdocs/release/";
 
@@ -172,6 +172,8 @@ public class LocalServletManager extends BaseServletManager {
 
     handler.addServlet("Home", "/Home",
 		       "org.lockss.servlet.UiHome");
+    handler.addServlet("BatchAuConfig", "/BatchAuConfig",
+		       "org.lockss.servlet.BatchAuConfig");
     handler.addServlet("JournalConfig", "/AuConfig",
 		       "org.lockss.servlet.AuConfig");
     handler.addServlet("DaemonStatus", "/DaemonStatus",
