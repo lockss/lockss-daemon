@@ -1,5 +1,5 @@
 /*
- * $Id: LcapComm.java,v 1.4 2002-11-23 01:35:48 troberts Exp $
+ * $Id: LcapComm.java,v 1.5 2002-12-02 00:38:54 tal Exp $
  */
 
 /*
@@ -45,6 +45,10 @@ import org.lockss.poller.*;
  */
 public class LcapComm {
 
+  static final String PARAM_GROUPNAME = Configuration.PREFIX + "group";
+  static final String PARAM_MULTIPORT = Configuration.PREFIX + "port";
+  static final String PARAM_UNIPORT = Configuration.PREFIX + "unicastport";
+
   protected static Logger log = Logger.getLogger("Comm");
 
   private static LcapComm singleton;
@@ -53,8 +57,10 @@ public class LcapComm {
   // These may change if/when we use multiple groups/ports
   private static String groupName;	// multicast group
   private static InetAddress group;
-  private static int multiPort;		// multicast port
+  private static int multiPort = -1;	// multicast port
+  private static int uniPort = -1;	// uncast port
   private LcapSocket.Multicast mSock;
+  private LcapSocket.Unicast uSock;
 
   private FifoQueue socketInQ;		// received packets from LcapSocket
   private ReceiveThread rcvThread;
@@ -67,9 +73,12 @@ public class LcapComm {
       log.critical("Can't create send socket", e);
     }
     try {
-      groupName = Configuration.getParam(Configuration.PREFIX + "group");
-      multiPort = Configuration.getIntParam(Configuration.PREFIX + "port");
-      group = InetAddress.getByName(groupName);
+      groupName = Configuration.getParam(PARAM_GROUPNAME);
+      multiPort = Configuration.getIntParam(PARAM_MULTIPORT);
+      uniPort = Configuration.getIntParam(PARAM_UNIPORT);
+      if (groupName != null) {
+	group = InetAddress.getByName(groupName);
+      }
       if (group == null) {
 	log.critical("null group addr");
 	return;
@@ -90,6 +99,12 @@ public class LcapComm {
    */
   public static void sendMessage(LcapMessage msg, ArchivalUnit au)
       throws IOException {
+    if (multiPort < 0) {
+      throw new IllegalStateException("Multicast port not configured");
+    }
+    if (group == null) {
+      throw new IllegalStateException("Multicast group not configured");
+    }
     sendMessageTo(msg, group, multiPort);
   }
 
@@ -99,35 +114,57 @@ public class LcapComm {
    * determine which multicast socket/port to send to.
    * @param id the identity of the cache to which to send the message
    */
-  public static void sendMessageTo(LcapMessage msg, ArchivalUnit au, LcapIdentity id)
+  public static void sendMessageTo(LcapMessage msg, ArchivalUnit au,
+				   LcapIdentity id)
       throws IOException {
-    // tk - shouldn't be multiPort
-    sendMessageTo(msg, id.getAddress(), multiPort);
+    if (uniPort < 0) {
+      throw new IllegalStateException("Unicast port not configured");
+    }
+    sendMessageTo(msg, id.getAddress(), uniPort);
   }
 
-  private static void sendMessageTo(LcapMessage msg, InetAddress addr, int port)
+  private static void sendMessageTo(LcapMessage msg, InetAddress addr,
+				    int port)
       throws IOException {
-    log.debug("sending "+msg+" to "+group+":"+port);
+    log.debug("sending "+msg+" to "+addr+":"+port);
     byte data[] = msg.encodeMsg();
     DatagramPacket pkt = new DatagramPacket(data, data.length, addr, port);
     sendSock.send(pkt);
   }
 
   private void start() {
-    // This is where multiple multicast groups and/or ports would be started,
-    // if they're all handled by the same thread.
-    try {
-      socketInQ = new FifoQueue();
-      log.debug("new LcapSocket.Multicast("+socketInQ+", "+group+", "+multiPort);
-      LcapSocket.Multicast mSock =
-	new LcapSocket.Multicast(socketInQ, group, multiPort);
-    
-      mSock.start();
-      this.mSock = mSock;
-    } catch (UnknownHostException e) {
-      log.error("Can't create socket", e);
-    } catch (IOException e) {
-      log.error("Can't create socket", e);
+    socketInQ = new FifoQueue();
+    if (multiPort >= 0 && group != null) {
+      try {
+	log.debug("new LcapSocket.Multicast("+socketInQ+", "+group+", "+
+		  multiPort);
+	LcapSocket.Multicast mSock =
+	  new LcapSocket.Multicast(socketInQ, group, multiPort);
+	mSock.start();
+	this.mSock = mSock;
+	log.info("Multicast socket started: " + mSock);
+      } catch (UnknownHostException e) {
+	log.error("Can't create multicast socket", e);
+      } catch (IOException e) {
+	log.error("Can't create multicast socket", e);
+      }
+    } else {
+      log.error("Multicast group or port not configured, not starting multicast receive");
+    }
+
+    if (uniPort >= 0) {
+      try {
+	log.debug("new LcapSocket.Unicast("+socketInQ+", "+uniPort);
+	LcapSocket.Unicast uSock =
+	  new LcapSocket.Unicast(socketInQ, uniPort);
+	uSock.start();
+	this.uSock = uSock;
+	log.info("Unicast socket started: " + uSock);
+      } catch (IOException e) {
+	log.error("Can't create unicast socket", e);
+      }
+    } else {
+      log.error("Unicast port not configured, not starting unicast receive");
     }
     ensureQRunner();
   }
@@ -153,7 +190,7 @@ public class LcapComm {
     LcapMessage msg;
     try {
       msg = LcapMessage.decodeToMsg(dgram.getPacket().getData(), 
-				dgram.isMulticast());
+				    dgram.isMulticast());
       log.debug("Received " + msg);
       PollManager.handleMessage(msg); //XXX should modify node state instead
     } catch (IOException e) {
@@ -171,9 +208,9 @@ public class LcapComm {
     }
 
     public void run() {
-//        if (rcvPriority > 0) {
-//  	Thread.currentThread().setPriority(rcvPriority);
-//        }
+      //        if (rcvPriority > 0) {
+      //  	Thread.currentThread().setPriority(rcvPriority);
+      //        }
       goOn = true;
 
       while (goOn) {
