@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.14 2004-01-08 22:44:09 tlipkis Exp $
+ * $Id: AuConfig.java,v 1.15 2004-01-12 06:22:22 tlipkis Exp $
  */
 
 /*
@@ -131,12 +131,12 @@ public class AuConfig extends LockssServlet {
 	displayAuSummary();
       } else if (action.equals("Edit")) displayEditAu(au);
       else if (action.equals("Restore")) displayRestoreAu(au);
-      else if (action.equals("DoRestore")) updateAu(au, "restored");
-      else if (action.equals("Update")) updateAu(au, "updated");
+      else if (action.equals("DoRestore")) updateAu(au, "Restored");
+      else if (action.equals("Update")) updateAu(au, "Updated");
       else if (action.equals("Deactivate")) confirmDeactivateAu(au);
       else if (action.equals("Confirm Deactivate")) doDeactivateAu(au);
-      else if (action.equals("Unconfigure")) confirmUnconfigureAu(au);
-      else if (action.equals("Confirm Unconfigure")) doUnconfigureAu(au);
+      else if (action.equals("Delete")) confirmDeleteAu(au);
+      else if (action.equals("Confirm Delete")) doDeleteAu(au);
       else {
 	errMsg = "Unknown action: " + action;
 	displayAuSummary();
@@ -217,7 +217,7 @@ public class AuConfig extends LockssServlet {
     page.add(getExplanationBlock("Editing configuration of: " +
 				 encodedAuName(au)));
 
-    java.util.List actions = ListUtil.list("Deactivate", "Unconfigure");
+    java.util.List actions = ListUtil.list("Deactivate", "Delete");
     if (!getEditKeys().isEmpty()) {
       actions.add(0, "Update");
     }
@@ -247,7 +247,12 @@ public class AuConfig extends LockssServlet {
   private void displayReactivateAu(AuProxy au) throws IOException {
     Page page = newPage();
     fetchAuConfig(au);
-
+    if (plugin == null) {
+      errMsg = "Unknown plugin: " + au.getPluginId() +
+	"<br>Cannot reactivate: " + encodeText(au.getName());
+      displayAuSummary();
+      return;
+    }
     page.add(getErrBlock());
     page.add(getExplanationBlock("Reactivating: " + encodedAuName(au)));
 
@@ -557,7 +562,7 @@ public class AuConfig extends LockssServlet {
       displayAddAu();
       return;
     }
-    createAuFromPlugin("Archival Unit created.");
+    createAuFromPlugin("Created");
   }
 
   /** Process the DoReactivate button */
@@ -569,9 +574,9 @@ public class AuConfig extends LockssServlet {
       return;
     }
     if (aup.isActiveAu()) {
-      updateAu(aup, "reactivated");
+      updateAu(aup, "Reactivated");
     } else {
-      createAuFromPlugin("Archival Unit reactivated.");
+      createAuFromPlugin("reactivated");
     }
   }
 
@@ -580,7 +585,7 @@ public class AuConfig extends LockssServlet {
     try {
       AuProxy au =
 	remoteApi.createAndSaveAuConfiguration(plugin, formConfig);
-      statusMsg = msg;
+      statusMsg = msg + " Archival Unit:<br>" + encodeText(au.getName());
       displayEditAu(au);
     } catch (ArchivalUnit.ConfigurationException e) {
       log.error("Error configuring AU", e);
@@ -602,7 +607,7 @@ public class AuConfig extends LockssServlet {
 	isChanged(remoteApi.getStoredAuConfiguration(au), formConfig)) {
       try {
 	remoteApi.setAndSaveAuConfiguration(au, formConfig);
-	statusMsg = "Archival Unit " + msg + ".";
+	statusMsg = msg + " Archival Unit:<br>" + encodeText(au.getName());
       } catch (ArchivalUnit.ConfigurationException e) {
 	log.error("Couldn't reconfigure AU", e);
 	errMsg = encodeText(e.getMessage());
@@ -617,34 +622,32 @@ public class AuConfig extends LockssServlet {
     displayEditAu(au);
   }
     
-  /** Display the Confirm Unconfigure  page */
-  private void confirmUnconfigureAu(AuProxy au) throws IOException {
-    String unconfigureFoot =
-      "Unconfigure will not take effect until the next daemon restart." +
-      "  At that point the Archival Unit will be inactive, but its contents" +
-      " will remain in the cache untill the deletion is made permanent." +
-      " Permanent deletion occurs only during a reboot, when configuration" +
-      " changes are backed up to the configuration floppy. (NIY)";
+  /** Display the Confirm Delete  page */
+  private void confirmDeleteAu(AuProxy au) throws IOException {
+    String deleteFoot =
+      (remoteApi.isRemoveStoppedAus() ? null :
+       "Delete does not take effect until the next daemon restart.");
 
     Page page = newPage();
     fetchAuConfig(au);
 
     page.add(getErrBlock());
-    page.add(getExplanationBlock("Are you sure you want to unconfigure" +
-				 addFootnote(unconfigureFoot) + ": " +
+    page.add(getExplanationBlock("Are you sure you want to delete" +
+				 addFootnote(deleteFoot) + ": " +
 				 encodedAuName(au)));
 
-    Form frm = createAuEditForm(ListUtil.list("Confirm Unconfigure"),
+    Form frm = createAuEditForm(ListUtil.list("Confirm Delete"),
 				au, false);
     page.add(frm);
     endPage(page);
   }
 
-  /** Process the Confirm Unconfigure button */
-  private void doUnconfigureAu(AuProxy au) throws IOException {
+  /** Process the Confirm Delete button */
+  private void doDeleteAu(AuProxy au) throws IOException {
+    String name = au.getName();
     try {
-      remoteApi.deleteAuConfiguration(au);
-      statusMsg = "Archival Unit configuration removed.";
+      remoteApi.deleteAu(au);
+      statusMsg = "Deleted Archival Unit:<br>" + encodeText(name);
     } catch (ArchivalUnit.ConfigurationException e) {
       log.error("Can't happen", e);
       errMsg = encodeText(e.getMessage());
@@ -658,9 +661,12 @@ public class AuConfig extends LockssServlet {
   /** Display the Confirm Deactivate  page */
   private void confirmDeactivateAu(AuProxy au) throws IOException {
     String deactivateFoot =
-      "Deactivate will not take effect until the next daemon restart." +
-      "  At that point the Archival Unit will be inactive, but its contents" +
-      " will remain in the cache and it can be reactivated at any time.";
+      (remoteApi.isRemoveStoppedAus()
+       ? ("A deactivated Archival Unit's contents" +
+	  " will remain in the cache and it can be reactivated at any time.")
+       : ("Deactivate will not take effect until the next daemon restart.  " +
+	  "At that point the Archival Unit will be inactive, but its contents"+
+	  " will remain in the cache and it can be reactivated at any time."));
 
     Page page = newPage();
     fetchAuConfig(au);
@@ -678,9 +684,10 @@ public class AuConfig extends LockssServlet {
 
   /** Process the Confirm Deactivate button */
   private void doDeactivateAu(AuProxy au) throws IOException {
+    String name = au.getName();
     try {
-      remoteApi.deactivateAuConfiguration(au);
-      statusMsg = "Archival Unit deactivated.";
+      remoteApi.deactivateAu(au);
+      statusMsg = "Deactivated Archival Unit:<br>" + encodeText(name);
     } catch (ArchivalUnit.ConfigurationException e) {
       log.error("Can't happen", e);
       errMsg = encodeText(e.getMessage());
@@ -752,14 +759,14 @@ public class AuConfig extends LockssServlet {
   private Composite getErrBlock() {
     Composite comp = new Composite();
     if (errMsg != null) {
-      comp.add("<center><font color=red>");
+      comp.add("<center><font color=red size=+1>");
       comp.add(errMsg);
       comp.add("</font></center><br>");
     }
     if (statusMsg != null) {
-      comp.add("<center>");
+      comp.add("<center><font size=+1>");
       comp.add(statusMsg);
-      comp.add("</center><br>");
+      comp.add("</font></center><br>");
     }
     return comp;
   }
@@ -830,7 +837,6 @@ public class AuConfig extends LockssServlet {
 
   private void fetchAuConfig(AuProxy au) {
     auConfig = au.getConfiguration();
-    log.debug("auConfig: " + auConfig);
     plugin = au.getPlugin();
   }
 
