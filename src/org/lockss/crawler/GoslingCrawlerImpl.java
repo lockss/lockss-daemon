@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingCrawlerImpl.java,v 1.30 2003-08-06 00:32:00 troberts Exp $
+ * $Id: GoslingCrawlerImpl.java,v 1.31 2003-08-25 23:15:04 eaalto Exp $
  */
 
 /*
@@ -236,7 +236,7 @@ public class GoslingCrawlerImpl implements Crawler {
 			     Set parsedPages, CachedUrlSet cus,
 			     boolean overWrite) {
     boolean wasError = false;
-    logger.debug("Dequeued url from list: "+url);
+    logger.debug2("Dequeued url from list: "+url);
     UrlCacher uc = au.makeUrlCacher(cus, url);
     // don't cache if already cached, unless overwriting
     if (overWrite || !uc.getCachedUrl().hasContent()) {
@@ -279,7 +279,7 @@ public class GoslingCrawlerImpl implements Crawler {
       logger.error("Problem parsing "+uc+". Ignoring", ioe);
       wasError = true;
     }
-    logger.debug("Removing from list: "+uc.getUrl());
+    logger.debug2("Removing from list: "+uc.getUrl());
     return !wasError;
   }
 
@@ -305,10 +305,10 @@ public class GoslingCrawlerImpl implements Crawler {
       InputStream is = cu.openForReading();
       Reader reader = new InputStreamReader(is); //should do this elsewhere
       URL srcUrl = new URL(cuStr);
-      logger.debug("Extracting urls from srcUrl");
+      logger.debug2("Extracting urls from srcUrl");
       String nextUrl = null;
       while ((nextUrl = extractNextLink(reader, srcUrl)) != null) {
-	logger.debug("Extracted "+nextUrl);
+	logger.debug2("Extracted "+nextUrl);
 
 	//should check if this is something we should cache first
  	if (!set.contains(nextUrl)
@@ -339,9 +339,9 @@ public class GoslingCrawlerImpl implements Crawler {
       }
     }
     if (returnVal) {
-      logger.debug("I should try to extract links from "+cu);
+      logger.debug2("I should try to extract links from "+cu);
     } else {
-      logger.debug("I shouldn't try to extract links from "+cu);
+      logger.debug2("I shouldn't try to extract links from "+cu);
     }
 
     return returnVal;
@@ -485,17 +485,17 @@ public class GoslingCrawlerImpl implements Crawler {
 
     if (returnStr != null) {
       returnStr = StringUtil.trimAfterChars(returnStr, " #\"");
-      logger.debug("Generating url from: "+srcUrl+" and "+returnStr);
+      logger.debug2("Generating url from: "+srcUrl+" and "+returnStr);
       URL retUrl = new URL(srcUrl, returnStr);
       returnStr = retUrl.toString();
-      logger.debug("Parsed: "+returnStr);
+      logger.debug2("Parsed: "+returnStr);
       return returnStr;
     }
     return null;
   }
 
   private static String getAttributeValue(String attribute, String src) {
-    logger.debug("looking for "+attribute+" in "+src);
+    logger.debug2("looking for "+attribute+" in "+src);
     StringTokenizer st = new StringTokenizer(src, " =\"", true);
     String lastToken = null;
     while (st.hasMoreTokens()) {
