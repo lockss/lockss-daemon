@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssTestCase.java,v 1.3 2002-10-06 21:22:36 tal Exp $
+ * $Id: TestLockssTestCase.java,v 1.4 2002-10-25 21:47:40 tal Exp $
  */
 
 /*
@@ -82,5 +82,13 @@ public class TestLockssTestCase extends LockssTestCase {
     m2.put("1", "one");
     assertEquals(m1, m2);
     assertEquals(m2, m1);
+  }
+
+  public void testTempDir() throws Exception {
+    File tmp = getTempDir();
+    assertTrue(tmp.exists());
+    assertTrue(tmp.isDirectory());
+    // how to test that it gets deleted by tearDown()?
+    System.out.println("Make sure " + tmp.getPath() + " is gone.");
   }
 }

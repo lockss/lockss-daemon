@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.3 2002-10-06 21:22:36 tal Exp $
+ * $Id: LockssTestCase.java,v 1.4 2002-10-25 21:47:40 tal Exp $
  */
 
 /*
@@ -33,13 +33,47 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.test;
 
 import java.util.*;
+import java.io.*;
 import org.lockss.util.*;
 import junit.framework.TestCase;
 
 
 public class LockssTestCase extends TestCase {
+  List tmpDirs;
+
   public LockssTestCase(String msg) {
     super(msg);
+  }
+
+  
+  /** Create and return the name of a temp dir.  The dir is created within
+   * the default temp file dir.
+   * It will be deleted following the test, by tearDown().  (So if you
+   * override tearDown(), be sure to call <code>super.tearDown();</code>.)
+   * @return The newly created directory
+   */
+  public File getTempDir() throws IOException {
+    File tmpdir = FileUtil.createTempDir("locksstest", null);
+    if (tmpdir != null) {
+      if (tmpDirs == null) {
+	tmpDirs = new LinkedList();
+      }
+      tmpDirs.add(tmpdir);
+    }
+    return tmpdir;
+  }
+
+  /** Remove any temp dirs */
+  public void tearDown() throws Exception {
+    if (tmpDirs != null) {
+      for (ListIterator iter = tmpDirs.listIterator(); iter.hasNext(); ) {
+	File dir = (File)iter.next();
+	if (FileUtil.delTree(dir)) {
+	  iter.remove();
+	}
+      }
+    }
+    super.tearDown();
   }
 
   /** Asserts that two Maps are equal (contain the same mappings).
