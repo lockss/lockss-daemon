@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poll.java,v 1.1.2.19 2004-11-28 23:08:30 dshr Exp $
+ * $Id: TestV3Poll.java,v 1.1.2.20 2004-11-29 03:31:07 dshr Exp $
  */
 
 /*
@@ -75,9 +75,12 @@ public class TestV3Poll extends LockssTestCase {
   protected PollSpec pollSpec;
   protected PollManager pollmanager;
   protected MockLcapStreamRouter router;
+  protected MyMessageHandler handler = null;
+  protected Hashtable pollHash = null;
 
   protected void setUp() throws Exception {
     super.setUp();
+    pollHash = new Hashtable();
     TimeBase.setSimulated();
 
     initRequiredServices();
@@ -101,6 +104,7 @@ public class TestV3Poll extends LockssTestCase {
     pollmanager.removePoll(poller.getKey());
     theDaemon.getPollManager().stopService();
     theDaemon.getPluginManager().stopService();
+    pollHash = null;
     super.tearDown();
   }
 
@@ -218,6 +222,9 @@ public class TestV3Poll extends LockssTestCase {
     // Use it to create a MockLcapStreamRouter object
     // in loop-back mode
     router = new MockLcapStreamRouter(q1, null);
+    // Register handlers
+    handler = new MyMessageHandler("TestV3Poll.handler");
+    router.registerMessageHandler(handler);
     router.startService();
     theDaemon.setStreamRouterManager(router);
     pollmanager = theDaemon.getPollManager();
@@ -281,12 +288,12 @@ public class TestV3Poll extends LockssTestCase {
 				    spec.getCachedUrlSet(),
 				    pollmanager);
     log.debug("Duration is " + duration);
-    byte[] voterChallenge = pollmanager.makeVerifier(duration);
+    byte[] challenge = pollmanager.makeVerifier(duration);
     pollSpec = spec;
     // Make the voter
     p = pollmanager.makePoll(pollSpec,
 			     duration,
-			     voterChallenge,
+			     challenge,
 			     null,
 			     testID1,
 			     "SHA-1");
@@ -305,8 +312,11 @@ public class TestV3Poll extends LockssTestCase {
     log.debug("initTestPoll: V3 poller returns " + p);
     assertTrue(p instanceof V3Poller);
     poller = (V3Poller) p;
+    // If sender is testID, recipient is voter
+    pollHash.put(testID, voter);
+    // If sender is testID1, recipient is poller
+    pollHash.put(testID1, poller);
     log.debug3("initTestPoll: poller " + p.toString());
-    router.setKeyMap(voterChallenge, pollerChallenge);
   }
 
   private void doPollsWithPeers(V3LcapMessage[] testV3msg,
@@ -535,6 +545,26 @@ public class TestV3Poll extends LockssTestCase {
     public CachedUrlSet makeCachedUrlSet(ArchivalUnit owner,
 					 CachedUrlSetSpec cuss) {
       return new PollTestPlugin.PTCachedUrlSet((MockArchivalUnit)owner, cuss);
+    }
+  }
+
+  public class MyMessageHandler implements LcapStreamRouter.MessageHandler {
+    String handlerName = null;
+    public MyMessageHandler(String n) {
+      handlerName = n;
+    }
+    public void handleMessage(V3LcapMessage msg) {
+      log.debug(handlerName + ": handleMessage(" + msg + ")");
+      PeerIdentity sender = msg.getOriginatorID();
+      V3Poll recipient = (V3Poll) pollHash.get(sender);
+      if (recipient == null) {
+	log.error("No recipient for " + msg);
+      } else {
+	log.debug("Handing " + msg + " to " + recipient);
+	if (false) {  // XXX disabled so I can check the initial changes in
+	  recipient.receiveMessage(msg);
+	}
+      }
     }
   }
 

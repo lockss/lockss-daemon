@@ -1,5 +1,5 @@
 /*
- * $Id: MockLcapStreamRouter.java,v 1.1.2.10 2004-11-28 23:08:32 dshr Exp $
+ * $Id: MockLcapStreamRouter.java,v 1.1.2.11 2004-11-29 03:31:08 dshr Exp $
  */
 
 /*
@@ -60,8 +60,6 @@ public class MockLcapStreamRouter extends LcapStreamRouter
   boolean loopBackMode = false;
   FifoQueue myReceiveQueue = null;
   FifoQueue mySendQueue = null;
-  byte[] key1 = null;
-  byte[] key2 = null;
   static Logger log = Logger.getLogger("MockLcapStreamRouter");
 
   public MockLcapStreamRouter(FifoQueue recv, FifoQueue send) {
@@ -111,7 +109,6 @@ public class MockLcapStreamRouter extends LcapStreamRouter
 	// No action intended
       }
       if (msg != null && !msg.isNoOp()) {
-	mapKey(msg);
 	log.debug("Pulled " + msg + " from receive Q");
 	runHandlers(msg);
       }
@@ -181,30 +178,6 @@ public class MockLcapStreamRouter extends LcapStreamRouter
 
   public boolean sendQueueEmpty() {
     return (mySendQueue.isEmpty());
-  }
-
-  private void mapKey(V3LcapMessage msg) {
-    //  XXX this will screw things up royally when the challenge
-    //  XXX is actually used to compute votes.
-    byte[] key = msg.getChallenge();
-    if (key1 == null || key2 == null || key == null) {
-      log.debug("not mapping key " + key);
-      return;
-    }
-    if (key.equals(key1)) {
-      log.debug("Overriding " + V3Poll.challengeToKey(key1) + " with " +
-		V3Poll.challengeToKey(key2));
-      msg.setChallenge(key2);
-    } else if (key.equals(key2)) {
-      log.debug("Overriding " + V3Poll.challengeToKey(key2) + " with " +
-		V3Poll.challengeToKey(key1));
-      msg.setChallenge(key1);
-    }
-  }
-
-  public void setKeyMap(byte[] k1, byte[] k2) {
-    key1 = k1;
-    key2 = k2;
   }
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestMockLcapStreamRouter.java,v 1.1.2.5 2004-11-28 23:08:32 dshr Exp $
+ * $Id: TestMockLcapStreamRouter.java,v 1.1.2.6 2004-11-29 03:31:09 dshr Exp $
  */
 
 /*
@@ -163,35 +163,6 @@ public class TestMockLcapStreamRouter extends LockssTestCase{
     assertTrue(received instanceof V3LcapMessage);
     assertEquals(sent, received);
     assertTrue(bitbucketRouter.sendQueueEmpty());
-  }
-
-  public void testKeyMapping() {
-    // Create a message
-    MockV3LcapMessage sent = null;
-    byte[] key1 = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-    byte[] key2 = {9, 8, 7, 6, 5, 4, 3, 2, 1, 0 };
-    try {
-      sent = new MockV3LcapMessage();
-      sent.setChallenge(key1);
-    } catch (IOException ex) {
-      fail("new MockV3LcapMessage() threw " + ex);
-    }
-    loopbackRouter.setKeyMap(key1, key2);
-    // Tell loopbackRouter to send it to p2
-    try {
-      loopbackRouter.sendTo(sent, null, null);
-    } catch (IOException ex) {
-      fail("loopbackRouter.sendTo() threw " + ex);
-    }
-    // Step time
-    // Thread.yield();
-    TimeBase.step(500);
-    // Get message from handler
-    LcapMessage received = handler1.getMessage();
-    assertNotNull(received);
-    assertTrue(received instanceof V3LcapMessage);
-    assertEquals(sent, received);
-    assertEquals(key2, received.getChallenge());
   }
 
   public class MyMessageHandler implements LcapStreamRouter.MessageHandler {
