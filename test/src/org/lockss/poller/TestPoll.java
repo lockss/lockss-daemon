@@ -80,10 +80,11 @@ public class TestPoll extends TestCase {
   }
 
   /** tearDown method for test case */
-  protected void tearDown() {
+  protected void tearDown() throws Exception {
     for(int i= 0; i< 3; i++) {
       pollmanager.removePoll(testpolls[i].m_key);
     }
+    super.tearDown();
   }
 
 

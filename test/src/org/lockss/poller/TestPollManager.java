@@ -70,10 +70,11 @@ public class TestPollManager extends TestCase {
   }
 
   /** tearDown method for test case */
-  protected void tearDown() {
+  protected void tearDown() throws Exception {
     for(int i=0; i<3; i++) {
       pollmanager.removePoll(pollmanager.makeKey(testmsg[i].getChallenge()));
     }
+    super.tearDown();
   }
 
   /** test for method makePoll(..) */

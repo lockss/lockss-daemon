@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapComm.java,v 1.2 2002-12-16 23:30:07 tal Exp $
+ * $Id: TestLcapComm.java,v 1.3 2003-01-13 17:11:29 tal Exp $
  */
 
 /*
@@ -124,6 +124,7 @@ public class TestLcapComm extends LockssTestCase {
       comm = null;
       fact = null;
     }
+    super.tearDown();
   }
 
   public void testUnicastSend() throws Exception {

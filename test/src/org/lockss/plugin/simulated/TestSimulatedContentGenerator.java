@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimulatedContentGenerator.java,v 1.10 2003-01-07 02:03:29 aalto Exp $
+ * $Id: TestSimulatedContentGenerator.java,v 1.11 2003-01-13 17:11:29 tal Exp $
  */
 
 /*
@@ -61,8 +61,8 @@ public class TestSimulatedContentGenerator extends LockssTestCase {
     scgen = new SimulatedContentGenerator(tempDirPath);
   }
 
-  public void tearDown() {
-
+  public void tearDown() throws Exception {
+    super.tearDown();
   }
 
   public void testAccessors() {
