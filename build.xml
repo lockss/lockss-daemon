@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.21 2002-11-19 23:18:33 tal Exp $
+ $Id: build.xml,v 1.22 2002-11-21 00:26:42 tal Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
@@ -427,7 +427,7 @@ Args:
       It should pipe the names to etags as in:
       find . -name \*.java -print | etags -t -S - -->
   <target name="tags" depends="prepare"
-   description="Build an emacs TAGS file in src/" >
+   description="Build an emacs TAGS file" >
     <apply executable="etags" dir="${basedir}"
            relative="true"
            parallel="true">
@@ -436,6 +436,8 @@ Args:
 <!--        <arg file="${etags.filename}"/> -->
       <fileset dir="${basedir}" includes="**/*.java"/>
     </apply>
+    <property name="tagsfile" location="TAGS" />
+    <echo>Tags written to ${tagsfile}</echo>
   </target>
 
   <!-- ==================================================================== -->
