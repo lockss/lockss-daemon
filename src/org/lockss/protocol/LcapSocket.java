@@ -1,5 +1,5 @@
 /*
- * $Id: LcapSocket.java,v 1.1 2002-11-05 21:16:05 tal Exp $
+ * $Id: LcapSocket.java,v 1.2 2002-11-06 21:19:20 tal Exp $
  */
 
 /*
@@ -43,15 +43,15 @@ public class LcapSocket {
 
   DatagramSocket sock;
 
+  /** Create an LcapSocket to send packets on a new datagram socket. */
+  public LcapSocket() throws SocketException {
+    this(new DatagramSocket());
+  }
+
   /** Create an LcapSocket to send packets on the datagram socket.
    * Intended for internal use and testing. */
   LcapSocket(DatagramSocket sock) {
     this.sock = sock;
-  }
-
-  /** Create an LcapSocket to send packets on a new datagram socket. */
-  public LcapSocket() throws SocketException {
-    this(new DatagramSocket());
   }
 
   /** Send a packet
@@ -67,8 +67,9 @@ public class LcapSocket {
     private ReceiveThread rcvThread;
 
     /** Subclasses should call this with the socket they create */
-    protected RcvSocket(DatagramSocket sock) {
+    protected RcvSocket(Queue rcvQ, DatagramSocket sock) {
       super(sock);
+      this.rcvQ = rcvQ;
       log = Logger.getLogger(getThreadName());
     }
 
@@ -105,7 +106,7 @@ public class LcapSocket {
 
     /** Receive one packet, build a DatagramPacket, call the LcapSocket's
 	processReceivedDatagram() */
-    private void receivePacket()throws IOException {
+    private void receivePacket() throws IOException {
       byte buf[] = new byte[LockssDatagram.MAX_SIZE];
       DatagramPacket pkt = new DatagramPacket(buf, LockssDatagram.MAX_SIZE);
       try {
@@ -159,7 +160,13 @@ public class LcapSocket {
      @param port The UDP port to which tobind the socket
     */
     public Unicast(Queue rcvQ, int port) throws SocketException {
-      super(new DatagramSocket(port));
+      this(rcvQ, new DatagramSocket(port));
+    }
+
+    /** Create a Unicast receive socket that receives from the datagram socket.
+     * Intended for internal use and testing only. */
+    Unicast(Queue rcvQ, DatagramSocket sock) {
+      super(rcvQ, sock);
     }
 
     /* Mark the packet as unicast, add to the queue */
@@ -186,11 +193,17 @@ public class LcapSocket {
      @param grp The multicast group to join
      @param port The UDP port to which tobind the socket
     */
-    Multicast(Queue rcvQ, InetAddress grp, int port)
+    public Multicast(Queue rcvQ, InetAddress grp, int port)
 	throws IOException {
-      super(new MulticastSocket(port));
-      MulticastSocket msock = (MulticastSocket)sock;
-      msock.joinGroup(grp);
+      this(rcvQ, new MulticastSocket(port), grp);
+    }
+
+    /** Create a Multicast receive socket that receives from the multicast
+     * socket.  Intended for internal use and testing only. */
+    Multicast(Queue rcvQ, MulticastSocket sock, InetAddress grp)
+	throws IOException {
+      super(rcvQ, sock);
+      sock.joinGroup(grp);
     }
 
     /* Mark the packet as multicast iff it really is, add to the queue */
