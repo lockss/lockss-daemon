@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerServiceImpl.java,v 1.4 2003-03-08 02:45:02 aalto Exp $
+ * $Id: NodeManagerServiceImpl.java,v 1.5 2003-04-03 05:22:02 claire Exp $
  */
 
 /*
@@ -37,34 +37,41 @@ import org.lockss.app.*;
 import org.lockss.daemon.Configuration;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.Logger;
+import org.lockss.daemon.status.*;
 
 /**
  * Implementation of the NodeManagerService.
  */
-public class NodeManagerServiceImpl implements NodeManagerService {
-  private static LockssDaemon theDaemon;
-  private static LockssManager theManager = null;
+public class NodeManagerServiceImpl extends BaseLockssManager
+    implements NodeManagerService {
   private HashMap auMap = new HashMap();
   private static Logger logger = Logger.getLogger("NodeManagerService");
 
   public NodeManagerServiceImpl() { }
 
-  public void initService(LockssDaemon daemon) throws LockssDaemonException {
-    if (theManager == null) {
-      theDaemon = daemon;
-      theManager = this;
-    } else {
-      throw new LockssDaemonException("Multiple Instantiation.");
-    }
-  }
 
   public void startService() {
+    super.startService();
+    // register our status
+    StatusService statusServ = theDaemon.getStatusService();
+    NodeManagerStatus nmStatus = new NodeManagerStatus(this);
+
+    statusServ.registerStatusAccessor(NodeManagerStatus.SERVICE_STATUS_TABLE_NAME,
+                                      new NodeManagerStatus.ServiceStatus());
+    statusServ.registerStatusAccessor(NodeManagerStatus.MANAGER_STATUS_TABLE_NAME,
+                                      new NodeManagerStatus.ManagerStatus());
+
   }
 
   public void stopService() {
     // checkpoint here
+    // unregister our status accessors
+    StatusService statusServ = theDaemon.getStatusService();
+    statusServ.unregisterStatusAccessor(NodeManagerStatus.SERVICE_STATUS_TABLE_NAME);
+    statusServ.unregisterStatusAccessor(NodeManagerStatus.MANAGER_STATUS_TABLE_NAME);
+
     stopAllManagers();
-    theManager = null;
+    super.stopService();
   }
 
   private void stopAllManagers() {
@@ -93,5 +100,11 @@ public class NodeManagerServiceImpl implements NodeManagerService {
       nodeManager.initService(theDaemon);
       nodeManager.startService();
     }
+  }
+
+  // support for status
+
+  Iterator getEntries() {
+    return auMap.entrySet().iterator();
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlState.java,v 1.4 2003-03-15 02:53:29 aalto Exp $
+ * $Id: CrawlState.java,v 1.5 2003-04-03 05:22:02 claire Exp $
  */
 
 /*
@@ -77,11 +77,60 @@ public class CrawlState {
   }
 
   /**
+   * Return the crawl type as a string
+   * @return a String representing the type
+   */
+  public String getTypeString() {
+    String str;
+
+    switch (type) {
+      case NEW_CONTENT_CRAWL:
+        str = "New Content";
+        break;
+      case REPAIR_CRAWL:
+        str = "Repair";
+        break;
+      case BACKGROUND_CRAWL:
+        str = "Background";
+        break;
+      case NODE_DELETED:
+        str = "Node Deleted";
+        break;
+      default:
+        str = "Undefined";
+    }
+    return str;
+  }
+
+  /**
    * Returns the status of the crawl.
    * @return an int representing the current status
    */
   public int getStatus() {
     return status;
+  }
+
+  /**
+   * return the status of the crawl as a string.
+   * @return a String representing the current status
+   */
+  public String getStatusString() {
+    String str;
+
+    switch (status) {
+      case SCHEDULED:
+        str = "scheduled";
+        break;
+      case RUNNING:
+        str = "running";
+        break;
+      case FINISHED:
+        str = "finished";
+        break;
+      default:
+        str = "Undefined";
+    }
+    return str;
   }
 
   /**

@@ -1,5 +1,5 @@
 /*
- * $Id: PollState.java,v 1.14 2003-04-02 23:29:19 tal Exp $
+ * $Id: PollState.java,v 1.15 2003-04-03 05:22:02 claire Exp $
  */
 
 /*
@@ -87,6 +87,17 @@ public class PollState implements Comparable {
     return type;
   }
 
+  public String getTypeString() {
+    switch (type) {
+      case 0:
+        return "Name Poll";
+      case 1:
+        return "Content Poll";
+      default:
+        return "Undefined";
+    }
+  }
+
   /**
    * Returns the lower boundary for a ranged match this poll.
    * @return the lower bound or null
@@ -103,12 +114,50 @@ public class PollState implements Comparable {
     return uprBound;
   }
 
+  public String getRangeString() {
+    if(lwrBound != null || uprBound != null) {
+      return "[" + lwrBound + " - " + uprBound + "]";
+    }
+    return "none";
+  }
+
   /**
    * Returns the status of the poll.
    * @return an int representing the current status
    */
   public int getStatus() {
     return status;
+  }
+
+  public String getStatusString() {
+    switch(status) {
+      case SCHEDULED:
+        return "Scheduled";
+      case RUNNING:
+        return "Running";
+      case REPAIRING:
+        return "Repairing";
+      case WON:
+        return "Won";
+      case LOST:
+        return "Lost";
+      case REPAIRED:
+        return "Repaired";
+      case UNREPAIRABLE:
+        return "Unrepairable";
+      case ERR_SCHEDULE_HASH:
+        return "Error scheduling hash";
+      case ERR_HASHING:
+        return "Error hashing";
+      case ERR_NO_QUORUM:
+        return "Error no quorum";
+      case ERR_IO:
+        return "Error I/0";
+      case ERR_UNDEFINED:
+        return "Undefined error";
+      default:
+        return "Undefined";
+    };
   }
 
   /**
