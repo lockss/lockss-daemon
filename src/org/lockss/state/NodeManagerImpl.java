@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.45 2003-03-01 03:21:30 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.46 2003-03-03 19:35:20 troberts Exp $
  */
 
 /*
@@ -315,8 +315,7 @@ public class NodeManagerImpl implements NodeManager {
   }
 
   void doTreeWalk() {
-    if (theCrawlManager.canTreeWalkStart(managerAu,
-					 getAuState(), null, null)) {
+    if (theCrawlManager.canTreeWalkStart(managerAu, null, null)) {
       long startTime = TimeBase.nowMs();
       // if it's been too long, start a top level poll
       //XXX ask the Plugin
