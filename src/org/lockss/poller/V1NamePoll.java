@@ -1,5 +1,5 @@
 /*
- * $Id: V1NamePoll.java,v 1.12 2004-10-21 22:51:57 clairegriffin Exp $
+ * $Id: V1NamePoll.java,v 1.13 2004-10-22 00:36:41 troberts Exp $
  */
 
 /*
@@ -158,7 +158,7 @@ public class V1NamePoll extends V1Poll {
         boolean hasContent = cusn.hasContent();
         if (name.startsWith(baseUrl)) {
           name = name.substring(baseUrl.length());
-        }
+        } //XXX add error message
         log.debug3("adding file name " + name + " - hasContent=" + hasContent);
         alist.add(new PollTally.NameListEntry(hasContent, name));
       }
