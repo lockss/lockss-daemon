@@ -1,5 +1,5 @@
 /*
- * $Id: LcapRouter.java,v 1.7 2003-03-28 08:13:20 tal Exp $
+ * $Id: LcapRouter.java,v 1.8 2003-03-28 23:39:17 tal Exp $
  */
 
 /*
@@ -72,7 +72,7 @@ public class LcapRouter extends BaseLockssManager {
   private double probAddPartner;
   private List localInterfaces;
   private long beaconInterval = 0;
-  private int initialHopCount = LcapMessage.MAX_MAX_HOP_COUNT;
+  private int initialHopCount = LcapMessage.MAX_HOP_COUNT_LIMIT;
   private Deadline beaconDeadline = Deadline.at(TimeBase.NEVER);;
   private PartnerList partnerList = new PartnerList();
   private Configuration.Callback configCallback;
@@ -124,7 +124,7 @@ public class LcapRouter extends BaseLockssManager {
     probAddPartner = (((double)config.getInt(PARAM_PROB_PARTNER_ADD, 0))
 		      / 100.0);
     initialHopCount =
-      config.getInt(PARAM_INITIAL_HOPCOUNT, LcapMessage.MAX_MAX_HOP_COUNT);
+      config.getInt(PARAM_INITIAL_HOPCOUNT, LcapMessage.MAX_HOP_COUNT_LIMIT);
 
     partnerList.setConfig(config);
 
@@ -149,7 +149,9 @@ public class LcapRouter extends BaseLockssManager {
     }
   }
 
-  /** Multicast a message to all caches holding the ArchivalUnit.
+  /** Multicast a message to all caches holding the ArchivalUnit.  All
+   * messages originated by this cache go through either this or {@link
+   * #sendTo(LcapMessage, ArchivalUnit, LcapIdentity)}.
    * @param msg the message to send
    * @param au archival unit for which this message is relevant.  Used to
    * determine which multicast socket/port to send to.
@@ -166,7 +168,9 @@ public class LcapRouter extends BaseLockssManager {
     rateLimiter.event();
   }
 
-  /** Unicast a message to a single cache.
+  /** Unicast a message to a single cache.  All
+   * messages originated by this cache go through either this or {@link
+   * #send(LcapMessage, ArchivalUnit)}.
    * @param msg the message to send
    * @param au archival unit for which this message is relevant.  Used to
    * determine which multicast socket/port to send to.

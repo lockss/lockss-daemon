@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessage.java,v 1.28 2003-03-26 23:39:39 claire Exp $
+ * $Id: LcapMessage.java,v 1.29 2003-03-28 23:39:17 tal Exp $
  */
 
 /*
@@ -69,7 +69,7 @@ public class LcapMessage
   public static final String[] POLL_NAMES = {
       "NamePoll", "ContentPoll", "VerfiyPoll"};
 
-  public static final int MAX_MAX_HOP_COUNT = 16;
+  public static final int MAX_HOP_COUNT_LIMIT = 16;
   public static final int SHA_LENGTH = 20;
   public static final int MAX_PACKET_SIZE = 1024; // Don't exceed 1450 - 28
 
@@ -567,8 +567,8 @@ public class LcapMessage
   public void setHopCount(int hopCount) {
     if (hopCount < 0) {
       hopCount = 0;
-    } else if (hopCount > MAX_MAX_HOP_COUNT) {
-      hopCount = MAX_MAX_HOP_COUNT;
+    } else if (hopCount > MAX_HOP_COUNT_LIMIT) {
+      hopCount = MAX_HOP_COUNT_LIMIT;
     }
     m_hopCount = (byte) hopCount;
   }
@@ -666,7 +666,7 @@ public class LcapMessage
   }
 
   private boolean hopCountInRange(int hopCount) {
-    if (hopCount < 0 || hopCount > MAX_MAX_HOP_COUNT)
+    if (hopCount < 0 || hopCount > MAX_HOP_COUNT_LIMIT)
       return false;
     return true;
   }

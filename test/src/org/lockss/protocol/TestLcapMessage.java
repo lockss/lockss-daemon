@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapMessage.java,v 1.18 2003-03-26 23:39:39 claire Exp $
+ * $Id: TestLcapMessage.java,v 1.19 2003-03-28 23:39:17 tal Exp $
  */
 
 /*
@@ -305,7 +305,7 @@ public class TestLcapMessage extends LockssTestCase {
   }
 
   public void testHopCount() {
-    int max = LcapMessage.MAX_MAX_HOP_COUNT;
+    int max = LcapMessage.MAX_HOP_COUNT_LIMIT;
     testmsg.setHopCount(0);
     assertEquals(0, testmsg.getHopCount());
     testmsg.setHopCount(-40);
