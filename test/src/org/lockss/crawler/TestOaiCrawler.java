@@ -1,5 +1,5 @@
 /*
- * $Id: TestOaiCrawler.java,v 1.1 2004-12-04 01:09:23 dcfok Exp $
+ * $Id: TestOaiCrawler.java,v 1.2 2004-12-12 23:02:09 tlipkis Exp $
  */
 
 /*
@@ -227,6 +227,10 @@ public class TestOaiCrawler extends LockssTestCase {
 
     protected void setUrlsToFollow(Set urls){
       updatedUrls = urls;
+    }
+
+    /** suppress these actions */
+    protected void doCrawlEndActions() {
     }
   }//end of MyOaiCrawler
 

@@ -1,5 +1,5 @@
 /*
- * $Id: FuncNewContentCrawler.java,v 1.10 2004-10-20 18:41:18 dcfok Exp $
+ * $Id: FuncNewContentCrawler.java,v 1.11 2004-12-12 23:02:09 tlipkis Exp $
  */
 
 /*
@@ -136,6 +136,12 @@ public class FuncNewContentCrawler extends LockssTestCase {
 			 " content ["+ dir +"] is not a directory");
     }
 
+    // Test PluginManager.getAuContentSize(), just because this is a
+    // convenient place to do it.  (And NewContentCrawler calls it at the
+    // end.)  If the simulated AU params are changed, or
+    // SimulatedContentGenerator is changed, this number may have to
+    // change.
+    assertEquals(25126, PluginManager.getAuContentSize(sau));
   }
 
   //recursive caller to check through the whole file tree

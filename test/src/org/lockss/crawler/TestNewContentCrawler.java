@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.28 2004-12-02 00:14:03 dcfok Exp $
+ * $Id: TestNewContentCrawler.java,v 1.29 2004-12-12 23:02:09 tlipkis Exp $
  */
 
 /*
@@ -79,7 +79,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     crawlRule.addUrlToCrawl(permissionPage);
     mau.addUrl(permissionPage);
     spec = new SpiderCrawlSpec(startUrls, ListUtil.list(permissionPage), crawlRule, 1);
-    crawler = new NewContentCrawler(mau, spec, aus);
+    crawler = new MyNewContentCrawler(mau, spec, aus);
     ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MyMockPermissionChecker(1));
 
     mau.setParser(parser);
@@ -90,7 +90,7 @@ public class TestNewContentCrawler extends LockssTestCase {
 
   public void testMnccThrowsForNullAu() {
     try {
-      crawler = new NewContentCrawler(null, spec, new MockAuState());
+      crawler = new MyNewContentCrawler(null, spec, new MockAuState());
       fail("Constructing a NewContentCrawler with a null ArchivalUnit"
 	   +" should throw an IllegalArgumentException");
     } catch (IllegalArgumentException iae) {
@@ -99,7 +99,7 @@ public class TestNewContentCrawler extends LockssTestCase {
 
   public void testMnccThrowsForNullCrawlSpec() {
     try {
-      crawler = new NewContentCrawler(mau, null, new MockAuState());
+      crawler = new MyNewContentCrawler(mau, null, new MockAuState());
       fail("Calling makeNewContentCrawler with a null CrawlSpec"
 	   +" should throw an IllegalArgumentException");
     } catch (IllegalArgumentException iae) {
@@ -108,7 +108,7 @@ public class TestNewContentCrawler extends LockssTestCase {
 
   public void testMnccThrowsForNullAuState() {
     try {
-      crawler = new NewContentCrawler(mau, spec, null);
+      crawler = new MyNewContentCrawler(mau, spec, null);
       fail("Calling makeNewContentCrawler with a null AuState"
 	   +" should throw an IllegalArgumentException");
     } catch (IllegalArgumentException iae) {
@@ -148,7 +148,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     }
 
     spec = new SpiderCrawlSpec(urls, ListUtil.list(permissionPage), crawlRule, 1);
-    crawler = new NewContentCrawler(mau, spec, new MockAuState());
+    crawler = new MyNewContentCrawler(mau, spec, new MockAuState());
     ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MyMockPermissionChecker(1));
 
     assertTrue(crawler.doCrawl());
@@ -225,7 +225,7 @@ public class TestNewContentCrawler extends LockssTestCase {
 
     List updatedStartUrls = ListUtil.list(startUrl, startUrl2);
     spec = new SpiderCrawlSpec(updatedStartUrls, permissionList, crawlRule, 1);
-    crawler = new NewContentCrawler(mau, spec, new MockAuState());
+    crawler = new MyNewContentCrawler(mau, spec, new MockAuState());
     ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MyMockPermissionChecker(2));
 
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
@@ -362,7 +362,7 @@ public class TestNewContentCrawler extends LockssTestCase {
 
     List updatedStartUrls = ListUtil.list(startUrl, startUrl2);
     spec = new SpiderCrawlSpec(updatedStartUrls, permissionList, crawlRule, 1);
-    crawler = new NewContentCrawler(mau, spec, new MockAuState());
+    crawler = new MyNewContentCrawler(mau, spec, new MockAuState());
     ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MyMockPermissionChecker(2));
 
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
@@ -377,7 +377,7 @@ public class TestNewContentCrawler extends LockssTestCase {
 
   public void testOverwritesStartingUrlsMultipleLevels() {
     spec = new SpiderCrawlSpec(startUrls, ListUtil.list(permissionPage), crawlRule, 2);
-    crawler = new NewContentCrawler(mau, spec, new MockAuState());
+    crawler = new MyNewContentCrawler(mau, spec, new MockAuState());
     ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MyMockPermissionChecker(1));
 
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
@@ -415,7 +415,7 @@ public class TestNewContentCrawler extends LockssTestCase {
 
     List updatedStartUrls = ListUtil.list(startUrl, startUrl2);
     spec = new SpiderCrawlSpec(updatedStartUrls, permissionList, crawlRule, 2);
-    crawler = new NewContentCrawler(mau, spec, new MockAuState());
+    crawler = new MyNewContentCrawler(mau, spec, new MockAuState());
     ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MyMockPermissionChecker(2));
 
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
@@ -473,7 +473,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     crawlRule.addUrlToCrawl(url3);
 
 
-    crawler = new NewContentCrawler(mau, spec, aus);
+    crawler = new MyNewContentCrawler(mau, spec, aus);
     ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MyMockPermissionChecker(100));
 
     mau.setParser(parser);
@@ -522,7 +522,7 @@ public class TestNewContentCrawler extends LockssTestCase {
 
 
     spec = new SpiderCrawlSpec(startUrls, ListUtil.list(permissionPage), crawlRule, 1);
-    crawler = new NewContentCrawler(mau, spec, aus);
+    crawler = new MyNewContentCrawler(mau, spec, aus);
     ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MyMockPermissionChecker(100));
 
     mau.addUrl(startUrl, false, true);
@@ -552,6 +552,17 @@ public class TestNewContentCrawler extends LockssTestCase {
     Properties p = new Properties();
     p.setProperty(prop, value);
     ConfigurationUtil.setCurrentConfigFromProps(p);
+  }
+
+  private static class MyNewContentCrawler extends NewContentCrawler {
+    protected MyNewContentCrawler(ArchivalUnit au, CrawlSpec spec,
+				  AuState aus){
+      super(au, spec, aus);
+    }
+
+    /** suppress these actions */
+    protected void doCrawlEndActions() {
+    }
   }
 
   private class MyMockArchivalUnit extends MockArchivalUnit {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestFollowLinkCrawler.java,v 1.2 2004-12-04 01:09:23 dcfok Exp $
+ * $Id: TestFollowLinkCrawler.java,v 1.3 2004-12-12 23:02:09 tlipkis Exp $
  */
 
 /*
@@ -183,7 +183,8 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     String url1="http://www.example.com/blah.html";
     mau.addUrl(startUrl, false, true);
     ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(SetUtil.set(url1));
-    mau.addUrl(url1, new IOException("Test exception"), DEFAULT_RETRY_TIMES);
+    mau.addUrl(url1, new ExpectedIOException("Test exception"),
+	       DEFAULT_RETRY_TIMES);
     crawlRule.addUrlToCrawl(url1);
 
     assertFalse(crawler.doCrawl0());
@@ -279,7 +280,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 	       new CacheException.RetryableException("Test exception"),
 	       retryNum);
     parser.addUrlSetToReturn(url3, SetUtil.set(url1));
-    mau.addUrl(url1, new IOException("Test exception"), retryNum);
+    mau.addUrl(url1, new ExpectedIOException("Test exception"), retryNum);
 
     crawlRule.addUrlToCrawl(url1);
     crawlRule.addUrlToCrawl(url2);
@@ -718,7 +719,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     String url2= "http://www.foo.com/link2.html";
     List urls = ListUtil.list(url1, url2);
 
-    mau.addUrl(permissionUrl1, new IOException(), 2);
+    mau.addUrl(permissionUrl1, new ExpectedIOException(), 2);
     mau.addUrl(permissionUrl2, false, true);
 
     MockCachedUrlSet cus = permissionPageTestSetup(permissionList,100,
@@ -741,7 +742,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     String url2= "http://www.example.com/link2.html";
     List urls = ListUtil.list(url1,url2);
 
-    mau.addUrl(permissionUrl1, new IOException(), 1);
+    mau.addUrl(permissionUrl1, new ExpectedIOException(), 1);
 
     MockCachedUrlSet cus = permissionPageTestSetup(permissionList,100,
 						   urls, mau); 
@@ -918,6 +919,10 @@ public class TestFollowLinkCrawler extends LockssTestCase {
       return true;
     }
     
+    /** suppress these actions */
+    protected void doCrawlEndActions() {
+    }
+
     /**
      * setUrlsToFollow set the urls set that will return when calling 
      * getUrlsToFollow
