@@ -1,5 +1,5 @@
 /*
- * $Id: PlatformInfo.java,v 1.7 2005-01-07 09:24:01 tlipkis Exp $
+ * $Id: PlatformInfo.java,v 1.8 2005-01-31 22:59:55 tlipkis Exp $
  */
 
 /*
@@ -170,7 +170,12 @@ public class PlatformInfo {
   }
 
   int getInt(String s) throws NumberFormatException{
-    return Integer.parseInt(s);
+    try {
+      return Integer.parseInt(s);
+    } catch (NumberFormatException e) {
+      log.warning("Illegal number in DF output: " + s);
+      return 0;
+    }
   }
 
   static Runtime rt() {
