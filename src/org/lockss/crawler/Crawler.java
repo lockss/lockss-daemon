@@ -15,7 +15,7 @@ import org.lockss.daemon.CachedUrl;
 import org.lockss.daemon.UrlCacher;
 import org.lockss.daemon.CachedUrlSet;
 import org.lockss.daemon.CachedUrlSetSpec;
-import org.lockss.util.StringUtils;
+import org.lockss.util.StringUtil;
 import org.lockss.util.Logger;
 
 
@@ -336,7 +336,7 @@ public class Crawler{
     default:
       return null;
     }
-    int linkIdx = StringUtils.getIndexIgnoringCase(link.toString(), key);
+    int linkIdx = StringUtil.getIndexIgnoringCase(link.toString(), key);
     if (linkIdx < 0){
       return null;
     }
@@ -352,7 +352,7 @@ public class Crawler{
     }
 
     returnStr = link.substring(idx);
-    returnStr = StringUtils.trimAfterChars(returnStr, " #\"");
+    returnStr = StringUtil.trimAfterChars(returnStr, " #\"");
     URL retUrl = new URL(srcUrl, returnStr);
     return retUrl.toString();
   } 
