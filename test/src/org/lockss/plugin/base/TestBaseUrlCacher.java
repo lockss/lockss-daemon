@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.15 2004-03-07 08:36:32 tlipkis Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.16 2004-03-08 19:33:24 tlipkis Exp $
  */
 
 /*
@@ -111,7 +111,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
   public void testLastModifiedCache() throws IOException {
     // add the 'cached' version
     Properties cachedProps = new Properties();
-    cachedProps.setProperty("date", "12345");
+    cachedProps.setProperty(CachedUrl.PROPERTY_FETCH_DATE, "12345");
 //     mcus.addUrl("test stream", TEST_URL, true, true, cachedProps);
      mcus.addUrl(TEST_URL, true, true, cachedProps);
 
@@ -135,7 +135,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
   public void testForceCache() throws IOException {
     // add the 'cached' version
     Properties cachedProps = new Properties();
-    cachedProps.setProperty("date", "12345");
+    cachedProps.setProperty(CachedUrl.PROPERTY_FETCH_DATE, "12345");
 //     mcus.addUrl("test stream", TEST_URL, true, true, cachedProps);
     mcus.addUrl(TEST_URL, true, true, cachedProps);
 
@@ -247,12 +247,11 @@ public class TestBaseUrlCacher extends LockssTestCase {
     assertNull("444332", mconn.getRequestProperty("if-modified-since"));
   }
 
-  
   MockConnectionMockBaseUrlCacher makeMucWithContent() {
     MockConnectionMockBaseUrlCacher muc =
       new MockConnectionMockBaseUrlCacher(mcus, TEST_URL);
     Properties cuprops = new Properties();
-    cuprops.setProperty("date", "12345000");
+    cuprops.setProperty(CachedUrl.PROPERTY_FETCH_DATE, "12345000");
     mcus.addUrl(TEST_URL, true, true, cuprops);
     return muc;
   }
@@ -278,6 +277,9 @@ public class TestBaseUrlCacher extends LockssTestCase {
     muc.cache();
     assertEquals(TEST_URL, mconn.getURL());
     assertNull(mconn.getRequestProperty("if-modified-since"));
+    // check the CU contents and properties
+    assertCuContents(TEST_URL, "foo");
+    assertCuProperty(TEST_URL, null, CachedUrl.PROPERTY_REDIRECTED_TO);
   }
 
   // Should throw exception derived from response code
@@ -328,7 +330,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
     InputStream is = muc.getUncachedInputStream();
     Properties p = muc.getUncachedProperties();
     assertNull(p.getProperty("_header_location"));
-    assertEquals(redTo, p.getProperty("redirected-to"));
+    assertEquals(redTo, p.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO));
     assertReaderMatchesString("bar", new InputStreamReader(is));
     // Make sure the UrlCacher still has the original URL
     assertEquals(TEST_URL, muc.getUrl());
@@ -368,7 +370,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
     InputStream is = muc.getUncachedInputStream();
     Properties p = muc.getUncachedProperties();
     assertNull(p.getProperty("_header_location"));
-    assertEquals(redTo, p.getProperty("redirected-to"));
+    assertEquals(redTo, p.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO));
     assertReaderMatchesString("bar", new InputStreamReader(is));
   }
 
@@ -405,12 +407,14 @@ public class TestBaseUrlCacher extends LockssTestCase {
     muc.cache();
     Properties p = muc.getUncachedProperties();
     assertNull(p.getProperty("_header_location"));
-    assertEquals(redTo, p.getProperty("redirected-to"));
+    assertEquals(redTo, p.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO));
 
     assertCuContents(TEST_URL, "bar");
+    assertCuProperty(TEST_URL, redTo, CachedUrl.PROPERTY_REDIRECTED_TO);
+    // final CU should have same contents
     assertCuContents(redTo, "bar");
-    assertCuProperty(TEST_URL, redTo, "redirected-to");
-    assertCuProperty(redTo, redTo, "redirected-to");
+    // but should *not* have a redirected-to property
+    assertCuProperty(redTo, null, CachedUrl.PROPERTY_REDIRECTED_TO);
   }
 
   public void testRedirectWritesAll() throws Exception {
@@ -432,13 +436,18 @@ public class TestBaseUrlCacher extends LockssTestCase {
     muc.cache();
     Properties p = muc.getUncachedProperties();
     assertNull(p.getProperty("_header_location"));
-    assertEquals(redTo3, p.getProperty("redirected-to"));
+    assertEquals(redTo3, p.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO));
 
+    // verify all have the correct contents, and all but the last have a
+    // redirected-to header
     assertCuContents(TEST_URL, content);
     assertCuContents(redTo1, content);
     assertCuContents(redTo2, content);
     assertCuContents(redTo3, content);
-    assertCuProperty(TEST_URL, redTo3, "redirected-to");
+    assertCuProperty(TEST_URL, redTo3, CachedUrl.PROPERTY_REDIRECTED_TO);
+    assertCuProperty(redTo1, redTo3, CachedUrl.PROPERTY_REDIRECTED_TO);
+    assertCuProperty(redTo2, redTo3, CachedUrl.PROPERTY_REDIRECTED_TO);
+    assertCuProperty(redTo3, null, CachedUrl.PROPERTY_REDIRECTED_TO);
   }
 
   void assertCuContents(String url, String contents) throws IOException {

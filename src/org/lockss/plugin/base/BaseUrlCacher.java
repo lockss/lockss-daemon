@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.26 2004-03-07 08:36:32 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.27 2004-03-08 19:33:24 tlipkis Exp $
  */
 
 /*
@@ -55,8 +55,6 @@ public class BaseUrlCacher implements UrlCacher {
   /** Maximum number of redirects that will be followed */
   static final int MAX_REDIRECTS = 10;
 
-  public static final String HEADER_PREFIX = "_header_";
-
   protected CachedUrlSet cus;
   protected Plugin plugin;
   protected String origUrl;		// URL with which I was created
@@ -81,7 +79,7 @@ public class BaseUrlCacher implements UrlCacher {
   }
 
   /**
-   * Return the URL in string form.  Always returns the original URL,
+   * Returns the original URL (the one the UrlCacher was created with),
    * independent of any redirects followed.
    * @return the url string
    */
@@ -149,11 +147,16 @@ public class BaseUrlCacher implements UrlCacher {
     long lastCached = 0;
     if (!forceRefetch) {
       CachedUrl cachedVersion = plugin.makeCachedUrl(cus, origUrl);
+
+      // XXX THIS IS WRONG.  SHOULD USE LAST_MODIFIED TIME
+
       // if it's been cached, get the last caching time and use that
       if ((cachedVersion!=null) && cachedVersion.hasContent()) {
 	Properties cachedProps = cachedVersion.getProperties();
+	String datestr =
+	  cachedProps.getProperty(CachedUrl.PROPERTY_FETCH_DATE);
 	try {
-	  lastCached = Long.parseLong(cachedProps.getProperty("date"));
+	  lastCached = Long.parseLong(datestr);
 	} catch (NumberFormatException nfe) { }
       }
     }
@@ -197,7 +200,19 @@ public class BaseUrlCacher implements UrlCacher {
 	if (logger.isDebug3())
 	  logger.debug3("Storing in redirected-to url '"+ name +"'");
 	InputStream is = cu.getUnfilteredInputStream();
-	storeContentIn(name, is, headers);
+	if (name.equals(fetchUrl)) {
+	  // this one was not redirected, don't store a redirected-to property
+	  Properties newHeaders  = new Properties();
+	  for (Iterator pi = headers.keySet().iterator(); pi.hasNext(); ) {
+	    String key = (String)pi.next();
+	    if (!key.equals(CachedUrl.PROPERTY_REDIRECTED_TO)) {
+	      newHeaders.setProperty(key, headers.getProperty(key));
+	    }
+	  }
+	  storeContentIn(name, is, newHeaders);
+	} else {
+	  storeContentIn(name, is, headers);
+	}
       }
     }
   }
@@ -265,16 +280,19 @@ public class BaseUrlCacher implements UrlCacher {
     if (uncachedProperties == null) {
       Properties props = new Properties();
       // set header properties in which we have interest
-      props.setProperty("content-type", conn.getResponseContentType());
-      props.setProperty("date", Long.toString(conn.getResponseDate()));
+
+      props.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE,
+			conn.getResponseContentType());
+      props.setProperty(CachedUrl.PROPERTY_FETCH_DATE,
+			Long.toString(conn.getResponseDate()));
       // XXX this property does not have consistent semantics.  It will be
       // set to the first url in a chain of redirects that led to content,
       // which could be different depending on fetch order.
-      props.setProperty("content-url", origUrl);
-      conn.storeResponseHeaderInto(props, HEADER_PREFIX);
+      props.setProperty(CachedUrl.PROPERTY_URL, origUrl);
+      conn.storeResponseHeaderInto(props, CachedUrl.HEADER_PREFIX);
       String actualURL = conn.getActualUrl();
       if (!origUrl.equals(actualURL)) {
-	props.setProperty("redirected-to", actualURL);
+	props.setProperty(CachedUrl.PROPERTY_REDIRECTED_TO, actualURL);
       }
       uncachedProperties = props;
     }
