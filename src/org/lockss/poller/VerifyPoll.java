@@ -1,5 +1,5 @@
 /*
-* $Id: VerifyPoll.java,v 1.40 2003-05-06 04:03:57 claire Exp $
+* $Id: VerifyPoll.java,v 1.41 2003-05-08 01:19:41 claire Exp $
  */
 
 /*
@@ -147,7 +147,8 @@ class VerifyPoll extends Poll {
     hasher.update(hashed, 0, hashed.length);
     byte[] HofHashed = hasher.digest();
     boolean agree = Arrays.equals(challenge, HofHashed);
-    updateReputation();
+    if(isMyPoll())
+      updateReputation();
     m_tally.addVote(new Vote(msg, agree),
                     id, idMgr.isLocalIdentity(id));
   }
@@ -180,10 +181,11 @@ class VerifyPoll extends Poll {
   private void sendVerifyReply(LcapMessage msg) throws IOException  {
     String url = new String(msg.getTargetUrl());
     ArchivalUnit au;
+    String chal = String.valueOf(B64Code.encode(msg.getChallenge()));
     byte[] secret = m_pollmanager.getSecret(msg.getChallenge());
     if(secret == null) {
       log.error("Verify poll reply failed.  Unable to find secret for: "
-                + String.valueOf(B64Code.encode(msg.getChallenge())));
+                + chal);
       return;
     }
     byte[] verifier = m_pollmanager.makeVerifier();
@@ -200,6 +202,8 @@ class VerifyPoll extends Poll {
     PollSpec spec = new PollSpec(repmsg);
     au = spec.getCachedUrlSet().getArchivalUnit();
     m_pollmanager.sendMessageTo(repmsg, au, originator);
+    log.debug("adding our check to poll");
+    performHash(repmsg);
   }
 
   private void startVoteCheck(LcapMessage msg) {

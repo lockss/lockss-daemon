@@ -27,6 +27,9 @@ public class PollTally {
   public static final int STATE_RESULTS_UNTRUSTED = 4;
   public static final int STATE_WON = 5;
   public static final int STATE_LOST = 6;
+  public static final int STATE_UNVERIFIED = 7;
+  public static final int STATE_VERIFIED = 8;
+  public static final int STATE_DISOWNED = 9;
   public static final int STATE_SUSPENDED = 10;
 
   PollSpec pollSpec;
@@ -45,8 +48,8 @@ public class PollTally {
   String hashAlgorithm; // the algorithm used to hash this poll
   long m_createTime;       // poll creation time
 
-  Object[] localEntries = null;  // the local entries less the remaining RegExp
-  Object[] votedEntries = null;  // entries which match the won votes in a poll
+  List localEntries = null;  // the local entries less the remaining RegExp
+  List votedEntries = null;  // entries which match the won votes in a poll
   private Deadline replayDeadline = null;
   private Iterator replayIter = null;
   private ArrayList originalVotes = null;
@@ -166,7 +169,7 @@ public class PollTally {
    */
   public Iterator getCorrectEntries() {
     return votedEntries == null ? CollectionUtil.EMPTY_ITERATOR :
-        new ArrayIterator(votedEntries);
+        votedEntries.iterator();
   }
 
   /**
@@ -175,7 +178,7 @@ public class PollTally {
    */
   public Iterator getLocalEntries() {
     return localEntries == null ? CollectionUtil.EMPTY_ITERATOR :
-        new ArrayIterator(localEntries);
+        localEntries.iterator();
   }
 
 
@@ -239,6 +242,12 @@ public class PollTally {
         return "Won";
       case STATE_LOST:
         return "Lost";
+      case STATE_UNVERIFIED:
+        return "Unverified";
+      case STATE_VERIFIED:
+        return "Verified";
+      case STATE_DISOWNED:
+        return "Disowned";
       default:
         return "Active";
 
@@ -246,6 +255,10 @@ public class PollTally {
   }
 
   void tallyVotes() {
+    if(type == Poll.VERIFY_POLL) {
+      verifyTally();
+      return;
+    }
     // if it's an error
     if (isErrorState()) {
       status = STATE_ERROR;
@@ -266,10 +279,28 @@ public class PollTally {
       }
     }
     if((type == Poll.NAME_POLL) && (status != STATE_WON)) {
-      log.info("lost a name poll, building poll list");
+      log.debug2("lost a name poll, building poll list");
       ((NamePoll)poll).buildPollLists(pollVotes.iterator());
     }
 
+  }
+
+  void verifyTally() {
+    if(isErrorState()) {
+      status = STATE_ERROR;
+    }
+    else if(poll.isMyPoll()) {
+      if (!haveQuorum()) {
+        status = STATE_UNVERIFIED;
+      } else if (numAgree > 0 && numDisagree == 0) {
+        status = STATE_VERIFIED;
+      } else {
+        status = STATE_DISOWNED;
+      }
+    }
+    else {
+      status = STATE_VERIFIED;
+    }
   }
 
   boolean isLeadEnough() {
@@ -443,6 +474,40 @@ class ReplayVoteCallback implements HashService.Callback {
       }
     }
   }
+
+  public static class NameListEntry {
+    public boolean hasContent;
+    public String name;
+
+    public NameListEntry(boolean hasContent, String name) {
+      this.hasContent = hasContent;
+      this.name = name;
+    }
+
+    /**
+     * Overrides Object.equals().
+     * Returns true if the obj is the same object and the names are the same
+     * @param obj the Object to compare
+     * @return the hashcode
+     */
+    public boolean equals(Object obj) {
+      if (obj instanceof NameListEntry) {
+        NameListEntry entry = (NameListEntry) obj;
+        return name.equals(entry.name);
+      }
+      return false;
+    }
+
+    /**
+     * Overrides Object.hashCode().
+     * Returns the hash of the strings
+     * @return the hashcode
+     */
+    public int hashCode() {
+      return name.hashCode();
+    }
+  }
+
 }
 
 

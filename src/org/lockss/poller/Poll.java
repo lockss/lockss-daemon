@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.76 2003-05-06 03:30:49 claire Exp $
+* $Id: Poll.java,v 1.77 2003-05-08 01:19:41 claire Exp $
  */
 
 /*
@@ -141,10 +141,15 @@ public abstract class Poll implements Serializable {
           Deadline.at(m_deadline.getExpirationTime() - Constants.MINUTE);
     }
 
-    m_challenge = msg.getChallenge();
-    m_verifier = m_pollmanager.makeVerifier();
     m_caller = idMgr.findIdentity(msg.getOriginAddr());
+    m_challenge = msg.getChallenge();
     m_key = msg.getKey();
+    if(!isMyPoll()) {
+      m_verifier = m_pollmanager.makeVerifier();
+    }
+    else {
+      m_verifier = msg.getVerifier();
+    }
 
     log.debug("I think poll "+m_challenge
 	      +" will take me this long to hash "+m_hashTime);
@@ -272,11 +277,13 @@ public abstract class Poll implements Serializable {
     else {
       verify = ((double)weight) / max * m_disagreeVer;
     }
+    log.debug2("probablitiy of verifying this vote = " + verify);
     try {
       if(ProbabilisticChoice.choose(verify)) {
         long remainingTime = m_deadline.getRemainingTime();
-        long minTime = TimeBase.nowMs() + (remainingTime/2) - (remainingTime/4);
-        long maxTime = TimeBase.nowMs() + (remainingTime/2) + (remainingTime/4);
+        long now = TimeBase.nowMs();
+        long minTime = now + (remainingTime/2) - (remainingTime/4);
+        long maxTime = now + (remainingTime/2) + (remainingTime/4);
         long duration = Deadline.atRandomRange(minTime, maxTime).getRemainingTime();
 
         m_pollmanager.requestVerifyPoll(m_pollspec, duration, vote);
@@ -284,7 +291,7 @@ public abstract class Poll implements Serializable {
       }
     }
     catch (IOException ex) {
-      log.debug("attempt to verify vote failed:", ex);
+      log.debug("attempt to request verify poll failed ", ex);
     }
     return callVerifyPoll;
   }

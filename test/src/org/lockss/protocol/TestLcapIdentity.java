@@ -8,6 +8,7 @@ import org.lockss.daemon.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.poller.*;
+import java.util.*;
 
 
 /** JUnitTest case for class: org.lockss.protocol.Identity */
@@ -24,8 +25,8 @@ public class TestLcapIdentity extends LockssTestCase {
   private static String uprbnd = "test3.doc";
   private static String archivalid = "testarchive 1.0";
   private static byte[] testbytes = {1,2,3,4,5,6,7,8,9,10};
-  private static String[] testentries = {"test1.doc",
-                                         "test2.doc", "test3.doc"};
+  private static ArrayList testentries = (ArrayList)ListUtil.list("test1.doc",
+      "test2.doc", "test3.doc");
   private static MockLockssDaemon daemon = new MockLockssDaemon(null);
   private static IdentityManager idmgr;
 

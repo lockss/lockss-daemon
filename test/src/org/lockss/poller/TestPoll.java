@@ -28,9 +28,9 @@ public class TestPoll extends LockssTestCase {
       PollTestPlugin.PTArchivalUnit.createFromListOfRootUrls(rooturls);
   private IdentityManager idmgr;
   private MockLockssDaemon theDaemon;
-  private String[] agree_entries = makeEntries(10, 50);
-  private String[] disagree_entries = makeEntries(15, 57);
-  private String[] dissenting_entries = makeEntries(7, 50);
+  private ArrayList agree_entries = makeEntries(10, 50);
+  private ArrayList disagree_entries = makeEntries(15, 57);
+  private ArrayList dissenting_entries = makeEntries(7, 50);
 
   protected InetAddress testaddr;
   protected InetAddress testaddr1;
@@ -170,10 +170,12 @@ public class TestPoll extends LockssTestCase {
     np.buildPollLists(np.m_tally.pollVotes.iterator());
 
     // these should be different since we lost the poll
-    assertFalse(Arrays.equals(np.m_tally.localEntries, np.m_tally.votedEntries));
+    assertFalse(CollectionUtil.isIsomorphic(np.m_tally.localEntries,
+                                            np.m_tally.votedEntries));
 
     // the expected "correct" set is in our disagree msg
-    assertTrue(Arrays.equals(disagree_entries, np.m_tally.votedEntries));
+    assertTrue(CollectionUtil.isIsomorphic(disagree_entries,
+                                           np.m_tally.votedEntries));
 
   }
 
@@ -194,7 +196,7 @@ public class TestPoll extends LockssTestCase {
 
   /** test for method voteInPoll(..) */
   public void testVoteInPoll() {
-    Poll p = testpolls[0];
+    Poll p = testpolls[1];
     p.m_tally.quorum = 10;
     p.m_tally.numAgree = 5;
     p.m_tally.numDisagree = 2;
@@ -281,6 +283,7 @@ public class TestPoll extends LockssTestCase {
 	new PollSpec(testau.getAUId(),
 		     rooturls[0],null,null,
 		     testau.makeCachedUrlSet(new RangeCachedUrlSetSpec(rooturls[0])));
+    ((MockCachedUrlSet)spec.getCachedUrlSet()).setHasContent(false);
       LcapMessage poll_msg = LcapMessage.makeRequestMsg(
           spec,
           null,
@@ -365,29 +368,29 @@ public class TestPoll extends LockssTestCase {
     }
     CachedUrlSet cus = au.makeCachedUrlSet(cusSpec);
     PollSpec spec = new PollSpec(cus);
+    ((MockCachedUrlSet)spec.getCachedUrlSet()).setHasContent(false);
     Poll p = daemon.getPollManager().createPoll(testmsg, spec);
     p.m_tally.quorum = numAgree + numDisagree;
     p.m_tally.numAgree = numAgree;
     p.m_tally.numDisagree = numDisagree;
     p.m_tally.wtAgree = 2000;
     p.m_tally.wtDisagree = 200;
-    p.m_tally.localEntries = new String[] {
-        "/testentry1.html", "/testentry2.html", "/testentry3.html" };
-    p.m_tally.votedEntries = new String[] {
-        "/testentry1.html", "/testentry3.html",
-        "/testentry4.html", "/testentry5.html"};
+    p.m_tally.localEntries = makeEntries(1,3);
+    p.m_tally.votedEntries = makeEntries(1,5);
+    p.m_tally.votedEntries.remove(1);
     p.m_pollstate = Poll.PS_COMPLETE;
     p.m_tally.tallyVotes();
     return p;
   }
 
 
-  public static String[] makeEntries(int firstEntry, int lastEntry) {
-    int numEntries = lastEntry - firstEntry;
-    String[] ret_arry = new String[numEntries];
+  public static ArrayList makeEntries(int firstEntry, int lastEntry) {
+    int numEntries = lastEntry - firstEntry + 1;
+    ArrayList ret_arry = new ArrayList(numEntries);
 
     for(int i=0; i < numEntries; i++) {
-      ret_arry[i] = "testentry" + (firstEntry + i) + ".html";
+      String name = "/testentry" + (firstEntry + i) + ".html";
+      ret_arry.add(new PollTally.NameListEntry(i%2 == 1, name));
     }
 
     return ret_arry;
@@ -449,6 +452,7 @@ public class TestPoll extends LockssTestCase {
         PollSpec spec = new PollSpec(testau.getAUId(),
                                      rooturls[i],lwrbnd, uprbnd,
                                      cus);
+        ((MockCachedUrlSet)spec.getCachedUrlSet()).setHasContent(false);
         int opcode = LcapMessage.NAME_POLL_REQ + (i * 2);
         testmsg[i] =  LcapMessage.makeRequestMsg(
           spec,

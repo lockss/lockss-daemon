@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessage.java,v 1.35 2003-05-01 23:29:50 tal Exp $
+ * $Id: LcapMessage.java,v 1.36 2003-05-08 01:19:41 claire Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import org.lockss.daemon.Configuration;
 import java.security.*;
 import org.lockss.app.LockssDaemon;
 import org.lockss.poller.*;
+import java.util.*;
 
 /**
  * <p>Description: used to encapsulate a message which has been received
@@ -107,7 +108,7 @@ public class LcapMessage
   protected byte[] m_hashed; // the hash of content
   protected String m_lwrRem; // the remaining entries lwr bound (opt)
   protected String m_uprRem; // the remaining entries upr bound (opt)
-  protected Object[] m_entries; // the name poll entry list (opt)
+  protected ArrayList m_entries; // the name poll entry list (opt)
 
   private EncodedProperty m_props;
   private static byte[] signature = {
@@ -133,7 +134,7 @@ public class LcapMessage
   }
 
   protected LcapMessage(PollSpec ps,
-                        Object[] entries,
+                        ArrayList entries,
                         byte ttl,
                         byte[] challenge,
                         byte[] verifier,
@@ -164,7 +165,7 @@ public class LcapMessage
                         LcapIdentity localID,
                         byte[] verifier,
                         byte[] hashedContent,
-                        Object[] entries,
+                        ArrayList entries,
                         int opcode) throws IOException {
 
     this();
@@ -250,7 +251,7 @@ public class LcapMessage
    * @throws IOException if unable to create message
    */
   static public LcapMessage makeRequestMsg(PollSpec pollspec,
-                                           Object[] entries,
+                                           ArrayList entries,
                                            byte[] challenge,
                                            byte[] verifier,
                                            int opcode,
@@ -286,7 +287,7 @@ public class LcapMessage
   static public LcapMessage makeReplyMsg(LcapMessage trigger,
                                          byte[] hashedContent,
                                          byte[] verifier,
-                                         Object[] entries,
+                                         ArrayList entries,
                                          int opcode,
                                          long timeRemaining,
                                          LcapIdentity localID) throws
@@ -536,7 +537,7 @@ public class LcapMessage
     m_multicast = multicast;
   }
 
-  public Object[] getEntries() {
+  public ArrayList getEntries() {
     return m_entries;
   }
 
@@ -602,17 +603,23 @@ public class LcapMessage
     m_lwrRem = null;
     m_uprRem = null;
     log.debug3("Entries To String max buffer size: " + maxBufSize);
-    for (int i = 0; i < m_entries.length; i++) {
+    for (int i = 0; i < m_entries.size(); i++) {
       // if the length of this entry < max buffer
       byte[] cur_bytes = m_props.encodeString(buf.toString());
-      byte[] entry_bytes = m_props.encodeString((String)m_entries[i]);
+      PollTally.NameListEntry entry = (PollTally.NameListEntry) m_entries.get(i);
+      byte[] entry_bytes = m_props.encodeString(entry.name);
       if (cur_bytes.length + entry_bytes.length < maxBufSize) {
-        buf.append((String)m_entries[i]);
-        buf.append("\n");
+        buf.append(entry.name);
+        if(entry.hasContent) {
+          buf.append("\r");
+        }
+        else {
+          buf.append("\n");
+        }
       }
       else {
         // we need to set RERemaining and break
-        m_lwrRem = (String)m_entries[i];
+        m_lwrRem = entry.name;
         m_uprRem = m_uprBound;
         break;
       }
@@ -622,18 +629,20 @@ public class LcapMessage
     return buf.toString();
   }
 
-  String[] stringToEntries(String estr) {
+  ArrayList stringToEntries(String estr) {
     if (estr == null || estr.length() <= 0) {
       return null;
     }
-    StringTokenizer tokenizer = new StringTokenizer(estr, "\n");
-    String[] ret = new String[tokenizer.countTokens()];
+    StringTokenizer tokenizer = new StringTokenizer(estr, "\n\r",true);
+    ArrayList entries = new ArrayList();
     int i = 0;
 
     while (tokenizer.hasMoreTokens()) {
-      ret[i++] = tokenizer.nextToken();
+      String name = tokenizer.nextToken();
+      boolean hasContent = tokenizer.nextToken() == "\r" ? true : false;
+      entries.add(new PollTally.NameListEntry(hasContent, name));
     }
-    return ret;
+    return entries;
   }
 
   public String toString() {

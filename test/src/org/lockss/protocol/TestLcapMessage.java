@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapMessage.java,v 1.23 2003-04-24 22:08:52 tal Exp $
+ * $Id: TestLcapMessage.java,v 1.24 2003-05-08 01:19:41 claire Exp $
  */
 
 /*
@@ -42,6 +42,7 @@ import org.lockss.test.*;
 import gnu.regexp.*;
 import org.lockss.poller.TestPoll;
 import org.lockss.poller.*;
+import org.lockss.util.*;
 
 /** JUnitTest case for class: org.lockss.protocol.Message */
 public class TestLcapMessage extends LockssTestCase {
@@ -50,7 +51,7 @@ public class TestLcapMessage extends LockssTestCase {
   private static byte[] testbytes = {1,2,3,4,5,6,7,8,9,10};
   private static String lwrbnd = "test1.doc";
   private static String uprbnd = "test3.doc";
-  private static String[] testentries;
+  private static ArrayList testentries;
 
   private static MockLockssDaemon daemon = new MockLockssDaemon(null);
   protected InetAddress testaddr;
@@ -102,8 +103,8 @@ public class TestLcapMessage extends LockssTestCase {
 
   public void testEntriesTranslation() {
     String encstr = testmsg.entriesToString(10000);
-    String[] decoded = testmsg.stringToEntries(encstr);
-    assertTrue(Arrays.equals(testmsg.m_entries,decoded));
+    ArrayList decoded = testmsg.stringToEntries(encstr);
+    assertIsomorphic(testmsg.m_entries, decoded);
 
     //test our entries remainder by artificially setting our size to very small
     encstr = testmsg.entriesToString(50);
@@ -115,7 +116,8 @@ public class TestLcapMessage extends LockssTestCase {
     encstr = testmsg.entriesToString(0);
     decoded = testmsg.stringToEntries(encstr);
     assertNull(decoded);
-    assertEquals(testentries[0], testmsg.m_lwrRem);
+    assertEquals(((PollTally.NameListEntry)testentries.get(0)).name,
+                 testmsg.m_lwrRem);
     assertEquals(testmsg.m_uprBound, testmsg.m_uprRem);
 
   }
@@ -202,7 +204,7 @@ public class TestLcapMessage extends LockssTestCase {
     assertTrue(Arrays.equals(rep_msg.m_challenge,testmsg.m_challenge));
     assertTrue(Arrays.equals(rep_msg.m_verifier,testmsg.m_verifier));
     assertTrue(Arrays.equals(rep_msg.m_hashed,testmsg.m_hashed));
-    assertTrue(Arrays.equals(rep_msg.m_entries,testentries));
+    assertIsomorphic(rep_msg.m_entries,testentries);
 
   }
 
@@ -228,7 +230,7 @@ public class TestLcapMessage extends LockssTestCase {
     assertTrue(Arrays.equals(req_msg.m_challenge,testbytes));
     assertTrue(Arrays.equals(req_msg.m_verifier,testbytes));
     assertEquals(null,req_msg.m_hashed);
-    assertTrue(Arrays.equals(req_msg.m_entries,testentries));
+    assertIsomorphic(req_msg.m_entries,testentries);
     assertEquals(req_msg.m_lwrBound, lwrbnd);
     assertEquals(req_msg.m_uprBound, uprbnd);
 
@@ -257,7 +259,7 @@ public class TestLcapMessage extends LockssTestCase {
       assertTrue(Arrays.equals(msg.m_challenge,testbytes));
       assertTrue(Arrays.equals(msg.m_verifier,testbytes));
       assertTrue(Arrays.equals(msg.m_hashed,testbytes));
-      assertTrue(Arrays.equals(msg.m_entries,testentries));
+      assertIsomorphic(msg.m_entries,testentries);
       assertEquals(msg.m_lwrBound, lwrbnd);
       assertEquals(msg.m_uprBound, uprbnd);
     }

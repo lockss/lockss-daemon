@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.120 2003-05-07 23:47:46 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.121 2003-05-08 01:19:41 claire Exp $
  */
 
 /*
@@ -443,28 +443,39 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
       // iterate through master list
       boolean repairMarked = false;
       while (masterIt.hasNext()) {
-        String url = (String) masterIt.next();
+        PollTally.NameListEntry entry =
+            (PollTally.NameListEntry) masterIt.next();
+        String url = entry.name;
+        boolean hasContent = entry.hasContent;
+        logger.debug3("checking " + url + " hasContent=" + hasContent);
         // compare against my list
-        if (localSet.contains(url)) {
+        if (localSet.contains(entry)) {
           // removing from the set to leave only files for deletion
-          localSet.remove(url);
-        } else if (!repairMarked) {
+          logger.debug3("removing entry: " + url);
+          localSet.remove(entry);
+        }
+        else if (!repairMarked) {
           // if not found locally, fetch
-          logger.debug2("marking missing node for repair: " + url);
+          logger.debug("marking missing node for repair: " + url);
           CachedUrlSet newCus = au.makeCachedUrlSet(
               new RangeCachedUrlSetSpec(baseUrl + url));
-          //XXX eventually check content status, and only mark for repair if
+          // check content status, and only mark for repair if
           // should have content.  Else just create in repository.
-          // create node in repository
-          try {
-            RepositoryNodeImpl repairNode =
-                (RepositoryNodeImpl)lockssRepo.createNewNode(newCus.getUrl());
-            repairNode.createNodeLocation();
-          } catch (MalformedURLException mue) {
-            // this shouldn't happen
+          if (hasContent) {
+            // run a repair crawl
+            markNodeForRepair(newCus, results);
           }
-          // run a repair crawl
-          markNodeForRepair(newCus, results);
+          else {
+            // create node in repository
+            try {
+              RepositoryNodeImpl repairNode =
+                  (RepositoryNodeImpl) lockssRepo.createNewNode(newCus.getUrl());
+              repairNode.createNodeLocation();
+            }
+            catch (MalformedURLException mue) {
+              // this shouldn't happen
+            }
+          }
           // only try one repair per poll
           //XXX instead, allow multi-URL repair crawls and schedule one
           // from a list of repairs
@@ -474,13 +485,18 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
       localIt = localSet.iterator();
       while (localIt.hasNext()) {
         // for extra items - deletion
-        String url = (String) localIt.next();
-        logger.debug2("deleting node: " + url);
+        PollTally.NameListEntry entry =
+            (PollTally.NameListEntry) localIt.next();
+        String url = entry.name;
         try {
           CachedUrlSet oldCus = au.makeCachedUrlSet(
               new RangeCachedUrlSetSpec(baseUrl + url));
-          deleteNode(oldCus);
+          if (entry.hasContent) {
+            logger.debug2("deleting node: " + url);
+            deleteNode(oldCus);
+          }
           //set crawl status to DELETED
+          logger.debug("marking node: " + url + " deleted.");
           NodeState oldState = getNodeState(oldCus);
           oldState.getCrawlState().type = CrawlState.NODE_DELETED;
         } catch (Exception e) {

@@ -1,5 +1,5 @@
 /*
- * $Id: NamePoll.java,v 1.49 2003-05-02 18:22:41 tal Exp $
+ * $Id: NamePoll.java,v 1.50 2003-05-08 01:19:41 claire Exp $
  */
 
 /*
@@ -61,7 +61,7 @@ public class NamePoll
     long remainingTime = m_deadline.getRemainingTime();
     try {
       msg = LcapMessage.makeReplyMsg(m_msg, m_hash, m_verifier,
-                                     getEntries().toArray(), m_replyOpcode,
+                                     getEntries(), m_replyOpcode,
                                      remainingTime, local_id);
       log.debug("vote:" + msg.toString());
       m_pollmanager.sendMessage(msg, m_cus.getArchivalUnit());
@@ -130,12 +130,15 @@ public class NamePoll
       String baseUrl = m_cus.getSpec().getUrl();
       log.debug2("getting a list of entries for base url " + baseUrl);
       while(it.hasNext()) {
-        String name = ((CachedUrlSetNode)it.next()).getUrl();
+        CachedUrlSetNode cusn = (CachedUrlSetNode)it.next();
+        String name = cusn.getUrl();
+        boolean hasContent = cusn.hasContent();
         if(name.startsWith(baseUrl)) {
           name = name.substring(baseUrl.length());
         }
-        log.debug3("adding file name: " + name);
-        alist.add(name);
+
+        log.debug3("adding file name "+ name +" - hasContent=" + hasContent);
+        alist.add(new PollTally.NameListEntry(hasContent, name));
       }
       m_entries = alist;
     }
@@ -206,17 +209,18 @@ public class NamePoll
         ArrayList localSet = new ArrayList();
         Iterator localIt = getEntries().iterator();
         while (localIt.hasNext()) {
-          String url = (String) localIt.next();
+          PollTally.NameListEntry entry = (PollTally.NameListEntry) localIt.next();
+          String url = entry.name;
           if((lwrRem != null) && url.compareTo(lwrRem) < 0) {
-            localSet.add(url);
+            localSet.add(entry);
           }
           else if((uprRem != null) && url.compareTo(uprRem) > 0) {
-            localSet.add(url);
+            localSet.add(entry);
           }
         }
-        m_tally.localEntries = localSet.toArray();
+        m_tally.localEntries = localSet;
       } else {
-        m_tally.localEntries = getEntries().toArray();
+        m_tally.localEntries = getEntries();
       }
     }
   }
@@ -238,7 +242,7 @@ public class NamePoll
   }
 
   static class NameVote extends Vote {
-    private Object[] knownEntries;
+    private ArrayList knownEntries;
     private String lwrRemaining;
     private String uprRemaining;
 
@@ -258,7 +262,7 @@ public class NamePoll
       uprRemaining = msg.getUprRemain();
     }
 
-    Object[] getKnownEntries() {
+    ArrayList getKnownEntries() {
       return knownEntries;
     }
 
@@ -277,8 +281,8 @@ public class NamePoll
       return false;
     }
 
-    boolean sameEntries(Object[] entries) {
-      return Arrays.equals(knownEntries, entries);
+    boolean sameEntries(ArrayList entries) {
+      return CollectionUtil.isIsomorphic(knownEntries,entries);
     }
   }
 
