@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.27 2003-02-05 18:02:45 tal Exp $
+ $Id: build.xml,v 1.28 2003-02-05 18:47:04 tal Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
@@ -302,12 +302,13 @@ Args:
     <jar jarfile="${lockss.test.jar}" basedir="${test.classes}" >
        <include name="**/" />
     </jar>
-    <pathconvert refid="test.run.classpath" property="tmp.test..clspth"
+    <pathconvert refid="test.run.classpath" property="tmp.test.clspth"
       targetos="unix" />
     <echo message="${tmp.test.clspth}" file="${test.classpath.file}"/>
     <pathconvert refid="test.run.classpath" property="tmp.run.clspth"
       targetos="unix">
-      <map from="${basedir}/lib" to="${JAVA.LIB.PATH}" />
+      <!-- entity codes below are open and close curly brace -->
+      <map from="${basedir}/lib" to="$&#x07b;JAVA.LIB.PATH&#x07d;" />
     </pathconvert>
     <echo message="${tmp.run.clspth}" file="${production.classpath.file}"/>
   </target>
