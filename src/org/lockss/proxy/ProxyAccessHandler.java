@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyAccessHandler.java,v 1.2 2004-03-26 17:57:51 tlipkis Exp $
+ * $Id: ProxyAccessHandler.java,v 1.3 2004-10-01 09:26:21 tlipkis Exp $
  */
 
 /*
@@ -47,14 +47,16 @@ import org.lockss.protocol.*;
 public class ProxyAccessHandler extends IpAccessHandler {
   private static Logger log = Logger.getLogger("ProxyAccess");
   private LockssDaemon daemon;
-  private PluginManager pluginMgr = null;
+  private PluginManager pluginMgr;
   private IdentityManager idMgr;
+  private ProxyManager proxyMgr;
 
   public ProxyAccessHandler(LockssDaemon daemon, String serverName) {
     super(serverName);
     this.daemon = daemon;
     pluginMgr = daemon.getPluginManager();
     idMgr = daemon.getIdentityManager();
+    proxyMgr = daemon.getProxyManager();
   }
 
   /**
@@ -73,12 +75,7 @@ public class ProxyAccessHandler extends IpAccessHandler {
 
 
     try	{
-      String userAgent = request.getField("user-agent");
-      if (log.isDebug3()) {
-	log.debug3("user-agent: " + userAgent);
-      }
-      boolean isRepairRequest =
-	StringUtil.equalStrings(userAgent, LockssDaemon.getUserAgent());
+      boolean isRepairRequest = proxyMgr.isRepairRequest(request);
 
       if (!isRepairRequest) {
 	// Not a repair request from a LOCKSS cache, let the parent

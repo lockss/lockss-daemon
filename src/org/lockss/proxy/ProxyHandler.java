@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.29 2004-09-27 22:39:09 smorabito Exp $
+ * $Id: ProxyHandler.java,v 1.30 2004-10-01 09:26:21 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.29 2004-09-27 22:39:09 smorabito Exp $
+// $Id: ProxyHandler.java,v 1.30 2004-10-01 09:26:21 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -72,12 +72,15 @@ public class ProxyHandler extends AbstractHttpHandler {
 
   static final String LOCKSS_PROXY_ID = "1.1 (LOCKSS/jetty)";
 
+  /** Force the proxy to serve only locally cached content.  Mainly useful
+   * in testing. */
   static final String PARAM_NEVER_PROXY =
     Configuration.PREFIX + "proxy.neverProxy";
   static final boolean DEFAULT_NEVER_PROXY = false;
 
   private LockssDaemon theDaemon = null;
   private PluginManager pluginMgr = null;
+  private ProxyManager proxyMgr = null;
   private LockssUrlConnectionPool connPool = null;
   private LockssUrlConnectionPool quickFailConnPool = null;
   private boolean neverProxy = DEFAULT_NEVER_PROXY;
@@ -85,6 +88,7 @@ public class ProxyHandler extends AbstractHttpHandler {
   ProxyHandler(LockssDaemon daemon) {
     theDaemon = daemon;
     pluginMgr = theDaemon.getPluginManager();
+    proxyMgr = theDaemon.getProxyManager();
     neverProxy = Configuration.getBooleanParam(PARAM_NEVER_PROXY,
 					       DEFAULT_NEVER_PROXY);
   }
@@ -178,13 +182,16 @@ public class ProxyHandler extends AbstractHttpHandler {
 
     String urlString = uri.toString();
     CachedUrl cu = pluginMgr.findMostRecentCachedUrl(urlString);
-    boolean isRepairRequest = isRepairRequest(request);
+    boolean isRepairRequest = proxyMgr.isRepairRequest(request);
 
     if (log.isDebug2()) {
       log.debug2("cu: " + (isRepairRequest ? "(repair) " : "") + cu);
     }
     if (isRepairRequest || neverProxy) {
       if (cu != null && cu.hasContent()) {
+	if (log.isDebug()) {
+	  log.debug("Serving repair to " + request.getRemoteAddr() + ", " + cu);
+	}
 	serveFromCache(pathInContext, pathParams, request,
 		       response, cu);
 	return;
@@ -202,18 +209,6 @@ public class ProxyHandler extends AbstractHttpHandler {
       }
     }
     doSun(pathInContext, pathParams, request, response);
-  }
-
-  private boolean isRepairRequest(HttpRequest request) {
-    if (org.lockss.util.StringUtil.equalStrings(request.getField("user-agent"),
-						LockssDaemon.getUserAgent())) {
-      return true;
-    }
-    java.util.List lockssFlags = request.getParameterValues(Constants.X_LOCKSS);
-    if (lockssFlags != null) {
-      return lockssFlags.contains(Constants.X_LOCKSS_REPAIR);
-    }
-    return false;
   }
 
   /** Proxy a connection using Java's native URLConection */
