@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.50 2005-03-23 17:26:12 troberts Exp $
+ * $Id: BaseUrlCacher.java,v 1.51 2005-03-24 00:54:35 troberts Exp $
  */
 
 /*
@@ -209,6 +209,7 @@ public class BaseUrlCacher implements UrlCacher {
 	  logger.debug3("Found set-cookie header, refetching");
 	  input.close();
 	  input = null; // ensure don't reclose in finally if next line throws
+	  releaseConnection();
 	  input = getUncachedInputStream(lastModified);
 	  if (input == null) {
 	    //this is odd if it happens.
@@ -351,6 +352,9 @@ public class BaseUrlCacher implements UrlCacher {
 	}
       }
       input = conn.getResponseInputStream();
+      if (input == null) {
+	logger.warning("Got null input stream back from conn.getResponseInputStream");
+      }
     } finally {
       if (conn != null && input == null) {
 	logger.debug3("Releasing connection");
@@ -494,6 +498,14 @@ public class BaseUrlCacher implements UrlCacher {
     checkConnectException(conn);
   }
 
+  private void releaseConnection() {
+    if (conn != null) {
+      logger.debug3("conn isn't null, releasing");
+      conn.release();
+      conn = null;
+    }
+  }
+
   /** Handle a single redirect response: determine whether it should be
    * followed and change the state (fetchUrl) to set up for the next fetch.
    * @param writeToRedirectedUrl boolean indicating whether content should
@@ -542,8 +554,7 @@ public class BaseUrlCacher implements UrlCacher {
           return false;
         }
       }
-      conn.release();
-      conn = null;
+      releaseConnection();
 
       // XXX
       // The names .../foo and .../foo/ map to the same repository node, so
