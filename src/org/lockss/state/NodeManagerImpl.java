@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.74 2003-04-01 00:08:12 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.75 2003-04-01 00:10:30 aalto Exp $
  */
 
 /*
@@ -55,7 +55,7 @@ import org.lockss.daemon.status.*;
  */
 public class NodeManagerImpl implements NodeManager {
   /**
-   * This parameter indicates the size of the {@link NodeStateMap} used by the
+   * This parameter indicates the size of the {@link NodeStateCache} used by the
    * node manager.
    */
   public static final String PARAM_NODESTATE_MAP_SIZE =
