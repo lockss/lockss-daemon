@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.46 2004-02-11 23:50:14 eaalto Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.47 2004-03-27 02:40:00 eaalto Exp $
  */
 
 /*
@@ -71,9 +71,6 @@ public class HistoryRepositoryImpl
   static final String AU_FILE_NAME = "#au_state.xml";
   static final String DAMAGED_NODES_FILE_NAME = "#damaged_nodes.xml";
   static final String IDENTITY_AGREEMENT_FILE_NAME = "#id_agreement.xml";
-  // this contains a '#' so that it's not defeatable by strings which
-  // match the prefix in a url (like '../tmp/')
-  private static final String TEST_PREFIX = "/#tmp";
 
   // The map files being used
   static final String[] MAPPING_FILES = {
@@ -334,31 +331,8 @@ public class HistoryRepositoryImpl
     if (AuUrl.isAuUrl(urlStr)) {
       return rootLocation;
     } else {
-      try {
-        URL testUrl = new URL(urlStr);
-        String path = testUrl.getPath();
-        if (path.indexOf("/.")>=0) {
-          if (FileUtil.isLegalPath(path)) {
-            // canonicalize to remove urls including '..' and '.'
-            path = TEST_PREFIX + path;
-            File testFile = new File(path);
-            String canonPath = testFile.getCanonicalPath();
-            String sysDepPrefix = FileUtil.sysDepPath(TEST_PREFIX);
-            int pathIndex = canonPath.indexOf(sysDepPrefix) +
-                sysDepPrefix.length();
-            urlStr = testUrl.getProtocol() + "://" +
-                testUrl.getHost().toLowerCase() +
-                FileUtil.sysIndepPath(canonPath.substring(pathIndex));
-          } else {
-            logger.error("Illegal URL detected: "+urlStr);
-            throw new MalformedURLException("Illegal URL detected.");
-          }
-        }
-      } catch (IOException ie) {
-        logger.error("Error testing URL: "+ie);
-        throw new MalformedURLException ("Error testing URL.");
-      }
-      return LockssRepositoryImpl.mapUrlToFileLocation(rootLocation, urlStr);
+      return LockssRepositoryImpl.mapUrlToFileLocation(rootLocation,
+          LockssRepositoryImpl.canonicalizePath(urlStr));
     }
   }
 
