@@ -1,5 +1,5 @@
 /*
- * $Id: TestCachedUrlSetSpec.java,v 1.1 2002-10-16 04:52:55 tal Exp $
+ * $Id: TestCachedUrlSetSpec.java,v 1.2 2002-11-14 22:00:38 tal Exp $
  */
 
 /*
@@ -49,15 +49,28 @@ public class TestCachedUrlSetSpec extends LockssTestCase {
 
   public void testIllRECachedUrlSetSpec() throws REException {
     try {
-      new RECachedUrlSetSpec("foo", (String)null);
-      fail("RECachedUrlSetSpec with null regexp string should throw");
-    } catch (NullPointerException e) {
-    }
-    try {
       new RECachedUrlSetSpec(null, "foo");
       fail("RECachedUrlSetSpec with null url should throw");
     } catch (NullPointerException e) {
     }
+  }
+
+  public void testRECachedUrlSetSpecEquivalence() throws REException {
+    CachedUrlSetSpec cuss1 = new RECachedUrlSetSpec("foo", (String)null);
+    CachedUrlSetSpec cuss2 = new RECachedUrlSetSpec("foo", (RE)null);
+    CachedUrlSetSpec cuss3 = new RECachedUrlSetSpec("foo");
+    CachedUrlSetSpec cuss4 = new RECachedUrlSetSpec("bar");
+    assertEquals(cuss1, cuss2);
+    assertEquals(cuss1, cuss3);
+    assertEquals(cuss2, cuss3);
+    assertTrue(!cuss3.equals(cuss4));
+    String re1 = "123.*";
+    String re2 = "456";
+    CachedUrlSetSpec cuss5 = new RECachedUrlSetSpec("xxx", re1);
+    CachedUrlSetSpec cuss6 = new RECachedUrlSetSpec("xxx", new RE(re1));
+    CachedUrlSetSpec cuss7 = new RECachedUrlSetSpec("xxx", new RE(re2));
+    assertEquals(cuss5, cuss6);
+    assertTrue(!cuss6.equals(cuss7));
   }
 
   public void testRECachedUrlSetSpec() throws REException {
