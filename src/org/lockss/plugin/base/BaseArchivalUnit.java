@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.87 2004-12-12 23:02:39 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.88 2005-01-27 23:00:16 troberts Exp $
  */
 
 /*
@@ -578,6 +578,8 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   }
 
 
+  
+
   /**
    * Returns a filter rule from the cache if found, otherwise calls
    * 'constructFilterRule()' and caches the result if non-null.  Mime-type
@@ -586,16 +588,21 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    * @return the FilterRule
    */
   public FilterRule getFilterRule(String mimeType) {
+    logger.debug3("Trying to find filter for "+mimeType);
     if (mimeType!=null) {
       FilterRule rule = (FilterRule)filterMap.get(mimeType);
       if (rule==null) {
         rule = constructFilterRule(mimeType);
         if (rule != null) {
+	  logger.debug3("Found one: "+rule);
           filterMap.put(mimeType, rule);
-        }
+        } else {
+	  logger.debug3("Didn't find one");
+	}
       }
       return rule;
     }
+    logger.debug3("Mime type was null");
     return null;
   }
 

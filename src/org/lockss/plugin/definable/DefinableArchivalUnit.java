@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.23 2004-10-23 01:38:21 clairegriffin Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.24 2005-01-27 23:00:17 troberts Exp $
  */
 
 /*
@@ -257,6 +257,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
         + AU_FILTER_SUFFIX);
 
     if (filter_el instanceof String) {
+      log.debug("Loading filter "+filter_el);
       return (FilterRule) loadClass( (String) filter_el, FilterRule.class);
     }
     else if (filter_el instanceof List) {
