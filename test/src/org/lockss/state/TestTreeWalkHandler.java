@@ -1,5 +1,5 @@
 /*
- * $Id: TestTreeWalkHandler.java,v 1.7 2003-04-07 23:38:06 aalto Exp $
+ * $Id: TestTreeWalkHandler.java,v 1.8 2003-04-10 01:09:54 claire Exp $
  */
 
 /*
@@ -242,31 +242,43 @@ public class TestTreeWalkHandler extends LockssTestCase {
         TestNodeManagerImpl.getCUS(mau, TEST_URL));
 
     // should ignore if active poll
-    PollState pollState = new PollState(1, "", "", PollState.RUNNING, 1,
-                                        Deadline.MAX);
+    PollState pollState = new PollState(Poll.NAME_POLL, "", "",
+                                        PollState.RUNNING, 1,
+                                        Deadline.MAX, true);
     node.addPollState(pollState);
     treeWalkHandler.checkNodeState(node);
     // no poll in manager since we just created a PollState
     assertNull(pollMan.getPollStatus(TEST_URL));
     assertNull(crawlMan.getUrlStatus(TEST_URL));
 
-    // should do nothing if last poll not LOST or REPAIRING
-    checkPollingTest(PollState.REPAIRED, 123, false, node);
-    checkPollingTest(PollState.SCHEDULED, 234, false, node);
-    checkPollingTest(PollState.UNREPAIRABLE, 345, false, node);
-    checkPollingTest(PollState.WON, 456, false, node);
+    // these are true iff the pollmanager doesn't know about them
+    checkPollingTest(PollState.RUNNING, 123, true, node);
+    ( (MockPollManager) theDaemon.getPollManager()).thePolls.remove(TEST_URL);
+    checkPollingTest(PollState.SCHEDULED, 234, true, node);
+    ( (MockPollManager) theDaemon.getPollManager()).thePolls.remove(TEST_URL);
+    checkPollingTest(PollState.REPAIRING, 345, true, node);
+    ( (MockPollManager) theDaemon.getPollManager()).thePolls.remove(TEST_URL);
 
-    // should schedule name poll if last history is LOST, REPAIRING
-    // or ERR_IO
-    checkPollingTest(PollState.ERR_IO, 567, true, node);
-    checkPollingTest(PollState.LOST, 678, true, node);
-    checkPollingTest(PollState.REPAIRING, 789, true, node);
-  }
+    // these are always false
+    checkPollingTest(PollState.WON, 456, false, node);
+    ( (MockPollManager) theDaemon.getPollManager()).thePolls.remove(TEST_URL);
+    checkPollingTest(PollState.REPAIRED, 567, false, node);
+    ( (MockPollManager) theDaemon.getPollManager()).thePolls.remove(TEST_URL);
+    checkPollingTest(PollState.UNREPAIRABLE, 678, false, node);
+    ( (MockPollManager) theDaemon.getPollManager()).thePolls.remove(TEST_URL);
+
+    // should schedule name poll if last history is LOST or ERR_IO
+    checkPollingTest(PollState.ERR_IO, 789, true, node);
+    ( (MockPollManager) theDaemon.getPollManager()).thePolls.remove(TEST_URL);
+    checkPollingTest(PollState.LOST, 890, true, node);
+    ( (MockPollManager) theDaemon.getPollManager()).thePolls.remove(TEST_URL);
+ }
 
   private void checkPollingTest(int pollState, long startTime,
                                boolean shouldSchedule, NodeStateImpl node) {
-    PollHistory pollHist = new PollHistory(1, "", "", pollState, startTime, 1,
-                                           null);
+    PollHistory pollHist = new PollHistory(Poll.NAME_POLL, "", "",
+                                           pollState, startTime, 1,
+                                           null, true);
     // doesn't clear old histories, so startTime must be used appropriately
     node.closeActivePoll(pollHist);
     treeWalkHandler.checkNodeState(node);

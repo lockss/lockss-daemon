@@ -1,5 +1,5 @@
 /*
-* $Id: MockPollManager.java,v 1.6 2003-03-15 07:47:13 claire Exp $
+* $Id: MockPollManager.java,v 1.7 2003-04-10 01:09:54 claire Exp $
  */
 
 /*
@@ -74,6 +74,10 @@ public class MockPollManager extends PollManager {
     else if (opcode == LcapMessage.NAME_POLL_REQ) {
       thePolls.put(ps.getUrl(), NAME_REQUESTED);
     }
+  }
+
+  public boolean isPollRunning(int opcode, PollSpec ps) {
+    return thePolls.get(ps.getUrl()) != null;
   }
 
   public void suspendPoll(String key) {

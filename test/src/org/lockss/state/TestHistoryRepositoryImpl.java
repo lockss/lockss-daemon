@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.25 2003-04-09 23:48:09 aalto Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.26 2003-04-10 01:09:54 claire Exp $
  */
 
 /*
@@ -272,8 +272,8 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
         "http://www.example.com"));
     CrawlState crawl = new CrawlState(1, 2, 123);
     List polls = new ArrayList(2);
-    PollState poll1 = new PollState(1, "sdf", "jkl", 2, 123, Deadline.at(456));
-    PollState poll2 = new PollState(2, "abc", "def", 3, 321, Deadline.at(654));
+    PollState poll1 = new PollState(1, "sdf", "jkl", 2, 123, Deadline.at(456), false);
+    PollState poll2 = new PollState(2, "abc", "def", 3, 321, Deadline.at(654), false);
     polls.add(poll1);
     polls.add(poll2);
     NodeState nodeState = new NodeStateImpl(mcus, 123321, crawl, polls,
@@ -320,7 +320,7 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
   }
 
   private PollHistoryBean createPollHistoryBean(int voteCount) throws Exception {
-    PollState state = new PollState(1, "lwr", "upr", 2, 5, null);
+    PollState state = new PollState(1, "lwr", "upr", 2, 5, null, false);
     List votes = new ArrayList(voteCount);
     for (int ii=0; ii<voteCount; ii++) {
       VoteBean bean = new VoteBean();

@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeStateImpl.java,v 1.14 2003-04-09 23:50:55 aalto Exp $
+ * $Id: TestNodeStateImpl.java,v 1.15 2003-04-10 01:09:54 claire Exp $
  */
 
 /*
@@ -52,9 +52,9 @@ public class TestNodeStateImpl extends LockssTestCase {
     historyRepo.startService();
 
     polls = new ArrayList(3);
-    polls.add(new PollState(1, "lwr1", "upr1", 1, 0, Deadline.MAX));
-    polls.add(new PollState(2, "lwr2", "upr3", 1, 0, Deadline.MAX));
-    polls.add(new PollState(3, "lwr3", "upr3", 1, 0, Deadline.MAX));
+    polls.add(new PollState(1, "lwr1", "upr1", 1, 0, Deadline.MAX, false));
+    polls.add(new PollState(2, "lwr2", "upr3", 1, 0, Deadline.MAX, false));
+    polls.add(new PollState(3, "lwr3", "upr3", 1, 0, Deadline.MAX, false));
     state = new NodeStateImpl(mcus, -1, new CrawlState(-1, -1, -1), polls,
                               historyRepo);
   }
@@ -77,7 +77,7 @@ public class TestNodeStateImpl extends LockssTestCase {
     Iterator pollIt = state.getPollHistories();
     assertFalse(pollIt.hasNext());
 
-    PollHistory history = new PollHistory(1, "test1lwr", "test1upr", 0, 321, 0, null);
+    PollHistory history = new PollHistory(1, "test1lwr", "test1upr", 0, 321, 0, null, false);
     state.pollHistories = new ArrayList(3);
     state.pollHistories.add(history);
     pollIt = state.getPollHistories();
@@ -88,7 +88,7 @@ public class TestNodeStateImpl extends LockssTestCase {
     assertEquals("test1upr", history.uprBound);
     assertFalse(pollIt.hasNext());
 
-    history = new PollHistory(2, "test2lwr", "test2upr", 0, 123, 0, null);
+    history = new PollHistory(2, "test2lwr", "test2upr", 0, 123, 0, null, false);
     state.pollHistories.add(history);
     pollIt = state.getPollHistories();
     assertTrue(pollIt.hasNext());
@@ -105,7 +105,7 @@ public class TestNodeStateImpl extends LockssTestCase {
     Iterator pollIt = state.getPollHistories();
     assertFalse(pollIt.hasNext());
 
-    PollHistory history = new PollHistory(1, "lwr1", "upr1", 0, 456, 0, null);
+    PollHistory history = new PollHistory(1, "lwr1", "upr1", 0, 456, 0, null, false);
     state.closeActivePoll(history);
 
     pollIt = state.getActivePolls();
@@ -123,11 +123,11 @@ public class TestNodeStateImpl extends LockssTestCase {
     assertFalse(pollIt.hasNext());
 
     // test proper insert
-    history = new PollHistory(1, "test1lwr", "test1upr", 0, 234, 0, null);
+    history = new PollHistory(1, "test1lwr", "test1upr", 0, 234, 0, null, false);
     state.pollHistories.add(history);
-    history = new PollHistory(1, "test2lwr", "test2upr", 0, 123, 0, null);
+    history = new PollHistory(1, "test2lwr", "test2upr", 0, 123, 0, null, false);
     state.pollHistories.add(history);
-    history = new PollHistory(1, "test1lwr", "test1upr", 0, 345, 0, null);
+    history = new PollHistory(1, "test1lwr", "test1upr", 0, 345, 0, null, false);
     state.closeActivePoll(history);
 
     Iterator histIt = state.getPollHistories();
@@ -148,7 +148,7 @@ public class TestNodeStateImpl extends LockssTestCase {
   public void testGetLastPollHistory() {
     assertNull(state.getLastPollHistory());
 
-    PollHistory history = new PollHistory(1, "test1lwr", "test1upr", 0, 123, 0, null);
+    PollHistory history = new PollHistory(1, "test1lwr", "test1upr", 0, 123, 0, null, false);
     state.pollHistories = new ArrayList(3);
     state.pollHistories.add(history);
     history = state.getLastPollHistory();
@@ -158,9 +158,9 @@ public class TestNodeStateImpl extends LockssTestCase {
     assertEquals("test1upr", history.uprBound);
     assertEquals(123, history.startTime);
 
-    history = new PollHistory(1, "test1lwr", "test1upr", 0, 789, 0, null);
+    history = new PollHistory(1, "test1lwr", "test1upr", 0, 789, 0, null, false);
     state.closeActivePoll(history);
-    history = new PollHistory(2, "test2lwr", "test2upr", 0, 456, 0, null);
+    history = new PollHistory(2, "test2lwr", "test2upr", 0, 456, 0, null, false);
     state.closeActivePoll(history);
     history = state.getLastPollHistory();
     assertNotNull(history);
@@ -178,7 +178,7 @@ public class TestNodeStateImpl extends LockssTestCase {
   }
 
   public void testAddPollState() {
-    PollState state4 = new PollState(4, "lwr4", "upr4", 1, 0, Deadline.MAX);
+    PollState state4 = new PollState(4, "lwr4", "upr4", 1, 0, Deadline.MAX, false);
     polls.add(state4);
     state.addPollState(state4);
     Iterator expectedIter = polls.iterator();
