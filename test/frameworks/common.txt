@@ -19,8 +19,8 @@ org.lockss.plugin.registry=\
 # Temporary list of plugins that should be loaded as ConfigurablePlugins
 # with a xml file.  These need not be included in the registry.
 
-org.lockss.plugin.xmlPlugins=\
-    org.lockss.plugin.absinthe.AbsinthePlugin;
+#org.lockss.plugin.xmlPlugins=\
+#    org.lockss.plugin.absinthe.AbsinthePlugin;
 
 # Title database
 
