@@ -1,5 +1,5 @@
 /*
- * $Id: NewContentCrawler.java,v 1.43 2004-10-20 18:41:21 dcfok Exp $
+ * $Id: NewContentCrawler.java,v 1.44 2004-10-22 00:43:49 troberts Exp $
  */
 
 /*
@@ -91,7 +91,7 @@ public class NewContentCrawler extends FollowLinkCrawler {
 	String url = (String)it.next();
 	//catch and warn if there's a url in the start urls
 	//that we shouldn't cache
-	logger.debug3("Trying to process " +url);
+	logger.debug2("Trying to process " +url);
 
         // check crawl window during crawl
 	if (!withinCrawlWindow()) {

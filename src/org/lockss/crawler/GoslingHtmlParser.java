@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlParser.java,v 1.22 2004-10-04 20:58:30 troberts Exp $
+ * $Id: GoslingHtmlParser.java,v 1.23 2004-10-22 00:43:48 troberts Exp $
  */
 
 /*
@@ -128,7 +128,7 @@ public class GoslingHtmlParser implements ContentParser {
   private CharRing ring;
   private int ringCapacity;
   private int ringSize;			// current ring size
-  private boolean isTrace = logger.isDebug3();
+  private boolean isTrace = logger.isDebug2();
 
   public GoslingHtmlParser() {
     ringCapacity = Configuration.getIntParam(PARAM_BUFFER_CAPACITY,
@@ -166,11 +166,11 @@ public class GoslingHtmlParser implements ContentParser {
       readerEof = false;
       ring = new CharRing(ringCapacity);
 
-      if (isTrace) logger.debug3("Extracting urls from " + srcUrl);
+      if (isTrace) logger.debug2("Extracting urls from " + srcUrl);
       String nextUrl = null;
       while ((nextUrl = extractNextLink(reader, ring)) != null) {
 	if (isTrace) {
-	  logger.debug3("Extracted "+nextUrl);
+	  logger.debug2("Extracted "+nextUrl);
 	}
 	cb.foundUrl(nextUrl);
       }
@@ -399,7 +399,7 @@ public class GoslingHtmlParser implements ContentParser {
 //       returnStr = Translate.decode(returnStr);
 //       returnStr = StringUtil.truncateAt(returnStr, '#');
       if (isTrace) {
-	logger.debug3("Generating url from: " + srcUrl + " and " + returnStr);
+	logger.debug2("Generating url from: " + srcUrl + " and " + returnStr);
       }
       try {
 	if (baseUrl == null) {
@@ -413,7 +413,7 @@ public class GoslingHtmlParser implements ContentParser {
 	return null;
       }
       if (isTrace) {
-	logger.debug3("Parsed: " + returnStr);
+	logger.debug2("Parsed: " + returnStr);
       }
     }
     return returnStr;
