@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.40 2003-11-07 00:50:11 troberts Exp $
+ * $Id: LockssTestCase.java,v 1.41 2003-11-11 20:27:11 tlipkis Exp $
  */
 
 /*
@@ -907,11 +907,13 @@ public class LockssTestCase extends TestCase {
 
     Interrupter(long waitMs, Thread thread) {
       super(waitMs);
+      setPriority(thread.getPriority() + 1);
       this.thread = thread;
     }
 
     /** Interrupt the thread */
     protected void doit() {
+      log.debug("Interrupting");
       if (threadDump) {
 	try {
 	  DebugUtils.getInstance().threadDump();
