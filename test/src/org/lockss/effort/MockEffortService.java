@@ -1,5 +1,5 @@
 /*
- * $Id: MockEffortService.java,v 1.1.2.5 2004-10-05 00:37:24 dshr Exp $
+ * $Id: MockEffortService.java,v 1.1.2.6 2004-10-05 18:30:41 dshr Exp $
  */
 
 /*
@@ -214,7 +214,7 @@ public class MockEffortService extends BaseLockssDaemonManager
     final Vote vote = voteSpec;
     final VoteCallback cb = callback;
     final Deadline dl = timer;
-    final Exception ex = myProofException;
+    final Exception ex = myVoteException;
     // XXX
     TimerQueue.Callback tqcb = new TimerQueue.Callback() {
 	public void timerExpired(Object tqCookie) {
@@ -248,7 +248,7 @@ public class MockEffortService extends BaseLockssDaemonManager
     final Vote vote = voteSpec;
     final VoteCallback cb = callback;
     final Deadline dl = timer;
-    final Exception ex = myProofException;
+    final Exception ex = myVoteException;
     // XXX
     TimerQueue.Callback tqcb = new TimerQueue.Callback() {
 	public void timerExpired(Object tqCookie) {

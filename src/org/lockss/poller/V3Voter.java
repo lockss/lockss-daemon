@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.1.2.10 2004-10-05 00:37:24 dshr Exp $
+ * $Id: V3Voter.java,v 1.1.2.11 2004-10-05 18:30:40 dshr Exp $
  */
 
 /*
@@ -239,30 +239,31 @@ public class V3Voter extends V3Poll {
       stopPoll();
       return;
     }
-    EffortService.VoteCallback cb = new VoteGenerationCallback(m_pollmanager);
-    EffortService.Vote vote = null;
+    //  Start by verifying the effort proof in the message
+    EffortService.ProofCallback cb =
+      new PollProofEffortCallback(m_pollmanager);
+    EffortService.Proof ep = null;
     EffortService es = null;
     if (false) {
       // XXX
-      // vote = msg.getVoteSpec();
-      es = vote.getEffortService();
+      ep = msg.getEffortProof();
+      es = ep.getEffortService();
     } else {
       // XXX
       es = theEffortService;
-      vote = es.makeVote();
+      ep = es.makeProof();
     }
     Deadline timer = msg.getDeadline();
     Serializable cookie = msg.getKey();
-    if (es.generateVote(vote, timer, cb, cookie)) {
-      // vote generation successfuly scheduled
-      log.debug("Scheduled vote callback for " + ((String)cookie));
+    if (es.verifyProof(ep, timer, cb, cookie)) {
+      // effort verification for PollProof successfuly scheduled
+      log.debug("Scheduled verification callback in " +
+		timer.getRemainingTime() + " for " + ((String)cookie));
       m_state = STATE_SENDING_VOTE;
     } else {
-      log.warning("could not schedule effort proof " + vote.toString() +
+      log.warning("could not schedule effort verification " + ep.toString() +
 		  " for " + msg.toString());
       m_state = STATE_FINALIZING;
-      m_pollstate = ERR_IO; // XXX choose better
-      stopPoll();
     }
   }
 
@@ -396,6 +397,82 @@ public class V3Voter extends V3Poll {
 		    pollAckProof.toString() + " for " + cookie);
 	m_pollstate = ERR_IO; // XXX choose better
 	m_state = STATE_FINALIZING;
+	stopPoll();
+      }
+      return;
+    }
+  }
+
+  class PollProofEffortCallback implements EffortService.ProofCallback {
+    private PollManager pollMgr = null;
+    PollProofEffortCallback(PollManager pm) {
+      pollMgr = pm;
+    }
+    /**
+     * Called to indicate generation of a proof of effort for
+     * the PollProof message is complete.
+     * @param ep the EffortProof in question
+     * @param cookie used to disambiguate callbacks
+     * @param e the exception that caused the effort proof to fail
+     */
+    public void generationFinished(EffortService.Proof ep,
+				   Deadline timer,
+				   Serializable cookie,
+				   Exception e) {
+      log.error("PollAckEffortProofCallback: bad call " + ((String) cookie) +
+		  " threw " + e);
+      m_state = STATE_FINALIZING;
+      m_pollstate = ERR_IO; // XXX choose better
+      stopPoll();
+    }
+
+    /**
+     * Called to indicate verification of a proof of effort is complete.
+     * @param ep the <code>EffortService.Proof</code> in question
+     * @param cookie used to disambiguate callbacks
+     * @param e the exception that caused the effort proof to fail
+     */
+    public void verificationFinished(EffortService.Proof ep,
+				     Deadline timer,
+				     Serializable cookie,
+				     Exception e) {
+      if (e != null) {
+	log.debug("PollProof effort verification threw: " + e);
+	m_pollstate = ERR_IO; // XXX choose better
+	m_state = STATE_FINALIZING;
+	stopPoll();
+	return;
+      }
+      if (!ep.isVerified()) {
+	log.debug("PollProof effort verification failed");
+	m_pollstate = ERR_IO; // XXX choose better
+	m_state = STATE_FINALIZING;
+	stopPoll();
+	return;
+      }
+      //  PollProof effort verified,  now generate a vote to reply with
+      log.debug("PollProof effort verification succeeds with " +
+		timer.getRemainingTime() + " to go");
+      EffortService es = ep.getEffortService();
+      EffortService.VoteCallback cb =
+	new VoteGenerationCallback(m_pollmanager);
+      EffortService.Vote vote = null;
+      if (false) {
+	// XXX
+	// vote = msg.getVoteSpec();
+	es = vote.getEffortService();
+      } else {
+	// XXX
+	vote = es.makeVote();
+      }
+      if (es.generateVote(vote, timer, cb, cookie)) {
+	// vote generation successfuly scheduled
+	log.debug("Scheduled vote callback for " + ((String)cookie));
+      } else {
+	log.warning("could not schedule effort proof " + vote.toString() +
+		    " for " + cookie);
+	m_state = STATE_FINALIZING;
+	m_pollstate = ERR_IO; // XXX choose better
 	stopPoll();
       }
       return;
