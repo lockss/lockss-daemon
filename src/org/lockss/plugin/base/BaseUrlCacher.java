@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.10 2003-09-19 22:34:02 eaalto Exp $
+ * $Id: BaseUrlCacher.java,v 1.11 2003-10-06 22:50:43 clairegriffin Exp $
  */
 
 /*
@@ -170,10 +170,8 @@ public class BaseUrlCacher implements UrlCacher {
    */
   protected InputStream getUncachedInputStream(long lastCached)
       throws IOException {
-    if (conn==null) {
-      URL urlObj = new URL(url);
-      conn = urlObj.openConnection();
-    }
+    openConnection();
+    // set the user-agent
     conn.setIfModifiedSince(lastCached);
     InputStream input = conn.getInputStream();
     if (conn instanceof HttpURLConnection) {
@@ -188,17 +186,23 @@ public class BaseUrlCacher implements UrlCacher {
   }
 
   protected Properties getUncachedProperties() throws IOException {
+    openConnection();
     Properties props = new Properties();
-    if (conn==null) {
-      URL urlO = new URL(url);
-      conn = urlO.openConnection();
-    }
     // set header properties in which we have interest
     props.setProperty("content-type", conn.getContentType());
     props.setProperty("content-url", url);
     props.setProperty("date", ""+conn.getDate());
     return props;
   }
+
+  private void openConnection() throws IOException {
+    if (conn==null) {
+      URL urlO = new URL(url);
+      conn = urlO.openConnection();
+      conn.setRequestProperty("user-agent", "LOCKSS cache");
+    }
+  }
+
 
   public static class CachingException extends IOException {
     public CachingException(String msg) {
