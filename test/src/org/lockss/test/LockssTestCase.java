@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.31 2003-07-14 06:47:20 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.32 2003-07-17 05:22:13 tlipkis Exp $
  */
 
 /*
@@ -130,8 +130,12 @@ public class LockssTestCase extends TestCase {
     if (cfg != null) {
       cfg.stopService();
     }
-
+    TimerQueue.stopTimerQueue();
     super.tearDown();
+    if (Boolean.getBoolean("org.lockss.test.threadDump")) {
+      DebugUtils.getInstance().threadDump();
+      TimerUtil.guaranteedSleep(1000);
+    }
   }
 
   /**
