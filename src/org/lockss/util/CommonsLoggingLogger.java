@@ -1,5 +1,5 @@
 /*
- * $Id: CommonsLoggingLogger.java,v 1.1 2004-02-23 09:18:08 tlipkis Exp $
+ * $Id: CommonsLoggingLogger.java,v 1.2 2004-08-09 02:59:09 tlipkis Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ package org.lockss.util;
 public class CommonsLoggingLogger implements org.apache.commons.logging.Log {
   static final String PARAM_DEFAULT_COMMONS_LOG_LEVEL =
     "org.lockss.defaultCommonsLogLevel";
-  static final String DEFAULT_COMMONS_LOG_LEVEL = "info";
+  static final String DEFAULT_DEFAULT_COMMONS_LOG_LEVEL = "info";
 
   private Logger log;
 
@@ -55,7 +55,7 @@ public class CommonsLoggingLogger implements org.apache.commons.logging.Log {
   public CommonsLoggingLogger(String name) {
     String s = System.getProperty(PARAM_DEFAULT_COMMONS_LOG_LEVEL);
     if (StringUtil.isNullString(s)) {
-      s = DEFAULT_COMMONS_LOG_LEVEL;
+      s = DEFAULT_DEFAULT_COMMONS_LOG_LEVEL;
     }
     log = Logger.getLoggerWithDefaultLevel(name, s,
 					   PARAM_DEFAULT_COMMONS_LOG_LEVEL);

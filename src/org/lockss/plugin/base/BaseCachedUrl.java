@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.12 2004-04-27 19:38:40 tlipkis Exp $
+ * $Id: BaseCachedUrl.java,v 1.13 2004-08-09 02:59:09 tlipkis Exp $
  */
 
 /*
@@ -52,6 +52,7 @@ public class BaseCachedUrl implements CachedUrl {
 
   private static final String PARAM_SHOULD_FILTER_HASH_STREAM =
     Configuration.PREFIX+"baseCachedUrl.filterHashStream";
+  private static final boolean DEFAULT_SHOULD_FILTER_HASH_STREAM = true;
 
   public BaseCachedUrl(CachedUrlSet owner, String url) {
     this.cus = owner;
@@ -101,7 +102,7 @@ public class BaseCachedUrl implements CachedUrl {
    */
   public InputStream openForHashing() {
     if (Configuration.getBooleanParam(PARAM_SHOULD_FILTER_HASH_STREAM,
-				      true)) {
+				      DEFAULT_SHOULD_FILTER_HASH_STREAM)) {
       logger.debug3("Filtering on, returning filtered stream");
       return getFilteredStream();
     } else {

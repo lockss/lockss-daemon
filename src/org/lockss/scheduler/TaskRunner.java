@@ -1,5 +1,5 @@
 /*
- * $Id: TaskRunner.java,v 1.19 2004-07-21 07:05:36 tlipkis Exp $
+ * $Id: TaskRunner.java,v 1.20 2004-08-09 02:59:09 tlipkis Exp $
  */
 
 /*
@@ -44,6 +44,11 @@ import org.lockss.daemon.status.*;
 import org.lockss.util.*;
 
 class TaskRunner implements Serializable {
+  // Sort options for displaying queue
+  static final int PEND_REV = 1;
+  static final int HIST_REV = 2;
+  static final int HIST_FIRST = 4;
+
   static final String PREFIX = Configuration.PREFIX + "taskRunner.";
 
   static final String PARAM_HISTORY_MAX = PREFIX + "historySize";
@@ -54,7 +59,7 @@ class TaskRunner implements Serializable {
   static final long DEFAULT_STATS_UPDATE_INTERVAL = 10 * Constants.SECOND;
 
   static final String PARAM_SORT_SCHEME = PREFIX + "tableSort";
-  final int DEFAULT_SORT_SCHEME = PEND_REV | HIST_REV;
+  static final int DEFAULT_SORT_SCHEME = PEND_REV | HIST_REV;
 
   // thread watchdog interval is set very high because the stepper thread
   // runs at low priority and may legitimately be blocked for a long time.
@@ -63,10 +68,6 @@ class TaskRunner implements Serializable {
 
   static final String PRIORITY_PARAM_STEPPER = "TaskRunner";
   static final int PRIORITY_DEFAULT_STEPPER = Thread.NORM_PRIORITY - 1;
-
-  static final int PEND_REV = 1;
-  static final int HIST_REV = 2;
-  static final int HIST_FIRST = 4;
 
   protected static Logger log = Logger.getLogger("TaskRunner");
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestSystemMetrics.java,v 1.15 2004-01-09 09:15:57 eaalto Exp $
+ * $Id: TestSystemMetrics.java,v 1.16 2004-08-09 02:59:08 tlipkis Exp $
  */
 
 /*
@@ -53,7 +53,7 @@ public class TestSystemMetrics extends LockssTestCase {
     props.setProperty(SystemMetrics.PARAM_HASH_TEST_BYTE_STEP,
                       Integer.toString(SystemMetrics.DEFAULT_HASH_TEST_BYTE_STEP));
     props.setProperty(SystemMetrics.PARAM_DEFAULT_HASH_SPEED,
-                      Integer.toString(SystemMetrics.DEFAULT_HASH_SPEED));
+                      Integer.toString(SystemMetrics.DEFAULT_DEFAULT_HASH_SPEED));
     ConfigurationUtil.setCurrentConfigFromProps(props);
     theDaemon.getHashService().startService();
     metrics = theDaemon.getSystemMetrics();
@@ -97,7 +97,7 @@ public class TestSystemMetrics extends LockssTestCase {
   public void testEstimationCaching() throws IOException {
     MockCachedUrlSetHasher hasher = new MockCachedUrlSetHasher(10000);
     int estimate = metrics.getBytesPerMsHashEstimate(hasher, new MockMessageDigest());
-    assertEquals(SystemMetrics.DEFAULT_HASH_SPEED, estimate);
+    assertEquals(SystemMetrics.DEFAULT_DEFAULT_HASH_SPEED, estimate);
     hasher = new MockCachedUrlSetHasher(10);
     int estimate2 = metrics.getBytesPerMsHashEstimate(hasher, new MockMessageDigest());
     assertEquals(estimate, estimate2);
