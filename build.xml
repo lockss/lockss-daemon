@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.123 2004-12-07 05:15:56 tlipkis Exp $
+ $Id: build.xml,v 1.124 2004-12-09 08:23:42 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -147,8 +147,6 @@ Args:
   <property name="servlet.jar"    value="${lib}/javax.servlet.jar"/>
   <property name="jaxp.jar"       value="${lib}/javax.xml.jaxp.jar"/>
 <!--    <property name="xml.jar"  value="${lib}/org.apache.crimson.jar"/> -->
-<!--    <property name="regexp.jar"     value="${lib}/gnu-regexp.jar"/> -->
-  <property name="regexp.jar"     value="${lib}/gnu-regexp-1.1.4.jar"/>
   <property name="log4j.jar" value="${lib}/log4j-1.2.8.jar"/>
   <property name="commons.collections.jar"
   				  value="${lib}/commons-collections-3.1.jar"/>
@@ -233,7 +231,6 @@ Args:
   <path id="test.compile.classpath">
     <path refid="compile.classpath" />
     <pathelement path="${lockss.jar}" />
-    <pathelement path="${regexp.jar}" />
     <pathelement path="${junit.jar}" />
     <pathelement path="${junit.addons.jar}" />
     <pathelement path="${httpunit.jar}" />
@@ -262,7 +259,6 @@ Args:
   <path id="tools.compile.classpath">
     <path refid="compile.classpath" />
     <pathelement path="${lockss.jar}" />
-    <pathelement path="${regexp.jar}" />
     <pathelement path="${jdk.tools.jar}" />
   </path>
 
