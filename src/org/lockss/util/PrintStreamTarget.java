@@ -1,5 +1,5 @@
 /*
- * $Id: PrintStreamTarget.java,v 1.4 2003-07-17 05:21:16 tlipkis Exp $
+ * $Id: PrintStreamTarget.java,v 1.5 2005-01-04 03:04:25 tlipkis Exp $
  */
 
 /*
@@ -90,7 +90,12 @@ public class PrintStreamTarget implements LogTarget {
     sb.append(": ");
     sb.append(message);
     PrintStream s = getPrintStream();
-    s.println(sb.toString());
+    String str = sb.toString();
+    if (str.endsWith("\n")) {
+	s.print(str);
+    } else {
+	s.println(str);
+    }
     s.flush();
   }
 

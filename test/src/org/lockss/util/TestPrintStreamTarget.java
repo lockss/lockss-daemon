@@ -1,5 +1,5 @@
 /*
- * $Id: TestPrintStreamTarget.java,v 1.4 2004-12-09 08:21:44 tlipkis Exp $
+ * $Id: TestPrintStreamTarget.java,v 1.5 2005-01-04 03:04:25 tlipkis Exp $
  */
 
 /*
@@ -63,5 +63,25 @@ public class TestPrintStreamTarget extends LockssTestCase {
     assertTrue("Debug string: \""+debugString+"\" not of correct format."+
 	       " Should be <time>: <error-level>: <error message>",
 	       isMatchRe(debugString, re));
+    assertEquals(3, StringUtil.countOccurences(debugString, "\n"));
+  }
+
+  public void testNoBlankLines() {
+    ByteArrayOutputStream baos = new ByteArrayOutputStream();
+    PrintStream ps = new PrintStream(baos);
+    PrintStreamTarget target = new PrintStreamTarget(ps);
+
+    String name = "log-id";
+    String errorMessage = "error message";
+    // output the message twice with and without newline on end
+    target.handleMessage(new Logger(Logger.LEVEL_DEBUG, name),
+			 Logger.LEVEL_ERROR,
+			 errorMessage + "\n");
+    target.handleMessage(new Logger(Logger.LEVEL_DEBUG, name),
+			 Logger.LEVEL_ERROR,
+			 errorMessage);
+    String debugString = baos.toString();
+    // Same three lines as above, and there should be only 3 EOLs
+    assertEquals(3, StringUtil.countOccurences(debugString, "\n"));
   }
 }
