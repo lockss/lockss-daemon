@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.28 2003-09-03 18:00:17 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.29 2003-09-03 18:08:37 tlipkis Exp $
  */
 
 /*
@@ -316,7 +316,8 @@ public class StringUtil {
     return str.regionMatches(true, str.length() - lend, end, 0, lend);
   }
 
-  /** Remove the extension from a filename */
+  /** Remove the substring beginning with the final occurrence of the
+   * separator, if any. */
   public static String upToFinal(String str, String sep) {
     int pos = str.lastIndexOf(sep);
     if (pos < 0) {
