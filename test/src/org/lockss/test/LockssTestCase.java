@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.45 2004-01-22 02:01:50 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.46 2004-01-24 22:55:42 tlipkis Exp $
  */
 
 /*
@@ -59,7 +59,7 @@ public class LockssTestCase extends TestCase {
   private MockLockssDaemon mockDaemon = null;
 
   List tmpDirs;
-  List doLaters;
+  List doLaters = null;
 
   public LockssTestCase(String msg) {
     this();
@@ -118,7 +118,10 @@ public class LockssTestCase extends TestCase {
    */
   protected void tearDown() throws Exception {
     if (doLaters != null) {
-      List copy = new ArrayList(doLaters);
+      List copy;
+      synchronized (this) {
+	copy = new ArrayList(doLaters);
+      }
       for (Iterator iter = copy.iterator(); iter.hasNext(); ) {
 	DoLater doer = (DoLater)iter.next();
 	doer.cancel();
@@ -952,10 +955,10 @@ public class LockssTestCase extends TestCase {
       try {
 	synchronized (LockssTestCase.this) {
 	  if (doLaters == null) {
-	    doLaters = Collections.synchronizedList(new LinkedList());
+	    doLaters = new LinkedList();
 	  }
+	  doLaters.add(this);
 	}
-	doLaters.add(this);
 	if (wait != 0) {
 	  TimerUtil.sleep(wait);
 	}
@@ -969,7 +972,9 @@ public class LockssTestCase extends TestCase {
       } catch (InterruptedException e) {
 	// exit thread
       } finally {
-	doLaters.remove(this);
+	synchronized (LockssTestCase.this) {
+	  doLaters.remove(this);
+	}
       }
     }
   }
