@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.11 2004-04-06 07:30:52 tlipkis Exp $
+ * $Id: BaseCachedUrl.java,v 1.12 2004-04-27 19:38:40 tlipkis Exp $
  */
 
 /*
@@ -111,8 +111,17 @@ public class BaseCachedUrl implements CachedUrl {
   }
 
   public boolean hasContent() {
-    ensureLeafLoaded();
-    return leaf.hasContent();
+    if (repository==null) {
+      getRepository();
+    }
+    if (leaf==null) {
+      try {
+        leaf = repository.getNode(url);
+      } catch (MalformedURLException mue) {
+	return false;
+      }
+    }
+    return (leaf == null) ? false : leaf.hasContent();
   }
 
   public InputStream getUnfilteredInputStream() {
@@ -152,10 +161,14 @@ public class BaseCachedUrl implements CachedUrl {
     }
   }
 
+  private void getRepository() {
+    ArchivalUnit au = getArchivalUnit();
+    repository = au.getPlugin().getDaemon().getLockssRepository(au);
+  }
+  
   private void ensureLeafLoaded() {
     if (repository==null) {
-      ArchivalUnit au = getArchivalUnit();
-      repository = au.getPlugin().getDaemon().getLockssRepository(au);
+      getRepository();
     }
     if (leaf==null) {
       try {
