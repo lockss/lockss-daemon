@@ -1,5 +1,5 @@
 /*
- * $Id: StatusService.java,v 1.9 2003-12-17 02:09:47 tlipkis Exp $
+ * $Id: StatusService.java,v 1.10 2004-04-29 10:11:18 tlipkis Exp $
  */
 
 /*
@@ -50,11 +50,24 @@ public interface StatusService {
    * and key specified.
    * @param tableName name of the table to get
    * @param key object which further specifies the needed table
-   * @return StatusTable object with specified name
+   * @return Populated StatusTable
    * @throws  StatusService.NoSuchTableException if there is no status table 
    * with that name-key combination
    */
   public StatusTable getTable(String tableName, String key) 
+      throws StatusService.NoSuchTableException;
+
+  /**
+   * Returns the StatusService.Table object identified by the tableName,
+   * key and options specified.
+   * @param tableName name of the table to get
+   * @param key object which further specifies the needed table
+   * @param options BitSet of StatusTable.OPTION_<iXXX</i>
+   * @return Populated StatusTable
+   * @throws  StatusService.NoSuchTableException if there is no status table 
+   * with that name-key combination
+   */
+  public StatusTable getTable(String tableName, String key, BitSet options) 
       throws StatusService.NoSuchTableException;
 
   /**

@@ -1,5 +1,5 @@
 /*
- * $Id: StatusServiceImpl.java,v 1.20 2003-12-23 00:32:12 tlipkis Exp $
+ * $Id: StatusServiceImpl.java,v 1.21 2004-04-29 10:11:17 tlipkis Exp $
  */
 
 /*
@@ -58,6 +58,11 @@ public class StatusServiceImpl
 
   public StatusTable getTable(String tableName, String key) 
       throws StatusService.NoSuchTableException {
+    return getTable(tableName, key, null);
+  }
+
+  public StatusTable getTable(String tableName, String key, BitSet options) 
+      throws StatusService.NoSuchTableException {
     if (tableName == null) {
       throw new 
 	StatusService.NoSuchTableException("Called with null tableName");
@@ -73,6 +78,11 @@ public class StatusServiceImpl
 						   +tableName+" "+key);
     } 
     StatusTable table = new StatusTable(tableName, key);
+    if (options != null) {
+      BitSet tableOpts = table.getOptions();
+      tableOpts.xor(tableOpts);
+      tableOpts.or(options);
+    }
     statusAccessor.populateTable(table);
     if (table.getTitle() == null) {
       try {
