@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuConfig.java,v 1.1 2003-08-06 06:29:45 tlipkis Exp $
+ * $Id: TestAuConfig.java,v 1.2 2003-08-09 20:38:44 tlipkis Exp $
  */
 
 /*
@@ -47,17 +47,13 @@ import com.meterware.httpunit.*;
 /**
  * This is the test class for org.lockss.servlet.AuConfig
  */
-public class TestAuConfig extends LockssTestCase {
+public class TestAuConfig extends LockssServletTestCase {
   static Logger log = Logger.getLogger("TestAuConfig");
 
-  private MockLockssDaemon theDaemon;
   private MockArchivalUnit mau = null;
-  private LockssServletRunner sr;
-  private ServletUnitClient sc;
 
   public void setUp() throws Exception {
     super.setUp();
-    theDaemon = new MockLockssDaemon();
     PluginManager mgr = new PluginManager();
     theDaemon.setPluginManager(mgr);
     theDaemon.setDaemonInited(true);
@@ -73,22 +69,25 @@ public class TestAuConfig extends LockssTestCase {
 //     props.setProperty(NodeManagerImpl.PARAM_RECALL_DELAY, "5s");
     ConfigurationUtil.setCurrentConfigFromProps(props);
     mau = new MockArchivalUnit();
-
-    sr = new LockssServletRunner();
-    sr.registerServlet("/AuConfig", AuConfig.class.getName() );
-    sr.setServletContextAttribute("LockssDaemon", theDaemon);
-    sc = sr.newClient();
   }
 
+  protected void initServletRunner() {
+    super.initServletRunner();
+    sRunner.registerServlet("/AuConfig", AuConfig.class.getName() );
+  }
+
+
   public void test1() throws Exception {
+    initServletRunner();
     WebRequest request =
       new GetMethodWebRequest("http://null/AuConfig" );
 //     request.setParameter( "color", "red" );
-    WebResponse response = sc.getResponse(request);
-    assertNotNull("No response received", response);
-    assertEquals("content type", "text/html", response.getContentType());
-    WebForm auForm = response.getFormWithID("AuSummaryForm");
-    WebTable auTable = response.getTableWithID("AuSummaryTable");
+    WebResponse resp1 = sClient.getResponse(request);
+    assertResponseOk(resp1);
+    assertEquals("Content type", "text/html", resp1.getContentType());
+
+    WebForm auForm = resp1.getFormWithID("AuSummaryForm");
+    WebTable auTable = resp1.getTableWithID("AuSummaryTable");
     assertNotNull("No form named AuSummaryForm", auForm);
     assertNotNull("No table named AuSummaryTable", auTable);
     assertEquals(1, auTable.getRowCount());
@@ -99,9 +98,10 @@ public class TestAuConfig extends LockssTestCase {
     HTMLElement elem = cell.getElementWithID("lsb.1");
     Button btn = (Button)elem;
     assertEquals("Add", btn.getValue());
+    // This form must be submitted via the javascript invoked by this button,
     btn.click();
-    WebRequest req2 = auForm.getRequest();
-    WebResponse resp2 = sc.getResponse(req2);
-//     log.info(resp2.getText());
+    WebResponse resp2 = sClient.getCurrentPage();
+    assertResponseOk(resp2);
+     log.info(resp2.getText());
   }
 }
