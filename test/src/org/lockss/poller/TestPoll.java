@@ -113,8 +113,8 @@ public class TestPoll extends TestCase {
       // unitialized comm
     }
 
-    assertEquals(1, p.m_tally.numYes);
-    assertEquals(rep, p.m_tally.wtYes);
+    assertEquals(1, p.m_tally.numAgree);
+    assertEquals(rep, p.m_tally.wtAgree);
     assertTrue(rep <= id.getReputation());
 
     rep = id.getReputation();
@@ -125,8 +125,8 @@ public class TestPoll extends TestCase {
     catch(IllegalStateException ex) {
       // unitialized comm
     }
-    assertEquals(1, p.m_tally.numNo);
-    assertEquals(rep, p.m_tally.wtNo);
+    assertEquals(1, p.m_tally.numDisagree);
+    assertEquals(rep, p.m_tally.wtDisagree);
     assertTrue(rep >= id.getReputation());
   }
 
@@ -138,20 +138,20 @@ public class TestPoll extends TestCase {
     p.m_tally.addVote(new Vote(msg,false));
     p.m_tally.addVote(new Vote(msg,false));
     p.m_tally.addVote(new Vote(msg,false));
-    assertEquals(0, p.m_tally.numYes);
-    assertEquals(0, p.m_tally.wtYes);
-    assertEquals(3, p.m_tally.numNo);
-    assertEquals(1500, p.m_tally.wtNo);
+    assertEquals(0, p.m_tally.numAgree);
+    assertEquals(0, p.m_tally.wtAgree);
+    assertEquals(3, p.m_tally.numDisagree);
+    assertEquals(1500, p.m_tally.wtDisagree);
 
     p = testpolls[1];
     msg = p.getMessage();
     p.m_tally.addVote(new Vote(msg,true));
     p.m_tally.addVote(new Vote(msg,true));
     p.m_tally.addVote(new Vote(msg,true));
-    assertEquals(3, p.m_tally.numYes);
-    assertEquals(1500, p.m_tally.wtYes);
-    assertEquals(0, p.m_tally.numNo);
-    assertEquals(0, p.m_tally.wtNo);
+    assertEquals(3, p.m_tally.numAgree);
+    assertEquals(1500, p.m_tally.wtAgree);
+    assertEquals(0, p.m_tally.numDisagree);
+    assertEquals(0, p.m_tally.wtDisagree);
   }
 
   /** test for method vote(..) */
@@ -174,10 +174,10 @@ public class TestPoll extends TestCase {
   public void testVoteInPoll() {
     Poll p = testpolls[0];
     p.m_tally.quorum = 10;
-    p.m_tally.numYes = 5;
-    p.m_tally.numNo = 2;
-    p.m_tally.wtYes = 2000;
-    p.m_tally.wtNo = 200;
+    p.m_tally.numAgree = 5;
+    p.m_tally.numDisagree = 2;
+    p.m_tally.wtAgree = 2000;
+    p.m_tally.wtDisagree = 200;
     p.m_hash = pollmanager.generateRandomBytes();
     try {
       p.voteInPoll();
@@ -186,7 +186,7 @@ public class TestPoll extends TestCase {
       // the socket isn't inited and should squack
     }
 
-    p.m_tally.numYes = 20;
+    p.m_tally.numAgree = 20;
     try {
       p.voteInPoll();
     }
