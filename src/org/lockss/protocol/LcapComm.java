@@ -1,5 +1,5 @@
 /*
- * $Id: LcapComm.java,v 1.23 2003-03-26 23:14:35 tal Exp $
+ * $Id: LcapComm.java,v 1.24 2003-03-27 23:53:21 tal Exp $
  */
 
 /*
@@ -99,8 +99,6 @@ public class LcapComm implements LockssManager {
       theDaemon = daemon;
       theManager = this;
       theManager.sockFact = new NormalSocketFactory();
-      theManager.configure(Configuration.getCurrentConfig());
-      theManager.start();
     }
     else {
       throw new LockssDaemonException("Multiple Instantiation.");
@@ -112,6 +110,8 @@ public class LcapComm implements LockssManager {
    * @see org.lockss.app.LockssManager#startService()
    */
   public void startService() {
+    configure(Configuration.getCurrentConfig());
+    start();
   }
 
   /**
@@ -127,14 +127,6 @@ public class LcapComm implements LockssManager {
 
   LcapComm(SocketFactory factory) {
     sockFact = factory;
-  }
-
-  /** Create a singleton, configure it from the Configuration singleton,
-   * and start its thread(s) */
-  public void startComm() {
-    theManager = new LcapComm(new NormalSocketFactory());
-    theManager.configure(Configuration.getCurrentConfig());
-    theManager.start();
   }
 
   /**
