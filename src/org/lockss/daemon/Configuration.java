@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.39 2003-04-21 05:37:11 tal Exp $
+ * $Id: Configuration.java,v 1.40 2003-04-23 20:31:12 tal Exp $
  */
 
 /*
@@ -235,12 +235,13 @@ public abstract class Configuration {
     String logdir = get(PARAM_PLATFORM_LOG_DIR);
     String logfile = get(PARAM_PLATFORM_LOG_FILE);
     if (logdir != null && logfile != null) {
-      setIfNotSet(FileTarget.PARAM_FILE, new File(logdir, logfile).toString());
+      platformOverride(FileTarget.PARAM_FILE,
+		       new File(logdir, logfile).toString());
     }
 
     String ip = get(PARAM_PLATFORM_IP_ADDRESS);
     if (ip != null) {
-      setIfNotSet(IdentityManager.PARAM_LOCAL_IP, ip);
+      platformOverride(IdentityManager.PARAM_LOCAL_IP, ip);
     }
 
     String platformSubnet = get(PARAM_PLATFORM_ACCESS_SUBNET);
@@ -251,16 +252,19 @@ public abstract class Configuration {
     if (!StringUtil.isNullString(space)) {
       String firstSpace =
 	((String)StringUtil.breakAt(space, ';', 1).elementAt(0));
-      setIfNotSet(LockssRepositoryServiceImpl.PARAM_CACHE_LOCATION,
-		  firstSpace);
-      setIfNotSet(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION, firstSpace);
+      platformOverride(LockssRepositoryServiceImpl.PARAM_CACHE_LOCATION,
+		       firstSpace);
+      platformOverride(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION,
+		       firstSpace);
     }
   }
 
-  private void setIfNotSet(String key, String val) {
-    if (get(key) == null) {
-      put(key, val);
+  private void platformOverride(String key, String val) {
+    if (get(key) != null) {
+      log.warning("Overriding param: " + key + "= " + get(key));
+      log.warning("with platform-derived value: " + val);
     }
+    put(key, val);
   }
 
   private void appendPlatformAccess(String accessParam,
