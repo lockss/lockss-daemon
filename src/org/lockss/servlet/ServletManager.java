@@ -1,5 +1,5 @@
 /*
- * $Id: ServletManager.java,v 1.6 2003-04-03 11:29:47 tal Exp $
+ * $Id: ServletManager.java,v 1.7 2003-04-04 08:41:06 tal Exp $
  */
 
 /*
@@ -52,9 +52,11 @@ public class ServletManager extends JettyManager {
   public static final String PARAM_START = PREFIX + "start";
   public static final String PARAM_PORT = PREFIX + "port";
 
+  public static final boolean DEFAULT_START = true;
+  public static final int DEFAULT_PORT = 8081;
+
   private static Logger log = Logger.getLogger("ServletMgr");
 
-  private Map servlets = new HashMap();
   private HttpServer server;
 
   private int port;
@@ -65,10 +67,7 @@ public class ServletManager extends JettyManager {
 
   /* ------- LockssManager implementation ------------------ */
 
-  /**
-   * start the servlet manager.
-   * @see org.lockss.app.LockssManager#startService()
-   */
+  /** Start servlets  */
   public void startService() {
     if (start) {
       super.startService();
@@ -76,26 +75,23 @@ public class ServletManager extends JettyManager {
     }
   }
 
-  /**
-   * stop the servlet manager
-   * @see org.lockss.app.LockssManager#stopService()
-   */
+  /** Stop servlets  */
   public void stopService() {
-    // tk - checkpoint if nec.
     try {
       if (server != null) {
 	server.stop();
       }
     } catch (InterruptedException e) {
-      log.info("Interrupted while stopping server");
+      log.warning("Interrupted while stopping server");
     }
     super.stopService();
   }
 
   protected void setConfig(Configuration config, Configuration prevConfig,
 			   Set changedKeys) {
-    port = config.getInt(PARAM_PORT, 8081);
-    start = config.getBoolean(PARAM_START, true);
+    super.setConfig(config, prevConfig, changedKeys);
+    port = config.getInt(PARAM_PORT, DEFAULT_PORT);
+    start = config.getBoolean(PARAM_START, DEFAULT_START);
   }
 
   public void startServlets() {
@@ -112,7 +108,7 @@ public class ServletManager extends JettyManager {
       // Start the http server
       server.start ();
     } catch (Exception e) {
-      log.error("Couldn't start servlets", e);
+      log.warning("Couldn't start servlets", e);
     }
   }
 
@@ -138,8 +134,13 @@ public class ServletManager extends JettyManager {
     try {
       // Create a context
       HttpContext context = server.getContext(null, "/");
-      context.setAttribute("LockssDaemon", getDaemon());
+//       context.setErrorPage("500", "images/");
+//       log.debug("Error page URL: " + context.getErrorPage("500"));
+//       log.debug("Error page URL: " + context.getErrorPage());
+      // Give servlets a way to find the daemon instance
+      context.setAttribute("LockssDaemon", theDaemon);
 
+      // find the htdocs directory, set as resource base
       ClassLoader loader = Thread.currentThread().getContextClassLoader();
       URL resourceUrl=loader.getResource("org/lockss/htdocs/");
       log.debug("Resource URL: " + resourceUrl);
@@ -157,9 +158,12 @@ public class ServletManager extends JettyManager {
 			 "org.lockss.servlet.DaemonStatus");
 
       context.addHttpHandler(handler);
+      context.addHttpHandler(new NotFoundHandler());
+//       context.addHttpHandler(new DumpHandler());
+
 
     } catch (Exception e) {
-      log.error("Couldn't start debug servlets", e);
+      log.warning("Couldn't start debug servlets", e);
     }
   }
 }
