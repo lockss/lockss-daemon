@@ -1,5 +1,5 @@
 /*
- * $Id: AuTreeWalkManager.java,v 1.10 2004-10-19 23:37:39 tlipkis Exp $
+ * $Id: AuTreeWalkManager.java,v 1.11 2004-12-12 22:59:56 tlipkis Exp $
  */
 
 /*
@@ -194,7 +194,11 @@ public class AuTreeWalkManager
   }
 
   void scheduleFirst() {
-    scheduleIn(twm.paramStartDelay);
+    // allow the au to override the global value
+    TypedEntryMap auMap = au.getProperties();
+    long delay = auMap.getLong(TreeWalkManager.PARAM_TREEWALK_START_DELAY,
+			       twm.paramStartDelay);
+    scheduleIn(delay);
   }
 
   void scheduleNext() {
