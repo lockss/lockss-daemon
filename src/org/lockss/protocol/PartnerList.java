@@ -1,5 +1,5 @@
 /*
- * $Id: PartnerList.java,v 1.5 2003-03-22 01:15:19 aalto Exp $
+ * $Id: PartnerList.java,v 1.6 2003-03-28 08:13:32 tal Exp $
  */
 
 /*
@@ -39,7 +39,7 @@ import org.lockss.daemon.*;
 import org.apache.commons.collections.LRUMap;
 
 /**
- * Partner list implements the LCAP V1 unicast partner list.
+ * PartnerList implements the LCAP V1 unicast partner list.
  * Partners (IP addresses) can be added and removed, checked for presence,
  * and record the last time a message was received.
  */
