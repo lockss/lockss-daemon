@@ -21,6 +21,7 @@ public class TestPoll extends TestCase {
   private static String urlstr = "http://www.test.org";
   private static String regexp = "*.doc";
   private static byte[] testbytes = {1,2,3,4,5,6,7,8,9,10};
+
   private static String[] testentries = {"test1.doc", "test2.doc", "test3.doc"};
   protected static ArchivalUnit testau;
   static {
@@ -54,8 +55,8 @@ public class TestPoll extends TestCase {
                                        testentries,
                                        testaddr,
                                        (byte)5,
-                                       testbytes,
-                                       testbytes,
+                                       PollManager.generateSecret(),
+                                       PollManager.generateSecret(),
                                        LcapMessage.CONTENT_POLL_REQ,
                                        5 * 60 *60 *1000,
                                        testID);
@@ -76,8 +77,8 @@ public class TestPoll extends TestCase {
                                  testentries,
                                  testaddr,
                                  (byte)5,
-                                 testbytes,
-                                 testbytes,
+                                 PollManager.generateSecret(),
+                                 PollManager.generateSecret(),
                                  LcapMessage.CONTENT_POLL_REQ,
                                  5 * 60 *60 *1000,
                                  testID);
@@ -119,8 +120,8 @@ public class TestPoll extends TestCase {
                                  testentries,
                                  testaddr,
                                  (byte)5,
-                                 testbytes,
-                                 testbytes,
+                                 PollManager.generateSecret(),
+                                 PollManager.generateSecret(),
                                  LcapMessage.NAME_POLL_REQ,
                                  5 * 60 *60 *1000,
                                  testID);
