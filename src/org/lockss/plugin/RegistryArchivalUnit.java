@@ -1,5 +1,5 @@
 /*
- * $Id: RegistryArchivalUnit.java,v 1.3 2004-08-02 20:04:34 smorabito Exp $
+ * $Id: RegistryArchivalUnit.java,v 1.4 2004-09-01 20:14:45 smorabito Exp $
  */
 
 /*
@@ -51,6 +51,11 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
   private String m_registryUrl = null;
   private int m_maxRefetchDepth = -1;
   
+  private static final String PLUGIN_REDISTRIBUTE_PERMISSION_STRING =
+    "LOCKSS system has permission to redistribute this Archival Unit";
+  
+  private List m_permissionCheckers;
+
   protected Logger log = Logger.getLogger("RegistryArchivalUnit");
 
   public RegistryArchivalUnit(RegistryPlugin plugin) {
@@ -59,6 +64,10 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
       Configuration.getIntParam(NewContentCrawler.PARAM_MAX_CRAWL_DEPTH,
 				NewContentCrawler.DEFAULT_MAX_CRAWL_DEPTH);
 
+    // Require redistribution permission in addition to the default.
+    m_permissionCheckers =
+      ListUtil.list(new StringPermissionChecker(PLUGIN_REDISTRIBUTE_PERMISSION_STRING,
+      						new StringPermissionChecker.StringFilterRule()));
   }
 
   public void loadAuConfigDescrs(Configuration config)
@@ -90,10 +99,17 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
     return false;
   }
 
+  /**
+   * Return a new CrawlSpec with the appropriate collect AND redistribute
+   * permissions, and with the maximum refetch depth.
+   *
+   * @return CrawlSpec
+   */
   protected CrawlSpec makeCrawlSpec() throws LockssRegexpException {
     CrawlRule rule = makeRules();
-    // Return a new CrawlSpec with the maximum refetch depth
-    return new CrawlSpec(startUrlString, rule, m_maxRefetchDepth);
+    List startUrls = ListUtil.list(startUrlString);
+    return new CrawlSpec(startUrls, startUrls, rule,
+			 m_maxRefetchDepth, m_permissionCheckers);
   }
 
   /**

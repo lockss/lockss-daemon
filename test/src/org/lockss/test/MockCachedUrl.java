@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrl.java,v 1.23 2004-05-25 00:17:43 clairegriffin Exp $
+ * $Id: MockCachedUrl.java,v 1.24 2004-09-01 20:14:44 smorabito Exp $
  */
 
 /*
@@ -54,6 +54,7 @@ public class MockCachedUrl implements CachedUrl {
   private boolean doesExist = false;
   private String content = null;
   private Reader reader = null;
+  private File cachedFile = null;
 
   public MockCachedUrl(String url) {
     this.url = url;
@@ -62,6 +63,17 @@ public class MockCachedUrl implements CachedUrl {
   public MockCachedUrl(String url, CachedUrlSet cus) {
     this(url);
     this.cus = cus;
+  }
+
+  /**
+   * Construct a mock cached URL that is backed by a file.
+   */
+  public MockCachedUrl(String url, String file) {
+    this(url);
+    cachedFile = new File(file);
+    if (!cachedFile.exists()) {
+      throw new RuntimeException("Unable to load file: " + file);
+    }
   }
 
   public ArchivalUnit getArchivalUnit() {
@@ -110,6 +122,13 @@ public class MockCachedUrl implements CachedUrl {
   // Read interface - used by the proxy.
 
   public InputStream getUnfilteredInputStream() {
+    if (cachedFile != null) {
+      try {
+	return new FileInputStream(cachedFile);
+      } catch (IOException ex) {
+	return null;
+      }
+    }
     if (content != null) {
       return new StringInputStream(content);
     }

@@ -1,5 +1,5 @@
 /*
- * $Id: JarValidator.java,v 1.1 2004-07-12 23:01:49 smorabito Exp $
+ * $Id: JarValidator.java,v 1.2 2004-09-01 20:14:45 smorabito Exp $
  */
 
 /*
@@ -100,7 +100,7 @@ public class JarValidator {
    */
   private void validatePluginJar(CachedUrl cu)
       throws IOException, JarValidationException {
-    boolean verified = true;
+    boolean foundJarEntry = false;
 
     // If the keystore is null we can't continue.
     if (m_keystore == null) {
@@ -122,11 +122,16 @@ public class JarValidator {
 	// will get loaded.
 	if (inManifest(je.getName(), manifest)) {
 	  verifyJarEntry(jstr, je);
+	  if (!foundJarEntry) foundJarEntry = true;
 	}
       }
     } finally {
-      if (jstr != null) 
+      if (jstr != null)
 	jstr.close();
+    }
+
+    if (!foundJarEntry) {
+      throw new JarValidationException("No valid entries found in manifest.");
     }
   }
 
@@ -162,7 +167,7 @@ public class JarValidator {
    * at least one certificate is a valid, trusted X509 certificate
    * in our keystore, the JAR passes.
    */
-  private void verifyJarEntry(JarInputStream jstr, JarEntry je) 
+  private void verifyJarEntry(JarInputStream jstr, JarEntry je)
       throws JarValidationException {
     // An unfortunate side-effect of the way JarEntries work.  We must
     // read the entire input of the jar entry, otherwise
@@ -186,7 +191,6 @@ public class JarValidator {
 
     for (int i = 0; i < certs.length; i++) {
       X509Certificate jarEntryCert = (X509Certificate)certs[i];
-
       try {
 	jarEntryCert.checkValidity();
       } catch (CertificateExpiredException ex) {

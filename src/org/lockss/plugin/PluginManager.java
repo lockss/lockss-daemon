@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.100 2004-09-01 02:22:27 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.101 2004-09-01 20:14:45 smorabito Exp $
  */
 
 /*
@@ -231,6 +231,12 @@ public class PluginManager
     if (changedKeys.contains(PARAM_PLUGIN_LOAD_TIMEOUT)) {
       registryTimeout = config.getTimeInterval(PARAM_PLUGIN_LOAD_TIMEOUT,
 					       DEFAULT_PLUGIN_LOAD_TIMEOUT);
+    }
+
+    // If the keystore or password has changed, update.
+    if (changedKeys.contains(PARAM_KEYSTORE_LOCATION) ||
+	changedKeys.contains(PARAM_KEYSTORE_PASSWORD)) {
+      initKeystore();
     }
 
     // Don't load or start other plugins until the daemon is running.
@@ -799,10 +805,10 @@ public class PluginManager
 
       switch(getPreferredPluginType()) {
       case PREFER_XML_PLUGIN:
-	log.info(pluginName + ": Creating definable plugin.");
+	log.debug(pluginName + ": Creating definable plugin.");
 	return xmlPlugin;
       case PREFER_CLASS_PLUGIN:
-	log.info(pluginName + ": Instantiating plugin class.");
+	log.debug(pluginName + ": Instantiating plugin class.");
 	return classPlugin;
       default:
 	log.warning(pluginName + ": Unable to determine which " +
@@ -1230,7 +1236,8 @@ public class PluginManager
     }
 
     if (dir.exists() && dir.isDirectory()) {
-      log.info("Plugin directory " + dir + " already exists.  Cleaning up...");
+      log.debug("Plugin directory " + dir +
+		" already exists.  Cleaning up...");
 
       File[] dirList = dir.listFiles();
       for (int ix = 0; ix < dirList.length; ix++) {
@@ -1452,10 +1459,10 @@ public class PluginManager
 		    PluginVersion otherVer =
 		      new PluginVersion(otherPlugin.getVersion());
 		    if (version.toLong() > otherVer.toLong()) {
-		      log.info("No AUs currently configured for plugin " +
-			       plugin.getPluginId() + " version " +
-			       otherVer + " replacing with newer version " +
-			       version);
+		      log.debug("No AUs currently configured for plugin " +
+				plugin.getPluginId() + " version " +
+				otherVer + " replacing with newer version " +
+				version);
 		      tmpMap.put(key, info);
 		    }
 		  } else {

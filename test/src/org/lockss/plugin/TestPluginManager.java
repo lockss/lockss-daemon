@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.43 2004-09-01 02:22:26 tlipkis Exp $
+ * $Id: TestPluginManager.java,v 1.44 2004-09-01 20:14:45 smorabito Exp $
  */
 
 /*
@@ -73,6 +73,13 @@ public class TestPluginManager extends LockssTestCase {
   static String p1a1param = p1param + mauauidKey1 + ".";
   static String p1a2param = p1param + mauauidKey2 + ".";
 
+  private String pluginDir;
+  private String pluginJar;
+  private String pubKeystore;
+  private String privKeystore;
+  private String signAlias = "test-user";
+  private String password = "password";
+
   PluginManager mgr;
 
   public TestPluginManager(String msg) {
@@ -87,6 +94,15 @@ public class TestPluginManager extends LockssTestCase {
     mgr = new MockPluginManager();
     theDaemon.setPluginManager(mgr);
     theDaemon.setDaemonInited(true);
+
+    // Prepare the loadable plugin directory property, which is
+    // created by mgr.startService()
+    pluginDir = getTempDir().getAbsolutePath() + File.separator;
+    Properties p = new Properties();
+    p.setProperty(PluginManager.PARAM_PLATFORM_DISK_SPACE_LIST, pluginDir);
+    p.setProperty(PluginManager.PARAM_PLUGIN_LOCATION, "plugins");
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+
     mgr.setLoadablePluginsReady(true);
     mgr.initService(theDaemon);
     mgr.startService();
@@ -612,11 +628,89 @@ public class TestPluginManager extends LockssTestCase {
     }
   }
 
+  private void prepareLoadablePluginTests() throws Exception {
+    pluginJar = pluginDir + "plugin.jar";
+    pubKeystore = pluginDir + "pub.keystore";
+    privKeystore = pluginDir + "priv.keystore";
+    KeystoreTestUtils.createKeystores(pubKeystore, privKeystore,
+				      password, signAlias, "Test User");
+    String xmlFile = "org/lockss/test/MockConfigurablePlugin.xml";
+    Map resourceMap = new HashMap();
+    resourceMap.put(xmlFile, xmlFile);
+    JarTestUtils.createResourceJar(pluginJar, resourceMap, true);
+
+    JarSigner js = new JarSigner(privKeystore, signAlias, password);
+    js.signJar(pluginJar);
+
+    Properties p = new Properties();
+    p.setProperty(PluginManager.PARAM_KEYSTORE_LOCATION,
+		  pubKeystore);
+    p.setProperty(PluginManager.PARAM_KEYSTORE_PASSWORD,
+		  password);
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+  }
+
+
+  /** Test loading a loadable plugin. */
+  public void testLoadLoadablePlugin() throws Exception {
+    prepareLoadablePluginTests();
+    String pluginKey = "org|lockss|test|MockConfigurablePlugin";
+    // Set up a MockRegistryArchivalUnit with the right data.
+    List plugins =
+      ListUtil.list(pluginJar);
+    List registryAus =
+      ListUtil.list(new MockRegistryArchivalUnit(plugins));
+    assertNull(mgr.getPlugin(pluginKey));
+    mgr.processRegistryAus(registryAus);
+    Plugin mockPlugin = mgr.getPlugin(pluginKey);
+    assertNotNull(mockPlugin);
+    assertEquals("1", mockPlugin.getVersion());
+  }
+
   public static Test suite() {
     TestSuite suite = new TestSuite();
     suite.addTestSuite(TestPluginManager.class);
     return suite;
   }
 
+  /**
+   * a mock Archival Unit used for testing loadable plugin loading.
+   */
+  private static class MockRegistryArchivalUnit extends MockArchivalUnit {
+    private MockRegistryCachedUrlSet cus;
 
+    public MockRegistryArchivalUnit(List jarFiles) {
+      super(null);
+      cus = new MockRegistryCachedUrlSet();
+      int n = 0;
+      for (Iterator iter = jarFiles.iterator(); iter.hasNext(); ) {
+	n++;
+	cus.addCu(new MockCachedUrl("http://foo.bar/test" + n + ".jar",
+					(String)iter.next()));
+      }
+    }
+
+    public CachedUrlSet getAuCachedUrlSet() {
+      return cus;
+    }
+  }
+
+  /**
+   * a mock CachedUrlSet used for testing loadable plugin loading.
+   */
+  private static class MockRegistryCachedUrlSet extends MockCachedUrlSet {
+    List cuList;
+
+    public MockRegistryCachedUrlSet() {
+      cuList = new ArrayList();
+    }
+
+    public void addCu(MockCachedUrl cu) {
+      cuList.add(cu);
+    }
+
+    public Iterator contentHashIterator() {
+      return cuList.iterator();
+    }
+  }
 }
