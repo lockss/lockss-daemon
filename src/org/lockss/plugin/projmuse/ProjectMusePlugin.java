@@ -1,5 +1,5 @@
 /*
- * $Id: ProjectMusePlugin.java,v 1.1 2003-08-26 00:21:28 eaalto Exp $
+ * $Id: ProjectMusePlugin.java,v 1.2 2003-08-27 00:26:42 eaalto Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import org.lockss.daemon.*;
 import org.lockss.util.ListUtil;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.base.BasePlugin;
+import org.lockss.app.LockssDaemon;
 
 /**
  * This is a first cut at making a Project Muse plugin
@@ -51,19 +52,29 @@ public class ProjectMusePlugin extends BasePlugin {
 
   static final ConfigParamDescr PD_BASE = ConfigParamDescr.BASE_URL;
   static final ConfigParamDescr PD_VOL = ConfigParamDescr.VOLUME_NUMBER;
+  static final ConfigParamDescr PD_DIR = ConfigParamDescr.JOURNAL_DIR;
+  static final ConfigParamDescr PD_ABBR = ConfigParamDescr.JOURNAL_ABBR;
 
   // public only so test methods can use them
   public static final String AUPARAM_BASE_URL = PD_BASE.getKey();
   public static final String AUPARAM_VOL = PD_VOL.getKey();
+  public static final String AUPARAM_JOURNAL_DIR = PD_DIR.getKey();
+  public static final String AUPARAM_JOURNAL_ABBR = PD_ABBR.getKey();
 
-  //TODO: fill this in when we get our title spec
-  private static String titleSpec[][];
+  private static String titleSpec[][] = {
+    {"AIM", AUPARAM_JOURNAL_DIR, "american_imago", AUPARAM_JOURNAL_ABBR, "aim"}
+  };
 
   public ArchivalUnit createAU(Configuration auConfig)
       throws ArchivalUnit.ConfigurationException {
     ArchivalUnit au = new ProjectMuseArchivalUnit(this);
     au.setConfiguration(auConfig);
     return au;
+  }
+
+  public void initPlugin(LockssDaemon daemon) {
+    super.initPlugin(daemon);
+    setTitleConfig(titleSpec);
   }
 
   public String getPluginName() {
@@ -75,11 +86,12 @@ public class ProjectMusePlugin extends BasePlugin {
   }
 
   public List getAUConfigProperties() {
-    return ListUtil.list(PD_BASE, PD_VOL);
+    return ListUtil.list(PD_BASE, PD_VOL, PD_DIR, PD_ABBR);
   }
 
   public Collection getDefiningConfigKeys() {
-    return ListUtil.list(AUPARAM_BASE_URL, AUPARAM_VOL);
+    return ListUtil.list(AUPARAM_BASE_URL, AUPARAM_VOL, AUPARAM_JOURNAL_DIR,
+                         AUPARAM_JOURNAL_ABBR);
   }
 
 }

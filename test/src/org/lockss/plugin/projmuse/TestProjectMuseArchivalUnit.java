@@ -1,5 +1,5 @@
 /*
- * $Id: TestProjectMuseArchivalUnit.java,v 1.1 2003-08-26 00:21:28 eaalto Exp $
+ * $Id: TestProjectMuseArchivalUnit.java,v 1.2 2003-08-27 00:26:42 eaalto Exp $
  */
 
 /*
@@ -47,6 +47,8 @@ public class TestProjectMuseArchivalUnit extends LockssTestCase {
   private MockArchivalUnit mau;
 
   static final String ROOT_URL = "http://muse.jhu.edu/";
+  static final String DIR = "american_imago";
+  static final String ABBR = "aim";
 
   public void setUp() throws Exception {
     super.setUp();
@@ -63,12 +65,19 @@ public class TestProjectMuseArchivalUnit extends LockssTestCase {
     super.tearDown();
   }
 
-  private ProjectMuseArchivalUnit makeAu(URL url, int volume)
+  private ProjectMuseArchivalUnit makeAu(URL url, int volume, String journalDir,
+                                         String abbr)
       throws ArchivalUnit.ConfigurationException {
     Properties props = new Properties();
     props.setProperty(ProjectMusePlugin.AUPARAM_VOL, Integer.toString(volume));
-    if (url != null) {
+    if (url!=null) {
       props.setProperty(ProjectMusePlugin.AUPARAM_BASE_URL, url.toString());
+    }
+    if (journalDir!=null) {
+      props.setProperty(ProjectMusePlugin.AUPARAM_JOURNAL_DIR, journalDir);
+    }
+    if (abbr!=null) {
+      props.setProperty(ProjectMusePlugin.AUPARAM_JOURNAL_ABBR, abbr);
     }
     Configuration config = ConfigurationUtil.fromProps(props);
     ProjectMuseArchivalUnit au = new ProjectMuseArchivalUnit(
@@ -80,7 +89,7 @@ public class TestProjectMuseArchivalUnit extends LockssTestCase {
 
   public void testConstructNullUrl() throws Exception {
     try {
-      makeAu(null, 1);
+      makeAu(null, 1, DIR, ABBR);
       fail("Should have thrown ArchivalUnit.ConfigurationException");
     } catch (ArchivalUnit.ConfigurationException e) { }
   }
@@ -88,7 +97,23 @@ public class TestProjectMuseArchivalUnit extends LockssTestCase {
   public void testConstructNegativeVolume() throws Exception {
     URL url = new URL(ROOT_URL);
     try {
-      makeAu(url, -1);
+      makeAu(url, -1, DIR, ABBR);
+      fail("Should have thrown ArchivalUnit.ConfigurationException");
+    } catch (ArchivalUnit.ConfigurationException e) { }
+  }
+
+  public void testConstructNullDir() throws Exception {
+    URL url = new URL(ROOT_URL);
+    try {
+      makeAu(url, 1, null, ABBR);
+      fail("Should have thrown ArchivalUnit.ConfigurationException");
+    } catch (ArchivalUnit.ConfigurationException e) { }
+  }
+
+  public void testConstructNullAbbr() throws Exception {
+    URL url = new URL(ROOT_URL);
+    try {
+      makeAu(url, 1, DIR, null);
       fail("Should have thrown ArchivalUnit.ConfigurationException");
     } catch (ArchivalUnit.ConfigurationException e) { }
   }
@@ -96,19 +121,19 @@ public class TestProjectMuseArchivalUnit extends LockssTestCase {
   public void testShouldCacheProperPages() throws Exception {
     URL base = new URL(ROOT_URL);
     int volume = 60;
-    ArchivalUnit pmAu = makeAu(base, volume);
+    ArchivalUnit pmAu = makeAu(base, volume, DIR, ABBR);
     theDaemon.getLockssRepository(pmAu);
     theDaemon.getNodeManager(pmAu);
     GenericFileCachedUrlSet cus = new GenericFileCachedUrlSet(pmAu,
         new RangeCachedUrlSetSpec(base.toString()));
 
-    String baseUrl = ROOT_URL + "journals/american_imago/";
+    String baseUrl = ROOT_URL + "journals/"+DIR+"/";
 
     // root page
     shouldCacheTest(baseUrl+"v060/", true, pmAu, cus);
 
     // volume page
-    shouldCacheTest(baseUrl+"toc/aim60.1.html", true, pmAu, cus);
+    shouldCacheTest(baseUrl+"toc/"+ABBR+"60.1.html", true, pmAu, cus);
 
     // article html
     shouldCacheTest(baseUrl+"v060/60.2zimmerman.html", true, pmAu, cus);
@@ -136,7 +161,7 @@ public class TestProjectMuseArchivalUnit extends LockssTestCase {
     shouldCacheTest(baseUrl+"v059/", false, pmAu, cus);
 
     // archived volume page
-    shouldCacheTest(baseUrl+"toc/aim59.1.html", false, pmAu, cus);
+    shouldCacheTest(baseUrl+"toc/"+ABBR+"59.1.html", false, pmAu, cus);
 
     // button destinations
     shouldCacheTest(ROOT_URL+"ordering/index.html", false, pmAu, cus);
@@ -148,7 +173,7 @@ public class TestProjectMuseArchivalUnit extends LockssTestCase {
 
     // substring matches
     shouldCacheTest(baseUrl+"v0601/", false, pmAu, cus);
-    shouldCacheTest(baseUrl+"toc/aim601.1.html", false, pmAu, cus);
+    shouldCacheTest(baseUrl+"toc/"+ABBR+"601.1.html", false, pmAu, cus);
 
     // other site
     shouldCacheTest("http://muse2.jhu.edu/", false, pmAu, cus);
@@ -164,72 +189,62 @@ public class TestProjectMuseArchivalUnit extends LockssTestCase {
     URL url = new URL(ROOT_URL);
 
     // 2 digit
-    String expectedStr = ROOT_URL+"journals/american_imago/v060/";
-    ProjectMuseArchivalUnit pmAu = makeAu(url, 60);
-    assertEquals(expectedStr, pmAu.makeStartUrl(url, 60));
+    String expectedStr = ROOT_URL+"journals/"+DIR+"/v060/";
+    ProjectMuseArchivalUnit pmAu = makeAu(url, 60, DIR, ABBR);
+    assertEquals(expectedStr, pmAu.makeStartUrl(url, DIR, 60));
 
     // 3 digit
-    expectedStr = ROOT_URL+"journals/american_imago/v601/";
-    pmAu = makeAu(url, 601);
-    assertEquals(expectedStr, pmAu.makeStartUrl(url, 601));
+    expectedStr = ROOT_URL+"journals/"+DIR+"/v601/";
+    pmAu = makeAu(url, 601, DIR, ABBR);
+    assertEquals(expectedStr, pmAu.makeStartUrl(url, DIR, 601));
 
     // 1 digit
-    expectedStr = ROOT_URL+"journals/american_imago/v006/";
-    pmAu = makeAu(url, 6);
-    assertEquals(expectedStr, pmAu.makeStartUrl(url, 6));
+    expectedStr = ROOT_URL+"journals/"+DIR+"/v006/";
+    pmAu = makeAu(url, 6, DIR, ABBR);
+    assertEquals(expectedStr, pmAu.makeStartUrl(url, DIR, 6));
   }
 
   public void testPathInUrlThrowsException() throws Exception {
     URL url = new URL(ROOT_URL+"path");
     try {
-      makeAu(url, 60);
+      makeAu(url, 60, DIR, ABBR);
       fail("Should have thrown ArchivalUnit.ConfigurationException");
     } catch(ArchivalUnit.ConfigurationException e) { }
   }
 
   public void testGetUrlStems() throws Exception {
     String stem1 = "http://muse.jhu.edu";
-    ProjectMuseArchivalUnit pmAu1 = makeAu(new URL(stem1 + "/"), 60);
+    ProjectMuseArchivalUnit pmAu1 = makeAu(new URL(stem1 + "/"), 60, DIR, ABBR);
     assertEquals(ListUtil.list(stem1), pmAu1.getUrlStems());
     String stem2 = "http://muse.jhu.edu:8080";
-    ProjectMuseArchivalUnit pmAu2 = makeAu(new URL(stem2 + "/"), 60);
+    ProjectMuseArchivalUnit pmAu2 = makeAu(new URL(stem2 + "/"), 60, DIR, ABBR);
     assertEquals(ListUtil.list(stem2), pmAu2.getUrlStems());
   }
 
   public void testShouldDoNewContentCrawlTooEarly() throws Exception {
-    ArchivalUnit pmAu =
-      makeAu(new URL(ROOT_URL), 60);
-
+    ArchivalUnit pmAu = makeAu(new URL(ROOT_URL), 60, DIR, ABBR);
     AuState aus = new MockAuState(null, TimeBase.nowMs(), -1, -1, null);
-
     assertFalse(pmAu.shouldCrawlForNewContent(aus));
   }
 
   public void testShouldDoNewContentCrawlForZero() throws Exception {
-    ArchivalUnit pmAu =
-      makeAu(new URL(ROOT_URL), 60);
-
+    ArchivalUnit pmAu = makeAu(new URL(ROOT_URL), 60, DIR, ABBR);
     AuState aus = new MockAuState(null, 0, -1, -1, null);
-
     assertTrue(pmAu.shouldCrawlForNewContent(aus));
   }
 
   public void testShouldDoNewContentCrawlEachMonth() throws Exception {
-    ArchivalUnit pmAu =
-      makeAu(new URL(ROOT_URL), 60);
-
+    ArchivalUnit pmAu = makeAu(new URL(ROOT_URL), 60, DIR, ABBR);
     AuState aus = new MockAuState(null, 4 * Constants.WEEK, -1, -1, null);
-
     assertTrue(pmAu.shouldCrawlForNewContent(aus));
   }
 
-  public void testgetName() throws Exception {
-    ProjectMuseArchivalUnit au =
-      makeAu(new URL(ROOT_URL), 60);
-    assertEquals("muse.jhu.edu, vol. 60", au.getName());
+  public void testGetName() throws Exception {
+    ProjectMuseArchivalUnit au = makeAu(new URL(ROOT_URL), 60, DIR, ABBR);
+    assertEquals("muse.jhu.edu, american_imago, vol. 60", au.getName());
     ProjectMuseArchivalUnit au1 =
-      makeAu(new URL("http://www.bmj.com/"), 60);
-    assertEquals("www.bmj.com, vol. 60", au1.getName());
+        makeAu(new URL("http://www.bmj.com/"), 61, "bmj", "b");
+    assertEquals("www.bmj.com, bmj, vol. 61", au1.getName());
   }
 
   public static void main(String[] argv) {

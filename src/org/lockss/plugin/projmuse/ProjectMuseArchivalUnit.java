@@ -1,5 +1,5 @@
 /*
- * $Id: ProjectMuseArchivalUnit.java,v 1.1 2003-08-26 00:21:28 eaalto Exp $
+ * $Id: ProjectMuseArchivalUnit.java,v 1.2 2003-08-27 00:26:42 eaalto Exp $
  */
 
 /*
@@ -63,10 +63,12 @@ public class ProjectMuseArchivalUnit extends BaseArchivalUnit {
 
   private static final String EXPECTED_URL_PATH = "/";
 
-  protected Logger logger = Logger.getLogger("ProjectMuseArchivalUnit");
+  protected Logger logger = Logger.getLogger("ProjectMusePlugin");
 
   private URL baseUrl; // the base Url for the volume
   private int volume; // the volume index
+  private String journalDir;
+  private String journalAbbr;
   private long pauseTime; // the time to pause between fetchs
   private long newContentCrawlIntv; // the new content crawl interval
 
@@ -99,13 +101,15 @@ public class ProjectMuseArchivalUnit extends BaseArchivalUnit {
 
   public String getName() {
     StringBuffer name = new StringBuffer(baseUrl.getHost());
+    name.append(", ");
+    name.append(journalDir);
     name.append(", vol. ");
     name.append(volume);
     return name.toString();
   }
 
   public List getNewContentCrawlUrls() {
-    return ListUtil.list(makeStartUrl(baseUrl, volume));
+    return ListUtil.list(makeStartUrl(baseUrl, journalDir, volume));
   }
 
   public long getFetchDelay() {
@@ -133,9 +137,26 @@ public class ProjectMuseArchivalUnit extends BaseArchivalUnit {
     // get the volume string
     String volStr = config.get(ProjectMusePlugin.AUPARAM_VOL);
     if (volStr == null) {
-      exception = "No Configuration value for " + ProjectMusePlugin.AUPARAM_VOL;
+      exception = "No configuration value for " + ProjectMusePlugin.AUPARAM_VOL;
       throw new ConfigurationException(exception);
     }
+
+    // get the journal directory
+    journalDir = config.get(ProjectMusePlugin.AUPARAM_JOURNAL_DIR);
+    if ((journalDir == null) || (journalDir.equals(""))) {
+      exception = "No configuration value for " +
+          ProjectMusePlugin.AUPARAM_JOURNAL_DIR;
+      throw new ConfigurationException(exception);
+    }
+
+    // get the journal abbreviation
+    journalAbbr = config.get(ProjectMusePlugin.AUPARAM_JOURNAL_ABBR);
+    if ((journalAbbr == null) || (journalAbbr.equals(""))) {
+      exception = "No configuration value for " +
+          ProjectMusePlugin.AUPARAM_JOURNAL_ABBR;
+      throw new ConfigurationException(exception);
+    }
+
     // turn them into appropriate types
     try {
       baseUrl = new URL(urlStr);
@@ -177,17 +198,17 @@ public class ProjectMuseArchivalUnit extends BaseArchivalUnit {
 
   private CrawlSpec makeCrawlSpec(URL base, int volume) throws REException {
 
-    CrawlRule rule = makeRules(base, volume);
-    return new CrawlSpec(makeStartUrl(base, volume), rule);
+    CrawlRule rule = makeRules(base, journalDir, volume, journalAbbr);
+    return new CrawlSpec(makeStartUrl(base, journalDir, volume), rule);
   }
 
   //Todo: return the correct starting url here
-  String makeStartUrl(URL base, int volume) {
+  String makeStartUrl(URL base, String journal, int volume) {
     String ret;
     StringBuffer sb = new StringBuffer();
     sb.append(base.toString());
     // always 3 digit?
-    sb.append("journals/american_imago/v");
+    sb.append("journals/"+journal+"/v");
     if (volume < 100) {
       // make 'v66' into 'v066' and 'v1' into 'v001'
       if (volume < 10) {
@@ -204,12 +225,13 @@ public class ProjectMuseArchivalUnit extends BaseArchivalUnit {
   }
 
   // Todo: add the crawl rules appropriate for Project Muse
-  private CrawlRule makeRules(URL urlRoot, int volume) throws REException {
+  private CrawlRule makeRules(URL urlRoot, String journal, int volume,
+                              String abbr) throws REException {
     List rules = new LinkedList();
     final int incl = CrawlRules.RE.MATCH_INCLUDE;
     final int excl = CrawlRules.RE.MATCH_EXCLUDE;
     rules.add(new CrawlRules.RE("^" + urlRoot.toString(), CrawlRules.RE.NO_MATCH_EXCLUDE));
-    String volStr = urlRoot.toString() + "journals/american_imago/v";
+    String volStr = urlRoot.toString() + "journals/"+journal+"/v";
     // pad out the 'vXXX' to 3 digits
     if (volume < 100) {
       if (volume < 10) {
@@ -220,7 +242,7 @@ public class ProjectMuseArchivalUnit extends BaseArchivalUnit {
     }
     rules.add(new CrawlRules.RE(volStr + volume + "/.*", incl));
     rules.add(new CrawlRules.RE(urlRoot.toString() +
-                                "journals/american_imago/toc/aim" + volume +
+                                "journals/"+journal+"/toc/" + abbr + volume +
                                 "\\..*", incl));
     rules.add(new CrawlRules.RE(urlRoot.toString() + "images/.*", incl));
     //rules.add(new CrawlRules.RE(".*ck=nck.*", excl));
