@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.16 2003-02-28 22:25:41 tal Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.17 2003-03-06 00:13:28 aalto Exp $
  */
 
 /*
@@ -132,12 +132,18 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
 
   // public methods
 
-  /** Set the directory where simulated content is generated */
+  /**
+   * Set the directory where simulated content is generated
+   * @param rootDir the new root dir
+   */
   public void setRootDir(String rootDir) {
     fileRoot = rootDir;
   }
 
-  /** Returns the directory where simulated content is generated */
+  /**
+   * Returns the directory where simulated content is generated
+   * @return the root dir
+   */
   public String getRootDir() {
     return fileRoot; }
 

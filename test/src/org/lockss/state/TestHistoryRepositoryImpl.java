@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.12 2003-03-05 22:55:28 aalto Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.13 2003-03-06 00:13:28 aalto Exp $
  */
 
 /*
@@ -125,6 +125,26 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
     assertEquals(expectVote.verifierStr, elemVote.verifierStr);
     assertEquals(expectVote.hashStr, elemVote.hashStr);
   }
+
+  public void testHandleEmptyFile() throws Exception {
+    MockCachedUrlSetSpec mspec =
+        new MockCachedUrlSetSpec("http://www.example.com", null);
+    CachedUrlSet mcus = new MockCachedUrlSet(mau, mspec);
+    NodeStateImpl nodeState = new NodeStateImpl(mcus, null, null, repository);
+    nodeState.setPollHistoryBeanList(new ArrayList());
+    repository.storePollHistories(nodeState);
+    String filePath = LockssRepositoryServiceImpl.mapAuToFileLocation(tempDirPath +
+        HistoryRepositoryImpl.HISTORY_ROOT_NAME, mau);
+    filePath = LockssRepositoryServiceImpl.mapUrlToFileLocation(filePath,
+        "http://www.example.com/"+HistoryRepositoryImpl.HISTORY_FILE_NAME);
+    File xmlFile = new File(filePath);
+    assertTrue(xmlFile.exists());
+
+    nodeState.setPollHistoryBeanList(new ArrayList());
+    repository.loadPollHistories(nodeState);
+    assertEquals(0, nodeState.pollHistories.size());
+  }
+
 
   public void testStoreAuState() throws Exception {
     AuState auState = new AuState(mau, 123, 321, 456);

@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.37 2003-03-05 22:55:28 aalto Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.38 2003-03-06 00:13:28 aalto Exp $
  */
 
 /*
@@ -592,7 +592,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     theDaemon.getPollManager().stopService();
   }
 
-  public void testHandleAuContentPoll() throws Exception {
+  public void testHandleAuPolls() throws Exception {
     theDaemon.getHashService().startService();
     theDaemon.getPollManager().startService();
     nodeManager.stopService();
@@ -601,16 +601,19 @@ public class TestNodeManagerImpl extends LockssTestCase {
     // to properly test handling AuNode content polls
     String auUrl = AuUrl.PROTOCOL_COLON;
     MockCachedUrlSet mcus = (MockCachedUrlSet)getCUS(auUrl);
-    mcus.setFlatIterator((new Vector()).iterator());
+    Vector auChildren = new Vector();
+    mcus.setFlatItSource(auChildren);
     mau.setAUCachedUrlSet(mcus);
 
     nodeManager = new NodeManagerImpl(mau);
     nodeManager.initService(theDaemon);
     nodeManager.repository = new HistoryRepositoryImpl(tempDirPath);
 
+    // test that a finished top-level poll sets the time right
     contentPoll = createPoll(auUrl, true, 10, 5);
     Poll.VoteTally results = contentPoll.getVoteTally();
     PollSpec spec = results.getPollSpec();
+
     AuState auState = nodeManager.getAuState();
     assertEquals(-1, auState.getLastTopLevelPollTime());
 
@@ -627,6 +630,32 @@ public class TestNodeManagerImpl extends LockssTestCase {
     nodeManager.updateState(nodeState, results);
     assertEquals(PollState.WON, pollState.getStatus());
     assertEquals(TimeBase.nowMs(), auState.getLastTopLevelPollTime());
+
+
+    // add some fake children
+    auChildren.add(getCUS("testDir1"));
+    auChildren.add(getCUS("testDir2"));
+    mcus.setFlatItSource(auChildren);
+
+    // test that won name poll calls content polls on Au children
+    contentPoll = createPoll(auUrl, false, 10, 5);
+    results = contentPoll.getVoteTally();
+    pollState = new PollState(results.getType(),
+                                        spec.getLwrBound(),
+                                        spec.getUprBound(),
+                                        PollState.RUNNING,
+                                        results.getStartTime(),
+                                        null);
+    nodeState.addPollState(pollState);
+    nodeManager.updateState(nodeState, results);
+    assertEquals(PollState.WON, pollState.getStatus());
+    assertEquals(TimeBase.nowMs(), auState.getLastTopLevelPollTime());
+    assertEquals(MockPollManager.CONTENT_REQUESTED,
+                 ((MockPollManager)theDaemon.getPollManager()).getPollStatus(
+        "testDir1"));
+    assertEquals(MockPollManager.CONTENT_REQUESTED,
+                 ((MockPollManager)theDaemon.getPollManager()).getPollStatus(
+        "testDir2"));
 
     theDaemon.getHashService().stopService();
     theDaemon.getPollManager().stopService();

@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.14 2003-03-05 22:55:28 aalto Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.15 2003-03-06 00:13:28 aalto Exp $
  */
 
 /*
@@ -159,6 +159,10 @@ public class HistoryRepositoryImpl implements HistoryRepository, LockssManager {
       Unmarshaller unmarshaller = new Unmarshaller(NodeHistoryBean.class);
       unmarshaller.setMapping(getMapping());
       NodeHistoryBean nhb = (NodeHistoryBean)unmarshaller.unmarshal(new FileReader(nodeFile));
+      if (nhb.historyBeans==null) {
+        logger.warning("Empty history list loaded.");
+        nhb.historyBeans = new ArrayList();
+      }
       ((NodeStateImpl)nodeState).setPollHistoryBeanList(new ArrayList(nhb.historyBeans));
     } catch (Exception e) {
       logger.error("Couldn't load poll history: ", e);

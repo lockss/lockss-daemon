@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.4 2003-02-28 02:10:33 troberts Exp $
+ * $Id: BaseArchivalUnit.java,v 1.5 2003-03-06 00:13:28 aalto Exp $
  */
 
 /*
@@ -53,6 +53,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 
   /**
    * Must invoke this constructor in plugin subclass.
+   * @param myPlugin the plugin
    * @param spec the CrawlSpec
    */
   protected BaseArchivalUnit(Plugin myPlugin, CrawlSpec spec) {
