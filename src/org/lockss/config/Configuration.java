@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.5 2004-10-22 07:01:59 tlipkis Exp $
+ * $Id: Configuration.java,v 1.6 2005-01-04 02:49:45 tlipkis Exp $
  */
 
 /*
@@ -136,11 +136,19 @@ public abstract class Configuration {
       prefix = prefix + ".";
     }
     Configuration res = ConfigManager.newConfiguration();
-    for (Iterator iter = keyIterator(); iter.hasNext();) {
-      String key = (String)iter.next();
-      res.put(prefix + key, get(key));
-    }
+    res.addAsSubTree(this, prefix);
     return res;
+  }
+
+  /** Add to this all values in config, prepending the prefix to all keys */
+  public void addAsSubTree(Configuration config, String prefix) {
+    if (!prefix.endsWith(".")) {
+      prefix = prefix + ".";
+    }
+    for (Iterator iter = config.keyIterator(); iter.hasNext();) {
+      String key = (String)iter.next();
+      put(prefix + key, config.get(key));
+    }
   }
 
   /** Return a copy of the Configuration that does not share structure with
@@ -378,6 +386,43 @@ public abstract class Configuration {
       return StringUtil.parseTimeInterval(val);
     } catch (Exception e) {
       log.warning("getTimeInterval(\'" + key + "\") = \"" + val + "\"");
+      return dfault;
+    }
+  }
+
+  /** Parse the config value as a size-in-bytes, specified
+   * as an integer with an optional suffix.  No suffix means bytes,
+   * kb, mb, gb, tb indicate kilo-, mega-, giga, tera-bytes respectively.
+   * @param key the configuration parameter name
+   * @return size in bytes
+   * @throws Configuration.InvalidParam if the value is missing or
+   * not parsable as a time interval.
+   */
+  public long getSize(String key) throws InvalidParam {
+    String val = get(key);
+    try {
+      return StringUtil.parseSize(val);
+    } catch (Exception e) {
+      throw newInvalid("Not a valid size: ", key, val);
+    }
+  }
+
+  /** Parse the config value as a size-in-bytes, specified
+   * as an integer with an optional suffix.  No suffix means bytes,
+   * kb, mb, gb, tb indicate kilo-, mega-, giga, tera-bytes respectively.
+   * @param key the configuration parameter name
+   * @param dfault the default value in milliseconds
+   * @return size in bytes
+   */
+  public long getSize(String key, long dfault) {
+    String val = get(key);
+    if (val == null) {
+      return dfault;
+    }
+    try {
+      return StringUtil.parseSize(val);
+    } catch (Exception e) {
+      log.warning("getSize(\'" + key + "\") = \"" + val + "\"");
       return dfault;
     }
   }

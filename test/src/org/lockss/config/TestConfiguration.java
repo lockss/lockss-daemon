@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfiguration.java,v 1.3 2004-10-22 07:01:58 tlipkis Exp $
+ * $Id: TestConfiguration.java,v 1.4 2005-01-04 02:49:45 tlipkis Exp $
  */
 
 /*
@@ -336,6 +336,66 @@ public class TestConfiguration extends LockssTestCase {
     Iterator it2 = config.nodeIterator("foo.bar");
     assertNotNull(it2);
     assertFalse(it2.hasNext());
+  }
+
+  public void testTimeInterval() throws Exception {
+    Properties props = new Properties();
+    props.put("p1", "1");
+    props.put("p2", "0s");
+    props.put("p3", "20m");
+    props.put("p4", "100h");
+    props.put("p5", "101d");
+    props.put("p6", "foo");
+    props.put("p7", "250x");
+    Configuration config = ConfigurationUtil.fromProps(props);
+    assertEquals(1, config.getTimeInterval("p1"));
+    assertEquals(0, config.getTimeInterval("p2"));
+    assertEquals(20*Constants.MINUTE, config.getTimeInterval("p3"));
+    assertEquals(100*Constants.HOUR, config.getTimeInterval("p4"));
+    assertEquals(101*Constants.DAY, config.getTimeInterval("p5"));
+    try {
+      config.getTimeInterval("p6");
+      fail("getTimeInterval(foo) should throw");
+    } catch (Configuration.InvalidParam e) {
+    }
+    try {
+      config.getTimeInterval("p7");
+      fail("getTimeInterval(250x) should throw");
+    } catch (Configuration.InvalidParam e) {
+    }
+  }
+
+  public void testSize() throws Exception {
+    long k = 1024;
+    long m = k*k;
+    Properties props = new Properties();
+    props.put("p0", "1");
+    props.put("p1", "1000000b");
+    props.put("p2", "100kb");
+    props.put("p3", "2.5mb");
+    props.put("p4", "100gb");
+    props.put("p5", "6.8tb");
+    props.put("p6", "1.5pb");
+    props.put("p7", "foo");
+    props.put("p8", "250x");
+    Configuration config = ConfigurationUtil.fromProps(props);
+    assertEquals(1, config.getSize("p0"));
+    assertEquals(1000000, config.getSize("p1"));
+    assertEquals(100*k, config.getSize("p2"));
+    assertEquals((long)(2.5*m), config.getSize("p3"));
+    assertEquals(100*k*m, config.getSize("p4"));
+    assertEquals((long)(6.8f*(m*m)), config.getSize("p5"));
+    assertEquals((long)(1.5f*(m*m*k)), config.getSize("p6"));
+    try {
+      config.getSize("p7");
+      fail("getSize(foo) should throw");
+    } catch (Configuration.InvalidParam e) {
+    }
+    try {
+      config.getSize("p8");
+      fail("getSize(250x) should throw");
+    } catch (Configuration.InvalidParam e) {
+    }
   }
 
   public void testPercentage() throws Exception {
