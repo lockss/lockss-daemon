@@ -1,5 +1,5 @@
 /*
- * $Id: HashQueue.java,v 1.7 2002-11-21 20:23:45 tal Exp $
+ * $Id: HashQueue.java,v 1.8 2002-11-23 01:31:57 troberts Exp $
  */
 
 /*
@@ -161,10 +161,12 @@ class HashQueue implements Serializable {
 
   boolean scheduleReq(Request req) {
     if (!insert(req)) {
+      log.debug("Can't schedule hash");
       return false;
     }
     ensureQRunner();
     sem.give();
+    log.debug("Scheduled hash:" +req);
     return true;
   }
 
@@ -261,6 +263,8 @@ class HashQueue implements Serializable {
     public String toString() {
       StringBuffer sb = new StringBuffer();
       sb.append("[HQ.Req:");
+      sb.append(urlset);
+      sb.append(' ');
       if (cookie instanceof String) {
 	sb.append("\"");
 	sb.append(cookie);
