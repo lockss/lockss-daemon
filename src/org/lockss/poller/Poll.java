@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.87 2004-09-28 08:53:16 tlipkis Exp $
+* $Id: Poll.java,v 1.88 2004-09-29 06:34:49 tlipkis Exp $
  */
 
 /*
@@ -35,10 +35,16 @@ import org.lockss.protocol.*;
 import org.lockss.util.*;
 
 public interface Poll {
+  // Poll protocol versions
+  public static final int V1_POLL = 1;
+  public static final int V2_POLL = 2;
+  public static final int V3_POLL = 3;
+  public static final int MAX_POLL_VERSION = 3;
+
+  // V1-specific poll types, should be moved to V1Poll
   public static final String[] PollName = { "Name", "Content", "Verify"};
 
   public static final int NAME_POLL = 0;
-
   public static final int CONTENT_POLL = 1;
   public static final int VERIFY_POLL = 2;
 
