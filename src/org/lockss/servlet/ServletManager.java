@@ -1,5 +1,5 @@
 /*
- * $Id: ServletManager.java,v 1.8 2003-04-05 00:57:36 tal Exp $
+ * $Id: ServletManager.java,v 1.9 2003-04-10 21:50:17 tal Exp $
  */
 
 /*
@@ -123,7 +123,7 @@ public class ServletManager extends JettyManager {
       // Admin servlet
       handler.addServlet("Admin", "/Admin", "org.lockss.servlet.Admin");
 
-      context.addHttpHandler(handler);
+      context.addHandler(handler);
 
     } catch (Exception e) {
       log.error("Couldn't start debug servlets", e);
@@ -133,21 +133,14 @@ public class ServletManager extends JettyManager {
   public void configureDebugServlets() {
     try {
       // Create a context
-      HttpContext context = server.getContext(null, "/");
+      HttpContext context = server.getContext("/");
 //       context.setErrorPage("500", "images/");
 //       log.debug("Error page URL: " + context.getErrorPage("500"));
 //       log.debug("Error page URL: " + context.getErrorPage());
       // Give servlets a way to find the daemon instance
       context.setAttribute("LockssDaemon", theDaemon);
 
-      // find the htdocs directory, set as resource base
-      ClassLoader loader = Thread.currentThread().getContextClassLoader();
-      URL resourceUrl=loader.getResource("org/lockss/htdocs/");
-      log.debug("Resource URL: " + resourceUrl);
-
-      context.setResourceBase(resourceUrl.toString());
       // Now add handlers in the order they should be tried.
-      context.addHandler(new ResourceHandler());
 
       // Create a servlet container
       ServletHandler handler = new ServletHandler();
@@ -157,10 +150,29 @@ public class ServletManager extends JettyManager {
       // Daemon status servlet
       handler.addServlet("DaemonStatus", "/DaemonStatus",
 			 "org.lockss.servlet.DaemonStatus");
+      handler.addServlet("ThreadDump", "/ThreadDump",
+			 "org.lockss.servlet.ThreadDump");
 
-      context.addHttpHandler(handler);
-      context.addHttpHandler(new NotFoundHandler());
-//       context.addHttpHandler(new DumpHandler());
+      context.addHandler(handler);
+
+      // ResourceHandler should come after servlets
+      // find the htdocs directory, set as resource base
+      ClassLoader loader = Thread.currentThread().getContextClassLoader();
+      URL resourceUrl=loader.getResource("org/lockss/htdocs/");
+      log.debug("Resource URL: " + resourceUrl);
+
+      context.setResourceBase(resourceUrl.toString());
+      ResourceHandler rHandler = new LockssResourceHandler();
+//       rHandler.setDirAllowed(false);
+//       rHandler.setPutAllowed(false);
+//       rHandler.setDelAllowed(false);
+//       rHandler.setAcceptRanges(true);
+      context.addHandler(rHandler);
+
+      // NotFoundHandler
+      context.addHandler(new NotFoundHandler());
+
+//       context.addHandler(new DumpHandler());
 
 
     } catch (Exception e) {
