@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlSpec.java,v 1.3 2003-10-08 21:20:52 troberts Exp $
+ * $Id: CrawlSpec.java,v 1.4 2003-10-09 18:56:10 troberts Exp $
  */
 
 /*
@@ -41,7 +41,7 @@ import org.lockss.util.*;
 public final class CrawlSpec {
   private List startList;
   private CrawlRule rule;
-  private int recrawlDepth;
+  private int recrawlDepth = -1;
 
   /** Create a CrawlSpec with the specified start list and rule.
    * @param startUrls a list of Strings specifying starting points
@@ -63,6 +63,7 @@ public final class CrawlSpec {
     }
     startList = ListUtil.immutableListOfType(startUrls, String.class);
     this.rule = rule;
+    this.recrawlDepth = recrawlDepth;
   }
 
   /** Create a CrawlSpec with the specified single start url and rule.
