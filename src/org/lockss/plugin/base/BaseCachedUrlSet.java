@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrlSet.java,v 1.11 2004-04-27 19:39:23 tlipkis Exp $
+ * $Id: BaseCachedUrlSet.java,v 1.12 2004-09-02 07:46:48 tlipkis Exp $
  */
 
 /*
@@ -256,21 +256,8 @@ public class BaseCachedUrlSet implements CachedUrlSet {
       if (!node.hasContent()) {
 	return 0;
       }
-      try {
-        contentSize = node.getContentSize();
-        MessageDigest hasher = LcapMessage.getDefaultHasher();
-        CachedUrlSetHasher cush = contentHasherFactory(this, hasher);
-        SystemMetrics metrics = theDaemon.getSystemMetrics();
-        long bytesPerMs = metrics.getBytesPerMsHashEstimate(cush, hasher);
-        if (bytesPerMs == 0) {
-          logger.warning("Couldn't estimate hash time: getting 0");
-          return contentSize / BYTES_PER_MS_DEFAULT;
-        }
-        return (contentSize / bytesPerMs);
-      } catch (Exception e) {
-        logger.error("Couldn't finish estimating hash time: " + e);
-        return contentSize / BYTES_PER_MS_DEFAULT;
-      }
+      contentSize = node.getContentSize();
+      return estimateFromSize(contentSize);
     }
     NodeState state = nodeManager.getNodeState(this);
     long lastDuration;
@@ -282,24 +269,33 @@ public class BaseCachedUrlSet implements CachedUrlSet {
     }
     // determine total size
     calculateNodeSize();
-    MessageDigest hasher = LcapMessage.getDefaultHasher();
-    CachedUrlSetHasher cush = contentHasherFactory(this, hasher);
-    long bytesPerMs = 0;
-    SystemMetrics metrics = theDaemon.getSystemMetrics();
-    try {
-      bytesPerMs = metrics.getBytesPerMsHashEstimate(cush, hasher);
-    } catch (IOException ie) {
-      logger.error("Couldn't finish estimating hash time: " + ie);
-      return totalNodeSize / BYTES_PER_MS_DEFAULT;
-    }
-    if (bytesPerMs == 0) {
-      logger.warning("Couldn't estimate hash time: getting 0");
-      return totalNodeSize / BYTES_PER_MS_DEFAULT;
-    }
-    lastDuration = (long) (totalNodeSize / bytesPerMs);
+    lastDuration = estimateFromSize(totalNodeSize);
     // store hash estimate
     nodeManager.hashFinished(this, lastDuration);
     return lastDuration;
+  }
+
+  long estimateFromSize(long size) {
+    SystemMetrics metrics = theDaemon.getSystemMetrics();
+    long bytesPerMs = 0;
+    try {
+      // SystemMetrics doesn't use the hasher currently anyway, so don't
+      // bother creating it
+//         MessageDigest hasher = LcapMessage.getDefaultHasher();
+//         CachedUrlSetHasher cush = contentHasherFactory(this, hasher);
+//         bytesPerMs = metrics.getBytesPerMsHashEstimate(cush, hasher);
+      bytesPerMs = metrics.getBytesPerMsHashEstimate();
+      if (bytesPerMs > 0) {
+	return /*(long)*/(size / bytesPerMs);
+      } else {
+	logger.warning("Hash speed estimate was 0, using size / " +
+		       BYTES_PER_MS_DEFAULT);
+	return size / BYTES_PER_MS_DEFAULT;
+      }
+    } catch (SystemMetrics.NoHashEstimateAvailableException ie) {
+      logger.error("Couldn't finish estimating hash time: " + ie);
+      return size / BYTES_PER_MS_DEFAULT;
+    }
   }
 
   protected CachedUrlSetHasher contentHasherFactory(CachedUrlSet owner,
