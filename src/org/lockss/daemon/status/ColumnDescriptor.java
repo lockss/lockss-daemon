@@ -1,5 +1,5 @@
 /*
- * $Id: ColumnDescriptor.java,v 1.2 2003-06-20 22:34:50 claire Exp $
+ * $Id: ColumnDescriptor.java,v 1.3 2003-07-01 19:45:18 troberts Exp $
  */
 
 /*
@@ -120,6 +120,16 @@ public class ColumnDescriptor {
     sb.append(type);
     sb.append("]");
     return sb.toString();
+  }
+
+  public boolean equals(Object obj) {
+    if (!(obj instanceof ColumnDescriptor)) {
+      return false;
+    }
+    ColumnDescriptor colDesc = (ColumnDescriptor) obj;
+    return (title.equals(colDesc.getTitle()) &&
+	    type == colDesc.getType() &&
+	    columnName.equals(colDesc.getColumnName()));
   }
 }
 
