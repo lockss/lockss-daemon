@@ -232,13 +232,17 @@
 	<property name="plugin" value="org.lockss.plugin.iop.IOPPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
-	  <property name="value" value="http://www.iop.org/EJ/" />
+	  <property name="value" value="http://www.iop.org/" />
 	</property>
 	<property name="param.2">
+	  <property name="key" value="base_url2" />
+	  <property name="value" value="http://ej.iop.org/" />
+	</property>
+	<property name="param.3">
 	  <property name="key" value="journal_id" />
 	  <property name="value" value="0266-5611" />
 	</property>
-	<property name="param.3">
+	<property name="param.4">
 	  <property name="key" value="volume" />
 	  <property name="value" value="20" />
 	</property>
