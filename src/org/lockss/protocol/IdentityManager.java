@@ -50,7 +50,8 @@ public class IdentityManager {
   private static IdentityManager theIdentityManager = null;
   static Logger theLog=Logger.getLogger("IdentityManager");
   static Random theRandom = new Random();
-  LcapIdentity theLocalIdentity;
+  LcapIdentity theLocalIdentity = null;
+  String localIdentityStr = null;
 
   HashMap theIdentities = null; // all known identities
 
@@ -93,26 +94,35 @@ public class IdentityManager {
 
 
   public LcapIdentity findIdentity(Object idKey)  {
-    return (LcapIdentity) theIdentities.get(idKey);
+    return (LcapIdentity)theIdentities.get(idKey);
   }
 
   /**
-   * get the Identity of the local host
+   * Get the Identity of the local host
    * @return newly constructed <code>Identity<\code>
    */
   public LcapIdentity getLocalIdentity() {
-    if(theLocalIdentity == null)  {
-      String identStr = Configuration.getParam(PARAM_LOCAL_IP);
+    if (theLocalIdentity == null)  {
       try {
-        InetAddress addr = InetAddress.getByName(identStr);
+        InetAddress addr = InetAddress.getByName(getLocalHostName());
         theLocalIdentity = new LcapIdentity(addr);
       } catch (UnknownHostException uhe) {
-        theLog.error("Could not resolve: "+identStr, uhe);
+        theLog.error("Could not resolve: "+localIdentityStr, uhe);
       }
     }
     return theLocalIdentity;
   }
 
+  /**
+   * Get the local host name
+   * @return hostname as a String
+   */
+  public String getLocalHostName() {
+    if (localIdentityStr == null)  {
+      localIdentityStr = Configuration.getParam(PARAM_LOCAL_IP);
+    }
+    return localIdentityStr;
+  }
 
   /**
    * return true if this Identity is the same as the local host
@@ -120,7 +130,7 @@ public class IdentityManager {
    * @return boolean true if is the local identity, false otherwise
    */
   public boolean isLocalIdentity(LcapIdentity id) {
-    if(theLocalIdentity == null)  {
+    if (theLocalIdentity == null)  {
       getLocalIdentity();
     }
     return id.isEqual(theLocalIdentity);
