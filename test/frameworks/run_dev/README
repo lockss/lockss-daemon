@@ -1,0 +1,10 @@
+You must create a local.txt file in this directory with the properties that
+would be set in a dev cache's local.txt.
+
+You will probably want at least these:
+
+org.lockss.platform.diskSpacePaths=./cache
+org.lockss.platform.localIPAddress=<routable-IP-address>
+org.lockss.platform.localIPs=<routable-IP-address>
+org.lockss.platform.accesssubnet=<local subnet>
+org.lockss.platform.smtphost=<smtp-host>
