@@ -1,5 +1,5 @@
 /*
- * $Id: ActivityRegulator.java,v 1.17 2003-06-06 23:15:11 aalto Exp $
+ * $Id: ActivityRegulator.java,v 1.18 2003-06-17 21:21:26 troberts Exp $
  */
 
 /*
@@ -511,7 +511,7 @@ public class ActivityRegulator extends BaseLockssManager {
     public int activity;
     Deadline expiration;
 
-    private Lock(int activity, long expireIn) {
+    public Lock(int activity, long expireIn) {
       this.activity = activity;
       expiration = Deadline.in(expireIn);
     }
