@@ -1,5 +1,5 @@
 /*
- * $Id: Logger.java,v 1.3 2002-08-31 06:52:49 tal Exp $
+ * $Id: Logger.java,v 1.4 2002-09-09 20:30:26 tal Exp $
  */
 
 /*
@@ -78,6 +78,11 @@ public class Logger {
   private static Vector targets = new Vector();
 
   private static boolean configHandlerRegistered = false;
+  private static ThreadLocal targetStack = new ThreadLocal() {
+      protected Object initialValue() {
+	return new Vector();
+      }
+    };
 
   private int level;			// this log's level
   private String name;			// this log's name
@@ -235,7 +240,7 @@ public class Logger {
   /** Register callback to reset log levels when config changes
    */
   private static void registerConfigCallback() {
-    Configuration.registerConfigurationCallback(new ConfigurationCallback() {
+    Configuration.registerConfigurationCallback(new Configuration.Callback() {
 	public void configurationChanged(Configuration oldConfig,
 					 Configuration newConfig,
 					 Set changedKeys) {
@@ -296,7 +301,7 @@ public class Logger {
       sb.append(": ");
       sb.append(msg);
       if (e != null) {
-	sb.append("\n");
+	sb.append("\n    ");
 	sb.append(stackTraceString(e));
       }
       writeMsg(level, sb.toString());
@@ -312,11 +317,22 @@ public class Logger {
     log(level, msg, null);
   }
 
+  // Invoke all the targets to write a message.
+  // Maintain a thread-local stack of targets, to avoid invoking any
+  // target recursively.
   private void writeMsg(int level, String msg) {
     Iterator iter = targets.iterator();
     while (iter.hasNext()) {
-      LogTarget curTarget = (LogTarget)iter.next();
-      curTarget.handleMessage(this, level, msg);
+      LogTarget target = (LogTarget)iter.next();
+      Vector ts = (Vector)targetStack.get();
+      if ( ! ts.contains(target)) {
+	try {
+	  ts.add(target);
+	  target.handleMessage(this, level, msg);
+	} finally {
+	  ts.remove(target);
+	}
+      }
     }
   }
 
