@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepository.java,v 1.3 2002-11-15 02:48:20 aalto Exp $
+ * $Id: LockssRepository.java,v 1.4 2002-11-21 21:07:56 aalto Exp $
  */
 
 /*
@@ -31,8 +31,7 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.repository;
-import java.io.*;
-import java.util.*;
+
 import java.net.MalformedURLException;
 
 /**

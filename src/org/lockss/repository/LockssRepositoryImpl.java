@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.6 2002-11-15 02:48:20 aalto Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.7 2002-11-21 21:07:56 aalto Exp $
  */
 
 /*
@@ -31,14 +31,16 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.repository;
+
 import java.io.*;
-import java.util.*;
 import java.net.*;
+import java.util.*;
 import java.lang.ref.WeakReference;
 import org.lockss.util.StringUtil;
+import org.lockss.daemon.ArchivalUnit;
+import org.lockss.daemon.Configuration;
 import org.apache.commons.collections.LRUMap;
 import org.apache.commons.collections.ReferenceMap;
-import org.lockss.daemon.*;
 
 /**
  * LockssRepository is used to organize the urls being cached.
@@ -92,7 +94,7 @@ public class LockssRepositoryImpl implements LockssRepository {
     return node;
   }
 
-  public synchronized RepositoryNode createNewNode(String url)
+  public RepositoryNode createNewNode(String url)
       throws MalformedURLException {
     RepositoryNode node = null;
     node = (RepositoryNode)lruMap.get(url);

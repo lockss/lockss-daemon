@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.1 2002-11-15 02:48:20 aalto Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.2 2002-11-21 21:07:56 aalto Exp $
  */
 
 /*
@@ -31,12 +31,11 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.repository;
+
 import java.io.*;
 import java.util.*;
-import junit.framework.TestCase;
 import org.lockss.test.*;
 import org.lockss.util.StreamUtil;
-import java.net.*;
 
 /**
  * This is the test class for org.lockss.daemon.LeafEntryImpl

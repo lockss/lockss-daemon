@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.4 2002-11-20 01:18:58 aalto Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.5 2002-11-21 21:07:56 aalto Exp $
  */
 
 /*
@@ -31,11 +31,12 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.repository;
-import java.util.*;
-import org.lockss.util.Logger;
+
 import java.io.*;
+import java.util.*;
+import java.net.MalformedURLException;
+import org.lockss.util.Logger;
 import org.lockss.daemon.CachedUrlSetSpec;
-import java.net.*;
 
 /**
  * RepositoryNode is used to store the contents and
@@ -67,8 +68,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
                                                     Logger.LEVEL_DEBUG);
   private LockssRepositoryImpl repository;
 
-  protected RepositoryNodeImpl(String url, String nodeLocation,
-                       LockssRepositoryImpl repository) {
+  RepositoryNodeImpl(String url, String nodeLocation,
+                     LockssRepositoryImpl repository) {
     this.url = url;
     this.nodeLocation = nodeLocation;
     this.repository = repository;
@@ -86,7 +87,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
   public boolean hasContent() {
     ensureCurrentVersionLoaded();
-    return getCurrentCacheFile().exists();
+    return currentCacheFile.exists();
   }
 
   public Properties getState() {
@@ -99,17 +100,18 @@ public class RepositoryNodeImpl implements RepositoryNode {
   }
 
   public Iterator listNodes(CachedUrlSetSpec filter) {
-    if (nodeRootFile==null) getNodeRoot();
+    if (nodeRootFile==null) loadNodeRoot();
     if (!nodeRootFile.exists()) {
-      return (new Vector()).iterator();
+      return Collections.EMPTY_LIST.iterator();
     }
+    if (cacheLocationFile==null) loadCacheLocation();
     File[] children = nodeRootFile.listFiles();
     Arrays.sort(children, new FileComparator());
-    Vector childV = new Vector();
+    ArrayList childL = new ArrayList(10);
     for (int ii=0; ii<children.length; ii++) {
       File child = children[ii];
       if (!child.isDirectory()) continue;
-      if (child.getName().equals(getCacheLocation().getName())) continue;
+      if (child.getName().equals(cacheLocationFile.getName())) continue;
       StringBuffer buffer = new StringBuffer(this.url);
       if (!url.endsWith(File.separator)) buffer.append(File.separator);
       buffer.append(child.getName());
@@ -117,13 +119,13 @@ public class RepositoryNodeImpl implements RepositoryNode {
       String childUrl = buffer.toString();
       if ((filter==null) || (filter.matches(childUrl))) {
         try {
-          childV.addElement(repository.getRepositoryNode(childUrl));
+          childL.add(repository.getRepositoryNode(childUrl));
         } catch (MalformedURLException mue) {
           logger.error("Malformed child url: "+childUrl);
         }
       }
     }
-    return childV.iterator();
+    return childL.iterator();
   }
 
   public int getCurrentVersion() {
@@ -146,38 +148,34 @@ public class RepositoryNodeImpl implements RepositoryNode {
     newVersionOpen = true;
   }
 
-  public void sealNewVersion() {
+  public synchronized void sealNewVersion() {
     if (!newVersionOpen) {
       throw new UnsupportedOperationException("New version not initialized.");
     }
-    synchronized (this) {
-      // rename current
-      currentCacheFile.renameTo(getVersionedCacheFile(currentVersion));
-      currentPropsFile.renameTo(getVersionedPropertiesFile(currentVersion));
-      // rename new
-      tempCacheFile.renameTo(currentCacheFile);
-      tempPropsFile.renameTo(currentPropsFile);
+    // rename current
+    currentCacheFile.renameTo(getVersionedCacheFile(currentVersion));
+    currentPropsFile.renameTo(getVersionedPropertiesFile(currentVersion));
+    // rename new
+    tempCacheFile.renameTo(currentCacheFile);
+    tempPropsFile.renameTo(currentPropsFile);
 
-      currentVersion++;
-      newVersionOutput = null;
-      curInputFile = null;
-      curProps = null;
-      newVersionOpen = false;
-    }
+    currentVersion++;
+    newVersionOutput = null;
+    curInputFile = null;
+    curProps = null;
+    newVersionOpen = false;
   }
 
-  public void abandonNewVersion() {
+  public synchronized void abandonNewVersion() {
     if (!newVersionOpen) {
       throw new UnsupportedOperationException("New version not initialized.");
     }
-    synchronized (this) {
-      // clear temp files
-      tempCacheFile.delete();
-      tempPropsFile.delete();
+    // clear temp files
+    tempCacheFile.delete();
+    tempPropsFile.delete();
 
-      newVersionOutput = null;
-      newVersionOpen = false;
-    }
+    newVersionOutput = null;
+    newVersionOpen = false;
   }
 
 
@@ -235,40 +233,14 @@ public class RepositoryNodeImpl implements RepositoryNode {
     }
   }
 
-  private void ensureReadInfoLoaded() {
-    if (currentVersion==0) {
-      curInputFile = null;
-      curProps = new Properties();
-      return;
-    }
-    if ((curInputFile==null) || (curProps==null)) {
-      synchronized (this) {
-        if (curInputFile==null) {
-          curInputFile = currentCacheFile;
-        }
-        if (curProps==null) {
-          try {
-            InputStream is = new BufferedInputStream(new FileInputStream(currentPropsFile));
-            curProps = new Properties();
-            curProps.load(is);
-            is.close();
-          } catch (IOException e) {
-            logger.error("No properties file for "+currentPropsFile.getAbsolutePath()+".");
-            curProps = new Properties();
-          }
-        }
-      }
-    }
-  }
-
   private void ensureCurrentVersionLoaded() {
     if (currentVersion!=-1) return;
-    cacheLocationFile = getCacheLocation();
+    loadCacheLocation();
+    loadCurrentCacheFile();
+    loadCurrentPropsFile();
+    loadTempCacheFile();
+    loadTempPropsFile();
     versionName = cacheLocationFile.getName();
-    currentCacheFile = getCurrentCacheFile();
-    currentPropsFile = getCurrentPropsFile();
-    tempCacheFile = getTempCacheFile();
-    tempPropsFile = getTempPropsFile();
     if (!cacheLocationFile.exists()) {
       currentVersion = 0;
       return;
@@ -296,70 +268,72 @@ public class RepositoryNodeImpl implements RepositoryNode {
                      curProps.getProperty("version_number", "0"));
   }
 
-  private File getCurrentCacheFile() {
-    if (currentCacheFile==null) {
-      StringBuffer buffer = new StringBuffer(nodeLocation);
-      buffer.append(File.separator);
-      buffer.append(nodeLocation);
-      buffer.append(CONTENT_DIR_SUFFIX);
-      buffer.append(File.separator);
-      buffer.append(versionName);
-      buffer.append(CURRENT_SUFFIX);
-      currentCacheFile = new File(buffer.toString());
+  private void ensureReadInfoLoaded() {
+    if (currentVersion==0) {
+      curInputFile = null;
+      curProps = new Properties();
+      return;
     }
-    return currentCacheFile;
+    if ((curInputFile==null) || (curProps==null)) {
+      synchronized (this) {
+        if (curInputFile==null) {
+          curInputFile = currentCacheFile;
+        }
+        if (curProps==null) {
+          try {
+            InputStream is = new BufferedInputStream(new FileInputStream(currentPropsFile));
+            curProps = new Properties();
+            curProps.load(is);
+            is.close();
+          } catch (IOException e) {
+            logger.error("No properties file for "+currentPropsFile.getAbsolutePath()+".");
+            curProps = new Properties();
+          }
+        }
+      }
+    }
   }
 
-  private File getCurrentPropsFile() {
-    if (currentPropsFile==null) {
-      StringBuffer buffer = new StringBuffer(nodeLocation);
-      buffer.append(File.separator);
-      buffer.append(nodeLocation);
-      buffer.append(CONTENT_DIR_SUFFIX);
-      buffer.append(File.separator);
-      buffer.append(versionName);
-      buffer.append(PROPS_SUFFIX);
-      buffer.append(CURRENT_SUFFIX);
-      currentPropsFile = new File(buffer.toString());
-    }
-    return currentPropsFile;
+  private void loadCurrentCacheFile() {
+    StringBuffer buffer = getContentDirBuffer();
+    buffer.append(versionName);
+    buffer.append(CURRENT_SUFFIX);
+    currentCacheFile = new File(buffer.toString());
   }
 
-  private File getTempCacheFile() {
-    if (tempCacheFile==null) {
-      StringBuffer buffer = new StringBuffer(nodeLocation);
-      buffer.append(File.separator);
-      buffer.append(nodeLocation);
-      buffer.append(CONTENT_DIR_SUFFIX);
-      buffer.append(File.separator);
-      buffer.append(versionName);
-      buffer.append(TEMP_SUFFIX);
-      tempCacheFile = new File(buffer.toString());
-    }
-    return tempCacheFile;
+  private void loadCurrentPropsFile() {
+    StringBuffer buffer = getContentDirBuffer();
+    buffer.append(versionName);
+    buffer.append(PROPS_SUFFIX);
+    buffer.append(CURRENT_SUFFIX);
+    currentPropsFile = new File(buffer.toString());
   }
 
-  private File getTempPropsFile() {
-    if (tempPropsFile==null) {
-      StringBuffer buffer = new StringBuffer(nodeLocation);
-      buffer.append(File.separator);
-      buffer.append(nodeLocation);
-      buffer.append(CONTENT_DIR_SUFFIX);
-      buffer.append(File.separator);
-      buffer.append(versionName);
-      buffer.append(PROPS_SUFFIX);
-      buffer.append(TEMP_SUFFIX);
-      tempPropsFile = new File(buffer.toString());
-    }
-    return tempPropsFile;
+  private void loadTempCacheFile() {
+    StringBuffer buffer = getContentDirBuffer();
+    buffer.append(versionName);
+    buffer.append(TEMP_SUFFIX);
+    tempCacheFile = new File(buffer.toString());
+  }
+
+  private void loadTempPropsFile() {
+    StringBuffer buffer = getContentDirBuffer();
+    buffer.append(versionName);
+    buffer.append(PROPS_SUFFIX);
+    buffer.append(TEMP_SUFFIX);
+    tempPropsFile = new File(buffer.toString());
+  }
+
+  private void loadCacheLocation() {
+    cacheLocationFile = new File(getContentDirBuffer().toString());
+  }
+
+  private void loadNodeRoot() {
+    nodeRootFile = new File(nodeLocation);
   }
 
   private File getVersionedCacheFile(int version) {
-    StringBuffer buffer = new StringBuffer(nodeLocation);
-    buffer.append(File.separator);
-    buffer.append(nodeLocation);
-    buffer.append(CONTENT_DIR_SUFFIX);
-    buffer.append(File.separator);
+    StringBuffer buffer = getContentDirBuffer();
     buffer.append(versionName);
     buffer.append(".");
     buffer.append(version);
@@ -367,11 +341,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
   }
 
   private File getVersionedPropertiesFile(int version) {
-    StringBuffer buffer = new StringBuffer(nodeLocation);
-    buffer.append(File.separator);
-    buffer.append(nodeLocation);
-    buffer.append(CONTENT_DIR_SUFFIX);
-    buffer.append(File.separator);
+    StringBuffer buffer = getContentDirBuffer();
     buffer.append(versionName);
     buffer.append(PROPS_SUFFIX);
     buffer.append(".");
@@ -379,22 +349,13 @@ public class RepositoryNodeImpl implements RepositoryNode {
     return new File(buffer.toString());
   }
 
-  private File getCacheLocation() {
-    if (cacheLocationFile==null) {
-      StringBuffer buffer = new StringBuffer(nodeLocation);
-      buffer.append(File.separator);
-      buffer.append(nodeLocation);
-      buffer.append(CONTENT_DIR_SUFFIX);
-      cacheLocationFile = new File(buffer.toString());
-    }
-    return cacheLocationFile;
-  }
-
-  private File getNodeRoot() {
-    if (nodeRootFile==null) {
-      nodeRootFile = new File(nodeLocation);
-    }
-    return nodeRootFile;
+  private StringBuffer getContentDirBuffer() {
+    StringBuffer buffer = new StringBuffer(nodeLocation);
+    buffer.append(File.separator);
+    buffer.append(nodeLocation);
+    buffer.append(CONTENT_DIR_SUFFIX);
+    buffer.append(File.separator);
+    return buffer;
   }
 
   private class FileComparator implements Comparator {

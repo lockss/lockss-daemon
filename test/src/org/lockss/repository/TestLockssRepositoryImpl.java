@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.6 2002-11-15 02:48:20 aalto Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.7 2002-11-21 21:07:56 aalto Exp $
  */
 
 /*
@@ -31,13 +31,14 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.repository;
-import java.util.*;
+
 import java.io.*;
-import junit.framework.TestCase;
-import org.lockss.test.*;
+import java.util.*;
 import java.net.MalformedURLException;
-import org.lockss.daemon.*;
+import org.lockss.test.*;
 import org.lockss.util.*;
+import org.lockss.daemon.Configuration;
+import org.lockss.daemon.TestConfiguration;
 
 /**
  * This is the test class for org.lockss.daemon.LockssRepositoryImpl

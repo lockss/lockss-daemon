@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrlSet.java,v 1.5 2002-11-15 02:48:20 aalto Exp $
+ * $Id: GenericFileCachedUrlSet.java,v 1.6 2002-11-21 21:07:56 aalto Exp $
  */
 
 /*
@@ -36,10 +36,9 @@ import java.util.*;
 import java.security.MessageDigest;
 import java.net.MalformedURLException;
 import org.lockss.daemon.*;
-import org.lockss.util.*;
 import org.lockss.hasher.*;
 import org.lockss.repository.*;
-import gnu.regexp.RE;
+import org.lockss.util.Logger;
 
 /**
  * This is an abstract CachedUrlSet implementation which uses the {@link LockssRepository}.
@@ -47,7 +46,6 @@ import gnu.regexp.RE;
  * @author  Emil Aalto
  * @version 0.0
  */
-
 public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
   private long lastDuration = 0;
   private Exception lastException = null;
@@ -75,7 +73,7 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
         while (children.hasNext()) {
           RepositoryNode child = (RepositoryNode)children.next();
           CachedUrlSetSpec rSpec =
-              new RECachedUrlSetSpec(child.getNodeUrl(), (RE)null);
+              new RECachedUrlSetSpec(child.getNodeUrl(), (String)null);
           CachedUrlSet newSet = ((BaseArchivalUnit)au).makeCachedUrlSet(rSpec);
           setTree.add(newSet);
         }

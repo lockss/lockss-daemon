@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericFileUrlCacher.java,v 1.6 2002-11-07 02:21:48 aalto Exp $
+ * $Id: TestGenericFileUrlCacher.java,v 1.7 2002-11-21 21:07:56 aalto Exp $
  */
 
 /*
@@ -32,11 +32,10 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin;
 
-import junit.framework.TestCase;
-import org.lockss.daemon.*;
-import org.lockss.test.*;
 import java.io.*;
 import java.util.Properties;
+import org.lockss.daemon.*;
+import org.lockss.test.*;
 import org.lockss.util.StreamUtil;
 import org.lockss.repository.TestLockssRepositoryImpl;
 
@@ -46,8 +45,6 @@ import org.lockss.repository.TestLockssRepositoryImpl;
  * @author  Emil Aalto
  * @version 0.0
  */
-
-
 public class TestGenericFileUrlCacher extends LockssTestCase {
   private MockGenericFileArchivalUnit mau;
 

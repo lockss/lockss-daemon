@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileUrlCacher.java,v 1.5 2002-11-15 02:48:20 aalto Exp $
+ * $Id: GenericFileUrlCacher.java,v 1.6 2002-11-21 21:07:56 aalto Exp $
  */
 
 /*
@@ -33,7 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin;
 
 import java.io.*;
-import java.util.*;
+import java.util.Properties;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.repository.*;
