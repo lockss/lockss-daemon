@@ -1,5 +1,5 @@
 /*
- * $Id: FuncNewContentCrawler.java,v 1.6 2004-09-27 23:41:06 dcfok Exp $
+ * $Id: FuncNewContentCrawler.java,v 1.7 2004-09-29 19:03:22 tlipkis Exp $
  */
 
 /*
@@ -97,7 +97,6 @@ public class FuncNewContentCrawler extends LockssTestCase {
     props.setProperty("org.lockss.au." + auId + "." +
                       SimulatedPlugin.AU_PARAM_BIN_FILE_SIZE, ""+fileSize);
 
-//     theDaemon = new MockLockssDaemon();
     theDaemon = getMockLockssDaemon();
     theDaemon.getAlertManager();
     theDaemon.getPluginManager().setLoadablePluginsReady(true);
