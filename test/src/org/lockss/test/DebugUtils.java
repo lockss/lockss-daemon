@@ -1,5 +1,5 @@
 /*
- * $Id: DebugUtils.java,v 1.6 2003-04-18 20:24:47 tal Exp $
+ * $Id: DebugUtils.java,v 1.7 2003-04-21 05:42:25 tal Exp $
  */
 
 /*
@@ -92,6 +92,9 @@ public class DebugUtils {
       log.info("Thread dump requested, not supported in this environment", e);
       return;
     }
+    // thread dump is more likely to appear on System.err than
+    // wherever the current log is.
+    System.err.println("Thread dump at " + new Date());
     String cmd = "kill -QUIT " + pid;
     try {
       Process p = rt().exec(cmd);
