@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawler.java,v 1.4 2002-10-16 04:50:54 tal Exp $
+ * $Id: TestCrawler.java,v 1.5 2002-11-06 02:49:15 troberts Exp $
  */
 
 /*
@@ -57,15 +57,15 @@ public class TestCrawler extends LockssTestCase {
     TestCrawlRule.class
   };
 
-  public TestCrawler(String msg){
+  public TestCrawler(String msg) {
     super(msg);
   }
 
-  public void testCreateInitialListNullCrawlSpec(){
+  public void testCreateInitialListNullCrawlSpec() {
     assertEquals(0, (Crawler.createInitialList(null)).size());
   }
 
-  public void testCreateInitialListEmptyCrawlSpec(){
+  public void testCreateInitialListEmptyCrawlSpec() {
     try {
       CrawlSpec cs = new CrawlSpec(Collections.EMPTY_LIST, null);
       fail("Shouldn't be able to create CrawlSpec with empty URL list");
@@ -73,15 +73,16 @@ public class TestCrawler extends LockssTestCase {
     }
   }
 
-  public void testCreateInitialListOneUrlInCrawlSpec(){
+  public void testCreateInitialListOneUrlInCrawlSpec() {
     String[] urls = {"http://test.org/"};
     CrawlSpec cs = new CrawlSpec(urls[0], null);
     assertIsomorphic(urls, Crawler.createInitialList(cs));
   }
   
-  public void testCreateInitialListOneMultipleInCrawlSpec(){
+  public void testCreateInitialListOneMultipleInCrawlSpec() {
     String[] urls = {"http://test.org/", 
-		     "http://test2.org/", "http://test3.org/"};
+		     "http://test2.org/", 
+		     "http://test3.org/"};
     CrawlSpec cs = new CrawlSpec(ListUtil.fromArray(urls), null);
     assertIsomorphic(urls, Crawler.createInitialList(cs));
   }
@@ -95,7 +96,7 @@ public class TestCrawler extends LockssTestCase {
   }
 
   public void testAddUrlsToListOneHrefInputStream()
-      throws IOException{
+      throws IOException {
     String url = "http://www.test.org/index.html";
     Vector list = new Vector();
     String source = "<html><head>"+
@@ -116,29 +117,33 @@ public class TestCrawler extends LockssTestCase {
   }
 
   public void testExtractLinkHandlesNoLink() 
-      throws IOException, MalformedURLException{
+      throws IOException, MalformedURLException {
     StringReader strReader = 
       new StringReader("blah blah blah");
     assertNull(Crawler.ExtractNextLink(strReader, null));
   }
 
   public void testExtractLinkGetsOneLink()
-      throws IOException, MalformedURLException{
+      throws IOException, MalformedURLException {
     StringReader strReader = 
-      new StringReader("This is a <a href=http://www.test.org>test</a> of the parser");
-    assertEquals("http://www.test.org", Crawler.ExtractNextLink(strReader, null));
+      new StringReader("This is a <a href=http://www.test.org>test</a> of "+
+		       "the parser");
+    assertEquals("http://www.test.org", 
+		 Crawler.ExtractNextLink(strReader, null));
   }
 
   public void testExtractLinkGetsMultipleLink()
-      throws IOException, MalformedURLException{
+      throws IOException, MalformedURLException {
     String testStr = 
       "<body background=backg1.gif>"+
       "This is a <a href=http://www.test.org>test</a> of the parser"+
       "It needs to have multiple diferent types of links, like this"+
-      "<img src=picture.gif> and this <table background=backg.jpg></table></body>";
+      "<img src=picture.gif> and this <table background=backg.jpg>"+
+      "</table></body>";
     URL srcUrl = new URL("http://www.test.org");
     StringReader strReader = new StringReader(testStr);
-    assertEquals("http://www.test.org/backg1.gif", Crawler.ExtractNextLink(strReader, srcUrl));
+    assertEquals("http://www.test.org/backg1.gif", 
+		 Crawler.ExtractNextLink(strReader, srcUrl));
     assertEquals("http://www.test.org", 
 		 Crawler.ExtractNextLink(strReader, srcUrl));
     assertEquals("http://www.test.org/picture.gif", 
@@ -149,7 +154,7 @@ public class TestCrawler extends LockssTestCase {
   }
 
   public void testExtractLinkGetsMixedCase()
-      throws IOException, MalformedURLException{
+      throws IOException, MalformedURLException {
     String testStr = 
       "This is a <a HREF=http://www.test.org>test</a> of the parser";
     URL srcUrl = new URL("http://www.test.org");
@@ -164,41 +169,53 @@ public class TestCrawler extends LockssTestCase {
    * 2)skip comments
    */
 
-  public void testParseLinkReturnsNullForBadStrings() throws MalformedURLException{
+  public void testParseLinkReturnsNullForBadStrings() 
+      throws MalformedURLException {
     StringBuffer link = new StringBuffer("/table");
     URL srcUrl = new URL("http://www.test.org");
     assertNull(Crawler.ParseLink(link, srcUrl));
   }
 
-  public void testParseLinkParsesQuotes() throws MalformedURLException{
-    StringBuffer link = new StringBuffer("a href=\"http://www.test.org/test/test2\"");
+  public void testParseLinkParsesQuotes() throws MalformedURLException {
+    StringBuffer link = 
+      new StringBuffer("a href=\"http://www.test.org/test/test2\"");
     URL srcUrl = new URL("http://www.test.org");
     assertEquals("http://www.test.org/test/test2", 
 		 Crawler.ParseLink(link, srcUrl));
   }
 
-  public void testParseLinkParsesHref() throws MalformedURLException{
-    StringBuffer link = new StringBuffer("a href=http://www.test.org/test/test2");
+  public void testParseLinkParsesHref() throws MalformedURLException {
+    StringBuffer link = 
+      new StringBuffer("a href=http://www.test.org/test/test2");
     URL srcUrl = new URL("http://www.test.org");
     assertEquals("http://www.test.org/test/test2", 
 		 Crawler.ParseLink(link, srcUrl));
   }
 
-  public void testParseLinkParsesHrefRelativeLink() throws MalformedURLException{
+  public void testParseLinkParsesHrefRelativeLink() 
+      throws MalformedURLException {
     StringBuffer link = new StringBuffer("a href=test/test2");
     URL srcUrl = new URL("http://www.test.org");
     assertEquals("http://www.test.org/test/test2", 
 		 Crawler.ParseLink(link, srcUrl));
   }
 
-  public void testParseLinkParsesHrefWithHash() throws MalformedURLException{
+  public void testParseLinkParsesHrefRelativeLinkWithSrcFile() 
+      throws MalformedURLException {
+    StringBuffer link = new StringBuffer("a href=test/test2");
+    URL srcUrl = new URL("http://www.test.org/index.html");
+    assertEquals("http://www.test.org/test/test2", 
+		 Crawler.ParseLink(link, srcUrl));
+  }
+
+  public void testParseLinkParsesHrefWithHash() throws MalformedURLException {
     StringBuffer link = new StringBuffer("a href=test/test2#section1");
     URL srcUrl = new URL("http://www.test.org");
     assertEquals("http://www.test.org/test/test2", 
 		 Crawler.ParseLink(link, srcUrl));
   }
 
-  public void testParseLinkParsesImg() throws MalformedURLException{
+  public void testParseLinkParsesImg() throws MalformedURLException {
     StringBuffer link = 
       new StringBuffer("img src=http://www.test.org/test/test2.gif");
     URL srcUrl = new URL("http://www.test.org");
@@ -206,14 +223,15 @@ public class TestCrawler extends LockssTestCase {
 		 Crawler.ParseLink(link, srcUrl));
   }
 
-  public void testParseLinkParsesImgRelativeLink() throws MalformedURLException{
+  public void testParseLinkParsesImgRelativeLink() 
+      throws MalformedURLException {
     StringBuffer link = new StringBuffer("img src=test/test2.gif");
     URL srcUrl = new URL("http://www.test.org");
     assertEquals("http://www.test.org/test/test2.gif", 
 		 Crawler.ParseLink(link, srcUrl));
   }
 
-  public void testParseLinkParsesFrame() throws MalformedURLException{
+  public void testParseLinkParsesFrame() throws MalformedURLException {
     StringBuffer link = 
       new StringBuffer("frame src=http://www.test.org/test/test2.html");
     URL srcUrl = new URL("http://www.test.org");
@@ -221,14 +239,15 @@ public class TestCrawler extends LockssTestCase {
 		 Crawler.ParseLink(link, srcUrl));
   }
 
-  public void testParseLinkParsesFrameRelativeLink() throws MalformedURLException{
+  public void testParseLinkParsesFrameRelativeLink() 
+      throws MalformedURLException {
     StringBuffer link = new StringBuffer("frame src=test/test2.html");
     URL srcUrl = new URL("http://www.test.org");
     assertEquals("http://www.test.org/test/test2.html", 
 		 Crawler.ParseLink(link, srcUrl));
   }
 
-  public void testParseLinkParsesLink() throws MalformedURLException{
+  public void testParseLinkParsesLink() throws MalformedURLException {
     StringBuffer link = 
       new StringBuffer("link href=http://www.test.org/test/test2.css");
     URL srcUrl = new URL("http://www.test.org");
@@ -236,14 +255,15 @@ public class TestCrawler extends LockssTestCase {
 		 Crawler.ParseLink(link, srcUrl));
   }
 
-  public void testParseLinkParsesLinkRelativeLink() throws MalformedURLException{
+  public void testParseLinkParsesLinkRelativeLink() 
+      throws MalformedURLException {
     StringBuffer link = new StringBuffer("link href=test/test2.css");
     URL srcUrl = new URL("http://www.test.org");
     assertEquals("http://www.test.org/test/test2.css", 
 		 Crawler.ParseLink(link, srcUrl));
   }
 
-  public void testParseLinkParsesBody() throws MalformedURLException{
+  public void testParseLinkParsesBody() throws MalformedURLException {
     StringBuffer link = 
       new StringBuffer("body background=http://www.test.org/test/test2.gif");
     URL srcUrl = new URL("http://www.test.org");
@@ -251,14 +271,15 @@ public class TestCrawler extends LockssTestCase {
 		 Crawler.ParseLink(link, srcUrl));
   }
 
-  public void testParseLinkParsesBodyRelativeLink() throws MalformedURLException{
+  public void testParseLinkParsesBodyRelativeLink() 
+      throws MalformedURLException {
     StringBuffer link = new StringBuffer("body background=test/test2.gif");
     URL srcUrl = new URL("http://www.test.org");
     assertEquals("http://www.test.org/test/test2.gif", 
 		 Crawler.ParseLink(link, srcUrl));
   }
 
-  public void testParseLinkParsesScript() throws MalformedURLException{
+  public void testParseLinkParsesScript() throws MalformedURLException {
     StringBuffer link = 
       new StringBuffer("script src=http://www.test.org/test/test2.html");
     URL srcUrl = new URL("http://www.test.org");
@@ -266,14 +287,15 @@ public class TestCrawler extends LockssTestCase {
 		 Crawler.ParseLink(link, srcUrl));
   }
 
-  public void testParseLinkParsesScriptRelativeLink() throws MalformedURLException{
+  public void testParseLinkParsesScriptRelativeLink() 
+      throws MalformedURLException {
     StringBuffer link = new StringBuffer("script src=test/test2.html");
     URL srcUrl = new URL("http://www.test.org");
     assertEquals("http://www.test.org/test/test2.html", 
 		 Crawler.ParseLink(link, srcUrl));
   }
 
-  public void testParseLinkParsesTd() throws MalformedURLException{
+  public void testParseLinkParsesTd() throws MalformedURLException {
     StringBuffer link = 
       new StringBuffer("td background=http://www.test.org/test/test2.gif");
     URL srcUrl = new URL("http://www.test.org");
@@ -281,14 +303,15 @@ public class TestCrawler extends LockssTestCase {
 		 Crawler.ParseLink(link, srcUrl));
   }
 
-  public void testParseLinkParsesTdRelativeLink() throws MalformedURLException{
+  public void testParseLinkParsesTdRelativeLink() 
+      throws MalformedURLException {
     StringBuffer link = new StringBuffer("td background=test/test2.gif");
     URL srcUrl = new URL("http://www.test.org");
     assertEquals("http://www.test.org/test/test2.gif", 
 		 Crawler.ParseLink(link, srcUrl));
   }
 
-  public void testParseLinkParsesTable() throws MalformedURLException{
+  public void testParseLinkParsesTable() throws MalformedURLException {
     StringBuffer link = 
       new StringBuffer("table background=http://www.test.org/test/test2.gif");
     URL srcUrl = new URL("http://www.test.org");
@@ -296,7 +319,8 @@ public class TestCrawler extends LockssTestCase {
 		 Crawler.ParseLink(link, srcUrl));
   }
 
-  public void testParseLinkParsesTableRelativeLink() throws MalformedURLException{
+  public void testParseLinkParsesTableRelativeLink() 
+      throws MalformedURLException {
     StringBuffer link = new StringBuffer("table background=test/test2.gif");
     URL srcUrl = new URL("http://www.test.org");
     assertEquals("http://www.test.org/test/test2.gif", 
@@ -304,7 +328,7 @@ public class TestCrawler extends LockssTestCase {
   }
 
   public void testParseLinkParsesLinksWithMultipleKeys() 
-      throws MalformedURLException{
+      throws MalformedURLException {
     StringBuffer link = 
       new StringBuffer("body background=test/test2.gif text=white");
     URL srcUrl = new URL("http://www.test.org");
@@ -313,7 +337,7 @@ public class TestCrawler extends LockssTestCase {
   }
 
 
-  public void testDoOneCrawlCycleOneLink(){
+  public void testDoOneCrawlCycleOneLink() {
     Vector list = new Vector();
     String source = "<html><head>"+
       "<title>Test</title></head>"+
@@ -335,7 +359,7 @@ public class TestCrawler extends LockssTestCase {
     
   }
 
-  public void testDoOneCrawlCycleDoesNotAssLinksForExistingFile(){
+  public void testDoOneCrawlCycleDoesNotAssLinksForExistingFile() {
     Vector list = new Vector();
     String source = "<html><head>"+
       "<title>Test</title></head>"+
