@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.11 2003-03-04 01:02:05 aalto Exp $
+ * $Id: TestStringUtil.java,v 1.12 2003-03-08 02:47:16 tal Exp $
  */
 
 /*
@@ -217,5 +217,16 @@ public class TestStringUtil extends LockssTestCase {
     String g2 = StringUtil.gensym(base);
     assertTrue(g1.startsWith(base));
     assertNotEquals(g1, g2);
+  }
+
+  public void testTrinHostName() {
+    assertEquals("foo", StringUtil.trimHostName("www.foo.com"));
+    assertEquals("foo", StringUtil.trimHostName("foo.com"));
+    assertEquals("foo.bar", StringUtil.trimHostName("www.foo.bar.com"));
+    assertEquals("foo.bar", StringUtil.trimHostName("foo.bar.com"));
+    assertEquals("www.com", StringUtil.trimHostName("www.com"));
+    assertEquals("foo", StringUtil.trimHostName("foo"));
+    assertEquals("", StringUtil.trimHostName(""));
+    assertNull(StringUtil.trimHostName(null));
   }
 }
