@@ -384,6 +384,21 @@
 	</property>
       </property>
 
+      <property name="ameriquests2004">
+	<property name="title" value="AmeriQuests 2004" />
+	<property name="estSize" value="11MB" />
+	<property name="journalTitle" value="AmeriQuests" />
+	<property name="plugin" value="org.lockss.plugin.ojs.OJSPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://ejournals.library.vanderbilt.edu/ameriquests/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2004" />
+	</property>
+      </property>
+
       <property name="snde8">
 	<property name="title" value="Studies in Nonlinear Dynamics and Econometrics Volume 8" />
 	<property name="estSize" value="22MB" />
@@ -1355,6 +1370,140 @@
 	  <property name="value" value="4" />
 	</property>
       </property>
+
+      <property name="Nashim8">
+	<property name="title" value="Nashim: A Journal of Jewish Women's Studies &amp; Gender Issues Volume 8" />
+	<property name="estSize" value="7MB" />
+	<property name="journalTitle" value="Nashim: A Journal of Jewish Women's Studies &amp; Gender Issues" />
+	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://muse.jhu.edu/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="journal_dir" />
+	  <property name="value" value="nashim" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="8" />
+	</property>
+      </property>
+
+      <property name="NWSAJournal16">
+	<property name="title" value="NWSA Journal Volume 16" />
+	<property name="estSize" value="7MB" />
+	<property name="journalTitle" value="" />
+	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://muse.jhu.edu/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="journal_dir" />
+	  <property name="value" value="nwsa_journal" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="16" />
+	</property>
+      </property>
+
+      <property name="PhilosophyofMusicEducationReview12">
+	<property name="title" value="Philosophy of Music Education Review Volume 12" />
+	<property name="estSize" value="7MB" />
+	<property name="journalTitle" value="Philosophy of Music Education Review" />
+	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://muse.jhu.edu/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="journal_dir" />
+	  <property name="value" value="philosophy_of_music_education_review" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="12" />
+	</property>
+      </property>
+
+      <property name="Prooftexts24">
+	<property name="title" value="Prooftexts Volume 24" />
+	<property name="estSize" value="7MB" />
+	<property name="journalTitle" value="Prooftexts" />
+	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://muse.jhu.edu/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="journal_dir" />
+	  <property name="value" value="prooftexts" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="24" />
+	</property>
+      </property>
+
+      <property name="ResearchinAfricanLiteratures36">
+	<property name="title" value="Research in African Literatures Volume 36" />
+	<property name="estSize" value="7MB" />
+	<property name="journalTitle" value="Research in African Literatures" />
+	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://muse.jhu.edu/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="journal_dir" />
+	  <property name="value" value="research_in_african_literatures" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="36" />
+	</property>
+      </property>
+
+      <property name="SmallAxe8">
+	<property name="title" value="Small Axe Volume 8" />
+	<property name="estSize" value="7MB" />
+	<property name="journalTitle" value="Small Axe" />
+	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://muse.jhu.edu/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="journal_dir" />
+	  <property name="value" value="small_axe" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="8" />
+	</property>
+      </property>
+
+      <property name="VictorianStudies46">
+	<property name="title" value="Victorian Studies Volume 46" />
+	<property name="estSize" value="7MB" />
+	<property name="journalTitle" value="Victorian Studies" />
+	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://muse.jhu.edu/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="journal_dir" />
+	  <property name="value" value="victorian_studies" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="46" />
+	</property>
+      </property>
+
 
       <property name="teslej8">
 	<property name="title" value="TESL-EJ Volume 8" />
