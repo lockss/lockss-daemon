@@ -253,7 +253,7 @@ public class TypedEntryMap {
   }
 
   public void putBoolean(String key, boolean value) {
-    setMapElement(key, Boolean.valueOf(value));
+    setMapElement(key, value ? Boolean.TRUE : Boolean.FALSE);
   }
 
   public void putDouble(String key, double value) {
