@@ -1,5 +1,5 @@
 /*
- * $Id: LcapComm.java,v 1.12 2002-12-16 23:29:40 tal Exp $
+ * $Id: LcapComm.java,v 1.13 2002-12-18 23:25:03 tal Exp $
  */
 
 /*
@@ -105,7 +105,12 @@ public class LcapComm {
     String uniSendToName = null;
     try {
       groupName = config.get(PARAM_MULTI_GROUP);
-      multiPort = config.getInt(PARAM_MULTI_PORT);
+      String multiPortString = config.get(PARAM_MULTI_PORT);
+      if ("localIp".equalsIgnoreCase(multiPortString)) {
+	multiPort = derivedMultiPort();
+      } else {
+	multiPort = config.getInt(PARAM_MULTI_PORT);
+      }
       uniPort = config.getInt(PARAM_UNI_PORT); // 
       uniSendToPort = config.getInt(PARAM_UNI_PORT_SEND, uniPort);
       uniSendToName = config.get(PARAM_UNI_ADDR_SEND);
@@ -138,6 +143,17 @@ public class LcapComm {
       log.debug("uniPort = " + uniPort);
       log.debug("uniSendToPort = " + uniSendToPort);
       log.debug("verifyMulticast = " + verifyMulticast);
+    }
+  }
+
+  private int derivedMultiPort() {
+    try {
+      InetAddress local = InetAddress.getLocalHost();
+      byte[] addr = local.getAddress();
+      return addr[3] + 1234;
+    } catch (UnknownHostException e) {
+      log.error("Can't find local IP address, so can't use ip-addr-derived multicast port", e);
+      return -1;
     }
   }
 
