@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.24 2004-02-23 21:17:02 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.25 2004-02-27 00:19:08 tlipkis Exp $
  */
 
 /*
@@ -55,7 +55,7 @@ public class BaseUrlCacher implements UrlCacher {
   protected static Logger logger = Logger.getLogger("UrlCacher");
   private LockssRepository repository;
   private CacheResultMap resultMap;
-  private static final String HEADER_PREFIX = "_header_";
+  public static final String HEADER_PREFIX = "_header_";
 
 
   public BaseUrlCacher(CachedUrlSet owner, String url) {
