@@ -1,5 +1,5 @@
 /*
- * $Id: RateLimiter.java,v 1.2 2003-02-20 22:30:20 tal Exp $
+ * $Id: RateLimiter.java,v 1.3 2003-04-02 23:29:42 tal Exp $
  */
 
 /*
@@ -78,6 +78,6 @@ public class RateLimiter {
 
   /** Return true if an event could occur now without exceeding the limit */
   public boolean isEventOk() {
-    return (TimeBase.nowMs() - time[count]) >= interval;
+    return TimeBase.msSince(time[count]) >= interval;
   }
 }
