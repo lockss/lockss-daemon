@@ -1,5 +1,5 @@
 /*
- * $Id: TestSyslogTarget.java,v 1.5 2003-06-20 22:34:57 claire Exp $
+ * $Id: TestSyslogTarget.java,v 1.6 2003-07-14 06:46:38 tlipkis Exp $
  */
 
 /*
@@ -73,7 +73,7 @@ public class TestSyslogTarget extends LockssTestCase {
       PARAM_HOST + "=" + host + "\n" +
       PARAM_PORT + "=" + port + "\n";
     List list = ListUtil.list(FileUtil.urlOfString(conf1));
-    TestConfiguration.setCurrentConfigFromUrlList(list);
+    ConfigurationUtil.setCurrentConfigFromUrlList(list);
   }
 
   public void testHandleMessageGetsMessageRight() throws Exception{

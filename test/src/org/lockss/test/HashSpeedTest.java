@@ -1,5 +1,5 @@
 /*
- * $Id: HashSpeedTest.java,v 1.13 2003-06-25 21:19:54 eaalto Exp $
+ * $Id: HashSpeedTest.java,v 1.14 2003-07-14 06:46:38 tlipkis Exp $
  */
 
 /*
@@ -85,7 +85,7 @@ public class HashSpeedTest extends LockssTestCase {
     String s2 = SystemMetrics.PARAM_HASH_TEST_BYTE_STEP + "=" + byteStep;
     String s3 = LockssRepositoryImpl.PARAM_CACHE_LOCATION + "=" + tempDirPath;
     String configStr = s + "\n" + s2 + "\n" + s3;
-    TestConfiguration.setCurrentConfigFromString(configStr);
+    ConfigurationUtil.setCurrentConfigFromString(configStr);
     theDaemon.getLockssRepository(sau);
   }
 

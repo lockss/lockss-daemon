@@ -1,5 +1,5 @@
 /*
- * $Id: TestPartnerList.java,v 1.8 2003-06-20 22:34:54 claire Exp $
+ * $Id: TestPartnerList.java,v 1.9 2003-07-14 06:46:39 tlipkis Exp $
  */
 
 /*
@@ -64,7 +64,7 @@ public class TestPartnerList extends LockssTestCase {
   InetAddress inet4;
 
   private void setConfig(PartnerList pl, Configuration config) {
-    pl.setConfig(config, Configuration.EMPTY_CONFIGURATION,
+    pl.setConfig(config, ConfigManager.EMPTY_CONFIGURATION,
 		 config.keySet());
   }
 

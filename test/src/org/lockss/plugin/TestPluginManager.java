@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.18 2003-06-25 21:19:58 eaalto Exp $
+ * $Id: TestPluginManager.java,v 1.19 2003-07-14 06:46:39 tlipkis Exp $
  */
 
 /*
@@ -113,7 +113,7 @@ public class TestPluginManager extends LockssTestCase {
     mgr.startService();
     String localConfig = configStr + getTempDir().getAbsolutePath() +
         File.separator;
-    TestConfiguration.setCurrentConfigFromString(localConfig);
+    ConfigurationUtil.setCurrentConfigFromString(localConfig);
   }
 
   public void testNameFromKey() {

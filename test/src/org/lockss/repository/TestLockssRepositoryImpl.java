@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.36 2003-06-26 01:05:24 eaalto Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.37 2003-07-14 06:46:38 tlipkis Exp $
  */
 
 /*
@@ -433,7 +433,7 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
 
   public static void configCacheLocation(String location) throws IOException {
     String s = LockssRepositoryImpl.PARAM_CACHE_LOCATION + "=" + location;
-    TestConfiguration.setCurrentConfigFromString(s);
+    ConfigurationUtil.setCurrentConfigFromString(s);
   }
 
   private RepositoryNode createLeaf(String url, String content,

@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapIdentity.java,v 1.19 2003-06-26 01:50:27 clairegriffin Exp $
+ * $Id: TestLcapIdentity.java,v 1.20 2003-07-14 06:46:39 tlipkis Exp $
  */
 
 /*
@@ -73,7 +73,7 @@ public class TestLcapIdentity extends LockssTestCase {
     super.setUp();
     String host = "1.2.3.4";
     String prop = "org.lockss.localIPAddress="+host;
-    TestConfiguration.
+    ConfigurationUtil.
       setCurrentConfigFromUrlList(ListUtil.list(FileUtil.urlOfString(prop)));
     idmgr = daemon.getIdentityManager();
     try {

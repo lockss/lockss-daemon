@@ -1,5 +1,5 @@
 /*
- * $Id: TestMailTarget.java,v 1.7 2003-06-20 22:34:56 claire Exp $
+ * $Id: TestMailTarget.java,v 1.8 2003-07-14 06:46:38 tlipkis Exp $
  */
 
 /*
@@ -51,7 +51,7 @@ public class TestMailTarget extends LockssTestCase {
     String s = MailTarget.PARAM_SMTPHOST + "=1.2.3.4";
     String s2 = MailTarget.PARAM_EMAIL_TO + "=target@t.com";
     String s3 = MailTarget.PARAM_EMAIL_FROM + "=source@s.com";
-    TestConfiguration.setCurrentConfigFromUrlList(ListUtil.list(
+    ConfigurationUtil.setCurrentConfigFromUrlList(ListUtil.list(
         FileUtil.urlOfString(s), FileUtil.urlOfString(s2),
         FileUtil.urlOfString(s3)));
     target = new MailTarget();
@@ -73,7 +73,7 @@ public class TestMailTarget extends LockssTestCase {
     String s3 = MailTarget.PARAM_EMAIL_TO + "=target2@t.com";
     String s4 = MailTarget.PARAM_EMAIL_FROM + "=source2@s.com";
     String s5 = MailTarget.PARAM_EMAIL_ENABLED + "=false";
-    TestConfiguration.setCurrentConfigFromUrlList(ListUtil.list(
+    ConfigurationUtil.setCurrentConfigFromUrlList(ListUtil.list(
         FileUtil.urlOfString(s), FileUtil.urlOfString(s2),
         FileUtil.urlOfString(s3), FileUtil.urlOfString(s4),
         FileUtil.urlOfString(s5)));

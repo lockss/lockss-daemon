@@ -1,5 +1,5 @@
 /*
- * $Id: TestLogger.java,v 1.18 2003-06-20 22:34:56 claire Exp $
+ * $Id: TestLogger.java,v 1.19 2003-07-14 06:46:38 tlipkis Exp $
  */
 
 /*
@@ -162,7 +162,7 @@ public class TestLogger extends LockssTestCase {
       "org.lockss.log.targets=" +
       "org.lockss.test.MockLogTarget;" +
       "org.lockss.util.SyslogTarget\n";
-    TestConfiguration.setCurrentConfigFromString(s);
+    ConfigurationUtil.setCurrentConfigFromString(s);
     List tgts = Logger.getTargets();
     List tgtClasses = classesOf(tgts);
     assertIsomorphic(ListUtil.list(MockLogTarget.class,
@@ -222,14 +222,14 @@ public class TestLogger extends LockssTestCase {
     String s =
       "org.lockss.log." + logName + ".level=" + Logger.nameOf(level) + "\n" +
       "org.lockss.log.default.level=critical\n";
-    TestConfiguration.setCurrentConfigFromString(s);
+    ConfigurationUtil.setCurrentConfigFromString(s);
   }
 
   private void configLogLevelOnly(String logName, int level)
       throws IOException {
     String s =
       "org.lockss.log." + logName + ".level=" + Logger.nameOf(level) + "\n";
-    TestConfiguration.setCurrentConfigFromString(s);
+    ConfigurationUtil.setCurrentConfigFromString(s);
   }
 
   public void testGetConfiguredLevel()

@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericFileCachedUrlSet.java,v 1.39 2003-06-25 21:19:58 eaalto Exp $
+ * $Id: TestGenericFileCachedUrlSet.java,v 1.40 2003-07-14 06:46:39 tlipkis Exp $
  */
 
 /*
@@ -64,7 +64,7 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
         tempDirPath +"\n";
     String s2 = HistoryRepositoryImpl.PARAM_HISTORY_LOCATION + "=" +
         tempDirPath;
-    TestConfiguration.setCurrentConfigFromString(s + s2);
+    ConfigurationUtil.setCurrentConfigFromString(s + s2);
 
     theDaemon = new MockLockssDaemon();
     theDaemon.getHistoryRepository().startService();

@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericFileCachedUrl.java,v 1.13 2003-06-25 21:19:58 eaalto Exp $
+ * $Id: TestGenericFileCachedUrl.java,v 1.14 2003-07-14 06:46:39 tlipkis Exp $
  */
 
 /*
@@ -150,7 +150,7 @@ public class TestGenericFileCachedUrl extends LockssTestCase {
     String config = "org.lockss.genericFileCachedUrl.filterHashStream=true";
     Properties props = new Properties();
     props.setProperty("content-type", "text/html");
-    TestConfiguration.setCurrentConfigFromString(config);
+    ConfigurationUtil.setCurrentConfigFromString(config);
     createLeaf("http://www.example.com/testDir/leaf1", "<test stream>", props);
 
     CachedUrl url = cus.makeCachedUrl("http://www.example.com/testDir/leaf1");
@@ -164,7 +164,7 @@ public class TestGenericFileCachedUrl extends LockssTestCase {
     String config = "org.lockss.genericFileCachedUrl.filterHashStream=true";
     Properties props = new Properties();
     props.setProperty("content-type", "blah");
-    TestConfiguration.setCurrentConfigFromString(config);
+    ConfigurationUtil.setCurrentConfigFromString(config);
     createLeaf("http://www.example.com/testDir/leaf1", "<test stream>", props);
 
     CachedUrl url = cus.makeCachedUrl("http://www.example.com/testDir/leaf1");
@@ -176,7 +176,7 @@ public class TestGenericFileCachedUrl extends LockssTestCase {
 
   public void testOpenForHashingWontFilterIfConfigedNotTo() throws Exception {
     String config = "org.lockss.genericFileCachedUrl.filterHashStream=false";
-    TestConfiguration.setCurrentConfigFromString(config);
+    ConfigurationUtil.setCurrentConfigFromString(config);
     createLeaf("http://www.example.com/testDir/leaf1", "<test stream>", null);
 
     CachedUrl url = cus.makeCachedUrl("http://www.example.com/testDir/leaf1");
