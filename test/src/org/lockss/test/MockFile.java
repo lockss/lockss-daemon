@@ -1,5 +1,5 @@
 /*
- * $Id: MockFile.java,v 1.2 2003-10-07 22:23:33 troberts Exp $
+ * $Id: MockFile.java,v 1.3 2003-10-10 22:15:57 troberts Exp $
  */
 
 /*
@@ -31,15 +31,19 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.test;
+import junit.framework.Assert;
 import java.io.*;
 import java.net.URL;
 import java.util.*;
+
 
 public class MockFile extends File {
 
   String path;
   boolean isDirectory = false;
   boolean isFile = false;
+  boolean exists = false;
+  boolean mkdirCalled = false;
   List children = new ArrayList();
 
   public MockFile(String path) {
@@ -96,7 +100,11 @@ public class MockFile extends File {
   }
 
   public boolean exists() {
-    throw new UnsupportedOperationException("Not implemented");
+    return exists;
+  }
+
+  public void setExists(boolean exists) {
+    this.exists = exists;
   }
 
   public boolean isDirectory() {
@@ -168,7 +176,14 @@ public class MockFile extends File {
   }
 
   public boolean mkdir() {
-    throw new UnsupportedOperationException("Not implemented");
+    mkdirCalled = true;
+    return true;
+  }
+
+  public void assertMkdirCalled() {
+    if (!mkdirCalled) {
+      Assert.fail("mkdir not called");
+    }
   }
 
   public boolean mkdirs() {
