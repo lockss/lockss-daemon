@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.2 2002-09-19 22:18:34 tal Exp $
+ * $Id: LockssTestCase.java,v 1.3 2002-10-06 21:22:36 tal Exp $
  */
 
 /*
@@ -42,6 +42,24 @@ public class LockssTestCase extends TestCase {
     super(msg);
   }
 
+  /** Asserts that two Maps are equal (contain the same mappings).
+   * If they are not an AssertionFailedError is thrown. */
+  static public void assertEqual(String message, Map expected, Map actual) {
+    if (expected == null && actual == null) {
+      return;
+    }
+    if (expected != null && expected.equals(actual)) {
+      return;
+    }
+    failNotEquals(message, expected, actual);
+  }
+  
+  /** Asserts that two Maps are equal (contain the same mappings).
+   * If they are not an AssertionFailedError is thrown. */
+  static public void assertEqual(Map expected, Map actual) {
+    assertEqual(null, expected, actual);
+  }
+
   /** Asserts that two collections are isomorphic. If they are not
    * an AssertionFailedError is thrown. */
   static public void assertIsomorphic(String message,
@@ -49,7 +67,7 @@ public class LockssTestCase extends TestCase {
     if (CollectionUtil.isIsomorphic(expected, actual)) {
       return;
     }
-	failNotIsomorphic(message, expected, actual);
+	failNotEquals(message, expected, actual);
   }
   
   /** Asserts that two collections are isomorphic. If they are not
@@ -65,7 +83,7 @@ public class LockssTestCase extends TestCase {
     if (CollectionUtil.isIsomorphic(expected, actual)) {
       return;
     }
-	failNotIsomorphic(message, expected, actual);
+	failNotEquals(message, expected, actual);
   }
   
   /** Asserts that the array is isomorphic with the collection. If not
@@ -81,7 +99,7 @@ public class LockssTestCase extends TestCase {
     if (CollectionUtil.isIsomorphic(new ArrayIterator(expected), actual)) {
       return;
     }
-	failNotIsomorphic(message, expected, actual);
+	failNotEquals(message, expected, actual);
   }
   
   /** Asserts that the array is isomorphic with the collection behind the
@@ -91,7 +109,7 @@ public class LockssTestCase extends TestCase {
   }
 
   // tk do a better job of printing collections
-  static private void failNotIsomorphic(String message,
+  static private void failNotEquals(String message,
 					Object expected, Object actual) {
     String formatted= "";
     if (message != null)

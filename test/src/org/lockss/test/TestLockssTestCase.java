@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssTestCase.java,v 1.2 2002-09-19 22:18:34 tal Exp $
+ * $Id: TestLockssTestCase.java,v 1.3 2002-10-06 21:22:36 tal Exp $
  */
 
 /*
@@ -72,5 +72,15 @@ public class TestLockssTestCase extends LockssTestCase {
     assertIsomorphic(a1, v1);
     assertIsomorphic(a1, v1.iterator());
     assertIsomorphic(v1, v1);
+  }
+
+  public void testMap() {
+    Map m1 = new HashMap();
+    Map m2 = new Hashtable();
+    assertEquals(m1, m2);
+    m1.put("1", "one");
+    m2.put("1", "one");
+    assertEquals(m1, m2);
+    assertEquals(m2, m1);
   }
 }
