@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.4 2003-02-07 19:15:48 aalto Exp $
+ * $Id: CrawlManagerImpl.java,v 1.5 2003-02-10 23:46:00 troberts Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import org.lockss.daemon.*;
 import org.lockss.state.NodeState;
 import org.lockss.util.*;
 import org.lockss.app.*;
+import org.lockss.state.*;
 
 
 /**
@@ -110,13 +111,13 @@ public class CrawlManagerImpl implements CrawlManager, LockssManager {
     crawlThread.start();
   }
 
-  public boolean canTreeWalkStart(ArchivalUnit au,
+  public boolean canTreeWalkStart(ArchivalUnit au, AuState aus,
 				  CrawlManager.Callback cb, Object cookie){
     if (au == null) {
       throw new IllegalArgumentException("Called with null AU");
     }
 
-    if (shouldCrawlForNewContent()) { //XXX get from au
+    if (au.shouldCrawlForNewContent(aus)) { //XXX get from au
       scheduleNewContentCrawl(au, cb, cookie);
       return false;
     }
@@ -126,10 +127,6 @@ public class CrawlManagerImpl implements CrawlManager, LockssManager {
   public boolean shouldRecrawl(ArchivalUnit au, NodeState ns) {
     //XXX implement
     return false;
-  }
-
-  private boolean shouldCrawlForNewContent() {
-    return true;
   }
 
   private void scheduleNewContentCrawl(ArchivalUnit au,
@@ -150,16 +147,6 @@ public class CrawlManagerImpl implements CrawlManager, LockssManager {
       }
     }
   }
-
-//   public void addNewContentCrawlCallback(CrawlCallback cb,
-// 					 ArchivalUnit au, Object cookie) {
-//     Vector callbacks = (Vector) newContentCallbacks.get(au);
-//     if (callbacks == null) {
-//       callbacks = new Vector();
-//       newContentCallbacks.put(au, callbacks);
-//     }
-//     callbacks.add(cb);
-//   }
 
   public class CrawlThread extends Thread {
     private ArchivalUnit au;
