@@ -1,5 +1,5 @@
 /*
- * $Id: CharRing.java,v 1.3 2003-06-13 00:34:28 troberts Exp $
+ * $Id: CharRing.java,v 1.4 2003-06-16 21:48:00 troberts Exp $
  */
 
 /*
@@ -38,15 +38,17 @@ public class CharRing {
   char chars[];
   int idx = -1;
   int head = 0;
-  int tail = -1;
+  int tail = 0;
   int size = 0;
+  int capacity = 0;
 
 
-  public CharRing(int size) {
-    if (size <= 0) {
-      throw new IllegalArgumentException("Bad size");
+  public CharRing(int capacity) {
+    if (capacity <= 0) {
+      throw new IllegalArgumentException("Bad capacity");
     }
-    chars = new char[size];
+    this.capacity = capacity;
+    chars = new char[this.capacity];
   }
 
   /**
@@ -62,7 +64,7 @@ public class CharRing {
    * @return the number of chars this ring can hold
    */
   public int capacity() {
-    return chars.length;
+    return capacity;
   }
 
   /**
@@ -71,16 +73,12 @@ public class CharRing {
    * @return nth char from this ring
    */
   public char get(int n) {
-    if (n >= chars.length) {
-      throw new BadIndexException("Tried to get the "+n
-				  +" element in a ring of length "
-				  +chars.length);
-    } else if (n >= size) {
-      throw new BadIndexException("Tried to get the "+n
-				  +" element in a ring with "
-				  +size+" elements");
+    if (n >= size) {
+      throw new IndexOutOfBoundsException("Tried to get the "+n
+					  +" element in a ring with "
+					  +size+" elements");
     }
-    return chars[incrementIndex(head, n)];
+    return chars[calcRealIndex(n)];
   }
 
   /**
@@ -88,14 +86,14 @@ public class CharRing {
    * @param kar char to add to ring
    */
   public void add(char kar) throws RingFullException {
-    if (size == chars.length) {
+    if (size == capacity) {
       throw new RingFullException("Array is full");
     }
-    incrementTail(1);
     if (logger.isDebug2()) {
       logger.debug2("Adding "+kar+" to "+toString());
     }
     chars[tail] = kar;
+    incrementTail(1);
     size++;
   }
 
@@ -119,17 +117,25 @@ public class CharRing {
    */
   public void add(char newChars[], int pos, int length)
       throws RingFullException {
-    if (length + size > chars.length) {
+    if (pos < 0) {
+      throw new IndexOutOfBoundsException("Called with negative position: "
+					  +pos);
+    } else if (length < 0) {
+      throw new IndexOutOfBoundsException("Called with negative length: "
+					  +length);
+    } else if (length + size > capacity) {
       throw new RingFullException("Array is full");
     }
-    incrementTail(1);
-    int addToEnd = Math.min(length, chars.length - tail);
+    //number of chars to add to the end of array
+    int addToEnd = length < (capacity - tail) ? length : (capacity - tail);
+
+    //number of chars to add to the beginning of array
     int addToStart = length - addToEnd;
 
     System.arraycopy(newChars, pos, chars, tail, addToEnd);
     System.arraycopy(newChars, pos+addToEnd, chars, 0, addToStart);
 
-    incrementTail(newChars.length-1);
+    incrementTail(newChars.length);
     size += length;
   }
 
@@ -139,7 +145,7 @@ public class CharRing {
    */
   public char remove() {
     if (size == 0) {
-      throw new BadIndexException("remove() called on empty CharRing");
+      throw new IndexOutOfBoundsException("remove() called on empty CharRing");
     }
     if (logger.isDebug2()) {
       logger.debug2("Removing head from "+toString());
@@ -172,14 +178,26 @@ public class CharRing {
    * @return number of chars removed from the ring
    */ 
   public int remove(char returnChars[], int pos, int len) {
-  //XXX should throw if trying to remove too many?
-    int numToReturn = Math.min(len, size);
+    if (pos < 0) {
+      throw new IndexOutOfBoundsException("Called with negative postion: "
+					  +pos);
+    } else if (len < 0) {
+      throw new IndexOutOfBoundsException("Called with negative length: "
+					  +len);
+    }
+
+    int numToReturn = len < size ? len : size;
     if (numToReturn == 0) {
       return 0;
     }
     
-    int chunk1 = Math.min(numToReturn, chars.length-head);
+    //number of chars to remove from end of array
+    int chunk1 =
+      numToReturn < (capacity - head) ? numToReturn : (capacity - head);
+
+    //number of chars to remove from start of array
     int chunk2 = numToReturn - chunk1;
+
     System.arraycopy(chars, head, returnChars, pos, chunk1);
     System.arraycopy(chars, 0, returnChars, pos + chunk1, chunk2);
 
@@ -188,9 +206,12 @@ public class CharRing {
     return numToReturn;
   }
 
+  private int calcRealIndex(int idx) {
+    return (incrementIndex(head, idx));
+  }
+
   private int incrementIndex(int idx, int amt) {
-    idx += amt;
-    return idx % chars.length;
+    return (idx + amt) % capacity;
   }
 
   private void incrementHead(int amt) {
@@ -207,9 +228,13 @@ public class CharRing {
    * @param num number of chars to clear
    */
   public void clear(int num) {
+    if (num < 0) {
+      throw new IndexOutOfBoundsException("Tried to clear a negative "
+					  +"number: "+num);
+    }
     if (num > size) {
-      throw new BadIndexException("Tried to clear "+num
-				  +" chars, but we only have "+size);
+      throw new IndexOutOfBoundsException("Tried to clear "+num
+					  +" chars, but we only have "+size);
     }
     incrementHead(num);
     size -= num;
@@ -217,10 +242,8 @@ public class CharRing {
 
   public String toString() {
     StringBuffer sb = new StringBuffer(size);
-    int curIdx = head;
     for (int ix=0; ix<size; ix++) {
-      sb.append(chars[curIdx]);
-      curIdx = incrementIndex(curIdx, 1);
+      sb.append(chars[calcRealIndex(ix)]);
     } 
     return sb.toString();
   }
@@ -230,11 +253,4 @@ public class CharRing {
       super(msg);
     }
   }
-
-  public static class BadIndexException extends RuntimeException {
-    public BadIndexException(String msg) {
-      super(msg);
-    }
-  }
-
 }
