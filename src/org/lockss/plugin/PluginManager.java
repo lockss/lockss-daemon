@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.116 2004-10-13 23:07:17 clairegriffin Exp $
+ * $Id: PluginManager.java,v 1.117 2004-10-18 06:14:09 smorabito Exp $
  */
 
 /*
@@ -150,6 +150,9 @@ public class PluginManager
   private Map cuNodeVersionMap = Collections.synchronizedMap(new HashMap());
   private Map classloaderMap = Collections.synchronizedMap(new HashMap());
   private Set inactiveAuIds = Collections.synchronizedSet(new HashSet());
+
+  // A set of all aus sorted by title.  The UI relies on this behavior.
+  private Set auSet = Collections.synchronizedSet(new TreeSet(auComparator));
 
   // Map of plugin keys to loadable plugin JAR CachedUrls, used by
   // the loadable plugin status accessor.
@@ -543,6 +546,7 @@ public class PluginManager
     // remove from map first, so no new activity can start (poll messages,
     // RemoteAPI, etc.)
     auMap.remove(auid);
+    auSet.remove(au);
 
     theDaemon.getPollManager().cancelAuPolls(au);
     theDaemon.getCrawlManager().cancelAuCrawls(au);
@@ -562,6 +566,7 @@ public class PluginManager
   protected void putAuInMap(ArchivalUnit au) {
     log.debug("putAuMap(" + au.getAuId() +", " + au);
     auMap.put(au.getAuId(), au);
+    auSet.add(au);
   }
 
   public ArchivalUnit getAuFromId(String auId) {
@@ -1002,11 +1007,14 @@ public class PluginManager
   }
 
   /**
-   * Return a list of all configured ArchivalUnits.
+   * Return a list of all configured ArchivalUnits.  The UI relies on
+   * this being sorted by au title, and so we return a copy of auSet,
+   * which is kept in the right order.
+   *
    * @return the List of aus
    */
   public List getAllAus() {
-    return new ArrayList(auMap.values());
+    return new ArrayList(auSet);
   }
 
   public Collection getInactiveAuIds() {
@@ -1509,36 +1517,21 @@ public class PluginManager
 
 		if (pluginMap.containsKey(key)) {
 		  // Plugin already exists in the global plugin map.
-		  // If it has no currently configured AUs and this
-		  // version is newer, replace it.  Otherwise, skip it
-		  // and go on to the next plugin.
+		  // Replace it with a new version if one is available.
 		  log.debug2("Plugin " + key + " is already in global pluginMap.");
-
-		  if (plugin.getAllAus().size() > 0) {
+		  Plugin otherPlugin = getPlugin(key);
+		  PluginVersion otherVer =
+		    new PluginVersion(otherPlugin.getVersion());
+		  if (version.toLong() > otherVer.toLong()) {
 		    if (log.isDebug2()) {
-		      log.debug2("Plugin " + plugin.getPluginId() +
-				 ": Already being used by " +
-				 "configured AUs.  Skipping.");
+		      log.debug2("Existing plugin " + plugin.getPluginId() + 
+				 ": Newer version " + version + " found.");
 		    }
-		    continue; // skip plugin
+		    tmpMap.put(key, info);
 		  } else {
-		    Plugin otherPlugin = (Plugin)pluginMap.get(key);
-		    PluginVersion otherVer =
-		      new PluginVersion(otherPlugin.getVersion());
-		    if (version.toLong() > otherVer.toLong()) {
-		      if (log.isDebug2()) {
-			log.debug2("No AUs currently configured for plugin " +
-				   plugin.getPluginId() + " version " +
-				   otherVer + ", replacing with newer version " +
-				   version);
-		      }
-		      tmpMap.put(key, info);
-		    } else {
-		      if (log.isDebug2()) {
-			log.debug2("No AUs currently configured for plugin " +
-				   plugin.getPluginId() + ", but loadable plugin " +
-				   "version is not newer.  Skipping.");
-		      }
+		    if (log.isDebug2()) {
+		      log.debug2("Existing plugin " + plugin.getPluginId() +
+				 ": No newer version found.");
 		    }
 		  }
 		} else if (!tmpMap.containsKey(key)) {
@@ -1586,7 +1579,6 @@ public class PluginManager
     tmpMap.clear();
     tmpMap = null;
   }
-
 
   /**
    * CrawlManager callback that is responsible for handling Registry

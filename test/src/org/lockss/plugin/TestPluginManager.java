@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.53 2004-10-13 23:07:19 clairegriffin Exp $
+ * $Id: TestPluginManager.java,v 1.54 2004-10-18 06:14:08 smorabito Exp $
  */
 
 /*
@@ -432,6 +432,27 @@ public class TestPluginManager extends LockssTestCase {
     } catch (Exception e) {
       fail("Deleting AU should not have thrown: " + e);
     }
+  }
+
+  // ensure getAllAus() returns AUs in title sorted order
+  public void testGetAllAus() throws Exception {
+    MockArchivalUnit mau1 = new MockArchivalUnit();
+    MockArchivalUnit mau2 = new MockArchivalUnit();
+    MockArchivalUnit mau3 = new MockArchivalUnit();
+    MockArchivalUnit mau4 = new MockArchivalUnit();
+    MockArchivalUnit mau5 = new MockArchivalUnit();
+    // make sure it sorts by name, not auid
+    mau1.setName("foobarm1"); mau1.setAuId("5");
+    mau2.setName("foom2"); mau2.setAuId("3");
+    mau3.setName("gunt"); mau3.setAuId("4");
+    mau4.setName("m4"); mau4.setAuId("1");
+    mau5.setName("zzyzx"); mau5.setAuId("2");
+    mgr.putAuInMap(mau5);
+    mgr.putAuInMap(mau4);
+    mgr.putAuInMap(mau2);
+    mgr.putAuInMap(mau3);
+    mgr.putAuInMap(mau1);
+    assertEquals(ListUtil.list(mau1, mau2, mau3, mau4, mau5), mgr.getAllAus());
   }
 
   static class MyMockLockssDaemon extends MockLockssDaemon {
