@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.27 2003-03-11 19:53:06 aalto Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.28 2003-03-28 23:27:21 aalto Exp $
  */
 
 /*
@@ -42,6 +42,7 @@ import org.lockss.plugin.*;
 import org.lockss.util.*;
 import org.apache.commons.collections.LRUMap;
 import org.apache.commons.collections.ReferenceMap;
+import java.net.MalformedURLException;
 
 /**
  * LockssRepository is used to organize the urls being cached.
@@ -276,4 +277,13 @@ public class LockssRepositoryImpl implements LockssRepository {
   int getRefHits() { return refHits; }
   int getRefMisses() { return refMisses; }
 
+  void consistencyCheck(RepositoryNodeImpl node) {
+    logger.warning("Inconsistent node state found; node content deactivated.");
+    if (!node.cacheLocationFile.exists()) {
+      node.cacheLocationFile.mkdirs();
+    }
+    // manually deactivate
+    node.currentVersion = RepositoryNodeImpl.INACTIVE_VERSION;
+    node.curProps = null;
+  }
 }
