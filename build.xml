@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.91 2004-07-09 16:45:04 clairegriffin Exp $
+ $Id: build.xml,v 1.92 2004-07-10 08:35:42 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -455,6 +455,7 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
        <fileset dir="${src}" >
           <include name="**/*.xml"/>   <!-- mapping files in various dirs -->
           <include name="**/*.props"/>
+          <include name="**/*.keystore"/>
           <include name="commons-logging.properties"/>
           <include name="org/lockss/htdocs/**/*"/>
        </fileset>
