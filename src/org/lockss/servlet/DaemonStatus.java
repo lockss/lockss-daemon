@@ -1,5 +1,5 @@
 // ========================================================================
-// $Id: DaemonStatus.java,v 1.13 2003-04-04 08:40:33 tal Exp $
+// $Id: DaemonStatus.java,v 1.14 2003-04-05 00:57:57 tal Exp $
 // ========================================================================
 
 /*
@@ -69,7 +69,7 @@ public class DaemonStatus extends LockssServlet {
   }
 
   /** Handle a request */
-  public void lockssHandle() throws IOException {
+  public void lockssHandleRequest() throws IOException {
     Page page = null;
     Date now = new Date();
 
@@ -157,13 +157,16 @@ public class DaemonStatus extends LockssServlet {
 
     Table table = null;
 
+    // convert list of ColumnDescriptors to array of ColumnDescriptors
     ColumnDescriptor cds[] =
       (ColumnDescriptor [])colList.toArray(new ColumnDescriptor[0]);
     int cols = cds.length;
-    Iterator rowIter = rowList.iterator();
-    if (true || rowIter.hasNext()) {
+    if (true || !rowList.isEmpty()) {
       // if table not empty, output column headings
 //       table = new Table(0, "CELLSPACING=2 CELLPADDING=0 WIDTH=\"100%\"");
+
+      // Make the table.  Make a narrow empty column between real columns,
+      // for spacing.  Resulting table will have 2*cols-1 columns
       table = new Table(0, "ALIGN=CENTER CELLSPACING=2 CELLPADDING=0");
       if (html) {
 	String title = title0 + addFootnote(titleFoot);
@@ -171,23 +174,7 @@ public class DaemonStatus extends LockssServlet {
 	table.newRow();
 	table.addHeading(title, "ALIGN=CENTER COLSPAN=" + (cols * 2 - 1));
 	table.newRow();
-	java.util.List summary = statTable.getSummaryInfo();
-	if (summary != null && !summary.isEmpty()) {
-	  for (Iterator iter = summary.iterator(); iter.hasNext(); ) {
-	    StatusTable.SummaryInfo sInfo = 
-	      (StatusTable.SummaryInfo)iter.next();
-	    table.newRow();
-	    StringBuffer sb = new StringBuffer();
-	    sb.append("<b>");
-	    sb.append(sInfo.getTitle());
-	    sb.append("</b>: ");
-	    sb.append(dispString(sInfo.getValue(), sInfo.getType()));
-	    table.newCell("COLSPAN=" + (cols * 2 - 1));
-	    table.add(sb.toString());
-
-	  }
-	  table.newRow();
-	}
+	addSummaryInfo(table, statTable, cols);
 
 	// output column headings
 	for (int ix = 0; ix < cols; ix++) {
@@ -206,11 +193,12 @@ public class DaemonStatus extends LockssServlet {
 	if (tableKey != null) {
 	  wrtr.println("key=" + tableKey);
 	}	  
+	// tk write summary info
       }
 
     }
     // output rows
-    while (rowIter.hasNext()) {
+    for (Iterator rowIter = rowList.iterator(); rowIter.hasNext(); ) {
       Map rowMap = (Map)rowIter.next();
       if (html) {
 	table.newRow();
@@ -219,16 +207,18 @@ public class DaemonStatus extends LockssServlet {
 	  Object val = rowMap.get(cd.getColumnName());
 
 	  table.newCell("align=" + getColAlignment(cd));
-	  table.add(dispString(rowMap.get(cd.getColumnName()), cd.getType()));
+	  table.add(getDisplayString(rowMap.get(cd.getColumnName()),
+				     cd.getType()));
 	  if (ix < (cols - 1)) {
 	    table.newCell();	// empty column for spacing
 	  }
 	}
       } else {
-	Iterator iter = rowMap.keySet().iterator();
-	while (iter.hasNext()) {
+	for (Iterator iter = rowMap.keySet().iterator(); iter.hasNext(); ) {
 	  String key = (String)iter.next();
-	  wrtr.print(key + "=" + rowMap.get(key).toString());
+	  Object val = rowMap.get(key);
+	  String valStr = StatusTable.getActualValue(val).toString();
+	  wrtr.print(key + "=" + valStr);
 	  if (iter.hasNext()) {
 	    wrtr.print(",");
 	  } else {
@@ -243,6 +233,25 @@ public class DaemonStatus extends LockssServlet {
       String heading = getHeading();
       // put table name in page title so appears in browser title & tabs
       page.title("LOCKSS: " + title0 + " - " + heading);
+    }
+  }
+
+  private void addSummaryInfo(Table table, StatusTable statTable, int cols) {
+    java.util.List summary = statTable.getSummaryInfo();
+    if (summary != null && !summary.isEmpty()) {
+      for (Iterator iter = summary.iterator(); iter.hasNext(); ) {
+	StatusTable.SummaryInfo sInfo = 
+	  (StatusTable.SummaryInfo)iter.next();
+	table.newRow();
+	StringBuffer sb = new StringBuffer();
+	sb.append("<b>");
+	sb.append(sInfo.getTitle());
+	sb.append("</b>: ");
+	sb.append(getDisplayString(sInfo.getValue(), sInfo.getType()));
+	table.newCell("COLSPAN=" + (cols * 2 - 1));
+	table.add(sb.toString());
+      }
+      table.newRow();
     }
   }
 
@@ -263,7 +272,7 @@ public class DaemonStatus extends LockssServlet {
 
 
   // turn References into html links
-  private String dispString(Object val, int type) {
+  private String getDisplayString(Object val, int type) {
     if (val instanceof StatusTable.Reference) {
       StatusTable.Reference ref = (StatusTable.Reference)val;
       StringBuffer sb = new StringBuffer();
@@ -274,30 +283,33 @@ public class DaemonStatus extends LockssServlet {
 	sb.append("&key=");
 	sb.append(urlEncode(key));
       }
-      return srvLink(myServletDescr(), dispString1(ref.getValue(), type),
+      return srvLink(myServletDescr(), getDisplayString1(ref.getValue(), type),
 		     sb.toString());
     } else {
-      return dispString1(val, type);
+      return getDisplayString1(val, type);
     }
   }
 
   // add display attributes from a DisplayedValue
-  private String dispString1(Object val, int type) {
+  private String getDisplayString1(Object val, int type) {
     if (val instanceof StatusTable.DisplayedValue) {
       StatusTable.DisplayedValue aval = (StatusTable.DisplayedValue)val;
-      String str = dispString2(aval.getValue(), type);
+      String str = getDisplayString1(aval.getValue(), type);
       String color = aval.getColor();
       if (color != null) {
 	str = "<font color=" + color + ">" + str + "</font>";
       }
+      if (aval.getBold()) {
+	str = "<b>" + str + "</b>";
+      }
       return str;
     } else {
-      return dispString2(val, type);
+      return getDisplayString2(val, type);
     }
   }
 
   // turn a value into a display string
-  private String dispString2(Object val, int type) {
+  private String getDisplayString2(Object val, int type) {
     if (val == null) {
       return "";
     }
@@ -317,6 +329,8 @@ public class DaemonStatus extends LockssServlet {
 	  d = new Date(((Number)val).longValue());
 	} else if (val instanceof Date) {
 	  d = (Date)val;
+	} else if (val instanceof Deadline) {
+	  d = ((Deadline)val).getExpiration();
 	} else {
 	  return val.toString();
 	}
