@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedContentGenerator.java,v 1.15 2004-11-18 05:20:53 smorabito Exp $
+ * $Id: SimulatedContentGenerator.java,v 1.16 2005-02-21 03:10:39 tlipkis Exp $
  */
 
 /*
@@ -50,17 +50,33 @@ import org.lockss.crawler.*;
 
 public class SimulatedContentGenerator {
   /**
-   * Content of a generated text or html file.  Values are substituted for
+   * Content of a generated text file.  Values are substituted for
    * the %Xs.
    */
-  public static final String NORMAL_FILE_CONTENT =
+  public static final String NORMAL_TXT_FILE_CONTENT =
     "This is file %1, depth %2, branch %3.";
   /**
-   * Content of a generated text or html file with 'abnormal' status.
+   * Content of a generated text file with 'abnormal' status.
    * Values are substituted for the %Xs.
    */
-  public static final String ABNORMAL_FILE_CONTENT =
+  public static final String ABNORMAL_TXT_FILE_CONTENT =
     "This is abnormal file %1, depth %2, branch %3.";
+
+  /**
+   * Content of a generated html file.  Values are substituted for
+   * the %Xs.
+   */
+  public static final String NORMAL_HTML_FILE_CONTENT =
+    "This is file %1, depth %2, branch %3.<br>" +
+    "<!-- comment -->    Citation String   foobar<br>" +
+    "<script>(defun fact (n) (cond ((= n 0) 1) (t (fact (sub1 n)))))</script>";
+
+  /**
+   * Content of a generated html file with 'abnormal' status.
+   * Values are substituted for the %Xs.
+   */
+  public static final String ABNORMAL_HTML_FILE_CONTENT =
+    ABNORMAL_TXT_FILE_CONTENT;
 
   /**
    * Artificial content of a directory, if required.
@@ -292,6 +308,11 @@ public class SimulatedContentGenerator {
   public String getContentRoot() { return contentRoot; }
 
   /**
+   * @return max file name length
+   */
+  public int getMaxFilenameLength() { return maxFilenameLength; }
+
+  /**
    * Tests whether the root of the generated tree exists.
    * @return content tree exists
    */
@@ -435,7 +456,7 @@ public class SimulatedContentGenerator {
       FileOutputStream fos = new FileOutputStream(file);
       PrintWriter pw = new PrintWriter(fos);
       String file_content =
-	getFileContent(fileNum, depth, branchNum, isAbnormal);
+	getTxtContent(fileNum, depth, branchNum, isAbnormal);
       pw.print(file_content);
       pw.flush();
       pw.close();
@@ -519,17 +540,35 @@ public class SimulatedContentGenerator {
   }
 
   /**
-   * Generates standard text content for a file (text or html types only).
+   * Generates standard text content for a file (text type only).
    * @param fileNum local file number
    * @param depth file depth (0 for root)
    * @param branchNum local branch number (0 for root)
    * @param isAbnormal whether or not to generate abnormal content
    * @return file content
    */
-  public static String getFileContent(int fileNum, int depth,
+  public static String getTxtContent(int fileNum, int depth,
+				     int branchNum, boolean isAbnormal) {
+    String file_content = NORMAL_TXT_FILE_CONTENT;
+    if (isAbnormal) file_content = ABNORMAL_TXT_FILE_CONTENT;
+    file_content = StringUtil.replaceString(file_content, "%1", ""+fileNum);
+    file_content = StringUtil.replaceString(file_content, "%2", ""+depth);
+    file_content = StringUtil.replaceString(file_content, "%3", ""+branchNum);
+    return file_content;
+  }
+
+  /**
+   * Generates standard content for an html file.
+   * @param fileNum local file number
+   * @param depth file depth (0 for root)
+   * @param branchNum local branch number (0 for root)
+   * @param isAbnormal whether or not to generate abnormal content
+   * @return file content
+   */
+  public static String getHtmlContent(int fileNum, int depth,
 				      int branchNum, boolean isAbnormal) {
-    String file_content = NORMAL_FILE_CONTENT;
-    if (isAbnormal) file_content = ABNORMAL_FILE_CONTENT;
+    String file_content = NORMAL_HTML_FILE_CONTENT;
+    if (isAbnormal) file_content = ABNORMAL_HTML_FILE_CONTENT;
     file_content = StringUtil.replaceString(file_content, "%1", ""+fileNum);
     file_content = StringUtil.replaceString(file_content, "%2", ""+depth);
     file_content = StringUtil.replaceString(file_content, "%3", ""+branchNum);
@@ -551,7 +590,7 @@ public class SimulatedContentGenerator {
 					  boolean isAbnormal) {
     String file_content =
       "<HTML><HEAD><TITLE>" + filename + "</TITLE></HEAD><BODY>\n";
-    file_content += getFileContent(fileNum, depth, branchNum, isAbnormal);
+    file_content += getHtmlContent(fileNum, depth, branchNum, isAbnormal);
     file_content += "\n</BODY></HTML>";
     return file_content;
   }

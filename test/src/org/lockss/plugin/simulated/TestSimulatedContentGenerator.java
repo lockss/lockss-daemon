@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimulatedContentGenerator.java,v 1.21 2004-11-18 05:20:53 smorabito Exp $
+ * $Id: TestSimulatedContentGenerator.java,v 1.22 2005-02-21 03:10:39 tlipkis Exp $
  */
 
 /*
@@ -127,23 +127,23 @@ public class TestSimulatedContentGenerator extends LockssTestCase {
 
   public void testGetHtmlFileContent() {
     String expectedStr = "<HTML><HEAD><TITLE>testfile</TITLE></HEAD><BODY>\n";
-    // assumes the value of NORMAL_FILE_CONTENT is unchanged
-    expectedStr += "This is file 1, depth 2, branch 3.";
+    expectedStr += SimulatedContentGenerator.NORMAL_HTML_FILE_CONTENT;
     expectedStr += "\n</BODY></HTML>";
+    expectedStr = StringUtil.replaceString(expectedStr, "%", "");
     assertEquals(expectedStr,
                  SimulatedContentGenerator.getHtmlFileContent("testfile",
                  1, 2, 3, false));
   }
 
   public void testGetFileContent() {
-    // assumes the value of NORMAL_FILE_CONTENT is unchanged
+    // assumes the value of NORMAL_TXT_FILE_CONTENT is unchanged
     String expectedStr = "This is file 1, depth 2, branch 3.";
     assertEquals(expectedStr,
-                 SimulatedContentGenerator.getFileContent(
+                 SimulatedContentGenerator.getTxtContent(
                  1, 2, 3, false));
-    // assumes the value of ABNORMAL_FILE_CONTENT is unchanged
+    // assumes the value of ABNORMAL_TXT_FILE_CONTENT is unchanged
     expectedStr = "This is abnormal file 3, depth 1, branch 2.";
-    assertEquals(expectedStr, SimulatedContentGenerator.getFileContent(
+    assertEquals(expectedStr, SimulatedContentGenerator.getTxtContent(
         3, 1, 2, true));
   }
   public void testGetFileName() {
@@ -246,7 +246,7 @@ public class TestSimulatedContentGenerator extends LockssTestCase {
     File child = new File(childName);
     assertTrue("File not found.", child.exists() && !child.isDirectory());
     String content = getFileContent(child);
-    String expectedContent = SimulatedContentGenerator.getFileContent(1, 0, 0, false);
+    String expectedContent = SimulatedContentGenerator.getTxtContent(1, 0, 0, false);
     assertEquals("content incorrect.", expectedContent, content);
   }
 
@@ -293,7 +293,7 @@ public class TestSimulatedContentGenerator extends LockssTestCase {
     assertTrue("Depth 2 file not found.",
                depth2file.exists() && !depth2file.isDirectory());
     String content = getFileContent(depth2file);
-    String expectedContent = SimulatedContentGenerator.getFileContent(1, 2, 1, false);
+    String expectedContent = SimulatedContentGenerator.getTxtContent(1, 2, 1, false);
     assertTrue("content incorrect.", content.equals(expectedContent));
     depth2Name = scgen.getContentRoot() + File.separator +
         SimulatedContentGenerator.getDirectoryName(2) + File.separator +
@@ -303,7 +303,7 @@ public class TestSimulatedContentGenerator extends LockssTestCase {
     assertTrue("Depth 2 file not found.",
                depth2file.exists() && !depth2file.isDirectory());
     content = getFileContent(depth2file);
-    expectedContent = SimulatedContentGenerator.getFileContent(2, 2, 1, true);
+    expectedContent = SimulatedContentGenerator.getTxtContent(2, 2, 1, true);
     assertEquals("abnormal content incorrect.", expectedContent, content);
   }
 
@@ -415,12 +415,13 @@ public class TestSimulatedContentGenerator extends LockssTestCase {
   }
 
   private String getFileContent(File file) throws Exception {
-    FileInputStream fis = new FileInputStream(file);
-    ByteArrayOutputStream baos = new ByteArrayOutputStream();
-    StreamUtil.copy(fis, baos);
-    fis.close();
-    String content = new String(baos.toByteArray());
-    baos.close();
-    return content;
+    return StringUtil.fromFile(file);
+//     FileInputStream fis = new FileInputStream(file);
+//     ByteArrayOutputStream baos = new ByteArrayOutputStream();
+//     StreamUtil.copy(fis, baos);
+//     fis.close();
+//     String content = new String(baos.toByteArray());
+//     baos.close();
+//     return content;
   }
 }

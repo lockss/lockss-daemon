@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.52 2004-10-20 18:41:14 dcfok Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.53 2005-02-21 03:10:40 tlipkis Exp $
  */
 
 /*
@@ -54,6 +54,8 @@ import org.lockss.plugin.base.*;
  */
 
 public class SimulatedArchivalUnit extends BaseArchivalUnit {
+  static final Logger log = Logger.getLogger("SAU");
+
   public static final String SIMULATED_URL_STEM = "http://www.example.com";
 
   /**
@@ -72,6 +74,7 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
   private SimulatedContentGenerator scgen;
   private String auId = StringUtil.gensym("SimAU_");
   String simRoot; //sim root dir returned by content generator
+  private boolean doFilter = false;
 
   Set toBeDamaged = new HashSet();
 
@@ -102,6 +105,18 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
     return SIMULATED_URL_START;
   }
 
+  /**
+   * Override to provide proper filter rules.
+   * @param mimeType the mime type
+   * @return null, since we don't filter by default
+   */
+  protected FilterRule constructFilterRule(String mimeType) {
+    log.info("constructFilterRule("+mimeType+")");
+    if (doFilter) {
+      return new SimulatedFilterRule();
+    }
+    return super.constructFilterRule(mimeType);
+  }
 
   // public methods
 
@@ -240,7 +255,8 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
           ArchivalUnit.ConfigurationException("Missing configuration value for: "+
                                               SimulatedPlugin.AU_PARAM_ROOT);
       }
-      SimulatedContentGenerator gen = getContentGenerator();
+      SimulatedContentGenerator gen = new SimulatedContentGenerator(fileRoot);
+
       if (config.containsKey(SimulatedPlugin.AU_PARAM_DEPTH)) {
         gen.setTreeDepth(config.getInt(SimulatedPlugin.AU_PARAM_DEPTH));
       }
@@ -273,12 +289,36 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
       }
       if (config.containsKey(SimulatedPlugin.AU_PARAM_BAD_CACHED_FILE_LOC) &&
           config.containsKey(SimulatedPlugin.AU_PARAM_BAD_CACHED_FILE_NUM)) {
-        toBeDamaged.add(scgen.getUrlFromLoc(config.get(
+        toBeDamaged.add(gen.getUrlFromLoc(config.get(
           SimulatedPlugin.AU_PARAM_BAD_CACHED_FILE_LOC),
           config.get(
           SimulatedPlugin.AU_PARAM_BAD_CACHED_FILE_NUM)));
       }
-      resetContentTree();
+      String spec = config.get(SimulatedPlugin.AU_PARAM_HASH_FILTER_SPEC);
+      boolean v = !StringUtil.isNullString(spec);
+      if (v != doFilter) {
+	filterMap.clear();
+	doFilter = v;
+	log.debug("filterMap.clear()");
+      }
+      // if no previous generator, any content-determining parameters have
+      // changed from last time, generate new content
+      log.debug("gen: " + gen);
+
+      if (scgen == null ||
+	  !(gen.getContentRoot().equals(scgen.getContentRoot()) &&
+	    gen.getTreeDepth() == scgen.getTreeDepth() &&
+	    gen.getNumBranches() == scgen.getNumBranches() &&
+	    gen.getNumFilesPerBranch() == scgen.getNumFilesPerBranch() &&
+	    gen.getBinaryFileSize() == scgen.getBinaryFileSize() &&
+	    gen.getMaxFilenameLength() == scgen.getMaxFilenameLength() &&
+	    gen.getFileTypes() == scgen.getFileTypes() &&
+	    gen.oddBranchesHaveContent() == scgen.oddBranchesHaveContent() &&
+	    gen.getAbnormalBranchString().equals(scgen.getAbnormalBranchString()) &&
+	    gen.getAbnormalFileNumber() == scgen.getAbnormalFileNumber())) {
+	scgen = gen;
+	resetContentTree();
+      }
     } catch (Configuration.InvalidParam e) {
       throw new ArchivalUnit.ConfigurationException("Bad config value", e);
     }

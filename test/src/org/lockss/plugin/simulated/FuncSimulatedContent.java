@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSimulatedContent.java,v 1.68 2004-11-18 05:37:06 smorabito Exp $
+ * $Id: FuncSimulatedContent.java,v 1.69 2005-02-21 03:10:40 tlipkis Exp $
  */
 
 /*
@@ -31,6 +31,7 @@ import java.io.*;
 import java.security.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
+import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.repository.*;
 import org.lockss.plugin.*;
@@ -42,6 +43,8 @@ import junit.framework.*;
  * Test class for functional tests on the content.
  */
 public class FuncSimulatedContent extends LockssTestCase {
+  static final Logger log = Logger.getLogger("FuncSimulatedContent");
+
   private SimulatedArchivalUnit sau;
   private MockLockssDaemon theDaemon;
   private String auId;
@@ -121,13 +124,29 @@ public class FuncSimulatedContent extends LockssTestCase {
     super.tearDown();
   }
 
+  void enableFilter(boolean enable)
+      throws ArchivalUnit.ConfigurationException {
+    Configuration auConfig = sau.getConfiguration().copy();
+    // no bad file when playing with filtering
+    auConfig.remove("badCachedFileLoc");
+    auConfig.remove("badCachedFileNum");
+    if (enable) {
+      auConfig.put(SimulatedPlugin.AU_PARAM_HASH_FILTER_SPEC, "true");
+    } else {
+      auConfig.remove(SimulatedPlugin.AU_PARAM_HASH_FILTER_SPEC);
+    }
+    sau.setConfiguration(auConfig);
+  }
+
   public void testSimulatedContent() throws Exception {
     createContent();
     crawlContent();
     checkContent();
+    doDamageRemoveTest();	       // must be before content read again
+    checkFilter();
     hashContent();
 
-    doDamageRemoveTest();
+    // this resets AU's config, do last to avoid messing up toBeDamaged set
   }
 
   public void testDualContentHash() throws Exception {
@@ -152,6 +171,7 @@ public class FuncSimulatedContent extends LockssTestCase {
   }
 
   private void createContent() {
+    log.debug("createContent()");
     SimulatedContentGenerator scgen = sau.getContentGenerator();
     scgen.setFileTypes(SimulatedContentGenerator.FILE_TYPE_HTML +
                        SimulatedContentGenerator.FILE_TYPE_TXT);
@@ -164,6 +184,7 @@ public class FuncSimulatedContent extends LockssTestCase {
   }
 
   private void crawlContent() {
+    log.debug("crawlContent()");
     CrawlSpec spec =
       new SpiderCrawlSpec(SimulatedArchivalUnit.SIMULATED_URL_START, null);
     Crawler crawler = new NewContentCrawler(sau, spec, new MockAuState());
@@ -171,19 +192,60 @@ public class FuncSimulatedContent extends LockssTestCase {
   }
 
   private void checkContent() throws IOException {
+    log.debug("checkContent()");
     checkRoot();
     checkLeaf();
     checkStoredContent();
     checkDepth();
   }
 
+  private void checkFilter() throws Exception {
+    log.debug("checkFilter()");
+    CachedUrl cu = sau.makeCachedUrl(SimulatedArchivalUnit.SIMULATED_URL_ROOT
+				     + "/001file.html");
+    
+    enableFilter(true);
+    InputStream is = cu.openForHashing();
+    String expected =
+      "001file.html This is file 1, depth 0, branch 0. foobar ";
+    assertEquals(expected, StringUtil.fromInputStream(is));
+    is.close();
+    enableFilter(false);
+    cu = sau.makeCachedUrl(SimulatedArchivalUnit.SIMULATED_URL_ROOT
+			   + "/001file.html");
+    is = cu.openForHashing();
+    expected =
+      "<HTML><HEAD><TITLE>001file.html</TITLE></HEAD><BODY>\n" +
+      "This is file 1, depth 0, branch 0.<br><!-- comment -->    " +
+      "Citation String   foobar<br><script>" +
+      "(defun fact (n) (cond ((= n 0) 1) (t (fact (sub1 n)))))</script>\n" +
+      "</BODY></HTML>";
+    assertEquals(expected, StringUtil.fromInputStream(is));
+    is.close();
+  }
+
+  private byte[] fromHex(String hex) {
+    return ByteArray.fromHexString(hex);
+  }
+
   private void hashContent() throws Exception {
+    log.debug("hashContent()");
     measureHashSpeed();
-    hashSet(true);
-    hashSet(false);
+
+    // If any changes are made to the contents or shape of the simulated
+    // content tree, these hash values will have to be changed
+    checkHashSet(true, false,
+		 fromHex("6AB258B4E1FFD9F9B45316B4F54111FF5E5948D2"));
+    checkHashSet(true, true,
+		 fromHex("6AB258B4E1FFD9F9B45316B4F54111FF5E5948D2"));
+    checkHashSet(false, false,
+		 fromHex("7A96BBAFBDABA7FA0D67569661E5F29E9DF29224"));
+    checkHashSet(false, true,
+		 fromHex("AB7CE605921BB36A3DC5CD0563E3CB1E9E278C3F"));
   }
 
   private void checkDepth() {
+    log.debug("checkDepth()");
     String URL_ROOT = SimulatedArchivalUnit.SIMULATED_URL_ROOT;
     assertEquals(0, sau.getLinkDepth(URL_ROOT + "/index.html"));
     assertEquals(0, sau.getLinkDepth(URL_ROOT + "/"));
@@ -194,6 +256,7 @@ public class FuncSimulatedContent extends LockssTestCase {
   }
 
   private void checkRoot() {
+    log.debug("checkRoot()");
     CachedUrlSet set = sau.getAuCachedUrlSet();
     Iterator setIt = set.flatSetIterator();
     ArrayList childL = new ArrayList(1);
@@ -226,6 +289,7 @@ public class FuncSimulatedContent extends LockssTestCase {
   }
 
   private void checkLeaf() {
+    log.debug("checkLeaf()");
     String parent = SimulatedArchivalUnit.SIMULATED_URL_ROOT + "/branch1";
     CachedUrlSetSpec spec = new RangeCachedUrlSetSpec(parent);
     CachedUrlSet set = sau.makeCachedUrlSet(spec);
@@ -270,7 +334,7 @@ public class FuncSimulatedContent extends LockssTestCase {
         fileNum, depth, branchNum, isAbnormal);
     }
     else {
-      expectedContent = SimulatedContentGenerator.getFileContent(
+      expectedContent = SimulatedContentGenerator.getTxtContent(
         fileNum, depth, branchNum, isAbnormal);
     }
     if (isDamaged) {
@@ -322,16 +386,17 @@ public class FuncSimulatedContent extends LockssTestCase {
                  theDaemon.getHashService().padHashEstimate(size / estimate));
   }
 
-  private void hashSet(boolean namesOnly) throws IOException {
+  private void checkHashSet(boolean namesOnly, boolean filter,
+			    byte[] expected) throws Exception {
+    enableFilter(filter);
     CachedUrlSet set = sau.getAuCachedUrlSet();
     byte[] hash = getHash(set, namesOnly);
-    byte[] hash2 = getHash(set, namesOnly);
-    assertTrue(Arrays.equals(hash, hash2));
+    assertEquals(expected,hash);
 
     String parent = SimulatedArchivalUnit.SIMULATED_URL_ROOT + "/branch1";
     CachedUrlSetSpec spec = new RangeCachedUrlSetSpec(parent);
     set = sau.makeCachedUrlSet(spec);
-    hash2 = getHash(set, namesOnly);
+    byte[] hash2 = getHash(set, namesOnly);
     assertFalse(Arrays.equals(hash, hash2));
   }
 

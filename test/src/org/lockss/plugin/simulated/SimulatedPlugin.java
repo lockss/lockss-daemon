@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedPlugin.java,v 1.20 2004-10-06 23:53:05 clairegriffin Exp $
+ * $Id: SimulatedPlugin.java,v 1.21 2005-02-21 03:10:39 tlipkis Exp $
  */
 
 /*
@@ -213,6 +213,21 @@ public class SimulatedPlugin extends BasePlugin implements PluginTestable {
   }
   public static final String AU_PARAM_BAD_CACHED_FILE_NUM =
     PD_BAD_CACHED_FILE_NUM.getKey();
+
+  /**
+   * Hash filter spec
+   */
+  static final ConfigParamDescr PD_HASH_FILTER_SPEC =
+    new ConfigParamDescr();
+  static {
+    PD_HASH_FILTER_SPEC.setKey("hashFilterSpec");
+    PD_HASH_FILTER_SPEC.setDisplayName("Hash Filters");
+    PD_HASH_FILTER_SPEC.setType(ConfigParamDescr.TYPE_STRING);
+    PD_HASH_FILTER_SPEC.setSize(30);
+    PD_HASH_FILTER_SPEC.setDefinitional(false);
+  }
+  public static final String AU_PARAM_HASH_FILTER_SPEC =
+    PD_HASH_FILTER_SPEC.getKey();
 
   private String pluginId = "SimulatedPlugin";
   private int initCtr = 0;
