@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.10 2002-12-21 01:15:45 aalto Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.11 2002-12-31 00:14:02 aalto Exp $
  */
 
 /*
@@ -42,6 +42,7 @@ import org.lockss.daemon.ArchivalUnit;
 import org.lockss.daemon.Configuration;
 import org.apache.commons.collections.LRUMap;
 import org.apache.commons.collections.ReferenceMap;
+import org.lockss.util.FileLocationUtil;
 
 /**
  * LockssRepository is used to organize the urls being cached.
@@ -117,7 +118,7 @@ public class LockssRepositoryImpl implements LockssRepository {
       refMisses++;
     }
 
-    String nodeLocation = mapUrlToCacheLocation(rootLocation, url);
+    String nodeLocation = FileLocationUtil.mapUrlToFileLocation(rootLocation, url);
     if (!create) {
       // if not creating, check for existence
       File nodeDir = new File(nodeLocation);
@@ -152,48 +153,6 @@ public class LockssRepositoryImpl implements LockssRepository {
   int getRefMisses() { return refMisses; }
 
   /**
-   * mapUrlToCacheFileName() is the name mapping method used by the
-   * LockssRepository. This maps a given url to a cache file location, using
-   * the cache root as the base.  It creates directories under a CACHE_ROOT_NAME
-   * directory which mirror the html string. So
-   * 'http://www.journal.org/issue1/index.html' would be cached in the file:
-   * cacheRoot/CACHE_ROOT_NAME/www.journal.org/http/issue1/index.html
-   * @param cacheRoot the file root of the cache
-   * @param urlStr the url to translate
-   * @return the file cache location
-   * @throws java.net.MalformedURLException
-   */
-  public static String mapUrlToCacheLocation(String cacheRoot, String urlStr)
-      throws MalformedURLException {
-    int totalLength = cacheRoot.length() + urlStr.length();
-    URL url = new URL(urlStr);
-    StringBuffer buffer = new StringBuffer(totalLength);
-    buffer.append(cacheRoot);
-    if (!cacheRoot.endsWith(File.separator)) {
-      buffer.append(File.separator);
-    }
-    buffer.append(url.getHost());
-    buffer.append(File.separator);
-    buffer.append(url.getProtocol());
-    buffer.append(StringUtil.replaceString(url.getPath(), "/", File.separator));
-    return buffer.toString();
-  }
-
-  public static String mapAuToCacheLocation(String rootLocation, ArchivalUnit au) {
-    StringBuffer buffer = new StringBuffer(rootLocation);
-    if (!rootLocation.endsWith(File.separator)) {
-      buffer.append(File.separator);
-    }
-    buffer.append(au.getPluginId());
-    if (!au.getAUId().equals("")) {
-      buffer.append(File.separator);
-      buffer.append(au.getAUId());
-    }
-    buffer.append(File.separator);
-    return buffer.toString();
-  }
-
-  /**
    * Creates a LockssRepository for the given {@link ArchivalUnit} at
    * a cache location specific to that archive.
    * @param au ArchivalUnit to be cached
@@ -211,6 +170,6 @@ public class LockssRepositoryImpl implements LockssRepository {
     }
     buffer.append(CACHE_ROOT_NAME);
     buffer.append(File.separator);
-    return new LockssRepositoryImpl(mapAuToCacheLocation(buffer.toString(), au));
+    return new LockssRepositoryImpl(FileLocationUtil.mapAuToFileLocation(buffer.toString(), au));
   }
 }

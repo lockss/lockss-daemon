@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.1 2002-12-21 01:15:45 aalto Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.2 2002-12-31 00:14:02 aalto Exp $
  */
 
 /*
@@ -44,6 +44,7 @@ import java.net.MalformedURLException;
 import org.exolab.castor.xml.Marshaller;
 import org.exolab.castor.xml.Unmarshaller;
 import org.exolab.castor.mapping.Mapping;
+import org.lockss.util.FileLocationUtil;
 
 
 /**
@@ -131,10 +132,10 @@ public class HistoryRepositoryImpl implements HistoryRepository {
     }
     buffer.append(HISTORY_ROOT_NAME);
     buffer.append(File.separator);
-    String auLoc = LockssRepositoryImpl.mapAuToCacheLocation(buffer.toString(),
+    String auLoc = FileLocationUtil.mapAuToFileLocation(buffer.toString(),
         cus.getArchivalUnit());
     String urlStr = (String)cus.getSpec().getPrefixList().get(0);
-    return LockssRepositoryImpl.mapUrlToCacheLocation(auLoc, urlStr);
+    return FileLocationUtil.mapUrlToFileLocation(auLoc, urlStr);
   }
 
   protected Mapping getMapping() throws Exception {
