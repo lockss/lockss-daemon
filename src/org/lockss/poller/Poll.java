@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.61 2003-04-02 06:44:12 claire Exp $
+* $Id: Poll.java,v 1.62 2003-04-02 23:12:18 claire Exp $
  */
 
 /*
@@ -413,6 +413,13 @@ public abstract class Poll implements Serializable {
 
   public String getKey() {
     return m_key;
+  }
+
+  public String getErrorString() {
+    if(m_pollstate < 0) {
+      return ERROR_STRINGS[-m_pollstate];
+    }
+    return "No Error";
   }
 
   double getMargin() {

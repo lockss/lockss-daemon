@@ -142,7 +142,7 @@ public class PollTally {
   }
 
   public CachedUrlSet getCachedUrlSet() {
-    return pollSpec.getCachedUrlSet();
+    return poll.m_cus;
   }
 
   public ArchivalUnit getArchivalUnit()  {
@@ -285,7 +285,7 @@ public class PollTally {
     pollVotes.add(vote);
   }
 
-  /**
+/**
  * replay a previously checked vote
  * @param vote the vote to recheck
  * @param deadline the deadline by which the check must complete
