@@ -101,16 +101,35 @@
       <property name="activeaus">
 	<property name="class" value="activeaus" />
       </property>
-      <property name="1">
+      <property name="projmuse">
 	<property name="name" value="All Project Muse Titles" />
 	<property name="class" value="xpath" />
 	<property name="xpath" value="[pluginName='org.lockss.plugin.projmuse.ProjectMusePlugin']" />
       </property>
+      <property name="bioone">
+	<property name="name" value="All BioOne Titles" />
+	<property name="class" value="xpath" />
+	<property name="xpath" value="[pluginName='org.lockss.plugin.bioone.BioOnePlugin']" />
+      </property>
+      <property name="free">
+	<property name="name" value="All Free Titles" />
+	<property name="class" value="xpath" />
+	<property name="xpath"
+	  value="[pluginName='org.lockss.plugin.emls.EmlsPlugin'
+	  or pluginName='org.lockss.plugin.emls.EmlsPlugin'
+	  or pluginName='org.lockss.plugin.blackbird.BlackbirdPlugin'
+	  or pluginName='org.lockss.plugin.absinthe.AbsinthePlugin'
+	  or pluginName='org.lockss.plugin.clogic.CulturalLogicPlugin'
+	  or pluginName='org.lockss.plugin.othervoices.OtherVoicesPlugin'
+	  ]"
+	  />
+      </property>
+<!--
       <property name="2">
 	<property name="name" value="All &quot;Journals&quot;" />
 	<property name="class" value="xpath" />
 	<property name="xpath" value="[RE:isMatchRe(displayName, 'Journal')]" />
-      </property>
+      </property> -->
     </property>
 
 
