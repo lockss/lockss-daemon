@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.14 2002-10-25 23:03:46 tal Exp $
+ $Id: build.xml,v 1.15 2002-11-01 09:22:46 tal Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
@@ -67,6 +67,8 @@ in this Software without prior written authorization from Stanford University.
   <property name="xml.jar"        value="${lib}/org.apache.crimson.jar"/>
 <!--    <property name="regexp.jar"     value="${lib}/gnu-regexp.jar"/> -->
   <property name="regexp.jar"     value="${lib}/gnu-regexp-1.1.4.jar"/>
+  <property name="commons.collections.jar"
+  				  value="${lib}/commons-collections.jar"/>
   <property name="junit.jar"      value="${test.lib}/junit.jar"/>
 
   <property name="lockss.jar"     value="${lib}/lockss.jar"/>
@@ -88,6 +90,7 @@ in this Software without prior written authorization from Stanford University.
     <pathelement path="${jettytools.jar}" />
     <pathelement path="${servlet.jar}" />
     <pathelement path="${regexp.jar}" />
+    <pathelement path="${commons.collections.jar}" />
   </path>
 
   <path id="run.classpath">
@@ -336,9 +339,11 @@ in this Software without prior written authorization from Stanford University.
    description="Run a class named by class prop, with args in args prop" >
     <!-- default args empty if not supplied on command line -->
     <property name="args" value="" />
+    <property name="loglevel" value="" />
     <java classname="${class}" fork="true">
        <classpath refid="test.run.classpath" />
        <arg line="${args}" />
+       <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
     </java>
   </target>
 
@@ -357,6 +362,7 @@ in this Software without prior written authorization from Stanford University.
   <target name="test-all"
    depends="prepare.test,check.junit,jar-tests"
    description="Run all the junit tests (test/src/**/Test*.class" >
+    <property name="loglevel" value="" />
     <echo>
 Test results in ${test.results}
     </echo>
@@ -371,6 +377,7 @@ Test results in ${test.results}
       <classpath>
          <path refid="test.run.classpath" />
       </classpath>        
+      <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
     </junit>
   </target>
 
@@ -379,6 +386,7 @@ Test results in ${test.results}
   <target name="test-all-debug"
    depends="prepare.test,check.junit,jar-tests"
    description="Run all the junit tests (test/src/**/Test*.class, under the debugger" >
+    <property name="loglevel" value="" />
     <echo>
 Test results in ${test.results}
     </echo>
@@ -394,6 +402,7 @@ Test results in ${test.results}
       <classpath> 
          <path refid="test.run.classpath" />
       </classpath>        
+      <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
     </junit>
   </target>
 -->
@@ -401,6 +410,7 @@ Test results in ${test.results}
   <target name="test-class"
    depends="prepare.test,check.junit,jar-ant,jar-tests"
    description="Run all tests for a single class, named by the 'class' property" >
+    <property name="loglevel" value="" />
     <echo>
 Running tests for class ${class}
 Test results in ${test.results}
@@ -423,6 +433,7 @@ Test results in ${test.results}
       <classpath> 
          <path refid="test.run.classpath" />
       </classpath>        
+      <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
     </junit>
   </target>
 
@@ -430,12 +441,14 @@ Test results in ${test.results}
   <target name="test-one"
    depends="prepare.test,check.junit,jar-tests"
    description="Run a single test class, named by the 'class' property" >
+    <property name="loglevel" value="" />
     <junit fork="no" printsummary="yes" haltonerror="yes" haltonfailure="yes">
       <test fork="no" name="${class}" />
       <formatter type="plain" usefile="false" />                  
       <classpath> 
          <path refid="test.run.classpath" />
       </classpath>        
+      <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
     </junit>
   </target>
 
