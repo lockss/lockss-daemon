@@ -1,5 +1,5 @@
 /*
- * $Id: RegistryArchivalUnit.java,v 1.5 2004-09-01 23:38:59 smorabito Exp $
+ * $Id: RegistryArchivalUnit.java,v 1.6 2004-09-02 07:46:05 tlipkis Exp $
  */
 
 /*
@@ -49,7 +49,7 @@ import org.lockss.crawler.*;
 
 public class RegistryArchivalUnit extends BaseArchivalUnit {
   private String m_registryUrl = null;
-  private int m_maxRefetchDepth = -1;
+  private int m_maxRefetchDepth = NewContentCrawler.DEFAULT_MAX_CRAWL_DEPTH;
 
   private List m_permissionCheckers;
 
@@ -100,7 +100,8 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
   protected CrawlSpec makeCrawlSpec() throws LockssRegexpException {
     CrawlRule rule = makeRules();
     List startUrls = ListUtil.list(startUrlString);
-    return new CrawlSpec(startUrls, rule);
+    return new CrawlSpec(startUrls, startUrls, rule,
+			 m_maxRefetchDepth);
   }
 
   /**
