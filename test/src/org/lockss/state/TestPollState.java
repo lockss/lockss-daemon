@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollState.java,v 1.1 2004-12-08 00:44:26 troberts Exp $
+ * $Id: TestPollState.java,v 1.2 2004-12-14 22:03:54 troberts Exp $
  */
 
 /*
@@ -64,36 +64,29 @@ public class TestPollState extends LockssTestCase {
   public void testCompareToDiffType() {
     PollState state = new PollState(1, "none", null, 1, 0, null, false);
     PollState state2 = new PollState(2, "none", null, 1, 0, null, false);
-    assertEquals(-1, state.compareTo(state2));
-    assertEquals(1, state2.compareTo(state));
+    assertGreaterThan(state2, state);
   }
 
   public void testCompareToDiffLower() {
     PollState state = new PollState(1, "none", null, 1, 0, null, false);
     PollState state2 = new PollState(1, "none2", null, 1, 0, null, false);
     PollState state3 = new PollState(1, null, null, 1, 0, null, false);
-    assertEquals(-1, state.compareTo(state2));
-    assertEquals(1, state2.compareTo(state));
+    assertGreaterThan(state2, state);
 
-    assertEquals(1, state.compareTo(state3));
-    assertEquals(-1, state3.compareTo(state));
+    assertGreaterThan(state, state3);
 
-    assertEquals(1, state2.compareTo(state3));
-    assertEquals(-1, state3.compareTo(state2));
+    assertGreaterThan(state2, state3);
   }
 
   public void testCompareToDiffUpper() {
     PollState state = new PollState(1, null, "none", 1, 0, null, false);
     PollState state2 = new PollState(1, null, "none2", 1, 0, null, false);
     PollState state3 = new PollState(1, null, null, 1, 0, null, false);
-    assertEquals(-1, state.compareTo(state2));
-    assertEquals(1, state2.compareTo(state));
+    assertGreaterThan(state2, state);
 
-    assertEquals(1, state.compareTo(state3));
-    assertEquals(-1, state3.compareTo(state));
+    assertGreaterThan(state, state3);
 
-    assertEquals(1, state2.compareTo(state3));
-    assertEquals(-1, state3.compareTo(state2));
+    assertGreaterThan(state2, state3);
   }
 
   public void testHashCodeEquals() {
@@ -114,7 +107,6 @@ public class TestPollState extends LockssTestCase {
   }
 
   public void testHashCodeDifferentLwr() {
-    System.err.println("Stop1");
     PollState state = new PollState(1, "none", null, 1, 0, null, false);
     PollState state2 = new PollState(1, "none2", null, 1, 0, null, false);
     PollState state3 = new PollState(1, null, null, 1, 0, null, false);
