@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.43 2003-12-17 02:09:44 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.44 2004-01-03 06:30:24 tlipkis Exp $
  */
 
 /*
@@ -56,6 +56,8 @@ public class LockssTestCase extends TestCase {
   public static final int DEFAULT_TIMEOUT_SHOULDNT = 2000;
   public static int TIMEOUT_SHOULDNT = DEFAULT_TIMEOUT_SHOULDNT;
 
+  private MockLockssDaemon mockDaemon = null;
+
   List tmpDirs;
   List doLaters;
 
@@ -91,8 +93,20 @@ public class LockssTestCase extends TestCase {
     return tmpdir;
   }
 
-  /** Create a fresh config manager */
+  /**
+   * Return the MockLockssDaemon instance for this testcase, creating one
+   * if necessary.
+   */
+  public synchronized MockLockssDaemon getMockLockssDaemon() {
+    if (mockDaemon == null) {
+      mockDaemon = new MockLockssDaemon();
+    }
+    return mockDaemon;
+  }
+
+  /** Create a fresh config manager, MockLockssDaemon */
   protected void setUp() throws Exception {
+    mockDaemon = null;
     super.setUp();
     ConfigManager.makeConfigManager();
   }
