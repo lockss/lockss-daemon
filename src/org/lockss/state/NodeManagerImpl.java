@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.115 2003-05-03 00:10:37 claire Exp $
+ * $Id: NodeManagerImpl.java,v 1.116 2003-05-05 21:21:55 aalto Exp $
  */
 
 /*
@@ -71,12 +71,13 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
   ArchivalUnit managedAu;
   AuState auState;
   NodeStateCache nodeCache;
+  HashMap activeNodes;
   int maxCacheSize = DEFAULT_CACHE_SIZE;
   long recallDelay = DEFAULT_RECALL_DELAY;
   /**
-   * the set nodes marked damaged.
+   * the set of nodes marked damaged.
    */
-  TreeSet damagedNodes = new TreeSet();
+  TreeSet damagedNodes;
 
   private static Logger logger = Logger.getLogger("NodeManager");
   TreeWalkHandler treeWalkHandler;
@@ -85,10 +86,6 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     managedAu = au;
   }
 
-  /**
-   * start the plugin manager.
-   * @see org.lockss.app.LockssManager#startService()
-   */
   public void startService() {
     super.startService();
     logger.debug("NodeManager being started");
@@ -98,6 +95,8 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     regulator = theDaemon.getActivityRegulator();
 
     nodeCache = new NodeStateCache(maxCacheSize);
+    activeNodes = new HashMap();
+    damagedNodes = new TreeSet();
 
     auState = historyRepo.loadAuState(managedAu);
 
@@ -106,16 +105,15 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     logger.debug("NodeManager sucessfully started");
   }
 
-  /**
-   * stop the plugin manager
-   * @see org.lockss.app.LockssManager#stopService()
-   */
   public void stopService() {
     logger.debug("NodeManager being stopped");
     if (treeWalkHandler != null) {
       treeWalkHandler.end();
       treeWalkHandler = null;
     }
+    activeNodes.clear();
+    damagedNodes.clear();
+    nodeCache.clear();
     super.stopService();
     logger.debug("NodeManager successfully stopped");
   }
@@ -156,6 +154,8 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
                                         Deadline.in(state.getDuration()),
                                         state.isMyPoll());
     ( (NodeStateImpl) nodeState).addPollState(pollState);
+    // store nodestate for active poll
+    activeNodes.put(state.getPollKey(), nodeState);
     logger.debug2("Starting poll for url '" +
                   nodeState.getCachedUrlSet().getUrl() + " " +
                   pollState.getLwrBound() + "-" +
@@ -179,8 +179,14 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
   }
 
   public void updatePollResults(CachedUrlSet cus, PollTally results) {
-    NodeState state = getNodeState(cus);
+    NodeState state = (NodeState)activeNodes.get(results.getPollKey());
+    if (state==null) {
+      state = getNodeState(cus);
+    }
+
     updateState(state, results);
+    // remove from active nodes
+    activeNodes.remove(results.getPollKey());
   }
 
   public void newContentCrawlFinished() {
@@ -246,6 +252,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
         PollSpec pollSpec = new PollSpec(state.getCachedUrlSet(),
                                          poll.getLwrBound(),
                                          poll.getUprBound());
+        // if poll isn't running at it was our poll
         if (!pollManager.isPollRunning(poll.getType(), pollSpec)) {
           // transfer dead poll to history and let treewalk handle it
           PollHistory history =
@@ -483,7 +490,8 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
       case PollState.UNFINISHED:
         // if this poll should be running make sure it is running.
         if (!pollManager.isPollRunning(lastHistory.getType(), lastPollSpec)) {
-          if(shouldRecallLastPoll) {
+          // if should recall and is our incomplete poll
+          if ((shouldRecallLastPoll) && (lastHistory.isOurPoll())) {
             if (!reportOnly) {
               logger.debug2("treewalk - re-calling last running poll");
               callLastPoll(lastPollSpec, lastHistory);
@@ -501,8 +509,19 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
             if (lastHistory.lwrBound != null && lastHistory.uprBound != null) {
               // look at the polls below this one for a range poll that failed
               Iterator history_it = node.getPollHistories();
-              while(history_it.hasNext()) {
-                PollHistory history = (PollHistory) history_it.next();
+              if (history_it.hasNext()) {
+                PollHistory prevHistory = (PollHistory)history_it.next();
+                CachedUrlSet cus1 = lastPollSpec.getCachedUrlSet();
+                PollSpec prevPollSpec = new PollSpec(node.getCachedUrlSet(),
+                                                     prevHistory.lwrBound,
+                                                     prevHistory.uprBound);
+                CachedUrlSet cus2 = prevPollSpec.getCachedUrlSet();
+                if ((lockssRepo.cusCompare(cus1, cus2) ==
+                    LockssRepository.SAME_LEVEL_NO_OVERLAP) &&
+                    (prevHistory.getStatus()==PollState.LOST)) {
+                  // found the failed poll, rerunning
+                  callLastPoll(prevPollSpec, prevHistory);
+                }
               }
             }
           }
@@ -511,14 +530,12 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
       case PollState.LOST:
         // for name polls the important poll is just below this so it's
         // safe to skip over it.
-        if (lastHistory.getType() == Poll.CONTENT_POLL) {
-          if(shouldRecallLastPoll) {
-            if (!reportOnly) {
-              logger.debug2("treewalk - calling namepoll for lost content poll");
-              callNamePoll(lastPollSpec);
-            }
-            return true;
+        if(shouldRecallLastPoll) {
+          if (!reportOnly) {
+            logger.debug2("treewalk - calling namepoll for lost content poll");
+            callNamePoll(lastPollSpec);
           }
+          return true;
         }
         break;
       case PollState.UNREPAIRABLE:
@@ -540,7 +557,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
       case PollState.ERR_UNDEFINED:
         // if we ended with an error and it was our poll,
         // we need to recall this poll.
-        if (lastHistory.getOurPoll()) {
+        if (lastHistory.isOurPoll()) {
           if(shouldRecallLastPoll) {
             if (!reportOnly) {
               logger.debug2("treewalk - re-calling last unsuccessful poll");

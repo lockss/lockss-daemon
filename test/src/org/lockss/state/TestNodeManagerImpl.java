@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.74 2003-05-01 00:56:29 aalto Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.75 2003-05-05 21:21:55 aalto Exp $
  */
 
 /*
@@ -213,7 +213,7 @@ public class TestNodeManagerImpl
                  nodeManager.mapResultsErrorToPollError(1));
   }
 
-  public void testStartPoll() throws Exception {
+  public void testShouldStartPoll() throws Exception {
     contentPoll = createPoll(TEST_URL, true, false, 15, 5);
     PollTally results = contentPoll.getVoteTally();
     // let's generate some history
@@ -238,6 +238,23 @@ public class TestNodeManagerImpl
     nodeManager.damagedNodes.add(cus.getUrl());
     assertFalse(nodeManager.shouldStartPoll(cus, results));
     nodeManager.damagedNodes.remove(cus.getUrl());
+  }
+
+  public void testStartPoll() throws Exception {
+    contentPoll = createPoll(TEST_URL, true, false, 15, 5);
+    PollTally results = contentPoll.getVoteTally();
+    // let's generate some history
+    CachedUrlSet cus = results.getCachedUrlSet();
+    Vector subFiles = new Vector(2);
+    subFiles.add(getCUS(mau, TEST_URL));
+    ( (MockCachedUrlSet) cus).setHashItSource(subFiles);
+
+    assertNull(nodeManager.activeNodes.get(results.getPollKey()));
+    nodeManager.startPoll(cus, results, false);
+    assertSame(nodeManager.activeNodes.get(results.getPollKey()),
+               nodeManager.getNodeState(cus));
+    nodeManager.updatePollResults(cus, results);
+    assertNull(nodeManager.activeNodes.get(results.getPollKey()));
   }
 
   public void testHandleContentPoll() throws Exception {
@@ -495,6 +512,7 @@ public class TestNodeManagerImpl
                  ( (MockPollManager) theDaemon.getPollManager()).getPollStatus(
         "testDir2"));
   }
+
   public void testCheckLastHistory() throws Exception {
     TimeBase.setSimulated(10000);
 
@@ -513,6 +531,12 @@ public class TestNodeManagerImpl
     historyCheckTest(PollState.REPAIRING, nodeState, false);
     ( (MockPollManager) theDaemon.getPollManager()).thePolls.remove(TEST_URL);
 
+    // shouldn't act if it isn't our poll
+    historyCheckTest(Poll.NAME_POLL, PollState.UNFINISHED, nodeState, false, false);
+    historyCheckTest(Poll.NAME_POLL, PollState.UNFINISHED, nodeState, true, true);
+    ( (MockPollManager) theDaemon.getPollManager()).thePolls.remove(TEST_URL);
+
+
     // these are false
     historyCheckTest(PollState.WON, nodeState, false);
     ( (MockPollManager) theDaemon.getPollManager()).thePolls.remove(TEST_URL);
@@ -523,10 +547,10 @@ public class TestNodeManagerImpl
     historyCheckTest(PollState.UNREPAIRABLE, nodeState, true);
     ( (MockPollManager) theDaemon.getPollManager()).thePolls.remove(TEST_URL);
 
-    // this true for lost content polls, false for name polls
+    // this true for lost polls
     historyCheckTest(Poll.CONTENT_POLL, PollState.LOST, nodeState, true);
-
-    historyCheckTest(Poll.NAME_POLL, PollState.LOST, nodeState, false);
+    ( (MockPollManager) theDaemon.getPollManager()).thePolls.remove(TEST_URL);
+    historyCheckTest(Poll.NAME_POLL, PollState.LOST, nodeState, true);
     ( (MockPollManager) theDaemon.getPollManager()).thePolls.remove(TEST_URL);
 
     // this is true, since we called the poll
@@ -537,10 +561,15 @@ public class TestNodeManagerImpl
 
   private void historyCheckTest(int pollType, int pollState, NodeState node,
                                 boolean shouldSchedule) {
+    historyCheckTest(pollType, pollState, node, true, shouldSchedule);
+  }
+
+  private void historyCheckTest(int pollType, int pollState, NodeState node,
+                                boolean ourPoll, boolean shouldSchedule) {
     PollHistory history = new PollHistory(pollType, null, null,
                                           pollState, 123,
                                           123, null,
-                                          true);
+                                          ourPoll);
     if (shouldSchedule) {
       assertTrue(nodeManager.checkLastHistory(history, node, true));
       assertNull(( (MockPollManager) theDaemon.getPollManager()).
