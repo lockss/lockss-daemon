@@ -1,5 +1,5 @@
 /*
- * $Id: TestActivityRegulator.java,v 1.7 2003-04-17 05:29:20 aalto Exp $
+ * $Id: TestActivityRegulator.java,v 1.8 2003-04-18 22:08:02 aalto Exp $
  */
 
 /*
@@ -246,8 +246,9 @@ public class TestActivityRegulator extends LockssTestCase {
 
   public void testIsAllowedOnCus() {
     // if a crawl-
-    //   allow nothing if same
+    //   allow only name poll if same
     assertFalse(allower.isAllowedOnCus(allower.NO_ACTIVITY, allower.BACKGROUND_CRAWL, allower.RELATION_SAME));
+    assertTrue(allower.isAllowedOnCus(allower.STANDARD_NAME_POLL, allower.REPAIR_CRAWL, allower.RELATION_SAME));
     //   allow anything if parent
     assertTrue(allower.isAllowedOnCus(allower.NO_ACTIVITY, allower.BACKGROUND_CRAWL, allower.RELATION_PARENT));
     //   allow only crawls if child
@@ -255,7 +256,7 @@ public class TestActivityRegulator extends LockssTestCase {
     assertTrue(allower.isAllowedOnCus(allower.REPAIR_CRAWL, allower.BACKGROUND_CRAWL, allower.RELATION_CHILD));
 
     // if a poll-
-    //   allow only name poll if same and content poll
+    //   allow only name poll or repair crawl if same
     assertFalse(allower.isAllowedOnCus(allower.NO_ACTIVITY, allower.STANDARD_CONTENT_POLL, allower.RELATION_SAME));
     assertTrue(allower.isAllowedOnCus(allower.STANDARD_NAME_POLL, allower.STANDARD_CONTENT_POLL, allower.RELATION_SAME));
     assertTrue(allower.isAllowedOnCus(allower.REPAIR_CRAWL, allower.STANDARD_CONTENT_POLL, allower.RELATION_SAME));
