@@ -1,5 +1,5 @@
 /*
- * $Id: OaiCrawler.java,v 1.4 2005-01-12 02:21:42 dcfok Exp $
+ * $Id: OaiCrawler.java,v 1.5 2005-01-20 01:35:16 dcfok Exp $
  */
 
 /*
@@ -119,13 +119,13 @@ public class OaiCrawler extends FollowLinkCrawler {
      List errList = oaiHandler.getErrors();
      if ( !errList.isEmpty() ){
        crawlStatus.setCrawlError("Error in processing Oai Records");
-       //we might want to add this Oai Error List to crawl Status as well.
-       logger.error("Error in processing Oai Records, here is the stack of error(s):\n");
-       Iterator errIt = errList.iterator();
-       while (errIt.hasNext()){
-	 Exception oaiEx = (Exception) errIt.next();
-	 logger.error("  ",oaiEx);
-       }
+       //XXX need to think how to reflect errors occurs in OaiHandler back to UI or daemon
+//        logger.error("Error in processing Oai Records, here is the stack of error(s):\n");
+//        Iterator errIt = errList.iterator();
+//        while (errIt.hasNext()){
+// 	 Exception oaiEx = (Exception) errIt.next();
+// 	 logger.error("",oaiEx);
+//        }
      }
 
      Set updatedUrls = oaiHandler.getUpdatedUrls();

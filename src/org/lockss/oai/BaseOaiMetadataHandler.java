@@ -1,5 +1,5 @@
 /*
- * $Id: BaseOaiMetadataHandler.java,v 1.3 2005-01-18 10:31:18 dcfok Exp $
+ * $Id: BaseOaiMetadataHandler.java,v 1.4 2005-01-20 01:35:16 dcfok Exp $
  */
 
 /*
@@ -49,12 +49,12 @@ public class BaseOaiMetadataHandler implements OaiMetadataHandler{
   protected NodeList metadataNodeList;
   protected Set extractedUrls;
   
-  /**
-   * Constructor with no arguments
-   */
-  public BaseOaiMetadataHandler() {
-    metadataNodeList = null;
-  }
+//   /**
+//    * Constructor with no arguments
+//    */
+//   public BaseOaiMetadataHandler() {
+//     metadataNodeList = null;
+//   }
   
   /**
    * Constructor with some arguments, which is useful if we want
@@ -101,22 +101,26 @@ public class BaseOaiMetadataHandler implements OaiMetadataHandler{
    * metadata namespace from node list
    */
   protected Set collectArticleUrls() {
-    Set extractedUrls = new HashSet();
+    Set articleUrls = new HashSet();
     logger.debug3("Processing Metadata nodes");
     for(int i = 0; i < metadataNodeList.getLength(); i++) {
 	Node node = metadataNodeList.item(i);
 	if(node != null) {
+   	  //logger.debug3("metadataNodeList ("+i+") = " + OaiHandler.displayXML(node) );
 	  NodeList list = 
 	    ((Element)node).getElementsByTagNameNS(metadataNamespaceUrl, urlContainerTagName);
-// 	  NodeList list = 
-// 	    ((Element)node).getElementsByTagName(urlContainerTagName);
-	  String str = list.item(0).getFirstChild().getNodeValue();
-	  extractedUrls.add(str);
-	  logger.debug3("node (" + i + ") value = " + str);
+	  if (list.getLength() > 0) {
+	    String str = list.item(0).getFirstChild().getNodeValue();
+	    articleUrls.add(str);
+	    logger.debug3("node (" + i + ") value = " + str);
+	  } else {
+	    logger.error("No XML elements with the tag name : "+urlContainerTagName+ 
+			 " in the namespace : "+metadataNamespaceUrl);
+	  }
 	}
     }
     
-    return extractedUrls;
+    return articleUrls;
   }
   
   /**

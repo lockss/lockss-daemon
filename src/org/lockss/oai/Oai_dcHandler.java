@@ -1,5 +1,5 @@
 /*
- * $Id: Oai_dcHandler.java,v 1.2 2005-01-13 00:51:11 dcfok Exp $
+ * $Id: Oai_dcHandler.java,v 1.3 2005-01-20 01:35:15 dcfok Exp $
  */
 
 /*
@@ -46,9 +46,7 @@ public class Oai_dcHandler extends BaseOaiMetadataHandler {
    * in oai_dc format properly.
    */
   public Oai_dcHandler()    {
-    metadataPrefix = "oai_dc";
-    metadataNamespaceUrl = "http://purl.org/dc/elements/1.1/";
-    urlContainerTagName = "identifier";
+    super("oai_dc", "http://purl.org/dc/elements/1.1/", "identifier");
   }
 
 }

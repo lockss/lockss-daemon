@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseOaiMetadataHandler.java,v 1.2 2005-01-19 08:48:50 dcfok Exp $
+ * $Id: TestBaseOaiMetadataHandler.java,v 1.3 2005-01-20 01:35:15 dcfok Exp $
  */
 
 /*
@@ -90,50 +90,58 @@ public class TestBaseOaiMetadataHandler extends LockssTestCase {
 	assertEquals(urlContainerTagName, baseOaiMetadataHandler.getUrlContainerTagName());
     }
 
-//     public void testSetupAndExecute(){
-// 	String prefix = "oai_dc";
-// 	String nsUrl = "http://purl.org/dc/elements/1.1/";
-// 	String tag = "identifer";
+    public void testGetArticleUrls(){
+	String prefix = "abc";
+	String nsUrl = "http://www.younameit.com/";
+	String tag = "foo";
 
-// 	//setup a nodelist that contain different <metadata>..<tag>url</tag>..</metadata> records
-// 	String url1 = "http://www.example.com/link1.html";
-// 	String url2 = "http://www.example.com/link2.html";
-// 	Set testUrls = SetUtil.set(url1, url2);
-// 	NodeList metadataNodeList = createMockMetadataNodeList(testUrls, prefix, nsUrl, tag);
+	//setup a nodelist that contain different <metadata>..<tag>url</tag>..</metadata> records
+	String url1 = "http://www.example.com/link1.html";
+	String url2 = "http://www.example.com/link2.html";
+	Set testUrls = SetUtil.set(url1, url2);
+	NodeList metadataNodeList = createMockMetadataNodeList(testUrls, prefix, nsUrl, tag);
 
-// 	//construct a bastOaiMetadataHandler
-// 	BaseOaiMetadataHandler mdHandler = new BaseOaiMetadataHandler(prefix, nsUrl, tag);
+	//construct a bastOaiMetadataHandler
+	BaseOaiMetadataHandler mdHandler = new BaseOaiMetadataHandler(prefix, nsUrl, tag);
 
-// 	//run setupAndExecute
-// 	mdHandler.setupAndExecute(metadataNodeList);
+	//run setupAndExecute
+	mdHandler.setupAndExecute(metadataNodeList);
 
-// 	//check by assertEquals of getArticleUrls()
-// 	assertEquals(testUrls, mdHandler.getArticleUrls());
-//     }
-
-    private static DocumentBuilder builder = null;
-    private static Element namespaceElement = null;
+	//check by assertEquals of getArticleUrls()
+	assertEquals(testUrls, mdHandler.getArticleUrls());
+    }
 
     private NodeList createMockMetadataNodeList(Set urls, String prefix, String namespaceUrl, String tagName){
+      
+        DocumentBuilder builder = null;
+	//        Element namespaceElement = null;
+
 	/* Load DOM Document */
 	try {
 	    DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 	    factory.setNamespaceAware(true);
 	    builder = factory.newDocumentBuilder();
 	    
-	    DOMImplementation impl = builder.getDOMImplementation();
-	    Document namespaceHolder
-		= impl.createDocument("http://www.oclc.org/research/software/oai/harvester", "harvester:namespaceHolder", null);
-	    namespaceElement = namespaceHolder.getDocumentElement();
-	    namespaceElement.setAttributeNS("http://www.w3.org/2000/xmlns/",
-					    "xmlns:harvester",
-					    "http://www.lockss.org/research/software/oai/harvester");
-	    namespaceElement.setAttributeNS("http://www.w3.org/2000/xmlns/",
-                                            "xmlns:xsi",
-					    "http://www.w3.org/2001/XMLSchema-instance");
-	    namespaceElement.setAttributeNS("http://www.w3.org/2000/xmlns/",
-					    "xmlns:oai20",
-					    "http://www.openarchives.org/OAI/2.0/");
+// 	    DOMImplementation impl = builder.getDOMImplementation();
+// 	    Document namespaceHolder
+// 		= impl.createDocument("http://www.lockss.org/oai/harvester", "harvester:namespaceHolder", null);
+// 	    namespaceElement = namespaceHolder.getDocumentElement();
+// 	    namespaceElement.setAttributeNS("http://www.w3.org/2000/xmlns/",
+// 					    "xmlns:harvester",
+// 					    "http://www.lockss.org/research/software/oai/harvester");
+// 	    namespaceElement.setAttributeNS("http://www.w3.org/2000/xmlns/",
+//                                             "xmlns:xsi",
+// 					    "http://www.w3.org/2001/XMLSchema-instance");
+// 	    namespaceElement.setAttributeNS("http://www.w3.org/2000/xmlns/",
+// 					    "xmlns:oai20",
+// 					    "http://www.openarchives.org/OAI/2.0/");
+// 	    namespaceElement.setAttributeNS("http://www.w3.org/2000/xmlns/",
+// 					    "xmlns:"+prefix,
+// 					    "http://www.example.com/"+prefix);
+// 	    namespaceElement.setAttributeNS("http://www.w3.org/2000/xmlns/",
+// 					    "xmlns:xyz",
+// 					    namespaceUrl);
+					    
 	} catch (ParserConfigurationException pce) {
 	    logger.error("", pce);
 	}
@@ -155,46 +163,40 @@ public class TestBaseOaiMetadataHandler extends LockssTestCase {
 	  </metadata>
 	*/
 
-	//XXX need to figure out how to add the namspaceUrl to this mock xml doc
-	// can refer to the OaiHarvester2 code which construct the doc in HarvesterVerb
 	Iterator it = urls.iterator();
 	while (it.hasNext()){
 
 	    StringBuffer xmlSBText = new StringBuffer();
 	    xmlSBText.append("<metadata>");
-	    xmlSBText.append("<"+prefix+":dc ");
-	    xmlSBText.append("xmlns:oai_dc=\"http://www.openarchives.org/OAI/2.0/oai_dc/\" ");
-	    xmlSBText.append("xmlns:dc=\""+namespaceUrl+"\" ");
-	    xmlSBText.append("xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" ");
-	    xmlSBText.append("xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/oai_dc/ ");
-	    xmlSBText.append("http://www.openarchives.org/OAI/2.0/oai_dc.xsd\">");
-	    xmlSBText.append("<dc:identifier>"+it.next()+"</dc:identifier>");
-	    xmlSBText.append("</"+prefix+":dc>");
+	    xmlSBText.append("<"+prefix+":xyz "); //note: xyz is a namespaceUrl qualified name
+	                                          //xyz is just for human read only. For the machine
+	                                          //will check the whole namespaceUrl instead of this
+	                                          //qualified name.
+
+	    xmlSBText.append("xmlns:"+prefix+"=\"http://www.example.com/"+prefix+"\" ");
+//	    xmlSBText.append("xmlns:xyz=\""+namespaceUrl+"\" ");
+	    xmlSBText.append("xmlns:xyz=\""+namespaceUrl+"\">");
+
+// 	    xmlSBText.append("xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" ");
+// 	    xmlSBText.append("xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/oai_dc/ ");
+// 	    xmlSBText.append("http://www.openarchives.org/OAI/2.0/oai_dc.xsd\">");
+	    xmlSBText.append("<xyz:"+tagName+">"+it.next()+"</xyz:"+tagName+">");
+	    xmlSBText.append("</"+prefix+":xyz>");
 	    xmlSBText.append("</metadata>");
 	    String xmlText = xmlSBText.toString();
 
-// 	    StringBuffer xmlSBText = new StringBuffer();
-// 	    xmlSBText.append("<metadata>");
-// 	    xmlSBText.append("<"+prefix+":xyz ");
-// 	    xmlSBText.append("xmlns:"+prefix+"='http://www.openarchives.org/OAI/2.0/abc/' ");
-// 	    xmlSBText.append("xmlns:xyz='"+namespaceUrl+"' ");
-// 	    xmlSBText.append("xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' ");
-// 	    xmlSBText.append("xsi:schemaLocation='http://www.openarchives.org/OAI/2.0/abc/ ");
-// 	    xmlSBText.append("http://www.openarchives.org/OAI/2.0/abc.xsd'>");
-// 	    xmlSBText.append("<xyz:"+tagName+">"+it.next()+"</xyz:"+tagName+">");
-// 	    xmlSBText.append("</"+prefix+":xyz>");
-// 	    xmlSBText.append("</metadata>");
-// 	    String xmlText = xmlSBText.toString();
-
 	    try {
-		Document tempDoc = builder.parse(xmlText);
+		Document tempDoc = builder.parse(new StringBufferInputStream(xmlText));
 		nodeSet.addNode(tempDoc.getDocumentElement());
-		logger.debug3(nodeToString(tempDoc.getDocumentElement()));
+		logger.debug3(OaiHandler.displayXML(tempDoc.getDocumentElement()));
 	    } catch (SAXException saxe) {
 		logger.error("", saxe);
 	    } catch (IOException ioe) {
 		logger.error("", ioe);
-	    }
+	    } 
+// 	    catch (XmlDomException xde) {
+// 	      logger.error("", xde);
+// 	    }
 
 	    
 	}
@@ -286,60 +288,6 @@ public class TestBaseOaiMetadataHandler extends LockssTestCase {
 
 
 	return (NodeList) nodeSet;
-    }
-    
-    private String nodeToString(Node domNode){
-	// An array of names for DOM node-types
-	// (Array indexes = nodeType() values.)
-	String[] typeName = {
-	    "none",
-	    "Element",
-	    "Attr",
-	    "Text",
-	    "CDATA",
-	    "EntityRef",
-	    "Entity",
-	    "ProcInstr",
-	    "Comment",
-	    "Document",
-	    "DocType",
-	    "DocFragment",
-	    "Notation",
-	};
-	
-	String s = typeName[domNode.getNodeType()];
-	String nodeName = domNode.getNodeName();
-	if (! nodeName.startsWith("#")) {
-	    s += ": " + nodeName;
-	}
-	if (domNode.getNodeValue() != null) {
-	    if (s.startsWith("ProcInstr")) 
-		s += ", ";
-	    else
-		s += ": ";
-	    // Trim the value to get rid of NL's at the front
-	    String t = domNode.getNodeValue().trim();
-	    int x = t.indexOf("\n");
-	    if (x >= 0) t = t.substring(0, x);
-	    s += t;
-	}
-	s += "\n";
-	NamedNodeMap attrMap = domNode.getAttributes();
-	if (attrMap != null){
-	    s += "Its attributes are : \n";
-	    for (int iy=0; iy <attrMap.getLength(); iy++){
-		Attr attr = (Attr) attrMap.item(iy);
-		s += attr.getName() + " = " + attr.getValue() + "\n";
-	    }
-	}
-	NodeList childList = domNode.getChildNodes();
-	if (childList != null) {
-	    s += "Child nodes of "+ nodeName + ": \n";
-	    for (int ix=0; ix <childList.getLength(); ix++){
-		s += nodeToString(childList.item(ix));
-	    }
-	}
-	return s;
     }
     
     public static void main(String[] argv) {

@@ -1,5 +1,5 @@
 /*
- * $Id: OaiHandler.java,v 1.2 2005-01-13 00:51:16 dcfok Exp $
+ * $Id: OaiHandler.java,v 1.3 2005-01-20 01:35:16 dcfok Exp $
  */
 
 /*
@@ -67,7 +67,7 @@ public class OaiHandler {
   protected static Logger logger = Logger.getLogger("OaiHandler");
   private Set updatedUrls = new HashSet();
   protected String queryString = null;
-  private ListRecords listRecords = null;
+  //private ListRecords listRecords = null;
   private String baseUrl;
   private int retries = 0;
   private int maxRetries;
@@ -104,8 +104,8 @@ public class OaiHandler {
     this.untilDate = untilDate;
     this.maxRetries = maxRetries;
 
-    listRecords = createListRecords(oaiData, fromDate, untilDate);
-    processListRecords(listRecords);
+    ListRecords lr = createListRecords(oaiData, fromDate, untilDate);
+    processListRecords(lr);
   }
   
   /**
@@ -118,55 +118,72 @@ public class OaiHandler {
    */
   protected void processListRecords(ListRecords listRecords){
 
+    nextListRecords:
     while (listRecords != null) {
       
       //check if we have error
+      NodeList errors = null;
       try {
-	NodeList errors = listRecords.getErrors();   
-	if (errors != null && errors.getLength() > 0) {
-	  int length = errors.getLength();
-	  for (int i=0; i<length; ++i) {
-	    Node item = errors.item(i);
-	    
-	    //sample error code:
-	    //<error code="badResumptionToken">More info about the error</error>
-	    String errCode = ((Element)item).getAttribute("code");
-	    String errMsg = errCode +  " : " +  item.getFirstChild().getNodeValue();
-	    
-	    //create an error for logError
-	    OaiResponseErrorException oaiErrEx = new OaiResponseErrorException(errMsg);
-	    logError("In Oai Response's error tag", oaiErrEx);
-
-	    if (errCode == "badResumptionToken") {
-	      if ( retries < maxRetries) {
-		logger.info("badResumptionToke error, re-issue a new oai request");
-		listRecords = createListRecords(oaiData, fromDate, untilDate);
-		retries++;
-		continue;
-	      } else {
-		logger.warning("Exceeded maximum Oai Request retry times");
-	      }
-	    }
-
-	    //testing to see what is inside that error item
-	    //	    logger.debug3("nodeToString");
-	    //      logger.debug3(nodeToString(item));
-	  }
-
-	  logger.debug3("Error record: " + listRecords.toString() );
-
-	  break; //apart from badResumptionToken, we cannot do much of other error case, thus just break
-	}
+	errors = listRecords.getErrors();
       } catch (TransformerException e) {
 	logError("In calling getErrors", e);
       }
+      if (errors != null && errors.getLength() > 0) {
+	int length = errors.getLength();
+	for (int i=0; i<length; ++i) {
+	  Node item = errors.item(i);
+	  
+	  //sample error code:
+	  //<error code="badResumptionToken">More info about the error</error>
+	  String errCode = ((Element)item).getAttribute("code");
+	  String errMsg = errCode +  " : " +  item.getFirstChild().getNodeValue();
+	  
+	  //create an error for logError
+	  OaiResponseErrorException oaiErrEx = new OaiResponseErrorException(errMsg);	  
+	  
+	  if (errCode == "noRecordsMatch"){ // this could be normal if there is no update
+	                                    // from the repository.
+	    logger.warning("The combination of the values of the from, until, set "
+                           +"and metadataPrefix arguments results in an empty list.");
+	  } else if (errCode == "badResumptionToken") {
+	    if ( retries < maxRetries) {
+	      logger.info("badResumptionToke error, re-issue a new oai request");
+	      listRecords = createListRecords(oaiData, fromDate, untilDate);
+	      retries++;
+	      continue nextListRecords;
+	    } else {
+	      logger.warning("Exceeded maximum Oai Request retry times");
+	      logError("badResumptionToken in Oai Response", oaiErrEx); 
+	    }
+	  } else if (errCode == "badArgument"){
+	    logError("badArgument in Oai Response, check the oai query string: "
+		     + getOaiQueryString() , oaiErrEx);
+	  } else if (errCode == "cannotDisseminateFormat") {
+	    logError("cannotDisseminateFormat in Oai Response, "
+                     +"metadata format not supported by item or repositry", oaiErrEx);
+	  } else if (errCode == "noSetHierarchy") {
+	    logError("The repository does not support sets.", oaiErrEx);
+	  } else {
+	    logError("Unexpected Error.", oaiErrEx); 
+	  }
+	  
+	  //testing to see what is inside that error item
+	  //	    logger.debug3("nodeToString");
+	  //      logger.debug3(nodeToString(item));
+	}
+	
+	logger.warning("Error record: " + listRecords.toString() );
+
+	break; //apart from badResumptionToken, we cannot do much of other error case, thus just break
+      }
+      
       
       //see what is inside the lisRecord
       logger.debug3("The content of listRecord : \n" + listRecords.toString() );
 
       //collect and store all the oai records
-      collectOaiRecords(); //XXX info collected is not being used now, 
-                           //can turn off to increase performance
+      collectOaiRecords(listRecords); //XXX info collected is not being used now, 
+                                      //can turn off to increase performance
 
       //parser urls by some implementation of oaiMetadataHander
       NodeList metadataNodeList = 
@@ -228,8 +245,8 @@ public class OaiHandler {
       untilDate + "&metadataPrefix=" + metadataPrefix + "&set=" + setSpec;
 
     try {
-      listRecords = new ListRecords(baseUrl, fromDate, untilDate, setSpec,
-				      metadataPrefix);
+      listRecords = new ListRecords(baseUrl, fromDate, untilDate, setSpec, 
+				    metadataPrefix);
     } catch (IOException ioe) {
       logError("In createListRecords calling new ListRecords", ioe);
     } catch (ParserConfigurationException pce) {
@@ -245,6 +262,8 @@ public class OaiHandler {
 
   /**
    * log the error message and the corresponding exception
+   *
+   * XXX need to be rewritten to reflect errors in crawlStatus
    */
   protected void logError(String msg, Exception ex) {
     logger.error(msg, ex);
@@ -257,6 +276,8 @@ public class OaiHandler {
    * Note: the latest error is at the beginning of the list, like a stack
    *
    * @return the error list 
+   *
+   * XXX need to be rewritten to reflect errors in crawlStatus
    */
   public List getErrors() {
     return (List) errList;
@@ -276,15 +297,16 @@ public class OaiHandler {
    * Information collected maybe useful to our future developement.
    * 
    * //XXX do we want to have a place in the file system to store it ?
-   * should it be output as an xml ?
+   * should it be output as an xml ? Methods to output the OaiRecords as 
+   * a file needed to be implemented.
    */
-  private void collectOaiRecords(){
+  private void collectOaiRecords(ListRecords listRecords){
     NodeList nodeList = listRecords.getDocument().getElementsByTagName("record");
     for (int i=0; i<nodeList.getLength(); i++) {
       Node node = nodeList.item(i);
       if (node != null) {
 	oaiRecords.add(node);
-	logger.debug3("Record ("+ i +") :" + nodeToString(node));
+	logger.debug3("Record ("+ i +") :" + displayXML(node));
       }
     }
   }
@@ -302,7 +324,7 @@ public class OaiHandler {
   /**
    * Print out the OAI query string for error tracing 
    */   
-  public String toString(){
+  public String getOaiQueryString(){
     return queryString;
   }
 
@@ -310,7 +332,7 @@ public class OaiHandler {
    * print out the content of a node, its attribute and its children
    * it might be useful to put it in some kind of Util
    */
-  private String nodeToString(Node domNode){
+  String nodeToString(Node domNode){
     // An array of names for DOM node-types
     // (Array indexes = nodeType() values.)
     String[] typeName = {
@@ -363,6 +385,95 @@ public class OaiHandler {
     }
     return s;
   }
+
+  //walk the DOM tree and print as u go
+  static String displayXML(Node node){
+    
+    StringBuffer tmpStr = new StringBuffer();
+        
+        int type = node.getNodeType();
+        switch(type)
+        {
+            case Node.DOCUMENT_NODE:
+            {
+              tmpStr.append("<?xml version=\"1.0\" encoding=\""+
+                                "UTF-8" + "\"?>");  
+              break;                  
+            }//end of document
+            case Node.ELEMENT_NODE:
+            {
+                tmpStr.append('<' + node.getNodeName() );
+                NamedNodeMap nnm = node.getAttributes();
+                if(nnm != null )
+                {
+                    int len = nnm.getLength() ;
+                    Attr attr;
+                    for ( int i = 0; i < len; i++ )
+                    {
+                        attr = (Attr)nnm.item(i);
+                        tmpStr.append(' ' 
+                             + attr.getNodeName()
+                             + "=\""
+                             + attr.getNodeValue()
+                             +  '"' );
+                    }
+                }
+                tmpStr.append('>');
+                
+                break;
+                
+            }//end of element
+            case Node.ENTITY_REFERENCE_NODE:
+            {
+               
+               tmpStr.append('&' + node.getNodeName() + ';' );
+               break;
+                
+            }//end of entity
+            case Node.CDATA_SECTION_NODE:
+            {
+                    tmpStr.append( "<![CDATA[" 
+                            + node.getNodeValue()
+                            + "]]>" );
+                     break;       
+                
+            }
+            case Node.TEXT_NODE:
+            {
+                tmpStr.append(node.getNodeValue());
+                break;
+            }
+            case Node.PROCESSING_INSTRUCTION_NODE:
+            {
+                tmpStr.append("<?" 
+                    + node.getNodeName() ) ;
+                String data = node.getNodeValue();
+                if ( data != null && data.length() > 0 ) {
+                    tmpStr.append(' ');
+                    tmpStr.append(data);
+                }
+                tmpStr.append("?>");
+                break;
+
+             }
+        }//end of switch
+        
+              
+        //recurse
+        for(Node child = node.getFirstChild(); child != null; child = child.getNextSibling())
+        {
+            tmpStr.append(displayXML(child));
+        }
+        
+        //without this the ending tags will miss
+        if ( type == Node.ELEMENT_NODE )
+        {
+            tmpStr.append("</" + node.getNodeName() + ">");
+        }
+        
+	return tmpStr.toString();
+        
+    }//end of displayXML
 
   /**
    * OaiResponseErrorException will only be thrown when there is
