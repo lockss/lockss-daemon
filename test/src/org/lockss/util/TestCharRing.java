@@ -1,5 +1,5 @@
 /*
- * $Id: TestCharRing.java,v 1.3 2003-06-12 00:55:51 troberts Exp $
+ * $Id: TestCharRing.java,v 1.4 2003-06-13 00:34:28 troberts Exp $
  */
 
 /*
@@ -46,26 +46,44 @@ public class TestCharRing extends LockssTestCase {
   }
 
 
-  public void testBadSizeThrows() {
+  public void testBadCapacityThrows() {
     try {
       CharRing cr = new CharRing(0);
-      fail("Trying to create a CharRing with a size of "
+      fail("Trying to create a CharRing with a capacity of "
 	   +"zero should have thrown");
     } catch (IllegalArgumentException e) {
     }
   }
 
   public void testGetNthChar() {
-    assertEquals('a', cr.getNthChar(0));
-    assertEquals('b', cr.getNthChar(1));
-    assertEquals('c', cr.getNthChar(2));
-    assertEquals('d', cr.getNthChar(3));
-    assertEquals('e', cr.getNthChar(4));
+    assertEquals('a', cr.get(0));
+    assertEquals('b', cr.get(1));
+    assertEquals('c', cr.get(2));
+    assertEquals('d', cr.get(3));
+    assertEquals('e', cr.get(4));
+  }
+
+  public void testWrapping() throws CharRing.RingFullException {
+    cr.remove();
+    cr.add('f');
+    assertEquals('b', cr.get(0));
+    assertEquals('c', cr.get(1));
+    assertEquals('d', cr.get(2));
+    assertEquals('e', cr.get(3));
+    assertEquals('f', cr.get(4));
+
+    cr.remove();
+    cr.add('g');
+    assertEquals('c', cr.get(0));
+    assertEquals('d', cr.get(1));
+    assertEquals('e', cr.get(2));
+    assertEquals('f', cr.get(3));
+    assertEquals('g', cr.get(4));
   }
 
   public void testGetNthCharThrowsIfLargerThanCapacity() {
     try {
-      cr.getNthChar(5);
+      cr.get(5);
       fail("getNthChar should have thrown when N was greater than capacity");
     } catch (CharRing.BadIndexException e) {
     }
@@ -74,7 +92,7 @@ public class TestCharRing extends LockssTestCase {
   public void testGetNthCharThrowsIfLargerThanSize() {
     cr.remove();
     try {
-      cr.getNthChar(4);
+      cr.get(4);
       fail("getNthChar should have thrown when N was greater than size");
     } catch (CharRing.BadIndexException e) {
     }
@@ -95,7 +113,7 @@ public class TestCharRing extends LockssTestCase {
 
   public void testRemoveDoes() {
     assertEquals('a', cr.remove());
-    assertEquals('b', cr.getNthChar(0));
+    assertEquals('b', cr.get(0));
   }
   
   public void testRemoveThrowsIfNothingLeft() {
@@ -122,36 +140,16 @@ public class TestCharRing extends LockssTestCase {
     assertEquals(0, cr.size());
   }
 
-  public void testWrapping() throws CharRing.RingFullException {
-    cr.remove();
-    cr.add('f');
-    assertEquals('f', cr.getNthChar(cr.size()-1));
-
-    cr.remove();
-    cr.add('g');
-    assertEquals('g', cr.getNthChar(cr.size()-1));
-  }
-
-  public void testHeadWraps() throws CharRing.RingFullException {
-    cr.remove();
-    cr.remove();
-    cr.remove();
-    cr.remove();
-    cr.remove();
-    cr.add('f');
-    assertEquals('f', cr.getNthChar(0));
-  }
-
   public void testClear0() {
     cr.clear(0);
-    assertEquals('a', cr.getNthChar(0));
+    assertEquals('a', cr.get(0));
   }
 
   public void testClearMany() {
     cr.clear(2);
-    assertEquals('c', cr.getNthChar(0));
+    assertEquals('c', cr.get(0));
     cr.clear(1);
-    assertEquals('d', cr.getNthChar(0));
+    assertEquals('d', cr.get(0));
     assertEquals(2, cr.size());
   }
 

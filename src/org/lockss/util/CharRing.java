@@ -1,5 +1,5 @@
 /*
- * $Id: CharRing.java,v 1.2 2003-06-12 00:55:51 troberts Exp $
+ * $Id: CharRing.java,v 1.3 2003-06-13 00:34:28 troberts Exp $
  */
 
 /*
@@ -49,15 +49,28 @@ public class CharRing {
     chars = new char[size];
   }
 
+  /**
+   * returns the number of chars in the ring
+   * @return number of chars in the ring
+   */
   public int size() {
     return size;
   }
 
+  /**
+   * returns the number of chars this ring can hold
+   * @return the number of chars this ring can hold
+   */
   public int capacity() {
     return chars.length;
   }
 
-  public char getNthChar(int n) {
+  /**
+   * returns the nth char from this ring
+   * @param n index of the char to return
+   * @return nth char from this ring
+   */
+  public char get(int n) {
     if (n >= chars.length) {
       throw new BadIndexException("Tried to get the "+n
 				  +" element in a ring of length "
@@ -65,11 +78,15 @@ public class CharRing {
     } else if (n >= size) {
       throw new BadIndexException("Tried to get the "+n
 				  +" element in a ring with "
-				  +chars.length+" elements");
+				  +size+" elements");
     }
     return chars[incrementIndex(head, n)];
   }
 
+  /**
+   * add kar to the end of this ring
+   * @param kar char to add to ring
+   */
   public void add(char kar) throws RingFullException {
     if (size == chars.length) {
       throw new RingFullException("Array is full");
@@ -82,11 +99,24 @@ public class CharRing {
     size++;
   }
 
-
+  /**
+   * add all chars in newChars to this ring
+   * @param newChars array of chars to add to this ring
+   * @throws RingFullException if the chars in newChars will exceed 
+   * the ring's capacity
+   */
   public void add(char newChars[]) throws RingFullException {
     add(newChars, 0, newChars.length);
   }
   
+  /**
+   * add all chars in newChars to this ring
+   * @param newChars array of chars to add to this ring
+   * @param pos position to begin read from newChars
+   * @param length number of chars to read from newChars
+   * @throws RingFullException if the chars being added will exceed
+   * the ring's capacity
+   */
   public void add(char newChars[], int pos, int length)
       throws RingFullException {
     if (length + size > chars.length) {
@@ -103,25 +133,10 @@ public class CharRing {
     size += length;
   }
 
-
-//   public char getHead() {
-//     if (logger.isDebug2()) {
-//       logger.debug2("Getting head from "+toString());
-//     }
-
-//     if (logger.isDebug2()) {
-//       logger.debug2("Returning "+chars[head]);
-//     }
-//     return chars[head];
-//   }
-
-//   public char getTail() {
-//     if (logger.isDebug2()) {
-//       logger.debug2("Getting tail from "+toString());
-//     }
-//     return chars[tail];
-//   }
-
+  /**
+   * remove the next char from the ring and return it
+   * @return next char from the ring
+   */
   public char remove() {
     if (size == 0) {
       throw new BadIndexException("remove() called on empty CharRing");
@@ -140,35 +155,38 @@ public class CharRing {
     return returnKar;
   }
 
+  /**
+   * remove the next returnChars.length chars from the ring
+   * @param returnChars array to write the removed chars from
+   * @return number of chars removed from the ring
+   */ 
   public int remove(char returnChars[]) {
     return remove(returnChars, 0, returnChars.length);
   }
 
+  /**
+   * remove the next len chars from the ring
+   * @param returnChars array to write the removed chars from
+   * @param pos position to begin writting into array
+   * @param len number of chars to remove
+   * @return number of chars removed from the ring
+   */ 
   public int remove(char returnChars[], int pos, int len) {
+  //XXX should throw if trying to remove too many?
     int numToReturn = Math.min(len, size);
     if (numToReturn == 0) {
       return 0;
     }
     
-    if (tail < head) {
-      int chunk1 = Math.min(numToReturn, chars.length-head);
-      int chunk2 = numToReturn - chunk1;
-      System.arraycopy(chars, head, returnChars, pos, chunk1);
-      System.arraycopy(chars, 0, returnChars, pos + chunk1, chunk2);
-    } else {
-      System.arraycopy(chars, head, returnChars, pos, numToReturn);
-    }
+    int chunk1 = Math.min(numToReturn, chars.length-head);
+    int chunk2 = numToReturn - chunk1;
+    System.arraycopy(chars, head, returnChars, pos, chunk1);
+    System.arraycopy(chars, 0, returnChars, pos + chunk1, chunk2);
 
     incrementHead(numToReturn);
     size -= numToReturn;
     return numToReturn;
   }
-
-//   private int incrementIndex(int idx) {
-//     return incrementIndex(idx, 1);
-// //     int nextIdx = idx+1;
-// //     return nextIdx == chars.length ? 0 : nextIdx;
-//   }
 
   private int incrementIndex(int idx, int amt) {
     idx += amt;
@@ -183,19 +201,11 @@ public class CharRing {
     tail = incrementIndex(tail, amt);
   }
 
-//   public int getHeadIndex() {
-//     return head;
-//   }
 
-//   public int getTailIndex() {
-//     return tail;
-//   }
-
-//   public char getChar(int idx) {
-//     return chars[idx];
-//   }
-
-
+  /**
+   * Clear the next num chars from the ring.  Should be quicker than remove
+   * @param num number of chars to clear
+   */
   public void clear(int num) {
     if (num > size) {
       throw new BadIndexException("Tried to clear "+num

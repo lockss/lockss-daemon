@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlTagFilter.java,v 1.6 2003-06-12 00:55:51 troberts Exp $
+ * $Id: HtmlTagFilter.java,v 1.7 2003-06-13 00:34:28 troberts Exp $
  */
 
 /*
@@ -43,21 +43,20 @@ import org.lockss.util.*;
 public class HtmlTagFilter extends Reader {
   /**
    * TODO
-   * 1)Check to see if we can inherit the 2 char array reads from another class
-   * 2)See how Mozilla handles nested comments
-   * 3)Use better string searching algorithm
+   * 1)See how Mozilla handles nested comments
+   * 2)Use better string searching algorithm
    */
+
+  public static final int DEFAULT_BUFFER_CAPACITY = 236;
 
 
   Reader reader = null;
   TagPair pair = null;
   CharRing charBuffer = null;
-//   Buffer charBuffer = null;
   int minBufferSize = 0;
-  int bufferCapacity = 256;
+  int bufferCapacity = DEFAULT_BUFFER_CAPACITY;
   char[] preBuffer = new char[bufferCapacity];
   boolean streamDone = false;
-  boolean withinIgnoredTag = false;
 
   private static Logger logger = Logger.getLogger("HtmlTagFilter");
 
@@ -82,7 +81,6 @@ public class HtmlTagFilter extends Reader {
     }
     this.pair = pair;
     minBufferSize = pair.getMaxTagLength();
-    logger.debug3("minBufferSize1: "+minBufferSize);
     bufferCapacity = Math.max(minBufferSize, bufferCapacity);
     charBuffer = new CharRing(bufferCapacity);
   }
@@ -115,35 +113,34 @@ public class HtmlTagFilter extends Reader {
     }
   }
 
-//   /**
-//    * Reads the next character.
-//    * @return next character or -1 if there is nothing left
-//    * @throws IOException if the reader it's constructed with throws
-//    */
-//   public int read() throws IOException {
-//     //read until the buffer is at capacity
-//     //or there's nothing more in the reader
+  /**
+   * Reads the next character.
+   * @return next character or -1 if there is nothing left
+   * @throws IOException if the reader it's constructed with throws
+   */
+  public int read() throws IOException {
+    if (charBuffer.size() < minBufferSize) {
+      refillBuffer(charBuffer, reader);
+    }
+    if (charBuffer.size() ==0 ) { 
+      logger.debug3("Read Returning -1, spot a");
+      return -1;
+    }
 
-//     //XXX do this more efficiently
-//     refillBuffer(charBuffer, reader);
-//     if (charBuffer.size() < 1) {
-//       logger.debug3("Read Returning -1, spot a");
-//       return -1;
-//     }
-
-//     if (startsWithTag(charBuffer, pair.getStart())) {
-//       readThroughTag(charBuffer, reader, pair);
-//     }
-//     if (charBuffer.size() == 0) {
-//       logger.debug3("Read Returning -1, spot b");
-//       return -1;
-//     }
-//     char returnChar = charBuffer.remove();
-//     if (logger.isDebug3()) {
-//       logger.debug3("Read returning "+returnChar);
-//     }
-//     return returnChar;
-//   }
+    if (startsWithTag(charBuffer, pair.start)) {
+      readThroughTag(charBuffer, reader, pair);
+    }
+    if (charBuffer.size() == 0) {
+      //ran out of stream while trying to read through a tag
+      logger.debug3("Read Returning -1, spot b");
+      return -1;
+    }
+    char returnChar = charBuffer.remove();
+    if (logger.isDebug3()) {
+      logger.debug3("Read returning "+returnChar);
+    }
+    return returnChar;
+  }
 
 
   private void refillBuffer(CharRing charBuffer, Reader reader) 
@@ -189,7 +186,7 @@ public class HtmlTagFilter extends Reader {
     int charPos = 0;
     while (ringArrayIdx < charBuffer.size()
 	   && charPos < tag.length()) {
-      char curChar = charBuffer.getNthChar(ringArrayIdx);
+      char curChar = charBuffer.get(ringArrayIdx);
       if (!charEqualsIgnoreCase(curChar, tag.charAt(charPos))) {
 	logger.debug3("It doesn't");
 	return false;
@@ -209,27 +206,34 @@ public class HtmlTagFilter extends Reader {
   private void readThroughTag(CharRing charBuffer, Reader reader,
 			      TagPair pair)
   throws IOException {
-    int tagNesting = 0;
+    int idx = pair.start.length();
+    int tagNesting = 1;
     if (logger.isDebug3()) {
       logger.debug3("reading through tag pair "+pair+" in "+charBuffer);
     }
-    do {
+    while (tagNesting > 0) {
       if (logger.isDebug3()) {
 	logger.debug3("tagNesting: "+tagNesting);
       }
-      if (startsWithTag(charBuffer, pair.getStart())) {
-	removeAndReplaceChars(charBuffer, reader, pair.getStart().length());
-	tagNesting++;
-      } else if (startsWithTag(charBuffer, pair.getEnd())) {
-	removeAndReplaceChars(charBuffer, reader, pair.getEnd().length());
-	tagNesting--;
-      } else {
-	removeAndReplaceChars(charBuffer, reader, 1);
+      if (idx == charBuffer.size()) {
+	charBuffer.clear(idx);
+	refillBuffer(charBuffer, reader);
+	idx = 0;
       }
       if (streamDone && charBuffer.size() == 0) {
 	return;
       }
-    } while (tagNesting > 0);
+      if (startsWithTag(charBuffer, idx, pair.start)) {
+	tagNesting++;
+	idx += pair.start.length();
+      } else if (startsWithTag(charBuffer, idx, pair.end)) {
+	tagNesting--;
+	idx += pair.end.length();
+      } else {
+	idx++;
+      }
+    } 
+    charBuffer.clear(idx);
   }
   
   private void removeAndReplaceChars(CharRing charBuffer,
@@ -272,7 +276,7 @@ public class HtmlTagFilter extends Reader {
       }
       int idx =0;
       while (!matchedTag && idx < numLeft && idx < charBuffer.size()) {
-	matchedTag = startsWithTag(charBuffer, idx, pair.getStart());
+	matchedTag = startsWithTag(charBuffer, idx, pair.start);
 	if (!matchedTag) {
 	  idx++;
 	}
@@ -284,7 +288,6 @@ public class HtmlTagFilter extends Reader {
       if (matchedTag) {
 	readThroughTag(charBuffer, reader, pair);
 	matchedTag = false;
-	System.err.println("rtt: "+charBuffer);
       }
     }
     int numRead = len - numLeft;
@@ -320,14 +323,6 @@ public class HtmlTagFilter extends Reader {
       this.end = end;
     }
 
-    public String getStart() {
-      return start;
-    }
-
-    public String getEnd() {
-      return end;
-    }
-
     int getMaxTagLength() {
       return Math.max(start.length(), end.length());
     }
@@ -346,7 +341,7 @@ public class HtmlTagFilter extends Reader {
 
     public boolean equals(Object obj) {
       TagPair pair = (TagPair) obj;
-      return (start.equals(pair.getStart()) && end.equals(pair.getEnd()));
+      return (start.equals(pair.start) && end.equals(pair.end));
     }
 
     public int hashCode() {
