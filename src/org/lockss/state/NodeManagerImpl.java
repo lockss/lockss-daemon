@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.68 2003-03-25 02:14:14 claire Exp $
+ * $Id: NodeManagerImpl.java,v 1.69 2003-03-26 23:39:39 claire Exp $
  */
 
 /*
@@ -143,7 +143,7 @@ public class NodeManagerImpl implements NodeManager {
     maxMapSize = config.getInt(PARAM_NODESTATE_MAP_SIZE, DEFAULT_MAP_SIZE);
   }
 
-  public boolean startPoll(CachedUrlSet cus, Poll.VoteTally state) {
+  public boolean startPoll(CachedUrlSet cus, PollTally state) {
     NodeState nodeState = getNodeState(cus);
     if (nodeState == null) {
       logger.error("Failed to find a valid node state for: " + cus);
@@ -163,7 +163,7 @@ public class NodeManagerImpl implements NodeManager {
     return true;
   }
 
-  public void updatePollResults(CachedUrlSet cus, Poll.VoteTally results) {
+  public void updatePollResults(CachedUrlSet cus, PollTally results) {
     NodeState state = getNodeState(cus);
     updateState(state, results);
   }
@@ -320,7 +320,7 @@ public class NodeManagerImpl implements NodeManager {
     return state;
   }
 
-  void updateState(NodeState state, Poll.VoteTally results) {
+  void updateState(NodeState state, PollTally results) {
     PollState pollState = getPollState(state, results);
     if (pollState == null) {
       logger.error("Results updated for a non-existent poll.");
@@ -351,7 +351,7 @@ public class NodeManagerImpl implements NodeManager {
     refreshInLRUMap(state);
   }
 
-  void handleContentPoll(PollState pollState, Poll.VoteTally results,
+  void handleContentPoll(PollState pollState, PollTally results,
                                  NodeState nodeState) {
     logger.debug("handling content poll results: " + results);
     if (results.didWinPoll()) {
@@ -392,7 +392,7 @@ public class NodeManagerImpl implements NodeManager {
     }
   }
 
-  void handleNamePoll(PollState pollState, Poll.VoteTally results,
+  void handleNamePoll(PollState pollState, PollTally results,
                               NodeState nodeState) {
     logger.debug2("handling name poll results " + results);
     if (results.didWinPoll()) {
@@ -524,7 +524,7 @@ public class NodeManagerImpl implements NodeManager {
     }
   }
 
-  private PollState getPollState(NodeState state, Poll.VoteTally results) {
+  private PollState getPollState(NodeState state, PollTally results) {
     Iterator polls = state.getActivePolls();
     while (polls.hasNext()) {
       PollState pollState = (PollState)polls.next();
@@ -553,7 +553,7 @@ public class NodeManagerImpl implements NodeManager {
     return PollState.ERR_UNDEFINED;
   }
 
-  private void markNodeForRepair(CachedUrlSet cus, Poll.VoteTally tally)
+  private void markNodeForRepair(CachedUrlSet cus, PollTally tally)
       throws IOException {
     logger.debug2("suspending poll " + tally.getPollKey());
     theDaemon.getPollManager().suspendPoll(tally.getPollKey());
@@ -570,7 +570,7 @@ public class NodeManagerImpl implements NodeManager {
   }
 
   private void callContentPollOnSubNodes(NodeState state,
-                                         Poll.VoteTally results)
+                                         PollTally results)
       throws IOException {
 
     Iterator children = results.getCachedUrlSet().flatSetIterator();
@@ -655,7 +655,7 @@ public class NodeManagerImpl implements NodeManager {
     return hasDamage;
   }
 
-  private void updateReputations(Poll.VoteTally results) {
+  private void updateReputations(PollTally results) {
     IdentityManager idManager = theDaemon.getIdentityManager();
     Iterator voteIt = results.getPollVotes().iterator();
     int agreeChange;

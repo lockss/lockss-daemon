@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.56 2003-03-25 02:14:14 claire Exp $
+* $Id: PollManager.java,v 1.57 2003-03-26 23:39:39 claire Exp $
  */
 
 /*
@@ -929,7 +929,7 @@ public class PollManager  implements LockssManager {
 
     public List getRows(String key) throws StatusService.NoSuchTableException {
       Poll poll = getPoll(key);
-      Poll.VoteTally tally = poll.getVoteTally();
+      PollTally tally = poll.getVoteTally();
 
       ArrayList l = new ArrayList();
       Iterator it = tally.pollVotes.iterator();

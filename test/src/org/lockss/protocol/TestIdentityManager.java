@@ -55,13 +55,8 @@ public class TestIdentityManager extends LockssTestCase {
 
   /** test for method getIdentity(..) */
   public void testFindIdentity() {
-    try {
-      assertNotNull(fakeId);
-      assertEquals(fakeId, idmgr.findIdentity(fakeId.getAddress()));
-    }
-    catch (UnknownHostException ex) {
-      fail("Invalid host:" + fakeId);
-    }
+    assertNotNull(fakeId);
+    assertEquals(fakeId, idmgr.findIdentity(fakeId.getAddress()));
   }
 
   /** test for method findIdentity(..) */

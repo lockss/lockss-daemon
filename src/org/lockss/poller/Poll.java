@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.57 2003-03-25 02:14:14 claire Exp $
+* $Id: Poll.java,v 1.58 2003-03-26 23:39:39 claire Exp $
  */
 
 /*
@@ -108,7 +108,7 @@ public abstract class Poll implements Serializable {
   int m_pollstate;         // one of state constants above
   int m_pendingVotes = 0;      // the number of votes waiting to be tallied
 
-  VoteTally m_tally;       // the vote tallier
+  PollTally m_tally;       // the vote tallier
   PollManager m_pollmanager; // the pollmanager which should be used by this poll.
   IdentityManager idMgr;
 
@@ -132,7 +132,6 @@ public abstract class Poll implements Serializable {
     m_pollspec = pollspec;
     m_urlSet = pm.getDaemon().getPluginManager().findCachedUrlSet(pollspec);
     m_createTime = TimeBase.nowMs();
-    m_tally = new VoteTally(-1, msg.getDuration());
 
     // now copy the msg elements we need
     m_arcUnit = m_urlSet.getArchivalUnit();
@@ -142,6 +141,10 @@ public abstract class Poll implements Serializable {
     m_verifier = m_pollmanager.makeVerifier();
     m_caller = idMgr.findIdentity(msg.getOriginAddr());
     m_key = msg.getKey();
+
+    // make a new vote tally
+    m_tally = new PollTally(this, -1, m_createTime, msg.getDuration(),
+                            pm.getQuorum(), msg.getHashAlgorithm());
     m_pollstate = PS_INITING;
   }
 
@@ -163,6 +166,13 @@ public abstract class Poll implements Serializable {
     return sb.toString();
   }
 
+  /**
+   * Returns true if the poll belongs to this Identity
+   * @return true if  we called the poll
+   */
+  public boolean isMyPoll() {
+    return idMgr.isLocalIdentity(m_caller);
+  }
 
   abstract void receiveMessage(LcapMessage msg);
 
@@ -206,7 +216,8 @@ public abstract class Poll implements Serializable {
               vote.getHashString());
 
     boolean agree = vote.setAgreeWithHash(hashResult);
-    m_tally.addVote(vote);
+    LcapIdentity id = idMgr.findIdentity(vote.getIDAddress());
+    m_tally.addVote(vote, id, idMgr.isLocalIdentity(id));
 
     if(!idMgr.isLocalIdentity(vote.getIDAddress())) {
       randomVerify(vote, agree);
@@ -339,6 +350,22 @@ public abstract class Poll implements Serializable {
     log.debug3("Number pending votes = " + m_pendingVotes);
   }
 
+  /**
+   * replay a previously checked vote
+   * @param vote the vote to recheck
+   * @param deadline the deadline by which the check must complete
+   */
+
+  void replayVoteCheck(Vote vote, Deadline deadline) {
+    MessageDigest hasher = getInitedHasher(vote.getChallenge(),
+        vote.getVerifier());
+
+    if(!scheduleHash(hasher, deadline, new Vote(vote),
+                     new ReplayVoteCallback())) {
+      m_pollstate = ERR_SCHEDULE_HASH;
+      log.debug("couldn't schedule hash - stopping replay poll");
+    }
+  }
 
   /**
    * are there too many votes waiting to be tallied
@@ -360,7 +387,7 @@ public abstract class Poll implements Serializable {
    * get the message used to define this Poll
    * @return <code>Message</code>
    */
-  LcapMessage getMessage() {
+  public LcapMessage getMessage() {
     return m_msg;
   }
 
@@ -368,7 +395,7 @@ public abstract class Poll implements Serializable {
    * get the VoteTally for this Poll
    * @return VoteTally for this poll
    */
-  public VoteTally getVoteTally() {
+  public PollTally getVoteTally() {
     return m_tally;
   }
 
@@ -458,34 +485,6 @@ public abstract class Poll implements Serializable {
     }
   }
 
-  class ReplayVoteCallback implements HashService.Callback {
-    /**
-     * Called to indicate that hashing the content or names of a
-     * <code>CachedUrlSet</code> object has succeeded, if <code>e</code>
-     * is null,  or has failed otherwise.
-     * @param urlset  the <code>CachedUrlSet</code> being hashed.
-     * @param cookie  used to disambiguate callbacks.
-     * @param hasher  the <code>MessageDigest</code> object that
-     *                contains the hash.
-     * @param e       the exception that caused the hash to fail.
-     */
-    public void hashingFinished(CachedUrlSet urlset,
-                                Object cookie,
-                                MessageDigest hasher,
-                                Exception e) {
-      boolean hash_completed = e == null ? true : false;
-
-      if(hash_completed)  {
-        Vote v = (Vote)cookie;
-        v.setAgreeWithHash(hasher.digest());
-        m_tally.addVote(v);
-        m_tally.replayNextVote();
-      }
-      else {
-        log.info("replay vote hash failed with exception:" + e.getMessage());
-      }
-    }
-  }
 
   class VoteTimerCallback implements TimerQueue.Callback {
     /**
@@ -515,245 +514,34 @@ public abstract class Poll implements Serializable {
     }
   }
 
-
-  /**
-   * VoteTally is a struct-like class which maintains the current state of
-   * votes within a poll.
-   */
-  public class VoteTally {
-    int type;
-    long startTime;
-    long duration;
-    int numAgree;     // The # of votes that agree with us
-    int numDisagree;  // The # of votes that disagree with us
-    int wtAgree;      // The weight of the votes that agree with us
-    int wtDisagree;   // The weight of the votes that disagree with us
-    int quorum;       // The # of votes needed to have a quorum
-    ArrayList pollVotes;
-    String hashAlgorithm; // the algorithm used to hash this poll
-
-    Object[] localEntries = null;  // the local entries less the remaining RegExp
-    Object[] votedEntries = null;  // entries which match the won votes in a poll
-    private Deadline replayDeadline = null;
-    private Iterator replayIter = null;
-    private ArrayList originalVotes = null;
-
-    VoteTally(int type, long startTime, long duration, int numAgree,
-              int numDisagree, int wtAgree, int wtDisagree) {
-      this.type = type;
-      this.startTime = startTime;
-      this.duration = duration;
-      this.numAgree = numAgree;
-      this.numDisagree = numDisagree;
-      this.wtAgree = wtAgree;
-      this.wtDisagree = wtDisagree;
-      quorum = m_pollmanager.getQuorum();
-      pollVotes = new ArrayList(quorum * 2);
-      hashAlgorithm = m_msg.getHashAlgorithm();
-    }
-
-    VoteTally(int type, long duration) {
-      this(type, m_createTime, duration, 0, 0, 0, 0);
-    }
-
-    public String toString() {
-      StringBuffer sbuf = new StringBuffer();
-      sbuf.append("[Tally:");
-      sbuf.append(" type:" + type);
-      sbuf.append("-(" + m_key);
-      sbuf.append(") agree:" + numAgree);
-      sbuf.append("-wt-" + wtAgree);
-      sbuf.append(" disagree:" + numDisagree);
-      sbuf.append("-wt-" + wtDisagree);
-      sbuf.append(" quorum:" + quorum);
-      sbuf.append("]");
-      return sbuf.toString();
-    }
-
+  class ReplayVoteCallback implements HashService.Callback {
     /**
-     * did we win or lose the last poll.
-     * @return true iff only if number of agree votes exceeds the number of
-     * disagree votes and the reputation of the ids we agreed with >= with those
-     * we disagreed with. false if we had and error or disagree votes exceed
-     * agree votes.
+     * Called to indicate that hashing the content or names of a
+     * <code>CachedUrlSet</code> object has succeeded, if <code>e</code>
+     * is null,  or has failed otherwise.
+     * @param urlset  the <code>CachedUrlSet</code> being hashed.
+     * @param cookie  used to disambiguate callbacks.
+     * @param hasher  the <code>MessageDigest</code> object that
+     *                contains the hash.
+     * @param e       the exception that caused the hash to fail.
      */
-    public boolean didWinPoll() {
-      if(!isErrorState()) {
-        return (numAgree > numDisagree) && (wtAgree >= wtDisagree);
-      }
-      return false;
-    }
+    public void hashingFinished(CachedUrlSet urlset,
+                                Object cookie,
+                                MessageDigest hasher,
+                                Exception e) {
+      boolean hash_completed = e == null ? true : false;
 
-    /**
-     * return the unique key for the poll for this tally
-     * @return a String representing the key
-     */
-    public String getPollKey() {
-      return m_key;
-    }
-
-    /**
-     * Returns true if the poll belongs to this Identity
-     * @return true if this Identity
-     */
-    public boolean isMyPoll() {
-      return idMgr.isLocalIdentity(m_msg.getOriginAddr());
-    }
-
-    /**
-     * Return the poll spec used by this poll
-     * @return the PollSpec
-     */
-    public PollSpec getPollSpec() {
-      return m_pollspec;
-    }
-
-    public CachedUrlSet getCachedUrlSet() {
-      return m_urlSet;
-    }
-
-    /**
-     * Returns poll type constant - one of Poll.NamePoll, Poll.ContentPoll,
-     * Poll.VerifyPoll
-     * @return integer constant for this poll
-     */
-    public int getType() {
-      return type;
-    }
-
-    /**
-     * returns the poll start time
-     * @return start time as a long
-     */
-    public long getStartTime() {
-      return startTime;
-    }
-
-    /**
-     * returns the poll duration
-     * @return the duration as a long
-     */
-    public long getDuration() {
-      return duration;
-    }
-
-    /**
-     * return the votes cast in this poll
-     * @return the list of votes
-     */
-
-    public List getPollVotes() {
-      return Collections.unmodifiableList(pollVotes);
-    }
-
-    /**
-     * return an interator for the set of entries tallied during the vote
-     * @return the completed list of entries
-     */
-    public Iterator getCorrectEntries() {
-      return votedEntries == null ? null : new ArrayIterator(votedEntries);
-    }
-
-    public Iterator getLocalEntries() {
-      return localEntries == null ? null : new ArrayIterator(localEntries);
-    }
-
-    /**
-     * get the error state for this poll
-     * @return 0 == NOERR or one of the poll err conditions
-     */
-    public int getErr() {
-      if(isErrorState()) {
-        return m_pollstate;
-      }
-      return 0;
-    }
-
-    /**
-     * replay all of the votes in a previously held poll.
-     * @param deadline the deadline by which the replay must be complete
-     */
-    public void startReplay(Deadline deadline) {
-      originalVotes = pollVotes;
-      pollVotes = new ArrayList(originalVotes.size());
-      replayIter =  originalVotes.iterator();
-      replayDeadline = deadline;
-      replayNextVote();
-    }
-
-    void replayNextVote() {
-      if(replayIter == null) {
-        log.warning("Call to replay a poll vote without call to replay all");
-      }
-      if(isErrorState() || !replayIter.hasNext()) {
-        replayDeadline = null;
-        replayIter = null;
-        if(isErrorState()) {
-          // restore the original votes
-          pollVotes = originalVotes;
-        }
-        originalVotes = null;
-        NodeManager nm = m_pollmanager.getDaemon().getNodeManager(m_arcUnit);
-        log.debug("sending NodeManager replay results " + m_tally);
-        nm.updatePollResults(m_urlSet, m_tally);
+      if(hash_completed)  {
+        Vote v = (Vote)cookie;
+        v.setAgreeWithHash(hasher.digest());
+        LcapIdentity id = idMgr.findIdentity(v.getIDAddress());
+        m_tally.addVote(v, id, idMgr.isLocalIdentity(id));
+        m_tally.replayNextVote();
       }
       else {
-        Vote vote = (Vote)replayIter.next();
-        MessageDigest hasher = getInitedHasher(vote.getChallenge(),
-            vote.getVerifier());
-
-        if(!scheduleHash(hasher, replayDeadline,new Vote(vote),
-                         new ReplayVoteCallback())) {
-          m_pollstate = ERR_SCHEDULE_HASH;
-          log.debug("couldn't schedule hash - stopping replay poll");
-        }
+        log.info("replay vote hash failed with exception:" + e.getMessage());
       }
-    }
-
-    boolean isLeadEnough() {
-      return (numAgree - numDisagree) > quorum;
-    }
-
-    boolean haveQuorum() {
-      return numAgree + numDisagree >= quorum;
-    }
-
-    boolean hasVoted(LcapIdentity voterID) {
-      Iterator it = pollVotes.iterator();
-      while(it.hasNext()) {
-        LcapIdentity id = (LcapIdentity) it.next();
-        if(id.isEqual(voterID))
-          return true;
-      }
-      return false;
-    }
-
-    void addVote(Vote vote) {
-      LcapIdentity id = idMgr.findIdentity(vote.getIDAddress());
-
-      int weight = id.getReputation();
-
-      synchronized (this) {
-        if(vote.isAgreeVote()) {
-          numAgree++;
-          wtAgree += weight;
-          log.debug("I agree with " + vote + " rep " + weight);
-        }
-        else {
-          numDisagree++;
-          wtDisagree += weight;
-          if (idMgr.isLocalIdentity(id)) {
-            log.error("I disagree with myself about " + vote + " rep " + weight);
-          }
-          else {
-            log.debug("I disagree with " + vote + " rep " + weight);
-          }
-
-        }
-      }
-      pollVotes.add(vote);
     }
   }
-
 
 }

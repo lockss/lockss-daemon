@@ -184,9 +184,10 @@ public class TestPoll extends LockssTestCase {
   public void testTally() {
     Poll p = testpolls[0];
     LcapMessage msg = p.getMessage();
-    p.m_tally.addVote(new Vote(msg, false));
-    p.m_tally.addVote(new Vote(msg, false));
-    p.m_tally.addVote(new Vote(msg, false));
+    LcapIdentity id = idmgr.findIdentity(msg.getOriginAddr());
+    p.m_tally.addVote(new Vote(msg, false), id, false);
+    p.m_tally.addVote(new Vote(msg, false), id, false);
+    p.m_tally.addVote(new Vote(msg, false), id, false);
     assertEquals(0, p.m_tally.numAgree);
     assertEquals(0, p.m_tally.wtAgree);
     assertEquals(3, p.m_tally.numDisagree);
@@ -194,9 +195,9 @@ public class TestPoll extends LockssTestCase {
 
     p = testpolls[1];
     msg = p.getMessage();
-    p.m_tally.addVote(new Vote(msg, true));
-    p.m_tally.addVote(new Vote(msg, true));
-    p.m_tally.addVote(new Vote(msg, true));
+    p.m_tally.addVote(new Vote(msg, true), id, false);
+    p.m_tally.addVote(new Vote(msg, true), id, false);
+    p.m_tally.addVote(new Vote(msg, true), id, false);
     assertEquals(3, p.m_tally.numAgree);
     assertEquals(1500, p.m_tally.wtAgree);
     assertEquals(0, p.m_tally.numDisagree);
@@ -353,21 +354,26 @@ public class TestPoll extends LockssTestCase {
     }
 
     // add our vote
-    np.m_tally.addVote(np.makeVote(np.getMessage(), true));
+    LcapMessage msg = np.getMessage();
+    LcapIdentity id = idmgr.findIdentity(msg.getOriginAddr());
+    np.m_tally.addVote(np.makeVote(msg, true), id, true);
 
     // add the agree votes
+    id =idmgr.findIdentity(agree_msg.getOriginAddr());
     for(int i = 0; i < numAgree; i++) {
-      np.m_tally.addVote(np.makeVote(agree_msg, true));
+      np.m_tally.addVote(np.makeVote(agree_msg, true), id, false);
     }
 
     // add the disagree votes
+    id =idmgr.findIdentity(disagree_msg1.getOriginAddr());
     for(int i = 0; i < numDisagree; i++) {
-      np.m_tally.addVote(np.makeVote(disagree_msg1, false));
+      np.m_tally.addVote(np.makeVote(disagree_msg1, false), id , false);
     }
 
     // add dissenting disagree vote
+    id =idmgr.findIdentity(disagree_msg2.getOriginAddr());
     for(int i = 0; i < numDissenting; i++) {
-      np.m_tally.addVote(np.makeVote(disagree_msg2, false));
+      np.m_tally.addVote(np.makeVote(disagree_msg2, false), id, false);
     }
 
     return np;

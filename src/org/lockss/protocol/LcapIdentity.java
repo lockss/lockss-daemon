@@ -1,5 +1,5 @@
 /*
- * $Id: LcapIdentity.java,v 1.12 2003-02-20 00:57:28 claire Exp $
+ * $Id: LcapIdentity.java,v 1.13 2003-03-26 23:39:39 claire Exp $
  */
 
 /*
@@ -52,7 +52,7 @@ public class LcapIdentity implements Serializable {
   transient long m_lastActiveTime = 0;
   transient long m_lastOpTime = 0;
   transient long m_incrPackets = 0;   // Total packets arrived this interval
-  transient long m_origPackets = 0;   // Unique pkts from this indentity this interval
+  transient long m_origPackets = 0;   // Unique pkts from this identity this interval
   transient long m_forwPackets = 0;   // Unique pkts forwarded by this identity this interval
   transient long m_duplPackets = 0;   // Duplicate packets originated by this identity
   transient long m_totalPackets = 0;
@@ -92,12 +92,8 @@ public class LcapIdentity implements Serializable {
   /**
    * return the address of the Identity
    * @return the <code>InetAddress<\code> for this Identity
-   * @throws UnknownHostException
    */
-  public InetAddress getAddress() throws UnknownHostException {
-    if(m_address == null) {
-      m_address = stringToAddr(m_idKey);
-    }
+  public InetAddress getAddress() {
     return m_address;
   }
 
@@ -219,8 +215,12 @@ public class LcapIdentity implements Serializable {
     return ret;
   }
 
-  public static InetAddress stringToAddr(String addr) throws UnknownHostException {
+  public static InetAddress stringToAddr(String addr)
+      throws UnknownHostException {
     InetAddress ret = InetAddress.getByName(addr);
+    if(ret == null) {
+      throw new UnknownHostException("Unable to get address: " + addr);
+    }
     return ret;
   }
 

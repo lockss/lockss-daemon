@@ -1,5 +1,5 @@
 /*
-* $Id: VerifyPoll.java,v 1.33 2003-03-01 00:01:51 claire Exp $
+* $Id: VerifyPoll.java,v 1.34 2003-03-26 23:39:39 claire Exp $
  */
 
 /*
@@ -143,7 +143,8 @@ class VerifyPoll extends Poll {
 
 
   private void performHash(LcapMessage msg) {
-    int weight = idMgr.findIdentity(msg.getOriginAddr()).getReputation();
+    LcapIdentity id = idMgr.findIdentity(msg.getOriginAddr());
+    int weight = id.getReputation();
     byte[] challenge = msg.getChallenge();
     byte[] hashed = msg.getHashed();
     MessageDigest hasher = m_pollmanager.getHasher(msg);
@@ -154,7 +155,8 @@ class VerifyPoll extends Poll {
     hasher.update(hashed, 0, hashed.length);
     byte[] HofHashed = hasher.digest();
     boolean agree = Arrays.equals(challenge, HofHashed);
-    m_tally.addVote(new Vote(msg, agree));
+    m_tally.addVote(new Vote(msg, agree),
+                    id, idMgr.isLocalIdentity(id));
   }
 
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.49 2003-03-24 23:52:24 aalto Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.50 2003-03-26 23:39:39 claire Exp $
  */
 
 /*
@@ -273,7 +273,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
 
   public void testStartPoll() throws Exception {
     contentPoll = createPoll(TEST_URL, true, false, 10, 5);
-    Poll.VoteTally results = contentPoll.getVoteTally();
+    PollTally results = contentPoll.getVoteTally();
     // let's generate some history
     CachedUrlSet cus = results.getCachedUrlSet();
     Vector subFiles = new Vector(2);
@@ -301,7 +301,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
 
   public void testHandleContentPoll() throws Exception {
     contentPoll = createPoll(TEST_URL, true, true, 10, 5);
-    Poll.VoteTally results = contentPoll.getVoteTally();
+    PollTally results = contentPoll.getVoteTally();
     PollSpec spec = results.getPollSpec();
 
     NodeState nodeState = nodeManager.getNodeState(getCUS(mau, TEST_URL));
@@ -383,7 +383,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
 
   public void testHandleNamePoll() throws Exception {
     namePoll = createPoll(TEST_URL + "/branch2", false, true, 10, 5);
-    Poll.VoteTally results = namePoll.getVoteTally();
+    PollTally results = namePoll.getVoteTally();
     PollSpec spec = results.getPollSpec();
     NodeState nodeState =
       nodeManager.getNodeState(getCUS(mau, TEST_URL + "/branch2"));
@@ -453,7 +453,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
 
     // test that a finished top-level poll sets the time right
     contentPoll = createPoll(auUrl, true, true, 10, 5);
-    Poll.VoteTally results = contentPoll.getVoteTally();
+    PollTally results = contentPoll.getVoteTally();
     PollSpec spec = results.getPollSpec();
 
     AuState auState = nodeManager.getAuState();
@@ -533,7 +533,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     }
   }
 
-  private void reputationChangeTest(Poll.VoteTally results) {
+  private void reputationChangeTest(PollTally results) {
     Iterator voteIt = results.getPollVotes().iterator();
     MockIdentityManager idManager =
         (MockIdentityManager) theDaemon.getIdentityManager();

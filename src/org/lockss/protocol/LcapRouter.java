@@ -1,5 +1,5 @@
 /*
- * $Id: LcapRouter.java,v 1.4 2003-03-26 23:14:35 tal Exp $
+ * $Id: LcapRouter.java,v 1.5 2003-03-26 23:39:39 claire Exp $
  */
 
 /*
@@ -314,7 +314,7 @@ public class LcapRouter extends BaseLockssManager {
 	  return true;
 	}
       }
-    }      
+    }
     return false;
   }
 
@@ -353,12 +353,7 @@ public class LcapRouter extends BaseLockssManager {
   }
 
   InetAddress getLocalIdentityAddr() {
-    try {
-      return idMgr.getLocalIdentity().getAddress();
-    } catch (UnknownHostException e) {
-      // can't happen
-      return null;
-    }
+    return idMgr.getLocalIdentity().getAddress();
   }
 
   private BeaconThread beaconThread;

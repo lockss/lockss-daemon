@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManager.java,v 1.14 2003-03-21 23:55:26 claire Exp $
+ * $Id: NodeManager.java,v 1.15 2003-03-26 23:39:39 claire Exp $
  */
 
 /*
@@ -51,14 +51,14 @@ public interface NodeManager extends LockssManager {
    * @returns false if the poll has no matching node state or
    * the poll would include damaged content.
    */
-  public boolean startPoll(CachedUrlSet cus, Poll.VoteTally state);
+  public boolean startPoll(CachedUrlSet cus, PollTally state);
 
   /**
    * Update a node state with current poll results
    * @param cus the cached url set used to identify the node
    * @param results the poll results
    */
-  public void updatePollResults(CachedUrlSet cus, Poll.VoteTally results);
+  public void updatePollResults(CachedUrlSet cus, PollTally results);
 
   /**
    * Return the node represented by a given CachedUrlSet

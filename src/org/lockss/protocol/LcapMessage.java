@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessage.java,v 1.27 2003-03-22 03:04:44 tal Exp $
+ * $Id: LcapMessage.java,v 1.28 2003-03-26 23:39:39 claire Exp $
  */
 
 /*
@@ -54,6 +54,7 @@ public class LcapMessage
   public static final int CONTENT_POLL_REP = 3;
   public static final int VERIFY_POLL_REQ = 4;
   public static final int VERIFY_POLL_REP = 5;
+  public static final int NO_OP = -1;
 
   public static final String PARAM_HASH_ALGORITHM = Configuration.PREFIX +
       "protocol.hashAlgorithm";
@@ -63,7 +64,7 @@ public class LcapMessage
   public static final String[] POLL_OPCODES = {
       "NameReq", "NameRep",
       "ContentReq", "ContentRep",
-      "VerifyReq", "VerifyRep"};
+      "VerifyReq", "VerifyRep" };
 
   public static final String[] POLL_NAMES = {
       "NamePoll", "ContentPoll", "VerfiyPoll"};
@@ -222,6 +223,17 @@ public class LcapMessage
    */
   protected void setMsgProperty(String key, String value) {
     m_props.setProperty(key, value);
+  }
+
+  static public LcapMessage makeNoOpMsg(LcapIdentity originID) throws
+      IOException {
+    LcapMessage msg = new LcapMessage();
+    if (msg != null) {
+      msg.m_originAddr = originID.getAddress();
+      msg.m_opcode = NO_OP;
+      msg.m_hopCount = 0;
+    }
+    return msg;
   }
 
   /**
@@ -396,6 +408,11 @@ public class LcapMessage
       throw new ProtocolException("encode - null origin host address.");
     }
 
+    if(m_opcode == NO_OP) {
+      m_props.putInt("opcode", m_opcode);
+      return wrapPacket();
+    }
+
     m_props.setProperty("hashAlgorithm", m_hashAlgorithm);
     m_props.putInt("ttl", m_ttl);
     m_props.putInt("duration", (int) (getDuration() / 1000));
@@ -442,22 +459,9 @@ public class LcapMessage
     if (m_uprRem != null) {
       m_props.setProperty("uprRem", m_uprRem);
     }
-
-    byte[] prop_bytes = m_props.encode();
-    byte[] hash_bytes = computeHash(prop_bytes);
-
-    // build out the remaining packet
-    int enc_len = prop_bytes.length + hash_bytes.length + 8;
-    ByteArrayOutputStream baos = new ByteArrayOutputStream(enc_len);
-    DataOutputStream dos = new DataOutputStream(baos);
-    dos.write(signature);
-    dos.writeBoolean(m_multicast);
-    dos.writeByte(m_hopCount);
-    dos.writeShort(prop_bytes.length);
-    dos.write(hash_bytes);
-    dos.write(prop_bytes);
-    return baos.toByteArray();
+    return wrapPacket();
   }
+
 
   public long getDuration() {
     long now = TimeBase.nowMs();
@@ -489,6 +493,10 @@ public class LcapMessage
 
   public boolean isVerifyPoll() {
     return m_opcode == VERIFY_POLL_REQ || m_opcode == VERIFY_POLL_REP;
+  }
+
+  public boolean isNoOp() {
+    return m_opcode == NO_OP;
   }
 
   /* methods to support data access */
@@ -661,6 +669,24 @@ public class LcapMessage
     if (hopCount < 0 || hopCount > MAX_MAX_HOP_COUNT)
       return false;
     return true;
+  }
+
+  private byte[] wrapPacket() throws IOException {
+    byte[] prop_bytes = m_props.encode();
+    byte[] hash_bytes = computeHash(prop_bytes);
+
+    // build out the remaining packet
+    int enc_len = prop_bytes.length + hash_bytes.length + 8;
+    ByteArrayOutputStream baos = new ByteArrayOutputStream(enc_len);
+    DataOutputStream dos = new DataOutputStream(baos);
+    dos.write(signature);
+    dos.writeBoolean(m_multicast);
+    dos.writeByte(m_hopCount);
+    dos.writeShort(prop_bytes.length);
+    dos.write(hash_bytes);
+    dos.write(prop_bytes);
+
+    return baos.toByteArray();
   }
 
   private static boolean verifyHash(byte[] hashValue, byte[] data) {
