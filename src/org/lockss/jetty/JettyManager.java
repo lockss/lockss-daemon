@@ -1,5 +1,5 @@
 /*
- * $Id: JettyManager.java,v 1.17 2004-10-18 03:37:19 tlipkis Exp $
+ * $Id: JettyManager.java,v 1.18 2005-01-26 01:08:30 tlipkis Exp $
  */
 
 /*
@@ -66,7 +66,7 @@ public abstract class JettyManager
   private String prioParam;
 
   private static Logger log = Logger.getLogger("JettyMgr");
-  private static boolean jettyLogInited = false;
+  private static boolean isJettyInited = false;
 
   protected ResourceManager resourceMgr;
   // Used as token in resource reservations, and in messages
@@ -94,23 +94,26 @@ public abstract class JettyManager
   public void startService() {
     super.startService();
     resourceMgr = getApp().getResourceManager();
-    installJettyLog();
+    oneTimeJettySetup();
     resetConfig();
   }
 
   // synchronized on class
-  private static synchronized void installJettyLog() {
+  private static synchronized void oneTimeJettySetup() {
     // install Jetty logger once only
-    if (!jettyLogInited) {
+    if (!isJettyInited) {
       org.mortbay.util.Log.instance().add(new LoggerLogSink());
-      jettyLogInited = true;
+      // Tell Jetty to allow symbolic links in file resources
+      System.setProperty("org.mortbay.util.FileResource.checkAliases",
+			 "false");
+      isJettyInited = true;
     }
   }
 
   // Set Jetty debug properties from config params
   public void setConfig(Configuration config, Configuration prevConfig,
 			Configuration.Differences changedKeys) {
-    if (jettyLogInited) {
+    if (isJettyInited) {
       if (changedKeys.contains(PARAM_JETTY_DEBUG)) {
 	boolean deb = config.getBoolean(PARAM_JETTY_DEBUG, 
 					DEFAULT_JETTY_DEBUG);
