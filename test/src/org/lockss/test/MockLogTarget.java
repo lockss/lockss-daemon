@@ -1,5 +1,5 @@
 /*
- * $Id: MockLogTarget.java,v 1.2 2002-08-31 07:00:20 tal Exp $
+ * $Id: MockLogTarget.java,v 1.3 2002-09-09 20:31:55 tal Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.util.*;
  */
 
 public class MockLogTarget implements LogTarget{
+  static Logger log = Logger.getLogger("Mock log target");
   Vector messages;
   
   public MockLogTarget(){
@@ -56,6 +57,10 @@ public class MockLogTarget implements LogTarget{
     sb.append(": ");
     sb.append(message);
     messages.add(sb.toString());
+    if (Logger.LEVEL_DEBUG == msgLevel) {
+      System.err.println("Recursive log call; should only happen once.");
+      log.debug("This is a recursive log message which should not be logged");
+    }
   }
 
   public Iterator messageIterator() {
