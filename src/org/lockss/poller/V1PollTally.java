@@ -1,5 +1,5 @@
 /*
- * $Id: V1PollTally.java,v 1.10 2004-08-09 23:54:04 clairegriffin Exp $
+ * $Id: V1PollTally.java,v 1.10.2.1 2004-10-19 17:19:31 clairegriffin Exp $
  */
 
 /*
@@ -196,6 +196,7 @@ public class V1PollTally extends PollTally {
 		" status " + result);
     if((type == Poll.NAME_POLL) && (result != RESULT_WON)) {
       log.debug2("lost a name poll, building poll list");
+      ((V1NamePoll)poll).m_entries = null;
       ((V1NamePoll)poll).buildPollLists(pollVotes.iterator());
       log.debug3("V1PollTally.tallyVotes() 5");
     }
