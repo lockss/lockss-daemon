@@ -1,5 +1,5 @@
 /*
- * $Id: TestCollectionUtil.java,v 1.6 2003-06-20 22:34:56 claire Exp $
+ * $Id: TestCollectionUtil.java,v 1.7 2003-11-03 18:14:08 tlipkis Exp $
  */
 
 /*
@@ -63,6 +63,24 @@ public class TestCollectionUtil extends TestCase {
       fail("remove() should throw UnsupportedOperationException");
     } catch (UnsupportedOperationException e) {
     }
+  }
+
+  public void testIsDisjoint() {
+    // empty sets are disjoint, as intersection is empty
+    assertTrue(CollectionUtil.isDisjoint(Collections.EMPTY_LIST,
+					 Collections.EMPTY_LIST));
+    assertTrue(CollectionUtil.isDisjoint(ListUtil.list("1"),
+					 Collections.EMPTY_LIST));
+    assertFalse(CollectionUtil.isDisjoint(ListUtil.list("1"),
+					  ListUtil.list("1")));
+    assertFalse(CollectionUtil.isDisjoint(ListUtil.list("1", "2"),
+					  ListUtil.list("1", "2")));
+    assertFalse(CollectionUtil.isDisjoint(ListUtil.list("1", "2"),
+					  ListUtil.list("2", "3")));
+    assertTrue(CollectionUtil.isDisjoint(ListUtil.list("1"),
+					 ListUtil.list("2")));
+    assertTrue(CollectionUtil.isDisjoint(ListUtil.list("1", "2"),
+					  ListUtil.list("3", "4")));
   }
 
   public void testIsoIter() {

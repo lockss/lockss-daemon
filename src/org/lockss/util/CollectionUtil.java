@@ -1,5 +1,5 @@
 /*
- * $Id: CollectionUtil.java,v 1.6 2003-06-20 22:34:53 claire Exp $
+ * $Id: CollectionUtil.java,v 1.7 2003-11-03 18:14:08 tlipkis Exp $
  */
 
 /*
@@ -42,6 +42,11 @@ public class CollectionUtil {
   // Somewhat convoluted way to achieve the above behavior.
   public static final Iterator EMPTY_ITERATOR =
     Collections.unmodifiableList(Collections.EMPTY_LIST).iterator();
+
+  /** Return true iff the two Collections are disjoint */
+  public static boolean isDisjoint(Collection a, Collection b) {
+    return !org.apache.commons.collections.CollectionUtils.containsAny(a, b);
+  }
 
   /** Return true iff the two iterators enumerate collections of the same
    * size, whose elements are pairwise equal.  The collections need not be of
