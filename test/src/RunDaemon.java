@@ -1,5 +1,5 @@
 /*
- * $Id: RunDaemon.java,v 1.39 2003-09-26 23:52:47 eaalto Exp $
+ * $Id: RunDaemon.java,v 1.40 2004-01-31 22:59:29 tlipkis Exp $
  */
 
 /*
@@ -152,7 +152,7 @@ public class RunDaemon
     String lwrBound = Configuration.getParam(PARAM_PS_LWRBND);
     String uprBound = Configuration.getParam(PARAM_PS_UPRBND);
 
-    PollSpec spec = new PollSpec(auId, url,lwrBound,uprBound, null);
+    PollSpec spec = new MockPollSpec(auId, url, lwrBound, uprBound, null);
 
     CachedUrlSet cus = getPluginManager().findCachedUrlSet(spec);
     try {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.104 2004-01-29 01:46:24 eaalto Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.105 2004-01-31 23:02:14 tlipkis Exp $
  */
 
 /*
@@ -1186,8 +1186,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     try {
 
       testmsg = LcapMessage.makeRequestMsg(
-          new PollSpec(mau.getAuId(),
-                       url, lwrBound, uprBound, null),
+          new MockPollSpec(mau, url, lwrBound, uprBound),
           null,
           bytes,
           bytes,
