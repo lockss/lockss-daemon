@@ -91,6 +91,8 @@
 	<value>edu.columbia.plugin.JiwsPlugin</value>
 	<value>edu.nyu.plugin.LeedsICSPlugin</value>
 	<value>edu.jhu.library.plugin.MedievalForumPlugin</value>
+	<value>edu.princeton.plugin.ncaw.19thCenturyArtWorldwidePlugin</value>
+	<value>org.lockss.plugin.msr.MSRPlugin</value>
       </list>
     </property>
 
@@ -3943,9 +3945,73 @@
 	</property>
       </property>
       
+      <property name="19thCAWW1">
+	<property name="title" value="19th Century Art Worldwide Volume 1" />
+	<property name="estSize" value="0.7MB" />
+	<property name="journalTitle" value="19th Century Art Worldwide" />
+	<property name="plugin" value="edu.princeton.plugin.ncaw.19thCenturyArtWorldwidePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://19thc-artworldwide.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="1" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="year" />
+	  <property name="value" value="2002" />
+	</property>
+      </property>
+
+      <property name="nsr1">
+	<property name="title" value="MRS Internet Journal of Nitride Semiconductor Research Volume 1" />
+	<property name="estSize" value="" />
+	<property name="journalTitle" value="MRS Internet Journal of Nitride Semiconductor Research" />
+	<property name="plugin" value="org.lockss.plugin.msr.MSRPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://nsr.mij.mrs.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="1" />
+	</property>
+      </property>
+
+      <property name="nsr2">
+	<property name="title" value="MRS Internet Journal of Nitride Semiconductor Research Volume 2" />
+	<property name="estSize" value="" />
+	<property name="journalTitle" value="MRS Internet Journal of Nitride Semiconductor Research" />
+	<property name="plugin" value="org.lockss.plugin.msr.MSRPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://nsr.mij.mrs.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="2" />
+	</property>
+      </property>
 
     </property>
 
+      <property name="nsr4s1">
+	<property name="title" value="MRS Internet Journal of Nitride Semiconductor Research Volume 4 Supplement 1" />
+	<property name="estSize" value="" />
+	<property name="journalTitle" value="MRS Internet Journal of Nitride Semiconductor Research" />
+	<property name="plugin" value="org.lockss.plugin.msr.MSRPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://nsr.mij.mrs.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="4S1" />
+	</property>
+      </property>
+
+    </property>
     <!-- End title database -->
     
   </property>
