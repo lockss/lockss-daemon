@@ -1,5 +1,5 @@
 /*
- * $Id: BinarySemaphore.java,v 1.1 2002-09-02 04:13:08 tal Exp $
+ * $Id: BinarySemaphore.java,v 1.2 2002-11-12 18:04:19 tal Exp $
  *
 
 Copyright (c) 2000-2002 Board of Trustees of Leland Stanford Jr. University,
@@ -48,14 +48,16 @@ public class BinarySemaphore {
    * @return true if <code>take()</code> was successful (semaphore was or
    * became full), else false (timer expired).
    */
-  synchronized public boolean take(ProbabilisticTimer timer) {
+  synchronized public boolean take(ProbabilisticTimer timer)
+      throws InterruptedException {
     if (timer != null) {
       while (!state && !timer.expired()) {
 	try {
 	  timer.setThread();
 	  this.wait(timer.getRemainingTime());
-	} catch (InterruptedException e) {
-	  continue;
+//  	} catch (InterruptedException e) {
+//  	  break;
+//  	  continue;
 	} finally {
 	  timer.clearThread();
 	}
@@ -76,5 +78,9 @@ public class BinarySemaphore {
   synchronized public void give() {
     state = true;
     this.notifyAll();
+  }
+
+  public String toString() {
+    return "[sem: " + (state ? "full]" : "empty]");
   }
 }

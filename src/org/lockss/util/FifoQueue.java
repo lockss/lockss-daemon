@@ -1,5 +1,5 @@
 /*
- * $Id: FifoQueue.java,v 1.2 2002-11-06 21:18:35 tal Exp $
+ * $Id: FifoQueue.java,v 1.3 2002-11-12 18:04:19 tal Exp $
  */
 
 /*
@@ -68,8 +68,8 @@ public class FifoQueue implements Queue {
       try {
 	timer.setThread();
 	this.wait(timer.getRemainingTime());
-      } catch (InterruptedException e) {
-	break;
+//        } catch (InterruptedException e) {
+//  	break;
 //  	  continue;
       } finally {
 	timer.clearThread();
