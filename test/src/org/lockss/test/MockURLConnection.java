@@ -1,5 +1,5 @@
 /*
- * $Id: MockURLConnection.java,v 1.5 2003-06-20 22:34:56 claire Exp $
+ * $Id: MockURLConnection.java,v 1.6 2003-07-23 23:37:21 troberts Exp $
  */
 
 /*
@@ -32,21 +32,18 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.test;
 
-import java.net.URLConnection;
-import java.net.HttpURLConnection;
-import java.net.FileNameMap;
-import java.net.URL;
-import java.net.ContentHandlerFactory;
-import java.net.UnknownServiceException;
+import java.util.List;
+import java.net.*;
 import java.security.Permission;
-import java.io.IOException;
-import java.io.OutputStream;
-import java.io.InputStream;
+import java.io.*;
 
 
-public class MockURLConnection extends URLConnection{
+public class MockURLConnection extends URLConnection {
 
-  protected MockURLConnection(URL url){
+  List headerFieldKeys = null;
+  List headerFields = null;
+
+  public MockURLConnection(URL url){
     super(url);
   }
 
@@ -104,11 +101,25 @@ public class MockURLConnection extends URLConnection{
   }
 
   public String getHeaderFieldKey(int n) {
-    throw new UnsupportedOperationException("Not Implemented");
+    if (headerFieldKeys == null || headerFieldKeys.size() <= n) {
+      return null;
+    }
+    return (String)headerFieldKeys.get(n);
   }
 
   public String getHeaderField(int n) {
-    throw new UnsupportedOperationException("Not Implemented");
+    if (headerFields == null || headerFields.size() <= n) {
+      return null;
+    }
+    return (String)headerFields.get(n);
+  }
+
+  public void setHeaderFieldKeys(List keys) {
+    this.headerFieldKeys = keys;
+  }
+
+  public void setHeaderFields(List fields) {
+    this.headerFields = fields;
   }
 
   public Object getContent() throws IOException {
