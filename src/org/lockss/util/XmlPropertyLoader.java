@@ -1,5 +1,5 @@
 /*
- * $Id: XmlPropertyLoader.java,v 1.5 2004-06-17 23:47:07 smorabito Exp $
+ * $Id: XmlPropertyLoader.java,v 1.6 2004-06-23 19:31:05 smorabito Exp $
  */
 
 /*
@@ -56,12 +56,22 @@ public class XmlPropertyLoader {
   private static final String TAG_NOT          = "not";
   private static final String TAG_TEST         = "test";
 
+  private static XmlPropertyLoader m_instance = null;
+
   private static Logger log = Logger.getLogger("XmlPropertyLoader");
+
+  public static boolean load(PropertyTree props, InputStream istr) {
+    if (m_instance == null) {
+      m_instance = new XmlPropertyLoader();
+    }
+
+    return m_instance.loadProperties(props, istr);
+  }
 
   /**
    * Load a set of XML properties from the input stream.
    */
-  public boolean load(PropertyTree props, InputStream istr) {
+  boolean loadProperties(PropertyTree props, InputStream istr) {
     boolean isLoaded = false;
 
     try {
@@ -111,6 +121,12 @@ public class XmlPropertyLoader {
     // Simple stack that helps us know what our current level in
     // the property tree is.
     private Stack m_propStack = new Stack();
+
+    // Stack to indicate what level of nesting the currently
+    // evaluated boolean is at.  The top of the stack is always
+    // the Boolean value of that level of nesting.
+    private Stack m_testStack = new Stack();
+
     // When building a list of configuration values for a single key.
     private List m_propList = null;
 
@@ -130,8 +146,6 @@ public class XmlPropertyLoader {
     private boolean m_inOr = false;
     // True iff the parser is currently inside a "not" element.
     private boolean m_inNot = false;
-    // True iff the parser is currently inside a "test" element.
-    private boolean m_inTest = false;
 
     // False iff the conditions in the propgroup attribute conditionals
     // are not satisfied.
@@ -360,18 +374,10 @@ public class XmlPropertyLoader {
 
 
     /**
-     * Depending on whether we are evaluating a test in an "and", an
-     * "or", or a "not", do the right thing.
+     * Push the value of the test onto the test stack.
      */
     private void startTestTag(Attributes attrs) {
-      m_inTest = true;
-      if (m_inAnd) {
-	m_evalIf &= evaluateAttributes(attrs);
-      } else if (m_inOr) {
-	m_evalIf |= evaluateAttributes(attrs);
-      } else if (m_inNot) {
-	m_evalIf &= !evaluateAttributes(attrs);
-      }
+      m_testStack.push(new Boolean(evaluateAttributes(attrs)));
     }
 
     /**
@@ -453,7 +459,13 @@ public class XmlPropertyLoader {
      * Handle encountering the end of a "test" tag.
      */
     private void endTestTag() {
-      m_inTest = false;
+      if (m_inAnd) {
+	m_evalIf &= ((Boolean)m_testStack.pop()).booleanValue();
+      } else if (m_inOr) {
+	m_evalIf |= ((Boolean)m_testStack.pop()).booleanValue();
+      } else if (m_inNot) {
+	m_evalIf &= !((Boolean)m_testStack.pop()).booleanValue();
+      }
     }
 
     /**
@@ -553,37 +565,31 @@ public class XmlPropertyLoader {
       /*
        * Daemon version checking.
        */
-      if (m_sysDaemonVer != null) {
-	if (daemonMin != null && daemonMax != null) {
-	  // Have both daemon min and max...
-	  returnVal &= ((m_sysDaemonVer.toLong() >= daemonMin.toLong()) &&
-			  (m_sysDaemonVer.toLong() <= daemonMax.toLong()));
-	} else if (daemonMin != null) {
-	  // Have only daemon min...
-	  returnVal &= (m_sysDaemonVer.toLong() >= daemonMin.toLong());
-	} else if (daemonMax != null) {
-	  // Have only daemon max...
-	  returnVal &= (m_sysDaemonVer.toLong() <= daemonMax.toLong());
-	}
-      }
+      returnVal &= compareVersion(m_sysDaemonVer, daemonMin, daemonMax);
 
       /*
        * Platform version checking.
        */
-      if (m_sysPlatformVer != null) {
-	if (platformMin != null && platformMax != null) {
-	  // Have both platform min and max...
-	  returnVal &= ((m_sysPlatformVer.toLong() >= platformMin.toLong()) &&
-			  (m_sysPlatformVer.toLong() <= platformMax.toLong()));
-	} else if (platformMin != null) {
-	  // Have only platform min...
-	  returnVal &= (m_sysPlatformVer.toLong() >= platformMin.toLong());
-	} else if (platformMax != null) {
-	  // Have only platform max...
-	  returnVal &= (m_sysPlatformVer.toLong() <= platformMax.toLong());
+      returnVal &= compareVersion(m_sysPlatformVer, platformMin, platformMax);
+
+      return returnVal;
+    }
+
+    boolean compareVersion(Version sysVersion, Version versionMin, Version versionMax) {
+      boolean returnVal = true;
+      if (sysVersion != null) {
+	if (versionMin != null && versionMax != null) {
+	  // Have both min and max...
+	  returnVal &= ((sysVersion.toLong() >= versionMin.toLong()) &&
+			  (sysVersion.toLong() <= versionMax.toLong()));
+	} else if (versionMin != null) {
+	  // Have min...
+	  returnVal &= (sysVersion.toLong() >= versionMin.toLong());
+	} else if (versionMax != null) {
+	  // Have max...
+	  returnVal &= (sysVersion.toLong() <= versionMax.toLong());
 	}
       }
-
       return returnVal;
     }
   }

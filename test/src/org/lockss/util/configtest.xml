@@ -300,6 +300,52 @@
 	<property name="not.g" value="bar"/>
       </else>
     </if>
+
+    <!-- Test nested booleans -->
+    <!-- Expected values at each level are in the comments. -->
+    <if>
+      <and>
+	<not>
+	  <and>
+	    <test hostname="testhost" /> <!-- true -->
+	    <test daemonVersion="1.5.0" /> <!-- false -->
+	  </and> <!-- false -->
+	</not> <!-- true -->
+	<or>
+	  <test group="foo" /> <!-- false -->
+	  <test group="bar" /> <!-- false -->
+	  <test group="beta" /> <!-- true -->
+	</or> <!-- true -->
+      </and> <!-- true -->
+      <then>
+	<property name="nested.a" value="foo" />
+      </then>
+      <else>
+	<property name="nested.a" value="bar" />
+      </else>
+    </if>
+
+    <if>
+      <or>
+	<not>
+	  <test hostname="testhost" /> <!-- true -->
+	</not> <!-- false -->
+	<or>
+	  <test hostname="bar" /> <!-- false -->
+	  <test hostname="foo" /> <!-- false -->
+	</or> <!-- false -->
+	<and>
+	  <test daemonVersionMin="1.0.0" daemonVersionMax="2.0.0" /> <!-- true -->
+	  <test platformVersionMin="100" platformVersionMax="130" /> <!-- false -->
+	</and> <!-- false -->
+      </or><!-- false -->
+      <then>
+	<property name="nested.b" value="foo" />
+      </then>
+      <else>
+	<property name="nested.b" value="bar" />
+      </else>
+    </if>
   </property>
 
 </lockss-config>
