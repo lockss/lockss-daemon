@@ -6,6 +6,10 @@ import org.lockss.util.Logger;
 import java.util.Random;
 import junit.framework.TestCase;
 import java.net.InetAddress;
+import org.lockss.daemon.TestConfiguration;
+import org.lockss.util.ListUtil;
+import org.lockss.test.FileUtil;
+import java.io.IOException;
 
 /** JUnitTest case for class: org.lockss.protocol.IdentityManager */
 public class TestIdentityManager extends TestCase {
@@ -20,7 +24,13 @@ public class TestIdentityManager extends TestCase {
   private static byte[] testbytes = {1,2,3,4,5,6,7,8,9,10};
   private static String[] testentries = {"test1.doc",
                                          "test2.doc", "test3.doc"};
-  private static IdentityManager idmgr = IdentityManager.getIdentityManager();
+
+  private static IdentityManager idmgr;
+  static {
+    configParams("/tmp/iddb", "src/org/lockss/protocol");
+    idmgr = IdentityManager.getIdentityManager();
+
+  }
 
   public TestIdentityManager(String _name) {
     super(_name);
@@ -70,6 +80,10 @@ public class TestIdentityManager extends TestCase {
   /** test for method findIdentity(..) */
   public void testFindIdentity() {
     assertTrue(idmgr.findIdentity(fakeId.getIdKey()) != null);
+  }
+
+  public void testGetMapping() {
+    assertNotNull(idmgr.getMapping());
   }
 
   /** test for method getLocalIdentity(..) */
@@ -203,6 +217,19 @@ public class TestIdentityManager extends TestCase {
     }
     catch (ProtocolException ex) {
       fail("identity db store failed");
+    }
+  }
+
+  public static void configParams(String dbDir, String mapDir) {
+    String s = IdentityManager.PARAM_IDDB_DIR + "=" + dbDir;
+    String s2 = IdentityManager.PARAM_IDDB_MAP_DIR + "=" + mapDir;
+
+    try {
+      TestConfiguration.setCurrentConfigFromUrlList(ListUtil.list(FileUtil.urlOfString(s),
+          FileUtil.urlOfString(s2)));
+    }
+    catch (IOException ex) {
+      fail("Unable to initialize configuration parameters.");
     }
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManager.java,v 1.7 2003-01-11 00:25:02 claire Exp $
+ * $Id: IdentityManager.java,v 1.8 2003-01-14 02:47:42 claire Exp $
  */
 
 /*
@@ -74,8 +74,11 @@ public class IdentityManager {
   static final String PARAM_VOTE_DISOWNED = Configuration.PREFIX + "id.voteDisowned";
 
   static final String PARAM_IDDB_DIR = Configuration.PREFIX + "id.databaseDir";
-  static final String PARAM_IDDB_MAP_FILENAME = Configuration.PREFIX + "id.mappingFile";
+  static final String PARAM_IDDB_MAP_DIR = Configuration.PREFIX + "id.mappingFile";
+
   static final String IDDB_FILENAME = "iddb.xml";
+  static final String IDDB_MAP_FILENAME = "idmapping.xml";
+
   /* Reputation constants */
   public static final int MAX_DELTA = 0;
   public static final int AGREE_VOTE = 1;
@@ -230,7 +233,7 @@ public class IdentityManager {
 
   void storeIdentities() throws ProtocolException {
     try {
-      String fn = Configuration.getParam(PARAM_IDDB_DIR,"/tmp/iddb");
+      String fn = Configuration.getParam(PARAM_IDDB_DIR);
 
       File iddbDir = new File(fn);
       if (!iddbDir.exists()) {
@@ -320,15 +323,15 @@ public class IdentityManager {
   }
 
   Mapping getMapping() {
+
     if (mapping==null) {
-      String mappingFile = Configuration.getParam(PARAM_IDDB_MAP_FILENAME,"/tmp/iddb/idmapping.xml");
-      if (mappingFile==null) {
-        theLog.error("Couldn't get "+PARAM_IDDB_MAP_FILENAME+" from Configuration");
-        return null;
-      }
-      mapping = new Mapping();
+      String mappingFile = Configuration.getParam(PARAM_IDDB_MAP_DIR)
+                           + File.separator + IDDB_MAP_FILENAME;
+
+      Mapping map = new Mapping();
       try {
-        mapping.loadMapping(mappingFile);
+        map.loadMapping(mappingFile);
+        mapping = map;
       }
       catch (Exception ex) {
         theLog.error("Loading of mapfile failed:" + mappingFile, ex);
