@@ -1,5 +1,5 @@
 /*
- * $Id: ServletManager.java,v 1.17 2003-04-21 05:39:51 tal Exp $
+ * $Id: ServletManager.java,v 1.18 2003-04-22 06:49:42 tal Exp $
  */
 
 /*
@@ -174,6 +174,10 @@ public class ServletManager extends JettyManager {
       // Create a context
       HttpContext context = server.getContext(null, "/admin/*");
 
+      // In this environment there is no point in consuming memory with
+      // cached resources
+      context.setMaxCachedFileSize(0);
+
       // Create a servlet container
       ServletHandler handler = new ServletHandler();
 
@@ -190,7 +194,7 @@ public class ServletManager extends JettyManager {
   public void configureDebugServlets() {
     ClassLoader loader = Thread.currentThread().getContextClassLoader();
     try {
-      if (logdir != null) {
+      if (true || logdir != null) {
 	// Create a context
 	HttpContext logContext = server.getContext("/log/");
 	logContext.setAttribute("LockssDaemon", theDaemon);
@@ -201,8 +205,9 @@ public class ServletManager extends JettyManager {
 	addAccessHandler(logContext);
 
 	// log dir resource
+	String logdirname = (logdir != null) ? logdir : ".";
 	URL logResourceUrl=new URL("file", null,
-				   new File(logdir).getAbsolutePath());
+				   new File(logdirname).getAbsolutePath());
 	log.debug("Log Resource URL: " + logResourceUrl);
 	logContext.setResourceBase(logResourceUrl.toString());
 	ResourceHandler logRHandler = new LockssResourceHandler();
