@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.56 2005-01-13 08:10:44 tlipkis Exp $
+ * $Id: TestPluginManager.java,v 1.57 2005-03-31 04:23:39 smorabito Exp $
  */
 
 /*
@@ -746,34 +746,6 @@ public class TestPluginManager extends LockssTestCase {
 
     CachedUrlSet cus = new MockCachedUrlSet(au, new AuCachedUrlSetSpec());
     return cus;
-  }
-
-  // ensure that wrapper is harmless when not enabled
-  public void testWrappedAu() {
-    if (!WrapperState.isUsingWrapping()) {
-      try {
-	// String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-	Properties p = new Properties();
-	p.setProperty(p1a1param + MockPlugin.CONFIG_PROP_1, "val1");
-	p.setProperty(p1a1param + MockPlugin.CONFIG_PROP_2, "val2");
-	p.setProperty(p1a1param + "reserved.wrapper", "true");
-	p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-	p.setProperty(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION, tempDirPath);
-	ConfigurationUtil.setCurrentConfigFromProps(p);
-	ArchivalUnit wau = (ArchivalUnit) mgr.getAuFromId(
-	    mauauid1);
-	Plugin wplug = (Plugin) wau.getPlugin();
-	MockPlugin mock = (MockPlugin) WrapperState.getOriginal(wplug);
-	assertSame(mock,wplug);
-	MockArchivalUnit mau = (MockArchivalUnit) WrapperState.getOriginal(wau);
-	assertSame(mock, mau.getPlugin());
-	assertSame(mau,wau);
-	//      } catch (IOException e) {
-	//	fail(e.getMessage());
-      } catch (ClassCastException e) {
-	fail("WrappedArchivalUnit not found.");
-      }
-    }
   }
 
   private KeyStore getKeystoreResource(String name, String pass)

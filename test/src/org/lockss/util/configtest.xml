@@ -8,7 +8,7 @@
   <!ELEMENT and (and|or|not|test)*>
   <!ELEMENT or (and|or|not|test)*>
   <!ELEMENT not (and|or|not|test)*>
-  <!ELEMENT if (and|or|not|then|else|property)*>
+  <!ELEMENT if (and|or|not|then|else|test|property)*>
   <!ELEMENT then (property)*>
   <!ELEMENT else (property)*>
   <!ATTLIST property name CDATA #REQUIRED>

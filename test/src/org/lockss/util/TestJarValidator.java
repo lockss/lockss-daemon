@@ -1,5 +1,5 @@
 /*
- * $Id: TestJarValidator.java,v 1.6 2004-09-27 20:10:51 smorabito Exp $
+ * $Id: TestJarValidator.java,v 1.7 2005-03-31 04:23:39 smorabito Exp $
  */
 
 /*
@@ -110,11 +110,7 @@ public class TestJarValidator extends LockssTestCase {
     JarValidator validator =
       new JarValidator(pubKeystore, getTempDir());
     File f = null;
-    try {
-      f = validator.getBlessedJar(goodCu);
-    } catch (JarValidator.JarValidationException ex) {
-      fail("Should not have thrown.");
-    }
+    f = validator.getBlessedJar(goodCu);
     assertNotNull(f);
     assertTrue(f.exists());
   }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.137 2005-03-29 05:44:04 tlipkis Exp $
+ $Id: build.xml,v 1.138 2005-03-31 04:23:42 smorabito Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -133,15 +133,6 @@ Args:
   <property name="tools.test.classes" value="${tools.test}/classes"/>
   <property name="tools.test.results" value="${tools.test}/results"/>
 
-  <property name="generated"           value="${basedir}/generated"/>
-  <property name="generated.src"       value="${generated}/src"/>
-  <property name="generated.classes"   value="${generated}/classes" />
-
-  <property name="generated.test"      value="${generated}/test"/>
-  <property name="generated.test.src"  value="${generated.test}/src"/>
-  <property name="generated.test.classes" value="${generated.test}/classes"/>
-  <property name="generated.test.results" value="${generated.test}/results"/>
-
   <property name="instrumented" value="${basedir}/instrumented"/>
 
   <property name="wrapper.path"    value="org/lockss/plugin/wrapper"/>
@@ -200,8 +191,6 @@ Args:
   <property name="lockss.ant.jar" value="${lib}/lockss-ant.jar"/>
   <property name="lockss.tools.jar" value="${lib}/lockss-tools.jar"/>
   <property name="lockss.tools.test.jar" value="${lib}/lockss-tools-test.jar"/>
-  <property name="lockss.generated.jar" value="${lib}/lockss-generated.jar"/>
-  <property name="lockss.generated.test.jar" value="${lib}/lockss-generated-test.jar"/>
 
   <!--  Files -->
   <property name="test.classpath.file" value="${test}/test-classpath"/>
@@ -305,10 +294,6 @@ Args:
     <pathelement path="${jdk.tools.jar}" />
   </path>
 
-  <path id="generated.compile.classpath">
-    <path refid="tools.compile.classpath" />
-  </path>
-
   <path id="tools.run.classpath">
     <path refid="tools.compile.classpath" />
     <pathelement path="${lockss.tools.jar}" />
@@ -321,24 +306,12 @@ Args:
     <pathelement path="${lockss.tools.jar}" />
   </path>
 
-  <path id="generated.test.compile.classpath">
-    <path refid="tools.test.compile.classpath" />
-    <pathelement path="${lockss.generated.jar}" />
-  </path>
-
   <path id="tools.test.run.classpath">
     <path refid="tools.test.compile.classpath" />
     <pathelement path="${lockss.tools.test.jar}" />
-    <pathelement path="${lockss.generated.jar}" />
-  </path>
-
- <path id="generated.test.run.classpath">
-    <path refid="tools.test.run.classpath" />
-    <pathelement path="${lockss.generated.test.jar}" />
   </path>
 
   <path id="one.test.run.classpath" >
-    <path refid="generated.test.run.classpath" />
     <pathelement path="${lockss.plugins.jar}"/>
     <pathelement path="${lockss.plugins.test.jar}"/>
     <pathelement path="${lockss.tools.jar}"/>
@@ -497,17 +470,12 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
        it requires a separate JDK 1.4 compilation -->
   <target name="clean-tools"
           description="Cleans tools jars">
-    <delete dir="${generated.src}" quiet="true"/>
     <delete dir="${tools.classes}" quiet="true"/>
     <delete dir="${tools.test.classes}" quiet="true"/>
-    <delete dir="${generated.classes}" quiet="true"/>
-    <delete dir="${generated.test.classes}" quiet="true"/>
     <delete dir="${instrumented}" quiet="true"/>
     <delete file="${jcoverage.ser}" quiet="true"/>
     <delete file="${lockss.tools.jar}" quiet="true"/>
     <delete file="${lockss.tools.test.jar}" quiet="true"/>
-    <delete file="${lockss.generated.jar}" quiet="true"/>
-    <delete file="${lockss.generated.test.jar}" quiet="true"/>
     <delete file="plugintool.zip" quiet="true"/>
     <delete file="plugintool.tgz" quiet="true"/>
   </target>
@@ -651,22 +619,6 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
        </fileset>
     </copy>
   </target>
-  <target name="compile-generated"
-          depends="prepare,generate-plugin-wrapper,jar-lockss"
-          description="Compile generated classes">
-    <mkdir dir="${generated.classes}"/>
-    <javac srcdir="${generated.src}"
-           destdir="${generated.classes}"
-	   debug="${javac.debug}"
-           optimize="${javac.optimize}"
-           deprecation="${javac.deprecation}"
-           fork="${forkc}"
-           listfiles="${listfiles}"
-           >
-       <classpath refid="generated.compile.classpath" />
-       <include name="**/*.java"/>
-    </javac>
-  </target>
   <target name="compile-tools-tests" depends="jar-tools,jar-tests"
    description="Compile the LOCKSS test classes for tools" >
     <mkdir dir="${tools.test.classes}" />
@@ -679,22 +631,6 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
            listfiles="${listfiles}"
            >
        <classpath refid="tools.test.compile.classpath" />
-       <include name="**/*.java"/>
-   </javac>
-  </target>
-
-    <target name="compile-generated-tests" depends="jar-generated,jar-tests"
-   description="Compile the LOCKSS test classes for generated" >
-    <mkdir dir="${generated.test.classes}" />
-    <javac srcdir="${generated.test.src}"
-           destdir="${generated.test.classes}"
-	   debug="${javac.debug}"
-           optimize="${javac.optimize}"
-           deprecation="${javac.deprecation}"
-           fork="${forkc}"
-           listfiles="${listfiles}"
-           >
-       <classpath refid="generated.test.compile.classpath" />
        <include name="**/*.java"/>
    </javac>
   </target>
@@ -927,22 +863,6 @@ JAVA_COMMAND_ARGS="-Xmx120m -Dsun.net.inetaddr.ttl=3600 -showversion"
   </target>
 
   <!-- ==================================================================== -->
-  <target name="jar-generated" depends="compile-generated"
-   description="Jar the generated classes" >
-    <jar jarfile="${lockss.generated.jar}" basedir="${generated.classes}" >
-       <include name="**/*" />
-    </jar>
-  </target>
-
-  <!-- ==================================================================== -->
-  <target name="jar-generated-tests" depends="compile-generated-tests"
-   description="Jar the generateds test classes" >
-    <jar jarfile="${lockss.generated.test.jar}" basedir="${generated.test.classes}" >
-       <include name="**/*"/>
-   </jar>
-  </target>
-
-  <!-- ==================================================================== -->
   <target name="jar-ant" depends="compile-ant"
    description="Jar the LOCKSS ant extensions" >
     <jar jarfile="${lockss.ant.jar}" basedir="${ant.classes}" >
@@ -1089,21 +1009,6 @@ java -classpath &quot;${tmp.ptool.clspth.unix}&quot; org.lockss.devtools.plugind
        <classpath refid="test.compile.classpath" />
     </javadoc>
   </target>
-
-  <target name="generate-plugin-wrapper"
-          depends="jar-ant,jar-tools,-set.wrap.task.available">
-    <mkdir dir="${generated.src}/${wrapper.path}"/>
-    <wrap srcdir="${tobewrapped.src}"
-        template="${plugin.wrapper.template}"
-	destdir="${generated.src}/${wrapper.path}"
-	interface="true" >
-     <fileset dir="${tools.src}/org/lockss/doclet"
-              includes="WrapperGenerator.java"/>
-     <fileset dir="${ant.src}/org/lockss/ant" includes="WrapTask.java" />
-     <classpath refid="tools.run.classpath" />
-    </wrap>
-  </target>
-
 
   <target name="generate-null-mock"
           description="Generates mock classes whose methods return null"
@@ -1547,42 +1452,6 @@ Test results in ${tools.test.results}
     <fail if="failed" message="Test(s) failed" />
   </target>
 
-    <target name="test-generated"
-   depends="-check-if-1.4,-using-junit1,jar-generated-tests"
-   description="Run all tests of generated" >
-    <echo>
-Test results in ${tools.test.results}
-    </echo>
-    <mkdir dir="${generated.test.results}"/>
-    <delete file="${generated.test.results}/*" quiet="true" />
-    <junit1 fork="no" printsummary="yes"
-         haltonfailure="${halt}" failureproperty="failed"
-         filtertrace="${filtertrace}" showoutput="${showoutput}">
-      <batchtest fork="${fork}" todir="${generated.test.results}">
-        <fileset dir="${generated.test.src}">
-          <include name="org/lockss/plugin/**/Test*.java" />
-	  <include name="org/lockss/plugin/**/Func*.java"/>
-        </fileset>
-      </batchtest>
-      <formatter type="plain" usefile="true" />
-      <classpath>
-         <path refid="generated.test.run.classpath" />
-      </classpath>
-      <sysproperty key="java.library.path" value="${test.native}"/>
-      <sysproperty key="org.lockss.unitTesting" value="true"/>
-      <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
-      <sysproperty key="org.lockss.defaultLogTarget" value="${logtarget}"/>
-      <sysproperty key="org.lockss.keepTempFiles" value="${keeptempfiles}"/>
-      <sysproperty key="org.lockss.test.timeout.shouldnt" value="${timeout}"/>
-    </junit1>
-    <fail if="failed" message="Test(s) failed" />
-  </target>
-
-  <target name="test-tools-etal"
-          description="Test the tools and generated classes"
-	  depends="test-tools,test-generated">
-  </target>
-
   <!-- ==================================================================== -->
   <target name="test-xml"
    description="Run xmllint on xml files" >
@@ -1609,7 +1478,7 @@ Test results in ${tools.test.results}
   </target>
 
   <target name="rebuild-tools"
-          depends="clean-tools,-check-if-1.4,test-tools-etal"
+          depends="clean-tools,-check-if-1.4,test-tools"
 	  description="Clean, build, and test tools">
   </target>
 
@@ -1690,7 +1559,6 @@ Test results in ${tools.test.results}
 	    <include name="ant/src/"/>
 	    <include name="doclet/"/>
 	    <include name="tools/"/>
-	    <include name="generated/test/"/>
 	    <exclude name="**/classes/**"/>
 	  </fileset>
 	</copy>

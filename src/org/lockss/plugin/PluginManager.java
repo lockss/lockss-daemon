@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.131 2005-03-18 09:09:15 smorabito Exp $
+ * $Id: PluginManager.java,v 1.132 2005-03-31 04:23:40 smorabito Exp $
  */
 
 /*
@@ -127,13 +127,12 @@ public class PluginManager
   // prefix for non-plugin AU params
   public static final String AU_PARAM_RESERVED = "reserved";
   // per AU params known to and processed by daemon, not plugin
-  static final String AU_PARAM_WRAPPER = AU_PARAM_RESERVED + ".wrapper";
   public static final String AU_PARAM_DISABLED = AU_PARAM_RESERVED + ".disabled";
   public static final String AU_PARAM_REPOSITORY = AU_PARAM_RESERVED + ".repository";
   public static final String AU_PARAM_DISPLAY_NAME = AU_PARAM_RESERVED + ".displayName";
 
   public static final List NON_USER_SETTABLE_AU_PARAMS =
-    Collections.unmodifiableList(ListUtil.list(AU_PARAM_WRAPPER));
+    Collections.unmodifiableList(new ArrayList());
 
   static final String CONFIGURABLE_PLUGIN_NAME =
     DefinablePlugin.class.getName();
@@ -320,7 +319,7 @@ public class PluginManager
     for (Iterator iter = list.iterator(); iter.hasNext(); ) {
       TitleSet ts = (TitleSet)iter.next();
       map.put(ts.getName(), ts);
-    }    
+    }
     titleSets = list;
     titleSetMap = map;
   }
@@ -456,24 +455,6 @@ public class PluginManager
     return (Plugin)pluginMap.get(pluginKey);
   }
 
-  /**
-   * Returns true if the reserved.wrapper key is true
-   * @param auConf the Configuration
-   * @return true if wrapped
-   */
-  private boolean isAuWrapped(Configuration auConf) {
-    return WrapperState.isUsingWrapping() &&
-      auConf.getBoolean(AU_PARAM_WRAPPER, false);
-  }
-
-  private Configuration removeWrapper(Configuration auConf) {
-    Configuration copy = auConf.copy();
-    if (copy.containsKey(AU_PARAM_WRAPPER)) {
-      copy.remove(AU_PARAM_WRAPPER);
-    }
-    return copy;
-  }
-
   private void configurePlugin(String pluginKey, Configuration pluginConf,
 			       Configuration oldPluginConf) {
     for (Iterator iter = pluginConf.nodeIterator(); iter.hasNext(); ) {
@@ -495,42 +476,25 @@ public class PluginManager
 	    log.debug2("AU already configured, not reconfiguring: " + auKey);
 	} else {
 	  log.debug("Configuring AU id: " + auKey);
-	  if (!isAuWrapped(auConf)) {
-	    boolean pluginOk = ensurePluginLoaded(pluginKey);
-	    if (pluginOk) {
-	      Plugin plugin = getPlugin(pluginKey);
-	      checkNotWrapped(plugin, pluginKey, auKey);
-	      try {
-		String genAuid = generateAuId(plugin, auConf);
-		if (!auId.equals(genAuid)) {
-		  log.warning("Generated AUID " + genAuid +
-			      " does not match stored AUID " + auId +
-			      ". Proceeding anyway.");
-		}
-	      } catch (RuntimeException e) {
-		log.warning("Not configuring probable non-AU.  " +
-			    "Can't generate AUID from config: " + auConf);
-		return;
+	  boolean pluginOk = ensurePluginLoaded(pluginKey);
+	  if (pluginOk) {
+	    Plugin plugin = getPlugin(pluginKey);
+	    try {
+	      String genAuid = generateAuId(plugin, auConf);
+	      if (!auId.equals(genAuid)) {
+		log.warning("Generated AUID " + genAuid +
+			    " does not match stored AUID " + auId +
+			    ". Proceeding anyway.");
 	      }
-	      configureAu(plugin, auConf, auId);
-	      inactiveAuIds.remove(generateAuId(pluginKey, auKey));
-	    } else {
-	      log.warning("Not configuring AU " + auKey);
+	    } catch (RuntimeException e) {
+	      log.warning("Not configuring probable non-AU.  " +
+			  "Can't generate AUID from config: " + auConf);
+	      return;
 	    }
+	    configureAu(plugin, auConf, auId);
+	    inactiveAuIds.remove(generateAuId(pluginKey, auKey));
 	  } else {
-	    checkNotUnWrapped(pluginKey, auKey);
-	    log.debug("Wrapping " + auKey);
-	    Plugin wrappedPlugin =
-	      WrapperState.retrieveWrappedPlugin(pluginKey, theDaemon);
-	    if (wrappedPlugin==null) {
-	      log.warning("Not configuring AU " + auKey);
-	      log.error("Error instantiating " +
-			WrapperState.WRAPPED_PLUGIN_NAME);
-	    } else {
-	      setPlugin(pluginKey,wrappedPlugin);
-	      Configuration wrappedAuConf = removeWrapper(auConf);
-	      configureAu(wrappedPlugin, wrappedAuConf, auId);
-	    }
+	    log.warning("Not configuring AU " + auKey);
 	  }
 	}
       } catch (ArchivalUnit.ConfigurationException e) {
@@ -538,21 +502,6 @@ public class PluginManager
       } catch (Exception e) {
 	log.error("Unexpected exception configuring AU " + auKey, e);
       }
-    }
-  }
-
-  void checkNotWrapped(Plugin plugin, String pluginKey, String auKey)
-      throws ArchivalUnit.ConfigurationException {
-    if (WrapperState.isWrappedPlugin(plugin)) {
-      throw new ArchivalUnit.ConfigurationException("Attempt to load unwrapped AU " + auKey + " from wrapped plugin " + pluginKey);
-    }
-  }
-
-  void checkNotUnWrapped(String pluginKey, String auKey)
-      throws ArchivalUnit.ConfigurationException {
-    if ((pluginMap.containsKey(pluginKey)) &&
-	(!WrapperState.isWrappedPlugin(pluginMap.get(pluginKey)))) {
-      throw new ArchivalUnit.ConfigurationException("Attempt to wrap AU " + auKey + " from loaded nonwrapped plugin " + pluginKey);
     }
   }
 
@@ -1645,7 +1594,7 @@ public class PluginManager
 		    new PluginVersion(otherPlugin.getVersion());
 		  if (version.toLong() > otherVer.toLong()) {
 		    if (log.isDebug2()) {
-		      log.debug2("Existing plugin " + plugin.getPluginId() + 
+		      log.debug2("Existing plugin " + plugin.getPluginId() +
 				 ": Newer version " + version + " found.");
 		    }
 		    tmpMap.put(key, info);
