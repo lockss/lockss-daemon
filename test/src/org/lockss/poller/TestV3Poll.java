@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poll.java,v 1.1.2.2 2004-10-01 15:12:05 dshr Exp $
+ * $Id: TestV3Poll.java,v 1.1.2.3 2004-10-01 18:46:58 dshr Exp $
  */
 
 /*
@@ -42,6 +42,7 @@ import org.lockss.protocol.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
 import org.lockss.config.*;
+import org.lockss.effort.*;
 import org.lockss.repository.LockssRepositoryImpl;
 
 /** JUnitTest case for class: org.lockss.poller.V3Poll */
@@ -115,6 +116,7 @@ public class TestV3Poll extends LockssTestCase {
     }
 
     public void testVoterStateTransitions() {
+	//  Check starting conditions
 	String key = testV3polls[0].getKey();
 	assertEquals("Poll " + testV3polls[0] + " should be in Initializing",
 		     V3Voter.STATE_INITIALIZING,
@@ -125,6 +127,8 @@ public class TestV3Poll extends LockssTestCase {
 		   pollmanager.isPollClosed(key));
 	assertFalse("Poll " + testV3polls[0] + " should not be suspended",
 		   pollmanager.isPollSuspended(key));
+	TimeBase.step(1000);
+	//  Receive a Poll message, go to SendingPollAck
 	try {
 	    pollmanager.handleIncomingMessage(testV3msg[0]);
 	} catch (IOException ex) {
@@ -139,6 +143,31 @@ public class TestV3Poll extends LockssTestCase {
 		   pollmanager.isPollClosed(key));
 	assertFalse("Poll " + testV3polls[0] + " should not be suspended",
 		   pollmanager.isPollSuspended(key));
+	TimeBase.step(1000);
+	assertEquals("Poll " + testV3polls[0] + " should be in WaitingPollProof",
+		     V3Voter.STATE_WAITING_POLL_PROOF,
+		     testV3polls[0].getPollState());
+	assertTrue("Poll " + testV3polls[0] + " should be active",
+		   pollmanager.isPollActive(key));
+	assertFalse("Poll " + testV3polls[0] + " should not be closed",
+		   pollmanager.isPollClosed(key));
+	assertFalse("Poll " + testV3polls[0] + " should not be suspended",
+		   pollmanager.isPollSuspended(key));
+	//  Receive a PollProof message, go to SendingVote
+	try {
+	    pollmanager.handleIncomingMessage(testV3msg[2]);
+	} catch (IOException ex) {
+	    fail("Message " + testV3msg[2].toString() + " threw " + ex);
+	}
+	assertEquals("Poll " + testV3polls[0] + " should be in SendingVote",
+		     V3Voter.STATE_SENDING_VOTE,
+		     testV3polls[0].getPollState());
+	assertTrue("Poll " + testV3polls[0] + " should be active",
+		   pollmanager.isPollActive(key));
+	assertFalse("Poll " + testV3polls[0] + " should not be closed",
+		   pollmanager.isPollClosed(key));
+	assertFalse("Poll " + testV3polls[0] + " should not be suspended",
+		   pollmanager.isPollSuspended(key));
     }
 
     //  Support methods
@@ -146,6 +175,7 @@ public class TestV3Poll extends LockssTestCase {
   private void initRequiredServices() {
     theDaemon = new MockLockssDaemon();
     pollmanager = theDaemon.getPollManager();
+    theDaemon.setEffortService((EffortService) new MockEffortService());
 
     theDaemon.getPluginManager();
     testau = PollTestPlugin.PTArchivalUnit.createFromListOfRootUrls(rootV3urls);
@@ -171,6 +201,7 @@ public class TestV3Poll extends LockssTestCase {
     theDaemon.getHashService().startService();
     theDaemon.getStreamRouterManager().startService();
     theDaemon.getSystemMetrics().startService();
+    theDaemon.getEffortService().startService();
     theDaemon.getActivityRegulator(testau).startService();
     theDaemon.setNodeManager(new MockNodeManager(), testau);
     pollmanager.startService();
@@ -193,23 +224,24 @@ public class TestV3Poll extends LockssTestCase {
     assertNotNull("PollFactory should not be null", ppf);
     assertTrue(ppf instanceof V3PollFactory);
     V3PollFactory pf = (V3PollFactory)ppf;
-
-    for (int i= 0; i<testV3msg.length; i++) {
-	testSpec[i] = new MockPollSpec(testau, rootV3urls[0],
+	PollSpec spec = new MockPollSpec(testau, rootV3urls[0],
 				     lwrbnd, uprbnd, Poll.CONTENT_POLL,
 				     Poll.V3_POLL);
-	PollSpec spec = testSpec[i];
 	assertEquals(spec.getPollType(), Poll.CONTENT_POLL);
 	assertEquals(spec.getPollVersion(), Poll.V3_POLL);
 	((MockCachedUrlSet)spec.getCachedUrlSet()).setHasContent(false);
-	long duration = pf.calcDuration(Poll.CONTENT_POLL,
+    long duration = pf.calcDuration(Poll.CONTENT_POLL,
 				    spec.getCachedUrlSet(),
 				    pollmanager);
+    byte[] challenge = pollmanager.makeVerifier(duration);
+
+    for (int i= 0; i<testV3msg.length; i++) {
+	testSpec[i] = spec;
       testV3msg[i] =
 	V3LcapMessage.makeRequestMsg(spec,
 				     null, // XXX entries not needed
-				     pollmanager.makeVerifier(100000),
-				     pollmanager.makeVerifier(100000),
+				     challenge,
+				     pollmanager.makeVerifier(duration),
 				     msgType[i],
 				     duration,
 				     testID1);

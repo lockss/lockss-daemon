@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.67.2.1 2004-10-01 01:13:48 dshr Exp $
+ * $Id: LockssDaemon.java,v 1.67.2.2 2004-10-01 18:46:57 dshr Exp $
  */
 
 /*
@@ -49,6 +49,7 @@ import org.lockss.servlet.*;
 import org.lockss.config.Configuration;
 import org.lockss.crawler.*;
 import org.lockss.remote.*;
+import org.lockss.effort.*;
 import org.apache.commons.collections.SequencedHashMap;
 
 /**
@@ -93,6 +94,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   public static String ALERT_MANAGER = "AlertManager";
   public static String HASH_SERVICE = "HashService";
   public static String TIMER_SERVICE = "TimerService";
+  public static String EFFORT_SERVICE = "EffortService";
   public static String DATAGRAM_COMM_MANAGER = "DatagramCommManager";
   public static String DATAGRAM_ROUTER_MANAGER = "DatagramRouterManager";
   public static String STREAM_ROUTER_MANAGER = "StreamRouterManager";
@@ -125,6 +127,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     new ManagerDesc(TIMER_SERVICE, "org.lockss.util.TimerQueue$Manager"),
     new ManagerDesc(SCHED_SERVICE, DEFAULT_SCHED_SERVICE),
     new ManagerDesc(HASH_SERVICE, "org.lockss.hasher.HashSvcQueueImpl"),
+    new ManagerDesc(EFFORT_SERVICE, "org.lockss.effort.EffortServiceImpl"),
     new ManagerDesc(SYSTEM_METRICS, "org.lockss.daemon.SystemMetrics"),
     new ManagerDesc(IDENTITY_MANAGER, "org.lockss.protocol.IdentityManager"),
     new ManagerDesc(POLL_MANAGER, "org.lockss.poller.PollManager"),
@@ -286,6 +289,15 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
    */
   public LcapStreamRouter getStreamRouterManager()  {
     return (LcapStreamRouter) getManager(STREAM_ROUTER_MANAGER);
+  }
+
+  /**
+   * return the effort service manager instance
+   * @return the EffortService
+   * @throws IllegalArgumentException if the manager is not available.
+   */
+  public EffortService getEffortService()  {
+    return (EffortService) getManager(EFFORT_SERVICE);
   }
 
   /**

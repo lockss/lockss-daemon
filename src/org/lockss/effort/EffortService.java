@@ -1,5 +1,5 @@
 /*
- * $Id: EffortService.java,v 1.1.2.1 2004-09-30 01:06:15 dshr Exp $
+ * $Id: EffortService.java,v 1.1.2.2 2004-10-01 18:46:57 dshr Exp $
  */
 
 /*
@@ -81,6 +81,8 @@ public interface EffortService extends LockssManager {
    * @param ep the <code>EffortService.Proof</code> to be cancelled.
    */
   public void cancelProofs(Proof ep);
+
+    public Proof makeProof();
 
   /**
    * <code>EffortService.Callback</code> is used to notify hash requestors

@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.142.2.1 2004-10-01 01:13:48 dshr Exp $
+ * $Id: PollManager.java,v 1.142.2.2 2004-10-01 18:46:58 dshr Exp $
  */
 
 /*
@@ -47,8 +47,8 @@ import org.lockss.hasher.HashService;
 import org.lockss.daemon.status.*;
 import org.lockss.state.*;
 import org.mortbay.util.B64Code;
-import org.lockss.alert.AlertManager;
 import org.lockss.alert.*;
+import org.lockss.effort.*;
 
 /**
  * <p>Class that manages the polling process.</p>
@@ -78,6 +78,7 @@ public class PollManager
   private static LcapDatagramRouter theRouter = null;
   private AlertManager theAlertManager = null;
   private static SystemMetrics theSystemMetrics = null;
+    private EffortService theEffortService = null; // XXX
 
   // our configuration variables
   protected static long m_recentPollExpireTime;
@@ -104,6 +105,7 @@ public class PollManager
     theIDManager = theDaemon.getIdentityManager();
     theHashService = theDaemon.getHashService();
     theAlertManager = theDaemon.getAlertManager();
+    theEffortService = theDaemon.getEffortService();
 
     // register a message handler with the router
     theRouter = theDaemon.getDatagramRouterManager();
@@ -707,6 +709,10 @@ public class PollManager
     theLog.error("Unknown poll version: " + version, new Throwable());
     return null;
   }
+
+    public EffortService getEffortService(PollSpec spec) {
+	return theEffortService; // XXX
+    }
 
 
 //--------------- PollerStatus Accessors -----------------------------

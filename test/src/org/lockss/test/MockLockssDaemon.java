@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssDaemon.java,v 1.44.2.1 2004-10-01 01:13:50 dshr Exp $
+ * $Id: MockLockssDaemon.java,v 1.44.2.2 2004-10-01 18:46:59 dshr Exp $
  */
 
 /*
@@ -50,6 +50,7 @@ import org.lockss.app.*;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
 import org.lockss.remote.*;
+import org.lockss.effort.*;
 import org.apache.commons.collections.SequencedHashMap;
 
 public class MockLockssDaemon extends LockssDaemon {
@@ -65,6 +66,7 @@ public class MockLockssDaemon extends LockssDaemon {
   LcapDatagramComm commManager = null;
   LcapDatagramRouter datagramRouterManager = null;
   LcapStreamRouter streamRouterManager = null;
+    EffortService effortService = null;
   ProxyManager proxyManager = null;
   CrawlManager crawlManager = null;
   RepositoryManager repositoryManager = null;
@@ -265,6 +267,19 @@ public class MockLockssDaemon extends LockssDaemon {
   }
 
   /**
+   * return the effort service instance
+   * @return the EffortService
+   */
+  public EffortService getEffortService() {
+    if (effortService == null) {
+      effortService =
+	(EffortService)newManager(LockssDaemon.EFFORT_SERVICE);
+      managerMap.put(LockssDaemon.EFFORT_SERVICE, effortService);
+    }
+    return effortService;
+  }
+
+  /**
    * return the proxy manager instance
    * @return the ProxyManager
    */
@@ -398,6 +413,15 @@ public class MockLockssDaemon extends LockssDaemon {
   public void setStreamRouterManager(LcapStreamRouter routerMan) {
     streamRouterManager = routerMan;
     managerMap.put(LockssDaemon.STREAM_ROUTER_MANAGER, streamRouterManager);
+  }
+
+  /**
+   * Set the EffortService
+   * @param effortSvc the new manager
+   */
+  public void setEffortService(EffortService effortSvc) {
+    effortService = effortSvc;
+    managerMap.put(LockssDaemon.EFFORT_SERVICE, effortSvc);
   }
 
   /**

@@ -1,5 +1,5 @@
 /*
-* $Id: V3Voter.java,v 1.1.2.3 2004-10-01 15:12:05 dshr Exp $
+* $Id: V3Voter.java,v 1.1.2.4 2004-10-01 18:46:58 dshr Exp $
  */
 
 /*
@@ -84,6 +84,7 @@ public class V3Voter extends V3Poll {
   static Logger log=Logger.getLogger("V3Voter");
 
   private int m_state = STATE_INITIALIZING;
+    private EffortService theEffortService = null;
   /**
    * create a new poll called by some other peer
    *
@@ -103,6 +104,7 @@ public class V3Voter extends V3Poll {
       super(pollspec, pm, orig, challenge, duration, hashAlg);
 
     // XXX
+      theEffortService = pm.getEffortService(pollspec);
   }
 
   // Implementations of abstract methods from V3Poll
@@ -189,18 +191,23 @@ public class V3Voter extends V3Poll {
       //  XXX should abort poll?
       return;
     }
-    // XXX
-    if (true) {
-	m_state = STATE_SENDING_POLL_ACK;
-	return;
+    EffortService.Callback cb = new PollAckEffortCallback(m_pollmanager);
+    EffortService.Proof ep = null;
+    EffortService es = null;
+    if (false) {
+	// XXX
+	ep = msg.getEffortProof();
+	es = ep.getEffortService();
+    } else {
+	// XXX
+	es = theEffortService;
+	ep = es.makeProof();
     }
-    EffortService.Callback cb = new PollAckEffortCallback();
-    EffortService.Proof ep = msg.getEffortProof();
-    EffortService es = ep.getEffortService();
     Deadline timer = msg.getDeadline();
-    Serializable cookie = null; // XXX
+    Serializable cookie = msg.getKey();
     if (es.proveEffort(ep, timer, cb, cookie)) {
       // effort proof for Poll Ack successfuly scheduled
+	log.debug("Scheduled callback for " + ((String)cookie));
       m_state = STATE_SENDING_POLL_ACK;
     } else {
       log.warning("could not schedule effort proof " + ep.toString() +
@@ -274,6 +281,10 @@ public class V3Voter extends V3Poll {
   }
 
   class PollAckEffortCallback implements EffortService.Callback {
+      private PollManager pollMgr = null;
+      PollAckEffortCallback(PollManager pm) {
+	  pollMgr = pm;
+      }
     /**
      * Called to indicate generation of a proof of effort for
      * the PollAck message is complete.
@@ -285,6 +296,9 @@ public class V3Voter extends V3Poll {
 				   Serializable cookie,
 				   Exception e) {
       // XXX
+	log.debug("PollAckEffortProofCallback: " + ((String) cookie));
+	V3Voter p = (V3Voter) pollMgr.getPoll((String) cookie);
+	p.m_state = STATE_WAITING_POLL_PROOF;
     }
 
   }
