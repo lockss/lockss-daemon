@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseOaiMetadataHandler.java,v 1.1 2005-01-18 10:31:11 dcfok Exp $
+ * $Id: TestBaseOaiMetadataHandler.java,v 1.2 2005-01-19 08:48:50 dcfok Exp $
  */
 
 /*
@@ -33,11 +33,17 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.oai;
 
 import java.util.*;
+import java.io.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.util.XmlDomBuilder.XmlDomException;
 import org.w3c.dom.*;
 import org.apache.xpath.NodeSet;
+import javax.xml.parsers.DocumentBuilderFactory;
+import org.w3c.dom.DOMImplementation;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.ParserConfigurationException;
+import org.xml.sax.SAXException;
 
 /**
  * Test cases for OaiHandler.java
@@ -85,9 +91,9 @@ public class TestBaseOaiMetadataHandler extends LockssTestCase {
     }
 
 //     public void testSetupAndExecute(){
-// 	String prefix = "abc";
-// 	String nsUrl = "http://www.example.com/ns/";
-// 	String tag = "foo";
+// 	String prefix = "oai_dc";
+// 	String nsUrl = "http://purl.org/dc/elements/1.1/";
+// 	String tag = "identifer";
 
 // 	//setup a nodelist that contain different <metadata>..<tag>url</tag>..</metadata> records
 // 	String url1 = "http://www.example.com/link1.html";
@@ -105,7 +111,33 @@ public class TestBaseOaiMetadataHandler extends LockssTestCase {
 // 	assertEquals(testUrls, mdHandler.getArticleUrls());
 //     }
 
+    private static DocumentBuilder builder = null;
+    private static Element namespaceElement = null;
+
     private NodeList createMockMetadataNodeList(Set urls, String prefix, String namespaceUrl, String tagName){
+	/* Load DOM Document */
+	try {
+	    DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+	    factory.setNamespaceAware(true);
+	    builder = factory.newDocumentBuilder();
+	    
+	    DOMImplementation impl = builder.getDOMImplementation();
+	    Document namespaceHolder
+		= impl.createDocument("http://www.oclc.org/research/software/oai/harvester", "harvester:namespaceHolder", null);
+	    namespaceElement = namespaceHolder.getDocumentElement();
+	    namespaceElement.setAttributeNS("http://www.w3.org/2000/xmlns/",
+					    "xmlns:harvester",
+					    "http://www.lockss.org/research/software/oai/harvester");
+	    namespaceElement.setAttributeNS("http://www.w3.org/2000/xmlns/",
+                                            "xmlns:xsi",
+					    "http://www.w3.org/2001/XMLSchema-instance");
+	    namespaceElement.setAttributeNS("http://www.w3.org/2000/xmlns/",
+					    "xmlns:oai20",
+					    "http://www.openarchives.org/OAI/2.0/");
+	} catch (ParserConfigurationException pce) {
+	    logger.error("", pce);
+	}
+
 
 	NodeSet nodeSet = new NodeSet();
 	// create sth like
@@ -124,23 +156,47 @@ public class TestBaseOaiMetadataHandler extends LockssTestCase {
 	*/
 
 	//XXX need to figure out how to add the namspaceUrl to this mock xml doc
+	// can refer to the OaiHarvester2 code which construct the doc in HarvesterVerb
 	Iterator it = urls.iterator();
 	while (it.hasNext()){
 
-	    StringBuffer xmlSBText = new StringBuffer("<metadata><"+prefix);
-	    xmlSBText.append("><"+tagName+">" + (String) it.next());
-	    xmlSBText.append("</"+ tagName +"></"+ prefix +"></metadata>");
+	    StringBuffer xmlSBText = new StringBuffer();
+	    xmlSBText.append("<metadata>");
+	    xmlSBText.append("<"+prefix+":dc ");
+	    xmlSBText.append("xmlns:oai_dc=\"http://www.openarchives.org/OAI/2.0/oai_dc/\" ");
+	    xmlSBText.append("xmlns:dc=\""+namespaceUrl+"\" ");
+	    xmlSBText.append("xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" ");
+	    xmlSBText.append("xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/oai_dc/ ");
+	    xmlSBText.append("http://www.openarchives.org/OAI/2.0/oai_dc.xsd\">");
+	    xmlSBText.append("<dc:identifier>"+it.next()+"</dc:identifier>");
+	    xmlSBText.append("</"+prefix+":dc>");
+	    xmlSBText.append("</metadata>");
 	    String xmlText = xmlSBText.toString();
-	try {
-	    XmlDomBuilder xmlDomBuilder = new XmlDomBuilder();
-	    Document tempDoc = xmlDomBuilder.parseXmlString(xmlText);
-	    tempDoc.createAttributeNS(namespaceUrl, "xyz");
-	    nodeSet.addNode(tempDoc.getDocumentElement());
-	    logger.debug3(nodeToString(tempDoc.getDocumentElement()));
-	} catch (XmlDomException xde) {
-	    logger.error("" ,xde);
-	}
 
+// 	    StringBuffer xmlSBText = new StringBuffer();
+// 	    xmlSBText.append("<metadata>");
+// 	    xmlSBText.append("<"+prefix+":xyz ");
+// 	    xmlSBText.append("xmlns:"+prefix+"='http://www.openarchives.org/OAI/2.0/abc/' ");
+// 	    xmlSBText.append("xmlns:xyz='"+namespaceUrl+"' ");
+// 	    xmlSBText.append("xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' ");
+// 	    xmlSBText.append("xsi:schemaLocation='http://www.openarchives.org/OAI/2.0/abc/ ");
+// 	    xmlSBText.append("http://www.openarchives.org/OAI/2.0/abc.xsd'>");
+// 	    xmlSBText.append("<xyz:"+tagName+">"+it.next()+"</xyz:"+tagName+">");
+// 	    xmlSBText.append("</"+prefix+":xyz>");
+// 	    xmlSBText.append("</metadata>");
+// 	    String xmlText = xmlSBText.toString();
+
+	    try {
+		Document tempDoc = builder.parse(xmlText);
+		nodeSet.addNode(tempDoc.getDocumentElement());
+		logger.debug3(nodeToString(tempDoc.getDocumentElement()));
+	    } catch (SAXException saxe) {
+		logger.error("", saxe);
+	    } catch (IOException ioe) {
+		logger.error("", ioe);
+	    }
+
+	    
 	}
 
 //===============================================================================
