@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.16 2004-12-18 01:44:57 dcfok Exp $
+ * $Id: FollowLinkCrawler.java,v 1.17 2005-01-04 02:50:39 tlipkis Exp $
  */
 
 /*
@@ -251,7 +251,7 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
     // Recompute the content tree size.  This can take a while, so do it
     // now in background (crawl) thread since it's likely to be necessary, to
     // make it more likely to be already computed when accessed from the UI.
-    PluginManager.getAuContentSize(au);
+    AuUtil.getAuContentSize(au);
   }
 
   /**

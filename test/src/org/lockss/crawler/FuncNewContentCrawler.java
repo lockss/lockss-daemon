@@ -1,5 +1,5 @@
 /*
- * $Id: FuncNewContentCrawler.java,v 1.11 2004-12-12 23:02:09 tlipkis Exp $
+ * $Id: FuncNewContentCrawler.java,v 1.12 2005-01-04 02:50:39 tlipkis Exp $
  */
 
 /*
@@ -141,7 +141,7 @@ public class FuncNewContentCrawler extends LockssTestCase {
     // end.)  If the simulated AU params are changed, or
     // SimulatedContentGenerator is changed, this number may have to
     // change.
-    assertEquals(25126, PluginManager.getAuContentSize(sau));
+    assertEquals(25126, AuUtil.getAuContentSize(sau));
   }
 
   //recursive caller to check through the whole file tree

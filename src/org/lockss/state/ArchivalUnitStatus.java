@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.26 2004-12-12 23:03:35 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.27 2005-01-04 02:50:39 tlipkis Exp $
  */
 
 /*
@@ -170,7 +170,7 @@ public class ArchivalUnitStatus
       //"AuID"
       rowMap.put("AuName", AuStatus.makeAuRef(au.getName(), au.getAuId()));
 //       rowMap.put("AuNodeCount", new Integer(-1));
-      rowMap.put("AuSize", new Long(PluginManager.getAuContentSize(au)));
+      rowMap.put("AuSize", new Long(AuUtil.getAuContentSize(au)));
       rowMap.put("AuLastCrawl", new Long(auState.getLastCrawlTime()));
       rowMap.put("Peers", PeersAgreement.makeAuRef("peers", au.getAuId()));
       rowMap.put("AuPolls",
@@ -463,8 +463,7 @@ public class ArchivalUnitStatus
 //             new StatusTable.SummaryInfo("Nodes", ColumnDescriptor.TYPE_INT,
 //                                         new Integer(-1)),
             new StatusTable.SummaryInfo("Size", ColumnDescriptor.TYPE_INT,
-                                        new Long(PluginManager.
-						 getAuContentSize(au))),
+                                        new Long(AuUtil.getAuContentSize(au))),
             new StatusTable.SummaryInfo("Last Crawl Time",
                                         ColumnDescriptor.TYPE_DATE,
                                         new Long(state.getLastCrawlTime())),
