@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.72 2003-03-29 20:25:39 tal Exp $
+ * $Id: NodeManagerImpl.java,v 1.73 2003-03-31 23:31:29 claire Exp $
  */
 
 /*
@@ -91,8 +91,6 @@ public class NodeManagerImpl implements NodeManager {
     if (theManager == null) {
       theDaemon = daemon;
       theManager = this;
-      historyRepo = theDaemon.getHistoryRepository();
-      lockssRepo = theDaemon.getLockssRepository(managedAu);
     } else {
       throw new LockssDaemonException("Multiple Instantiation.");
     }
@@ -116,7 +114,7 @@ public class NodeManagerImpl implements NodeManager {
     Configuration.registerConfigurationCallback(configCallback);
 
     nodeMap = new NodeStateMap(historyRepo, maxMapSize);
-
+    lockssRepo = theDaemon.getLockssRepository(managedAu);
     historyRepo = theDaemon.getHistoryRepository();
 
     treeWalkHandler = new TreeWalkHandler(this, theDaemon.getCrawlManager());
@@ -144,23 +142,28 @@ public class NodeManagerImpl implements NodeManager {
     maxMapSize = config.getInt(PARAM_NODESTATE_MAP_SIZE, DEFAULT_MAP_SIZE);
   }
 
-  public boolean startPoll(CachedUrlSet cus, PollTally state) {
+  public void startPoll(CachedUrlSet cus, PollTally state) {
     NodeState nodeState = getNodeState(cus);
-    if (nodeState == null) {
-      logger.error("Failed to find a valid node state for: " + cus);
-      return false;
-    }
-    if(!state.isMyPoll() && hasDamage(cus, state.getType()))  {
-      logger.info("Ignoring poll request on damaged node: " + cus);
-      return false;
-    }
-
     PollSpec spec = state.getPollSpec();
     PollState pollState = new PollState(state.getType(), spec.getLwrBound(),
                                         spec.getUprBound(),
                                         PollState.RUNNING, state.getStartTime(),
                                         null);
     ((NodeStateImpl)nodeState).addPollState(pollState);
+  }
+
+  public boolean shouldStartPoll(CachedUrlSet cus, PollTally state) {
+    NodeState nodeState = getNodeState(cus);
+
+    if (nodeState == null) {
+      logger.error("Failed to find a valid node state for: " + cus);
+      return false;
+    }
+
+    if(!state.isMyPoll() && hasDamage(cus, state.getType()))  {
+      logger.info("Poll has damaged node: " + cus);
+      return false;
+    }
     return true;
   }
 
@@ -283,38 +286,6 @@ public class NodeManagerImpl implements NodeManager {
     return historyV.iterator();
   }
 
-/*
- Removed until needed.
-  public long getEstimatedTreeWalkDuration() {
-    long treeWalkEstimate = -1;
-    if (treeWalkHandler!=null) {
-      logger.debug("Estimating treewalk...");
-      logger.debug3("Checking thread estimate...");
-      treeWalkEstimate  = treeWalkHandler.getEstimatedTreeWalkDuration();
-      if (treeWalkEstimate < 0) {
-        treeWalkHandler.calculateEstimatedTreeWalkDuration();
-
-        // give up after 10*the test duration
-        Deadline quitDeadline =
-            Deadline.in(10*treeWalkHandler.treeWalkTestDuration);
-        while ((treeWalkEstimate < 0) && (!quitDeadline.expired())) {
-          treeWalkEstimate = treeWalkHandler.getEstimatedTreeWalkDuration();
-          // sleep for a test duration
-          Deadline sleepDeadline =
-              Deadline.in(treeWalkHandler.treeWalkTestDuration);
-          try {
-            sleepDeadline.sleep();
-          } catch (InterruptedException ie) { }
-        }
-      }
-      logger.debug("Estimate: "+treeWalkEstimate);
-    } else {
-      logger.warning("Can't estimate treewalk duration if thread not started.");
-      return 1;
-    }
-    return treeWalkEstimate;
-  }
-*/
   NodeState createNodeState(CachedUrlSet cus) {
     logger.debug2("Loading NodeState: " + cus.toString());
     // load from file cache, or get a new one
@@ -384,12 +355,7 @@ public class NodeManagerImpl implements NodeManager {
         logger.debug2("lost content poll, state = repairing, marking for repair.");
         // if leaf node, we need to repair
         pollState.status = PollState.REPAIRING;
-        try {
-          markNodeForRepair(nodeState.getCachedUrlSet(), results);
-        } catch (IOException ioe) {
-          logger.error("Attempt to mark node for repair failed.", ioe);
-          // the treewalk will fix this eventually
-        }
+        markNodeForRepair(nodeState.getCachedUrlSet(), results);
       }
     }
   }
@@ -411,7 +377,6 @@ public class NodeManagerImpl implements NodeManager {
         }
       } else {
         logger.debug2("won name poll, setting state to WON");
-        // if poll is not mine stop - set to WON
         pollState.status = PollState.WON;
       }
     } else {
@@ -430,16 +395,12 @@ public class NodeManagerImpl implements NodeManager {
         if (localSet.contains(url)) {
           // removing from the set to leave only files for deletion
           localSet.remove(url);
-        } else {
+        }
+        else {
           // if not found locally, fetch
-          try {
-            logger.debug2("marking missing node for repair: " + url);
-            CachedUrlSet newCus = au.makeCachedUrlSet(baseUrl+url, null, null);
-            markNodeForRepair(newCus, results);
-          } catch (Exception e) {
-            logger.error("Couldn't fetch new node.", e);
-            // the treewalk will fix this eventually
-          }
+          logger.debug2("marking missing node for repair: " + url);
+          CachedUrlSet newCus = au.makeCachedUrlSet(baseUrl + url, null, null);
+          markNodeForRepair(newCus, results);
         }
       }
       localIt = localSet.iterator();
@@ -556,14 +517,19 @@ public class NodeManagerImpl implements NodeManager {
     return PollState.ERR_UNDEFINED;
   }
 
-  private void markNodeForRepair(CachedUrlSet cus, PollTally tally)
-      throws IOException {
+  private void markNodeForRepair(CachedUrlSet cus, PollTally tally) {
     logger.debug2("suspending poll " + tally.getPollKey());
     theDaemon.getPollManager().suspendPoll(tally.getPollKey());
     logger.debug2("scheduling repair");
-    theDaemon.getCrawlManager().scheduleRepair(managedAu,
-        new URL(cus.getUrl()), new ContentRepairCallback(),
-                                 tally.getPollKey());
+    try {
+      theDaemon.getCrawlManager().scheduleRepair(managedAu,
+                                                 new URL(cus.getUrl()),
+                                                 new ContentRepairCallback(),
+                                                 tally.getPollKey());
+    }
+    catch (MalformedURLException ex) {
+      // ignore and let the tree walk catch the repair
+    }
   }
 
   private void deleteNode(CachedUrlSet cus) throws IOException {
@@ -580,7 +546,7 @@ public class NodeManagerImpl implements NodeManager {
     List childList = convertChildrenToCUSList(children);
     // Divide the list in two and call two new content polls
     if (childList.size() > 4) {
-      String base = results.getCachedUrlSet().getSpec().getUrl();
+      String base = results.getCachedUrlSet().getUrl();
       int mid = childList.size() / 2;
       String lwr = ( (CachedUrlSet) childList.get(0)).getSpec().getUrl();
       lwr = lwr.startsWith(base) ? lwr.substring(base.length()) : lwr;

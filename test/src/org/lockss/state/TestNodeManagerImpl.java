@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.51 2003-03-27 00:50:23 aalto Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.52 2003-03-31 23:31:29 claire Exp $
  */
 
 /*
@@ -286,17 +286,17 @@ public class TestNodeManagerImpl extends LockssTestCase {
     }
 
     // if we got a valid node we should return true
-    assertTrue(nodeManager.startPoll(cus,results));
+    assertTrue(nodeManager.shouldStartPoll(cus,results));
 
     // if we haven't got one we should return false
-    assertFalse(nodeManager.startPoll(getCUS(mau, TEST_URL + "/bogus"),
+    assertFalse(nodeManager.shouldStartPoll(getCUS(mau, TEST_URL + "/bogus"),
                                              results));
 
     // if we have a damaged node we return false
     ( (NodeStateImpl) node).closeActivePoll(new PollHistory(Poll.CONTENT_POLL,
         "", "", PollHistory.UNREPAIRABLE, 200, 456, null));
 
-    assertFalse(nodeManager.startPoll(cus, results));
+    assertFalse(nodeManager.shouldStartPoll(cus, results));
   }
 
   public void testHandleContentPoll() throws Exception {

@@ -219,6 +219,10 @@ public class PollTally {
     pollVotes = new ArrayList(originalVotes.size());
     replayIter =  originalVotes.iterator();
     replayDeadline = deadline;
+    numAgree = 0;
+    numDisagree = 0;
+    wtAgree = 0;
+    wtDisagree = 0;
     replayNextVote();
   }
 

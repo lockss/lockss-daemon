@@ -19,7 +19,7 @@ org.lockss.test.doTreewalk=false
 org.lockss.test.treewalk.pluginId=org|lockss|plugin|simulated|SimulatedPlugin
 org.lockss.test.treewalk.auId=localA
 
-org.lockss.test.doPoll=false
+org.lockss.test.doPoll=true
 org.lockss.test.polltype=2
 org.lockss.test.pollspec.pluginId=org|lockss|plugin|simulated|SimulatedPlugin
 org.lockss.test.pollspec.auId=localA

@@ -215,7 +215,7 @@ public class TestPollManager extends LockssTestCase {
       // we should now be closed
       assertTrue(pollmanager.isPollClosed(p1.m_key));
       // we should reject an attempt to handle a packet with this key
-      pollmanager.handleMessage(testmsg[0]);
+      pollmanager.handleIncomingMessage(testmsg[0]);
       assertFalse(pollmanager.isPollActive(p1.m_key));
 
    }
