@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrlSetSpec.java,v 1.7 2003-02-20 02:27:37 aalto Exp $
+ * $Id: MockCachedUrlSetSpec.java,v 1.8 2003-03-04 21:20:41 tal Exp $
  */
 
 /*
@@ -63,7 +63,7 @@ public class MockCachedUrlSetSpec implements CachedUrlSetSpec {
     if (obj instanceof MockCachedUrlSetSpec) {
       MockCachedUrlSetSpec spec = (MockCachedUrlSetSpec)obj;
       return ((root.equals(spec.root)) &&
-              (regExp.equals(spec.regExp)));
+              (StringUtil.equalStrings(regExp, spec.regExp)));
     } else {
       return false;
     }
