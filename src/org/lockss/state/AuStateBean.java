@@ -1,5 +1,5 @@
 /*
- * $Id: AuStateBean.java,v 1.7 2003-04-07 18:30:36 aalto Exp $
+ * $Id: AuStateBean.java,v 1.8 2003-04-07 21:29:08 aalto Exp $
  */
 
 /*
@@ -47,14 +47,6 @@ public class AuStateBean extends AuState {
   AuStateBean(AuState auState) {
     super(auState.au, auState.lastCrawlTime, auState.lastTopLevelPoll,
           auState.lastTreeWalk, null);
-  }
-
-  /**
-   * Sets the archival unit
-   * @param au the au
-   */
-  void setArchivalUnit(ArchivalUnit au) {
-    this.au = au;
   }
 
   /**
