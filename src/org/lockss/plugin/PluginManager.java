@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.114 2004-10-12 23:44:47 smorabito Exp $
+ * $Id: PluginManager.java,v 1.115 2004-10-13 01:01:11 smorabito Exp $
  */
 
 /*
@@ -150,12 +150,6 @@ public class PluginManager
   private Map cuNodeVersionMap = Collections.synchronizedMap(new HashMap());
   private Map classloaderMap = Collections.synchronizedMap(new HashMap());
   private Set inactiveAuIds = Collections.synchronizedSet(new HashSet());
-
-  // Lists of plugins and AUs used by the plugin manager for internal
-  // purposes, rather than by content plugins (for example,
-  // RegistryPlugin and RegistryArchivalUnit)
-  private List internalPluginList = Collections.synchronizedList(new ArrayList());
-  private List internalAuList = Collections.synchronizedList(new ArrayList());
 
   // Map of plugin keys to loadable plugin JAR CachedUrls, used by
   // the loadable plugin status accessor.
@@ -741,7 +735,7 @@ public class PluginManager
    * by the LOCKSS daemon.
    */
   public boolean isInternalAu(ArchivalUnit au) {
-    return internalAuList.contains(au);
+    return au instanceof RegistryArchivalUnit;
   }
 
   /**
@@ -749,7 +743,7 @@ public class PluginManager
    * by the LOCKSS daemon.
    */
   public boolean isInternalPlugin(Plugin plugin) {
-    return internalPluginList.contains(plugin);
+    return plugin instanceof RegistryPlugin;
   }
 
   /**
@@ -1110,7 +1104,6 @@ public class PluginManager
     String pluginKey = pluginKeyFromName("org.lockss.plugin.RegistryPlugin");
     registryPlugin.initPlugin(theDaemon);
     setPlugin(pluginKey, registryPlugin);
-    internalPluginList.add(registryPlugin);
     for (Iterator iter = urls.iterator(); iter.hasNext(); ) {
       String url = (String)iter.next();
       Configuration auConf = ConfigManager.newConfiguration();
@@ -1140,8 +1133,6 @@ public class PluginManager
 	ArchivalUnit registryAu = getAuFromId(auId);
 
 	loadAus.add(registryAu);
-	// also add to global list of "internal" AUs.
-	internalAuList.add(registryAu);
 
 	// Trigger a new content crawl if required.
 	if (registryAu.
