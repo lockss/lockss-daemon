@@ -1,5 +1,5 @@
 /*
- * $Id: LcapComm.java,v 1.31 2003-05-06 01:45:45 troberts Exp $
+ * $Id: LcapComm.java,v 1.32 2003-05-22 01:20:29 tal Exp $
  */
 
 /*
@@ -349,10 +349,10 @@ public class LcapComm extends BaseLockssManager {
     int proto = ld.getProtocol();
     MessageHandler handler;
     if (proto < messageHandlers.size() &&
-	(handler = (MessageHandler)messageHandlers.get(proto))  != null) {
+	(handler = (MessageHandler)messageHandlers.get(proto)) != null) {
       runHandler(handler, ld);
     } else {
-      log.warning("Message receved for unregistered protocol: " + proto);
+      log.warning("Message received for unregistered protocol: " + proto);
     }
 //      for (Iterator iter = messageHandlers.iterator(); iter.hasNext();) {
 //        runHandler((MessageHandler)iter.next(), ld);
