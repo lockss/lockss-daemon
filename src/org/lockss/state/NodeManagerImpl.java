@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.196.2.1 2004-11-16 01:53:14 tlipkis Exp $
+ * $Id: NodeManagerImpl.java,v 1.196.2.2 2004-12-02 20:37:57 tlipkis Exp $
  */
 
 /*
@@ -202,7 +202,19 @@ public class NodeManagerImpl
    * @return Iterator the NodeStates
    */
   Iterator getCacheEntries() {
-    return nodeCache.snapshot().iterator();
+    if (isGlobalNodeCache) {
+      // must return just our entries from global cache
+      Collection auEntries = new ArrayList();
+      for (Iterator iter = nodeCache.snapshot().iterator(); iter.hasNext(); ) {
+        NodeState state = (NodeState)iter.next();
+	if (managedAu == state.getCachedUrlSet().getArchivalUnit()) {
+	  auEntries.add(state);
+	}
+      }
+      return auEntries.iterator();
+    } else {
+      return nodeCache.snapshot().iterator();
+    }
   }
 
   public void forceTopLevelPoll() {
