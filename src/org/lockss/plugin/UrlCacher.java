@@ -1,5 +1,5 @@
 /*
- * $Id: UrlCacher.java,v 1.5 2003-12-19 01:33:25 eaalto Exp $
+ * $Id: UrlCacher.java,v 1.6 2004-02-06 03:10:49 troberts Exp $
  */
 
 /*
@@ -97,4 +97,10 @@ public interface UrlCacher {
    * @throws IOException
    */
   public Properties getUncachedProperties() throws IOException;
+
+
+  public void storeContent(InputStream input, Properties headers)
+      throws IOException;
+
+
 }
