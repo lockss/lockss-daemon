@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.35 2003-09-12 01:19:02 eaalto Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.36 2003-09-13 00:46:15 eaalto Exp $
  */
 
 /*
@@ -132,8 +132,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
       int bufMaxLength = url.length() + child.getName().length() + 1;
       StringBuffer buffer = new StringBuffer(bufMaxLength);
       buffer.append(url);
-      if (!url.endsWith(File.separator)) {
-        buffer.append(File.separator);
+      if (!url.endsWith("/")) {
+        buffer.append('/');
       }
       buffer.append(child.getName());
 
@@ -319,15 +319,21 @@ public class RepositoryNodeImpl implements RepositoryNode {
         throw new UnsupportedOperationException("setNewProperties() not called.");
       }
 
-      // rename current
-      if ((currentCacheFile.exists() &&
-           !currentCacheFile.renameTo(getVersionedCacheFile(currentVersion))) ||
-          (currentPropsFile.exists() &&
-           !currentPropsFile.renameTo(getVersionedPropsFile(currentVersion)))) {
-        String err = "Couldn't rename current version files: " + url;
+      // rename current files only if they exists
+      if (currentCacheFile.exists() &&
+          !currentCacheFile.renameTo(getVersionedCacheFile(currentVersion))) {
+        String err = "Couldn't rename current content file: " + url;
         logger.error(err);
         throw new LockssRepository.RepositoryStateException(err);
       }
+
+      if (currentPropsFile.exists() &&
+          !currentPropsFile.renameTo(getVersionedPropsFile(currentVersion))) {
+        String err = "Couldn't rename current property file: " + url;
+        logger.error(err);
+        throw new LockssRepository.RepositoryStateException(err);
+      }
+
       // rename new
       if (!tempCacheFile.renameTo(currentCacheFile) ||
           !tempPropsFile.renameTo(currentPropsFile)) {
