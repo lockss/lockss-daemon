@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.6 2003-07-27 01:40:57 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.7 2003-07-30 05:35:47 tlipkis Exp $
  */
 
 /*
@@ -176,7 +176,7 @@ public class ConfigManager implements LockssManager {
   }
 
   /** Factory to create instance of appropriate class */
-  static Configuration newConfiguration() {
+  public static Configuration newConfiguration() {
     return new ConfigurationPropTreeImpl();
   }
 
