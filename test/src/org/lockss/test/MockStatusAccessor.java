@@ -1,5 +1,5 @@
 /*
- * $Id: MockStatusAccessor.java,v 1.13 2003-12-23 00:41:37 tlipkis Exp $
+ * $Id: MockStatusAccessor.java,v 1.14 2004-05-14 08:42:03 tlipkis Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ public class MockStatusAccessor implements StatusAccessor {
   private Map defaultSortRules = new HashMap();
   private Map titles = new HashMap();
   private Map summaryInfo = new HashMap();
-
+  private Map titleFeet = new HashMap();
 
   public String getDisplayName() {
     return "MockStatusAccessor";
@@ -73,6 +73,10 @@ public class MockStatusAccessor implements StatusAccessor {
     titles.put(key, tableTitle);
   }
 
+  public void setTitleFoot(String titleFoot, String key) {
+    titleFeet.put(key, titleFoot);
+  }
+
   public void setSummaryInfo(String key, List summaryInfo) {
     this.summaryInfo.put(key, summaryInfo);
   }
@@ -81,6 +85,10 @@ public class MockStatusAccessor implements StatusAccessor {
       throws StatusService.NoSuchTableException {
     String key = table.getKey();
     table.setTitle((String)titles.get(key));
+    String titleFoot = (String)titleFeet.get(key);
+    if (titleFoot != null) {
+      table.setTitleFootnote(titleFoot);
+    }
     table.setColumnDescriptors((List)columnDescriptors.get(key));
     table.setDefaultSortRules((List)defaultSortRules.get(key));
     table.setRows((List)rows.get(key));
@@ -96,6 +104,9 @@ public class MockStatusAccessor implements StatusAccessor {
 	new StatusTable.SummaryInfo((String)summaryInfoArray[ix][0], 
 			       ((Integer)summaryInfoArray[ix][1]).intValue(),
 			       summaryInfoArray[ix][2]);
+      if (summaryInfoArray[ix].length >= 4) {
+	summaryInfo.setFootnote((String)summaryInfoArray[ix][3]);
+      }
       list.add(summaryInfo);
     }
     return list;
