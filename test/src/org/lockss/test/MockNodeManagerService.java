@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerService.java,v 1.2 2003-03-01 02:56:06 aalto Exp $
+ * $Id: MockNodeManagerService.java,v 1.1 2003-03-01 02:56:06 aalto Exp $
  */
 
 /*
@@ -30,30 +30,51 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.state;
+package org.lockss.test;
 
 import java.util.*;
 import org.lockss.app.*;
-import org.lockss.daemon.Configuration;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.state.*;
 
 /**
- * Handles the NodeManagers.
+ * Mock implementation of the NodeManagerService.
  */
-public interface NodeManagerService extends LockssManager {
-  /**
-   * Returns the node manager matching that ArchivalUnit.
-   * Throws an IllegalArgumentException if there is no NodeManager, since it
-   * should be loaded.
-   * @param au the ArchivalUnit
-   * @return the NodeManager
-   */
-  public NodeManager getNodeManager(ArchivalUnit au);
+public class MockNodeManagerService implements NodeManagerService {
+  private static LockssDaemon theDaemon;
+  private static LockssManager theManager = null;
+  public HashMap auMaps = new HashMap();
 
-  /**
-   * Factory method to retrieve NodeManager.  Calls 'startService()' on the
-   * ArchivalUnit-specific NodeManager.
-   * @param au the ArchivalUnit being managed
-   */
-  public void addNodeManager(ArchivalUnit au);
+  public MockNodeManagerService() { }
+
+  public void initService(LockssDaemon daemon) throws LockssDaemonException {
+    if (theManager == null) {
+      theDaemon = daemon;
+      theManager = this;
+    } else {
+      throw new LockssDaemonException("Multiple Instantiation.");
+    }
+  }
+
+  public void startService() {
+  }
+
+  public void stopService() {
+  }
+
+  public NodeManager getNodeManager(ArchivalUnit au) {
+    NodeManager nodeMan = (NodeManager)auMaps.get(au);
+    if (nodeMan==null) {
+      throw new IllegalArgumentException("NodeManager not created for au.");
+    }
+    return nodeMan;
+  }
+
+  public synchronized void addNodeManager(ArchivalUnit au) {
+    NodeManager nodeManager = (NodeManager)auMaps.get(au);
+    if (nodeManager==null) {
+      nodeManager = NodeManagerImpl.getTestNodeManager(au);
+      auMaps.put(au, nodeManager);
+    }
+  }
 }

@@ -12,18 +12,17 @@ import org.lockss.crawler.*;
 import org.lockss.plugin.*;
 import org.lockss.app.*;
 
-public class MockLockssDaemon
-    extends LockssDaemon {
+public class MockLockssDaemon extends LockssDaemon {
   HashService hashService = null;
   PollManager pollManager = null;
   LcapComm commManager = null;
   LockssRepository lockssRepository = null;
   HistoryRepository historyRepository = null;
-  NodeManagerService nodeManagerService = null;
   ProxyHandler proxyHandler = null;
   CrawlManager crawlManager = null;
   PluginManager pluginManager = null;
   IdentityManager identityManager = null;
+  NodeManagerService nodeManagerService = null;
 
   public MockLockssDaemon(List urls) {
     super(urls);
@@ -38,11 +37,11 @@ public class MockLockssDaemon
     commManager = null;
     lockssRepository = null;
     historyRepository = null;
-    nodeManagerService = null;
     proxyHandler = null;
     crawlManager = null;
     pluginManager = null;
     identityManager = null;
+    nodeManagerService = null;
   }
 
   /**
@@ -136,22 +135,31 @@ public class MockLockssDaemon
   }
 
   /**
-   * return the node manager instance
+   * return the node manager service
+   * @return the NodeManagerService
+   */
+  public NodeManagerService getNodeManagerService() {
+    if (nodeManagerService == null) {
+      nodeManagerService = new MockNodeManagerService();
+      try {
+        nodeManagerService.initService(this);
+      }
+      catch (LockssDaemonException ex) {
+      }
+      theManagers.put(LockssDaemon.NODE_MANAGER_SERVICE, nodeManagerService);
+    }
+    return nodeManagerService;
+  }
+
+
+  /**
+   * return the node manager instance.  Uses NodeManagerService.
    * @param au the ArchivalUnit
    * @return the NodeManager
    */
   public NodeManager getNodeManager(ArchivalUnit au) {
-    if (nodeManagerService == null) {
-      NodeManagerService nms = new NodeManagerService();
-      try {
-        nms.initService(this);
-      }
-      catch (LockssDaemonException ex) {
-      }
-      nodeManagerService = nms;
-      theManagers.put(LockssDaemon.NODE_MANAGER_SERVICE, nodeManagerService);
-    }
-    return nodeManagerService.managerFactory(au);
+    getNodeManagerService().addNodeManager(au);
+    return nodeManagerService.getNodeManager(au);
   }
 
   /**
@@ -279,12 +287,27 @@ public class MockLockssDaemon
   }
 
   /**
-   * Set the NodeManager
-   * @param nodeManService the new manager
+   * Set a new NodeManagerService.
+   * @param nms the new service
    */
-  public void setNodeManagerService(NodeManagerService nodeManService) {
-    nodeManagerService = nodeManService;
-    theManagers.put(LockssDaemon.NODE_MANAGER_SERVICE, nodeManagerService);
+  public void setNodeManagerService(NodeManagerService nms) {
+    nodeManagerService = nms;
+  }
+
+  /**
+   * Set the NodeManager for a given AU.  Requires a MocKNodeManagerService
+   * (the default).
+   * @param nodeMan the new manager
+   * @param au the ArchivalUnit
+   */
+  public void setNodeManager(NodeManager nodeMan, ArchivalUnit au) {
+    getNodeManagerService();
+    if (nodeManagerService instanceof MockNodeManagerService) {
+      ((MockNodeManagerService)nodeManagerService).auMaps.put(au, nodeMan);
+    } else {
+      throw new UnsupportedOperationException("Couldn't setNodeManager with"+
+                                              "a non-Mock service.");
+    }
   }
 
   /**

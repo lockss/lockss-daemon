@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.12 2003-03-01 01:10:02 tal Exp $
+ * $Id: PluginManager.java,v 1.13 2003-03-01 02:56:06 aalto Exp $
  */
 
 /*
@@ -59,7 +59,7 @@ public class PluginManager implements LockssManager {
   private Map plugins = new HashMap();
 
   public PluginManager() {
-  }    
+  }
 
   /* ------- LockssManager implementation ------------------ */
   /**
@@ -128,6 +128,7 @@ public class PluginManager implements LockssManager {
 
   /**
    * Return the plugin with the given id.  Mostly for testing.
+   * @param pluginId the plugin id
    * @return the plugin or null
    */
   public Plugin getPlugin(String pluginId) {
@@ -146,7 +147,7 @@ public class PluginManager implements LockssManager {
 	  Configuration oldAuConf = oldPluginConf.getConfigTree(auKey);
 	  if (!auConf.equals(oldAuConf)) {
 	    log.debug("Configuring AU id: " + auKey);
-	    plugin.configureAU(auConf);
+	    configureAU(plugin, auConf);
 	  } else {
 	    log.debug("Not configuring AU id: " + auKey +
 		      ", already configured");
@@ -157,12 +158,19 @@ public class PluginManager implements LockssManager {
       } else {
 	log.warning("Not configuring AU " + auKey);
       }
-    }    
+    }
+  }
+
+  private void configureAU(Plugin plugin, Configuration auConf)
+      throws ArchivalUnit.ConfigurationException {
+    ArchivalUnit au = plugin.configureAU(auConf);
+    theDaemon.getNodeManagerService().addNodeManager(au);
   }
 
   /**
    * load a plugin with the given class name from somewhere in our classpath
-   * @param pluginName the unique name for this plugin
+   * @param pluginId the unique name for this plugin
+   * @return true if loaded
    */
   boolean ensurePluginLoaded(String pluginId) {
     if (plugins.containsKey(pluginId)) {
@@ -225,7 +233,10 @@ public class PluginManager implements LockssManager {
     return res;
   }
 
-  /** Return a list of all configured ArchivalUnits. */
+  /**
+   * Return a list of all configured ArchivalUnits.
+   * @return the List of aus
+   */
   public List getAllAUs() {
     List res = new ArrayList();
     for (Iterator pi = plugins.values().iterator(); pi.hasNext(); ) {
