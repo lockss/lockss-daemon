@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.1 2003-02-24 18:40:11 tal Exp $
+ * $Id: TestPluginManager.java,v 1.2 2003-02-26 06:02:25 tal Exp $
  */
 
 /*
@@ -39,7 +39,8 @@ import junit.framework.TestCase;
 //import org.lockss.util.*;
 import org.lockss.test.*;
 import org.lockss.daemon.*;
-
+import org.lockss.plugin.*;
+import org.lockss.poller.*;
 
 /**
  * Test class for org.lockss.plugin.PluginManager
@@ -57,14 +58,16 @@ public class TestPluginManager extends LockssTestCase {
   }
 
   static String mockPlugId = "org|lockss|test|MockPlugin";
-  static String mauauid1 = "val1|val2.";
-  static String mauauid2 = "val1|va|l3.";
+  static String mauauid1 = "val1|val2";
+  static String mauauidkey1 = "val1|val2";
+  static String mauauid2 = "val1|va.l3";
+  static String mauauidkey2 = "val1|va|l3";
 
   static String p1param = PluginManager.PARAM_AU_TREE +
     ".org|lockss|test|MockPlugin.";
 
-  static String p1a1param = p1param + mauauid1;
-  static String p1a2param = p1param + mauauid2;
+  static String p1a1param = p1param + mauauid1 + ".";
+  static String p1a2param = p1param + mauauidkey2 + ".";
 
   static String configStr =
     p1a1param + MockPlugin.CONFIG_PROP_1 + "=val1\n" +
@@ -95,7 +98,7 @@ public class TestPluginManager extends LockssTestCase {
     assertEquals(1, mpi.getInitCtr());
     Collection aus = mpi.getAllAUs();
     assertEquals(2, aus.size());
-    ArchivalUnit au1 = mpi.getAU("val1|val2");
+    ArchivalUnit au1 = mpi.getAU(mauauid1);
     assertNotNull(au1);
     MockArchivalUnit mau1 = (MockArchivalUnit)au1;
     Configuration c1 = mau1.getConfiguration();
@@ -103,9 +106,67 @@ public class TestPluginManager extends LockssTestCase {
     assertEquals("val2", c1.get(MockPlugin.CONFIG_PROP_2));
     ArchivalUnit au2 = mpi.getAU("val1|va|l3");
     assertNotNull(au2);
+    assertEquals(mauauid1, au1.getAUId());
+    assertEquals(mauauid2, au2.getAUId());
+    assertTrue(au1 != au2);
+    assertTrue(!au1.equals(au2));
     MockArchivalUnit mau2 = (MockArchivalUnit)au2;
     Configuration c2 = mau2.getConfiguration();
     assertEquals("val1", c2.get(MockPlugin.CONFIG_PROP_1));
     assertEquals("va.l3", c2.get(MockPlugin.CONFIG_PROP_2));
+  }
+
+  public void testFindCUS() throws Exception {
+    String url = "http://foo.bar/";
+    String lower = "lll";
+    String upper = "hhh";
+    mgr.startService();
+    TestConfiguration.setCurrentConfigFromString(configStr);
+    MockPlugin mpi = (MockPlugin)mgr.getPlugin(mockPlugId);
+
+    CachedUrlSet protoCus = makeCUS(mockPlugId, mauauid1, url, lower, upper);
+    PollSpec ps1 = new PollSpec(protoCus);
+
+    CachedUrlSet cus = mgr.findCachedUrlSet(ps1);
+    assertNotNull(cus);
+    CachedUrlSetSpec cuss = cus.getSpec();
+    assertEquals(url, cuss.getUrl());
+    RangeCachedUrlSetSpec rcuss = (RangeCachedUrlSetSpec)cuss;
+    assertEquals(lower, rcuss.getLowerBound());
+    assertEquals(upper, rcuss.getUpperBound());
+    // can't test protoCus.getArchivalUnit() .equals( cus.getArchivalUnit() )
+    // as we made a fake mock one to build PollSpec, and PluginManager will
+    // have created & configured a real mock one.
+
+    CachedUrlSet protoAuCus = makeAUCUS(mockPlugId, mauauid1);
+    PollSpec ps2 = new PollSpec(protoAuCus);
+
+    CachedUrlSet aucus = mgr.findCachedUrlSet(ps2);
+    assertNotNull(aucus);
+    CachedUrlSetSpec aucuss = aucus.getSpec();
+    assertEquals("lockssau:", aucuss.getUrl());
+    assertTrue(aucuss instanceof AUCachedUrlSetSpec);
+  }
+
+  public CachedUrlSet makeCUS(String pluginid, String auid, String url,
+			       String lower, String upper) {
+    MockArchivalUnit au = new MockArchivalUnit();
+    au.setAuId(auid);
+    au.setPluginId(pluginid);
+
+    CachedUrlSet cus = new MockCachedUrlSet(au,
+					    new RangeCachedUrlSetSpec(url,
+								      lower,
+								      upper));
+    return cus;
+  }
+
+  public CachedUrlSet makeAUCUS(String pluginid, String auid) {
+    MockArchivalUnit au = new MockArchivalUnit();
+    au.setAuId(auid);
+    au.setPluginId(pluginid);
+
+    CachedUrlSet cus = new MockCachedUrlSet(au, new AUCachedUrlSetSpec());
+    return cus;
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.7 2003-02-24 23:32:43 tal Exp $
+ * $Id: PluginManager.java,v 1.8 2003-02-26 06:02:25 tal Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.util.*;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.app.*;
+import org.lockss.poller.*;
 
 /**
  * Plugin global functionality
@@ -55,7 +56,7 @@ public class PluginManager implements LockssManager {
   private static LockssDaemon theDaemon = null;
   private String pluginDir = null;
 
-  private static Map plugins = new HashMap();
+  private Map plugins = new HashMap();
   private static Vector archivalUnits = new Vector();
 
 
@@ -140,12 +141,15 @@ public class PluginManager implements LockssManager {
     for (Iterator iter = pluginConf.nodeIterator(); iter.hasNext(); ) {
       String auKey = (String)iter.next();
       if (pluginOk) {
-	log.debug("Configuring AU id: " + auKey);
 	try {
 	  Configuration auConf = pluginConf.getConfigTree(auKey);
 	  Configuration oldAuConf = oldPluginConf.getConfigTree(auKey);
 	  if (!auConf.equals(oldAuConf)) {
+	    log.debug("Configuring AU id: " + auKey);
 	    plugin.configureAU(auConf);
+	  } else {
+	    log.debug("Not configuring AU id: " + auKey +
+		      ", already configured");
 	  }
 	} catch (ArchivalUnit.ConfigurationException e) {
 	  log.error("Failed to configure AU " + auKey, e);
@@ -185,6 +189,7 @@ public class PluginManager implements LockssManager {
       return false;
     }
     try {
+      log.debug("Instantiating " + pluginClass);
       Plugin plugin = (Plugin)pluginClass.newInstance();
       plugin.initPlugin();
       plugins.put(pluginId, plugin);
@@ -238,19 +243,26 @@ public class PluginManager implements LockssManager {
   }
 
   /**
-   * Find the <code>CachedUrlSet</code>
-   * that comtains a URL.
-   * @param url The URL to search for.
-   * @return The <code>CachedUrlSet</code> that contains the URL, or
-   * null if none found.  It is an error for more than one
-   * <code>ArchivalUnit</code> to contain the url.
+   * Find the CachedUrlSet from a PollSpec.
+   * @param spec the PollSpec (from an incoming message)
+   * @returns a CachedUrlSet for the plugin, au and URL in the spec, or
+   * null if au not present on this cache
    */
-  public CachedUrlSet findAUCachedUrlSet(String url) {
-    ArchivalUnit au = findArchivalUnit(url);
-    if (au == null) {
-      return null;
+  public CachedUrlSet findCachedUrlSet(PollSpec spec) {
+    String pluginId = spec.getPluginId();
+    Plugin plugin = getPlugin(pluginId);
+    if (plugin == null) return null;
+    String auId = spec.getAUId();
+    ArchivalUnit au = plugin.getAU(auId);
+    if (au == null) return null;
+    String url = spec.getUrl();
+    CachedUrlSet cus;
+    if (AuUrl.isAuUrl(url)) {
+      cus = au.getAUCachedUrlSet();
+    } else {
+      cus = au.makeCachedUrlSet(url, spec.getLwrBound(), spec.getUprBound());
     }
-    return au.getAUCachedUrlSet();
+    return cus;
   }
 
   /**
