@@ -1,5 +1,5 @@
 /*
- * $Id: TestXmlPropertyLoader.java,v 1.9 2004-09-27 20:10:51 smorabito Exp $
+ * $Id: TestXmlPropertyLoader.java,v 1.9.4.1 2004-11-12 19:29:30 smorabito Exp $
  */
 
 /*
@@ -305,6 +305,11 @@ public class TestXmlPropertyLoader extends LockssTestCase {
   public void testConditionalCombo() throws IOException {
     assertEquals("bar", m_props.get("org.lockss.test.w"));
     assertEquals("foo", m_props.get("org.lockss.test.x"));
+  }
+
+  public void testTestNonNested() throws IOException {
+    assertEquals("bar", m_props.get("org.lockss.test.y"));
+    assertEquals("foo", m_props.get("org.lockss.test.z"));
   }
 
   public void testBooleanAnd() throws IOException {

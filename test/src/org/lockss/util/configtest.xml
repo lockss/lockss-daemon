@@ -184,6 +184,26 @@
       </else>
     </if>
 
+    <!-- ensure 'test' can stand on its own -->
+    <if>
+      <test platformVersion="134" />
+      <then>
+	<property name="test.y" value="foo"/>
+      </then>
+      <else>
+	<property name="test.y" value="bar"/>
+      </else>
+    </if>
+    <if>
+      <test platformVersion="135" />
+      <then>
+	<property name="test.z" value="foo"/>
+      </then>
+      <else>
+	<property name="test.z" value="bar"/>
+      </else>
+    </if>
+
 
     <!-- Test the legal formats for "and" booleans -->
     <if>
@@ -451,7 +471,6 @@
 	<property name="nulltest.h" value="bar" />
       </else>
     </if>
-
 
   </property>
 
