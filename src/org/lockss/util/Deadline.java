@@ -1,5 +1,5 @@
 /*
- * $Id: Deadline.java,v 1.22 2003-05-08 22:13:57 tal Exp $
+ * $Id: Deadline.java,v 1.23 2003-05-15 21:54:11 tyronen Exp $
  */
 
 /*
@@ -397,6 +397,11 @@ public class Deadline implements Comparable {
 
   public boolean equals(Object o) {
     return expiration.equals(((Deadline)o).expiration);
+  }
+
+  /** Returns the hashCode of the underlying Date object */
+  public int hashCode() {
+    return expiration.hashCode();
   }
 
   // tk - should include "+n days" or some such
