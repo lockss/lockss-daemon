@@ -1,5 +1,5 @@
 /*
- * $Id: LcapSocket.java,v 1.3 2002-11-19 23:26:36 tal Exp $
+ * $Id: LcapSocket.java,v 1.4 2002-12-02 00:39:27 tal Exp $
  */
 
 /*
@@ -187,11 +187,11 @@ public class LcapSocket {
    */
   public static class Multicast extends RcvSocket {
 
-    /* Create a Multicast socket that receives packets sent to <i>port</i>,
+    /** Create a Multicast socket that receives packets sent to <i>port</i>,
      * and puts them on the specified queue.
-     @param rcvQ The queue onto which to put received packets
-     @param grp The multicast group to join
-     @param port The UDP port to which tobind the socket
+     * @param rcvQ The queue onto which to put received packets
+     * @param grp The multicast group to join
+     * @param port The UDP port to which to bind the socket
     */
     public Multicast(Queue rcvQ, InetAddress grp, int port)
 	throws IOException {
