@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedStatusAccessor.java,v 1.5 2003-03-15 02:31:20 troberts Exp $
+ * $Id: SimulatedStatusAccessor.java,v 1.6 2003-03-17 08:32:58 tal Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.daemon.status;
 
 import java.util.*;
 import java.net.*;
+import java.math.BigInteger;
 import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.daemon.status.*;
@@ -76,7 +77,8 @@ public class SimulatedStatusAccessor {
       for (int ix = 1; ix <= ncols; ix++) {
 	columns.add(new ColumnDescriptor(coltag(ix),
 					 "Column " + ix, 
-					 coltype(ix-1)));
+					 coltype(ix-1),
+					 "Footnote for colemn " + ix));
       }
       return columns;
     }
@@ -99,7 +101,8 @@ public class SimulatedStatusAccessor {
       case ColumnDescriptor.TYPE_PERCENT:
 	return new Float(1.0 / row);
       case ColumnDescriptor.TYPE_TIME_INTERVAL:
-	return new Integer((59 << row) * Constants.SECOND);
+	return new Long(Math.round(Math.pow(59, row)) * Constants.SECOND);
+// 	return new Integer((59 << row) * Constants.SECOND);
       case ColumnDescriptor.TYPE_FLOAT:
 	return new Float(1.0 / row);
       case ColumnDescriptor.TYPE_IP_ADDRESS:
