@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.35 2004-05-04 22:19:44 tlipkis Exp $
+ * $Id: DaemonStatus.java,v 1.36 2004-05-14 16:10:38 tlipkis Exp $
  */
 
 /*
@@ -195,7 +195,7 @@ public class DaemonStatus extends LockssServlet {
       XmlDomBuilder xmlBuilder =
           new XmlDomBuilder(XmlStatusConstants.NS_PREFIX,
                             XmlStatusConstants.NS_URI,
-                            XmlDomBuilder.XML_VERSIONNAME);
+                            "1.0");
       Document errorDoc = xmlBuilder.createDocument();
       org.w3c.dom.Element rootElem = xmlBuilder.createRoot(errorDoc,
           XmlStatusConstants.ERROR);

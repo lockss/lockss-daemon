@@ -1,5 +1,5 @@
 /*
- * $Id: XmlStatusTable.java,v 1.8 2004-05-14 08:39:55 tlipkis Exp $
+ * $Id: XmlStatusTable.java,v 1.9 2004-05-14 16:10:39 tlipkis Exp $
  */
 
 /*
@@ -44,7 +44,7 @@ public class XmlStatusTable {
 
   XmlDomBuilder xmlBuilder = new XmlDomBuilder(XmlStatusConstants.NS_PREFIX,
                                                XmlStatusConstants.NS_URI,
-                                               XmlDomBuilder.XML_VERSIONNAME);
+                                               "2.0");
 
   StatusTable statusTable = null;
   Document tableDocument = null;
