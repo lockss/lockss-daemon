@@ -1,5 +1,5 @@
 /*
- * $Id: TitleConfig.java,v 1.1 2004-01-03 06:13:26 tlipkis Exp $
+ * $Id: TitleConfig.java,v 1.2 2004-01-04 06:14:31 tlipkis Exp $
  */
 
 /*
@@ -124,6 +124,24 @@ public class TitleConfig {
     return config;
   }
 
+  // AuConfig hasn't been fully converted to use TitleConfig.  These
+  // methods provide the info it needs to do things mostly the old way
+
+  public Collection getUnEditableKeys() {
+    if (params == null) {
+      return Collections.EMPTY_LIST;
+    }
+    List res = new ArrayList();
+    for (Iterator iter = params.iterator(); iter.hasNext(); ) {
+      ConfigParamAssignment cpa = (ConfigParamAssignment)iter.next();
+      ConfigParamDescr cpd = cpa.getParamDescr();
+      if (!cpa.isEditable()) {
+	res.add(cpd.getKey());
+      }
+    }
+    return res;
+  }
+
   /** Generate Properties that will result in this TitleConfig when loaded
    * by BasePlugin */
   public Properties toProperties(String propAbbr) {
@@ -141,4 +159,18 @@ public class TitleConfig {
     }
     return p;
   }
+
+  public String toString() {
+    StringBuffer sb = new StringBuffer(40);
+    sb.append("[Title: ");
+    sb.append(displayName);
+    sb.append(", plugin:");
+    sb.append(pluginName);
+    sb.append(", params:");
+    sb.append(params);
+    sb.append("]");
+    return sb.toString();
+  }
+
+
 }
