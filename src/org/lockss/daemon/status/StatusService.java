@@ -1,5 +1,5 @@
 /*
- * $Id: StatusService.java,v 1.2 2003-03-13 02:00:36 troberts Exp $
+ * $Id: StatusService.java,v 1.3 2003-03-13 23:14:23 troberts Exp $
  */
 
 /*
@@ -39,6 +39,11 @@ import java.util.*;
  * centralized place to query for status information on the system.
  */
 public interface StatusService {
+
+  /**
+   * Name of the table that contains references to all tables
+   */
+  public static final String ALL_TABLES_TABLE = "table of all tables";
 
   /**
    * Returns the StatusService.Table object identified by the tableName 
