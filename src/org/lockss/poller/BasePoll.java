@@ -1,5 +1,5 @@
 /*
-* $Id: BasePoll.java,v 1.8 2004-09-29 01:19:11 dshr Exp $
+* $Id: BasePoll.java,v 1.9 2004-10-01 09:25:53 tlipkis Exp $
  */
 
 /*
@@ -114,7 +114,9 @@ public abstract class BasePoll implements Poll {
    */
   public boolean isMyPoll() {
     boolean ret = idMgr.isLocalIdentity(m_callerID);
-    log.debug("isMyPoll(" + m_callerID.toString() + ") = " + ret);
+    if (log.isDebug2()) {
+      log.debug2("isMyPoll(" + m_callerID.toString() + ") = " + ret);
+    }
     return ret;
   }
 
