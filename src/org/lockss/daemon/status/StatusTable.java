@@ -1,5 +1,5 @@
 /*
- * $Id: StatusTable.java,v 1.29 2004-05-04 22:18:45 tlipkis Exp $
+ * $Id: StatusTable.java,v 1.30 2004-05-26 07:03:47 tlipkis Exp $
  */
 
 /*
@@ -56,7 +56,7 @@ public class StatusTable {
   private static Logger logger = Logger.getLogger("StatusTable");
   private List summaryInfo;
   private BitSet options = new BitSet();
-  private long cacheLife = -1;
+  private boolean isResortable = true;
 
   /**
    * @param name String representing table name
@@ -236,6 +236,14 @@ public class StatusTable {
    */
   public void setDefaultSortRules(List defaultSortRules) {
     this.defaultSortRules = defaultSortRules;
+  }
+
+  public void setResortable(boolean isResortable) {
+    this.isResortable = isResortable;
+  }
+
+  public boolean isResortable() {
+    return isResortable;
   }
 
   public String toString() {

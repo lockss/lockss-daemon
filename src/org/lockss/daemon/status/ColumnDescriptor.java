@@ -1,5 +1,5 @@
 /*
- * $Id: ColumnDescriptor.java,v 1.5 2004-05-04 22:18:01 tlipkis Exp $
+ * $Id: ColumnDescriptor.java,v 1.6 2004-05-26 07:03:47 tlipkis Exp $
  */
 
 /*
@@ -81,6 +81,7 @@ public class ColumnDescriptor {
   private String title;
   private int type;
   private String footNote;
+  protected boolean sortable = true;
 
   public ColumnDescriptor(String columnName, String title, int type) {
     this.columnName = columnName;
@@ -108,6 +109,10 @@ public class ColumnDescriptor {
 
   public String getFootnote() {
     return footNote;
+  }
+
+  public boolean isSortable() {
+    return sortable;
   }
 
   public String toString() {
