@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.6 2004-03-27 02:38:16 eaalto Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.7 2004-04-07 22:56:18 tlipkis Exp $
  */
 
 /*
@@ -93,7 +93,7 @@ public class ArchivalUnitStatus extends BaseLockssManager {
 
     private static final List columnDescriptors = ListUtil.list(
       new ColumnDescriptor("AuName", "Volume", ColumnDescriptor.TYPE_STRING),
-      new ColumnDescriptor("AuNodeCount", "Nodes", ColumnDescriptor.TYPE_INT),
+//       new ColumnDescriptor("AuNodeCount", "Nodes", ColumnDescriptor.TYPE_INT),
       new ColumnDescriptor("AuSize", "Size", ColumnDescriptor.TYPE_INT),
       new ColumnDescriptor("AuLastCrawl", "Last Crawl",
                            ColumnDescriptor.TYPE_DATE),
@@ -150,7 +150,7 @@ public class ArchivalUnitStatus extends BaseLockssManager {
       rowMap.put("AuName", AuStatus.makeAuRef(au.getName(),
           au.getAuId()));
       //XXX start caching this info
-      rowMap.put("AuNodeCount", new Integer(-1));
+//       rowMap.put("AuNodeCount", new Integer(-1));
       rowMap.put("AuSize", new Long(repoNode.getTreeContentSize(null)));
       rowMap.put("AuLastCrawl", new Long(state.getLastCrawlTime()));
       rowMap.put("AuLastPoll", new Long(state.getLastTopLevelPollTime()));
@@ -167,22 +167,22 @@ public class ArchivalUnitStatus extends BaseLockssManager {
     private static final List columnDescriptors = ListUtil.list(
       new ColumnDescriptor("NodeName", "Node Url",
                            ColumnDescriptor.TYPE_STRING),
-      new ColumnDescriptor("NodeStatus", "Status",
-                           ColumnDescriptor.TYPE_STRING),
-      new ColumnDescriptor("NodeHasContent", "Content",
-                           ColumnDescriptor.TYPE_STRING),
+//       new ColumnDescriptor("NodeHasContent", "Content",
+//                            ColumnDescriptor.TYPE_STRING),
       new ColumnDescriptor("NodeVersion", "Version",
                            ColumnDescriptor.TYPE_INT),
       new ColumnDescriptor("NodeContentSize", "Size",
                            ColumnDescriptor.TYPE_INT),
+      new ColumnDescriptor("NodeTreeSize", "Tree Size",
+                           ColumnDescriptor.TYPE_INT),
       new ColumnDescriptor("NodeChildCount", "Children",
                            ColumnDescriptor.TYPE_INT),
-      new ColumnDescriptor("NodeTreeSize", "Tree Size",
-                           ColumnDescriptor.TYPE_INT)
+      new ColumnDescriptor("NodeStatus", "Status",
+                           ColumnDescriptor.TYPE_STRING)
       );
 
     private static final List sortRules = ListUtil.list(
-      new StatusTable.SortRule("NodeName", false)
+      new StatusTable.SortRule("sort", true)
       );
 
     private static LockssDaemon theDaemon;
@@ -236,8 +236,7 @@ public class ArchivalUnitStatus extends BaseLockssManager {
                          NodeManager nodeMan, int startRow) {
       List rowL = new ArrayList();
       Iterator cusIter = au.getAuCachedUrlSet().contentHashIterator();
-      int rowCount = 0;
-      int endRow = startRow + nodesToDisplay;
+      int endRow1 = startRow + nodesToDisplay; // end row + 1
 
       if (startRow > 0) {
         // add 'previous'
@@ -248,18 +247,11 @@ public class ArchivalUnitStatus extends BaseLockssManager {
         rowL.add(makeOtherRowsLink(false, start, au.getAuId()));
       }
 
-      boolean hasMoreRows = false;
-      while (cusIter.hasNext()) {
-        if (rowCount < startRow) {
-          cusIter.next();
-          rowCount++;
+      for (int curRow = 0; (curRow < endRow1) && cusIter.hasNext(); curRow++) {
+        CachedUrlSetNode cusn = (CachedUrlSetNode)cusIter.next();
+        if (curRow < startRow) {
           continue;
         }
-        if (rowCount >= endRow) {
-          hasMoreRows = true;
-          break;
-        }
-        CachedUrlSetNode cusn = (CachedUrlSetNode)cusIter.next();
         CachedUrlSet cus;
         if (cusn.getType() == cusn.TYPE_CACHED_URL_SET) {
           cus = (CachedUrlSet)cusn;
@@ -268,17 +260,67 @@ public class ArchivalUnitStatus extends BaseLockssManager {
           cus = au.getPlugin().makeCachedUrlSet(au, spec);
         }
         try {
-          rowL.add(makeRow(repo.getNode(cus.getUrl()),
-                           nodeMan.getNodeState(cus)));
+	  Map row = makeRow(repo.getNode(cus.getUrl()),
+			    nodeMan.getNodeState(cus));
+	  row.put("sort", new Integer(curRow));
+          rowL.add(row);
         } catch (MalformedURLException ignore) { }
-        rowCount++;
       }
 
-      if (hasMoreRows) {
+      if (cusIter.hasNext()) {
         // add 'next'
-        rowL.add(makeOtherRowsLink(true, endRow, au.getAuId()));
+        rowL.add(makeOtherRowsLink(true, endRow1, au.getAuId()));
       }
       return rowL;
+    }
+
+    private Map makeRow(RepositoryNode node, NodeState state) {
+      HashMap rowMap = new HashMap();
+      rowMap.put("NodeName", node.getNodeUrl());
+
+      String status = null;
+      if (node.isDeleted()) {
+        status = "Deleted";
+      } else if (node.isContentInactive()) {
+        status = "Inactive";
+      } else if (state.hasDamage()) {
+        status = "Damaged";
+      } else {
+//         status = "Active";
+      }
+      if (status != null) {
+	rowMap.put("NodeStatus", status);
+      }
+      boolean content = node.hasContent();
+      Object versionObj = "-";
+      Object sizeObj = "-";
+      if (content) {
+        versionObj = new Integer(node.getCurrentVersion());
+        sizeObj = new Long(node.getContentSize());
+      }
+      rowMap.put("NodeHasContent", (content ? "yes" : "no"));
+      rowMap.put("NodeVersion", versionObj);
+      rowMap.put("NodeContentSize", sizeObj);
+      if (!node.isLeaf()) {
+	rowMap.put("NodeChildCount", new Integer(node.getChildCount()));
+	rowMap.put("NodeTreeSize", new Long(node.getTreeContentSize(null)));
+      } else {
+	rowMap.put("NodeChildCount", "-");
+	rowMap.put("NodeTreeSize", "-");
+      }
+      return rowMap;
+    }
+
+    private Map makeOtherRowsLink(boolean isNext, int startRow, String auKey) {
+      HashMap rowMap = new HashMap();
+      String label = (isNext ? "Next" : "Previous") + " (" +
+	(startRow + 1) + "-" + (startRow + nodesToDisplay) + ")";
+      StatusTable.Reference link =
+          new StatusTable.Reference(label, AU_STATUS_TABLE_NAME,
+                                    auKey + KEY_SUFFIX + startRow);
+      rowMap.put("NodeName", link);
+      rowMap.put("sort", new Integer(isNext ? Integer.MAX_VALUE : -1));
+      return rowMap;
     }
 
     private String getTitle(String key) {
@@ -290,8 +332,8 @@ public class ArchivalUnitStatus extends BaseLockssManager {
       List summaryList =  ListUtil.list(
             new StatusTable.SummaryInfo("Volume" , ColumnDescriptor.TYPE_STRING,
                                         au.getName()),
-            new StatusTable.SummaryInfo("Nodes", ColumnDescriptor.TYPE_INT,
-                                        new Integer(-1)),
+//             new StatusTable.SummaryInfo("Nodes", ColumnDescriptor.TYPE_INT,
+//                                         new Integer(-1)),
             new StatusTable.SummaryInfo("Size", ColumnDescriptor.TYPE_INT,
                                         new Long(repoNode.getTreeContentSize(null))),
             new StatusTable.SummaryInfo("Last Crawl Time",
@@ -311,59 +353,6 @@ public class ArchivalUnitStatus extends BaseLockssManager {
                                         "-")
             );
         return summaryList;
-    }
-
-    private Map makeRow(RepositoryNode node, NodeState state) {
-      HashMap rowMap = new HashMap();
-      rowMap.put("NodeName", node.getNodeUrl());
-
-      String status;
-      if (node.isDeleted()) {
-        status = "Deleted";
-      } else if (node.isContentInactive()) {
-        status = "Inactive";
-      } else if (state.hasDamage()) {
-        status = "Damaged";
-      } else {
-        status = "Active";
-      }
-      rowMap.put("NodeStatus", status);
-      boolean content = node.hasContent();
-      Object versionObj = "-";
-      Object sizeObj = "-";
-      if (content) {
-        versionObj = new Integer(node.getCurrentVersion());
-        sizeObj = new Long(node.getContentSize());
-      }
-      rowMap.put("NodeHasContent", (content ? "yes" : "no"));
-      rowMap.put("NodeVersion", versionObj);
-      rowMap.put("NodeContentSize", sizeObj);
-      Object childObj = "-";
-      if (!node.isLeaf()) {
-        childObj = new Integer(node.getChildCount());
-      }
-      rowMap.put("NodeChildCount", childObj);
-      rowMap.put("NodeContentSize", new Long(node.getTreeContentSize(null)));
-
-      return rowMap;
-    }
-
-    private Map makeOtherRowsLink(boolean isNext, int startRow, String auKey) {
-      HashMap rowMap = new HashMap();
-      String label = (isNext ? "Next" : "Previous");
-      StatusTable.Reference link =
-          new StatusTable.Reference(label, AU_STATUS_TABLE_NAME,
-                                    auKey + KEY_SUFFIX + startRow);
-      String rows = ""+(startRow+1)+"-"+(startRow + nodesToDisplay);
-      rowMap.put("NodeName", link);
-      rowMap.put("NodeStatus", rows);
-      rowMap.put("NodeHasContent", "");
-      rowMap.put("NodeVersion", "");
-      rowMap.put("NodeContentSize", "");
-      rowMap.put("NodeChildCount", "");
-      rowMap.put("NodeContentSize", "");
-
-      return rowMap;
     }
 
     // utility method for making a Reference
