@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.58 2004-02-27 00:19:26 tlipkis Exp $
+ * $Id: Configuration.java,v 1.59 2004-05-12 17:46:46 tlipkis Exp $
  */
 
 /*
@@ -404,6 +404,25 @@ public abstract class Configuration {
       remove(rootKey + "." + key);
     }
     remove(rootKey);
+  }
+
+  /** Remove the subtree below the specified key.
+   * @param rootKey The key at the root of the subtree to be deleted.  This
+   * key and all below it are removed.
+   */
+  public void copyConfigTreeFrom(Configuration fromConfig, String root) {
+    Configuration subtree = fromConfig.getConfigTree(root);
+    if (subtree.isEmpty()) {
+      return;
+    }
+    for (Iterator iter = subtree.keyIterator(); iter.hasNext(); ) {
+      String relkey = (String)iter.next();
+      String key = root + "." + relkey;
+      put(key, fromConfig.get(key));
+    }
+    if (fromConfig.containsKey(root)) {
+      put(root, fromConfig.get(root));
+    }
   }
 
 

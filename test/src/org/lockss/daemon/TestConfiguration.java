@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfiguration.java,v 1.27 2003-12-23 00:30:18 tlipkis Exp $
+ * $Id: TestConfiguration.java,v 1.28 2004-05-12 17:46:46 tlipkis Exp $
  */
 
 /*
@@ -105,6 +105,26 @@ public class TestConfiguration extends LockssTestCase {
     // removing a non-existent tree should do nothing
     config.removeConfigTree("dkdkdk");
     assertEquals(3, config.keySet().size());
+  }
+
+  public void testCopyTree() {
+    Configuration from = newConfiguration();
+    from.put("a", "1");
+    from.put("b", "2");
+    from.put("b.a", "3");
+    from.put("b.a.1", "4");
+    from.put("b.a.1.1", "5");
+    from.put("b.a.2", "6");
+    from.put("b.b", "7");
+    Configuration to = newConfiguration();
+    to.put("a", "2");
+    to.copyConfigTreeFrom(from, "b.a");
+    assertEquals(5, to.keySet().size());
+    assertEquals("2", to.get("a"));
+    assertEquals("3", to.get("b.a"));
+    assertEquals("4", to.get("b.a.1"));
+    assertEquals("5", to.get("b.a.1.1"));
+    assertEquals("6", to.get("b.a.2"));
   }
 
   private void assertSealed(Configuration config) {
