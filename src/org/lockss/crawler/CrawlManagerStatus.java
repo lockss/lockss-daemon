@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatus.java,v 1.20.2.1 2005-01-19 17:05:01 troberts Exp $
+ * $Id: CrawlManagerStatus.java,v 1.20.2.2 2005-01-19 18:03:39 tlipkis Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.crawler;
 import java.util.*;
+import org.apache.commons.collections.map.ReferenceMap;
 import org.lockss.daemon.status.*;
 import org.lockss.daemon.*;
 import org.lockss.app.*;
@@ -88,8 +89,10 @@ public class CrawlManagerStatus implements StatusAccessor {
   private CrawlManager.StatusSource statusSource;
   private PluginManager pluginMgr;
 
-  private List statusObjects = new ArrayList();
-  private Map statusIndex = new HashMap();
+  // Maps key to Crawler.Status.  Weak values allow Status obj to be
+  // collected
+  private Map statusMap = new ReferenceMap(ReferenceMap.HARD,
+					   ReferenceMap.WEAK);
 
   public CrawlManagerStatus(CrawlManager.StatusSource statusSource) {
     this.statusSource = statusSource;
@@ -166,12 +169,8 @@ public class CrawlManagerStatus implements StatusAccessor {
   }
 
   private Map makeRow(Crawler.Status status) {
-    Integer idx = (Integer)statusIndex.get(status);
-    if (idx == null) {
-      statusObjects.add(status);
-      idx = new Integer(statusObjects.size() - 1);
-      statusIndex.put(status, idx);
-    }
+    String key = status.getKey();
+    statusMap.put(key, status);
 
     String type = getTypeString(status.getType());
     Map row = new HashMap();
@@ -181,19 +180,19 @@ public class CrawlManagerStatus implements StatusAccessor {
     row.put(START_TIME_COL_NAME, new Long(status.getStartTime()));
     row.put(END_TIME_COL_NAME, new Long(status.getEndTime()));
     row.put(NUM_URLS_FETCHED, 
-	    makeRefRow(status.getNumFetched(),
-		       "single_crawl_status", "fetched;"+idx));
+	    makeRef(status.getNumFetched(),
+		    "single_crawl_status", "fetched."+key));
 
     row.put(NUM_URLS_WITH_ERRORS, 
-	    makeRefRow(status.getNumUrlsWithErrors(),
-		       "single_crawl_status", "error;"+idx));
+	    makeRef(status.getNumUrlsWithErrors(),
+		    "single_crawl_status", "error."+key));
 
     row.put(NUM_URLS_NOT_MODIFIED, 
-	    makeRefRow(status.getNumNotModified(),
-		       "single_crawl_status", "not-modified;"+idx));
+	    makeRef(status.getNumNotModified(),
+		    "single_crawl_status", "not-modified."+key));
     row.put(NUM_URLS_PARSED, 
-	    makeRefRow(status.getNumParsed(),
-		       "single_crawl_status", "parsed;"+idx));
+	    makeRef(status.getNumParsed(),
+		    "single_crawl_status", "parsed."+key));
     row.put(START_URLS,
 	    (StringUtil.separatedString(status.getStartUrls(), "\n")));
     row.put(CRAWL_STATUS, status.getCrawlStatus());
@@ -204,10 +203,7 @@ public class CrawlManagerStatus implements StatusAccessor {
    * Makes the proper reference object if value is != 0, otherwise just returns
    * a Long
    */
-  private Object makeRefRow(long value, String tableName, String key) {
-    if (value == 0) {
-      return new Long(0);
-    }
+  private Object makeRef(long value, String tableName, String key) {
     return new StatusTable.Reference(new Long(value), tableName, key);
   }
 
@@ -227,7 +223,7 @@ public class CrawlManagerStatus implements StatusAccessor {
     String key = table.getKey();
     table.setColumnDescriptors(colDescs);
     boolean includeInternalAus =
-      table.getOptions().get(StatusTable.OPTION_INCLUDE_INTERNAL_AUS); 
+      table.getOptions().get(StatusTable.OPTION_INCLUDE_INTERNAL_AUS);
     table.setRows(getRows(key, includeInternalAus));
 
     table.setDefaultSortRules(makeSortRules());
@@ -242,8 +238,8 @@ public class CrawlManagerStatus implements StatusAccessor {
     return sortRules;
   }
 
-  public Crawler.Status getStatusObject(int idx) {
-    return (Crawler.Status)statusObjects.get(idx);
+  public Crawler.Status getStatusObject(String key) {
+    return (Crawler.Status)statusMap.get(key);
   }
 
 }

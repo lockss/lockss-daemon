@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawlManagerStatus.java,v 1.1.2.2 2005-01-19 17:05:24 troberts Exp $
+ * $Id: MockCrawlManagerStatus.java,v 1.1.2.3 2005-01-19 18:03:33 tlipkis Exp $
  */
 
 /*
@@ -42,17 +42,17 @@ import org.lockss.plugin.base.*;
 import org.lockss.util.*;
 
 public class MockCrawlManagerStatus extends CrawlManagerStatus {
-  List statusObjects = new ArrayList();
+  Map statusMap = new HashMap();
 
   public MockCrawlManagerStatus() {
   }
 
-  public Crawler.Status getStatusObject(int idx) {
-    return (Crawler.Status)statusObjects.get(idx);
+  public Crawler.Status getStatusObject(String key) {
+    return (Crawler.Status)statusMap.get(key);
   }
 
   public void addStatusObject(Crawler.Status status) {
-    statusObjects.add(status);
+    statusMap.put(status.getKey(), status);
   }
 
 }
