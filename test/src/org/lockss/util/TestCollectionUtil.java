@@ -1,5 +1,5 @@
 /*
- * $Id: TestCollectionUtil.java,v 1.2 2002-09-19 21:02:13 tal Exp $
+ * $Id: TestCollectionUtil.java,v 1.3 2002-10-16 04:58:55 tal Exp $
  */
 
 /*
@@ -72,23 +72,28 @@ public class TestCollectionUtil extends TestCase {
     Vector v2 = new Vector();
     Object a0[] = {};
     Object a1[] = {"12", "34"};
+    assertTrue(CollectionUtil.isIsomorphic(v1, v2));
+    assertTrue(CollectionUtil.isIsomorphic(v1, a0));
+    assertTrue(!CollectionUtil.isIsomorphic(v1, a1));
+    v1.add(a1[0]);
+    v1.add(a1[1]);
+    assertTrue(CollectionUtil.isIsomorphic(v1, a1));
+    assertTrue(!CollectionUtil.isIsomorphic(new HashSet(), new Vector()));
+    assertTrue(!CollectionUtil.isIsomorphic(new Vector(), new HashSet()));
+    Set s1 = new HashSet();
+    Set s2 = new HashSet();
+    s1.add("a");
+    assertTrue(!CollectionUtil.isIsomorphic(s1, s2));
+    s2.add("a");
+    assertTrue(CollectionUtil.isIsomorphic(s1, s2));
+    Vector v = new Vector();
+    v.add("a");
+    assertTrue(!CollectionUtil.isIsomorphic(s1, v));
+    assertTrue(!CollectionUtil.isIsomorphic(v, s1));
+    s1.add("1");
+    s1.add("2");
+    s2.add("2");
+    s2.add("1");
+    assertTrue(CollectionUtil.isIsomorphic(s1, s2));
   }
-
-
-  static String empty[] = {};
-  public void testEmptyIter() {
-    Iterator iter = new ArrayIterator(empty);
-    assertTrue( ! iter.hasNext());
-  }
-
-  static String arr[] = {"one", "two"};
-  public void testIter() {
-    Iterator iter = new ArrayIterator(arr);
-    for (int ix = 0; ix < arr.length; ix++) {
-      assertTrue(iter.hasNext());
-      assertEquals(arr[ix], (String)iter.next());
-    }
-    assertTrue( ! iter.hasNext());
-  }
-
 }
