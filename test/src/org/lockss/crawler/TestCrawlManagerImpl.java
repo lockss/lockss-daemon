@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.1 2003-02-05 22:40:42 troberts Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.2 2003-02-06 01:00:42 troberts Exp $
  */
 
 /*
@@ -280,7 +280,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 
   
 
-  private class TestCrawlCB implements CrawlCallback {
+  private class TestCrawlCB implements CrawlManager.Callback {
     Deadline timer;
     boolean called = false;
     Object cookie;

@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.1 2003-02-05 22:40:42 troberts Exp $
+ * $Id: CrawlManagerImpl.java,v 1.2 2003-02-06 01:00:42 troberts Exp $
  */
 
 /*
@@ -61,7 +61,7 @@ public class CrawlManagerImpl implements CrawlManager {
    * repair we're referring to.
    */
   public void scheduleRepair(ArchivalUnit au, URL url, 
-			     CrawlCallback cb, Object cookie){
+			     CrawlManager.Callback cb, Object cookie){
     if (au == null) {
       throw new IllegalArgumentException("Called with null AU");
     } if (url == null) {
@@ -76,7 +76,7 @@ public class CrawlManagerImpl implements CrawlManager {
   }
 
   public boolean canTreeWalkStart(ArchivalUnit au, 
-				  CrawlCallback cb, Object cookie){
+				  CrawlManager.Callback cb, Object cookie){
     if (au == null) {
       throw new IllegalArgumentException("Called with null AU");
     }
@@ -98,7 +98,8 @@ public class CrawlManagerImpl implements CrawlManager {
   }
 
   private void scheduleNewContentCrawl(ArchivalUnit au, 
-				       CrawlCallback cb, Object cookie) {
+				       CrawlManager.Callback cb, 
+				       Object cookie) {
     CrawlThread crawlThread = 
       new CrawlThread(au, au.getNewContentCrawlUrls(), 
 		      true, Deadline.NEVER, cb, cookie);
@@ -109,7 +110,7 @@ public class CrawlManagerImpl implements CrawlManager {
     if (callbacks != null) {
       Iterator it = callbacks.iterator();
       while (it.hasNext()) {
-	CrawlCallback cb = (CrawlCallback) it.next();
+	CrawlManager.Callback cb = (CrawlManager.Callback) it.next();
 	cb.signalCrawlAttemptCompleted(true, null);
       }
     }
@@ -130,12 +131,12 @@ public class CrawlManagerImpl implements CrawlManager {
     private List urls;
     private boolean followLinks;
     private Deadline deadline;
-    private CrawlCallback cb;
+    private CrawlManager.Callback cb;
     private Object cookie;
 
     private CrawlThread(ArchivalUnit au, List urls, 
 			boolean followLinks, Deadline deadline,
-			CrawlCallback cb, Object cookie) {
+			CrawlManager.Callback cb, Object cookie) {
       super(au.toString());
       this.au = au;
       this.urls = urls;
