@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.39 2004-08-22 02:12:43 tlipkis Exp $
+ * $Id: TestStringUtil.java,v 1.40 2004-10-19 10:16:08 tlipkis Exp $
  */
 
 /*
@@ -136,6 +136,12 @@ public class TestStringUtil extends LockssTestCase {
     assertEquals("", StringUtil.escapeNonAlphaNum(""));
     assertEquals("123", StringUtil.escapeNonAlphaNum("123"));
     assertEquals("\\ 1\\.2\\\\3\\?", StringUtil.escapeNonAlphaNum(" 1.2\\3?"));
+  }
+
+  public void testCsvEncode() {
+    assertEquals("", StringUtil.csvEncode(""));
+    assertSame("foo", StringUtil.csvEncode("foo"));
+    assertEquals("foo\\\\bar\\,x", StringUtil.csvEncode("foo\\bar,x"));
   }
 
   public void testCountOccurences() {

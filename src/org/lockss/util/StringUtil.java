@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.45 2004-10-08 06:58:39 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.46 2004-10-19 10:16:17 tlipkis Exp $
  */
 
 /*
@@ -388,6 +388,31 @@ public class StringUtil {
     Substitution subst = new Perl5Substitution("\\\\$1");
     return Util.substitute(RegexpUtil.getMatcher(), alphanum, subst, str,
 			   Util.SUBSTITUTE_ALL);
+  }
+
+  /** Escape all commas and backslashes with backslash, allowing result to
+   * be included in csv text */
+  public static String csvEncode(String s) {
+    int pos = Math.max(s.indexOf('\\'), s.indexOf(','));
+    if (pos < 0) return s;
+    int len = s.length();
+    StringBuffer sb = new StringBuffer(len + 8);
+    for (int ix = 0; ix < len; ix++) {
+      char c = s.charAt(ix);
+      switch(c) {
+	// Special characters
+      case '\\':
+	sb.append("\\\\");
+	break;
+      case ',':
+	sb.append("\\,");
+	break;
+      default:
+	sb.append(c);
+	break;
+      }
+    }
+    return sb.toString();
   }
 
   /**
