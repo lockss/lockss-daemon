@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Elements>
 <MapElement>
-<ElementKey>au_url_normalizer</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">org.lockss.plugin.iop.IOPNormalizer</ElementValue>
-</MapElement>
-<MapElement>
 <ElementKey>plugin_identifier</ElementKey>
 <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">org.lockss.plugin.iop.IOPPlugin</ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>au_def_pause_time</ElementKey>
+<ElementValue xsi:type="java:java.lang.Long" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">12000</ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>text/html_filter</ElementKey>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">org.lockss.plugin.iop.IOPFilterRule</ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>plugin_version</ElementKey>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2</ElementValue>
 </MapElement>
 <MapElement>
 <ElementKey>au_name</ElementKey>
@@ -20,14 +28,15 @@
 <ElementKey>au_crawlrules</ElementKey>
 <ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 <string xsi:type="java:java.lang.String">4,"^%s", base_url</string>
-<string xsi:type="java:java.lang.String">1,"%svolume/-lockss=1/%s/%d", base_url, journal_id, volume</string>
+<string xsi:type="java:java.lang.String">1,"%sEJ/volume/-lockss=1/%s/%d", base_url, journal_id, volume</string>
 <string xsi:type="java:java.lang.String">2,".*/(help|login)/.*"</string>
-<string xsi:type="java:java.lang.String">1,"%s(abstract|refs|article|mmedia|toc)/%s/%d/.*", base_url, journal_id, volume</string>
+<string xsi:type="java:java.lang.String">1,"%sEJ/(abstract|refs|article|mmedia|toc)/%s/%d/.*", base_url, journal_id, volume</string>
+<string xsi:type="java:java.lang.String">1,"%slinks/.*\.pdf", base_url</string>
 </ElementValue>
 </MapElement>
 <MapElement>
 <ElementKey>au_start_url</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%svolume/-lockss=1/%s/%d", base_url, journal_id, volume</ElementValue>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%sEJ/volume/-lockss=1/%s/%d", base_url, journal_id, volume</ElementValue>
 </MapElement>
 <MapElement>
 <ElementKey>plugin_config_props</ElementKey>
