@@ -1,5 +1,5 @@
 /*
- * $Id: TestProxyInfo.java,v 1.2 2003-07-17 23:38:56 tlipkis Exp $
+ * $Id: TestProxyInfo.java,v 1.3 2003-09-23 07:49:58 eaalto Exp $
  */
 
 /*
@@ -127,7 +127,7 @@ public class TestProxyInfo extends LockssTestCase {
   }
 
   public static void main(String[] argv) {
-    String[] testCaseList = { TestSystemMetrics.class.getName()};
+    String[] testCaseList = { TestProxyInfo.class.getName()};
     junit.swingui.TestRunner.main(testCaseList);
   }
 }
