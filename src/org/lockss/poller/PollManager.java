@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.62 2003-04-01 23:51:33 claire Exp $
+* $Id: PollManager.java,v 1.63 2003-04-02 10:50:42 tal Exp $
  */
 
 /*
@@ -575,8 +575,8 @@ public class PollManager  extends BaseLockssManager {
     return m_quorum;
   }
 
-  protected void setConfig(Configuration oldConfig,
-                           Configuration newConfig,
+  protected void setConfig(Configuration newConfig,
+                           Configuration oldConfig,
                            Set changedKeys) {
     long aveDuration = newConfig.getTimeInterval(PARAM_NAMEPOLL_DEADLINE,
                                                   DEFAULT_NAMEPOLL_DEADLINE);
