@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.1.2.8 2004-10-08 17:38:35 dshr Exp $
+ * $Id: TestV3Poller.java,v 1.1.2.9 2004-10-08 19:50:05 dshr Exp $
  */
 
 /*
@@ -222,7 +222,7 @@ public class TestV3Poller extends LockssTestCase {
 		pollmanager.isPollSuspended(key));
   }
 
-  public void dontTestPollWithThreeAgreeThreeDisagreeThreeInvalidVoters() {
+  public void testPollWithThreeAgreeThreeDisagreeThreeInvalidVoters() {
     //  Set up effort service stuff
     MockEffortService es = (MockEffortService)theDaemon.getEffortService();
     es.setGenerateProofResult(true);
@@ -388,19 +388,51 @@ public class TestV3Poller extends LockssTestCase {
       assertFalse("Poll " + poll + " should not be suspended",
 		  pollmanager.isPollSuspended(key));
       //  Eventually go to SendingReceipt
+      log.debug("XXX before first step 500");
       TimeBase.step(500);
-      // XXX what is going on here?
+      //  VoteEffortProofCallback
+      log.debug("XXX before second step 500");
       TimeBase.step(500);
-      assertEquals("Poll " + poll + " should be in SendingReceipt",
-		   V3Poller.STATE_SENDING_RECEIPT,
-		   poll.getPollState());
-      assertTrue("Poll " + poll + " should be active",
-		 pollmanager.isPollActive(key));
-      assertFalse("Poll " + poll + " should not be closed",
-		  pollmanager.isPollClosed(key));
-      assertFalse("Poll " + poll + " should not be suspended",
-		  pollmanager.isPollSuspended(key));
-      TimeBase.step(500);
+      //  Vote effort verification fails
+      log.debug("XXX before third step 500");
+      if ((totalPeers - i) < numInvalid) {
+	assertEquals("Poll " + poll + " should be in SendingPoll",
+		     V3Poller.STATE_SENDING_POLL,
+		     poll.getPollState());
+      } else {
+	assertEquals("Poll " + poll + " should be in SendingReceipt",
+		     V3Poller.STATE_SENDING_RECEIPT,
+		     poll.getPollState());
+	assertTrue("Poll " + poll + " should be active",
+		   pollmanager.isPollActive(key));
+	assertFalse("Poll " + poll + " should not be closed",
+		    pollmanager.isPollClosed(key));
+	assertFalse("Poll " + poll + " should not be suspended",
+		    pollmanager.isPollSuspended(key));
+	TimeBase.step(500);
+	if (i > 1) {
+	  assertEquals("Poll " + poll + " should be in SendingPoll",
+		       V3Poller.STATE_SENDING_POLL,
+		       poll.getPollState());
+	  assertTrue("Poll " + poll + " should be active",
+		     pollmanager.isPollActive(key));
+	  assertFalse("Poll " + poll + " should not be closed",
+		      pollmanager.isPollClosed(key));
+	  assertFalse("Poll " + poll + " should not be suspended",
+		      pollmanager.isPollSuspended(key));
+	} else {
+	  assertEquals("Poll " + poll + " should be in Finalizing",
+		       V3Poller.STATE_FINALIZING,
+		       poll.getPollState());
+	  assertFalse("Poll " + poll + " should not be active",
+		      pollmanager.isPollActive(key));
+	  assertTrue("Poll " + poll + " should be closed",
+		     pollmanager.isPollClosed(key));
+	  assertFalse("Poll " + poll + " should not be suspended",
+		      pollmanager.isPollSuspended(key));
+	}
+	TimeBase.step(500);
+      }
       assertTrue(peers.size() == i-1);
     }
   }
