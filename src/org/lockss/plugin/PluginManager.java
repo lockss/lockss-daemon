@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.99 2004-08-23 18:43:11 smorabito Exp $
+ * $Id: PluginManager.java,v 1.100 2004-09-01 02:22:27 tlipkis Exp $
  */
 
 /*
@@ -923,14 +923,30 @@ public class PluginManager
    * @return a CachedUrl, or null if URL not present in any AU
    */
   public CachedUrl findMostRecentCachedUrl(String url) {
+    // We don't know what AU it might be in, so can't do plugin-dependent
+    // normalization yet.  But only need to do generic normalization once.
+    // XXX This is wrong, as plugin-specific normalization is normally done
+    // first.
+    String normUrl;
+    try {
+      normUrl = UrlUtil.normalizeUrl(url);
+    } catch (MalformedURLException e) {
+      log.warning("findMostRecentCachedUrl(" + url + ")", e);
+      return null;
+    }
     CachedUrl best = null;
     for (Iterator iter = getAllAus().iterator(); iter.hasNext();) {
       ArchivalUnit au = (ArchivalUnit)iter.next();
-      Plugin plugin = au.getPlugin();
       if (au.shouldBeCached(url)) {
-	CachedUrl cu = plugin.makeCachedUrl(au.getAuCachedUrlSet(), url);
-	if (cu != null && cu.hasContent() && cuNewerThan(cu, best)) {
-	  best = cu;
+	Plugin plugin = au.getPlugin();
+	try {
+	  String siteUrl = UrlUtil.normalizeUrl(normUrl, au);
+	  CachedUrl cu = plugin.makeCachedUrl(au.getAuCachedUrlSet(), siteUrl);
+	  if (cu != null && cu.hasContent() && cuNewerThan(cu, best)) {
+	    best = cu;
+	  }
+	} catch (MalformedURLException ignore) {
+	  // ignored
 	}
       }
     }

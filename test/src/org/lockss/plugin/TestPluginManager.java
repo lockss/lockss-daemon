@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.42 2004-08-18 22:37:25 smorabito Exp $
+ * $Id: TestPluginManager.java,v 1.43 2004-09-01 02:22:26 tlipkis Exp $
  */
 
 /*
@@ -483,16 +483,52 @@ public class TestPluginManager extends LockssTestCase {
 
     // get the two archival units
     MockArchivalUnit au1 = (MockArchivalUnit)mgr.getAuFromId(mauauid1);
-    ArchivalUnit au2 = mgr.getAuFromId(mauauid2);
+//     ArchivalUnit au2 = mgr.getAuFromId(mauauid2);
     assertNull(mgr.findMostRecentCachedUrl(url1));
     CachedUrlSetSpec cuss = new MockCachedUrlSetSpec(prefix, null);
     MockCachedUrlSet mcuss = new MockCachedUrlSet(au1, cuss);
-//     mcuss.addUrl("foo", url1, true, true, null);
     mcuss.addUrl(url1, true, true, null);
     au1.setAuCachedUrlSet(mcuss);
     CachedUrl cu = mgr.findMostRecentCachedUrl(url1);
     assertNotNull(cu);
     assertEquals(url1, cu.getUrl());
+    assertNull(mgr.findMostRecentCachedUrl(url2));
+  }
+
+  public void testFindMostRecentCachedUrlWithNormalization()
+      throws Exception {
+    final String prefix = "http://foo.bar/"; // pseudo crawl rule prefix
+    String url0 = "http://foo.bar/xxx/baz"; // normal form of test url
+    String url1 = "http://foo.bar/SESSION/xxx/baz"; // should normalize to url0
+    String url2 = "http://foo.bar/SESSION/not";	// should not
+    // manually create necessary pieces, no config
+    MockPlugin mpi = new MockPlugin();
+    MockArchivalUnit mau = new MockArchivalUnit() {
+	// shouldBeCached() is true of anything starting with prefix
+	public boolean shouldBeCached(String url) {
+	  return StringUtil.startsWithIgnoreCase(url, prefix);
+	}
+	// siteNormalizeUrl() removes "SESSION/" from url
+	public String siteNormalizeUrl(String url) {
+	  return StringUtil.replaceString(url, "SESSION/", "");
+	}
+      };
+    mau.setPlugin(mpi);
+    mau.setAuId("mauauidddd");
+    mgr.putAuInMap(mau);
+    // neither url is found
+    assertNull(mgr.findMostRecentCachedUrl(url1));
+    assertNull(mgr.findMostRecentCachedUrl(url2));
+    // create mock structure so that url0 exists with content
+    CachedUrlSetSpec cuss = new MockCachedUrlSetSpec(prefix, null);
+    MockCachedUrlSet mcuss = new MockCachedUrlSet(mau, cuss);
+    mcuss.addUrl(url0, true, true, null);
+    mau.setAuCachedUrlSet(mcuss);
+    // url1 should now be found, as url0
+    CachedUrl cu = mgr.findMostRecentCachedUrl(url1);
+    assertNotNull(cu);
+    assertEquals(url0, cu.getUrl());
+    // url2 still not found
     assertNull(mgr.findMostRecentCachedUrl(url2));
   }
 

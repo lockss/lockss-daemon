@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.17 2004-08-20 22:56:17 clairegriffin Exp $
+ * $Id: TestNewContentCrawler.java,v 1.18 2004-09-01 02:22:26 tlipkis Exp $
  */
 
 /*
@@ -413,6 +413,32 @@ public class TestNewContentCrawler extends LockssTestCase {
     aus.assertUpdatedCrawlListCalled(0); //not called for startUrl
   }
 
+  public void testMyFoundUrlCallback() {
+    final String prefix = "http://www.example.com/"; // pseudo crawl rule
+    MockArchivalUnit mau = new MockArchivalUnit() {
+	// shouldBeCached() is true of anything starting with prefix
+	public boolean shouldBeCached(String url) {
+	  return StringUtil.startsWithIgnoreCase(url, prefix);
+	}
+	// siteNormalizeUrl() removes "SESSION/" from url
+	public String siteNormalizeUrl(String url) {
+	  return StringUtil.replaceString(url, "SESSION/", "");
+	}
+      };
+    Set extractedUrls = new HashSet();
+    NewContentCrawler.MyFoundUrlCallback mfuc =
+      new NewContentCrawler.MyFoundUrlCallback(Collections.EMPTY_SET,
+					       extractedUrls, mau);
+    mfuc.foundUrl("http://www.example.com/foo.bar");
+    mfuc.foundUrl("http://www.example.com/SESSION/foo.bar");
+    mfuc.foundUrl("HTTP://www.example.com/SESSION/foo.bar");
+    assertEquals(SetUtil.set("http://www.example.com/foo.bar"), extractedUrls);
+    extractedUrls.clear();
+    // illegal url should not be added
+    mfuc.foundUrl("http://www.example.com/foo/../..");
+    assertEmpty(extractedUrls);
+  }
+
   public void testWatchdogPokedForEachFetch() {
     String url1= "http://www.example.com/link1.html";
     String url2= "http://www.example.com/link2.html";
@@ -667,10 +693,10 @@ public class TestNewContentCrawler extends LockssTestCase {
       checkAbort();
       return new StringInputStream("");
     }
-    public void cache() throws IOException {
+    public int cache() throws IOException {
       checkAbort();
       //System.out.println("Caching for : " + super.getUrl());
-      super.cache();
+      return super.cache();
     }
     private void checkAbort() {
       if (abortCrawl) {
