@@ -1,5 +1,5 @@
 /*
- * $Id: LockssUrlConnection.java,v 1.4 2004-03-09 23:41:34 tlipkis Exp $
+ * $Id: LockssUrlConnection.java,v 1.5 2004-03-14 01:04:47 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -150,4 +150,12 @@ public interface LockssUrlConnection {
    * automatically, but this should be called if no input stream is
    * obtained (<i>eg</i>, in case of error responses) */
   public void release();
+
+
+  /** Exception thrown if a timeout occured while opening the socket. */
+  public class ConnectionTimeoutException extends IOException {
+    public ConnectionTimeoutException(String msg) {
+      super(msg);
+    }
+  }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: HttpClientUrlConnection.java,v 1.9 2004-03-11 22:13:39 tlipkis Exp $
+ * $Id: HttpClientUrlConnection.java,v 1.10 2004-03-14 01:04:47 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -119,15 +119,77 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     }
     isExecuted = true;
     for (int retry = 1; retry < MAX_REDIRECTS; retry++) {
-      if (hostConfig != null) {
-	responseCode = client.executeMethod(hostConfig, method);
-      } else {
-	responseCode = client.executeMethod(method);
-      }
+      responseCode = executeOnce(hostConfig, method);
       if (!isRetryNeeded(responseCode)) {
 	break;
       }
     }
+  }
+
+  private int executeOnce(HostConfiguration hostConfig, HttpMethod method)
+      throws IOException {
+    try {
+      if (hostConfig != null) {
+	return client.executeMethod(hostConfig, method);
+      } else {
+	return client.executeMethod(method);
+      }
+    } catch (HttpRecoverableException e) {
+      // Information-losing wrapper for lots of different exceptions within
+      // HttpClient methods.  Try to turn it back into the real exception.
+      throw exceptionFromRecoverableException(e);
+    } catch (HttpConnection.ConnectionTimeoutException e) {
+      // Host not responding (connect)
+      // Turn this into a non HttpClient-specific exception
+      throw new ConnectionTimeoutException(e);
+    }
+  }
+
+  IOException exceptionFromRecoverableException(HttpRecoverableException re) {
+    String msg = re.getMessage();
+    if (msg == null) {
+      return re;
+    }
+    IOException e = getExceptionFromMsg(msg);
+    if (e != null) {
+      return e;
+    }
+    return re;
+  }
+
+  /** Create an instance of the exception named in the message.  The new
+   * exception's stack trace will be from here, which is misleading, but
+   * the original exception's stack trace has already been lost anyway,
+   * when the HttpRecoverableException was thrown. */
+  IOException getExceptionFromMsg(String msg) {
+    // Pretty cheesy to do it this way, but a general mechanism would
+    // require reflection to call one-arg constructor, and hopefully the
+    // need for this will go away in a future release of HttpClient
+
+    String newMsg = null;
+    int pos = msg.indexOf(": ");
+    if (pos >= 0 && (pos + 2) < msg.length()) {
+      newMsg = msg.substring(pos + 2, msg.length());
+    }
+    if (msg.startsWith("java.io.InterruptedIOException")) {
+      return new java.io.InterruptedIOException(newMsg);
+    }
+    if (msg.startsWith("java.net.BindException")) {
+      return new java.net.BindException(newMsg);
+    }
+    if (msg.startsWith("java.net.ConnectException")) {
+      return new java.net.ConnectException(newMsg);
+    }
+    if (msg.startsWith("java.net.NoRouteToHostException")) {
+      return new java.net.NoRouteToHostException(newMsg);
+    }
+    if (msg.startsWith("java.net.ProtocolException")) {
+      return new java.net.ProtocolException(newMsg);
+    }
+    if (msg.startsWith("java.net.UnknownHostException")) {
+      return new java.net.UnknownHostException(newMsg);
+    }
+    return null;
   }
 
   public boolean canProxy() {
@@ -398,7 +460,7 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
   // right state before updating the variable.
   private static MethodRetryHandler getRetryHandler() {
     if (retryHandler == null) {
-      DefaultMethodRetryHandler h = new DefaultMethodRetryHandler();
+      LockssMethodRetryHandler h = new LockssMethodRetryHandler();
       h.setRequestSentRetryEnabled(true);
       retryHandler = h;
     }
@@ -441,4 +503,77 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     }
   }
 
+  /** Derived from DefaultMethodRetryHandler, but suppresses retries for
+   * certain exceptions */
+  static class LockssMethodRetryHandler implements MethodRetryHandler {
+    private int retryCount;
+    private boolean requestSentRetryEnabled;
+    
+    public LockssMethodRetryHandler() {
+      this.retryCount = 3;
+      this.requestSentRetryEnabled = false;
+    }
+    
+    public boolean retryMethod(HttpMethod method,
+			       HttpConnection connection,
+			       HttpRecoverableException recoverableException,
+			       int executionCount,
+			       boolean requestSent) {
+
+      // Check if it's a data (socket) timeout
+      String msg = recoverableException.getMessage();
+      if (msg != null &&
+	  msg.startsWith("java.io.InterruptedIOException")) {
+	// These take a long time to happen, so retrying is probably not a
+	// good idea.  Retrying may also result in a different error;
+	// better to tell the user about this one.  (Wouldn't it be nice if
+	// HttpClient passed the actual exception along, instead of just
+	// its message?)
+	return false;
+      }
+      return ((!requestSent || requestSentRetryEnabled) &&
+	      (executionCount <= retryCount));
+    }
+
+    public void setRequestSentRetryEnabled(boolean requestSentRetryEnabled) {
+      this.requestSentRetryEnabled = requestSentRetryEnabled;
+    }
+
+    public void setRetryCount(int retryCount) {
+      this.retryCount = retryCount;
+    }
+  }
+
+  /** Extension of ConnectionTimeoutException used as a wrapper for the
+   * HttpClient-specific HttpConnection.ConnectionTimeoutException. */
+  public class ConnectionTimeoutException
+    extends LockssUrlConnection.ConnectionTimeoutException {
+    private Exception nestedException;
+
+    public ConnectionTimeoutException(String msg) {
+      super(msg);
+    }
+    public ConnectionTimeoutException
+      (HttpConnection.ConnectionTimeoutException e) {
+      super(e.getMessage());
+      nestedException = e;
+    }
+
+    /** Stack trace of nestedException is more interesting and correct than
+     * ours */
+    public void printStackTrace() {
+      if (nestedException == null) super.printStackTrace();
+      else nestedException.printStackTrace();
+    }
+
+    public void printStackTrace(java.io.PrintStream s) {
+      if (nestedException == null) super.printStackTrace(s);
+      else nestedException.printStackTrace(s);
+    }
+
+    public void printStackTrace(java.io.PrintWriter s) {
+      if (nestedException == null) super.printStackTrace(s);
+      else nestedException.printStackTrace(s);
+    }
+  }
 }

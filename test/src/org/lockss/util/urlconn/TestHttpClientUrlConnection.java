@@ -1,5 +1,5 @@
 /*
- * $Id: TestHttpClientUrlConnection.java,v 1.4 2004-03-11 09:43:45 tlipkis Exp $
+ * $Id: TestHttpClientUrlConnection.java,v 1.5 2004-03-14 01:04:47 tlipkis Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util.urlconn;
 
 import java.io.*;
+import java.net.*;
 import java.util.*;
 import java.text.*;
 import org.lockss.daemon.*;
@@ -81,6 +82,34 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
       fail("Failed to throw MalformedURLException");
     } catch (java.net.MalformedURLException e) {}
   }    
+
+  void assertProperException(Class cls, String msg, Exception origE) {
+    HttpRecoverableException re = 
+      new HttpRecoverableException(origE.toString());
+    IOException e = conn.exceptionFromRecoverableException(re);
+    assertTrue("'" + e + "' is not an instance of " + cls.getName(),
+	       cls.isInstance(e));
+    assertEquals(msg, e.getMessage());
+  }
+
+  public void testExceptionFromRecoverableException() {
+    assertProperException(BindException.class, "foo msg",
+			  new BindException("foo msg"));
+    assertProperException(InterruptedIOException.class, "bar",
+			  new InterruptedIOException("bar"));
+    assertProperException(ConnectException.class, "bar",
+			  new ConnectException("bar"));
+    assertProperException(NoRouteToHostException.class, "bar",
+			  new NoRouteToHostException("bar"));
+    assertProperException(ProtocolException.class, "bar",
+			  new ProtocolException("bar"));
+    assertProperException(UnknownHostException.class, "bar",
+			  new UnknownHostException("bar"));
+    // This one should stay an HttpRecoverableException
+    assertProperException(HttpRecoverableException.class,
+			  "java.io.IOException: bar",
+			  new IOException("bar"));
+  }
 
   public void testReqProps() {
     Header hdr;
