@@ -1,5 +1,5 @@
 /*
- * $Id: PollTally.java,v 1.21 2003-07-24 20:41:18 clairegriffin Exp $
+ * $Id: PollTally.java,v 1.22 2003-07-31 00:46:04 eaalto Exp $
  */
 
 /*
@@ -73,6 +73,7 @@ public abstract class PollTally implements Tallier{
   protected Iterator replayIter = null;
   protected ArrayList originalVotes = null;
   protected static IdentityManager idManager = null;
+  protected ActivityRegulator.Lock activityLock;
 
   static Logger log=Logger.getLogger("PollTally");
 
@@ -92,43 +93,22 @@ public abstract class PollTally implements Tallier{
     log.debug3("Constructor type " + type + " " + this.toString());
   }
 
-
-  /**
-   * return the unique key for the poll for this tally
-   * @return a String representing the key
-   */
   public String getPollKey() {
     return key;
   }
 
-  /**
-   * Returns true if the poll belongs to this Identity
-   * @return true if this Identity
-   */
   public boolean isMyPoll() {
     return getPoll().isMyPoll();
   }
 
-  /**
-   * Return the poll spec used by this poll
-   * @return the PollSpec
-   */
   public PollSpec getPollSpec() {
     return pollSpec;
   }
 
-  /**
-   * the cached url set for this poll
-   * @return a CachedUrlSet
-   */
   public CachedUrlSet getCachedUrlSet() {
     return getPoll().m_cus;
   }
 
-  /**
-   * the archival unit for this poll
-   * @return the ArchivalUnit
-   */
   public ArchivalUnit getArchivalUnit()  {
     return getCachedUrlSet().getArchivalUnit();
   }
@@ -142,68 +122,39 @@ public abstract class PollTally implements Tallier{
     return type;
   }
 
-  /**
-   * returns the poll start time
-   * @return start time as a long
-   */
   public long getStartTime() {
     return startTime;
   }
 
-  /**
-   * returns the poll duration
-   * @return the duration as a long
-   */
   public long getDuration() {
     return duration;
   }
-
-  /**
-   * return the votes cast in this poll
-   * @return the list of votes
-   */
 
   public List getPollVotes() {
     return Collections.unmodifiableList(pollVotes);
   }
 
-  /**
-   * return an interator for the set of entries tallied during the vote
-   * @return the completed list of entries
-   */
   public Iterator getCorrectEntries() {
     return votedEntries == null ? CollectionUtil.EMPTY_ITERATOR :
         votedEntries.iterator();
   }
 
-  /**
-   * return an interator for the set of entries we have locally
-   * @return the list of entries
-   */
   public Iterator getLocalEntries() {
     return localEntries == null ? CollectionUtil.EMPTY_ITERATOR :
         localEntries.iterator();
   }
 
-  /**
-   * get the error state for this poll
-   * @return 0 == NOERR or one of the poll err conditions
-   */
+  public ActivityRegulator.Lock getActivityLock() {
+    return activityLock;
+  }
+
+  void setActivityLock(ActivityRegulator.Lock newLock) {
+    activityLock = newLock;
+  }
+
   abstract public int getErr();
-
-  /**
-   * get the error as a string
-   * @return the String representation of the error
-   */
   abstract public String getErrString();
-
-
-  /**
-   * get the current value of the poll tally status
-   * @return the String representation of status
-   */
   abstract public String getStatusString();
-
 
   /**
    * return the poll for which we are acting as a tally
@@ -227,7 +178,6 @@ public abstract class PollTally implements Tallier{
    * @return true if the poll has finished
    */
   abstract boolean stateIsFinished();
-
 
   /**
    * True if the poll is suspended
@@ -290,13 +240,11 @@ public abstract class PollTally implements Tallier{
     }
   }
 
-
   /**
    * replay a previously checked vote
    * @param vote the vote to recheck
    * @param deadline the deadline by which the check must complete
    */
-
   abstract void replayVoteCheck(Vote vote, Deadline deadline);
 
   /**

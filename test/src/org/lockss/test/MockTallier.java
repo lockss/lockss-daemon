@@ -1,5 +1,5 @@
 /*
-* $Id: MockTallier.java,v 1.4 2003-07-24 20:41:19 clairegriffin Exp $
+* $Id: MockTallier.java,v 1.5 2003-07-31 00:46:05 eaalto Exp $
  */
 
 /*
@@ -31,12 +31,13 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.test;
 
-import org.lockss.util.*;
-import org.lockss.protocol.*;
 import java.util.*;
 
+import org.lockss.util.*;
+import org.lockss.protocol.*;
 import org.lockss.plugin.*;
 import org.lockss.poller.*;
+import org.lockss.daemon.ActivityRegulator;
 
 /**
  * <p>Title: </p>
@@ -61,6 +62,7 @@ public class MockTallier implements Tallier {
   ArrayList m_pollVotes;
   int m_error = 0;
   int m_result = 0;
+  ActivityRegulator.Lock m_lock;
 
   public MockTallier() {
   }
@@ -243,5 +245,11 @@ public class MockTallier implements Tallier {
     m_result = result;
   }
 
+  public ActivityRegulator.Lock getActivityLock() {
+    return m_lock;
+  }
 
+  public void setActivityLock(ActivityRegulator.Lock lock) {
+    m_lock = lock;
+  }
 }

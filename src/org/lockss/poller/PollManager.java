@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.111 2003-07-24 20:41:18 clairegriffin Exp $
+* $Id: PollManager.java,v 1.112 2003-07-31 00:46:04 eaalto Exp $
  */
 
 /*
@@ -260,7 +260,6 @@ public class PollManager  extends BaseLockssManager {
     theLog.debug3("completed resume poll " + (String) key);
   }
 
-
   /**
    * handle an incoming message packet.  This will create a poll if
    * one is not already running. It will then call recieveMessage on
@@ -327,16 +326,17 @@ public class PollManager  extends BaseLockssManager {
     PollSpec spec = new PollSpec(msg);
     CachedUrlSet cus = spec.getCachedUrlSet();
     theLog.debug("making poll from: " + spec);
+    ActivityRegulator.Lock lock = null;
 
     // check for presence of item in the cache
-    if(cus == null) {
+    if (cus == null) {
       theLog.debug(spec.getUrl()+ " not in this cache, ignoring poll request.");
       return null;
     }
 
     // check for conflicts
     CachedUrlSet conflict = checkForConflicts(msg, cus);
-    if(conflict != null) {
+    if (conflict != null) {
       String err = "New poll " + cus + " conflicts with " + conflict +
           ", ignoring poll request.";
       theLog.debug(err);
@@ -344,7 +344,7 @@ public class PollManager  extends BaseLockssManager {
     }
     if (msg.isVerifyPoll()) {
       // if we didn't call the poll and we don't have the verifier ignore this
-      if((getSecret(msg.getChallenge())== null) &&
+      if ((getSecret(msg.getChallenge())== null) &&
         !theIDManager.isLocalIdentity(msg.getOriginAddr())) {
        String ver = String.valueOf(B64Code.encode(msg.getChallenge()));
        theLog.debug("ignoring verify request from " + msg.getOriginAddr()
@@ -357,27 +357,27 @@ public class PollManager  extends BaseLockssManager {
       // get expiration time for the lock
       long expiration = 2 * msg.getDuration();
       if (AuUrl.isAuUrl(cus.getUrl())) {
-        ActivityRegulator.Lock lock = theDaemon.getActivityRegulator(
-            cus.getArchivalUnit()).startAuActivity(
+        lock = theDaemon.getActivityRegulator(
+            cus.getArchivalUnit()).getAuActivityLock(
             ActivityRegulator.TOP_LEVEL_POLL, expiration);
         if (lock==null) {
           theLog.debug2("New top-level poll aborted due to activity lock.");
           return null;
         }
-      }
-      else {
+      } else {
         int activity;
-        if (cus.getSpec().isSingleNode()) {
-          activity = (msg.isContentPoll() ?
-                          ActivityRegulator.SINGLE_NODE_CONTENT_POLL :
-                          ActivityRegulator.STANDARD_NAME_POLL);
+        if (msg.isContentPoll()) {
+          if (cus.getSpec().isSingleNode()) {
+            activity = ActivityRegulator.SINGLE_NODE_CONTENT_POLL;
+          } else {
+            activity = ActivityRegulator.STANDARD_CONTENT_POLL;
+          }
         } else {
-          activity = (msg.isContentPoll() ?
-                          ActivityRegulator.STANDARD_CONTENT_POLL :
-                          ActivityRegulator.STANDARD_NAME_POLL);
+          activity = ActivityRegulator.STANDARD_NAME_POLL;
         }
-        ActivityRegulator.Lock lock = theDaemon.getActivityRegulator(
-            cus.getArchivalUnit()).startCusActivity(activity, cus, expiration);
+
+        lock = theDaemon.getActivityRegulator(
+            cus.getArchivalUnit()).getCusActivityLock(cus, activity, expiration);
         if (lock==null) {
           theLog.debug2("New poll aborted due to activity lock.");
           return null;
@@ -393,7 +393,8 @@ public class PollManager  extends BaseLockssManager {
       if (!msg.isVerifyPoll()) {
         if (!nm.shouldStartPoll(cus, ret_poll.getVoteTally())) {
 	  theLog.debug("NodeManager said not to start poll: "+ret_poll);
-          freePollLock(cus, msg.isContentPoll());
+          // clear the lock
+          lock.expire();
           return null;
         }
       }
@@ -401,38 +402,20 @@ public class PollManager  extends BaseLockssManager {
       thePolls.put(ret_poll.m_key, new PollManagerEntry(ret_poll));
       if (!msg.isVerifyPoll()) {
         nm.startPoll(cus, ret_poll.getVoteTally(), false);
+        // set the activity lock in the tally
+        ret_poll.getVoteTally().setActivityLock(lock);
       }
+
       ret_poll.startPoll();
       theLog.debug2("Started new poll: " + ret_poll.m_key);
       return ret_poll;
     } else {
       theLog.error("Got a null ret_poll from createPoll");
-      freePollLock(cus, msg.isContentPoll());
-      return null;
-    }
-  }
-
-  /**
-   * Frees the {@link ActivityRegulator} lock from this poll.
-   * @param cus the CachedUrlSet being polled
-   * @param isContentPoll true iff a content poll
-   */
-  private void freePollLock(CachedUrlSet cus, boolean isContentPoll) {
-    if (AuUrl.isAuUrl(cus.getUrl())) {
-      theDaemon.getActivityRegulator(cus.getArchivalUnit()).auActivityFinished(
-          ActivityRegulator.TOP_LEVEL_POLL);
-    } else {
-      int activity;
-      if (cus.getSpec().isSingleNode()) {
-        activity = (isContentPoll ?
-                    ActivityRegulator.SINGLE_NODE_CONTENT_POLL :
-                    ActivityRegulator.STANDARD_NAME_POLL);
-      } else {
-        activity = (isContentPoll ?
-                    ActivityRegulator.STANDARD_CONTENT_POLL :
-                    ActivityRegulator.STANDARD_NAME_POLL);
+      if (lock!=null) {
+        // clear the lock
+        lock.expire();
       }
-      theDaemon.getActivityRegulator(cus.getArchivalUnit()).cusActivityFinished(activity, cus);
+      return null;
     }
   }
 
@@ -450,19 +433,17 @@ public class PollManager  extends BaseLockssManager {
     // we don't want this one to be in conflict with it.
     PollTally tally = pme.poll.getVoteTally();
     pme.setPollCompleted();
-    if(tally.getType() != Poll.VERIFY_POLL) {
+    if (tally.getType() != Poll.VERIFY_POLL) {
       NodeManager nm = theDaemon.getNodeManager(tally.getArchivalUnit());
       theLog.debug("sending completed poll results " + tally);
       nm.updatePollResults(tally.getCachedUrlSet(), tally);
       try {
         theIDManager.storeIdentities();
-      }
-      catch (ProtocolException ex) {
+      } catch (ProtocolException ex) {
         theLog.error("Unable to write Identity DB file.");
       }
-      // free the activity regulator
-      freePollLock(tally.getCachedUrlSet(),
-                   tally.getType()==Poll.CONTENT_POLL);
+      // free the activity lock
+      tally.getActivityLock().expire();
     }
   }
 
@@ -478,7 +459,7 @@ public class PollManager  extends BaseLockssManager {
       throws ProtocolException {
     BasePoll ret_poll = null;
 
-    switch(msg.getOpcode()) {
+    switch (msg.getOpcode()) {
       case LcapMessage.CONTENT_POLL_REP:
       case LcapMessage.CONTENT_POLL_REQ:
         theLog.debug3("Making a content poll on "+ pollspec);

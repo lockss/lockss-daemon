@@ -1,5 +1,5 @@
 /*
-* $Id: Tallier.java,v 1.4 2003-07-24 20:41:18 clairegriffin Exp $
+* $Id: Tallier.java,v 1.5 2003-07-31 00:46:04 eaalto Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.poller;
 import java.util.*;
 
 import org.lockss.plugin.*;
+import org.lockss.daemon.ActivityRegulator;
 
 public interface Tallier {
   public static final int RESULT_POLLING = 0;
@@ -125,13 +126,11 @@ public interface Tallier {
    */
   public String getErrString();
 
-
   /**
    * get the current value of the poll tally status
    * @return the String representation of status
    */
   public String getStatusString();
-
 
   /**
    * return a constant reflecting the results of the poll tally.
@@ -139,6 +138,10 @@ public interface Tallier {
    */
   public int getTallyResult();
 
-
+  /**
+   * Returns the ActivityRegulator.Lock that this poll is using.
+   * @return the lock
+   */
+  public ActivityRegulator.Lock getActivityLock();
 
 }
