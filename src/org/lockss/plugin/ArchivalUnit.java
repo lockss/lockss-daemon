@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.32 2004-10-13 23:07:17 clairegriffin Exp $
+ * $Id: ArchivalUnit.java,v 1.33 2005-01-29 20:00:34 troberts Exp $
  */
 
 /*
@@ -193,20 +193,20 @@ public interface ArchivalUnit {
 
   /**
    * Get a {@link org.lockss.crawler.ContentParser} that knows how to parse
-   * the given mime type
-   * @param mimeType mime type to get a content parser for
-   * @return a content parser for mimeType if we have one, null otherwise
+   * the given content type
+   * @param contentType content type to get a content parser for
+   * @return a content parser for contentType if we have one, null otherwise
    */
-  public ContentParser getContentParser(String mimeType);
+  public ContentParser getContentParser(String contentType);
 
   /**
-   * Return the {@link FilterRule} for the given mimeType or null if there
+   * Return the {@link FilterRule} for the given contentType or null if there
    * is none
-   * @param mimeType mime type of the content we are going to filter
-   * @return {@link FilterRule} for the given mimeType or null if there
+   * @param contentType content type of the content we are going to filter
+   * @return {@link FilterRule} for the given contentType or null if there
    * is none
    */
-  public FilterRule getFilterRule(String mimeType);
+  public FilterRule getFilterRule(String contentType);
 
   /**
    * Create a {@link CachedUrlSet}representing the content
