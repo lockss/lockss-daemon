@@ -1,5 +1,5 @@
 /*
- * $Id: Interval.java,v 1.3 2003-11-11 20:25:47 tlipkis Exp $
+ * $Id: Interval.java,v 1.4 2004-09-28 08:53:14 tlipkis Exp $
  */
 
 /*
@@ -39,7 +39,7 @@ import java.io.*;
 /** A half-open interval, including the lower bound but excluding the upper
  * bound.  (If other varieties are needed, this could either be made
  * abtsract or given a mode selector.) */
-public class Interval implements Serializable {
+public class Interval {
   private Comparable lb;		// lower bound
   private Comparable ub;		// upper bound
 
@@ -79,6 +79,10 @@ public class Interval implements Serializable {
       return lb.equals(oi.getLB()) && ub.equals(oi.getUB());
     }
     return false;
+  }
+
+  public int hashCode() {
+    return 3*lb.hashCode() + ub.hashCode();
   }
 
   /** Determine whether intervals are ordered and non-overlapping.

@@ -1,5 +1,5 @@
 /*
- * $Id: V1TreeWalkImpl.java,v 1.2 2004-08-21 07:10:33 tlipkis Exp $
+ * $Id: V1TreeWalkImpl.java,v 1.3 2004-09-28 08:53:14 tlipkis Exp $
  */
 
 /*
@@ -257,11 +257,11 @@ public class V1TreeWalkImpl implements TreeWalker {
     }
 
     // at each node, check for recrawl needed
-    if (node.getCachedUrlSet().hasContent()) {
-      //XXX if (crawlMgr.shouldRecrawl(managerAu, node)) {
-      // then CrawlManager.scheduleBackgroundCrawl()
-      // return false;
-    }
+//     if (node.getCachedUrlSet().hasContent()) {
+//       //XXX if (crawlMgr.shouldRecrawl(managerAu, node)) {
+//       // then CrawlManager.scheduleBackgroundCrawl()
+//       // return false;
+//     }
 
     // check recent histories to see if something needs fixing
     PollHistory lastHistory = node.getLastPollHistory();

@@ -1,5 +1,5 @@
 /*
- * $Id: V1NamePoll.java,v 1.6 2004-09-20 14:20:36 dshr Exp $
+ * $Id: V1NamePoll.java,v 1.7 2004-09-28 08:53:16 tlipkis Exp $
  */
 
 /*
@@ -100,7 +100,7 @@ public class V1NamePoll extends V1Poll {
    * @param callback the hashing callback to use on return
    * @return true if hash successfully completed.
    */
-  boolean scheduleHash(MessageDigest hasher, Deadline timer, Serializable key,
+  boolean scheduleHash(MessageDigest hasher, Deadline timer, Object key,
                        HashService.Callback callback) {
 
     HashService hs = m_pollmanager.getHashService();
@@ -291,6 +291,10 @@ public class V1NamePoll extends V1Poll {
         return (sameEntries( ( (NameVote) obj).knownEntries));
       }
       return false;
+    }
+
+    public int hashCode() {
+      throw new UnsupportedOperationException();
     }
 
     boolean sameEntries(ArrayList entries) {

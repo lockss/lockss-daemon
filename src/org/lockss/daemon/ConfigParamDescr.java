@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescr.java,v 1.16 2004-09-28 00:50:36 clairegriffin Exp $
+ * $Id: ConfigParamDescr.java,v 1.17 2004-09-28 08:53:19 tlipkis Exp $
  */
 
 /*
@@ -379,7 +379,7 @@ public class ConfigParamDescr implements Comparable {
     return hash;
   }
 
-  public class InvalidFormatException extends Exception {
+  public static class InvalidFormatException extends Exception {
     private Throwable nestedException;
 
     public InvalidFormatException(String msg) {

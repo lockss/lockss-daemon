@@ -1,5 +1,5 @@
 /*
- * $Id: AuProxy.java,v 1.4 2004-09-27 22:39:08 smorabito Exp $
+ * $Id: AuProxy.java,v 1.5 2004-09-28 08:53:16 tlipkis Exp $
  */
 
 /*
@@ -125,7 +125,7 @@ public class AuProxy {
     return au.getName();
   }
 
-  public class NoSuchAU extends Exception {
+  public static class NoSuchAU extends Exception {
     public NoSuchAU(String msg) {
       super(msg);
     }

@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.66 2004-09-27 22:39:15 smorabito Exp $
+ * $Id: LockssDaemon.java,v 1.67 2004-09-28 08:53:19 tlipkis Exp $
  */
 
 /*
@@ -174,7 +174,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   protected static HashMap auManagerMaps = new HashMap();
 
   // Maps managerKey -> LockssAuManager.Factory instance
-  protected static HashMap auManagerFactoryMap = new HashMap();
+  protected HashMap auManagerFactoryMap = new HashMap();
 
   private static LockssDaemon theDaemon;
 

@@ -1,5 +1,5 @@
 /*
- * $Id: PollState.java,v 1.25 2004-04-01 02:44:32 eaalto Exp $
+ * $Id: PollState.java,v 1.26 2004-09-28 08:53:14 tlipkis Exp $
  */
 
 /*
@@ -286,4 +286,7 @@ public class PollState implements Comparable {
     }
   }
 
+  public int hashCode() {
+    throw new UnsupportedOperationException();
+  }
 }

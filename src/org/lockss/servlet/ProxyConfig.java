@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyConfig.java,v 1.6 2004-07-23 20:57:05 smorabito Exp $
+ * $Id: ProxyConfig.java,v 1.7 2004-09-28 08:53:14 tlipkis Exp $
  */
 
 /*
@@ -284,7 +284,7 @@ public class ProxyConfig extends LockssServlet {
     String fmt = "action=" + format;
     String absUrl = "<code>" + srvAbsURL(desc, fmt) + "</code>";
     Composite elem = new Composite();
-    elem.add(StringUtil.replaceString(text, "#", absUrl.toString()));
+    elem.add(StringUtil.replaceString(text, "#", absUrl));
     addFmtElement(comp, title, format, elem);
   }
 

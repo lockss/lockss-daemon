@@ -1,5 +1,5 @@
 /*
- * $Id: TaskRunner.java,v 1.26 2004-09-27 22:39:07 smorabito Exp $
+ * $Id: TaskRunner.java,v 1.27 2004-09-28 08:53:15 tlipkis Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
 import org.lockss.util.*;
 
-class TaskRunner implements Serializable {
+class TaskRunner {
   // Sort options for displaying queue
   static final int PEND_REV = 1;
   static final int HIST_REV = 2;

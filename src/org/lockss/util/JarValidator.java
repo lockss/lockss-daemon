@@ -1,5 +1,5 @@
 /*
- * $Id: JarValidator.java,v 1.3 2004-09-27 20:10:54 smorabito Exp $
+ * $Id: JarValidator.java,v 1.4 2004-09-28 08:53:14 tlipkis Exp $
  */
 
 /*
@@ -269,7 +269,7 @@ public class JarValidator {
    * If the Jar doesn't verify, this exception will
    * explain exactly why.
    */
-  public class JarValidationException extends Exception {
+  public static class JarValidationException extends Exception {
     JarValidationException(String s) {
       super(s);
     }

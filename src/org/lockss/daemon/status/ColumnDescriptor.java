@@ -1,5 +1,5 @@
 /*
- * $Id: ColumnDescriptor.java,v 1.7 2004-06-01 08:32:26 tlipkis Exp $
+ * $Id: ColumnDescriptor.java,v 1.8 2004-09-28 08:53:18 tlipkis Exp $
  */
 
 /*
@@ -152,5 +152,10 @@ public class ColumnDescriptor {
 	    type == colDesc.getType() &&
 	    columnName.equals(colDesc.getColumnName()));
   }
+
+  public int hashCode() {
+    throw new UnsupportedOperationException();
+  }
+
 }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: StatusServiceImpl.java,v 1.25 2004-09-15 22:27:36 tlipkis Exp $
+ * $Id: StatusServiceImpl.java,v 1.26 2004-09-28 08:53:18 tlipkis Exp $
  */
 
 /*
@@ -173,7 +173,7 @@ public class StatusServiceImpl
     logger.debug("Unregistered ObjectReferenceAccessor for table "+tableName);
   }
 
-  private class ObjRefAccessorSpec {
+  private static class ObjRefAccessorSpec {
     Class cls;
     String table;
     ObjectReferenceAccessor accessor;

@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.17 2004-09-27 22:39:08 smorabito Exp $
+ * $Id: RemoteApi.java,v 1.18 2004-09-28 08:53:16 tlipkis Exp $
  */
 
 /*
@@ -433,7 +433,10 @@ public class RemoteApi extends BaseLockssDaemonManager {
     RestoreStatus stat = new RestoreStatus(auid);
     status.add(stat);
     Configuration currentConfig = pluginMgr.getStoredAuConfiguration(auid);
-    String name = currentConfig.get(AU_PARAM_DISPLAY_NAME);
+    String name = null;
+    if (currentConfig != null) {
+      name = currentConfig.get(AU_PARAM_DISPLAY_NAME);
+    }
     if (name == null) {
       name = auConfig.get(AU_PARAM_DISPLAY_NAME);
     }
@@ -596,7 +599,7 @@ public class RemoteApi extends BaseLockssDaemonManager {
   }
 
   /** Exception thrown if the uploaded AU config backup file isn't valid */
-  public class InvalidAuConfigBackupFile extends Exception {
+  public static class InvalidAuConfigBackupFile extends Exception {
     public InvalidAuConfigBackupFile(String message) {
       super(message);
     }
@@ -605,7 +608,7 @@ public class RemoteApi extends BaseLockssDaemonManager {
 
   /** Comparator for sorting AuProxy lists.  Not suitable for use in a
    * TreeSet unless changed to never return 0. */
-  class AuProxyOrderComparator implements Comparator {
+  static class AuProxyOrderComparator implements Comparator {
     CatalogueOrderComparator coc = CatalogueOrderComparator.SINGLETON;
     public int compare(Object o1, Object o2) {
       if (!((o1 instanceof AuProxy)

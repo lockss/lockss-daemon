@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.86 2003-07-09 20:06:46 clairegriffin Exp $
+* $Id: Poll.java,v 1.87 2004-09-28 08:53:16 tlipkis Exp $
  */
 
 /*

@@ -1,5 +1,5 @@
 /*
- * $Id: UrlManager.java,v 1.5 2004-08-22 02:05:56 tlipkis Exp $
+ * $Id: UrlManager.java,v 1.6 2004-09-28 08:53:18 tlipkis Exp $
  */
 
 /*
@@ -76,7 +76,7 @@ public class UrlManager extends BaseLockssDaemonManager {
 
   /** A URLStreamHandlerFactory that returns URLStreamHandlers for
       locksscu: and lockssau: protocols. */
-  private class LockssUrlFactory implements URLStreamHandlerFactory {
+  private static class LockssUrlFactory implements URLStreamHandlerFactory {
     public URLStreamHandler createURLStreamHandler(String protocol) {
       if (PROTOCOL_CU.equalsIgnoreCase(protocol)) {
 	// locksscu: gets a CuUrlConnection

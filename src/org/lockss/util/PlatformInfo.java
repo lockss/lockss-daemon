@@ -1,5 +1,5 @@
 /*
- * $Id: PlatformInfo.java,v 1.5 2004-08-02 03:24:07 tlipkis Exp $
+ * $Id: PlatformInfo.java,v 1.6 2004-09-28 08:53:14 tlipkis Exp $
  */
 
 /*
@@ -200,7 +200,7 @@ public class PlatformInfo {
   /** Exception thrown if no implementation is available for the current
    * platform, or a platform-dependent error occurs.
    * In the case of an error, the original exception is available. */
-  public class UnsupportedException extends Exception {
+  public static class UnsupportedException extends Exception {
     Throwable e;
 
     public UnsupportedException(String msg) {

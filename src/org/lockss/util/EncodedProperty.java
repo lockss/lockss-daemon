@@ -1,5 +1,5 @@
 /*
- * $Id: EncodedProperty.java,v 1.6 2003-12-17 02:09:45 tlipkis Exp $
+ * $Id: EncodedProperty.java,v 1.7 2004-09-28 08:53:14 tlipkis Exp $
  */
 
 /*
@@ -169,7 +169,7 @@ public class EncodedProperty extends Properties {
     String value = getProperty(key);
 
     if(value != null) {
-      ret = new Boolean(value).booleanValue();
+      ret = Boolean.valueOf(value).booleanValue();
      }
     return ret;
   }

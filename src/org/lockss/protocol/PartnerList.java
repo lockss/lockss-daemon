@@ -1,5 +1,5 @@
 /*
- * $Id: PartnerList.java,v 1.23 2004-09-27 22:39:09 smorabito Exp $
+ * $Id: PartnerList.java,v 1.24 2004-09-28 08:53:16 tlipkis Exp $
  */
 
 /*
@@ -76,7 +76,6 @@ class PartnerList {
   long minPartnerRemoveInterval;
   int maxPartners;
   private IdentityManager idMgr;
-  PeerIdentity localPeer;
 
   /** Create a PartnerList */
   public PartnerList(IdentityManager idMgr) {

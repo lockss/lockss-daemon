@@ -1,5 +1,5 @@
 /*
- * $Id: TestInterval.java,v 1.2 2003-11-03 18:14:45 tlipkis Exp $
+ * $Id: TestInterval.java,v 1.3 2004-09-28 08:53:14 tlipkis Exp $
  */
 
 /*
@@ -81,5 +81,10 @@ public class TestInterval extends LockssTestCase {
     assertFalse(int12.equals(new Interval(0, 2)));
     assertTrue(int01.equals(int01));
     assertTrue(int13.equals(new Interval(1, 3)));
+  }
+
+  public void testHash() {
+    assertEquals(new Interval(2,4).hashCode(),
+		 new Interval(2,4).hashCode());
   }
 }

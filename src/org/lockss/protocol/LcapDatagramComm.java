@@ -1,5 +1,5 @@
 /*
- * $Id: LcapDatagramComm.java,v 1.2 2004-09-27 22:39:09 smorabito Exp $
+ * $Id: LcapDatagramComm.java,v 1.3 2004-09-28 08:53:16 tlipkis Exp $
  */
 
 /*
@@ -469,8 +469,9 @@ public class LcapDatagramComm
    * @param protocol an int representing the protocol
    */
   public void unregisterMessageHandler(int protocol) {
-    if (protocol < messageHandlers.size());
-    messageHandlers.set(protocol, null);
+    if (protocol < messageHandlers.size()) {
+      messageHandlers.set(protocol, null);
+    }
   }
 
 
@@ -575,7 +576,7 @@ public class LcapDatagramComm
 
   // Statistics
 
-  private class Stats {
+  private static class Stats {
     int port;
     int proto;
     boolean multicast;

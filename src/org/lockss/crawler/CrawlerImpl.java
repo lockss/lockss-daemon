@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerImpl.java,v 1.32 2004-09-27 22:39:15 smorabito Exp $
+ * $Id: CrawlerImpl.java,v 1.33 2004-09-28 08:53:19 tlipkis Exp $
  */
 
 /*
@@ -332,7 +332,7 @@ public abstract class CrawlerImpl implements Crawler {
       try {
         is.close();
       }
-      catch (IOException ex) {
+      catch (IOException ignore) {
       }
     }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: HashSvcQueueImpl.java,v 1.7 2004-09-27 22:39:13 smorabito Exp $
+ * $Id: HashSvcQueueImpl.java,v 1.8 2004-09-28 08:53:18 tlipkis Exp $
  */
 
 /*
@@ -124,7 +124,7 @@ public class HashSvcQueueImpl
 				    MessageDigest hasher,
 				    Deadline deadline,
 				    Callback callback,
-				    Serializable cookie) {
+				    Object cookie) {
     HashQueue.Request req =
       new HashQueue.Request(urlset, hasher, deadline,
 			    callback, cookie,
@@ -157,7 +157,7 @@ public class HashSvcQueueImpl
 				  MessageDigest hasher,
 				  Deadline deadline,
 				  Callback callback,
-				  Serializable cookie) {
+				  Object cookie) {
     HashQueue.Request req =
       new HashQueue.Request(urlset, hasher, deadline,
 			    callback, cookie,

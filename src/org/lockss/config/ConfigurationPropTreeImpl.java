@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurationPropTreeImpl.java,v 1.1 2004-09-27 22:09:06 smorabito Exp $
+ * $Id: ConfigurationPropTreeImpl.java,v 1.2 2004-09-28 08:53:19 tlipkis Exp $
  */
 
 /*
@@ -92,6 +92,10 @@ public class ConfigurationPropTreeImpl extends Configuration {
     }
     ConfigurationPropTreeImpl c0 = (ConfigurationPropTreeImpl)c;
     return PropUtil.equalProps(props, c0.getPropertyTree());
+  }
+
+  public int hashCode() {
+    throw new UnsupportedOperationException();
   }
 
   /** Return the set of keys whose values differ.

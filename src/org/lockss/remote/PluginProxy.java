@@ -1,5 +1,5 @@
 /*
- * $Id: PluginProxy.java,v 1.2 2004-01-27 04:07:07 tlipkis Exp $
+ * $Id: PluginProxy.java,v 1.3 2004-09-28 08:53:16 tlipkis Exp $
  */
 
 /*
@@ -132,7 +132,7 @@ public class PluginProxy {
     return remoteApi.mapAusToProxies(plugin.getAllAus());
   }
 
-  public class NoSuchPlugin extends Exception {
+  public static class NoSuchPlugin extends Exception {
     public NoSuchPlugin(String msg) {
       super(msg);
     }

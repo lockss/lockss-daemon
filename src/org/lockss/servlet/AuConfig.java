@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.31 2004-09-27 22:39:06 smorabito Exp $
+ * $Id: AuConfig.java,v 1.32 2004-09-28 08:53:15 tlipkis Exp $
  */
 
 /*
@@ -77,7 +77,6 @@ public class AuConfig extends LockssServlet {
   private String statusMsg;
 
   String action;			// action request by form
-  MultiPartRequest multiReq;
   PluginProxy plugin;			// current plugin
   Configuration auConfig;		// current config from AU
   Configuration formConfig;		// config read from form
@@ -95,7 +94,6 @@ public class AuConfig extends LockssServlet {
     auConfigParams = null;
     defKeys = null;
     editKeys = null;
-    multiReq = null;
     super.resetLocals();
   }
 
@@ -111,12 +109,11 @@ public class AuConfig extends LockssServlet {
     statusMsg = null;
     formConfig = null;
     titleConfig = null;
-    multiReq = null;
 
     action = req.getParameter(ACTION_TAG);
     if (StringUtil.isNullString(action)) {
       try {
-	multiReq = getMultiPartRequest(100000);
+	getMultiPartRequest(100000);
 	if (multiReq != null) {
 	  action = multiReq.getString(ACTION_TAG);
 	  log.debug(ACTION_TAG + " = " + action);

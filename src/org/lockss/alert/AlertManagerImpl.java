@@ -1,5 +1,5 @@
 /*
- * $Id: AlertManagerImpl.java,v 1.9 2004-09-27 22:39:16 smorabito Exp $
+ * $Id: AlertManagerImpl.java,v 1.10 2004-09-28 08:53:20 tlipkis Exp $
  *
 
  Copyright (c) 2000-2004 Board of Trustees of Leland Stanford Jr. University,
@@ -64,7 +64,7 @@ public class AlertManagerImpl extends BaseLockssDaemonManager
 
   static final String PARAM_ALERT_ALL_EMAIL = PREFIX + "allEmail";
 
-  public static String CONFIG_FILE_ALERT_CONFIG = "alertconfig.xml";
+  public static final String CONFIG_FILE_ALERT_CONFIG = "alertconfig.xml";
 
   private ConfigManager configMgr;
   private AlertConfig alertConfig;
@@ -251,7 +251,6 @@ public class AlertManagerImpl extends BaseLockssDaemonManager
   class PendingActions {
     AlertAction action;
     List alerts;
-    Alert initial;
     Deadline trigger;
     long latestTrigger;
     boolean isProcessed = false;

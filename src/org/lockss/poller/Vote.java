@@ -1,5 +1,5 @@
 /*
-* $Id: Vote.java,v 1.12 2004-09-20 14:20:37 dshr Exp $
+* $Id: Vote.java,v 1.13 2004-09-28 08:53:16 tlipkis Exp $
  */
 
 /*
@@ -37,7 +37,6 @@ import org.lockss.protocol.PeerIdentity;
 import org.lockss.protocol.IdentityManager;
 import org.lockss.protocol.LcapMessage;
 import java.util.Arrays;
-import java.io.Serializable;
 import java.net.UnknownHostException;
 import org.lockss.app.LockssDaemon;
 import org.lockss.util.*;
@@ -46,7 +45,7 @@ import org.lockss.util.*;
  * Vote stores the information need to replay a single vote. These are needed
  * to run a repair poll.
  */
-public class Vote implements Serializable {
+public class Vote {
   private PeerIdentity voterID = null;
   protected boolean agree = false;
   private ActiveVote activeInfo = null;

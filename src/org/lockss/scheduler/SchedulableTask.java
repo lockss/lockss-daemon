@@ -1,5 +1,5 @@
 /*
- * $Id: SchedulableTask.java,v 1.7 2004-09-01 18:01:50 tlipkis Exp $
+ * $Id: SchedulableTask.java,v 1.8 2004-09-28 08:53:15 tlipkis Exp $
  */
 
 /*
@@ -39,7 +39,7 @@ import org.lockss.daemon.*;
 import org.lockss.util.*;
 
 /** Description of a computation to be scheduled and executed */
-public class SchedulableTask implements Serializable, Cloneable {
+public class SchedulableTask {
   //  protected static Logger log = Logger.getLogger("Task");
 
   Deadline earliestStart;

@@ -1,5 +1,5 @@
 /*
- * $Id: Alert.java,v 1.4 2004-09-27 22:39:16 smorabito Exp $
+ * $Id: Alert.java,v 1.5 2004-09-28 08:53:20 tlipkis Exp $
  */
 
 /*
@@ -48,20 +48,20 @@ public class Alert {
   private static Logger log = Logger.getLogger("Alert");
 
   // Attribute names
-  public static String ATTR_NAME = "name";
-  public static String ATTR_DATE = "date";
-  public static String ATTR_GENERIC_TEXT = "generic_text";
-  public static String ATTR_TEXT = "text";
-  public static String ATTR_CACHE = "cache";
-  public static String ATTR_AUID = "auid";
-  public static String ATTR_AU_NAME = "au_name";
-  public static String ATTR_AU_TITLE = "au_title";
-  public static String ATTR_IS_CONTENT = "is_content";
-  public static String ATTR_IS_CACHE = "is_cache";
+  public static final String ATTR_NAME = "name";
+  public static final String ATTR_DATE = "date";
+  public static final String ATTR_GENERIC_TEXT = "generic_text";
+  public static final String ATTR_TEXT = "text";
+  public static final String ATTR_CACHE = "cache";
+  public static final String ATTR_AUID = "auid";
+  public static final String ATTR_AU_NAME = "au_name";
+  public static final String ATTR_AU_TITLE = "au_title";
+  public static final String ATTR_IS_CONTENT = "is_content";
+  public static final String ATTR_IS_CACHE = "is_cache";
   /** If true, prevents delayed notification */
-  public static String ATTR_IS_TIME_CRITICAL = "is_time_critical";
-  public static String ATTR_SEVERITY = "severity";
-  public static String ATTR_RPT_ACTION = "foo";
+  public static final String ATTR_IS_TIME_CRITICAL = "is_time_critical";
+  public static final String ATTR_SEVERITY = "severity";
+  public static final String ATTR_RPT_ACTION = "foo";
 
   // Severities
   /** Conditions that require immediate attention from a human. */
@@ -81,80 +81,80 @@ public class Alert {
 
 
   // Predefined Alert templates
-  public static Alert PERMISSION_PAGE_FETCH_ERROR =
+  public static final Alert PERMISSION_PAGE_FETCH_ERROR =
     cAlert("PermissionPageFetchError").
     setAttribute(ATTR_SEVERITY, SEVERITY_WARNING);
 
-  public static Alert NO_CRAWL_PERMISSION =
+  public static final Alert NO_CRAWL_PERMISSION =
     cAlert("NoCrawlPermission").
     setAttribute(ATTR_SEVERITY, SEVERITY_WARNING);
 
-  public static Alert NEW_CONTENT =
+  public static final Alert NEW_CONTENT =
     cAlert("NewContent").
     setAttribute(ATTR_SEVERITY, SEVERITY_INFO);
 
-  public static Alert NO_NEW_CONTENT =
+  public static final Alert NO_NEW_CONTENT =
     cAlert("NoNewContent").
     setAttribute(ATTR_SEVERITY, SEVERITY_WARNING);
 
-  public static Alert VOLUME_CLOSED =
+  public static final Alert VOLUME_CLOSED =
     cAlert("VolumeClosed").
     setAttribute(ATTR_SEVERITY, SEVERITY_INFO);
 
-  public static Alert PUBLISHER_UNREACHABLE =
+  public static final Alert PUBLISHER_UNREACHABLE =
     cAlert("PublisherUnreachable").
     setAttribute(ATTR_SEVERITY, SEVERITY_WARNING);
 
-  public static Alert PUBLISHER_CONTENT_CHANGED =
+  public static final Alert PUBLISHER_CONTENT_CHANGED =
     cAlert("PublisherContentChanged").
     setAttribute(ATTR_SEVERITY, SEVERITY_INFO);
 
-  public static Alert DAMAGE_DETECTED =
+  public static final Alert DAMAGE_DETECTED =
     cAlert("DamageDetected").
     setAttribute(ATTR_SEVERITY, SEVERITY_WARNING);
 
-  public static Alert PERSISTENT_DAMAGE =
+  public static final Alert PERSISTENT_DAMAGE =
     cAlert("PersistentDamage").
     setAttribute(ATTR_SEVERITY, SEVERITY_WARNING);
 
-  public static Alert REPAIR_COMPLETE =
+  public static final Alert REPAIR_COMPLETE =
     cAlert("RepairComplete").
     setAttribute(ATTR_SEVERITY, SEVERITY_WARNING);
 
-  public static Alert PERSISTENT_NO_QUORUM =
+  public static final Alert PERSISTENT_NO_QUORUM =
     cAlert("PersistentNoQuorum").
     setAttribute(ATTR_SEVERITY, SEVERITY_WARNING);
 
-  public static Alert INCONCLUSIVE_POLL =
+  public static final Alert INCONCLUSIVE_POLL =
     cAlert("InconclusivePoll").
     setAttribute(ATTR_SEVERITY, SEVERITY_WARNING);
 
-  public static Alert CACHE_DOWN =
+  public static final Alert CACHE_DOWN =
     new Alert("CacheDown").
     setAttribute(ATTR_SEVERITY, SEVERITY_ERROR);
 
-  public static Alert CACHE_UP =
+  public static final Alert CACHE_UP =
     new Alert("CacheUp").
     setAttribute(ATTR_SEVERITY, SEVERITY_INFO);
 
-  public static Alert DISK_SPACE_LOW =
+  public static final Alert DISK_SPACE_LOW =
     new Alert("DiskSpaceLow").
     setAttribute(ATTR_SEVERITY, SEVERITY_WARNING).
     setAttribute(ATTR_IS_TIME_CRITICAL, true);
 
-  public static Alert DISK_SPACE_FULL =
+  public static final Alert DISK_SPACE_FULL =
     new Alert("DiskSpaceFull").
     setAttribute(ATTR_SEVERITY, SEVERITY_CRITICAL).
     setAttribute(ATTR_IS_TIME_CRITICAL, true);
 
-  public static Alert INTERNAL_ERROR =
+  public static final Alert INTERNAL_ERROR =
     new Alert("InternalError").
     setAttribute(ATTR_SEVERITY, SEVERITY_ERROR).
     setAttribute(ATTR_IS_TIME_CRITICAL, true);
 
 
   private Map attributes;
-  private Throwable throwable;
+//   private Throwable throwable;
 
   // Factories
   /**

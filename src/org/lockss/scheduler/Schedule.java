@@ -1,5 +1,5 @@
 /*
- * $Id: Schedule.java,v 1.5 2004-07-21 07:05:36 tlipkis Exp $
+ * $Id: Schedule.java,v 1.6 2004-09-28 08:53:15 tlipkis Exp $
  */
 
 /*
@@ -187,6 +187,10 @@ public class Schedule {
       return false;
     }
 
+    public int hashCode() {
+      throw new UnsupportedOperationException();
+    }
+
     public String toString() {
       StringBuffer sb = new StringBuffer();
       sb.append("[BEvnt:");
@@ -275,6 +279,10 @@ public class Schedule {
 		runTime == oc.getRunTime());
       }
       return false;
+    }
+
+    public int hashCode() {
+      throw new UnsupportedOperationException();
     }
 
     public String toString() {

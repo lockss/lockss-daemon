@@ -1,5 +1,5 @@
 /*
- * $Id: TimerQueue.java,v 1.21 2004-09-19 01:29:56 tlipkis Exp $
+ * $Id: TimerQueue.java,v 1.22 2004-09-28 08:53:14 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -55,7 +55,7 @@ public class TimerQueue {
    * request.
    */
   public static Request schedule(Deadline deadline, Callback callback,
-				 Serializable cookie) {
+				 Object cookie) {
     return singleton.add(deadline, callback, cookie);
   }
 
@@ -120,7 +120,7 @@ public class TimerQueue {
 
 
   /** Timer Request element; only used to cancel a request. */
-  public class Request implements Serializable, Comparable {
+  public class Request implements Comparable {
     private Deadline deadline;
     private Callback callback;
     private Object cookie;
@@ -343,7 +343,7 @@ public class TimerQueue {
    * The TimerQueue.Callback interface defines the
    * method that will be called when a timer expires.
    */
-  public interface Callback extends Serializable {
+  public interface Callback {
     /**
      * Called when the timer expires.
      * @param cookie  data supplied by caller to schedule()

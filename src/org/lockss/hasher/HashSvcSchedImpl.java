@@ -1,5 +1,5 @@
 /*
- * $Id: HashSvcSchedImpl.java,v 1.15 2004-09-27 22:39:13 smorabito Exp $
+ * $Id: HashSvcSchedImpl.java,v 1.16 2004-09-28 08:53:18 tlipkis Exp $
  */
 
 /*
@@ -60,7 +60,7 @@ public class HashSvcSchedImpl
   private List queue = new LinkedList();
   private HistoryList completed = new HistoryList(DEFAULT_COMPLETED_MAX);
   // lock object for both queue and completed
-  private String queueLock = new String();
+  private Object queueLock = new Object();
   private int hashStepBytes = DEFAULT_STEP_BYTES;
   private BigInteger totalBytesHashed = BigInteger.valueOf(0);
   private int reqCtr = 0;
@@ -130,7 +130,7 @@ public class HashSvcSchedImpl
 			     MessageDigest hasher,
 			     Deadline deadline,
 			     Callback callback,
-			     Serializable cookie) {
+			     Object cookie) {
     HashTask task =
       new HashTask(urlset, hasher, deadline, callback, cookie,
 		   urlset.getContentHasher(hasher),
@@ -162,7 +162,7 @@ public class HashSvcSchedImpl
 			   MessageDigest hasher,
 			   Deadline deadline,
 			   Callback callback,
-			   Serializable cookie) {
+			   Object cookie) {
     HashTask task =
       new HashTask(urlset, hasher, deadline, callback, cookie,
 			    // tk - get better duration estimate
@@ -360,7 +360,7 @@ public class HashSvcSchedImpl
     }
   }
 
-  class DummyTask extends StepTask {
+  static class DummyTask extends StepTask {
     DummyTask(Deadline deadline,
 	     long estimatedDuration) {
       super(Deadline.in(0), deadline, estimatedDuration, null, null);

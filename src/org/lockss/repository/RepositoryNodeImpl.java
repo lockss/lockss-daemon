@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.57 2004-09-27 22:39:07 smorabito Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.58 2004-09-28 08:53:15 tlipkis Exp $
  */
 
 /*
@@ -1339,7 +1339,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
   /**
    * Simple comparator which uses File.compareTo() for sorting.
    */
-  private class FileComparator implements Comparator {
+  private static class FileComparator implements Comparator {
     public int compare(Object o1, Object o2) {
       // compares file pathnames
       return ((File)o1).getName().compareToIgnoreCase(((File)o2).getName());

@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlParser.java,v 1.20 2004-09-27 22:39:15 smorabito Exp $
+ * $Id: GoslingHtmlParser.java,v 1.21 2004-09-28 08:53:19 tlipkis Exp $
  */
 
 /*
@@ -179,7 +179,7 @@ public class GoslingHtmlParser implements ContentParser {
       if (reader != null) {
 	try {
 	  reader.close();
-	} catch (IOException e) {}
+	} catch (IOException ignore) {}
 	reader = null;
       }
     }

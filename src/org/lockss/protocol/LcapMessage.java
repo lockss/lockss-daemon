@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessage.java,v 1.50 2004-09-27 22:39:09 smorabito Exp $
+ * $Id: LcapMessage.java,v 1.51 2004-09-28 08:53:16 tlipkis Exp $
  */
 
 /*
@@ -47,8 +47,7 @@ import java.util.*;
  * @version 1.0
  */
 
-public class LcapMessage
-    implements Serializable {
+public class LcapMessage {
   public static final int NAME_POLL_REQ = 0;
   public static final int NAME_POLL_REP = 1;
   public static final int CONTENT_POLL_REQ = 2;

@@ -1,5 +1,5 @@
 /*
- * $Id: StatusTable.java,v 1.35 2004-09-19 01:28:54 tlipkis Exp $
+ * $Id: StatusTable.java,v 1.36 2004-09-28 08:53:18 tlipkis Exp $
  */
 
 /*
@@ -403,6 +403,10 @@ public class StatusTable {
 
       //true iff both strings are equal or null
       return StringUtil.equalStrings(key, ref.getKey());
+    }
+
+    public int hashCode() {
+      throw new UnsupportedOperationException();
     }
   }
 

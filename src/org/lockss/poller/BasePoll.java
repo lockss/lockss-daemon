@@ -1,5 +1,5 @@
 /*
-* $Id: BasePoll.java,v 1.6 2004-09-20 14:20:36 dshr Exp $
+* $Id: BasePoll.java,v 1.7 2004-09-28 08:53:17 tlipkis Exp $
  */
 
 /*
@@ -54,7 +54,7 @@ import org.lockss.daemon.status.*;
  * @version 1.0
  */
 
-public abstract class BasePoll implements Poll, Serializable {
+public abstract class BasePoll implements Poll {
 
   static final String[] ERROR_STRINGS = {"Poll Complete","Hasher Busy",
       "Hashing Error", "IO Error"

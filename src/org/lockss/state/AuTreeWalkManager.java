@@ -1,5 +1,5 @@
 /*
- * $Id: AuTreeWalkManager.java,v 1.6 2004-09-27 22:39:06 smorabito Exp $
+ * $Id: AuTreeWalkManager.java,v 1.7 2004-09-28 08:53:14 tlipkis Exp $
  */
 
 /*
@@ -52,7 +52,6 @@ public class AuTreeWalkManager
   TreeWalkManager twm;
   NodeManager nodeMgr;
   SchedService schedSvc;
-  TreeWalkRunner runner;
 
   // The currently scheduled or running task.  If null, there is no task
   // scheduld, but there should be a timer event pending which will attempt

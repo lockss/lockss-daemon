@@ -1,5 +1,5 @@
 /*
- * $Id: HashService.java,v 1.22 2004-09-27 22:39:13 smorabito Exp $
+ * $Id: HashService.java,v 1.23 2004-09-28 08:53:18 tlipkis Exp $
  */
 
 /*
@@ -101,7 +101,7 @@ public interface HashService extends LockssManager {
 			     MessageDigest hasher,
 			     Deadline deadline,
 			     Callback callback,
-			     Serializable cookie);
+			     Object cookie);
 
   /**
    * Ask for the names in the <code>CachedUrlSet</code> object to be
@@ -126,7 +126,7 @@ public interface HashService extends LockssManager {
 			   MessageDigest hasher,
 			   Deadline deadline,
 			   Callback callback,
-			   Serializable cookie);
+			   Object cookie);
 
   /** Return the average hash speed, or -1 if not known.
    * @param digest the hashing algorithm
@@ -159,7 +159,7 @@ public interface HashService extends LockssManager {
    * <code>HashService.Callback</code> is used to notify hash requestors
    * that their hash has succeeded or failed.
    */
-  public interface Callback extends Serializable {
+  public interface Callback {
     /**
      * Called to indicate that hashing the content or names of a
      * <code>CachedUrlSet</code> object has succeeded, if <code>e</code>

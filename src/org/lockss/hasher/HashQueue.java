@@ -1,5 +1,5 @@
 /*
- * $Id: HashQueue.java,v 1.45 2004-09-27 22:39:14 smorabito Exp $
+ * $Id: HashQueue.java,v 1.46 2004-09-28 08:53:18 tlipkis Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ import org.lockss.daemon.status.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
 
-class HashQueue implements Serializable {
+class HashQueue {
   static final String PARAM_PRIORITY = HashService.PARAM_PRIORITY;
   static final int DEFAULT_PRIORITY = HashService.DEFAULT_PRIORITY;
 
@@ -314,7 +314,7 @@ class HashQueue implements Serializable {
   }
 
   // Request - hash queue element.
-  static class Request implements Serializable, Comparable {
+  static class Request implements Comparable {
     CachedUrlSet urlset;
     MessageDigest hasher;
     Deadline deadline;

@@ -1,5 +1,5 @@
 /*
-* $Id: V1ContentPoll.java,v 1.3 2004-09-16 21:29:16 dshr Exp $
+* $Id: V1ContentPoll.java,v 1.4 2004-09-28 08:53:16 tlipkis Exp $
  */
 
 /*
@@ -85,7 +85,7 @@ public class V1ContentPoll extends V1Poll {
    * @param callback the hashing callback to use on return
    * @return true if hash successfully completed.
    */
-  boolean scheduleHash(MessageDigest hasher, Deadline timer, Serializable key,
+  boolean scheduleHash(MessageDigest hasher, Deadline timer, Object key,
                                 HashService.Callback callback) {
     HashService hs = m_pollmanager.getHashService();
     return hs.hashContent( m_cus, hasher, timer, callback, key);

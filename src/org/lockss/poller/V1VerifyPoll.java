@@ -1,5 +1,5 @@
 /*
-* $Id: V1VerifyPoll.java,v 1.7 2004-09-20 14:20:37 dshr Exp $
+* $Id: V1VerifyPoll.java,v 1.8 2004-09-28 08:53:16 tlipkis Exp $
  */
 
 /*
@@ -94,7 +94,7 @@ class V1VerifyPoll extends V1Poll {
    * @return true we never do anything here
    */
   boolean scheduleHash(MessageDigest hasher, Deadline timer,
-                       Serializable key, HashService.Callback callback) {
+                       Object key, HashService.Callback callback) {
     return true;
   }
 
@@ -190,7 +190,7 @@ class V1VerifyPoll extends V1Poll {
   }
 
   private void sendVerifyReply(LcapMessage msg) throws IOException  {
-    String url = new String(msg.getTargetUrl());
+    String url = msg.getTargetUrl();
     ArchivalUnit au;
     String chal = String.valueOf(B64Code.encode(msg.getChallenge()));
     byte[] secret = m_pollmanager.getSecret(msg.getChallenge());

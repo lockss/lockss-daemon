@@ -1,5 +1,5 @@
 /*
-* $Id: V1Poll.java,v 1.15 2004-09-27 22:39:10 smorabito Exp $
+* $Id: V1Poll.java,v 1.16 2004-09-28 08:53:16 tlipkis Exp $
  */
 
 /*
@@ -159,7 +159,7 @@ public abstract class V1Poll extends BasePoll {
    * @return true if hash successfully completed.
    */
   abstract boolean scheduleHash(MessageDigest hasher, Deadline timer,
-                                Serializable key,
+                                Object key,
                                 HashService.Callback callback);
   /**
    * schedule a vote by a poll.  we've already completed the hash so we're

@@ -1,5 +1,5 @@
 /*
- * $Id: IpFilter.java,v 1.6 2004-07-12 06:22:54 tlipkis Exp $
+ * $Id: IpFilter.java,v 1.7 2004-09-28 08:53:14 tlipkis Exp $
  */
 
 /*
@@ -220,6 +220,10 @@ public class IpFilter {
 	return (addr == ip.addr) && (mask == ip.mask);
       }
       return false;
+    }
+
+    public int hashCode() {
+      return 3*addr + mask;
     }
 
     /** Return true if ip is equal to this, or if either ip or this is a
