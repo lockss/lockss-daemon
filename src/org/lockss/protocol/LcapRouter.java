@@ -1,5 +1,5 @@
 /*
- * $Id: LcapRouter.java,v 1.9 2003-03-29 02:43:18 tal Exp $
+ * $Id: LcapRouter.java,v 1.10 2003-03-29 20:22:57 tal Exp $
  */
 
 /*
@@ -83,21 +83,13 @@ public class LcapRouter extends BaseLockssManager {
 
   private Deadline beaconDeadline = Deadline.at(TimeBase.NEVER);;
   private PartnerList partnerList = new PartnerList();
-  private Configuration.Callback configCallback;
   private List messageHandlers = new ArrayList();
 
   public void startService() {
     super.startService();
     comm = getDaemon().getCommManager();
     idMgr = getDaemon().getIdentityManager();
-    configCallback  = new Configuration.Callback() {
-	public void configurationChanged(Configuration oldConfig,
-					 Configuration newConfig,
-					 Set changedKeys) {
-	  setConfig(newConfig, changedKeys);
-	}
-      };
-    Configuration.registerConfigurationCallback(configCallback);
+    registerDefaultConfigCallback();
     comm.registerMessageHandler(LockssDatagram.PROTOCOL_LCAP,
 				new LcapComm.MessageHandler() {
 				    public void
@@ -108,7 +100,6 @@ public class LcapRouter extends BaseLockssManager {
   }
 
   public void stopService() {
-    Configuration.unregisterConfigurationCallback(configCallback);
     stopBeacon();
     super.stopService();
   }
@@ -127,7 +118,8 @@ public class LcapRouter extends BaseLockssManager {
     }
   }
 
-  private void setConfig(Configuration config, Set changedKeys) {
+  protected void setConfig(Configuration config, Configuration oldConfig,
+			   Set changedKeys) {
     fwdRateLimiter =
       getRateLimiter(config, fwdRateLimiter,
 		     PARAM_FWD_PKTS_PER_INTERVAL, PARAM_FWD_PKT_INTERVAL,

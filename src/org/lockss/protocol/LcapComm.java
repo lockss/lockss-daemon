@@ -1,5 +1,5 @@
 /*
- * $Id: LcapComm.java,v 1.24 2003-03-27 23:53:21 tal Exp $
+ * $Id: LcapComm.java,v 1.25 2003-03-29 20:22:57 tal Exp $
  */
 
 /*
@@ -46,7 +46,7 @@ import org.lockss.plugin.*;
  * Routing involves decisions about using unicast to supplement multicast,
  * including forwarding received unicast packets.
  */
-public class LcapComm implements LockssManager {
+public class LcapComm extends BaseLockssManager {
 
   static final String PREFIX = Configuration.PREFIX + "comm.";
   static final String PARAM_MULTI_GROUP = PREFIX + "multicast.group";
@@ -55,9 +55,6 @@ public class LcapComm implements LockssManager {
   static final String PARAM_UNI_PORT = PREFIX + "unicast.port";
   static final String PARAM_UNI_PORT_SEND = PREFIX + "unicast.sendToPort";
   static final String PARAM_UNI_ADDR_SEND = PREFIX + "unicast.sendToAddr";
-
-  private static LockssDaemon theDaemon = null;
-  private static LcapComm theManager = null;
 
   static Logger log = Logger.getLogger("Comm");
 
@@ -86,23 +83,13 @@ public class LcapComm implements LockssManager {
 
   private Vector messageHandlers = new Vector();
 
-  public LcapComm() {}
+  public LcapComm() {
+    sockFact = new NormalSocketFactory();
+  }
 
-  /**
-   * init the comm manager.
-   * @param daemon the LockssDaemon instance
-   * @throws LockssDaemonException if we already instantiated this manager
-   * @see org.lockss.app.LockssManager#initService(LockssDaemon daemon)
-   */
-  public void initService(LockssDaemon daemon) throws LockssDaemonException {
-    if(theManager == null) {
-      theDaemon = daemon;
-      theManager = this;
-      theManager.sockFact = new NormalSocketFactory();
-    }
-    else {
-      throw new LockssDaemonException("Multiple Instantiation.");
-    }
+  /** For testing */
+  LcapComm(SocketFactory factory) {
+    sockFact = factory;
   }
 
   /**
@@ -110,6 +97,7 @@ public class LcapComm implements LockssManager {
    * @see org.lockss.app.LockssManager#startService()
    */
   public void startService() {
+    super.startService();
     configure(Configuration.getCurrentConfig());
     start();
   }
@@ -120,22 +108,10 @@ public class LcapComm implements LockssManager {
    */
   public void stopService() {
     // TODO: checkpoint here.
-    theManager.stop();
-    theManager = null;
+    stop();
+    super.stopService();
   }
 
-
-  LcapComm(SocketFactory factory) {
-    sockFact = factory;
-  }
-
-  /**
-   * Return the singleton LcapComm instance.
-   * @return the LcapComm
-   */
-  public LcapComm getComm() {
-    return theManager;
-  }
 
   /**
    * Set communication parameters from configuration.

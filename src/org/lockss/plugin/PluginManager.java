@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.24 2003-03-27 03:04:58 tal Exp $
+ * $Id: PluginManager.java,v 1.25 2003-03-29 20:22:57 tal Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ import org.lockss.poller.*;
  * @author  TAL
  * @version 0.0
  */
-public class PluginManager implements LockssManager {
+public class PluginManager extends BaseLockssManager {
   static final String PARAM_AU_TREE = Configuration.PREFIX + "au";
   private static String PARAM_PLUGIN_LOCATION =
     Configuration.PREFIX + "platform.pluginDir";
@@ -53,7 +53,6 @@ public class PluginManager implements LockssManager {
 
   private static Logger log = Logger.getLogger("PluginMgr");
 
-  private static PluginManager theManager = null;
   private static LockssDaemon theDaemon = null;
   private static StatusService statusSvc;
   private String pluginDir = null;
@@ -65,32 +64,13 @@ public class PluginManager implements LockssManager {
 
   /* ------- LockssManager implementation ------------------ */
   /**
-   * init the plugin manager.
-   * @param daemon the LockssDaemon instance
-   * @throws LockssDaemonException if we already instantiated this manager
-   * @see LockssManager#initService(LockssDaemon)
-   */
-  public void initService(LockssDaemon daemon) throws LockssDaemonException {
-    if (theManager == null) {
-      theDaemon = daemon;
-      theManager = this;
-    } else {
-      throw new LockssDaemonException("Multiple Instantiation.");
-    }
-  }
-
-  /**
    * start the plugin manager.
    * @see org.lockss.app.LockssManager#startService()
    */
   public void startService() {
-    Configuration.registerConfigurationCallback(new Configuration.Callback() {
-	public void configurationChanged(Configuration oldConfig,
-					 Configuration newConfig,
-					 Set changedKeys) {
-	  setConfig(newConfig, oldConfig);
-	}
-      });
+    super.startService();
+    theDaemon = getDaemon();
+    registerDefaultConfigCallback();
     statusSvc = theDaemon.getStatusService();
     statusSvc.registerStatusAccessor("AUS", new Status(this));
   }
@@ -105,11 +85,11 @@ public class PluginManager implements LockssManager {
       Plugin plugin = (Plugin)iter.next();
       plugin.stopPlugin();
     }
-
-    theManager = null;
+    super.stopService();
   }
 
-  private void setConfig(Configuration config, Configuration oldConfig) {
+  protected void setConfig(Configuration config, Configuration oldConfig,
+			   Set changedKeys) {
     pluginDir = config.get(PARAM_PLUGIN_LOCATION, DEFAULT_PLUGIN_LOCATION);
     Configuration allPlugs = config.getConfigTree(PARAM_AU_TREE);
     Configuration oldAllPlugs = oldConfig.getConfigTree(PARAM_AU_TREE);

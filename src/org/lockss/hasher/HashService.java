@@ -1,5 +1,5 @@
 /*
- * $Id: HashService.java,v 1.12 2003-03-27 03:04:16 tal Exp $
+ * $Id: HashService.java,v 1.13 2003-03-29 20:22:57 tal Exp $
  */
 
 /*
@@ -48,61 +48,40 @@ import org.lockss.plugin.*;
  * time-slice scheduling so that large requests, which can take hours, do
  * not lock out smaller requests.
  */
-public class HashService implements LockssManager {
+public class HashService extends BaseLockssManager {
   /** Constant by which hash estimates are increased */
-  static String PARAM_ESTIMATE_PAD_CONSTANT =
+  static final String PARAM_ESTIMATE_PAD_CONSTANT =
     Configuration.PREFIX + "hasher.estimate.pad.constant";
   /** Percentage by which hash estimates are increased */
-  static String PARAM_ESTIMATE_PAD_PERCENT =
+  static final String PARAM_ESTIMATE_PAD_PERCENT =
     Configuration.PREFIX + "hasher.estimate.pad.percent";
 
-  private static int DEFAULT_ESTIMATE_PAD_CONSTANT = 10;
-  private static int DEFAULT_ESTIMATE_PAD_PERCENT = 10;
+  private static final int DEFAULT_ESTIMATE_PAD_CONSTANT = 10;
+  private static final int DEFAULT_ESTIMATE_PAD_PERCENT = 10;
+
+  protected static Logger log = Logger.getLogger("HashService");
 
   // Queue of outstanding hash requests.  The currently executing request,
   // if any, is on the queue, but not necessarily still at the head.
   // Currently there is a single hash queue.  (Might make sense to have
   // more if there are multiple disks.)
-  private static HashQueue theQueue = null;
-  private static HashService theService = null;
-  private LockssDaemon theDaemon = null;
+  private HashQueue theQueue = null;
   private long estPadConstant = 0;
   private long estPadPercent = 0;
 
   public HashService() {}
 
   /**
-   * init the plugin manager.
-   * @param daemon the LockssDaemon instance
-   * @throws LockssDaemonException if we already instantiated this manager
-   * @see org.lockss.app.LockssManager#initService(LockssDaemon daemon)
-   */
-  public void initService(LockssDaemon daemon) throws LockssDaemonException {
-    if(theService == null) {
-      theDaemon = daemon;
-      theService = this;
-    }
-    else {
-      throw new LockssDaemonException("Multiple Instantiation.");
-    }
-  }
-
-  /**
    * start the plugin manager.
    * @see org.lockss.app.LockssManager#startService()
    */
   public void startService() {
+    super.startService();
     theQueue = new HashQueue();
     theQueue.init();
-    Configuration.registerConfigurationCallback(new Configuration.Callback() {
-	public void configurationChanged(Configuration oldConfig,
-					 Configuration newConfig,
-					 Set changedKeys) {
-	  setConfig(newConfig);
-	}
-      });
-    theDaemon.getStatusService().registerStatusAccessor("HashQ",
-							theQueue.getStatusAccessor());
+    registerDefaultConfigCallback();
+    getDaemon().getStatusService().registerStatusAccessor("HashQ",
+							  theQueue.getStatusAccessor());
   }
 
   /**
@@ -112,15 +91,16 @@ public class HashService implements LockssManager {
   public void stopService() {
     // TODO: checkpoint here.
     if (theQueue != null) {
-      theDaemon.getStatusService().unregisterStatusAccessor("HashQ");
+      getDaemon().getStatusService().unregisterStatusAccessor("HashQ");
       theQueue.stop();
     }
     theQueue = null;
 
-    theService = null;
+    super.stopService();
   }
 
-  private void setConfig(Configuration config) {
+  protected void setConfig(Configuration config, Configuration oldConfig,
+			   Set changedKeys) {
     estPadConstant = config.getLong(PARAM_ESTIMATE_PAD_CONSTANT,
 				    DEFAULT_ESTIMATE_PAD_CONSTANT);
     estPadPercent = config.getLong(PARAM_ESTIMATE_PAD_PERCENT,
