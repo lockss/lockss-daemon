@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.28 2003-08-02 00:16:04 eaalto Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.29 2003-09-16 23:48:24 eaalto Exp $
  */
 
 /*
@@ -74,7 +74,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertEquals("testUrl/test.txt", node.getNodeUrl());
   }
 
-  public void testGetState() {
+  public void testGetState() throws Exception {
     //XXX implement
   }
 
@@ -457,7 +457,12 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
         createLeaf("http://www.example.com/testDir/test.cache",
         "test stream", props);
 
-    props = leaf.getNodeContents().props;
+    RepositoryNode.RepositoryNodeContents contents = leaf.getNodeContents();
+    props = contents.props;
+    // close these to allow the file to be renamed later
+    contents.input.close();
+    contents.reader.close();
+
     assertEquals("value 1", props.getProperty("test 1"));
 
     leaf.makeNewVersion();
@@ -692,7 +697,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     RepositoryNodeImpl node = (RepositoryNodeImpl) repo.createNewNode(
         "http://www.example.com/test.url");
     node.loadNodeRoot();
-    String contentStr = node.nodeLocation + "/#content/";
+    String contentStr = FileUtil.sysDepPath(node.nodeLocation + "/#content/");
     assertEquals(contentStr, node.getContentDirBuffer().toString());
     String expectedStr = contentStr + "123";
     assertEquals(expectedStr,
