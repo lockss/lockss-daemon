@@ -1,5 +1,5 @@
 /*
- * $Id: TestHashQueue.java,v 1.7 2003-02-24 22:13:42 claire Exp $
+ * $Id: TestHashQueue.java,v 1.8 2003-02-27 22:36:58 troberts Exp $
  */
 
 /*
@@ -62,6 +62,7 @@ public class TestHashQueue extends LockssTestCase {
   }
 
   public void setUp() throws Exception {
+    super.setUp();
     log.setLevel(Logger.LEVEL_DEBUG);
     if (dig == null) {
       dig = MessageDigest.getInstance(hashAlgorithm);

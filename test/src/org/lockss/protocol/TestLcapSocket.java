@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapSocket.java,v 1.8 2002-12-30 20:40:05 tal Exp $
+ * $Id: TestLcapSocket.java,v 1.9 2003-02-27 22:36:58 troberts Exp $
  */
 
 /*
@@ -62,6 +62,7 @@ public class TestLcapSocket extends LockssTestCase {
   DatagramPacket testPacket;
 
   public void setUp() throws Exception {
+    super.setUp();
     testAddr = InetAddress.getByName("127.0.0.1");
     testPacket =
       new DatagramPacket(testData, testData.length, testAddr, testPort);

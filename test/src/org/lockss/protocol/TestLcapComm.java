@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapComm.java,v 1.4 2003-02-24 22:13:42 claire Exp $
+ * $Id: TestLcapComm.java,v 1.5 2003-02-27 22:36:58 troberts Exp $
  */
 
 /*
@@ -95,6 +95,7 @@ public class TestLcapComm extends LockssTestCase {
 
 
   public void setUp() throws Exception {
+    super.setUp();
     testData = testStr.getBytes();
     testAddr = InetAddress.getByName("127.0.0.1");
     testSend = new LockssDatagram(LockssDatagram.PROTOCOL_TEST, testData);

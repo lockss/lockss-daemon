@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssDatagram.java,v 1.1 2002-12-13 02:26:08 tal Exp $
+ * $Id: TestLockssDatagram.java,v 1.2 2003-02-27 22:36:58 troberts Exp $
  */
 
 /*
@@ -59,7 +59,8 @@ public class TestLockssDatagram extends LockssTestCase {
   byte[] testData;
   int testPort;
 
-  public void setUp() {
+  public void setUp() throws Exception {
+    super.setUp();
     testStr = "This is test data";
     testData = testStr.getBytes();
     testPort = 1234;

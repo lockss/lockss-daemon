@@ -41,7 +41,8 @@ public class TestMockDatagramSocket extends LockssTestCase{
     super(msg);
   }
 
-  public void setUp(){
+  public void setUp() throws Exception {
+    super.setUp();
     try{
       ds = new MockDatagramSocket();
     }

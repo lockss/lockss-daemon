@@ -38,7 +38,6 @@ import org.lockss.daemon.*;
 public class TestSyslogTarget extends LockssTestCase {
   private static final int syslogPort = 9999;
   private static final String syslogHost = "127.0.0.1";
-  //  private DatagramSocketListener dsl;  
   private static final String PARAM_HOST = SyslogTarget.PARAM_HOST;
   private static final String PARAM_PORT = SyslogTarget.PARAM_PORT;
 
@@ -46,13 +45,6 @@ public class TestSyslogTarget extends LockssTestCase {
     super(msg);
   }
   
-  public void setUp() throws Exception{
-    super.setUp();
-
-//     dsl = new DatagramSocketListener(syslogPort);
-//     new Thread(dsl).start();
-  }
-
   private SyslogTarget newSyslogTarget() {
     SyslogTarget target = new SyslogTarget();
     target.init();
@@ -134,33 +126,4 @@ public class TestSyslogTarget extends LockssTestCase {
       assertEquals(msgBytes[ix], recData[ix]);
     }
   }
-
-//   public void testNoSyslogHostSpecified(){
-//     SyslogTarget target = newSyslogTarget();
-//     target.handleMessage("blah", "blah", "blah");
-//     assertTrue(dsl.getPacket() == null);
-//   }    
-
-//   public void testHostNotPortSpecified(){
-//     Properties props = System.getProperties();
-//     props.setProperty(PARAM_HOST, syslogHost);
-//     SyslogTarget target = newSyslogTarget();
-//     target.handleMessage("blah", "blah", "blah");
-//     assertTrue(dsl.getPacket() == null);
-//   }    
-  
-//   public void testBasicMessage(){
-//     SyslogTarget target = newSyslogTarget();
-//     String callerId = "testCaller";
-//     String errorMessage = "testErrorMessage";
-//     String expectedMessage = "LCAP: "+callerId+": "+errorMessage;
-//     byte[] msgBytes = expectedMessage.getBytes();
-//     DatagramPacket packet = dsl.getPacket();
-//     assertTrue(packet != null);
-//     int dataLength = packet.getLength();
-//     byte[] data = packet.getData();
-//     for (int ix=0; ix < dataLength; ix++){
-//       assertEquals(msgBytes[ix], data[ix]);
-//     }
-//   }
 }

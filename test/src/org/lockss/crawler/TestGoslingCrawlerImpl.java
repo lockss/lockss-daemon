@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingCrawlerImpl.java,v 1.8 2003-02-24 22:13:42 claire Exp $
+ * $Id: TestGoslingCrawlerImpl.java,v 1.9 2003-02-27 22:36:58 troberts Exp $
  */
 
 /*
@@ -73,7 +73,8 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     super(msg);
   }
 
-  public void setUp() {
+  public void setUp() throws Exception {
+    super.setUp();
     TimeBase.setSimulated();
 
     mau = new MockArchivalUnit();

@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapMessage.java,v 1.14 2003-02-27 04:04:28 tal Exp $
+ * $Id: TestLcapMessage.java,v 1.15 2003-02-27 22:36:58 troberts Exp $
  */
 
 /*
@@ -65,8 +65,8 @@ public class TestLcapMessage extends LockssTestCase {
   }
 
 
-  public void setUp() {
-
+  public void setUp() throws Exception {
+    super.setUp();
     try {
       testaddr = InetAddress.getByName("127.0.0.1");
     }

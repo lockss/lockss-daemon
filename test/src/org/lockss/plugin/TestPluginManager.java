@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.3 2003-02-27 07:31:11 tal Exp $
+ * $Id: TestPluginManager.java,v 1.4 2003-02-27 22:36:58 troberts Exp $
  */
 
 /*
@@ -54,7 +54,8 @@ public class TestPluginManager extends LockssTestCase {
     super(msg);
   }
 
-  public void setUp() {
+  public void setUp() throws Exception {
+    super.setUp();
     mgr = new PluginManager();
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollHistoryImpl.java,v 1.3 2003-02-24 22:13:43 claire Exp $
+ * $Id: TestPollHistoryImpl.java,v 1.4 2003-02-27 22:36:58 troberts Exp $
  */
 
 /*
@@ -46,6 +46,7 @@ public class TestPollHistoryImpl extends LockssTestCase {
   }
 
   public void setUp() throws Exception {
+    super.setUp();
     PollState state = new PollState(1, "none", null, 1, 0, null);
     Collection votes = new ArrayList();
     votes.add(new String("test"));

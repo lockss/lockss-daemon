@@ -43,7 +43,8 @@ public class TestHighWirePlugin extends LockssTestCase {
     super(msg);
   }
 
-  public void setUp() {
+  public void setUp() throws Exception {
+    super.setUp();
     plugin = new HighWirePlugin();
     plugin.initPlugin();
   }

@@ -35,7 +35,8 @@ public class TestLcapIdentity extends LockssTestCase {
   }
 
   /** setUp method for test case */
-  protected void setUp() {
+  protected void setUp() throws Exception {
+    super.setUp();
     try {
       fakeId = new LcapIdentity(InetAddress.getByName(fakeIdString));
       testAddress = InetAddress.getByName("127.0.0.1");

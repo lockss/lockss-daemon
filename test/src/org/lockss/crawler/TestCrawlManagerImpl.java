@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.4 2003-02-24 22:13:42 claire Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.5 2003-02-27 22:36:58 troberts Exp $
  */
 
 /*
@@ -53,7 +53,8 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     super(msg);
   }
 
-  public void setUp() {
+  public void setUp() throws Exception {
+    super.setUp();
     mau = new MockArchivalUnit();
     
     urlList = ListUtil.list(startUrl);
