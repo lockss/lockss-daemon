@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.35 2004-03-29 09:19:43 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.36 2004-04-05 17:09:48 tlipkis Exp $
  */
 
 /*
@@ -410,7 +410,7 @@ public class StringUtil {
    * @return true if s is null or the empty string
    */
   public static boolean isNullString(String s) {
-    return s == null || "".equals(s);
+    return s == null || s.length() == 0;
   }
 
   /**

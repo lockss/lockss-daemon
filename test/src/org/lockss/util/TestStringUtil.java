@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.33 2004-03-29 09:19:43 tlipkis Exp $
+ * $Id: TestStringUtil.java,v 1.34 2004-04-05 17:09:48 tlipkis Exp $
  */
 
 /*
@@ -269,6 +269,7 @@ public class TestStringUtil extends LockssTestCase {
   public void testIsNullString() {
     assertTrue(StringUtil.isNullString(null));
     assertTrue(StringUtil.isNullString(""));
+    assertTrue(StringUtil.isNullString(new String()));
     assertFalse(StringUtil.isNullString(" "));
   }
 
