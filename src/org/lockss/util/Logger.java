@@ -1,5 +1,5 @@
 /*
- * $Id: Logger.java,v 1.7 2002-11-23 01:24:45 troberts Exp $
+ * $Id: Logger.java,v 1.8 2002-12-02 00:40:40 tal Exp $
  */
 
 /*
@@ -48,6 +48,10 @@ import org.lockss.daemon.*;
  */
 public class Logger {
 
+  static final String PREFIX = Configuration.PREFIX + "log.";
+  static final String PARAM_DEFAULT_LEVEL = PREFIX + "default.level";
+  static final String PARAM_LOG_LEVEL = PREFIX + "<logname>.level";
+
   /** Critical errors, need immediate attention */
   public static final int LEVEL_CRITICAL = 1;
   /** Errors, system nay not operate correctly, but won't damage anything */
@@ -71,8 +75,6 @@ public class Logger {
 
   // Default default log level if config parameter not set.
   private static final int DEFAULT_LEVEL = LEVEL_INFO;
-
-  static final String PREFIX = Configuration.PREFIX + "log.";
 
   private static final Map logs = new HashMap();
   private static Vector targets = new Vector();
@@ -149,8 +151,9 @@ public class Logger {
    */
   static int getConfiguredLevel(String name) {
     String levelName =
-      Configuration.getParam(PREFIX + name + ".level",
-			     Configuration.getParam(PREFIX + "default.level"));
+      Configuration.getParam(StringUtil.replaceString(PARAM_LOG_LEVEL,
+						      "<logname>", name),
+			     Configuration.getParam(PARAM_DEFAULT_LEVEL));
     int level = 0;
     try {
       level = levelOf(levelName);
@@ -252,7 +255,7 @@ public class Logger {
 
   /** Translate an exception's stack trace to a string.
    */
-  private static String stackTraceString(Exception exp) {
+  private static String stackTraceString(Throwable exp) {
     StringWriter sw = new StringWriter();
     PrintWriter pw = new PrintWriter(sw);
     exp.printStackTrace(pw);
@@ -319,9 +322,9 @@ public class Logger {
    * Log a message with the specified log level
    * @param level log level (<code>Logger.LEVEL_XXX</code>)
    * @mag log message
-   * @param e <code>Exception</code>
+   * @param e <code>Throwable</code>
    */
-  public void log(int level, String msg, Exception e) {
+  public void log(int level, String msg, Throwable e) {
     if (isLevel(level)) {
       StringBuffer sb = new StringBuffer();
       sb.append(name);
@@ -370,7 +373,7 @@ public class Logger {
   }
 
   /** Log a critical message with an exception backtrace */
-  public void critical(String msg, Exception e) {
+  public void critical(String msg, Throwable e) {
     log(LEVEL_CRITICAL, msg, e);
   }
 
@@ -380,7 +383,7 @@ public class Logger {
   }
 
   /** Log an error message with an exception backtrace */
-  public void error(String msg, Exception e) {
+  public void error(String msg, Throwable e) {
     log(LEVEL_ERROR, msg, e);
   }
 
@@ -390,7 +393,7 @@ public class Logger {
   }
 
   /** Log a warning message with an exception backtrace */
-  public void warning(String msg, Exception e) {
+  public void warning(String msg, Throwable e) {
     log(LEVEL_WARNING, msg, e);
   }
 
@@ -400,7 +403,7 @@ public class Logger {
   }
 
   /** Log an information message with an exception backtrace */
-  public void info(String msg, Exception e) {
+  public void info(String msg, Throwable e) {
     log(LEVEL_INFO, msg, e);
   }
 
@@ -410,7 +413,7 @@ public class Logger {
   }
 
   /** Log a debug message with an exception backtrace */
-  public void debug(String msg, Exception e) {
+  public void debug(String msg, Throwable e) {
     log(LEVEL_DEBUG, msg, e);
   }
 
