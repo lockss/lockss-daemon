@@ -1,5 +1,5 @@
 /*
- * $Id: MockMessageDigest.java,v 1.8 2003-07-23 00:17:19 troberts Exp $
+ * $Id: MockMessageDigest.java,v 1.9 2004-04-05 08:03:12 tlipkis Exp $
  */
 
 /*
@@ -108,13 +108,25 @@ public class MockMessageDigest extends MessageDigest {
 
   /**
    * Method to retrieve bytes fed in by <code>update</code>
+   * @return number of bytes written to output
+   * @see MockMessageDigest#update(byte)
+   * @see MockMessageDigest#update(byte[])
+   */
+  public byte[] getUpdatedBytes(){
+    byte[] res = new byte[inputList.size()];
+    getUpdatedBytes(res);
+    return res;
+  }
+
+  /**
+   * Method to retrieve bytes fed in by <code>update</code>
    * @param output byte[] to fill with bytes from the queue
    * @return number of bytes written to output
    * @see MockMessageDigest#update(byte)
    * @see MockMessageDigest#update(byte[])
    */
   public int getUpdatedBytes(byte[] output){
-    int length = inputList.size() >= output.length ? output.length : inputList.size();
+    int length = Math.min(inputList.size(), output.length);
 
     for (int i=0; i<length; i++){
       output[i] = getUpdatedByte();
