@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.79 2004-04-09 06:53:00 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.80 2004-04-27 19:38:02 tlipkis Exp $
  */
 
 /*
@@ -77,9 +77,12 @@ public class PluginManager extends BaseLockssManager {
   private StatusService statusSvc;
   private String pluginDir = null;
 
+  private AuOrderComparator auComparator = new AuOrderComparator();
+
   // maps plugin key(not id) to plugin
   private Map pluginMap = Collections.synchronizedMap(new HashMap());
   private Map auMap = Collections.synchronizedMap(new HashMap());
+  private Set auSet = Collections.synchronizedSet(new TreeSet(auComparator));
   private Set inactiveAuIds = Collections.synchronizedSet(new HashSet());
   private List xmlPlugins = Collections.EMPTY_LIST;
 
@@ -403,6 +406,7 @@ public class PluginManager extends BaseLockssManager {
     // remove from map first, so no new activity can start (poll messages,
     // RemoteAPI, etc.)
     auMap.remove(auid);
+    auSet.remove(au);
 
     theDaemon.getPollManager().cancelAuPolls(au);
     theDaemon.getCrawlManager().cancelAuCrawls(au);
@@ -421,6 +425,7 @@ public class PluginManager extends BaseLockssManager {
 
   protected void putAuInMap(ArchivalUnit au) {
     auMap.put(au.getAuId(), au);
+    auSet.add(au);
   }
 
   public ArchivalUnit getAuFromId(String auId) {
@@ -668,7 +673,7 @@ public class PluginManager extends BaseLockssManager {
 		 plugin.getPluginName() + ")");
     }
     pluginMap.put(pluginKey, plugin);
-    titleMap = null;
+    resetTitles();
   }
 
   protected String getConfigurablePluginName() {
@@ -740,16 +745,20 @@ public class PluginManager extends BaseLockssManager {
    * @return the List of aus
    */
   public List getAllAus() {
-    return new ArrayList(auMap.values());
+    return new ArrayList(auSet);
   }
 
   public Collection getInactiveAuIds() {
     return inactiveAuIds;
   }
 
-  /** Return all the known titles from the title db */
-  public Collection findAllTitles() {
-    return getTitleMap().keySet();
+  /** Return all the known titles from the title db, sorted by title */
+  public List findAllTitles() {
+    if (allTitles == null) {
+      allTitles = new ArrayList(getTitleMap().keySet());
+      Collections.sort(allTitles, auComparator.coc);
+    }
+    return allTitles;
   }
 
   /** Find all the plugins that support the given title */
@@ -758,9 +767,11 @@ public class PluginManager extends BaseLockssManager {
   }
 
   private Map titleMap = null;
+  private List allTitles = null;
 
   public void resetTitles() {
     titleMap = null;
+    allTitles = null;
   }
 
   public Map getTitleMap() {
@@ -840,6 +851,36 @@ public class PluginManager extends BaseLockssManager {
     }
   }
 
+  /** Comparator for sorting Aus alphabetically by title.  This is used in a
+   * TreeSet, so must return 0 only for identical objects. */
+  class AuOrderComparator implements Comparator {
+    CatalogueOrderComparator coc = new CatalogueOrderComparator();
+
+    public int compare(Object o1, Object o2) {
+      if (o1 == o2) {
+	return 0;
+      }
+      if (!((o1 instanceof ArchivalUnit)
+	   && (o2 instanceof ArchivalUnit))) {
+	throw new IllegalArgumentException("AuOrderComparator(" +
+					   o1.getClass() + "," +
+					   o2.getClass() + ")");
+      }
+      ArchivalUnit a1 = (ArchivalUnit)o1;
+      ArchivalUnit a2 = (ArchivalUnit)o2;
+      int res = coc.compare(a1.getName(), a2.getName());
+      if (res == 0) {
+	res = coc.compare(a1.getAuId(), a2.getAuId());
+      }
+      if (res == 0) {
+	// this can happen during testing.  Don't care about order, but
+	// mustn't be equal.
+	res = 1;
+      }
+      return res;
+    }
+  }
+
   private class Status implements StatusAccessor {
     private final List sortRules =
       ListUtil.list(new StatusTable.SortRule("au", true));
@@ -897,6 +938,8 @@ public class PluginManager extends BaseLockssManager {
       table.setRows(getRows(key));
     }
   }
+
+
 //   protected void initPlugins() {
 //     /* grab our 3rd party plugins and load them using security manager */
 //     String[] files = new java.io.File(pluginDir).list();
