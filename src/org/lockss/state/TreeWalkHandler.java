@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkHandler.java,v 1.61 2004-04-08 01:11:58 eaalto Exp $
+ * $Id: TreeWalkHandler.java,v 1.62 2004-05-04 22:20:48 tlipkis Exp $
  */
 
 /*
@@ -528,7 +528,7 @@ public class TreeWalkHandler {
 
       while (!theDaemon.isDaemonRunning()) {
         // if the daemon isn't up yet, do a short sleep
-        logger.debug2("Daemon not running yet. Sleeping...");
+        logger.debug3("Daemon not running yet. Sleeping...");
         try {
           Deadline.in(SMALL_SLEEP).sleep();
         } catch (InterruptedException ie) { }
@@ -625,11 +625,20 @@ public class TreeWalkHandler {
                           startDeadline.shortString());
             break;
           } else {
-            if (TimeBase.msUntil(startDeadline.getExpirationTime()) >
+	    // Can't fit into existing schedule.  Try for a later time.
+            if (TimeBase.msUntil(startDeadline.getExpirationTime()) <
                 (3 * Constants.WEEK)) {
-              // If can't fit it into schedule in next 3 weeks, give up
-              // and try again in an hour.  Prevents infinite looping
-              // trying to create a schedule.
+              logger.debug3("Couldn't schedule.  Trying new time.");
+              start += Math.max(est, MIN_SCHEDULE_ADJUSTMENT);
+            } else {
+              // If can't fit it into schedule in next 3 weeks, wait and
+              // try again in an hour.
+	      // XXX This is partly because the scheduler can get into a
+	      // state where no schedule can be created until the task
+	      // runner gets a chance to run.  Looping continuously here
+	      // can prevent the task runner from running.  Even when
+	      // that's fixed, waiting and starting over seems like a good
+	      // idea.
               logger.debug("Can't schedule, waiting for an hour");
               try {
                 Deadline.in(Constants.HOUR).sleep();
@@ -638,11 +647,6 @@ public class TreeWalkHandler {
 		throw ie;
 	      }
               start = chooseTimeToRun(0);  // no delay needed
-            } else {
-              // can't fit into existing schedule.  try adjusting by
-              // estimate length
-              logger.debug3("Schedule failed.  Trying new time.");
-              start += Math.max(est, MIN_SCHEDULE_ADJUSTMENT);
             }
           }
         }
