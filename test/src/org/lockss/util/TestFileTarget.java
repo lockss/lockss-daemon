@@ -1,5 +1,5 @@
 /*
- * $Id: TestFileTarget.java,v 1.3 2003-06-20 22:34:56 claire Exp $
+ * $Id: TestFileTarget.java,v 1.4 2004-12-09 08:21:44 tlipkis Exp $
  */
 
 /*
@@ -33,8 +33,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 
 import java.io.*;
-import gnu.regexp.RE;
-import gnu.regexp.REException;
 import junit.framework.TestCase;
 import org.lockss.test.*;
 
@@ -56,19 +54,15 @@ public class TestFileTarget extends LockssTestCase {
 			     errorMessage);
     }
 
-//      RE regExp = 
-//        new RE("\\d(\\d)?:\\d\\d:\\d\\d (A|P)M: Error: "+errorMessage+"\n");
-//     RE regExp = 
-//       new RE("\\d(\\d)?:\\d\\d:\\d\\d\\.\\d\\d\\d: Error: "+errorMessage+"\n");
     // Should have one Timestamp: message followed by two copies of the message
     String timestampRE = "\\d(\\d)?:\\d\\d:\\d\\d\\.\\d\\d\\d: ";
     String line1 = timestampRE + "Timestamp: .*\\n";
     String line2 = timestampRE + "Error: "+errorMessage+"\\n";
-    RE regExp = new RE(line1 + line2 + line2);
-//     String debugString = baos.toString();
-//     assertTrue("Debug string: \""+debugString+"\" not of correct format."+
-// 	       " Should be <time>: <error-level>: <error message>",
-// 	       regExp.isMatch(debugString));
+    String re = line1 + line2 + line2;
+    String debugString = StringUtil.fromFile(file);
+     assertTrue("Debug string: \""+debugString+"\" not of correct format."+
+ 	       " Should be <time>: <error-level>: <error message>",
+		isMatchRe(debugString, re));
   }
   
 }

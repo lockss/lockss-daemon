@@ -1,5 +1,5 @@
 /*
- * $Id: TestWrapperGenerator.java,v 1.7 2004-10-23 01:01:04 clairegriffin Exp $
+ * $Id: TestWrapperGenerator.java,v 1.8 2004-12-09 08:21:43 tlipkis Exp $
  */
 
 /*
@@ -69,10 +69,6 @@ public class TestWrapperGenerator extends LockssTestCase {
 
   public void tearDown() throws Exception {
     super.tearDown();
-    if (!debug) {
-      File tempDir = new File(tempDirPath);
-      tempDir.delete();
-    }
   }
 
   public void testAll() throws Exception {

@@ -1,5 +1,5 @@
 /*
- * $Id: WrapperGenerator.java,v 1.3 2004-06-10 22:03:55 tyronen Exp $
+ * $Id: WrapperGenerator.java,v 1.4 2004-12-09 08:21:44 tlipkis Exp $
  */
 
 /*
@@ -31,6 +31,16 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.doclet;
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.lang.reflect.*;
+import com.sun.javadoc.*;
+import org.apache.oro.text.regex.*;
+import org.w3c.dom.*;
+import org.lockss.util.*;
+
 
 /**
  * <p>Title: </p>
@@ -117,16 +127,8 @@ package org.lockss.doclet;
  * @version 1.0
  */
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.lang.reflect.*;
-import com.sun.javadoc.*;
-import gnu.regexp.*;
-import org.w3c.dom.*;
-import org.lockss.util.*;
-
 public class WrapperGenerator extends Doclet {
+  static Logger log = Logger.getLogger("WrapperGenerator");
 
   /** Command-line option to specify template file name */
   static final String templateOption = "-template";
@@ -156,8 +158,8 @@ public class WrapperGenerator extends Doclet {
   /** Name of variable to be used in generated class to hold wrapped class */
   static final String wrappedVariableName = "wrappedReturnValue";
 
-  /** Variables holding GNU regular expression objects */
-  static RE classnameRE, fullclassnameRE, methodnameRE, innerobjectRE,
+  /** Variables holding regular expression patterns objects */
+  static Pattern classnameRE, fullclassnameRE, methodnameRE, innerobjectRE,
       returnTypeRE, invokeMethodRE, throwRE, listparamsRE, beginLineRE,
       returnValueRE, modifyParamsRE, publicRE, nullRE, wrappedRetvalRE;
 
@@ -211,21 +213,28 @@ public class WrapperGenerator extends Doclet {
   }
 
   /** Set up the regular expressions.  Exception should never be thrown. */
-  static void initializeRE() throws REException {
-    classnameRE = new RE("#CLASSNAME");
-    fullclassnameRE = new RE("#FULLCLASSNAME");
-    methodnameRE = new RE("#METHODNAME");
-    innerobjectRE = new RE("#INNEROBJECT");
-    returnTypeRE = new RE("#RETTYPE");
-    invokeMethodRE = new RE("#RUN");
-    listparamsRE = new RE("#LISTPARAMS");
-    modifyParamsRE = new RE("(\\w+)\\(#MODIFYPARAMS\\);");
-    throwRE = new RE("#THROW (\\w+);");
-    beginLineRE = new RE("^(.)",RE.REG_MULTILINE,RESyntax.RE_SYNTAX_PERL5_S);
-    returnValueRE = new RE("#RETVAL");
-    wrappedRetvalRE = new RE("#WRAPPED_RETVAL");
-    publicRE = new RE("public ");
-    nullRE = new RE("#NULLVAL");
+  static void initializeRE() throws MalformedPatternException {
+    Perl5Compiler comp = RegexpUtil.getCompiler();
+    classnameRE = comp.compile("#CLASSNAME");
+    fullclassnameRE = comp.compile("#FULLCLASSNAME");
+    methodnameRE = comp.compile("#METHODNAME");
+    innerobjectRE = comp.compile("#INNEROBJECT");
+    returnTypeRE = comp.compile("#RETTYPE");
+    invokeMethodRE = comp.compile("#RUN");
+    listparamsRE = comp.compile("#LISTPARAMS");
+    modifyParamsRE = comp.compile("(\\w+)\\(#MODIFYPARAMS\\);");
+    throwRE = comp.compile("#THROW (\\w+);");
+    beginLineRE = comp.compile("(^)", Perl5Compiler.MULTILINE_MASK);
+    returnValueRE = comp.compile("#RETVAL");
+    wrappedRetvalRE = comp.compile("#WRAPPED_RETVAL");
+    publicRE = comp.compile("public ");
+    nullRE = comp.compile("#NULLVAL");
+  }
+
+  String substituteAll(Pattern pat, String inString, String withString) {
+    Substitution subst = new Perl5Substitution(withString);
+    return Util.substitute(RegexpUtil.getMatcher(), pat, subst, inString,
+			   Util.SUBSTITUTE_ALL);
   }
 
   /** Record the values of the command line options */
@@ -657,7 +666,7 @@ public class WrapperGenerator extends Doclet {
   void writeVoidBody(SourceMethod method, Writer wr)
   throws IOException {
     String output = substituteRE_method(voidTemplate, method);
-    output = returnTypeRE.substituteAll(output, method.returnType);
+    output = substituteAll(returnTypeRE, output, method.returnType);
     writeDecl(method, wr);
     writeModifiedMethodBody(output, method, wr);
   }
@@ -665,12 +674,12 @@ public class WrapperGenerator extends Doclet {
   void writeNonvoidBody(SourceMethod method, Writer wr)
   throws IOException {
     String output = substituteRE_method(nonvoidTemplate,method);
-    output = returnTypeRE.substituteAll(output, method.returnType);
-    output = returnValueRE.substituteAll(output, returnValue);
+    output = substituteAll(returnTypeRE, output, method.returnType);
+    output = substituteAll(returnValueRE, output, returnValue);
     String substName = (method.returnsWrapped) ? wrappedVariableName :
         returnValue;
-    output = wrappedRetvalRE.substituteAll(output, substName);
-    output = nullRE.substituteAll(output, method.nullText());
+    output = substituteAll(wrappedRetvalRE, output, substName);
+    output = substituteAll(nullRE, output, method.nullText());
     writeDecl(method, wr);
     writeLocalDecl(method.returnType + method.returnDimension, returnValue, wr);
     if (method.returnsWrapped) {
@@ -689,27 +698,27 @@ public class WrapperGenerator extends Doclet {
   }
 
   String substituteRE_common(String output) {
-    output = classnameRE.substituteAll(output, classname);
-    output = fullclassnameRE.substituteAll(output,fullclassname);
-    output = innerobjectRE.substituteAll(output, innerObjectName);
+    output = substituteAll(classnameRE, output, classname);
+    output = substituteAll(fullclassnameRE, output,fullclassname);
+    output = substituteAll(innerobjectRE, output, innerObjectName);
     return output;
   }
 
   /** Makes macro substitutions using the GNU RE objects */
   String substituteRE_general(String output) {
-    output = beginLineRE.substituteAll(output, "  $1");
+    output = substituteAll(beginLineRE, output, "  $1");
     output = substituteRE_common(output);
     return output;
   }
 
   /** Makes macro substitutions using the GNU RE objects, local to a method */
   String substituteRE_method(String output, SourceExecMember method) {
-    output = beginLineRE.substituteAll(output, "    $1");
+    output = substituteAll(beginLineRE, output, "    $1");
     output = substituteRE_common(output);
-    output = methodnameRE.substituteAll(output, method.methodname);
-    output = invokeMethodRE.substituteAll(output, method.runText());
-    output = listparamsRE.substituteAll(output, method.paramsAsString());
-    output = throwRE.substituteAll(output, method.throwText());
+    output = substituteAll(methodnameRE, output, method.methodname);
+    output = substituteAll(invokeMethodRE, output, method.runText());
+    output = substituteAll(listparamsRE, output, method.paramsAsString());
+    output = substituteAll(throwRE, output, method.throwText());
     return output;
   }
 
@@ -762,7 +771,7 @@ public class WrapperGenerator extends Doclet {
       }
       substr = buf.toString();
     }
-    wr.write(modifyParamsRE.substituteAll(output,substr));
+    wr.write(substituteAll(modifyParamsRE, output,substr));
     wr.write("\n  }");
   }
 
@@ -778,7 +787,7 @@ public class WrapperGenerator extends Doclet {
 
   void writeSpecialMethod(SourceMethod method,Writer wr) throws IOException {
     wr.write("\n\n  ");
-    String nopublic = publicRE.substituteAll(method.modifiers,"");
+    String nopublic = substituteAll(publicRE, method.modifiers,"");
     wr.write(nopublic);
     String origname = method.methodname;
     method.methodname = prefix + '_' + method.methodname;

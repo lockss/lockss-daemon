@@ -1,5 +1,5 @@
 /*
- * $Id: TestWrappedArchivalUnit.java,v 1.5 2004-09-29 18:58:19 tlipkis Exp $
+ * $Id: TestWrappedArchivalUnit.java,v 1.6 2004-12-09 08:21:44 tlipkis Exp $
  */
 
 /*
@@ -37,7 +37,6 @@ package org.lockss.plugin.wrapper;
 import java.io.File;
 import java.net.*;
 import java.util.*;
-import gnu.regexp.*;
 
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;

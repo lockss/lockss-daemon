@@ -1,5 +1,5 @@
 /*
- * $Id: TestProxyInfo.java,v 1.8 2004-11-16 22:08:48 tlipkis Exp $
+ * $Id: TestProxyInfo.java,v 1.9 2004-12-09 08:21:44 tlipkis Exp $
  */
 
 /*
@@ -40,8 +40,7 @@ import org.lockss.util.*;
 import org.lockss.protocol.*;
 import org.lockss.plugin.*;
 import org.lockss.test.*;
-import gnu.regexp.RE;
-import gnu.regexp.REException;
+import org.apache.oro.text.regex.*;
 
 /**
  * Test class for ProxyInfo.
@@ -95,14 +94,13 @@ public class TestProxyInfo extends LockssTestCase {
   }
 
   public void testGeneratePacEntry() throws Exception {
-    RE re = new RE(ifsRE);
     StringBuffer sb = new StringBuffer();
     for (Iterator iter = urlStems.iterator(); iter.hasNext(); ) {
       String urlStem = (String)iter.next();
       pi.generatePacEntry(sb, urlStem);
     }
-    assertTrue("Fragments didn't match RE:\n" + sb.toString(),
-	       re.isMatch(sb.toString()));
+    assertMatchesRE("Fragments didn't match RE:\n" + sb.toString(),
+		    ifsRE, sb.toString());
   }
 
   public void testGeneratePacFile() throws Exception {
@@ -110,10 +108,9 @@ public class TestProxyInfo extends LockssTestCase {
       "// PAC file generated .* by LOCKSS cache .*\\n\\n" +
       "function FindProxyForURL\\(url, host\\) {\\n";
     String tailRE = " return \\\"DIRECT\\\";\\n}\\n";
-    RE re = new RE(headRE + ifsRE + tailRE);
     String pf = pi.generatePacFile(makeUrlStemMap());
-    assertTrue("PAC file didn't match RE.  File contents:\n" + pf,
-	       re.isMatch(pf));
+    assertMatchesRE("PAC file didn't match RE.  File contents:\n" + pf,
+		    headRE + ifsRE + tailRE, pf);
   }
 
   public void testGenerateEncapsulatedPacFile() throws Exception {
@@ -129,11 +126,11 @@ public class TestProxyInfo extends LockssTestCase {
       "function FindProxyForURL\\(url, host\\) {\\n";
     String tailRE = " return FindProxyForURL_0\\(url, host\\);\\n}\\n" +
       "// Encapsulated PAC file follows \\(msg\\)\\n\\n";
-    RE re = new RE(headRE + ifsRE + tailRE +
-		   StringUtil.escapeNonAlphaNum(encapsulated));
+    String pat = headRE + ifsRE + tailRE +
+      StringUtil.escapeNonAlphaNum(encapsulated);
     String pf = pi.encapsulatePacFile(makeUrlStemMap(), oldfile, " (msg)");
-    assertTrue("PAC file didn't match RE.  File contents:\n" + pf,
-	       re.isMatch(pf));
+    assertMatchesRE("PAC file didn't match RE.  File contents:\n" + pf,
+		    pat, pf);
   }
 
   String entry = "Title foo\n" +

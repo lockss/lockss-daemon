@@ -1,5 +1,5 @@
 /*
- * $Id: TestPrintStreamTarget.java,v 1.3 2003-09-16 23:33:54 eaalto Exp $
+ * $Id: TestPrintStreamTarget.java,v 1.4 2004-12-09 08:21:44 tlipkis Exp $
  */
 
 /*
@@ -33,16 +33,14 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 
 import java.io.*;
-import gnu.regexp.RE;
-import gnu.regexp.REException;
-import junit.framework.TestCase;
+import org.lockss.test.*;
 
-public class TestPrintStreamTarget extends TestCase{
+public class TestPrintStreamTarget extends LockssTestCase {
   public static Class testedClasses[] = {
     org.lockss.util.PrintStreamTarget.class
   };
 
-  public void testOutputStringFormat() throws REException {
+  public void testOutputStringFormat() {
     ByteArrayOutputStream baos = new ByteArrayOutputStream();
     PrintStream ps = new PrintStream(baos);
     PrintStreamTarget target = new PrintStreamTarget(ps);
@@ -56,18 +54,14 @@ public class TestPrintStreamTarget extends TestCase{
 			   errorMessage);
     }
 
-//      RE regExp =
-//        new RE("\\d(\\d)?:\\d\\d:\\d\\d (A|P)M: Error: "+errorMessage+"\n");
-//     RE regExp =
-//       new RE("\\d(\\d)?:\\d\\d:\\d\\d\\.\\d\\d\\d: Error: "+errorMessage+"\n");
     // Should have one Timestamp: message followed by two copies of the message
     String timestampRE = "\\d(\\d)?:\\d\\d:\\d\\d\\.\\d\\d\\d: ";
     String line1 = timestampRE + "Timestamp: .*"+Constants.EOL_RE;
     String line2 = timestampRE + "Error: "+errorMessage+Constants.EOL_RE;
-    RE regExp = new RE(line1 + line2 + line2);
+    String re = line1 + line2 + line2;
     String debugString = baos.toString();
     assertTrue("Debug string: \""+debugString+"\" not of correct format."+
 	       " Should be <time>: <error-level>: <error message>",
-	       regExp.isMatch(debugString));
+	       isMatchRe(debugString, re));
   }
 }
