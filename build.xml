@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.18 2002-11-06 04:52:20 tal Exp $
+ $Id: build.xml,v 1.19 2002-11-07 00:06:48 tal Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
@@ -424,7 +424,6 @@ Test results in ${test.results}
    depends="prepare.test,check.junit,jar-ant,jar-tests"
    description="Run all tests for a single class, named by the 'class' property" >
     <property name="loglevel" value="" />
-    <echo>showoutput=${showoutput} </echo>
     <echo>
 Running tests for class ${class}
 Test results in ${test.results}
@@ -457,7 +456,6 @@ Test results in ${test.results}
    depends="prepare.test,check.junit,jar-tests"
    description="Run a single test class, named by the 'class' property" >
     <property name="loglevel" value="" />
-    <echo>showoutput=${showoutput} </echo>
     <junit fork="no" printsummary="yes" haltonerror="yes" haltonfailure="yes"
          showoutput="${showoutput}">
       <test fork="no" name="${class}" />
