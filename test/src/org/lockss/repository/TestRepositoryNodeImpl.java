@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.8 2002-12-17 01:57:50 aalto Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.9 2003-01-14 02:22:28 aalto Exp $
  */
 
 /*
@@ -129,7 +129,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
 
     RepositoryNode dirEntry =
         repo.getNode("http://www.example.com/testDir");
-    Iterator childIt = dirEntry.listNodes(null);
+    Iterator childIt = dirEntry.listNodes(null, false);
     ArrayList childL = new ArrayList(3);
     while (childIt.hasNext()) {
       RepositoryNode node = (RepositoryNode)childIt.next();
@@ -144,7 +144,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
 
     dirEntry = repo.getNode("http://www.example.com/testDir/branch1");
     childL.clear();
-    childIt = dirEntry.listNodes(null);
+    childIt = dirEntry.listNodes(null, false);
     while (childIt.hasNext()) {
       RepositoryNode node = (RepositoryNode)childIt.next();
       childL.add(node.getNodeUrl());
@@ -164,7 +164,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
 
     RepositoryNode dirEntry =
         repo.getNode("http://www.example.com/testDir");
-    Iterator childIt = dirEntry.listNodes(null);
+    Iterator childIt = dirEntry.listNodes(null, false);
     ArrayList childL = new ArrayList(4);
     while (childIt.hasNext()) {
       RepositoryNode node = (RepositoryNode)childIt.next();

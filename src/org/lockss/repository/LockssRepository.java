@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepository.java,v 1.6 2002-11-27 20:34:18 aalto Exp $
+ * $Id: LockssRepository.java,v 1.7 2003-01-14 02:22:28 aalto Exp $
  */
 
 /*
@@ -56,6 +56,19 @@ public interface LockssRepository {
    * @throws java.net.MalformedURLException
    */
   public RepositoryNode createNewNode(String url) throws MalformedURLException;
+
+  /**
+   * Delete the node.
+   * @param url the url to be deleted
+   * @throws MalformedURLException
+   */
+  public void deleteNode(String url) throws MalformedURLException;
+
+  /**
+   * Traverses the node hierarchy and tests internal state consistency for each
+   * node.  Corrects and logs any correctable errors it encounters.
+   */
+//  public void nodeConsistencyCheck();
 
   /**
    * Thrown when an unexpected error is encountered while caching.

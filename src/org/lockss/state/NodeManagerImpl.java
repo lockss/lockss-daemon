@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.4 2003-01-10 23:02:25 claire Exp $
+ * $Id: NodeManagerImpl.java,v 1.5 2003-01-14 02:22:28 aalto Exp $
  */
 
 /*
@@ -43,6 +43,14 @@ import org.lockss.poller.PollManager;
 import org.lockss.protocol.LcapMessage;
 import java.net.InetAddress;
 import java.io.IOException;
+import org.lockss.poller.Vote;
+import org.lockss.protocol.IdentityManager;
+import org.lockss.daemon.UrlCacher;
+import org.lockss.util.ListUtil;
+import org.lockss.util.SetUtil;
+import gnu.regexp.*;
+import org.lockss.repository.LockssRepositoryImpl;
+import org.lockss.repository.LockssRepository;
 
 /**
  */
@@ -233,7 +241,8 @@ public class NodeManagerImpl implements NodeManager {
     }
   }
 
-  private void handleContentPoll(PollState pollState, Poll.VoteTally results, NodeState nodeState) {
+  private void handleContentPoll(PollState pollState, Poll.VoteTally results,
+                                 NodeState nodeState) {
     if (results.didWinPoll()) {
       // if agree
       if (pollState.getStatus() == PollState.RUNNING) {
@@ -243,30 +252,41 @@ public class NodeManagerImpl implements NodeManager {
         // if repair poll, we're repaired
         pollState.status = PollState.REPAIRED;
       }
-      //XXX update reputation
+      updateReputations(results);
     } else {
       // if disagree
       if (pollState.getStatus() == PollState.REPAIRING) {
         // if repair poll, can't be repaired
         pollState.status = PollState.UNREPAIRABLE;
-        //XXX update reputation
+        updateReputations(results);
       } else if (isInternalNode(nodeState)) {
         // if internal node, we need to call a name poll
         pollState.status = PollState.LOST;
-        //XXX call name poll
-        long duration = 0; //XXX calculate
-//        PollManager.getPollManager().makePollRequest(results, duration, LcapMessage.NAME_POLL_REQ);
+        long duration = calculateDuration(nodeState.getCachedUrlSet(), false);
+        try {
+          PollManager.getPollManager().makePollRequest(results.url,
+              results.regExp, LcapMessage.NAME_POLL_REQ, duration);
+        } catch (IOException ioe) {
+          logger.error("Couldn't make name poll request.", ioe);
+          //XXX throw something
+        }
       } else {
         // if leaf node, we need to repair
         pollState.status = PollState.REPAIRING;
-        repairNode(nodeState);
-        Deadline deadline = null; //XXX determine
-        results.replayAllVotes(deadline);
+        try {
+          repairNode(nodeState.getCachedUrlSet());
+          Deadline deadline = Deadline.in(results.duration * 2);
+          results.replayAllVotes(deadline);
+        } catch (IOException ioe) {
+          logger.error("Repair attempt failed.", ioe);
+          //XXX schedule something?
+        }
       }
     }
   }
 
-  private void handleNamePoll(PollState pollState, Poll.VoteTally results, NodeState nodeState) {
+  private void handleNamePoll(PollState pollState, Poll.VoteTally results,
+                              NodeState nodeState) {
     if (results.didWinPoll()) {
       // if agree
       if (results.isMyPoll()) {
@@ -284,19 +304,40 @@ public class NodeManagerImpl implements NodeManager {
       }
     } else {
       // if disagree
-      if (results.isMyPoll()) {
-        // if poll is mine
-        pollState.status = PollState.REPAIRING;
-        //XXX iterate through master list
-        // compare against my list
-        // if you're missing item - create and repair
-        // if extra item - deletion
-        pollState.status = PollState.REPAIRED;
-      } else {
-        // poll is not mine ????
-        //XXX do something?
-        pollState.status = PollState.LOST;
+      pollState.status = PollState.REPAIRING;
+      // iterate through master list
+      Iterator masterIt = null; //XXX receive from name poll
+      // compare against my list
+      Iterator localIt = nodeState.getCachedUrlSet().flatSetIterator();
+      Set localSet = createUrlSetFromCusIterator(localIt);
+      ArchivalUnit au = nodeState.getCachedUrlSet().getArchivalUnit();
+      while (masterIt.hasNext()) {
+        String url = (String)masterIt.next();
+        if (localSet.contains(url)) {
+          // removing from the set to leave only files for deletion
+          localSet.remove(url);
+        } else {
+          // if not found locally, fetch
+          try {
+            repairNode(au.makeCachedUrlSet(url, null));
+          } catch (Exception e) {
+            logger.error("Couldn't fetch new node.", e);
+            //XXX schedule something
+          }
+        }
       }
+      localIt = localSet.iterator();
+      while (localIt.hasNext()) {
+        // for extra items - deletion
+        String url = (String)localIt.next();
+        try {
+          deleteNode(au.makeCachedUrlSet(url, null));
+        } catch (Exception e) {
+          logger.error("Couldn't delete node.", e);
+          //XXX schedule something
+        }
+      }
+      pollState.status = PollState.REPAIRED;
     }
   }
 
@@ -331,9 +372,18 @@ public class NodeManagerImpl implements NodeManager {
     return PollState.ERR_UNDEFINED;
   }
 
-  private void repairNode(NodeState state) {
-    //XXX move old version
-    // fetch new version
+  private void repairNode(CachedUrlSet cus) throws IOException {
+    // fetch new version; automatically backs up old version
+    String url = (String)cus.getSpec().getPrefixList().get(0);
+    cus.makeUrlCacher(url).cache();
+  }
+
+  private void deleteNode(CachedUrlSet cus) throws IOException {
+    // delete the node from the LockssRepository
+    String url = (String)cus.getSpec().getPrefixList().get(0);
+    //XXX change to get from RunDaemon
+    LockssRepository repository = LockssRepositoryImpl.repositoryFactory(cus.getArchivalUnit());
+    repository.deleteNode(url);
   }
 
   private void callContentPollOnSubNodes(NodeState state,
@@ -342,9 +392,36 @@ public class NodeManagerImpl implements NodeManager {
     while (children.hasNext()) {
       CachedUrlSet child = (CachedUrlSet)children.next();
       String url = (String)child.getSpec().getPrefixList().get(0);
-      long duration = 0; //XXX calculate
+      long duration = calculateDuration(child, true);
       PollManager.getPollManager().makePollRequest(url, null,
           LcapMessage.CONTENT_POLL_REQ, duration);
     }
+  }
+
+  private long calculateDuration(CachedUrlSet cus, boolean isContentPoll) {
+    //XXX implement!
+    return 100000;
+  }
+
+  private void updateReputations(Poll.VoteTally results) {
+    IdentityManager idManager = IdentityManager.getIdentityManager();
+    Iterator voteIt = results.pollVotes.iterator();
+    while (voteIt.hasNext()) {
+      Vote vote = (Vote)voteIt.next();
+      int repChange = IdentityManager.AGREE_VOTE;
+      if (!vote.isAgreeVote()) {
+        repChange = IdentityManager.DISAGREE_VOTE;
+      }
+      idManager.changeReputation(vote.getIdentity(), repChange);
+    }
+  }
+
+  private Set createUrlSetFromCusIterator(Iterator cusIt) {
+    Set set = new HashSet();
+    while (cusIt.hasNext()) {
+      CachedUrlSet cus = (CachedUrlSet)cusIt.next();
+      set.add(cus.getSpec().getPrefixList().get(0));
+    }
+    return set;
   }
 }

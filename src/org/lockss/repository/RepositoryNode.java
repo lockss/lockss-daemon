@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNode.java,v 1.6 2002-12-17 01:57:50 aalto Exp $
+ * $Id: RepositoryNode.java,v 1.7 2003-01-14 02:22:28 aalto Exp $
  */
 
 /*
@@ -48,10 +48,17 @@ public interface RepositoryNode {
   public String getNodeUrl();
 
   /**
-   * Determines if the node has stored content.
+   * Determines if the node has current stored content.
    * @return true if the node has content
    */
   public boolean hasContent();
+
+  /**
+   * Determines if the node is currently inactive.  Inactive nodes often
+   * have old content but no current content, so hasContent() will return false.
+   * @return true if the node is inactive
+   */
+  public boolean isInactive();
 
   /**
    * Returns the size of the current version of stored cache.  Throws an
@@ -75,11 +82,13 @@ public interface RepositoryNode {
 
   /**
    * Returns the immediate children of the entry, possibly filtered (null
-   * indicates no filtering).  Includes leaf and internal nodes.
+   * indicates no filtering).  Includes leaf and internal nodes, but not
+   * inactive nodes unless 'includeInactive' is true.
    * @param filter a spec to determine which urls to return
+   * @param includeInactive true to include inactive nodes
    * @return an <code>Iterator</code> of RepositoryNode objects
    */
-  public Iterator listNodes(CachedUrlSetSpec filter);
+  public Iterator listNodes(CachedUrlSetSpec filter, boolean includeInactive);
 
   /**
    * Prepares the node to write to a new version.  Should be called before storing
@@ -105,19 +114,36 @@ public interface RepositoryNode {
   public void abandonNewVersion();
 
   /**
+   * Deactivates the node.  Throws if called while a version is open.  To
+   * reactivate, call <code>restoreLastVersion()</code> or make a new version.
+   * @throws UnsupportedOperationException
+   */
+  public void deactivate();
+
+  /**
    * Returns the current version.  This is the open version when writing,
-   * and the one accessed by <code>getNodeInfo()</code>.  Throws an exception
-   * if called on a content-less node.
+   * and the one accessed by <code>getNodeInfo()</code>.  If inactive,
+   * returns -1. Throws an exception if called on a content-less node.
    * @return the current version
    * @throws UnsupportedOperationException
    */
   public int getCurrentVersion();
 
   /**
+   * Reverts to the last version.  Throws if called on a node without content
+   * or only one version (and active).  Can be used to reactivate inactive nodes.
+   * @throws UnsupportedOperationException
+   */
+  public void restoreLastVersion();
+
+
+  /**
    * Return a <code>RepositoryNodeContents</code> object which accesses the
-   * content in the cache and its properties.
+   * content in the cache and its properties.  Throws if called on a content-less
+   * or inactive node.
    * @return an {@link RepositoryNodeContents} object from which the contents of
    *         the cache can be read.
+   * @throws UnsupportedOperationException
    */
   public RepositoryNodeContents getNodeContents();
 

@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.10 2002-12-17 01:57:50 aalto Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.11 2003-01-14 02:22:28 aalto Exp $
  */
 
 /*
@@ -50,6 +50,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
   static final String CURRENT_SUFFIX = ".current";
   static final String PROPS_SUFFIX = ".props";
   static final String TEMP_SUFFIX = ".temp";
+  static final String INACTIVE_SUFFIX = ".inactive";
+  static final int INACTIVE_VERSION = -99;
 
   private boolean newVersionOpen = false;
   private boolean newOutputCalled = false;
@@ -96,6 +98,11 @@ public class RepositoryNodeImpl implements RepositoryNode {
     return currentVersion>0;
   }
 
+  public boolean isInactive() {
+    ensureCurrentInfoLoaded();
+    return currentVersion==INACTIVE_VERSION;
+  }
+
   public long getContentSize() {
     if (!hasContent()) {
       logger.error("Cannot get size if no content: "+url);
@@ -113,7 +120,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
     //XXX implement
   }
 
-  public Iterator listNodes(CachedUrlSetSpec filter) {
+  public Iterator listNodes(CachedUrlSetSpec filter, boolean includeInactive) {
     if (nodeRootFile==null) loadNodeRoot();
     if (!nodeRootFile.exists()) {
       logger.error("No cache directory located for: "+url);
@@ -139,7 +146,10 @@ public class RepositoryNodeImpl implements RepositoryNode {
       String childUrl = buffer.toString();
       if ((filter==null) || (filter.matches(childUrl))) {
         try {
-          childL.add(repository.getNode(childUrl));
+          RepositoryNode node = repository.getNode(childUrl);
+          if ((!node.isInactive()) || includeInactive) {
+            childL.add(repository.getNode(childUrl));
+          }
         } catch (MalformedURLException mue) {
           // this can safely skip bad files because they will
           // eventually be trimmed by the repository integrity checker
@@ -180,6 +190,20 @@ public class RepositoryNodeImpl implements RepositoryNode {
         }
       }
     }
+
+    if (isInactive()) {
+      int lastVersion = determineLastActiveVersion();
+      File inactiveCacheFile = getInactiveCacheFile();
+      File inactivePropsFile = getInactivePropsFile();
+
+      if (!inactiveCacheFile.renameTo(currentCacheFile) ||
+          !inactivePropsFile.renameTo(currentPropsFile)) {
+        logger.error("Couldn't rename inactive versions: "+url);
+        throw new LockssRepository.RepositoryStateException("Couldn't rename inactive versions.");
+      }
+      currentVersion = lastVersion;
+    }
+
     newVersionOpen = true;
     versionTimeout = Deadline.in(VERSION_TIMEOUT);
   }
@@ -238,6 +262,56 @@ public class RepositoryNodeImpl implements RepositoryNode {
     }
   }
 
+  public synchronized void deactivate() {
+    if (newVersionOpen) {
+      throw new UnsupportedOperationException("Can't deactivate while new version open.");
+    }
+    ensureCurrentInfoLoaded();
+    if (!currentCacheFile.renameTo(getInactiveCacheFile()) ||
+        !currentPropsFile.renameTo(getInactivePropsFile())) {
+      logger.error("Couldn't deactivate: "+url);
+      throw new LockssRepository.RepositoryStateException("Couldn't deactivate.");
+    }
+    currentVersion = INACTIVE_VERSION;
+    curProps = null;
+  }
+
+  public synchronized void restoreLastVersion() {
+    if (isInactive()) {
+      int lastVersion = determineLastActiveVersion();
+      File inactiveCacheFile = getInactiveCacheFile();
+      File inactivePropsFile = getInactivePropsFile();
+
+      if (!inactiveCacheFile.renameTo(currentCacheFile) ||
+          !inactivePropsFile.renameTo(currentPropsFile)) {
+        logger.error("Couldn't rename inactive versions: "+url);
+        throw new LockssRepository.RepositoryStateException("Couldn't rename inactive versions.");
+      }
+      currentVersion = lastVersion;
+      return;
+    }
+    if ((!hasContent()) || (getCurrentVersion() == 1)) {
+      logger.error("Version restore attempted on node without previous versions.");
+      throw new UnsupportedOperationException("Node must have previous versions.");
+    }
+    int lastVersion = getCurrentVersion() - 1;
+    File lastContentFile = getVersionedCacheFile(lastVersion);
+    File lastPropsFile = getVersionedPropertiesFile(lastVersion);
+
+    // delete current version
+    currentCacheFile.delete();
+    currentPropsFile.delete();
+
+    // rename old version to current
+    if (!lastContentFile.renameTo(currentCacheFile) ||
+        !lastPropsFile.renameTo(currentPropsFile)) {
+      logger.error("Couldn't rename old versions: "+url);
+      throw new LockssRepository.RepositoryStateException("Couldn't rename old versions.");
+    }
+
+    currentVersion--;
+    curProps = null;
+  }
 
   public synchronized RepositoryNodeContents getNodeContents() {
     if (!hasContent()) {
@@ -315,6 +389,12 @@ public class RepositoryNodeImpl implements RepositoryNode {
       curProps = null;
       return;
     }
+    if ((!currentCacheFile.exists()) && (getInactiveCacheFile().exists())) {
+      currentVersion = INACTIVE_VERSION;
+      curInputFile = null;
+      curProps = null;
+      return;
+    }
     if ((curInputFile==null) || (curProps==null)) {
       synchronized (this) {
         if (curInputFile==null) {
@@ -340,6 +420,27 @@ public class RepositoryNodeImpl implements RepositoryNode {
                        curProps.getProperty(LOCKSS_VERSION_NUMBER, "-1"));
       }
     }
+  }
+
+  private int determineLastActiveVersion() {
+    File inactivePropFile = getInactivePropsFile();
+    if (inactivePropFile.exists()) {
+      Properties oldProps = new Properties();
+      try {
+        InputStream is = new BufferedInputStream(new FileInputStream(inactivePropFile));
+        oldProps.load(is);
+        is.close();
+      } catch (Exception e) {
+        logger.error("Error loading last active version from "+
+                      inactivePropFile.getPath()+".");
+        throw new LockssRepository.RepositoryStateException("Couldn't load version from properties file.");
+      }
+      if (oldProps!=null) {
+         return Integer.parseInt(oldProps.getProperty(LOCKSS_VERSION_NUMBER,
+             "-1"));
+       }
+    }
+    return -1;
   }
 
   private void loadCurrentCacheFile() {
@@ -394,6 +495,21 @@ public class RepositoryNodeImpl implements RepositoryNode {
     buffer.append(PROPS_SUFFIX);
     buffer.append(".");
     buffer.append(version);
+    return new File(buffer.toString());
+  }
+
+  private File getInactiveCacheFile() {
+    StringBuffer buffer = getContentDirBuffer();
+    buffer.append(versionName);
+    buffer.append(INACTIVE_SUFFIX);
+    return new File(buffer.toString());
+  }
+
+  private File getInactivePropsFile() {
+    StringBuffer buffer = getContentDirBuffer();
+    buffer.append(versionName);
+    buffer.append(PROPS_SUFFIX);
+    buffer.append(INACTIVE_SUFFIX);
     return new File(buffer.toString());
   }
 

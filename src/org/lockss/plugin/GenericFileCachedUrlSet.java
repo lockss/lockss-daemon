@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrlSet.java,v 1.13 2002-12-19 01:28:40 aalto Exp $
+ * $Id: GenericFileCachedUrlSet.java,v 1.14 2003-01-14 02:22:28 aalto Exp $
  */
 
 /*
@@ -77,7 +77,7 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
       String prefix = (String)nodes.get(0);
       try {
         RepositoryNode intNode = repository.getNode(prefix);
-        Iterator children = intNode.listNodes(spec);
+        Iterator children = intNode.listNodes(spec, false);
         while (children.hasNext()) {
           RepositoryNode child = (RepositoryNode)children.next();
           CachedUrlSetSpec rSpec =
@@ -109,7 +109,7 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
       String prefix = (String)nodes.get(0);
       try {
         RepositoryNode intNode = repository.getNode(prefix);
-        Iterator children = intNode.listNodes(spec);
+        Iterator children = intNode.listNodes(spec, false);
         while (children.hasNext()) {
           RepositoryNode child = (RepositoryNode)children.next();
           if (child.hasContent()) {
@@ -133,7 +133,7 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
   }
 
   private void recurseLeafFetch(RepositoryNode node, TreeSet set) {
-    Iterator children = node.listNodes(null);
+    Iterator children = node.listNodes(null, false);
     while (children.hasNext()) {
       RepositoryNode child = (RepositoryNode)children.next();
       if (child.hasContent()) {
