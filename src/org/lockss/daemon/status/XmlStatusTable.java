@@ -1,5 +1,5 @@
 /*
- * $Id: XmlStatusTable.java,v 1.1 2004-02-20 05:28:17 eaalto Exp $
+ * $Id: XmlStatusTable.java,v 1.2 2004-02-20 19:33:47 eaalto Exp $
  */
 
 /*
@@ -46,11 +46,10 @@ public class XmlStatusTable {
   /**
    * The SimpleDateFormat pattern for Date entries.
    */
-  public static final String DATE_FORMAT = "yyyy.MM.dd GGG HH:mm";
+  public static final String DATE_FORMAT = "MM/dd/yy HH:mm:ss";
 
-//XXX fix values
-  XmlDomBuilder xmlBuilder = new XmlDomBuilder("sa",
-      "http://lockss.stanford.edu/statusui", "1.0");
+  XmlDomBuilder xmlBuilder = new XmlDomBuilder("st",
+      "http://lockss.org/statusui", "1.0");
 
   StatusTable statusTable = null;
   Document tableDocument = null;
