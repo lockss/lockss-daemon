@@ -1,5 +1,5 @@
 /*
- * $Id: JettyManager.java,v 1.9 2004-06-15 21:44:19 tlipkis Exp $
+ * $Id: JettyManager.java,v 1.9.4.1 2004-07-26 23:35:56 tlipkis Exp $
  */
 
 /*
@@ -112,6 +112,7 @@ public abstract class JettyManager extends BaseLockssManager {
     } else {
       if (runningOnPort > 0) {
 	portsInUse.remove(new Integer(runningOnPort));
+	runningOnPort = -1;
       }
     }
   }
