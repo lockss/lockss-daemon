@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.35 2004-09-14 23:37:20 smorabito Exp $
+ * $Id: ConfigManager.java,v 1.36 2004-09-25 00:49:11 smorabito Exp $
  */
 
 /*
@@ -186,6 +186,9 @@ public class ConfigManager implements LockssManager {
     // only, on first use.
     configChangedCallbacks = new ArrayList();
     configUrlList = null;
+    cacheConfigInited = false;
+    cacheConfigDir = null;
+    configCache = new ConfigCache();
     stopHandler();
     haveConfig = new OneShotSemaphore();
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.106 2004-09-21 18:36:02 smorabito Exp $
+ * $Id: PluginManager.java,v 1.107 2004-09-25 00:49:10 smorabito Exp $
  */
 
 /*
@@ -629,7 +629,7 @@ public class PluginManager
 						   Properties auProps)
       throws ArchivalUnit.ConfigurationException, IOException {
     return createAndSaveAuConfiguration(plugin,
-					ConfigManager.fromProperties(auProps));
+					ConfigManager.fromPropertiesUnsealed(auProps));
   }
 
   /**
@@ -1303,6 +1303,11 @@ public class PluginManager
 
   private boolean isKeystoreInited() {
     return keystoreInited;
+  }
+
+  // used by unit tests.
+  public void setKeystoreInited(boolean val) {
+    this.keystoreInited = val;
   }
 
   /**

@@ -1,5 +1,5 @@
 /*
- * $Id: TestJarValidator.java,v 1.4 2004-09-08 01:25:46 smorabito Exp $
+ * $Id: TestJarValidator.java,v 1.5 2004-09-25 00:49:10 smorabito Exp $
  */
 
 /*
@@ -72,6 +72,18 @@ public class TestJarValidator extends LockssTestCase {
 
   public void setUp() throws Exception {
     pubKeystore = getKeystoreResource(pubKeystoreName, password);
+  }
+
+  public void testNoPluginDir() throws Exception {
+    MockCachedUrl goodCu =
+      new MockCachedUrl("http://foo.com/good.jar", goodJar, true);
+    JarValidator validator = new JarValidator(pubKeystore, null);
+    try {
+      File f = validator.getBlessedJar(goodCu);
+      fail("Should have thrown JarValidationException.");
+    } catch (JarValidator.JarValidationException ignore) {
+      ;
+    }
   }
 
   public void testNullKeystore() throws Exception {

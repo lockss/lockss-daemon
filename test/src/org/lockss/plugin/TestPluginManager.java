@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.50 2004-09-21 21:24:59 dshr Exp $
+ * $Id: TestPluginManager.java,v 1.51 2004-09-25 00:49:10 smorabito Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.app.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.definable.*;
 import org.lockss.poller.*;
+import org.lockss.repository.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
 import org.lockss.repository.*;
@@ -74,11 +75,12 @@ public class TestPluginManager extends LockssTestCase {
   static String p1a1param = p1param + mauauidKey1 + ".";
   static String p1a2param = p1param + mauauidKey2 + ".";
 
-  private String pluginDir;
   private String pluginJar;
   private String signAlias = "goodguy";
   private String pubKeystore = "org/lockss/test/public.keystore";
   private String password = "f00bar";
+
+  private String tempDirPath;
 
   PluginManager mgr;
 
@@ -89,17 +91,16 @@ public class TestPluginManager extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
 
+    tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     theDaemon = new MyMockLockssDaemon();
-
     mgr = new MyMockPluginManager();
     theDaemon.setPluginManager(mgr);
     theDaemon.setDaemonInited(true);
 
     // Prepare the loadable plugin directory property, which is
     // created by mgr.startService()
-    pluginDir = getTempDir().getAbsolutePath() + File.separator;
     Properties p = new Properties();
-    p.setProperty(PluginManager.PARAM_PLATFORM_DISK_SPACE_LIST, pluginDir);
+    p.setProperty(PluginManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
     p.setProperty(PluginManager.PARAM_PLUGIN_LOCATION, "plugins");
     ConfigurationUtil.setCurrentConfigFromProps(p);
 
@@ -115,7 +116,7 @@ public class TestPluginManager extends LockssTestCase {
   }
 
   private void doConfig() throws Exception {
-    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    // String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     Properties p = new Properties();
     p.setProperty(p1a1param+MockPlugin.CONFIG_PROP_1, "val1");
     p.setProperty(p1a1param+MockPlugin.CONFIG_PROP_2, "val2");
@@ -127,7 +128,7 @@ public class TestPluginManager extends LockssTestCase {
   }
 
   private void minimalConfig() throws Exception {
-    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    // String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     ConfigurationUtil.setFromArgs(LockssRepositoryImpl.PARAM_CACHE_LOCATION,
 				  tempDirPath,
 				  HistoryRepositoryImpl.PARAM_HISTORY_LOCATION,
@@ -363,6 +364,73 @@ public class TestPluginManager extends LockssTestCase {
       log.debug(e.toString());
     }
     assertEmpty(theDaemon.getAuMgrsStarted());
+  }
+
+  public void testDeactivateAu() throws Exception {
+    minimalConfig();
+    String pid = new ThrowingMockPlugin().getPluginId();
+    String key = PluginManager.pluginKeyFromId(pid);
+
+    assertTrue(mgr.ensurePluginLoaded(key));
+    ThrowingMockPlugin mpi = (ThrowingMockPlugin)mgr.getPlugin(key);
+    assertNotNull(mpi);
+    Configuration config = ConfigurationUtil.fromArgs("a", "b");
+    ArchivalUnit au = mgr.createAu(mpi, config);
+    assertNotNull(au);
+    String auId = au.getAuId();
+    mgr.configureAu(mpi, config, auId);
+
+    // should not throw.
+    try {
+      assertFalse(mgr.getInactiveAuIds().contains(auId));
+      mgr.deactivateAu(au);
+      assertTrue(mgr.getInactiveAuIds().contains(auId));
+    } catch (Exception ex) {
+      fail("Deactivating au should not have thrown: " + ex);
+    }
+
+  }
+
+  public void testCreateAndSaveAndDeleteAuConfiguration() throws Exception {
+    minimalConfig();
+    String pid = new ThrowingMockPlugin().getPluginId();
+    String key = PluginManager.pluginKeyFromId(pid);
+   
+    assertTrue(mgr.ensurePluginLoaded(key));
+    ThrowingMockPlugin mpi = (ThrowingMockPlugin)mgr.getPlugin(key);
+    assertNotNull(mpi);
+
+    Properties props = new Properties();
+    props.put("a", "b");
+
+    // Test creating and deleting by au reference.
+    ArchivalUnit au1 = mgr.createAndSaveAuConfiguration(mpi, props);
+    assertNotNull(au1);
+    try {
+      mgr.deleteAuConfiguration(au1);
+    } catch (Exception e) {
+      fail("Deleting au config by AU reference should not have thrown: " + e);
+    }
+
+    // Test creating and deleting by au ID.
+    ArchivalUnit au2 = mgr.createAndSaveAuConfiguration(mpi, props);
+    assertNotNull(au2);
+    try {
+      mgr.deleteAuConfiguration(au2.getAuId());
+    } catch (Exception e) {
+      fail("Deleting au config by AU ID should not have thrown: " + e);
+    }
+
+    // Test setAndSaveAuConfiguration
+    ArchivalUnit au3 = mgr.createAu(mpi,
+				    ConfigurationUtil.fromArgs("foo", "bar"));
+    try {
+      mgr.setAndSaveAuConfiguration(au3, props);
+      
+      mgr.deleteAu(au3);
+    } catch (Exception e) {
+      fail("Deleting AU should not have thrown: " + e);
+    }
   }
 
   static class MyMockLockssDaemon extends MockLockssDaemon {
@@ -620,7 +688,7 @@ public class TestPluginManager extends LockssTestCase {
   public void testWrappedAu() {
     if (!WrapperState.isUsingWrapping()) {
       try {
-	String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+	// String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
 	Properties p = new Properties();
 	p.setProperty(p1a1param + MockPlugin.CONFIG_PROP_1, "val1");
 	p.setProperty(p1a1param + MockPlugin.CONFIG_PROP_2, "val2");
@@ -636,8 +704,8 @@ public class TestPluginManager extends LockssTestCase {
 	MockArchivalUnit mau = (MockArchivalUnit) WrapperState.getOriginal(wau);
 	assertSame(mock, mau.getPlugin());
 	assertSame(mau,wau);
-      } catch (IOException e) {
-	fail(e.getMessage());
+	//      } catch (IOException e) {
+	//	fail(e.getMessage());
       } catch (ClassCastException e) {
 	fail("WrappedArchivalUnit not found.");
       }
@@ -659,6 +727,8 @@ public class TestPluginManager extends LockssTestCase {
 		  pubKeystore);
     p.setProperty(PluginManager.PARAM_KEYSTORE_PASSWORD,
 		  password);
+    p.setProperty(PluginManager.PARAM_PLUGIN_REGISTRIES,
+		  "");
     ConfigurationUtil.setCurrentConfigFromProps(p);
   }
 
