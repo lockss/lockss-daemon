@@ -1,5 +1,5 @@
 /*
- * $Id: HashCUS.java,v 1.1 2004-03-29 09:17:19 tlipkis Exp $
+ * $Id: HashCUS.java,v 1.2 2004-04-06 07:31:54 tlipkis Exp $
  */
 
 /*
@@ -115,6 +115,13 @@ public class HashCUS extends LockssServlet {
   private String statusMsg;
 
   void resetVars() {
+    String auid;
+    String url;
+    String upper;
+    String lower;
+    byte[] challenge;
+    byte[] verifier;
+
     isHash = true;
     isRecord = false;
     isContent = false;;
@@ -241,10 +248,6 @@ public class HashCUS extends LockssServlet {
       return false;
     }
     log.debug(""+cus);
-    if (!au.shouldBeCached(url)) {
-      errMsg = "AU: " + au.getName() + " does not contain URL: " + url;
-      return false;
-    }
     return true;
   }
 
