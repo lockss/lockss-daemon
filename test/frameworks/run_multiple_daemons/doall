@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /bin/sh
 
 # PROJECT_DIR
 PROJECT_DIR=`( cd ../../..; pwd )`
@@ -8,8 +8,7 @@ if [ "$1" == "clean" ] ; then
   rm -rf lib
 fi
 
-for (( i=1 ; i<=4 ; i++ )) ; do
-  (
+for i in 1 2 3 4 ; do
     cd test$i
     if [ "$1" == "start" ] ; then
 	../testrundaemons &
@@ -28,5 +27,5 @@ for (( i=1 ; i<=4 ; i++ )) ; do
 	kill `cat dpid`
         echo stopped in `pwd`
     fi
-  )
+    cd ..
 done

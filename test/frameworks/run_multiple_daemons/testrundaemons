@@ -1,8 +1,13 @@
-#! /bin/bash
+#! /bin/sh
 
 # "." here is the test<n> dir
 PROP_URL_LIST="../../common.txt ../lockss.txt ../lockss.opt local.txt local.opt"
 
+if [ "X${PROJECT_DIR}" = "X" ]
+then
+	echo "PROJECT_DIR must be set"
+	exit
+fi
 mkdir -p ../lib
 cp ${PROJECT_DIR}/lib/lockss.jar ../lib
 cp ${PROJECT_DIR}/lib/lockss-test.jar ../lib
