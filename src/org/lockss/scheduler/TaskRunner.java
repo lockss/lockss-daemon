@@ -1,5 +1,5 @@
 /*
- * $Id: TaskRunner.java,v 1.3.2.4 2003-11-19 06:22:33 tlipkis Exp $
+ * $Id: TaskRunner.java,v 1.3.2.5 2003-11-20 00:06:07 tlipkis Exp $
  */
 
 /*
@@ -55,6 +55,13 @@ class TaskRunner implements Serializable {
     PREFIX + "statsUpdateInterval";
   static final long DEFAULT_STATS_UPDATE_INTERVAL = 10 * Constants.SECOND;
 
+  static final String PARAM_SORT_SCHEME = PREFIX + "tableSort";
+  final int DEFAULT_SORT_SCHEME = PEND_REV | HIST_REV;
+
+  static final int PEND_REV = 1;
+  static final int HIST_REV = 2;
+  static final int HIST_FIRST = 4;
+
   protected static Logger log = Logger.getLogger("TaskRunner");
 
   private SchedulerFactory schedulerFactory;
@@ -69,6 +76,7 @@ class TaskRunner implements Serializable {
   private BinarySemaphore sem = new BinarySemaphore();
   private int stepPriority = -1;
   private long statsUpdateInterval = DEFAULT_STATS_UPDATE_INTERVAL;;
+  private int sortScheme = DEFAULT_SORT_SCHEME;
 
   private int taskCtr = 0;
   private long totalTime = 0;
@@ -110,6 +118,8 @@ class TaskRunner implements Serializable {
     statsUpdateInterval =
       config.getTimeInterval(PARAM_STATS_UPDATE_INTERVAL,
 			     DEFAULT_STATS_UPDATE_INTERVAL);
+    sortScheme = config.getInt(PARAM_SORT_SCHEME, DEFAULT_SORT_SCHEME);
+
     int cMax = config.getInt(PARAM_HISTORY_MAX, DEFAULT_HISTORY_MAX);
     if (changedKeys.contains(PARAM_HISTORY_MAX) ) {
       synchronized (history) {
@@ -122,7 +132,7 @@ class TaskRunner implements Serializable {
    * @param task the new task
    * @return true if the task was added to the schedule.
    */
-  public synchronized boolean scheduleTask(SchedulableTask task) {
+  boolean scheduleTask(SchedulableTask task) {
     if (addToSchedule(task)) {
       pokeThread();
       log.debug("Scheduled task: " + task);
@@ -193,6 +203,7 @@ class TaskRunner implements Serializable {
       new Schedule.BackgroundEvent(task, Deadline.in(0),
 				   Schedule.EventType.FINISH);
     log.debug2("Background task finished early: " + task);
+    // put the event where the stepper thread will find it
     extraBackgroundEvents.add(event);
     if (stepThread != null) {
       // Avoid starting thread in unit tests.  In practice, the thread will
@@ -438,7 +449,7 @@ class TaskRunner implements Serializable {
 	// Must provisionally add to backgroundTasks, as it might run and
 	// finish before we get to run again after calling its taskEvent
 	try {
-	  task.callback.taskEvent(task, event.getType());
+	  task.callback.taskEvent(task, et);
 	} catch (TaskCallback.Abort e) {
 	  // task doesn't want to run, remove from backgroundTasks
 	  event.setError(e);
@@ -706,10 +717,6 @@ class TaskRunner implements Serializable {
     return new Status();
   }
 
-  static final String FOOT_TITLE =
-    "Pending events are first in table, in the order they will occur."+
-    "  Completed events follow, most recent first.";
-
   private static final List statusSortRules =
     ListUtil.list(new StatusTable.SortRule("sort", true));
 
@@ -733,11 +740,13 @@ class TaskRunner implements Serializable {
   private class Status implements StatusAccessor {
     public void populateTable(StatusTable table) {
       String key = table.getKey();
+      int scheme = parseSortScheme(key);
+
       table.setTitle("Scheduler Queue");
-      table.setTitleFootnote(FOOT_TITLE);
+      table.setTitleFootnote(getTitleFootnote(scheme));
       table.setColumnDescriptors(statusColDescs);
       table.setDefaultSortRules(statusSortRules);
-      table.setRows(getRows(key));
+      table.setRows(getRows(scheme));
       table.setSummaryInfo(getSummaryInfo(key));
     }
 
@@ -745,30 +754,57 @@ class TaskRunner implements Serializable {
       return false;
     }
 
-    private List getRows(String key) {
+    private List getRows(int scheme) {
       List table = new ArrayList();
+      List pend = getSchedSnapshot();
+      List hist = getHistorySnapshot();
       int ix = 0;
-      for (ListIterator iter = getSchedSnapshot().listIterator();
-	   iter.hasNext();) {
+      for (ListIterator iter = pend.listIterator(); iter.hasNext();) {
 	Schedule.Event event = getDisplayEvent(iter);
-	if (event != null) {
-	  table.add(makeRow(event, ix++));
-	}
+	table.add(makeRow(event, scheme, ix++, iter, false));
       }
-      int seprIx = ix + 1;
-      List complet = getHistorySnapshot();
-      Collections.reverse(complet);
-      for (ListIterator iter = complet.listIterator(); iter.hasNext();) {
+      ix = 0;
+      for (ListIterator iter = hist.listIterator(); iter.hasNext();) {
 	Schedule.Event event = getDisplayEvent(iter);
-	Map row = makeRow(event, ix++);
-	// if both parts of the table are present , add a separator before
-	// the first history event
-	if (ix == seprIx) {
-	  row.put(StatusTable.ROW_SEPARATOR, "");
-	}
-	table.add(row);
+	table.add(makeRow(event, scheme, ix++, iter, true));
       }
       return table;
+    }
+
+    private Map makeRow(Schedule.Event event, int scheme, int ix,
+			Iterator iter, boolean isHist) {
+      Map row = new HashMap();
+      if (isSepr(scheme, ix, !iter.hasNext(), isHist)) {
+	row.put(StatusTable.ROW_SEPARATOR, "");
+      }
+      row.put("sort", new Integer(sortOrder(scheme, ix, isHist)));
+      if (event.isBackgroundEvent()) {
+	Schedule.BackgroundEvent be = (Schedule.BackgroundEvent)event;
+	BackgroundTask bt = be.getTask();
+	row.put("type", "  Back");
+// 	row.put("tasknum", new Integer(bt.schedSeq));
+	row.put("task", bt.schedSeq + ":" + bt.getShortText());
+	row.put("load", new Double(bt.getLoadFactor()));
+	if (be instanceof CombinedBackgroundEvent) {
+	  CombinedBackgroundEvent cbe = (CombinedBackgroundEvent)be;
+	  row.put("start", cbe.getStart());
+	  row.put("stop", cbe.getFinish());
+	} else if (Schedule.EventType.START == be.getType()) {
+	  row.put("start", be.getStart());
+	} else if (Schedule.EventType.FINISH == be.getType()) {
+	  row.put("stop", be.getStart());
+	}
+      } else {
+	Schedule.Chunk chunk = (Schedule.Chunk)event;
+	StepTask st = chunk.getTask();
+	row.put("type", (chunk == runningChunk) ? "*Fore" : "Fore");
+// 	row.put("tasknum", new Integer(st.schedSeq));
+	row.put("task", st.schedSeq + ":" + st.getShortText());
+	row.put("load", new Double(chunk.getLoadFactor()));
+	row.put("start", chunk.getStart());
+	row.put("stop", chunk.getFinish());
+      }
+      return row;
     }
 
     private class CombinedBackgroundEvent extends Schedule.BackgroundEvent {
@@ -810,38 +846,6 @@ class TaskRunner implements Serializable {
       return event;
     }
 
-    private Map makeRow(Schedule.Event event, int sort) {
-      Map row = new HashMap();
-      row.put("sort", new Integer(sort));
-      if (event.isBackgroundEvent()) {
-	Schedule.BackgroundEvent be = (Schedule.BackgroundEvent)event;
-	BackgroundTask bt = be.getTask();
-	row.put("type", "  Back");
-// 	row.put("tasknum", new Integer(bt.schedSeq));
-	row.put("task", bt.schedSeq + ":" + bt.getShortText());
-	row.put("load", new Double(bt.getLoadFactor()));
-	if (be instanceof CombinedBackgroundEvent) {
-	  CombinedBackgroundEvent cbe = (CombinedBackgroundEvent)be;
-	  row.put("start", cbe.getStart());
-	  row.put("stop", cbe.getFinish());
-	} else if (Schedule.EventType.START == be.getType()) {
-	  row.put("start", be.getStart());
-	} else if (Schedule.EventType.FINISH == be.getType()) {
-	  row.put("stop", be.getStart());
-	}
-      } else {
-	Schedule.Chunk chunk = (Schedule.Chunk)event;
-	StepTask st = chunk.getTask();
-	row.put("type", (chunk == runningChunk) ? "*Fore" : "Fore");
-// 	row.put("tasknum", new Integer(st.schedSeq));
-	row.put("task", st.schedSeq + ":" + st.getShortText());
-	row.put("load", new Double(chunk.getLoadFactor()));
-	row.put("start", chunk.getStart());
-	row.put("stop", chunk.getFinish());
-      }
-      return row;
-    }
-
     private String combStats(int stat) {
       StringBuffer sb = new StringBuffer();
       sb.append(foregroundStats[stat]);
@@ -879,6 +883,85 @@ class TaskRunner implements Serializable {
       return res;
     }
 
+    private boolean bittest(int x, int y) {
+      return ((x & y) != 0);
+    }
+
+    private int sortOrder(int scheme, int ix, boolean history) {
+      int res = ix;
+      if ((history && bittest(scheme, HIST_REV)) ||
+	  (!history && bittest(scheme, PEND_REV))) {
+	res = -res;
+      }
+      if (bittest(scheme, HIST_FIRST) != history) {
+	res += 99999;
+      }
+      return res;
+    }
+
+    private boolean isSepr(int scheme, int ix, boolean isLast,
+			   boolean isHist) {
+      if (isHist != bittest(scheme, HIST_FIRST)) {
+	if (isHist) {
+	  if (bittest(scheme, HIST_REV)) {
+	    return isLast;
+	  }
+	} else {
+	  if (bittest(scheme, PEND_REV)) {
+	    return isLast;
+	  }
+	}
+	return ix == 0;
+      }
+      return false;
+    }
+
+    private String getOrderWords(boolean isHist, int scheme) {
+      if (isHist) {
+	return (bittest(scheme, HIST_REV)
+		? "most recent to oldest" : "oldest to most recent");
+      } else {
+	return (bittest(scheme, PEND_REV) ? "last to first" : "first to last");
+      }
+    }
+
+    private String getSectionWord(boolean isHist) {
+      return isHist ? "Completed" : "Pending";
+    }
+
+    private String getTitleFootnote(int scheme) {
+      StringBuffer sb = new StringBuffer();
+      boolean histFirst = bittest(scheme, HIST_FIRST);
+      sb.append(getSectionWord(histFirst));
+      sb.append(" events are at top of table, ");
+      sb.append(getOrderWords(histFirst, scheme));
+      sb.append(". ");
+      sb.append(getSectionWord(!histFirst));
+      sb.append(" events follow, ");
+      sb.append(getOrderWords(!histFirst, scheme));
+      switch (scheme) {
+      case PEND_REV | HIST_REV:
+	sb.append(".  (I.e., time moves backward down the page.)");
+	break;
+      case HIST_FIRST:
+	sb.append(".  (I.e., time moves forward down the page.)");
+	break;
+      default:
+	sb.append(".");
+      }
+      return sb.toString();
+    }
+
+    private int parseSortScheme(String key) {
+      if (StringUtil.isNullString(key)) {
+	return sortScheme;
+      }
+      try {
+	return Integer.parseInt(key);
+      } catch (Exception e) {
+	return sortScheme;
+      }
+    }
   }
 
 }
