@@ -1,5 +1,5 @@
 /*
- * $Id: FuncCommons.java,v 1.4 2004-10-11 00:56:40 tlipkis Exp $
+ * $Id: FuncCommons.java,v 1.5 2005-01-04 03:06:47 tlipkis Exp $
  */
 
 /*
@@ -36,7 +36,8 @@ import java.io.*;
 import java.util.*;
 import junit.framework.TestCase;
 import org.apache.commons.collections.map.ReferenceMap;
-
+import org.apache.commons.collections.map.*;
+import org.lockss.util.*;
 
 /**
  * Tests that verify our understanding of the behavior of Commons
@@ -96,5 +97,16 @@ public class FuncCommons extends LockssTestCase {
     // be in the map either.
     assertFalse(map.containsKey(new Integer(143)));
     assertFalse(map.containsKey(aKey));
+  }
+
+  // Just here to convince myself that LinkedMap handles null values
+  public void testLinkedMap() {
+    LinkedMap lm = new LinkedMap();
+    lm.put("foo", "1");
+    lm.put("bar", null);
+    assertIsomorphic(ListUtil.list("foo", "bar").iterator(),
+		     lm.keySet().iterator());
+    assertIsomorphic(ListUtil.list("1", null).iterator(),
+		     lm.values().iterator());
   }
 }
