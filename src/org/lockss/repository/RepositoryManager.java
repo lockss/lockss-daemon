@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryManager.java,v 1.2 2004-09-27 22:39:07 smorabito Exp $
+ * $Id: RepositoryManager.java,v 1.3 2004-10-18 03:40:32 tlipkis Exp $
  */
 
 /*
@@ -48,20 +48,33 @@ public class RepositoryManager
 
   private static Logger log = Logger.getLogger("RepositoryManager");
 
-  public static final String PREFIX = Configuration.PREFIX + "treewalk.";
+  public static final String PREFIX = Configuration.PREFIX + "repository.";
 
   /** Maximum size of per-AU repository node cache */
-  public static final String PARAM_MAX_LRUMAP_SIZE =
-    Configuration.PREFIX + "repository.nodeCache.size";
-  public static final int DEFAULT_MAX_LRUMAP_SIZE = 100;
+  public static final String PARAM_MAX_PER_AU_CACHE_SIZE =
+    PREFIX + "nodeCache.size";
+  public static final int DEFAULT_MAX_PER_AU_CACHE_SIZE = 10;
 
-  int paramNodeCacheSize = DEFAULT_MAX_LRUMAP_SIZE;
+  static final String GLOBAL_CACHE_PREFIX = PREFIX + "globalNodeCache.";
+  public static final String PARAM_MAX_GLOBAL_CACHE_SIZE =
+    GLOBAL_CACHE_PREFIX + "size";
+  public static final int DEFAULT_MAX_GLOBAL_CACHE_SIZE = 500;
+
+  public static final String PARAM_GLOBAL_CACHE_ENABLED =
+    GLOBAL_CACHE_PREFIX + "enabled";
+  public static final boolean DEFAULT_GLOBAL_CACHE_ENABLED = false;
+
+  int paramNodeCacheSize = DEFAULT_MAX_PER_AU_CACHE_SIZE;
+  boolean paramIsGlobalNodeCache = DEFAULT_GLOBAL_CACHE_ENABLED;
+  int paramGlobalNodeCacheSize = DEFAULT_MAX_GLOBAL_CACHE_SIZE;
+  UniqueRefLruCache globalNodeCache =
+      new UniqueRefLruCache(DEFAULT_MAX_GLOBAL_CACHE_SIZE);
 
   public void setConfig(Configuration config, Configuration oldConfig,
 			Configuration.Differences changedKeys) {
-    if (changedKeys.contains(PARAM_MAX_LRUMAP_SIZE)) {
-      paramNodeCacheSize =
-	config.getInt(PARAM_MAX_LRUMAP_SIZE, DEFAULT_MAX_LRUMAP_SIZE);
+    if (changedKeys.contains(PARAM_MAX_PER_AU_CACHE_SIZE)) {
+      paramNodeCacheSize = config.getInt(PARAM_MAX_PER_AU_CACHE_SIZE,
+					 DEFAULT_MAX_PER_AU_CACHE_SIZE);
       for (Iterator iter = getDaemon().getAllLockssRepositories().iterator();
 	   iter.hasNext(); ) {
 	LockssRepository repo = (LockssRepository)iter.next();
@@ -71,6 +84,23 @@ public class RepositoryManager
 	}
       }
     }
+    if (changedKeys.contains(GLOBAL_CACHE_PREFIX)) {
+      paramIsGlobalNodeCache = config.getBoolean(PARAM_GLOBAL_CACHE_ENABLED,
+						 DEFAULT_GLOBAL_CACHE_ENABLED);
+      if (paramIsGlobalNodeCache) {
+	paramGlobalNodeCacheSize = config.getInt(PARAM_MAX_GLOBAL_CACHE_SIZE,
+						 DEFAULT_MAX_GLOBAL_CACHE_SIZE);
+	log.debug("global node cache size: " + paramGlobalNodeCacheSize);
+	globalNodeCache.setMaxSize(paramGlobalNodeCacheSize);
+      }
+    }
   }
 
+  public boolean isGlobalNodeCache() {
+    return paramIsGlobalNodeCache;
+  }
+
+  public UniqueRefLruCache getGlobalNodeCache() {
+    return globalNodeCache;
+  }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.63 2004-10-11 00:56:57 tlipkis Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.64 2004-10-18 03:40:32 tlipkis Exp $
  */
 
 /*
@@ -54,6 +54,7 @@ import org.apache.commons.collections.map.ReferenceMap;
  */
 public class LockssRepositoryImpl
   extends BaseLockssDaemonManager implements LockssRepository {
+  private static Logger logger = Logger.getLogger("LockssRepository");
 
   /**
    * Configuration parameter name for Lockss cache location.
@@ -92,13 +93,9 @@ public class LockssRepositoryImpl
 
   private RepositoryManager repoMgr;
   private String rootLocation;
-  LRUMap nodeCache; // made non-private for testing
-  private ReferenceMap refMap;
-  private int cacheHits = 0;
-  private int cacheMisses = 0;
-  private int refHits = 0;
-  private int refMisses = 0;
-  private static Logger logger = Logger.getLogger("LockssRepository");
+  UniqueRefLruCache nodeCache;
+  private boolean isGlobalNodeCache =
+    RepositoryManager.DEFAULT_GLOBAL_CACHE_ENABLED;
 
   LockssRepositoryImpl(String rootPath) {
     rootLocation = rootPath;
@@ -106,14 +103,22 @@ public class LockssRepositoryImpl
       // this shouldn't happen
       rootLocation += File.separator;
     }
-    nodeCache = new LRUMap(RepositoryManager.DEFAULT_MAX_LRUMAP_SIZE);
-    refMap = new ReferenceMap(ReferenceMap.HARD, ReferenceMap.WEAK);
+    // Test code still needs this.
+    nodeCache =
+      new UniqueRefLruCache(RepositoryManager.DEFAULT_MAX_PER_AU_CACHE_SIZE);
   }
 
   public void startService() {
     super.startService();
     repoMgr = getDaemon().getRepositoryManager();
-    setNodeCacheSize(repoMgr.paramNodeCacheSize);
+    isGlobalNodeCache = repoMgr.isGlobalNodeCache();
+    if (isGlobalNodeCache) {
+      nodeCache = repoMgr.getGlobalNodeCache();
+    } else {
+//       nodeCache =
+// 	new UniqueRefLruCache(repoMgr.paramNodeCacheSize);
+      setNodeCacheSize(repoMgr.paramNodeCacheSize);
+    }
   }
 
   public void stopService() {
@@ -125,10 +130,9 @@ public class LockssRepositoryImpl
   }
 
   public void setNodeCacheSize(int size) {
-    if (nodeCache != null && nodeCache.maxSize() != size) {
-      LRUMap newNodeCache = new LRUMap(size);
-      newNodeCache.putAll(nodeCache);
-      nodeCache = newNodeCache;
+    if (nodeCache != null && !isGlobalNodeCache &&
+	nodeCache.getMaxSize() != size) {
+      nodeCache.setMaxSize(size);
     }
   }
 
@@ -170,46 +174,33 @@ public class LockssRepositoryImpl
    */
   private synchronized RepositoryNode getNode(String url, boolean create)
       throws MalformedURLException {
-    String urlKey;
+    String canonUrl;
     boolean isAuUrl = false;
     if (AuUrl.isAuUrl(url)) {
       // path information is lost here, but is unimportant if it's an AuUrl
-      urlKey = AuUrl.PROTOCOL;
+      canonUrl = AuUrl.PROTOCOL;
       isAuUrl = true;
     } else {
       // create a canonical path, handling all illegal path traversal
-      urlKey = canonicalizePath(url);
+      canonUrl = canonicalizePath(url);
     }
 
     // check LRUMap cache for node
-    RepositoryNode node = (RepositoryNode)nodeCache.get(urlKey);
+    RepositoryNode node = (RepositoryNode)nodeCache.get(nodeCacheKey(canonUrl));
     if (node!=null) {
-      cacheHits++;
       return node;
-    } else {
-      cacheMisses++;
-    }
-
-    // check weak reference map for node
-    node = (RepositoryNode)refMap.get(urlKey);
-    if (node!=null) {
-      refHits++;
-      nodeCache.put(urlKey, node);
-      return node;
-    } else {
-      refMisses++;
     }
 
     String nodeLocation;
     if (isAuUrl) {
       // base directory of ArchivalUnit
       nodeLocation = rootLocation;
-      node = new AuNodeImpl(urlKey, nodeLocation, this);
+      node = new AuNodeImpl(canonUrl, nodeLocation, this);
     } else {
       // determine proper node location
       nodeLocation = LockssRepositoryImpl.mapUrlToFileLocation(rootLocation,
-          urlKey);
-      node = new RepositoryNodeImpl(urlKey, nodeLocation, this);
+          canonUrl);
+      node = new RepositoryNodeImpl(canonUrl, nodeLocation, this);
     }
 
     if (!create) {
@@ -225,17 +216,23 @@ public class LockssRepositoryImpl
       }
     }
 
-    // add to node cache and weak reference cache
-    nodeCache.put(urlKey, node);
-    refMap.put(urlKey, node);
+    // add to node cache
+    nodeCache.put(nodeCacheKey(canonUrl), node);
     return node;
   }
 
+  Object nodeCacheKey(String canonUrl) {
+    if (isGlobalNodeCache) {
+      return new KeyPair(this, canonUrl);
+    }
+    return canonUrl;
+  }
+
   // functions for testing
-  int getCacheHits() { return cacheHits; }
-  int getCacheMisses() { return cacheMisses; }
-  int getRefHits() { return refHits; }
-  int getRefMisses() { return refMisses; }
+  int getCacheHits() { return nodeCache.getCacheHits(); }
+  int getCacheMisses() { return nodeCache.getCacheMisses(); }
+  int getRefHits() { return nodeCache.getRefHits(); }
+  int getRefMisses() { return nodeCache.getRefMisses(); }
 
   public void nodeConsistencyCheck() {
     // traverse the node tree from the top

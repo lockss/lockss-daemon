@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.123 2004-10-13 23:07:24 clairegriffin Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.124 2004-10-18 03:44:09 tlipkis Exp $
  */
 
 /*
@@ -62,7 +62,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     Properties p = new Properties();
     p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     p.setProperty(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION, tempDirPath);
-    p.setProperty(NodeManagerManager.PARAM_NODESTATE_CACHE_SIZE, "10");
+    p.setProperty(NodeManagerManager.PARAM_MAX_PER_AU_CACHE_SIZE, "10");
     p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.1.2.3");
     p.setProperty(NodeManagerManager.PARAM_RECALL_DELAY, "5s");
     ConfigurationUtil.setCurrentConfigFromProps(p);

@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryManager.java,v 1.2 2004-09-21 21:25:01 dshr Exp $
+ * $Id: TestRepositoryManager.java,v 1.3 2004-10-18 03:40:31 tlipkis Exp $
  */
 
 /*
@@ -62,23 +62,23 @@ public class TestRepositoryManager extends LockssTestCase {
 
   public void testConfig() throws Exception {
     MyMockLockssRepositoryImpl repo1 = makeRepo("foo");
-    assertEquals(RepositoryManager.DEFAULT_MAX_LRUMAP_SIZE,
+    assertEquals(RepositoryManager.DEFAULT_MAX_PER_AU_CACHE_SIZE,
 		 repo1.nodeCacheSize);
 
-    ConfigurationUtil.setFromArgs(RepositoryManager.PARAM_MAX_LRUMAP_SIZE,
+    ConfigurationUtil.setFromArgs(RepositoryManager.PARAM_MAX_PER_AU_CACHE_SIZE,
 				  "4");
     MyMockLockssRepositoryImpl repo2 = makeRepo("bar");
     assertEquals(4, repo1.nodeCacheSize);
     assertEquals(4, repo2.nodeCacheSize);
 
     repo1.cnt = 0;
-    ConfigurationUtil.setFromArgs(RepositoryManager.PARAM_MAX_LRUMAP_SIZE,
+    ConfigurationUtil.setFromArgs(RepositoryManager.PARAM_MAX_PER_AU_CACHE_SIZE,
 				  "37");
     assertEquals(37, repo1.nodeCacheSize);
     assertEquals(37, repo2.nodeCacheSize);
     assertEquals(1, repo1.cnt);
     // ensure setNodeCacheSize doesn't get called if param doesn't change
-    ConfigurationUtil.setFromArgs(RepositoryManager.PARAM_MAX_LRUMAP_SIZE,
+    ConfigurationUtil.setFromArgs(RepositoryManager.PARAM_MAX_PER_AU_CACHE_SIZE,
 				  "37",
 				  "org.lockss.somethingElse", "bar");
     assertEquals(1, repo1.cnt);

@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerManager.java,v 1.1 2004-08-22 02:05:47 tlipkis Exp $
+ * $Id: TestNodeManagerManager.java,v 1.2 2004-10-18 03:40:31 tlipkis Exp $
  */
 
 /*
@@ -83,21 +83,21 @@ public class TestNodeManagerManager extends LockssTestCase {
   public void testConfig() throws Exception {
     setConfig(null, null);
     MyMockNodeManager nm1 = makeNodeMgr();
-    assertEquals(NodeManagerManager.DEFAULT_NODESTATE_CACHE_SIZE,
+    assertEquals(NodeManagerManager.DEFAULT_MAX_PER_AU_CACHE_SIZE,
 		 nm1.nodeStateCacheSize);
 
-    setConfig(NodeManagerManager.PARAM_NODESTATE_CACHE_SIZE, "4");
+    setConfig(NodeManagerManager.PARAM_MAX_PER_AU_CACHE_SIZE, "4");
     MyMockNodeManager nm2 = makeNodeMgr();
     assertEquals(4, nm1.nodeStateCacheSize);
     assertEquals(4, nm2.nodeStateCacheSize);
 
     nm1.cnt = 0;
-    setConfig(NodeManagerManager.PARAM_NODESTATE_CACHE_SIZE, "37");
+    setConfig(NodeManagerManager.PARAM_MAX_PER_AU_CACHE_SIZE, "37");
     assertEquals(37, nm1.nodeStateCacheSize);
     assertEquals(37, nm2.nodeStateCacheSize);
     assertEquals(1, nm1.cnt);
     // ensure setNodeCacheSize doesn't get called if param doesn't change
-    setConfig(NodeManagerManager.PARAM_NODESTATE_CACHE_SIZE, "37",
+    setConfig(NodeManagerManager.PARAM_MAX_PER_AU_CACHE_SIZE, "37",
 	      "org.lockss.somethingElse", "bar");
     assertEquals(1, nm1.cnt);
   }

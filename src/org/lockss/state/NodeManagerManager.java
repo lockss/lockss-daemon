@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerManager.java,v 1.5 2004-10-13 06:21:28 tlipkis Exp $
+ * $Id: NodeManagerManager.java,v 1.6 2004-10-18 03:40:31 tlipkis Exp $
  */
 
 /*
@@ -47,10 +47,20 @@ public class NodeManagerManager
 
   static final String PREFIX = Configuration.PREFIX + "state.";
 
-  /**  Size of the {@link NodeStateCache} used by the node manager. */
-  public static final String PARAM_NODESTATE_CACHE_SIZE =
+  static final String GLOBAL_CACHE_PREFIX = PREFIX + "globalNodeCache.";
+  public static final String PARAM_MAX_GLOBAL_CACHE_SIZE =
+    GLOBAL_CACHE_PREFIX + "size";
+  public static final int DEFAULT_MAX_GLOBAL_CACHE_SIZE = 500;
+
+  public static final String PARAM_GLOBAL_CACHE_ENABLED =
+    GLOBAL_CACHE_PREFIX + "enabled";
+  public static final boolean DEFAULT_GLOBAL_CACHE_ENABLED = false;
+
+  /** Size of the {@link UniqueRefLruCache} used as a node cache by the
+   * node manager. */
+  public static final String PARAM_MAX_PER_AU_CACHE_SIZE =
     PREFIX + "cache.size";
-  static final int DEFAULT_NODESTATE_CACHE_SIZE = 100;
+  static final int DEFAULT_MAX_PER_AU_CACHE_SIZE = 100;
 
   /** Minimum delay after unsuccessful poll on a node before recalling that
    * poll. */
@@ -69,7 +79,11 @@ public class NodeManagerManager
 
   long paramRecallDelay = DEFAULT_RECALL_DELAY;
   boolean paramRestartNonexpiredPolls = DEFAULT_RESTART_NONEXPIRED_POLLS;
-  int paramNodeStateCacheSize = DEFAULT_NODESTATE_CACHE_SIZE;
+  int paramNodeStateCacheSize = DEFAULT_MAX_PER_AU_CACHE_SIZE;
+  boolean paramIsGlobalNodeCache = DEFAULT_GLOBAL_CACHE_ENABLED;
+  int paramGlobalNodeCacheSize = DEFAULT_MAX_GLOBAL_CACHE_SIZE;
+  UniqueRefLruCache globalNodeCache =
+      new UniqueRefLruCache(DEFAULT_MAX_GLOBAL_CACHE_SIZE);
 
   public void startService() {
     super.startService();
@@ -106,8 +120,8 @@ public class NodeManagerManager
 			  DEFAULT_RESTART_NONEXPIRED_POLLS);
 
       paramNodeStateCacheSize =
-	config.getInt(PARAM_NODESTATE_CACHE_SIZE,
-		      DEFAULT_NODESTATE_CACHE_SIZE);
+	config.getInt(PARAM_MAX_PER_AU_CACHE_SIZE,
+		      DEFAULT_MAX_PER_AU_CACHE_SIZE);
       for (Iterator iter = getDaemon().getAllNodeManagers().iterator();
 	   iter.hasNext(); ) {
 	NodeManager nm = (NodeManager)iter.next();
@@ -117,6 +131,24 @@ public class NodeManagerManager
 	}
       }
     }
+    if (changedKeys.contains(GLOBAL_CACHE_PREFIX)) {
+      paramIsGlobalNodeCache = config.getBoolean(PARAM_GLOBAL_CACHE_ENABLED,
+						 DEFAULT_GLOBAL_CACHE_ENABLED);
+      if (paramIsGlobalNodeCache) {
+	paramGlobalNodeCacheSize = config.getInt(PARAM_MAX_GLOBAL_CACHE_SIZE,
+						 DEFAULT_MAX_GLOBAL_CACHE_SIZE);
+	logger.debug("global node cache size: " + paramGlobalNodeCacheSize);
+	globalNodeCache.setMaxSize(paramGlobalNodeCacheSize);
+      }
+    }
+  }
+
+  public boolean isGlobalNodeCache() {
+    return paramIsGlobalNodeCache;
+  }
+
+  public UniqueRefLruCache getGlobalNodeCache() {
+    return globalNodeCache;
   }
 
   private NodeManagerImpl getNodeManagerFromKey(String key)
