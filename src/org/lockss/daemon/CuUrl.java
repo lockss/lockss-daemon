@@ -1,5 +1,5 @@
 /*
-* $Id: CuUrl.java,v 1.3 2003-04-17 02:16:58 troberts Exp $
+* $Id: CuUrl.java,v 1.4 2003-05-10 00:40:57 troberts Exp $
  */
 
 /*
@@ -112,7 +112,7 @@ public class CuUrl {
       String spec = url.getFile();
       if (spec != null && spec.startsWith("/")) {
 	spec = spec.substring(1, spec.length());
-      }
+      } 
       cachedUrlString = URLDecoder.decode(spec);
       if (log.isDebug3()) {
 	log.debug3("parseUrl("+url+")");
@@ -136,7 +136,7 @@ public class CuUrl {
 	if (au == null) {
 	  throw new FileNotFoundException(urlString);
 	}
-	if (!au.shouldBeCached(urlString)) {
+	if (!au.shouldBeCached(cachedUrlString)) {
 	  throw new FileNotFoundException(urlString);
 	}
 	cu = au.getAUCachedUrlSet().makeCachedUrl(cachedUrlString);
