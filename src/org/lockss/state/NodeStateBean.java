@@ -1,5 +1,5 @@
 /*
- * $Id: NodeStateBean.java,v 1.2 2003-04-04 23:50:11 aalto Exp $
+ * $Id: NodeStateBean.java,v 1.3 2003-05-30 01:41:06 aalto Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ import org.lockss.plugin.CachedUrlSet;
 public class NodeStateBean {
   CrawlStateBean crawlBean;
   List pollBeans = new ArrayList();
+  int curState;
   long hashDuration = -1;
 
   public NodeStateBean() { }
@@ -55,6 +56,7 @@ public class NodeStateBean {
       pollBeans.add(new PollStateBean(poll));
     }
     hashDuration = nodeState.getAverageHashDuration();
+    curState = nodeState.getState();
   }
 
   /**
@@ -103,6 +105,22 @@ public class NodeStateBean {
    */
   public void setAverageHashDuration(long newDuration) {
     hashDuration = newDuration;
+  }
+
+  /**
+   * Returns the state.
+   * @return the state
+   */
+  public int getState() {
+    return curState;
+  }
+
+  /**
+   * Sets the state.
+   * @param newState the state
+   */
+  public void setState(int newState) {
+    curState = newState;
   }
 
 }

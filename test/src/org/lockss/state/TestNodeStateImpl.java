@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeStateImpl.java,v 1.18 2003-05-09 20:53:30 aalto Exp $
+ * $Id: TestNodeStateImpl.java,v 1.19 2003-05-30 01:41:06 aalto Exp $
  */
 
 /*
@@ -214,6 +214,12 @@ public class TestNodeStateImpl extends LockssTestCase {
 
     mcus.setIsLeaf(false);
     assertTrue(state.isInternalNode());
+  }
+
+  public void testState() throws Exception {
+    assertEquals(NodeState.UNKNOWN, state.getState());
+    state.setState(NodeState.OK);
+    assertEquals(NodeState.OK, state.getState());
   }
 
   public void testLastHashDuration() throws Exception {

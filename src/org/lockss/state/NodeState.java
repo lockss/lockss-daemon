@@ -1,5 +1,5 @@
 /*
- * $Id: NodeState.java,v 1.8 2003-04-10 01:06:51 claire Exp $
+ * $Id: NodeState.java,v 1.9 2003-05-30 01:41:06 aalto Exp $
  */
 
 /*
@@ -35,12 +35,95 @@ package org.lockss.state;
 
 import java.util.Iterator;
 import org.lockss.plugin.CachedUrlSet;
+import org.lockss.daemon.CachedUrlSetSpec;
 
 /**
  * NodeState contains the current state information for a node, as well as the
  * poll histories.
  */
 public interface NodeState {
+  /**
+   * Integer representing the unknown state.
+   */
+  public static final int UNKNOWN = 0;
+  /**
+   * Integer representing the ok state.  Nothing needs doing.
+   */
+  public static final int OK = 1;
+  /**
+   * Integer representing the 'needs a content poll' state.
+   */
+  public static final int NEEDS_POLL = 2;
+  /**
+   * Integer representing the 'needs a content poll' state.
+   */
+  public static final int NEEDS_REPLAY_POLL = 3;
+  /**
+   * Integer representing the 'content poll is running' state.
+   */
+  public static final int CONTENT_RUNNING = 4;
+  /**
+   * Integer representing the 'content poll is replaying' state.
+   */
+  public static final int CONTENT_REPLAYING = 5;
+  /**
+   * Integer representing the 'content poll is lost, needs a name poll' state.
+   */
+  public static final int CONTENT_LOST = 6;
+  /**
+   * Integer representing the 'name poll is running' state.
+   */
+  public static final int NAME_RUNNING = 7;
+  /**
+   * Integer representing the 'name poll is replaying' state.
+   */
+  public static final int NAME_REPLAYING = 8;
+  /**
+   * Integer representing the 'failed a name poll, have a list of wrong names' state.
+   */
+  public static final int WRONG_NAMES = 9;
+  /**
+   * Integer representing the 'there is non-name damage here' state.
+   */
+  public static final int DAMAGE_AT_OR_BELOW = 10;
+  /**
+   * Integer representing the 'should check own content' state.
+   */
+  public static final int POSSIBLE_DAMAGE_HERE = 11;
+  /**
+   * Integer representing the 'sncus poll is running' state.
+   */
+  public static final int SNCUSS_POLL_RUNNING = 12;
+  /**
+   * Integer representing the 'sncus poll is replaying' state.
+   */
+  public static final int SNCUSS_POLL_REPLAYING = 13;
+  /**
+   * Integer representing the 'repair is needed here' state.
+   */
+  public static final int NEEDS_REPAIR = 14;
+  /**
+   * Integer representing the 'possible damage below here' state.
+   */
+  public static final int POSSIBLE_DAMAGE_BELOW = 15;
+  /**
+   * Integer representing the 'own content is unrepairable' state.
+   */
+  public static final int UNREPAIRABLE_SNCUSS = 16;
+  /**
+   * Integer representing the 'own content is unrepairable, time to try again'
+   * state.
+   */
+  public static final int UNREPAIRABLE_SNCUSS_NEEDS_POLL = 17;
+  /**
+   * Integer representing the 'list of names is unrepairable' state.
+   */
+  public static final int UNREPAIRABLE_NAMES = 18;
+  /**
+   * Integer representing the 'list of names is unrepairable, time to try again' state.
+   */
+  public static final int UNREPAIRABLE_NAMES_NEEDS_POLL = 19;
+
   /**
    * Returns the last hash duration.  -1 if no hash yet.
    * @return the hash duration
@@ -85,8 +168,15 @@ public interface NodeState {
   public boolean isInternalNode();
 
   /**
-   * Returns the current poll status for this node
-   * @return one of the PollState status values.
+   * Returns an int representing the overall state of the node.
+   * @return the state
    */
-  // public int getPollStatus();
+  public int getState();
+
+  /**
+   * Returns a string from of the state of the node, for display.
+   * @return the state as a string
+   */
+  public String getStateString();
+
 }

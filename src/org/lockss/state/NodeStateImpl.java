@@ -1,5 +1,5 @@
 /*
- * $Id: NodeStateImpl.java,v 1.17 2003-05-09 20:53:30 aalto Exp $
+ * $Id: NodeStateImpl.java,v 1.18 2003-05-30 01:41:06 aalto Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ package org.lockss.state;
 import java.util.*;
 import org.lockss.plugin.CachedUrlSet;
 import org.apache.commons.collections.TreeBag;
+import org.lockss.daemon.CachedUrlSetSpec;
 
 /**
  * NodeState contains the current state information for a node, as well as the
@@ -49,6 +50,7 @@ public class NodeStateImpl implements NodeState {
   protected List pollHistories = null;
   protected HistoryRepository repository;
   protected long hashDuration = -1;
+  protected int curState = UNKNOWN;
 
   // for marshalling only
   NodeStateImpl() { }
@@ -62,6 +64,7 @@ public class NodeStateImpl implements NodeState {
       polls.add(ii, new PollState((PollStateBean)bean.pollBeans.get(ii)));
     }
     this.hashDuration = bean.getAverageHashDuration();
+    this.curState = bean.getState();
     this.repository = repository;
   }
 
@@ -82,12 +85,68 @@ public class NodeStateImpl implements NodeState {
     return crawlState;
   }
 
+  public int getState() {
+    return curState;
+  }
+
+  public String getStateString() {
+    switch (curState) {
+      case NodeState.NEEDS_POLL:
+        return "Needs Poll";
+      case NodeState.NEEDS_REPLAY_POLL:
+        return "Needs Replay Poll";
+      case NodeState.CONTENT_LOST:
+        return "Content Lost";
+      case NodeState.UNREPAIRABLE_NAMES_NEEDS_POLL:
+        return "Unrepairable Names: Needs Poll";
+      case NodeState.CONTENT_RUNNING:
+        return "Content Poll Running";
+      case NodeState.CONTENT_REPLAYING:
+        return "Content Poll Replaying";
+      case NodeState.NAME_RUNNING:
+        return "Name Poll Running";
+      case NodeState.NAME_REPLAYING:
+        return "Name Poll Replaying";
+      case NodeState.SNCUSS_POLL_RUNNING:
+        return "SNCUSS Content Poll Running";
+      case NodeState.SNCUSS_POLL_REPLAYING:
+        return "SNCUSS Content Poll Replaying";
+      case NodeState.WRONG_NAMES:
+        return "Wrong Names";
+      case NodeState.DAMAGE_AT_OR_BELOW:
+        return "Damage At Or Below";
+      case NodeState.POSSIBLE_DAMAGE_HERE:
+        return "Possible Damage Here";
+      case NodeState.UNREPAIRABLE_SNCUSS_NEEDS_POLL:
+        return "Unrepairable SNCUSS Content: Needs Poll";
+      case NodeState.NEEDS_REPAIR:
+        return "Needs Repair";
+      case NodeState.UNREPAIRABLE_SNCUSS:
+        return "Unrepairable SNCUSS Content";
+      case NodeState.UNREPAIRABLE_NAMES:
+        return "Unrepairable Names";
+      case NodeState.POSSIBLE_DAMAGE_BELOW:
+        return "Possible Damage Below";
+      case NodeState.UNKNOWN:
+        return "Unknown";
+      case NodeState.OK:
+        return "Ok";
+      default:
+        return "Undefined";
+    }
+  }
+
   public long getAverageHashDuration() {
     return hashDuration;
   }
 
   void setLastHashDuration(long newDuration) {
     hashDuration = newDuration;
+    repository.storeNodeState(this);
+  }
+
+  void setState(int newState) {
+    curState = newState;
     repository.storeNodeState(this);
   }
 
