@@ -1,10 +1,11 @@
 /*
- * $Id: PropUtil.java,v 1.2 2003-04-09 23:46:29 aalto Exp $
+ * $Id: PropUtil.java,v 1.3 2003-04-15 01:20:27 troberts Exp $
  */
 
 package org.lockss.util;
 
 import java.util.*;
+import java.net.URLEncoder;
 import org.mortbay.tools.*;
 
 /*
@@ -103,5 +104,22 @@ public class PropUtil {
     p2Only.removeAll(keys1);
     res.addAll(p2Only);
     return res;
+  }
+
+  public static String propsToEncodedString(Properties props) {
+    if (props == null || props.isEmpty()) {
+      return "";
+    }
+    StringBuffer sb = new StringBuffer();
+    for (Iterator it=props.keySet().iterator(); it.hasNext();) {
+      String key = (String)it.next();
+      sb.append(PropKeyEncoder.encode(key));
+      sb.append("~");
+      sb.append(URLEncoder.encode(props.getProperty(key)));
+      if (it.hasNext()) {
+	sb.append("&");
+      }
+    }
+    return sb.toString();
   }
 }

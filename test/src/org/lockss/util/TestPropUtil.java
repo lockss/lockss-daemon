@@ -1,5 +1,5 @@
 /*
- * $Id: TestPropUtil.java,v 1.2 2003-03-04 01:02:05 aalto Exp $
+ * $Id: TestPropUtil.java,v 1.3 2003-04-15 01:20:27 troberts Exp $
  */
 
 /*
@@ -120,4 +120,41 @@ public class TestPropUtil extends TestCase {
     assertEquals(SetUtil.set("k1"), PropUtil.differentKeys(p5, p1));
     assertEquals(SetUtil.set("k2","k3"), PropUtil.differentKeys(p6, p1));
   }
+
+  public void testPropsToEncodedStringNullProps() {
+    assertEquals("", PropUtil.propsToEncodedString(null));
+  }
+
+  public void testPropsToEncodedStringEmptyProps() {
+    assertEquals("", PropUtil.propsToEncodedString(new Properties()));
+  }
+
+  public void testPropsToEncodedStringOneElement() {
+    Properties props = new Properties();
+    props.setProperty("key1", "val1");
+    assertEquals("key1~val1", PropUtil.propsToEncodedString(props));
+  }
+
+  public void testPropsToEncodedStringMultipleElements() {
+    Properties props = new Properties();
+    props.setProperty("key1", "val1");
+    props.setProperty("key2", "val2");
+    String encStr = PropUtil.propsToEncodedString(props);
+    Set actual = new HashSet(StringUtil.breakAt(encStr, '&'));
+    assertEquals(SetUtil.set("key1~val1", "key2~val2"), actual);
+  }
+
+  public void testPropsToEncodedStringEncodePropStrings() {
+    Properties props = new Properties();
+    props.setProperty("key&1", "val=1");
+    props.setProperty("key2", "val 2");
+    props.setProperty("key.3", "val:3");
+    String encStr = PropUtil.propsToEncodedString(props);
+    Set actual = new HashSet(StringUtil.breakAt(encStr, '&'));
+    Set expected = SetUtil.set("key%261~val%3D1", 
+			       "key2~val+2",
+			       "key%2E3~val%3A3");
+    assertEquals(expected, actual);
+  }
+
 }
