@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.80 2003-04-18 22:44:19 claire Exp $
+* $Id: PollManager.java,v 1.81 2003-04-18 23:29:51 claire Exp $
  */
 
 /*
@@ -382,7 +382,6 @@ public class PollManager  extends BaseLockssManager {
       // mark the poll completed because if we need to call a repair poll
       // we don't want this one to be in conflict with it.
       PollTally tally = pme.poll.getVoteTally();
-      tally.tallyVotes();
       pme.setPollCompleted();
       if(tally.getType() != Poll.VERIFY_POLL) {
         NodeManager nm = theDaemon.getNodeManager(tally.getArchivalUnit());
