@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.24 2003-09-26 23:49:01 eaalto Exp $
+ * $Id: TestPluginManager.java,v 1.25 2003-12-08 06:55:17 tlipkis Exp $
  */
 
 /*
@@ -136,9 +136,13 @@ public class TestPluginManager extends LockssTestCase {
 
   public void testEnsurePluginLoaded() throws Exception {
     // non-existent class shouldn't load
-    assertFalse(mgr.ensurePluginLoaded("org|lockss|NoSuchClass"));
+    String key = "org|lockss|NoSuchClass";
+    assertFalse(mgr.ensurePluginLoaded(key));
+    assertNull(mgr.getPlugin(key));
     // MockPlugin should load
     assertTrue(mgr.ensurePluginLoaded(mockPlugKey));
+    Plugin p = mgr.getPlugin(mockPlugKey);
+    assertTrue(p.toString(), p instanceof MockPlugin);
     MockPlugin mpi = (MockPlugin)mgr.getPlugin(mockPlugKey);
     assertNotNull(mpi);
     assertEquals(1, mpi.getInitCtr());	// should have been inited once
@@ -148,6 +152,26 @@ public class TestPluginManager extends LockssTestCase {
     MockPlugin mpi2 = (MockPlugin)mgr.getPlugin(mockPlugKey);
     assertSame(mpi, mpi2);
     assertEquals(1, mpi.getInitCtr());
+  }
+
+  public void testInitPluginRegistry() {
+    String n1 = "org.lockss.test.MockPlugin";
+    String n2 = ThrowingMockPlugin.class.getName();
+    assertEmpty(mgr.getRegisteredPlugins());
+    ConfigurationUtil.setFromArgs(PluginManager.PARAM_PLUGIN_REGISTRY,
+				  n1 + ";" + n2);
+    Plugin p1 = mgr.getPlugin(mgr.pluginKeyFromName(n1));
+    assertNotNull(p1);
+    assertTrue(p1.toString(), p1 instanceof MockPlugin);
+    Plugin p2 = mgr.getPlugin(mgr.pluginKeyFromName(n2));
+    assertNotNull(p2);
+    assertTrue(p2.toString(), p2 instanceof ThrowingMockPlugin);
+    assertEquals(2, mgr.getRegisteredPlugins().size());
+    ConfigurationUtil.setFromArgs(PluginManager.PARAM_PLUGIN_REGISTRY, n1);
+    assertEquals(1, mgr.getRegisteredPlugins().size());
+    assertNull(mgr.getPlugin(mgr.pluginKeyFromName(n2)));
+    assertNotNull(mgr.getPlugin(mgr.pluginKeyFromName(n1)));
+    assertTrue(mgr.getPlugin(mgr.pluginKeyFromName(n1)) instanceof MockPlugin);
   }
 
   public void testStop() throws Exception {
@@ -220,7 +244,7 @@ public class TestPluginManager extends LockssTestCase {
     } catch (ArchivalUnit.ConfigurationException e) {
     }
 
-    mpi.setRtEx(new NullPointerException("Should be caught"));
+    mpi.setRtEx(new NullPointerException("Should be caught. (May be logged)"));
     try {
       ArchivalUnit au2 = mgr.createAu(mpi, config);
       fail("createAU should have thrown ArchivalUnit.ConfigurationException");
@@ -260,7 +284,7 @@ public class TestPluginManager extends LockssTestCase {
     } catch (ArchivalUnit.ConfigurationException e) {
     }
 
-    mpi.setRtEx(new NullPointerException("Should be caught"));
+    mpi.setRtEx(new NullPointerException("Should be caught. (May be logged)"));
     try {
       mgr.configureAu(mpi, config, auid);
       fail("configureAU should have thrown ArchivalUnit.ConfigurationException");
@@ -439,7 +463,7 @@ public class TestPluginManager extends LockssTestCase {
   private static String wkey = "org|lockss|plugin|wrapper|WrappedPlugin";
 
   public void testWrappedAu() {
-    if (!WrapperState.isUsingWrapping()) {
+    if (WrapperState.isUsingWrapping()) {
       try {
         mgr.startService();
         String localConfig = p1a1param + MockPlugin.CONFIG_PROP_1 + "=val1\n" +

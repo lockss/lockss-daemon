@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.56 2003-12-06 01:32:34 eaalto Exp $
+ * $Id: PluginManager.java,v 1.57 2003-12-08 06:55:17 tlipkis Exp $
  */
 
 /*
@@ -51,13 +51,20 @@ public class PluginManager extends BaseLockssManager {
   private static String PARAM_PLUGIN_LOCATION =
     Configuration.PREFIX + "platform.pluginDir";
 
+  static String PARAM_PLUGIN_REGISTRY =
+    Configuration.PREFIX + "plugin.registry";
+
+  static final String AU_PARAM_WRAPPER = "reserved.wrapper";
+  public static final String AU_PARAM_DISABLED = "reserved.disabled";
+
   private static Logger log = Logger.getLogger("PluginMgr");
 
   private ConfigManager configMgr;
   private StatusService statusSvc;
   private String pluginDir = null;
 
-  private Map pluginMap = new HashMap(); //maps plugin keys(not ids) to plugins
+  // maps plugin key(not id) to plugin
+  private Map pluginMap = Collections.synchronizedMap(new HashMap());
   private Map auMap = new HashMap();
 
   public PluginManager() {
@@ -72,9 +79,8 @@ public class PluginManager extends BaseLockssManager {
     super.startService();
     configMgr = getDaemon().getConfigManager();
     statusSvc = getDaemon().getStatusService();
-    statusSvc.registerStatusAccessor("AUS", new Status(this));
-    initPluginRegistry();
-    resetConfig();
+    statusSvc.registerStatusAccessor("AUS", new Status());
+    resetConfig();   // causes setConfig to think previous config was empty
   }
 
   /**
@@ -90,25 +96,29 @@ public class PluginManager extends BaseLockssManager {
     super.stopService();
   }
 
-  Configuration prevAllPlugs = ConfigManager.EMPTY_CONFIGURATION;
+  Configuration currentAllPlugs = ConfigManager.EMPTY_CONFIGURATION;
 
   protected void setConfig(Configuration config, Configuration oldConfig,
 			   Set changedKeys) {
     pluginDir = config.get(PARAM_PLUGIN_LOCATION);
     // Don't load and start plugins until the daemon is running.
-    // Because we don't necessarily process the config, we must keep track
-    // of the previous config ourselves.
     if (isDaemonInited()) {
       Configuration allPlugs = config.getConfigTree(PARAM_AU_TREE);
       for (Iterator iter = allPlugs.nodeIterator(); iter.hasNext(); ) {
 	String pluginKey = (String)iter.next();
 	log.debug("Configuring plugin key: " + pluginKey);
 	Configuration pluginConf = allPlugs.getConfigTree(pluginKey);
-	Configuration prevPluginConf = prevAllPlugs.getConfigTree(pluginKey);
+	Configuration prevPluginConf =
+	  currentAllPlugs.getConfigTree(pluginKey);
 
 	configurePlugin(pluginKey, pluginConf, prevPluginConf);
       }
-      prevAllPlugs = allPlugs;
+      currentAllPlugs = allPlugs;
+
+      // process the plugin registry after configuring AUs
+      if (changedKeys.contains(PARAM_PLUGIN_REGISTRY)) {
+	initPluginRegistry(config.get(PARAM_PLUGIN_REGISTRY));
+      }
     }
   }
 
@@ -184,27 +194,20 @@ public class PluginManager extends BaseLockssManager {
     return (Plugin)pluginMap.get(pluginKey);
   }
 
-  static final String PARAM_WRAPPER = "reserved.wrapper";
-
   /**
    * Returns true if the reserved.wrapper key is true
    * @param auConf the Configuration
    * @return true if wrapped
    */
   private boolean isAuWrapped(Configuration auConf) {
-    try {
-      return WrapperState.isUsingWrapping() &&
-          auConf.getConfigTree("reserved").getBoolean("wrapper");
-    }
-    catch (Configuration.InvalidParam e) {
-      return false;
-    }
+    return WrapperState.isUsingWrapping() &&
+      auConf.getBoolean(AU_PARAM_WRAPPER, false);
   }
 
   private Configuration removeWrapper(Configuration auConf) {
     Configuration copy = auConf.copy();
-    if (copy.containsKey(PARAM_WRAPPER)) {
-      copy.remove(PARAM_WRAPPER);
+    if (copy.containsKey(AU_PARAM_WRAPPER)) {
+      copy.remove(AU_PARAM_WRAPPER);
     }
     return copy;
   }
@@ -213,54 +216,52 @@ public class PluginManager extends BaseLockssManager {
 			       Configuration oldPluginConf) {
     for (Iterator iter = pluginConf.nodeIterator(); iter.hasNext(); ) {
       String auKey = (String)iter.next();
-//      if (pluginOk) {
-	try {
-	  Configuration auConf = pluginConf.getConfigTree(auKey);
-	  Configuration oldAuConf = oldPluginConf.getConfigTree(auKey);
-	  if (!auConf.equals(oldAuConf)) {
-	    log.debug("Configuring AU id: " + auKey);
-            if (!isAuWrapped(auConf)) {
-                boolean pluginOk = ensurePluginLoaded(pluginKey);
-                if (pluginOk) {
-                  Plugin plugin = getPlugin(pluginKey);
-                  if (WrapperState.isWrappedPlugin(plugin)) {
-                    throw new ArchivalUnit.ConfigurationException(
-                    "An attempt was made to have load unwrapped " + auKey + " from plugin " + pluginKey + " which is already wrapped.");
-                  }
-                  configureAu(plugin, auConf, generateAuId(pluginKey, auKey));
-                } else {
-                  log.warning("Not configuring AU " + auKey);
-                }
-            } else {
-              if ((pluginMap.containsKey(pluginKey)) &&
-                    (!WrapperState.isWrappedPlugin(pluginMap.get(pluginKey)))) {
-                throw new ArchivalUnit.ConfigurationException(
-                  "An attempt was made to wrap AU " + auKey + " from plugin " + pluginKey + " which is already loaded.");
-              }
-              Plugin wrappedPlugin = WrapperState.retrieveWrappedPlugin(
-                pluginKey, theDaemon);
-              if (wrappedPlugin==null) {
-                log.warning("Not configuring AU " + auKey);
-                log.error("Error instantiating " + WrapperState.WRAPPED_PLUGIN_NAME);
-              } else {
-                setPlugin(pluginKey,wrappedPlugin);
-                Configuration wrappedAuConf = removeWrapper(auConf);
-                configureAu(wrappedPlugin, wrappedAuConf, generateAuId(
-                    pluginKey, auKey));
-              }
-            }
+      try {
+	Configuration auConf = pluginConf.getConfigTree(auKey);
+	Configuration oldAuConf = oldPluginConf.getConfigTree(auKey);
+	if (auConf.getBoolean(AU_PARAM_DISABLED, false)) {
+	  // tk should actually remove AU?
+	  log.debug("Not configuring disabled AU id: " + auKey);
+	} else if (!auConf.equals(oldAuConf)) {
+	  log.debug("Configuring AU id: " + auKey);
+	  if (!isAuWrapped(auConf)) {
+	    boolean pluginOk = ensurePluginLoaded(pluginKey);
+	    if (pluginOk) {
+	      Plugin plugin = getPlugin(pluginKey);
+	      if (WrapperState.isWrappedPlugin(plugin)) {
+		throw new ArchivalUnit.ConfigurationException("An attempt was made to have load unwrapped " + auKey + " from plugin " + pluginKey + " which is already wrapped.");
+	      }
+	      configureAu(plugin, auConf, generateAuId(pluginKey, auKey));
+	    } else {
+	      log.warning("Not configuring AU " + auKey);
+	    }
 	  } else {
-	    log.debug("Not configuring AU id: " + auKey +
-		      ", already configured");
+	    log.debug("Wrapping " + auKey);
+	    if ((pluginMap.containsKey(pluginKey)) &&
+		(!WrapperState.isWrappedPlugin(pluginMap.get(pluginKey)))) {
+	      throw new ArchivalUnit.ConfigurationException("An attempt was made to wrap AU " + auKey + " from plugin " + pluginKey + " which is already loaded.");
+	    }
+	    Plugin wrappedPlugin =
+	      WrapperState.retrieveWrappedPlugin(pluginKey, theDaemon);
+	    if (wrappedPlugin==null) {
+	      log.warning("Not configuring AU " + auKey);
+	      log.error("Error instantiating " +
+			WrapperState.WRAPPED_PLUGIN_NAME);
+	    } else {
+	      setPlugin(pluginKey,wrappedPlugin);
+	      Configuration wrappedAuConf = removeWrapper(auConf);
+	      configureAu(wrappedPlugin, wrappedAuConf,
+			  generateAuId(pluginKey, auKey));
+	    }
 	  }
-	} catch (ArchivalUnit.ConfigurationException e) {
-	  log.error("Failed to configure AU " + auKey, e);
-	} catch (Exception e) {
-	  log.error("Unexpected exception configuring AU " + auKey, e);
+	} else {
+	  log.debug("AU already configured, not reconfiguring: " + auKey);
 	}
-  /*    } else {
-	log.warning("Not configuring AU " + auKey);
-      }*/
+      } catch (ArchivalUnit.ConfigurationException e) {
+	log.error("Failed to configure AU " + auKey, e);
+      } catch (Exception e) {
+	log.error("Unexpected exception configuring AU " + auKey, e);
+      }
     }
   }
 
@@ -433,15 +434,38 @@ public class PluginManager extends BaseLockssManager {
   }
 
   /**
+   * Deactivate an AU
+   * @param au the ArchivalUnit to be deactivated
+   * @throws ArchivalUnit.ConfigurationException
+   * @throws IOException
+   */
+  public void deactivateAuConfiguration(ArchivalUnit au)
+      throws ArchivalUnit.ConfigurationException, IOException {
+    log.debug("Deactivating AU: " + au);
+    Configuration config = getStoredAuConfiguration(au);
+    config.put(AU_PARAM_DISABLED, "true");
+    updateAuConfigFile(au, config);
+  }
+
+  /**
    * Return the stored config info for an AU (from config file, not from
    * AU instance).
    * @param au the ArchivalUnit
    * @return the AU's Configuration, with unprefixed keys.
    */
   public Configuration getStoredAuConfiguration(ArchivalUnit au) {
+    return getStoredAuConfiguration(configKeyFromAuId(au.getAuId()));
+  }
+
+  /**
+   * Return the config tree for an AU key (from config file).
+   * @param aukey the AU's config key (<i>ie</i>,
+   * <code>configKeyFromAuId(auid)</code>)
+   * @return the AU's Configuration, with unprefixed keys.
+   */
+  public Configuration getStoredAuConfiguration(String aukey) {
     Configuration config = configMgr.readAuConfigFile();
-    String auid = au.getAuId();
-    String prefix = PARAM_AU_TREE + "." + configKeyFromAuId(auid);
+    String prefix = PARAM_AU_TREE + "." + aukey;
     return config.getConfigTree(prefix);
   }
 
@@ -506,9 +530,41 @@ public class PluginManager extends BaseLockssManager {
 
   // separate method so can be called by test code
   private void setPlugin(String pluginKey, Plugin plugin) {
-    log.debug3("PluginManager.setPlugin(" + pluginKey + ", " + plugin.getPluginName() + ")");
+    if (log.isDebug3()) {
+      log.debug3("PluginManager.setPlugin(" + pluginKey + ", " +
+		 plugin.getPluginName() + ")");
+    }
     pluginMap.put(pluginKey, plugin);
     titleMap = null;
+  }
+
+  /**
+   * Find the CachedUrlSet from a PollSpec.
+   * @param spec the PollSpec (from an incoming message)
+   * @return a CachedUrlSet for the plugin, au and URL in the spec, or
+   * null if au not present on this cache
+   */
+  public CachedUrlSet findCachedUrlSet(PollSpec spec) {
+    if (log.isDebug3()) log.debug3(this +".findCachedUrlSet2("+spec+")");
+    String auId = spec.getAuId();
+    ArchivalUnit au = getAuFromId(auId);
+    if (log.isDebug3()) log.debug3("au: " + au);
+    if (au == null) return null;
+    Plugin plugin = au.getPlugin();
+    String url = spec.getUrl();
+    CachedUrlSet cus;
+    if (AuUrl.isAuUrl(url)) {
+      cus = au.getAuCachedUrlSet();
+    } else if ((spec.getLwrBound()!=null) &&
+               (spec.getLwrBound().equals(PollSpec.SINGLE_NODE_LWRBOUND))) {
+      cus = plugin.makeCachedUrlSet(au, new SingleNodeCachedUrlSetSpec(url));
+    } else {
+      RangeCachedUrlSetSpec rcuss =
+	new RangeCachedUrlSetSpec(url, spec.getLwrBound(), spec.getUprBound());
+      cus = plugin.makeCachedUrlSet(au, rcuss);
+    }
+    if (log.isDebug3()) log.debug3("ret cus: " + cus);
+    return cus;
   }
 
   /**
@@ -569,70 +625,64 @@ public class PluginManager extends BaseLockssManager {
 
   Map buildTitleMap() {
     Map map = new org.apache.commons.collections.MultiHashMap();
-    Collection plugs = getRegisteredPlugins();
-    for (Iterator iter = plugs.iterator(); iter.hasNext();) {
-      Plugin p = (Plugin)iter.next();
-      Collection titles = p.getSupportedTitles();
-      for (Iterator iter2 = titles.iterator(); iter2.hasNext();) {
-	String title = (String)iter2.next();
-	map.put(title, p);
+    synchronized (pluginMap) {
+      for (Iterator iter = getRegisteredPlugins().iterator();
+	   iter.hasNext();) {
+	Plugin p = (Plugin)iter.next();
+	Collection titles = p.getSupportedTitles();
+	for (Iterator iter2 = titles.iterator(); iter2.hasNext();) {
+	  String title = (String)iter2.next();
+	  map.put(title, p);
+	}
       }
     }
     return map;
   }
 
-  /**
-   * Find the CachedUrlSet from a PollSpec.
-   * @param spec the PollSpec (from an incoming message)
-   * @return a CachedUrlSet for the plugin, au and URL in the spec, or
-   * null if au not present on this cache
-   */
-  public CachedUrlSet findCachedUrlSet(PollSpec spec) {
-    if (log.isDebug3()) log.debug3(this +".findCachedUrlSet2("+spec+")");
-    String auId = spec.getAuId();
-    ArchivalUnit au = getAuFromId(auId);
-    if (log.isDebug3()) log.debug3("au: " + au);
-    if (au == null) return null;
-    Plugin plugin = au.getPlugin();
-    String url = spec.getUrl();
-    CachedUrlSet cus;
-    if (AuUrl.isAuUrl(url)) {
-      cus = au.getAuCachedUrlSet();
-    } else if ((spec.getLwrBound()!=null) &&
-               (spec.getLwrBound().equals(PollSpec.SINGLE_NODE_LWRBOUND))) {
-      cus = plugin.makeCachedUrlSet(au, new SingleNodeCachedUrlSetSpec(url));
-    } else {
-      RangeCachedUrlSetSpec rcuss =
-	new RangeCachedUrlSetSpec(url, spec.getLwrBound(), spec.getUprBound());
-      cus = plugin.makeCachedUrlSet(au, rcuss);
+  /** Return a SortedMap mapping (human readable) plugin name to plugin
+   * instance */
+  public SortedMap getPluginNameMap() {
+    SortedMap pMap = new TreeMap();
+    synchronized (pluginMap) {
+      for (Iterator iter = getRegisteredPlugins().iterator();
+	   iter.hasNext(); ) {
+	Plugin p = (Plugin)iter.next();
+	pMap.put(p.getPluginName(), p);
+      }
     }
-    if (log.isDebug3()) log.debug3("ret cus: " + cus);
-    return cus;
+    return pMap;
   }
 
-  // Plugin registry
-  // List the plugins that should always be listed in UI menus.
-  // Other plugins that were loaded because of an configured AU will
-  // be included automatically
-  private String builtinPluginNames[] = {
-    "org.lockss.plugin.highwire.HighWirePlugin",
-    "org.lockss.plugin.projmuse.ProjectMusePlugin",
-    "org.lockss.plugin.acs.AcsPlugin",
-    "org.lockss.plugin.absinthe.AbsinthePlugin",
-    "org.lockss.plugin.emls.EmlsPlugin",
-    "org.lockss.plugin.ieee.IeeePlugin",
-    "org.lockss.plugin.histcoop.HistoryCooperativePlugin",
-    "org.lockss.plugin.othervoices.OtherVoicesPlugin"
-//     "org.lockss.plugin.simulated.SimulatedPlugin",
-  };
-
+  /** @return All plugins that have been registered.  <i>Ie</i>, that are
+   * either listed in org.lockss.plugin.registry, or were loaded by a
+   * configured AU */
   public Collection getRegisteredPlugins() {
     return pluginMap.values();
   }
 
-  void initPluginRegistry() {
-    for (int ix = 0; ix < builtinPluginNames.length; ix++) {
-      ensurePluginLoaded(pluginKeyFromName(builtinPluginNames[ix]));
+  // Synch the plugin registry with the plugins listed in names
+  void initPluginRegistry(String names) {
+    Collection newKeys = new HashSet();
+    List nameList = StringUtil.breakAt(names, ';', 0, true);
+    for (Iterator iter = nameList.iterator(); iter.hasNext(); ) {
+      String name = (String)iter.next();
+      String key = pluginKeyFromName(name);
+      ensurePluginLoaded(pluginKeyFromName(name));
+      newKeys.add(key);
+    }
+    // remove plugins that are no longer listed, unless they have one or
+    // more configured AUs
+    synchronized (pluginMap) {
+      for (Iterator iter = pluginMap.keySet().iterator(); iter.hasNext(); ) {
+	String name = (String)iter.next();
+	String key = pluginKeyFromName(name);
+	if (!newKeys.contains(key)) {
+	  Configuration tree = currentAllPlugs.getConfigTree(key);
+	  if (tree == null || tree.isEmpty()) {
+	    iter.remove();
+	  }
+	}	
+      }
     }
   }
 
@@ -652,12 +702,7 @@ public class PluginManager extends BaseLockssManager {
 					 ColumnDescriptor.TYPE_STRING)
 		    );
 
-    // need this because the statics above require this to be a nested,
-    // not inner class.
-    PluginManager mgr;
-
-    Status(PluginManager mgr) {
-      this.mgr = mgr;
+    Status() {
     }
 
     public List getColumnDescriptors(String key) {
@@ -666,7 +711,7 @@ public class PluginManager extends BaseLockssManager {
 
     public List getRows(String key) {
       List table = new ArrayList();
-      for (Iterator iter = mgr.getAllAus().iterator(); iter.hasNext();) {
+      for (Iterator iter = getAllAus().iterator(); iter.hasNext();) {
 	Map row = new HashMap();
 	ArchivalUnit au = (ArchivalUnit)iter.next();
 	row.put("au", au.getName());
