@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlackbirdArchivalUnit.java,v 1.14 2004-09-09 00:51:33 clairegriffin Exp $
+ * $Id: TestBlackbirdArchivalUnit.java,v 1.15 2004-09-27 22:38:42 smorabito Exp $
  */
 
 /*
@@ -35,6 +35,8 @@ package org.lockss.plugin.blackbird;
 import java.io.File;
 import java.net.URL;
 import java.util.Properties;
+
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.test.*;

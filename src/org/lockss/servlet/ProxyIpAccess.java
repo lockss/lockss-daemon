@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyIpAccess.java,v 1.6 2004-09-16 21:54:23 tlipkis Exp $
+ * $Id: ProxyIpAccess.java,v 1.7 2004-09-27 22:39:06 smorabito Exp $
  */
 
 /*
@@ -37,6 +37,8 @@ import java.util.*;
 import org.mortbay.html.*;
 import org.lockss.app.*;
 import org.lockss.util.*;
+import org.lockss.config.ConfigManager;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.proxy.*;
 

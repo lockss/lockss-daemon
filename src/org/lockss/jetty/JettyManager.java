@@ -1,5 +1,5 @@
 /*
- * $Id: JettyManager.java,v 1.15 2004-09-16 21:52:13 tlipkis Exp $
+ * $Id: JettyManager.java,v 1.16 2004-09-27 22:39:13 smorabito Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.jetty;
 import java.util.*;
 import org.lockss.app.*;
 import org.lockss.util.*;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.mortbay.http.*;
 import org.mortbay.util.Code;

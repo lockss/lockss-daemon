@@ -1,5 +1,5 @@
 /*
- * $Id: TestEmlsArchivalUnit.java,v 1.11 2004-09-09 00:51:34 clairegriffin Exp $
+ * $Id: TestEmlsArchivalUnit.java,v 1.12 2004-09-27 22:38:41 smorabito Exp $
  */
 
 /*
@@ -29,6 +29,8 @@ package org.lockss.plugin.emls;
 import java.io.File;
 import java.net.URL;
 import java.util.Properties;
+
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.test.*;

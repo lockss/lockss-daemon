@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.189 2004-09-22 23:50:20 clairegriffin Exp $
+ * $Id: NodeManagerImpl.java,v 1.190 2004-09-27 22:39:05 smorabito Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import org.lockss.poller.*;
 import org.lockss.plugin.*;
 import org.lockss.protocol.*;
 import org.lockss.repository.*;
+import org.lockss.config.Configuration;
 import org.lockss.crawler.CrawlManager;
 import org.lockss.alert.*;
 import java.util.ArrayList;

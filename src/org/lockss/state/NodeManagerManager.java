@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerManager.java,v 1.1 2004-08-22 02:05:50 tlipkis Exp $
+ * $Id: NodeManagerManager.java,v 1.2 2004-09-27 22:39:05 smorabito Exp $
  */
 
 /*
@@ -27,6 +27,8 @@
 package org.lockss.state;
 
 import java.util.*;
+
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
 import org.lockss.plugin.*;

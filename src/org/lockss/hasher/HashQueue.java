@@ -1,5 +1,5 @@
 /*
- * $Id: HashQueue.java,v 1.44 2004-08-18 00:14:59 tlipkis Exp $
+ * $Id: HashQueue.java,v 1.45 2004-09-27 22:39:14 smorabito Exp $
  */
 
 /*
@@ -40,6 +40,8 @@ import java.util.*;
 import java.text.*;
 import java.math.*;
 import java.security.MessageDigest;
+
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
 import org.lockss.util.*;

@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.54 2004-09-01 23:36:51 clairegriffin Exp $
+ * $Id: MockArchivalUnit.java,v 1.55 2004-09-27 22:38:35 smorabito Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.test;
 import java.io.*;
 import java.util.*;
 import org.lockss.daemon.*;
+import org.lockss.config.Configuration;
 import org.lockss.crawler.*;
 import org.lockss.util.*;
 import org.lockss.state.*;

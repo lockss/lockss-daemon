@@ -1,5 +1,5 @@
 /*
- * $Id: Plugin.java,v 1.21 2004-02-03 02:03:13 clairegriffin Exp $
+ * $Id: Plugin.java,v 1.22 2004-09-27 22:39:12 smorabito Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.plugin;
 import java.util.*;
 
 import org.lockss.app.*;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 
 /**

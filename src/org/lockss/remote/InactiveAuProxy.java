@@ -1,5 +1,5 @@
 /*
- * $Id: InactiveAuProxy.java,v 1.2 2004-01-12 06:19:51 tlipkis Exp $
+ * $Id: InactiveAuProxy.java,v 1.3 2004-09-27 22:39:08 smorabito Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.remote;
 import java.io.*;
 import java.util.*;
 import org.lockss.app.*;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;

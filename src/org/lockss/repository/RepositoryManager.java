@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryManager.java,v 1.1 2004-08-22 02:05:51 tlipkis Exp $
+ * $Id: RepositoryManager.java,v 1.2 2004-09-27 22:39:07 smorabito Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.util.*;
 import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 
 /**

@@ -1,5 +1,5 @@
 /*
- * $Id: AuTreeWalkManager.java,v 1.5 2004-09-10 17:04:40 tlipkis Exp $
+ * $Id: AuTreeWalkManager.java,v 1.6 2004-09-27 22:39:06 smorabito Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import EDU.oswego.cs.dl.util.concurrent.*;
 import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.scheduler.*;
 

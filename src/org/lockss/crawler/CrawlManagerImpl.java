@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.72 2004-08-22 02:05:57 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.73 2004-09-27 22:39:15 smorabito Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.crawler;
 
 import java.util.*;
 import org.apache.commons.collections.*;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
 import org.lockss.state.NodeState;

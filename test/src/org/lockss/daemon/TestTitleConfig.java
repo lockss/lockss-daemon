@@ -1,5 +1,5 @@
 /*
- * $Id: TestTitleConfig.java,v 1.3 2004-04-27 19:37:23 tlipkis Exp $
+ * $Id: TestTitleConfig.java,v 1.4 2004-09-27 22:38:45 smorabito Exp $
  */
 
 /*
@@ -33,6 +33,9 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.daemon;
 
 import java.util.*;
+
+import org.lockss.config.ConfigManager;
+import org.lockss.config.Configuration;
 import org.lockss.test.*;
 import org.lockss.util.*;
 

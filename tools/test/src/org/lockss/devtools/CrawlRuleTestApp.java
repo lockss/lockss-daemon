@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRuleTestApp.java,v 1.3 2004-07-23 16:45:54 tlipkis Exp $
+ * $Id: CrawlRuleTestApp.java,v 1.4 2004-09-27 22:38:32 smorabito Exp $
  */
 
 /*
@@ -33,6 +33,9 @@ package org.lockss.devtools;
 
 import java.io.*;
 import java.util.*;
+
+import org.lockss.config.ConfigManager;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import gnu.regexp.*;

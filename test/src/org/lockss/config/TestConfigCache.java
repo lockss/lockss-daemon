@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigCache.java,v 1.1 2004-09-27 22:10:13 smorabito Exp $
+ * $Id: TestConfigCache.java,v 1.2 2004-09-27 22:39:01 smorabito Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import org.lockss.util.*;
 import org.lockss.util.TestXmlPropertyLoader;
 
 /**
- * Test class for <code>org.lockss.daemon.ConfigCache</code>
+ * Test class for <code>org.lockss.config.ConfigCache</code>
  */
 
 public class TestConfigCache extends LockssTestCase {

@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManager.java,v 1.47 2004-09-22 17:42:29 dshr Exp $
+ * $Id: IdentityManager.java,v 1.48 2004-09-27 22:39:09 smorabito Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.net.*;
 import java.util.*;
 import org.lockss.plugin.*;
 import org.lockss.state.*;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
 import org.lockss.util.*;

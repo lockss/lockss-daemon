@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlTagFilter.java,v 1.4 2004-04-05 17:08:06 tlipkis Exp $
+ * $Id: HtmlTagFilter.java,v 1.5 2004-09-27 22:39:14 smorabito Exp $
  */
 
 /*
@@ -36,7 +36,7 @@ import java.io.*;
 import java.util.*;
 import org.apache.commons.collections.*;
 import org.lockss.util.*;
-import org.lockss.daemon.Configuration;
+import org.lockss.config.Configuration;
 
 /**
  * This class is used to filter all content from a reader between two string

@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinablePlugin.java,v 1.7 2004-09-22 00:16:07 troberts Exp $
+ * $Id: TestDefinablePlugin.java,v 1.8 2004-09-27 22:38:41 smorabito Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ package org.lockss.plugin.definable;
 
 import org.lockss.test.*;
 import org.lockss.plugin.*;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import java.util.*;
 import org.lockss.util.*;

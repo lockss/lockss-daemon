@@ -1,5 +1,5 @@
 /*
- * $Id: TestWrapperStateOn.java,v 1.3 2004-06-10 22:03:54 tyronen Exp $
+ * $Id: TestWrapperStateOn.java,v 1.4 2004-09-27 22:39:17 smorabito Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.plugin;
 import java.util.*;
 import java.io.*;
 import org.lockss.app.*;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.test.*;
 import org.lockss.plugin.wrapper.*;

@@ -1,5 +1,5 @@
 /*
- * $Id: MailService.java,v 1.1 2004-07-12 06:11:23 tlipkis Exp $
+ * $Id: MailService.java,v 1.2 2004-09-27 22:39:13 smorabito Exp $
  *
 
 Copyright (c) 2000-2004 Board of Trustees of Leland Stanford Jr. University,
@@ -34,6 +34,7 @@ import java.net.*;
 import java.util.*;
 import org.lockss.app.*;
 import org.lockss.util.*;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 
 /** MailService is the interface to a mail system. */

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.80 2004-09-21 00:03:32 clairegriffin Exp $
+ * $Id: BaseArchivalUnit.java,v 1.81 2004-09-27 22:39:12 smorabito Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.text.*;
 import java.util.*;
 
 import org.apache.commons.collections.*;
+import org.lockss.config.Configuration;
 import org.lockss.crawler.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;

@@ -30,6 +30,8 @@ package org.lockss.util;
 import java.util.*;
 import java.net.*;
 import java.io.*;
+
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 
 public class SyslogTarget implements LogTarget{

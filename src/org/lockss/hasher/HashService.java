@@ -1,5 +1,5 @@
 /*
- * $Id: HashService.java,v 1.21 2004-01-13 01:33:35 tlipkis Exp $
+ * $Id: HashService.java,v 1.22 2004-09-27 22:39:13 smorabito Exp $
  */
 
 /*
@@ -34,6 +34,8 @@ package org.lockss.hasher;
 import java.io.*;
 import java.util.*;
 import java.security.MessageDigest;
+
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
 import org.lockss.util.*;

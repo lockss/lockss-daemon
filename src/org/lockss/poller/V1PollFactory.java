@@ -1,5 +1,5 @@
 /*
- * $Id: V1PollFactory.java,v 1.4 2004-09-23 17:38:44 dshr Exp $
+ * $Id: V1PollFactory.java,v 1.5 2004-09-27 22:39:10 smorabito Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.security.*;
 import java.util.*;
 
 import org.lockss.app.*;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.protocol.*;

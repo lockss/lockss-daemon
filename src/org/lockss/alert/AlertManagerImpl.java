@@ -1,5 +1,5 @@
 /*
- * $Id: AlertManagerImpl.java,v 1.8 2004-08-22 02:05:57 tlipkis Exp $
+ * $Id: AlertManagerImpl.java,v 1.9 2004-09-27 22:39:16 smorabito Exp $
  *
 
  Copyright (c) 2000-2004 Board of Trustees of Leland Stanford Jr. University,
@@ -34,6 +34,8 @@ import java.net.*;
 import java.util.*;
 import org.lockss.app.*;
 import org.lockss.util.*;
+import org.lockss.config.ConfigManager;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 
 /**

@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArchivalUnit.java,v 1.22 2004-09-20 18:54:37 clairegriffin Exp $
+ * $Id: TestBaseArchivalUnit.java,v 1.23 2004-09-27 22:38:42 smorabito Exp $
  */
 
 /*
@@ -38,7 +38,7 @@ import org.lockss.daemon.*;
 import org.lockss.test.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
-import org.lockss.daemon.Configuration;
+import org.lockss.config.Configuration;
 import org.lockss.crawler.*;
 import org.lockss.plugin.ArchivalUnit.*;
 import java.net.*;

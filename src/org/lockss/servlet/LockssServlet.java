@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.47 2004-08-12 19:10:23 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.48 2004-09-27 22:39:06 smorabito Exp $
  */
 
 /*
@@ -45,6 +45,7 @@ import org.mortbay.tools.*;
 import org.mortbay.servlet.MultiPartRequest;
 import org.lockss.app.*;
 import org.lockss.util.*;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 
 /** Abstract base class for LOCKSS servlets

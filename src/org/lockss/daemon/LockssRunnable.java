@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRunnable.java,v 1.1 2004-08-21 06:48:09 tlipkis Exp $
+ * $Id: LockssRunnable.java,v 1.2 2004-09-27 22:39:14 smorabito Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -32,6 +32,7 @@ package org.lockss.daemon;
 import java.io.*;
 import java.util.*;
 import org.lockss.app.*;
+import org.lockss.config.Configuration;
 import org.lockss.util.*;
 
 /** LockssRunnable abstracts out common features of LOCKSS daemon threads,

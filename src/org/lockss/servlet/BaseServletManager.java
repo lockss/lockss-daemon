@@ -1,5 +1,5 @@
 /*
- * $Id: BaseServletManager.java,v 1.3 2004-08-22 02:05:50 tlipkis Exp $
+ * $Id: BaseServletManager.java,v 1.4 2004-09-27 22:39:06 smorabito Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 import org.lockss.app.*;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.jetty.*;

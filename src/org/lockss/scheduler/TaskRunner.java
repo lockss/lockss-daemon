@@ -1,5 +1,5 @@
 /*
- * $Id: TaskRunner.java,v 1.25 2004-09-10 17:04:05 tlipkis Exp $
+ * $Id: TaskRunner.java,v 1.26 2004-09-27 22:39:07 smorabito Exp $
  */
 
 /*
@@ -39,6 +39,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.scheduler;
 import java.io.*;
 import java.util.*;
+
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
 import org.lockss.util.*;

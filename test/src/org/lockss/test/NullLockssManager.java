@@ -1,5 +1,5 @@
 /*
- * $Id: NullLockssManager.java,v 1.3 2004-08-02 02:59:35 tlipkis Exp $
+ * $Id: NullLockssManager.java,v 1.4 2004-09-27 22:38:34 smorabito Exp $
  */
 
 /*
@@ -33,7 +33,7 @@ package org.lockss.test;
 
 import java.util.Set;
 import org.lockss.app.*;
-import org.lockss.daemon.Configuration;
+import org.lockss.config.Configuration;
 
 /**
  * Null implementation of LockssManager

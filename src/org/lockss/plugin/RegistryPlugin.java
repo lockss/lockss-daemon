@@ -1,5 +1,5 @@
 /*
- * $Id: RegistryPlugin.java,v 1.2 2004-08-18 00:14:57 tlipkis Exp $
+ * $Id: RegistryPlugin.java,v 1.3 2004-09-27 22:39:12 smorabito Exp $
  */
 
 /*
@@ -32,6 +32,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin;
 
 import java.util.*;
+
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.base.BasePlugin;
 import org.lockss.plugin.ArchivalUnit;

@@ -1,5 +1,5 @@
 /*
- * $Id: TitleParams.java,v 1.3 2004-02-18 17:02:09 tlipkis Exp $
+ * $Id: TitleParams.java,v 1.4 2004-09-27 22:39:02 smorabito Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 import java.io.*;
 import java.util.*;
 import org.lockss.util.*;
+import org.lockss.config.ConfigManager;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.test.*;

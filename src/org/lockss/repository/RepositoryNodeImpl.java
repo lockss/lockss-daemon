@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.56 2004-06-17 06:17:26 eaalto Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.57 2004-09-27 22:39:07 smorabito Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.*;
 import java.util.*;
 import java.net.MalformedURLException;
 import org.lockss.util.*;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.AuUrl;
 

@@ -1,5 +1,5 @@
 /*
- * $Id: LockssThread.java,v 1.10 2004-08-02 03:08:00 tlipkis Exp $
+ * $Id: LockssThread.java,v 1.11 2004-09-27 22:39:14 smorabito Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -32,6 +32,7 @@ package org.lockss.daemon;
 import java.io.*;
 import java.util.*;
 import org.lockss.app.*;
+import org.lockss.config.Configuration;
 import org.lockss.util.*;
 
 /** LockssThread abstracts out common features of LOCKSS daemon threads,

@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.48 2004-09-09 00:51:35 clairegriffin Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.49 2004-09-27 22:38:38 smorabito Exp $
  */
 
 /*
@@ -35,11 +35,12 @@ package org.lockss.plugin.simulated;
 import java.net.*;
 import java.util.*;
 import java.io.File;
+
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
-import org.lockss.daemon.Configuration;
 
 /**
  * This is ArchivalUnit of the simulated plugin, used for testing purposes.

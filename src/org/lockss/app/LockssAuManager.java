@@ -1,5 +1,5 @@
 /*
- * $Id: LockssAuManager.java,v 1.2 2004-08-02 03:03:42 tlipkis Exp $
+ * $Id: LockssAuManager.java,v 1.3 2004-09-27 22:39:15 smorabito Exp $
  */
 
 /*
@@ -31,7 +31,7 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.app;
 
-import org.lockss.daemon.Configuration;
+import org.lockss.config.Configuration;
 import org.lockss.plugin.ArchivalUnit;
 
 /**

@@ -1,5 +1,5 @@
 /*
- * $Id: MockNodeManager.java,v 1.18 2004-08-21 06:52:49 tlipkis Exp $
+ * $Id: MockNodeManager.java,v 1.19 2004-09-27 22:38:34 smorabito Exp $
  */
 
 /*
@@ -33,6 +33,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.test;
 
 import java.util.*;
+
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.poller.*;

@@ -1,5 +1,5 @@
 /*
- * $Id: Alert.java,v 1.3 2004-08-09 02:54:33 tlipkis Exp $
+ * $Id: Alert.java,v 1.4 2004-09-27 22:39:16 smorabito Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.*;
 import java.net.*;
 import java.text.*;
 import org.lockss.util.*;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 

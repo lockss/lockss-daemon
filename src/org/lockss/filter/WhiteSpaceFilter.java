@@ -1,5 +1,5 @@
 /*
- * $Id: WhiteSpaceFilter.java,v 1.4 2004-08-19 00:02:19 clairegriffin Exp $
+ * $Id: WhiteSpaceFilter.java,v 1.5 2004-09-27 22:39:14 smorabito Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.filter;
 import java.util.*;
 import java.io.*;
 import org.lockss.util.*;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 
 /** A FilterInputStream that canonicalizes white space.

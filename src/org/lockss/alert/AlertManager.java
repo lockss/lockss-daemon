@@ -1,5 +1,5 @@
 /*
- * $Id: AlertManager.java,v 1.1 2004-07-12 06:09:41 tlipkis Exp $
+ * $Id: AlertManager.java,v 1.2 2004-09-27 22:39:16 smorabito Exp $
  *
 
 Copyright (c) 2000-2004 Board of Trustees of Leland Stanford Jr. University,
@@ -34,6 +34,7 @@ import java.net.*;
 import java.util.*;
 import org.lockss.app.*;
 import org.lockss.util.*;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 
 /** AlertManager handles alert conditions, sending mail and maintaining a

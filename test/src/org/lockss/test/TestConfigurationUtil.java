@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigurationUtil.java,v 1.2 2003-12-23 01:39:16 tlipkis Exp $
+ * $Id: TestConfigurationUtil.java,v 1.3 2004-09-27 22:38:34 smorabito Exp $
  */
 
 /*
@@ -36,6 +36,8 @@ import java.util.*;
 import java.io.*;
 import java.net.*;
 import org.lockss.util.*;
+import org.lockss.config.ConfigManager;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.test.*;
 

@@ -1,5 +1,5 @@
 /*
- * $Id: SmtpClient.java,v 1.2 2004-08-09 02:55:34 tlipkis Exp $
+ * $Id: SmtpClient.java,v 1.3 2004-09-27 22:39:13 smorabito Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.net.*;
 import sun.net.TransferProtocolClient;
 import sun.net.NetworkClient;
 import org.lockss.util.*;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 
 /**

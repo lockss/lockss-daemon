@@ -1,5 +1,5 @@
 /*
- * $Id: AlertActionMail.java,v 1.4 2004-08-09 02:54:59 tlipkis Exp $
+ * $Id: AlertActionMail.java,v 1.5 2004-09-27 22:39:16 smorabito Exp $
  */
 
 /*
@@ -36,6 +36,8 @@ import java.util.*;
 import java.text.*;
 
 import org.lockss.app.*;
+import org.lockss.config.ConfigManager;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.mail.*;
 import org.lockss.util.*;

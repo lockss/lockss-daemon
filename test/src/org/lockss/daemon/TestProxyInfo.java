@@ -1,5 +1,5 @@
 /*
- * $Id: TestProxyInfo.java,v 1.6 2004-06-07 19:19:17 tlipkis Exp $
+ * $Id: TestProxyInfo.java,v 1.7 2004-09-27 22:38:45 smorabito Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.daemon;
 import java.io.IOException;
 import java.util.*;
 import org.lockss.app.*;
+import org.lockss.config.ConfigManager;
 import org.lockss.util.*;
 import org.lockss.protocol.*;
 import org.lockss.plugin.*;

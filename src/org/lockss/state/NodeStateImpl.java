@@ -1,5 +1,5 @@
 /*
- * $Id: NodeStateImpl.java,v 1.25 2004-04-01 02:44:32 eaalto Exp $
+ * $Id: NodeStateImpl.java,v 1.26 2004-09-27 22:39:05 smorabito Exp $
  */
 
 /*
@@ -37,7 +37,7 @@ import java.util.*;
 import org.lockss.util.*;
 import org.lockss.app.LockssDaemon;
 import org.lockss.plugin.CachedUrlSet;
-import org.lockss.daemon.Configuration;
+import org.lockss.config.Configuration;
 
 /**
  * NodeState contains the current state information for a node, as well as the

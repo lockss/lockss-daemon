@@ -1,5 +1,5 @@
 /*
- * $Id: NewContentCrawler.java,v 1.36 2004-09-22 02:45:13 tlipkis Exp $
+ * $Id: NewContentCrawler.java,v 1.37 2004-09-27 22:39:15 smorabito Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.net.*;
 import java.io.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;

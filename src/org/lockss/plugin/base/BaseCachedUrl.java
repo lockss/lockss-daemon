@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.14 2004-08-19 00:02:19 clairegriffin Exp $
+ * $Id: BaseCachedUrl.java,v 1.15 2004-09-27 22:39:12 smorabito Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.base;
 import java.io.*;
 import org.lockss.util.*;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.repository.*;

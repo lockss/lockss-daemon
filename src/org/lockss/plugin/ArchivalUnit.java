@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.29 2004-09-02 01:23:22 troberts Exp $
+ * $Id: ArchivalUnit.java,v 1.30 2004-09-27 22:39:12 smorabito Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin;
 import java.util.*;
 
+import org.lockss.config.Configuration;
 import org.lockss.crawler.*;
 import org.lockss.daemon.*;
 import org.lockss.state.*;

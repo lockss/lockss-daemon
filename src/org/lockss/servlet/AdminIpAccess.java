@@ -1,5 +1,5 @@
 /*
- * $Id: AdminIpAccess.java,v 1.2 2003-07-30 05:37:47 tlipkis Exp $
+ * $Id: AdminIpAccess.java,v 1.3 2004-09-27 22:39:06 smorabito Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.servlet;
 
+import org.lockss.config.ConfigManager;
 import org.lockss.daemon.*;
 
 /** Display and update admin UI IP access control lists.

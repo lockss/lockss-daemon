@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.28 2004-09-23 03:37:02 tlipkis Exp $
+ * $Id: ProxyHandler.java,v 1.29 2004-09-27 22:39:09 smorabito Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.28 2004-09-23 03:37:02 tlipkis Exp $
+// $Id: ProxyHandler.java,v 1.29 2004-09-27 22:39:09 smorabito Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -52,6 +52,7 @@ import org.mortbay.util.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.app.*;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.apache.commons.httpclient.util.*;

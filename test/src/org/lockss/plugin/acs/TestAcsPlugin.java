@@ -1,5 +1,5 @@
 /*
- * $Id: TestAcsPlugin.java,v 1.13 2004-03-01 06:10:41 clairegriffin Exp $
+ * $Id: TestAcsPlugin.java,v 1.14 2004-09-27 22:38:42 smorabito Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.Properties;
 import org.lockss.test.*;
 import org.lockss.util.ListUtil;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.definable.*;
 

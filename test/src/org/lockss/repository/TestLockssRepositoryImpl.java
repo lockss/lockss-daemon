@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.53 2004-08-22 02:05:49 tlipkis Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.54 2004-09-27 22:38:35 smorabito Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.*;
 import java.util.*;
 import java.net.*;
 import org.lockss.test.*;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;

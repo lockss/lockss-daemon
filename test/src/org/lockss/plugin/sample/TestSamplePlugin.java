@@ -1,5 +1,5 @@
 /*
- * $Id: TestSamplePlugin.java,v 1.4 2004-01-27 04:07:05 tlipkis Exp $
+ * $Id: TestSamplePlugin.java,v 1.5 2004-09-27 22:38:38 smorabito Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.Properties;
 import org.lockss.test.*;
 import org.lockss.util.ListUtil;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 
 public class TestSamplePlugin extends LockssTestCase {

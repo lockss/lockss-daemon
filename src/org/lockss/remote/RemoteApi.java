@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.16 2004-09-07 07:26:04 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.17 2004-09-27 22:39:08 smorabito Exp $
  */
 
 /*
@@ -35,6 +35,8 @@ package org.lockss.remote;
 import java.io.*;
 import java.util.*;
 import org.lockss.app.*;
+import org.lockss.config.ConfigManager;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.repository.*;

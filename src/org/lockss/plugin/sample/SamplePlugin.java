@@ -1,5 +1,5 @@
 /*
- * $Id: SamplePlugin.java,v 1.7 2004-09-01 23:36:50 clairegriffin Exp $
+ * $Id: SamplePlugin.java,v 1.8 2004-09-27 22:39:11 smorabito Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.sample;
 
 import org.lockss.app.*;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.definable.*;

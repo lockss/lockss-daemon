@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.41 2004-07-23 20:57:05 smorabito Exp $
+ * $Id: DaemonStatus.java,v 1.42 2004-09-27 22:39:06 smorabito Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.util.*;
 import java.text.*;
 import org.mortbay.html.*;
 import org.lockss.util.*;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
 import org.lockss.plugin.*;

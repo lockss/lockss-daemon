@@ -1,5 +1,5 @@
 /*
- * $Id: SampleArchivalUnit.java,v 1.10 2004-09-09 00:51:32 clairegriffin Exp $
+ * $Id: SampleArchivalUnit.java,v 1.11 2004-09-27 22:39:11 smorabito Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.plugin.sample;
 import java.net.*;
 import java.util.*;
 
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.ArchivalUnit.*;

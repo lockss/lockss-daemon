@@ -1,5 +1,5 @@
 /*
- * $Id: TinyUi.java,v 1.5 2004-08-18 00:14:54 tlipkis Exp $
+ * $Id: TinyUi.java,v 1.6 2004-09-27 22:39:06 smorabito Exp $
  */
 
 /*
@@ -36,6 +36,8 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 import org.lockss.app.*;
+import org.lockss.config.ConfigManager;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.jetty.*;

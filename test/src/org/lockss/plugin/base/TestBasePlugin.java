@@ -1,5 +1,5 @@
 /*
- * $Id: TestBasePlugin.java,v 1.7 2004-09-21 21:24:59 dshr Exp $
+ * $Id: TestBasePlugin.java,v 1.8 2004-09-27 22:38:42 smorabito Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.plugin.base;
 import java.io.*;
 import java.util.*;
 import org.lockss.app.*;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.test.*;
 import org.lockss.plugin.*;

@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.20 2004-09-20 14:20:38 dshr Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.21 2004-09-27 22:39:06 smorabito Exp $
  */
 
 /*
@@ -28,6 +28,8 @@ package org.lockss.state;
 
 import java.util.*;
 import java.net.MalformedURLException;
+
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
 import org.lockss.plugin.*;

@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWirePlugin.java,v 1.25 2004-07-29 23:14:56 troberts Exp $
+ * $Id: TestHighWirePlugin.java,v 1.26 2004-09-27 22:38:40 smorabito Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.util.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.ArchivalUnit.*;
 import org.lockss.plugin.definable.*;

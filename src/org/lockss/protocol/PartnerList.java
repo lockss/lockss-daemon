@@ -1,5 +1,5 @@
 /*
- * $Id: PartnerList.java,v 1.22 2004-09-22 17:42:30 dshr Exp $
+ * $Id: PartnerList.java,v 1.23 2004-09-27 22:39:09 smorabito Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 import org.lockss.util.*;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.apache.commons.collections.LRUMap;
 

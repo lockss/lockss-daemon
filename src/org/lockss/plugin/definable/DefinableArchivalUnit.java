@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.18 2004-09-22 23:50:19 clairegriffin Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.19 2004-09-27 22:39:11 smorabito Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ package org.lockss.plugin.definable;
 import java.net.*;
 import java.util.*;
 
+import org.lockss.config.Configuration;
 import org.lockss.crawler.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;

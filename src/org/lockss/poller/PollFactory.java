@@ -1,5 +1,5 @@
 /*
-* $Id: PollFactory.java,v 1.2 2004-09-23 17:38:43 dshr Exp $
+* $Id: PollFactory.java,v 1.3 2004-09-27 22:39:10 smorabito Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ package org.lockss.poller;
 
 import org.lockss.protocol.*;
 import org.lockss.util.*;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 

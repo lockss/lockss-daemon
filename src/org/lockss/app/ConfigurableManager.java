@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurableManager.java,v 1.2 2004-09-07 07:26:05 tlipkis Exp $
+ * $Id: ConfigurableManager.java,v 1.3 2004-09-27 22:39:16 smorabito Exp $
  */
 
 /*
@@ -31,6 +31,7 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.app;
 
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 
 /** Managers that implement this interface will have a

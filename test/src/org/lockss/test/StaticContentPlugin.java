@@ -1,5 +1,5 @@
 /*
- * $Id: StaticContentPlugin.java,v 1.24 2004-03-09 23:37:52 tlipkis Exp $
+ * $Id: StaticContentPlugin.java,v 1.25 2004-09-27 22:38:34 smorabito Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.*;
 import java.net.*;
 import java.security.MessageDigest;
 import org.lockss.app.*;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;

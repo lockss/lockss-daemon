@@ -1,5 +1,5 @@
 /*
- * $Id: HashSvcSchedImpl.java,v 1.14 2004-08-22 02:05:55 tlipkis Exp $
+ * $Id: HashSvcSchedImpl.java,v 1.15 2004-09-27 22:39:13 smorabito Exp $
  */
 
 /*
@@ -36,6 +36,8 @@ import java.util.*;
 import java.text.*;
 import java.math.*;
 import java.security.MessageDigest;
+
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
 import org.lockss.scheduler.*;

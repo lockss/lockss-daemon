@@ -1,5 +1,5 @@
 /*
- * $Id: TestAbsintheArchivalUnit.java,v 1.12 2004-09-09 00:51:32 clairegriffin Exp $
+ * $Id: TestAbsintheArchivalUnit.java,v 1.13 2004-09-27 22:38:43 smorabito Exp $
  */
 
 /*
@@ -29,6 +29,8 @@ package org.lockss.plugin.absinthe;
 import java.io.File;
 import java.net.URL;
 import java.util.Properties;
+
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.test.*;

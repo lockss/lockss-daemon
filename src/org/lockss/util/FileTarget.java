@@ -1,5 +1,5 @@
 /*
- * $Id: FileTarget.java,v 1.5 2003-06-20 22:34:53 claire Exp $
+ * $Id: FileTarget.java,v 1.6 2004-09-27 22:39:04 smorabito Exp $
  */
 
 /*
@@ -34,6 +34,8 @@ package org.lockss.util;
 
 import java.text.*;
 import java.io.*;
+
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 
 /** A <code>LogTarget</code> implementation that outputs to a file, which

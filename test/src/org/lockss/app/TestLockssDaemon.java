@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssDaemon.java,v 1.7 2004-09-14 23:37:19 smorabito Exp $
+ * $Id: TestLockssDaemon.java,v 1.8 2004-09-27 22:39:02 smorabito Exp $
  */
 
 /*
@@ -35,6 +35,8 @@ package org.lockss.app;
 import java.util.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
+import org.lockss.config.ConfigManager;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 

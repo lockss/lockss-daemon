@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.54 2004-08-22 02:05:50 tlipkis Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.55 2004-09-27 22:39:06 smorabito Exp $
  */
 
 /*
@@ -41,7 +41,7 @@ import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
 import org.lockss.repository.*;
-import org.lockss.daemon.Configuration;
+import org.lockss.config.Configuration;
 import org.lockss.protocol.*;
 
 /**

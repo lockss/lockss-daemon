@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryStatus.java,v 1.12 2004-09-01 02:24:11 tlipkis Exp $
+ * $Id: LockssRepositoryStatus.java,v 1.13 2004-09-27 22:39:07 smorabito Exp $
  */
 
 /*
@@ -28,6 +28,9 @@ package org.lockss.repository;
 
 import java.util.*;
 import java.io.*;
+
+import org.lockss.config.ConfigManager;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
 import org.lockss.plugin.*;

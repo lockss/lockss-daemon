@@ -1,5 +1,5 @@
 /*
- * $Id: TestOtherVoicesPlugin.java,v 1.9 2004-03-01 06:10:42 clairegriffin Exp $
+ * $Id: TestOtherVoicesPlugin.java,v 1.10 2004-09-27 22:38:39 smorabito Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.plugin.othervoices;
 import java.net.*;
 import java.util.Properties;
 import org.lockss.test.*;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.util.ListUtil;
 import org.lockss.plugin.ArchivalUnit;

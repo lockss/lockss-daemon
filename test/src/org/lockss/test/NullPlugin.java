@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.63 2004-09-23 03:38:03 tlipkis Exp $
+ * $Id: NullPlugin.java,v 1.64 2004-09-27 22:38:34 smorabito Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.security.*;
 import java.util.*;
 
 import org.lockss.app.*;
+import org.lockss.config.Configuration;
 import org.lockss.crawler.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;

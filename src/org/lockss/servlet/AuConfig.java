@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.30 2004-08-18 07:09:51 tlipkis Exp $
+ * $Id: AuConfig.java,v 1.31 2004-09-27 22:39:06 smorabito Exp $
  */
 
 /*
@@ -44,6 +44,8 @@ import org.mortbay.servlet.MultiPartRequest;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
 import org.lockss.remote.*;
+import org.lockss.config.ConfigManager;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
 

@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssDaemon.java,v 1.43 2004-09-22 19:13:05 dshr Exp $
+ * $Id: MockLockssDaemon.java,v 1.44 2004-09-27 22:38:34 smorabito Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ import org.lockss.poller.*;
 import org.lockss.state.*;
 import org.lockss.repository.*;
 import org.lockss.proxy.*;
+import org.lockss.config.Configuration;
 import org.lockss.crawler.*;
 import org.lockss.plugin.*;
 import org.lockss.app.*;

@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.23 2004-09-07 07:28:02 tlipkis Exp $
+ * $Id: UrlUtil.java,v 1.24 2004-09-27 22:39:04 smorabito Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -36,6 +36,7 @@ import java.net.*;
 import javax.servlet.http.HttpServletRequest;
 import org.lockss.plugin.*;
 import org.lockss.util.urlconn.*;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.apache.commons.httpclient.*;
 import org.apache.commons.httpclient.methods.*;

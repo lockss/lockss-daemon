@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDatagram.java,v 1.11 2004-09-22 19:13:03 dshr Exp $
+ * $Id: LockssDatagram.java,v 1.12 2004-09-27 22:39:09 smorabito Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.net.*;
 import java.util.*;
 import java.util.zip.*;
 import org.lockss.util.*;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 
 

@@ -1,5 +1,5 @@
 /*
- * $Id: NullAlertManager.java,v 1.3 2004-08-18 00:14:51 tlipkis Exp $
+ * $Id: NullAlertManager.java,v 1.4 2004-09-27 22:38:34 smorabito Exp $
  */
 
 /*
@@ -33,6 +33,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.test;
 
 import java.util.*;
+
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.alert.*;
 import org.lockss.plugin.*;

@@ -1,5 +1,5 @@
 /*
- * $Id: SortScheduler.java,v 1.6 2004-09-01 18:01:50 tlipkis Exp $
+ * $Id: SortScheduler.java,v 1.7 2004-09-27 22:39:07 smorabito Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.scheduler;
 
 import java.util.*;
 import org.lockss.util.*;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 
 /** This scheduler assigns tasks to intervals preferentially based on their

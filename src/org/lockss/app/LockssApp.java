@@ -1,5 +1,5 @@
 /*
- * $Id: LockssApp.java,v 1.5 2004-09-14 23:37:20 smorabito Exp $
+ * $Id: LockssApp.java,v 1.6 2004-09-27 22:39:15 smorabito Exp $
  */
 
 /*
@@ -34,6 +34,8 @@ package org.lockss.app;
 import java.util.*;
 import org.lockss.util.*;
 import org.lockss.mail.*;
+import org.lockss.config.ConfigManager;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
 import org.lockss.scheduler.*;

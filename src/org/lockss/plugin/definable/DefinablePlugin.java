@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.6 2004-09-01 23:36:49 clairegriffin Exp $
+ * $Id: DefinablePlugin.java,v 1.7 2004-09-27 22:39:11 smorabito Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ package org.lockss.plugin.definable;
 
 import org.lockss.plugin.base.*;
 import org.lockss.plugin.*;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.app.*;
 import org.lockss.util.*;

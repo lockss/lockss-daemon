@@ -1,5 +1,5 @@
 /*
- * $Id: PollSpec.java,v 1.26 2004-09-23 02:35:22 dshr Exp $
+ * $Id: PollSpec.java,v 1.27 2004-09-27 22:39:10 smorabito Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 import org.lockss.util.*;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.protocol.*;

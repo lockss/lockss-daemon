@@ -1,5 +1,5 @@
 /*
- * $Id: TitleConfig.java,v 1.4 2004-04-27 19:37:24 tlipkis Exp $
+ * $Id: TitleConfig.java,v 1.5 2004-09-27 22:39:14 smorabito Exp $
  */
 
 /*
@@ -35,6 +35,8 @@ package org.lockss.daemon;
 import java.io.*;
 import java.util.*;
 import org.lockss.util.*;
+import org.lockss.config.ConfigManager;
+import org.lockss.config.Configuration;
 import org.lockss.plugin.*;
 
 /**

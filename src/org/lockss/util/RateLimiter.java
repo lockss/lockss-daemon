@@ -1,5 +1,5 @@
 /*
- * $Id: RateLimiter.java,v 1.5 2004-07-12 06:25:59 tlipkis Exp $
+ * $Id: RateLimiter.java,v 1.6 2004-09-27 22:39:04 smorabito Exp $
  */
 
 /*
@@ -32,7 +32,8 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util;
 import java.util.*;
-import org.lockss.daemon.Configuration;
+
+import org.lockss.config.Configuration;
 
 /**
  * RateLimiter is used to limit the rate at which some class of events occur.

@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.55 2004-08-04 23:46:29 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.56 2004-09-27 22:38:35 smorabito Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.util.*;
 import java.io.*;
 import java.net.*;
 import org.lockss.util.*;
+import org.lockss.config.ConfigManager;
 import org.lockss.daemon.*;
 import junit.framework.TestCase;
 import junit.framework.TestResult;

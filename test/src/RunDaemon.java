@@ -1,5 +1,5 @@
 /*
- * $Id: RunDaemon.java,v 1.46 2004-09-22 19:13:03 dshr Exp $
+ * $Id: RunDaemon.java,v 1.47 2004-09-27 22:39:03 smorabito Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import org.lockss.test.*;
 import org.lockss.protocol.*;
 import org.lockss.poller.*;
 import org.lockss.util.*;
+import org.lockss.config.Configuration;
 import org.lockss.crawler.*;
 import org.lockss.repository.*;
 import org.lockss.app.*;

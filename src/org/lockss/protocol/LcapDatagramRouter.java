@@ -1,5 +1,5 @@
 /*
- * $Id: LcapDatagramRouter.java,v 1.2 2004-09-22 19:13:03 dshr Exp $
+ * $Id: LcapDatagramRouter.java,v 1.3 2004-09-27 22:39:09 smorabito Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.net.*;
 import java.util.*;
 import org.lockss.app.*;
 import org.lockss.util.*;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.poller.PollManager;

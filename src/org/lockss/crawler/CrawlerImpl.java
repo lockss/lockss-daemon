@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerImpl.java,v 1.31 2004-09-22 02:45:13 tlipkis Exp $
+ * $Id: CrawlerImpl.java,v 1.32 2004-09-27 22:39:15 smorabito Exp $
  */
 
 /*
@@ -36,6 +36,8 @@ import java.io.*;
 import java.util.*;
 
 import org.lockss.alert.*;
+import org.lockss.config.ConfigManager;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.state.*;

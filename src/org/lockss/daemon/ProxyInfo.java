@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyInfo.java,v 1.7 2004-07-23 16:45:57 tlipkis Exp $
+ * $Id: ProxyInfo.java,v 1.8 2004-09-27 22:39:14 smorabito Exp $
  */
 
 /*
@@ -36,6 +36,8 @@ import java.net.*;
 import java.io.*;
 import org.apache.oro.text.regex.*;
 import org.lockss.app.*;
+import org.lockss.config.ConfigManager;
+import org.lockss.config.Configuration;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
 import org.lockss.proxy.*;

@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlParser.java,v 1.19 2004-09-19 01:29:29 tlipkis Exp $
+ * $Id: GoslingHtmlParser.java,v 1.20 2004-09-27 22:39:15 smorabito Exp $
  */
 
 /*
@@ -75,6 +75,7 @@ import java.net.*;
 import java.io.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 
 

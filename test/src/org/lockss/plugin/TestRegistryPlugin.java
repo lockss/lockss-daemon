@@ -1,5 +1,5 @@
 /*
- * $Id: TestRegistryPlugin.java,v 1.1 2004-09-25 00:49:10 smorabito Exp $
+ * $Id: TestRegistryPlugin.java,v 1.2 2004-09-27 22:38:43 smorabito Exp $
  */
 
 /*
@@ -35,6 +35,8 @@ package org.lockss.plugin;
 import java.util.*;
 import junit.framework.*;
 import org.lockss.app.*;
+import org.lockss.config.ConfigManager;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.test.*;
 import org.lockss.util.*;

@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.28 2004-09-23 03:38:33 tlipkis Exp $
+ * $Id: RepairCrawler.java,v 1.29 2004-09-27 22:39:15 smorabito Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.io.*;
 import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.protocol.*;
 import org.lockss.proxy.ProxyManager;

@@ -1,5 +1,5 @@
 /*
- * $Id: WatchdogService.java,v 1.11 2004-08-22 02:05:56 tlipkis Exp $
+ * $Id: WatchdogService.java,v 1.12 2004-09-27 22:39:14 smorabito Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -33,6 +33,7 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 import org.lockss.app.*;
+import org.lockss.config.Configuration;
 import org.lockss.util.*;
 
 /** WatchdogService pokes a file periodically to reassure the platform that

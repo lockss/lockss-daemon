@@ -1,5 +1,5 @@
 /*
- * $Id: RegistryArchivalUnit.java,v 1.6 2004-09-02 07:46:05 tlipkis Exp $
+ * $Id: RegistryArchivalUnit.java,v 1.7 2004-09-27 22:39:12 smorabito Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import org.lockss.daemon.*;
 import org.lockss.state.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
+import org.lockss.config.Configuration;
 import org.lockss.crawler.*;
 
 /**

@@ -1,5 +1,5 @@
 /*
- * $Id: V1PollTally.java,v 1.12 2004-09-20 14:20:37 dshr Exp $
+ * $Id: V1PollTally.java,v 1.13 2004-09-27 22:39:10 smorabito Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.security.*;
 import java.util.*;
 
 import org.lockss.alert.*;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.hasher.*;
 import org.lockss.plugin.*;

@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkManager.java,v 1.2 2004-08-22 02:05:50 tlipkis Exp $
+ * $Id: TreeWalkManager.java,v 1.3 2004-09-27 22:39:05 smorabito Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import EDU.oswego.cs.dl.util.concurrent.*;
 import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 
 /**

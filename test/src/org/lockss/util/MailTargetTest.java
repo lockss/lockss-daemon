@@ -1,5 +1,5 @@
 /*
- * $Id: MailTargetTest.java,v 1.5 2003-09-16 23:28:36 eaalto Exp $
+ * $Id: MailTargetTest.java,v 1.6 2004-09-27 22:38:34 smorabito Exp $
  */
 
 /*
@@ -33,7 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 
 import org.lockss.test.*;
-import org.lockss.daemon.TestConfiguration;
+import org.lockss.config.TestConfiguration;
 
 /**
  * Test class for functional tests on the mail target.

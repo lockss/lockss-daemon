@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.21 2004-09-22 02:45:00 tlipkis Exp $
+ * $Id: TestNewContentCrawler.java,v 1.22 2004-09-27 22:38:45 smorabito Exp $
  */
 
 /*
@@ -33,6 +33,9 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.crawler;
 import java.util.*;
 import java.io.*;
+
+import org.lockss.config.ConfigManager;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;

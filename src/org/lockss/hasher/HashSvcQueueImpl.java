@@ -1,5 +1,5 @@
 /*
- * $Id: HashSvcQueueImpl.java,v 1.6 2004-08-22 02:05:55 tlipkis Exp $
+ * $Id: HashSvcQueueImpl.java,v 1.7 2004-09-27 22:39:13 smorabito Exp $
  */
 
 /*
@@ -34,6 +34,8 @@ package org.lockss.hasher;
 import java.io.*;
 import java.util.*;
 import java.security.MessageDigest;
+
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
 import org.lockss.util.*;

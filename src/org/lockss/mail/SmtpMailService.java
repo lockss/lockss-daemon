@@ -1,5 +1,5 @@
 /*
- * $Id: SmtpMailService.java,v 1.6 2004-08-22 02:05:54 tlipkis Exp $
+ * $Id: SmtpMailService.java,v 1.7 2004-09-27 22:37:36 smorabito Exp $
  *
 
  Copyright (c) 2000-2004 Board of Trustees of Leland Stanford Jr. University,
@@ -34,6 +34,7 @@ import java.net.*;
 import java.util.*;
 import org.lockss.app.*;
 import org.lockss.util.*;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 
 /** SmtpMailService is a MailService that sends mail directly over an smtp

@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.25 2004-08-18 07:07:44 tlipkis Exp $
+ * $Id: BasePlugin.java,v 1.26 2004-09-27 22:39:12 smorabito Exp $
  */
 
 /*
@@ -30,6 +30,8 @@ import java.util.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.app.*;
+import org.lockss.config.ConfigManager;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 

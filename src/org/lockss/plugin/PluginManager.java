@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.107 2004-09-25 00:49:10 smorabito Exp $
+ * $Id: PluginManager.java,v 1.108 2004-09-27 22:39:12 smorabito Exp $
  */
 
 /*
@@ -45,6 +45,8 @@ import org.lockss.repository.*;
 import org.lockss.util.*;
 import org.lockss.app.BaseLockssDaemonManager;
 import org.lockss.plugin.definable.DefinablePlugin;
+import org.lockss.config.ConfigManager;
+import org.lockss.config.Configuration;
 import org.lockss.crawler.CrawlManager;
 
 /**

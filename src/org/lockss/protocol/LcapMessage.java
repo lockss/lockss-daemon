@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessage.java,v 1.49 2004-09-20 14:20:37 dshr Exp $
+ * $Id: LcapMessage.java,v 1.50 2004-09-27 22:39:09 smorabito Exp $
  */
 
 /*
@@ -33,7 +33,8 @@ import java.util.StringTokenizer;
 import org.lockss.util.*;
 import java.io.*;
 import org.mortbay.util.B64Code;
-import org.lockss.daemon.Configuration;
+import org.lockss.config.Configuration;
+
 import java.security.*;
 import org.lockss.app.LockssDaemon;
 import org.lockss.poller.*;

@@ -1,5 +1,5 @@
 /*
- * $Id: SystemMetrics.java,v 1.24 2004-08-22 02:05:56 tlipkis Exp $
+ * $Id: SystemMetrics.java,v 1.25 2004-09-27 22:39:14 smorabito Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.IOException;
 import java.util.*;
 import java.security.MessageDigest;
 import org.lockss.app.*;
+import org.lockss.config.Configuration;
 import org.lockss.util.*;
 import org.lockss.hasher.*;
 import org.lockss.protocol.LcapMessage;

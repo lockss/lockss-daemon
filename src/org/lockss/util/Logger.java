@@ -1,5 +1,5 @@
 /*
- * $Id: Logger.java,v 1.34 2004-08-18 07:07:43 tlipkis Exp $
+ * $Id: Logger.java,v 1.35 2004-09-27 22:39:04 smorabito Exp $
  */
 
 /*
@@ -34,6 +34,8 @@ package org.lockss.util;
 import java.util.*;
 import java.io.*;
 import java.net.*;
+
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 
 /**

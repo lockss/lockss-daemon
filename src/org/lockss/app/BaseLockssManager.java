@@ -1,5 +1,5 @@
 /*
- * $Id: BaseLockssManager.java,v 1.15 2004-08-22 02:05:57 tlipkis Exp $
+ * $Id: BaseLockssManager.java,v 1.16 2004-09-27 22:39:16 smorabito Exp $
  */
 
 /*
@@ -31,6 +31,8 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.app;
 
+import org.lockss.config.ConfigManager;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import java.util.*;
 import org.lockss.util.*;

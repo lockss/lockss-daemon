@@ -1,5 +1,5 @@
 /*
- * $Id: ActivityRegulator.java,v 1.36 2004-09-16 21:29:15 dshr Exp $
+ * $Id: ActivityRegulator.java,v 1.37 2004-09-27 22:39:15 smorabito Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.util.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
 import org.lockss.app.*;
+import org.lockss.config.Configuration;
 
 /**
  * The ActivityRegulator is queried by the various managers when they wish to

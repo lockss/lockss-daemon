@@ -1,5 +1,5 @@
 /*
- * $Id: TestPartnerList.java,v 1.13 2004-09-22 02:43:12 tlipkis Exp $
+ * $Id: TestPartnerList.java,v 1.14 2004-09-27 22:38:37 smorabito Exp $
  */
 
 /*
@@ -36,6 +36,9 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 import junit.framework.TestCase;
+
+import org.lockss.config.ConfigManager;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.test.*;

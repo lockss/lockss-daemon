@@ -1,5 +1,5 @@
 /*
- * $Id: XmlPropertyLoader.java,v 1.13 2004-09-27 20:10:53 smorabito Exp $
+ * $Id: XmlPropertyLoader.java,v 1.14 2004-09-27 22:39:03 smorabito Exp $
  */
 
 /*
@@ -38,7 +38,7 @@ import javax.xml.parsers.*;
 import org.mortbay.tools.PropertyTree;
 import org.xml.sax.*;
 import org.xml.sax.helpers.*;
-import org.lockss.daemon.Configuration;
+import org.lockss.config.Configuration;
 
 public class XmlPropertyLoader {
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigManager.java,v 1.1 2004-09-27 22:10:13 smorabito Exp $
+ * $Id: TestConfigManager.java,v 1.2 2004-09-27 22:39:01 smorabito Exp $
  */
 
 /*
@@ -42,13 +42,10 @@ import org.lockss.config.Configuration;
 import org.lockss.test.*;
 
 /**
- * Test class for <code>org.lockss.util.ConfigManager</code>
+ * Test class for <code>org.lockss.config.ConfigManager</code>
  */
 
 public class TestConfigManager extends LockssTestCase {
-//   public static Class testedClasses[] = {
-//     org.lockss.daemon.ConfigManager.class
-//   };
 
   ConfigManager mgr;
 

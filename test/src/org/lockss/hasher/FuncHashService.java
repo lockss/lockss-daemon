@@ -1,5 +1,5 @@
 /*
- * $Id: FuncHashService.java,v 1.5 2004-09-21 21:24:58 dshr Exp $
+ * $Id: FuncHashService.java,v 1.6 2004-09-27 22:38:44 smorabito Exp $
  */
 
 /*
@@ -36,6 +36,8 @@ import java.util.*;
 import java.io.*;
 import java.security.MessageDigest;
 import junit.framework.*;
+
+import org.lockss.config.ConfigManager;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.test.*;

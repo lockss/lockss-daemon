@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.51 2004-09-25 00:49:10 smorabito Exp $
+ * $Id: TestPluginManager.java,v 1.52 2004-09-27 22:38:43 smorabito Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.*;
 import java.security.KeyStore;
 import junit.framework.*;
 import org.lockss.app.*;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.definable.*;
 import org.lockss.poller.*;

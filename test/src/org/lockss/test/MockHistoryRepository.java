@@ -1,5 +1,5 @@
 /*
- * $Id: MockHistoryRepository.java,v 1.11 2004-08-02 02:59:35 tlipkis Exp $
+ * $Id: MockHistoryRepository.java,v 1.12 2004-09-27 22:38:35 smorabito Exp $
  */
 
 /*
@@ -37,7 +37,7 @@ import java.util.*;
 import org.lockss.app.*;
 import org.lockss.state.*;
 import org.lockss.plugin.*;
-import org.lockss.daemon.Configuration;
+import org.lockss.config.Configuration;
 
 /**
  * MockHistoryRepository is a mock implementation of the HistoryRepository.

@@ -1,5 +1,5 @@
 /*
- * $Id: TestPoll.java,v 1.83 2004-09-23 17:38:45 dshr Exp $
+ * $Id: TestPoll.java,v 1.84 2004-09-27 22:38:37 smorabito Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.*;
 import java.util.*;
 import java.net.*;
 import org.lockss.app.*;
+import org.lockss.config.ConfigManager;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.protocol.*;

@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedPlugin.java,v 1.18 2004-01-27 04:07:04 tlipkis Exp $
+ * $Id: SimulatedPlugin.java,v 1.19 2004-09-27 22:38:38 smorabito Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.plugin.simulated;
 
 import java.util.*;
 import org.lockss.app.*;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;

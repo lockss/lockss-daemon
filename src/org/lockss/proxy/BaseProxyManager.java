@@ -1,5 +1,5 @@
 /*
- * $Id: BaseProxyManager.java,v 1.7 2004-08-22 02:05:52 tlipkis Exp $
+ * $Id: BaseProxyManager.java,v 1.8 2004-09-27 22:39:09 smorabito Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.util.*;
 import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.jetty.*;
 import org.mortbay.util.*;

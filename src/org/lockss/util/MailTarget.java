@@ -1,5 +1,5 @@
 /*
- * $Id: MailTarget.java,v 1.11 2004-09-20 14:20:39 dshr Exp $
+ * $Id: MailTarget.java,v 1.12 2004-09-27 22:39:04 smorabito Exp $
  */
 
 /*
@@ -37,7 +37,8 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 import org.lockss.protocol.IdentityManager;
-import org.lockss.daemon.Configuration;
+import org.lockss.config.Configuration;
+
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 

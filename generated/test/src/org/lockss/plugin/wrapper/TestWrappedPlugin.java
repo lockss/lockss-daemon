@@ -1,5 +1,5 @@
 /*
- * $Id: TestWrappedPlugin.java,v 1.4 2004-06-10 22:03:54 tyronen Exp $
+ * $Id: TestWrappedPlugin.java,v 1.5 2004-09-27 22:39:17 smorabito Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.*;
 import java.util.*;
 import java.net.*;
 import org.lockss.test.*;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.repository.TestLockssRepositoryImpl;
 import org.lockss.plugin.definable.*;

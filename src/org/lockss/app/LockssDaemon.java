@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.65 2004-09-22 19:13:01 dshr Exp $
+ * $Id: LockssDaemon.java,v 1.66 2004-09-27 22:39:15 smorabito Exp $
  */
 
 /*
@@ -46,6 +46,7 @@ import org.lockss.repository.*;
 import org.lockss.state.*;
 import org.lockss.proxy.*;
 import org.lockss.servlet.*;
+import org.lockss.config.Configuration;
 import org.lockss.crawler.*;
 import org.lockss.remote.*;
 import org.apache.commons.collections.SequencedHashMap;
