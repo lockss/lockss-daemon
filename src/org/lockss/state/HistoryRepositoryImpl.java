@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.25 2003-04-03 01:57:13 aalto Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.26 2003-04-03 11:29:47 tal Exp $
  */
 
 /*
@@ -53,7 +53,9 @@ import java.net.URL;
  * HistoryRepository is an inner layer of the NodeManager which handles the actual
  * storage of NodeStates.
  */
-public class HistoryRepositoryImpl implements HistoryRepository, LockssManager {
+public class HistoryRepositoryImpl
+  extends BaseLockssManager implements HistoryRepository {
+
   /**
    * Configuration parameter name for Lockss history location.
    */
@@ -87,33 +89,16 @@ public class HistoryRepositoryImpl implements HistoryRepository, LockssManager {
   public HistoryRepositoryImpl() { }
 
   /**
-   * init the plugin manager.
-   * @param daemon the LockssDaemon instance
-   * @throws LockssDaemonException if we already instantiated this manager
-   * @see org.lockss.app.LockssManager#initService(LockssDaemon daemon)
-   */
-  public void initService(LockssDaemon daemon) throws LockssDaemonException {
-    if(theRepository == null) {
-      theDaemon = daemon;
-      theRepository = this;
-      if (rootDir==null) {
-        rootDir = Configuration.getParam(PARAM_HISTORY_LOCATION);
-        if (rootDir==null) {
-          logger.error("Couldn't get "+PARAM_HISTORY_LOCATION+" from Configuration");
-          throw new LockssRepository.RepositoryStateException("Couldn't load param.");
-        }
-      }
-    }
-    else {
-      throw new LockssDaemonException("Multiple Instantiation.");
-    }
-  }
-
-  /**
    * start the plugin manager.
    * @see org.lockss.app.LockssManager#startService()
    */
   public void startService() {
+    super.startService();
+    if (rootDir==null) {
+      String msg = PARAM_HISTORY_LOCATION + " not configured";
+      logger.error(msg);
+      throw new LockssDaemonException(msg);
+    }
   }
 
   /**
@@ -123,7 +108,15 @@ public class HistoryRepositoryImpl implements HistoryRepository, LockssManager {
   public void stopService() {
     // we want to checkpoint here
 
-    theRepository = null;
+    super.stopService();
+  }
+
+  protected void setConfig(Configuration config, Configuration oldConfig,
+			   Set changedKeys) {
+    // don't reset this once it's set
+    if (rootDir==null) {
+      rootDir = config.getParam(PARAM_HISTORY_LOCATION);
+    }
   }
 
   public void storeNodeState(NodeState nodeState) {

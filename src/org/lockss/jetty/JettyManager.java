@@ -1,5 +1,5 @@
 /*
- * $Id: JettyManager.java,v 1.1 2003-03-12 22:11:20 tal Exp $
+ * $Id: JettyManager.java,v 1.2 2003-04-03 11:29:47 tal Exp $
  */
 
 /*
@@ -37,7 +37,7 @@ import org.lockss.app.*;
 /**
  * Abstract base class for LOCKSS managers that use/start Jetty services
  */
-public abstract class JettyManager implements LockssManager {
+public abstract class JettyManager extends BaseLockssManager {
   private static boolean jettyLogInited = false;
 
   public JettyManager() {
@@ -48,6 +48,7 @@ public abstract class JettyManager implements LockssManager {
    * @see org.lockss.app.LockssManager#startService()
    */
   public void startService() {
+    super.startService();
     if (!jettyLogInited) {
       org.mortbay.util.Log.instance().add(new LoggerLogSink());
       jettyLogInited = true;

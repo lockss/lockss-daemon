@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.19 2003-04-02 23:28:37 tal Exp $
+ * $Id: CrawlManagerImpl.java,v 1.20 2003-04-03 11:29:47 tal Exp $
  */
 
 /*
@@ -46,7 +46,9 @@ import org.lockss.plugin.*;
  * This is the interface for the object which will sit between the crawler
  * and the rest of the world.  It mediates the different crawl types.
  */
-public class CrawlManagerImpl implements CrawlManager, LockssManager {
+public class CrawlManagerImpl
+   extends BaseLockssManager implements CrawlManager {
+
   /**
    * ToDo:
    * 1)make a crawl to the AU to decide if I should do a new content crawl
@@ -55,36 +57,18 @@ public class CrawlManagerImpl implements CrawlManager, LockssManager {
    * 4)check for conflicting crawl types
    * 5)check crawl schedule rules
    */
-  private static CrawlManagerImpl theManager = null;
-  private static LockssDaemon theDaemon = null;
   private static final String CRAWL_STATUS_TABLE_NAME = "crawl_status_table";
   private Map newContentCrawls = new HashMap();
   private Set activeCrawls = new HashSet();
   private static Logger logger = Logger.getLogger("CrawlManagerImpl");
 
 
-
-  /**
-   * init the plugin manager.
-   * @param daemon the LockssDaemon instance
-   * @throws LockssDaemonException if we already instantiated this manager
-   * @see org.lockss.app.LockssManager#initService(LockssDaemon daemon)
-   */
-  public void initService(LockssDaemon daemon) throws LockssDaemonException {
-    if(theManager == null) {
-      theDaemon = daemon;
-      theManager = this;
-    }
-    else {
-      throw new LockssDaemonException("Multiple Instantiation.");
-    }
-  }
-
   /**
    * start the plugin manager.
    * @see org.lockss.app.LockssManager#startService()
    */
   public void startService() {
+    super.startService();
     StatusService statusServ = theDaemon.getStatusService();
     statusServ.registerStatusAccessor(CRAWL_STATUS_TABLE_NAME, new Status());
   }
@@ -99,7 +83,11 @@ public class CrawlManagerImpl implements CrawlManager, LockssManager {
     if (statusServ != null) {
       statusServ.unregisterStatusAccessor(CRAWL_STATUS_TABLE_NAME);
     }
-    theManager = null;
+    super.stopService();
+  }
+
+  protected void setConfig(Configuration config, Configuration oldConfig,
+			   Set changedKeys) {
   }
 
   /**

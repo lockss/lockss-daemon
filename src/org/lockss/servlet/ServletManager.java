@@ -1,5 +1,5 @@
 /*
- * $Id: ServletManager.java,v 1.5 2003-03-29 20:25:39 tal Exp $
+ * $Id: ServletManager.java,v 1.6 2003-04-03 11:29:47 tal Exp $
  */
 
 /*
@@ -54,9 +54,6 @@ public class ServletManager extends JettyManager {
 
   private static Logger log = Logger.getLogger("ServletMgr");
 
-  private static ServletManager theManager = null;
-  private static LockssDaemon theDaemon = null;
-
   private Map servlets = new HashMap();
   private HttpServer server;
 
@@ -67,34 +64,12 @@ public class ServletManager extends JettyManager {
   }
 
   /* ------- LockssManager implementation ------------------ */
-  /**
-   * init the servlet manager.
-   * @param daemon the LockssDaemon instance
-   * @throws LockssDaemonException if we already instantiated this manager
-   * @see LockssManager#initService(LockssDaemon)
-   */
-  public void initService(LockssDaemon daemon) throws LockssDaemonException {
-//     super.initService();
-    if (theManager == null) {
-      theDaemon = daemon;
-      theManager = this;
-    } else {
-      throw new LockssDaemonException("Multiple Instantiation.");
-    }
-  }
 
   /**
    * start the servlet manager.
    * @see org.lockss.app.LockssManager#startService()
    */
   public void startService() {
-    Configuration.registerConfigurationCallback(new Configuration.Callback() {
-	public void configurationChanged(Configuration newConfig,
-					 Configuration oldConfig,
-					 Set changedKeys) {
-	  setConfig(newConfig, oldConfig);
-	}
-      });
     if (start) {
       super.startService();
       startServlets();
@@ -108,14 +83,17 @@ public class ServletManager extends JettyManager {
   public void stopService() {
     // tk - checkpoint if nec.
     try {
-      server.stop();
+      if (server != null) {
+	server.stop();
+      }
     } catch (InterruptedException e) {
       log.info("Interrupted while stopping server");
     }
-    theManager = null;
+    super.stopService();
   }
 
-  private void setConfig(Configuration config, Configuration oldConfig) {
+  protected void setConfig(Configuration config, Configuration prevConfig,
+			   Set changedKeys) {
     port = config.getInt(PARAM_PORT, 8081);
     start = config.getBoolean(PARAM_START, true);
   }
@@ -160,7 +138,7 @@ public class ServletManager extends JettyManager {
     try {
       // Create a context
       HttpContext context = server.getContext(null, "/");
-      context.setAttribute("LockssDaemon", theDaemon);
+      context.setAttribute("LockssDaemon", getDaemon());
 
       ClassLoader loader = Thread.currentThread().getContextClassLoader();
       URL resourceUrl=loader.getResource("org/lockss/htdocs/");

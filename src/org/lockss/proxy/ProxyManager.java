@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyManager.java,v 1.3 2003-03-29 20:25:39 tal Exp $
+ * $Id: ProxyManager.java,v 1.4 2003-04-03 11:29:47 tal Exp $
  */
 
 /*
@@ -48,41 +48,15 @@ public class ProxyManager extends JettyManager {
   public static final String PARAM_START = PREFIX + "start";
   public static final String PARAM_PORT = PREFIX + "port";
 
-  private static LockssDaemon theDaemon = null;
-  private static ProxyManager theManager = null;
-
   private int port;
   private boolean start;
 
   /* ------- LockssManager implementation ------------------ */
   /**
-   * init the plugin manager.
-   * @param daemon the LockssDaemon instance
-   * @throws LockssDaemonException if we already instantiated this manager
-   * @see org.lockss.app.LockssManager#initService(LockssDaemon daemon)
-   */
-  public void initService(LockssDaemon daemon) throws LockssDaemonException {
-    if(theManager == null) {
-      theDaemon = daemon;
-      theManager = this;
-    }
-    else {
-      throw new LockssDaemonException("Multiple Instantiation.");
-    }
-  }
-
-  /**
    * start the proxy.
    * @see org.lockss.app.LockssManager#startService()
    */
   public void startService() {
-    Configuration.registerConfigurationCallback(new Configuration.Callback() {
-	public void configurationChanged(Configuration newConfig,
-					 Configuration oldConfig,
-					 Set changedKeys) {
-	  setConfig(newConfig, oldConfig);
-	}
-      });
     if (start) {
       super.startService();
       startProxy();
@@ -96,10 +70,11 @@ public class ProxyManager extends JettyManager {
   public void stopService() {
     // XXX undo whatever we did in start proxy.
 
-    theManager = null;
+    super.stopService();
   }
 
-  private void setConfig(Configuration config, Configuration oldConfig) {
+  protected void setConfig(Configuration config, Configuration oldConfig,
+			   Set changedKeys) {
     port = config.getInt(PARAM_PORT, 9090);
     start = config.getBoolean(PARAM_START, true);
   }
@@ -117,7 +92,7 @@ public class ProxyManager extends JettyManager {
       HttpContext context = server.getContext(null, "/");
 
       // Create a servlet container
-      HttpHandler handler = new ProxyHandler(theDaemon);
+      HttpHandler handler = new ProxyHandler(getDaemon());
       context.addHandler(handler);
 
       // Start the http server
