@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.5 2002-08-03 06:35:57 tal Exp $
+ $Id: build.xml,v 1.6 2002-08-13 02:09:03 tal Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
@@ -233,6 +233,20 @@ in this Software without prior written authorization from Stanford University.
              bottom="Copyright &#169; 2002 Board of Trustees of Leland Stanford Jr. University, all rights reserved.">
        <classpath refid="compile.classpath" />
     </javadoc>
+  </target>
+
+  <!-- ==================================================================== -->
+<!--  find . -name \*.java -print | etags -t -S - -->
+  <target name="tags" depends="prepare"
+   description="Build a TAGS file in src/" >
+    <apply executable="etags" dir="${src}"
+           relative="true"
+           parallel="true">
+      <arg value="-S"/>
+<!--        <arg value="-o"/> -->
+<!--        <arg file="${etags.filename}"/> -->
+      <fileset dir="${src}" includes="**/*.java"/>
+    </apply>
   </target>
 
   <!-- ==================================================================== -->
