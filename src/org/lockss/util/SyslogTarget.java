@@ -27,6 +27,7 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.util;
+import java.util.*;
 import java.net.*;
 import java.io.*;
 import org.lockss.daemon.*;
@@ -34,61 +35,88 @@ import org.lockss.daemon.*;
 public class SyslogTarget implements LogTarget{
   
   static final String PREFIX = Logger.PREFIX+"syslog.";
-  static final String PARAM_DEFAULT_PORT = PREFIX + "port";
-  static final String PARAM_DEFAULT_HOST = PREFIX + "host";
+  static final String PARAM_PORT = PREFIX + "port";
+  static final String PARAM_HOST = PREFIX + "host";
 
-  //FIXME get from props after TAL's commit
   private static final String DEFAULT_HOST = "127.0.0.1";
-  private static final String DEFAULT_PORT = "514";
+  private static final int DEFAULT_PORT = 514;
 
   static final int FACILITY = 8; //user level facility
 
   private int port;
-  private String host;
-  private String threshold;
-  private Logger logger;
+  private String hostname = null;
+  private InetAddress host = null;
+  private DatagramSocket socket = null;
 
   public SyslogTarget(){
-    getProps();
   }
 
-  public void handleMessage (Logger logger, int msgLevel, String message) {
-    this.logger = logger;
-    try{
-      DatagramSocket socket = 
-	new DatagramSocket();
-      handleMessage(socket, msgLevel, message);
-    }
-    catch(IOException ioe){
+  /** Initialize this log target */
+  public void init() {
+    Configuration.registerConfigurationCallback(new Configuration.Callback() {
+	public void configurationChanged(Configuration oldConfig,
+					 Configuration newConfig,
+					 Set changedKeys) {
+	  setConfig(changedKeys);
+	}});
+    try {
+      socket = new DatagramSocket();
+    } catch(IOException ioe) {
       ioe.printStackTrace();
       //XXX how should we handle errors here?
     }
   }
 
-  protected void handleMessage(DatagramSocket socket, int msgLevel, String message) {
-    int syslogSev = loggerSeverityToSyslogSeverity(msgLevel);
-    String msg = "<"+syslogSev+">"+"LOCKSS: "+message;
-    
-    try {
-      DatagramPacket packet =
-	new DatagramPacket(msg.getBytes(),
-			   msg.length(),
-			   InetAddress.getByName(host),
-			   port);
-      if (socket != null) {
-	socket.send(packet);
-      } 
-    }catch (IOException ioe) {
-      ioe.printStackTrace();
-      // No action intended
+  private void setConfig(Set changedKeys) {
+    port = Configuration.getIntParam(PARAM_PORT, DEFAULT_PORT);
+    if (changedKeys.contains(PARAM_HOST)) {
+      hostname = Configuration.getParam(PARAM_HOST, DEFAULT_HOST);
+      host = null;			// force new name lookup
     }
   }
- 
+
+  private InetAddress getHost() {
+    // don't depend on name resolving the first time we try
+    try {
+      if (hostname != null && host == null) {
+	host = InetAddress.getByName(hostname);
+      }
+    } catch (UnknownHostException e) {
+      // no action
+    }
+    return host;
+  }
+   
+  public void handleMessage(Logger logger, int level, String message) {
+    if (socket != null) {
+      handleMessage(socket, level, message);
+    }
+  }
+
+  public void handleMessage(DatagramSocket socket, int level, String message) {
+    int syslogSev = loggerSeverityToSyslogSeverity(level);
+    String msg = "<"+syslogSev+">"+"LOCKSS: "+message;
+    InetAddress hst = getHost();
+    if (hst != null) {
+      try {
+	DatagramPacket packet =
+	  new DatagramPacket(msg.getBytes(),
+			     msg.length(),
+			     hst,
+			     port);
+	socket.send(packet);
+      } catch (IOException ioe) {
+	ioe.printStackTrace();
+	// No action intended
+      }
+    }
+  }
 
   protected static int loggerSeverityToSyslogSeverity(int severity){
     switch (severity){
     case Logger.LEVEL_CRITICAL:
       return FACILITY + 2;
+    default:
     case Logger.LEVEL_ERROR:
       return FACILITY + 3;
     case Logger.LEVEL_WARNING:
@@ -97,20 +125,6 @@ public class SyslogTarget implements LogTarget{
       return FACILITY + 6;
     case Logger.LEVEL_DEBUG:
       return FACILITY + 7;
-    default:
-      return -1;
     }
   }
-
-  private void getProps(){
-    String portStr = Configuration.getParam(PARAM_DEFAULT_PORT, DEFAULT_PORT);
-    port = Integer.parseInt(portStr);
-    host = Configuration.getParam(PARAM_DEFAULT_HOST, DEFAULT_HOST);
-  }
-   
-  public static void main(String[] args){
-    SyslogTarget st = new SyslogTarget();
-    st.handleMessage((Logger)null, Logger.LEVEL_CRITICAL, "Message");
-  }
-  
 }
