@@ -1,5 +1,5 @@
 /*
- * $Id: LocalServletManager.java,v 1.4 2004-11-10 20:07:26 smorabito Exp $
+ * $Id: LocalServletManager.java,v 1.5 2004-12-07 05:15:05 tlipkis Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 import org.lockss.app.*;
+import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.jetty.*;
@@ -50,10 +51,47 @@ public class LocalServletManager extends BaseServletManager {
   public static final String SERVER_NAME = "LocalUI";
   private static Logger log = Logger.getLogger("ServletMgr");
 
+  static final String PREFIX = Configuration.PREFIX + "admin.";
+
+  static final String PARAM_CONTACT_ADDR = PREFIX + "admin.contactEmail";
+  static final String DEFAULT_CONTACT_ADDR = "contactnotset@notset";
+
+  static final String PARAM_HELP_URL = PREFIX + "admin.helpUrl";
+  static final String DEFAULT_HELP_URL =
+    "http://documents.lockss.org/publicdocs/release/";
+
+  public static final String PARAM_REDIRECT_ROOT = PREFIX + "redirectRoot";
+  public static final String DEFAULT_REDIRECT_ROOT = null;
+
+  private String redirectRootTo = DEFAULT_REDIRECT_ROOT;
+  private LockssResourceHandler rootResourceHandler;
   private HashUserRealm realm;
 
   public LocalServletManager() {
     super(SERVER_NAME);
+  }
+
+  public void setConfig(Configuration config, Configuration prevConfig,
+			Configuration.Differences changedKeys) {
+    super.setConfig(config, prevConfig, changedKeys);
+    if (changedKeys.contains(PARAM_REDIRECT_ROOT)) {
+      redirectRootTo = config.get(PARAM_REDIRECT_ROOT, DEFAULT_REDIRECT_ROOT);
+      if (rootResourceHandler != null) {
+	setRedirectRootTo(rootResourceHandler,
+			  (StringUtil.isNullString(redirectRootTo)
+			   ? null : redirectRootTo));
+      }
+    }
+    if (changedKeys.contains(PREFIX)) {
+      LockssServlet.setContactAddr(config.get(PARAM_CONTACT_ADDR,
+					      DEFAULT_CONTACT_ADDR));
+      LockssServlet.setHelpUrl(config.get(PARAM_HELP_URL, DEFAULT_HELP_URL));
+    }
+  }
+
+  private void setRedirectRootTo(LockssResourceHandler rh, String redTo) {
+    rootResourceHandler.setRedirectRootTo(StringUtil.isNullString(redTo)
+					  ? null : redTo);
   }
 
   public void startServlets() {
@@ -127,7 +165,9 @@ public class LocalServletManager extends BaseServletManager {
 
     // Request dump servlet
     handler.addServlet("Dump", "/Dump", "org.mortbay.servlet.Dump");
-    // Daemon status servlet
+
+    handler.addServlet("Home", "/Home",
+		       "org.lockss.servlet.UiHome");
     handler.addServlet("JournalConfig", "/AuConfig",
 		       "org.lockss.servlet.AuConfig");
     handler.addServlet("DaemonStatus", "/DaemonStatus",
@@ -153,10 +193,11 @@ public class LocalServletManager extends BaseServletManager {
     log.debug("Resource URL: " + resourceUrl);
 
     context.setResourceBase(resourceUrl.toString());
-    LockssResourceHandler rHandler = new LockssResourceHandler(getDaemon());
-    rHandler.setDirAllowed(false);
+    rootResourceHandler = new LockssResourceHandler(getDaemon());
+    rootResourceHandler.setDirAllowed(false);
+    setRedirectRootTo(rootResourceHandler, redirectRootTo);
     //       rHandler.setAcceptRanges(true);
-    context.addHandler(rHandler);
+    context.addHandler(rootResourceHandler);
 
     // NotFoundHandler
     context.addHandler(new NotFoundHandler());
