@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapRouter.java,v 1.1 2003-03-27 17:49:39 tal Exp $
+ * $Id: TestLcapRouter.java,v 1.2 2003-03-27 23:53:38 tal Exp $
  */
 
 /*
@@ -45,6 +45,9 @@ import org.lockss.poller.*;
 
 /** JUnitTest case for class: org.lockss.protocol.Message */
 public class TestLcapRouter extends LockssTestCase {
+  static Logger log = Logger.getLogger("TestLcapRouter");
+
+  private LcapRouter rtr;
 
   private static String urlstr = "http://www.example.com";
   private static byte[] testbytes = {1,2,3,4,5,6,7,8,9,10};
@@ -53,7 +56,7 @@ public class TestLcapRouter extends LockssTestCase {
   private static String[] testentries;
 
   private static MockLockssDaemon daemon = new MockLockssDaemon(null);
-  private IdentityManager idmgr = daemon.getIdentityManager();
+  private IdentityManager idmgr;
   protected InetAddress testaddr;
   protected LcapIdentity testID;
   protected LcapMessage testmsg;
@@ -64,12 +67,36 @@ public class TestLcapRouter extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-
+    rtr = daemon.getRouterManager();
+    idmgr = daemon.getIdentityManager();
+    rtr.startService();
+    setConfig();
   }
 
-  LcapMessage createTestMsg() throws IOException {
+  public void testIsEligibleToForward() throws Exception {
+//     LcapMessage msg = createTestMsg("127.0.0.1", 3);
+    createTestMsg("1.2.3.4", 3);
+    assertTrue(rtr.isEligibleToForward(rdg, testmsg));
+    createTestMsg("1.2.3.4", 0);
+    assertFalse(rtr.isEligibleToForward(rdg, testmsg));
+    createTestMsg("127.0.0.1", 3);
+    assertFalse(rtr.isEligibleToForward(rdg, testmsg));
+  }
+
+  void setConfig() {
+    Properties p = new Properties();
+    p.put(LcapRouter.PARAM_PKTS_PER_INTERVAL, "100");
+    p.put(LcapRouter.PARAM_PKT_INTERVAL, "1");
+    p.put(LcapRouter.PARAM_BEACON_INTERVAL, "1m");
+    p.put(LcapRouter.PARAM_INITIAL_HOPCOUNT, "3");
+    p.put(LcapRouter.PARAM_PROB_PARTNER_ADD, "100");
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+  }
+
+  LcapMessage createTestMsg(String originator, int hopCount)
+      throws IOException {
     try {
-      testaddr = InetAddress.getByName("127.0.0.1");
+      testaddr = InetAddress.getByName(originator);
     }
     catch (UnknownHostException ex) {
       fail("can't open test host");
@@ -91,7 +118,7 @@ public class TestLcapRouter extends LockssTestCase {
     testmsg.m_startTime = 123456789;
     testmsg.m_stopTime = 987654321;
     testmsg.m_multicast = false;
-    testmsg.m_hopCount = 2;
+    testmsg.m_hopCount = (byte)hopCount;
 
     testmsg.m_ttl = 5;
     testmsg.m_challenge = testbytes;
@@ -102,10 +129,9 @@ public class TestLcapRouter extends LockssTestCase {
     testmsg.m_pluginID = pluginID;
     testmsg.m_archivalID = archivalID;
     dg = new LockssDatagram(LockssDatagram.PROTOCOL_LCAP, testmsg.encodeMsg());
+    rdg = new LockssReceivedDatagram(dg.makeSendPacket(testaddr, 0));
+    rdg.setMulticast(true);
     return testmsg;
-  }
-
-  public void testIsEligibleToForward() {
   }
 
   public static void main(String[] argv) {
