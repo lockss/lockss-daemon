@@ -1,5 +1,5 @@
 /*
- * $Id: LcapRouter.java,v 1.5 2003-03-26 23:39:39 claire Exp $
+ * $Id: LcapRouter.java,v 1.6 2003-03-27 03:05:14 tal Exp $
  */
 
 /*
@@ -41,8 +41,6 @@ import org.lockss.plugin.*;
 import org.lockss.poller.PollManager;
 import org.apache.commons.collections.LRUMap;
 
-// tk - beacon thread
-// tk - send() call from poller (multicast, unicast to each)
 // tk - synchronization here and in PartnerList
 // tk - ratelimiter.event() where?
 
@@ -53,7 +51,7 @@ import org.apache.commons.collections.LRUMap;
  */
 public class LcapRouter extends BaseLockssManager {
   static final String PREFIX = Configuration.PREFIX + "comm.router.";
-  static final String SENDRATE_PREFIX = Configuration.PREFIX + "maxSendRate.";
+  static final String SENDRATE_PREFIX = PREFIX + "maxSendRate.";
   static final String PARAM_PKTS_PER_INTERVAL = SENDRATE_PREFIX + "packets";
   static final String PARAM_PKT_INTERVAL = SENDRATE_PREFIX + "interval";
   static final String PARAM_BEACON_INTERVAL = PREFIX + "beacon.interval";
@@ -61,8 +59,8 @@ public class LcapRouter extends BaseLockssManager {
 
   static final String PARAM_PROB_PARTNER_ADD =
     PREFIX + "partnerAddProbability";
-  static final String PARAM_LOCAL_IPS = Configuration.PREFIX + "localIPs";
-
+  static final String PARAM_LOCAL_IPS =
+    Configuration.PREFIX + "platform.interfaceAddresses";
 
   static final int defaultPktsPerInterval = 40;
   static final long defaultPktInterval = 10 * Constants.SECOND;
@@ -154,31 +152,6 @@ public class LcapRouter extends BaseLockssManager {
   }
 
   /** Multicast a message to all caches holding the ArchivalUnit.
-   * @param ld the datagram to send
-   * @param au archival unit for which this message is relevant.  Used to
-   * determine which multicast socket/port to send to.
-   * @throws IOException
-   */
-  public void send(LockssDatagram ld, ArchivalUnit au) throws IOException {
-    updateBeacon();
-    comm.send(ld, au);
-    doUnicast(ld, null, null);
-  }
-
-  /** Unicast a message to a single cache.
-   * @param ld the datagram to send
-   * @param au archival unit for which this message is relevant.  Used to
-   * determine which multicast socket/port to send to.
-   * @param id the identity of the cache to which to send the message
-   * @throws IOException
-   */
-  public void sendTo(LockssDatagram ld, ArchivalUnit au, LcapIdentity id)
-      throws IOException {
-    updateBeacon();
-    comm.sendTo(ld, au, id);
-  }
-
-  /** Multicast a message to all caches holding the ArchivalUnit.
    * @param msg the message to send
    * @param au archival unit for which this message is relevant.  Used to
    * determine which multicast socket/port to send to.
@@ -190,6 +163,7 @@ public class LcapRouter extends BaseLockssManager {
     LockssDatagram dg = new LockssDatagram(LockssDatagram.PROTOCOL_LCAP,
 					   msg.encodeMsg());
     comm.send(dg, au);
+    rateLimiter.event();
   }
 
   /** Unicast a message to a single cache.
@@ -227,7 +201,10 @@ public class LcapRouter extends BaseLockssManager {
       return;
     }
     routeIncomingMessage(dg, msg);
-    runHandlers(msg);
+    // if not a no-op, give to incoming message handlers
+    if (!msg.isNoOp()) {
+      runHandlers(msg);
+    }
   }
 
 
@@ -356,6 +333,15 @@ public class LcapRouter extends BaseLockssManager {
     return idMgr.getLocalIdentity().getAddress();
   }
 
+  void sendNoop() {
+    try {
+      LcapMessage noop = LcapMessage.makeNoOpMsg(idMgr.getLocalIdentity());
+      send(noop, null);
+    } catch (IOException e) {
+      log.warning("Couldn't send Noop message", e);
+    }
+  }
+
   private BeaconThread beaconThread;
 
   synchronized void stopBeacon() {
@@ -394,7 +380,7 @@ public class LcapRouter extends BaseLockssManager {
 	  beaconDeadline.sleep();
 	  if (beaconDeadline.expired()) {
 	    log.debug3("Beacon send");
-// 	    sendNoop();
+	    sendNoop();
 	    beaconDeadline.expireIn(beaconInterval);
 	  }
 	} catch (InterruptedException e) {
