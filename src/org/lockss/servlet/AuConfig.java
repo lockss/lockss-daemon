@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.25 2004-05-24 22:20:20 tlipkis Exp $
+ * $Id: AuConfig.java,v 1.26 2004-05-26 07:01:25 tlipkis Exp $
  */
 
 /*
@@ -713,7 +713,7 @@ public class AuConfig extends LockssServlet {
 	tbl.add(StringUtil.sizeKBToString(df.getAvail()));
 	tbl.newCell("align=right");
 	tbl.add("&nbsp;");
-	tbl.add(df.getPercent());
+	tbl.add(df.getPercentString());
 	first = false;
       }
       comp.add(tbl);

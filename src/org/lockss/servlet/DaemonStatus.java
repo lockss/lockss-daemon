@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.37 2004-05-16 08:45:32 tlipkis Exp $
+ * $Id: DaemonStatus.java,v 1.38 2004-05-26 07:01:26 tlipkis Exp $
  */
 
 /*
@@ -63,6 +63,7 @@ public class DaemonStatus extends LockssServlet {
 
   private String tableName;
   private String tableKey;
+  private String sortKey;
   private StatusService statSvc;
   private int outputFmt;
   private BitSet tableOptions;
@@ -116,6 +117,10 @@ public class DaemonStatus extends LockssServlet {
     }
     if (StringUtil.isNullString(tableKey)) {
       tableKey = null;
+    }
+    sortKey = req.getParameter("sort");
+    if (StringUtil.isNullString(sortKey)) {
+      sortKey = null;
     }
 
     switch (outputFmt) {
@@ -244,7 +249,14 @@ public class DaemonStatus extends LockssServlet {
       return;
     }
     java.util.List colList = statTable.getColumnDescriptors();
-    java.util.List rowList = statTable.getSortedRows();
+    java.util.List rowList;
+    if (sortKey != null) {
+      StatusTable.SortRule sortRule = new StatusTable.SortRule(sortKey, true);
+      java.util.List rules = ListUtil.list(sortRule);
+      rowList = statTable.getSortedRows(rules);
+    } else {
+      rowList = statTable.getSortedRows();
+    }
     String title0 = statTable.getTitle();
     String titleFoot = statTable.getTitleFootnote();
 
@@ -278,7 +290,12 @@ public class DaemonStatus extends LockssServlet {
 	  // output column headings
 	  for (int ix = 0; ix < cols; ix++) {
 	    ColumnDescriptor cd = cds[ix];
-	    String head = cd.getTitle() + addFootnote(cd.getFootnote());
+	    String colTitle = cd.getTitle();
+	    if (true && statTable.isResortable() && cd.isSortable()) {
+	      colTitle = srvLink(myServletDescr(), colTitle,
+				 modifyParams("sort", cd.getColumnName()));
+	    }
+	    String head = colTitle + addFootnote(cd.getFootnote());
 	    table.addHeading(head, "valign=bottom align=" +
 			     ((cols == 1) ? "center" : getColAlignment(cd)));
 	    if (ix < (cols - 1)) {
