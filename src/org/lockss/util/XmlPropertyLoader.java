@@ -1,5 +1,5 @@
 /*
- * $Id: XmlPropertyLoader.java,v 1.6 2004-06-23 19:31:05 smorabito Exp $
+ * $Id: XmlPropertyLoader.java,v 1.7 2004-07-15 05:08:48 smorabito Exp $
  */
 
 /*
@@ -392,7 +392,7 @@ public class XmlPropertyLoader {
      */
     private void endListTag() {
       if (doEval()) {
-	setProperty(m_propList);
+	setListProperty(m_propList);
 
 	// Clean-up.
 	m_propList = null;
@@ -478,14 +478,15 @@ public class XmlPropertyLoader {
     /**
      * Log a warning if overwriting an existing property.
      */
-    public void setProperty(Object value) {
-      String prop = getPropname();
-      if (m_props.get(prop) != null) {
-	log.warning("Overwriting property '" + prop + "'.  Was: '" +
-		    m_props.get(prop) + "'," + "Now: '" + value + "'");
+    private void setProperty(String value) {
+      m_props.put(getPropname(), value);
+    }
 
-      }
-      m_props.put(prop, value);
+    /**
+     * Set a list of property values.
+     */
+    private void setListProperty(List list) {
+      setProperty(StringUtil.separatedString(list, ";"));
     }
 
     /**

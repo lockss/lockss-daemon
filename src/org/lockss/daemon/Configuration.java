@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.64 2004-07-12 06:15:17 tlipkis Exp $
+ * $Id: Configuration.java,v 1.65 2004-07-15 05:08:49 smorabito Exp $
  */
 
 /*
@@ -128,10 +128,6 @@ public abstract class Configuration {
     return res;
   }
 
-  // instance methods
-
-  protected ConfigCache configCache = new ConfigCache();
-
   /** Return a copy of the configuration with the specified prefix
    * prepended to all keys. */
   public Configuration addPrefix(String prefix) {
@@ -159,6 +155,10 @@ public abstract class Configuration {
     return copy;
   }
 
+  private ConfigCache getConfigCache() {
+    return ConfigManager.getConfigManager().getConfigCache();
+  }
+
   /**
    * Try to load config from a list or urls
    * @return true iff properties were successfully loaded
@@ -172,6 +172,7 @@ public abstract class Configuration {
    * @return true iff properties were successfully loaded
    */
   boolean loadList(List urls, boolean failOk) {
+    ConfigCache configCache = getConfigCache();
     // Complete kludge until platform support changed.  Load local.txt
     // first so can use values from it to control parsing of other files.
     // Also save it so we can get local config values later even if
@@ -250,6 +251,7 @@ public abstract class Configuration {
 
   /** Return the first ConfigFile that got an error */
   public ConfigFile getFirstErrorFile(List urls) {
+    ConfigCache configCache = getConfigCache();
     for (Iterator iter = urls.iterator(); iter.hasNext();) {
       String url = (String)iter.next();
       ConfigFile cf = configCache.get(url);
