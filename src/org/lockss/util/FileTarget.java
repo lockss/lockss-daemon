@@ -30,89 +30,78 @@ package org.lockss.util;
 
 import java.text.*;
 import java.io.*;
-import java.util.Date;
+import org.lockss.daemon.*;
 
-/** A <code>LogTarget</code> implementation that outputs to System.err
+/** A <code>LogTarget</code> implementation that outputs to a file, which
+ * is closed and reopened periodically to allow for log file rotation.
  */
-public class FileTarget implements LogTarget {
-//    static final DateFormat df = DateFormat.getTimeInstance();
-  static final DateFormat df = new SimpleDateFormat("HH:mm:ss.SSS");
+public class FileTarget extends PrintStreamTarget {
+  static final String PREFIX = Logger.TARGET_PREFIX + "FileTarget.";
+  static final String PARAM_REOPEN_INTERVAL = PREFIX + "reopenInterval";
+  public static final String PARAM_FILE = PREFIX + "file";
 
-  private static long lastTimestamp = 0;
+  private static final long DEFAULT_REOPEN_INTERVAL = 10 * Constants.MINUTE;
+  private static final String DEFAULT_FILE = "/var/log/lockss/daemon";
 
-  private PrintWriter stream;
-  private long lastTimeOpened;
-  private static final long reOpenInterval = (10 * 60 * 1000);
-  private static String logfile = "/var/log/lockss/daemon"; // XXX
+  private String filename;
+  private File logfile;
 
-  /** Create a log target that outputs to a File */
+  private long reopenInterval;
+  private Deadline nextReopen = Deadline.in(0);
+  long maxSize = 0;
+
+  /** Create a FileTarget that will log to the file specified by
+   * org.lockss.log.target.FileTarget.file */
   public FileTarget() {
-    stream = null;
-    lastTimeOpened = 0;
+    super(null);
   }
 
-  //  For testing
-  public FileTarget(PrintWriter pw) {
-    stream = pw;
-    lastTimeOpened = System.currentTimeMillis();
+  /** Create a FileTarget that will log to the specified file */
+  FileTarget(String file) {
+    super(null);
+    filename = file;
+    logfile = new File(file);
   }
 
   public void init() {
+    Configuration config = Configuration.getCurrentConfig();
+    reopenInterval = config.getTimeInterval(PARAM_REOPEN_INTERVAL,
+					    DEFAULT_REOPEN_INTERVAL);
+    if (filename == null) {
+      filename = config.get(PARAM_FILE, DEFAULT_FILE);
+      logfile = new File(filename);
+    }
   }
 
-  // Rather than synchronizing, build whole string and assume a single
-  // println will probably not get interleaved with another thread.
-  // If need to explicitly synchronize, do so on the class, not instance,
-  // as there could be multiple instances of this.  (Even that's not right,
-  // as it should synchronize with all other uses of the stream)
-
-  /** Write the message to stdout, prefaced by a timestamp if more than one
-   * day has passed since the last timestamp
+  /** Write the message to the file, reopening it first if it's time
    */
   public void handleMessage(Logger log, int msgLevel, String message) {
-    if (TimeBase.msSince(lastTimestamp) >= Constants.DAY &&
-	!TimeBase.isSimulated()) {
-      lastTimestamp = TimeBase.nowMs();
-      writeMessage(log, "Timestamp", TimeBase.nowDate().toString());
-    }
-    writeMessage(log, log.nameOf(msgLevel), message);
+    openOrReopenStream(log);
+    super.handleMessage(log, msgLevel, message);
+    maxSize = Math.max(maxSize, logfile.length());
   }
 
-  /** Write the message to stdout */
-  void writeMessage(Logger log, String msgLevel, String message) {
-    StringBuffer sb = new StringBuffer();
-    sb.append(df.format(new Date()));
-    if (TimeBase.isSimulated()) {
-      sb.append("(sim ");
-      sb.append(TimeBase.nowMs());
-      sb.append(")");
-    }
-    sb.append(": ");
-    sb.append(msgLevel);
-    sb.append(": ");
-    sb.append(message);
-    // If its been a while since we re-opened the log,
-    // close it.
-    if (stream != null && (System.currentTimeMillis() - lastTimeOpened) >  reOpenInterval) {
+  /** Ensure file is open.  If it's been a while since we re-opened the
+   * log, close it and reopen it. */
+  void openOrReopenStream(Logger log) {
+    if (stream != null && nextReopen.expired()) {
       stream.flush();
       stream.close();
       stream = null;
     }
-    // If the log is closed, open it.
     if (stream == null) {
       try {
-        FileOutputStream fos = new FileOutputStream(logfile, true);
-        OutputStreamWriter osw = new OutputStreamWriter(fos);
-        stream = new PrintWriter(osw);
-        lastTimeOpened = System.currentTimeMillis();
+        FileOutputStream fos = new FileOutputStream(filename, true);
+        stream = new PrintStream(fos);
+	nextReopen.expireIn(reopenInterval);
+	if (logfile.length() < maxSize) {
+	  maxSize = 0;
+	  emitTimestamp(log);
+	}	
       } catch (IOException e) {
-        System.out.println("Can't open " + logfile);
-        System.out.println(sb.toString());
+	log.error("Can't open " + filename);
+        System.err.println("Can't open " + filename);
       }
-    }
-    if (stream != null) {
-      stream.println(sb.toString());
-      stream.flush();
     }
   }
 }
