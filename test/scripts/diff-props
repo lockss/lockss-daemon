@@ -1,23 +1,50 @@
 #!/bin/sh
 
 usage() {
-  echo "usage: $0 <url1> <url2>"
+  echo "usage: $0 [-1 args1] [-2 args2] <url1> <url2>"
   echo "  Loads two prop files (txt or xml) and outputs any differences"
   echo "  in the resulting Configuration.  Exits with zero status if same."
+  echo "  args1 and args2 are args to ConfigDump for fetching url1 and url2,"
+  echo "   respectively.  E.g.,"
+  echo "   $0 -1 \"-g dev\" http://props.lockss.org:8001/lockss.xml http://..."
   exit 2
 }
 
-[ "$#" -ne "2" ] && usage
+[ "$#" -lt "2" ] && usage
+
+args1=""
+args2=""
+
+while true ; do
+  case "$1" in
+    "-1" )
+      args1="$2"
+      shift; shift; continue;;
+    "-2" )
+      args2="$2"
+      shift; shift; continue;;
+    "-*" )
+      usage
+  esac
+  break;
+done
 
 f1="$1"
 f2="$2"
+shift; shift;
 TEMP_PREFIX=/tmp/props
 t1=`mktemp ${TEMP_PREFIX}.XXXXXX`
 t2=`mktemp ${TEMP_PREFIX}.XXXXXX`
 
-test/scripts/run-class ConfigDump -t -o $t1 "$f1"
-test/scripts/run-class ConfigDump -t -o $t2 "$f2"
-if diff -U 0 -L "$f1" -L "$f2" $t1 $t2; then
+test/scripts/run-class ConfigDump $args1 -o $t1 "$f1"
+test/scripts/run-class ConfigDump $args2 -o $t2 "$f2"
+
+lbl1="$f1"
+[ -n "$args1" ] && lbl1="$lbl1 $args1"
+lbl2="$f2"
+[ -n "$args2" ] && lbl2="$lbl2 $args2"
+
+if diff -U 0 -L "$lbl1" -L "$lbl2" $t1 $t2; then
  exit=0
 else
  exit=1
