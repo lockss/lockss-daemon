@@ -1,5 +1,5 @@
 /*
- * $Id: SetUtil.java,v 1.5 2003-06-20 22:34:53 claire Exp $
+ * $Id: SetUtil.java,v 1.6 2003-11-11 20:26:05 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -222,13 +222,14 @@ public class SetUtil {
     return l;
   }
 
+  /** Create a set containing the elements of a Collection */
+  public static Set theSet(Collection coll) {
+    return new HashSet(coll);
+  }
+
   /** Create a set containing the elements of a list */
   public static Set fromList(List list) {
-    Set l = set();
-    for (int i = 0; i < list.size(); i++) {
-      l.add(list.get(i));
-    }
-    return l;
+    return theSet(list);
   }
 
   /** Create a set containing the elements of an iterator */
