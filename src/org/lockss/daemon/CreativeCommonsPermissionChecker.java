@@ -1,5 +1,5 @@
 /*
- * $Id: CreativeCommonsPermissionChecker.java,v 1.2 2004-10-26 00:31:48 smorabito Exp $
+ * $Id: CreativeCommonsPermissionChecker.java,v 1.3 2005-03-19 09:08:39 tlipkis Exp $
  */
 
 /*
@@ -187,8 +187,8 @@ public class CreativeCommonsPermissionChecker
 	  return true;
 	}
       }
-    } catch (Exception ex) {
-      ex.printStackTrace();
+    } catch (ModelException ex) {
+      log.warning("Couldn't parse RDF", ex);
     }
 
     // No permission granted if this point is reached.

@@ -1,5 +1,5 @@
 /*
- * $Id: ExternalizableMap.java,v 1.14 2004-10-05 00:31:58 clairegriffin Exp $
+ * $Id: ExternalizableMap.java,v 1.15 2005-03-19 09:08:39 tlipkis Exp $
  */
 
 /*
@@ -86,7 +86,7 @@ public class ExternalizableMap extends TypedEntryMap {
     }
     catch (Exception e) {
       // some other error occured
-      e.printStackTrace();
+      logger.warning("Couldn't load: " + mapLocation, e);
       loadErr = "Exception Loading XML file: " + e.toString();
       throw new FileNotFoundException(loadErr);
     }
