@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapSocket.java,v 1.4 2002-11-19 23:26:16 tal Exp $
+ * $Id: TestLcapSocket.java,v 1.5 2002-12-02 00:43:08 tal Exp $
  */
 
 /*
@@ -100,6 +100,22 @@ public class TestLcapSocket extends LockssTestCase{
     assertEquals(testPacket, sent);
   }
   
+  static Logger log = Logger.getLogger("SockTest");
+
+  public void testUnicastReceive() throws Exception {
+    Queue rcvQ = new FifoQueue();
+    MockDatagramSocket dskt = new MockDatagramSocket();
+    LcapSocket.Unicast lskt = new LcapSocket.Unicast(rcvQ, dskt);
+    dskt.addToReceiveQueue(testPacket);
+    Interrupter intr;
+    intr = interruptMeIn(500);
+    PrivilegedAccessor.invokeMethod(lskt, "receivePacket");
+    assertTrue(!rcvQ.isEmpty());
+    LockssDatagram rcvd = (LockssDatagram)rcvQ.get(Deadline.in(0));
+    assertEquals(testPacket, rcvd.getPacket());
+    intr.cancel();
+  }
+
   public void testMulticastReceive() throws Exception {
     Queue rcvQ = new FifoQueue();
     MockMulticastSocket mskt = new MockMulticastSocket();
