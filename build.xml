@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.70 2004-01-13 04:46:24 clairegriffin Exp $
+ $Id: build.xml,v 1.70.2.1 2004-01-15 03:35:58 troberts Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -634,7 +634,7 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
       targetos="${detected.os}" />
     <echo message="${tmp.test.clspth}" file="${test.classpath.file}"/>
     <!-- Write run classpath to a different file, for package build -->
-    <pathconvert refid="run.classpath" property="tmp.run.clspth"
+    <pathconvert refid="test.run.classpath" property="tmp.run.clspth"
       targetos="${detected.os}">
       <!-- entity codes below are open and close curly brace -->
       <map from="${basedir}/lib" to="$&#x07b;JAVA.LIB.PATH&#x07d;" />
