@@ -1,5 +1,5 @@
 /*
- * $Id: SingleNodeCachedUrlSetSpec.java,v 1.6 2003-06-20 22:34:50 claire Exp $
+ * $Id: SingleNodeCachedUrlSetSpec.java,v 1.7 2003-06-26 23:59:33 eaalto Exp $
  */
 
 /*
@@ -84,7 +84,7 @@ public class SingleNodeCachedUrlSetSpec implements CachedUrlSetSpec {
   }
 
   /**
-   * @arg spec the set to test disjointness with
+   * @param spec the set to test disjointness with
    * @return true if the two sets are disjoint
    */
   public boolean isDisjoint(CachedUrlSetSpec spec) {
@@ -98,7 +98,7 @@ public class SingleNodeCachedUrlSetSpec implements CachedUrlSetSpec {
   }
 
   /**
-   * @arg spec the set to test subsumption of
+   * @param spec the set to test subsumption of
    * @return true if spec is a SingleNodeCachedUrlSetSpec naming the same
    * URL, false otherwise.
    */
