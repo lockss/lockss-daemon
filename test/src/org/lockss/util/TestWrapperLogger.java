@@ -1,5 +1,5 @@
 /*
- * $Id: TestWrapperLogger.java,v 1.3 2004-01-26 20:00:35 tyronen Exp $
+ * $Id: TestWrapperLogger.java,v 1.3.18.1 2004-12-08 00:56:10 tlipkis Exp $
  */
 
 /*
@@ -50,7 +50,7 @@ public class TestWrapperLogger extends LockssTestCase {
   private MockLogTarget tgt;
   private final String classname = "TestClass";
   private final String methodname = "TestMethod";
-  private final String teststr = "Debug3: " + WrapperLogger.WRAPPED_LOG_NAME +
+  private final String teststr = "Debug3: 1-" + WrapperLogger.WRAPPED_LOG_NAME +
       ": Method " + methodname + " of class " + classname + ' ';
 
   public static Class testedClasses[] = {
@@ -143,7 +143,7 @@ public class TestWrapperLogger extends LockssTestCase {
 
   private String getExceptionLogMessage(Throwable e) {
     StringBuffer sb = new StringBuffer();
-    sb.append("Warning: ");
+    sb.append("Warning: 1-");
     sb.append(WrapperLogger.WRAPPED_LOG_NAME);
     sb.append(": Method ");
     sb.append(methodname);
