@@ -1,5 +1,5 @@
 /*
-* $Id: Identity.java,v 1.2 2002-10-18 18:05:24 claire Exp $
+* $Id: Identity.java,v 1.3 2002-11-07 03:25:38 claire Exp $
  */
 
 /*
@@ -124,7 +124,8 @@ public class Identity {
   /**
    * construct a new Identity from the information found in
    * a datagram socket
-   * @param socket
+   * @param socket the DatagramSocket
+   * @return newly constructed <code>Identity<\code>
    */
   Identity(DatagramSocket socket) {
     this(socket.getInetAddress(),socket.getPort());
@@ -193,7 +194,7 @@ public class Identity {
 
   /**
    * get the Identity of the local host
-   * @return
+   * @return newly constructed <code>Identity<\code>
    */
   public static Identity getLocalIdentity() {
     if(theLocalIdentity == null)  {
@@ -209,7 +210,7 @@ public class Identity {
   // accessor methods
   /**
    * return the address of the Identity
-   * @return
+   * @return the <code>InetAddress<\code> for this Identity
    */
   public InetAddress getAddress() {
     return m_address;
@@ -217,7 +218,7 @@ public class Identity {
 
   /**
    * return the port used by this Identity
-   * @return
+   * @return the <code>int<\code> port value for this Identity
    */
   public int getPort() {
     return m_port;
@@ -225,7 +226,7 @@ public class Identity {
 
   /**
    * return the current value of this Identity's reputation
-   * @return
+   * @return the int value of reputation
    */
   public int getReputation() {
     return m_reputation;
@@ -233,7 +234,7 @@ public class Identity {
 
   /**
    * return true if this Identity is the same as the local host
-   * @return
+   * @return boolean true if is the local identity, false otherwise
    */
   public boolean isLocalIdentity() {
     if(theLocalIdentity == null)  {
@@ -247,8 +248,8 @@ public class Identity {
   // methods which may need to be overridden
   /**
    * return true if two Identity are found to be the same
-   * @param id
-   * @return
+   * @param id the Identity to compare with this one
+   * @return true if the id keys are the same
    */
   public boolean isEqual(Identity id) {
     String idKey = (String)id.m_idKey;
@@ -258,7 +259,7 @@ public class Identity {
 
   /**
    * return the identity of the Identity
-   * @return
+   * @return the String representation of the Identity
    */
   public String toString() {
     return (String)m_idKey;
@@ -266,7 +267,7 @@ public class Identity {
 
   /**
    * return the name of the host as a string
-   * @return
+   * @return the String representation of the Host
    */
   protected String toHost() {
     return (String)m_idKey;
@@ -341,8 +342,8 @@ public class Identity {
 
   /**
    * update the active packet counter
-   * @param NoOp
-   * @param msg
+   * @param NoOp boolean true if this is a no-op message
+   * @param msg the active message
    */
   public void rememberActive(boolean NoOp, Message msg) {
     m_lastActiveTime = System.currentTimeMillis();
@@ -369,7 +370,7 @@ public class Identity {
 
   /**
    * increment the originator packet counter
-   * @param msg
+   * @param msg Message ignored
    */
   public void rememberValidOriginator(Message msg) {
     m_origPackets++;
@@ -377,7 +378,7 @@ public class Identity {
 
   /**
    * increment the forwarded packet counter
-   * @param msg
+   * @param msg Message ignored
    */
   public void rememberValidForward(Message msg) {
     m_forwPackets++;
@@ -385,7 +386,7 @@ public class Identity {
 
   /**
    * increment the duplicate packet counter
-   * @param msg
+   * @param msg Message ignored
    */
   public void rememberDuplicate(Message msg) {
     m_duplPackets++;
