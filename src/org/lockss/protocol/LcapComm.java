@@ -1,5 +1,5 @@
 /*
- * $Id: LcapComm.java,v 1.8 2002-12-13 23:09:40 tal Exp $
+ * $Id: LcapComm.java,v 1.9 2002-12-15 00:15:36 tal Exp $
  */
 
 /*
@@ -91,32 +91,9 @@ public class LcapComm {
     singleton.start();
   }
 
-  /** Multicast a message to all caches holding the ArchivalUnit.
-   * @param msg the message to send
-   * @param au archival unit for which this message is relevant.  Used to
-   * determine which multicast socket/port to send to.
-   */
-  public static void sendMessage(LockssDatagram msg, ArchivalUnit au)
-      throws IOException {
-    if (singleton == null) {
-      throw new IllegalStateException("LcapComm singleton not created");
-    }
-    singleton.send(msg, au);
-  }
-
-  /** Unicast a message to a single cache.
-   * @param msg the message to send
-   * @param au archival unit for which this message is relevant.  Used to
-   * determine which multicast socket/port to send to.
-   * @param id the identity of the cache to which to send the message
-   */
-  public static void sendMessageTo(LockssDatagram msg, ArchivalUnit au,
-				   LcapIdentity id)
-      throws IOException {
-    if (singleton == null) {
-      throw new IllegalStateException("LcapComm singleton not created");
-    }
-    singleton.sendTo(msg, au, id);
+  /** Return the singleton LcapComm instance */
+  public static LcapComm getComm() {
+    return singleton;
   }
 
   /** Set communication parameters from configuration */
@@ -167,7 +144,7 @@ public class LcapComm {
   }
 
   /** Unicast a message to a single cache.
-   * @param msg the message to send
+   * @param ld the datagram to send
    * @param au archival unit for which this message is relevant.  Used to
    * determine which multicast socket/port to send to.
    * @param id the identity of the cache to which to send the message
