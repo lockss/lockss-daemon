@@ -1,5 +1,5 @@
 /*
- * $Id: MockAuState.java,v 1.3 2003-02-26 02:15:47 aalto Exp $
+ * $Id: MockAuState.java,v 1.4 2003-02-27 21:14:25 troberts Exp $
  */
 
 /*
@@ -51,18 +51,6 @@ public class MockAuState extends AuState {
 
   public MockAuState(ArchivalUnit au, long lastCrawlTime, long lastPollTime) {
     super(au, lastCrawlTime, lastPollTime);
-  }
-
-  public ArchivalUnit getArchivalUnit() {
-    return au;
-  }
-
-  public long getLastCrawlTime() {
-    return lastCrawlTime;
-  }
-
-  public long getLastTopLevelPollTime() {
-    return lastTopLevelPoll;
   }
 
   public void setLastCrawlTime(long newCrawlTime) {
