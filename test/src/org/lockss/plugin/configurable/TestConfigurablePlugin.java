@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigurablePlugin.java,v 1.7 2004-02-17 21:46:07 clairegriffin Exp $
+ * $Id: TestConfigurablePlugin.java,v 1.8 2004-02-18 23:28:06 clairegriffin Exp $
  */
 
 /*
@@ -135,9 +135,9 @@ public class TestConfigurablePlugin extends LockssTestCase {
     catch (Exception npe) {
     }
 
-    extMapName = "org.lockss.plugin.absinthe.AbsinthePlugin";
+    extMapName = "org.lockss.test.MockConfigurablePlugin";
     configurablePlugin.initPlugin(daemon, extMapName);
-    assertEquals("org.lockss.plugin.absinthe.AbsinthePlugin",
+    assertEquals("org.lockss.test.MockConfigurablePlugin",
                  configurablePlugin.getPluginId());
   }
 
@@ -152,7 +152,7 @@ public class TestConfigurablePlugin extends LockssTestCase {
     }
     assertEquals("ConfigurablePlugin", configurablePlugin.getPluginName());
 
-    extMapName = "org.lockss.plugin.configurable.AbsinthePlugin";
+    extMapName = "org.lockss.test.MockConfigurablePlugin";
     configurablePlugin.initPlugin(daemon, extMapName);
     assertEquals("Absinthe Literary Review",
                  configurablePlugin.getPluginName());

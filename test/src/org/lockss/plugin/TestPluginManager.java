@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.35 2004-02-17 21:46:04 clairegriffin Exp $
+ * $Id: TestPluginManager.java,v 1.36 2004-02-18 23:28:06 clairegriffin Exp $
  */
 
 /*
@@ -180,7 +180,7 @@ public class TestPluginManager extends LockssTestCase {
   }
 
   public void testEnsurePluginLoadedXml() throws Exception {
-    String pname = "org.lockss.plugin.configurable.AbsinthePlugin";
+    String pname = "org.lockss.foo.BarPlugin";
     ConfigurationUtil.setFromArgs(PluginManager.PARAM_PLUGIN_XML_PLUGINS,
 				  pname);
     String key = PluginManager.pluginKeyFromId(pname);
@@ -330,7 +330,7 @@ public class TestPluginManager extends LockssTestCase {
     throws FileNotFoundException {
       initArgs.add(ListUtil.list(daemon, extMapName));
 
-      super.initPlugin(daemon, extMapName);
+     // super.initPlugin(daemon, extMapName);
 
     }
 
