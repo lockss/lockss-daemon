@@ -1,5 +1,5 @@
 /*
- * $Id: BackgroundTask.java,v 1.3 2003-11-12 21:09:20 tlipkis Exp $
+ * $Id: BackgroundTask.java,v 1.4 2003-11-20 01:08:16 tlipkis Exp $
  */
 
 /*
@@ -35,7 +35,7 @@ package org.lockss.scheduler;
 import java.util.*;
 import org.lockss.util.*;
 
-/** Description of a background task that reduces the CPI time available to
+/** Description of a background task that reduces the CPU time available to
  * a foreground (stepped) task. */
 public class BackgroundTask extends SchedulableTask {
   final double loadFactor;
