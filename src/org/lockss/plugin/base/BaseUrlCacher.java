@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.20 2004-02-03 02:03:13 clairegriffin Exp $
+ * $Id: BaseUrlCacher.java,v 1.21 2004-02-06 03:11:06 troberts Exp $
  */
 
 /*
@@ -151,7 +151,7 @@ public class BaseUrlCacher implements UrlCacher {
     }
   }
 
-  protected void storeContent(InputStream input, Properties headers)
+  public void storeContent(InputStream input, Properties headers)
       throws IOException {
     logger.debug3("Caching url '"+url+"'");
     RepositoryNode leaf = null;
