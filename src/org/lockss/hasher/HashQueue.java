@@ -1,5 +1,5 @@
 /*
- * $Id: HashQueue.java,v 1.15 2003-02-24 22:13:41 claire Exp $
+ * $Id: HashQueue.java,v 1.16 2003-02-26 02:07:26 tal Exp $
  */
 
 /*
@@ -57,6 +57,8 @@ class HashQueue implements Serializable {
   private int hashPriority = -1;
   private int hashStepBytes = 10000;
   private int hashNumSteps = 10;
+
+  private long totalBytesHashed = 10;
 
   HashQueue() {
   }
@@ -320,7 +322,7 @@ class HashQueue implements Serializable {
 
 	if (log.isDebug()) log.debug("hashStep(" + nbytes + "): " + req);
 
-	ush.hashStep(nbytes);
+	totalBytesHashed += ush.hashStep(nbytes);
 
 	// break if it's newly overrun
 	if (!ush.finished() &&
