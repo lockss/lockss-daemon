@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.10 2005-01-10 06:23:34 smorabito Exp $
+ * $Id: ConfigManager.java,v 1.10.2.1 2005-01-16 00:04:31 tlipkis Exp $
  */
 
 /*
@@ -339,14 +339,16 @@ public class ConfigManager implements LockssManager {
       return null;
     }
     Configuration newConfig = newConfiguration();
+
+    // Add platform-like params before calling loadList() as they affect
+    // conditional processing
+    if (groupName != null) {
+      newConfig.put(Configuration.PARAM_DAEMON_GROUP, groupName);
+    }
     try {
       boolean gotIt = loadList(newConfig, urlList);
       if (gotIt) {
 	recentLoadError = null;
-	if (groupName != null) {
-	  newConfig.put(Configuration.PARAM_DAEMON_GROUP,
-			groupName);
-	}
 	return newConfig;
       } else {
 	recentLoadError =
@@ -379,13 +381,15 @@ public class ConfigManager implements LockssManager {
 	try {
 	  ConfigFile cf = configCache.get(url);
 	  config.load(cf);
-	  platformConfig = config.copy();
-	  platformConfig.seal();
 	} catch (IOException e) {
 	  log.warning("Couldn't preload local.txt", e);
 	}
       }
     }
+    // do this even if no local.txt, to ensure platform-like params (e.g.,
+    // group) in initial config get into platformConfig even during testing.
+    platformConfig = config.copy();
+    platformConfig.seal();
 
     // Load all of the config files in order.
     for (Iterator iter = urls.iterator(); iter.hasNext();) {
