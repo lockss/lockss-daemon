@@ -1,5 +1,5 @@
 /*
- * $Id: TestAcsPlugin.java,v 1.9 2004-02-10 01:09:10 clairegriffin Exp $
+ * $Id: TestAcsPlugin.java,v 1.10 2004-02-10 04:41:07 clairegriffin Exp $
  */
 
 /*
@@ -48,7 +48,6 @@ public class TestAcsPlugin extends LockssTestCase {
     plugin.initPlugin(getMockLockssDaemon(),
                       "org.lockss.plugin.acs.AcsPlugin");
   }
-
 
   private AcsArchivalUnit makeAuFromProps(Properties props)
       throws ArchivalUnit.ConfigurationException {

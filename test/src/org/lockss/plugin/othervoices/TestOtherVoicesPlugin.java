@@ -1,5 +1,5 @@
 /*
- * $Id: TestOtherVoicesPlugin.java,v 1.5 2004-02-10 01:09:11 clairegriffin Exp $
+ * $Id: TestOtherVoicesPlugin.java,v 1.6 2004-02-10 04:41:07 clairegriffin Exp $
  */
 
 /*
@@ -39,13 +39,13 @@ import org.lockss.daemon.*;
 import org.lockss.util.ListUtil;
 import org.lockss.plugin.ArchivalUnit;
 
-public class TestOtherVoicesPlugin extends LockssTestCase {
+public class TestOtherVoicesPlugin
+    extends LockssTestCase {
   private OtherVoicesPlugin plugin;
 
   public void setUp() throws Exception {
     super.setUp();
     plugin = new OtherVoicesPlugin();
-    plugin.initPlugin(getMockLockssDaemon());
     plugin.initPlugin(getMockLockssDaemon(),
                       "org.lockss.plugin.othervoices.OtherVoicesPlugin");
   }
@@ -54,33 +54,36 @@ public class TestOtherVoicesPlugin extends LockssTestCase {
     try {
       plugin.configureAu(null, null);
       fail("Didn't throw ArchivalUnit.ConfigurationException");
-    } catch (ArchivalUnit.ConfigurationException e) { }
+    }
+    catch (ArchivalUnit.ConfigurationException e) {}
+
   }
 
-  private OtherVoicesArchivalUnit makeAuFromProps(Properties props)
-      throws ArchivalUnit.ConfigurationException {
+  private OtherVoicesArchivalUnit makeAuFromProps(Properties props) throws
+      ArchivalUnit.ConfigurationException {
     Configuration config = ConfigurationUtil.fromProps(props);
-    return (OtherVoicesArchivalUnit)plugin.configureAu(config, null);
+    return (OtherVoicesArchivalUnit) plugin.configureAu(config, null);
   }
 
-  public void testGetAuHandlesBadUrl()
-      throws ArchivalUnit.ConfigurationException, MalformedURLException {
+  public void testGetAuHandlesBadUrl() throws ArchivalUnit.
+      ConfigurationException, MalformedURLException {
     Properties props = new Properties();
     props.setProperty(OtherVoicesPlugin.AUPARAM_BASE_URL, "blah");
     props.setProperty(OtherVoicesPlugin.AUPARAM_VOL, "322");
 
     try {
       OtherVoicesArchivalUnit au = makeAuFromProps(props);
-      fail ("Didn't throw InstantiationException when given a bad url");
-    } catch (ArchivalUnit.ConfigurationException auie) {
+      fail("Didn't throw InstantiationException when given a bad url");
+    }
+    catch (ArchivalUnit.ConfigurationException auie) {
       ConfigParamDescr.InvalidFormatException murle =
-        (ConfigParamDescr.InvalidFormatException)auie.getNestedException();
+          (ConfigParamDescr.InvalidFormatException) auie.getNestedException();
       assertNotNull(auie.getNestedException());
     }
   }
 
-  public void testGetAuConstructsProperAU()
-      throws ArchivalUnit.ConfigurationException, MalformedURLException {
+  public void testGetAuConstructsProperAU() throws ArchivalUnit.
+      ConfigurationException, MalformedURLException {
     Properties props = new Properties();
     props.setProperty(OtherVoicesPlugin.AUPARAM_BASE_URL,
                       "http://www.example.com/");
@@ -92,12 +95,12 @@ public class TestOtherVoicesPlugin extends LockssTestCase {
 
   public void testGetPluginId() {
     assertEquals("org.lockss.plugin.othervoices.OtherVoicesPlugin",
-		 plugin.getPluginId());
+                 plugin.getPluginId());
   }
 
   public void testGetAuConfigProperties() {
     assertEquals(ListUtil.list(ConfigParamDescr.BASE_URL,
-			       ConfigParamDescr.VOLUME_NUMBER),
-		 plugin.getAuConfigDescrs());
+                               ConfigParamDescr.VOLUME_NUMBER),
+                 plugin.getAuConfigDescrs());
   }
 }

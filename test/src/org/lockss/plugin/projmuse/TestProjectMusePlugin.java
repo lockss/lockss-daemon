@@ -1,5 +1,5 @@
 /*
- * $Id: TestProjectMusePlugin.java,v 1.10 2004-02-10 01:09:11 clairegriffin Exp $
+ * $Id: TestProjectMusePlugin.java,v 1.11 2004-02-10 04:41:07 clairegriffin Exp $
  */
 
 /*
@@ -56,6 +56,7 @@ public class TestProjectMusePlugin extends LockssTestCase {
       fail("Didn't throw ArchivalUnit.ConfigurationException");
     } catch (ArchivalUnit.ConfigurationException e) { }
   }
+
   public void testCreateAu() {
     Properties props = new Properties();
     props.setProperty(ProjectMusePlugin.AUPARAM_BASE_URL, "http://www.example.com/");
