@@ -1,0 +1,186 @@
+<!--
+========================================================================
+ $Id: build.xml,v 1.1 2002-07-17 09:00:00 tal Exp $
+ Ant build file for LOCKSS daemon
+========================================================================
+Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
+all rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Except as contained in this notice, the name of Stanford University shall not
+be used in advertising or otherwise to promote the sale, use or other dealings
+in this Software without prior written authorization from Stanford University.
+========================================================================
+
+The default target is "lockss-jar", which will build the lockss jar
+
+Other targets:
+
+
+-->
+<project name="LOCKSS Gamma" default="lockss-jar" basedir=".">
+  <property environment="env"/>
+  <property name="src"            value="${basedir}/src" />
+  <property name="classes"        value="${basedir}/classes" />
+  <property name="lib"            value="${basedir}/lib"/>
+  <property name="test"           value="${basedir}/test"/>
+<!--    <property name="test.lib"       value="${test}/lib"/> -->
+  <property name="test.lib"       value="${lib}"/>
+  <property name="test.src"       value="${test}/src"/>
+  <property name="test.classes"   value="${test}/classes" />
+
+  <property name="javac.debug"             value="on" />
+  <property name="javac.optimize"          value="off" />
+  <property name="javac.deprecation"       value="off" />
+
+  <property name="jetty.jar"      value="${lib}/org.mortbay.jetty.jar"/>
+  <property name="servlet.jar"    value="${lib}/javax.servlet.jar"/>
+  <property name="jaxp.jar"       value="${lib}/javax.xml.jaxp.jar"/>
+  <property name="xml.jar"        value="${lib}/org.apache.crimson.jar"/>
+<!--    <property name="regexp.jar"     value="${lib}/gnu-regexp.jar"/> -->
+  <property name="regexp.jar"     value="${lib}/gnu-regexp-1.1.4.jar"/>
+  <property name="junit.jar"      value="${test.lib}/junit.jar"/>
+  <property name="lockss.jar"     value="${lib}/lockss.jar"/>
+  <property name="test.lockss.jar" value="${test.lib}/lockss-test.jar"/>
+  <property name="test.results"   value="${test}/results"/>
+
+  <path id="compile.classpath">
+    <pathelement path="${jetty.jar}" />
+    <pathelement path="${servlet.jar}" />
+    <pathelement path="${regexp.jar}" />
+  </path>
+
+  <path id="run.classpath">
+    <path refid="compile.classpath" />
+    <pathelement path="${lockss.jar}" />
+  </path>
+
+  <path id="test.compile.classpath">
+    <path refid="compile.classpath" />
+    <pathelement path="${lockss.jar}" />
+    <pathelement path="${junit.jar}" />
+  </path>
+
+  <path id="test.run.classpath">
+    <path refid="test.compile.classpath" />
+    <pathelement path="${test.lockss.jar}" />
+  </path>
+
+  <!-- ==================================================================== -->
+  <target name="prepare">
+    <mkdir dir="${classes}" />
+  </target>
+
+  <!-- ==================================================================== -->
+  <target name="test.prepare" depends="prepare">
+    <mkdir dir="${test.classes}" />
+    <mkdir dir="${test.results}" />
+    <available property="junit.task.available" 
+               classname="org.apache.tools.ant.taskdefs.optional.junit.JUnitTask" />
+    <available property="junit.available" 
+               classname="junit.framework.Test" />
+  </target>
+
+  <!-- ==================================================================== -->
+  <target name="lockss-classes" depends="prepare"
+   description="Compile the LOCKSS classes" >
+    <javac srcdir="${src}"
+           destdir="${classes}"
+           debug="${javac.debug}"
+           optimize="${javac.optimize}"
+           deprecation="${javac.deprecation}"
+           >
+       <classpath refid="compile.classpath" />
+       <include name="**/*.java"/>
+    </javac>
+  </target>
+  <!-- ==================================================================== -->
+  <target name="test-classes" depends="lockss-jar,test.prepare"
+   description="Compile the LOCKSS test classes" >
+    <javac srcdir="${test.src}"
+           destdir="${test.classes}"
+           debug="${javac.debug}"
+           optimize="${javac.optimize}"
+           deprecation="${javac.deprecation}"
+           >
+       <classpath refid="test.compile.classpath" />
+       <include name="**/*.java"/>
+    </javac>
+  </target>
+  <!-- ==================================================================== -->
+  <target name="lockss-jar" depends="lockss-classes"
+   description="Jar the LOCKSS classes" >
+    <jar jarfile="${lockss.jar}" basedir="${classes}" >
+       <include name="**/" />
+    </jar>
+  </target>
+  <!-- ==================================================================== -->
+  <target name="test-jar" depends="test-classes"
+   description="Jar the LOCKSS test classes" >
+    <jar jarfile="${test.lockss.jar}" basedir="${test.classes}" >
+       <include name="**/" />
+    </jar>
+  </target>
+  <!-- ==================================================================== -->
+  <target name="proxy" depends="test-jar"
+   description="Run the proxy" >
+    <java classname="org.lockss.proxy.StartProxy" fork="true">
+       <classpath refid="test.run.classpath" />
+    </java>
+  </target>
+
+  <!-- ==================================================================== -->
+  <target name="junit"
+   depends="test.prepare,check.junit.task,check.junit,test-jar"
+   description="Run all the junit tests" >
+    <echo>
+Test results in ${test.results}
+    </echo>
+    <delete file="${test.results}/*" quiet="true" />
+    <junit fork="no" printsummary="yes" haltonerror="yes" haltonfailure="yes" >
+      <formatter type="plain" usefile="true" />                  
+      <classpath> 
+         <path refid="test.run.classpath" />
+      </classpath>        
+      <batchtest fork="no" todir="${test.results}">
+        <fileset dir="${test.src}">
+          <include name="**/Test*.java" />
+        </fileset>
+      </batchtest>   
+    </junit>
+  </target>
+
+  <!-- ==================================================================== -->
+  <target name="check.junit.task" unless="junit.task.available" >
+    <fail message="
+ The &lt;junit&gt; task is not available.
+ You need to install the Ant optional tasks .jar in the [ant]/lib directory.
+ Please see Ant's JUnit task doc for more information"
+   />
+  </target>
+
+  <target name="check.junit" unless="junit.available" >
+    <fail message="
+  The junit .jar is not in the Ant class path.
+  You need to place a copy of junit.jar on the classpath.
+  Please see Ant's JUnit task doc for more information"
+    />
+  </target>
+
+</project>
