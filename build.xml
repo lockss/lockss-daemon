@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.106 2004-09-02 23:10:13 smorabito Exp $
+ $Id: build.xml,v 1.106.2.1 2004-09-13 22:48:52 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -1391,16 +1391,18 @@ Test results in ${tools.test.results}
    <if>
     <equals arg1="${cvstag}" arg2="" />
     <then>
+      <!-- Note: The following applies a regexp to the CVS expansion of the
+           Name keyword to determine the CVS tag on this file, if any.  The
+           keyword must not appear literally in the regexp, or it would be
+           expanded there too.  An equivalent regexp is used instead. -->
       <!-- cvs.name.tag will get a value that looks like either
 	   "$ Name: branch_tag $" (or "$ Name: $" or $ Name$ for no tag).
            (Except that there is no space between the $ and Name.)
-           The prefix and suffix are removed to yield the actual tag.
-           (The \ before Name in the pattern is to prevent cvs from expanding
-           the keyword on that line.) -->
+           The prefix and suffix are removed to yield the actual tag. -->
       <property name="cvs.name.tag" value="$Name: not supported by cvs2svn $"/>
       <propertyregex property="cvs.co.tag"
          input="${cvs.name.tag}"
-         regexp="\$\Name: *([^ ]*) *\$"
+         regexp="\$[N]ame: *([^ ]*) *\$"
          replace="\1"
          defaultValue="" />
     </then>
