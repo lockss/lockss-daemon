@@ -1,5 +1,5 @@
 /*
- * $Id: TimeHtmlTagFilter.java,v 1.1 2004-04-05 08:05:16 tlipkis Exp $
+ * $Id: TimeHtmlTagFilter.java,v 1.2 2004-04-06 07:32:58 tlipkis Exp $
  */
 
 /*
@@ -96,7 +96,7 @@ public class TimeHtmlTagFilter extends LockssTiming {
     time(file, NULLFILT,
 	 new Computation() {
 	   public void execute() throws Exception {
-	     Reader rdr = new InputStreamReader(new BufferedInputStream(new FileInputStream(file)));
+	     Reader rdr = newInputStreamReader(new BufferedInputStream(new FileInputStream(file)));
 	     incrBytes(readAll(rdr, true));
 	     rdr.close();
 	   }});
@@ -107,7 +107,7 @@ public class TimeHtmlTagFilter extends LockssTiming {
     time(file, FILTTEXT,
 	 new Computation() {
 	   public void execute() throws Exception {
-	     Reader rdr = new HtmlTagFilter(new InputStreamReader(new FileInputStream(file)),
+	     Reader rdr = new HtmlTagFilter(newInputStreamReader(new FileInputStream(file)),
 					    tagpair);
 	     incrBytes(readAll(rdr, true));
 	     rdr.close();
@@ -119,7 +119,7 @@ public class TimeHtmlTagFilter extends LockssTiming {
     time(file, FILTHTML,
 	 new Computation() {
 	   public void execute() throws Exception {
-	     Reader rdr = new HtmlTagFilter(new InputStreamReader(new FileInputStream(file)),
+	     Reader rdr = new HtmlTagFilter(newInputStreamReader(new FileInputStream(file)),
 					    tagpair);
 	     incrBytes(readAll(rdr, true));
 	     rdr.close();

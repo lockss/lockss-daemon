@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTiming.java,v 1.1 2004-04-05 08:05:15 tlipkis Exp $
+ * $Id: LockssTiming.java,v 1.2 2004-04-06 07:32:57 tlipkis Exp $
  */
 
 /*
@@ -136,6 +136,11 @@ public class LockssTiming extends LockssTestCase {
       }
     }
     return tot;
+  }
+
+  protected InputStreamReader newInputStreamReader(InputStream is)
+      throws UnsupportedEncodingException{
+    return new InputStreamReader(is, Constants.DEFAULT_ENCODING);
   }
 
   public interface Computation {

@@ -1,5 +1,5 @@
 /*
- * $Id: TimeReaderStream.java,v 1.1 2004-04-05 08:05:16 tlipkis Exp $
+ * $Id: TimeReaderStream.java,v 1.2 2004-04-06 07:32:57 tlipkis Exp $
  */
 
 /*
@@ -80,7 +80,7 @@ public class TimeReaderStream extends LockssTiming {
 	   public void execute() throws Exception {
 	     InputStream is =
 	       new BufferedInputStream(new FileInputStream(file));
-	     Reader rdr = new InputStreamReader(is, "ISO8859_1");
+	     Reader rdr = newInputStreamReader(is);
 	     readAll(rdr, true);
 	     rdr.close();
 	   }});
@@ -92,7 +92,7 @@ public class TimeReaderStream extends LockssTiming {
 	   public void execute() throws Exception {
 	     InputStream is =
 	       new BufferedInputStream(new FileInputStream(file));
-	     Reader rdr = new InputStreamReader(is, "ISO8859_1");
+	     Reader rdr = newInputStreamReader(is);
 	     InputStream is2 = new ReaderInputStream(rdr);
 	     readAll(is2, true);
 	     is2.close();
@@ -105,7 +105,7 @@ public class TimeReaderStream extends LockssTiming {
 	   public void execute() throws Exception {
 	     InputStream is =
 	       new BufferedInputStream(new FileInputStream(file));
-	     Reader rdr = new InputStreamReader(is, "ISO8859_1");
+	     Reader rdr = newInputStreamReader(is);
 	     InputStream is2 = new BufferedInputStream(new ReaderInputStream(rdr));
 	     readAll(is2, true);
 	     is2.close();

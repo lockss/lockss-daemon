@@ -1,5 +1,5 @@
 /*
- * $Id: TimeFilterRule.java,v 1.1 2004-04-05 08:05:16 tlipkis Exp $
+ * $Id: TimeFilterRule.java,v 1.2 2004-04-06 07:32:58 tlipkis Exp $
  */
 
 /*
@@ -102,7 +102,7 @@ public class TimeFilterRule extends LockssTiming {
     time(file, NULLFILT,
 	 new Computation() {
 	   public void execute() throws Exception {
-	     InputStream is = new ReaderInputStream(new InputStreamReader(new BufferedInputStream(new FileInputStream(file))));
+	     InputStream is = new ReaderInputStream(newInputStreamReader(new BufferedInputStream(new FileInputStream(file))));
 	     incrBytes(readAll(is, true));
 	     is.close();
 	   }});
@@ -113,7 +113,7 @@ public class TimeFilterRule extends LockssTiming {
     time(file, FILTTEXT,
 	 new Computation() {
 	   public void execute() throws Exception {
-	     InputStream is = rule.createFilteredInputStream(new InputStreamReader(new FileInputStream(file)));
+	     InputStream is = rule.createFilteredInputStream(newInputStreamReader(new FileInputStream(file)));
 	     incrBytes(readAll(is, true));
 	     is.close();
 	   }});
@@ -124,7 +124,7 @@ public class TimeFilterRule extends LockssTiming {
     time(file, FILTHTML,
 	 new Computation() {
 	   public void execute() throws Exception {
-	     InputStream is = rule.createFilteredInputStream(new InputStreamReader(new FileInputStream(file)));
+	     InputStream is = rule.createFilteredInputStream(newInputStreamReader(new FileInputStream(file)));
 	     incrBytes(readAll(is, true));
 	     is.close();
 	   }});
