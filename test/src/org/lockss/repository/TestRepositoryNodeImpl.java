@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.38 2004-04-06 07:30:51 tlipkis Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.39 2004-04-09 06:54:46 tlipkis Exp $
  */
 
 /*
@@ -43,6 +43,11 @@ import org.lockss.plugin.AuUrl;
  * This is the test class for org.lockss.repository.RepositoryNodeImpl
  */
 public class TestRepositoryNodeImpl extends LockssTestCase {
+  static final String TREE_SIZE_PROPERTY =
+    RepositoryNodeImpl.TREE_SIZE_PROPERTY;
+  static final String CHILD_COUNT_PROPERTY =
+    RepositoryNodeImpl.CHILD_COUNT_PROPERTY;
+
   private MockLockssDaemon theDaemon;
   private LockssRepository repo;
   private String tempDirPath;
@@ -622,32 +627,54 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     RepositoryNodeImpl branch2 =
         (RepositoryNodeImpl)createLeaf("http://www.example.com/branch/branch2",
                                        "test", null);
+    // This one has directory level with no node prop file, to check that
+    // cache invalidation traverses them correctly
     RepositoryNodeImpl leaf =
-        (RepositoryNodeImpl)createLeaf("http://www.example.com/branch/branch2/leaf",
+        (RepositoryNodeImpl)createLeaf("http://www.example.com/branch/branch2/a/b/c/leaf",
                                        "test", null);
-    assertNull(branch.nodeProps.getProperty(leaf.TREE_SIZE_PROPERTY));
-    assertNull(leaf.nodeProps.getProperty(leaf.TREE_SIZE_PROPERTY));
-    root.nodeProps.setProperty(leaf.TREE_SIZE_PROPERTY, "789");
-    root.nodeProps.setProperty(leaf.CHILD_COUNT_PROPERTY, "3");
+    assertNull(branch.nodeProps.getProperty(TREE_SIZE_PROPERTY));
+    assertNull(leaf.nodeProps.getProperty(TREE_SIZE_PROPERTY));
+    // force invalidation to happen
+    branch.nodeProps.setProperty(TREE_SIZE_PROPERTY, "789");
+    branch.invalidateCachedValues(true);
+    // should now be explicitly marked invalid
+    assertEquals(branch.INVALID,
+		 branch.nodeProps.getProperty(TREE_SIZE_PROPERTY));
+    assertEquals(branch.INVALID,
+		 branch.nodeProps.getProperty(CHILD_COUNT_PROPERTY));
+    // fake prop set at root to check invalidation stops properly
+    root.nodeProps.setProperty(TREE_SIZE_PROPERTY, "789");
+    root.nodeProps.setProperty(CHILD_COUNT_PROPERTY, "3");
     // don't set branch so the invalidate stops there
-    branch2.nodeProps.setProperty(leaf.TREE_SIZE_PROPERTY, "456");
-    branch2.nodeProps.setProperty(leaf.CHILD_COUNT_PROPERTY, "1");
-    leaf.nodeProps.setProperty(leaf.TREE_SIZE_PROPERTY, "123");
-    leaf.nodeProps.setProperty(leaf.CHILD_COUNT_PROPERTY, "0");
+    branch2.nodeProps.setProperty(TREE_SIZE_PROPERTY, "456");
+    branch2.nodeProps.setProperty(CHILD_COUNT_PROPERTY, "1");
+    leaf.nodeProps.setProperty(TREE_SIZE_PROPERTY, "123");
+    leaf.nodeProps.setProperty(CHILD_COUNT_PROPERTY, "0");
 
     leaf.invalidateCachedValues(true);
-    // cleared
-    assertNull(leaf.nodeProps.getProperty(leaf.TREE_SIZE_PROPERTY));
-    assertNull(leaf.nodeProps.getProperty(leaf.CHILD_COUNT_PROPERTY));
-    // cleared
-    assertNull(branch2.nodeProps.getProperty(leaf.TREE_SIZE_PROPERTY));
-    assertNull(branch2.nodeProps.getProperty(leaf.CHILD_COUNT_PROPERTY));
-    // cleared (invalidate should stop, since there was nothing to invalidate)
-    assertNull(branch.nodeProps.getProperty(leaf.TREE_SIZE_PROPERTY));
-    assertNull(branch.nodeProps.getProperty(leaf.CHILD_COUNT_PROPERTY));
-    // Not cleared
-    assertEquals("789", root.nodeProps.getProperty(leaf.TREE_SIZE_PROPERTY));
-    assertEquals("3", root.nodeProps.getProperty(leaf.CHILD_COUNT_PROPERTY));
+    // shoulddn't be set here anymore
+    assertFalse(isPropValid(leaf.nodeProps.getProperty(TREE_SIZE_PROPERTY)));
+    assertFalse(isPropValid(leaf.nodeProps.getProperty(CHILD_COUNT_PROPERTY)));
+    // or here (requires recursing up through dirs that have no node props
+    // file)
+    assertFalse(isPropValid(branch2.nodeProps.getProperty(TREE_SIZE_PROPERTY)));
+    assertFalse(isPropValid(branch2.nodeProps.getProperty(CHILD_COUNT_PROPERTY)));
+    // still invalid, recursion should have stopped here
+    assertFalse(isPropValid(branch.nodeProps.getProperty(TREE_SIZE_PROPERTY)));
+    assertFalse(isPropValid(branch.nodeProps.getProperty(CHILD_COUNT_PROPERTY)));
+    // so not cleared these
+    assertTrue(isPropValid(root.nodeProps.getProperty(TREE_SIZE_PROPERTY)));
+    assertTrue(isPropValid(root.nodeProps.getProperty(CHILD_COUNT_PROPERTY)));
+    assertEquals("789", root.nodeProps.getProperty(TREE_SIZE_PROPERTY));
+    assertEquals("3", root.nodeProps.getProperty(CHILD_COUNT_PROPERTY));
+  }
+
+  boolean isPropValid(String val) {
+    return RepositoryNodeImpl.isPropValid(val);
+  }
+
+  boolean isPropInvalid(String val) {
+    return RepositoryNodeImpl.isPropInvalid(val);
   }
 
   public void testTreeSizeCaching() throws Exception {
@@ -655,13 +682,13 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
 
     RepositoryNodeImpl leaf =
         (RepositoryNodeImpl)repo.getNode("http://www.example.com/testDir");
-    assertNull(leaf.nodeProps.getProperty(leaf.TREE_SIZE_PROPERTY));
+    assertNull(leaf.nodeProps.getProperty(TREE_SIZE_PROPERTY));
     assertEquals(4, leaf.getTreeContentSize(null));
-    assertEquals("4", leaf.nodeProps.getProperty(leaf.TREE_SIZE_PROPERTY));
+    assertEquals("4", leaf.nodeProps.getProperty(TREE_SIZE_PROPERTY));
     leaf.markAsDeleted();
-    assertNull(leaf.nodeProps.getProperty(leaf.TREE_SIZE_PROPERTY));
+    assertTrue(isPropInvalid(leaf.nodeProps.getProperty(TREE_SIZE_PROPERTY)));
     assertEquals(0, leaf.getTreeContentSize(null));
-    assertEquals("0", leaf.nodeProps.getProperty(leaf.TREE_SIZE_PROPERTY));
+    assertEquals("0", leaf.nodeProps.getProperty(TREE_SIZE_PROPERTY));
   }
 
   public void testChildCount() throws Exception {
@@ -669,14 +696,14 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
 
     RepositoryNodeImpl leaf =
         (RepositoryNodeImpl)repo.getNode("http://www.example.com/testDir");
-    assertNull(leaf.nodeProps.getProperty(leaf.CHILD_COUNT_PROPERTY));
+    assertNull(leaf.nodeProps.getProperty(CHILD_COUNT_PROPERTY));
     assertEquals(0, leaf.getChildCount());
-    assertEquals("0", leaf.nodeProps.getProperty(leaf.CHILD_COUNT_PROPERTY));
+    assertEquals("0", leaf.nodeProps.getProperty(CHILD_COUNT_PROPERTY));
 
     createLeaf("http://www.example.com/testDir/test1", "test1", null);
     createLeaf("http://www.example.com/testDir/test2", "test2", null);
     assertEquals(2, leaf.getChildCount());
-    assertEquals("2", leaf.nodeProps.getProperty(leaf.CHILD_COUNT_PROPERTY));
+    assertEquals("2", leaf.nodeProps.getProperty(CHILD_COUNT_PROPERTY));
   }
 
   public void testDeactivate() throws Exception {

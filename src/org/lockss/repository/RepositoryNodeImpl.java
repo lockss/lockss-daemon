@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.51 2004-04-06 07:30:51 tlipkis Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.52 2004-04-09 06:54:47 tlipkis Exp $
  */
 
 /*
@@ -75,8 +75,13 @@ public class RepositoryNodeImpl implements RepositoryNode {
   // properties set in the node properties
   static final String INACTIVE_CONTENT_PROPERTY = "node.content.isInactive";
   static final String DELETION_PROPERTY = "node.isDeleted";
+
   static final String TREE_SIZE_PROPERTY = "node.tree.size";
   static final String CHILD_COUNT_PROPERTY = "node.child.count";
+  // Token used in above props to indicate explicitly invalid.  Used to
+  // distinguish invalidated from never-been-set.
+  static final String INVALID = "U";
+
   // the filenames associated with the filesystem storage structure
   // the node property file
   static final String NODE_PROPS_FILENAME = "#node_props";
@@ -161,7 +166,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
     // only cache if not filtered
     if (filter==null) {
       String treeSize = nodeProps.getProperty(TREE_SIZE_PROPERTY);
-      if (treeSize != null) {
+      if (isPropValid(treeSize)) {
         // return if found
         return Long.parseLong(treeSize);
       }
@@ -259,7 +264,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
     // caches the value for efficiency
     ensureCurrentInfoLoaded();
     String childCount = nodeProps.getProperty(CHILD_COUNT_PROPERTY);
-    if (childCount!=null) {
+    if (isPropValid(childCount)) {
       // return if found
       return Integer.parseInt(childCount);
     }
@@ -270,10 +275,24 @@ public class RepositoryNodeImpl implements RepositoryNode {
     return count;
   }
 
+  /** return true if value is null or INVALID token */
+  static boolean isPropValid(String val) {
+    return val != null && !val.equals(INVALID);
+  }
+
+  /** return true if value is INVALID token */
+  static boolean isPropInvalid(String val) {
+    return val != null && val.equals(INVALID);
+  }
+
   /**
-   * This call wipes the cached values from the node properties, and calls itself
-   * on the parent node, if any.  This allows a change in value to propagate
-   * upwards, forcing the nodes to recalculate when queried.
+   * Invalidate the cached values in this node's properties, and recurse up
+   * the tree to the root of the AU.  Called whenever anything changes at a
+   * node which might require the cached values to be recomputed.  Stops if
+   * a node is reached whose cache has already been invalidated, but
+   * continues through dirs that have never had their cache values set, as
+   * they may have been created en masse by a mkdirs, and never had a props
+   * file written.
    * @param startNode true iff this node started the chain
    */
   void invalidateCachedValues(boolean startNode) {
@@ -283,20 +302,17 @@ public class RepositoryNodeImpl implements RepositoryNode {
       ensureCurrentInfoLoaded();
     }
 
-    boolean wasCleared = false;
-    if ((nodeProps.getProperty(TREE_SIZE_PROPERTY)!=null) ||
-        (nodeProps.getProperty(CHILD_COUNT_PROPERTY)!=null)) {
-      nodeProps.remove(TREE_SIZE_PROPERTY);
-      nodeProps.remove(CHILD_COUNT_PROPERTY);
+    String treeSize = nodeProps.getProperty(TREE_SIZE_PROPERTY);
+    String childCount = nodeProps.getProperty(CHILD_COUNT_PROPERTY);
+    if (isPropValid(treeSize) || isPropValid(childCount)) {
+      nodeProps.setProperty(TREE_SIZE_PROPERTY, INVALID);
+      nodeProps.setProperty(CHILD_COUNT_PROPERTY, INVALID);
       writeNodeProperties();
-      wasCleared = true;
     }
 
-    // continue to parent if start node, or had cached values
-    // this forces the first level, but then stops if we hit an already
-    // wiped node (for efficiency)
-    if (startNode || wasCleared) {
-      // call invalidate on parent
+    // continue to parent if start node, or had not already been explicitly
+    // invalidated (in which case there might be cached values above)
+    if (startNode || !isPropInvalid(treeSize) || !isPropInvalid(childCount)) {
       RepositoryNodeImpl parentNode = determineParentNode();
       if (parentNode != null) {
         if (!parentNode.getNodeUrl().equals(getNodeUrl())) {
@@ -1066,6 +1082,10 @@ public class RepositoryNodeImpl implements RepositoryNode {
     return new File(buffer.toString());
   }
 
+  public String toString() {
+    return "[reponode: " + url + "]";
+  }
+
   /**
    * Intended to ensure props and stream reflect a consistent view of a
    * single version.  This version gurantees that only if the stream is
@@ -1130,6 +1150,5 @@ public class RepositoryNodeImpl implements RepositoryNode {
       // compares file pathnames
       return ((File)o1).getName().compareToIgnoreCase(((File)o2).getName());
     }
-
   }
 }

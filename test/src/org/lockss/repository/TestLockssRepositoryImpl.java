@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.44 2004-04-06 07:30:51 tlipkis Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.45 2004-04-09 06:54:47 tlipkis Exp $
  */
 
 /*
@@ -188,18 +188,18 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
   public void testCaching() throws Exception {
     createLeaf("http://www.example.com/testDir/leaf1", null, null);
     createLeaf("http://www.example.com/testDir/leaf2", null, null);
-
-    // these values are strange because creating each child node
-    // causes a call to 'invalidateCachedValues() on its parent
     LockssRepositoryImpl repoImpl = (LockssRepositoryImpl)repo;
-    assertEquals(1, repoImpl.getCacheHits());
-    assertEquals(3, repoImpl.getCacheMisses());
+
+    // initial values are strange because creating each child node
+    // causes invalidateCachedValues() to be called nodes up to the root
+    int hits = repoImpl.getCacheHits();
+    int misses = repoImpl.getCacheMisses();
     RepositoryNode leaf = repo.getNode("http://www.example.com/testDir/leaf1");
-    assertEquals(2, repoImpl.getCacheHits());
+    assertEquals(hits + 1, repoImpl.getCacheHits());
     RepositoryNode leaf2 = repo.getNode("http://www.example.com/testDir/leaf1");
     assertSame(leaf, leaf2);
-    assertEquals(3, repoImpl.getCacheHits());
-    assertEquals(3, repoImpl.getCacheMisses());
+    assertEquals(hits + 2, repoImpl.getCacheHits());
+    assertEquals(misses, repoImpl.getCacheMisses());
   }
 
   public void testWeakReferenceCaching() throws Exception {
