@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlParser.java,v 1.17 2004-03-23 20:53:58 tlipkis Exp $
+ * $Id: GoslingHtmlParser.java,v 1.18 2004-04-19 02:16:58 tlipkis Exp $
  */
 
 /*
@@ -75,9 +75,14 @@ import java.net.*;
 import java.io.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
+import org.lockss.daemon.*;
 
 
 public class GoslingHtmlParser implements ContentParser {
+
+  public static final int DEFAULT_BUFFER_CAPACITY = 4096;
+  public static final String PARAM_BUFFER_CAPACITY =
+    Configuration.PREFIX + "crawler.buffer_capacity";
 
   private static final String METATAG = "meta";
   private static final String IMGTAG = "img";
@@ -99,16 +104,38 @@ public class GoslingHtmlParser implements ContentParser {
   private static final String HTTP_EQUIV_CONTENT = "content";
   private static final String HTTP_EQUIV_URL = "url";
 
-  private static final String NEWLINE = "\n";
-  private static final String CARRIAGE_RETURN = "\r";
+  private static final char NEWLINE_CHAR = '\n';
+  private static final char CARRIAGE_RETURN_CHAR = '\r';
 
   //smallest size any of the tags we're interested in can be; <a href=
   private static final int MIN_TAG_LENGTH = 5;
 
+  // initial tag string buffer size
+  private static int EST_TAG_LENGTH = 60;
+
+  // initial url string buffer size
+  private static int EST_URL_LENGTH = 40;
+
   private static Logger logger = Logger.getLogger("GoslingHtmlParser");
 
-
   private String srcUrl = null;
+  private URL baseUrl = null;
+  private Reader reader;
+  private boolean readerEof;
+
+  private CharRing ring;
+  private int ringCapacity;
+  private int ringSize;			// current ring size
+  private boolean isTrace = logger.isDebug3();
+
+  public GoslingHtmlParser() {
+    ringCapacity = Configuration.getIntParam(PARAM_BUFFER_CAPACITY,
+						 DEFAULT_BUFFER_CAPACITY);
+  }
+
+  public GoslingHtmlParser(int ringCapacity) {
+    this.ringCapacity = ringCapacity;
+  }
 
   /**
    * Method which will parse the html file represented by cu call
@@ -125,39 +152,40 @@ public class GoslingHtmlParser implements ContentParser {
     } else if (cb == null) {
       throw new IllegalArgumentException("Called with null callback");
     }
-    String cuStr = cu.getUrl();
-    if (cuStr == null) {
-      logger.error("CachedUrl has null getUrl() value: "+cu);
+    srcUrl = getBaseUrl(cu);
+    if (srcUrl == null) {
+      logger.error("CachedUrl getUrl() and content-url prop are null: "+cu);
       return;
     }
+    baseUrl = null;
 
-    Reader reader = cu.openForReading();
+    reader = cu.openForReading();
+    readerEof = false;
+    ring = new CharRing(ringCapacity);
 
-    String redirectedTo = getRedirectedTo(cu);
-    srcUrl = cuStr;
-    if (redirectedTo != null) {
-      if (logger.isDebug3()) {
-	logger.debug3("redirected-to set to "+redirectedTo
-		      +". Using that as base URL");
-      }
-      srcUrl = redirectedTo;
-    } 
-    logger.debug3("Extracting urls from srcUrl");
+    if (isTrace) logger.debug3("Extracting urls from " + srcUrl);
     String nextUrl = null;
-    while ((nextUrl = extractNextLink(reader)) != null) {
-      if (logger.isDebug3()) {
+    while ((nextUrl = extractNextLink(reader, ring)) != null) {
+      if (isTrace) {
 	logger.debug3("Extracted "+nextUrl);
       }
       cb.foundUrl(nextUrl);
     }
   }
 
-  private static String getRedirectedTo(CachedUrl cu) {
+  private String getBaseUrl(CachedUrl cu) {
     CIProperties props = cu.getProperties();
     if (props != null) {
-      return (String)props.get(CachedUrl.PROPERTY_CONTENT_URL);
+      String redir = props.getProperty(CachedUrl.PROPERTY_CONTENT_URL); 
+      if (redir != null) {
+	if (isTrace) {
+	  logger.debug3("redirected-to set to "+ redir
+			+". Using that as base URL");
+	}
+	return redir;
+      }
     }
-    return null;
+    return cu.getUrl();
   }
 
   /**
@@ -168,54 +196,98 @@ public class GoslingHtmlParser implements ContentParser {
    * @throws IOException
    * @throws MalformedURLException
    */
-  protected String extractNextLink(Reader reader)
+  protected String extractNextLink(Reader reader, CharRing ring)
       throws IOException, MalformedURLException {
-    String nextLink = null;
-    int c = 0;
-    StringBuffer lineBuf = new StringBuffer();
-
-    while(nextLink == null && c >=0) {
+    while (refill()) {
       //skip to the next tag
-      do {
-	c = reader.read();
-      } while (c >= 0 && c != '<');
-
-      if (c == '<') {
-	int pos = 0;
-	c = reader.read();
-	while (c >= 0 && c != '>') {
-	  if(pos==2 && c=='-' && lineBuf.charAt(0)=='!'
-	     && lineBuf.charAt(1)=='-') {
-	    // we're in a HTML comment
-	    pos = 0;
-	    int lc1 = 0;
-	    int lc2 = 0;
-	    while((c = reader.read()) >= 0
-		  && (c != '>' || lc1 != '-' || lc2 != '-')) {
-	      lc1 = lc2;
-	      lc2 = c;
+      int idx = ring.indexOf("<", -1, false);
+      if (idx < 0) {
+	ring.clear();
+	continue;
+      } else {
+	if (isTrace) logger.debug3("Found < at " + idx);
+	ring.skip(idx + 1);
+	if (!refill()) return null;
+	if (ring.get(0) == '!' && ring.get(1) == '-' && ring.get(2) == '-') {
+	  // html comment, skip
+	  ring.skip(3);
+	  if (isTrace) logger.debug3("Searching for end of comment");
+	  while (true) {
+	    if (!refill()) return null;
+	    idx = ring.indexOf(">", -1, false);
+	    if (idx >= 2 && ring.get(idx-1) == '-' && ring.get(idx-2) == '-') {
+	      break;
 	    }
-	    break;
+	    if (idx >= 0) {
+	      // found a > that doesn't close the comment.  Skip past it.
+	      ring.skip(idx + 1);
+	    } else {
+	      // No > in ring.  Leave last two chars in case they're "--"
+	      ring.skip(ring.size() - 2);
+	    }
 	  }
-	  lineBuf.append((char)c);
-	  pos++;
-	  c = reader.read();
+	} else {
+	  // html tag, read into StringBuffer (created lazily if needed)
+	  StringBuffer tagBuf = null;
+	  while (true) {
+	    if (!refill()) break;
+	    idx = ring.indexOf(">", -1, false);
+	    if (idx >= 0) {
+	      if (isTrace) logger.debug3("Found > at " + idx);
+	      if (tagBuf == null) {
+		// If this is first chunk of tag, and it's too short, no
+		// need to call parseLink, so avoid creating StringBuffer.
+		if (idx < MIN_TAG_LENGTH) {
+		  ring.skip(idx + 1);
+		  break;
+		} else {
+		  tagBuf = new StringBuffer(EST_TAG_LENGTH);
+		}
+	      }
+	      ring.remove(tagBuf, idx);
+	      ring.skip(1);
+	      break;
+	    } else {
+	      if (tagBuf == null) {
+		tagBuf = new StringBuffer(EST_TAG_LENGTH);
+	      }
+	      ring.remove(tagBuf, ring.size());
+	    }
+	  }
+
+	  if (tagBuf != null && tagBuf.length() >= MIN_TAG_LENGTH) {
+	    String nextLink = parseLink(tagBuf);
+	    if (nextLink != null) {
+	      return nextLink;
+	    }
+	  }
 	}
-	//optimization. if lineBuf is smaller than this, can't be any link
-	if (lineBuf.length() >= MIN_TAG_LENGTH) {
-	  nextLink = parseLink(lineBuf);
-	}
-	lineBuf = new StringBuffer();
       }
     }
-    return nextLink;
+    return null;
   }
 
-  private static boolean beginsWithTag(StringBuffer sb, String tag) {
+  /** Ensure sufficient chars in ring for shortest tag we're interested in.
+   * @return true if at least MIN_TAG_LENGTH chars in ring, false if EOF
+   * reached and fewer then MIN_TAG_LENGTH chars
+   */
+  private boolean refill() throws IOException {
+    if (ring.size() >= MIN_TAG_LENGTH) return true;
+    while (!readerEof) {
+      readerEof = ring.refillBuffer(reader);
+      if (isTrace) logger.debug3("refilled: " + ring.toString());
+      if (ring.size() >= MIN_TAG_LENGTH) {
+	return true;
+      }
+    }
+    return false;
+  }
+
+  private boolean beginsWithTag(StringBuffer sb, String tag) {
     return beginsWithTag(sb.toString(), tag);
   }
 
-  private static boolean beginsWithTag(String s1, String tag) {
+  private boolean beginsWithTag(String s1, String tag) {
     if (StringUtil.startsWithIgnoreCase(s1, tag)) {
       int len = tag.length();
       if (s1.length() > len && Character.isWhitespace(s1.charAt(len))) {
@@ -278,6 +350,7 @@ public class GoslingHtmlParser implements ContentParser {
 	  String newBase = getAttributeValue(HREF, link);
  	  if (UrlUtil.isAbsoluteUrl(newBase)) {
 	    srcUrl = newBase;
+	    baseUrl = null;
  	  }
 	}
         break;
@@ -308,75 +381,123 @@ public class GoslingHtmlParser implements ContentParser {
         return null;
     }
     if (returnStr != null) {
-      returnStr = StringUtil.trimAfterChars(returnStr, "#");
-      if (logger.isDebug3()) {
+      returnStr = StringUtil.truncateAt(returnStr, '#');
+      if (isTrace) {
 	logger.debug3("Generating url from: " + srcUrl + " and " + returnStr);
       }
       try {
-	returnStr = UrlUtil.resolveUri(srcUrl, returnStr);
+	if (baseUrl == null) {
+	  baseUrl = new URL(srcUrl);
+	}
+	returnStr = UrlUtil.resolveUri(baseUrl, returnStr);
       } catch (MalformedURLException e) {
 	logger.debug("Couldn't resolve URL, base: \"" + srcUrl +
 		     "\", link: \"" + returnStr + "\"",
 		     e);
 	return null;
       }
-      if (logger.isDebug3()) {
+      if (isTrace) {
 	logger.debug3("Parsed: " + returnStr);
       }
     }
     return returnStr;
   }
 
-  private static String getAttributeValue(String attribute, StringBuffer sb) {
+  String getAttributeValue(String attribute, StringBuffer sb) {
     return getAttributeValue(attribute, sb.toString());
   }
 
-  private static String getAttributeValue(String attribute, String src) {
-    if (logger.isDebug3()) {
+  String getAttributeValue(String attribute, String src) {
+    if (isTrace) {
       logger.debug3("looking for "+attribute+" in "+src);
     }
     //  we need to allow for all whitespace in our tokenizer;
     StringTokenizer st = new StringTokenizer(src, "\n\t\r '=\"", true);
-    String lastToken = null;
+    String prevNonWhite = null;
+    // search for "attribute ="
     while (st.hasMoreTokens()) {
       String token = st.nextToken();
-      if (!token.equals("=")) {
-	if (!token.equals(" ") && !token.equals("\"")) {
-	  lastToken = token;
-	}
+      if (isWhitespace(token)) {
+	continue;
+      }
+      if (token.equals("=") && attribute.equalsIgnoreCase(prevNonWhite)) {
+	break;
+      }
+      prevNonWhite = token;
+    }
+    // extract the attribute value
+    while (st.hasMoreTokens()) {
+      String token = st.nextToken();
+      if (isWhitespace(token)) {
+	continue;
+      }
+      if (token.equals("\"")) {
+	return getTokensUntil(st, "\"", null);
+      } else if (token.equals("'")){
+	return getTokensUntil(st, "'", null);
       } else {
-        if (attribute.equalsIgnoreCase(lastToken)){
-	  if (st.hasMoreTokens()) {
-	    String firstToken = st.nextToken();
-	    if (firstToken.equals("\"")) {
-	      return getTokensUntil(st, "\"");
-	    } else if (firstToken.equals("'")){
-	      return getTokensUntil(st, "'");
-	    } else {
-	      StringBuffer sb = new StringBuffer(firstToken);
-	      sb.append(getTokensUntil(st, " "));
-	      return sb.toString();
-	    }
-	  }
-	}
+	StringBuffer sb = new StringBuffer(EST_URL_LENGTH);
+	sb.append(token);
+	return getTokensUntilWhite(st, sb);
       }
     }
     return null;
   }
 
-    private static String getTokensUntil(StringTokenizer st, String endStr) {
-      StringBuffer sb = new StringBuffer();
-      while (st.hasMoreTokens()) {
-	String token = st.nextToken();
-	if (token.equals(endStr)) {
-	  break; //we've hit the end of the attribute value
-	} else if (!token.equals(NEWLINE) && !token.equals(CARRIAGE_RETURN)) {
-	sb.append(token);
+  String getTokensUntil(StringTokenizer st, String endStr, StringBuffer sb) {
+    if (sb == null) {
+      sb = new StringBuffer(EST_URL_LENGTH);
+    }
+    while (st.hasMoreTokens()) {
+      String token = st.nextToken();
+      if (token.equals(endStr)) {
+	break; //we've hit the end of the attribute value
+      } else {
+	// browsers discard newlines in quoted urls
+	if (!isNewline(token)) {
+	  sb.append(token);
 	}
       }
-      return sb.toString();
     }
+    return sb.toString();
+  }
   
+  private String getTokensUntilWhite(StringTokenizer st, StringBuffer sb) {
+    if (sb == null) {
+      sb = new StringBuffer(EST_URL_LENGTH);
+    }
+    while (st.hasMoreTokens()) {
+      String token = st.nextToken();
+      if (isWhitespace(token)) {
+	break;
+      }
+      sb.append(token);
+    }
+    return sb.toString();
+  }
+  
+
+  boolean isWhitespace(String token) {
+    if (Character.isWhitespace(token.charAt(0))) {
+      if (token.length() != 1) {
+	logger.warning("Multi-char token begins with white: " + token);
+      }
+      return true;
+    }
+    return false;
+  }
+
+  boolean isNewline(String token) {
+    char ch = token.charAt(0);
+    if (ch == NEWLINE_CHAR || ch == CARRIAGE_RETURN_CHAR) {
+      if (token.length() != 1) {
+	logger.warning("Multi-char token begins with newline: " + token);
+      }
+      return true;
+    }
+    return false;
+  }
+
 
 //   private static String extractScriptUrl(String src) {
 //     int begin = src.indexOf("'");
@@ -385,7 +506,5 @@ public class GoslingHtmlParser implements ContentParser {
 //       return src.substring(begin+1,end);
 //     return src;
 //   }
-
-
 
 }

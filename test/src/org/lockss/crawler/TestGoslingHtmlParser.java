@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingHtmlParser.java,v 1.14 2004-03-18 03:34:22 tlipkis Exp $
+ * $Id: TestGoslingHtmlParser.java,v 1.15 2004-04-19 02:16:57 tlipkis Exp $
  */
 
 /*
@@ -292,12 +292,53 @@ public class TestGoslingHtmlParser extends LockssTestCase {
     checkBadTags(badTags, "</table>");
   }
 
-  public void testCollectsHttps() throws IOException {
+  // Behavior currently depends on Java version, do disabled.  Crawler
+  // excludes everything but http anyway.
+  public void donttestCollectsHttps() throws IOException {
     String url = "https://www.example.com/link3.html";
     String source =
       "<html><head><title>Test</title></head><body>"+
       "<a href=\""+url+"\">link3</a>";
-    assertEquals(SetUtil.set(url), parseSingleSource(source));
+    // empty in 1.3, no https stream handler
+    assertEmpty(parseSingleSource(source));
+    // 1.4 has one
+//     assertEquals(SetUtil.set(url), parseSingleSource(source));
+  }
+
+  public void testGetAttribute() throws IOException {
+    // no value found
+    assertEquals(null, parser.getAttributeValue("href", "a bar=foo"));
+    assertEquals(null, parser.getAttributeValue("href", "a href"));
+    assertEquals(null, parser.getAttributeValue("href", "a href="));
+    assertEquals(null, parser.getAttributeValue("href", "a href= "));
+    // find proper attribute
+    assertEquals("foo", parser.getAttributeValue("tag", "a tag=foo tag=bar"));
+    assertEquals("bar", parser.getAttributeValue("tag", "a ta=foo tag=bar"));
+    assertEquals("bar", parser.getAttributeValue("tag", "a xy=foo\n tag=bar"));
+    // whitespace
+    assertEquals("foo", parser.getAttributeValue("href", "a href=foo"));
+    assertEquals("foo", parser.getAttributeValue("href", "a href =foo"));
+    assertEquals("foo", parser.getAttributeValue("href", "a href = foo"));
+    assertEquals("foo", parser.getAttributeValue("href", "a href = foo\n"));
+    assertEquals("foo", parser.getAttributeValue("href", "a href= foo"));
+    assertEquals("foo", parser.getAttributeValue("href", "a href\t  = \n foo"));
+    // quoted strings & whitespace
+    assertEquals("foo", parser.getAttributeValue("href", "a href=\"foo\""));
+    assertEquals("foo", parser.getAttributeValue("href", "a href=\"foo\""));
+    assertEquals("fo o", parser.getAttributeValue("href", "a href  =\"fo o\""));
+    assertEquals("fo'o", parser.getAttributeValue("href", "a href=  \"fo'o\""));
+    assertEquals("foo", parser.getAttributeValue("href", "a href  =\"foo\""));
+    assertEquals("foo", parser.getAttributeValue("href", "a href='foo'"));
+    assertEquals("foo", parser.getAttributeValue("href", "a href='foo'"));
+    assertEquals("fo o", parser.getAttributeValue("href", "a href  ='fo o'"));
+    assertEquals("fo\"o", parser.getAttributeValue("href", "a href=  'fo\"o'"));
+    assertEquals("foo", parser.getAttributeValue("href", "a href  ='foo'"));
+    // empty quoted strings
+    assertEquals("", parser.getAttributeValue("href", "a href=\"\""));
+    assertEquals("", parser.getAttributeValue("href", "a href=''"));
+    // dangling quoted strings
+    assertEquals("", parser.getAttributeValue("href", "a href=\""));
+    assertEquals("xy", parser.getAttributeValue("href", "a href=\"xy"));
   }
 
   public void testEmptyAttribute() throws IOException {
@@ -307,14 +348,14 @@ public class TestGoslingHtmlParser extends LockssTestCase {
     assertEquals(SetUtil.set(), parseSingleSource(source));
   }
 
-  //parser now should return urls for protocols we don't know.  Crawler will
-  //ignore them.
+  //Parser should once again not return urls for unknown protocols.
+  //Crawler will ignore them anyway.
   public void testParseUnknownProtocol() throws IOException {
     String url = "badprotocol://www.example.com/link3.html";
     String source =
       "<html><head><title>Test</title></head><body>"+
       "<a href=\""+url+"\">link3</a>";
-    assertEquals(SetUtil.set(url), parseSingleSource(source));
+    assertEmpty(parseSingleSource(source));
   }
 
   public void testParsesFileWithQuotedUrls() throws IOException {
