@@ -1,5 +1,5 @@
 /*
- * $Id: AuSpecificManagerHandler.java,v 1.1 2003-06-26 01:03:13 eaalto Exp $
+ * $Id: AuSpecificManagerHandler.java,v 1.2 2003-08-21 19:30:26 eaalto Exp $
  */
 
 /*
@@ -32,27 +32,23 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.app;
 
 import java.util.*;
-import org.lockss.util.*;
-import org.lockss.daemon.*;
-import org.lockss.daemon.status.*;
-import org.lockss.hasher.*;
-import org.lockss.plugin.*;
-import org.lockss.poller.*;
-import org.lockss.protocol.*;
-import org.lockss.repository.*;
-import org.lockss.state.*;
-import org.lockss.proxy.*;
-import org.lockss.servlet.*;
-import org.lockss.crawler.*;
-import org.apache.commons.collections.SequencedHashMap;
+import org.lockss.util.Logger;
+import org.lockss.daemon.ActivityRegulator;
+import org.lockss.plugin.ArchivalUnit;
+import org.lockss.repository.LockssRepositoryImpl;
+import org.lockss.state.NodeManagerImpl;
 
 /**
- * @author Claire Griffin
+ * This class organizes LockssManagers which are specific to the ArchivalUnit.
+ * It stores these in a hashmap of hashmaps, with the first keyed on manager
+ * type and the second on ArchivalUnit.
+ *
+ * @author Emil Aalto
  * @version 1.0
  */
 
 public class AuSpecificManagerHandler {
-  private static Logger log = Logger.getLogger("LockssDaemon");
+  private static Logger log = Logger.getLogger("AuSpecificManagerHandler");
   private LockssDaemon theDaemon;
 
   // order is unimportant here.  This is a hashmap of hashmaps.
