@@ -1,5 +1,5 @@
 /*
- * $Id: PriorityQueue.java,v 1.4 2002-11-15 01:25:40 tal Exp $
+ * $Id: PriorityQueue.java,v 1.5 2002-11-19 23:28:02 tal Exp $
  */
 
 /*
@@ -38,9 +38,9 @@ import java.util.*;
  * A thread-safe priority queue
  * Elements must implement the Comparable interface (or be accepted
  * by the specified Comparator).
- * This implementation assumes that comparisons are stable over time,
- * <i>ie</i>, new elements are added by inserting them into the already
- * sorted list.
+ * Elements are sorted in order upon insertion.  If any element changes
+ * in a way that might affect its sort order, {@link sort()} must be
+ * called to resort the queue.
  */
 public class PriorityQueue implements Queue {
   private Vector queue = new Vector();
@@ -90,24 +90,43 @@ public class PriorityQueue implements Queue {
   /** 
    * Remove from the beginning of the queue. Does not return until
    * an object appears in the queue and becomes available to this thread.
+   * @return the item formerly at the head of the queue, or null if a
+   * timeout occurred before an item was available.
+   * @throws InterruptedException if interrupted while waiting
    */
-  public synchronized Object get(ProbabilisticTimer timer)
+  public synchronized Object get(Deadline timer) throws InterruptedException {
+    Object head = peekWait(timer);
+    if (head != null) {
+      queue.removeElementAt(0);
+    }
+    return head;
+  }
+
+  /** 
+   * Wait until the queue is non-empty, then return the element at the
+   * head of the queue, leaving it on the queue.
+   * @return the item at the head of the queue, or null if a
+   * timeout occurred before an item was available.
+   * @throws InterruptedException if interrupted while waiting
+   */
+  public synchronized Object peekWait(Deadline timer)
       throws InterruptedException {
+    final Thread thread = Thread.currentThread();
+    Deadline.Callback cb = new Deadline.Callback() {
+	public void changed(Deadline deadline) {
+	  thread.interrupt();
+	}};
     while (queue.isEmpty() && !timer.expired()) {
       try {
-	timer.setThread();
+	timer.registerCallback(cb);
 	this.wait(timer.getRemainingTime());
-//        } catch (InterruptedException e) {
-//  	  break;
-//  	  continue;
       } finally {
-	timer.clearThread();
+	timer.unregisterCallback(cb);
       }
     }
     if (!queue.isEmpty()) {
       // remove from beginning
       Object obj = queue.firstElement();
-      queue.removeElementAt(0);
       return obj;
     } else {
       return null;
@@ -127,5 +146,13 @@ public class PriorityQueue implements Queue {
    */
   public boolean isEmpty() {
     return queue.isEmpty();
+  }
+
+  /** 
+   * Resort the elements on the queue.  Must be called if any element
+   * changes in a way that might affect its sort order
+   */
+  public synchronized void sort() {
+    Collections.sort(queue, comparator);
   }
 }
