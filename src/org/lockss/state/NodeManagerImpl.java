@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.107 2003-04-18 21:34:45 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.108 2003-04-18 23:18:37 aalto Exp $
  */
 
 /*
@@ -149,6 +149,10 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
                                         Deadline.in(state.getDuration()),
                                         state.isMyPoll());
     ( (NodeStateImpl) nodeState).addPollState(pollState);
+    logger.debug2("Starting poll for url '" +
+                  nodeState.getCachedUrlSet().getUrl() + " " +
+                  pollState.getLwrBound() + "-" +
+                  pollState.getUprBound() + "'");
   }
 
   public boolean shouldStartPoll(CachedUrlSet cus, PollTally state) {
