@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.26 2003-04-18 22:31:02 troberts Exp $
+ * $Id: CrawlManagerImpl.java,v 1.27 2003-04-27 08:51:53 tal Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.util.*;
 import org.lockss.app.*;
 import org.lockss.state.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.base.*;
 
 
 /**
@@ -303,6 +304,8 @@ public class CrawlManagerImpl extends BaseLockssManager
     private static final String END_TIME_COL_NAME = "end";
     private static final String NUM_URLS_PARSED = "num_urls_parsed";
     private static final String NUM_URLS_FETCHED = "num_urls_fetched";
+    private static final String NUM_CACHE_HITS = "num_cache_hits";
+    private static final String CACHE_HITS_PERCENT = "cache_hits_percent";
 
     private List colDescs =
       ListUtil.list(
@@ -312,10 +315,14 @@ public class CrawlManagerImpl extends BaseLockssManager
 					 ColumnDescriptor.TYPE_DATE),
 		    new ColumnDescriptor(END_TIME_COL_NAME, "End Time",
 					 ColumnDescriptor.TYPE_DATE),
-		    new ColumnDescriptor(NUM_URLS_FETCHED, "Num URLs fetched",
+		    new ColumnDescriptor(NUM_URLS_FETCHED, "URLs fetched",
 					 ColumnDescriptor.TYPE_INT),
-		    new ColumnDescriptor(NUM_URLS_PARSED, "Num URLs parsed",
-					 ColumnDescriptor.TYPE_INT)
+		    new ColumnDescriptor(NUM_URLS_PARSED, "URLs parsed",
+					 ColumnDescriptor.TYPE_INT),
+		    new ColumnDescriptor(NUM_CACHE_HITS, "Cache hits",
+					 ColumnDescriptor.TYPE_INT),
+		    new ColumnDescriptor(CACHE_HITS_PERCENT, "percent",
+					 ColumnDescriptor.TYPE_PERCENT)
 		    );
 
 
@@ -355,11 +362,20 @@ public class CrawlManagerImpl extends BaseLockssManager
 
     private Map makeRow(Crawler crawler) {
       Map row = new HashMap();
-      row.put(AU_COL_NAME, crawler.getAU().getName());
+      ArchivalUnit au = crawler.getAU();
+      row.put(AU_COL_NAME, au.getName());
       row.put(START_TIME_COL_NAME, makeNullOrLong(crawler.getStartTime()));
       row.put(END_TIME_COL_NAME, makeNullOrLong(crawler.getEndTime()));
       row.put(NUM_URLS_FETCHED, new Long(crawler.getNumFetched()));
       row.put(NUM_URLS_PARSED, new Long(crawler.getNumParsed()));
+      if (au instanceof BaseArchivalUnit) {
+	BaseArchivalUnit bau = (BaseArchivalUnit)au;
+	row.put(NUM_CACHE_HITS, new Long(bau.getCrawlSpecCacheHits()));
+	double per = ((float)bau.getCrawlSpecCacheHits() /
+		      ((float)bau.getCrawlSpecCacheHits() +
+		       (float)bau.getCrawlSpecCacheMisses()));
+	row.put(CACHE_HITS_PERCENT, new Double(per));
+      }
       return row;
     }
 
