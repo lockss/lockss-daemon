@@ -1,5 +1,5 @@
 /*
- * $Id: WatchdogService.java,v 1.2 2003-05-23 17:10:38 tal Exp $
+ * $Id: WatchdogService.java,v 1.3 2003-05-24 01:14:09 tal Exp $
  *
 
 Copyright (c) 2000-2002 Board of Trustees of Leland Stanford Jr. University,
@@ -60,7 +60,8 @@ public class WatchdogService extends BaseLockssManager {
   protected synchronized void setConfig(Configuration config,
 					Configuration prevConfig,
 					Set changedKeys) {
-    if (changedKeys.contains(PARAM_PLATFORM_WDOG_FILE)) {
+    if (changedKeys.contains(PARAM_PLATFORM_WDOG_FILE) ||
+	changedKeys.contains(PARAM_PLATFORM_WDOG_INTERVAL)) {
       String name = config.get(PARAM_PLATFORM_WDOG_FILE);
       if (name != null) {
 	watchedFile = new File(name);
@@ -110,12 +111,6 @@ public class WatchdogService extends BaseLockssManager {
     }
   }
 
-  private TimerQueue.Callback cb = new TimerQueue.Callback() {
-      public void timerExpired(Object cookie) {
-	woof();
-      }
-    };
-
   private synchronized void woof() {
     log.debug2("woof");
     req = null;
@@ -128,15 +123,12 @@ public class WatchdogService extends BaseLockssManager {
 		      e.toString());
 	}
       }
-      req = TimerQueue.schedule(Deadline.in(interval), cb, null);
+      req = TimerQueue.schedule(Deadline.in(interval),
+				new TimerQueue.Callback() {
+				  public void timerExpired(Object cookie) {
+				    woof();
+				  }},
+				null);
     }
-  }
-
-  /** For testing only */
-  void setWatchedFile(File file) {
-    if (watchedFile.toString() != file.toString()) {
-      throw new RuntimeException("Substituting different watched file");
-    }
-    watchedFile = file;
   }
 }

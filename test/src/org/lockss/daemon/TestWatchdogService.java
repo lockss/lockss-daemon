@@ -1,5 +1,5 @@
 /*
- * $Id: TestWatchdogService.java,v 1.2 2003-05-23 17:10:38 tal Exp $
+ * $Id: TestWatchdogService.java,v 1.3 2003-05-24 01:14:09 tal Exp $
  */
 
 /*
@@ -83,23 +83,17 @@ public class TestWatchdogService extends LockssTestCase {
   }
 
   public void testWdogOn() throws Exception {
-    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
-    File tmpfile = new MockFile(FileUtil.tempFile("wdog").toString(), sem);
+    File tmpfile = FileUtil.tempFile("wdog");
 
     // configure a 10 second watchdog
     Properties props = new Properties();
     props.put(WatchdogService.PARAM_PLATFORM_WDOG_FILE, tmpfile.toString());
     props.put(WatchdogService.PARAM_PLATFORM_WDOG_INTERVAL, "10s");
     ConfigurationUtil.setCurrentConfigFromProps(props);
-    // substitute our MockFile for the File, just so we can wait for
-    // setLastModified to be called
-    wdog.setWatchedFile(tmpfile);
 
     TimeBase.setSimulated(9000);
     wdog.startService();
     // should happen immediately, when service is started
-    sem.take(TIMEOUT_SHOULDNT);
-
     // ensure file mod time is correct
     long e1 = TimeBase.nowMs();
     assertEquals(e1, tmpfile.lastModified());
@@ -112,23 +106,6 @@ public class TestWatchdogService extends LockssTestCase {
     // 1 more second later, it should be updated again
     TimeBase.step(1000);
     long e2 = TimeBase.nowMs();
-    sem.take(TIMEOUT_SHOULDNT);
     assertEquals(e2, tmpfile.lastModified());
-  }
-
-  /** File that posts a semaphore when setLastModified is called */
-  static class MockFile extends File {
-    SimpleBinarySemaphore slmSem;
-
-    public MockFile(String pathname, SimpleBinarySemaphore slmSem) {
-      super(pathname);
-      this.slmSem = slmSem;
-    }
-
-    public boolean setLastModified(long time) {
-      boolean ret = super.setLastModified(time);
-      slmSem.give();
-      return ret;
-    }
   }
 }
