@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.3 2002-11-23 02:15:33 aalto Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.4 2002-11-23 03:40:49 aalto Exp $
  */
 
 /*
@@ -138,13 +138,46 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     RepositoryNode leaf =
       repo.createNewNode("http://www.example.com/testDir/test.cache");
     assertTrue(!leaf.hasContent());
-    assertEquals(0, leaf.getCurrentVersion());
+    try {
+      leaf.getCurrentVersion();
+      fail("Cannot get current version if no content.");
+    } catch (UnsupportedOperationException uoe) { }
     leaf.makeNewVersion();
     writeToLeaf(leaf, "test stream");
+    leaf.setNewProperties(new Properties());
     leaf.sealNewVersion();
     assertEquals(1, leaf.getCurrentVersion());
     assertTrue(leaf.hasContent());
   }
+
+  public void testIllegalOperations() throws Exception {
+    RepositoryNode leaf =
+      repo.createNewNode("http://www.example.com/testDir/test.cache");
+    assertTrue(!leaf.hasContent());
+    try {
+      leaf.getCurrentVersion();
+      fail("Cannot get current version if no content.");
+    } catch (UnsupportedOperationException uoe) { }
+    try {
+      leaf.sealNewVersion();
+      fail("Cannot seal version if not open.");
+    } catch (UnsupportedOperationException uoe) { }
+    leaf.makeNewVersion();
+    try {
+      leaf.sealNewVersion();
+      fail("Cannot seal version if getNewOutputStream() uncalled.");
+    } catch (UnsupportedOperationException uoe) { }
+    writeToLeaf(leaf, "test stream");
+    try {
+      leaf.sealNewVersion();
+      fail("Cannot seal version if setNewProperties() uncalled.");
+    } catch (UnsupportedOperationException uoe) { }
+    leaf.setNewProperties(new Properties());
+    leaf.sealNewVersion();
+    assertEquals(1, leaf.getCurrentVersion());
+    assertTrue(leaf.hasContent());
+  }
+
 
   public void testMakeNewVersion() throws Exception {
     Properties props = new Properties();
@@ -152,11 +185,11 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     RepositoryNode leaf =
         createLeaf("http://www.example.com/testDir/test.cache",
         "test stream 1", props);
-
     assertEquals(1, leaf.getCurrentVersion());
-    leaf.makeNewVersion();
+
     props = new Properties();
     props.setProperty("test 1", "value 2");
+    leaf.makeNewVersion();
     leaf.setNewProperties(props);
     writeToLeaf(leaf, "test stream 2");
     leaf.sealNewVersion();
@@ -164,7 +197,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
 
     String resultStr = getLeafContent(leaf);
     assertEquals("test stream 2", resultStr);
-    props = leaf.getProperties();
+    props = leaf.getNodeContents().props;
     assertEquals("value 2", props.getProperty("test 1"));
   }
 
@@ -183,7 +216,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
         createLeaf("http://www.example.com/testDir/test.cache",
         "test stream", props);
 
-    props = leaf.getProperties();
+    props = leaf.getNodeContents().props;
     assertEquals("value 1", props.getProperty("test 1"));
 
     leaf.makeNewVersion();
@@ -193,7 +226,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     writeToLeaf(leaf, "test stream 2");
     leaf.sealNewVersion();
 
-    props = leaf.getProperties();
+    props = leaf.getNodeContents().props;
     assertEquals("value 2", props.getProperty("test 1"));
   }
 
@@ -207,6 +240,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
         repo.getRepositoryNode("http://www.example.com/testDir");
     dir.makeNewVersion();
     writeToLeaf(dir, "test stream");
+    dir.setNewProperties(new Properties());
     dir.sealNewVersion();
     assertTrue(dir.hasContent());
 
@@ -226,26 +260,28 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     RepositoryNode leaf = repo.createNewNode(url);
     leaf.makeNewVersion();
     writeToLeaf(leaf, content);
-    if (props!=null) {
-      leaf.setNewProperties(props);
+    if (props==null) {
+      props = new Properties();
     }
+    leaf.setNewProperties(props);
     leaf.sealNewVersion();
     return leaf;
   }
 
   public static void writeToLeaf(RepositoryNode leaf, String content)
       throws Exception {
-    if (content!=null) {
-      OutputStream os = leaf.getNewOutputStream();
-      InputStream is = new StringInputStream(content);
-      StreamUtil.copy(is, os);
-      os.close();
-      is.close();
+    if (content==null) {
+      content = "";
     }
+    OutputStream os = leaf.getNewOutputStream();
+    InputStream is = new StringInputStream(content);
+    StreamUtil.copy(is, os);
+    os.close();
+    is.close();
   }
 
   public static String getLeafContent(RepositoryNode leaf) throws IOException {
-    InputStream is = leaf.getInputStream();
+    InputStream is = leaf.getNodeContents().input;
     OutputStream baos = new ByteArrayOutputStream(20);
     StreamUtil.copy(is, baos);
     is.close();

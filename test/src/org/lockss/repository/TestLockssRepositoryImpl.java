@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.8 2002-11-23 02:15:32 aalto Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.9 2002-11-23 03:40:49 aalto Exp $
  */
 
 /*
@@ -99,6 +99,8 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     assertEquals(leaf, leaf2);
     try {
       leaf.makeNewVersion();
+      TestRepositoryNodeImpl.writeToLeaf(leaf, "test stream");
+      leaf.setNewProperties(new Properties());
       leaf2.sealNewVersion();
     } catch (UnsupportedOperationException uoe) {
       fail("Leaf2 couldn't finish leaf's version.");

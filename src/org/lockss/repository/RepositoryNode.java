@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNode.java,v 1.4 2002-11-21 21:07:56 aalto Exp $
+ * $Id: RepositoryNode.java,v 1.5 2002-11-23 03:40:49 aalto Exp $
  */
 
 /*
@@ -75,59 +75,77 @@ public interface RepositoryNode {
 
   /**
    * Prepares the node to write to a new version.  Should be called before storing
-   * any data.
+   * any data.  Throws an exception if called while a new version is already open.
+   * @throws UnsupportedOperationException
    */
   public void makeNewVersion();
 
   /**
    * Closes the new version to any further writing.  Should be called when done
-   * storing data.
+   * storing data.  Throws an exception if called before
+   * <code>makeNewVersion()</code> or if either <code>getNewOutputStream()</code>
+   * or <code>setNewProperties()</code> has not been called.
+   * @throws UnsupportedOperationException
    */
   public void sealNewVersion();
 
   /**
    * Discards the currently open new version without writing.
+   * Throws an exception if called before <code>makeNewVersion()</code>
+   * @throws UnsupportedOperationException
    */
   public void abandonNewVersion();
 
   /**
    * Returns the current version.  This is the open version when writing,
-   * and the one accessed by the <code>getInputStream()</code> and
-   * <code>getProperties()</code>.
+   * and the one accessed by <code>getNodeInfo()</code>.  Throws an exception
+   * if called on a content-less node.
    * @return the current version
+   * @throws UnsupportedOperationException
    */
   public int getCurrentVersion();
 
   /**
-   * Return an <code>InputStream</code> object which accesses the
-   * content in the cache.
-   * @return an <code>InputStream</code> object from which the contents of
+   * Return a <code>RepositoryNodeContents</code> object which accesses the
+   * content in the cache and its properties.
+   * @return an {@link RepositoryNodeContents} object from which the contents of
    *         the cache can be read.
    */
-  public InputStream getInputStream();
-
-  /**
-   * Return a <code>Properties</code> object containing the headers of
-   * the object in the cache.
-   * @return a <code>Properties</code> object containing the headers of
-   *         the original object being cached.
-   */
-  public Properties getProperties();
+  public RepositoryNodeContents getNodeContents();
 
   /**
    * Return an <code>OutputStream</code> object which writes to a new version
-   * in the cache.  <code>makeNewVersion()</code> must be called first.
+   * in the cache.
+   * Throws an exception if called before <code>makeNewVersion()</code> or
+   * called twice.
    * @return an <code>OutputStream</code> object to which the new contents can be
    * written.
+   * @throws UnsupportedOperationException
    * @see RepositoryNode#makeNewVersion()
    */
   public OutputStream getNewOutputStream();
 
   /**
-   * Stores the properties for a new version of the cache.  <code>makeNewVersion()</code>
-   * must be called first.
+   * Stores the properties for a new version of the cache.  Throws an exception
+   * if called before <code>makeNewVersion()</code> or called twice.
    * @param newProps a <code>Properties</code> object containing the headers of
    *         the new version being cached.
+   * @throws UnsupportedOperationException
    * @see RepositoryNode#makeNewVersion()
    */
-  public void setNewProperties(Properties newProps);}
+  public void setNewProperties(Properties newProps);
+
+  /**
+   * RepositoryNodeContents is a struct containing a matched inputstream
+   * and properties.
+   */
+  public class RepositoryNodeContents {
+    public InputStream input;
+    public Properties props;
+
+    public RepositoryNodeContents(InputStream input, Properties props) {
+      this.input = input;
+      this.props = props;
+    }
+  }
+}

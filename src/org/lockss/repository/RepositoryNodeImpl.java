@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.5 2002-11-21 21:07:56 aalto Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.6 2002-11-23 03:40:49 aalto Exp $
  */
 
 /*
@@ -49,12 +49,14 @@ public class RepositoryNodeImpl implements RepositoryNode {
   private static final String TEMP_SUFFIX = ".temp";
 
   private boolean newVersionOpen = false;
-  private OutputStream newVersionOutput;
+  private boolean newOutputCalled = false;
+  private boolean newPropsSet = false;
   private File curInputFile;
   private Properties curProps;
   private String versionName;
   private int currentVersion = -1;
 
+  private String contentBufferStr = null;
   private File nodeRootFile = null;
   private File cacheLocationFile;
   private File currentCacheFile;
@@ -64,8 +66,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
   private String url;
   private String nodeLocation;
-  private static Logger logger = Logger.getLogger("RepositoryNode",
-                                                    Logger.LEVEL_DEBUG);
+  private static Logger logger = Logger.getLogger("RepositoryNode");
   private LockssRepositoryImpl repository;
 
   RepositoryNodeImpl(String url, String nodeLocation,
@@ -86,8 +87,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
   }
 
   public boolean hasContent() {
-    ensureCurrentVersionLoaded();
-    return currentCacheFile.exists();
+    ensureCurrentInfoLoaded();
+    return currentVersion>0;
   }
 
   public Properties getState() {
@@ -102,18 +103,24 @@ public class RepositoryNodeImpl implements RepositoryNode {
   public Iterator listNodes(CachedUrlSetSpec filter) {
     if (nodeRootFile==null) loadNodeRoot();
     if (!nodeRootFile.exists()) {
-      return Collections.EMPTY_LIST.iterator();
+      logger.error("No cache directory located for: "+url);
+      throw new RepositoryStateException("No cache directory located.");
     }
     if (cacheLocationFile==null) loadCacheLocation();
     File[] children = nodeRootFile.listFiles();
+    // sorts alphabetically relying on File.compareTo()
     Arrays.sort(children, new FileComparator());
-    ArrayList childL = new ArrayList(10);
+    ArrayList childL = new ArrayList(Math.min(40, children.length));
     for (int ii=0; ii<children.length; ii++) {
       File child = children[ii];
       if (!child.isDirectory()) continue;
       if (child.getName().equals(cacheLocationFile.getName())) continue;
-      StringBuffer buffer = new StringBuffer(this.url);
-      if (!url.endsWith(File.separator)) buffer.append(File.separator);
+      int bufMaxLength = url.length() + child.getName().length() + 1;
+      StringBuffer buffer = new StringBuffer(bufMaxLength);
+      buffer.append(url);
+      if (!url.endsWith(File.separator)) {
+        buffer.append(File.separator);
+      }
       buffer.append(child.getName());
 
       String childUrl = buffer.toString();
@@ -121,6 +128,9 @@ public class RepositoryNodeImpl implements RepositoryNode {
         try {
           childL.add(repository.getRepositoryNode(childUrl));
         } catch (MalformedURLException mue) {
+          // this can safely skip bad files because they will
+          // eventually be trimmed by the repository integrity checker
+          // and the content will be replaced by a poll repair
           logger.error("Malformed child url: "+childUrl);
         }
       }
@@ -129,17 +139,19 @@ public class RepositoryNodeImpl implements RepositoryNode {
   }
 
   public int getCurrentVersion() {
-    if (hasContent()) {
-      return currentVersion;
-    } else return 0;
+    if (!hasContent()) {
+      logger.error("Cannot get version if no content: "+url);
+      throw new UnsupportedOperationException("No content to version.");
+    }
+    return currentVersion;
   }
 
-  public void makeNewVersion() {
+  public synchronized void makeNewVersion() {
     if (newVersionOpen) {
       throw new UnsupportedOperationException("New version already"+
                                               " initialized.");
     }
-    ensureCurrentVersionLoaded();
+    ensureCurrentInfoLoaded();
     if (currentVersion == 0) {
       if (!cacheLocationFile.exists()) {
         cacheLocationFile.mkdirs();
@@ -152,6 +164,13 @@ public class RepositoryNodeImpl implements RepositoryNode {
     if (!newVersionOpen) {
       throw new UnsupportedOperationException("New version not initialized.");
     }
+    if (!newOutputCalled) {
+      throw new UnsupportedOperationException("getNewOutputStream() not called.");
+    }
+    if (!newPropsSet) {
+      throw new UnsupportedOperationException("setNewProperties() not called.");
+    }
+
     // rename current
     currentCacheFile.renameTo(getVersionedCacheFile(currentVersion));
     currentPropsFile.renameTo(getVersionedPropertiesFile(currentVersion));
@@ -160,9 +179,9 @@ public class RepositoryNodeImpl implements RepositoryNode {
     tempPropsFile.renameTo(currentPropsFile);
 
     currentVersion++;
-    newVersionOutput = null;
-    curInputFile = null;
     curProps = null;
+    newOutputCalled = false;
+    newPropsSet = false;
     newVersionOpen = false;
   }
 
@@ -174,45 +193,38 @@ public class RepositoryNodeImpl implements RepositoryNode {
     tempCacheFile.delete();
     tempPropsFile.delete();
 
-    newVersionOutput = null;
+    newOutputCalled = false;
+    newPropsSet = false;
     newVersionOpen = false;
   }
 
 
-  public InputStream getInputStream() {
+  public synchronized RepositoryNodeContents getNodeContents() {
     if (!hasContent()) {
       throw new UnsupportedOperationException("No content for url '"+url+"'");
     }
-    ensureReadInfoLoaded();
     try {
-      return new BufferedInputStream(new FileInputStream(curInputFile));
+      InputStream is = new BufferedInputStream(new FileInputStream(curInputFile));
+      return new RepositoryNodeContents(is, curProps);
     } catch (FileNotFoundException fnfe) {
       logger.error("Couldn't get inputstream for '"+curInputFile.getAbsolutePath()+"'");
-      return null;
+      throw new RepositoryStateException("Couldn't get info for node.");
     }
-  }
-
-  public Properties getProperties() {
-    if (!hasContent()) {
-      throw new UnsupportedOperationException("No content for url '"+url+"'");
-    }
-    ensureReadInfoLoaded();
-    return curProps;
   }
 
   public OutputStream getNewOutputStream() {
     if (!newVersionOpen) {
       throw new UnsupportedOperationException("New version not initialized.");
     }
-    if (newVersionOutput!=null) {
-      return newVersionOutput;
+    if (newOutputCalled) {
+      throw new UnsupportedOperationException("getNewOutputStream() called twice.");
     }
+    newOutputCalled = true;
     try {
-      newVersionOutput = new BufferedOutputStream(new FileOutputStream(tempCacheFile));
-      return newVersionOutput;
+      return new BufferedOutputStream(new FileOutputStream(tempCacheFile));
     } catch (FileNotFoundException fnfe) {
       logger.error("No new version file for "+tempCacheFile.getAbsolutePath()+".");
-      return null;
+      throw new RepositoryStateException("Couldn't load new outputstream.");
     }
   }
 
@@ -220,76 +232,64 @@ public class RepositoryNodeImpl implements RepositoryNode {
     if (!newVersionOpen) {
       throw new UnsupportedOperationException("New version not initialized.");
     }
+    if (newPropsSet) {
+      throw new UnsupportedOperationException("setNewProperties() called twice.");
+    }
+    newPropsSet = true;
     if (newProps!=null) {
       try {
         OutputStream os = new BufferedOutputStream(new FileOutputStream(tempPropsFile));
-        newProps.setProperty("version_number", ""+(currentVersion+1));
+        newProps.setProperty("lockss_version_number", ""+(currentVersion+1));
         newProps.store(os, "HTTP headers for " + url);
         os.close();
       } catch (IOException ioe) {
         logger.error("Couldn't write properties for " +
                      tempPropsFile.getAbsolutePath()+".");
+        throw new RepositoryStateException("Couldn't write properties file.");
       }
     }
   }
 
-  private void ensureCurrentVersionLoaded() {
-    if (currentVersion!=-1) return;
-    loadCacheLocation();
-    loadCurrentCacheFile();
-    loadCurrentPropsFile();
-    loadTempCacheFile();
-    loadTempPropsFile();
-    versionName = cacheLocationFile.getName();
+  private void ensureCurrentInfoLoaded() {
+    if (currentVersion==-1) {
+      loadCacheLocation();
+      loadCurrentCacheFile();
+      loadCurrentPropsFile();
+      loadTempCacheFile();
+      loadTempPropsFile();
+      versionName = cacheLocationFile.getName();
+    }
     if (!cacheLocationFile.exists()) {
       currentVersion = 0;
+      curInputFile = null;
+      curProps = null;
       return;
     }
     //XXX getting version from props probably a mistake
-    if (curProps==null) {
-      synchronized (this) {
-        if (currentPropsFile.exists()) {
-          try {
-            InputStream is = new BufferedInputStream(new FileInputStream(currentPropsFile));
-            curProps = new Properties();
-            curProps.load(is);
-            is.close();
-          } catch (Exception e) {
-            logger.error("Error loading version from "+
-                          currentPropsFile.getAbsolutePath()+".");
-            curProps = new Properties();
-          }
-        } else {
-          curProps = new Properties();
-        }
-      }
-    }
-    currentVersion = Integer.parseInt(
-                     curProps.getProperty("version_number", "0"));
-  }
-
-  private void ensureReadInfoLoaded() {
-    if (currentVersion==0) {
-      curInputFile = null;
-      curProps = new Properties();
-      return;
-    }
     if ((curInputFile==null) || (curProps==null)) {
       synchronized (this) {
         if (curInputFile==null) {
           curInputFile = currentCacheFile;
         }
         if (curProps==null) {
-          try {
-            InputStream is = new BufferedInputStream(new FileInputStream(currentPropsFile));
-            curProps = new Properties();
-            curProps.load(is);
-            is.close();
-          } catch (IOException e) {
-            logger.error("No properties file for "+currentPropsFile.getAbsolutePath()+".");
-            curProps = new Properties();
+          if (currentPropsFile.exists()) {
+            try {
+              InputStream is = new BufferedInputStream(new FileInputStream(currentPropsFile));
+              curProps = new Properties();
+//XXX load immutably
+              curProps.load(is);
+              is.close();
+            } catch (Exception e) {
+              logger.error("Error loading version from "+
+                            currentPropsFile.getAbsolutePath()+".");
+              throw new RepositoryStateException("Couldn't load version from properties file.");
+            }
           }
         }
+      }
+      if (curProps!=null) {
+        currentVersion = Integer.parseInt(
+                       curProps.getProperty("lockss_version_number", "-1"));
       }
     }
   }
@@ -350,19 +350,27 @@ public class RepositoryNodeImpl implements RepositoryNode {
   }
 
   private StringBuffer getContentDirBuffer() {
-    StringBuffer buffer = new StringBuffer(nodeLocation);
-    buffer.append(File.separator);
-    buffer.append(nodeLocation);
-    buffer.append(CONTENT_DIR_SUFFIX);
-    buffer.append(File.separator);
-    return buffer;
+    if (contentBufferStr==null) {
+      StringBuffer buffer = new StringBuffer(nodeLocation);
+      buffer.append(File.separator);
+      buffer.append(nodeLocation);
+      buffer.append(CONTENT_DIR_SUFFIX);
+      buffer.append(File.separator);
+      contentBufferStr = buffer.toString();
+    }
+    return new StringBuffer(contentBufferStr);
   }
 
   private class FileComparator implements Comparator {
     public int compare(Object o1, Object o2) {
-      if ((o1 instanceof File) && (o2 instanceof File)) {
-        return ((File)o1).compareTo((File)o2);
-      } else return -1;
+      // compares file pathnames
+      return ((File)o1).getName().compareToIgnoreCase(((File)o2).getName());
+    }
+  }
+
+  public class RepositoryStateException extends RuntimeException {
+    public RepositoryStateException(String msg) {
+      super(msg);
     }
   }
 }
