@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.3 2003-01-16 01:44:45 aalto Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.4 2003-01-25 02:22:20 aalto Exp $
  */
 
 /*
@@ -139,7 +139,7 @@ public class HistoryRepositoryImpl implements HistoryRepository {
     buffer.append(File.separator);
     String auLoc = FileLocationUtil.mapAuToFileLocation(buffer.toString(),
         cus.getArchivalUnit());
-    String urlStr = (String)cus.getSpec().getPrefixList().get(0);
+    String urlStr = (String)cus.getPrimaryUrl();
     return FileLocationUtil.mapUrlToFileLocation(auLoc, urlStr);
   }
 
@@ -154,6 +154,5 @@ public class HistoryRepositoryImpl implements HistoryRepository {
       mapping.loadMapping(mappingFile);
     }
     return mapping;
-
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeStateImpl.java,v 1.2 2003-01-23 01:27:00 aalto Exp $
+ * $Id: TestNodeStateImpl.java,v 1.3 2003-01-25 02:22:20 aalto Exp $
  */
 
 /*
@@ -134,6 +134,18 @@ public class TestNodeStateImpl extends LockssTestCase {
 
     Iterator pollIter = state.getActivePolls();
     assertTrue(CollectionUtil.isIsomorphic(expectedIter, pollIter));
+  }
+
+  public void testIsInternalNode() {
+    MockCachedUrlSet mcus = new MockCachedUrlSet(null, null);
+    Vector childV = new Vector();
+    mcus.setFlatIterator(childV.iterator());
+    state = new NodeStateImpl(mcus, null, null, null);
+    assertTrue(!state.isInternalNode());
+
+    childV.addElement("test string");
+    mcus.setFlatIterator(childV.iterator());
+    assertTrue(state.isInternalNode());
   }
 
   public static void main(String[] argv) {

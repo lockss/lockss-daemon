@@ -1,5 +1,5 @@
 /*
- * $Id: NodeStateImpl.java,v 1.4 2003-01-16 01:44:45 aalto Exp $
+ * $Id: NodeStateImpl.java,v 1.5 2003-01-25 02:22:20 aalto Exp $
  */
 
 /*
@@ -72,6 +72,10 @@ public class NodeStateImpl implements NodeState {
       repository.loadPollHistories(this);
     }
     return Collections.unmodifiableList(pollHistories).iterator();
+  }
+
+  public boolean isInternalNode() {
+    return cus.flatSetIterator().hasNext();
   }
 
   protected void addPollState(PollState new_poll) {

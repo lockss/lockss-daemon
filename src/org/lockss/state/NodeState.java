@@ -1,5 +1,5 @@
 /*
- * $Id: NodeState.java,v 1.3 2003-01-16 01:44:45 aalto Exp $
+ * $Id: NodeState.java,v 1.4 2003-01-25 02:22:20 aalto Exp $
  */
 
 /*
@@ -65,4 +65,11 @@ public interface NodeState {
    * @return an Iterator of PollHistory objects.
    */
   public Iterator getPollHistories();
+
+  /**
+   * Returns true if it's an internal node.
+   * @return true if an internal node
+   */
+  public boolean isInternalNode();
+
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.4 2003-01-23 02:00:50 claire Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.5 2003-01-25 02:22:20 aalto Exp $
  */
 
 /*
@@ -44,6 +44,7 @@ import org.lockss.protocol.*;
 
 public class TestNodeManagerImpl extends LockssTestCase {
   public static final String TEST_URL = "http://www.example.com";
+  private String tempDirPath;
   private MockArchivalUnit mau = null;
   private NodeManagerImpl nodeManager;
   private List urlList = null;
@@ -57,14 +58,15 @@ public class TestNodeManagerImpl extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     TestHistoryRepositoryImpl.configHistoryParams(tempDirPath);
 
     mau = new MockArchivalUnit();
     mau.setAUCachedUrlSet(makeFakeCachedUrlSet(TEST_URL, 2, 2));
     Plugin.registerArchivalUnit(mau);
 
-    nodeManager = new NodeManagerImpl();
+    nodeManager = new NodeManagerImpl(mau);
+    nodeManager.repository = new HistoryRepositoryImpl(tempDirPath);
   }
 
   public void tearDown() throws Exception {
@@ -81,7 +83,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
   }
 
   public void testGetNodeManager() {
-    assertNotNull(NodeManagerImpl.getNodeManager());
+    assertNotNull(NodeManagerImpl.getNodeManager(mau));
   }
 
   public void testGetNodeState() throws Exception {
@@ -124,7 +126,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     ArrayList nodeL = new ArrayList(2);
     while (nodeIt.hasNext()) {
       node = (NodeState)nodeIt.next();
-      nodeL.add(nodeManager.getCusKey(node.getCachedUrlSet()));
+      nodeL.add(node.getCachedUrlSet().getPrimaryUrl());
     }
     String[] expectedA = new String[] {
       "http://www.example.com/branch1",
@@ -151,7 +153,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     ArrayList nodeL = new ArrayList(2);
     while (nodeIt.hasNext()) {
       node = (NodeState)nodeIt.next();
-      nodeL.add(nodeManager.getCusKey(node.getCachedUrlSet()));
+      nodeL.add(node.getCachedUrlSet().getPrimaryUrl());
     }
     String[] expectedA = new String[] {
       "http://www.example.com/branch1",
@@ -164,7 +166,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     nodeL = new ArrayList(1);
     while (nodeIt.hasNext()) {
       node = (NodeState)nodeIt.next();
-      nodeL.add(nodeManager.getCusKey(node.getCachedUrlSet()));
+      nodeL.add(node.getCachedUrlSet().getPrimaryUrl());
     }
     expectedA = new String[] {
       "http://www.example.com/branch1"
@@ -226,11 +228,11 @@ public class TestNodeManagerImpl extends LockssTestCase {
     mau.setPluginId("mock2");
     mau.setAuId("none2");
     String expectedStr = "mock2:none2";
-    assertEquals(expectedStr, nodeManager.getAuKey(mau));
+    assertEquals(expectedStr, mau.getIdString());
 
     CachedUrlSet mcus = getCUS("http://www.foo.com");
     expectedStr = "http://www.foo.com";
-    assertEquals(expectedStr, nodeManager.getCusKey(mcus));
+    assertEquals(expectedStr, mcus.getPrimaryUrl());
   }
 
   public void testMapErrorCodes() {
@@ -315,8 +317,8 @@ public class TestNodeManagerImpl extends LockssTestCase {
   }
 
   private boolean cusEquals(CachedUrlSet cus1, CachedUrlSet cus2) {
-    String url1 = (String)cus1.getSpec().getPrefixList().get(0);
-    String url2 = (String)cus2.getSpec().getPrefixList().get(0);
+    String url1 = (String)cus1.getPrimaryUrl();
+    String url2 = (String)cus2.getPrimaryUrl();
     return url1.equals(url2);
   }
 
@@ -360,7 +362,8 @@ public class TestNodeManagerImpl extends LockssTestCase {
     return cus;
   }
 
-  private Poll createPoll(String url, boolean isContentPoll, int numAgree, int numDisagree)
+  private Poll createPoll(String url, boolean isContentPoll, int numAgree,
+                          int numDisagree)
       throws Exception {
     LcapIdentity testID = null;
     LcapMessage testmsg = null;
@@ -385,7 +388,9 @@ public class TestNodeManagerImpl extends LockssTestCase {
     } catch (IOException ex) {
       fail("can't create test name message" + ex.toString());
     }
-    return TestPoll.createCompletedPoll(testmsg, numAgree, numDisagree);
+    Poll p = TestPoll.createCompletedPoll(testmsg, numAgree, numDisagree);
+    TestHistoryRepositoryImpl.configHistoryParams(tempDirPath);
+    return p;
   }
 
 

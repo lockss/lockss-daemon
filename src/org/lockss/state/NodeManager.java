@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManager.java,v 1.5 2002-12-17 23:35:14 aalto Exp $
+ * $Id: NodeManager.java,v 1.6 2003-01-25 02:22:20 aalto Exp $
  */
 
 /*
@@ -100,6 +100,6 @@ public interface NodeManager {
    * @param au the ArchivalUnit to treewalk
    * @return estimated time in ms
    */
-  public long getEstimatedTreeWalkDuration(ArchivalUnit au);
+  public long getEstimatedTreeWalkDuration();
 
 }

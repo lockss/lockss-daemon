@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.11 2003-01-24 02:43:09 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.12 2003-01-25 02:22:20 aalto Exp $
  */
 
 /*
@@ -51,24 +51,31 @@ import org.lockss.repository.LockssRepositoryImpl;
  */
 public class NodeManagerImpl implements NodeManager {
   private static NodeManager nodeManager = null;
-  private HistoryRepository repository;
-  private HashMap auMaps;
-  private HashMap auEstimateMap;
+  static HistoryRepository repository =
+      HistoryRepositoryImpl.getHistoryRepository();
+  private static HashMap auMaps = new HashMap();
+  private static HashMap auEstimateMap = new HashMap();
+
+  private ArchivalUnit managerAu;
+  private TreeMap nodeMap = new TreeMap();
   private static Logger logger = Logger.getLogger("NodeManager");
 
   /**
    * Factory method to retrieve NodeManager.
+   * @param au the ArchivalUnit being managed
    * @return the current NodeManager
    */
-  public static NodeManager getNodeManager() {
+  public synchronized static NodeManager getNodeManager(ArchivalUnit au) {
+    nodeManager = (NodeManager)auMaps.get(au);
     if (nodeManager==null) {
-      nodeManager = new NodeManagerImpl();
+      nodeManager = new NodeManagerImpl(au);
+      auMaps.put(au, nodeManager);
     }
     return nodeManager;
   }
 
-  NodeManagerImpl() {
-    repository = HistoryRepositoryImpl.getHistoryRepository();
+  NodeManagerImpl(ArchivalUnit au) {
+    managerAu = au;
     loadStateTree();
   }
 
@@ -79,20 +86,19 @@ public class NodeManagerImpl implements NodeManager {
   }
 
   public NodeState getNodeState(CachedUrlSet cus) {
-    TreeMap auMap = (TreeMap)auMaps.get(getAuKey(cus.getArchivalUnit()));
-    if (auMap==null) return null;
-    return (NodeState)auMap.get(getCusKey(cus));
+    return (NodeState)nodeMap.get(cus.getIdString());
   }
 
   public Iterator getActiveCrawledNodes(CachedUrlSet cus) {
-    TreeMap auMap = (TreeMap)auMaps.get(getAuKey(cus.getArchivalUnit()));
-    Iterator keys = auMap.keySet().iterator();
+    Iterator keys = nodeMap.keySet().iterator();
     Vector stateV = new Vector();
     while (keys.hasNext()) {
       String key = (String)keys.next();
       if (cus.containsUrl(key)) {
-        NodeState state = (NodeState)auMap.get(key);
-        if (state.getCrawlState().getStatus() != CrawlState.FINISHED) {
+        NodeState state = (NodeState)nodeMap.get(key);
+        int status = state.getCrawlState().getStatus();
+        if ((status != CrawlState.FINISHED) &&
+            (status != CrawlState.NODE_DELETED)) {
           stateV.addElement(state);
         }
       }
@@ -101,13 +107,12 @@ public class NodeManagerImpl implements NodeManager {
   }
 
   public Iterator getFilteredPolledNodes(CachedUrlSet cus, int filter) {
-    TreeMap auMap = (TreeMap)auMaps.get(getAuKey(cus.getArchivalUnit()));
-    Iterator keys = auMap.keySet().iterator();
+    Iterator keys = nodeMap.keySet().iterator();
     Vector stateV = new Vector();
     while (keys.hasNext()) {
       String key = (String)keys.next();
       if (cus.containsUrl(key)) {
-        NodeState state = (NodeState)auMap.get(key);
+        NodeState state = (NodeState)nodeMap.get(key);
         Iterator polls = state.getActivePolls();
         while (polls.hasNext()) {
           PollState pollState = (PollState)polls.next();
@@ -122,13 +127,12 @@ public class NodeManagerImpl implements NodeManager {
   }
 
   public Iterator getNodeHistories(CachedUrlSet cus, int maxNumber) {
-    TreeMap auMap = (TreeMap)auMaps.get(getAuKey(cus.getArchivalUnit()));
-    Iterator keys = auMap.keySet().iterator();
+    Iterator keys = nodeMap.keySet().iterator();
     Vector historyV = new Vector();
     while (keys.hasNext()) {
       String key = (String)keys.next();
       if (cus.containsUrl(key)) {
-        NodeState state = (NodeState)auMap.get(key);
+        NodeState state = (NodeState)nodeMap.get(key);
         Iterator pollHistories = state.getPollHistories();
         while (pollHistories.hasNext()) {
           PollHistory history = (PollHistory)pollHistories.next();
@@ -143,13 +147,12 @@ public class NodeManagerImpl implements NodeManager {
   }
 
   public Iterator getNodeHistoriesSince(CachedUrlSet cus, Deadline since) {
-    TreeMap auMap = (TreeMap)auMaps.get(getAuKey(cus.getArchivalUnit()));
-    Iterator keys = auMap.keySet().iterator();
+    Iterator keys = nodeMap.keySet().iterator();
     Vector historyV = new Vector();
     while (keys.hasNext()) {
       String key = (String)keys.next();
       if (cus.containsUrl(key)) {
-        NodeState state = (NodeState)auMap.get(key);
+        NodeState state = (NodeState)nodeMap.get(key);
         Iterator pollHistories = state.getPollHistories();
         while (pollHistories.hasNext()) {
           PollHistory history = (PollHistory)pollHistories.next();
@@ -163,24 +166,14 @@ public class NodeManagerImpl implements NodeManager {
     return historyV.iterator();
   }
 
-  public long getEstimatedTreeWalkDuration(ArchivalUnit au) {
-    if (auEstimateMap==null) {
-      auEstimateMap = new HashMap();
-    }
-    String auKey = getAuKey(au);
-    Long estimateL = (Long)auEstimateMap.get(auKey);
+  public long getEstimatedTreeWalkDuration() {
+    Long estimateL = (Long)auEstimateMap.get(managerAu);
     if (estimateL==null) {
       // check size (node count) of tree
-      TreeMap auMap = (TreeMap)auMaps.get(auKey);
-      if (auMap==null) {
-        logger.error("Estimate called on non-existent au '"+getAuKey(au)+"'.");
-        throw new IllegalArgumentException("Estimate called on non-existent au.");
-      }
-      int nodeCount = auMap.size();
+      int nodeCount = nodeMap.size();
       // estimate via short walk
       // this is not a fake walk; it functionally walks part of the tree
       long startTime = TimeBase.nowMs();
-      TreeMap nodeMap = (TreeMap)auMaps.get(auKey);
       Iterator nodesIt = nodeMap.entrySet().iterator();
       String deleteSub = null;
       int NUMBER_OF_NODES_TO_TEST = 200; //XXX fix
@@ -195,33 +188,28 @@ public class NodeManagerImpl implements NodeManager {
       double nodesPerMs = ((double)elapsedTime / NUMBER_OF_NODES_TO_TEST);
       estimateL = new Long((long)(nodeCount * nodesPerMs));
 
-      auEstimateMap.put(getAuKey(au), estimateL);
+      auEstimateMap.put(managerAu, estimateL);
     }
     return estimateL.longValue();
   }
 
   private void doTreeWalk() {
-    Iterator keyIt = auMaps.keySet().iterator();
-    while (keyIt.hasNext()) {
-      String auKey = (String)keyIt.next();
-      long startTime = TimeBase.nowMs();
-      TreeMap nodeMap = (TreeMap)auMaps.get(auKey);
-      nodeTreeWalk(nodeMap);
-      long elapsedTime = TimeBase.nowMs() - startTime;
-      updateEstimate(auKey, elapsedTime);
-    }
+    long startTime = TimeBase.nowMs();
+    nodeTreeWalk(nodeMap);
+    long elapsedTime = TimeBase.nowMs() - startTime;
+    updateEstimate(elapsedTime);
   }
 
-  private void updateEstimate(String auKey, long elapsedTime) {
+  private void updateEstimate(long elapsedTime) {
     if (auEstimateMap==null) {
       auEstimateMap = new HashMap();
     }
-    Long estimateL = (Long)auEstimateMap.get(auKey);
+    Long estimateL = (Long)auEstimateMap.get(managerAu);
     if (estimateL==null) {
-      auEstimateMap.put(auKey, new Long(elapsedTime));
+      auEstimateMap.put(managerAu, new Long(elapsedTime));
     } else {
       long newEstimate = (estimateL.longValue() + elapsedTime)/2;
-      auEstimateMap.put(auKey, new Long(newEstimate));
+      auEstimateMap.put(managerAu, new Long(newEstimate));
     }
   }
 
@@ -272,50 +260,26 @@ public class NodeManagerImpl implements NodeManager {
 
   private void loadStateTree() {
     // get list of aus
-    auMaps = new HashMap(Plugin.getNumArchivalUnits());
-    Iterator auIter = Plugin.getArchivalUnits();
-    while (auIter.hasNext()) {
-      ArchivalUnit au = (ArchivalUnit)auIter.next();
-      TreeMap nodeMap = new TreeMap();
-      // recurse through au cachedurlsets
-      CachedUrlSet cus = au.getAUCachedUrlSet();
-      recurseLoadCachedUrlSets(cus, nodeMap);
-      auMaps.put(getAuKey(au), nodeMap);
-    }
+    // recurse through au cachedurlsets
+    CachedUrlSet cus = managerAu.getAUCachedUrlSet();
+    recurseLoadCachedUrlSets(cus);
   }
 
-  private void recurseLoadCachedUrlSets(CachedUrlSet cus, TreeMap nodeMap) {
+  private void recurseLoadCachedUrlSets(CachedUrlSet cus) {
     // add the nodeState for this cus
-    addNewNodeState(cus, nodeMap);
+    addNewNodeState(cus);
     // recurse the set's children
     Iterator children = cus.flatSetIterator();
     while (children.hasNext()) {
       CachedUrlSet child = (CachedUrlSet)children.next();
-      recurseLoadCachedUrlSets(child, nodeMap);
+      recurseLoadCachedUrlSets(child);
     }
-  }
-
-  private void addNewNodeState(CachedUrlSet cus, TreeMap nodeMap) {
-    NodeState state = new NodeStateImpl(cus, new CrawlState(-1,
-        CrawlState.FINISHED, 0), new ArrayList(), repository);
-    nodeMap.put(getCusKey(cus), state);
   }
 
   private void addNewNodeState(CachedUrlSet cus) {
-    TreeMap nodeMap = (TreeMap)auMaps.get(getAuKey(cus.getArchivalUnit()));
-    addNewNodeState(cus, nodeMap);
-  }
-
-  static String getAuKey(ArchivalUnit au) {
-    return au.getPluginId() + ":" + au.getAUId();
-  }
-
-  static String getCusKey(CachedUrlSet cus) {
-    String key = (String)cus.getSpec().getPrefixList().get(0);
-    if (key.endsWith(File.separator)) {
-      key = key.substring(0, key.length()-1);
-    }
-    return key;
+    NodeState state = new NodeStateImpl(cus, new CrawlState(-1,
+        CrawlState.FINISHED, 0), new ArrayList(), repository);
+    nodeMap.put(cus.getIdString(), state);
   }
 
   private void updateState(NodeState state, Poll.VoteTally results) {
@@ -351,34 +315,42 @@ public class NodeManagerImpl implements NodeManager {
         // if repair poll, we're repaired
         pollState.status = PollState.REPAIRED;
       }
-      closePoll(pollState, results.getDuration(), results.getPollVotes(), nodeState);
+      closePoll(pollState, results.getDuration(), results.getPollVotes(),
+                nodeState);
       updateReputations(results);
     } else {
       // if disagree
       if (pollState.getStatus() == PollState.REPAIRING) {
         // if repair poll, can't be repaired
         pollState.status = PollState.UNREPAIRABLE;
-        closePoll(pollState, results.getDuration(), results.getPollVotes(), nodeState);
+        closePoll(pollState, results.getDuration(), results.getPollVotes(),
+                  nodeState);
         updateReputations(results);
-      } else if (isInternalNode(nodeState)) {
+      } else if (nodeState.isInternalNode()) {
         // if internal node, we need to call a name poll
         pollState.status = PollState.LOST;
-        closePoll(pollState, results.getDuration(), results.getPollVotes(), nodeState);
-        long duration = calculateDuration(nodeState.getCachedUrlSet(), false);
+        closePoll(pollState, results.getDuration(), results.getPollVotes(),
+                  nodeState);
+        long duration = calculateNamePollDuration(nodeState.getCachedUrlSet());
         try {
           PollManager.getPollManager().makePollRequest(results.getUrl(),
               results.getRegExp(), LcapMessage.NAME_POLL_REQ, duration);
         } catch (IOException ioe) {
           logger.error("Couldn't make name poll request.", ioe);
-          //XXX throw something
+          //XXX schedule something
         }
       } else {
         // if leaf node, we need to repair
         pollState.status = PollState.REPAIRING;
         try {
-          repairNode(nodeState.getCachedUrlSet());
-          Deadline deadline = Deadline.in(results.getDuration() * 2);
-          results.replayAllVotes(deadline);
+          markNodeForRepair(nodeState.getCachedUrlSet(), pollState);
+          closePoll(pollState, results.getDuration(), results.getPollVotes(),
+                    nodeState);
+          //XXX PollManager.suspendPoll(pollState);
+          // callback from fetch queue
+          // PollManager.resumePoll(poll info);
+          //  -Deadline deadline = Deadline.in(results.getDuration() * 2);
+          //  -results.replayAllVotes(deadline);
         } catch (IOException ioe) {
           logger.error("Repair attempt failed.", ioe);
           //XXX schedule something?
@@ -404,7 +376,8 @@ public class NodeManagerImpl implements NodeManager {
         // if poll is not mine stop - set to WON
         pollState.status = PollState.WON;
       }
-      closePoll(pollState, results.getDuration(), results.getPollVotes(), nodeState);
+      closePoll(pollState, results.getDuration(), results.getPollVotes(),
+                nodeState);
     } else {
       // if disagree
       pollState.status = PollState.REPAIRING;
@@ -423,7 +396,7 @@ public class NodeManagerImpl implements NodeManager {
           // if not found locally, fetch
           try {
             CachedUrlSet newCus = au.makeCachedUrlSet(url, null);
-            repairNode(newCus);
+            markNodeForRepair(newCus, pollState);
             //add to NodeState list
             addNewNodeState(newCus);
           } catch (Exception e) {
@@ -454,8 +427,10 @@ public class NodeManagerImpl implements NodeManager {
 
   private void closePoll(PollState pollState, long duration, Collection votes,
                          NodeState nodeState) {
+    //XXX checkpoint correctly
     PollHistory history = new PollHistory(pollState, duration, votes);
     ((NodeStateImpl)nodeState).closeActivePoll(history);
+    repository.storePollHistories(nodeState);
   }
 
   private PollState getPollState(NodeState state, Poll.VoteTally results) {
@@ -468,11 +443,6 @@ public class NodeManagerImpl implements NodeManager {
       }
     }
     return null;
-  }
-
-  private boolean isInternalNode(NodeState state) {
-    Iterator children = state.getCachedUrlSet().flatSetIterator();
-    return children.hasNext();
   }
 
   static int mapResultsErrorToPollError(int resultsErr) {
@@ -489,17 +459,19 @@ public class NodeManagerImpl implements NodeManager {
     return PollState.ERR_UNDEFINED;
   }
 
-  private void repairNode(CachedUrlSet cus) throws IOException {
+  private void markNodeForRepair(CachedUrlSet cus, PollState pollState)
+      throws IOException {
     // fetch new version; automatically backs up old version
-    cus.makeUrlCacher(getCusKey(cus)).cache();
+    //XXX fix to asynchronize
+    // pass info to fetch queue instead
+    cus.makeUrlCacher(cus.getPrimaryUrl()).cache();
   }
 
   private void deleteNode(CachedUrlSet cus) throws IOException {
     // delete the node from the LockssRepository
-    String url = getCusKey(cus);
     //XXX change to get from RunDaemon
     LockssRepository repository = LockssRepositoryImpl.repositoryFactory(cus.getArchivalUnit());
-    repository.deleteNode(url);
+    repository.deleteNode(cus.getPrimaryUrl());
   }
 
   private void callContentPollOnSubNodes(NodeState state,
@@ -507,14 +479,18 @@ public class NodeManagerImpl implements NodeManager {
     Iterator children = state.getCachedUrlSet().flatSetIterator();
     while (children.hasNext()) {
       CachedUrlSet child = (CachedUrlSet)children.next();
-      String url = getCusKey(child);
-      long duration = calculateDuration(child, true);
-      PollManager.getPollManager().makePollRequest(url, null,
+      long duration = calculateContentPollDuration(child);
+      PollManager.getPollManager().makePollRequest(child.getPrimaryUrl(), null,
           LcapMessage.CONTENT_POLL_REQ, duration);
     }
   }
 
-  private long calculateDuration(CachedUrlSet cus, boolean isContentPoll) {
+  private long calculateContentPollDuration(CachedUrlSet cus) {
+    //XXX implement!
+    return 100000;
+  }
+
+  private long calculateNamePollDuration(CachedUrlSet cus) {
     //XXX implement!
     return 100000;
   }
