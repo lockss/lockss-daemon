@@ -1,5 +1,5 @@
 /*
- * $Id: TestTreeWalkHandler.java,v 1.37 2004-02-03 02:48:39 eaalto Exp $
+ * $Id: TestTreeWalkHandler.java,v 1.38 2004-06-08 19:49:53 tlipkis Exp $
  */
 
 /*
@@ -188,7 +188,8 @@ public class TestTreeWalkHandler extends LockssTestCase {
 
     TimerUtil.guaranteedSleep(100);
 
-    assertTrue(treeWalkHandler.timeUntilTreeWalkStart() <= 0);
+    long tutws = treeWalkHandler.timeUntilTreeWalkStart();
+    assertTrue(tutws + " > 0", tutws <= 0);
   }
 
   public void testCheckNodeStateCrawling() throws Exception {
