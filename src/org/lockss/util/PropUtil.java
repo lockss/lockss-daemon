@@ -1,6 +1,6 @@
-// ========================================================================
-// $Id: PropUtil.java,v 1.1 2002-08-31 06:39:29 tal Exp $
-// ========================================================================
+/*
+ * $Id: PropUtil.java,v 1.2 2003-04-09 23:46:29 aalto Exp $
+ */
 
 package org.lockss.util;
 
@@ -53,8 +53,8 @@ public class PropUtil {
   /**
    * Compare two Properties for equality (same set of properties with
    * same (.equals) values.
-   * @param p1
-   * @param p2
+   * @param p1 first Properties
+   * @param p2 second Properties
    * @return true iff Properties are equal
    */
   public static boolean equalProps(Properties p1, Properties p2) {
@@ -75,8 +75,8 @@ public class PropUtil {
    * Compare two Properties, return the set of keys whose values are not
    * equal.  (The set may contain keys that don't exist in one or the other
    * Properties).
-   * @param p1
-   * @param p2
+   * @param p1 first Properties
+   * @param p2 second Properties
    * @return Set of keys whose values differ, or null if
    * there are no differences.
    */

@@ -1,6 +1,6 @@
-// ========================================================================
-// $Id: TimerUtil.java,v 1.3 2002-11-21 20:50:17 tal Exp $
-// ========================================================================
+/*
+ * $Id: TimerUtil.java,v 1.4 2003-04-09 23:46:29 aalto Exp $
+ */
 
 /*
 
@@ -42,8 +42,11 @@ public class TimerUtil {
   private TimerUtil() {
   }
 
-  /** Sleep for <code>ms</code> milliseconds,
+  /**
+   * Sleep for <code>ms</code> milliseconds,
    * throwing <code>InterruptedException</code> if interrupted.
+   * @param ms length to sleep, in ms
+   * @throws InterruptedException
    */
   public static void sleep(long ms) throws InterruptedException {
     Thread.currentThread().sleep(ms);
@@ -58,7 +61,10 @@ public class TimerUtil {
 //      }
 //    }
 
-  /** Sleep for <code>ms</code> milliseconds, ignoring interrupts */
+  /**
+   * Sleep for <code>ms</code> milliseconds, ignoring interrupts
+   * @param ms length to sleep, in ms
+   */
   public static void guaranteedSleep(long ms) {
     long expMS = System.currentTimeMillis() + ms;
 
@@ -72,12 +78,21 @@ public class TimerUtil {
     }
   }
 
-  /** Return the millisecond difference between two <code>Date</code>s. */
+  /**
+   * Return the millisecond difference between two <code>Date</code>s.
+   * @param d1 the first Date
+   * @param d2 the second Date
+   * @return the diff, in ms
+   */
   public static long diff(Date d1, Date d2) {
     return d1.getTime() - d2.getTime();
   }
 
-  /** Return the milliseconds since <code>Date</code>. */
+  /**
+   * Return the milliseconds since <code>Date</code>.
+   * @param start the start Date
+   * @return the time since in ms
+   */
   public static long timeSince(Date start) {
     return diff(new Date(), start);
   }

@@ -1,6 +1,6 @@
-// ========================================================================
-// $Id: DaemonStatus.java,v 1.14 2003-04-05 00:57:57 tal Exp $
-// ========================================================================
+/*
+ * $Id: DaemonStatus.java,v 1.15 2003-04-09 23:46:29 aalto Exp $
+ */
 
 /*
 
@@ -68,7 +68,10 @@ public class DaemonStatus extends LockssServlet {
     statSvc = getLockssDaemon().getStatusService();
   }
 
-  /** Handle a request */
+  /**
+   * Handle a request
+   * @throws IOException
+   */
   public void lockssHandleRequest() throws IOException {
     Page page = null;
     Date now = new Date();
@@ -192,7 +195,7 @@ public class DaemonStatus extends LockssServlet {
 	wrtr.println("table=" + title0);
 	if (tableKey != null) {
 	  wrtr.println("key=" + tableKey);
-	}	  
+	}
 	// tk write summary info
       }
 
@@ -240,7 +243,7 @@ public class DaemonStatus extends LockssServlet {
     java.util.List summary = statTable.getSummaryInfo();
     if (summary != null && !summary.isEmpty()) {
       for (Iterator iter = summary.iterator(); iter.hasNext(); ) {
-	StatusTable.SummaryInfo sInfo = 
+	StatusTable.SummaryInfo sInfo =
 	  (StatusTable.SummaryInfo)iter.next();
 	table.newRow();
 	StringBuffer sb = new StringBuffer();

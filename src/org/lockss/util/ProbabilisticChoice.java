@@ -1,6 +1,6 @@
-// ========================================================================
-// $Id: ProbabilisticChoice.java,v 1.2 2003-02-28 00:23:23 troberts Exp $
-// ========================================================================
+/*
+ * $Id: ProbabilisticChoice.java,v 1.3 2003-04-09 23:46:29 aalto Exp $
+ */
 
 /*
 
@@ -44,9 +44,11 @@ public class ProbabilisticChoice {
   private ProbabilisticChoice() {
   }
 
-  /** 
+  /**
    * Return <code>true</code> with probability <code>prob</code>
-   * (0.0 <= <code>prob</code> < 1.0)
+   * (0.0 <= <code>prob</code> &lt; 1.0)
+   * @param prob the probability
+   * @return true with propability 'prob'
    */
   public static boolean choose(double prob) {
     return (random.nextDouble() < prob);
