@@ -1,5 +1,5 @@
 /*
-* $Id: Vote.java,v 1.13 2004-09-28 08:53:16 tlipkis Exp $
+* $Id: Vote.java,v 1.14 2004-09-29 06:38:13 tlipkis Exp $
  */
 
 /*
@@ -105,8 +105,8 @@ public class Vote {
 			   B64Code.decode(verifierStr.toCharArray()),
 			   B64Code.decode(hashStr.toCharArray()));
       }
-    } catch (UnknownHostException uhe) {
-      theLog.error("Can't get peer identity for " + idStr + " throws " + uhe);
+    } catch (IdentityManager.MalformedIdentityKeyException e) {
+      theLog.error("Malformed peer identity: " + idStr, e);
     }
     return vote;
   }

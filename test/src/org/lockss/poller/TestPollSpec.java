@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollSpec.java,v 1.15 2004-09-20 14:20:40 dshr Exp $
+ * $Id: TestPollSpec.java,v 1.16 2004-09-29 06:38:13 tlipkis Exp $
  */
 
 /*
@@ -107,7 +107,7 @@ public class TestPollSpec extends LockssTestCase {
     try {
       id = theDaemon.getIdentityManager().stringToPeerIdentity("127.0.0.1");
     }
-    catch (UnknownHostException ex) {
+    catch (IdentityManager.MalformedIdentityKeyException ex) {
       fail("can't open test host");
     }
     LcapMessage msg = null;

@@ -1,5 +1,5 @@
 /*
- * $Id: PartnerList.java,v 1.24 2004-09-28 08:53:16 tlipkis Exp $
+ * $Id: PartnerList.java,v 1.25 2004-09-29 06:38:13 tlipkis Exp $
  */
 
 /*
@@ -101,7 +101,7 @@ class PartnerList {
       for (Iterator iter = stringList.iterator(); iter.hasNext(); ) try {
 	PeerIdentity partner = idMgr.stringToPeerIdentity((String)iter.next());
 	newDefaultList.add(partner);
-      } catch (UnknownHostException uhe) {
+      } catch (IdentityManager.MalformedIdentityKeyException uhe) {
 	log.error("default partner list throvi ws " + uhe);
       }
       if (newDefaultList.isEmpty()) {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestPoll.java,v 1.85 2004-09-29 01:19:12 dshr Exp $
+ * $Id: TestPoll.java,v 1.86 2004-09-29 06:38:13 tlipkis Exp $
  */
 
 /*
@@ -497,7 +497,7 @@ public class TestPoll extends LockssTestCase {
       testID = idmgr.stringToPeerIdentity("127.0.0.1");
       testID1 = idmgr.stringToPeerIdentity("1.1.1.1");
     }
-    catch (UnknownHostException ex) {
+    catch (IdentityManager.MalformedIdentityKeyException ex) {
       fail("can't open test host");
     }
   }

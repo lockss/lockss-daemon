@@ -1,5 +1,5 @@
 /*
- * $Id: TestMemoryBoundFunctionVote.java,v 1.14 2004-09-20 14:20:39 dshr Exp $
+ * $Id: TestMemoryBoundFunctionVote.java,v 1.15 2004-09-29 06:38:13 tlipkis Exp $
  */
 
 /*
@@ -156,7 +156,7 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
     rand.nextBytes(pollID);
     try {
       voterID = idmgr.stringToPeerIdentity("127.0.0.1");
-    } catch (UnknownHostException ex) {
+    } catch (IdentityManager.MalformedIdentityKeyException ex) {
       fail("PeerIdentity throws: " + ex.toString());
     }
   }
