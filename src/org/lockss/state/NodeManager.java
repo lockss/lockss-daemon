@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManager.java,v 1.3 2002-12-06 20:43:10 aalto Exp $
+ * $Id: NodeManager.java,v 1.4 2002-12-13 23:51:32 aalto Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.util.Iterator;
 import org.lockss.daemon.CachedUrlSet;
 import org.lockss.poller.Poll;
 import org.lockss.daemon.ArchivalUnit;
+import org.lockss.util.Deadline;
 
 /**
  * NodeManager handles all nodes in a given system.  It retrieves and stores
@@ -63,7 +64,7 @@ public interface NodeManager {
    * @param cus the cached url set used to identify the top node
    * @return an Iterator of NodeStates
    */
-  public Iterator getCrawledNodes(CachedUrlSet cus);
+  public Iterator getActiveCrawledNodes(CachedUrlSet cus);
 
   /**
    * Returns an iterator of all node states in which a poll is running,
@@ -72,7 +73,7 @@ public interface NodeManager {
    * @param filter the bitwise state filter
    * @return an Iterator of NodeStates
    */
-  public Iterator getPolledNodes(CachedUrlSet cus, int filter);
+  public Iterator getFilteredPolledNodes(CachedUrlSet cus, int filter);
 
   /**
    * Returns an iterator of node histories for an ArchivalUnit, up to
@@ -90,7 +91,7 @@ public interface NodeManager {
    * @param since histories after this time (in ms)
    * @return an Iterator of PollHistory objects
    */
-  public Iterator getNodeHistories(ArchivalUnit au, long since);
+  public Iterator getNodeHistoriesSince(ArchivalUnit au, Deadline since);
 
   /**
    * Returns the estimated time it will take to walk a given

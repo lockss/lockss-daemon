@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBean.java,v 1.1 2002-12-12 23:08:17 aalto Exp $
+ * $Id: VoteBean.java,v 1.2 2002-12-13 23:51:32 aalto Exp $
  */
 
 /*
@@ -35,6 +35,9 @@ package org.lockss.state;
 public class VoteBean {
   public String idStr = null;
   public boolean agree = false;
+  public String challenge = null;
+  public String verifier = null;
+  public String hash = null;
 
   /**
    * Empty constructor for bean creation during marshalling
@@ -73,4 +76,53 @@ public class VoteBean {
   public void setAgreeState(boolean agree_state) {
     agree = agree_state;
   }
+
+  /**
+   * Returns the vote's challenge in Base64.
+   * @return the challenge
+   */
+  public String getChallenge() {
+    return challenge;
+  }
+
+  /**
+   * Sets the challenge.
+   * @param challenge the new challenge
+   */
+  public void setChallenge(String challenge) {
+    this.challenge = challenge;
+  }
+
+  /**
+   * Returns the vote's verifier in Base64.
+   * @return the verifier
+   */
+  public String getVerifier() {
+    return verifier;
+  }
+
+  /**
+   * Sets the verifier.
+   * @param verifier the new verifier
+   */
+  public void setVerifier(String verifier) {
+    this.verifier = verifier;
+  }
+
+  /**
+   * Returns the vote's hash in Base64.
+   * @return the hash
+   */
+  public String getHash() {
+    return hash;
+  }
+
+  /**
+   * Sets the hash.
+   * @param hash the new hash
+   */
+  public void setHash(String hash) {
+    this.hash = hash;
+  }
+
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: NodeState.java,v 1.2 2002-12-13 23:51:32 aalto Exp $
+ * $Id: CrawlState.java,v 1.1 2002-12-13 23:51:32 aalto Exp $
  */
 
 /*
@@ -35,33 +35,53 @@ package org.lockss.state;
 
 import java.util.Iterator;
 import org.lockss.daemon.CachedUrlSet;
+import org.lockss.util.Deadline;
 
 /**
- * NodeState contains the current state information for a node, as well as the
- * poll histories.
+ * PollState contains the state information for a poll current to a node.
+ * There may be more than one active poll per node.
  */
-public interface NodeState {
+public class CrawlState {
+  public static final int NEW_CONTENT_CRAWL = 1;
+  public static final int REPAIR_CRAWL = 2;
+  public static final int BACKGROUND_CRAWL = 4;
+
+  public static final int SCHEDULED = 1;
+  public static final int RUNNING = 2;
+  public static final int FINISHED = 4;
+
+  int type;
+  int status;
+  long startTime;
+
+  CrawlState(int type, int status, long startTime) {
+    this.type = type;
+    this.status = status;
+    this.startTime = startTime;
+  }
   /**
-   * Get the CachedUrlSet with which this NodeState is associated.
-   * @return the CachedUrlSet
+   * Returns the poll type.
+   * @return an int representing the type
+   * @see org.lockss.protocol.LcapMessage
    */
-  public CachedUrlSet getCachedUrlSet();
+  public int getType() {
+    return type;
+  }
 
   /**
-   * Returns the current crawl state.
-   * @return a CrawlState
+   * Returns the status of the poll.
+   * @return an int representing the current status
    */
-  public CrawlState getCrawlState();
+  public int getStatus() {
+    return status;
+  }
 
   /**
-   * Returns an Iterator of the polls active on this node, if any.
-   * @return an Iterator of PollStates
+   * Returns the start time of the poll.
+   * @return the start time in ms
    */
-  public Iterator getActivePolls();
+  public long getStartTime() {
+    return startTime;
+  }
 
-  /**
-   * Returns an Iterator of the polls histories for this node, if any.
-   * @return an Iterator of PollHistory objects.
-   */
-  public Iterator getPollHistories();
 }

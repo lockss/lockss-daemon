@@ -1,5 +1,5 @@
 /*
- * $Id: PollHistory.java,v 1.5 2002-12-12 23:07:07 aalto Exp $
+ * $Id: PollHistory.java,v 1.6 2002-12-13 23:51:32 aalto Exp $
  */
 
 /*
@@ -39,67 +39,27 @@ import org.lockss.protocol.LcapIdentity;
 /**
  * PollHistory contains the information for a completed poll.
  */
-public class PollHistory {
-  int type;
-  String regExp;
-  int status;
-  long startTime;
+public class PollHistory extends PollState {
   long duration;
-  ArrayList votes;
+  Collection votes;
+  Collection immutableVotes;
 
   /**
    * Empty constructor used for marshalling.  Needed to create the
    * PollHistoryBean.
    */
   public PollHistory() {
-    type = -1;
-    regExp = null;
-    status = -1;
-    startTime = 0;
+    super(-1, null, -1, 0, null);
     duration = 0;
     votes = null;
+    immutableVotes = null;
   }
 
-  PollHistory(PollState state, long duration, ArrayList votes) {
-    this.type = state.type;
-    this.regExp = state.regexp;
-    this.status = state.status;
-    this.startTime = state.startTime;
+  PollHistory(PollState state, long duration, Collection votes) {
+    super(state.type, state.regExp, state.status, state.startTime, null);
     this.duration = duration;
-    this.votes = (ArrayList)Collections.unmodifiableList(votes);
-  }
-
-  /**
-   * Returns the type of the poll.
-   * @return an int representing the type
-   * @see org.lockss.protocol.LcapMessage
-   */
-  public int getType() {
-    return type;
-  }
-
-  /**
-   * Returns the regular expression for this poll.
-   * @return the regexp or null
-   */
-  public String getRegExp() {
-    return regExp;
-
-  }
-  /**
-   * Returns the status of the poll.
-   * @return an int representing the current status
-   */
-  public int getStatus() {
-    return status;
-  }
-
-  /**
-   * Returns the start time of the poll.
-   * @return the start time in ms
-   */
-  public long getStartTime() {
-    return startTime;
+    this.votes = votes;
+    immutableVotes = null;
   }
 
   /**
@@ -111,12 +71,13 @@ public class PollHistory {
   }
 
   /**
-   * Returns a list of Votes.
-   * @return an ArrayList of Poll.Vote objects.
+   * Returns a collection of Votes.
+   * @return a Collection of Poll.Vote objects.
    */
-  public ArrayList getVotes() {
-    return votes;
+  public Collection getVotes() {
+    if (immutableVotes==null) {
+      immutableVotes = Collections.unmodifiableCollection(votes);
+    }
+    return immutableVotes;
   }
-
-
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: PollState.java,v 1.3 2002-12-06 20:43:10 aalto Exp $
+ * $Id: PollState.java,v 1.4 2002-12-13 23:51:32 aalto Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.state;
 
 import java.util.Iterator;
 import org.lockss.daemon.CachedUrlSet;
+import org.lockss.util.Deadline;
 
 /**
  * PollState contains the state information for a poll current to a node.
@@ -46,18 +47,19 @@ public class PollState {
   public static final int REPAIRING = 4;
   public static final int WON = 8;
   public static final int LOST = 16;
-  public static final int UNREPAIRABLE = 32;
+  public static final int REPAIRED = 32;
+  public static final int UNREPAIRABLE = 64;
 
   int type;
-  String regexp;
+  String regExp;
   int status;
   long startTime;
-  long deadline;
+  Deadline deadline;
 
-  PollState(int type, String regexp, int status, long startTime,
-            long deadline) {
+  PollState(int type, String regExp, int status, long startTime,
+            Deadline deadline) {
     this.type = type;
-    this.regexp = regexp;
+    this.regExp = regExp;
     this.status = status;
     this.startTime = startTime;
     this.deadline = deadline;
@@ -77,7 +79,7 @@ public class PollState {
    * @return the regexp or null
    */
   public String getRegExp() {
-    return regexp;
+    return regExp;
   }
 
   /**
@@ -100,7 +102,7 @@ public class PollState {
    * Returns the deadline for the poll (absolute).
    * @return the deadline in ms
    */
-  public long getDeadline() {
+  public Deadline getDeadline() {
     return deadline;
   }
 
