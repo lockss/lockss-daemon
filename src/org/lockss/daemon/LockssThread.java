@@ -1,5 +1,5 @@
 /*
- * $Id: LockssThread.java,v 1.1 2004-02-09 22:06:46 tlipkis Exp $
+ * $Id: LockssThread.java,v 1.2 2004-02-10 02:26:05 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -39,18 +39,22 @@ import org.lockss.util.*;
  * only from the thread.
  */
 public abstract class LockssThread extends Thread implements LockssWatchdog {
-  static final String PREFIX = Configuration.PREFIX + "watchdog.";
+  static final String PREFIX = Configuration.PREFIX + "thread.";
 
   static final String PARAM_THREAD_WDOG_EXIT_IMM =
     Configuration.PREFIX + "exitImmediately";
   static final boolean DEFAULT_THREAD_WDOG_EXIT_IMM = true;
 
   public static final String PARAM_NAMED_WDOG_INTERVAL =
-    PREFIX + "<name>.interval";
+    PREFIX + "<name>.watchdog.interval";
+
+  public static final String PARAM_NAMED_THREAD_PRIORITY =
+    PREFIX + "<name>.priority";
 
   private static Logger log = Logger.getLogger("LockssThread");
 
-  private Map paramNameMap = new HashMap();
+  private Map wdogParamNameMap = new HashMap();
+  private Map prioParamNameMap = new HashMap();
   private volatile boolean triggerOnExit = false;
   private volatile long interval = 0;
   private TimerQueue.Request timerReq;
@@ -58,11 +62,30 @@ public abstract class LockssThread extends Thread implements LockssWatchdog {
   private TimerQueue.Callback timerCallback =
     new TimerQueue.Callback() {
       public void timerExpired(Object cookie) {
-	threadHung();
+	// Don't trigger the watchdog if it has been turned off.  This could
+	// happen if the timer event happens as it's being cancelled.
+	if (interval != 0) {
+	  threadHung();
+	}
       }};
 
   protected LockssThread(String name) {
     super(name);
+  }
+
+  /** Set the priority of the thread from a parameter value
+   * @param name Used to derive a configuration parameter name
+   * (org.lockss.thread.<i>name</i>.priority) whose value is the priority
+   * @param defaultPriority the default priority if the config param has no
+   * value.  If this is -1 and the config param has no value, the priority
+   * will not be changed.
+   */
+  public void setPriority(String name, int defaultPriority) {
+    int prio = getPriorityFromParam(name, defaultPriority);
+    if (prio != -1) {
+      log.debug("Setting priority of " + getName() + " thread to " + prio);
+      setPriority(prio);
+    }
   }
 
   /** Start a watchdog timer that will expire if not poked for interval
@@ -76,19 +99,21 @@ public abstract class LockssThread extends Thread implements LockssWatchdog {
       logEvent("Starting", true);
       timerDead = Deadline.in(interval);
       timerReq = TimerQueue.schedule(timerDead, timerCallback, null);
+    } else {
+      logEvent("Not starting", true);
     }
   }
 
   /** Start a watchdog timer that will expire if not poked for interval
    * milliseconds.  Calls {@link #threadHung()} if triggered.
    * @param name Used to derive a configuration parameter name
-   * (org.lockss.watchdog.<i>name</i>.interval) whose value is the watchdog
-   * interval.
+   * (org.lockss.thread.<i>name</i>.watchdog.interval) whose value is the
+   * watchdog interval.
    * @param defaultInterval the default interval if the config param has no
    * value.
    */
   public void startWDog(String name, long defaultInterval) {
-    startWDog(getInterval(name, defaultInterval));
+    startWDog(getIntervalFromParam(name, defaultInterval));
   }
 
   /** Stop the watchdog so that it will not trigger. */
@@ -152,14 +177,24 @@ public abstract class LockssThread extends Thread implements LockssWatchdog {
     }
   }
 
-  long getInterval(String name, long defaultInterval) {
-    String param = (String)paramNameMap.get(name);
+  long getIntervalFromParam(String name, long defaultInterval) {
+    String param = (String)wdogParamNameMap.get(name);
     if (param == null) {
       param = StringUtil.replaceString(PARAM_NAMED_WDOG_INTERVAL,
 				       "<name>", name);
-      paramNameMap.put(name, param);
+      wdogParamNameMap.put(name, param);
     }
     return Configuration.getTimeIntervalParam(param, defaultInterval);
+  }
+
+  int getPriorityFromParam(String name, int defaultInterval) {
+    String param = (String)prioParamNameMap.get(name);
+    if (param == null) {
+      param = StringUtil.replaceString(PARAM_NAMED_THREAD_PRIORITY,
+				       "<name>", name);
+      prioParamNameMap.put(name, param);
+    }
+    return Configuration.getIntParam(param, defaultInterval);
   }
 
   private void logEvent(String event, boolean includeInterval) {

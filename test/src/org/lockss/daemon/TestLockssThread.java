@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssThread.java,v 1.1 2004-02-09 22:06:46 tlipkis Exp $
+ * $Id: TestLockssThread.java,v 1.2 2004-02-10 02:26:05 tlipkis Exp $
  */
 
 /*
@@ -81,14 +81,24 @@ public class TestLockssThread extends LockssTestCase {
   }
 
 
-  public void testGetInterval() {
+  public void testGetIntervalFromParam() {
     Properties p = new Properties();
-    p.put("org.lockss.watchdog.foo.interval", "123");
+    p.put("org.lockss.thread.foo.watchdog.interval", "123");
     ConfigurationUtil.setCurrentConfigFromProps(p);
 
     TestThread thr = new TestThread("Test");
-    assertEquals(432, thr.getInterval("foobar", 432));
-    assertEquals(123, thr.getInterval("foo", 432));
+    assertEquals(432, thr.getIntervalFromParam("foobar", 432));
+    assertEquals(123, thr.getIntervalFromParam("foo", 432));
+  }
+
+  public void testGetPriorityFromParam() {
+    Properties p = new Properties();
+    p.put("org.lockss.thread.foo.priority", "1");
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+
+    TestThread thr = new TestThread("Test");
+    assertEquals(432, thr.getPriorityFromParam("foobar", 432));
+    assertEquals(1, thr.getPriorityFromParam("foo", 432));
   }
 
   // ensure LockssThread gets started correctly
