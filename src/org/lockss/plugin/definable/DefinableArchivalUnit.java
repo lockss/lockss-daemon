@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.28 2005-03-04 01:24:19 troberts Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.29 2005-03-23 17:02:30 troberts Exp $
  */
 
 /*
@@ -97,11 +97,9 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 
     if (permission_el instanceof String) {
       templateList = ListUtil.list((String)permission_el);
-    }
-    else if (permission_el instanceof List) {
+    } else if (permission_el instanceof List) {
        templateList = (List) permission_el;
-    }
-    else {
+    } else {
       return super.getPermissionPages();
     }
     List permission_list = new ArrayList();
