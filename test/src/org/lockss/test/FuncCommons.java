@@ -1,5 +1,5 @@
 /*
- * $Id: FuncCommons.java,v 1.1 2003-03-29 07:27:34 tal Exp $
+ * $Id: FuncCommons.java,v 1.2 2003-03-29 20:36:47 tal Exp $
  */
 
 /*
@@ -57,19 +57,19 @@ public class FuncCommons extends LockssTestCase {
 
     int drop = 20;		      // number of drops in map size needed
     int loop = 10000;			// inner loop repetitions
-    int lastSize = 0;			// last map size
 
     Integer aKey = null;		// one key that we will hold on to
-    Object aVal = null;			// one calue that we will hold on to
+    Object aVal = null;			// one value that we will hold on to
+    int lastSize = 0;			// last map size
 
     // Repeat until we have seen enough drops in size
     for (int ii = 0; drop > 0; ii++) {
       for (int jj = 0; jj < loop; jj++) {
-	Integer key = new Integer(ii*loop+jj);
+	Integer key = new Integer(ii*loop+jj); // make a unique key
 	Integer val = new Integer(jj);
 	map.put(key, val);
 	
-	if (key.intValue() == 143) {	// hold on to key = 143
+	if (key.intValue() == 143) {	// hold on to key 143
 	  aKey = key;
 	}
 	if (key.intValue() == 243) {	// hold on to value for key 243
@@ -88,7 +88,7 @@ public class FuncCommons extends LockssTestCase {
     assertTrue(map.containsKey(new Integer(243)));
     assertSame(aVal, (Integer)map.get(new Integer(243)));
 
-    // the key's value has been collected by now (we hope), so it shouldn't
+    // This key's value has been collected by now (we hope), so it shouldn't
     // be in the map
     assertFalse(map.containsKey(new Integer(221)));
 
@@ -96,6 +96,5 @@ public class FuncCommons extends LockssTestCase {
     // be in the map either.
     assertFalse(map.containsKey(new Integer(143)));
     assertFalse(map.containsKey(aKey));
-
   }
 }
