@@ -1,5 +1,5 @@
 /*
-* $Id: Tallier.java,v 1.2 2003-07-09 20:06:46 clairegriffin Exp $
+* $Id: Tallier.java,v 1.3 2003-07-17 04:39:11 dshr Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ public interface Tallier {
   public String getPollKey();
   /**
    * Returns true if the poll belongs to this Identity
-   * @return true if this Identity
+   * @return true if this Identity owns the poll
    */
   public boolean isMyPoll();
 
@@ -117,13 +117,62 @@ public interface Tallier {
 
   /**
    * get the current value of the poll tally status
-   * @return the status
-   */
-  public int getStatus();
-
-  /**
-   * get the current value of the poll tally status
    * @return the String representation of status
    */
   public String getStatusString();
+
+  /**
+   * True if the poll is active
+   * @return true if the poll is active
+   */
+  abstract public boolean stateIsActive();
+
+  /**
+   * True if the poll has finshed
+   * @return true if the poll has finished
+   */
+  abstract public boolean stateIsFinished();
+
+  /**
+   * True if the poll has an error
+   * @return true if the poll has an error
+   */
+  abstract public boolean stateIsError();
+
+  /**
+   * True if the poll has finished without a quorum
+   * @return true if the poll has finisehd without a quorum
+   */
+  abstract public boolean stateIsNoQuorum();
+
+  /**
+   * True if the poll has finished with a quorum but without a
+   * conclusive win or loss
+   * @return true if the poll has finished without a conclusive win or loss
+   */
+  abstract public boolean stateIsInconclusive();
+
+  /**
+   * True if the poll has been lost
+   * @return true if the poll has been lost
+   */
+  abstract public boolean stateIsLost();
+
+  /**
+   * True if the poll has been won
+   * @return true if the poll has been won
+   */
+  abstract public boolean stateIsWon();
+
+  /**
+   * True if the poll is suspended
+   * @return true if the poll is suspended
+   */
+  abstract public boolean stateIsSuspended();
+
+  /**
+   * Set the poll state to suspended
+   */
+  abstract public void setStateSuspended();
+
 }

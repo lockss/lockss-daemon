@@ -1,5 +1,5 @@
 /*
- * $Id: V2PollTally.java,v 1.1 2003-07-16 17:34:39 dshr Exp $
+ * $Id: V2PollTally.java,v 1.2 2003-07-17 04:39:11 dshr Exp $
  */
 
 /*
@@ -54,6 +54,19 @@ import org.lockss.daemon.status.*;
  * @version 1.0
  */
 public class V2PollTally extends PollTally {
+  // XXX Change these for V2
+  private static final int STATE_POLLING = 0;
+  private static final int STATE_ERROR = 1;
+  private static final int STATE_NOQUORUM = 2;
+  private static final int STATE_RESULTS_TOO_CLOSE = 3;
+  private static final int STATE_RESULTS_UNTRUSTED = 4;
+  private static final int STATE_WON = 5;
+  private static final int STATE_LOST = 6;
+  private static final int STATE_UNVERIFIED = 7;
+  private static final int STATE_VERIFIED = 8;
+  private static final int STATE_DISOWNED = 9;
+  private static final int STATE_SUSPENDED = 10;
+
   V2Poll poll;
   double voteMargin; // XXX
   double trustedWeight; // XXX
@@ -142,7 +155,7 @@ public class V2PollTally extends PollTally {
   }
 
   void tallyVotes() {
-    status = PollTally.STATE_NOQUORUM; // XXX
+    status = STATE_NOQUORUM; // XXX
   }
 
   void verifyTally() {
@@ -218,6 +231,78 @@ public class V2PollTally extends PollTally {
 
   void replayVoteCheck(Vote vote, Deadline deadline) {
     throw new UnsupportedOperationException();
+  }
+
+  /**
+   * True if the poll is active
+   * @return true if the poll is active
+   */
+  public boolean stateIsActive() {
+    return (status == STATE_POLLING);
+  }
+
+  /**
+   * True if the poll has finshed
+   * @return true if the poll has finished
+   */
+  public boolean stateIsFinished() {
+    return (false);
+  }
+
+  /**
+   * True if the poll has an error
+   * @return true if the poll has an error
+   */
+  public boolean stateIsError() {
+    return (false);
+  }
+
+  /**
+   * True if the poll has finished without a quorum
+   * @return true if the poll has finisehd without a quorum
+   */
+  public boolean stateIsNoQuorum() {
+    return (false);
+  }
+
+  /**
+   * True if the poll has finished with a quorum but without a
+   * conclusive win or loss
+   * @return true if the poll has finished without a conclusive win or loss
+   */
+  public boolean stateIsInconclusive() {
+    return (false);
+  }
+
+  /**
+   * True if the poll has been lost
+   * @return true if the poll has been lost
+   */
+  public boolean stateIsLost() {
+    return(false);
+  }
+
+  /**
+   * True if the poll has been won
+   * @return true if the poll has been won
+   */
+  public boolean stateIsWon() {
+    return (false);
+  }
+
+  /**
+   * True if the poll is suspended
+   * @return true if the poll is suspended
+   */
+  public boolean stateIsSuspended() {
+    return (status == STATE_SUSPENDED);
+  }
+
+  /**
+   * Set the poll state to suspended
+   */
+  public void setStateSuspended() {
+    status = STATE_SUSPENDED;
   }
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: V1PollTally.java,v 1.3 2003-07-09 19:25:19 clairegriffin Exp $
+ * $Id: V1PollTally.java,v 1.4 2003-07-17 04:39:11 dshr Exp $
  */
 
 /*
@@ -52,17 +52,17 @@ import org.lockss.daemon.status.*;
  * state of votes within a V1Poll.
  */
 public class V1PollTally extends PollTally {
-  public static final int STATE_POLLING = 0;
-  public static final int STATE_ERROR = 1;
-  public static final int STATE_NOQUORUM = 2;
-  public static final int STATE_RESULTS_TOO_CLOSE = 3;
-  public static final int STATE_RESULTS_UNTRUSTED = 4;
-  public static final int STATE_WON = 5;
-  public static final int STATE_LOST = 6;
-  public static final int STATE_UNVERIFIED = 7;
-  public static final int STATE_VERIFIED = 8;
-  public static final int STATE_DISOWNED = 9;
-  public static final int STATE_SUSPENDED = 10;
+  private static final int STATE_POLLING = 0;
+  private static final int STATE_ERROR = 1;
+  private static final int STATE_NOQUORUM = 2;
+  private static final int STATE_RESULTS_TOO_CLOSE = 3;
+  private static final int STATE_RESULTS_UNTRUSTED = 4;
+  private static final int STATE_WON = 5;
+  private static final int STATE_LOST = 6;
+  private static final int STATE_UNVERIFIED = 7;
+  private static final int STATE_VERIFIED = 8;
+  private static final int STATE_DISOWNED = 9;
+  private static final int STATE_SUSPENDED = 10;
 
   double voteMargin = 0;    // the margin by which we must win or lose
   double trustedWeight = 0;// the min ave. weight of the winners, when we lose.
@@ -374,6 +374,79 @@ void replayVoteCheck(Vote vote, Deadline deadline) {
     log.debug("couldn't schedule hash - stopping replay poll");
   }
 }
+
+  /**
+   * True if the poll is active
+   * @return true if the poll is active
+   */
+public boolean stateIsActive() {
+  return (status == STATE_POLLING);
+}
+
+  /**
+   * True if the poll has finshed
+   * @return true if the poll has finished
+   */
+public boolean stateIsFinished() {
+  return (status != STATE_SUSPENDED && status != STATE_POLLING);
+}
+
+  /**
+   * True if the poll has an error
+   * @return true if the poll has an error
+   */
+public boolean stateIsError() {
+  return (status == STATE_ERROR);
+}
+
+  /**
+   * True if the poll has finished without a quorum
+   * @return true if the poll has finisehd without a quorum
+   */
+public boolean stateIsNoQuorum() {
+  return (status == STATE_NOQUORUM);
+}
+
+  /**
+   * True if the poll has finished with a quorum but without a
+   * conclusive win or loss
+   * @return true if the poll has finished without a conclusive win or loss
+   */
+public boolean stateIsInconclusive() {
+  return (status == STATE_RESULTS_TOO_CLOSE ||
+	  status == STATE_RESULTS_UNTRUSTED);
+}
+
+  /**
+   * True if the poll has been lost
+   * @return true if the poll has been lost
+   */
+public boolean stateIsLost() {
+  return (status == STATE_LOST);
+}
+
+  /**
+   * True if the poll has been won
+   * @return true if the poll has been won
+   */
+  public boolean stateIsWon() {
+    return (status == STATE_WON);
+  }
+
+  /**
+   * True if the poll is suspended
+   * @return true if the poll is suspended
+   */
+  public boolean stateIsSuspended() {
+    return (status == STATE_SUSPENDED);
+  }
+
+  /**
+   * Set the poll state to suspended
+   */
+  public void setStateSuspended() {
+    status = STATE_SUSPENDED;
+  }
 
 class ReplayVoteCallback implements HashService.Callback {
     /**

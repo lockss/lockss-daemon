@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.144 2003-07-09 19:36:53 clairegriffin Exp $
+ * $Id: NodeManagerImpl.java,v 1.145 2003-07-17 04:39:11 dshr Exp $
  */
 
 /*
@@ -436,27 +436,21 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
 
     try {
       boolean notFinished = false;
-      switch (results.getStatus()) {
-        case PollTally.STATE_ERROR:
+      if (results.stateIsError()) {
           pollState.status = mapResultsErrorToPollError(results.getErr());
           logger.info("Poll didn't finish fully.  Error: "
                       + results.getErrString());
           notFinished = true;
-          break;
-        case PollTally.STATE_NOQUORUM:
+      } else if (results.stateIsNoQuorum()) {
           pollState.status = PollState.INCONCLUSIVE;
           logger.info("Poll finished without quorum");
           notFinished = true;
-          break;
-        case PollTally.STATE_RESULTS_TOO_CLOSE:
-        case PollTally.STATE_RESULTS_UNTRUSTED:
+      } else if (results.stateIsInconclusive()) {
           pollState.status = PollState.INCONCLUSIVE;
           logger.warning("Poll concluded with suspect result - "
                          + pollState.getStatusString());
           notFinished = true;
-          break;
-        case PollTally.STATE_LOST:
-        case PollTally.STATE_WON:
+      } else if (results.stateIsLost() || results.stateIsWon()) {
           // set last state in case it changes
           lastState = nodeState.getState();
           if (results.getType() == Poll.CONTENT_POLL) {
@@ -469,7 +463,6 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
             logger.error(err);
             throw new UnsupportedOperationException(err);
           }
-          break;
       }
 
       // if error state occurred, set node state accordingly
@@ -663,7 +656,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     boolean isRangedPoll =
         results.getCachedUrlSet().getSpec().isRangeRestricted();
 
-    if (results.getStatus() == PollTally.STATE_WON) {
+    if (results.stateIsWon()) {
       // if agree
 
       // change poll state accordingly
@@ -762,7 +755,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     boolean isRangedPoll =
         results.getCachedUrlSet().getSpec().isRangeRestricted();
 
-    if (results.getStatus() == PollTally.STATE_WON) {
+    if (results.stateIsWon()) {
       // if agree
 
       // change poll state accordingly
@@ -1465,14 +1458,14 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
   private void updateReputations(PollTally results) {
     IdentityManager idManager = theDaemon.getIdentityManager();
     Iterator voteIt = results.getPollVotes().iterator();
-    int agreeChange;
-    int disagreeChange;
+    int agreeChange = 0;
+    int disagreeChange = 0;
 
-    if (results.getStatus() == PollTally.STATE_WON) {
+    if (results.stateIsWon()) {
       agreeChange = IdentityManager.AGREE_VOTE;
       disagreeChange = IdentityManager.DISAGREE_VOTE;
     }
-    else {
+    else if (results.stateIsLost()) {
       agreeChange = IdentityManager.DISAGREE_VOTE;
       disagreeChange = IdentityManager.AGREE_VOTE;
     }

@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.109 2003-07-16 17:34:39 dshr Exp $
+* $Id: PollManager.java,v 1.110 2003-07-17 04:39:11 dshr Exp $
  */
 
 /*
@@ -890,7 +890,6 @@ public class PollManager  extends BaseLockssManager {
     int type;
     Deadline pollDeadline;
     Deadline deadline;
-    int status = 0;
     String key;
 
     PollManagerEntry(BasePoll p) {
@@ -903,16 +902,15 @@ public class PollManager  extends BaseLockssManager {
     }
 
     boolean isPollActive() {
-      return status == PollTally.STATE_POLLING;
+      return poll.getVoteTally().stateIsActive();
     }
 
     boolean isPollCompleted() {
-      return status != PollTally.STATE_POLLING
-          && status != PollTally.STATE_SUSPENDED;
+      return poll.getVoteTally().stateIsFinished();
     }
 
     boolean isPollSuspended() {
-      return status == PollTally.STATE_SUSPENDED;
+      return poll.getVoteTally().stateIsSuspended();
     }
 
     synchronized void setPollCompleted() {
@@ -921,8 +919,7 @@ public class PollManager  extends BaseLockssManager {
       PollTally tally = poll.getVoteTally();
       int version = tally.getPollSpec().getVersion();
       tally.tallyVotes();
-      status = tally.getStatus();
-      if((tally.type == Poll.NAME_POLL) && (status == PollTally.STATE_LOST)) {
+      if((tally.type == Poll.NAME_POLL) && (tally.stateIsLost())) {
         theLog.debug2("lost a name poll, building poll list");
 	switch (version) {
 	case 1:
@@ -935,7 +932,7 @@ public class PollManager  extends BaseLockssManager {
     }
 
     synchronized void setPollSuspended() {
-      status = PollTally.STATE_SUSPENDED;
+      poll.getVoteTally().setStateSuspended();
       if(deadline != null) {
         deadline.expire();
         deadline = null;
