@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.68 2003-12-17 02:05:37 tlipkis Exp $
+ $Id: build.xml,v 1.69 2004-01-10 04:32:03 clairegriffin Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -103,27 +103,27 @@ Args:
   <property name="tools"           value="${basedir}/tools"/>
   <property name="tools.src"       value="${tools}/src"/>
   <property name="tools.classes"   value="${tools}/classes" />
-  
+
   <property name="tools.test"      value="${tools}/test"/>
   <property name="tools.test.src"  value="${tools.test}/src"/>
   <property name="tools.test.classes" value="${tools.test}/classes"/>
   <property name="tools.test.results" value="${tools.test}/results"/>
- 
+
   <property name="generated"           value="${basedir}/generated"/>
   <property name="generated.src"       value="${generated}/src"/>
   <property name="generated.classes"   value="${generated}/classes" />
-  
+
   <property name="generated.test"      value="${generated}/test"/>
   <property name="generated.test.src"  value="${generated.test}/src"/>
   <property name="generated.test.classes" value="${generated.test}/classes"/>
   <property name="generated.test.results" value="${generated.test}/results"/>
- 
+
   <property name="instrumented" value="${basedir}/instrumented"/>
- 
+
   <property name="wrapper.path"    value="org/lockss/plugin/wrapper"/>
   <property name="tobewrapped.src" value="${src}/org/lockss/plugin"/>
   <property name="plugin.wrapper.template" value="${tools.src}/pluginwrapper.xml" />
-  	    
+
   <property name="javadoc"        value="${basedir}/javadoc"/>
   <property name="test.javadoc"   value="${test}/javadoc"/>
   <property name="depend.cache"   value="${basedir}/.depend"/>
@@ -154,7 +154,7 @@ Args:
   <property name="log4j.jar"  value="${test.lib}/log4j-1.2.8.jar"/>
   <property name="oro.jar"  value="${test.lib}/jakarta-oro-2.0.7.jar"/>
   <property name="getopt.jar"  value="${test.lib}/java-getopt-1.0.9.jar"/>
-
+  <property name="hb16.jar"      value="${lib}/hb16.jar"/>
   <property name="lockss.jar"     value="${lib}/lockss.jar"/>
   <property name="lockss.test.jar" value="${test.lib}/lockss-test.jar"/>
   <property name="lockss.ant.jar" value="${lib}/lockss-ant.jar"/>
@@ -192,6 +192,7 @@ Args:
     <pathelement path="${castor.jar}" />
     <pathelement path="${xerces.jar}" />
     <pathelement path="${xmlparser.jar}" />
+    <pathelement path="${hb16.jar}"/>
   </path>
 
   <path id="run.classpath">
@@ -234,7 +235,7 @@ Args:
     <path refid="test.run.classpath" />
     <pathelement path="${jdk.tools.jar}" />
   </path>
-   
+
   <path id="generated.test.compile.classpath">
     <path refid="tools.test.compile.classpath" />
     <pathelement path="${lockss.generated.jar}" />
@@ -245,17 +246,17 @@ Args:
     <pathelement path="${lockss.tools.test.jar}" />
     <pathelement path="${lockss.generated.jar}" />
   </path>
-  
+
  <path id="generated.test.run.classpath">
     <path refid="tools.test.run.classpath" />
     <pathelement path="${lockss.generated.test.jar}" />
   </path>
-  
+
   <path id="one.test.run.classpath" >
     <path refid="generated.test.run.classpath" />
     <pathelement path="${lockss.tools.jar}"/>
   </path>
-  
+
   <path id="ant-contrib.classpath">
     <pathelement location="${ant-contrib.jar}"/>
   </path>
@@ -329,45 +330,45 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
   </target>
 
   <target name="prepare.contrib">
-    <available property="ant-contrib.available" 
+    <available property="ant-contrib.available"
                resource="${ant-contrib.resource}">
 	 <classpath refid="ant-contrib.classpath" />
     </available>
   </target>
 
   <target name="-set.junit.task.available" unless="junit.task.available">
-    <available property="junit.task.available" 
+    <available property="junit.task.available"
          classname="org.apache.tools.ant.taskdefs.optional.junit.JUnitTask" />
   </target>
 
   <target name="-set.junit.logger.task.available" depends="jar-ant"
         unless="junit.logger.task.available">
-    <available property="junit.logger.task.available" 
+    <available property="junit.logger.task.available"
          classname="org.lockss.ant.LoggingJUnitTask" />
     <taskdef name="junit1" classname="org.lockss.ant.LoggingJUnitTask" >
-      <classpath> 
+      <classpath>
          <path refid="test.run.classpath" />
-      </classpath>        
+      </classpath>
     </taskdef>
   </target>
-  
+
   <target name="-set.wrap.task.available" unless="wrap.task.available">
      <available property="wrap.task.available" classname="org.lockss.ant.WrapTask"/>
      <taskdef name="wrap" classname="org.lockss.ant.WrapTask">
-       <classpath> 
+       <classpath>
          <path refid="test.run.classpath" />
-      </classpath>        
+      </classpath>
     </taskdef>
   </target>
 
   <target name="-set.junit.available" unless="junit.available">
-    <available property="junit.available" 
+    <available property="junit.available"
                classname="junit.framework.Test" />
   </target>
-  
-  <target name="-using-junit1" 
+
+  <target name="-using-junit1"
           depends="-set.junit.available,-set.junit.task.available,-set.junit.logger.task.available"/>
-  
+
   <!-- ==================================================================== -->
   <!--  Public tasks -->
   <!-- ==================================================================== -->
@@ -395,7 +396,7 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
    description="Delete temporary build dirs" >
     <delete dir="${temp.build}" quiet="true"/>
   </target>
-  
+
   <!-- The tools jar has a separate cleaning target because
        it requires a separate JDK 1.4 compilation -->
   <target name="clean-tools"
@@ -405,13 +406,13 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
     <delete dir="${tools.test.classes}" quiet="true"/>
     <delete dir="${generated.classes}" quiet="true"/>
     <delete dir="${generated.test.classes}" quiet="true"/>
-    <delete dir="${instrumented}" quiet="true"/>    
+    <delete dir="${instrumented}" quiet="true"/>
     <delete file="${lockss.tools.jar}" quiet="true"/>
     <delete file="${lockss.tools.test.jar}" quiet="true"/>
     <delete file="${lockss.generated.jar}" quiet="true"/>
     <delete file="${lockss.generated.test.jar}" quiet="true"/>
   </target>
-  
+
   <!-- ==================================================================== -->
   <target name="depend-lockss" depends="prepare"
    description="Process Java dependencies in LOCKSS classes" >
@@ -479,9 +480,9 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
        <include name="**/*.java"/>
     </javac>
   </target>
-   
+
   <!-- ==================================================================== -->
-  <target name="compile-tools" 
+  <target name="compile-tools"
           depends="jar-lockss,-check-if-1.4"
           description="Compile the LOCKSS tools">
     <mkdir dir="${tools.classes}" />
@@ -497,7 +498,7 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
        <include name="**/*.java"/>
     </javac>
   </target>
- 
+
   <target name="compile-generated" depends="prepare,generate-plugin-wrapper,jar-lockss"
           description="Compile generated classes">
     <mkdir dir="${generated.classes}"/>
@@ -513,7 +514,7 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
        <include name="**/*.java"/>
     </javac>
   </target>
-  
+
   <target name="compile-tools-tests" depends="jar-tools,jar-tests,jar-generated"
    description="Compile the LOCKSS test classes for tools" >
     <mkdir dir="${tools.test.classes}" />
@@ -529,7 +530,7 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
        <include name="**/*.java"/>
    </javac>
   </target>
-  
+
     <target name="compile-generated-tests" depends="jar-generated,jar-tests"
    description="Compile the LOCKSS test classes for generated" >
     <mkdir dir="${generated.test.classes}" />
@@ -608,7 +609,7 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
     <exec executable="sh" dir="${src}" output="${build.filerev.file}">
       <arg line="-c &quot;egrep -r &apos;&quot;&apos;\$Id(:.*)?\$&apos;&quot;&apos; .&quot;" />
     </exec>
-     Concatenate CVS/Entries files, with header for each:     
+     Concatenate CVS/Entries files, with header for each:
      sh -c "find . -name CVS -type d -exec echo {} \; -exec grep '^/' {}/Entries \;"
     <exec executable="sh" dir="${src}" output="${build.filerev.file}">
       <arg line="-c &quot;find . -name CVS -type d -exec echo Dir \{\} \; -exec grep &apos;^/&apos; {}/Entries \;&quot;" />
@@ -674,7 +675,7 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
        <include name="**/*"/>
    </jar>
   </target>
-    
+
   <!-- ==================================================================== -->
   <target name="jar-ant" depends="compile-ant"
    description="Jar the LOCKSS ant extensions" >
@@ -738,7 +739,7 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
 <!--  packagenames="org.lockss.test.*" -->
     <property name="javadoc.test.header"
               value="Built ${build.timestamp} on ${build.host}" />
-    <javadoc 
+    <javadoc
 	     failonerror="true"
              sourcepath="${test.src}"
              destdir="${test.javadoc}"
@@ -754,8 +755,8 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
        <classpath refid="test.compile.classpath" />
     </javadoc>
   </target>
-  
-  <target name="generate-plugin-wrapper" 
+
+  <target name="generate-plugin-wrapper"
           depends="jar-ant,jar-tools,-set.wrap.task.available">
     <mkdir dir="${generated.src}/${wrapper.path}"/>
     <wrap srcdir="${tobewrapped.src}"
@@ -798,7 +799,7 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
        prefix="index"/>
     <property name="copies" value="1" />
     <basename property="indexname" file="${file}" suffix=".java" />
-    <javadoc 
+    <javadoc
        sourcepath="${src}"
        sourcefiles="${file}"
        destdir="${javadoc}"
@@ -914,7 +915,7 @@ Test results in ${test.results}
       <formatter type="plain" usefile="true" />
       <classpath>
          <path refid="test.run.classpath" />
-      </classpath>        
+      </classpath>
       <sysproperty key="java.library.path" value="${test.native}"/>
       <sysproperty key="org.lockss.unitTesting" value="true"/>
       <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
@@ -945,7 +946,7 @@ Test results in ${test.results}
       <formatter type="plain" usefile="true" />
       <classpath>
          <path refid="test.run.classpath" />
-      </classpath>        
+      </classpath>
       <sysproperty key="java.library.path" value="${test.native}"/>
       <sysproperty key="org.lockss.unitTesting" value="true"/>
       <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
@@ -971,11 +972,11 @@ Test results in ${test.results}
         <fileset dir="${test.src}">
           <include name="**/Test*.java" />
         </fileset>
-      </batchtest>   
-      <formatter type="plain" usefile="true" />                  
-      <classpath> 
+      </batchtest>
+      <formatter type="plain" usefile="true" />
+      <classpath>
          <path refid="test.run.classpath" />
-      </classpath>        
+      </classpath>
       <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
     </junit>
   </target>
@@ -992,17 +993,17 @@ Test results in ${test.results}
           <include name="**/*.java" />
           <exclude name="${exclude}" />
 	  <custom classname="org.lockss.ant.ClassTestSelector">
-	    <classpath> 
+	    <classpath>
 	      <path refid="test.run.classpath" />
-	    </classpath>        
+	    </classpath>
 	    <param name="class" value="${class}" />
 	  </custom>
         </fileset>
       </batchtest>
       <formatter type="plain" usefile="false" />
-      <classpath> 
+      <classpath>
          <path refid="test.run.classpath" />
-      </classpath>        
+      </classpath>
       <sysproperty key="java.library.path" value="${test.native}"/>
       <sysproperty key="org.lockss.unitTesting" value="true"/>
       <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
@@ -1020,10 +1021,10 @@ Test results in ${test.results}
          showoutput="${showoutput}">
       <jvmarg value="-Xmx128m"/>  <!-- no effect unless both fork=yes -->
       <test fork="${fork}" name="${class}" />
-      <formatter type="plain" usefile="false" />                  
-      <classpath> 
+      <formatter type="plain" usefile="false" />
+      <classpath>
  	 <path refid="one.test.run.classpath" />
-      </classpath>        
+      </classpath>
       <sysproperty key="java.library.path" value="${test.native}"/>
       <sysproperty key="org.lockss.unitTesting" value="true"/>
       <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
@@ -1054,7 +1055,7 @@ Test results in ${tools.test.results}
       <formatter type="plain" usefile="true" />
       <classpath>
          <path refid="tools.test.run.classpath" />
-      </classpath>        
+      </classpath>
       <sysproperty key="java.library.path" value="${test.native}"/>
       <sysproperty key="org.lockss.unitTesting" value="true"/>
       <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
@@ -1085,7 +1086,7 @@ Test results in ${tools.test.results}
       <formatter type="plain" usefile="true" />
       <classpath>
          <path refid="generated.test.run.classpath" />
-      </classpath>        
+      </classpath>
       <sysproperty key="java.library.path" value="${test.native}"/>
       <sysproperty key="org.lockss.unitTesting" value="true"/>
       <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
@@ -1095,7 +1096,7 @@ Test results in ${tools.test.results}
     </junit1>
     <fail if="failed" message="Test(s) failed" />
   </target>
-  
+
   <target name="test-tools-etal"
           description="Test the tools and generated classes"
 	  depends="test-tools,test-generated">
@@ -1111,12 +1112,12 @@ Test results in ${tools.test.results}
           depends="clean-tools,-check-if-1.4,test-tools-etal"
 	  description="Clean, build, and test tools">
   </target>
-  
+
   <target name="rebuild-all-with-tools"
           depends="rebuild-all,rebuild-tools"
 	  description="Clean, build, test daemon and tools">
   </target>
-  
+
   <!-- ==================================================================== -->
   <target name="checkout-and-build"
      depends="check.contrib"
@@ -1171,9 +1172,9 @@ Test results in ${tools.test.results}
   <target name="javah-test" depends="jar-tests"
    description="Generate headers for native code in test/" >
      <javah destdir="${test.native}">
-      <classpath> 
+      <classpath>
          <path refid="test.run.classpath" />
-      </classpath>        
+      </classpath>
       <class name="org.lockss.test.DebugUtils" />
      </javah>
   </target>
@@ -1265,7 +1266,7 @@ Test results in ${tools.test.results}
       <classpath>
         <path location="${instrumented}"/>
         <path refid="jcover.run.classpath" />
-      </classpath>        
+      </classpath>
       <sysproperty key="java.library.path" value="${test.native}"/>
       <sysproperty key="org.lockss.unitTesting" value="true"/>
       <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
