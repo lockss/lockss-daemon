@@ -1,5 +1,5 @@
 /*
- * $Id: NewContentCrawler.java,v 1.17 2004-03-26 00:47:37 troberts Exp $
+ * $Id: NewContentCrawler.java,v 1.18 2004-05-26 07:04:42 tlipkis Exp $
  */
 
 /*
@@ -79,6 +79,9 @@ public class NewContentCrawler extends CrawlerImpl {
 
 
   protected boolean doCrawl0() {
+    if (crawlAborted) {
+      return aborted();
+    }
     alwaysReparse =
       Configuration.getBooleanParam(PARAM_REPARSE_ALL, DEFAULT_REPARSE_ALL);
     usePersistantList =
@@ -176,6 +179,9 @@ public class NewContentCrawler extends CrawlerImpl {
 	aus.updatedCrawlUrls(false);
       }
     }
+    if (crawlAborted) {
+      return aborted();
+    }
     if (crawlStatus.getCrawlError() != 0) {
       logger.info("Finished crawl (errors) of "+au);
     } else {
@@ -192,6 +198,14 @@ public class NewContentCrawler extends CrawlerImpl {
     }
 
     return (crawlStatus.getCrawlError() == 0);
+  }
+
+  private boolean aborted() {
+    logger.info("Crawl aborted: "+au);
+    if (crawlStatus.getCrawlError() == 0) {
+      crawlStatus.setCrawlError(Crawler.STATUS_INCOMPLETE);
+    }
+    return false;
   }
 
   private boolean withinCrawlWindow() {

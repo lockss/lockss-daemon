@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.6 2004-03-26 00:47:37 troberts Exp $
+ * $Id: TestNewContentCrawler.java,v 1.7 2004-05-26 07:04:41 tlipkis Exp $
  */
 
 /*
@@ -110,7 +110,7 @@ public class TestNewContentCrawler extends LockssTestCase {
   public void testDoCrawlOnePageNoLinks() {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     cus.addUrl(startUrl);
-    crawler.doCrawl();
+    assertTrue(crawler.doCrawl());
     Set cachedUrls = cus.getCachedUrls();
     Set expected = SetUtil.set(startUrl);
     assertEquals(expected, cachedUrls);
@@ -127,7 +127,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     cus.addUrl(startUrl, true, true);
     cus.addUrl(url1, true, true);
 
-    crawler.doCrawl();
+    assertTrue(crawler.doCrawl());
 
     Set expected = SetUtil.set(startUrl);
     assertEquals(expected, cus.getCachedUrls());
@@ -152,7 +152,7 @@ public class TestNewContentCrawler extends LockssTestCase {
 
     mau.setParser(parser);
 
-    crawler.doCrawl();
+    assertTrue(crawler.doCrawl());
     Set expected = SetUtil.fromList(urls);
     assertEquals(expected, cus.getCachedUrls());
   }
@@ -161,7 +161,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     cus.addUrl(startUrl, true, true);
 
-    crawler.doCrawl();
+    assertTrue(crawler.doCrawl());
     Set expected = SetUtil.set(startUrl);
     assertEquals(expected, cus.getCachedUrls());
   }
@@ -191,7 +191,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     crawlRule.addUrlToCrawl(url3);
     crawlRule.addUrlToCrawl(url4);
 
-    crawler.doCrawl();
+    assertTrue(crawler.doCrawl());
     Set expected = SetUtil.set(startUrl, url1, url2, url3);
     assertEquals(expected, cus.getCachedUrls());
   }
@@ -214,7 +214,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     crawlRule.addUrlToCrawl(url1);
     crawlRule.addUrlToCrawl(url2);
 
-    crawler.doCrawl();
+    assertTrue(crawler.doCrawl());
     Set expected = SetUtil.set(startUrl);
     assertEquals(expected, cus.getCachedUrls());
   }
@@ -235,9 +235,59 @@ public class TestNewContentCrawler extends LockssTestCase {
     crawlRule.addUrlToCrawl(url1);
     crawlRule.addUrlToCrawl(url2);
 
-    crawler.doCrawl();
+    assertTrue(crawler.doCrawl());
     Set expected = SetUtil.set(startUrl, url2);
     assertEquals(expected, cus.getCachedUrls());
+  }
+
+  public void testOutsideOfWindow1() {
+//     String url1= "http://www.example.com/link1.html";
+    spec.setCrawlWindow(new MyMockCrawlWindow(0));
+//     parser.addUrlSetToReturn(startUrl, SetUtil.set(url1));
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    cus.addUrl(startUrl, true, true);
+    assertFalse(crawler.doCrawl());
+  }
+
+  public void testOutsideOfWindow2() {
+    String url1= "http://www.example.com/link1.html";
+    spec.setCrawlWindow(new MyMockCrawlWindow(1));
+    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1));
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    cus.addUrl(startUrl, true, true);
+    cus.addUrl(url1);
+    assertFalse(crawler.doCrawl());
+  }
+
+  public void testAborted1() {
+    String url1= "http://www.example.com/link1.html";
+    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1));
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    cus.addUrl(startUrl, true, true);
+    crawler.abortCrawl();
+    assertFalse(crawler.doCrawl());
+    assertEmpty(cus.getCachedUrls());
+  }
+
+  public void testAborted2() {
+    String url1= "http://www.example.com/link1.html";
+    String url2 = "http://www.example.com/link4.html";
+    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1, url2));
+    MyMockCachedUrlSet cus = (MyMockCachedUrlSet)mau.getAuCachedUrlSet();
+    cus.addUrl(startUrl, true, true);
+    cus.addUrl(url1);
+    cus.addUrl(url2);
+    // make it abort after either url1 or url2 cached.  (Can't predict
+    // order, so do both.)
+    MyMockUrlCacher mmuc = (MyMockUrlCacher)cus.makeUrlCacher(url1);
+    mmuc.abortCrawl = true;
+    mmuc = (MyMockUrlCacher)cus.makeUrlCacher(url2);
+    mmuc.abortCrawl = true;
+    assertFalse(crawler.doCrawl());
+    // should have cached startUrl and one of the others
+    Set cached = cus.getCachedUrls();
+    assertEquals(2, cached.size());
+    assertTrue(cached.contains(startUrl));
   }
 
   private Set crawlUrls(Set urls) {
@@ -331,7 +381,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     String url2= "http://www.example.com/link2.html";
     String url3= "http://www.example.com/link3.html";
 
-    spec.setCrawlWindow(new MyMockCrawlWindow(1));
+    spec.setCrawlWindow(new MyMockCrawlWindow(2));
     parser.addUrlSetToReturn(startUrl, SetUtil.set(url1, url2, url3));
     crawlUrls(SetUtil.set(url1, url2, url3));
     assertEquals(SetUtil.set(), aus.getCrawlUrls());
@@ -409,6 +459,7 @@ public class TestNewContentCrawler extends LockssTestCase {
   }
 
   private class MyMockCachedUrlSet extends MockCachedUrlSet {
+
     public MyMockCachedUrlSet(MockArchivalUnit owner, CachedUrlSetSpec spec) {
       super(owner, spec);
     }
@@ -421,11 +472,23 @@ public class TestNewContentCrawler extends LockssTestCase {
   }
 
   private class MyMockUrlCacher extends MockUrlCacher {
+    private boolean abortCrawl = false;
+
     public MyMockUrlCacher(String url, MockCachedUrlSet cus) {
       super(url, cus);
     }
     public InputStream getUncachedInputStream() {
+      checkAbort();
       return new StringInputStream("");
+    }
+    public void cache() throws IOException {
+      checkAbort();
+      super.cache();
+    }
+    private void checkAbort() {
+      if (abortCrawl) {
+	crawler.abortCrawl();
+      }
     }
   }
 

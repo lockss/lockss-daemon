@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.21 2004-03-23 23:05:48 troberts Exp $
+ * $Id: RepairCrawler.java,v 1.22 2004-05-26 07:04:42 tlipkis Exp $
  */
 
 /*
@@ -129,8 +129,15 @@ public class RepairCrawler extends CrawlerImpl {
 	break;
       }
     }
-    // unsuccessful crawl if window closed
+    if (crawlAborted) {
+      logger.info("Crawl aborted: "+au);
+      if (crawlStatus.getCrawlError() == 0) {
+	crawlStatus.setCrawlError(Crawler.STATUS_INCOMPLETE);
+      }
+      return false;
+    }
     if (windowClosed) {
+      // unsuccessful crawl if window closed
       crawlStatus.setCrawlError(Crawler.STATUS_WINDOW_CLOSED);
     }
     if (crawlStatus.getCrawlError() != 0) {

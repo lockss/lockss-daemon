@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlerImpl.java,v 1.10 2004-03-23 20:54:35 tlipkis Exp $
+ * $Id: TestCrawlerImpl.java,v 1.11 2004-05-26 07:04:42 tlipkis Exp $
  */
 
 /*
@@ -130,9 +130,8 @@ public class TestCrawlerImpl extends LockssTestCase {
     cus.addUrl(url3);
 
     crawler.abortCrawl();
-    crawler.doCrawl();
-    Set expected = SetUtil.set(startUrl);
-    assertEquals(expected, cus.getCachedUrls());
+    assertFalse(crawler.doCrawl());
+    assertEmpty(cus.getCachedUrls());
 //     assertFalse(crawler.doCrawl0Called());
   }
 
