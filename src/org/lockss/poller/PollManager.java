@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.37 2003-03-03 23:33:19 claire Exp $
+* $Id: PollManager.java,v 1.38 2003-03-04 00:59:04 claire Exp $
  */
 
 /*
@@ -307,7 +307,7 @@ public class PollManager  implements LockssManager {
     while(iter.hasNext()) {
       Poll p = ((PollManagerEntry)iter.next()).poll;
 
-      if(!p.getMessage().isVerifyPoll()) { // eliminate running verify polls
+      if(p != null && !p.getMessage().isVerifyPoll()) { // eliminate running verify polls
         CachedUrlSet pcus = p.getPollSpec().getCachedUrlSet();
 	ArchivalUnit au = cus.getArchivalUnit();
 	LockssRepository repo = theDaemon.getLockssRepository(au);
