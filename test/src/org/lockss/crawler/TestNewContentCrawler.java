@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.19 2004-09-21 21:24:57 dshr Exp $
+ * $Id: TestNewContentCrawler.java,v 1.20 2004-09-21 23:11:51 troberts Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import org.lockss.util.*;
 import org.lockss.plugin.*;
 import org.lockss.test.*;
 import org.lockss.state.*;
+import org.lockss.util.urlconn.*;
 
 public class TestNewContentCrawler extends LockssTestCase {
 
@@ -50,6 +51,10 @@ public class TestNewContentCrawler extends LockssTestCase {
   private List startUrls = ListUtil.list(startUrl);
   private CrawlerImpl crawler = null;
   private MockContentParser parser = new MockContentParser();
+
+  private static final String PARAM_RETRY_TIMES =
+    Configuration.PREFIX + "CrawlerImpl.numCacheRetries";
+  private static final int DEFAULT_RETRY_TIMES = 3;
 
   public void setUp() throws Exception {
     super.setUp();
@@ -156,6 +161,252 @@ public class TestNewContentCrawler extends LockssTestCase {
 
     assertTrue(crawler.doCrawl());
     Set expected = SetUtil.fromList(urls);
+    assertEquals(expected, cus.getCachedUrls());
+  }
+
+  public void testReturnsFalseWhenFailingUnretryableExceptionThrown() {
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    String url1="http://www.example.com/blah.html";
+    cus.addUrl(startUrl, false, true);
+    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1));
+    MyMockUnretryableCacheException exception =
+       new MyMockUnretryableCacheException("Test exception");
+    cus.addUrl(url1, exception, DEFAULT_RETRY_TIMES);
+    crawlRule.addUrlToCrawl(url1);
+    
+    assertFalse(crawler.doCrawl0());
+  }
+
+  public void testReturnsFalseWhenIOExceptionThrown() {
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    String url1="http://www.example.com/blah.html";
+    cus.addUrl(startUrl, false, true);
+    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1));
+    cus.addUrl(url1, new IOException("Test exception"), DEFAULT_RETRY_TIMES);
+    crawlRule.addUrlToCrawl(url1);
+
+    assertFalse(crawler.doCrawl0());
+  }
+
+  public void testReturnsTrueWhenCrawlSuccessful() {
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    String url1="http://www.example.com/blah.html";
+    cus.addUrl(startUrl, false, true);
+    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1));
+    cus.addUrl(url1, false, true);
+
+    assertTrue(crawler.doCrawl0());
+   }
+
+  public void testReturnsTrueWhenNonFailingUnretryableExceptionThrown() {
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    String url1="http://www.example.com/blah.html";
+    cus.addUrl(startUrl, false, true);
+    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1));
+    MyMockCacheException exception =
+      new MyMockCacheException("Test exception");
+    cus.addUrl(url1, exception, DEFAULT_RETRY_TIMES);
+    crawlRule.addUrlToCrawl(url1);
+
+    assertTrue(crawler.doCrawl0());
+  }
+
+  public void testReturnsRetriesWhenRetryableExceptionThrown() {
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    String url1="http://www.example.com/blah.html";
+    cus.addUrl(startUrl, false, true);
+    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1));
+    MyMockRetryableCacheException exception =
+      new MyMockRetryableCacheException("Test exception");
+    cus.addUrl(url1, exception, DEFAULT_RETRY_TIMES-1);
+    crawlRule.addUrlToCrawl(url1);
+
+    crawler.doCrawl0();
+    Set expected = SetUtil.set(startUrl, url1);
+    assertEquals(expected, cus.getCachedUrls());
+  }
+
+  public void testReturnsDoesntRetryWhenUnretryableExceptionThrown() {
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    String url1="http://www.example.com/blah.html";
+    cus.addUrl(startUrl, false, true);
+    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1));
+    MyMockUnretryableCacheException exception =
+      new MyMockUnretryableCacheException("Test exception");
+    cus.addUrl(url1, exception, DEFAULT_RETRY_TIMES-1);
+    crawlRule.addUrlToCrawl(url1);
+
+    crawler.doCrawl0();
+    Set expected = SetUtil.set(startUrl);
+    assertEquals(expected, cus.getCachedUrls());
+  }
+
+  public void testRetryNumSetByParam() {
+    int retryNum = DEFAULT_RETRY_TIMES + 3;
+    assertTrue("Test is worthless unless retryNum is greater than "
+	       +"DEFAULT_RETRY_TIMES", retryNum > DEFAULT_RETRY_TIMES);
+    Properties p = new Properties();
+    p.setProperty(PARAM_RETRY_TIMES, String.valueOf(retryNum));
+    p.setProperty(NewContentCrawler.PARAM_RETRY_PAUSE, "0");
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    String url1="http://www.example.com/blah.html";
+    cus.addUrl(startUrl, false, true);
+    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1));
+    cus.addUrl(url1,
+	       new MyMockRetryableCacheException("Test exception"),
+	       retryNum-1);
+    crawlRule.addUrlToCrawl(url1);
+
+    crawler.doCrawl();
+    Set expected = SetUtil.set(startUrl, url1);
+    assertEquals(expected, cus.getCachedUrls());
+  }
+
+  public void testCachesFailedFetches() {
+    int retryNum = 3;
+    Properties p = new Properties();
+    p.setProperty(PARAM_RETRY_TIMES, String.valueOf(retryNum));
+    p.setProperty(NewContentCrawler.PARAM_RETRY_PAUSE, "0");
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+
+    MyMockCachedUrlSet cus = (MyMockCachedUrlSet)mau.getAuCachedUrlSet();
+    String url1="http://www.example.com/blah.html";
+    String url2="http://www.example.com/blah2.html";
+    String url3="http://www.example.com/blah3.html";
+    cus.addUrl(startUrl, false, true);
+    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1, url2, url3));
+    cus.addUrl(url2,
+	       new CacheException.UnretryableException("Test exception"),
+	       retryNum);
+    parser.addUrlSetToReturn(url2, SetUtil.set(url1));
+    cus.addUrl(url3,
+	       new CacheException.RetryableException("Test exception"),
+	       retryNum);
+    parser.addUrlSetToReturn(url3, SetUtil.set(url1));
+    cus.addUrl(url1, new IOException("Test exception"), retryNum);
+
+    crawlRule.addUrlToCrawl(url1);
+    crawlRule.addUrlToCrawl(url2);
+    crawlRule.addUrlToCrawl(url3);
+
+    crawler.doCrawl();
+    // IOException should not be retried
+    assertEquals(1, cus.getNumCacheAttempts(url1));
+    // UnretryableException should not be retried
+    assertEquals(1, cus.getNumCacheAttempts(url2));
+    // RetryableException should be retried
+    assertEquals(retryNum, cus.getNumCacheAttempts(url3));
+  }
+
+
+  public void testReturnsTrueWhenNonFailingExceptionThrown() {
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    String url1="http://www.example.com/blah.html";
+    cus.addUrl(startUrl, false, true);
+    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1));
+    cus.addUrl(url1, new FileNotFoundException("Test exception"), 0);
+    crawlRule.addUrlToCrawl(url1);
+
+    assertTrue(crawler.doCrawl());
+  }
+
+  public void testPluginThrowsRuntimeException() {
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    String url1="http://www.example.com/blah.html";
+    cus.addUrl(startUrl, false, true);
+    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1));
+    cus.addUrl(url1, new ExpectedRuntimeException("Test exception"), 0);
+    crawlRule.addUrlToCrawl(url1);
+
+    assertFalse(crawler.doCrawl());
+  }
+
+  public void testGetStatusStartUrls() {
+    Crawler.Status crawlStatus = crawler.getStatus();
+    assertEquals(startUrls, crawlStatus.getStartUrls());
+  }
+
+  public void testGetStatusCrawlDone() {
+    String url1 = "http://www.example.com/link1.html";
+    String url2 = "http://www.example.com/link2.html";
+    String url3 = "http://www.example.com/link3.html";
+
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    cus.addUrl(startUrl);
+    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1, url2, url3));
+    cus.addUrl(url1);
+    cus.addUrl(url2);
+    cus.addUrl(url3);
+    crawlRule.addUrlToCrawl(url1);
+    crawlRule.addUrlToCrawl(url2);
+    crawlRule.addUrlToCrawl(url3);
+
+    long expectedStart = TimeBase.nowMs();
+    crawler.doCrawl();
+    long expectedEnd = TimeBase.nowMs();
+    Crawler.Status crawlStatus = crawler.getStatus();
+    assertEquals(expectedStart, crawlStatus.getStartTime());
+    assertEquals(expectedEnd, crawlStatus.getEndTime());
+    assertEquals(5, crawlStatus.getNumFetched());
+    assertEquals(4, crawlStatus.getNumParsed());
+  }
+
+  public void testGetStatusIncomplete() {
+    assertEquals(Crawler.STATUS_INCOMPLETE,
+		 crawler.getStatus().getCrawlStatus());
+  }
+
+  public void testGetStatusSuccessful() {
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    cus.addUrl(startUrl);
+    crawler.doCrawl();
+    assertEquals(Crawler.STATUS_SUCCESSFUL,
+		 crawler.getStatus().getCrawlStatus());
+  }
+
+  public void testGetStatusError() {
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    String url1="http://www.example.com/blah.html";
+    cus.addUrl(startUrl, false, true);
+    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1));
+    cus.addUrl(url1, new IOException("Test exception"), DEFAULT_RETRY_TIMES);
+    crawlRule.addUrlToCrawl(url1);
+
+    crawler.doCrawl();
+    assertEquals(Crawler.STATUS_ERROR,
+		 crawler.getStatus().getCrawlStatus());
+  }
+
+  public void testCrawlWindow() {
+    String url1 = "http://www.example.com/link1.html";
+    String url2 = "http://www.example.com/link2.html";
+    String url3 = "http://www.example.com/link3.html";
+
+    CrawlSpec spec = new CrawlSpec(startUrl, crawlRule);
+    spec.setCrawlWindow(new MockCrawlWindowThatCountsDown(3));
+    mau.setCrawlSpec(spec);
+
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    cus.addUrl(startUrl);
+    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1, url2, url3));
+    cus.addUrl(url1);
+    cus.addUrl(url2);
+    cus.addUrl(url3);
+    crawlRule.addUrlToCrawl(url1);
+    crawlRule.addUrlToCrawl(url2);
+    crawlRule.addUrlToCrawl(url3);
+
+
+    crawler = new NewContentCrawler(mau, spec, aus);
+//     crawler = new NewContentCrawler(mau, spec, new MockAuState());
+    ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MyMockPermissionChecker(100));
+
+    mau.setParser(parser);
+    crawler.doCrawl();
+    // only gets 2 urls because start url is fetched twice (manifest & parse)
+    Set expected = SetUtil.set(startUrl, url1);
     assertEquals(expected, cus.getCachedUrls());
   }
 
@@ -705,6 +956,30 @@ public class TestNewContentCrawler extends LockssTestCase {
     }
   }
 
+  private class MyMockRetryableCacheException
+    extends CacheException.RetryableException {
+    public MyMockRetryableCacheException(String msg) {
+      super(msg);
+    }
+  }
+
+  private class MyMockUnretryableCacheException
+    extends CacheException.UnretryableException {
+    public MyMockUnretryableCacheException(String msg) {
+      super(msg);
+    }
+  }
+
+  private class MyMockCacheException
+    extends CacheException {
+    public MyMockCacheException(String msg) {
+      super(msg);
+    }
+    public void setFailing() {
+      attributeBits.set(CacheException.ATTRIBUTE_FAIL);
+    }
+  }
+
   private class MyMockPermissionChecker implements PermissionChecker{
     int numPermissionGranted=0;
 
@@ -729,6 +1004,33 @@ public class TestNewContentCrawler extends LockssTestCase {
           return false;
         }
 
+    }
+  }
+  private class MockCrawlWindowThatCountsDown implements CrawlWindow {
+    int counter;
+
+    public MockCrawlWindowThatCountsDown(int counter) {
+      this.counter = counter;
+    }
+
+    public int getCurrentCount() {
+      return counter;
+    }
+
+    public boolean canCrawl() {
+      if (counter > 0) {
+        counter--;
+        return true;
+      }
+      return false;
+    }
+
+    public boolean canCrawl(Date serverDate) {
+      return canCrawl();
+    }
+
+    public boolean crawlIsPossible() {
+      return true;
     }
   }
 
