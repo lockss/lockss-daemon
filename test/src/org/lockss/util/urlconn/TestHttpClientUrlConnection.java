@@ -1,5 +1,5 @@
 /*
- * $Id: TestHttpClientUrlConnection.java,v 1.7 2004-03-23 08:27:13 tlipkis Exp $
+ * $Id: TestHttpClientUrlConnection.java,v 1.8 2004-03-27 05:56:41 tlipkis Exp $
  */
 
 /*
@@ -194,6 +194,31 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     
   }
 
+  public void testResponseStream() throws Exception {
+    client.setRes(200, 200);
+    String test = "foo123";
+    StringInputStream sis = new StringInputStream(test);
+    method.setResponseStream(sis);
+    conn.execute();
+    assertTrue(conn.isExecuted());
+    assertEquals(200, conn.getResponseCode());
+    InputStream is = conn.getResponseInputStream();
+    String res = StringUtil.fromInputStream(is);
+    assertEquals(test, res);
+    assertEquals(0, is.available());
+    sis.close();
+    assertEquals(0, is.available());
+  }
+
+  public void testResponseStreamNull() throws Exception {
+    client.setRes(200, 200);
+    method.setResponseStream(null);
+    conn.execute();
+    assertTrue(conn.isExecuted());
+    assertEquals(200, conn.getResponseCode());
+    assertNull(conn.getResponseInputStream());
+  }
+
   public void testExecuteProxy() throws Exception {
     client.setRes(201, 202);
     conn.setProxy("phost", 9009);
@@ -335,6 +360,7 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     HttpClientUrlConnection.LockssGetMethodImpl getMeth;
     Properties respProps = new Properties();
     String statusText;
+    InputStream respStream;
     int contentLength = -1;
     boolean released = false;
     int res = -1;
@@ -455,6 +481,13 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
       return new HostConfiguration();
     }
 
+    public InputStream getResponseBodyAsStream() throws IOException {
+      return respStream;
+    }
+
+    public void setResponseStream(InputStream strm) {
+      respStream = strm;
+    }
 
   }
 
