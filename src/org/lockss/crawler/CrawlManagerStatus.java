@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatus.java,v 1.4 2003-10-31 23:14:45 troberts Exp $
+ * $Id: CrawlManagerStatus.java,v 1.5 2003-11-04 18:59:35 troberts Exp $
  */
 
 /*
@@ -47,6 +47,12 @@ public class CrawlManagerStatus implements StatusAccessor {
   private static final String NUM_URLS_PARSED = "num_urls_parsed";
   private static final String NUM_URLS_FETCHED = "num_urls_fetched";
   private static final String START_URLS = "start_urls";
+  private static final String CRAWL_STATUS = "crawl_status";
+
+  public static final String INCOMPLETE_STRING = "Incomplete";
+  public static final String ERROR_STRING = "Error";
+  public static final String SUCCESSFUL_STRING = "Successful";
+  public static final String UNKNOWN_STRING = "Unknown";
 
   private List colDescs =
     ListUtil.list(
@@ -63,6 +69,8 @@ public class CrawlManagerStatus implements StatusAccessor {
 		  new ColumnDescriptor(NUM_URLS_PARSED, "URLs parsed",
 				       ColumnDescriptor.TYPE_INT),
 		  new ColumnDescriptor(START_URLS, "starting url",
+				       ColumnDescriptor.TYPE_STRING),
+		  new ColumnDescriptor(CRAWL_STATUS, "Crawl Status",
 				       ColumnDescriptor.TYPE_STRING)
 		  );
 
@@ -160,6 +168,7 @@ public class CrawlManagerStatus implements StatusAccessor {
     row.put(NUM_URLS_PARSED, new Long(crawler.getNumParsed()));
     row.put(START_URLS,
 	    (StringUtil.separatedString(crawler.getStartUrls(), "\n")));
+    row.put(CRAWL_STATUS, statusToString(crawler.getStatus()));
     return row;
   }
 
@@ -174,6 +183,7 @@ public class CrawlManagerStatus implements StatusAccessor {
     row.put(NUM_URLS_PARSED, new Long(crawler.getNumParsed()));
     row.put(START_URLS,
 	    (StringUtil.separatedString(crawler.getStartUrls(), "\n")));
+    row.put(CRAWL_STATUS, statusToString(crawler.getStatus()));
     return row;
   }
 
@@ -193,5 +203,18 @@ public class CrawlManagerStatus implements StatusAccessor {
     table.setTitle("Crawl Status");
     table.setColumnDescriptors(colDescs);
     table.setRows(getRows(key));
+  }
+
+  private String statusToString(int status) {
+    switch (status) {
+    case Crawler.STATUS_SUCCESSFUL : 
+      return SUCCESSFUL_STRING;
+    case Crawler.STATUS_INCOMPLETE : 
+      return INCOMPLETE_STRING;
+    case Crawler.STATUS_ERROR : 
+      return ERROR_STRING;
+    default : 
+      return UNKNOWN_STRING;
+    }
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerStatus.java,v 1.4 2003-10-31 23:14:45 troberts Exp $
+ * $Id: TestCrawlManagerStatus.java,v 1.5 2003-11-04 18:59:36 troberts Exp $
  */
 
 /*
@@ -48,11 +48,14 @@ public class TestCrawlManagerStatus extends LockssTestCase {
   private static final String END_TIME_COL_NAME = "end";
   private static final String NUM_URLS_PARSED = "num_urls_parsed";
   private static final String NUM_URLS_FETCHED = "num_urls_fetched";
-  private static final String NUM_CACHE_HITS = "num_cache_hits";
-  private static final String CACHE_HITS_PERCENT = "cache_hits_percent";
   private static final String START_URLS = "start_urls";
+  private static final String CRAWL_STATUS = "crawl_status";
   private static final String NC_TYPE = "New Content";
   private static final String REPAIR_TYPE = "Repair";
+
+  private static final String STATUS_INCOMPLETE = "Incomplete";
+  private static final String STATUS_ERROR = "Error";
+  private static final String STATUS_SUCCESSFUL = "Successful";
 
   private static List expectedColDescs =
     ListUtil.list(
@@ -69,6 +72,8 @@ public class TestCrawlManagerStatus extends LockssTestCase {
 		  new ColumnDescriptor(NUM_URLS_PARSED, "URLs parsed",
 				       ColumnDescriptor.TYPE_INT),
 		  new ColumnDescriptor(START_URLS, "starting url",
+				       ColumnDescriptor.TYPE_STRING),
+		  new ColumnDescriptor(CRAWL_STATUS, "Crawl Status",
 				       ColumnDescriptor.TYPE_STRING)
 		  );
 
@@ -203,6 +208,45 @@ public class TestCrawlManagerStatus extends LockssTestCase {
 
     map = (Map)rows.get(1);
     assertEquals(REPAIR_TYPE, map.get(CRAWL_TYPE));
+  }
+
+  public void testCrawlStatus() {
+    StatusTable table = new StatusTable("test");
+
+    MockCrawler crawler = new MockCrawler();
+    crawler.setType(Crawler.NEW_CONTENT);
+    crawler.setAu(new MockArchivalUnit());
+    crawler.setStatus(Crawler.STATUS_INCOMPLETE);
+
+    MockCrawler crawler2 = new MockCrawler();
+    crawler2.setType(Crawler.REPAIR);
+    crawler2.setAu(new MockArchivalUnit());
+    crawler2.setStatus(Crawler.STATUS_SUCCESSFUL);
+
+    MockCrawler crawler3 = new MockCrawler();
+    crawler3.setType(Crawler.REPAIR);
+    crawler3.setAu(new MockArchivalUnit());
+    crawler3.setStatus(Crawler.STATUS_ERROR);
+
+    statusSource.setCrawls(ListUtil.list(crawler), "key1");
+    statusSource.setCrawls(ListUtil.list(crawler2), "key2");
+    statusSource.setCrawls(ListUtil.list(crawler3), "key3");
+    statusSource.setActiveAus(ListUtil.list("key1", "key2", "key3"));
+
+    cmStatus.populateTable(table);
+    assertEquals(expectedColDescs, table.getColumnDescriptors());
+    List rows = table.getSortedRows();
+    int expectedElements = 3;
+    assertEquals(expectedElements, rows.size());
+
+    Map map = (Map)rows.get(0);
+    assertEquals(STATUS_INCOMPLETE, map.get(CRAWL_STATUS));
+
+    map = (Map)rows.get(1);
+    assertEquals(STATUS_SUCCESSFUL, map.get(CRAWL_STATUS));
+
+    map = (Map)rows.get(2);
+    assertEquals(STATUS_ERROR, map.get(CRAWL_STATUS));
   }
 
 }
