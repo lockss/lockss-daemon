@@ -1,5 +1,5 @@
 /*
- * $Id: XmlPropertyLoader.java,v 1.2 2004-06-14 03:08:44 smorabito Exp $
+ * $Id: XmlPropertyLoader.java,v 1.3 2004-06-15 21:43:23 smorabito Exp $
  */
 
 /*
@@ -48,25 +48,25 @@ public class XmlPropertyLoader {
   private static final String TAG_PROPERTY     = "property";
   private static final String TAG_VALUE        = "value";
   private static final String TAG_LIST         = "list";
-  private static final String TAG_CONDITIONAL  = "if";
+  private static final String TAG_IF           = "if";
   private static final String TAG_THEN         = "then";
   private static final String TAG_ELSE         = "else";
+  private static final String TAG_AND          = "and";
+  private static final String TAG_OR           = "or";
+  private static final String TAG_NOT          = "not";
+  private static final String TAG_TEST         = "test";
 
-  private static final String PREFIX = Configuration.PREFIX;
-  private static final String PLATFORM = Configuration.PLATFORM;
-  private static final String DAEMON = Configuration.PREFIX + "daemon.";
-
-  private static Logger logger = Logger.getLogger("XmlPropertyLoader");
+  private static Logger log = Logger.getLogger("XmlPropertyLoader");
 
   /**
    * Load a set of XML properties from the input stream.
    */
   public boolean load(PropertyTree props, InputStream istr) {
     boolean isLoaded = false;
-    
+
     try {
       SAXParserFactory factory = SAXParserFactory.newInstance();
-      
+
       factory.setValidating(true);
       factory.setNamespaceAware(false);
 
@@ -75,9 +75,13 @@ public class XmlPropertyLoader {
       parser.parse(istr, new LockssConfigHandler(props));
 
       isLoaded = true;
-    } catch (Exception ex) {
-      logger.warning("Unable to parse configuration file: " +
-		     ex.toString());
+    } catch (ParserConfigurationException ex) {
+      // Really shouldn't ever happen.
+      log.warning("parser configuration exception: " + ex);
+    } catch (SAXException ex) {
+      log.warning("SAX Exception: " + ex);
+    } catch (IOException ex) {
+      log.warning("IO Exception: " + ex);
     }
 
     return isLoaded;
@@ -109,23 +113,38 @@ public class XmlPropertyLoader {
     private Stack m_propStack = new Stack();
     // When building a list of configuration values for a single key.
     private List m_propList = null;
+
     // True iff the parser is currently inside a "value" element.
     private boolean m_inValue = false;
     // True iff the parser is currently inside a "list" element.
     private boolean m_inList  = false;
-    // True iff the parser is currently inside a "propgroup" element.
-    private boolean m_inConditional = false;
+    // True iff the parser is currently inside an "if" element.
+    private boolean m_inIf = false;
     // True iff the parser is currently inside an "else" element.
     private boolean m_inElse = false;
     // True iff the parser is currently inside a "then" element.
     private boolean m_inThen = false;
+    // True iff the parser is currently inside an "and" element.
+    private boolean m_inAnd = false;
+    // True iff the parser is currently inside an "or" element.
+    private boolean m_inOr = false;
+    // True iff the parser is currently inside a "not" element.
+    private boolean m_inNot = false;
+    // True iff the parser is currently inside a "test" element.
+    private boolean m_inTest = false;
 
     // False iff the conditions in the propgroup attribute conditionals
     // are not satisfied.
-    private boolean m_condValue = false;
+    private boolean m_evalIf = false;
 
     // The property tree we're adding to.
     private PropertyTree m_props;
+
+    // Save the current running daemon and platform version
+    private Version m_sysPlatformVer = getPlatformVersion();
+    private Version m_sysDaemonVer = getDaemonVersion();
+    private String m_sysGroup = getPlatformGroup();
+    private String m_sysHostname = getPlatformHostname();
 
     /**
      * Default constructor.
@@ -148,10 +167,10 @@ public class XmlPropertyLoader {
      * </ol>
      */
     private boolean doEval() {
-      return (!m_inConditional ||
-	      ((m_condValue && m_inThen) ||
-	       (!m_condValue && m_inElse)) ||
-	      (m_condValue && !m_inThen && !m_inElse));
+      return (!m_inIf ||
+	      ((m_evalIf && m_inThen) ||
+	       (!m_evalIf && m_inElse)) ||
+	      (m_evalIf && !m_inThen && !m_inElse));
     }
 
     /**
@@ -162,8 +181,8 @@ public class XmlPropertyLoader {
 			     String qName, Attributes attrs)
 	throws SAXException {
 
-      if (TAG_CONDITIONAL.equals(qName)) {
-	startConditionalTag(attrs);
+      if (TAG_IF.equals(qName)) {
+	startIfTag(attrs);
       } else if (TAG_ELSE.equals(qName)) {
 	startElseTag();
       } else if (TAG_LIST.equals(qName)) {
@@ -174,6 +193,14 @@ public class XmlPropertyLoader {
 	startThenTag();
       } else if (TAG_VALUE.equals(qName)) {
 	startValueTag();
+      } else if (TAG_AND.equals(qName)) {
+	startAndTag();
+      } else if (TAG_OR.equals(qName)) {
+	startOrTag();
+      } else if (TAG_NOT.equals(qName)) {
+	startNotTag();
+      } else if (TAG_TEST.equals(qName)) {
+	startTestTag(attrs);
       } else if (TAG_LOCKSSCONFIG.equals(qName)) {
 	; // do nothing
       } else {
@@ -188,8 +215,8 @@ public class XmlPropertyLoader {
 			   String qName)
 	throws SAXException {
 
-      if (TAG_CONDITIONAL.equals(qName)) {
-	endConditionalTag();
+      if (TAG_IF.equals(qName)) {
+	endIfTag();
       } else if (TAG_ELSE.equals(qName)) {
 	endElseTag();
       } else if (TAG_LIST.equals(qName)) {
@@ -200,6 +227,14 @@ public class XmlPropertyLoader {
 	endThenTag();
       } else if (TAG_VALUE.equals(qName)) {
 	endValueTag();
+      } else if (TAG_AND.equals(qName)) {
+	endAndTag();
+      } else if (TAG_OR.equals(qName)) {
+	endOrTag();
+      } else if (TAG_NOT.equals(qName)) {
+	endNotTag();
+      } else if (TAG_TEST.equals(qName)) {
+	endTestTag();
       } else if (TAG_LOCKSSCONFIG.equals(qName)) {
 	; // do nothing
       } else {
@@ -276,117 +311,10 @@ public class XmlPropertyLoader {
     /**
      * Handle encountering the start of an "if" tag by parsing
      * the conditional attributes and acting on them accordingly.
-     *
-     * @throws IllegalArgumentException for illegal combinations of attributes.
      */
-    private void startConditionalTag(Attributes attrs) {
-      m_inConditional = true;
-
-      // By default, evaluate the property group.  If any of the
-      // conditions fail to match, this becomes false.
-      m_condValue = true;
-
-      // Evaluate the attributes of the tag and set the
-      // value "m_condValue" appropriately.
-
-      // Get the XML element attributes
-      String group = null;
-      String hostname = null;
-      Version daemonMin = null;
-      Version daemonMax = null;
-      Version platformMin = null;
-      Version platformMax = null;
-
-      group = attrs.getValue("group");
-      hostname = attrs.getValue("hostname");
-
-      if (attrs.getValue("daemonVersionMin") != null) {
-	daemonMin = new DaemonVersion(attrs.getValue("daemonVersionMin"));
-      }
-
-      if (attrs.getValue("daemonVersionMax") != null) {
-	daemonMax = new DaemonVersion(attrs.getValue("daemonVersionMax"));
-      }
-
-      if (attrs.getValue("daemonVersion") != null) {
-	if (daemonMin != null || daemonMax != null) {
-	  throw new IllegalArgumentException("Cannot mix daemonMin, daemonMax " +
-					     "and daemonVersion!");
-	}
-	daemonMin = daemonMax = new DaemonVersion(attrs.getValue("daemonVersion"));
-      }
-
-      if (attrs.getValue("platformVersionMin") != null) {
-	platformMin = new PlatformVersion(attrs.getValue("platformVersionMin"));
-      }
-
-      if (attrs.getValue("platformVersionMax") != null) {
-	platformMax = new PlatformVersion(attrs.getValue("platformVersionMax"));
-      }
-
-      if (attrs.getValue("platformVersion") != null) {
-	if (platformMin != null || platformMax != null) {
-	  throw new IllegalArgumentException("Cannot mix platformMin, " +
-					     "platformMax and platformVersion!");
-	}
-	platformMin = platformMax =
-	  new PlatformVersion(attrs.getValue("platformVersion"));
-      }
-
-      // Save the current running daemon and platform version
-      Version sysPlatformVer = getPlatformVersion();
-      Version sysDaemonVer = getDaemonVersion();
-      String sysGroup = getPlatformGroup();
-      String sysHostname = getPlatformHostname();
-
-
-      /*
-       * Group membership checking.
-       */
-      if (group != null && sysGroup != null) {
-	m_condValue &= StringUtil.equalStringsIgnoreCase(sysGroup, group);
-      }
-
-      /*
-       * Hostname checking.
-       */
-      if (hostname != null && sysHostname != null) {
-	m_condValue &= StringUtil.equalStringsIgnoreCase(sysHostname, hostname);
-      }
-
-      /*
-       * Daemon version checking.
-       */
-      if (sysDaemonVer != null) {
-	if (daemonMin != null && daemonMax != null) {
-	  // Have both daemon min and max...
-	  m_condValue &= ((sysDaemonVer.toLong() >= daemonMin.toLong()) &&
-			  (sysDaemonVer.toLong() <= daemonMax.toLong()));
-	} else if (daemonMin != null) {
-	  // Have only daemon min...
-	  m_condValue &= (sysDaemonVer.toLong() >= daemonMin.toLong());
-	} else if (daemonMax != null) {
-	  // Have only daemon max...
-	  m_condValue &= (sysDaemonVer.toLong() <= daemonMax.toLong());
-	}
-      }
-
-      /*
-       * Platform version checking.
-       */
-      if (sysPlatformVer != null) {
-	if (platformMin != null && platformMax != null) {
-	  // Have both platform min and max...
-	  m_condValue &= ((sysPlatformVer.toLong() >= platformMin.toLong()) &&
-			  (sysPlatformVer.toLong() <= platformMax.toLong()));
-	} else if (platformMin != null) {
-	  // Have only platform min...
-	  m_condValue &= (sysPlatformVer.toLong() >= platformMin.toLong());
-	} else if (platformMax != null) {
-	  // Have only platform max...
-	  m_condValue &= (sysPlatformVer.toLong() <= platformMax.toLong());
-	}
-      }
+    private void startIfTag(Attributes attrs) {
+      m_inIf = true;
+      m_evalIf = evaluateAttributes(attrs);
     }
 
     /**
@@ -403,6 +331,46 @@ public class XmlPropertyLoader {
       if (doEval()) {
 	// Inside a "value" element.
 	m_inValue = true;
+      }
+    }
+
+    /**
+     * Handle encountering a starting "and" tag.
+     */
+    private void startAndTag() {
+      m_inAnd = true;
+      m_evalIf = true; // 'and' evaluates to true by default.
+    }
+
+    /**
+     * Handle encountering a starting "or" tag.
+     */
+    private void startOrTag() {
+      m_inOr = true;
+      m_evalIf = false; // 'or' evaluates to false by default.
+    }
+
+    /**
+     * Handle encountering a starting "not" tag.
+     */
+    private void startNotTag() {
+      m_inNot = true;
+      m_evalIf = true; // 'not' evaluates to true by default.
+    }
+
+
+    /**
+     * Depending on whether we are evaluating a test in an "and", an
+     * "or", or a "not", do the right thing.
+     */
+    private void startTestTag(Attributes attrs) {
+      m_inTest = true;
+      if (m_inAnd) {
+	m_evalIf &= evaluateAttributes(attrs);
+      } else if (m_inOr) {
+	m_evalIf |= evaluateAttributes(attrs);
+      } else if (m_inNot) {
+	m_evalIf ^= evaluateAttributes(attrs);
       }
     }
 
@@ -438,8 +406,9 @@ public class XmlPropertyLoader {
     /**
      * Handle encountering the end of a "propgroup" tag.
      */
-    private void endConditionalTag() {
-      m_inConditional = false;
+    private void endIfTag() {
+      m_inIf = false;
+      m_evalIf = false; // Reset the evaluation boolean.
     }
 
 
@@ -460,6 +429,34 @@ public class XmlPropertyLoader {
     }
 
     /**
+     * Handle encountering the end of an "and" tag.
+     */
+    private void endAndTag() {
+      m_inAnd = false;
+    }
+
+    /**
+     * Handle encountering the end of an "or" tag.
+     */
+    private void endOrTag() {
+      m_inOr = false;
+    }
+
+    /**
+     * Handle encountering the end of a "not" tag.
+     */
+    private void endNotTag() {
+      m_inNot = false;
+    }
+
+    /**
+     * Handle encountering the end of a "test" tag.
+     */
+    private void endTestTag() {
+      m_inTest = false;
+    }
+
+    /**
      * Return the current property name.
      */
     private String getPropname() {
@@ -467,17 +464,127 @@ public class XmlPropertyLoader {
     }
 
     /**
-     * @throws IllegalArgumentException if the property has already been
-     * set.
+     * Log a warning if overwriting an existing property.
      */
     public void setProperty(Object value) {
       String prop = getPropname();
       if (m_props.get(prop) == null) {
-	m_props.put(prop, value);
-      } else {
-	throw new IllegalArgumentException("Trying to overwrite property '" +
-					   prop + "'.  Was: " + m_props.get(prop));
+	log.warning("Overwriting property '" + prop + "'.  Was: '" +
+		    m_props.get(prop) + "'," + "Now: '" + value + "'");
+
       }
+      m_props.put(prop, value);
+    }
+
+    /**
+     * Evaluate the attributes of this test (whether an <if...> or a
+     * <test...> tag) and return the boolean value.
+     */
+    public boolean evaluateAttributes(Attributes attrs) {
+      boolean returnVal = true;
+
+      // If we don't have any attributes, short-circuit.
+      if (attrs.getLength() == 0) {
+	return returnVal;
+      }
+
+      // Evaluate the attributes of the tag and set the
+      // value "returnVal" appropriately.
+
+      // Get the XML element attributes
+      String group = null;
+      String hostname = null;
+      Version daemonMin = null;
+      Version daemonMax = null;
+      Version platformMin = null;
+      Version platformMax = null;
+
+      group = attrs.getValue("group");
+      hostname = attrs.getValue("hostname");
+
+      if (attrs.getValue("daemonVersionMin") != null) {
+	daemonMin = new DaemonVersion(attrs.getValue("daemonVersionMin"));
+      }
+
+      if (attrs.getValue("daemonVersionMax") != null) {
+	daemonMax = new DaemonVersion(attrs.getValue("daemonVersionMax"));
+      }
+
+      if (attrs.getValue("daemonVersion") != null) {
+	if (daemonMin != null || daemonMax != null) {
+	  throw new IllegalArgumentException("Cannot mix daemonMin, daemonMax " +
+					     "and daemonVersion!");
+	}
+	daemonMin = daemonMax =
+	  new DaemonVersion(attrs.getValue("daemonVersion"));
+      }
+
+      if (attrs.getValue("platformVersionMin") != null) {
+	platformMin = new PlatformVersion(attrs.getValue("platformVersionMin"));
+      }
+
+      if (attrs.getValue("platformVersionMax") != null) {
+	platformMax = new PlatformVersion(attrs.getValue("platformVersionMax"));
+      }
+
+      if (attrs.getValue("platformVersion") != null) {
+	if (platformMin != null || platformMax != null) {
+	  throw new IllegalArgumentException("Cannot mix platformMin, " +
+					     "platformMax and platformVersion!");
+	}
+	platformMin = platformMax =
+	  new PlatformVersion(attrs.getValue("platformVersion"));
+      }
+
+      /*
+       * Group membership checking.
+       */
+      if (group != null && m_sysGroup != null) {
+	returnVal &= StringUtil.equalStringsIgnoreCase(m_sysGroup, group);
+      }
+
+      /*
+       * Hostname checking.
+       */
+      if (hostname != null && m_sysHostname != null) {
+	returnVal &= StringUtil.equalStringsIgnoreCase(m_sysHostname, hostname);
+      }
+
+      /*
+       * Daemon version checking.
+       */
+      if (m_sysDaemonVer != null) {
+	if (daemonMin != null && daemonMax != null) {
+	  // Have both daemon min and max...
+	  returnVal &= ((m_sysDaemonVer.toLong() >= daemonMin.toLong()) &&
+			  (m_sysDaemonVer.toLong() <= daemonMax.toLong()));
+	} else if (daemonMin != null) {
+	  // Have only daemon min...
+	  returnVal &= (m_sysDaemonVer.toLong() >= daemonMin.toLong());
+	} else if (daemonMax != null) {
+	  // Have only daemon max...
+	  returnVal &= (m_sysDaemonVer.toLong() <= daemonMax.toLong());
+	}
+      }
+
+      /*
+       * Platform version checking.
+       */
+      if (m_sysPlatformVer != null) {
+	if (platformMin != null && platformMax != null) {
+	  // Have both platform min and max...
+	  returnVal &= ((m_sysPlatformVer.toLong() >= platformMin.toLong()) &&
+			  (m_sysPlatformVer.toLong() <= platformMax.toLong()));
+	} else if (platformMin != null) {
+	  // Have only platform min...
+	  returnVal &= (m_sysPlatformVer.toLong() >= platformMin.toLong());
+	} else if (platformMax != null) {
+	  // Have only platform max...
+	  returnVal &= (m_sysPlatformVer.toLong() <= platformMax.toLong());
+	}
+      }
+
+      return returnVal;
     }
   }
 }

@@ -140,6 +140,142 @@
 	<property name="test.x" value="bar"/>
       </else>
     </if>
+    
+    
+    <!-- Test the legal formats for "and" booleans -->
+    <if>
+      <and>
+	<test group="beta" />
+	<test hostname="testhost" />
+      </and>
+      <property name="and.a" value="foo" />
+    </if>
+    <if>
+      <and>
+	<test group="beta" />
+	<test hostname="bar" />
+      </and>
+      <property name="and.b" value="foo" />
+    </if>
+    <if>
+      <and>
+	<test group="beta" />
+	<test hostname="testhost" />
+      </and>
+      <then>
+	<property name="and.c" value="foo" />
+      </then>
+    </if>
+    <if>
+      <and>
+	<test group="beta" />
+	<test hostname="foo" />
+      </and>
+      <then>
+	<property name="and.d" value="foo" />
+      </then>
+    </if>
+    <if>
+      <and>
+	<test group="beta" />
+	<test hostname="foo" />
+      </and>
+      <then>
+	<property name="and.e" value="foo" />
+      </then>
+      <else>
+	<property name="and.e" value="bar" />
+      </else>
+    </if>
+
+  
+    <!-- Test the legal formats for "or" booleans -->
+    <if>
+      <or>
+	<test group="beta" />
+	<test group="foo" />
+      </or>
+      <property name="or.a" value="foo"/>
+    </if>
+    <if>
+      <or>
+	<test group="foo" />
+	<test group="bar" />
+      </or>
+      <property name="or.b" value="foo"/>
+    </if>
+    <if>
+      <or>
+	<test group="beta" />
+	<test group="foo" />
+      </or>
+      <then>
+	<property name="or.c" value="foo"/>
+      </then>
+    </if>
+    <if>
+      <or>
+	<test group="foo" />
+	<test group="bar" />
+      </or>
+      <then>
+	<property name="or.d" value="foo"/>
+      </then>
+    </if>
+    <if>
+      <or>
+	<test group="foo" />
+	<test group="bar" />
+      </or>
+      <then>
+	<property name="or.e" value="foo"/>
+      </then>
+      <else>
+	<property name="or.e" value="bar"/>
+      </else>
+    </if>
+
+    <!-- Test the legal formats for "not" booleans -->
+    <if>
+      <not>
+	<test group="foo" />
+      </not>
+      <property name="not.a" value="foo"/>
+    </if>
+    <if>
+      <not>
+	<test group="beta" />
+      </not>
+      <property name="not.b" value="foo"/>
+    </if>
+    <if>
+      <not>
+	<test group="foo" />
+      </not>
+      <then>
+	<property name="not.c" value="foo"/>
+      </then>
+    </if>
+    <if>
+      <not>
+	<test group="beta" />
+      </not>
+      <then>
+	<property name="not.d" value="foo"/>
+      </then>
+    </if>
+    <if>
+      <not>
+	<test group="beta" />
+      </not>
+      <then>
+	<property name="not.e" value="foo"/>
+      </then>
+      <else>
+	<property name="not.e" value="bar"/>
+      </else>
+    </if>
+
   </property>
 
 </lockss-config>

@@ -1,5 +1,5 @@
 /*
- * $Id: TestXmlPropertyLoader.java,v 1.1 2004-06-14 03:08:45 smorabito Exp $
+ * $Id: TestXmlPropertyLoader.java,v 1.2 2004-06-15 21:43:22 smorabito Exp $
  */
 
 /*
@@ -49,7 +49,8 @@ import org.lockss.test.*;
 public class TestXmlPropertyLoader extends LockssTestCase {
 
   private static PropertyTree m_props = null;
-  private static XmlPropertyLoader m_xmlPropertyLoader = new MockXmlPropertyLoader();
+  private static XmlPropertyLoader m_xmlPropertyLoader =
+    new MockXmlPropertyLoader();
 
   public static Class testedClasses[] = {
     org.lockss.util.XmlPropertyLoader.class
@@ -92,7 +93,8 @@ public class TestXmlPropertyLoader extends LockssTestCase {
     sb.append("<lockss-config>\n");
     sb.append("  <some-unknown-tag name=\"foo\" value=\"bar\" />\n");
     sb.append("</lockss-config>\n");
-    InputStream istr = new ReaderInputStream(new StringReader(sb.toString()));
+    InputStream istr =
+      new ReaderInputStream(new StringReader(sb.toString()));
     try {
       m_xmlPropertyLoader.load(props, istr);
       fail("Should have thrown.");
@@ -144,7 +146,6 @@ public class TestXmlPropertyLoader extends LockssTestCase {
     assertEquals("4", (String)l.get(3));
     assertEquals("5", (String)l.get(4));
   }
-
 
   public void testDaemonVersionEquals() throws IOException {
     assertNull(m_props.get("org.lockss.test.a"));
@@ -208,4 +209,29 @@ public class TestXmlPropertyLoader extends LockssTestCase {
     assertEquals("foo", m_props.get("org.lockss.test.x"));
 
   }
+
+  public void testBooleanAnd() throws IOException {
+    assertEquals("foo", m_props.get("org.lockss.and.a"));
+    assertNull(m_props.get("org.lockss.and.b"));
+    assertEquals("foo", m_props.get("org.lockss.and.c"));
+    assertNull(m_props.get("org.lockss.and.d"));
+    assertEquals("bar", m_props.get("org.lockss.and.e"));
+  }
+
+  public void testBooleanOr() throws IOException {
+    assertEquals("foo", m_props.get("org.lockss.or.a"));
+    assertNull(m_props.get("org.lockss.or.b"));
+    assertEquals("foo", m_props.get("org.lockss.or.c"));
+    assertNull(m_props.get("org.lockss.or.d"));
+    assertEquals("bar", m_props.get("org.lockss.or.e"));
+  }
+
+  public void testBooleanNot() throws IOException {
+    assertEquals("foo", m_props.get("org.lockss.not.a"));
+    assertNull(m_props.get("org.lockss.not.b"));
+    assertEquals("foo", m_props.get("org.lockss.not.c"));
+    assertNull(m_props.get("org.lockss.or.d"));
+    assertEquals("bar", m_props.get("org.lockss.not.e"));
+  }
+
 }
