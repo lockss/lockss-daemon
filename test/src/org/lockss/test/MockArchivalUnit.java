@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.19 2003-02-26 21:33:34 tal Exp $
+ * $Id: MockArchivalUnit.java,v 1.20 2003-03-08 04:35:53 tal Exp $
  */
 
 /*
@@ -139,6 +139,10 @@ public class MockArchivalUnit implements ArchivalUnit {
 
   public String getAUId() {
     return auId;
+  }
+
+  public String getName() {
+    return "MockAU";
   }
 
   public void setPluginId(String newId) {

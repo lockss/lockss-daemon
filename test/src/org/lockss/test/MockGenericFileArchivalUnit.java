@@ -1,5 +1,5 @@
 /*
- * $Id: MockGenericFileArchivalUnit.java,v 1.6 2003-02-28 02:10:33 troberts Exp $
+ * $Id: MockGenericFileArchivalUnit.java,v 1.7 2003-03-08 04:35:53 tal Exp $
  */
 
 /*
@@ -90,6 +90,10 @@ public class MockGenericFileArchivalUnit extends BaseArchivalUnit {
 
   public String getAUId() {
     return auId;
+  }
+
+  public String getName() {
+    return "MockGenericFileAU";
   }
 
   public void setPluginId(String newId) {

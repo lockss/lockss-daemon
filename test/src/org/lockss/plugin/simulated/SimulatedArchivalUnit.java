@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.17 2003-03-06 00:13:28 aalto Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.18 2003-03-08 04:35:53 tal Exp $
  */
 
 /*
@@ -127,6 +127,10 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
 
   public String getAUId() {
     // must agree with what SimulatedPlugin.getAUIdFromConfig() returns
+    return fileRoot;
+  }
+
+  public String getName() {
     return fileRoot;
   }
 

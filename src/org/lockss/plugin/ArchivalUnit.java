@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.2 2003-02-26 04:45:31 tal Exp $
+ * $Id: ArchivalUnit.java,v 1.3 2003-03-08 04:35:53 tal Exp $
  */
 
 /*
@@ -99,6 +99,14 @@ public interface ArchivalUnit {
    * @return a unique id
    */
   public String getAUId();
+
+  /**
+   * Returns a human-readable name for the ArchivalUnit.  This is used in
+   * messages, so it is desirable that it succinctly identify the AU, but it
+   * is not essential that it be unique.
+   * @return the AU name
+   */
+  public String getName();
 
   /**
    * Sleeps for the interval needed between requests to the server

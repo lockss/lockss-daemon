@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireArchivalUnit.java,v 1.13 2003-03-08 02:18:57 tal Exp $
+ * $Id: HighWireArchivalUnit.java,v 1.14 2003-03-08 04:35:53 tal Exp $
  */
 
 /*
@@ -186,6 +186,11 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
 
   public String getAUId() {
     return HighWirePlugin.constructAUId(base, volume);
+  }
+
+  public String getName() {
+    String host = StringUtil.trimHostName(base.getHost());
+    return host + ", vol. " + volume;
   }
 
   public int getVolumeNumber() {
