@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.38 2003-08-02 00:16:04 eaalto Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.39 2003-09-16 23:36:11 eaalto Exp $
  */
 
 /*
@@ -401,7 +401,8 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
   public void testMapAuToFileLocation() {
     LockssRepositoryImpl.lastPluginDir = "ca";
     String expectedStr = LockssRepositoryImpl.cacheLocation + "root/cb/";
-    assertEquals(expectedStr, LockssRepositoryImpl.mapAuToFileLocation(
+    assertEquals(FileUtil.sysDepPath(expectedStr),
+                 LockssRepositoryImpl.mapAuToFileLocation(
         LockssRepositoryImpl.cacheLocation+"root", new MockArchivalUnit()));
   }
 
@@ -412,20 +413,21 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
 
     LockssRepositoryImpl.lastPluginDir = "aa";
     String expectedStr = LockssRepositoryImpl.cacheLocation + "root/ac/";
-    assertEquals(expectedStr, LockssRepositoryImpl.mapAuToFileLocation(
+    assertEquals(FileUtil.sysDepPath(expectedStr),
+                 LockssRepositoryImpl.mapAuToFileLocation(
         LockssRepositoryImpl.cacheLocation+"root", new MockArchivalUnit()));
   }
 
   public void testMapUrlToFileLocation() throws MalformedURLException {
     String testStr = "http://www.example.com/branch1/branch2/index.html";
     String expectedStr = "root/www.example.com/http/branch1/branch2/index.html";
-    assertEquals(expectedStr, LockssRepositoryImpl.mapUrlToFileLocation("root",
-        testStr));
+    assertEquals(FileUtil.sysDepPath(expectedStr),
+                 LockssRepositoryImpl.mapUrlToFileLocation("root", testStr));
 
     testStr = "hTTp://www.exaMPLE.com/branch1/branch2/index.html";
     expectedStr = "root/www.example.com/http/branch1/branch2/index.html";
-    assertEquals(expectedStr, LockssRepositoryImpl.mapUrlToFileLocation("root",
-        testStr));
+    assertEquals(FileUtil.sysDepPath(expectedStr),
+                 LockssRepositoryImpl.mapUrlToFileLocation("root", testStr));
 
     try {
       testStr = ":/brokenurl.com/branch1/index/";
