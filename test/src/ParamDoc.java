@@ -1,5 +1,5 @@
 /*
- * $Id: ParamDoc.java,v 1.7 2004-02-10 02:28:09 tlipkis Exp $
+ * $Id: ParamDoc.java,v 1.8 2004-08-09 02:56:12 tlipkis Exp $
  */
 
 /*
@@ -55,31 +55,67 @@ public class ParamDoc {
 
   static Map defaultMap = new TreeMap();
 
-  public static void main(String argv[]) {
+  static PrintStream pout = System.out;
+
+  public static void main(String argv[]) throws Exception {
     Vector jars = new Vector();
-    for (int i=0; i<argv.length; i++) {
-      String s = argv[i];
-      jars.add(s);
-      File jarfile = find_jar(s);
-      JarFile jar;
-      try {
-	jar = new JarFile(jarfile);
-      } catch (IOException e) {
-	log.error("Couldn't open jar " + s, e);
-	return;
+    String ofile = null;
+    try {
+      for (int ix=0; ix<argv.length; ix++) {
+	String arg = argv[ix];
+	if (arg.startsWith("-")) {
+	  if (arg.startsWith("-o")) {
+	    ofile = argv[++ix];
+	  } else {
+	    usage();
+	  }
+	} else {
+	  jars.add(arg);
+	}
       }
-      for (Enumeration enum = jar.entries();
-	   enum.hasMoreElements(); ) {
-	JarEntry ent = (JarEntry)enum.nextElement();
-	doClass(ent);
+    } catch (ArrayIndexOutOfBoundsException e) {
+      usage();
+    }
+
+    if (ofile != null) {
+      FileOutputStream fos = new FileOutputStream(ofile);
+      pout = new PrintStream(fos);
+    }
+    doJars(jars);
+  }
+
+  static void doJars(List jars) {
+    for (Iterator iter = jars.iterator(); iter.hasNext(); ) {
+      String jarname = (String)iter.next();
+      File jarfile = find_jar(jarname);
+      if (jarfile == null) {
+	System.err.println("Couldn't find " + jarname);
+      } else {
+	JarFile jar;
+	try {
+	  jar = new JarFile(jarfile);
+	} catch (IOException e) {
+	  log.error("Couldn't open jar " + jarfile, e);
+	  return;
+	}
+	for (Enumeration enum = jar.entries();
+	     enum.hasMoreElements(); ) {
+	  JarEntry ent = (JarEntry)enum.nextElement();
+	  doClass(ent);
+	}
       }
     }
-    System.out.println("Params with defaults");
+    pout.println("Parameters and default values");
     printDefaults();
-//     System.out.println("\nParameters by class");
+//     pout.println("\nParameters by class");
 //     printMap(classMap);
-    System.out.println("\nParameters by name");
+    pout.println("\nClasses using parameter");
     printMap(paramMap);
+  }
+
+  static void usage() {
+    System.err.println("Usage: ParamDoc [-o outfile] <jars ...>");
+    System.exit(1);
   }
 
   static final int COL = 40;
@@ -89,16 +125,16 @@ public class ParamDoc {
 	 keyIter.hasNext(); ) {
       String key = (String)keyIter.next();
       List list = (List)map.get(key);
-      System.out.print(key);
+      pout.print(key);
       Collections.sort(list);
       int len = key.length();
       for (Iterator iter = list.iterator(); iter.hasNext(); ) {
 	if (len >= COL) {
-	  System.out.println();
+	  pout.println();
 	  len = 0;
 	}
-	System.out.print(nblanks(COL - len));
-	System.out.println((String)iter.next());
+	pout.print(nblanks(COL - len));
+	pout.println((String)iter.next());
 	len = 0;
       }
     }
@@ -112,20 +148,20 @@ public class ParamDoc {
 
       defaultVal = defaultMap.get(paramName);
 
-      System.out.print(paramName);
+      pout.print(paramName);
       int len = paramName.length();
       if (len >= COL) {
-	System.out.println();
+	pout.println();
 	len = 0;
       }
-      System.out.print(nblanks(COL - len));
-      System.out.print(defaultVal);
+      pout.print(nblanks(COL - len));
+      pout.print(defaultVal);
       if (defaultVal instanceof Long) {
 	String timeStr = 
 	  StringUtil.timeIntervalToString(((Long)defaultVal).longValue());
-	System.out.println(" ("+timeStr+")");
+	pout.println(" ("+timeStr+")");
       } else {
-	System.out.println();
+	pout.println();
       }
     }
   }
@@ -166,13 +202,13 @@ public class ParamDoc {
       String defaultSym = (String)paramSymToDefaultSym.get(paramSym);
       Object defaultVal = defaultSymToDefVal.get(defaultSym);
 
-      if (defaultVal != null) {
-	putIfNotDifferent(defaultMap, paramName, defaultVal,
-			  "Conflicting defaults");
-      }
-//       putIfNotDifferent(defaultMap, paramName, 
-// 			defaultVal != null ? defaultVal : "(none)", 
-// 			"Conflicting defaults");
+//       if (defaultVal != null) {
+// 	putIfNotDifferent(defaultMap, paramName, defaultVal,
+// 			  "Conflicting defaults");
+//       }
+      putIfNotDifferent(defaultMap, paramName, 
+			defaultVal != null ? defaultVal : "(none)", 
+			"Conflicting defaults");
     }
   }
 
