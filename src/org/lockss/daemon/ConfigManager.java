@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.26 2004-06-14 03:08:43 smorabito Exp $
+ * $Id: ConfigManager.java,v 1.27 2004-07-12 06:14:46 tlipkis Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.*;
 import java.util.*;
 
 import org.lockss.app.*;
+import org.lockss.mail.*;
 import org.lockss.hasher.*;
 import org.lockss.protocol.*;
 import org.lockss.proxy.*;
@@ -118,6 +119,8 @@ public class ConfigManager implements LockssManager {
 
   private List configUrlList;	// list of urls
 
+  private String recentLoadError;
+
   /** A constant empty Configuration object */
   public static Configuration EMPTY_CONFIGURATION = newConfiguration();
   static {
@@ -126,7 +129,7 @@ public class ConfigManager implements LockssManager {
 
   // Current configuration instance.
   // Start with an empty one to avoid errors in the static accessors.
-  private static Configuration currentConfig = EMPTY_CONFIGURATION;
+  private Configuration currentConfig = EMPTY_CONFIGURATION;
 
   private OneShotSemaphore haveConfig = new OneShotSemaphore();
 
@@ -196,7 +199,10 @@ public class ConfigManager implements LockssManager {
 
   /** Return current configuration */
   public static Configuration getCurrentConfig() {
-    return currentConfig;
+    if (theMgr == null || theMgr.currentConfig == null) {
+      return EMPTY_CONFIGURATION;
+    }
+    return theMgr.currentConfig;
   }
 
   void setCurrentConfig(Configuration newConfig) {
@@ -288,10 +294,33 @@ public class ConfigManager implements LockssManager {
     Configuration newConfig = newConfiguration();
     try {
       boolean gotIt = newConfig.loadList(urlList);
-      return gotIt ? newConfig : null;
+      if (gotIt) {
+	recentLoadError = null;
+	return newConfig;
+      } else {
+	recentLoadError =
+	  getLoadErrorMessage(newConfig.getFirstErrorFile(urlList));
+	return null;
+      }
     } catch (Exception e) {
       log.error("Error loading config", e);
+      recentLoadError = e.toString();
       return null;
+    }
+  }
+
+  String getLoadErrorMessage(ConfigFile cf) {
+    if (cf != null) {
+      StringBuffer sb = new StringBuffer();
+      sb.append("Error loading: ");
+      sb.append(cf.getFileUrl());
+      sb.append("<br>");
+      sb.append(cf.getLoadErrorMessage());
+      sb.append("<br>Last attempt: ");
+      sb.append(new Date(cf.getLastAttemptTime()));
+      return sb.toString();
+    } else {
+      return "Error loading unknown file: shouldn't happen";
     }
   }
 
@@ -366,9 +395,9 @@ public class ConfigManager implements LockssManager {
 				IdentityManager.PARAM_LOCAL_IP);
 
     conditionalPlatformOverride(config, PARAM_PLATFORM_SMTP_PORT,
-				MailTarget.PARAM_SMTPPORT);
+				SmtpMailService.PARAM_SMTPPORT);
     conditionalPlatformOverride(config, PARAM_PLATFORM_SMTP_HOST,
-				MailTarget.PARAM_SMTPHOST);
+				SmtpMailService.PARAM_SMTPHOST);
 
     String platformSubnet = config.get(PARAM_PLATFORM_ACCESS_SUBNET);
     appendPlatformAccess(config, ServletManager.PARAM_IP_INCLUDE,
@@ -684,14 +713,14 @@ public class ConfigManager implements LockssManager {
    * Don't accidentally use this on a <code>Configuration</code> instance.
    */
   public static String getParam(String key) {
-    return currentConfig.get(key);
+    return getCurrentConfig().get(key);
   }
 
   /** Static convenience method to get param from current configuration.
    * Don't accidentally use this on a <code>Configuration</code> instance.
    */
   public static String getParam(String key, String dfault) {
-    return currentConfig.get(key, dfault);
+    return getCurrentConfig().get(key, dfault);
   }
 
   /** Static convenience method to get param from current configuration.
@@ -699,14 +728,14 @@ public class ConfigManager implements LockssManager {
    */
   public static boolean getBooleanParam(String key)
       throws Configuration.InvalidParam {
-    return currentConfig.getBoolean(key);
+    return getCurrentConfig().getBoolean(key);
   }
 
   /** Static convenience method to get param from current configuration.
    * Don't accidentally use this on a <code>Configuration</code> instance.
    */
   public static boolean getBooleanParam(String key, boolean dfault) {
-    return currentConfig.getBoolean(key, dfault);
+    return getCurrentConfig().getBoolean(key, dfault);
   }
 
   /** Static convenience method to get param from current configuration.
@@ -714,14 +743,14 @@ public class ConfigManager implements LockssManager {
    */
   public static int getIntParam(String key)
       throws Configuration.InvalidParam {
-    return currentConfig.getInt(key);
+    return getCurrentConfig().getInt(key);
   }
 
   /** Static convenience method to get param from current configuration.
    * Don't accidentally use this on a <code>Configuration</code> instance.
    */
   public static int getIntParam(String key, int dfault) {
-    return currentConfig.getInt(key, dfault);
+    return getCurrentConfig().getInt(key, dfault);
   }
 
   /** Static convenience method to get param from current configuration.
@@ -729,14 +758,14 @@ public class ConfigManager implements LockssManager {
    */
   public static long getLongParam(String key)
       throws Configuration.InvalidParam {
-    return currentConfig.getLong(key);
+    return getCurrentConfig().getLong(key);
   }
 
   /** Static convenience method to get param from current configuration.
    * Don't accidentally use this on a <code>Configuration</code> instance.
    */
   public static long getLongParam(String key, long dfault) {
-    return currentConfig.getLong(key, dfault);
+    return getCurrentConfig().getLong(key, dfault);
   }
 
   /** Static convenience method to get param from current configuration.
@@ -744,14 +773,14 @@ public class ConfigManager implements LockssManager {
    */
   public static long getTimeIntervalParam(String key)
       throws Configuration.InvalidParam {
-    return currentConfig.getTimeInterval(key);
+    return getCurrentConfig().getTimeInterval(key);
   }
 
   /** Static convenience method to get param from current configuration.
    * Don't accidentally use this on a <code>Configuration</code> instance.
    */
   public static long getTimeIntervalParam(String key, long dfault) {
-    return currentConfig.getTimeInterval(key, dfault);
+    return getCurrentConfig().getTimeInterval(key, dfault);
   }
 
   /** Static convenience method to get a <code>Configuration</code>
@@ -759,7 +788,7 @@ public class ConfigManager implements LockssManager {
    * Don't accidentally use this on a <code>Configuration</code> instance.
    */
   public static Configuration paramConfigTree(String key) {
-    return currentConfig.getConfigTree(key);
+    return getCurrentConfig().getConfigTree(key);
   }
 
   /** Static convenience method to get key iterator from the
@@ -767,7 +796,7 @@ public class ConfigManager implements LockssManager {
    * Don't accidentally use this on a <code>Configuration</code> instance.
    */
   public static Iterator paramKeyIterator() {
-    return currentConfig.keyIterator();
+    return getCurrentConfig().keyIterator();
   }
 
   /** Static convenience method to get a node iterator from the
@@ -775,7 +804,33 @@ public class ConfigManager implements LockssManager {
    * Don't accidentally use this on a <code>Configuration</code> instance.
    */
   public static Iterator paramNodeIterator(String key) {
-    return currentConfig.nodeIterator(key);
+    return getCurrentConfig().nodeIterator(key);
+  }
+
+  TinyUi tiny = null;
+  String[] tinyData = new String[1];
+
+  void startTinyUi() {
+    TinyUi t = new TinyUi(tinyData);
+    updateTinyData();
+    t.startTiny();
+    tiny = t;
+  }
+
+  void stopTinyUi() {
+    if (tiny != null) {
+      tiny.stopTiny();
+      tiny = null;
+      // give listener socket a little time to close
+      try {
+	Deadline.in(2 * Constants.SECOND).sleep();
+      } catch (InterruptedException e ) {
+      }
+    }
+  }
+
+  void updateTinyData() {
+    tinyData[0] = recentLoadError;
   }
 
   // Reload thread
@@ -820,6 +875,9 @@ public class ConfigManager implements LockssManager {
       // according to org.lockss.parameterReloadInterval, or 30 minutes.
       while (goOn) {
 	if (updateConfig()) {
+	  if (tiny != null) {
+	    stopTinyUi();
+	  }
 	  // true iff loaded config has changed
 	  if (!goOn) {
 	    break;
@@ -829,6 +887,14 @@ public class ConfigManager implements LockssManager {
 	  reloadInterval = getTimeIntervalParam(PARAM_RELOAD_INTERVAL,
 						DEFAULT_RELOAD_INTERVAL);
 
+	} else {
+	  if (lastReload == 0) {
+	    if (tiny == null) {
+	      startTinyUi();
+	    } else {
+	      updateTinyData();
+	    }
+	  }
 	}
 	long reloadRange = reloadInterval/4;
 	nextReload = Deadline.inRandomRange(reloadInterval - reloadRange,
