@@ -1,5 +1,5 @@
 /*
- * $Id: PartnerList.java,v 1.2 2003-03-19 23:54:01 tal Exp $
+ * $Id: PartnerList.java,v 1.3 2003-03-21 07:28:56 tal Exp $
  */
 
 /*
@@ -48,15 +48,18 @@ class PartnerList {
   static final String PARAM_MAX_PARTNER_LIFE = PREFIX + "maxPartnerLife";
   static final String PARAM_MAX_PARTNERS = PREFIX + "maxPartners";
   static final String PARAM_DEFAULT_LIST = PREFIX + "defaultPartnerList";
+  static final String PARAM_RECENT_MULTICAST_INTERVAL =
+    LcapV1Comm.PARAM_RECENT_MULTICAST_INTERVAL;
+
   static Logger log = Logger.getLogger("PartnerList");
 
   static Random random = new Random();
 
   Map partners = new HashMap();
-  Map lastReceived = new LRUMap(100);
+  Map lastMulticastReceived = new LRUMap(100);
   List defaultPartnerList;
   long lastPartnerRemoveTime = 0;
-  long recentPacketInterval = 0;
+  long recentMulticastInterval = 0;
   long maxPartnerLife = 0;
   long maxPartners = 0;
 
@@ -66,6 +69,8 @@ class PartnerList {
   void setConfig(Configuration config) {
     maxPartners = config.getInt(PARAM_MAX_PARTNERS, 2);
     maxPartnerLife = config.getInt(PARAM_MAX_PARTNER_LIFE, 0);
+    recentMulticastInterval =
+      config.getInt(PARAM_RECENT_MULTICAST_INTERVAL, 0);
     String s = config.get(PARAM_DEFAULT_LIST, "");
     List stringList = StringUtil.breakAt(s, ';');
     List newDefaultList = new ArrayList();
@@ -89,8 +94,9 @@ class PartnerList {
     return new HashSet(partners.keySet());
   }
 
-  void packetReceivedFrom(InetAddress ip) {
-    lastReceived.put(ip, nowLong());
+  void multicastPacketReceivedFrom(InetAddress ip) {
+    removePartner(ip);
+    lastMulticastReceived.put(ip, nowLong());
   }
 
   void addPartner(InetAddress partnerIP, double probability) {
@@ -100,9 +106,10 @@ class PartnerList {
   }
 
   void addPartner(InetAddress partnerIP) {
-    Long lastRcv = (Long)lastReceived.get(partnerIP);
+    // don't add if recently received multicast from him
+    Long lastRcv = (Long)lastMulticastReceived.get(partnerIP);
     if (lastRcv != null &&
-	((TimeBase.nowMs() - lastRcv.longValue()) < recentPacketInterval)) {
+	((TimeBase.nowMs() - lastRcv.longValue()) < recentMulticastInterval)) {
       return;
     }
     partners.put(partnerIP, nowLong());

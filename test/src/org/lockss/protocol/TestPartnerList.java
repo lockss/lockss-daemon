@@ -1,5 +1,5 @@
 /*
- * $Id: TestPartnerList.java,v 1.1 2003-03-19 23:54:19 tal Exp $
+ * $Id: TestPartnerList.java,v 1.2 2003-03-21 07:28:56 tal Exp $
  */
 
 /*
@@ -47,6 +47,7 @@ import org.lockss.test.*;
 public class TestPartnerList extends LockssTestCase {
   static final int DEF_MAX_LIFE = 10;
   static final int DEF_MAX_PARTNERS = 3;
+  static final int DEF_MULTICAST_INTERVAL = 10;
   static final String IP1 = "1.1.1.1";
   static final String IP2 = "1.1.1.2";
   static final String DEF_PARTNERS = IP1 + ";" + IP2;
@@ -63,7 +64,8 @@ public class TestPartnerList extends LockssTestCase {
     super.setUp();
     TimeBase.setSimulated();
     pl = new PartnerList();
-    pl.setConfig(getConfig(DEF_MAX_LIFE, DEF_MAX_PARTNERS, DEF_PARTNERS));
+    pl.setConfig(getConfig(DEF_MAX_LIFE, DEF_MAX_PARTNERS,
+			   DEF_MULTICAST_INTERVAL, DEF_PARTNERS));
     inet1 = InetAddress.getByName(IP1);
     inet2 = InetAddress.getByName(IP2);
     inet3 = InetAddress.getByName(IP3);
@@ -76,10 +78,13 @@ public class TestPartnerList extends LockssTestCase {
   }
 
   private Configuration getConfig(int maxLife, int maxPartners,
+				  int multicastInterval,
 				  String defaultPartners) {
     Properties prop = new Properties();
     prop.put(PartnerList.PARAM_MAX_PARTNER_LIFE, Integer.toString(maxLife));
     prop.put(PartnerList.PARAM_MAX_PARTNERS, Integer.toString(maxPartners));
+    prop.put(PartnerList.PARAM_RECENT_MULTICAST_INTERVAL,
+	     Integer.toString(multicastInterval));
     prop.put(PartnerList.PARAM_DEFAULT_LIST, defaultPartners);
     return ConfigurationUtil.fromProps(prop);
   }
@@ -100,6 +105,25 @@ public class TestPartnerList extends LockssTestCase {
     assertEquals(SetUtil.set(inet1, inet2), pl.getPartners());
     pl.removePartner(inet1);
     assertEquals(SetUtil.set(inet2), pl.getPartners());
+  }
+
+  public void testNoAddMulticastPartner() {
+    // this depends on not exceeding max partners (which is 3)
+    removeAll();
+    assertEquals(new HashSet(), pl.getPartners());
+    pl.multicastPacketReceivedFrom(inet3);
+    pl.addPartner(inet3);
+    assertEquals(Collections.EMPTY_SET, pl.getPartners());
+  }
+
+  public void testRemoveMulticastPartner() {
+    // this depends on not exceeding max partners (which is 3)
+    removeAll();
+    assertEquals(new HashSet(), pl.getPartners());
+    pl.addPartner(inet3);
+    assertEquals(SetUtil.set(inet3), pl.getPartners());
+    pl.multicastPacketReceivedFrom(inet3);
+    assertEquals(Collections.EMPTY_SET, pl.getPartners());
   }
 
   public void testAddPartner() {
@@ -141,7 +165,8 @@ public class TestPartnerList extends LockssTestCase {
   public void testAddPartnerRestoresDefault() {
     pl = new PartnerList();
     // configure with maxPartners = 0
-    pl.setConfig(getConfig(DEF_MAX_LIFE, 0, DEF_PARTNERS));
+    pl.setConfig(getConfig(DEF_MAX_LIFE, 0,
+			   DEF_MULTICAST_INTERVAL, DEF_PARTNERS));
     removeAll();
     assertEquals(new HashSet(), pl.getPartners());
     // make sure past lastPartnerRemoveTime
