@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlerImpl.java,v 1.3 2004-01-17 00:15:28 troberts Exp $
+ * $Id: TestCrawlerImpl.java,v 1.4 2004-01-28 21:08:55 troberts Exp $
  */
 
 /*
@@ -92,7 +92,7 @@ public class TestCrawlerImpl extends LockssTestCase {
     crawler =
       CrawlerImpl.makeNewContentCrawler(mau, spec, aus);
 
-    crawler.setParser(parser);
+    mau.setParser(parser);
     Properties p = new Properties();
     p.setProperty(CrawlerImpl.PARAM_RETRY_PAUSE, "0");
     ConfigurationUtil.setCurrentConfigFromProps(p);
@@ -191,64 +191,66 @@ public class TestCrawlerImpl extends LockssTestCase {
     assertEquals(0, cus.getCachedUrls().size());
   }
 
+  //XXX move to TestBaseArchivalUnit
+
   //test that we correctly parse content that has mime type
   //text/html; charset=US-ASCII
-  public void testParsesFileWithCharsetAfterContentType() {
-    String url = "http://www.example.com/link1.html";
-    Properties props = new Properties();
-    props.setProperty("content-type", "text/html; charset=US-ASCII");
+//   public void testParsesFileWithCharsetAfterContentType() {
+//     String url = "http://www.example.com/link1.html";
+//     Properties props = new Properties();
+//     props.setProperty("content-type", "text/html; charset=US-ASCII");
 
-    parser.setUrlToReturn(url);
+//     parser.setUrlToReturn(url);
 
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
-    cus.addUrl(startUrl, false, true, props);
-    cus.addUrl(url);
-    crawlRule.addUrlToCrawl(url);
+//     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+//     cus.addUrl(startUrl, false, true, props);
+//     cus.addUrl(url);
+//     crawlRule.addUrlToCrawl(url);
 
-    crawler.doCrawl(Deadline.MAX);
+//     crawler.doCrawl(Deadline.MAX);
 
-    Set expected = SetUtil.set(startUrl, url);
-    assertEquals(expected, cus.getCachedUrls());
-  }
+//     Set expected = SetUtil.set(startUrl, url);
+//     assertEquals(expected, cus.getCachedUrls());
+//   }
 
-  //test that we're not case sensitive when checking content-type
-  public void testParsesFileWithCapitilizedContentType() {
-    String url = "http://www.example.com/link1.html";
-    Properties props = new Properties();
-    props.setProperty("content-type", "TEXT/HTML");
-
-
-    parser.setUrlToReturn(url);
-
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
-    cus.addUrl(startUrl, false, true, props);
-    cus.addUrl(url);
-    crawlRule.addUrlToCrawl(url);
-
-    crawler.doCrawl(Deadline.MAX);
-
-    Set expected = SetUtil.set(startUrl, url);
-    assertEquals(expected, cus.getCachedUrls());
-  }
-
-  public void testDoesNotParseBadContentType() {
-    String url = "http://www.example.com/link1.html";
-
-    Properties props = new Properties();
-    props.setProperty("content-type", "text/xml");
+//   //test that we're not case sensitive when checking content-type
+//   public void testParsesFileWithCapitilizedContentType() {
+//     String url = "http://www.example.com/link1.html";
+//     Properties props = new Properties();
+//     props.setProperty("content-type", "TEXT/HTML");
 
 
-    parser.setUrlToReturn(url);
+//     parser.setUrlToReturn(url);
 
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
-    cus.addUrl(startUrl, false, true, props);
-    cus.addUrl(url);
+//     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+//     cus.addUrl(startUrl, false, true, props);
+//     cus.addUrl(url);
+//     crawlRule.addUrlToCrawl(url);
 
-    crawler.doCrawl(Deadline.MAX);
+//     crawler.doCrawl(Deadline.MAX);
 
-    Set expected = SetUtil.set(startUrl);
-    assertEquals(expected, cus.getCachedUrls());
-  }
+//     Set expected = SetUtil.set(startUrl, url);
+//     assertEquals(expected, cus.getCachedUrls());
+//   }
+
+//   public void testDoesNotParseBadContentType() {
+//     String url = "http://www.example.com/link1.html";
+
+//     Properties props = new Properties();
+//     props.setProperty("content-type", "text/xml");
+
+
+//     parser.setUrlToReturn(url);
+
+//     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+//     cus.addUrl(startUrl, false, true, props);
+//     cus.addUrl(url);
+
+//     crawler.doCrawl(Deadline.MAX);
+
+//     Set expected = SetUtil.set(startUrl);
+//     assertEquals(expected, cus.getCachedUrls());
+//   }
 
 
 
@@ -271,7 +273,7 @@ public class TestCrawlerImpl extends LockssTestCase {
     crawler =
       CrawlerImpl.makeNewContentCrawler(mau, spec, new MockAuState());
     
-    crawler.setParser(parser);
+    mau.setParser(parser);
 
     crawler.doCrawl(Deadline.MAX);
     Set expected = SetUtil.fromList(urls);
@@ -298,7 +300,7 @@ public class TestCrawlerImpl extends LockssTestCase {
     String url3= "http://www.example.com/dir/link3.html";
     String url4= "http://www.example.com/dir/link9.html";
 
-    crawler.setParser(parser);
+    mau.setParser(parser);
     parser.addUrlSetToReturn(startUrl, SetUtil.set(url1, url2, url3));
     parser.addUrlSetToReturn(url1, SetUtil.set(url4));
 
@@ -712,7 +714,7 @@ public class TestCrawlerImpl extends LockssTestCase {
 
     crawler =
       CrawlerImpl.makeNewContentCrawler(mau, spec, new MockAuState());
-    crawler.setParser(parser);
+    mau.setParser(parser);
     crawler.doCrawl(Deadline.MAX);
     // only gets 2 urls because start url is fetched twice (manifest & parse)
     Set expected = SetUtil.set(startUrl, url1);
