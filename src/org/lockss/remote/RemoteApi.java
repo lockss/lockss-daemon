@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.19 2004-10-11 00:56:58 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.20 2004-10-12 22:03:07 tlipkis Exp $
  */
 
 /*
@@ -251,11 +251,20 @@ public class RemoteApi extends BaseLockssDaemonManager {
   /**
    * Return the stored config info for an AU (from config file, not from
    * AU instance).
-   * @param auid the id of the AU to be deactivated
+   * @param aup the AuProxy
    * @return the AU's Configuration, with unprefixed keys.
    */
   public Configuration getStoredAuConfiguration(AuProxy aup) {
     return pluginMgr.getStoredAuConfiguration(aup.getAuId());
+  }
+
+  /**
+   * Return the current config info for an AU (from current configuration)
+   * @param aup the AuProxy
+   * @return the AU's Configuration, with unprefixed keys.
+   */
+  public Configuration getCurrentAuConfiguration(AuProxy aup) {
+    return pluginMgr.getCurrentAuConfiguration(aup.getAuId());
   }
 
   /**
@@ -481,6 +490,8 @@ public class RemoteApi extends BaseLockssDaemonManager {
 	  status.incrOk();
 	}
       } catch (ArchivalUnit.ConfigurationException e) {
+	log.warning("restoreOneAu", e);
+	log.warning("restoreOneAu: " + auid + ", " + auConfig);
 	stat.setStatus("Configuration Error");
 	stat.setExplanation(e.getMessage());
       } catch (IOException e) {

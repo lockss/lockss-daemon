@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.111 2004-10-11 05:43:56 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.112 2004-10-12 22:03:07 tlipkis Exp $
  */
 
 /*
@@ -500,7 +500,7 @@ public class PluginManager
     }
     if (oldAu != null) {
       inactiveAuIds.remove(oldAu.getAuId());
-      throw new ArchivalUnit.ConfigurationException("Cannot create that AU because it already exists");
+      throw new ArchivalUnit.ConfigurationException("Cannot create that AU because it already exists: " + oldAu.getName());
     }
     try {
       ArchivalUnit au = plugin.createAu(auConf);
@@ -754,6 +754,19 @@ public class PluginManager
     Configuration config = configMgr.readAuConfigFile();
     String prefix = PARAM_AU_TREE + "." + aukey;
     return config.getConfigTree(prefix);
+  }
+
+  /**
+   * Return the current config info for an AU (from current configuration)
+   * @param auid the AU's id.
+   * @param aup the AuProxy
+   * @return the AU's Configuration, with unprefixed keys.
+   */
+  public Configuration getCurrentAuConfiguration(String auid) {
+    String aukey = configKeyFromAuId(auid);
+    Configuration config = configMgr.readAuConfigFile();
+    String prefix = PARAM_AU_TREE + "." + aukey;
+    return ConfigManager.getCurrentConfig().getConfigTree(prefix);
   }
 
   /**
