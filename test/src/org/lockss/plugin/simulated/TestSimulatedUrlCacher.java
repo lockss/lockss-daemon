@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimulatedUrlCacher.java,v 1.4 2002-11-23 02:15:32 aalto Exp $
+ * $Id: TestSimulatedUrlCacher.java,v 1.5 2002-11-27 20:29:12 aalto Exp $
  */
 
 /*
@@ -32,10 +32,10 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.simulated;
 
-import junit.framework.TestCase;
-import org.lockss.daemon.*;
 import java.util.Properties;
 import org.lockss.test.*;
+import org.lockss.daemon.*;
+import org.lockss.repository.TestLockssRepositoryImpl;
 
 /**
  * This is the test class for org.lockss.plugin.simulated.SimulatedUrlCacher
@@ -45,9 +45,13 @@ import org.lockss.test.*;
  */
 
 
-public class TestSimulatedUrlCacher extends TestCase {
+public class TestSimulatedUrlCacher extends LockssTestCase {
   public TestSimulatedUrlCacher(String msg) {
     super(msg);
+  }
+
+  public void setUp() throws Exception {
+    TestLockssRepositoryImpl.configCacheLocation("null");
   }
 
   public void testHtmlProperties() {

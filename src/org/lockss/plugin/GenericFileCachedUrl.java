@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrl.java,v 1.8 2002-11-23 03:41:20 aalto Exp $
+ * $Id: GenericFileCachedUrl.java,v 1.9 2002-11-27 20:29:12 aalto Exp $
  */
 
 /*
@@ -76,7 +76,7 @@ public class GenericFileCachedUrl extends BaseCachedUrl {
     }
     if (leaf==null) {
       try {
-        leaf = repository.getRepositoryNode(url);
+        leaf = repository.getNode(url);
         if (leaf==null) {
           leaf = repository.createNewNode(url);
         }

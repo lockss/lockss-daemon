@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrlSet.java,v 1.8 2002-11-23 03:41:20 aalto Exp $
+ * $Id: GenericFileCachedUrlSet.java,v 1.9 2002-11-27 20:29:12 aalto Exp $
  */
 
 /*
@@ -68,7 +68,7 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
     if (nodes.size()==1) {
       String prefix = (String)nodes.get(0);
       try {
-        RepositoryNode intNode = repository.getRepositoryNode(prefix);
+        RepositoryNode intNode = repository.getNode(prefix);
         Iterator children = intNode.listNodes(spec);
         while (children.hasNext()) {
           RepositoryNode child = (RepositoryNode)children.next();
@@ -98,7 +98,7 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
     if (nodes.size()==1) {
       String prefix = (String)nodes.get(0);
       try {
-        RepositoryNode intNode = repository.getRepositoryNode(prefix);
+        RepositoryNode intNode = repository.getNode(prefix);
         Iterator children = intNode.listNodes(spec);
         while (children.hasNext()) {
           RepositoryNode child = (RepositoryNode)children.next();
