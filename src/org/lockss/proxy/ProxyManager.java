@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyManager.java,v 1.28 2004-10-27 23:53:55 tlipkis Exp $
+ * $Id: ProxyManager.java,v 1.29 2004-10-28 07:13:50 smorabito Exp $
  */
 
 /*
@@ -118,6 +118,12 @@ public class ProxyManager extends BaseProxyManager {
     PREFIX + "quickTimeout.data";
   public static final long DEFAULT_PROXY_QUICK_DATA_TIMEOUT =
     5  * Constants.MINUTE;
+
+  /** Content Re-Writing Support - GIF to PNG */
+  public static final String PARAM_REWRITE_GIF_PNG =
+    PREFIX + "contentRewrite.gifToPng";
+  public static final boolean DEFAULT_REWRITE_GIF_PNG =
+    false;
 
   private boolean lockssUserAgentImpliesRepair =
     DEFAULT_LOCKSS_USER_AGENT_IMPLIES_REPAIR;
