@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedPlugin.java,v 1.1 2003-02-27 21:56:17 tal Exp $
+ * $Id: SimulatedPlugin.java,v 1.2 2003-02-27 23:29:23 tal Exp $
  */
 
 /*
@@ -46,8 +46,15 @@ import org.lockss.test.*;
 public class SimulatedPlugin extends BasePlugin implements PluginTestable {
   static Logger log = Logger.getLogger("SimulatedPlugin");
 
-  public static final String CONFIG_PROP_1 = "base_url";
-  public static final String CONFIG_PROP_2 = "volume";
+  public static final String PARAM_ROOT = "root";
+  public static final String PARAM_DEPTH = "depth";
+  public static final String PARAM_BRANCH = "branch";
+  public static final String PARAM_NUM_FILES = "numFiles";
+  public static final String PARAM_BIN_FILE_SIZE = "binFileSize";
+  public static final String PARAM_MAXFILE_NAME = "maxFileName";
+  public static final String PARAM_FILE_TYPES = "fileTypes";
+  public static final String PARAM_BAD_FILE_LOC = "badFileLoc";
+  public static final String PARAM_BAD_FILE_NUM = "badFileNum";
 
   private String pluginId = "SimulatedPlugin";
   private int initCtr = 0;
@@ -101,7 +108,11 @@ public class SimulatedPlugin extends BasePlugin implements PluginTestable {
    * which values are needed in order to configure an AU
    */
   public List getAUConfigProperties() {
-    return ListUtil.list(CONFIG_PROP_1, CONFIG_PROP_2);
+    return ListUtil.list(PARAM_ROOT, PARAM_DEPTH,
+			 PARAM_BRANCH, PARAM_NUM_FILES,
+			 PARAM_BIN_FILE_SIZE, PARAM_MAXFILE_NAME,
+			 PARAM_FILE_TYPES, PARAM_BAD_FILE_LOC,
+			 PARAM_BAD_FILE_NUM);
   }
 
   /**
@@ -114,7 +125,8 @@ public class SimulatedPlugin extends BasePlugin implements PluginTestable {
    */
   public String getAUIdFromConfig(Configuration config) 
       throws ArchivalUnit.ConfigurationException {
-    return config.get(CONFIG_PROP_1) + "|" + config.get(CONFIG_PROP_2);
+    // tk - this should include at least the root, possibly more
+    return config.get(PARAM_ROOT);
   }
 
   /**

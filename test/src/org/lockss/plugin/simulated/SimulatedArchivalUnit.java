@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.13 2003-02-27 21:56:17 tal Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.14 2003-02-27 23:29:23 tal Exp $
  */
 
 /*
@@ -75,7 +75,39 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
     this(new SimulatedPlugin());
   }
 
-  public void setConfiguration(Configuration config) {
+  public void setConfiguration(Configuration config)
+      throws ArchivalUnit.ConfigurationException {
+    // tk - not right, generator might have been created already with
+    // different root?
+    try {
+      fileRoot = config.get(SimulatedPlugin.PARAM_ROOT);
+      SimulatedContentGenerator gen = getContentGenerator();
+      if (config.containsKey(SimulatedPlugin.PARAM_DEPTH)) {
+	gen.setTreeDepth(config.getInt(SimulatedPlugin.PARAM_DEPTH));
+      }
+      if (config.containsKey(SimulatedPlugin.PARAM_BRANCH)) {
+	gen.setNumBranches(config.getInt(SimulatedPlugin.PARAM_BRANCH));
+      }
+      if (config.containsKey(SimulatedPlugin.PARAM_NUM_FILES)) {
+	gen.setNumFilesPerBranch(config.getInt(SimulatedPlugin.PARAM_NUM_FILES));
+      }
+      if (config.containsKey(SimulatedPlugin.PARAM_BIN_FILE_SIZE)) {
+	gen.setBinaryFileSize(config.getInt(SimulatedPlugin.PARAM_BIN_FILE_SIZE));
+      }
+      if (config.containsKey(SimulatedPlugin.PARAM_MAXFILE_NAME)) {
+	gen.setMaxFilenameLength(config.getInt(SimulatedPlugin.PARAM_MAXFILE_NAME));
+      }
+      if (config.containsKey(SimulatedPlugin.PARAM_FILE_TYPES)) {
+	gen.setFileTypes(config.getInt(SimulatedPlugin.PARAM_FILE_TYPES));
+      }
+      if (config.containsKey(SimulatedPlugin.PARAM_BAD_FILE_LOC) &&
+	  config.containsKey(SimulatedPlugin.PARAM_BAD_FILE_NUM)) {
+	gen.setAbnormalFile(config.get(SimulatedPlugin.PARAM_BAD_FILE_LOC),
+			    config.getInt(SimulatedPlugin.PARAM_BAD_FILE_NUM));
+      }
+    } catch (Configuration.InvalidParam e) {
+      throw new ArchivalUnit.ConfigurationException("Bad config value", e);
+    }
   }
 
   public CachedUrlSet cachedUrlSetFactory(ArchivalUnit owner,
@@ -92,7 +124,8 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
   }
 
   public String getAUId() {
-    return auId;
+    // must agree with what SimulatedPlugin.getAUIdFromConfig() returns
+    return fileRoot;
   }
 
   // public methods
