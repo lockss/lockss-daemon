@@ -1,5 +1,5 @@
 /*
- * $Id: NewContentCrawler.java,v 1.5 2004-02-23 21:15:52 tlipkis Exp $
+ * $Id: NewContentCrawler.java,v 1.6 2004-02-24 08:02:11 tlipkis Exp $
  */
 
 /*
@@ -241,7 +241,7 @@ public class NewContentCrawler extends CrawlerImpl {
   private void cacheWithRetries(UrlCacher uc, int maxRetries,
 				boolean shouldForceCache)
       throws IOException {
-    int numRetries = 0;
+    int retriesLeft = maxRetries;
     while (true) {
       try {
 	logger.debug((shouldForceCache ? "force " : "" ) + "caching "+uc);
@@ -256,26 +256,28 @@ public class NewContentCrawler extends CrawlerImpl {
 	crawlStatus.signalUrlFetched();
 	return; //cache didn't throw
       } catch (IOException e) {
-	logger.debug("Exception when trying to cache "+uc+", retrying", e);
-	Deadline pause =
-	  Deadline.in(Configuration.getTimeIntervalParam(PARAM_RETRY_PAUSE,
-							 DEFAULT_RETRY_PAUSE));
-	while (!pause.expired()) {
-	  logger.debug3("Sleeping for "+pause);
-	  try {
-	    pause.sleep();
-	  } catch (InterruptedException ie) {
-	    // no action
+	logger.debug("Exception when trying to cache "+uc, e);
+	if (--retriesLeft > 0) {
+	  long pauseTime =
+	    Configuration.getTimeIntervalParam(PARAM_RETRY_PAUSE,
+					       DEFAULT_RETRY_PAUSE);
+	  Deadline pause = Deadline.in(pauseTime);
+	  logger.debug3("Sleeping for " +
+			StringUtil.timeIntervalToString(pauseTime));
+	  while (!pause.expired()) {
+	    try {
+	      pause.sleep();
+	    } catch (InterruptedException ie) {
+	      // no action
+	    }
 	  }
-	}
-	numRetries++;
-	if (numRetries >= maxRetries) {
-	  logger.warning("Failed to cache "+numRetries +" times.  Skipping "
+	  uc = makeUrlCacher(uc.getCachedUrlSet(), uc.getUrl());
+	} else {
+	  logger.warning("Failed to cache "+ maxRetries +" times.  Skipping "
 			 + uc);
 	  failedUrls.add(uc.getUrl());
 	  throw e;
 	}
-	uc = makeUrlCacher(uc.getCachedUrlSet(), uc.getUrl());
       }
     }
   }
