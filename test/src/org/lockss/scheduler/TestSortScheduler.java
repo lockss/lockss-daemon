@@ -1,5 +1,5 @@
 /*
- * $Id: TestSortScheduler.java,v 1.5 2004-09-21 21:25:01 dshr Exp $
+ * $Id: TestSortScheduler.java,v 1.6 2004-10-06 04:46:47 tlipkis Exp $
  */
 
 /*
@@ -166,14 +166,13 @@ public class TestSortScheduler extends LockssTestCase {
     SortScheduler sched =
       new SortScheduler(ListUtil.list(t1, t2, t3, t4, t5, t6));
     sched.initIntervals();
-    assertTrue(sched.initIntervalTaskLists());
     SortScheduler.SchedInterval intervals[] = sched.intervals;
     assertEquals(7, intervals.length);
 
     assertIntervalEquals(100, 150, intervals[0]);
     assertEquals(tdSetFromT(SetUtil.set(t4, t1)),
 		 theSet(intervals[0].competingTaskList));
-    assertEquals(EMPTY_LIST, intervals[0].endingTaskList);
+    assertNull(intervals[0].endingTaskList);
 
     assertIntervalEquals(150, 200, intervals[1]);
     assertEquals(tdSetFromT(SetUtil.set(t1, t4, t5)),
@@ -201,7 +200,7 @@ public class TestSortScheduler extends LockssTestCase {
 
     assertIntervalEquals(400, 450, intervals[5]);
     assertEquals(EMPTY_LIST, intervals[5].competingTaskList);
-    assertEquals(EMPTY_LIST, intervals[5].endingTaskList);
+    assertNull(intervals[5].endingTaskList);
 
     assertIntervalEquals(450, 500, intervals[6]);
     assertEquals(tdSetFromT(SetUtil.set(t6)),
@@ -244,7 +243,6 @@ public class TestSortScheduler extends LockssTestCase {
   public void testScheduleAll() {
     MyMockBTS1 sched = new MyMockBTS1(ListUtil.list(t1, t2, t6, t7));
     sched.initIntervals();
-    assertTrue(sched.initIntervalTaskLists());
     SortScheduler.SchedInterval intervals[] = sched.intervals;
     assertEquals(5, intervals.length);
     assertIntervalEquals(100, 150, intervals[0]);
@@ -468,10 +466,17 @@ public class TestSortScheduler extends LockssTestCase {
 				  "25");
     BackgroundTask b1 = bTask(100, 200, .5);
     BackgroundTask b2 = bTask(200, 300, .5);
-    SortScheduler sched = new SortScheduler(ListUtil.list(b1, b2));
-    assertTrue(sched.createSchedule());
+    List tasklist = ListUtil.list(b1, b2);
+    SortScheduler sched = new SortScheduler();
+    assertTrue(sched.createSchedule(tasklist));
 
     BackgroundTask b = bTask(100, 201, .7);
+    assertSame(b, sched.scheduleHint(b));
+    assertEquals(bTask(400, 501, .7), sched.scheduleHint(b));
+
+    // do it again to ensure scheduler is reusable
+    assertTrue(sched.createSchedule(tasklist));
+    b = bTask(100, 201, .7);
     assertSame(b, sched.scheduleHint(b));
     assertEquals(bTask(400, 501, .7), sched.scheduleHint(b));
   }
@@ -627,7 +632,6 @@ public class TestSortScheduler extends LockssTestCase {
     SortScheduler sched =
       new SortScheduler(ListUtil.list(h1, h2, h3, h4b, h5, h6, h7, b1));
     sched.initIntervals();
-    assertTrue(sched.initIntervalTaskLists());
     assertTrue(sched.createSchedule());
     assertEquals(sh1, sched.getSchedule().getEvents());
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: SortScheduler.java,v 1.7 2004-09-27 22:39:07 smorabito Exp $
+ * $Id: SortScheduler.java,v 1.8 2004-10-06 04:46:48 tlipkis Exp $
  */
 
 /*
@@ -46,23 +46,26 @@ public class SortScheduler implements Scheduler {
   static final String PARAM_MAX_BACKGROUND_LOAD = PREFIX + "maxBackgroundLoad";
   static final double DEFAULT_MAX_BACKGROUND_LOAD = 1.0;
 
+  // Vars that should not be reset between invocations
+  final double maxBackgroundLoad;
+
+  // Vars that should be reset between invocations
   Collection rawTasks;
-  List tasks;
+  TaskData tdarr[];
   SchedInterval intervals[];
   int nIntervals;
   List ranges = new ArrayList();
   Set unscheduledTasks;
-  double maxBackgroundLoad;
   boolean scheduleCreated;
   Deadline scheduledAt;
 
   private void resetVars() {
     rawTasks = null;
+    tdarr = null;
     intervals = null;
     nIntervals = 0;
     ranges = new ArrayList();
     unscheduledTasks = null;
-    maxBackgroundLoad = 0;
     scheduleCreated = false;
     scheduledAt = null;
   }
@@ -89,12 +92,13 @@ public class SortScheduler implements Scheduler {
    * past up to now. */
   private boolean initTasks() {
     unscheduledTasks = new HashSet(rawTasks);
-    tasks = new ArrayList(rawTasks.size());
+    tdarr = new TaskData[rawTasks.size()];
     if (scheduledAt == null) {
       // can happen during testing
       scheduledAt = Deadline.in(0);
     }
     Deadline now = scheduledAt ;
+    int tdix = 0;
     for (Iterator iter = rawTasks.iterator(); iter.hasNext(); ) {
       SchedulableTask rawTask = (SchedulableTask)iter.next();
       if (!rawTask.isProperWindow()) {
@@ -114,7 +118,7 @@ public class SortScheduler implements Scheduler {
 	log.warning("initTasks: expired task: " + td);
 	return false;
       }
-      tasks.add(td);
+      tdarr[tdix++] = td;
     }
     scheduleCreated = false;
     return true;
@@ -130,7 +134,6 @@ public class SortScheduler implements Scheduler {
       log.debug2("createSchedule: " + rawTasks.size() + " tasks");
     scheduledAt = Deadline.in(0);
     scheduleCreated = initIntervals() &&
-      initIntervalTaskLists() &&
       scheduleAll();
     return scheduleCreated;
   }
@@ -164,26 +167,80 @@ public class SortScheduler implements Scheduler {
     if (!initTasks()) {
       return false;
     }
-    if (tasks == null || tasks.isEmpty()) {
+    if (tdarr == null || tdarr.length == 0) {
       intervals = null;
       return true;
     }
-    TreeSet boundaries = new TreeSet();
-    for (Iterator iter = tasks.iterator(); iter.hasNext(); ) {
-      TaskData td = (TaskData)iter.next();
-      boundaries.add(td.getWStart());
-      boundaries.add(td.getWEnd());
+    TreeMap bdTasks = new TreeMap();
+    for (int tdix = 0, len = tdarr.length; tdix < len; tdix++) {
+      TaskData td = tdarr[tdix];
+      getBoundaryTasks(bdTasks, td.getWStart()).addStartingTask(td);
+      getBoundaryTasks(bdTasks, td.getWEnd()).addEndingTask(td);
     }
-    nIntervals = boundaries.size() - 1;
+    nIntervals = bdTasks.size() - 1;
     intervals = new SchedInterval[nIntervals];
+
+    long cumBackTime = 0;		// cumulative background time
+    Set cumBackTasks = new HashSet();
+    Set cumForeTasks = new HashSet();
     int ix = 0;
-    Iterator biter = boundaries.iterator();
-    Deadline lower = (Deadline)biter.next();
-    while (biter.hasNext()) {
-      Deadline upper = (Deadline)biter.next();
+    Iterator beIter = bdTasks.entrySet().iterator();
+    Map.Entry lentry = (Map.Entry)beIter.next();
+    Deadline lower = (Deadline)lentry.getKey();
+    BoundaryTasks lbt = (BoundaryTasks)lentry.getValue();
+    while (beIter.hasNext()) {
+      Map.Entry uentry = (Map.Entry)beIter.next();
+      Deadline upper = (Deadline)uentry.getKey();
+      BoundaryTasks ubt = (BoundaryTasks)uentry.getValue();
       SchedInterval intrvl = new SchedInterval(lower, upper);
       intervals[ix++] = intrvl;
+      if (!cumBackTasks.isEmpty()) {
+	for (Iterator iter = cumBackTasks.iterator(); iter.hasNext(); ) {
+	  TaskData btd = (TaskData)iter.next();
+	  BackgroundTask btask = (BackgroundTask)btd.task;
+	  intrvl.loadFactor -= btask.getLoadFactor();
+	  intrvl.backgroundTaskList.add(btd);
+	}
+      }
+      if (lbt.startingTasks != null) {
+	for (Iterator iter = lbt.startingTasks.iterator(); iter.hasNext(); ) {
+	  TaskData std = (TaskData)iter.next();
+	  if (std.task.isBackgroundTask()) {
+	    BackgroundTask btask = (BackgroundTask)std.task;
+	    intrvl.loadFactor -= btask.getLoadFactor();
+	    if (log.isDebug3())
+	      log.debug3("reduced " + intrvl + " by " + btask.getLoadFactor());
+	    intrvl.backgroundTaskList.add(std);
+	    cumBackTasks.add(std);
+	  } else {
+	    cumForeTasks.add(std);
+	  }
+	}
+      }
+      intrvl.competingTaskList = new ArrayList(cumForeTasks);
+      if (intrvl.loadFactor < 0.0) {
+	if (log.isDebug2())
+	  log.debug2("initIntrTskList: loadFactor < 0: " + intrvl);
+	return false;
+      }
+      
+      if (ubt.endingTasks != null) {
+	for (Iterator iter = ubt.endingTasks.iterator(); iter.hasNext(); ) {
+	  TaskData etd = (TaskData)iter.next();
+	  if (etd.task.isBackgroundTask()) {
+	    BackgroundTask btask = (BackgroundTask)etd.task;
+	    cumBackTasks.remove(etd);
+	  } else {
+	    intrvl.addEndingTask(etd);
+	    cumForeTasks.remove(etd);
+	  }
+	}
+      }
+      intrvl.cumBackTime = cumBackTime;
+      cumBackTime += intrvl.backgroundTime();
+
       lower = upper;
+      lbt = ubt;
     }
     if (log.isDebug3()) {
       log.debug3(nIntervals + " intervals: " + arrayString(intervals));
@@ -191,51 +248,32 @@ public class SortScheduler implements Scheduler {
     return true;
   }
 
-  // Assign candidate step tasks to intervals
-  // Adjust interval loadFactor to account for background tasks
-  // Reject if sum of background loadFactor > 100% in any interval
-  // XXX doesn't yet - Reject if overall background loadFactor > param
-  boolean initIntervalTaskLists() {
-    if (intervals == null || intervals.length == 0) {
-      return true;
+  BoundaryTasks getBoundaryTasks(TreeMap bdTasks, Deadline time) {
+    BoundaryTasks bt = (BoundaryTasks)bdTasks.get(time);
+    if (bt == null) {
+      bt = new BoundaryTasks();
+      bdTasks.put(time, bt);
     }
-    long cumBackTime = 0;		// cumulative background time
-    for (int xintr = 0; xintr < nIntervals; xintr++) {
-      SchedInterval intrvl = intervals[xintr];
-      // tk - could make this more efficient by first sorting the tasks by
-      // start time
-      for (Iterator iter = tasks.iterator(); iter.hasNext(); ) {
-	TaskData td = (TaskData)iter.next();
-	if (!intrvl.isDisjoint(td.getWindow())) {
-	  if (!td.getWindow().subsumes(intrvl)) {
-	    String msg = "Intersecting task " + td.task + " doesn't subsume "
-	      + intrvl;
-	    log.error(msg);
-	    throw new RuntimeException(msg);
-	  }
-	  if (td.task.isBackgroundTask()) {
-	    BackgroundTask btask = (BackgroundTask)td.task;
-	    intrvl.loadFactor -= btask.getLoadFactor();
-	    if (log.isDebug3())
-	      log.debug3("reduced " + intrvl + " by " + btask.getLoadFactor());
-	    if (intrvl.loadFactor < 0.0) {
-	      if (log.isDebug2())
-		log.debug2("initIntrTskList: loadFactor < 0: " + intrvl);
-	      return false;
-	    }
-	    intrvl.backgroundTaskList.add(td);
-	  } else {
-	    intrvl.competingTaskList.add(td);
-	    if (td.getWEnd().equals(intrvl.getEnd())) {
-	      intrvl.endingTaskList.add(td);
-	    }
-	  }
-	}
+    return bt;
+  }
+
+  static class BoundaryTasks {
+    List startingTasks;
+    List endingTasks;
+
+    void addStartingTask(TaskData td) {
+      if (startingTasks == null) {
+	startingTasks = new ArrayList();
       }
-      intrvl.cumBackTime = cumBackTime;
-      cumBackTime += intrvl.backgroundTime();
+      startingTasks.add(td);
     }
-    return true;
+
+    void addEndingTask(TaskData td) {
+      if (endingTasks == null) {
+	endingTasks = new ArrayList();
+      }
+      endingTasks.add(td);
+    }
   }
 
   boolean scheduleAll() {
@@ -453,9 +491,9 @@ public class SortScheduler implements Scheduler {
 					// time at the start of this
 					// interval, for calculating
 					// average background time
-    List competingTaskList = new ArrayList();
+    List competingTaskList;
     List backgroundTaskList = new ArrayList();
-    List endingTaskList = new ArrayList();
+    List endingTaskList;
     TaskData[] endingTasks;
     List chunks;			// scheduled chunks (result)
 
@@ -485,6 +523,13 @@ public class SortScheduler implements Scheduler {
     /** Return true if any tasks are available to run during this interval */
     boolean hasTasks() {
       return !competingTaskList.isEmpty();
+    }
+
+    void addEndingTask(TaskData td) {
+      if (endingTaskList == null) {
+	endingTaskList = new ArrayList();
+      }
+      endingTaskList.add(td);
     }
 
     /** Add Schedule.Events for all background events and chunks in this
@@ -577,11 +622,13 @@ public class SortScheduler implements Scheduler {
 	}
       }
       // if any tasks ending at this interval have unschedTaskTime, fail
-      for (int eix = 0; eix < endingTasks.length; eix++) {
-	TaskData etd = endingTasks[eix];
-	if (etd.unschedTaskTime > 0) {
-	  log.debug("No schedule found");
-	  return false;
+      if (endingTasks != null) {
+	for (int eix = 0; eix < endingTasks.length; eix++) {
+	  TaskData etd = endingTasks[eix];
+	  if (etd.unschedTaskTime > 0) {
+	    log.debug("No schedule found: " + etd);
+	    return false;
+	  }
 	}
       }
       return true;
@@ -631,18 +678,20 @@ public class SortScheduler implements Scheduler {
       for (int ix = first; ix <= last; ix++) {
 	SchedInterval intrvl = intervals[ix];
 	taskset.addAll(intrvl.competingTaskList);
-	intrvl.endingTasks =
-	  (TaskData[])intrvl.endingTaskList.toArray(EMPTY_TASKDATA_ARRAY);
+	if (intrvl.endingTaskList != null) {
+	  intrvl.endingTasks =
+	    (TaskData[])intrvl.endingTaskList.toArray(EMPTY_TASKDATA_ARRAY);
+	}
       }
       ntasks = taskset.size();
-      log.debug(ntasks + " tasks");
+      log.debug2(ntasks + " tasks");
       tasks = (TaskData[])taskset.toArray(EMPTY_TASKDATA_ARRAY);
       Arrays.sort(tasks, TaskData.endTimeComparator());
       if (log.isDebug3()) log.debug3("tasks: " + arrayString(tasks));
     }
 
     boolean scheduleIntervalRange() {
-      log.debug("sched " + first + " - " + last + " of " + intervals.length +
+      log.debug2("sched " + first + " - " + last + " of " + intervals.length +
 		" intervals");
       initIntervalTasks();
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TaskRunner.java,v 1.29 2004-10-02 01:16:44 tlipkis Exp $
+ * $Id: TaskRunner.java,v 1.30 2004-10-06 04:46:48 tlipkis Exp $
  */
 
 /*
@@ -177,10 +177,10 @@ class TaskRunner {
   boolean scheduleTask(SchedulableTask task) {
     if (addToSchedule(task)) {
       pokeStepThread();
-      log.debug("Scheduled task: " + task);
+      if (log.isDebug()) log.debug("Scheduled task: " + task);
       return true;
     } else {
-      log.debug2("Can't schedule task: " + task);
+      if (log.isDebug2()) log.debug2("Can't schedule task: " + task);
       incrStats(task, STAT_REFUSED);
       return false;
     }
@@ -207,8 +207,10 @@ class TaskRunner {
   public synchronized boolean isTaskSchedulable(SchedulableTask task) {
     Scheduler scheduler = schedulerFactory.createScheduler();
     boolean res = canAddToSchedule(scheduler, task, false);
-    log.debug2((res ? "Task is schedulable: " : "Task is not schedulable: ")
-	       + task);
+    if (log.isDebug2()) {
+      log.debug2((res ? "Task is schedulable: " : "Task is not schedulable: ")
+		 + task);
+    }
     return res;
   }
 
@@ -395,10 +397,12 @@ class TaskRunner {
   synchronized void backgroundTaskIsFinished(BackgroundTask task) {
     if (task.isFinished()) {
       // ignore if task already finished/finishing
-      log.debug3("Background task finished redundantly: " + task);
+      if (log.isDebug3()) {
+	log.debug3("Background task finished redundantly: " + task);
+      }
       return;
     }
-    log.debug2("Background task finished early: " + task);
+    if (log.isDebug2()) log.debug2("Background task finished early: " + task);
     Schedule.BackgroundEvent event = 
       new Schedule.BackgroundEvent(task, Deadline.in(0),
 				   Schedule.EventType.FINISH);
@@ -727,7 +731,7 @@ class TaskRunner {
     } else {
       // This is expected if schedule is recomputed while background task is
       // running
-      log.debug("Already active background task: " + task);
+      if (log.isDebug()) log.debug("Already active background task: " + task);
       return false;
     }
   }
