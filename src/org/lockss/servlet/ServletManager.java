@@ -1,5 +1,5 @@
 /*
- * $Id: ServletManager.java,v 1.25 2003-07-21 08:36:07 tlipkis Exp $
+ * $Id: ServletManager.java,v 1.25.2.1 2003-08-06 19:23:02 tlipkis Exp $
  */
 
 /*
@@ -226,8 +226,8 @@ public class ServletManager extends JettyManager {
     // Request dump servlet
     handler.addServlet("Dump", "/Dump", "org.mortbay.servlet.Dump");
     // Daemon status servlet
-    handler.addServlet("JournalConfig", "/AuConfig",
-		       "org.lockss.servlet.AuConfig");
+//     handler.addServlet("JournalConfig", "/AuConfig",
+// 		       "org.lockss.servlet.AuConfig");
     handler.addServlet("DaemonStatus", "/DaemonStatus",
 		       "org.lockss.servlet.DaemonStatus");
     handler.addServlet("AdminIpAccess", "/AdminIpAccess",

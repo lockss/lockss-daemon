@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.26 2003-08-04 07:58:22 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.26.2.1 2003-08-06 19:23:02 tlipkis Exp $
  */
 
 /*
@@ -200,7 +200,7 @@ public abstract class LockssServlet extends HttpServlet
   // All servlets must be listed here (even if not in van table).
   // Order of descrs determines order in nav table.
   static ServletDescr servletDescrs[] = {
-     SERVLET_AU_CONFIG,
+//      SERVLET_AU_CONFIG,
      SERVLET_ADMIN_ACCESS_CONTROL,
      SERVLET_PROXY_ACCESS_CONTROL,
      SERVLET_PROXY_INFO,
