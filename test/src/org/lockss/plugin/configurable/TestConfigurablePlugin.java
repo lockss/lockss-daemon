@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigurablePlugin.java,v 1.2 2004-01-14 06:57:48 clairegriffin Exp $
+ * $Id: TestConfigurablePlugin.java,v 1.3 2004-01-14 23:48:56 clairegriffin Exp $
  */
 
 /*
@@ -101,7 +101,7 @@ public class TestConfigurablePlugin extends LockssTestCase {
 
   public void testGetPluginName() {
     // no name set
-    String expectedReturn = "UNCONFIGURED";
+    String expectedReturn = "ConfigurablePlugin";
     String actualReturn = configurablePlugin.getPluginName();
     assertEquals("return value", expectedReturn, actualReturn);
 
@@ -129,17 +129,49 @@ public class TestConfigurablePlugin extends LockssTestCase {
 
   }
 
+  public void testGetPluginId() {
+    LockssDaemon daemon = getMockLockssDaemon();
+    String extMapName = null;
+    try {
+      configurablePlugin.initPlugin(daemon, extMapName);
+      assertNull(configurablePlugin.mapName);
+    }
+    catch (NullPointerException npe) {
+    }
+    assertEquals("org.lockss.plugin.configurable.ConfigurablePlugin",
+                 configurablePlugin.getPluginId());
+
+    extMapName = "org.lockss.plugin.absinthe.AbsinthePlugin";
+    configurablePlugin.initPlugin(daemon, extMapName);
+    assertEquals("org.lockss.plugin.absinthe.AbsinthePlugin",
+                 configurablePlugin.getPluginId());
+  }
+
   public void testInitPlugin() {
     LockssDaemon daemon = getMockLockssDaemon();
-    String extMapName = "";
-    configurablePlugin.initPlugin(daemon, extMapName);
-    assertEquals("UNCONFIGURED", configurablePlugin.getPluginName());
+    String extMapName = null;
+    try {
+      configurablePlugin.initPlugin(daemon, extMapName);
+      assertNull(configurablePlugin.mapName);
+    }
+    catch (NullPointerException npe) {
+    }
+    assertEquals("ConfigurablePlugin", configurablePlugin.getPluginName());
 
-    extMapName = "src/org/lockss/plugin/configurable/AbsinthePlugin.xml";
+    extMapName = "org.lockss.plugin.absinthe.AbsinthePlugin";
     configurablePlugin.initPlugin(daemon, extMapName);
     assertEquals("Absinthe Literary Review",
                  configurablePlugin.getPluginName());
     assertEquals("Pre-release", configurablePlugin.getVersion());
+
+    // check some other field
+    StringBuffer sb = new StringBuffer("%sarchives%02d.htm\n");
+    sb.append(ConfigParamDescr.BASE_URL.getKey());
+    sb.append("\n");
+    sb.append(ConfigParamDescr.YEAR.getKey());
+    ExternalizableMap map = configurablePlugin.getConfigurationMap();
+    assertEquals(sb.toString(),
+                 map.getString(ConfigurableArchivalUnit.CM_AU_START_URL_KEY, null));
 
   }
 

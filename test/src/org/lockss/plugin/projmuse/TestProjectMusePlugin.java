@@ -1,5 +1,5 @@
 /*
- * $Id: TestProjectMusePlugin.java,v 1.6 2004-01-03 06:29:33 tlipkis Exp $
+ * $Id: TestProjectMusePlugin.java,v 1.7 2004-01-14 23:48:56 clairegriffin Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import org.lockss.test.*;
 import org.lockss.daemon.*;
 import org.lockss.util.ListUtil;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.ArchivalUnit.*;
 
 public class TestProjectMusePlugin extends LockssTestCase {
   private ProjectMusePlugin plugin;
@@ -53,6 +54,20 @@ public class TestProjectMusePlugin extends LockssTestCase {
       plugin.configureAu(null, null);
       fail("Didn't throw ArchivalUnit.ConfigurationException");
     } catch (ArchivalUnit.ConfigurationException e) { }
+  }
+  public void testCreateAu() {
+    Properties props = new Properties();
+    props.setProperty(ProjectMusePlugin.AUPARAM_BASE_URL, "http://www.example.com/");
+    props.setProperty(ProjectMusePlugin.AUPARAM_JOURNAL_DIR, "blah2");
+    props.setProperty(ProjectMusePlugin.AUPARAM_VOL, "322");
+
+    ProjectMuseArchivalUnit au = null;
+    try {
+      au = makeAuFromProps(props);
+    }
+    catch (ConfigurationException ex) {
+    }
+
   }
 
   private ProjectMuseArchivalUnit makeAuFromProps(Properties props)

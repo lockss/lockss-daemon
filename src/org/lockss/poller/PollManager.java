@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.121 2004-01-14 05:24:30 tlipkis Exp $
+* $Id: PollManager.java,v 1.122 2004-01-14 23:48:56 clairegriffin Exp $
  */
 
 /*
@@ -181,6 +181,7 @@ public class PollManager  extends BaseLockssManager {
       ArchivalUnit pau = pme.poll.m_cus.getArchivalUnit();
       if (pau == au) {
         if (!pme.isPollCompleted()) {
+          theHashService.cancelAuHashes(pau);
           pme.poll.stopPoll();
         }
       }

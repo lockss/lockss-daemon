@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurablePlugin.java,v 1.3 2004-01-14 06:57:48 clairegriffin Exp $
+ * $Id: ConfigurablePlugin.java,v 1.4 2004-01-14 23:48:55 clairegriffin Exp $
  */
 
 /*
@@ -53,24 +53,25 @@ public class ConfigurablePlugin extends BasePlugin {
   static final protected String CM_DEFINING_CONFIG_PROPS_KEY =
       "plugin_defining_props";
 
+  String mapName = null;
+
   static Logger log = Logger.getLogger("ConfigurablePlugin");
 
   protected ExternalizableMap configurationMap = new ExternalizableMap();
 
   public void initPlugin(LockssDaemon daemon, String extMapName){
-    // load the configuration map from disk
-    if(extMapName != null) {
-      configurationMap.loadMap(null, extMapName);
-    }
-    else {
-      log.warning("Attempt to create configurable plugin without map.");
-    }
-    // then call the overridden initializaton.
+    mapName = extMapName;
+    // load the configuration map from jar file
+    String mapFile = "/" + mapName.replace('.','/') + ".xml";
+    configurationMap.loadMapFromResource(mapFile);
+
+   // then call the overridden initializaton.
     super.initPlugin(daemon);
   }
 
   public String getPluginName() {
-    return configurationMap.getString(CM_NAME_KEY, "UNCONFIGURED");
+    String default_name = StringUtil.shortName(getPluginId());
+    return configurationMap.getString(CM_NAME_KEY, default_name);
   }
 
   public String getVersion() {
@@ -96,5 +97,16 @@ public class ConfigurablePlugin extends BasePlugin {
 
   protected ExternalizableMap getConfigurationMap() {
     return configurationMap;
+  }
+
+  public String getPluginId() {
+    String class_name;
+    if(mapName != null) {
+      class_name = mapName;
+    }
+    else {
+      class_name = this.getClass().getName();
+    }
+    return class_name;
   }
 }

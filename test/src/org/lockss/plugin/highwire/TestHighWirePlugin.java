@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWirePlugin.java,v 1.15 2004-01-03 06:29:34 tlipkis Exp $
+ * $Id: TestHighWirePlugin.java,v 1.16 2004-01-14 23:48:56 clairegriffin Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
 import org.lockss.daemon.*;
+import org.lockss.plugin.ArchivalUnit.*;
 
 public class TestHighWirePlugin extends LockssTestCase {
   private static final String AUPARAM_BASE_URL = HighWirePlugin.AUPARAM_BASE_URL;
@@ -61,6 +62,19 @@ public class TestHighWirePlugin extends LockssTestCase {
       fail("Didn't throw ArchivalUnit.ConfigurationException");
     } catch (ArchivalUnit.ConfigurationException e) {
     }
+  }
+  public void testCreateAu() {
+    Properties props = new Properties();
+    props.setProperty(HighWirePlugin.AUPARAM_BASE_URL, "http://www.example.com/");
+    props.setProperty(HighWirePlugin.AUPARAM_VOL, "32");
+
+    HighWireArchivalUnit au = null;
+    try {
+      au = makeAuFromProps(props);
+    }
+    catch (ConfigurationException ex) {
+    }
+
   }
 
   private HighWireArchivalUnit makeAuFromProps(Properties props)

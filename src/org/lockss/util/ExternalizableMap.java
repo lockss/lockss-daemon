@@ -1,5 +1,5 @@
 /*
- * $Id: ExternalizableMap.java,v 1.2 2003-11-19 23:51:10 eaalto Exp $
+ * $Id: ExternalizableMap.java,v 1.3 2004-01-14 23:48:56 clairegriffin Exp $
  */
 
 /*
@@ -64,6 +64,33 @@ public class ExternalizableMap {
   public void setMapElement(String descrKey, Object descrElement) {
     synchronized(descrMap) {
       descrMap.put(descrKey, descrElement);
+    }
+  }
+
+  public void loadMapFromResource(String mapLocation) {
+
+    try {
+      InputStream mapStream = getClass().getResourceAsStream(mapLocation);
+      if (mapStream == null) {
+        descrMap = new HashMap();
+        return;
+      }
+      Reader reader = new BufferedReader(new InputStreamReader(mapStream));
+      Unmarshaller unmarshaller = new Unmarshaller(ExtMapBean.class);
+      unmarshaller.setMapping(getMapping());
+      ExtMapBean emp = (ExtMapBean) unmarshaller.unmarshal(reader);
+      descrMap = emp.getMapFromLists();
+      reader.close();
+    }
+    catch (org.exolab.castor.xml.MarshalException me) {
+      // we have a damaged file
+      logger.error(me.toString());
+      descrMap = new HashMap();
+    }
+    catch (Exception e) {
+      // some other error occured
+      logger.error(e.toString());
+      descrMap = new HashMap();
     }
   }
 

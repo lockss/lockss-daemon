@@ -1,5 +1,5 @@
 /*
- * $Id: TestAbsinthePlugin.java,v 1.2 2004-01-03 06:29:34 tlipkis Exp $
+ * $Id: TestAbsinthePlugin.java,v 1.3 2004-01-14 23:48:56 clairegriffin Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import org.lockss.test.*;
 import org.lockss.daemon.*;
 import org.lockss.util.ListUtil;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.ArchivalUnit.*;
 
 public class TestAbsinthePlugin extends LockssTestCase {
   private AbsinthePlugin plugin;
@@ -48,6 +49,19 @@ public class TestAbsinthePlugin extends LockssTestCase {
     plugin.initPlugin(getMockLockssDaemon());
   }
 
+  public void testCreateAu() {
+    Properties props = new Properties();
+    props.setProperty(AbsinthePlugin.AUPARAM_BASE_URL, "http://www.example.com/");
+    props.setProperty(AbsinthePlugin.AUPARAM_YEAR, "2003");
+
+    AbsintheArchivalUnit au = null;
+    try {
+      au = makeAuFromProps(props);
+    }
+    catch (ConfigurationException ex) {
+    }
+
+  }
   public void testGetAuNullConfig() throws ArchivalUnit.ConfigurationException {
     try {
       plugin.configureAu(null, null);
