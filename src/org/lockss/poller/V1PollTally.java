@@ -1,5 +1,5 @@
 /*
- * $Id: V1PollTally.java,v 1.14 2004-10-20 18:32:22 tlipkis Exp $
+ * $Id: V1PollTally.java,v 1.15 2004-10-21 22:51:57 clairegriffin Exp $
  */
 
 /*
@@ -36,8 +36,7 @@ import java.security.*;
 import java.util.*;
 
 import org.lockss.alert.*;
-import org.lockss.config.Configuration;
-import org.lockss.daemon.*;
+import org.lockss.config.*;
 import org.lockss.hasher.*;
 import org.lockss.plugin.*;
 import org.lockss.protocol.*;
@@ -197,11 +196,9 @@ public class V1PollTally extends PollTally {
 		" status " + result);
     if((type == Poll.NAME_POLL) && (result != RESULT_WON)) {
       log.debug2("lost a name poll, building poll list");
-      ((V1NamePoll)poll).m_entries = null;
       ((V1NamePoll)poll).buildPollLists(pollVotes.iterator());
-      log.debug3("V1PollTally.tallyVotes() 5");
     }
-    log.debug3("V1PollTally.tallyVotes() 6");
+    log.debug3("completed tally.");
   }
 
   void verifyTally() {
@@ -333,6 +330,9 @@ public class V1PollTally extends PollTally {
     numDisagree = 0;
     wtAgree = 0;
     wtDisagree = 0;
+    if(poll instanceof V1NamePoll) {
+      ((V1NamePoll)poll).clearEntryList();
+    }
     replayNextVote();
   }
 
@@ -360,7 +360,6 @@ public class V1PollTally extends PollTally {
 void replayVoteCheck(Vote vote, Deadline deadline) {
   MessageDigest hasher = poll.getInitedHasher(vote.getChallenge(),
                                               vote.getVerifier());
-  Vote newVote;
 
   if (!poll.scheduleHash(hasher, deadline, poll.copyVote(vote, vote.agree),
                          new ReplayVoteCallback())) {
@@ -417,7 +416,7 @@ class ReplayVoteCallback implements HashService.Callback {
 			      MessageDigest hasher,
 			      Exception e) {
     boolean hash_completed = e == null ? true : false;
-    
+
     if (hash_completed) {
       Vote v = (Vote) cookie;
       PeerIdentity id = v.getVoterIdentity();

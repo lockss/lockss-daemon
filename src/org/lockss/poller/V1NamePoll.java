@@ -1,5 +1,5 @@
 /*
- * $Id: V1NamePoll.java,v 1.11 2004-10-05 20:11:27 dshr Exp $
+ * $Id: V1NamePoll.java,v 1.12 2004-10-21 22:51:57 clairegriffin Exp $
  */
 
 /*
@@ -141,27 +141,37 @@ public class V1NamePoll extends V1Poll {
     }
   }
 
+  void clearEntryList() {
+    m_entries = null;
+  }
+
+  ArrayList generateEntries() {
+    Iterator it = m_cus.flatSetIterator();
+    ArrayList alist = new ArrayList();
+    CachedUrlSetSpec spec = m_cus.getSpec();
+    String baseUrl = spec.getUrl();
+    log.debug2("getting a list of entries for spec " + m_cus.getSpec());
+    while (it.hasNext()) {
+      CachedUrlSetNode cusn = (CachedUrlSetNode) it.next();
+      String name = cusn.getUrl();
+      if (spec.matches(name)) {
+        boolean hasContent = cusn.hasContent();
+        if (name.startsWith(baseUrl)) {
+          name = name.substring(baseUrl.length());
+        }
+        log.debug3("adding file name " + name + " - hasContent=" + hasContent);
+        alist.add(new PollTally.NameListEntry(hasContent, name));
+      }
+    }
+    m_entries = alist;
+    return m_entries;
+  }
 
   ArrayList getEntries() {
     if (m_entries == null) {
-      Iterator it = m_cus.flatSetIterator();
-      ArrayList alist = new ArrayList();
-      String baseUrl = m_cus.getSpec().getUrl();
-      log.debug2("getting a list of entries for base url " + baseUrl);
-      while(it.hasNext()) {
-        CachedUrlSetNode cusn = (CachedUrlSetNode)it.next();
-        String name = cusn.getUrl();
-        boolean hasContent = cusn.hasContent();
-        if(name.startsWith(baseUrl)) {
-          name = name.substring(baseUrl.length());
-        }
-
-        log.debug3("adding file name "+ name +" - hasContent=" + hasContent);
-        alist.add(new PollTally.NameListEntry(hasContent, name));
-      }
-      m_entries = alist;
+      generateEntries();
     }
-    log.debug2("successfully added " + m_entries.size() + " items to list");
+    log.debug2("found " + m_entries.size() + " items in list");
     return m_entries;
   }
 
@@ -208,47 +218,59 @@ public class V1NamePoll extends V1Poll {
   }
 
   void buildPollLists(Iterator voteIter) {
-    log.debug3("buildPollLists");
     NameVote winningVote = findWinningVote(voteIter);
-    log.debug("found winning vote: " + winningVote);
     if (winningVote != null) {
-      log.debug3("buildPollLists 2");
+      log.debug("found winning vote: " + winningVote);
       m_tally.votedEntries = winningVote.getKnownEntries();
+      if(log.isDebug3()) {
+      	for(int i=0; i< m_tally.votedEntries.size(); i++) {
+      	  log.debug3("winning entry " + i + ": " + m_tally.votedEntries.get(i));
+      	}
+      }
       String lwrRem = winningVote.getLwrRemaining();
       String uprRem = winningVote.getUprRemaining();
-      log.debug3("buildPollLists 2");
+      log.debug3("remainder lwr : "+ lwrRem + " upr: " + uprRem);
       if (lwrRem != null) {
-        // we call a new poll on the remaining entries and set the regexp
-	PollSpec spec = new PollSpec(m_pollspec.getCachedUrlSet(),
-				     lwrRem, uprRem,
-				     Poll.NAME_POLL,
-				     Poll.V1_POLL);
-	if (!m_pollmanager.callPoll(spec)) {
-          log.error("unable to call name poll for " + spec);
-        }
-	log.debug3("buildPollLists 3");
+        callNameSubPoll(m_cus, lwrRem, uprRem);
         // we make our list from whatever is in our
         // master list that doesn't match the remainder;
         ArrayList localSet = new ArrayList();
         Iterator localIt = getEntries().iterator();
-	log.debug3("buildPollLists 4");
+        log.debug3("finding local entries which are below our lwr remainder:" +lwrRem);
         while (localIt.hasNext()) {
-	  log.debug3("buildPollLists 5");
           PollTally.NameListEntry entry = (PollTally.NameListEntry) localIt.next();
           String url = entry.name;
           if((lwrRem != null) && url.compareTo(lwrRem) < 0) {
-            localSet.add(entry);
-          }
-          else if((uprRem != null) && url.compareTo(uprRem) > 0) {
+            log.debug3("adding local entry " + entry);
             localSet.add(entry);
           }
         }
         m_tally.localEntries = localSet;
       } else {
+        log.debug3("No entries remain to be sent, return all entries for spec: "
+                   + m_cus.getSpec());
         m_tally.localEntries = getEntries();
       }
     }
   }
+
+  /**
+   * Calls a name poll poll with the lower and upper bounds set.
+   * @param cus CachedUrlSet
+   * @param lwr lower bound
+   * @param upr upper bound
+   */
+  private void callNameSubPoll(CachedUrlSet cus, String lwr, String upr) {
+    String base = cus.getUrl();
+    ArchivalUnit au = cus.getArchivalUnit();
+    CachedUrlSet newCus = au.makeCachedUrlSet(new RangeCachedUrlSetSpec(base, lwr, upr));
+    PollSpec spec = new PollSpec(newCus, lwr, upr, Poll.NAME_POLL, Poll.V1_POLL);
+    log.debug3("calling new name poll on: " + spec);
+    if (!m_pollmanager.callPoll(spec)) {
+      log.error("unable to call name poll for " + spec);
+    }
+  }
+
 
   /**
    * make a NameVote.  NB - used only by TestPoll

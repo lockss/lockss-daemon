@@ -1,5 +1,5 @@
 /*
-* $Id: V1ContentPoll.java,v 1.6 2004-10-02 13:08:24 dshr Exp $
+* $Id: V1ContentPoll.java,v 1.7 2004-10-21 22:51:57 clairegriffin Exp $
  */
 
 /*
@@ -32,17 +32,11 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.poller;
 
-import java.io.*;
 import java.security.*;
-import java.util.*;
 
-
-import org.lockss.daemon.*;
 import org.lockss.hasher.*;
 import org.lockss.protocol.*;
 import org.lockss.util.*;
-import org.mortbay.util.B64Code;
-import org.lockss.plugin.*;
 
 /**
  * class which represents a version one content poll

@@ -1,5 +1,5 @@
 /*
- * $Id: PollTally.java,v 1.28 2004-09-22 23:50:20 clairegriffin Exp $
+ * $Id: PollTally.java,v 1.29 2004-10-21 22:51:57 clairegriffin Exp $
  */
 
 /*
@@ -263,6 +263,16 @@ public abstract class PollTally implements Tallier{
     public NameListEntry(boolean hasContent, String name) {
       this.hasContent = hasContent;
       this.name = name;
+    }
+
+    public String toString() {
+      StringBuffer sb = new StringBuffer();
+      sb.append("[NameListEntry:");
+      sb.append(name);
+      sb.append(" - ");
+      sb.append(hasContent ? "has content" : "no content");
+      sb.append("]");
+      return sb.toString();
     }
 
     /**

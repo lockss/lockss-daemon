@@ -1,5 +1,5 @@
 /*
- * $Id: RangeCachedUrlSetSpec.java,v 1.17 2004-01-31 22:53:50 tlipkis Exp $
+ * $Id: RangeCachedUrlSetSpec.java,v 1.18 2004-10-21 22:51:56 clairegriffin Exp $
  */
 
 /*
@@ -214,7 +214,7 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
   }
 
   public String toString() {
-    StringBuffer sb = new StringBuffer("[CUSS: ");
+    StringBuffer sb = new StringBuffer("[RangedCUSS: ");
     sb.append(prefix);
 
     if (lowerBound != null || upperBound != null) {

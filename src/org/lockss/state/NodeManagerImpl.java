@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.193 2004-10-18 03:40:31 tlipkis Exp $
+ * $Id: NodeManagerImpl.java,v 1.194 2004-10-21 22:51:57 clairegriffin Exp $
  */
 
 /*
@@ -387,8 +387,11 @@ public class NodeManagerImpl
 
     CachedUrlSetSpec spec = results.getCachedUrlSet().getSpec();
     // determine if ranged, as those don't update as much
-    boolean isRangedPoll = spec.isRangeRestricted();
 
+    boolean isRangedPoll = spec.isRangeRestricted();
+    if(isRangedPoll) {
+      logger.debug3("range poll- ignoring state flags: " + spec);
+    }
     // log if current state is invalid for finishing poll
     if (!isRangedPoll) {
       if (!checkValidStatesForResults(pollState, nodeState,spec)) {
@@ -1577,7 +1580,6 @@ public class NodeManagerImpl
       upr = upr.startsWith(base) ? upr.substring(base.length()) : upr;
     }
     ArchivalUnit au = cus.getArchivalUnit();
-    Plugin plugin = au.getPlugin();
     CachedUrlSet newCus =
       au.makeCachedUrlSet(new RangeCachedUrlSetSpec(base, lwr, upr));
     PollSpec spec = new PollSpec(newCus, lwr, upr, Poll.CONTENT_POLL);
@@ -1591,7 +1593,6 @@ public class NodeManagerImpl
   private void callSingleNodeContentPoll(CachedUrlSet cus) {
     // create a 'single node' CachedUrlSet
     ArchivalUnit au = cus.getArchivalUnit();
-    Plugin plugin = au.getPlugin();
     CachedUrlSet newCus =
       au.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(cus.getUrl()));
     PollSpec spec = new PollSpec(newCus, Poll.CONTENT_POLL);
@@ -1676,7 +1677,6 @@ public class NodeManagerImpl
             break;
           case CachedUrlSetNode.TYPE_CACHED_URL:
             CachedUrlSetSpec rSpec = new RangeCachedUrlSetSpec(child.getUrl());
-	    Plugin plugin = managedAu.getPlugin();
             cus = managedAu.makeCachedUrlSet(rSpec);
         }
         childList.add(cus);

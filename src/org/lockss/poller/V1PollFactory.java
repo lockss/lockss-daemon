@@ -1,5 +1,5 @@
 /*
- * $Id: V1PollFactory.java,v 1.11 2004-10-11 05:43:49 tlipkis Exp $
+ * $Id: V1PollFactory.java,v 1.12 2004-10-21 22:51:57 clairegriffin Exp $
  */
 
 /*
@@ -117,7 +117,7 @@ public class V1PollFactory implements PollFactory {
     }
     return ret;
   }
- 
+
   /**
    * cause a V1 poll by sending a request packet.
    * @param pollspec the <code>PollSpec</code> used to define the range,
@@ -154,7 +154,7 @@ public class V1PollFactory implements PollFactory {
       return;
     }
     byte[] challenge = ((V1Poll)poll).getChallenge();
-    byte[] verifier = ((V1Poll)poll).getVerifier();
+    byte[] verifier = pm.makeVerifier(duration);
     LcapMessage msg =
       LcapMessage.makeRequestMsg(pollspec,
                                  null,
@@ -175,7 +175,7 @@ public class V1PollFactory implements PollFactory {
                    " for spec " + pollspec + "- conflicts with existing poll.");
     }
   }
-  
+
   /**
    * createPoll is invoked when an incoming message requires a new
    * Poll to be created.
