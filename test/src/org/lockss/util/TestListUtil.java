@@ -1,5 +1,5 @@
 /*
- * $Id: TestListUtil.java,v 1.6 2003-07-23 06:41:16 tlipkis Exp $
+ * $Id: TestListUtil.java,v 1.6.30.1 2004-11-16 01:51:05 tlipkis Exp $
  */
 
 /*
@@ -64,6 +64,40 @@ public class TestListUtil extends LockssTestCase {
     String csv = "1,2,4";
     String arr[] = {"1", "2", "4"};
     assertIsomorphic(arr, ListUtil.fromCSV(csv));
+  }
+
+  LinkedList lList(List lst) {
+    return new LinkedList(lst);
+  }
+
+  public void testPrependAll() {
+    assertEquals(Collections.EMPTY_LIST,
+		 ListUtil.prependAll(null, (LinkedList)null));
+    assertEquals(ListUtil.list("1"),
+		 ListUtil.prependAll(ListUtil.list("1"), (LinkedList)null));
+    assertEquals(ListUtil.list("1"),
+		 ListUtil.prependAll(null, lList(ListUtil.list("1"))));
+    assertEquals(Collections.EMPTY_LIST,
+		 ListUtil.prependAll(Collections.EMPTY_LIST,
+				     lList(Collections.EMPTY_LIST)));
+    assertEquals(ListUtil.list("1"),
+		 ListUtil.prependAll(ListUtil.list("1"),
+				     lList(Collections.EMPTY_LIST)));
+    assertEquals(ListUtil.list("1"),
+		 ListUtil.prependAll(Collections.EMPTY_LIST,
+				     lList(ListUtil.list("1"))));
+    assertEquals(ListUtil.list("1", "2", "3"),
+		 ListUtil.prependAll(Collections.EMPTY_LIST,
+				     lList(ListUtil.list("1", "2", "3"))));
+    assertEquals(ListUtil.list("1", "2", "3"),
+		 ListUtil.prependAll(ListUtil.list("1", "2", "3"),
+				     lList(Collections.EMPTY_LIST)));
+    assertEquals(ListUtil.list("1", "2", "3"),
+		 ListUtil.prependAll(ListUtil.list("1"),
+				     lList(ListUtil.list("2", "3"))));
+    assertEquals(ListUtil.list("1", "2", "3"),
+		 ListUtil.prependAll(ListUtil.list("1", "2"),
+				     lList(ListUtil.list("3"))));
   }
 
   public void testImmutableListOfType() {
