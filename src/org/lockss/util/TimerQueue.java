@@ -1,5 +1,5 @@
 /*
- * $Id: TimerQueue.java,v 1.20 2004-07-27 23:26:41 tlipkis Exp $
+ * $Id: TimerQueue.java,v 1.21 2004-09-19 01:29:56 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -31,12 +31,14 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 import java.io.*;
 import java.util.*;
+import org.lockss.app.*;
 import org.lockss.daemon.*;
+import org.lockss.daemon.status.*;
 
 /** TimerQueue implements a queue of actions to be performed at a specific
  * time.
  */
-public class TimerQueue /*extends BaseLockssManager*/ implements Serializable {
+public class TimerQueue {
   static final String PRIORITY_PARAM_TIMERQUEUE = "TimerQueue";
   static final int PRIORITY_DEFAULT_TIMERQUEUE = Thread.NORM_PRIORITY + 1;
 
@@ -253,6 +255,90 @@ public class TimerQueue /*extends BaseLockssManager*/ implements Serializable {
       this.interrupt();
     }
   }
+
+  // status table
+
+  private static final List statusSortRules =
+    ListUtil.list(new StatusTable.SortRule("Time", true));
+
+  static final String FOOT_IN = "Order in which requests were made.";
+
+  static final String FOOT_OVER = "Red indicates overrun.";
+
+  static final String FOOT_TITLE =
+    "Pending requests are first in table, in the order they will be executed."+
+    "  Completed requests follow, in reverse completion order " +
+    "(most recent first).";
+
+  private static final List statusColDescs =
+    ListUtil.list(
+		  new ColumnDescriptor("Time", "Time",
+				       ColumnDescriptor.TYPE_DATE),
+		  new ColumnDescriptor("In", "In",
+				       ColumnDescriptor.TYPE_STRING),
+		  new ColumnDescriptor("Callback", "Callback",
+				       ColumnDescriptor.TYPE_STRING),
+		  new ColumnDescriptor("Cookie", "Cookie",
+				       ColumnDescriptor.TYPE_STRING)
+		  );
+
+  private static class Status implements StatusAccessor {
+    private TimerQueue timerQ;
+
+    Status(TimerQueue tq) {
+      this.timerQ = tq;
+    }
+
+    public String getDisplayName() {
+      return "Timer Queue";
+    }
+
+    public void populateTable(StatusTable table) {
+      if (!table.getOptions().get(StatusTable.OPTION_NO_ROWS)) {
+	table.setColumnDescriptors(statusColDescs);
+	table.setDefaultSortRules(statusSortRules);
+	table.setRows(getRows());
+      }
+      table.setSummaryInfo(getSummaryInfo());
+    }
+
+    public boolean requiresKey() {
+      return false;
+    }
+
+    private List getRows() {
+      List q = timerQ.queue.copyAsList();
+      List table = new ArrayList(q.size());
+      int ix = 0;
+      for (Iterator iter = q.iterator(); iter.hasNext();) {
+	table.add(makeRow((Request)iter.next()));
+      }
+      return table;
+    }
+
+    private Map makeRow(Request req) {
+      Map row = new HashMap();
+      row.put("Time", req.deadline);
+      row.put("In", StringUtil.timeIntervalToString(TimeBase.msUntil(req.deadline.getExpirationTime())));
+      if (req.callback != null) {
+	row.put("Callback", req.callback.toString());
+      }
+      if (req.cookie != null) {
+	row.put("Cookie", req.cookie.toString());
+      }
+      return row;
+    }
+
+    private List getSummaryInfo() {
+      List res = new ArrayList();
+//       res.add(new StatusTable.SummaryInfo("Total bytes hashed",
+// 					  ColumnDescriptor.TYPE_INT,
+// 					  totalBytesHashed));
+      return res;
+    }
+
+  }
+
   /**
    * The TimerQueue.Callback interface defines the
    * method that will be called when a timer expires.
@@ -264,4 +350,20 @@ public class TimerQueue /*extends BaseLockssManager*/ implements Serializable {
      */
     public void timerExpired(Object cookie);
   }
+
+  /** A little manager class just to register a status accessor. */
+  public static class Manager extends BaseLockssDaemonManager {
+    public void startService() {
+      super.startService();
+      getDaemon().getStatusService().
+	registerStatusAccessor("TimerQ", new Status(singleton));
+    }
+    
+    public void stopService() {
+      getDaemon().getStatusService().unregisterStatusAccessor("TimerQ");
+      super.stopService();
+    }
+
+  }
+
 }
