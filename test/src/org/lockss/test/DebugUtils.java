@@ -1,5 +1,5 @@
 /*
- * $Id: DebugUtils.java,v 1.5 2003-04-18 16:41:53 tal Exp $
+ * $Id: DebugUtils.java,v 1.6 2003-04-18 20:24:47 tal Exp $
  */
 
 /*
@@ -210,7 +210,7 @@ public class DebugUtils {
 
   /** OpenBSD implementation of platform-specific code */
   public static class OpenBSD extends DebugUtils {
-    // offsets into /proc/<n>/stat
+    // offsets into /proc/<n>/status
     static final int STAT_OFFSET_CMD = 1;
     static final int STAT_OFFSET_PID = 1;
     static final int STAT_OFFSET_PPID = 2;
@@ -222,24 +222,26 @@ public class DebugUtils {
 
     /** Get PID of main java process */
     public int getMainPid() throws UnsupportedException {
+      // tk - not sure how to find top process on OpenBSD.
+      // This is right for green threads only.
       return getProcPid();
     }
 
-    /** Get PID from linux /proc/surproc/status */
+    /** Get PID from OpenBSD /proc/curproc/status */
     private int getProcPid() throws UnsupportedException {
       Vector v = getMyProcStats();
       String pid = (String)v.elementAt(STAT_OFFSET_PID);
       return Integer.parseInt(pid);
     }
 
-    /** Get stat vector of this java process from /proc/self/stat .
+    /** Get stat vector of this java process from /proc/curproc.status .
    * Read the stat file with java code so the executing process (self) is
    * java. */
     Vector getMyProcStats() throws UnsupportedException {
       return getProcStats("curproc");
     }
 
-    /** Get stat vector for specified process from /proc/<n>/stat .
+    /** Get stat vector for specified process from /proc/<n>/status .
      * @param pid the process for which to get stats, or "self"
      * @return vector of strings of values in stat file
      */
