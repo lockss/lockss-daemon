@@ -1,5 +1,5 @@
 /*
- * $Id: HashCUS.java,v 1.9 2004-07-12 23:01:50 smorabito Exp $
+ * $Id: HashCUS.java,v 1.10 2004-08-02 03:23:55 tlipkis Exp $
  */
 
 /*
@@ -357,10 +357,8 @@ public class HashCUS extends LockssServlet {
     sel.add("", auid == null, "");
     for (Iterator iter = pluginMgr.getAllAus().iterator(); iter.hasNext(); ) {
       ArchivalUnit au = (ArchivalUnit)iter.next();
-      if (!(au instanceof RegistryArchivalUnit)) {
-	String id = au.getAuId();
-	sel.add(au.getName(), id.equals(auid), id);
-      }
+      String id = au.getAuId();
+      sel.add(au.getName(), id.equals(auid), id);
     }
     autbl.newRow(); autbl.newCell();
     setTabOrder(sel);
