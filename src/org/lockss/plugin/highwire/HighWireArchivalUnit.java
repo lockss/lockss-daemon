@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireArchivalUnit.java,v 1.9 2003-03-01 01:18:49 tal Exp $
+ * $Id: HighWireArchivalUnit.java,v 1.10 2003-03-08 01:36:44 troberts Exp $
  */
 
 /*
@@ -175,11 +175,11 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
   }
 
   private void loadProps() {
-    pauseMS = Configuration.getIntParam(PARAM_HIGHWIRE_PAUSE_TIME,
-                                        DEFAULT_PAUSE_TIME);
+    pauseMS = Configuration.getTimeIntervalParam(PARAM_HIGHWIRE_PAUSE_TIME,
+						 DEFAULT_PAUSE_TIME);
     ncCrawlInterval = 
-      Configuration.getIntParam(PARAM_HIGHWIRE_NC_INTERVAL,
-				DEFAULT_NC_INTERVAL);
+      Configuration.getTimeIntervalParam(PARAM_HIGHWIRE_NC_INTERVAL,
+					 DEFAULT_NC_INTERVAL);
   }
 
   public void pause() {
