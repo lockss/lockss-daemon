@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyManager.java,v 1.6 2003-04-10 21:49:24 tal Exp $
+ * $Id: ProxyManager.java,v 1.7 2003-04-14 07:30:35 tal Exp $
  */
 
 /*
@@ -51,8 +51,21 @@ public class ProxyManager extends JettyManager {
   public static final String PARAM_START = PREFIX + "start";
   public static final String PARAM_PORT = PREFIX + "port";
 
+  // tk - for now use same params as ui
+//   public static final String IP_ACCESS_PREFIX = PREFIX + "access.ip.";
+  public static final String IP_ACCESS_PREFIX =
+    org.lockss.servlet.ServletManager.IP_ACCESS_PREFIX;
+  public static final String PARAM_IP_INCLUDE = IP_ACCESS_PREFIX + "include";
+  public static final String PARAM_IP_EXCLUDE = IP_ACCESS_PREFIX + "exclude";
+  public static final String PARAM_LOG_FORBIDDEN =
+    IP_ACCESS_PREFIX + "logForbidden";
+
   private int port;
   private boolean start;
+  private String includeIps;
+  private String excludeIps;
+  private boolean logForbidden;
+  private IpAccessHandler accessHandler;
 
   /* ------- LockssManager implementation ------------------ */
   /**
@@ -81,6 +94,30 @@ public class ProxyManager extends JettyManager {
     super.setConfig(config, prevConfig, changedKeys);
     port = config.getInt(PARAM_PORT, 9090);
     start = config.getBoolean(PARAM_START, true);
+    if (changedKeys.contains(PARAM_IP_INCLUDE) ||
+	changedKeys.contains(PARAM_IP_EXCLUDE) ||
+	changedKeys.contains(PARAM_LOG_FORBIDDEN)) {
+      includeIps = config.get(PARAM_IP_INCLUDE, "");
+      excludeIps = config.get(PARAM_IP_EXCLUDE, "");
+      logForbidden = config.getBoolean(PARAM_LOG_FORBIDDEN, false);
+      log.debug("Installing new ip filter: incl: " + includeIps +
+		", excl: " + excludeIps);
+      setIpFilter();
+    }
+  }
+
+  void setIpFilter() {
+    if (accessHandler != null) {
+      try {
+	IpFilter filter = new IpFilter();
+	filter.setFilters(includeIps, excludeIps, ';');
+	accessHandler.setFilter(filter);
+      } catch (IpFilter.MalformedException e) {
+	log.warning("Malformed IP filter, filters not changed", e);
+      }
+      accessHandler.setLogForbidden(logForbidden);
+      accessHandler.setAllowLocal(true);
+    }
   }
 
   /** Start a Jetty handler for the proxy */
@@ -94,6 +131,11 @@ public class ProxyManager extends JettyManager {
 
       // Create a context
       HttpContext context = server.getContext(null, "/");
+
+      // IpAccessHandler is first
+      accessHandler = new IpAccessHandler("Proxy");
+      setIpFilter();
+      context.addHandler(accessHandler);
 
       // Add a proxy handler to the context
       HttpHandler handler = new org.lockss.proxy.ProxyHandler(getDaemon());

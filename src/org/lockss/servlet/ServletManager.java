@@ -1,5 +1,5 @@
 /*
- * $Id: ServletManager.java,v 1.9 2003-04-10 21:50:17 tal Exp $
+ * $Id: ServletManager.java,v 1.10 2003-04-14 07:30:35 tal Exp $
  */
 
 /*
@@ -52,6 +52,12 @@ public class ServletManager extends JettyManager {
   public static final String PARAM_START = PREFIX + "start";
   public static final String PARAM_PORT = PREFIX + "port";
 
+  public static final String IP_ACCESS_PREFIX = PREFIX + "access.ip.";
+  public static final String PARAM_IP_INCLUDE = IP_ACCESS_PREFIX + "include";
+  public static final String PARAM_IP_EXCLUDE = IP_ACCESS_PREFIX + "exclude";
+  public static final String PARAM_LOG_FORBIDDEN =
+    IP_ACCESS_PREFIX + "logForbidden";
+
   public static final boolean DEFAULT_START = true;
   public static final int DEFAULT_PORT = 8081;
 
@@ -61,6 +67,10 @@ public class ServletManager extends JettyManager {
 
   private int port;
   private boolean start;
+  private String includeIps;
+  private String excludeIps;
+  private boolean logForbidden;
+  private IpAccessHandler accessHandler;
 
   public ServletManager() {
   }
@@ -92,6 +102,30 @@ public class ServletManager extends JettyManager {
     super.setConfig(config, prevConfig, changedKeys);
     port = config.getInt(PARAM_PORT, DEFAULT_PORT);
     start = config.getBoolean(PARAM_START, DEFAULT_START);
+    if (changedKeys.contains(PARAM_IP_INCLUDE) ||
+	changedKeys.contains(PARAM_IP_EXCLUDE) ||
+	changedKeys.contains(PARAM_LOG_FORBIDDEN)) {
+      includeIps = config.get(PARAM_IP_INCLUDE, "");
+      excludeIps = config.get(PARAM_IP_EXCLUDE, "");
+      logForbidden = config.getBoolean(PARAM_LOG_FORBIDDEN, false);
+      log.debug("Installing new ip filter: incl: " + includeIps +
+		", excl: " + excludeIps);
+      setIpFilter();
+    }
+  }
+
+  void setIpFilter() {
+    if (accessHandler != null) {
+      try {
+	IpFilter filter = new IpFilter();
+	filter.setFilters(includeIps, excludeIps, ';');
+	accessHandler.setFilter(filter);
+      } catch (IpFilter.MalformedException e) {
+	log.warning("Malformed IP filter, filters not changed", e);
+      }
+      accessHandler.setLogForbidden(logForbidden);
+      accessHandler.setAllowLocal(true);
+    }
   }
 
   public void startServlets() {
@@ -142,6 +176,11 @@ public class ServletManager extends JettyManager {
 
       // Now add handlers in the order they should be tried.
 
+      // IpAccessHandler is first
+      accessHandler = new IpAccessHandler("UI");
+      setIpFilter();
+      context.addHandler(accessHandler);
+
       // Create a servlet container
       ServletHandler handler = new ServletHandler();
 
@@ -152,7 +191,6 @@ public class ServletManager extends JettyManager {
 			 "org.lockss.servlet.DaemonStatus");
       handler.addServlet("ThreadDump", "/ThreadDump",
 			 "org.lockss.servlet.ThreadDump");
-
       context.addHandler(handler);
 
       // ResourceHandler should come after servlets
