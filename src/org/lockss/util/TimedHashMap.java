@@ -1,3 +1,35 @@
+/*
+ * $Id: TimedHashMap.java,v 1.2 2003-05-22 20:49:34 tyronen Exp $
+ */
+
+/*
+
+Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
+all rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Except as contained in this notice, the name of Stanford University shall not
+be used in advertising or otherwise to promote the sale, use or other dealings
+in this Software without prior written authorization from Stanford University.
+
+*/
+
 package org.lockss.util;
 
 import java.util.*;
@@ -5,7 +37,12 @@ import org.apache.commons.collections.*;
 
 /**
  * <p>Title: TimedHashMap</p>
- * <p>Description: </p>
+ * <p>Description: This class implements the Map interface.  It has the
+ * additional property that entries expire on an interval specified
+ * by a parameter to the constructor.  The interval is calculated from the
+ * time at which the entry was added to the map.  This map is a hash map; as
+ * such, classes used as keys should have a defined <code>hashCode</code>
+ * method that obeys the contract for hash codes.</p>
  * @author Tyrone Nicholas
  * @version 1.0
  */
@@ -13,141 +50,157 @@ import org.apache.commons.collections.*;
 public class TimedHashMap implements Map
 {
 
-	/** Amount of time each entry has before it will be deleted */
-	int interval;
+  /** Amount of time each entry has before it will be deleted */
+  int interval;
 
-	/** Stores times of all the keys */
-	Map keytimes;
+  /** Stores times of all the keys */
+  Map keytimes;
 
-    /** Delegates actual entries */
-    SequencedHashMap entries;
+  /** Delegates actual entries */
+  SequencedHashMap entries;
 
-	public TimedHashMap(int interval)
-	{
-		this.interval = interval;
-		this.keytimes = new HashMap();
-        this.entries = new SequencedHashMap();
-	}
+  /** Constructor.
+   * @param interval Interval after which entries expire, in milliseconds.
+   */
 
-	protected void updateEntries()
-	{
-		while (!entries.isEmpty())
-		{
-			Object o = entries.getFirstKey();
-            Deadline entry = (Deadline)keytimes.get(o);
-			if (entry.expired())
-			{
-				keytimes.remove(o);
-				entries.remove(o);
-			}
-			else
-				return;
-		}
-	}
+  public TimedHashMap(int interval)
+  {
+    this.interval = interval;
+    this.keytimes = new HashMap();
+    this.entries = new SequencedHashMap();
+  }
+
+  protected void updateEntries()
+  {
+    while (!entries.isEmpty())
+    {
+      Object obj = entries.getFirstKey();
+      Deadline entry = (Deadline)keytimes.get(obj);
+      if (entry.expired())
+      {
+        keytimes.remove(obj);
+        entries.remove(obj);
+      }
+      else
+        return;
+    }
+  }
 
   public void clear()
   {
-      entries.clear();
-      keytimes.clear();
+    entries.clear();
+    keytimes.clear();
   }
 
-	public boolean containsKey(Object key)
-	{
-		updateEntries();
-		return entries.containsKey(key);
-	}
+  public boolean containsKey(Object key)
+  {
+    updateEntries();
+    return entries.containsKey(key);
+  }
 
-	public boolean containsValue(Object value)
-	{
-		updateEntries();
-		return entries.containsKey(value);
-	}
+  public boolean containsValue(Object value)
+  {
+    updateEntries();
+    return entries.containsKey(value);
+  }
 
-	public Set entrySet()
-	{
-		updateEntries();
-		return entries.entrySet();
-	}
+  public Set entrySet()
+  {
+    updateEntries();
+    return entries.entrySet();
+  }
 
-	public boolean equals(Object obj)
+  public Object get(Object key)
+  {
+    updateEntries();
+    return entries.get(key);
+  }
+
+  public int hashCode()
+  {
+    return entries.hashCode() + interval + keytimes.hashCode();
+  }
+
+  public boolean isEmpty()
+  {
+    updateEntries();
+    return entries.isEmpty();
+  }
+
+  public Set keySet()
+  {
+    updateEntries();
+    return entries.keySet();
+  }
+
+  public Object put(Object key, Object value)
+  {
+    updateEntries();
+    Deadline deadline = Deadline.in(interval);
+    keytimes.put(key,deadline);
+    return entries.put(key, value);
+  }
+
+  /** Places all entries from another map into this one.  Each entry gets its
+   * own expiry time based on when it was added in real time.
+   * @param t Map whose entries are being added to this map.
+   */
+
+  public void putAll(Map t)
+  {
+    updateEntries();
+    Iterator it = t.entrySet().iterator();
+    while (it.hasNext())
     {
+      Map.Entry entry = (Map.Entry) it.next();
+      put(entry.getKey(), entry.getValue());
+    }
+  }
 
-		try {
-			updateEntries();
-			TimedHashMap other = (TimedHashMap) obj;
-			other.updateEntries();
-			return (interval == other.interval &&
-					entries.equals(other.entries) &&
-					keytimes.equals(other.keytimes));
-		}
-		catch (ClassCastException e)
-        {
-			return false;
-		}
-	}
+  public Object remove(Object key)
+  {
+    updateEntries();
+    keytimes.remove(key);
+    return entries.remove(key);
+  }
 
-	public Object get(Object key)
-    {
-		updateEntries();
-		return entries.get(key);
-	}
+  public int size()
+  {
+    updateEntries();
+    return entries.size();
+  }
 
-	public int hashCode()
-    {
-      int a = entries.hashCode();
-      int b = interval;
-      int c = keytimes.hashCode();
-		return entries.hashCode() + interval + keytimes.hashCode();
-	}
+  public Collection values()
+  {
+    updateEntries();
+    return entries.values();
+  }
 
-	public boolean isEmpty()
-    {
-		updateEntries();
-		return entries.isEmpty();
-	}
+  /** Not implemented.  Throws an <code>UnsupportedOperationException</code>.
+   * See the source code for details.
+   * @param obj Object being compared to.
+   */
 
-	public Set keySet()
-    {
-		updateEntries();
-		return entries.keySet();
-	}
+  public boolean equals(Object obj)
+  {
+    /*
+    This code is not implemented because of uncertainty on whether
+    objects with the same entries but different deadlines should be considered
+    "equal" or not.  Code below considered them unequal.
 
-	public Object put(Object key, Object value)
-    {
-		updateEntries();
-		Deadline deadline = Deadline.in(interval);
-		keytimes.put(key,deadline);
-		return entries.put(key, value);
-	}
-
-	public void putAll(Map t)
-    {
-		updateEntries();
-		Iterator it = t.entrySet().iterator();
-		while (it.hasNext())
-        {
-            Map.Entry entry = (Map.Entry)it.next();
-            put(entry.getKey(),entry.getValue());
-        }
-	}
-
-	public Object remove(Object key)
-    {
-		updateEntries();
-		keytimes.remove(key);
-		return entries.remove(key);
-	}
-
-	public int size()
-    {
-		updateEntries();
-		return entries.size();
-	}
-
-	public Collection values()
-    {
-		updateEntries();
-		return entries.values();
-	}
+    try {
+      updateEntries();
+      TimedHashMap other = (TimedHashMap) obj;
+      other.updateEntries();
+      return (interval == other.interval &&
+          entries.equals(other.entries) &&
+          keytimes.equals(other.keytimes));
+    }
+    catch (ClassCastException e) {
+      return false;
+    }*/
+    throw new UnsupportedOperationException("Equals operation not yet " +
+                                            "implemented for this class.");
+  }
 
 }
