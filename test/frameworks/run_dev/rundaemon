@@ -1,5 +1,7 @@
 #! /bin/bash
 
+group="dev"
+
 while true ; do
   case "$1" in
     "-classpath" )
@@ -9,6 +11,13 @@ while true ; do
 	CLASSPATH="$CLASSPATH":"$2"
       fi
       echo "CLASSPATH=$CLASSPATH"
+      shift; shift; continue;;
+    "-debug" )
+      args="$args -Dorg.lockss.defaultLogLevel=DEBUG"
+      shift; continue;;
+    "-g" )
+      group="$2"
+      echo "group=$group"
       shift; shift; continue;;
     "-1.4" )
       if [ -z "$JAVA_14_HOME" ] ; then
@@ -32,7 +41,7 @@ if [ -z "$args" ]; then
   args=-Dorg.lockss.defaultLogLevel=DEBUG
 fi
 
-PROP_URL_LIST="http://props.lockss.org:8001/03042003_dev/lockss.txt local.txt"
+PROP_URL_LIST="-p http://props.lockss.org:8001/daemon/lockss.xml -p local.txt"
 
 # local copy of lockss jars allows recompile while we're running
 mkdir -p lib
@@ -42,11 +51,10 @@ cp ${PROJECT_DIR}/lib/lockss-plugins.jar lib
 CLASSPATH=lib/lockss.jar:lib/lockss-test.jar:lib/lockss-plugins.jar:`cat ${PROJECT_DIR}/test/test-classpath`
 export CLASSPATH
 #echo CLASSPATH=$CLASSPATH
-JVM_ARGS="-Xmx70m -Dsun.net.inetaddr.ttl=3600"
+JVM_ARGS="-Xmx120m -Dsun.net.inetaddr.ttl=3600"
 
 echo running at `date`
-# for large caches, need to pass "-ms4m -mx64m" to java
-java $args org.lockss.app.LockssDaemon ${PROP_URL_LIST} >>test.out 2>&1 &
+java $args org.lockss.app.LockssDaemon -g $group ${PROP_URL_LIST} >>test.out 2>&1 &
 echo $! >dpid
 wait
 echo stopped with status $? at `date`
