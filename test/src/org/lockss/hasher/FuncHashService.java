@@ -1,5 +1,5 @@
 /*
- * $Id: FuncHashService.java,v 1.3 2004-01-08 23:09:54 tlipkis Exp $
+ * $Id: FuncHashService.java,v 1.4 2004-01-12 06:24:27 tlipkis Exp $
  */
 
 /*
@@ -132,16 +132,18 @@ public class FuncHashService extends LockssTestCase {
     assertTrue(svc.canHashBeScheduledBefore(10000, Deadline.in(20000)));
   }
 
-  public void testOneStepWork() throws Exception {
-    assertTrue(hashContent("1", 300, 100, 10 * Constants.SECOND, hashCB()));
-    waitUntilDone();
-    assertEquals(ListUtil.list(new Work("1", stepBytes(), 1000),
-			       new Work("1", stepBytes(), 1000),
-			       new Work("1", stepBytes(), 1000)),
-		 work);
-  }
+  // This fails on slow machines.  Simulated version is good enough test.
+//   public void testRealTimeStep() throws Exception {
+//     log.info("testOneStepWorkl");
+//     assertTrue(hashContent("1", 300, 100, 10 * Constants.SECOND, hashCB()));
+//     waitUntilDone();
+//     assertEquals(ListUtil.list(new Work("1", stepBytes(), 1000),
+// 			       new Work("1", stepBytes(), 1000),
+// 			       new Work("1", stepBytes(), 1000)),
+// 		 work);
+//   }
 
-  public void testActualCallbackValues() throws Exception {
+  public void testSimulatedTimeStep() throws Exception {
     TimeBase.setSimulated();
     hashContent("1", 300, -100, 500, hashCB());
     waitUntilDone();
@@ -168,7 +170,6 @@ public class FuncHashService extends LockssTestCase {
     Work(Deadline when, String cookie,
 	 int numBytes, int eachStepBytes) {
       this.when = when;
-      log.debug("when: " + when);
       this.cookie = cookie;
       this.numBytes = numBytes;
       this.eachStepBytes = eachStepBytes;
