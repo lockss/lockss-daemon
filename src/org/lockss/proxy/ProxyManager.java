@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyManager.java,v 1.5 2003-04-04 08:39:04 tal Exp $
+ * $Id: ProxyManager.java,v 1.6 2003-04-10 21:49:24 tal Exp $
  */
 
 /*
@@ -34,16 +34,19 @@ package org.lockss.proxy;
 
 import java.util.*;
 import org.lockss.app.*;
+import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.jetty.*;
 import org.mortbay.util.*;
 import org.mortbay.http.*;
+import org.mortbay.http.handler.*;
 
 /* ------------------------------------------------------------ */
 /** LOCKSS proxy manager.
  */
 public class ProxyManager extends JettyManager {
 
+  private static Logger log = Logger.getLogger("Proxy");
   public static final String PREFIX = Configuration.PREFIX + "proxy.";
   public static final String PARAM_START = PREFIX + "start";
   public static final String PARAM_PORT = PREFIX + "port";
@@ -92,14 +95,26 @@ public class ProxyManager extends JettyManager {
       // Create a context
       HttpContext context = server.getContext(null, "/");
 
-      // Create a servlet container
-      HttpHandler handler = new ProxyHandler(getDaemon());
+      // Add a proxy handler to the context
+      HttpHandler handler = new org.lockss.proxy.ProxyHandler(getDaemon());
       context.addHandler(handler);
+
+      // Add a CuResourceHandler to handle requests for locally cached
+      // content that the proxy handler modified and passed on.
+      context.setBaseResource(new CuUrlResource());
+      ResourceHandler rHandler = new CuResourceHandler();
+//       rHandler.setDirAllowed(false);
+//       rHandler.setPutAllowed(false);
+//       rHandler.setDelAllowed(false);
+//       rHandler.setAcceptRanges(true);
+      context.addHandler(rHandler);
+      // Requests shouldn't get this far, so dump them
+      context.addHandler(new org.mortbay.http.handler.DumpHandler());
 
       // Start the http server
       server.start ();
     } catch (Exception e) {
-      e.printStackTrace();
+      log.error("Couldn't start proxy", e);
     }
   }
 }
