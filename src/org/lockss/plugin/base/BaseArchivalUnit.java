@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.73 2004-09-01 23:36:48 clairegriffin Exp $
+ * $Id: BaseArchivalUnit.java,v 1.74 2004-09-02 01:25:50 troberts Exp $
  */
 
 /*
@@ -106,6 +106,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
       DEFAULT_NEW_CONTENT_CRAWL_INTERVAL = 2 * Constants.WEEK;
   protected Plugin plugin;
   protected CrawlSpec crawlSpec;
+  protected UrlNormalizer urlNormalizer;
   static Logger logger = Logger.getLogger("BaseArchivalUnit");
   static SimpleDateFormat sdf = new SimpleDateFormat();
 
@@ -233,6 +234,11 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     }
     paramMap.setMapElement(AU_CRAWL_SPEC, crawlSpec);
 
+
+    //make our url normalizer
+    urlNormalizer = makeUrlNormalizer();
+    paramMap.setMapElement(AU_URL_NORMALIZER, urlNormalizer);
+
     // make our name
     titleConfig = findTitleConfig(config);
     if (titleConfig != null) {
@@ -336,8 +342,13 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     return misses;
   }
 
-  /** By default there is no site normalization */
   public String siteNormalizeUrl(String url) {
+    UrlNormalizer urlNormalizer =
+      (UrlNormalizer)paramMap.getMapElement(AU_URL_NORMALIZER);
+
+    if (urlNormalizer != null) {
+      return urlNormalizer.normalizeUrl(url);
+    }
     return url;
   }
 
@@ -387,6 +398,11 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   public String getName() {
     return paramMap.getString(AU_TITLE, auName);
   }
+
+  protected UrlNormalizer makeUrlNormalizer() {
+    return null;
+  }
+
 
   /**
    * Use the starting url and the crawl rules to make the crawl spec needed
