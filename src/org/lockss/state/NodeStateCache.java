@@ -1,5 +1,5 @@
 /*
- * $Id: NodeStateCache.java,v 1.5 2003-04-02 23:50:55 aalto Exp $
+ * $Id: NodeStateCache.java,v 1.6 2003-04-03 00:02:14 aalto Exp $
  */
 
 /*
@@ -54,6 +54,9 @@ public class NodeStateCache {
   private int refMisses = 0;
 
   public NodeStateCache(int maxSize) {
+    if (maxSize<=0) {
+      throw new IllegalArgumentException("Cache size must be greater than zero");
+    }
     lruMap = new LRUMap(maxSize);
   }
 
@@ -70,6 +73,9 @@ public class NodeStateCache {
    * @param newSize the new size
    */
   public void setCacheSize(int newSize) {
+    if (newSize<=0) {
+      throw new IllegalArgumentException("Cache size must be greater than zero");
+    }
     lruMap.setMaximumSize(newSize);
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeStateCache.java,v 1.4 2003-04-02 19:32:30 aalto Exp $
+ * $Id: TestNodeStateCache.java,v 1.5 2003-04-03 00:02:14 aalto Exp $
  */
 
 /*
@@ -74,6 +74,16 @@ public class TestNodeStateCache extends LockssTestCase {
     cache.setCacheSize(10);
     assertEquals(10, cache.getCacheSize());
     assertEquals(10, cache.lruMap.size());
+
+    try {
+      cache.setCacheSize(0);
+      fail("Should have thrown IllegalArgumentException.");
+    } catch (IllegalArgumentException iae) { }
+
+    try {
+      cache = new NodeStateCache(0);
+      fail("Should have thrown IllegalArgumentException.");
+    } catch (IllegalArgumentException iae) { }
   }
 
   public void testCaching() throws Exception {
