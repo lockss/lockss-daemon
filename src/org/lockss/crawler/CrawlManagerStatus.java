@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatus.java,v 1.3 2003-09-26 23:52:18 eaalto Exp $
+ * $Id: CrawlManagerStatus.java,v 1.4 2003-10-31 23:14:45 troberts Exp $
  */
 
 /*
@@ -46,8 +46,6 @@ public class CrawlManagerStatus implements StatusAccessor {
   private static final String END_TIME_COL_NAME = "end";
   private static final String NUM_URLS_PARSED = "num_urls_parsed";
   private static final String NUM_URLS_FETCHED = "num_urls_fetched";
-  private static final String NUM_CACHE_HITS = "num_cache_hits";
-  private static final String CACHE_HITS_PERCENT = "cache_hits_percent";
   private static final String START_URLS = "start_urls";
 
   private List colDescs =
@@ -64,10 +62,6 @@ public class CrawlManagerStatus implements StatusAccessor {
 				       ColumnDescriptor.TYPE_INT),
 		  new ColumnDescriptor(NUM_URLS_PARSED, "URLs parsed",
 				       ColumnDescriptor.TYPE_INT),
-		  new ColumnDescriptor(NUM_CACHE_HITS, "Cache hits",
-				       ColumnDescriptor.TYPE_INT),
-		  new ColumnDescriptor(CACHE_HITS_PERCENT, "percent",
-				       ColumnDescriptor.TYPE_PERCENT),
 		  new ColumnDescriptor(START_URLS, "starting url",
 				       ColumnDescriptor.TYPE_STRING)
 		  );
@@ -166,14 +160,6 @@ public class CrawlManagerStatus implements StatusAccessor {
     row.put(NUM_URLS_PARSED, new Long(crawler.getNumParsed()));
     row.put(START_URLS,
 	    (StringUtil.separatedString(crawler.getStartUrls(), "\n")));
-    if (au instanceof BaseArchivalUnit) {
-      BaseArchivalUnit bau = (BaseArchivalUnit)au;
-      row.put(NUM_CACHE_HITS, new Long(bau.getCrawlSpecCacheHits()));
-      double per = ((float)bau.getCrawlSpecCacheHits() /
-		    ((float)bau.getCrawlSpecCacheHits() +
-		     (float)bau.getCrawlSpecCacheMisses()));
-      row.put(CACHE_HITS_PERCENT, new Double(per));
-    }
     return row;
   }
 
@@ -188,14 +174,6 @@ public class CrawlManagerStatus implements StatusAccessor {
     row.put(NUM_URLS_PARSED, new Long(crawler.getNumParsed()));
     row.put(START_URLS,
 	    (StringUtil.separatedString(crawler.getStartUrls(), "\n")));
-    if (au instanceof BaseArchivalUnit) {
-      BaseArchivalUnit bau = (BaseArchivalUnit)au;
-      row.put(NUM_CACHE_HITS, new Long(bau.getCrawlSpecCacheHits()));
-      double per = ((float)bau.getCrawlSpecCacheHits() /
-		    ((float)bau.getCrawlSpecCacheHits() +
-		     (float)bau.getCrawlSpecCacheMisses()));
-      row.put(CACHE_HITS_PERCENT, new Double(per));
-    }
     return row;
   }
 

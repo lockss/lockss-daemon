@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerStatus.java,v 1.3 2003-09-26 23:50:39 eaalto Exp $
+ * $Id: TestCrawlManagerStatus.java,v 1.4 2003-10-31 23:14:45 troberts Exp $
  */
 
 /*
@@ -68,10 +68,6 @@ public class TestCrawlManagerStatus extends LockssTestCase {
 				       ColumnDescriptor.TYPE_INT),
 		  new ColumnDescriptor(NUM_URLS_PARSED, "URLs parsed",
 				       ColumnDescriptor.TYPE_INT),
-		  new ColumnDescriptor(NUM_CACHE_HITS, "Cache hits",
-				       ColumnDescriptor.TYPE_INT),
-		  new ColumnDescriptor(CACHE_HITS_PERCENT, "percent",
-				       ColumnDescriptor.TYPE_PERCENT),
 		  new ColumnDescriptor(START_URLS, "starting url",
 				       ColumnDescriptor.TYPE_STRING)
 		  );
