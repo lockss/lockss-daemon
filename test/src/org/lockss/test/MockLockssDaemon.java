@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssDaemon.java,v 1.35 2004-02-03 02:48:39 eaalto Exp $
+ * $Id: MockLockssDaemon.java,v 1.36 2004-03-07 08:43:18 tlipkis Exp $
  */
 
 /*
@@ -396,7 +396,7 @@ public class MockLockssDaemon extends LockssDaemon {
   // AU managers
 
   /** Create an AU manager instance, mimicking what LockssDaemon does */
-  LockssAuManager newAuManager(String key, ArchivalUnit au) {
+  public LockssAuManager newAuManager(String key, ArchivalUnit au) {
     ManagerDesc desc = findAuManagerDesc(key);
     if (desc == null) {
       throw new LockssDaemonException("No AU ManagerDesc for: " + key);
