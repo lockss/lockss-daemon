@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingCrawlerImpl.java,v 1.45 2003-11-13 19:53:40 troberts Exp $
+ * $Id: GoslingCrawlerImpl.java,v 1.45.2.1 2003-11-19 06:21:51 tlipkis Exp $
  */
 
 /*
@@ -123,7 +123,7 @@ public class GoslingCrawlerImpl implements Crawler {
 
   private CrawlSpec spec = null;
   
-  private boolean wasError = false;
+  private int crawlError = 0;
   private AuState aus = null;
 
   private static final String PARAM_RETRY_TIMES =
@@ -222,8 +222,8 @@ public class GoslingCrawlerImpl implements Crawler {
   public int getStatus() {
     if (endTime == -1) {
       return Crawler.STATUS_INCOMPLETE;
-    } else if (wasError) {
-      return Crawler.STATUS_ERROR;
+    } else if (crawlError != 0) {
+      return crawlError;
     }
     return Crawler.STATUS_SUCCESSFUL;
   }
@@ -236,6 +236,14 @@ public class GoslingCrawlerImpl implements Crawler {
    * @return true if no errors
    */
   public boolean doCrawl(Deadline deadline) {
+    try {
+      return doCrawl0(deadline);
+    } finally {
+      endTime = TimeBase.nowMs();
+    }
+  }
+
+  private boolean doCrawl0(Deadline deadline) {
     if (deadline == null) {
       throw new IllegalArgumentException("Called with a null Deadline");
     }
@@ -276,7 +284,9 @@ public class GoslingCrawlerImpl implements Crawler {
         }
  	if (spec.isIncluded(url)) {
 	  if (!doCrawlLoop(url, extractedUrls, parsedPages, cus, true)) {
-	    wasError = true;
+	    if (crawlError == 0) {
+	      crawlError = Crawler.STATUS_ERROR;
+	    }
 	  }
 	} else {
 	  logger.warning("Called with a starting url we aren't suppose to "+
@@ -310,21 +320,27 @@ public class GoslingCrawlerImpl implements Crawler {
         break;
       }
       if (!doCrawlLoop(nextUrl, urlsToCrawl, parsedPages, cus, false)) {
-	wasError = true;
+	if (crawlError == 0) {
+	  crawlError = Crawler.STATUS_ERROR;
+	}
       }
       aus.updatedCrawlUrls(false);
     }
-    logger.info("Finished crawl of "+au);
-    endTime = TimeBase.nowMs();
     // unsuccessful crawl if window closed
     if (windowClosed) {
-      wasError = true;
+      crawlError = Crawler.STATUS_WINDOW_CLOSED;
     }
-    return !wasError;
+    if (crawlError != 0) {
+      logger.info("Finished crawl (errors) of "+au);
+    } else {
+      logger.info("Finished crawl of "+au);
+    }      
+    return (crawlError == 0);
   }
 
   boolean crawlPermission(CachedUrlSet ownerCus) {
     boolean crawl_ok = false;
+    int err = Crawler.STATUS_PUB_PERMISSION;
 
     // fetch and cache the manifest page
     String manifest = au.getManifestPage();
@@ -347,13 +363,18 @@ public class GoslingCrawlerImpl implements Crawler {
           }
         } else {
           logger.debug("Couldn't start crawl due to crawl window restrictions.");
+	  err = Crawler.STATUS_WINDOW_CLOSED;
         }
+      } else {
+	logger.debug("Manifest not within CrawlSpec");
       }
     } catch (IOException ex) {
       logger.warning("Exception reading manifest: "+ex);
+      crawlError = Crawler.STATUS_FETCH_ERROR;
     }
-
-
+    if (!crawl_ok) {
+      crawlError = err;
+    }
     return crawl_ok;
   }
 
@@ -372,7 +393,7 @@ public class GoslingCrawlerImpl implements Crawler {
   protected boolean doCrawlLoop(String url, Collection extractedUrls,
 			     Set parsedPages, CachedUrlSet cus,
 			     boolean overWrite) {
-    boolean wasError = false;
+    int error = 0;
     logger.debug2("Dequeued url from list: "+url);
     Plugin plugin = au.getPlugin();
     UrlCacher uc = plugin.makeUrlCacher(cus, url);
@@ -389,7 +410,7 @@ public class GoslingCrawlerImpl implements Crawler {
       } catch (IOException ioe) {
 	//XXX handle this better.  Requeue?
 	logger.error("Problem caching "+uc+". Ignoring", ioe);
-	wasError = true;
+	error = Crawler.STATUS_FETCH_ERROR;
       }
     }
     else {
@@ -413,10 +434,10 @@ public class GoslingCrawlerImpl implements Crawler {
     } catch (IOException ioe) {
       //XXX handle this better.  Requeue?
       logger.error("Problem parsing "+uc+". Ignoring", ioe);
-      wasError = true;
+      error = Crawler.STATUS_FETCH_ERROR;
     }
     logger.debug2("Removing from list: "+uc.getUrl());
-    return !wasError;
+    return (error == 0);
   }
 
   private void cacheWithRetries(UrlCacher uc, int type, int maxRetries)
