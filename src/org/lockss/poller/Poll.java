@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.69 2003-04-30 18:22:03 troberts Exp $
+* $Id: Poll.java,v 1.70 2003-05-01 20:28:10 claire Exp $
  */
 
 /*
@@ -213,7 +213,7 @@ public abstract class Poll implements Serializable {
    * only interested in how long we have remaining.
    */
   void scheduleVote() {
-    long remainingTime = m_deadline.getRemainingTime();
+    long remainingTime = m_deadline.getRemainingTime() *95/100;
     long minTime = TimeBase.nowMs() + (remainingTime/2) - (remainingTime/4);
     long maxTime = TimeBase.nowMs() + (remainingTime/2) + (remainingTime/4);
     m_voteTime = Deadline.atRandomRange(minTime, maxTime);

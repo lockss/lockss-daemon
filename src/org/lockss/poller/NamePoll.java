@@ -1,5 +1,5 @@
 /*
- * $Id: NamePoll.java,v 1.47 2003-04-18 23:44:28 aalto Exp $
+ * $Id: NamePoll.java,v 1.48 2003-05-01 20:28:10 claire Exp $
  */
 
 /*
@@ -110,7 +110,8 @@ public class NamePoll
     if (shouldCheckVote(msg)) {
       Vote vote = new NameVote(msg, false);
       log.debug3("created a new NameVote instead of a Vote");
-      long dur = msg.getDuration();
+      long dur = m_deadline.getRemainingTime() * 95 /100;
+
       MessageDigest hasher = getInitedHasher(msg.getChallenge(),
                                              msg.getVerifier());
 

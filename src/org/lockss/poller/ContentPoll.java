@@ -1,5 +1,5 @@
 /*
-* $Id: ContentPoll.java,v 1.29 2003-03-29 04:02:15 claire Exp $
+* $Id: ContentPoll.java,v 1.30 2003-05-01 20:28:10 claire Exp $
  */
 
 /*
@@ -97,7 +97,8 @@ public class ContentPoll extends Poll {
     if (shouldCheckVote(msg)) {
       Vote vote = new Vote(msg, false);
 
-      long dur = msg.getDuration();
+      long dur = m_deadline.getRemainingTime() * 95 /100;
+
       MessageDigest hasher = getInitedHasher(msg.getChallenge(),
                                              msg.getVerifier());
 
