@@ -8,17 +8,14 @@ then
 	echo "PROJECT_DIR must be set"
 	exit
 fi
-mkdir -p ../lib
-cp ${PROJECT_DIR}/lib/lockss.jar ../lib
-cp ${PROJECT_DIR}/lib/lockss-test.jar ../lib
-cp ${PROJECT_DIR}/lib/lockss-plugins.jar ../lib
+
 CLASSPATH=../lib/lockss.jar:../lib/lockss-test.jar:../lib/lockss-plugins.jar:`cat ${PROJECT_DIR}/test/test-classpath`
 export CLASSPATH
 
 echo running in `pwd` at `date`
 #echo CLASSPATH=$CLASSPATH
 # for large caches, need to pass "-ms4m -mx64m" to java
-java -Dorg.lockss.defaultLogLevel=DEBUG RunDaemon ${PROP_URL_LIST} >>test.out 2>&1 &
+java -Dorg.lockss.defaultLogLevel=DEBUG org.lockss.app.LockssDaemon ${PROP_URL_LIST} >>test.out 2>&1 &
 echo $! >dpid
 wait
 echo stopped with status $? in `pwd` at `date`
