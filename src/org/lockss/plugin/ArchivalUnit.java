@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.3 2003-03-08 04:35:53 tal Exp $
+ * $Id: ArchivalUnit.java,v 1.4 2003-03-18 02:27:40 aalto Exp $
  */
 
 /*
@@ -51,6 +51,8 @@ public interface ArchivalUnit {
 
   /**
    * Supply (possibly changed) configuration information to an existing AU.
+   * @param config the {@link Configuration}
+   * @throws ConfigurationException
    */
   public void setConfiguration(Configuration config)
       throws ConfigurationException;
@@ -63,47 +65,48 @@ public interface ArchivalUnit {
   public boolean shouldBeCached(String url);
 
   /**
-   * Create a <code>CachedUrlSet</code> representing the content in this AU
+   * Create a {@link CachedUrlSet}representing the content in this AU
    * that matches the url and regexp.
-   * @param url the CachedUrlSet url
+   * @param url the {@link CachedUrlSet} url
    * @param lwrBound the lower bound of the match range
    * @param uprBound the upper bound of the match range
-   * @return the created CachedUrlSet
+   * @return the created {@link CachedUrlSet}
    */
   public CachedUrlSet makeCachedUrlSet(String url, String lwrBound,
                                        String uprBound);
 
   /**
-   * Return the <code>CachedUrlSet</code> representing the entire contents
+   * Return the {@link CachedUrlSet} representing the entire contents
    * of this AU
-   * @return the top-level CachedUrlSet
+   * @return the top-level {@link CachedUrlSet}
    */
   public CachedUrlSet getAUCachedUrlSet();
 
   /**
    * Return the {@link CrawlSpec}
-   * @return the CrawlSpec for the AU
+   * @return the {@link CrawlSpec} for the AU
    */
   public CrawlSpec getCrawlSpec();
 
   /**
-   * Returns a unique string identifier for the Plugin.
+   * Returns a unique string identifier for the {@link Plugin}.
    * @return a unique id
    */
   public String getPluginId();
 
   /**
-   * Returns a unique string identifier for the ArchivalUnit instance
-   * within the Plugin.  This must be completely determined by the subset of
-   * the AU's configuration info that's necessary to identify the AU.
+   * Returns a unique string identifier for the <code>ArchivalUnit</code>
+   * instance within the {@link Plugin}.  This must be completely determined by
+   * the subset of the AU's configuration info that's necessary to identify the
+   * AU.
    * @return a unique id
    */
   public String getAUId();
 
   /**
-   * Returns a human-readable name for the ArchivalUnit.  This is used in
-   * messages, so it is desirable that it succinctly identify the AU, but it
-   * is not essential that it be unique.
+   * Returns a human-readable name for the <code>ArchivalUnit</code>.  This is
+   * used in messages, so it is desirable that it succinctly identify the AU,
+   * but it is not essential that it be unique.
    * @return the AU name
    */
   public String getName();
@@ -115,30 +118,31 @@ public interface ArchivalUnit {
   public void pause();
 
   /**
-   * Needs to be overridden to hash ArchivalUnits properly.
+   * Needs to be overridden to hash <code>ArchivalUnit</code>s properly.
    * @return the hashcode
    */
   public int hashCode();
 
   /**
-   * Needs to be overridden to hash ArchivalUnits properly.
+   * Needs to be overridden to hash <code>ArchivalUnit</code>s properly.
    * @param obj the object to compare to
    * @return true if equal
    */
   public boolean equals(Object obj);
 
   /**
-   * @return list of urls which need to be recrawled during a new content
-   * crawl
+   * Return a list of urls which need to be recrawled during a new content
+   * crawl.
+   * @return the {@link List} of urls to crawl
    */
   public List getNewContentCrawlUrls();
 
 
   /**
-   * Query the AUState object to determine if this is the proper time to
+   * Query the {@link AuState} object to determine if this is the proper time to
    * do a new content crawl.
    *
-   * @param aus state object for this archival unit
+   * @param aus {@link AuState} object for this archival unit
    * @return true if we should do a new content crawl
    */
   public boolean shouldCrawlForNewContent(AuState aus);

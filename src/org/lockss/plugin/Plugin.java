@@ -1,5 +1,5 @@
 /*
- * $Id: Plugin.java,v 1.7 2003-02-20 22:27:26 tal Exp $
+ * $Id: Plugin.java,v 1.8 2003-03-18 02:27:41 aalto Exp $
  */
 
 /*
@@ -68,8 +68,8 @@ public interface Plugin {
   public String getVersion();
 
   /**
-   * Return the list of names of the Archival Units and volranges supported by
-   * this plugin
+   * Return the list of names of the {@link ArchivalUnit}s and volranges
+   * supported by this plugin.
    * @return a List of Strings
    */
   public List getSupportedAUNames();
@@ -77,49 +77,57 @@ public interface Plugin {
   /**
    * Return the set of configuration properties required to configure
    * an archival unit for this plugin.
-   * @return a List of strings which are the names of the properties for
+   * @return a {@link List} of strings which are the names of the properties for
    * which values are needed in order to configure an AU
    */
   public List getAUConfigProperties();
 
   /**
-   * Return the AU Id string for the ArchivalUnit handling the AU specified
-   * by the given configuration. This must be completely determined by the
-   * subset of the configuration info that's necessary to identify the AU.
+   * Return the AU Id string for the {@link ArchivalUnit} handling the AU
+   * specified by the given configuration. This must be completely determined
+   * by the subset of the configuration info that's necessary to identify the
+   * AU.
+   * @param configInfo the {@link Configuration}
    * @return the AUId string
    * @throws ArchivalUnit.ConfigurationException if the configuration is
    * illegal in any way.
    */
-  public String getAUIdFromConfig(Configuration configInfo) 
+  public String getAUIdFromConfig(Configuration configInfo)
       throws ArchivalUnit.ConfigurationException;
 
   /**
-   * Create or (re)configure an ArchivalUnit from the specified configuration.
-   * @param auConfig Configuration object with values for all properties
+   * Create or (re)configure an {@link ArchivalUnit} from the specified
+   * configuration.
+   * @param config {@link Configuration} object with values for all properties
    * returned by {@link #getAUConfigProperties()}
+   * @return an {@link ArchivalUnit}
+   * @throws ArchivalUnit.ConfigurationException
    */
   public ArchivalUnit configureAU(Configuration config)
       throws ArchivalUnit.ConfigurationException;
 
   /**
    * Create an ArchivalUnit for the AU specified by the configuration.
-   * @param auConfig Configuration object with values for all properties
+   * @param auConfig {@link Configuration} object with values for all properties
    * returned by {@link #getAUConfigProperties()}
+   * @return an {@link ArchivalUnit}
+   * @throws ArchivalUnit.ConfigurationException
    */
   public ArchivalUnit createAU(Configuration auConfig)
       throws ArchivalUnit.ConfigurationException;
 
   /**
-   * Lookup the ArchivalUnit corresponding to the AUId.
+   * Lookup the {@link ArchivalUnit} corresponding to the AUId.
    * @param auId The AUId for an AU within this plugin.  (Often obtained from
    * {@link AuUrl#getAuId(URL)}.)
-   * @return the ArchivalUnit, or null if not found
+   * @return the {@link ArchivalUnit}, or null if not found
    */
   public ArchivalUnit getAU(String auId);
 
   /**
-   * Return a collection of all ArchivalUnits that exist within this plugin
-   * @return a collection of AUs
+   * Return a collection of all {@link ArchivalUnit}s that exist within this
+   * plugin.
+   * @return a {@link Collection} of AUs
    */
   public Collection getAllAUs() ;
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrlSet.java,v 1.2 2003-02-24 23:27:05 tal Exp $
+ * $Id: CachedUrlSet.java,v 1.3 2003-03-18 02:27:41 aalto Exp $
  */
 
 /*
@@ -41,7 +41,7 @@ import org.lockss.daemon.*;
  * generic daemon uses this interface to perform I/O on the files
  * representing the preserved content.  The generic daemon treats
  * <code>CachedUrlSet</code> objects as containing a set of files whose
- * URLs match a list of <code>CachedUrlSetSpec</code>s (<code>[url-prefix,
+ * URLs match a list of {@link CachedUrlSetSpec}s (<code>[url-prefix,
  * regular-expression]</code> pairs).
  *
  * @author  David S. H. Rosenthal
@@ -49,15 +49,16 @@ import org.lockss.daemon.*;
  */
 public interface CachedUrlSet extends CachedUrlSetNode {
   /**
+   * Returns the owning ArchivalUnit.
    * @return the {@link ArchivalUnit} to which this CachedUrlSet belongs
    */
   public ArchivalUnit getArchivalUnit();
 
   /**
-   * Return the <code>CachedUrlSetSpec</code>
+   * Return the {@link CachedUrlSetSpec}
    * describing the set of URLs that are members of this
    * <code>CachedUrlSet</code>.
-   * @return the CachedUrlSet
+   * @return the {@link CachedUrlSetSpec}
    */
   public CachedUrlSetSpec getSpec();
 
@@ -76,35 +77,35 @@ public interface CachedUrlSet extends CachedUrlSetNode {
 
   /**
    * Return an object that can be used to hash the names of cached urls
-   * that match the list of <code>CachedUrlSetSpec</code>
+   * that match the list of {@link CachedUrlSetSpec}
    * entries.
-   * @param hasher a <code>MessageDigest</code> object to which the
+   * @param hasher a {@link MessageDigest} object to which the
    *               names will be supplied.
-   * @return a <code>CachedUrlSetHasher</code> object that will
+   * @return a {@link CachedUrlSetHasher} object that will
    *         hash the names of cached urls matching this
    *         <code>CachedUrlSet</code>.
    */
   public CachedUrlSetHasher getNameHasher(MessageDigest hasher);
 
   /**
-   * Return an <code>Iterator</code> of <code>UrlElement</code>
+   * Return an {@link Iterator} of {@link CachedUrlSetNode}
    * objects representing the direct descendants of this
    * <code>CachedUrlSet</code>.  These are CachedUrlSets for internal nodes
    * and CachedUrls for leaf nodes.
-   * @return an <code>Iterator</code> of the <code>UrlElement</code>
+   * @return an {@link Iterator} of the {@link CachedUrlSetNode}s
    *         matching the members of the
-   *         <code>CachedUrlSetSpec</code> list.
+   *         {@link CachedUrlSetSpec} list.
    */
   public Iterator flatSetIterator();
 
   /**
-   * Return an <code>Iterator</code> of <code>UrlElement</code>
+   * Return an {@link Iterator} of {@link CachedUrlSetNode}
    * objects representing all the nodes of the tree rooted at this
    * <code>CachedUrlSet</code>.  These are CachedUrlSets for internal nodes
    * and CachedUrls for leaf nodes.
-   * @return an <code>Iterator</code> of <code>UrlElement</code>s
+   * @return an {@link Iterator} of {@link CachedUrlSetNode}s
    *         for all the nodes matching the members of the
-   *         <code>CachedUrlSetSpec</code> list.
+   *         {@link CachedUrlSetSpec} list.
    */
   public Iterator treeIterator();
 
@@ -126,18 +127,18 @@ public interface CachedUrlSet extends CachedUrlSetNode {
   // Methods used by readers
 
   /**
-   * Create a <code>CachedUrl</code> object within the set.
+   * Create a {@link CachedUrl} object within the set.
    * @param url the url of interest
-   * @return a <code>CachedUrl</code> object representing the url.
+   * @return a {@link CachedUrl} object representing the url.
    */
   public CachedUrl makeCachedUrl(String url);
 
   // Methods used by writers
 
   /**
-   * Create a <code>UrlCacher</code> object within the set.
+   * Create a {@link UrlCacher} object within the set.
    * @param url the url of interest
-   * @return a <code>UrlCacher</code> object representing the url.
+   * @return a {@link UrlCacher} object representing the url.
    */
   public UrlCacher makeUrlCacher(String url);
 

@@ -1,5 +1,5 @@
 /*
- * $Id: UrlCacher.java,v 1.1 2003-02-24 22:13:42 claire Exp $
+ * $Id: UrlCacher.java,v 1.2 2003-03-18 02:27:41 aalto Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ import org.lockss.daemon.*;
 public interface UrlCacher {
     /**
      * Return the url being represented
-     * @return the <code>String</code> url being represented.
+     * @return the {@link String} url being represented.
      */
     public String getUrl();
     /**

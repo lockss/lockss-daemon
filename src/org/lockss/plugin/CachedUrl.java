@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrl.java,v 1.2 2003-02-25 22:56:16 aalto Exp $
+ * $Id: CachedUrl.java,v 1.3 2003-03-18 02:27:40 aalto Exp $
  */
 
 /*
@@ -56,7 +56,7 @@ public interface CachedUrl extends CachedUrlSetNode {
     /**
      * Get an object from which the content of the url can be read
      * from the cache.
-     * @return a <code>InputStream</code> object from which the
+     * @return a {@link InputStream} object from which the
      *         unfiltered content of the cached url can be read.
      */
     public InputStream openForReading();
@@ -64,15 +64,15 @@ public interface CachedUrl extends CachedUrlSetNode {
     /**
      * Get an inputstream of the content suitable for hashing.
      * Probably filtered.
-     * @return an InputStream
+     * @return an {@link InputStream}
      */
     public InputStream openForHashing();
 
     /**
      * Get the properties attached to the url in the cache, if any.
-     * @return the <code>Properties</code> object attached to the
+     * @return the {@link Properties} object attached to the
      *         url.  If no properties have been attached, an
-     *         empty <code>Properties</code> object is returned.
+     *         empty {@link Properties} object is returned.
      */
     public Properties getProperties();
 
