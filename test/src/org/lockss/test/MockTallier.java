@@ -1,5 +1,5 @@
 /*
-* $Id: MockTallier.java,v 1.2 2003-07-09 20:06:46 clairegriffin Exp $
+* $Id: MockTallier.java,v 1.3 2003-07-17 05:33:12 tlipkis Exp $
  */
 
 /*
@@ -241,4 +241,41 @@ public class MockTallier implements Tallier {
   public void setStatus(int status) {
     m_status = status;
   }
+
+  public boolean stateIsActive() {
+    throw new RuntimeException("foo");
+  }
+
+  public boolean stateIsFinished() {
+    throw new RuntimeException("foo");
+  }
+
+  public boolean stateIsError() {
+    throw new RuntimeException("foo");
+  }
+
+  public boolean stateIsNoQuorum() {
+    throw new RuntimeException("foo");
+  }
+
+  public boolean stateIsInconclusive() {
+    throw new RuntimeException("foo");
+  }
+
+  public boolean stateIsLost() {
+    throw new RuntimeException("foo");
+  }
+
+  public boolean stateIsWon() {
+    throw new RuntimeException("foo");
+  }
+
+  public boolean stateIsSuspended() {
+    throw new RuntimeException("foo");
+  }
+
+  public void setStateSuspended() {
+    throw new RuntimeException("foo");
+  }
+
 }
