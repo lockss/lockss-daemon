@@ -1,5 +1,5 @@
 /*
- * $Id: HashSvcSchedImpl.java,v 1.3.2.2 2003-11-18 01:16:42 tlipkis Exp $
+ * $Id: HashSvcSchedImpl.java,v 1.3.2.3 2003-11-19 06:22:13 tlipkis Exp $
  */
 
 /*
@@ -56,8 +56,8 @@ public class HashSvcSchedImpl
   private long estPadConstant = 0;
   private long estPadPercent = 0;
   private List queue = new LinkedList();
-  private HistoryList completed = new HistoryList(50);
-  private int hashStepBytes = 10000;
+  private HistoryList completed = new HistoryList(DEFAULT_COMPLETED_MAX);
+  private int hashStepBytes = DEFAULT_STEP_BYTES;
   private BigInteger totalBytesHashed = BigInteger.valueOf(0);
   private int reqCtr = 0;
   private long totalTime = 0;
@@ -95,7 +95,7 @@ public class HashSvcSchedImpl
     int cMax = config.getInt(PARAM_COMPLETED_MAX, DEFAULT_COMPLETED_MAX);
     if (changedKeys.contains(PARAM_COMPLETED_MAX) ) {
       synchronized (completed) {
-	completed.setMax(config.getInt(PARAM_COMPLETED_MAX, 50));
+	completed.setMax(config.getInt(PARAM_COMPLETED_MAX, cMax));
       }
     }
   }
