@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.9 2003-09-03 17:59:53 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.10 2003-09-08 23:17:08 eaalto Exp $
  */
 
 /*
@@ -484,7 +484,7 @@ public class ConfigManager implements LockssManager {
       throw new RuntimeException("No cache config dir");
     }
     File cfile = new File(cacheConfigDir, cacheConfigFileName);
-    log.debug2("Reasding cache config file: " + cfile.toString());
+    log.debug2("Reading cache config file: " + cfile.toString());
     InputStream is = new FileInputStream(cfile);
     Configuration res = newConfiguration();
     res.load(is);
