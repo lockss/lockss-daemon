@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.9 2003-09-12 01:35:51 tlipkis Exp $
+ * $Id: AuConfig.java,v 1.10 2003-09-26 23:50:39 eaalto Exp $
  */
 
 /*
@@ -172,12 +172,12 @@ public class AuConfig extends LockssServlet {
     // make form findable by unit tests
     frm.attribute("id", "AuSummaryForm");
     frm.add("<input type=hidden name=\"" + ACTION_TAG + "\">");
-    addAuid(frm, null);
+    addAuId(frm, null);
     Table tbl = new Table(0, "align=center cellspacing=4 cellpadding=0");
     // make table findable by unit tests
     tbl.attribute("id", "AuSummaryTable");
     addAddAuRow(tbl);
-    Collection allAUs = pluginMgr.getAllAUs();
+    Collection allAUs = pluginMgr.getAllAus();
     if (!allAUs.isEmpty()) {
       for (Iterator iter = allAUs.iterator(); iter.hasNext(); ) {
 	addAuSummaryRow(tbl, (ArchivalUnit)iter.next());
@@ -204,7 +204,7 @@ public class AuConfig extends LockssServlet {
     tbl.newRow();
     tbl.newCell("align=right valign=center");
     String act = deleted ? "Restore": "Edit";
-    tbl.add(submitButton(act, act, "auid", au.getAUId()));
+    tbl.add(submitButton(act, act, "auid", au.getAuId()));
     tbl.newCell("valign=center");
     tbl.add(greyText(encodedAuName(au), deleted));
   }
@@ -222,7 +222,7 @@ public class AuConfig extends LockssServlet {
     if (!getEditKeys().isEmpty()) {
       actions.add(0, "Update");
     }
-    Form frm = createAUEditForm(actions, au, true);
+    Form frm = createAuEditForm(actions, au, true);
     page.add(frm);
     endPage(page);
   }
@@ -239,7 +239,7 @@ public class AuConfig extends LockssServlet {
     java.util.List actions =
       ListUtil.list(new Input(Input.Hidden, ACTION_TAG, "DoRestore"),
 		    new Input(Input.Submit, "button", "Restore"));
-    Form frm = createAUEditForm(actions, au, true);
+    Form frm = createAuEditForm(actions, au, true);
     page.add(frm);
     endPage(page);
   }
@@ -298,7 +298,7 @@ public class AuConfig extends LockssServlet {
 				 encodeText(plugin.getPluginName()) +
 				 "<br>Edit the parameters then click Create"));
 
-    Form frm = createAUEditForm(ListUtil.list("Create"), null, true);
+    Form frm = createAuEditForm(ListUtil.list("Create"), null, true);
     // Ensure still have title info if come back here on error
     frm.add(new Input(Input.Hidden, "Title", title));
     page.add(frm);
@@ -408,7 +408,7 @@ public class AuConfig extends LockssServlet {
    * @param editable true if the form should be editable.  (Not all the
    * fields will be editable in any case).
    */
-  private Form createAUEditForm(java.util.List actions, ArchivalUnit au,
+  private Form createAuEditForm(java.util.List actions, ArchivalUnit au,
 				boolean editable)
       throws IOException {
     boolean isNew = au == null;
@@ -461,7 +461,7 @@ public class AuConfig extends LockssServlet {
     if (isNew) {
       addPlugId(tbl, plugin);
     } else {
-      addAuid(tbl, au);
+      addAuId(tbl, au);
     }
     for (Iterator iter = actions.iterator(); iter.hasNext(); ) {
       Object act = iter.next();
@@ -526,7 +526,7 @@ public class AuConfig extends LockssServlet {
     formConfig = getAuConfigFromForm(true);
     try {
       ArchivalUnit au =
-	pluginMgr.createAndSaveAUConfiguration(plugin, formConfig);
+	pluginMgr.createAndSaveAuConfiguration(plugin, formConfig);
       statusMsg = "Archival Unit created.";
       displayEditAu(au);
     } catch (ArchivalUnit.ConfigurationException e) {
@@ -548,7 +548,7 @@ public class AuConfig extends LockssServlet {
     if (isChanged(auConfig, formConfig) ||
 	isChanged(pluginMgr.getStoredAuConfiguration(au), formConfig)) {
       try {
-	pluginMgr.setAndSaveAUConfiguration(au, formConfig);
+	pluginMgr.setAndSaveAuConfiguration(au, formConfig);
 	statusMsg = "Archival Unit configuration saved.";
       } catch (ArchivalUnit.ConfigurationException e) {
 	log.error("Couldn't reconfigure AU", e);
@@ -583,7 +583,7 @@ public class AuConfig extends LockssServlet {
 				 addFootnote(unconfigureFoot) + ": " +
 				 encodedAuName(au)));
 
-    Form frm = createAUEditForm(ListUtil.list("Confirm Unconfigure"),
+    Form frm = createAuEditForm(ListUtil.list("Confirm Unconfigure"),
 				au, false);
     page.add(frm);
     endPage(page);
@@ -592,7 +592,7 @@ public class AuConfig extends LockssServlet {
   /** Process the Confirm Unconfigure button */
   private void doUnconfigureAu(ArchivalUnit au) throws IOException {
     try {
-      pluginMgr.deleteAUConfiguration(au);
+      pluginMgr.deleteAuConfiguration(au);
       statusMsg = "Archival Unit configuration removed.";
     } catch (ArchivalUnit.ConfigurationException e) {
       log.error("Can't happen", e);
@@ -710,9 +710,9 @@ public class AuConfig extends LockssServlet {
   }
 
   /** Add auid to form in a hidden field */
-  private void addAuid(Composite comp, ArchivalUnit au) {
+  private void addAuId(Composite comp, ArchivalUnit au) {
     comp.add(new Input(Input.Hidden, "auid",
-		       au != null ? au.getAUId() : ""));
+		       au != null ? au.getAuId() : ""));
   }
 
   /** Add plugin id to form in a hidden field */
@@ -748,7 +748,7 @@ public class AuConfig extends LockssServlet {
   }
 
   void prepareConfigParams() {
-    auConfigParams = new ArrayList(plugin.getAUConfigProperties());
+    auConfigParams = new ArrayList(plugin.getAuConfigProperties());
     // let the plugin specify the order
     // Collections.sort(auConfigParams);
     defKeys = plugin.getDefiningConfigKeys();

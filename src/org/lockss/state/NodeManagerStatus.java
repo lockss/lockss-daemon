@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerStatus.java,v 1.13 2003-09-17 06:10:00 troberts Exp $
+ * $Id: NodeManagerStatus.java,v 1.14 2003-09-26 23:50:39 eaalto Exp $
  */
 
 /*
@@ -59,7 +59,7 @@ public class NodeManagerStatus {
     while (entries.hasNext()) {
       Map.Entry entry = (Map.Entry) entries.next();
       NodeManager manager = (NodeManager) entry.getValue();
-      if (manager.getAuState().au.getAUId().equals(key)) {
+      if (manager.getAuState().au.getAuId().equals(key)) {
         return (NodeManagerImpl) manager;
       }
     }
@@ -123,7 +123,7 @@ public class NodeManagerStatus {
 
       //"AuID"
       rowMap.put("AuName", ManagerStatus.makeNodeManagerRef(au.getName(),
-							    au.getAUId()));
+							    au.getAuId()));
 
       //"Status"
       rowMap.put("CrawlTime", new Long(state.getLastCrawlTime()));
@@ -191,7 +191,7 @@ public class NodeManagerStatus {
 
     private List getRows(NodeManagerImpl nodeManager) {
       Iterator entries = nodeManager.getCacheEntries();
-      String auId = nodeManager.getAuState().getArchivalUnit().getAUId();
+      String auId = nodeManager.getAuState().getArchivalUnit().getAuId();
       ArrayList entriesL = new ArrayList();
       while (entries.hasNext()) {
         NodeState state = (NodeState) entries.next();

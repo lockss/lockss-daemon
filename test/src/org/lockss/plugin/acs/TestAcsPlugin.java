@@ -1,5 +1,5 @@
 /*
- * $Id: TestAcsPlugin.java,v 1.2 2003-09-22 23:52:04 clairegriffin Exp $
+ * $Id: TestAcsPlugin.java,v 1.3 2003-09-26 23:49:01 eaalto Exp $
  */
 
 /*
@@ -48,9 +48,9 @@ public class TestAcsPlugin extends LockssTestCase {
     plugin.initPlugin(null);
   }
 
-  public void testGetAUNullConfig() throws ArchivalUnit.ConfigurationException {
+  public void testGetAuNullConfig() throws ArchivalUnit.ConfigurationException {
     try {
-      plugin.configureAU(null, null);
+      plugin.configureAu(null, null);
       fail("Didn't throw ArchivalUnit.ConfigurationException");
     } catch (ArchivalUnit.ConfigurationException e) { }
   }
@@ -58,7 +58,7 @@ public class TestAcsPlugin extends LockssTestCase {
   private AcsArchivalUnit makeAuFromProps(Properties props)
       throws ArchivalUnit.ConfigurationException {
     Configuration config = ConfigurationUtil.fromProps(props);
-    return (AcsArchivalUnit)plugin.configureAU(config, null);
+    return (AcsArchivalUnit)plugin.configureAu(config, null);
   }
 
   public void testGetAuHandlesBadUrl()
@@ -97,13 +97,13 @@ public class TestAcsPlugin extends LockssTestCase {
 		 plugin.getPluginId());
   }
 
-  public void testGetAUConfigProperties() {
+  public void testGetAuConfigProperties() {
     assertEquals(ListUtil.list(ConfigParamDescr.BASE_URL,
                                AcsPlugin.ARTICLE_URL,
                                AcsPlugin.JOURNAL_KEY,
 			       ConfigParamDescr.VOLUME_NUMBER,
                                AcsPlugin.JOURNAL_YEAR),
-		 plugin.getAUConfigProperties());
+		 plugin.getAuConfigProperties());
   }
 
   public void testGetDefiningProperties() {

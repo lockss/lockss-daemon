@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkHandler.java,v 1.38 2003-09-17 06:10:00 troberts Exp $
+ * $Id: TreeWalkHandler.java,v 1.39 2003-09-26 23:50:39 eaalto Exp $
  */
 
 /*
@@ -165,7 +165,7 @@ public class TreeWalkHandler {
   }
 
   private void nodeTreeWalk() {
-    CachedUrlSet cus = theAu.getAUCachedUrlSet();
+    CachedUrlSet cus = theAu.getAuCachedUrlSet();
     recurseTreeWalk(cus);
   }
 

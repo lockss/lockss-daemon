@@ -1,5 +1,5 @@
 /*
- * $Id: TestIeeePlugin.java,v 1.1 2003-09-24 23:43:48 clairegriffin Exp $
+ * $Id: TestIeeePlugin.java,v 1.2 2003-09-26 23:49:01 eaalto Exp $
  */
 
 /*
@@ -50,7 +50,7 @@ public class TestIeeePlugin extends LockssTestCase {
 
   public void testGetAUNullConfig() throws ArchivalUnit.ConfigurationException {
     try {
-      plugin.configureAU(null, null);
+      plugin.configureAu(null, null);
       fail("Didn't throw ArchivalUnit.ConfigurationException");
     } catch (ArchivalUnit.ConfigurationException e) { }
   }
@@ -58,7 +58,7 @@ public class TestIeeePlugin extends LockssTestCase {
   private IeeeArchivalUnit makeAuFromProps(Properties props)
       throws ArchivalUnit.ConfigurationException {
     Configuration config = ConfigurationUtil.fromProps(props);
-    return (IeeeArchivalUnit)plugin.configureAU(config, null);
+    return (IeeeArchivalUnit)plugin.configureAu(config, null);
   }
 
   public void testGetAuHandlesBadUrl()
@@ -97,7 +97,7 @@ public class TestIeeePlugin extends LockssTestCase {
     assertEquals(ListUtil.list(ConfigParamDescr.BASE_URL,
                                IeeePlugin.PU_NUMBER,
 			       IeeePlugin.JOURNAL_YEAR),
-		 plugin.getAUConfigProperties());
+		 plugin.getAuConfigProperties());
   }
 
   public void testGetDefiningProperties() {

@@ -1,5 +1,5 @@
 /*
- * $Id: StartProxy.java,v 1.8 2003-06-20 22:34:54 claire Exp $
+ * $Id: StartProxy.java,v 1.9 2003-09-26 23:49:01 eaalto Exp $
  */
 
 /*
@@ -41,7 +41,7 @@ import org.lockss.test.*;
 public class StartProxy {
   public static void main(String args[]) {
     MockLockssDaemon daemon = new MockLockssDaemon(null);
-    ArchivalUnit au = PTestPlugin.makeTestAU();
+    ArchivalUnit au = PTestPlugin.makeTestAu();
     PluginUtil.registerArchivalUnit(au);
 
     ProxyManager manager = new ProxyManager();

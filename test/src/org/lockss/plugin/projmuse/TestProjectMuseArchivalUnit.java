@@ -1,5 +1,5 @@
 /*
- * $Id: TestProjectMuseArchivalUnit.java,v 1.5 2003-09-19 22:39:52 eaalto Exp $
+ * $Id: TestProjectMuseArchivalUnit.java,v 1.6 2003-09-26 23:49:01 eaalto Exp $
  */
 
 /*
@@ -176,7 +176,7 @@ public class TestProjectMuseArchivalUnit extends LockssTestCase {
     assertTrue(uc.shouldBeCached()==shouldCache);
   }
 
-  public void testStartURLConstruction() throws Exception {
+  public void testStartUrlConstruction() throws Exception {
     URL url = new URL(ROOT_URL);
 
     // 2 digit

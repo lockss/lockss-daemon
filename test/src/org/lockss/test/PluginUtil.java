@@ -1,5 +1,5 @@
 /*
- * $Id: PluginUtil.java,v 1.5 2003-06-20 22:34:56 claire Exp $
+ * $Id: PluginUtil.java,v 1.6 2003-09-26 23:49:01 eaalto Exp $
  */
 
 /*
@@ -78,7 +78,7 @@ public class PluginUtil {
     PluginManager mgr = getPluginManager();
     String plugid = au.getPluginId();
     Plugin plug = mgr.getPlugin(plugid);
-    log.debug("registerArchivalUnit id = " + au.getAUId() +
+    log.debug("registerArchivalUnit id = " + au.getAuId() +
 	      ", pluginid = " + plugid + ", plugin = " + plug);
     if (plug == null) {
       MockPlugin mp = new MockPlugin();
@@ -94,7 +94,7 @@ public class PluginUtil {
     log.debug(mgr.toString());
     String plugid = au.getPluginId();
     Plugin plug = mgr.getPlugin(plugid);
-    log.debug("registerArchivalUnit id = " + au.getAUId() +
+    log.debug("registerArchivalUnit id = " + au.getAuId() +
 	      ", pluginid = " + plugid + ", plugin = " + plug);
     if (plug == null) {
       MockPlugin mp = new MockPlugin();
@@ -130,7 +130,7 @@ public class PluginUtil {
       aulist.remove(au);
     }
   }
-    
+
   public static void unregisterAllArchivalUnits() {
     log.debug("unregisterAllArchivalUnits()");
     List aus = new ArrayList(aulist);

@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.154 2003-09-17 06:09:59 troberts Exp $
+ * $Id: NodeManagerImpl.java,v 1.155 2003-09-26 23:50:39 eaalto Exp $
  */
 
 /*
@@ -266,7 +266,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
 
   public void forceTopLevelPoll() {
     logger.info("Forcing top level poll...");
-    NodeState topNode = getNodeState(managedAu.getAUCachedUrlSet());
+    NodeState topNode = getNodeState(managedAu.getAuCachedUrlSet());
     Iterator activePolls = topNode.getActivePolls();
     if (!activePolls.hasNext()) {
       callTopLevelPoll();
@@ -388,7 +388,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     getAuState().newCrawlFinished();
 
     // checkpoint the top-level nodestate
-    NodeState topState = getNodeState(managedAu.getAUCachedUrlSet());
+    NodeState topState = getNodeState(managedAu.getAuCachedUrlSet());
     CrawlState crawl = topState.getCrawlState();
     crawl.status = CrawlState.FINISHED;
     crawl.type = CrawlState.NEW_CONTENT_CRAWL;
@@ -965,7 +965,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
           // call a content poll for this node's content if we haven't started
           // sub-dividing yet (and not an AU url, since they never have content)
           if ((lastOrCurrentPoll.getLwrBound() == null) &&
-              (!nodeState.getCachedUrlSet().getSpec().isAU())) {
+              (!nodeState.getCachedUrlSet().getSpec().isAu())) {
             logger.debug2("calling single node content poll on node's contents");
             //XXX once we're checking the content bit in the name poll,
             // only call SNCP if has content
@@ -1047,7 +1047,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
       case NodeState.INITIAL:
       case NodeState.OK:
         // check time, switch to NEEDS_POLL if necessary and call toplevel poll
-        if (nodeState.getCachedUrlSet().getSpec().isAU()) {
+        if (nodeState.getCachedUrlSet().getSpec().isAu()) {
           // query the AU if a top level poll should be started
           if (managedAu.shouldCallTopLevelPoll(auState)) {
             if (!reportOnly) {
@@ -1270,7 +1270,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
 
 
   void callTopLevelPoll() {
-    PollSpec spec = new PollSpec(managedAu.getAUCachedUrlSet());
+    PollSpec spec = new PollSpec(managedAu.getAuCachedUrlSet());
     try {
       logger.debug2("Calling a top level poll on " + spec);
       pollManager.sendPollRequest(LcapMessage.CONTENT_POLL_REQ, spec);
@@ -1354,7 +1354,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
   private void callContentPollsOnSubNodes(NodeState state, CachedUrlSet cus)
       throws IOException {
     Iterator children = cus.flatSetIterator();
-    List childList = convertChildrenToCUSList(children);
+    List childList = convertChildrenToCusList(children);
     // Divide the list in two and call two new content polls
     if (childList.size() > 4) {
       logger.debug2("more than 4 children, calling ranged content polls.");
@@ -1448,7 +1448,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     }
   }
 
-  private List convertChildrenToCUSList(Iterator children) {
+  private List convertChildrenToCusList(Iterator children) {
     ArrayList childList = new ArrayList();
     if (children != null) {
       while (children.hasNext()) {
@@ -1518,7 +1518,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
   }
 
   boolean isTopLevelPollFinished(CachedUrlSetSpec spec, int type) {
-    return (spec.isAU() && (type == Poll.CONTENT_POLL));
+    return (spec.isAu() && (type == Poll.CONTENT_POLL));
   }
 
   class ContentRepairCallback implements CrawlManager.Callback {

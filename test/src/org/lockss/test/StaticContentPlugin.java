@@ -1,5 +1,5 @@
 /*
- * $Id: StaticContentPlugin.java,v 1.16 2003-09-17 06:10:05 troberts Exp $
+ * $Id: StaticContentPlugin.java,v 1.17 2003-09-26 23:49:01 eaalto Exp $
  */
 
 /*
@@ -69,11 +69,11 @@ public class StaticContentPlugin extends BasePlugin implements PluginTestable {
     throw new UnsupportedOperationException("Not implemented");
   }
 
-  public List getAUConfigProperties() {
+  public List getAuConfigProperties() {
     throw new UnsupportedOperationException("Not implemented");
   }
 
-  public ArchivalUnit createAU(Configuration auConfig)
+  public ArchivalUnit createAu(Configuration auConfig)
       throws ArchivalUnit.ConfigurationException {
     return new SAU(this);
   }

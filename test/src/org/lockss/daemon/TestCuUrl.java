@@ -1,5 +1,5 @@
 /*
- * $Id: TestCuUrl.java,v 1.5 2003-09-19 22:41:18 eaalto Exp $
+ * $Id: TestCuUrl.java,v 1.6 2003-09-26 23:50:38 eaalto Exp $
  */
 
 /*
@@ -72,9 +72,9 @@ public class TestCuUrl extends LockssTestCase {
     // create an AU with some static content
     StaticContentPlugin spl = new StaticContentPlugin();
     spl.initPlugin(theDaemon);
-    au = (StaticContentPlugin.SAU)spl.createAU(null);
+    au = (StaticContentPlugin.SAU)spl.createAu(null);
     PluginUtil.registerArchivalUnit(spl, au);
-    fillAU(au);
+    fillAu(au);
 
     theDaemon.getLockssRepository(au);
   }
@@ -106,7 +106,7 @@ public class TestCuUrl extends LockssTestCase {
    * @param au the static AU
    * @return an ArchivalUnit
    */
-  public static ArchivalUnit fillAU(StaticContentPlugin.SAU au) {
+  public static ArchivalUnit fillAu(StaticContentPlugin.SAU au) {
     for (int i = 0; i < testUrls.length; i++) {
       au.storeCachedUrl(testUrls[i], testTypes[i], testContents[i]);
     }
@@ -114,7 +114,7 @@ public class TestCuUrl extends LockssTestCase {
   }
 
   public void testCuUrl() throws Exception {
-    CachedUrlSet cus = au.getAUCachedUrlSet();
+    CachedUrlSet cus = au.getAuCachedUrlSet();
     log.debug("cus: " + cus);
     // non-existent url should return null CU
     assertNull(au.getPlugin().makeCachedUrl(cus, "foobarnotthere"));

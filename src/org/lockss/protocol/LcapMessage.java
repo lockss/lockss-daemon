@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessage.java,v 1.43 2003-07-16 17:34:40 dshr Exp $
+ * $Id: LcapMessage.java,v 1.44 2003-09-26 23:50:39 eaalto Exp $
  */
 
 /*
@@ -156,7 +156,7 @@ public class LcapMessage
     m_targetUrl = ps.getUrl();
     m_uprBound = ps.getUprBound();
     m_lwrBound = ps.getLwrBound();
-    m_archivalID = ps.getAUId();
+    m_archivalID = ps.getAuId();
     m_ttl = ttl;
     m_challenge = challenge;
     m_verifier = verifier;
@@ -188,7 +188,7 @@ public class LcapMessage
     m_targetUrl = trigger.getTargetUrl();
     m_uprBound = trigger.getUprBound();
     m_lwrBound = trigger.getLwrBound();
-    m_archivalID = trigger.getArchivalID();
+    m_archivalID = trigger.getArchivalId();
     m_entries = entries;
     m_hashAlgorithm = trigger.getHashAlgorithm();
     m_originAddr = localID.getAddress();
@@ -564,7 +564,7 @@ public class LcapMessage
     return POLL_OPCODES[m_opcode];
   }
 
-  public String getArchivalID() {
+  public String getArchivalId() {
     return m_archivalID;
   }
 

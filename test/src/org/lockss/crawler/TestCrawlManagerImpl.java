@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.31 2003-09-17 06:10:00 troberts Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.32 2003-09-26 23:50:39 eaalto Exp $
  */
 
 /*
@@ -99,7 +99,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     super.tearDown();
   }
 
-  public void testNullAUForIsCrawlingAU() {
+  public void testNullAuForIsCrawlingAu() {
     try {
       TestCrawlCB cb = new TestCrawlCB(new SimpleBinarySemaphore());
       crawlManager.startNewContentCrawl(null, cb, "blah", null);
@@ -232,7 +232,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     waitForCrawlToFinish(finishedSem);
   }
 
-  public void testScheduleRepairNullAU() {
+  public void testScheduleRepairNullAu() {
     try{
       crawlManager.startRepair(null, ListUtil.list("http://www.example.com"),
                                new TestCrawlCB(), "blah", null);
@@ -403,32 +403,32 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 
   //StatusSource tests
 
-  public void testGetActiveAUsReturnsEmptyCollectionIfNoCrawls() {
-    Collection coll = statusSource.getActiveAUs();
+  public void testGetActiveAusReturnsEmptyCollectionIfNoCrawls() {
+    Collection coll = statusSource.getActiveAus();
     assertEquals(0, coll.size());
   }
 
-  public void testGetActiveAUsOneNCCrawl() {
+  public void testGetActiveAusOneNCCrawl() {
     SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
     crawlManager.startNewContentCrawl(mau, new TestCrawlCB(sem), null, null);
 
-    Collection actual = statusSource.getActiveAUs();
-    Collection expected = ListUtil.list(mau.getAUId());
+    Collection actual = statusSource.getActiveAus();
+    Collection expected = ListUtil.list(mau.getAuId());
     assertSameElements(expected, actual);
     waitForCrawlToFinish(sem);
   }
 
-  public void testGetActiveAUsOneRepairCrawl() {
+  public void testGetActiveAusOneRepairCrawl() {
     SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
     crawlManager.startRepair(mau, ListUtil.list(GENERIC_URL),
 			     new TestCrawlCB(sem), null, null);
-    Collection actual = statusSource.getActiveAUs();
-    Collection expected = ListUtil.list(mau.getAUId());
+    Collection actual = statusSource.getActiveAus();
+    Collection expected = ListUtil.list(mau.getAuId());
     assertSameElements(expected, actual);
     waitForCrawlToFinish(sem);
   }
 
-  public void testGetActiveAUsMulti() {
+  public void testGetActiveAusMulti() {
     SimpleBinarySemaphore sem1 = new SimpleBinarySemaphore();
     SimpleBinarySemaphore sem2 = new SimpleBinarySemaphore();
     crawlManager.startRepair(mau, ListUtil.list(GENERIC_URL),
@@ -442,15 +442,15 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 
     crawlManager.startNewContentCrawl(mau2, new TestCrawlCB(sem2), null, null);
 
-    Collection actual = statusSource.getActiveAUs();
-    Collection expected = ListUtil.list(mau.getAUId(), mau2.getAUId());
+    Collection actual = statusSource.getActiveAus();
+    Collection expected = ListUtil.list(mau.getAuId(), mau2.getAuId());
     assertSameElements(expected, actual);
     waitForCrawlToFinish(sem1);
     waitForCrawlToFinish(sem2);
   }
 
   public void testGetCrawlsNoCrawls() {
-    Collection coll = statusSource.getCrawls(mau.getAUId());
+    Collection coll = statusSource.getCrawls(mau.getAuId());
     assertEquals(0, coll.size());
   }
 
@@ -458,7 +458,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
     crawlManager.startRepair(mau, ListUtil.list(GENERIC_URL),
 			     new TestCrawlCB(sem), null, null);
-    Collection actual = statusSource.getCrawls(mau.getAUId());
+    Collection actual = statusSource.getCrawls(mau.getAuId());
     Collection expected = ListUtil.list(crawler);
 
     assertEquals(expected, actual);
@@ -468,7 +468,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
   public void testGetCrawlsOneNCCrawl() {
     SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
     crawlManager.startNewContentCrawl(mau, new TestCrawlCB(sem), null, null);
-    Collection actual = statusSource.getCrawls(mau.getAUId());
+    Collection actual = statusSource.getCrawls(mau.getAuId());
     Collection expected = ListUtil.list(crawler);
     assertEquals(expected, actual);
     waitForCrawlToFinish(sem);
@@ -484,7 +484,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     crawlManager.setTestCrawler(crawler2);
     crawlManager.startNewContentCrawl(mau, new TestCrawlCB(sem2), null, null);
 
-    Collection actual = statusSource.getCrawls(mau.getAUId());
+    Collection actual = statusSource.getCrawls(mau.getAuId());
     Collection expected = ListUtil.list(crawler, crawler2);
     assertEquals(expected, actual);
     waitForCrawlToFinish(sem1);
@@ -496,8 +496,8 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     protected Crawler makeCrawler(ArchivalUnit au, Collection urls,
 				  int type, boolean followLinks) {
 
-      mockCrawler.setAU(au);
-      mockCrawler.setURLs(urls);
+      mockCrawler.setAu(au);
+      mockCrawler.setUrls(urls);
       mockCrawler.setFollowLinks(followLinks);
       mockCrawler.setType(type);
       return mockCrawler;

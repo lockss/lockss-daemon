@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericContentHasher.java,v 1.19 2003-09-17 06:10:00 troberts Exp $
+ * $Id: TestGenericContentHasher.java,v 1.20 2003-09-26 23:49:02 eaalto Exp $
  */
 
 /*
@@ -95,7 +95,7 @@ public class TestGenericContentHasher extends LockssTestCase {
 
   public void testHashNoChildren() throws IOException, FileNotFoundException {
     CachedUrlSet cus = makeFakeCachedUrlSet(0);
-    byte[] bytes = getExpectedCUSBytes(cus);
+    byte[] bytes = getExpectedCusBytes(cus);
 
     GenericContentHasher hasher = new GenericContentHasher(cus, dig);
 
@@ -146,7 +146,7 @@ public class TestGenericContentHasher extends LockssTestCase {
     files.add(cu);
     cus.setHashItSource(files);
 
-    byte[] bytes = getExpectedCUSBytes(cus);
+    byte[] bytes = getExpectedCusBytes(cus);
 
     GenericContentHasher hasher = new GenericContentHasher(cus, dig);
 
@@ -155,7 +155,7 @@ public class TestGenericContentHasher extends LockssTestCase {
 
   public void testHashSingleChild() throws IOException, FileNotFoundException {
     CachedUrlSet cus = makeFakeCachedUrlSet(1);
-    byte[] bytes = getExpectedCUSBytes(cus);
+    byte[] bytes = getExpectedCusBytes(cus);
 
     GenericContentHasher hasher = new GenericContentHasher(cus, dig);
 
@@ -181,7 +181,7 @@ public class TestGenericContentHasher extends LockssTestCase {
     cus.addUrl(TEST_FILE_CONTENT+" base", TEST_URL_BASE, true, true);
     cus.setHashItSource(files);
 
-    byte[] bytes = getExpectedCUSBytes(cus);
+    byte[] bytes = getExpectedCusBytes(cus);
 
     GenericContentHasher hasher = new GenericContentHasher(cus, dig);
 
@@ -263,7 +263,7 @@ public class TestGenericContentHasher extends LockssTestCase {
     cus.addUrl(TEST_FILE_CONTENT+" base", TEST_URL_BASE, true, true);
     cus.setHashItSource(files);
 
-    byte[] expectedBytes = getExpectedCUSBytes(cus);
+    byte[] expectedBytes = getExpectedCusBytes(cus);
     //set the input stream again, since the above call uses it up
     is.regenerate();
     is.setZeroInterval(2);
@@ -286,7 +286,7 @@ public class TestGenericContentHasher extends LockssTestCase {
   public void testHashMultipleFiles()
       throws IOException, FileNotFoundException {
     CachedUrlSet cus = makeFakeCachedUrlSet(5);
-    byte[] expectedBytes = getExpectedCUSBytes(cus);
+    byte[] expectedBytes = getExpectedCusBytes(cus);
 
 
     GenericContentHasher hasher = new GenericContentHasher(cus, dig);
@@ -297,7 +297,7 @@ public class TestGenericContentHasher extends LockssTestCase {
   public void testHashMultipleFilesSmallSteps()
       throws IOException, FileNotFoundException {
     CachedUrlSet cus = makeFakeCachedUrlSet(5);
-    byte[] expectedBytes = getExpectedCUSBytes(cus);
+    byte[] expectedBytes = getExpectedCusBytes(cus);
 
 
     GenericContentHasher hasher = new GenericContentHasher(cus, dig);
@@ -308,7 +308,7 @@ public class TestGenericContentHasher extends LockssTestCase {
   public void testHashMultipleFilesStepsLargerThanCU()
       throws IOException, FileNotFoundException {
     CachedUrlSet cus = makeFakeCachedUrlSet(5);
-    byte[] expectedBytes = getExpectedCUSBytes(cus);
+    byte[] expectedBytes = getExpectedCusBytes(cus);
 
 
     GenericContentHasher hasher = new GenericContentHasher(cus, dig);
@@ -318,7 +318,7 @@ public class TestGenericContentHasher extends LockssTestCase {
   public void testHashMultipleFilesTooLargeStep()
       throws IOException, FileNotFoundException {
     CachedUrlSet cus = makeFakeCachedUrlSet(5);
-    byte[] expectedBytes = getExpectedCUSBytes(cus);
+    byte[] expectedBytes = getExpectedCusBytes(cus);
 
 
     GenericContentHasher hasher = new GenericContentHasher(cus, dig);
@@ -345,7 +345,7 @@ public class TestGenericContentHasher extends LockssTestCase {
     return cus;
   }
 
-  private byte[] getExpectedCUSBytes(CachedUrlSet cus) throws IOException {
+  private byte[] getExpectedCusBytes(CachedUrlSet cus) throws IOException {
     Iterator it = cus.contentHashIterator();
     List byteArrays = new LinkedList();
     int totalSize = 0;
@@ -353,7 +353,7 @@ public class TestGenericContentHasher extends LockssTestCase {
     while (it.hasNext()) {
       CachedUrl cu = cachedUrlSetNodeToCachedUrl((CachedUrlSetNode) it.next());
       if (cu.hasContent()) {
-	byte[] arr = getExpectedCUBytes(cu);
+	byte[] arr = getExpectedCuBytes(cu);
 	totalSize += arr.length;
 	byteArrays.add(arr);
       }
@@ -383,7 +383,7 @@ public class TestGenericContentHasher extends LockssTestCase {
     return null;
   }
 
-  private byte[] getExpectedCUBytes(CachedUrl cu) throws IOException {
+  private byte[] getExpectedCuBytes(CachedUrl cu) throws IOException {
     String name = cu.getUrl();
     InputStream contentStream = cu.openForHashing();
     StringBuffer sb = new StringBuffer();

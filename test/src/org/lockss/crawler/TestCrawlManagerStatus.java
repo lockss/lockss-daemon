@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerStatus.java,v 1.2 2003-07-18 22:18:24 troberts Exp $
+ * $Id: TestCrawlManagerStatus.java,v 1.3 2003-09-26 23:50:39 eaalto Exp $
  */
 
 /*
@@ -102,7 +102,7 @@ public class TestCrawlManagerStatus extends LockssTestCase {
     assertEquals(new ArrayList(), table.getSortedRows());
   }
 
-  private MockArchivalUnit makeMockAUWithId(String auid) {
+  private MockArchivalUnit makeMockAuWithId(String auid) {
     MockArchivalUnit mau = new MockArchivalUnit();
     mau.setAuId(auid);
     return mau;
@@ -116,14 +116,14 @@ public class TestCrawlManagerStatus extends LockssTestCase {
     crawler.setEndTime(2);
     crawler.setNumFetched(3);
     crawler.setNumParsed(4);
-     crawler.setAU(new MockArchivalUnit());
+     crawler.setAu(new MockArchivalUnit());
 
     MockCrawler crawler2 = new MockCrawler();
     crawler2.setStartTime(7);
     crawler2.setEndTime(8);
     crawler2.setNumFetched(9);
     crawler2.setNumParsed(10);
-    crawler2.setAU(new MockArchivalUnit());
+    crawler2.setAu(new MockArchivalUnit());
     statusSource.setCrawls(ListUtil.list(crawler), "test_key");
     statusSource.setCrawls(ListUtil.list(crawler2), "not_test_key");
 
@@ -141,24 +141,24 @@ public class TestCrawlManagerStatus extends LockssTestCase {
     assertEquals(new Long(4), map.get(NUM_URLS_PARSED));
   }
 
-  public void testPopulateTableAllAUs() {
+  public void testPopulateTableAllAus() {
     StatusTable table = new StatusTable("test");
     MockCrawler crawler = new MockCrawler();
     crawler.setStartTime(1);
     crawler.setEndTime(2);
     crawler.setNumFetched(3);
     crawler.setNumParsed(4);
-    crawler.setAU(new MockArchivalUnit());
+    crawler.setAu(new MockArchivalUnit());
 
     MockCrawler crawler2 = new MockCrawler();
     crawler2.setStartTime(7);
     crawler2.setEndTime(8);
     crawler2.setNumFetched(9);
     crawler2.setNumParsed(10);
-    crawler2.setAU(new MockArchivalUnit());
+    crawler2.setAu(new MockArchivalUnit());
     statusSource.setCrawls(ListUtil.list(crawler), "id1");
     statusSource.setCrawls(ListUtil.list(crawler2), "id2");
-    statusSource.setActiveAUs(ListUtil.list("id1", "id2"));
+    statusSource.setActiveAus(ListUtil.list("id1", "id2"));
 
     cmStatus.populateTable(table);
     assertEquals("Crawl Status", table.getTitle());
@@ -186,15 +186,15 @@ public class TestCrawlManagerStatus extends LockssTestCase {
 
     MockCrawler crawler = new MockCrawler();
     crawler.setType(Crawler.NEW_CONTENT);
-    crawler.setAU(new MockArchivalUnit());
+    crawler.setAu(new MockArchivalUnit());
 
     MockCrawler crawler2 = new MockCrawler();
     crawler2.setType(Crawler.REPAIR);
-    crawler2.setAU(new MockArchivalUnit());
+    crawler2.setAu(new MockArchivalUnit());
 
     statusSource.setCrawls(ListUtil.list(crawler), "key1");
     statusSource.setCrawls(ListUtil.list(crawler2), "key2");
-    statusSource.setActiveAUs(ListUtil.list("key1", "key2"));
+    statusSource.setActiveAus(ListUtil.list("key1", "key2"));
 
     cmStatus.populateTable(table);
     assertEquals(expectedColDescs, table.getColumnDescriptors());

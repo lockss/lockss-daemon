@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWirePlugin.java,v 1.13 2003-08-04 07:57:49 tlipkis Exp $
+ * $Id: TestHighWirePlugin.java,v 1.14 2003-09-26 23:49:01 eaalto Exp $
  */
 
 /*
@@ -54,44 +54,44 @@ public class TestHighWirePlugin extends LockssTestCase {
     plugin.initPlugin(null);
   }
 
-  public void testGetAUNullConfig() 
+  public void testGetAuNullConfig()
       throws ArchivalUnit.ConfigurationException {
     try {
-      plugin.configureAU(null, null);
+      plugin.configureAu(null, null);
       fail("Didn't throw ArchivalUnit.ConfigurationException");
     } catch (ArchivalUnit.ConfigurationException e) {
     }
   }
 
-  private HighWireArchivalUnit makeAUFromProps(Properties props)
+  private HighWireArchivalUnit makeAuFromProps(Properties props)
       throws ArchivalUnit.ConfigurationException {
     Configuration config = ConfigurationUtil.fromProps(props);
-    return (HighWireArchivalUnit)plugin.configureAU(config, null);
+    return (HighWireArchivalUnit)plugin.configureAu(config, null);
   }
 
-  public void testGetAUHandlesBadUrl() 
+  public void testGetAuHandlesBadUrl()
       throws ArchivalUnit.ConfigurationException, MalformedURLException {
     Properties props = new Properties();
     props.setProperty(HighWirePlugin.AUPARAM_VOL, "322");
     props.setProperty(HighWirePlugin.AUPARAM_BASE_URL, "blah");
-    
+
     try {
-      HighWireArchivalUnit au = makeAUFromProps(props);
+      HighWireArchivalUnit au = makeAuFromProps(props);
       fail ("Didn't throw InstantiationException when given a bad url");
     } catch (ArchivalUnit.ConfigurationException auie) {
-      MalformedURLException murle = 
+      MalformedURLException murle =
 	(MalformedURLException)auie.getNestedException();
       assertNotNull(auie.getNestedException());
     }
   }
 
-  public void testGetAUConstructsProperAU() 
+  public void testGetAuConstructsProperAu()
       throws ArchivalUnit.ConfigurationException, MalformedURLException {
     Properties props = new Properties();
     props.setProperty(AUPARAM_VOL, "322");
     props.setProperty(AUPARAM_BASE_URL, "http://www.example.com/");
-    
-    HighWireArchivalUnit au = makeAUFromProps(props);
+
+    HighWireArchivalUnit au = makeAuFromProps(props);
     assertEquals(322, au.getVolumeNumber());
     assertEquals(new URL("http://www.example.com/"), au.getBaseUrl());
   }
@@ -101,10 +101,10 @@ public class TestHighWirePlugin extends LockssTestCase {
 		 plugin.getPluginId());
   }
 
-  public void testGetAUConfigProperties() {
+  public void testGetAuConfigProperties() {
     assertEquals(ListUtil.list(ConfigParamDescr.BASE_URL,
 			       ConfigParamDescr.VOLUME_NUMBER),
-		 plugin.getAUConfigProperties());
+		 plugin.getAuConfigProperties());
   }
 
   public void testGetDefiningProperties() {

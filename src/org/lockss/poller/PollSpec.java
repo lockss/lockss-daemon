@@ -1,5 +1,5 @@
 /*
- * $Id: PollSpec.java,v 1.16 2003-08-21 19:29:18 eaalto Exp $
+ * $Id: PollSpec.java,v 1.17 2003-09-26 23:50:40 eaalto Exp $
  */
 
 /*
@@ -93,7 +93,7 @@ public class PollSpec {
   public PollSpec(CachedUrlSet cus, String lwrBound, String uprBound) {
     this.cus = cus;
     ArchivalUnit au = cus.getArchivalUnit();
-    auId = au.getAUId();
+    auId = au.getAuId();
     CachedUrlSetSpec cuss = cus.getSpec();
     url = cuss.getUrl();
     this.lwrBound = lwrBound;
@@ -116,7 +116,7 @@ public class PollSpec {
 		  int version) {
     this.cus = cus;
     ArchivalUnit au = cus.getArchivalUnit();
-    auId = au.getAUId();
+    auId = au.getAuId();
     CachedUrlSetSpec cuss = cus.getSpec();
     url = cuss.getUrl();
     this.lwrBound = lwrBound;
@@ -131,7 +131,7 @@ public class PollSpec {
   public PollSpec(CachedUrlSet cus) {
     this.cus = cus;
     ArchivalUnit au = cus.getArchivalUnit();
-    auId = au.getAUId();
+    auId = au.getAuId();
     CachedUrlSetSpec cuss = cus.getSpec();
     url = cuss.getUrl();
     if (cuss instanceof RangeCachedUrlSetSpec) {
@@ -152,7 +152,7 @@ public class PollSpec {
    * @param msg the LcapMessage which defines the range of interest
    */
   public PollSpec(LcapMessage msg) {
-    auId = msg.getArchivalID();
+    auId = msg.getArchivalId();
     url = msg.getTargetUrl();
     uprBound = msg.getUprBound();
     lwrBound = msg.getLwrBound();
@@ -164,7 +164,7 @@ public class PollSpec {
     return cus;
   }
 
-  public String getAUId() {
+  public String getAuId() {
     return auId;
   }
 

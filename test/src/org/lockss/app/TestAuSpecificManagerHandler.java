@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuSpecificManagerHandler.java,v 1.1 2003-06-26 01:03:13 eaalto Exp $
+ * $Id: TestAuSpecificManagerHandler.java,v 1.2 2003-09-26 23:50:38 eaalto Exp $
  */
 
 /*
@@ -59,23 +59,23 @@ public class TestAuSpecificManagerHandler extends LockssTestCase {
   }
 
   public void testGetLockssManager() {
-    String auId = mau.getAUId();
-    LockssManager man1 = handler.getAUSpecificManager(LockssDaemon.NODE_MANAGER,
+    String auId = mau.getAuId();
+    LockssManager man1 = handler.getAuSpecificManager(LockssDaemon.NODE_MANAGER,
         mau);
     assertNull(man1);
 
     handler.addAuSpecificManager(LockssDaemon.NODE_MANAGER, mau);
-    man1 = handler.getAUSpecificManager(LockssDaemon.NODE_MANAGER, mau);
+    man1 = handler.getAuSpecificManager(LockssDaemon.NODE_MANAGER, mau);
     assertNotNull(man1);
 
     mau = new MockArchivalUnit();
     handler.addAuSpecificManager(LockssDaemon.NODE_MANAGER, mau);
-    LockssManager man2 = handler.getAUSpecificManager(LockssDaemon.NODE_MANAGER,
+    LockssManager man2 = handler.getAuSpecificManager(LockssDaemon.NODE_MANAGER,
         mau);
     assertNotSame(man1, man2);
 
     mau = new MockArchivalUnit();
-    man1 = handler.getAUSpecificManager(LockssDaemon.NODE_MANAGER, mau);
+    man1 = handler.getAuSpecificManager(LockssDaemon.NODE_MANAGER, mau);
     assertNull(man1);
   }
 
@@ -99,23 +99,23 @@ public class TestAuSpecificManagerHandler extends LockssTestCase {
     } catch (IllegalArgumentException iae) { }
   }
 
-  public void testStartAUManagers() {
-    LockssManager manager = handler.getAUSpecificManager(
+  public void testStartAuManagers() {
+    LockssManager manager = handler.getAuSpecificManager(
         LockssDaemon.ACTIVITY_REGULATOR, mau);
     assertNull(manager);
-    manager = handler.getAUSpecificManager(LockssDaemon.LOCKSS_REPOSITORY, mau);
+    manager = handler.getAuSpecificManager(LockssDaemon.LOCKSS_REPOSITORY, mau);
     assertNull(manager);
-    manager = handler.getAUSpecificManager(LockssDaemon.NODE_MANAGER, mau);
+    manager = handler.getAuSpecificManager(LockssDaemon.NODE_MANAGER, mau);
     assertNull(manager);
 
-    handler.startAUManagers(mau);
+    handler.startAuManagers(mau);
 
-    manager = handler.getAUSpecificManager(LockssDaemon.ACTIVITY_REGULATOR,
+    manager = handler.getAuSpecificManager(LockssDaemon.ACTIVITY_REGULATOR,
                                            mau);
     assertNotNull(manager);
-    manager = handler.getAUSpecificManager(LockssDaemon.LOCKSS_REPOSITORY, mau);
+    manager = handler.getAuSpecificManager(LockssDaemon.LOCKSS_REPOSITORY, mau);
     assertNotNull(manager);
-    manager = handler.getAUSpecificManager(LockssDaemon.NODE_MANAGER, mau);
+    manager = handler.getAuSpecificManager(LockssDaemon.NODE_MANAGER, mau);
     assertNotNull(manager);
   }
 
@@ -136,11 +136,11 @@ public class TestAuSpecificManagerHandler extends LockssTestCase {
 
   public void testStopAllManagers() {
     HashMap map =
-        handler.getAUSpecificManagerMap(LockssDaemon.LOCKSS_REPOSITORY);
+        handler.getAuSpecificManagerMap(LockssDaemon.LOCKSS_REPOSITORY);
     MyMockLockssManager man1 = new MyMockLockssManager();
     map.put(mau, man1);
 
-    map = handler.getAUSpecificManagerMap(LockssDaemon.NODE_MANAGER);
+    map = handler.getAuSpecificManagerMap(LockssDaemon.NODE_MANAGER);
     MyMockLockssManager man2 = new MyMockLockssManager();
     map.put(mau, man2);
 

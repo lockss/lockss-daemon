@@ -1,5 +1,5 @@
 /*
- * $Id: HashSpeedTest.java,v 1.15 2003-09-23 07:47:51 eaalto Exp $
+ * $Id: HashSpeedTest.java,v 1.16 2003-09-26 23:49:01 eaalto Exp $
  */
 
 /*
@@ -108,7 +108,7 @@ public class HashSpeedTest extends LockssTestCase {
     theDaemon.getHashService().startService();
 
     sau =
-        (SimulatedArchivalUnit)theDaemon.getPluginManager().getAllAUs().get(0);
+        (SimulatedArchivalUnit)theDaemon.getPluginManager().getAllAus().get(0);
     theDaemon.getLockssRepository(sau);
   }
 
@@ -143,7 +143,7 @@ public class HashSpeedTest extends LockssTestCase {
     System.out.println("  Algorithm: "+digest.getAlgorithm());
     System.out.println("  Duration: "+duration+"ms");
     System.out.println("  Byte/step: "+byteStep+"bytes");
-    CachedUrlSetHasher hasher = sau.getAUCachedUrlSet().getContentHasher(digest);
+    CachedUrlSetHasher hasher = sau.getAuCachedUrlSet().getContentHasher(digest);
 
     SystemMetrics metrics = SystemMetrics.getSystemMetrics();
     double estimate = metrics.getBytesPerMsHashEstimate(hasher, digest);

@@ -1,5 +1,5 @@
 /*
- * $Id: TestSingleNodeCachedUrlSetSpec.java,v 1.5 2003-06-20 22:34:53 claire Exp $
+ * $Id: TestSingleNodeCachedUrlSetSpec.java,v 1.6 2003-09-26 23:50:38 eaalto Exp $
  */
 
 /*
@@ -72,7 +72,7 @@ public class TestSingleNodeCachedUrlSetSpec extends LockssTestCase {
     CachedUrlSetSpec cuss3 = new SingleNodeCachedUrlSetSpec("bar");
     assertEquals(cuss1, cuss2);
     assertNotEquals(cuss1, cuss3);
-    assertNotEquals(cuss1, new AUCachedUrlSetSpec());
+    assertNotEquals(cuss1, new AuCachedUrlSetSpec());
     assertNotEquals(cuss1, new RangeCachedUrlSetSpec("foo"));
   }
 
@@ -84,7 +84,7 @@ public class TestSingleNodeCachedUrlSetSpec extends LockssTestCase {
   public void testTypePredicates() {
     CachedUrlSetSpec cuss = new SingleNodeCachedUrlSetSpec("foo");
     assertTrue(cuss.isSingleNode());
-    assertFalse(cuss.isAU());
+    assertFalse(cuss.isAu());
     assertFalse(cuss.isRangeRestricted());
   }
 
@@ -96,7 +96,7 @@ public class TestSingleNodeCachedUrlSetSpec extends LockssTestCase {
     assertTrue(cuss1.isDisjoint(new SingleNodeCachedUrlSetSpec("a/b1")));
     assertTrue(cuss1.isDisjoint(new SingleNodeCachedUrlSetSpec("a/c")));
 
-    assertFalse(cuss1.isDisjoint(new AUCachedUrlSetSpec()));
+    assertFalse(cuss1.isDisjoint(new AuCachedUrlSetSpec()));
 
     assertFalse(cuss1.isDisjoint(new RangeCachedUrlSetSpec("a/")));
     assertFalse(cuss1.isDisjoint(new RangeCachedUrlSetSpec("a/", "b", null)));
@@ -125,7 +125,7 @@ public class TestSingleNodeCachedUrlSetSpec extends LockssTestCase {
     assertFalse(cuss.subsumes(new RangeCachedUrlSetSpec("foo", "1", "2")));
     assertFalse(cuss.subsumes(new RangeCachedUrlSetSpec("foo", null, "")));
 
-    assertFalse(cuss.subsumes(new AUCachedUrlSetSpec()));
+    assertFalse(cuss.subsumes(new AuCachedUrlSetSpec()));
   }
 
   public static void main(String[] argv) {

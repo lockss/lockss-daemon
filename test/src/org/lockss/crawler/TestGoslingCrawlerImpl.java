@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingCrawlerImpl.java,v 1.20 2003-09-17 06:10:00 troberts Exp $
+ * $Id: TestGoslingCrawlerImpl.java,v 1.21 2003-09-26 23:50:39 eaalto Exp $
  */
 
 /*
@@ -79,12 +79,12 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
 
     urlSet = SetUtil.set(startUrl);
     MockCachedUrlSet cus = new MyMockCachedUrlSet(mau, null);
-    mau.setAUCachedUrlSet(cus);
+    mau.setAuCachedUrlSet(cus);
     mau.setManifestPage(startUrl);
     crawler = new GoslingCrawlerImpl(mau, urlSet, Crawler.NEW_CONTENT, true);
   }
 
-  public void testThrowsForNullAU() {
+  public void testThrowsForNullAu() {
     try {
       crawler =
 	new GoslingCrawlerImpl(null, ListUtil.list("http://www.example.com"),
@@ -115,7 +115,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
   }
 
   public void testDoCrawlOnePageNoLinks() {
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     cus.addUrl(LINKLESS_PAGE, startUrl);
     crawler.doCrawl(Deadline.MAX);
     Set cachedUrls = cus.getCachedUrls();
@@ -147,7 +147,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
       "<html><head><title>Test</title></head><body>"+
       "<img src="+url+" alt=src>link3</a>";
 
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     cus.addUrl(source, startUrl);
     cus.addUrl(LINKLESS_PAGE, url);
 
@@ -317,7 +317,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
 			      String openTag,
 			      String closeTag,
 			      boolean shouldCache) {
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
 
     String content = makeContent(url, openTag, closeTag);
     cus.addUrl(content, startUrl);
@@ -345,7 +345,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
   }
 
   public void testDoesNotCacheExistingFile() {
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     String url1="http://www.example.com/blah.html";
     cus.addUrl("<a href="+url1+">test</a>", startUrl, true, true);
     cus.addUrl(LINKLESS_PAGE, url1, true, true);
@@ -357,7 +357,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
   }
 
   public void testDoesNotCacheFileWhichShouldNotBeCached() {
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     cus.addUrl(LINKLESS_PAGE, startUrl, false, false);
 
     crawler.doCrawl(Deadline.MAX);
@@ -371,7 +371,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     props.setProperty("content-type", "text/html; charset=US-ASCII");
 
 
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     cus.addUrl(content, startUrl, false, true, props);
     cus.addUrl(LINKLESS_PAGE, url);
 
@@ -388,7 +388,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     props.setProperty("content-type", "TEXT/HTML");
 
 
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     cus.addUrl(content, startUrl, false, true, props);
     cus.addUrl(LINKLESS_PAGE, url);
 
@@ -406,7 +406,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     props.setProperty("content-type", "text/xml");
 
 
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     cus.addUrl(content, startUrl, false, true, props);
     cus.addUrl(LINKLESS_PAGE, url);
 
@@ -424,7 +424,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
       "<html><head><title>Test</title></head><body>"+
       "<a href=\"http://www.example.com/link3.html\">link3</a>";
 
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     cus.addUrl(source, startUrl);
     cus.addUrl(LINKLESS_PAGE, url);
 
@@ -443,7 +443,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
       "<a href=http://www.example.com/link2.html>link2</a>-->"+
       "<a href=http://www.example.com/link3.html>link3</a>";
 
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     cus.addUrl(source, startUrl);
     cus.addUrl(LINKLESS_PAGE, url);
 
@@ -464,7 +464,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
       "<a href="+url2+">link2</a>"+
       "<a href="+url3+">link3</a>";
 
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     cus.addUrl(source, startUrl);
     cus.addUrl(LINKLESS_PAGE, url1);
     cus.addUrl(LINKLESS_PAGE, url2);
@@ -487,7 +487,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
       "<a blah1=blah href=link2.html#ref blah2=blah>link2</a>"+
       "<a href=dir/link3.html>link3</a>";
 
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     cus.addUrl(source, startUrl);
     cus.addUrl(LINKLESS_PAGE, url1);
     cus.addUrl(LINKLESS_PAGE, url2);
@@ -508,7 +508,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
       "Filler, with <b>bold</b> tags and<i>others</i>"+
       "<a href=branch2/index.html>link2</a>";
 
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     cus.addUrl(source, startUrl);
     cus.addUrl(LINKLESS_PAGE, url1);
     cus.addUrl(LINKLESS_PAGE, url2);
@@ -524,7 +524,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
 			      "http://www.example.com/link3.html",
 			      startUrl);
 
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     for (int ix=0; ix<urls.size(); ix++) {
       cus.addUrl(LINKLESS_PAGE, (String)urls.get(ix));
     }
@@ -536,7 +536,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
   }
 
   public void testOverwritesStartingUrls() {
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     cus.addUrl(LINKLESS_PAGE, startUrl, true, true);
 
     crawler.doCrawl(Deadline.MAX);
@@ -551,7 +551,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
       "<html><head><title>Test</title></head><body>"+
       "<a href="+url+">link3</a>";
 
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     cus.addUrl(source, startUrl);
     cus.addUrl(LINKLESS_PAGE, url);
 
@@ -569,7 +569,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
       "<html><head><title>Test</title></head><body>"+
       "<a href="+excludeUrl+">link3</a>";
 
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     cus.addUrl(source, startUrl);
     cus.addUrl(LINKLESS_PAGE, excludeUrl);
     cus.addUrl(LINKLESS_PAGE, includeUrl);
@@ -588,7 +588,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
       "<html><head><title>Test</title></head><body>"+
       "<a href="+url1+">link3</a>";
 
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     cus.addUrl(source, startUrl, true, true);
     cus.addUrl("<a href="+url2+">link4</a>", url1, true, true);
     cus.addUrl(LINKLESS_PAGE, url2);
@@ -599,7 +599,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
   }
 
   public void testWillNotCrawlExpiredDeadline() {
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     cus.addUrl(LINKLESS_PAGE, startUrl, false, true);
 
     Deadline deadline = Deadline.in(0);
@@ -619,7 +619,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
       "<a href=http://www.example.com/link2.html>link2</a>"+
       "<a href=http://www.example.com/link3.html>link3</a>";
 
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     cus.addUrl(source, startUrl);
     cus.addUrl(LINKLESS_PAGE, url1);
     cus.addUrl(LINKLESS_PAGE, url2);
@@ -644,7 +644,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
       "<a href="+url3+">link3</a>"+
       "<a href="+startUrl+">start page</a>";
 
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     cus.addUrl(source, startUrl);
     cus.addUrl(LINKLESS_PAGE, url1);
     cus.addUrl(LINKLESS_PAGE, url2);
@@ -673,7 +673,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
       "<a href="+startUrl+">link1</a>";
 
 
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     cus.addUrl(source1, startUrl);
     cus.addUrl(source2, url1);
     cus.addUrl(LINKLESS_PAGE, url2);
@@ -685,7 +685,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
   }
 
   public void testReturnsTrueWhenCrawlSuccessful() {
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     String url1="http://www.example.com/blah.html";
     cus.addUrl("<a href="+url1+">test</a>", startUrl, false, true);
     cus.addUrl(LINKLESS_PAGE, url1, false, true);
@@ -694,7 +694,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
    }
 
   public void testReturnsFalseWhenExceptionThrown() {
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     String url1="http://www.example.com/blah.html";
     cus.addUrl("<a href="+url1+">test</a>", startUrl, false, true);
     cus.addUrl(url1, new IOException("Test exception"));
@@ -703,7 +703,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
   }
 
   public void testReturnsTrueWhenFileNotFoundExceptionThrown() {
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     String url1="http://www.example.com/blah.html";
     cus.addUrl("<a href="+url1+">test</a>", startUrl, false, true);
     cus.addUrl(url1, new FileNotFoundException("Test exception"));
@@ -730,7 +730,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
       "<a href="+url2+">link2</a>"+
       "<a href="+url3+">link3</a>";
 
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     cus.addUrl(source, startUrl);
     cus.addUrl(LINKLESS_PAGE, url1);
     cus.addUrl(LINKLESS_PAGE, url2);
@@ -746,7 +746,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
   }
 
   public void testRepairCrawlCallsForceCache() {
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     cus.addUrl(LINKLESS_PAGE, startUrl);
     crawler = new GoslingCrawlerImpl(mau, urlSet, Crawler.REPAIR, false);
     crawler.doCrawl(Deadline.MAX);

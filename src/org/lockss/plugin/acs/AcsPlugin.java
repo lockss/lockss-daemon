@@ -1,5 +1,5 @@
 /*
- * $Id: AcsPlugin.java,v 1.3 2003-09-24 23:43:48 clairegriffin Exp $
+ * $Id: AcsPlugin.java,v 1.4 2003-09-26 23:50:39 eaalto Exp $
  */
 
 /*
@@ -99,7 +99,7 @@ public class AcsPlugin extends BasePlugin {
     AUPARAM_YEAR, "2003"}
   };
 
-  public ArchivalUnit createAU(Configuration auConfig)
+  public ArchivalUnit createAu(Configuration auConfig)
       throws ArchivalUnit.ConfigurationException {
     ArchivalUnit au = new AcsArchivalUnit(this);
     au.setConfiguration(auConfig);
@@ -119,7 +119,7 @@ public class AcsPlugin extends BasePlugin {
     return CURRENT_VERSION;
   }
 
-  public List getAUConfigProperties() {
+  public List getAuConfigProperties() {
     return ListUtil.list(PD_BASE, PD_ARTICLE, PD_JKEY, PD_VOL, PD_YEAR);
   }
 

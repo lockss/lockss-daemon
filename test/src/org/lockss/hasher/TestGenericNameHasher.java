@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericNameHasher.java,v 1.10 2003-06-20 22:34:54 claire Exp $
+ * $Id: TestGenericNameHasher.java,v 1.11 2003-09-26 23:49:02 eaalto Exp $
  */
 
 /*
@@ -106,7 +106,7 @@ public class TestGenericNameHasher extends LockssTestCase {
 
     CachedUrlSetHasher hasher = new GenericNameHasher(root, dig);
 
-    byte[] bytes = getExpectedCUSBytes(root);
+    byte[] bytes = getExpectedCusBytes(root);
     int totalHashed = 0;
     while (!hasher.finished()) {
       totalHashed += hasher.hashStep(1);
@@ -121,9 +121,9 @@ public class TestGenericNameHasher extends LockssTestCase {
 
    public void testComplexHashSmallStep() throws IOException {
      MockMessageDigest dig = new MockMessageDigest();
-     CachedUrlSet cus = makeTestCUS();
+     CachedUrlSet cus = makeTestCus();
      CachedUrlSetHasher hasher = new GenericNameHasher(cus, dig);
-     byte[] expectedBytes = getExpectedCUSBytes(cus);
+     byte[] expectedBytes = getExpectedCusBytes(cus);
 
      int totalHashed = 0;
      while (!hasher.finished()) {
@@ -137,9 +137,9 @@ public class TestGenericNameHasher extends LockssTestCase {
 
    public void testComplexHashLargerStep() throws IOException {
      MockMessageDigest dig = new MockMessageDigest();
-     CachedUrlSet cus = makeTestCUS();
+     CachedUrlSet cus = makeTestCus();
      CachedUrlSetHasher hasher = new GenericNameHasher(cus, dig);
-     byte[] expectedBytes = getExpectedCUSBytes(cus);
+     byte[] expectedBytes = getExpectedCusBytes(cus);
 
      int totalHashed = 0;
      while (!hasher.finished()) {
@@ -153,9 +153,9 @@ public class TestGenericNameHasher extends LockssTestCase {
 
    public void testComplexHashVeryLargeStep() throws IOException {
      MockMessageDigest dig = new MockMessageDigest();
-     CachedUrlSet cus = makeTestCUS();
+     CachedUrlSet cus = makeTestCus();
      CachedUrlSetHasher hasher = new GenericNameHasher(cus, dig);
-     byte[] expectedBytes = getExpectedCUSBytes(cus);
+     byte[] expectedBytes = getExpectedCusBytes(cus);
 
      int totalHashed = 0;
      while (!hasher.finished()) {
@@ -167,7 +167,7 @@ public class TestGenericNameHasher extends LockssTestCase {
      }
    }
 
-  private CachedUrlSet makeTestCUS() {
+  private CachedUrlSet makeTestCus() {
     List list = new LinkedList();
     MockCachedUrlSet cus = new MockCachedUrlSet("TestName1");
     cus.setHasContent(true);
@@ -189,13 +189,13 @@ public class TestGenericNameHasher extends LockssTestCase {
     return root;
   }
 
-  private byte[] getExpectedCUSBytes(CachedUrlSet cus) throws IOException {
+  private byte[] getExpectedCusBytes(CachedUrlSet cus) throws IOException {
     Iterator it = cus.flatSetIterator();
     List byteArrays = new LinkedList();
     int totalSize = 0;
     while (it.hasNext()) {
       CachedUrlSetNode cusn = (CachedUrlSetNode) it.next();
-      byte[] arr = getExpectedCUSNBytes(cusn);
+      byte[] arr = getExpectedCusnBytes(cusn);
       totalSize += arr.length;
       byteArrays.add(arr);
     }
@@ -211,7 +211,7 @@ public class TestGenericNameHasher extends LockssTestCase {
     return returnArr;
   }
 
-  private byte[] getExpectedCUSNBytes(CachedUrlSetNode cusn) {
+  private byte[] getExpectedCusnBytes(CachedUrlSetNode cusn) {
     String name = cusn.getUrl();
     byte[] sizeBytes = ByteArray.encodeLong(name.length());
     byte[] returnArray = new byte[name.length() + sizeBytes.length + 2];

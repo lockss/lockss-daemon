@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.113 2003-08-26 23:33:40 clairegriffin Exp $
+* $Id: PollManager.java,v 1.114 2003-09-26 23:50:39 eaalto Exp $
  */
 
 /*
@@ -127,7 +127,7 @@ public class PollManager  extends BaseLockssManager {
                                       new PollerStatus.PollStatus());
     statusServ.registerObjectReferenceAccessor(PollerStatus.MANAGER_STATUS_TABLE_NAME,
 					       ArchivalUnit.class,
-					       new PollerStatus.ManagerStatusAURef());
+					       new PollerStatus.ManagerStatusAuRef());
   }
 
   /**
