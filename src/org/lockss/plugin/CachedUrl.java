@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrl.java,v 1.12 2004-03-11 09:41:20 tlipkis Exp $
+ * $Id: CachedUrl.java,v 1.13 2004-03-18 03:34:22 tlipkis Exp $
  */
 
 /*
@@ -63,19 +63,30 @@ public interface CachedUrl extends CachedUrlSetNode {
   /** The URL under which the node was created.  Distinguishes between foo
    * and foo/ */
   public static final String PROPERTY_NODE_URL = "X-Lockss-node-url";
-  /** The final URL (that had content) if redirected from here */
+
+  /** The final URL (that had content) if redirected from here.  If this is
+   * present, it is the base URL appropriate for interpreting the
+   * content. */
+  public static final String PROPERTY_CONTENT_URL = "X-Lockss-content-url";
+
+  /** The URL immediately redirected to from here, if any. */
   public static final String PROPERTY_REDIRECTED_TO = "X-Lockss-redirected-to";
+
   /** The final URL (that had content) if redirected from here */
   public static final String PROPERTY_REPAIR_FROM = "X-Lockss-repaired-from";
+
   /** From response.getContentType(); might be inferred */
   public static final String PROPERTY_CONTENT_TYPE = "X-Lockss-content-type";
+
   /** The original URL requested, potentially at the start of a chains of
    * redirects.  Not predictable; don't use. */
   public static final String PROPERTY_ORIG_URL = "X-Lockss-orig-url";
+
   /** Date: from response, as a long */
   public static final String PROPERTY_FETCH_TIME = "X_Lockss-server-date";
 
   public static final String PROPERTY_LAST_MODIFIED = "last-modified";
+
   /**
   * Get an object from which the content of the url can be read
   * from the cache.

@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingHtmlParser.java,v 1.13 2004-03-10 01:36:29 troberts Exp $
+ * $Id: TestGoslingHtmlParser.java,v 1.14 2004-03-18 03:34:22 tlipkis Exp $
  */
 
 /*
@@ -534,7 +534,7 @@ public class TestGoslingHtmlParser extends LockssTestCase {
 
     MockCachedUrl mcu = new MockCachedUrl("http://www.example.com");
     CIProperties props = new CIProperties();
-    props.put(CachedUrl.PROPERTY_REDIRECTED_TO,
+    props.put(CachedUrl.PROPERTY_CONTENT_URL,
 	      "http://www.example.com/extra_level/");
     mcu.setContent(source);
     mcu.setProperties(props);
