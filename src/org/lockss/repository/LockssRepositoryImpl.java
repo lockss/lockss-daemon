@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.53 2004-04-27 19:40:12 tlipkis Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.54 2004-05-12 17:47:51 tlipkis Exp $
  */
 
 /*
@@ -318,9 +318,7 @@ public class LockssRepositoryImpl
    * @return the new LockssRepository instance
    */
   public static LockssRepository createNewLockssRepository(ArchivalUnit au) {
-    // XXX needs to handle multiple disks/repository locations
-
-    cacheLocation = Configuration.getParam(PARAM_CACHE_LOCATION);
+    cacheLocation = getRepositoryRoot(au);
     if (cacheLocation == null) {
       logger.error("Couldn't get " + PARAM_CACHE_LOCATION +
 		   " from Configuration");
@@ -328,9 +326,30 @@ public class LockssRepositoryImpl
           "Couldn't load param.");
     }
     cacheLocation = extendCacheLocation(cacheLocation);
+    String auDir = LockssRepositoryImpl.mapAuToFileLocation(cacheLocation, au);
+    logger.debug("repo: " + auDir + ", au: " + au.getName());
+    return new LockssRepositoryImpl(auDir);
+  }
 
-    return new LockssRepositoryImpl(
-        LockssRepositoryImpl.mapAuToFileLocation(cacheLocation, au));
+  public static String getRepositoryRoot(ArchivalUnit au) {
+    String root = null;
+    Configuration auConfig = au.getConfiguration();
+    if (auConfig != null) {		// can be null in unit tests
+      String repoSpec = auConfig.get(PluginManager.AU_PARAM_REPOSITORY);
+      if (repoSpec != null) {
+	if (repoSpec.startsWith("local:")) {
+	  root = repoSpec.substring(6);
+	}
+      }
+    }
+    if (root == null) {
+      root = Configuration.getParam(PARAM_CACHE_LOCATION);
+    }
+    return root;
+  }
+
+  static String getCacheLocation() {
+    return cacheLocation;
   }
 
   /**

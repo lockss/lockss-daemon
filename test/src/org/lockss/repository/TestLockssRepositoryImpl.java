@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.48 2004-04-14 23:46:17 eaalto Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.49 2004-05-12 17:47:51 tlipkis Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.*;
 import java.util.*;
 import java.net.*;
 import org.lockss.test.*;
+import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
 
@@ -68,6 +69,20 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
   public void tearDown() throws Exception {
     repo.stopService();
     super.tearDown();
+  }
+
+  String getCacheLocation() {
+    return repo.getCacheLocation();
+  }
+
+  public void testGetRepositoryRoot() throws Exception {
+    assertEquals(tempDirPath, LockssRepositoryImpl.getRepositoryRoot(mau));
+
+    Configuration auconf =
+      ConfigurationUtil.fromArgs(PluginManager.AU_PARAM_REPOSITORY,
+				 "local:/foo/bar");
+    mau.setConfiguration(auconf);
+    assertEquals("/foo/bar", LockssRepositoryImpl.getRepositoryRoot(mau));
   }
 
   public void testFileLocation() throws Exception {
@@ -304,7 +319,7 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     newNameMap.put(mau.getAuId(), "testDir");
     LockssRepositoryImpl.nameMap = newNameMap;
     String location = LockssRepositoryImpl.mapAuToFileLocation(
-        LockssRepositoryImpl.cacheLocation, mau);
+        getCacheLocation(), mau);
 
     LockssRepositoryImpl.saveAuIdProperties(location, newProps);
     File idFile = new File(location + LockssRepositoryImpl.AU_ID_FILE);
@@ -319,42 +334,42 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
   public void testLoadNameMap() {
     Properties newProps = new Properties();
     newProps.setProperty(LockssRepositoryImpl.AU_ID_PROP, mau.getAuId());
-    String location = LockssRepositoryImpl.cacheLocation + "ab";
+    String location = getCacheLocation() + "ab";
     LockssRepositoryImpl.saveAuIdProperties(location, newProps);
 
-    LockssRepositoryImpl.loadNameMap(LockssRepositoryImpl.cacheLocation);
+    LockssRepositoryImpl.loadNameMap(getCacheLocation());
     assertEquals("ab", repo.nameMap.get(mau.getAuId()));
   }
 
   public void testLoadNameMapSkipping() {
     // clear the prop file from setUp()
-    String propsLoc = LockssRepositoryImpl.cacheLocation + "a" + File.separator +
+    String propsLoc = getCacheLocation() + "a" + File.separator +
         LockssRepositoryImpl.AU_ID_FILE;
     File propsFile = new File(propsLoc);
     propsFile.delete();
 
-    LockssRepositoryImpl.loadNameMap(LockssRepositoryImpl.cacheLocation);
+    LockssRepositoryImpl.loadNameMap(getCacheLocation());
     assertNull(LockssRepositoryImpl.nameMap.get(mau.getAuId()));
   }
 
   public void testMapAuToFileLocation() {
     LockssRepositoryImpl.lastPluginDir = "ca";
-    String expectedStr = LockssRepositoryImpl.cacheLocation + "root/cb/";
+    String expectedStr = getCacheLocation() + "root/cb/";
     assertEquals(FileUtil.sysDepPath(expectedStr),
                  LockssRepositoryImpl.mapAuToFileLocation(
-        LockssRepositoryImpl.cacheLocation+"root", new MockArchivalUnit()));
+        getCacheLocation()+"root", new MockArchivalUnit()));
   }
 
   public void testGetAuDirSkipping() {
-    String location = LockssRepositoryImpl.cacheLocation + "root/ab";
+    String location = getCacheLocation() + "root/ab";
     File dirFile = new File(location);
     dirFile.mkdirs();
 
     LockssRepositoryImpl.lastPluginDir = "aa";
-    String expectedStr = LockssRepositoryImpl.cacheLocation + "root/ac/";
+    String expectedStr = getCacheLocation() + "root/ac/";
     assertEquals(FileUtil.sysDepPath(expectedStr),
                  LockssRepositoryImpl.mapAuToFileLocation(
-        LockssRepositoryImpl.cacheLocation+"root", new MockArchivalUnit()));
+        getCacheLocation()+"root", new MockArchivalUnit()));
   }
 
   public void testMapUrlToFileLocation() throws MalformedURLException {
