@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.26 2004-04-19 02:17:44 tlipkis Exp $
+ * $Id: ProxyHandler.java,v 1.26.2.1 2004-06-16 06:44:44 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.26 2004-04-19 02:17:44 tlipkis Exp $
+// $Id: ProxyHandler.java,v 1.26.2.1 2004-06-16 06:44:44 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -98,6 +98,12 @@ public class ProxyHandler extends AbstractHttpHandler {
 	       LockssUrlConnectionPool quickFailConnPool) {
     this(daemon, pool);
     this.quickFailConnPool = quickFailConnPool;
+  }
+
+  /** If set to true, content will be served only from the cache; requests
+   * will never be proxied */
+  public void setFromCacheOnly(boolean flg) {
+    neverProxy = flg;
   }
 
   protected int _tunnelTimeoutMs=250;
@@ -183,9 +189,7 @@ public class ProxyHandler extends AbstractHttpHandler {
 		       response, cu);
 	return;
       } else {
-      // This should never happen, as it should have been caught by the
-      // ProcyAccessHandler.  But we never want to forward repair request
-      // from another LOCKSS cache, so we check here just to make sure.
+      // Don't forward request if it's a repair or we were told not to.
 	response.sendError(HttpResponse.__404_Not_Found);
 	request.setHandled(true);
 	return; 
