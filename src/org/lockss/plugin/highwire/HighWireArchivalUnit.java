@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireArchivalUnit.java,v 1.16 2003-03-12 21:14:47 aalto Exp $
+ * $Id: HighWireArchivalUnit.java,v 1.17 2003-03-28 23:48:12 aalto Exp $
  */
 
 /*
@@ -203,7 +203,7 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
   }
 
   public boolean shouldCrawlForNewContent(AuState aus) {
-    long timeDiff = TimeBase.nowMs() - aus.getLastCrawlTime();
+    long timeDiff = TimeBase.msSince(aus.getLastCrawlTime());
     logger.debug("Deciding whether to do new content crawl for "+aus);
     if (aus.getLastCrawlTime() == 0 ||
 	timeDiff > (ncCrawlInterval * Constants.DAY)) {

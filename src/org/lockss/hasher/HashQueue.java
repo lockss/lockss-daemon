@@ -1,5 +1,5 @@
 /*
- * $Id: HashQueue.java,v 1.28 2003-03-27 17:49:13 tal Exp $
+ * $Id: HashQueue.java,v 1.29 2003-03-28 23:48:13 aalto Exp $
  */
 
 /*
@@ -124,7 +124,7 @@ class HashQueue implements Serializable {
   }
 
   // separated out so callbacks are run outside of synchronized block,
-  // and so can put in another thread if necessary.  
+  // and so can put in another thread if necessary.
   void doCallbacks(List list) {
     for (Iterator iter = list.iterator(); iter.hasNext();) {
       Request req = (Request)iter.next();
@@ -382,7 +382,7 @@ class HashQueue implements Serializable {
       // tk - should this catch all Throwable?
       req.e = e;
     }
-    long timeDelta = TimeBase.nowMs() - startTime;
+    long timeDelta = TimeBase.msSince(startTime);
     req.timeUsed += timeDelta;
     req.bytesHashed += bytesHashed;
     totalBytesHashed = totalBytesHashed.add(BigInteger.valueOf(bytesHashed));
@@ -487,7 +487,7 @@ class HashQueue implements Serializable {
 		  new ColumnDescriptor("bytesHashed", "Bytes<br>Hashed",
 				       ColumnDescriptor.TYPE_INT)
 		  );
-		    
+
 
   private class Status implements StatusAccessor {
     public void populateTable(StatusTable table) {
@@ -569,7 +569,7 @@ class HashQueue implements Serializable {
 					      ColumnDescriptor.TYPE_INT,
 					      new Long(bpms)));
 	} else {
-	  res.add(new 
+	  res.add(new
 		  StatusTable.SummaryInfo("Bytes/sec",
 					  ColumnDescriptor.TYPE_INT,
 					  new Long(bpms / Constants.SECOND)));
@@ -602,9 +602,9 @@ class HashQueue implements Serializable {
 
   static final StatusTable.DisplayedValue REQ_STATE_TIMEOUT =
     new StatusTable.DisplayedValue(new ReqState("Timeout", 3));
-  static final StatusTable.DisplayedValue REQ_STATE_ERROR = 
+  static final StatusTable.DisplayedValue REQ_STATE_ERROR =
     new StatusTable.DisplayedValue(new ReqState("Error", 3));
-    
+
   static {
     REQ_STATE_TIMEOUT.setColor("red");
     REQ_STATE_ERROR.setColor("red");

@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkHandler.java,v 1.3 2003-03-28 22:23:31 aalto Exp $
+ * $Id: TreeWalkHandler.java,v 1.4 2003-03-28 23:48:12 aalto Exp $
  */
 
 /*
@@ -127,7 +127,7 @@ public class TreeWalkHandler {
         } else {
           logger.debug("Tree walk started: "+theAu.getName());
           nodeTreeWalk();
-       //   long elapsedTime = TimeBase.nowMs() - startTime;
+       //   long elapsedTime = TimeBase.msSince(startTime);
        //   updateEstimate(elapsedTime);
         }
       }
@@ -221,7 +221,7 @@ public class TreeWalkHandler {
    */
   long timeUntilTreeWalkStart() {
     long lastTreeWalkTime = manager.getAuState().getLastTreeWalkTime();
-    long timeSinceLastTW = TimeBase.nowMs() - lastTreeWalkTime;
+    long timeSinceLastTW = TimeBase.msSince(lastTreeWalkTime);
     logger.debug3(timeSinceLastTW+" since last treewalk");
     logger.debug("Treewalks should happen every "+treeWalkInterval);
     return treeWalkInterval - timeSinceLastTW;
@@ -348,7 +348,7 @@ public class TreeWalkHandler {
       estDeadline = Deadline.in(treeWalkTestDuration);
       int nodesWalked = recurseEstimate(cus, 0);
 
-      timeTaken = TimeBase.nowMs() - startTime;
+      timeTaken = TimeBase.msSince(startTime);
       logger.debug("Treewalk estimate finished in time " + timeTaken + "ms with " +
                    nodesWalked + " nodes walked.");
       if (timeTaken == 0) {
