@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingCrawlerImpl.java,v 1.29 2003-08-02 00:16:05 eaalto Exp $
+ * $Id: GoslingCrawlerImpl.java,v 1.29.2.1 2003-08-06 00:28:46 troberts Exp $
  */
 
 /*
@@ -241,8 +241,13 @@ public class GoslingCrawlerImpl implements Crawler {
     // don't cache if already cached, unless overwriting
     if (overWrite || !uc.getCachedUrl().hasContent()) {
       try {
-	logger.debug("caching "+uc);
-	uc.cache(); //IOException if there is a caching problem
+	if (type == Crawler.NEW_CONTENT) {
+	  logger.debug("caching "+uc);
+	  uc.cache(); //IOException if there is a caching problem
+	} else {
+	  logger.debug("forced caching "+uc);
+	  uc.forceCache();
+	}
 	numUrlsFetched++;
       } catch (FileNotFoundException e) {
 	logger.warning(uc+" not found on publisher's site");
