@@ -1,5 +1,5 @@
 /*
- * $Id: ExpectedRuntimeException.java,v 1.1 2003-12-23 00:38:14 tlipkis Exp $
+ * $Id: ExpectedRuntimeException.java,v 1.2 2004-08-21 06:54:46 tlipkis Exp $
  */
 
 /*
@@ -35,6 +35,10 @@ package org.lockss.test;
 /** A RuntimeException to use in tests where the exception is expected, to
  * emphasize that fact in the log */
 public class ExpectedRuntimeException extends RuntimeException {
+  public ExpectedRuntimeException() {
+    super();
+  }
+
   public ExpectedRuntimeException(String message) {
     super(message);
   }
