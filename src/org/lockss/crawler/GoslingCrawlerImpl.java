@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingCrawlerImpl.java,v 1.51 2004-01-08 22:47:23 troberts Exp $
+ * $Id: GoslingCrawlerImpl.java,v 1.52 2004-01-09 01:16:31 troberts Exp $
  */
 
 /*
@@ -128,6 +128,8 @@ public class GoslingCrawlerImpl implements Crawler {
 
   private int crawlError = 0;
   private AuState aus = null;
+
+  private Set failedUrls = new HashSet();
 
   private static final String PARAM_RETRY_TIMES =
     Configuration.PREFIX + "GoslingCrawlerImpl.numCacheRetries";
@@ -467,7 +469,11 @@ public class GoslingCrawlerImpl implements Crawler {
   }
 
   private void cacheWithRetries(UrlCacher uc, int type, int maxRetries)
-   throws IOException {
+      throws IOException {
+    if (failedUrls.contains(uc)) {
+      logger.debug3("Already failed to cache "+uc+". Not retrying.");
+      return;
+    }
     int numRetries = 0;
     while (true) {
       try {
@@ -497,6 +503,7 @@ public class GoslingCrawlerImpl implements Crawler {
 	if (numRetries >= maxRetries) {
 	  logger.warning("Failed to cache "+numRetries +" times.  Skipping "
 			 + uc);
+	  failedUrls.add(uc);
 	  throw e;
 	}
 	Plugin plugin = uc.getCachedUrlSet().getArchivalUnit().getPlugin();

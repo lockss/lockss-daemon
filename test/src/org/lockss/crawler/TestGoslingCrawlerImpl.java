@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingCrawlerImpl.java,v 1.33 2004-01-08 22:47:23 troberts Exp $
+ * $Id: TestGoslingCrawlerImpl.java,v 1.34 2004-01-09 01:16:32 troberts Exp $
  */
 
 /*
@@ -793,6 +793,32 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     assertEquals(expected, cus.getCachedUrls());
   }
 
+  public void testCachesFailedFetches() {
+    int retryNum = 3;
+    Properties p = new Properties();
+    p.setProperty(PARAM_RETRY_TIMES, String.valueOf(retryNum));
+    p.setProperty(GoslingCrawlerImpl.PARAM_RETRY_PAUSE, "0");
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+
+    MyMockCachedUrlSet cus = (MyMockCachedUrlSet)mau.getAuCachedUrlSet();
+    String url1="http://www.example.com/blah.html";
+    String url2="http://www.example.com/blah2.html";
+    String url3="http://www.example.com/blah3.html";
+    cus.addUrl("<a href="+url1+">test</a><a href="+url2
+	       +">test</a><a href="+url3+">test</a>", startUrl, false, true);
+    cus.addUrl("<a href="+url1+">test</a>", url2, false, true);
+    cus.addUrl("<a href="+url1+">test</a>", url3, false, true);
+    cus.addUrl(url1, new IOException("Test exception"), retryNum);
+
+    crawlRule.addUrlToCrawl(url1);
+    crawlRule.addUrlToCrawl(url2);
+    crawlRule.addUrlToCrawl(url3);
+
+    crawler.doCrawl(Deadline.MAX);
+    assertEquals(retryNum, cus.getNumCacheAttempts(url1));
+  }
+
+
   public void testReturnsTrueWhenFileNotFoundExceptionThrown() {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     String url1="http://www.example.com/blah.html";
@@ -1113,10 +1139,12 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
 					      MockCachedUrlSet parent) {
       return new MockUrlCacherThatStepsTimebase(url, parent);
     }
+
   }
-  private class MockUrlCacherThatStepsTimebase extends MockUrlCacher {
-    public MockUrlCacherThatStepsTimebase(String url, MockCachedUrlSet cus) {
-      super(url, cus);
+
+    private class MockUrlCacherThatStepsTimebase extends MockUrlCacher {
+      public MockUrlCacherThatStepsTimebase(String url, MockCachedUrlSet cus) {
+	super(url, cus);
     }
     public void cache() throws IOException {
       TimeBase.step();
