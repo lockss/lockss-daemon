@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.17 2005-01-04 02:50:39 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.18 2005-01-07 01:22:34 troberts Exp $
  */
 
 /*
@@ -451,7 +451,7 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
 	if (wdog != null) {
 	  wdog.pokeWDog();
 	}
-	updateCacheStats(uc.cache());
+	updateCacheStats(uc.cache(), uc);
 	return; //cache didn't throw
       } catch (CacheException.RetryableException e) {
 	logger.debug("Exception when trying to cache "+uc, e);

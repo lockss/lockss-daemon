@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerImpl.java,v 1.38 2004-12-18 01:44:57 dcfok Exp $
+ * $Id: CrawlerImpl.java,v 1.39 2005-01-07 01:22:34 troberts Exp $
  */
 
 /*
@@ -268,7 +268,7 @@ public abstract class CrawlerImpl implements Crawler {
     uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW_ON_HOST);
 
     InputStream is = new BufferedInputStream(uc.getUncachedInputStream());
-    crawlStatus.signalUrlFetched();
+    crawlStatus.signalUrlFetched(uc.getUrl());
     // allow us to reread contents if reasonable size
     boolean needPermission = true;
     try {
@@ -287,7 +287,7 @@ public abstract class CrawlerImpl implements Crawler {
             uc = makeUrlCacher(permissionPage);
             uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW_ON_HOST);
             is = new BufferedInputStream(uc.getUncachedInputStream());
-	    crawlStatus.signalUrlFetched();
+	    crawlStatus.signalUrlFetched(uc.getUrl());
           }
         }
       }
@@ -316,7 +316,7 @@ public abstract class CrawlerImpl implements Crawler {
             uc = makeUrlCacher(permissionPage);
             uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW_ON_HOST);
             is = new BufferedInputStream(uc.getUncachedInputStream());
-	    crawlStatus.signalUrlFetched();
+	    crawlStatus.signalUrlFetched(uc.getUrl());
           }
         }
       }
@@ -346,16 +346,16 @@ public abstract class CrawlerImpl implements Crawler {
     // XXX can't reuse UrlCacher
     UrlCacher uc = makeUrlCacher(permissionPage);
     uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW);
-    updateCacheStats(uc.cache());
+    updateCacheStats(uc.cache(), uc);
   }
 
-  protected void updateCacheStats(int cacheResult) {
+  protected void updateCacheStats(int cacheResult, UrlCacher uc) {
     switch (cacheResult) {
     case UrlCacher.CACHE_RESULT_FETCHED:
-      crawlStatus.signalUrlFetched();
+      crawlStatus.signalUrlFetched(uc.getUrl());
       break;
     case UrlCacher.CACHE_RESULT_NOT_MODIFIED:
-      crawlStatus.signalUrlNotModified();
+      crawlStatus.signalUrlNotModified(uc.getUrl());
       break;
     }
   }

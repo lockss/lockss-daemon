@@ -1,5 +1,5 @@
 /*
- * $Id: Crawler.java,v 1.23 2004-10-20 18:41:21 dcfok Exp $
+ * $Id: Crawler.java,v 1.24 2005-01-07 01:22:35 troberts Exp $
  */
 
 /*
@@ -108,13 +108,16 @@ public interface Crawler {
   public static class Status {
     protected long startTime = -1;
     protected long endTime = -1;
-    protected long numFetched = 0;
     protected long numNotModified = 0;
     protected long numParsed = 0;
     protected String crawlError = null;
     protected Collection startUrls = null;
     protected ArchivalUnit au = null;
     protected int type = -1;
+
+    protected Map urlsWithErrors = new HashMap();
+    protected Set urlsFetched = new HashSet();
+    protected Set urlsNotModified = new HashSet();
 
     public Status(ArchivalUnit au, Collection startUrls, int type) {
       this.au = au;
@@ -151,7 +154,7 @@ public interface Crawler {
      * @return number of urls that have been fetched by this crawler
      */
     public long getNumFetched() {
-      return numFetched;
+      return urlsFetched.size();
     }
 
     /**
@@ -159,15 +162,27 @@ public interface Crawler {
      * @return number of urls whose contents were not modified
      */
     public long getNumNotModified() {
-      return numNotModified;
+      return urlsNotModified.size();
     }
 
-    public void signalUrlFetched() {
-      numFetched++;
+    public void signalUrlFetched(String url) {
+      urlsFetched.add(url);
     }
 
-    public void signalUrlNotModified() {
-      numNotModified++;
+    public void signalUrlNotModified(String url) {
+      urlsNotModified.add(url);
+    }
+
+    /**
+     * @return hash of the urls that couldn't be fetched due to errors and the
+     * error they got
+     */
+    public Map getUrlsWithErrors() {
+      return urlsWithErrors;
+    }
+
+    public Set getUrlsFetched() {
+      return urlsFetched;
     }
 
     /**
@@ -197,6 +212,10 @@ public interface Crawler {
 
     public void setCrawlError(String crawlError) {
       this.crawlError = crawlError;
+    }
+
+    public void signalErrorForUrl(String url, String error) {
+      urlsWithErrors.put(url, error);
     }
 
     public String getCrawlError() {
