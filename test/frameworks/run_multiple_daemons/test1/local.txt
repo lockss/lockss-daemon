@@ -11,7 +11,7 @@ org.lockss.comm.unicast.sendToAddr=127.0.0.1
 org.lockss.cache.location=.
 
 #au config settings
-org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.localA.badFileLoc=0
+org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.localA.badFileLoc=1
 org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.localA.badFileNum=1
 
 #test settings

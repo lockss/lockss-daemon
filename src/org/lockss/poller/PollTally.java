@@ -247,9 +247,10 @@ public class PollTally {
   boolean hasVoted(LcapIdentity voterID) {
     Iterator it = pollVotes.iterator();
     while(it.hasNext()) {
-      LcapIdentity id = (LcapIdentity) it.next();
-      if(id.isEqual(voterID))
+      Vote vote = (Vote) it.next();
+      if(voterID.isEqual(vote.getIDAddress())) {
         return true;
+      }
     }
     return false;
   }
