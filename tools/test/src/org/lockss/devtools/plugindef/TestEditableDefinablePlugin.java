@@ -1,5 +1,5 @@
 /*
- * $Id: TestEditableDefinablePlugin.java,v 1.2 2004-07-14 20:46:03 clairegriffin Exp $
+ * $Id: TestEditableDefinablePlugin.java,v 1.3 2004-09-22 00:16:37 troberts Exp $
  */
 
 /*
@@ -35,8 +35,6 @@ import java.util.*;
 
 import org.lockss.daemon.*;
 import org.lockss.plugin.definable.*;
-import org.lockss.plugin.definable.DefinablePlugin.*;
-import org.lockss.plugin.definable.TestDefinablePlugin.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
@@ -279,7 +277,7 @@ public class TestEditableDefinablePlugin
       edPlugin.setAuCrawlWindow("foobar");
       assertTrue("bad crawl window", false);
     }
-    catch (InvalidDefinitionException ex) {
+    catch (DefinablePlugin.InvalidDefinitionException ex) {
     }
 
     // test good class name is ok
