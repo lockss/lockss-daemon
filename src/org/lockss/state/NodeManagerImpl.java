@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.110 2003-04-23 00:55:52 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.111 2003-04-24 01:23:18 aalto Exp $
  */
 
 /*
@@ -227,7 +227,6 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
   }
 
   NodeState createNodeState(CachedUrlSet cus) {
-    logger.debug2("Loading NodeState: " + cus.getUrl());
     // load from file cache, or get a new one
     NodeState state = historyRepo.loadNodeState(cus);
 
