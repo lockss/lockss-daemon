@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSimulatedContent.java,v 1.32 2003-04-15 01:27:00 aalto Exp $
+ * $Id: FuncSimulatedContent.java,v 1.33 2003-04-17 01:03:59 aalto Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ import org.lockss.repository.*;
 import org.lockss.plugin.PluginManager;
 import java.security.*;
 import org.lockss.plugin.*;
+import org.lockss.state.HistoryRepositoryImpl;
 
 /**
  * Test class for functional tests on the content.
@@ -63,16 +64,22 @@ public class FuncSimulatedContent extends LockssTestCase {
     String s = SystemMetrics.PARAM_HASH_TEST_DURATION + "=1000\n";
     String s2 = SystemMetrics.PARAM_HASH_TEST_BYTE_STEP + "=1024\n";
     String s3 = LockssRepositoryServiceImpl.PARAM_CACHE_LOCATION + "=" +
+        tempDirPath + "\n";
+    String s4 = HistoryRepositoryImpl.PARAM_HISTORY_LOCATION + "=" +
         tempDirPath;
-    String configStr = s + s2 + s3;
+    String configStr = s + s2 + s3 + s4;
     TestConfiguration.setCurrentConfigFromString(configStr);
     theDaemon.getLockssRepositoryService().startService();
     theDaemon.getLockssRepository(sau);
     theDaemon.getPluginManager();
+    theDaemon.getNodeManagerService();
+    theDaemon.getNodeManager(sau);
+    theDaemon.getHistoryRepository().startService();
   }
 
   public void tearDown() throws Exception {
     theDaemon.getLockssRepositoryService().stopService();
+    theDaemon.getNodeManagerService().stopService();
     super.tearDown();
   }
 
@@ -95,6 +102,7 @@ public class FuncSimulatedContent extends LockssTestCase {
     sau.setRootDir(tempDirPath);
     TestLockssRepositoryServiceImpl.configCacheLocation(tempDirPath);
     theDaemon.getLockssRepository(sau);
+    theDaemon.getNodeManager(sau);
 
     createContent();
     crawlContent();
@@ -172,13 +180,14 @@ public class FuncSimulatedContent extends LockssTestCase {
   private void checkLeaf() {
     String parent = sau.SIMULATED_URL_ROOT + "/branch1";
     CachedUrlSetSpec spec = new RangeCachedUrlSetSpec(parent);
-    CachedUrlSet set = sau.cachedUrlSetFactory(sau, spec);
+    CachedUrlSet set = sau.makeCachedUrlSet(spec);
     Iterator setIt = set.contentHashIterator();
-    ArrayList childL = new ArrayList(15);
+    ArrayList childL = new ArrayList(16);
     while (setIt.hasNext()) {
       childL.add(((CachedUrlSetNode)setIt.next()).getUrl());
     }
     String[] expectedA = new String[] {
+      parent,
       parent+"/branch1",
       parent+"/branch1/file1.html",
       parent+"/branch1/file1.txt",
