@@ -26,8 +26,12 @@ org.lockss.plugin.registry=\
     org.lockss.plugin.simulated.SimulatedPlugin;\
     org.lockss.plugin.othervoices.OtherVoicesPlugin;\
     org.lockss.plugin.bepress.BePressPlugin;\
+    org.lockss.plugin.bioone.BioOnePlugin;\
     org.lockss.plugin.disputatio.DisputatioPlugin;\
+    edu.harvard.plugin.jrs.JRSPlugin;\
+    edu.upenn.library.plugin.annualofurdustudies.AnnualOfUrduStudiesPlugin;\
     edu.indiana.lib.plugin.jcjpc.JcjpcPlugin;\
+    edu.princeton.plugin.bmcr.BMCRPlugin;\
     org.lockss.plugin.ojs.OJSPlugin;
 
 # List of plugins that should be loaded as ConfigurablePlugins with an xml
@@ -46,8 +50,12 @@ org.lockss.plugin.xmlPlugins=\
     org.lockss.plugin.clogic.CulturalLogicPlugin;\
     org.lockss.plugin.othervoices.OtherVoicesPlugin;\
     org.lockss.plugin.bepress.BePressPlugin;\
+    org.lockss.plugin.bioone.BioOnePlugin;\
     org.lockss.plugin.disputatio.DisputatioPlugin;\
+    edu.harvard.plugin.jrs.JRSPlugin;\
+    edu.upenn.library.plugin.annualofurdustudies.AnnualOfUrduStudiesPlugin;\
     edu.indiana.lib.plugin.jcjpc.JcjpcPlugin;\
+    edu.princeton.plugin.bmcr.BMCRPlugin;\
     org.lockss.plugin.ojs.OJSPlugin;
 
 # Title database
@@ -153,8 +161,6 @@ org.lockss.title.tal9.param.1.key=base_url
 org.lockss.title.tal9.param.1.value=http\://www.jhc.org/
 org.lockss.title.tal9.param.2.key=volume
 org.lockss.title.tal9.param.2.value=52
-org.lockss.title.tal9.param.3.key=year
-org.lockss.title.tal9.param.3.value=2004
 #Title: Test - Shadow1 (HighWire Press)
 #Fri Jan 02 14:29:37 PST 2004
 org.lockss.title.tal10.title=Test - Shadow1 (small)
@@ -309,4 +315,176 @@ org.lockss.title.pm21.param.2.value=modern_fiction_studies
 org.lockss.title.pm21.param.3.key=volume
 org.lockss.title.pm21.param.3.value=49
 
+#journal_of_early_christian_studies, vol. 11
+org.lockss.title.pm22.title=Journal of Early Christian Studies Volume 11
+org.lockss.title.pm22.journalTitle=Journal of Early Christian Studies
+org.lockss.title.pm22.plugin=org.lockss.plugin.projmuse.ProjectMusePlugin
+org.lockss.title.pm22.param.1.key=base_url
+org.lockss.title.pm22.param.1.value=http\://muse.jhu.edu/
+org.lockss.title.pm22.param.2.key=journal_dir
+org.lockss.title.pm22.param.2.value=journal_of_early_christian_studies
+org.lockss.title.pm22.param.3.key=volume
+org.lockss.title.pm22.param.3.value=11
+
+#journal_of_modern_greek_studies, vol. 21
+org.lockss.title.pm23.title=Journal of Modern Greek Studies Volume 21
+org.lockss.title.pm23.journalTitle=Journal of Modern Greek Studies
+org.lockss.title.pm23.plugin=org.lockss.plugin.projmuse.ProjectMusePlugin
+org.lockss.title.pm23.param.1.key=base_url
+org.lockss.title.pm23.param.1.value=http\://muse.jhu.edu/
+org.lockss.title.pm23.param.2.key=journal_dir
+org.lockss.title.pm23.param.2.value=journal_of_modern_greek_studies
+org.lockss.title.pm23.param.3.key=volume
+org.lockss.title.pm23.param.3.value=21
+
+#journal_of_the_history_of_ideas, vol. 64
+org.lockss.title.pm24.title=Journal of the History of Ideas Volume 64
+org.lockss.title.pm24.journalTitle=Journal of the History of Ideas
+org.lockss.title.pm24.plugin=org.lockss.plugin.projmuse.ProjectMusePlugin
+org.lockss.title.pm24.param.1.key=base_url
+org.lockss.title.pm24.param.1.value=http\://muse.jhu.edu/
+org.lockss.title.pm24.param.2.key=journal_dir
+org.lockss.title.pm24.param.2.value=journal_of_the_history_of_ideas
+org.lockss.title.pm24.param.3.key=volume
+org.lockss.title.pm24.param.3.value=64
+
+#journal_of_the_history_of_philosophy, vol. 41
+org.lockss.title.pm25.title=Journal of the History of Philosophy Volume 41
+org.lockss.title.pm25.journalTitle=Journal of the History of Philosophy
+org.lockss.title.pm25.plugin=org.lockss.plugin.projmuse.ProjectMusePlugin
+org.lockss.title.pm25.param.1.key=base_url
+org.lockss.title.pm25.param.1.value=http\://muse.jhu.edu/
+org.lockss.title.pm25.param.2.key=journal_dir
+org.lockss.title.pm25.param.2.value=journal_of_the_history_of_philosophy
+org.lockss.title.pm25.param.3.key=volume
+org.lockss.title.pm25.param.3.value=41
+
+#journal_of_womens_history, vol. 15
+org.lockss.title.pm26.title=Journal of Women's History Volume 15
+org.lockss.title.pm26.journalTitle=Journal of Women's History
+org.lockss.title.pm26.plugin=org.lockss.plugin.projmuse.ProjectMusePlugin
+org.lockss.title.pm26.param.1.key=base_url
+org.lockss.title.pm26.param.1.value=http\://muse.jhu.edu/
+org.lockss.title.pm26.param.2.key=journal_dir
+org.lockss.title.pm26.param.2.value=journal_of_womens_history
+org.lockss.title.pm26.param.3.key=volume
+org.lockss.title.pm26.param.3.value=15
+
+#kennedy_institute_of_ethics_journal, vol. 13
+org.lockss.title.pm27.title=Kennedy Institute of Ethics Journal Volume 13
+org.lockss.title.pm27.journalTitle=Kennedy Institute of Ethics Journal
+org.lockss.title.pm27.plugin=org.lockss.plugin.projmuse.ProjectMusePlugin
+org.lockss.title.pm27.param.1.key=base_url
+org.lockss.title.pm27.param.1.value=http\://muse.jhu.edu/
+org.lockss.title.pm27.param.2.key=journal_dir
+org.lockss.title.pm27.param.2.value=kennedy_institute_of_ethics_journal
+org.lockss.title.pm27.param.3.key=volume
+org.lockss.title.pm27.param.3.value=13
+
+#late_imperial_china, vol. 24
+org.lockss.title.pm28.title=Late Imperial China Volume 24
+org.lockss.title.pm28.journalTitle=Late Imperial China
+org.lockss.title.pm28.plugin=org.lockss.plugin.projmuse.ProjectMusePlugin
+org.lockss.title.pm28.param.1.key=base_url
+org.lockss.title.pm28.param.1.value=http\://muse.jhu.edu/
+org.lockss.title.pm28.param.2.key=journal_dir
+org.lockss.title.pm28.param.2.value=late_imperial_china
+org.lockss.title.pm28.param.3.key=volume
+org.lockss.title.pm28.param.3.value=24
+
+#lion_and_the_unicorn, vol. 27
+org.lockss.title.pm29.title=Lion and the Unicorn Volume 27
+org.lockss.title.pm29.journalTitle=Lion and the Unicorn
+org.lockss.title.pm29.plugin=org.lockss.plugin.projmuse.ProjectMusePlugin
+org.lockss.title.pm29.param.1.key=base_url
+org.lockss.title.pm29.param.1.value=http\://muse.jhu.edu/
+org.lockss.title.pm29.param.2.key=journal_dir
+org.lockss.title.pm29.param.2.value=lion_and_the_unicorn
+org.lockss.title.pm29.param.3.key=volume
+org.lockss.title.pm29.param.3.value=27
+
+#literature_and_medicine, vol. 22
+org.lockss.title.pm30.title=Literature and Medicine Volume 22
+org.lockss.title.pm30.journalTitle=Literature and Medicine
+org.lockss.title.pm30.plugin=org.lockss.plugin.projmuse.ProjectMusePlugin
+org.lockss.title.pm30.param.1.key=base_url
+org.lockss.title.pm30.param.1.value=http\://muse.jhu.edu/
+org.lockss.title.pm30.param.2.key=journal_dir
+org.lockss.title.pm30.param.2.value=literature_and_medicine
+org.lockss.title.pm30.param.3.key=volume
+org.lockss.title.pm30.param.3.value=22
+
+#mln, vol. 118
+org.lockss.title.pm31.title=MLN Volume 118
+org.lockss.title.pm31.journalTitle=MLN
+org.lockss.title.pm31.plugin=org.lockss.plugin.projmuse.ProjectMusePlugin
+org.lockss.title.pm31.param.1.key=base_url
+org.lockss.title.pm31.param.1.value=http\://muse.jhu.edu/
+org.lockss.title.pm31.param.2.key=journal_dir
+org.lockss.title.pm31.param.2.value=mln
+org.lockss.title.pm31.param.3.key=volume
+org.lockss.title.pm31.param.3.value=118
+
+#SNDE vol. 8
+org.lockss.title.bp1.title=Studies in Nonlinear Dynamics and Econometrics Volume 8
+org.lockss.title.bp1.journalTitle=Studies in Nonlinear Dynamics and Econometrics
+org.lockss.title.bp1.plugin=org.lockss.plugin.bepress.BePressPlugin
+org.lockss.title.bp1.param.1.key=base_url
+org.lockss.title.bp1.param.1.value=http\://www.bepress.com/
+org.lockss.title.bp1.param.2.key=journal_abbr
+org.lockss.title.bp1.param.2.value=snde
+org.lockss.title.bp1.param.3.key=volume
+org.lockss.title.bp1.param.3.value=8
+
+#AMBIO: A Journal of the Human Environment
+org.lockss.title.bo1.title=AMBIO: A Journal of the Human Environment Volume 33
+org.lockss.title.bo1.journalTitle=AMBIO: A Journal of the Human Environment
+org.lockss.title.bo1.plugin=org.lockss.plugin.bioone.BioOnePlugin
+org.lockss.title.bo1.param.1.key=base_url
+org.lockss.title.bo1.param.1.value=http\://www.bioone.org/
+org.lockss.title.bo1.param.2.key=journal_id
+org.lockss.title.bo1.param.2.value=0044-7447
+org.lockss.title.bo1.param.3.key=volume
+org.lockss.title.bo1.param.3.value=33
+
+#BMCR
+org.lockss.title.bmcr1.title=Bryn Mawr Classical Review 2004
+org.lockss.title.bmcr1.journalTitle=Bryn Mawr Classical Review
+org.lockss.title.bmcr1.plugin=edu.princeton.plugin.bmcr.BMCRPlugin
+org.lockss.title.bmcr1.param.1.key=base_url
+org.lockss.title.bmcr1.param.1.value=http\://ccat.sas.upenn.edu/bmcr/
+org.lockss.title.bmcr1.param.2.key=year
+org.lockss.title.bmcr1.param.2.value=2004
+
+org.lockss.title.bmcr2.title=Bryn Mawr Classical Review 2003
+org.lockss.title.bmcr2.journalTitle=Bryn Mawr Classical Review
+org.lockss.title.bmcr2.plugin=edu.princeton.plugin.bmcr.BMCRPlugin
+org.lockss.title.bmcr2.param.1.key=base_url
+org.lockss.title.bmcr2.param.1.value=http\://ccat.sas.upenn.edu/bmcr/
+org.lockss.title.bmcr2.param.2.key=year
+org.lockss.title.bmcr2.param.2.value=2003
+
+org.lockss.title.bmcr3.title=Bryn Mawr Classical Review 2002
+org.lockss.title.bmcr3.journalTitle=Bryn Mawr Classical Review
+org.lockss.title.bmcr3.plugin=edu.princeton.plugin.bmcr.BMCRPlugin
+org.lockss.title.bmcr3.param.1.key=base_url
+org.lockss.title.bmcr3.param.1.value=http\://ccat.sas.upenn.edu/bmcr/
+org.lockss.title.bmcr3.param.2.key=year
+org.lockss.title.bmcr3.param.2.value=2002
+
+org.lockss.title.bmcr4.title=Bryn Mawr Classical Review 2001
+org.lockss.title.bmcr4.journalTitle=Bryn Mawr Classical Review
+org.lockss.title.bmcr4.plugin=edu.princeton.plugin.bmcr.BMCRPlugin
+org.lockss.title.bmcr4.param.1.key=base_url
+org.lockss.title.bmcr4.param.1.value=http\://ccat.sas.upenn.edu/bmcr/
+org.lockss.title.bmcr4.param.2.key=year
+org.lockss.title.bmcr4.param.2.value=2001
+
+org.lockss.title.bmcr5.title=Bryn Mawr Classical Review 1990
+org.lockss.title.bmcr5.journalTitle=Bryn Mawr Classical Review
+org.lockss.title.bmcr5.plugin=edu.princeton.plugin.bmcr.BMCRPlugin
+org.lockss.title.bmcr5.param.1.key=base_url
+org.lockss.title.bmcr5.param.1.value=http\://ccat.sas.upenn.edu/bmcr/
+org.lockss.title.bmcr5.param.2.key=year
+org.lockss.title.bmcr5.param.2.value=1990
 
