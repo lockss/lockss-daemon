@@ -1,5 +1,5 @@
 /*
- * $Id: JarValidator.java,v 1.2 2004-09-01 20:14:45 smorabito Exp $
+ * $Id: JarValidator.java,v 1.3 2004-09-27 20:10:54 smorabito Exp $
  */
 
 /*
@@ -112,6 +112,10 @@ public class JarValidator {
       jstr = new JarInputStream(cu.getUnfilteredInputStream(), true);
 
       Manifest manifest = jstr.getManifest();
+
+      if (manifest == null) {
+	throw new JarValidationException("No manifest");
+      }
 
       // Iterate across all the JAR entries, validating each
       // one.

@@ -40,6 +40,9 @@
   <property name="b">
     <property name="c" value="foo"/>
   </property>
+  <property name="d">
+    <value>bar</value>
+  </property>
 
   <!-- For testing conditionals, these are the expected values: -->
   <!--     Daemon Version: 1.2.8                                -->

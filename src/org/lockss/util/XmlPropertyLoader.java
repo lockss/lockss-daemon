@@ -1,5 +1,5 @@
 /*
- * $Id: XmlPropertyLoader.java,v 1.12 2004-09-02 01:13:24 smorabito Exp $
+ * $Id: XmlPropertyLoader.java,v 1.13 2004-09-27 20:10:53 smorabito Exp $
  */
 
 /*
@@ -259,9 +259,9 @@ public class XmlPropertyLoader {
 	endTestTag();
       } else if (TAG_LOCKSSCONFIG.equals(qName)) {
 	; // do nothing
-      } else {
-	throw new IllegalArgumentException("Unexpected tag: " + qName);
       }
+      // Don't need to throw here.  Unsupported tags will have already
+      // thrown in startElement().
     }
 
     /**

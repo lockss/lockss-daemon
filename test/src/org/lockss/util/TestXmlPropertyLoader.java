@@ -1,5 +1,5 @@
 /*
- * $Id: TestXmlPropertyLoader.java,v 1.8 2004-08-20 02:56:42 smorabito Exp $
+ * $Id: TestXmlPropertyLoader.java,v 1.9 2004-09-27 20:10:51 smorabito Exp $
  */
 
 /*
@@ -104,6 +104,52 @@ public class TestXmlPropertyLoader extends LockssTestCase {
   }
 
   /**
+   * Test mixing daemon version and daemon min / daemon max (illegal)
+   */
+  public void testIllegalDaemonVersionCombo() throws IOException {
+    PropertyTree props = new PropertyTree();
+    StringBuffer sb = new StringBuffer();
+    sb.append("<lockss-config>\n");
+    sb.append("  <if daemonVersion=\"2.0.0\" daemonVersionMax=\"3.0.0\">\n");
+    sb.append("    <property name=\"a\" value=\"foo\" />");
+    sb.append("  </if>\n");
+    sb.append("  <if daemonVersion=\"2.0.0\" daemonVersionMin=\"1.0.0\">\n");
+    sb.append("    <property name=\"b\" value=\"foo\" />");
+    sb.append("  </if>\n");
+    sb.append("</lockss-config>\n");
+    InputStream istr =
+      new ReaderInputStream(new StringReader(sb.toString()));
+    try {
+      m_xmlPropertyLoader.loadProperties(props, istr);
+      fail("Should have thrown.");
+    } catch (Throwable t) {
+    }
+  }
+
+  /**
+   * Test mixing platform version and platform min / platform max (illegal)
+   */
+  public void testIllegalPlatformVersionCombo() throws IOException {
+    PropertyTree props = new PropertyTree();
+    StringBuffer sb = new StringBuffer();
+    sb.append("<lockss-config>\n");
+    sb.append("  <if platformVersion=\"150\" platformVersionMax=\"200\">\n");
+    sb.append("    <property name=\"a\" value=\"foo\" />");
+    sb.append("  </if>\n");
+    sb.append("  <if platformVersion=\"150\" platformVersionMin=\"100\">\n");
+    sb.append("    <property name=\"b\" value=\"foo\" />");
+    sb.append("  </if>\n");
+    sb.append("</lockss-config>\n");
+    InputStream istr =
+      new ReaderInputStream(new StringReader(sb.toString()));
+    try {
+      m_xmlPropertyLoader.loadProperties(props, istr);
+      fail("Should have thrown.");
+    } catch (Throwable t) {
+    }
+  }
+
+  /**
    * Test basic non-nested property getting from the static config.
    */
   public void testGet() throws IOException {
@@ -115,6 +161,13 @@ public class TestXmlPropertyLoader extends LockssTestCase {
    */
   public void testNestedGet() throws IOException {
     assertEquals("foo", m_props.get("b.c"));
+  }
+
+  /**
+   * Test value tag (not in a list)
+   */
+  public void testValueTag() throws IOException {
+    assertEquals("bar", m_props.get("d"));
   }
 
   /**
