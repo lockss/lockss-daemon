@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.98 2004-08-09 02:52:06 tlipkis Exp $
+ $Id: build.xml,v 1.99 2004-08-14 00:18:18 smorabito Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -172,12 +172,9 @@ Args:
   <property name="lockss.tools.test.jar" value="${lib}/lockss-tools-test.jar"/>
   <property name="lockss.generated.jar" value="${lib}/lockss-generated.jar"/>
   <property name="lockss.generated.test.jar" value="${lib}/lockss-generated-test.jar"/>
-  <property name="signed.plugins.dir"  value="${basedir}/signed-plugins/" />
-  <property name="unsigned.plugins.dir" value="${basedir}/unsigned-plugins/" />
-  <property name="signed.plugins.jar"
-	    value="${signed.plugins.dir}/plugins.jar"/>
-  <property name="unsigned.plugins.jar"
-	    value="${unsigned.plugins.dir}/plugins.jar" />
+  <property name="plugins.dir" value="${basedir}/plugins" />
+  <property name="plugins.jar"
+	    value="${plugins.dir}/plugins.jar"/>
 
   <property name="ant-contrib.jar"      value="${lib}/ant-contrib-0.6.jar"/>
 
@@ -402,8 +399,7 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
     <delete dir="${test.results}" quiet="true"/>
     <delete dir="${javadoc}" quiet="true"/>
     <delete dir="${test.javadoc}" quiet="true"/>
-    <delete dir="${signed.plugins.dir}" quiet="true"/>
-    <delete dir="${unsigned.plugins.dir}" quiet="true"/>
+    <delete dir="${plugins.dir}" quiet="true"/>
     <delete file="${lockss.jar}" quiet="true"/>
     <delete file="${lockss.test.jar}" quiet="true"/>
     <delete file="${lockss.ant.jar}" quiet="true"/>
@@ -664,8 +660,8 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
 
   <!-- ==================================================================== -->
   <target name="jar-plugins" depends="compile-lockss,build-info,check.contrib"
-   description="Jar the LOCKSS plugins" >
-
+	  description="Jar the LOCKSS plugins" >
+    <mkdir dir="${plugins.dir}" />
     <condition property="sign.jar.files" value="true" >
       <and>
 	<isset property="sign-alias" />
@@ -674,22 +670,7 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
 	<isset property="sign-storepass" />
       </and>
     </condition>
-
-    <if>
-      <not>
-        <isset property="sign.jar.files" />
-      </not>
-      <then>
-        <property name="tmp.sign.dir" value="${unsigned.plugins.dir}" />
-        <property name="tmp.sign.jar" value="${tmp.sign.dir}/plugin.jar" />
-        <mkdir dir="${tmp.sign.dir}" />
-      </then>
-      <else>
-        <property name="tmp.sign.dir" value="${java.io.tmpdir}" />
-        <property name="tmp.sign.jar" value="${tmp.sign.dir}/plugin.jar" />
-      </else>
-    </if>
-
+    
     <jar jarfile="${tmp.sign.jar}" basedir="${classes}" >
       <include name="**/plugin/*/*.xml" />
       <include name="**/plugin/*/*.class" />
@@ -697,36 +678,77 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
       <exclude name="**/plugin/definable/**" />
       <exclude name="**/plugin/sample/**" />
     </jar>
-
+    
     <if>
       <isset property="sign.jar.files" />
       <then>
-	<mkdir dir="${signed.plugins.dir}" />
 	<signjar keystore="${sign-keystore}"
-		 jar="${tmp.sign.jar}"
-		 signedjar="${signed.plugins.jar}"
+		 jar="${plugins.jar}"
 		 keypass="${sign-keypass}"
 		 storepass="${sign-storepass}"
 		 alias="${sign-alias}" />
       </then>
     </if>
 
-    <!-- cleanup the unsigned plugin jar -->
-    <if>
-      <and>
-        <isset property="sign.jar.files" />
-        <not>
-          <isset property="keeptempfiles" />
-        </not>
-      </and>
-      <then>
-        <delete file="${tmp.sign.jar}" />
-      </then>
-    </if>
-
   </target>
 
   <!-- ==================================================================== -->
+  <target name="build-plugin" depends="compile-lockss,build-info,check.contrib"
+	  description="Generate and optionally sign a loadable plugin 
+	               JAR file for a single plugin">
+    <!-- relies on the properties: plugin-jarfile, plugin-path,
+	 and plugin-file -->
+
+    <mkdir dir="${plugins.dir}" />
+    <condition property="sign.jar.file" value="true" >
+      <and>
+	<isset property="sign-alias" />
+	<isset property="sign-keystore" />
+	<isset property="sign-keypass" />
+	<isset property="sign-storepass" />
+      </and>
+    </condition>
+
+    <jar destfile="${plugins.dir}/${plugin-jarfile}">
+      <fileset dir="${classes}">
+	<include name="${plugin-path}/*.class" />
+	<include name="${plugin-path}/*.xml" />
+      </fileset>
+      <manifest>
+	<section name="${plugin-path}/${plugin-file}">
+	  <attribute name="Lockss-Plugin" value="true" />
+	</section>
+      </manifest>
+    </jar>
+
+    <if>
+      <isset property="sign.jar.file" />
+      <then>
+	<echo>Signing jar file ${plugin-jarfile}...</echo>
+	<signjar keystore="${sign-keystore}"
+		 jar="${plugins.dir}/${plugin-jarfile}"
+		 keypass="${sign-keypass}"
+		 storepass="${sign-keypass}"
+		 alias="${sign-alias}"/>
+      </then>
+    </if>
+      
+  </target>
+
+  <!-- ==================================================================== -->
+
+  <target name="sign-plugin" depends="compile-lockss,build-info,check.contrib"
+	  description="Sign a loadable plugin JAR file">
+    <!-- relies on the properties: plugin-jarfile -->
+    <signjar keystore="${sign-keystore}"
+		 jar="${plugins.dir}/${plugin-jarfile}"
+		 keypass="${sign-keypass}"
+		 storepass="${sign-keypass}"
+		 alias="${sign-alias}"/>
+  </target>
+	  
+  <!-- ==================================================================== -->
+
   <target name="jar-tests" depends="compile-tests"
    description="Jar the LOCKSS test classes" >
     <jar jarfile="${lockss.test.jar}" basedir="${test.classes}" >
