@@ -45,9 +45,9 @@ org.lockss.poll.voteMargin=51
 org.lockss.poll.trustedMargin=51
 org.lockss.poll.namepoll.deadline=5m
 org.lockss.poll.contentpoll.min=3m
-org.lockss.poll.contentpoll.max=5m
+org.lockss.poll.contentpoll.max=3d
 
-org.lockss.treewalk.interval=5m
+org.lockss.treewalk.interval=10m
 org.lockss.comm.router.beacon.interval=1m
 
 org.lockss.metrics.slowest.hashrate = 250
