@@ -1,5 +1,5 @@
 /*
- * $Id: ExternalizableMap.java,v 1.9 2004-03-06 00:48:58 clairegriffin Exp $
+ * $Id: ExternalizableMap.java,v 1.10 2004-04-28 22:52:05 clairegriffin Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.util;
 import java.io.*;
 import java.net.*;
 import java.util.*;
+import org.exolab.castor.mapping.Mapping;
 
 /**
  * ExternalizableMap: A class which allows a map to be loaded in or written as
@@ -58,6 +59,14 @@ public class ExternalizableMap {
     synchronized(descrMap) {
       return descrMap.get(descrKey);
     }
+  }
+
+  public Set keySet() {
+    return descrMap.keySet();
+  }
+
+  public Set entrySet() {
+    return descrMap.entrySet();
   }
 
   public void setMapElement(String descrKey, Object descrElement) {
@@ -103,11 +112,13 @@ public class ExternalizableMap {
     }
   }
 
-  public void loadMap(String mapLocation, String mapName) {
+  public void loadMap(String mapLocation, String mapName, String mapFileName) {
     String mapFile = mapLocation + File.separator + mapName;
     try {
-      ExtMapBean em = (ExtMapBean)marshaller.load(mapFile, ExtMapBean.class,
-          MAPPING_FILE_NAME);
+      ExtMapBean em;
+      mapFileName = mapFileName == null ? MAPPING_FILE_NAME: mapFileName;
+        em = (ExtMapBean) marshaller.load(mapFile, ExtMapBean.class,
+                                          mapFileName);
       if (em==null) {
         return;
       }
@@ -121,10 +132,12 @@ public class ExternalizableMap {
     }
   }
 
-  public void storeMap(String mapLocation, String mapName) {
+  public void storeMap(String mapLocation, String mapName, String mapFileName) {
     try {
+      mapFileName = mapFileName == null ? MAPPING_FILE_NAME : mapFileName;
       ExtMapBean em = new ExtMapBean(descrMap);
       marshaller.store(mapLocation, mapName, em, MAPPING_FILE_NAME);
+
     }
     catch (Exception e) {
       logger.error("Couldn't store map: ", e);
@@ -282,6 +295,5 @@ public class ExternalizableMap {
     setMapElement(key, value);
   }
  */
-
 }
 

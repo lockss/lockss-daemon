@@ -1,5 +1,5 @@
 /*
- * $Id: TestExternalizableMap.java,v 1.3 2004-01-13 04:46:27 clairegriffin Exp $
+ * $Id: TestExternalizableMap.java,v 1.4 2004-04-28 22:52:06 clairegriffin Exp $
  */
 
 /*
@@ -169,7 +169,7 @@ public class TestExternalizableMap extends LockssTestCase {
     // marshal
     String fileLoc = tempDirPath + "testMap";
     String fileName = "testMap";
-    map.storeMap(fileLoc, fileName);
+    map.storeMap(fileLoc, fileName, null);
 
     // new map
     map = new ExternalizableMap();
@@ -186,7 +186,7 @@ public class TestExternalizableMap extends LockssTestCase {
                  map.getUrl("test-u", new URL("http://foo.com")));
 
     // unmarshal
-    map.loadMap(fileLoc, fileName);
+    map.loadMap(fileLoc, fileName, null);
     assertFalse(map.getBoolean("test-b", true));
     assertIsomorphic(testCol,
                      map.getCollection("test-c", new ArrayList()));

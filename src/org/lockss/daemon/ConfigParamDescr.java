@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescr.java,v 1.12 2004-02-12 03:57:28 clairegriffin Exp $
+ * $Id: ConfigParamDescr.java,v 1.13 2004-04-28 22:52:04 clairegriffin Exp $
  */
 
 /*
@@ -54,6 +54,9 @@ public class ConfigParamDescr implements Comparable {
   public static final int TYPE_BOOLEAN = 5;
   /** Value is a positive integer */
   public static final int TYPE_POS_INT = 6;
+
+  public static final String[] TYPE_STRINGS = {
+      "String", "Integer", "URL", "Year", "Boolean", "Positive Integer" };
 
   public static final ConfigParamDescr VOLUME_NUMBER = new ConfigParamDescr();
   static {

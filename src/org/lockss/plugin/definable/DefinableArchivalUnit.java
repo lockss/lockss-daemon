@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.2 2004-03-06 00:48:56 clairegriffin Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.3 2004-04-28 22:52:05 clairegriffin Exp $
  */
 
 /*
@@ -64,6 +64,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   static final public String CM_AU_MANIFEST_KEY = "au_manifest";
   static final public String CM_AU_PARSER_SUFFIX = "_parser";
   static final public String CM_AU_FILTER_SUFFIX = "_filter";
+  static final public int DEFAULT_AU_CRAWL_DEPTH = 1;
 
   protected ExternalizableMap definitionMap;
   static Logger log = Logger.getLogger("ConfigurableArchivalUnit");
@@ -169,7 +170,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
       throws REException {
 
     CrawlRule rule = makeRules();
-    int depth = definitionMap.getInt(CM_AU_CRAWL_DEPTH, 1);
+    int depth = definitionMap.getInt(CM_AU_CRAWL_DEPTH, DEFAULT_AU_CRAWL_DEPTH);
     return new CrawlSpec(startUrlString, rule, depth);
   }
 
