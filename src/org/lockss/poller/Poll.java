@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.27 2002-12-17 02:24:00 claire Exp $
+* $Id: Poll.java,v 1.28 2002-12-17 21:09:05 claire Exp $
  */
 
 /*
@@ -365,7 +365,7 @@ public abstract class Poll implements Serializable {
    * @return a MessageDigest
    */
   MessageDigest getInitedHasher(byte[] challenge, byte[] verifier) {
-    MessageDigest hasher = m_pollmanager.getHasher();
+    MessageDigest hasher = m_pollmanager.getHasher(m_msg);
     hasher.update(challenge, 0, challenge.length);
     hasher.update(verifier, 0, verifier.length);
     log.debug("hashing: C[" +String.valueOf(B64Code.encode(challenge)) + "] "

@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapMessage.java,v 1.2 2002-11-23 01:49:32 troberts Exp $
+ * $Id: TestLcapMessage.java,v 1.3 2002-12-17 21:09:05 claire Exp $
  */
 
 /*
@@ -46,7 +46,7 @@ public class TestLcapMessage extends TestCase {
   private static String urlstr = "http://www.test.org";
   private static String regexp = "*.doc";
   private static byte[] testbytes = {1,2,3,4,5,6,7,8,9,10};
-  private static String[] testentries = {"test1.doc", 
+  private static String[] testentries = {"test1.doc",
 					 "test2.doc", "test3.doc"};
 
   protected InetAddress testaddr;
@@ -78,7 +78,7 @@ public class TestLcapMessage extends TestCase {
     testID = new LcapIdentity(testaddr);
 
     testmsg.m_originID = new LcapIdentity(testaddr);
-
+    testmsg.m_hashAlgorithm = LcapMessage.getDefaultHashAlgorithm();
     testmsg.m_startTime = 123456789;
     testmsg.m_stopTime = 987654321;
     testmsg.m_multicast = false;
@@ -121,6 +121,7 @@ public class TestLcapMessage extends TestCase {
     assertTrue(rep_msg.m_originID.isEqual(testID));
     assertEquals(rep_msg.m_ttl,5);
     assertEquals(rep_msg.m_opcode,LcapMessage.CONTENT_POLL_REP);
+    assertEquals(rep_msg.m_hashAlgorithm,testmsg.m_hashAlgorithm);
     // TODO: figure out how to test time
     assertEquals(rep_msg.m_multicast ,false);
     assertEquals(rep_msg.m_hopCount,2);
@@ -198,13 +199,13 @@ public class TestLcapMessage extends TestCase {
     testmsg.m_entries = null;
     testmsg.encodeMsg();
   }
-    
+
   public void testMessageDecodingHandlesNullEntries() throws IOException {
     testmsg.m_entries = null;
     byte[] msgbytes = testmsg.encodeMsg();
     new LcapMessage(msgbytes);
   }
-    
+
 
 
 

@@ -284,7 +284,7 @@ public class TestPollManager extends TestCase {
 
   /** test for method getHasher(..) */
   public void testGetHasher() {
-    MessageDigest md = pollmanager.getHasher();
+    MessageDigest md = pollmanager.getHasher(null);
     assertNotNull(md);
   }
 
@@ -299,7 +299,7 @@ public class TestPollManager extends TestCase {
     assertNotNull("unable to retrieve secret for verifier", secret);
 
     // confirm that the verifier is the hash of the secret
-    MessageDigest md = pollmanager.getHasher();
+    MessageDigest md = pollmanager.getHasher(null);
     md.update(secret, 0, secret.length);
     byte[] verifier_check = md.digest();
     assertTrue("secret does not match verifier",

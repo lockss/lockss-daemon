@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessage.java,v 1.12 2002-12-17 02:24:00 claire Exp $
+ * $Id: LcapMessage.java,v 1.13 2002-12-17 21:09:05 claire Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import java.util.StringTokenizer;
 import org.lockss.util.*;
 import java.io.*;
 import org.mortbay.util.B64Code;
+import org.lockss.daemon.Configuration;
 
 
 /**
@@ -56,6 +57,11 @@ public class LcapMessage implements Serializable {
   public static final int CONTENT_POLL_REP = 3;
   public static final int VERIFY_POLL_REQ = 4;
   public static final int VERIFY_POLL_REP = 5;
+
+  public static final String PARAM_HASH_ALGORITHM = Configuration.PREFIX +
+      "protocol.hashAlgorithm";
+
+  public static final String DEFAULT_HASH_ALGORITM = "SHA-1";
 
   public static final String[] POLL_OPCODES =
   {"NameReq", "NameRep",
@@ -82,8 +88,9 @@ public class LcapMessage implements Serializable {
   int                m_length;      // length of remaining packet
 
   /* items which are in the property list */
-  LcapIdentity           m_originID;    // the address of the originator
+  LcapIdentity       m_originID;    // the address of the originator
   InetAddress        m_group;       // The group address
+  protected String   m_hashAlgorithm; // the algorithm used to hash
   byte               m_ttl;         // The original time-to-live
   long               m_startTime;   // the original start time
   long               m_stopTime;    // the original stop time
@@ -101,6 +108,7 @@ public class LcapMessage implements Serializable {
 
   protected LcapMessage() throws IOException {
     m_props = new EncodedProperty();
+
   }
 
   protected LcapMessage(byte[] encodedBytes) throws IOException {
@@ -135,6 +143,7 @@ public class LcapMessage implements Serializable {
     m_hashed = hashedData;
     m_opcode = opcode;
     m_entries = entries;
+    m_hashAlgorithm = getDefaultHashAlgorithm();
     // null the remaining undefined data
     m_startTime = 0;
     m_stopTime = 0;
@@ -158,7 +167,7 @@ public class LcapMessage implements Serializable {
     m_targetUrl = trigger.getTargetUrl();
     m_regExp = trigger.getRegExp();
     m_entries = trigger.getEntries();
-
+    m_hashAlgorithm = trigger.getHashAlgorithm();
     m_originID = localID;
     m_verifier = verifier;
     m_hashed = hashedContent;
@@ -167,6 +176,12 @@ public class LcapMessage implements Serializable {
     m_startTime = 0;
     m_stopTime = 0;
     m_multicast = false;
+  }
+
+  public static String getDefaultHashAlgorithm() {
+    String algorithm =  Configuration.getParam( PARAM_HASH_ALGORITHM,
+        DEFAULT_HASH_ALGORITM);
+    return algorithm;
   }
 
   /**
@@ -251,10 +266,6 @@ public class LcapMessage implements Serializable {
     if (msg != null) {
       msg.m_startTime = TimeBase.nowMs();
       msg.m_stopTime = msg.m_startTime + timeRemaining;
-      msg.m_targetUrl = trigger.getTargetUrl();
-      msg.m_regExp = trigger.getRegExp();
-      msg.m_originID = localID;
-      msg.m_hopCount = trigger.getHopCount();
     }
     return msg;
   }
@@ -334,6 +345,7 @@ public class LcapMessage implements Serializable {
       log.error("invalid group address");
     }
 
+    m_hashAlgorithm = m_props.getProperty("hashAlgorithm");
     m_ttl = (byte) m_props.getInt("ttl", 0);
     duration = m_props.getInt("duration", 0) * 1000;
     elapsed = m_props.getInt("elapsed", 0)* 1000;
@@ -372,6 +384,7 @@ public class LcapMessage implements Serializable {
       m_props.putByteArray("group", m_group.getAddress());
     }
 
+    m_props.setProperty("hashAlgorithm", m_hashAlgorithm);
     m_props.putInt("ttl",m_ttl);
     m_props.putInt("duration",(int)(getDuration()/1000));
     m_props.putInt("elapsed",(int)(getElapsed()/1000));
@@ -498,6 +511,10 @@ public class LcapMessage implements Serializable {
 
   public String getRegExp() {
     return m_regExp;
+  }
+
+  public String getHashAlgorithm() {
+    return m_hashAlgorithm;
   }
 
   String entriesToString() {

@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.14 2002-12-17 02:24:00 claire Exp $
+* $Id: PollManager.java,v 1.15 2002-12-17 21:09:05 claire Exp $
  */
 
 /*
@@ -48,7 +48,6 @@ import gnu.regexp.*;
 
 public class PollManager {
 
-  static final String HASH_ALGORITHM = "SHA-1";
   static final long EXPIRATION_TIME = 24 * 60 * 60 * 1000; // 1 day
   static final long VERIFIER_EXPIRATION_TIME = 24 * 60 * 60 * 1000;
 
@@ -67,9 +66,9 @@ public class PollManager {
     if(theManager == null) {
       theManager = new PollManager();
       try {
-      theComm = LcapComm.getComm();
-      theComm.registerMessageHandler(LockssDatagram.PROTOCOL_LCAP,
-                                  new CommMessageHandler());
+        theComm = LcapComm.getComm();
+        theComm.registerMessageHandler(LockssDatagram.PROTOCOL_LCAP,
+                                       new CommMessageHandler());
       }
       catch(Exception ex) {
         theLog.warning("Unitialized Comm!", ex);
@@ -77,6 +76,15 @@ public class PollManager {
     }
     return theManager;
   }
+
+  /**
+   * return the default MessageDigest hasher
+   * @return MessageDigest the hasher
+   */
+  public MessageDigest getHasher() {
+    return getHasher(null);
+  }
+
 
   /**
    * make a new poll of the type defined by the incoming message.
@@ -104,7 +112,7 @@ public class PollManager {
     CachedUrlSet conflict = checkForConflicts(msg);
     if(conflict != null) {
       String err = msg.toString() + " conflicts with " + conflict.toString() +
-                                  " in makeElection()";
+                   " in makeElection()";
       theLog.debug(err);
       throw new ProtocolException(err);
     }
@@ -155,12 +163,12 @@ public class PollManager {
    * @throws IOException thrown if Message construction fails.
    */
   public void makePollRequest(String url,
-                                     String regexp,
-                                     int opcode,
-                                     int timeToLive,
-                                     InetAddress grpAddr,
-                                     long duration,
-                                     long voteRange)
+                              String regexp,
+                              int opcode,
+                              int timeToLive,
+                              InetAddress grpAddr,
+                              long duration,
+                              long voteRange)
       throws IOException {
     if (voteRange > (duration/4)) {
       voteRange = duration/4;
@@ -392,16 +400,6 @@ public class PollManager {
 
   }
 
-  MessageDigest getHasher() {
-    MessageDigest hasher = null;
-    try {
-      hasher = MessageDigest.getInstance(PollManager.HASH_ALGORITHM);
-    } catch (NoSuchAlgorithmException ex) {
-      theLog.error("Unable to run - no hasher");
-    }
-
-    return hasher;
-  }
 
   void requestVerifyPoll(LcapMessage msg) throws IOException {
     String url = new String(msg.getTargetUrl());
@@ -428,6 +426,31 @@ public class PollManager {
     Poll poll = findPoll(reqmsg);
     poll.m_pollstate = Poll.PS_WAIT_TALLY;
   }
+
+  /**
+   * return a MessageDigest hasher for needed to hash this message
+   * @param msg the LcapMessage which needs to be hashed or null to used
+   * the default hasher
+   * @return MessageDigest the hasher
+   */
+  MessageDigest getHasher(LcapMessage msg) {
+    MessageDigest hasher = null;
+    String algorithm;
+    if(msg == null) {
+      algorithm = LcapMessage.getDefaultHashAlgorithm();
+    }
+    else {
+      algorithm = msg.getHashAlgorithm();
+    }
+    try {
+      hasher = MessageDigest.getInstance(algorithm);
+    } catch (NoSuchAlgorithmException ex) {
+      theLog.error("Unable to run - no hasher");
+    }
+
+    return hasher;
+  }
+
 
   /**
    * return a key from an array of bytes.
@@ -489,7 +512,7 @@ public class PollManager {
    */
   byte[] generateVerifier(byte[] secret) {
     byte[] verifier = null;
-    MessageDigest hasher = getHasher();
+    MessageDigest hasher = getHasher(null);
     hasher.update(secret, 0, secret.length);
     verifier = hasher.digest();
 
@@ -498,7 +521,7 @@ public class PollManager {
 
 
   private void rememberVerifier(byte[] verifier,
-                                       byte[] secret) {
+                                byte[] secret) {
     String ver = String.valueOf(B64Code.encode(verifier));
     String sec = secret == null ? "" : String.valueOf(B64Code.encode(secret));
     long expiration = TimeBase.nowMs() + VERIFIER_EXPIRATION_TIME;
