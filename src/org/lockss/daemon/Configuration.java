@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.21 2003-03-05 21:07:14 tal Exp $
+ * $Id: Configuration.java,v 1.22 2003-03-08 01:44:32 troberts Exp $
  */
 
 /*
@@ -607,7 +607,7 @@ public abstract class Configuration {
   /** Static convenience method to get param from current configuration.
    * Don't accidentally use this on a <code>Configuration</code> instance.
    */
-  public static long getTimeIntervalParam(String key, int dfault) {
+  public static long getTimeIntervalParam(String key, long dfault) {
     return currentConfig.getTimeInterval(key, dfault);
   }
 
