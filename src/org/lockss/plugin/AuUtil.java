@@ -1,5 +1,5 @@
 /*
- * $Id: AuUtil.java,v 1.1 2005-01-04 02:59:52 tlipkis Exp $
+ * $Id: AuUtil.java,v 1.2 2005-01-07 09:20:53 tlipkis Exp $
  */
 
 /*
@@ -49,13 +49,17 @@ import org.lockss.repository.*;
  */
 public class AuUtil {
 
+  public static LockssDaemon getDaemon(ArchivalUnit au) {
+    return au.getPlugin().getDaemon();
+  }
+
   /**
    * Return the size of the AU, calculating it if necessary.
    * @param au the AU
    * @return the AU's total content size.
    */
   public static long getAuContentSize(ArchivalUnit au) {
-    LockssDaemon daemon = au.getPlugin().getDaemon();
+    LockssDaemon daemon = getDaemon(au);
     LockssRepository repo = daemon.getLockssRepository(au);
     try {
       RepositoryNode repoNode = repo.getNode(au.getAuCachedUrlSet().getUrl());
@@ -63,6 +67,25 @@ public class AuUtil {
     } catch (MalformedURLException ignore) {
       return -1;
     }
+  }
+
+  /**
+   * Return the disk space used by the AU, including all overhead,
+   * calculating it if necessary.
+   * @param au the AU
+   * @return the AU's disk usage in bytes.
+   */
+  public static long getAuDiskUsage(ArchivalUnit au) {
+    LockssDaemon daemon = getDaemon(au);
+    LockssRepository repo = daemon.getLockssRepository(au);
+    try {
+      RepositoryNode repoNode = repo.getNode(au.getAuCachedUrlSet().getUrl());
+      if (repoNode instanceof AuNodeImpl) {
+	return ((AuNodeImpl)repoNode).getDiskUsage();
+      }
+    } catch (MalformedURLException ignore) {
+    }
+    return -1;
   }
 
   /** Return true if the supplied AU config appears to be compatible with
