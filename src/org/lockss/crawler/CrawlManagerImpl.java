@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.6 2003-02-24 22:13:41 claire Exp $
+ * $Id: CrawlManagerImpl.java,v 1.7 2003-03-03 19:35:08 troberts Exp $
  */
 
 /*
@@ -56,6 +56,7 @@ public class CrawlManagerImpl implements CrawlManager, LockssManager {
    */
   static private CrawlManagerImpl theManager = null;
   static private LockssDaemon theDaemon = null;
+
   /**
    * init the plugin manager.
    * @param daemon the LockssDaemon instance
@@ -108,17 +109,17 @@ public class CrawlManagerImpl implements CrawlManager, LockssManager {
 
     CrawlThread crawlThread =
       new CrawlThread(au, ListUtil.list(url.toString()),
-		      false, Deadline.NEVER, cb, cookie);
+		      false, Deadline.NEVER, ListUtil.list(cb), cookie);
     crawlThread.start();
   }
 
-  public boolean canTreeWalkStart(ArchivalUnit au, AuState aus,
-				  CrawlManager.Callback cb, Object cookie){
+  public boolean canTreeWalkStart(ArchivalUnit au, CrawlManager.Callback cb, 
+				  Object cookie){
     if (au == null) {
       throw new IllegalArgumentException("Called with null AU");
     }
-
-    if (au.shouldCrawlForNewContent(aus)) { //XXX get from au
+    NodeManager nodeManager = theDaemon.getNodeManager(au);
+    if (au.shouldCrawlForNewContent(nodeManager.getAuState())) { 
       scheduleNewContentCrawl(au, cb, cookie);
       return false;
     }
@@ -130,12 +131,18 @@ public class CrawlManagerImpl implements CrawlManager, LockssManager {
     return false;
   }
 
-  private void scheduleNewContentCrawl(ArchivalUnit au,
+  private void scheduleNewContentCrawl(ArchivalUnit au, 
 				       CrawlManager.Callback cb,
 				       Object cookie) {
+    List callBackList = 
+      ListUtil.list(new UpdateNewCrawlTimeCB(theDaemon.getNodeManager(au)));
+    if (cb != null) {
+      callBackList.add(cb);
+    }
+
     CrawlThread crawlThread =
       new CrawlThread(au, au.getNewContentCrawlUrls(),
-		      true, Deadline.NEVER, cb, cookie);
+		      true, Deadline.NEVER, callBackList, cookie);
     crawlThread.start();
   }
 
@@ -154,26 +161,44 @@ public class CrawlManagerImpl implements CrawlManager, LockssManager {
     private List urls;
     private boolean followLinks;
     private Deadline deadline;
-    private CrawlManager.Callback cb;
+    private List callbacks;
     private Object cookie;
 
     private CrawlThread(ArchivalUnit au, List urls,
 			boolean followLinks, Deadline deadline,
-			CrawlManager.Callback cb, Object cookie) {
+			List callbacks, Object cookie) {
       super(au.toString());
       this.au = au;
       this.urls = urls;
       this.followLinks = followLinks;
       this.deadline = deadline;
-      this.cb = cb;
+      this.callbacks = callbacks;
       this.cookie = cookie;
     }
 
     public void run() {
       Crawler crawler = new GoslingCrawlerImpl();
       crawler.doCrawl(au, urls, followLinks, deadline);
-      if (cb != null) {
-	cb.signalCrawlAttemptCompleted(true, cookie);
+      if (callbacks != null) {
+	Iterator it = callbacks.iterator();
+	while (it.hasNext()) {
+	  CrawlManager.Callback cb = (CrawlManager.Callback)it.next();
+	  cb.signalCrawlAttemptCompleted(true, cookie);
+	}
+      }
+    }
+  }
+  
+  private class UpdateNewCrawlTimeCB implements CrawlManager.Callback {
+    NodeManager nodeManager;
+
+    public UpdateNewCrawlTimeCB(NodeManager nodeManager) {
+      this.nodeManager = nodeManager;
+    }
+    
+    public void signalCrawlAttemptCompleted(boolean success, Object cookie) {
+      if (success) {
+	nodeManager.newTopLevelCrawlFinished();
       }
     }
   }
