@@ -761,24 +761,208 @@
 	</property>
       </property>
 
-      <property name="ambio33">
-	<property name="title" value="AMBIO: A Journal of the Human Environment Volume 33" />
-	<property name="journalTitle" value="AMBIO: A Journal of the Human Environment" />
-	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
-	<property name="param.1">
-	  <property name="key" value="base_url" />
-	  <property name="value" value="http://www.bioone.org/" />
-	</property>
-	<property name="param.2">
-	  <property name="key" value="journal_id" />
-	  <property name="value" value="0044-7447" />
-	</property>
-	<property name="param.3">
-	  <property name="key" value="volume" />
-	  <property name="value" value="33" />
-	</property>
-      </property>
+      <property name="biooone">
 
+	<property name="ambio33">
+	  <property name="title" value="AMBIO: A Journal of the Human Environment Volume 33" />
+	  <property name="journalTitle" value="AMBIO: A Journal of the Human Environment" />
+	  <property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
+	  <property name="param.1">
+	    <property name="key" value="base_url" />
+	    <property name="value" value="http://www.bioone.org/" />
+	  </property>
+	  <property name="param.2">
+	    <property name="key" value="journal_id" />
+	    <property name="value" value="0044-7447" />
+	  </property>
+	  <property name="param.3">
+	    <property name="key" value="volume" />
+	    <property name="value" value="33" />
+	  </property>
+	</property>
+
+
+	<property name="abt66">
+	  <property name="title" value="The American Biology Teacher Volume 66" />
+	  <property name="journalTitle" value="The American Biology Teacher" />
+	  <property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
+	  <property name="param.1">
+	    <property name="key" value="base_url" />
+	    <property name="value" value="http://www.bioone.org/" />
+	  </property>
+	  <property name="param.2">
+	    <property name="key" value="journal_id" />
+	    <property name="value" value="0002-7685" />
+	  </property>
+	  <property name="param.3">
+	    <property name="key" value="volume" />
+	    <property name="value" value="66" />
+	  </property>
+	</property>
+
+	<property name="fren94">
+	  <property name="title" value="American Fern Journal Volume 94" />
+	  <property name="journalTitle" value="American Fern Journal" />
+	  <property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
+	  <property name="param.1">
+	    <property name="key" value="base_url" />
+	    <property name="value" value="http://www.bioone.org/" />
+	  </property>
+	  <property name="param.2">
+	    <property name="key" value="journal_id" />
+	    <property name="value" value="0002-8444" />
+	  </property>
+	  <property name="param.3">
+	    <property name="key" value="volume" />
+	    <property name="value" value="94" />
+	  </property>
+	</property>
+
+	<property name="amn152">
+	  <property name="title" value="The American Midland Naturalist Volume 152" />
+	  <property name="journalTitle" value="The American Midland Naturalist" />
+	  <property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
+	  <property name="param.1">
+	    <property name="key" value="base_url" />
+	    <property name="value" value="http://www.bioone.org/" />
+	  </property>
+	  <property name="param.2">
+	    <property name="key" value="journal_id" />
+	    <property name="value" value="0003-0031" />
+	  </property>
+	  <property name="param.3">
+	    <property name="key" value="volume" />
+	    <property name="value" value="152" />
+	  </property>
+	</property>
+
+	<property name="amn460">
+	  <property name="title" value="American Museum Novitates Volume 460" />
+	  <property name="journalTitle" value="American Museum Novitates" />
+	  <property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
+	  <property name="param.1">
+	    <property name="key" value="base_url" />
+	    <property name="value" value="http://www.bioone.org/" />
+	  </property>
+	  <property name="param.2">
+	    <property name="key" value="journal_id" />
+	    <property name="value" value="0003-0082" />
+	  </property>
+	  <property name="param.3">
+	    <property name="key" value="volume" />
+	    <property name="value" value="460" />
+	  </property>
+	</property>
+
+	<property name="americanzoo41">
+	  <property name="title" value="American Zoologist Volume 41" />
+	  <property name="journalTitle" value="American Zoologist" />
+	  <property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
+	  <property name="param.1">
+	    <property name="key" value="base_url" />
+	    <property name="value" value="http://www.bioone.org/" />
+	  </property>
+	  <property name="param.2">
+	    <property name="key" value="journal_id" />
+	    <property name="value" value="0003-1569" />
+	  </property>
+	  <property name="param.3">
+	    <property name="key" value="volume" />
+	    <property name="value" value="41" />
+	  </property>
+	</property>
+
+	<property name="esa97">
+	  <property name="title" value="Annals of the Entomological Society of America Volume 97" />
+	  <property name="journalTitle" value="Annals of the Entomological Society of America" />
+	  <property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
+	  <property name="param.1">
+	    <property name="key" value="base_url" />
+	    <property name="value" value="http://www.bioone.org/" />
+	  </property>
+	  <property name="param.2">
+	    <property name="key" value="journal_id" />
+	    <property name="value" value="0013-8746" />
+	  </property>
+	  <property name="param.3">
+	    <property name="key" value="volume" />
+	    <property name="value" value="97" />
+	  </property>
+	</property>
+
+	<property name="avs7">
+	  <property name="title" value="Applied Vegetation Science Volume 7" />
+	  <property name="journalTitle" value="Applied Vegetation Science" />
+	  <property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
+	  <property name="param.1">
+	    <property name="key" value="base_url" />
+	    <property name="value" value="http://www.bioone.org/" />
+	  </property>
+	  <property name="param.2">
+	    <property name="key" value="journal_id" />
+	    <property name="value" value="1402-2001" />
+	  </property>
+	  <property name="param.3">
+	    <property name="key" value="volume" />
+	    <property name="value" value="7" />
+	  </property>
+	</property>
+
+	<property name="aaaresearch36">
+	  <property name="title" value="Arctic, Antarctic, and Alpine Research Volume 36" />
+	  <property name="journalTitle" value="Arctic, Antarctic, and Alpine Research" />
+	  <property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
+	  <property name="param.1">
+	    <property name="key" value="base_url" />
+	    <property name="value" value="http://www.bioone.org/" />
+	  </property>
+	  <property name="param.2">
+	    <property name="key" value="journal_id" />
+	    <property name="value" value="1523-0430" />
+	  </property>
+	  <property name="param.3">
+	    <property name="key" value="volume" />
+	    <property name="value" value="36" />
+	  </property>
+	</property>
+
+	<property name="auk121">
+	  <property name="title" value="The Auk Volume 121" />
+	  <property name="journalTitle" value="The Auk" />
+	  <property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
+	  <property name="param.1">
+	    <property name="key" value="base_url" />
+	    <property name="value" value="http://www.bioone.org/" />
+	  </property>
+	  <property name="param.2">
+	    <property name="key" value="journal_id" />
+	    <property name="value" value="0004-8038" />
+	  </property>
+	  <property name="param.3">
+	    <property name="key" value="volume" />
+	    <property name="value" value="121" />
+	  </property>
+	</property>
+
+	<property name="aviandiseases48">
+	  <property name="title" value="Avian Diseases Volume 48" />
+	  <property name="journalTitle" value="Avian Diseases" />
+	  <property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
+	  <property name="param.1">
+	    <property name="key" value="base_url" />
+	    <property name="value" value="http://www.bioone.org/" />
+	  </property>
+	  <property name="param.2">
+	    <property name="key" value="journal_id" />
+	    <property name="value" value="0005-2086" />
+	  </property>
+	  <property name="param.3">
+	    <property name="key" value="volume" />
+	    <property name="value" value="48" />
+	  </property>
+	</property>
+
+      </property>
       <property name="teslej8">
 	<property name="title" value="TESL-EJ Volume 8" />
 	<property name="journalTitle" value="TESL-EJ" />
