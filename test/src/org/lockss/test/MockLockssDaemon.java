@@ -17,6 +17,7 @@ public class MockLockssDaemon extends LockssDaemon {
   HashService hashService = null;
   PollManager pollManager = null;
   LcapComm commManager = null;
+  LcapRouter routerManager = null;
   LockssRepositoryService lockssRepositoryService = null;
   HistoryRepository historyRepository = null;
   ProxyManager proxyManager = null;
@@ -111,6 +112,23 @@ public class MockLockssDaemon extends LockssDaemon {
       theManagers.put(LockssDaemon.COMM_MANAGER, hashService);
     }
     return commManager;
+  }
+
+  /**
+   * return the router manager instance
+   * @return the LcapRouter
+   */
+  public LcapRouter getRouterManager() {
+    if (routerManager == null) {
+      routerManager = new LcapRouter();
+      try {
+        routerManager.initService(this);
+      }
+      catch (LockssDaemonException ex) {
+      }
+      theManagers.put(LockssDaemon.ROUTER_MANAGER, hashService);
+    }
+    return routerManager;
   }
 
   /**
@@ -285,6 +303,15 @@ public class MockLockssDaemon extends LockssDaemon {
   public void setCommManager(LcapComm commMan) {
     commManager = commMan;
     theManagers.put(LockssDaemon.COMM_MANAGER, hashService);
+  }
+
+  /**
+   * Set the RouterManager
+   * @param routerMan the new manager
+   */
+  public void setRouterManager(LcapRouter routerMan) {
+    routerManager = routerMan;
+    theManagers.put(LockssDaemon.ROUTER_MANAGER, hashService);
   }
 
   /**
