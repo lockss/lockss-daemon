@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.13 2003-03-01 02:01:24 aalto Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.14 2003-03-05 22:55:28 aalto Exp $
  */
 
 /*
@@ -220,13 +220,13 @@ public class HistoryRepositoryImpl implements HistoryRepository, LockssManager {
     }
     buffer.append(HISTORY_ROOT_NAME);
     buffer.append(File.separator);
-    String auLoc = RepositoryLocationUtil.mapAuToFileLocation(buffer.toString(),
+    String auLoc = LockssRepositoryServiceImpl.mapAuToFileLocation(buffer.toString(),
         cus.getArchivalUnit());
     String urlStr = (String)cus.getUrl();
     if (AuUrl.isAuUrl(urlStr)) {
       return auLoc;
     } else {
-      return RepositoryLocationUtil.mapUrlToFileLocation(auLoc, urlStr);
+      return LockssRepositoryServiceImpl.mapUrlToFileLocation(auLoc, urlStr);
     }
   }
 
@@ -237,7 +237,7 @@ public class HistoryRepositoryImpl implements HistoryRepository, LockssManager {
     }
     buffer.append(HISTORY_ROOT_NAME);
     buffer.append(File.separator);
-    return RepositoryLocationUtil.mapAuToFileLocation(buffer.toString(), au);
+    return LockssRepositoryServiceImpl.mapAuToFileLocation(buffer.toString(), au);
   }
 
   protected Mapping getMapping() throws Exception {

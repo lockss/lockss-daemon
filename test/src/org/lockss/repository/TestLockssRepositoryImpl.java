@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.23 2003-03-04 01:02:05 aalto Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.24 2003-03-05 22:55:28 aalto Exp $
  */
 
 /*
@@ -48,6 +48,7 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
   private LockssRepository repo;
   private MockArchivalUnit mau;
   private String tempDirPath;
+  private String cacheLocation;
 
   public TestLockssRepositoryImpl(String msg) {
     super(msg);
@@ -57,25 +58,25 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     super.setUp();
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     mau = new MockArchivalUnit();
-    String cacheLocation = LockssRepositoryServiceImpl.extendCacheLocation(
+    cacheLocation = LockssRepositoryServiceImpl.extendCacheLocation(
         tempDirPath);
     repo = new LockssRepositoryImpl(
-        RepositoryLocationUtil.mapAuToFileLocation(cacheLocation, mau), mau);
+        LockssRepositoryServiceImpl.mapAuToFileLocation(cacheLocation, mau), mau);
   }
 
   public void testFileLocation() throws Exception {
-    tempDirPath += RepositoryLocationUtil.mapAuToFileLocation("cache/", mau);
-    File testFile = new File(tempDirPath);
-    assertFalse(testFile.exists());
+    String cachePath = LockssRepositoryServiceImpl.mapAuToFileLocation(
+        cacheLocation, mau);
+    File testFile = new File(cachePath);
 
     createLeaf("http://www.example.com/testDir/branch1/leaf1",
                "test stream", null);
     assertTrue(testFile.exists());
-    tempDirPath += "www.example.com/http/";
-    testFile = new File(tempDirPath);
+    cachePath += "www.example.com/http/";
+    testFile = new File(cachePath);
     assertTrue(testFile.exists());
-    tempDirPath += "testDir/branch1/leaf1/";
-    testFile = new File(tempDirPath);
+    cachePath += "testDir/branch1/leaf1/";
+    testFile = new File(cachePath);
     assertTrue(testFile.exists());
   }
 

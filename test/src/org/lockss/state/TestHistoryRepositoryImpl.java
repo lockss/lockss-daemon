@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.11 2003-03-01 02:01:23 aalto Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.12 2003-03-05 22:55:28 aalto Exp $
  */
 
 /*
@@ -44,7 +44,7 @@ import org.lockss.daemon.TestConfiguration;
 import org.exolab.castor.mapping.Mapping;
 import org.lockss.protocol.LcapIdentity;
 import org.lockss.protocol.IdentityManager;
-import org.lockss.repository.RepositoryLocationUtil;
+import org.lockss.repository.LockssRepositoryServiceImpl;
 
 public class TestHistoryRepositoryImpl extends LockssTestCase {
   private String tempDirPath;
@@ -74,8 +74,8 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
     MockCachedUrlSet mcus = new MockCachedUrlSet(mau, mspec);
     String location = repository.getNodeLocation(mcus);
     String expected = tempDirPath + repository.HISTORY_ROOT_NAME;
-    expected = RepositoryLocationUtil.mapAuToFileLocation(expected, mau);
-    expected = RepositoryLocationUtil.mapUrlToFileLocation(expected,
+    expected = LockssRepositoryServiceImpl.mapAuToFileLocation(expected, mau);
+    expected = LockssRepositoryServiceImpl.mapUrlToFileLocation(expected,
         "http://www.example.com");
 
     assertEquals(expected, location);
@@ -95,9 +95,9 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
                                    createPollHistoryBean(3));
     nodeState.setPollHistoryBeanList(histories);
     repository.storePollHistories(nodeState);
-    String filePath = RepositoryLocationUtil.mapAuToFileLocation(tempDirPath +
+    String filePath = LockssRepositoryServiceImpl.mapAuToFileLocation(tempDirPath +
         HistoryRepositoryImpl.HISTORY_ROOT_NAME, mau);
-    filePath = RepositoryLocationUtil.mapUrlToFileLocation(filePath,
+    filePath = LockssRepositoryServiceImpl.mapUrlToFileLocation(filePath,
         "http://www.example.com/"+HistoryRepositoryImpl.HISTORY_FILE_NAME);
     File xmlFile = new File(filePath);
     assertTrue(xmlFile.exists());
@@ -129,7 +129,7 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
   public void testStoreAuState() throws Exception {
     AuState auState = new AuState(mau, 123, 321, 456);
     repository.storeAuState(auState);
-    String filePath = RepositoryLocationUtil.mapAuToFileLocation(tempDirPath +
+    String filePath = LockssRepositoryServiceImpl.mapAuToFileLocation(tempDirPath +
         HistoryRepositoryImpl.HISTORY_ROOT_NAME, mau);
     filePath += HistoryRepositoryImpl.AU_FILE_NAME;
     System.out.println("path: "+filePath);

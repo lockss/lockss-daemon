@@ -1,5 +1,5 @@
 /*
- * $Id: Deadline.java,v 1.15 2003-02-05 00:14:56 tal Exp $
+ * $Id: Deadline.java,v 1.16 2003-03-05 22:55:28 aalto Exp $
  */
 
 /*
@@ -48,53 +48,65 @@ public class Deadline implements Comparable {
   private List subscribers;		// those who wish to be notified
 					// if/when this Deadline's duration
 					// changes
-  
+
   /** Create a Deadline that expires at the specified Date, with the
    * specified duration.  Done this way so factory methods don't risk a
    * timer tick between getting the current time, and the constructor
    * computing the duration, which would then be different from what was
    * specified.
+   * @param at the Date
+   * @param duration the duration
    */
   private Deadline(Date at, long duration) {
     expiration = at;
     this.duration = duration;
   }
-  
-  /** Create a Deadline that expires at the specified Date. */
+
+  /** Create a Deadline that expires at the specified Date.
+   * @param at the Date
+   */
   private Deadline(Date at) {
     duration = at.getTime() - nowMs();
     expiration = at;
   }
-  
-  /** Create a Deadline that expires at the specified date. */
+
+  /** Create a Deadline that expires at the specified date.
+   * @param at the time in ms
+   */
   private Deadline(long at) {
     this(new Date(at));
   }
-  
-  /** Create a Deadline that expires in <code>duration</code> milliseconds. */
+
+  /** Create a Deadline that expires in <code>duration</code> milliseconds.
+   * @param duration in ms
+   * @return the Deadline
+   */
   public static Deadline in(long duration) {
     return new Deadline(new Date(nowMs() + duration), duration);
   }
 
   /** Create a Deadline representing the specified Date.
-   * @param at
+   * @param at the Date
+   * @return the Deadline
    */
   public static Deadline at(Date at) {
     return new Deadline(at);
   }
-  
+
   /** Create a Deadline representing the specified date/time.
    * @param at date/time in milliseconds from the epoch.
+   * @return the Deadline
    */
   public static Deadline at(long at) {
     return new Deadline(at);
   }
-  
+
   /** Create a Deadline representing a random time between
    * <code>earliest</code> (inclusive) and <code>latest</code> (exclusive).
    * The random time is uniformly distributed between the endpoints.
    * @param earliest The earliest possible time
    * @param latest The latest possible time
+   * @return the Deadline
    */
   public static Deadline atRandomRange(long earliest, long latest) {
     return new Deadline(earliest + getRandom().nextLong(latest - earliest));
@@ -104,6 +116,7 @@ public class Deadline implements Comparable {
    * and <code>before</code> (exclusive).  The random time is uniformly
    * distributed.
    * @param before The time before which the deadline should expire
+   * @return the Deadline
    */
   public static Deadline atRandomBefore(long before) {
     return atRandomRange(nowMs(), before);
@@ -114,6 +127,7 @@ public class Deadline implements Comparable {
    * The random time is uniformly distributed between the endpoints.
    * @param earliest The earliest possible time
    * @param latest The latest possible time
+   * @return the Deadline
    */
   public static Deadline atRandomRange(Deadline earliest, Deadline latest) {
     return atRandomRange(earliest.getExpirationTime(),
@@ -124,6 +138,7 @@ public class Deadline implements Comparable {
    * and <code>before</code> (exclusive).  The random time is uniformly
    * distributed.
    * @param before The time before which the deadline should expire
+   * @return the Deadline
    */
   public static Deadline atRandomBefore(Deadline before) {
     return atRandomRange(nowMs(), before.getExpirationTime());
@@ -135,6 +150,7 @@ public class Deadline implements Comparable {
    * distributed between the endpoints.
    * @param minDuration The minimum duration, in milliseconds.
    * @param maxDuration The maximum duration, in milliseconds.
+   * @return the Deadline
    */
   public static Deadline inRandomRange(long minDuration, long maxDuration) {
     return atRandomRange(nowMs() + minDuration, nowMs() + maxDuration);
@@ -144,9 +160,20 @@ public class Deadline implements Comparable {
    * and <code>maxDuration</code> (exclusive) milliseconds from now.  The
    * random time is uniformly distributed.
    * @param maxDuration The maximum duration, in milliseconds.
+   * @return the Deadline
    */
   public static Deadline inRandomBefore(long maxDuration) {
     return inRandomRange(0, maxDuration);
+  }
+
+  /** Create a Deadline representing a random time deviating from the
+   * meanDuration by at most delta.  The random time is uniformly distributed.
+   * @param meanDuration The mean duration, in milliseconds.
+   * @param delta the max deviation
+   * @return the Deadline
+   */
+  public static Deadline inRandomDeviation(long meanDuration, long delta) {
+    return inRandomRange(meanDuration - delta, meanDuration + delta);
   }
 
 //   /** Return a timer whose duration is a random, normally distrubuted value
@@ -156,12 +183,18 @@ public class Deadline implements Comparable {
 //     super(meanDuration + (long)(stddev * getRandom().nextGaussian()));
 //   }
 
-  /** Return the absolute expiration time, in milliseconds */
+  /**
+   * Return the absolute expiration time, in milliseconds
+   * @return the expriation time
+   */
   public synchronized long getExpirationTime() {
     return expiration.getTime();
   }
 
-  /** Return the expiration time as a Date */
+  /**
+   * Return the expiration time as a Date
+   * @return the Date
+   */
   public Date getExpiration() {
     return expiration;
   }
@@ -169,6 +202,7 @@ public class Deadline implements Comparable {
   /** Return the time remaining until expiration, in milliseconds.
    * This method should not be used to obtain a duration to sleep; use
    * {@link #getSleepTime()} for that.
+   * @return remaining time
    */
   public synchronized long getRemainingTime() {
     return (expired() ? 0 : expiration.getTime() - nowMs());
@@ -181,7 +215,8 @@ public class Deadline implements Comparable {
    * time base for debugging, it returns a small number so that any sleeps
    * will complete quickly, as it is impossible to predict when the fake
    * time base will be advanced to the deadline.
-  */
+   * @return sleep time
+   */
   public synchronized long getSleepTime() {
     if (TimeBase.isSimulated()) {
       return expired() ? 0 : 5;
@@ -190,12 +225,19 @@ public class Deadline implements Comparable {
     }
   }
 
-  /** Return true iff the timer has expired */
+  /**
+   * Return true iff the timer has expired
+   * @return true if expired
+   */
   public synchronized boolean expired() {
     return (!now().before(expiration));
   }
 
-  /** Return true iff this deadline expires before <code>other</code>. */
+  /**
+   * Return true iff this deadline expires before <code>other</code>.
+   * @param other the other Deadline
+   * @return true if expires earlier
+   */
   public synchronized boolean before(Deadline other) {
     return expiration.before(other.expiration);
   }
@@ -206,30 +248,43 @@ public class Deadline implements Comparable {
     changed();
   }
 
-  /** Change expiration time to time n. */
+  /**
+   * Change expiration time to time n.
+   * @param millis new expire time
+   */
   public synchronized void expireAt(long millis) {
     expiration.setTime(millis);
     changed();
   }
 
-  /** Change expiration time to n milliseconds from now. */
+  /**
+   * Change expiration time to n milliseconds from now.
+   * @param millis new expire interval
+   */
   public synchronized void expireIn(long millis) {
     expiration.setTime(nowMs() + millis);
     changed();
   }
 
-  /** Add <code>delta</code> milliseconds to the deadline. */
+  /**
+   * Add <code>delta</code> milliseconds to the deadline.
+   * @param delta new ms to add
+   */
   public synchronized void later(long delta) {
     expireAt(expiration.getTime() + delta);
   }
 
-  /** Subtract <code>delta</code> from the deadline. */
+  /**
+   * Subtract <code>delta</code> from the deadline.
+   * @param delta new ms to remove
+   */
   public synchronized void sooner(long delta) {
     expireAt(expiration.getTime() - delta);
   }
 
   /** Register a callback that will be called if/when the Deadline's
    * duration changes (by a call to expire(), sooner(), etc.)
+   * @param callback the Callback
    */
   public synchronized void registerCallback(Callback callback) {
     if (subscribers == null) {
@@ -238,7 +293,10 @@ public class Deadline implements Comparable {
     subscribers.add(callback);
   }
 
-  /** Unregister a change callback */
+  /**
+   * Unregister a change callback
+   * @param callback the Callback
+   */
   public synchronized void unregisterCallback(Callback callback) {
     subscribers.remove(callback);
   }

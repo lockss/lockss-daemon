@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.48 2003-03-05 19:07:33 troberts Exp $
+ * $Id: NodeManagerImpl.java,v 1.49 2003-03-05 22:55:28 aalto Exp $
  */
 
 /*
@@ -67,7 +67,7 @@ public class NodeManagerImpl implements NodeManager {
    */
   public static final String PARAM_TREEWALK_INTERVAL =
       Configuration.PREFIX + "treewalk.interval";
-  static final int DEFAULT_TREEWALK_INTERVAL = 14*24*60*60*1000; //2 weeks
+  static final int DEFAULT_TREEWALK_INTERVAL = 60*60*1000; //1 hour
 
   /**
    * Configuration parameter name for default interval, in ms, after which
@@ -76,12 +76,14 @@ public class NodeManagerImpl implements NodeManager {
   public static final String PARAM_TOP_LEVEL_POLL_INTERVAL =
       Configuration.PREFIX + "top.level.poll.duration";
   static final int DEFAULT_TOP_LEVEL_POLL_INTERVAL = 14*24*60*60*1000; //2 weeks
+  static final double MAX_DEVIATION_PERCENT = 0.1;
 
   private static LockssDaemon theDaemon;
   private NodeManager theManager = null;
   static HistoryRepository repository;
   private static CrawlManager theCrawlManager = null;
   private static HashMap auEstimateMap = new HashMap();
+  boolean topLevelPollActive;
   long treeWalkInterval;
   long topPollInterval;
   long treeWalkTestDuration;
@@ -190,7 +192,6 @@ public class NodeManagerImpl implements NodeManager {
   public void updatePollResults(CachedUrlSet cus, Poll.VoteTally results) {
     NodeState state = getNodeState(cus);
     updateState(state, results);
-    repository.storePollHistories(state);
   }
 
   public void newTopLevelCrawlFinished() {
@@ -321,22 +322,33 @@ public class NodeManagerImpl implements NodeManager {
   }
 
   void doTreeWalk() {
+    logger.debug("Attempting tree walk.");
     if (theCrawlManager.canTreeWalkStart(managerAu, null, null)) {
       long startTime = TimeBase.nowMs();
-      // if it's been too long, start a top level poll
-      //XXX ask the Plugin
-      if ((startTime - getAuState().getLastTopLevelPollTime())
-	  > topPollInterval) {
-        callTopLevelPoll();
-      } else {
-        nodeTreeWalk(nodeMap);
-        long elapsedTime = TimeBase.nowMs() - startTime;
-        updateEstimate(elapsedTime);
+
+      NodeState topNode = getNodeState(managerAu.getAUCachedUrlSet());
+      Iterator activePolls = topNode.getActivePolls();
+      if (activePolls.hasNext()) {
+        topLevelPollActive = true;
+      }
+      // only continue if no top level poll being considered
+      if (!topLevelPollActive) {
+        // if it's been too long, start a top level poll
+        if ((startTime - getAuState().getLastTopLevelPollTime())
+            > topPollInterval) {
+          callTopLevelPoll();
+        } else {
+          logger.debug("Tree walk started.");
+          nodeTreeWalk(nodeMap);
+          long elapsedTime = TimeBase.nowMs() - startTime;
+          updateEstimate(elapsedTime);
+        }
       }
     }
     //alert the thread and set the AuState
     getAuState().treeWalkFinished();
-
+    treeWalkThread.treeWalkFinished();
+    logger.debug("Tree walk finished.");
   }
 
   void updateEstimate(long elapsedTime) {
@@ -450,7 +462,7 @@ public class NodeManagerImpl implements NodeManager {
     nodeMap.put(cus.getUrl(), state);
   }
 
-  private void updateState(NodeState state, Poll.VoteTally results) {
+  void updateState(NodeState state, Poll.VoteTally results) {
     PollState pollState = getPollState(state, results);
     if (pollState == null) {
       logger.error("Results updated for a non-existent poll.");
@@ -464,8 +476,12 @@ public class NodeManagerImpl implements NodeManager {
 
     if (results.getType() == Poll.CONTENT_POLL) {
       handleContentPoll(pollState, results, state);
+      closePoll(pollState, results.getDuration(), results.getPollVotes(),
+                state);
     } else if (results.getType() == Poll.NAME_POLL) {
       handleNamePoll(pollState, results, state);
+      closePoll(pollState, results.getDuration(), results.getPollVotes(),
+                state);
     } else {
       logger.error("Updating state for invalid results type: " +
                    results.getType());
@@ -484,30 +500,22 @@ public class NodeManagerImpl implements NodeManager {
         // if repair poll, we're repaired
         pollState.status = PollState.REPAIRED;
       }
-      closePoll(pollState, results.getDuration(), results.getPollVotes(),
-                nodeState);
       updateReputations(results);
     } else {
       // if disagree
       if (pollState.getStatus() == PollState.REPAIRING) {
         // if repair poll, can't be repaired
         pollState.status = PollState.UNREPAIRABLE;
-        closePoll(pollState, results.getDuration(), results.getPollVotes(),
-                  nodeState);
         updateReputations(results);
       } else if (nodeState.isInternalNode()) {
         // if internal node, we need to call a name poll
         pollState.status = PollState.LOST;
-        closePoll(pollState, results.getDuration(), results.getPollVotes(),
-                  nodeState);
         callNamePoll(nodeState.getCachedUrlSet());
       } else {
         // if leaf node, we need to repair
         pollState.status = PollState.REPAIRING;
         try {
           markNodeForRepair(nodeState.getCachedUrlSet(), results);
-          closePoll(pollState, results.getDuration(), results.getPollVotes(),
-                    nodeState);
         } catch (IOException ioe) {
           logger.error("Repair attempt failed.", ioe);
           // the treewalk will fix this eventually
@@ -533,8 +541,6 @@ public class NodeManagerImpl implements NodeManager {
         // if poll is not mine stop - set to WON
         pollState.status = PollState.WON;
       }
-      closePoll(pollState, results.getDuration(), results.getPollVotes(),
-                nodeState);
     } else {
       // if disagree
       pollState.status = PollState.REPAIRING;
@@ -578,8 +584,6 @@ public class NodeManagerImpl implements NodeManager {
         }
       }
       pollState.status = PollState.REPAIRED;
-      closePoll(pollState, results.getDuration(), results.getPollVotes(),
-                nodeState);
     }
   }
 
@@ -597,7 +601,8 @@ public class NodeManagerImpl implements NodeManager {
     try {
       theDaemon.getPollManager().requestPoll(LcapMessage.CONTENT_POLL_REQ,
       new PollSpec(managerAu.getAUCachedUrlSet()));
-
+      topLevelPollActive = true;
+      logger.info("Top level poll started.");
     } catch (IOException ioe) {
       logger.error("Couldn't make top level poll request.", ioe);
       // the treewalk will fix this eventually
@@ -609,11 +614,15 @@ public class NodeManagerImpl implements NodeManager {
     PollHistory history = new PollHistory(pollState, duration, votes);
     ((NodeStateImpl)nodeState).closeActivePoll(history);
     repository.storePollHistories(nodeState);
+    logger.debug3("Closing poll for url '" +
+                  nodeState.getCachedUrlSet().getUrl() + "'");
     // if this is an AU top-level content poll
     // update the AuState to indicate the poll is finished
     if ((AuUrl.isAuUrl(nodeState.getCachedUrlSet().getUrl())) &&
         (pollState.getType() == Poll.CONTENT_POLL)) {
       getAuState().newPollFinished();
+      topLevelPollActive = false;
+      logger.info("Top level poll finished.");
     }
   }
 
@@ -744,14 +753,19 @@ public class NodeManagerImpl implements NodeManager {
               treeWalkRunning = true;
               doTreeWalk();
             } else {
-              // sleep for the same interval again
+              // sleep for the a randomized version of the same interval again
               // this should gradually lengthen if the treewalk
               // is taking forever
-              sleep(curInterval);
+              long delta = (long)((double)curInterval * MAX_DEVIATION_PERCENT);
+              Deadline deadline = Deadline.inRandomDeviation(curInterval, delta);
+              deadline.sleep();
             }
           } else {
             // sleep until it's time for the next treewalk
-            sleep(treeWalkInterval-curInterval);
+            long interval = treeWalkInterval - curInterval;
+            long delta = (long)((double)interval * MAX_DEVIATION_PERCENT);
+            Deadline deadline = Deadline.inRandomDeviation(interval, delta);
+            deadline.sleep();
           }
         }
       } catch (Exception e) {

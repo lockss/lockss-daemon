@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.36 2003-03-03 23:23:44 troberts Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.37 2003-03-05 22:55:28 aalto Exp $
  */
 
 /*
@@ -116,7 +116,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
   }
 
   public void testGetActiveCrawledNodes() throws Exception {
-    Iterator nodeIt = 
+    Iterator nodeIt =
       nodeManager.getActiveCrawledNodes(mau.getAUCachedUrlSet());
     assertFalse(nodeIt.hasNext());
 
@@ -142,7 +142,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
   }
 
   public void testGetFilteredPolledNodes() throws Exception {
-    Iterator nodeIt = 
+    Iterator nodeIt =
       nodeManager.getFilteredPolledNodes(mau.getAUCachedUrlSet(),
 					 PollState.RUNNING + PollState.WON);
     assertFalse(nodeIt.hasNext());
@@ -239,12 +239,16 @@ public class TestNodeManagerImpl extends LockssTestCase {
     };
     assertIsomorphic(expectedA, histL);
   }
-  
+
   public void testTreeWalkStartNoCrawlNoPoll() throws Exception {
     MockPollManager pollMan = (MockPollManager)theDaemon.getPollManager();
     MockCrawlManager crawlMan = (MockCrawlManager)theDaemon.getCrawlManager();
     pollMan.startService();
     crawlMan.startService();
+
+    // set to avoid thread calling a treewalk
+    nodeManager.getAuState().lastTreeWalk = TimeBase.nowMs();
+    nodeManager.startService();
 
     AuState auState = nodeManager.getAuState();
 
@@ -266,17 +270,69 @@ public class TestNodeManagerImpl extends LockssTestCase {
     pollMan.startService();
     crawlMan.startService();
 
+    // set to avoid thread calling a treewalk
+    nodeManager.getAuState().lastTreeWalk = TimeBase.nowMs();
+    nodeManager.startService();
+
     AuState auState = nodeManager.getAuState();
 
     //should allow walk but schedule top level poll
-    auState.lastTopLevelPoll = 0;
+    auState.lastTopLevelPoll = -123;
     crawlMan.setShouldCrawlNewContent(false);
 
+    assertFalse(nodeManager.topLevelPollActive);
     nodeManager.doTreeWalk();
     assertNull(crawlMan.getAuStatus(mau));
-    assertEquals(MockPollManager.CONTENT_REQUESTED, 
+    assertEquals(MockPollManager.CONTENT_REQUESTED,
 		 pollMan.getPollStatus(mau.getAUCachedUrlSet().getUrl()));
+    assertTrue(nodeManager.topLevelPollActive);
+  }
 
+  public void testTreeWalkPollBlocking() throws Exception {
+    MockPollManager pollMan = (MockPollManager)theDaemon.getPollManager();
+    MockCrawlManager crawlMan = (MockCrawlManager)theDaemon.getCrawlManager();
+    theDaemon.getHashService().startService();
+    pollMan.startService();
+    crawlMan.startService();
+
+    // set up with proper Au level CUS
+    String auUrl = AuUrl.PROTOCOL_COLON;
+    MockCachedUrlSet mcus = (MockCachedUrlSet)getCUS(auUrl);
+    mcus.setFlatIterator((new Vector()).iterator());
+    mau.setAUCachedUrlSet(mcus);
+
+    nodeManager = new NodeManagerImpl(mau);
+    nodeManager.initService(theDaemon);
+    nodeManager.repository = new HistoryRepositoryImpl(tempDirPath);
+    // set to avoid thread calling a treewalk
+    nodeManager.getAuState().lastTreeWalk = TimeBase.nowMs();
+    nodeManager.startService();
+
+
+    //should allow walk but exit without scheduling poll, since waiting on one
+    nodeManager.topLevelPollActive = true;
+    nodeManager.doTreeWalk();
+    assertNull(pollMan.getPollStatus(auUrl));
+
+    // finish top-level poll
+    TimeBase.setSimulated(TimeBase.nowMs());
+    contentPoll = createPoll(auUrl, true, 10, 5);
+    Poll.VoteTally results = contentPoll.getVoteTally();
+    PollSpec spec = results.getPollSpec();
+    NodeStateImpl nodeState = (NodeStateImpl)nodeManager.getNodeState(mcus);
+    PollState pollState = new PollState(results.getType(),
+                                        spec.getLwrBound(),
+                                        spec.getUprBound(),
+                                        PollState.RUNNING,
+                                        results.getStartTime(),
+                                        null);
+    nodeState.addPollState(pollState);
+    nodeManager.updateState(nodeState, results);
+    assertFalse(nodeManager.topLevelPollActive);
+    assertEquals(TimeBase.nowMs(),
+                 nodeManager.getAuState().getLastTopLevelPollTime());
+
+    theDaemon.getHashService().stopService();
     pollMan.stopService();
     crawlMan.stopService();
   }
@@ -286,9 +342,12 @@ public class TestNodeManagerImpl extends LockssTestCase {
     pollMan.startService();
     crawlMan.startService();
 
-    AuState auState = nodeManager.getAuState();
+    // set to avoid thread calling a treewalk
+    nodeManager.getAuState().lastTreeWalk = TimeBase.nowMs();
+    nodeManager.startService();
 
-    //should abort walk and schedule crawl if last crawl time < 0
+    AuState auState = nodeManager.getAuState();
+    //should abort walk and schedule crawl
     crawlMan.setShouldCrawlNewContent(true);
     nodeManager.doTreeWalk();
     assertEquals(MockCrawlManager.SCHEDULED, crawlMan.getAuStatus(mau));
@@ -296,10 +355,11 @@ public class TestNodeManagerImpl extends LockssTestCase {
     pollMan.stopService();
     crawlMan.stopService();
   }
-  
-  public void testTreeWalkThread() throws Exception {
+
+  public void testTreeWalkThreadStarting() throws Exception {
     MockCrawlManager crawlMan = (MockCrawlManager)theDaemon.getCrawlManager();
     crawlMan.startService();
+    crawlMan.setShouldCrawlNewContent(true);
 
     assertNull(nodeManager.treeWalkThread);
     AuState auState = nodeManager.getAuState();
@@ -315,15 +375,14 @@ public class TestNodeManagerImpl extends LockssTestCase {
     nodeManager.stopService();
     assertNull(nodeManager.treeWalkThread);
 /*
+    crawlMan.setShouldCrawlNewContent(false);
     // the thread should trigger a treewalk, and the treewalk should
     // trigger a crawl scheduled
     auState.lastTreeWalk = -123;
-    auState.lastCrawlTime = -123;
     nodeManager.startService();
-
     assertTrue(crawlMan.getAuStatus(mau)==MockCrawlManager.SCHEDULED);
-    nodeManager.stopService();
  */
+    nodeManager.stopService();
     crawlMan.stopService();
   }
 
@@ -415,7 +474,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     node.closeActivePoll(pollHist);
     nodeManager.walkNodeState(node);
     if (shouldSchedule) {
-      assertEquals(pollMan.getPollStatus(node.getCachedUrlSet().getUrl()), 
+      assertEquals(pollMan.getPollStatus(node.getCachedUrlSet().getUrl()),
 		   MockPollManager.NAME_REQUESTED);
     } else {
       assertNull(pollMan.getPollStatus(node.getCachedUrlSet().getUrl()));
@@ -511,7 +570,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
         url));
 
     // - leaf
-    nodeState = nodeManager.getNodeState(getCUS(TEST_URL 
+    nodeState = nodeManager.getNodeState(getCUS(TEST_URL
 						+ "/branch1/file1.doc"));
     pollState = new PollState(results.getType(), spec.getLwrBound(),
                               spec.getUprBound(),
@@ -556,14 +615,16 @@ public class TestNodeManagerImpl extends LockssTestCase {
     assertEquals(-1, auState.getLastTopLevelPollTime());
 
     TimeBase.setSimulated(TimeBase.nowMs());
-    NodeState nodeState = nodeManager.getNodeState(getCUS(auUrl));
+    NodeStateImpl nodeState = (NodeStateImpl)
+        nodeManager.getNodeState(getCUS(auUrl));
     PollState pollState = new PollState(results.getType(),
                                         spec.getLwrBound(),
                                         spec.getUprBound(),
                                         PollState.RUNNING,
                                         results.getStartTime(),
                                         null);
-    nodeManager.handleContentPoll(pollState, results, nodeState);
+    nodeState.addPollState(pollState);
+    nodeManager.updateState(nodeState, results);
     assertEquals(PollState.WON, pollState.getStatus());
     assertEquals(TimeBase.nowMs(), auState.getLastTopLevelPollTime());
 
@@ -577,7 +638,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     contentPoll = createPoll(TEST_URL + "/branch2", false, 10, 5);
     Poll.VoteTally results = contentPoll.getVoteTally();
     PollSpec spec = results.getPollSpec();
-    NodeState nodeState = 
+    NodeState nodeState =
       nodeManager.getNodeState(getCUS(TEST_URL + "/branch2"));
     // won name poll
     PollState pollState = new PollState(results.getType(),

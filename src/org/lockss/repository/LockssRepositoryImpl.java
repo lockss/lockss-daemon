@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.22 2003-03-04 00:16:12 aalto Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.23 2003-03-05 22:55:29 aalto Exp $
  */
 
 /*
@@ -212,7 +212,7 @@ public class LockssRepositoryImpl implements LockssRepository {
       nodeLocation = rootLocation;
       node = new AuNodeImpl(url, nodeLocation, this);
     } else {
-      nodeLocation = RepositoryLocationUtil.mapUrlToFileLocation(rootLocation, url);
+      nodeLocation = LockssRepositoryServiceImpl.mapUrlToFileLocation(rootLocation, url);
       node = new RepositoryNodeImpl(url, nodeLocation, this);
     }
     if (!create) {
