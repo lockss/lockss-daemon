@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrlSet.java,v 1.33 2003-04-23 00:54:46 aalto Exp $
+ * $Id: MockCachedUrlSet.java,v 1.34 2003-04-23 23:24:52 troberts Exp $
  */
 
 /*
@@ -48,7 +48,7 @@ import org.lockss.plugin.*;
  */
 
 public class MockCachedUrlSet implements CachedUrlSet {
-  private ArchivalUnit au;
+  private MockArchivalUnit au;
   private CachedUrlSetSpec spec;
   private String url;
 
@@ -74,7 +74,7 @@ public class MockCachedUrlSet implements CachedUrlSet {
     this(new MockArchivalUnit(), (CachedUrlSetSpec)null);
   }
 
-  public MockCachedUrlSet(ArchivalUnit owner, CachedUrlSetSpec spec) {
+  public MockCachedUrlSet(MockArchivalUnit owner, CachedUrlSetSpec spec) {
     this.spec = spec;
     this.au = owner;
   }
@@ -95,7 +95,7 @@ public class MockCachedUrlSet implements CachedUrlSet {
     return au;
   }
 
-  public void setArchivalUnit(ArchivalUnit newAu) {
+  public void setArchivalUnit(MockArchivalUnit newAu) {
     au = newAu;
   }
 
@@ -254,6 +254,9 @@ public class MockCachedUrlSet implements CachedUrlSet {
 
     MockUrlCacher uc = new MockUrlCacher(url, this);
     uc.setShouldBeCached(shouldCache);
+    if (shouldCache && au != null) {
+      au.addUrlToBeCached(url);
+    }
     uc.setCachedUrl(cu);
     if (cacheException != null) {
       uc.setCachingException(cacheException);

@@ -1,5 +1,5 @@
 /*
- * $Id: PollTestPlugin.java,v 1.4 2003-01-22 06:14:56 claire Exp $
+ * $Id: PollTestPlugin.java,v 1.5 2003-04-23 23:24:53 troberts Exp $
  */
 
 /*
@@ -49,7 +49,7 @@ public class PollTestPlugin {
     private long duration = 60000;
     private int bytes = 1000;
 
-    public PTCachedUrlSet(ArchivalUnit owner, CachedUrlSetSpec spec) {
+    public PTCachedUrlSet(MockArchivalUnit owner, CachedUrlSetSpec spec) {
       super(owner,spec);
     }
     /**

@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.24 2003-04-17 00:55:50 troberts Exp $
+ * $Id: MockArchivalUnit.java,v 1.25 2003-04-23 23:24:52 troberts Exp $
  */
 
 /*
@@ -55,6 +55,8 @@ public class MockArchivalUnit implements ArchivalUnit {
   private boolean shouldCrawlForNewContent = true;
   private boolean shouldCallTopLevelPoll = true;
   private static Logger log = Logger.getLogger("MockArchivalUnit");
+
+  private HashSet urlsToCache = new HashSet();
 
   private Plugin plugin;
 
@@ -123,12 +125,12 @@ public class MockArchivalUnit implements ArchivalUnit {
     return new MockCachedUrlSet(this, cuss);
   }
 
+  protected void addUrlToBeCached(String url) {
+    urlsToCache.add(url);
+  }
+
   public boolean shouldBeCached(String url) {
-    if (cus!=null) {
-      return cus.containsUrl(url);
-    } else {
-      return false;
-    }
+    return urlsToCache.contains(url);
   }
 
   public String getPluginId() {

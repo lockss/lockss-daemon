@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.70 2003-04-17 05:29:20 aalto Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.71 2003-04-23 23:24:52 troberts Exp $
  */
 
 /*
@@ -558,7 +558,7 @@ public class TestNodeManagerImpl
     }
   }
 
-  static CachedUrlSet getCUS(ArchivalUnit mau, String url) throws Exception {
+  static CachedUrlSet getCUS(MockArchivalUnit mau, String url) throws Exception {
     return new MockCachedUrlSet(mau, new RangeCachedUrlSetSpec(url));
   }
 

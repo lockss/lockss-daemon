@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingCrawlerImpl.java,v 1.18 2003-04-23 17:25:44 troberts Exp $
+ * $Id: GoslingCrawlerImpl.java,v 1.19 2003-04-23 23:24:53 troberts Exp $
  */
 
 /*
@@ -179,9 +179,16 @@ public class GoslingCrawlerImpl implements Crawler {
 
     Iterator it = startUrls.iterator();
     while (it.hasNext() && !deadline.expired()) {
-      if (!doCrawlLoop((String)it.next(), extractedUrls, 
-		       parsedPages, cus, true)) {
-	wasError = true;
+      String url = (String)it.next();
+      //catch and warn if there's a url in the start urls 
+      //that we shouldn't cache
+      if (au.shouldBeCached(url)) { 
+	if (!doCrawlLoop(url, extractedUrls, parsedPages, cus, true)) {
+	  wasError = true;
+	}
+      } else {
+	logger.warning("Called with a starting url we aren't suppose to "
+		       +"cache: "+url);
       }
     }
 
@@ -214,44 +221,42 @@ public class GoslingCrawlerImpl implements Crawler {
     boolean wasError = false;
     logger.debug("Dequeued url from list: "+url);
     UrlCacher uc = cus.makeUrlCacher(url);
-    if (uc.shouldBeCached()) {
-      // don't cache if already cached, unless overwriting
-      if (overWrite || !uc.getCachedUrl().hasContent()) {
-	try {
-	  logger.debug("caching "+uc);
-	  uc.cache(); //IOException if there is a caching problem
-	  numUrlsFetched++;
-	} catch (FileNotFoundException e) {
-	  logger.error(uc+" not found on publisher's site");
-	} catch (IOException ioe) {
-	  //XXX handle this better.  Requeue?
-	  logger.error("Problem caching "+uc+". Ignoring", ioe);
-	  wasError = true;
-	}
-	au.pause(); //XXX make sure we throw InterruptedExceptions
-      }
-      else {
-	if (!parsedPages.contains(uc.getUrl())) {
-	  logger.debug2(uc+" exists, not caching");
-	}
-      }
+    // don't cache if already cached, unless overwriting
+    if (overWrite || !uc.getCachedUrl().hasContent()) {
       try {
-	if (followLinks && !parsedPages.contains(uc.getUrl())) {
-	  CachedUrl cu = uc.getCachedUrl();
-
-	  //XXX quick fix; if statement should be removed when we rework
-	  //handling of error condition
-	  if (cu.hasContent()) {
-	    addUrlsToSet(cu, extractedUrls);//IOException if the CU can't be read
-	    parsedPages.add(uc.getUrl());
-	    numUrlsParsed++;
-	  }
-	}
+	logger.debug("caching "+uc);
+	uc.cache(); //IOException if there is a caching problem
+	numUrlsFetched++;
+      } catch (FileNotFoundException e) {
+	logger.error(uc+" not found on publisher's site");
       } catch (IOException ioe) {
 	//XXX handle this better.  Requeue?
-	logger.error("Problem parsing "+uc+". Ignoring", ioe);
+	logger.error("Problem caching "+uc+". Ignoring", ioe);
 	wasError = true;
       }
+      au.pause(); //XXX make sure we throw InterruptedExceptions
+    }
+    else {
+      if (!parsedPages.contains(uc.getUrl())) {
+	logger.debug2(uc+" exists, not caching");
+      }
+    }
+    try {
+      if (followLinks && !parsedPages.contains(uc.getUrl())) {
+	CachedUrl cu = uc.getCachedUrl();
+
+	//XXX quick fix; if statement should be removed when we rework
+	//handling of error condition
+	if (cu.hasContent()) {
+	  addUrlsToSet(cu, extractedUrls);//IOException if the CU can't be read
+	  parsedPages.add(uc.getUrl());
+	  numUrlsParsed++;
+	}
+      }
+    } catch (IOException ioe) {
+      //XXX handle this better.  Requeue?
+      logger.error("Problem parsing "+uc+". Ignoring", ioe);
+      wasError = true;
     }
     logger.debug("Removing from list: "+uc.getUrl());
     return !wasError;
@@ -266,7 +271,7 @@ public class GoslingCrawlerImpl implements Crawler {
    * @param set set to which all the urs in cu should be added
    * @throws IOException
    */
-  protected static void addUrlsToSet(CachedUrl cu, Set set)
+  protected void addUrlsToSet(CachedUrl cu, Set set)
       throws IOException {
     if (shouldExtractLinksFromCachedUrl(cu)) {
       String cuStr = cu.getUrl();
@@ -284,8 +289,7 @@ public class GoslingCrawlerImpl implements Crawler {
 	logger.debug("Extracted "+nextUrl);
 
 	//should check if this is something we should cache first
-// 	if (au.shouldBeCached(nextUrl) && !set.contains(nextUrl)) {
-	if (!set.contains(nextUrl)) {
+ 	if (au.shouldBeCached(nextUrl) && !set.contains(nextUrl)) {
 	  set.add(nextUrl);
 	}
       }
