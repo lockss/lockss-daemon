@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.34 2003-11-01 01:03:18 eaalto Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.35 2003-11-07 00:52:48 troberts Exp $
  */
 
 /*
@@ -219,7 +219,7 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
 
 
   public void testStoreAuState() throws Exception {
-    Collection strCol = new ArrayList();
+    List strCol = new ArrayList();
     strCol.add("test");
     AuState auState = new AuState(mau, 123, 321, 456, strCol, repository);
     repository.storeAuState(auState);

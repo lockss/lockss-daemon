@@ -1,5 +1,5 @@
 /*
- * $Id: HashSpeedTest.java,v 1.20 2003-10-30 23:57:27 troberts Exp $
+ * $Id: HashSpeedTest.java,v 1.21 2003-11-07 00:52:48 troberts Exp $
  */
 
 /*
@@ -132,7 +132,8 @@ public class HashSpeedTest extends LockssTestCase {
   private void crawlContent() {
     System.out.println("Crawling tree...");
     CrawlSpec spec = new CrawlSpec(sau.SIMULATED_URL_START, null);
-    Crawler crawler = GoslingCrawlerImpl.makeNewContentCrawler(sau, spec);
+    Crawler crawler =
+      GoslingCrawlerImpl.makeNewContentCrawler(sau, spec, new MockAuState());
     crawler.doCrawl(Deadline.MAX);
   }
 

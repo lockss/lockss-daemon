@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.48 2003-10-30 23:57:27 troberts Exp $
+ * $Id: CrawlManagerImpl.java,v 1.49 2003-11-07 00:52:47 troberts Exp $
  */
 
 /*
@@ -252,12 +252,18 @@ public class CrawlManagerImpl extends BaseLockssManager
   }
 
   protected Crawler makeNewContentCrawler(ArchivalUnit au, CrawlSpec spec) {
-    return GoslingCrawlerImpl.makeNewContentCrawler(au, spec);
+    NodeManager nodeManager = theDaemon.getNodeManager(au);
+    return
+      GoslingCrawlerImpl.makeNewContentCrawler(au, spec,
+					       nodeManager.getAuState());
   }
 
   protected Crawler makeRepairCrawler(ArchivalUnit au, CrawlSpec spec,
 				      Collection  repairUrls) {
-    return GoslingCrawlerImpl.makeRepairCrawler(au, spec, repairUrls);
+    NodeManager nodeManager = theDaemon.getNodeManager(au);
+    return GoslingCrawlerImpl.makeRepairCrawler(au, spec,
+						nodeManager.getAuState(),
+						repairUrls);
   }
 
   public class CrawlThread extends Thread {

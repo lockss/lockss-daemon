@@ -1,5 +1,5 @@
 /*
- * $Id: Crawler.java,v 1.13 2003-11-04 19:00:19 troberts Exp $
+ * $Id: Crawler.java,v 1.14 2003-11-07 00:52:47 troberts Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.daemon;
 import java.io.IOException;
 import java.util.*;
 import org.lockss.util.*;
+import org.lockss.state.*;
 import org.lockss.plugin.*;
 
 /**

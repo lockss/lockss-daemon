@@ -1,5 +1,5 @@
 /*
- * $Id: AuState.java,v 1.14 2003-11-01 01:03:18 eaalto Exp $
+ * $Id: AuState.java,v 1.15 2003-11-07 00:52:47 troberts Exp $
  */
 
 /*
@@ -46,7 +46,7 @@ public class AuState {
   protected long lastTopLevelPoll;
   protected long lastTreeWalk;
   private HistoryRepository historyRepo;
-  protected Collection crawlUrls;
+  protected List crawlUrls;
 
   int urlUpdateCntr = 0;
 
@@ -54,7 +54,7 @@ public class AuState {
   static final int URL_UPDATE_LIMIT = 1;
 
   protected AuState(ArchivalUnit au, long lastCrawlTime, long lastTopLevelPoll,
-                    long lastTreeWalk, Collection crawlUrls,
+                    long lastTreeWalk, List crawlUrls,
                     HistoryRepository historyRepo) {
     this.au = au;
     this.lastCrawlTime = lastCrawlTime;
@@ -125,9 +125,9 @@ public class AuState {
    * Gets the collection of crawl urls.
    * @return a {@link Collection}
    */
-  public Collection getCrawlUrls() {
+  public List getCrawlUrls() {
     if (crawlUrls==null) {
-      crawlUrls = new ArrayList();
+      crawlUrls = new LinkedList();
     }
     return crawlUrls;
   }

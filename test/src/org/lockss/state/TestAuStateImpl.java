@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuStateImpl.java,v 1.8 2003-11-01 01:03:18 eaalto Exp $
+ * $Id: TestAuStateImpl.java,v 1.9 2003-11-07 00:52:48 troberts Exp $
  */
 
 /*
@@ -86,7 +86,7 @@ public class TestAuStateImpl extends LockssTestCase {
   }
 
   public void testGetUrls() {
-    Collection stringList = new ArrayList();
+    List stringList = new ArrayList();
     stringList.add("test");
 
     AuState auState = new AuState(mau, -1, -1, 123, stringList, historyRepo);

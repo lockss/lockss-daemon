@@ -1,5 +1,5 @@
 /*
- * $Id: MockAuState.java,v 1.9 2003-11-01 01:03:18 eaalto Exp $
+ * $Id: MockAuState.java,v 1.10 2003-11-07 00:52:48 troberts Exp $
  */
 
 /*
@@ -32,7 +32,8 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.test;
 
-import java.util.Collection;
+import java.util.*;
+import junit.framework.*;
 import org.lockss.state.*;
 import org.lockss.plugin.ArchivalUnit;
 
@@ -41,6 +42,9 @@ import org.lockss.plugin.ArchivalUnit;
  */
 
 public class MockAuState extends AuState {
+
+  LinkedList crawlUrls = new LinkedList();
+  int updatedCrawlUrlsCalled = 0;
 
   public MockAuState(ArchivalUnit au) {
     this(au, -1, -1, -1, new MockHistoryRepository());
@@ -56,9 +60,10 @@ public class MockAuState extends AuState {
   }
 
   public MockAuState(ArchivalUnit au, long lastCrawlTime, long lastPollTime,
-                     long lastTreeWalk, Collection crawlUrls,
+                     long lastTreeWalk, List crawlUrls,
                      HistoryRepository historyRepo) {
-    super(au, lastCrawlTime, lastPollTime, lastTreeWalk, crawlUrls, historyRepo);
+    super(au, lastCrawlTime, lastPollTime, lastTreeWalk,
+	  crawlUrls, historyRepo);
   }
 
   public void setLastCrawlTime(long newCrawlTime) {
@@ -77,5 +82,19 @@ public class MockAuState extends AuState {
     super.newCrawlFinished();
   }
 
+  public List getCrawlUrls() {
+    return crawlUrls;
+  }
+
+  public void updatedCrawlUrls(boolean forceUpdate) {
+    updatedCrawlUrlsCalled++;
+  }
+
+  public void assertUpdatedCrawlListCalled(int numTimes) {
+    if (numTimes != updatedCrawlUrlsCalled) {
+      Assert.fail("updatedCrawlUrls was only called "+updatedCrawlUrlsCalled
+	   +" but should have been called "+numTimes+" times");
+    }
+  }
 }
 

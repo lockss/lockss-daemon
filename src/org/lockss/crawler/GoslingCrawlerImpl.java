@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingCrawlerImpl.java,v 1.41 2003-11-04 18:59:35 troberts Exp $
+ * $Id: GoslingCrawlerImpl.java,v 1.42 2003-11-07 00:52:47 troberts Exp $
  */
 
 /*
@@ -75,6 +75,7 @@ import java.util.*;
 import java.net.URL;
 import java.net.MalformedURLException;
 import org.lockss.daemon.*;
+import org.lockss.state.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
 
@@ -123,6 +124,7 @@ public class GoslingCrawlerImpl implements Crawler {
   private CrawlSpec spec = null;
   
   private boolean wasError = false;
+  private AuState aus = null;
 
 
   /**
@@ -132,13 +134,16 @@ public class GoslingCrawlerImpl implements Crawler {
    * @return new content crawl object
    */
   public static GoslingCrawlerImpl makeNewContentCrawler(ArchivalUnit au,
-							 CrawlSpec spec) {
+							 CrawlSpec spec,
+							 AuState aus) {
     if (au == null) {
       throw new IllegalArgumentException("Called with null AU");
     } else if (spec == null) {
       throw new IllegalArgumentException("Called with null spec");
+    } else if (aus == null) {
+      throw new IllegalArgumentException("Called with null AuState");
     }
-    return new GoslingCrawlerImpl(au, spec, Crawler.NEW_CONTENT);
+    return new GoslingCrawlerImpl(au, spec, aus, Crawler.NEW_CONTENT);
   }
 
   /**
@@ -150,6 +155,7 @@ public class GoslingCrawlerImpl implements Crawler {
    */
   public static GoslingCrawlerImpl makeRepairCrawler(ArchivalUnit au,
 						     CrawlSpec spec,
+						     AuState aus,
 						     Collection repairUrls) {
      if (au == null) {
        throw new IllegalArgumentException("Called with null AU");
@@ -160,18 +166,20 @@ public class GoslingCrawlerImpl implements Crawler {
      } else if (repairUrls.size() == 0) {
        throw new IllegalArgumentException("Called with empty repair list");
      }
-     return new GoslingCrawlerImpl(au, spec, Crawler.REPAIR, repairUrls);
-  }
-
-  private GoslingCrawlerImpl(ArchivalUnit au, CrawlSpec spec, int type) {
-    this.au = au;
-    this.spec = spec;
-    this.type = type;
+     return new GoslingCrawlerImpl(au, spec, aus, Crawler.REPAIR, repairUrls);
   }
 
   private GoslingCrawlerImpl(ArchivalUnit au, CrawlSpec spec,
-			     int type, Collection repairUrls) {
-    this(au, spec, type);
+			     AuState aus, int type) {
+    this.au = au;
+    this.spec = spec;
+    this.type = type;
+    this.aus = aus;
+  }
+
+  private GoslingCrawlerImpl(ArchivalUnit au, CrawlSpec spec,
+			     AuState aus, int type, Collection repairUrls) {
+    this(au, spec, aus, type);
     this.repairUrls = repairUrls;
   }
 
@@ -274,18 +282,29 @@ public class GoslingCrawlerImpl implements Crawler {
       it = extractedUrls.iterator();
     }
 
-    while (!extractedUrls.isEmpty() && !deadline.expired() && !windowClosed) {
+    //we don't alter the crawl list from AuState until we've enumerated the
+    //urls that need to be recrawled.
+    
+    List urlsToCrawl = aus.getCrawlUrls();
+    while (!extractedUrls.isEmpty()) {
       String url = (String)extractedUrls.iterator().next();
       extractedUrls.remove(url);
+      urlsToCrawl.add(url);
+    }
+
+    
+    while (!urlsToCrawl.isEmpty() && !deadline.expired() && !windowClosed) {
+      String nextUrl = (String)urlsToCrawl.remove(0);
       // check crawl window during crawl
       if ((spec!=null) && (!spec.canCrawl())) {
         logger.debug("Crawl canceled: outside of crawl window");
         windowClosed = true;
         break;
       }
-      if (!doCrawlLoop(url, extractedUrls, parsedPages, cus, false)) {
+      if (!doCrawlLoop(nextUrl, urlsToCrawl, parsedPages, cus, false)) {
 	wasError = true;
       }
+      aus.updatedCrawlUrls(false);
     }
     logger.info("Finished crawl of "+au);
     endTime = TimeBase.nowMs();
@@ -342,7 +361,7 @@ public class GoslingCrawlerImpl implements Crawler {
    * @param overWrite true if overwriting is desired
    * @return true if there were no errors
    */
-  protected boolean doCrawlLoop(String url, Set extractedUrls,
+  protected boolean doCrawlLoop(String url, Collection extractedUrls,
 			     Set parsedPages, CachedUrlSet cus,
 			     boolean overWrite) {
     boolean wasError = false;
@@ -406,7 +425,7 @@ public class GoslingCrawlerImpl implements Crawler {
    * @param urlsToIgnore urls which should not be added to set
    * @throws IOException
    */
-  protected void addUrlsToSet(CachedUrl cu, Set set, Set urlsToIgnore)
+  protected void addUrlsToSet(CachedUrl cu, Collection set, Set urlsToIgnore)
       throws IOException {
     if (shouldExtractLinksFromCachedUrl(cu)) {
       String cuStr = cu.getUrl();
