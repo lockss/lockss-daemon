@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingHtmlParser.java,v 1.4 2004-01-27 01:53:59 troberts Exp $
+ * $Id: TestGoslingHtmlParser.java,v 1.5 2004-01-27 02:18:40 troberts Exp $
  */
 
 /*
@@ -307,6 +307,20 @@ public class TestGoslingHtmlParser extends LockssTestCase {
     String source =
       "<html><head><title>Test</title></head><body>"+
       "<a href=\"https://www.example.com/link3.html\">link3</a>";
+
+    MockCachedUrl mcu = new MockCachedUrl("http://www.example.com");
+    mcu.setContent(source);
+
+    parser.parseForUrls(mcu, cb);
+    
+    Set expected = SetUtil.set();
+    assertEquals(expected, cb.getFoundUrls());
+  }
+
+  public void testDoesntThrowOnMalformedUrl() throws IOException {
+    String source =
+      "<html><head><title>Test</title></head><body>"+
+      "<a href=\"badprotocol://www.example.com/link3.html\">link3</a>";
 
     MockCachedUrl mcu = new MockCachedUrl("http://www.example.com");
     mcu.setContent(source);
