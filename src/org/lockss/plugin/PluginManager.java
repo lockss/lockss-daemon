@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.48 2003-09-11 07:47:08 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.49 2003-09-17 06:09:59 troberts Exp $
  */
 
 /*
@@ -516,8 +516,9 @@ public class PluginManager extends BaseLockssManager {
     CachedUrl best = null;
     for (Iterator iter = getAllAUs().iterator(); iter.hasNext();) {
       ArchivalUnit au = (ArchivalUnit)iter.next();
+      Plugin plugin = au.getPlugin();
       if (au.shouldBeCached(url)) {
-	CachedUrl cu = au.makeCachedUrl(au.getAUCachedUrlSet(), url);
+	CachedUrl cu = plugin.makeCachedUrl(au.getAUCachedUrlSet(), url);
 	if (cu != null && cu.hasContent() && cuNewerThan(cu, best)) {
 	  best = cu;
 	}
@@ -588,16 +589,18 @@ public class PluginManager extends BaseLockssManager {
     ArchivalUnit au = getAuFromId(auId);
     if (log.isDebug3()) log.debug3("au: " + au);
     if (au == null) return null;
+    Plugin plugin = au.getPlugin();
     String url = spec.getUrl();
     CachedUrlSet cus;
     if (AuUrl.isAuUrl(url)) {
       cus = au.getAUCachedUrlSet();
     } else if ((spec.getLwrBound()!=null) &&
                (spec.getLwrBound().equals(PollSpec.SINGLE_NODE_LWRBOUND))) {
-      cus = au.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url));
+      cus = plugin.makeCachedUrlSet(au, new SingleNodeCachedUrlSetSpec(url));
     } else {
-      cus = au.makeCachedUrlSet(new RangeCachedUrlSetSpec(url,
-          spec.getLwrBound(), spec.getUprBound()));
+      RangeCachedUrlSetSpec rcuss =
+	new RangeCachedUrlSetSpec(url, spec.getLwrBound(), spec.getUprBound());
+      cus = plugin.makeCachedUrlSet(au, rcuss);
     }
     if (log.isDebug3()) log.debug3("ret cus: " + cus);
     return cus;

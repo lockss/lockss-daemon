@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.153 2003-09-12 20:47:06 eaalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.154 2003-09-17 06:09:59 troberts Exp $
  */
 
 /*
@@ -652,6 +652,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
 
   private CachedUrlSet getChildCus(String url, NodeState nodeState) {
     ArchivalUnit au = nodeState.getCachedUrlSet().getArchivalUnit();
+    Plugin plugin = au.getPlugin();
     String baseUrl = nodeState.getCachedUrlSet().getUrl();
     String childUrl;
     if (AuUrl.isAuUrl(baseUrl)) {
@@ -661,7 +662,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
       // append base url
       childUrl = baseUrl + url;
     }
-    return au.makeCachedUrlSet(new RangeCachedUrlSetSpec(childUrl));
+    return plugin.makeCachedUrlSet(au, new RangeCachedUrlSetSpec(childUrl));
   }
 
   void handleContentPoll(PollState pollState, Tallier results,
@@ -1388,8 +1389,10 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     if(upr != null) {
       upr = upr.startsWith(base) ? upr.substring(base.length()) : upr;
     }
-    CachedUrlSet newCus = cus.getArchivalUnit().makeCachedUrlSet(
-        new RangeCachedUrlSetSpec(base, lwr, upr));
+    ArchivalUnit au = cus.getArchivalUnit();
+    Plugin plugin = au.getPlugin();
+    CachedUrlSet newCus =
+      plugin.makeCachedUrlSet(au, new RangeCachedUrlSetSpec(base, lwr, upr));
     PollSpec spec = new PollSpec(newCus, lwr, upr);
     logger.debug2("Calling a content poll on " + spec);
     pollManager.sendPollRequest(LcapMessage.CONTENT_POLL_REQ, spec);
@@ -1397,8 +1400,11 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
 
   private void callSingleNodeContentPoll(CachedUrlSet cus) throws IOException {
     // create a 'single node' CachedUrlSet
-    CachedUrlSet newCus = cus.getArchivalUnit().makeCachedUrlSet(
-        new SingleNodeCachedUrlSetSpec(cus.getUrl()));
+    ArchivalUnit au = cus.getArchivalUnit();
+    Plugin plugin = au.getPlugin();
+    CachedUrlSet newCus =
+      plugin.makeCachedUrlSet(au,
+			      new SingleNodeCachedUrlSetSpec(cus.getUrl()));
     PollSpec spec = new PollSpec(newCus);
     logger.debug2("Calling a content poll on " + spec);
     pollManager.sendPollRequest(LcapMessage.CONTENT_POLL_REQ, spec);
@@ -1454,7 +1460,8 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
             break;
           case CachedUrlSetNode.TYPE_CACHED_URL:
             CachedUrlSetSpec rSpec = new RangeCachedUrlSetSpec(child.getUrl());
-            cus = managedAu.makeCachedUrlSet(rSpec);
+	    Plugin plugin = managedAu.getPlugin();
+            cus = plugin.makeCachedUrlSet(managedAu, rSpec);
         }
         childList.add(cus);
       }

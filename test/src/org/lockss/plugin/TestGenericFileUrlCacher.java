@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericFileUrlCacher.java,v 1.21 2003-09-04 23:11:17 tyronen Exp $
+ * $Id: TestGenericFileUrlCacher.java,v 1.22 2003-09-17 06:10:00 troberts Exp $
  */
 
 /*
@@ -63,7 +63,7 @@ public class TestGenericFileUrlCacher extends LockssTestCase {
 
     mgfau = new MockGenericFileArchivalUnit();
     mgfau.setCrawlSpec(new CrawlSpec(tempDirPath, null));
-    MockPlugin plugin = new MockPlugin();
+    MockPlugin plugin = new MyMockPlugin();
     plugin.initPlugin(theDaemon);
     plugin.setDefiningConfigKeys(Collections.EMPTY_LIST);
     mgfau.setPlugin(plugin);
@@ -96,6 +96,21 @@ public class TestGenericFileUrlCacher extends LockssTestCase {
 
     props = url.getProperties();
     assertTrue(props.getProperty("test1").equals("value1"));
+  }
+
+  private class MyMockPlugin extends MockPlugin {
+    public CachedUrlSet makeCachedUrlSet(ArchivalUnit owner,
+					 CachedUrlSetSpec cuss) {
+      return new GenericFileCachedUrlSet(owner, cuss);
+    }
+
+    public CachedUrl makeCachedUrl(CachedUrlSet owner, String url) {
+      return new GenericFileCachedUrl(owner, url);
+    }
+    
+    public UrlCacher makeUrlCacher(CachedUrlSet owner, String url) {
+      return new MockGenericFileUrlCacher(owner,url);
+    }
   }
 
   public static void main(String[] argv) {

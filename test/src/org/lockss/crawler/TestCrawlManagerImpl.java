@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.30 2003-07-31 00:45:00 eaalto Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.31 2003-09-17 06:10:00 troberts Exp $
  */
 
 /*
@@ -55,6 +55,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
   private CachedUrlSet cus;
   private CrawlManager.StatusSource statusSource;
   private MockAuState maus;
+  private Plugin plugin;
 
   public TestCrawlManagerImpl(String msg) {
     super(msg);
@@ -63,6 +64,8 @@ public class TestCrawlManagerImpl extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     mau = new MockArchivalUnit();
+    mau.setPlugin(new MockPlugin());
+    plugin = mau.getPlugin();
 
     crawlManager = new TestableCrawlManagerImpl();
     statusSource = (CrawlManager.StatusSource)crawlManager;
@@ -78,7 +81,8 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     crawlManager.initService(theDaemon);
     crawlManager.startService();
 
-    cus = mau.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(GENERIC_URL));
+    cus = plugin.makeCachedUrlSet(mau,
+				  new SingleNodeCachedUrlSetSpec(GENERIC_URL));
     activityRegulator.setStartCusActivity(cus, true);
     activityRegulator.setStartAuActivity(true);
     crawler = new MockCrawler();
@@ -156,9 +160,9 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
     TestCrawlCB cb = new TestCrawlCB(sem);
     CachedUrlSet cus1 =
-      mau.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url1));
+      plugin.makeCachedUrlSet(mau, new SingleNodeCachedUrlSetSpec(url1));
     CachedUrlSet cus2 =
-      mau.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url2));
+      plugin.makeCachedUrlSet(mau, new SingleNodeCachedUrlSetSpec(url2));
 
     activityRegulator.setStartCusActivity(cus1, true);
     activityRegulator.setStartCusActivity(cus2, true);
@@ -254,9 +258,9 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
     TestCrawlCB cb = new TestCrawlCB(sem);
     CachedUrlSet cus1 =
-      mau.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url1));
+      plugin.makeCachedUrlSet(mau, new SingleNodeCachedUrlSetSpec(url1));
     CachedUrlSet cus2 =
-      mau.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url2));
+      plugin.makeCachedUrlSet(mau, new SingleNodeCachedUrlSetSpec(url2));
 
     activityRegulator.setStartCusActivity(cus1, true);
     activityRegulator.setStartCusActivity(cus2, false);
@@ -296,9 +300,9 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
     TestCrawlCB cb = new TestCrawlCB(sem);
     CachedUrlSet cus1 =
-      mau.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url1));
+      plugin.makeCachedUrlSet(mau, new SingleNodeCachedUrlSetSpec(url1));
     CachedUrlSet cus2 =
-      mau.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url2));
+      plugin.makeCachedUrlSet(mau, new SingleNodeCachedUrlSetSpec(url2));
 
     activityRegulator.setStartCusActivity(cus1, true);
     activityRegulator.setStartCusActivity(cus2, false);
@@ -530,5 +534,10 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       sem.give();
       return true;
     }
+  }
+
+  public static void main(String[] argv) {
+    String[] testCaseList = { TestCrawlManagerImpl.class.getName()};
+    junit.textui.TestRunner.main(testCaseList);
   }
 }

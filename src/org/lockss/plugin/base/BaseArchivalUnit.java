@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.34 2003-08-30 00:35:30 clairegriffin Exp $
+ * $Id: BaseArchivalUnit.java,v 1.35 2003-09-17 06:09:59 troberts Exp $
  */
 
 /*
@@ -155,38 +155,6 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     return plugin;
   }
 
-  // Factories that must be implemented by plugin subclass
-
-  /**
-   * Create an instance of the plugin-specific implementation of
-   * CachedUrlSet, with the specified owner and CachedUrlSetSpec
-   * @param owner the ArchivalUnit owner
-   * @param cuss the spec
-   * @return the cus
-   */
-  public abstract CachedUrlSet cachedUrlSetFactory(ArchivalUnit owner,
-						   CachedUrlSetSpec cuss);
-
-  /**
-   * Create an instance of the plugin-specific implementation of
-   * CachedUrl, with the specified owner and url
-   * @param owner the CachedUrlSet owner
-   * @param url the url
-   * @return the CachedUrl
-   */
-  public abstract CachedUrl cachedUrlFactory(CachedUrlSet owner,
-					     String url);
-
-  /**
-   * Create an instance of the plugin-specific implementation of
-   * UrlCacher, with the specified owner and url
-   * @param owner the CachedUrlSet owner
-   * @param url the url
-   * @return the UrlCacher
-   */
-  public abstract UrlCacher urlCacherFactory(CachedUrlSet owner,
-					     String url);
-
   /**
    * Creates id by joining the plugin id to the canonical representation of
    * the defining properties as an encoded string
@@ -252,17 +220,17 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     return misses;
   }
 
-  public CachedUrlSet makeCachedUrlSet(CachedUrlSetSpec cuss) {
-    return cachedUrlSetFactory(this, cuss);
-  }
+//   public CachedUrlSet makeCachedUrlSet(CachedUrlSetSpec cuss) {
+//     return cachedUrlSetFactory(this, cuss);
+//   }
 
-  public CachedUrl makeCachedUrl(CachedUrlSet owner, String url) {
-    return cachedUrlFactory(owner, url);
-  }
+//   public CachedUrl makeCachedUrl(CachedUrlSet owner, String url) {
+//     return cachedUrlFactory(owner, url);
+//   }
 
-  public UrlCacher makeUrlCacher(CachedUrlSet owner, String url) {
-    return urlCacherFactory(owner, url);
-  }
+//   public UrlCacher makeUrlCacher(CachedUrlSet owner, String url) {
+//     return urlCacherFactory(owner, url);
+//   }
 
   /**
    * Return the CachedUrlSet representing the entire contents
@@ -271,7 +239,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    */
   public CachedUrlSet getAUCachedUrlSet() {
     // tk - use singleton instance?
-    return makeCachedUrlSet(new AUCachedUrlSetSpec());
+    return getPlugin().makeCachedUrlSet(this, new AUCachedUrlSetSpec());
   }
 
   private Deadline nextFetchTime = Deadline.in(0);
@@ -373,6 +341,15 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     }
     return false;
   }
+
+  /**
+   * @return null, since we don't filter by default
+   */
+  public FilterRule getFilterRule(String mimeType) {
+    logger.debug3("BaseArchivalUnit.getFilterRule called, returning null");
+    return null;
+  }
+
 
   void checkNextPollInterval() {
     Configuration config = Configuration.getCurrentConfig();

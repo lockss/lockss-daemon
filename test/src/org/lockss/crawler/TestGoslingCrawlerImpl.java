@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingCrawlerImpl.java,v 1.19 2003-09-12 22:38:38 clairegriffin Exp $
+ * $Id: TestGoslingCrawlerImpl.java,v 1.20 2003-09-17 06:10:00 troberts Exp $
  */
 
 /*
@@ -75,6 +75,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     TimeBase.setSimulated(10);
 
     mau = new MockArchivalUnit();
+    mau.setPlugin(new MockPlugin());
 
     urlSet = SetUtil.set(startUrl);
     MockCachedUrlSet cus = new MyMockCachedUrlSet(mau, null);

@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.10 2003-08-27 23:19:16 tlipkis Exp $
+ * $Id: BasePlugin.java,v 1.11 2003-09-17 06:09:59 troberts Exp $
  */
 
 /*
@@ -138,4 +138,16 @@ public abstract class BasePlugin implements Plugin {
     return theDaemon;
   }
 
+  public CachedUrlSet makeCachedUrlSet(ArchivalUnit owner,
+				       CachedUrlSetSpec cuss) {
+    return new GenericFileCachedUrlSet(owner, cuss);
+  }
+
+  public CachedUrl makeCachedUrl(CachedUrlSet owner, String url) {
+    return new GenericFileCachedUrl(owner, url);
+  }
+
+  public UrlCacher makeUrlCacher(CachedUrlSet owner, String url) {
+    return new GenericFileUrlCacher(owner, url);
+  }
 }

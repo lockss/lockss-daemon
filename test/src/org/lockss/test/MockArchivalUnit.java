@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.36 2003-09-13 00:47:50 troberts Exp $
+ * $Id: MockArchivalUnit.java,v 1.37 2003-09-17 06:10:04 troberts Exp $
  */
 
 /*
@@ -87,7 +87,7 @@ public class MockArchivalUnit implements ArchivalUnit {
       return cus;
     } else {
       // else make one
-      return makeCachedUrlSet(new AUCachedUrlSetSpec());
+      return getPlugin().makeCachedUrlSet(this, new AUCachedUrlSetSpec());
     }
   }
 
@@ -127,19 +127,19 @@ public class MockArchivalUnit implements ArchivalUnit {
 
   // Methods used by the crawler
 
-  public CachedUrlSet makeCachedUrlSet(CachedUrlSetSpec cuss) {
-    return new MockCachedUrlSet(this, cuss);
-  }
+//   public CachedUrlSet makeCachedUrlSet(CachedUrlSetSpec cuss) {
+//     return new MockCachedUrlSet(this, cuss);
+//   }
 
-  public CachedUrl makeCachedUrl(CachedUrlSet owner, String url) {
-    // keep functionality from MockCachedUrlSet
-    return ((MockCachedUrlSet)owner).makeCachedUrl(url);
-  }
+//   public CachedUrl makeCachedUrl(CachedUrlSet owner, String url) {
+//     // keep functionality from MockCachedUrlSet
+//     return ((MockCachedUrlSet)owner).makeCachedUrl(url);
+//   }
 
-  public UrlCacher makeUrlCacher(CachedUrlSet owner, String url) {
-    // keep functionality from MockCachedUrlSet
-    return ((MockCachedUrlSet)owner).makeUrlCacher(url);
-  }
+//   public UrlCacher makeUrlCacher(CachedUrlSet owner, String url) {
+//     // keep functionality from MockCachedUrlSet
+//     return ((MockCachedUrlSet)owner).makeUrlCacher(url);
+//   }
 
   protected void addUrlToBeCached(String url) {
     urlsToCache.add(url);
@@ -181,7 +181,7 @@ public class MockArchivalUnit implements ArchivalUnit {
     if (auId != null) {
       return auId;
     }
-    if (plugin == null) {
+    if (plugin == null || config == null) {
       return defaultAUId;
     }
     Collection defKeys = plugin.getDefiningConfigKeys();

@@ -1,5 +1,5 @@
 /*
- * $Id: Plugin.java,v 1.14 2003-07-30 05:36:53 tlipkis Exp $
+ * $Id: Plugin.java,v 1.15 2003-09-17 06:09:59 troberts Exp $
  */
 
 /*
@@ -140,4 +140,32 @@ public interface Plugin {
    * @return the LockssDaemon instance
    */
   public LockssDaemon getDaemon();
+
+  /**
+   * Create a {@link CachedUrlSet}representing the content
+   * with a specific {@link CachedUrlSetSpec}.
+   * @param owner the {@link ArchivalUnit} owner
+   * @param spec the {@link CachedUrlSetSpec}
+   * @return the created {@link CachedUrlSet}
+   */
+  public CachedUrlSet makeCachedUrlSet(ArchivalUnit owner,
+				       CachedUrlSetSpec spec);
+
+  /**
+   * Create a {@link CachedUrl} object within the set.
+   * @param owner the {@link CachedUrlSet} owner
+   * @param url the url of interest
+   * @return a {@link CachedUrl} object representing the url.
+   */
+  public CachedUrl makeCachedUrl(CachedUrlSet owner, String url);
+
+  /**
+   * Create a {@link UrlCacher} object within the set.
+   * @param owner the {@link CachedUrlSet} owner
+   * @param url the url of interest
+   * @return a {@link UrlCacher} object representing the url.
+   */
+  public UrlCacher makeUrlCacher(CachedUrlSet owner, String url);
+
+
 }

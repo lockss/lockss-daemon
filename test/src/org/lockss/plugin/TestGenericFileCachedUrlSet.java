@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericFileCachedUrlSet.java,v 1.41 2003-08-02 00:16:04 eaalto Exp $
+ * $Id: TestGenericFileCachedUrlSet.java,v 1.42 2003-09-17 06:10:00 troberts Exp $
  */
 
 /*
@@ -56,6 +56,7 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
   private HashService hashService;
   private MockGenericFileArchivalUnit mgfau;
   private MockLockssDaemon theDaemon;
+  private MockPlugin plugin;
 
   public void setUp() throws Exception {
     super.setUp();
@@ -72,7 +73,7 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
     theDaemon.getSystemMetrics().startService();
 
     mgfau = new MockGenericFileArchivalUnit();
-    MockPlugin plugin = new MockPlugin();
+    plugin = new MyMockPlugin();
     plugin.initPlugin(theDaemon);
     plugin.setDefiningConfigKeys(Collections.EMPTY_LIST);
     mgfau.setPlugin(plugin);
@@ -101,7 +102,7 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
 
     CachedUrlSetSpec rSpec =
         new RangeCachedUrlSetSpec("http://www.example.com/testDir");
-    CachedUrlSet fileSet = mgfau.makeCachedUrlSet(rSpec);
+    CachedUrlSet fileSet = plugin.makeCachedUrlSet(mgfau, rSpec);
     Iterator setIt = fileSet.flatSetIterator();
     ArrayList childL = new ArrayList(3);
     while (setIt.hasNext()) {
@@ -124,7 +125,7 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
 
     CachedUrlSetSpec spec =
         new SingleNodeCachedUrlSetSpec("http://www.example.com/testDir");
-    CachedUrlSet fileSet = mgfau.makeCachedUrlSet(spec);
+    CachedUrlSet fileSet = plugin.makeCachedUrlSet(mgfau, spec);
     Iterator setIt = fileSet.flatSetIterator();
     assertFalse(setIt.hasNext());
   }
@@ -134,7 +135,7 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
 
     CachedUrlSetSpec rSpec =
         new RangeCachedUrlSetSpec("no_such_protoco://www.example.com/testDir");
-    CachedUrlSet fileSet = mgfau.makeCachedUrlSet(rSpec);
+    CachedUrlSet fileSet = plugin.makeCachedUrlSet(mgfau, rSpec);
     try {
       fileSet.flatSetIterator();
       fail("Call to flatSetIterator() should have thrown when given "
@@ -151,7 +152,7 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
 
     CachedUrlSetSpec rSpec =
         new RangeCachedUrlSetSpec("http://www.example.com/testDir");
-    CachedUrlSet fileSet = mgfau.makeCachedUrlSet(rSpec);
+    CachedUrlSet fileSet = plugin.makeCachedUrlSet(mgfau, rSpec);
     Iterator setIt = fileSet.flatSetIterator();
     assertRightClass((CachedUrlSetNode)setIt.next(),
                    "http://www.example.com/testDir/branch1", true);
@@ -172,7 +173,7 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
 
     CachedUrlSetSpec rSpec =
         new RangeCachedUrlSetSpec("http://www.example.com/testDir");
-    CachedUrlSet fileSet = mgfau.makeCachedUrlSet(rSpec);
+    CachedUrlSet fileSet = plugin.makeCachedUrlSet(mgfau, rSpec);
     Iterator setIt = fileSet.contentHashIterator();
     ArrayList childL = new ArrayList(7);
     while (setIt.hasNext()) {
@@ -194,7 +195,7 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
     // should behave normally
     createLeaf("http://www.example.com/testDir/branch1", "test stream", null);
     rSpec = new RangeCachedUrlSetSpec("http://www.example.com/testDir/branch1");
-    fileSet = mgfau.makeCachedUrlSet(rSpec);
+    fileSet = plugin.makeCachedUrlSet(mgfau, rSpec);
     setIt = fileSet.contentHashIterator();
     childL = new ArrayList(3);
     while (setIt.hasNext()) {
@@ -227,7 +228,7 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
 
     CachedUrlSetSpec spec =
       new SingleNodeCachedUrlSetSpec("http://www.example.com/testDir");
-    CachedUrlSet fileSet = mgfau.makeCachedUrlSet(spec);
+    CachedUrlSet fileSet = plugin.makeCachedUrlSet(mgfau, spec);
     Iterator setIt = fileSet.contentHashIterator();
     ArrayList childL = new ArrayList(1);
     while (setIt.hasNext()) {
@@ -246,7 +247,7 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
 
     CachedUrlSetSpec spec =
       new RangeCachedUrlSetSpec("bad_protocol://www.example.com/testDir");
-    CachedUrlSet fileSet = mgfau.makeCachedUrlSet(spec);
+    CachedUrlSet fileSet = plugin.makeCachedUrlSet(mgfau, spec);
     try {
       Iterator setIt = fileSet.contentHashIterator();
       fail("Bogus url should have caused a RuntimeException");
@@ -263,7 +264,7 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
     CachedUrlSetSpec rSpec =
         new RangeCachedUrlSetSpec("http://www.example.com/testDir/branch1",
                                   "/leaf1", "/leaf2");
-    CachedUrlSet fileSet = mgfau.makeCachedUrlSet(rSpec);
+    CachedUrlSet fileSet = plugin.makeCachedUrlSet(mgfau, rSpec);
     Iterator setIt = fileSet.contentHashIterator();
     ArrayList childL = new ArrayList(2);
     while (setIt.hasNext()) {
@@ -278,7 +279,7 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
 
     CachedUrlSetSpec snSpec =
         new SingleNodeCachedUrlSetSpec("http://www.example.com/testDir/branch1");
-    fileSet = mgfau.makeCachedUrlSet(snSpec);
+    fileSet = plugin.makeCachedUrlSet(mgfau, snSpec);
     setIt = fileSet.contentHashIterator();
     childL = new ArrayList(1);
     while (setIt.hasNext()) {
@@ -303,7 +304,7 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
 
     CachedUrlSetSpec rSpec =
       new RangeCachedUrlSetSpec("http://www.example.com/testDir");
-    CachedUrlSet fileSet = mgfau.makeCachedUrlSet(rSpec);
+    CachedUrlSet fileSet = plugin.makeCachedUrlSet(mgfau, rSpec);
     Iterator setIt = fileSet.contentHashIterator();
     assertRightClass((CachedUrlSetNode)setIt.next(),
 		     "http://www.example.com/testDir", true);
@@ -348,7 +349,7 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
     CachedUrlSetSpec rSpec =
         new RangeCachedUrlSetSpec("http://www.example.com/testDir");
     GenericFileCachedUrlSet fileSet =
-        (GenericFileCachedUrlSet)mgfau.makeCachedUrlSet(rSpec);
+        (GenericFileCachedUrlSet)plugin.makeCachedUrlSet(mgfau, rSpec);
     fileSet.calculateNodeSize();
  //   assertEquals(4, ((GenericFileCachedUrlSet)fileSet).contentNodeCount);
     assertEquals(48, ((GenericFileCachedUrlSet)fileSet).totalNodeSize);
@@ -363,7 +364,7 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
     }
     CachedUrlSetSpec rSpec =
         new RangeCachedUrlSetSpec("http://www.example.com/testDir");
-    CachedUrlSet fileSet = mgfau.makeCachedUrlSet(rSpec);
+    CachedUrlSet fileSet = plugin.makeCachedUrlSet(mgfau, rSpec);
     NodeState node = nodeMan.getNodeState(fileSet);
     long estimate = fileSet.estimatedHashDuration();
     assertTrue(estimate > 0);
@@ -392,7 +393,7 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
     createLeaf("http://www.example.com/testDir", testString, null);
     CachedUrlSetSpec sSpec =
         new SingleNodeCachedUrlSetSpec("http://www.example.com/testDir");
-    CachedUrlSet fileSet = mgfau.makeCachedUrlSet(sSpec);
+    CachedUrlSet fileSet = plugin.makeCachedUrlSet(mgfau, sSpec);
     long estimate = fileSet.estimatedHashDuration();
     // XXX fix this with a MockSystemMetrics so we can set the hash speed
 //     assertTrue(estimate > 0);
@@ -408,26 +409,26 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
     createLeaf("http://www.example.com/testDir", null, null);
     CachedUrlSetSpec sSpec =
         new SingleNodeCachedUrlSetSpec("http://www.example.com/testDir");
-    CachedUrlSet fileSet = mgfau.makeCachedUrlSet(sSpec);
+    CachedUrlSet fileSet = plugin.makeCachedUrlSet(mgfau, sSpec);
     fileSet.storeActualHashDuration(123, null);
     assertEquals(-1, nodeMan.getNodeState(fileSet).getAverageHashDuration());
 
     // check that estimation isn't changed for ranged sets
     CachedUrlSetSpec rSpec =
         new RangeCachedUrlSetSpec("http://www.example.com/testDir", "ab", "yz");
-    fileSet = mgfau.makeCachedUrlSet(rSpec);
+    fileSet = plugin.makeCachedUrlSet(mgfau, rSpec);
     fileSet.storeActualHashDuration(123, null);
     assertEquals(-1, nodeMan.getNodeState(fileSet).getAverageHashDuration());
 
     // check that estimation isn't changed for exceptions
     rSpec = new RangeCachedUrlSetSpec("http://www.example.com/testDir");
-    fileSet = mgfau.makeCachedUrlSet(rSpec);
+    fileSet = plugin.makeCachedUrlSet(mgfau, rSpec);
     fileSet.storeActualHashDuration(123, new Exception("bad"));
     assertEquals(-1, nodeMan.getNodeState(fileSet).getAverageHashDuration());
 
     // check that estimation is grown for timeout exceptions
     rSpec = new RangeCachedUrlSetSpec("http://www.example.com/testDir");
-    fileSet = mgfau.makeCachedUrlSet(rSpec);
+    fileSet = plugin.makeCachedUrlSet(mgfau, rSpec);
     fileSet.storeActualHashDuration(100, null);
     assertEquals(100, nodeMan.getNodeState(fileSet).getAverageHashDuration());
     // simulate a timeout
@@ -441,6 +442,21 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
   private RepositoryNode createLeaf(String url, String content,
                                     Properties props) throws Exception {
     return TestRepositoryNodeImpl.createLeaf(repo, url, content, props);
+  }
+
+  private class MyMockPlugin extends MockPlugin {
+    public CachedUrlSet makeCachedUrlSet(ArchivalUnit owner,
+					 CachedUrlSetSpec cuss) {
+      return new GenericFileCachedUrlSet(owner, cuss);
+    }
+
+    public CachedUrl makeCachedUrl(CachedUrlSet owner, String url) {
+      return new GenericFileCachedUrl(owner, url);
+    }
+    
+    public UrlCacher makeUrlCacher(CachedUrlSet owner, String url) {
+      return new MockGenericFileUrlCacher(owner,url);
+    }
   }
 
   public static void main(String[] argv) {

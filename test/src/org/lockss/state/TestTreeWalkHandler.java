@@ -1,5 +1,5 @@
 /*
- * $Id: TestTreeWalkHandler.java,v 1.29 2003-07-31 00:49:16 eaalto Exp $
+ * $Id: TestTreeWalkHandler.java,v 1.30 2003-09-17 06:10:03 troberts Exp $
  */
 
 /*
@@ -66,6 +66,7 @@ public class TestTreeWalkHandler extends LockssTestCase {
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
     mau = new MockArchivalUnit();
+    mau.setPlugin(new MockPlugin());
     mau.setAUCachedUrlSet(TestNodeManagerImpl.makeFakeAuCachedUrlSet(mau,
         TEST_URL, 2, 2));
     theDaemon.getPluginManager();

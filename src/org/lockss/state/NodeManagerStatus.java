@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerStatus.java,v 1.12 2003-06-26 22:03:59 eaalto Exp $
+ * $Id: NodeManagerStatus.java,v 1.13 2003-09-17 06:10:00 troberts Exp $
  */
 
 /*
@@ -436,7 +436,9 @@ public class NodeManagerStatus {
       String url = key.substring(pos + 1);
       logger.debug("finding node state for url: " + url);
       ArchivalUnit au = nodeManager.getAuState().getArchivalUnit();
-      CachedUrlSet cus = au.makeCachedUrlSet(new RangeCachedUrlSetSpec(url));
+      Plugin plugin = au.getPlugin();
+      CachedUrlSet cus =
+	plugin.makeCachedUrlSet(au, new RangeCachedUrlSetSpec(url));
       NodeState state = nodeManager.getNodeState(cus);
       if (state == null) {
         logger.debug("unable to find a node state for " + url);

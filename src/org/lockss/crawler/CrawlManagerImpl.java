@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.44 2003-07-31 00:45:00 eaalto Exp $
+ * $Id: CrawlManagerImpl.java,v 1.45 2003-09-17 06:09:58 troberts Exp $
  */
 
 /*
@@ -190,7 +190,8 @@ public class CrawlManagerImpl extends BaseLockssManager
 
   private static CachedUrlSet createSingleNodeCachedUrlSet(ArchivalUnit au,
 							   String url) {
-    return au.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url));
+    Plugin plugin = au.getPlugin();
+    return plugin.makeCachedUrlSet(au, new SingleNodeCachedUrlSetSpec(url));
   }
 
   public void startNewContentCrawl(ArchivalUnit au, CrawlManager.Callback cb,

@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollSpec.java,v 1.8 2003-06-20 22:34:54 claire Exp $
+ * $Id: TestPollSpec.java,v 1.9 2003-09-17 06:10:01 troberts Exp $
  */
 
 /*
@@ -127,6 +127,10 @@ public class TestPollSpec extends LockssTestCase {
     assertEquals(url, ps.getUrl());
     assertEquals(lower, ps.getLwrBound());
     assertEquals(upper, ps.getUprBound());
+}
 
+  public static void main(String[] argv) {
+    String[] testCaseList = {TestPollSpec.class.getName()};
+    junit.textui.TestRunner.main(testCaseList);
   }
 }

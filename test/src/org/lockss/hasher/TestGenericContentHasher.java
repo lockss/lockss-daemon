@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericContentHasher.java,v 1.18 2003-08-02 00:16:04 eaalto Exp $
+ * $Id: TestGenericContentHasher.java,v 1.19 2003-09-17 06:10:00 troberts Exp $
  */
 
 /*
@@ -375,7 +375,8 @@ public class TestGenericContentHasher extends LockssTestCase {
     switch (cusn.getType()) {
       case CachedUrlSetNode.TYPE_CACHED_URL_SET:
 	CachedUrlSet cus = (CachedUrlSet)cusn;
-	return cus.getArchivalUnit().makeCachedUrl(cus, cus.getUrl());
+	return cus.getArchivalUnit().getPlugin().makeCachedUrl(cus,
+							       cus.getUrl());
       case CachedUrlSetNode.TYPE_CACHED_URL:
 	return (CachedUrl)cusn;
     }

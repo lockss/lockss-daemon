@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.8 2003-08-02 00:16:05 eaalto Exp $
+ * $Id: BaseUrlCacher.java,v 1.9 2003-09-17 06:09:59 troberts Exp $
  */
 
 /*
@@ -107,12 +107,13 @@ public abstract class BaseUrlCacher implements UrlCacher {
    * @return CachedUrl for the content stored.
    */
   public CachedUrl getCachedUrl() {
-    return getArchivalUnit().makeCachedUrl(cus, url);
+    return getArchivalUnit().getPlugin().makeCachedUrl(cus, url);
   }
 
   public void cache() throws IOException {
     long lastCached = 0;
-    CachedUrl cachedVersion = getArchivalUnit().makeCachedUrl(cus, url);
+    Plugin plugin = getArchivalUnit().getPlugin();
+    CachedUrl cachedVersion = plugin.makeCachedUrl(cus, url);
     // if it's been cached, get the last caching time and use that
     if ((cachedVersion!=null) && cachedVersion.hasContent()) {
       Properties cachedProps = cachedVersion.getProperties();

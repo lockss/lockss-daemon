@@ -1,5 +1,5 @@
 /*
- * $Id: TestAcsArchivalUnit.java,v 1.1 2003-09-15 22:28:33 clairegriffin Exp $
+ * $Id: TestAcsArchivalUnit.java,v 1.2 2003-09-17 06:10:00 troberts Exp $
  */
 
 /*
@@ -189,9 +189,9 @@ public class TestAcsArchivalUnit
     shouldCacheTest(url, false, acsAu, cus);
   }
 
-  private void shouldCacheTest(String url, boolean shouldCache, ArchivalUnit au,
-                               CachedUrlSet cus) {
-    UrlCacher uc = au.makeUrlCacher(cus, url);
+  private void shouldCacheTest(String url, boolean shouldCache,
+			       ArchivalUnit au, CachedUrlSet cus) {
+    UrlCacher uc = au.getPlugin().makeUrlCacher(cus, url);
     assertEquals(uc.shouldBeCached(), shouldCache);
   }
 

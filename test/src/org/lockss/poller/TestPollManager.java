@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.53 2003-08-26 23:33:40 clairegriffin Exp $
+ * $Id: TestPollManager.java,v 1.54 2003-09-17 06:10:01 troberts Exp $
  */
 
 /*
@@ -128,7 +128,9 @@ public class TestPollManager extends LockssTestCase {
   public void testMakePollRequest() {
     try {
       CachedUrlSet cus = null;
-      cus = testau.makeCachedUrlSet(new RangeCachedUrlSetSpec(rooturls[1]));
+      Plugin plugin = testau.getPlugin();
+      cus = plugin.makeCachedUrlSet(testau,
+				    new RangeCachedUrlSetSpec(rooturls[1]));
       PollSpec spec = new PollSpec(cus, lwrbnd, uprbnd);
       pollmanager.sendPollRequest(LcapMessage.VERIFY_POLL_REQ, spec);
     }
@@ -176,11 +178,13 @@ public class TestPollManager extends LockssTestCase {
 
     try {
       for(int i= 0; i<3; i++) {
-        PollSpec spec =
+	CachedUrlSetSpec cuss =
+	  new RangeCachedUrlSetSpec(urlstr, lwrbnd, uprbnd);
+	Plugin plugin = testau.getPlugin();
+	PollSpec spec =
 	  new PollSpec(testau.getAUId(),
 		       urlstr,lwrbnd,uprbnd,
-		       testau.makeCachedUrlSet(new RangeCachedUrlSetSpec(urlstr,
-          lwrbnd, uprbnd)));
+		       plugin.makeCachedUrlSet(testau, cuss));
         sameroot[i] =  LcapMessage.makeRequestMsg(
           spec,
           testentries,
@@ -316,8 +320,9 @@ public class TestPollManager extends LockssTestCase {
    long pollTime = Constants.DAY;
    long neededTime = pollTime/4;
 
-   CachedUrlSet cus = null;
-   cus = testau.makeCachedUrlSet(new RangeCachedUrlSetSpec(rooturls[1]));
+   Plugin plugin = testau.getPlugin();
+   CachedUrlSet cus =
+     plugin.makeCachedUrlSet(testau, new RangeCachedUrlSetSpec(rooturls[1]));
    PollSpec spec = new PollSpec(cus, lwrbnd, uprbnd);
    assertTrue(spec.canSchedulePoll(pollTime,neededTime,pollmanager));
 
@@ -329,6 +334,7 @@ public class TestPollManager extends LockssTestCase {
 
     theDaemon.getPluginManager();
     testau = PollTestPlugin.PTArchivalUnit.createFromListOfRootUrls(rooturls);
+    ((MockArchivalUnit)testau).setPlugin(new MyMockPlugin());
     PluginUtil.registerArchivalUnit(testau);
 
     String tempDirPath = null;
@@ -367,11 +373,13 @@ public class TestPollManager extends LockssTestCase {
     try {
       testmsg = new LcapMessage[3];
 
+      Plugin plugin = testau.getPlugin();
       for(int i= 0; i<3; i++) {
+	CachedUrlSetSpec cuss =
+	  new RangeCachedUrlSetSpec(rooturls[i], lwrbnd, uprbnd);
         PollSpec spec = new PollSpec(testau.getAUId(),
                                      rooturls[i],lwrbnd, uprbnd,
-                                     testau.makeCachedUrlSet(
-            new RangeCachedUrlSetSpec(rooturls[i], lwrbnd, uprbnd)));
+                                     plugin.makeCachedUrlSet(testau, cuss));
         testmsg[i] =  LcapMessage.makeRequestMsg(
           spec,
           testentries,
@@ -395,6 +403,13 @@ public class TestPollManager extends LockssTestCase {
     }
     catch (Exception ex) {
       return null;
+    }
+  }
+
+  public class MyMockPlugin extends MockPlugin {
+    public CachedUrlSet makeCachedUrlSet(ArchivalUnit owner,
+					 CachedUrlSetSpec cuss) {
+      return new PollTestPlugin.PTCachedUrlSet((MockArchivalUnit)owner, cuss);
     }
   }
 

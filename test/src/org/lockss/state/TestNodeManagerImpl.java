@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.97 2003-09-16 00:53:52 eaalto Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.98 2003-09-17 06:10:01 troberts Exp $
  */
 
 /*
@@ -69,6 +69,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     ConfigurationUtil.setCurrentConfigFromProps(p);
 
     mau = new MockArchivalUnit();
+    mau.setPlugin(new MockPlugin());
     mau.setAUCachedUrlSet(makeFakeCachedUrlSet(mau, TEST_URL, 2, 2));
     theDaemon.getPluginManager();
     PluginUtil.registerArchivalUnit(mau);
@@ -1124,7 +1125,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
           break;
         case CachedUrlSetNode.TYPE_CACHED_URL:
           CachedUrlSetSpec rSpec = new RangeCachedUrlSetSpec(child.getUrl());
-          CachedUrlSet newSet = au.makeCachedUrlSet(rSpec);
+          CachedUrlSet newSet = au.getPlugin().makeCachedUrlSet(au, rSpec);
           nodeManager.createNodeState(newSet);
       }
     }

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrlSet.java,v 1.6 2003-08-02 00:16:05 eaalto Exp $
+ * $Id: BaseCachedUrlSet.java,v 1.7 2003-09-17 06:09:59 troberts Exp $
  */
 
 /*
@@ -71,7 +71,7 @@ public abstract class BaseCachedUrlSet implements CachedUrlSet {
   }
 
   public boolean hasContent() {
-    CachedUrl cu = au.makeCachedUrl(this, getUrl());
+    CachedUrl cu = au.getPlugin().makeCachedUrl(this, getUrl());
     return (cu == null ? false : cu.hasContent());
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestCuUrl.java,v 1.3 2003-08-02 00:16:04 eaalto Exp $
+ * $Id: TestCuUrl.java,v 1.4 2003-09-17 06:10:00 troberts Exp $
  */
 
 /*
@@ -106,7 +106,7 @@ public class TestCuUrl extends LockssTestCase {
     CachedUrlSet cus = au.getAUCachedUrlSet();
     log.debug("cus: " + cus);
     // non-existent url should return null CU
-    assertNull(au.makeCachedUrl(cus, "foobarnotthere"));
+    assertNull(au.getPlugin().makeCachedUrl(cus, "foobarnotthere"));
 
     tryUrl(au, cus, 0);
     tryUrl(au, cus, 1);
@@ -116,7 +116,7 @@ public class TestCuUrl extends LockssTestCase {
       throws Exception {
 
     // get a test CU
-    CachedUrl cu = au.makeCachedUrl(cus, new String(testUrls[n]));
+    CachedUrl cu = au.getPlugin().makeCachedUrl(cus, new String(testUrls[n]));
     assertNotNull(cu);
 
     // make a CuUrl URL from it

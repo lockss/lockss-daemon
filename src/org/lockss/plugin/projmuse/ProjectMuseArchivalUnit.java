@@ -1,5 +1,5 @@
 /*
- * $Id: ProjectMuseArchivalUnit.java,v 1.9 2003-09-13 00:47:50 troberts Exp $
+ * $Id: ProjectMuseArchivalUnit.java,v 1.10 2003-09-17 06:09:59 troberts Exp $
  */
 
 /*
@@ -271,12 +271,4 @@ public class ProjectMuseArchivalUnit extends BaseArchivalUnit {
     }
     return false;
   }
-
-  /**
-   * @return null since we're not currently filtering Muse content
-   */
-  public FilterRule getFilterRule(String mimeType) {
-    return null;
-  }
-
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.4 2003-07-18 02:14:25 eaalto Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.5 2003-09-17 06:10:00 troberts Exp $
  */
 
 /*
@@ -173,6 +173,10 @@ public class TestBaseUrlCacher extends LockssTestCase {
   private class MyMockArchivalUnit extends MockArchivalUnit {
     public void pauseBeforeFetch() {
       pauseBeforeFetchCounter++;
+    }
+    
+    public Plugin getPlugin() {
+      return new MockPlugin();
     }
   }
 }

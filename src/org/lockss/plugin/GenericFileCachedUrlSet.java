@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrlSet.java,v 1.48 2003-08-02 00:16:05 eaalto Exp $
+ * $Id: GenericFileCachedUrlSet.java,v 1.49 2003-09-17 06:09:59 troberts Exp $
  */
 
 /*
@@ -96,12 +96,14 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
       while (children.hasNext()) {
         RepositoryNode child = (RepositoryNode)children.next();
         if (child.isLeaf()) {
-          CachedUrl newUrl = au.makeCachedUrl(this, child.getNodeUrl());
+	  Plugin plugin = au.getPlugin();
+          CachedUrl newUrl = plugin.makeCachedUrl(this, child.getNodeUrl());
           flatSet.add(newUrl);
         } else {
 	  CachedUrlSetSpec rSpec =
 	    new RangeCachedUrlSetSpec(child.getNodeUrl());
-          CachedUrlSet newSet = au.makeCachedUrlSet(rSpec);
+	  Plugin plugin = au.getPlugin();
+          CachedUrlSet newSet = plugin.makeCachedUrlSet(au, rSpec);
           flatSet.add(newSet);
         }
       }

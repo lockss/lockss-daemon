@@ -1,5 +1,5 @@
 /*
- * $Id: PollTestPlugin.java,v 1.6 2003-06-20 22:34:54 claire Exp $
+ * $Id: PollTestPlugin.java,v 1.7 2003-09-17 06:10:01 troberts Exp $
  */
 
 /*
@@ -129,13 +129,13 @@ public class PollTestPlugin {
       return new PTArchivalUnit(rootSpec);
     }
 
-    public CachedUrlSet makeCachedUrlSet(CachedUrlSetSpec cuss) {
-      return new PTCachedUrlSet(this,cuss);
-    }
+//     public CachedUrlSet makeCachedUrlSet(CachedUrlSetSpec cuss) {
+//       return new PTCachedUrlSet(this,cuss);
+//     }
 
-    public CachedUrlSet makeCachedUrlSet(String url, String regexp) {
-      return new PTCachedUrlSet(this,new MockCachedUrlSetSpec(url,regexp));
-    }
+//     public CachedUrlSet makeCachedUrlSet(String url, String regexp) {
+//       return new PTCachedUrlSet(this,new MockCachedUrlSetSpec(url,regexp));
+//     }
 
     public boolean shouldBeCached(String url) {
       return true;

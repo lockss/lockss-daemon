@@ -1,5 +1,5 @@
 /*
- * $Id: MockGenericFileArchivalUnit.java,v 1.16 2003-09-13 00:47:50 troberts Exp $
+ * $Id: MockGenericFileArchivalUnit.java,v 1.17 2003-09-17 06:10:04 troberts Exp $
  */
 
 /*
@@ -116,10 +116,5 @@ public class MockGenericFileArchivalUnit extends BaseArchivalUnit {
 
   public String getManifestPage() {
     throw new UnsupportedOperationException("Not implemented.");
-  }
-
-  public FilterRule getFilterRule(String mimeType) {
-    //no filtering
-    return null;
   }
 }

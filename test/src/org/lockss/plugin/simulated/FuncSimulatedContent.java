@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSimulatedContent.java,v 1.41 2003-09-12 00:37:07 eaalto Exp $
+ * $Id: FuncSimulatedContent.java,v 1.42 2003-09-17 06:10:01 troberts Exp $
  */
 
 /*
@@ -149,7 +149,8 @@ public class FuncSimulatedContent
   }
 
   private void crawlContent() {
-    CrawlSpec spec = new CrawlSpec(SimulatedArchivalUnit.SIMULATED_URL_START, null);
+    CrawlSpec spec =
+      new CrawlSpec(SimulatedArchivalUnit.SIMULATED_URL_START, null);
     Crawler crawler =
       new GoslingCrawlerImpl(sau, spec.getStartingUrls(), true);
     crawler.doCrawl(Deadline.MAX);
@@ -202,7 +203,8 @@ public class FuncSimulatedContent
   private void checkLeaf() {
     String parent = SimulatedArchivalUnit.SIMULATED_URL_ROOT + "/branch1";
     CachedUrlSetSpec spec = new RangeCachedUrlSetSpec(parent);
-    CachedUrlSet set = sau.makeCachedUrlSet(spec);
+    Plugin plugin = sau.getPlugin();
+    CachedUrlSet set = plugin.makeCachedUrlSet(sau, spec);
     Iterator setIt = set.contentHashIterator();
     ArrayList childL = new ArrayList(16);
     while (setIt.hasNext()) {
@@ -235,7 +237,8 @@ public class FuncSimulatedContent
                                int branchNum, boolean isAbnormal,
                                boolean isDamaged) throws IOException {
     String file = SimulatedArchivalUnit.SIMULATED_URL_ROOT + path;
-    CachedUrl url = sau.cachedUrlFactory(sau.getAUCachedUrlSet(), file);
+    CachedUrl url =
+      sau.getPlugin().makeCachedUrl(sau.getAUCachedUrlSet(), file);
     String content = getUrlContent(url);
     String expectedContent;
     if (path.endsWith(".html")) {
@@ -265,7 +268,7 @@ public class FuncSimulatedContent
   {
     /* Cache the file again; this time the damage should be gone */
     String file = SimulatedArchivalUnit.SIMULATED_URL_ROOT + DAMAGED_CACHED_URL;
-    UrlCacher uc = sau.urlCacherFactory(sau.getAUCachedUrlSet(),file);
+    UrlCacher uc = sau.getPlugin().makeUrlCacher(sau.getAUCachedUrlSet(),file);
     uc.forceCache();
     checkUrlContent(DAMAGED_CACHED_URL, 2, 2, 2, false, false);
   }
@@ -303,7 +306,7 @@ public class FuncSimulatedContent
 
     String parent = SimulatedArchivalUnit.SIMULATED_URL_ROOT + "/branch1";
     CachedUrlSetSpec spec = new RangeCachedUrlSetSpec(parent);
-    set = sau.cachedUrlSetFactory(sau, spec);
+    set = sau.getPlugin().makeCachedUrlSet(sau, spec);
     hash2 = getHash(set, namesOnly);
     assertFalse(Arrays.equals(hash, hash2));
   }
