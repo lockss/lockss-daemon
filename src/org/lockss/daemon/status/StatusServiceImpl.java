@@ -1,5 +1,5 @@
 /*
- * $Id: StatusServiceImpl.java,v 1.17 2003-04-03 11:33:36 tal Exp $
+ * $Id: StatusServiceImpl.java,v 1.18 2003-06-04 20:09:43 tal Exp $
  */
 
 /*
@@ -146,7 +146,8 @@ public class StatusServiceImpl
 						       objRefAccessor);
       objRefAccessors.put(tableName, spec);
     }
-    logger.debug("Registered statusAccessor for table "+tableName);
+    logger.debug("Registered ObjectReferenceAccessor for table "+tableName +
+		 ", class " + cls);
   }
 
   public void
