@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedStatusAccessor.java,v 1.9 2003-03-21 01:11:25 troberts Exp $
+ * $Id: SimulatedStatusAccessor.java,v 1.10 2003-03-25 01:04:05 troberts Exp $
  */
 
 /*
@@ -136,32 +136,15 @@ public class SimulatedStatusAccessor {
       return sortRules;
     }
 
-//     public List getColumnDescriptors(String key) {
-//       return columns;
-//     }
-
-//     public List getRows(String key) {
-//       return rows;
-//     }
-
-//     public List getDefaultSortRules(String key) {
-//       return sortRules;
-//     }
-
     public boolean requiresKey() {
       return false;
     }
 
-//     public String getTitle(String key) {
-//       return title;
-//     }
-
-    public StatusTable getStatusTable(String key) 
-	throws StatusService.NoSuchTableException {
-      
-      StatusTable table = new StatusTable(key, title, columns, 
-					  sortRules,  rows, null);
-      return table;
+    public void populateTable(StatusTable table) {
+      table.setTitle(title);
+      table.setColumnDescriptors(columns);
+      table.setDefaultSortRules(sortRules);
+      table.setRows(rows);
     }
   }
   

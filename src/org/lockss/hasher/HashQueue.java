@@ -1,5 +1,5 @@
 /*
- * $Id: HashQueue.java,v 1.24 2003-03-24 01:22:32 tal Exp $
+ * $Id: HashQueue.java,v 1.25 2003-03-25 01:04:05 troberts Exp $
  */
 
 /*
@@ -576,16 +576,14 @@ class HashQueue implements Serializable {
       return res;
     }
 
-    public StatusTable getStatusTable(String key) {
-      StatusTable table = new StatusTable(key, getTitle(key),
-					  getColumnDescriptors(key),
-					  getDefaultSortRules(key),
-					  getRows(key), getSummaryInfo(key));
-      table.setTitleFootnote(FOOT_TITLE);
-      return table;
+    public void populateTable(StatusTable table) {
+      String key = table.getKey();
+      table.setTitle(getTitle(key));
+      table.setColumnDescriptors(getColumnDescriptors(key));
+      table.setDefaultSortRules(getDefaultSortRules(key));
+      table.setRows(getRows(key));
+      table.setSummaryInfo(getSummaryInfo(key));
     }
-
-
   }
 
   static class ReqState implements Comparable {

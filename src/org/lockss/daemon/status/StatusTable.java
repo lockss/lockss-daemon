@@ -1,5 +1,5 @@
 /*
- * $Id: StatusTable.java,v 1.17 2003-03-21 07:27:30 tal Exp $
+ * $Id: StatusTable.java,v 1.18 2003-03-25 01:04:05 troberts Exp $
  */
 
 /*
@@ -54,22 +54,18 @@ public class StatusTable {
   /**
    * @param name String representing table name
    * @param key String representing the key for this table, may be null
-   * @param columnDescriptors List of {@link ColumnDescriptor} objects
-   * @param defaultSortRules List of {@link SortRule} objects specifying the 
-   * default sort rules for this table.  If null, we'll sort ascending by 
-   * first column
-   * @param rows List of {@link java.util.Map} objects, representing rows in 
-   * this table.  Not assumed to be in any specific order
    */
-  public StatusTable(String key, String title,
-		     List columnDescriptors, 
-		     List defaultSortRules, List rows, List summaryInfo) {
-    this.columnDescriptors = columnDescriptors;
-    this.rows = rows;
-    this.defaultSortRules = defaultSortRules; 
+  public StatusTable(String name, String key) {
+    this.name = name;
     this.key = key;
-    this.title = title;
-    this.summaryInfo = summaryInfo;
+  }
+
+  /**
+   * Constructor for tables that don't have a key
+   * @param name String representing table name
+   */
+  public StatusTable(String name) {
+    this(name, null);
   }
 
   private List makeDefaultSortRules() {
@@ -105,6 +101,13 @@ public class StatusTable {
   public String getTitle() {
     return title;
   }
+  /**
+   * Sets the title for this table
+   * @param title title of this table
+   */
+  public void setTitle(String title) {
+    this.title = title;
+  }
 
   /**
    * Get the title footnote for this table
@@ -131,6 +134,15 @@ public class StatusTable {
   }
 
   /**
+   * Sets a list of {@link SummaryInfo} objects for this table
+   * @param summaryInfo list of {@link SummaryInfo} objects for this table
+   */
+  public void setSummaryInfo(List summaryInfo) {
+    this.summaryInfo = summaryInfo;
+  }
+
+  
+  /**
    * Gets a list of {@link ColumnDescriptor}s representing the 
    * columns in this table in their preferred display order.
    * @returns list of {@link ColumnDescriptor}s the columns in 
@@ -138,6 +150,16 @@ public class StatusTable {
    */
   public List getColumnDescriptors() {
     return columnDescriptors;
+  }
+
+  /**
+   * Sets a list of {@link ColumnDescriptor}s in their perferred display 
+   * order for this table
+   * @param columnDescriptors List of {@link ColumnDescriptor}s in their 
+   * perferred display order for this table
+   */
+  public void setColumnDescriptors(List columnDescriptors) {
+    this.columnDescriptors = columnDescriptors;
   }
 
   /**
@@ -165,6 +187,23 @@ public class StatusTable {
     Collections.sort(rows, 
 		     new SortRuleComparator(sortRules, columnDescriptors));
     return rows;
+  }
+
+  /**
+   * Set the rows ({@link Map}s) for this table
+   * @param rows List of unsorted rows for this table
+   */
+  public void setRows(List rows) {
+    this.rows = rows;
+  }
+
+  /**
+   * Sets the default {@link StatusTable.SortRule}s for this table
+   * @param defaultSortRules List of default {@link StatusTable.SortRule}s 
+   * for this table
+   */
+  public void setDefaultSortRules(List defaultSortRules) {
+    this.defaultSortRules = defaultSortRules;
   }
 
   public String toString() {

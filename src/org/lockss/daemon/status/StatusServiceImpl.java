@@ -1,5 +1,5 @@
 /*
- * $Id: StatusServiceImpl.java,v 1.14 2003-03-21 01:11:24 troberts Exp $
+ * $Id: StatusServiceImpl.java,v 1.15 2003-03-25 01:04:05 troberts Exp $
  */
 
 /*
@@ -67,14 +67,8 @@ public class StatusServiceImpl
       throw new StatusService.NoSuchTableException("Table not found: "
 						   +tableName+" "+key);
     } 
-//     StatusTable table = 
-//       new StatusTable(tableName, key, statusAccessor.getTitle(key),
-// 		      statusAccessor.getColumnDescriptors(key),
-// 		      statusAccessor.getDefaultSortRules(key),
-// 		      statusAccessor.getRows(key));
-//     table.setSummaryInfo(statusAccessor.getSummaryInfo(key));
-    StatusTable table = statusAccessor.getStatusTable(key);
-    table.setName(tableName);
+    StatusTable table = new StatusTable(tableName, key);
+    statusAccessor.populateTable(table);
     return table;
   }
 
@@ -190,7 +184,7 @@ public class StatusServiceImpl
       sortRules = ListUtil.list(sortRule);
     }
 
-    private List getRows(String key) {
+    private List getRows() {
       synchronized(statusAccessors) {
 	Set tables = statusAccessors.keySet();
 	Iterator it = tables.iterator();
@@ -203,12 +197,14 @@ public class StatusServiceImpl
 	      !statusAccessor.requiresKey()) {
 	    Map row = new HashMap(1); //will only have the one key-value pair
 	    String title = null;
-	    try {
-	      title = statusAccessor.getStatusTable(null).getTitle();
-	    } catch (NoSuchTableException e) {
-	      // no action, title is null here
-	    }
-	    // getTitle might return null or throw
+ 	    try {
+	      StatusTable table = new StatusTable(tableName);
+	      statusAccessor.populateTable(table);
+	      title = table.getTitle();
+ 	    } catch (NoSuchTableException e) {
+ 	      // no action, title is null here
+ 	    }
+ 	    // getTitle might return null or throw
 	    if (title == null) {
 	      title = tableName;
 	    }
@@ -230,14 +226,17 @@ public class StatusServiceImpl
     }
 
     /**
-     * Gets a {@link StatusTable} of all the tables that don't require a key
-     *
-     * @param key ignored
+     * Populate the {@link StatusTable} with entries for each table that 
+     * doesn't require a key
+     * @param table {@link StatusTable} to populate as the table of all tables
+     * that don't require a key
      */
-    public StatusTable getStatusTable(String key) {
-      StatusTable table = new StatusTable(key, ALL_TABLE_TITLE, columns,
-					  sortRules, getRows(key), null);
-      return table;
+    public void populateTable(StatusTable table) {
+      table.setTitle(ALL_TABLE_TITLE);
+      table.setColumnDescriptors(columns);
+      table.setDefaultSortRules(sortRules);
+      table.setRows(getRows());
     }
+
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: MockStatusAccessor.java,v 1.9 2003-03-21 01:11:25 troberts Exp $
+ * $Id: MockStatusAccessor.java,v 1.10 2003-03-25 01:04:05 troberts Exp $
  */
 
 /*
@@ -44,26 +44,12 @@ public class MockStatusAccessor implements StatusAccessor {
   private Map summaryInfo = new HashMap();
 
 
-  public List getColumnDescriptors(String key) 
-      throws StatusService.NoSuchTableException{
-    return (List)columnDescriptors.get(key);
-  }
-
   public void setColumnDescriptors(List columnDescriptors, String key) {
     this.columnDescriptors.put(key, columnDescriptors);
   }
 
-  private List getRows(String key) throws StatusService.NoSuchTableException {
-    return (List)rows.get(key);
-  }
-
   public void setRows(List rows, String key) {
     this.rows.put(key, rows);
-  }
-
-  private List getDefaultSortRules(String key) {
-    List list = (List)defaultSortRules.get(key);
-    return list;
   }
 
   public void setDefaultSortRules(List sortRules, String key) {
@@ -82,24 +68,17 @@ public class MockStatusAccessor implements StatusAccessor {
     titles.put(key, tableTitle);
   }
 
-  private String getTitle(String key) {
-    return (String)titles.get(key);
-  }
-
-  private List getSummaryInfo(String key) {
-    return (List)summaryInfo.get(key);
-  }
-
   public void setSummaryInfo(String key, List summaryInfo) {
     this.summaryInfo.put(key, summaryInfo);
   }
 
-  public StatusTable getStatusTable(String key) 
-  throws StatusService.NoSuchTableException {
-    StatusTable table = new StatusTable(key, getTitle(key),
-					getColumnDescriptors(key),
-					getDefaultSortRules(key),
-					getRows(key), getSummaryInfo(key));
-    return table;
+  public void populateTable(StatusTable table) 
+      throws StatusService.NoSuchTableException {
+    String key = table.getKey();
+    table.setTitle((String)titles.get(key));
+    table.setColumnDescriptors((List)columnDescriptors.get(key));
+    table.setDefaultSortRules((List)defaultSortRules.get(key));
+    table.setRows((List)rows.get(key));
+    table.setSummaryInfo((List)summaryInfo.get(key));
   }
 }

@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.54 2003-03-21 20:43:41 tal Exp $
+* $Id: PollManager.java,v 1.55 2003-03-25 01:04:05 troberts Exp $
  */
 
 /*
@@ -773,14 +773,13 @@ public class PollManager  implements LockssManager {
       return rulesL;
     }
 
-    public StatusTable getStatusTable(String key) 
+    public void populateTable(StatusTable table) 
 	throws StatusService.NoSuchTableException {
-      checkKey(key);
-      StatusTable table = new StatusTable(key, getTitle(key),
-					  getColumnDescriptors(key),
-					  getDefaultSortRules(key),
-					  getRows(key), null);
-      return table;
+      String key = table.getKey();
+      table.setTitle(getTitle(key));
+      table.setColumnDescriptors(getColumnDescriptors(key));
+      table.setDefaultSortRules(getDefaultSortRules(key));
+      table.setRows(getRows(key));
     }
 
     public boolean requiresKey() {
@@ -983,15 +982,14 @@ public class PollManager  implements LockssManager {
 
       return rowMap;
     }
-    public StatusTable getStatusTable(String key) 
+    public void populateTable(StatusTable table) 
 	throws StatusService.NoSuchTableException {
-      StatusTable table = new StatusTable(key, getTitle(key),
-					  getColumnDescriptors(key),
-					  getDefaultSortRules(key),
-					  getRows(key), null);
-      return table;
+      String key = table.getKey();
+      table.setTitle(getTitle(key));
+      table.setColumnDescriptors(getColumnDescriptors(key));
+      table.setDefaultSortRules(getDefaultSortRules(key));
+      table.setRows(getRows(key));
     }
-
   }
 
   private static class ManagerStatusAURef implements ObjectReferenceAccessor {
