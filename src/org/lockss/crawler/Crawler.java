@@ -1,5 +1,5 @@
 /*
- * $Id: Crawler.java,v 1.9 2002-11-02 01:52:41 troberts Exp $
+ * $Id: Crawler.java,v 1.10 2002-11-06 01:17:29 tal Exp $
  */
 
 /*
@@ -107,10 +107,9 @@ public class Crawler{
    * @param uc UrlCacher representing the url to be crawled
    * @param list List object to add new urls to
    */
-  protected static void doOneCrawlCycle(UrlCacher uc, List list)
-  {
+  protected static void doOneCrawlCycle(UrlCacher uc, List list) {
     if (uc.shouldBeCached()){
-    if (!uc.getCachedUrl().exists()) {
+      if (!uc.getCachedUrl().exists()) {
 	try{
 	  pause(); //XXX should get from plugin
 	  logger.info("caching "+uc);
@@ -169,7 +168,7 @@ public class Crawler{
       if (cuStr == null){
 	return;
       }
-      //check to see if we should even try to parse the file
+//check to see if we should even try to parse the file
 //       if (cuStr.indexOf("html") < 0 && 
 // 	  cuStr.indexOf("htm") < 0){ //XXX hack for now
 // 	return;
@@ -281,7 +280,7 @@ public class Crawler{
    * @returns string representation of the url from the link tag
    */
   protected static String ParseLink(StringBuffer link, URL srcUrl)
-  throws MalformedURLException
+      throws MalformedURLException
   {
     String returnStr = null;
     String key = null;
