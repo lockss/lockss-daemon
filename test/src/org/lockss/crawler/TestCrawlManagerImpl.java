@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.40 2004-01-13 02:37:42 troberts Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.41 2004-01-14 00:06:52 troberts Exp $
  */
 
 /*
@@ -149,6 +149,19 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     crawlManager.cancelAuCrawls(mau);
 
     assertTrue(crawler.wasAborted());
+  }
+
+  public void testStoppingCrawlDoesntAbortCompletedCrawl() {
+    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
+
+    crawlManager.startNewContentCrawl(mau, new TestCrawlCB(sem), null, null);
+
+    waitForCrawlToFinish(sem);
+    assertTrue("doCrawl() not called", crawler.doCrawlCalled());
+
+    crawlManager.cancelAuCrawls(mau);
+
+    assertFalse(crawler.wasAborted());
   }
 
   public void testStoppingCrawlAbortsRepairCrawl() {

@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.54 2004-01-13 10:20:12 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.55 2004-01-14 00:06:52 troberts Exp $
  */
 
 /*
@@ -327,6 +327,9 @@ public class CrawlManagerImpl extends BaseLockssManager
           ActivityRegulator.Lock lock = (ActivityRegulator.Lock)lockIt.next();
           lock.expire();
         }
+      }
+      synchronized(runningCrawls) {
+ 	runningCrawls.remove(crawler.getAu(), crawler);
       }
       if (cb != null) {
 	try {
