@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.2 2003-02-22 03:00:46 tal Exp $
+ * $Id: BasePlugin.java,v 1.3 2003-03-01 01:18:29 tal Exp $
  */
 
 /*
@@ -58,6 +58,13 @@ public abstract class BasePlugin implements Plugin {
   }
 
   public void stopPlugin() {
+  }
+
+  // for now use the plugin's class name with "|"s instead of "."s
+  // tk - this will have to change to account for versioning
+  public String getPluginId() {
+    String name = this.getClass().getName();
+    return StringUtil.replaceString(name, ".", "|");
   }
 
   public ArchivalUnit getAU(String auId) {
