@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.142 2004-09-29 06:35:06 tlipkis Exp $
+ * $Id: PollManager.java,v 1.143 2004-10-01 23:10:38 clairegriffin Exp $
  */
 
 /*
@@ -72,6 +72,7 @@ public class PollManager
   private static LcapDatagramRouter.MessageHandler  m_msgHandler;
   private static Hashtable thePolls = new Hashtable();
   private static VariableTimedMap theVerifiers = new VariableTimedMap();
+  private static VariableTimedMap theRecentPolls = new VariableTimedMap();
   private static IdentityManager theIDManager;
   private static HashService theHashService;
   private static LockssRandom theRandom = new LockssRandom();
@@ -144,6 +145,7 @@ public class PollManager
     theHashService = null;
     theSystemMetrics = null;
     thePolls.clear();
+    theRecentPolls.clear();
     super.stopService();
   }
 
@@ -235,8 +237,13 @@ public class PollManager
   public void suspendPoll(String key) {
     PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
     if(pme == null) {
-      theLog.debug2("ignoring suspend request for unknown key " + key);
-      return;
+      pme = (PollManagerEntry) theRecentPolls.get(key);
+      if(pme == null) {
+        theLog.debug2("ignoring suspend request for unknown key " + key);
+        return;
+      }
+      theRecentPolls.remove(key);
+      thePolls.put(key, pme);
     }
     pme.setPollSuspended();
     theLog.debug("suspended poll " + key);
@@ -298,6 +305,9 @@ public class PollManager
     }
     String key = msg.getKey();
     PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
+    if(pme == null) {
+      pme = (PollManagerEntry)theRecentPolls.get(key);
+    }
     if(pme != null) {
       if(pme.isPollCompleted() || pme.isPollSuspended()) {
         theLog.debug("Message received after poll was closed." + msg);
@@ -479,19 +489,16 @@ public class PollManager
    * @param key the poll signature
    */
   void closeThePoll(String key)  {
-    PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
+    PollManagerEntry pme = (PollManagerEntry)thePolls.remove(key);
     if(pme== null || pme.poll == null) {
       theLog.warning("Attempt to close unknown poll : " + key);
-      return;
-    }
-    if(pme.isPollCompleted()) {
-      theLog.warning("Attempt to close- previously closed poll: " + key);
       return;
     }
     // mark the poll completed because if we need to call a repair poll
     // we don't want this one to be in conflict with it.
     PollTally tally = pme.poll.getVoteTally();
     pme.setPollCompleted();
+    theRecentPolls.put(key, pme,Deadline.in(m_recentPollExpireTime));
     if (tally.getType() != Poll.VERIFY_POLL) {
       NodeManager nm = theDaemon.getNodeManager(tally.getArchivalUnit());
       theLog.debug("sending completed poll results " + tally);
@@ -711,17 +718,23 @@ public class PollManager
 
 //--------------- PollerStatus Accessors -----------------------------
   Iterator getPolls() {
-    Map polls = Collections.unmodifiableMap(thePolls);
-    return polls.values().iterator();
+    Map polls = new HashMap();
+    polls.putAll(thePolls);
+    polls.putAll(theRecentPolls);
+    return Collections.unmodifiableMap(polls).values().iterator();
   }
 
   BasePoll getPoll(String key) {
     BasePoll poll = null;
 
     PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
+    if(pme == null) {
+      pme = (PollManagerEntry) theRecentPolls.get(key);
+    }
     if(pme != null) {
       poll =  pme.poll;
     }
+
     return poll;
   }
 
@@ -747,7 +760,7 @@ public class PollManager
   }
 
   boolean isPollClosed(String key) {
-    PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
+    PollManagerEntry pme = (PollManagerEntry)theRecentPolls.get(key);
     return (pme != null) ? pme.isPollCompleted() : false;
   }
 
@@ -782,22 +795,6 @@ public class PollManager
       }
       catch (IOException ex) {
 	theLog.error("handle incoming message failed.");
-      }
-    }
-  }
-
-  static class ExpireRecentCallback implements TimerQueue.Callback {
-    /**
-     * Called when the timer expires.
-     * @param cookie  data supplied by caller to schedule()
-     */
-    public void timerExpired(Object cookie) {
-      synchronized(thePolls) {
-        PollManagerEntry pme = (PollManagerEntry)thePolls.get(cookie);
-        if(pme != null  && pme.isPollSuspended()) {
-          return;
-        }
-        thePolls.remove(cookie);
       }
     }
   }
@@ -839,8 +836,6 @@ public class PollManager
     }
 
     synchronized void setPollCompleted() {
-      Deadline d = Deadline.in(m_recentPollExpireTime);
-      TimerQueue.schedule(d, new ExpireRecentCallback(), (String) key);
       PollTally tally = poll.getVoteTally();
       tally.tallyVotes();
     }
