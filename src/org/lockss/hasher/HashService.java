@@ -1,5 +1,5 @@
 /*
- * $Id: HashService.java,v 1.18 2003-06-20 22:34:51 claire Exp $
+ * $Id: HashService.java,v 1.19 2003-11-11 20:32:45 tlipkis Exp $
  */
 
 /*
@@ -42,72 +42,36 @@ import org.lockss.plugin.*;
 
 /**
  * API for content and name hashing services.
- * HashService maintains a HashQueue, onto which it enqueues requests.
- *
- * HashQueue refuses to overcommit the available resources, and it does
- * time-slice scheduling so that large requests, which can take hours, do
- * not lock out smaller requests.
  */
-public class HashService extends BaseLockssManager {
+public interface HashService extends LockssManager {
+  static final String PREFIX = Configuration.PREFIX + "hasher.";
+
+  static final String PARAM_PRIORITY = PREFIX + "priority";
+  static final int DEFAULT_PRIORITY = Thread.MIN_PRIORITY;
+
+  static final String PARAM_STEP_BYTES = PREFIX + "stepBytes";
+  static final int DEFAULT_STEP_BYTES = 10000;
+
+  static final String PARAM_NUM_STEPS = PREFIX + "numSteps";
+  static final int DEFAULT_NUM_STEPS = 10;
+
+  static final String PARAM_COMPLETED_MAX = PREFIX + "historySize";
+  static final int DEFAULT_COMPLETED_MAX = 50;
+
   /** Constant by which hash estimates are increased */
   static final String PARAM_ESTIMATE_PAD_CONSTANT =
-    Configuration.PREFIX + "hasher.estimate.pad.constant";
+    PREFIX + "estimate.pad.constant";
+  static final int DEFAULT_ESTIMATE_PAD_CONSTANT = 10;
+
   /** Percentage by which hash estimates are increased */
   static final String PARAM_ESTIMATE_PAD_PERCENT =
-    Configuration.PREFIX + "hasher.estimate.pad.percent";
+    PREFIX + "estimate.pad.percent";
+  static final int DEFAULT_ESTIMATE_PAD_PERCENT = 10;
 
-  private static final int DEFAULT_ESTIMATE_PAD_CONSTANT = 10;
-  private static final int DEFAULT_ESTIMATE_PAD_PERCENT = 10;
+
 
   public static final int CONTENT_HASH = 1;
   public static final int NAME_HASH = 2;
-
-  protected static Logger log = Logger.getLogger("HashService");
-
-  // Queue of outstanding hash requests.  The currently executing request,
-  // if any, is on the queue, but not necessarily still at the head.
-  // Currently there is a single hash queue.  (Might make sense to have
-  // more if there are multiple disks.)
-  private HashQueue theQueue = null;
-  private long estPadConstant = 0;
-  private long estPadPercent = 0;
-
-  public HashService() {}
-
-  /**
-   * start the hash service.
-   * @see org.lockss.app.LockssManager#startService()
-   */
-  public void startService() {
-    super.startService();
-    theQueue = new HashQueue();
-    theQueue.init();
-    getDaemon().getStatusService().registerStatusAccessor("HashQ",
-							  theQueue.getStatusAccessor());
-  }
-
-  /**
-   * stop the hash service
-   * @see org.lockss.app.LockssManager#stopService()
-   */
-  public void stopService() {
-    // TODO: checkpoint here.
-    if (theQueue != null) {
-      getDaemon().getStatusService().unregisterStatusAccessor("HashQ");
-      theQueue.stop();
-    }
-    theQueue = null;
-
-    super.stopService();
-  }
-
-  protected void setConfig(Configuration config, Configuration prevConfig,
-			   Set changedKeys) {
-    estPadConstant = config.getLong(PARAM_ESTIMATE_PAD_CONSTANT,
-				    DEFAULT_ESTIMATE_PAD_CONSTANT);
-    estPadPercent = config.getLong(PARAM_ESTIMATE_PAD_PERCENT,
-				   DEFAULT_ESTIMATE_PAD_PERCENT);
-  }
 
   /**
    * Ask for the content of the <code>CachedUrlSet</code> object to be
@@ -129,18 +93,10 @@ public class HashService extends BaseLockssManager {
    *         available.
    */
   public boolean hashContent(CachedUrlSet urlset,
-				    MessageDigest hasher,
-				    Deadline deadline,
-				    Callback callback,
-				    Serializable cookie) {
-    HashQueue.Request req =
-      new HashQueue.Request(urlset, hasher, deadline,
-			    callback, cookie,
-			    urlset.getContentHasher(hasher),
-			    urlset.estimatedHashDuration(),
-			    CONTENT_HASH);
-    return scheduleReq(req);
-  }
+			     MessageDigest hasher,
+			     Deadline deadline,
+			     Callback callback,
+			     Serializable cookie);
 
   /**
    * Ask for the names in the <code>CachedUrlSet</code> object to be
@@ -162,63 +118,31 @@ public class HashService extends BaseLockssManager {
    *         available.
    */
   public boolean hashNames(CachedUrlSet urlset,
-				  MessageDigest hasher,
-				  Deadline deadline,
-				  Callback callback,
-				  Serializable cookie) {
-    HashQueue.Request req =
-      new HashQueue.Request(urlset, hasher, deadline,
-			    callback, cookie,
-			    // tk - get better duration estimate
-			    urlset.getNameHasher(hasher), 1000, NAME_HASH);
-    return scheduleReq(req);
-  }
+			   MessageDigest hasher,
+			   Deadline deadline,
+			   Callback callback,
+			   Serializable cookie);
 
   /** Return the average hash speed, or -1 if not known.
    * @param digest the hashing algorithm
    * @return hash speed in bytes/ms, or -1 if not known
    */
-  public int getHashSpeed(MessageDigest digest) {
-    if (theQueue == null) {
-      throw new IllegalStateException("HashService has not been initialized");
-    }
-    return theQueue.getHashSpeed(digest);
-  }
+  public int getHashSpeed(MessageDigest digest);
 
   /** Add the configured padding percentage, plus the constant */
-  public long padHashEstimate(long estimate) {
-    return estimate + ((estimate * estPadPercent) / 100) + estPadConstant;
-  }
+  public long padHashEstimate(long estimate);
 
-  private boolean scheduleReq(HashQueue.Request req) {
-    if (theQueue == null) {
-      throw new IllegalStateException("HashService has not been initialized");
-    }
-    return theQueue.scheduleReq(req);
-  }
-
-  /** Return the amount of hash time currently unscheduled before the
-   * specified deadline.
+  /** Test whether a hash request could be successfully sceduled before a
+   * given deadline.
+   * @param duration the estimated hash time needed.
    * @param when the deadline
-   * @return unscheduled hash time before deadline in milliseconds
+   * @return true if such a request could be accepted into the scedule.
    */
-  public long getAvailableHashTimeBefore(Deadline when) {
-    return theQueue.getAvailableHashTimeBefore(when);
-  }
+  public boolean canHashBeScheduledBefore(long duration, Deadline when);
 
-  /** Create a queue ready to receive and execute requests */
-  protected void start() {
-    theQueue = new HashQueue();
-    theQueue.init();
-  }
-
-  /** Stop any queue runner(s) and destroy the queue */
-  protected void stop() {
-    if (theQueue != null) {
-      theQueue.stop();
-    }
-    theQueue = null;
-  }
+  /** Return true if the HashService has nothing to do.  Useful in unit
+   * tests. */
+  public boolean isIdle();
 
   /**
    * <code>HashService.Callback</code> is used to notify hash requestors
