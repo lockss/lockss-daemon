@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrl.java,v 1.9 2002-11-27 20:29:12 aalto Exp $
+ * $Id: GenericFileCachedUrl.java,v 1.10 2002-12-03 23:05:49 aalto Exp $
  */
 
 /*
@@ -72,14 +72,11 @@ public class GenericFileCachedUrl extends BaseCachedUrl {
 
   private void ensureLeafLoaded() {
     if (repository==null) {
-      repository = LockssRepositoryImpl.repositoryFactory(super.cus.getArchivalUnit());
+      repository = LockssRepositoryImpl.repositoryFactory(cus.getArchivalUnit());
     }
     if (leaf==null) {
       try {
-        leaf = repository.getNode(url);
-        if (leaf==null) {
-          leaf = repository.createNewNode(url);
-        }
+        leaf = repository.createNewNode(url);
       } catch (MalformedURLException mue) {
         logger.error("Couldn't load node due to bad url: "+url);
       }
