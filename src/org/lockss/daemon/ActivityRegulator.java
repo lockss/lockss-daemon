@@ -1,5 +1,5 @@
 /*
- * $Id: ActivityRegulator.java,v 1.1 2003-04-12 01:14:29 aalto Exp $
+ * $Id: ActivityRegulator.java,v 1.2 2003-04-15 00:36:05 aalto Exp $
  */
 
 /*
@@ -37,6 +37,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import org.lockss.util.Logger;
+import org.lockss.util.Deadline;
+import org.lockss.util.Constants;
 
 /**
  * The ActivityAllower is queried by the various managers when they wish to
@@ -80,7 +82,6 @@ public class ActivityRegulator {
    */
   public static final int BACKGROUND_CRAWL = 12;
 
-
   /**
    * Integer representing the standard poll activity.  CUS level.
    */
@@ -105,9 +106,11 @@ public class ActivityRegulator {
    * the state to indicate that the requested activity is now running.
    * @param activity the activity int
    * @param au the {@link ArchivalUnit}
+   * @param expireIn expire in X ms
    * @return true iff the activity was marked as started
    */
-  public synchronized boolean startAuActivity(int activity, ArchivalUnit au) {
+  public synchronized boolean startAuActivity(int activity, ArchivalUnit au,
+                                              long expireIn) {
     // check if the au is free for this activity
     int auActivity = getAuActivity(au);
     if (auActivity!=NO_ACTIVITY) {
@@ -118,7 +121,7 @@ public class ActivityRegulator {
       return false;
     }
 
-    setAuActivity(au, activity);
+    setAuActivity(au, activity, expireIn);
     logger.debug3("Started " + activityCodeToString(activity) + " on AU '" +
                   au.getName() + "'");
     return true;
@@ -129,9 +132,11 @@ public class ActivityRegulator {
    * the state to inidicate that the requested activity is now running.
    * @param activity the activity int
    * @param cus the {@link CachedUrlSet}
+   * @param expireIn expire in X ms
    * @return true iff the activity was marked as started
    */
-  public synchronized boolean startCusActivity(int activity, CachedUrlSet cus) {
+  public synchronized boolean startCusActivity(int activity, CachedUrlSet cus,
+                                               long expireIn) {
     // first, check if au is busy
     int auActivity = getAuActivity(cus.getArchivalUnit());
     if ((auActivity!=NO_ACTIVITY) && (auActivity!=CUS_ACTIVITY)) {
@@ -151,7 +156,7 @@ public class ActivityRegulator {
                     cus.getUrl() + "'");
       return false;
     }
-    setCusActivity(cus, activity);
+    setCusActivity(cus, activity, expireIn);
     logger.debug3("Started " + activityCodeToString(activity) + " on CUS '" +
                   cus.getUrl() + "'");
     return true;
@@ -165,7 +170,7 @@ public class ActivityRegulator {
    */
   public synchronized void auActivityFinished(int activity, ArchivalUnit au) {
     // change state to reflect
-    endAuActivity(au);
+    endAuActivity(activity, au);
     logger.debug3("Finished " + activityCodeToString(activity) + " on AU '" +
                   au.getName() + "'");
   }
@@ -177,7 +182,7 @@ public class ActivityRegulator {
    * @param cus the {@link CachedUrlSet}
    */
   public synchronized void cusActivityFinished(int activity, CachedUrlSet cus) {
-    endCusActivity(cus);
+    endCusActivity(activity, cus);
     logger.debug3("Finished " + activityCodeToString(activity) + " on CUS '" +
                   cus.getUrl() + "'");
 
@@ -189,8 +194,13 @@ public class ActivityRegulator {
       Map.Entry entry = (Map.Entry)cusIt.next();
       String key = (String)entry.getKey();
       if (key.startsWith(auKeyPrefix)) {
-        Integer value = (Integer)entry.getValue();
-        if (value.intValue()!=NO_ACTIVITY) {
+        ActivityEntry value = (ActivityEntry)entry.getValue();
+        if (value.isExpired()) {
+          logger.debug3("Removing expired "+activityCodeToString(value.activity) +
+                        " on CUS '" + key + "'");
+          cusMap.remove(key);
+        }
+        if (value.activity!=NO_ACTIVITY) {
           otherAuActivity = true;
           break;
         }
@@ -198,47 +208,76 @@ public class ActivityRegulator {
     }
     if (!otherAuActivity) {
       // no other CUS activity on this AU, so free it up
-      endAuActivity(cus.getArchivalUnit());
+      endAuActivity(CUS_ACTIVITY, cus.getArchivalUnit());
       logger.debug3("Finished " + activityCodeToString(CUS_ACTIVITY) +
                     " on AU '" + cus.getArchivalUnit().getName() + "'");
     }
   }
 
   int getAuActivity(ArchivalUnit au) {
-    Integer curActivity = (Integer)auMap.get(getAuKey(au));
-    if (curActivity==null) {
+    ActivityEntry entry = (ActivityEntry)auMap.get(getAuKey(au));
+    if (entry==null)  {
+      return NO_ACTIVITY;
+    } else if (entry.isExpired()) {
+      auMap.remove(getAuKey(au));
+      logger.debug3("Removing expired " + activityCodeToString(entry.activity) +
+                    " on AU '" + au.getName() + "'");
       return NO_ACTIVITY;
     } else {
-      return curActivity.intValue();
+      return entry.activity;
     }
   }
 
-  void setAuActivity(ArchivalUnit au, int activity) {
-    auMap.put(getAuKey(au), new Integer(activity));
+  void setAuActivity(ArchivalUnit au, int activity, long expireIn) {
+    auMap.put(getAuKey(au), new ActivityEntry(activity, expireIn));
   }
 
-  void endAuActivity(ArchivalUnit au) {
-    auMap.remove(getAuKey(au));
+  void endAuActivity(int activity, ArchivalUnit au) {
+    int curActivity = getAuActivity(au);
+    // only end if this is my activity, in case it already timed out and
+    // something else started
+    if (curActivity == activity) {
+      auMap.remove(getAuKey(au));
+    } else {
+      logger.debug3(activityCodeToString(curActivity) + " running on AU '"+
+                    au.getName() + "', so couldn't end " +
+                    activityCodeToString(activity));
+    }
   }
 
   int getCusActivity(CachedUrlSet cus) {
-    Integer curActivity = (Integer)cusMap.get(getCusKey(cus));
-    if (curActivity==null) {
+    ActivityEntry entry = (ActivityEntry)cusMap.get(getCusKey(cus));
+    if (entry==null)  {
+      return NO_ACTIVITY;
+    } else if (entry.isExpired()) {
+      cusMap.remove(getCusKey(cus));
+      logger.debug3("Removing expired " + activityCodeToString(entry.activity) +
+                    " on AU '" + cus.getUrl() + "'");
       return NO_ACTIVITY;
     } else {
-      return curActivity.intValue();
+      return entry.activity;
     }
   }
 
-  void setCusActivity(CachedUrlSet cus, int activity) {
+  void setCusActivity(CachedUrlSet cus, int activity, long expireIn) {
     // set CUS state
-    cusMap.put(getCusKey(cus), new Integer(activity));
-    // set AU state to indicate CUS activity
-    auMap.put(getAuKey(cus.getArchivalUnit()), new Integer(CUS_ACTIVITY));
+    cusMap.put(getCusKey(cus), new ActivityEntry(activity, expireIn));
+    // set AU state to indicate CUS activity (resets expiration time)
+    auMap.put(getAuKey(cus.getArchivalUnit()),
+              new ActivityEntry(CUS_ACTIVITY, expireIn));
   }
 
-  void endCusActivity(CachedUrlSet cus) {
-    cusMap.remove(getCusKey(cus));
+  void endCusActivity(int activity, CachedUrlSet cus) {
+    int curActivity = getCusActivity(cus);
+    // only end if this is my activity, in case it already timed out and
+    // something else started
+    if (curActivity == activity) {
+      cusMap.remove(getCusKey(cus));
+    } else {
+      logger.debug3(activityCodeToString(curActivity) + " running on CUS '" +
+                    cus.getUrl() + "', so couldn't end " +
+                    activityCodeToString(activity));
+    }
   }
 
   static String getAuPrefix(CachedUrlSet cus) {
@@ -272,6 +311,20 @@ public class ActivityRegulator {
       case NO_ACTIVITY:
       default:
         return "No Activity";
+    }
+  }
+
+  static class ActivityEntry {
+    int activity;
+    Deadline expiration;
+
+    ActivityEntry(int activity, long expireIn) {
+      this.activity = activity;
+      expiration = Deadline.in(expireIn);
+    }
+
+    boolean isExpired() {
+      return expiration.expired();
     }
   }
 

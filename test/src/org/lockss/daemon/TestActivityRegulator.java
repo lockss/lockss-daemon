@@ -1,5 +1,5 @@
 /*
- * $Id: TestActivityRegulator.java,v 1.1 2003-04-12 01:14:29 aalto Exp $
+ * $Id: TestActivityRegulator.java,v 1.2 2003-04-15 00:36:05 aalto Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.daemon;
 
 import org.lockss.plugin.*;
 import org.lockss.test.*;
+import org.lockss.util.TimeBase;
 
 public class TestActivityRegulator extends LockssTestCase {
   private ActivityRegulator allower;
@@ -44,20 +45,26 @@ public class TestActivityRegulator extends LockssTestCase {
 
     allower = new ActivityRegulator();
     mau = new MockArchivalUnit();
+    TimeBase.setSimulated(123);
+  }
+
+  public void tearDown() throws Exception {
+    TimeBase.setReal();
+    super.tearDown();
   }
 
   public void testGetAuActivity() {
     mau.setAuId("testid");
     assertEquals(allower.NO_ACTIVITY, allower.getAuActivity(mau));
 
-    allower.setAuActivity(mau, allower.NEW_CONTENT_CRAWL);
+    allower.setAuActivity(mau, allower.NEW_CONTENT_CRAWL, 123);
     assertEquals(allower.NEW_CONTENT_CRAWL, allower.getAuActivity(mau));
 
     MockArchivalUnit mau2 = new MockArchivalUnit();
     mau2.setAuId("testid2");
     assertEquals(allower.NO_ACTIVITY, allower.getAuActivity(mau2));
 
-    allower.setAuActivity(mau2, allower.TOP_LEVEL_POLL);
+    allower.setAuActivity(mau2, allower.TOP_LEVEL_POLL, 123);
     assertEquals(allower.TOP_LEVEL_POLL, allower.getAuActivity(mau2));
     assertEquals(allower.NEW_CONTENT_CRAWL, allower.getAuActivity(mau));
   }
@@ -67,76 +74,111 @@ public class TestActivityRegulator extends LockssTestCase {
     mcus.setArchivalUnit(mau);
     assertEquals(allower.NO_ACTIVITY, allower.getCusActivity(mcus));
 
-    allower.setCusActivity(mcus, allower.REPAIR_CRAWL);
+    allower.setCusActivity(mcus, allower.REPAIR_CRAWL, 123);
     assertEquals(allower.REPAIR_CRAWL, allower.getCusActivity(mcus));
 
     MockCachedUrlSet mcus2 = new MockCachedUrlSet("test url2");
     mcus2.setArchivalUnit(mau);
     assertEquals(allower.NO_ACTIVITY, allower.getCusActivity(mcus2));
 
-    allower.setCusActivity(mcus2, allower.BACKGROUND_CRAWL);
+    allower.setCusActivity(mcus2, allower.BACKGROUND_CRAWL, 123);
     assertEquals(allower.BACKGROUND_CRAWL, allower.getCusActivity(mcus2));
     assertEquals(allower.REPAIR_CRAWL, allower.getCusActivity(mcus));
   }
 
   public void testAuActivityAllowed() {
-    assertTrue(allower.startAuActivity(allower.NEW_CONTENT_CRAWL, mau));
+    assertTrue(allower.startAuActivity(allower.NEW_CONTENT_CRAWL, mau, 123));
     assertEquals(allower.NEW_CONTENT_CRAWL, allower.getAuActivity(mau));
-    assertFalse(allower.startAuActivity(allower.TOP_LEVEL_POLL, mau));
+    assertFalse(allower.startAuActivity(allower.TOP_LEVEL_POLL, mau, 123));
   }
 
   public void testCusActivityAllowed() {
     MockCachedUrlSet mcus = new MockCachedUrlSet("test url");
     mcus.setArchivalUnit(mau);
-    assertTrue(allower.startCusActivity(allower.REPAIR_CRAWL, mcus));
+    assertTrue(allower.startCusActivity(allower.REPAIR_CRAWL, mcus, 123));
     assertEquals(allower.REPAIR_CRAWL, allower.getCusActivity(mcus));
-    assertFalse(allower.startCusActivity(allower.BACKGROUND_CRAWL, mcus));
+    assertFalse(allower.startCusActivity(allower.BACKGROUND_CRAWL, mcus, 123));
     allower.cusActivityFinished(allower.REPAIR_CRAWL, mcus);
 
     mcus = new MockCachedUrlSet("test url2");
     mcus.setArchivalUnit(mau);
-    allower.startAuActivity(allower.NEW_CONTENT_CRAWL, mau);
-    assertFalse(allower.startCusActivity(allower.REPAIR_CRAWL, mcus));
+    allower.startAuActivity(allower.NEW_CONTENT_CRAWL, mau, 123);
+    assertFalse(allower.startCusActivity(allower.REPAIR_CRAWL, mcus, 123));
 
     allower.auActivityFinished(allower.NEW_CONTENT_CRAWL, mau);
-    assertTrue(allower.startCusActivity(allower.REPAIR_CRAWL, mcus));
+    assertTrue(allower.startCusActivity(allower.REPAIR_CRAWL, mcus, 123));
   }
 
-  public void testAuActivityFinished() {
-    assertTrue(allower.startAuActivity(allower.NEW_CONTENT_CRAWL, mau));
+  public void testAuFinished() {
+    assertTrue(allower.startAuActivity(allower.NEW_CONTENT_CRAWL, mau, 123));
     assertEquals(allower.NEW_CONTENT_CRAWL, allower.getAuActivity(mau));
     allower.auActivityFinished(allower.NEW_CONTENT_CRAWL, mau);
     assertEquals(allower.NO_ACTIVITY, allower.getAuActivity(mau));
+
+    // calling 'finished' on the wrong activity shouldn't end the current one
+    assertTrue(allower.startAuActivity(allower.NEW_CONTENT_CRAWL, mau, 123));
+    assertEquals(allower.NEW_CONTENT_CRAWL, allower.getAuActivity(mau));
+    allower.auActivityFinished(allower.TOP_LEVEL_POLL, mau);
+    assertEquals(allower.NEW_CONTENT_CRAWL, allower.getAuActivity(mau));
   }
 
-  public void testCusActivityFinished() {
+  public void testCusFinished() {
     MockCachedUrlSet mcus = new MockCachedUrlSet("test url");
     mcus.setArchivalUnit(mau);
-    assertTrue(allower.startCusActivity(allower.REPAIR_CRAWL, mcus));
+    assertTrue(allower.startCusActivity(allower.REPAIR_CRAWL, mcus, 123));
     assertEquals(allower.REPAIR_CRAWL, allower.getCusActivity(mcus));
     allower.cusActivityFinished(allower.REPAIR_CRAWL, mcus);
     assertEquals(allower.NO_ACTIVITY, allower.getCusActivity(mcus));
+
+    // calling 'finished' on the wrong activity shouldn't end the current one
+    assertTrue(allower.startCusActivity(allower.REPAIR_CRAWL, mcus, 123));
+    assertEquals(allower.REPAIR_CRAWL, allower.getCusActivity(mcus));
+    allower.cusActivityFinished(allower.BACKGROUND_CRAWL, mcus);
+    assertEquals(allower.REPAIR_CRAWL, allower.getCusActivity(mcus));
   }
 
-  public void testCusActivityBlocking() {
+  public void testCusBlocking() {
     MockCachedUrlSet mcus = new MockCachedUrlSet("test url");
     mcus.setArchivalUnit(mau);
     assertEquals(allower.NO_ACTIVITY, allower.getAuActivity(mau));
-    assertTrue(allower.startCusActivity(allower.REPAIR_CRAWL, mcus));
+    assertTrue(allower.startCusActivity(allower.REPAIR_CRAWL, mcus, 123));
     assertEquals(allower.CUS_ACTIVITY, allower.getAuActivity(mau));
-    assertFalse(allower.startAuActivity(allower.TOP_LEVEL_POLL, mau));
+    assertFalse(allower.startAuActivity(allower.TOP_LEVEL_POLL, mau, 123));
 
     MockCachedUrlSet mcus2 = new MockCachedUrlSet("test url2");
     mcus2.setArchivalUnit(mau);
-    assertTrue(allower.startCusActivity(allower.BACKGROUND_CRAWL, mcus2));
+    assertTrue(allower.startCusActivity(allower.BACKGROUND_CRAWL, mcus2, 123));
 
     allower.cusActivityFinished(allower.REPAIR_CRAWL, mcus);
-    assertFalse(allower.startAuActivity(allower.TOP_LEVEL_POLL, mau));
+    assertFalse(allower.startAuActivity(allower.TOP_LEVEL_POLL, mau, 123));
     assertEquals(allower.CUS_ACTIVITY, allower.getAuActivity(mau));
 
     allower.cusActivityFinished(allower.BACKGROUND_CRAWL, mcus2);
     assertEquals(allower.NO_ACTIVITY, allower.getAuActivity(mau));
-    assertTrue(allower.startAuActivity(allower.TOP_LEVEL_POLL, mau));
+    assertTrue(allower.startAuActivity(allower.TOP_LEVEL_POLL, mau, 123));
+  }
+
+  public void testAuExpiration() {
+    assertTrue(allower.startAuActivity(allower.NEW_CONTENT_CRAWL, mau, 10));
+    assertEquals(allower.NEW_CONTENT_CRAWL, allower.getAuActivity(mau));
+    TimeBase.step(5);
+    assertEquals(allower.NEW_CONTENT_CRAWL, allower.getAuActivity(mau));
+    TimeBase.step(5);
+    assertEquals(allower.NO_ACTIVITY, allower.getAuActivity(mau));
+  }
+
+  public void testCusExpiration() {
+    MockCachedUrlSet mcus = new MockCachedUrlSet("test url");
+    mcus.setArchivalUnit(mau);
+    assertTrue(allower.startCusActivity(allower.REPAIR_CRAWL, mcus, 10));
+    assertEquals(allower.REPAIR_CRAWL, allower.getCusActivity(mcus));
+    assertEquals(allower.CUS_ACTIVITY, allower.getAuActivity(mau));
+    TimeBase.step(5);
+    assertEquals(allower.REPAIR_CRAWL, allower.getCusActivity(mcus));
+    assertEquals(allower.CUS_ACTIVITY, allower.getAuActivity(mau));
+    TimeBase.step(5);
+    assertEquals(allower.NO_ACTIVITY, allower.getCusActivity(mcus));
+    assertEquals(allower.NO_ACTIVITY, allower.getAuActivity(mau));
   }
 
   public void testGetKeys() {
