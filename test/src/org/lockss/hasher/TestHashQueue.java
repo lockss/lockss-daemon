@@ -1,5 +1,5 @@
 /*
- * $Id: TestHashQueue.java,v 1.5 2002-11-25 21:34:44 tal Exp $
+ * $Id: TestHashQueue.java,v 1.6 2002-12-02 23:16:26 tal Exp $
  */
 
 /*
@@ -139,20 +139,23 @@ public class TestHashQueue extends LockssTestCase {
   // test request acceptance
   public void testAccept() {
     HashQueue q = new HashQueue();
-    HashQueue.Request req1 = simpleReq(-1, 100);
-    HashQueue.Request req2 = simpleReq(2000, 1000);
-    HashQueue.Request req3 = simpleReq(2000, 1100);
+    HashQueue.Request r1, r2, r3 ,r4, r5, r6;
+    r1 = simpleReq(-1, 100);
+    r2 = simpleReq(2000, 1000);
+    r3 = simpleReq(3000, 2900);
     assertEquals(null, q.head());
-    assertTrue(!q.insert(req1));
-    assertEquals(null, q.head());
-    assertTrue(q.insert(req2));
-    assertTrue(null != q.head());
-    assertTrue(!q.insert(req3));
-
+    assertTrue(!q.insert(r1));
+    assertTrue(q.insert(r2));
+    assertTrue(!q.insert(r3));
+    // change r2 to overrun
+    r2.timeUsed = 1200;
+    // r3 should now be accepted.  It would prevent r2 from finishing in
+    // time, but sr2 should be ignored as it has overrun.
+    assertTrue(q.insert(r3));
   }
 
   // test insert order
-  public void testOrder() throws Exception {
+  public void testInsertOrder() throws Exception {
     HashQueue q = new HashQueue();
     HashQueue.Request r1, r2, r3 ,r4, r5, r6;
     r1 = simpleReq(2000, 0);
