@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.34 2004-04-29 10:12:49 tlipkis Exp $
+ * $Id: DaemonStatus.java,v 1.35 2004-05-04 22:19:44 tlipkis Exp $
  */
 
 /*
@@ -278,7 +278,7 @@ public class DaemonStatus extends LockssServlet {
 	  // output column headings
 	  for (int ix = 0; ix < cols; ix++) {
 	    ColumnDescriptor cd = cds[ix];
-	    String head = cd.getTitle() + addFootnote(cd.getFootNote());
+	    String head = cd.getTitle() + addFootnote(cd.getFootnote());
 	    table.addHeading(head, "valign=bottom align=" +
 			     ((cols == 1) ? "center" : getColAlignment(cd)));
 	    if (ix < (cols - 1)) {
@@ -358,6 +358,9 @@ public class DaemonStatus extends LockssServlet {
 	StringBuffer sb = new StringBuffer();
 	sb.append("<b>");
 	sb.append(sInfo.getTitle());
+	if (sInfo.getFootnote() != null) {
+	  sb.append(addFootnote(sInfo.getFootnote()));
+	}
 	sb.append("</b>: ");
 	sb.append(getDisplayString(sInfo.getValue(), sInfo.getType()));
 	table.newCell("COLSPAN=" + (cols * 2 - 1));
@@ -383,8 +386,21 @@ public class DaemonStatus extends LockssServlet {
   }
 
 
-  // turn References into html links
+  // Handle lists
   private String getDisplayString(Object val, int type) {
+    if (val instanceof java.util.List) {
+      StringBuffer sb = new StringBuffer();
+      for (Iterator iter = ((java.util.List)val).iterator(); iter.hasNext(); ) {
+	sb.append(getDisplayString0(iter.next(), type));
+      }
+      return sb.toString();
+    } else {
+      return getDisplayString0(val, type);
+    }
+  }
+
+  // turn References into html links
+  private String getDisplayString0(Object val, int type) {
     if (val instanceof StatusTable.Reference) {
       StatusTable.Reference ref = (StatusTable.Reference)val;
       StringBuffer sb = new StringBuffer();
@@ -510,7 +526,7 @@ public class DaemonStatus extends LockssServlet {
           StatusTable.Reference ref = (StatusTable.Reference)val;
           String key = ref.getTableName();
           // select the current table
-          boolean isThis = tableName.equals(key);
+          boolean isThis = (tableKey == null) && tableName.equals(key);
           foundIt = foundIt || isThis;
           sel.add(display, isThis, key);
         } else {
