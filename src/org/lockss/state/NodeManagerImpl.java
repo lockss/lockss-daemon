@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.84 2003-04-02 23:50:55 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.85 2003-04-03 00:34:40 aalto Exp $
  */
 
 /*
@@ -68,7 +68,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
   ArchivalUnit managedAu;
   AuState auState;
   NodeStateCache nodeCache;
-  int maxCacheSize;
+  int maxCacheSize = DEFAULT_CACHE_SIZE;
   private static Logger logger = Logger.getLogger("NodeManager");
   TreeWalkHandler treeWalkHandler;
 
