@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingCrawlerImpl.java,v 1.9 2003-01-08 01:51:38 aalto Exp $
+ * $Id: GoslingCrawlerImpl.java,v 1.10 2003-02-06 23:31:05 troberts Exp $
  */
 
 /*
@@ -171,7 +171,7 @@ public class GoslingCrawlerImpl implements Crawler {
     if (uc.shouldBeCached()) {
       if (overWrite || !cus.isCached(url)) {
 	try {
-	  logger.info("caching "+uc);
+	  logger.debug("caching "+uc);
 	  uc.cache(); //IOException if there is a caching problem
 	} catch (IOException ioe) {
 	  //XXX handle this better.  Requeue?
