@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedUrlCacher.java,v 1.4 2002-11-27 20:04:09 troberts Exp $
+ * $Id: SimulatedUrlCacher.java,v 1.5 2003-01-03 22:42:54 aalto Exp $
  */
 
 /*
@@ -56,14 +56,9 @@ public class SimulatedUrlCacher extends GenericFileUrlCacher {
     this.fileRoot = contentRoot;
   }
 
-  protected InputStream getUncachedInputStream() {
+  protected InputStream getUncachedInputStream() throws IOException {
     if (contentFile!=null) {
-      try {
-        return new BufferedInputStream(new FileInputStream(contentFile));
-      } catch (FileNotFoundException fnfe) {
-        logger.error("Couldn't find content file '"+contentFile.getAbsolutePath()+"'");
-        return null;
-      }
+      return new BufferedInputStream(new FileInputStream(contentFile));
     }
     if (contentName==null) {
       StringBuffer buffer = new StringBuffer(fileRoot);
@@ -74,16 +69,11 @@ public class SimulatedUrlCacher extends GenericFileUrlCacher {
       contentName = buffer.toString();
     }
     contentFile = new File(contentName);
-    try {
-      return new BufferedInputStream(new FileInputStream(contentFile));
-    } catch (FileNotFoundException fnfe) {
-      logger.error("Couldn't find content file '"+contentFile.getAbsolutePath()+"'");
-      return null;
-    }
+    return new BufferedInputStream(new FileInputStream(contentFile));
   }
 
 
-  protected Properties getUncachedProperties() {
+  protected Properties getUncachedProperties() throws IOException {
     if (props!=null) {
       return props;
     }

@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireUrlCacher.java,v 1.4 2003-01-03 00:17:42 aalto Exp $
+ * $Id: HighWireUrlCacher.java,v 1.5 2003-01-03 22:42:54 aalto Exp $
  */
 
 /*
@@ -54,33 +54,23 @@ public class HighWireUrlCacher extends GenericFileUrlCacher {
     super(owner, url);
   }
 
-  protected InputStream getUncachedInputStream() {
-    try {
-      if (conn==null) {
-	URL urlO = new URL(url);
-	conn = urlO.openConnection();
-      }
-      return conn.getInputStream();
-    } catch (IOException ioe) {
-      logger.error("Couldn't get inputstream: ", ioe);
-      return null;
+  protected InputStream getUncachedInputStream() throws IOException {
+    if (conn==null) {
+      URL urlO = new URL(url);
+      conn = urlO.openConnection();
     }
+    return conn.getInputStream();
   }
 
-  protected Properties getUncachedProperties() {
+  protected Properties getUncachedProperties() throws IOException {
     Properties props = new Properties();
-    try {
-      if (conn==null) {
-	URL urlO = new URL(url);
-	conn = urlO.openConnection();
-      }
-      String contentType = conn.getContentType();
-      props.setProperty("content-type", contentType);
-      return props;
-    } catch (IOException ioe) {
-      logger.error("Couldn't get properties: ", ioe);
-      return null;
+    if (conn==null) {
+      URL urlO = new URL(url);
+      conn = urlO.openConnection();
     }
+    String contentType = conn.getContentType();
+    props.setProperty("content-type", contentType);
+    return props;
   }
 }
 
