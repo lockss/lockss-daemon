@@ -1,5 +1,5 @@
 /*
- * $Id: TaskRunner.java,v 1.12 2004-01-13 10:21:02 tlipkis Exp $
+ * $Id: TaskRunner.java,v 1.13 2004-02-09 22:10:58 tlipkis Exp $
  */
 
 /*
@@ -57,6 +57,11 @@ class TaskRunner implements Serializable {
 
   static final String PARAM_SORT_SCHEME = PREFIX + "tableSort";
   final int DEFAULT_SORT_SCHEME = PEND_REV | HIST_REV;
+
+  // thread watchdog interval is set very high because the stepper thread
+  // runs at low priority and may legitimately be blocked for a long time.
+  static final String WDOG_PARAM_STEPPER = "TaskRunner";
+  static final long WDOG_DEFAULT_STEPPER = 1 * Constants.DAY;
 
   static final int PEND_REV = 1;
   static final int HIST_REV = 2;
@@ -605,7 +610,7 @@ class TaskRunner implements Serializable {
     task.cookie = null;
   }
 
-  void runSteps(MutableBoolean continueStepping) {
+  void runSteps(MutableBoolean continueStepping, LockssWatchdog wdog) {
     StepTask task = runningTask;
     Deadline until = runningDeadline;
     boolean overOk = task.isOverrunAllowed();
@@ -626,6 +631,9 @@ class TaskRunner implements Serializable {
 	 if (log.isDebug3()) log.debug3("taskStep: " + task);
 	 // tk - step size?
 	 task.step(0);
+	 if (wdog != null) {
+	   wdog.pokeWDog();
+	 }
 	 timeDelta =
 	   (long)(TimeBase.msSince(statsStartTime) *
 		  (1.0 - backgroundLoadFactor));
@@ -671,7 +679,7 @@ class TaskRunner implements Serializable {
   }
 
   // Step thread
-  private class StepThread extends Thread {
+  private class StepThread extends LockssThread {
     private MutableBoolean continueStepping = new MutableBoolean(false);
     private boolean exit = false;
 
@@ -679,18 +687,22 @@ class TaskRunner implements Serializable {
       super(name);
     }
 
-    public void run() {
+    public void lockssRun() {
+      triggerWDogOnExit(true);
       if (stepPriority > 0) {
 	Thread.currentThread().setPriority(stepPriority);
       }
+      startWDog(WDOG_PARAM_STEPPER, WDOG_DEFAULT_STEPPER);
 
       try {
 	while (!exit) {
 	  continueStepping.setValue(true);
 	  if (findTaskToRun()) {
-	    runSteps(continueStepping);
+	    runSteps(continueStepping, this);
 	  } else {
+	    stopWDog();
 	    sem.take(runningDeadline);
+	    startWDog(WDOG_PARAM_STEPPER, WDOG_DEFAULT_STEPPER);
 	  }
 	}
       } catch (InterruptedException e) {
@@ -708,6 +720,7 @@ class TaskRunner implements Serializable {
     }
 
     private void stopStepper() {
+      triggerWDogOnExit(false);
       exit = true;
       pokeStepper();
     }

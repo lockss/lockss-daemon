@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.59 2004-02-07 06:48:32 eaalto Exp $
+ * $Id: CrawlManagerImpl.java,v 1.60 2004-02-09 22:11:13 tlipkis Exp $
  */
 
 /*
@@ -66,6 +66,9 @@ public class CrawlManagerImpl extends BaseLockssManager
    */
   public static final String PARAM_PRIORITY =
       Configuration.PREFIX + "crawler.priority";
+
+  static final String WDOG_PARAM_CRAWLER = "Crawler";
+  static final long WDOG_DEFAULT_CRAWLER = 2 * Constants.HOUR;
 
   /**
    * ToDo:
@@ -280,7 +283,7 @@ public class CrawlManagerImpl extends BaseLockssManager
     return new RepairCrawler(au, spec, nodeManager.getAuState(), repairUrls);
   }
 
-  public class CrawlThread extends Thread {
+  public class CrawlThread extends LockssThread {
     private Deadline deadline;
     private Object cookie;
     private Crawler crawler;
@@ -298,7 +301,7 @@ public class CrawlManagerImpl extends BaseLockssManager
       this.locks = locks;
     }
 
-    public void run() {
+    public void lockssRun() {
       if (crawlPriority > 0) {
 	logger.debug("Setting crawl thread priority to "+crawlPriority);
 	Thread.currentThread().setPriority(crawlPriority);
@@ -306,6 +309,9 @@ public class CrawlManagerImpl extends BaseLockssManager
 	logger.warning("Crawl thread priority less than zero, not set: "
 		       +crawlPriority);
       }
+      crawler.setWatchdog(this);
+      startWDog(WDOG_PARAM_CRAWLER, WDOG_DEFAULT_CRAWLER);
+
       boolean crawlSuccessful = crawler.doCrawl(deadline);
 
       if (crawler.getType() == Crawler.NEW_CONTENT) {

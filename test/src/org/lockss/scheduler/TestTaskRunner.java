@@ -1,5 +1,5 @@
 /*
- * $Id: TestTaskRunner.java,v 1.4 2004-01-13 10:21:01 tlipkis Exp $
+ * $Id: TestTaskRunner.java,v 1.5 2004-02-09 22:10:58 tlipkis Exp $
  */
 
 /*
@@ -463,7 +463,7 @@ public class TestTaskRunner extends LockssTestCase {
     Interrupter intr = null;
     try {
       intr = interruptMeIn(TIMEOUT_SHOULDNT, true);
-      tr.runSteps(new MutableBoolean(true));
+      tr.runSteps(new MutableBoolean(true), null);
       intr.cancel();
     } catch (Exception e) {
       log.error("runSteps threw:", e);
@@ -489,7 +489,7 @@ public class TestTaskRunner extends LockssTestCase {
     try {
       intr = interruptMeIn(TIMEOUT_SHOULDNT, true);
       while(tr.findTaskToRun()) {
-	tr.runSteps(new MutableBoolean(true));
+	tr.runSteps(new MutableBoolean(true), null);
       }
       intr.cancel();
     } catch (Exception e) {
@@ -519,7 +519,7 @@ public class TestTaskRunner extends LockssTestCase {
     try {
       intr = interruptMeIn(TIMEOUT_SHOULDNT, true);
       while(tr.findTaskToRun()) {
-	tr.runSteps(new MutableBoolean(true));
+	tr.runSteps(new MutableBoolean(true), null);
       }
       intr.cancel();
     } catch (Exception e) {
@@ -574,7 +574,7 @@ public class TestTaskRunner extends LockssTestCase {
     Interrupter intr = null;
     try {
       intr = interruptMeIn(TIMEOUT_SHOULDNT, true);
-      tr.runSteps(new MutableBoolean(true));
+      tr.runSteps(new MutableBoolean(true), null);
       intr.cancel();
     } catch (Exception e) {
       log.error("runSteps threw:", e);
