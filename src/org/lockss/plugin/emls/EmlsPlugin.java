@@ -1,5 +1,5 @@
 /*
- * $Id: EmlsPlugin.java,v 1.2 2003-11-07 04:12:00 clairegriffin Exp $
+ * $Id: EmlsPlugin.java,v 1.2.2.1 2003-11-18 00:02:31 clairegriffin Exp $
  */
 
 /*
@@ -62,7 +62,8 @@ public class EmlsPlugin extends BasePlugin {
   };
 
   public void initPlugin(LockssDaemon daemon){
-    super.initPlugin(daemon);
+    //todo: we override initPlugin largely to manually load the values that
+    // should be put into the configuration map when we load it from disk
     configurationMap.putString(CM_NAME_KEY, PLUGIN_NAME);
     configurationMap.putString(CM_VERSION_KEY, CURRENT_VERSION);
     configurationMap.putCollection(CM_CONFIG_PROPS_KEY,
@@ -70,6 +71,8 @@ public class EmlsPlugin extends BasePlugin {
     configurationMap.putCollection(CM_DEFINING_CONFIG_PROPS_KEY,
                                    ListUtil.list(AUPARAM_BASE_URL, AUPARAM_VOL));
     configurationMap.setMapElement(CM_TITLE_SPEC_KEY, titleSpec);
+    // then call the overridden initializaton.
+    super.initPlugin(daemon);
   }
 
   public ArchivalUnit createAu(Configuration auConfig)
