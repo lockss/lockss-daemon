@@ -1,5 +1,5 @@
 /*
- * $Id: IpAccessControl.java,v 1.6 2003-07-16 00:04:20 tlipkis Exp $
+ * $Id: IpAccessControl.java,v 1.7 2003-07-17 23:39:44 tlipkis Exp $
  */
 
 /*
@@ -46,10 +46,7 @@ import org.lockss.daemon.status.*;
 
 /** Display and update IP access control lists.
  */
-public class IpAccessControl extends LockssServlet {
-  static final String AC_PREFIX = ServletManager.IP_ACCESS_PREFIX;
-  public static final String PARAM_IP_INCLUDE = AC_PREFIX + "include";
-  public static final String PARAM_IP_EXCLUDE = AC_PREFIX + "exclude";
+public abstract class IpAccessControl extends LockssServlet {
 
   private static final String footIP =
     "List individual IP addresses (<code>172.16.31.14</code>), " +
@@ -108,8 +105,8 @@ public class IpAccessControl extends LockssServlet {
    */
   private void displayPage()
       throws IOException {
-    Vector incl = getListFromParam(PARAM_IP_INCLUDE);
-    Vector excl = getListFromParam(PARAM_IP_EXCLUDE);
+    Vector incl = getListFromParam(getIncludeParam());
+    Vector excl = getListFromParam(getExcludeParam());
     // hack to remove possibly duplicated first element from platform subnet
     if (incl.size() >= 2 && incl.get(0).equals(incl.get(1))) {
       incl.remove(0);
@@ -270,42 +267,18 @@ public class IpAccessControl extends LockssServlet {
     String excStr = StringUtil.separatedString(excIPsList, ";");
 
     Properties acProps = new Properties();
-    acProps.put(PARAM_IP_INCLUDE, incStr);
-    acProps.put(PARAM_IP_EXCLUDE, excStr);
+    acProps.put(getIncludeParam(), incStr);
+    acProps.put(getExcludeParam(), excStr);
     configMgr.writeCacheConfigFile(acProps,
-				   ConfigManager.CONFIG_FILE_UI_IP_ACCESS,
-				   "UI IP Access Control");
+				   getConfigFileName(),
+				   getConfigFileComment());
   }
 
-  /**
-   * Read the prop file, change ip access list props and rewrite file
-   * @param filename name of the cluster property file
-   * @param incStr string of included ip addresses
-   * @param excStr string of excluded ip addresses
-   * @return whether the save was successful
-   */
-//   public boolean replacePropertyInFile(File file, String incStr,
-// 				       String excStr) {
-//     PropertyTree t = new PropertyTree();
-//     String filename = file.getPath();
+  protected abstract String getIncludeParam();
 
-//     try {
-//       if (file.exists()) {
-// 	// get property tree
-// 	InputStream istr = new FileInputStream(filename);
-// 	t.load(istr);
-// 	istr.close();
-//       }
-//       // replace ip properties
-//       t.put(LcapProperties.IP_INCLUDE_PROP_KEY, incStr);
-//       t.put(LcapProperties.IP_EXCLUDE_PROP_KEY, excStr);
+  protected abstract String getExcludeParam();
 
-//       // write properties to file
-//       saveTree(t, filename, "LOCKSS Cluster Property file");
-//     } catch (Exception e) {
-//       LcapLog.error("UpdateIps: Error writing prop file", filename + ": " + e);
-//       return false;
-//     }
-//     return true;
-//   }
+  protected abstract String getConfigFileName();
+
+  protected abstract String getConfigFileComment();
 }
