@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedContentGenerator.java,v 1.7 2003-04-02 00:19:40 aalto Exp $
+ * $Id: SimulatedContentGenerator.java,v 1.8 2003-04-03 01:43:05 aalto Exp $
  */
 
 /*
@@ -574,7 +574,7 @@ public class SimulatedContentGenerator {
         subLink += File.separator + SimulatedContentGenerator.INDEX_NAME;
       }
       if (subLink.equals(DIR_CONTENT_NAME)) {
-        subLink = directory.getName();
+        subLink = ".";
       }
       file_content += "<BR><A HREF=\"" + subLink + "\">" + subLink + "</A>";
     }
