@@ -1,5 +1,5 @@
 /*
- * $Id: TestIdentityManager.java,v 1.25 2004-02-07 02:00:25 troberts Exp $
+ * $Id: TestIdentityManager.java,v 1.26 2004-02-07 06:51:18 eaalto Exp $
  */
 
 /*
@@ -32,14 +32,11 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.protocol;
 
-import java.io.IOException;
+import java.io.File;
 import java.util.*;
 import java.net.UnknownHostException;
-import org.lockss.daemon.Configuration;
-import org.lockss.daemon.TestConfiguration;
 import org.lockss.util.*;
 import org.lockss.test.*;
-import java.io.File;
 
 /** JUnitTest case for class: org.lockss.protocol.IdentityManager */
 public class TestIdentityManager extends LockssTestCase {
@@ -48,12 +45,12 @@ public class TestIdentityManager extends LockssTestCase {
   IPAddr testAddress;
   int testReputation;
   Object testIdKey;
-  private static String urlstr = "http://www.test.org";
-  private static String lwrbnd = "test1.doc";
-  private static String uprbnd = "test3.doc";
-  private static byte[] testbytes = {1,2,3,4,5,6,7,8,9,10};
-  private static String[] testentries = {"test1.doc",
-                                         "test2.doc", "test3.doc"};
+//  private static String urlstr = "http://www.test.org";
+//  private static String lwrbnd = "test1.doc";
+//  private static String uprbnd = "test3.doc";
+//  private static byte[] testbytes = {1,2,3,4,5,6,7,8,9,10};
+//  private static String[] testentries = {"test1.doc",
+//                                         "test2.doc", "test3.doc"};
 
   private MockLockssDaemon theDaemon;
   private IdentityManager idmgr;
@@ -96,10 +93,6 @@ public class TestIdentityManager extends LockssTestCase {
   /** test for method findIdentity(..) */
   public void testGetIdentity() {
     assertTrue(idmgr.getIdentity(fakeId.getIdKey()) != null);
-  }
-
-  public void testGetMapping() {
-    assertNotNull(idmgr.getMapping());
   }
 
   /** test for method getLocalIdentity(..) */
@@ -163,7 +156,7 @@ public class TestIdentityManager extends LockssTestCase {
   }
 
   /** test for method acttackDetected(..) */
-  public void testActtackDetected() {
+  public void testAttackDetected() {
     int rep = fakeId.getReputation();
     idmgr.changeReputation(fakeId,IdentityManager.ATTACK_DETECTED);
     checkReputation(rep, idmgr.reputationDeltas[IdentityManager.ATTACK_DETECTED],
@@ -225,8 +218,7 @@ public class TestIdentityManager extends LockssTestCase {
       assertNotNull(idmgr.findIdentity(LcapIdentity.stringToAddr(fakeIdString2)));
       assertNotNull(idmgr.findIdentity(LcapIdentity.stringToAddr(fakeIdString3)));
       idmgr.storeIdentities();
-    }
-    catch (ProtocolException ex) {
+    } catch (ProtocolException ex) {
       fail("identity db store failed");
     }
   }
@@ -312,8 +304,8 @@ public class TestIdentityManager extends LockssTestCase {
     idmgr.signalDisagreed(id1, mau);
 
     Map expected = new HashMap();
-    expected.put(id1, new Long(10)); 
-    expected.put(id2, new Long(10)); 
+    expected.put(id1, new Long(10));
+    expected.put(id2, new Long(10));
 
     assertEquals(expected, idmgr.getAgreed(mau));
   }
@@ -394,7 +386,7 @@ public class TestIdentityManager extends LockssTestCase {
     idmgr.signalDisagreed(id1, mau);
 
     Map expected = new HashMap();
-    expected.put(id2, new Long(10)); 
+    expected.put(id2, new Long(10));
 
     assertEquals(expected, idmgr.getCachesToRepairFrom(mau));
   }
@@ -416,12 +408,12 @@ public class TestIdentityManager extends LockssTestCase {
     idmgr.signalDisagreed(id1, mau2);
 
     Map expected = new HashMap();
-    expected.put(id2, new Long(10)); 
+    expected.put(id2, new Long(10));
 
     assertEquals(expected, idmgr.getCachesToRepairFrom(mau2));
 
     expected = new HashMap();
-    expected.put(id1, new Long(10)); 
+    expected.put(id1, new Long(10));
     assertEquals(expected, idmgr.getCachesToRepairFrom(mau1));
   }
 
@@ -443,7 +435,7 @@ public class TestIdentityManager extends LockssTestCase {
     Set expected = new HashSet(3);
 
     IdentityManager.IdentityAgreement ida =
-      new IdentityManager.IdentityAgreement(id1);
+        new IdentityManager.IdentityAgreement(id1);
     ida.setLastAgree(10);
     ida.setLastDisagree(10);
     expected.add(ida);
@@ -477,7 +469,7 @@ public class TestIdentityManager extends LockssTestCase {
     List loadList = new ArrayList(3);
 
     IdentityManager.IdentityAgreement ida =
-      new IdentityManager.IdentityAgreement(id1);
+        new IdentityManager.IdentityAgreement(id1);
     ida.setLastAgree(10);
     ida.setLastDisagree(10);
     loadList.add(ida);
@@ -493,13 +485,13 @@ public class TestIdentityManager extends LockssTestCase {
     hRep.setLoadedIdentityAgreement(loadList);
 
     Map expected = new HashMap();
-    expected.put(id2, new Long(10)); 
+    expected.put(id2, new Long(10));
 
     assertEquals(expected, idmgr.getCachesToRepairFrom(mau1));
-    
+
     expected = new HashMap();
-    expected.put(id1, new Long(10)); 
-    expected.put(id2, new Long(10)); 
+    expected.put(id1, new Long(10));
+    expected.put(id2, new Long(10));
 
     assertEquals(expected, idmgr.getAgreed(mau1));
   }

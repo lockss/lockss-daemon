@@ -20,6 +20,26 @@
                        type="integer">
                         <bind-xml name="Rep" node="attribute"/>
                 </field>
-
+        </class>
+       <class name="org.lockss.protocol.IdentityAgreementList">
+                <field name="list"
+                       type="java.util.ArrayList"
+                       collection="arraylist" lazy="true">
+                </field>
+       </class>
+       <class name="org.lockss.protocol.IdentityManager$IdentityAgreement">
+                <map-to xml="IdentityAgreement"/>
+                <field name="id"
+                       type="java.lang.String">
+                        <bind-xml name="Id" node="element"/>
+                </field>
+                <field name="lastAgree"
+                       type="long">
+                        <bind-xml name="LastAgree" node="element"/>
+                </field>
+                <field name="lastDisagree"
+                       type="long">
+                        <bind-xml name="LastDisagree" node="element"/>
+                </field>
         </class>
 </mapping>

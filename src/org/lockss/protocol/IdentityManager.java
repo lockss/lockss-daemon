@@ -1,5 +1,5 @@
 /*
-* $Id: IdentityManager.java,v 1.37 2004-02-07 01:59:42 troberts Exp $
+* $Id: IdentityManager.java,v 1.38 2004-02-07 06:51:18 eaalto Exp $
  */
 
 /*
@@ -40,18 +40,12 @@ import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
 import org.lockss.util.*;
 import org.lockss.app.*;
-import org.lockss.poller.Vote;
-import org.exolab.castor.xml.Unmarshaller;
-import org.exolab.castor.xml.Marshaller;
-import org.exolab.castor.mapping.Mapping;
-import org.exolab.castor.mapping.*;
 
 /**
  * Abstraction for identity of a LOCKSS cache.  Currently wraps an IP address.
  * @author Claire Griffin
  * @version 1.0
  */
-
 public class IdentityManager extends BaseLockssManager {
   protected static Logger log = Logger.getLogger("IDMgr");
 
@@ -92,7 +86,9 @@ public class IdentityManager extends BaseLockssManager {
   public static final String PARAM_IDDB_DIR = PREFIX + "database.dir";
 
   static final String IDDB_FILENAME = "iddb.xml";
-  static final String IDDB_MAP_FILENAME = "idmapping.xml";
+  // fully qualify for XmlMarshaller
+  public static final String MAPPING_FILE_NAME =
+      "/org/lockss/protocol/idmapping.xml";
 
   /* Reputation constants */
   public static final int MAX_DELTA = 0;
@@ -117,12 +113,11 @@ public class IdentityManager extends BaseLockssManager {
 
   int[] reputationDeltas = new int[10];
 
-  Mapping mapping = null;
   private Map agreeMap = null;
   private Map disagreeMap = null;
 
   //derivable from the above two; included for speed
-  private Map cachesToFetchFrom = null; 
+  private Map cachesToFetchFrom = null;
 
   private String identityMapLock = "lock";
 
@@ -252,7 +247,7 @@ public class IdentityManager extends BaseLockssManager {
    * return the max value of an Identity's reputation
    * @return the int value of max reputation
    */
-  public int getMaxReputaion() {
+  public int getMaxReputation() {
     return REPUTATION_NUMERATOR;
   }
 
@@ -302,17 +297,15 @@ public class IdentityManager extends BaseLockssManager {
         return;
       }
       String fn = iddbDir + File.separator + IDDB_FILENAME;
-      File iddbFile = new File(fn);
-      if((iddbFile != null) && iddbFile.canRead()) {
-        Unmarshaller unmarshaller = new Unmarshaller(IdentityListBean.class);
-        unmarshaller.setMapping(getMapping());
-        IdentityListBean idlb = (IdentityListBean)unmarshaller.unmarshal(
-            new FileReader(iddbFile));
-        setIdentities(idlb.getIdBeans());
-      }
-      else {
-        theLog.warning("Unable to read Identity file:" + fn);
 
+      // load the identity list via the marshaller
+      XmlMarshaller marshaller = new XmlMarshaller();
+      IdentityListBean idlb = (IdentityListBean)marshaller.load(fn,
+          IdentityListBean.class, MAPPING_FILE_NAME);
+      if (idlb==null) {
+        theLog.warning("Unable to read Identity file:" + fn);
+      } else {
+        setIdentities(idlb.getIdBeans());
       }
     } catch (Exception e) {
       theLog.warning("Couldn't load identity database: " + e.getMessage());
@@ -328,23 +321,9 @@ public class IdentityManager extends BaseLockssManager {
         return;
       }
 
-      File iddbDir = new File(fn);
-      if (!iddbDir.exists()) {
-        iddbDir.mkdirs();
-      }
-      File iddbFile = new File(iddbDir, IDDB_FILENAME);
-      if(!iddbFile.exists()) {
-        iddbFile.createNewFile();
-      }
-      if((iddbFile != null) && iddbFile.canWrite()) {
-        IdentityListBean idlb = getIdentityListBean();
-        Marshaller marshaller = new Marshaller(new FileWriter(iddbFile));
-        marshaller.setMapping(getMapping());
-        marshaller.marshal(idlb);
-      }
-      else {
-        throw new ProtocolException("Unable to store identity database.");
-      }
+      // store the identity list via the marshaller
+      XmlMarshaller marshaller = new XmlMarshaller();
+      marshaller.store(fn, IDDB_FILENAME, getIdentityListBean(), MAPPING_FILE_NAME);
 
     } catch (Exception e) {
       theLog.error("Couldn't store identity database: ", e);
@@ -389,6 +368,8 @@ public class IdentityManager extends BaseLockssManager {
   /**
    * Signals that we've agreed with id on a top level poll on au.
    * Only called if we're both on the winning side
+   * @param cacheAddr the address
+   * @param au the {@link ArchivalUnit}
    */
   public void signalAgreed(String cacheAddr, ArchivalUnit au) {
     signalAgreed(cacheAddr, au, TimeBase.nowMs());
@@ -416,12 +397,14 @@ public class IdentityManager extends BaseLockssManager {
       }
       map.put(cacheAddr, new Long(time));
       storeIdentityAgreement(au);
-    } 
+    }
   }
 
   /**
    * Signals that we've disagreed with id on any level poll on au.
    * Only called if we're on the winning side
+   * @param cacheAddr the address
+   * @param au the {@link ArchivalUnit}
    */
   public void signalDisagreed(String cacheAddr, ArchivalUnit au) {
     signalDisagreed(cacheAddr, au, TimeBase.nowMs());
@@ -489,7 +472,7 @@ public class IdentityManager extends BaseLockssManager {
 
   private void loadIdentityAgreement(ArchivalUnit au) {
     HistoryRepository hRep = getDaemon().getHistoryRepository(au);
-    List list = hRep.loadIdentityAgreement();
+    List list = hRep.loadIdentityAgreements();
     if (list != null) {
       Iterator it = list.iterator();
       while (it.hasNext()) {
@@ -507,10 +490,10 @@ public class IdentityManager extends BaseLockssManager {
   //only called within a synchronized block, so we don't need to
   private void storeIdentityAgreement(ArchivalUnit au) {
     HistoryRepository hRep = getDaemon().getHistoryRepository(au);
-    hRep.storeIdentityAgreement(generateIdentityAgreementList(au)); 
+    hRep.storeIdentityAgreements(generateIdentityAgreementList(au));
   }
 
-  
+
   //only called within a synchronized block, so we don't need to
   private List generateIdentityAgreementList(ArchivalUnit au) {
     List list = new ArrayList();
@@ -524,7 +507,7 @@ public class IdentityManager extends BaseLockssManager {
 	Long time = (Long)agreeMapForAu.get(id);
 	IdentityAgreement ida = new IdentityAgreement(id);
 	ida.setLastAgree(time.longValue());
-	
+
 	list.add(ida);
 	map.put(id, ida);
       }
@@ -546,27 +529,6 @@ public class IdentityManager extends BaseLockssManager {
       }
     }
     return list;
-  }
-  
-
-  Mapping getMapping() {
-
-    if (mapping==null) {
-      URL mappingLoc = this.getClass().getResource(IDDB_MAP_FILENAME);
-      if (mappingLoc == null) {
-        theLog.error("Unable to find resource '"+IDDB_MAP_FILENAME+"'");
-        return null;
-      }
-
-      Mapping map = new Mapping();
-      try {
-        map.loadMapping(mappingLoc);
-        mapping = map;
-      } catch (Exception ex) {
-        theLog.error("Loading of mapfile failed:" + mappingLoc);
-      }
-    }
-    return mapping;
   }
 
   protected void setConfig(Configuration config, Configuration oldConfig,
@@ -630,7 +592,6 @@ public class IdentityManager extends BaseLockssManager {
 				       ColumnDescriptor.TYPE_INT)
 		  );
 
-
   public static class IdentityAgreement {
     private long lastAgree = 0;
     private long lastDisagree = 0;
@@ -640,24 +601,31 @@ public class IdentityManager extends BaseLockssManager {
       this.id = id;
     }
 
+    // needed for marshalling
+    public IdentityAgreement() {}
+
+    public long getLastAgree() {
+      return lastAgree;
+    }
+
     public void setLastAgree(long lastAgree) {
       this.lastAgree = lastAgree;
+    }
+
+    public long getLastDisagree() {
+      return lastDisagree;
     }
 
     public void setLastDisagree(long lastDisagree) {
       this.lastDisagree = lastDisagree;
     }
 
-    public long getLastAgree() {
-      return this.lastAgree;
-    }
-
-    public long getLastDisagree() {
-      return this.lastDisagree;
-    }
-
     public String getId() {
-      return this.id;
+      return id;
+    }
+
+    public void setId(String id) {
+      this.id = id;
     }
 
     public String toString() {
@@ -676,31 +644,35 @@ public class IdentityManager extends BaseLockssManager {
     }
 
     public boolean equals(Object obj) {
-//       System.err.println("Called for "+obj);
-//       System.err.println("and        "+this);
-      try {
-	IdentityAgreement ida = (IdentityAgreement) obj;
-// 	System.err.println("id: "+id.equals(ida.getId()));
-// 	System.err.println("lastDisagree: "
-// 			   +(ida.getLastDisagree()==lastDisagree));
-// 	System.err.println("lastAgree: "
-// 			   +(ida.getLastAgree()==lastAgree));
-	boolean isEqual =
-	  (id.equals(ida.getId())
-	   && ida.getLastDisagree() == lastDisagree
-	   && ida.getLastAgree() == lastAgree);
-// 	System.err.println("isEqual: "+isEqual);
-	return isEqual;
-      } catch (ClassCastException e) {
-// 	System.err.println("isn't equal");
-	return false;
+      if (obj instanceof IdentityAgreement) {
+        IdentityAgreement ida = (IdentityAgreement)obj;
+        return (id.equals(ida.getId())
+            && ida.getLastDisagree() == lastDisagree
+            && ida.getLastAgree() == lastAgree);
       }
+      return false;
+    }
+  }
+
+  // for marshalling purposes, this class has to exist
+  public static class IdentityAgreementList {
+    private List idAgreeList;
+    public IdentityAgreementList() { }
+    public IdentityAgreementList(List list) {
+      idAgreeList = list;
     }
 
+    public List getList() {
+      return idAgreeList;
+    }
+
+    public void setList(List list) {
+      idAgreeList = list;
+    }
   }
 
   private class Status implements StatusAccessor {
-    
+
     public String getDisplayName() {
       return "Cache Identities";
     }

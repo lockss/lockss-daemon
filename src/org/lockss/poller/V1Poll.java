@@ -1,5 +1,5 @@
 /*
-* $Id: V1Poll.java,v 1.7 2003-10-31 18:34:30 dshr Exp $
+* $Id: V1Poll.java,v 1.8 2004-02-07 06:51:19 eaalto Exp $
  */
 
 /*
@@ -203,7 +203,7 @@ public abstract class V1Poll extends BasePoll {
    */
   boolean randomVerify(Vote vote, boolean isAgreeVote) {
     LcapIdentity id = idMgr.findIdentity(vote.getIDAddress());
-    int max = idMgr.getMaxReputaion();
+    int max = idMgr.getMaxReputation();
     int weight = id.getReputation();
     double verify;
     boolean callVerifyPoll = false;
