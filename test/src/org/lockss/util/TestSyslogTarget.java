@@ -35,27 +35,32 @@ import junit.framework.TestCase;
 import org.lockss.test.*;
 import org.lockss.daemon.*;
 
-public class TestSyslogTarget extends TestCase{
+public class TestSyslogTarget extends LockssTestCase {
   private static final int syslogPort = 9999;
   private static final String syslogHost = "127.0.0.1";
   //  private DatagramSocketListener dsl;  
-  private static final String SYSLOG_HOST_PROPERTY = "org.lockss.log.syslogHost";
-  private static final String SYSLOG_PORT_PROPERTY = "org.lockss.log.syslogPort";
+  private static final String PARAM_HOST = SyslogTarget.PARAM_HOST;
+  private static final String PARAM_PORT = SyslogTarget.PARAM_PORT;
 
   public TestSyslogTarget(String msg){
     super(msg);
   }
   
   public void setUp() throws Exception{
+    super.setUp();
 
 //     dsl = new DatagramSocketListener(syslogPort);
 //     new Thread(dsl).start();
   }
 
-
+  private SyslogTarget newSyslogTarget() {
+    SyslogTarget target = new SyslogTarget();
+    target.init();
+    return target;
+  }
 
   public void testSeverityToFacility(){
-    assertEquals(10, 
+    assertEquals(10,
 		 SyslogTarget.loggerSeverityToSyslogSeverity(Logger.LEVEL_CRITICAL));
     assertEquals(11, 
 		 SyslogTarget.loggerSeverityToSyslogSeverity(Logger.LEVEL_ERROR));
@@ -67,27 +72,30 @@ public class TestSyslogTarget extends TestCase{
 		 SyslogTarget.loggerSeverityToSyslogSeverity(Logger.LEVEL_DEBUG));
   }
 
+  private void setConfig(String host, int port) throws Exception {
+    String conf1 = 
+      PARAM_HOST + "=" + host + "\n" +
+      PARAM_PORT + "=" + port + "\n";
+    List list = ListUtil.list(FileUtil.urlOfString(conf1));
+    TestConfiguration.setCurrentConfigFromUrlList(list);
+  }
+
   public void testHandleMessageGetsMessageRight() throws Exception{
     int expectedPort = 1234;
     String expectedHost = "199.99.9.99";
-    String conf1 = 
-      "org.lockss.log.syslog.port="+expectedPort+"\n"+
-      "org.lockss.log.syslog.host="+expectedHost+"\n";
-    List list = ListUtil.list(FileUtil.urlOfString(conf1));
-    TestConfiguration.setCurrentConfigFromUrlList(list);
+    setConfig(expectedHost, expectedPort);
 
     String expectedDataStr = 
       "<"+SyslogTarget.loggerSeverityToSyslogSeverity(Logger.LEVEL_ERROR)+">"+
       "LOCKSS: TestMessage";
     byte[] expectedData = expectedDataStr.getBytes();
 
-    SyslogTarget target = new SyslogTarget();
+    SyslogTarget target = newSyslogTarget();
     MockDatagramSocket ds = new MockDatagramSocket();
     target.handleMessage(ds, Logger.LEVEL_ERROR, "TestMessage");
     Vector packets = ds.getSentPackets();
     assertEquals(1, packets.size());
     DatagramPacket packet = (DatagramPacket)packets.elementAt(0);
-    //FIXME after props are done
     assertEquals(expectedPort, packet.getPort());
     assertEquals(expectedHost, packet.getAddress().getHostAddress());
     
@@ -97,18 +105,14 @@ public class TestSyslogTarget extends TestCase{
   }
 
   public void testActualDatagramComm() throws Exception {
-    String conf1 = 
-      "org.lockss.log.syslog.port=9091\n"+
-      "org.lockss.log.syslog.host=127.0.0.1\n";
-    List list = ListUtil.list(FileUtil.urlOfString(conf1));
-    TestConfiguration.setCurrentConfigFromUrlList(list);
     int port = 9091;
+    setConfig("127.0.0.1", port);
     DatagramSocketListener dsl = new DatagramSocketListener(port, 1);
     try{
       dsl.beginListening();
     }
-    catch (BindException be){
-      fail("Could not bind to the port: "+port);
+    catch (BindException e) {
+      fail("Could not bind to port " + port + ": " + e);
     }
     String expectedMsg = 
       "<"+SyslogTarget.loggerSeverityToSyslogSeverity(Logger.LEVEL_ERROR)+">"+
@@ -116,7 +120,7 @@ public class TestSyslogTarget extends TestCase{
 
     byte[] msgBytes = expectedMsg.getBytes();
     
-    SyslogTarget target = new SyslogTarget();
+    SyslogTarget target = newSyslogTarget();
     target.handleMessage((Logger)null, Logger.LEVEL_ERROR, "TestMessage");
     
     DatagramPacket recPacket = dsl.getPacket();
@@ -132,21 +136,21 @@ public class TestSyslogTarget extends TestCase{
   }
 
 //   public void testNoSyslogHostSpecified(){
-//     SyslogTarget target = new SyslogTarget();
+//     SyslogTarget target = newSyslogTarget();
 //     target.handleMessage("blah", "blah", "blah");
 //     assertTrue(dsl.getPacket() == null);
 //   }    
 
 //   public void testHostNotPortSpecified(){
 //     Properties props = System.getProperties();
-//     props.setProperty(SYSLOG_HOST_PROPERTY, syslogHost);
-//     SyslogTarget target = new SyslogTarget();
+//     props.setProperty(PARAM_HOST, syslogHost);
+//     SyslogTarget target = newSyslogTarget();
 //     target.handleMessage("blah", "blah", "blah");
 //     assertTrue(dsl.getPacket() == null);
 //   }    
   
 //   public void testBasicMessage(){
-//     SyslogTarget target = new SyslogTarget();
+//     SyslogTarget target = newSyslogTarget();
 //     String callerId = "testCaller";
 //     String errorMessage = "testErrorMessage";
 //     String expectedMessage = "LCAP: "+callerId+": "+errorMessage;
