@@ -1,5 +1,5 @@
 /*
- * $Id: TestMockStatusAccessor.java,v 1.1 2003-08-09 20:37:21 tlipkis Exp $
+ * $Id: TestMockStatusAccessor.java,v 1.2 2004-05-04 22:18:01 tlipkis Exp $
  */
 
 /*
@@ -97,7 +97,7 @@ public class TestMockStatusAccessor extends LockssTestCase {
       assertEquals(expectedCol.getColumnName(), actualCol.getColumnName());
       assertEquals(expectedCol.getTitle(), actualCol.getTitle());
       assertEquals(expectedCol.getType(), actualCol.getType());
-      assertEquals(expectedCol.getFootNote(), actualCol.getFootNote());
+      assertEquals(expectedCol.getFootnote(), actualCol.getFootnote());
     }
     assertFalse(actualIt.hasNext());
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: XmlStatusTable.java,v 1.6 2004-04-29 10:11:54 tlipkis Exp $
+ * $Id: XmlStatusTable.java,v 1.7 2004-05-04 22:18:01 tlipkis Exp $
  */
 
 /*
@@ -127,7 +127,7 @@ public class XmlStatusTable {
       addTextElement(cdElement, XmlStatusConstants.TYPE,
 		     Integer.toString(cd.getType()));
       addTextElement(cdElement, XmlStatusConstants.TITLE, cd.getTitle());
-      addTextElement(cdElement, XmlStatusConstants.FOOTNOTE, cd.getFootNote());
+      addTextElement(cdElement, XmlStatusConstants.FOOTNOTE, cd.getFootnote());
     }
   }
 

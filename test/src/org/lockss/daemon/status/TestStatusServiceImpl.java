@@ -1,5 +1,5 @@
 /*
- * $Id: TestStatusServiceImpl.java,v 1.16 2004-01-20 18:22:50 tlipkis Exp $
+ * $Id: TestStatusServiceImpl.java,v 1.17 2004-05-04 22:18:01 tlipkis Exp $
  */
 
 /*
@@ -628,7 +628,7 @@ public class TestStatusServiceImpl extends LockssTestCase {
       assertEquals(expectedCol.getColumnName(), actualCol.getColumnName());
       assertEquals(expectedCol.getTitle(), actualCol.getTitle());
       assertEquals(expectedCol.getType(), actualCol.getType());
-      assertEquals(expectedCol.getFootNote(), actualCol.getFootNote());
+      assertEquals(expectedCol.getFootnote(), actualCol.getFootnote());
     }
     assertFalse(actualIt.hasNext());
   }

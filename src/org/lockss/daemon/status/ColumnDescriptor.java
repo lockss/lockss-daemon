@@ -1,5 +1,5 @@
 /*
- * $Id: ColumnDescriptor.java,v 1.4 2004-01-20 18:22:51 tlipkis Exp $
+ * $Id: ColumnDescriptor.java,v 1.5 2004-05-04 22:18:01 tlipkis Exp $
  */
 
 /*
@@ -106,7 +106,7 @@ public class ColumnDescriptor {
     return type;
   }
 
-  public String getFootNote() {
+  public String getFootnote() {
     return footNote;
   }
 
