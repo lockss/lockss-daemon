@@ -1,5 +1,5 @@
 /*
- * $Id: NewContentCrawler.java,v 1.21 2004-06-16 22:26:39 dcfok Exp $
+ * $Id: NewContentCrawler.java,v 1.22 2004-06-18 23:01:14 dcfok Exp $
  */
 
 /*
@@ -117,6 +117,15 @@ public class NewContentCrawler extends CrawlerImpl {
       logger.info("Crawl spec refetch depth (" + refetchDepth0 +
 		  ") overridden by parameter (" + refetchDepth + ")");
     }
+
+    //maxDepth should be greater than refetchDepth
+    if (refetchDepth > maxDepth){ //it should not happen
+      logger.error("Max. depth is set smaller than refetchDepth." +
+		   " Abort Crawl of " + au);
+      crawlStatus.setCrawlError("Max. Crawl depth too small");
+      return aborted();
+    }
+
     Iterator it = spec.getStartingUrls().iterator(); //getStartingUrls();
     for (int ix=0; ix<refetchDepth; ix++) {
 
@@ -168,89 +177,69 @@ public class NewContentCrawler extends CrawlerImpl {
     int lvlCnt = refetchDepth; // count for what level (N) 
                                // from the root we are at
 
-    int siteDepth = -1;   //XXX
-    
-    //maxDepth should be greater than refetchDepth
-    if (refetchDepth > maxDepth){
-      logger.error("Max. depth is set smaller than refetchDepth." +
-		   " Abort Crawl of " + au);
-      crawlStatus.setCrawlError("Max. Crawl depth too small");
-      crawlAborted = true;
-    } else {
-      while (lvlCnt <= maxDepth) {
-
-	logger.debug2("Crawling at level " + lvlCnt);
-        extractedUrls = new HashSet(); // level (N+1)'s Urls
-
-        while (!urlsToCrawl.isEmpty() && !crawlAborted) {
-          String nextUrl = (String)CollectionUtil.removeElement(urlsToCrawl);
-          // check crawl window during crawl
-          if (!withinCrawlWindow()) {
-	    crawlStatus.setCrawlError(Crawler.STATUS_WINDOW_CLOSED);
-	    return false;
-          }
-          boolean crawlRes = false;
-          try {
-	    crawlRes = fetchAndParse(nextUrl, extractedUrls, parsedPages,
+    while (lvlCnt <= maxDepth && !urlsToCrawl.isEmpty() ) {
+      
+      logger.debug2("Crawling at level " + lvlCnt);
+      extractedUrls = new HashSet(); // level (N+1)'s Urls
+      
+      while (!urlsToCrawl.isEmpty() && !crawlAborted) {
+	String nextUrl = (String)CollectionUtil.removeElement(urlsToCrawl);
+	// check crawl window during crawl
+	if (!withinCrawlWindow()) {
+	  crawlStatus.setCrawlError(Crawler.STATUS_WINDOW_CLOSED);
+	  return false;
+	}
+	boolean crawlRes = false;
+	try {
+	  crawlRes = fetchAndParse(nextUrl, extractedUrls, parsedPages,
  	  			   cus, false, alwaysReparse);
-          } catch (RuntimeException e) {
-	    logger.warning("Unexpected exception in crawl", e);
-          }
-          if  (!crawlRes) {
-	    if (crawlStatus.getCrawlError() == null) {
-	      crawlStatus.setCrawlError(Crawler.STATUS_ERROR);
-	    }
-          }
-          if (usePersistantList) {
-	    aus.updatedCrawlUrls(false);
-          }
+	} catch (RuntimeException e) {
+	  logger.warning("Unexpected exception in crawl", e);
+	}
+	if  (!crawlRes) {
+	  if (crawlStatus.getCrawlError() == null) {
+	    crawlStatus.setCrawlError(Crawler.STATUS_ERROR);
+	  }
+	}
+	if (usePersistantList) {
+	  aus.updatedCrawlUrls(false);
+	}
         
-	} // end of inner while
+      } // end of inner while
+      
+      urlsToCrawl = extractedUrls;
+      lvlCnt++;
+    } // end of outer while
 
-	if (extractedUrls.isEmpty()){
- 	  logger.debug2("extractedUrls empty at level " + lvlCnt);
-	  siteDepth = lvlCnt;
-	  break;
-	} else {
-	  urlsToCrawl = extractedUrls;
-	  lvlCnt++;
-	}
-      } // end of outer while
-
-      if (siteDepth == -1) {
-	logger.error("Site depth exceeds max. crawl depth. Stopped Crawl of " + au.getName() +
-		       " at depth " + (lvlCnt-1));
-	crawlStatus.setCrawlError("Site depth exceeded max. crawl depth");
-	logger.debug2("urlsToCrawl contains:");
-  	Iterator itz = urlsToCrawl.iterator();
-	while (itz.hasNext()){
- 	  logger.debug2(""+itz.next());
-	}
-	logger.info("Site depth = " + (lvlCnt-1));
-      } else {
-	logger.info("Site depth = "+ siteDepth);
-      }
+    if (!urlsToCrawl.isEmpty()) {
+      logger.error("Site depth exceeds max. crawl depth. Stopped Crawl of " + au.getName() +
+		   " at depth " + (lvlCnt-1));
+      crawlStatus.setCrawlError("Site depth exceeded max. crawl depth");
+      logger.debug2("urlsToCrawl contains: " + urlsToCrawl);
+      logger.info("Site depth = " + (lvlCnt-1));
+    } else {
+      logger.info("Site depth = "+ (lvlCnt-1));
     }
-
+    
     if (crawlAborted) {
-      return aborted();
+        return aborted();
     }
-
+  
     if (crawlStatus.getCrawlError() != null) {
       logger.info("Finished crawl (errors) of "+au.getName());
     } else {
       logger.info("Finished crawl of "+au.getName());
     }
-
+  
     if (au instanceof BaseArchivalUnit) {
       BaseArchivalUnit bau = (BaseArchivalUnit)au;
       long cacheHits = bau.getCrawlSpecCacheHits();
       long cacheMisses = bau.getCrawlSpecCacheMisses();
       double per = ((float)cacheHits /
-		    ((float)cacheHits + (float)cacheMisses));
-      logger.info("Had "+cacheHits+" cache hits, with a percentage of "+per);
+		  ((float)cacheHits + (float)cacheMisses));
+      logger.info("Had "+cacheHits+" cache hits, with a percentage of "+ (per*100) );
     }
-
+  
     return (crawlStatus.getCrawlError() == null); 
   }
 
