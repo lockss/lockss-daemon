@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSimulatedContent.java,v 1.56 2004-03-07 08:35:37 tlipkis Exp $
+ * $Id: FuncSimulatedContent.java,v 1.57 2004-03-30 19:49:53 eaalto Exp $
  */
 
 /*
@@ -44,6 +44,8 @@ import junit.framework.*;
 public class FuncSimulatedContent extends LockssTestCase {
   private SimulatedArchivalUnit sau;
   private MockLockssDaemon theDaemon;
+  private String auId;
+  private String auId2;
 
   private static String DAMAGED_CACHED_URL = "/branch2/branch2/file2.txt";
 
@@ -55,9 +57,9 @@ public class FuncSimulatedContent extends LockssTestCase {
     super.setUp();
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     String tempDirPath2 = getTempDir().getAbsolutePath() + File.separator;
-    String auId = "org|lockss|plugin|simulated|SimulatedPlugin.root~" +
+    String auIdStr = "org|lockss|plugin|simulated|SimulatedPlugin.root~" +
       PropKeyEncoder.encode(tempDirPath);
-    String auId2 = "org|lockss|plugin|simulated|SimulatedPlugin.root~" +
+    String auId2Str = "org|lockss|plugin|simulated|SimulatedPlugin.root~" +
       PropKeyEncoder.encode(tempDirPath2);
     Properties props = new Properties();
     props.setProperty(SystemMetrics.PARAM_HASH_TEST_DURATION, "1000");
@@ -65,20 +67,20 @@ public class FuncSimulatedContent extends LockssTestCase {
     props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     props.setProperty(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION,
                       tempDirPath);
-    props.setProperty("org.lockss.au." + auId + ".root", tempDirPath);
-    props.setProperty("org.lockss.au." + auId + ".depth", "2");
-    props.setProperty("org.lockss.au." + auId + ".branch", "2");
-    props.setProperty("org.lockss.au." + auId + ".numFiles", "2");
+    props.setProperty("org.lockss.au." + auIdStr + ".root", tempDirPath);
+    props.setProperty("org.lockss.au." + auIdStr + ".depth", "2");
+    props.setProperty("org.lockss.au." + auIdStr + ".branch", "2");
+    props.setProperty("org.lockss.au." + auIdStr + ".numFiles", "2");
 
-    props.setProperty("org.lockss.au." + auId + ".badCachedFileLoc", "2,2");
-    props.setProperty("org.lockss.au." + auId + ".badCachedFileNum", "2");
-    props.setProperty("org.lockss.au." + auId2 + ".badCachedFileLoc", "2,2");
-    props.setProperty("org.lockss.au." + auId2 + ".badCachedFileNum", "2");
+    props.setProperty("org.lockss.au." + auIdStr + ".badCachedFileLoc", "2,2");
+    props.setProperty("org.lockss.au." + auIdStr + ".badCachedFileNum", "2");
+    props.setProperty("org.lockss.au." + auId2Str + ".badCachedFileLoc", "2,2");
+    props.setProperty("org.lockss.au." + auId2Str + ".badCachedFileNum", "2");
 
-    props.setProperty("org.lockss.au." + auId2 + ".root", tempDirPath2);
-    props.setProperty("org.lockss.au." + auId2 + ".depth", "2");
-    props.setProperty("org.lockss.au." + auId2 + ".branch", "2");
-    props.setProperty("org.lockss.au." + auId2 + ".numFiles", "2");
+    props.setProperty("org.lockss.au." + auId2Str + ".root", tempDirPath2);
+    props.setProperty("org.lockss.au." + auId2Str + ".depth", "2");
+    props.setProperty("org.lockss.au." + auId2Str + ".branch", "2");
+    props.setProperty("org.lockss.au." + auId2Str + ".numFiles", "2");
 
     theDaemon = new MockLockssDaemon();
     theDaemon.getPluginManager();
@@ -90,8 +92,13 @@ public class FuncSimulatedContent extends LockssTestCase {
     theDaemon.setDaemonInited(true);
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
+    // form proper ids
+    auId = auIdStr.replace('.', '&');
+    auId2 = auId2Str.replace('.', '&');
+
     sau =
-      (SimulatedArchivalUnit)theDaemon.getPluginManager().getAllAus().get(0);
+      (SimulatedArchivalUnit)theDaemon.getPluginManager().getAuFromId(auId);
+    List aus = theDaemon.getPluginManager().getAllAus();
 
     theDaemon.getPluginManager().startService();
 
@@ -131,7 +138,7 @@ public class FuncSimulatedContent extends LockssTestCase {
     byte[] contentH = getHash(set, false);
 
     sau =
-        (SimulatedArchivalUnit)theDaemon.getPluginManager().getAllAus().get(1);
+        (SimulatedArchivalUnit)theDaemon.getPluginManager().getAuFromId(auId2);
     theDaemon.getLockssRepository(sau);
     theDaemon.getNodeManager(sau).startService();
 
@@ -146,7 +153,8 @@ public class FuncSimulatedContent extends LockssTestCase {
 
   private void createContent() {
     SimulatedContentGenerator scgen = sau.getContentGenerator();
-    scgen.setFileTypes(SimulatedContentGenerator.FILE_TYPE_HTML + SimulatedContentGenerator.FILE_TYPE_TXT);
+    scgen.setFileTypes(SimulatedContentGenerator.FILE_TYPE_HTML +
+                       SimulatedContentGenerator.FILE_TYPE_TXT);
     scgen.setAbnormalFile("1,1", 1);
     scgen.setOddBranchesHaveContent(true);
 
@@ -368,8 +376,8 @@ public class FuncSimulatedContent extends LockssTestCase {
   // this version doesn't fully override the 'measureHashSpeed()' function, but
   // protects against it returning '0' by returning the set speed
   private class MyMockSystemMetrics extends MockSystemMetrics {
-    public int measureHashSpeed(CachedUrlSetHasher hasher, MessageDigest digest) throws
-        IOException {
+    public int measureHashSpeed(CachedUrlSetHasher hasher, MessageDigest digest)
+        throws IOException {
       int speed = super.measureHashSpeed(hasher, digest);
       if (speed==0) {
         speed = getHashSpeed();
@@ -380,7 +388,6 @@ public class FuncSimulatedContent extends LockssTestCase {
       return speed;
     }
   }
-
 
   public static void main(String[] argv) {
     String[] testCaseList = {
