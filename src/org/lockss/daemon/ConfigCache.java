@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigCache.java,v 1.2 2004-06-29 18:58:22 smorabito Exp $
+ * $Id: ConfigCache.java,v 1.3 2004-07-12 06:13:47 tlipkis Exp $
  */
 
 /*
@@ -44,18 +44,20 @@ import org.lockss.util.*;
  * the remote files to be parsed before any of the local files.
  */
 public class ConfigCache {
+  // MUST pass in explicit log level to avoid recursive call back to
+  // Configuration to get Config log level.  (Others should NOT do this.)
+  private static Logger log =
+    Logger.getLoggerWithInitialLevel("ConfigCache",
+				     Logger.getInitialDefaultLevel());
 
-  private static SequencedHashMap m_remoteFileMap =
-    new SequencedHashMap();
-  private static SequencedHashMap m_localFileMap =
-    new SequencedHashMap();
+  private SequencedHashMap m_remoteFileMap = new SequencedHashMap();
+  private SequencedHashMap m_localFileMap = new SequencedHashMap();
 
-  private static Logger log = Logger.getLogger("ConfigCache");
 
   /**
    * Retrieve a configuration file from the cache.
    */
-  public static ConfigFile get(String url) throws IOException {
+  public ConfigFile get(String url) {
     ConfigFile confFile = null;
 
     if (UrlUtil.isHttpUrl(url)) {
@@ -72,7 +74,7 @@ public class ConfigCache {
    * Insert a configuration file into the cache.  If the file
    * is already in the cache, it will be reloaded if it has changed.
    */
-  public static void load(String url) throws IOException {
+  public void load(String url) throws IOException {
     try {
       // Store the configuration in the right hashmap
       if (UrlUtil.isHttpUrl(url)) {
@@ -89,7 +91,7 @@ public class ConfigCache {
     }
   }
 
-  public static synchronized void remove(String url) {
+  public synchronized void remove(String url) {
     if (UrlUtil.isHttpUrl(url)) {
       m_remoteFileMap.remove(url);
     } else {
@@ -102,7 +104,7 @@ public class ConfigCache {
    * cache.  If the ConfigFile is already in the cache, just ask it to
    * reload its content.
    */
-  private static synchronized void put(Map map, String url)
+  private synchronized void put(Map map, String url)
       throws IOException {
     if (map.containsKey(url)) {
       log.debug2("put: cache hit, reloading.");
@@ -117,35 +119,27 @@ public class ConfigCache {
   /**
    * Return all remotely-loaded config files.
    */
-  public static List getRemoteConfigFiles() {
+  public List getRemoteConfigFiles() {
     return new ArrayList(m_remoteFileMap.values());
   }
 
   /**
    * Return all locally-loaded config files.
    */
-  public static List getLocalConfigFiles() {
+  public List getLocalConfigFiles() {
     return new ArrayList(m_localFileMap.values());
   }
 
   /**
    * Return all config files.
    */
-  public static List getConfigFiles() {
+  public List getConfigFiles() {
     List allConfigFiles = new ArrayList(m_localFileMap.values());
     allConfigFiles.addAll(m_remoteFileMap.values());
     return allConfigFiles;
   }
 
-  /**
-   * Reset the cache - used by unit testing.
-   */
-  public static synchronized void reset() {
-    m_localFileMap.clear();
-    m_remoteFileMap.clear();
-  }
-
-  public static int size() {
+  public int size() {
     return m_localFileMap.size() + m_remoteFileMap.size();
   }
 }

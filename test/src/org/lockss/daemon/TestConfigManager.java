@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigManager.java,v 1.9 2004-06-14 03:08:44 smorabito Exp $
+ * $Id: TestConfigManager.java,v 1.10 2004-07-12 06:13:47 tlipkis Exp $
  */
 
 /*
@@ -153,19 +153,16 @@ public class TestConfigManager extends LockssTestCase {
 	  diffSet = changedKeys;
 	}
       });
-    ConfigCache.reset(); // Used for testing only...
     assertTrue(setCurrentConfigFromUrlList(ListUtil.
 					   list(FileTestUtil.urlOfString(c1a),
 						FileTestUtil.urlOfString(c1))));
     assertEquals(SetUtil.set("prop2"), diffSet);
     System.out.println(mgr.getCurrentConfig().toString());
-    ConfigCache.reset();
     assertTrue(setCurrentConfigFromUrlList(ListUtil.
 					   list(FileTestUtil.urlOfString(c1),
 						FileTestUtil.urlOfString(c1))));
     assertEquals(SetUtil.set("prop4"), diffSet);
     System.out.println(mgr.getCurrentConfig().toString());
-    ConfigCache.reset();
     assertTrue(setCurrentConfigFromUrlList(ListUtil.
 					   list(FileTestUtil.urlOfString(c1),
 						FileTestUtil.urlOfString(c1a))));
@@ -260,9 +257,9 @@ public class TestConfigManager extends LockssTestCase {
     ConfigurationUtil.setCurrentConfigFromProps(props);
     Configuration config = mgr.getCurrentConfig();
     assertEquals("smtp.example.com",
-		 config.get("org.lockss.log.target.MailTarget.smtphost"));
+		 config.get("org.lockss.mail.smtphost"));
     assertEquals("25",
-		 config.get("org.lockss.log.target.MailTarget.smtpport"));
+		 config.get("org.lockss.mail.smtpport"));
   }
 
   public void testPlatformVersionConfig() throws Exception {

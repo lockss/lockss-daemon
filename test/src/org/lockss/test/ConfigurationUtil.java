@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurationUtil.java,v 1.8 2004-06-14 03:08:45 smorabito Exp $
+ * $Id: ConfigurationUtil.java,v 1.9 2004-07-12 06:13:47 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -39,6 +39,7 @@ import org.mortbay.tools.*;
 /** Utilities for Configuration and ConfigManager
  */
 public class ConfigurationUtil {
+  public static Logger log = Logger.getLogger("ConfigUtil");
 
   private static ConfigManager mgr() {
     return ConfigManager.getConfigManager();
@@ -144,7 +145,6 @@ public class ConfigurationUtil {
   /** Install the supplied Configuration as the current configuration.
    */
   public static boolean installConfig(Configuration config) {
-    ConfigCache.reset();  // For testing, always start with a clean cache.
     try {
       PrivilegedAccessor.invokeMethod(mgr(), "installConfig", config);
     } catch (Exception e) {

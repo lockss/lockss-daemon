@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigCache.java,v 1.1 2004-06-14 03:08:44 smorabito Exp $
+ * $Id: TestConfigCache.java,v 1.2 2004-07-12 06:13:47 tlipkis Exp $
  */
 
 /*
@@ -68,36 +68,41 @@ public class TestConfigCache extends LockssTestCase {
     "  <property name=\"prop.9\" value=\"baz\" />\n" +
     "</lockss-config>";
 
+  ConfigCache cache;
+
+  public void setUp() throws Exception {
+    super.setUp();
+    cache = new ConfigCache();
+  }
+
   /*
    * Test methods.
    */
   public void testLoadConfigFile() throws IOException {
-    ConfigCache.reset();
     String url = null;
     try {
       url = FileTestUtil.urlOfString(config1);
-      ConfigCache.load(url);
+      cache.load(url);
     } catch (IOException ex) {
       fail("Unable to load local config file " + url + " :" + ex);
     }
   }
 
   public void testSize() throws IOException {
-    ConfigCache.reset();
-    assertEquals(0, (ConfigCache.getConfigFiles()).size());
+    assertEquals(0, (cache.getConfigFiles()).size());
 
     try {
       String url1 = FileTestUtil.urlOfString(config1);
       String url2 = FileTestUtil.urlOfString(config2);
       String url3 = FileTestUtil.urlOfString(config3, ".xml");
-      ConfigCache.load(url1);
-      ConfigCache.load(url2);
-      ConfigCache.load(url3);
+      cache.load(url1);
+      cache.load(url2);
+      cache.load(url3);
     } catch (IOException ex) {
       fail("Unable to load config file: " + ex);
     }
 
-    assertEquals(3, (ConfigCache.getConfigFiles()).size());
+    assertEquals(3, (cache.getConfigFiles()).size());
 
   }
 
