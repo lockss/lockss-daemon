@@ -1,5 +1,5 @@
 /*
- * $Id: LockssThread.java,v 1.4 2004-02-12 02:58:24 tlipkis Exp $
+ * $Id: LockssThread.java,v 1.5 2004-02-23 21:26:27 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -277,6 +277,8 @@ public abstract class LockssThread extends Thread implements LockssWatchdog {
   public final void run() {
     try {
       lockssRun();
+    } catch (RuntimeException e) {
+      log.warning("Thread threw", e);
     } finally {
       if (triggerOnExit) {
 	threadExited();
