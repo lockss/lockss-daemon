@@ -1,5 +1,5 @@
 /*
- * $Id: NodeStateImpl.java,v 1.13 2003-04-04 23:50:11 aalto Exp $
+ * $Id: NodeStateImpl.java,v 1.14 2003-04-09 23:48:09 aalto Exp $
  */
 
 /*
@@ -144,7 +144,9 @@ public class NodeStateImpl implements NodeState {
       pollHistories.add(finished_poll);
     }
     polls.remove(finished_poll);
+    // checkpoint state, store histories
     repository.storeNodeState(this);
+    repository.storePollHistories(this);
   }
 
   protected void setPollHistoryBeanList(List new_histories) {

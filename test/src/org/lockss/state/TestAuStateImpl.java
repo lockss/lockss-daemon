@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuStateImpl.java,v 1.5 2003-04-01 00:08:12 aalto Exp $
+ * $Id: TestAuStateImpl.java,v 1.6 2003-04-09 23:48:08 aalto Exp $
  */
 
 /*
@@ -78,12 +78,10 @@ public class TestAuStateImpl extends LockssTestCase {
   public void testTreeWalkFinished() {
     AuState auState = new AuState(mau, -1, -1, 123, historyRepo);
     assertEquals(123, auState.getLastTreeWalkTime());
-    assertNull(historyRepo.storedAus.get(auState.getArchivalUnit()));
 
     TimeBase.setSimulated(456);
     auState.setLastTreeWalkTime();
     assertEquals(456, auState.getLastTreeWalkTime());
-    assertNotNull(historyRepo.storedAus.get(auState.getArchivalUnit()));
   }
 
   public static void main(String[] argv) {

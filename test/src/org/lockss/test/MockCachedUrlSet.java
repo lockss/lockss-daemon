@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrlSet.java,v 1.27 2003-03-04 21:47:55 tal Exp $
+ * $Id: MockCachedUrlSet.java,v 1.28 2003-04-09 23:48:09 aalto Exp $
  */
 
 /*
@@ -70,12 +70,17 @@ public class MockCachedUrlSet implements CachedUrlSet {
   private static final Logger logger = Logger.getLogger("MockCachedUrlSet");
 
   public MockCachedUrlSet() {
-    this(new MockArchivalUnit(), null);
+    this(new MockArchivalUnit(), (CachedUrlSetSpec)null);
   }
 
   public MockCachedUrlSet(ArchivalUnit owner, CachedUrlSetSpec spec) {
     this.spec = spec;
     this.au = owner;
+  }
+
+  public MockCachedUrlSet(ArchivalUnit owner, String url) {
+    this.au = owner;
+    this.url = url;
   }
 
   public MockCachedUrlSet(String url) {
@@ -88,6 +93,10 @@ public class MockCachedUrlSet implements CachedUrlSet {
 
   public ArchivalUnit getArchivalUnit() {
     return au;
+  }
+
+  public void setArchivalUnit(ArchivalUnit newAu) {
+    au = newAu;
   }
 
   public MockCachedUrlSet(CachedUrlSetSpec spec) {

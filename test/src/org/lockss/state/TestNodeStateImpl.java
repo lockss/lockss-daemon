@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeStateImpl.java,v 1.12 2003-04-07 23:38:06 aalto Exp $
+ * $Id: TestNodeStateImpl.java,v 1.13 2003-04-09 23:48:09 aalto Exp $
  */
 
 /*
@@ -188,7 +188,7 @@ public class TestNodeStateImpl extends LockssTestCase {
   }
 
   public void testIsInternalNode() {
-    MockCachedUrlSet mcus = new MockCachedUrlSet(null, null);
+    MockCachedUrlSet mcus = new MockCachedUrlSet(null, "");
     Vector childV = new Vector();
     mcus.setFlatIterator(childV.iterator());
     state = new NodeStateImpl(mcus, -1, null, null, null);

@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.24 2003-04-07 23:38:05 aalto Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.25 2003-04-09 23:48:09 aalto Exp $
  */
 
 /*
@@ -232,12 +232,13 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
     auState = repository.loadAuState(mau);
     assertEquals(123, auState.getLastCrawlTime());
     assertEquals(321, auState.getLastTopLevelPollTime());
-    assertEquals(456, auState.getLastTreeWalkTime());
+    // doesn't store last treewalk time, so should reset to -1
+    assertEquals(-1, auState.getLastTreeWalkTime());
     assertEquals(mau.getAUId(), auState.getArchivalUnit().getAUId());
   }
 
   public void testStoreOverwrite() throws Exception {
-    AuState auState = new AuState(mau, 123, 321, 456, repository);
+    AuState auState = new AuState(mau, 123, 321, -1, repository);
     repository.storeAuState(auState);
     String filePath = LockssRepositoryServiceImpl.mapAuToFileLocation(tempDirPath +
         HistoryRepositoryImpl.HISTORY_ROOT_NAME, mau);
@@ -248,17 +249,16 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
     StreamUtil.copy(fis, baos);
     String expectedStr = baos.toString();
 
-    auState = new AuState(mau, 1234, 4321, 4567, repository);
+    auState = new AuState(mau, 1234, 4321, -1, repository);
     repository.storeAuState(auState);
 
     auState = null;
     auState = repository.loadAuState(mau);
     assertEquals(1234, auState.getLastCrawlTime());
     assertEquals(4321, auState.getLastTopLevelPollTime());
-    assertEquals(4567, auState.getLastTreeWalkTime());
     assertEquals(mau.getAUId(), auState.getArchivalUnit().getAUId());
 
-    auState = new AuState(mau, 123, 321, 456, repository);
+    auState = new AuState(mau, 123, 321, -1, repository);
     repository.storeAuState(auState);
     fis = new FileInputStream(xmlFile);
     baos = new ByteArrayOutputStream(expectedStr.length());

@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.28 2003-04-07 23:38:06 aalto Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.29 2003-04-09 23:48:09 aalto Exp $
  */
 
 /*
@@ -152,6 +152,13 @@ public class HistoryRepositoryImpl
       NodeStateBean nsb = (NodeStateBean)unmarshaller.unmarshal(
           new FileReader(nodeFile));
       return new NodeStateImpl(cus, nsb, this);
+    } catch (org.exolab.castor.xml.MarshalException me) {
+      logger.error("Marshalling exception on nodestate for '" +
+                   cus.getUrl() + "' ", me);
+      // continue
+      return new NodeStateImpl(cus, -1,
+                               new CrawlState(-1, CrawlState.FINISHED, 0),
+                               new ArrayList(), this);
     } catch (Exception e) {
       logger.error("Couldn't load node state: ", e);
       throw new LockssRepository.RepositoryStateException(
@@ -238,11 +245,17 @@ public class HistoryRepositoryImpl
       }
       Unmarshaller unmarshaller = new Unmarshaller(AuStateBean.class);
       unmarshaller.setMapping(getMapping());
-      AuStateBean asb = (AuStateBean)unmarshaller.unmarshal(
+      AuStateBean asb = (AuStateBean) unmarshaller.unmarshal(
           new FileReader(auFile));
+      // does not load in an old treewalk time, so that one will be run
+      // immediately
       return new AuState(au, asb.getLastCrawlTime(),
                          asb.getLastTopLevelPollTime(),
-                         asb.getLastTreeWalkTime(), this);
+                         -1, this);
+    } catch (org.exolab.castor.xml.MarshalException me) {
+      logger.error("Marshalling exception for austate '"+au.getName()+"': "+me);
+      // continue
+      return new AuState(au, -1, -1, -1, this);
     } catch (Exception e) {
       logger.error("Couldn't load au state: ", e);
       throw new LockssRepository.RepositoryStateException(
