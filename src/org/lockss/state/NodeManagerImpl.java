@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.130.2.2 2003-06-09 20:15:13 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.130.2.3 2003-06-11 00:03:38 aalto Exp $
  */
 
 /*
@@ -477,15 +477,20 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
         logger.info("Top level poll finished.");
       }
 
-      // take next appropriate action on node
-      try {
-        logger.debug3("New node state: "+nodeState.getStateString());
-        checkCurrentState(pollState, results, nodeState, false);
-      } catch (IOException ie) {
-        logger.error("Unable to continue actions on node: ", ie);
-        pollState.status = PollState.ERR_IO;
+      // take next appropriate action on node if needed
+      // only check state for ranged polls if they changed the state
+      boolean checkState = !isRangedPoll ||
+          ((lastState != -1) && (lastState != nodeState.getState()));
+      if (checkState) {
+        try {
+          logger.debug3("New node state: " + nodeState.getStateString());
+          checkCurrentState(pollState, results, nodeState, false);
+        }
+        catch (IOException ie) {
+          logger.error("Unable to continue actions on node: ", ie);
+          pollState.status = PollState.ERR_IO;
+        }
       }
-
     }
     finally {
       if ((isRangedPoll) && (lastState != -1)) {
