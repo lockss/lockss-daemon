@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.34 2004-10-22 07:03:35 tlipkis Exp $
+ * $Id: AuConfig.java,v 1.35 2005-01-04 03:01:59 tlipkis Exp $
  */
 
 /*
@@ -127,9 +127,6 @@ public class AuConfig extends LockssServlet {
     String auid = req.getParameter("auid");
 
     if (StringUtil.isNullString(action)) displayAuSummary();
-    else if (action.equals("SaveAll")) doSaveAll();
-    else if (action.equals("RestoreAll")) displayRestoreAll();
-    else if (action.equals("DoRestoreAll")) doRestoreAll();
     else if (action.equals("Add")) displayAddAu();
     else if (action.equals("EditNew")) displayEditNew();
     else if (action.equals("Create")) createAu();
@@ -167,111 +164,6 @@ public class AuConfig extends LockssServlet {
     }
   }
 
-  /** Serve the contents of the local AU config file, as
-   * application/binary */
-  private void doSaveAll() throws IOException {
-    try {
-      InputStream is = remoteApi.getAuConfigBackupStream(getMachineName());
-      Reader rdr = new InputStreamReader(is, Constants.DEFAULT_ENCODING);
-      PrintWriter wrtr = resp.getWriter();
-      resp.setContentType("application/binary");
-      StreamUtil.copy(rdr, wrtr);
-      rdr.close();
-    } catch (FileNotFoundException e) {
-      errMsg = "No AUs have been configured - nothing to backup";
-      displayAuSummary();
-    } catch (IOException e) {
-      log.warning("doSaveAll()", e);
-      throw e;
-    }
-  }
-
-  /** Display the RestoreAll page */
-  private void displayRestoreAll() throws IOException {
-    Page page = newPage();
-    addJavaScript(page);
-    page.add(getErrBlock());
-    Form frm = new Form(srvURL(myServletDescr(), null));
-    frm.method("POST");
-    frm.attribute("enctype", "multipart/form-data");
-    frm.add("<input type=hidden name=\"" + ACTION_TAG + "\">");
-    Table tbl = new Table(0, "align=center cellspacing=4 cellpadding=0");
-    tbl.newRow();
-    tbl.newCell("align=center");
-    tbl.add("Enter name of AU configuration backup file");
-    tbl.newRow();
-    tbl.newCell("align=center");
-    tbl.add(new Input(Input.File, "AuConfigBackupContents"));
-    tbl.newRow();
-    tbl.newCell("align=center");
-    tbl.add(submitButton("Restore", "DoRestoreAll"));
-//     tbl.add(new Input(Input.Submit, "button", "DoRestoreAll"));
-    frm.add(tbl);
-    page.add(frm);
-    endPage(page);
-  }
-
-  /** Restore the AU config */
-  private void doRestoreAll() throws IOException {
-    InputStream ins = multiReq.getInputStream("AuConfigBackupContents");
-    if (ins == null) {
-      errMsg = "No backup file uploaded";
-      displayRestoreAll();
-    } else {
-      try {
-	RemoteApi.RestoreAllStatus status = remoteApi.restoreAllAus(ins);
-	displayRestoreAllStatus(status);
-      } catch (RemoteApi.InvalidAuConfigBackupFile e) {
-	errMsg = "Couldn't restore configuration: " + e.getMessage();
-	displayRestoreAll();
-      }
-    }
-  }
-
-  private void displayRestoreAllStatus(RemoteApi.RestoreAllStatus status)
-      throws IOException {
-    Page page = newPage();
-    page.add(getErrBlock());
-    java.util.List statusList = status.getStatusList();
-    int okCnt = status.getOkCnt();
-    int errCnt = statusList.size() - okCnt;
-    page.add(getExplanationBlock(okCnt + " AUs restored, " +
-				 errCnt + " skipped"));
-    Table tbl = new Table(0, "align=center cellspacing=4 cellpadding=0");
-    tbl.addHeading("Status");
-    tbl.addHeading("AU");
-    for (Iterator iter = statusList.iterator(); iter.hasNext(); ) {
-      RemoteApi.RestoreStatus stat = (RemoteApi.RestoreStatus)iter.next();
-      tbl.newRow();
-      tbl.newCell();
-      tbl.add("&nbsp;");
-      tbl.add(stat.getStatus());
-      tbl.newCell();
-      String name = stat.getName();
-      tbl.add(name != null ? name : stat.getAuId());
-      if (stat.getExplanation() != null) {
-	tbl.newCell();
-	tbl.add(stat.getExplanation());
-      }
-    }
-    page.add(tbl);
-    endPage(page);
-  }
-
-  /** Display a "The cache isn't ready yet, come back later" message if
-   *  not all of the AUs have started yet.
-   */
-  protected void displayNotStarted() throws IOException {
-    Page page = newPage();
-    Composite warning = new Composite();
-    warning.add("<center><font color=red size=+1>");
-    warning.add("This LOCKSS Cache is still starting.  Please try again in a moment.");
-    warning.add("</font></center><br>");
-    page.add(warning);
-    page.add(getFooter());
-    page.write(resp.getWriter());
-  }
-
   /** Display "Add Archival Unit" button and list of configured AUs with Edit
    * buttons */
   private void displayAuSummary() throws IOException {
@@ -300,28 +192,14 @@ public class AuConfig extends LockssServlet {
     // make table findable by unit tests
     tbl.attribute("id", "AuSummaryTable");
     addAddAuRow(tbl);
-    if (!allAUs.isEmpty()) {
-      for (Iterator iter = allAUs.iterator(); iter.hasNext(); ) {
-	addAuSummaryRow(tbl, (AuProxy)iter.next());
-      }
+    for (Iterator iter = allAUs.iterator(); iter.hasNext(); ) {
+      addAuSummaryRow(tbl, (AuProxy)iter.next());
     }
     Collection inactiveAUs = remoteApi.getInactiveAus();
-    if (!inactiveAUs.isEmpty()) {
-      for (Iterator iter = inactiveAUs.iterator(); iter.hasNext(); ) {
-	addAuSummaryRow(tbl, (AuProxy)iter.next());
-      }
+    for (Iterator iter = inactiveAUs.iterator(); iter.hasNext(); ) {
+      addAuSummaryRow(tbl, (AuProxy)iter.next());
     }
     frm.add(tbl);
-    Table srTab =  new Table(0, "align=center cellspacing=4 cellpadding=0");
-    addOr(srTab);
-    srTab.newRow();
-    srTab.newCell("align=center");
-    srTab.add(submitButton("Backup", "SaveAll"));
-    srTab.add(" or ");
-    srTab.add(submitButton("Restore", "RestoreAll"));
-    srTab.add(" AU&nbsp;configuration");
-    srTab.add(addFootnote("Saves or restores to/from a file on your workstation.  You will be prompted for a file name."));
-    frm.add(srTab);
     page.add(frm);
     endPage(page);
   }
