@@ -216,26 +216,30 @@ public class PrintfEditor extends JDialog implements EDPEditor {
   }
 
   void paramComboBox_actionPerformed(ActionEvent e) {
+    String cmd = e.getActionCommand();
     String key = (String)paramComboBox.getSelectedItem();
-    int type = ((Integer)paramKeys.get(key)).intValue();
+    Object param = paramKeys.get(key);
+    if(param == null) {
+      setPadding(false);
+      return;
+    }
+    int type = ((Integer)param).intValue();
     if ( (type == ConfigParamDescr.TYPE_INT) ||
         (type == ConfigParamDescr.TYPE_POS_INT)) {
-      widthTextField.setVisible(true);
-      fieldWidthLabel.setVisible(true);
-      spacesRadioButton.setVisible(true);
-      zeroRadioButton.setVisible(true);
-      paddingLabel.setVisible(true);
-
+      setPadding(true);
     }
     else {
-      widthTextField.setVisible(false);
-      fieldWidthLabel.setVisible(false);
-      spacesRadioButton.setVisible(false);
-      zeroRadioButton.setVisible(false);
-      paddingLabel.setVisible(false);
-
+      setPadding(false);
     }
 
+  }
+
+  void setPadding(boolean paddingOn) {
+    widthTextField.setVisible(paddingOn);
+    fieldWidthLabel.setVisible(paddingOn);
+    spacesRadioButton.setVisible(paddingOn);
+    zeroRadioButton.setVisible(paddingOn);
+    paddingLabel.setVisible(paddingOn);
   }
 }
 
