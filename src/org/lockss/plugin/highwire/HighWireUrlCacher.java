@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireCachedUrl.java,v 1.4 2002-10-16 04:57:03 tal Exp $
+ * $Id: HighWireUrlCacher.java,v 1.1 2002-10-16 04:57:03 tal Exp $
  */
 
 /*
@@ -40,58 +40,92 @@ import org.lockss.util.*;
 import org.lockss.plugin.*;
 
 /**
- * This is the CachedUrl object for the HighWirePlugin
+ * This is the UrlCacher object for the HighWirePlugin
  *
  * @author  Thomas S. Robertson
  * @version 0.0
  */
 
-public class HighWireCachedUrl extends BaseCachedUrl {
+public class HighWireUrlCacher extends BaseUrlCacher {
+  protected static Logger logger = Logger.getLogger(HighWirePlugin.LOG_NAME);
   private URLConnection conn;
   private Properties headers;
 
-  public HighWireCachedUrl(CachedUrlSet owner, String url){
+  public HighWireUrlCacher(CachedUrlSet owner, String url) {
     super(owner, url);
   }
 
-  //CachedUrl methods
-  public String getUrl(){
-    return url;
+  private String getUrlRoot() {
+    HighWirePlugin au = (HighWirePlugin)getArchivalUnit();
+    return au.getUrlRoot();
   }
 
-  public boolean exists(){
-    File file = new File(mapUrlToFileName());
-    return file.exists();
+  public boolean shouldBeCached(){
+    logger.info("checking: "+url);
+    return super.shouldBeCached();
   }
 
+  // Write interface - used by the crawler.
 
-  // Read interface - used by the proxy.
-
-  public InputStream openForReading(){
-    File file = new File(mapUrlToFileName());
-    try{
-      if (file.exists()){
-	return new FileInputStream(file);
+  public void storeContent(InputStream input,
+			   Properties headers) throws IOException{
+    if (input != null){
+      File file = new File(mapUrlToFileName());
+      File parentDir = file.getParentFile();
+      if (!parentDir.exists()){
+	parentDir.mkdirs();
       }
+      OutputStream os = new FileOutputStream(file);
+      int kar = input.read();
+      while (kar >= 0){
+	os.write(kar);
+	kar = input.read();
+      }
+      os.close();
+      input.close();
     }
-    catch (FileNotFoundException fnfe){
-      fnfe.printStackTrace();
+    File file = new File(mapUrlToFileName() + ".props");
+    File parentDir = file.getParentFile();
+    if (!parentDir.exists()){
+      parentDir.mkdirs();
+    }
+    OutputStream os = new FileOutputStream(file);
+    headers.store(os, "HTTP headers for " + url);
+    os.close();
+    
+    this.headers = headers;
+  }
+
+  public InputStream getUncachedInputStream(){
+    try{
+      if (conn == null){
+	URL urlO = new URL(url);
+	conn = urlO.openConnection();
+      }
+      return conn.getInputStream();
+    } catch (IOException ioe){
+      ioe.printStackTrace();
     }
     return null;
   }
 
-  public Properties getProperties(){
-    try {
-      File file = new File(mapUrlToFileName() + ".props");
-      InputStream is = new FileInputStream(file);
-      Properties props = new Properties();
-      props.load(is);
-      is.close();
+
+  public Properties getUncachedProperties(){
+    Properties props = new Properties();
+    try{
+      if (conn == null){
+	URL urlO = new URL(url);
+	conn = urlO.openConnection();
+      }
+      String contentType = conn.getContentType();
+      props.setProperty("content-type", contentType);
       return props;
-    } catch (IOException e) {
-      return headers;
+    }catch (IOException ioe){
+      ioe.printStackTrace();
     }
+    return null;
   }
+
 
   private String mapUrlToFileName(){
     int idx = url.indexOf("://")+3;

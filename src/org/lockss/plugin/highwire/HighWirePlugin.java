@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePlugin.java,v 1.5 2002-10-08 01:08:31 tal Exp $
+ * $Id: HighWirePlugin.java,v 1.6 2002-10-16 04:57:03 tal Exp $
  */
 
 /*
@@ -32,25 +32,13 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.highwire;
 
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.io.IOException;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.net.URLConnection;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.util.Properties;
-import java.util.Vector;
-import java.util.Iterator;
-import java.util.Enumeration;
+import java.io.*;
+import java.net.*;
+import java.util.*;
 import java.security.MessageDigest;
-import gnu.regexp.RE;
-import gnu.regexp.REException;
+import gnu.regexp.*;
 import org.lockss.daemon.*;
-import org.lockss.crawler.Crawler;
+import org.lockss.crawler.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
 
@@ -61,139 +49,73 @@ import org.lockss.plugin.*;
  * @version 0.0
  */
  
-public class HighWirePlugin implements ArchivalUnit {
-
-  private String url;
-  private Vector urls;
+public class HighWirePlugin extends BaseArchivalUnit {
+  static public final String LOG_NAME = "HighWirePlugin";
   private String urlRoot; //url root for the web page, eg. http://www.bmj.org
-  private int volume;  //volume that this plugin is for
-  private Vector rules;
-  protected Logger logger;
-
-  private HighWirePlugin(){
-    urls = new Vector();
-    logger = Logger.getLogger("HighWirePlugin");
-  }
+  protected Logger logger = Logger.getLogger(LOG_NAME);
+  private RECachedUrlSetSpec mySpec;
 
   /**
    * Standard constructor for HighWirePlugin.  
    *
-   * @param urlRoot root that all URLs which this plugin will crawl must have
-   * (ie, http://shadow3.stanford.edu)
-   * @param volume journal volume number that we are crawling (used with url 
-   * root to generate the rules)
+   * @param start URL to start crawl
    */
-  public HighWirePlugin(String urlRoot, int volume){
-    this();
-    this.urlRoot = urlRoot;
-    this.volume = volume;
-    try{
-      rules = makeRules(urlRoot, volume);
-    }
-    catch (REException ree){
-      ree.printStackTrace();
-    }
+  public HighWirePlugin(String start) throws REException {
+    super(makeCrawlSpec(start));
+    urlRoot = "http://shadow1.stanford.edu";
+    mySpec = new RECachedUrlSetSpec(urlRoot);
   }
 
-  private static Vector makeRules(String urlRoot, int volume)
-      throws REException{
-    Vector rules = new Vector();
+  protected CachedUrlSet cachedUrlSetFactory(ArchivalUnit owner,
+					     CachedUrlSetSpec cuss) {
+    return new HighWireCachedUrlSet(owner, cuss);
+  }
 
-    rules.add(new CrawlRule(urlRoot+"/lockss-volume"+volume+".shtml", true));
-    rules.add(new CrawlRule(".*ck=nck.*", false));
-    rules.add(new CrawlRule(".*ck=nck.*", false));
-    rules.add(new CrawlRule(".*adclick.*", false));
-    rules.add(new CrawlRule(".*/cgi/mailafriend.*", false));
-    rules.add(new CrawlRule(".*/content/current/.*", true));
-    rules.add(new CrawlRule(".*/content/vol"+volume+"/.*", true));
-    rules.add(new CrawlRule(".*/cgi/content/.*/"+volume+"/.*", true));
-    rules.add(new CrawlRule(".*/cgi/reprint/"+volume+"/.*", true));
-    rules.add(new CrawlRule(".*/icons.*", true));
-    rules.add(new CrawlRule(".*/math.*", true));
-    rules.add(new CrawlRule("http://.*/.*/.*", false));
-    return rules;
+  protected CachedUrl cachedUrlFactory(CachedUrlSet owner, String url) {
+    return new HighWireCachedUrl(owner, url);
+  }
+
+  protected UrlCacher urlCacherFactory(CachedUrlSet owner, String url) {
+    return new HighWireUrlCacher(owner, url);
+  }
+
+  private static CrawlSpec makeCrawlSpec(String start)
+      throws REException {
+    // tk - should compute both of these from starting url
+    String prefix = "http://shadow1.stanford.edu";
+    int volume = 322;
+      
+    CrawlRule rule = makeRules(prefix, volume);
+    return new CrawlSpec(start, rule);
+  }
+
+  private static CrawlRule makeRules(String urlRoot, int volume)
+      throws REException{
+    List rules = new LinkedList();
+    final int incl = CrawlRules.RE.MATCH_INCLUDE;
+    final int excl = CrawlRules.RE.MATCH_EXCLUDE;
+    String escapedRoot = StringUtil.escapeNonAlphaNum(urlRoot);
+
+    rules.add(new CrawlRules.RE("^" + escapedRoot,
+				CrawlRules.RE.NO_MATCH_EXCLUDE));
+    rules.add(new CrawlRules.RE(escapedRoot+"/lockss-volume"+volume+".shtml",
+				incl));
+    rules.add(new CrawlRules.RE(".*ck=nck.*", excl));
+    rules.add(new CrawlRules.RE(".*ck=nck.*", excl));
+    rules.add(new CrawlRules.RE(".*adclick.*", excl));
+    rules.add(new CrawlRules.RE(".*/cgi/mailafriend.*", excl));
+    rules.add(new CrawlRules.RE(".*/content/current/.*", incl));
+    rules.add(new CrawlRules.RE(".*/content/vol"+volume+"/.*", incl));
+    rules.add(new CrawlRules.RE(".*/cgi/content/.*/"+volume+"/.*", incl));
+    rules.add(new CrawlRules.RE(".*/cgi/reprint/"+volume+"/.*", incl));
+    rules.add(new CrawlRules.RE(".*/icons.*", incl));
+    rules.add(new CrawlRules.RE(".*/math.*", incl));
+    rules.add(new CrawlRules.RE("http://.*/.*/.*", excl));
+    return new CrawlRules.FirstMatch(rules);
   }
 
   public String getUrlRoot(){
     return urlRoot;
   }
 			    
-  public Enumeration getRules(){
-    return rules.elements();
-  }
-			    
-
-
-
-
-  //CacheUrlSet methods
-  public void addToList(CachedUrlSetSpec spec){
-    urls.add(spec);
-  }
-
-  public boolean removeFromList(CachedUrlSetSpec spec){
-    return urls.remove(spec);
-  }
-
-  public boolean memberOfList(CachedUrlSetSpec spec){
-    return urls.contains(spec);
-  }
-
-  public Enumeration listEnumeration(){
-    if (urls == null){
-      return null;
-    }
-    return urls.elements();
-  }
-
-  public boolean memberOfSet(String url){
-    UrlCacher uc = new HighWireCachedUrl(url, this);
-    return uc.shouldBeCached();
-  }
-
-
-    // Methods used by the poller
-
-  public CachedUrlSetHasher getContentHasher(MessageDigest hasher){
-    return null;
-  }
-
-  public CachedUrlSetHasher getNameHasher(MessageDigest hasher){
-    return null;
-  }
-
-  public Enumeration flatEnumeration(){
-    return null;
-  }
-
-  public Enumeration treeEnumeration(){
-    return null;
-  }
-
-  public long hashDuration(){
-    return 0;
-  }
-
-  public long duration(long elapsed, Exception err) {
-    return 0;
-  }
-
-  // Methods used by the crawler
-
-  public CachedUrl makeCachedUrl(String url){
-    return new HighWireCachedUrl(url, this);
-  }
-
-  public UrlCacher makeUrlCacher(String url){
-    return new HighWireCachedUrl(url, this);
-  }
-
-  // ArchivalUnit methods
-
-  public CachedUrlSet makeCachedUrlSet(String url, String regexp) {
-    return null;
-  }
-
-  //other
-
 }
