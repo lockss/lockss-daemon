@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.41 2004-10-13 23:07:18 clairegriffin Exp $
+ * $Id: BaseUrlCacher.java,v 1.42 2004-11-11 00:40:44 troberts Exp $
  */
 
 /*
@@ -435,8 +435,10 @@ public class BaseUrlCacher implements UrlCacher {
 	conn.setIfModifiedSince(lastModified);
       }
       conn.execute();
-    }
-    catch (IOException ex) {
+    } catch (MalformedURLException ex) {
+      logger.warning("openConnection", ex);
+      throw resultMap.getMalformedURLException(ex);
+    } catch (IOException ex) {
       logger.warning("openConnection", ex);
       throw resultMap.getHostException(ex);
     } catch (RuntimeException e) {

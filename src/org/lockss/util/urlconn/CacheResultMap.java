@@ -1,5 +1,5 @@
 /*
- * $Id: CacheResultMap.java,v 1.2 2004-03-09 04:15:32 clairegriffin Exp $
+ * $Id: CacheResultMap.java,v 1.3 2004-11-11 00:40:45 troberts Exp $
  */
 
 /*
@@ -42,6 +42,8 @@ package org.lockss.util.urlconn;
 
 public interface CacheResultMap {
   public CacheException getHostException(Exception nestedException);
+
+  public CacheException getMalformedURLException(Exception nestedException);
 
   public CacheException getRepositoryException(Exception nestedException);
 

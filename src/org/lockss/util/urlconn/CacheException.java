@@ -1,5 +1,5 @@
 /*
- * $Id: CacheException.java,v 1.6 2004-03-26 23:29:53 clairegriffin Exp $
+ * $Id: CacheException.java,v 1.7 2004-11-11 00:40:45 troberts Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -230,6 +230,30 @@ public class CacheException extends IOException {
     public HostException(Exception e) {
       super(e.toString());
       nestedException = e;
+    }
+  }
+
+  /** An error from trying to connect to a malformed URL*/
+  public static class MalformedURLException
+      extends UnretryableException {
+    public MalformedURLException() {
+      super();
+      suppressStackTrace = false;
+    }
+
+    public MalformedURLException(String message) {
+      super(message);
+      suppressStackTrace = false;
+    }
+
+    /** Create this if details of causal exception are more relevant. */
+    public MalformedURLException(Exception e) {
+      super(e.toString());
+      nestedException = e;
+    }
+
+    protected void setAttributes() {
+      attributeBits.clear(ATTRIBUTE_FAIL);
     }
   }
 
