@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkHandler.java,v 1.30 2003-05-17 00:12:48 aalto Exp $
+ * $Id: TreeWalkHandler.java,v 1.31 2003-05-30 01:58:32 aalto Exp $
  */
 
 /*
@@ -70,6 +70,7 @@ public class TreeWalkHandler {
   private static LockssDaemon theDaemon;
   private static CrawlManager theCrawlManager;
   private static ActivityRegulator theRegulator;
+  ActivityRegulator.Lock activityLock = null;
   private ArchivalUnit theAu;
 
   private Logger logger = Logger.getLogger("TreeWalkHandler");
@@ -127,7 +128,9 @@ public class TreeWalkHandler {
       expiration = 2 * getAverageTreeWalkDuration();
     }
     // check with regulator to see if treewalk can proceed
-    if (theRegulator.startAuActivity(ActivityRegulator.TREEWALK, expiration)) {
+    activityLock = theRegulator.startAuActivity(ActivityRegulator.TREEWALK,
+                                                expiration);
+    if (activityLock != null) {
       try {
         // check with crawl manager
         if (theAu.shouldCrawlForNewContent(manager.getAuState())) {
@@ -146,7 +149,7 @@ public class TreeWalkHandler {
         }
         // after finishing treewalk successfully, check if we should schedule
         // a top-level poll (this way we handle damage first)
-        if (!treeWalkAborted &&
+   /*     if (!treeWalkAborted &&
             (theAu.shouldCallTopLevelPoll(manager.getAuState()))) {
           // query the AU if a top level poll should be started
           theRegulator.auActivityFinished(ActivityRegulator.TREEWALK);
@@ -154,6 +157,7 @@ public class TreeWalkHandler {
           manager.callTopLevelPoll();
           logger.debug("Requested top level poll...");
         }
+    */
       }
       finally {
         if (!treeWalkAborted) {
@@ -183,6 +187,10 @@ public class TreeWalkHandler {
    * @return true if the treewalk should continue
    */
   boolean recurseTreeWalk(CachedUrlSet cus) {
+    if (activityLock.isExpired()) {
+      // lost lock, so abort treewalk
+      treeWalkAborted = true;
+    }
     if (treeWalkAborted) {
       // treewalk has been terminated
       return false;
@@ -233,22 +241,29 @@ public class TreeWalkHandler {
       // then CrawlManager.scheduleBackgroundCrawl()
       // return false;
     }
+
     // check recent histories to see if something needs fixing
     PollHistory lastHistory = node.getLastPollHistory();
-    if (lastHistory != null) {
+//    if (lastHistory != null) {
       // give the last history to the manager to check for consistency
-      if (manager.checkLastHistory(lastHistory, node, true)) {
-        logger.debug3("Calling poll on node '"+
-                      node.getCachedUrlSet().getUrl()+"'");
+      try {
+      if (manager.checkCurrentState(lastHistory, null, node, true)) {
+//      if (manager.checkLastHistory(lastHistory, node, true)) {
+        logger.debug3("Calling poll on node '" +
+                      node.getCachedUrlSet().getUrl() + "'");
         // free treewalk state
         theRegulator.auActivityFinished(ActivityRegulator.TREEWALK);
         // take appropriate action
-        manager.checkLastHistory(lastHistory, node, false);
+        manager.checkCurrentState(lastHistory, null, node, false);
+//        manager.checkLastHistory(lastHistory, node, false);
         // abort treewalk
         treeWalkAborted = true;
         return false;
       }
+    } catch (java.io.IOException ie) {
+      logger.error("Error in checkCurrentState: ", ie);
     }
+ //   }
     return true;
   }
 
