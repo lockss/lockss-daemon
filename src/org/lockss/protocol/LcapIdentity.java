@@ -1,5 +1,5 @@
 /*
- * $Id: LcapIdentity.java,v 1.20 2004-01-20 18:22:50 tlipkis Exp $
+ * $Id: LcapIdentity.java,v 1.21 2004-02-07 00:13:53 troberts Exp $
  */
 
 /*
@@ -182,7 +182,7 @@ public class LcapIdentity implements Serializable {
    * return the name of the host as a string
    * @return the String representation of the Host
    */
-  protected String toHost() {
+  public String toHost() {
     return m_idKey;
   }
 
