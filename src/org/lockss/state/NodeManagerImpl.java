@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.194 2004-10-21 22:51:57 clairegriffin Exp $
+ * $Id: NodeManagerImpl.java,v 1.195 2004-10-22 00:37:27 troberts Exp $
  */
 
 /*
@@ -1499,6 +1499,7 @@ public class NodeManagerImpl
       while (iter.hasNext()) {
         String url = (String)iter.next();
         if (!damagedNodes.containsToRepair(cus, url)) {
+	  //XXX bogus, we aren't doing anything here
           logger.debug2("Adding '" + url + "' to repair list...");
         }
       }
@@ -1829,6 +1830,8 @@ public class NodeManagerImpl
     public void signalCrawlAttemptCompleted(boolean success, Object cookie) {
       PollCookie pollCookie = (PollCookie)cookie;
       CachedUrlSet cus = pollCookie.cus;
+
+      //XXX should check success (or get passed in fetched url list)
 
       Iterator urlIter = pollCookie.urlsToRepair.iterator();
       while (urlIter.hasNext()) {
