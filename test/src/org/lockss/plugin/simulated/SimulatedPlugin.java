@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedPlugin.java,v 1.8 2003-04-17 00:55:50 troberts Exp $
+ * $Id: SimulatedPlugin.java,v 1.9 2003-06-12 23:46:43 tyronen Exp $
  */
 
 /*
@@ -98,6 +98,17 @@ public class SimulatedPlugin extends BasePlugin implements PluginTestable {
    * location string.
    */
   public static final String AU_PARAM_BAD_FILE_NUM = "badFileNum";
+
+  /**
+   * The directory location of a file to be marked as 'damaged' in the cache.
+   * Should be a string filepath.
+   */
+  public static final String AU_PARAM_BAD_CACHED_FILE_LOC = "badCachedFileLoc";
+
+  /**
+   * File number of the 'damaged' cache file
+   */
+  public static final String AU_PARAM_BAD_CACHED_FILE_NUM = "badCachedFileNum";
 
   private String pluginId = "SimulatedPlugin";
   private int initCtr = 0;

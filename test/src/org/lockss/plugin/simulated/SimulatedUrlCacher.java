@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedUrlCacher.java,v 1.8 2003-05-06 20:05:28 aalto Exp $
+ * $Id: SimulatedUrlCacher.java,v 1.9 2003-06-12 23:46:43 tyronen Exp $
  */
 
 /*
@@ -58,10 +58,7 @@ public class SimulatedUrlCacher extends GenericFileUrlCacher {
     this.fileRoot = contentRoot;
   }
 
-  protected InputStream getUncachedInputStream() throws IOException {
-    if (contentFile!=null) {
-      return new BufferedInputStream(new FileInputStream(contentFile));
-    }
+  private void makeContentName() {
     if (contentName==null) {
       StringBuffer buffer = new StringBuffer(fileRoot);
       if (!fileRoot.endsWith(File.separator)) {
@@ -70,21 +67,31 @@ public class SimulatedUrlCacher extends GenericFileUrlCacher {
       buffer.append(mapUrlToContentFileName());
       contentName = buffer.toString();
     }
+  }
+
+  protected InputStream getUncachedInputStream() throws IOException {
+     if (contentFile!=null) {
+      return getDefaultStream(contentFile);
+    }
+    makeContentName();
     contentFile = new File(contentName);
     if (contentFile.isDirectory()) {
       File dirContentFile = new File(
           SimulatedContentGenerator.getDirectoryContentFile(contentName));
       if (dirContentFile.exists()) {
-        return new BufferedInputStream(new FileInputStream(dirContentFile));
+        return getDefaultStream(dirContentFile);
       } else {
         logger.error("Couldn't find file: "+dirContentFile.getAbsolutePath());
         return null;
       }
     } else {
-      return new BufferedInputStream(new FileInputStream(contentFile));
+      return getDefaultStream(contentFile);
     }
   }
 
+  protected InputStream getDefaultStream(File file) throws IOException {
+    return new SimulatedContentStream(new FileInputStream(file),toBeDamaged());
+  }
 
   protected Properties getUncachedProperties() throws IOException {
     if (props!=null) {
@@ -109,6 +116,15 @@ public class SimulatedUrlCacher extends GenericFileUrlCacher {
 
   private String mapUrlToContentFileName() {
     return SimulatedArchivalUnit.mapUrlToContentFileName(url);
+  }
+
+  private boolean toBeDamaged() {
+    try {
+      SimulatedArchivalUnit unit = (SimulatedArchivalUnit) getArchivalUnit();
+      return unit.isURLToBeDamaged(url);
+    } catch (ClassCastException e ) {
+      return false;
+    }
   }
 
 }

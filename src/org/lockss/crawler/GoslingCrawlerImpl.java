@@ -1,34 +1,28 @@
 /*
- * $Id: GoslingCrawlerImpl.java,v 1.23 2003-05-30 01:49:02 aalto Exp $
+ * $Id: GoslingCrawlerImpl.java,v 1.24 2003-06-12 23:46:43 tyronen Exp $
  */
 
 /*
-
-Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
-all rights reserved.
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
-STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
-IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-Except as contained in this notice, the name of Stanford University shall not
-be used in advertising or otherwise to promote the sale, use or other dealings
-in this Software without prior written authorization from Stanford University.
-
-*/
+ Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
+ all rights reserved.
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+ STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ Except as contained in this notice, the name of Stanford University shall not
+ be used in advertising or otherwise to promote the sale, use or other dealings
+ in this Software without prior written authorization from Stanford University.
+ */
 
 /*
  * Some portions of this code are:
@@ -85,15 +79,14 @@ import org.lockss.plugin.*;
  * @version 0.0
  */
 
-
-public class GoslingCrawlerImpl implements Crawler {
+public class GoslingCrawlerImpl
+  implements Crawler {
   /**
    * TODO
    * 1) write state to harddrive using whatever system we come up for for the
    * rest of LOCKSS
    * 2) check deadline and die if we run too long
    */
-
 
   private static final String IMGTAG = "img";
   private static final String ATAG = "a";
@@ -120,7 +113,6 @@ public class GoslingCrawlerImpl implements Crawler {
   private int numUrlsFetched = 0;
   private int numUrlsParsed = 0;
 
-
   /**
    * Construct a crawl object; does NOT start the crawl
    * @param au {@link ArchivalUnit} that this crawl will happen on
@@ -128,10 +120,11 @@ public class GoslingCrawlerImpl implements Crawler {
    * @param followLinks whether or not to extract and follow links
    */
   public GoslingCrawlerImpl(ArchivalUnit au, List startUrls,
-			    boolean followLinks) {
+                            boolean followLinks) {
     if (au == null) {
       throw new IllegalArgumentException("Called with a null ArchivalUnit");
-    } else if (startUrls == null) {
+    }
+    else if (startUrls == null) {
       throw new IllegalArgumentException("Called with a null start url list");
     }
     this.au = au;
@@ -171,7 +164,7 @@ public class GoslingCrawlerImpl implements Crawler {
       throw new IllegalArgumentException("Called with a null Deadline");
     }
     boolean wasError = false;
-    logger.info("Beginning crawl of "+au);
+    logger.info("Beginning crawl of " + au);
     startTime = TimeBase.nowMs();
     CachedUrlSet cus = au.getAUCachedUrlSet();
     Set parsedPages = new HashSet();
@@ -180,31 +173,31 @@ public class GoslingCrawlerImpl implements Crawler {
 
     Iterator it = startUrls.iterator();
     while (it.hasNext() && !deadline.expired()) {
-      String url = (String)it.next();
+      String url = (String) it.next();
       //catch and warn if there's a url in the start urls
       //that we shouldn't cache
       if (au.shouldBeCached(url)) {
-	if (!doCrawlLoop(url, extractedUrls, parsedPages, cus, true)) {
-	  wasError = true;
-	}
-      } else {
-	logger.warning("Called with a starting url we aren't suppose to "
-		       +"cache: "+url);
+        if (!doCrawlLoop(url, extractedUrls, parsedPages, cus, true)) {
+          wasError = true;
+        }
+      }
+      else {
+        logger.warning("Called with a starting url we aren't suppose to "
+                       + "cache: " + url);
       }
     }
 
     while (!extractedUrls.isEmpty() && !deadline.expired()) {
-      String url = (String)extractedUrls.iterator().next();
+      String url = (String) extractedUrls.iterator().next();
       extractedUrls.remove(url);
       if (!doCrawlLoop(url, extractedUrls, parsedPages, cus, false)) {
-	wasError = true;
+        wasError = true;
       }
     }
-    logger.info("Finished crawl of "+au);
+    logger.info("Finished crawl of " + au);
     endTime = TimeBase.nowMs();
-    return !wasError;
+    return!wasError;
   }
-
 
   /**
    * This is the meat of the crawl.  Fetches the specified url and adds
@@ -218,51 +211,53 @@ public class GoslingCrawlerImpl implements Crawler {
    * @return true if there were no errors
    */
   protected boolean doCrawlLoop(String url, Set extractedUrls,
-			     Set parsedPages, CachedUrlSet cus,
-			     boolean overWrite) {
+                                Set parsedPages, CachedUrlSet cus,
+                                boolean overWrite) {
     boolean wasError = false;
-    logger.debug("Dequeued url from list: "+url);
+    logger.debug("Dequeued url from list: " + url);
     UrlCacher uc = cus.makeUrlCacher(url);
     // don't cache if already cached, unless overwriting
     if (overWrite || !uc.getCachedUrl().hasContent()) {
       try {
-	logger.debug("caching "+uc);
-	uc.cache(); //IOException if there is a caching problem
-	numUrlsFetched++;
-      } catch (FileNotFoundException e) {
-	logger.warning(uc+" not found on publisher's site");
-      } catch (IOException ioe) {
-	//XXX handle this better.  Requeue?
-	logger.error("Problem caching "+uc+". Ignoring", ioe);
-	wasError = true;
+        logger.debug("caching " + uc);
+        uc.cache(); //IOException if there is a caching problem
+        numUrlsFetched++;
+      }
+      catch (FileNotFoundException e) {
+        logger.warning(uc + " not found on publisher's site");
+      }
+      catch (IOException ioe) {
+        //XXX handle this better.  Requeue?
+        logger.error("Problem caching " + uc + ". Ignoring", ioe);
+        wasError = true;
       }
     }
     else {
       if (!parsedPages.contains(uc.getUrl())) {
-	logger.debug2(uc+" exists, not caching");
+        logger.debug2(uc + " exists, not caching");
       }
     }
     try {
       if (followLinks && !parsedPages.contains(uc.getUrl())) {
-	CachedUrl cu = uc.getCachedUrl();
+        CachedUrl cu = uc.getCachedUrl();
 
-	//XXX quick fix; if statement should be removed when we rework
-	//handling of error condition
-	if (cu.hasContent()) {
-	  addUrlsToSet(cu, extractedUrls, parsedPages);//IOException if the CU can't be read
-	  parsedPages.add(uc.getUrl());
-	  numUrlsParsed++;
-	}
+        //XXX quick fix; if statement should be removed when we rework
+        //handling of error condition
+        if (cu.hasContent()) {
+          addUrlsToSet(cu, extractedUrls, parsedPages); //IOException if the CU can't be read
+          parsedPages.add(uc.getUrl());
+          numUrlsParsed++;
+        }
       }
-    } catch (IOException ioe) {
+    }
+    catch (IOException ioe) {
       //XXX handle this better.  Requeue?
-      logger.error("Problem parsing "+uc+". Ignoring", ioe);
+      logger.error("Problem parsing " + uc + ". Ignoring", ioe);
       wasError = true;
     }
-    logger.debug("Removing from list: "+uc.getUrl());
-    return !wasError;
+    logger.debug("Removing from list: " + uc.getUrl());
+    return!wasError;
   }
-
 
   /**
    * Method which will parse the html file represented by cu and add all
@@ -273,13 +268,13 @@ public class GoslingCrawlerImpl implements Crawler {
    * @param urlsToIgnore urls which should not be added to set
    * @throws IOException
    */
-  protected void addUrlsToSet(CachedUrl cu, Set set, Set urlsToIgnore)
-      throws IOException {
+  protected void addUrlsToSet(CachedUrl cu, Set set, Set urlsToIgnore) throws
+    IOException {
     if (shouldExtractLinksFromCachedUrl(cu)) {
       String cuStr = cu.getUrl();
       if (cuStr == null) {
-	logger.error("CachedUrl has null getUrl() value: "+cu);
-	return;
+        logger.error("CachedUrl has null getUrl() value: " + cu);
+        return;
       }
 
       InputStream is = cu.openForReading();
@@ -287,15 +282,15 @@ public class GoslingCrawlerImpl implements Crawler {
       URL srcUrl = new URL(cuStr);
       logger.debug("Extracting urls from srcUrl");
       String nextUrl = null;
-      while ((nextUrl = extractNextLink(reader, srcUrl)) != null) {
-	logger.debug("Extracted "+nextUrl);
+      while ( (nextUrl = extractNextLink(reader, srcUrl)) != null) {
+        logger.debug("Extracted " + nextUrl);
 
-	//should check if this is something we should cache first
- 	if (!set.contains(nextUrl)
-	    && !urlsToIgnore.contains(nextUrl)
-	    && au.shouldBeCached(nextUrl)) {
-	  set.add(nextUrl);
-	}
+        //should check if this is something we should cache first
+        if (!set.contains(nextUrl)
+            && !urlsToIgnore.contains(nextUrl)
+            && au.shouldBeCached(nextUrl)) {
+          set.add(nextUrl);
+        }
       }
     }
   }
@@ -314,14 +309,15 @@ public class GoslingCrawlerImpl implements Crawler {
     if (props != null) {
       String contentType = props.getProperty("content-type");
       if (contentType != null) {
-	//XXX check if the string starts with this
-	returnVal = contentType.toLowerCase().startsWith("text/html");
+        //XXX check if the string starts with this
+        returnVal = contentType.toLowerCase().startsWith("text/html");
       }
     }
     if (returnVal) {
-      logger.debug("I should try to extract links from "+cu);
-    } else {
-      logger.debug("I shouldn't try to extract links from "+cu);
+      logger.debug("I should try to extract links from " + cu);
+    }
+    else {
+      logger.debug("I shouldn't try to extract links from " + cu);
     }
 
     return returnVal;
@@ -337,8 +333,8 @@ public class GoslingCrawlerImpl implements Crawler {
    * @throws IOException
    * @throws MalformedURLException
    */
-  protected static String extractNextLink(Reader reader, URL srcUrl)
-      throws IOException, MalformedURLException {
+  protected static String extractNextLink(Reader reader, URL srcUrl) throws
+    IOException, MalformedURLException {
     if (reader == null) {
       return null;
     }
@@ -347,49 +343,48 @@ public class GoslingCrawlerImpl implements Crawler {
     int c = 0;
     StringBuffer lineBuf = new StringBuffer();
 
-    while(nextLink == null && c >=0) {
+    while (nextLink == null && c >= 0) {
       //skip to the next tag
       do {
-	c = reader.read();
-      } while (c >= 0 && c != '<');
+        c = reader.read();
+      }
+      while (c >= 0 && c != '<');
 
       if (c == '<') {
-	int pos = 0;
-	c = reader.read();
-	while (c >= 0 && c != '>') {
-	  if(pos==2 && c=='-' && lineBuf.charAt(0)=='!'
-	     && lineBuf.charAt(1)=='-') {
-	    // we're in a HTML comment
-	    pos = 0;
-	    int lc1 = 0;
-	    int lc2 = 0;
-	    while((c = reader.read()) >= 0
-		  && (c != '>' || lc1 != '-' || lc2 != '-')) {
-	      lc1 = lc2;
-	      lc2 = c;
-	    }
-	    break;
-	  }
-	  lineBuf.append((char)c);
-	  pos++;
-	  c = reader.read();
-	}
-	if (inscript) {
-	  //FIXME when you deal with the script problems
-	  //	  if(lookingAt(lineBuf, 0, pos, scripttagend)) {
-	  inscript = false;
-	  //}
-	} else if (lineBuf.length() >= 5) { //see if the lineBuf has a link tag
-	  nextLink = parseLink(lineBuf, srcUrl);
-	}
-	lineBuf = new StringBuffer();
+        int pos = 0;
+        c = reader.read();
+        while (c >= 0 && c != '>') {
+          if (pos == 2 && c == '-' && lineBuf.charAt(0) == '!'
+              && lineBuf.charAt(1) == '-') {
+            // we're in a HTML comment
+            pos = 0;
+            int lc1 = 0;
+            int lc2 = 0;
+            while ( (c = reader.read()) >= 0
+                   && (c != '>' || lc1 != '-' || lc2 != '-')) {
+              lc1 = lc2;
+              lc2 = c;
+            }
+            break;
+          }
+          lineBuf.append( (char) c);
+          pos++;
+          c = reader.read();
+        }
+        if (inscript) {
+          //FIXME when you deal with the script problems
+          //	  if(lookingAt(lineBuf, 0, pos, scripttagend)) {
+          inscript = false;
+          //}
+        }
+        else if (lineBuf.length() >= 5) { //see if the lineBuf has a link tag
+          nextLink = parseLink(lineBuf, srcUrl);
+        }
+        lineBuf = new StringBuffer();
       }
     }
     return nextLink;
   }
-
-
-
 
   /**
    * Method to take a link tag, and parse out the URL it points to, returning
@@ -403,95 +398,96 @@ public class GoslingCrawlerImpl implements Crawler {
    * @return string representation of the url from the link tag
    * @throws MalformedURLException
    */
-  protected static String parseLink(StringBuffer link, URL srcUrl)
-      throws MalformedURLException {
+  protected static String parseLink(StringBuffer link, URL srcUrl) throws
+    MalformedURLException {
     String returnStr = null;
 
     switch (link.charAt(0)) {
-    case 'a': //<a href=http://www.yahoo.com>
-    case 'A':
-      if (StringUtil.getIndexIgnoringCase(link.toString(),
-					  ATAG+" ") == 0) {
-	returnStr = getAttributeValue(ASRC, link.toString());
-      }
-      break;
-    case 'f': //<frame src=frame1.html>
-    case 'F':
-      if (StringUtil.getIndexIgnoringCase(link.toString(),
-					  FRAMETAG+" ") == 0) {
-	returnStr = getAttributeValue(SRC, link.toString());
-      }
-      break;
-    case 'i': //<img src=image.gif>
-    case 'I':
-      if (StringUtil.getIndexIgnoringCase(link.toString(),
-					  IMGTAG+" ") == 0) {
-	returnStr = getAttributeValue(SRC, link.toString());
-      }
-      break;
-    case 'l': //<link href=blah.css>
-    case 'L':
-      if (StringUtil.getIndexIgnoringCase(link.toString(),
-					  LINKTAG+" ") == 0) {
-	returnStr = getAttributeValue(ASRC, link.toString());
-      }
-      break;
-    case 'b': //<body backgroung=background.gif>
-    case 'B':
-      if (StringUtil.getIndexIgnoringCase(link.toString(),
-					  BODYTAG+" ") == 0) {
-	returnStr = getAttributeValue(BACKGROUNDSRC, link.toString());
-      }
-      break;
-    case 's': //<script src=blah.js>
-    case 'S':
-      if (StringUtil.getIndexIgnoringCase(link.toString(),
-					  SCRIPTTAG+" ") == 0) {
-	returnStr = getAttributeValue(SRC, link.toString());
-      }
-      break;
-    case 't': //<tc background=back.gif> or <table background=back.gif>
-    case 'T':
-      if (StringUtil.getIndexIgnoringCase(link.toString(),
-					  TABLETAG+" ") == 0 ||
-	  StringUtil.getIndexIgnoringCase(link.toString(),
-					  TDTAG+" ") == 0) {
-	  returnStr = getAttributeValue(BACKGROUNDSRC, link.toString());
-	}
-      break;
-    default:
-      return null;
+      case 'a': //<a href=http://www.yahoo.com>
+      case 'A':
+        if (StringUtil.getIndexIgnoringCase(link.toString(),
+                                            ATAG + " ") == 0) {
+          returnStr = getAttributeValue(ASRC, link.toString());
+        }
+        break;
+      case 'f': //<frame src=frame1.html>
+      case 'F':
+        if (StringUtil.getIndexIgnoringCase(link.toString(),
+                                            FRAMETAG + " ") == 0) {
+          returnStr = getAttributeValue(SRC, link.toString());
+        }
+        break;
+      case 'i': //<img src=image.gif>
+      case 'I':
+        if (StringUtil.getIndexIgnoringCase(link.toString(),
+                                            IMGTAG + " ") == 0) {
+          returnStr = getAttributeValue(SRC, link.toString());
+        }
+        break;
+      case 'l': //<link href=blah.css>
+      case 'L':
+        if (StringUtil.getIndexIgnoringCase(link.toString(),
+                                            LINKTAG + " ") == 0) {
+          returnStr = getAttributeValue(ASRC, link.toString());
+        }
+        break;
+      case 'b': //<body backgroung=background.gif>
+      case 'B':
+        if (StringUtil.getIndexIgnoringCase(link.toString(),
+                                            BODYTAG + " ") == 0) {
+          returnStr = getAttributeValue(BACKGROUNDSRC, link.toString());
+        }
+        break;
+      case 's': //<script src=blah.js>
+      case 'S':
+        if (StringUtil.getIndexIgnoringCase(link.toString(),
+                                            SCRIPTTAG + " ") == 0) {
+          returnStr = getAttributeValue(SRC, link.toString());
+        }
+        break;
+      case 't': //<tc background=back.gif> or <table background=back.gif>
+      case 'T':
+        if (StringUtil.getIndexIgnoringCase(link.toString(),
+                                            TABLETAG + " ") == 0 ||
+            StringUtil.getIndexIgnoringCase(link.toString(),
+                                            TDTAG + " ") == 0) {
+          returnStr = getAttributeValue(BACKGROUNDSRC, link.toString());
+        }
+        break;
+      default:
+        return null;
     }
 
     if (returnStr != null) {
       returnStr = StringUtil.trimAfterChars(returnStr, " #\"");
-      logger.debug("Generating url from: "+srcUrl+" and "+returnStr);
+      logger.debug("Generating url from: " + srcUrl + " and " + returnStr);
       URL retUrl = new URL(srcUrl, returnStr);
       returnStr = retUrl.toString();
-      logger.debug("Parsed: "+returnStr);
+      logger.debug("Parsed: " + returnStr);
       return returnStr;
     }
     return null;
   }
 
   private static String getAttributeValue(String attribute, String src) {
-    logger.debug("looking for "+attribute+" in "+src);
+    logger.debug("looking for " + attribute + " in " + src);
     StringTokenizer st = new StringTokenizer(src, " =\"", true);
     String lastToken = null;
     while (st.hasMoreTokens()) {
       String token = st.nextToken();
       if (!token.equals("=")) {
-	if (!token.equals(" ") && !token.equals("\"")) {
-	  lastToken = token;
-	}
-      } else {
-	if (attribute.equalsIgnoreCase(lastToken))
-	  while (st.hasMoreTokens()) {
-	    token = st.nextToken();
-	    if (!token.equals(" ") && !token.equals("\"")) {
-	      return token;
-	    }
-	  }
+        if (!token.equals(" ") && !token.equals("\"")) {
+          lastToken = token;
+        }
+      }
+      else {
+        if (attribute.equalsIgnoreCase(lastToken))
+          while (st.hasMoreTokens()) {
+            token = st.nextToken();
+            if (!token.equals(" ") && !token.equals("\"")) {
+              return token;
+            }
+          }
       }
     }
     return null;

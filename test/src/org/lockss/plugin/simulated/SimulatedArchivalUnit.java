@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.26 2003-05-07 20:35:14 tal Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.27 2003-06-12 23:46:43 tyronen Exp $
  */
 
 /*
@@ -67,6 +67,8 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
   private SimulatedContentGenerator scgen;
   private String auId = StringUtil.gensym("SimAU_");
 
+  Set toBeDamaged = new HashSet();
+
   public SimulatedArchivalUnit(Plugin owner) {
     super(owner);
   }
@@ -85,35 +87,41 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
       fileRoot = config.get(SimulatedPlugin.AU_PARAM_ROOT);
       SimulatedContentGenerator gen = getContentGenerator();
       if (config.containsKey(SimulatedPlugin.AU_PARAM_DEPTH)) {
-	gen.setTreeDepth(config.getInt(SimulatedPlugin.AU_PARAM_DEPTH));
+        gen.setTreeDepth(config.getInt(SimulatedPlugin.AU_PARAM_DEPTH));
       }
       if (config.containsKey(SimulatedPlugin.AU_PARAM_BRANCH)) {
-	gen.setNumBranches(config.getInt(SimulatedPlugin.AU_PARAM_BRANCH));
+        gen.setNumBranches(config.getInt(SimulatedPlugin.AU_PARAM_BRANCH));
       }
       if (config.containsKey(SimulatedPlugin.AU_PARAM_NUM_FILES)) {
-	gen.setNumFilesPerBranch(config.getInt(
+        gen.setNumFilesPerBranch(config.getInt(
                    SimulatedPlugin.AU_PARAM_NUM_FILES));
       }
       if (config.containsKey(SimulatedPlugin.AU_PARAM_BIN_FILE_SIZE)) {
-	gen.setBinaryFileSize(config.getInt(
+        gen.setBinaryFileSize(config.getInt(
                    SimulatedPlugin.AU_PARAM_BIN_FILE_SIZE));
       }
       if (config.containsKey(SimulatedPlugin.AU_PARAM_MAXFILE_NAME)) {
-	gen.setMaxFilenameLength(config.getInt(
+        gen.setMaxFilenameLength(config.getInt(
                    SimulatedPlugin.AU_PARAM_MAXFILE_NAME));
       }
       if (config.containsKey(SimulatedPlugin.AU_PARAM_FILE_TYPES)) {
-	gen.setFileTypes(config.getInt(SimulatedPlugin.AU_PARAM_FILE_TYPES));
+        gen.setFileTypes(config.getInt(SimulatedPlugin.AU_PARAM_FILE_TYPES));
       }
       if (config.containsKey(SimulatedPlugin.AU_PARAM_ODD_BRANCH_CONTENT)) {
         gen.setOddBranchesHaveContent(config.getBoolean(
             SimulatedPlugin.AU_PARAM_ODD_BRANCH_CONTENT));
       }
       if (config.containsKey(SimulatedPlugin.AU_PARAM_BAD_FILE_LOC) &&
-	  config.containsKey(SimulatedPlugin.AU_PARAM_BAD_FILE_NUM)) {
-	gen.setAbnormalFile(config.get(SimulatedPlugin.AU_PARAM_BAD_FILE_LOC),
-			    config.getInt(
-                                 SimulatedPlugin.AU_PARAM_BAD_FILE_NUM));
+          config.containsKey(SimulatedPlugin.AU_PARAM_BAD_FILE_NUM)) {
+        gen.setAbnormalFile(config.get(SimulatedPlugin.AU_PARAM_BAD_FILE_LOC),
+			    config.getInt(SimulatedPlugin.AU_PARAM_BAD_FILE_NUM));
+      }
+      if (config.containsKey(SimulatedPlugin.AU_PARAM_BAD_CACHED_FILE_LOC) &&
+          config.containsKey(SimulatedPlugin.AU_PARAM_BAD_CACHED_FILE_NUM)) {
+        toBeDamaged.add(scgen.getUrlFromLoc(config.get(
+          SimulatedPlugin.AU_PARAM_BAD_CACHED_FILE_LOC),
+          config.get(
+          SimulatedPlugin.AU_PARAM_BAD_CACHED_FILE_NUM)));
       }
       resetContentTree();
     } catch (Configuration.InvalidParam e) {
@@ -123,7 +131,7 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
   }
 
   public CachedUrlSet cachedUrlSetFactory(ArchivalUnit owner,
-					  CachedUrlSetSpec cuss) {
+                                          CachedUrlSetSpec cuss) {
     return new GenericFileCachedUrlSet(owner, cuss);
   }
 
@@ -221,4 +229,14 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
     return ListUtil.list(SIMULATED_URL_START);
   }
 
+  boolean isURLToBeDamaged(String url) {
+    String file = StringUtil.replaceString(url,SIMULATED_URL_ROOT,"");
+    if (toBeDamaged.contains(file)) {
+      boolean x = toBeDamaged.remove(file);
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
 }

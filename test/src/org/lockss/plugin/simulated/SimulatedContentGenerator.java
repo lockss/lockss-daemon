@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedContentGenerator.java,v 1.8 2003-04-03 01:43:05 aalto Exp $
+ * $Id: SimulatedContentGenerator.java,v 1.9 2003-06-12 23:46:43 tyronen Exp $
  */
 
 /*
@@ -33,7 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.simulated;
 
 import java.io.*;
-import java.util.Arrays;
+import java.util.*;
 import org.lockss.util.StringUtil;
 import org.lockss.test.*;
 
@@ -616,6 +616,24 @@ public class SimulatedContentGenerator {
 
   public static String getDirectoryContentFile(String dirPath) {
     return dirPath + File.separator + DIR_CONTENT_NAME;
+  }
+
+  /**
+   * Converts a specification to a url.
+   * @param fileLoc Represents the branch number and depth, separated by a
+   * comma
+   * @param fileNum Actual file number
+   * @return
+   */
+  public String getUrlFromLoc(String fileLoc, String fileNum) {
+    StringTokenizer tok = new StringTokenizer(fileLoc,",");
+    String path = "/";
+    while (tok.hasMoreTokens()) {
+      int loc = Integer.parseInt(tok.nextToken());
+      path += getDirectoryName(loc) + "/";
+    }
+    path += getFileName(Integer.parseInt(fileNum),getFileTypes());
+    return path;
   }
 
 
