@@ -1,5 +1,5 @@
 /*
- * $Id: GenericNameHasher.java,v 1.1 2002-10-31 01:48:59 troberts Exp $
+ * $Id: GenericNameHasher.java,v 1.2 2002-11-06 18:33:26 troberts Exp $
  */
 
 /*
@@ -39,86 +39,58 @@ import org.lockss.util.*;
 /**
  * General class to handle name hashing
  */
-public class GenericNameHasher implements CachedUrlSetHasher{
+public class GenericNameHasher extends GenericHasher {
   public static final char DELIMITER= '\n';
-  public static final String DELIMITER_STRING= DELIMITER+"";
 
-  MessageDigest digest;
-  CachedUrlSet cus;
-  Iterator nameIterator;
-  byte[] curName = null;
-  int curIdx = -1;
-  boolean isFinished = false;
-  boolean firstElement = true; //are we on the first name, so we can skip the delimiter
+  byte[] nameBytes = null;
+  int nameIdx = -1;
+  boolean onFirstElement = true; 
 
-  /**
-   * Create a GenericNameHasher to take names from cus and feed them into digest
-   * @param cus {@link CachedUrlSet} to hash
-   * @param digest {@link java.security.MessageDigest} to feed bytes into
-   */
-  public GenericNameHasher(CachedUrlSet cus, MessageDigest digest){
-    this.digest = digest;
-    this.cus = cus;
-    nameIterator = cus.flatSetIterator();
+  public GenericNameHasher(CachedUrlSet cus, MessageDigest dig) {
+    super(cus, dig);
+    iterator = cus.flatSetIterator();
   }
 
-  /**
-   * @param numBytes number of bytes to has in this step
-   * @return number of bytes actually hashed; only less than numBytes if we run out of names
-   * to hash
-   */
-  public int hashStep(int numBytes){
-    if (digest == null || cus == null || nameIterator == null){
-      isFinished = true;
-      return 0;
-    }
-    int bytesLeftToHash = numBytes;
-
-    while (bytesLeftToHash > 0){
-      if (curName == null || curName.length <= curIdx){
-	if (!nameIterator.hasNext()){
-	  this.isFinished = true;
-	  return numBytes - bytesLeftToHash;
-	}
-	if (!firstElement){
-	  digest.update(DELIMITER_STRING.getBytes());
-	  bytesLeftToHash--;
-	}
-	else{
-	  firstElement = false;
-	}
-	String curNameStr = getCUSName((CachedUrlSet)nameIterator.next());
-	curName = (curNameStr).getBytes();
-	curIdx = 0;
+  protected int hashElementUpToNumBytes(Object element, int numBytes) {
+    if (nameBytes == null) {
+      String nameStr = getCUSName((CachedUrlSet)element);
+      StringBuffer sb = new StringBuffer(nameStr.length()+1);
+      if (!onFirstElement) {
+	sb.append(DELIMITER);
       }
+      else {
+	onFirstElement = false;
+      }
+      sb.append(nameStr);
+      nameBytes = (sb.toString().getBytes());
+      nameIdx = 0;
+    }
 
-      //hash up to numBytesToReturn bytes
-      int remNameBytes = curName.length - curIdx;
-      int len = 
-	bytesLeftToHash < (remNameBytes) ? bytesLeftToHash : remNameBytes;
-
-      digest.update(curName, curIdx, len);
-      curIdx += len;
-      bytesLeftToHash -= len;
-    } 
-    return numBytes - bytesLeftToHash;
+    int len = numBytes < (nameBytes.length - nameIdx) 
+      ? numBytes : (nameBytes.length - nameIdx);
+    digest.update(nameBytes, nameIdx, len);
+    nameIdx += len;
+    if (nameIdx >= nameBytes.length) {
+      shouldGetNextElement = true;
+      element = null;
+      nameBytes = null;
+    }
+    return len;
   }
-    
+  
 
-  /**
-   * @return true if all the names have been hashed
-   */
-  public boolean finished(){
-    return isFinished;
-  }
-
-  protected static String getCUSName(CachedUrlSet cus){
-    if (cus == null){
+  protected static String getCUSName(CachedUrlSet cus) {
+    if (cus == null) {
       return null;
     }
     CachedUrlSetSpec cuss = cus.getSpec();
     List names = cuss.getPrefixList();
     
+    if (names.size() != 1) {
+      throw new RuntimeException("getCUSName called with a cus CachedUrlSet "+
+				 "with "+names.size()+" prefixes");
+    }
+  
     //XXX done this way until we figure out how to map a CUS to a name
     return (String)names.get(0);
   }

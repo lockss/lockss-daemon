@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericNameHasher.java,v 1.1 2002-10-31 01:48:59 troberts Exp $
+ * $Id: TestGenericNameHasher.java,v 1.2 2002-11-06 18:33:26 troberts Exp $
  */
 
 /*
@@ -40,62 +40,99 @@ import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 
-public class TestGenericNameHasher extends TestCase{
+public class TestGenericNameHasher extends TestCase {
   private static final char DELIMITER = '\n';
-  private static final String DELIMITER_STRING = DELIMITER+"";
 
 
-  public TestGenericNameHasher(String msg){
+  public TestGenericNameHasher(String msg) {
     super(msg);
   }
 
-  public void testNullMessageDigest() throws IOException{
+  public void testNullMessageDigest() throws IOException {
     CachedUrlSet cus = new MockCachedUrlSet(null, null);
     CachedUrlSetHasher hasher = new GenericNameHasher(cus, null);
     assertEquals(0, hasher.hashStep(10));
     assertTrue(hasher.finished());
   }
 
-  public void testGetCUSNameNull(){
+  public void testGetCUSNameNull() {
     assertNull(GenericNameHasher.getCUSName(null));
   }
 
-  public void testGetCUSNameOneName(){
+
+  public void testGetCUSNameOneName() {
     String name = "TestName";
     CachedUrlSetSpec cuss = new MockCachedUrlSetSpec(name, null);
     CachedUrlSet cus = new MockCachedUrlSet(null, cuss);
     assertEquals(name, GenericNameHasher.getCUSName(cus));
   }
 
-  public void testHashOneName() throws IOException{
+  public void testMultipleCUSSPrefixesThrowsException() {
+    MockCachedUrlSetSpec cuss = new MockCachedUrlSetSpec();
+    Vector names = new Vector(2);
+    names.add("Test1");
+    names.add("Test2");
+
+    cuss.setPrefixList(names);
+
+    CachedUrlSet cus = new MockCachedUrlSet(null, cuss);
+    try {
+      GenericNameHasher.getCUSName(cus);
+      fail("Call to getCUSName with multiple prefixes should have thrown "+
+	   "a runtime exception");
+    }
+    catch (RuntimeException re) {
+    }
+  }
+
+  public void testNoCUSSPrefixesThrowsException() {
+    MockCachedUrlSetSpec cuss = new MockCachedUrlSetSpec();
+    Vector names = new Vector(0);
+
+    cuss.setPrefixList(names);
+
+    CachedUrlSet cus = new MockCachedUrlSet(null, cuss);
+    try {
+      GenericNameHasher.getCUSName(cus);
+      fail("Call to getCUSName with no prefixes should have thrown "+
+	   "a runtime exception");
+    }
+    catch (RuntimeException re) {
+    }
+  }
+
+  public void testHashOneName() throws IOException {
     String name = "TestName1";
     MockMessageDigest dig = new MockMessageDigest();
     CachedUrlSetHasher hasher = createHasherFromName(name, dig);
     
     byte[] bytes = name.getBytes();
-    for (int ix=0; ix<bytes.length; ix++){
+    for (int ix=0; ix<bytes.length; ix++) {
       assertEquals(1, hasher.hashStep(1));
-      assertEquals("Byte mismatch at index "+ix, bytes[ix], dig.getUpdatedByte());
+      assertEquals("Byte mismatch at index "+ix, bytes[ix], 
+		   dig.getUpdatedByte());
     }
     assertEquals(0, hasher.hashStep(1));
     assertTrue(hasher.finished());
   }
 
-  public void testHashMultNameEqualToNumBytes() throws IOException{
+  public void testHashMultNameEqualToNumBytes() throws IOException {
     String nameStub = "TestName";
     Vector childNodeNames = new Vector();
     int numChildNodes = 5;
-    for (int ix=0; ix<numChildNodes; ix++){
+    for (int ix=0; ix<numChildNodes; ix++) {
       String name = nameStub+ix;
       childNodeNames.add(name);
     }
     MockMessageDigest dig = new MockMessageDigest();
-    CachedUrlSetHasher hasher = createHasherFromNameVector(childNodeNames, dig);
+    CachedUrlSetHasher hasher = 
+      createHasherFromNameVector(childNodeNames, dig);
 
-    for (int ix=0; ix<numChildNodes; ix++){
+    for (int ix=0; ix<numChildNodes; ix++) {
       String name = (String)childNodeNames.elementAt(ix);
-      if (ix != 0){
-	hashAndCompareByteArray(DELIMITER_STRING.getBytes(), hasher, dig);
+      if (ix != 0) {
+	String delimStr = String.valueOf(DELIMITER);
+	hashAndCompareByteArray(delimStr.getBytes(), hasher, dig);
       }
       hashAndCompareByteArray(name.getBytes(), hasher, dig);
     }
@@ -103,10 +140,10 @@ public class TestGenericNameHasher extends TestCase{
     assertTrue(hasher.finished());
   }
 
-  public void testHashMultNameLessThanNumBytes() throws IOException{
+  public void testHashMultNameLessThanNumBytes() throws IOException {
     Vector childNodeNames = new Vector();
     int numChildNodes = 5;
-    for (int ix=0; ix<numChildNodes; ix++){
+    for (int ix=0; ix<numChildNodes; ix++) {
       String name = "TestName"+ix;
       childNodeNames.add(name);
     }
@@ -117,23 +154,24 @@ public class TestGenericNameHasher extends TestCase{
     byte[] bytes = nameVectorToBytes(childNodeNames, DELIMITER);
 
     assertEquals(bytes.length, hasher.hashStep(bytes.length+100));
-    for (int ix=0; ix<bytes.length; ix++){
+    for (int ix=0; ix<bytes.length; ix++) {
       assertEquals(bytes[ix], dig.getUpdatedByte());
     }
     assertTrue(hasher.finished());
   }
   
-  public void testUnfinishedHasherNotFinished(){
+  public void testUnfinishedHasherNotFinished() {
     String name = "TestName1";
     MockMessageDigest dig = new MockMessageDigest();
     CachedUrlSetHasher hasher = createHasherFromName(name, dig);
     assertTrue(!hasher.finished());
   }
 
-  private GenericNameHasher createHasherFromNameVector(Vector names, MessageDigest dig){
+  private GenericNameHasher createHasherFromNameVector(Vector names, 
+						       MessageDigest dig) {
     Iterator it = names.iterator();
     Vector childNodes = new Vector();
-    while(it.hasNext()){
+    while(it.hasNext()) {
       String curName = (String)it.next();
       CachedUrlSetSpec cuss = new MockCachedUrlSetSpec(curName, null);
       MockCachedUrlSet cus = new MockCachedUrlSet(null, cuss);
@@ -145,32 +183,34 @@ public class TestGenericNameHasher extends TestCase{
     return new GenericNameHasher(root, dig);
   }
 
-  private GenericNameHasher createHasherFromName(String name, MessageDigest dig){
+  private GenericNameHasher createHasherFromName(String name, 
+						 MessageDigest dig) {
     Vector names = new Vector();
     names.add(name);
     return createHasherFromNameVector(names, dig);
   }
 
-  private byte[] nameVectorToBytes(Vector names, char delim){
+  private byte[] nameVectorToBytes(Vector names, char delim) {
     Iterator it = names.iterator();
     StringBuffer sb = new StringBuffer();
     sb.append((String)it.next());
-    while (it.hasNext()){
+    while (it.hasNext()) {
       sb.append(delim);
       sb.append((String)it.next());
     }
     return sb.toString().getBytes();
   }
 
-  private void hashAndCompareByteArray(byte[] bytes, CachedUrlSetHasher hasher, 
+  private void hashAndCompareByteArray(byte[] bytes, 
+				       CachedUrlSetHasher hasher, 
 				       MockMessageDigest dig)
-  throws IOException{
+      throws IOException {
     assertEquals(bytes.length, hasher.hashStep(bytes.length));
-    for (int ix=0; ix<bytes.length; ix++){
-      assertEquals("Byte mismatch at index "+ix, bytes[ix], dig.getUpdatedByte());
+    for (int ix=0; ix<bytes.length; ix++) {
+      assertEquals("Byte mismatch at index "+ix, bytes[ix], 
+		   dig.getUpdatedByte());
     }
   }
-    
 }
 
 
