@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.6 2002-10-31 01:58:54 aalto Exp $
+ * $Id: TestStringUtil.java,v 1.7 2002-11-01 09:20:53 tal Exp $
  */
 
 /*
@@ -33,6 +33,9 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 
 import junit.framework.TestCase;
+import java.util.*;
+import org.lockss.util.*;
+import org.lockss.test.*;
 
 /**
  * This is the test class for org.lockss.util.StringUtil
@@ -133,33 +136,53 @@ public class TestStringUtil extends TestCase{
   public void testReplaceStringNonExistingSubstring(){
     String testStr = "blahTestblah";
     assertEquals(testStr, StringUtil.replaceString(testStr, "!", "8"));
+    assertEquals(testStr, StringUtil.replaceString(testStr, "lah1", "8"));
   }
 
   public void testReplaceStringSingleExistingSubstring(){
     String testStr = "blahTestblah";
-    assertEquals("blahtestblah", StringUtil.replaceString(testStr, "Test", "test"));
+    // same length
+    assertEquals("blah1234blah",
+		 StringUtil.replaceString(testStr, "Test", "1234"));
+    // shorter
+    assertEquals("blahabcblah",
+		 StringUtil.replaceString(testStr, "Test", "abc"));
+    // longer
+    assertEquals("blahCheeseblah",
+		 StringUtil.replaceString(testStr, "Test", "Cheese"));
   }
 
   public void testReplaceStringMultiExistingSubstring(){
     String testStr = "blahTestblah";
-    assertEquals("BlahTestBlah", StringUtil.replaceString(testStr, "blah", "Blah"));
+    // same length
+    assertEquals("BrieTestBrie",
+		 StringUtil.replaceString(testStr, "blah", "Brie"));
+    // shorter
+    assertEquals("blahabcblah",
+		 StringUtil.replaceString(testStr, "Test", "abc"));
+    // longer
+    assertEquals("splungeTestsplunge",
+		 StringUtil.replaceString(testStr, "blah", "splunge"));
   }
 
   public void testReplacementStringContainsReplacedString(){
     assertEquals("1234456",
   		 StringUtil.replaceString("123456", "4", "44"));
+    assertEquals("123444456",
+  		 StringUtil.replaceString("1234456", "4", "44"));
   }
 
-  public void testReplacementStringDiffLength(){
-    assertEquals("12347856",
-  		 StringUtil.replaceString("123456", "4", "478"));
+  public void testOverlap(){
+    String testStr = "xxx1xxx2xxx3xxx";
+    assertEquals("ddx1ddx2ddx3ddx",
+		 StringUtil.replaceString(testStr, "xx", "dd"));
   }
 
   public void testReplaceEqualStrings(){
-    assertEquals("TestBlahTest",
-		 StringUtil.replaceString("TestBlahTest", "Blah", "Blah"));
+    String testStr = "xxx1xxx2xxx3xxx";
+    assertSame(testStr, StringUtil.replaceString(testStr, "1", "1"));
+    assertSame(testStr, StringUtil.replaceString(testStr, "xx", "xx"));
   }
-
 
 //    public void testReplaceStringNullFirst(){
 //    }
