@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedStatusAccessor.java,v 1.6 2003-03-17 08:32:58 tal Exp $
+ * $Id: SimulatedStatusAccessor.java,v 1.7 2003-03-18 22:28:53 troberts Exp $
  */
 
 /*
@@ -156,6 +156,10 @@ public class SimulatedStatusAccessor {
       return title;
     }
 
+    public List getHeaders(String key) {
+      return null;
+    }
+    
   }
   
   private static class SimAccessor1 extends SimAccessor {

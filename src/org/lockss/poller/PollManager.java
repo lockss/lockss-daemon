@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.49 2003-03-18 02:38:28 tal Exp $
+* $Id: PollManager.java,v 1.50 2003-03-18 22:28:53 troberts Exp $
  */
 
 /*
@@ -782,6 +782,13 @@ public class PollManager  implements LockssManager {
       return "Poll Manager Table";
     }
 
+    /**
+     * Returns null
+     */
+    public List getHeaders(String key) {
+      return null;
+    }
+
     // utility methods for making a Reference
 
     public StatusTable.Reference makePluginRef(Object value, String key) {
@@ -938,6 +945,13 @@ public class PollManager  implements LockssManager {
 
     public String getTitle(String key) {
       return "Table for running poll " + key;
+    }
+
+    /**
+     * Returns null
+     */
+    public List getHeaders(String key) {
+      return null;
     }
 
     // utility methods for making a Reference

@@ -1,5 +1,5 @@
 /*
- * $Id: HashQueue.java,v 1.17 2003-03-17 08:27:12 tal Exp $
+ * $Id: HashQueue.java,v 1.18 2003-03-18 22:28:53 troberts Exp $
  */
 
 /*
@@ -453,6 +453,13 @@ class HashQueue implements Serializable {
 
     public String getTitle(String key) {
       return "Hash Queue";
+    }
+
+    /**
+     * Returns null
+     */
+    public List getHeaders(String key) {
+      return null;
     }
   }
 
