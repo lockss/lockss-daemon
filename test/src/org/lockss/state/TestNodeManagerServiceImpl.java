@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerServiceImpl.java,v 1.8 2003-03-27 00:50:23 aalto Exp $
+ * $Id: TestNodeManagerServiceImpl.java,v 1.9 2003-04-02 19:25:26 aalto Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ import org.lockss.repository.LockssRepositoryServiceImpl;
 import org.lockss.daemon.TestConfiguration;
 
 public class TestNodeManagerServiceImpl extends LockssTestCase {
+  public static final String TEST_URL = "http://www.example.com";
   private MockLockssDaemon theDaemon;
   private NodeManagerService nms;
   private MockArchivalUnit mau;
@@ -42,20 +43,26 @@ public class TestNodeManagerServiceImpl extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    String s = LockssRepositoryServiceImpl.PARAM_CACHE_LOCATION + "=" +
-        tempDirPath + "\n" + HistoryRepositoryImpl.PARAM_HISTORY_LOCATION +
+    String s = HistoryRepositoryImpl.PARAM_HISTORY_LOCATION +
         "=" + tempDirPath;
     TestConfiguration.setCurrentConfigFromString(s);
 
     mau = new MockArchivalUnit();
     MockCachedUrlSet mcus =
-        new MockCachedUrlSet(mau, new RangeCachedUrlSetSpec("none"));
+        new MockCachedUrlSet(mau, new RangeCachedUrlSetSpec(TEST_URL));
     mcus.setFlatItSource(new Vector());
     mau.setAUCachedUrlSet(mcus);
 
     theDaemon = new MockLockssDaemon();
-    theDaemon.getLockssRepositoryService().startService();
+    theDaemon.setLockssRepositoryService(new MockLockssRepositoryService());
     theDaemon.setHistoryRepository(new HistoryRepositoryImpl(tempDirPath));
+
+    // create au state so thread doesn't throw null pointers
+    theDaemon.getLockssRepository(mau).createNewNode(TEST_URL);
+
+    MockCrawlManager crawlMan = new MockCrawlManager();
+    crawlMan.setShouldCrawlNewContent(true);
+    theDaemon.setCrawlManager(crawlMan);
 
     nms = new NodeManagerServiceImpl();
     nms.initService(theDaemon);
@@ -63,12 +70,11 @@ public class TestNodeManagerServiceImpl extends LockssTestCase {
 
   public void tearDown() throws Exception {
     nms.stopService();
-    theDaemon.getLockssRepositoryService().stopService();
     theDaemon.stopDaemon();
     super.tearDown();
   }
 
-  public void testGetNodeManager() {
+  public void testGetNodeManager() throws Exception {
     String auId = mau.getAUId();
 
     try {
@@ -81,6 +87,8 @@ public class TestNodeManagerServiceImpl extends LockssTestCase {
     assertNotNull(node1);
 
     mau.setAuId(auId + "test");
+    theDaemon.getLockssRepository(mau).createNewNode(TEST_URL);
+
     nms.addNodeManager(mau);
     NodeManager node2 = nms.getNodeManager(mau);
     assertNotSame(node1, node2);

@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.81 2003-04-02 02:20:56 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.82 2003-04-02 19:25:26 aalto Exp $
  */
 
 /*
@@ -88,7 +88,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     lockssRepo = theDaemon.getLockssRepository(managedAu);
     pollManager = theDaemon.getPollManager();
 
-    nodeCache = new NodeStateCache(historyRepo, maxMapSize);
+    nodeCache = new NodeStateCache(maxMapSize);
 
     auState = historyRepo.loadAuState(managedAu);
 
