@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigManager.java,v 1.1 2003-07-14 06:41:57 tlipkis Exp $
+ * $Id: TestConfigManager.java,v 1.2 2003-07-16 00:03:59 tlipkis Exp $
  */
 
 /*
@@ -262,7 +262,8 @@ public class TestConfigManager extends LockssTestCase {
     Configuration config = Configuration.getCurrentConfig();
   }
 
-  public void testPlatformConfigIpAccess() throws Exception {
+  public void testWriteAndReadCacheConfigFile() throws Exception {
+    String fname = "test-config";
     String tmpdir = getTempDir().toString();
     Properties props = new Properties();
     props.put(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tmpdir);
@@ -274,15 +275,33 @@ public class TestConfigManager extends LockssTestCase {
     assertTrue(cdir.exists());
     Properties acprops = new Properties();
     acprops.put("foo.bar" , "12345");
-    mgr.writeCacheConfigFile(acprops,
-				       ConfigManager.CONFIG_FILE_UI_IP_ACCESS,
-				       "this is a header");
-    File acfile = new File(cdir, ConfigManager.CONFIG_FILE_UI_IP_ACCESS);
-    log.info("wrote ac file");
+    mgr.writeCacheConfigFile(acprops, fname, "this is a header");
+
+    File acfile = new File(cdir, fname);
     assertTrue(acfile.exists());
+
+    Configuration config2 = mgr.readCacheConfigFile(fname);
+    assertEquals("12345", config2.get("foo.bar"));
+    assertEquals(1, config2.keySet().size());
+  }
+
+  public void testCacheConfigFile() throws Exception {
+    String tmpdir = getTempDir().toString();
+    ConfigurationUtil.setFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
+				  tmpdir);
+    String relConfigPath =
+      Configuration.getParam(ConfigManager.PARAM_CONFIG_PATH,
+			     ConfigManager.DEFAULT_CONFIG_PATH);
+    File cdir = new File(tmpdir, relConfigPath);
+    assertTrue(cdir.exists());
+    Properties acprops = new Properties();
+    acprops.put("foo.bar" , "12345");
+    mgr.writeCacheConfigFile(acprops, ConfigManager.CONFIG_FILE_UI_IP_ACCESS,
+			     "this is a header");
+
     Configuration config = Configuration.getCurrentConfig();
     assertNull(config.get("foo.bar"));
-    ConfigurationUtil.setCurrentConfigFromProps(props);
+    ConfigurationUtil.setCurrentConfigFromString("a=1\n");
     Configuration config2 = Configuration.getCurrentConfig();
     assertEquals("12345", config2.get("foo.bar"));
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.1 2003-07-14 06:41:57 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.2 2003-07-16 00:03:59 tlipkis Exp $
  */
 
 /*
@@ -83,6 +83,7 @@ public class ConfigManager implements LockssManager {
   static final String PARAM_PLATFORM_PIDFILE = PLATFORM + "pidfile";
 
   public static String CONFIG_FILE_UI_IP_ACCESS = "ui_ip_access.txt";
+  public static String CONFIG_FILE_AU_CONFIG = "au.txt";
 
   /** array of local cache config file names */
   static String cacheConfigFiles[] = {
@@ -264,7 +265,7 @@ public class ConfigManager implements LockssManager {
       return false;
     }
     initCacheConfig(newConfig);
-    loadCacheConfigInto(newConfig);
+    List loadedCacheFiles = loadCacheConfigInto(newConfig);
     copyPlatformParams(newConfig);
     newConfig.seal();
     Configuration oldConfig = currentConfig;
@@ -275,8 +276,11 @@ public class ConfigManager implements LockssManager {
       return false;
     }
     setCurrentConfig(newConfig);
+    String cmsg = ((loadedCacheFiles != null)
+		   ? "; " + StringUtil.separatedString(loadedCacheFiles, ", ")
+		   : "");
     log.info("Config updated from " +
-	     StringUtil.separatedString(configUrlList, ", "));
+	     StringUtil.separatedString(configUrlList, ", ") + cmsg);
     if (log.isDebug()) {
       logConfig(newConfig);
     }
@@ -431,14 +435,36 @@ public class ConfigManager implements LockssManager {
     cacheConfigInited = true;
   }
 
-  void loadCacheConfigInto(Configuration config) {
+  List loadCacheConfigInto(Configuration config) {
     if (cacheConfigDir == null) {
-      return;
+      return null;
     }
+    List res = new ArrayList();
     for (int ix = 0; ix < cacheConfigFiles.length; ix++) {
       File cfile = new File(cacheConfigDir, cacheConfigFiles[ix]);
+      log.debug2("Loading cache config from " + cfile);
       boolean gotIt = config.loadList(ListUtil.list(cfile.toString()), true);
+      if (gotIt) {
+	res.add(cfile.toString());
+      }
     }
+    return res;
+  }
+
+  public Configuration readCacheConfigFile(String cacheConfigFileName)
+      throws IOException {
+    if (cacheConfigDir == null) {
+      log.warning("Attempting to read cache config file: " +
+		  cacheConfigFileName + ", but no cache config dir exists");
+      throw new RuntimeException("No cache config dir");
+    }
+    File cfile = new File(cacheConfigDir, cacheConfigFileName);
+    log.debug2("Reasding cache config file: " + cfile.toString());
+    InputStream is = new FileInputStream(cfile);
+    Configuration res = newConfiguration();
+    res.load(is);
+    is.close();
+    return res;
   }
 
   public void writeCacheConfigFile(Properties props,
@@ -454,6 +480,7 @@ public class ConfigManager implements LockssManager {
     OutputStream os = new FileOutputStream(cfile);
     props.store(os, header);
     os.close();
+    log.debug2("Wrote cache config file: " + cfile.toString());
     if (handlerThread != null) {
       handlerThread.forceReload();
     }
