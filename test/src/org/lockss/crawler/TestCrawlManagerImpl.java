@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.41 2004-01-14 00:06:52 troberts Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.42 2004-01-15 22:31:25 tlipkis Exp $
  */
 
 /*
@@ -100,6 +100,11 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     super.tearDown();
   }
 
+  String didntMsg(String what, long time) {
+    return "Crawl didn't " + what + " in " +
+      StringUtil.timeIntervalToString(time);
+  }
+
   public void testNullAuForIsCrawlingAu() {
     try {
       TestCrawlCB cb = new TestCrawlCB(new SimpleBinarySemaphore());
@@ -117,7 +122,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 
   private void waitForCrawlToFinish(SimpleBinarySemaphore sem) {
     if (!sem.take(TIMEOUT_SHOULDNT)) {
-      fail("Crawl didn't finish in 10 seconds");
+      fail(didntMsg("finish", TIMEOUT_SHOULDNT));
     }
   }
 
@@ -142,7 +147,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     crawlManager.setTestCrawler(crawler);
 
     crawlManager.startNewContentCrawl(mau, cb, null, null);
-    assertTrue("Crawl didn't start in 10 seconds",
+    assertTrue(didntMsg("start", TIMEOUT_SHOULDNT),
 	       sem1.take(TIMEOUT_SHOULDNT));
     //we know that doCrawl started
 
@@ -180,7 +185,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     crawlManager.setTestCrawler(crawler);
 
     crawlManager.startRepair(mau, urls, cb, null, null);
-    assertTrue("Crawl didn't start in 10 seconds",
+    assertTrue(didntMsg("start", TIMEOUT_SHOULDNT),
 	       sem1.take(TIMEOUT_SHOULDNT));
     //we know that doCrawl started
 
@@ -289,7 +294,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     crawlManager.setTestCrawler(crawler);
 
     crawlManager.startNewContentCrawl(mau, cb, null, null);
-    assertTrue("Crawl didn't start in 10 seconds",
+    assertTrue(didntMsg("start", TIMEOUT_SHOULDNT),
 	       sem1.take(TIMEOUT_SHOULDNT));
     //we know that doCrawl started
 
