@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRules.java,v 1.6 2004-11-11 00:35:47 troberts Exp $
+ * $Id: CrawlRules.java,v 1.7 2004-12-09 09:45:34 tlipkis Exp $
  */
 
 /*
@@ -97,6 +97,22 @@ public class CrawlRules {
     }
 
     /**
+     * Perform the match in a synchronized block so that the pattern isn't
+     * concurrently used by multiple threads.
+     */
+    protected boolean isMatch(String url) {
+      return isMatch(RegexpUtil.getMatcher(), url);
+    }
+
+    /**
+     * Perform the match in a synchronized block so that the pattern isn't
+     * concurrently used by multiple threads.
+     */
+    protected synchronized boolean isMatch(Perl5Matcher matcher, String url) {
+      return matcher.contains(url, regexp);
+    }
+
+    /**
      * Determine whether the URL is included, excluded or ignored by this rule
      * @param url URL to check.
      * @return MATCH_INCLUDE if the URL should be fetched, MATCH_EXCLUDE if
@@ -104,7 +120,7 @@ public class CrawlRules {
      * about the URL.
      */
     public int match(String url) {
-      boolean match = RegexpUtil.getMatcher().contains(url, regexp);
+      boolean match = isMatch(url);
       return matchAction(match);
     }
 
@@ -159,7 +175,7 @@ public class CrawlRules {
     public int match(String url) {
       logger.debug3("Match called with "+url);
       Perl5Matcher matcher = RegexpUtil.getMatcher();
-      boolean match = matcher.contains(url, regexp);
+      boolean match = isMatch(matcher, url);
       if (match) {
 	match &= isConditionMet(matcher.getMatch());
       }

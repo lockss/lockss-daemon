@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlRules.java,v 1.2 2004-11-11 00:37:50 troberts Exp $
+ * $Id: TestCrawlRules.java,v 1.3 2004-12-09 09:45:34 tlipkis Exp $
  */
 
 /*
@@ -30,8 +30,8 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.daemon
-;
+package org.lockss.daemon;
+
 import java.util.*;
 import junit.framework.TestCase;
 import org.apache.oro.text.regex.*;
