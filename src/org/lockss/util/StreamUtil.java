@@ -1,5 +1,5 @@
 /*
- * $Id: StreamUtil.java,v 1.2 2002-10-24 02:18:59 aalto Exp $
+ * $Id: StreamUtil.java,v 1.3 2002-11-20 01:18:16 aalto Exp $
  */
 
 /*
@@ -45,7 +45,10 @@ public class StreamUtil {
 
   /**
    * This function copies the contents of in InputStream to an Outputstream.
-   * It closes neither.
+   * It buffers the copying, and closes neither.
+   * @param is input
+   * @param os output
+   * @throws IOException
    */
    public static void copy(InputStream is, OutputStream os) throws IOException {
      if ((is==null) || (os==null)) return;
