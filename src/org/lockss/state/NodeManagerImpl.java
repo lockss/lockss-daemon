@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.156 2003-10-07 22:08:37 eaalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.156.2.1 2003-10-16 00:11:07 eaalto Exp $
  */
 
 /*
@@ -313,9 +313,13 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
 
           // these are polls started by another cache
           status = PollState.RUNNING;
-          nodeState.setState((tally.getType() == Poll.CONTENT_POLL) ?
-                             NodeState.CONTENT_RUNNING :
-                             NodeState.NAME_RUNNING);
+          if (cus.getSpec().isSingleNode()) {
+            nodeState.setState(NodeState.SNCUSS_POLL_RUNNING);
+          } else {
+            nodeState.setState((tally.getType() == Poll.CONTENT_POLL) ?
+                               NodeState.CONTENT_RUNNING :
+                               NodeState.NAME_RUNNING);
+          }
           break;
         case NodeState.NEEDS_POLL:
         case NodeState.POSSIBLE_DAMAGE_BELOW:
