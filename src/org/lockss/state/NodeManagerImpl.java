@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.50 2003-03-05 22:59:07 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.51 2003-03-06 00:36:24 aalto Exp $
  */
 
 /*
@@ -769,7 +769,7 @@ public class NodeManagerImpl implements NodeManager {
           }
         }
       } catch (Exception e) {
-        logger.error("Unexpected exception caught in treewalk thread.");
+        logger.warning("Exception caught in treewalk thread.");
       }
     }
 
