@@ -1,5 +1,5 @@
 /*
- * $Id: TestPsmResponse.java,v 1.1 2005-02-23 02:19:04 tlipkis Exp $
+ * $Id: TestPsmResponse.java,v 1.2 2005-02-24 04:25:59 tlipkis Exp $
  */
 
 /*
@@ -49,6 +49,10 @@ public class TestPsmResponse extends LockssTestCase {
       fail("null event should throw");
     } catch (RuntimeException e) { }
     try {
+      new PsmResponse(null);
+      fail("null event should throw");
+    } catch (RuntimeException e) { }
+    try {
       new PsmResponse(PsmEvents.MsgEvent, (PsmAction)null);
       fail("null action should throw");
     } catch (RuntimeException e) { }
@@ -74,9 +78,9 @@ public class TestPsmResponse extends LockssTestCase {
     assertFalse(resp.isAction());
     assertFalse(resp.isWait());
 
-    resp = new PsmResponse(event, "wait");
+    resp = new PsmResponse(event);
     assertSame(event, resp.getEvent());
-    assertTrue(resp.isTransition());
+    assertFalse(resp.isTransition());
     assertFalse(resp.isAction());
     assertTrue(resp.isWait());
   }

@@ -1,5 +1,5 @@
 /*
-* $Id: PsmException.java,v 1.1 2005-02-23 02:19:05 tlipkis Exp $
+* $Id: PsmException.java,v 1.2 2005-02-24 04:25:59 tlipkis Exp $
  */
 
 /*
@@ -118,6 +118,14 @@ public class PsmException extends RuntimeException {
   public static class ActionError extends PsmException {
     public ActionError(String msg, Throwable t) {
       super(msg, t);
+    }
+  }
+
+  /** A null event was signalled.  Thrown by the state machine interpreter
+   * if an action returns null, or if null is passed to handleEvent() */
+  public static class NullEvent extends PsmException {
+    public NullEvent(String msg) {
+      super(msg);
     }
   }
 

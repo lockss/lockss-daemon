@@ -1,5 +1,5 @@
 /*
- * $Id: TestPsmMachine.java,v 1.1 2005-02-23 02:19:04 tlipkis Exp $
+ * $Id: TestPsmMachine.java,v 1.2 2005-02-24 04:25:59 tlipkis Exp $
  */
 
 /*
@@ -39,37 +39,49 @@ public class TestPsmMachine extends LockssTestCase {
 
   PsmState[] states1 = {
     new PsmState("Start",
-		 new PsmResponse(PsmEvents.Else, "foo")),
+		 new PsmResponse(PsmEvents.Else, "Foo")),
+    new PsmState("Foo"),
   };
 
   public void testNullConstructorArgs() {
     try {
       new PsmMachine(null, states1, "Start");
       fail("null name should throw");
-    } catch (RuntimeException e) { }
+    } catch (PsmException.IllegalStateMachine e) { }
     try {
       new PsmMachine("Test1", null, "Start");
       fail("null states should throw");
-    } catch (RuntimeException e) { }
+    } catch (PsmException.IllegalStateMachine e) { }
     try {
       new PsmMachine("Test1", states1, (String)null);
       fail("null initial state should throw");
-    } catch (RuntimeException e) { }
+    } catch (PsmException.IllegalStateMachine e) { }
     try {
       new PsmMachine("Test1", states1, (PsmState)null);
       fail("null initial state should throw");
-    } catch (RuntimeException e) { }
+    } catch (PsmException.IllegalStateMachine e) { }
   }
 
   public void testIllMachine() {
     try {
       new PsmMachine("Test1", states1, "NoState");
       fail("Bad initial state name should throw");
-    } catch (RuntimeException e) { }
+    } catch (PsmException.IllegalStateMachine e) { }
     try {
       new PsmMachine("Test1", states1, new PsmState("X"));
-      fail("Bad initial state name should throw");
-    } catch (RuntimeException e) { }
+      fail("Bad initial state");
+    } catch (PsmException.IllegalStateMachine e) { }
+    try {
+      new PsmMachine("Test1", states1, new PsmState("Test1"));
+      fail("Bad initial state");
+    } catch (PsmException.IllegalStateMachine e) { }
+  }
+
+  public void testIllTrans() {
+    PsmState[] states = {
+      new PsmState("Start",
+		   new PsmResponse(PsmEvents.Else, "Foo")),
+    };
   }
 
   public void testLegalMachine() {
@@ -88,14 +100,14 @@ public class TestPsmMachine extends LockssTestCase {
     PsmState[] states = {
       new PsmState("Start", new PsmResponse(PsmEvents.Else, "foo")),
       new PsmState("s1"),
-      new PsmState("s2"),
+      new PsmState("foo"),
     };
     PsmMachine m = new PsmMachine("Test1", states, "s1");
     assertEquals("Test1", m.getName());
     assertEquals(states, m.getStates());
     assertSame(states[0], m.getState("Start"));
     assertSame(states[1], m.getState("s1"));
-    assertSame(states[2], m.getState("s2"));
+    assertSame(states[2], m.getState("foo"));
     assertSame(states[1], m.getInitialState());
   }
 
@@ -109,6 +121,6 @@ public class TestPsmMachine extends LockssTestCase {
     try {
       new PsmMachine("Test1", states, "Start");
       fail("Dup state name name should throw");
-    } catch (RuntimeException e) { }
+    } catch (PsmException.IllegalStateMachine e) { }
   }
 }

@@ -1,5 +1,5 @@
 /*
-* $Id: PsmState.java,v 1.1 2005-02-23 02:19:04 tlipkis Exp $
+* $Id: PsmState.java,v 1.2 2005-02-24 04:25:59 tlipkis Exp $
  */
 
 /*
@@ -36,7 +36,8 @@ import org.lockss.util.*;
 
 /**
  * Defines a single state in a state machine.  Has a name, optional entry
- * action and array of event responses.
+ * action and array of event responses.  Final states are defined as those
+ * with no responses.
  */
 public class PsmState {
   public static final PsmResponse[] EMPTY_RESPONSE_ARRAY = new PsmResponse[0];
@@ -44,7 +45,10 @@ public class PsmState {
   private String name;
   private PsmAction entryAction;
   private PsmResponse[] responses;
-  private boolean isFinal = false;
+  private int isSucceed = NEITHER;
+  private static final int NEITHER = 0;
+  private static final int SUCCEED = 1;
+  private static final int FAIL = 2;
 
   /** Create a state.
    * @param name state name
@@ -61,8 +65,7 @@ public class PsmState {
     validate();
   }
 
-  /** Create a state with no responses.  This state can never be left, so
-   * makes sense only as a final state.
+  /** Create a state with no responses.  This state is a final state.
    * @param name state name
    * @param entryAction action to be performed upon entry into the state.
    * This action is not considered to have a causitive event.
@@ -170,8 +173,8 @@ public class PsmState {
 				     response5, response6)));
   }
 
-  /** Create a state with no responses and no entry action.  This state can
-   * never be left, so makes sense only as a final state.
+  /** Create a state with no responses and no entry action.  This state is
+   * a final state.
    * @param name state name
    * This action is not considered to have a causitive event.
    */
@@ -302,15 +305,36 @@ public class PsmState {
     return null;
   }
 
-  /** Makes this state a final state.  Returns this so can be chained. */
-  public PsmState setFinal() {
-    isFinal = true;
+  /** Returns true iff this is a final state (<i>Ie</i>, it has no
+   * responses). */
+  public boolean isFinal() {
+    return responses.length == 0;
+  }
+
+  /** Makes this state a success state.  Returns this so can be chained. */
+  public PsmState succeed() {
+    if (!isFinal()) 
+      throw new PsmException.IllegalStateMachine("Non-final success state");
+    isSucceed = SUCCEED;
     return this;
   }
 
-  /** Returns true iff this is a final state. */
-  public boolean isFinal() {
-    return isFinal;
+  /** Makes this state a failure state.  Returns this so can be chained. */
+  public PsmState fail() {
+    if (!isFinal()) 
+      throw new PsmException.IllegalStateMachine("Non-final failure state");
+    isSucceed = FAIL;
+    return this;
+  }
+
+  /** Returns true iff this is a success final state. */
+  public boolean isSucceed() {
+    return isSucceed == SUCCEED;
+  }
+
+  /** Returns true iff this is a failure final state. */
+  public boolean isFail() {
+    return isSucceed == FAIL;
   }
 
   public String toString() {

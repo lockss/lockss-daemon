@@ -1,5 +1,5 @@
 /*
-* $Id: PsmMachine.java,v 1.1 2005-02-23 02:19:05 tlipkis Exp $
+* $Id: PsmMachine.java,v 1.2 2005-02-24 04:25:59 tlipkis Exp $
  */
 
 /*
@@ -59,6 +59,11 @@ public class PsmMachine {
     this(name, states);
     this.initialState = initialState;
     validate();
+    if (initialState == null)
+      throw new PsmException.IllegalStateMachine("Initial state is null");
+    if (getState(initialState.getName()) != initialState)
+      throw new PsmException.IllegalStateMachine("Initial state not a state" +
+						 " in this machine");
   }
 
   /** Create a state machine.
@@ -68,8 +73,10 @@ public class PsmMachine {
    */
   public PsmMachine(String name, PsmState[] states, String initialStateName) {
     this(name, states);
-    this.initialState = getState(initialStateName);
     validate();
+    this.initialState = getState(initialStateName);
+    if (this.initialState == null)
+      throw new PsmException.IllegalStateMachine("Initial state not found");
   }
 
   private void validate() {
@@ -77,12 +84,21 @@ public class PsmMachine {
       throw new PsmException.IllegalStateMachine("states is null");
     if (name == null)
       throw new PsmException.IllegalStateMachine("name is null");
-    if (initialState == null)
-      throw new PsmException.IllegalStateMachine("Initial state is null");
     buildStateMap();
-    if (getState(initialState.getName()) != initialState)
-      throw new PsmException.IllegalStateMachine("Initial state not in states");
     // validate transitions
+    for (int sx = 0; sx < states.length; sx++) {
+      PsmState state = states[sx];
+      PsmResponse[] responses = state.getResponses();
+      for (int rx = 0; rx < responses.length; rx++) {
+	PsmResponse resp = responses[rx];
+	if (resp.isTransition() && getState(resp.getNewState()) == null) {
+	  throw new
+	    PsmException.IllegalStateMachine(state + " has transition to " +
+					     "nonexistent state " +
+					     resp.getNewState());
+	}
+      }
+    }
   }
 
   /** Return the name of the state machine */

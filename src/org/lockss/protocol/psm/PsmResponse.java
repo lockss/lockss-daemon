@@ -1,5 +1,5 @@
 /*
-* $Id: PsmResponse.java,v 1.1 2005-02-23 02:19:04 tlipkis Exp $
+* $Id: PsmResponse.java,v 1.2 2005-02-24 04:25:59 tlipkis Exp $
  */
 
 /*
@@ -76,6 +76,16 @@ public class PsmResponse {
     this.action = action;
   }
 
+  /** Create a wait response - causes the machine to wait for another event
+   * @param event the pattern event against which incoming events are matched
+   */
+  public PsmResponse(PsmEvent event) {
+    if (event == null)
+      throw new PsmException.IllegalStateMachine("event is null");
+    this.event = event;
+    isWait = true;
+  }
+
   /** Return the event against which incoming events are matched */
   public PsmEvent getEvent() {
     return event;
@@ -114,8 +124,12 @@ public class PsmResponse {
     sb.append(" -> ");
     if (isAction()) {
       sb.append(action);
-    } else {
+    } else if (isTransition()) {
       sb.append(newState);
+    } else if (isWait()) {
+      sb.append("[Wait]");
+    } else {
+      sb.append("[???]");
     }
     sb.append("]");
     return sb.toString();

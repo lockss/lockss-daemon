@@ -1,5 +1,5 @@
 /*
- * $Id: TestPsmInterp.java,v 1.1 2005-02-23 02:19:04 tlipkis Exp $
+ * $Id: TestPsmInterp.java,v 1.2 2005-02-24 04:25:59 tlipkis Exp $
  */
 
 /*
@@ -89,7 +89,7 @@ public class TestPsmInterp extends LockssTestCase {
 
   public void testNullConstructorArgs() {
     PsmState[] states = {
-      new PsmState("Start", new PsmResponse(Ok, "foo")),
+      new PsmState("Start", new PsmResponse(Ok, "Start")),
     };
     PsmMachine mach1 = new PsmMachine("Test1", states, "Start");
     try {
@@ -118,7 +118,7 @@ public class TestPsmInterp extends LockssTestCase {
   // Can't call handleEvent() before init()
   public void testNoInit() {
     PsmState[] states = {
-      new PsmState("Start", new PsmResponse(Ok, "wait")),
+      new PsmState("Start", new PsmResponse(Ok)),
     };
     PsmMachine mach = new PsmMachine("M1", states, "Start");
     MyInterp interp = new MyInterp(mach, null);
@@ -139,6 +139,7 @@ public class TestPsmInterp extends LockssTestCase {
     MyInterp interp = new MyInterp(mach, null);
     try {
       interp.init();
+      fail("Should threw if state loop");
     } catch (PsmException.MaxChainedEvents e) {
     }
   }
@@ -155,6 +156,7 @@ public class TestPsmInterp extends LockssTestCase {
     PsmInterp interp = new MyInterp(mach, null);
     try {
       interp.init();
+      fail("Should threw if state loop");
     } catch (PsmException.MaxChainedEvents e) {
     }
   }
@@ -168,15 +170,50 @@ public class TestPsmInterp extends LockssTestCase {
     MyInterp interp = new MyInterp(mach, null);
     try {
       interp.init();
+      fail("Interp should threw if action throws");
     } catch (PsmException.ActionError e) {
       assertEquals("abcd", e.getNestedException().getMessage());
+    }
+  }
+
+  PsmAction nullAction = new PsmAction() {
+      public PsmEvent run(PsmEvent event, PsmInterp interp) {
+	return null;
+      }};
+
+  // Actions are not allowed to return a null Event
+  public void testNullEntryAction() {
+    PsmState[] states = {
+      new PsmState("Start", nullAction),
+    };
+    PsmMachine mach = new PsmMachine("M1", states, "Start");
+    MyInterp interp = new MyInterp(mach, null);
+    try {
+      interp.init();
+      fail("Interp should threw if action returns null");
+    } catch (PsmException.NullEvent e) {
+    }
+  }
+
+  public void testNullRespAction() {
+    PsmState[] states = {
+      new PsmState("Start",
+		   new PsmResponse(Else, nullAction)),
+    };
+    PsmMachine mach = new PsmMachine("M1", states, "Start");
+    MyInterp interp = new MyInterp(mach, null);
+    interp.init();
+    try {
+      interp.handleEvent(Ok);
+      fail("Interp should threw if action returns null");
+    } catch (PsmException.NullEvent e) {
     }
   }
 
   // Simple state machine for next few tests
   PsmState[] states1 = {
     new PsmState("Start", new MyAction(Sched),
-		 new PsmResponse(Sched, "wait"),
+		 new PsmResponse(Sched),
 		 new PsmResponse(NotSched, "Error"),
 		 new PsmResponse(TaskComplete, "Send"),
 		 new PsmResponse(TaskError, "Error")),
@@ -249,8 +286,8 @@ public class TestPsmInterp extends LockssTestCase {
 		 new PsmResponse(RcvMsgA, "WaitVote"),
 		 new PsmResponse(RcvMsgB, "Done"),
 		 new PsmResponse(Else, "Error")),
-    new PsmState("Done").setFinal(),
-    new PsmState("Error").setFinal(),
+    new PsmState("Done"),
+    new PsmState("Error"),
   };
 
   // Feed interpreter events from list until it reaches final state
@@ -310,11 +347,11 @@ public class TestPsmInterp extends LockssTestCase {
     new PsmState("WaitVote",
 		 new PsmResponse(RcvMsgA, new MyMsgAction(MsgOk)),
 		 new PsmResponse(RcvMsgB, new MyMsgAction(MsgDone)),
-		 new PsmResponse(MsgOk, "wait"),
+		 new PsmResponse(MsgOk),
 		 new PsmResponse(MsgDone, "Done"),
 		 new PsmResponse(Else, "Error")),
-    new PsmState("Done").setFinal(),
-    new PsmState("Error").setFinal(),
+    new PsmState("Done"),
+    new PsmState("Error"),
   };
 
   // Feed the machine message events, check that message action received
@@ -376,17 +413,8 @@ public class TestPsmInterp extends LockssTestCase {
       public PsmEvent run(PsmEvent event, PsmInterp interp) {
 	TestObj obj = (TestObj)interp.getUserData();
 	obj.event("done");
-	return null;
+	return Ok;
       }};
-
-//   // Done action records user event
-//   PsmAction startTimeoutAction = new PsmAction() {
-//       public PsmEvent run(PsmEvent event, PsmInterp interp) {
-// 	TestObj obj = (TestObj)interp.getUserData();
-// 	inter
-// 	obj.event("done");
-// 	return null;
-//       }};
 
   // State machine to schedule then wait for a computation
   PsmState[] states4 = {
@@ -394,12 +422,14 @@ public class TestPsmInterp extends LockssTestCase {
 		 new PsmResponse(Sched, "WaitCompute"),
 		 new PsmResponse(Else, "Error")),
     new PsmState("WaitCompute",
-		 new PsmResponse(TaskComplete, "Done"),
+		 new PsmResponse(TaskComplete, "AlmostDone"),
 		 new PsmResponse(Timeout, "GiveUp"),
 		 new PsmResponse(Else, "Error")),
-    new PsmState("Done", doneAction).setFinal(),
-    new PsmState("Error").setFinal(),
-    new PsmState("GiveUp").setFinal(),
+    new PsmState("AlmostDone", doneAction,
+		 new PsmResponse(Else, "Done")),
+    new PsmState("Done").succeed(),
+    new PsmState("Error").fail(),
+    new PsmState("GiveUp").fail(),
   };
 
   public void testCallback() {
@@ -414,11 +444,13 @@ public class TestPsmInterp extends LockssTestCase {
     try {
       intr = interruptMeIn(TIMEOUT_SHOULDNT, true);
       while (!interp.isFinalState()) {
-	TimerUtil.guaranteedSleep(10);
+	TimerUtil.sleep(10);
       };
+      assertTrue(interp.getFinalState().isSucceed());
       assertEquals("Done", interp.getFinalState().getName());
       assertEquals(ListUtil.list("sched", "taskcomplete", "done"),
 		   obj.userEvents);
+    } catch (InterruptedException e) {
     } finally {
       if (intr.did()) {
 	fail("testCallback machine didn't reach final state");
@@ -472,6 +504,7 @@ public class TestPsmInterp extends LockssTestCase {
 	TimerUtil.sleep(10);
       };
       intr.cancel();
+      assertTrue(interp.getFinalState().isFail());
       assertEquals("GiveUp", interp.getFinalState().getName());
       assertEquals(ListUtil.list("set timeout", "sched"),
 		   obj.userEvents);

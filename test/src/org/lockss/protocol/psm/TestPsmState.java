@@ -1,5 +1,5 @@
 /*
- * $Id: TestPsmState.java,v 1.1 2005-02-23 02:19:04 tlipkis Exp $
+ * $Id: TestPsmState.java,v 1.2 2005-02-24 04:25:59 tlipkis Exp $
  */
 
 /*
@@ -103,12 +103,38 @@ public class TestPsmState extends LockssTestCase {
   }
 
   public void testIsFinal() {
-    PsmState s1 = new PsmState("s1", action);
-    PsmState s2 = new PsmState("s1", action).setFinal();
-    PsmState s3 = new PsmState("s1", action);
-    assertFalse(s1.isFinal());
+    PsmState s1 = new PsmState("s1");
+    PsmState s2 = new PsmState("s1", action);
+    PsmState s3 = new PsmState("s1", action,
+			       new PsmResponse(PsmEvents.Else, "s1"));
+    PsmState s4 = new PsmState("s1",
+			       new PsmResponse(PsmEvents.Else, "s1"));
+    assertTrue(s1.isFinal());
     assertTrue(s2.isFinal());
-    assertSame(s3, s3.setFinal());
+    assertFalse(s3.isFinal());
+    assertFalse(s4.isFinal());
+  }
+
+  public void testIsSucceed() {
+    PsmState s1 = new PsmState("s1");
+    PsmState s2 = new PsmState("s1", action);
+    PsmState s3 = new PsmState("s1", action).succeed();
+    PsmState s4 = new PsmState("s1").fail();
+    assertFalse(s1.isSucceed());
+    assertFalse(s1.isFail());
+    assertFalse(s2.isSucceed());
+    assertFalse(s2.isFail());
+    assertTrue(s3.isSucceed());
+    assertFalse(s3.isFail());
+    assertFalse(s4.isSucceed());
+    assertTrue(s4.isFail());
+    assertSame(s1, s1.succeed());
+    assertSame(s2, s2.fail());
+    assertTrue(s1.isSucceed());
+    assertFalse(s1.isFail());
+    assertSame(s1, s1.fail());
+    assertFalse(s1.isSucceed());
+    assertTrue(s1.isFail());
   }
 
   public void testConstructors() {
