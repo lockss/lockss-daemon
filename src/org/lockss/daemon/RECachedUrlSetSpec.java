@@ -1,5 +1,5 @@
 /*
- * $Id: RECachedUrlSetSpec.java,v 1.1 2002-10-16 04:52:55 tal Exp $
+ * $Id: RECachedUrlSetSpec.java,v 1.2 2002-11-14 22:00:24 tal Exp $
  */
 
 /*
@@ -66,11 +66,11 @@ public class RECachedUrlSetSpec implements CachedUrlSetSpec {
    * @param urlPrefix Common prefix of URLs in the CachedUrlSetSpec.
    * @param regexp Regular expression that URLs must also match.
    * @throws NullPointerException if the prefix is null
-   * @throws REException if the regecp is invalid
+   * @throws REException if the regexp is invalid
    */
   public RECachedUrlSetSpec(String urlPrefix, String regexp)
       throws REException {
-    this(urlPrefix, new RE(regexp));
+    this(urlPrefix, regexp != null ? new RE(regexp) : null);
   }
   
   /**
@@ -99,5 +99,27 @@ public class RECachedUrlSetSpec implements CachedUrlSetSpec {
    */
   public List getPrefixList() {
     return prefixList;
+  }
+
+  /**
+   * Return the RE, or null if none
+   */
+  public RE getRE() {
+    return re;
+  }
+
+  public boolean equals(Object o) {
+    if (! (o instanceof RECachedUrlSetSpec)) {
+      return false;
+    }
+    RECachedUrlSetSpec c = (RECachedUrlSetSpec)o;
+    RE cre = c.getRE();
+    return prefixList.equals(c.getPrefixList()) &&
+      (re == null ? cre == null : re.toString().equals(cre.toString()));
+  }
+
+  public String toString() {
+    return "[CUSS: " + prefixList.get(0) +
+      ((re == null) ? "]" : (", " + re + "]"));
   }
 }
