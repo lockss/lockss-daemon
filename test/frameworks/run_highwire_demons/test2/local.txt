@@ -1,0 +1,25 @@
+org.lockss.startNetServers=yes
+org.lockss.localIPAddress=1.1.1.1
+org.lockss.comm.unicast.port=9001
+org.lockss.comm.unicast.sendToPort=9000
+org.lockss.comm.unicast.sendToAddr=127.0.0.1
+
+org.lockss.cache.location=.
+
+#au config settings
+org.lockss.highwire.pause.time=0
+org.lockss.au.org|lockss|plugin|highwire|HighWirePlugin.322|http|//shadow1|stanford|edu/.volume=322
+org.lockss.au.org|lockss|plugin|highwire|HighWirePlugin.322|http|//shadow1|stanford|edu/.base_url=http://shadow1.stanford.edu/
+
+#test settings
+org.lockss.test.treewalk=true
+org.lockss.treewalk.pluginId=org|lockss|plugin|highwire|HighWirePlugin
+org.lockss.treewalk.auId=322|http://shadow1.stanford.edu/
+
+org.lockss.test.poll=true
+org.lockss.poll.type=2
+org.lockss.pollspec.pluginId=org|lockss|plugin|highwire|HighWirePlugin
+org.lockss.pollspec.auId=322|http://shadow1.stanford.edu/
+org.lockss.pollspec.url=LOCKSSAU:
+#org.lockss.pollspec.lwrBound=
+#org.lockss.pollspec.uprBound=
