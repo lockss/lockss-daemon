@@ -1,5 +1,5 @@
 /*
- * $Id: BinarySemaphore.java,v 1.4 2002-11-21 20:25:05 tal Exp $
+ * $Id: BinarySemaphore.java,v 1.5 2002-11-25 21:32:05 tal Exp $
  *
 
 Copyright (c) 2000-2002 Board of Trustees of Leland Stanford Jr. University,
@@ -57,13 +57,13 @@ public class BinarySemaphore {
 	  public void changed(Deadline deadline) {
 	    thread.interrupt();
 	  }};
-      while (!state && !timer.expired()) {
-	try {
-	  timer.registerCallback(cb);
+      try {
+	timer.registerCallback(cb);
+	while (!state && !timer.expired()) {
 	  this.wait(timer.getSleepTime());
-	} finally {
-	  timer.unregisterCallback(cb);
 	}
+      } finally {
+	timer.unregisterCallback(cb);
       }
     }
     if (state) {

@@ -1,5 +1,5 @@
 /*
- * $Id: FifoQueue.java,v 1.6 2002-11-21 20:25:05 tal Exp $
+ * $Id: FifoQueue.java,v 1.7 2002-11-25 21:32:05 tal Exp $
  */
 
 /*
@@ -69,13 +69,13 @@ public class FifoQueue implements Queue {
 	public void changed(Deadline deadline) {
 	  thread.interrupt();
 	}};
-    while (queue.isEmpty() && !timer.expired()) {
-      try {
-	timer.registerCallback(cb);
+    try {
+      timer.registerCallback(cb);
+      while (queue.isEmpty() && !timer.expired()) {
 	this.wait(timer.getSleepTime());
-      } finally {
-	timer.unregisterCallback(cb);
       }
+    } finally {
+      timer.unregisterCallback(cb);
     }
     if (!queue.isEmpty()) {
       // remove from beginning
