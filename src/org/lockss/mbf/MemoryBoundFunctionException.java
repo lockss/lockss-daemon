@@ -1,10 +1,10 @@
 /*
-* $Id: ProtocolException.java,v 1.3 2003-07-21 02:39:29 dshr Exp $
+ * $Id: MemoryBoundFunctionException.java,v 1.1 2003-07-21 02:39:29 dshr Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2002 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -30,23 +30,23 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.protocol;
+package org.lockss.mbf;
 
 import java.io.IOException;
 
 /**
- * ProtocolException: thrown if an LcapMessage is unparseable
- * @author Claire Griffin
+ * MemoryBoundFunctionException: thrown if something bad happens to MBF
+ * @author David Rosenthal
  * @version 1.0
  */
 
-public class ProtocolException extends IOException {
+public class MemoryBoundFunctionException extends IOException {
 
-  public ProtocolException() {
+  public MemoryBoundFunctionException() {
     super();
   }
 
-  public ProtocolException(String msg) {
+  public MemoryBoundFunctionException(String msg) {
     super(msg);
   }
 }
