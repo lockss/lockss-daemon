@@ -1,5 +1,5 @@
 /*
- * $Id: GenericHasher.java,v 1.3 2002-12-17 02:06:53 aalto Exp $
+ * $Id: GenericHasher.java,v 1.4 2002-12-17 20:20:26 aalto Exp $
  */
 
 /*
@@ -106,11 +106,12 @@ public abstract class GenericHasher implements CachedUrlSetHasher {
     if (bytesPerMsEst == 0) {
       long timeTaken = 0;
       long bytesHashed = 0;
-      while (timeTaken<HASH_TEST_DURATION) {
-        long startTime = TimeBase.nowMs();
+      long startTime = TimeBase.nowMs();
+      Deadline deadline = Deadline.in(HASH_TEST_DURATION);
+      while (!deadline.expired()) {
         bytesHashed += hashStep(HASH_TEST_BYTE_STEP);
-        timeTaken += TimeBase.nowMs() - startTime;
       }
+      timeTaken = TimeBase.nowMs() - startTime;
       bytesPerMsEst = (int)(bytesHashed / timeTaken);
     }
     return bytesPerMsEst;
