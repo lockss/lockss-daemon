@@ -1,5 +1,5 @@
 /*
- * $Id: HashSvcSchedImpl.java,v 1.3.2.4 2003-11-20 00:05:41 tlipkis Exp $
+ * $Id: HashSvcSchedImpl.java,v 1.3.2.5 2003-11-20 01:02:59 tlipkis Exp $
  */
 
 /*
@@ -61,7 +61,7 @@ public class HashSvcSchedImpl
   private BigInteger totalBytesHashed = BigInteger.valueOf(0);
   private int reqCtr = 0;
   private long totalTime = 0;
-  private long nameHashEstimate = DEFAULT_NAME_HASH_EXTIMATE;
+  private long nameHashEstimate = DEFAULT_NAME_HASH_ESTIMATE;
 
   public HashSvcSchedImpl() {}
 
@@ -93,8 +93,8 @@ public class HashSvcSchedImpl
     estPadPercent = config.getLong(PARAM_ESTIMATE_PAD_PERCENT,
 				   DEFAULT_ESTIMATE_PAD_PERCENT);
     hashStepBytes = config.getInt(PARAM_STEP_BYTES, DEFAULT_STEP_BYTES);
-    nameHashEstimate = config.getTimeInterval(PARAM_NAME_HASH_EXTIMATE,
-					      DEFAULT_NAME_HASH_EXTIMATE);
+    nameHashEstimate = config.getTimeInterval(PARAM_NAME_HASH_ESTIMATE,
+					      DEFAULT_NAME_HASH_ESTIMATE);
     int cMax = config.getInt(PARAM_COMPLETED_MAX, DEFAULT_COMPLETED_MAX);
     if (changedKeys.contains(PARAM_COMPLETED_MAX) ) {
       synchronized (completed) {

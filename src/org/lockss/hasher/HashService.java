@@ -1,5 +1,5 @@
 /*
- * $Id: HashService.java,v 1.19.2.1 2003-11-20 00:05:42 tlipkis Exp $
+ * $Id: HashService.java,v 1.19.2.2 2003-11-20 01:02:59 tlipkis Exp $
  */
 
 /*
@@ -55,8 +55,8 @@ public interface HashService extends LockssManager {
   static final String PARAM_NUM_STEPS = PREFIX + "numSteps";
   static final int DEFAULT_NUM_STEPS = 10;
 
-  static final String PARAM_NAME_HASH_EXTIMATE = PREFIX + "nameHashEstimate";
-  static final long DEFAULT_NAME_HASH_EXTIMATE = Constants.SECOND;
+  static final String PARAM_NAME_HASH_ESTIMATE = PREFIX + "nameHashEstimate";
+  static final long DEFAULT_NAME_HASH_ESTIMATE = Constants.SECOND;
 
   static final String PARAM_COMPLETED_MAX = PREFIX + "historySize";
   static final int DEFAULT_COMPLETED_MAX = 50;
