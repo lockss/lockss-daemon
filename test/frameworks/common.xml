@@ -67,6 +67,7 @@
 	<value>org.lockss.plugin.GendersPlugin</value>
 	<value>org.lockss.plugin.ShadowPlugin</value>
 	<value>org.lockss.plugin.iop.IOPPlugin</value>
+	<value>org.lockss.plugin.LockssCardPlugin</value>
 	<value>edu.harvard.plugin.jrs.JRSPlugin</value>
 	<value>edu.upenn.library.plugin.annualofurdustudies.AnnualOfUrduStudiesPlugin</value>
 	<value>edu.indiana.lib.plugin.jcjpc.JcjpcPlugin</value>
@@ -1837,6 +1838,20 @@
 	</property>
       </property>
 
+      <property name="locksscard2005">
+	<property name="title" value="LOCKSS Card 2005" />
+	<property name="estSize" value="4.5MB" />
+	<property name="journalTitle" value="LOCKSS Card" />
+	<property name="plugin" value="org.lockss.plugin.LockssCardPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.lockss.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2005" />
+	</property>
+      </property>
 
     </property>
 
