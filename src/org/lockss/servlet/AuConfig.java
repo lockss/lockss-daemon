@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.24 2004-05-18 21:30:00 tlipkis Exp $
+ * $Id: AuConfig.java,v 1.25 2004-05-24 22:20:20 tlipkis Exp $
  */
 
 /*
@@ -439,13 +439,23 @@ public class AuConfig extends LockssServlet {
     }
     Page page = newPage();
     page.add(getErrBlock());
-    page.add(getExplanationBlock((StringUtil.isNullString(title)
-				  ? "Creating new Archival Unit"
-				  : ("Creating new Archival Unit of " +
-				     encodeText(title))) +
-				 " with plugin: " +
-				 encodeText(plugin.getPluginName()) +
-				 "<br>Edit the parameters then click Create"));
+
+    StringBuffer exp = new StringBuffer();
+    exp.append("Creating new Archival Unit");
+    if (!StringUtil.isNullString(title)) {
+      exp.append(" of ");
+      exp.append(encodeText(title));
+    }
+    exp.append(" with plugin: ");
+    exp.append(encodeText(plugin.getPluginName()));
+    exp.append("<br>");
+    exp.append(getEditKeys().isEmpty() ? "Confirm" : "Edit");
+    exp.append(" the parameters, ");
+    if (remoteApi.getRepositoryList().size() > 1) {
+      exp.append(" choose a repository, ");
+    }
+    exp.append("then click Create");
+    page.add(getExplanationBlock(exp.toString()));
 
     Form frm = createAuEditForm(ListUtil.list("Create"), null, true);
     // Ensure still have title info if come back here on error
@@ -640,35 +650,24 @@ public class AuConfig extends LockssServlet {
       tbl.add("Other Parameters");
       addPropRows(tbl, eKeys, initVals, editable ? eKeys : null);
     }
+    frm.add(tbl);
     if (isNew) {
-      java.util.List repos = remoteApi.getRepositoryList();
-      if (repos.size() > 1) {
-	tbl.newRow();
-	tbl.newCell("colspan=2 align=center");
-	tbl.add("Select Repository");
-	tbl.add(addFootnote(FOOT_REPOSITORY));
-	boolean first = true;
-	for (Iterator iter = repos.iterator(); iter.hasNext(); ) {
-	  String repo = (String)iter.next();
-	  tbl.newRow();
-	  tbl.newCell("colspan=2 align=left");
-	  tbl.add(radioButton(repo, REPO_TAG, first));
-	  first = false;
-	}
-      }
+      addRepoChoice(frm);
     }
 
     if (isNew) {
-      addPlugId(tbl, plugin);
+      addPlugId(frm, plugin);
     } else {
-      addAuId(tbl, au);
+      addAuId(frm, au);
     }
-    tbl.newRow();
-    tbl.newCell("colspan=2 align=center");
+    Table btnsTbl = new Table(0, "align=center cellspacing=4 cellpadding=0");
+    btnsTbl.newRow();
+    btnsTbl.newCell("align=center");
     for (Iterator iter = actions.iterator(); iter.hasNext(); ) {
       Object act = iter.next();
       if (act instanceof String) {
-	tbl.add(setTabOrder(new Input(Input.Submit, ACTION_TAG, (String)act)));
+	btnsTbl.add(setTabOrder(new Input(Input.Submit, ACTION_TAG,
+					  (String)act)));
       } else {
 	if (act instanceof Element) {
 	  // this will include hidden inputs in tab order, but that seems
@@ -676,14 +675,49 @@ public class AuConfig extends LockssServlet {
 	  Element ele = (Element)act;
 	  setTabOrder(ele);
 	}
-	tbl.add(act);
+	btnsTbl.add(act);
       }
       if (iter.hasNext()) {
-	tbl.add("&nbsp;");
+	btnsTbl.add("&nbsp;");
       }
     }
-    frm.add(tbl);
+    frm.add(btnsTbl);
     return frm;
+  }
+
+  void addRepoChoice(Composite comp) {
+    Table tbl = new Table(0, "align=center cellspacing=4 cellpadding=0");
+    java.util.List repos = remoteApi.getRepositoryList();
+    if (repos.size() > 1) {
+      tbl.newRow();
+      tbl.newCell("colspan=4 align=center");
+      tbl.add("Select Repository");
+      tbl.add(addFootnote(FOOT_REPOSITORY));
+      tbl.newRow();
+      tbl.addHeading("Repository");
+      tbl.addHeading("Size");
+      tbl.addHeading("Free");
+      tbl.addHeading("%Full");
+      boolean first = true;
+      for (Iterator iter = repos.iterator(); iter.hasNext(); ) {
+	String repo = (String)iter.next();
+	PlatformInfo.DF df = remoteApi.getRepositoryDF(repo);
+	tbl.newRow();
+	tbl.newCell("align=left");
+	tbl.add(radioButton(repo, REPO_TAG, first));
+	tbl.newCell("align=right");
+	tbl.add("&nbsp;");
+	tbl.add(StringUtil.sizeKBToString(df.getSize()));
+	tbl.newCell("align=right");
+	tbl.add("&nbsp;");
+	tbl.add(StringUtil.sizeKBToString(df.getAvail()));
+	tbl.newCell("align=right");
+	tbl.add("&nbsp;");
+	tbl.add(df.getPercent());
+	first = false;
+      }
+      comp.add(tbl);
+    }
   }
 
   /** Add config props rows to edit AU table.
