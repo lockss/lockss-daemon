@@ -195,7 +195,7 @@
 	</property>
       </property>
 
-      <property name="ojs1">
+      <property name="ecp2004">
         <property name="title" value="Electronic Communications In Probability 2004" />
         <property name="journalTitle" value="Electronic Communications In Probability" />
         <property name="plugin" value="org.lockss.plugin.ojs.OJSPlugin" />
@@ -209,7 +209,7 @@
         </property>
       </property>
 
-      <property name="ojs1">
+      <property name="ejp2004">
 	<property name="title" value="Electronic Journal Of Probability 2004" />
 	<property name="journalTitle" value="Electronic Journal Of Probability" />
 	<property name="plugin" value="org.lockss.plugin.ojs.OJSPlugin" />
