@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSimulatedContent.java,v 1.66 2004-10-20 18:41:14 dcfok Exp $
+ * $Id: FuncSimulatedContent.java,v 1.67 2004-11-18 05:20:54 smorabito Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ public class FuncSimulatedContent extends LockssTestCase {
   private String auId;
   private String auId2;
 
-  private static String DAMAGED_CACHED_URL = "/branch2/branch2/file2.txt";
+  private static String DAMAGED_CACHED_URL = "/branch2/branch2/002file.txt";
 
   public FuncSimulatedContent(String msg) {
     super(msg);
@@ -187,10 +187,10 @@ public class FuncSimulatedContent extends LockssTestCase {
     String URL_ROOT = SimulatedArchivalUnit.SIMULATED_URL_ROOT;
     assertEquals(0, sau.getLinkDepth(URL_ROOT + "/index.html"));
     assertEquals(0, sau.getLinkDepth(URL_ROOT + "/"));
-    assertEquals(1, sau.getLinkDepth(URL_ROOT + "/file1.html"));
+    assertEquals(1, sau.getLinkDepth(URL_ROOT + "/001file.html"));
     assertEquals(1, sau.getLinkDepth(URL_ROOT + "/branch1/index.html"));
     assertEquals(1, sau.getLinkDepth(URL_ROOT + "/branch1/"));
-    assertEquals(2, sau.getLinkDepth(URL_ROOT + "/branch1/file1.html"));
+    assertEquals(2, sau.getLinkDepth(URL_ROOT + "/branch1/001file.html"));
   }
 
   private void checkRoot() {
@@ -214,12 +214,12 @@ public class FuncSimulatedContent extends LockssTestCase {
     }
 
     expectedA = new String[] {
+      SimulatedArchivalUnit.SIMULATED_URL_ROOT + "/001file.html",
+      SimulatedArchivalUnit.SIMULATED_URL_ROOT + "/001file.txt",
+      SimulatedArchivalUnit.SIMULATED_URL_ROOT + "/002file.html",
+      SimulatedArchivalUnit.SIMULATED_URL_ROOT + "/002file.txt",
       SimulatedArchivalUnit.SIMULATED_URL_ROOT + "/branch1",
       SimulatedArchivalUnit.SIMULATED_URL_ROOT + "/branch2",
-      SimulatedArchivalUnit.SIMULATED_URL_ROOT + "/file1.html",
-      SimulatedArchivalUnit.SIMULATED_URL_ROOT + "/file1.txt",
-      SimulatedArchivalUnit.SIMULATED_URL_ROOT + "/file2.html",
-      SimulatedArchivalUnit.SIMULATED_URL_ROOT + "/file2.txt",
       SimulatedArchivalUnit.SIMULATED_URL_ROOT + "/index.html"
     };
     assertIsomorphic(expectedA, childL);
@@ -236,22 +236,22 @@ public class FuncSimulatedContent extends LockssTestCase {
     }
     String[] expectedA = new String[] {
       parent,
+      parent + "/001file.html",
+      parent + "/001file.txt",
+      parent + "/002file.html",
+      parent + "/002file.txt",
       parent + "/branch1",
-      parent + "/branch1/file1.html",
-      parent + "/branch1/file1.txt",
-      parent + "/branch1/file2.html",
-      parent + "/branch1/file2.txt",
+      parent + "/branch1/001file.html",
+      parent + "/branch1/001file.txt",
+      parent + "/branch1/002file.html",
+      parent + "/branch1/002file.txt",
       parent + "/branch1/index.html",
       parent + "/branch2",
-      parent + "/branch2/file1.html",
-      parent + "/branch2/file1.txt",
-      parent + "/branch2/file2.html",
-      parent + "/branch2/file2.txt",
+      parent + "/branch2/001file.html",
+      parent + "/branch2/001file.txt",
+      parent + "/branch2/002file.html",
+      parent + "/branch2/002file.txt",
       parent + "/branch2/index.html",
-      parent + "/file1.html",
-      parent + "/file1.txt",
-      parent + "/file2.html",
-      parent + "/file2.txt",
       parent + "/index.html",
     };
     assertIsomorphic(expectedA, childL);
@@ -282,8 +282,8 @@ public class FuncSimulatedContent extends LockssTestCase {
   }
 
   private void checkStoredContent() throws IOException {
-    checkUrlContent("/file1.txt", 1, 0, 0, false, false);
-    checkUrlContent("/branch1/branch1/file1.txt", 1, 2, 1, true, false);
+    checkUrlContent("/001file.txt", 1, 0, 0, false, false);
+    checkUrlContent("/branch1/branch1/001file.txt", 1, 2, 1, true, false);
     checkUrlContent(DAMAGED_CACHED_URL, 2, 2, 2, false, true);
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimulatedContentGenerator.java,v 1.20 2004-06-04 21:52:30 tlipkis Exp $
+ * $Id: TestSimulatedContentGenerator.java,v 1.21 2004-11-18 05:20:53 smorabito Exp $
  */
 
 /*
@@ -58,6 +58,7 @@ public class TestSimulatedContentGenerator extends LockssTestCase {
     super.setUp();
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     scgen = new SimulatedContentGenerator(tempDirPath);
+    scgen.setMaxFilenameLength(-1);
   }
 
   public void testAccessors() {
@@ -146,20 +147,25 @@ public class TestSimulatedContentGenerator extends LockssTestCase {
         3, 1, 2, true));
   }
   public void testGetFileName() {
-    String expectedStr = SimulatedContentGenerator.FILE_PREFIX + "11.txt";
-    assertEquals(expectedStr, SimulatedContentGenerator.getFileName(11,
+    SimulatedContentGenerator gen = new SimulatedContentGenerator("test");
+    String expectedStr;
+    expectedStr = "011" + SimulatedContentGenerator.FILE_PREFIX + ".txt";
+    assertEquals(expectedStr, gen.getFileName(11,
         SimulatedContentGenerator.FILE_TYPE_TXT));
-    expectedStr = SimulatedContentGenerator.FILE_PREFIX + "12.html";
-    assertEquals(expectedStr, SimulatedContentGenerator.getFileName(12,
+    expectedStr = "012" + SimulatedContentGenerator.FILE_PREFIX + ".html";
+    assertEquals(expectedStr, gen.getFileName(12,
         SimulatedContentGenerator.FILE_TYPE_HTML));
-    expectedStr = SimulatedContentGenerator.FILE_PREFIX + "13.pdf";
-    assertEquals(expectedStr, SimulatedContentGenerator.getFileName(13,
+    expectedStr = "013" + SimulatedContentGenerator.FILE_PREFIX + ".pdf";
+    assertEquals(expectedStr, gen.getFileName(13,
         SimulatedContentGenerator.FILE_TYPE_PDF));
-    expectedStr = SimulatedContentGenerator.FILE_PREFIX + "14.jpg";
-    assertEquals(expectedStr, SimulatedContentGenerator.getFileName(14,
+    expectedStr = "014" + SimulatedContentGenerator.FILE_PREFIX + ".jpg";
+    assertEquals(expectedStr, gen.getFileName(14,
         SimulatedContentGenerator.FILE_TYPE_JPEG));
     expectedStr = SimulatedContentGenerator.BRANCH_PREFIX + "15";
     assertEquals(expectedStr, SimulatedContentGenerator.getDirectoryName(15));
+
+    // Test with maxFilenameLength set.
+    
   }
 
   public void testFileLocation() throws IOException {
@@ -170,7 +176,7 @@ public class TestSimulatedContentGenerator extends LockssTestCase {
     scgen.setNumFilesPerBranch(1);
     assertEquals(testDir.toString(), scgen.generateContentTree());
     assertTrue(testDir.exists());
-    String testStr = tempDirPath + "file1.txt";
+    String testStr = tempDirPath + "001file.txt";
     testDir = new File(testStr);
     assertTrue(testDir.exists());
     testStr = tempDirPath + "index.html";
@@ -179,7 +185,7 @@ public class TestSimulatedContentGenerator extends LockssTestCase {
     testStr = tempDirPath + "branch1";
     testDir = new File(testStr);
     assertTrue(testDir.exists());
-    testStr = tempDirPath + "branch1/file1.txt";
+    testStr = tempDirPath + "branch1/001file.txt";
     testDir = new File(testStr);
     assertTrue(testDir.exists());
     testStr = tempDirPath + "branch1/index.html";
@@ -236,7 +242,7 @@ public class TestSimulatedContentGenerator extends LockssTestCase {
     scgen.setFileTypes(SimulatedContentGenerator.FILE_TYPE_TXT);
     scgen.generateContentTree();
     String childName = scgen.getContentRoot() + File.separator +
-                       SimulatedContentGenerator.getFileName(1, SimulatedContentGenerator.FILE_TYPE_TXT);
+                       scgen.getFileName(1, SimulatedContentGenerator.FILE_TYPE_TXT);
     File child = new File(childName);
     assertTrue("File not found.", child.exists() && !child.isDirectory());
     String content = getFileContent(child);
@@ -250,11 +256,11 @@ public class TestSimulatedContentGenerator extends LockssTestCase {
     scgen.setFileTypes(SimulatedContentGenerator.FILE_TYPE_HTML);
     scgen.generateContentTree();
     String childName = scgen.getContentRoot() + File.separator +
-                       SimulatedContentGenerator.getFileName(1, SimulatedContentGenerator.FILE_TYPE_HTML);
+                       scgen.getFileName(1, SimulatedContentGenerator.FILE_TYPE_HTML);
     File child = new File(childName);
     assertTrue("File not found.", child.exists() && !child.isDirectory());
     String content = getFileContent(child);
-    String expectedContent = SimulatedContentGenerator.getHtmlFileContent(SimulatedContentGenerator.getFileName(1,
+    String expectedContent = scgen.getHtmlFileContent(scgen.getFileName(1,
         SimulatedContentGenerator.FILE_TYPE_HTML), 1, 0, 0, false);
     assertEquals("content incorrect.", expectedContent, content);
   }
@@ -266,7 +272,7 @@ public class TestSimulatedContentGenerator extends LockssTestCase {
     scgen.setFileTypes(SimulatedContentGenerator.FILE_TYPE_BIN);
     scgen.generateContentTree();
     String childName = scgen.getContentRoot() + File.separator +
-                       SimulatedContentGenerator.getFileName(1, SimulatedContentGenerator.FILE_TYPE_BIN);
+                       scgen.getFileName(1, SimulatedContentGenerator.FILE_TYPE_BIN);
     File child = new File(childName);
     assertTrue("File not found.", child.exists() && !child.isDirectory());
     assertEquals(128, child.length());
@@ -282,7 +288,7 @@ public class TestSimulatedContentGenerator extends LockssTestCase {
     String depth2Name = scgen.getContentRoot() + File.separator +
         SimulatedContentGenerator.getDirectoryName(2) + File.separator +
         SimulatedContentGenerator.getDirectoryName(1) + File.separator +
-        SimulatedContentGenerator.getFileName(1, SimulatedContentGenerator.FILE_TYPE_TXT);
+        scgen.getFileName(1, SimulatedContentGenerator.FILE_TYPE_TXT);
     File depth2file = new File(depth2Name);
     assertTrue("Depth 2 file not found.",
                depth2file.exists() && !depth2file.isDirectory());
@@ -292,7 +298,7 @@ public class TestSimulatedContentGenerator extends LockssTestCase {
     depth2Name = scgen.getContentRoot() + File.separator +
         SimulatedContentGenerator.getDirectoryName(2) + File.separator +
         SimulatedContentGenerator.getDirectoryName(1) + File.separator +
-        SimulatedContentGenerator.getFileName(2, SimulatedContentGenerator.FILE_TYPE_TXT);
+        scgen.getFileName(2, SimulatedContentGenerator.FILE_TYPE_TXT);
     depth2file = new File(depth2Name);
     assertTrue("Depth 2 file not found.",
                depth2file.exists() && !depth2file.isDirectory());
@@ -311,22 +317,22 @@ public class TestSimulatedContentGenerator extends LockssTestCase {
     File[] rootChildren = rootFile.listFiles();
     assertEquals("root has wrong number of children.", 5, rootChildren.length);
     String depth2Name = scgen.getContentRoot() + File.separator +
-                        SimulatedContentGenerator.getFileName(1, SimulatedContentGenerator.FILE_TYPE_TXT);
+                        scgen.getFileName(1, SimulatedContentGenerator.FILE_TYPE_TXT);
     File child = new File(depth2Name);
     assertTrue("Text file 1 not found.",
                child.exists() && !child.isDirectory());
     depth2Name = scgen.getContentRoot() + File.separator +
-                 SimulatedContentGenerator.getFileName(1, SimulatedContentGenerator.FILE_TYPE_HTML);
+                 scgen.getFileName(1, SimulatedContentGenerator.FILE_TYPE_HTML);
     child = new File(depth2Name);
     assertTrue("Html file 1 not found.",
                child.exists() && !child.isDirectory());
     depth2Name = scgen.getContentRoot() + File.separator +
-                 SimulatedContentGenerator.getFileName(2, SimulatedContentGenerator.FILE_TYPE_TXT);
+                 scgen.getFileName(2, SimulatedContentGenerator.FILE_TYPE_TXT);
     child = new File(depth2Name);
     assertTrue("Text file 2 not found.",
                child.exists() && !child.isDirectory());
     depth2Name = scgen.getContentRoot() + File.separator +
-                 SimulatedContentGenerator.getFileName(2, SimulatedContentGenerator.FILE_TYPE_HTML);
+                 scgen.getFileName(2, SimulatedContentGenerator.FILE_TYPE_HTML);
     child = new File(depth2Name);
     assertTrue("Html file 2 not found.",
                child.exists() && !child.isDirectory());
