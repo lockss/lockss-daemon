@@ -1,5 +1,5 @@
 /*
- * $Id: TestHtmlTagFilter.java,v 1.6 2003-06-12 00:55:51 troberts Exp $
+ * $Id: TestHtmlTagFilter.java,v 1.7 2003-06-16 23:04:33 troberts Exp $
  */
 
 /*
@@ -80,8 +80,8 @@ public class TestHtmlTagFilter extends LockssTestCase {
   public void testCanNotCreateWithNullTagPairList() {
     try {
       HtmlTagFilter filter =
-	new HtmlTagFilter(new StringReader("blah"),
-			  (List)null);
+	HtmlTagFilter.makeNestedFilter(new StringReader("blah"),
+				       (List)null);
       fail("Trying to create a HtmlTagFilter with a null TagPair list should "+
 	   "throw an IllegalArgumentException");
     } catch(IllegalArgumentException iae) {
@@ -91,9 +91,30 @@ public class TestHtmlTagFilter extends LockssTestCase {
   public void testCanNotCreateWithEmptyTagPairList() {
     try {
       HtmlTagFilter filter =
-	new HtmlTagFilter(new StringReader("blah"), new LinkedList());
+	HtmlTagFilter.makeNestedFilter(new StringReader("blah"),
+				       new LinkedList());
       fail("Trying to create a HtmlTagFilter with an empty TagPair should "+
 	   "throw an IllegalArgumentException");
+    } catch(IllegalArgumentException iae) {
+    }
+  }
+
+  public void testCanNotCreateWithEmptyStringTags() {
+    try {
+      HtmlTagFilter filter =
+	new HtmlTagFilter(new StringReader("blah"),
+			  new HtmlTagFilter.TagPair("", "blah"));
+      fail("Trying to create a HtmlTagFilter with a TagPair with "+
+	   "an empty string should throw an IllegalArgumentException");
+    } catch(IllegalArgumentException iae) {
+    }
+
+    try {
+      HtmlTagFilter filter =
+	new HtmlTagFilter(new StringReader("blah"),
+			  new HtmlTagFilter.TagPair("blah", ""));
+      fail("Trying to create a HtmlTagFilter with a TagPair with "+
+	   "an empty string should throw an IllegalArgumentException");
     } catch(IllegalArgumentException iae) {
     }
   }
@@ -103,13 +124,22 @@ public class TestHtmlTagFilter extends LockssTestCase {
     list.add(tagPair1);
     list.add(tagPair2);
     HtmlTagFilter filter =
-      new HtmlTagFilter(new StringReader("blah"), list);
+      HtmlTagFilter.makeNestedFilter(new StringReader("blah"), list);
     assertEquals(2, list.size());
     assertEquals(tagPair1, (HtmlTagFilter.TagPair)list.get(0));
     assertEquals(tagPair2, (HtmlTagFilter.TagPair)list.get(1));
   }
 
-  public void testDoesNotFilterContentWithOutTags() throws IOException {
+  public void testReadReturnsNegOneWhenEmpty() throws IOException {
+    HtmlTagFilter reader =
+      new HtmlTagFilter(new StringReader(""),
+			new HtmlTagFilter.TagPair("blah", "blah2"));
+
+    assertEquals(-1, reader.read());
+  }
+
+
+  public void testDoesNotFilterContentWithoutTags() throws IOException {
     String content = "This is test content";
 
     HtmlTagFilter reader =
@@ -141,11 +171,14 @@ public class TestHtmlTagFilter extends LockssTestCase {
   }
 
   public void testCaseInsensitive() throws IOException {
+    HtmlTagFilter.TagPair tagPair =
+      new HtmlTagFilter.TagPair(startTag1, endTag1, true);
+
     String content = "This <Start> is test <END>content";
     String expectedContent = "This content";
 
     HtmlTagFilter reader =
-      new HtmlTagFilter(new StringReader(content), tagPair1);
+      new HtmlTagFilter(new StringReader(content), tagPair);
 
     assertReaderMatchesString(expectedContent, reader);
   }
@@ -220,37 +253,35 @@ public class TestHtmlTagFilter extends LockssTestCase {
   }
 
 
-   public void testFiltersMultipleTagsNoNesting() throws IOException {
-    System.err.println("STOP1");
-     
+  public void testFiltersMultipleTagsNoNesting() throws IOException {
     String content =
       "This "+startTag1+"is "+endTag1
       +"test "+startTag2+"content"+endTag2+"here";
     String expectedContent = "This test here";
-
+    
     HtmlTagFilter reader =
-      new HtmlTagFilter(new StringReader(content),
-			ListUtil.list(tagPair1, tagPair2));
-
+      HtmlTagFilter.makeNestedFilter(new StringReader(content),
+				     ListUtil.list(tagPair1, tagPair2));
+    
     assertReaderMatchesString(expectedContent, reader);
   }
-
-   public void testFiltersMultipleTagsComplexNesting() throws IOException {
+  
+  public void testFiltersMultipleTagsComplexNesting() throws IOException {
     String content =
       startTag2+startTag1+endTag2+"blah1"+endTag1+endTag2+"blah2";
-
+    
     String expectedContent = "blah2";
 
     HtmlTagFilter reader =
-      new HtmlTagFilter(new StringReader(content),
-			ListUtil.list(tagPair1, tagPair2));
+      HtmlTagFilter.makeNestedFilter(new StringReader(content),
+				     ListUtil.list(tagPair1, tagPair2));
 
     assertReaderMatchesString(expectedContent, reader);
 
     expectedContent = "blah1"+endTag1+endTag2+"blah2";
     reader =
-      new HtmlTagFilter(new StringReader(content),
-			ListUtil.list(tagPair2, tagPair1));
+      HtmlTagFilter.makeNestedFilter(new StringReader(content),
+				     ListUtil.list(tagPair2, tagPair1));
     assertReaderMatchesString(expectedContent, reader);
   }
 
@@ -261,8 +292,21 @@ public class TestHtmlTagFilter extends LockssTestCase {
     String expectedContent = "This here";
 
     HtmlTagFilter reader =
-      new HtmlTagFilter(new StringReader(content),
-			ListUtil.list(tagPair2, tagPair1));
+      HtmlTagFilter.makeNestedFilter(new StringReader(content),
+				     ListUtil.list(tagPair2, tagPair1));
+
+    assertReaderMatchesString(expectedContent, reader);
+  }
+
+  public void testFiltersSingleTagCloseNextToOpen() throws IOException {
+    String content =
+      "This "+startTag1+"is "+endTag1+startTag1
+      +"test content"+endTag1+"here";
+    String expectedContent = "This here";
+
+    HtmlTagFilter reader =
+      HtmlTagFilter.makeNestedFilter(new StringReader(content),
+				     ListUtil.list(tagPair2, tagPair1));
 
     assertReaderMatchesString(expectedContent, reader);
   }
@@ -305,7 +349,7 @@ public class TestHtmlTagFilter extends LockssTestCase {
     }
 
     try {
-      reader.read(new char[10], 11, 5);
+      reader.read(new char[10], 10, 5);
       fail("Calling read with an offset bigger than array length "
 	   +"should have thrown");
     } catch (IndexOutOfBoundsException e) {
@@ -324,7 +368,7 @@ public class TestHtmlTagFilter extends LockssTestCase {
     }
 
     try {
-      reader.read(new char[10], 5, 7);
+      reader.read(new char[10], 5, 6);
       fail("Calling read with (offset+length) bigger than "
 	   +"array length should thrown");
     } catch (IndexOutOfBoundsException e) {
@@ -362,6 +406,12 @@ public class TestHtmlTagFilter extends LockssTestCase {
 		 new String(chars, 0, expectedContent.length()));
   }
     
+
+  public void testMarkSupportedReturnsFalse() {
+    HtmlTagFilter reader = new HtmlTagFilter(new StringReader(""),
+					     tagPair1);
+    assertFalse(reader.markSupported());
+  }
 
 
   private void assertReaderMatchesString(String expected, Reader reader)
@@ -401,6 +451,12 @@ public class TestHtmlTagFilter extends LockssTestCase {
     HtmlTagFilter.TagPair pair1 = new HtmlTagFilter.TagPair("blah1", "blah2");
     HtmlTagFilter.TagPair pair2 = new HtmlTagFilter.TagPair("blah1", "blah2");
     assertEquals(pair1, pair2);
+  }
+
+  public void testEqualsWithDiffObject() {
+    HtmlTagFilter.TagPair pair1 = new HtmlTagFilter.TagPair("blah1", "blah2");
+    HtmlTagFilter.TagPair pair2 = new HtmlTagFilter.TagPair("blah1", "blah2");
+    assertNotEquals(pair1, "Test string");
   }
 
   public void testTagPairNotEqualHash() {

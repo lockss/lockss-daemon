@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlTagFilter.java,v 1.7 2003-06-13 00:34:28 troberts Exp $
+ * $Id: HtmlTagFilter.java,v 1.8 2003-06-16 23:04:33 troberts Exp $
  */
 
 /*
@@ -47,15 +47,15 @@ public class HtmlTagFilter extends Reader {
    * 2)Use better string searching algorithm
    */
 
-  public static final int DEFAULT_BUFFER_CAPACITY = 236;
+  public static final int DEFAULT_BUFFER_CAPACITY = 256;
 
 
   Reader reader = null;
   TagPair pair = null;
   CharRing charBuffer = null;
   int minBufferSize = 0;
-  int bufferCapacity = DEFAULT_BUFFER_CAPACITY;
-  char[] preBuffer = new char[bufferCapacity];
+  int bufferCapacity;
+  char[] preBuffer;
   boolean streamDone = false;
 
   private static Logger logger = Logger.getLogger("HtmlTagFilter");
@@ -78,12 +78,17 @@ public class HtmlTagFilter extends Reader {
     this(reader);
     if (pair == null) {
       throw new IllegalArgumentException("Called with a null tag pair");
+    } else if (pair.start == "" || pair.end == "") {
+      throw new IllegalArgumentException("Called with a tag pair with an "
+					 +"empty string: "+pair);
     }
     this.pair = pair;
     minBufferSize = pair.getMaxTagLength();
-    bufferCapacity = Math.max(minBufferSize, bufferCapacity);
+    bufferCapacity = Math.max(minBufferSize, DEFAULT_BUFFER_CAPACITY);
     charBuffer = new CharRing(bufferCapacity);
+    preBuffer = new char[bufferCapacity];
   }
+
   /**
    * Create a filter with multiple tags.  When filtering with multiple tags
    * it behaves as though everything between each pair is removed sequentially
@@ -92,25 +97,20 @@ public class HtmlTagFilter extends Reader {
    *
    * @param reader reader to filter from
    * @param pairs List of TagPairs to filter between.
-   * @see HtmlTagFilter#read()
    */
-  public HtmlTagFilter(Reader reader, List pairs) {
-    // XXX add check to make sure no tag is a substring of another
-    this(reader);
+  public static HtmlTagFilter makeNestedFilter(Reader reader, List pairs) {
     if (pairs == null) {
       throw new IllegalArgumentException("Called with a null tag pair list");
     }
-    if (pairs.size() < 1) {
+    if (pairs.size() <= 0) {
       throw new IllegalArgumentException("Called with empty tag pair list");
     }
-    this.pair = (TagPair) pairs.get(pairs.size()-1);
-    minBufferSize = pair.getMaxTagLength();
-    bufferCapacity = Math.max(minBufferSize, bufferCapacity);
-    charBuffer = new CharRing(bufferCapacity);
-    if (pairs.size() >= 2) {
-      this.reader = new HtmlTagFilter(reader, 
-				      pairs.subList(0,pairs.size()-1));
+
+    Reader curReader = reader;
+    for (int ix = 0; ix < pairs.size(); ix++) {
+      curReader = new HtmlTagFilter(curReader, (TagPair) pairs.get(ix));
     }
+    return (HtmlTagFilter)curReader;
   }
 
   /**
@@ -122,12 +122,8 @@ public class HtmlTagFilter extends Reader {
     if (charBuffer.size() < minBufferSize) {
       refillBuffer(charBuffer, reader);
     }
-    if (charBuffer.size() ==0 ) { 
-      logger.debug3("Read Returning -1, spot a");
-      return -1;
-    }
 
-    if (startsWithTag(charBuffer, pair.start)) {
+    while (startsWithTag(charBuffer, 0, pair.start, pair.ignoreCase)) {
       readThroughTag(charBuffer, reader, pair);
     }
     if (charBuffer.size() == 0) {
@@ -158,18 +154,15 @@ public class HtmlTagFilter extends Reader {
       try{
 	charBuffer.add(preBuffer, 0, charsRead);
       } catch (CharRing.RingFullException e) {
-	//XXX handle this
 	logger.error("Overfilled a CharRing", e);
+	throw new IOException("Overfilled a CharRing");
       }
       charsNeeded = charBuffer.capacity() - charBuffer.size();
     }
   }
 
-  private boolean startsWithTag(CharRing charBuffer, String tag) {
-    return startsWithTag(charBuffer, 0, tag);
-  }
-
-  private boolean startsWithTag(CharRing charBuffer, int idx, String tag) {
+  private boolean startsWithTag(CharRing charBuffer, int idx,
+				String tag, boolean ignoreCase) {
     //XXX reimplement with DNA searching algorithm
 
     if (logger.isDebug3()) {
@@ -182,17 +175,19 @@ public class HtmlTagFilter extends Reader {
       return false;
     }
 
-    int ringArrayIdx = idx;
-    int charPos = 0;
-    while (ringArrayIdx < charBuffer.size()
-	   && charPos < tag.length()) {
-      char curChar = charBuffer.get(ringArrayIdx);
-      if (!charEqualsIgnoreCase(curChar, tag.charAt(charPos))) {
-	logger.debug3("It doesn't");
-	return false;
+    for (int ix=0; ix < tag.length() && ix + idx < charBuffer.size(); ix ++) {
+      char curChar = charBuffer.get(ix + idx);
+      if (ignoreCase) {
+	if (!charEqualsIgnoreCase(curChar, tag.charAt(ix))) {
+	  logger.debug3("It doesn't");
+	  return false;
+	} 
+      } else {
+	if (curChar != tag.charAt(ix)) {
+	  logger.debug3("It doesn't");
+	  return false;
+	}
       }
-      ringArrayIdx++;
-      charPos++;
     }
     logger.debug3("It does");
     return true;
@@ -223,10 +218,10 @@ public class HtmlTagFilter extends Reader {
       if (streamDone && charBuffer.size() == 0) {
 	return;
       }
-      if (startsWithTag(charBuffer, idx, pair.start)) {
+      if (startsWithTag(charBuffer, idx, pair.start, pair.ignoreCase)) {
 	tagNesting++;
 	idx += pair.start.length();
-      } else if (startsWithTag(charBuffer, idx, pair.end)) {
+      } else if (startsWithTag(charBuffer, idx, pair.end, pair.ignoreCase)) {
 	tagNesting--;
 	idx += pair.end.length();
       } else {
@@ -236,20 +231,7 @@ public class HtmlTagFilter extends Reader {
     charBuffer.clear(idx);
   }
   
-  private void removeAndReplaceChars(CharRing charBuffer,
-				     Reader reader, int numChars)
-      throws IOException {
-    charBuffer.clear(numChars);
-    if (charBuffer.size() < minBufferSize) {
-      refillBuffer(charBuffer, reader);
-    } 
-  }
-
   public void mark(int readAheadLimit) {
-    throw new UnsupportedOperationException("Not Implemented");
-  }
-
-  public boolean markSupported() {
     throw new UnsupportedOperationException("Not Implemented");
   }
 
@@ -262,7 +244,7 @@ public class HtmlTagFilter extends Reader {
 
     if ((off < 0) || (len < 0) || ((off + len) > outputBuf.length)) {
       throw new IndexOutOfBoundsException();
-    } else if (len ==0) {
+    } else if (len == 0) {
       return 0;
     }
     
@@ -276,7 +258,8 @@ public class HtmlTagFilter extends Reader {
       }
       int idx =0;
       while (!matchedTag && idx < numLeft && idx < charBuffer.size()) {
-	matchedTag = startsWithTag(charBuffer, idx, pair.start);
+	matchedTag = startsWithTag(charBuffer, idx,
+				   pair.start, pair.ignoreCase);
 	if (!matchedTag) {
 	  idx++;
 	}
@@ -313,6 +296,7 @@ public class HtmlTagFilter extends Reader {
   public static class TagPair {
     String start = null;
     String end = null;
+    boolean ignoreCase = false;
 
     public TagPair(String start, String end) {
       if (start == null || end == null) {
@@ -321,6 +305,11 @@ public class HtmlTagFilter extends Reader {
       }
       this.start = start;
       this.end = end;
+    }
+
+    public TagPair(String start, String end, boolean ignoreCase) {
+      this(start, end);
+      this.ignoreCase = ignoreCase;
     }
 
     int getMaxTagLength() {
@@ -340,12 +329,15 @@ public class HtmlTagFilter extends Reader {
     }
 
     public boolean equals(Object obj) {
-      TagPair pair = (TagPair) obj;
-      return (start.equals(pair.start) && end.equals(pair.end));
+      if (obj instanceof TagPair) {
+	TagPair pair = (TagPair) obj;
+	return (start.equals(pair.start) && end.equals(pair.end));
+      }
+      return false;
     }
 
     public int hashCode() {
-      return (start.hashCode() + end.hashCode());
+      return ((3 * start.hashCode()) + (5 * end.hashCode()));
     }
   }
 }
