@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.4 2004-02-10 03:31:46 troberts Exp $
+ * $Id: RepairCrawler.java,v 1.5 2004-02-10 07:51:27 tlipkis Exp $
  */
 
 /*
@@ -189,6 +189,7 @@ public class RepairCrawler extends CrawlerImpl {
 
     
     HttpURLConnection conn = (HttpURLConnection)url.openConnection();
+    conn.setRequestProperty("user-agent", LockssDaemon.getUserAgent());
     uc.storeContent(conn.getInputStream(),
 		    getPropertiesFromConn(conn, uc.getUrl()));
   }
