@@ -1,5 +1,5 @@
 /*
- * $Id: AuTreeWalkManager.java,v 1.11 2004-12-12 22:59:56 tlipkis Exp $
+ * $Id: AuTreeWalkManager.java,v 1.12 2005-02-21 03:08:33 tlipkis Exp $
  */
 
 /*
@@ -144,7 +144,9 @@ public class AuTreeWalkManager
 	try {
 	  removeTask(task);
 	  // Do any action that was deferred until after the task ended
-	  walker.doDeferredAction();
+	  if (happened) {
+	    walker.doDeferredAction();
+	  }
 	} catch (Exception e) {
 	  log.warning("Unexpected exception", e);
 	}
