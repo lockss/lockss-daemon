@@ -1,5 +1,5 @@
 /*
- * $Id: TestMemoryBoundFunction.java,v 1.9 2003-09-09 03:54:04 dshr Exp $
+ * $Id: TestMemoryBoundFunction.java,v 1.10 2003-09-10 03:17:01 dshr Exp $
  */
 
 /*
@@ -52,7 +52,7 @@ public class TestMemoryBoundFunction extends LockssTestCase {
   private int pathsTried;
   private static String[] names = {
     "MOCK",
-    "MBF1",
+    // "MBF1",
     "MBF2",
   };
   private static MemoryBoundFunctionFactory[] factory = null;
@@ -185,26 +185,26 @@ public class TestMemoryBoundFunction extends LockssTestCase {
   /**
    * Test one generate/verify pair for invalid proof
    */
-  public void dontTestBadProofGoodNonce() throws IOException {
+  public void testBadProofGoodNonce() throws IOException {
     for (int i = 0; i < names.length; i++)
-      onePair(i, 63, 2048, 2, true, false);
+      onePair(i, 511, 128, 2, true, false);
   }
 
 
   /**
    * Test one generate/verify pair for invalid nonce
    */
-  public void dontTestGoodProofBadNonce() throws IOException {
+  public void testGoodProofBadNonce() throws IOException {
     for (int i = 0; i < names.length; i++)
-      onePair(i, 63, 2048, 2, false, true);
+      onePair(i, 511, 128, 2, false, true);
   }
 
   /**
    * Test one generate/verify pair for invalid nonce & proof
    */
-  public void dontTestBadProofBadNonce() throws IOException {
+  public void testBadProofBadNonce() throws IOException {
     for (int i = 0; i < names.length; i++)
-      onePair(i, 63, 2048, 2, false, false);
+      onePair(i, 511, 128, 2, false, false);
   }
 
 
@@ -455,39 +455,42 @@ public class TestMemoryBoundFunction extends LockssTestCase {
     long startTime = System.currentTimeMillis();
     MockMemoryBoundFunction.setProof(goodProof);
     int[] proof = null;
-    int numNulls = 0;
     byte[] nonce1 = null;
-    for (int i = 0; i < 100 && proof == null; i++) {
+    // Generate a suitable proof
+    for (int i = 0; i < 20 && proof == null; i++) {
       nonce1 = new byte[64];
       rand.nextBytes(nonce1);
       MockMemoryBoundFunction.setNonce(nonce1);
       proof = generate(index, nonce1, e, l, n, 8);
-      numNulls++;
+      // Null proofs are never suitable
+      if (proof != null && !proofOK) {
+	boolean butchered = false;
+	// We need to convert this into an invalid proof, is this possible?
+	if (proof.length == 0) {
+	  // Empty proof - convert to {1}
+	  proof = new int[1];
+	  proof[0] = 1;
+	  butchered = true;
+	  log.info(names[index] + ": empty proof[0] = 1");
+	} else if (proof.length == 1 && proof[0] != 1) {
+	  // If x>1 convert {x} to {1}
+	  proof[0] = 1;
+	  butchered = true;
+	  log.info(names[index] + ": proof[0] = 1");
+	} else for (int j = 1; j < proof.length && butchered == false; j++) {
+	  if (proof[j] > (proof[j-1] + 1)) {
+	    proof[j] = proof[j-1] + 1;
+	    butchered = true;
+	    log.info(names[index] + ": proof[" + j + "] = " + (proof[j-1]+1));
+	  }
+	}
+	if (!butchered) {
+	  proof = null;
+	}
+      }
     }
     assertTrue(proof != null);
     assertTrue(proof.length > 0);
-    if (!proofOK) {
-      // Butcher the proof
-      boolean butchered = false;
-      if (proof[0] != 1) {
-	proof[0] = 1;
-	butchered = true;
-	log.debug(names[index] + ": proof[0] = 1");
-      } else for (int i = 1; i < proof.length; i++) {
-	if (proof[i] > (proof[i-1] + 1)) {
-	  proof[i] = proof[i-1] + 1;
-	  butchered = true;
-	  log.debug(names[index] + ": proof[" + i + "] = " + (proof[i-1]+1));
-	}
-      }
-      // XXX improve butchering so this doesn't happen
-      if (!butchered) {
-	log.info("no butchering proof length " + proof.length);
-	for (int i = 0; i < proof.length; i++)
-	  log.info("index " + i + " value " + proof[i]);
-	fail(names[index] + ": could not butcher proof");
-      }
-    }
     byte[] nonce2 = new byte[64];
     rand.nextBytes(nonce2);
     if (MessageDigest.isEqual(nonce1, nonce2))
@@ -501,15 +504,8 @@ public class TestMemoryBoundFunction extends LockssTestCase {
       fail(names[index] + ": Invalid nonce declared valid");
     if (!nonceOK && !proofOK && ret)
       fail(names[index] + ": Invalid nonce & proof declared valid");
-    if (numNulls > 2) {
-      log.info(names[index] + " onePair(" + e + "," + l + ") took " +
-	     (System.currentTimeMillis() - startTime) + " msec " +
-	       numNulls + " retries");
-    } else {
-      log.debug(names[index] + " onePair(" + e + "," + l + ") took " +
-		(System.currentTimeMillis() - startTime) + " msec");
-    }
+    log.info(names[index] + " onePair(" + e + "," + l + "," + n + ") took " +
+	      (System.currentTimeMillis() - startTime) + " msec");
   }
-
 
 }
