@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.28 2003-04-05 00:56:55 tal Exp $
+ * $Id: PluginManager.java,v 1.29 2003-04-08 19:47:59 tal Exp $
  */
 
 /*
@@ -135,7 +135,7 @@ public class PluginManager extends BaseLockssManager {
 	  Configuration auConf = pluginConf.getConfigTree(auKey);
 	  Configuration oldAuConf = oldPluginConf.getConfigTree(auKey);
 	  if (!auConf.equals(oldAuConf)) {
-	    log.debug("Configuring AU id: " + auKey, new Throwable());
+	    log.debug("Configuring AU id: " + auKey);
 	    configureAU(plugin, auConf);
 	  } else {
 	    log.debug("Not configuring AU id: " + auKey +
