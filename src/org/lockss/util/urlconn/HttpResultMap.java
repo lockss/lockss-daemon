@@ -1,5 +1,5 @@
 /*
- * $Id: HttpResultMap.java,v 1.3 2004-03-09 04:15:32 clairegriffin Exp $
+ * $Id: HttpResultMap.java,v 1.4 2004-03-26 23:29:53 clairegriffin Exp $
  */
 
 /*
@@ -40,16 +40,17 @@ import java.util.*;
 
 public class HttpResultMap implements CacheResultMap {
   int[] SuccessCodes = {200, 203, 304};
-  int[] SameUrlCodes = { 408, 413, 500, 502, 503, 504};
+  int[] SameUrlCodes = { 408, 409, 413, 500, 502, 503, 504};
   int[] MovePermCodes = {301};
   int[] MoveTempCodes = { 307, 303, 302};
   int[] UnimplementedCodes = {};
-  int[] ExpectedCodes = { 401, 402, 403,  407};
+  int[] ExpectedCodes = { 305, 401, 402, 403,  407};
   int[] RetryDeadLinkCodes = {};
-  int[] NoRetryDeadLinkCodes= {204, 300, 305, 404, 405, 406, 410};
-  int[] UnexpectedCodes = {
-      201, 202, 205, 206, 306, 400, 409,
-      411, 412, 414, 415, 416, 417, 501, 505};
+  int[] NoRetryDeadLinkCodes= {204, 300, 404, 405, 406, 410};
+  int[] UnexpectedFailCodes = {
+      201, 202, 205, 206, 306, 400,
+      411, 412, 416, 417, 501, 505};
+  int[] UnexpectedNoFailCodes = { 414, 415 };
 
   HashMap exceptionTable = new HashMap();
 
@@ -69,8 +70,10 @@ public class HttpResultMap implements CacheResultMap {
                       CacheException.UnimplementedCodeException.class);
     storeArrayEntries(ExpectedCodes,
                       CacheException.ExpectedNoRetryException.class);
-    storeArrayEntries(UnexpectedCodes,
-                      CacheException.UnexpectedNoRetryException.class);
+    storeArrayEntries(UnexpectedFailCodes,
+                      CacheException.UnexpectedNoRetryFailException.class);
+    storeArrayEntries(UnexpectedNoFailCodes,
+                      CacheException.UnexpectedNoRetryNoFailException.class);
     storeArrayEntries(RetryDeadLinkCodes,
                       CacheException.RetryDeadLinkException.class);
     storeArrayEntries(NoRetryDeadLinkCodes,
