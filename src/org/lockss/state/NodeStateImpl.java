@@ -1,5 +1,5 @@
 /*
- * $Id: NodeStateImpl.java,v 1.14 2003-04-09 23:48:09 aalto Exp $
+ * $Id: NodeStateImpl.java,v 1.15 2003-04-16 05:54:35 aalto Exp $
  */
 
 /*
@@ -88,6 +88,7 @@ public class NodeStateImpl implements NodeState {
 
   void setLastHashDuration(long newDuration) {
     hashDuration = newDuration;
+    repository.storeNodeState(this);
   }
 
   public Iterator getActivePolls() {
@@ -143,7 +144,10 @@ public class NodeStateImpl implements NodeState {
     if (!added) {
       pollHistories.add(finished_poll);
     }
-    polls.remove(finished_poll);
+    // remove this poll, and any lingering PollStates for it
+    while (polls.contains(finished_poll)) {
+      polls.remove(finished_poll);
+    }
     // checkpoint state, store histories
     repository.storeNodeState(this);
     repository.storePollHistories(this);
