@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDatagram.java,v 1.9 2004-01-20 18:22:50 tlipkis Exp $
+ * $Id: LockssDatagram.java,v 1.10 2004-04-13 21:34:36 tlipkis Exp $
  */
 
 /*
@@ -53,9 +53,12 @@ public class LockssDatagram {
   // V1 rev1 was used across a protocol change (hash filtering turned on)
   // in 8/03.  Switched to V1 rev2 11/03 to avoid poll disagreements with
   // old versions.
+  // Switched to V1R3 4/02 so un-upgraded beta machines won't talk to prod
+  // machines
   public static final int PROTOCOL_LCAP_V1_R1 = 2;
   public static final int PROTOCOL_LCAP_V1_R2 = 3;
-  public static final int PROTOCOL_LCAP = PROTOCOL_LCAP_V1_R2;
+  public static final int PROTOCOL_LCAP_V1_R3 = 4;
+  public static final int PROTOCOL_LCAP = PROTOCOL_LCAP_V1_R3;
   static final int HEADER_LENGTH = 4;
 
   byte[] pktData;			// packet data (poss. compressed)
