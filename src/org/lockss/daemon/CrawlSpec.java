@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlSpec.java,v 1.2 2003-06-20 22:34:50 claire Exp $
+ * $Id: CrawlSpec.java,v 1.3 2003-10-08 21:20:52 troberts Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import org.lockss.util.*;
 public final class CrawlSpec {
   private List startList;
   private CrawlRule rule;
+  private int recrawlDepth;
 
   /** Create a CrawlSpec with the specified start list and rule.
    * @param startUrls a list of Strings specifying starting points
@@ -51,11 +52,14 @@ public final class CrawlSpec {
    * @throws NullPointerException if any elements of startUrls is null.
    * @throws ClassCastException if any elements of startUrls is not a String.
    */
-  public CrawlSpec(List startUrls, CrawlRule rule)
+  public CrawlSpec(List startUrls, CrawlRule rule, int recrawlDepth)
       throws ClassCastException {
     int len = startUrls.size();
     if (len == 0) {
       throw new IllegalArgumentException("CrawlSpec starting point list must not be empty");
+    }
+    if (recrawlDepth < 1) {
+      throw new IllegalArgumentException("recrawlDepth must be at least 1");
     }
     startList = ListUtil.immutableListOfType(startUrls, String.class);
     this.rule = rule;
@@ -67,8 +71,8 @@ public final class CrawlSpec {
    * should themselves be crawled.  A null rule is always true.
    * @throws NullPointerException if the url is null.
    */
-  public CrawlSpec(String url, CrawlRule rule) {
-    this(ListUtil.list(url), rule);
+  public CrawlSpec(String url, CrawlRule rule, int recrawlDepth) {
+    this(ListUtil.list(url), rule, recrawlDepth);
   }
 
   /**
@@ -88,4 +92,15 @@ public final class CrawlSpec {
   public boolean isIncluded(String url) {
     return (rule == null) ? true : (rule.match(url) == CrawlRule.INCLUDE);
   }
+
+  /**
+   * @return depth to recrawl when doing a new content crawl.
+   * 1 means just the starting urls, 2 is all of them and everything
+   * they link directly to, etc.
+   */
+  public int getRecrawlDepth() {
+    return recrawlDepth;
+  }
+
+
 }

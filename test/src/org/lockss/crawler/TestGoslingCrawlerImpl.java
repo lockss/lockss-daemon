@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingCrawlerImpl.java,v 1.21 2003-09-26 23:50:39 eaalto Exp $
+ * $Id: TestGoslingCrawlerImpl.java,v 1.22 2003-10-08 21:20:53 troberts Exp $
  */
 
 /*
@@ -81,14 +81,15 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     MockCachedUrlSet cus = new MyMockCachedUrlSet(mau, null);
     mau.setAuCachedUrlSet(cus);
     mau.setManifestPage(startUrl);
-    crawler = new GoslingCrawlerImpl(mau, urlSet, Crawler.NEW_CONTENT, true);
+    crawler =
+      new GoslingCrawlerImpl(mau, urlSet, Crawler.NEW_CONTENT, true, 1);
   }
 
   public void testThrowsForNullAu() {
     try {
       crawler =
 	new GoslingCrawlerImpl(null, ListUtil.list("http://www.example.com"),
-			       Crawler.NEW_CONTENT, false);
+			       Crawler.NEW_CONTENT, false, 1);
       fail("Trying to construct a GoslingCrawlerImpl with a null ArchivalUnit"
 	   +" should throw an IllegalArgumentException");
     } catch (IllegalArgumentException iae) {
@@ -97,7 +98,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
 
   public void testThrowsForNullStartUrlList() {
     try {
-      crawler = new GoslingCrawlerImpl(new MockArchivalUnit(), null, false);
+      crawler = new GoslingCrawlerImpl(new MockArchivalUnit(), null, false, 1);
 
       fail("Trying to construct a GoslingCrawlerImpl with a null list of "
 	   +"starting urls should throw an IllegalArgumentException");
@@ -529,18 +530,49 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
       cus.addUrl(LINKLESS_PAGE, (String)urls.get(ix));
     }
 
-    crawler = new GoslingCrawlerImpl(mau, urls, true);
+    crawler = new GoslingCrawlerImpl(mau, urls, true, 1);
     crawler.doCrawl(Deadline.MAX);
     Set expected = SetUtil.fromList(urls);
     assertEquals(expected, cus.getCachedUrls());
   }
 
-  public void testOverwritesStartingUrls() {
+  public void testOverwritesStartingUrlsOneLevel() {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     cus.addUrl(LINKLESS_PAGE, startUrl, true, true);
 
     crawler.doCrawl(Deadline.MAX);
     Set expected = SetUtil.set(startUrl);
+    assertEquals(expected, cus.getCachedUrls());
+  }
+
+  public void testOverwritesStartingUrlsMultipleLevels() {
+    crawler = new GoslingCrawlerImpl(mau, urlSet,
+				     Crawler.NEW_CONTENT, true, 2);
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    String url1= "http://www.example.com/link1.html";
+    String url2= "http://www.example.com/link2.html";
+    String url3= "http://www.example.com/dir/link3.html";
+    String url4= "http://www.example.com/dir/link9.html";
+
+    String source =
+      "<html><head><title>Test</title></head><body>"+
+      "<a href="+url1+">link1</a>"+
+      "Filler, with <b>bold</b> tags and<i>others</i>"+
+      "<a blah1=blah href="+url2+">link2</a>"+
+      "<a href="+url3+">link3</a>";
+
+    String source2 = 
+      "<html><head><title>Test</title></head><body>"+
+      "<a href="+url4+">link1</a>";
+      
+    cus.addUrl(source, startUrl, true, true);
+    cus.addUrl(LINKLESS_PAGE, url1, true, true);
+    cus.addUrl(source2, url2, true, true);
+    cus.addUrl(LINKLESS_PAGE, url3, true, true);
+    cus.addUrl(LINKLESS_PAGE, url4, true, true);
+
+    crawler.doCrawl(Deadline.MAX);
+    Set expected = SetUtil.set(startUrl, url1, url2, url3);
     assertEquals(expected, cus.getCachedUrls());
   }
 
@@ -555,7 +587,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     cus.addUrl(source, startUrl);
     cus.addUrl(LINKLESS_PAGE, url);
 
-    crawler = new GoslingCrawlerImpl(mau, urlSet, false);
+    crawler = new GoslingCrawlerImpl(mau, urlSet, false, 1);
     crawler.doCrawl(Deadline.MAX);
     Set expected = SetUtil.set(startUrl);
     assertEquals(expected, cus.getCachedUrls());
@@ -574,7 +606,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     cus.addUrl(LINKLESS_PAGE, excludeUrl);
     cus.addUrl(LINKLESS_PAGE, includeUrl);
 
-    crawler = new GoslingCrawlerImpl(mau, urlSet, false);
+    crawler = new GoslingCrawlerImpl(mau, urlSet, false, 1);
     crawler.doCrawl(Deadline.MAX);
     Set expected = SetUtil.set(startUrl, includeUrl);
     assertEquals(expected, cus.getCachedUrls());
@@ -748,7 +780,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
   public void testRepairCrawlCallsForceCache() {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     cus.addUrl(LINKLESS_PAGE, startUrl);
-    crawler = new GoslingCrawlerImpl(mau, urlSet, Crawler.REPAIR, false);
+    crawler = new GoslingCrawlerImpl(mau, urlSet, Crawler.REPAIR, false, 1);
     crawler.doCrawl(Deadline.MAX);
     Set cachedUrls = cus.getForceCachedUrls();
     assertEquals(1, cachedUrls.size());

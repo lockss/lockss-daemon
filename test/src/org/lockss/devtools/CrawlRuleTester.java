@@ -123,7 +123,7 @@ class RuleTester {
       props.remove(BASE_URL_PROP);
 
       // now load the crawl rules
-      m_crawlSpec = new CrawlSpec(m_baseUrl, makeRules(props));
+      m_crawlSpec = new CrawlSpec(m_baseUrl, makeRules(props), 1);
     }
     catch (IOException ex) {
       exitOnError("Error processing prop file: ", ex);

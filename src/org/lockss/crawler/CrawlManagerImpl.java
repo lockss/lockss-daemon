@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.46 2003-09-26 23:52:17 eaalto Exp $
+ * $Id: CrawlManagerImpl.java,v 1.47 2003-10-08 21:20:51 troberts Exp $
  */
 
 /*
@@ -145,7 +145,8 @@ public class CrawlManagerImpl extends BaseLockssManager
       if (locks.size() < urls.size()) {
 	cb = new FailingCallbackWrapper(cb);
       }
-      Crawler crawler = makeCrawler(au, locks.keySet(), Crawler.REPAIR, false);
+      Crawler crawler = makeCrawler(au, locks.keySet(),
+				    Crawler.REPAIR, false, 1);
       CrawlThread crawlThread =
 	new CrawlThread(crawler, Deadline.MAX, cb, cookie, locks.values());
       crawlThread.start();
@@ -231,8 +232,10 @@ public class CrawlManagerImpl extends BaseLockssManager
                                        CrawlManager.Callback cb, Object cookie,
                                        ActivityRegulator.Lock lock) {
     List callBackList = new ArrayList();
+    CrawlSpec spec = au.getCrawlSpec();
     Crawler crawler = makeCrawler(au, au.getNewContentCrawlUrls(),
-				  Crawler.NEW_CONTENT, true);
+				  Crawler.NEW_CONTENT, true,
+				  spec.getRecrawlDepth());
     CrawlThread crawlThread =
       new CrawlThread(crawler, Deadline.MAX, cb, cookie, SetUtil.set(lock));
     crawlThread.start();
@@ -251,8 +254,9 @@ public class CrawlManagerImpl extends BaseLockssManager
   }
 
   protected Crawler makeCrawler(ArchivalUnit au, Collection urls,
-				int type, boolean followLinks) {
-    return new GoslingCrawlerImpl(au, urls, type, followLinks);
+				int type, boolean followLinks,
+				int recrawlDepth) {
+    return new GoslingCrawlerImpl(au, urls, type, followLinks, recrawlDepth);
   }
 
 

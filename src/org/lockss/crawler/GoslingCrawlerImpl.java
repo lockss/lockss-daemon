@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingCrawlerImpl.java,v 1.37 2003-10-06 23:31:33 eaalto Exp $
+ * $Id: GoslingCrawlerImpl.java,v 1.38 2003-10-08 21:20:52 troberts Exp $
  */
 
 /*
@@ -120,6 +120,7 @@ public class GoslingCrawlerImpl implements Crawler {
   private int numUrlsFetched = 0;
   private int numUrlsParsed = 0;
   private int type;
+  private int refetchDepth = -1;
 
 
   /**
@@ -130,7 +131,7 @@ public class GoslingCrawlerImpl implements Crawler {
    * @param followLinks whether or not to extract and follow links
    */
   public GoslingCrawlerImpl(ArchivalUnit au, Collection startUrls,
-			    int type, boolean followLinks) {
+			    int type, boolean followLinks, int refetchDepth) {
     if (au == null) {
       throw new IllegalArgumentException("Called with a null ArchivalUnit");
     } else if (startUrls == null) {
@@ -140,12 +141,14 @@ public class GoslingCrawlerImpl implements Crawler {
     this.startUrls = startUrls;
     this.followLinks = followLinks;
     this.type = type;
+    this.refetchDepth = refetchDepth;
   }
 
   public GoslingCrawlerImpl(ArchivalUnit au, Collection startUrls,
-			    boolean followLinks) {
-    this(au, startUrls, Crawler.NEW_CONTENT, followLinks);
+			    boolean followLinks, int refetchDepth) {
+    this(au, startUrls, Crawler.NEW_CONTENT, followLinks, refetchDepth);
   }
+
   public long getNumFetched() {
     return numUrlsFetched;
   }
@@ -191,7 +194,7 @@ public class GoslingCrawlerImpl implements Crawler {
     CachedUrlSet cus = au.getAuCachedUrlSet();
     Set parsedPages = new HashSet();
 
-    Set extractedUrls = new HashSet();
+    Set extractedUrls = null;
 
 
     if (!deadline.expired() &&
@@ -200,18 +203,22 @@ public class GoslingCrawlerImpl implements Crawler {
       return false;
     }
     Iterator it = startUrls.iterator();
-    while (it.hasNext() && !deadline.expired()) {
-      String url = (String)it.next();
-      //catch and warn if there's a url in the start urls
-      //that we shouldn't cache
-      if (au.shouldBeCached(url)) {
-	if (!doCrawlLoop(url, extractedUrls, parsedPages, cus, true)) {
-	  wasError = true;
+    for (int ix=0; ix<refetchDepth; ix++) {
+      extractedUrls = new HashSet();
+      while (it.hasNext() && !deadline.expired()) {
+	String url = (String)it.next();
+	//catch and warn if there's a url in the start urls
+	//that we shouldn't cache
+	if (au.shouldBeCached(url)) {
+	  if (!doCrawlLoop(url, extractedUrls, parsedPages, cus, true)) {
+	    wasError = true;
+	  }
+	} else {
+	  logger.warning("Called with a starting url we aren't suppose to "
+			 +"cache: "+url);
 	}
-      } else {
-	logger.warning("Called with a starting url we aren't suppose to "
-		       +"cache: "+url);
       }
+      it = extractedUrls.iterator();
     }
 
     while (!extractedUrls.isEmpty() && !deadline.expired()) {

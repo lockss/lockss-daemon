@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireArchivalUnit.java,v 1.33 2003-09-19 22:39:52 eaalto Exp $
+ * $Id: HighWireArchivalUnit.java,v 1.34 2003-10-08 21:20:52 troberts Exp $
  */
 
 /*
@@ -157,7 +157,7 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
       throws REException {
 
     CrawlRule rule = makeRules(base, volume);
-    return new CrawlSpec(makeStartUrl(base, volume), rule);
+    return new CrawlSpec(makeStartUrl(base, volume), rule, 1);
   }
 
   String makeStartUrl(URL base, int volume) {

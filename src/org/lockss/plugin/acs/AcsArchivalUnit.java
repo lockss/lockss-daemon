@@ -1,5 +1,5 @@
 /*
- * $Id: AcsArchivalUnit.java,v 1.3 2003-09-22 23:52:03 clairegriffin Exp $
+ * $Id: AcsArchivalUnit.java,v 1.4 2003-10-08 21:20:52 troberts Exp $
  */
 
 /*
@@ -252,7 +252,7 @@ public class AcsArchivalUnit extends BaseArchivalUnit {
       throws REException {
 
     CrawlRule rule = makeRules(base, jkey, volume);
-    return new CrawlSpec(startUrlString, rule);
+    return new CrawlSpec(startUrlString, rule, 1);
   }
 
   private CrawlRule makeRules(URL urlRoot, String jkey, int volume)

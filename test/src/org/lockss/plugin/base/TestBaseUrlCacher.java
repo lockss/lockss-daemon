@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.6 2003-09-19 22:34:02 eaalto Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.7 2003-10-08 21:20:53 troberts Exp $
  */
 
 /*
@@ -67,7 +67,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
     theDaemon.getHashService();
 
     mau = new MyMockArchivalUnit();
-    mau.setCrawlSpec(new CrawlSpec(tempDirPath, null));
+    mau.setCrawlSpec(new CrawlSpec(tempDirPath, null, 1));
     MockPlugin plugin = new MyMockPlugin();
     plugin.initPlugin(theDaemon);
     plugin.setDefiningConfigKeys(Collections.EMPTY_LIST);

@@ -1,5 +1,5 @@
 /*
- * $Id: AbsintheArchivalUnit.java,v 1.1 2003-09-27 00:35:31 eaalto Exp $
+ * $Id: AbsintheArchivalUnit.java,v 1.2 2003-10-08 21:20:52 troberts Exp $
  */
 
 /*
@@ -173,7 +173,7 @@ public class AbsintheArchivalUnit extends BaseArchivalUnit {
   private CrawlSpec makeCrawlSpec(URL base, String year) throws REException {
 
     CrawlRule rule = makeRules(base, year);
-    return new CrawlSpec(makeStartUrl(base, year), rule);
+    return new CrawlSpec(makeStartUrl(base, year), rule, 1);
   }
 
   public String getManifestPage() {
