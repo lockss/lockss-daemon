@@ -1,5 +1,5 @@
 /*
- * $Id: HashService.java,v 1.15 2003-04-30 04:52:56 tal Exp $
+ * $Id: HashService.java,v 1.16 2003-04-30 23:39:52 tal Exp $
  */
 
 /*
@@ -172,6 +172,17 @@ public class HashService extends BaseLockssManager {
 			    // tk - get better duration estimate
 			    urlset.getNameHasher(hasher), 1000, NAME_HASH);
     return scheduleReq(req);
+  }
+
+  /** Return the average hash speed, or -1 if not known.
+   * @param digest the hashing algorithm
+   * @return hash speed in bytes/ms, or -1 if not known
+   */
+  public int getHashSpeed(MessageDigest digest) {
+    if (theQueue == null) {
+      throw new IllegalStateException("HashService has not been initialized");
+    }
+    return theQueue.getHashSpeed(digest);
   }
 
   /** Add the configured padding percentage, plus the constant */

@@ -1,5 +1,5 @@
 /*
- * $Id: HashQueue.java,v 1.34 2003-04-30 04:52:56 tal Exp $
+ * $Id: HashQueue.java,v 1.35 2003-04-30 23:39:52 tal Exp $
  */
 
 /*
@@ -210,6 +210,19 @@ class HashQueue implements Serializable {
     sem.give();
     log.debug("Scheduled hash: " + req);
     return true;
+  }
+
+  /** Return the average hash speed, or -1 if not known.
+   * @param digest the hashing algorithm
+   * @return hash speed in bytes/ms, or -1 if not known
+   */
+  int getHashSpeed(MessageDigest digest) {
+    if (totalTime < 5 * Constants.SECOND) {
+      return -1;
+    }
+    int bpms =
+      totalBytesHashed.divide(BigInteger.valueOf(totalTime)).intValue();
+    return bpms;
   }
 
   void init() {
