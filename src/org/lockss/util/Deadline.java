@@ -1,5 +1,5 @@
 /*
- * $Id: Deadline.java,v 1.8 2002-11-20 23:33:33 tal Exp $
+ * $Id: Deadline.java,v 1.9 2002-11-20 23:37:03 tal Exp $
  */
 
 /*
@@ -168,7 +168,7 @@ public class Deadline implements Comparable {
 
   /** Return the time remaining until expiration, in milliseconds.
    * This method should not be used to obtain a duration to sleep; use
-   * {@link getSleepTime()} for that.
+   * {@link #getSleepTime()} for that.
    */
   public synchronized long getRemainingTime() {
     return (expired() ? 0 : expiration.getTime() - nowMs());
