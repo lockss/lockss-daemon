@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurationUtil.java,v 1.1 2003-02-20 22:30:59 tal Exp $
+ * $Id: ConfigurationUtil.java,v 1.2 2003-03-21 18:22:39 tal Exp $
  *
 
 Copyright (c) 2000-2002 Board of Trustees of Leland Stanford Jr. University,
@@ -30,8 +30,10 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.test;
 
+import java.io.*;
 import java.util.*;
 import org.lockss.daemon.*;
+import org.lockss.util.*;
 import org.mortbay.tools.*;
 
 /** Utilities for Configuration
@@ -46,6 +48,12 @@ public class ConfigurationUtil {
 //       throws IOException {
 //     return setCurrentConfigFromUrlList(ListUtil.list(FileUtil.urlOfString(s)));
 //   }
+
+  public static Configuration fromString(String s)
+      throws IOException {
+    List l = ListUtil.list(FileUtil.urlOfString(s));
+    return Configuration.readConfig(l);
+  }
 
   public static Configuration fromProps(Properties props) {
     PropertyTree tree = new PropertyTree(props);
