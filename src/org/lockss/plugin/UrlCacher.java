@@ -1,5 +1,5 @@
 /*
- * $Id: UrlCacher.java,v 1.7 2004-02-23 09:15:21 tlipkis Exp $
+ * $Id: UrlCacher.java,v 1.8 2004-03-07 08:35:38 tlipkis Exp $
  */
 
 /*
@@ -44,6 +44,15 @@ import org.lockss.util.urlconn.*;
  * returning an object implementing the UrlCacher interface.
  */
 public interface UrlCacher {
+
+  /** Automatically follow all redirects */
+  public static final int REDIRECT_SCHEME_FOLLOW = 1;
+  /** Don't follow redirects; throw CacheException.RetryNewUrlException if
+   * redirect response received */
+  public static final int REDIRECT_SCHEME_DONT_FOLLOW = 2;
+  /** Follow redirects iff within the crawl spec, store under all names */
+  public static final int REDIRECT_SCHEME_STORE_ALL = 3;
+
   /**
    * Return the url being represented
    * @return the {@link String} url being represented.
@@ -74,19 +83,23 @@ public interface UrlCacher {
   /** Set the shared connection pool object to be used by this UrlCacher */
   public void setConnectionPool(LockssUrlConnectionPool connectionPool);
 
-  /**
-   * Copies the content and properties from the source into the cache.
-   * Only caches if the content has been modified.
-   * @throws java.io.IOException on many possible I/O problems.
+  /** Determines whether content will be refetched even if already present
+   * and up-to-date.  The default behavior is to not refetch if not
+   * necessary (by sending an If-Modified-Since header with the date of the
+   * content currently on disk, if any).
+   * @param force if true, fetches the URL unconditionally.
    */
-  public void cache() throws IOException;
+  public void setForceRefetch(boolean force);
+
+  /** Determines the behavior if a redirect response is received. */
+  public void setRedirectScheme(int scheme);
 
   /**
    * Copies the content and properties from the source into the cache.
-   * Always caches even if the content hasn't been modified.
+   * If forceRefetch is false, only caches if the content has been modified.
    * @throws java.io.IOException on many possible I/O problems.
    */
-  public void forceCache() throws IOException;
+  public void cache() throws IOException;
 
   /**
    * Gets an InputStream for this URL.

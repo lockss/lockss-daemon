@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.50 2004-03-06 00:38:35 troberts Exp $
+ * $Id: NullPlugin.java,v 1.51 2004-03-07 08:35:36 tlipkis Exp $
  */
 
 /*
@@ -210,10 +210,13 @@ public class NullPlugin {
       return false;
     }
 
-    public void cache() throws IOException {
+    public void setForceRefetch(boolean force) {
     }
 
-    public void forceCache() throws IOException {
+    public void setRedirectScheme(int scheme) {
+    }
+
+    public void cache() throws IOException {
     }
 
     public void storeContent(InputStream input,
