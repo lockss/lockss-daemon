@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.26 2003-05-06 01:45:45 troberts Exp $
+ * $Id: LockssDaemon.java,v 1.27 2003-05-08 02:40:23 tal Exp $
  */
 
 /*
@@ -52,10 +52,13 @@ import org.apache.commons.collections.SequencedHashMap;
  */
 
 public class LockssDaemon {
-  private static String PARAM_DAEMON_EXIT =
-    Configuration.PREFIX + "daemon.exit";
+  private static String PREFIX = Configuration.PREFIX + "daemon.";
 
-  private static boolean DEFAULT_DAEMON_EXIT = false;
+  private static String PARAM_DAEMON_EXIT_IMM = PREFIX + "exitImmediately";
+  private static boolean DEFAULT_DAEMON_EXIT_IMM = false;
+
+  private static String PARAM_DAEMON_EXIT_AFTER = PREFIX + "exitAfter";
+  private static long DEFAULT_DAEMON_EXIT_AFTER = 0;
 
   private static String MANAGER_PREFIX = Configuration.PREFIX + "manager.";
 
@@ -154,6 +157,8 @@ public class LockssDaemon {
   private boolean daemonInited = false;
   private boolean daemonRunning = false;
   private Date startDate;
+  private long daemonLifetime = DEFAULT_DAEMON_EXIT_AFTER;
+  private Deadline timeToExit = Deadline.at(TimeBase.MAX);
 
   // Need to preserve order so managers are started and stopped in the
   // right order.  This does not need to be synchronized.
@@ -165,26 +170,44 @@ public class LockssDaemon {
 
   public static void main(String[] args) {
     Vector urls = new Vector();
+    LockssDaemon daemon;
 
     for (int i=0; i<args.length; i++) {
       urls.add(args[i]);
     }
 
     try {
-      LockssDaemon daemon = new LockssDaemon(urls);
+      daemon = new LockssDaemon(urls);
       daemon.runDaemon();
-      if (Configuration.getBooleanParam(PARAM_DAEMON_EXIT, 
-					DEFAULT_DAEMON_EXIT)) {
-	daemon.stop();
-      }
     } catch (Throwable e) {
-      System.err.println("Exception thrown in main loop:");
-      e.printStackTrace();
+      log.error("Exception thrown in main loop", e);
+      System.exit(1);
+      return;				// compiler doesn't know that
+					// System.exit() doesn't return
+    }
+    if (Configuration.getBooleanParam(PARAM_DAEMON_EXIT_IMM,
+				      DEFAULT_DAEMON_EXIT_IMM)) {
+      daemon.stop();
+      System.exit(0);
+    }
+    daemon.keepRunning();
+    log.info("Exiting because time to die");
+    System.exit(0);
+  }
+
+  private void keepRunning() {
+    while (!timeToExit.expired()) {
+      try {
+	log.debug("Will exit at " + timeToExit);
+	timeToExit.sleep();
+      } catch (InterruptedException e) {
+	// no action
+      }
     }
   }
 
   /** Return the time the daemon started running.
-   * @return the time the daemon started running, as a long
+   * @return the time the daemon started running, as a Date
    */
   public Date getStartDate() {
     return startDate;
@@ -401,8 +424,45 @@ public class LockssDaemon {
     Configuration.waitConfig();
     log.info("Config loaded");
 
-    // get the properties we're going to store locally
+    Configuration.registerConfigurationCallback(new Configuration.Callback() {
+	public void configurationChanged(Configuration newConfig,
+					 Configuration prevConfig,
+					 Set changedKeys) {
+	  setConfig(newConfig, prevConfig, changedKeys);
+	}
+      });
+  }
 
+  protected void setConfig(Configuration config, Configuration prevConfig,
+			   Set changedKeys) {
+    long life = config.getTimeInterval(PARAM_DAEMON_EXIT_AFTER,
+				       DEFAULT_DAEMON_EXIT_AFTER);
+    if (life != daemonLifetime) {
+      // lifetime changed
+      daemonLifetime = life;
+      if (life == 0) {
+	// zero is forever
+	timeToExit.expireAt(TimeBase.MAX);
+      } else {
+	// compute new randomized deadline relative to start time
+	long start = getStartDate().getTime();
+	long min = start + life - life/4;
+	long max = start + life + life/4;
+	long prevExp = timeToExit.getExpirationTime();
+	if (!(min <= prevExp && prevExp <= max)) {
+	  // previous end of life is not within new range, so change timer
+	  if (min <= TimeBase.nowMs()) {
+	    // earliest time is earlier than now.  make random interval at
+	    // least an hour long to prevent all daemons from exiting too
+	    // close to each other.
+	    min = TimeBase.nowMs();
+	    max = Math.max(max, min + Constants.HOUR);
+	  }
+	  Deadline tmp = Deadline.atRandomRange(min, max);
+	  timeToExit.expireAt(tmp.getExpirationTime());
+	}
+      }
+    }    
   }
 
   /**
