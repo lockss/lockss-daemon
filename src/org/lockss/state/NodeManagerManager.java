@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerManager.java,v 1.6 2004-10-18 03:40:31 tlipkis Exp $
+ * $Id: NodeManagerManager.java,v 1.7 2004-12-07 05:17:51 tlipkis Exp $
  */
 
 /*
@@ -316,7 +316,7 @@ public class NodeManagerManager
     }
 
     private String getTitle(String key) {
-      return "NodeManager Table for Archival Unit " + key;
+      return "NodeManager Cache for Archival Unit " + key;
     }
 
     // currently unused

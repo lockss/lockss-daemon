@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.124 2004-10-18 03:44:09 tlipkis Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.125 2004-12-07 05:17:50 tlipkis Exp $
  */
 
 /*
@@ -172,7 +172,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     polls.add(new PollState(1, "lwr1", "upr1", 1, 0, Deadline.MAX, false));
 
     // start the poll
-    assertTrue(pollManager.callPoll(new PollSpec(cus, Poll.CONTENT_POLL)));
+    assertNotNull(pollManager.callPoll(new PollSpec(cus, Poll.CONTENT_POLL)));
 
     NodeStateImpl node = new NodeStateImpl(cus, 123, new CrawlState(-1, -1, -1),
                                            polls, historyRepo);

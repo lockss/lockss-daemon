@@ -1,5 +1,5 @@
 /*
- * $Id: V1NamePoll.java,v 1.14 2004-10-23 01:01:01 clairegriffin Exp $
+ * $Id: V1NamePoll.java,v 1.15 2004-12-07 05:17:52 tlipkis Exp $
  */
 
 /*
@@ -45,6 +45,7 @@ import org.lockss.plugin.*;
 public class V1NamePoll extends V1Poll {
 
   ArrayList m_entries;
+  private boolean m_calledSubpoll = false;
 
   public V1NamePoll(PollSpec pollspec,
 		    PollManager pm,
@@ -60,6 +61,11 @@ public class V1NamePoll extends V1Poll {
                               duration,
                               V1PollFactory.getQuorum(),  // XXX AU-specific
                               hashAlg);
+  }
+
+  /** kludge to remember whether we called a subpoll */
+  public boolean isSubpollRunning() {
+    return m_calledSubpoll;
   }
 
   /**
@@ -267,7 +273,15 @@ public class V1NamePoll extends V1Poll {
     CachedUrlSet newCus = au.makeCachedUrlSet(new RangeCachedUrlSetSpec(base, lwr, upr));
     PollSpec spec = new PollSpec(newCus, lwr, upr, Poll.NAME_POLL, Poll.V1_POLL);
     log.debug3("calling new name poll on: " + spec);
-    if (!m_pollmanager.callPoll(spec)) {
+    Poll subPoll = m_pollmanager.callPoll(spec);
+    if (subPoll != null) {
+      PollTally subTally = subPoll.getVoteTally();
+      if (subTally instanceof V1PollTally) {
+	V1PollTally v1tally = (V1PollTally)subTally;
+	v1tally.setPreviousNamePollTally((V1PollTally)getVoteTally());
+      }
+      m_calledSubpoll = true;
+    } else {
       log.error("unable to call name poll for " + spec);
     }
   }

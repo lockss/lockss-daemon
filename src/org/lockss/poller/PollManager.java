@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.149 2004-11-05 23:13:04 smorabito Exp $
+ * $Id: PollManager.java,v 1.150 2004-12-07 05:17:52 tlipkis Exp $
  */
 
 /*
@@ -191,27 +191,31 @@ public class PollManager
    * Call a poll.  Only used by the tree walk.
    * @param pollspec the <code>PollSpec</code> that defines the subject of
    *                 the <code>Poll</code>.
-   * @return true if the poll was successfuly called.
+   * @return the poll, if it was successfuly called, else null.
    */
-  public boolean callPoll(PollSpec pollspec) {
-    boolean ret = false;
+  public Poll callPoll(PollSpec pollspec) {
+    BasePoll thePoll = null;
     PollFactory pollFact = getPollFactory(pollspec);
     if (pollFact == null) {
-      return false;
+      return null;
     } else {
       long duration = pollFact.calcDuration(pollspec, this);
       if (duration <= 0) {
 	theLog.debug("Duration for " + pollspec + " too short " + duration);
-	return false;
+	return null;
       }
       byte[] challenge = makeVerifier(duration);
       byte[] verifier = makeVerifier(duration);
       try {
-	BasePoll thePoll = makePoll(pollspec, duration, challenge, verifier,
-				    theIDManager.getLocalPeerIdentity(pollspec.getPollVersion()),
-				    LcapMessage.getDefaultHashAlgorithm());
+	thePoll = makePoll(pollspec, duration, challenge, verifier,
+			   theIDManager.getLocalPeerIdentity(pollspec.getPollVersion()),
+			   LcapMessage.getDefaultHashAlgorithm());
 	if (thePoll != null) {
-	  ret = pollFact.callPoll(thePoll, this, theIDManager);
+	  if (pollFact.callPoll(thePoll, this, theIDManager)) {
+	    return thePoll;
+	  } else {
+	    theLog.debug("pollFact.callPoll() returned false");
+	  }
 	} else {
 	  theLog.debug("makePoll(" + pollspec + ") returned null");
 	}
@@ -219,7 +223,7 @@ public class PollManager
 	theLog.debug("Error in makePoll or callPoll", ex);
       }
     }
-    return ret;
+    return null;
   }
 
    /**
@@ -361,11 +365,11 @@ public class PollManager
 
   /**
    * Find the poll defined by the <code>Message</code>.  If the poll
-   * does not exist this will create a new poll
+   * does not exist this will create a new poll (iff there are no conflicts)
    * @param msg <code>Message</code>
-   * @return <code>Poll</code> which matches the message opcode.
-   * @throws IOException if message opcode is unknown or if new poll would
-   * conflict with currently running poll.
+   * @return <code>Poll</code> which matches the message opcode, or a new
+   * poll, or null if the new poll would conflict with a currently running poll.
+   * @throws IOException if message opcode is unknown.
    * @see <code>Poll.createPoll</code>
    */
   synchronized BasePoll findPoll(LcapMessage msg) throws IOException {
@@ -376,10 +380,16 @@ public class PollManager
     if(pme == null) {
       theLog.debug3("Making new poll: " + key);
       ret = makePoll(msg);
-      theLog.debug3("Done making new poll: "+ key);
+      if (theLog.isDebug3()) {
+	if (ret != null) {
+	  theLog.debug3("Made new poll: " + key);
+	} else {
+	  theLog.debug3("Did not make new poll: " + key);
+	}
+      }
     }
     else {
-      theLog.debug3("Returning existing poll:" + key);
+      theLog.debug3("Returning existing poll: " + key);
       ret = pme.poll;
     }
     return ret;
@@ -388,7 +398,9 @@ public class PollManager
   /**
    * make a new poll of the type and version defined by the incoming message.
    * @param msg <code>Message</code> to use for
-   * @return a new Poll object of the required type
+   * @return a new Poll object of the required type, or null if we don't
+   * want to run this poll now (<i>ie</i>, due to a conflict with another
+   * poll).
    * @throws ProtocolException if message opcode is unknown
    */
   BasePoll makePoll(LcapMessage msg) throws ProtocolException {
@@ -461,7 +473,8 @@ public class PollManager
 	}
 	if (theLog.isDebug2()) {
 	  theLog.debug2("about to get lock for " + cus.toString() + " act " +
-			activity + " expire " + expiration);
+			activity + " for " +
+			StringUtil.timeIntervalToString(expiration));
 	}
         lock = ar.getCusActivityLock(cus, activity, expiration);
         if (lock==null) {
@@ -503,7 +516,9 @@ public class PollManager
       }
 
       thePolls.put(ret_poll.m_key, new PollManagerEntry(ret_poll));
-      if (spec.getPollType() != Poll.VERIFY_POLL) {
+      if (spec.getPollType() != Poll.VERIFY_POLL &&
+	  !(spec.getPollType() == Poll.NAME_POLL &&
+	    spec.getLwrBound() != null)) {
         // set the activity lock in the tally
         ret_poll.getVoteTally().setActivityLock(lock);
         nm.startPoll(cus, ret_poll.getVoteTally(), false);
@@ -539,9 +554,18 @@ public class PollManager
     synchronized (pollMapLock) {
       theRecentPolls.put(key, pme);
     }
-    if (tally.getType() != Poll.VERIFY_POLL) {
+    // Don't tell the node manager about verify polls
+    // If closing a name poll that started ranged subpolls, don't tell
+    // the node manager about it until all ranged subpolls have finished
+    if (tally.getType() != Poll.VERIFY_POLL && !pme.poll.isSubpollRunning()) {
+      // if closing last name poll, concatenate all the name lists into the
+      // first tally and pass that to node manager
+      if (tally.getType() == Poll.NAME_POLL && tally instanceof V1PollTally) {
+	V1PollTally lastTally = (V1PollTally)tally;
+	tally = lastTally.concatenateNameSubPollLists();
+      }
       NodeManager nm = theDaemon.getNodeManager(tally.getArchivalUnit());
-      theLog.debug("sending completed poll results " + tally);
+      theLog.debug("handing poll results to node manager: " + tally);
       nm.updatePollResults(tally.getCachedUrlSet(), tally);
       try {
         theIDManager.storeIdentities();

@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.88 2004-09-29 06:34:49 tlipkis Exp $
+* $Id: Poll.java,v 1.89 2004-12-07 05:17:52 tlipkis Exp $
  */
 
 /*
@@ -101,4 +101,7 @@ public interface Poll {
    * @return VoteTally for this poll
    */
   public PollTally getVoteTally();
+
+  /** Kludge for V1Name subpolls */
+  public boolean isSubpollRunning();
 }

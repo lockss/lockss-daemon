@@ -1,5 +1,5 @@
 /*
-* $Id: BasePoll.java,v 1.10 2004-10-02 13:08:24 dshr Exp $
+* $Id: BasePoll.java,v 1.11 2004-12-07 05:17:52 tlipkis Exp $
  */
 
 /*
@@ -102,6 +102,10 @@ public abstract class BasePoll implements Poll {
     m_deadline = Deadline.in(duration);
     m_pollstate = PS_INITING;
     
+  }
+
+  public boolean isSubpollRunning() {
+    return false;
   }
 
   public void setMessage(LcapMessage msg) {
