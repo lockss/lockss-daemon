@@ -1,5 +1,5 @@
 /*
- * $Id: JettyManager.java,v 1.8 2003-06-20 22:34:51 claire Exp $
+ * $Id: JettyManager.java,v 1.9 2004-06-15 21:44:19 tlipkis Exp $
  */
 
 /*
@@ -55,6 +55,9 @@ public abstract class JettyManager extends BaseLockssManager {
 
   private static Logger log = Logger.getLogger("JettyMgr");
   private static boolean jettyLogInited = false;
+  private static Set portsInUse = Collections.synchronizedSet(new HashSet());
+
+  protected int runningOnPort = -1;
 
   public JettyManager() {
   }
@@ -100,5 +103,20 @@ public abstract class JettyManager extends BaseLockssManager {
 	Code.setVerbose(ver);
       }
     }
+  }
+
+  protected void runningOnPort(int port) {
+    if (port > 0) {
+      portsInUse.add(new Integer(port));
+      runningOnPort = port;
+    } else {
+      if (runningOnPort > 0) {
+	portsInUse.remove(new Integer(runningOnPort));
+      }
+    }
+  }
+
+  public static boolean isPortInUse(int port) {
+    return portsInUse.contains(new Integer(port));
   }
 }
