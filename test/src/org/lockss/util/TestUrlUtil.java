@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlUtil.java,v 1.15 2004-09-01 02:24:43 tlipkis Exp $
+ * $Id: TestUrlUtil.java,v 1.16 2004-09-01 02:34:23 tlipkis Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ public class TestUrlUtil extends LockssTestCase {
 
   // For testing against the behavior of code extracted from Java 1.4 URI class
   static String normalizePath(String path) {
-    switch (2) {
+    switch (1) {
     case 1:
       try {
 	return UrlUtil.normalizePath(path, true);
