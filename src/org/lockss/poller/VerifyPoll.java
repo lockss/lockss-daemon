@@ -1,5 +1,5 @@
 /*
-* $Id: VerifyPoll.java,v 1.38 2003-05-06 03:08:46 claire Exp $
+* $Id: VerifyPoll.java,v 1.39 2003-05-06 03:51:00 claire Exp $
  */
 
 /*
@@ -106,6 +106,8 @@ class VerifyPoll extends Poll {
       long minTime = now + (remainingTime / 2) - (remainingTime / 4);
       long maxTime = now + (remainingTime / 2) + (remainingTime / 4);
       m_voteTime = Deadline.atRandomRange(minTime, maxTime);
+      log.debug("scheduling verify vote for " + m_voteTime);
+      m_pollstate = PS_WAIT_VOTE;
       scheduleVote();
 
     }
@@ -119,12 +121,16 @@ class VerifyPoll extends Poll {
  void voteInPoll() {
    if(m_pollstate != PS_WAIT_TALLY) {
      try {
+       log.debug("sending our verify reply now.");
        // send our reply message
        sendVerifyReply(m_msg);
      }
      catch (IOException ex) {
        m_pollstate = ERR_IO;
      }
+   }
+   else {
+     log.debug("waiting for tally - not sending reply.");
    }
  }
 
