@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.25 2004-10-20 21:49:50 smorabito Exp $
+ * $Id: UrlUtil.java,v 1.25.2.1 2004-11-12 20:11:14 troberts Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -61,6 +61,7 @@ public class UrlUtil {
    */
   public static String normalizeUrl(String urlString)
       throws MalformedURLException {
+    log.debug3("Normalizing "+urlString);
     urlString = urlString.trim();	// remove extra spaces
     if ("".equals(urlString)) {		// permit empty
       return urlString;
@@ -71,6 +72,13 @@ public class UrlUtil {
     String host = url.getHost();
     int port = url.getPort();
     String file = url.getFile();
+    if (log.isDebug3()) {
+      log.debug3("protocal: "+protocol);
+      log.debug3("host: "+host);
+      log.debug3("port: "+port);
+      log.debug3("file: "+file);
+    }
+
 
     boolean changed = false;
 
@@ -99,6 +107,7 @@ public class UrlUtil {
     } else {
       String normPath = normalizePath(file);
       if (!normPath.equals(file)) {
+	log.debug3("Normalized "+file+" to "+normPath);
 	file = normPath;
 	changed = true;
       }
@@ -110,10 +119,12 @@ public class UrlUtil {
 //   }
     if (changed) {
       urlString = new URL(protocol, host, port, file).toString();
-      String query = url.getQuery();
-      if (query != null) {
-	urlString += "?" + query;
-      }
+//       String query = url.getQuery();
+//       log.debug3("Has query string: "+query);
+//       if (query != null) {
+// 	urlString += "?" + query;
+//       }
+      log.debug3("Changed, so returning "+urlString);
     }
     return urlString;
   }
