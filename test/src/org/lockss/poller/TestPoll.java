@@ -12,6 +12,7 @@ import org.lockss.util.*;
 import junit.framework.TestCase;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
+import org.lockss.test.FileUtil;
 
 /** JUnitTest case for class: org.lockss.poller.Poll */
 public class TestPoll extends TestCase {
@@ -31,6 +32,7 @@ public class TestPoll extends TestCase {
   protected LcapIdentity testID;
   protected LcapMessage[] testmsg;
   protected Poll[] testpolls;
+  protected PollManager pollmanager;
 
   public TestPoll(String _name) {
     super(_name);
@@ -38,6 +40,8 @@ public class TestPoll extends TestCase {
 
   /** setUp method for test case */
   protected void setUp() {
+    HashService.start();
+    pollmanager = PollManager.getPollManager();
     try {
       testaddr = InetAddress.getByName("127.0.0.1");
       testID = LcapIdentity.getIdentity(testaddr);
@@ -55,8 +59,8 @@ public class TestPoll extends TestCase {
         testentries,
         testaddr,
         (byte)5,
-        PollManager.generateRandomBytes(),
-        PollManager.generateRandomBytes(),
+        pollmanager.generateRandomBytes(),
+        pollmanager.generateRandomBytes(),
         LcapMessage.NAME_POLL_REQ + (i * 2),
         testduration,
         testID);
@@ -69,7 +73,7 @@ public class TestPoll extends TestCase {
     try {
       testpolls = new Poll[3];
       for(int i=0; i< 3; i++) {
-        testpolls[i] = PollManager.makePoll(testmsg[i]);
+        testpolls[i] = pollmanager.makePoll(testmsg[i]);
       }
     }
     catch (IOException ex) {
@@ -80,7 +84,7 @@ public class TestPoll extends TestCase {
   /** tearDown method for test case */
   protected void tearDown() {
     for(int i= 0; i< 3; i++) {
-      PollManager.removePoll(testpolls[i].m_key);
+      pollmanager.removePoll(testpolls[i].m_key);
     }
   }
 
@@ -116,7 +120,7 @@ public class TestPoll extends TestCase {
     rep = id.getReputation();
     // bad vote check
     try {
-      p.checkVote(PollManager.generateRandomBytes(), msg);
+      p.checkVote(pollmanager.generateRandomBytes(), msg);
     }
     catch(IllegalStateException ex) {
       // unitialized comm
@@ -153,7 +157,7 @@ public class TestPoll extends TestCase {
   /** test for method vote(..) */
   public void testVote() {
     Poll p = testpolls[1];
-    p.m_hash = PollManager.generateRandomBytes();
+    p.m_hash = pollmanager.generateRandomBytes();
     try {
       p.vote();
     }
@@ -174,7 +178,7 @@ public class TestPoll extends TestCase {
     p.m_tally.numNo = 2;
     p.m_tally.wtYes = 2000;
     p.m_tally.wtNo = 200;
-    p.m_hash = PollManager.generateRandomBytes();
+    p.m_hash = pollmanager.generateRandomBytes();
     try {
       p.voteInPoll();
     }
@@ -216,10 +220,6 @@ public class TestPoll extends TestCase {
     p.m_pendingVotes = 3;
     p.stopVote();
     assertEquals(2,p.m_pendingVotes);
-  }
-
-  public void testVerifyPoll() {
-
   }
 
 

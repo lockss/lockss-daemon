@@ -1,5 +1,5 @@
 /*
- * $Id: RunDaemon.java,v 1.8 2002-12-06 19:36:45 claire Exp $
+ * $Id: RunDaemon.java,v 1.9 2002-12-17 02:24:45 claire Exp $
  */
 
 /*
@@ -59,6 +59,7 @@ public class RunDaemon {
   private SimulatedArchivalUnit sau = null;
   private List propUrls = null;
   private String dirPath = null;
+  private PollManager pollManager = null;
 
   public static void main(String argv[]) {
     Vector urls = new Vector();
@@ -89,7 +90,7 @@ public class RunDaemon {
 
     HashService.start();
     LcapComm.startComm();
-
+    pollManager = PollManager.getPollManager();
     dirPath =
       Configuration.getParam(PARAM_CACHE_LOCATION, DEFAULT_DIR_PATH);
     boolean shouldCallPoll =
@@ -107,10 +108,10 @@ public class RunDaemon {
     if (shouldCallPoll) {
       try {
 	Thread.currentThread().sleep(1000);
-	PollManager.makePollRequest("http://www.example.com/", ".*",
+	pollManager.makePollRequest("http://www.example.com/", ".*",
 				    poll_type,
 				    5, InetAddress.getByName("239.4.5.6"),
-				    5 * 60 * 1000, 60 * 1000);
+				    3 * 60 * 1000, 60 * 1000);
       } catch (Exception e) {
 	e.printStackTrace();
       }

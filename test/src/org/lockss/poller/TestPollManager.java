@@ -33,6 +33,7 @@ public class TestPollManager extends TestCase {
   protected InetAddress testaddr;
   protected LcapIdentity testID;
   protected LcapMessage[] testmsg;
+  protected PollManager pollmanager;
 
   public TestPollManager(String _name) {
     super(_name);
@@ -40,6 +41,7 @@ public class TestPollManager extends TestCase {
 
   /** setUp method for test case */
   protected void setUp() {
+    pollmanager = PollManager.getPollManager();
     try {
       testaddr = InetAddress.getByName("127.0.0.1");
       testID = LcapIdentity.getIdentity(testaddr);
@@ -57,8 +59,8 @@ public class TestPollManager extends TestCase {
           testentries,
           testaddr,
           (byte)5,
-          PollManager.generateRandomBytes(),
-          PollManager.generateRandomBytes(),
+          pollmanager.generateRandomBytes(),
+          pollmanager.generateRandomBytes(),
           LcapMessage.NAME_POLL_REQ + (i * 2),
           testduration,
           testID);
@@ -72,7 +74,7 @@ public class TestPollManager extends TestCase {
   /** tearDown method for test case */
   protected void tearDown() {
     for(int i=0; i<3; i++) {
-      PollManager.removePoll(PollManager.makeKey(testmsg[i].getChallenge()));
+      pollmanager.removePoll(pollmanager.makeKey(testmsg[i].getChallenge()));
     }
   }
 
@@ -80,7 +82,7 @@ public class TestPollManager extends TestCase {
   public void testMakePoll() {
     // make a name poll
     try {
-      Poll p1 = PollManager.makePoll(testmsg[0]);
+      Poll p1 = pollmanager.makePoll(testmsg[0]);
       // make sure we got the right type of poll here
       assertTrue(p1 instanceof NamePoll);
     }
@@ -90,7 +92,7 @@ public class TestPollManager extends TestCase {
 
     // make a content poll
     try {
-      Poll p2 = PollManager.makePoll(testmsg[1]);
+      Poll p2 = pollmanager.makePoll(testmsg[1]);
       // make sure we got the right type of poll here
       assertTrue(p2 instanceof ContentPoll);
 
@@ -102,7 +104,7 @@ public class TestPollManager extends TestCase {
 
     // make a verify poll
     try {
-      Poll p3 = PollManager.makePoll(testmsg[2]);
+      Poll p3 = pollmanager.makePoll(testmsg[2]);
       // make sure we got the right type of poll here
       assertTrue(p3 instanceof VerifyPoll);
     }
@@ -115,7 +117,7 @@ public class TestPollManager extends TestCase {
   /** test for method makePollRequest(..) */
   public void testMakePollRequest() {
     try {
-      PollManager.makePollRequest(urlstr,regexp,LcapMessage.VERIFY_POLL_REQ,
+      pollmanager.makePollRequest(urlstr,regexp,LcapMessage.VERIFY_POLL_REQ,
                                   (byte)5,testaddr,testduration, 10000);
     }
     catch (IllegalStateException e) {
@@ -130,8 +132,8 @@ public class TestPollManager extends TestCase {
   public void testFindPoll() {
     // lets see if we can find our name poll
     try {
-      Poll p1 = PollManager.makePoll(testmsg[0]);
-      Poll p2 = PollManager.findPoll(testmsg[0]);
+      Poll p1 = pollmanager.makePoll(testmsg[0]);
+      Poll p2 = pollmanager.findPoll(testmsg[0]);
       assertEquals(p1, p2);
     }
     catch (IOException ex) {
@@ -142,7 +144,7 @@ public class TestPollManager extends TestCase {
   /** test for method handleMessage(..) */
 //   public void testHandleMessage() {
 //     try {
-//       PollManager.handleMessage(testmsg[1]);
+//       pollmanager.handleMessage(testmsg[1]);
 //     }
 //     catch (IOException ex) {
 //       fail("could not create or find content message");
@@ -152,9 +154,9 @@ public class TestPollManager extends TestCase {
   /** test for method removePoll(..) */
   public void testRemovePoll() {
     try {
-      Poll p1 = PollManager.makePoll(testmsg[0]);
+      Poll p1 = pollmanager.makePoll(testmsg[0]);
       assertNotNull(p1);
-      Poll p2 = PollManager.removePoll(p1.m_key);
+      Poll p2 = pollmanager.removePoll(p1.m_key);
       assertEquals(p1, p2);
     }
     catch (IOException ex) {
@@ -177,8 +179,8 @@ public class TestPollManager extends TestCase {
           testentries,
           testaddr,
           (byte)5,
-          PollManager.generateRandomBytes(),
-          PollManager.generateRandomBytes(),
+          pollmanager.generateRandomBytes(),
+          pollmanager.generateRandomBytes(),
           LcapMessage.NAME_POLL_REQ + (i * 2),
           testduration,
           testID);
@@ -190,32 +192,32 @@ public class TestPollManager extends TestCase {
 
     // check content poll conflicts
     try {
-      Poll c1 = PollManager.makePoll(sameroot[1]);
+      Poll c1 = pollmanager.makePoll(sameroot[1]);
       // differnt content poll should be ok
-      CachedUrlSet cus = PollManager.checkForConflicts(testmsg[1]);
+      CachedUrlSet cus = pollmanager.checkForConflicts(testmsg[1]);
       assertNull("different content poll s/b ok", cus);
 
       // same content poll should be a conflict
-      cus = PollManager.checkForConflicts(sameroot[1]);
+      cus = pollmanager.checkForConflicts(sameroot[1]);
       assertNotNull("same content poll root s/b conflict", cus);
 
       // different name poll should be ok
-      cus = PollManager.checkForConflicts(testmsg[0]);
+      cus = pollmanager.checkForConflicts(testmsg[0]);
       assertNull("name poll with different root s/b ok", cus);
 
       // same name poll should be conflict
-      cus = PollManager.checkForConflicts(sameroot[0]);
+      cus = pollmanager.checkForConflicts(sameroot[0]);
       assertNotNull("same name poll root s/b conflict", cus);
 
       // different verify poll should be ok
-      cus = PollManager.checkForConflicts(testmsg[2]);
+      cus = pollmanager.checkForConflicts(testmsg[2]);
       assertNull("verify poll s/b ok", cus);
 
-      cus = PollManager.checkForConflicts(sameroot[2]);
+      cus = pollmanager.checkForConflicts(sameroot[2]);
       assertNull("verify poll s/b ok", cus);
 
       // remove the poll
-      PollManager.removePoll(c1.m_key);
+      pollmanager.removePoll(c1.m_key);
     }
     catch (IOException ex) {
       fail("unable to make content poll");
@@ -223,32 +225,32 @@ public class TestPollManager extends TestCase {
 
     // check name poll conflicts
     try {
-      Poll np = PollManager.makePoll(sameroot[0]);
+      Poll np = pollmanager.makePoll(sameroot[0]);
       // differnt name poll should be ok
-      CachedUrlSet cus = PollManager.checkForConflicts(testmsg[0]);
+      CachedUrlSet cus = pollmanager.checkForConflicts(testmsg[0]);
       assertNull("different name poll s/b ok", cus);
 
       // same content poll should be a conflict
-      cus = PollManager.checkForConflicts(sameroot[0]);
+      cus = pollmanager.checkForConflicts(sameroot[0]);
       assertNotNull("same name poll root s/b conflict", cus);
 
       // different name poll should be ok
-      cus = PollManager.checkForConflicts(testmsg[1]);
+      cus = pollmanager.checkForConflicts(testmsg[1]);
       assertNull("content poll with different root s/b ok", cus);
 
       // same name poll should be conflict
-      cus = PollManager.checkForConflicts(sameroot[1]);
+      cus = pollmanager.checkForConflicts(sameroot[1]);
       assertNotNull("content poll root s/b conflict", cus);
 
       // different verify poll should be ok
-      cus = PollManager.checkForConflicts(testmsg[2]);
+      cus = pollmanager.checkForConflicts(testmsg[2]);
       assertNull("verify poll s/b ok", cus);
 
-      cus = PollManager.checkForConflicts(sameroot[2]);
+      cus = pollmanager.checkForConflicts(sameroot[2]);
       assertNull("verify poll s/b ok", cus);
 
       // remove the poll
-      PollManager.removePoll(np.m_key);
+      pollmanager.removePoll(np.m_key);
     }
     catch (IOException ex) {
       fail("unable to make content poll");
@@ -259,16 +261,16 @@ public class TestPollManager extends TestCase {
   /** test for method closeThePoll(..) */
   public void testCloseThePoll() {
     try {
-      Poll p1 = PollManager.makePoll(testmsg[0]);
+      Poll p1 = pollmanager.makePoll(testmsg[0]);
       // we should now be open
-      assertTrue(!PollManager.isPollClosed(p1.m_challenge));
+      assertTrue(!pollmanager.isPollClosed(p1.m_challenge));
 
       // we should now be closed
-      PollManager.closeThePoll(p1.m_key);
-      assertTrue(PollManager.isPollClosed(p1.m_challenge));
+      pollmanager.closeThePoll(p1.m_key);
+      assertTrue(pollmanager.isPollClosed(p1.m_challenge));
       // we should reject an attempt to handle a packet with this key
       try {
-        PollManager.handleMessage(testmsg[0]);
+        pollmanager.handleMessage(testmsg[0]);
         //fail("packet on recent poll s/b rejected");
       }
       catch (IOException ex) {
@@ -282,22 +284,22 @@ public class TestPollManager extends TestCase {
 
   /** test for method getHasher(..) */
   public void testGetHasher() {
-    MessageDigest md = PollManager.getHasher();
+    MessageDigest md = pollmanager.getHasher();
     assertNotNull(md);
   }
 
   /** test for method makeVerifier(..) */
   public void testMakeVerifier() {
     // test for make verifier - this will also store the verify/secret pair
-    byte[] verifier = PollManager.makeVerifier();
+    byte[] verifier = pollmanager.makeVerifier();
     assertNotNull("unable to make and store a verifier", verifier);
 
     // retrieve our secret
-    byte[] secret = PollManager.getSecret(verifier);
+    byte[] secret = pollmanager.getSecret(verifier);
     assertNotNull("unable to retrieve secret for verifier", secret);
 
     // confirm that the verifier is the hash of the secret
-    MessageDigest md = PollManager.getHasher();
+    MessageDigest md = pollmanager.getHasher();
     md.update(secret, 0, secret.length);
     byte[] verifier_check = md.digest();
     assertTrue("secret does not match verifier",
@@ -308,8 +310,8 @@ public class TestPollManager extends TestCase {
   /** test for method makeKey(..) */
   public void testMakeKey() {
 
-    byte[] key_bytes = PollManager.generateRandomBytes();
-    String key_str = PollManager.makeKey(key_bytes);
+    byte[] key_bytes = pollmanager.generateRandomBytes();
+    String key_str = pollmanager.makeKey(key_bytes);
 
     // the key str reconverted as bytes
     byte[] str_bytes = B64Code.decode(key_str.toCharArray());
