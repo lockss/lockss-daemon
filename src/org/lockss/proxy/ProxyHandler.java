@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.18 2003-09-12 20:47:47 eaalto Exp $
+ * $Id: ProxyHandler.java,v 1.19 2004-02-10 08:01:53 tlipkis Exp $
  */
 
 /*
@@ -31,7 +31,7 @@ in this Software without prior written authorization from Stanford University.
 */
 // ========================================================================
 // Copyright (c) 1999 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.18 2003-09-12 20:47:47 eaalto Exp $
+// $Id: ProxyHandler.java,v 1.19 2004-02-10 08:01:53 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -92,6 +92,18 @@ public class ProxyHandler extends AbstractHttpHandler {
     if (cu != null && cu.hasContent()) {
       serveFromCache(pathInContext, pathParams, request, response, cu);
       return;
+    }
+
+    boolean isRepairRequest =
+      org.lockss.util.StringUtil.equalStrings(request.getField("user-agent"),
+					      LockssDaemon.getUserAgent());
+    if (isRepairRequest) {
+      // This should never happen, as it should have been caught by the
+      // ProcyAccessHandler.  But we never want to forward repair request
+      // from another LOCKSS cache, so we check here just to make sure.
+      response.sendError(HttpResponse.__404_Not_Found);
+      request.setHandled(true);
+      return; 
     }
 
     Socket socket = null;
