@@ -1,5 +1,5 @@
 /*
- * $Id: Logger.java,v 1.29 2004-01-26 20:02:29 tyronen Exp $
+ * $Id: Logger.java,v 1.30 2004-02-23 09:19:33 tlipkis Exp $
  */
 
 /*
@@ -108,8 +108,7 @@ public class Logger {
   private static List targets = new ArrayList();
 
   // allow default level to be specified on command line
-  private static int defaultLevel;
-  private static String defaultLevelName;
+  private static int globalDefaultLevel;
 
   private static boolean deferredInitDone = false;
 
@@ -123,6 +122,8 @@ public class Logger {
 
   int level;			// this log's level
   private String name;			// this log's name
+  private int defaultLevel = globalDefaultLevel;
+  private String defaultLevelParam = PARAM_DEFAULT_LEVEL;
 
   static {
     // until we get configured, output to default target
@@ -140,27 +141,33 @@ public class Logger {
     this.name = name;
   }
 
+  /** Private constructor for use by public factory methods
+   */
+  private Logger(int level, String name, String defaultLevelParam) {
+    this.level = level;
+    this.name = name;
+    this.defaultLevel = level;
+    this.defaultLevelParam = defaultLevelParam;
+  }
+
   /**
    * Logger factory.  Return the unique instance
    * of <code>Logger</code> with the given name, creating it if necessary.
    * @param name identifies the log instance, appears in output
    */
   public static Logger getLogger(String name) {
-    if (!deferredInitDone) {
-      // set this true FIRST, as this method will be called recursively by
-      // deferredInit()
-      deferredInitDone = true;
-      deferredInit();
-    }
-    if (name == null) {
-      name = genName();
-    }
-    return getLogger(name, getConfiguredLevel(name));
+    deferredInit();
+    return getLoggerWithInitialLevel(name, getConfiguredLevel(name));
   }
 
   private static void deferredInit() {
     // Can't call this until Configuration class is fully loaded.
-    myLog = Logger.getLogger("Logger");
+    if (!deferredInitDone) {
+      // set this true FIRST, as this method will be called recursively by
+      // deferredInit()
+      deferredInitDone = true;
+      myLog = Logger.getLogger("Logger");
+    }
   }
 
   /**
@@ -170,16 +177,54 @@ public class Logger {
    * log without being invoked recursively, which causes its class
    * initialization to not complete correctly.
    * @param name identifies the log instance, appears in output
-   * @param level the initial log level (<code>Logger.LEVEL_XXX</code>).
+   * @param initialLevel the initial log level (<code>Logger.LEVEL_XXX</code>).
    */
-  public static Logger getLogger(String name, int level) {
+  public static Logger getLoggerWithInitialLevel(String name,
+						 int initialLevel) {
     // This method MUST NOT make any reference to Configuration !!
     if (name == null) {
       name = genName();
     }
     Logger l = (Logger)logs.get(name);
     if (l == null) {
-      l = new Logger(level, name);
+      l = new Logger(initialLevel, name);
+      if (myLog != null) myLog.info("Creating logger: " + name);
+      logs.put(name, l);
+    }
+    return l;
+  }
+
+  /**
+   * Special purpose Logger factory.  Return the <code>Logger</code> with
+   * the given name, establishing its initial default level, and the
+   * configuration parameter name of its default level.  This is primarily
+   * intended to be used by classes that implement a foreign logging
+   * interface in terms of this logger.  Because such interfaces
+   * potentially support logging from a large number of classes not
+   * directly related to LOCKSS, it is useful to be able to establish
+   * defaults that are distinct from the normal system-wide defaults.
+   * @param name identifies the log instance, appears in output
+   * @param defaultLevel the default log level if no config param is
+   * present specifying the level or the default level
+   * @param defaultLevelParam the name of the config param specifying the
+   * default level.
+   */
+  public static Logger getLoggerWithDefaultLevel(String name,
+						 String defaultLevelName,
+						 String defaultLevelParam) {
+    deferredInit();
+    if (name == null) {
+      name = genName();
+    }
+    Logger l = (Logger)logs.get(name);
+    if (l == null) {
+      int defaultLevel = globalDefaultLevel;
+      try {
+	defaultLevel = levelOf(defaultLevelName);
+      } catch (Exception e) {
+      }
+      l = new Logger(defaultLevel, name, defaultLevelParam);
+      if (myLog != null) myLog.debug2("Creating logger: " + name);
       logs.put(name, l);
     }
     return l;
@@ -187,11 +232,24 @@ public class Logger {
 
   /** Get the log level for the given log name from the configuration.
    */
+  int getConfiguredLevel() {
+    return getConfiguredLevel(name, defaultLevelParam, defaultLevel);
+  }
+
+  /** Get the log level for the given log name from the configuration.
+   */
   static int getConfiguredLevel(String name) {
+    return getConfiguredLevel(name, PARAM_DEFAULT_LEVEL, globalDefaultLevel);
+  }
+
+  /** Get the log level for the given log name from the configuration.
+   */
+  static int getConfiguredLevel(String name, String defaultParamName,
+				int defaultLevel) {
     String levelName =
       Configuration.getParam(StringUtil.replaceString(PARAM_LOG_LEVEL,
 						      "<logname>", name),
-			     Configuration.getParam(PARAM_DEFAULT_LEVEL));
+			     Configuration.getParam(defaultParamName));
     int level = defaultLevel;
     if (levelName != null) {
       try {
@@ -240,7 +298,7 @@ public class Logger {
 
   /** Return numeric log level (<code>Logger.LEVEL_XXX</code>) for given name.
    */
-  static int levelOf(String name) {
+  static int levelOf(String name) throws IllegalArgumentException {
     for (int ix = 0; ix < levelDescrs.length; ix++) {
       LevelDescr l = levelDescrs[ix];
       if (l.name.equalsIgnoreCase(name)) {
@@ -354,8 +412,7 @@ public class Logger {
    * org.lockss.defaultLogLevel system property if present, or DEFAULT_LEVEL
    */
   static void setInitialDefaultLevel() {
-    defaultLevel = getInitialDefaultLevel();
-    defaultLevelName = nameOf(defaultLevel);
+    globalDefaultLevel = getInitialDefaultLevel();
   }
 
   /** Return a callback to reset log levels when config changes.  XXX This
@@ -382,7 +439,7 @@ public class Logger {
     for (Iterator iter = logs.values().iterator();
 	 iter.hasNext(); ) {
       Logger l = (Logger)iter.next();
-      l.setLevel(getConfiguredLevel(l.name));
+      l.setLevel(l.getConfiguredLevel());
     }
   }
 
@@ -434,6 +491,15 @@ public class Logger {
 //        info("Changing log level to " + nameOf(level));
       this.level = level;
     }
+  }
+
+  /**
+   * Set minimum severity level logged by this log
+   * @param levelName level string
+   */
+  public void setLevel(String levelName) {
+    int level = levelOf(levelName);
+    setLevel(level);
   }
 
   /**
