@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.42 2003-12-11 22:40:52 eaalto Exp $
+ * $Id: BaseArchivalUnit.java,v 1.43 2003-12-11 23:11:11 eaalto Exp $
  */
 
 /*
@@ -451,7 +451,6 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     Reader replaceReader = StringFilter.makeNestedFilter(reader,
         new String[][] {
         { "<br>", " " },
-        { "<p>", " " },
         { "&nbsp;", " " }
     },
         true);

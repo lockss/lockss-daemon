@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArchivalUnit.java,v 1.11 2003-12-11 22:40:52 eaalto Exp $
+ * $Id: TestBaseArchivalUnit.java,v 1.12 2003-12-11 23:11:11 eaalto Exp $
  */
 
 /*
@@ -210,7 +210,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
 
   public void testCheckCrawlPermissionWithHtml() {
     int firstWS = BaseArchivalUnit.PERMISSION_STRING.indexOf(' ');
-    if (firstWS <=0) {
+    if (firstWS <= 0) {
       fail("No spaces in permission string, or starts with space");
     }
 
@@ -231,7 +231,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     // multiple, with mixed case
     sb = new StringBuffer("laa-dee-dah-LOCK-KCOL\n\n");
     sb.append(subStr1);
-    sb.append("<BR>&nbsp;<p>");
+    sb.append("<BR>&nbsp;");
     sb.append(subStr2);
     sb.append("\n\nTheEnd!");
     testStr = sb.toString();
