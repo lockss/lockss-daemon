@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.74 2003-05-03 00:10:37 claire Exp $
+* $Id: Poll.java,v 1.75 2003-05-06 03:08:46 claire Exp $
  */
 
 /*
@@ -66,16 +66,16 @@ public abstract class Poll implements Serializable {
       "poll.agreeVerify";
   static final String PARAM_DISAGREE_VERIFY = Configuration.PREFIX +
       "poll.disagreeVerify";
-  static final String PARAM_MARGIN = Configuration.PREFIX +
+  static final String PARAM_VOTE_MARGIN = Configuration.PREFIX +
       "poll.voteMargin";
-  static final String PARAM_TRUSTED_MARGIN = Configuration.PREFIX +
-      "poll.trustedMargin";
+  static final String PARAM_TRUSTED_WEIGHT = Configuration.PREFIX +
+      "poll.trustedWeight";
 
-  static final int DEFAULT_MARGIN = 75;
-  static final int DEFAULT_TRUSTED_MARGIN = 10;
+  static final int DEFAULT_VOTE_MARGIN = 75;
+  static final int DEFAULT_TRUSTED_WEIGHT = 350;
   static final int DEFAULT_AGREE_VERIFY = 10;
   static final int DEFAULT_DISAGREE_VERIFY = 80;
-  static final String[] ERROR_STRINGS = {"Poll Complete","Hash Schedule Error",
+  static final String[] ERROR_STRINGS = {"Poll Complete","Hasher Busy",
       "Hashing Error", "IO Error"
   };
   public static final int ERR_SCHEDULE_HASH = -1;
@@ -95,7 +95,7 @@ public abstract class Poll implements Serializable {
   double m_agreeVer = 0;     // the max percentage of time we will verify
   double m_disagreeVer = 0;  // the max percentage of time we will verify
   double m_margin = 0;    // the margin by which we must win or lose
-  double m_trustedMargin = 0;// the margin by which a lost poll reputations
+  double m_trustedWeight = 0;// the min ave. weight of the winners, when we lose.
   CachedUrlSet m_cus;     // the cached url set retrieved from the archival unit
   PollSpec m_pollspec;
   byte[] m_challenge;     // The caller's challenge string
@@ -189,10 +189,10 @@ public abstract class Poll implements Serializable {
     m_disagreeVer = ((double)Configuration.getIntParam(PARAM_DISAGREE_VERIFY,
         DEFAULT_DISAGREE_VERIFY)) / 100;
 
-    m_trustedMargin = ((double)Configuration.getIntParam(PARAM_TRUSTED_MARGIN,
-        DEFAULT_TRUSTED_MARGIN)) / 100;
-    m_margin = ((double)Configuration.getIntParam(PARAM_MARGIN,
-        DEFAULT_MARGIN)) / 100;
+    m_trustedWeight = ((double)Configuration.getIntParam(PARAM_TRUSTED_WEIGHT,
+        DEFAULT_TRUSTED_WEIGHT));
+    m_margin = ((double)Configuration.getIntParam(PARAM_VOTE_MARGIN,
+        DEFAULT_VOTE_MARGIN)) / 100;
 
   }
 
@@ -404,6 +404,10 @@ public abstract class Poll implements Serializable {
     // make sure we haven't already voted
     if(m_tally.hasVoted(voter)) {
       log.warning("Ignoring multiple vote from " + voter);
+      int oldRep = voter.getReputation();
+      idMgr.changeReputation(voter, IdentityManager.REPLAY_DETECTED);
+      int newRep = voter.getReputation();
+      m_tally.adjustReputation(voter,newRep-oldRep);
       return false;
     }
 

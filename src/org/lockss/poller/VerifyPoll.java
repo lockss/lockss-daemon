@@ -1,5 +1,5 @@
 /*
-* $Id: VerifyPoll.java,v 1.37 2003-04-16 03:39:23 claire Exp $
+* $Id: VerifyPoll.java,v 1.38 2003-05-06 03:08:46 claire Exp $
  */
 
 /*
@@ -61,6 +61,8 @@ class VerifyPoll extends Poll {
        // so we set our state to wait for a tally.
        m_pollstate = PS_WAIT_TALLY;
     }
+    String key = String.valueOf(B64Code.encode(msg.getVerifier()));
+    originalPoll = m_pollmanager.getPoll(key);
   }
 
 
@@ -99,7 +101,13 @@ class VerifyPoll extends Poll {
   void startPoll() {
     log.debug("Starting new verify poll:" + m_key);
     if(!idMgr.isLocalIdentity(m_caller)) {
+      long now = TimeBase.nowMs();
+      long remainingTime = m_deadline.getRemainingTime();
+      long minTime = now + (remainingTime / 2) - (remainingTime / 4);
+      long maxTime = now + (remainingTime / 2) + (remainingTime / 4);
+      m_voteTime = Deadline.atRandomRange(minTime, maxTime);
       scheduleVote();
+
     }
     TimerQueue.schedule(m_deadline, new PollTimerCallback(), this);
  }
@@ -144,6 +152,7 @@ class VerifyPoll extends Poll {
   private void updateReputation()  {
     log.info(m_msg.toString() + " tally " + toString());
     LcapIdentity id = m_caller;
+    int oldRep = id.getReputation();
 
     if ((m_tally.numAgree + m_tally.numDisagree) < 1) {
       log.debug("vote failed to verify");
@@ -155,8 +164,11 @@ class VerifyPoll extends Poll {
       log.debug("vote disowned.");
       idMgr.changeReputation(id, IdentityManager.VOTE_DISOWNED);
     }
-    // now we need to update the tally for the poll which triggered this verify
-
+    int newRep = id.getReputation();
+    if(originalPoll != null) {
+      originalPoll.getVoteTally().adjustReputation(id, newRep -oldRep);
+      log.debug("adjusted voter reputation in poll: " + originalPoll.getKey());
+    }
   }
 
   private void sendVerifyReply(LcapMessage msg) throws IOException  {

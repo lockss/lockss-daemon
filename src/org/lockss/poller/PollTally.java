@@ -208,7 +208,7 @@ public class PollTally {
   public String getErrString() {
     switch(poll.m_pollstate) {
       case Poll.ERR_SCHEDULE_HASH:
-        return "Error scheduling hash";
+        return "Hasher Busy";
       case Poll.ERR_HASHING:
         return "Error hashing";
       case Poll.ERR_IO:
@@ -233,6 +233,9 @@ public class PollTally {
       case STATE_RESULTS_TOO_CLOSE:
         return "Too Close";
       case STATE_WON:
+        if(replayDeadline != null) {
+          return "Repaired";
+        }
         return "Won";
       case STATE_LOST:
         return "Lost";
@@ -297,8 +300,8 @@ public class PollTally {
   }
 
   public boolean isTrustedResults() {
-    double act_margin = (double)wtDisagree/ (double)(wtAgree + wtDisagree);
-    return act_margin >= poll.m_trustedMargin;
+
+    return wtDisagree/numDisagree >= poll.m_trustedWeight;
   }
 
 
@@ -311,6 +314,24 @@ public class PollTally {
       }
     }
     return false;
+  }
+
+  void adjustReputation(LcapIdentity voterID, int repDelta) {
+    synchronized (this) {
+      Iterator it = pollVotes.iterator();
+      while (it.hasNext()) {
+        Vote vote = (Vote) it.next();
+        if (voterID.isEqual(vote.getIDAddress())) {
+          if (vote.isAgreeVote()) {
+            wtAgree += repDelta;
+          }
+          else {
+            wtDisagree += repDelta;
+          }
+          return;
+        }
+      }
+    }
   }
 
   void addVote(Vote vote, LcapIdentity id, boolean isLocal) {
@@ -360,7 +381,6 @@ public class PollTally {
       log.warning("Call to replay a poll vote without call to replay all");
     }
     if(poll.isErrorState() || !replayIter.hasNext()) {
-      replayDeadline = null;
       replayIter = null;
       poll.stopPoll();
     }
@@ -419,7 +439,7 @@ class ReplayVoteCallback implements HashService.Callback {
         replayNextVote();
       }
       else {
-        log.info("replay vote hash failed with exception:" + e.getMessage());
+        log.warning("replay vote hash failed with exception:" + e.getMessage());
       }
     }
   }

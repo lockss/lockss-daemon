@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.93 2003-05-03 01:02:24 claire Exp $
+* $Id: PollManager.java,v 1.94 2003-05-06 03:08:46 claire Exp $
  */
 
 /*
@@ -53,8 +53,6 @@ import org.lockss.state.*;
 public class PollManager  extends BaseLockssManager {
   static final String PARAM_RECENT_EXPIRATION = Configuration.PREFIX +
       "poll.expireRecent";
-  static final String PARAM_REPLAY_EXPIRATION = Configuration.PREFIX +
-      "poll.expireReplay";
   static final String PARAM_VERIFY_EXPIRATION = Configuration.PREFIX +
       "poll.expireVerifier";
 
@@ -68,12 +66,11 @@ public class PollManager  extends BaseLockssManager {
   static final String PARAM_QUORUM = Configuration.PREFIX + "poll.quorum";
 
   static long DEFAULT_NAMEPOLL_DEADLINE =  10 * Constants.MINUTE;
-  static long DEFAULT_CONTENTPOLL_MIN = Constants.HOUR;
+  static long DEFAULT_CONTENTPOLL_MIN = 3 * Constants.MINUTE;
   static long DEFAULT_CONTENTPOLL_MAX = 5 * Constants.DAY;
   static final int DEFAULT_QUORUM = 5;
 
   static final long DEFAULT_RECENT_EXPIRATION = Constants.DAY;
-  static final long DEFAULT_REPLAY_EXPIRATION = DEFAULT_RECENT_EXPIRATION/2;
   static final long DEFAULT_VERIFY_EXPIRATION = Constants.DAY;
 
   private static final long POLL_DURATION_MULTIPLIER = 4;
@@ -95,7 +92,6 @@ public class PollManager  extends BaseLockssManager {
   private static long m_minNamePollDuration;
   private static long m_maxNamePollDuration;
   private static long m_recentPollExpireTime;
-  private static long m_replayPollExpireTime;
   private static long m_verifierExpireTime;
   private static int m_quorum;
 
@@ -251,7 +247,7 @@ public class PollManager  extends BaseLockssManager {
       NodeManager nm = theDaemon.getNodeManager(tally.getArchivalUnit());
       nm.startPoll(tally.getCachedUrlSet(), tally, true);
       theLog.debug2("starting replay of poll " + key);
-      expiration = m_replayPollExpireTime;
+      expiration = m_maxContentPollDuration;
       d = Deadline.in(expiration);
       tally.startReplay(d);
     }
@@ -444,6 +440,12 @@ public class PollManager  extends BaseLockssManager {
       NodeManager nm = theDaemon.getNodeManager(tally.getArchivalUnit());
       theLog.debug("sending completed poll results " + tally);
       nm.updatePollResults(tally.getCachedUrlSet(), tally);
+      try {
+        theIDManager.storeIdentities();
+      }
+      catch (ProtocolException ex) {
+        theLog.error("Unable to write Identity DB file.");
+      }
       // free the activity regulator
       freePollLock(tally.getCachedUrlSet(),
                    tally.getType()==Poll.CONTENT_POLL);
@@ -714,8 +716,6 @@ public class PollManager  extends BaseLockssManager {
 
     m_recentPollExpireTime = newConfig.getTimeInterval(PARAM_RECENT_EXPIRATION,
         DEFAULT_RECENT_EXPIRATION);
-    m_replayPollExpireTime = newConfig.getTimeInterval(PARAM_REPLAY_EXPIRATION,
-        DEFAULT_REPLAY_EXPIRATION);
     m_verifierExpireTime = newConfig.getTimeInterval(PARAM_VERIFY_EXPIRATION,
                                         DEFAULT_VERIFY_EXPIRATION);
   }
@@ -750,7 +750,7 @@ public class PollManager  extends BaseLockssManager {
           ret = m_minContentPollDuration;
         }
         else if (ret > m_maxContentPollDuration) {
-          theLog.info("My poll estimate (" + ret
+          theLog.warning("My poll estimate (" + ret
                        + ") is too high, adjusting to the maximum: "
                        + m_maxContentPollDuration);
           ret = m_maxContentPollDuration;
@@ -959,7 +959,7 @@ public class PollManager  extends BaseLockssManager {
         return "Active";
       }
       else if(isPollSuspended()) {
-        return "Suspended";
+        return "Repairing";
       }
       return "Unknown";
     }

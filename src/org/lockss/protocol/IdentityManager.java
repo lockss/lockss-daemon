@@ -1,5 +1,5 @@
 /*
-* $Id: IdentityManager.java,v 1.29 2003-05-06 01:45:45 troberts Exp $
+* $Id: IdentityManager.java,v 1.30 2003-05-06 03:08:46 claire Exp $
  */
 
 /*
@@ -313,7 +313,7 @@ public class IdentityManager extends BaseLockssManager {
     }
   }
 
-  void storeIdentities() throws ProtocolException {
+  public void storeIdentities() throws ProtocolException {
     try {
       String fn = Configuration.getParam(PARAM_IDDB_DIR);
       if (fn==null) {
