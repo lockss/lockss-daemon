@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.15 2003-04-11 06:33:13 tal Exp $
+ * $Id: ProxyHandler.java,v 1.16 2003-06-04 20:11:23 tal Exp $
  */
 
 /*
@@ -31,7 +31,7 @@ in this Software without prior written authorization from Stanford University.
 */
 // ========================================================================
 // Copyright (c) 1999 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.15 2003-04-11 06:33:13 tal Exp $
+// $Id: ProxyHandler.java,v 1.16 2003-06-04 20:11:23 tal Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -87,7 +87,7 @@ public class ProxyHandler extends AbstractHttpHandler {
 
     String urlString = uri.toString();
     CachedUrl cu = pluginMgr.findMostRecentCachedUrl(urlString);
-    log.debug2("cu: " + cu);
+    if (log.isDebug2()) log.debug2("cu: " + cu);
     if (cu != null && cu.hasContent()) {
       serveFromCache(pathInContext, pathParams, request, response, cu);
       return;

@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.35 2003-05-06 01:45:45 troberts Exp $
+ * $Id: PluginManager.java,v 1.36 2003-06-04 20:11:23 tal Exp $
  */
 
 /*
@@ -297,10 +297,10 @@ public class PluginManager extends BaseLockssManager {
    * null if au not present on this cache
    */
   public CachedUrlSet findCachedUrlSet(PollSpec spec) {
-    log.debug3(this +".findCachedUrlSet2("+spec+")");
+    if (log.isDebug3()) log.debug3(this +".findCachedUrlSet2("+spec+")");
     String auId = spec.getAUId();
     ArchivalUnit au = getAuFromId(auId);
-    log.debug3("au: " + au);
+    if (log.isDebug3()) log.debug3("au: " + au);
     if (au == null) return null;
     String url = spec.getUrl();
     CachedUrlSet cus;
@@ -313,7 +313,7 @@ public class PluginManager extends BaseLockssManager {
       cus = au.makeCachedUrlSet(new RangeCachedUrlSetSpec(url,
           spec.getLwrBound(), spec.getUprBound()));
     }
-    log.debug3("ret cus: " + cus);
+    if (log.isDebug3()) log.debug3("ret cus: " + cus);
     return cus;
   }
 
