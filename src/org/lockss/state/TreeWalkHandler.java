@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkHandler.java,v 1.26 2003-05-03 01:38:03 aalto Exp $
+ * $Id: TreeWalkHandler.java,v 1.27 2003-05-03 01:52:45 aalto Exp $
  */
 
 /*
@@ -57,6 +57,13 @@ public class TreeWalkHandler {
       TREEWALK_PREFIX + "interval";
   static final long DEFAULT_TREEWALK_INTERVAL = Constants.HOUR;
 
+  /**
+   * Configuration parameter name for interval, in ms, between treewalks.
+   */
+  public static final String PARAM_TREEWALK_START_DELAY =
+      TREEWALK_PREFIX + "start.delay";
+  static final long DEFAULT_TREEWALK_START_DELAY = Constants.MINUTE;
+
   static final double MAX_DEVIATION = 0.4;
 
   NodeManagerImpl manager;
@@ -71,6 +78,7 @@ public class TreeWalkHandler {
   long treeWalkInterval;
   long topPollInterval;
   long treeWalkTestDuration;
+  long startDelay;
 
   boolean treeWalkAborted;
   boolean forceTreeWalk = false;
@@ -100,6 +108,8 @@ public class TreeWalkHandler {
   private void setConfig(Configuration config, Configuration oldConfig) {
     treeWalkInterval = config.getTimeInterval(
         PARAM_TREEWALK_INTERVAL, DEFAULT_TREEWALK_INTERVAL);
+    startDelay = config.getTimeInterval(
+        PARAM_TREEWALK_START_DELAY, DEFAULT_TREEWALK_START_DELAY);
     logger.debug3("treeWalkInterval reset to "+treeWalkInterval);
   }
 
@@ -328,8 +338,11 @@ public class TreeWalkHandler {
         if (timeToStart <= 0) {
           if (randomDelay) {
             // only random delay the first time, to allow better test communication
-            deadline = Deadline.inRandomRange(SMALL_SLEEP, 10*SMALL_SLEEP);
-            logger.debug3("Random sleep for "+deadline.getRemainingTime()+"ms");
+            long delta = (long) ( (double) MAX_DEVIATION * startDelay);
+            deadline = Deadline.inRandomRange(startDelay, startDelay + delta);
+            logger.debug3("Random sleep for "+
+                          StringUtil.timeIntervalToString(
+                deadline.getRemainingTime()));
             try {
               deadline.sleep();
             } catch (InterruptedException ie) { }
@@ -348,8 +361,10 @@ public class TreeWalkHandler {
           }
         } else {
           long delta = (long) ( (double) MAX_DEVIATION * timeToStart);
-          logger.debug3("Creating a deadline for " + timeToStart +
-                        " with delta of " + delta);
+          logger.debug3("Creating a deadline for " +
+                        StringUtil.timeIntervalToString(timeToStart) +
+                        " with delta of " +
+                        StringUtil.timeIntervalToString(delta));
           deadline = Deadline.inRandomRange(timeToStart, timeToStart + delta);
           try {
             deadline.sleep();

@@ -49,6 +49,7 @@ org.lockss.poll.contentpoll.min=3m
 org.lockss.poll.contentpoll.max=5m
 
 org.lockss.treewalk.interval=5m
+org.lockss.treewalk.start.delay=10s
 org.lockss.comm.router.beacon.interval=1m
 
 
