@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.1.2.17 2004-11-23 02:05:31 dshr Exp $
+ * $Id: TestV3Poller.java,v 1.1.2.18 2004-11-24 21:33:22 dshr Exp $
  */
 
 /*
@@ -300,11 +300,11 @@ public class TestV3Poller extends LockssTestCase {
       numAgree = agree.size();
     }
     int totalPeers = peers.size();
+    poll.solicitVotesFrom(peers);
     for (int i = totalPeers; i > 0; i--) {
 
       // Decide to solicit a vote from testID[1],  go to SendingPoll
-      poll.solicitVotesFrom(peers);
-      assertEquals("Poll " + poll + " vote " + i + " should be in SendingPoll",
+      assertEquals("Poll " + poll + " vote " + i + " should be in ProvingIntroEffort",
 		   V3Poller.STATE_PROVING_INTRO_EFFORT,
 		   poll.getPollState());
       assertTrue("Poll " + poll + " vote " + i + " should be active",
@@ -313,7 +313,7 @@ public class TestV3Poller extends LockssTestCase {
 		  pollmanager.isPollClosed(key));
       assertFalse("Poll " + poll + " vote " + i + " should not be suspended",
 		  pollmanager.isPollSuspended(key));
-      stepTimeUntilPollStateChanges(poll);
+      stepTimeUntilPollStateChanges(poll, "Generating a MSG_POLL for " + i);
       // And after a while go to WaitingPollAck
       assertEquals("Poll " + poll + " vote " + i + " should be in WaitingPollAck",
 		   V3Poller.STATE_WAITING_POLL_ACK,
@@ -330,16 +330,20 @@ public class TestV3Poller extends LockssTestCase {
 	  (MockLcapStreamRouter)theDaemon.getStreamRouterManager();
 	Deadline dl = Deadline.in(10);
 	V3LcapMessage msg = router.getSentMessage(dl);
+	assertNotNull(msg);
 	assertEquals(msg.getOpcode(), V3LcapMessage.MSG_POLL);
+	assertTrue("Send queue should be empty after Poll",
+		   router.sendQueueEmpty());
       }
       TimeBase.step(500);
-      //  Receive a PollAck message, go to SendingPollProof
+      log.debug("Receive a MSG_POLL_ACK for " + i);
+      //  Receive a PollAck message, go toVerifyingPollAckEffort
       try {
 	pollmanager.handleIncomingMessage(testV3msg[1]);
       } catch (IOException ex) {
 	fail("Message " + testV3msg[1].toString() + " threw " + ex);
       }
-      assertEquals("Poll " + poll + " vote " + i + " should be in SendingPollProof",
+      assertEquals("Poll " + poll + " vote " + i + " should be in VerifyingPollAckEffort",
 		   V3Poller.STATE_VERIFYING_POLL_ACK_EFFORT,
 		   poll.getPollState());
       assertTrue("Poll " + poll + " vote " + i + " should be active",
@@ -348,8 +352,8 @@ public class TestV3Poller extends LockssTestCase {
 		  pollmanager.isPollClosed(key));
       assertFalse("Poll " + poll + " vote " + i + " should not be suspended",
 		  pollmanager.isPollSuspended(key));
-      stepTimeUntilPollStateChanges(poll);
-      assertEquals("Poll " + poll + " vote " + i + " should be in SendingPollProof",
+      stepTimeUntilPollStateChanges(poll, "Verifying a MSG_POLL_ACK for " + i);
+      assertEquals("Poll " + poll + " vote " + i + " should be in ProvingRemainingEffort",
 		   V3Poller.STATE_PROVING_REMAINING_EFFORT,
 		   poll.getPollState());
       assertTrue("Poll " + poll + " vote " + i + " should be active",
@@ -358,9 +362,21 @@ public class TestV3Poller extends LockssTestCase {
 		  pollmanager.isPollClosed(key));
       assertFalse("Poll " + poll + " vote " + i + " should not be suspended",
 		  pollmanager.isPollSuspended(key));
-      stepTimeUntilPollStateChanges(poll);
+      stepTimeUntilPollStateChanges(poll, "Generating a MSG_POLL_PROOF for " + i);
       //  Eventually go to WaitingVote
-      assertEquals("Poll " + poll + " vote " + i + " should be in WaitingPollProof",
+      {
+	// Check that the poll sent a MSG_POLL_PROOF
+	MockLcapStreamRouter router =
+	  (MockLcapStreamRouter)theDaemon.getStreamRouterManager();
+	Deadline dl = Deadline.in(10);
+	V3LcapMessage msg = router.getSentMessage(dl);
+	assertNotNull(msg);
+	assertEquals("Poll " + poll + " vote " + i + " sent " + msg + " not PollProof",
+		     msg.getOpcode(), V3LcapMessage.MSG_POLL_PROOF);
+	assertTrue("Send queue should be empty after PollProof",
+		   router.sendQueueEmpty());
+      }
+      assertEquals("Poll " + poll + " vote " + i + " should be in WaitingVote",
 		   V3Poller.STATE_WAITING_VOTE,
 		   poll.getPollState());
       assertTrue("Poll " + poll + " vote " + i + " should be active",
@@ -371,6 +387,7 @@ public class TestV3Poller extends LockssTestCase {
 		  pollmanager.isPollSuspended(key));
       //  Receive a Vote message, go to SendingPoll for next voter
       //  unless no more voters in which case go to SendingRepairRequest
+      log.debug("Receive a MSG_VOTE for " + i);
       try {
 	pollmanager.handleIncomingMessage(testV3msg[3]);
       } catch (IOException ex) {
@@ -383,17 +400,18 @@ public class TestV3Poller extends LockssTestCase {
       assertFalse("Poll " + poll + " vote " + i + " should not be suspended",
 		  pollmanager.isPollSuspended(key));
       if (i > 1) {
-	assertEquals("Poll " + poll + " vote " + i + " should be in SendingPoll",
+	assertEquals("Poll " + poll + " vote " + i + " should be in ProvingIntroEffort",
 		     V3Poller.STATE_PROVING_INTRO_EFFORT,
 		     poll.getPollState());
       } else {
-	assertEquals("Poll " + poll + " vote " + i + " should be in SendingRepairReq",
-		     V3Poller.STATE_VERIFYING_VOTE_EFFORT,
+	assertEquals("Poll " + poll + " vote " + i + " should be in ChoosingNextVote",
+		     V3Poller.STATE_CHOOSING_NEXT_VOTE,
 		     poll.getPollState());
       }
       assertTrue(peers.size() == i-1);
     }
     for (int i = totalPeers; i > 0; i--) {
+      log.debug("Tallying vote " + i);
       if ((totalPeers - i) < numInvalid) {
 	es.setVerifyVoteResult(false);
       } else {
@@ -404,7 +422,8 @@ public class TestV3Poller extends LockssTestCase {
       } else {
 	es.setAgreeVoteResult(true);
       }
-      assertEquals("Poll " + poll + " vote " + i + " should be in SendingRepairReq",
+      stepTimeUntilPollStateChanges(poll, "Verifying vote effort for " + i);
+      assertEquals("Poll " + poll + " vote " + i + " should be in VerifyingVoteEffort",
 		   V3Poller.STATE_VERIFYING_VOTE_EFFORT,
 		   poll.getPollState());
       assertTrue("Poll " + poll + " vote " + i + " should be active",
@@ -413,8 +432,8 @@ public class TestV3Poller extends LockssTestCase {
 		  pollmanager.isPollClosed(key));
       assertFalse("Poll " + poll + " vote " + i + " should not be suspended",
 		  pollmanager.isPollSuspended(key));
-      stepTimeUntilPollStateChanges(poll);
-      assertEquals("Poll " + poll + " vote " + i + " should be in SendingRepairReq",
+      stepTimeUntilPollStateChanges(poll, "Proving repair effort for " + i);
+      assertEquals("Poll " + poll + " vote " + i + " should be in ProvingRepairEffort",
 		   V3Poller.STATE_PROVING_REPAIR_EFFORT,
 		   poll.getPollState());
       assertTrue("Poll " + poll + " vote " + i + " should be active",
@@ -423,8 +442,8 @@ public class TestV3Poller extends LockssTestCase {
 		  pollmanager.isPollClosed(key));
       assertFalse("Poll " + poll + " vote " + i + " should not be suspended",
 		  pollmanager.isPollSuspended(key));
-      stepTimeUntilPollStateChanges(poll);
-      assertEquals("Poll " + poll + " vote " + i + " should be in SendingRepairReq",
+      stepTimeUntilPollStateChanges(poll, "Verifying vote for " + i);
+      assertEquals("Poll " + poll + " vote " + i + " should be in VerifyingVote",
 		   V3Poller.STATE_VERIFYING_VOTE,
 		   poll.getPollState());
       assertTrue("Poll " + poll + " vote " + i + " should be active",
@@ -433,12 +452,13 @@ public class TestV3Poller extends LockssTestCase {
 		  pollmanager.isPollClosed(key));
       assertFalse("Poll " + poll + " vote " + i + " should not be suspended",
 		  pollmanager.isPollSuspended(key));
-      stepTimeUntilPollStateChanges(poll);
       if ((totalPeers - i) < numInvalid) {
-	assertEquals("Poll " + poll + " vote " + i + " should be in state SenndingRepairReq",
-		     V3Poller.STATE_VERIFYING_VOTE_EFFORT,
+	stepTimeUntilPollStateChanges(poll, "Vote " + i + " invalid");
+	assertEquals("Poll " + poll + " vote " + i + " should be in state VerifyingVoteEffort",
+		     V3Poller.STATE_CHOOSING_NEXT_VOTE,
 		     poll.getPollState());
       } else {
+	stepTimeUntilPollStateChanges(poll, "Vote " + i + " valid - make receipt");
 	assertEquals("Poll " + poll + " vote " + i + " should be in SendingReceipt",
 		     V3Poller.STATE_SENDING_RECEIPT,
 		     poll.getPollState());
@@ -449,10 +469,10 @@ public class TestV3Poller extends LockssTestCase {
 	assertFalse("Poll " + poll + " vote " + i + " should not be suspended",
 		    pollmanager.isPollSuspended(key));
 	log.debug("XXX before fourth step 500");
-	stepTimeUntilPollStateChanges(poll);
+	stepTimeUntilPollStateChanges(poll, "Going back for another vote");
 	if (i > 1) {
-	  assertEquals("Poll " + poll + " vote " + i + " should be in SendingRepairReq",
-		       V3Poller.STATE_VERIFYING_VOTE_EFFORT,
+	  assertEquals("Poll " + poll + " vote " + i + " should be in VerifyingVoteEffort",
+		       V3Poller.STATE_CHOOSING_NEXT_VOTE,
 		       poll.getPollState());
 	  assertTrue("Poll " + poll + " vote " + i + " should be active",
 		     pollmanager.isPollActive(key));
@@ -466,11 +486,12 @@ public class TestV3Poller extends LockssTestCase {
     }
   }
 
-  private void stepTimeUntilPollStateChanges(V3Poller poll) {
+  private void stepTimeUntilPollStateChanges(V3Poller poll, String s) {
     // XXX
     int oldState = poll.getPollState();
     int newState = -1;
     long startTime = TimeBase.nowMs();
+    log.debug(s + " poll " + poll);
     do {
       TimeBase.step(100);
     } while ((newState = poll.getPollState()) == oldState);

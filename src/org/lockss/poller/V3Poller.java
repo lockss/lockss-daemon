@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.1.2.15 2004-11-23 02:05:26 dshr Exp $
+ * $Id: V3Poller.java,v 1.1.2.16 2004-11-24 21:33:21 dshr Exp $
  */
 
 /*
@@ -77,7 +77,7 @@ public class V3Poller extends V3Poll {
   public static final int STATE_FINALIZING = 17;
   private static final String[] stateName = {
     "Initializing",
-    "ChoosingNextvoter",
+    "ChoosingNextVoter",
     "ProvingIntroEffort",
     "SendingPoll",
     "WaitingPollAck",
@@ -183,6 +183,7 @@ public class V3Poller extends V3Poll {
    * and prevent any more activity in this poll.
    */
   void stopPoll() {
+    log.debug("stoppping Poll " + this);
     if(isErrorState()) {
       log.debug("poll stopped with error: " + ERROR_STRINGS[ -m_pollstate]);
       m_pollmanager.closeThePoll(m_key);
@@ -190,9 +191,13 @@ public class V3Poller extends V3Poll {
     }
     else {
       m_pollstate = BasePoll.PS_COMPLETE;
-      verifyNextVote(m_key);
+      if (m_state != STATE_CHOOSING_NEXT_VOTE) {
+	log.error("Should be in ChoosingNextVote state");
+	changePollState(STATE_CHOOSING_NEXT_VOTE);
+      }
+      // Start verifying votes
+      pauseBeforeVerifyNextVote(m_key);
     }
-    // Start verifying votes
   }
 
   public int getPollState() {
@@ -202,6 +207,11 @@ public class V3Poller extends V3Poll {
   // End abstract methods of V3Poll
 
   private void changePollState(int state) {
+    if (state == m_state) {
+      log.error("Bad state change from " + stateName[m_state] +
+	      " to " + stateName[state]);
+      throw new RuntimeException("V3Poller: bad state change");
+    }
     log.debug("Change state from " + stateName[m_state] +
 	      " to " + stateName[state]);
     m_state = state;
@@ -296,17 +306,22 @@ public class V3Poller extends V3Poll {
     } else {
       log.warning("could not schedule effort verification " + ep.toString() +
 		  " for " + msg.toString());
+      changePollState(STATE_CHOOSING_NEXT_VOTE);
       pauseBeforeVerifyNextVote(cookie);
     }
     // XXX
   }
 
   protected void pauseBeforeVerifyNextVote(Serializable cookie) {
-    //  XXX move vote at head of list to tail, sleep
-    V3LcapMessage msg = (V3LcapMessage)ballotBox.remove(0);
-    ballotBox.add(msg);
-    Deadline pauseDeadline = Deadline.in(10000);
-    TimerQueue.schedule(pauseDeadline, new PauseTimerCallback(), cookie);
+    if (ballotBox.isEmpty()) {
+      // Finish the poll now
+      verifyNextVote(cookie);
+    } else {
+      V3LcapMessage msg = (V3LcapMessage)ballotBox.remove(0);
+      ballotBox.add(msg);
+      Deadline pauseDeadline = Deadline.in(10000);
+      TimerQueue.schedule(pauseDeadline, new PauseTimerCallback(), cookie);
+    }
   }
 
   //  XXX - stuff for initial testing
@@ -315,11 +330,13 @@ public class V3Poller extends V3Poll {
 
   protected void solicitVotesFrom(List peers) {
     if (peers.size() == 0) {
-      log.error("No voters to solicit from");
-      // XXX throw?
+      log.debug("No voters to solicit from");
+      changePollState(STATE_CHOOSING_NEXT_VOTE);
+      return;
     }
     m_voterRoll = peers;
     Object[] voters = peers.toArray();
+
     if (!(voters[0] instanceof PeerIdentity)) {
       log.error("Voter is not a PeerIdentity");
       // XXX throw?
@@ -344,32 +361,27 @@ public class V3Poller extends V3Poll {
   }
 
   protected void nextVoter(Object cookie, boolean addBack) {
-    changePollState(STATE_CHOOSING_NEXT_VOTER);
-    log.debug("nextVoter(" + cookie + ")");
     if (m_voterRoll.isEmpty()) {
       log.error("Voter roll empty after receipt");
-      changePollState(STATE_FINALIZING);
+      changePollState(STATE_CHOOSING_NEXT_VOTE);
       if(m_pollstate != PS_COMPLETE) {
 	stopPoll();
       }
     } else {
       Object obj = m_voterRoll.remove(0);
+      changePollState(STATE_CHOOSING_NEXT_VOTER);
+      log.debug("nextVoter(" + cookie + ")");
       if (addBack) {
 	m_voterRoll.add(obj);
       }
-      log.debug("voter roll returns a " + obj.getClass().getName());
       if ((PeerIdentity)obj == null) {
 	log.error("Voter roll doesn't deliver peer id after receipt");
 	changePollState(STATE_FINALIZING);
 	if(m_pollstate != PS_COMPLETE) {
 	  stopPoll();
 	}
-      } else if (m_voterRoll.isEmpty()) {
-	changePollState(STATE_CHOOSING_NEXT_VOTE);
-	if(m_pollstate != PS_COMPLETE) {
-	  stopPoll();
-	}
       } else {
+	log.debug("voter roll returns a " + obj.getClass().getName());
 	solicitVotesFrom(m_voterRoll);
       }
     }
@@ -485,8 +497,21 @@ public class V3Poller extends V3Poll {
       } else {
 	log.debug("PollProofEffortProofCallback: " + ((String) cookie));
 	changePollState(STATE_SENDING_POLL_PROOF);
-	// XXX send the proof and the message
-	changePollState(STATE_WAITING_VOTE);
+	Properties props = null;
+	//  XXX put effort etc into Properties for message
+	try {
+	  LcapMessage msg =
+	    V3LcapMessage.makeRequestMsg(m_pollspec, props, m_challenge,
+					 V3LcapMessage.MSG_POLL_PROOF,
+					 m_deadline.getRemainingTime(),
+					 m_callerID, "SHA-1");
+	  pollMgr.sendMessageTo(msg, m_cus.getArchivalUnit(), m_currentVoter);
+	  changePollState(STATE_WAITING_VOTE);
+	} catch (IOException ex) {
+	  log.error("sending message to " + m_currentVoter.toString() +
+		    " threw " + ex.toString());
+	  nextVoter(cookie, false);
+	}
       }
     }
 
@@ -551,7 +576,8 @@ public class V3Poller extends V3Poll {
 	// We assume there's something bad about the vote we just
 	// failed to verify
 	ballotBox.remove(0);
-	verifyNextVote(cookie);
+	changePollState(STATE_CHOOSING_NEXT_VOTE);
+	pauseBeforeVerifyNextVote(cookie);
       } else {
 	log.debug("VoteEffortProofCallback: " + ((String) cookie));
 	m_repairEffort = ep;
@@ -572,6 +598,7 @@ public class V3Poller extends V3Poll {
 	} else {
 	  log.warning("could not schedule vote verification generation " +
 		      vote.toString() + " for " + cookie);
+	  changePollState(STATE_CHOOSING_NEXT_VOTE);
 	  pauseBeforeVerifyNextVote(cookie);
 	}
       }
@@ -590,13 +617,15 @@ public class V3Poller extends V3Poll {
       if (e != null) {
 	log.debug("Vote effort verification threw: " + e);
 	ballotBox.remove(0);
-	verifyNextVote(cookie);
+	changePollState(STATE_CHOOSING_NEXT_VOTE);
+	pauseBeforeVerifyNextVote(cookie);
 	return;
       }
       if (!ep.isVerified()) {
 	log.debug("Vote effort verification failed");
 	ballotBox.remove(0);
-	verifyNextVote(cookie);
+	changePollState(STATE_CHOOSING_NEXT_VOTE);
+	pauseBeforeVerifyNextVote(cookie);
 	return;
       }
       //  Vote effort verified,  now generate effort for repair request
@@ -612,6 +641,7 @@ public class V3Poller extends V3Poll {
       } else {
 	log.warning("could not schedule effort generation " +
 		    pollProof.toString() + " for " + cookie);
+	changePollState(STATE_CHOOSING_NEXT_VOTE);
 	pauseBeforeVerifyNextVote(cookie);
       }
       return;
@@ -654,12 +684,14 @@ public class V3Poller extends V3Poll {
       ballotBox.remove(0);
       if (e != null) {
 	log.debug("Vote effort verification threw: " + e);
-	verifyNextVote(cookie);
+	changePollState(STATE_CHOOSING_NEXT_VOTE);
+	pauseBeforeVerifyNextVote(cookie);
 	return;
       }
       if (!vote.isValid()) {
 	log.debug("Vote deemed invalid");
-	verifyNextVote(cookie);
+	changePollState(STATE_CHOOSING_NEXT_VOTE);
+	pauseBeforeVerifyNextVote(cookie);
 	return;
       }
       log.debug("Vote: " + (String) cookie +
@@ -689,7 +721,8 @@ public class V3Poller extends V3Poll {
      */
     public void timerExpired(Object cookie) {
       log.debug("ReceiptTimerCallback for " + cookie);
-      verifyNextVote((Serializable)cookie);
+      changePollState(STATE_CHOOSING_NEXT_VOTE);
+      pauseBeforeVerifyNextVote((Serializable)cookie);
     }
   }
 

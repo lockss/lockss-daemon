@@ -1,5 +1,5 @@
 /*
- * $Id: MockLcapStreamRouter.java,v 1.1.2.6 2004-11-23 02:05:32 dshr Exp $
+ * $Id: MockLcapStreamRouter.java,v 1.1.2.7 2004-11-24 21:33:22 dshr Exp $
  */
 
 /*
@@ -120,7 +120,9 @@ public class MockLcapStreamRouter extends LcapStreamRouter
   public void sendTo(V3LcapMessage msg, ArchivalUnit au, PeerIdentity id)
     throws IOException {
     log.debug("mock sendTo(" + msg + ")");
-    mySendQueue.put(msg);
+    if (mySendQueue != null) {
+      mySendQueue.put(msg);
+    }
     if (partner != null) {
       log.debug("Interrupting partner for " + msg);
       partner.myThread.interrupt();
@@ -145,7 +147,11 @@ public class MockLcapStreamRouter extends LcapStreamRouter
   public V3LcapMessage getSentMessage(Deadline dl) {
     V3LcapMessage msg = null;
     try {
+      int s = mySendQueue.size();
       msg = (V3LcapMessage) mySendQueue.get(dl);
+      if ((s - mySendQueue.size()) != 1) {
+	log.error("get didn't remove msg");
+      }
     } catch (InterruptedException ex) {
       log.debug("getSentMessage() interrupted");
       // No action intended
@@ -154,5 +160,9 @@ public class MockLcapStreamRouter extends LcapStreamRouter
       log.debug("Pulled " + msg + " from send Q");
     }
     return msg;
+  }
+
+  public boolean sendQueueEmpty() {
+    return (mySendQueue.isEmpty());
   }
 }
