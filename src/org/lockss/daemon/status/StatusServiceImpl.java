@@ -1,5 +1,5 @@
 /*
- * $Id: StatusServiceImpl.java,v 1.4 2003-03-13 23:14:08 troberts Exp $
+ * $Id: StatusServiceImpl.java,v 1.5 2003-03-14 00:28:01 troberts Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import org.lockss.util.*;
  */
 public class StatusServiceImpl 
   extends BaseLockssManager implements StatusService {
+  private static Logger logger = Logger.getLogger("StatusServiceImpl");
   private Map statusAccessors;
 
 
@@ -76,10 +77,12 @@ public class StatusServiceImpl
 					   +tableName);
     }
     statusAccessors.put(tableName, statusAccessor);
+    logger.info("Registered statusAccessor for table "+tableName);
   }
 
   public synchronized void unregisterStatusAccessor(String tableName){
     statusAccessors.remove(tableName);
+    logger.info("Unregistered statusAccessor for table "+tableName);
   }
 
   private synchronized List getAllTableNames() {
