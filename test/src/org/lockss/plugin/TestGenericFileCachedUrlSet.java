@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericFileCachedUrlSet.java,v 1.3 2002-11-07 02:21:48 aalto Exp $
+ * $Id: TestGenericFileCachedUrlSet.java,v 1.4 2002-11-15 02:48:20 aalto Exp $
  */
 
 /*
@@ -34,11 +34,12 @@ package org.lockss.plugin;
 
 import org.lockss.daemon.*;
 import org.lockss.test.*;
-import java.io.File;
 import java.util.Iterator;
 import org.lockss.repository.*;
 import java.net.MalformedURLException;
 import org.lockss.plugin.simulated.SimulatedArchivalUnit;
+import java.io.*;
+import org.lockss.util.StreamUtil;
 
 /**
  * This is the test class for org.lockss.plugin.simulated.GenericFileUrlCacher
@@ -67,17 +68,17 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
   }
 
   public void testFlatSetIterator() throws MalformedURLException {
-    LeafNode leaf =
-        repo.createLeafNode("http://www.example.com/testDir/branch1/leaf1");
+    RepositoryNode leaf =
+        repo.createNewNode("http://www.example.com/testDir/branch1/leaf1");
     leaf.makeNewVersion();
     leaf.sealNewVersion();
-    leaf = repo.createLeafNode("http://www.example.com/testDir/branch1/leaf2");
+    leaf = repo.createNewNode("http://www.example.com/testDir/branch1/leaf2");
     leaf.makeNewVersion();
     leaf.sealNewVersion();
-    leaf = repo.createLeafNode("http://www.example.com/testDir/leaf4");
+    leaf = repo.createNewNode("http://www.example.com/testDir/leaf4");
     leaf.makeNewVersion();
     leaf.sealNewVersion();
-    leaf = repo.createLeafNode("http://www.example.com/testDir/branch2/leaf3");
+    leaf = repo.createNewNode("http://www.example.com/testDir/branch2/leaf3");
     leaf.makeNewVersion();
     leaf.sealNewVersion();
 
@@ -98,19 +99,39 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
     assertTrue(!setIt.hasNext());
   }
 
-  public void testLeafIterator() throws MalformedURLException {
-    LeafNode leaf =
-        repo.createLeafNode("http://www.example.com/testDir/branch1/leaf1");
+  public void testLeafIterator() throws Exception {
+    RepositoryNode leaf =
+        repo.createNewNode("http://www.example.com/testDir/branch1/leaf1");
     leaf.makeNewVersion();
+    OutputStream os = leaf.getNewOutputStream();
+    InputStream is = new StringInputStream("testing stream");
+    StreamUtil.copy(is, os);
+    os.close();
+    is.close();
     leaf.sealNewVersion();
-    leaf = repo.createLeafNode("http://www.example.com/testDir/branch1/leaf2");
+    leaf = repo.createNewNode("http://www.example.com/testDir/branch1/leaf2");
     leaf.makeNewVersion();
+    os = leaf.getNewOutputStream();
+    is = new StringInputStream("testing stream");
+    StreamUtil.copy(is, os);
+    os.close();
+    is.close();
     leaf.sealNewVersion();
-    leaf = repo.createLeafNode("http://www.example.com/testDir/leaf4");
+    leaf = repo.createNewNode("http://www.example.com/testDir/leaf4");
     leaf.makeNewVersion();
+    os = leaf.getNewOutputStream();
+    is = new StringInputStream("testing stream");
+    StreamUtil.copy(is, os);
+    os.close();
+    is.close();
     leaf.sealNewVersion();
-    leaf = repo.createLeafNode("http://www.example.com/testDir/branch2/leaf3");
+    leaf = repo.createNewNode("http://www.example.com/testDir/branch2/leaf3");
     leaf.makeNewVersion();
+    os = leaf.getNewOutputStream();
+    is = new StringInputStream("testing stream");
+    StreamUtil.copy(is, os);
+    os.close();
+    is.close();
     leaf.sealNewVersion();
 
     CachedUrlSetSpec rSpec =

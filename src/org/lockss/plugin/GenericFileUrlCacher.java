@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileUrlCacher.java,v 1.4 2002-11-05 01:49:54 aalto Exp $
+ * $Id: GenericFileUrlCacher.java,v 1.5 2002-11-15 02:48:20 aalto Exp $
  */
 
 /*
@@ -57,7 +57,7 @@ public abstract class GenericFileUrlCacher extends BaseUrlCacher {
   }
 
   public void storeContent(InputStream input, Properties headers) throws IOException {
-    LeafNode leaf = repository.createLeafNode(url);
+    RepositoryNode leaf = repository.createNewNode(url);
     leaf.makeNewVersion();
     try {
       if (input != null) {

@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNode.java,v 1.1 2002-10-31 01:52:41 aalto Exp $
+ * $Id: RepositoryNode.java,v 1.2 2002-11-15 02:48:20 aalto Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.repository;
 import java.io.*;
 import java.util.*;
+import org.lockss.daemon.CachedUrlSetSpec;
 
 /**
  * RepositoryNode is used to store the contents and
@@ -40,26 +41,92 @@ import java.util.*;
  */
 public interface RepositoryNode {
   /**
-   * Returns the url represented by this entry.
-   * @return the entry's url
+   * Returns the url represented by this node.
+   * @return the node's url
    */
   public String getNodeUrl();
 
   /**
-   * Identify if the entry represents a leaf
-   * @return true if the entry represents a leaf
+   * Determines if the node has stored content.
+   * @return true if the node has content
    */
-  public boolean isLeaf();
+  public boolean hasContent();
 
   /**
-   * Returns the state information for the entry.
-   * @return state properties of the entry
+   * Returns the state information for the node.
+   * @return state properties of the node
    */
   public Properties getState();
 
   /**
-   * Writes new state information for the entry.
+   * Writes new state information for the node.
    * @param newProps the new state information
    */
   public void storeState(Properties newProps);
-}
+
+  /**
+   * Returns the immediate children of the entry, possibly filtered (null
+   * indicates no filtering).  Includes leaf and internal nodes.
+   * @param filter a spec to determine which urls to return
+   * @return an <code>Iterator</code> of RepositoryNode objects
+   */
+  public Iterator listNodes(CachedUrlSetSpec filter);
+
+  /**
+   * Prepares the node to write to a new version.  Should be called before storing
+   * any data.
+   */
+  public void makeNewVersion();
+
+  /**
+   * Closes the new version to any further writing.  Should be called when done
+   * storing data.
+   */
+  public void sealNewVersion();
+
+  /**
+   * Discards the currently open new version without writing.
+   */
+  public void abandonNewVersion();
+
+  /**
+   * Returns the current version.  This is the open version when writing,
+   * and the one accessed by the <code>getInputStream()</code> and
+   * <code>getProperties()</code>.
+   * @return the current version
+   */
+  public int getCurrentVersion();
+
+  /**
+   * Return an <code>InputStream</code> object which accesses the
+   * content in the cache.
+   * @return an <code>InputStream</code> object from which the contents of
+   *         the cache can be read.
+   */
+  public InputStream getInputStream();
+
+  /**
+   * Return a <code>Properties</code> object containing the headers of
+   * the object in the cache.
+   * @return a <code>Properties</code> object containing the headers of
+   *         the original object being cached.
+   */
+  public Properties getProperties();
+
+  /**
+   * Return an <code>OutputStream</code> object which writes to a new version
+   * in the cache.  <code>makeNewVersion()</code> must be called first.
+   * @return an <code>OutputStream</code> object to which the new contents can be
+   * written.
+   * @see LeafNode#makeNewVersion()
+   */
+  public OutputStream getNewOutputStream();
+
+  /**
+   * Stores the properties for a new version of the cache.  <code>makeNewVersion()</code>
+   * must be called first.
+   * @param newProps a <code>Properties</code> object containing the headers of
+   *         the new version being cached.
+   * @see LeafNode#makeNewVersion()
+   */
+  public void setNewProperties(Properties newProps);}

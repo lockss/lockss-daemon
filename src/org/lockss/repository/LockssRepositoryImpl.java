@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.5 2002-11-07 02:21:48 aalto Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.6 2002-11-15 02:48:20 aalto Exp $
  */
 
 /*
@@ -36,7 +36,8 @@ import java.util.*;
 import java.net.*;
 import java.lang.ref.WeakReference;
 import org.lockss.util.StringUtil;
-import org.apache.commons.collections.*;
+import org.apache.commons.collections.LRUMap;
+import org.apache.commons.collections.ReferenceMap;
 import org.lockss.daemon.*;
 
 /**
@@ -79,43 +80,34 @@ public class LockssRepositoryImpl implements LockssRepository {
       return node;
     }
 
-    String cacheLocation = rootLocation + mapUrlToCacheLocation(url);
-    File nodeDir = new File(cacheLocation);
+    String nodeLocation = rootLocation + mapUrlToCacheLocation(url);
+    File nodeDir = new File(nodeLocation);
     if (!nodeDir.exists() || !nodeDir.isDirectory()) {
       return null;
     }
-    File leafFile = new File(nodeDir, LeafNodeImpl.LEAF_FILE_NAME);
-    if (leafFile.exists()) {
-      node = new LeafNodeImpl(url, cacheLocation, this);
-    } else {
-      node = new InternalNodeImpl(url, cacheLocation, rootLocation, this);
-    }
+    node = new RepositoryNodeImpl(url, nodeLocation, this);
+
     lruMap.put(url, node);
     refMap.put(url, node);
     return node;
   }
 
-  public synchronized LeafNode createLeafNode(String url)
+  public synchronized RepositoryNode createNewNode(String url)
       throws MalformedURLException {
-    LeafNode node = null;
-    try {
-      node = (LeafNode)lruMap.get(url);
-    } catch (ClassCastException cce) {
-      throw new MalformedURLException("URL refers to an internal node,"+
-                                      " not a leaf: "+url);
-    }
+    RepositoryNode node = null;
+    node = (RepositoryNode)lruMap.get(url);
     if (node!=null) {
       return node;
     }
 
-    node = (LeafNode)refMap.get(url);
+    node = (RepositoryNode)refMap.get(url);
     if (node!=null) {
       lruMap.put(url, node);
       return node;
     }
 
-    String cacheLocation = rootLocation + mapUrlToCacheLocation(url);
-    node = new LeafNodeImpl(url, cacheLocation, this);
+    String nodeLocation = rootLocation + mapUrlToCacheLocation(url);
+    node = new RepositoryNodeImpl(url, nodeLocation, this);
     lruMap.put(url, node);
     refMap.put(url, node);
     return node;

@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepository.java,v 1.2 2002-10-31 01:53:30 aalto Exp $
+ * $Id: LockssRepository.java,v 1.3 2002-11-15 02:48:20 aalto Exp $
  */
 
 /*
@@ -49,12 +49,12 @@ public interface LockssRepository {
   public RepositoryNode getRepositoryNode(String url) throws MalformedURLException;
 
   /**
-   * Creates a {@link LeafNode} for the purposes of writing a new leaf to the
-   * cache.  This is used to add new leaves.
+   * Creates a new {@link RepositoryNode} for the purposes of writing a new leaf
+   * to the cache.  This is used to add new leaves.
    * @param url the url to be cached
    * @return an entry for the url
    * @throws java.net.MalformedURLException
    */
-  public LeafNode createLeafNode(String url) throws MalformedURLException;
+  public RepositoryNode createNewNode(String url) throws MalformedURLException;
 
 }

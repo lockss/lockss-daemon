@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrlSet.java,v 1.4 2002-11-06 19:21:24 troberts Exp $
+ * $Id: GenericFileCachedUrlSet.java,v 1.5 2002-11-15 02:48:20 aalto Exp $
  */
 
 /*
@@ -70,7 +70,7 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
     if (nodes.size()==1) {
       String prefix = (String)nodes.get(0);
       try {
-        InternalNode intNode = (InternalNode)repository.getRepositoryNode(prefix);
+        RepositoryNode intNode = repository.getRepositoryNode(prefix);
         Iterator children = intNode.listNodes(spec);
         while (children.hasNext()) {
           RepositoryNode child = (RepositoryNode)children.next();
@@ -79,8 +79,6 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
           CachedUrlSet newSet = ((BaseArchivalUnit)au).makeCachedUrlSet(rSpec);
           setTree.add(newSet);
         }
-      } catch (ClassCastException cce) {
-        logger.error("Spec url points to leaf: "+prefix);
       } catch (MalformedURLException mue) {
         logger.error("Bad url in spec: "+prefix);
       } catch (Exception e) {
@@ -102,20 +100,18 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
     if (nodes.size()==1) {
       String prefix = (String)nodes.get(0);
       try {
-        InternalNode intNode = (InternalNode)repository.getRepositoryNode(prefix);
+        RepositoryNode intNode = repository.getRepositoryNode(prefix);
         Iterator children = intNode.listNodes(spec);
         while (children.hasNext()) {
           RepositoryNode child = (RepositoryNode)children.next();
-          if (child.isLeaf()) {
+          if (child.hasContent()) {
             CachedUrl newUrl = ((BaseArchivalUnit)au).cachedUrlFactory(this,
                 child.getNodeUrl());
             leafSet.add(newUrl);
           } else {
-            recurseLeafFetch((InternalNode)child, leafSet);
+            recurseLeafFetch(child, leafSet);
           }
         }
-      } catch (ClassCastException cce) {
-        logger.error("Spec url points to leaf: "+prefix);
       } catch (MalformedURLException mue) {
         logger.error("Bad url in spec: "+prefix);
       } catch (Exception e) {
@@ -126,16 +122,16 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
     return leafSet.iterator();
   }
 
-  private void recurseLeafFetch(InternalNode node, TreeSet set) {
+  private void recurseLeafFetch(RepositoryNode node, TreeSet set) {
     Iterator children = node.listNodes(null);
     while (children.hasNext()) {
       RepositoryNode child = (RepositoryNode)children.next();
-      if (child.isLeaf()) {
+      if (child.hasContent()) {
         CachedUrl newUrl = ((BaseArchivalUnit)au).cachedUrlFactory(this,
             child.getNodeUrl());
         set.add(newUrl);
       } else {
-        recurseLeafFetch((InternalNode)child, set);
+        recurseLeafFetch(child, set);
       }
     }
   }

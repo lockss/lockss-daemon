@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrl.java,v 1.5 2002-11-07 02:21:48 aalto Exp $
+ * $Id: GenericFileCachedUrl.java,v 1.6 2002-11-15 02:48:20 aalto Exp $
  */
 
 /*
@@ -49,7 +49,7 @@ import java.net.MalformedURLException;
 
 public class GenericFileCachedUrl extends BaseCachedUrl {
   private LockssRepository repository;
-  private LeafNode leaf = null;
+  private RepositoryNode leaf = null;
   protected static Logger logger = Logger.getLogger("CachedUrl", Logger.LEVEL_DEBUG);
 
   public GenericFileCachedUrl(CachedUrlSet owner, String url) {
@@ -59,7 +59,7 @@ public class GenericFileCachedUrl extends BaseCachedUrl {
 
   public boolean exists() {
     ensureLeafLoaded();
-    return leaf.exists();
+    return leaf.hasContent();
   }
 
   public InputStream openForReading() {
@@ -75,9 +75,9 @@ public class GenericFileCachedUrl extends BaseCachedUrl {
   private void ensureLeafLoaded() {
     if (leaf==null) {
       try {
-        leaf = (LeafNode)repository.getRepositoryNode(url);
+        leaf = repository.getRepositoryNode(url);
         if (leaf==null) {
-          leaf = repository.createLeafNode(url);
+          leaf = repository.createNewNode(url);
         }
       } catch (MalformedURLException mue) {
         logger.error("Couldn't load node due to bad url: "+url);

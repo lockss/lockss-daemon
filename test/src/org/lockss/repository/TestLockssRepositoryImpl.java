@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.5 2002-11-07 02:21:48 aalto Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.6 2002-11-15 02:48:20 aalto Exp $
  */
 
 /*
@@ -37,7 +37,7 @@ import junit.framework.TestCase;
 import org.lockss.test.*;
 import java.net.MalformedURLException;
 import org.lockss.daemon.*;
-import org.lockss.util.ListUtil;
+import org.lockss.util.*;
 
 /**
  * This is the test class for org.lockss.daemon.LockssRepositoryImpl
@@ -61,53 +61,68 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     repo = LockssRepositoryImpl.repositoryFactory(mau);
   }
 
-  public void testGetRepositoryEntry() throws MalformedURLException {
-    LeafNode leaf =
-        repo.createLeafNode("http://www.example.com/testDir/branch1/leaf1");
+  public void testGetRepositoryEntry() throws Exception {
+    RepositoryNode leaf =
+        repo.createNewNode("http://www.example.com/testDir/branch1/leaf1");
     leaf.makeNewVersion();
+    OutputStream os = leaf.getNewOutputStream();
+    InputStream is = new StringInputStream("testing stream");
+    StreamUtil.copy(is, os);
+    os.close();
+    is.close();
     leaf.sealNewVersion();
-    leaf = repo.createLeafNode("http://www.example.com/testDir/branch1/leaf2");
+    leaf = repo.createNewNode("http://www.example.com/testDir/branch1/leaf2");
     leaf.makeNewVersion();
+    os = leaf.getNewOutputStream();
+    is = new StringInputStream("testing stream");
+    StreamUtil.copy(is, os);
+    os.close();
+    is.close();
     leaf.sealNewVersion();
-    leaf = repo.createLeafNode("http://www.example.com/testDir/branch2/leaf3");
+    leaf = repo.createNewNode("http://www.example.com/testDir/branch2/leaf3");
     leaf.makeNewVersion();
+    os = leaf.getNewOutputStream();
+    is = new StringInputStream("testing stream");
+    StreamUtil.copy(is, os);
+    os.close();
+    is.close();
     leaf.sealNewVersion();
-    leaf = repo.createLeafNode("http://www.example.com/testDir/leaf4");
+    leaf = repo.createNewNode("http://www.example.com/testDir/leaf4");
     leaf.makeNewVersion();
+    os = leaf.getNewOutputStream();
+    is = new StringInputStream("testing stream");
+    StreamUtil.copy(is, os);
+    os.close();
+    is.close();
     leaf.sealNewVersion();
 
-    RepositoryNode entry =
+    RepositoryNode node =
         repo.getRepositoryNode("http://www.example.com/testDir");
-    assertTrue(!entry.isLeaf());
-    assertTrue(entry instanceof InternalNode);
-    entry = repo.getRepositoryNode("http://www.example.com/testDir/branch1");
-    assertTrue(!entry.isLeaf());
-    assertTrue(entry instanceof InternalNode);
-    entry =
+    assertTrue(!node.hasContent());
+    node = repo.getRepositoryNode("http://www.example.com/testDir/branch1");
+    assertTrue(!node.hasContent());
+    node =
         repo.getRepositoryNode("http://www.example.com/testDir/branch2/leaf3");
-    assertTrue(entry.isLeaf());
-    assertTrue(entry instanceof LeafNode);
-    entry = repo.getRepositoryNode("http://www.example.com/testDir/leaf4");
-    assertTrue(entry.isLeaf());
-    assertTrue(entry instanceof LeafNode);
-
+    assertTrue(node.hasContent());
+    node = repo.getRepositoryNode("http://www.example.com/testDir/leaf4");
+    assertTrue(node.hasContent());
   }
 
   public void testCaching() throws MalformedURLException {
-    LeafNode leaf = repo.createLeafNode("http://www.example.com/testDir/leaf1");
+    RepositoryNode leaf = repo.createNewNode("http://www.example.com/testDir/leaf1");
     leaf.makeNewVersion();
     leaf.sealNewVersion();
-    leaf = repo.createLeafNode("http://www.example.com/testDir/leaf2");
+    leaf = repo.createNewNode("http://www.example.com/testDir/leaf2");
     leaf.makeNewVersion();
     leaf.sealNewVersion();
 
-    leaf = (LeafNode)repo.getRepositoryNode("http://www.example.com/testDir/leaf1");
+    leaf = repo.getRepositoryNode("http://www.example.com/testDir/leaf1");
     try {
       leaf.sealNewVersion();
       fail("Should have thrown UnsupportedOperationException");
     } catch (UnsupportedOperationException uoe) { }
-    leaf = (LeafNode)repo.getRepositoryNode("http://www.example.com/testDir/leaf2");
-    LeafNode leaf2 = (LeafNode)repo.getRepositoryNode("http://www.example.com/testDir/leaf2");
+    leaf = repo.getRepositoryNode("http://www.example.com/testDir/leaf2");
+    RepositoryNode leaf2 = repo.getRepositoryNode("http://www.example.com/testDir/leaf2");
     assertTrue(leaf2.equals(leaf));
     try {
       leaf.makeNewVersion();
@@ -118,16 +133,16 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
   }
 
   public void testWeakReferenceCaching() throws MalformedURLException {
-    LeafNode leaf = repo.createLeafNode("http://www.example.com/testDir/leaf1");
+    RepositoryNode leaf = repo.createNewNode("http://www.example.com/testDir/leaf1");
     leaf.makeNewVersion();
     leaf.sealNewVersion();
 
-    leaf = (LeafNode)repo.getRepositoryNode("http://www.example.com/testDir/leaf1");
-    LeafNode leaf2 = null;
+    leaf = repo.getRepositoryNode("http://www.example.com/testDir/leaf1");
+    RepositoryNode leaf2 = null;
     for (int ii=0; ii<LockssRepositoryImpl.MAX_LRUMAP_SIZE; ii++) {
-      leaf2 = repo.createLeafNode("http://www.example.com/testDir/testleaf"+ii);
+      leaf2 = repo.createNewNode("http://www.example.com/testDir/testleaf"+ii);
     }
-    leaf2 = (LeafNode)repo.getRepositoryNode("http://www.example.com/testDir/leaf1");
+    leaf2 = repo.getRepositoryNode("http://www.example.com/testDir/leaf1");
     assertTrue(leaf2.equals(leaf));
   }
 
