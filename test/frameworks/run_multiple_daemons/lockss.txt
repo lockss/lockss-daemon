@@ -1,0 +1,41 @@
+# LOCKSS & LCAP tuning parameters
+org.lockss.log.default.level=info
+org.lockss.log.Poll.level=debug
+org.lockss.log.Comm.level=debug
+org.lockss.log.Message.level=debug
+org.lockss.log.GenericHasher.level=info
+org.lockss.log.MSock_3456_Rcv.level=debug
+org.lockss.log.USock_9001_Rcv.level=debug
+org.lockss.log.USock_9000_Rcv.level=debug
+
+#org.lockss.cache.location
+
+org.lockss.parameterReloadInterval = 600000
+
+#hasher settings
+#org.lockss.hasher.numSteps
+#org.lockss.hasher.priority
+#org.lockss.hasher.stepBytes
+
+#comm settings
+org.lockss.comm.multicast.group=239.4.5.6
+org.lockss.comm.multicast.port=3456
+org.lockss.comm.unicast.port=1025
+org.lockss.comm.verifyMulticast=no
+
+# lcap protocol settings
+org.lockss.protocol.ttl=2
+org.lockss.protocol.hashAlgorithm=SHA-1
+
+# poll settings
+org.lockss.poll.maxpolls=12
+org.lockss.poll.quorum=3
+org.lockss.poll.agreeVerify=20
+org.lockss.poll.disagreeVerify=90
+org.lockss.poll.type=2
+org.lockss.votedelay=300000
+org.lockss.voterange=50000
+
+#test only settings
+
+

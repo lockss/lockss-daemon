@@ -1,5 +1,8 @@
 org.lockss.localIPAddress=2.2.2.2
-org.lockss.unicastport=9001
-org.lockss.cache.location=/home/claire/projects/lockss-gamma/test/frameworks/run_multiple_daemons/test2
+org.lockss.comm.unicast.port=9001
+org.lockss.comm.unicast.sendToPort=9000
+org.lockss.comm.unicast.sendToAddr=127.0.0.1
+
+org.lockss.cache.location=.
 org.lockss.shouldCallPoll=false
 

@@ -1,31 +1,20 @@
 #! /bin/bash
-LOCKSS_CONF=../lockss.conf
-if [ -e ${LOCKSS_CONF} ]
-then
-	. ${LOCKSS_CONF}
-else
-	echo ${LOCKSS_CONF}: not found
-	exit
-fi
 
-if [ ${PROJECT_DIR}X = X ]
-then
-    echo Called without \$PROJECT_DIR set.  Exiting
-    exit
-fi
+# "." here is the test<n> dir
+PROP_URL_LIST="../lockss.txt local.txt"
 
-date >KeepGoing
-while [ -f KeepGoing ]
+JAVA_LIB=${PROJECT_DIR}/lockss-gamma/lib
+JAVA_LIB_LIST="org.mortbay.jetty.jar org.mortbay.tools.jar lockss.jar lockss-test.jar commons-collections.jar gnu-regexp-1.1.4.jar"
+for A in ${JAVA_LIB_LIST}
 do
-	echo started `date`
-	echo running in `pwd`
-	# for large caches, need to pass "-ms4m -mx64m" to java
-        java RunDaemon ${PROP_URL_LIST} &
-	echo $! >dpid
-	wait
-        echo stopped `date` with status $?
-	if [ -f KeepGoing ]
-	then
-        	sleep 600
-	fi
-done >>test.out 2>&1
+	CLASSPATH=${CLASSPATH}:${JAVA_LIB}/${A}
+done
+export CLASSPATH
+
+echo running in `pwd` at `date`
+#echo CLASSPATH=$CLASSPATH
+# for large caches, need to pass "-ms4m -mx64m" to java
+java RunDaemon ${PROP_URL_LIST} >>test.out 2>&1 &
+echo $! >dpid
+wait
+echo stopped with status $? in `pwd` at `date`

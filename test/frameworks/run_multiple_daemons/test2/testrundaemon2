@@ -1,4 +1,0 @@
-#! /bin/bash
-
-export DAEMON_NUM=2
-../testrundaemons
