@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurableArchivalUnit.java,v 1.9 2004-02-27 02:05:52 clairegriffin Exp $
+ * $Id: ConfigurableArchivalUnit.java,v 1.10 2004-02-27 22:50:17 clairegriffin Exp $
  */
 
 /*
@@ -48,19 +48,19 @@ import java.net.URL;
  * @version 1.0
  */
 public class ConfigurableArchivalUnit extends BaseArchivalUnit {
-  static final protected String CM_AU_START_URL_KEY = "au_start_url";
-  static final protected String CM_AU_NAME_KEY = "au_name";
-  static final protected String CM_AU_RULES_KEY = "au_crawlrules";
-  static final protected String CM_AU_SHORT_YEAR_PREFIX = "au_short_";
-  static final protected String CM_AU_HOST_SUFFIX = "_host";
-  static final protected String CM_AU_PATH_SUFFIX = "_path";
-  static final protected String CM_AU_CRAWL_WINDOW_KEY = "au_crawlwindow";
-  static final protected String CM_AU_EXPECTED_PATH = "au_expected_base_path";
-  static final protected String CM_AU_CRAWL_DEPTH = "au_crawl_depth";
-  static final protected String CM_AU_DEFAULT_NC_CRAWL_KEY =
+  static final public String CM_AU_START_URL_KEY = "au_start_url";
+  static final public String CM_AU_NAME_KEY = "au_name";
+  static final public String CM_AU_RULES_KEY = "au_crawlrules";
+  static final public String CM_AU_SHORT_YEAR_PREFIX = "au_short_";
+  static final public String CM_AU_HOST_SUFFIX = "_host";
+  static final public String CM_AU_PATH_SUFFIX = "_path";
+  static final public String CM_AU_CRAWL_WINDOW_KEY = "au_crawlwindow";
+  static final public String CM_AU_EXPECTED_PATH = "au_expected_base_path";
+  static final public String CM_AU_CRAWL_DEPTH = "au_crawl_depth";
+  static final public String CM_AU_DEFAULT_NC_CRAWL_KEY =
       "au_def_new_content_crawl";
-  static final protected String CM_AU_DEFAULT_PAUSE_TIME = "au_def_pause_time";
-  static final protected String CM_AU_MANIFEST_KEY = "au_manifest";
+  static final public String CM_AU_DEFAULT_PAUSE_TIME = "au_def_pause_time";
+  static final public String CM_AU_MANIFEST_KEY = "au_manifest";
 
   protected ExternalizableMap configurationMap;
   static Logger log = Logger.getLogger("ConfigurableArchivalUnit");
@@ -95,6 +95,10 @@ public class ConfigurableArchivalUnit extends BaseArchivalUnit {
     String convstr = convertVariableString(startstr);
     log.debug2("setting start url " + convstr);
     return convstr;
+  }
+
+  public String getStartUrl() {
+    return startUrlString;
   }
 
   protected void loadAuConfigDescrs(Configuration config) throws
