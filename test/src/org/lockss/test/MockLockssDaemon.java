@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssDaemon.java,v 1.30 2003-09-26 23:47:45 eaalto Exp $
+ * $Id: MockLockssDaemon.java,v 1.31 2003-11-11 20:36:12 tlipkis Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.test;
 import java.util.*;
 import org.lockss.util.*;
 import org.lockss.hasher.*;
+import org.lockss.scheduler.*;
 import org.lockss.protocol.*;
 import org.lockss.poller.*;
 import org.lockss.state.*;
@@ -47,8 +48,11 @@ import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
 
 public class MockLockssDaemon extends LockssDaemon {
+  private static Logger log = Logger.getLogger("MockLockssDaemon");
+
   WatchdogService wdogService = null;
   HashService hashService = null;
+  SchedService schedService = null;
   SystemMetrics systemMetrics = null;
   PollManager pollManager = null;
   LcapComm commManager = null;
@@ -78,6 +82,7 @@ public class MockLockssDaemon extends LockssDaemon {
   public void stopDaemon() {
     wdogService = null;
     hashService = null;
+    schedService = null;
     pollManager = null;
     commManager = null;
     historyRepository = null;
@@ -90,6 +95,34 @@ public class MockLockssDaemon extends LockssDaemon {
     mockHandler.clear();
 
     //super.stopDaemon();
+  }
+
+  ManagerDesc findManagerDesc(String key) {
+    for(int i=0; i< managerDescs.length; i++) {
+      ManagerDesc desc = managerDescs[i];
+      if (key == desc.getKey()) {
+	return desc;
+      }
+    }
+    return null;
+  }
+
+  /** The rest of the manager get routines should be converted to use this
+   * so they will be responsive to manager class config */
+  LockssManager newManager(String key) {
+    log.debug2("Loading manager: " + key);
+    ManagerDesc desc = findManagerDesc(key);
+    if (desc == null) {
+      throw new LockssDaemonException("No ManagerDesc for: " + key);
+    }
+    String mgr_name = Configuration.getParam(MANAGER_PREFIX + desc.getKey(),
+					     desc.getDefaultClass());
+    log.debug2("Manager class: " + mgr_name); 
+    try {
+      return loadManager(mgr_name);
+    } catch (Exception e) {
+      throw new LockssDaemonException("Can't load manager: " + e.toString());
+    }
   }
 
   /**
@@ -115,15 +148,27 @@ public class MockLockssDaemon extends LockssDaemon {
    */
   public HashService getHashService() {
     if (hashService == null) {
-      hashService = new HashService();
-      try {
-        hashService.initService(this);
-      }
-      catch (LockssDaemonException ex) {
-      }
+      hashService = (HashService)newManager(LockssDaemon.HASH_SERVICE);
       theManagers.put(LockssDaemon.HASH_SERVICE, hashService);
     }
     return hashService;
+  }
+
+  /**
+   * return the sched service instance
+   * @return the SchedService
+   */
+  public SchedService getSchedService() {
+    if (schedService == null) {
+      schedService = new SchedService();
+      try {
+        schedService.initService(this);
+      }
+      catch (LockssDaemonException ex) {
+      }
+      theManagers.put(LockssDaemon.SCHED_SERVICE, schedService);
+    }
+    return schedService;
   }
 
   /**
@@ -377,6 +422,15 @@ public class MockLockssDaemon extends LockssDaemon {
   public void setHashService(HashService hashServ) {
     hashService = hashServ;
     theManagers.put(LockssDaemon.HASH_SERVICE, hashService);
+  }
+
+  /**
+   * Set the SchedService
+   * @param schedServ the new service
+   */
+  public void setSchedService(SchedService schedServ) {
+    schedService = schedServ;
+    theManagers.put(LockssDaemon.SCHED_SERVICE, schedService);
   }
 
   /**
