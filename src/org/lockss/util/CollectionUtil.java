@@ -1,5 +1,5 @@
 /*
- * $Id: CollectionUtil.java,v 1.2 2002-09-19 20:44:28 tal Exp $
+ * $Id: CollectionUtil.java,v 1.3 2002-10-06 21:22:04 tal Exp $
  */
 
 /*
@@ -76,7 +76,7 @@ public class CollectionUtil {
     return isIsomorphic(new ArrayIterator(a), b.iterator());
   }
 
-  /** Return true iff the two collections are isomorphic */
+  /** Return true iff the two arrays are isomorphic */
   public static boolean isIsomorphic(Object a[], Object b[]) {
     return isIsomorphic(new ArrayIterator(a), new ArrayIterator(b));
   }
