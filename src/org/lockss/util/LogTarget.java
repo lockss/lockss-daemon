@@ -44,4 +44,6 @@ public interface LogTarget{
    */
   public void handleMessage(Logger log, int msglevel, String message);
 
+  /** Called the first time target is added to a logger */
+  public void init();
 }

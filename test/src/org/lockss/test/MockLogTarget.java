@@ -1,5 +1,5 @@
 /*
- * $Id: MockLogTarget.java,v 1.3 2002-09-09 20:31:55 tal Exp $
+ * $Id: MockLogTarget.java,v 1.4 2003-01-02 06:45:54 tal Exp $
  */
 
 /*
@@ -42,9 +42,14 @@ import org.lockss.util.*;
 public class MockLogTarget implements LogTarget{
   static Logger log = Logger.getLogger("Mock log target");
   Vector messages;
+  int initCount = 0;
   
   public MockLogTarget(){
     messages = new Vector();
+  }
+
+  public void init() {
+    initCount++;
   }
 
   /**
@@ -73,5 +78,9 @@ public class MockLogTarget implements LogTarget{
 
   public void resetMessages() {
     messages.clear();
+  }
+
+  public int initCount() {
+    return initCount;
   }
 }

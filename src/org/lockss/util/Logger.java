@@ -1,5 +1,5 @@
 /*
- * $Id: Logger.java,v 1.10 2002-12-30 23:04:29 tal Exp $
+ * $Id: Logger.java,v 1.11 2003-01-02 06:43:20 tal Exp $
  */
 
 /*
@@ -126,7 +126,7 @@ public class Logger {
   }
 
   /**
-   * Logger factory.  Return the unique instance
+   * Special purpose Logger factory.  Return the unique instance
    * of <code>Logger</code> with the given name, creating it if necessary.
    * This is here primarily so <Conde>Configuration</code> can create a
    * log without being invoked recursively, which causes its class
@@ -248,7 +248,10 @@ public class Logger {
    * @param target instance of <code>LogTarget</code> implementation.
    */
   public static void addTarget(LogTarget target) {
-    targets.addElement(target);
+    if (!targets.contains(target)) {
+      targets.addElement(target);
+      target.init();
+    }
   }
 
   //private

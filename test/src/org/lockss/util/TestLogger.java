@@ -1,5 +1,5 @@
 /*
- * $Id: TestLogger.java,v 1.6 2002-09-19 22:18:34 tal Exp $
+ * $Id: TestLogger.java,v 1.7 2003-01-02 06:45:54 tal Exp $
  */
 
 /*
@@ -84,6 +84,16 @@ public class TestLogger extends LockssTestCase{
     assertTrue(l.isLevel(Logger.LEVEL_CRITICAL));
     assertTrue( ! l.isLevel(Logger.LEVEL_INFO));
     assertTrue( ! l.isLevel(Logger.LEVEL_DEBUG));
+  }
+
+  public void testTargetInit() {
+    Logger l = Logger.getLogger("test-log");
+    MockLogTarget target = new MockLogTarget();
+    assertEquals(0, target.initCount());
+    l.addTarget(target);
+    assertEquals(1, target.initCount());
+    l.addTarget(target);
+    assertEquals(1, target.initCount());
   }
 
   public void testLevelFilter() {

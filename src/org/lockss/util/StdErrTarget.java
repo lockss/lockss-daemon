@@ -37,6 +37,9 @@ public class StdErrTarget implements LogTarget {
 //    static final DateFormat df = DateFormat.getTimeInstance();
   static final DateFormat df = new SimpleDateFormat("HH:mm:ss.SSS");
 
+  public void init() {
+  }
+
   // Rather than synchronizing, build whole string and assume a single
   // println will probably not get interleaved with another thread.
   // If need to explicitly synchronize, do so on the class, not instance,
