@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.50 2004-05-11 04:01:53 clairegriffin Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.51 2004-05-16 08:44:34 tlipkis Exp $
  */
 
 /*
@@ -88,6 +88,9 @@ public class HistoryRepositoryImpl
   HistoryRepositoryImpl(ArchivalUnit au, String rootPath) {
     storedAu = au;
     rootLocation = rootPath;
+    if (rootLocation==null) {
+      throw new NullPointerException();
+    }
     if (!rootLocation.endsWith(File.separator)) {
       // this shouldn't happen
       rootLocation += File.separator;
@@ -96,11 +99,11 @@ public class HistoryRepositoryImpl
 
   public void startService() {
     super.startService();
-    if (rootLocation==null) {
-      String msg = PARAM_HISTORY_LOCATION + " not configured";
-      logger.error(msg);
-      throw new LockssDaemonException(msg);
-    }
+//     if (rootLocation==null) {
+//       String msg = PARAM_HISTORY_LOCATION + " not configured";
+//       logger.error(msg);
+//       throw new LockssDaemonException(msg);
+//     }
     // check if file updates are needed
     checkFileChange();
   }
@@ -463,34 +466,11 @@ public class HistoryRepositoryImpl
    * @return the new HistoryRepository instance
    */
   public static HistoryRepository createNewHistoryRepository(ArchivalUnit au) {
-    // XXX needs to handle multiple disks/repository locations
+    String root = LockssRepositoryImpl.getRepositoryRoot(au);
 
-    String historyLocation = Configuration.getParam(PARAM_HISTORY_LOCATION);
-    if (historyLocation == null) {
-      logger.error("Couldn't get " + PARAM_HISTORY_LOCATION +
-          " from Configuration");
-      throw new LockssRepository.RepositoryStateException(
-          "Couldn't load param.");
-    }
-    historyLocation = extendCacheLocation(historyLocation);
-
-    return new HistoryRepositoryImpl(au,
-        LockssRepositoryImpl.mapAuToFileLocation(historyLocation, au));
-  }
-
-  /**
-   * Convenience function to add the 'cache' to the root location.
-   * @param cacheDir dir to put cache in
-   * @return String full cache location
-   */
-  static String extendCacheLocation(String cacheDir) {
-    StringBuffer buffer = new StringBuffer(cacheDir);
-    if (!cacheDir.endsWith(File.separator)) {
-      buffer.append(File.separator);
-    }
-    buffer.append(HISTORY_ROOT_NAME);
-    buffer.append(File.separator);
-    return buffer.toString();
+    return new
+      HistoryRepositoryImpl(au, LockssRepositoryImpl.mapAuToFileLocation(root,
+									 au));
   }
 
   /**

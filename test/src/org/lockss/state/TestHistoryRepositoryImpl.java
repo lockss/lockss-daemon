@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.43 2004-02-07 06:52:47 eaalto Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.44 2004-05-16 08:44:33 tlipkis Exp $
  */
 
 /*
@@ -419,6 +419,7 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
     throws IOException {
     Properties p = new Properties();
     p.setProperty(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION, rootLocation);
+    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, rootLocation);
     p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
     ConfigurationUtil.setCurrentConfigFromProps(p);
   }
