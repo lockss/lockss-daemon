@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.7 2005-01-10 06:23:33 smorabito Exp $
+ * $Id: Configuration.java,v 1.8 2005-01-20 04:27:29 tlipkis Exp $
  */
 
 /*
@@ -60,9 +60,10 @@ public abstract class Configuration {
   /** Platform host name. */
   public static final String PARAM_PLATFORM_HOSTNAME =
     ConfigManager.PARAM_PLATFORM_FQDN;
-  /** Test group. */
-  public static final String PARAM_DAEMON_GROUP =
-    DAEMON + "group";
+
+  /** Group name, for group= config file conditional */
+  public static final String PARAM_DAEMON_GROUP = DAEMON + "group";
+  public static final String DEFAULT_DAEMON_GROUP = "nogroup";
 
   // MUST pass in explicit log level to avoid recursive call back to
   // Configuration to get Config log level.  (Others should NOT do this.)
@@ -122,7 +123,7 @@ public abstract class Configuration {
   }
 
   public static String getPlatformGroup() {
-    return getPlatformConfig().get(PARAM_DAEMON_GROUP);
+    return getPlatformConfig().get(PARAM_DAEMON_GROUP, DEFAULT_DAEMON_GROUP);
   }
 
   public static String getPlatformHostname() {
