@@ -1,5 +1,5 @@
 /*
- * $Id: HashSvcSchedImpl.java,v 1.11 2004-05-26 07:03:11 tlipkis Exp $
+ * $Id: HashSvcSchedImpl.java,v 1.12 2004-08-02 02:59:37 tlipkis Exp $
  */
 
 /*
@@ -48,7 +48,7 @@ import org.lockss.plugin.*;
  * the SchedService to execute tasks.
  */
 public class HashSvcSchedImpl
-  extends BaseLockssManager implements HashService {
+  extends BaseLockssDaemonManager implements HashService {
 
   protected static Logger log = Logger.getLogger("HashSvcSchedImpl");
 

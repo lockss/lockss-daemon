@@ -1,5 +1,5 @@
 /*
- * $Id: MockNodeManager.java,v 1.16 2004-04-29 10:10:39 tlipkis Exp $
+ * $Id: MockNodeManager.java,v 1.17 2004-08-02 02:59:35 tlipkis Exp $
  */
 
 /*
@@ -50,8 +50,8 @@ public class MockNodeManager implements NodeManager {
   private HashMap nodeMap = new HashMap();
   public HashMap hashCalls = new HashMap();
 
-  public void initService(LockssDaemon daemon)
-      throws LockssDaemonException {
+  public void initService(LockssApp app)
+      throws LockssAppException {
     throw new UnsupportedOperationException("Not implemented");
   }
 
@@ -63,7 +63,7 @@ public class MockNodeManager implements NodeManager {
     logger.debug3("Service stopped");
   }
 
-  public LockssDaemon getDaemon() {
+  public LockssApp getApp() {
     throw new UnsupportedOperationException("Not implemented");
   }
 

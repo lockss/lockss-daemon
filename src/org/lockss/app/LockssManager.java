@@ -1,5 +1,5 @@
 /*
- * $Id: LockssManager.java,v 1.7 2004-04-29 10:10:41 tlipkis Exp $
+ * $Id: LockssManager.java,v 1.8 2004-08-02 02:59:38 tlipkis Exp $
  */
 
 /*
@@ -42,11 +42,11 @@ public interface LockssManager {
   /**
    * init the manager - There is no guarantee that any other manager is
    * loaded into memory.
-   * @param daemon the daemon that can be used to get additional services
-   * @throws LockssDaemonException if this manager was already inited.
+   * @param app the app that can be used to get additional services
+   * @throws LockssAppException if this manager was already inited.
    */
-  public void initService(LockssDaemon daemon)
-      throws LockssDaemonException;
+  public void initService(LockssApp app)
+      throws LockssAppException;
 
   /**
    * start the manager.  All managers are inited at this point
@@ -59,7 +59,7 @@ public interface LockssManager {
   public void stopService();
 
   /**
-   * Return the daemon instance in which this manager is running
+   * Return the app instance in which this manager is running
    */
-  public LockssDaemon getDaemon();
+  public LockssApp getApp();
 }

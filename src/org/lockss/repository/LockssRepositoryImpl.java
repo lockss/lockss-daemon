@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.57 2004-06-17 06:17:26 eaalto Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.58 2004-08-02 02:59:36 tlipkis Exp $
  */
 
 /*
@@ -52,7 +52,7 @@ import org.apache.commons.collections.ReferenceMap;
  * removed from the cache on finalize()).
  */
 public class LockssRepositoryImpl
-  extends BaseLockssManager implements LockssRepository {
+  extends BaseLockssDaemonManager implements LockssRepository {
 
   /**
    * Configuration parameter name for Lockss cache location.

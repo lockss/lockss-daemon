@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerStatus.java,v 1.19 2004-07-12 23:01:50 smorabito Exp $
+ * $Id: NodeManagerStatus.java,v 1.20 2004-08-02 02:59:36 tlipkis Exp $
  */
 
 /*
@@ -37,7 +37,7 @@ import org.lockss.app.*;
 /**
  * Collect and report the status of the NodeManager
  */
-public class NodeManagerStatus extends BaseLockssManager {
+public class NodeManagerStatus extends BaseLockssDaemonManager {
   public static final String SERVICE_STATUS_TABLE_NAME =
       "NodeManagerServiceTable";
   public static final String MANAGER_STATUS_TABLE_NAME = "NodeManagerTable";

@@ -1,5 +1,5 @@
 /*
-* $Id: MockIdentityManager.java,v 1.6 2004-02-06 03:12:07 troberts Exp $
+* $Id: MockIdentityManager.java,v 1.7 2004-08-02 02:59:35 tlipkis Exp $
  */
 
 /*
@@ -46,7 +46,7 @@ public class MockIdentityManager extends IdentityManager {
   public Map agreeMap = new HashMap();
 
   public MockIdentityManager() { }
-  public void initService(LockssDaemon daemon) throws LockssDaemonException {
+  public void initService(LockssDaemon daemon) throws LockssAppException {
     localIdentityStr = "127.1.2.3";
     makeLocalIdentity();
   }

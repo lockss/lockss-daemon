@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.12 2004-07-21 23:29:47 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.13 2004-08-02 02:59:37 tlipkis Exp $
  */
 
 /*
@@ -46,7 +46,7 @@ import org.apache.commons.collections.ReferenceMap;
  * variety of daemon status and services using only datastructure-like
  * classes that are easy to serialize.
  */
-public class RemoteApi extends BaseLockssManager {
+public class RemoteApi extends BaseLockssDaemonManager {
   private static Logger log = Logger.getLogger("RemoteApi");
   static final String PARAM_AU_TREE = PluginManager.PARAM_AU_TREE;
   static final String AU_PARAM_DISPLAY_NAME =

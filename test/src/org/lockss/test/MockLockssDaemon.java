@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssDaemon.java,v 1.38 2004-07-12 06:12:10 tlipkis Exp $
+ * $Id: MockLockssDaemon.java,v 1.39 2004-08-02 02:59:35 tlipkis Exp $
  */
 
 /*
@@ -121,7 +121,7 @@ public class MockLockssDaemon extends LockssDaemon {
     log.debug2("Loading manager: " + key);
     ManagerDesc desc = findManagerDesc(key);
     if (desc == null) {
-      throw new LockssDaemonException("No ManagerDesc for: " + key);
+      throw new LockssAppException("No ManagerDesc for: " + key);
     }
     if (log.isDebug2()) {
       String mgr_name = Configuration.getParam(MANAGER_PREFIX + desc.getKey(),
@@ -131,7 +131,7 @@ public class MockLockssDaemon extends LockssDaemon {
     try {
       return initManager(desc);
     } catch (Exception e) {
-      throw new LockssDaemonException("Can't load manager: " + e.toString());
+      throw new LockssAppException("Can't load manager: " + e.toString());
     }
   }
 
@@ -445,7 +445,7 @@ public class MockLockssDaemon extends LockssDaemon {
   public LockssAuManager newAuManager(String key, ArchivalUnit au) {
     ManagerDesc desc = findAuManagerDesc(key);
     if (desc == null) {
-      throw new LockssDaemonException("No AU ManagerDesc for: " + key);
+      throw new LockssAppException("No AU ManagerDesc for: " + key);
     }
     log.debug2("Loading manager: " + desc.getKey() + " for " + au);
     try {
@@ -454,7 +454,7 @@ public class MockLockssDaemon extends LockssDaemon {
       return mgr;
     } catch (Exception e) {
       log.error("Error starting au manager", e);
-      throw new LockssDaemonException("Can't load au manager: " +
+      throw new LockssAppException("Can't load au manager: " +
 				      e.toString());
     }
   }
@@ -473,10 +473,10 @@ public class MockLockssDaemon extends LockssDaemon {
   }
 
   /** Overridden to prevent manager from being started */
-  protected void startAuManagers(ArchivalUnit au, SequencedHashMap auMgrMap)
+  public void startOrReconfigureAuManagers(ArchivalUnit au,
+					   Configuration auConfig)
       throws Exception {
   }
-
 
   /** Return ActivityRegulator for AU */
   public ActivityRegulator getActivityRegulator(ArchivalUnit au) {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssDaemon.java,v 1.4 2004-04-29 10:10:40 tlipkis Exp $
+ * $Id: TestLockssDaemon.java,v 1.5 2004-08-02 02:59:35 tlipkis Exp $
  */
 
 /*
@@ -42,86 +42,6 @@ import org.lockss.plugin.*;
  * This is the test class for org.lockss.util.LockssDaemon
  */
 public class TestLockssDaemon extends LockssTestCase {
-
-  // load & init default manager
-  public void testInitManagerNoParam() throws Exception {
-    LockssDaemon daemon = new LockssDaemon(null);
-    LockssDaemon.ManagerDesc d1 =
-      new LockssDaemon.ManagerDesc("param", mockMgrName);
-    LockssManager m1 = daemon.initManager(d1);
-    assertTrue(((MockMgr)m1).isInited());
-  }
-
-  // configure alternate manager class
-  public void testInitManagerParam() throws Exception {
-    LockssDaemon daemon = new LockssDaemon(null);
-    ConfigurationUtil.setFromArgs(LockssDaemon.MANAGER_PREFIX + "param",
-				  mockMgrName);
-    LockssDaemon.ManagerDesc d1 =
-      new LockssDaemon.ManagerDesc("param", "not.found");
-    LockssManager m1 = daemon.initManager(d1);
-    assertTrue(((MockMgr)m1).isInited());
-  }
-
-  // if configured class not found, fall back to default class
-  public void testInitManagerParamFallback() throws Exception {
-    LockssDaemon daemon = new LockssDaemon(null);
-    ConfigurationUtil.setFromArgs(LockssDaemon.MANAGER_PREFIX + "param",
-				  "not.found.class");
-    LockssDaemon.ManagerDesc d1 =
-      new LockssDaemon.ManagerDesc("param", mockMgrName);
-    LockssManager m1 = daemon.initManager(d1);
-    assertTrue(((MockMgr)m1).isInited());
-  }
-
-  // fail if class not LockssManager
-  public void testInitManagerNotManager() throws Exception {
-    LockssDaemon daemon = new LockssDaemon(null);
-    LockssDaemon.ManagerDesc d1 =
-      new LockssDaemon.ManagerDesc("param", "java.lang.String");
-    try {
-      LockssManager m1 = daemon.initManager(d1);
-      fail("initManager() shouldn't succeed on non-LockssManager class");
-    } catch (ClassCastException e) {
-    }
-  }
-
-  // Configured class not LockssManager shouldn't cause fallback to default
-  public void testInitManagerParamNoFallbackIfNotManager() throws Exception {
-    LockssDaemon daemon = new LockssDaemon(null);
-    ConfigurationUtil.setFromArgs(LockssDaemon.MANAGER_PREFIX + "param",
-				  "java.lang.String");
-    LockssDaemon.ManagerDesc d1 =
-      new LockssDaemon.ManagerDesc("param", mockMgrName);
-    try {
-      LockssManager m1 = daemon.initManager(d1);
-      fail("initManager() shouldn't succeed on non-LockssManager class");
-    } catch (ClassCastException e) {
-    }
-  }
-
-  static final String mockMgrName = "org.lockss.app.TestLockssDaemon$MockMgr";
-  static class MockMgr implements LockssManager {
-    boolean isInited = false;
-
-    public void initService(LockssDaemon daemon)
-	throws LockssDaemonException {
-      isInited = true;
-    }
-
-    public void startService() {
-    }
-
-    public void stopService() {
-    }
-    public LockssDaemon getDaemon() {
-      throw new UnsupportedOperationException("Not implemented");
-    }
-
-    boolean isInited() {
-      return isInited;
-    }
-  }
 
   // AU specific manager tests
 
@@ -237,8 +157,8 @@ public class TestLockssDaemon extends LockssTestCase {
 			     Configuration prevConfig,
 			     Set changedKeys) {
     }
-    public void initService(LockssDaemon daemon) {
-      events.add(new Event(this, "initService", daemon));
+    public void initService(LockssApp app) {
+      events.add(new Event(this, "initService", app));
     }
     public void startService() {
       events.add(new Event(this, "startService"));
@@ -247,7 +167,7 @@ public class TestLockssDaemon extends LockssTestCase {
     public void stopService() {
       events.add(new Event(this, "stopService"));
     }
-    public LockssDaemon getDaemon() {
+    public LockssApp getApp() {
       throw new UnsupportedOperationException("Not implemented");
     }
 

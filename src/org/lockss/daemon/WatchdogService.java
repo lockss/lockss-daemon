@@ -1,5 +1,5 @@
 /*
- * $Id: WatchdogService.java,v 1.8 2004-02-09 22:09:56 tlipkis Exp $
+ * $Id: WatchdogService.java,v 1.9 2004-08-02 02:59:38 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -34,7 +34,6 @@ import java.net.*;
 import java.util.*;
 import org.lockss.app.*;
 import org.lockss.util.*;
-import org.lockss.daemon.*;
 
 /** WatchdogService pokes a file periodically to reassure the platform that
  * java is still running ok.  If the file's last-modified time is not
@@ -93,7 +92,7 @@ public class WatchdogService extends BaseLockssManager {
 	log.info("Platform watchdog interval: " +
 		 StringUtil.timeIntervalToString(interval) +
 		 ", file: " + watchedFile);
-	if (theDaemon.isDaemonRunning()) {
+	if (theApp.isAppRunning()) {
 	  enable();
 	}
       } else {
@@ -118,7 +117,7 @@ public class WatchdogService extends BaseLockssManager {
     super.stopService();
   }
 
-  /** Force the platform to kill the daemon, by stopping the updating of
+  /** Force the platform to kill the app, by stopping the updating of
    * the file */
   public synchronized void forceStop() {
     stopped = true;

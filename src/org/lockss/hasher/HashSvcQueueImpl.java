@@ -1,5 +1,5 @@
 /*
- * $Id: HashSvcQueueImpl.java,v 1.3 2004-01-13 01:33:35 tlipkis Exp $
+ * $Id: HashSvcQueueImpl.java,v 1.4 2004-08-02 02:59:37 tlipkis Exp $
  */
 
 /*
@@ -49,7 +49,7 @@ import org.lockss.plugin.*;
  * not lock out smaller requests.
  */
 public class HashSvcQueueImpl
-  extends BaseLockssManager implements HashService {
+  extends BaseLockssDaemonManager implements HashService {
 
   protected static Logger log = Logger.getLogger("HashSvcQueueImpl");
 

@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.69 2004-05-26 07:04:42 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.70 2004-08-02 02:59:38 tlipkis Exp $
  */
 
 /*
@@ -46,7 +46,7 @@ import org.lockss.plugin.*;
  * This is the interface for the object that will sit between the crawler
  * and the rest of the world.  It mediates the different crawl types.
  */
-public class CrawlManagerImpl extends BaseLockssManager
+public class CrawlManagerImpl extends BaseLockssDaemonManager
     implements CrawlManager, CrawlManager.StatusSource {
 
   /**

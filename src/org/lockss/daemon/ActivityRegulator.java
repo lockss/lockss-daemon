@@ -1,5 +1,5 @@
 /*
- * $Id: ActivityRegulator.java,v 1.32 2004-04-14 23:46:44 eaalto Exp $
+ * $Id: ActivityRegulator.java,v 1.33 2004-08-02 02:59:38 tlipkis Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ import org.lockss.app.*;
  * the state to reflect the new activity.
  */
 public class ActivityRegulator
-  extends BaseLockssManager implements LockssAuManager {
+  extends BaseLockssDaemonManager implements LockssAuManager {
 
 // AU level
   /**

@@ -1,5 +1,5 @@
 /*
-* $Id: MockPollManager.java,v 1.10 2003-07-09 19:25:19 clairegriffin Exp $
+* $Id: MockPollManager.java,v 1.11 2004-08-02 02:59:35 tlipkis Exp $
  */
 
 /*
@@ -53,7 +53,7 @@ public class MockPollManager extends PollManager {
   public MockPollManager() {
     super();
   }
-  public void initService(LockssDaemon daemon) throws LockssDaemonException {
+  public void initService(LockssDaemon daemon) throws LockssAppException {
     super.initService(daemon);
   }
   public void startService() {

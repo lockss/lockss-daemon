@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.14 2004-07-21 07:06:05 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.15 2004-08-02 02:59:36 tlipkis Exp $
  */
 
 /*
@@ -39,7 +39,7 @@ import org.lockss.repository.*;
 /**
  * Collect and report the status of the ArchivalUnits
  */
-public class ArchivalUnitStatus extends BaseLockssManager {
+public class ArchivalUnitStatus extends BaseLockssDaemonManager {
   /**
    * The maximum number of nodes to display in a single page of the ui.
    */

@@ -1,5 +1,5 @@
 /*
- * $Id: NullAlertManager.java,v 1.1 2004-07-12 06:28:44 tlipkis Exp $
+ * $Id: NullAlertManager.java,v 1.2 2004-08-02 02:59:35 tlipkis Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import org.lockss.app.*;
 /**
  * Null version of the AlertManager.
  */
-public class NullAlertManager extends BaseLockssManager
+public class NullAlertManager extends BaseLockssDaemonManager
   implements AlertManager {
   private static Logger log = Logger.getLogger("NullAlertManager");
 

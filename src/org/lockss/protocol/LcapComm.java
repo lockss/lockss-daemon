@@ -1,5 +1,5 @@
 /*
- * $Id: LcapComm.java,v 1.48 2004-06-28 22:25:06 tlipkis Exp $
+ * $Id: LcapComm.java,v 1.49 2004-08-02 02:59:37 tlipkis Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ import org.lockss.plugin.*;
  * between LOCKSS caches.  The packets sent at this level are {@link
  * LockssDatagram}s.  They are sent and received via {@link LcapSocket}s.
  */
-public class LcapComm extends BaseLockssManager {
+public class LcapComm extends BaseLockssDaemonManager {
 
   static final String PARAM_LOCAL_IPS =
     Configuration.PREFIX + "platform.localIPs";

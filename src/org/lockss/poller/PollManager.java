@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.127 2004-07-12 23:41:42 clairegriffin Exp $
+ * $Id: PollManager.java,v 1.128 2004-08-02 02:59:37 tlipkis Exp $
  */
 
 /*
@@ -55,7 +55,7 @@ import org.lockss.alert.*;
  * @version 1.0
  */
 
-public class PollManager  extends BaseLockssManager {
+public class PollManager  extends BaseLockssDaemonManager {
   static final String PARAM_RECENT_EXPIRATION = Configuration.PREFIX +
       "poll.expireRecent";
   static final String PARAM_VERIFY_EXPIRATION = Configuration.PREFIX +

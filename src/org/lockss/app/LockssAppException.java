@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemonException.java,v 1.4 2003-06-20 22:34:50 claire Exp $
+ * $Id: LockssAppException.java,v 1.1 2004-08-02 02:59:38 tlipkis Exp $
  */
 
 /*
@@ -32,13 +32,13 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.app;
 
-public class LockssDaemonException extends RuntimeException {
+public class LockssAppException extends RuntimeException {
 
-  public LockssDaemonException() {
+  public LockssAppException() {
     super();
   }
 
-  public LockssDaemonException(String msg) {
+  public LockssAppException(String msg) {
     super(msg);
   }
 }

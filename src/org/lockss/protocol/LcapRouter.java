@@ -1,5 +1,5 @@
 /*
- * $Id: LcapRouter.java,v 1.33 2004-07-12 06:16:48 tlipkis Exp $
+ * $Id: LcapRouter.java,v 1.34 2004-08-02 02:59:37 tlipkis Exp $
  */
 
 /*
@@ -49,7 +49,7 @@ import org.mortbay.util.B64Code;
  * Routing involves decisions about using unicast to supplement multicast,
  * including forwarding received unicast packets.
  */
-public class LcapRouter extends BaseLockssManager {
+public class LcapRouter extends BaseLockssDaemonManager {
   static final String PREFIX = Configuration.PREFIX + "comm.router.";
   static final String ORIGRATE_PREFIX = PREFIX + "maxOriginateRate.";
   static final String PARAM_ORIG_PKTS_PER_INTERVAL = ORIGRATE_PREFIX+"packets";

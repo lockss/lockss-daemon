@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssRepository.java,v 1.10 2004-06-17 06:17:25 eaalto Exp $
+ * $Id: MockLockssRepository.java,v 1.11 2004-08-02 02:59:35 tlipkis Exp $
  */
 
 /*
@@ -55,7 +55,7 @@ public class MockLockssRepository implements LockssRepository {
     nodeCache = new HashMap();
   }
 
-  public void initService(LockssDaemon daemon) throws LockssDaemonException {
+  public void initService(LockssApp app) throws LockssAppException {
 
   }
 
@@ -65,7 +65,7 @@ public class MockLockssRepository implements LockssRepository {
   public void stopService() {
   }
 
-  public LockssDaemon getDaemon() {
+  public LockssApp getApp() {
     throw new UnsupportedOperationException("Not implemented");
   }
 

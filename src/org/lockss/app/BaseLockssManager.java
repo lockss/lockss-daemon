@@ -1,5 +1,5 @@
 /*
- * $Id: BaseLockssManager.java,v 1.12 2004-04-29 10:10:41 tlipkis Exp $
+ * $Id: BaseLockssManager.java,v 1.13 2004-08-02 02:59:39 tlipkis Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import org.lockss.util.*;
 public abstract class BaseLockssManager implements LockssManager {
 
   private LockssManager theManager = null;
-  protected LockssDaemon theDaemon = null;
+  protected LockssApp theApp = null;
   private Configuration.Callback configCallback;
   private String className = ClassUtil.getClassNameWithoutPackage(getClass());
   private static Logger log = Logger.getLogger("BaseLockssManager");
@@ -52,18 +52,18 @@ public abstract class BaseLockssManager implements LockssManager {
    * this to perform any internal initialization necessary before service
    * can be called from outside.  No calls to other services may be made in
    * this method.
-   * @param daemon the {@link LockssDaemon}
-   * @throws LockssDaemonException
+   * @param app the {@link LockssApp}
+   * @throws LockssAppException
    */
-  public void initService(LockssDaemon daemon) throws LockssDaemonException {
+  public void initService(LockssApp app) throws LockssAppException {
     if (log.isDebug2()) log.debug2(className + ".initService()");
     if(theManager == null) {
-      theDaemon = daemon;
+      theApp = app;
       theManager = this;
       registerDefaultConfigCallback();
     }
     else {
-      throw new LockssDaemonException("Multiple Instantiation.");
+      throw new LockssAppException("Multiple Instantiation.");
     }
   }
 
@@ -82,23 +82,23 @@ public abstract class BaseLockssManager implements LockssManager {
     theManager = null;
   }
 
-  /** Return the daemon instance in which this manager is running */
-  public LockssDaemon getDaemon() {
-    return theDaemon;
+  /** Return the app instance in which this manager is running */
+  public LockssApp getApp() {
+    return theApp;
   }
 
   /**
-   * Return true iff all the daemon services have been initialized.
-   * @return true if the daemon is inited
+   * Return true iff all the app services have been initialized.
+   * @return true if the app is inited
    */
-  protected boolean isDaemonInited() {
-    return theDaemon.isDaemonInited();
+  protected boolean isAppInited() {
+    return theApp.isAppInited();
   }
 
   private void registerConfigCallback(Configuration.Callback callback) {
     if(callback == null || this.configCallback != null) {
-      throw new LockssDaemonException("Invalid callback registration: "
-                                       + callback);
+      throw new LockssAppException("Invalid callback registration: "
+				       + callback);
     }
     configCallback = callback;
     Configuration.registerConfigurationCallback(configCallback);
@@ -123,10 +123,10 @@ public abstract class BaseLockssManager implements LockssManager {
     setConfig(cur, ConfigManager.EMPTY_CONFIGURATION, cur.keySet());
   }
 
-  /** Managers must implement this method.  It is called once at daemon
+  /** Managers must implement this method.  It is called once at app
    * init time (during initService()) and again whenever the current
    * configuration changes.  This method should not invoke other services
-   * unless isDaemonInited() is true.
+   * unless isAppInited() is true.
    * @param newConfig the new {@link Configuration}
    * @param prevConfig the previous {@link Configuration}
    * @param changedKeys the {@link Set} of changed keys
@@ -137,8 +137,8 @@ public abstract class BaseLockssManager implements LockssManager {
 
   private class DefaultConfigCallback implements Configuration.Callback {
     public void configurationChanged(Configuration newConfig,
-                                     Configuration prevConfig,
-                                     Set changedKeys) {
+				     Configuration prevConfig,
+				     Set changedKeys) {
       setConfig(newConfig, prevConfig, changedKeys);
     }
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: MockHistoryRepository.java,v 1.10 2004-04-29 10:10:40 tlipkis Exp $
+ * $Id: MockHistoryRepository.java,v 1.11 2004-08-02 02:59:35 tlipkis Exp $
  */
 
 /*
@@ -53,7 +53,7 @@ public class MockHistoryRepository implements HistoryRepository {
 
   public MockHistoryRepository() { }
 
-  public void initService(LockssDaemon daemon) throws LockssDaemonException { }
+  public void initService(LockssApp app) throws LockssAppException { }
   public void startService() { }
   public void stopService() {
     storedHistories = new HashMap();
@@ -61,7 +61,7 @@ public class MockHistoryRepository implements HistoryRepository {
     theDamagedNodeSet = null;
     storedNodes = new HashMap();
   }
-  public LockssDaemon getDaemon() {
+  public LockssApp getApp() {
     throw new UnsupportedOperationException("Not implemented");
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: StartProxy.java,v 1.9 2003-09-26 23:49:01 eaalto Exp $
+ * $Id: StartProxy.java,v 1.10 2004-08-02 02:59:35 tlipkis Exp $
  */
 
 /*
@@ -48,7 +48,7 @@ public class StartProxy {
     try {
       manager.initService(null);
     }
-    catch (LockssDaemonException ex) {
+    catch (LockssAppException ex) {
       System.err.println("Init called twice!");
     }
 //    System.out.println("pm.findArchivalUnit(http://foo.bar/one) = " +

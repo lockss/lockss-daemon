@@ -1,5 +1,5 @@
 /*
- * $Id: UrlManager.java,v 1.2 2003-06-20 22:34:50 claire Exp $
+ * $Id: UrlManager.java,v 1.3 2004-08-02 02:59:38 tlipkis Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ import org.lockss.plugin.*;
  * during unit testing.)
  */
 
-public class UrlManager extends BaseLockssManager {
+public class UrlManager extends BaseLockssDaemonManager {
   public static final String PROTOCOL_CU = "locksscu";
   public static final String PROTOCOL_AU = "lockssau";
 

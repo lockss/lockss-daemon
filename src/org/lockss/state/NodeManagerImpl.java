@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.179 2004-07-12 23:49:30 clairegriffin Exp $
+ * $Id: NodeManagerImpl.java,v 1.180 2004-08-02 02:59:36 tlipkis Exp $
  */
 
 /*
@@ -44,7 +44,7 @@ import org.lockss.alert.*;
  * Implementation of the NodeManager.
  */
 public class NodeManagerImpl
-  extends BaseLockssManager implements NodeManager {
+  extends BaseLockssDaemonManager implements NodeManager {
   /**
    * This parameter indicates the size of the {@link NodeStateCache} used by the
    * node manager.

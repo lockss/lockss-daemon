@@ -1,5 +1,5 @@
 /*
- * $Id: RunDaemon.java,v 1.41 2004-04-08 01:12:16 eaalto Exp $
+ * $Id: RunDaemon.java,v 1.42 2004-08-02 02:59:36 tlipkis Exp $
  */
 
 /*
@@ -92,7 +92,7 @@ public class RunDaemon
   }
 
   public void runDaemon() throws Exception {
-    super.runDaemon();
+    super.startDaemon();
 
     boolean testPoll = Configuration.getBooleanParam(PARAM_CALL_POLL,
         false);

@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.29 2004-07-19 08:26:56 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.30 2004-08-02 02:59:38 tlipkis Exp $
  */
 
 /*
@@ -114,7 +114,7 @@ public class ConfigManager implements LockssManager {
     Logger.getLoggerWithInitialLevel("Config",
 				     Logger.getInitialDefaultLevel());
 
-  protected LockssDaemon theDaemon = null;
+  protected LockssApp theApp = null;
 
   private List configChangedCallbacks = new ArrayList();
 
@@ -160,8 +160,8 @@ public class ConfigManager implements LockssManager {
     configCache = new ConfigCache();
   }
 
-  public void initService(LockssDaemon daemon) throws LockssDaemonException {
-    theDaemon = daemon;
+  public void initService(LockssApp app) throws LockssAppException {
+    theApp = app;
   }
 
   /** Called to start each service in turn, after all services have been
@@ -184,8 +184,8 @@ public class ConfigManager implements LockssManager {
     haveConfig = new OneShotSemaphore();
   }
 
-  public LockssDaemon getDaemon() {
-    return theDaemon;
+  public LockssApp getApp() {
+    return theApp;
   }
   private static ConfigManager theMgr;
 

@@ -1,5 +1,5 @@
 /*
- * $Id: SchedService.java,v 1.6 2004-07-21 07:05:36 tlipkis Exp $
+ * $Id: SchedService.java,v 1.7 2004-08-02 02:59:36 tlipkis Exp $
  */
 
 /*
@@ -62,7 +62,7 @@ public class SchedService extends BaseLockssManager {
 	  return new SortScheduler(tasks);
 	}});
     runner.init();
-    getDaemon().getStatusService().
+    getApp().getStatusService().
       registerStatusAccessor("SchedQ", runner.getStatusAccessor());
   }
 
@@ -73,7 +73,7 @@ public class SchedService extends BaseLockssManager {
   public void stopService() {
     // TODO: checkpoint here.
     if (runner != null) {
-      getDaemon().getStatusService().unregisterStatusAccessor("TaskRunner");
+      getApp().getStatusService().unregisterStatusAccessor("TaskRunner");
       runner.stopThread();
     }
     runner = null;
