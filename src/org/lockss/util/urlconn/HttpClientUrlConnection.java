@@ -1,5 +1,5 @@
 /*
- * $Id: HttpClientUrlConnection.java,v 1.15 2004-09-27 22:39:03 smorabito Exp $
+ * $Id: HttpClientUrlConnection.java,v 1.16 2005-03-24 00:55:33 troberts Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -302,6 +302,7 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
       return in;
     }
     if (in == null) {
+      log.warning("Returning null input stream");
       return null;
     }
     return new EofMonitoringInputStream(in);
