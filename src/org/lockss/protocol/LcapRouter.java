@@ -1,5 +1,5 @@
 /*
- * $Id: LcapRouter.java,v 1.18 2003-04-24 01:00:22 tal Exp $
+ * $Id: LcapRouter.java,v 1.19 2003-04-24 02:15:14 claire Exp $
  */
 
 /*
@@ -73,6 +73,7 @@ public class LcapRouter extends BaseLockssManager {
   static Logger log = Logger.getLogger("Router");
 
   private LcapComm comm;
+  private PollManager pollMgr;
   private IdentityManager idMgr;
   private RateLimiter fwdRateLimiter;
   private RateLimiter origRateLimiter;
@@ -89,6 +90,8 @@ public class LcapRouter extends BaseLockssManager {
     super.startService();
     comm = getDaemon().getCommManager();
     idMgr = getDaemon().getIdentityManager();
+    pollMgr = getDaemon().getPollManager();
+
     comm.registerMessageHandler(LockssDatagram.PROTOCOL_LCAP,
 				new LcapComm.MessageHandler() {
 				    public void
@@ -377,7 +380,8 @@ public class LcapRouter extends BaseLockssManager {
 
   void sendNoOp() {
     try {
-      LcapMessage noOp = LcapMessage.makeNoOpMsg(idMgr.getLocalIdentity());
+      LcapMessage noOp = LcapMessage.makeNoOpMsg(idMgr.getLocalIdentity(),
+                                                 pollMgr.generateRandomBytes());
       send(noOp, null);
     } catch (IOException e) {
       log.warning("Couldn't send NoOp message", e);

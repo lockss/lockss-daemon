@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessage.java,v 1.32 2003-04-24 00:51:55 aalto Exp $
+ * $Id: LcapMessage.java,v 1.33 2003-04-24 02:15:14 claire Exp $
  */
 
 /*
@@ -224,13 +224,15 @@ public class LcapMessage
     m_props.setProperty(key, value);
   }
 
-  static public LcapMessage makeNoOpMsg(LcapIdentity originID) throws
+  static public LcapMessage makeNoOpMsg(LcapIdentity originID,
+                                        byte[] verifier) throws
       IOException {
     LcapMessage msg = new LcapMessage();
     if (msg != null) {
       msg.m_originAddr = originID.getAddress();
       msg.m_opcode = NO_OP;
       msg.m_hopCount = 0;
+      msg.m_verifier = verifier;
     }
     return msg;
   }
@@ -408,6 +410,7 @@ public class LcapMessage
 
     if(m_opcode == NO_OP) {
       m_props.putInt("opcode", m_opcode);
+      m_props.putByteArray("verifier", m_verifier);
       return wrapPacket();
     }
 

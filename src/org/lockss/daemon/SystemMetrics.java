@@ -1,5 +1,5 @@
 /*
- * $Id: SystemMetrics.java,v 1.11 2003-04-24 00:51:55 aalto Exp $
+ * $Id: SystemMetrics.java,v 1.12 2003-04-24 02:15:14 claire Exp $
  */
 
 /*
@@ -55,8 +55,13 @@ public class SystemMetrics {
    */
   public static final String PARAM_HASH_TEST_BYTE_STEP =
       Configuration.PREFIX + "metrics.hash.stepsize";
+
+  public static final String PARAM_SLOWEST_RATE =
+      Configuration.PREFIX + "metrics.slowest.hashrate";
+
   static final long DEFAULT_HASH_DURATION = 10 * Constants.SECOND;
   static final int DEFAULT_HASH_STEP = 1024;
+  static final int DEFAULT_SLOWEST_RATE = 250;
 
 
   private static SystemMetrics metrics = null;
@@ -141,5 +146,9 @@ public class SystemMetrics {
     } else {
       return estimate.intValue();
     }
+  }
+
+  public int getSlowestRate() {
+    return Configuration.getIntParam(PARAM_SLOWEST_RATE, DEFAULT_SLOWEST_RATE);
   }
 }

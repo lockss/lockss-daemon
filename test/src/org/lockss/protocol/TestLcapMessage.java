@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapMessage.java,v 1.21 2003-04-17 02:16:58 troberts Exp $
+ * $Id: TestLcapMessage.java,v 1.22 2003-04-24 02:15:14 claire Exp $
  */
 
 /*
@@ -125,7 +125,7 @@ public class TestLcapMessage extends LockssTestCase {
     LcapMessage noop_msg = null;
 
     try {
-      noop_msg = LcapMessage.makeNoOpMsg(testID);
+      noop_msg = LcapMessage.makeNoOpMsg(testID, testbytes);
 
     }
     catch(IOException ex) {
@@ -135,10 +135,11 @@ public class TestLcapMessage extends LockssTestCase {
     // now check the fields we expect to be valid
     assertEquals(noop_msg.m_originAddr, testaddr);
     assertEquals(noop_msg.m_opcode,LcapMessage.NO_OP);
+    assertEquals(noop_msg.m_verifier, testbytes);
   }
 
   public void testNoOpMessageToString() throws IOException {
-    LcapMessage noop_msg = LcapMessage.makeNoOpMsg(testID);
+    LcapMessage noop_msg = LcapMessage.makeNoOpMsg(testID, testbytes);
 
     noop_msg.toString();
   }
@@ -149,7 +150,7 @@ public class TestLcapMessage extends LockssTestCase {
     LcapMessage noop_msg = null;
 
     try {
-      noop_msg = LcapMessage.makeNoOpMsg(testID);
+      noop_msg = LcapMessage.makeNoOpMsg(testID, testbytes);
     }
     catch(IOException ex) {
       fail("noop message creation failed");
@@ -166,6 +167,7 @@ public class TestLcapMessage extends LockssTestCase {
       // now test to see if we got back what we started with
       assertEquals(msg.m_originAddr, testaddr);
       assertEquals(msg.m_opcode,LcapMessage.NO_OP);
+      assertEquals(msg.m_verifier,testbytes);
     }
     catch (IOException ex) {
       fail("message decode failed");
