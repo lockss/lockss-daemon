@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlerImpl.java,v 1.19 2004-08-20 22:56:17 clairegriffin Exp $
+ * $Id: TestCrawlerImpl.java,v 1.20 2004-09-01 02:27:18 tlipkis Exp $
  */
 
 /*
@@ -439,7 +439,7 @@ public class TestCrawlerImpl extends LockssTestCase {
     Crawler.Status crawlStatus = crawler.getStatus();
     assertEquals(expectedStart, crawlStatus.getStartTime());
     assertEquals(expectedEnd, crawlStatus.getEndTime());
-    assertEquals(4, crawlStatus.getNumFetched());
+    assertEquals(5, crawlStatus.getNumFetched());
     assertEquals(4, crawlStatus.getNumParsed());
   }
 
@@ -594,9 +594,9 @@ public class TestCrawlerImpl extends LockssTestCase {
       public MockUrlCacherThatStepsTimebase(String url, MockCachedUrlSet cus) {
 	super(url, cus);
     }
-    public void cache() throws IOException {
+    public int cache() throws IOException {
       TimeBase.step();
-      super.cache();
+      return super.cache();
     }
 
     public InputStream getUncachedInputStream() {

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.36 2004-08-19 00:02:20 clairegriffin Exp $
+ * $Id: BaseUrlCacher.java,v 1.37 2004-09-01 02:27:19 tlipkis Exp $
  */
 
 /*
@@ -155,7 +155,7 @@ public class BaseUrlCacher implements UrlCacher {
     this.redirectOptions = scheme.getOptions();
   }
 
-  public void cache() throws IOException {
+  public int cache() throws IOException {
     String lastModified = null;
     if (!forceRefetch) {
       CachedUrl cachedVersion = plugin.makeCachedUrl(cus, origUrl);
@@ -167,27 +167,29 @@ public class BaseUrlCacher implements UrlCacher {
 	  cachedProps.getProperty(CachedUrl.PROPERTY_LAST_MODIFIED);
       }
     }
-    cache(lastModified);
+    return cache(lastModified);
   }
 
-  private void cache(String lastModified) throws IOException {
+  private int cache(String lastModified) throws IOException {
     logger.debug3("Pausing before fetching content");
     getArchivalUnit().pauseBeforeFetch();
     logger.debug3("Done pausing");
     InputStream input = getUncachedInputStream(lastModified);
     // null input indicates unmodified content, so skip caching
-    if (input!=null) {
-      try {
-	CIProperties headers = getUncachedProperties();
-	if (headers == null) {
-	  String err = "Received null headers for url '" + origUrl + "'.";
-	  logger.error(err);
-	  throw new NullPointerException(err);
-	}
-	storeContent(input, headers);
-      } finally {
-	input.close();
+    if (input == null) {
+      return CACHE_RESULT_NOT_MODIFIED;
+    }
+    try {
+      CIProperties headers = getUncachedProperties();
+      if (headers == null) {
+	String err = "Received null headers for url '" + origUrl + "'.";
+	logger.error(err);
+	throw new NullPointerException(err);
       }
+      storeContent(input, headers);
+      return CACHE_RESULT_FETCHED;
+    } finally {
+      input.close();
     }
   }
 

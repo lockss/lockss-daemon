@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.24 2004-08-19 00:02:22 clairegriffin Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.25 2004-09-01 02:27:18 tlipkis Exp $
  */
 
 /*
@@ -107,8 +107,8 @@ public class TestBaseUrlCacher extends LockssTestCase {
 
     cacher._input = new StringInputStream("test stream");
     cacher._headers = new CIProperties();
-    cacher.cache();
     // should cache
+    assertEquals(UrlCacher.CACHE_RESULT_FETCHED, cacher.cache());
     assertTrue(cacher.wasStored);
     assertEquals(1, pauseBeforeFetchCounter);
   }
@@ -124,15 +124,15 @@ public class TestBaseUrlCacher extends LockssTestCase {
     TimeBase.setSimulated(10000);
     cacher._input = new StringInputStream("test stream");
     cacher._headers = new CIProperties();
-    cacher.cache();
     // shouldn't cache
+    assertEquals(UrlCacher.CACHE_RESULT_NOT_MODIFIED, cacher.cache());
     assertFalse(cacher.wasStored);
 
     TimeBase.step(5000);
     cacher._input = new StringInputStream("test stream");
     cacher._headers = new CIProperties();
-    cacher.cache();
     // should cache now
+    assertEquals(UrlCacher.CACHE_RESULT_FETCHED, cacher.cache());
     assertTrue(cacher.wasStored);
 
     TimeBase.setReal();

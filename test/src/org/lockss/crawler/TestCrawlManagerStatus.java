@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerStatus.java,v 1.10 2004-06-14 23:54:46 dcfok Exp $
+ * $Id: TestCrawlManagerStatus.java,v 1.11 2004-09-01 02:27:18 tlipkis Exp $
  */
 
 /*
@@ -48,6 +48,7 @@ public class TestCrawlManagerStatus extends LockssTestCase {
   private static final String END_TIME_COL_NAME = "end";
   private static final String NUM_URLS_PARSED = "num_urls_parsed";
   private static final String NUM_URLS_FETCHED = "num_urls_fetched";
+  private static final String NUM_URLS_NOT_MODIFIED = "num_urls_not_modified";
   private static final String START_URLS = "start_urls";
   private static final String CRAWL_STATUS = "crawl_status";
   private static final String NC_TYPE = "New Content";
@@ -67,9 +68,11 @@ public class TestCrawlManagerStatus extends LockssTestCase {
 				       ColumnDescriptor.TYPE_DATE),
 		  new ColumnDescriptor(END_TIME_COL_NAME, "End Time",
 				       ColumnDescriptor.TYPE_DATE),
-		  new ColumnDescriptor(NUM_URLS_FETCHED, "URLs fetched",
+		  new ColumnDescriptor(NUM_URLS_PARSED, "Parsed",
 				       ColumnDescriptor.TYPE_INT),
-		  new ColumnDescriptor(NUM_URLS_PARSED, "URLs parsed",
+		  new ColumnDescriptor(NUM_URLS_FETCHED, "Fetched",
+				       ColumnDescriptor.TYPE_INT),
+		  new ColumnDescriptor(NUM_URLS_NOT_MODIFIED, "Not Modified ",
 				       ColumnDescriptor.TYPE_INT),
 		  new ColumnDescriptor(START_URLS, "starting url",
 				       ColumnDescriptor.TYPE_STRING),

@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.24 2004-07-12 18:19:03 dcfok Exp $
+ * $Id: RepairCrawler.java,v 1.25 2004-09-01 02:27:21 tlipkis Exp $
  */
 
 /*
@@ -265,7 +265,6 @@ public class RepairCrawler extends CrawlerImpl {
 	}
       }
       crawlStatus.signalUrlFetched();
-      numUrlsFetched++;
 
     } catch (CacheException e) {
       if (e.isAttributeSet(CacheException.ATTRIBUTE_FAIL)) {

@@ -1,5 +1,5 @@
 /*
- * $Id: MockUrlCacher.java,v 1.17 2004-08-19 00:02:23 clairegriffin Exp $
+ * $Id: MockUrlCacher.java,v 1.18 2004-09-01 02:27:18 tlipkis Exp $
  */
 
 /*
@@ -151,7 +151,7 @@ public class MockUrlCacher implements UrlCacher {
     this.cachingRuntimException = e;
   }
 
-  public void cache() throws IOException {
+  public int cache() throws IOException {
     if (cus != null) {
       cus.signalCacheAttempt(url);
     }
@@ -176,6 +176,7 @@ public class MockUrlCacher implements UrlCacher {
     if (cu != null) {
       cu.setExists(true);
     }
+    return CACHE_RESULT_FETCHED;
   }
 
   public InputStream getUncachedInputStream(){

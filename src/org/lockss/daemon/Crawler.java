@@ -1,5 +1,5 @@
 /*
- * $Id: Crawler.java,v 1.21 2004-06-14 23:54:46 dcfok Exp $
+ * $Id: Crawler.java,v 1.22 2004-09-01 02:27:20 tlipkis Exp $
  */
 
 /*
@@ -108,6 +108,7 @@ public interface Crawler {
     protected long startTime = -1;
     protected long endTime = -1;
     protected long numFetched = 0;
+    protected long numNotModified = 0;
     protected long numParsed = 0;
     protected String crawlError = null;
     protected Collection startUrls = null;
@@ -152,8 +153,20 @@ public interface Crawler {
       return numFetched;
     }
 
+    /**
+     * Return the number of urls whose GETs returned 304 not modified
+     * @return number of urls whose contents were not modified
+     */
+    public long getNumNotModified() {
+      return numNotModified;
+    }
+
     public void signalUrlFetched() {
       numFetched++;
+    }
+
+    public void signalUrlNotModified() {
+      numNotModified++;
     }
 
     /**
