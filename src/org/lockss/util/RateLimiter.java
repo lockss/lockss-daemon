@@ -1,5 +1,5 @@
 /*
- * $Id: RateLimiter.java,v 1.1 2003-01-21 18:34:26 tal Exp $
+ * $Id: RateLimiter.java,v 1.2 2003-02-20 22:30:20 tal Exp $
  */
 
 /*
@@ -37,10 +37,10 @@ import java.util.*;
  * RateLimiter is used to limit the rate at which some class of events occur.
  */
 public class RateLimiter {
-  int limit;				// limit on events / interval
-  long interval;
-  long time[];				// history of (limit) event times
-  int count = 0;
+  private int limit;			// limit on events / interval
+  private long interval;
+  private long time[];			// history of (limit) event times
+  private int count = 0;
 
   /** Create a RateLimiter that limits events to <code>limit</code> per
    * <code>interval</code> milliseconds.
