@@ -8,6 +8,9 @@ from sys import argv, exit
 from getpass import getpass
 from getopt import getopt, GetoptError
 from os import path, environ, popen, getcwd, sep
+from os import pathsep
+from os.path import exists, join
+from string import split
 
 # Constants
 BUILD_ONLY = 0
@@ -17,23 +20,51 @@ validArgs = ["help", "nosign", "titledb=", "jar=", "plugin=",
              "alias=", "keystore=", "password="]
 args = {}
 
-# Make sure environment variables are set
-if not environ.has_key('ANT_HOME'):
-    print "ANT_HOME must be defined in your environment."
+
+#
+# Search up the tree until build.xml is found.  If it cannot be found, exit.
+#
+def find_project_dir():
+    path_elements =  getcwd().split("/")
+
+    while len(path_elements) > 1:
+        dir = "/".join(path_elements)
+        f = dir + "/" + "build.xml";
+        if path.exists(f) and path.isfile(f):
+            print "Using build xml file " + f
+            return dir
+        else:
+            path_elements = path_elements[:len(path_elements) - 1]
+
+    # File wasn't found.
+    return None
+
+
+# Find ant binary and lockss project dir
+antBin=''
+if environ.has_key('ANT_HOME'):
+    antBin = path.join(environ.get('ANT_HOME'), 'bin', 'ant')
+else:
+    pathdirs = split(environ.get('PATH'), pathsep)
+    for dir in pathdirs:
+        tmp = path.join(dir, 'ant')
+        if exists(tmp):
+            antBin = tmp
+            break
+
+if antBin == '':
+    print "ant must be on your path or ANT_HOME must be defined."
     exit(1)
 
-if not environ.has_key('PLUGIN_HOME'):
-    print "PLUGIN_HOME must be defined in your environment, and must point to the\n" + \
-          "top-level project under which the plugin source files can be found\n" + \
-          "(i.e., /path/to/lockss-daemon/)"
-    exit(1)
 
-# Location of the 'ant' command.
-antBin = path.join(environ.get('ANT_HOME'), 'bin', 'ant')
-pluginSrc = path.join(environ.get('PLUGIN_HOME'), 'src')
 
-if not path.isdir(pluginSrc):
-    print "Unable to find src directory uner PLUGIN_HOME, can't continue."
+if  environ.has_key('PLUGIN_HOME'):
+    projectDir = environ.get('PLUGIN_HOME')
+else:
+    projectDir = find_project_dir()
+
+if not projectDir:
+    print "Unable to find build.xml file."
     exit(1)
 
 # By default, the mode is to build and sign plugins.
@@ -87,7 +118,7 @@ def get_plugin_info(plugin):
     the plugin file, i.e. given '/path/to/src/foo/bar/BazPlugin.xml',
     return ('foo/bar', 'BazPlugin.xml') """
 
-    pSrc = path.join(environ['PLUGIN_HOME'], 'src') + sep
+    pSrc = projectDir + sep
     pPath = path.abspath(plugin)
     commonPath = common_path(pSrc, pPath)
 
@@ -194,23 +225,6 @@ def run_ant(command):
     return err
 
 #
-# Search up the tree until build.xml is found.  If it cannot be found, exit.
-#
-def find_build_xml():
-    path_elements =  getcwd().split("/")
-
-    while len(path_elements) > 1:
-        f = "/".join(path_elements) + "/" + "build.xml";
-        if path.exists(f) and path.isfile(f):
-            print "Using build xml file " + f
-            return f
-        else:
-            path_elements = path_elements[:len(path_elements) - 1]
-
-    # File wasn't found.
-    return None
-
-#
 # Build jar and optionally sign
 #
 def gen_plugin():
@@ -250,9 +264,9 @@ def main():
     """ Main entry point """
     # Find the build.xml file
     global buildXml
-    buildXml = find_build_xml()
+    buildXml = projectDir + "/build.xml"
 
-    if not buildXml:
+    if not exists(buildXml):
         print "Unable to find build.xml file."
         exit(1)
 
