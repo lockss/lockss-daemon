@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.82 2003-04-21 22:21:20 claire Exp $
+* $Id: PollManager.java,v 1.83 2003-04-22 00:08:55 claire Exp $
  */
 
 /*
@@ -179,7 +179,7 @@ public class PollManager  extends BaseLockssManager {
     // before we actually send the message make sure that another poll
     // isn't going to conflict with this and create a split poll
     if(checkForConflicts(msg,cus) == null) {
-      theLog.debug2("send poll request: " +  msg.toString());
+      theLog.debug2("sending poll request message: " +  msg.toString());
       sendMessage(msg, cus.getArchivalUnit());
     }
     else {
@@ -827,7 +827,7 @@ public class PollManager  extends BaseLockssManager {
 
     boolean isPollCompleted() {
       return status != PollTally.STATE_POLLING
-                     && status != PollTally.STATE_SUSPENDED;
+          && status != PollTally.STATE_SUSPENDED;
     }
 
     boolean isPollSuspended() {
@@ -850,10 +850,16 @@ public class PollManager  extends BaseLockssManager {
     }
 
     String getStatusString() {
-      if(status == PollTally.STATE_SUSPENDED) {
+      if (isPollCompleted()) {
+        return poll.getVoteTally().getStatusString();
+      }
+      else if(isPollActive()) {
+        return "Active";
+      }
+      else if(isPollSuspended()) {
         return "Suspended";
       }
-      return poll.getVoteTally().getStatusString();
+      return "Unknown";
     }
 
     String getTypeString() {

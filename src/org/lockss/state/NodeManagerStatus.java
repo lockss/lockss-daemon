@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerStatus.java,v 1.4 2003-04-17 02:16:58 troberts Exp $
+ * $Id: NodeManagerStatus.java,v 1.5 2003-04-22 00:08:55 claire Exp $
  */
 
 /*
@@ -45,6 +45,7 @@ public class NodeManagerStatus {
   public static final String POLLHISTORY_STATUS_TABLE_NAME = "PollHistoryTable";
 
   private static NodeManagerServiceImpl managerService;
+  private static Logger logger = Logger.getLogger("NodeManagerStatus");
 
   NodeManagerStatus(NodeManagerServiceImpl impl) {
     managerService = impl;
@@ -80,7 +81,7 @@ public class NodeManagerStatus {
                               ColumnDescriptor.TYPE_DATE)
          );
 
-    private static final List sortRules = 
+    private static final List sortRules =
       ListUtil.list(new StatusTable.SortRule("AuID", true));
 
     public void populateTable(StatusTable table) throws StatusService.
@@ -330,7 +331,7 @@ public class NodeManagerStatus {
 
     public static StatusTable.Reference makeNodeRef(Object value,
         String auId, String url, String filter) {
-      StringBuffer key_buf = new StringBuffer(ACTIVE_POLLS_FILTER);
+      StringBuffer key_buf = new StringBuffer(filter);
       key_buf.append(auId);
       key_buf.append("&");
       key_buf.append(url);
@@ -421,7 +422,7 @@ public class NodeManagerStatus {
       int pos = filter.length();
 
       String au_id = key.substring(pos, key.lastIndexOf("&"));
-
+      logger.debug("getting node manager " + au_id + " from key:[" + key + "]");
       return getNodeManager(au_id);
     }
 
@@ -429,10 +430,12 @@ public class NodeManagerStatus {
         StatusService.NoSuchTableException {
       int pos = key.lastIndexOf("&");
       String url = key.substring(pos + 1);
+      logger.debug("finding node state for url: " + url);
       ArchivalUnit au = nodeManager.getAuState().getArchivalUnit();
       CachedUrlSet cus = au.makeCachedUrlSet(new RangeCachedUrlSetSpec(url));
       NodeState state = nodeManager.getNodeState(cus);
       if (state == null) {
+        logger.debug("unable to find a node state for " + url);
         throw new StatusService.NoSuchTableException("No Node State for "
             + key);
       }

@@ -22,12 +22,12 @@ public class TestPoll extends LockssTestCase {
       "http://www.test1.org", "http://www.test2.org"};
   private static String lwrbnd = "test1.doc";
   private static String uprbnd = "test3.doc";
-  private static long testduration = Constants.HOUR;
+  private static long testduration = Constants.DAY;
 
-  protected ArchivalUnit testau = PollTestPlugin.PTArchivalUnit.createFromListOfRootUrls(rooturls);
+  protected ArchivalUnit testau =
+      PollTestPlugin.PTArchivalUnit.createFromListOfRootUrls(rooturls);
   private IdentityManager idmgr;
-  //XXX fix to use non-statically
-  private static MockLockssDaemon theDaemon;
+  private MockLockssDaemon theDaemon;
   private String[] agree_entries = makeEntries(10, 50);
   private String[] disagree_entries = makeEntries(15, 57);
   private String[] dissenting_entries = makeEntries(7, 50);
