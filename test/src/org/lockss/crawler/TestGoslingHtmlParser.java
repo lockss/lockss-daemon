@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingHtmlParser.java,v 1.7 2004-03-04 23:24:30 troberts Exp $
+ * $Id: TestGoslingHtmlParser.java,v 1.8 2004-03-05 23:09:25 troberts Exp $
  */
 
 /*
@@ -74,15 +74,6 @@ public class TestGoslingHtmlParser extends LockssTestCase {
     } catch (IllegalArgumentException iae) {
     }
   }
-
-//   public void testThrowsOnNullSet() throws IOException {
-//     try {
-//       parser.parseForUrls(new MockCachedUrl("http://www.example.com/"),
-// 			  null, null);
-//       fail("Calling parseForUrls with a null Set should have thrown");
-//     } catch (IllegalArgumentException iae) {
-//     }
-//   }
 
   public void testThrowsOnNullAu() {
     try {
@@ -294,42 +285,18 @@ public class TestGoslingHtmlParser extends LockssTestCase {
     checkBadTags(badTags, "</table>");
   }
 
-//     MockCachedUrl mcu = new MockCachedUrl("http://www.example.com");
-//     String url = "http://www.example.com/link1.html";
-//     mcu.setContent("<a href="+url+">Test</a>");
-
-//     Collection parsedUrls = new HashSet();
-//     parser.parseForUrls(mcu, parsedUrls, null);
-
-//     Set expected = SetUtil.set(url);
-//     assertEquals(expected, parsedUrls);
-
   public void testDoesntCollectHttps() throws IOException {
     String source =
       "<html><head><title>Test</title></head><body>"+
       "<a href=\"https://www.example.com/link3.html\">link3</a>";
-
-    MockCachedUrl mcu = new MockCachedUrl("http://www.example.com");
-    mcu.setContent(source);
-
-    parser.parseForUrls(mcu, cb);
-
-    Set expected = SetUtil.set();
-    assertEquals(expected, cb.getFoundUrls());
+    assertEquals(SetUtil.set(), parseSingleSource(source));
   }
 
   public void testDoesntThrowOnMalformedUrl() throws IOException {
     String source =
       "<html><head><title>Test</title></head><body>"+
       "<a href=\"badprotocol://www.example.com/link3.html\">link3</a>";
-
-    MockCachedUrl mcu = new MockCachedUrl("http://www.example.com");
-    mcu.setContent(source);
-
-    parser.parseForUrls(mcu, cb);
-
-    Set expected = SetUtil.set();
-    assertEquals(expected, cb.getFoundUrls());
+    assertEquals(SetUtil.set(), parseSingleSource(source));
   }
 
   public void testParsesFileWithQuotedUrls() throws IOException {
@@ -338,14 +305,7 @@ public class TestGoslingHtmlParser extends LockssTestCase {
     String source =
       "<html><head><title>Test</title></head><body>"+
       "<a href=\"http://www.example.com/link3.html\">link3</a>";
-
-    MockCachedUrl mcu = new MockCachedUrl("http://www.example.com");
-    mcu.setContent(source);
-
-    parser.parseForUrls(mcu, cb);
-
-    Set expected = SetUtil.set(url);
-    assertEquals(expected, cb.getFoundUrls());
+    assertEquals(SetUtil.set(url), parseSingleSource(source));
   }
   public void testDoHrefInAnchorJavascript() throws IOException {
     String url= "http://www.example.com/link3.html";
@@ -357,14 +317,7 @@ public class TestGoslingHtmlParser extends LockssTestCase {
       "<a href = javascript:newWindow('http://www.example.com/link3.html')</a>"
     + "<a href = javascript:popup('http://www.example.com/link2.html')</a>"
     + "<img src = javascript:popup('" + url3 + "') </img>";
-
-    MockCachedUrl mcu = new MockCachedUrl("http://www.example.com");
-    mcu.setContent(source);
-
-    parser.parseForUrls(mcu, cb);
-
-    Set expected = SetUtil.set(url,url2);
-    assertEquals(expected, cb.getFoundUrls());
+    assertEquals(SetUtil.set(url, url2), parseSingleSource(source));
   }
 
   public void testSkipsComments() throws IOException {
@@ -376,14 +329,7 @@ public class TestGoslingHtmlParser extends LockssTestCase {
       "Filler, with <b>bold</b> tags and<i>others</i>"+
       "<a href=http://www.example.com/link2.html>link2</a>-->"+
       "<a href=http://www.example.com/link3.html>link3</a>";
-
-    MockCachedUrl mcu = new MockCachedUrl("http://www.example.com");
-    mcu.setContent(source);
-
-    parser.parseForUrls(mcu, cb);
-
-    Set expected = SetUtil.set(url);
-    assertEquals(expected, cb.getFoundUrls());
+    assertEquals(SetUtil.set(url), parseSingleSource(source));
   }
 
   public void testMultipleLinks() throws IOException {
@@ -398,13 +344,7 @@ public class TestGoslingHtmlParser extends LockssTestCase {
       "<a href="+url2+">link2</a>"+
       "<a href="+url3+">link3</a>";
 
-    MockCachedUrl mcu = new MockCachedUrl("http://www.example.com");
-    mcu.setContent(source);
-
-    parser.parseForUrls(mcu, cb);
-
-    Set expected = SetUtil.set(url1, url2, url3);
-    assertEquals(expected, cb.getFoundUrls());
+    assertEquals(SetUtil.set(url1, url2, url3), parseSingleSource(source));
   }
 
   public void testRelativeLinksLocationTagsAndMultipleKeys()
@@ -420,14 +360,42 @@ public class TestGoslingHtmlParser extends LockssTestCase {
       "<a blah1=blah href=link2.html#ref blah2=blah>link2</a>"+
       "<a href=dir/link3.html>link3</a>";
 
+    assertEquals(SetUtil.set(url1, url2, url3), parseSingleSource(source));
+  }
+
+  public void testHttpEquiv() throws IOException {
+    String url1= "http://example.com/blah.html";
+    String source = 
+      "<html><head>"
+      +"<meta http-equiv=\"refresh\" "
+      +"content=\"0; url=http://example.com/blah.html\">"
+      +"</head></html>";
+
+    assertEquals(SetUtil.set(url1), parseSingleSource(source));
+  }
+
+  //tests that we are only parsing out the URL when the
+  // http-equiv header is "refresh"
+  public void testHttpEquiv2() throws IOException {
+    String url1= "http://example.com/blah.html";
+    String source = 
+      "<html><head>"+
+      "<meta http-equiv=\"blah\" "
+      +"content=\"0; url=http://example.com/blah.html\">"+
+      "</head></html>";
+
+    assertEquals(SetUtil.set(), parseSingleSource(source));
+  }
+
+  private Set parseSingleSource(String source) throws IOException {
     MockCachedUrl mcu = new MockCachedUrl("http://www.example.com");
     mcu.setContent(source);
-
+    
     parser.parseForUrls(mcu, cb);
-
-    Set expected = SetUtil.set(url1, url2, url3);
-    assertEquals(expected, cb.getFoundUrls());
+    
+    return cb.getFoundUrls();
   }
+
 
   public void testRelativeLinksWithSameName() throws IOException {
     String url1= "http://www.example.com/branch1/index.html";

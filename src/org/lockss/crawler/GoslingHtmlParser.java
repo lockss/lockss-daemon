@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlParser.java,v 1.8 2004-03-04 23:24:30 troberts Exp $
+ * $Id: GoslingHtmlParser.java,v 1.9 2004-03-05 23:09:25 troberts Exp $
  */
 
 /*
@@ -79,6 +79,7 @@ import org.lockss.util.*;
 
 public class GoslingHtmlParser implements ContentParser {
 
+  private static final String METATAG = "meta";
   private static final String IMGTAG = "img";
   private static final String ATAG = "a";
   private static final String FRAMETAG = "frame";
@@ -92,6 +93,7 @@ public class GoslingHtmlParser implements ContentParser {
   private static final String ASRC = "href";
   private static final String SRC = "src";
   private static final String BACKGROUNDSRC = "background";
+  private static final String REFRESH = "refresh";
 
   private static Logger logger = Logger.getLogger("GoslingHtmlParser");
   private ArchivalUnit au = null;
@@ -284,6 +286,15 @@ public class GoslingHtmlParser implements ContentParser {
           returnStr = getAttributeValue(SRC, link.toString());
         }
         break;
+      case 'm': //<meta http-equiv="refresh"
+      case 'M': //"content="0; url=http://example.com/blah.html">
+        if (beginsWithTag(link.toString(),METATAG)) {
+	  String httpEquiv = getAttributeValue("http-equiv", link.toString());
+	  if (REFRESH.equalsIgnoreCase(httpEquiv)) {
+	    returnStr = getAttributeValue("url", link.toString());
+	  }
+        }
+        break;
       case 't': //<tc background=back.gif> or <table background=back.gif>
       case 'T':
         if (beginsWithTag(link.toString(),TABLETAG) ||
@@ -332,9 +343,12 @@ public class GoslingHtmlParser implements ContentParser {
             // we need to allow for arguments in the url which use '='
             if (!token.equals(" ") && !token.equals("\"")) {
               StringBuffer sb = new StringBuffer(token);
-              while (st.hasMoreTokens() &&
-                     !token.equals(" ") && !token.equals("\"")) {
+              while (st.hasMoreTokens()){// &&
+//                      !token.equals(" ") && !token.equals("\"")) {
                 token = st.nextToken();
+		if (token.equals(" ") || token.equals("\"")) {
+		  break; //we've hit the end of the attribute value
+		}
                 sb.append(token);
               }
               return sb.toString();
