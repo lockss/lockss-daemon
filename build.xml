@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.26 2003-02-04 07:33:57 tal Exp $
+ $Id: build.xml,v 1.27 2003-02-05 18:02:45 tal Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
@@ -105,6 +105,7 @@ Args:
 
   <!--  Files -->
   <property name="test.classpath.file" value="${test}/test-classpath"/>
+  <property name="production.classpath.file" value="${lib}/run-classpath"/>
   <property name="ant-contrib.resource"
                           value="net/sf/antcontrib/antcontrib.properties"/>
 
@@ -210,6 +211,7 @@ Args:
     <delete file="${lockss.ant.jar}" quiet="true"/>
     <delete file="${lockss.doclet.jar}" quiet="true"/>
     <delete file="${test.classpath.file}" quiet="true"/>
+    <delete file="${production.classpath.file}" quiet="true"/>
   </target>
 
   <target name="clean-tempbuild"
@@ -300,9 +302,14 @@ Args:
     <jar jarfile="${lockss.test.jar}" basedir="${test.classes}" >
        <include name="**/" />
     </jar>
-    <pathconvert refid="test.run.classpath" property="tmp.clspth"
+    <pathconvert refid="test.run.classpath" property="tmp.test..clspth"
       targetos="unix" />
-    <echo message="${tmp.clspth}" file="${test.classpath.file}"/>
+    <echo message="${tmp.test.clspth}" file="${test.classpath.file}"/>
+    <pathconvert refid="test.run.classpath" property="tmp.run.clspth"
+      targetos="unix">
+      <map from="${basedir}/lib" to="${JAVA.LIB.PATH}" />
+    </pathconvert>
+    <echo message="${tmp.run.clspth}" file="${production.classpath.file}"/>
   </target>
 
   <!-- ==================================================================== -->
