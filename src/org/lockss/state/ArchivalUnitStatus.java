@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.7 2004-04-07 22:56:18 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.8 2004-04-09 06:53:34 tlipkis Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ import org.lockss.daemon.status.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
 import org.lockss.app.*;
+import org.lockss.poller.PollerStatus;
 import org.lockss.repository.*;
 
 /**
@@ -57,11 +58,10 @@ public class ArchivalUnitStatus extends BaseLockssManager {
     super.startService();
 
     StatusService statusServ = theDaemon.getStatusService();
-
-    statusServ.registerStatusAccessor(ArchivalUnitStatus.SERVICE_STATUS_TABLE_NAME,
-                                      new ArchivalUnitStatus.ServiceStatus(theDaemon));
-    statusServ.registerStatusAccessor(ArchivalUnitStatus.AU_STATUS_TABLE_NAME,
-                                      new ArchivalUnitStatus.AuStatus(theDaemon));
+    statusServ.registerStatusAccessor(SERVICE_STATUS_TABLE_NAME,
+                                      new ServiceStatus(theDaemon));
+    statusServ.registerStatusAccessor(AU_STATUS_TABLE_NAME,
+                                      new AuStatus(theDaemon));
     logger.debug2("Status accessors registered.");
   }
 
@@ -89,7 +89,7 @@ public class ArchivalUnitStatus extends BaseLockssManager {
   }
 
   static class ServiceStatus implements StatusAccessor {
-    static final String TABLE_TITLE = "ArchivalUnit Status Table";
+    static final String TABLE_TITLE = "Archival Units";
 
     private static final List columnDescriptors = ListUtil.list(
       new ColumnDescriptor("AuName", "Volume", ColumnDescriptor.TYPE_STRING),
@@ -97,6 +97,8 @@ public class ArchivalUnitStatus extends BaseLockssManager {
       new ColumnDescriptor("AuSize", "Size", ColumnDescriptor.TYPE_INT),
       new ColumnDescriptor("AuLastCrawl", "Last Crawl",
                            ColumnDescriptor.TYPE_DATE),
+      new ColumnDescriptor("AuPolls", "Polls",
+                           ColumnDescriptor.TYPE_STRING),
       new ColumnDescriptor("AuLastPoll", "Last Poll",
                            ColumnDescriptor.TYPE_DATE),
       new ColumnDescriptor("AuLastTreeWalk", "Last TreeWalk",
@@ -153,6 +155,11 @@ public class ArchivalUnitStatus extends BaseLockssManager {
 //       rowMap.put("AuNodeCount", new Integer(-1));
       rowMap.put("AuSize", new Long(repoNode.getTreeContentSize(null)));
       rowMap.put("AuLastCrawl", new Long(state.getLastCrawlTime()));
+      Object ref = 
+      rowMap.put("AuPolls",
+		 theDaemon.getStatusService().
+		 getReference(PollerStatus.MANAGER_STATUS_TABLE_NAME,
+			      au));
       rowMap.put("AuLastPoll", new Long(state.getLastTopLevelPollTime()));
       rowMap.put("AuLastTreeWalk", new Long(state.getLastTreeWalkTime()));
 
@@ -161,7 +168,7 @@ public class ArchivalUnitStatus extends BaseLockssManager {
   }
 
   static class AuStatus implements StatusAccessor {
-    static final String TABLE_TITLE = "AU Status Table";
+    static final String TABLE_TITLE = "Archival Unit Status";
     static final String KEY_SUFFIX = "&&&";
 
     private static final List columnDescriptors = ListUtil.list(
@@ -324,7 +331,7 @@ public class ArchivalUnitStatus extends BaseLockssManager {
     }
 
     private String getTitle(String key) {
-      return "Status Table for AU: " + key;
+      return "Status of AU: " + key;
     }
 
     private List getSummaryInfo(ArchivalUnit au, AuState state,
