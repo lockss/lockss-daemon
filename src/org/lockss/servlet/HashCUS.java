@@ -1,5 +1,5 @@
 /*
- * $Id: HashCUS.java,v 1.3 2004-04-06 07:46:39 tlipkis Exp $
+ * $Id: HashCUS.java,v 1.4 2004-04-27 19:40:31 tlipkis Exp $
  */
 
 /*
@@ -67,6 +67,10 @@ public class HashCUS extends LockssServlet {
   static final String KEY_FILE = "file";
   static final String KEY_MIME = "mime";
 
+  static final String HASH_TYPE_CONTENT = "Content";
+  static final String HASH_TYPE_NAME = "Name";
+  static final String HASH_TYPE_SNCUSS = "Sncuss";
+
   static final String ACTION_HASH = "Hash";
   static final String ACTION_STREAM = "Stream";
 
@@ -99,6 +103,7 @@ public class HashCUS extends LockssServlet {
   boolean isHash;
   boolean isRecord;
   File recordFile;
+  String hashType;
   boolean isContent;;
   boolean isName;
   boolean isSncuss;
@@ -188,6 +193,11 @@ public class HashCUS extends LockssServlet {
 
   private boolean checkParams() {
     auid = getParameter(KEY_AUID);
+    url = getParameter(KEY_URL);
+    lower = getParameter(KEY_LOWER);
+    upper = getParameter(KEY_UPPER);
+    isRecord = (getParameter(KEY_RECORD) != null);
+    hashType = getParameter(KEY_HASH_TYPE);
     if (auid == null) {
       errMsg = "Select an AU";
       return false;
@@ -197,13 +207,10 @@ public class HashCUS extends LockssServlet {
       errMsg = "No such AU.  Select an AU";
       return false;
     }
-    url = getParameter(KEY_URL);
     if (url == null) {
       errMsg = "URL required";
       return false;
     }
-    lower = getParameter(KEY_LOWER);
-    upper = getParameter(KEY_UPPER);
     try {
       challenge = getB64Param(KEY_CHALLENGE);
     } catch (IllegalArgumentException e) {
@@ -216,14 +223,15 @@ public class HashCUS extends LockssServlet {
       errMsg = "Verifier: Illegal Base64 string: " + e.getMessage();
       return false;
     }
-    isRecord = (getParameter(KEY_RECORD) != null);
-    String type = getParameter(KEY_HASH_TYPE);
-    if ("Content".equals(type)) {
+    if (HASH_TYPE_CONTENT.equals(hashType)) {
       isContent = true;
-    } else if ("Name".equals(type)) {
+    } else if (HASH_TYPE_NAME.equals(hashType)) {
       isName = true;
-    } else if ("Sncuss".equals(type)) {
+    } else if (HASH_TYPE_SNCUSS.equals(hashType)) {
       isSncuss = true;
+    } else {
+      errMsg = "Unknown hash type: " + hashType;
+      return false;
     }
     PollSpec ps;
     try {
@@ -338,12 +346,15 @@ public class HashCUS extends LockssServlet {
     Table autbl = new Table(0, "cellpadding=0");
     autbl.newRow();
     autbl.addHeading("Select AU");
+    Select sel = new Select(KEY_AUID, false);
+    sel.add("", auid == null, "");
     for (Iterator iter = pluginMgr.getAllAus().iterator(); iter.hasNext(); ) {
       ArchivalUnit au = (ArchivalUnit)iter.next();
-      autbl.newRow(); autbl.newCell();
       String id = au.getAuId();
-      autbl.add(rb(au.getName(), id, KEY_AUID, id.equals(auid)));
+      sel.add(au.getName(), id.equals(auid), id);
     }
+    autbl.newRow(); autbl.newCell();
+    autbl.add(sel);
 
     Table tbl = new Table(0, "cellpadding=0");
     tbl.newRow();
@@ -361,11 +372,14 @@ public class HashCUS extends LockssServlet {
     addInputRow(tbl, "Verifier", KEY_VERIFIER, 50, getParameter(KEY_VERIFIER));
     tbl.newRow();
     tbl.newCell(COL2CENTER);
-    tbl.add(rb("Content", KEY_HASH_TYPE, !(isName || isSncuss)));
+    tbl.add(rb(HASH_TYPE_CONTENT, KEY_HASH_TYPE, 
+	       hashType == null || HASH_TYPE_CONTENT.equals(hashType)));
     tbl.add("&nbsp;&nbsp;");
-    tbl.add(rb("Name", KEY_HASH_TYPE, isName));
+    tbl.add(rb(HASH_TYPE_NAME, KEY_HASH_TYPE,
+	       HASH_TYPE_NAME.equals(hashType)));
     tbl.add("&nbsp;&nbsp;");
-    tbl.add(rb("Sncuss", KEY_HASH_TYPE, isSncuss));
+    tbl.add(rb(HASH_TYPE_SNCUSS, KEY_HASH_TYPE,
+	       HASH_TYPE_SNCUSS.equals(hashType)));
     tbl.newRow();
     tbl.newCell(COL2CENTER);
     tbl.add(cb("Record filtered stream", "true", KEY_RECORD, isRecord));
