@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.1 2002-08-31 06:58:16 tal Exp $
+ * $Id: TestStringUtil.java,v 1.2 2002-09-11 00:52:56 tal Exp $
  */
 
 /*
@@ -101,4 +101,18 @@ public class TestStringUtil extends TestCase{
     assertEquals("blahTeStblah", testStr);
   }
   
+  public void testSeparatedString() {
+    assertEquals("1,2,3",
+		 StringUtil.separatedString(ListUtil.list("1","2","3"), ","));
+    assertEquals("'1','2','3'",
+		 StringUtil.separatedDelimitedString(ListUtil.list("1","2",
+								   "3"),
+						     ",", "'"));
+    assertEquals("[1],[2],[3]",
+		 StringUtil.separatedDelimitedString(ListUtil.list("1","2",
+								   "3"),
+						     ",", "[", "]"));
+    String a[] = {"a", "b", "c"};
+    assertEquals("a,b,c", StringUtil.separatedString(a, ","));
+  }
 }
