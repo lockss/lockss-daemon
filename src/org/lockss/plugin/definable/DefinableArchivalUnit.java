@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.5 2004-05-14 22:31:22 clairegriffin Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.6 2004-05-18 23:11:16 clairegriffin Exp $
  */
 
 /*
@@ -280,7 +280,6 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     String val_str = printfString.substring(0, printfString.indexOf(","));
     int value = Integer.valueOf(val_str).intValue();
     return new CrawlRules.RE(rule, value);
-
   }
 
 /*

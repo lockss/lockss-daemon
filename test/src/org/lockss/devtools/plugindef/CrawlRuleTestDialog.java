@@ -1,6 +1,5 @@
 package org.lockss.devtools.plugindef;
 
-import java.io.*;
 import java.util.*;
 
 import java.awt.*;
@@ -83,7 +82,7 @@ public class CrawlRuleTestDialog extends JDialog {
     parameterBorder = new TitledBorder("");
     infoBorder = new TitledBorder("");
     panel1.setLayout(borderLayout1);
-    okButton.setText("OK");
+    okButton.setText("Run Test");
     okButton.addActionListener(new CrawlRuleTestDialog_okButton_actionAdapter(this));
     cancelButton.setText("Cancel");
     cancelButton.addActionListener(new
@@ -198,6 +197,7 @@ public class CrawlRuleTestDialog extends JDialog {
       }
       Configuration config = ConfigurationUtil.fromProps(props);
       ArchivalUnit au = m_plugin.createAu(config);
+      fileChooser.setDialogTitle("Save Test Results to...");
       int option = fileChooser.showSaveDialog(this);
       if(option == fileChooser.APPROVE_OPTION ||
          fileChooser.getSelectedFile() != null) {
