@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.9 2005-02-02 09:42:48 tlipkis Exp $
+ * $Id: Configuration.java,v 1.10 2005-03-14 23:31:46 tlipkis Exp $
  */
 
 /*
@@ -204,7 +204,7 @@ public abstract class Configuration {
       String url = (String)iter.next();
       ConfigFile cf = null;
       try {
-	cf = configCache.get(url);
+	cf = configCache.justGet(url);
       } catch (IOException ignore) {
       }
       if (cf != null && !cf.isLoaded()) {
