@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.67 2004-09-28 08:53:19 tlipkis Exp $
+ * $Id: LockssDaemon.java,v 1.67.2.1 2004-10-01 01:13:48 dshr Exp $
  */
 
 /*
@@ -95,6 +95,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   public static String TIMER_SERVICE = "TimerService";
   public static String DATAGRAM_COMM_MANAGER = "DatagramCommManager";
   public static String DATAGRAM_ROUTER_MANAGER = "DatagramRouterManager";
+  public static String STREAM_ROUTER_MANAGER = "StreamRouterManager";
   public static String IDENTITY_MANAGER = "IdentityManager";
   public static String CRAWL_MANAGER = "CrawlManager";
   public static String PLUGIN_MANAGER = "PluginManager";
@@ -143,6 +144,8 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
 		    "org.lockss.protocol.LcapDatagramComm"),
     new ManagerDesc(DATAGRAM_ROUTER_MANAGER,
 		    "org.lockss.protocol.LcapDatagramRouter"),
+    new ManagerDesc(STREAM_ROUTER_MANAGER,
+		    "org.lockss.protocol.LcapStreamRouter"),
     new ManagerDesc(WATCHDOG_SERVICE, DEFAULT_WATCHDOG_SERVICE),
     new ManagerDesc(NODE_MANAGER_MANAGER, "org.lockss.state.NodeManagerManager"),
     new ManagerDesc(ARCHIVAL_UNIT_STATUS,
@@ -268,12 +271,21 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   }
 
   /**
-   * return the communication router manager instance
+   * return the datagram router manager instance
    * @return the LcapDatagramRouter
    * @throws IllegalArgumentException if the manager is not available.
    */
   public LcapDatagramRouter getDatagramRouterManager()  {
     return (LcapDatagramRouter) getManager(DATAGRAM_ROUTER_MANAGER);
+  }
+
+  /**
+   * return the stream router manager instance
+   * @return the LcapStreamRouter
+   * @throws IllegalArgumentException if the manager is not available.
+   */
+  public LcapStreamRouter getStreamRouterManager()  {
+    return (LcapStreamRouter) getManager(STREAM_ROUTER_MANAGER);
   }
 
   /**

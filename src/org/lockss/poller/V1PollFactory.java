@@ -1,5 +1,5 @@
 /*
- * $Id: V1PollFactory.java,v 1.8 2004-09-29 06:36:20 tlipkis Exp $
+ * $Id: V1PollFactory.java,v 1.8.2.1 2004-10-01 01:13:49 dshr Exp $
  */
 
 /*
@@ -64,7 +64,6 @@ public class V1PollFactory implements PollFactory {
   static final String PARAM_CONTENTPOLL_MAX = Configuration.PREFIX +
       "poll.contentpoll.max";
 
-  static final String PARAM_QUORUM = Configuration.PREFIX + "poll.quorum";
   static final String PARAM_DURATION_MULTIPLIER_MIN = Configuration.PREFIX +
       "poll.duration.multiplier.min";
   static final String PARAM_DURATION_MULTIPLIER_MAX = Configuration.PREFIX +
@@ -79,7 +78,6 @@ public class V1PollFactory implements PollFactory {
   static long DEFAULT_NAMEPOLL_DEADLINE =  10 * Constants.MINUTE;
   static long DEFAULT_CONTENTPOLL_MIN = 3 * Constants.MINUTE;
   static long DEFAULT_CONTENTPOLL_MAX = 5 * Constants.DAY;
-  static final int DEFAULT_QUORUM = 5;
   static final int DEFAULT_DURATION_MULTIPLIER_MIN = 3;
   static final int DEFAULT_DURATION_MULTIPLIER_MAX = 7;
 
@@ -88,7 +86,6 @@ public class V1PollFactory implements PollFactory {
   protected static long m_minNamePollDuration;
   protected static long m_maxNamePollDuration;
   protected static long m_nameHashEstimate;
-  protected static int m_quorum;
   protected static int m_minDurationMultiplier;
   protected static int m_maxDurationMultiplier;
 
@@ -331,7 +328,7 @@ public class V1PollFactory implements PollFactory {
   // Poll time calculation
   public long calcDuration(PollSpec pollspec, PollManager pm) {
     CachedUrlSet cus = pollspec.getCachedUrlSet();
-    int quorum = m_quorum;
+    int quorum = pollspec.getQuorum();
     switch (pollspec.getPollType()) {
     case Poll.NAME_POLL: {
       long minPoll = (m_minNamePollDuration +
@@ -347,7 +344,7 @@ public class V1PollFactory implements PollFactory {
       theLog.debug3("CUS estimated hash duration: " + hashEst);
 
       hashEst = getAdjustedEstimate(hashEst, pm);
-      theLog.debug3("My adjusted hash duration: " + hashEst);
+      theLog.debug3("My adjusted hash duration: " + hashEst + " q " + quorum);
 
       long totalHash = hashEst * (quorum + 1);
       long minPoll = Math.max(totalHash * m_minDurationMultiplier,
@@ -467,8 +464,6 @@ public class V1PollFactory implements PollFactory {
     m_maxContentPollDuration = newConfig.getTimeInterval(PARAM_CONTENTPOLL_MAX,
         DEFAULT_CONTENTPOLL_MAX);
 
-    m_quorum = newConfig.getIntParam(PARAM_QUORUM, DEFAULT_QUORUM);
-
     m_minDurationMultiplier =
       newConfig.getIntParam(PARAM_DURATION_MULTIPLIER_MIN,
 			    DEFAULT_DURATION_MULTIPLIER_MIN);
@@ -497,7 +492,4 @@ public class V1PollFactory implements PollFactory {
     }
   }
 
-  protected static int getQuorum() {
-    return m_quorum;
-  }
 }

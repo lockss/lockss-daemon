@@ -1,5 +1,5 @@
 /*
-* $Id: V3Poller.java,v 1.1.2.1 2004-09-30 01:06:16 dshr Exp $
+* $Id: V3Poller.java,v 1.1.2.2 2004-10-01 01:13:49 dshr Exp $
  */
 
 /*
@@ -52,15 +52,15 @@ import org.mortbay.util.*;  // For B64 encoding stuff?
 
 public class V3Poller extends V3Poll {
 
-  private static final int STATE_INITIALIZING = 0;
-  private static final int STATE_SENDING_POLL = 1;
-  private static final int STATE_WAITING_POLL_ACK = 2;
-  private static final int STATE_SENDING_POLL_PROOF = 3;
-  private static final int STATE_WAITING_VOTE = 4;
-  private static final int STATE_SENDING_REPAIR_REQ = 5;
-  private static final int STATE_WAITING_REPAIR = 6;
-  private static final int STATE_SENDING_RECEIPT = 7;
-  private static final int STATE_FINALIZING = 8;
+  public static final int STATE_INITIALIZING = 0;
+  public static final int STATE_SENDING_POLL = 1;
+  public static final int STATE_WAITING_POLL_ACK = 2;
+  public static final int STATE_SENDING_POLL_PROOF = 3;
+  public static final int STATE_WAITING_VOTE = 4;
+  public static final int STATE_SENDING_REPAIR_REQ = 5;
+  public static final int STATE_WAITING_REPAIR = 6;
+  public static final int STATE_SENDING_RECEIPT = 7;
+  public static final int STATE_FINALIZING = 8;
   private static final String[] stateName = {
     "Initializing",
     "SendingPoll",
@@ -72,6 +72,8 @@ public class V3Poller extends V3Poll {
     "SendingReceipt",
     "Finalizing",
   };
+
+    private int m_state;
 
   static Logger log=Logger.getLogger("V3Poller");
 
@@ -93,6 +95,7 @@ public class V3Poller extends V3Poll {
 	}
 
     // XXX
+	m_state = STATE_INITIALIZING;
   }
 
   // Implementations of abstract methods from V3Poll
@@ -138,6 +141,10 @@ public class V3Poller extends V3Poll {
     log.debug3("closed the poll:" + m_key);
   }
 
+    public int getPollState() {
+	return m_state;
+    }
+
   // End abstract methods of V3Poll
 
   /**
@@ -154,8 +161,10 @@ public class V3Poller extends V3Poll {
     sb.append(m_cus.toString());
     sb.append(" ");
     sb.append(m_msg.getOpcodeString());
-    sb.append(" key:");
+    sb.append(" key: ");
     sb.append(m_key);
+    sb.append(" state: ");
+    sb.append(stateName[m_state]);
     sb.append("]");
     return sb.toString();
   }

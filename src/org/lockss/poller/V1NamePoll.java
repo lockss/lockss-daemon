@@ -1,5 +1,5 @@
 /*
- * $Id: V1NamePoll.java,v 1.9 2004-09-29 06:36:20 tlipkis Exp $
+ * $Id: V1NamePoll.java,v 1.9.2.1 2004-10-01 01:13:49 dshr Exp $
  */
 
 /*
@@ -58,7 +58,7 @@ public class V1NamePoll extends V1Poll {
                               NAME_POLL,
                               m_createTime,
                               duration,
-                              V1PollFactory.getQuorum(),  // XXX AU-specific
+                              pollspec.getQuorum(),  // XXX AU-specific
                               hashAlg);
   }
 

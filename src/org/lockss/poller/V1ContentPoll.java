@@ -1,5 +1,5 @@
 /*
-* $Id: V1ContentPoll.java,v 1.5 2004-09-29 01:19:11 dshr Exp $
+* $Id: V1ContentPoll.java,v 1.5.2.1 2004-10-01 01:13:49 dshr Exp $
  */
 
 /*
@@ -63,7 +63,7 @@ public class V1ContentPoll extends V1Poll {
                               CONTENT_POLL,
                               m_createTime,
                               duration,
-                              V1PollFactory.getQuorum(),
+                              pollspec.getQuorum(),
                               hashAlg);
   }
 

@@ -1,5 +1,5 @@
 /*
-* $Id: V3Poll.java,v 1.1.2.1 2004-09-30 01:06:16 dshr Exp $
+* $Id: V3Poll.java,v 1.1.2.2 2004-10-01 01:13:49 dshr Exp $
  */
 
 /*
@@ -74,6 +74,8 @@ public abstract class V3Poll extends BasePoll {
     // XXX
     m_pendingVotes = 0;
     getConfigValues();
+    m_tally = new V3PollTally(this, CONTENT_POLL, m_createTime,
+			      duration, pollspec.getQuorum(), hashAlg);
   }
 
   // Implementations of abstract methods from BasePoll
@@ -127,6 +129,8 @@ public abstract class V3Poll extends BasePoll {
   public static String challengeToKey(byte[] challenge) {
     return String.valueOf(B64Code.encode(challenge));
   }
+
+    public abstract int getPollState();
 
   /**
    * Return a hasher preinited with the challenge and verifier

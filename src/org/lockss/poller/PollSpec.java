@@ -1,5 +1,5 @@
 /*
- * $Id: PollSpec.java,v 1.27 2004-09-27 22:39:10 smorabito Exp $
+ * $Id: PollSpec.java,v 1.27.2.1 2004-10-01 01:13:49 dshr Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.protocol.*;
 import org.lockss.app.*;
+import org.lockss.config.*;
 
 /**
  * Class implementing the concept of the set of URLs covered by a poll.
@@ -59,6 +60,8 @@ public class PollSpec {
   public static final String PARAM_USE_POLL_VERSION =
     Configuration.PREFIX + "protocol.usePollVersion";
 
+  static final String PARAM_QUORUM = Configuration.PREFIX + "poll.quorum";
+    static final int DEFAULT_QUORUM = 5;
   public static final int DEFAULT_USE_POLL_VERSION = 1;
   static final String DEFAULT_PLUGIN_VERSION = "1";
 
@@ -73,6 +76,8 @@ public class PollSpec {
   private PluginManager pluginMgr = null;
   private int pollVersion; // poll protocol version
   private int pollType;    // One of the types defined by Poll
+    private int quorum;
+
 
   /**
    * Construct a PollSpec from a CachedUrlSet and an upper and lower bound
@@ -143,6 +148,8 @@ public class PollSpec {
       pollType = -1;
     }
     cus = getPluginManager().findCachedUrlSet(this);
+    quorum =
+	Configuration.getCurrentConfig().getIntParam(PARAM_QUORUM, DEFAULT_QUORUM);
   }
 
   /**
@@ -161,6 +168,10 @@ public class PollSpec {
     cus = getPluginManager().findCachedUrlSet(this);
     this.pollType = pollType;
     this.pollVersion = pollVersion;
+    quorum =
+	Configuration.getCurrentConfig().getIntParam(PARAM_QUORUM, DEFAULT_QUORUM);
+
+
   }
 
   /**
@@ -177,6 +188,7 @@ public class PollSpec {
     this.pluginMgr = ps.pluginMgr;
     this.pollVersion = ps.pollVersion;
     this.pollType = pollType;
+    this.quorum = ps.quorum;
   }
     
   /** Setup common to most constructors */
@@ -203,6 +215,8 @@ public class PollSpec {
     this.uprBound = uprBound;
     this.pollVersion = pollVersion;
     this.pollType = pollType;
+    quorum =
+	Configuration.getCurrentConfig().getIntParam(PARAM_QUORUM, DEFAULT_QUORUM);
   }
 
   protected int getDefaultPollVersion() {
@@ -260,6 +274,10 @@ public class PollSpec {
     return pollType;
   }
 
+    public int getQuorum() {
+	return quorum;
+    }
+
   private PluginManager getPluginManager() {
     if (pluginMgr == null) {
       pluginMgr =
@@ -269,7 +287,12 @@ public class PollSpec {
   }
 
   public String toString() {
-    return "[PS: " + Poll.PollName[pollType] + " auid=" + auId + ", url=" + url
-      + ", l=" + lwrBound + ", u=" + uprBound + ", pollV=" + pollVersion + "]";
+      if (pollType < 0 || pollType >= Poll.PollName.length) {
+	  return "[PS: bad type " + pollType + "]";
+      } else {
+	  return "[PS: " + Poll.PollName[pollType] + " auid=" + auId +
+	      ", url=" + url + ", l=" + lwrBound + ", u=" + uprBound +
+	      ", pollV=" + pollVersion + "]";
+      }
   }
 }

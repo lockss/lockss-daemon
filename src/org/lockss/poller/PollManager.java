@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.142 2004-09-29 06:35:06 tlipkis Exp $
+ * $Id: PollManager.java,v 1.142.2.1 2004-10-01 01:13:48 dshr Exp $
  */
 
 /*
@@ -88,7 +88,7 @@ public class PollManager
     null,
     new V1PollFactory(),
     null, // new V2PollFactory(),
-    null, // new V3PollFactory(),
+    new V3PollFactory(),
   };
 
   public PollManager() {
@@ -820,7 +820,7 @@ public class PollManager
     PollManagerEntry(BasePoll p) {
       poll = p;
       spec = p.getPollSpec();
-      type = p.getVoteTally().getType();
+      type = spec.getPollType();
       key = p.getKey();
       pollDeadline = p.getDeadline();
       deadline = null;

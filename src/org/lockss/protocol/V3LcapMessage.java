@@ -1,5 +1,5 @@
 /*
- * $Id: V3LcapMessage.java,v 1.1.2.1 2004-09-30 01:06:16 dshr Exp $
+ * $Id: V3LcapMessage.java,v 1.1.2.2 2004-10-01 01:13:49 dshr Exp $
  */
 
 /*
@@ -124,8 +124,8 @@ public class V3LcapMessage extends LcapMessage implements Serializable {
 
     V3LcapMessage msg = new V3LcapMessage(pollspec,
                                       entries,
-                                      (byte) 0,
-                                      challenge, verifier, null, opcode);
+					  (byte)0,
+                                      challenge, verifier, new byte[0], opcode);
     if (msg != null) {
       msg.m_startTime = TimeBase.nowMs();
       msg.m_stopTime = msg.m_startTime + timeRemaining;
@@ -183,10 +183,15 @@ public class V3LcapMessage extends LcapMessage implements Serializable {
     return msg;
   }
 
+    protected byte[] wrapPacket() {
+	return new byte[0];
+    }
+
   public String getOpcodeString() {
     return POLL_MESSAGES[m_opcode];
   }
 
+    
   public EffortService.Proof getEffortProof() {
     EffortService.Proof ret = null; // XXX
     return ret;
@@ -202,16 +207,13 @@ public class V3LcapMessage extends LcapMessage implements Serializable {
     sb.append("[V3LcapMessage: from ");
     sb.append(m_originatorID);
     sb.append(", ");
-    if (isNoOp()) {
-      sb.append(POLL_OPCODES[m_opcode]);
-    } else {
       sb.append(m_targetUrl);
       sb.append(" ");
       sb.append(m_lwrBound);
       sb.append("-");
       sb.append(m_uprBound);
       sb.append(" ");
-      sb.append(POLL_OPCODES[m_opcode]);
+      sb.append(POLL_MESSAGES[m_opcode]);
       sb.append(" C:");
       sb.append(String.valueOf(B64Code.encode(m_challenge)));
       sb.append(" V:");
@@ -220,12 +222,8 @@ public class V3LcapMessage extends LcapMessage implements Serializable {
 	sb.append(" H:");
 	sb.append(String.valueOf(B64Code.encode(m_hashed)));
       }
-      if(m_entries != null) {
-
-      }
       if (m_pollVersion > 1)
 	sb.append(" ver " + m_pollVersion);
-    }
     sb.append("]");
     return sb.toString();
   }

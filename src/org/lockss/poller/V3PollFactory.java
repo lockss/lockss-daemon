@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollFactory.java,v 1.1.2.1 2004-09-30 01:06:16 dshr Exp $
+ * $Id: V3PollFactory.java,v 1.1.2.2 2004-10-01 01:13:49 dshr Exp $
  */
 
 /*
@@ -153,6 +153,8 @@ public class V3PollFactory implements PollFactory {
 				      byte[] challenge,
 				      PeerIdentity orig) {
      boolean ret = false;
+     // XXX
+     ret = true;
      // XXX
      return ret;
    }

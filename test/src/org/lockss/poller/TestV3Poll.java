@@ -1,0 +1,235 @@
+/*
+ * $Id: TestV3Poll.java,v 1.1.2.1 2004-10-01 01:13:50 dshr Exp $
+ */
+
+/*
+
+Copyright (c) 2004 Board of Trustees of Leland Stanford Jr. University,
+all rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Except as contained in this notice, the name of Stanford University shall not
+be used in advertising or otherwise to promote the sale, use or other dealings
+in this Software without prior written authorization from Stanford University.
+
+*/
+
+package org.lockss.poller;
+
+import java.io.*;
+import java.util.*;
+import java.net.*;
+import org.lockss.app.*;
+import org.lockss.daemon.*;
+import org.lockss.plugin.*;
+import org.lockss.protocol.*;
+import org.lockss.util.*;
+import org.lockss.test.*;
+import org.lockss.config.*;
+import org.lockss.repository.LockssRepositoryImpl;
+
+/** JUnitTest case for class: org.lockss.poller.V3Poll */
+public class TestV3Poll extends LockssTestCase {
+  private static Logger log = Logger.getLogger("TestV3Poll");
+  private static String[] rootV3urls = {
+      "http://www.test.net",
+      "http://www.test1.net", "http://www.test2.net"};
+  private static String lwrbnd = "test1.doc";
+  private static String uprbnd = "test3.doc";
+  private static long testduration = Constants.DAY;
+
+  protected MockArchivalUnit testau;
+  private IdentityManager idmgr;
+  private MockLockssDaemon theDaemon;
+
+  protected PeerIdentity testID;
+  protected PeerIdentity testID1;
+    protected int[] msgType = {
+	V3LcapMessage.MSG_POLL,
+	V3LcapMessage.MSG_POLL_ACK,
+	V3LcapMessage.MSG_POLL_PROOF,
+	V3LcapMessage.MSG_VOTE,
+	V3LcapMessage.MSG_REPAIR_REQ,
+	V3LcapMessage.MSG_REPAIR_REP,
+	V3LcapMessage.MSG_EVALUATION_RECEIPT,
+    };
+  protected LcapMessage[] testV3msg = new LcapMessage[msgType.length];;
+  protected V3Poll[] testV3polls;
+    protected PollSpec[] testSpec = new PollSpec[msgType.length];
+  protected PollManager pollmanager;
+
+  protected void setUp() throws Exception {
+    super.setUp();
+    TimeBase.setSimulated();
+
+    initRequiredServices();
+
+    testau.setPlugin(new MyMockPlugin());
+
+    initTestPeerIDs();
+    initTestMsg();
+    initTestPolls();
+  }
+
+  /** tearDown method for test case
+   * @throws Exception if removePoll failed
+   */
+  public void tearDown() throws Exception {
+    pollmanager.stopService();
+    theDaemon.getLockssRepository(testau).stopService();
+    theDaemon.getHashService().stopService();
+    theDaemon.getStreamRouterManager().stopService();
+    theDaemon.getSystemMetrics().stopService();
+    TimeBase.setReal();
+    for(int i=0; i<testV3msg.length; i++) {
+      if (testV3msg[i] != null)
+	pollmanager.removePoll(testV3msg[i].getKey());
+    }
+    super.tearDown();
+  }
+
+    // Tests
+
+    public void testInitialPollState() {
+	assertEquals("Poll " + testV3polls[0] + " should be in SendingPollAck",
+		     V3Voter.STATE_INITIALIZING,
+		     testV3polls[0].getPollState());
+    }
+
+    //  Support methods
+
+  private void initRequiredServices() {
+    theDaemon = new MockLockssDaemon();
+    pollmanager = theDaemon.getPollManager();
+
+    theDaemon.getPluginManager();
+    testau = PollTestPlugin.PTArchivalUnit.createFromListOfRootUrls(rootV3urls);
+    PluginUtil.registerArchivalUnit(testau);
+
+    String tempDirPath = null;
+    try {
+      tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    }
+    catch (IOException ex) {
+      fail("unable to create a temporary directory");
+    }
+
+    Properties p = new Properties();
+    p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
+    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
+    p.setProperty(ConfigManager.PARAM_NEW_SCHEDULER, "false");
+    // XXX we need to disable verification of votes because the
+    // voter isn't really there
+    p.setProperty(V1Poll.PARAM_AGREE_VERIFY, "0");
+    p.setProperty(V1Poll.PARAM_DISAGREE_VERIFY, "0");
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+    idmgr = theDaemon.getIdentityManager();
+    idmgr.startService();
+    //theDaemon.getSchedService().startService();
+    theDaemon.getHashService().startService();
+    theDaemon.getStreamRouterManager().startService();
+    theDaemon.getSystemMetrics().startService();
+    theDaemon.getActivityRegulator(testau).startService();
+    theDaemon.setNodeManager(new MockNodeManager(), testau);
+    pollmanager.startService();
+  }
+
+  private void initTestPeerIDs() {
+      try{
+	  testID = idmgr.stringToPeerIdentity("127.0.0.1");
+	  testID1 = idmgr.stringToPeerIdentity("1.1.1.1");
+      } catch (IdentityManager.MalformedIdentityKeyException ex) {
+	  fail("can't open test host:" + ex);
+      }
+      assertFalse(testID1.isLocalIdentity());
+
+  }
+
+  private void initTestMsg() throws Exception {
+    PollFactory ppf = pollmanager.getPollFactory(3);
+    assertNotNull("PollFactory should not be null", ppf);
+    assertTrue(ppf instanceof V3PollFactory);
+    V3PollFactory pf = (V3PollFactory)ppf;
+
+    for (int i= 0; i<testV3msg.length; i++) {
+	testSpec[i] = new MockPollSpec(testau, rootV3urls[0],
+				     lwrbnd, uprbnd, Poll.CONTENT_POLL,
+				     Poll.V3_POLL);
+	PollSpec spec = testSpec[i];
+	assertEquals(spec.getPollType(), Poll.CONTENT_POLL);
+	assertEquals(spec.getPollVersion(), Poll.V3_POLL);
+	((MockCachedUrlSet)spec.getCachedUrlSet()).setHasContent(false);
+	long duration = pf.calcDuration(Poll.CONTENT_POLL,
+				    spec.getCachedUrlSet(),
+				    pollmanager);
+      testV3msg[i] =
+	V3LcapMessage.makeRequestMsg(spec,
+				     null, // XXX entries not needed
+				     pollmanager.makeVerifier(100000),
+				     pollmanager.makeVerifier(100000),
+				     msgType[i],
+				     duration,
+				     testID1);
+      assertNotNull(testV3msg[i]);
+      log.debug("Made " + testV3msg[i] + " from " + spec);
+    }
+
+  }
+
+  private void initTestPolls() throws Exception {
+    testV3polls = new V3Poll[1];
+    for (int i = 0; i < testV3polls.length; i++) {
+      log.debug3("initTestPolls: V3 " + i);
+      BasePoll p = pollmanager.makePoll(testSpec[i],
+					testV3msg[i].getDuration(),
+					testV3msg[i].getChallenge(),
+					testV3msg[i].getVerifier(),
+					testV3msg[i].getOriginatorID(),
+					testV3msg[i].getHashAlgorithm());
+      log.debug("initTestPolls: V3 " + i + " returns " + p);
+      switch (i) {
+      case 0:
+	assertTrue(p instanceof V3Voter);
+	break;
+      default:
+	  assertNull(p);
+	  break;
+      }
+      testV3polls[i] = (V3Poll)p;
+      log.debug3("initTestPolls: " + i + " " + p.toString());
+    }
+  }
+
+  public class MyMockPlugin extends MockPlugin {
+    public CachedUrlSet makeCachedUrlSet(ArchivalUnit owner,
+					 CachedUrlSetSpec cuss) {
+      return new PollTestPlugin.PTCachedUrlSet((MockArchivalUnit)owner, cuss);
+    }
+  }
+
+  /** Executes the test case
+   * @param argv array of Strings containing command line arguments
+   * */
+  public static void main(String[] argv) {
+    String[] testCaseList = {
+        TestV3Poll.class.getName()};
+    junit.swingui.TestRunner.main(testCaseList);
+  }
+}

@@ -1,5 +1,5 @@
 /*
- * $Id: MockPollSpec.java,v 1.3 2004-09-23 02:35:23 dshr Exp $
+ * $Id: MockPollSpec.java,v 1.3.2.1 2004-10-01 01:13:50 dshr Exp $
  */
 
 /*
@@ -72,6 +72,13 @@ public class MockPollSpec extends PollSpec {
 		      int pollType) {
     super(makeCus(au, url, lwrBound, uprBound, null),
 	  lwrBound, uprBound, pollType);
+  }
+
+  public MockPollSpec(ArchivalUnit au, String url,
+		      String lwrBound, String uprBound,
+		      int pollType, int pollVersion) {
+    super(makeCus(au, url, lwrBound, uprBound, null),
+	  lwrBound, uprBound, pollType, pollVersion);
   }
 
   public MockPollSpec(String auId, String url,

@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.72 2004-09-29 18:57:57 tlipkis Exp $
+ * $Id: TestPollManager.java,v 1.72.2.1 2004-10-01 01:13:49 dshr Exp $
  */
 
 /*
@@ -471,7 +471,7 @@ public class TestPollManager extends LockssTestCase {
     p.setProperty(V1PollFactory.PARAM_NAMEPOLL_DEADLINE, "10000");
     p.setProperty(V1PollFactory.PARAM_CONTENTPOLL_MIN, "1000");
     p.setProperty(V1PollFactory.PARAM_CONTENTPOLL_MAX, "4100");
-    p.setProperty(V1PollFactory.PARAM_QUORUM, "5");
+    p.setProperty(PollSpec.PARAM_QUORUM, "5");
     p.setProperty(V1PollFactory.PARAM_DURATION_MULTIPLIER_MIN, "3");
     p.setProperty(V1PollFactory.PARAM_DURATION_MULTIPLIER_MAX, "7");
     p.setProperty(V1PollFactory.PARAM_NAME_HASH_ESTIMATE, "1s");

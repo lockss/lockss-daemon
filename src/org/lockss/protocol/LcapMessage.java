@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessage.java,v 1.52 2004-09-29 01:19:11 dshr Exp $
+ * $Id: LcapMessage.java,v 1.52.2.1 2004-10-01 01:13:49 dshr Exp $
  */
 
 /*
@@ -759,7 +759,7 @@ public class LcapMessage {
     return true;
   }
 
-  private byte[] wrapPacket() throws IOException {
+  protected byte[] wrapPacket() throws IOException {
     if (!supportedPollVersion(m_pollVersion))
       throw new ProtocolException("Unsupported outbound poll version: " +
 				  m_pollVersion);

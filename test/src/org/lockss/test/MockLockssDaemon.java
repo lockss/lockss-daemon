@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssDaemon.java,v 1.44 2004-09-27 22:38:34 smorabito Exp $
+ * $Id: MockLockssDaemon.java,v 1.44.2.1 2004-10-01 01:13:50 dshr Exp $
  */
 
 /*
@@ -63,7 +63,8 @@ public class MockLockssDaemon extends LockssDaemon {
   SystemMetrics systemMetrics = null;
   PollManager pollManager = null;
   LcapDatagramComm commManager = null;
-  LcapDatagramRouter routerManager = null;
+  LcapDatagramRouter datagramRouterManager = null;
+  LcapStreamRouter streamRouterManager = null;
   ProxyManager proxyManager = null;
   CrawlManager crawlManager = null;
   RepositoryManager repositoryManager = null;
@@ -242,12 +243,25 @@ public class MockLockssDaemon extends LockssDaemon {
    * @return the LcapDatagramRouter
    */
   public LcapDatagramRouter getDatagramRouterManager() {
-    if (routerManager == null) {
-      routerManager =
+    if (datagramRouterManager == null) {
+      datagramRouterManager =
 	(LcapDatagramRouter)newManager(LockssDaemon.DATAGRAM_ROUTER_MANAGER);
-      managerMap.put(LockssDaemon.DATAGRAM_ROUTER_MANAGER, routerManager);
+      managerMap.put(LockssDaemon.DATAGRAM_ROUTER_MANAGER, datagramRouterManager);
     }
-    return routerManager;
+    return datagramRouterManager;
+  }
+
+  /**
+   * return the router manager instance
+   * @return the LcapStreamRouter
+   */
+  public LcapStreamRouter getStreamRouterManager() {
+    if (streamRouterManager == null) {
+      streamRouterManager =
+	(LcapStreamRouter)newManager(LockssDaemon.STREAM_ROUTER_MANAGER);
+      managerMap.put(LockssDaemon.STREAM_ROUTER_MANAGER, streamRouterManager);
+    }
+    return streamRouterManager;
   }
 
   /**
@@ -369,12 +383,21 @@ public class MockLockssDaemon extends LockssDaemon {
   }
 
   /**
-   * Set the RouterManager
+   * Set the DatagramRouterManager
    * @param routerMan the new manager
    */
   public void setDatagramRouterManager(LcapDatagramRouter routerMan) {
-    routerManager = routerMan;
-    managerMap.put(LockssDaemon.DATAGRAM_ROUTER_MANAGER, routerManager);
+    datagramRouterManager = routerMan;
+    managerMap.put(LockssDaemon.DATAGRAM_ROUTER_MANAGER, datagramRouterManager);
+  }
+
+  /**
+   * Set the StreamRouterManager
+   * @param routerMan the new manager
+   */
+  public void setStreamRouterManager(LcapStreamRouter routerMan) {
+    streamRouterManager = routerMan;
+    managerMap.put(LockssDaemon.STREAM_ROUTER_MANAGER, streamRouterManager);
   }
 
   /**
