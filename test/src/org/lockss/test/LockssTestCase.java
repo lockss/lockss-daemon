@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.34 2003-09-08 19:27:36 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.35 2003-09-08 22:57:52 tlipkis Exp $
  */
 
 /*
@@ -139,6 +139,79 @@ public class LockssTestCase extends TestCase {
       DebugUtils.getInstance().threadDump();
       TimerUtil.guaranteedSleep(1000);
     }
+  }
+
+  double successRate;
+  int successMaxRepetitions;
+  int successMaxFailures;
+
+  /** Causes the current test case to be repeated if it fails, ultimately
+   * succeeding if the success rate is sufficiently high.  If a test is
+   * repeated, a message will be written to System.err.  Repetitions are
+   * not reflected in test statistics.
+   * @param rate the minimum success rate between 0 and 1 (successes /
+   * attempts) necessary for the test ultimately to succeed.
+   * @param maxRepetitions the maximum number of times the test will be
+   * repeated in an attempt to achieve the specified success rate.
+   * @see #successRateSetUp()
+   * @see #successRateTearDown()
+   */
+  protected void assertSuccessRate(double rate, int maxRepetitions) {
+    if (successMaxRepetitions == 0) {
+      successRate = rate;
+      successMaxRepetitions = maxRepetitions;
+      successMaxFailures = maxRepetitions - ((int)(rate * maxRepetitions));
+    }
+  }
+
+  /**
+   * Runs the bare test sequence, repeating if necessary to achieve the
+   * specified success rate.
+   * @see #assertSuccessRate
+   * @exception Throwable if any exception is thrown
+   */
+  public void runBare() throws Throwable {
+    int rpt = 0;
+    int failures = 0;
+    successRateSetUp();
+    try {
+      while (true) {
+	try {
+	  super.runBare();
+	} catch (Throwable e) {
+	  if (++failures > successMaxFailures) {
+	    rpt++;
+	    throw e;
+	  }
+	}
+	if (++rpt >= successMaxRepetitions) {
+	  break;
+	}
+	if ((((double)(rpt - failures)) / ((double)rpt)) > successRate) {
+	  break;
+	}
+      }
+    } finally {
+      if (failures > 0) {
+	System.err.println(getName() + " failed " + failures +
+			   " of " + rpt + " tries, " +
+			   ((failures > successMaxFailures) ? "not " : "") +
+			   "achieving a " + successRate + " success rate.");
+      }
+      successRateTearDown();
+    }
+  }
+
+  /** Called once (before setUp()) before a set of repetitions of a test
+   * case that uses assertSuccessRate().  (setUp() is called before each
+   * repetition.) */
+  protected void successRateSetUp() {
+  }
+
+  /** Called once (after tearDown()) after a set of repetitions of a test
+   * case that uses assertSuccessRate().  (tearDown() is called after each
+   * repetition.) */
+  protected void successRateTearDown() {
   }
 
   /**

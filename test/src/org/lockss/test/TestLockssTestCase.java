@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssTestCase.java,v 1.6 2003-06-20 22:34:56 claire Exp $
+ * $Id: TestLockssTestCase.java,v 1.7 2003-09-08 22:57:52 tlipkis Exp $
  */
 
 /*
@@ -264,6 +264,39 @@ public class TestLockssTestCase extends LockssTestCase {
     }
   }
 
+  int rpt;
+  protected void successRateSetUp() {
+    super.successRateSetUp();
+    rpt = 10;
+  }
 
 
+  public void testSuccessRate100Succeed() {
+    assertSuccessRate(1, 0);
+  }
+
+  public void testSuccessRate90Succeed() {
+    assertSuccessRate(.9, 0);
+  }
+
+  public void testSuccessRate90Fail1A() {
+    assertSuccessRate(.9, 10);
+    if (rpt-- == 10) {
+      fail("failing on iteration " + rpt);
+    }
+  }
+
+  public void testSuccessRate90Fail1B() {
+    assertSuccessRate(.9, 10);
+    if (rpt-- == 5) {
+      fail("failing on iteration " + rpt);
+    }
+  }
+
+  public void donttestSuccessRate90Fail2() {
+    assertSuccessRate(.9, 10);
+    if (rpt-- >= 9) {
+      fail("failing on iteration " + rpt);
+    }
+  }
 }
