@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.195 2004-10-22 00:37:27 troberts Exp $
+ * $Id: NodeManagerImpl.java,v 1.196 2004-10-23 01:01:01 clairegriffin Exp $
  */
 
 /*
@@ -285,6 +285,7 @@ public class NodeManagerImpl
           break;
         case NodeState.WRONG_NAMES:
           nodeState.setState(NodeState.NAME_REPLAYING);
+          // Fall through to NAME_REPLAYING to set status
         case NodeState.NAME_REPLAYING:
           status = PollState.REPAIRING;
           break;
@@ -295,6 +296,7 @@ public class NodeManagerImpl
           break;
         case NodeState.NEEDS_REPAIR:
           nodeState.setState(NodeState.SNCUSS_POLL_REPLAYING);
+           // Fall through to SNCUSS_POLL_REPLAYING to set status
         case NodeState.SNCUSS_POLL_REPLAYING:
           status = PollState.REPAIRING;
           break;

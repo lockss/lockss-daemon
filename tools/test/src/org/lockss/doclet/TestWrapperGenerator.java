@@ -1,5 +1,5 @@
 /*
- * $Id: TestWrapperGenerator.java,v 1.6 2004-06-16 06:36:25 tlipkis Exp $
+ * $Id: TestWrapperGenerator.java,v 1.7 2004-10-23 01:01:04 clairegriffin Exp $
  */
 
 /*
@@ -112,6 +112,7 @@ public class TestWrapperGenerator extends LockssTestCase {
         break;
       case USE_PACKAGE_BLANK:
         pw.println("<package name=\"blank\"/>");
+        break;
       case USE_PACKAGE_SPECIFIED:
         pw.println("<package name=\"" + packageName + "\"/>");
         break;

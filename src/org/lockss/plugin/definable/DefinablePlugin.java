@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.7 2004-09-27 22:39:11 smorabito Exp $
+ * $Id: DefinablePlugin.java,v 1.8 2004-10-23 01:01:01 clairegriffin Exp $
  */
 
 /*
@@ -62,7 +62,7 @@ public class DefinablePlugin extends BasePlugin {
 
   protected String mapName = null;
 
-  static Logger log = Logger.getLogger("ConfigurablePlugin");
+  static Logger log = Logger.getLogger("DefinablePlugin");
 
   protected ExternalizableMap definitionMap = new ExternalizableMap();
   protected CacheResultHandler resultHandler = null;
@@ -77,8 +77,9 @@ public class DefinablePlugin extends BasePlugin {
       throws FileNotFoundException {
     mapName = extMapName;
     this.classLoader = loader;
-    // load the configuration map from jar file
+    // convert the plugin class name to an xml file name
     String mapFile = mapName.replace('.', '/') + MAP_SUFFIX;
+    // load the configuration map from jar file
     definitionMap.loadMapFromResource(mapFile, classLoader);
 
     // then call the overridden initializaton.
@@ -120,8 +121,8 @@ public class DefinablePlugin extends BasePlugin {
     return resultHandler;
   }
 
-  protected void installCacheExceptionHandler() throws InvalidDefinitionException {
-
+  protected void initResultMap() throws InvalidDefinitionException {
+    resultMap = new HttpResultMap();
     // we support two form of result handlers... either a class which handles
     // installing the numbers as well as handling any exceptions
     String handler_class = null;
@@ -136,8 +137,13 @@ public class DefinablePlugin extends BasePlugin {
         throw new InvalidDefinitionException(mapName
         + " has invalid Exception handler: " + handler_class);
       }
+      catch (LinkageError le) {
+        throw new InvalidDefinitionException(
+            mapName + "has  invalid Exception handler: " + handler_class , le);
+
+      }
     }
-    else {// or a list of remappings
+    else {// or a list of individual exception remappings
       Collection results;
       results = definitionMap.getCollection(CM_EXCEPTION_LIST_KEY, null);
       if (results != null) {

@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.21 2004-10-20 18:41:18 dcfok Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.22 2004-10-23 01:01:01 clairegriffin Exp $
  */
 
 /*
@@ -66,14 +66,14 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 
   protected ClassLoader classLoader;
   protected ExternalizableMap definitionMap;
-  static Logger log = Logger.getLogger("ConfigurableArchivalUnit");
+  static Logger log = Logger.getLogger("DefinableArchivalUnit");
   public static final String RANGE_SUBSTITUTION_STRING = "(.*)";
   public static final String NUM_SUBSTITUTION_STRING = "(\\d+)";
 
   protected DefinableArchivalUnit(Plugin myPlugin) {
     super(myPlugin);
     throw new UnsupportedOperationException(
-        "ConfigurableArchvialUnit requires ConfigurablePlugin for construction");
+        "DefinableArchvialUnit requires DefinablePlugin for construction");
   }
 
 
@@ -91,19 +91,23 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   }
 
   protected List getPermissionPages() {
+    List templateList;
     Object permission_el = definitionMap.getMapElement(AU_MANIFEST_KEY);
 
     if (permission_el instanceof String) {
-      String permission_str = convertVariableString((String)permission_el);
-      log.debug2("overriding permission page with " + permission_str);
-      return ListUtil.list(permission_str);
+      templateList = ListUtil.list((String)permission_el);
     }
     else if (permission_el instanceof List) {
-      return (List) permission_el;
+       templateList = (List) permission_el;
     }
     else {
       return super.getPermissionPages();
     }
+    List permission_list = new ArrayList();
+    for(Iterator it = templateList.iterator(); it.hasNext();) {
+      permission_list.add(convertVariableString((String)it.next()));
+    }
+    return permission_list;
   }
 
   protected String makeStartUrl() {
@@ -122,17 +126,17 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 
       try {
         Object val = descr.getValueOfType(config.get(key));
-        definitionMap.setMapElement(key, val);
+        paramMap.setMapElement(key, val);
         // we store years in two formats - short and long
         if (descr.getType() == ConfigParamDescr.TYPE_YEAR) {
           int year = ((Integer)val).intValue() % 100;
-          definitionMap.putInt(AU_SHORT_YEAR_PREFIX + key, year);
+          paramMap.putInt(AU_SHORT_YEAR_PREFIX + key, year);
         }
         if (descr.getType() == ConfigParamDescr.TYPE_URL) {
-          URL url = definitionMap.getUrl(key, null);
+          URL url = paramMap.getUrl(key, null);
           if(url != null) {
-            definitionMap.putString(key+AU_HOST_SUFFIX, url.getHost());
-            definitionMap.putString(key+AU_PATH_SUFFIX, url.getPath());
+            paramMap.putString(key+AU_HOST_SUFFIX, url.getHost());
+            paramMap.putString(key+AU_PATH_SUFFIX, url.getPath());
           }
         }
      }
@@ -171,7 +175,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 
     if (rule instanceof String) {
 	CrawlRuleFromAuFactory fact = (CrawlRuleFromAuFactory)
-            loadClass((String) rule, "CrawlRule");
+            loadClass((String) rule, CrawlRuleFromAuFactory.class);
 	return fact.createCrawlRule(this);
     }
     List rules = new LinkedList();
@@ -202,7 +206,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     int depth = definitionMap.getInt(AU_CRAWL_DEPTH, DEFAULT_AU_CRAWL_DEPTH);
     //XXX this change is to make things compile,
     // what needs to be done:
-    // get from the plugin tool that what kind of crawl we are going to have 
+    // get from the plugin tool that what kind of crawl we are going to have
     // and create and return the appropriate CrawlSpec (SpiderCrawlSpec or OaiCrawlSpec)
     return new SpiderCrawlSpec(startUrlString, rule, depth);
   }
@@ -210,11 +214,11 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   protected CrawlWindow makeCrawlWindow() {
     CrawlWindow window = null;
     String window_class;
-    window_class = definitionMap.getString(AU_CRAWL_WINDOW_KEY,
-                                              null);
+    window_class = definitionMap.getString(AU_CRAWL_WINDOW_KEY, null);
     if (window_class != null) {
       ConfigurableCrawlWindow ccw =
-          (ConfigurableCrawlWindow) loadClass(window_class, "CrawlWindow");
+          (ConfigurableCrawlWindow) loadClass(window_class,
+                                              ConfigurableCrawlWindow.class);
        window = ccw.makeCrawlWindow();
      }
     return window;
@@ -224,7 +228,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     UrlNormalizer urlNormalizer = null;
     String normalizerClass = definitionMap.getString(AU_URL_NORMALIZER_KEY, null);
     if (normalizerClass != null) {
-      urlNormalizer = (UrlNormalizer)loadClass(normalizerClass, "UrlNormalizer");
+      urlNormalizer = (UrlNormalizer)loadClass(normalizerClass, UrlNormalizer.class);
     }
     return urlNormalizer;
   }
@@ -234,7 +238,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
         + AU_FILTER_SUFFIX);
 
     if (filter_el instanceof String) {
-      return (FilterRule) loadClass( (String) filter_el, "FilterRule");
+      return (FilterRule) loadClass( (String) filter_el, FilterRule.class);
     }
     else if (filter_el instanceof List) {
       if ( ( (List) filter_el).size() > 0) {
@@ -256,29 +260,35 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     String parser_cl = definitionMap.getString(mimeType + AU_PARSER_SUFFIX,
                                                null);
     if (parser_cl != null) {
-      return (ContentParser) loadClass(parser_cl, "ContentParser");
+      return (ContentParser) loadClass(parser_cl, ContentParser.class);
     }
     return super.getContentParser(mimeType);
   }
 
-// ---------------------------------------------------------------------
+  // ---------------------------------------------------------------------
 //   CLASS LOADING SUPPORT ROUTINES
 // ---------------------------------------------------------------------
 
-  Object loadClass(String className, String description) {
-    try {
-      return Class.forName(className, true, classLoader).newInstance();
-    }
-    catch (Exception ex) {
-      throw new InvalidDefinitionException(
-          auName + " unable to create " + description + ": " + className, ex);
-    }
-    catch (LinkageError le) {
-      throw new InvalidDefinitionException(
-          auName + " unable to create " + description + ": " + className, le);
+    Object loadClass(String className, Class loadedClass) {
+      Object obj = null;
+      try {
+        obj = Class.forName(className, true, classLoader).newInstance();
+      }
+      catch (Exception ex) {
+        throw new InvalidDefinitionException(
+            auName + " unable to create " + loadedClass + ": " + className, ex);
+      }
+      catch (LinkageError le) {
+        throw new InvalidDefinitionException(
+            auName + " unable to create " + loadedClass + ": " + className, le);
 
+      }
+      if(!loadedClass.isInstance(obj)) {
+        throw new InvalidDefinitionException(auName + "wrong class type for "
+            + loadedClass + ": " + className);
+      }
+      return obj;
     }
-  }
 
 // ---------------------------------------------------------------------
 //   VARIABLE ARGUMENT REPLACEMENT SUPPORT ROUTINES
@@ -293,7 +303,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     boolean has_all_args = true;
     for (Iterator it = p_args.iterator(); it.hasNext(); ) {
       String key = (String) it.next();
-      Object val = definitionMap.getMapElement(key);
+      Object val = paramMap.getMapElement(key);
       if (val != null){
         if (val instanceof Vector) {
           Vector vec = (Vector) val;
@@ -332,18 +342,18 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     if (rule.indexOf(RANGE_SUBSTITUTION_STRING) != -1 ||
         rule.indexOf(NUM_SUBSTITUTION_STRING) != -1) {
       // check for one range or set
-      vec = (Vector) definitionMap.getMapElement(ConfigParamDescr.ISSUE_RANGE.
+      vec = (Vector) paramMap.getMapElement(ConfigParamDescr.ISSUE_RANGE.
                                                  getKey());
       if (vec != null) {
         return new CrawlRules.REMatchRange(rule, value,
                                            (String) vec.elementAt(0),
                                            (String) vec.elementAt(1));
       }
-      else if ( (vec = (Vector) definitionMap.getMapElement(
+      else if ( (vec = (Vector) paramMap.getMapElement(
           ConfigParamDescr.ISSUE_SET.getKey())) != null) {
         return new CrawlRules.REMatchSet(rule, value, new HashSet(vec));
       }
-      else if ( (vec = (Vector) definitionMap.getMapElement(
+      else if ( (vec = (Vector) paramMap.getMapElement(
           ConfigParamDescr.NUM_ISSUE_RANGE.getKey())) != null) {
         return new CrawlRules.REMatchRange(rule, value,
                                            ( (Long) vec.elementAt(0)).longValue(),

@@ -1,5 +1,5 @@
 /*
- * $Id: V1NamePoll.java,v 1.13 2004-10-22 00:36:41 troberts Exp $
+ * $Id: V1NamePoll.java,v 1.14 2004-10-23 01:01:01 clairegriffin Exp $
  */
 
 /*
@@ -253,6 +253,7 @@ public class V1NamePoll extends V1Poll {
       }
     }
   }
+
 
   /**
    * Calls a name poll poll with the lower and upper bounds set.

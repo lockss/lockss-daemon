@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.7 2004-10-22 00:45:09 troberts Exp $
+ * $Id: FollowLinkCrawler.java,v 1.8 2004-10-23 01:00:59 clairegriffin Exp $
  */
 
 /*
@@ -449,8 +449,8 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
 	case PermissionMap.PERMISSION_UNCHECKED:
 	  //should not be in this state as each permissionPage should be checked in the first iteration
 	  logger.warning("permission unchecked on host : "+ urlPermissionUrl);
-	  // fall through, re-fetch permission like FETCH_PERMISSION_FAILED
 	  printFailedWarning = false;
+          // fall through, re-fetch permission like FETCH_PERMISSION_FAILED
 	case PermissionMap.FETCH_PERMISSION_FAILED:
 	  if (printFailedWarning) {
 	    logger.warning("Fail to fetch permission page on host :" +

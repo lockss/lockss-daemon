@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlUtil.java,v 1.1 2003-08-06 06:27:57 tlipkis Exp $
+ * $Id: HtmlUtil.java,v 1.2 2004-10-23 01:01:03 clairegriffin Exp $
  */
 
 /*
@@ -71,7 +71,7 @@ public class HtmlUtil {
 
     default:
       return s;
-    }	    
+    }
   }
 
   public static String htmlEncode(String s) {
@@ -127,6 +127,7 @@ public class HtmlUtil {
 	// Special characters
       case '\n':
 	sb.append("\\n");
+        break;
       case '\r':
 	break;
       default:

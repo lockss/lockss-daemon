@@ -1,5 +1,5 @@
 /*
- * $Id: V1PollTally.java,v 1.15 2004-10-21 22:51:57 clairegriffin Exp $
+ * $Id: V1PollTally.java,v 1.16 2004-10-23 01:01:01 clairegriffin Exp $
  */
 
 /*
@@ -422,7 +422,7 @@ class ReplayVoteCallback implements HashService.Callback {
       PeerIdentity id = v.getVoterIdentity();
       boolean isLocalVote = idManager.isLocalIdentity(id);
       if (isLocalVote) {
-	poll.copyVote(v,true);
+	v = poll.copyVote(v,true);
       }
       else {
 	v.setAgreeWithHash(hasher.digest());

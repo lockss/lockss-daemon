@@ -1,5 +1,5 @@
 /*
- * $Id: PrintfEditor.java,v 1.16 2004-10-01 22:56:29 clairegriffin Exp $
+ * $Id: PrintfEditor.java,v 1.17 2004-10-23 01:01:04 clairegriffin Exp $
  */
 
 /*
@@ -309,6 +309,7 @@ public class PrintfEditor extends JDialog
           else {
             format = "%d";
           }
+          break;
         case ConfigParamDescr.TYPE_RANGE:
         case ConfigParamDescr.TYPE_SET:
           format = "%s";
