@@ -1,5 +1,5 @@
 /*
- * $Id: LockssCardFilterRule.java,v 1.1 2005-02-03 19:24:39 troberts Exp $
+ * $Id: LockssCardFilterRule.java,v 1.1 2005-02-04 00:50:22 troberts Exp $
  */
 
 /*
