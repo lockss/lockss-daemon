@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssDaemon.java,v 1.36 2004-03-07 08:43:18 tlipkis Exp $
+ * $Id: MockLockssDaemon.java,v 1.37 2004-05-12 17:50:00 tlipkis Exp $
  */
 
 /*
@@ -407,6 +407,7 @@ public class MockLockssDaemon extends LockssDaemon {
       setAuManager(desc, au, mgr);
       return mgr;
     } catch (Exception e) {
+      log.error("Error starting au manager", e);
       throw new LockssDaemonException("Can't load au manager: " +
 				      e.toString());
     }
