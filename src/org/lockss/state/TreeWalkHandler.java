@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkHandler.java,v 1.27 2003-05-03 01:52:45 aalto Exp $
+ * $Id: TreeWalkHandler.java,v 1.28 2003-05-06 02:23:32 aalto Exp $
  */
 
 /*
@@ -84,7 +84,6 @@ public class TreeWalkHandler {
   boolean forceTreeWalk = false;
 
   long treeWalkEstimate = -1;
-
 
   Configuration.Callback configCallback;
 
@@ -172,7 +171,6 @@ public class TreeWalkHandler {
     manager.getAuState().setLastTreeWalkTime();
     logger.debug("Tree walk finished.");
   }
-
 
   private void nodeTreeWalk() {
     CachedUrlSet cus = theAu.getAUCachedUrlSet();
