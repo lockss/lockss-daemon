@@ -1,5 +1,5 @@
 /*
- * $Id: BuildInfo.java,v 1.1 2003-03-17 08:20:38 tal Exp $
+ * $Id: BuildInfo.java,v 1.2 2003-04-29 00:59:22 tal Exp $
  */
 
 /*
@@ -59,6 +59,9 @@ public class BuildInfo {
   /** Name of build host property.  Should agree with the name used in
    * build.xml */
   public static final String BUILD_HOST = "build.host";
+  /** Name of release name property.  Should agree with the name used in
+   * build.xml */
+  public static final String BUILD_RELEASENAME = "build.releasename";
 
   private static Logger log = Logger.getLogger("BuildInfo");
 
@@ -70,7 +73,11 @@ public class BuildInfo {
    * @return the value of the property
    */
   public static String getBuildProperty(String prop) {
-    return findBuildProps().getProperty(prop);
+    String s = findBuildProps().getProperty(prop);
+    if (s != null && !s.startsWith("${")) {
+      return s;
+    }
+    return null;
   }
 
   private static synchronized Properties findBuildProps() {
