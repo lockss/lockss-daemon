@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.120 2004-10-21 18:35:06 smorabito Exp $
+ $Id: build.xml,v 1.121 2004-10-26 00:32:00 smorabito Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -157,8 +157,7 @@ Args:
   				value="${lib}/commons-httpclient-2.0.jar"/>
   <property name="concurrent.jar" value="${lib}/concurrent.jar"/>
   <property name="htmlparser.jar"  value="${lib}/htmlparser.jar"/>
-  <property name="jena.jar" value="${lib}/jena.jar"/> <!-- Jena RDF parser -->
-  <property name="icu4j.jar" value="${lib}/icu4j.jar"/> <!-- Jena RDF parser -->
+  <property name="rdf.jar" value="${lib}/rdf-api-2001-01-19.jar" /> <!-- W3C RDF Parser -->
   <!-- Needed by OAI harvester -->
   <property name="oai-harvester.jar" value="${lib}/harvester2.jar"/>
   <property name="xalan.jar" value="${lib}/xalan.jar"/>
@@ -218,8 +217,7 @@ Args:
     <pathelement path="${xmlparser.jar}" />
     <pathelement path="${oro.jar}" />
     <pathelement path="${htmlparser.jar}" />
-    <pathelement path="${jena.jar}" />
-    <pathelement path="${icu4j.jar}" />
+    <pathelement path="${rdf.jar}" />
     <!-- jars need to run the Oai harvester -->
     <pathelement path="${oai-harvester.jar}" />
     <pathelement path="${xalan.jar}" />

@@ -1,5 +1,5 @@
 /*
- * $Id: CreativeCommonsPermissionChecker.java,v 1.1 2004-10-18 02:57:49 smorabito Exp $
+ * $Id: CreativeCommonsPermissionChecker.java,v 1.2 2004-10-26 00:31:48 smorabito Exp $
  */
 
 /*
@@ -33,11 +33,19 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.daemon;
 
 import java.io.*;
-import com.hp.hpl.jena.vocabulary.*;
-import com.hp.hpl.jena.rdf.model.*;
-import com.hp.hpl.jena.rdf.model.impl.*;
-import com.hp.hpl.jena.rdf.arp.*;
-import com.hp.hpl.jena.graph.*;
+import java.util.*;
+
+import edu.stanford.db.xml.util.*;
+import edu.stanford.db.rdf.model.i.StatementImpl;
+import edu.stanford.db.rdf.model.i.ModelImpl;
+import org.w3c.rdf.implementation.model.*;
+import org.w3c.rdf.implementation.syntax.sirpac.*;
+import org.w3c.rdf.model.*;
+import org.w3c.rdf.syntax.*;
+import org.w3c.rdf.util.*;
+import org.w3c.rdf.vocabulary.rdf_syntax_19990222.*;
+import org.xml.sax.*;
+
 import org.lockss.util.*;
 
 /**
@@ -58,21 +66,19 @@ public class CreativeCommonsPermissionChecker
   // Maximum size for the RDF buffer
   private static int RDF_BUF_LEN = 65535;
 
-  // Creative Commons RDF resource URIs
-  private static final String WORK =
-    "http://www.w3.org/1999/02/22-rdf-syntax-ns";
-  private static final String LICENSE =
-    "http://web.resource.org/cc/license";
+  // License resource
+  private static final Resource LICENSE =
+    new ResourceImpl("http://web.resource.org/cc/license");
 
-  // Permissions URIs (currently only "PERMITS" is checked)
-  private static final String PERMITS =
-    "http://web.resource.org/cc/permits";
-  private static final String REQUIRES =
-    "http://web.resources.org/cc/requires";
-  private static final String PROHIBITS =
-    "http://web.resources.org/cc/prohibits";
+  // Permission-kind resources
+  private static final Resource PERMITS =
+    new ResourceImpl("http://web.resource.org/cc/permits");
+  private static final Resource REQUIRES =
+    new ResourceImpl("http://web.resources.org/cc/requires");
+  private static final Resource PROHIBITS =
+    new ResourceImpl("http://web.resources.org/cc/prohibits");
 
-  // Permissions URIs (currently only "DISTRIBUTION" is checked)
+  // Permission labels
   private static final String DERIVATIVE_WORKS =
     "http://web.resource.org/cc/DerivativeWorks";
   private static final String REPRODUCTION =
@@ -82,6 +88,27 @@ public class CreativeCommonsPermissionChecker
 
   private static final Logger log =
     Logger.getLogger("CreativeCommonsPermissionChecker");
+
+  // The URI of the resource being checked for permission
+  private String m_licenseURI;
+
+  /**
+   * Construct a Creative Commons permission checker with a license
+   * location URI.  If the CC RDF being parsed does not have a URI set
+   * for the "Work" element's "about:rdf" attribute, this will just be
+   * ignored.  But if it does, this URL *must* match the attribute's
+   * value in order to be a valid license.
+   *
+   * <p>For example, if the license Work opening element reads
+   * &lt;Work rdf:about=""&gt;, then this URI will be ignored (but, for
+   * SAX parser reasons, must be valid).  If the license Work opening
+   * element reads &lt;Work rdf:about="http://some.url/foo/"&gt;, then
+   * the licenseURI must be "http://some.url/foo/", or the license will
+   * not be considered valid.
+   */
+  public CreativeCommonsPermissionChecker(String licenseURI) {
+    m_licenseURI = licenseURI;
+  }
 
   /**
    * Check for "Distribution" permission granted by a Creative Commons
@@ -103,47 +130,65 @@ public class CreativeCommonsPermissionChecker
       return false;
     }
 
-    Model model = ModelFactory.createDefaultModel();
-    JenaReader jreader = new JenaReader();
 
+    Model model = new RDFFactoryImpl().createModel();
+
+    RDFParser parser = new SiRPAC();
     // Default error handler prints to stderr.  This error handler
     // will log any RDF parsing errors to the LOCKSS cache log
     // instead.
-    jreader.setErrorHandler(new LoggingErrorHandler());
-
-    StringReader rdfIn = new StringReader(rdfString);
-    jreader.read(model, rdfIn, RDF.getURI());
-    rdfIn.close();
-
-    // Get the "Work" resource in order to determine the license type
-    Resource work = model.getResource(WORK);
-    Statement licenseStmt =
-      work.getProperty(new PropertyImpl(LICENSE));
-
-    if (licenseStmt == null) {
-      log.warning("No 'work' resource.  Invalid CC RDF.");
+    parser.setErrorHandler(new LoggingErrorHandler());
+    try {
+      InputSource source = new InputSource(new StringReader(rdfString));
+      source.setSystemId(m_licenseURI);
+      parser.parse(source, new ModelConsumer(model));
+    } catch (Exception ex) {
+      // Can throw SAXException or ModelException
+      log.warning("Exception while parsing RDF.", ex);
       return false;
     }
 
-    RDFNode licenseType = licenseStmt.getObject();
+    log.debug("Extracted RDF.");
 
-    if (licenseType == null) {
-      log.warning("No 'license' resource.  Invalid CC RDF.");
-      return false;
-    }
+    try {
+      // Find the license type to use as the subject key
+      // for obtaining "permission" triples from this RDF model.
+      Model license = (Model)model.find(new ResourceImpl(m_licenseURI), LICENSE, null);
 
-    // Get the "License" resource based on the license from the "Work"
-    // section.
-    Resource license = model.getResource(licenseType.toString());
-
-    // Iterate through all "Permits" statements.
-    StmtIterator iter = license.listProperties(new PropertyImpl(PERMITS));
-    while (iter.hasNext()) {
-      Statement stmt = (Statement)iter.next();
-      Node rsrc = stmt.getObject().asNode();
-      if (rsrc.getURI().equals(DISTRIBUTION)) {
-	return true;
+      if (license == null) {
+	log.warning("No 'license' resource.  Invalid CC RDF.");
+	return false;
       }
+
+      String licenseType = null;
+      for (Enumeration e = license.elements(); e.hasMoreElements(); ) {
+	Statement triple = (StatementImpl)e.nextElement();
+	// find the first valid license type.  It's not clear whether
+	// it would be valid to have more than one (seems unlikely),
+	// or what to do if it is valid.
+	licenseType = triple.object().getLabel();
+	break;
+      }
+
+      if (licenseType == null) {
+	log.warning("No CC license type found.");
+	return false;
+      }
+
+      // Now loop through all the permission statement triples looking for one
+      // that permits redistribution.
+      Model permission = (Model)model.find(new ResourceImpl(licenseType), null, null);
+      for (Enumeration e = permission.elements(); e.hasMoreElements(); ) {
+	Statement triple = (StatementImpl)e.nextElement();
+	if (PERMITS.equals(triple.predicate()) &&
+	    DISTRIBUTION.equals(triple.object().getLabel())) {
+	  // Valid distribution permission found!
+	  log.debug("Permission granted.");
+	  return true;
+	}
+      }
+    } catch (Exception ex) {
+      ex.printStackTrace();
     }
 
     // No permission granted if this point is reached.
@@ -220,16 +265,16 @@ public class CreativeCommonsPermissionChecker
    * Simple RDF error handler that logs output instead of dumping to
    * stderr.
    */
-  private static class LoggingErrorHandler implements RDFErrorHandler {
-    public void error(Exception e) {
+  private static class LoggingErrorHandler implements ErrorHandler {
+    public void error(SAXParseException e) {
       log.warning("RDF Parser: " + e);
     }
 
-    public void fatalError(Exception e) {
+    public void fatalError(SAXParseException e) {
       log.error("RDF Parser: " + e);
     }
 
-    public void warning(Exception e) {
+    public void warning(SAXParseException e) {
       log.warning("RDF Parser: " + e);
     }
   }

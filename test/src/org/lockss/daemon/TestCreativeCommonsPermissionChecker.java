@@ -1,5 +1,5 @@
 /*
- * $Id: TestCreativeCommonsPermissionChecker.java,v 1.1 2004-10-18 02:57:49 smorabito Exp $
+ * $Id: TestCreativeCommonsPermissionChecker.java,v 1.2 2004-10-26 00:31:47 smorabito Exp $
  */
 
 /*
@@ -42,6 +42,22 @@ public class TestCreativeCommonsPermissionChecker extends LockssTestCase {
     "    xmlns:dc=\"http://purl.org/dc/elements/1.1/\"\n" +
     "    xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\">\n" +
     "<Work rdf:about=\"\">\n" +
+    "    <license rdf:resource=\"http://creativecommons.org/licenses/by/2.0/\" />\n" +
+    "</Work>\n\n" +
+    "<License rdf:about=\"http://creativecommons.org/licenses/by/2.0/\">\n" +
+    "    <permits rdf:resource=\"http://web.resource.org/cc/Distribution\" />\n" +
+    "    <requires rdf:resource=\"http://web.resource.org/cc/Notice\" />\n" +
+    "    <requires rdf:resource=\"http://web.resource.org/cc/Attribution\" />\n" +
+    "    <permits rdf:resource=\"http://web.resource.org/cc/DerivativeWorks\" />\n" +
+    "    <permits rdf:resource=\"http://web.resource.org/cc/Reproduction\" />\n" +
+    "</License>\n\n"+
+    "</rdf:RDF>";
+
+  private static final String grantedRDFWithURI = 
+    "<rdf:RDF xmlns=\"http://web.resource.org/cc/\"\n" +
+    "    xmlns:dc=\"http://purl.org/dc/elements/1.1/\"\n" +
+    "    xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\">\n" +
+    "<Work rdf:about=\"http://www.lockss.org/registry/\">\n" +
     "    <license rdf:resource=\"http://creativecommons.org/licenses/by/2.0/\" />\n" +
     "</Work>\n\n" +
     "<License rdf:about=\"http://creativecommons.org/licenses/by/2.0/\">\n" +
@@ -100,14 +116,34 @@ public class TestCreativeCommonsPermissionChecker extends LockssTestCase {
     "</bar>\n\n" +
     "</rdf:RDF>";
 
+  // Imaginary URI.  The permission requires a valid URI for the SAX
+  // parser.  If the CC RDF license contains a URI in the <Work
+  // rdf:about="..."> attribute, this MUST MATCH IT to be valid.  If
+  // the rdf:about attribute is left empty, this is ignored.
+  private String pageURI = "http://www.lockss.org/registry/";
+
   private CreativeCommonsPermissionChecker cc =
-    new CreativeCommonsPermissionChecker();
+    new CreativeCommonsPermissionChecker(pageURI);
 
   private StringReader reader;
-
+  
   public void testCheckGrantedPermissionRDFOnly() throws Exception {
     reader = new StringReader(grantedRDF);
     assertTrue(cc.checkPermission(reader));
+    reader.close();
+  }
+  
+  public void testCheckGrantedPermissionRDFOnlyWithURI() throws Exception {
+    reader = new StringReader(grantedRDFWithURI);
+    assertTrue(cc.checkPermission(reader));
+    reader.close();
+  }
+  
+  public void testCheckDeniedPermissionRDFOnlyWithURI() throws Exception {
+    CreativeCommonsPermissionChecker cc1 =
+      new CreativeCommonsPermissionChecker("http://www.some-other-site.com/");
+    reader = new StringReader(grantedRDFWithURI);
+    assertFalse(cc1.checkPermission(reader));
     reader.close();
   }
 
