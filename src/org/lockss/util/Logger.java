@@ -1,5 +1,5 @@
 /*
- * $Id: Logger.java,v 1.13 2003-01-05 23:41:22 tal Exp $
+ * $Id: Logger.java,v 1.14 2003-01-08 01:13:27 tal Exp $
  */
 
 /*
@@ -259,9 +259,39 @@ public class Logger {
    * @param target instance of <code>LogTarget</code> implementation.
    */
   public static void addTarget(LogTarget target) {
-    if (!targets.contains(target)) {
-      targets.add(target);
-      target.init();
+    addTargetTo(target, targets);
+  }
+
+  /**
+   * Add an output target to a target list.  All target adding should
+   * eventually call this
+   * @param target instance of <code>LogTarget</code> implementation.
+   * @param tgts list of targets to which target will be added after it is
+   * initialize.
+   */
+  static void addTargetTo(LogTarget target, List tgts) {
+    if (!tgts.contains(target)) {
+      try {
+	target.init();
+	tgts.add(target);		// add only if init succeeded
+      } catch (Exception e) {
+	myLog.error("Log target " + target + " threw", e);
+      }
+    }
+  }
+
+  /**
+   * Install the targets, replacing any current targets
+   * @param newTargets list of targets to be installed
+   */
+  public static void setTargets(List newTargets) {
+    List tgts = new ArrayList();
+    // make list of initialized targets
+    for (Iterator iter = newTargets.iterator(); iter.hasNext(); ) {
+      addTargetTo((LogTarget)iter.next(), tgts);
+    }
+    if (!tgts.isEmpty()) {		// ensure targets is never empty
+      targets = tgts;
     }
   }
 
@@ -314,7 +344,7 @@ public class Logger {
     List tgts =
       targetListFromString(Configuration.getParam(PARAM_LOG_TARGETS));
     if (tgts != null && !tgts.isEmpty()) {
-      targets = tgts;
+      setTargets(tgts);
     } else {
       myLog.error("Leaving log targets unchanged");
     }
@@ -422,6 +452,8 @@ public class Logger {
 	try {
 	  ts.add(target);
 	  target.handleMessage(this, level, msg);
+	} catch (Exception e) {
+	  // should log this?
 	} finally {
 	  ts.remove(target);
 	}
