@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrlSet.java,v 1.39 2003-08-25 23:58:49 dshr Exp $
+ * $Id: MockCachedUrlSet.java,v 1.40 2003-08-26 01:08:21 dshr Exp $
  */
 
 /*
@@ -114,7 +114,10 @@ public class MockCachedUrlSet implements CachedUrlSet {
       return this.hasContent;
     }
     CachedUrl cu = (CachedUrl)cuHash.get(getUrl());
-    return cu.hasContent();
+    if (cu != null)
+      return cu.hasContent();
+    else
+      return false;
   }
 
   public void setHasContent(boolean hasContent) {
