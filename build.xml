@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.60 2003-09-18 06:49:28 tlipkis Exp $
+ $Id: build.xml,v 1.61 2003-09-23 05:23:33 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -55,6 +55,7 @@ Args:
                               a compile step runs when nothing should need to
                               be compiled, to find package/dir disagreements.
   -Dhalt=false             Run all tests in group, even if some fail.
+  -Dscript=name            Script run by jdftp.  Default is lockss-jdftp.
 </description>
 
   <!-- Defaults -->
@@ -566,13 +567,13 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
 
     <!-- Concatenate all CVS/Entries files.   Not ideal, as dir names
          must be inferred, but it's fast, done entirely within Ant,
-         and includes files that don't have $Id: build.xml,v 1.60 2003-09-18 06:49:28 tlipkis Exp $ line -->
+         and includes files that don't have $Id: build.xml,v 1.61 2003-09-23 05:23:33 tlipkis Exp $ line -->
     <concat destfile="${build.filerev.file}">
        <fileset dir="${src}" includes="**/CVS/Entries" defaultexcludes="no" />
     </concat>
 <!--
  Some other ways to do this.
-     Extract cvs $Id: build.xml,v 1.60 2003-09-18 06:49:28 tlipkis Exp $ lines from all files, with shell command:
+     Extract cvs $Id: build.xml,v 1.61 2003-09-23 05:23:33 tlipkis Exp $ lines from all files, with shell command:
      sh -c "find . -type f -print0 | xargs -0 '"'egrep '\$Id(:.*)?\$'"'"
     <exec executable="sh" dir="${src}" output="${build.filerev.file}">
       <arg line="-c &quot;find . -type f  -print0 | xargs -0 egrep &apos;&quot;&apos;\$Id(:.*)?\$&apos;&quot;&apos;&quot;" />
@@ -734,9 +735,24 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
   </target>
 
   <!-- ==================================================================== -->
-  <target name="jdftp" depends="javadoc,javadoc-test" >
-    <echo message="Copying javadoc to server"/>
-    <exec executable="./jdftp" dir="${basedir}">
+  <target name="jdftp" depends="javadoc,javadoc-test,jdftp1"
+   description="Build javadoc and invoke script to copy it somewhere.">
+  </target>
+
+  <target name="jdftp1" >
+    <!-- Convert list of dirs to list of relative dirs -->
+    <path id="docdirspath">
+      <pathelement location="${javadoc}" />
+      <pathelement location="${test.javadoc}" />
+    </path>
+    <pathconvert refid="docdirspath" property="docdirs" pathsep=" ">
+      <map from="${basedir}" to="." />
+    </pathconvert>
+
+    <property name="script" value="lockss-jdftp" />
+    <echo message="Invoking '${script} ${docdirs}'"/>
+    <exec executable="${script}" dir="${basedir}">
+      <arg line="${docdirs}"/>
     </exec>
   </target>
 
