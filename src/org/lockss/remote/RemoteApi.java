@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.8 2004-05-18 17:11:13 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.9 2004-05-18 21:30:00 tlipkis Exp $
  */
 
 /*
@@ -327,6 +327,13 @@ public class RemoteApi extends BaseLockssManager {
 				   fileStream);
   }
 
+  /** Restore AU config from an AU config backup file.
+   * @param configBackupStream InputStream open on backup fir to be restored
+   * @return RestoreAllStatus object describing the results.
+   * @throws RemoteApi.InvalidAuConfigBackupFile if the backup file is of
+   * an unknown format, unsupported version, or contains keys this
+   * operation isn't allowed to modify.
+   */
   public RestoreAllStatus restoreAllAus(InputStream configBackupStream)
       throws IOException, InvalidAuConfigBackupFile {
     BufferedInputStream bis = new BufferedInputStream(configBackupStream);
@@ -354,7 +361,14 @@ public class RemoteApi extends BaseLockssManager {
     return restoreAllAus(ConfigManager.fromPropertiesUnsealed(allAuProps));
   }
 
-  public RestoreAllStatus restoreAllAus(Configuration allAuConfig)
+  /** Restore AU config from an AU config backup file.
+   * @param allAuConfig the Configuration to be restored
+   * @return RestoreAllStatus object describing the results.
+   * @throws RemoteApi.InvalidAuConfigBackupFile if the backup file is of
+   * an unknown format, unsupported version, or contains keys this
+   * operation isn't allowed to modify.
+   */
+  RestoreAllStatus restoreAllAus(Configuration allAuConfig)
       throws InvalidAuConfigBackupFile {
     checkLegalProps(allAuConfig);
     Configuration allPlugs = allAuConfig.getConfigTree(PARAM_AU_TREE);
@@ -386,6 +400,10 @@ public class RemoteApi extends BaseLockssManager {
     stat.setName(name);
 
     if (currentConfig != null && !currentConfig.isEmpty()) {
+      ArchivalUnit au = pluginMgr.getAuFromId(auid);
+      if (au != null) {
+	stat.setName(au.getName());
+      }
       if (currentConfig.equals(auConfig)) {
 	log.debug("Restore: same config: " + auid);
 	stat.setStatus("Unchanged");
@@ -393,6 +411,14 @@ public class RemoteApi extends BaseLockssManager {
 	log.debug("Restore: conflicting config: " + auid +
 		  ", current: " + currentConfig + ", new: " + auConfig);
 	stat.setStatus("Conflict");
+	Set diffKeys = auConfig.differentKeys(currentConfig);
+	StringBuffer sb = new StringBuffer();
+	for (Iterator iter = diffKeys.iterator(); iter.hasNext(); ) {
+	  String key = (String)iter.next();
+	  String foo = "Key: " + key + ", current=" + currentConfig.get(key) +
+	    ", file=" + auConfig.get(key) + "<br>";
+	  stat.setExplanation(foo);
+	}
       }
     } else {
       try {
@@ -418,8 +444,9 @@ public class RemoteApi extends BaseLockssManager {
     }
   }
 
-  /** Throw InvalidAuConfigBackupFile if the config contains any keys
-   * outside the AU config subtree. */
+  /** Throw InvalidAuConfigBackupFile if the config is of an unknown
+   * version or contains any keys that shouldn't be part of an AU config
+   * backup, such as any keys outside the AU config subtree. */
   void checkLegalProps(Configuration config)
       throws InvalidAuConfigBackupFile {
     String verProp =
@@ -432,12 +459,22 @@ public class RemoteApi extends BaseLockssManager {
     if (auConfig.keySet().size() != (config.keySet().size() - 1)) {
       throw new InvalidAuConfigBackupFile("Uploaded file contains illegal keys; does not appear to be a saved AU configuration");
     }
+    for (Iterator iter = auConfig.keyIterator(); iter.hasNext(); ) {
+      String key = (String)iter.next();
+      if (PluginManager.NON_USER_SETTABLE_AU_PARAMS.contains(key)) {
+	throw new InvalidAuConfigBackupFile("Uploaded file contains illegal key (" + key + "); does not appear to be a saved AU configuration");
+      }
+    }
   }
 
-  public class RestoreAllStatus {
+  /** Object describing results of AU config restore operation.  Basically
+   * a list of {@link RestoreStatus}, one for each AU restore attempted */
+  public static class RestoreAllStatus {
+    static Comparator statusComparator = new RestoreStatusOrderComparator();
     private List statusList = new ArrayList();
     private int ok = 0;
     public List getStatusList() {
+      Collections.sort(statusList, statusComparator);
       return statusList;
     }
     public int getOkCnt() {
@@ -450,11 +487,34 @@ public class RemoteApi extends BaseLockssManager {
       ok++;
     }
   }
-  public class RestoreStatus {
+  static class RestoreStatusOrderComparator implements Comparator {
+    CatalogueOrderComparator coc = CatalogueOrderComparator.SINGLETON;
+    public int compare(Object o1, Object o2) {
+      if (!((o1 instanceof RestoreStatus)
+	   && (o2 instanceof RestoreStatus))) {
+	throw new IllegalArgumentException("RestoreStatusOrderComparator(" +
+					   o1.getClass().getName() + "," +
+					   o2.getClass().getName() + ")");
+      }
+      RestoreStatus rs1 = (RestoreStatus)o1;
+      RestoreStatus rs2 = (RestoreStatus)o2;
+      int res = rs1.order - rs2.order;
+      if (res == 0) {
+	res = coc.compare(rs1.getName(), rs2.getName());
+      }
+      return res;
+    }
+
+  }
+  /** Object describing result of attempting to restore a single saved AU
+   * configuration. */
+  public static class RestoreStatus {
     private String auid;
     private String name;
     private String status;
     private String explanation;
+    private int order = 0;
+
     RestoreStatus(String auid) {
       this.auid = auid;
     }
@@ -472,6 +532,13 @@ public class RemoteApi extends BaseLockssManager {
     }
     void setStatus(String s) {
       this.status = s;
+      if (StringUtil.startsWithIgnoreCase(s, "Conflict")) {
+	order = 1;
+      } else if (StringUtil.startsWithIgnoreCase(s, "Restored")) {
+	order = 2;
+      } else {
+	order = 3;
+      }
     }
     void setName(String s) {
       this.name = s;

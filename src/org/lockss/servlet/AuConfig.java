@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.23 2004-05-18 17:11:13 tlipkis Exp $
+ * $Id: AuConfig.java,v 1.24 2004-05-18 21:30:00 tlipkis Exp $
  */
 
 /*
@@ -237,18 +237,21 @@ public class AuConfig extends LockssServlet {
     page.add(getExplanationBlock(okCnt + " AUs restored, " +
 				 errCnt + " skipped"));
     Table tbl = new Table(0, "align=center cellspacing=4 cellpadding=0");
-    tbl.addHeading("AU");
     tbl.addHeading("Status");
+    tbl.addHeading("AU");
     for (Iterator iter = statusList.iterator(); iter.hasNext(); ) {
       RemoteApi.RestoreStatus stat = (RemoteApi.RestoreStatus)iter.next();
       tbl.newRow();
       tbl.newCell();
-      String name = stat.getName();
-      tbl.add(name != null ? name : stat.getAuId());
-      tbl.newCell();
+      tbl.add("&nbsp;");
       tbl.add(stat.getStatus());
       tbl.newCell();
-      tbl.add(stat.getExplanation());
+      String name = stat.getName();
+      tbl.add(name != null ? name : stat.getAuId());
+      if (stat.getExplanation() != null) {
+	tbl.newCell();
+	tbl.add(stat.getExplanation());
+      }
     }
     page.add(tbl);
     endPage(page);
@@ -418,10 +421,10 @@ public class AuConfig extends LockssServlet {
       String pid = req.getParameter("PluginId");
       if (StringUtil.isNullString(pid)) {
 	pid = req.getParameter("PluginClass");
-// 	String pclass = req.getParameter("PluginClass");
-// 	if (!StringUtil.isNullString(pclass)) {
-// 	  pid = remoteApi.pluginIdFromName(pclass);
-// 	}
+//	String pclass = req.getParameter("PluginClass");
+//	if (!StringUtil.isNullString(pclass)) {
+//	  pid = remoteApi.pluginIdFromName(pclass);
+//	}
       }
       plugin = getPluginProxy(pid);
       if (plugin == null) {
@@ -433,7 +436,7 @@ public class AuConfig extends LockssServlet {
 	displayAddAu();
 	return;
       }
-    }    
+    }
     Page page = newPage();
     page.add(getErrBlock());
     page.add(getExplanationBlock((StringUtil.isNullString(title)
@@ -616,20 +619,20 @@ public class AuConfig extends LockssServlet {
 //     tbl.add(isNew ? "Defining Properties" : "Fixed Properties");
 
 //     addPropRows(tbl, getDefKeys(), initVals,
-// 		(isNew ? getDefKeys() : null));
+//		(isNew ? getDefKeys() : null));
     addPropRows(tbl, getDefKeys(), initVals,
- 		(isNew
- 		 ? (org.apache.commons.collections.CollectionUtils.
- 		    subtract(getDefKeys(), noEditKeys))
- 		 : null));
+		(isNew
+		 ? (org.apache.commons.collections.CollectionUtils.
+		    subtract(getDefKeys(), noEditKeys))
+		 : null));
 
     tbl.newRow();
     Collection eKeys = getEditKeys();
     if (eKeys.isEmpty()) {
       if (!isNew && editable) {
-// 	tbl.newRow();
-// 	tbl.newCell("colspan=2 align=center");
-// 	tbl.add("No Editable Properties");
+//	tbl.newRow();
+//	tbl.newCell("colspan=2 align=center");
+//	tbl.add("No Editable Properties");
       }
     } else {
       tbl.newRow();
@@ -797,7 +800,7 @@ public class AuConfig extends LockssServlet {
     // cause latter to see changes even when we don't need to update.
     boolean checkStored = false;
     if (isChanged(auConfig, formConfig) ||
-	(checkStored && 
+	(checkStored &&
 	 isChanged(remoteApi.getStoredAuConfiguration(au), formConfig))) {
       try {
 	remoteApi.setAndSaveAuConfiguration(au, formConfig);
@@ -816,7 +819,7 @@ public class AuConfig extends LockssServlet {
     }
     displayEditAu(au);
   }
-    
+
   /** Display the Confirm Delete  page */
   private void confirmDeleteAu(AuProxy au) throws IOException {
     String deleteFoot =
@@ -1043,7 +1046,7 @@ public class AuConfig extends LockssServlet {
       page.add("<center>");
       page.add(srvLink(myServletDescr(), "Back to Journal Configuration"));
       page.add("</center>");
-    }      
+    }
     page.add(getFooter());
     page.write(resp.getWriter());
   }
