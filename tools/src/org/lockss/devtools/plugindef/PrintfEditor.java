@@ -5,10 +5,9 @@ import java.util.*;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+import javax.swing.border.*;
 
 import org.lockss.daemon.*;
-import javax.swing.border.*;
-import javax.swing.event.*;
 
 public class PrintfEditor extends JDialog
     implements EDPEditor {
@@ -17,6 +16,8 @@ public class PrintfEditor extends JDialog
   private EDPCellData m_data;
   private HashMap paramKeys;
   private HashMap matchesKeys = new HashMap();
+  static char[] RESERVED_CHARS = {'[','\\','^','$','.','|','?','*','+','(',')'};
+  static String RESERVED_STRING = new String(RESERVED_CHARS);
 
   JPanel formatPanel = new JPanel();
   ButtonGroup buttonGroup = new ButtonGroup();
@@ -222,15 +223,33 @@ public class PrintfEditor extends JDialog
     String key = (String) matchComboBox.getSelectedItem();
     String format = (String)matchesKeys.get(key);
     if(key.equals("String Literal")) {
-     format = (String) JOptionPane.showInputDialog(this,
+     format = escapeReservedChars((String) JOptionPane.showInputDialog(this,
          "Enter the string you wish to match",
          "String Literal Input",
-         JOptionPane.OK_CANCEL_OPTION);
+         JOptionPane.OK_CANCEL_OPTION));
     }
 
     // add the combobox data value to the edit box
     int pos = formatTextArea.getCaretPosition();
     formatTextArea.insert(format, pos);
+  }
+
+
+  /** Return a copy of the string with all non-alphanumeric chars
+   * escaped by backslash.  Useful when embedding an unknown string in
+   * a regexp
+   */
+  public static String escapeReservedChars(String str) {
+    StringBuffer sb = new StringBuffer();
+
+    for(int ci = 0; ci < str.length(); ci++) {
+      char ch = str.charAt(ci);
+      if(RESERVED_STRING.indexOf(ch) >=0) {
+        sb.append('\\');
+      }
+      sb.append(ch);
+    }
+    return sb.toString();
   }
 
   /**
