@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlParser.java,v 1.14 2004-03-09 23:37:53 tlipkis Exp $
+ * $Id: GoslingHtmlParser.java,v 1.15 2004-03-10 01:36:28 troberts Exp $
  */
 
 /*
@@ -82,6 +82,7 @@ public class GoslingHtmlParser implements ContentParser {
   private static final String METATAG = "meta";
   private static final String IMGTAG = "img";
   private static final String ATAG = "a";
+  private static final String BASETAG = "base";
   private static final String FRAMETAG = "frame";
   private static final String LINKTAG = "link";
   private static final String SCRIPTTAG = "script";
@@ -90,7 +91,7 @@ public class GoslingHtmlParser implements ContentParser {
   private static final String TABLETAG = "table";
   private static final String TDTAG = "tc";
   private static final String JSCRIPTTAG = "javascript";
-  private static final String ASRC = "href";
+  private static final String HREF = "href";
   private static final String SRC = "src";
   private static final String BACKGROUNDSRC = "background";
   private static final String REFRESH = "refresh";
@@ -106,6 +107,8 @@ public class GoslingHtmlParser implements ContentParser {
 
   private static Logger logger = Logger.getLogger("GoslingHtmlParser");
 
+
+  private String srcUrl = null;
 
   /**
    * Method which will parse the html file represented by cu call
@@ -131,7 +134,7 @@ public class GoslingHtmlParser implements ContentParser {
     Reader reader = cu.openForReading();
 
     String redirectedTo = getRedirectedTo(cu);
-    String srcUrl = cuStr;
+    srcUrl = cuStr;
     if (redirectedTo != null) {
       if (logger.isDebug3()) {
 	logger.debug3("redirected-to set to "+redirectedTo
@@ -141,7 +144,7 @@ public class GoslingHtmlParser implements ContentParser {
     } 
     logger.debug3("Extracting urls from srcUrl");
     String nextUrl = null;
-    while ((nextUrl = extractNextLink(reader, srcUrl)) != null) {
+    while ((nextUrl = extractNextLink(reader)) != null) {
       if (logger.isDebug3()) {
 	logger.debug3("Extracted "+nextUrl);
       }
@@ -161,13 +164,11 @@ public class GoslingHtmlParser implements ContentParser {
    * Read through the reader stream, extract and return the next url found
    *
    * @param reader Reader object to extract the link from
-   * @param srcUrl URL object representing the page we are looking at
-   * (for resolving relative links)
    * @return String representing the next url in reader
    * @throws IOException
    * @throws MalformedURLException
    */
-  protected static String extractNextLink(Reader reader, String srcUrl)
+  protected String extractNextLink(Reader reader)
       throws IOException, MalformedURLException {
     String nextLink = null;
     int c = 0;
@@ -202,7 +203,7 @@ public class GoslingHtmlParser implements ContentParser {
 	}
 	//optimization. if lineBuf is smaller than this, can't be any link
 	if (lineBuf.length() >= MIN_TAG_LENGTH) {
-	  nextLink = parseLink(lineBuf, srcUrl);
+	  nextLink = parseLink(lineBuf);
 	}
 	lineBuf = new StringBuffer();
       }
@@ -210,6 +211,9 @@ public class GoslingHtmlParser implements ContentParser {
     return nextLink;
   }
 
+  private static boolean beginsWithTag(StringBuffer sb, String tag) {
+    return beginsWithTag(sb.toString(), tag);
+  }
 
   private static boolean beginsWithTag(String s1, String tag) {
     if (StringUtil.startsWithIgnoreCase(s1, tag)) {
@@ -233,7 +237,7 @@ public class GoslingHtmlParser implements ContentParser {
    * @return string representation of the url from the link tag
    * @throws MalformedURLException
    */
-  protected static String parseLink(StringBuffer link, String srcUrl)
+  protected String parseLink(StringBuffer link)
       throws MalformedURLException {
     String returnStr = null;
 
@@ -242,7 +246,7 @@ public class GoslingHtmlParser implements ContentParser {
       case 'A':
 	//optimization, since we just have to check a single char
 	if (Character.isWhitespace(link.charAt(1))) { 
-          returnStr = getAttributeValue(ASRC, link);
+          returnStr = getAttributeValue(HREF, link);
 //           if (returnStr != null && returnStr.startsWith(JSCRIPTTAG)) {
 //             returnStr = extractScriptUrl(returnStr);
 //           }
@@ -250,37 +254,42 @@ public class GoslingHtmlParser implements ContentParser {
         break;
       case 'f': //<frame src=frame1.html>
       case 'F':
-        if (beginsWithTag(link.toString(),FRAMETAG)) {
+        if (beginsWithTag(link, FRAMETAG)) {
           returnStr = getAttributeValue(SRC, link);
         }
         break;
       case 'i': //<img src=image.gif>
       case 'I':
-        if (beginsWithTag(link.toString(),IMGTAG)) {
+        if (beginsWithTag(link, IMGTAG)) {
           returnStr = getAttributeValue(SRC, link);
         }
         break;
       case 'l': //<link href=blah.css>
       case 'L':
-        if (beginsWithTag(link.toString(),LINKTAG)) {
-          returnStr = getAttributeValue(ASRC, link);
+        if (beginsWithTag(link, LINKTAG)) {
+          returnStr = getAttributeValue(HREF, link);
         }
         break;
       case 'b': //<body backgroung=background.gif>
-      case 'B':
-        if (beginsWithTag(link.toString(),BODYTAG)) {
+      case 'B': //or <base href=http://www.example.com>
+        if (beginsWithTag(link, BODYTAG)) {
           returnStr = getAttributeValue(BACKGROUNDSRC, link);
-        }
+        } else if (beginsWithTag(link, BASETAG)) {
+	  String newBase = getAttributeValue(HREF, link);
+ 	  if (UrlUtil.isAbsoluteUrl(newBase)) {
+	    srcUrl = newBase;
+ 	  }
+	}
         break;
       case 's': //<script src=blah.js>
       case 'S':
-        if (beginsWithTag(link.toString(),SCRIPTTAG)) {
+        if (beginsWithTag(link, SCRIPTTAG)) {
           returnStr = getAttributeValue(SRC, link);
         }
         break;
       case 'm': //<meta http-equiv="refresh"
       case 'M': //"content="0; url=http://example.com/blah.html">
-        if (beginsWithTag(link.toString(),METATAG)) {
+        if (beginsWithTag(link, METATAG)) {
 	  String httpEquiv = getAttributeValue(HTTP_EQUIV, link);
 	  if (REFRESH.equalsIgnoreCase(httpEquiv)) {
 	    String content = getAttributeValue(HTTP_EQUIV_CONTENT, link);
@@ -290,8 +299,8 @@ public class GoslingHtmlParser implements ContentParser {
         break;
       case 't': //<tc background=back.gif> or <table background=back.gif>
       case 'T':
-        if (beginsWithTag(link.toString(),TABLETAG) ||
-          beginsWithTag(link.toString(),TDTAG)) {
+        if (beginsWithTag(link, TABLETAG) ||
+          beginsWithTag(link, TDTAG)) {
           returnStr = getAttributeValue(BACKGROUNDSRC, link);
         }
         break;

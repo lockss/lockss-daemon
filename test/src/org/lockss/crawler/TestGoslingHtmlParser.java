@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingHtmlParser.java,v 1.12 2004-03-09 23:37:52 tlipkis Exp $
+ * $Id: TestGoslingHtmlParser.java,v 1.13 2004-03-10 01:36:29 troberts Exp $
  */
 
 /*
@@ -337,6 +337,40 @@ public class TestGoslingHtmlParser extends LockssTestCase {
 //     + "<img src = javascript:popup('" + url3 + "') </img>";
 //     assertEquals(SetUtil.set(url, url2), parseSingleSource(source));
 //   }
+
+  public void testInterpretatesBase() throws IOException {
+    String url1= "http://www.example.com/link1.html";
+    String url2= "http://www.example2.com/link2.html";
+    String url3= "http://www.example.com/link3.html";
+
+    String source =
+      "<html><head><title>Test</title></head><body>"+
+      "<base href=http://www.example.com>"+
+      "<a href=link1.html>link1</a>"+
+      "Filler, with <b>bold</b> tags and<i>others</i>"+
+      "<base href=http://www.example2.com>"+
+      "<a href=link2.html>link2</a>"+
+      "<base href=http://www.example.com>"+
+      "<a href=link3.html>link3</a>";
+    assertEquals(SetUtil.set(url1, url2, url3), parseSingleSource(source));
+  }
+
+  public void testInterpretatesBadBase() throws IOException {
+    String url1= "http://www.example.com/link1.html";
+    String url2= "http://www.example2.com/link2.html";
+    String url3= "http://www.example2.com/link3.html";
+
+    String source =
+      "<html><head><title>Test</title></head><body>"+
+      "<base href=http://www.example.com>"+
+      "<a href=link1.html>link1</a>"+
+      "Filler, with <b>bold</b> tags and<i>others</i>"+
+      "<base href=http://www.example2.com>"+
+      "<a href=link2.html>link2</a>"+
+      "<base href=www.example.com>"+
+      "<a href=link3.html>link3</a>";
+    assertEquals(SetUtil.set(url1, url2, url3), parseSingleSource(source));
+  }
 
   public void testSkipsComments() throws IOException {
     String url= "http://www.example.com/link3.html";
