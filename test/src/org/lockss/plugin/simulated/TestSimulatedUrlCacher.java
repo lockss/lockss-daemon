@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimulatedUrlCacher.java,v 1.15 2003-04-02 00:19:40 aalto Exp $
+ * $Id: TestSimulatedUrlCacher.java,v 1.16 2003-04-02 23:49:14 aalto Exp $
  */
 
 /*
@@ -56,10 +56,9 @@ public class TestSimulatedUrlCacher extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    TestLockssRepositoryServiceImpl.configCacheLocation(tempDirPath);
 
     theDaemon = new MockLockssDaemon();
-    theDaemon.getLockssRepositoryService().startService();
+    theDaemon.setLockssRepositoryService(new MockLockssRepositoryService());
 
     mau = new MockArchivalUnit();
     theDaemon.getLockssRepository(mau);
@@ -78,6 +77,7 @@ public class TestSimulatedUrlCacher extends LockssTestCase {
     assertEquals("text/html", prop.getProperty("content-type"));
     assertEquals(testStr, prop.getProperty("content-url"));
   }
+
   public void testTextProperties() throws Exception {
     String testStr = "http://www.example.com/file.txt";
     SimulatedUrlCacher suc = new SimulatedUrlCacher(
@@ -86,6 +86,7 @@ public class TestSimulatedUrlCacher extends LockssTestCase {
     assertEquals("text/plain", prop.getProperty("content-type"));
     assertEquals(testStr, prop.getProperty("content-url"));
   }
+
   public void testPdfProperties() throws Exception {
     String testStr = "http://www.example.com/file.pdf";
     SimulatedUrlCacher suc = new SimulatedUrlCacher(
@@ -94,6 +95,7 @@ public class TestSimulatedUrlCacher extends LockssTestCase {
     assertEquals("application/pdf", prop.getProperty("content-type"));
     assertEquals(testStr, prop.getProperty("content-url"));
   }
+
   public void testJpegProperties() throws Exception {
     String testStr = "http://www.example.com/image.jpg";
     SimulatedUrlCacher suc = new SimulatedUrlCacher(
