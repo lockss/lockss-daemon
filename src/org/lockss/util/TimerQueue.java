@@ -1,5 +1,5 @@
 /*
- * $Id: TimerQueue.java,v 1.10 2003-03-21 19:40:52 tal Exp $
+ * $Id: TimerQueue.java,v 1.11 2003-04-03 11:35:25 tal Exp $
  *
 
 Copyright (c) 2000-2002 Board of Trustees of Leland Stanford Jr. University,
@@ -35,7 +35,7 @@ import java.util.*;
 /** TimerQueue implements a queue of actions to be performed at a specific
  * time.
  */
-public class TimerQueue implements Serializable {
+public class TimerQueue /*extends BaseLockssManager*/ implements Serializable {
   protected static Logger log = Logger.getLogger("TimerQueue");
   private static TimerQueue singleton = new TimerQueue();
 
@@ -44,27 +44,46 @@ public class TimerQueue implements Serializable {
 
   /** Schedule an event.  At time <code>deadline</code>, <code>callback</code>
    * will be called with <code>cookie</code> as an argument.
+   * @return a TimerQueue.Request object, which can be used to cancel the
+   * request.
    */
-  public static boolean schedule(Deadline deadline, Callback callback,
+  public static Request schedule(Deadline deadline, Callback callback,
 				 Serializable cookie) {
     return singleton.add(deadline, callback, cookie);
   }
 
-  private boolean add(Deadline deadline, Callback callback, Object cookie) {
+  /** Cancel a previously scheduled request.
+   * @param req the {@link TimerQueue.Request} object returned from an
+   * earlier call to schedule()
+   */
+  public static void cancel(Request req) {
+    singleton.cancelReq(req);
+  }
+
+  private Request add(Deadline deadline, Callback callback, Object cookie) {
     Request req = new Request(deadline, callback, cookie);
     req.deadline.registerCallback(req.deadlineCb);
     queue.put(req);
     startOrKickThread();
-    return true;
+    return req;
   }
 
-  class Request implements Serializable, Comparable {
-    Deadline deadline;
-    Callback callback;
-    Object cookie;
-    Deadline.Callback deadlineCb;
+  private void cancelReq(Request req) {
+    if (!req.deadline.expired()) {
+      req.cancelled = true;
+      req.deadline.expire();
+    }
+  }
 
-    Request(Deadline deadline, Callback callback, Object cookie) {
+  /** Timer Request element; only used to cancel a request. */
+  public class Request implements Serializable, Comparable {
+    private Deadline deadline;
+    private Callback callback;
+    private Object cookie;
+    private Deadline.Callback deadlineCb;
+    private volatile boolean cancelled = false;
+
+    private Request(Deadline deadline, Callback callback, Object cookie) {
       this.deadline = deadline;
       this.callback = callback;
       this.cookie = cookie;
@@ -80,12 +99,14 @@ public class TimerQueue implements Serializable {
   }
 
   private void doNotify(Request req) {
-    // tk - run these in a separate thread
-    req.deadline.unregisterCallback(req.deadlineCb);
-    try {
-      req.callback.timerExpired(req.cookie);
-    } catch (Exception e) {
-      log.error("Timer callback threw", e);
+    if (!req.cancelled) {
+      // tk - run these in a separate thread
+      req.deadline.unregisterCallback(req.deadlineCb);
+      try {
+	req.callback.timerExpired(req.cookie);
+      } catch (Exception e) {
+	log.error("Timer callback threw", e);
+      }
     }
     queue.remove(req);
   }    

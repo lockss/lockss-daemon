@@ -1,5 +1,5 @@
 /*
- * $Id: TestTimerQueue.java,v 1.5 2003-01-13 17:11:29 tal Exp $
+ * $Id: TestTimerQueue.java,v 1.6 2003-04-03 11:35:25 tal Exp $
  */
 
 /*
@@ -97,6 +97,32 @@ public class TestTimerQueue extends LockssTestCase {
     d1.expire();
     assertEquals("foo", q.get(500));
     TimeBase.step(501);
+    assertEquals("bar", q.get(500));
+  }
+
+  public void testCancel() {
+    final SimpleQueue.Fifo q = new SimpleQueue.Fifo();
+    // a request that we will cancel, which fails if it gets run
+    TimerQueue.Request req =
+      TimerQueue.schedule(Deadline.in(100),
+			  new TimerQueue.Callback() {
+			    public void timerExpired(Object cookie) {
+			      fail("This timer request was cancelled, " +
+				   "so should not have run.");
+			    }},
+			  "foo");
+    assertTrue(q.isEmpty());
+    // a second request to wait for, to (more or less) ensure the one we
+    // cancelled would have run by then.
+    TimerQueue.schedule(Deadline.in(200),
+			new TimerQueue.Callback() {
+			  public void timerExpired(Object cookie) {
+			    q.put(cookie);
+			  }},
+			"bar");
+    assertTrue(q.isEmpty());
+    TimerQueue.cancel(req);
+    TimeBase.step(201);
     assertEquals("bar", q.get(500));
   }
 }
