@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSimulatedContent.java,v 1.1 2002-11-13 05:09:49 aalto Exp $
+ * $Id: FuncSimulatedContent.java,v 1.2 2002-11-14 03:13:53 aalto Exp $
  */
 
 /*
@@ -99,6 +99,7 @@ public class FuncSimulatedContent extends LockssTestCase {
   private void checkContent() {
     checkRoot();
     checkLeaf();
+    checkStoredContent();
   }
 
   private void hashContent() {
@@ -173,6 +174,38 @@ public class FuncSimulatedContent extends LockssTestCase {
     assertTrue(!setIt.hasNext());
   }
 
+  private void checkStoredContent() {
+    String file = sau.SIMULATED_URL_ROOT + "/file1.txt";
+    CachedUrl url = sau.cachedUrlFactory(sau.getAUCachedUrlSet(), file);
+    InputStream content = url.openForReading();
+    String expectedContent = sau.getContentGenerator().getFileContent(1, 0, 0, false);
+    ByteArrayOutputStream baos = new ByteArrayOutputStream(expectedContent.length());
+    try {
+      StreamUtil.copy(content, baos);
+      content.close();
+      String contentStr = new String(baos.toByteArray());
+      baos.close();
+      assertTrue(contentStr.equals(expectedContent));
+    } catch (IOException ie) {
+      fail(ie.getMessage());
+    }
+
+    file = sau.SIMULATED_URL_ROOT + "/branch1/branch1/file1.txt";
+    url = sau.cachedUrlFactory(sau.getAUCachedUrlSet(), file);
+    content = url.openForReading();
+    expectedContent = sau.getContentGenerator().getFileContent(1, 2, 1, true);
+    baos = new ByteArrayOutputStream(expectedContent.length());
+    try {
+      StreamUtil.copy(content, baos);
+      content.close();
+      String contentStr = new String(baos.toByteArray());
+      baos.close();
+      assertTrue(contentStr.equals(expectedContent));
+    } catch (IOException ie) {
+      fail(ie.getMessage());
+    }
+  }
+
   private void hashSet(boolean namesOnly) {
     CachedUrlSet set = sau.getAUCachedUrlSet();
     MockMessageDigest dig = new MockMessageDigest();
@@ -182,13 +215,22 @@ public class FuncSimulatedContent extends LockssTestCase {
     } else {
       hasher = set.getContentHasher(dig);
     }
+    int bytesHashed = 0;
+    long timeTaken = System.currentTimeMillis();
     while (!hasher.finished()) {
       try {
-        hasher.hashStep(256);
+        bytesHashed += hasher.hashStep(256);
       } catch (IOException ie) {
         fail(ie.toString());
       }
     }
+    timeTaken = System.currentTimeMillis() - timeTaken;
+    if ((timeTaken>0)&&(bytesHashed>500)) {
+      System.out.println("Bytes hashed: "+bytesHashed);
+      System.out.println("Time taken: "+timeTaken+"ms");
+      System.out.println("Bytes/sec: "+(bytesHashed*1000/timeTaken));
+    }
+
     byte[] hash = dig.digest();
     dig = new MockMessageDigest();
     if (namesOnly) {
