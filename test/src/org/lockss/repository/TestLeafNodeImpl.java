@@ -1,5 +1,5 @@
 /*
- * $Id: TestLeafNodeImpl.java,v 1.2 2002-11-02 00:57:50 aalto Exp $
+ * $Id: TestLeafNodeImpl.java,v 1.3 2002-11-06 00:01:30 aalto Exp $
  */
 
 /*
@@ -54,92 +54,95 @@ public class TestLeafNodeImpl extends LockssTestCase {
     leaf = new LeafNodeImpl("test.cache", tempDir.getAbsolutePath() + File.separator, null);
   }
 
-  public void testMakeNewCache() {
+  public void testMakeNewCache() throws IOException {
     assertTrue(!leaf.exists());
     assertTrue(leaf.getCurrentVersion()==0);
     leaf.makeNewVersion();
 
-    try {
-      OutputStream os = leaf.getNewOutputStream();
-      InputStream is = new StringInputStream("testing stream");
-      StreamUtil.copy(is, os);
-      os.close();
-      is.close();
-      leaf.sealNewVersion();
-      assertTrue(leaf.getCurrentVersion()==1);
-      assertTrue(leaf.exists());
-    } catch (Exception e) { System.out.println(e); }
+    OutputStream os = leaf.getNewOutputStream();
+    InputStream is = new StringInputStream("testing stream");
+    StreamUtil.copy(is, os);
+    os.close();
+    is.close();
+    leaf.sealNewVersion();
+    assertTrue(leaf.getCurrentVersion()==1);
+    assertTrue(leaf.exists());
   }
 
-  public void testMakeNewVersion() {
+  public void testMakeNewVersion() throws IOException {
     leaf.makeNewVersion();
-    try {
-      OutputStream os = leaf.getNewOutputStream();
-      InputStream is = new StringInputStream("testing stream 1");
-      StreamUtil.copy(is, os);
-      os.close();
-      is.close();
+    OutputStream os = leaf.getNewOutputStream();
+    InputStream is = new StringInputStream("testing stream 1");
+    StreamUtil.copy(is, os);
+    os.close();
+    is.close();
 
-      leaf.sealNewVersion();
-      assertTrue(leaf.getCurrentVersion()==1);
-      leaf.makeNewVersion();
-      os = leaf.getNewOutputStream();
-      is = new StringInputStream("testing stream 2");
-      StreamUtil.copy(is, os);
-      os.close();
-      is.close();
-      leaf.sealNewVersion();
-      assertTrue(leaf.getCurrentVersion()==2);
+    leaf.sealNewVersion();
+    assertTrue(leaf.getCurrentVersion()==1);
+    leaf.makeNewVersion();
+    os = leaf.getNewOutputStream();
+    is = new StringInputStream("testing stream 2");
+    StreamUtil.copy(is, os);
+    os.close();
+    is.close();
+    leaf.sealNewVersion();
+    assertTrue(leaf.getCurrentVersion()==2);
 
-      is = leaf.getInputStream();
-      OutputStream baos = new ByteArrayOutputStream(16);
-      StreamUtil.copy(is, baos);
-      is.close();
-      String resultStr = baos.toString();
-      baos.close();
-      assertTrue(resultStr.equals("testing stream 2"));
-    } catch (Exception e) { System.out.println(e); }
+    is = leaf.getInputStream();
+    OutputStream baos = new ByteArrayOutputStream(16);
+    StreamUtil.copy(is, baos);
+    is.close();
+    String resultStr = baos.toString();
+    baos.close();
+    assertTrue(resultStr.equals("testing stream 2"));
   }
 
-  public void testGetInputStream() {
-    try {
-      leaf.makeNewVersion();
-      OutputStream os = leaf.getNewOutputStream();
-      InputStream is = new StringInputStream("testing stream");
-      StreamUtil.copy(is, os);
-      os.close();
-      is.close();
-      leaf.sealNewVersion();
+  public void testGetInputStream() throws IOException {
+    leaf.makeNewVersion();
+    OutputStream os = leaf.getNewOutputStream();
+    InputStream is = new StringInputStream("testing stream");
+    StreamUtil.copy(is, os);
+    os.close();
+    is.close();
+    leaf.sealNewVersion();
 
-      is = leaf.getInputStream();
-      OutputStream baos = new ByteArrayOutputStream(14);
-      StreamUtil.copy(is, baos);
-      is.close();
-      String resultStr = baos.toString();
-      baos.close();
-      assertTrue(resultStr.equals("testing stream"));
-    } catch (Exception e) { System.out.println(e); }
+    is = leaf.getInputStream();
+    OutputStream baos = new ByteArrayOutputStream(14);
+    StreamUtil.copy(is, baos);
+    is.close();
+    String resultStr = baos.toString();
+    baos.close();
+    assertTrue(resultStr.equals("testing stream"));
   }
 
-  public void testGetProperties() {
-    try {
-      leaf.makeNewVersion();
-      Properties props = new Properties();
-      props.setProperty("test 1", "value 1");
+  public void testGetProperties() throws IOException {
+    leaf.makeNewVersion();
+    OutputStream os = leaf.getNewOutputStream();
+    InputStream is = new StringInputStream("testing stream");
+    StreamUtil.copy(is, os);
+    os.close();
+    is.close();
 
-      leaf.setNewProperties(props);
-      leaf.sealNewVersion();
-      props = leaf.getProperties();
-      assertTrue(props.getProperty("test 1").equals("value 1"));
+    Properties props = new Properties();
+    props.setProperty("test 1", "value 1");
+    leaf.setNewProperties(props);
+    leaf.sealNewVersion();
 
-      leaf.makeNewVersion();
-      props = new Properties();
-      props.setProperty("test 1", "value 2");
+    props = leaf.getProperties();
+    assertTrue(props.getProperty("test 1").equals("value 1"));
 
-      leaf.setNewProperties(props);
-      leaf.sealNewVersion();
-      props = leaf.getProperties();
-      assertTrue(props.getProperty("test 1").equals("value 2"));
-    } catch (Exception e) { System.out.println(e); }
+    leaf.makeNewVersion();
+    os = leaf.getNewOutputStream();
+    is = new StringInputStream("testing stream");
+    StreamUtil.copy(is, os);
+    os.close();
+    is.close();
+    props = new Properties();
+    props.setProperty("test 1", "value 2");
+    leaf.setNewProperties(props);
+    leaf.sealNewVersion();
+
+    props = leaf.getProperties();
+    assertTrue(props.getProperty("test 1").equals("value 2"));
   }
 }

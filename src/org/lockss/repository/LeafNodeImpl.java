@@ -1,5 +1,5 @@
 /*
- * $Id: LeafNodeImpl.java,v 1.3 2002-11-02 01:01:00 aalto Exp $
+ * $Id: LeafNodeImpl.java,v 1.4 2002-11-06 00:01:30 aalto Exp $
  */
 
 /*
@@ -100,17 +100,17 @@ public class LeafNodeImpl extends RepositoryNodeImpl implements LeafNode {
       throw new UnsupportedOperationException("New version not initialized.");
     }
     synchronized (this) {
-      File curContent = getCurrentCacheFile();
-      File curProps = getCurrentPropertiesFile();
-      File newContent = getTempCacheFile();
-      File newProps = getTempPropertiesFile();
+      File curContentF = getCurrentCacheFile();
+      File curPropsF = getCurrentPropertiesFile();
+      File newContentF = getTempCacheFile();
+      File newPropsF = getTempPropertiesFile();
 
       // rename current
-      curContent.renameTo(getVersionedCacheFile(currentVersion));
-      curProps.renameTo(getVersionedPropertiesFile(currentVersion));
+      curContentF.renameTo(getVersionedCacheFile(currentVersion));
+      curPropsF.renameTo(getVersionedPropertiesFile(currentVersion));
       // rename new
-      newContent.renameTo(getCurrentCacheFile());
-      newProps.renameTo(getCurrentCacheFile());
+      newContentF.renameTo(getCurrentCacheFile());
+      newPropsF.renameTo(getCurrentPropertiesFile());
 
       currentVersion++;
       newVersionOutput = null;
@@ -168,6 +168,11 @@ public class LeafNodeImpl extends RepositoryNodeImpl implements LeafNode {
   }
 
   private void ensureReadInfoLoaded() {
+    if (currentVersion==0) {
+      curInput = null;
+      curProps = new Properties();
+      return;
+    }
     if ((curInput==null) || (curProps==null)) {
       synchronized (this) {
         File file = null;
