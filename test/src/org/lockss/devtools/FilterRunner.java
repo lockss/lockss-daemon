@@ -1,5 +1,5 @@
 /*
- * $Id: FilterRunner.java,v 1.3 2003-09-09 20:23:07 troberts Exp $
+ * $Id: FilterRunner.java,v 1.4 2003-09-16 23:37:38 eaalto Exp $
  */
 
 /*
@@ -54,7 +54,7 @@ public class FilterRunner {
 		    new HtmlTagFilter.TagPair("[Medline", "]", true),
  		    new HtmlTagFilter.TagPair("<", ">")
  		    );
-    
+
     return HtmlTagFilter.makeNestedFilter(new FileReader(fileName), tagList);
   }
 
@@ -101,7 +101,7 @@ public class FilterRunner {
 
   /**
    * Use FileInputStream (wrapped ina InputStreamReader and ReaderInputStream)
-   * To try to vaguely match what the HtmlTagFilter has to do (convert to a 
+   * To try to vaguely match what the HtmlTagFilter has to do (convert to a
    * reader and back)
    */
   private static long filterFile2(File source, File dest) throws IOException {
@@ -214,7 +214,7 @@ public class FilterRunner {
 
   private static File makeDestFile(File file, File sourceDir, File destDir)
       throws IOException {
-    String relativePath = FileUtil.getPathUnderRoot(file, sourceDir);
+    String relativePath = FileTestUtil.getPathUnderRoot(file, sourceDir);
     File returnFile = new File(destDir, relativePath);
     returnFile.getParentFile().mkdirs();
     returnFile.createNewFile();
@@ -224,7 +224,7 @@ public class FilterRunner {
   private static void filterFiles(File sourceDir, File destDir, int method)
       throws IOException {
     long startTime = TimeBase.nowMs();
-    List fileList = FileUtil.enumerateFiles(sourceDir);
+    List fileList = FileTestUtil.enumerateFiles(sourceDir);
     int totalBytes = 0;
     for (Iterator it = fileList.iterator(); it.hasNext();) {
       File curFile = (File) it.next();
