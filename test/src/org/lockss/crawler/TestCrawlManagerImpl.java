@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.22 2003-06-25 21:19:58 eaalto Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.23 2003-06-26 00:19:10 troberts Exp $
  */
 
 /*
@@ -75,7 +75,6 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     
     cus = mau.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(GENERIC_URL));
     activityRegulator.setStartCusActivity(cus, true);
-//     activityRegulator.setStartCusActivity(true);
     activityRegulator.setStartAuActivity(true);
     crawler = new MockCrawler();
     crawlManager.setTestCrawler(crawler);
@@ -175,7 +174,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
   }
 
 
-  public void testTriggersNewContentCallback() {
+  public void testNewContentCallbackTriggered() {
     SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
 
     TestCrawlCB cb = new TestCrawlCB(sem);
@@ -210,11 +209,24 @@ public class TestCrawlManagerImpl extends LockssTestCase {
   }
 
   public void testKicksOffNewThread() {
+    //start the crawler, but use a crawler that will hang
+    //if we aren't running it in another thread we'll hang too
+
     TestCrawlCB cb = new TestCrawlCB();
+    SimpleBinarySemaphore sem1 = new SimpleBinarySemaphore();
+    SimpleBinarySemaphore sem2 = new SimpleBinarySemaphore();
+    //gives sem1 when doCrawl is entered, then takes sem2
+    MockCrawler crawler = new HangingCrawler(sem1, sem2);
+    crawlManager.setTestCrawler(crawler);
+
     crawlManager.startNewContentCrawl(mau, cb, null);
+    assertTrue("Crawl didn't start in 10 seconds", sem1.take(TEN_SECONDS));
+    //we know that doCrawl started
+    TimerUtil.guaranteedSleep(2000);
 
     //if the callback was triggered, the crawl completed
     assertFalse("Callback was triggered", cb.wasTriggered());
+    sem2.give();
   }
 
   public void testScheduleRepairNullAU() throws MalformedURLException {
@@ -275,7 +287,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     crawlManager.scheduleRepair(mau, urls, cb, null);
 
     assertTrue("Crawl didn't finish in 10 seconds", sem.take(TEN_SECONDS));
-    assertTrue("doCrawl() called", crawler.doCrawlCalled());
+    assertTrue("doCrawl() not called", crawler.doCrawlCalled());
     assertEquals(ListUtil.list(url1.toString()), crawler.getStartUrls());
   }
 
@@ -289,7 +301,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     assertTrue("doCrawl() not called", crawler.doCrawlCalled());
   }
 
-  public void testTriggersRepairCallback() throws MalformedURLException {
+  public void testRepairCallbackTriggered() throws MalformedURLException {
     SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
     TestCrawlCB cb = new TestCrawlCB(sem);
 
@@ -399,6 +411,24 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 
     private void setTestCrawler(MockCrawler mockCrawler) {
       this.mockCrawler = mockCrawler;
+    }
+  }
+
+  private static class HangingCrawler extends MockCrawler {
+    SimpleBinarySemaphore sem1;
+    SimpleBinarySemaphore sem2;
+    public HangingCrawler(SimpleBinarySemaphore sem1,
+			  SimpleBinarySemaphore sem2) {
+      this.sem1 = sem1;
+      this.sem2 = sem2;
+    }
+
+    public boolean doCrawl(Deadline deadline) {
+      sem1.give();
+      System.err.println("Gave sem1, Waiting on sem2");
+      sem2.take();
+      System.err.println("Took sem2");
+      return true;
     }
   }
 }
