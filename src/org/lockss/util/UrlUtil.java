@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.12 2004-03-07 08:36:58 tlipkis Exp $
+ * $Id: UrlUtil.java,v 1.13 2004-03-09 19:27:06 troberts Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -158,12 +158,16 @@ public class UrlUtil {
    */
   public static String resolveUri(String baseUrl, String possiblyRelativeUrl)
       throws MalformedURLException {
+    possiblyRelativeUrl =
+      StringUtil.replaceString(possiblyRelativeUrl.trim(), " ", "%20");
     try {
-      URI resultURI = new URI(possiblyRelativeUrl.toCharArray());
+      org.apache.commons.httpclient.URI resultURI =
+	new org.apache.commons.httpclient.URI(possiblyRelativeUrl.toCharArray());
       if (resultURI.isRelativeURI()) {
 	//location is incomplete, use base values for defaults
-	URI baseURI = new URI(baseUrl.toCharArray());
-	resultURI = new URI(baseURI, resultURI);
+	org.apache.commons.httpclient.URI baseURI =
+	  new org.apache.commons.httpclient.URI(baseUrl.toCharArray());
+	resultURI = new org.apache.commons.httpclient.URI(baseURI, resultURI);
       }
       return resultURI.toString();
     } catch (URIException e) {
