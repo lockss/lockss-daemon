@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyManager.java,v 1.27.2.1 2004-11-02 00:03:01 smorabito Exp $
+ * $Id: ProxyManager.java,v 1.27.2.2 2004-11-10 20:10:27 smorabito Exp $
  */
 
 /*
@@ -217,7 +217,7 @@ public class ProxyManager extends BaseProxyManager {
    * string "Repair" in the value of the X-Lockss: header.  Until all
    * caches are running the new code this still accepts the old way, but
    * that's disablable for testing. */
-  boolean isRepairRequest(HttpRequest request) {
+  public boolean isRepairRequest(HttpRequest request) {
     String userAgent = request.getField("user-agent");
     if (log.isDebug3()) {
       log.debug3("user-agent: " + userAgent);

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseProxyManager.java,v 1.9 2004-10-18 03:38:12 tlipkis Exp $
+ * $Id: BaseProxyManager.java,v 1.9.2.1 2004-11-10 20:10:27 smorabito Exp $
  */
 
 /*
@@ -138,7 +138,7 @@ public abstract class BaseProxyManager extends JettyManager {
       // Add a CuResourceHandler to handle requests for locally cached
       // content that the proxy handler modified and passed on.
       context.setBaseResource(new CuUrlResource());
-      LockssResourceHandler rHandler = new CuResourceHandler();
+      LockssResourceHandler rHandler = new CuResourceHandler(getDaemon());
       rHandler.setDirAllowed(false);
 //       rHandler.setAcceptRanges(true);
       context.addHandler(rHandler);

@@ -1,5 +1,5 @@
 /*
- * $Id: LockssResourceHandler.java,v 1.6.6.1 2004-11-02 00:02:45 smorabito Exp $
+ * $Id: LockssResourceHandler.java,v 1.6.6.2 2004-11-10 20:10:28 smorabito Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Portions of this code are:
 // ===========================================================================
 // Copyright (c) 1996-2002 Mort Bay Consulting Pty. Ltd. All rights reserved.
-// $Id: LockssResourceHandler.java,v 1.6.6.1 2004-11-02 00:02:45 smorabito Exp $
+// $Id: LockssResourceHandler.java,v 1.6.6.2 2004-11-10 20:10:28 smorabito Exp $
 // ---------------------------------------------------------------------------
 
 package org.lockss.jetty;
@@ -44,6 +44,7 @@ import java.util.*;
 import org.mortbay.http.*;
 import org.mortbay.http.handler.*;
 import org.mortbay.util.*;
+import org.lockss.app.*;
 import org.lockss.plugin.*;
 import org.lockss.proxy.ProxyManager;
 import org.lockss.config.*;
@@ -58,6 +59,8 @@ import com.sun.jimi.core.raster.*;
  * aren't public or protected. */
 public class LockssResourceHandler extends AbstractHttpHandler {
     /* ----------------------------------------------------------------- */
+    private LockssDaemon theDaemon = null;
+    private ProxyManager proxyMgr = null;
     private boolean _acceptRanges=true;
     private boolean _redirectWelcomeFiles ;
     private String[] _methods=null;
@@ -80,8 +83,11 @@ public class LockssResourceHandler extends AbstractHttpHandler {
     /* ----------------------------------------------------------------- */
     /** Construct a ResourceHandler.
      */
-    public LockssResourceHandler()
-    {}
+    public LockssResourceHandler(LockssDaemon daemon)
+    {
+      theDaemon = daemon;
+      proxyMgr = theDaemon.getProxyManager();
+    }
 
  
     /* ----------------------------------------------------------------- */
@@ -717,7 +723,8 @@ public class LockssResourceHandler extends AbstractHttpHandler {
 	    boolean enableRewrite =
 	      Configuration.getCurrentConfig().getBoolean(ProxyManager.PARAM_REWRITE_GIF_PNG,
 							  ProxyManager.DEFAULT_REWRITE_GIF_PNG);
-	    if (enableRewrite &&
+	    if (!proxyMgr.isRepairRequest(request) &&
+		enableRewrite &&
 		"image/gif".equals(response.getContentType()) &&
 		"from-cache".equals(response.getField("X-Lockss"))) {
 	      try {
