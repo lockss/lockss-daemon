@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.74 2004-10-06 23:52:54 clairegriffin Exp $
+ * $Id: CrawlManagerImpl.java,v 1.75 2004-10-18 03:33:49 tlipkis Exp $
  */
 
 /*
@@ -65,6 +65,10 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   public static final String PARAM_REPAIR_FROM_CACHE_PERCENT =
       Configuration.PREFIX + "crawler.repair.repair_from_cache_percent";
 
+  /** Set false to prevent all crawl activity */ 
+  public static final String PARAM_CRAWLER_ENABLED =
+    Configuration.PREFIX + "crawler.enabled";
+  static final boolean DEFAULT_CRAWLER_ENABLED = true;
 
   static final String WDOG_PARAM_CRAWLER = "Crawler";
   static final long WDOG_DEFAULT_CRAWLER = 2 * Constants.HOUR;
@@ -97,6 +101,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   private long contentCrawlExpiration;
   private long repairCrawlExpiration;
   private float percentRepairFromCache;
+  private boolean crawlerEnabled = DEFAULT_CRAWLER_ENABLED;
   private static Logger logger = Logger.getLogger("CrawlManager");
 
 
@@ -137,6 +142,9 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     percentRepairFromCache =
       newConfig.getPercentage(PARAM_REPAIR_FROM_CACHE_PERCENT,
 			      DEFAULT_REPAIR_FROM_CACHE_PERCENT);
+    crawlerEnabled =
+      newConfig.getBooleanParam(PARAM_CRAWLER_ENABLED,
+				DEFAULT_CRAWLER_ENABLED);
   }
 
   public void cancelAuCrawls(ArchivalUnit au) {
@@ -340,20 +348,28 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       //pull out of thread
       boolean crawlSuccessful = false;
       try {
-        setPriority(PRIORITY_PARAM_CRAWLER, PRIORITY_DEFAULT_CRAWLER);
-        crawler.setWatchdog(this);
-        startWDog(WDOG_PARAM_CRAWLER, WDOG_DEFAULT_CRAWLER);
-        nowRunning();
+	if (!crawlerEnabled) {
+	  nowRunning();
+	  try {
+	    Deadline.in(Constants.HOUR).sleep();
+	  } catch (InterruptedException e) {
+	  }
+	} else {
+	  setPriority(PRIORITY_PARAM_CRAWLER, PRIORITY_DEFAULT_CRAWLER);
+	  crawler.setWatchdog(this);
+	  startWDog(WDOG_PARAM_CRAWLER, WDOG_DEFAULT_CRAWLER);
+	  nowRunning();
 
-	crawlSuccessful = crawler.doCrawl();
+	  crawlSuccessful = crawler.doCrawl();
 
-        if (crawler.getType() == Crawler.NEW_CONTENT) {
-          if (crawlSuccessful) {
-            NodeManager nodeManager =
-	      theDaemon.getNodeManager(crawler.getAu());
-            nodeManager.newContentCrawlFinished();
-          }
-        }
+	  if (crawler.getType() == Crawler.NEW_CONTENT) {
+	    if (crawlSuccessful) {
+	      NodeManager nodeManager =
+		theDaemon.getNodeManager(crawler.getAu());
+	      nodeManager.newContentCrawlFinished();
+	    }
+	  }
+	}
       } finally {
         // free all locks, regardless of exceptions
         if (locks != null) {
