@@ -1,5 +1,5 @@
 /*
- * $Id: ServletManager.java,v 1.13 2003-04-16 19:08:28 tal Exp $
+ * $Id: ServletManager.java,v 1.14 2003-04-17 04:03:56 tal Exp $
  */
 
 /*
@@ -62,10 +62,17 @@ public class ServletManager extends JettyManager {
   public static final String PARAM_PLATFORM_ACCESS_SUBNET =
     Configuration.PARAM_PLATFORM_ACCESS_SUBNET;
 
+  public static final String PARAM_LOGDIR =
+    Configuration.PREFIX +  "platform.logdirectory";
+
   public static final boolean DEFAULT_START = true;
   public static final int DEFAULT_PORT = 8081;
 
   private static Logger log = Logger.getLogger("ServletMgr");
+
+  private static String textMimes[] = {
+    "out", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9",
+  };
 
   private HttpServer server;
 
@@ -74,6 +81,8 @@ public class ServletManager extends JettyManager {
   private String includeIps;
   private String excludeIps;
   private boolean logForbidden;
+  private String logdir;
+
   List accessHandlers = new ArrayList();
 
   public ServletManager() {
@@ -106,6 +115,8 @@ public class ServletManager extends JettyManager {
     super.setConfig(config, prevConfig, changedKeys);
     port = config.getInt(PARAM_PORT, DEFAULT_PORT);
     start = config.getBoolean(PARAM_START, DEFAULT_START);
+    logdir = config.get(PARAM_LOGDIR);
+
     if (changedKeys.contains(PARAM_IP_INCLUDE) ||
 	changedKeys.contains(PARAM_IP_EXCLUDE) ||
 	changedKeys.contains(PARAM_LOG_FORBIDDEN)) {
@@ -175,35 +186,36 @@ public class ServletManager extends JettyManager {
 
   public void configureDebugServlets() {
     try {
-      // Create a context
-      HttpContext logContext = server.getContext("/log/");
-      logContext.setAttribute("LockssDaemon", theDaemon);
+      if (logdir != null) {
+	// Create a context
+	HttpContext logContext = server.getContext("/log/");
+	logContext.setAttribute("LockssDaemon", theDaemon);
 
-      log.debug("logmime map: " + logContext.getMimeMap());
+	// Now add handlers in the order they should be tried.
 
-      // Now add handlers in the order they should be tried.
+	// IpAccessHandler is first
+	addAccessHandler(logContext);
 
-      // IpAccessHandler is first
-      addAccessHandler(logContext);
+	// log dir resource
+	URL logResourceUrl=new URL("file", null,
+				   new File(logdir).getAbsolutePath());
+	log.debug("Log Resource URL: " + logResourceUrl);
+	logContext.setResourceBase(logResourceUrl.toString());
+	ResourceHandler logRHandler = new LockssResourceHandler();
+	//       rHandler.setDirAllowed(false);
+	//       rHandler.setPutAllowed(false);
+	//       rHandler.setDelAllowed(false);
+	//       rHandler.setAcceptRanges(true);
+	logContext.addHandler(logRHandler);
+	for (int ix = 0; ix < textMimes.length; ix++) {
+	  logContext.setMimeMapping(textMimes[ix], "text/plain");
+	}
+// 	logContext.setMimeMapping("gz", "text/gzip");
+// 	logContext.setTypeEncoding("text/gzip", "x-gzip");
 
-      // log dir resource
-      URL logResourceUrl=new URL("file", null,
-				 new File(".").getAbsolutePath());
-      log.debug("Log Resource URL: " + logResourceUrl);
-      logContext.setResourceBase(logResourceUrl.toString());
-      ResourceHandler logRHandler = new LockssResourceHandler();
-//       rHandler.setDirAllowed(false);
-//       rHandler.setPutAllowed(false);
-//       rHandler.setDelAllowed(false);
-//       rHandler.setAcceptRanges(true);
-      logContext.addHandler(logRHandler);
-      logContext.setMimeMapping("out", "text/plain");
-      logContext.setMimeMapping("gz", "text/gzip");
-//       logContext.setTypeEncoding("text/gzip", "x-gzip");
-
-      // NotFoundHandler
-      logContext.addHandler(new NotFoundHandler());
-
+	// NotFoundHandler
+	logContext.addHandler(new NotFoundHandler());
+      }
 
       HttpContext context = server.getContext("/");
 //       context.setErrorPage("500", "images/");
