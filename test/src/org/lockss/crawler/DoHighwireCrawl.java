@@ -1,5 +1,5 @@
 /*
- * $Id: DoHighwireCrawl.java,v 1.4 2002-11-27 00:26:18 troberts Exp $
+ * $Id: DoHighwireCrawl.java,v 1.5 2002-12-17 20:59:33 troberts Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.highwire.*;
 import org.lockss.proxy.*;
+import org.lockss.util.*;
 
 public class DoHighwireCrawl {
 
@@ -70,7 +71,9 @@ public class DoHighwireCrawl {
 
     }
     if (crawlFlg) {
-      GoslingCrawlerImpl.doCrawl(au, au.getCrawlSpec());
+      Crawler crawler = new GoslingCrawlerImpl();
+      crawler.doCrawl(au, au.getCrawlSpec().getStartingUrls(),
+		      true, false, Deadline.NEVER);
     }
   }
 }
