@@ -1,5 +1,5 @@
 /*
- * $Id: DamagedNodeSet.java,v 1.8 2004-05-11 04:01:52 clairegriffin Exp $
+ * $Id: DamagedNodeSet.java,v 1.8.2.1 2004-05-19 21:57:58 clairegriffin Exp $
  */
 
 /*
@@ -43,11 +43,11 @@ import org.lockss.util.ExtMapBean;
  * repair.
  */
 public class DamagedNodeSet {
-  HashSet nodesWithDamage;
+  HashSet nodesWithDamage = new HashSet();
   // the form of this map is key: url String, value: ArrayList url Strings
   // while it is logical to use a Set instead of an ArrayList, it is not
   // possible due to Castor's inability to marshall groups of Sets correctly.
-  HashMap cusToRepair;
+  HashMap cusToRepair = new HashMap();
   HistoryRepository repository;
   ArchivalUnit theAu;
 
@@ -64,8 +64,6 @@ public class DamagedNodeSet {
   public DamagedNodeSet(ArchivalUnit au, HistoryRepository repository) {
     this.theAu = au;
     this.repository = repository;
-    nodesWithDamage = new HashSet();
-    cusToRepair = new HashMap();
   }
 
   public ArchivalUnit getArchivalUnit() {

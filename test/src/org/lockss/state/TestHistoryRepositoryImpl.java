@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.44 2004-05-16 08:44:33 tlipkis Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.44.2.1 2004-05-19 21:57:58 clairegriffin Exp $
  */
 
 /*
@@ -281,6 +281,15 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
     damNodes.removeFromRepair(mcus1, "cus1-2");
     assertFalse(damNodes.containsToRepair(mcus1, "cus1-2"));
     assertNull(damNodes.cusToRepair.get(mcus1));
+
+    // check remove from damaged nodes
+    damNodes.removeFromDamage("test1");
+    damNodes.removeFromDamage("test2");
+    repository.storeDamagedNodeSet(damNodes);
+    damNodes = repository.loadDamagedNodeSet();
+    assertNotNull(damNodes);
+    assertFalse(damNodes.containsWithDamage("test1"));
+    assertFalse(damNodes.containsWithDamage("test2"));
   }
 
   public void testStoreOverwrite() throws Exception {
