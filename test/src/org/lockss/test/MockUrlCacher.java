@@ -1,5 +1,5 @@
 /*
- * $Id: MockUrlCacher.java,v 1.22 2005-01-14 01:37:41 troberts Exp $
+ * $Id: MockUrlCacher.java,v 1.23 2005-01-14 02:13:18 troberts Exp $
  */
 
 /*
@@ -181,14 +181,11 @@ public class MockUrlCacher implements UrlCacher {
       }
     }
 
-    System.err.println("Stop1");
-    System.err.println("url: "+url);
 
     //XXX messy
     //content already there, so we should be doing a not modified response
 //     if (!forceRefetch && cu.hasContent()) {
     if (cu.hasContent()) {
-    System.err.println("Stop2");
       return CACHE_RESULT_NOT_MODIFIED;
     } 
     
@@ -197,7 +194,6 @@ public class MockUrlCacher implements UrlCacher {
     if (cu != null) {
       cu.setExists(true);
     }
-    System.err.println("Stop3");
     return CACHE_RESULT_FETCHED;
   }
 
