@@ -1,5 +1,5 @@
 /*
- * $Id: TestCatalogueOrderComparator.java,v 1.3 2004-05-17 20:19:58 dcfok Exp $
+ * $Id: TestCatalogueOrderComparator.java,v 1.4 2004-05-18 00:00:25 dcfok Exp $
  */
 
 /*
@@ -69,12 +69,12 @@ public class TestCatalogueOrderComparator extends LockssTestCase {
   }
 
   public void testReplaceAccentedChar(){
-    assertEquals("toe", coc.replaceAccentedChar("toë"));
-    assertEquals("Apple", coc.replaceAccentedChar("Àpple"));
-    assertEquals("low", coc.replaceAccentedChar("löw"));
-    assertEquals("coupe", coc.replaceAccentedChar("coupé"));
-    assertEquals("naive", coc.replaceAccentedChar("naïve"));
-    assertEquals("garcon", coc.replaceAccentedChar("garçon"));
+    assertEquals("toe", coc.replaceAccentedChar("to\u00eb"));
+    assertEquals("Apple", coc.replaceAccentedChar("\u00c1pple"));
+    assertEquals("low", coc.replaceAccentedChar("l\u00f4w"));
+    assertEquals("coupe", coc.replaceAccentedChar("coup\u00e9"));
+    assertEquals("naive", coc.replaceAccentedChar("na\u00efve"));
+    assertEquals("garcon", coc.replaceAccentedChar("gar\u00e7on"));
   }
 
   public void testXlate() {
@@ -92,7 +92,7 @@ public class TestCatalogueOrderComparator extends LockssTestCase {
       "An Apple and its Eve",
       "a boy and his bog",
       "A Boy and his Dog",
-      "Garçon Magazine",
+      "Gar\u00e7on Magazine",
       "IBM Tech Journak",
       "I.B.M. Tech. Journal",
       "IBM Tech Journam",
@@ -124,7 +124,7 @@ public class TestCatalogueOrderComparator extends LockssTestCase {
 			     "a 4", 
 			     "an 5", 
 			     "6 I B M Journal",
-			     " 7 Garçon Magazine");
+			     " 7 Gar\u00e7on Magazine");
 
     ccoc.xlateCnt = 0;
     Collections.sort(lst, ccoc);
