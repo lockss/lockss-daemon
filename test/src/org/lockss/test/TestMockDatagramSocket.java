@@ -110,7 +110,7 @@ public class TestMockDatagramSocket extends TestCase{
     } finally {
       intr.cancel();
       if (!intr.did()) {
-	fail("get() of empty returned");
+	fail("receive() when no packets, returned");
       }
     }
   }
