@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.32 2004-02-21 02:17:23 eaalto Exp $
+ * $Id: DaemonStatus.java,v 1.33 2004-02-23 09:16:42 tlipkis Exp $
  */
 
 /*
@@ -36,8 +36,6 @@ import javax.servlet.*;
 import java.io.*;
 import java.util.*;
 import java.text.*;
-//  import com.mortbay.servlet.*;
-//  import org.mortbay.util.*;
 import org.mortbay.html.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
@@ -49,6 +47,12 @@ import org.w3c.dom.*;
  * DaemonStatus servlet
  */
 public class DaemonStatus extends LockssServlet {
+  protected static Logger log = Logger.getLogger("DaemonStatus");
+
+  /** Supported output formats */
+  static final int OUTPUT_HTML = 1;
+  static final int OUTPUT_TEXT = 2;
+  static final int OUTPUT_XML = 3;
 
   /** Format to display date/time in tables */
   public static final DateFormat tableDf =
@@ -58,12 +62,9 @@ public class DaemonStatus extends LockssServlet {
 //     DateFormat.getDateTimeInstance(DateFormat.SHORT, DateFormat.SHORT);
 
   private String tableName;
-  private String key;
-
-  private boolean isText;
-  private boolean isHtml;
-  private boolean isXml;
+  private String tableKey;
   private StatusService statSvc;
+  private int outputFmt;
 
   public void init(ServletConfig config) throws ServletException {
     super.init(config);
@@ -75,97 +76,101 @@ public class DaemonStatus extends LockssServlet {
    * @throws IOException
    */
   public void lockssHandleRequest() throws IOException {
-    Page page = null;
-    Date now = new Date();
+    outputFmt = OUTPUT_HTML;	// default output is html
 
-    // reset values
-    PrintWriter wrtr = null;
-    isText = false;
-    isHtml = false;
-    isXml = false;
-
+    // allow "text=" for backwards compatibility
     if (req.getParameter("text") != null) {
-      // choose 'text', if present
-      isText = true;
-    } else if (req.getParameter("xml") != null) {
-      // second option is 'xml'
-      isXml = true;
-    } else {
-      // default to html
-      isHtml = true;
+      outputFmt = OUTPUT_TEXT;
     }
-
-    // After resp.getWriter() has been called, throwing an exception will
-    // result in a blank page, so don't call it until the end
-    // (unless producing a text page, where we use it as we go along).
-    //  (HttpResponse.sendError() calls getOutputStream(), and only one of
-    //  getWriter() or getOutputStream() may be called.)
-
-    if (!isHtml) {
-      wrtr = resp.getWriter();
-      resp.setContentType(isText ? "text/plain" : "text/xml");
-    } else {
-      resp.setContentType("text/html");
+    String outputParam = req.getParameter("output");
+    if (!StringUtil.isNullString(outputParam)) {
+      if ("html".equalsIgnoreCase(outputParam)) {
+	outputFmt = OUTPUT_HTML;
+      } else if ("xml".equalsIgnoreCase(outputParam)) {
+	outputFmt = OUTPUT_XML;
+      } else if ("text".equalsIgnoreCase(outputParam)) {
+	outputFmt = OUTPUT_TEXT;
+      } else {
+	log.warning("Unknown output format: " + outputParam);
+      }
     }
 
     tableName = req.getParameter("table");
-    key = req.getParameter("key");
+    tableKey = req.getParameter("key");
     if (StringUtil.isNullString(tableName)) {
       tableName = StatusService.ALL_TABLES_TABLE;
     }
-    if (StringUtil.isNullString(key)) {
-      key = null;
+    if (StringUtil.isNullString(tableKey)) {
+      tableKey = null;
     }
 
-    if (isXml) {
+    switch (outputFmt) {
+    case OUTPUT_HTML:
+      doHtmlStatusTable();
+      break;
+    case OUTPUT_XML:
       try {
-        doXmlStatusTable(wrtr, tableName, key);
+        doXmlStatusTable();
       } catch (XmlDomBuilder.XmlDomException xde) {
         throw new IOException("Error with XML: "+xde.toString());
       }
-    } else {
-      // handle html or text requests
-      if (isHtml) {
-        page = newPage();
-
-        // all pages but index get a select box to choose a different table
-        if (!isAllTablesTable()) {
-          Block centeredBlock = new Block(Block.Center);
-          centeredBlock.add(getSelectTableForm());
-          page.add(centeredBlock);
-        }
-
-        //       page.add("<center>");
-        //       page.add(srvLink(SERVLET_DAEMON_STATUS, ".",
-        // 		       concatParams("text=1", req.getQueryString())));
-        //       page.add("</center><br><br>");
-      } else {
-        String vPlatform = Configuration.getParam(PARAM_PLATFORM_VERSION);
-        if (vPlatform != null) {
-          vPlatform = ", cd=" + vPlatform;
-        } else {
-          vPlatform = "";
-        }
-        Date startDate = getLockssDaemon().getStartDate();
-        wrtr.println("host=" + getLcapIPAddr() +
-                     ",time=" + now.getTime() +
-                     ",up=" + TimeBase.msSince(startDate.getTime()) +
-                     ",version=" + BuildInfo.getBuildInfoString() +
-                     vPlatform);
-      }
-
-      doStatusTable(page, wrtr, tableName, key);
-      if (isHtml) {
-        page.add(getFooter());
-        page.write(resp.getWriter());
-      }
+      break;
+    case OUTPUT_TEXT:
+      doTextStatusTable();
+      break;
     }
   }
 
+  private void doHtmlStatusTable() throws IOException {
+    Page page = newPage();
+    resp.setContentType("text/html");
+
+    // After resp.getWriter() has been called, throwing an exception will
+    // result in a blank page, so don't call it until the end.
+    // (HttpResponse.sendError() calls getOutputStream(), and only one of
+    // getWriter() or getOutputStream() may be called.)
+
+    // all pages but index get a select box to choose a different table
+    if (!isAllTablesTable()) {
+      Block centeredBlock = new Block(Block.Center);
+      centeredBlock.add(getSelectTableForm());
+      page.add(centeredBlock);
+    }
+
+    //       page.add("<center>");
+    //       page.add(srvLink(SERVLET_DAEMON_STATUS, ".",
+    // 		       concatParams("text=1", req.getQueryString())));
+    //       page.add("</center><br><br>");
+    doHtmlOrTextStatusTable(page, null);
+    page.add(getFooter());
+    page.write(resp.getWriter());
+  }
+
+  private void doTextStatusTable() throws IOException {
+    PrintWriter wrtr = resp.getWriter();
+    resp.setContentType("text/plain");
+
+    String vPlatform = Configuration.getParam(PARAM_PLATFORM_VERSION);
+    if (vPlatform != null) {
+      vPlatform = ", cd=" + vPlatform;
+    } else {
+      vPlatform = "";
+    }
+    Date now = new Date();
+    Date startDate = getLockssDaemon().getStartDate();
+    wrtr.println("host=" + getLcapIPAddr() +
+		 ",time=" + now.getTime() +
+		 ",up=" + TimeBase.msSince(startDate.getTime()) +
+		 ",version=" + BuildInfo.getBuildInfoString() +
+		 vPlatform);
+    doHtmlOrTextStatusTable(null, wrtr);
+  }
+
   // build and send an XML DOM Document of the StatusTable
-  private void doXmlStatusTable(PrintWriter wrtr, String tableName,
-                                String tableKey)
+  private void doXmlStatusTable()
       throws IOException, XmlDomBuilder.XmlDomException {
+    PrintWriter wrtr = resp.getWriter();
+    resp.setContentType("text/xml");
     StatusTable statTable;
     try {
       statTable = statSvc.getTable(tableName, tableKey);
@@ -196,15 +201,14 @@ public class DaemonStatus extends LockssServlet {
     }
   }
 
-  // Build the table
-  private void doStatusTable(Page page, PrintWriter wrtr,
-			     String tableName, String tableKey)
+  // Build the table, addelements to page or writing text to wrtr
+  private void doHtmlOrTextStatusTable(Page page, PrintWriter wrtr)
       throws IOException {
     StatusTable statTable;
     try {
       statTable = statSvc.getTable(tableName, tableKey);
     } catch (StatusService.NoSuchTableException e) {
-      if (isHtml) {
+      if (outputFmt == OUTPUT_HTML) {
 	page.add("No such table: ");
 	page.add(e.toString());
       } else {
@@ -212,7 +216,7 @@ public class DaemonStatus extends LockssServlet {
       }
       return;
     } catch (Exception e) {
-      if (isHtml) {
+      if (outputFmt == OUTPUT_HTML) {
 	page.add("Error getting table: ");
 	String emsg = e.toString();
 	page.add(emsg);
@@ -242,7 +246,7 @@ public class DaemonStatus extends LockssServlet {
       // Make the table.  Make a narrow empty column between real columns,
       // for spacing.  Resulting table will have 2*cols-1 columns
       table = new Table(0, "ALIGN=CENTER CELLSPACING=2 CELLPADDING=0");
-      if (isHtml) {
+      if (outputFmt == OUTPUT_HTML) {
 	String title = title0 + addFootnote(titleFoot);
 
 	table.newRow();
@@ -273,7 +277,7 @@ public class DaemonStatus extends LockssServlet {
     // output rows
     for (Iterator rowIter = rowList.iterator(); rowIter.hasNext(); ) {
       Map rowMap = (Map)rowIter.next();
-      if (isHtml) {
+      if (outputFmt == OUTPUT_HTML) {
 	if (rowMap.get(StatusTable.ROW_SEPARATOR) != null) {
 	  table.newRow();
 	  table.newCell("align=center colspan=" + (cols * 2 - 1));
@@ -310,7 +314,7 @@ public class DaemonStatus extends LockssServlet {
 	}
       }
     }
-    if (isHtml && table != null) {
+    if (outputFmt == OUTPUT_HTML && table != null) {
       page.add(table);
       page.add("<br>");
       String heading = getHeading();
