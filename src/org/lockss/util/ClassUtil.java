@@ -1,5 +1,5 @@
 /*
- * $Id: LockssUtil.java,v 1.1 2003-07-17 19:20:43 tyronen Exp $
+ * $Id: ClassUtil.java,v 1.1 2003-07-25 00:34:07 tyronen Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -40,7 +40,9 @@ package org.lockss.util;
  * @version 1.0
  */
 
-public class LockssUtil {
+import java.util.*;
+
+public class ClassUtil {
 
   /** Returns true of the classname passed is a Java primitive type; false if
    * it is an object
@@ -54,6 +56,28 @@ public class LockssUtil {
     }
     else {
       return false;
+    }
+  }
+
+  /** Returns the name of a class without the package prefix */
+  public static String getClassNameWithoutPackage(Class cl) {
+    String fullname = cl.getName();
+    int pos = fullname.lastIndexOf('.');
+    return (pos==-1) ? fullname : fullname.substring(pos + 1);
+  }
+
+  public static String objectTypeName(String name) {
+    if (!isPrimitive(name)) {
+      return name;
+    }
+    else if (name.equals("int")) {
+      return "Integer";
+    }
+    else if (name.equals("char")) {
+      return "Character";
+    }
+    else {
+      return StringUtil.titleCase(name);
     }
   }
 
