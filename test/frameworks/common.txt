@@ -27,8 +27,6 @@ org.lockss.plugin.registry=\
     org.lockss.plugin.othervoices.OtherVoicesPlugin;\
     org.lockss.plugin.bepress.BePressPlugin;\
     org.lockss.plugin.disputatio.DisputatioPlugin;\
-    edu.jhu.library.plugin.journalofreligionandfilm.JournalOfReligionAndFilmPlugin;\
-    edu.jhu.library.plugin.medievalforum.MedievalForumPlugin;\
     edu.indiana.lib.plugin.jcjpc.JcjpcPlugin;\
     org.lockss.plugin.ojs.OJSPlugin;
 
@@ -49,8 +47,6 @@ org.lockss.plugin.xmlPlugins=\
     org.lockss.plugin.othervoices.OtherVoicesPlugin;\
     org.lockss.plugin.bepress.BePressPlugin;\
     org.lockss.plugin.disputatio.DisputatioPlugin;\
-    edu.jhu.library.plugin.journalofreligionandfilm.JournalOfReligionAndFilmPlugin;\
-    edu.jhu.library.plugin.medievalforum.MedievalForumPlugin;\
     edu.indiana.lib.plugin.jcjpc.JcjpcPlugin;\
     org.lockss.plugin.ojs.OJSPlugin;
 
