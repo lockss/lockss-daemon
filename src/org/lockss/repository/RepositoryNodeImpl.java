@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.30 2003-06-20 22:34:52 claire Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.30.2.1 2003-07-10 20:18:38 clairegriffin Exp $
  */
 
 /*
@@ -326,10 +326,15 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
       // rename current
       if (currentCacheFile.exists()) {
-        if (!currentCacheFile.renameTo(getVersionedCacheFile(currentVersion)) ||
-            !currentPropsFile.renameTo(getVersionedPropsFile(currentVersion))) {
+        if (!currentCacheFile.renameTo(getVersionedCacheFile(currentVersion))) {
           logger.error("Couldn't rename current versions: "+url);
           throw new LockssRepository.RepositoryStateException("Couldn't rename current versions.");
+        }
+        if(currentPropsFile.exists()) {
+          if (!currentPropsFile.renameTo(getVersionedPropsFile(currentVersion))) {
+            logger.error("Couldn't rename current version prop file: "+url);
+            throw new LockssRepository.RepositoryStateException("Couldn't rename current prop file.");
+          }
         }
       }
       // rename new
