@@ -1,5 +1,5 @@
 /*
- * $Id: StatusTable.java,v 1.8 2003-03-14 23:04:34 troberts Exp $
+ * $Id: StatusTable.java,v 1.9 2003-03-15 00:26:45 troberts Exp $
  */
 
 /*
@@ -76,8 +76,9 @@ public class StatusTable {
   public static final int TYPE_DATE=6;
 
 
-  private String name=null;
-  private String key=null;
+  private String name;
+  private String key;
+  private String title;
   private List columnDescriptors;
   private List rows;
   private List defaultSortRules;
@@ -91,7 +92,8 @@ public class StatusTable {
    * @param rows List of {@link java.util.Map} objects, representing rows in 
    * this table.  Not assumed to be in any specific order
    */
-  protected StatusTable(String name, String key, List columnDescriptors, 
+  protected StatusTable(String name, String key, String title,
+			List columnDescriptors, 
 			List defaultSortRules, List rows) {
     if (defaultSortRules == null) {
       throw new IllegalArgumentException("Created with an null list of "
@@ -106,6 +108,7 @@ public class StatusTable {
     this.rows = rows;
     this.defaultSortRules = defaultSortRules;
     this.key = key;
+    this.title = title;
   }
 
   /**
@@ -122,6 +125,14 @@ public class StatusTable {
    */
   public String getKey() {
     return key;
+  }
+
+  /**
+   * Get the title for this table
+   * @returns title for this table
+   */
+  public String getTitle() {
+    return title;
   }
 
   /**
@@ -235,6 +246,11 @@ public class StatusTable {
       this.columnName = columnName;
       this.title = title;
       this.type = type;
+    }
+
+    public ColumnDescriptor(String columnName, String title, 
+			    int type, String footNote) {
+      this(columnName,title, type);
     }
 
     public String getColumnName() {
