@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.10 2003-04-10 21:50:01 tal Exp $
+ * $Id: LockssServlet.java,v 1.11 2003-04-17 04:03:38 tal Exp $
  */
 
 /*
@@ -540,7 +540,8 @@ public abstract class LockssServlet extends HttpServlet
       BuildInfo.getBuildProperty(BuildInfo.BUILD_TIMESTAMP);
     String buildHost =
       BuildInfo.getBuildProperty(BuildInfo.BUILD_HOST);
-    String vDaemon = "Daemon built " + buildTimeStamp + " on " + buildHost;
+//     String vDaemon = "Daemon built " + buildTimeStamp + " on " + buildHost;
+    String vDaemon = "Daemon built " + buildTimeStamp;
 
     addNotes(comp);
     comp.add("<p>");
@@ -556,7 +557,7 @@ public abstract class LockssServlet extends HttpServlet
     comp.add("<center><font size=-1>" +
 	     (vPlatform == null || vPlatform.equals("")
 	      ? vDaemon
-	      : vDaemon + " Floppy" + vPlatform) +
+	      : vDaemon + ", platform " + vPlatform) +
 	     "</font></center>");
     return comp;
   }
