@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.11 2002-11-27 00:55:49 claire Exp $
+* $Id: PollManager.java,v 1.12 2002-12-03 03:35:59 claire Exp $
  */
 
 /*
@@ -106,8 +106,13 @@ public class PollManager {
         break;
       case LcapMessage.VERIFY_POLL_REP:
       case LcapMessage.VERIFY_POLL_REQ:
-        theLog.debug("Making a verify poll on "+cus);
-        ret_poll = new VerifyPoll(msg, cus);
+        theLog.debug("Checking for multicast verfiy poll...");
+        String key = makeKey(msg.getChallenge());
+        ret_poll = (Poll)thePolls.get(key);
+        if( ret_poll == null) {
+          theLog.debug("Making a verify poll on "+cus);
+          ret_poll = new VerifyPoll(msg, cus);
+        }
         break;
       default:
         throw new ProtocolException("Unknown opcode:" +
@@ -193,7 +198,7 @@ public class PollManager {
     if(isPollClosed(msg.getChallenge())) {
       theLog.info("Message received after poll was closed." + msg.toString());
       // XXX - what to do here - not really an exception
-      throw new ProtocolException("Poll is closed:" + msg.toString());
+      return;
     }
     Poll p = findPoll(msg);
     if (p == null) {

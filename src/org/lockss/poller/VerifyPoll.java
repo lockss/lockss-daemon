@@ -1,5 +1,5 @@
 /*
-* $Id: VerifyPoll.java,v 1.17 2002-11-27 00:55:49 claire Exp $
+* $Id: VerifyPoll.java,v 1.18 2002-12-03 03:35:59 claire Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.hasher.*;
 import org.lockss.plugin.*;
 import org.lockss.protocol.*;
 import org.lockss.util.*;
+import org.mortbay.util.B64Code;
 
 
 /**
@@ -59,13 +60,12 @@ class VerifyPoll extends Poll {
   /**
    * will request a verify at random based on some percentage.
    * @param msg the Message to use to request verification
-   * @param pct the percentage of time you should verify
+   * @param prob the percentage of time you should verify
    * @throws IOException thrown by ProbbilisticChoice
    */
-  protected static void randomRequestVerify(LcapMessage msg, int pct)
+  protected static void randomRequestVerify(LcapMessage msg, double prob)
       throws IOException {
-    double prob = ((double) pct) / 100.0;
-    if (ProbabilisticChoice.choose(prob)) {
+     if (ProbabilisticChoice.choose(prob)) {
       requestVerify(msg);
     }
   }
@@ -75,9 +75,9 @@ class VerifyPoll extends Poll {
    * @param msg the Message to handle
    */
   void receiveMessage(LcapMessage msg) {
+    log.debug("receiving verify message" + msg.toString());
     int opcode = msg.getOpcode();
-
-    if(opcode == LcapMessage.VERIFY_POLL_REP) {
+     if(!m_caller.isLocalIdentity()) {
       startVote(msg);
     }
   }
@@ -103,10 +103,9 @@ class VerifyPoll extends Poll {
    * start the poll.  set a deadline in which to actually verify the message.
    */
   void startPoll() {
-    // if someone else called the poll, we verify and we're done
     log.debug("Starting new verify poll:" + m_key);
 
-    Deadline pt = Deadline.atRandomBefore(m_deadline);
+    Deadline pt = Deadline.at(m_deadline.getExpirationTime());
 
     TimerQueue.schedule(pt, new PollTimerCallback(), this);
   }
@@ -117,7 +116,7 @@ class VerifyPoll extends Poll {
    */
   void stopPoll() {
     // if we didn't call the poll
-    if(m_pollstate != PS_WAIT_TALLY) {
+    if(!m_caller.isLocalIdentity()) {
       try {
         // send our reply message
         replyVerify(m_msg);
@@ -136,7 +135,7 @@ class VerifyPoll extends Poll {
   protected void tally()  {
     super.tally();
     log.info(m_msg.toString() + " tally " + toString());
-    LcapIdentity id = m_msg.getOriginID();
+    LcapIdentity id = m_caller;
     if ((m_agree + m_disagree) < 1) {
       id.voteNotVerify();
     } else if (m_agree > 0 && m_disagree == 0) {
@@ -147,7 +146,8 @@ class VerifyPoll extends Poll {
   }
 
 
-  private boolean performHash(LcapMessage msg) {
+  private void performHash(LcapMessage msg) {
+    int weight = msg.getOriginID().getReputation();
     byte[] challenge = msg.getChallenge();
     byte[] hashed = msg.getHashed();
     MessageDigest hasher = PollManager.getHasher();
@@ -157,22 +157,24 @@ class VerifyPoll extends Poll {
 
     hasher.update(hashed, 0, hashed.length);
     byte[] HofHashed = hasher.digest();
-    if(!Arrays.equals(challenge, HofHashed))  {
+    if(Arrays.equals(challenge, HofHashed))  {
       log.debug("verify vote disagreed");
-      handleDisagreeVote(msg);
+      m_agree++;
+      m_agreeWt += weight;
+      //handleAgreeVote(msg);
     }
     else  {
       log.debug("verify vote agreed.");
-      handleAgreeVote(msg);
+      m_disagree++;
+      m_disagreeWt += weight;
+      //handleDisagreeVote(msg);
     }
-    return true;
 
   }
 
   private static void requestVerify(LcapMessage msg) throws IOException {
     String url = new String(msg.getTargetUrl());
     String regexp = new String(msg.getRegExp());
-    int opcode = LcapMessage.VERIFY_POLL_REQ;
 
     log.debug("Calling a verify poll...");
 
@@ -183,20 +185,28 @@ class VerifyPoll extends Poll {
         msg.getTimeToLive(),
         msg.getVerifier(),
         PollManager.makeVerifier(),
-        opcode,
+        LcapMessage.VERIFY_POLL_REQ,
         msg.getDuration(),
         LcapIdentity.getLocalIdentity());
+
     LcapIdentity originator = msg.getOriginID();
-    LcapComm.sendMessageTo(msg, Plugin.findArchivalUnit(url), originator);
+    log.debug("sending our verification request to " + originator.toString());
+    //LcapComm.sendMessage(reqmsg, Plugin.findArchivalUnit(url));
+    LcapComm.sendMessageTo(reqmsg, Plugin.findArchivalUnit(url), originator);
 
     log.debug("Creating a local poll instance...");
     Poll poll = PollManager.findPoll(reqmsg);
     poll.m_pollstate = PS_WAIT_TALLY;
-    poll.startPoll();
   }
 
   private void replyVerify(LcapMessage msg) throws IOException  {
+    String url = new String(msg.getTargetUrl());
     byte[] secret = PollManager.getSecret(msg.getChallenge());
+    if(secret == null) {
+      log.error("Verify poll reply failed.  Unable to find secret for: "
+                + B64Code.encode(msg.getChallenge()));
+      return;
+    }
     byte[] verifier = PollManager.makeVerifier();
     LcapMessage repmsg = LcapMessage.makeReplyMsg(msg,
         secret,
@@ -204,17 +214,39 @@ class VerifyPoll extends Poll {
         LcapMessage.VERIFY_POLL_REP,
         msg.getDuration(),
         LcapIdentity.getLocalIdentity());
-    log.debug("sending our verification reply.");
+
     LcapIdentity originator = msg.getOriginID();
-    LcapComm.sendMessageTo(repmsg, Plugin.findArchivalUnit(msg.getTargetUrl()),
-                           originator);
+    log.debug("sending our verification reply to " + originator.toString());
+    //LcapComm.sendMessage(repmsg, Plugin.findArchivalUnit(url));
+    LcapComm.sendMessageTo(repmsg, Plugin.findArchivalUnit(url), originator);
 
   }
 
   private void startVote(LcapMessage msg) {
+    log.debug("Starting new verify vote:" + m_key);
     super.startVote();
-    performHash(msg);
-    stopVote();
+    // schedule a hash/vote
+    Deadline deadline = Deadline.atRandomBefore(m_deadline);
+    log.debug("Waiting until at most " + deadline + " to verify");
+    TimerQueue.schedule(deadline, new VerifyTimerCallback(), msg);
+    m_pollstate = PS_WAIT_HASH;
+  }
+
+  class VerifyTimerCallback implements TimerQueue.Callback {
+    /**
+     * Called when the timer expires.
+     * @param cookie  data supplied by caller to schedule()
+     */
+    public void timerExpired(Object cookie) {
+      log.debug("VerifyTimerCallback called, checking if I should verify");
+      if(m_pollstate == PS_WAIT_HASH) {
+        log.debug("I should verify ");
+        LcapMessage msg = (LcapMessage) cookie;
+        performHash(msg);
+        log.debug("Just sent verification.");
+        stopVote();
+      }
+    }
   }
 
 }

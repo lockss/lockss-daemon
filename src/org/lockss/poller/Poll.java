@@ -1,5 +1,5 @@
 /*
- * $Id: Poll.java,v 1.21 2002-11-27 00:55:49 claire Exp $
+ * $Id: Poll.java,v 1.22 2002-12-03 03:35:59 claire Exp $
  */
 
 /*
@@ -52,8 +52,15 @@ import org.lockss.util.*;
  */
 
 public abstract class Poll {
+  static final String PARAM_QUORUM = Configuration.PREFIX + "poll.quorum";
+  static final String PARAM_AGREE_VERIFY = Configuration.PREFIX +
+                                        "poll.agreeVerify";
+  static final String PARAM_DISAGREE_VERIFY = Configuration.PREFIX +
+                                      "poll.disagreeVerify";
+
   static final int DEFAULT_QUORUM = 5;
-  static final int DEFAULT_DURATION = 6*3600*1000;
+  static final int DEFAULT_AGREE_VERIFY = 20;
+  static final int DEFAULT_DISAGREE_VERIFY = 90;
 
   static final int ERR_SCHEDULE_HASH = -1;
   static final int ERR_HASHING = -2;
@@ -68,13 +75,16 @@ public abstract class Poll {
 
   static Logger log=Logger.getLogger("Poll");
 
-  LcapMessage m_msg;          // The message which triggered the poll
-  int m_quorum = DEFAULT_QUORUM;// The caller's quorum value
-  int m_quorumWt = 500;       // The quorum weights
-  int m_agree = 0;            // The # of votes we've heard that agree with us
-  int m_agreeWt = 0;          // the sum of the the agree weights
-  int m_disagree = 0;         // The # of votes we've heard that disagree with us
-  int m_disagreeWt = 0;       // the sum of the disagree weights
+  LcapMessage m_msg;      // The message which triggered the poll
+  int m_quorum = DEFAULT_QUORUM;       // The caller's quorum value
+
+  int m_agree = 0;        // The # of votes we've heard that agree with us
+  int m_agreeWt = 0;      // the sum of the the agree weights
+  double m_agreeVer = 0;     // the max percentage of time we will verify
+
+  int m_disagree = 0;     // The # of votes we've heard that disagree with us
+  int m_disagreeWt = 0;   // the sum of the disagree weights
+  double m_disagreeVer = 0;  // the max percentage of time we will verify
 
   ArchivalUnit m_arcUnit; // the url as an archival unit
   CachedUrlSet m_urlSet;  // the cached url set retrieved from the archival unit
@@ -104,6 +114,13 @@ public abstract class Poll {
    * needed to create this poll.
    */
   Poll(LcapMessage msg, CachedUrlSet urlSet) {
+    /* initialize with our parameters */
+    m_quorum = Configuration.getIntParam(PARAM_QUORUM, DEFAULT_QUORUM);
+    m_agreeVer = ((double)Configuration.getIntParam(PARAM_AGREE_VERIFY,
+        DEFAULT_AGREE_VERIFY)) / 100;
+    m_disagreeVer = ((double)Configuration.getIntParam(PARAM_DISAGREE_VERIFY,
+        DEFAULT_DISAGREE_VERIFY)) / 100;
+
     m_msg = msg;
     m_urlSet = urlSet;
 
@@ -133,7 +150,7 @@ public abstract class Poll {
     sb.append(" ");
     sb.append(m_urlSet.toString());
     sb.append(" ");
-    sb.append(m_msg.getOpcode());
+    sb.append(m_msg.getOpcodeString());
     sb.append(" key:");
     sb.append(m_key);
     sb.append("]");
@@ -162,7 +179,7 @@ public abstract class Poll {
    */
   void scheduleVote() {
     m_voteTime = Deadline.atRandomBefore(m_deadline);
-    log.debug("Waiting until at most "+m_deadline+" to vote");
+    log.debug("Waiting until at most " + m_deadline.toString() + " to vote");
     TimerQueue.schedule(m_voteTime, new VoteTimerCallback(), this);
     m_pollstate = PS_WAIT_VOTE;
   }
@@ -194,24 +211,26 @@ public abstract class Poll {
    * @param msg the <code>Message</code> that we agree with
    */
   void handleAgreeVote(LcapMessage msg) {
-    int weight = msg.getOriginID().getReputation();
+    LcapIdentity id = msg.getOriginID();
+    int weight = id.getReputation();
     synchronized (this) {
       m_agree++;
       m_agreeWt += weight;
     }
 
     log.info("I agree with " + msg.toString() + " rep " + weight);
-    // NodeManager.rememberVote(msg, true);
     if (!msg.isLocal()) {
       try {
         int max = msg.getOriginID().getMaxReputaion();
-        double verify = (max - weight)* 20 / max;
-        VerifyPoll.randomRequestVerify(msg,(int)verify);
+        double verify = ((double)(max - weight)) / max * m_agreeVer;
+        VerifyPoll.randomRequestVerify(msg, verify);
       }
       catch (IOException ex) {
         log.debug("attempt to randomly verify failed:", ex);
       }
     }
+    // rememberVote(id, true);
+    id.agreeWithVote();
   }
 
   /**
@@ -219,7 +238,8 @@ public abstract class Poll {
    * @param msg the <code>Message</code> that we disagree with
    */
   void handleDisagreeVote(LcapMessage msg) {
-    int weight = msg.getOriginID().getReputation();
+    LcapIdentity id = msg.getOriginID();
+    int weight = id.getReputation();
     boolean local = msg.isLocal();
 
     synchronized (this) {
@@ -233,17 +253,18 @@ public abstract class Poll {
     else {
       log.info("I disagree with " + msg.toString() + " rep " + weight);
     }
-    //NodeManager.rememberVote(msg, false);
     if (!local) {
       try {
         int max = msg.getOriginID().getMaxReputaion();
-        double verify = ((double)weight) / max * 100 ;
-        VerifyPoll.randomRequestVerify(msg, (int)verify );
+        double verify = ((double)weight) / max * m_disagreeVer;
+        VerifyPoll.randomRequestVerify(msg, verify );
       }
       catch (IOException ex) {
         log.debug("attempt to verify randomly failed.", ex);
       }
     }
+    //rememberVote(id, false);
+    id.disagreeWithVote();
   }
 
   /**
@@ -292,6 +313,7 @@ public abstract class Poll {
     MessageDigest hasher = getInitedHasher(m_challenge, m_verifier);
     if(!scheduleHash(hasher, pt, m_msg, new PollHashCallback())) {
       m_pollstate = ERR_SCHEDULE_HASH;
+      log.debug("couldn't schedule hash - stopping poll");
       stopPoll();
       return;
     }
@@ -383,8 +405,8 @@ public abstract class Poll {
     MessageDigest hasher = PollManager.getHasher();
     hasher.update(challenge, 0, challenge.length);
     hasher.update(verifier, 0, verifier.length);
-    log.debug("hashing: C[" +String.valueOf(B64Code.encode(m_challenge)) + "] "
-            +"V[" + String.valueOf(B64Code.encode(m_verifier)) + "]");
+    log.debug("hashing: C[" +String.valueOf(B64Code.encode(challenge)) + "] "
+            +"V[" + String.valueOf(B64Code.encode(verifier)) + "]");
     return hasher;
   }
 

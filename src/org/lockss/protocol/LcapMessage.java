@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessage.java,v 1.9 2002-11-26 03:06:14 aalto Exp $
+ * $Id: LcapMessage.java,v 1.10 2002-12-03 03:35:59 claire Exp $
  */
 
 /*
@@ -60,6 +60,11 @@ public class LcapMessage {
   public static final int CONTENT_POLL_REP = 3;
   public static final int VERIFY_POLL_REQ = 4;
   public static final int VERIFY_POLL_REP = 5;
+
+  public static final String[] POLL_OPCODES =
+  {"NameReq", "NameRep",
+   "ContentReq", "ContentRep",
+   "VerifyReq", "VerifyRep"};
 
   public static final int MAX_HOP_COUNT = 16;
   public static final int SHA_LENGTH = 20;
@@ -450,6 +455,10 @@ public class LcapMessage {
     return m_opcode;
   }
 
+  public String getOpcodeString() {
+    return POLL_OPCODES[m_opcode];
+  }
+
   public boolean getMulticast() {
     return m_multicast;
   }
@@ -528,13 +537,13 @@ public class LcapMessage {
     sb.append(" ");
     sb.append(m_regExp);
     sb.append(" ");
-    sb.append(m_opcode);
-    sb.append(" ");
+    sb.append(POLL_OPCODES[m_opcode]);
+    sb.append(" C:");
     sb.append(String.valueOf(B64Code.encode(m_challenge)));
-    sb.append(" ");
+    sb.append(" V:");
     sb.append(String.valueOf(B64Code.encode(m_verifier)));
     if (m_hashed != null) { //can be null for a request message
-      sb.append(" ");
+      sb.append(" H:");
       sb.append(String.valueOf(B64Code.encode(m_hashed)));
     }
     sb.append("]");
