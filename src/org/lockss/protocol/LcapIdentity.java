@@ -1,5 +1,5 @@
 /*
- * $Id: LcapIdentity.java,v 1.24 2004-09-28 08:47:27 tlipkis Exp $
+ * $Id: LcapIdentity.java,v 1.25 2004-09-29 06:39:41 tlipkis Exp $
  */
 
 /*
@@ -31,6 +31,7 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.protocol;
 
+import java.io.*;
 import java.net.*;
 import java.util.HashMap;
 import java.util.Random;
@@ -96,12 +97,12 @@ public class LcapIdentity {
   }
 
   protected LcapIdentity(PeerIdentity pid, String idKey)
-      throws UnknownHostException {
+      throws IdentityManager.MalformedIdentityKeyException {
     this(pid, idKey, IdentityManager.INITIAL_REPUTATION);
   }
 
   protected LcapIdentity(PeerIdentity pid, String idKey, int reputation)
-      throws UnknownHostException {
+      throws IdentityManager.MalformedIdentityKeyException {
     this(pid);
     m_idKey = idKey;
     m_address = stringToAddr(idKey);
@@ -123,6 +124,14 @@ public class LcapIdentity {
 
 
   // accessor methods
+
+  /**
+   * return the PeerIdentity
+   * @return the PeerIdentity
+   */
+  public PeerIdentity getPeerIdentity() {
+    return m_pid;
+  }
 
   /**
    * return the address of the Identity
@@ -301,32 +310,36 @@ public class LcapIdentity {
   }
 
   public static IPAddr stringToAddr(String idKey)
-      throws UnknownHostException {
-    int colon = idKey.indexOf(':');
+      throws IdentityManager.MalformedIdentityKeyException {
     IPAddr ret = null;
-    if (colon > 0) {
-      // XXX V3 identity not really supported
-      ret = IPAddr.getByName(idKey.substring(0,colon));
-    } else if (colon < 0) {
-      // V1 identity,  no port part
-      ret = IPAddr.getByName(idKey);
+    try {
+      int colon = idKey.indexOf(':');
+      if (colon > 0) {
+	// XXX V3 identity not really supported
+	ret = IPAddr.getByName(idKey.substring(0,colon));
+      } else if (colon < 0) {
+	// V1 identity,  no port part
+	ret = IPAddr.getByName(idKey);
+      }
+    } catch (UnknownHostException ignore) {
     }
-    if(ret == null) {
-      throw new UnknownHostException("Unable to get address: " + idKey);
+    if (ret == null) {
+      throw new IdentityManager.MalformedIdentityKeyException(idKey);
     }
     return ret;
   }
 
   public static int stringToPort(String idKey)
-      throws UnknownHostException {
+      throws IdentityManager.MalformedIdentityKeyException {
     int colon = idKey.indexOf(':');
     int ret = 0;
-    if (colon >= 0) try {
-      ret = Short.parseShort(idKey.substring(colon+1));
-    } catch (NumberFormatException nfe) {
-      throw new UnknownHostException("Unable to get port: " + idKey);
+    if (colon >= 0) {
+      try {
+	ret = Short.parseShort(idKey.substring(colon+1));
+      } catch (NumberFormatException nfe) {
+	throw new IdentityManager.MalformedIdentityKeyException(idKey);
+      }
     }
     return ret;
   }
-
 }
