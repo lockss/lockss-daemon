@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigFile.java,v 1.4 2004-07-15 05:08:49 smorabito Exp $
+ * $Id: ConfigFile.java,v 1.5 2004-07-19 08:26:22 tlipkis Exp $
  */
 
 /*
@@ -47,8 +47,6 @@ public class ConfigFile {
   public static final int XML_FILE = 0;
   public static final int PROPERTIES_FILE = 1;
 
-  private static final int HTTP_OK = 200;
-
   private int m_fileType;
   private String m_lastModified;
   private String m_fileUrl;
@@ -89,7 +87,6 @@ public class ConfigFile {
   }
 
   public String getLoadErrorMessage() {
-    log.info("getLoadErrorMessage(): " + m_loadError);
     return m_loadError;
   }
 
@@ -145,7 +142,7 @@ public class ConfigFile {
     URL u = new URL(url);
     LockssUrlConnection conn = UrlUtil.openConnection(url);
 
-    if (m_lastModified != null) {
+    if (m_fileContents != null && m_lastModified != null) {
       log.debug2("Setting request if-modified-since to: " + m_lastModified);
       conn.setIfModifiedSince(m_lastModified);
     }
@@ -153,19 +150,25 @@ public class ConfigFile {
     conn.execute();
 
     if (conn.isHttp()) {
-      log.debug2(url + " request got response: " + conn.getResponseCode());
-      if (conn.getResponseCode() == HTTP_OK) {
+      int resp = conn.getResponseCode();
+      String respMsg = conn.getResponseMessage();
+      log.debug2(url + " request got response: " + resp + ": " + respMsg);
+      switch (resp) {
+      case HttpURLConnection.HTTP_OK:
 	m_loadError = null;
 	m_lastModified = conn.getResponseHeaderValue("last-modified");
-	log.debug2("Storing this config's last-modified as: " + m_lastModified);
+	log.debug2("Storing this config's last-modified as: " +
+		   m_lastModified);
 	in = new InputStreamReader(conn.getResponseInputStream());
 	log.debug2("New file, or file changed.  Loading file from " +
 		   "remote connection:" + url);
-      } else {
-	m_loadError = conn.getResponseCode() + ": " +
-	  conn.getResponseMessage();
-	log.info("m_loadError: " + m_loadError);
-	log.debug2("Error, or file has not changed and not reloading.");
+	break;
+      case HttpURLConnection.HTTP_NOT_MODIFIED:
+	m_loadError = null;
+	log.debug3("Not reloading");
+	break;
+      default:
+	m_loadError = resp + ": " + respMsg;
       }
     } else {
       in = new InputStreamReader(conn.getResponseInputStream());
@@ -212,8 +215,8 @@ public class ConfigFile {
 	String xmlUrl = makeXmlUrl(url);
 
 	try {
-	  in = getUrlInputStream(xmlUrl);
 	  log.debug2("First pass: Trying to load XML-ized URL: " + xmlUrl);
+	  in = getUrlInputStream(xmlUrl);
 	} catch (Exception ignore) {;}
 	
 	if (in != null) {
@@ -223,9 +226,9 @@ public class ConfigFile {
 	  m_fileUrl = xmlUrl;
 	} else {
 	  // This is not an XML file, try to load the real URL name.
-	  in = getUrlInputStream(url);
 	  log.debug2("Second pass: That didn't work, trying to " +
 		     "load original URL: " + url);
+	  in = getUrlInputStream(url);
 	}
 
       }
