@@ -1,5 +1,5 @@
 /*
- * $Id: LcapSocket.java,v 1.7 2002-12-16 22:05:32 tal Exp $
+ * $Id: LcapSocket.java,v 1.8 2002-12-16 22:13:30 tal Exp $
  */
 
 /*
@@ -78,7 +78,7 @@ public class LcapSocket {
 
     /** Convenience method to make names for loggers and threads */
     String getThreadName() {
-      return "Sock " + sock.getLocalPort() + " Rcv";
+      return "Sock_" + sock.getLocalPort() + "_Rcv";
     }
 
     /** Start the socket's receive thread */
