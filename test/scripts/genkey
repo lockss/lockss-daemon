@@ -86,9 +86,9 @@ def genkey():
               " -genkey -alias " + args["alias"] + \
               " -validity %d" % validDays + \
               " -keystore " + args["alias"] + ".keystore " + \
-              " -storepass \"" + args["passphrase"] + "\" " + \
-              " -keypass \"" + args["passphrase"] + "\" " + \
-              " -dname \"" + dn + "\""
+              " -storepass \'" + args["passphrase"] + "\' " + \
+              " -keypass \'" + args["passphrase"] + "\' " + \
+              " -dname \'" + dn + "\'"
     run_command(command, False)
 
 def export_cert():
@@ -98,7 +98,7 @@ def export_cert():
               " -export -file " + args["alias"] + ".cer" + \
               " -keystore " + args["alias"] + ".keystore" + \
               " -alias " + args["alias"] + \
-              " -storepass \"" + args["passphrase"] + "\""
+              " -storepass \'" + args["passphrase"] + "\'"
     run_command(command, False)
     
 def display_cert():

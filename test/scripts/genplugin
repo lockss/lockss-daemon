@@ -187,8 +187,8 @@ def gen_plugin():
 	command = command + \
 	      " -Dsign-alias=" + passedArgs["alias"] + \
 	      " -Dsign-keystore=" + passedArgs["keystore"] + \
-	      " -Dsign-keypass=" + passedArgs["password"] + \
-	      " -Dsign-storepass=" + passedArgs["password"]
+	      " -Dsign-keypass=\'" + passedArgs["password"] + "\'" \
+	      " -Dsign-storepass=\'" + passedArgs["password"] + "\'"
 
     err = run_ant(command)
     if not err:
