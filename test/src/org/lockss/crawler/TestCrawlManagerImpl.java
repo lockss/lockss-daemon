@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.11 2003-03-20 21:48:29 troberts Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.12 2003-03-21 19:40:52 tal Exp $
  */
 
 /*
@@ -42,6 +42,7 @@ import org.lockss.plugin.*;
 /**
  */
 public class TestCrawlManagerImpl extends LockssTestCase {
+  static final long TEN_SECONDS = 10 * Constants.SECOND;
   public static final String startUrl = "http://www.example.com/index.html";
   private CrawlManagerImpl crawlManager = null;
   private MockArchivalUnit mau = null;
@@ -119,7 +120,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     cus.addUrl(LINKLESS_PAGE, url2);
     cus.addUrl(LINKLESS_PAGE, url3);
 
-    Deadline deadline = Deadline.in(1000 * 10);
+    Deadline deadline = Deadline.in(TEN_SECONDS);
 
 
     assertTrue(crawlManager.isCrawlingAU(mau, new TestCrawlCB(deadline),
@@ -138,7 +139,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 
 
   public void testTriggersNewContentCallback() {
-    Deadline deadline = Deadline.in(1000 * 10);
+    Deadline deadline = Deadline.in(TEN_SECONDS);
 
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
     cus.addUrl(LINKLESS_PAGE, startUrl);
@@ -156,7 +157,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
   }
 
   public void testNewContentCrawlCallbackReturnsCookie() {
-    Deadline deadline = Deadline.in(1000 * 10);
+    Deadline deadline = Deadline.in(TEN_SECONDS);
     String cookie = "cookie string";
 
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
@@ -175,7 +176,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
   }
 
   public void testNewContentCrawlCallbackReturnsNullCookie() {
-    Deadline deadline = Deadline.in(1000 * 10);
+    Deadline deadline = Deadline.in(TEN_SECONDS);
     String cookie = null;
 
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
@@ -202,7 +203,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     cus.addUrl(LINKLESS_PAGE, startUrl);
 
     WaitOnSemaphoreCallback pauseCB = new WaitOnSemaphoreCallback(sem,
-								  1000 * 10);
+								  TEN_SECONDS);
     mau.setPauseCallback(pauseCB);
 
     crawlManager.isCrawlingAU(mau, cb, null);
@@ -247,7 +248,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     cus.addUrl(LINKLESS_PAGE, url2);
     cus.addUrl(LINKLESS_PAGE, url3);
 
-    Deadline deadline = Deadline.in(1000 * 10);
+    Deadline deadline = Deadline.in(TEN_SECONDS);
 
     crawlManager.scheduleRepair(mau, new URL(startUrl),
 				new TestCrawlCB(deadline), null);
@@ -263,7 +264,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
   }
 
   public void testTriggersRepairCallback() throws MalformedURLException {
-    Deadline deadline = Deadline.in(1000 * 10);
+    Deadline deadline = Deadline.in(TEN_SECONDS);
 
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
     cus.addUrl(LINKLESS_PAGE, startUrl);
@@ -282,7 +283,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
   }
 
   public void testRepairCallbackGetsCookie() throws MalformedURLException {
-    Deadline deadline = Deadline.in(1000 * 10);
+    Deadline deadline = Deadline.in(TEN_SECONDS);
     String cookie = "test cookie str";
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
     cus.addUrl(LINKLESS_PAGE, startUrl);
@@ -303,7 +304,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
   }
 
   public void testCompletedCrawlUpdatesLastCrawlTime() {
-    Deadline deadline = Deadline.in(1000 * 10);
+    Deadline deadline = Deadline.in(TEN_SECONDS);
     MockAuState maus = new MockAuState();
     long lastCrawlTime = maus.getLastCrawlTime();
     nodeManager.setAuState(maus);
@@ -332,7 +333,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     cus.addUrl(LINKLESS_PAGE, startUrl);
 
     WaitOnSemaphoreCallback pauseCB = new WaitOnSemaphoreCallback(sem,
-								  1000 * 10);
+								  TEN_SECONDS);
     mau.setPauseCallback(pauseCB);
 
     assertTrue(crawlManager.isCrawlingAU(mau, null, null));
@@ -376,9 +377,9 @@ public class TestCrawlManagerImpl extends LockssTestCase {
    */
   private class WaitOnSemaphoreCallback implements MockObjectCallback {
     BinarySemaphore sem;
-    int maxWaitTime = 0;
+    long maxWaitTime = 0;
 
-    public WaitOnSemaphoreCallback(BinarySemaphore sem, int maxWaitTime) {
+    public WaitOnSemaphoreCallback(BinarySemaphore sem, long maxWaitTime) {
       this.sem = sem;
       this.maxWaitTime = maxWaitTime;
     }

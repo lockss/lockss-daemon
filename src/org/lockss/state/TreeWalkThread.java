@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkThread.java,v 1.5 2003-03-20 21:48:29 troberts Exp $
+ * $Id: TreeWalkThread.java,v 1.6 2003-03-21 19:40:52 tal Exp $
  */
 
 /*
@@ -51,13 +51,13 @@ public class TreeWalkThread extends Thread {
    */
   public static final String PARAM_TREEWALK_ESTIMATE_DURATION =
       PREFIX + "estimate.duration";
-  static final int DEFAULT_TREEWALK_ESTIMATE_DURATION = 1000;
+  static final int DEFAULT_TREEWALK_ESTIMATE_DURATION = Constants.SECOND;
 
   /**
    * Configuration parameter name for interval, in ms, between treewalks.
    */
   public static final String PARAM_TREEWALK_INTERVAL = PREFIX + "interval";
-  static final int DEFAULT_TREEWALK_INTERVAL = 60 * 60 * 1000; //1 hour
+  static final int DEFAULT_TREEWALK_INTERVAL = Constants.HOUR;
 
   /**
    * Configuration parameter name for default interval, in ms, after which
@@ -65,8 +65,7 @@ public class TreeWalkThread extends Thread {
    */
   public static final String PARAM_TOP_LEVEL_POLL_INTERVAL =
       Configuration.PREFIX + "top.level.poll.interval";
-  static final int DEFAULT_TOP_LEVEL_POLL_INTERVAL =
-      14 * 24 * 60 * 60 * 1000; //2 weeks
+  static final int DEFAULT_TOP_LEVEL_POLL_INTERVAL = 2 * Constants.WEEK;
 
   static final double MAX_DEVIATION = 0.1;
 

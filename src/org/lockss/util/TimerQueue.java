@@ -1,5 +1,5 @@
 /*
- * $Id: TimerQueue.java,v 1.9 2003-02-05 00:14:29 tal Exp $
+ * $Id: TimerQueue.java,v 1.10 2003-03-21 19:40:52 tal Exp $
  *
 
 Copyright (c) 2000-2002 Board of Trustees of Leland Stanford Jr. University,
@@ -132,7 +132,7 @@ public class TimerQueue implements Serializable {
 
       while (goOn) {
 	try {
-	  Request req = (Request)queue.peekWait(Deadline.in(60000));
+	  Request req = (Request)queue.peekWait(Deadline.in(Constants.MINUTE));
 	  if (req != null) {
 	    req.deadline.sleep();
 	    // check that this request is still at the head of the queue

@@ -1,5 +1,5 @@
 /*
- * $Id: LcapComm.java,v 1.19 2003-03-21 07:27:52 tal Exp $
+ * $Id: LcapComm.java,v 1.20 2003-03-21 19:40:52 tal Exp $
  */
 
 /*
@@ -410,7 +410,7 @@ public class LcapComm implements LockssManager {
   // Receive thread
   private class ReceiveThread extends Thread {
     private boolean goOn = true;
-    private int sleep = 60000;
+    private int sleep = Constants.MINUTE;
     private Deadline timeout = Deadline.in(sleep);
 
     private ReceiveThread(String name) {
