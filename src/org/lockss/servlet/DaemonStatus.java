@@ -1,5 +1,5 @@
 // ========================================================================
-// $Id: DaemonStatus.java,v 1.5 2003-03-15 02:31:20 troberts Exp $
+// $Id: DaemonStatus.java,v 1.6 2003-03-17 08:31:37 tal Exp $
 // ========================================================================
 
 /*
@@ -93,6 +93,7 @@ public class DaemonStatus extends LockssServlet {
 
       page.add("<center>" + getMachineName() + " at " +
 	       df.format(now) + "</center>");
+      page.add("<br>");
 
 //       page.add("<center>");
 //       page.add(srvLink(SERVLET_DAEMON_STATUS, ".",
@@ -142,7 +143,7 @@ public class DaemonStatus extends LockssServlet {
     if (true || rowIter.hasNext()) {
       // if table not empty, output column headings
 //       table = new Table(0, "CELLSPACING=2 CELLPADDING=0 WIDTH=\"100%\"");
-      table = new Table(0, "CELLSPACING=2 CELLPADDING=0");
+      table = new Table(0, "ALIGN=CENTER CELLSPACING=2 CELLPADDING=0");
       if (html) {
 	// ensure title footnote numbered before ColDesc.HEADs
 	title = title + addFootnote(titleFoot);
@@ -154,10 +155,12 @@ public class DaemonStatus extends LockssServlet {
 
 	for (int ix = 0; ix < cols; ix++) {
 	  ColumnDescriptor cd = cds[ix];
-	  String head = cd.getTitle() + addFootnote(null/*cd.getFootnote()*/);
-	  table.addHeading(head, "align=" + getColAlignment(cd));
-	  if (ix < cols) {
-	    table.newCell("width = 4");
+	  String head = cd.getTitle() + addFootnote(cd.getFootNote());
+	  table.addHeading(head, "align=" + ((cols != 1) ?
+					     getColAlignment(cd)
+					     : "center" ));
+	  if (ix < (cols - 1)) {
+	    table.newCell("width = 8");
 	  }
 	}
       } else {
@@ -180,7 +183,7 @@ public class DaemonStatus extends LockssServlet {
 
 	  table.newCell("align=" + getColAlignment(cd));
 	  table.add(dispString(rowMap.get(cd.getColumnName()), cd));
-	  if (ix < (cols)) {
+	  if (ix < (cols - 1)) {
 	    table.newCell();	// empty column for spacing
 	  }
 	}
@@ -258,41 +261,21 @@ public class DaemonStatus extends LockssServlet {
 	return ((InetAddress)val).getHostAddress();
       case ColumnDescriptor.TYPE_TIME_INTERVAL:
 	long millis = ((Number)val).longValue();
-	StringBuffer sb = new StringBuffer();
-	long days = millis / Constants.DAY;
-	millis %= Constants.DAY;
-	if (days > 0) {
-	  sb.append(days);
-	  sb.append("d");
-	}
-	long hours = millis / Constants.HOUR;
-	millis %= Constants.HOUR;
-	if (days != 0 || hours != 0) {
-	  sb.append(hours);
-	  sb.append("h");
-	}
-	long mins = millis / Constants.MINUTE;
-	millis %= Constants.MINUTE;
-	if (days != 0 || hours != 0 || mins != 0) {
-	  sb.append(mins);
-	  sb.append("m");
-	}
-	long secs = millis / Constants.SECOND;
-	if (days == 0) {
-	  sb.append(secs);
-	  sb.append("s");
-	}
-	return sb.toString();
+	return StringUtil.timeIntervalToString(millis);
       }
     } catch (NumberFormatException e) {
-      log.warning("bad number: " + e.toString());
+      log.warning("Bad number: " + val.toString() + ": " + e.toString());
       return val.toString();
     } catch (ClassCastException e) {
-      log.warning("wrong type value: " + val.toString() + ": " + e.toString());
+      log.warning("Wrong type value: " + val.toString() + ": " + e.toString());
+      return val.toString();
+    } catch (Exception e) {
+      log.warning("Error formatting value: " + val.toString() + ": " + e.toString());
       return val.toString();
     }
   }
 
+  // don't make me a link in nav table if I'm displaying table of all tables
   protected boolean includeMeInNav() {
     return !StatusService.ALL_TABLES_TABLE.equals(tableName);
   }
