@@ -1,5 +1,5 @@
 /*
- * $Id: ListUtil.java,v 1.3 2003-04-21 05:41:27 tal Exp $
+ * $Id: ListUtil.java,v 1.4 2003-04-30 23:44:01 tal Exp $
  *
 
 Copyright (c) 2000-2002 Board of Trustees of Leland Stanford Jr. University,
@@ -235,7 +235,10 @@ public class ListUtil {
     return Collections.unmodifiableList(l);
   }
 
-  /** Return a copy of the list, in reverse order */
+  /** Return a copy of the list, in reverse order.
+   * @param list the List to reverse.
+   * @return A new list with elements in reverse order of the original list.
+   */
   public static List reverseCopy(List list) {
     List res = new ArrayList(list);
     Collections.reverse(res);
