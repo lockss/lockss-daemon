@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileUrlCacher.java,v 1.1 2002-10-23 23:45:49 aalto Exp $
+ * $Id: GenericFileUrlCacher.java,v 1.2 2002-10-24 02:16:36 aalto Exp $
  */
 
 /*
@@ -46,6 +46,9 @@ import org.lockss.util.*;
  */
 
 public abstract class GenericFileUrlCacher extends BaseUrlCacher {
+  /**
+   * Name of top directory in which the urls are cached.
+   */
   public static final String CACHE_ROOT = "cache";
 
   public GenericFileUrlCacher(CachedUrlSet owner, String url) {

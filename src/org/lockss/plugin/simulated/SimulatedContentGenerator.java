@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedContentGenerator.java,v 1.1 2002-10-23 23:43:05 aalto Exp $
+ * $Id: SimulatedContentGenerator.java,v 1.2 2002-10-24 02:16:36 aalto Exp $
  */
 
 /*
@@ -43,16 +43,46 @@ import org.lockss.util.StringUtil;
  */
 
 public class SimulatedContentGenerator {
+/**
+ * Content of a generated text or html file.  Values are substituted for the %Xs.
+ */
   public static final String NORMAL_FILE_CONTENT = "This is file %1, depth %2, branch %3.";
+  /**
+   * Content of a generated text or html file with 'abnormal' status.  Values are substituted for the %Xs.
+   */
   public static final String ABNORMAL_FILE_CONTENT = "This is abnormal file %1, depth %2, branch %3.";
+/**
+ * Name of top directory in which the content is generated.
+ */
   public static final String ROOT_NAME = "simcontent";
+  /**
+   * The name prefix for generated files.  The local file number is appended.
+   */
   public static final String FILE_PREFIX = "file";
+  /**
+   * The name prefix for generated sub-directories.  The local branch number is appended.
+   */
   public static final String BRANCH_PREFIX = "branch";
+  /**
+   * The name of the 'index' file in each directory which lists the children as html links for crawling.
+   */
   public static final String INDEX_NAME = "index.html";
 
+ /**
+  * File-type value for text files.  Independent bitwise from the other file-types.
+  */
   public static final int FILE_TYPE_TXT = 1;
+  /**
+   * File-type value for html files.  Independent bitwise from the other file-types.
+   */
   public static final int FILE_TYPE_HTML = 2;
+  /**
+   * File-type value for pdf files.  Independent bitwise from the other file-types.
+   */
   public static final int FILE_TYPE_PDF = 4;
+  /**
+   * File-type value for jpeg files.  Independent bitwise from the other file-types.
+   */
   public static final int FILE_TYPE_JPEG = 8;
 
   // how deep the tree extends
@@ -82,33 +112,107 @@ public class SimulatedContentGenerator {
   }
 
   // accessors
+  /**
+   * Depth 0 generates only the root directory.
+   * @return depth of the generated tree
+   */
   public int getTreeDepth() { return treeDepth; }
+  /**
+   * Depth 0 generates only the root directory.
+   * @param newDepth new depth for generated tree
+   */
   public void setTreeDepth(int newDepth) { treeDepth = newDepth; }
+  /**
+   * @return number of branches per internal node
+   */
   public int getNumBranches() { return numBranches; }
+  /**
+   * @param newNumBranches new number of branches per internal node
+   */
   public void setNumBranches(int newNumBranches) { numBranches = newNumBranches; }
+  /**
+   * @return number of files per internal node
+   */
   public int getNumFilesPerBranch() { return numFilesPerBranch; }
+  /**
+   * @param newNumFiles new number of files per internal node
+   */
   public void setNumFilesPerBranch(int newNumFiles) { numFilesPerBranch = newNumFiles; }
+  /**
+   * @return maximum length for a file name
+   */
   public int maxFilenameLength() { return maxFilenameLength; }
+  /**
+   * @param newMaxLength new maximum length for a file name
+   */
   public void setMaxFilenameLength(int newMaxLength) { maxFilenameLength = newMaxLength; }
+  /**
+   * Determine whether or not to expand all file names to maximum length.
+   * @param fillOut expand to max length
+   */
   public void setFillOutFilenamesFully(boolean fillOut) { fillOutFilenames = fillOut; }
+  /**
+   * Returns whether or not set to expand all file names to maximum length.
+   * @return is expanding to max length
+   */
   public boolean isFillingOutFilenamesFully() { return fillOutFilenames; }
+  /**
+   * @return is set to create abnormal file
+   */
   public boolean isAbnormalFile() { return isAbnormalFile; }
+  /**
+   * Returns 'branch path' leading to abnormal file.  Format is "1,2,3..."
+   * for ROOT/branch1/branch2/branch3/...  Empty string refers to root.
+   * @return branch path
+   */
   public String getAbnormalBranchString() { return abnormalBranchStr; }
+  /**
+   * @return local file number for abnormal file.
+   */
   public int getAbnormalFileNumber() { return abnormalFileNum; }
+  /**
+   * Sets the parameters to create an abnormal file.
+   * Format for branch path is "1,2,3..." for ROOT/branch1/branch2/branch3/...
+   * Empty string refers to root.
+   *
+   * @param branchStr branch path to file location
+   * @param fileNum local file number
+   */
   public void setAbnormalFile(String branchStr, int fileNum) {
     abnormalBranchStr = branchStr;
     abnormalFileNum = fileNum;
     isAbnormalFile = true;
   }
+  /**
+   * Gets the file types which will be generated.
+   * Uses a bitwise AND technique to store the various file types
+   * in a single int (i.e. FILE_TYPE_TXT + FILE_TYPE_JPEG)
+   * @return file types to be created
+   */
   public int getFileTypes() { return fileTypes; }
+  /**
+   * Sets the file types to be generated.
+   * Uses a bitwise AND technique to store the various file types
+   * in a single int (i.e. FILE_TYPE_TXT + FILE_TYPE_JPEG)
+   * @param types file types to be created
+   */
   public void setFileTypes(int types) { fileTypes = types; }
+  /**
+   * @return location of content root
+   */
   public String getContentRoot() { return contentRoot; }
 
+  /**
+   * Tests whether the root of the generated tree exists.
+   * @return content tree exists
+   */
   public boolean isContentTree() {
-    // check to see if the content tree root exists
     File treeRoot = new File(contentRoot);
     return (treeRoot.exists() && treeRoot.isDirectory());
   }
+  /**
+   * Deletes the generated content tree.
+   */
   public void deleteContentTree() {
     recurseDeleteFileTree(new File(contentRoot));
   }
@@ -123,6 +227,13 @@ public class SimulatedContentGenerator {
       file.delete();
     }
   }
+/**
+ * Generates a content tree using the current parameters.
+ * Depth of 0 is root (and files) only.  Depth >0 is number of sub-levels.
+ * Each directory contains the set number of files X number of file types
+ * (so for numFiles=2, types=TXT + HTML, each directory would contain 2 txt files,
+ * 2 html files, the index file, and any subdirectories).
+ */
   public void generateContentTree() {
     // make an appropriate file tree
     File treeRoot = new File(contentRoot);
@@ -259,6 +370,14 @@ public class SimulatedContentGenerator {
     } catch (Exception e) { System.err.println(e); }
   }
 
+  /**
+   * Generates standard text content for a file (text or html types only).
+   * @param fileNum local file number
+   * @param depth file depth (0 for root)
+   * @param branchNum local branch number (0 for root)
+   * @param isAbnormal whether or not to generate abnormal content
+   * @return file content
+   */
   public static String getFileContent(int fileNum, int depth, int branchNum, boolean isAbnormal) {
     String file_content = NORMAL_FILE_CONTENT;
     if (isAbnormal) file_content = ABNORMAL_FILE_CONTENT;
@@ -268,6 +387,16 @@ public class SimulatedContentGenerator {
     return file_content;
   }
 
+  /**
+   * Generates standard html content for an html file.
+   * Standard text content is included as the body of the html.
+   * @param filename name of file (used in title)
+   * @param fileNum local file number
+   * @param depth file depth (0 for root)
+   * @param branchNum local branch number (0 for root)
+   * @param isAbnormal whether or not to generate abnormal content
+   * @return file content
+   */
   public static String getHtmlFileContent(String filename, int fileNum,
                                           int depth, int branchNum, boolean isAbnormal) {
     String file_content = "<HTML><HEAD><TITLE>" + filename + "</TITLE></HEAD><BODY>\n";
@@ -275,6 +404,23 @@ public class SimulatedContentGenerator {
     file_content += "\n</BODY></HTML>";
     return file_content;
   }
+
+  /**
+   * Generates index file for a directory, in html form with each sibling
+   * file or sub-directory index file as a link.  This is to allow crawling.
+   * To be available statically, it takes several parameters for the purpose
+   * of determining the expected generated content.  It does not actually check the
+   * contents of the directory.
+   *
+   * @param parentPath path of parent dir
+   * @param filename name of current dir
+   * @param curDepth current depth
+   * @param maxDepth max depth
+   * @param numBranches number of branches per node
+   * @param numFiles number of files per node
+   * @param fileTypes file-types to generate
+   * @return index file content
+   */
 
   public static String getIndexContent(String parentPath, String filename, int curDepth,
                           int maxDepth, int numBranches, int numFiles, int fileTypes) {
@@ -311,7 +457,13 @@ public class SimulatedContentGenerator {
     return file_content;
   }
 
-
+  /**
+   * Generates a standard file name.
+   * @param fileNum local file number
+   * @param isDirectory is a directory
+   * @param fileType file type (ignored if directory, otherwise single type only)
+   * @return standard file name
+   */
   public static String getFileName(int fileNum, boolean isDirectory, int fileType) {
     String fileName = "";
     if (isDirectory) {

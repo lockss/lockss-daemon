@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.1 2002-10-23 23:43:05 aalto Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.2 2002-10-24 02:16:36 aalto Exp $
  */
 
 /*
@@ -50,6 +50,9 @@ import org.lockss.plugin.*;
  */
 
 public class SimulatedArchivalUnit extends BaseArchivalUnit {
+/**
+ * This is the url prefix which the SimAU pretends to be.
+ */
   public static final String SIMULATED_URL = "http://www.example.com";
 
   private String fileRoot; //root directory for the generated content
