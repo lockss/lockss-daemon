@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.114 2004-10-11 00:57:00 tlipkis Exp $
+ $Id: build.xml,v 1.115 2004-10-13 23:58:44 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -233,6 +233,16 @@ Args:
     <path refid="test.compile.classpath" />
     <pathelement path="${lockss.test.jar}" />
     <pathelement path="${lockss.ant.jar}" />
+  </path>
+
+  <!-- Classpath exported to production environment includes UI jar so API
+  servlet can be run if jar is present. -->
+  <!-- The UI jar is not actually available to any targets in this build,
+  so it doens't make sense to use this classpath for any other purpose. -->
+
+  <path id="prod.run.classpath">
+    <path refid="test.run.classpath" />
+    <pathelement path="${lib}/lockss-ui.jar" />
   </path>
 
   <path id="tools.compile.classpath">
@@ -768,7 +778,7 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
       targetos="${detected.os}" />
     <echo message="${tmp.test.clspth}" file="${test.classpath.file}"/>
     <!-- Write run classpath to a different file, for package build -->
-    <pathconvert refid="test.run.classpath" property="tmp.run.clspth"
+    <pathconvert refid="prod.run.classpath" property="tmp.run.clspth"
       targetos="${detected.os}">
       <!-- entity codes below are open and close curly brace -->
       <map from="${basedir}/lib" to="$&#x07b;JAVA.LIB.PATH&#x07d;" />
@@ -1576,7 +1586,8 @@ Test results in ${tools.test.results}
   <target name="findbugs" depends="jar-lockss, -load.findbugs"
    description="Run FindBugs on the main source tree." >
     <findbugs home="${findbugs.home}"
-              output="emacs" >
+              output="emacs"
+              excludeFilter="test/scripts/findbugsexclude.xml" >
       <auxClasspath refid="run.classpath" />
       <sourcePath path="${src}" />
       <class location="${lockss.jar}" />
