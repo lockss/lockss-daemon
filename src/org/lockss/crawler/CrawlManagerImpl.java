@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.34 2003-06-17 21:20:54 troberts Exp $
+ * $Id: CrawlManagerImpl.java,v 1.35 2003-06-18 00:29:46 troberts Exp $
  */
 
 /*
@@ -327,6 +327,7 @@ public class CrawlManagerImpl extends BaseLockssManager
     private static final String NUM_URLS_FETCHED = "num_urls_fetched";
     private static final String NUM_CACHE_HITS = "num_cache_hits";
     private static final String CACHE_HITS_PERCENT = "cache_hits_percent";
+    private static final String START_URLS = "start_urls";
 
     private List colDescs =
       ListUtil.list(
@@ -345,7 +346,9 @@ public class CrawlManagerImpl extends BaseLockssManager
 		    new ColumnDescriptor(NUM_CACHE_HITS, "Cache hits",
 					 ColumnDescriptor.TYPE_INT),
 		    new ColumnDescriptor(CACHE_HITS_PERCENT, "percent",
-					 ColumnDescriptor.TYPE_PERCENT)
+					 ColumnDescriptor.TYPE_PERCENT),
+		    new ColumnDescriptor(START_URLS, "starting url",
+					 ColumnDescriptor.TYPE_STRING)
 		    );
 
 
@@ -405,6 +408,7 @@ public class CrawlManagerImpl extends BaseLockssManager
       row.put(END_TIME_COL_NAME, makeNullOrLong(crawler.getEndTime()));
       row.put(NUM_URLS_FETCHED, new Long(crawler.getNumFetched()));
       row.put(NUM_URLS_PARSED, new Long(crawler.getNumParsed()));
+      row.put(START_URLS, (crawler.getStartUrls()).get(0)); //XXX hack
       if (au instanceof BaseArchivalUnit) {
 	BaseArchivalUnit bau = (BaseArchivalUnit)au;
 	row.put(NUM_CACHE_HITS, new Long(bau.getCrawlSpecCacheHits()));
