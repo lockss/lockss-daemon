@@ -1,5 +1,5 @@
 /*
- * $Id: TestAUCachedUrlSetSpec.java,v 1.2 2003-06-03 01:52:50 tal Exp $
+ * $Id: TestAUCachedUrlSetSpec.java,v 1.3 2003-06-06 05:56:07 tal Exp $
  */
 
 /*
@@ -47,12 +47,28 @@ public class TestAUCachedUrlSetSpec extends LockssTestCase {
     super(msg);
   }
 
-  public void testAUCachedUrlSetSpec() {
+  public void testGetUrl() {
+    CachedUrlSetSpec cuss = new AUCachedUrlSetSpec();
+    assertEquals("lockssau:", cuss.getUrl());
+  }
+
+  public void testMatches() {
+    CachedUrlSetSpec cuss = new AUCachedUrlSetSpec();
+    assertTrue(cuss.matches("anything"));
+    assertTrue(cuss.matches(""));
+  }
+
+  public void testEquals() {
     CachedUrlSetSpec cuss = new AUCachedUrlSetSpec();
     CachedUrlSetSpec cuss2 = new AUCachedUrlSetSpec();
-    assertEquals("lockssau:", cuss.getUrl());
-    assertTrue(cuss.matches("anything"));
     assertEquals(cuss, cuss2);
+    assertNotEquals(cuss, new SingleNodeCachedUrlSetSpec("foo"));
+    assertNotEquals(cuss, new RangeCachedUrlSetSpec("foo"));
+  }
+
+  public void testHashCode() {
+    CachedUrlSetSpec cuss = new AUCachedUrlSetSpec();
+    CachedUrlSetSpec cuss2 = new AUCachedUrlSetSpec();
     assertEquals(cuss.hashCode(), cuss2.hashCode());
   }
 
@@ -64,18 +80,18 @@ public class TestAUCachedUrlSetSpec extends LockssTestCase {
   }
 
   public void testDisjoint() {
-    CachedUrlSetSpec cuss1 = new AUCachedUrlSetSpec();
-    assertFalse(cuss1.isDisjoint(new AUCachedUrlSetSpec()));
-    assertFalse(cuss1.isDisjoint(new RangeCachedUrlSetSpec("foo")));
-    assertFalse(cuss1.isDisjoint(new RangeCachedUrlSetSpec("foo", "1", "2")));
-    assertFalse(cuss1.isDisjoint(new SingleNodeCachedUrlSetSpec("foo")));
+    CachedUrlSetSpec cuss = new AUCachedUrlSetSpec();
+    assertFalse(cuss.isDisjoint(new AUCachedUrlSetSpec()));
+    assertFalse(cuss.isDisjoint(new RangeCachedUrlSetSpec("foo")));
+    assertFalse(cuss.isDisjoint(new RangeCachedUrlSetSpec("foo", "1", "2")));
+    assertFalse(cuss.isDisjoint(new SingleNodeCachedUrlSetSpec("foo")));
   }
 
   public void testSubsumes() {
-    CachedUrlSetSpec cuss1 = new AUCachedUrlSetSpec();
-    assertTrue(cuss1.subsumes(new AUCachedUrlSetSpec()));
-    assertTrue(cuss1.subsumes(new RangeCachedUrlSetSpec("foo")));
-    assertTrue(cuss1.subsumes(new RangeCachedUrlSetSpec("foo", "1", "2")));
-    assertTrue(cuss1.subsumes(new SingleNodeCachedUrlSetSpec("foo")));
+    CachedUrlSetSpec cuss = new AUCachedUrlSetSpec();
+    assertTrue(cuss.subsumes(new AUCachedUrlSetSpec()));
+    assertTrue(cuss.subsumes(new RangeCachedUrlSetSpec("foo")));
+    assertTrue(cuss.subsumes(new RangeCachedUrlSetSpec("foo", "1", "2")));
+    assertTrue(cuss.subsumes(new SingleNodeCachedUrlSetSpec("foo")));
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestRangeCachedUrlSetSpec.java,v 1.8 2003-06-04 00:35:17 tal Exp $
+ * $Id: TestRangeCachedUrlSetSpec.java,v 1.9 2003-06-06 05:56:07 tal Exp $
  */
 
 /*
@@ -57,6 +57,19 @@ public class TestRangeCachedUrlSetSpec extends LockssTestCase {
     }
   }
 
+  public void testGets() {
+    RangeCachedUrlSetSpec cuss1 = new RangeCachedUrlSetSpec("1/2/3");
+    RangeCachedUrlSetSpec cuss2 = new RangeCachedUrlSetSpec("a/", "b", "d");
+
+    assertEquals("1/2/3", cuss1.getUrl());
+    assertEquals(null, cuss1.getLowerBound());
+    assertEquals(null, cuss1.getUpperBound());
+
+    assertEquals("a/", cuss2.getUrl());
+    assertEquals("b", cuss2.getLowerBound());
+    assertEquals("d", cuss2.getUpperBound());
+  }
+
   public void testEquals() {
     CachedUrlSetSpec cuss1 = new RangeCachedUrlSetSpec("foo", null, null);
     CachedUrlSetSpec cuss2 = new RangeCachedUrlSetSpec("foo");
@@ -78,79 +91,15 @@ public class TestRangeCachedUrlSetSpec extends LockssTestCase {
     assertEquals(cuss5, cuss6);
     assertEquals(cuss7, cuss8);
     assertNotEquals(cuss5, cuss9);
-  }
 
-  public void testNoRange() {
-    RangeCachedUrlSetSpec cuss1 = new RangeCachedUrlSetSpec("foo");
-    assertEquals("foo", cuss1.getUrl());
-    assertEquals(null, cuss1.getLowerBound());
-    assertEquals(null, cuss1.getUpperBound());
-    assertTrue(cuss1.matches("foo"));
-    assertTrue(cuss1.matches("foobar"));
-    assertTrue(cuss1.matches("foo/bar"));
-    assertFalse(cuss1.matches("1foo"));
-  }
-
-  public void testLower() {
-    RangeCachedUrlSetSpec cuss2 =
-      new RangeCachedUrlSetSpec("foo", "/123", null);
-    assertEquals("foo", cuss2.getUrl());
-    assertEquals("/123", cuss2.getLowerBound());
-    assertEquals(null, cuss2.getUpperBound());
-    assertFalse(cuss2.matches("foo"));	// ranged, shouldn't match prefix
-    assertFalse(cuss2.matches("/123foo"));
-    assertTrue(cuss2.matches("foo/123"));
-    assertTrue(cuss2.matches("foo/123/x"));
-    assertFalse(cuss2.matches("foo/122"));
-    assertFalse(cuss2.matches("foo/0"));
-  }
-
-  public void testUpper() {
-    RangeCachedUrlSetSpec cuss3 =
-      new RangeCachedUrlSetSpec("bar/", null, "123");
-    assertEquals("bar/", cuss3.getUrl());
-    assertEquals(null, cuss3.getLowerBound());
-    assertEquals("123", cuss3.getUpperBound());
-    assertFalse(cuss3.matches("bar/"));  // ranged, shouldn't match prefix
-    assertTrue(cuss3.matches("bar/0"));
-    assertTrue(cuss3.matches("bar/123"));
-    assertFalse(cuss3.matches("bar/123/4"));
-    assertFalse(cuss3.matches("bar/124"));
-  }
-
-  public void testBoth() {
-    RangeCachedUrlSetSpec cuss4 =
-      new RangeCachedUrlSetSpec("bar/", "222", "555");
-    assertEquals("bar/", cuss4.getUrl());
-    assertEquals("222", cuss4.getLowerBound());
-    assertEquals("555", cuss4.getUpperBound());
-    assertFalse(cuss4.matches("bar/"));
-    assertFalse(cuss4.matches("bar/0"));
-    assertTrue(cuss4.matches("bar/222"));
-    assertTrue(cuss4.matches("bar/223"));
-    assertTrue(cuss4.matches("bar/24"));
-    assertFalse(cuss4.matches("bar/556"));
+    assertNotEquals(cuss1, new AUCachedUrlSetSpec());
+    assertNotEquals(cuss1, new SingleNodeCachedUrlSetSpec("foo"));
   }
 
   public void testHashCode() throws Exception {
-    String lwrb1 = "/abc";
-    String uprb1 = "/xyz";
-
-    String lwrb2 = "/bcd";
-    String uprb2 = "/zyx";
-
-    CachedUrlSetSpec spec1 = new RangeCachedUrlSetSpec("foo", lwrb1, uprb1);
-    CachedUrlSetSpec spec2 = new RangeCachedUrlSetSpec("bar", lwrb1, uprb1);
-    assertTrue(spec1.hashCode() != spec2.hashCode());
-    assertTrue(spec1 != spec2);
-
-    spec2 = new RangeCachedUrlSetSpec("foo", lwrb2, uprb2);
-    assertTrue(spec1.hashCode() != spec2.hashCode());
-    assertTrue(spec1 != spec2);
-
-    spec2 = new RangeCachedUrlSetSpec("foo", lwrb1, uprb1);
-    assertEquals(spec1.hashCode(), spec2.hashCode());
-    assertEquals(spec1, spec2);
+    CachedUrlSetSpec cuss1 = new RangeCachedUrlSetSpec("foo", "/abc", "/xyz");
+    CachedUrlSetSpec cuss2 = new RangeCachedUrlSetSpec("foo", "/abc", "/xyz");
+    assertTrue(cuss1.hashCode() == cuss1.hashCode());
   }
 
   public void testTypePredicates() {
@@ -168,6 +117,52 @@ public class TestRangeCachedUrlSetSpec extends LockssTestCase {
     assertFalse(cuss3.isSingleNode());
     assertFalse(cuss3.isAU());
     assertTrue(cuss3.isRangeRestricted());
+  }
+
+  public void testMatchNoRange() {
+    RangeCachedUrlSetSpec cuss1 = new RangeCachedUrlSetSpec("foo");
+    assertTrue(cuss1.matches("foo"));// not ranged, should match prefix
+    assertTrue(cuss1.matches("foobar"));
+    assertTrue(cuss1.matches("foo/bar"));
+    assertFalse(cuss1.matches("fo"));
+    assertFalse(cuss1.matches("1foo"));
+  }
+
+  public void testMatchLower() {
+    RangeCachedUrlSetSpec cuss2 =
+      new RangeCachedUrlSetSpec("foo", "/123", null);
+    assertTrue(cuss2.matches("foo/123"));
+    assertTrue(cuss2.matches("foo/123/x"));
+    assertFalse(cuss2.matches("foo"));
+    assertFalse(cuss2.matches("foo/12"));
+    assertFalse(cuss2.matches("foo/122"));
+    assertFalse(cuss2.matches("foo/0"));
+    assertFalse(cuss2.matches("/123foo"));
+  }
+
+  public void testMatchUpper() {
+    RangeCachedUrlSetSpec cuss3 =
+      new RangeCachedUrlSetSpec("bar/", null, "123");
+    assertTrue(cuss3.matches("bar/0"));
+    assertTrue(cuss3.matches("bar/123"));
+    assertFalse(cuss3.matches("bar/"));  // ranged, shouldn't match prefix
+    assertFalse(cuss3.matches("bar/123/4"));
+    assertFalse(cuss3.matches("bar/124"));
+    assertFalse(cuss3.matches("bar"));
+    assertFalse(cuss3.matches("foo"));
+  }
+
+  public void testMatchBoth() {
+    RangeCachedUrlSetSpec cuss4 =
+      new RangeCachedUrlSetSpec("bar/", "222", "555");
+    assertFalse(cuss4.matches("bar/"));
+    assertFalse(cuss4.matches("bar/0"));
+    assertTrue(cuss4.matches("bar/222"));
+    assertTrue(cuss4.matches("bar/223"));
+    assertTrue(cuss4.matches("bar/555"));
+    assertTrue(cuss4.matches("bar/24"));
+    assertFalse(cuss4.matches("bar/556"));
+    assertFalse(cuss4.matches("bar/22"));
   }
 
   public void testDisjoint() {
@@ -382,6 +377,55 @@ public class TestRangeCachedUrlSetSpec extends LockssTestCase {
     assertFalse(cuss4.subsumes(new RangeCachedUrlSetSpec("a/b/", null, "d")));
     assertFalse(cuss4.subsumes(new RangeCachedUrlSetSpec("a/b/", "a", "b")));
     assertFalse(cuss4.subsumes(new RangeCachedUrlSetSpec("a/b/", "e", "f")));
+  }
+
+  private CachedUrlSetSpec makeCuss(int ix) {
+    switch (ix) {
+    case 1: return new AUCachedUrlSetSpec(); 
+    case 2: return new SingleNodeCachedUrlSetSpec("a"); 
+    case 3: return new SingleNodeCachedUrlSetSpec("a/b"); 
+    case 4: return new SingleNodeCachedUrlSetSpec("a/c"); 
+    case 5: return new RangeCachedUrlSetSpec("a"); 
+    case 6: return new RangeCachedUrlSetSpec("a/b"); 
+    case 7: return new RangeCachedUrlSetSpec("a/c"); 
+    case 8: return new RangeCachedUrlSetSpec("a", null, "/b"); 
+    case 9: return new RangeCachedUrlSetSpec("a", null, "/c"); 
+    case 10: return new RangeCachedUrlSetSpec("a/b", null, "/b"); 
+    case 11: return new RangeCachedUrlSetSpec("a/b", null, "/c"); 
+    case 12: return new RangeCachedUrlSetSpec("a/b", "/a", null); 
+    case 13: return new RangeCachedUrlSetSpec("a/b", "/b", null); 
+    case 14: return new RangeCachedUrlSetSpec("a/b", "/a", "/b"); 
+    case 15: return new RangeCachedUrlSetSpec("a/b", "/a", "/c"); 
+    case 16: return new RangeCachedUrlSetSpec("a/b", "/b", "/b"); 
+    case 17: return new RangeCachedUrlSetSpec("a/b", "/c", "/c"); 
+    }
+    return null;
+  }
+  static final int LAST = 17;
+
+  public void testCombinations() {
+    for (int x1 = 1; x1 <= LAST; x1++) {
+      for (int x2 = 1; x2 <= LAST; x2++) {
+	CachedUrlSetSpec c1 = makeCuss(x1);
+	CachedUrlSetSpec c2 = makeCuss(x2);
+	if (x1 == x2) {
+	  // equals() and subsumes() are both reflexive
+	  assertTrue(c1.equals(c2));
+	  assertTrue(c2.equals(c1));
+	  assertTrue(c1.subsumes(c2));
+	  assertTrue(c2.subsumes(c1));
+	} else {
+	  // different CUSSes are not equal, and cannot each subsume the other
+	  assertFalse(c1.equals(c2));
+	  assertFalse(c2.equals(c1));
+	  assertFalse(c1.subsumes(c2) && c2.subsumes(c1));
+	}
+	// isDisjoint is commutative
+	assertEquals(c1.isDisjoint(c2), c2.isDisjoint(c1));
+	// cannot both be disjoint and have subsumption relationship
+	assertFalse(c1.isDisjoint(c2) && (c1.subsumes(c2) || c2.subsumes(c1)));
+      }
+    }
   }
 
   public static void main(String[] argv) {
