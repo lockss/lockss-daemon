@@ -1,5 +1,5 @@
 /*
- * $Id: TestHashSvcSchedImpl.java,v 1.1 2004-01-13 01:33:35 tlipkis Exp $
+ * $Id: TestHashSvcSchedImpl.java,v 1.2 2004-01-14 23:37:15 tlipkis Exp $
  */
 
 /*
@@ -88,7 +88,7 @@ public class TestHashSvcSchedImpl extends LockssTestCase {
 
   boolean hashContent(String cookie, int duration, int eachStepTime,
 		      long deadInOrAt, HashService.Callback cb) {
-    CachedUrlSetHasher hasher = new MockCachedUrlSetHasher();
+    CachedUrlSetHasher hasher = new MockCUSH();
     //    hasher.setNumBytes(bytes);
     cus.setContentHasher(hasher);
     cus.setEstimatedHashDuration(duration);
@@ -100,12 +100,23 @@ public class TestHashSvcSchedImpl extends LockssTestCase {
 
   public void testCancel() throws Exception {
     TimeBase.setSimulated();
-    hashContent("1", 300, -100, 500, null);
+    assertTrue(hashContent("1", 300, -100, 500, null));
     assertFalse(svc.isIdle());
     svc.cancelAuHashes(new MockArchivalUnit());
     assertFalse(svc.isIdle());
     svc.cancelAuHashes(au);
     assertTrue(svc.isIdle());
+  }
+
+  public class MockCUSH extends MockCachedUrlSetHasher {
+
+    public int hashStep(int numBytes) {
+      // do nothing
+      return 0;
+    }
+    public boolean finished() {
+      return false;
+    }
   }
 
 }
