@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.9 2002-11-25 21:28:53 tal Exp $
+ * $Id: Configuration.java,v 1.10 2002-12-02 00:31:52 tal Exp $
  */
 
 /*
@@ -52,8 +52,11 @@ public abstract class Configuration {
   /** The common prefix string of all LOCKSS configuration parameters. */
   public static final String PREFIX = "org.lockss.";
 
+  static final String PARAM_RELOAD_INTERVAL =
+    PREFIX + "parameterReloadInterval";
+
   // MUST pass in explicit log level to avoid recursive call back to
-  // Configuration to get Config log level.
+  // Configuration to get Config log level.  (Others should NOT do this.)
   protected static Logger log = Logger.getLogger("Config", Logger.LEVEL_INFO);
 
   private static List configChangedCallbacks = new ArrayList();
@@ -338,6 +341,36 @@ public abstract class Configuration {
     }
   }
 
+  /** Return the config value as a long.
+   * @throws Configuration.Error if the value is missing or
+   * not parsable as a long.
+   */
+  public long getLong(String key) throws Error {
+    String val = get(key);
+    try {
+      return Long.parseLong(val);
+    } catch (NumberFormatException e) {
+      throw new Error("Not a long value: " + val);
+    }
+  }
+
+  /** Return the config value as a long.  If it's missing, return the
+   * default value.  If it's present but not parsable as a long, log a
+   * warning and return the default value
+   */
+  public long getLong(String key, long dfault) {
+    String val = get(key);
+    if (val == null) {
+      return dfault;
+    }
+    try {
+      return Long.parseLong(val);
+    } catch (NumberFormatException e) {
+      log.warning("getLong(\'" + key + "\") = \"" + val + "\"");
+      return dfault;
+    }
+  }
+
   // must be implemented by implementation subclass
 
   abstract void reset();
@@ -416,6 +449,20 @@ public abstract class Configuration {
     return currentConfig.getInt(key, dfault);
   }
 
+  /** Static convenience method to get param from current configuration.
+   * Don't accidentally use this on a <code>Configuration</code> instance.
+   */
+  public static long getLongParam(String key) throws Error {
+    return currentConfig.getLong(key);
+  }
+
+  /** Static convenience method to get param from current configuration.
+   * Don't accidentally use this on a <code>Configuration</code> instance.
+   */
+  public static long getLongParam(String key, long dfault) {
+    return currentConfig.getLong(key, dfault);
+  }
+
   /** Static convenience method to get a <code>Configuration</code>
    * subtree from the current configuration.
    * Don't accidentally use this on a <code>Configuration</code> instance.
@@ -491,9 +538,7 @@ public abstract class Configuration {
 	  }
 	  lastReload = TimeBase.nowMs();
 	  //  	stopAndOrStartThings(true);
-	  reloadInterval = Integer.getInteger(Configuration.PREFIX +
-					      "parameterReloadInterval",
-					      1800000).longValue();
+	  reloadInterval = getLongParam(PARAM_RELOAD_INTERVAL, 1800000);
 	}
 	long reloadRange = reloadInterval/4;
 	Deadline nextReload =
