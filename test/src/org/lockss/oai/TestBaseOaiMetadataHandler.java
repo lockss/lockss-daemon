@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseOaiMetadataHandler.java,v 1.4 2005-01-20 01:51:57 dcfok Exp $
+ * $Id: TestBaseOaiMetadataHandler.java,v 1.5 2005-01-26 01:09:50 tlipkis Exp $
  */
 
 /*
@@ -159,7 +159,7 @@ public class TestBaseOaiMetadataHandler extends LockssTestCase {
 	    String xmlText = xmlSBText.toString();
 
 	    try {
-		Document tempDoc = builder.parse(new StringBufferInputStream(xmlText));
+		Document tempDoc = builder.parse(new StringInputStream(xmlText));
 		nodeSet.addNode(tempDoc.getDocumentElement());
 		logger.debug3(OaiHandler.displayXML(tempDoc.getDocumentElement()));
 	    } catch (SAXException saxe) {
