@@ -1,5 +1,5 @@
 /*
- * $Id: V1PollFactory.java,v 1.12 2004-10-21 22:51:57 clairegriffin Exp $
+ * $Id: V1PollFactory.java,v 1.13 2004-10-23 01:38:22 clairegriffin Exp $
  */
 
 /*
@@ -321,12 +321,16 @@ public class V1PollFactory implements PollFactory {
 	theLog.debug2("compare " + cus + " with " + ps.getCachedUrlSet());
       }
       if (ps.getPollType() != Poll.VERIFY_POLL) {
-	CachedUrlSet pcus = ps.getCachedUrlSet();
+        CachedUrlSet pcus = ps.getCachedUrlSet();
         int rel_pos = cus.cusCompare(pcus);
-        if(rel_pos != CachedUrlSet.SAME_LEVEL_NO_OVERLAP &&
-           rel_pos != CachedUrlSet.NO_RELATION) {
-	  theLog.debug("New poll on " + cus + " conflicts with " + pcus);
-          return pcus;
+        if (rel_pos != CachedUrlSet.SAME_LEVEL_NO_OVERLAP &&
+            rel_pos != CachedUrlSet.NO_RELATION) {
+          // allow name polls to overlap
+          if (ps.getPollType() != Poll.NAME_POLL ||
+              rel_pos != CachedUrlSet.SAME_LEVEL_OVERLAP) {
+            theLog.debug("New poll on " + cus + " conflicts with " + pcus);
+            return pcus;
+          }
         }
       }
     }

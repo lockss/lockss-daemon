@@ -1,5 +1,5 @@
 /*
- * $Id: EDPInspectorTableModel.java,v 1.5 2004-06-15 04:14:44 clairegriffin Exp $
+ * $Id: EDPInspectorTableModel.java,v 1.6 2004-10-23 01:38:22 clairegriffin Exp $
  */
 
 /*
@@ -37,7 +37,16 @@ import javax.swing.event.*;
 
 public class EDPInspectorTableModel extends AbstractTableModel
     implements ChangeListener {
+
   static EDPInspectorCellEditor inspectorCellEditor = new EDPInspectorCellEditor();
+
+  static JComboBox crawlTypeBox = new JComboBox(new String[] {
+                                                "HTML Links",
+                                                "OAI"
+  });
+
+  static DefaultCellEditor crawlTypeEditor = new DefaultCellEditor(crawlTypeBox);
+
   static final String[] cols = {
       "Plugin Field", "Assigned Value"};
   static final class InspectorEntry {
@@ -78,7 +87,9 @@ public class EDPInspectorTableModel extends AbstractTableModel
       new InspectorEntry(EditableDefinablePlugin.PLUGIN_EXCEPTION_HANDLER,
                          "Crawl Exception Class", null),
       new InspectorEntry(EditableDefinablePlugin.CM_EXCEPTION_LIST_KEY,
-                         "Cache Exception Map", inspectorCellEditor)
+                         "Cache Exception Map", inspectorCellEditor),
+      new InspectorEntry(EditableDefinablePlugin.CM_CRAWL_TYPE,
+                         "Crawl Type", crawlTypeEditor)
   };
 
   static final InspectorEntry[] requiredEntries = {
@@ -154,7 +165,7 @@ public class EDPInspectorTableModel extends AbstractTableModel
     if (obj instanceof EDPCellData) {
       EDPCellData cell_data = (EDPCellData) obj;
       Object value = cell_data.getData();
-      if (inspectorEntries[rowIndex].m_editor == null) {
+      if (inspectorEntries[rowIndex].m_editor != inspectorCellEditor) {
         return value;
       }
       return cell_data;
@@ -164,7 +175,8 @@ public class EDPInspectorTableModel extends AbstractTableModel
 
   public void setValueAt(Object obj, int rowIndex, int columnIndex) {
     EDPCellData cell_data = (EDPCellData) data[rowIndex][columnIndex];
-    if (inspectorEntries[rowIndex].m_editor == null) { // we handle the internal update here
+    if (inspectorEntries[rowIndex].m_editor != inspectorCellEditor) {
+      // we handle the internal update here
       cell_data.updateStringData( (String) obj);
     }
   }

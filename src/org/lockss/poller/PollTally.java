@@ -1,5 +1,5 @@
 /*
- * $Id: PollTally.java,v 1.29 2004-10-21 22:51:57 clairegriffin Exp $
+ * $Id: PollTally.java,v 1.30 2004-10-23 01:38:22 clairegriffin Exp $
  */
 
 /*
@@ -32,19 +32,12 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.poller;
 
-import java.io.*;
-import java.security.*;
 import java.util.*;
 
-import org.mortbay.util.B64Code;
 import org.lockss.daemon.*;
-import org.lockss.hasher.*;
 import org.lockss.plugin.*;
 import org.lockss.protocol.*;
 import org.lockss.util.*;
-import org.lockss.state.PollHistory;
-import org.lockss.state.NodeManager;
-import org.lockss.daemon.status.*;
 
 /**
  * PollTally is a struct-like class which maintains the current state of

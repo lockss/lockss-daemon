@@ -1,5 +1,5 @@
 /*
- * $Id: EDPCellData.java,v 1.3 2004-06-15 04:14:44 clairegriffin Exp $
+ * $Id: EDPCellData.java,v 1.4 2004-10-23 01:38:22 clairegriffin Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ package org.lockss.devtools.plugindef;
 
 import java.util.*;
 import javax.swing.event.*;
+import javax.swing.*;
 
 public class EDPCellData {
   EditableDefinablePlugin m_plugin;
@@ -97,6 +98,9 @@ public class EDPCellData {
     }
     else if(key.equals(edp.CM_EXCEPTION_LIST_KEY)) {
       m_data = edp.getSingleExceptionHandlers();
+    }
+    else if(key.equals(edp.CM_CRAWL_TYPE)) {
+      m_data =edp.getCrawlType();
     }
   }
 
@@ -206,6 +210,11 @@ public class EDPCellData {
       m_data = data;
       m_plugin.setPluginExceptionHandler((String)m_data);
     }
+    else if(m_key.equals(m_plugin.CM_CRAWL_TYPE)) {
+      m_data = data;
+      m_plugin.setCrawlType((String)m_data);
+    }
+
     notifyListenersOfChange();
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: SampleArchivalUnit.java,v 1.11 2004-09-27 22:39:11 smorabito Exp $
+ * $Id: SampleArchivalUnit.java,v 1.12 2004-10-23 01:38:21 clairegriffin Exp $
  */
 
 /*
@@ -75,7 +75,7 @@ public class SampleArchivalUnit extends DefinableArchivalUnit {
       throws ConfigurationException {
     super.loadAuConfigDescrs(config);
     // get the volume string
-    volume = definitionMap.getInt(SamplePlugin.AUPARAM_VOL, -1);
+    volume = paramMap.getInt(SamplePlugin.AUPARAM_VOL, -1);
     if (volume <= 0) {
       throw new ConfigurationException("Invalid volume: "+volume);
     }

@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescr.java,v 1.19 2004-10-05 00:31:58 clairegriffin Exp $
+ * $Id: ConfigParamDescr.java,v 1.20 2004-10-23 01:38:21 clairegriffin Exp $
  */
 
 /*
@@ -156,11 +156,29 @@ public class ConfigParamDescr implements Comparable {
 
   }
 
+  public static final ConfigParamDescr OAI_REQUEST_URL = new ConfigParamDescr();
+  static {
+    OAI_REQUEST_URL.setKey("oai_request_url");
+    OAI_REQUEST_URL.setDisplayName("OAI Request URL");
+    OAI_REQUEST_URL.setType(TYPE_URL);
+    OAI_REQUEST_URL.setSize(40);
+    OAI_REQUEST_URL.setDescription("Usually of the form http://<journal-name>.com/");
+  }
+
+  public static final ConfigParamDescr OAI_SPEC = new ConfigParamDescr();
+  static {
+    OAI_SPEC.setKey("oai_spec");
+    OAI_SPEC.setDisplayName("OAI Journal Spec");
+    OAI_SPEC.setType(TYPE_STRING);
+    OAI_SPEC.setSize(40);
+    OAI_SPEC.setDescription("Spec for journal in the OAI crawl");
+  }
+
   public static final ConfigParamDescr[] DEFAULT_DESCR_ARRAY = {
       BASE_URL, VOLUME_NUMBER, YEAR, JOURNAL_ID,
-      PUBLISHER_NAME, ISSUE_RANGE, NUM_ISSUE_RANGE, ISSUE_SET
+      PUBLISHER_NAME, ISSUE_RANGE, NUM_ISSUE_RANGE, ISSUE_SET, OAI_REQUEST_URL,
+      OAI_SPEC
   };
-
 
   private String key;			// param (prop) key
   private String displayName;		// human readable name

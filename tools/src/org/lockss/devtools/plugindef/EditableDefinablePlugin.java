@@ -1,5 +1,5 @@
 /*
- * $Id: EditableDefinablePlugin.java,v 1.10 2004-10-05 00:31:58 clairegriffin Exp $
+ * $Id: EditableDefinablePlugin.java,v 1.11 2004-10-23 01:38:22 clairegriffin Exp $
  */
 
 /*
@@ -52,6 +52,11 @@ public class EditableDefinablePlugin
       = DefinablePlugin.CM_EXCEPTION_HANDLER_KEY;
   static final protected String CM_EXCEPTION_LIST_KEY
       = DefinablePlugin.CM_EXCEPTION_LIST_KEY;
+  static final protected String CM_CRAWL_TYPE
+      = DefinablePlugin.CM_CRAWL_TYPE;
+  static final protected String[] CRAWL_TYPES
+      = DefinablePlugin.CRAWL_TYPES;
+
   static final protected String PLUGIN_IDENTIFIER = "plugin_identifier";
 
   static final protected String AU_START_URL
@@ -125,6 +130,18 @@ public class EditableDefinablePlugin
     else {
       mapName = name + MAP_SUFFIX;
     }
+  }
+
+  public void setCrawlType(String crawlType) {
+    definitionMap.putString(CM_CRAWL_TYPE, crawlType);
+  }
+
+  public String getCrawlType() {
+    return definitionMap.getString(CM_CRAWL_TYPE, CRAWL_TYPES[0]);
+  }
+
+  public void removeCrawlType() {
+    definitionMap.removeMapElement(CM_CRAWL_TYPE);
   }
 
   public void setAuStartURL(String startUrl) {

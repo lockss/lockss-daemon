@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.8 2004-10-23 01:01:01 clairegriffin Exp $
+ * $Id: DefinablePlugin.java,v 1.9 2004-10-23 01:38:21 clairegriffin Exp $
  */
 
 /*
@@ -57,8 +57,13 @@ public class DefinablePlugin extends BasePlugin {
       "plugin_cache_result_handler";
   static final public String CM_EXCEPTION_LIST_KEY =
       "plugin_cache_result_list";
+  static final public String CM_CRAWL_TYPE =
+      "plugin_crawl_type";
+  static final public String CM_FOLLOW_LINKS = "plugin_follow_link";
   static final public String DEFAULT_PLUGIN_VERSION = "1";
   static final public String MAP_SUFFIX = ".xml";
+
+  static final public String[] CRAWL_TYPES = {"HTML Links", "OAI"};
 
   protected String mapName = null;
 

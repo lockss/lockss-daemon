@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.22 2004-10-23 01:01:01 clairegriffin Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.23 2004-10-23 01:38:21 clairegriffin Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
 import org.lockss.util.*;
 import org.lockss.plugin.definable.DefinablePlugin.*;
+import org.lockss.oai.*;
 
 /**
  * <p>ConfigurableArchivalUnit: An implementatation of Base Archival Unit used
@@ -198,17 +199,35 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     }
   }
 
+  protected OaiRequestData makeOaiData() {
+    String oai_request_url =
+        paramMap.getString(ConfigParamDescr.OAI_REQUEST_URL.getKey());
+    String oai_au_spec =
+        paramMap.getString(ConfigParamDescr.OAI_SPEC.getKey());
+    return new OaiRequestData(oai_request_url,
+                      "http://purl.org/dc/elements/1.1/",
+                      "identifier",
+                      oai_au_spec,
+                      "oai_dc"
+                      );
 
-  protected CrawlSpec makeCrawlSpec()
-      throws LockssRegexpException {
+  }
+
+  protected CrawlSpec makeCrawlSpec() throws LockssRegexpException {
 
     CrawlRule rule = makeRules();
-    int depth = definitionMap.getInt(AU_CRAWL_DEPTH, DEFAULT_AU_CRAWL_DEPTH);
-    //XXX this change is to make things compile,
-    // what needs to be done:
-    // get from the plugin tool that what kind of crawl we are going to have
-    // and create and return the appropriate CrawlSpec (SpiderCrawlSpec or OaiCrawlSpec)
-    return new SpiderCrawlSpec(startUrlString, rule, depth);
+    String crawl_type = definitionMap.getString(DefinablePlugin.CM_CRAWL_TYPE,
+                                                DefinablePlugin.CRAWL_TYPES[0]);
+    if(crawl_type.equals(DefinablePlugin.CRAWL_TYPES[1])) { // oai-crawl
+      boolean follow_links =
+          definitionMap.getBoolean(DefinablePlugin.CM_FOLLOW_LINKS, true);
+      return new OaiCrawlSpec(makeOaiData(), getPermissionPages(),
+                              Collections.EMPTY_LIST, rule, follow_links);
+    }
+    else  { // for now use the default spider crawl spec
+      int depth = definitionMap.getInt(AU_CRAWL_DEPTH, DEFAULT_AU_CRAWL_DEPTH);
+      return new SpiderCrawlSpec(startUrlString, rule, depth);
+    }
   }
 
   protected CrawlWindow makeCrawlWindow() {
