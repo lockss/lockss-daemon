@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuNodeImpl.java,v 1.10 2003-08-02 00:16:04 eaalto Exp $
+ * $Id: TestAuNodeImpl.java,v 1.11 2004-03-27 02:37:24 eaalto Exp $
  */
 
 /*
@@ -35,7 +35,6 @@ package org.lockss.repository;
 import java.io.*;
 import java.util.*;
 import org.lockss.test.*;
-import org.lockss.util.*;
 import org.lockss.plugin.AuUrl;
 
 /**
@@ -78,7 +77,7 @@ public class TestAuNodeImpl extends LockssTestCase {
                                       "test stream", null);
 
     RepositoryNode auNode = repo.getNode(AuUrl.PROTOCOL_COLON+"//test.com");
-    Iterator childIt = auNode.listNodes(null, false);
+    Iterator childIt = auNode.listChildren(null, false);
     ArrayList childL = new ArrayList(3);
     while (childIt.hasNext()) {
       RepositoryNode node = (RepositoryNode)childIt.next();
@@ -96,7 +95,7 @@ public class TestAuNodeImpl extends LockssTestCase {
     RepositoryNode auNode = new AuNodeImpl("lockssAu:test", "", null);
     assertFalse(auNode.hasContent());
     assertFalse(auNode.isLeaf());
-    assertFalse(auNode.isInactive());
+    assertFalse(auNode.isContentInactive());
     try {
       auNode.makeNewVersion();
       fail("Cannot make version for AuNode.");

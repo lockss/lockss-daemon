@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.34 2004-03-24 23:39:52 eaalto Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.35 2004-03-27 02:37:24 eaalto Exp $
  */
 
 /*
@@ -234,7 +234,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     // root branch
     RepositoryNode dirEntry =
         repo.getNode("http://www.example.com/testDir");
-    Iterator childIt = dirEntry.listNodes(null, false);
+    Iterator childIt = dirEntry.listChildren(null, false);
     ArrayList childL = new ArrayList(3);
     while (childIt.hasNext()) {
       RepositoryNode node = (RepositoryNode)childIt.next();
@@ -250,7 +250,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     // sub-branch
     dirEntry = repo.getNode("http://www.example.com/testDir/branch1");
     childL.clear();
-    childIt = dirEntry.listNodes(null, false);
+    childIt = dirEntry.listChildren(null, false);
     while (childIt.hasNext()) {
       RepositoryNode node = (RepositoryNode)childIt.next();
       childL.add(node.getNodeUrl());
@@ -264,7 +264,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     // sub-branch with content
     dirEntry = repo.getNode("http://www.example.com/testDir/branch2");
     childL.clear();
-    childIt = dirEntry.listNodes(null, false);
+    childIt = dirEntry.listChildren(null, false);
     while (childIt.hasNext()) {
       RepositoryNode node = (RepositoryNode)childIt.next();
       childL.add(node.getNodeUrl());
@@ -277,7 +277,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     // leaf node
     dirEntry = repo.getNode("http://www.example.com/testDir/branch1/leaf1");
     childL.clear();
-    childIt = dirEntry.listNodes(null, false);
+    childIt = dirEntry.listChildren(null, false);
     while (childIt.hasNext()) {
       RepositoryNode node = (RepositoryNode)childIt.next();
       childL.add(node.getNodeUrl());
@@ -294,7 +294,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
 
     RepositoryNode dirEntry =
         repo.getNode("http://www.example.com/testDir");
-    Iterator childIt = dirEntry.listNodes(null, false);
+    Iterator childIt = dirEntry.listChildren(null, false);
     ArrayList childL = new ArrayList(4);
     while (childIt.hasNext()) {
       RepositoryNode node = (RepositoryNode)childIt.next();
@@ -631,13 +631,13 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
         (RepositoryNodeImpl)createLeaf("http://www.example.com/test1",
                                        "test stream", null);
     assertTrue(leaf.hasContent());
-    assertFalse(leaf.isInactive());
+    assertFalse(leaf.isContentInactive());
     assertEquals(1, leaf.getCurrentVersion());
     assertNull(leaf.nodeProps.getProperty(leaf.INACTIVE_CONTENT_PROPERTY));
 
     leaf.deactivateContent();
     assertFalse(leaf.hasContent());
-    assertTrue(leaf.isInactive());
+    assertTrue(leaf.isContentInactive());
     assertEquals(RepositoryNodeImpl.INACTIVE_VERSION, leaf.getCurrentVersion());
     assertEquals("true", leaf.nodeProps.getProperty(leaf.INACTIVE_CONTENT_PROPERTY));
   }
@@ -667,7 +667,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertEquals(RepositoryNodeImpl.DELETED_VERSION, leaf.getCurrentVersion());
 
     leaf.markAsNotDeleted();
-    assertFalse(leaf.isInactive());
+    assertFalse(leaf.isContentInactive());
     assertFalse(leaf.isDeleted());
     assertEquals(1, leaf.getCurrentVersion());
     // make to null, not 'false'
@@ -705,11 +705,11 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
         (RepositoryNodeImpl)createLeaf("http://www.example.com/test1",
                                        "test stream", null);
     leaf.deactivateContent();
-    assertTrue(leaf.isInactive());
+    assertTrue(leaf.isContentInactive());
     assertEquals(RepositoryNodeImpl.INACTIVE_VERSION, leaf.getCurrentVersion());
 
     leaf.restoreLastVersion();
-    assertFalse(leaf.isInactive());
+    assertFalse(leaf.isContentInactive());
     assertEquals(1, leaf.getCurrentVersion());
     // back to null, not 'false'
     assertNull(leaf.nodeProps.getProperty(leaf.INACTIVE_CONTENT_PROPERTY));
@@ -721,7 +721,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     RepositoryNode leaf =
         createLeaf("http://www.example.com/test1", "test stream", null);
     leaf.deactivateContent();
-    assertTrue(leaf.isInactive());
+    assertTrue(leaf.isContentInactive());
     assertEquals(RepositoryNodeImpl.INACTIVE_VERSION, leaf.getCurrentVersion());
 
     Properties props = new Properties();
@@ -730,7 +730,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     leaf.setNewProperties(props);
     writeToLeaf(leaf, "test stream 2");
     leaf.sealNewVersion();
-    assertFalse(leaf.isInactive());
+    assertFalse(leaf.isContentInactive());
     assertEquals(2, leaf.getCurrentVersion());
     String resultStr = getLeafContent(leaf);
     assertEquals("test stream 2", resultStr);
@@ -758,7 +758,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     createLeaf("http://www.example.com/testDir/branch2/test5", "test stream", null);
 
     RepositoryNode dirEntry = repo.getNode("http://www.example.com/testDir");
-    Iterator childIt = dirEntry.listNodes(null, false);
+    Iterator childIt = dirEntry.listChildren(null, false);
     ArrayList childL = new ArrayList(3);
     while (childIt.hasNext()) {
       RepositoryNode node = (RepositoryNode)childIt.next();
@@ -782,7 +782,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     leaf = repo.getNode("http://www.example.com/testDir/branch2");
     leaf.markAsDeleted();
 
-    childIt = dirEntry.listNodes(null, false);
+    childIt = dirEntry.listChildren(null, false);
     childL = new ArrayList(2);
     while (childIt.hasNext()) {
       RepositoryNode node = (RepositoryNode)childIt.next();
@@ -795,7 +795,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
       };
     assertIsomorphic("Excluding inactive nodes failed.", expectedA, childL);
 
-    childIt = dirEntry.listNodes(null, true);
+    childIt = dirEntry.listChildren(null, true);
     childL = new ArrayList(3);
     while (childIt.hasNext()) {
       RepositoryNode node = (RepositoryNode)childIt.next();
@@ -826,7 +826,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
   public void testGetFileStrings() throws Exception {
     RepositoryNodeImpl node = (RepositoryNodeImpl) repo.createNewNode(
         "http://www.example.com/test.url");
-    node.loadNodeRoot();
+    node.initNodeRoot();
     String contentStr = FileUtil.sysDepPath(node.nodeLocation + "/#content/");
     assertEquals(contentStr, node.getContentDirBuffer().toString());
     String expectedStr = contentStr + "123";

@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.41 2004-03-09 23:57:51 eaalto Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.42 2004-03-27 02:37:24 eaalto Exp $
  */
 
 /*
@@ -38,7 +38,6 @@ import java.net.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
-import org.lockss.daemon.*;
 
 /**
  * This is the test class for org.lockss.daemon.LockssRepositoryImpl
@@ -149,8 +148,8 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
 
     RepositoryNode auNode = repo.getNode(AuUrl.PROTOCOL_COLON+"//www.example.com");
     assertFalse(auNode.hasContent());
-    assertEquals(AuUrl.PROTOCOL +"://www.example.com", auNode.getNodeUrl());
-    Iterator childIt = auNode.listNodes(null, false);
+    assertEquals(AuUrl.PROTOCOL, auNode.getNodeUrl());
+    Iterator childIt = auNode.listChildren(null, false);
     ArrayList childL = new ArrayList(3);
     while (childIt.hasNext()) {
       RepositoryNode node = (RepositoryNode)childIt.next();
@@ -180,10 +179,10 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
 
     RepositoryNode node = repo.getNode("http://www.example.com/test1");
     assertTrue(node.hasContent());
-    assertFalse(node.isInactive());
+    assertFalse(node.isContentInactive());
     repo.deactivateNode("http://www.example.com/test1");
     assertFalse(node.hasContent());
-    assertTrue(node.isInactive());
+    assertTrue(node.isContentInactive());
   }
 
   public void testCaching() throws Exception {
@@ -226,84 +225,6 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     assertEquals(refHits+1, repoImpl.getRefHits());
   }
 
-  public void testCusCompare() throws Exception {
-    CachedUrlSetSpec spec1 =
-        new RangeCachedUrlSetSpec("http://www.example.com/test");
-    CachedUrlSetSpec spec2 =
-        new RangeCachedUrlSetSpec("http://www.example.com");
-    MockCachedUrlSet cus1 = new MockCachedUrlSet(mau, spec1);
-    MockCachedUrlSet cus2 = new MockCachedUrlSet(mau, spec2);
-    assertEquals(LockssRepository.BELOW, repo.cusCompare(cus1, cus2));
-
-    spec1 = new RangeCachedUrlSetSpec("http://www.example.com/test");
-    spec2 = new RangeCachedUrlSetSpec("http://www.example.com/test/subdir");
-    cus1 = new MockCachedUrlSet(mau, spec1);
-    cus2 = new MockCachedUrlSet(mau, spec2);
-    assertEquals(LockssRepository.ABOVE, repo.cusCompare(cus1, cus2));
-
-    spec1 = new RangeCachedUrlSetSpec("http://www.example.com/test", "/a", "/b");
-    spec2 = new RangeCachedUrlSetSpec("http://www.example.com/test", "/c", "/d");
-    cus1 = new MockCachedUrlSet(mau, spec1);
-    cus2 = new MockCachedUrlSet(mau, spec2);
-    assertEquals(LockssRepository.SAME_LEVEL_NO_OVERLAP,
-                 repo.cusCompare(cus1, cus2));
-
-    spec2 = new RangeCachedUrlSetSpec("http://www.example.com/test", "/b", "/d");
-    cus2 = new MockCachedUrlSet(mau, spec2);
-    assertEquals(LockssRepository.SAME_LEVEL_OVERLAP,
-                 repo.cusCompare(cus1, cus2));
-
-    spec1 = new RangeCachedUrlSetSpec("http://www.example.com/test/subdir2");
-    spec2 = new RangeCachedUrlSetSpec("http://www.example.com/subdir");
-    cus1 = new MockCachedUrlSet(mau, spec1);
-    cus2 = new MockCachedUrlSet(mau, spec2);
-    assertEquals(LockssRepository.NO_RELATION, repo.cusCompare(cus1, cus2));
-
-    // test for single node specs
-    spec1 = new SingleNodeCachedUrlSetSpec("http://www.example.com");
-    spec2 = new RangeCachedUrlSetSpec("http://www.example.com/test");
-    cus1 = new MockCachedUrlSet(mau, spec1);
-    cus2 = new MockCachedUrlSet(mau, spec2);
-    assertEquals(LockssRepository.SAME_LEVEL_NO_OVERLAP, repo.cusCompare(cus1, cus2));
-    // reverse
-    assertEquals(LockssRepository.SAME_LEVEL_NO_OVERLAP, repo.cusCompare(cus2, cus1));
-
-    // test for Au urls
-    spec1 = new AuCachedUrlSetSpec();
-    spec2 = new AuCachedUrlSetSpec();
-    cus1 = new MockCachedUrlSet(mau, spec1);
-    cus2 = new MockCachedUrlSet(mau, spec2);
-    assertEquals(LockssRepository.SAME_LEVEL_OVERLAP, repo.cusCompare(cus1, cus2));
-
-    spec2 = new RangeCachedUrlSetSpec("http://www.example.com");
-    cus2 = new MockCachedUrlSet(mau, spec2);
-    assertEquals(LockssRepository.ABOVE, repo.cusCompare(cus1, cus2));
-    // reverse
-    assertEquals(LockssRepository.BELOW, repo.cusCompare(cus2, cus1));
-
-    // test for different AUs
-    spec1 = new RangeCachedUrlSetSpec("http://www.example.com");
-    spec2 = new RangeCachedUrlSetSpec("http://www.example.com");
-    cus1 = new MockCachedUrlSet(mau, spec1);
-    cus2 = new MockCachedUrlSet(new MockArchivalUnit(), spec2);
-    assertEquals(LockssRepository.NO_RELATION, repo.cusCompare(cus1, cus2));
-
-    // test for exclusive ranges
-    spec1 = new RangeCachedUrlSetSpec("http://www.example.com", "/abc", "/xyz");
-    spec2 = new RangeCachedUrlSetSpec("http://www.example.com/test");
-    cus1 = new MockCachedUrlSet(mau, spec1);
-    cus2 = new MockCachedUrlSet(mau, spec2);
-    // this range is inclusive, so should be parent
-    assertEquals(LockssRepository.ABOVE, repo.cusCompare(cus1, cus2));
-    assertEquals(LockssRepository.BELOW, repo.cusCompare(cus2, cus1));
-    spec1 = new RangeCachedUrlSetSpec("http://www.example.com", "/abc", "/mno");
-    cus1 = new MockCachedUrlSet(mau, spec1);
-    // this range is exclusive, so should be no relation
-    assertEquals(LockssRepository.NO_RELATION, repo.cusCompare(cus1, cus2));
-    // reverse
-    assertEquals(LockssRepository.NO_RELATION, repo.cusCompare(cus2, cus1));
-  }
-
   public void testConsistencyCheck() throws Exception {
     createLeaf("http://www.example.com/testDir/leaf1", "test stream", null);
 
@@ -327,11 +248,6 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
   }
 
   // test static naming calls
-
-  public void testAuKey() {
-    String expectedStr = mau.getAuId();
-    assertEquals(expectedStr, LockssRepositoryImpl.getAuKey(mau));
-  }
 
   public void testGetNewPluginDir() {
     // call this to 'reblank' after the effects of setUp()
@@ -361,7 +277,7 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
 
   public void testGetAuDirFromMap() {
     HashMap newNameMap = new HashMap();
-    newNameMap.put(LockssRepositoryImpl.getAuKey(mau), "testDir");
+    newNameMap.put(mau.getAuId(), "testDir");
     LockssRepositoryImpl.nameMap = newNameMap;
     StringBuffer buffer = new StringBuffer();
     LockssRepositoryImpl.getAuDir(mau, buffer);
@@ -373,7 +289,7 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     newProps.setProperty(LockssRepositoryImpl.AU_ID_PROP, mau.getAuId());
 
     HashMap newNameMap = new HashMap();
-    newNameMap.put(LockssRepositoryImpl.getAuKey(mau), "testDir");
+    newNameMap.put(mau.getAuId(), "testDir");
     LockssRepositoryImpl.nameMap = newNameMap;
     String location = LockssRepositoryImpl.mapAuToFileLocation(
         LockssRepositoryImpl.cacheLocation, mau);
@@ -395,7 +311,7 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     LockssRepositoryImpl.saveAuIdProperties(location, newProps);
 
     LockssRepositoryImpl.loadNameMap(LockssRepositoryImpl.cacheLocation);
-    assertEquals("ab", repo.nameMap.get(LockssRepositoryImpl.getAuKey(mau)));
+    assertEquals("ab", repo.nameMap.get(mau.getAuId()));
   }
 
   public void testLoadNameMapSkipping() {
@@ -406,8 +322,7 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     propsFile.delete();
 
     LockssRepositoryImpl.loadNameMap(LockssRepositoryImpl.cacheLocation);
-    assertNull(LockssRepositoryImpl.nameMap.get(
-        LockssRepositoryImpl.getAuKey(mau)));
+    assertNull(LockssRepositoryImpl.nameMap.get(mau.getAuId()));
   }
 
   public void testMapAuToFileLocation() {

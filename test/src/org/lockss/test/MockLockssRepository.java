@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssRepository.java,v 1.7 2003-12-23 00:26:14 tlipkis Exp $
+ * $Id: MockLockssRepository.java,v 1.8 2004-03-27 02:37:24 eaalto Exp $
  */
 
 /*
@@ -32,16 +32,11 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.test;
 
-import java.io.*;
 import java.net.*;
 import java.util.*;
-import java.lang.ref.WeakReference;
 import org.lockss.app.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
-import org.lockss.util.*;
-import org.apache.commons.collections.LRUMap;
-import org.apache.commons.collections.ReferenceMap;
 import org.lockss.repository.*;
 
 /**
@@ -95,68 +90,6 @@ public class MockLockssRepository implements LockssRepository {
     RepositoryNode node = getNode(url, false);
     if (node!=null) {
       node.deactivateContent();
-    }
-  }
-
-  public int cusCompare(CachedUrlSet cus1, CachedUrlSet cus2) {
-    // check that they're in the same AU
-    if (!cus1.getArchivalUnit().equals(cus2.getArchivalUnit())) {
-      return LockssRepository.NO_RELATION;
-    }
-    CachedUrlSetSpec spec1 = cus1.getSpec();
-    CachedUrlSetSpec spec2 = cus2.getSpec();
-    String url1 = cus1.getUrl();
-    String url2 = cus2.getUrl();
-
-    // check for top-level urls
-    if (spec1.isAu() || spec2.isAu()) {
-      if (spec1.equals(spec2)) {
-        return LockssRepository.SAME_LEVEL_OVERLAP;
-      } else if (spec1.isAu()) {
-        return LockssRepository.ABOVE;
-      } else {
-        return LockssRepository.BELOW;
-      }
-    }
-
-    if (!url1.endsWith(UrlUtil.URL_PATH_SEPARATOR)) {
-      url1 += UrlUtil.URL_PATH_SEPARATOR;
-    }
-    if (!url2.endsWith(UrlUtil.URL_PATH_SEPARATOR)) {
-      url2 += UrlUtil.URL_PATH_SEPARATOR;
-    }
-    if (url1.equals(url2)) {
-      //the urls are on the same level; check for overlap
-      if (spec1.isDisjoint(spec2)) {
-        return LockssRepository.SAME_LEVEL_NO_OVERLAP;
-      } else {
-        return LockssRepository.SAME_LEVEL_OVERLAP;
-      }
-    } else if (url1.startsWith(url2)) {
-      // url1 is a sub-directory of url2
-      if (spec2.isSingleNode()) {
-        return LockssRepository.SAME_LEVEL_NO_OVERLAP;
-      } else if (cus2.containsUrl(url1)) {
-        // child
-        return LockssRepository.BELOW;
-      } else {
-        // cus2 probably has a range which excludes url1
-        return LockssRepository.NO_RELATION;
-      }
-    } else if (url2.startsWith(url1)) {
-      // url2 is a sub-directory of url1
-      if (spec1.isSingleNode()) {
-        return LockssRepository.SAME_LEVEL_NO_OVERLAP;
-      } else if (cus1.containsUrl(url2)) {
-        // parent
-        return LockssRepository.ABOVE;
-      } else {
-        // cus1 probably has a range which excludes url2
-        return LockssRepository.NO_RELATION;
-      }
-    } else {
-      // no connection between the two urls
-      return LockssRepository.NO_RELATION;
     }
   }
 

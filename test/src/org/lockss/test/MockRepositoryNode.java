@@ -1,5 +1,5 @@
 /*
- * $Id: MockRepositoryNode.java,v 1.8 2004-03-11 02:31:23 eaalto Exp $
+ * $Id: MockRepositoryNode.java,v 1.9 2004-03-27 02:37:24 eaalto Exp $
  */
 
 /*
@@ -69,7 +69,7 @@ public class MockRepositoryNode implements RepositoryNode {
     return currentVersion>0;
   }
 
-  public boolean isInactive() {
+  public boolean isContentInactive() {
     return inactive;
   }
 
@@ -108,7 +108,7 @@ public class MockRepositoryNode implements RepositoryNode {
     return (children==null || children.size()>0);
   }
 
-  public Iterator listNodes(CachedUrlSetSpec filter, boolean includeInactive) {
+  public Iterator listChildren(CachedUrlSetSpec filter, boolean includeInactive) {
     return children.iterator();
   }
 

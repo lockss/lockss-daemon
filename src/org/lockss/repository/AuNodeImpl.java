@@ -1,5 +1,5 @@
 /*
- * $Id: AuNodeImpl.java,v 1.7 2004-03-09 23:57:50 eaalto Exp $
+ * $Id: AuNodeImpl.java,v 1.8 2004-03-27 02:37:24 eaalto Exp $
  */
 
 /*
@@ -52,7 +52,6 @@ public class AuNodeImpl extends RepositoryNodeImpl {
    * @return false
    */
   public boolean hasContent() {
-    if (nodeRootFile==null) loadNodeRoot();
     return false;
   }
 
@@ -60,7 +59,7 @@ public class AuNodeImpl extends RepositoryNodeImpl {
    * Overriden to return false.
    * @return false
    */
-  public boolean isInactive() {
+  public boolean isContentInactive() {
     return false;
   }
 
@@ -72,8 +71,15 @@ public class AuNodeImpl extends RepositoryNodeImpl {
     return false;
   }
 
-  public Iterator listNodes(CachedUrlSetSpec filter, boolean includeInactive) {
-    if (nodeRootFile==null) loadNodeRoot();
+  /**
+   * The overridden version has special code to properly determine the top-level
+   * children of the AU.
+   * @param filter the filter, if any
+   * @param includeInactive true iff inactive are to be included
+   * @return Iterator the children
+   */
+  protected List getNodeList(CachedUrlSetSpec filter, boolean includeInactive) {
+    if (nodeRootFile==null) initNodeRoot();
     if (!nodeRootFile.exists()) {
       logger.error("No cache directory located for: "+url);
       throw new LockssRepository.RepositoryStateException("No cache directory located.");
@@ -98,7 +104,7 @@ public class AuNodeImpl extends RepositoryNodeImpl {
           String dirName = new URL(protocolStr, urlStr, "").toString();
           RepositoryNode node = repository.getNode(dirName);
           // add all nodes which are internal or active leaves
-          if (!node.isLeaf() || (!node.isInactive()) || includeInactive) {
+          if (!node.isLeaf() || (!node.isContentInactive()) || includeInactive) {
             childM.put(dirName, repository.getNode(dirName));
           }
         } catch (MalformedURLException mue) {
@@ -116,7 +122,7 @@ public class AuNodeImpl extends RepositoryNodeImpl {
       Map.Entry entry = (Map.Entry)entriesIt.next();
       childL.add(entry.getValue());
     }
-    return childL.iterator();
+    return childL;
   }
 
   /**

@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.47 2004-03-24 23:39:52 eaalto Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.48 2004-03-27 02:37:24 eaalto Exp $
  */
 
 /*
@@ -99,7 +99,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
     return currentVersion>0;
   }
 
-  public boolean isInactive() {
+  public boolean isContentInactive() {
     ensureCurrentInfoLoaded();
     return currentVersion==INACTIVE_VERSION;
   }
@@ -134,7 +134,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
     }
 
     // since RepositoryNodes update and cache tree size, efficient to use them
-    for (Iterator subNodes = listNodes(filter, false); subNodes.hasNext(); ) {
+    for (Iterator subNodes = listChildren(filter, false); subNodes.hasNext(); ) {
       RepositoryNode subNode = (RepositoryNode)subNodes.next();
       totalSize += subNode.getTreeContentSize(null);
     }
@@ -147,74 +147,35 @@ public class RepositoryNodeImpl implements RepositoryNode {
     return totalSize;
   }
 
-/*
-  code for direct file measuring
-      // filter the immediate level
-      File[] children = nodeRootFile.listFiles();
-      for (int ii=0; ii<children.length; ii++) {
-        File child = children[ii];
-        if ((!child.isDirectory()) || (child.getName().equals(CONTENT_DIR))) {
-          continue;
-        }
-        // check if in initial spec
-        int bufMaxLength = url.length() + child.getName().length() + 1;
-        StringBuffer buffer = new StringBuffer(bufMaxLength);
-        buffer.append(url);
-        if (!url.endsWith("/")) {
-          buffer.append('/');
-        }
-        buffer.append(child.getName());
-
-        String childUrl = buffer.toString();
-        if ( (filter == null) || (filter.matches(childUrl))) {
-          totalSize += recurseDirContentSize(child);
-        }
-      }
-
-
-  private long recurseDirContentSize(File nodeDir) {
-    // add size of this dir, if any
-    long subSize = 0;
-    File contentFile = new File(nodeDir, CONTENT_DIR + File.separator +
-                                CURRENT_FILENAME);
-    if (contentFile.exists()) {
-      subSize = contentFile.length();
-    }
-
-    // recurse on children
-    File[] children = nodeDir.listFiles();
-    for (int ii=0; ii<children.length; ii++) {
-      File child = children[ii];
-      if ((!child.isDirectory()) || (child.getName().equals(CONTENT_DIR))) {
-        continue;
-      }
-      subSize += recurseDirContentSize(child);
-    }
-
-    //XXX store here?
-    return subSize;
-  }
- */
-
   public boolean isLeaf() {
     return (getChildCount() == 0);
   }
 
-  public Iterator listNodes(CachedUrlSetSpec filter, boolean includeInactive) {
+  public Iterator listChildren(CachedUrlSetSpec filter, boolean includeInactive) {
     return getNodeList(filter, includeInactive).iterator();
   }
 
-  private List getNodeList(CachedUrlSetSpec filter, boolean includeInactive) {
-    if (nodeRootFile==null) loadNodeRoot();
+  protected List getNodeList(CachedUrlSetSpec filter, boolean includeInactive) {
+    if (nodeRootFile==null) initNodeRoot();
     if (!nodeRootFile.exists()) {
       logger.error("No cache directory located for: "+url);
       throw new LockssRepository.RepositoryStateException("No cache directory located.");
     }
-    if (cacheLocationFile==null) loadCacheLocation();
+    if (cacheLocationFile==null) initCacheLocation();
     File[] children = nodeRootFile.listFiles();
     // sorts alphabetically relying on File.compareTo()
     Arrays.sort(children, new FileComparator());
-    ArrayList childL = new ArrayList(Math.min(40, children.length));
+    int listSize;
+    if (filter==null) {
+      listSize = children.length;
+    } else {
+      // give a reasonable minimum since, if it's filtered, the array size
+      // may be much smaller than the total children, particularly in very
+      // flat trees
+      listSize = Math.min(40, children.length);
+    }
+
+    ArrayList childL = new ArrayList(listSize);
     for (int ii=0; ii<children.length; ii++) {
       File child = children[ii];
       if ((!child.isDirectory()) || (child.getName().equals(CONTENT_DIR))) {
@@ -228,7 +189,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
           // add all nodes which are internal or active leaves
           boolean activeInternal = !node.isLeaf() && !node.isDeleted();
           boolean activeLeaf = node.isLeaf() && !node.isDeleted() &&
-              (!node.isInactive() || includeInactive);
+              (!node.isContentInactive() || includeInactive);
           if (activeInternal || activeLeaf) {
             childL.add(repository.getNode(childUrl));
           }
@@ -281,7 +242,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
   }
 
   public int getCurrentVersion() {
-    if ((!hasContent()) && ((!isInactive() && !isDeleted()))) {
+    if ((!hasContent()) && ((!isContentInactive() && !isDeleted()))) {
       logger.error("Cannot get version if no content: "+url);
       throw new UnsupportedOperationException("No content to version.");
     }
@@ -322,7 +283,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
     }
 
     // if restoring from deletion or inactivation
-    if (isInactive() || isDeleted()) {
+    if (isContentInactive() || isDeleted()) {
       int lastVersion = determineLastActiveVersion();
       File inactiveCacheFile = getInactiveCacheFile();
       File inactivePropsFile = getInactivePropsFile();
@@ -529,7 +490,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
   public synchronized void markAsDeleted() {
     ensureCurrentInfoLoaded();
-    if (hasContent() && !isInactive()) {
+    if (hasContent() && !isContentInactive()) {
       deactivateContent();
     }
 
@@ -561,7 +522,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
       return;
     }
 
-    if (isInactive()) {
+    if (isContentInactive()) {
       int lastVersion = determineLastActiveVersion();
       if (lastVersion > 0) {
         File inactiveCacheFile = getInactiveCacheFile();
@@ -580,7 +541,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
       }
       return;
     }
-    if ((!hasContent()) || (getCurrentVersion() == 1)) {
+    if ((!hasContent()) || (getCurrentVersion() <= 1)) {
       logger.error("Version restore attempted on node without previous versions.");
       throw new UnsupportedOperationException("Node must have previous versions.");
     }
@@ -589,6 +550,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
     File lastPropsFile = getVersionedPropsFile(lastVersion);
 
     // delete current version
+    // XXX probably should rename these instead
     currentCacheFile.delete();
     currentPropsFile.delete();
 
@@ -622,7 +584,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
     } catch (IOException ioe) {
       logger.error("Couldn't get inputstream for '"+curInputFile.getPath()+"'");
       logger.debug3("Running consistency check on node '"+url+"'");
-      repository.consistencyCheck(this);
+      repository.deactivateInconsistentNode(this);
       throw new LockssRepository.RepositoryStateException("Couldn't get info for node.");
     }
   }
@@ -685,13 +647,13 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
   private void ensureCurrentInfoLoaded() {
     if (currentVersion==-1) {
-      loadNodeRoot();
-      loadCacheLocation();
-      loadCurrentCacheFile();
-      loadCurrentPropsFile();
-      loadTempCacheFile();
-      loadTempPropsFile();
-      loadNodePropsFile();
+      initNodeRoot();
+      initCacheLocation();
+      initCurrentCacheFile();
+      initCurrentPropsFile();
+      initTempCacheFile();
+      initTempPropsFile();
+      initNodePropsFile();
     } else if ((currentVersion==0) || (currentVersion==INACTIVE_VERSION) ||
                (currentVersion==DELETED_VERSION)) {
       return;
@@ -756,8 +718,11 @@ public class RepositoryNodeImpl implements RepositoryNode {
         }
       }
       if (curProps!=null) {
-        currentVersion = Integer.parseInt(
-                       curProps.getProperty(LOCKSS_VERSION_NUMBER, "-1"));
+        currentVersion = Integer.parseInt(curProps.getProperty(LOCKSS_VERSION_NUMBER, "-1"));
+        if (currentVersion <= 0) {
+          logger.error("Bad content version found: "+currentVersion);
+          repository.deactivateInconsistentNode(this);
+        }
       }
     }
   }
@@ -804,13 +769,13 @@ public class RepositoryNodeImpl implements RepositoryNode {
     }
   }
 
-  private void loadCurrentCacheFile() {
+  private void initCurrentCacheFile() {
     StringBuffer buffer = getContentDirBuffer();
     buffer.append(CURRENT_FILENAME);
     currentCacheFile = new File(buffer.toString());
   }
 
-  private void loadCurrentPropsFile() {
+  private void initCurrentPropsFile() {
     StringBuffer buffer = getContentDirBuffer();
     buffer.append(CURRENT_FILENAME);
     buffer.append(".");
@@ -818,13 +783,13 @@ public class RepositoryNodeImpl implements RepositoryNode {
     currentPropsFile = new File(buffer.toString());
   }
 
-  private void loadTempCacheFile() {
+  private void initTempCacheFile() {
     StringBuffer buffer = getContentDirBuffer();
     buffer.append(TEMP_FILENAME);
     tempCacheFile = new File(buffer.toString());
   }
 
-  private void loadTempPropsFile() {
+  private void initTempPropsFile() {
     StringBuffer buffer = getContentDirBuffer();
     buffer.append(TEMP_FILENAME);
     buffer.append(".");
@@ -832,18 +797,18 @@ public class RepositoryNodeImpl implements RepositoryNode {
     tempPropsFile = new File(buffer.toString());
   }
 
-  private void loadNodePropsFile() {
+  private void initNodePropsFile() {
     StringBuffer buffer = new StringBuffer(nodeLocation);
     buffer.append(File.separator);
     buffer.append(NODE_PROPS_FILENAME);
     nodePropsFile = new File(buffer.toString());
   }
 
-  private void loadCacheLocation() {
+  private void initCacheLocation() {
     cacheLocationFile = new File(getContentDirBuffer().toString());
   }
 
-  protected void loadNodeRoot() {
+  protected void initNodeRoot() {
     nodeRootFile = new File(nodeLocation);
   }
 

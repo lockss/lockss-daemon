@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNode.java,v 1.15 2004-03-11 02:31:24 eaalto Exp $
+ * $Id: RepositoryNode.java,v 1.16 2004-03-27 02:37:24 eaalto Exp $
  */
 
 /*
@@ -56,13 +56,15 @@ public interface RepositoryNode {
   /**
    * Determines if the node is currently inactive.  Inactive nodes often
    * have old content but no current content, so hasContent() will return false.
+   * The node is still counted as part of the AU, and its children are present.
    * @return true if the node is inactive
    */
-  public boolean isInactive();
+  public boolean isContentInactive();
 
   /**
    * Determines if the node is deleted.  Deleted nodes may have old content or
-   * children, but will not appear in lists of nodes
+   * children, but will not appear in lists of nodes.  Their children will not
+   * be included in the AU.
    * @return true if the node is deleted
    */
   public boolean isDeleted();
@@ -103,7 +105,7 @@ public interface RepositoryNode {
    * @param includeInactive true to include inactive nodes
    * @return an <code>Iterator</code> of RepositoryNode objects
    */
-  public Iterator listNodes(CachedUrlSetSpec filter, boolean includeInactive);
+  public Iterator listChildren(CachedUrlSetSpec filter, boolean includeInactive);
 
   /**
    * Prepares the node to write to a new version.  Should be called before storing

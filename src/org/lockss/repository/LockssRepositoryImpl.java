@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.46 2004-03-09 23:57:50 eaalto Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.47 2004-03-27 02:37:24 eaalto Exp $
  */
 
 /*
@@ -74,15 +74,20 @@ public class LockssRepositoryImpl
   static final String AU_ID_FILE = "#au_id_file";
   static final String AU_ID_PROP = "au.id";
   static final String PLUGIN_ID_PROP = "plugin.id";
-  static String lastPluginDir = ""+(char)('a'-1);
   static final char ESCAPE_CHAR = '#';
   static final String ESCAPE_STR = "#";
   static final char ENCODED_SEPARATOR_CHAR = 's';
+  static final String INITIAL_PLUGIN_DIR = String.valueOf((char)('a'-1));
+  static String lastPluginDir = INITIAL_PLUGIN_DIR;
 
   /**
-   * Maximum number of node instances to cache.
+   * Parameter for maximum number of node instances to cache.  This can be
+   * fairly small because there typically isn't need for repeated access to
+   * the same nodes over a short time.
    */
-  public static final int MAX_LRUMAP_SIZE = 12;
+  public static final String PARAM_MAX_LRUMAP_SIZE = Configuration.PREFIX +
+      "cache.max.lrumap.size";
+  private static final int DEFAULT_MAX_LRUMAP_SIZE = 12;
 
   // this contains a '#' so that it's not defeatable by strings which
   // match the prefix in a url (like '../tmp/')
@@ -103,21 +108,27 @@ public class LockssRepositoryImpl
       // this shouldn't happen
       rootLocation += File.separator;
     }
-    nodeCache = new LRUMap(MAX_LRUMAP_SIZE);
+    nodeCache = new LRUMap(DEFAULT_MAX_LRUMAP_SIZE);
     refMap = new ReferenceMap(ReferenceMap.HARD, ReferenceMap.WEAK);
   }
 
   public void stopService() {
     // mainly important in testing to blank this
-    lastPluginDir = ""+(char)('a'-1);
+    lastPluginDir = INITIAL_PLUGIN_DIR;
     nameMap = null;
     super.stopService();
   }
 
-  protected void setConfig(Configuration config, Configuration oldConfig,
+  protected void setConfig(Configuration newConfig, Configuration prevConfig,
                            Set changedKeys) {
     // at some point we'll have to respond to changes in the available disk
     // space list
+
+    int maxLruMapSize = newConfig.getInt(PARAM_MAX_LRUMAP_SIZE,
+                                         DEFAULT_MAX_LRUMAP_SIZE);
+    if (nodeCache.getMaximumSize() != maxLruMapSize) {
+      nodeCache.setMaximumSize(maxLruMapSize);
+    }
   }
 
   /** Called between initService() and startService(), then whenever the
@@ -149,108 +160,24 @@ public class LockssRepositoryImpl
     }
   }
 
-  public int cusCompare(CachedUrlSet cus1, CachedUrlSet cus2) {
-    // check that they're in the same AU
-    if (!cus1.getArchivalUnit().equals(cus2.getArchivalUnit())) {
-      return LockssRepository.NO_RELATION;
-    }
-    CachedUrlSetSpec spec1 = cus1.getSpec();
-    CachedUrlSetSpec spec2 = cus2.getSpec();
-    String url1 = cus1.getUrl();
-    String url2 = cus2.getUrl();
-
-    // check for top-level urls
-    if (spec1.isAu() || spec2.isAu()) {
-      if (spec1.equals(spec2)) {
-        return LockssRepository.SAME_LEVEL_OVERLAP;
-      } else if (spec1.isAu()) {
-        return LockssRepository.ABOVE;
-      } else {
-        return LockssRepository.BELOW;
-      }
-    }
-
-    if (!url1.endsWith(UrlUtil.URL_PATH_SEPARATOR)) {
-      url1 += UrlUtil.URL_PATH_SEPARATOR;
-    }
-    if (!url2.endsWith(UrlUtil.URL_PATH_SEPARATOR)) {
-      url2 += UrlUtil.URL_PATH_SEPARATOR;
-    }
-    if (url1.equals(url2)) {
-      //the urls are on the same level; check for overlap
-      if (spec1.isDisjoint(spec2)) {
-        return LockssRepository.SAME_LEVEL_NO_OVERLAP;
-      } else {
-        return LockssRepository.SAME_LEVEL_OVERLAP;
-      }
-    } else if (url1.startsWith(url2)) {
-      // url1 is a sub-directory of url2
-      if (spec2.isSingleNode()) {
-        return LockssRepository.SAME_LEVEL_NO_OVERLAP;
-      } else if (cus2.containsUrl(url1)) {
-        // child
-        return LockssRepository.BELOW;
-      } else {
-        // cus2 probably has a range which excludes url1
-        return LockssRepository.NO_RELATION;
-      }
-    } else if (url2.startsWith(url1)) {
-      // url2 is a sub-directory of url1
-      if (spec1.isSingleNode()) {
-        return LockssRepository.SAME_LEVEL_NO_OVERLAP;
-      } else if (cus1.containsUrl(url2)) {
-        // parent
-        return LockssRepository.ABOVE;
-      } else {
-        // cus1 probably has a range which excludes url2
-        return LockssRepository.NO_RELATION;
-      }
-    } else {
-      // no connection between the two urls
-      return LockssRepository.NO_RELATION;
-    }
-  }
-
+  /**
+   * This function returns a RepositoryNode with a canonicalized path.
+   * @param url the url in String form
+   * @param create true iff the node should be created if absent
+   * @return RepositoryNode the node
+   * @throws MalformedURLException
+   */
   private synchronized RepositoryNode getNode(String url, boolean create)
       throws MalformedURLException {
     String urlKey;
     boolean isAuUrl = false;
     if (AuUrl.isAuUrl(url)) {
+      // path information is lost here, but is unimportant if it's an AuUrl
       urlKey = AuUrl.PROTOCOL;
       isAuUrl = true;
     } else {
-      try {
-        URL testUrl = new URL(url);
-        String path = testUrl.getPath();
-        if (path.indexOf("/.")>=0) {
-          if (FileUtil.isLegalPath(path)) {
-            // canonicalize to remove urls including '..' and '.'
-            path = TEST_PREFIX + path;
-            File testFile = new File(path);
-            String canonPath = testFile.getCanonicalPath();
-            String sysDepPrefix = FileUtil.sysDepPath(TEST_PREFIX);
-            int pathIndex = canonPath.indexOf(sysDepPrefix) +
-                sysDepPrefix.length();
-            urlKey = testUrl.getProtocol() + "://" +
-                testUrl.getHost().toLowerCase() +
-                FileUtil.sysIndepPath(canonPath.substring(pathIndex));
-          } else {
-            logger.error("Illegal URL detected: "+url);
-            throw new MalformedURLException("Illegal URL detected.");
-          }
-          url = urlKey;
-        } else {
-          // clean path, no testing needed
-          urlKey = url;
-        }
-        String query = testUrl.getQuery();
-        if (query!=null) {
-          urlKey += "?" + query;
-        }
-      } catch (IOException ie) {
-        logger.error("Error testing URL: "+ie);
-        throw new MalformedURLException ("Error testing URL.");
-      }
+      // create a canonical path, handling all illegal path traversal
+      urlKey = canonicalizePath(url);
     }
     // check LRUMap cache for node
     RepositoryNode node = (RepositoryNode)nodeCache.get(urlKey);
@@ -275,16 +202,19 @@ public class LockssRepositoryImpl
     if (isAuUrl) {
       // base directory of ArchivalUnit
       nodeLocation = rootLocation;
-      node = new AuNodeImpl(url, nodeLocation, this);
+      node = new AuNodeImpl(urlKey, nodeLocation, this);
     } else {
+      // determine proper node location
       nodeLocation = LockssRepositoryImpl.mapUrlToFileLocation(rootLocation,
-          url);
-      node = new RepositoryNodeImpl(url, nodeLocation, this);
+          urlKey);
+      node = new RepositoryNodeImpl(urlKey, nodeLocation, this);
     }
+
     if (!create) {
       // if not creating, check for existence
       File nodeDir = new File(nodeLocation);
       if (!nodeDir.exists()) {
+        // return null if the node doesn't exist and shouldn't be created
         return null;
       }
       if (!nodeDir.isDirectory()) {
@@ -299,18 +229,73 @@ public class LockssRepositoryImpl
     return node;
   }
 
+  // functions for testing
   int getCacheHits() { return cacheHits; }
   int getCacheMisses() { return cacheMisses; }
   int getRefHits() { return refHits; }
   int getRefMisses() { return refMisses; }
 
-  void consistencyCheck(RepositoryNodeImpl node) {
+  /**
+   * This is called when a node is in an inconsistent state.  It simply creates
+   * some necessary directories and deactivates the node.  Future polls should
+   * restore it properly.
+   * @param node the inconsistent node
+   */
+  void deactivateInconsistentNode(RepositoryNodeImpl node) {
     logger.warning("Inconsistent node state found; node content deactivated.");
     if (!node.cacheLocationFile.exists()) {
       node.cacheLocationFile.mkdirs();
     }
     // manually deactivate
     node.deactivateContent();
+  }
+
+  /**
+   * A method to remove any non-canonical '..' or '.' elements in the path,
+   * as well as protecting against illegal path traversal.
+   * @param url the raw url
+   * @return String the canonicalized url
+   * @throws MalformedURLException
+   */
+  public static String canonicalizePath(String url)
+      throws MalformedURLException {
+    String canonUrl;
+    try {
+      URL testUrl = new URL(url);
+      String path = testUrl.getPath();
+      // look for '.' or '..' elements
+      if (path.indexOf("/.")>=0) {
+        // check if path traversal is legal
+        if (FileUtil.isLegalPath(path)) {
+          // canonicalize to remove urls including '..' and '.'
+          path = TEST_PREFIX + path;
+          File testFile = new File(path);
+          String canonPath = testFile.getCanonicalPath();
+          String sysDepPrefix = FileUtil.sysDepPath(TEST_PREFIX);
+          int pathIndex = canonPath.indexOf(sysDepPrefix) +
+              sysDepPrefix.length();
+          // reconstruct the url
+          canonUrl = testUrl.getProtocol() + "://" +
+              testUrl.getHost().toLowerCase() +
+              FileUtil.sysIndepPath(canonPath.substring(pathIndex));
+          // restore the query, if any
+          String query = testUrl.getQuery();
+          if (query!=null) {
+            canonUrl += "?" + query;
+          }
+        } else {
+          logger.error("Illegal URL detected: "+url);
+          throw new MalformedURLException("Illegal URL detected.");
+        }
+      } else {
+        // clean path, no testing needed
+        canonUrl = url;
+      }
+    } catch (IOException ie) {
+      logger.error("Error testing URL: "+ie);
+      throw new MalformedURLException ("Error testing URL.");
+    }
+    return canonUrl;
   }
 
   // static calls
@@ -336,6 +321,11 @@ public class LockssRepositoryImpl
         LockssRepositoryImpl.mapAuToFileLocation(cacheLocation, au));
   }
 
+  /**
+   * Adds the 'cache' directory to the HD location.
+   * @param cacheDir the root location.
+   * @return String the extended location
+   */
   static String extendCacheLocation(String cacheDir) {
     StringBuffer buffer = new StringBuffer(cacheDir);
     if (!cacheDir.endsWith(File.separator)) {
@@ -400,15 +390,22 @@ public class LockssRepositoryImpl
 
   // name mapping functions
 
+  /**
+   * Finds the directory for this AU.  If none found in the map, designates
+   * a new dir for it.
+   * @param au the AU
+   * @param buffer a StringBuffer to add the dir name to.
+   */
   static void getAuDir(ArchivalUnit au, StringBuffer buffer) {
     if (nameMap == null) {
       loadNameMap(buffer.toString());
     }
-    String auKey = getAuKey(au);
+    String auKey = au.getAuId();
     String auDir = (String)nameMap.get(auKey);
     if (auDir == null) {
       logger.debug3("Creating new au directory for '" + auKey + "'.");
       while (true) {
+        // loop through looking for an available dir
         auDir = getNewPluginDir();
         File testDir = new File(buffer.toString() + auDir);
         if (!testDir.exists()) {
@@ -421,6 +418,9 @@ public class LockssRepositoryImpl
       logger.debug3("New au directory: "+auDir);
       nameMap.put(auKey, auDir);
       String auLocation = buffer.toString() + auDir;
+      // write the new au property file to the new dir
+      // XXX this data should be backed up elsewhere to avoid single-point
+      // corruption
       Properties idProps = new Properties();
       idProps.setProperty(AU_ID_PROP, au.getAuId());
       saveAuIdProperties(auLocation, idProps);
@@ -428,6 +428,11 @@ public class LockssRepositoryImpl
     buffer.append(auDir);
   }
 
+  /**
+   * Loads the name map by recursing through the current dirs and reading
+   * the AU prop file at each location.
+   * @param rootLocation the repository HD root location
+   */
   static void loadNameMap(String rootLocation) {
     logger.debug3("Loading name map for '" + rootLocation + "'.");
     nameMap = new HashMap();
@@ -439,8 +444,10 @@ public class LockssRepositoryImpl
     }
     File[] pluginAus = rootFile.listFiles();
     for (int ii = 0; ii < pluginAus.length; ii++) {
+      // loop through reading each property and storing the id with that dir
       String dirName = pluginAus[ii].getName();
       if (dirName.compareTo(lastPluginDir) == 1) {
+        // adjust the 'lastPluginDir' upwards if necessary
         lastPluginDir = dirName;
       }
 
@@ -449,14 +456,20 @@ public class LockssRepositoryImpl
         // if no properties were found, just continue
         continue;
       }
+      // store the id, dirName pair in our map
       nameMap.put(idProps.getProperty(AU_ID_PROP), dirName);
     }
   }
 
+  /**
+   * Returns the next dir name, from 'a'->'z', then 'aa'->'az', then 'ba'->etc.
+   * @return String the next dir
+   */
   static String getNewPluginDir() {
     String newPluginDir = "";
     boolean charChanged = false;
     // go through and increment the first non-'z' char
+    // counts back from the last char, so 'aa'->'ab', not 'ba'
     for (int ii=lastPluginDir.length()-1; ii>=0; ii--) {
       char curChar = lastPluginDir.charAt(ii);
       if (!charChanged) {
@@ -493,6 +506,8 @@ public class LockssRepositoryImpl
   }
 
   static void saveAuIdProperties(String location, Properties props) {
+    //XXX these AU_ID_FILE entries need to be backed up elsewhere to avoid
+    // single-point corruption
     File propDir = new File(location);
     if (!propDir.exists()) {
       logger.debug("Creating directory '"+propDir.getAbsolutePath()+"'");
@@ -511,10 +526,6 @@ public class LockssRepositoryImpl
       throw new LockssRepository.RepositoryStateException(
           "Couldn't write au id properties file.");
     }
-  }
-
-  static String getAuKey(ArchivalUnit au) {
-    return au.getAuId();
   }
 
   // lockss filename-specific encoding methods
