@@ -1,5 +1,5 @@
 /*
- * $Id: LcapComm.java,v 1.28 2003-04-21 05:38:49 tal Exp $
+ * $Id: LcapComm.java,v 1.29 2003-04-21 22:22:17 claire Exp $
  */
 
 /*
@@ -144,7 +144,7 @@ public class LcapComm extends BaseLockssManager {
       uniSendToName = config.get(PARAM_UNI_ADDR_SEND);
       verifyMulticast = config.getBoolean(PARAM_MULTI_VERIFY, false);
     } catch (Configuration.InvalidParam e) {
-      log.critical("Config error, not started", e);
+      log.critical("Config error, not started: " + e);
     }
     try {
       if (groupName != null) {
@@ -155,14 +155,14 @@ public class LcapComm extends BaseLockssManager {
 	return;
       }
     } catch (UnknownHostException e) {
-      log.critical("Can't get group addr, not started", e);
+      log.critical("Can't get group addr, not started: " + e);
     }
     try {
       if (uniSendToName != null) {
 	uniSendToAddr = InetAddress.getByName(uniSendToName);
       }
     } catch (UnknownHostException e) {
-      log.critical("Can't get unicast send-to addr, not started", e);
+      log.critical("Can't get unicast send-to addr, not started: " + e);
     }
 
     if (log.isDebug()) {
