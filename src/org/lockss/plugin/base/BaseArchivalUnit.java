@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.61 2004-03-23 08:26:08 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.62 2004-03-26 17:57:51 tlipkis Exp $
  */
 
 /*
@@ -198,7 +198,8 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     // get the new content crawl interval
     newContentCrawlIntv = config.getTimeInterval(NEW_CONTENT_CRAWL_KEY,
                                                  defaultContentCrawlIntv);
-    logger.debug2("Set new content crawl interval to " + newContentCrawlIntv);
+    logger.debug2("Setting new content crawl interval to " +
+		  StringUtil.timeIntervalToString(newContentCrawlIntv));
 
     // make the start url
     startUrlString = makeStartUrl();

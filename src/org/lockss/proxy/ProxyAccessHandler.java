@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyAccessHandler.java,v 1.1 2004-02-10 07:52:37 tlipkis Exp $
+ * $Id: ProxyAccessHandler.java,v 1.2 2004-03-26 17:57:51 tlipkis Exp $
  */
 
 /*
@@ -74,8 +74,8 @@ public class ProxyAccessHandler extends IpAccessHandler {
 
     try	{
       String userAgent = request.getField("user-agent");
-      if (log.isDebug2()) {
-	log.debug2("user-agent: " + userAgent);
+      if (log.isDebug3()) {
+	log.debug3("user-agent: " + userAgent);
       }
       boolean isRepairRequest =
 	StringUtil.equalStrings(userAgent, LockssDaemon.getUserAgent());
