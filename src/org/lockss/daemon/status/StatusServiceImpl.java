@@ -1,5 +1,5 @@
 /*
- * $Id: StatusServiceImpl.java,v 1.3 2003-03-13 18:54:37 troberts Exp $
+ * $Id: StatusServiceImpl.java,v 1.4 2003-03-13 23:14:08 troberts Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.daemon.status;
 
 import java.util.*;
 import org.lockss.app.*;
+import org.lockss.util.*;
 
 /**
  * Main implementation of {@link StatusService}
@@ -45,6 +46,7 @@ public class StatusServiceImpl
 
   public StatusServiceImpl() {
     statusAccessors = new Hashtable();
+    registerStatusAccessor(ALL_TABLES_TABLE, new AllTableStatusAccessor());
   }
 
   public StatusTable getTable(String tableName, Object key) 
@@ -78,5 +80,70 @@ public class StatusServiceImpl
 
   public synchronized void unregisterStatusAccessor(String tableName){
     statusAccessors.remove(tableName);
+  }
+
+  private synchronized List getAllTableNames() {
+    /**
+     * keySet() calls a synchronized method, so it is thread safe, but the set
+     * returned is backed by the Hashtable, which mean that changes to that are
+     * reflected in the set.  We want a snap shot, so I synched this
+     */
+    Iterator it = statusAccessors.keySet().iterator();
+
+    List tables = new ArrayList();
+    while (it.hasNext()) {
+      String tableName = (String) it.next();
+      StatusAccessor statusAccessor = 
+	(StatusAccessor)statusAccessors.get(tableName);
+      if (!statusAccessor.requiresKey()) {
+	tables.add(tableName);
+      }
+    }
+    return tables;
+  }
+
+  private class AllTableStatusAccessor implements StatusAccessor {
+    private List columns;
+    private List sortRules;
+    private static final String COL_NAME = "table_name";
+    private static final String COL_TITLE = "Table name";
+
+    public AllTableStatusAccessor() {
+      StatusTable.ColumnDescriptor col = 
+	new StatusTable.ColumnDescriptor(COL_NAME, COL_TITLE, 
+					 StatusTable.TYPE_STRING);
+      columns = ListUtil.list(col);
+
+      StatusTable.SortRule sortRule = 
+	new StatusTable.SortRule(COL_NAME, true);
+
+      sortRules = ListUtil.list(sortRule);
+    }
+
+    public List getColumnDescriptors(Object key) throws StatusService.Error {
+      return columns;
+    }
+
+    public List getRows(Object key) throws StatusService.Error {
+      List tableNames =  getAllTableNames();
+      Iterator it = tableNames.iterator();
+      List rows = new ArrayList(tableNames.size());
+      while (it.hasNext()) {
+	String tableName = (String) it.next();
+	Map row = new HashMap(1); //will only have the one key-value pair
+	row.put(COL_NAME, 
+		new StatusTable.Reference(tableName, tableName, null));
+	rows.add(row);
+      }
+      return rows;
+    }
+
+    public List getDefaultSortRules(Object key) throws StatusService.Error {
+      return sortRules;
+    }
+
+    public boolean requiresKey() {
+      return false;
+    }
   }
 }

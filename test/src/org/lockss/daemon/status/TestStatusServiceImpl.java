@@ -1,5 +1,5 @@
 /*
- * $Id: TestStatusServiceImpl.java,v 1.1 2003-03-13 00:22:05 troberts Exp $
+ * $Id: TestStatusServiceImpl.java,v 1.2 2003-03-13 23:14:08 troberts Exp $
  */
 
 /*
@@ -137,6 +137,16 @@ public class TestStatusServiceImpl extends LockssTestCase {
     } catch (StatusService.RuntimeError re) {
     }
   }
+
+  public void testRegisteringAllTableThrows() {
+    try {
+      statusService.registerStatusAccessor(StatusService.ALL_TABLES_TABLE, 
+					   new MockStatusAccessor());
+      fail("Should have thrown after trying to register StatusAccessor for "+
+	   "all tables");
+    } catch (StatusService.RuntimeError re) {
+    }
+  }    
 
   public void testUnregisteringBadDoesntThrow() {
     statusService.unregisterStatusAccessor("table1");
@@ -324,6 +334,66 @@ public class TestStatusServiceImpl extends LockssTestCase {
     assertRowsEqual(expectedRows, actualRows);
   }
 
+  static Object[][] allTablesExpectedColArray = 
+  {
+    {"table_name", "Table name", new Integer(StatusTable.TYPE_STRING)}
+  };
+
+  static Object[][] allTablesExpectedRowArray = 
+  {
+    {new StatusTable.Reference("A table", "A table", null)},
+    {new StatusTable.Reference("B table", "B table", null)},
+    {new StatusTable.Reference("F table", "F table", null)},
+    {new StatusTable.Reference("Z table", "Z table", null)},
+    {new StatusTable.Reference("table of all tables", 
+			       "table of all tables", null)}
+  };
+
+  public void testGetTableOfAllTables() throws StatusService.Error {
+    statusService.registerStatusAccessor("A table", new MockStatusAccessor());
+    statusService.registerStatusAccessor("B table", new MockStatusAccessor());
+    statusService.registerStatusAccessor("F table", new MockStatusAccessor());
+    statusService.registerStatusAccessor("Z table", new MockStatusAccessor());
+    
+    StatusTable table = 
+      statusService.getTable(StatusService.ALL_TABLES_TABLE, null);
+
+    assertNotNull(table);
+    List expectedCols = 
+      makeColumnDescriptorsFromArray(allTablesExpectedColArray);
+    assertColumnDescriptorsEqual(expectedCols, 
+				 table.getColumnDescriptors());
+
+    List expectedRows = makeRowsFromArray(expectedCols,
+					  allTablesExpectedRowArray);
+    assertRowsEqual(expectedRows, table.getSortedRows());
+  }
+  
+  public void testGetTableOfAllTablesFiltersTablesThatRequireKeys() 
+      throws StatusService.Error {
+    statusService.registerStatusAccessor("A table", new MockStatusAccessor());
+    statusService.registerStatusAccessor("B table", new MockStatusAccessor());
+    statusService.registerStatusAccessor("F table", new MockStatusAccessor());
+    statusService.registerStatusAccessor("Z table", new MockStatusAccessor());
+
+    MockStatusAccessor statusAccessor = new MockStatusAccessor();
+    statusAccessor.setRequiresKey(true);
+    statusService.registerStatusAccessor("excluded table", statusAccessor);
+    
+    StatusTable table = 
+      statusService.getTable(StatusService.ALL_TABLES_TABLE, null);
+
+    assertNotNull(table);
+    List expectedCols = 
+      makeColumnDescriptorsFromArray(allTablesExpectedColArray);
+    assertColumnDescriptorsEqual(expectedCols, 
+				 table.getColumnDescriptors());
+
+    List expectedRows = makeRowsFromArray(expectedCols,
+					  allTablesExpectedRowArray);
+    assertRowsEqual(expectedRows, table.getSortedRows());
+  }
+  
   
   /**
    * I don't normally like to write tests for test code, but this is a pretty 
