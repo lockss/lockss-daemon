@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePlugin.java,v 1.11 2002-11-06 00:10:06 aalto Exp $
+ * $Id: HighWireArchivalUnit.java,v 1.1 2003-01-03 00:17:42 aalto Exp $
  */
 
 /*
@@ -32,13 +32,10 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.highwire;
 
-import java.io.*;
 import java.net.*;
 import java.util.*;
-import java.security.MessageDigest;
 import gnu.regexp.*;
 import org.lockss.daemon.*;
-import org.lockss.crawler.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
 
@@ -49,26 +46,29 @@ import org.lockss.plugin.*;
  * @version 0.0
  */
 
-public class HighWirePlugin extends BaseArchivalUnit {
-  static public final String LOG_NAME = "HighWirePlugin";
+public class HighWireArchivalUnit extends BaseArchivalUnit {
+  static public final String LOG_NAME = "HighWireArchivalUnit";
   protected Logger logger = Logger.getLogger(LOG_NAME);
 
   /**
    * Standard constructor for HighWirePlugin.
    *
    * @param start URL to start crawl
+   * @throws REException
+   * @throws MalformedURLException
    */
-  public HighWirePlugin(String start) throws REException, MalformedURLException{
+  public HighWireArchivalUnit(String start)
+      throws REException, MalformedURLException {
     super(makeCrawlSpec(start));
   }
 
   public CachedUrlSet cachedUrlSetFactory(ArchivalUnit owner,
-					     CachedUrlSetSpec cuss) {
-    return new HighWireCachedUrlSet(owner, cuss);
+      CachedUrlSetSpec cuss) {
+    return new GenericFileCachedUrlSet(owner, cuss);
   }
 
   public CachedUrl cachedUrlFactory(CachedUrlSet owner, String url) {
-    return new HighWireCachedUrl(owner, url);
+    return new GenericFileCachedUrl(owner, url);
   }
 
   public UrlCacher urlCacherFactory(CachedUrlSet owner, String url) {
@@ -84,22 +84,23 @@ public class HighWirePlugin extends BaseArchivalUnit {
     return new CrawlSpec(start, rule);
   }
 
-  protected static int getUrlVolumeNumber(String urlStr) throws MalformedURLException{
+  protected static int getUrlVolumeNumber(String urlStr)
+      throws MalformedURLException {
     URL url = new URL(urlStr);
     String path = url.getPath();
 
     String volStr = "lockss-volume";
     int volStrIdx = path.indexOf(volStr);
-    int startIdx =  volStrIdx + volStr.length();
+    int startIdx = volStrIdx + volStr.length();
     int endIdx = path.lastIndexOf(".");
-    if (volStrIdx < 0 || endIdx < 0 || endIdx <= startIdx){
+    if (volStrIdx < 0 || endIdx < 0 || endIdx <= startIdx) {
       return -1;
     }
     return Integer.parseInt(path.substring(startIdx, endIdx));
   }
 
   private static CrawlRule makeRules(String urlRoot, int volume)
-      throws REException{
+      throws REException {
     List rules = new LinkedList();
     final int incl = CrawlRules.RE.MATCH_INCLUDE;
     final int excl = CrawlRules.RE.MATCH_EXCLUDE;
@@ -126,6 +127,7 @@ public class HighWirePlugin extends BaseArchivalUnit {
   public String getPluginId() {
     return "highwire";
   }
+
   public String getAUId() {
     try {
       String url = (String)getCrawlSpec().getStartingUrls().get(0);

@@ -1,8 +1,4 @@
 /*
- * $Id: TestHighWireCachedUrl.java,v 1.3 2002-10-16 04:54:45 tal Exp $
- */
-
-/*
 
 Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -32,36 +28,58 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.highwire;
 
-import junit.framework.TestCase;
+import java.io.File;
+import java.net.MalformedURLException;
 import org.lockss.daemon.*;
+import org.lockss.test.LockssTestCase;
+import org.lockss.plugin.GenericFileCachedUrlSet;
+import org.lockss.repository.TestLockssRepositoryImpl;
 
-/**
- * This is the test class for org.lockss.crawler.Crawler
- *
- * @author  Thomas S. Robertson
- * @version 0.0
- */
-
-
-public class TestHighWireCachedUrl extends TestCase{
+public class TestHighWireArchivalUnit extends LockssTestCase {
   private static final String cStart =
     "http://shadow1.stanford.edu/lockss-volume322.shtml";
   private static final String cRoot = "http://shadow1.stanford.edu/";
-  public TestHighWireCachedUrl(String msg){
+
+  public TestHighWireArchivalUnit(String msg) {
     super(msg);
   }
 
+  public void setUp() throws Exception {
+    super.setUp();
+    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    TestLockssRepositoryImpl.configCacheLocation(tempDirPath);
+  }
+
+  public void testGetUrlVolumeNumberNullUrl() {
+    try {
+      HighWireArchivalUnit.getUrlVolumeNumber(null);
+      fail("Should have thrown MalformedURLException");
+    } catch(MalformedURLException mue) { }
+  }
+
+  public void testGetUrlvolumeNumberNonRootUrl() throws MalformedURLException {
+    String url = "http://shadow8.stanford.edu/";
+    assertEquals(-1, HighWireArchivalUnit.getUrlVolumeNumber(url));
+  }
+
+  public void testGetUrlvolumeNumberRootUrl() throws MalformedURLException {
+    String url = "http://shadow8.stanford.edu/lockss-volume327.shtml";
+    assertEquals(327, HighWireArchivalUnit.getUrlVolumeNumber(url));
+  }
+
   public void testShouldCacheRootPage() throws Exception {
-    HighWirePlugin hwPlug = new HighWirePlugin(cStart);
-    HighWireCachedUrlSet cus = new HighWireCachedUrlSet(hwPlug, cRoot);
+    ArchivalUnit hwAu = new HighWireArchivalUnit(cStart);
+    CachedUrlSetSpec spec = new RECachedUrlSetSpec(cRoot);
+    GenericFileCachedUrlSet cus = new GenericFileCachedUrlSet(hwAu, spec);
     UrlCacher uc =
       cus.makeUrlCacher("http://shadow1.stanford.edu/lockss-volume322.shtml");
     assertTrue(uc.shouldBeCached());
   }
-  
+
   public void testShouldNotCachePageFromOtherSite() throws Exception {
-    HighWirePlugin hwPlug = new HighWirePlugin(cStart);
-    HighWireCachedUrlSet cus = new HighWireCachedUrlSet(hwPlug, cRoot);
+    ArchivalUnit hwAu = new HighWireArchivalUnit(cStart);
+    CachedUrlSetSpec spec = new RECachedUrlSetSpec(cRoot);
+    GenericFileCachedUrlSet cus = new GenericFileCachedUrlSet(hwAu, spec);
     UrlCacher uc =
       cus.makeUrlCacher("http://shadow2.stanford.edu/lockss-volume322.shtml");
     assertTrue(!uc.shouldBeCached());

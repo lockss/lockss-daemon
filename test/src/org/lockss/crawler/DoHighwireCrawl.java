@@ -1,5 +1,5 @@
 /*
- * $Id: DoHighwireCrawl.java,v 1.5 2002-12-17 20:59:33 troberts Exp $
+ * $Id: DoHighwireCrawl.java,v 1.6 2003-01-03 00:17:42 aalto Exp $
  */
 
 /*
@@ -32,19 +32,14 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.crawler;
 
-import java.io.*;
-import java.util.*;
-import java.net.*;
 import org.lockss.daemon.*;
-import org.lockss.plugin.*;
-import org.lockss.plugin.highwire.*;
-import org.lockss.proxy.*;
-import org.lockss.util.*;
+import org.lockss.plugin.Plugin;
+import org.lockss.plugin.highwire.HighWireArchivalUnit;
+import org.lockss.proxy.ProxyHandler;
+import org.lockss.util.Deadline;
 
 public class DoHighwireCrawl {
-
-  public static void main(String args[])
-      throws Exception {
+  public static void main(String args[]) throws Exception {
     boolean proxyFlg = false;
     boolean crawlFlg = false;
     int i = 0;
@@ -63,7 +58,7 @@ public class DoHighwireCrawl {
     }
     String start = args[i];
 
-    ArchivalUnit au = new HighWirePlugin(start);
+    ArchivalUnit au = new HighWireArchivalUnit(start);
     if (proxyFlg) {
       org.lockss.plugin.Plugin.registerArchivalUnit(au);
       ProxyHandler.startProxy();

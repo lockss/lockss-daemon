@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireUrlCacher.java,v 1.3 2002-11-27 20:04:09 troberts Exp $
+ * $Id: HighWireUrlCacher.java,v 1.4 2003-01-03 00:17:42 aalto Exp $
  */
 
 /*
@@ -46,99 +46,41 @@ import org.lockss.plugin.*;
  * @version 0.0
  */
 
-public class HighWireUrlCacher extends BaseUrlCacher {
-  protected static Logger logger = Logger.getLogger(HighWirePlugin.LOG_NAME);
+public class HighWireUrlCacher extends GenericFileUrlCacher {
+  protected static Logger logger = Logger.getLogger(HighWireArchivalUnit.LOG_NAME);
   private URLConnection conn;
-  private Properties headers;
 
   public HighWireUrlCacher(CachedUrlSet owner, String url) {
     super(owner, url);
   }
 
-  public boolean shouldBeCached(){
-    logger.info("checking: "+url);
-    return super.shouldBeCached();
-  }
-  
-  // Write interface - used by the crawler.
-  
-  protected void storeContent(InputStream input,
-			   Properties headers) throws IOException{
-    if (input != null){
-      File file = new File(mapUrlToFileName());
-      File parentDir = file.getParentFile();
-      if (!parentDir.exists()){
-	parentDir.mkdirs();
-      }
-      OutputStream os = new FileOutputStream(file);
-      int kar = input.read();
-      while (kar >= 0){
-	os.write(kar);
-	kar = input.read();
-      }
-      os.close();
-      input.close();
-    }
-    File file = new File(mapUrlToFileName() + ".props");
-    File parentDir = file.getParentFile();
-    if (!parentDir.exists()){
-      parentDir.mkdirs();
-    }
-    OutputStream os = new FileOutputStream(file);
-    headers.store(os, "HTTP headers for " + url);
-    os.close();
-    
-    this.headers = headers;
-  }
-
-  protected InputStream getUncachedInputStream(){
-    try{
-      if (conn == null){
+  protected InputStream getUncachedInputStream() {
+    try {
+      if (conn==null) {
 	URL urlO = new URL(url);
 	conn = urlO.openConnection();
       }
       return conn.getInputStream();
-    } catch (IOException ioe){
-      ioe.printStackTrace();
+    } catch (IOException ioe) {
+      logger.error("Couldn't get inputstream: ", ioe);
+      return null;
     }
-    return null;
   }
 
-
-  protected Properties getUncachedProperties(){
+  protected Properties getUncachedProperties() {
     Properties props = new Properties();
-    try{
-      if (conn == null){
+    try {
+      if (conn==null) {
 	URL urlO = new URL(url);
 	conn = urlO.openConnection();
       }
       String contentType = conn.getContentType();
       props.setProperty("content-type", contentType);
       return props;
-    }catch (IOException ioe){
-      ioe.printStackTrace();
+    } catch (IOException ioe) {
+      logger.error("Couldn't get properties: ", ioe);
+      return null;
     }
-    return null;
   }
-
-
-  private String mapUrlToFileName(){
-    int idx = url.indexOf("://")+3;
-    int lastSlashIdx = url.lastIndexOf("/");
-    int lastPeriodIdx = url.lastIndexOf(".");
-
-    StringBuffer fileName = new StringBuffer("./");
-    fileName.append(url.substring(idx));
-
-    if (lastSlashIdx >= lastPeriodIdx){
-      if (url.charAt(url.length()-1) != '/'){
-	fileName.append('/');
-      }
-      fileName.append("index.html");
-    }
-    return fileName.toString();
-  }
-
-
 }
 
