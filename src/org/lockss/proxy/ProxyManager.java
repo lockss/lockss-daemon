@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyManager.java,v 1.4 2003-04-03 11:29:47 tal Exp $
+ * $Id: ProxyManager.java,v 1.5 2003-04-04 08:39:04 tal Exp $
  */
 
 /*
@@ -73,8 +73,9 @@ public class ProxyManager extends JettyManager {
     super.stopService();
   }
 
-  protected void setConfig(Configuration config, Configuration oldConfig,
+  protected void setConfig(Configuration config, Configuration prevConfig,
 			   Set changedKeys) {
+    super.setConfig(config, prevConfig, changedKeys);
     port = config.getInt(PARAM_PORT, 9090);
     start = config.getBoolean(PARAM_START, true);
   }
