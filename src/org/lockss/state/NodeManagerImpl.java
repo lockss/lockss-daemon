@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.131 2003-06-04 23:31:25 tal Exp $
+ * $Id: NodeManagerImpl.java,v 1.132 2003-06-05 21:21:02 aalto Exp $
  */
 
 /*
@@ -295,6 +295,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
           status = PollState.REPAIRING;
           break;
         case NodeState.CONTENT_LOST:
+        case NodeState.UNREPAIRABLE_NAMES_NEEDS_POLL:
           nodeState.setState(NodeState.NAME_RUNNING);
           status = PollState.RUNNING;
           break;
@@ -303,6 +304,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
           status = PollState.REPAIRING;
           break;
         case NodeState.POSSIBLE_DAMAGE_HERE:
+        case NodeState.UNREPAIRABLE_SNCUSS_NEEDS_POLL:
           nodeState.setState(NodeState.SNCUSS_POLL_RUNNING);
           status = PollState.RUNNING;
           break;
@@ -727,10 +729,8 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
         switch (nodeState.getState()) {
           case NodeState.NAME_RUNNING:
             if (results.isMyPoll()) {
-              nodeState.setState(
-                  NodeState.DAMAGE_AT_OR_BELOW);
-            }
-            else {
+              nodeState.setState(NodeState.DAMAGE_AT_OR_BELOW);
+            } else {
               nodeState.setState(NodeState.OK);
             }
             break;
@@ -751,7 +751,6 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
         // the poll calls only one repair, and repeats only once.
         // the treewalk will have to handle the rest
         pollState.status = PollState.UNREPAIRABLE;
-        return;
       } else {
         pollState.status = PollState.REPAIRING;
         logger.debug2("lost name poll, state = repairing");
@@ -764,7 +763,8 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
             nodeState.setState(NodeState.WRONG_NAMES);
             break;
           case NodeState.NAME_REPLAYING:
-            nodeState.setState(NodeState.UNREPAIRABLE_NAMES);
+            //XXX temporarily skip 'unrepairable->needs poll' timing
+            nodeState.setState(NodeState.UNREPAIRABLE_NAMES_NEEDS_POLL);
         }
       } else {
         // if ranged, set temporary state
@@ -799,14 +799,16 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
         return true;
       case NodeState.CONTENT_LOST:
         if (!reportOnly) {
-          if (lastOrCurrentPoll.getLwrBound() != null) {
-            // if ranged, we know the names are accurate from the previous name
-            // poll, so continue as if it had won
-            logger.debug2("sub-dividing under lost ranged content poll");
-            callContentPollsOnSubNodes(nodeState, results.getCachedUrlSet());
+          if ((results!=null) &&
+              (results.getCachedUrlSet().getSpec().isRangeRestricted())) {
+              // if ranged, we know the names are accurate from the previous
+              // name poll, so continue as if it had won
+              logger.debug2("sub-dividing under lost ranged content poll");
+              callContentPollsOnSubNodes(nodeState, results.getCachedUrlSet());
           } else {
-            // call name poll if not ranged
-            logger.debug2("lost content poll, state = lost, calling name poll.");
+            // call name poll if not ranged or no results to use
+            logger.debug2(
+                "lost content poll, state = lost, calling name poll.");
             callNamePoll(new PollSpec(nodeState.getCachedUrlSet()));
           }
         }
@@ -898,12 +900,11 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
       case NodeState.DAMAGE_AT_OR_BELOW:
         // subdivide or recurse, plus SNCUSS if not ranged
         if (!reportOnly) {
-          logger.debug2(
-              "won name poll (mine), calling content poll on subnodes.");
+          logger.debug2("won name poll (mine), calling content poll on subnodes.");
           // call a content poll for this node's content if we haven't started
           // sub-dividing yet (and not an AU url, since they never have content)
           if ((lastOrCurrentPoll.getLwrBound() == null) &&
-              (!AuUrl.isAuUrl(nodeState.getCachedUrlSet().getUrl()))) {
+              (!nodeState.getCachedUrlSet().getSpec().isAU())) {
             logger.debug2("calling single node content poll on node's contents");
             //XXX once we're checking the content bit in the name poll,
             // only call SNCP if has content
@@ -915,7 +916,9 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
             nodeState.setState(NodeState.POSSIBLE_DAMAGE_BELOW);
           }
           // call a content poll on this node's subnodes
-          callContentPollsOnSubNodes(nodeState, results.getCachedUrlSet());
+          CachedUrlSet cusToUse = (results!=null ? results.getCachedUrlSet() :
+                                   nodeState.getCachedUrlSet());
+          callContentPollsOnSubNodes(nodeState, cusToUse);
         }
         return true;
       case NodeState.POSSIBLE_DAMAGE_HERE:
@@ -1267,8 +1270,8 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     repository.deleteNode(cus.getUrl());
   }
 
-  private void callContentPollsOnSubNodes(NodeState state, CachedUrlSet cus) throws
-      IOException {
+  private void callContentPollsOnSubNodes(NodeState state, CachedUrlSet cus)
+      throws IOException {
     Iterator children = cus.flatSetIterator();
     List childList = convertChildrenToCUSList(children);
     // Divide the list in two and call two new content polls
@@ -1305,7 +1308,9 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     if(upr != null) {
       upr = upr.startsWith(base) ? upr.substring(base.length()) : upr;
     }
-    PollSpec spec = new PollSpec(cus, lwr, upr);
+    CachedUrlSet newCus = cus.getArchivalUnit().makeCachedUrlSet(
+        new RangeCachedUrlSetSpec(base, lwr, upr));
+    PollSpec spec = new PollSpec(newCus, lwr, upr);
     logger.debug2("Calling a content poll on " + spec);
     pollManager.sendPollRequest(LcapMessage.CONTENT_POLL_REQ, spec);
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: NodeStateImpl.java,v 1.19 2003-05-30 23:27:53 aalto Exp $
+ * $Id: NodeStateImpl.java,v 1.20 2003-06-05 21:21:03 aalto Exp $
  */
 
 /*
@@ -128,7 +128,7 @@ public class NodeStateImpl implements NodeState {
       case NodeState.POSSIBLE_DAMAGE_BELOW:
         return "Possible Damage Below";
       case NodeState.INITIAL:
-        return "Unknown";
+        return "Initial";
       case NodeState.OK:
         return "Ok";
       default:
