@@ -1,5 +1,5 @@
 /*
- * $Id: TestStreamUtil.java,v 1.2 2002-10-28 23:55:09 aalto Exp $
+ * $Id: TestStreamUtil.java,v 1.3 2003-05-29 00:56:35 troberts Exp $
  */
 
 /*
@@ -45,13 +45,51 @@ public class TestStreamUtil extends LockssTestCase {
     super(msg);
   }
 
-  public void testCopy() throws IOException {
+  public void testCopyNullInputStream() throws IOException {
+    OutputStream baos = new ByteArrayOutputStream(11);
+    StreamUtil.copy(null, baos);
+    String resultStr = baos.toString();
+    baos.close();
+    assertEquals("", baos.toString());
+  }
+
+  public void testCopyNullOutputStream() throws IOException {
+    InputStream is = new StringInputStream("test string");
+    StreamUtil.copy(is, null);
+    is.close();
+  }
+
+  public void testCopyInputStream() throws IOException {
     InputStream is = new StringInputStream("test string");
     OutputStream baos = new ByteArrayOutputStream(11);
     StreamUtil.copy(is, baos);
     is.close();
     String resultStr = baos.toString();
     baos.close();
+    assertTrue(resultStr.equals("test string"));
+  }
+
+  public void testCopyNullReader() throws IOException {
+    Writer writer = new CharArrayWriter(11);
+    StreamUtil.copy(null, writer);
+    String resultStr = writer.toString();
+    writer.close();
+    assertEquals("", writer.toString());
+  }
+
+  public void testCopyNullWriter() throws IOException {
+    Reader reader = new StringReader("test string");
+    StreamUtil.copy(reader, null);
+    reader.close();
+  }
+
+  public void testCopyReader() throws IOException {
+    Reader reader = new StringReader("test string");
+    Writer writer = new CharArrayWriter(11);
+    StreamUtil.copy(reader, writer);
+    reader.close();
+    String resultStr = writer.toString();
+    writer.close();
     assertTrue(resultStr.equals("test string"));
   }
 }

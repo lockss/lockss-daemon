@@ -1,5 +1,5 @@
 /*
- * $Id: StreamUtil.java,v 1.3 2002-11-20 01:18:16 aalto Exp $
+ * $Id: StreamUtil.java,v 1.4 2003-05-29 00:56:35 troberts Exp $
  */
 
 /*
@@ -43,6 +43,8 @@ import java.io.*;
 
 public class StreamUtil {
 
+  private static final int BUFFER_SIZE = 256;
+
   /**
    * This function copies the contents of in InputStream to an Outputstream.
    * It buffers the copying, and closes neither.
@@ -50,12 +52,35 @@ public class StreamUtil {
    * @param os output
    * @throws IOException
    */
-   public static void copy(InputStream is, OutputStream os) throws IOException {
-     if ((is==null) || (os==null)) return;
-     byte[] bytes = new byte[256];
-     int byteCount;
-     while ((byteCount = is.read(bytes))>0) os.write(bytes, 0, byteCount);
-     os.flush();
-   }
+  public static void copy(InputStream is, OutputStream os) throws IOException {
+    if (is == null || os == null) {
+      return;
+    }
+    byte[] bytes = new byte[BUFFER_SIZE];
+    int byteCount;
+    while ((byteCount = is.read(bytes)) > 0) {
+      os.write(bytes, 0, byteCount);
+    }
+    os.flush();
+  }
+  
+  /**
+   * This function copies the contents of a Reader to a Writer
+   * It buffers the copying, and closes neither.
+   * @param reader reader
+   * @param writer writer
+   * @throws IOException
+   */
+  public static void copy(Reader reader, Writer writer) throws IOException {
+    if (reader == null || writer == null) {
+      return;
+    }
+    char[] chars = new char[BUFFER_SIZE];
+    int count;
+    while ((count = reader.read(chars)) > 0) {
+      writer.write(chars, 0, count);
+    }
+    writer.flush();
+  }
 }
 
