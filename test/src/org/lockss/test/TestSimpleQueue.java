@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimpleQueue.java,v 1.7 2003-03-04 01:02:05 aalto Exp $
+ * $Id: TestSimpleQueue.java,v 1.8 2003-03-04 01:58:59 tal Exp $
  */
 
 /*
@@ -58,22 +58,39 @@ public class TestSimpleQueue extends LockssTestCase {
   /** Putter puts something onto a queue in a while */
   class Putter extends DoLater {
     SimpleQueue.Fifo queue;
-    Object obj;
+    Object obj1;
+    Object obj2;
 
     Putter(long waitMs, SimpleQueue.Fifo queue, Object obj) {
+      this(waitMs, queue, obj, null);
+    }
+
+    Putter(long waitMs, SimpleQueue.Fifo queue, Object obj1, Object obj2) {
       super(waitMs);
       this.queue = queue;
-      this.obj = obj;
+      this.obj1 = obj1;
+      this.obj2 = obj2;
     }
 
     protected void doit() {
-      queue.put(obj);
+      queue.put(obj1);
+      if (obj2 != null) {
+	queue.put(obj2);
+      }
     }
   }
 
   /** Put something onto a queue in a while */
   private Putter putIn(long ms, SimpleQueue.Fifo queue, Object obj) {
     Putter p = new Putter(ms, queue, obj);
+    p.start();
+    return p;
+  }
+
+  /** Put two things onto a queue in a while */
+  private Putter putIn(long ms, SimpleQueue.Fifo queue,
+		       Object obj1, Object obj2) {
+    Putter p = new Putter(ms, queue, obj1, obj2);
     p.start();
     return p;
   }
@@ -167,8 +184,7 @@ public class TestSimpleQueue extends LockssTestCase {
     SimpleQueue.Fifo fifo = new SimpleQueue.Fifo();
     Interrupter intr = null;
     try {
-      putIn(100, fifo, O1);
-      putIn(200, fifo, O2);
+      putIn(200, fifo, O1, O2);
       Date start = new Date();
       intr = interruptMeIn(TIMEOUT_SHOULDNT, true);
       assertSame(O1, fifo.get());
