@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.55 2003-03-11 02:47:08 claire Exp $
+ * $Id: NodeManagerImpl.java,v 1.56 2003-03-11 04:20:16 claire Exp $
  */
 
 /*
@@ -131,6 +131,7 @@ public class NodeManagerImpl implements NodeManager {
     if (theManager == null) {
       theDaemon = daemon;
       theManager = this;
+      repository = theDaemon.getHistoryRepository();
       loadStateTree();
 
     } else {
@@ -701,7 +702,7 @@ public class NodeManagerImpl implements NodeManager {
       }
       childList.add(cus);
     }
-    // Divide the list in two and call to new content polls
+    // Divide the list in two and call two new content polls
     if(childList.size() > 4) {
       String base = results.getCachedUrlSet().getSpec().getUrl();
       int mid = childList.size() / 2;

@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.43 2003-03-11 02:47:08 claire Exp $
+* $Id: PollManager.java,v 1.44 2003-03-11 04:20:16 claire Exp $
  */
 
 /*
@@ -135,6 +135,8 @@ public class PollManager  implements LockssManager {
    */
   public void requestPoll(int opcode, PollSpec pollspec)
       throws IOException {
+    theLog.debug("handling request for poll of type: " + opcode +
+                 " for spec " + pollspec);
     CachedUrlSet cus = pollspec.getCachedUrlSet();
     long duration = calcDuration(opcode, cus);
     byte[] challenge = makeVerifier();
