@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.48 2004-12-01 18:43:20 troberts Exp $
+ * $Id: StringUtil.java,v 1.49 2004-12-08 00:42:09 troberts Exp $
  */
 
 /*
@@ -487,6 +487,20 @@ public class StringUtil {
    */
   public static boolean isNullString(String s) {
     return s == null || s.length() == 0;
+  }
+
+  /**
+   * Same as str.compareTo(str), except handles nulls (which sorts before all
+   * other strings)
+   */
+  public static int compareToHandleNull(String str1, String str2) {
+    if (str1 == null) {
+      return (str2 == null) ? 0 : -1;
+    }
+    if (str2 == null) {
+      return 1;
+    }
+    return str1.compareTo(str2);
   }
 
   /**

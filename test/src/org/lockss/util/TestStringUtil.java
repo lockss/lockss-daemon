@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.42 2004-12-01 18:43:20 troberts Exp $
+ * $Id: TestStringUtil.java,v 1.43 2004-12-08 00:42:09 troberts Exp $
  */
 
 /*
@@ -530,6 +530,15 @@ System.out.println("s: "+s);
 
     assertEquals(7, StringUtil.nthIndexOf(4, "xyzxyzxxxyz", "x"));
     assertEquals(9, StringUtil.nthIndexOf(2, "xyzzzzzysxyz", "xyz"));
+  }
+
+  public void testCompareHandleNull() {
+    assertEquals(0, StringUtil.compareToHandleNull(null, null));
+    assertEquals(-1, StringUtil.compareToHandleNull(null, "a"));
+    assertEquals(1, StringUtil.compareToHandleNull("a", null));
+    assertEquals(1, StringUtil.compareToHandleNull("b", "a"));
+    assertEquals(-1, StringUtil.compareToHandleNull("a", "b"));
+    assertEquals(0, StringUtil.compareToHandleNull("a", "a"));
   }
 
 }
