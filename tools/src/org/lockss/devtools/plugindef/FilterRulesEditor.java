@@ -9,6 +9,7 @@ import javax.swing.table.*;
 
 import org.lockss.plugin.definable.*;
 import org.lockss.plugin.definable.DefinablePlugin.*;
+import org.lockss.devtools.plugindef.FilterRulesEditor.*;
 
 /**
  * <p>Title: </p>
@@ -23,6 +24,7 @@ public class FilterRulesEditor extends JDialog implements EDPEditor {
   JPanel panel1 = new JPanel();
   BorderLayout borderLayout1 = new BorderLayout();
   EDPCellData m_data;
+  FilterRulesTableModel m_model = new FilterRulesTableModel();
   HashMap m_filters;
   JPanel buttonPanel = new JPanel();
   JButton okButton = new JButton();
@@ -32,6 +34,7 @@ public class FilterRulesEditor extends JDialog implements EDPEditor {
   JButton deleteButton = new JButton();
   JButton upButton = new JButton();
   JButton dnButton = new JButton();
+  JScrollPane jScrollPane1 = new JScrollPane();
 
   public FilterRulesEditor(Frame frame, String title, boolean modal) {
     super(frame, title, modal);
@@ -45,7 +48,7 @@ public class FilterRulesEditor extends JDialog implements EDPEditor {
   }
 
   public FilterRulesEditor(Frame frame) {
-    this(null, "Filter Rules", false);
+    this(frame, "Assigned Filter Rules", false);
   }
 
   private void jbInit() throws Exception {
@@ -53,10 +56,11 @@ public class FilterRulesEditor extends JDialog implements EDPEditor {
     okButton.setText("OK");
     okButton.addActionListener(new FilterRulesEditor_okButton_actionAdapter(this));
     filtersTable.setRowSelectionAllowed(true);
-    filtersTable.setBorder(BorderFactory.createEtchedBorder());
+    filtersTable.setPreferredSize(new Dimension(418, 200));
+    filtersTable.setAutoResizeMode(JTable.AUTO_RESIZE_SUBSEQUENT_COLUMNS);
     filtersTable.setCellSelectionEnabled(true);
     filtersTable.setColumnSelectionAllowed(false);
-    filtersTable.setModel(new FilterRulesTableModel());
+    filtersTable.setModel(m_model);
     addButton.setToolTipText("Add a new filter for mime type.");
     addButton.setText("Add");
     addButton.addActionListener(new FilterRulesEditor_addButton_actionAdapter(this));
@@ -69,15 +73,19 @@ public class FilterRulesEditor extends JDialog implements EDPEditor {
     upButton.addActionListener(new FilterRulesEditor_upButton_actionAdapter(this));
     dnButton.setText("Down");
     dnButton.addActionListener(new FilterRulesEditor_dnButton_actionAdapter(this));
+    panel1.setPreferredSize(new Dimension(418, 200));
+    jScrollPane1.setMinimumSize(new Dimension(200, 80));
+    jScrollPane1.setOpaque(true);
     buttonPanel.add(dnButton, null);
     buttonPanel.add(upButton, null);
     buttonPanel.add(addButton, null);
     buttonPanel.add(deleteButton, null);
+    buttonPanel.add(okButton, null);
+    buttonPanel.add(cancelButton, null);
     getContentPane().add(panel1);
     panel1.add(buttonPanel,  BorderLayout.SOUTH);
-    buttonPanel.add(okButton, null);
-    panel1.add(filtersTable, BorderLayout.CENTER);
-    buttonPanel.add(cancelButton, null);
+    panel1.add(jScrollPane1,  BorderLayout.CENTER);
+    jScrollPane1.getViewport().add(filtersTable, null);
 
   }
 
@@ -89,9 +97,7 @@ public class FilterRulesEditor extends JDialog implements EDPEditor {
   public void setCellData(EDPCellData data) {
     m_data = data;
     m_filters = m_data.getPlugin().getAuFilters();
-    FilterRulesTableModel model = (FilterRulesTableModel) filtersTable.getModel();
-
-    model.updateTableData();
+    m_model.updateTableData();
   }
 
   void okButton_actionPerformed(ActionEvent e) {
@@ -105,31 +111,21 @@ public class FilterRulesEditor extends JDialog implements EDPEditor {
         edp.setAuFilter(mime_type, filter);
       }
       catch (InvalidDefinitionException ex) {
-        //TODO: Add alert.
+        JOptionPane.showMessageDialog(this, ex.getMessage(),
+                                      "Save Filter Warning",
+                                      JOptionPane.WARNING_MESSAGE);
       }
     }
     setVisible(false);
   }
 
   void addButton_actionPerformed(ActionEvent e) {
-    FilterRulesTableModel model = (FilterRulesTableModel) filtersTable.getModel();
-    Object[] row_data = new Object[2];
-    if(m_filters.size() < 1) { // add a new html filter
-      row_data[0] = "text/html";
-      row_data[1] = "Replace with Filter class name.";
-    }
-    else {
-      row_data[0] = "Enter Mime type";
-      row_data[1] = "Replace with Filter class Name.";
-    }
-    model.addRowData(row_data);
-    model.fireTableDataChanged();
+    m_model.addNewRow();
   }
+
   void deleteButton_actionPerformed(ActionEvent e) {
     int row = filtersTable.getSelectedRow();
-    FilterRulesTableModel model = (FilterRulesTableModel) filtersTable.getModel();
-    model.removeRowData(row);
-
+    m_model.removeRowData(row);
   }
 
   void cancelButton_actionPerformed(ActionEvent e) {
@@ -138,21 +134,17 @@ public class FilterRulesEditor extends JDialog implements EDPEditor {
 
   void dnButton_actionPerformed(ActionEvent e) {
     int row = filtersTable.getSelectedRow();
-
-    FilterRulesTableModel model = (FilterRulesTableModel) filtersTable.getModel();
-    model.moveData(row, row+1);
+    m_model.moveData(row, row+1);
   }
 
   void upButton_actionPerformed(ActionEvent e) {
     int row = filtersTable.getSelectedRow();
-
-    FilterRulesTableModel model = (FilterRulesTableModel) filtersTable.getModel();
-    model.moveData(row, row-1);
-
+    m_model.moveData(row, row-1);
   }
 
   class FilterRulesTableModel extends AbstractTableModel {
     String[] columnNames = {"Mime Type", "Filter Class"};
+    Class[] columnClass = {String.class, String.class};
     Vector rowData = new Vector();
 
 
@@ -169,8 +161,10 @@ public class FilterRulesEditor extends JDialog implements EDPEditor {
     }
 
     public Object getValueAt(int row, int col) {
-       return ((Object[])rowData.elementAt(row))[col];
-   }
+      Object obj = ( (Object[]) rowData.elementAt(row))[col];
+      System.out.println("Got object: " + obj);
+      return ( (Object[]) rowData.elementAt(row))[col];
+    }
 
     public Class getColumnClass(int col) {
       return getValueAt(0,col).getClass();
@@ -188,19 +182,15 @@ public class FilterRulesEditor extends JDialog implements EDPEditor {
       fireTableCellUpdated(row, col);
     }
 
-    public void addRowData(Object[] data) {
-      rowData.add(data);
-    }
-
     public void updateTableData() {
       // we need to get the stored filters
       Object[] row_data;
-
+      rowData.removeAllElements();
       for(Iterator it = m_filters.keySet().iterator(); it.hasNext();) {
         row_data = new Object[2];
         row_data[0] = it.next();
         row_data[1] = m_filters.get(row_data[0]);
-        addRowData(row_data);
+        rowData.add(row_data);
       }
       fireTableDataChanged();
     }
@@ -214,6 +204,21 @@ public class FilterRulesEditor extends JDialog implements EDPEditor {
       if(rowData.size() > row && row >=0) {
         rowData.remove(row);
       }
+      fireTableDataChanged();
+    }
+
+    private void addNewRow() {
+      Object[] row_data = new Object[2];
+      if (rowData.size() < 1) { // add a new html filter
+        row_data[0] = "text/html";
+        row_data[1] = "Replace with Filter class name.";
+      }
+      else {
+        row_data[0] = "Enter Mime type";
+        row_data[1] = "Replace with Filter class Name.";
+      }
+      System.out.println("Adding new row.");
+      rowData.add(row_data);
       fireTableDataChanged();
     }
 

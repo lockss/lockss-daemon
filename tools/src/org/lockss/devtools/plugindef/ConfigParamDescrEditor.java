@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescrEditor.java,v 1.2 2004-06-07 23:42:02 clairegriffin Exp $
+ * $Id: ConfigParamDescrEditor.java,v 1.3 2004-06-15 04:14:43 clairegriffin Exp $
  */
 
 /*
@@ -114,7 +114,7 @@ public class ConfigParamDescrEditor extends JDialog
       descriptionTextArea.setText(descr == null ? "" : descr);
       descriptionTextArea.setEditable(editable);
       definitionCheckBox.setSelected(cpd.isDefinitional());
-      definitionCheckBox.setEnabled(editable);
+      definitionCheckBox.setEnabled(true);
     }
   }
 

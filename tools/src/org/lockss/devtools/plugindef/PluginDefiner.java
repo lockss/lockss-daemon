@@ -1,5 +1,5 @@
 /*
- * $Id: PluginDefiner.java,v 1.3 2004-06-14 20:04:57 clairegriffin Exp $
+ * $Id: PluginDefiner.java,v 1.4 2004-06-15 04:14:44 clairegriffin Exp $
  */
 
 /*
@@ -63,12 +63,13 @@ public class PluginDefiner extends JFrame {
   String location = null;
   String name = null;
   EDPInspectorTableModel inspectorModel = new EDPInspectorTableModel(this);
-  GridBagLayout gridBagLayout1 = new GridBagLayout();
   JMenu jMenuPlugin = new JMenu();
   JMenuItem rulesTestMenuItem = new JMenuItem();
   JMenuItem jMenuItem2 = new JMenuItem();
   JCheckBoxMenuItem expertModeMenuItem = new JCheckBoxMenuItem();
   JMenuItem filtersTestMenuItem = new JMenuItem();
+  JScrollPane jScrollPane1 = new JScrollPane();
+  BorderLayout borderLayout1 = new BorderLayout();
   //Construct the frame
   public PluginDefiner() {
     enableEvents(AWTEvent.WINDOW_EVENT_MASK);
@@ -84,7 +85,7 @@ public class PluginDefiner extends JFrame {
   private void jbInit() throws Exception  {
     contentPane = (JPanel) this.getContentPane();
     titledBorder1 = new TitledBorder("");
-    contentPane.setLayout(gridBagLayout1);
+    contentPane.setLayout(borderLayout1);
     this.setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
     this.setSize(new Dimension(380, 320));
     this.setTitle("Plugin Configuration");
@@ -151,8 +152,8 @@ public class PluginDefiner extends JFrame {
     jMenuEdit.add(jMenuEditCopy);
     jMenuEdit.add(jMenuEditPaste);
     jMenuEdit.add(jMenuEditDelete);
-    contentPane.add(jTable1,     new GridBagConstraints(0, 1, 1, 1, 1.0, 1.0
-            ,GridBagConstraints.CENTER, GridBagConstraints.BOTH, new Insets(2, 2, 2, 2), 360, 0));
+    contentPane.add(jScrollPane1,  BorderLayout.CENTER);
+    jScrollPane1.getViewport().add(jTable1, null);
     jMenuPlugin.add(expertModeMenuItem);
     jMenuPlugin.addSeparator();
     jMenuPlugin.add(rulesTestMenuItem);

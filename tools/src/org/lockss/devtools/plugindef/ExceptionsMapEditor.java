@@ -27,6 +27,7 @@ public class ExceptionsMapEditor extends JDialog implements EDPEditor {
 
   private EDPCellData m_data;
   ExceptionsTableModel m_model = new ExceptionsTableModel();
+  JScrollPane jScrollPane1 = new JScrollPane();
 
   public ExceptionsMapEditor(Frame frame, String title, boolean modal) {
     super(frame, title, modal);
@@ -53,30 +54,38 @@ public class ExceptionsMapEditor extends JDialog implements EDPEditor {
     okButton.addActionListener(new ExceptionsMapEditor_okButton_actionAdapter(this));
     cancelButton.setText("Cancel");
     cancelButton.addActionListener(new ExceptionsMapEditor_cancelButton_actionAdapter(this));
+    panel1.setPreferredSize(new Dimension(300, 200));
+    exceptionTable.setMaximumSize(new Dimension(0, 0));
+    exceptionTable.setMinimumSize(new Dimension(418, 100));
+    exceptionTable.setPreferredSize(new Dimension(418, 200));
+    exceptionTable.setRowHeight(20);
     getContentPane().add(panel1);
     panel1.add(buttonPanel, BorderLayout.SOUTH);
     buttonPanel.add(addButton, null);
     buttonPanel.add(deleteButton, null);
     buttonPanel.add(okButton, null);
     buttonPanel.add(cancelButton, null);
-    panel1.add(exceptionTable, BorderLayout.CENTER);
+    panel1.add(jScrollPane1, BorderLayout.CENTER);
+    jScrollPane1.getViewport().add(exceptionTable, null);
     exceptionTable.setModel(m_model);
   }
 
   void addButton_actionPerformed(ActionEvent e) {
-
+    m_model.addNewRow();
   }
 
   void deleteButton_actionPerformed(ActionEvent e) {
+    int row = exceptionTable.getSelectedRow();
+    m_model.removeRowData(row);
 
   }
 
   void okButton_actionPerformed(ActionEvent e) {
-
+    setVisible(false);
   }
 
   void cancelButton_actionPerformed(ActionEvent e) {
-
+    setVisible(false);
   }
 
   /**
@@ -103,53 +112,77 @@ public class ExceptionsMapEditor extends JDialog implements EDPEditor {
 
 class ExceptionsTableModel extends AbstractTableModel {
   String columnNames[] = {"Return Code", "Exception Class"};
-  Class columnClass[] = {Integer.class, String.class};
-  private Collection classNames;
-  private Object[][] data;
-
-  public ExceptionsTableModel() {
-    data = new Object[0][2];
-  }
+  Class columnClass[] = {String.class, String.class};
+  Vector rowData = new Vector();
 
   public int getColumnCount() {
     return columnNames.length;
   }
 
   public int getRowCount() {
-    return classNames == null ? 0 : classNames.size();
+    return rowData.size();
   }
 
-  public String getColumnName(int column) {
-    return columnNames[column];
+  public String getColumnName(int col) {
+    return columnNames[col];
   }
 
   public Object getValueAt(int row, int col) {
-    return data[row][col];
-  }
+     return ((Object[])rowData.elementAt(row))[col];
+ }
 
-  public void setValueAt(Object value, int row, int col) {
-    data[row][col] = value;
-  }
-
-  public Class getColumnClass(int column) {
-    return columnClass[column];
-  }
+ public Class getColumnClass(int column) {
+   return columnClass[column];
+ }
 
   public boolean isCellEditable(int row, int col) {
     return true;
   }
 
+  public void setValueAt(Object value, int row, int col) {
+    if(rowData.size() > row && row >=0) {
+      Object[] data = (Object[]) rowData.get(row);
+      data[col] = value;
+    }
+    fireTableCellUpdated(row, col);
+  }
+
   public void setTableData(HashMap map) {
-    int num_rows = map.size();
-    data = new Object[num_rows][columnNames.length];
-    int row = 0;
+    Object[] row_data;
+    rowData.removeAllElements();
     for(Iterator it = map.keySet().iterator(); it.hasNext();) {
+      row_data = new Object[2];
       String error = (String) it.next();
       String errorClass = (String) map.get(error);
-      data[row][0] = new Integer(error);
-      data[row][1] = errorClass;
-      ++row;
+      row_data[0] = new Integer(error);
+      row_data[1] = errorClass;
+      rowData.add(row_data);
     }
+    fireTableDataChanged();
+  }
+
+  /**
+   * addNewRow
+   */
+  public void addNewRow() {
+    Object[] row_data = new Object[2];
+    row_data[0] = "Return Code";
+    row_data[1] = "Error Class";
+
+    rowData.add(row_data);
+    fireTableDataChanged();
+  }
+
+  /**
+   * removeRowData
+   *
+   * @param row int
+   */
+  public void removeRowData(int row) {
+    if(rowData.size() > row && row >=0) {
+      rowData.remove(row);
+    }
+    fireTableDataChanged();
   }
 
 }

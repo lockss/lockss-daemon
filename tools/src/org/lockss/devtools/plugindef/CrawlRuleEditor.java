@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRuleEditor.java,v 1.4 2004-06-14 20:04:56 clairegriffin Exp $
+ * $Id: CrawlRuleEditor.java,v 1.5 2004-06-15 04:14:44 clairegriffin Exp $
  */
 
 /*
@@ -64,6 +64,7 @@ public class CrawlRuleEditor extends JDialog implements EDPEditor{
   JButton upButton = new JButton();
   JButton dnButton = new JButton();
   private Frame m_frame;
+  JScrollPane rulesScrollPane = new JScrollPane();
 
   public CrawlRuleEditor(Frame frame, String title, boolean modal) {
     super(frame, title, modal);
@@ -103,8 +104,9 @@ public class CrawlRuleEditor extends JDialog implements EDPEditor{
     dnButton.setText("Down");
     dnButton.addActionListener(new CrawlRuleEditor_dnButton_actionAdapter(this));
     getContentPane().add(rulesPanel);
-    rulesPanel.add(rulesTable, BorderLayout.CENTER);
-    this.getContentPane().add(buttonPanel, BorderLayout.SOUTH);
+    rulesPanel.add(rulesScrollPane, BorderLayout.CENTER);
+    rulesPanel.add(buttonPanel,  BorderLayout.SOUTH);
+    rulesScrollPane.getViewport().add(rulesTable, null);
     buttonPanel.add(upButton, null);
     buttonPanel.add(dnButton, null);
     buttonPanel.add(addButton, null);

@@ -1,5 +1,5 @@
 /*
- * $Id: EDPCellData.java,v 1.2 2004-06-05 02:30:12 clairegriffin Exp $
+ * $Id: EDPCellData.java,v 1.3 2004-06-15 04:14:44 clairegriffin Exp $
  */
 
 /*
@@ -143,7 +143,7 @@ public class EDPCellData {
 
   public String toString() {
     if(m_displayString == null) {
-      if (m_data instanceof Collection) {
+      if (m_data instanceof Collection || m_data instanceof Map) {
         m_displayString = ELLIPSIS;
       }
       else if (m_data == null) {

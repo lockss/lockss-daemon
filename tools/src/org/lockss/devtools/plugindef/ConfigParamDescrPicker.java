@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescrPicker.java,v 1.3 2004-06-14 20:04:56 clairegriffin Exp $
+ * $Id: ConfigParamDescrPicker.java,v 1.4 2004-06-15 04:14:43 clairegriffin Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import javax.swing.*;
 import javax.swing.border.*;
 
 import org.lockss.daemon.*;
+import javax.swing.event.*;
 
 /**
  * <p>Title: </p>
@@ -73,6 +74,7 @@ public class ConfigParamDescrPicker
   private EDPCellData m_data;
   protected EditableDefinablePlugin plugin;
   protected Vector listeners;
+  Map defaultDescrs;
   TitledBorder assignedBorder;
   TitledBorder availableBorder;
   GridBagLayout gridBagLayout1 = new GridBagLayout();
@@ -166,6 +168,7 @@ public class ConfigParamDescrPicker
   void initLists() {
     Collection knownList = plugin.getKnownConfigParamDescrs();
     Collection pluginList = plugin.getConfigParamDescrs();
+    defaultDescrs = plugin.getDefaultConfigParamDescrs();
     Iterator it;
     // add current plugin parameters
 
@@ -202,9 +205,17 @@ public class ConfigParamDescrPicker
     if (index >= 0) {
       DefaultListModel dlm = (DefaultListModel) PluginParamList.getModel();
       String key = (String) dlm.getElementAt(index);
-      dlm.removeElementAt(index);
-      dlm = (DefaultListModel) AvailableParamList.getModel();
-      dlm.addElement(key);
+      if(plugin.canRemoveParam(plugin.getConfigParamDescr(key))) {
+        dlm.removeElementAt(index);
+        dlm = (DefaultListModel) AvailableParamList.getModel();
+        dlm.addElement(key);
+      }
+      else {
+        JOptionPane.showMessageDialog(this,
+            "You cannot delete a parameter that is being used.",
+            "Deletion Error",
+            JOptionPane.ERROR_MESSAGE);
+      }
     }
   }
 
@@ -225,7 +236,7 @@ public class ConfigParamDescrPicker
       DefaultListModel dlm = (DefaultListModel) PluginParamList.getModel();
       String key = (String) dlm.getElementAt(index);
       ConfigParamDescr cpd = plugin.getConfigParamDescr(key);
-      showConfigParamEditor(cpd, true);
+      showConfigParamEditor(cpd, !defaultDescrs.containsKey(key));
     }
   }
 
@@ -247,6 +258,7 @@ public class ConfigParamDescrPicker
       String key = (String) dlm.getElementAt(index);
       plugin.addConfigParamDescr(key);
     }
+    plugin.notifyParamsChanged();
     hide();
   }
 
@@ -262,7 +274,7 @@ public class ConfigParamDescrPicker
   }
 
   void showConfigParamEditor(ConfigParamDescr cpd, boolean editable) {
-    ConfigParamDescrEditor dlg = new ConfigParamDescrEditor(this,cpd, editable);
+    ConfigParamDescrEditor dlg = new ConfigParamDescrEditor(this, cpd, editable);
     Dimension dlgSize = dlg.getPreferredSize();
     Point loc = getLocation();
     dlg.setLocation(dlgSize.width / 2 + loc.x, dlgSize.height / 2 + loc.y);

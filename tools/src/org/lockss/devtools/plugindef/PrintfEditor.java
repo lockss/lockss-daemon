@@ -9,9 +9,10 @@ import javax.swing.border.*;
 
 import org.lockss.daemon.*;
 
-public class PrintfEditor extends JDialog implements EDPEditor {
+
+public class PrintfEditor extends JDialog
+    implements EDPEditor, ConfigParamListener {
   protected PrintfTemplate originalTemplate;
-  protected transient PrintfTemplate editTemplate;
   private EDPCellData m_data;
   private HashMap paramKeys;
   private HashMap matchesKeys = new HashMap();
@@ -47,7 +48,6 @@ public class PrintfEditor extends JDialog implements EDPEditor {
     super(frame, title, false);
 
     originalTemplate = new PrintfTemplate();
-    editTemplate = new PrintfTemplate();
     try {
       jbInit();
       pack();
@@ -60,7 +60,7 @@ public class PrintfEditor extends JDialog implements EDPEditor {
 
   private void initMatches() {
     matchesKeys.put("String Literal", "");
-    matchesKeys.put("Any Number", "[0-9][0-9]*");
+    matchesKeys.put("Any Number", "[0-9]+");
     matchesKeys.put("Anything", ".*");
     matchesKeys.put("Start", "^");
     matchesKeys.put("End", "$");
@@ -261,8 +261,25 @@ public class PrintfEditor extends JDialog implements EDPEditor {
    */
   public void setCellData(EDPCellData data) {
     m_data = data;
+    data.getPlugin().addParamListener(this);
     setTemplate( (PrintfTemplate) data.getData());
     // initialize the combobox
+    updateParams(data);
+    if(data.getKey().equals(EditableDefinablePlugin.AU_RULES)) {
+      matchPanel.setVisible(true);
+    }
+    else {
+      matchPanel.setVisible(false);
+    }
+  }
+
+  protected void setTemplate(PrintfTemplate template) {
+    originalTemplate = template;
+    formatTextArea.setText(template.m_format);
+    parameterTextArea.setText(template.getTokenString());
+  }
+
+  private void updateParams(EDPCellData data) {
     paramComboBox.removeAllItems();
     paramKeys = data.getPlugin().getPrintfDescrs();
     if (paramKeys.size() > 0) {
@@ -280,25 +297,14 @@ public class PrintfEditor extends JDialog implements EDPEditor {
       paramComboBox.setEnabled(false);
       paramComboBox.setToolTipText("No configuration parameters available.");
     }
-    if(data.getKey().equals(EditableDefinablePlugin.AU_RULES)) {
-      matchPanel.setVisible(true);
-    }
-    else {
-      matchPanel.setVisible(false);
-    }
   }
 
-  protected void setTemplate(PrintfTemplate template) {
-    originalTemplate = template;
-    editTemplate = new PrintfTemplate();
-    if (template != null) {
-      editTemplate.setFormat(template.m_format);
-      editTemplate.setTokens(template.m_tokens);
-    }
-    formatTextArea.setText(template.m_format);
-    parameterTextArea.setText(template.getTokenString());
+  /**
+   * notifiyParamsChanged
+   */
+  public void notifiyParamsChanged() {
+    updateParams(m_data);
   }
-
 
 }
 

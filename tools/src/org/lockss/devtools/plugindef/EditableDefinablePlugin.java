@@ -1,5 +1,5 @@
 /*
- * $Id: EditableDefinablePlugin.java,v 1.3 2004-06-05 02:30:12 clairegriffin Exp $
+ * $Id: EditableDefinablePlugin.java,v 1.4 2004-06-15 04:14:44 clairegriffin Exp $
  */
 
 /*
@@ -92,6 +92,11 @@ public class EditableDefinablePlugin
 
   // for writing map files
   public void writeMap(String location, String name) {
+    // make sure we don't have any AU Config info in map
+    HashMap cmap = getPrintfDescrs();
+    for(Iterator it = cmap.keySet().iterator(); it.hasNext();) {
+      definitionMap.removeMapElement((String)it.next());
+    }
     // store the configuration map
     definitionMap.storeMap(location, name, ExternalizableMap.MAPPING_FILE_NAME);
   }
@@ -219,13 +224,19 @@ public class EditableDefinablePlugin
   public void setAuFilter(String mimetype, String filter) {
 
     try {
+      if(filter.indexOf(" ") != -1 || filter.indexOf(".") == -1
+         || filter.endsWith(".")) {
+        throw new DefinablePlugin.InvalidDefinitionException(
+         filter + "is not a class name! Ignoring filter for " + mimetype );
+      }
       definitionMap.putString(mimetype + AU_FILTER_SUFFIX, filter);
       FilterRule rule = (FilterRule) Class.forName(filter).newInstance();
     }
     catch (Exception ex) {
-      throw new DefinablePlugin.InvalidDefinitionException(
+ /*     throw new DefinablePlugin.InvalidDefinitionException(
           "Unable to create filter rule class " + filter +
-          "for mimetype " + mimetype, ex);
+          "for mimetype " + mimetype);
+*/
     }
   }
 
@@ -352,13 +363,8 @@ public class EditableDefinablePlugin
     definitionMap.putCollection(PLUGIN_PROPS, descrlist);
   }
 
-  public HashSet getPluginConfigDescrs() {
-    return (HashSet)SetUtil.fromList((List)definitionMap.getCollection(
-      PLUGIN_PROPS, Collections.EMPTY_LIST));
-  }
-
   public HashMap getPrintfDescrs() {
-    HashSet pcd_set = getPluginConfigDescrs();
+    Collection pcd_set = getConfigParamDescrs();
     HashMap pd_map = new HashMap(pcd_set.size());
 
     for(Iterator it = pcd_set.iterator(); it.hasNext();) {
@@ -502,6 +508,47 @@ public class EditableDefinablePlugin
     }
   }
 
+  ArrayList cpListeners = new ArrayList();
+
+  public void addParamListener(ConfigParamListener listener) {
+    if(!cpListeners.contains(listener)) {
+      cpListeners.add(listener);
+    }
+  }
+
+  public void removeParamListener(ConfigParamListener listener) {
+    cpListeners.remove(listener);
+  }
+
+  public void notifyParamsChanged() {
+    Iterator it = cpListeners.iterator();
+    while (it.hasNext()) {
+      ConfigParamListener listener = (ConfigParamListener) it.next();
+      listener.notifiyParamsChanged();
+    }
+  }
+
+  public boolean canRemoveParam(ConfigParamDescr descr) {
+    String key = descr.getKey();
+    PrintfTemplate template = new PrintfTemplate(getAuName());
+    if(template.m_tokens.contains(key)) {
+      return false;
+    }
+    template = new PrintfTemplate(getAuStartUrl());
+    if(template.m_tokens.contains(key)) {
+      return false;
+    }
+    Collection rules = getAuCrawlRules();
+    for(Iterator it = rules.iterator(); it.hasNext();) {
+      CrawlRuleTemplate crt = new CrawlRuleTemplate((String)it.next());
+      if(crt.m_tokens.contains(key)) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+
   // list utils
   Collection getKnownCacheExceptions() {
     HashSet exceptions = new HashSet();
@@ -575,6 +622,7 @@ public class EditableDefinablePlugin
       return false;
     }
   }
+
 
   // fetching the map
   ExternalizableMap getMap() {
