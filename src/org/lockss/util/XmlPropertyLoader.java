@@ -1,5 +1,5 @@
 /*
- * $Id: XmlPropertyLoader.java,v 1.8 2004-08-03 21:57:05 smorabito Exp $
+ * $Id: XmlPropertyLoader.java,v 1.9 2004-08-18 07:11:41 tlipkis Exp $
  */
 
 /*
@@ -430,8 +430,8 @@ public class XmlPropertyLoader {
 	if (m_inList) {
 	  // If we're inside a list, we need to add this value to the
 	  // current temporary property list.
-	  if (log.isDebug2()) {
-	    log.debug2("Adding '" + m_charBuffer.toString().trim() + "' to " +
+	  if (log.isDebug3()) {
+	    log.debug3("Adding '" + m_charBuffer.toString().trim() + "' to " +
 		       getPropname() + " prop list");
 	  }
 	  m_propList.add(m_charBuffer.toString().trim());
