@@ -1,5 +1,5 @@
 /*
- * $Id: TestLogger.java,v 1.19 2003-07-14 06:46:38 tlipkis Exp $
+ * $Id: TestLogger.java,v 1.20 2004-07-12 06:28:59 tlipkis Exp $
  */
 
 /*
@@ -208,7 +208,7 @@ public class TestLogger extends LockssTestCase {
     while (iter.hasNext()) {
       System.err.println((String)iter.next());
     }
-    assertIsomorphic(testOutputOutput, target.messageIterator());
+    assertIsomorphic(testOutputOutput, target.getMessages());
   }
 
   private static final String c1 = "prop1=12\nprop2=foobar\nprop3=true\n"; 
@@ -242,9 +242,9 @@ public class TestLogger extends LockssTestCase {
     assertEquals(Logger.LEVEL_DEBUG2, Logger.getConfiguredLevel("foobar"));
   }
 
-  public void testLevelconfig()
+  public void testLevelConfig()
       throws IOException {
-    String lName = "test-log";
+    String lName = "test-log1";
     Logger l = Logger.getLogger(lName);
     MockLogTarget target = new MockLogTarget();
     l.setTarget(target);
@@ -259,7 +259,9 @@ public class TestLogger extends LockssTestCase {
     while (iter.hasNext()) {
       System.err.println((String)iter.next());
     }
-    assertIsomorphic(testOutputOutput, target.messageIterator());
+    assertIsomorphic(ListUtil.list("Warning: test-log1: msg2 warning",
+				   "Error: test-log1: msg3 error"),
+		     target.getMessages());
   }
 
   public void testNoRecurse() {
