@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.147 2003-07-22 01:19:12 eaalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.148 2003-07-23 22:56:31 eaalto Exp $
  */
 
 /*
@@ -437,32 +437,32 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     try {
       boolean notFinished = false;
       if (results.stateIsError()) {
-          pollState.status = mapResultsErrorToPollError(results.getErr());
-          logger.info("Poll didn't finish fully.  Error: "
-                      + results.getErrString());
-          notFinished = true;
+        pollState.status = mapResultsErrorToPollError(results.getErr());
+        logger.info("Poll didn't finish fully.  Error: "
+                    + results.getErrString());
+        notFinished = true;
       } else if (results.stateIsNoQuorum()) {
-          pollState.status = PollState.INCONCLUSIVE;
-          logger.info("Poll finished without quorum");
-          notFinished = true;
+        pollState.status = PollState.INCONCLUSIVE;
+        logger.info("Poll finished without quorum");
+        notFinished = true;
       } else if (results.stateIsInconclusive()) {
-          pollState.status = PollState.INCONCLUSIVE;
-          logger.warning("Poll concluded with suspect result - "
-                         + pollState.getStatusString());
-          notFinished = true;
+        pollState.status = PollState.INCONCLUSIVE;
+        logger.warning("Poll concluded with suspect result - "
+                       + pollState.getStatusString());
+        notFinished = true;
       } else if (results.stateIsLost() || results.stateIsWon()) {
-          // set last state in case it changes
-          lastState = nodeState.getState();
-          if (results.getType() == Poll.CONTENT_POLL) {
-            handleContentPoll(pollState, results, nodeState);
-          } else if (results.getType() == Poll.NAME_POLL) {
-            handleNamePoll(pollState, results, nodeState);
-          } else {
-            String err = "Request to update state for unknown type: " +
-                         results.getType();
-            logger.error(err);
-            throw new UnsupportedOperationException(err);
-          }
+        // set last state in case it changes
+        lastState = nodeState.getState();
+        if (results.getType() == Poll.CONTENT_POLL) {
+          handleContentPoll(pollState, results, nodeState);
+        } else if (results.getType() == Poll.NAME_POLL) {
+          handleNamePoll(pollState, results, nodeState);
+        } else {
+          String err = "Request to update state for unknown type: " +
+              results.getType();
+          logger.error(err);
+          throw new UnsupportedOperationException(err);
+        }
       }
 
       // if error state occurred, set node state accordingly
@@ -490,30 +490,31 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
             }
           }
         }
-      }
+      } else {
+        // finished properly
 
-
-      // if this is an AU top-level content poll
-      // update the AuState to indicate the poll is finished if it has
-      // the proper status
-      if (isTopLevelPollFinished(nodeState.getCachedUrlSet().getSpec(),
-                               pollState.getType(), pollState.getStatus())) {
-        getAuState().newPollFinished();
-        logger.info("Top level poll finished.");
-      }
-
-      // take next appropriate action on node if needed
-      // only check state for ranged polls if they changed the state
-      boolean checkState = !isRangedPoll ||
-          ((lastState != -1) && (lastState != nodeState.getState()));
-      if (checkState) {
-        try {
-          logger.debug3("New node state: " + nodeState.getStateString());
-          checkCurrentState(pollState, results, nodeState, false);
+        // if this is an AU top-level content poll
+        // update the AuState to indicate the poll is finished if it has
+        // the proper status
+        if (isTopLevelPollFinished(nodeState.getCachedUrlSet().getSpec(),
+                                   pollState.getType())) {
+          getAuState().newPollFinished();
+          logger.info("Top level poll finished.");
         }
-        catch (IOException ie) {
-          logger.error("Unable to continue actions on node: ", ie);
-          pollState.status = PollState.ERR_IO;
+
+        // take next appropriate action on node if needed
+        // only check state for ranged polls if they changed the state
+        boolean checkState = !isRangedPoll ||
+            ((lastState != -1) && (lastState != nodeState.getState()));
+        if (checkState) {
+          try {
+            logger.debug3("New node state: " + nodeState.getStateString());
+            checkCurrentState(pollState, results, nodeState, false);
+          }
+          catch (IOException ie) {
+            logger.error("Unable to continue actions on node: ", ie);
+            pollState.status = PollState.ERR_IO;
+          }
         }
       }
     }
@@ -1486,9 +1487,8 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     return list;
   }
 
-  boolean isTopLevelPollFinished(CachedUrlSetSpec spec, int type, int status) {
-    return (spec.isAU() && (type == Poll.CONTENT_POLL) &&
-            ((status==PollState.WON) || (status==PollState.LOST)));
+  boolean isTopLevelPollFinished(CachedUrlSetSpec spec, int type) {
+    return (spec.isAU() && (type == Poll.CONTENT_POLL));
   }
 
   class ContentRepairCallback implements CrawlManager.Callback {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.93 2003-07-09 19:36:53 clairegriffin Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.94 2003-07-23 22:56:31 eaalto Exp $
  */
 
 /*
@@ -611,7 +611,6 @@ public class TestNodeManagerImpl extends LockssTestCase {
     reputationChangeTest(results);
   }
 
-
   public void testHandleWrongNames() throws Exception {
     Vector masterV = new Vector();
     List localL = new ArrayList();
@@ -675,7 +674,8 @@ public class TestNodeManagerImpl extends LockssTestCase {
 
     nodeManager.createNodeState(mcus);
 
-    contentPoll = createPoll(mcus.getUrl(), true, true, 15, 5);
+    // test with an inconclusive poll
+    contentPoll = createPoll(mcus.getUrl(), true, true, 5, 5);
     PollTally results = contentPoll.getVoteTally();
     PollSpec spec = results.getPollSpec();
 
@@ -696,6 +696,10 @@ public class TestNodeManagerImpl extends LockssTestCase {
     assertEquals(-1, auState.getLastTopLevelPollTime());
 
     // test that a finished top-level poll sets the time right
+    contentPoll = createPoll(mcus.getUrl(), true, true, 15, 5);
+    results = contentPoll.getVoteTally();
+    spec = results.getPollSpec();
+
     TimeBase.setSimulated(TimeBase.nowMs());
     nodeState = (NodeStateImpl)nodeManager.getNodeState(mcus);
     pollState = new PollState(results.getType(),
