@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.33 2004-10-12 22:03:06 tlipkis Exp $
+ * $Id: AuConfig.java,v 1.34 2004-10-22 07:03:35 tlipkis Exp $
  */
 
 /*
@@ -337,7 +337,7 @@ public class AuConfig extends LockssServlet {
 
   /** Add an Edit row to the table */
   private void addAuSummaryRow(Table tbl, AuProxy au) {
-    Configuration cfg = remoteApi.getCurrentAuConfiguration(au);
+    Configuration cfg = remoteApi.getStoredAuConfiguration(au);
     boolean isGrey = true;
     String act;
     if (cfg.isEmpty()) {
