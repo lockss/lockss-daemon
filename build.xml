@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.125 2004-12-18 01:33:56 dcfok Exp $
+ $Id: build.xml,v 1.126 2005-01-04 02:47:34 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -154,6 +154,8 @@ Args:
   				  value="${lib}/commons-logging.jar"/>
   <property name="commons.httpclient.jar"
   				value="${lib}/commons-httpclient-2.0.jar"/>
+  <property name="commons.jxpath.jar"
+  				value="${lib}/commons-jxpath-1.2.jar"/>
   <property name="concurrent.jar" value="${lib}/concurrent.jar"/>
   <property name="htmlparser.jar"  value="${lib}/htmlparser.jar"/>
   <property name="rdf.jar" value="${lib}/rdf-api-2001-01-19.jar" /> <!-- W3C RDF Parser -->
@@ -206,6 +208,7 @@ Args:
     <pathelement path="${commons.collections.jar}" />
     <pathelement path="${commons.logging.jar}" />
     <pathelement path="${commons.httpclient.jar}" />
+    <pathelement path="${commons.jxpath.jar}" />
     <pathelement path="${log4j.jar}" />
     <pathelement path="${concurrent.jar}" />
     <pathelement path="${jetty.jar}" />
@@ -1327,22 +1330,49 @@ Test results in ${test.results}
   <target name="test-one"
    depends="prepare.run.test,check.class.arg,check.junit,jar-tests"
    description="Run a single test class, named by the 'class' property" >
-    <junit1 fork="no" printsummary="yes" haltonerror="yes" haltonfailure="yes"
-         filtertrace="${filtertrace}"
-         showoutput="${showoutput}">
-      <jvmarg value="-Xmx128m"/>  <!-- no effect unless both fork=yes -->
-      <test fork="${fork}" name="${class}" />
-      <formatter type="plain" usefile="false" />
-      <classpath>
- 	 <path refid="one.test.run.classpath" />
-      </classpath>
-      <sysproperty key="java.library.path" value="${test.native}"/>
-      <sysproperty key="org.lockss.unitTesting" value="true"/>
-      <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
-      <sysproperty key="org.lockss.defaultLogTarget" value="${logtarget}"/>
-      <sysproperty key="org.lockss.keepTempFiles" value="${keeptempfiles}"/>
-      <sysproperty key="org.lockss.test.timeout.shouldnt" value="${timeout}"/>
-    </junit1>
+    <if>
+      <contains string="${class}" substring="." />
+     <then>
+      <junit1 fork="no" printsummary="yes" haltonerror="yes"
+	   haltonfailure="yes" filtertrace="${filtertrace}"
+	   showoutput="${showoutput}">
+       <jvmarg value="-Xmx128m"/>  <!-- no effect unless both fork=yes -->
+       <test fork="${fork}" name="${class}" />
+       <formatter type="plain" usefile="false" />
+       <classpath>
+	  <path refid="one.test.run.classpath" />
+       </classpath>
+       <sysproperty key="java.library.path" value="${test.native}"/>
+       <sysproperty key="org.lockss.unitTesting" value="true"/>
+       <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
+       <sysproperty key="org.lockss.defaultLogTarget" value="${logtarget}"/>
+       <sysproperty key="org.lockss.keepTempFiles" value="${keeptempfiles}"/>
+       <sysproperty key="org.lockss.test.timeout.shouldnt" value="${timeout}"/>
+      </junit1>
+     </then>
+     <else>
+      <junit1 fork="no" printsummary="yes"
+	   haltonfailure="yes"
+	   filtertrace="${filtertrace}" showoutput="${showoutput}">
+       <jvmarg value="-Xmx128m"/>  <!-- no effect unless both fork=yes -->
+       <batchtest fork="${fork}">
+	 <fileset dir="${test.src}">
+	   <include name="**/${class}.java" />
+	 </fileset>
+       </batchtest>
+       <formatter type="plain" usefile="false" />
+       <classpath>
+	  <path refid="test.run.classpath" />
+       </classpath>
+       <sysproperty key="java.library.path" value="${test.native}"/>
+       <sysproperty key="org.lockss.unitTesting" value="true"/>
+       <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
+       <sysproperty key="org.lockss.defaultLogTarget" value="${logtarget}"/>
+       <sysproperty key="org.lockss.keepTempFiles" value="${keeptempfiles}"/>
+       <sysproperty key="org.lockss.test.timeout.shouldnt" value="${timeout}"/>
+      </junit1>
+     </else>
+    </if>
   </target>
 
   <!-- ==================================================================== -->
