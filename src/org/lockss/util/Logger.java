@@ -1,5 +1,5 @@
 /*
- * $Id: Logger.java,v 1.5 2002-09-23 02:56:49 tal Exp $
+ * $Id: Logger.java,v 1.6 2002-11-01 09:23:21 tal Exp $
  */
 
 /*
@@ -69,13 +69,16 @@ public class Logger {
     new LevelDescr(LEVEL_DEBUG, "Debug"),
   };
 
-  // Default log level if config parameter not set.
+  // Default default log level if config parameter not set.
   private static final int DEFAULT_LEVEL = LEVEL_INFO;
 
   static final String PREFIX = Configuration.PREFIX + "log.";
 
   private static final Map logs = new HashMap();
   private static Vector targets = new Vector();
+
+  // allow default level to be specified on command line
+  private static int defaultLevel;
 
   private static boolean configHandlerRegistered = false;
   private static ThreadLocal targetStack = new ThreadLocal() {
@@ -90,8 +93,11 @@ public class Logger {
   static {
     // until we get configured, output to default target
     defaultTarget();
+    setInitialDefaultLevel();
   }
 
+  // tk - make this private and use PrivilegedAccessor (which needs
+  // to be enhanced to handle constructors)
   /** Constructor not intended for outside use - not private only so
    * test classes can use it
    */
@@ -149,7 +155,7 @@ public class Logger {
     try {
       level = levelOf(levelName);
     } catch (IllegalArgumentException e) {
-      level = DEFAULT_LEVEL;
+      level = defaultLevel;
     }
     return level;
   }
@@ -227,6 +233,22 @@ public class Logger {
   }
 
   //private
+
+  /** set the initial default log level to that specified by the
+   * org.lockss.defaultLogLevel system property if present, or DEFAULT_LEVEL
+   */
+  private static void setInitialDefaultLevel() {
+    String s = System.getProperty("org.lockss.defaultLogLevel");
+    int l = DEFAULT_LEVEL;
+    if (s != null && !"".equals(s)) {
+      try {
+	l = levelOf(s);
+      } catch (IllegalArgumentException e) {
+	// no action
+      }
+    }
+    defaultLevel = l;
+  }
 
   /** Translate an exception's stack trace to a string.
    */
