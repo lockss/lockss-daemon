@@ -1,5 +1,5 @@
 /*
- * $Id: TestAcsArchivalUnit.java,v 1.10 2004-03-01 04:04:39 clairegriffin Exp $
+ * $Id: TestAcsArchivalUnit.java,v 1.11 2004-03-01 06:10:41 clairegriffin Exp $
  */
 
 /*
@@ -36,7 +36,7 @@ import org.lockss.plugin.*;
 import org.lockss.state.AuState;
 import org.lockss.plugin.base.BaseCachedUrlSet;
 import org.lockss.repository.LockssRepositoryImpl;
-import org.lockss.plugin.configurable.*;
+import org.lockss.plugin.definable.*;
 
 public class TestAcsArchivalUnit
     extends LockssTestCase {
@@ -69,7 +69,7 @@ public class TestAcsArchivalUnit
     super.tearDown();
   }
 
-  private ConfigurableArchivalUnit makeAu(URL volUrl,
+  private DefinableArchivalUnit makeAu(URL volUrl,
                                  URL issueUrl,
                                  String jkey,
                                  int volume,
@@ -90,9 +90,9 @@ public class TestAcsArchivalUnit
     props.setProperty(YEAR_KEY, Integer.toString(year));
 
     Configuration config = ConfigurationUtil.fromProps(props);
-    ConfigurablePlugin ap = new ConfigurablePlugin();
+    DefinablePlugin ap = new DefinablePlugin();
     ap.initPlugin(theDaemon, "org.lockss.plugin.acs.AcsPlugin");
-    ConfigurableArchivalUnit au = (ConfigurableArchivalUnit)ap.createAu(config);
+    DefinableArchivalUnit au = (DefinableArchivalUnit)ap.createAu(config);
     return au;
   }
 
@@ -152,7 +152,7 @@ public class TestAcsArchivalUnit
     String b_root = base_url.toString();
     String url;
 
-    ConfigurableArchivalUnit acsAu = makeAu(base_url, art_url, JOURNAL_KEY, VOL_ID, VOL_YEAR);
+    DefinableArchivalUnit acsAu = makeAu(base_url, art_url, JOURNAL_KEY, VOL_ID, VOL_YEAR);
 
     theDaemon.getLockssRepository(acsAu);
     theDaemon.getNodeManager(acsAu);
@@ -221,7 +221,7 @@ public class TestAcsArchivalUnit
         JOURNAL_KEY + "&in_volume=" + VOL_ID + "&in_decade=2003";
     URL a_url = new URL(ARTICLE_ROOT);
     URL base = new URL(ROOT_URL);
-    ConfigurableArchivalUnit acsAu = makeAu(base, a_url, JOURNAL_KEY, VOL_ID, VOL_YEAR);
+    DefinableArchivalUnit acsAu = makeAu(base, a_url, JOURNAL_KEY, VOL_ID, VOL_YEAR);
     assertEquals(expected, acsAu.getManifestPage());
   }
 
@@ -229,11 +229,11 @@ public class TestAcsArchivalUnit
     URL a_url = new URL(ARTICLE_ROOT);
     URL base = new URL(ROOT_URL);
     String stem1 = "http://pubs3.acs.org";
-    ConfigurableArchivalUnit acsAu1 = makeAu(base, a_url, JOURNAL_KEY, VOL_ID, VOL_YEAR);
+    DefinableArchivalUnit acsAu1 = makeAu(base, a_url, JOURNAL_KEY, VOL_ID, VOL_YEAR);
     assertEquals(ListUtil.list(stem1), acsAu1.getUrlStems());
 
     String stem2 = "http://pubs.acs.org";
-    ConfigurableArchivalUnit acsAu2 = makeAu(a_url, a_url, JOURNAL_KEY, VOL_ID, VOL_YEAR);
+    DefinableArchivalUnit acsAu2 = makeAu(a_url, a_url, JOURNAL_KEY, VOL_ID, VOL_YEAR);
     assertEquals(ListUtil.list(stem2), acsAu2.getUrlStems());
   }
 
@@ -264,9 +264,9 @@ public class TestAcsArchivalUnit
   public void testGetName() throws Exception {
     URL a_url = new URL(ARTICLE_ROOT);
     URL base = new URL(ROOT_URL);
-    ConfigurableArchivalUnit au = makeAu(base, a_url, JOURNAL_KEY, VOL_ID, VOL_YEAR);
+    DefinableArchivalUnit au = makeAu(base, a_url, JOURNAL_KEY, VOL_ID, VOL_YEAR);
     assertEquals("pubs3.acs.org, jcisd8, vol. 43", au.getName());
-    ConfigurableArchivalUnit au1 = makeAu(new URL("http://www.bmj.com/"),
+    DefinableArchivalUnit au1 = makeAu(new URL("http://www.bmj.com/"),
                                  new URL("http://www.bmj.com/"), "bmj", 61, VOL_YEAR);
     assertEquals("www.bmj.com, bmj, vol. 61", au1.getName());
   }
@@ -274,7 +274,7 @@ public class TestAcsArchivalUnit
   public void testRefetchDepth() throws Exception {
     URL a_url = new URL(ARTICLE_ROOT);
     URL base = new URL(ROOT_URL);
-    ConfigurableArchivalUnit au = makeAu(base, a_url, JOURNAL_KEY, VOL_ID, VOL_YEAR);
+    DefinableArchivalUnit au = makeAu(base, a_url, JOURNAL_KEY, VOL_ID, VOL_YEAR);
 
     assertEquals(2, au.getCrawlSpec().getRefetchDepth());
   }
@@ -282,7 +282,7 @@ public class TestAcsArchivalUnit
   public void testDefPauseTime() throws Exception {
     URL a_url = new URL(ARTICLE_ROOT);
     URL base = new URL(ROOT_URL);
-    ConfigurableArchivalUnit au = makeAu(base, a_url, JOURNAL_KEY, VOL_ID, VOL_YEAR);
+    DefinableArchivalUnit au = makeAu(base, a_url, JOURNAL_KEY, VOL_ID, VOL_YEAR);
     assertEquals(10 * Constants.SECOND, au.getFetchDelay());
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlackbirdPlugin.java,v 1.7 2004-03-01 04:04:39 clairegriffin Exp $
+ * $Id: TestBlackbirdPlugin.java,v 1.8 2004-03-01 06:10:41 clairegriffin Exp $
  */
 
 /*
@@ -38,17 +38,17 @@ import org.lockss.test.*;
 import org.lockss.daemon.*;
 import org.lockss.util.ListUtil;
 import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.configurable.*;
+import org.lockss.plugin.definable.*;
 
 public class TestBlackbirdPlugin extends LockssTestCase {
-  private ConfigurablePlugin plugin;
+  private DefinablePlugin plugin;
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   static final String YEAR_KEY = ConfigParamDescr.YEAR.getKey();
   static final String VOL_KEY = ConfigParamDescr.VOLUME_NUMBER.getKey();
 
   public void setUp() throws Exception {
     super.setUp();
-    plugin = new ConfigurablePlugin();
+    plugin = new DefinablePlugin();
     plugin.initPlugin(getMockLockssDaemon(),
                       "org.lockss.plugin.blackbird.BlackbirdPlugin");
   }
@@ -60,10 +60,10 @@ public class TestBlackbirdPlugin extends LockssTestCase {
     } catch (ArchivalUnit.ConfigurationException e) { }
   }
 
-  private ConfigurableArchivalUnit makeAuFromProps(Properties props)
+  private DefinableArchivalUnit makeAuFromProps(Properties props)
       throws ArchivalUnit.ConfigurationException {
     Configuration config = ConfigurationUtil.fromProps(props);
-    return (ConfigurableArchivalUnit)plugin.configureAu(config, null);
+    return (DefinableArchivalUnit)plugin.configureAu(config, null);
   }
 
   public void testGetAuHandlesBadUrl()
@@ -73,7 +73,7 @@ public class TestBlackbirdPlugin extends LockssTestCase {
     props.setProperty(VOL_KEY, "322");
 
     try {
-      ConfigurableArchivalUnit au = makeAuFromProps(props);
+      DefinableArchivalUnit au = makeAuFromProps(props);
       fail ("Didn't throw InstantiationException when given a bad url");
     } catch (ArchivalUnit.ConfigurationException auie) {
       ConfigParamDescr.InvalidFormatException murle =
@@ -89,7 +89,7 @@ public class TestBlackbirdPlugin extends LockssTestCase {
                       "http://www.example.com/");
     props.setProperty(VOL_KEY, "322");
 
-    ConfigurableArchivalUnit au = makeAuFromProps(props);
+    DefinableArchivalUnit au = makeAuFromProps(props);
     assertEquals("www.example.com, vol. 322", au.getName());
   }
 

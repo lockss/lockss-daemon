@@ -1,5 +1,5 @@
 /*
- * $Id: TestCulturalLogicArchivalUnit.java,v 1.5 2004-03-01 04:04:39 clairegriffin Exp $
+ * $Id: TestCulturalLogicArchivalUnit.java,v 1.6 2004-03-01 06:10:41 clairegriffin Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import org.lockss.plugin.*;
 import org.lockss.plugin.base.BaseCachedUrlSet;
 import org.lockss.state.AuState;
 import org.lockss.repository.LockssRepositoryImpl;
-import org.lockss.plugin.configurable.*;
+import org.lockss.plugin.definable.*;
 
 public class TestCulturalLogicArchivalUnit extends LockssTestCase {
   private MockLockssDaemon theDaemon;
@@ -62,7 +62,7 @@ public class TestCulturalLogicArchivalUnit extends LockssTestCase {
     theDaemon.getHashService();
   }
 
-  private ConfigurableArchivalUnit makeAu(URL url, String year)
+  private DefinableArchivalUnit makeAu(URL url, String year)
       throws Exception {
     Properties props = new Properties();
     props.setProperty(YEAR_KEY, year);
@@ -70,10 +70,10 @@ public class TestCulturalLogicArchivalUnit extends LockssTestCase {
       props.setProperty(BASE_URL_KEY, url.toString());
     }
     Configuration config = ConfigurationUtil.fromProps(props);
-    ConfigurablePlugin ap = new ConfigurablePlugin();
+    DefinablePlugin ap = new DefinablePlugin();
     ap.initPlugin(getMockLockssDaemon(),
                       "org.lockss.plugin.clogic.CulturalLogicPlugin");
-    ConfigurableArchivalUnit au = (ConfigurableArchivalUnit)ap.createAu(config);
+    DefinableArchivalUnit au = (DefinableArchivalUnit)ap.createAu(config);
     return au;
   }
 
@@ -147,7 +147,7 @@ public class TestCulturalLogicArchivalUnit extends LockssTestCase {
     URL url = new URL(ROOT_URL);
 
     String expectedStr = ROOT_URL+"lockss-2003.html";
-    ConfigurableArchivalUnit clAu = makeAu(url, "2003");
+    DefinableArchivalUnit clAu = makeAu(url, "2003");
     assertEquals(expectedStr, clAu.getManifestPage());
   }
 
@@ -161,10 +161,10 @@ public class TestCulturalLogicArchivalUnit extends LockssTestCase {
 
   public void testGetUrlStems() throws Exception {
     String stem1 = "http://eserver.org/clogic";
-    ConfigurableArchivalUnit clAu1 = makeAu(new URL(stem1 + "/"), "2003");
+    DefinableArchivalUnit clAu1 = makeAu(new URL(stem1 + "/"), "2003");
     assertEquals(ListUtil.list("http://eserver.org"), clAu1.getUrlStems());
     String stem2 = "http://eserver.org:8080/clogic";
-    ConfigurableArchivalUnit clAu2 = makeAu(new URL(stem2 + "/"), "2003");
+    DefinableArchivalUnit clAu2 = makeAu(new URL(stem2 + "/"), "2003");
     assertEquals(ListUtil.list("http://eserver.org:8080"), clAu2.getUrlStems());
   }
 
@@ -187,15 +187,15 @@ public class TestCulturalLogicArchivalUnit extends LockssTestCase {
   }
 
   public void testGetName() throws Exception {
-    ConfigurableArchivalUnit au = makeAu(new URL(ROOT_URL), "2003");
+    DefinableArchivalUnit au = makeAu(new URL(ROOT_URL), "2003");
     assertEquals("eserver.org/clogic/, 2003", au.getName());
-    ConfigurableArchivalUnit au1 =
+    DefinableArchivalUnit au1 =
         makeAu(new URL("http://www.bmj.com/clogic/"), "2004");
     assertEquals("www.bmj.com/clogic/, 2004", au1.getName());
   }
 
   public void testGetFilterRules() throws Exception {
-    ConfigurableArchivalUnit au = makeAu(new URL(ROOT_URL), "2003");
+    DefinableArchivalUnit au = makeAu(new URL(ROOT_URL), "2003");
     assertNull(au.getFilterRule(null));
     assertNull(au.getFilterRule("jpg"));
     assertNull(au.getFilterRule("text/html"));

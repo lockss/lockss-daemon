@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlackbirdArchivalUnit.java,v 1.8 2004-03-01 04:04:39 clairegriffin Exp $
+ * $Id: TestBlackbirdArchivalUnit.java,v 1.9 2004-03-01 06:10:41 clairegriffin Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import org.lockss.plugin.*;
 import org.lockss.plugin.base.BaseCachedUrlSet;
 import org.lockss.state.AuState;
 import org.lockss.repository.LockssRepositoryImpl;
-import org.lockss.plugin.configurable.*;
+import org.lockss.plugin.definable.*;
 
 public class TestBlackbirdArchivalUnit extends LockssTestCase {
   private MockLockssDaemon theDaemon;
@@ -63,7 +63,7 @@ public class TestBlackbirdArchivalUnit extends LockssTestCase {
     theDaemon.getHashService();
   }
 
-  private ConfigurableArchivalUnit makeAu(URL url, int volume)
+  private DefinableArchivalUnit makeAu(URL url, int volume)
       throws Exception {
     Properties props = new Properties();
     props.setProperty(VOL_KEY, Integer.toString(volume));
@@ -71,9 +71,9 @@ public class TestBlackbirdArchivalUnit extends LockssTestCase {
       props.setProperty(BASE_URL_KEY, url.toString());
     }
     Configuration config = ConfigurationUtil.fromProps(props);
-    ConfigurablePlugin ap = new ConfigurablePlugin();
+    DefinablePlugin ap = new DefinablePlugin();
     ap.initPlugin(theDaemon,"org.lockss.plugin.blackbird.BlackbirdPlugin");
-    ConfigurableArchivalUnit au = (ConfigurableArchivalUnit)ap.createAu(config);
+    DefinableArchivalUnit au = (DefinableArchivalUnit)ap.createAu(config);
     return au;
   }
 
@@ -174,7 +174,7 @@ public class TestBlackbirdArchivalUnit extends LockssTestCase {
     URL url = new URL(ROOT_URL);
 
     String expectedStr = ROOT_URL+"lockss/lockss-volume2.htm";
-    ConfigurableArchivalUnit bbAu = makeAu(url, 2);
+    DefinableArchivalUnit bbAu = makeAu(url, 2);
     assertEquals(expectedStr, bbAu.getManifestPage());
   }
 
@@ -188,10 +188,10 @@ public class TestBlackbirdArchivalUnit extends LockssTestCase {
 
   public void testGetUrlStems() throws Exception {
     String stem1 = "http://www.blackbird.vcu.edu";
-    ConfigurableArchivalUnit bbAu1 = makeAu(new URL(stem1 + "/"), 2);
+    DefinableArchivalUnit bbAu1 = makeAu(new URL(stem1 + "/"), 2);
     assertEquals(ListUtil.list(stem1), bbAu1.getUrlStems());
     String stem2 = "http://www.blackbird.vcu.edu:8080";
-    ConfigurableArchivalUnit bbAu2 = makeAu(new URL(stem2 + "/"), 2);
+    DefinableArchivalUnit bbAu2 = makeAu(new URL(stem2 + "/"), 2);
     assertEquals(ListUtil.list(stem2), bbAu2.getUrlStems());
   }
 
@@ -214,14 +214,14 @@ public class TestBlackbirdArchivalUnit extends LockssTestCase {
   }
 
   public void testGetName() throws Exception {
-    ConfigurableArchivalUnit au = makeAu(new URL(ROOT_URL), 2);
+    DefinableArchivalUnit au = makeAu(new URL(ROOT_URL), 2);
     assertEquals("www.blackbird.vcu.edu, vol. 2", au.getName());
-    ConfigurableArchivalUnit au1 = makeAu(new URL("http://www.bmj.com/"), 3);
+    DefinableArchivalUnit au1 = makeAu(new URL("http://www.bmj.com/"), 3);
     assertEquals("www.bmj.com, vol. 3", au1.getName());
   }
 
   public void testGetFilterRules() throws Exception {
-    ConfigurableArchivalUnit au = makeAu(new URL(ROOT_URL), 2);
+    DefinableArchivalUnit au = makeAu(new URL(ROOT_URL), 2);
     assertNull(au.getFilterRule(null));
     assertNull(au.getFilterRule("jpg"));
     assertNull(au.getFilterRule("text/html"));

@@ -1,5 +1,5 @@
 /*
- * $Id: ExternalizableMap.java,v 1.7 2004-02-07 06:53:34 eaalto Exp $
+ * $Id: ExternalizableMap.java,v 1.8 2004-03-01 06:10:40 clairegriffin Exp $
  */
 
 /*
@@ -67,6 +67,12 @@ public class ExternalizableMap {
       } else {
         descrMap.put(descrKey, descrElement);
       }
+    }
+  }
+
+  public Object removeMapElement(String descrKey) {
+    synchronized(descrMap) {
+      return descrMap.remove(descrKey);
     }
   }
 

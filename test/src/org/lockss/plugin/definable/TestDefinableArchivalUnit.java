@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigurableArchivalUnit.java,v 1.6 2004-02-27 02:05:53 clairegriffin Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.1 2004-03-01 06:10:41 clairegriffin Exp $
  */
 
 /*
@@ -29,7 +29,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
 */
-package org.lockss.plugin.configurable;
+package org.lockss.plugin.definable;
 
 import java.util.*;
 
@@ -44,8 +44,8 @@ import gnu.regexp.*;
  * @version 1.0
  */
 
-public class TestConfigurableArchivalUnit extends LockssTestCase {
-  private ConfigurableArchivalUnit cau = null;
+public class TestDefinableArchivalUnit extends LockssTestCase {
+  private DefinableArchivalUnit cau = null;
   private ExternalizableMap map;
   private List configProps = ListUtil.list(ConfigParamDescr.BASE_URL,
                                            ConfigParamDescr.VOLUME_NUMBER);
@@ -58,12 +58,12 @@ public class TestConfigurableArchivalUnit extends LockssTestCase {
   protected void setUp() throws Exception {
     super.setUp();
 
-    ConfigurablePlugin cp = new ConfigurablePlugin();
+    DefinablePlugin cp = new DefinablePlugin();
     map = cp.getConfigurationMap();
-    cau = new ConfigurableArchivalUnit(cp, map);
-    map.putString(ConfigurablePlugin.CM_NAME_KEY, PLUGIN_NAME);
-    map.putString(ConfigurablePlugin.CM_VERSION_KEY, CURRENT_VERSION);
-    map.putCollection(ConfigurablePlugin.CM_CONFIG_PROPS_KEY, configProps);
+    cau = new DefinableArchivalUnit(cp, map);
+    map.putString(DefinablePlugin.CM_NAME_KEY, PLUGIN_NAME);
+    map.putString(DefinablePlugin.CM_VERSION_KEY, CURRENT_VERSION);
+    map.putCollection(DefinablePlugin.CM_CONFIG_PROPS_KEY, configProps);
   }
 
   protected void tearDown() throws Exception {
@@ -76,7 +76,7 @@ public class TestConfigurableArchivalUnit extends LockssTestCase {
     map.putBoolean("BOOLEAN", true);
     map.putString("STRING", "Yo Mama!");
     map.putInt(ConfigParamDescr.YEAR.getKey(), 2003);
-    map.putInt(ConfigurableArchivalUnit.CM_AU_SHORT_YEAR_PREFIX +
+    map.putInt(DefinableArchivalUnit.CM_AU_SHORT_YEAR_PREFIX +
                ConfigParamDescr.YEAR.getKey(),3);
 
     String substr = "My Test Integer = %d\nINTEGER";
@@ -123,7 +123,7 @@ public class TestConfigurableArchivalUnit extends LockssTestCase {
   public void testMakeName() {
     map.putString("JOURNAL_NAME", "MyJournal");
     map.putInt("VOLUME", 43);
-    map.putString(ConfigurableArchivalUnit.CM_AU_NAME_KEY,
+    map.putString(DefinableArchivalUnit.CM_AU_NAME_KEY,
                   "%s Vol %d\nJOURNAL_NAME\nVOLUME");
     String expectedReturn = "MyJournal Vol 43";
     String actualReturn = cau.makeName();
@@ -132,7 +132,7 @@ public class TestConfigurableArchivalUnit extends LockssTestCase {
 
   public void testMakeRules() throws REException {
     map.putString("base_url", "http://www.example.com/");
-    map.putCollection(ConfigurableArchivalUnit.CM_AU_RULES_KEY, crawlRules);
+    map.putCollection(DefinableArchivalUnit.CM_AU_RULES_KEY, crawlRules);
 
     CrawlRule rules = cau.makeRules();
     assertEquals(CrawlRule.INCLUDE,
@@ -144,7 +144,7 @@ public class TestConfigurableArchivalUnit extends LockssTestCase {
   public void testMakeStartUrl() {
     map.putInt("VOLUME", 43);
     map.putString("URL", "http://www.example.com/");
-    map.putString(ConfigurableArchivalUnit.CM_AU_START_URL_KEY,
+    map.putString(DefinableArchivalUnit.CM_AU_START_URL_KEY,
                   "%slockss-volume/%d.html\nURL\nVOLUME");
 
     String expectedReturn = "http://www.example.com/lockss-volume/43.html";
@@ -156,7 +156,7 @@ public class TestConfigurableArchivalUnit extends LockssTestCase {
 
     map.putString("HOST", "www.example.com");
     map.putInt("YEAR", 2003);
-    map.putString(ConfigurableArchivalUnit.CM_AU_MANIFEST_KEY,
+    map.putString(DefinableArchivalUnit.CM_AU_MANIFEST_KEY,
             "http://%s/contents-by-date.%d.shtml\nHOST\nYEAR");
     String expectedReturn = "http://www.example.com/contents-by-date.2003.shtml";
     String actualReturn = cau.getManifestPage();

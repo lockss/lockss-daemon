@@ -1,5 +1,5 @@
 /*
- * $Id: DoHighwireCrawl.java,v 1.26 2004-03-01 04:04:39 clairegriffin Exp $
+ * $Id: DoHighwireCrawl.java,v 1.27 2004-03-01 06:10:40 clairegriffin Exp $
  */
 
 /*
@@ -36,7 +36,7 @@ import java.util.*;
 
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.configurable.*;
+import org.lockss.plugin.definable.*;
 import org.lockss.plugin.highwire.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
@@ -45,7 +45,7 @@ import org.lockss.plugin.base.*;
 public class DoHighwireCrawl {
   static MockLockssDaemon theDaemon;
 
-  private static ConfigurableArchivalUnit makeAu(URL url, int volume, int year)
+  private static DefinableArchivalUnit makeAu(URL url, int volume, int year)
       throws Exception {
     String baseUrlKey = ConfigParamDescr.BASE_URL.getKey();
     String yearKey = ConfigParamDescr.YEAR.getKey();
@@ -57,9 +57,9 @@ public class DoHighwireCrawl {
     props.setProperty(yearKey, String.valueOf(year));
     props.setProperty(BaseArchivalUnit.USE_CRAWL_WINDOW, ""+true);
     Configuration config = ConfigurationUtil.fromProps(props);
-    ConfigurablePlugin ap = new ConfigurablePlugin();
+    DefinablePlugin ap = new DefinablePlugin();
     ap.initPlugin(theDaemon, "org.lockss.plugin.highwire.HighWirePlugin");
-    ConfigurableArchivalUnit au = (ConfigurableArchivalUnit)ap.createAu(config);
+    DefinableArchivalUnit au = (DefinableArchivalUnit)ap.createAu(config);
     return au;
   }
 

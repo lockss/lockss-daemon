@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWirePlugin.java,v 1.22 2004-03-01 04:04:40 clairegriffin Exp $
+ * $Id: TestHighWirePlugin.java,v 1.23 2004-03-01 06:10:42 clairegriffin Exp $
  */
 
 /*
@@ -38,14 +38,14 @@ import org.lockss.util.*;
 import org.lockss.plugin.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.ArchivalUnit.*;
-import org.lockss.plugin.configurable.*;
+import org.lockss.plugin.definable.*;
 
 public class TestHighWirePlugin extends LockssTestCase {
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   static final String YEAR_KEY = ConfigParamDescr.YEAR.getKey();
   static final String VOL_KEY = ConfigParamDescr.VOLUME_NUMBER.getKey();
 
-  private ConfigurablePlugin plugin;
+  private DefinablePlugin plugin;
 
   public TestHighWirePlugin(String msg) {
     super(msg);
@@ -53,7 +53,7 @@ public class TestHighWirePlugin extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    plugin = new ConfigurablePlugin();
+    plugin = new DefinablePlugin();
     plugin.initPlugin(getMockLockssDaemon(),
                       "org.lockss.plugin.highwire.HighWirePlugin");
 
@@ -72,7 +72,7 @@ public class TestHighWirePlugin extends LockssTestCase {
     props.setProperty(BASE_URL_KEY, "http://www.example.com/");
     props.setProperty(VOL_KEY, "32");
     props.setProperty(YEAR_KEY, "2004");
-    ConfigurableArchivalUnit au = null;
+    DefinableArchivalUnit au = null;
     try {
       au = makeAuFromProps(props);
     }
@@ -81,10 +81,10 @@ public class TestHighWirePlugin extends LockssTestCase {
 
   }
 
-  private ConfigurableArchivalUnit makeAuFromProps(Properties props)
+  private DefinableArchivalUnit makeAuFromProps(Properties props)
       throws ArchivalUnit.ConfigurationException {
     Configuration config = ConfigurationUtil.fromProps(props);
-    return (ConfigurableArchivalUnit)plugin.configureAu(config, null);
+    return (DefinableArchivalUnit)plugin.configureAu(config, null);
   }
 
   public void testGetAuHandlesBadUrl()
@@ -95,7 +95,7 @@ public class TestHighWirePlugin extends LockssTestCase {
     props.setProperty(YEAR_KEY, "2004");
 
     try {
-      ConfigurableArchivalUnit au = makeAuFromProps(props);
+      DefinableArchivalUnit au = makeAuFromProps(props);
       fail ("Didn't throw InstantiationException when given a bad url");
     } catch (ArchivalUnit.ConfigurationException auie) {
       ConfigParamDescr.InvalidFormatException murle =
@@ -111,7 +111,7 @@ public class TestHighWirePlugin extends LockssTestCase {
     props.setProperty(BASE_URL_KEY, "http://www.example.com/");
     props.setProperty(YEAR_KEY, "2004");
 
-    ConfigurableArchivalUnit au = makeAuFromProps(props);
+    DefinableArchivalUnit au = makeAuFromProps(props);
     assertEquals("www.example.com, vol. 322", au.getName());
   }
 

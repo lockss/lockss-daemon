@@ -1,5 +1,5 @@
 /*
- * $Id: TestIeeePlugin.java,v 1.9 2004-03-01 04:04:40 clairegriffin Exp $
+ * $Id: TestIeeePlugin.java,v 1.10 2004-03-01 06:10:42 clairegriffin Exp $
  */
 
 /*
@@ -38,10 +38,10 @@ import org.lockss.test.*;
 import org.lockss.util.ListUtil;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.daemon.*;
-import org.lockss.plugin.configurable.*;
+import org.lockss.plugin.definable.*;
 
 public class TestIeeePlugin extends LockssTestCase {
-  private ConfigurablePlugin plugin;
+  private DefinablePlugin plugin;
   static final ConfigParamDescr PU_NUMBER = new ConfigParamDescr();
   static {
     PU_NUMBER.setKey("Pu_Number");
@@ -57,7 +57,7 @@ public class TestIeeePlugin extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    plugin = new ConfigurablePlugin();
+    plugin = new DefinablePlugin();
     plugin.initPlugin(getMockLockssDaemon(),
                       "org.lockss.plugin.ieee.IeeePlugin");
 
@@ -70,10 +70,10 @@ public class TestIeeePlugin extends LockssTestCase {
     } catch (ArchivalUnit.ConfigurationException e) { }
   }
 
-  private ConfigurableArchivalUnit makeAuFromProps(Properties props)
+  private DefinableArchivalUnit makeAuFromProps(Properties props)
       throws ArchivalUnit.ConfigurationException {
     Configuration config = ConfigurationUtil.fromProps(props);
-    return (ConfigurableArchivalUnit)plugin.configureAu(config, null);
+    return (DefinableArchivalUnit)plugin.configureAu(config, null);
   }
 
   public void testGetAuHandlesBadUrl()
@@ -83,7 +83,7 @@ public class TestIeeePlugin extends LockssTestCase {
     props.setProperty(BASE_URL_KEY, "foobar");
     props.setProperty(PUNUM_KEY, "4");
     try {
-      ConfigurableArchivalUnit au = makeAuFromProps(props);
+      DefinableArchivalUnit au = makeAuFromProps(props);
       fail ("Didn't throw InstantiationException when given a bad url");
     } catch (ArchivalUnit.ConfigurationException auie) {
       ConfigParamDescr.InvalidFormatException murle =
@@ -99,7 +99,7 @@ public class TestIeeePlugin extends LockssTestCase {
     props.setProperty(BASE_URL_KEY, "http://www.example.com/");
     props.setProperty(PUNUM_KEY,"4");
 
-    ConfigurableArchivalUnit au = makeAuFromProps(props);
+    DefinableArchivalUnit au = makeAuFromProps(props);
     assertEquals("www.example.com, puNumber 4, 2003", au.getName());
   }
 

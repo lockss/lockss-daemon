@@ -1,5 +1,5 @@
 /*
- * $Id: TestIeeeArchivalUnit.java,v 1.8 2004-03-01 04:04:40 clairegriffin Exp $
+ * $Id: TestIeeeArchivalUnit.java,v 1.9 2004-03-01 06:10:42 clairegriffin Exp $
  */
 
 /*
@@ -36,7 +36,7 @@ import org.lockss.plugin.*;
 import org.lockss.state.AuState;
 import org.lockss.plugin.base.BaseCachedUrlSet;
 import org.lockss.repository.LockssRepositoryImpl;
-import org.lockss.plugin.configurable.*;
+import org.lockss.plugin.definable.*;
 
 public class TestIeeeArchivalUnit
     extends LockssTestCase {
@@ -64,7 +64,7 @@ public class TestIeeeArchivalUnit
     super.tearDown();
   }
 
-  private ConfigurableArchivalUnit makeAu(URL volUrl,
+  private DefinableArchivalUnit makeAu(URL volUrl,
                                  int pub,
                                  int year) throws Exception {
 
@@ -77,9 +77,9 @@ public class TestIeeeArchivalUnit
     props.setProperty(YEAR_KEY, Integer.toString(year));
 
     Configuration config = ConfigurationUtil.fromProps(props);
-    ConfigurablePlugin ap = new ConfigurablePlugin();
+    DefinablePlugin ap = new DefinablePlugin();
     ap.initPlugin(theDaemon,"org.lockss.plugin.ieee.IeeePlugin");
-    ConfigurableArchivalUnit au = (ConfigurableArchivalUnit)ap.createAu(config);
+    DefinableArchivalUnit au = (DefinableArchivalUnit)ap.createAu(config);
     au.setConfiguration(config);
     return au;
   }
@@ -119,7 +119,7 @@ public class TestIeeeArchivalUnit
     String b_root = base.toString();
     String url;
 
-    ConfigurableArchivalUnit ieeeAu = makeAu(base, PUB_NUMBER, VOL_YEAR);
+    DefinableArchivalUnit ieeeAu = makeAu(base, PUB_NUMBER, VOL_YEAR);
 
     theDaemon.getLockssRepository(ieeeAu);
     theDaemon.getNodeManager(ieeeAu);
@@ -169,14 +169,14 @@ public class TestIeeeArchivalUnit
     String expected = ROOT_URL +
         "xpl/RecentIssue.jsp?puNumber=" + PUB_NUMBER + "&year=" + VOL_YEAR;
     URL base = new URL(ROOT_URL);
-    ConfigurableArchivalUnit ieeeAu = makeAu(base, PUB_NUMBER, VOL_YEAR);
+    DefinableArchivalUnit ieeeAu = makeAu(base, PUB_NUMBER, VOL_YEAR);
     assertEquals(expected, ieeeAu.getManifestPage());
   }
 
   public void testGetUrlStems() throws Exception {
     URL base = new URL(ROOT_URL);
     String stem = "http://ieeexplore.ieee.org";
-    ConfigurableArchivalUnit ieeeAu = makeAu(base, PUB_NUMBER, VOL_YEAR);
+    DefinableArchivalUnit ieeeAu = makeAu(base, PUB_NUMBER, VOL_YEAR);
     assertEquals(ListUtil.list(stem), ieeeAu.getUrlStems());
 
   }
@@ -204,7 +204,7 @@ public class TestIeeeArchivalUnit
 
   public void testGetName() throws Exception {
     URL base = new URL(ROOT_URL);
-    ConfigurableArchivalUnit au = makeAu(base, PUB_NUMBER, VOL_YEAR);
+    DefinableArchivalUnit au = makeAu(base, PUB_NUMBER, VOL_YEAR);
     assertEquals("ieeexplore.ieee.org, puNumber 8, 2003", au.getName());
   }
 

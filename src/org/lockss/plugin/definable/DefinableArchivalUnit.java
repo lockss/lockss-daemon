@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurableArchivalUnit.java,v 1.11 2004-03-01 04:04:37 clairegriffin Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.1 2004-03-01 06:10:40 clairegriffin Exp $
  */
 
 /*
@@ -28,7 +28,7 @@
  in this Software without prior written authorization from Stanford University.
 
  */
-package org.lockss.plugin.configurable;
+package org.lockss.plugin.definable;
 
 import java.util.*;
 
@@ -47,7 +47,7 @@ import java.net.URL;
  * @author claire griffin
  * @version 1.0
  */
-public class ConfigurableArchivalUnit extends BaseArchivalUnit {
+public class DefinableArchivalUnit extends BaseArchivalUnit {
   static final public String CM_AU_START_URL_KEY = "au_start_url";
   static final public String CM_AU_NAME_KEY = "au_name";
   static final public String CM_AU_RULES_KEY = "au_crawlrules";
@@ -65,14 +65,14 @@ public class ConfigurableArchivalUnit extends BaseArchivalUnit {
   protected ExternalizableMap definitionMap;
   static Logger log = Logger.getLogger("ConfigurableArchivalUnit");
 
-  protected ConfigurableArchivalUnit(Plugin myPlugin) {
+  protected DefinableArchivalUnit(Plugin myPlugin) {
     super(myPlugin);
     throw new UnsupportedOperationException(
         "ConfigurableArchvialUnit requires ConfigurablePlugin for construction");
   }
 
 
-  protected ConfigurableArchivalUnit(ConfigurablePlugin myPlugin,
+  protected DefinableArchivalUnit(DefinablePlugin myPlugin,
                                      ExternalizableMap definitionMap) {
     super(myPlugin);
     this.definitionMap = definitionMap;
@@ -183,7 +183,7 @@ public class ConfigurableArchivalUnit extends BaseArchivalUnit {
         window = ccw.makeCrawlWindow();
       }
       catch (Exception ex) {
-        throw new ConfigurablePlugin.InvalidDefinitionException(
+        throw new DefinablePlugin.InvalidDefinitionException(
        auName + " failed to create crawl window from " + window_class, ex);
       }
     }
@@ -197,7 +197,7 @@ public class ConfigurableArchivalUnit extends BaseArchivalUnit {
         return (FilterRule) Class.forName(filter).newInstance();
       }
       catch (Exception ex) {
-        throw new ConfigurablePlugin.InvalidDefinitionException(
+        throw new DefinablePlugin.InvalidDefinitionException(
        auName + " failed to create filter rule from " + filter, ex);
 
       }

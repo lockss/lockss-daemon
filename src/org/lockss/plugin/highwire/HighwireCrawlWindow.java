@@ -3,10 +3,10 @@ package org.lockss.plugin.highwire;
 import java.util.*;
 
 import org.lockss.daemon.*;
-import org.lockss.plugin.configurable.*;
+import org.lockss.plugin.definable.*;
 
 public class HighwireCrawlWindow
-    implements ConfigurableArchivalUnit.ConfigurableCrawlWindow {
+    implements DefinableArchivalUnit.ConfigurableCrawlWindow {
   public HighwireCrawlWindow() {}
 
   public CrawlWindow makeCrawlWindow() {

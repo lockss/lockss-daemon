@@ -1,5 +1,5 @@
 /*
- * $Id: TestAcsPlugin.java,v 1.12 2004-03-01 04:04:39 clairegriffin Exp $
+ * $Id: TestAcsPlugin.java,v 1.13 2004-03-01 06:10:41 clairegriffin Exp $
  */
 
 /*
@@ -38,10 +38,10 @@ import org.lockss.test.*;
 import org.lockss.util.ListUtil;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.daemon.*;
-import org.lockss.plugin.configurable.*;
+import org.lockss.plugin.definable.*;
 
 public class TestAcsPlugin extends LockssTestCase {
-  private ConfigurablePlugin plugin;
+  private DefinablePlugin plugin;
   static final ConfigParamDescr JOURNAL_KEY = new ConfigParamDescr();
   static {
     JOURNAL_KEY.setKey("journal_key");
@@ -67,15 +67,15 @@ public class TestAcsPlugin extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    plugin = new ConfigurablePlugin();
+    plugin = new DefinablePlugin();
     plugin.initPlugin(getMockLockssDaemon(),
                       "org.lockss.plugin.acs.AcsPlugin");
   }
 
-  private ConfigurableArchivalUnit makeAuFromProps(Properties props)
+  private DefinableArchivalUnit makeAuFromProps(Properties props)
       throws ArchivalUnit.ConfigurationException {
     Configuration config = ConfigurationUtil.fromProps(props);
-    return (ConfigurableArchivalUnit)plugin.configureAu(config, null);
+    return (DefinableArchivalUnit)plugin.configureAu(config, null);
   }
 
   public void testGetAuHandlesBadUrl()
@@ -87,7 +87,7 @@ public class TestAcsPlugin extends LockssTestCase {
     props.setProperty(BASE_URL_KEY, "blah");
     props.setProperty(YEAR_KEY, "2003");
     try {
-      ConfigurableArchivalUnit au = makeAuFromProps(props);
+      DefinableArchivalUnit au = makeAuFromProps(props);
       fail ("Didn't throw InstantiationException when given a bad url");
     } catch (ArchivalUnit.ConfigurationException auie) {
       ConfigParamDescr.InvalidFormatException murle =
@@ -105,7 +105,7 @@ public class TestAcsPlugin extends LockssTestCase {
     props.setProperty(BASE_URL_KEY, "http://www.example.com/");
     props.setProperty(YEAR_KEY, "2003");
 
-    ConfigurableArchivalUnit au = makeAuFromProps(props);
+    DefinableArchivalUnit au = makeAuFromProps(props);
     assertEquals("www.example.com, abcd, vol. 322", au.getName());
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigurablePlugin.java,v 1.8 2004-02-18 23:28:06 clairegriffin Exp $
+ * $Id: TestDefinablePlugin.java,v 1.1 2004-03-01 06:10:41 clairegriffin Exp $
  */
 
 /*
@@ -29,7 +29,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
 */
-package org.lockss.plugin.configurable;
+package org.lockss.plugin.definable;
 
 import org.lockss.test.*;
 import org.lockss.plugin.*;
@@ -45,18 +45,18 @@ import org.lockss.plugin.base.*;
  * @version 1.0
  */
 
-public class TestConfigurablePlugin extends LockssTestCase {
+public class TestDefinablePlugin extends LockssTestCase {
   static final String DEFAULT_PLUGIN_VERSION = "1";
 
-  private ConfigurablePlugin configurablePlugin = null;
+  private DefinablePlugin definablePlugin = null;
 
   protected void setUp() throws Exception {
     super.setUp();
-    configurablePlugin = new ConfigurablePlugin();
+    definablePlugin = new DefinablePlugin();
   }
 
   protected void tearDown() throws Exception {
-    configurablePlugin = null;
+    definablePlugin = null;
     super.tearDown();
   }
 
@@ -66,46 +66,46 @@ public class TestConfigurablePlugin extends LockssTestCase {
     p.setProperty(ConfigParamDescr.BASE_URL.getKey(), "http://www.example.com/");
      p.setProperty(BaseArchivalUnit.PAUSE_TIME_KEY,"10000");
     List rules = ListUtil.list("1\nhttp://www.example.com");
-    ExternalizableMap map = configurablePlugin.getConfigurationMap();
-    map.putString(ConfigurablePlugin.CM_NAME_KEY, "testplugin");
-    map.putCollection(ConfigurablePlugin.CM_CONFIG_PROPS_KEY,
+    ExternalizableMap map = definablePlugin.getConfigurationMap();
+    map.putString(DefinablePlugin.CM_NAME_KEY, "testplugin");
+    map.putCollection(DefinablePlugin.CM_CONFIG_PROPS_KEY,
                       Collections.EMPTY_LIST);
-    map.putCollection(ConfigurableArchivalUnit.CM_AU_RULES_KEY,rules);
+    map.putCollection(DefinableArchivalUnit.CM_AU_RULES_KEY,rules);
     map.putString("au_start_url", "http://www.example.com/");
     ConfigurationUtil.setCurrentConfigFromProps(p);
     Configuration auConfig = Configuration.getCurrentConfig();
-    ArchivalUnit actualReturn = configurablePlugin.createAu(auConfig);
-    assertTrue(actualReturn instanceof ConfigurableArchivalUnit);
+    ArchivalUnit actualReturn = definablePlugin.createAu(auConfig);
+    assertTrue(actualReturn instanceof DefinableArchivalUnit);
     assertEquals("configuration", auConfig, actualReturn.getConfiguration());
   }
 
   public void testGetAuConfigProperties() {
     Collection expectedReturn = ListUtil.list("Item1", "Item2");
-    ExternalizableMap map = configurablePlugin.getConfigurationMap();
-    map.putCollection(ConfigurablePlugin.CM_CONFIG_PROPS_KEY,
+    ExternalizableMap map = definablePlugin.getConfigurationMap();
+    map.putCollection(DefinablePlugin.CM_CONFIG_PROPS_KEY,
                       expectedReturn);
 
-    List actualReturn = configurablePlugin.getAuConfigDescrs();
+    List actualReturn = definablePlugin.getAuConfigDescrs();
     assertIsomorphic("return value", expectedReturn, actualReturn);
   }
 
   public void testGetConfigurationMap() {
-    ExternalizableMap expectedReturn = configurablePlugin.definitionMap;
-    ExternalizableMap actualReturn = configurablePlugin.getConfigurationMap();
+    ExternalizableMap expectedReturn = definablePlugin.definitionMap;
+    ExternalizableMap actualReturn = definablePlugin.getConfigurationMap();
     assertEquals("return value", expectedReturn, actualReturn);
   }
 
   public void testGetPluginName() {
     // no name set
-    String expectedReturn = "ConfigurablePlugin";
-    String actualReturn = configurablePlugin.getPluginName();
+    String expectedReturn = "DefinablePlugin";
+    String actualReturn = definablePlugin.getPluginName();
     assertEquals("return value", expectedReturn, actualReturn);
 
     // set the name
     expectedReturn = "TestPlugin";
-    ExternalizableMap map = configurablePlugin.getConfigurationMap();
-    map.putString(ConfigurablePlugin.CM_NAME_KEY, expectedReturn);
-    actualReturn = configurablePlugin.getPluginName();
+    ExternalizableMap map = definablePlugin.getConfigurationMap();
+    map.putString(DefinablePlugin.CM_NAME_KEY, expectedReturn);
+    actualReturn = definablePlugin.getPluginName();
     assertEquals("return value", expectedReturn, actualReturn);
 
   }
@@ -113,14 +113,14 @@ public class TestConfigurablePlugin extends LockssTestCase {
   public void testGetVersion() {
     // no version set
     String expectedReturn = DEFAULT_PLUGIN_VERSION;
-    String actualReturn = configurablePlugin.getVersion();
+    String actualReturn = definablePlugin.getVersion();
     assertEquals("return value", expectedReturn, actualReturn);
 
     // set the version
     expectedReturn = "Version 1.0";
-    ExternalizableMap map = configurablePlugin.getConfigurationMap();
-    map.putString(ConfigurablePlugin.CM_VERSION_KEY, expectedReturn);
-    actualReturn = configurablePlugin.getVersion();
+    ExternalizableMap map = definablePlugin.getConfigurationMap();
+    map.putString(DefinablePlugin.CM_VERSION_KEY, expectedReturn);
+    actualReturn = definablePlugin.getVersion();
     assertEquals("return value", expectedReturn, actualReturn);
 
   }
@@ -129,43 +129,43 @@ public class TestConfigurablePlugin extends LockssTestCase {
     LockssDaemon daemon = getMockLockssDaemon();
     String extMapName = null;
     try {
-      configurablePlugin.initPlugin(daemon, extMapName);
-      assertNull(configurablePlugin.mapName);
+      definablePlugin.initPlugin(daemon, extMapName);
+      assertNull(definablePlugin.mapName);
     }
     catch (Exception npe) {
     }
 
     extMapName = "org.lockss.test.MockConfigurablePlugin";
-    configurablePlugin.initPlugin(daemon, extMapName);
+    definablePlugin.initPlugin(daemon, extMapName);
     assertEquals("org.lockss.test.MockConfigurablePlugin",
-                 configurablePlugin.getPluginId());
+                 definablePlugin.getPluginId());
   }
 
   public void testInitPlugin() throws Exception {
     LockssDaemon daemon = getMockLockssDaemon();
     String extMapName = null;
     try {
-      configurablePlugin.initPlugin(daemon, extMapName);
-      assertNull(configurablePlugin.mapName);
+      definablePlugin.initPlugin(daemon, extMapName);
+      assertNull(definablePlugin.mapName);
     }
     catch (NullPointerException npe) {
     }
-    assertEquals("ConfigurablePlugin", configurablePlugin.getPluginName());
+    assertEquals("DefinablePlugin", definablePlugin.getPluginName());
 
     extMapName = "org.lockss.test.MockConfigurablePlugin";
-    configurablePlugin.initPlugin(daemon, extMapName);
+    definablePlugin.initPlugin(daemon, extMapName);
     assertEquals("Absinthe Literary Review",
-                 configurablePlugin.getPluginName());
-    assertEquals("Pre-release", configurablePlugin.getVersion());
+                 definablePlugin.getPluginName());
+    assertEquals("Pre-release", definablePlugin.getVersion());
 
     // check some other field
     StringBuffer sb = new StringBuffer("%sarchives%02d.htm\n");
     sb.append(ConfigParamDescr.BASE_URL.getKey());
     sb.append("\n");
     sb.append(ConfigParamDescr.YEAR.getKey());
-    ExternalizableMap map = configurablePlugin.getConfigurationMap();
+    ExternalizableMap map = definablePlugin.getConfigurationMap();
     assertEquals(sb.toString(),
-                 map.getString(ConfigurableArchivalUnit.CM_AU_START_URL_KEY, null));
+                 map.getString(DefinableArchivalUnit.CM_AU_START_URL_KEY, null));
 
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.71 2004-01-27 04:07:09 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.72 2004-03-01 06:10:39 clairegriffin Exp $
  */
 
 /*
@@ -39,7 +39,7 @@ import org.lockss.daemon.status.*;
 import org.lockss.poller.*;
 import org.lockss.util.*;
 import org.lockss.app.BaseLockssManager;
-import org.lockss.plugin.configurable.ConfigurablePlugin;
+import org.lockss.plugin.definable.DefinablePlugin;
 
 /**
  * Plugin global functionality
@@ -69,7 +69,7 @@ public class PluginManager extends BaseLockssManager {
   public static final String AU_PARAM_DISPLAY_NAME = "reserved.displayName";
 
   static final String CONFIGURABLE_PLUGIN_NAME =
-    ConfigurablePlugin.class.getName();
+    DefinablePlugin.class.getName();
 
   private static Logger log = Logger.getLogger("PluginMgr");
 
@@ -619,9 +619,9 @@ public class PluginManager extends BaseLockssManager {
       return null;
     }
     Plugin plugin = (Plugin) pluginClass.newInstance();
-    if (confFile != null && plugin instanceof ConfigurablePlugin) {
+    if (confFile != null && plugin instanceof DefinablePlugin) {
       log.debug("Instantiating Configurable plugin from " + confFile);
-      ((ConfigurablePlugin)plugin).initPlugin(theDaemon, confFile);
+      ((DefinablePlugin)plugin).initPlugin(theDaemon, confFile);
     } else {
       log.debug("Instantiating " + pluginClass);
       plugin.initPlugin(theDaemon);

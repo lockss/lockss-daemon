@@ -1,5 +1,5 @@
 /*
- * $Id: SampleArchivalUnit.java,v 1.5 2004-03-01 04:04:38 clairegriffin Exp $
+ * $Id: SampleArchivalUnit.java,v 1.6 2004-03-01 06:10:40 clairegriffin Exp $
  */
 
 /*
@@ -39,7 +39,7 @@ import org.lockss.state.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
 import gnu.regexp.REException;
-import org.lockss.plugin.configurable.*;
+import org.lockss.plugin.definable.*;
 
 /**
  * <p>SampleArchivalUnit: The Archival Unit Class for SamplePlugin.  This archival unit
@@ -48,7 +48,7 @@ import org.lockss.plugin.configurable.*;
  * @version 1.0
  */
 
-public class SampleArchivalUnit extends ConfigurableArchivalUnit {
+public class SampleArchivalUnit extends DefinableArchivalUnit {
   /**
    * Configuration parameter for new content crawl interval
    */
@@ -65,7 +65,7 @@ public class SampleArchivalUnit extends ConfigurableArchivalUnit {
 
   private int volume; // the volume number
 
-  public SampleArchivalUnit(ConfigurablePlugin myPlugin,
+  public SampleArchivalUnit(DefinablePlugin myPlugin,
                             ExternalizableMap map) {
     super(myPlugin, map);
   }

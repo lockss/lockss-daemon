@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurablePlugin.java,v 1.15 2004-03-01 04:04:37 clairegriffin Exp $
+ * $Id: DefinablePlugin.java,v 1.1 2004-03-01 06:10:40 clairegriffin Exp $
  */
 
 /*
@@ -29,7 +29,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
 */
-package org.lockss.plugin.configurable;
+package org.lockss.plugin.definable;
 
 import org.lockss.plugin.base.*;
 import org.lockss.plugin.*;
@@ -47,7 +47,7 @@ import java.io.FileNotFoundException;
  * @version 1.0
  */
 
-public class ConfigurablePlugin extends BasePlugin {
+public class DefinablePlugin extends BasePlugin {
   // configuration map keys
   static final public String CM_NAME_KEY = "plugin_name";
   static final public String CM_VERSION_KEY = "plugin_version";
@@ -96,7 +96,7 @@ public class ConfigurablePlugin extends BasePlugin {
 
   public ArchivalUnit createAu(Configuration auConfig)
       throws ArchivalUnit.ConfigurationException {
-    ConfigurableArchivalUnit au = new ConfigurableArchivalUnit(this,
+    DefinableArchivalUnit au = new DefinableArchivalUnit(this,
         definitionMap);
     au.setConfiguration(auConfig);
     return au;

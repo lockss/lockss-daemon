@@ -1,5 +1,5 @@
 /*
- * $Id: TestEmlsPlugin.java,v 1.8 2004-03-01 04:04:39 clairegriffin Exp $
+ * $Id: TestEmlsPlugin.java,v 1.9 2004-03-01 06:10:41 clairegriffin Exp $
  */
 
 /*
@@ -38,16 +38,16 @@ import org.lockss.test.*;
 import org.lockss.daemon.*;
 import org.lockss.util.ListUtil;
 import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.configurable.*;
+import org.lockss.plugin.definable.*;
 
 public class TestEmlsPlugin extends LockssTestCase {
-  private ConfigurablePlugin plugin;
+  private DefinablePlugin plugin;
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   static final String VOL_KEY = ConfigParamDescr.VOLUME_NUMBER.getKey();
 
   public void setUp() throws Exception {
     super.setUp();
-    plugin = new ConfigurablePlugin();
+    plugin = new DefinablePlugin();
     plugin.initPlugin(getMockLockssDaemon(),
                       "org.lockss.plugin.emls.EmlsPlugin");
   }
@@ -59,10 +59,10 @@ public class TestEmlsPlugin extends LockssTestCase {
     } catch (ArchivalUnit.ConfigurationException e) { }
   }
 
-  private ConfigurableArchivalUnit makeAuFromProps(Properties props)
+  private DefinableArchivalUnit makeAuFromProps(Properties props)
       throws ArchivalUnit.ConfigurationException {
     Configuration config = ConfigurationUtil.fromProps(props);
-    return (ConfigurableArchivalUnit)plugin.configureAu(config, null);
+    return (DefinableArchivalUnit)plugin.configureAu(config, null);
   }
 
   public void testGetAuHandlesBadUrl()
@@ -72,7 +72,7 @@ public class TestEmlsPlugin extends LockssTestCase {
     props.setProperty(VOL_KEY, "3");
 
     try {
-      ConfigurableArchivalUnit au = makeAuFromProps(props);
+      DefinableArchivalUnit au = makeAuFromProps(props);
       fail ("Didn't throw InstantiationException when given a bad url");
     } catch (ArchivalUnit.ConfigurationException auie) {
       ConfigParamDescr.InvalidFormatException murle =
@@ -88,7 +88,7 @@ public class TestEmlsPlugin extends LockssTestCase {
                       "http://www.example.com/emls/");
     props.setProperty(VOL_KEY, "3");
 
-    ConfigurableArchivalUnit au = makeAuFromProps(props);
+    DefinableArchivalUnit au = makeAuFromProps(props);
     assertEquals("www.example.com, vol. 3", au.getName());
   }
 
