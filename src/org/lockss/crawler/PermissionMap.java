@@ -1,5 +1,5 @@
 /*
- * $Id: PermissionMap.java,v 1.1 2004-07-28 22:49:28 dcfok Exp $
+ * $Id: PermissionMap.java,v 1.1.2.1 2004-09-19 01:35:52 tlipkis Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ public class PermissionMap{
   public static final int PERMISSION_NOT_OK = PermissionRecord.PERMISSION_NOT_OK;
   public static final int FETCH_PERMISSION_FAILED = PermissionRecord.FETCH_PERMISSION_FAILED;
 
-  private static HashMap hMap;
+  private HashMap hMap;
 
   public PermissionMap(){
     hMap = new HashMap();
