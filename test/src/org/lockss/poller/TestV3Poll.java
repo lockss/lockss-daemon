@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poll.java,v 1.1.2.25 2004-12-16 22:49:44 dshr Exp $
+ * $Id: TestV3Poll.java,v 1.1.2.26 2004-12-16 23:30:44 dshr Exp $
  */
 
 /*
@@ -330,7 +330,7 @@ public class TestV3Poll extends LockssTestCase {
     assertEquals(voterTally.getTallyResult(), Tallier.RESULT_NOQUORUM);
   }
 
-  public void dontTestNormalPollWithSevenAgreeVotes() {
+  public void testNormalPollWithSevenAgreeVotes() {
     log.debug("Starting testNormalPollWithSevenAgreeVotes()");
     try {
       initTestPoll(7);
@@ -368,7 +368,7 @@ public class TestV3Poll extends LockssTestCase {
     poller.solicitVotesFrom(peers);
     String key = poller.getKey();
     int steps = 200;
-    while (poller.getPollState() != V3Voter.STATE_FINALIZING) {
+    while (poller.getDeadline().getRemainingTime() > 0) {
       log.debug("about to step time");
       Thread.yield();
       if (!stepTimeUntilPollStateChanges(poller, voter, "testing")) {
@@ -486,7 +486,7 @@ public class TestV3Poll extends LockssTestCase {
 				    spec.getCachedUrlSet(),
 				    pollmanager);
     // XXX
-    duration = 40000;
+    duration = 50000;
     log.debug("Duration is " + duration);
     byte[] challenge = pollmanager.makeVerifier(duration);
     pollSpec = spec;
@@ -505,7 +505,7 @@ public class TestV3Poll extends LockssTestCase {
       log.debug("make voter ID " + i + " IP " + voterID[i]);
       // Make a voter
       p = pollmanager.makePoll(pollSpec,
-			       duration-20000,
+			       duration-10000,
 			       challenge,
 			       challenge,  // XXX how we signal to make a Voter
 			       pollerID,
