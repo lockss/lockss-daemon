@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigDump.java,v 1.2 2004-07-22 20:20:24 tlipkis Exp $
+ * $Id: ConfigDump.java,v 1.3 2004-07-23 16:41:50 tlipkis Exp $
  */
 
 /*
@@ -47,6 +47,7 @@ public class ConfigDump {
     List configUrls = new ArrayList();
     String outputFile = null;
     boolean includeTitles = false;
+    boolean xmlHack = false;
 
     if (argv.length == 0) {
       usage();
@@ -54,8 +55,14 @@ public class ConfigDump {
     try {
       for (int ix = 0; ix < argv.length; ix++) {
 	String arg = argv[ix];
-	if (arg.startsWith("-t")) {
+	if        (arg.startsWith("-t")) {
 	  includeTitles = true;
+	} else if (arg.startsWith("-nt")) {
+	  includeTitles = false;
+	} else if (arg.startsWith("-x")) {
+	  xmlHack = true;
+	} else if (arg.startsWith("-nx")) {
+	  xmlHack = false;
 	} else if (arg.startsWith("-o")) {
 	  outputFile = argv[++ix];
 	} else if (arg.startsWith("-")) {
@@ -66,6 +73,10 @@ public class ConfigDump {
       }
     } catch (ArrayIndexOutOfBoundsException e) {
       usage();
+    }
+
+    if (!xmlHack) {
+      System.setProperty("org.lockss.config.noXmlHack", "true");
     }
 
     PrintStream pout = System.out;
@@ -88,8 +99,9 @@ public class ConfigDump {
   }
 
   static void usage() {
-    System.err.println("Usage: ConfigDump [-t] [-o outfile] <urls-or-files ...>");
-    System.err.println("         -t   include title db entries");
+    System.err.println("Usage: ConfigDump [-t] [-x] [-o outfile] <urls-or-files ...>");
+    System.err.println("         -t           include title db entries");
+    System.err.println("         -x           enable .txt -> .xml hack");
     System.err.println("         -o outfile   write to outfile, else stdout");
     System.exit(1);
   }

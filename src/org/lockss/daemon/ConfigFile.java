@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigFile.java,v 1.6 2004-07-21 18:10:37 smorabito Exp $
+ * $Id: ConfigFile.java,v 1.7 2004-07-23 16:41:50 tlipkis Exp $
  */
 
 /*
@@ -208,7 +208,8 @@ public class ConfigFile {
       // This logic can and should go away when we're no longer in a
       // transition period, and the platform knows about XML config
       // files.
-      if (m_fileContents == null &&
+      if (!Boolean.getBoolean("org.lockss.config.noXmlHack") &&
+	  m_fileContents == null &&
 	  m_fileType == PROPERTIES_FILE && 
 	  UrlUtil.isHttpUrl(url)) {
 	String xmlUrl = makeXmlUrl(url);
