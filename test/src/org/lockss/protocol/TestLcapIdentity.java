@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapIdentity.java,v 1.22 2004-01-20 18:22:49 tlipkis Exp $
+ * $Id: TestLcapIdentity.java,v 1.23 2004-01-31 23:01:36 tlipkis Exp $
  */
 
 /*
@@ -85,19 +85,14 @@ public class TestLcapIdentity extends LockssTestCase {
     }
     testReputation = IdentityManager.INITIAL_REPUTATION;
     testIdKey = LcapIdentity.makeIdKey(testAddress);
-    try {
-      PollSpec spec = new PollSpec(archivalid, urlstr, lwrbnd, uprbnd,null);
-      testMsg = LcapMessage.makeRequestMsg(spec,
-          testentries,
-          testbytes,
-          testbytes,
-          LcapMessage.CONTENT_POLL_REQ,
-          100000,
-          fakeId);
-    }
-    catch (Exception ex) {
-      fail("message request creation failed.");
-    }
+    PollSpec spec = new MockPollSpec(archivalid, urlstr, lwrbnd, uprbnd);
+    testMsg = LcapMessage.makeRequestMsg(spec,
+					 testentries,
+					 testbytes,
+					 testbytes,
+					 LcapMessage.CONTENT_POLL_REQ,
+					 100000,
+					 fakeId);
   }
 
   /** test for method getIdentity(..) */
