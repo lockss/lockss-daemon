@@ -63,6 +63,7 @@
 	<value>org.lockss.plugin.disputatio.DisputatioPlugin</value>
 	<value>org.lockss.plugin.GendersPlugin</value>
 	<value>org.lockss.plugin.ShadowPlugin</value>
+	<value>org.lockss.plugin.iop.IOPPlugin</value>
 	<value>edu.harvard.plugin.jrs.JRSPlugin</value>
 	<value>edu.upenn.library.plugin.annualofurdustudies.AnnualOfUrduStudiesPlugin</value>
 	<value>edu.indiana.lib.plugin.jcjpc.JcjpcPlugin</value>
@@ -83,6 +84,7 @@
 	<value>edu.wisc.library.plugin.CortlandReview98Plugin</value>
 	<value>edu.wisc.library.plugin.BigBridgePlugin</value>
 	<value>edu.wisc.library.plugin.BigBridgeVol1Plugin</value>
+	<value>edu.columbia.plugin.JiwsPlugin</value>
       </list>
     </property>
 
@@ -91,6 +93,25 @@
     <!-- Title Database -->
 
     <property name="title">
+      <property name="ip20">
+	<property name="title" value="Inverse Problems Volume 20" />
+	<property name="journalTitle" value="Inverse Problems" />
+	<property name="plugin" value="org.lockss.plugin.iop.IOPPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.iop.org/EJ/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="journal_id" />
+	  <property name="value" value="0266-5611" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="20" />
+	</property>
+      </property>
+
+
       <!-- Title: EMLS (Early Modern Literary Studies) -->
       <property name="emls9">
 	<property name="title" value="EMLS Volume 9" />
@@ -1491,10 +1512,6 @@
 	<property name="value" value="11" />
       </property>
     </property>
-
-
-
-  </property>
 
   <!-- End title database -->
   
