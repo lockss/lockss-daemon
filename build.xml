@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.3 2002-07-24 06:24:41 tal Exp $
+ $Id: build.xml,v 1.4 2002-08-02 19:23:38 tal Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
@@ -240,6 +240,15 @@ in this Software without prior written authorization from Stanford University.
    description="Run the proxy" >
     <java classname="org.lockss.proxy.StartProxy" fork="true">
        <classpath refid="test.run.classpath" />
+    </java>
+  </target>
+
+  <!-- ==================================================================== -->
+  <target name="run-class" depends="jar-tests"
+   description="Run a class named by class prop, with args in args prop" >
+    <java classname="${class}" fork="true">
+       <classpath refid="test.run.classpath" />
+       <arg line="${args}" />
     </java>
   </target>
 
