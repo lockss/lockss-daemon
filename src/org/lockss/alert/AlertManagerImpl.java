@@ -1,5 +1,5 @@
 /*
- * $Id: AlertManagerImpl.java,v 1.3.2.1 2004-07-19 08:25:43 tlipkis Exp $
+ * $Id: AlertManagerImpl.java,v 1.3.2.2 2004-08-02 03:33:35 tlipkis Exp $
  *
 
  Copyright (c) 2000-2004 Board of Trustees of Leland Stanford Jr. University,
@@ -271,12 +271,12 @@ public class AlertManagerImpl extends BaseLockssManager
 	alerts = new ArrayList();
 	isProcessed = false;
 	latestTrigger = now() + min(maxDelay, action.getMaxPendTime());
-	trigger = Deadline.in(min(now() + initialDelay, latestTrigger));
+	trigger = Deadline.at(min(now() + initialDelay, latestTrigger));
 	scheduleTimer();
       } else {
 	if (log.isDebug3()) log.debug3("Adding: " + alert);
 	alerts.add(alert);
-	trigger.expireIn(min(now() + incrDelay, latestTrigger));
+	trigger.expireAt(min(now() + incrDelay, latestTrigger));
 	if (log.isDebug3()) log.debug3(" and resetting timer to " + trigger);
 	if (isTime()) {
 	  execute();
