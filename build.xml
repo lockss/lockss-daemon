@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.9 2002-09-02 04:12:41 tal Exp $
+ $Id: build.xml,v 1.10 2002-09-04 18:11:42 tal Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
@@ -35,6 +35,9 @@ in this Software without prior written authorization from Stanford University.
   <!--  Ignore system classpath, to ensure consistent builds -->
   <property name="build.sysclasspath" value="ignore" />
 
+  <!--  CVS-related -->
+  <property name="cvs.project"    value="lockss-gamma" />
+
   <!--  Directories -->
   <property name="src"            value="${basedir}/src" />
   <property name="classes"        value="${basedir}/classes" />
@@ -54,6 +57,7 @@ in this Software without prior written authorization from Stanford University.
   <property name="javadoc"        value="${basedir}/javadoc"/>
   <property name="test.javadoc"   value="${test}/javadoc"/>
   <property name="depend.cache"   value="${basedir}/.depend"/>
+  <property name="temp.build"     value="${basedir}/tempbuild"/>
 
   <!--  Jars -->
   <property name="jetty.jar"      value="${lib}/org.mortbay.jetty.jar"/>
@@ -68,6 +72,10 @@ in this Software without prior written authorization from Stanford University.
   <property name="lockss.jar"     value="${lib}/lockss.jar"/>
   <property name="lockss.test.jar" value="${test.lib}/lockss-test.jar"/>
   <property name="lockss.ant.jar" value="${lib}/lockss-ant.jar"/>
+
+  <property name="ant-contrib.jar"      value="${lib}/ant-contrib-0.1.jar"/>
+  <property name="ant-contrib.resource"
+                          value="net/sf/antcontrib/antcontrib.properties"/>
 
   <!--  Compiler options -->
   <property name="javac.debug"             value="on" />
@@ -98,11 +106,20 @@ in this Software without prior written authorization from Stanford University.
     <pathelement path="${lockss.test.jar}" />
   </path>
 
+  <path id="ant-contrib.classpath">
+    <pathelement location="${ant-contrib.jar}"/>
+  </path>
+
   <!--  Need ant jar to compile ant extensions, so include ant's classpath -->
   <path id="ant.compile.classpath">
     <path refid="compile.classpath" />
     <pathelement path="${java.class.path}" />
   </path>
+
+  <!--  Non-standard tasks -->
+  <taskdef resource="${ant-contrib.resource}">
+   <classpath refid="ant-contrib.classpath"/>
+  </taskdef>
 
   <!-- ==================================================================== -->
   <!--  Setup tasks -->
@@ -121,10 +138,17 @@ in this Software without prior written authorization from Stanford University.
                classname="junit.framework.Test" />
   </target>
 
+  <target name="prepare.contrib">
+    <available property="ant-contrib.available" 
+               resource="${ant-contrib.resource}">
+	 <classpath refid="ant-contrib.classpath" />
+    </available>
+  </target>
+
   <!-- ==================================================================== -->
   <!--  Public tasks -->
   <!-- ==================================================================== -->
-  <target name="clean"
+  <target name="clean" depends="clean-tempbuild"
    description="Delete all generated files and dirs" >
     <delete dir="${classes}" quiet="true"/>
     <delete dir="${test.classes}" quiet="true"/>
@@ -138,6 +162,10 @@ in this Software without prior written authorization from Stanford University.
     <delete file="${lockss.ant.jar}" quiet="true"/>
   </target>
 
+  <target name="clean-tempbuild"
+   description="Delete temporary build dirs" >
+    <delete dir="${temp.build}" quiet="true"/>
+  </target>
   <!-- ==================================================================== -->
   <target name="depend-lockss" depends="prepare"
    description="Process Java dependencies in LOCKSS classes" >
@@ -226,6 +254,12 @@ in this Software without prior written authorization from Stanford University.
   <target name="javadoc" depends="compile-lockss"
    description="Build the LOCKSS javadoc">
     <mkdir dir="${javadoc}"/>
+    <!-- Old files can result in misleading stuff in the docs.  Since
+         javadoc regenerates everything from scratch each time anyway,
+	 ensure the directory is cleared out first.  -->
+    <delete>
+      <fileset dir="${javadoc}" defaultexcludes="no" />
+    </delete>
     <javadoc packagenames="org.lockss.*"
              sourcepath="${src}"
              destdir="${javadoc}"
@@ -250,6 +284,13 @@ in this Software without prior written authorization from Stanford University.
 	 An alternative would be to fully include the non-test classes,
 	 by putting them on the sourcepath.  -->
     <mkdir dir="${test.javadoc}"/>
+    <!-- Old files can result in misleading stuff in the docs.  Since
+         javadoc regenerates everything from scratch each time anyway,
+	 ensure the directory is cleared out first.  -->
+    <delete>
+      <fileset dir="${test.javadoc}" defaultexcludes="no" />
+    </delete>
+<!--  packagenames="org.lockss.test.*" -->
     <javadoc 
              sourcepath="${test.src}"
              destdir="${test.javadoc}"
@@ -259,7 +300,9 @@ in this Software without prior written authorization from Stanford University.
              windowtitle="LOCKSS test classes API"
              doctitle="LOCKSS test"
              bottom="Copyright &#169; 2002 Board of Trustees of Leland Stanford Jr. University, all rights reserved.">
-       <fileset dir="${test.src}" includes="**/*.java"/>
+<!--         <fileset dir="${test.src}" includes="**/*.java"/> -->
+       <fileset dir="${test.src}"
+         includes="**/*.java" excludes="**/Test*.java"/>
        <classpath refid="test.compile.classpath" />
     </javadoc>
   </target>
@@ -384,6 +427,47 @@ Test results in ${test.results}
   </target>
 
   <!-- ==================================================================== -->
+  <target name="rebuild-all"
+   depends="clean,test-all,javadoc,javadoc-test"
+   description="Clean, build and test all, and javadoc." >
+  </target>
+
+  <!-- ==================================================================== -->
+  <target name="checkout-and-build"
+     depends="check.contrib"
+     description="Checkout current cvs into a new temp dir and build all.  Delete temp dir iff build was successful." >
+   <mkdir dir="${temp.build}" />
+   <tempfile property="temp.build.dir" destdir="${temp.build}" prefix="build"/>
+   <mkdir dir="${temp.build.dir}" />
+   <trycatch property="recursive.error.msg">
+    <try>
+     <echo>Checking out to ${temp.build.dir}</echo>
+     <cvs command="-Q checkout" package="lockss-gamma" dest="${temp.build.dir}"
+       failonerror="true"/>
+     <echo>Building and testing in ${temp.build.dir}</echo>
+     <ant dir="${temp.build.dir}/${cvs.project}"
+	   target="rebuild-all"
+	   inheritAll="false" />
+     <echo>Build was successful, deleting "${temp.build.dir}"</echo>
+     <delete dir="${temp.build.dir}" quiet="true"/>
+     <property name="checkout.and.build.worked" value="true" />
+    </try>
+    <catch>
+     <echo>*** Failed temp checkout left in
+*** ${temp.build.dir}
+*** Use clean-tempbuild target to delete it.</echo>
+    </catch>
+   </trycatch>
+  </target>
+
+  <!-- ==================================================================== -->
+  <target name="pre-commit-check" depends="rebuild-all"
+   description="Synonym for rebuild-all." />
+
+  <target name="post-commit-test" depends="checkout-and-build"
+   description="Synonym for checkout-and-build." />
+
+  <!-- ==================================================================== -->
   <target name="check.junit"
    depends="check.junit.task,check.junit.jar">
   </target>
@@ -402,6 +486,13 @@ Test results in ${test.results}
   You need to place a copy of junit.jar on the classpath.
   Please see Ant's JUnit task doc for more information"
     />
+  </target>
+
+  <target name="check.contrib"
+   depends="prepare.contrib,check.ant-contrib.jar" />
+
+  <target name="check.ant-contrib.jar" unless="ant-contrib.available" >
+    <fail message="You need to place a copy of ant-contrib-0.1.jar in ${lib}." />
   </target>
 
 </project>
