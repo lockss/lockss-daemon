@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerImpl.java,v 1.27 2004-08-19 00:02:18 clairegriffin Exp $
+ * $Id: CrawlerImpl.java,v 1.28 2004-08-20 22:56:16 clairegriffin Exp $
  */
 
 /*
@@ -37,7 +37,6 @@ import java.util.*;
 
 import org.lockss.alert.*;
 import org.lockss.daemon.*;
-import org.lockss.filter.*;
 import org.lockss.plugin.*;
 import org.lockss.state.*;
 import org.lockss.util.*;
@@ -99,6 +98,7 @@ public abstract class CrawlerImpl implements Crawler {
   public abstract int getType();
 
   protected ArrayList permissionCheckers = new ArrayList();
+  protected List lockssCheckers = null;
   protected AlertManager alertMgr;
 
   protected CrawlerImpl(ArchivalUnit au, CrawlSpec spec, AuState aus) {
@@ -112,10 +112,7 @@ public abstract class CrawlerImpl implements Crawler {
     this.au = au;
     this.spec = spec;
     this.aus = aus;
-    StringPermissionChecker spc = new StringPermissionChecker(
-        LOCKSS_PERMISSION_STRING, new CrawlerFilterRule());
-    spc.setFlag(StringPermissionChecker.IGNORE_CASE, true);
-    permissionCheckers.add(spc);
+    lockssCheckers = new LockssPermission().getCheckers();
     permissionCheckers.addAll(spec.getPermissionCheckers());
     connectionPool = new LockssUrlConnectionPool();
 
@@ -235,13 +232,39 @@ public abstract class CrawlerImpl implements Crawler {
 
     InputStream is = new BufferedInputStream(uc.getUncachedInputStream());
     // allow us to reread contents if reasonable size
+    boolean needPermission = true;
     try {
+      // check the lockss checkers and find at least one checker that matches
+      for (Iterator it = lockssCheckers.iterator(); it.hasNext() && needPermission; ) {
+        is.mark(PERM_BUFFER_MAX);
+        checker = (PermissionChecker) it.next();
+        Reader reader = new InputStreamReader(is, Constants.DEFAULT_ENCODING);
+        if (checker.checkPermission(reader)) {
+          needPermission = false;
+          try {
+            is.reset();
+          }
+          catch (IOException e) {
+            is.close();
+            uc = makeUrlCacher(ownerCus, permissionPage);
+            uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW_ON_HOST);
+            is = new BufferedInputStream(uc.getUncachedInputStream());
+          }
+        }
+      }
+      // if we didn't find at least one required lockss permission - fail.
+      if(needPermission) {
+        logger.error("No LOCKSS crawl permission on " + permissionPage);
+        is.close();
+        return false;
+      }
+      // now check for the required permission from the plugin
       for (Iterator it = permissionCheckers.iterator(); it.hasNext(); ) {
         is.mark(PERM_BUFFER_MAX);
         checker = (PermissionChecker) it.next();
         Reader reader = new InputStreamReader(is, Constants.DEFAULT_ENCODING);
         if (!checker.checkPermission(reader)) {
-          logger.error("No crawl permission on " + permissionPage);
+          logger.error("No plugin crawl permission on " + permissionPage);
           is.close();
           return false;
         }
@@ -250,6 +273,7 @@ public abstract class CrawlerImpl implements Crawler {
             is.reset();
           }
           catch (IOException e) {
+            is.close();
             uc = makeUrlCacher(ownerCus, permissionPage);
             uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW_ON_HOST);
             is = new BufferedInputStream(uc.getUncachedInputStream());
@@ -264,9 +288,14 @@ public abstract class CrawlerImpl implements Crawler {
       else {
         uc.storeContent(is, uc.getUncachedProperties());
       }
+
     }
     finally {
-      is.close();
+      try {
+        is.close();
+      }
+      catch (IOException ex) {
+      }
     }
 
     return true;
@@ -321,13 +350,5 @@ public abstract class CrawlerImpl implements Crawler {
     sb.append(au.toString());
     sb.append("]");
     return sb.toString();
-  }
-
-  static public class CrawlerFilterRule implements FilterRule {
-    public Reader createFilteredReader(Reader reader) {
-      Reader filteredReader = StringFilter.makeNestedFilter(reader,
-          new String[][] { {"<br>", " "} , {"&nbsp;", " "} } , true);
-      return new WhiteSpaceFilter(filteredReader);
-    }
   }
 }

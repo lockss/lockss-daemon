@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.16 2004-08-12 23:15:15 clairegriffin Exp $
+ * $Id: TestNewContentCrawler.java,v 1.17 2004-08-20 22:56:17 clairegriffin Exp $
  */
 
 /*
@@ -67,8 +67,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     crawlRule.addUrlToCrawl(startUrl);
     spec = new CrawlSpec(startUrls, startUrls, crawlRule, 1);
     crawler = new NewContentCrawler(mau, spec, aus);
-    ((CrawlerImpl)crawler).permissionCheckers.clear();
-    ((CrawlerImpl)crawler).permissionCheckers.add(new MockPermissionChecker(1));
+    ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MockPermissionChecker(1));
 
     mau.setParser(parser);
     Properties p = new Properties();
@@ -151,8 +150,7 @@ public class TestNewContentCrawler extends LockssTestCase {
 
     spec = new CrawlSpec(urls, ListUtil.list(startUrl), crawlRule, 1);
     crawler = new NewContentCrawler(mau, spec, new MockAuState());
-    ((CrawlerImpl)crawler).permissionCheckers.clear();
-    ((CrawlerImpl)crawler).permissionCheckers.add(new MockPermissionChecker(1));
+    ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MockPermissionChecker(1));
 
     mau.setParser(parser);
 
@@ -174,8 +172,7 @@ public class TestNewContentCrawler extends LockssTestCase {
   public void testOverwritesStartingUrlsMultipleLevels() {
     spec = new CrawlSpec(startUrls, startUrls, crawlRule, 2);
     crawler = new NewContentCrawler(mau, spec, new MockAuState());
-    ((CrawlerImpl)crawler).permissionCheckers.clear();
-    ((CrawlerImpl)crawler).permissionCheckers.add(new MockPermissionChecker(1));
+    ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MockPermissionChecker(1));
 
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     String url1= "http://www.example.com/link1.html";
@@ -576,8 +573,7 @@ public class TestNewContentCrawler extends LockssTestCase {
 
     //set Crawler
     crawler = new NewContentCrawler(mmau, spec, new MockAuState());
-    ((CrawlerImpl)crawler).permissionCheckers.clear();
-    ((CrawlerImpl)crawler).permissionCheckers.add(
+    ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(
         new MockPermissionChecker(passPermissionCheck));
 
     //set parser

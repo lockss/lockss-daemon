@@ -1,5 +1,5 @@
 /*
- * $Id: StringPermissionChecker.java,v 1.2 2004-08-19 00:02:19 clairegriffin Exp $
+ * $Id: StringPermissionChecker.java,v 1.3 2004-08-20 22:56:16 clairegriffin Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.util.*;
 
 import org.lockss.plugin.*;
 import org.lockss.util.*;
+import org.lockss.filter.*;
 
 public class StringPermissionChecker implements PermissionChecker {
   public static final int IGNORE_CASE = 0;
@@ -50,6 +51,7 @@ public class StringPermissionChecker implements PermissionChecker {
       m_matchString = matchString;
       m_filter = filterRule;
       m_encoding = Constants.DEFAULT_ENCODING;
+      setFlag(IGNORE_CASE, true);
   }
 
   public StringPermissionChecker(String matchString) {
@@ -105,6 +107,14 @@ public class StringPermissionChecker implements PermissionChecker {
                        + ex.toString());
     }
     return permission_ok;
+  }
+
+  static public class StringFilterRule implements FilterRule {
+    public Reader createFilteredReader(Reader reader) {
+      Reader filteredReader = StringFilter.makeNestedFilter(reader,
+          new String[][] { {"<br>", " "} , {"&nbsp;", " "} } , true);
+      return new WhiteSpaceFilter(filteredReader);
+    }
   }
 
 }

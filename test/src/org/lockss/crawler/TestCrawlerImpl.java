@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlerImpl.java,v 1.18 2004-08-12 23:15:15 clairegriffin Exp $
+ * $Id: TestCrawlerImpl.java,v 1.19 2004-08-20 22:56:17 clairegriffin Exp $
  */
 
 /*
@@ -89,9 +89,8 @@ public class TestCrawlerImpl extends LockssTestCase {
     new MockLockssDaemon().getAlertManager();
     crawler = new NewContentCrawler(mau, spec, aus);
     // store the orignal checker and replace with a mock checker
-    checker = (PermissionChecker)((CrawlerImpl)crawler).permissionCheckers.get(0);
-    ((CrawlerImpl)crawler).permissionCheckers.clear();
-    ((CrawlerImpl)crawler).permissionCheckers.add(new MockPermissionChecker(true));
+    checker = (PermissionChecker)((CrawlerImpl)crawler).lockssCheckers.get(0);
+    ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MockPermissionChecker(true));
 //     crawler = new MyCrawler(mau, spec, aus);
 
     mau.setParser(parser);
@@ -492,8 +491,7 @@ public class TestCrawlerImpl extends LockssTestCase {
 
 
     crawler = new NewContentCrawler(mau, spec, new MockAuState());
-    ((CrawlerImpl)crawler).permissionCheckers.clear();
-    ((CrawlerImpl)crawler).permissionCheckers.add(new MockPermissionChecker(true));
+    ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MockPermissionChecker(true));
 
     mau.setParser(parser);
     crawler.doCrawl();
