@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlParser.java,v 1.10 2004-03-06 00:02:23 troberts Exp $
+ * $Id: GoslingHtmlParser.java,v 1.11 2004-03-06 00:38:34 troberts Exp $
  */
 
 /*
@@ -119,11 +119,8 @@ public class GoslingHtmlParser implements ContentParser {
       return;
     }
 
-    InputStream is = cu.openForReading();
-    // set the reader to our default encoding
-    //XXX try to extract encoding from source
-    Reader reader = new InputStreamReader(is, Constants.DEFAULT_ENCODING); //should do this elsewhere
-    //XXX fix here
+    Reader reader = cu.openForReading();
+
     String redirectedTo = getRedirectedTo(cu);
     URL srcUrl = null;
     if (redirectedTo != null) {

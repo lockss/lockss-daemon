@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.49 2004-02-23 09:12:05 tlipkis Exp $
+ * $Id: NullPlugin.java,v 1.50 2004-03-06 00:38:35 troberts Exp $
  */
 
 /*
@@ -157,15 +157,15 @@ public class NullPlugin {
       return CachedUrlSetNode.TYPE_CACHED_URL;
     }
 
-    public InputStream openForReading() {
+    public InputStream getUnfilteredInputStream() {
       return new StringInputStream("");
     }
 
     public InputStream openForHashing() {
-      return openForReading();
+      return getUnfilteredInputStream();
     }
 
-    public Reader getReader() {
+    public Reader openForReading() {
       throw new UnsupportedOperationException("Not implemented");
     }
 

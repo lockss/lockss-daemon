@@ -1,5 +1,5 @@
 /*
- * $Id: PTestPlugin.java,v 1.17 2003-09-26 23:49:01 eaalto Exp $
+ * $Id: PTestPlugin.java,v 1.18 2004-03-06 00:38:35 troberts Exp $
  */
 
 /*
@@ -86,15 +86,15 @@ public class PTestPlugin {
       return CachedUrlSetNode.TYPE_CACHED_URL;
     }
 
-    public InputStream openForReading() {
+    public InputStream getUnfilteredInputStream() {
       return new StringInputStream(contents);
     }
 
     public InputStream openForHashing() {
-      return openForReading();
+      return getUnfilteredInputStream();
     }
 
-    public Reader getReader() {
+    public Reader openForReading() {
       throw new UnsupportedOperationException("Not implemented");
     }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.13 2004-02-23 09:12:06 tlipkis Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.14 2004-03-06 00:38:35 troberts Exp $
  */
 
 /*
@@ -167,7 +167,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
     cacher.cache();
 
     CachedUrl url = new BaseCachedUrl(mcus, TEST_URL);
-    InputStream is = url.openForReading();
+    InputStream is = url.getUnfilteredInputStream();
     ByteArrayOutputStream baos = new ByteArrayOutputStream(12);
     StreamUtil.copy(is, baos);
     is.close();

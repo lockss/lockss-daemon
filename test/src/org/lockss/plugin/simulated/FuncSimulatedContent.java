@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSimulatedContent.java,v 1.54 2004-03-03 00:38:44 troberts Exp $
+ * $Id: FuncSimulatedContent.java,v 1.55 2004-03-06 00:38:35 troberts Exp $
  */
 
 /*
@@ -355,7 +355,7 @@ public class FuncSimulatedContent extends LockssTestCase {
   }
 
   private String getUrlContent(CachedUrl url) throws IOException {
-    InputStream content = url.openForReading();
+    InputStream content = url.getUnfilteredInputStream();
     ByteArrayOutputStream baos = new ByteArrayOutputStream();
     StreamUtil.copy(content, baos);
     content.close();

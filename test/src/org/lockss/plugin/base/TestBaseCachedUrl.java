@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCachedUrl.java,v 1.6 2004-01-27 04:07:06 tlipkis Exp $
+ * $Id: TestBaseCachedUrl.java,v 1.7 2004-03-06 00:38:35 troberts Exp $
  */
 
 /*
@@ -145,19 +145,19 @@ public class TestBaseCachedUrl extends LockssTestCase {
 
      CachedUrl url =
        plugin.makeCachedUrl(cus, "http://www.example.com/testDir/leaf1");
-     InputStream urlIs = url.openForReading();
+     InputStream urlIs = url.getUnfilteredInputStream();
      ByteArrayOutputStream baos = new ByteArrayOutputStream(11);
      StreamUtil.copy(urlIs, baos);
      assertEquals("test stream", baos.toString());
 
      url = plugin.makeCachedUrl(cus, "http://www.example.com/testDir/leaf2");
-     urlIs = url.openForReading();
+     urlIs = url.getUnfilteredInputStream();
      baos = new ByteArrayOutputStream(12);
      StreamUtil.copy(urlIs, baos);
      assertEquals("test stream2", baos.toString());
 
      url = plugin.makeCachedUrl(cus, "http://www.example.com/testDir/leaf3");
-     urlIs = url.openForReading();
+     urlIs = url.getUnfilteredInputStream();
      baos = new ByteArrayOutputStream(0);
      StreamUtil.copy(urlIs, baos);
      assertEquals("", baos.toString());
@@ -170,7 +170,7 @@ public class TestBaseCachedUrl extends LockssTestCase {
 
     CachedUrl url =
       plugin.makeCachedUrl(cus, "http://www.example.com/testDir/leaf1");
-    InputStream urlIs = url.openForReading();
+    InputStream urlIs = url.getUnfilteredInputStream();
     assertNotSame(fakeStream, urlIs);
   }
 
@@ -220,7 +220,7 @@ public class TestBaseCachedUrl extends LockssTestCase {
 
      CachedUrl cu =
        plugin.makeCachedUrl(cus, "http://www.example.com/testDir/leaf1");
-     Reader reader = cu.getReader();
+     Reader reader = cu.openForReading();
      CharArrayWriter writer = new CharArrayWriter(11);
      StreamUtil.copy(reader, writer);
      assertEquals("test stream", writer.toString());
@@ -282,7 +282,7 @@ public class TestBaseCachedUrl extends LockssTestCase {
        return new MyAu();
      }
 
-     public InputStream openForReading() {
+     public InputStream getUnfilteredInputStream() {
        gotUnfilteredStream = true;
        return null;
      }
@@ -295,7 +295,7 @@ public class TestBaseCachedUrl extends LockssTestCase {
        throw new UnsupportedOperationException("Not implemented");
      }
 
-     public Reader getReader() {
+     public Reader openForReading() {
        return new StringReader("Test");
      }
 

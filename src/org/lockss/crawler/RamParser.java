@@ -1,5 +1,5 @@
 /*
- * $Id: RamParser.java,v 1.2 2004-03-05 00:51:49 troberts Exp $
+ * $Id: RamParser.java,v 1.3 2004-03-06 00:38:34 troberts Exp $
  */
 
 /*
@@ -60,7 +60,8 @@ public class RamParser implements ContentParser {
     } else if (cb == null) {
       throw new IllegalArgumentException("Called with null callback");
     }
-    reader = new BufferedReader(cu.getReader());
+//     reader = new BufferedReader(cu.getReader());
+    reader = new BufferedReader(cu.openForReading());
     for (String line = reader.readLine();
 	 line != null;
 	 line = reader.readLine()) {

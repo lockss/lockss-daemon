@@ -1,5 +1,5 @@
 /*
-* $Id: CuUrl.java,v 1.9 2004-02-27 00:19:59 tlipkis Exp $
+* $Id: CuUrl.java,v 1.10 2004-03-06 00:38:34 troberts Exp $
  */
 
 /*
@@ -150,7 +150,7 @@ public class CuUrl {
 
     public InputStream getInputStream() throws IOException {
       connect();
-      InputStream res = cu.openForReading();
+      InputStream res = cu.getUnfilteredInputStream();
       return res;
     }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: StaticContentPlugin.java,v 1.22 2004-02-06 23:54:14 clairegriffin Exp $
+ * $Id: StaticContentPlugin.java,v 1.23 2004-03-06 00:38:35 troberts Exp $
  */
 
 /*
@@ -226,19 +226,19 @@ public class StaticContentPlugin extends BasePlugin implements PluginTestable {
       throw new UnsupportedOperationException("Not implemented");
     }
 
-    public InputStream openForReading() {
+    public InputStream getUnfilteredInputStream() {
       return new StringInputStream(contents);
     }
 
     public InputStream openForHashing() {
-      return openForReading();
+      return getUnfilteredInputStream();
     }
 
     protected InputStream getFilteredStream() {
       throw new UnsupportedOperationException("Not implemented");
     }
 
-    public Reader getReader() {
+    public Reader openForReading() {
       throw new UnsupportedOperationException("Not implemented");
     }
 

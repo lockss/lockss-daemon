@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.6 2004-01-07 19:44:18 troberts Exp $
+ * $Id: BaseCachedUrl.java,v 1.7 2004-03-06 00:38:34 troberts Exp $
  */
 
 /*
@@ -106,7 +106,7 @@ public class BaseCachedUrl implements CachedUrl {
       return getFilteredStream();
     } else {
       logger.debug3("Filtering off, returning unfiltered stream");
-      return openForReading();
+      return getUnfilteredInputStream();
     }
   }
 
@@ -115,12 +115,12 @@ public class BaseCachedUrl implements CachedUrl {
     return leaf.hasContent();
   }
 
-  public InputStream openForReading() {
+  public InputStream getUnfilteredInputStream() {
     ensureLeafLoaded();
     return leaf.getNodeContents().input;
   }
 
-  public Reader getReader() {
+  public Reader openForReading() {
     ensureLeafLoaded();
     return leaf.getNodeContents().reader;
   }
@@ -156,10 +156,10 @@ public class BaseCachedUrl implements CachedUrl {
     String mimeType = props.getProperty("content-type");
     FilterRule fr = au.getFilterRule(mimeType);
     if (fr != null) {
-      return fr.createFilteredInputStream(getReader());
+      return fr.createFilteredInputStream(openForReading());
     } else {
       logger.debug2("No FilterRule, not filtering");
     }
-    return openForReading();
+    return getUnfilteredInputStream();
   }
 }
