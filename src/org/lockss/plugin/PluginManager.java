@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.129 2005-02-14 03:30:10 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.130 2005-02-21 03:04:01 tlipkis Exp $
  */
 
 /*
@@ -499,19 +499,27 @@ public class PluginManager
 	    boolean pluginOk = ensurePluginLoaded(pluginKey);
 	    if (pluginOk) {
 	      Plugin plugin = getPlugin(pluginKey);
-	      if (WrapperState.isWrappedPlugin(plugin)) {
-		throw new ArchivalUnit.ConfigurationException("An attempt was made to load unwrapped AU " + auKey + " from plugin " + pluginKey + " which is already wrapped.");
+	      checkNotWrapped(plugin, pluginKey, auKey);
+	      try {
+		String genAuid = generateAuId(plugin, auConf);
+		if (!auId.equals(genAuid)) {
+		  log.warning("Generated AUID " + genAuid +
+			      " does not match stored AUID " + auId +
+			      ". Proceeding anyway.");
+		}
+	      } catch (RuntimeException e) {
+		log.warning("Not configuring probable non-AU.  " +
+			    "Can't generate AUID from config: " + auConf);
+		return;
 	      }
 	      configureAu(plugin, auConf, auId);
+	      inactiveAuIds.remove(generateAuId(pluginKey, auKey));
 	    } else {
 	      log.warning("Not configuring AU " + auKey);
 	    }
 	  } else {
+	    checkNotUnWrapped(pluginKey, auKey);
 	    log.debug("Wrapping " + auKey);
-	    if ((pluginMap.containsKey(pluginKey)) &&
-		(!WrapperState.isWrappedPlugin(pluginMap.get(pluginKey)))) {
-	      throw new ArchivalUnit.ConfigurationException("An attempt was made to wrap AU " + auKey + " from plugin " + pluginKey + " which is already loaded.");
-	    }
 	    Plugin wrappedPlugin =
 	      WrapperState.retrieveWrappedPlugin(pluginKey, theDaemon);
 	    if (wrappedPlugin==null) {
@@ -524,13 +532,27 @@ public class PluginManager
 	      configureAu(wrappedPlugin, wrappedAuConf, auId);
 	    }
 	  }
-	  inactiveAuIds.remove(generateAuId(pluginKey, auKey));
 	}
       } catch (ArchivalUnit.ConfigurationException e) {
 	log.error("Failed to configure AU " + auKey, e);
       } catch (Exception e) {
 	log.error("Unexpected exception configuring AU " + auKey, e);
       }
+    }
+  }
+
+  void checkNotWrapped(Plugin plugin, String pluginKey, String auKey)
+      throws ArchivalUnit.ConfigurationException {
+    if (WrapperState.isWrappedPlugin(plugin)) {
+      throw new ArchivalUnit.ConfigurationException("Attempt to load unwrapped AU " + auKey + " from wrapped plugin " + pluginKey);
+    }
+  }
+
+  void checkNotUnWrapped(String pluginKey, String auKey)
+      throws ArchivalUnit.ConfigurationException {
+    if ((pluginMap.containsKey(pluginKey)) &&
+	(!WrapperState.isWrappedPlugin(pluginMap.get(pluginKey)))) {
+      throw new ArchivalUnit.ConfigurationException("Attempt to wrap AU " + auKey + " from loaded nonwrapped plugin " + pluginKey);
     }
   }
 
