@@ -1,5 +1,5 @@
 /*
- * $Id: TestPoll.java,v 1.72 2003-12-23 00:37:03 tlipkis Exp $
+ * $Id: TestPoll.java,v 1.73 2003-12-23 01:37:30 tlipkis Exp $
  */
 
 /*
@@ -488,8 +488,10 @@ public class TestPoll extends LockssTestCase {
     p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
     p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
+    p.setProperty(ConfigManager.PARAM_NEW_SCHEDULER, "false");
     ConfigurationUtil.setCurrentConfigFromProps(p);
     idmgr = theDaemon.getIdentityManager();
+//     theDaemon.getSchedService().startService();
     theDaemon.getHashService().startService();
     theDaemon.getRouterManager().startService();
     theDaemon.getSystemMetrics().startService();
