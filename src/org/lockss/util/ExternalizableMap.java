@@ -1,5 +1,5 @@
 /*
- * $Id: ExternalizableMap.java,v 1.10 2004-04-28 22:52:05 clairegriffin Exp $
+ * $Id: ExternalizableMap.java,v 1.11 2004-07-12 23:01:49 smorabito Exp $
  */
 
 /*
@@ -86,9 +86,9 @@ public class ExternalizableMap {
   }
 
 
-  public void loadMapFromResource(String mapLocation)
+  public void loadMapFromResource(String mapLocation, ClassLoader loader)
       throws FileNotFoundException {
-    InputStream mapStream = getClass().getResourceAsStream(mapLocation);
+    InputStream mapStream = loader.getResourceAsStream(mapLocation);
     if (mapStream == null) {
       String err = "Unable to load:" + mapLocation;
       throw new FileNotFoundException(err);
@@ -108,6 +108,7 @@ public class ExternalizableMap {
     }
     catch (Exception e) {
       // some other error occured
+      e.printStackTrace();
       throw new FileNotFoundException("Error: " + e.toString());
     }
   }

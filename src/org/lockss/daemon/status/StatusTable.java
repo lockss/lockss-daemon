@@ -1,5 +1,5 @@
 /*
- * $Id: StatusTable.java,v 1.31 2004-06-01 08:32:26 tlipkis Exp $
+ * $Id: StatusTable.java,v 1.32 2004-07-12 23:01:53 smorabito Exp $
  */
 
 /*
@@ -45,6 +45,7 @@ public class StatusTable {
   public static Object ROW_SEPARATOR = new Object();
 
   public static final int OPTION_NO_ROWS = 1;
+  public static final int OPTION_INCLUDE_INTERNAL_AUS = 2;
 
   private String name;
   private String key;

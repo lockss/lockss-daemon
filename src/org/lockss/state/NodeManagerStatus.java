@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerStatus.java,v 1.18 2004-04-29 10:14:05 tlipkis Exp $
+ * $Id: NodeManagerStatus.java,v 1.19 2004-07-12 23:01:50 smorabito Exp $
  */
 
 /*
@@ -124,19 +124,24 @@ public class NodeManagerStatus extends BaseLockssManager {
         throws StatusService.NoSuchTableException {
       table.setColumnDescriptors(columnDescriptors);
       table.setDefaultSortRules(sortRules);
-      table.setRows(getRows());
+      table.setRows(getRows(table.getOptions().get(StatusTable.OPTION_INCLUDE_INTERNAL_AUS)));
     }
 
     public boolean requiresKey() {
       return false;
     }
 
-    private List getRows() {
+    private List getRows(boolean includeInternalAus) {
       List rowL = new ArrayList();
       for (Iterator iter = theDaemon.getAllNodeManagers().iterator();
 	   iter.hasNext(); ) {
 	NodeManager manager = (NodeManager)iter.next();
-        if (manager.getAuState() != null) {
+	AuState auState = manager.getAuState();
+        if (auState != null) {
+	  if (!includeInternalAus && 
+	      (auState.getArchivalUnit() instanceof RegistryArchivalUnit)) {
+	    continue;
+	  }
           rowL.add(makeRow(manager));
         }
       }

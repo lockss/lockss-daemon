@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.10 2004-05-24 22:20:01 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.11 2004-07-12 23:01:51 smorabito Exp $
  */
 
 /*
@@ -149,8 +149,11 @@ public class RemoteApi extends BaseLockssManager {
   List mapAusToProxies(Collection aus) {
     List res = new ArrayList();
     for (Iterator iter = aus.iterator(); iter.hasNext(); ) {
-      AuProxy aup = findAuProxy((ArchivalUnit)iter.next());
-      res.add(aup);
+      ArchivalUnit au = (ArchivalUnit)iter.next();
+      if (!(au instanceof RegistryArchivalUnit)) {
+	AuProxy aup = findAuProxy(au);
+	res.add(aup);
+      }
     }
     return res;
   }
@@ -159,8 +162,11 @@ public class RemoteApi extends BaseLockssManager {
   List mapPluginsToProxies(Collection plugins) {
     List res = new ArrayList();
     for (Iterator iter = plugins.iterator(); iter.hasNext(); ) {
-      PluginProxy pluginp = findPluginProxy((Plugin)iter.next());
-      res.add(pluginp);
+      Plugin plugin = (Plugin)iter.next();
+      if (!(plugin instanceof RegistryPlugin)) {
+	PluginProxy pluginp = findPluginProxy(plugin);
+	res.add(pluginp);
+      }
     }
     return res;
   }
@@ -271,7 +277,9 @@ public class RemoteApi extends BaseLockssManager {
     List res = new ArrayList();
     for (Iterator iter = inactiveAuIds.iterator(); iter.hasNext(); ) {
       String auid = (String)iter.next();
-      res.add(new InactiveAuProxy(auid, this));
+      if (!(pluginMgr.getAuFromId(auid) instanceof RegistryArchivalUnit)) {
+	res.add(new InactiveAuProxy(auid, this));
+      }
     }
     Collections.sort(res, auProxyComparator);
     return res;

@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatus.java,v 1.13 2004-06-14 23:54:46 dcfok Exp $
+ * $Id: CrawlManagerStatus.java,v 1.14 2004-07-12 23:01:53 smorabito Exp $
  */
 
 /*
@@ -96,32 +96,37 @@ public class CrawlManagerStatus implements StatusAccessor {
     return "Crawl Status";
   }
 
-  private List getRows(String key) {
+  private List getRows(String key, boolean includeInternalAus) {
     if (key == null) {
-      return getAllCrawls();
+      return getAllCrawls(includeInternalAus);
     }
 
     List rows = new ArrayList();
-    addCrawls(key, rows);
+    addCrawls(key, rows, includeInternalAus);
     return rows;
   }
 
-  public void addCrawls(String key, List rows) {
+  public void addCrawls(String key, List rows, boolean includeInternalAus) {
     Collection crawls = statusSource.getCrawlStatus(key);
     if (crawls != null) {
       for (Iterator it = crawls.iterator(); it.hasNext();) {
-	rows.add(makeRow((Crawler.Status) it.next()));
+	Crawler.Status crawlStat = (Crawler.Status)it.next();
+	if (!includeInternalAus &&
+	    (crawlStat.getAu() instanceof RegistryArchivalUnit)) {
+	  continue;
+	}
+	rows.add(makeRow(crawlStat));
       }
     }
   }
 
-  private List getAllCrawls() {
+  private List getAllCrawls(boolean includeInternalAus) {
     Collection aus = statusSource.getActiveAus();
     List crawls = new ArrayList();
     if (aus != null) {
       for (Iterator it = aus.iterator(); it.hasNext();) {
 	String auid = (String)it.next();
-	addCrawls(auid, crawls);
+	addCrawls(auid, crawls, includeInternalAus);
       }
     }
     return crawls;
@@ -185,7 +190,7 @@ public class CrawlManagerStatus implements StatusAccessor {
     }
     String key = table.getKey();
     table.setColumnDescriptors(colDescs);
-    table.setRows(getRows(key));
+    table.setRows(getRows(key, table.getOptions().get(StatusTable.OPTION_INCLUDE_INTERNAL_AUS)));
 
     table.setDefaultSortRules(makeSortRules());
   }

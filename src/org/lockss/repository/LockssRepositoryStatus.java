@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryStatus.java,v 1.7 2004-06-01 08:32:26 tlipkis Exp $
+ * $Id: LockssRepositoryStatus.java,v 1.8 2004-07-12 23:01:50 smorabito Exp $
  */
 
 /*
@@ -108,7 +108,7 @@ public class LockssRepositoryStatus extends BaseLockssManager {
         throws StatusService.NoSuchTableException {
       table.setColumnDescriptors(columnDescriptors);
       table.setDefaultSortRules(sortRules);
-      table.setRows(getRows());
+      table.setRows(getRows(table.getOptions().get(StatusTable.OPTION_INCLUDE_INTERNAL_AUS)));
       table.setSummaryInfo(getSummaryInfo());
     }
 
@@ -116,7 +116,7 @@ public class LockssRepositoryStatus extends BaseLockssManager {
       return false;
     }
 
-    private List getRows() {
+    private List getRows(boolean includeInternalAus) {
       List rows = new ArrayList();
       TreeSet roots = new TreeSet();
       List repos = daemon.getConfigManager().getRepositoryList();
@@ -130,7 +130,7 @@ public class LockssRepositoryStatus extends BaseLockssManager {
       roots.add(getDefaultRepositoryLocation());
       for (Iterator iter = roots.iterator(); iter.hasNext(); ) {
 	String root = (String)iter.next();
-	addRows(rows, LockssRepositoryImpl.extendCacheLocation(root));
+	addRows(rows, LockssRepositoryImpl.extendCacheLocation(root), includeInternalAus);
       }
       return rows;
     }
@@ -139,7 +139,7 @@ public class LockssRepositoryStatus extends BaseLockssManager {
       return Configuration.getParam(LockssRepositoryImpl.PARAM_CACHE_LOCATION);
     }
 
-    private void addRows(Collection rows, String root) {
+    private void addRows(Collection rows, String root, boolean includeInternalAus) {
       File dir = new File(root);
       File[] subs = dir.listFiles();
       if (subs != null) {
@@ -152,6 +152,10 @@ public class LockssRepositoryStatus extends BaseLockssManager {
 	      Properties props = propsFromFile(auidfile);
 	      if (props != null) {
 		auid = props.getProperty(LockssRepositoryImpl.AU_ID_PROP);
+		if (!includeInternalAus &&
+		    (pluginMgr.getAuFromId(auid) instanceof RegistryArchivalUnit)) {
+		  continue;
+		}
 	      }
 	    }
 	    rows.add(makeRow(sub, auid));

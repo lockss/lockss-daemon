@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.37 2004-03-01 06:10:41 clairegriffin Exp $
+ * $Id: TestPluginManager.java,v 1.38 2004-07-12 23:01:48 smorabito Exp $
  */
 
 /*
@@ -192,7 +192,7 @@ public class TestPluginManager extends LockssTestCase {
     List initArgs = mcpi.getInitArgs();
     assertEquals(1, initArgs.size());
     List args = (List)initArgs.get(0);
-    assertEquals(2, args.size());
+    assertEquals(3, args.size());
     assertEquals(pname, args.get(1));
   }
 
@@ -326,9 +326,9 @@ public class TestPluginManager extends LockssTestCase {
   static class MockConfigurablePlugin extends DefinablePlugin {
     private List initArgs = new ArrayList();
 
-    public void initPlugin(LockssDaemon daemon, String extMapName)
+    public void initPlugin(LockssDaemon daemon, String extMapName, ClassLoader loader)
     throws FileNotFoundException {
-      initArgs.add(ListUtil.list(daemon, extMapName));
+      initArgs.add(ListUtil.list(daemon, extMapName, loader));
 
      // super.initPlugin(daemon, extMapName);
 

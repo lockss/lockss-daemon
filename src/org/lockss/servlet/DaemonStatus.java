@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.39 2004-06-01 08:35:20 tlipkis Exp $
+ * $Id: DaemonStatus.java,v 1.40 2004-07-12 23:01:50 smorabito Exp $
  */
 
 /*
@@ -97,16 +97,19 @@ public class DaemonStatus extends LockssServlet {
       }
     }
     String optionsParam = req.getParameter("options");
-    if (StringUtil.isNullString(optionsParam)) {
-      tableOptions = null;
-    } else {
-      tableOptions = new BitSet();
-      for (Iterator iter = StringUtil.breakAt(optionsParam, ',').iterator();
-	   iter.hasNext(); ) {
-	String s = (String)iter.next();
-	if ("norows".equalsIgnoreCase(s)) {
-	  tableOptions.set(StatusTable.OPTION_NO_ROWS);
-	}
+
+    tableOptions = new BitSet();
+
+    if (isDebugUser()) {
+      log.debug2("Debug user.  Setting OPTION_INCLUDE_INTERNAL_AUS");
+      tableOptions.set(StatusTable.OPTION_INCLUDE_INTERNAL_AUS);
+    }
+    
+    for (Iterator iter = StringUtil.breakAt(optionsParam, ',').iterator();
+	 iter.hasNext(); ) {
+      String s = (String)iter.next();
+      if ("norows".equalsIgnoreCase(s)) {
+	tableOptions.set(StatusTable.OPTION_NO_ROWS);
       }
     }
 
