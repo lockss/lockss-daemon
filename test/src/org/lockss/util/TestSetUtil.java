@@ -1,5 +1,5 @@
 /*
- * $Id: TestSetUtil.java,v 1.5 2003-11-11 20:26:05 tlipkis Exp $
+ * $Id: TestSetUtil.java,v 1.6 2004-01-03 06:30:42 tlipkis Exp $
  */
 
 /*
@@ -81,7 +81,7 @@ public class TestSetUtil extends LockssTestCase {
     Set s1 = SetUtil.theSet(ListUtil.list("1", "2", "3"));
     assertTrue(s1 instanceof Set);
     assertEquals(3, s1.size());
-    assertTrue(s1.contains("1"));
+    assertTrue(s1.contains(new String("1")));
     assertTrue(s1.contains("2"));
     assertTrue(s1.contains("3"));
   }
