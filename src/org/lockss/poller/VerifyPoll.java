@@ -1,5 +1,5 @@
 /*
-* $Id: VerifyPoll.java,v 1.3 2002-10-24 23:18:14 claire Exp $
+* $Id: VerifyPoll.java,v 1.4 2002-11-07 03:30:31 claire Exp $
  */
 
 /*
@@ -38,6 +38,8 @@ import org.lockss.protocol.*;
 import java.util.*;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import org.lockss.plugin.Plugin;
+import org.lockss.util.ProbabilisticTimer;
 
 
 /**
@@ -55,17 +57,24 @@ class VerifyPoll extends Poll implements Runnable {
     m_thread = new Thread(this,"Verify Poll - "	+ m_seq);
   }
 
-
-	public boolean scheduleHash() {
-		return true;
-	}
+  /**
+   * schedule the hash for this poll.
+   * @param C the challenge
+   * @param V the verifier
+   * @param urlSet the cachedUrlSet
+   * @param timer the probabilistic timer
+   * @return true if hash successfully completed.
+   */
+  boolean scheduleHash(byte[] C, byte[] V, CachedUrlSet urlSet,
+                       ProbabilisticTimer timer) {
+    return true;
+  }
 
   protected static void randomRequestVerify(Message msg, int pct)
       throws IOException {
     double prob = ((double) pct) / 100.0;
     if (ProbabilisticChoice.choose(prob))
       requestVerify(msg);
-
   }
 
   private static void requestVerify(Message msg) throws IOException {
@@ -85,7 +94,7 @@ class VerifyPoll extends Poll implements Runnable {
         msg.getDuration(),
         Identity.getLocalIdentity());
     Identity originator = msg.getOriginID();
-    sendTo(reqmsg,originator.getAddress(), originator.getPort());
+    LcapComm.sendMessageTo(msg,Plugin.findArchivalUnit(url),originator);
     Poll poll = findPoll(reqmsg);
     poll.startPoll();
   }
@@ -102,7 +111,9 @@ class VerifyPoll extends Poll implements Runnable {
         Identity.getLocalIdentity());
 
     Identity originator = msg.getOriginID();
-    sendTo(repmsg, originator.getAddress(), originator.getPort());
+    LcapComm.sendMessageTo(repmsg,Plugin.findArchivalUnit(msg.getTargetUrl()),
+                           originator);
+
   }
 
   protected void tally()  {
@@ -124,6 +135,16 @@ class VerifyPoll extends Poll implements Runnable {
       id.voteDisown();
     }
     //recordVote(m_urlset, Message.VERIFY_REQ, yes, no, agreeWt, disagreeWt);
+  }
+
+  void checkVote(byte[] hashResult, Message msg)  {
+    byte[] H = msg.getHashed();
+    if(Arrays.equals(H, hashResult)) {
+      handleDisagreeVote(msg);
+    }
+    else {
+      handleAgreeVote(msg);
+    }
   }
 
   void checkVote()  {
@@ -166,12 +187,12 @@ class VerifyPoll extends Poll implements Runnable {
 
     checkVote();
     try {
-      if (m_caller == null) {          // we called this poll
+      if (m_caller == null) {   // we called this poll
         m_deadline.sleepUntil();
-        closeThePoll(m_arcUnit, m_challenge);
+        closeThePoll(m_urlSet, m_challenge);
         tally();
       }
-      else {						// someone else called this poll
+      else {			// someone else called this poll
         replyVerify(m_msg);
         thePolls.remove(m_key);
       }
@@ -180,6 +201,16 @@ class VerifyPoll extends Poll implements Runnable {
     } catch (IOException e) {
       log.error(m_key + " election failed " + e);
       abort();
+    }
+  }
+
+  static class VPVoteChecker extends VoteChecker {
+
+    VPVoteChecker(Poll poll, Message msg, CachedUrlSet urlSet, long hashTime) {
+      super(poll, msg, urlSet, hashTime);
+    }
+
+    public void run() {
     }
   }
 
