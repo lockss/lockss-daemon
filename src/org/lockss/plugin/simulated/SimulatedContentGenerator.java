@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedContentGenerator.java,v 1.2 2002-10-24 02:16:36 aalto Exp $
+ * $Id: SimulatedContentGenerator.java,v 1.3 2002-10-25 01:07:33 aalto Exp $
  */
 
 /*
@@ -101,7 +101,9 @@ public class SimulatedContentGenerator {
 
   private String contentRootParent = "";
   private String contentRoot;
-
+/**
+ * @param rootPath path where the content directory will be generated
+ */
   public SimulatedContentGenerator(String rootPath) {
     contentRootParent = rootPath;
     if (contentRootParent.length()>0 &&
@@ -111,7 +113,6 @@ public class SimulatedContentGenerator {
     contentRoot = contentRootParent + ROOT_NAME;
   }
 
-  // accessors
   /**
    * Depth 0 generates only the root directory.
    * @return depth of the generated tree
@@ -286,9 +287,7 @@ public class SimulatedContentGenerator {
       File file = new File(parentDir, filename);
       FileOutputStream fos = new FileOutputStream(file);
       PrintWriter pw = new PrintWriter(fos);
-      filename = parentDir.getPath() + File.separator + filename;
-      String file_content = getIndexContent(parentDir.getPath(), filename, depth,
-                               getTreeDepth(), getNumBranches(), getNumFilesPerBranch(), getFileTypes());
+      String file_content = getIndexContent(parentDir, filename);
       pw.print(file_content);
       pw.flush();
       pw.close();
@@ -349,7 +348,7 @@ public class SimulatedContentGenerator {
       PrintWriter pw = new PrintWriter(fos);
       String file_content = "";
 // XXX open local pdf file, copy to pw
-      pw.println(file_content);
+      pw.print(file_content);
       pw.flush();
       pw.close();
       fos.close();
@@ -363,7 +362,7 @@ public class SimulatedContentGenerator {
       PrintWriter pw = new PrintWriter(fos);
       String file_content = "";
 // XXX open local jpeg file, copy to pw
-      pw.println(file_content);
+      pw.print(file_content);
       pw.flush();
       pw.close();
       fos.close();
@@ -408,50 +407,33 @@ public class SimulatedContentGenerator {
   /**
    * Generates index file for a directory, in html form with each sibling
    * file or sub-directory index file as a link.  This is to allow crawling.
-   * To be available statically, it takes several parameters for the purpose
-   * of determining the expected generated content.  It does not actually check the
-   * contents of the directory.
    *
-   * @param parentPath path of parent dir
-   * @param filename name of current dir
-   * @param curDepth current depth
-   * @param maxDepth max depth
-   * @param numBranches number of branches per node
-   * @param numFiles number of files per node
-   * @param fileTypes file-types to generate
+   * @param File directory to generate index content for
    * @return index file content
    */
 
-  public static String getIndexContent(String parentPath, String filename, int curDepth,
-                          int maxDepth, int numBranches, int numFiles, int fileTypes) {
-    String file_content = "<HTML><HEAD><TITLE>" + filename + "</TITLE></HEAD><BODY>";
-    file_content += "<B>"+filename+"</B>";
-
-    if (curDepth < maxDepth) {
-      for (int ii=1; ii<=numBranches; ii++) {
-        String subDirName = getFileName(ii, true, 0) + File.separator + INDEX_NAME;
-        file_content += "<BR><A HREF=\"" + subDirName + "\">"+ subDirName + "</A>";
-      }
+  public static String getIndexContent(File directory, String filename) {
+    if ((directory==null) || (!directory.exists()) || (!directory.isDirectory())) {
+      return "";
     }
+    String fullName = directory.getPath() + File.separator + filename;
+    String file_content = "<HTML><HEAD><TITLE>" + fullName + "</TITLE></HEAD><BODY>";
+    file_content += "<B>"+fullName+"</B>";
 
-    for (int jj=1; jj<=numFiles; jj++) {
-      String subFileName = "";
-      if ((fileTypes & FILE_TYPE_TXT) > 0) {
-        subFileName = getFileName(jj, false, FILE_TYPE_TXT);
-        file_content += "<BR><A HREF=\"" + subFileName + "\">" + subFileName + "</A>";
+    File[] children = directory.listFiles();
+
+    for (int ii=0; ii<children.length; ii++) {
+      File child = children[ii];
+      String subLink = child.getName();
+      if (child.isDirectory()) {
+        subLink += File.separator + SimulatedContentGenerator.INDEX_NAME;
       }
-      if ((fileTypes & FILE_TYPE_HTML) > 0) {
-        subFileName = getFileName(jj, false, FILE_TYPE_HTML);
-        file_content += "<BR><A HREF=\"" + subFileName + "\">" + subFileName + "</A>";
-      }
-      if ((fileTypes & FILE_TYPE_PDF) > 0) {
-        subFileName = getFileName(jj, false, FILE_TYPE_PDF);
-        file_content += "<BR><A HREF=\"" + subFileName + "\">" + subFileName + "</A>";
-      }
-      if ((fileTypes & FILE_TYPE_JPEG) > 0) {
-        subFileName = getFileName(jj, false, FILE_TYPE_JPEG);
-        file_content += "<BR><A HREF=\"" + subFileName + "\">" + subFileName + "</A>";
-      }
+      file_content += "<BR><A HREF=\"" + subLink + "\">" + subLink + "</A>";    // assumes the value of NORMAL_FILE_CONTENT is unchanged
+      // assumes the value of NORMAL_FILE_CONTENT is unchanged
+      // assumes the value of NORMAL_FILE_CONTENT is unchanged
+      // assumes the value of NORMAL_FILE_CONTENT is unchanged
+      // assumes the value of NORMAL_FILE_CONTENT is unchanged
+
     }
     file_content += "</BODY></HTML>";
     return file_content;

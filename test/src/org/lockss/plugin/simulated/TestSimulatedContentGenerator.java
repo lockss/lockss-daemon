@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimulatedContentGenerator.java,v 1.2 2002-10-24 02:17:43 aalto Exp $
+ * $Id: TestSimulatedContentGenerator.java,v 1.3 2002-10-25 01:07:33 aalto Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.plugin.simulated;
 import junit.framework.TestCase;
 import org.lockss.daemon.*;
 import org.lockss.util.StreamUtil;
+import org.lockss.util.StringUtil;
 import java.io.*;
 
 /**
@@ -73,13 +74,89 @@ public class TestSimulatedContentGenerator extends TestCase {
     scgen.setFileTypes(scgen.FILE_TYPE_HTML+scgen.FILE_TYPE_TXT);
     assertEquals("setFileTypes() failed.", scgen.getFileTypes(), scgen.FILE_TYPE_TXT+scgen.FILE_TYPE_HTML);
     assertEquals("getContentRoot() failed.", scgen.getContentRoot(), "test"+File.separator+scgen.ROOT_NAME);
-    System.out.println("All accessors test correctly.");
   }
 
- /* public void testContentTree() {
-    //XXX get root dir from system props
+  public void testGetIndexContent() {
+    String tempPath = ""; //XXX get from system
+ /*   File directory = new File(tempPath, "testdir");
+    if (!directory.exists()) {
+      directory.mkdirs();
+    }
+    File child = new File(directory, "testfile1.txt");
+    if (!child.exists()) {
+      try {
+        FileOutputStream fos = new FileOutputStream(child);
+        PrintWriter pw = new PrintWriter(fos);
+        pw.print("test file 1");
+        pw.flush();
+        pw.close();
+        fos.close();
+      } catch (Exception e) { System.out.println(e); }
+    }
+    child = new File(directory, "testfile2.html");
+    if (!child.exists()) {
+      try {
+        FileOutputStream fos = new FileOutputStream(child);
+        PrintWriter pw = new PrintWriter(fos);
+        pw.print("<html><body>test file 2</body></html>");
+        pw.flush();
+        pw.close();
+        fos.close();
+      } catch (Exception e) { System.out.println(e); }
+    }
+    child = new File(directory, "testsub1");
+    if (!child.exists()) {
+      child.mkdir();
+    }
+    child = new File(directory, "testsub2");
+    if (!child.exists()) {
+      child.mkdir();
+    }
+
+    String content = SimulatedContentGenerator.getIndexContent(directory, "index.html").toLowerCase();
+    //test for correct links
+    assertTrue(content.indexOf("<a href=\"testfile1.txt\">testfile1.txt</a>")>=0);
+    assertTrue(content.indexOf("<a href=\"testfile2.html\">testfile2.html</a>")>=0);
+    assertTrue(content.indexOf("<a href=\"testsub1/index.html\">testsub1/index.html</a>")>=0);
+    assertTrue(content.indexOf("<a href=\"testsub2/index.html\">testsub2/index.html</a>")>=0);
+    //test for no extra links
+    assertEquals(4, StringUtil.substringCount(content, "<a href="));
+    */
+  }
+  public void testGetHtmlFileContent() {
+    String expectedStr = "<HTML><HEAD><TITLE>testfile</TITLE></HEAD><BODY>\n";
+    // assumes the value of NORMAL_FILE_CONTENT is unchanged
+    expectedStr += "This is file 1, depth 2, branch 3.";
+    expectedStr += "\n</BODY></HTML>";
+    assertTrue(SimulatedContentGenerator.getHtmlFileContent("testfile", 1, 2, 3, false).equals(expectedStr));
+  }
+  public void testGetFileContent() {
+    // assumes the value of NORMAL_FILE_CONTENT is unchanged
+    String expectedStr = "This is file 1, depth 2, branch 3.";
+    assertTrue(SimulatedContentGenerator.getFileContent(1, 2, 3, false).equals(expectedStr));
+    // assumes the value of ABNORMAL_FILE_CONTENT is unchanged
+    expectedStr = "This is abnormal file 3, depth 1, branch 2.";
+    assertTrue(SimulatedContentGenerator.getFileContent(3, 1, 2, true).equals(expectedStr));
+  }
+  public void testGetFileName() {
+    String expectedStr = SimulatedContentGenerator.FILE_PREFIX + "11.txt";
+    assertTrue(SimulatedContentGenerator.getFileName(11, false, SimulatedContentGenerator.FILE_TYPE_TXT).equals(expectedStr));
+    expectedStr = SimulatedContentGenerator.FILE_PREFIX + "12.html";
+    assertTrue(SimulatedContentGenerator.getFileName(12, false, SimulatedContentGenerator.FILE_TYPE_HTML).equals(expectedStr));
+    expectedStr = SimulatedContentGenerator.FILE_PREFIX + "13.pdf";
+    assertTrue(SimulatedContentGenerator.getFileName(13, false, SimulatedContentGenerator.FILE_TYPE_PDF).equals(expectedStr));
+    expectedStr = SimulatedContentGenerator.FILE_PREFIX + "14.jpg";
+    assertTrue(SimulatedContentGenerator.getFileName(14, false, SimulatedContentGenerator.FILE_TYPE_JPEG).equals(expectedStr));
+    expectedStr = SimulatedContentGenerator.BRANCH_PREFIX + "15";
+    assertTrue(SimulatedContentGenerator.getFileName(15, true, -1).equals(expectedStr));
+  }
+
+
+ public void testContentTree() {
+    String tempPath = ""; //XXX get from system
+  /*
   //XXX bug: will fail if more than one file type
-    SimulatedContentGenerator scgen = new SimulatedContentGenerator("");
+    SimulatedContentGenerator scgen = new SimulatedContentGenerator(tempPath);
     scgen.setTreeDepth(2);
     scgen.setNumBranches(2);
     scgen.setNumFilesPerBranch(2);
@@ -130,9 +207,8 @@ public class TestSimulatedContentGenerator extends TestCase {
       baos.close();
       expectedContent = scgen.getFileContent(2, 2, 1, true);
       assertTrue("abnormal content incorrect.", content.equals(expectedContent));
-      System.out.println("All content tested correctly.");
     } catch (Exception e) { System.out.println(e); }
+  */
   }
 
-  */
 }
