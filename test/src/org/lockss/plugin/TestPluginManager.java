@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.4 2003-02-27 22:36:58 troberts Exp $
+ * $Id: TestPluginManager.java,v 1.5 2003-03-01 01:28:14 tal Exp $
  */
 
 /*
@@ -48,17 +48,6 @@ import org.lockss.test.*;
  */
 
 public class TestPluginManager extends LockssTestCase {
-  PluginManager mgr;
-
-  public TestPluginManager(String msg) {
-    super(msg);
-  }
-
-  public void setUp() throws Exception {
-    super.setUp();
-    mgr = new PluginManager();
-  }
-
   static String mockPlugId = "org|lockss|test|MockPlugin";
   static String mauauid1 = "val1|val2";
   static String mauauidkey1 = "val1|val2";
@@ -77,66 +66,105 @@ public class TestPluginManager extends LockssTestCase {
     p1a2param + MockPlugin.CONFIG_PROP_1 + "=val1\n" +
     p1a2param + MockPlugin.CONFIG_PROP_2 + "=va.l3\n"; // value contains a dot
 
+  PluginManager mgr;
+
+  public TestPluginManager(String msg) {
+    super(msg);
+  }
+
+  public void setUp() throws Exception {
+    super.setUp();
+    mgr = new PluginManager();
+  }
+
+  private void doConfig() throws Exception {
+    mgr.startService();
+    TestConfiguration.setCurrentConfigFromString(configStr);
+  }
+
   public void testNameFromId() {
     assertEquals("org.lockss.Foo", mgr.pluginNameFromId("org|lockss|Foo"));
   }
 
   public void testEnsurePluginLoaded() throws Exception {
-    assertTrue(!mgr.ensurePluginLoaded("org.lockss.NoSuchClass"));
+    // non-existent class shouldn't load
+    assertTrue(!mgr.ensurePluginLoaded("org|lockss|NoSuchClass"));
+    // MockPlugin should load
     assertTrue(mgr.ensurePluginLoaded(mockPlugId));
     MockPlugin mpi = (MockPlugin)mgr.getPlugin(mockPlugId);
-    assertEquals(1, mpi.getInitCtr());
+    assertNotNull(mpi);
+    assertEquals(1, mpi.getInitCtr());	// should have been inited once
+
+    // second time shouldn't reload, reinstantiate, or reinitialize plugin
     assertTrue(mgr.ensurePluginLoaded(mockPlugId));
     MockPlugin mpi2 = (MockPlugin)mgr.getPlugin(mockPlugId);
     assertSame(mpi, mpi2);
     assertEquals(1, mpi.getInitCtr());
   }
 
-  public void testMgr() throws Exception {
-    mgr.startService();
-    TestConfiguration.setCurrentConfigFromString(configStr);
+  public void testStop() throws Exception {
+    doConfig();
     MockPlugin mpi = (MockPlugin)mgr.getPlugin(mockPlugId);
+    assertEquals(0, mpi.getStopCtr());
+    mgr.stopService();
+    assertEquals(1, mpi.getStopCtr());
+  }
+
+  public void testAUConfig() throws Exception {
+    doConfig();
+    MockPlugin mpi = (MockPlugin)mgr.getPlugin(mockPlugId);
+    // plugin should be registered
     assertNotNull(mpi);
+    // should have been inited once
     assertEquals(1, mpi.getInitCtr());
+
+    // get the two archival units
+    ArchivalUnit au1 = mpi.getAU(mauauidkey1);
+    ArchivalUnit au2 = mpi.getAU(mauauidkey2);
+
+    // verify the plugin's set of all AUs is {au1, au2}
     Collection aus = mpi.getAllAUs();
-    assertEquals(2, aus.size());
-    ArchivalUnit au1 = mpi.getAU(mauauid1);
-    assertNotNull(au1);
+    assertEquals(SetUtil.set(au1, au2), new HashSet(mgr.getAllAUs()));
+
+    // verify au1's configuration
+    assertEquals(mauauid1, au1.getAUId());
     MockArchivalUnit mau1 = (MockArchivalUnit)au1;
     Configuration c1 = mau1.getConfiguration();
     assertEquals("val1", c1.get(MockPlugin.CONFIG_PROP_1));
     assertEquals("val2", c1.get(MockPlugin.CONFIG_PROP_2));
-    ArchivalUnit au2 = mpi.getAU("val1|va|l3");
-    assertNotNull(au2);
-    assertEquals(mauauid1, au1.getAUId());
+
+    // verify au1's configuration
     assertEquals(mauauid2, au2.getAUId());
-    assertTrue(au1 != au2);
-    assertTrue(!au1.equals(au2));
     MockArchivalUnit mau2 = (MockArchivalUnit)au2;
     Configuration c2 = mau2.getConfiguration();
     assertEquals("val1", c2.get(MockPlugin.CONFIG_PROP_1));
     assertEquals("va.l3", c2.get(MockPlugin.CONFIG_PROP_2));
-    assertEquals(SetUtil.set(mau1, mau2), new HashSet(mgr.getAllAUs()));
   }
 
   public void testFindCUS() throws Exception {
     String url = "http://foo.bar/";
     String lower = "lll";
     String upper = "hhh";
-    mgr.startService();
-    TestConfiguration.setCurrentConfigFromString(configStr);
+
+    doConfig();
     MockPlugin mpi = (MockPlugin)mgr.getPlugin(mockPlugId);
 
+    // make a PollSpec with info from a manually created CUS, which should
+    // match one of the registered AUs
     CachedUrlSet protoCus = makeCUS(mockPlugId, mauauid1, url, lower, upper);
     PollSpec ps1 = new PollSpec(protoCus);
 
+    // verify PluginManager can make a CUS for the PollSpec
     CachedUrlSet cus = mgr.findCachedUrlSet(ps1);
     assertNotNull(cus);
+    // verify the CUS's CUSS
     CachedUrlSetSpec cuss = cus.getSpec();
     assertEquals(url, cuss.getUrl());
     RangeCachedUrlSetSpec rcuss = (RangeCachedUrlSetSpec)cuss;
     assertEquals(lower, rcuss.getLowerBound());
     assertEquals(upper, rcuss.getUpperBound());
+
+    assertEquals(mauauid1, cus.getArchivalUnit().getAUId());
     // can't test protoCus.getArchivalUnit() .equals( cus.getArchivalUnit() )
     // as we made a fake mock one to build PollSpec, and PluginManager will
     // have created & configured a real mock one.
@@ -147,7 +175,6 @@ public class TestPluginManager extends LockssTestCase {
     CachedUrlSet aucus = mgr.findCachedUrlSet(ps2);
     assertNotNull(aucus);
     CachedUrlSetSpec aucuss = aucus.getSpec();
-    assertEquals("lockssau:", aucuss.getUrl());
     assertTrue(aucuss instanceof AUCachedUrlSetSpec);
   }
 
