@@ -1,5 +1,5 @@
 /*
- * $Id: TestWrappedMapOn.java,v 1.1 2003-09-04 23:11:16 tyronen Exp $
+ * $Id: TestWrappedMapOn.java,v 1.2 2004-01-27 00:41:49 tyronen Exp $
  */
 
 /*
@@ -33,10 +33,9 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin;
 
 import java.util.*;
-
-import org.lockss.plugin.wrapper.*;
-import org.lockss.test.*;
 import junit.framework.*;
+import org.lockss.test.*;
+import org.lockss.plugin.wrapper.*;
 
 /**
  * <p>Title: TestWrappedMapOn </p>

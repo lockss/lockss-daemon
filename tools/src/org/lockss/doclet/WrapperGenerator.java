@@ -1,5 +1,5 @@
 /*
- * $Id: WrapperGenerator.java,v 1.1 2003-09-04 23:11:18 tyronen Exp $
+ * $Id: WrapperGenerator.java,v 1.2 2004-01-27 00:41:50 tyronen Exp $
  */
 
 /*
@@ -577,9 +577,11 @@ public class WrapperGenerator extends Doclet {
 
   void writeAllMethods(ClassDoc cl, Writer wr) throws IOException {
     ClassDoc cptr = cl;
+    boolean isLeaf = true;
     do {
-      writeMethods(cptr.methods(), wr);
+      writeMethods(cptr.methods(), wr, isLeaf);
       cptr = cptr.superclass();
+      isLeaf = false;
     } while (cptr!=null && !cptr.qualifiedTypeName().equals("java.lang.Object"));
     ClassDoc[] interfaces = cl.interfaces();
     for (int i=0; i<interfaces.length; i++) {
@@ -605,13 +607,14 @@ public class WrapperGenerator extends Doclet {
 
   }
 
-  void writeMethods(MethodDoc[] methods, Writer wr)
+  void writeMethods(MethodDoc[] methods, Writer wr, boolean isLeaf)
       throws IOException {
     for (int i = 0; i < methods.length; i++) {
       MethodDoc method = methods[i];
       if (!alreadyWrittenMethods.contains(method)) {
         alreadyWrittenMethods.add(method);
-        if (method.isPublic() && method.isIncluded() && !isStandardMethod(method)) {
+        if (method.isPublic() && method.isIncluded() &&
+            (isLeaf || !isStandardMethod(method))) {
           SourceMethod srcMethod = new SourceMethod(method);
             if (srcMethod.returnType.equals("void")) {
               writeVoidBody(srcMethod, wr);

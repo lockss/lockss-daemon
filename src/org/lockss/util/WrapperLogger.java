@@ -1,5 +1,5 @@
 /*
- * $Id: WrapperLogger.java,v 1.3 2003-12-17 02:49:59 tlipkis Exp $
+ * $Id: WrapperLogger.java,v 1.4 2004-01-27 00:41:49 tyronen Exp $
  */
 
 /*
@@ -132,6 +132,10 @@ public class WrapperLogger {
 
   public static void setLevel(int level) {
     wrapLog.setLevel(level);
+  }
+
+  public static int getLevel() {
+    return wrapLog.level;
   }
 
 }

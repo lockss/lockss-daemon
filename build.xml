@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.72 2004-01-26 23:27:19 clairegriffin Exp $
+ $Id: build.xml,v 1.73 2004-01-27 00:41:48 tyronen Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -496,8 +496,8 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
        <include name="**/*.java"/>
     </javac>
   </target>
-
-  <target name="compile-generated" depends="prepare,generate-plugin-wrapper,jar-lockss"
+  <target name="compile-generated"
+          depends="prepare,generate-plugin-wrapper,jar-lockss"
           description="Compile generated classes">
     <mkdir dir="${generated.classes}"/>
     <javac srcdir="${generated.src}"
@@ -512,8 +512,7 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
        <include name="**/*.java"/>
     </javac>
   </target>
-
-  <target name="compile-tools-tests" depends="jar-tools,jar-tests,jar-generated"
+  <target name="compile-tools-tests" depends="jar-tools,jar-tests"
    description="Compile the LOCKSS test classes for tools" >
     <mkdir dir="${tools.test.classes}" />
     <javac srcdir="${tools.test.src}"
@@ -761,7 +760,8 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
         template="${plugin.wrapper.template}"
 	destdir="${generated.src}/${wrapper.path}"
 	interface="true" >
-     <fileset dir="${tools.src}/org/lockss/doclet" includes="WrapperGenerator.java"/>
+     <fileset dir="${tools.src}/org/lockss/doclet"
+              includes="WrapperGenerator.java"/>
      <fileset dir="${ant.src}/org/lockss/ant" includes="WrapTask.java" />
      <classpath refid="tools.run.classpath" />
     </wrap>

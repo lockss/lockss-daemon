@@ -1,5 +1,5 @@
 /*
- * $Id: TestWrapperStateOn.java,v 1.1 2003-09-04 23:11:16 tyronen Exp $
+ * $Id: TestWrapperStateOn.java,v 1.2 2004-01-27 00:41:49 tyronen Exp $
  */
 
 /*
@@ -33,13 +33,9 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin;
 
 import java.util.*;
-import java.io.*;
-import junit.framework.TestCase;
-import org.lockss.util.*;
-import org.lockss.plugin.wrapper.*;
-import org.lockss.test.*;
 import org.lockss.daemon.*;
-import org.lockss.repository.*;
+import org.lockss.test.*;
+import org.lockss.plugin.wrapper.*;
 
 /**
  * This is another test class for org.lockss.util.WrapperState.  It runs under
@@ -68,28 +64,30 @@ public class TestWrapperStateOn extends LockssTestCase {
   void commonTest(MockPlugin plug, WrappedPlugin wplug) throws Exception {
     // Make an archival unit
     Configuration config = ConfigurationUtil.fromString("");
-    WrappedArchivalUnit wau = (WrappedArchivalUnit) wplug.createAU(config);
+    WrappedArchivalUnit wau = (WrappedArchivalUnit) wplug.createAu(config);
     assertNotNull(wau);
 
-    // Verify wrapped AU points to wrapped plugin
+    // Verify wrapped Au points to wrapped plugin
     WrappedPlugin wplug2 = (WrappedPlugin) wau.getPlugin();
     assertSame(wplug, wplug2);
 
-    // Verify wrapped AU points to original AU
+    // Verify wrapped Au points to original Au
     ArchivalUnit au = (ArchivalUnit) WrapperState.getOriginal(wau);
     Plugin plug2 = au.getPlugin();
     assertSame(plug, plug2);
 
-    // Associate AU with plugin
+    // Associate Au with plugin
     plug.registerArchivalUnit(au);
 
-    // Get list of AUs in each plugin,verify nonempty
-    Collection wcoll = wplug.getAllAUs();
-    Collection ocoll = plug.getAllAUs();
-    assertFalse(wcoll.isEmpty());
+    // Get list of Aus in each plugin,verify nonempty
+    Collection ocoll = plug.getAllAus();
+    Collection wcoll = wplug.getAllAus();
+    assertSame(ocoll,plug.getAllAus());
+    assertFalse(plug.getAllAus().isEmpty());
     assertFalse(ocoll.isEmpty());
+    assertFalse(wcoll.isEmpty());
 
-    // Get the AU objects
+    // Get the Au objects
     WrappedArchivalUnit wau2 = (WrappedArchivalUnit) wcoll.iterator().next();
     ArchivalUnit au2 = (ArchivalUnit) ocoll.iterator().next();
 
@@ -126,12 +124,13 @@ public class TestWrapperStateOn extends LockssTestCase {
         (WrappedPlugin) WrapperState.getWrapper(mockPlugin);
     Configuration config = ConfigurationUtil.fromString("");
     WrappedArchivalUnit wau =
-        (WrappedArchivalUnit) wrappedPlugin.createAU(config);
+        (WrappedArchivalUnit) wrappedPlugin.createAu(config);
     ArchivalUnit au = (ArchivalUnit)WrapperState.getOriginal(wau);
 
     CachedUrlSetSpec cspec =
         new RangeCachedUrlSetSpec("http://www.example.com/testDir");
-    WrappedCachedUrlSet wcus = (WrappedCachedUrlSet)wau.makeCachedUrlSet(cspec);
+
+    WrappedCachedUrlSet wcus = (WrappedCachedUrlSet)wau.getAuCachedUrlSet();
     assertSame(wcus.getArchivalUnit(),wau);
 
     CachedUrlSet cus = (CachedUrlSet)WrapperState.getOriginal(wcus);
@@ -141,50 +140,40 @@ public class TestWrapperStateOn extends LockssTestCase {
 
   /** More sophisticated test uses the daemon */
   public void testNestedCachedUrlAndUrlCacher() throws Exception {
-    // Set up an environment
-    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    Properties props = new Properties();
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-    ConfigurationUtil.setCurrentConfigFromProps(props);
-
-    // Set up daemon
-    MockLockssDaemon theDaemon = new MockLockssDaemon();
-    theDaemon.getHashService();
-
     // Set up mock objects
-    MockGenericFileArchivalUnit mgfau = new MockGenericFileArchivalUnit();
+    MockArchivalUnit mau = new MockArchivalUnit();
     MockPlugin plugin = new MockPlugin();
-    plugin.initPlugin(theDaemon);
-    plugin.setDefiningConfigKeys(Collections.EMPTY_LIST);
-    mgfau.setPlugin(plugin);
-    assertSame(mgfau.getPlugin(),plugin);
+    mau.setPlugin(plugin);
+    assertSame(mau.getPlugin(),plugin);
 
     // Set up wrapped objects
     WrappedArchivalUnit wau = (WrappedArchivalUnit) WrapperState.getWrapper(
-        mgfau);
+        mau);
     WrappedPlugin wplug = (WrappedPlugin)WrapperState.getWrapper(plugin);
     assertSame(wau.getPlugin(),wplug);
 
     // Get CachedUrlSets
     CachedUrlSetSpec cspec =
         new RangeCachedUrlSetSpec("http://www.example.com/testDir");
-    WrappedCachedUrlSet wcus = (WrappedCachedUrlSet)wau.makeCachedUrlSet(cspec);
-    CachedUrlSet cus = (CachedUrlSet)WrapperState.getOriginal(wcus);
+    WrappedCachedUrlSet wcus = (WrappedCachedUrlSet)wplug.makeCachedUrlSet(wau,cspec);
+    MockCachedUrlSet mcus = (MockCachedUrlSet)WrapperState.getOriginal(wcus);
+    mcus.addUrl(URL);
 
     // Verify wrapped CachedUrlSet
     WrappedPlugin wcplug = (WrappedPlugin)wcus.getArchivalUnit().getPlugin();
     assertSame(wcplug,wplug);
-    assertSame(cus.getArchivalUnit(),mgfau);
+    assertSame(mcus.getArchivalUnit(),mau);
     assertSame(wcus.getArchivalUnit(),wau);
 
     // Get and verify wrapped CachedUrl
-    WrappedCachedUrl wurl = (WrappedCachedUrl) wau.makeCachedUrl(wcus, URL);
+    WrappedCachedUrl wurl = (WrappedCachedUrl) wplug.makeCachedUrl(wcus, URL);
+    assertNotNull(wurl);
     assertSame(wurl.getArchivalUnit(), wau);
     CachedUrl curl = (CachedUrl) WrapperState.getOriginal(wurl);
-    assertSame(curl.getArchivalUnit(), mgfau);
+    assertSame(curl.getArchivalUnit(), mau);
 
     // Make sure wrapped UrlCacher points to right place
-    WrappedUrlCacher wc = (WrappedUrlCacher) wau.makeUrlCacher(wcus, URL);
+    WrappedUrlCacher wc = (WrappedUrlCacher) wplug.makeUrlCacher(wcus, URL);
     assertNotNull(wc);
     assertSame(wc.getCachedUrlSet(), wcus);
     assertSame(wc.getCachedUrl().getArchivalUnit(), wau);
@@ -192,8 +181,8 @@ public class TestWrapperStateOn extends LockssTestCase {
 
     // Make sure unwrapped UrlCacher points to right place
     UrlCacher uc = (UrlCacher) WrapperState.getOriginal(wc);
-    assertSame(uc.getCachedUrlSet(), cus);
-    assertSame(uc.getCachedUrl().getArchivalUnit(), mgfau);
+    assertSame(uc.getCachedUrlSet(), mcus);
+    assertSame(uc.getCachedUrl().getArchivalUnit(), mau);
     assertSame(uc.getCachedUrl().getUrl(),URL);
 
   }

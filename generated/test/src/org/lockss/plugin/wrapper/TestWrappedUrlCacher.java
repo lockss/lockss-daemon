@@ -1,5 +1,5 @@
 /*
- * $Id: TestWrappedUrlCacher.java,v 1.1 2003-09-04 23:11:17 tyronen Exp $
+ * $Id: TestWrappedUrlCacher.java,v 1.2 2004-01-27 00:41:49 tyronen Exp $
  */
 
 /*
@@ -39,14 +39,16 @@ import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.plugin.*;
+import junit.framework.*;
 
 /**
  * This is the test class for org.lockss.plugin.wrapper.WrappedUrlCacher
  *
- * Based on the code of TestGenericFileUrlCacher
+ * Based on the code of TestBaseUrlCacher
  */
 public class TestWrappedUrlCacher extends LockssTestCase {
   private WrappedArchivalUnit wau;
+  private WrappedPlugin wplug;
   private MockLockssDaemon theDaemon;
 
   public void setUp() throws Exception {
@@ -60,11 +62,11 @@ public class TestWrappedUrlCacher extends LockssTestCase {
     theDaemon.getHashService();
 
 
-    MockGenericFileArchivalUnit mgfau = new MockGenericFileArchivalUnit();
+    MockArchivalUnit mgfau = new MockArchivalUnit();
     wau = (WrappedArchivalUnit)WrapperState.getWrapper(mgfau);
     mgfau.setCrawlSpec(new CrawlSpec(tempDirPath, null));
     MockPlugin plugin = new MockPlugin();
-    WrappedPlugin wplug = (WrappedPlugin)WrapperState.getWrapper(plugin);
+    wplug = (WrappedPlugin)WrapperState.getWrapper(plugin);
     wplug.initPlugin(theDaemon);
     plugin.setDefiningConfigKeys(Collections.EMPTY_LIST);
     mgfau.setPlugin(wplug);
@@ -78,57 +80,16 @@ public class TestWrappedUrlCacher extends LockssTestCase {
   }
 
   public void testCache() throws IOException {
-    MockWrappedUrlCacher cacher = new MockWrappedUrlCacher(
-        wau.getAUCachedUrlSet(), "http://www.example.com/testDir/leaf1");
-    cacher.setUncachedInputStream(new StringInputStream("test content"));
+    final String URL = "http://www.example.com/testDir/leaf1";
+    WrappedCachedUrlSet wset = (WrappedCachedUrlSet)wau.getAuCachedUrlSet();
+    MockCachedUrlSet mset = (MockCachedUrlSet)wset.getOriginal();
     Properties props = new Properties();
     props.setProperty("test1", "value1");
-    WrappedUrlCacher wcacher = (WrappedUrlCacher)WrapperState.getWrapper(cacher);
-    cacher.setUncachedProperties(props);
+    mset.addUrl(URL,false,true,props);
+    WrappedUrlCacher wcacher = (WrappedUrlCacher)wplug.makeUrlCacher(wset,URL);
+    int count = mset.getNumCacheAttempts(URL);
     wcacher.cache();
-
-    WrappedCachedUrl url = (WrappedCachedUrl)wau.makeCachedUrl(
-        wau.getAUCachedUrlSet(),"http://www.example.com/testDir/leaf1");
-    InputStream is = url.openForReading();
-    ByteArrayOutputStream baos = new ByteArrayOutputStream(12);
-    StreamUtil.copy(is, baos);
-    is.close();
-    assertTrue(baos.toString().equals("test content"));
-    baos.close();
-
-    props = url.getProperties();
-    assertTrue(props.getProperty("test1").equals("value1"));
-  }
-
-  public static void main(String[] argv) {
-    String[] testCaseList = { TestWrappedUrlCacher.class.getName()};
-    junit.swingui.TestRunner.main(testCaseList);
-  }
-
-  private class MockWrappedUrlCacher extends GenericFileUrlCacher {
-    private InputStream uncachedIS;
-    private Properties uncachedProp;
-
-    public MockWrappedUrlCacher(CachedUrlSet owner, String url) {
-      super(owner, url);
-    }
-
-    public InputStream getUncachedInputStream(long lastCached) {
-      return uncachedIS;
-    }
-
-    public Properties getUncachedProperties() {
-      return uncachedProp;
-    }
-
-    //mock specific acessors
-    public void setUncachedInputStream(InputStream is) {
-      uncachedIS = is;
-    }
-
-    public void setUncachedProperties(Properties prop) {
-      uncachedProp = prop;
-    }
+    assertEquals(mset.getNumCacheAttempts(URL),count+1);
   }
 
 }

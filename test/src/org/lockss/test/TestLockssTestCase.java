@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssTestCase.java,v 1.7 2003-09-08 22:57:52 tlipkis Exp $
+ * $Id: TestLockssTestCase.java,v 1.8 2004-01-27 00:41:50 tyronen Exp $
  */
 
 /*
@@ -297,6 +297,21 @@ public class TestLockssTestCase extends LockssTestCase {
     assertSuccessRate(.9, 10);
     if (rpt-- >= 9) {
       fail("failing on iteration " + rpt);
+    }
+  }
+
+  public void testAssertContainsAll() {
+    Set set = new HashSet();
+    set.add("one");
+    set.add("two");
+    set.add("three");
+    String[] strs = { "three","two","one" };
+    assertContainsAll(set,strs);
+    String[] extra = { "three","two","one", "four" };
+    try {
+      assertContainsAll(set,extra);
+      fail("assertContainsAll should have thrown an AssertionFailedException");
+    } catch (AssertionFailedError afe) {
     }
   }
 }

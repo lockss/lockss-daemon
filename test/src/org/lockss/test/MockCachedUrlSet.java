@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrlSet.java,v 1.43 2004-01-17 00:14:35 troberts Exp $
+ * $Id: MockCachedUrlSet.java,v 1.44 2004-01-27 00:41:50 tyronen Exp $
  */
 
 /*
@@ -70,9 +70,9 @@ public class MockCachedUrlSet implements CachedUrlSet {
   private Hashtable ucHash = new Hashtable();
   private Hashtable cuHash = new Hashtable();
 
+  private long actualHashDuration;
+
   private Map cacheAttempts = new HashMap();
-
-
 
   private static final Logger logger = Logger.getLogger("MockCachedUrlSet");
 
@@ -225,6 +225,11 @@ public class MockCachedUrlSet implements CachedUrlSet {
   }
 
   public void storeActualHashDuration(long elapsed, Exception err) {
+    actualHashDuration = elapsed;
+  }
+
+  public long getActualHashDuration() {
+    return actualHashDuration;
   }
 
   // Methods used by the crawler
@@ -278,7 +283,7 @@ public class MockCachedUrlSet implements CachedUrlSet {
 		      boolean exists, boolean shouldCache,
 		      Properties props, IOException cacheException,
 		      int timesToThrow) {
-    MockCachedUrl cu = new MockCachedUrl(url);
+    MockCachedUrl cu = new MockCachedUrl(url, this);
 //     cu.setContent(source);
     cu.setProperties(props);
     cu.setExists(exists);

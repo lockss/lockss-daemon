@@ -1,5 +1,5 @@
 /*
- * $Id: MockPlugin.java,v 1.14 2003-09-26 23:47:45 eaalto Exp $
+ * $Id: MockPlugin.java,v 1.15 2004-01-27 00:41:50 tyronen Exp $
  */
 
 /*
@@ -56,9 +56,8 @@ public class MockPlugin extends BasePlugin implements PluginTestable {
   private Configuration auConfig;
   private Collection defKeys = null;
 
-  private List aus = new ArrayList();
-
   public MockPlugin(){
+    super();
   }
 
   /**

@@ -1,5 +1,5 @@
 /*
- * $Id: FuncWrappedSimulatedContent.java,v 1.1 2003-09-04 23:11:17 tyronen Exp $
+ * $Id: FuncWrappedSimulatedContent.java,v 1.2 2004-01-27 00:41:49 tyronen Exp $
  */
 
 /*
@@ -26,18 +26,17 @@
 
 package org.lockss.plugin.wrapper;
 
-import java.util.*;
 import java.io.*;
-import org.lockss.app.*;
-import org.lockss.util.*;
-import org.lockss.test.*;
-import org.lockss.crawler.GoslingCrawlerImpl;
-import org.lockss.daemon.*;
-import org.lockss.repository.*;
 import java.security.*;
+import java.util.*;
+import org.lockss.crawler.*;
+import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.simulated.*;
-import org.lockss.state.HistoryRepositoryImpl;
+import org.lockss.repository.*;
+import org.lockss.state.*;
+import org.lockss.test.*;
+import org.lockss.util.*;
 import junit.framework.*;
 
 /**
@@ -47,6 +46,7 @@ import junit.framework.*;
 public class FuncWrappedSimulatedContent extends LockssTestCase {
   private SimulatedArchivalUnit sau;
   private WrappedArchivalUnit wau;
+  private WrappedPlugin wplug;
   private MockLockssDaemon theDaemon;
 
   public FuncWrappedSimulatedContent(String msg) {
@@ -92,15 +92,15 @@ public class FuncWrappedSimulatedContent extends LockssTestCase {
     ConfigurationUtil.setCurrentConfigFromString(makeConfig());
     theDaemon = new MockLockssDaemon();
     theDaemon.setDaemonInited(true);
-    theDaemon.getPluginManager().startService();
-
-    theDaemon.getHistoryRepository().startService();
-    theDaemon.getHashService();
     init();
   }
 
   void init() {
-    Collection coll = theDaemon.getPluginManager().getAllAUs();
+   MockSystemMetrics metrics = new MockSystemMetrics();
+   metrics.initService(theDaemon);
+   theDaemon.setSystemMetrics(metrics);
+   PluginManager pmgr = theDaemon.getPluginManager();
+    Collection coll = pmgr.getAllAus();
     Iterator it = coll.iterator();
     while (it.hasNext()) {
       Object au = it.next();
@@ -110,10 +110,18 @@ public class FuncWrappedSimulatedContent extends LockssTestCase {
     }
     assertNotNull(wau);
     sau = (SimulatedArchivalUnit)wau.getOriginal();
+    wplug = (WrappedPlugin)wau.getPlugin();
+    pmgr.startService();
+
+    theDaemon.getHistoryRepository().startService();
 
     theDaemon.getLockssRepository(wau);
-    theDaemon.getNodeManager(wau).initService(theDaemon);
-    theDaemon.getNodeManager(wau).startService();
+    theDaemon.getHashService().startService();
+    metrics.startService();
+    metrics.setHashSpeed(100);
+    NodeManager nmgr = theDaemon.getNodeManager(wau);
+//    nmgr.initService(theDaemon);
+    nmgr.startService();
  }
 
 
@@ -130,7 +138,10 @@ public class FuncWrappedSimulatedContent extends LockssTestCase {
     createContent();
     crawlContent();
     checkContent();
-    theDaemon.getNodeManager(wau).startService();
+    /* Is this correct?  Check how node managers etc. handle
+        wrapped au's */
+    NodeManager nmgr = theDaemon.getNodeManager(sau);
+    nmgr.startService();
     hashContent();
     doTestDualContentHash();
   }
@@ -151,7 +162,7 @@ public class FuncWrappedSimulatedContent extends LockssTestCase {
     CrawlSpec spec = new CrawlSpec(
         SimulatedArchivalUnit.SIMULATED_URL_START, null);
     Crawler crawler =
-      new GoslingCrawlerImpl(wau, spec.getStartingUrls(), true);
+      CrawlerImpl.makeNewContentCrawler(wau, spec, new MockAuState());
     crawler.doCrawl(Deadline.MAX);
   }
 
@@ -162,7 +173,7 @@ public class FuncWrappedSimulatedContent extends LockssTestCase {
   }
 
   private void checkRoot() {
-    WrappedCachedUrlSet set = (WrappedCachedUrlSet)wau.getAUCachedUrlSet();
+    WrappedCachedUrlSet set = (WrappedCachedUrlSet)wau.getAuCachedUrlSet();
     Iterator setIt = set.flatSetIterator();
     ArrayList childL = new ArrayList(1);
     WrappedCachedUrlSet cus = null;
@@ -197,7 +208,7 @@ public class FuncWrappedSimulatedContent extends LockssTestCase {
     String parent = SimulatedArchivalUnit.SIMULATED_URL_ROOT + "/branch1";
     CachedUrlSetSpec spec = new RangeCachedUrlSetSpec(parent);
     WrappedCachedUrlSet set = (WrappedCachedUrlSet)
-        wau.makeCachedUrlSet(spec);
+        wplug.makeCachedUrlSet(wau,spec);
     Iterator setIt = set.contentHashIterator();
     ArrayList childL = new ArrayList(16);
     while (setIt.hasNext()) {
@@ -242,8 +253,8 @@ public class FuncWrappedSimulatedContent extends LockssTestCase {
     CachedUrlSetSpec spec = new RangeCachedUrlSetSpec(
         SimulatedArchivalUnit.SIMULATED_URL_ROOT);
     WrappedCachedUrlSet urlset = (WrappedCachedUrlSet)
-    wau.makeCachedUrlSet(spec);
-    WrappedCachedUrl url = (WrappedCachedUrl)wau.makeCachedUrl(urlset,
+    wplug.makeCachedUrlSet(wau,spec);
+    WrappedCachedUrl url = (WrappedCachedUrl)wplug.makeCachedUrl(urlset,
         SimulatedArchivalUnit.SIMULATED_URL_ROOT + path);
     String content = getUrlContent(url);
     String expectedContent;
@@ -272,7 +283,7 @@ public class FuncWrappedSimulatedContent extends LockssTestCase {
   public void doTestDualContentHash() throws Exception {
     createContent();
     crawlContent();
-    WrappedCachedUrlSet set = (WrappedCachedUrlSet)wau.getAUCachedUrlSet();
+    WrappedCachedUrlSet set = (WrappedCachedUrlSet)wau.getAuCachedUrlSet();
     byte[] nameH = getHash(set, true);
     byte[] contentH = getHash(set, false);
   }
@@ -291,7 +302,7 @@ public class FuncWrappedSimulatedContent extends LockssTestCase {
     catch (NoSuchAlgorithmException ex) {
       fail("No algorithm.");
     }
-    WrappedCachedUrlSet set = (WrappedCachedUrlSet)wau.getAUCachedUrlSet();
+    WrappedCachedUrlSet set = (WrappedCachedUrlSet)wau.getAuCachedUrlSet();
     CachedUrlSetHasher hasher = set.getContentHasher(dig);
     SystemMetrics metrics = theDaemon.getSystemMetrics();
     int estimate = metrics.getBytesPerMsHashEstimate(hasher, dig);
@@ -306,14 +317,14 @@ public class FuncWrappedSimulatedContent extends LockssTestCase {
   }
 
   private void hashSet(boolean namesOnly) throws IOException {
-    WrappedCachedUrlSet set = (WrappedCachedUrlSet)wau.getAUCachedUrlSet();
+    WrappedCachedUrlSet set = (WrappedCachedUrlSet)wau.getAuCachedUrlSet();
     byte[] hash = getHash(set, namesOnly);
     byte[] hash2 = getHash(set, namesOnly);
     assertTrue(Arrays.equals(hash, hash2));
 
     String parent = SimulatedArchivalUnit.SIMULATED_URL_ROOT + "/branch1";
     CachedUrlSetSpec spec = new RangeCachedUrlSetSpec(parent);
-    set = (WrappedCachedUrlSet)wau.makeCachedUrlSet(spec);
+    set = (WrappedCachedUrlSet)wplug.makeCachedUrlSet(wau,spec);
     hash2 = getHash(set, namesOnly);
     assertFalse(Arrays.equals(hash, hash2));
   }

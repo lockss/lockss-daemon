@@ -1,5 +1,5 @@
 /*
- * $Id: TestWrappedPlugin.java,v 1.1 2003-09-04 23:11:17 tyronen Exp $
+ * $Id: TestWrappedPlugin.java,v 1.2 2004-01-27 00:41:49 tyronen Exp $
  */
 
 /*
@@ -63,25 +63,26 @@ public class TestWrappedPlugin extends LockssTestCase {
     super.setUp();
     HighWirePlugin hplug = new HighWirePlugin();
     plugin = (WrappedPlugin)WrapperState.getWrapper(hplug);
-    plugin.initPlugin(null);
+    MockLockssDaemon daemon = new MockLockssDaemon();
+    plugin.initPlugin(daemon);
   }
 
-  public void testGetAUNullConfig()
+  public void testGetAuNullConfig()
       throws ArchivalUnit.ConfigurationException {
     try {
-      plugin.configureAU(null, null);
+      plugin.configureAu(null, null);
       fail("Didn't throw ArchivalUnit.ConfigurationException");
     } catch (ArchivalUnit.ConfigurationException e) {
     }
   }
 
-  private WrappedArchivalUnit makeAUFromProps(Properties props)
+  private WrappedArchivalUnit makeAuFromProps(Properties props)
       throws ArchivalUnit.ConfigurationException {
     Configuration config = ConfigurationUtil.fromProps(props);
-    return (WrappedArchivalUnit)plugin.configureAU(config, null);
+    return (WrappedArchivalUnit)plugin.configureAu(config, null);
   }
 
-  public void testGetAUHandlesBadUrl()
+  public void testGetAuHandlesBadUrl()
       throws ArchivalUnit.ConfigurationException, MalformedURLException {
     Properties props = new Properties();
     props.setProperty(HighWirePlugin.AUPARAM_VOL, "322");
@@ -89,7 +90,7 @@ public class TestWrappedPlugin extends LockssTestCase {
     props.setProperty("reserved.wrapper","true");
 
     try {
-      WrappedArchivalUnit au = makeAUFromProps(props);
+      WrappedArchivalUnit au = makeAuFromProps(props);
       fail ("Didn't throw InstantiationException when given a bad url");
     } catch (ArchivalUnit.ConfigurationException auie) {
       MalformedURLException murle =
@@ -98,14 +99,14 @@ public class TestWrappedPlugin extends LockssTestCase {
     }
   }
 
-  public void testGetAUConstructsProperAU()
+  public void testGetAuConstructsProperAu()
       throws ArchivalUnit.ConfigurationException, MalformedURLException {
     Properties props = new Properties();
     props.setProperty(AUPARAM_VOL, "322");
     props.setProperty(AUPARAM_BASE_URL, "http://www.example.com/");
     props.setProperty("reserved.wrapper","true");
 
-    WrappedArchivalUnit au = (WrappedArchivalUnit)makeAUFromProps(props);
+    WrappedArchivalUnit au = (WrappedArchivalUnit)makeAuFromProps(props);
   }
 
   public void testGetPluginId() {
@@ -113,10 +114,10 @@ public class TestWrappedPlugin extends LockssTestCase {
                  plugin.getPluginId());
   }
 
-  public void testGetAUConfigProperties() {
+  public void testGetAuConfigProperties() {
     assertEquals(ListUtil.list(ConfigParamDescr.BASE_URL,
                                ConfigParamDescr.VOLUME_NUMBER),
-                 plugin.getAUConfigProperties());
+                 plugin.getAuConfigProperties());
   }
 
   public void testGetDefiningProperties() {

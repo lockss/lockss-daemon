@@ -1,5 +1,5 @@
 /*
- * $Id: TestWrapperGenerator.java,v 1.1 2003-09-04 23:11:18 tyronen Exp $
+ * $Id: TestWrapperGenerator.java,v 1.2 2004-01-27 00:41:50 tyronen Exp $
  */
 
 /*
@@ -205,12 +205,6 @@ public class TestWrapperGenerator extends LockssTestCase {
       pw.println("  public File useFile(Map map, Set set) {");
       pw.println("    return new File();");
       pw.println("  }");
-      pw.println("  public int hashCode() {");
-      pw.println("    return 0;");
-      pw.println("  }");
-      pw.println("  public boolean equals(Object obj) {");
-      pw.println("    return false;");
-      pw.println("  }");
     } else {
       pw.println("public interface TestClass {");
       pw.println("  public void exception(List list) throws IOException;");
@@ -228,15 +222,24 @@ public class TestWrapperGenerator extends LockssTestCase {
       pw.print("class");
     }
     pw.println(" childTestClass extends TestClass {");
-    pw.print("  public boolean returnTrue()");
-    if (!INTERFACE_ONLY) {
-      pw.println(" {\n    return true;\n}");
-    } else {
-      pw.println(";");
-    }
+    printDifferently(pw,"boolean returnTrue","true");
+    printDifferently(pw,"int hashCode","0");
     pw.println("}");
     pw.close();
     fw.close();
+  }
+
+  void printDifferently(PrintWriter pw, String retTypeAndName, String retVal)
+  {
+    pw.print("  public ");
+    pw.print(retTypeAndName);
+    if (!INTERFACE_ONLY) {
+      pw.print("() {\n    return ");
+      pw.print(retVal);
+      pw.println(";\n}");
+    } else {
+      pw.println(";");
+    }
   }
 
   void writeStartOfThrow(PrintWriter pw) throws IOException {
@@ -290,9 +293,6 @@ public class TestWrapperGenerator extends LockssTestCase {
       pw.print(", childTestClass");
     }
     pw.println(" {\n");
-   /* pw.println("  static {");
-    pw.println("    WrapperState.register(\"childTestClass\");");
-    pw.println("  }\n");*/
     pw.println("  private childTestClass innerchildTestClass;\n");
     pw.println("  Map wrappermap = new WeakHashMap();\n");
     pw.println("  private void makeMap() {");
@@ -341,6 +341,23 @@ public class TestWrapperGenerator extends LockssTestCase {
     pw.println("    }");
     pw.println("    return custom_returnTrue_val(returnValue);");
     pw.println("  }\n");
+
+    pw.println("  public int hashCode() {");
+    pw.println("    int returnValue;");
+    pw.println("    WrapperLogger.record_call(\"childTestClass\", \"hashCode\", ListUtil.list());");
+    pw.println("    try {");
+    pw.println(
+        "      returnValue = innerchildTestClass.hashCode();");
+    pw.println(
+        "      WrapperLogger.record_val(\"childTestClass\", \"hashCode\", returnValue);");
+    pw.println("    } catch (Throwable throwable) {");
+    pw.println("      WrapperLogger.record_throwable(\"childTestClass\", \"hashCode\", throwable);");
+    writeDefaultThrowable(pw);
+    pw.println("    }");
+    pw.println("    return custom_hashCode_val(returnValue);");
+    pw.println("  }\n");
+
+
     if (!INTERFACE_ONLY) {
       pw.println("  public static int[] ret3() {");
       pw.println("    int[] returnValue;");
@@ -402,6 +419,7 @@ public class TestWrapperGenerator extends LockssTestCase {
     pw.println("    }");
     pw.println("    return custom_useFile_val(wrappedReturnValue);");
     pw.println("  }\n");
+
     pw.println("  protected void finalize() throws Throwable {");
     pw.println("    WrapperState.removeWrapping(innerchildTestClass);");
     pw.println("    innerchildTestClass = null;");

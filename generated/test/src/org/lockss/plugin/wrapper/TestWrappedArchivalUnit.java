@@ -1,5 +1,5 @@
 /*
- * $Id: TestWrappedArchivalUnit.java,v 1.1 2003-09-04 23:11:17 tyronen Exp $
+ * $Id: TestWrappedArchivalUnit.java,v 1.2 2004-01-27 00:41:49 tyronen Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ import org.lockss.util.*;
 import org.lockss.state.*;
 import org.lockss.test.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.base.*;
 import org.lockss.plugin.highwire.*;
 import org.lockss.repository.LockssRepositoryImpl;
 
@@ -107,9 +108,9 @@ public class TestWrappedArchivalUnit extends LockssTestCase {
     theDaemon.getLockssRepository(hwAu);
     theDaemon.getNodeManager(hwAu);
     CachedUrlSetSpec spec = new RangeCachedUrlSetSpec(base.toString());
-    GenericFileCachedUrlSet cus = new GenericFileCachedUrlSet(hwAu, spec);
+    BaseCachedUrlSet cus = new BaseCachedUrlSet(hwAu, spec);
     WrappedUrlCacher uc = (WrappedUrlCacher)
-        hwAu.makeUrlCacher(cus,
+        hwAu.getPlugin().makeUrlCacher(cus,
         "http://shadow1.stanford.edu/lockss-volume322.shtml");
     assertTrue(uc.shouldBeCached());
   }
@@ -121,9 +122,9 @@ public class TestWrappedArchivalUnit extends LockssTestCase {
     theDaemon.getLockssRepository(hwAu);
     theDaemon.getNodeManager(hwAu);
     CachedUrlSetSpec spec = new RangeCachedUrlSetSpec(base.toString());
-    GenericFileCachedUrlSet cus = new GenericFileCachedUrlSet(hwAu, spec);
+    BaseCachedUrlSet cus = new BaseCachedUrlSet(hwAu, spec);
     WrappedUrlCacher uc = (WrappedUrlCacher)
-      hwAu.makeUrlCacher(cus,
+      hwAu.getPlugin().makeUrlCacher(cus,
       "http://shadow2.stanford.edu/lockss-volume322.shtml");
     assertFalse(uc.shouldBeCached());
   }

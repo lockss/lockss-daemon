@@ -62,7 +62,7 @@ try {
   LockssDaemon theDaemon;
 
   public WrappedPlugin() {}
-  
+
   public void setOriginal(Plugin plugin) throws InstantiationException {
     if (innerPlugin!=null &amp;&amp; innerPlugin!=plugin) {
       throw new InstantiationException("Class " + innerPlugin.getClass().getName() + " already wrapped.");
@@ -83,7 +83,7 @@ try {
 </special>
 <special class="org.lockss.plugin.Plugin" method="stopPlugin">
     /* The Plugin Manager has an entry for the inner plugin,
-       and will call it directly, so this method 
+       and will call it directly, so this method
        should do nothing */
     if (innerPlugin!=null) {
       innerPlugin.stopPlugin();
@@ -99,8 +99,8 @@ try {
       return innerPlugin.equals(obj);
     }
 </special>
-<special class="org.lockss.plugin.Plugin" method="getAllAUs">
-    Collection coll = innerPlugin.getAllAUs();
+<special class="org.lockss.plugin.Plugin" method="getAllAus">
+    Collection coll = innerPlugin.getAllAus();
     Collection wcoll = new ArrayList();
     Iterator it = coll.iterator();
     while (it.hasNext()) {

@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.46 2004-01-24 22:55:42 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.47 2004-01-27 00:41:49 tyronen Exp $
  */
 
 /*
@@ -696,6 +696,13 @@ public class LockssTestCase extends TestCase {
       sb.append("Expected empty Collection, but containted ");
       sb.append(coll);
       fail(sb.toString());
+    }
+  }
+
+  public static void assertContainsAll(Collection coll,
+                                             Object[] elements) {
+    for (int i = 0; i < elements.length; i++) {
+      assertContains(coll, elements[i]);
     }
   }
 
