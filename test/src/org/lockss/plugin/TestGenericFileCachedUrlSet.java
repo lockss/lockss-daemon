@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericFileCachedUrlSet.java,v 1.21 2003-03-04 01:02:05 aalto Exp $
+ * $Id: TestGenericFileCachedUrlSet.java,v 1.22 2003-03-18 01:28:57 aalto Exp $
  */
 
 /*
@@ -54,9 +54,6 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
   private MockGenericFileArchivalUnit mgfau;
   private MockLockssDaemon theDaemon = new MockLockssDaemon(null);
 
-  public TestGenericFileCachedUrlSet(String msg) {
-    super(msg);
-  }
   public void setUp() throws Exception {
     super.setUp();
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
@@ -202,10 +199,10 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
   }
 
   public void testHashEstimation() throws Exception {
-    byte[] bytes = new byte[10000];
+    byte[] bytes = new byte[100];
     Arrays.fill(bytes, (byte)1);
     String testString = new String(bytes);
-    for (int ii=0; ii<100; ii++) {
+    for (int ii=0; ii<10; ii++) {
       createLeaf("http://www.example.com/testDir/leaf"+ii, testString, null);
     }
     CachedUrlSetSpec rSpec =

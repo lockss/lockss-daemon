@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerServiceImpl.java,v 1.4 2003-03-15 02:53:29 aalto Exp $
+ * $Id: TestNodeManagerServiceImpl.java,v 1.5 2003-03-18 01:28:57 aalto Exp $
  */
 
 /*
@@ -38,10 +38,6 @@ public class TestNodeManagerServiceImpl extends LockssTestCase {
   private MockLockssDaemon theDaemon;
   private NodeManagerService nms;
   private MockArchivalUnit mau;
-
-  public TestNodeManagerServiceImpl(String msg) {
-    super(msg);
-  }
 
   public void setUp() throws Exception {
     super.setUp();
