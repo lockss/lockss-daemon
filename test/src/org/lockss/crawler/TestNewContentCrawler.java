@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.1 2004-02-03 03:12:32 troberts Exp $
+ * $Id: TestNewContentCrawler.java,v 1.2 2004-02-09 22:54:45 troberts Exp $
  */
 
 /*
@@ -167,7 +167,7 @@ public class TestNewContentCrawler extends LockssTestCase {
 
     crawler.doCrawl(Deadline.MAX);
     Set expected = SetUtil.fromList(urls);
-    assertEquals(expected, cus.getCachedUrls());
+    assertEquals(expected, cus.getForceCachedUrls());
   }
 
   public void testOverwritesStartingUrlsOneLevel() {
@@ -207,7 +207,7 @@ public class TestNewContentCrawler extends LockssTestCase {
 
     crawler.doCrawl(Deadline.MAX);
     Set expected = SetUtil.set(startUrl, url1, url2, url3);
-    assertEquals(expected, cus.getCachedUrls());
+    assertEquals(expected, cus.getForceCachedUrls());
   }
 
   public void testWillNotParseExistingPagesForUrls() {
@@ -309,7 +309,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     String url2= "http://www.example.com/link2.html";
     String url3= "http://www.example.com/link3.html";
 
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    MyMockCachedUrlSet cus = (MyMockCachedUrlSet)mau.getAuCachedUrlSet();
     cus.addUrl(startUrl);
     parser.addUrlSetToReturn(startUrl, SetUtil.set(url1, url2, url3));
     cus.addUrl(url1);
@@ -405,9 +405,15 @@ public class TestNewContentCrawler extends LockssTestCase {
     public MockUrlCacherThatStepsTimebase(String url, MockCachedUrlSet cus) {
       super(url, cus);
     }
+
     public void cache() throws IOException {
       TimeBase.step();
       super.cache();
+    }
+
+    public void forceCache() throws IOException {
+      TimeBase.step();
+      super.forceCache();
     }
 
     public InputStream getUncachedInputStream() {
