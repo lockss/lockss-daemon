@@ -1,5 +1,5 @@
 /*
- * $Id: TestPrivilegedAccessor.java,v 1.3 2002-09-11 00:59:14 tal Exp $
+ * $Id: TestPrivilegedAccessor.java,v 1.4 2002-09-19 20:57:35 tal Exp $
  */
 
 /*
@@ -104,6 +104,11 @@ public class TestPrivilegedAccessor extends TestCase {
   }
 
   public void testInstanceParam() throws Exception {
+    try {
+      new PrivilegedAccessor.Instance(String.class, new Float(5));
+      fail("PrivilegedAccessor.Instance should have thrown ClassCastException");
+    } catch (ClassCastException e) {
+    }
     MockParent parent = new MockParent();
     Object nullString = new PrivilegedAccessor.Instance(String.class, null);
     Boolean bool = 
