@@ -1,5 +1,5 @@
 /*
- * $Id: TestTitleConfig.java,v 1.4 2004-09-27 22:38:45 smorabito Exp $
+ * $Id: TestTitleConfig.java,v 1.5 2005-01-19 04:16:34 tlipkis Exp $
  */
 
 /*
@@ -119,4 +119,59 @@ public class TestTitleConfig extends LockssTestCase {
     a1.setEditable(true);
     assertFalse(tc1.matchesConfig(config));
   }
+
+  public void testEqualsHashWithNulls() {
+    TitleConfig tc1 = new TitleConfig(null, (String)null);
+    TitleConfig tc1c = new TitleConfig(null, (String)null);
+    assertEquals(tc1, tc1c);
+    assertEquals(tc1.hashCode(), tc1c.hashCode());
+  }
+
+  public void testEqualsHash() {
+    ConfigParamDescr d1 = new ConfigParamDescr("key1");
+    ConfigParamDescr d2 = new ConfigParamDescr("key2");
+    ConfigParamAssignment a1 = new ConfigParamAssignment(d1, "a");
+    ConfigParamAssignment a2 = new ConfigParamAssignment(d2, "foo");
+    TitleConfig tc1 = new TitleConfig("a", "b");
+    tc1.setParams(ListUtil.list(a1, a2));
+    tc1.setJournalTitle("jtitle");
+    tc1.setPluginVersion("2");
+    tc1.setEstimatedSize(42);
+    ConfigParamDescr d1c = new ConfigParamDescr("key1");
+    ConfigParamDescr d2c = new ConfigParamDescr("key2");
+    ConfigParamAssignment a1c = new ConfigParamAssignment(d1c, "a");
+    ConfigParamAssignment a2c = new ConfigParamAssignment(d2c, "foo");
+    TitleConfig tc1c = new TitleConfig("a", "b");
+    tc1c.setParams(ListUtil.list(a1c, a2c));
+    tc1c.setJournalTitle("jtitle");
+    tc1c.setPluginVersion("2");
+    tc1c.setEstimatedSize(42);
+    assertEquals(tc1, tc1c);
+    assertEquals(tc1.hashCode(), tc1c.hashCode());
+    // params are order-independent
+    tc1c.setParams(ListUtil.list(a2c, a1c));
+    assertEquals(tc1, tc1c);
+    assertEquals(tc1.hashCode(), tc1c.hashCode());
+    tc1c.setParams(ListUtil.list(a1c, new ConfigParamAssignment(d1c, "b")));
+    assertNotEquals(tc1, tc1c);
+    tc1c.setParams(ListUtil.list(a1c, a2c));
+    assertEquals(tc1, tc1c);
+    tc1c.setJournalTitle("sdfsdf");
+    assertNotEquals(tc1, tc1c);
+    tc1.setJournalTitle("sdfsdf");
+    assertEquals(tc1, tc1c);
+    tc1c.setPluginVersion("3");
+    assertNotEquals(tc1, tc1c);
+    tc1.setPluginVersion("3");
+    assertEquals(tc1, tc1c);
+    tc1c.setEstimatedSize(420);
+    assertNotEquals(tc1, tc1c);
+    tc1.setEstimatedSize(420);
+    assertEquals(tc1, tc1c);
+
+    assertNotEquals(new TitleConfig("a", "b"), new TitleConfig("2", "b"));
+    assertNotEquals(new TitleConfig("a", "b"), new TitleConfig("a", "2"));
+
+  }
+
 }
