@@ -1,5 +1,5 @@
 /*
- * $Id: NewContentCrawler.java,v 1.2 2004-02-09 22:54:45 troberts Exp $
+ * $Id: NewContentCrawler.java,v 1.3 2004-02-10 00:22:02 troberts Exp $
  */
 
 /*
@@ -239,6 +239,9 @@ public class NewContentCrawler extends CrawlerImpl {
     while (true) {
       try {
 	logger.debug("caching "+uc);
+	if (wdog != null) {
+	  wdog.pokeWDog();
+	}
  	if (shouldForceCache) {
  	  uc.forceCache(); //IOException if there is a caching problem
  	} else {

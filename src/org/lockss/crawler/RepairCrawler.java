@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.2 2004-02-06 03:10:32 troberts Exp $
+ * $Id: RepairCrawler.java,v 1.3 2004-02-10 00:22:02 troberts Exp $
  */
 
 /*
@@ -141,6 +141,9 @@ public class RepairCrawler extends CrawlerImpl {
 
     // don't cache if already cached, unless overwriting
     try {
+      if (wdog != null) {
+	wdog.pokeWDog();
+      }
       if (shouldFetchFromCache()) {
 	fetchFromCache(uc);
       } else {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepairCrawler.java,v 1.2 2004-02-06 03:11:50 troberts Exp $
+ * $Id: TestRepairCrawler.java,v 1.3 2004-02-10 00:22:02 troberts Exp $
  */
 
 /*
@@ -121,6 +121,29 @@ public class TestRepairCrawler extends LockssTestCase {
     Set cachedUrls = cus.getForceCachedUrls();
     assertEquals(1, cachedUrls.size());
     assertTrue("cachedUrls: "+cachedUrls, cachedUrls.contains(repairUrl));
+  }
+
+  public void testRepairCrawlPokesWatchdog() {
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    String repairUrl1 = "http://example.com/forcecache1.html";
+    String repairUrl2 = "http://example.com/forcecache2.html";
+    String repairUrl3 = "http://example.com/forcecache3.html";
+    cus.addUrl(repairUrl1);
+    cus.addUrl(repairUrl2);
+    cus.addUrl(repairUrl3);
+    crawlRule.addUrlToCrawl(repairUrl1);
+    crawlRule.addUrlToCrawl(repairUrl2);
+    crawlRule.addUrlToCrawl(repairUrl3);
+
+    MockLockssWatchdog wdog = new MockLockssWatchdog();
+
+    List repairUrls = ListUtil.list(repairUrl1, repairUrl2, repairUrl3);
+    spec = new CrawlSpec(startUrls, crawlRule, 1);
+    crawler = new RepairCrawler(mau, spec, aus, repairUrls);
+    crawler.setWatchdog(wdog);
+    crawler.doCrawl(Deadline.MAX);
+
+    wdog.assertPoked(3);
   }
 
   public void testRepairCrawlDoesntFollowLinks() {
