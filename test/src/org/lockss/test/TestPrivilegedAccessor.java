@@ -1,5 +1,5 @@
 /*
- * $Id: TestPrivilegedAccessor.java,v 1.4 2002-09-19 20:57:35 tal Exp $
+ * $Id: TestPrivilegedAccessor.java,v 1.5 2003-01-31 06:33:31 tal Exp $
  */
 
 /*
@@ -190,6 +190,72 @@ public class TestPrivilegedAccessor extends TestCase {
 						 "stat", null));
   }
 
+  public void testNoArgConstructor() throws Exception {
+    ClassWithPrivateConstructor c =
+      (ClassWithPrivateConstructor)
+      PrivilegedAccessor.invokeConstructor(ClassWithPrivateConstructor.class);
+    assertEquals(0, c.getN());
+  }
+
+  public void testOneArgConstructor() throws Exception {
+    ClassWithPrivateConstructor c =
+      (ClassWithPrivateConstructor)
+      PrivilegedAccessor.invokeConstructor(ClassWithPrivateConstructor.class,
+					   new Integer(7));
+    assertEquals(1, c.getN());
+  }
+
+  public void testUnambiguousConstructor() throws Exception {
+    Object[] args1 = {new Integer(7),
+		      new ClassWithPrivateConstructor.Sub()};
+    Object[] args2 = {new Integer(7),
+		      new ClassWithPrivateConstructor.Super()};
+
+    ClassWithPrivateConstructor c1 =
+      (ClassWithPrivateConstructor)
+      PrivilegedAccessor.invokeConstructor(ClassWithPrivateConstructor.class,
+					   args1);
+    assertEquals(3, c1.getN());
+    ClassWithPrivateConstructor c2 =
+      (ClassWithPrivateConstructor)
+      PrivilegedAccessor.invokeConstructor(ClassWithPrivateConstructor.class,
+					   args2);
+    assertEquals(2, c2.getN());
+  }
+
+  public void testNoArgConstructorByName() throws Exception {
+    ClassWithPrivateConstructor c =
+      (ClassWithPrivateConstructor)
+      PrivilegedAccessor.invokeConstructor("org.lockss.test.ClassWithPrivateConstructor");
+    assertEquals(0, c.getN());
+  }
+
+  public void testOneArgConstructorByName() throws Exception {
+    ClassWithPrivateConstructor c =
+      (ClassWithPrivateConstructor)
+      PrivilegedAccessor.invokeConstructor("org.lockss.test.ClassWithPrivateConstructor",
+					   new Integer(7));
+    assertEquals(1, c.getN());
+  }
+
+  public void testUnambiguousConstructorByName() throws Exception {
+    Object[] args1 = {new Integer(7),
+		      new ClassWithPrivateConstructor.Sub()};
+    Object[] args2 = {new Integer(7),
+		      new ClassWithPrivateConstructor.Super()};
+
+    ClassWithPrivateConstructor c1 =
+      (ClassWithPrivateConstructor)
+      PrivilegedAccessor.invokeConstructor("org.lockss.test.ClassWithPrivateConstructor",
+					   args1);
+    assertEquals(3, c1.getN());
+    ClassWithPrivateConstructor c2 =
+      (ClassWithPrivateConstructor)
+      PrivilegedAccessor.invokeConstructor("org.lockss.test.ClassWithPrivateConstructor",
+					   args2);
+    assertEquals(2, c2.getN());
+  }
+
   // Test utility classes
 
   public static class MockParent {
@@ -258,5 +324,36 @@ public class TestPrivilegedAccessor extends TestCase {
     private static String stat() {
       return "child.static";
     }
+  }
+
+}
+
+class ClassWithPrivateConstructor {
+  private int n;
+
+  private ClassWithPrivateConstructor() {
+    n = 0;
+  }
+
+  private ClassWithPrivateConstructor(Integer i) {
+    n = 1;
+  }
+
+  private ClassWithPrivateConstructor(Integer i, Super x) {
+    n = 2;
+  }
+
+  private ClassWithPrivateConstructor(Integer i, Sub x) {
+    n = 3;
+  }
+
+  public int getN() {
+    return n;
+  }
+
+  public static class Super {
+  }
+
+  public static class Sub extends Super {
   }
 }

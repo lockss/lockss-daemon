@@ -1,5 +1,5 @@
 /*
- * $Id: PrivilegedAccessor.java,v 1.7 2002-11-06 21:15:39 tal Exp $
+ * $Id: PrivilegedAccessor.java,v 1.8 2003-01-31 06:33:31 tal Exp $
  */
 
 /*
@@ -37,9 +37,9 @@ import org.lockss.util.*;
 
 /**
  * <code>PrivilegedAccessor</code> allows access to private or protected
- * methods and fields of other classes, for unit testing.  It does this
- * using reflection.  These accessors do not work with primitive types,
- * either as arguments or return values.<br>
+ * constructors, methods and fields of other classes, for unit testing.  It
+ * does this using reflection.  These accessors do not work with primitive
+ * types, either as arguments or return values.<br>
  * There are several situations in which the compile-time type of an
  * expression, not the run-time class of an object, determines
  * behavior:<ol>
@@ -52,8 +52,7 @@ import org.lockss.util.*;
  * of the expression must be explicitly supplied.  Wherever these methods
  * accept an object, one may instead supply an instance of
  * <code>PrivilegedAccessor.Instance</code> that contains both the
- * expression type and value.
- */
+ * expression type and value.  */
 public class PrivilegedAccessor {
 //    static Logger log = Logger.getLogger("PrivAcc", Logger.LEVEL_DEBUG);
   
@@ -63,7 +62,6 @@ public class PrivilegedAccessor {
 
   /**
    * Gets the value of the named field and returns it as an object.
-   *
    * @param instance the object instance
    * @param fieldName the name of the field
    * @return an object representing the value of the field
@@ -90,7 +88,6 @@ public class PrivilegedAccessor {
   
   /**
    * Calls a method on the given object instance, with no arguments.
-   *
    * @param instance the object instance
    * @param methodName the name of the method to invoke
    */
@@ -105,7 +102,6 @@ public class PrivilegedAccessor {
   
   /**
    * Calls a method on the given object instance with the given argument.
-   *
    * @param instance the object instance
    * @param methodName the name of the method to invoke
    * @param arg the argument to pass to the method
@@ -123,7 +119,6 @@ public class PrivilegedAccessor {
   
   /**
    * Calls a method on the given object instance with the given arguments.
-   *
    * @param instance the object instance
    * @param methodName the name of the method to invoke
    * @param args an array of objects to pass as arguments
@@ -147,6 +142,103 @@ public class PrivilegedAccessor {
 	val = method.invoke(instance, getRealArgs(args));
       } finally {
 	method.setAccessible(false);
+      }
+    }
+    return val;
+  }
+  
+  /**
+   * Invokes the no-argument constructor for the named class
+   * @param className the class name
+   */
+  public static Object invokeConstructor(String className)
+      throws ClassNotFoundException,
+	     NoSuchMethodException,
+	     IllegalAccessException,
+	     InvocationTargetException,
+	     InstantiationException {
+    return invokeConstructor(Class.forName(className));
+  }
+  
+  /**
+   * Invokes a one-argument constructor for the named class
+   * @param className the class name
+   * @param arg the argument to pass to the constructor
+   */
+  public static Object invokeConstructor(String className, Object arg)
+      throws ClassNotFoundException,
+	     NoSuchMethodException,
+	     IllegalAccessException,
+	     InvocationTargetException,
+	     InstantiationException {
+    return invokeConstructor(Class.forName(className), arg);
+  }
+  
+  /**
+   * Invokes a constructor for the named class
+   * @param className the class name
+   * @param args an array of objects to pass as arguments to the constructor
+   */
+  public static Object invokeConstructor(String className, Object[] args)
+      throws ClassNotFoundException,
+	     NoSuchMethodException,
+	     IllegalAccessException,
+	     InvocationTargetException,
+	     InstantiationException {
+    return invokeConstructor(Class.forName(className), args);
+  }
+  
+  /**
+   * Invokes the no-arg constructor for the specified class
+   * @param cls the class
+   */
+  public static Object invokeConstructor(Class cls)
+      throws NoSuchMethodException,
+	     IllegalAccessException,
+	     InvocationTargetException,
+	     InstantiationException {
+    Object[] args = {};
+    return invokeConstructor(cls, args);
+  }
+  
+  /**
+   * Invokes a one-argument constructor for the specified class
+   * @param cls the class
+   * @param arg the argument to pass to the constructor
+   */
+  public static Object invokeConstructor(Class cls, Object arg)
+      throws NoSuchMethodException,
+	     IllegalAccessException,
+	     InvocationTargetException,
+	     InstantiationException {
+    Object[] args = new Object[1];
+    args[0] = arg;
+    return invokeConstructor(cls, args);
+  }
+  
+  /**
+   * Invokes a constructor for the specified class
+   * @param cls the class
+   * @param args an array of objects to pass as arguments to the constructor
+   */
+  public static Object invokeConstructor(Class cls, Object[] args)
+      throws NoSuchMethodException,
+	     IllegalAccessException,
+	     InvocationTargetException,
+	     InstantiationException {
+    if (args == null) {
+      args = new Object[0];
+    }
+    Constructor constructor = findConstructor(cls, args);
+    Object val = null;
+    if (constructor.isAccessible()) {
+      val = constructor.newInstance(getRealArgs(args));
+    } else {
+      try {
+	constructor.setAccessible(true);
+	val = constructor.newInstance(getRealArgs(args));
+      } finally {
+	constructor.setAccessible(false);
       }
     }
     return val;
@@ -252,6 +344,86 @@ public class PrivilegedAccessor {
     return true;
   }
 
+  // Find the constructor applicable to the args.
+  // Throw NoSuchMethodException if none applicable.
+  // Throw AmbiguousMethodException if more than one applicable and none is
+  // most specific.  (Doesn't match behavior of Java 1.3, which makes
+  // compile-time decision of which constructor to call, and calls it even
+  // if target class has been recompiled and now has ambiguous constructors.
+  // Nevertheless, this seems the best behavior here.)
+  private static Constructor findConstructor(Class cls, Object args[])
+      throws NoSuchMethodException, AmbiguousMethodException {
+    List l = new LinkedList();
+    // find all constructors with parameter types matching args
+    Constructor cons[] = cls.getDeclaredConstructors();
+    for (int ix = 0; ix < cons.length; ix++) {
+      Constructor c = cons[ix];
+      if (isConstructorApplicable(cons[ix], args)) {
+	l.add(c);
+      }
+    }
+    if (l.isEmpty()) {
+      throw new NoSuchMethodException(cls.getName() + " constructor");
+    }
+    if (l.size() == 1) {
+      return (Constructor)l.get(0);
+    }
+    // More than one.  Find the maximally specific constructors.
+    // There's probably a more efficient (better than O(n**2)) way to do this.
+    List maximally = new LinkedList();
+    for (Iterator iter1 = l.iterator(); iter1.hasNext(); ) {
+      Constructor c1 = (Constructor)iter1.next();
+    notmax:
+      {
+	for (Iterator iter2 = l.iterator(); iter2.hasNext(); ) {
+	  Constructor c2 = (Constructor)iter2.next();
+	  if (! isSubsumedBy(c1, c2)) {
+	    break notmax;
+	  }
+	}
+	maximally.add(c1);
+      }
+    }
+    if (maximally.size() != 1) {
+      throw new AmbiguousMethodException(cls.getName() + " constructor");
+    }
+    return (Constructor)maximally.get(0);
+  }
+
+  private static boolean isSubsumedBy(Constructor ee, Constructor er) {
+    Class per[] = er.getParameterTypes();
+    Class pee[] = ee.getParameterTypes();
+    if (per.length != pee.length) {
+      return false;
+    }
+    for (int ix = 0; ix < per.length; ix++) {
+      if (!per[ix].isAssignableFrom(pee[ix]))
+	return false;
+    }
+    return true;
+  }
+
+  private static boolean isConstructorApplicable(Constructor constructor,
+						 Object args[]) {
+    Class params[] = constructor.getParameterTypes();
+    if (params.length != args.length) {
+      return false;
+    }
+    for (int ix = 0; ix < params.length; ix++) {
+      if (params[ix].isPrimitive()) {
+	// can't handle params with primitive type, so always exclude them
+	return false;
+      }
+      Class argType;
+      if (args[ix] != null) {		// null args satisfy any param type
+	argType = classOf(args[ix]);
+	if (!params[ix].isAssignableFrom(argType))
+	  return false;
+      }
+    }
+    return true;
+  }
+
   // Return an array of args, replacing any instances of Instance with
   // the real valus stored in it.
   private static Object[] getRealArgs(Object[] args) {
@@ -275,11 +447,10 @@ public class PrivilegedAccessor {
   }
 
   /** Exception thrown when an attempt is made to invoke an overloaded
-   * method and there is no most specific applicable method.  (See section
-   * 15.11.2.2 of the Java Language Spec.)  Situations in which this is
-   * thrown correspond to code that would cause a comple-time error if
-   * attempted other than through reflection.
-   */
+   * constructor or method and there is no most specific applicable method.
+   * (See section 15.11.2.2 of the Java Language Spec.)  Situations in
+   * which this is thrown correspond to code that would cause a comple-time
+   * error if attempted other than through reflection.  */
   public static class AmbiguousMethodException extends RuntimeException {
     public AmbiguousMethodException(String msg) {
       super(msg);
