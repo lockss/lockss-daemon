@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.9 2004-02-27 00:19:09 tlipkis Exp $
+ * $Id: RepairCrawler.java,v 1.10 2004-03-01 23:21:56 troberts Exp $
  */
 
 /*
@@ -154,11 +154,14 @@ public class RepairCrawler extends CrawlerImpl {
       }
       if (shouldFetchFromCache()) {
 	try {
+	  logger.debug3("Trying to fetch from a cache");
 	  fetchFromCache(uc);
 	} catch (CantProxyException e) {
+	  logger.debug3("Failed, so trying to fetch from a cache");
 	  cache(uc);
 	}
       } else {
+	logger.debug3("Trying to fetch from a cache");
 	cache(uc);
       }
       numUrlsFetched++;
