@@ -1,5 +1,5 @@
 /*
- * $Id: NodeStateCache.java,v 1.6 2003-04-03 00:02:14 aalto Exp $
+ * $Id: NodeStateCache.java,v 1.7 2003-05-05 21:22:52 aalto Exp $
  */
 
 /*
@@ -119,6 +119,11 @@ public class NodeStateCache {
    */
   public synchronized Set snapshot() {
     return new HashSet(lruMap.values());
+  }
+
+  public void clear() {
+    lruMap.clear();
+    refMap.clear();
   }
 
   int getCacheHits() { return cacheHits; }

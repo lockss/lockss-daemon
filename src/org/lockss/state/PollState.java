@@ -1,5 +1,5 @@
 /*
- * $Id: PollState.java,v 1.21 2003-05-03 01:38:03 aalto Exp $
+ * $Id: PollState.java,v 1.22 2003-05-05 21:22:52 aalto Exp $
  */
 
 /*
@@ -68,7 +68,7 @@ public class PollState implements Comparable {
     this.status = bean.getStatus();
     this.startTime = bean.getStartTime();
     this.deadline = Deadline.restoreDeadlineAt(bean.getDeadlineTime());
-    this.ourPoll = bean.getOurPoll();
+    this.ourPoll = bean.isOurPoll();
   }
 
   PollState(int type, String lwrBound, String uprBound, int status,
@@ -144,7 +144,7 @@ public class PollState implements Comparable {
    * Returns true if this poll was started by us
    * @return true if this is our poll
    */
-  public boolean getOurPoll() {
+  public boolean isOurPoll() {
     return ourPoll;
   }
 
