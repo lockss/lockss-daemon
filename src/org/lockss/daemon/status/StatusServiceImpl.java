@@ -1,5 +1,5 @@
 /*
- * $Id: StatusServiceImpl.java,v 1.10 2003-03-17 08:26:29 tal Exp $
+ * $Id: StatusServiceImpl.java,v 1.11 2003-03-18 01:04:18 tal Exp $
  */
 
 /*
@@ -44,6 +44,7 @@ public class StatusServiceImpl
   extends BaseLockssManager implements StatusService {
   private static Logger logger = Logger.getLogger("StatusServiceImpl");
   private Map statusAccessors = new HashMap();
+  private Map objRefAccessors = new HashMap();
 
   public void startService() {
     super.startService();
@@ -108,6 +109,63 @@ public class StatusServiceImpl
       statusAccessors.remove(tableName);
     }
     logger.debug("Unregistered statusAccessor for table "+tableName);
+  }
+
+  public StatusTable.Reference getReference(String tableName, Object obj) {
+    ObjRefAccessorSpec spec;
+    synchronized (objRefAccessors) {
+      spec = (ObjRefAccessorSpec)objRefAccessors.get(tableName);
+    }
+    if (spec != null && spec.cls.isInstance(obj)) {
+      return spec.accessor.getReference(obj, tableName);
+    } else {
+      return null;
+    }
+  }
+
+  // not implemented yet.
+  public List getReferences(Object obj) {
+    return Collections.EMPTY_LIST;
+  }
+
+  public void
+    registerObjectReferenceAccessor(String tableName, Class cls,
+				    ObjectReferenceAccessor objRefAccessor) {
+    synchronized (objRefAccessors) {
+      Object oldEntry = objRefAccessors.get(tableName);
+      if (oldEntry != null) {
+	ObjRefAccessorSpec oldSpec = (ObjRefAccessorSpec)oldEntry;
+	throw new 
+	  StatusService.MultipleRegistrationException(oldSpec.accessor
+						      +" already registered "
+						      +"for "+tableName);
+      }
+      ObjRefAccessorSpec spec = new ObjRefAccessorSpec(cls, tableName,
+						       objRefAccessor);
+      objRefAccessors.put(tableName, spec);
+    }
+    logger.debug("Registered statusAccessor for table "+tableName);
+  }
+
+  public void
+    unregisterObjectReferenceAccessor(String tableName, Class cls) {
+    synchronized (objRefAccessors) {
+      objRefAccessors.remove(tableName);
+    }
+    logger.debug("Unregistered ObjectReferenceAccessor for table "+tableName);
+  }
+
+  private class ObjRefAccessorSpec {
+    Class cls;
+    String table;
+    ObjectReferenceAccessor accessor;
+
+    ObjRefAccessorSpec(Class cls, String table,
+		       ObjectReferenceAccessor accessor) {
+      this.cls = cls;
+      this.table = table;
+      this.accessor = accessor;
+    }
   }
 
   private class AllTableStatusAccessor implements StatusAccessor {

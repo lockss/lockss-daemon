@@ -1,5 +1,5 @@
 /*
- * $Id: TestStatusServiceImpl.java,v 1.8 2003-03-17 21:48:36 troberts Exp $
+ * $Id: TestStatusServiceImpl.java,v 1.9 2003-03-18 01:04:18 tal Exp $
  */
 
 /*
@@ -671,4 +671,39 @@ public class TestStatusServiceImpl extends LockssTestCase {
     }
     assertFalse(actualIt.hasNext());
   }
+
+  public void testRegisterObjectReferenceAccessor() {
+    MockObjectReferenceAccessor refAcc = new MockObjectReferenceAccessor();
+    statusService.registerObjectReferenceAccessor("table1", Integer.class,
+						  refAcc);
+    try {
+      // 2nd register should fail
+      statusService.registerObjectReferenceAccessor("table1", Integer.class,
+						    refAcc);
+      fail("Should have thrown after multiple register attempts");
+    } catch (StatusService.MultipleRegistrationException re) {
+    }
+    // should be able to unregister then reregister
+    statusService.unregisterObjectReferenceAccessor("table1", Integer.class);
+    statusService.registerObjectReferenceAccessor("table1", Integer.class,
+						  refAcc);
+  }
+
+  public void testgetReference() {
+    MockObjectReferenceAccessor refAcc = new MockObjectReferenceAccessor();
+    refAcc.setRef(new StatusTable.Reference("value", "table1", "key"));
+    statusService.registerObjectReferenceAccessor("table1", C2.class,
+						  refAcc);
+    assertNull(statusService.getReference("table2", new C2()));
+    assertNull(statusService.getReference("table1", new Integer(42)));
+    assertNull(statusService.getReference("table1", new C1()));
+    StatusTable.Reference ref = statusService.getReference("table1", new C2());
+    assertNotNull(ref);
+    assertEquals("value", ref.getValue());
+    assertEquals("table1", ref.getTableName());
+  }
+
+  private class C1 {}
+  private class C2 extends C1 {}
+  private class C3 extends C2 {}
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: StatusService.java,v 1.6 2003-03-15 02:32:11 troberts Exp $
+ * $Id: StatusService.java,v 1.7 2003-03-18 01:04:18 tal Exp $
  */
 
 /*
@@ -63,7 +63,7 @@ public interface StatusService {
    * @param statusAccessor StatusAccessor that can provide the specified table
    * @throws StatusService.MultpleRegistrationException if multiple 
    * StatusAccessors are registered to the same tableName
-   * @throws StatusService.InvalidTableNameException if you attemtp to register
+   * @throws StatusService.InvalidTableNameException if you attempt to register
    * a StatusAccessor for a table name that has anything other than 
    * <i>[a-zA-Z0-9]</i>, <i>-</i>, and <i>_</i>  in it
    */
@@ -75,6 +75,60 @@ public interface StatusService {
    * @param tableName name of the table to unregister
    */
   public void unregisterStatusAccessor(String tableName);
+
+  
+  /**
+   * Get a reference to the named table for the given object.
+   * virtue of its class) and ask each one to create a reference to their
+   * table for the object.
+   * @param tableName the table for which a reference is desired
+   * @param obj the object for which a reference is desired
+   * @returns a reference to the supplied object, or null if no method to
+   * create one has been registered.
+   */
+  public StatusTable.Reference getReference(String tableName, Object obj);
+
+
+  /**
+   * Find all the ObjectReferenceAccessors applicable to the object (by
+   * virtue of its class) and ask each one to create a reference to their
+   * table for the object.
+   * @param obj the object for which references are desired
+   * @returns list of {@link StatusTable.Reference}s to tables for the
+   * supplied object.  Returns null or an empty list if there are none.
+   */
+  public List getReferences(Object obj);
+
+
+  /**
+   * Register an ObjectReferenceAccessor that knows how to create a {@link
+   * StatusTable.Reference}s to one or more tables with a key appropriate to
+   * select and/or filter on a supplied object.  Multiple accessors may be
+   * registered for the same object class, but not for the same table.
+   * @param tableName name of the table to which the references returned by
+   * the accessor refer.
+   * @param cls the class of objects for which the supplied
+   * ObjectReferenceAccessor can create references.
+   * @param objRefAccessor ObjectReferenceAccessor that creates references
+   * to named table
+   * @throws StatusService.MultpleRegistrationException if multiple
+   * ObjectReferenceAccessor are registered for the same table
+   * @throws StatusService.InvalidTableNameException if you attempt to register
+   * a StatusAccessor for a table name that has anything other than 
+   * <i>[a-zA-Z0-9]</i>, <i>-</i>, and <i>_</i>  in it
+   */
+  public void
+    registerObjectReferenceAccessor(String tableName, Class cls,
+				    ObjectReferenceAccessor objRefAccessor);
+  
+  /**
+   * Unregister a previously registered ObjectReferenceAccessor 
+   * @param tableName name of the table for which the previously supplied
+   * @param cls the class of objects for which the previously supplied
+   * ObjectReferenceAccessor is no longer willing to create references.
+   * ObjectReferenceAccessor is no longer willing to create references.
+   */
+  public void unregisterObjectReferenceAccessor(String tableName, Class cls);
 
   
   /**
