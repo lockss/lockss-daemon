@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.20 2002-11-12 18:15:58 tal Exp $
+ $Id: build.xml,v 1.21 2002-11-19 23:18:33 tal Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
@@ -381,7 +381,7 @@ Args:
       <doclet name="org.lockss.doclet.Indexer"
               path="${lockss.doclet.jar}">
 	<param name="-o" value="${index.file}" />
-<!--  	<param name="-dots" value="0" /> -->
+  	<param name="-dots" value="0" />
       </doclet>
       <classpath refid="compile.classpath" />
     </javadoc>
@@ -394,7 +394,7 @@ Args:
       <arg value="-l"/>
       <arg value="50"/>
       <arg value="--copies=${copies}"/>
-<!--        <arg value="-prologue=matrix"/> -->
+      <arg value="--prologue=matrix"/>
 <!--        <arg value="-o"/> -->
 <!--        <arg value="foo.ps"/> -->
       <arg value="${index.file}"/>
