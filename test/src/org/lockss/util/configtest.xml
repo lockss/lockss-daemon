@@ -275,7 +275,31 @@
 	<property name="not.e" value="bar"/>
       </else>
     </if>
-
+    <if>
+      <not>
+        <test group="foo" />
+        <test group="bar" />
+      </not>
+      <then>
+	<property name="not.f" value="foo"/>
+      </then>
+      <else>
+	<property name="not.f" value="bar"/>
+      </else>
+    </if>
+    <if>
+      <not>
+	<test group="foo" />
+	<test group="beta" />
+	<test group="bar" />
+      </not>
+      <then>
+	<property name="not.g" value="foo"/>
+      </then>
+      <else>
+	<property name="not.g" value="bar"/>
+      </else>
+    </if>
   </property>
 
 </lockss-config>

@@ -1,5 +1,5 @@
 /*
- * $Id: XmlPropertyLoader.java,v 1.4 2004-06-17 22:44:19 smorabito Exp $
+ * $Id: XmlPropertyLoader.java,v 1.5 2004-06-17 23:47:07 smorabito Exp $
  */
 
 /*
@@ -370,7 +370,7 @@ public class XmlPropertyLoader {
       } else if (m_inOr) {
 	m_evalIf |= evaluateAttributes(attrs);
       } else if (m_inNot) {
-	m_evalIf ^= evaluateAttributes(attrs);
+	m_evalIf &= !evaluateAttributes(attrs);
       }
     }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestXmlPropertyLoader.java,v 1.2 2004-06-15 21:43:22 smorabito Exp $
+ * $Id: TestXmlPropertyLoader.java,v 1.3 2004-06-17 23:47:08 smorabito Exp $
  */
 
 /*
@@ -232,6 +232,8 @@ public class TestXmlPropertyLoader extends LockssTestCase {
     assertEquals("foo", m_props.get("org.lockss.not.c"));
     assertNull(m_props.get("org.lockss.or.d"));
     assertEquals("bar", m_props.get("org.lockss.not.e"));
+    assertEquals("foo", m_props.get("org.lockss.not.f"));
+    assertEquals("bar", m_props.get("org.lockss.not.g"));
   }
 
 }
