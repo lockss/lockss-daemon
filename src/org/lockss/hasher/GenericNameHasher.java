@@ -1,5 +1,5 @@
 /*
- * $Id: GenericNameHasher.java,v 1.3 2003-02-20 01:37:24 aalto Exp $
+ * $Id: GenericNameHasher.java,v 1.4 2003-02-20 02:23:40 aalto Exp $
  */
 
 /*
@@ -51,9 +51,9 @@ public class GenericNameHasher extends GenericHasher {
     iterator = cus.flatSetIterator();
   }
 
-  protected int hashElementUpToNumBytes(NamedElement element, int numBytes) {
+  protected int hashElementUpToNumBytes(UrlElement element, int numBytes) {
     if (nameBytes == null) {
-      String nameStr = element.getName();
+      String nameStr = element.getUrl();
       StringBuffer sb = new StringBuffer(nameStr.length()+1);
       if (!onFirstElement) {
 	sb.append(DELIMITER);

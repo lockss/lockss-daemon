@@ -1,5 +1,5 @@
 /*
- * $Id: PTestPlugin.java,v 1.8 2003-02-20 01:37:23 aalto Exp $
+ * $Id: PTestPlugin.java,v 1.9 2003-02-20 02:23:40 aalto Exp $
  */
 
 /*
@@ -67,10 +67,6 @@ class PTestPlugin {
 
     public String getUrl() {
       return url;
-    }
-
-    public String getName() {
-      return getUrl();
     }
 
     public boolean exists() {

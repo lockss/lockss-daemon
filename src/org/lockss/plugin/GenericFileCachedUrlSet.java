@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrlSet.java,v 1.20 2003-02-20 01:37:24 aalto Exp $
+ * $Id: GenericFileCachedUrlSet.java,v 1.21 2003-02-20 02:23:40 aalto Exp $
  */
 
 /*
@@ -69,83 +69,71 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
   }
 
   public Iterator flatSetIterator() {
-    List nodes = spec.getPrefixList();
-    if (nodes.size()>1) {
-      // currently does not support more than one prefix
-      logger.error("More than one prefix found in CachedUrlSetSpec.");
-      throw new UnsupportedOperationException("More than one prefix found in CachedUrlSetSpec.");
-    }
     TreeSet flatSet = new TreeSet(new UrlComparator());
-    if (nodes.size()==1) {
-      String prefix = (String)nodes.get(0);
-      try {
-        RepositoryNode intNode = repository.getNode(prefix);
-        Iterator children = intNode.listNodes(spec, false);
-        while (children.hasNext()) {
-          RepositoryNode child = (RepositoryNode)children.next();
-          CachedUrlSetSpec rSpec =
-              new RangeCachedUrlSetSpec(child.getNodeUrl());
-          if (child.listNodes(rSpec, true).hasNext()) {
-            CachedUrlSet newSet = ((BaseArchivalUnit)au).makeCachedUrlSet(
-                rSpec);
-            flatSet.add(newSet);
-          } else {
-            CachedUrl newUrl = ((BaseArchivalUnit)au).cachedUrlFactory(this,
-                child.getNodeUrl());
-            flatSet.add(newUrl);
-          }
+    String prefix = spec.getUrl();
+    try {
+      RepositoryNode intNode = repository.getNode(prefix);
+      Iterator children = intNode.listNodes(spec, false);
+      while (children.hasNext()) {
+        RepositoryNode child = (RepositoryNode)children.next();
+        CachedUrlSetSpec rSpec =
+            new RangeCachedUrlSetSpec(child.getNodeUrl());
+        if (child.listNodes(rSpec, true).hasNext()) {
+          CachedUrlSet newSet = ((BaseArchivalUnit)au).makeCachedUrlSet(
+              rSpec);
+          flatSet.add(newSet);
+        } else {
+          CachedUrl newUrl = ((BaseArchivalUnit)au).cachedUrlFactory(this,
+              child.getNodeUrl());
+          flatSet.add(newUrl);
         }
-      } catch (MalformedURLException mue) {
-        logger.error("Bad url in spec: "+prefix);
-      } catch (Exception e) {
-        // this shouldn't occur
-        logger.error(e.getMessage());
       }
+    } catch (MalformedURLException mue) {
+      logger.error("Bad url in spec: "+prefix);
+    } catch (Exception e) {
+      // this shouldn't occur
+      logger.error(e.getMessage());
     }
     return flatSet.iterator();
   }
 
   public Iterator treeIterator() {
-    List nodes = spec.getPrefixList();
-    if (nodes.size()>1) {
-      // currently does not support more than one prefix
-      logger.error("More than one prefix found in CachedUrlSetSpec.");
-      throw new UnsupportedOperationException("More than one prefix found in CachedUrlSetSpec.");
-    }
     contentNodeCount = 0;
     totalNodeSize = 0;
     TreeSet treeSet = new TreeSet(new UrlComparator());
-    if (nodes.size()==1) {
-      String prefix = (String)nodes.get(0);
-      try {
-        RepositoryNode intNode = repository.getNode(prefix);
-        Iterator children = intNode.listNodes(spec, false);
-        while (children.hasNext()) {
-          // add all nodes to tree iterator, regardless of content
-          RepositoryNode child = (RepositoryNode)children.next();
-          CachedUrlSetSpec rSpec =
-              new RangeCachedUrlSetSpec(child.getNodeUrl());
-          if (child.listNodes(rSpec, true).hasNext()) {
-            CachedUrlSet newSet = ((BaseArchivalUnit)au).makeCachedUrlSet(
-                rSpec);
-            treeSet.add(newSet);
-          } else {
-            CachedUrl newUrl = ((BaseArchivalUnit)au).cachedUrlFactory(this,
-                child.getNodeUrl());
-            treeSet.add(newUrl);
-          }
-          if (child.hasContent()) {
-            contentNodeCount++;
-            totalNodeSize += child.getContentSize();
-          }
-          recurseLeafFetch(child, treeSet);
+
+    String prefix = spec.getUrl();
+    try {
+      RepositoryNode intNode = repository.getNode(prefix);
+      Iterator children = intNode.listNodes(spec, false);
+      while (children.hasNext()) {
+        // add all nodes to tree iterator, regardless of content
+        RepositoryNode child = (RepositoryNode)children.next();
+        CachedUrlSetSpec rSpec =
+            new RangeCachedUrlSetSpec(child.getNodeUrl());
+        if (child.listNodes(rSpec, true).hasNext()) {
+          CachedUrlSet newSet = ( (BaseArchivalUnit) au).makeCachedUrlSet(
+              rSpec);
+          treeSet.add(newSet);
         }
-      } catch (MalformedURLException mue) {
-        logger.error("Bad url in spec: "+prefix);
-      } catch (Exception e) {
-        // this shouldn't occur
-        logger.error(e.getMessage());
+        else {
+          CachedUrl newUrl = ( (BaseArchivalUnit) au).cachedUrlFactory(this,
+              child.getNodeUrl());
+          treeSet.add(newUrl);
+        }
+        if (child.hasContent()) {
+          contentNodeCount++;
+          totalNodeSize += child.getContentSize();
+        }
+        recurseLeafFetch(child, treeSet);
       }
+    }
+    catch (MalformedURLException mue) {
+      logger.error("Bad url in spec: " + prefix);
+    }
+    catch (Exception e) {
+      // this shouldn't occur
+      logger.error(e.getMessage());
     }
     return treeSet.iterator();
   }
@@ -255,9 +243,9 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
     public int compare(Object o1, Object o2) {
       String prefix = null;
       String prefix2 = null;
-      if ((o1 instanceof NamedElement) && (o2 instanceof NamedElement)) {
-        prefix = ((NamedElement)o1).getName();
-        prefix2 = ((NamedElement)o2).getName();
+      if ((o1 instanceof UrlElement) && (o2 instanceof UrlElement)) {
+        prefix = ((UrlElement)o1).getUrl();
+        prefix2 = ((UrlElement)o2).getUrl();
       } else {
         throw new IllegalStateException("Bad object in iterator: " +
                                         o1.getClass() + "," +

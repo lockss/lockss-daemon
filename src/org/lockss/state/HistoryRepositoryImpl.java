@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.8 2003-02-11 00:58:16 aalto Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.9 2003-02-20 02:23:40 aalto Exp $
  */
 
 /*
@@ -221,7 +221,7 @@ public class HistoryRepositoryImpl implements HistoryRepository, LockssManager {
     buffer.append(File.separator);
     String auLoc = FileLocationUtil.mapAuToFileLocation(buffer.toString(),
         cus.getArchivalUnit());
-    String urlStr = (String)cus.getPrimaryUrl();
+    String urlStr = (String)cus.getUrl();
     return FileLocationUtil.mapUrlToFileLocation(auLoc, urlStr);
   }
 

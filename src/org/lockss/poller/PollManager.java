@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.32 2003-02-20 00:57:28 claire Exp $
+* $Id: PollManager.java,v 1.33 2003-02-20 02:23:40 aalto Exp $
  */
 
 /*
@@ -143,7 +143,7 @@ public class PollManager  implements LockssManager {
     ArchivalUnit au = cus.getArchivalUnit();
     byte[] challenge = makeVerifier();
     byte[] verifier = makeVerifier();
-    LcapMessage msg = LcapMessage.makeRequestMsg(cus.getPrimaryUrl(),
+    LcapMessage msg = LcapMessage.makeRequestMsg(cus.getUrl(),
         lwrBound,
         uprBound,
         null,

@@ -1,5 +1,5 @@
 /*
- * $Id: RECachedUrlSetSpec.java,v 1.5 2003-01-28 02:06:13 aalto Exp $
+ * $Id: RECachedUrlSetSpec.java,v 1.6 2003-02-20 02:23:40 aalto Exp $
  */
 
 /*
@@ -42,7 +42,6 @@ import org.lockss.util.*;
  */
 public class RECachedUrlSetSpec implements CachedUrlSetSpec {
   private String prefix;
-  private List prefixList;
   private RE re;
 
   /**
@@ -57,7 +56,6 @@ public class RECachedUrlSetSpec implements CachedUrlSetSpec {
       throw new NullPointerException("RECachedUrlSetSpec with null URL");
     }
     this.prefix = urlPrefix;
-    this.prefixList = Collections.unmodifiableList(ListUtil.list(urlPrefix));
     this.re = regexp;
   }
 
@@ -98,14 +96,6 @@ public class RECachedUrlSetSpec implements CachedUrlSetSpec {
   }
 
   /**
-   * Return a list containing the URL prefix
-   * @return the prefix list
-   */
-  public List getPrefixList() {
-    return prefixList;
-  }
-
-  /**
    * Return the RE, or null if none
    * @return the re
    */
@@ -122,7 +112,7 @@ public class RECachedUrlSetSpec implements CachedUrlSetSpec {
   public boolean equals(Object obj) {
     if (obj instanceof RECachedUrlSetSpec) {
       RECachedUrlSetSpec spec = (RECachedUrlSetSpec)obj;
-      if (!prefixList.equals(spec.getPrefixList())) {
+      if (!prefix.equals(spec.getUrl())) {
         return false;
       } else {
         if (re==null) {
@@ -142,7 +132,7 @@ public class RECachedUrlSetSpec implements CachedUrlSetSpec {
   }
 
   public String toString() {
-    return "[CUSS: " + getPrimaryUrl() +
+    return "[CUSS: " + prefix +
       ((re == null) ? "]" : (", " + re + "]"));
   }
 
@@ -153,9 +143,9 @@ public class RECachedUrlSetSpec implements CachedUrlSetSpec {
    */
   public int hashCode() {
     if (re!=null) {
-      return re.hashCode() + getPrimaryUrl().hashCode();
+      return re.hashCode() + prefix.hashCode();
     } else {
-      return getPrimaryUrl().hashCode();
+      return prefix.hashCode();
     }
   }
 
@@ -163,7 +153,7 @@ public class RECachedUrlSetSpec implements CachedUrlSetSpec {
    * Returns the first url in the prefix list, or null if none.
    * @return the url
    */
-  public String getPrimaryUrl() {
-    return (prefixList.size()>0 ? (String)prefixList.get(0) : null);
+  public String getUrl() {
+    return prefix;
   }
 }

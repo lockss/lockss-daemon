@@ -1,5 +1,5 @@
 /*
- * $Id: GenericHasher.java,v 1.6 2003-02-20 01:37:24 aalto Exp $
+ * $Id: GenericHasher.java,v 1.7 2003-02-20 02:23:40 aalto Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ import org.lockss.util.*;
 public abstract class GenericHasher implements CachedUrlSetHasher {
   private CachedUrlSet cus = null;
   protected MessageDigest digest = null;
-  private NamedElement curElement = null;
+  private UrlElement curElement = null;
   protected Iterator iterator = null;
   protected boolean isFinished = false;
   protected boolean shouldGetNextElement = true;
@@ -81,7 +81,7 @@ public abstract class GenericHasher implements CachedUrlSetHasher {
 	shouldGetNextElement = false;
 	if (iterator.hasNext()) {
 	  log.debug("Getting next element to hash");
-	  curElement = (NamedElement)iterator.next();
+	  curElement = (UrlElement)iterator.next();
 	}
 	else {
 	  log.debug("No more elements to hash");
@@ -99,6 +99,6 @@ public abstract class GenericHasher implements CachedUrlSetHasher {
   /*
    * Subclasses should override this to correctly hash the specified element
    */
-  protected abstract int hashElementUpToNumBytes(NamedElement element, int numBytes)
+  protected abstract int hashElementUpToNumBytes(UrlElement element, int numBytes)
       throws IOException;
 }

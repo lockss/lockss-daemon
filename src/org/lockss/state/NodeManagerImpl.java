@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.32 2003-02-20 01:37:23 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.33 2003-02-20 02:23:40 aalto Exp $
  */
 
 /*
@@ -146,7 +146,7 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
   }
 
   public NodeState getNodeState(CachedUrlSet cus) {
-    return (NodeState)nodeMap.get(cus.getPrimaryUrl());
+    return (NodeState)nodeMap.get(cus.getUrl());
   }
 
   public AuState getAuState() {
@@ -323,7 +323,7 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
         if (crawlState.getStatus() == CrawlState.FINISHED) {
           // if node is cached
           if (node.getCachedUrlSet().isCached(
-              node.getCachedUrlSet().getPrimaryUrl())) {
+              node.getCachedUrlSet().getUrl())) {
             // if (theCrawlManager.shouldRecrawl(managerAu, node)) {
             // then CrawlManager.scheduleBackgroundCrawl()
           }
@@ -370,11 +370,11 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
     // recurse the set's children
     Iterator children = cus.flatSetIterator();
     while (children.hasNext()) {
-      NamedElement child = (NamedElement)children.next();
+      UrlElement child = (UrlElement)children.next();
       if (child instanceof CachedUrlSet) {
         recurseLoadCachedUrlSets((CachedUrlSet)child);
       } else {
-        CachedUrlSetSpec rSpec = new RangeCachedUrlSetSpec(child.getName());
+        CachedUrlSetSpec rSpec = new RangeCachedUrlSetSpec(child.getUrl());
         CachedUrlSet newSet = ((BaseArchivalUnit)managerAu).makeCachedUrlSet(
             rSpec);
         addNewNodeState(newSet);
@@ -385,7 +385,7 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
   private void addNewNodeState(CachedUrlSet cus) {
     NodeState state = new NodeStateImpl(cus, new CrawlState(-1,
         CrawlState.FINISHED, 0), new ArrayList(), repository);
-    nodeMap.put(cus.getPrimaryUrl(), state);
+    nodeMap.put(cus.getUrl(), state);
   }
 
   private void updateState(NodeState state, Poll.VoteTally results) {
@@ -569,7 +569,7 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
       throws IOException {
     theDaemon.getPollManager().suspendPoll(tally.getPollKey());
     theDaemon.getCrawlManager().scheduleRepair(managerAu,
-        new URL(cus.getPrimaryUrl()), new ContentRepairCallback(),
+        new URL(cus.getUrl()), new ContentRepairCallback(),
                                  tally.getPollKey());
   }
 
@@ -578,19 +578,19 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
     LockssRepository repository =
         theDaemon.getLockssRepository(managerAu).repositoryFactory(
         cus.getArchivalUnit());
-    repository.deleteNode(cus.getPrimaryUrl());
+    repository.deleteNode(cus.getUrl());
   }
 
   private void callContentPollOnSubNodes(NodeState state,
       Poll.VoteTally results) throws IOException {
     Iterator children = state.getCachedUrlSet().flatSetIterator();
     while (children.hasNext()) {
-      NamedElement child = (NamedElement)children.next();
+      UrlElement child = (UrlElement)children.next();
       CachedUrlSet cus = null;
       if (child instanceof CachedUrlSet) {
         cus = (CachedUrlSet)child;
       } else {
-        CachedUrlSetSpec rSpec = new RangeCachedUrlSetSpec(child.getName());
+        CachedUrlSetSpec rSpec = new RangeCachedUrlSetSpec(child.getUrl());
         cus = ((BaseArchivalUnit)managerAu).makeCachedUrlSet(
             rSpec);
       }

@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrlSet.java,v 1.13 2003-02-20 01:37:23 aalto Exp $
+ * $Id: CachedUrlSet.java,v 1.14 2003-02-20 02:23:40 aalto Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ import java.security.MessageDigest;
  * @author  David S. H. Rosenthal
  * @version 0.0
  */
-public interface CachedUrlSet extends NamedElement {
+public interface CachedUrlSet extends UrlElement {
   /**
    * @return the {@link ArchivalUnit} to which this CachedUrlSet belongs
    */
@@ -85,22 +85,22 @@ public interface CachedUrlSet extends NamedElement {
     public CachedUrlSetHasher getNameHasher(MessageDigest hasher);
 
     /**
-     * Return an <code>Iterator</code> of <code>NamedElement</code>
+     * Return an <code>Iterator</code> of <code>UrlElement</code>
      * objects representing the direct descendants of this
      * <code>CachedUrlSet</code>.  These are CachedUrlSets for internal nodes
      * and CachedUrls for leaf nodes.
-     * @return an <code>Iterator</code> of the <code>NamedElement</code>
+     * @return an <code>Iterator</code> of the <code>UrlElement</code>
      *         matching the members of the
      *         <code>CachedUrlSetSpec</code> list.
      */
     public Iterator flatSetIterator();
 
     /**
-     * Return an <code>Iterator</code> of <code>NamedElement</code>
+     * Return an <code>Iterator</code> of <code>UrlElement</code>
      * objects representing all the nodes of the tree rooted at this
      * <code>CachedUrlSet</code>.  These are CachedUrlSets for internal nodes
      * and CachedUrls for leaf nodes.
-     * @return an <code>Iterator</code> of <code>NamedElement</code>s
+     * @return an <code>Iterator</code> of <code>UrlElement</code>s
      *         for all the nodes matching the members of the
      *         <code>CachedUrlSetSpec</code> list.
      */
@@ -149,12 +149,6 @@ public interface CachedUrlSet extends NamedElement {
      * @return a <code>UrlCacher</code> object representing the url.
      */
     public UrlCacher makeUrlCacher(String url);
-
-    /**
-     * Returns the primary url referenced by the CachedUrlSet.
-     * @return the url
-     */
-    public String getPrimaryUrl();
 
     /**
      * Needs to be overridden to hash CachedUrlSets properly.

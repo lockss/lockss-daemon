@@ -1,5 +1,5 @@
 /*
-* $Id: MockPollManager.java,v 1.2 2003-02-13 06:28:52 claire Exp $
+* $Id: MockPollManager.java,v 1.3 2003-02-20 02:23:40 aalto Exp $
  */
 
 /*
@@ -61,10 +61,10 @@ public class MockPollManager extends PollManager {
     // note: uses a different key than the other two, since we're not
     // creating an actual challenge and verifier to key off of.
     if (opcode == LcapMessage.CONTENT_POLL_REQ) {
-      thePolls.put(cus.getPrimaryUrl(), CONTENT_REQUESTED);
+      thePolls.put(cus.getUrl(), CONTENT_REQUESTED);
     }
     else if (opcode == LcapMessage.NAME_POLL_REQ) {
-      thePolls.put(cus.getPrimaryUrl(), NAME_REQUESTED);
+      thePolls.put(cus.getUrl(), NAME_REQUESTED);
     }
   }
 

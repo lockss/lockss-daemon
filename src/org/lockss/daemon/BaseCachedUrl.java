@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.5 2003-02-20 01:37:23 aalto Exp $
+ * $Id: BaseCachedUrl.java,v 1.6 2003-02-20 02:23:40 aalto Exp $
  */
 
 /*
@@ -59,14 +59,6 @@ public abstract class BaseCachedUrl implements CachedUrl {
    */
   public String getUrl() {
     return url;
-  }
-
-  /**
-   * Returns the url.
-   * @return the url
-   */
-  public String getName() {
-    return getUrl();
   }
 
   /**

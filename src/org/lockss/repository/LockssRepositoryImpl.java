@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.16 2003-02-11 00:58:16 aalto Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.17 2003-02-20 02:23:40 aalto Exp $
  */
 
 /*
@@ -151,8 +151,8 @@ public class LockssRepositoryImpl implements LockssRepository, LockssManager {
   }
 
   public int cusCompare(CachedUrlSet cus1, CachedUrlSet cus2) {
-    String url1 = cus1.getPrimaryUrl();
-    String url2 = cus2.getPrimaryUrl();
+    String url1 = cus1.getUrl();
+    String url2 = cus2.getUrl();
     if (!url1.endsWith(File.separator)) {
       url1 += File.separator;
     }

@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrlSetSpec.java,v 1.5 2003-01-28 02:06:13 aalto Exp $
+ * $Id: MockCachedUrlSetSpec.java,v 1.6 2003-02-20 02:23:40 aalto Exp $
  */
 
 /*
@@ -55,18 +55,9 @@ public class MockCachedUrlSetSpec implements CachedUrlSetSpec {
   public MockCachedUrlSetSpec(String root, String regExp) {
     this.root = root;
     this.regExp = regExp;
-    this.prefixList =  ListUtil.list(root);
   }
 
-  public List getPrefixList() {
-    return prefixList;
-  }
-
-  public void setPrefixList(List prefixList) {
-    this.prefixList = prefixList;
-  }
-
-  public String getPrimaryUrl() {
+  public String getUrl() {
     return root;
   }
 

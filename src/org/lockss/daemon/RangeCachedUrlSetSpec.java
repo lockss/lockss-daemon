@@ -1,5 +1,5 @@
 /*
- * $Id: RangeCachedUrlSetSpec.java,v 1.1 2003-02-13 01:13:15 claire Exp $
+ * $Id: RangeCachedUrlSetSpec.java,v 1.2 2003-02-20 02:23:40 aalto Exp $
  */
 
 /*
@@ -43,9 +43,8 @@ import org.lockss.util.ListUtil;
  * @version 1.0
  */
 
-public class RangeCachedUrlSetSpec implements CachedUrlSetSpec{
+public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
   private String prefix;
-  private List prefixList;
   private String upperBound;
   private String lowerBound;
 
@@ -63,7 +62,6 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec{
       throw new NullPointerException("RangeCachedUrlSetSpec with null URL");
     }
     this.prefix = urlPrefix;
-    this.prefixList = Collections.unmodifiableList(ListUtil.list(urlPrefix));
     this.upperBound = upperBound;
     this.lowerBound = lowerBound;
   }
@@ -91,14 +89,6 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec{
   }
 
   /**
-   * return the Prefix list for this CachedUrlSetSpec
-   * @return the prefix list
-   */
-  public List getPrefixList() {
-    return prefixList;
-  }
-
-  /**
    * Overrides Object.equals().
    * Compares the lists and REs of the two specs.
    * @param obj the other spec
@@ -107,7 +97,7 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec{
   public boolean equals(Object obj) {
     if (obj instanceof RangeCachedUrlSetSpec) {
       RangeCachedUrlSetSpec spec = (RangeCachedUrlSetSpec)obj;
-      if (!prefixList.equals(spec.getPrefixList())) {
+      if (!prefix.equals(spec.getUrl())) {
         return false;
       }
 
@@ -142,8 +132,8 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec{
    * Returns the first url in the prefix list, or null if none.
    * @return the url
    */
-  public String getPrimaryUrl() {
-    return (prefixList.size()>0 ? (String)prefixList.get(0) : null);
+  public String getUrl() {
+    return prefix;
   }
 
   /**
@@ -152,7 +142,7 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec{
    */
   public String toString() {
     StringBuffer sb = new StringBuffer("[CUSS: ");
-    sb.append(getPrimaryUrl());
+    sb.append(prefix);
 
     if(lowerBound != null) {
       sb.append(" lwr:");
@@ -173,7 +163,7 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec{
    */
   public int hashCode() {
     StringBuffer sb = new StringBuffer();
-    sb.append(getPrimaryUrl());
+    sb.append(prefix);
 
     if(lowerBound != null) {
       sb.append(lowerBound);

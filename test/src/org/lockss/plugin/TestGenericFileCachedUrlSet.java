@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericFileCachedUrlSet.java,v 1.15 2003-02-20 01:37:23 aalto Exp $
+ * $Id: TestGenericFileCachedUrlSet.java,v 1.16 2003-02-20 02:23:40 aalto Exp $
  */
 
 /*
@@ -79,7 +79,7 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
     Iterator setIt = fileSet.flatSetIterator();
     ArrayList childL = new ArrayList(3);
     while (setIt.hasNext()) {
-      childL.add(((NamedElement)setIt.next()).getName());
+      childL.add(((UrlElement)setIt.next()).getUrl());
     }
     // should be sorted
     String[] expectedA = new String[] {
@@ -101,14 +101,14 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
         new RangeCachedUrlSetSpec("http://www.example.com/testDir");
     CachedUrlSet fileSet = mau.makeCachedUrlSet(rSpec);
     Iterator setIt = fileSet.flatSetIterator();
-    NamedElement element = (NamedElement)setIt.next();
-    assertEquals("http://www.example.com/testDir/branch1", element.getName());
+    UrlElement element = (UrlElement)setIt.next();
+    assertEquals("http://www.example.com/testDir/branch1", element.getUrl());
     assertTrue(element instanceof CachedUrlSet);
-    element = (NamedElement)setIt.next();
-    assertEquals("http://www.example.com/testDir/branch2", element.getName());
+    element = (UrlElement)setIt.next();
+    assertEquals("http://www.example.com/testDir/branch2", element.getUrl());
     assertTrue(element instanceof CachedUrlSet);
-    element = (NamedElement)setIt.next();
-    assertEquals("http://www.example.com/testDir/leaf1", element.getName());
+    element = (UrlElement)setIt.next();
+    assertEquals("http://www.example.com/testDir/leaf1", element.getUrl());
     assertTrue(element instanceof CachedUrl);
   }
 
@@ -127,7 +127,7 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
     Iterator setIt = fileSet.treeIterator();
     ArrayList childL = new ArrayList(4);
     while (setIt.hasNext()) {
-      childL.add(((NamedElement)setIt.next()).getName());
+      childL.add(((UrlElement)setIt.next()).getUrl());
     }
     // should be sorted
     String[] expectedA = new String[] {
@@ -156,23 +156,23 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
         new RangeCachedUrlSetSpec("http://www.example.com/testDir");
     CachedUrlSet fileSet = mau.makeCachedUrlSet(rSpec);
     Iterator setIt = fileSet.treeIterator();
-    NamedElement element = (NamedElement)setIt.next();
-    assertEquals("http://www.example.com/testDir/branch1", element.getName());
+    UrlElement element = (UrlElement)setIt.next();
+    assertEquals("http://www.example.com/testDir/branch1", element.getUrl());
     assertTrue(element instanceof CachedUrlSet);
-    element = (NamedElement)setIt.next();
-    assertEquals("http://www.example.com/testDir/branch1/leaf1", element.getName());
+    element = (UrlElement)setIt.next();
+    assertEquals("http://www.example.com/testDir/branch1/leaf1", element.getUrl());
     assertTrue(element instanceof CachedUrl);
-    element = (NamedElement)setIt.next();
-    assertEquals("http://www.example.com/testDir/branch2", element.getName());
+    element = (UrlElement)setIt.next();
+    assertEquals("http://www.example.com/testDir/branch2", element.getUrl());
     assertTrue(element instanceof CachedUrlSet);
-    element = (NamedElement)setIt.next();
-    assertEquals("http://www.example.com/testDir/branch2/branch3", element.getName());
+    element = (UrlElement)setIt.next();
+    assertEquals("http://www.example.com/testDir/branch2/branch3", element.getUrl());
     assertTrue(element instanceof CachedUrlSet);
-    element = (NamedElement)setIt.next();
-    assertEquals("http://www.example.com/testDir/branch2/branch3/leaf2", element.getName());
+    element = (UrlElement)setIt.next();
+    assertEquals("http://www.example.com/testDir/branch2/branch3/leaf2", element.getUrl());
     assertTrue(element instanceof CachedUrl);
-    element = (NamedElement)setIt.next();
-    assertEquals("http://www.example.com/testDir/leaf3", element.getName());
+    element = (UrlElement)setIt.next();
+    assertEquals("http://www.example.com/testDir/leaf3", element.getUrl());
     assertTrue(element instanceof CachedUrl);
   }
 

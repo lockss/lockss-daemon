@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSimulatedContent.java,v 1.16 2003-02-20 01:37:23 aalto Exp $
+ * $Id: FuncSimulatedContent.java,v 1.17 2003-02-20 02:23:40 aalto Exp $
  */
 
 /*
@@ -142,7 +142,7 @@ public class FuncSimulatedContent extends LockssTestCase {
     Iterator setIt = set.flatSetIterator();
     ArrayList childL = new ArrayList(7);
     while (setIt.hasNext()) {
-      childL.add(((NamedElement)setIt.next()).getName());
+      childL.add(((UrlElement)setIt.next()).getUrl());
     }
     String[] expectedA = new String[] {
       sau.SIMULATED_URL_ROOT+"/branch1",
@@ -163,7 +163,7 @@ public class FuncSimulatedContent extends LockssTestCase {
     Iterator setIt = set.treeIterator();
     ArrayList childL = new ArrayList(15);
     while (setIt.hasNext()) {
-      childL.add(((NamedElement)setIt.next()).getName());
+      childL.add(((UrlElement)setIt.next()).getUrl());
     }
     String[] expectedA = new String[] {
       parent+"/branch1/file1.html",

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrlSet.java,v 1.8 2003-02-20 01:37:23 aalto Exp $
+ * $Id: BaseCachedUrlSet.java,v 1.9 2003-02-20 02:23:40 aalto Exp $
  */
 
 /*
@@ -98,20 +98,8 @@ public abstract class BaseCachedUrlSet implements CachedUrlSet {
     return "[BCUS: "+spec+"]";
   }
 
-  /**
-   * Returns the main url of the spec.
-   * @return the url
-   */
-  public String getPrimaryUrl() {
-    return spec.getPrimaryUrl();
-  }
-
-  /**
-   * Returns the main url.
-   * @return the url
-   */
-  public String getName() {
-    return getPrimaryUrl();
+  public String getUrl() {
+    return spec.getUrl();
   }
 
   /**

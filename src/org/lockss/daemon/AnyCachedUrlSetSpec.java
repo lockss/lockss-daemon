@@ -1,5 +1,5 @@
 /*
- * $Id: AnyCachedUrlSetSpec.java,v 1.4 2003-01-28 02:06:13 aalto Exp $
+ * $Id: AnyCachedUrlSetSpec.java,v 1.5 2003-02-20 02:23:40 aalto Exp $
  */
 
 /*
@@ -76,7 +76,11 @@ public class AnyCachedUrlSetSpec implements CachedUrlSetSpec {
     List res = new LinkedList();
     for (Iterator iter = set.iterator(); iter.hasNext(); ) {
       CachedUrlSetSpec cuss = (CachedUrlSetSpec)iter.next();
-      res.addAll(cuss.getPrefixList());
+      if (cuss instanceof AnyCachedUrlSetSpec) {
+        res.addAll(((AnyCachedUrlSetSpec)cuss).getPrefixList());
+      } else {
+        res.add(cuss.getUrl());
+      }
     }
     return res;
   }
@@ -122,9 +126,9 @@ public class AnyCachedUrlSetSpec implements CachedUrlSetSpec {
    * Returns the primary url of the first sub-spec, or null if none.
    * @return the url
    */
-  public String getPrimaryUrl() {
+  public String getUrl() {
     if (set.size()>0) {
-      return ((CachedUrlSetSpec)set.iterator().next()).getPrimaryUrl();
+      return ((CachedUrlSetSpec)set.iterator().next()).getUrl();
     } else {
       return null;
     }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestRangeCachedUrlSetSpec.java,v 1.1 2003-02-13 01:13:15 claire Exp $
+ * $Id: TestRangeCachedUrlSetSpec.java,v 1.2 2003-02-20 02:23:40 aalto Exp $
  */
 
 /*
@@ -89,7 +89,7 @@ public class TestRangeCachedUrlSetSpec extends LockssTestCase {
 
     // no range anything that begins with foo is a match
     CachedUrlSetSpec cuss1 = new RangeCachedUrlSetSpec("foo", null, null);
-    assertEquals(ListUtil.list("foo"), cuss1.getPrefixList());
+    assertEquals("foo", cuss1.getUrl());
     assertTrue(cuss1.matches("foo"));
     assertTrue(cuss1.matches("foobar"));
     assertTrue(cuss1.matches("foo/bar"));
@@ -123,15 +123,12 @@ public class TestRangeCachedUrlSetSpec extends LockssTestCase {
     assertEquals(spec1, spec2);
   }
 
-  public void testGetPrimaryUrl() throws Exception {
+  public void testGetUrl() throws Exception {
     CachedUrlSetSpec spec1 = new RangeCachedUrlSetSpec("foo", null, null);
-    assertEquals("foo", spec1.getPrimaryUrl());
+    assertEquals("foo", spec1.getUrl());
 
     CachedUrlSetSpec spec2 = new RangeCachedUrlSetSpec("bar", "/abc", "/xyz");
     Set s = SetUtil.set(spec1, spec2);
-
-    CachedUrlSetSpec any = new AnyCachedUrlSetSpec(s);
-    assertEquals("foo", any.getPrimaryUrl());
   }
 
   public static void main(String[] argv) {

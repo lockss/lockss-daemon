@@ -1,5 +1,5 @@
 /*
- * $Id: TestCachedUrlSetSpec.java,v 1.4 2003-01-28 02:06:13 aalto Exp $
+ * $Id: TestCachedUrlSetSpec.java,v 1.5 2003-02-20 02:23:40 aalto Exp $
  */
 
 /*
@@ -75,7 +75,7 @@ public class TestCachedUrlSetSpec extends LockssTestCase {
 
   public void testRECachedUrlSetSpec() throws REException {
     CachedUrlSetSpec cuss1 = new RECachedUrlSetSpec("foo", (RE)null);
-    assertEquals(ListUtil.list("foo"), cuss1.getPrefixList());
+    assertEquals("foo", cuss1.getUrl());
     assertTrue(cuss1.matches("foo"));
     assertTrue(cuss1.matches("foobar"));
     assertTrue(cuss1.matches("foo/bar"));
@@ -115,7 +115,7 @@ public class TestCachedUrlSetSpec extends LockssTestCase {
     CachedUrlSetSpec re2 = new RECachedUrlSetSpec("bar", "12");
     Set prefixes = SetUtil.set("foo", "bar");
     Set s = SetUtil.set(re1, re2);
-    CachedUrlSetSpec any = new AnyCachedUrlSetSpec(s);
+    AnyCachedUrlSetSpec any = new AnyCachedUrlSetSpec(s);
     assertTrue(any.matches("foo/fjfjf"));
     assertTrue(any.matches("bar/123"));
     assertTrue(!any.matches("bar/132"));
@@ -140,13 +140,13 @@ public class TestCachedUrlSetSpec extends LockssTestCase {
     assertEquals(re1, re2);
   }
 
-  public void testGetPrimaryUrl() throws Exception {
+  public void testGetUrl() throws Exception {
     CachedUrlSetSpec re1 = new RECachedUrlSetSpec("foo", (RE)null);
-    assertEquals("foo", re1.getPrimaryUrl());
+    assertEquals("foo", re1.getUrl());
     CachedUrlSetSpec re2 = new RECachedUrlSetSpec("bar", "12");
     Set s = SetUtil.set(re1, re2);
     CachedUrlSetSpec any = new AnyCachedUrlSetSpec(s);
-    assertEquals("foo", any.getPrimaryUrl());
+    assertEquals("foo", any.getUrl());
   }
 
   public static void main(String[] argv) {

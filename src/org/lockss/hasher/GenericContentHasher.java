@@ -1,5 +1,5 @@
 /*
- * $Id: GenericContentHasher.java,v 1.4 2003-02-20 01:37:24 aalto Exp $
+ * $Id: GenericContentHasher.java,v 1.5 2003-02-20 02:23:40 aalto Exp $
  */
 
 /*
@@ -56,12 +56,12 @@ public class GenericContentHasher extends GenericHasher {
     iterator = cus.treeIterator();
   }
 
-  protected int hashElementUpToNumBytes(NamedElement element, int numBytes)
+  protected int hashElementUpToNumBytes(UrlElement element, int numBytes)
       throws IOException {
     CachedUrl cu = null;
     if (element instanceof CachedUrlSet) {
       CachedUrlSet cus = (CachedUrlSet)element;
-      cu = cus.makeCachedUrl(cus.getPrimaryUrl());
+      cu = cus.makeCachedUrl(cus.getUrl());
     } else if (element instanceof CachedUrl) {
       cu = (CachedUrl)element;
     }

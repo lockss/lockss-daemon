@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.24 2003-02-20 00:57:28 claire Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.25 2003-02-20 02:23:40 aalto Exp $
  */
 
 /*
@@ -146,7 +146,7 @@ public class TestNodeManagerImpl
     ArrayList nodeL = new ArrayList(2);
     while (nodeIt.hasNext()) {
       node = (NodeState) nodeIt.next();
-      nodeL.add(node.getCachedUrlSet().getPrimaryUrl());
+      nodeL.add(node.getCachedUrlSet().getUrl());
     }
     String[] expectedA = new String[] {
         "http://www.example.com/branch1",
@@ -175,7 +175,7 @@ public class TestNodeManagerImpl
     ArrayList nodeL = new ArrayList(2);
     while (nodeIt.hasNext()) {
       node = (NodeState) nodeIt.next();
-      nodeL.add(node.getCachedUrlSet().getPrimaryUrl());
+      nodeL.add(node.getCachedUrlSet().getUrl());
     }
     String[] expectedA = new String[] {
         "http://www.example.com/branch1",
@@ -188,7 +188,7 @@ public class TestNodeManagerImpl
     nodeL = new ArrayList(1);
     while (nodeIt.hasNext()) {
       node = (NodeState)nodeIt.next();
-      nodeL.add(node.getCachedUrlSet().getPrimaryUrl());
+      nodeL.add(node.getCachedUrlSet().getUrl());
     }
     expectedA = new String[] {
         "http://www.example.com/branch1"
@@ -308,11 +308,11 @@ public class TestNodeManagerImpl
     crawlState.status = status;
     crawlState.startTime = startTime;
     nodeManager.walkNodeState(node);
-    assertTrue(pollMan.getPollStatus(node.getCachedUrlSet().getPrimaryUrl())==null);
+    assertTrue(pollMan.getPollStatus(node.getCachedUrlSet().getUrl())==null);
     if (shouldSchedule) {
       //XXX uncomment when CrawlManager ready
       //assertTrue(crawlMan.getUrlStatus(
-      //node.getCachedUrlSet().getPrimaryUrl())==MockCrawlManager.SCHEDULED);
+      //node.getCachedUrlSet().getUrl())==MockCrawlManager.SCHEDULED);
     } else {
       assertTrue(crawlMan.getUrlStatus(TEST_URL)==null);
     }
@@ -361,14 +361,14 @@ public class TestNodeManagerImpl
     nodeManager.walkNodeState(node);
     if (shouldSchedule) {
       assertTrue(pollMan.getPollStatus(
-          node.getCachedUrlSet().getPrimaryUrl()) ==
+          node.getCachedUrlSet().getUrl()) ==
                  MockPollManager.NAME_REQUESTED);
     } else {
       assertTrue(pollMan.getPollStatus(
-          node.getCachedUrlSet().getPrimaryUrl()) == null);
+          node.getCachedUrlSet().getUrl()) == null);
     }
     assertTrue(crawlMan.getUrlStatus(
-        node.getCachedUrlSet().getPrimaryUrl())==null);
+        node.getCachedUrlSet().getUrl())==null);
   }
 
   public void testEstimatedTreeWalk() {
@@ -449,7 +449,7 @@ public class TestNodeManagerImpl
     nodeManager.handleContentPoll(pollState, results, nodeState);
     assertEquals(PollState.LOST, pollState.getStatus());
     // assert name poll requested
-    String url = nodeState.getCachedUrlSet().getPrimaryUrl();
+    String url = nodeState.getCachedUrlSet().getUrl();
     assertNotNull(url);
     assertEquals(MockPollManager.NAME_REQUESTED,
                  ((MockPollManager)theDaemon.getPollManager()).getPollStatus(
@@ -467,7 +467,7 @@ public class TestNodeManagerImpl
     // assert repair call scheduled
     assertEquals(MockCrawlManager.SCHEDULED,
                  ((MockCrawlManager)theDaemon.getCrawlManager()).getUrlStatus(
-        nodeState.getCachedUrlSet().getPrimaryUrl()));
+        nodeState.getCachedUrlSet().getUrl()));
     // assert poll suspended
     assertEquals(MockPollManager.SUSPENDED,
                  ((MockPollManager)theDaemon.getPollManager()).getPollStatus(
