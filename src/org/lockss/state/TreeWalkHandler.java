@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkHandler.java,v 1.36 2003-09-05 22:47:33 eaalto Exp $
+ * $Id: TreeWalkHandler.java,v 1.37 2003-09-12 20:47:06 eaalto Exp $
  */
 
 /*
@@ -65,8 +65,8 @@ public class TreeWalkHandler {
   static final double MAX_DEVIATION = 0.4;
 
   NodeManagerImpl manager;
-  private static LockssDaemon theDaemon;
-  private static CrawlManager theCrawlManager;
+  private LockssDaemon theDaemon;
+  private CrawlManager theCrawlManager;
   private ActivityRegulator theRegulator;
   ActivityRegulator.Lock activityLock = null;
   private ArchivalUnit theAu;

@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.152 2003-08-06 00:08:56 eaalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.153 2003-09-12 20:47:06 eaalto Exp $
  */
 
 /*
@@ -73,10 +73,10 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
 
   static final boolean DEFAULT_RESTART_NONEXPIRED_POLLS = false;
 
-  static HistoryRepository historyRepo;
+  HistoryRepository historyRepo;
   private LockssRepository lockssRepo;
-  static PollManager pollManager;
-  static ActivityRegulator regulator;
+  PollManager pollManager;
+  ActivityRegulator regulator;
   static SimpleDateFormat sdf = new SimpleDateFormat();
 
   static boolean registeredAccessors = false;
