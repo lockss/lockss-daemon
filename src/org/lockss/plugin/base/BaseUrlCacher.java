@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.49 2005-03-18 18:07:50 troberts Exp $
+ * $Id: BaseUrlCacher.java,v 1.50 2005-03-23 17:26:12 troberts Exp $
  */
 
 /*
@@ -83,6 +83,11 @@ public class BaseUrlCacher implements UrlCacher {
   private String proxyHost = null;
   private int proxyPort;
   private Properties reqProps;
+
+
+  private static final String SHOULD_REFETCH_ON_SET_COOKIE =
+    "refetch_on_set_cookie";
+  private static final boolean DEFAULT_SHOULD_REFETCH_ON_SET_COOKIE = true;
 
   public BaseUrlCacher(ArchivalUnit owner, String url) {
     //this.cus = owner;
@@ -200,16 +205,18 @@ public class BaseUrlCacher implements UrlCacher {
     try {
       CIProperties headers = getHeaders();
       if (headers.get("Set-Cookie") != null) {
-	logger.debug3("Found set-cookie header, refetching");
-	input.close();
-	input = null; // ensure don't reclose in finally if next line throws
-	input = getUncachedInputStream(lastModified);
-	if (input == null) {
-	  //this is odd if it happens.
-	  logger.warning("Got null input stream on second call to getUncachedInputStream");
-	  return CACHE_RESULT_NOT_MODIFIED;
+	if (shouldRefetchOnCookies()) {
+	  logger.debug3("Found set-cookie header, refetching");
+	  input.close();
+	  input = null; // ensure don't reclose in finally if next line throws
+	  input = getUncachedInputStream(lastModified);
+	  if (input == null) {
+	    //this is odd if it happens.
+	    logger.warning("Got null input stream on second call to getUncachedInputStream");
+	    return CACHE_RESULT_NOT_MODIFIED;
+	  }
+	  headers = getHeaders();
 	}
-	headers = getHeaders();
       }
       storeContent(input, headers);
       return CACHE_RESULT_FETCHED;
@@ -218,6 +225,20 @@ public class BaseUrlCacher implements UrlCacher {
 	input.close();
       }
     }
+  }
+
+  private boolean shouldRefetchOnCookies() {
+    TypedEntryMap pMap = getParamMap();
+    if (pMap != null) {
+      boolean shouldRefetchOnCookies =
+	pMap.getBoolean(SHOULD_REFETCH_ON_SET_COOKIE,
+			DEFAULT_SHOULD_REFETCH_ON_SET_COOKIE);
+      logger.debug3("Should refetch on cookies is "+shouldRefetchOnCookies);
+      return shouldRefetchOnCookies;
+    }
+    logger.debug3("No param map found, returning default shouldRefetchOnCookies: "
+		  +DEFAULT_SHOULD_REFETCH_ON_SET_COOKIE);
+    return DEFAULT_SHOULD_REFETCH_ON_SET_COOKIE;
   }
 
   private CIProperties getHeaders() throws IOException {
@@ -332,6 +353,7 @@ public class BaseUrlCacher implements UrlCacher {
       input = conn.getResponseInputStream();
     } finally {
       if (conn != null && input == null) {
+	logger.debug3("Releasing connection");
 	conn.release();
       }
     }
@@ -502,6 +524,7 @@ public class BaseUrlCacher implements UrlCacher {
       }
       PermissionMap permissionMap = null;
       if (permissionMapSource != null) {
+	logger.debug3("Getting permission map");
 	permissionMap = permissionMapSource.getPermissionMap();
       }
 
@@ -569,5 +592,15 @@ public class BaseUrlCacher implements UrlCacher {
    */
   public void setPermissionMapSource(PermissionMapSource permissionMapSource) {
     this.permissionMapSource = permissionMapSource;
+  }
+
+  protected BaseArchivalUnit.ParamHandlerMap getParamMap() {
+    try {
+      BaseArchivalUnit bau = (BaseArchivalUnit) au;
+      return bau.getParamMap();
+    } catch (ClassCastException ex) {
+      logger.error("Expected au to be BaseArchivalUnit", ex);
+    }
+    return null;
   }
 }

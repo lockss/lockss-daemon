@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.35 2005-03-18 18:07:51 troberts Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.36 2005-03-23 17:26:13 troberts Exp $
  */
 
 /*
@@ -116,7 +116,6 @@ public class TestBaseUrlCacher extends LockssTestCase {
   }
 
   public void testReCacheWCookie() throws IOException {
-    System.err.println("Stop1");
     pauseBeforeFetchCounter = 0;
 
     cacher._input = new StringInputStream("test stream");
@@ -129,7 +128,25 @@ public class TestBaseUrlCacher extends LockssTestCase {
     assertEquals(2, cacher.getUncachedInputStreamCount);
     assertEquals(2, cacher.getUncachedPropertiesCount);
     assertEquals(1, pauseBeforeFetchCounter);
-    System.err.println("Stop1");
+  }
+
+  public void testReCacheWCookieOverride() throws IOException {
+    BaseArchivalUnit.ParamHandlerMap pMap =
+      new BaseArchivalUnit.ParamHandlerMap();
+    pMap.putBoolean("refetch_on_set_cookie", false);
+    cacher.setParamMap(pMap);
+    pauseBeforeFetchCounter = 0;
+
+    cacher._input = new StringInputStream("test stream");
+    CIProperties headers = new CIProperties();
+    headers.put("Set-Cookie", "blah");
+    cacher._headers = headers;
+    // should cache
+    assertEquals(UrlCacher.CACHE_RESULT_FETCHED, cacher.cache());
+    assertTrue(cacher.wasStored);
+    assertEquals(1, cacher.getUncachedInputStreamCount);
+    assertEquals(1, cacher.getUncachedPropertiesCount);
+    assertEquals(1, pauseBeforeFetchCounter);
   }
 
   public void testLastModifiedCache() throws IOException {
@@ -835,9 +852,18 @@ public class TestBaseUrlCacher extends LockssTestCase {
     boolean wasStored = false;
     int getUncachedPropertiesCount = 0;
     int getUncachedInputStreamCount = 0;
+    BaseArchivalUnit.ParamHandlerMap pMap;
 
     public MyMockBaseUrlCacher(ArchivalUnit owner, String url) {
       super(owner, url);
+    }
+
+    protected BaseArchivalUnit.ParamHandlerMap getParamMap() {
+      return pMap;
+    }
+
+    public void setParamMap(BaseArchivalUnit.ParamHandlerMap pMap) {
+      this.pMap = pMap;
     }
 
     public InputStream getUncachedInputStream(String lastModified) {
