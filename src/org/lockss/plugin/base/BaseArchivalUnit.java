@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.74 2004-09-02 01:25:50 troberts Exp $
+ * $Id: BaseArchivalUnit.java,v 1.75 2004-09-02 01:32:03 clairegriffin Exp $
  */
 
 /*
@@ -299,7 +299,9 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    * @return the spec
    */
   public CrawlSpec getCrawlSpec() {
-    return (CrawlSpec)paramMap.getMapElement(AU_CRAWL_SPEC);
+    // for speed we return the cached value
+    return crawlSpec;
+    //return (CrawlSpec)paramMap.getMapElement(AU_CRAWL_SPEC);
   }
 
   /**
