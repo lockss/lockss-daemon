@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.1 2002-10-16 04:50:54 tal Exp $
+ * $Id: MockArchivalUnit.java,v 1.2 2002-11-05 01:46:50 aalto Exp $
  */
 
 /*
@@ -44,6 +44,8 @@ import org.lockss.test.MockCachedUrlSetSpec;
 
 public class MockArchivalUnit implements ArchivalUnit {
   private CrawlSpec spec;
+  private String pluginId = "mock";
+  private String auId = "null";
 
   public MockArchivalUnit(CrawlSpec spec) {
     this.spec = spec;
@@ -61,7 +63,7 @@ public class MockArchivalUnit implements ArchivalUnit {
    * Make a new MockArchivalUnit object with a list populated with
    * the urls specified in rootUrls (and no reg expressions)
    *
-   * @param rootUrls list of string representation of the urls to 
+   * @param rootUrls list of string representation of the urls to
    * add to the new MockArchivalUnit's list
    * @return MockArchivalUnit with urls in rootUrls in its list
    */
@@ -84,6 +86,20 @@ public class MockArchivalUnit implements ArchivalUnit {
     return false;
   }
 
-  //methods used to generate proper mock objects
+  public String getPluginId() {
+    return pluginId;
+  }
+
+  public String getAUId() {
+    return auId;
+  }
+
+  public void setPluginId(String newId) {
+    pluginId = newId;
+  }
+
+  public void setAuId(String newId) {
+    auId = newId;
+  }
 
 }

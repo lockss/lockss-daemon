@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.2 2002-10-16 04:50:54 tal Exp $
+ * $Id: ArchivalUnit.java,v 1.3 2002-11-05 01:46:50 aalto Exp $
  */
 
 /*
@@ -67,5 +67,18 @@ public interface ArchivalUnit {
    * Return the {@link CrawlSpec}
    */
   public CrawlSpec getCrawlSpec();
+
+  /**
+   * Returns a fixed string identifier for the Plugin.
+   * @return a fixed plugin id
+   */
+  public String getPluginId();
+
+  /**
+   * Returns a unique string identifier for the ArchivalUnit instance
+   * within the Plugin.
+   * @return a unique id
+   */
+  public String getAUId();
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.1 2002-10-16 04:52:55 tal Exp $
+ * $Id: BaseArchivalUnit.java,v 1.2 2002-11-05 01:46:50 aalto Exp $
  */
 
 /*
@@ -49,19 +49,19 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   /** Create an instance of the plugin-specific implementation of
    * CachedUrlSet, with the specified owner and CachedUrlSetSpec
    */
-  protected abstract CachedUrlSet cachedUrlSetFactory(ArchivalUnit owner,
+  public abstract CachedUrlSet cachedUrlSetFactory(ArchivalUnit owner,
 						      CachedUrlSetSpec cuss);
 
   /** Create an instance of the plugin-specific implementation of
    * CachedUrl, with the specified owner and url
    */
-  protected abstract CachedUrl cachedUrlFactory(CachedUrlSet owner,
+  public abstract CachedUrl cachedUrlFactory(CachedUrlSet owner,
 						String url);
 
   /** Create an instance of the plugin-specific implementation of
    * UrlCacher, with the specified owner and url
    */
-  protected abstract UrlCacher urlCacherFactory(CachedUrlSet  owner,
+  public abstract UrlCacher urlCacherFactory(CachedUrlSet  owner,
 						String url);
 
   /** Return the CrawlSpec */

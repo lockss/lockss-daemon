@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.4 2002-10-16 04:50:54 tal Exp $
+ * $Id: NullPlugin.java,v 1.5 2002-11-05 01:46:50 aalto Exp $
  */
 
 /*
@@ -106,7 +106,7 @@ public class NullPlugin {
     }
 
     public boolean shouldBeCached() {
-      return false;;
+      return false;
     }
 
     public void cache() throws IOException {
@@ -119,7 +119,7 @@ public class NullPlugin {
     public InputStream getUncachedInputStream() {
       return new StringInputStream("");
     }
-  
+
     public Properties getUncachedProperties() {
       return new Properties();
     }
@@ -209,6 +209,13 @@ public class NullPlugin {
 
     public boolean shouldBeCached(String url) {
       return false;
+    }
+    public String getPluginId() {
+      return "null";
+    }
+
+    public String getAUId() {
+      return "null";
     }
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePlugin.java,v 1.9 2002-10-23 16:56:33 troberts Exp $
+ * $Id: HighWirePlugin.java,v 1.10 2002-11-05 01:46:50 aalto Exp $
  */
 
 /*
@@ -48,13 +48,13 @@ import org.lockss.plugin.*;
  * @author  Thomas S. Robertson
  * @version 0.0
  */
- 
+
 public class HighWirePlugin extends BaseArchivalUnit {
   static public final String LOG_NAME = "HighWirePlugin";
   protected Logger logger = Logger.getLogger(LOG_NAME);
 
   /**
-   * Standard constructor for HighWirePlugin.  
+   * Standard constructor for HighWirePlugin.
    *
    * @param start URL to start crawl
    */
@@ -62,16 +62,16 @@ public class HighWirePlugin extends BaseArchivalUnit {
     super(makeCrawlSpec(start));
   }
 
-  protected CachedUrlSet cachedUrlSetFactory(ArchivalUnit owner,
+  public CachedUrlSet cachedUrlSetFactory(ArchivalUnit owner,
 					     CachedUrlSetSpec cuss) {
     return new HighWireCachedUrlSet(owner, cuss);
   }
 
-  protected CachedUrl cachedUrlFactory(CachedUrlSet owner, String url) {
+  public CachedUrl cachedUrlFactory(CachedUrlSet owner, String url) {
     return new HighWireCachedUrl(owner, url);
   }
 
-  protected UrlCacher urlCacherFactory(CachedUrlSet owner, String url) {
+  public UrlCacher urlCacherFactory(CachedUrlSet owner, String url) {
     return new HighWireUrlCacher(owner, url);
   }
 
@@ -79,7 +79,7 @@ public class HighWirePlugin extends BaseArchivalUnit {
       throws REException, MalformedURLException {
     String prefix = UrlUtil.getUrlPrefix(start);
     int volume = getUrlVolumeNumber(start);
-      
+
     CrawlRule rule = makeRules(prefix, volume);
     return new CrawlSpec(start, rule);
   }
@@ -89,7 +89,7 @@ public class HighWirePlugin extends BaseArchivalUnit {
     String path = url.getPath();
 
     String volStr = "lockss-volume";
-    int volStrIdx = path.indexOf(volStr); 
+    int volStrIdx = path.indexOf(volStr);
     int startIdx =  volStrIdx + volStr.length();
     int endIdx = path.lastIndexOf(".");
     if (volStrIdx < 0 || endIdx < 0 || endIdx <= startIdx){
@@ -121,5 +121,16 @@ public class HighWirePlugin extends BaseArchivalUnit {
     rules.add(new CrawlRules.RE(".*/math.*", incl));
     rules.add(new CrawlRules.RE("http://.*/.*/.*", excl));
     return new CrawlRules.FirstMatch(rules);
+  }
+
+  public String getPluginId() {
+    return "highwire";
+  }
+  public String getAUId() {
+    try {
+      return ""+getUrlVolumeNumber((String)getCrawlSpec().getStartingUrls().get(0));
+    } catch (MalformedURLException ex) {
+      return "null";
+    }
   }
 }

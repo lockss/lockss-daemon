@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrlSet.java,v 1.1 2002-10-16 04:52:55 tal Exp $
+ * $Id: BaseCachedUrlSet.java,v 1.2 2002-11-05 01:46:50 aalto Exp $
  */
 
 /*
@@ -44,8 +44,8 @@ import java.util.*;
  * Plugins may extend this to get some common CachedUrlSet functionality.
  */
 public abstract class BaseCachedUrlSet implements CachedUrlSet {
-  private ArchivalUnit au;
-  private CachedUrlSetSpec spec;
+  protected ArchivalUnit au;
+  protected CachedUrlSetSpec spec;
 
   /** Must invoke this constructor in plugin subclass. */
   public BaseCachedUrlSet(ArchivalUnit owner, CachedUrlSetSpec spec) {

@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrlSet.java,v 1.5 2002-10-31 01:50:16 troberts Exp $
+ * $Id: MockCachedUrlSet.java,v 1.6 2002-11-05 01:46:50 aalto Exp $
  */
 
 /*
@@ -65,7 +65,7 @@ public class MockCachedUrlSet implements CachedUrlSet {
   }
 
   public MockCachedUrlSet(CachedUrlSetSpec spec) {
-    this(null, spec);
+    this(new MockArchivalUnit(null), spec);
   }
 
   public boolean containsUrl(String url) {
