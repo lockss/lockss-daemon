@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.38 2004-04-27 19:40:58 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.38.2.1 2004-05-20 08:55:49 tlipkis Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 import java.util.*;
 import java.io.*;
+import java.text.*;
 import java.lang.reflect.*;
 import gnu.regexp.*;
 
@@ -408,7 +409,7 @@ public class StringUtil {
     char[] buf = new char[1000];
     StringBuffer sb = new StringBuffer(1000);
     int len;
-    while ((len = r.read(buf)) > 0) {
+    while ((len = r.read(buf)) >= 0) {
       sb.append(buf, 0, len);
     }
     return sb.toString();
@@ -611,6 +612,32 @@ public class StringUtil {
       }
     }
     return sb.toString();
+  }
+
+  private static final NumberFormat fmt_1dec = new DecimalFormat("0.0");
+  private static final NumberFormat fmt_0dec = new DecimalFormat("0");
+
+  static final String[] byteSuffixes = {"KB", "MB", "GB", "TB"};
+
+  public static String sizeKBToString(long size) {
+    double base = 1024.0;
+    double x = (double)size;
+    
+    int len = byteSuffixes.length;
+    for (int ix = 0; ix < len; ix++) {
+      if (x < base || ix == len-1) {
+	StringBuffer sb = new StringBuffer();
+	if (x < 10.0) {
+	  sb.append(fmt_1dec.format(x));
+	} else {
+	  sb.append(fmt_0dec.format(x));
+	}
+	sb.append(byteSuffixes[ix]);
+	return sb.toString();
+      }
+      x = x / base;
+    }
+    return ""+size;
   }
 
   /** Remove the first line of the stack trace, iff it duplicates the end
