@@ -1,5 +1,5 @@
 /*
- * $Id: SmtpMailService.java,v 1.2 2004-07-19 08:28:45 tlipkis Exp $
+ * $Id: SmtpMailService.java,v 1.3 2004-08-09 02:55:34 tlipkis Exp $
  *
 
  Copyright (c) 2000-2004 Board of Trustees of Leland Stanford Jr. University,
@@ -248,6 +248,10 @@ public class SmtpMailService extends BaseLockssManager implements MailService {
 		}
 		break;
 	      case SmtpClient.RESULT_FAIL:
+ 		// XXX need better log here - client should record smtp
+ 		// transaction
+ 		log.warning("Send failed");
+ 		// fall through
 	      case SmtpClient.RESULT_OK:
 	      default:
 		queue.remove(req);

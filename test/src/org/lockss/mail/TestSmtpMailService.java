@@ -1,5 +1,5 @@
 /*
- * $Id: TestSmtpMailService.java,v 1.2 2004-07-19 08:28:44 tlipkis Exp $
+ * $Id: TestSmtpMailService.java,v 1.3 2004-08-09 02:55:34 tlipkis Exp $
  */
 
 /*
@@ -105,13 +105,12 @@ public class TestSmtpMailService extends LockssTestCase {
     svc.sendMail("m2", "t", "b");
     svc.sendMail("m3", "t", "b");
     svc.sendMail("m4", "t", "b");
-    waitNSent(sem, 3);
-    sem.take(100);
-    if (client.senders.size() > 3) {
-      fail(client.senders.size() + " messages arrived, only 3 should have");
-    }
+    assertNSent(sem, 3);
+    sem.take(TIMEOUT_SHOULD);
+    assertFalse(client.senders.size() + " messages arrived, expected only 3",
+	       client.senders.size() > 3);
     TimeBase.step(10);
-    waitNSent(sem, 4);
+    assertNSent(sem, 4);
   }
 
   public void testRetry() throws IOException, InterruptedException {
@@ -152,16 +151,20 @@ public class TestSmtpMailService extends LockssTestCase {
     // can't try to add another to queue until certain at least one of the
     // previous ones has been removed (which happens after send semaphore
     // is posted), so must wait until *second* is sent
-    waitNSent(sem, 2);
+    assertNSent(sem, 2);
     assertTrue(svc.sendMail("m4", "t", "b"));
   }
 
-  void waitNSent(SimpleBinarySemaphore sem, int n) {
-    waitNSent(sem, n, null);
+  /** assert that n senders appear on the client's senders list, failing if
+   * TIMEOUT_SHOULDNT elapses before that happens */
+  void assertNSent(SimpleBinarySemaphore sem, int n) {
+    assertNSent(sem, n, null);
   }
 
-  void waitNSent(SimpleBinarySemaphore sem, int n,
-		 SimpleBinarySemaphore postSem) {
+  /** assert that n senders appear on the client's senders list, failing if
+   * TIMEOUT_SHOULDNT elapses before that happens */
+  void assertNSent(SimpleBinarySemaphore sem, int n,
+		   SimpleBinarySemaphore postSem) {
     while (client.senders.size() < n) {
       if (postSem != null) postSem.give();
       if (! sem.take(TIMEOUT_SHOULDNT)) {

@@ -1,5 +1,5 @@
 /*
- * $Id: SmtpClient.java,v 1.1 2004-07-12 06:11:23 tlipkis Exp $
+ * $Id: SmtpClient.java,v 1.2 2004-08-09 02:55:34 tlipkis Exp $
  */
 
 /*
@@ -46,6 +46,12 @@ import org.lockss.daemon.*;
 public class SmtpClient extends TransferProtocolClient  {
   protected static Logger log = Logger.getLogger("SmtpClient");
 
+  static final String TIMEOUT_PREFIX =
+    Configuration.PREFIX + "mail.smtp.timeout.";
+  static final String PARAM_SMTP_DATA_TIMEOUT = TIMEOUT_PREFIX + "data";
+  static long DEFAULT_SMTP_DATA_TIMEOUT = Constants.HOUR;
+
+  // Result codes returned by sendMsg()
   /** The mail was sent */
   public static final int RESULT_OK = 0;
   /** The mail was not sent, retry may succeed */
@@ -53,15 +59,33 @@ public class SmtpClient extends TransferProtocolClient  {
   /** The mail was not sent, retry is unlikely to succeed */
   public static final int RESULT_FAIL = 2;
 
-  static final int RESP_POS = 1;
-  static final int RESP_INTER = 2;
-  static final int RESP_TRANS = 3;
-  static final int RESP_PERM = 4;
+  // SMTP reply codes
+  static final int RESP_SYSTEM_STATUS = 211;
+  static final int RESP_HELP_MESSAGE = 214;
+  static final int RESP_SERVICE_READY = 220;
+  static final int RESP_SERVICE_CLOSING_TRANSMISSION_CHANNEL = 221;
+  static final int RESP_ACTION_OK = 250;
+  static final int RESP_USER_NOT_LOCAL_WILL_FORWARD = 251;
+  static final int RESP_CANNOT_VRFY_WILL_ATTEMPT_DELIVERY = 252;
+  static final int RESP_START_MAIL_INPUT = 354;
+  static final int RESP_SERVICE_NOT_AVAILABLE = 421;
+  static final int RESP_ACTION_NOT_TAKEN = 450;
+  static final int RESP_ACTION_ABORTED = 451;
+  static final int RESP_INSUFFICIENT_STORAGE = 452;
+  static final int RESP_UNRECOGNIZED_COMMAND = 500;
+  static final int RESP_SYNTAX_ERROR_IN_ARGUMENTS = 501;
+  static final int RESP_COMMAND_NOT_IMPLEMENTED = 502;
+  static final int RESP_BAD_COMMAND_SEQUENCE = 503;
+  static final int RESP_COMMAND_NOT_IMPLEMENTED_FOR_PARAMETER = 504;
+  static final int RESP_MAILBOX_UNAVAILABLE = 550;
+  static final int RESP_USER_NOT_LOCAL = 551;
+  static final int RESP_STORAGE_ALLOCATION_EXCEEDED = 552;
+  static final int RESP_MAILBOX_NAME_NOT_ALLOWED = 553;
+  static final int RESP_TRANSACTION_FAILED = 554;
 
   private String smtpHost;
   private int smtpPort;
   private String heloName;
-  private int respType;
 
   SmtpClient() {
   }
@@ -76,6 +100,13 @@ public class SmtpClient extends TransferProtocolClient  {
     super(smtpHost, smtpPort);
     this.smtpHost = smtpHost;
     this.smtpPort = smtpPort;
+    serverSocket.setSoTimeout(getSoTimeout());
+  }
+
+  public int getSoTimeout() {
+    long time = Configuration.getTimeIntervalParam(PARAM_SMTP_DATA_TIMEOUT,
+						   DEFAULT_SMTP_DATA_TIMEOUT);
+    return time >= Integer.MAX_VALUE ? Integer.MAX_VALUE : (int)time;
   }
 
   private String getHeloName() {
@@ -94,7 +125,7 @@ public class SmtpClient extends TransferProtocolClient  {
       try {
 	host = IPAddr.getLocalHost().getHostName();
       } catch (UnknownHostException ex) {
-	log.error("Couldn't determine HELO name, using \"LOCKSS cache\"", ex);
+	log.warning("Couldn't determine HELO name, using \"LOCKSS cache\"");
 	return null;
       }
     }
@@ -116,26 +147,29 @@ public class SmtpClient extends TransferProtocolClient  {
     }
     try {
       int resp = resp();
-      if (resp != 220) return RESULT_RETRY;
+      if (resp != RESP_SERVICE_READY) return RESULT_RETRY;
 
       resp = sendResp("HELO " + getHeloName());
-      if (resp != 250) return RESULT_RETRY;
+      if (resp != RESP_ACTION_OK) return RESULT_RETRY;
 
       resp = sendResp("MAIL FROM: <" + sender + ">");
-      if (resp != 250) return getErrResult();
+      if (resp != RESP_ACTION_OK) return getErrResult(resp);
 
       resp = sendResp("RCPT TO: <" + recipient + ">");
-      if (!(resp == 250 || resp == 251 || resp == 252)) {
-	return getErrResult();
+      if (!(resp == RESP_ACTION_OK ||
+	    resp == RESP_USER_NOT_LOCAL_WILL_FORWARD ||
+	    resp == RESP_CANNOT_VRFY_WILL_ATTEMPT_DELIVERY)) {
+	return getErrResult(resp);
       }
       resp = sendResp("DATA");
-      if (resp != 354) return getErrResult();
+      if (resp != RESP_START_MAIL_INPUT) return getErrResult(resp);
 
       sendBody(serverOutput, body);
       resp = resp();
-      if (resp != 250) return getErrResult();
+      if (resp != RESP_ACTION_OK) return getErrResult(resp);
       result = RESULT_OK;
     } catch (IOException e) {
+      log.warning("Sending SMTP message", e);
       if (result < 0) {
 	result = RESULT_RETRY;
       }
@@ -157,28 +191,18 @@ public class SmtpClient extends TransferProtocolClient  {
     if (log.isDebug3()) {
       log.debug3("Response: " + getResponseString());
     }
-    respType = respType(resp);
     return resp;
   }
 
-  int respType(int resp) {
-    switch (resp / 100) {
-    case 2: return RESP_POS;
-    case 3: return RESP_INTER;
-    case 4: return RESP_TRANS;
-    case 5: return RESP_PERM;
-    default: return RESP_PERM;
-    }
-  }
-
-  int getErrResult() {
+  int getErrResult(int resp) {
     if (log.isDebug3()) {
-      log.debug3("getErrResult(" + respType + ")");
+      log.debug3("getErrResult(" + resp + ")");
     }
-    switch (respType) {
-    case RESP_TRANS: return RESULT_RETRY;
-    case RESP_PERM: return RESULT_FAIL;
+    switch (resp / 100) {
+    case 4: return RESULT_RETRY;
+    case 5: return RESULT_FAIL;
     default:
+      log.warning("Unexpected SMTP error reply: " + resp);
       return RESULT_FAIL;
     }
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestSmtpClient.java,v 1.1 2004-07-12 06:11:23 tlipkis Exp $
+ * $Id: TestSmtpClient.java,v 1.2 2004-08-09 02:55:34 tlipkis Exp $
  */
 
 /*
@@ -67,16 +67,21 @@ public class TestSmtpClient extends LockssTestCase {
     assertEquals(22, client.port);
   }
 
-  public void testRespType() throws IOException {
-    assertEquals(SmtpClient.RESP_POS, client.respType(200));
-    assertEquals(SmtpClient.RESP_POS, client.respType(201));
-    assertEquals(SmtpClient.RESP_POS, client.respType(299));
-    assertEquals(SmtpClient.RESP_INTER, client.respType(300));
-    assertEquals(SmtpClient.RESP_INTER, client.respType(399));
-    assertEquals(SmtpClient.RESP_TRANS, client.respType(400));
-    assertEquals(SmtpClient.RESP_PERM, client.respType(500));
-    assertEquals(SmtpClient.RESP_PERM, client.respType(100));
-    assertEquals(SmtpClient.RESP_PERM, client.respType(600));
+  public void testGetErrResult() throws IOException {
+    assertEquals(SmtpClient.RESULT_FAIL, client.getErrResult(200));
+    assertEquals(SmtpClient.RESULT_RETRY, client.getErrResult(400));
+    assertEquals(SmtpClient.RESULT_RETRY, client.getErrResult(401));
+    assertEquals(SmtpClient.RESULT_RETRY, client.getErrResult(499));
+    assertEquals(SmtpClient.RESULT_FAIL, client.getErrResult(500));
+    assertEquals(SmtpClient.RESULT_FAIL, client.getErrResult(599));
+  }
+
+  public void testSoTimeout() throws IOException {
+    ConfigurationUtil.setFromArgs(SmtpClient.PARAM_SMTP_DATA_TIMEOUT,
+				  "12m");
+    client = new MockSmtpClient("hostx");
+    MyMockSocket sock = (MyMockSocket)client.getServerSocket();
+    assertEquals(12 * Constants.MINUTE, sock.soTimeout);
   }
 
   public void testSendBodyDot() throws IOException {
@@ -126,12 +131,24 @@ public class TestSmtpClient extends LockssTestCase {
     assertEquals(expectedMessage, client.getServerInput());
   }
 
+  public void testTimeout() throws Exception {
+    client.setResponses("220\n250\n250\n250\n354\n250\n");
+    client.setNThrow(3);
+    int res = client.sendMsg("source@s.com", "target@t.com", "test message");
+    assertEquals(SmtpClient.RESULT_RETRY, res);
+    String expectedMessage = "HELO foohost\r\n" +
+                             "MAIL FROM: <source@s.com>\r\n" +
+                             "QUIT\r\n";
+    assertEquals(expectedMessage, client.getServerInput());
+  }
+
   class MockSmtpClient extends SmtpClient {
     String host;
     int port;
     String responses;
     ByteArrayOutputStream baos;
     boolean isOpen;
+    int nThrow = -1;
 
     MockSmtpClient(String smtpHost)
 	throws IOException {
@@ -148,6 +165,7 @@ public class TestSmtpClient extends LockssTestCase {
       this.host = server;
       this.port = port;
       baos = new ByteArrayOutputStream(1024);
+      serverSocket = new MyMockSocket();
       serverOutput = new PrintStream(baos);
       ByteArrayInputStream bais = new ByteArrayInputStream("".getBytes());
       serverInput = new BufferedInputStream(bais);
@@ -162,6 +180,19 @@ public class TestSmtpClient extends LockssTestCase {
       isOpen = false;
     }
 
+    public void setNThrow(int n) {
+      nThrow = n;
+    }
+
+    public int readServerResponse() throws IOException {
+      if (nThrow > 0) {
+	if (--nThrow == 0) {
+	  throw new InterruptedIOException("Expected exception");
+	}
+      }
+      return super.readServerResponse();
+    }
+
     void setResponses(String responses) {
       ByteArrayInputStream bais =
 	new ByteArrayInputStream(responses.getBytes());
@@ -171,6 +202,17 @@ public class TestSmtpClient extends LockssTestCase {
     String getServerInput() {
       serverOutput.flush();
       return baos.toString();
+    }
+
+    Socket getServerSocket() {
+      return serverSocket;
+    }
+  }
+
+  class MyMockSocket extends MockSocket {
+    int soTimeout = -1;
+    public void setSoTimeout(int timeout) throws SocketException {
+      soTimeout = timeout;
     }
   }
 }
