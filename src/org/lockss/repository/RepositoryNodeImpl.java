@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.30 2003-06-20 22:34:52 claire Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.31 2003-07-10 02:29:35 clairegriffin Exp $
  */
 
 /*
@@ -325,18 +325,27 @@ public class RepositoryNodeImpl implements RepositoryNode {
       }
 
       // rename current
+      String err;
       if (currentCacheFile.exists()) {
-        if (!currentCacheFile.renameTo(getVersionedCacheFile(currentVersion)) ||
-            !currentPropsFile.renameTo(getVersionedPropsFile(currentVersion))) {
-          logger.error("Couldn't rename current versions: "+url);
-          throw new LockssRepository.RepositoryStateException("Couldn't rename current versions.");
+        if (!currentCacheFile.renameTo(getVersionedCacheFile(currentVersion))) {
+          err = "Couldn't rename current versions: "+url;
+          logger.error(err);
+          throw new LockssRepository.RepositoryStateException(err);
+        }
+        if (currentPropsFile.exists()) {
+          if(!currentPropsFile.renameTo(getVersionedPropsFile(currentVersion))) {
+            err = "Couldn't rename current version prop file: " + url;
+            logger.error(err);
+            throw new LockssRepository.RepositoryStateException(err);
+          }
         }
       }
       // rename new
       if (!tempCacheFile.renameTo(currentCacheFile) ||
           !tempPropsFile.renameTo(currentPropsFile)) {
-        logger.error("Couldn't rename temp versions: "+url);
-        throw new LockssRepository.RepositoryStateException("Couldn't rename temp versions.");
+        err = "Couldn't rename temp versions: "+url;
+        logger.error(err);
+        throw new LockssRepository.RepositoryStateException(err);
       }
 
       currentVersion++;
