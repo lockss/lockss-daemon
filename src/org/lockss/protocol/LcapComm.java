@@ -1,5 +1,5 @@
 /*
- * $Id: LcapComm.java,v 1.32 2003-05-22 01:20:29 tal Exp $
+ * $Id: LcapComm.java,v 1.33 2003-05-26 03:48:25 tal Exp $
  */
 
 /*
@@ -354,9 +354,6 @@ public class LcapComm extends BaseLockssManager {
     } else {
       log.warning("Message received for unregistered protocol: " + proto);
     }
-//      for (Iterator iter = messageHandlers.iterator(); iter.hasNext();) {
-//        runHandler((MessageHandler)iter.next(), ld);
-//      }
   }
 
   /**
@@ -374,20 +371,15 @@ public class LcapComm extends BaseLockssManager {
 	new RuntimeException("Protocol " + protocol + " already registered");
     }
     messageHandlers.set(protocol, handler);
-//      if (!messageHandlers.contains(handler)) {
-//        messageHandlers.add(handler);
-//      }
   }
 
   /**
    * Unregister a {@link LcapComm.MessageHandler}.
    * @param protocol an int representing the protocol
-   * @param handler MessageHandler to remove
    */
-  public void unregisterMessageHandler(int protocol, MessageHandler handler) {
+  public void unregisterMessageHandler(int protocol) {
     if (protocol < messageHandlers.size());
     messageHandlers.set(protocol, null);
-//      messageHandlers.remove(handler);
   }
 
 
