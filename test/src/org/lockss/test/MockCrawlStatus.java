@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawlStatus.java,v 1.7 2005-01-12 02:14:41 troberts Exp $
+ * $Id: MockCrawlStatus.java,v 1.8 2005-01-14 01:37:41 troberts Exp $
  */
 
 /*
@@ -40,10 +40,14 @@ public class MockCrawlStatus extends Crawler.Status {
 
   String crawlStatus = null;
   boolean crawlEndSignaled = false;
+  long numParsed = 0;
   long numFetched = 0;
   long numErrors = 0;
+  long numNotModified = 0;
 
   Set urlsFetched = null;
+  Set urlsParsed = null;
+  Set urlsNotModified = null;
   Map errorUrls = null;
 
 
@@ -90,11 +94,45 @@ public class MockCrawlStatus extends Crawler.Status {
     this.numErrors = num;
   }
 
+  public void setUrlsNotModified(Set urlsNotModified) {
+    this.urlsNotModified = urlsNotModified;
+  }
+
+  public Set getUrlsParsed() {
+    return urlsParsed;
+  }
+
+  public void setUrlsParsed(Set urlsParsed) {
+    this.urlsParsed = urlsParsed;
+  }
+
+  public Set getUrlsNotModified() {
+    return urlsNotModified;
+  }
+
+  public void setNumNotModified(int numNotModified) {
+    this.numNotModified = numNotModified;
+  }
+
+  public long getNumNotModified() {
+    if (urlsNotModified != null) {
+      return urlsNotModified.size();
+    }
+    return numNotModified;
+  }
+
   public long getNumUrlsWithErrors() {
     if (errorUrls != null) {
       return urlsWithErrors.size();
     }
     return numErrors;
+  }
+
+  public long getNumParsed() {
+    if (urlsParsed != null) {
+      return urlsParsed.size();
+    }
+    return numParsed;
   }
 
   public Map getUrlsWithErrors() {

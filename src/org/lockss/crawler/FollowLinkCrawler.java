@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.18 2005-01-07 01:22:34 troberts Exp $
+ * $Id: FollowLinkCrawler.java,v 1.19 2005-01-14 01:37:38 troberts Exp $
  */
 
 /*
@@ -394,7 +394,7 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
 	    if (extractedUrls.remove(url)){
 	      logger.debug3("Removing self reference in "+url+" from the extracted list");
 	    }
-	    crawlStatus.signalUrlParsed();
+	    crawlStatus.signalUrlParsed(uc.getUrl());
 	    parsedPages.add(uc.getUrl());
 	  }
 	}

@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatus.java,v 1.21 2005-01-12 02:12:40 troberts Exp $
+ * $Id: CrawlManagerStatus.java,v 1.22 2005-01-14 01:37:38 troberts Exp $
  */
 
 /*
@@ -181,19 +181,34 @@ public class CrawlManagerStatus implements StatusAccessor {
     row.put(START_TIME_COL_NAME, new Long(status.getStartTime()));
     row.put(END_TIME_COL_NAME, new Long(status.getEndTime()));
     row.put(NUM_URLS_FETCHED, 
-	    new StatusTable.Reference(new Long(status.getNumFetched()),
-				      "single_crawl_status", "fetched;"+idx));
+	    makeRefRow(status.getNumFetched(),
+		       "single_crawl_status", "fetched;"+idx));
 
     row.put(NUM_URLS_WITH_ERRORS, 
-	    new StatusTable.Reference(new Long(status.getNumUrlsWithErrors()),
-				      "single_crawl_status", "error;"+idx));
+	    makeRefRow(status.getNumUrlsWithErrors(),
+		       "single_crawl_status", "error;"+idx));
 
-    row.put(NUM_URLS_NOT_MODIFIED, new Long(status.getNumNotModified()));
-    row.put(NUM_URLS_PARSED, new Long(status.getNumParsed()));
+    row.put(NUM_URLS_NOT_MODIFIED, 
+	    makeRefRow(status.getNumNotModified(),
+		       "single_crawl_status", "not-modified;"+idx));
+    row.put(NUM_URLS_PARSED, 
+	    makeRefRow(status.getNumParsed(),
+		       "single_crawl_status", "parsed;"+idx));
     row.put(START_URLS,
 	    (StringUtil.separatedString(status.getStartUrls(), "\n")));
     row.put(CRAWL_STATUS, status.getCrawlStatus());
     return row;
+  }
+
+  /**
+   * Makes the proper reference object if value is != 0, otherwise just returns
+   * a Long
+   */
+  private Object makeRefRow(long value, String tableName, String key) {
+    if (value == 0) {
+      return new Long(0);
+    }
+    return new StatusTable.Reference(new Long(value), tableName, key);
   }
 
   public boolean requiresKey() {

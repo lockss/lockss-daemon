@@ -1,5 +1,5 @@
 /*
- * $Id: Crawler.java,v 1.25 2005-01-12 02:13:59 troberts Exp $
+ * $Id: Crawler.java,v 1.26 2005-01-14 01:37:39 troberts Exp $
  */
 
 /*
@@ -82,12 +82,6 @@ public interface Crawler {
   public int getType();
 
   /**
-   * Returns the starting urls for this crawler
-   * @return starting urls for this crawler
-   */
-//   public Collection getStartUrls();
-
-  /**
    * aborts the running crawl
    */
   public void abortCrawl();
@@ -108,8 +102,6 @@ public interface Crawler {
   public static class Status {
     protected long startTime = -1;
     protected long endTime = -1;
-    protected long numNotModified = 0;
-    protected long numParsed = 0;
     protected String crawlError = null;
     protected Collection startUrls = null;
     protected ArchivalUnit au = null;
@@ -118,6 +110,7 @@ public interface Crawler {
     protected Map urlsWithErrors = new HashMap();
     protected Set urlsFetched = new HashSet();
     protected Set urlsNotModified = new HashSet();
+    protected Set urlsParsed = new HashSet();
 
     public Status(ArchivalUnit au, Collection startUrls, int type) {
       this.au = au;
@@ -189,17 +182,25 @@ public interface Crawler {
       return urlsFetched;
     }
 
+    public Set getUrlsNotModified() {
+      return urlsNotModified;
+    }
+
+    public Set getUrlsParsed() {
+      return urlsParsed;
+    }
+
     /**
      * Return the number of urls that have been parsed by this crawler
      * @return number of urls that have been parsed by this crawler
      */
     public long getNumParsed() {
-      return numParsed;
+      return urlsParsed.size();
     }
 
-    public void signalUrlParsed() {
-      numParsed++;
-    }
+     public void signalUrlParsed(String url) {
+       urlsParsed.add(url);
+     }
     
     public Collection getStartUrls() {
       return startUrls;

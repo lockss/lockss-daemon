@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.29 2004-12-12 23:02:09 tlipkis Exp $
+ * $Id: TestNewContentCrawler.java,v 1.30 2005-01-14 01:37:40 troberts Exp $
  */
 
 /*
@@ -316,6 +316,66 @@ public class TestNewContentCrawler extends LockssTestCase {
     assertEquals(expectedStart, crawlStatus.getStartTime());
     assertEquals(expectedEnd, crawlStatus.getEndTime());
     assertEquals(5, crawlStatus.getNumFetched());
+    assertEquals(SetUtil.set(startUrl, url1, url2, url3, permissionPage),
+		 crawlStatus.getUrlsFetched());
+    assertEquals(4, crawlStatus.getNumParsed());
+  }
+
+  public void testGetStatusCrawlDoneNotModified() {
+    System.err.println("TEST START");
+    String url1 = "http://www.example.com/link1.html";
+    String url2 = "http://www.example.com/link2.html";
+    String url3 = "http://www.example.com/link3.html";
+
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    mau.addUrl(startUrl, true, true);
+    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1, url2, url3));
+    mau.addUrl(url1);
+//     mau.addUrl(url1, true, true);
+    mau.addUrl(url2);
+    mau.addUrl(url3);
+    crawlRule.addUrlToCrawl(url1);
+    crawlRule.addUrlToCrawl(url2);
+    crawlRule.addUrlToCrawl(url3);
+
+    long expectedStart = TimeBase.nowMs();
+    crawler.doCrawl();
+    long expectedEnd = TimeBase.nowMs();
+    Crawler.Status crawlStatus = crawler.getStatus();
+    assertEquals(expectedStart, crawlStatus.getStartTime());
+    assertEquals(expectedEnd, crawlStatus.getEndTime());
+    assertEquals(4, crawlStatus.getNumFetched());
+    assertEquals(1, crawlStatus.getNumNotModified());
+    assertEquals(SetUtil.set(url1, url2, url3, permissionPage),
+		 crawlStatus.getUrlsFetched());
+    assertEquals(SetUtil.set(startUrl), crawlStatus.getUrlsNotModified());
+    assertEquals(4, crawlStatus.getNumParsed());
+  }
+
+  public void testGetStatusCrawlDoneParsed() {
+    String url1 = "http://www.example.com/link1.html";
+    String url2 = "http://www.example.com/link2.html";
+    String url3 = "http://www.example.com/link3.html";
+
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    mau.addUrl(startUrl);
+    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1, url2, url3));
+    mau.addUrl(url1);
+    mau.addUrl(url2);
+    mau.addUrl(url3);
+    crawlRule.addUrlToCrawl(url1);
+    crawlRule.addUrlToCrawl(url2);
+    crawlRule.addUrlToCrawl(url3);
+
+    long expectedStart = TimeBase.nowMs();
+    crawler.doCrawl();
+    long expectedEnd = TimeBase.nowMs();
+    Crawler.Status crawlStatus = crawler.getStatus();
+    assertEquals(expectedStart, crawlStatus.getStartTime());
+    assertEquals(expectedEnd, crawlStatus.getEndTime());
+    assertEquals(5, crawlStatus.getNumFetched());
+    assertEquals(SetUtil.set(url1, url2, url3, startUrl),
+		 crawlStatus.getUrlsParsed());
     assertEquals(4, crawlStatus.getNumParsed());
   }
 
