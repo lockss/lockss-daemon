@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.47 2005-03-04 23:54:09 troberts Exp $
+ * $Id: BaseUrlCacher.java,v 1.48 2005-03-08 02:06:40 tlipkis Exp $
  */
 
 /*
@@ -201,6 +201,7 @@ public class BaseUrlCacher implements UrlCacher {
       if (headers.get("Set-Cookie") != null) {
 	logger.debug3("Found set-cookie header, refetching");
 	input.close();
+	input = null; // ensure don't reclose in finally if next line throws
 	input = getUncachedInputStream(lastModified);
 	if (input == null) {
 	  //this is odd if it happens.
