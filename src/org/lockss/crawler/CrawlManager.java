@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManager.java,v 1.10 2003-04-16 05:52:11 aalto Exp $
+ * $Id: CrawlManager.java,v 1.11 2003-06-17 21:20:54 troberts Exp $
  */
 
 /*
@@ -53,23 +53,17 @@ public interface CrawlManager {
   public void scheduleRepair(ArchivalUnit au, URL url,
 			     CrawlManager.Callback cb, Object cookie);
 
-  public void startNewContentCrawl(ArchivalUnit au, CrawlManager.Callback cb,
-                                   Object cookie);
-
-
   /**
-   * Returns true if there is an active crawl on the AU; can also trigger the
-   * beginning of a new content crawl if one hasn't happened recently.
+   * Starts a new content crawl
    *
    * @param au ArchivalUnit that the crawl manager should check
    * @param cb callback to be called when the crawler is done with the AU,
    * if not now
    * @param cookie cookie for the callback
-   * @return true if there is a crawl going on for that AU, false otherwise
    */
+  public void startNewContentCrawl(ArchivalUnit au, CrawlManager.Callback cb,
+                                   Object cookie);
 
-  public boolean isCrawlingAU(ArchivalUnit au,
-			      CrawlManager.Callback cb, Object cookie);
 
   public interface Callback {
     /**

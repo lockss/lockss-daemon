@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.33 2003-05-30 01:46:55 aalto Exp $
+ * $Id: CrawlManagerImpl.java,v 1.34 2003-06-17 21:20:54 troberts Exp $
  */
 
 /*
@@ -139,8 +139,8 @@ public class CrawlManagerImpl extends BaseLockssManager
    * @param cookie object that the callback needs to understand which
    * repair we're referring to.
    */
-  public void scheduleRepair(ArchivalUnit au, URL url, CrawlManager.Callback cb,
-                             Object cookie) {
+  public void scheduleRepair(ArchivalUnit au, URL url,
+			     CrawlManager.Callback cb, Object cookie) {
     //XXX check to make sure no other crawls are running and queue if they are
     if (au == null) {
       throw new IllegalArgumentException("Called with null AU");
@@ -149,59 +149,53 @@ public class CrawlManagerImpl extends BaseLockssManager
     }
 
     // check with regulator and start repair
-    ActivityRegulator.Lock lock =
-        theDaemon.getActivityRegulator(au).startCusActivity(
-        ActivityRegulator.REPAIR_CRAWL, au.makeCachedUrlSet(
-        new SingleNodeCachedUrlSetSpec(url.toString())),
-        repairCrawlExpiration);
+    ActivityRegulator.Lock lock = getRepairLock(au, url.toString());
     if (lock != null) {
-      CrawlThread crawlThread =
-          new CrawlThread(au, ListUtil.list(url.toString()),
-                          false, Deadline.MAX, ListUtil.list(cb), cookie, lock);
+      Crawler crawler = makeCrawler(au, ListUtil.list(url.toString()),
+				    Crawler.REPAIR, false);
+      CrawlThread crawlThread = new CrawlThread(crawler, Deadline.MAX,
+						ListUtil.list(cb),
+						cookie);
       crawlThread.start();
-      addCrawl(repairCrawls, au, crawlThread.getCrawler());
+      addCrawl(repairCrawls, au, crawler);
     } else {
       logger.debug3("Repair aborted due to activity lock.");
+      cb.signalCrawlAttemptCompleted(false, cookie);
     }
   }
 
-  //XXX should be obsolete
-  public boolean isCrawlingAU(ArchivalUnit au, CrawlManager.Callback cb,
-                              Object cookie) {
-    if (au == null) {
-      throw new IllegalArgumentException("Called with null AU");
-    }
-    logger.debug3("Checking to see if we should do a new content crawl on "+
-		  au);
-    NodeManager nodeManager = theDaemon.getNodeManager(au);
-    synchronized (activeCrawls) {
-      if (activeCrawls.contains(au)) {
-	logger.debug3("Already crawling "+ au
-		      +", not starting new content crawl");
-	return true;
-      }
-      if (au.shouldCrawlForNewContent(nodeManager.getAuState())) {
-	logger.debug3("No crawls for "+au+", scheduling new content crawl");
-	activeCrawls.add(au);
-	scheduleNewContentCrawl(au, cb, cookie, null);
-	return true;
-      }
-    }
-    return false;
+  private ActivityRegulator.Lock getRepairLock(ArchivalUnit au, String url) {
+    ActivityRegulator ar = theDaemon.getActivityRegulator(au);
+    return ar.startCusActivity(ActivityRegulator.REPAIR_CRAWL,
+			       createSingleNodeCachedUrlSet(au, url),
+			       repairCrawlExpiration);
+  }
+
+  private static CachedUrlSet createSingleNodeCachedUrlSet(ArchivalUnit au,
+							   String url) {
+    return au.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url));
   }
 
   public void startNewContentCrawl(ArchivalUnit au, CrawlManager.Callback cb,
                                    Object cookie) {
-    logger.debug3("Scheduling new content crawl for AU '" + au.getName() + "'");
-    ActivityRegulator.Lock lock =
-        theDaemon.getActivityRegulator(au).startAuActivity(
-        ActivityRegulator.NEW_CONTENT_CRAWL, contentCrawlExpiration);
+    if (au == null) {
+      throw new IllegalArgumentException("Called with null AU");
+    }
+    ActivityRegulator.Lock lock = getNewContentLock(au);
     if (lock != null) {
       activeCrawls.add(au);
       scheduleNewContentCrawl(au, cb, cookie, lock);
     } else {
-      logger.debug2("Couldn't schedule new content crawl due to activity lock.");
+      logger.debug2("Couldn't schedule new content crawl due "
+		    +"to activity lock.");
+      cb.signalCrawlAttemptCompleted(false, cookie);
     }
+  }
+
+  private ActivityRegulator.Lock getNewContentLock(ArchivalUnit au) {
+    ActivityRegulator ar = theDaemon.getActivityRegulator(au);
+    return ar.startAuActivity(ActivityRegulator.NEW_CONTENT_CRAWL,
+			      contentCrawlExpiration);
   }
 
   public boolean shouldRecrawl(ArchivalUnit au, NodeState ns) {
@@ -218,11 +212,12 @@ public class CrawlManagerImpl extends BaseLockssManager
       callBackList.add(cb);
     }
 
-    CrawlThread crawlThread =
-      new CrawlThread(au, au.getNewContentCrawlUrls(),
-		      true, Deadline.MAX, callBackList, cookie, lock);
+    Crawler crawler = makeCrawler(au, au.getNewContentCrawlUrls(),
+				  Crawler.NEW_CONTENT, true);
+    CrawlThread crawlThread = new CrawlThread(crawler, Deadline.MAX,
+					      callBackList, cookie);
     crawlThread.start();
-    addCrawl(newContentCrawls, au, crawlThread.getCrawler());
+    addCrawl(newContentCrawls, au, crawler);
   }
 
   private void addCrawl(Map crawlMap, ArchivalUnit au, Crawler crawler) {
@@ -246,29 +241,25 @@ public class CrawlManagerImpl extends BaseLockssManager
     }
   }
 
+  protected Crawler makeCrawler(ArchivalUnit au, List urls,
+				int type, boolean followLinks) {
+    return new GoslingCrawlerImpl(au, urls, type, followLinks);
+  }
+
+
   public class CrawlThread extends Thread {
-    private ArchivalUnit au;
-    private List urls;
-    private boolean followLinks;
     private Deadline deadline;
     private List callbacks;
     private Object cookie;
     private Crawler crawler;
-    private ActivityRegulator.Lock activityLock;
 
-    private CrawlThread(ArchivalUnit au, List urls,
-			boolean followLinks, Deadline deadline,
-			List callbacks, Object cookie,
-                        ActivityRegulator.Lock lock) {
-      super(au.toString());
-      this.au = au;
-      this.urls = urls;
-      this.followLinks = followLinks;
+    private CrawlThread(Crawler crawler, Deadline deadline,
+			List callbacks, Object cookie) {
+      super(crawler.toString());
       this.deadline = deadline;
       this.callbacks = callbacks;
       this.cookie = cookie;
-      this.activityLock = lock;
-      crawler = new GoslingCrawlerImpl(au, urls, followLinks);
+      this.crawler = crawler;
     }
 
     public void run() {
@@ -280,31 +271,32 @@ public class CrawlManagerImpl extends BaseLockssManager
 		       +crawlPriority);
       }
       boolean crawlSucessful = crawler.doCrawl(deadline);
+      ArchivalUnit au = crawler.getAU();
       activeCrawls.remove(au);
-
+ 
       // if followLinks is true, assume it's a new content crawl
       // free activity regulator so polls can resume
-      if (followLinks) {
-        theDaemon.getActivityRegulator(au).auActivityFinished(
-            ActivityRegulator.NEW_CONTENT_CRAWL);
+      ActivityRegulator ar = theDaemon.getActivityRegulator(au);
+
+      if (crawler.getType() == Crawler.NEW_CONTENT) {
+        ar.auActivityFinished(ActivityRegulator.NEW_CONTENT_CRAWL);
       } else {
-        // otherwise, assume it's a repair crawl
-        String url = (String)urls.get(0);
-        theDaemon.getActivityRegulator(au).cusActivityFinished(
-            ActivityRegulator.REPAIR_CRAWL, au.makeCachedUrlSet(
-            new SingleNodeCachedUrlSetSpec(url)));
+	String url = (String)crawler.getStartUrls().get(0); //XXX hack
+        ar.cusActivityFinished(ActivityRegulator.REPAIR_CRAWL,
+			       createSingleNodeCachedUrlSet(au, url));
       }
 
-      if (callbacks != null) {
-        Iterator it = callbacks.iterator();
-        while (it.hasNext()) {
-          CrawlManager.Callback cb = (CrawlManager.Callback) it.next();
-          cb.signalCrawlAttemptCompleted(crawlSucessful, cookie);
-        }
-      }
+      doCallbacks(callbacks, crawlSucessful, cookie);
     }
-    public Crawler getCrawler() {
-      return crawler;
+  }
+  private void doCallbacks(List callbacks, boolean crawlSucessful,
+			   Object cookie) {
+    if (callbacks != null) {
+      Iterator it = callbacks.iterator();
+      while (it.hasNext()) {
+	CrawlManager.Callback cb = (CrawlManager.Callback) it.next();
+	cb.signalCrawlAttemptCompleted(crawlSucessful, cookie);
+      }
     }
   }
 
@@ -443,4 +435,5 @@ public class CrawlManagerImpl extends BaseLockssManager
       return num <= 0 ? null : new Long(num);
     }
   }
+
 }
