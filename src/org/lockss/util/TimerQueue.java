@@ -1,5 +1,5 @@
 /*
- * $Id: TimerQueue.java,v 1.7 2002-12-16 19:44:18 tal Exp $
+ * $Id: TimerQueue.java,v 1.8 2002-12-30 20:43:04 tal Exp $
  *
 
 Copyright (c) 2000-2002 Board of Trustees of Leland Stanford Jr. University,
@@ -54,10 +54,7 @@ public class TimerQueue implements Serializable {
     Request req = new Request(deadline, callback, cookie);
     req.deadline.registerCallback(req.deadlineCb);
     queue.put(req);
-    ensureQRunner();
-    if (timerThread != null) {
-      timerThread.interrupt();
-    }
+    startOrKickThread();
     return true;
   }
 
@@ -102,11 +99,13 @@ public class TimerQueue implements Serializable {
   }
 
   // tk add watchdog
-  synchronized void ensureQRunner() {
+  synchronized void startOrKickThread() {
     if (timerThread == null) {
       log.info("Starting thread");
       timerThread = new TimerThread("TimerQ");
       timerThread.start();
+    } else {
+      timerThread.interrupt();
     }
   }
 
