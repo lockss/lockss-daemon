@@ -1,5 +1,5 @@
 /*
- * $Id: LcapV1Comm.java,v 1.1 2003-03-19 07:55:49 tal Exp $
+ * $Id: LcapV1Comm.java,v 1.2 2003-03-21 07:28:08 tal Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.*;
 import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
+import org.lockss.plugin.*;
 import org.lockss.poller.PollManager;
 import org.apache.commons.collections.LRUMap;
 
@@ -44,6 +45,7 @@ import org.apache.commons.collections.LRUMap;
 // tk - decrement hop count
 // tk - send() call from poller (multicast, unicast to each)
 // tk - synchronization here and in PartnerList
+// tk - ratelimiter.event() where?
 
 /**
  * LcapV1Comm implements unicast routing parts of the LCAP V1 protocol.
@@ -52,31 +54,44 @@ import org.apache.commons.collections.LRUMap;
  */
 public class LcapV1Comm extends BaseLockssManager {
   static final String PREFIX = Configuration.PREFIX + "comm.v1";
-  static final String PARAM_PKTS_PER_INTERVAL = PREFIX + "packetsPerInterval";
-  static final String PARAM_PKT_INTERVAL = PREFIX + "packetInterval";
+  static final String SENDRATE_PREFIX = Configuration.PREFIX + "maxSendRate.";
+  static final String PARAM_PKTS_PER_INTERVAL = SENDRATE_PREFIX + "packets";
+  static final String PARAM_PKT_INTERVAL = SENDRATE_PREFIX + "interval";
+  static final String PARAM_BEACON_INTERVAL = PREFIX + "beacon.interval";
+  static final String PARAM_RECENT_MULTICAST_INTERVAL =
+    PREFIX + "recentMulticastInterval";
   static final String PARAM_PROB_PARTNER_ADD =
     PREFIX + "partnerAddProbability";
+  static final String PARAM_LOCAL_IPS = Configuration.PREFIX + "localIPs";
+
 
   static final int defaultPktsPerInterval = 40;
-  static final int defaultPktInterval = 10000;
+  static final int defaultPktInterval = 10 * Constants.SECOND;
 
   static Logger log = Logger.getLogger("V1Comm");
 
   private LcapComm comm;
+  private IdentityManager idMgr;
   private RateLimiter rateLimiter;
   private double probAddPartner;
+  private List localInterfaces;
+  private long beaconInterval = 0;
+  private Deadline beaconDeadline = Deadline.at(TimeBase.NEVER);;
   private PartnerList partnerList = new PartnerList();
+  private Configuration.Callback configCallback;
 
   public void startService() {
     super.startService();
     comm = getDaemon().getCommManager();
-    Configuration.registerConfigurationCallback(new Configuration.Callback() {
+    idMgr = getDaemon().getIdentityManager();
+    configCallback  = new Configuration.Callback() {
 	public void configurationChanged(Configuration oldConfig,
 					 Configuration newConfig,
 					 Set changedKeys) {
-	  setConfig(newConfig);
+	  setConfig(newConfig, changedKeys);
 	}
-      });
+      };
+    Configuration.registerConfigurationCallback(configCallback);
     comm.registerMessageHandler(LockssDatagram.PROTOCOL_LCAP,
 				new LcapComm.MessageHandler() {
 				    public void
@@ -87,20 +102,118 @@ public class LcapV1Comm extends BaseLockssManager {
 //      singleton.start();
   }
 
-  private void setConfig(Configuration config) {
-    long interval = config.getLong(PARAM_PKTS_PER_INTERVAL,
-				   defaultPktsPerInterval);
-    int limit = config.getInt(PARAM_PKT_INTERVAL, defaultPktInterval);
+  public void stopService() {
+    Configuration.unregisterConfigurationCallback(configCallback);
+    stopBeacon();
+    super.stopService();
+  }
+
+  private void setConfig(Configuration config, Set changedKeys) {
+    long interval = config.getTimeInterval(PARAM_PKTS_PER_INTERVAL,
+					   defaultPktsPerInterval);
+    int limit =
+      config.getInt(PARAM_PKT_INTERVAL, defaultPktInterval);
     if (rateLimiter == null || rateLimiter.getInterval() != interval ||
 	rateLimiter.getLimit() != limit) {
       rateLimiter = new RateLimiter(limit, interval);
     }
+    if (changedKeys.contains(PARAM_BEACON_INTERVAL)) {
+      beaconInterval = config.getTimeInterval(PARAM_BEACON_INTERVAL, 0);
+      if (beaconInterval != 0) {
+	ensureBeaconRunning();
+      } else {
+	stopBeacon();
+      }
+    }
     probAddPartner = (((double)config.getInt(PARAM_PROB_PARTNER_ADD, 0))
 		      / 100.0);
     partnerList.setConfig(config);
+
+    // make list of InetAddresses of local interfaces
+    if (localInterfaces == null || changedKeys.contains(PARAM_LOCAL_IPS)) {
+      String s = config.get(PARAM_LOCAL_IPS, "");
+      List ipStrings = StringUtil.breakAt(s, ';');
+      localInterfaces = new ArrayList();
+      for (Iterator iter = ipStrings.iterator(); iter.hasNext(); ) {
+	String ip = (String)iter.next();
+	try {
+	  InetAddress inet = InetAddress.getByName(ip);
+	  localInterfaces.add(inet);
+	} catch (UnknownHostException e) {
+	  log.warning("Couldn't parse local interface IP address: " + ip);
+	}
+      }
+      // if not specified, assume single interface is same as local identity
+      if (localInterfaces.isEmpty()) {
+	localInterfaces.add(getLocalIdentityAddr());
+      }
+    }
   }
 
-  // handle received messge.  do unicast/multicast routing, then send to
+  /** Multicast a message to all caches holding the ArchivalUnit.
+   * @param ld the datagram to send
+   * @param au archival unit for which this message is relevant.  Used to
+   * determine which multicast socket/port to send to.
+   * @throws IOException
+   */
+  public void send(LockssDatagram ld, ArchivalUnit au) throws IOException {
+    updateBeacon();
+    comm.send(ld, au);
+    doUnicast(ld, null, null);
+  }
+
+  /** Unicast a message to a single cache.
+   * @param ld the datagram to send
+   * @param au archival unit for which this message is relevant.  Used to
+   * determine which multicast socket/port to send to.
+   * @param id the identity of the cache to which to send the message
+   * @throws IOException
+   */
+  public void sendTo(LockssDatagram ld, ArchivalUnit au, LcapIdentity id)
+      throws IOException {
+    updateBeacon();
+    comm.sendTo(ld, au, id);
+  }
+
+  /** Multicast a message to all caches holding the ArchivalUnit.
+   * @param msg the message to send
+   * @param au archival unit for which this message is relevant.  Used to
+   * determine which multicast socket/port to send to.
+   * @deprecated Use {@link #send(LockssDatagram, ArchivalUnit)}
+   * @throws IOException
+   */
+  public void send(LcapMessage msg, ArchivalUnit au) throws IOException {
+    LockssDatagram dg = new LockssDatagram(LockssDatagram.PROTOCOL_LCAP,
+					   msg.encodeMsg());
+    // set hop count
+    comm.send(dg, au);
+  }
+
+  /** Unicast a message to a single cache.
+   * @param msg the message to send
+   * @param au archival unit for which this message is relevant.  Used to
+   * determine which multicast socket/port to send to.
+   * @param id the identity of the cache to which to send the message
+   * @deprecated Use {@link #sendTo(LockssDatagram, ArchivalUnit,
+   * LcapIdentity)}
+   * @throws IOException
+   */
+  public void sendMessageTo(LcapMessage msg, ArchivalUnit au,
+			    LcapIdentity id)
+      throws IOException {
+    LockssDatagram dg = new LockssDatagram(LockssDatagram.PROTOCOL_LCAP,
+					   msg.encodeMsg());
+    // set hop count
+    comm.sendTo(dg, au, id);
+  }
+
+  private void updateBeacon() {
+    if (beaconInterval != 0) {
+      beaconDeadline.expireIn(beaconInterval);
+    }
+  }
+
+  // handle received message.  do unicast/multicast routing, then send to
   // poll manager
   void processIncomingMessage(LockssReceivedDatagram dg) {
     LcapMessage msg;
@@ -124,19 +237,18 @@ public class LcapV1Comm extends BaseLockssManager {
     InetAddress originator = msg.getOriginAddr();
     if (isEligibleToForward(dg, msg)) {
       if (dg.isMulticast()) {
-	partnerList.removePartner(sender);
+	partnerList.multicastPacketReceivedFrom(sender);
 	if (!sender.equals(originator)) {
 	  partnerList.addPartner(originator, probAddPartner);
 	}
-	doUnicast(dg, msg, sender, originator);
+	doUnicast(dg, sender, originator);
       } else {
 	partnerList.addPartner(sender, 1.0);
 	partnerList.addPartner(originator, probAddPartner);
 	doMulticast(dg, msg);
-	doUnicast(dg, msg, sender, originator);
+	doUnicast(dg, sender, originator);
       }
     }
-    partnerList.packetReceivedFrom(sender);
   }
 
 
@@ -172,14 +284,38 @@ public class LcapV1Comm extends BaseLockssManager {
     }
   }
 
-  void doUnicast(LockssDatagram dg, LcapMessage msg,
+  // true if either the packet's source address is one of my interfaces,
+  // or if I am (my identity is) the originator
+  boolean didISend(LockssReceivedDatagram dg, LcapMessage msg) {
+    if (msg.getOriginAddr().equals(getLocalIdentityAddr())) {
+      return true;
+    }
+    if (localInterfaces != null) {
+      InetAddress sender = dg.getSender();
+      for (Iterator iter = localInterfaces.iterator(); iter.hasNext(); ) {
+	if (sender.equals((InetAddress)iter.next())) {
+	  return true;
+	}
+      }
+    }      
+    return false;
+  }
+
+  /** Unicast to each of our partners.  Don't send the message if either
+   * the seonder or the originator is us.  Either or both of sender and
+   * originator may be null to disable this test.
+   */
+  void doUnicast(LockssDatagram dg,
 		 InetAddress sender, InetAddress originator) {
     Set partners = partnerList.getPartners();
-    if (partners.contains(getLocalIP())) {
-      log.warning("Local IP found in partner list: " + getLocalIP());
+    if (partners.contains(getLocalIdentityAddr())) {
+      log.warning("Local IP found in partner list: " + getLocalIdentityAddr());
+      partners.remove(getLocalIdentityAddr());
     }
     for (Iterator iter = partners.iterator(); iter.hasNext(); ) {
       InetAddress part = (InetAddress)iter.next();
+      // *** Either or both of sender and originator may be null here,
+      //     so equals() will be false. ***
       if (!(part.equals(sender) || part.equals(originator))) {
 	try {
 	  comm.sendTo(dg, part);
@@ -199,18 +335,68 @@ public class LcapV1Comm extends BaseLockssManager {
     }
   }
 
-
-  // tk - to be implemented
-
-  InetAddress getLocalIP() {
-    return null;
+  InetAddress getLocalIdentityAddr() {
+    try {
+      return idMgr.getLocalIdentity().getAddress();
+    } catch (UnknownHostException e) {
+      // can't happen
+      return null;
+    }
   }
 
-  // Should this test originator or sender?
-  // Is it enough to test that against the local identity's ip, or should
-  // we check all local IP addrs?
-  boolean didISend(LockssReceivedDatagram dg, LcapMessage msg) {
-    return false;
+  private BeaconThread beaconThread;
+
+  synchronized void stopBeacon() {
+    if (beaconThread != null) {
+      log.info("Stopping beacon");
+      beaconThread.stopBeacon();
+      beaconThread = null;
+    }
   }
 
+  // tk add watchdog
+  synchronized void ensureBeaconRunning() {
+    if (beaconThread == null) {
+      log.info("Starting beacon");
+      beaconThread = new BeaconThread("Beacon");
+      beaconThread.start();
+    }
+  }
+
+  // Beacon thread
+  private class BeaconThread extends Thread {
+    private boolean goOn = false;
+
+    private BeaconThread(String name) {
+      super(name);
+    }
+
+    public void run() {
+//       if (beaconPriority > 0) {
+// 	Thread.currentThread().setPriority(beaconPriority);
+//       }
+      goOn = true;
+
+      while (goOn) {
+	try {
+	  beaconDeadline.sleep();
+	  if (beaconDeadline.expired()) {
+	    log.debug3("Beacon send");
+// 	    sendNoop();
+	    beaconDeadline.expireIn(beaconInterval);
+	  }
+	} catch (InterruptedException e) {
+	  // no action - expected when stopping
+	} catch (Exception e) {
+	  log.error("Unexpected exception caught in Beacon thread", e);
+	}
+      }
+      beaconThread = null;
+    }
+
+    private void stopBeacon() {
+      goOn = false;
+      this.interrupt();
+    }
+  }
 }
