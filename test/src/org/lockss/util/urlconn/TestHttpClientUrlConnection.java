@@ -1,5 +1,5 @@
 /*
- * $Id: TestHttpClientUrlConnection.java,v 1.9 2004-03-27 06:23:26 tlipkis Exp $
+ * $Id: TestHttpClientUrlConnection.java,v 1.10 2004-06-01 08:36:35 tlipkis Exp $
  */
 
 /*
@@ -58,7 +58,7 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     client = new MockHttpClient();
     conn = newConn(urlString);
     method = conn.getMockMethod();
-  }  
+  }
 
   public void tearDown() throws Exception {
   }
@@ -70,7 +70,7 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
   public void testPred() {
     assertTrue(conn.isHttp());
     assertTrue(conn.canProxy());
-  }    
+  }
 
   public void testMalformedUrl() throws Exception {
     try {
@@ -81,10 +81,10 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
       newConn("http://foo.bar/a<");
       fail("Failed to throw MalformedURLException");
     } catch (java.net.MalformedURLException e) {}
-  }    
+  }
 
   void assertProperException(Class cls, String msg, Exception origE) {
-    HttpRecoverableException re = 
+    HttpRecoverableException re =
       new HttpRecoverableException(origE.toString());
     IOException e = conn.exceptionFromRecoverableException(re);
     assertTrue("'" + e + "' is not an instance of " + cls.getName(),
@@ -191,7 +191,7 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     assertEquals("keep-alive", hdr.getValue());
     hdr = method.getRequestHeader("accept");
     assertEquals(HttpClientUrlConnection.ACCEPT_STRING, hdr.getValue());
-    
+
   }
 
   public void testResponseStream() throws Exception {
@@ -334,6 +334,33 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     assertEquals(301, conn.getResponseCode());
   }
 
+  public void xtestConnTimeout() throws Exception {
+    String url0 = "http://10.222.111.99:43215/";
+    String url = "http://sul-lockss28.stanford.edu:43215/";
+    LockssUrlConnectionPool pool = new LockssUrlConnectionPool();
+    pool.setConnectTimeout(600000);
+    pool.setDataTimeout(30000);
+
+    LockssUrlConnection conn;
+    HttpClient client = pool.getHttpClient();
+//     HttpClient client = new HttpClient();
+    conn = new HttpClientUrlConnection(LockssUrlConnection.METHOD_GET,
+				       url, client);
+    conn.execute();
+    log.debug("resp: " + conn.getResponseCode());
+    log.debug("respMsg: " + conn.getResponseMessage());
+    assertEquals(200, conn.getResponseCode());
+  }
+
+  public void xtestLegalUrl() throws Exception {
+    String url = "http://sul-lockss28.stanford.edu/fo|o.bar";
+    org.apache.commons.httpclient.URI u =
+      new org.apache.commons.httpclient.URI(url.toCharArray());
+    LockssUrlConnection conn;
+    HttpClient client = new HttpClient();
+    conn = new HttpClientUrlConnection(LockssUrlConnection.METHOD_GET,
+				       url, client);
+  }
 
   class MockHttpClient extends HttpClient {
     int res1 = -1;
@@ -341,7 +368,7 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     HostConfiguration hc = null;
 
     public int executeMethod(HttpMethod method)
-        throws IOException, HttpException  {
+	throws IOException, HttpException  {
       int mres = -1;
       if (method instanceof MyMockGetMethod) {
 	mres = ((MyMockGetMethod)method).getRes();
@@ -351,14 +378,14 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
 
     public int executeMethod(HostConfiguration hostConfiguration,
 			     HttpMethod method)
-        throws IOException, HttpException {
+	throws IOException, HttpException {
       hc = hostConfiguration;
       int mres = -1;
       if (method instanceof MyMockGetMethod) {
 	mres = ((MyMockGetMethod)method).getRes();
       }
       return (mres < 0) ? res2 : mres;
-    }    
+    }
 
     void setRes(int res1, int res2) {
       this.res1 = res1;
@@ -459,7 +486,7 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     void setResponseHeader(String name, String value) {
       respProps.put(name.toLowerCase(), value);
     }
-    public Header getResponseHeader(String headerName) {        
+    public Header getResponseHeader(String headerName) {
       String val = (String)respProps.get(headerName.toLowerCase());
       log.debug(headerName + ": " + val);
       if (val != null) {
@@ -467,7 +494,7 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
       }
       return null;
     }
-    public Header[] getRequestHeaders() { 
+    public Header[] getRequestHeaders() {
       Header[] res = new Header[respProps.size()];
       int ix = 0;
       for (Iterator iter = respProps.keySet().iterator(); iter.hasNext(); ) {
@@ -487,7 +514,7 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
       }
       return hdrs;
     }
-	
+
     public int getResponseContentLength() {
       return contentLength;
     }
