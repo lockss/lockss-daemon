@@ -1,5 +1,5 @@
 /*
- * $Id: TestSchedule.java,v 1.1 2003-11-11 20:30:59 tlipkis Exp $
+ * $Id: TestSchedule.java,v 1.1.2.1 2003-11-17 22:49:51 tlipkis Exp $
  */
 
 /*
@@ -52,6 +52,16 @@ public class TestSchedule extends LockssTestCase {
   public void tearDown() throws Exception {
     TimeBase.setReal();
     super.tearDown();
+  }
+
+  public void testGetOverrunTasks() {
+    List tasks = ListUtil.list(null, null);
+    Schedule sched = new Schedule(null);
+    assertNull(sched.getOverrunTasks());
+    sched = new Schedule(null, null);
+    assertNull(sched.getOverrunTasks());
+    sched = new Schedule(null, tasks);
+    assertEquals(tasks, sched.getOverrunTasks());
   }
 
   public void testGetEvents() {
