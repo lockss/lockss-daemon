@@ -1,5 +1,5 @@
 /*
- * $Id: TestHashService.java,v 1.1 2003-03-27 03:04:16 tal Exp $
+ * $Id: TestHashService.java,v 1.2 2003-03-29 20:27:15 tal Exp $
  */
 
 /*
@@ -75,6 +75,7 @@ public class TestHashService extends LockssTestCase {
     ConfigurationUtil.setCurrentConfigFromProps(props);
     assertEquals(10, svc.padEstimate(0));
     assertEquals(11, svc.padEstimate(1));
+    assertEquals(250, svc.padEstimate(200));
     assertEquals(130, svc.padEstimate(100));
   }
 }
