@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyManager.java,v 1.8 2003-04-14 23:14:52 tal Exp $
+ * $Id: ProxyManager.java,v 1.9 2003-04-17 21:47:30 tal Exp $
  */
 
 /*
@@ -96,6 +96,7 @@ public class ProxyManager extends JettyManager {
     start = config.getBoolean(PARAM_START, true);
     if (changedKeys.contains(PARAM_IP_INCLUDE) ||
 	changedKeys.contains(PARAM_IP_EXCLUDE) ||
+	changedKeys.contains(PARAM_PLATFORM_ACCESS_SUBNET) ||
 	changedKeys.contains(PARAM_LOG_FORBIDDEN)) {
       includeIps = config.get(PARAM_IP_INCLUDE,
 			      config.get(PARAM_PLATFORM_ACCESS_SUBNET, ""));
