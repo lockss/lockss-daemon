@@ -40,7 +40,6 @@ import org.lockss.plugin.*;
 import org.lockss.repository.TestLockssRepositoryServiceImpl;
 
 public class TestHighWireArchivalUnit extends LockssTestCase {
-  public static final long WEEK_MS = 1000 * 60 * 60 * 24 * 7;
   private MockLockssDaemon theDaemon = new MockLockssDaemon();
   private MockArchivalUnit mau;
 
@@ -141,7 +140,7 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
     ArchivalUnit hwAu =
       makeAU(new URL("http://shadow1.stanford.edu/"), 322);
 
-    AuState aus = new MockAuState(null, 4 * WEEK_MS, -1, -1);
+    AuState aus = new MockAuState(null, 4 * Constants.WEEK, -1, -1);
 
     assertTrue(hwAu.shouldCrawlForNewContent(aus));
   }

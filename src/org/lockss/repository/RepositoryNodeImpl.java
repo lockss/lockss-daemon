@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.15 2003-02-26 02:19:27 aalto Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.16 2003-03-08 02:18:57 tal Exp $
  */
 
 /*
@@ -35,16 +35,15 @@ package org.lockss.repository;
 import java.io.*;
 import java.util.*;
 import java.net.MalformedURLException;
-import org.lockss.util.Logger;
+import org.lockss.util.*;
 import org.lockss.daemon.CachedUrlSetSpec;
-import org.lockss.util.Deadline;
 
 /**
  * RepositoryNode is used to store the contents and
  * meta-information of urls being cached.
  */
 public class RepositoryNodeImpl implements RepositoryNode {
-  static final int VERSION_TIMEOUT = 5*60*60*1000; // 5 hours
+  static final int VERSION_TIMEOUT = 5 * Constants.HOUR; // 5 hours
   static final String LOCKSS_VERSION_NUMBER = "org.lockss.version.number";
   static final String CONTENT_DIR_SUFFIX = ".content";
   static final String CURRENT_SUFFIX = ".current";

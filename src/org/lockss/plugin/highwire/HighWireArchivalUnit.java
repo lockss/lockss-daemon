@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireArchivalUnit.java,v 1.12 2003-03-08 01:52:54 troberts Exp $
+ * $Id: HighWireArchivalUnit.java,v 1.13 2003-03-08 02:18:57 tal Exp $
  */
 
 /*
@@ -55,7 +55,7 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
    */
   public static final String PARAM_HIGHWIRE_PAUSE_TIME =
       Configuration.PREFIX + "highwire.pause.time";
-  private static final long DEFAULT_PAUSE_TIME = 10000;
+  private static final long DEFAULT_PAUSE_TIME = 10 * Constants.SECOND;
 
   private static final String EXPECTED_URL_PATH = "/";
 
@@ -68,8 +68,6 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
   public static final String PARAM_HIGHWIRE_NC_INTERVAL =
       Configuration.PREFIX + "highwire.nc_interval";
   private static final long DEFAULT_NC_INTERVAL = 14;
-
-  private static final long DAY_MS = 1000 * 60 * 60 * 24;
 
   private long ncCrawlInterval;
 
@@ -202,7 +200,7 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
     long timeDiff = TimeBase.nowMs() - aus.getLastCrawlTime();
     logger.debug("Deciding whether to do new content crawl for "+aus);
     if (aus.getLastCrawlTime() == 0 || 
-	timeDiff > (ncCrawlInterval * DAY_MS)) {
+	timeDiff > (ncCrawlInterval * Constants.DAY)) {
       return true;
     }
     return false;

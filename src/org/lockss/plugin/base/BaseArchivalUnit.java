@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.6 2003-03-08 01:52:54 troberts Exp $
+ * $Id: BaseArchivalUnit.java,v 1.7 2003-03-08 02:18:57 tal Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ import org.lockss.daemon.*;
  */
 public abstract class BaseArchivalUnit implements ArchivalUnit {
   private static final int
-    DEFAULT_MILLISECONDS_BETWEEN_CRAWL_HTTP_REQUESTS = 10000;
+    DEFAULT_MILLISECONDS_BETWEEN_CRAWL_HTTP_REQUESTS = 10 * Constants.SECOND;
 
   private Plugin plugin;
   protected CrawlSpec crawlSpec;

@@ -23,7 +23,7 @@ public class TestPollManager extends LockssTestCase {
   private static String urlstr = "http://www.test3.org";
   private static String lwrbnd = "test1.doc";
   private static String uprbnd = "test3.doc";
-  private static long testduration = 60 * 60 *60 *1000; /* 60 min */
+  private static long testduration = Constants.HOUR;
 
   private static String[] testentries = {"test1.doc", "test2.doc", "test3.doc"};
   protected static ArchivalUnit testau;

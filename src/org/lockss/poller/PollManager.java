@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.41 2003-03-05 23:47:07 claire Exp $
+* $Id: PollManager.java,v 1.42 2003-03-08 02:18:57 tal Exp $
  */
 
 /*
@@ -68,14 +68,14 @@ public class PollManager  implements LockssManager {
 
   static final String PARAM_QUORUM = Configuration.PREFIX + "poll.quorum";
 
-  static long DEFAULT_NAMEPOLL_DEADLINE =  10 * 60 * 1000;      // 10 min
-  static long DEFAULT_CONTENTPOLL_MIN = 60 * 60 * 1000;         // 1 hr
-  static long DEFAULT_CONTENTPOLL_MAX = 5 * 24 * 60 *60 * 1000; // 5 days
+  static long DEFAULT_NAMEPOLL_DEADLINE =  10 * Constants.MINUTE;
+  static long DEFAULT_CONTENTPOLL_MIN = Constants.HOUR;
+  static long DEFAULT_CONTENTPOLL_MAX = 5 * Constants.DAY;
   static final int DEFAULT_QUORUM = 5;
 
-  static final long DEFAULT_RECENT_EXPIRATION = 24 * 60 * 60 * 1000; // 1 day
+  static final long DEFAULT_RECENT_EXPIRATION = Constants.DAY;
   static final long DEFAULT_REPLAY_EXPIRATION = DEFAULT_RECENT_EXPIRATION/2;
-  static final long DEFAULT_VERIFIER_EXPIRATION = 24 * 60 * 60 * 1000;
+  static final long DEFAULT_VERIFIER_EXPIRATION = Constants.DAY;
 
   private static PollManager theManager = null;
   private static Logger theLog=Logger.getLogger("PollManager");

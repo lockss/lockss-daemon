@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfiguration.java,v 1.11 2003-03-05 21:07:14 tal Exp $
+ * $Id: TestConfiguration.java,v 1.12 2003-03-08 02:18:57 tal Exp $
  */
 
 /*
@@ -180,7 +180,7 @@ public class TestConfiguration extends LockssTestCase {
     assertTrue(Configuration.getBooleanParam("prop.p3.a", false));
     assertEquals(12, Configuration.getIntParam("prop.p1"));
     assertEquals(554, Configuration.getIntParam("propnot.p1", 554));
-    assertEquals(1000*3600*24*14,
+    assertEquals(2 * Constants.WEEK,
 		 Configuration.getTimeIntervalParam("timeint", 554));
     assertEquals(554, Configuration.getTimeIntervalParam("noparam", 554));
   }

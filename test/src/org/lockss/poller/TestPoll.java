@@ -22,7 +22,7 @@ public class TestPoll extends LockssTestCase {
       "http://www.test1.org", "http://www.test2.org"};
   private static String lwrbnd = "test1.doc";
   private static String uprbnd = "test3.doc";
-  private static long testduration = 60 * 60 * 60 * 1000; /* 60 min */
+  private static long testduration = Constants.HOUR;
 
   protected static ArchivalUnit testau;
   private static IdentityManager idmgr;

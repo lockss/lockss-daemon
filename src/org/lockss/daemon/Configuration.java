@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.22 2003-03-08 01:44:32 troberts Exp $
+ * $Id: Configuration.java,v 1.23 2003-03-08 02:18:57 tal Exp $
  */
 
 /*
@@ -484,11 +484,11 @@ public abstract class Configuration {
       } else {
 	numstr = val.substring(0, len - 1);
 	switch (Character.toUpperCase(suffix)) {
-	case 'S': mult = 1000; break;
-	case 'M': mult = 1000 * 60; break;
-	case 'H': mult = 1000 * 60 * 60; break;
-	case 'D': mult = 1000 * 60 * 60 * 24; break;
-	case 'W': mult = 1000 * 60 * 60 * 24 * 7; break;
+	case 'S': mult = Constants.SECOND; break;
+	case 'M': mult = Constants.MINUTE; break;
+	case 'H': mult = Constants.HOUR; break;
+	case 'D': mult = Constants.DAY; break;
+	case 'W': mult = Constants.WEEK; break;
 	default:
 	  throw new NumberFormatException("Illegal time interval suffix");
 	}
