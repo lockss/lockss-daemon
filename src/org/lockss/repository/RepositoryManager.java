@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryManager.java,v 1.3 2004-10-18 03:40:32 tlipkis Exp $
+ * $Id: RepositoryManager.java,v 1.4 2005-01-05 09:46:13 tlipkis Exp $
  */
 
 /*
@@ -36,7 +36,7 @@ import java.util.*;
 import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
-import org.lockss.config.Configuration;
+import org.lockss.config.*;
 import org.lockss.daemon.*;
 
 /**
@@ -64,6 +64,8 @@ public class RepositoryManager
     GLOBAL_CACHE_PREFIX + "enabled";
   public static final boolean DEFAULT_GLOBAL_CACHE_ENABLED = false;
 
+  private PlatformInfo platInfo = PlatformInfo.getInstance();
+  private List repoList = Collections.EMPTY_LIST;
   int paramNodeCacheSize = DEFAULT_MAX_PER_AU_CACHE_SIZE;
   boolean paramIsGlobalNodeCache = DEFAULT_GLOBAL_CACHE_ENABLED;
   int paramGlobalNodeCacheSize = DEFAULT_MAX_GLOBAL_CACHE_SIZE;
@@ -72,6 +74,20 @@ public class RepositoryManager
 
   public void setConfig(Configuration config, Configuration oldConfig,
 			Configuration.Differences changedKeys) {
+    //  Build list of repositories from list of disk (fs) paths).  Needs to
+    //  be generalized if ever another repository implementation.
+    if (changedKeys.contains(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST)) {
+      List lst = new ArrayList();
+      String dspace =
+	config.get(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, "");
+      List paths = StringUtil.breakAt(dspace, ';');
+      if (paths != null) {
+	for (Iterator iter = paths.iterator(); iter.hasNext(); ) {
+	  lst.add("local:" + (String)iter.next());
+	}
+      }
+      repoList = lst;
+    }
     if (changedKeys.contains(PARAM_MAX_PER_AU_CACHE_SIZE)) {
       paramNodeCacheSize = config.getInt(PARAM_MAX_PER_AU_CACHE_SIZE,
 					 DEFAULT_MAX_PER_AU_CACHE_SIZE);
@@ -94,6 +110,37 @@ public class RepositoryManager
 	globalNodeCache.setMaxSize(paramGlobalNodeCacheSize);
       }
     }
+  }
+
+  /** Return list of known repository names.  Needs a registration
+   * mechanism if ever another repository implementation. */
+  public List getRepositoryList() {
+    return repoList;
+  }
+
+  public PlatformInfo.DF getRepositoryDF(String repoName) {
+    String path = LockssRepositoryImpl.getLocalRepositoryPath(repoName);
+    log.debug("path: " + path);
+    try {
+      return platInfo.getDF(path);
+    } catch (PlatformInfo.UnsupportedException e) {
+      return null;
+    }
+  }
+
+  public List findExistingRepositoriesFor(String auid) {
+    List res = null;
+    for (Iterator iter = getRepositoryList().iterator(); iter.hasNext(); ) {
+      String repoName = (String)iter.next();
+      String path = LockssRepositoryImpl.getLocalRepositoryPath(repoName);
+      if (LockssRepositoryImpl.doesAuDirExist(auid, path)) {
+	if (res == null) {
+	  res = new ArrayList();
+	}
+	res.add(repoName);
+      }
+    }
+    return res == null ? Collections.EMPTY_LIST : res;
   }
 
   public boolean isGlobalNodeCache() {

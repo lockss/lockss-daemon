@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.7 2005-01-04 02:49:19 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.8 2005-01-05 09:46:14 tlipkis Exp $
  */
 
 /*
@@ -113,12 +113,17 @@ public class ConfigManager implements LockssManager {
     CONFIG_FILE_AU_CONFIG,
   };
 
-
   // MUST pass in explicit log level to avoid recursive call back to
   // Configuration to get Config log level.  (Others should NOT do this.)
   protected static Logger log =
     Logger.getLoggerWithInitialLevel("Config",
 				     Logger.getInitialDefaultLevel());
+
+  /** A constant empty Configuration object */
+  public static Configuration EMPTY_CONFIGURATION = newConfiguration();
+  static {
+    EMPTY_CONFIGURATION.seal();
+  }
 
   protected LockssApp theApp = null;
 
@@ -128,12 +133,6 @@ public class ConfigManager implements LockssManager {
   private String groupName;     // daemon group name
 
   private String recentLoadError;
-
-  /** A constant empty Configuration object */
-  public static Configuration EMPTY_CONFIGURATION = newConfiguration();
-  static {
-    EMPTY_CONFIGURATION.seal();
-  }
 
   // Platform config
   private static Configuration platformConfig =
@@ -147,9 +146,9 @@ public class ConfigManager implements LockssManager {
 
   private HandlerThread handlerThread; // reload handler thread
 
-  private long reloadInterval = 10 * Constants.MINUTE;
-
   private ConfigCache configCache = new ConfigCache();
+
+  private long reloadInterval = 10 * Constants.MINUTE;
 
   public ConfigManager() {
     this(null, null);
@@ -309,6 +308,8 @@ public class ConfigManager implements LockssManager {
   void runCallbacks(Configuration newConfig,
 		    Configuration oldConfig,
 		    Configuration.Differences diffs) {
+    // run our own "callback"
+    configurationChanged(newConfig, oldConfig, diffs);
     // copy the list of callbacks as it could change during the loop.
     List cblist = new ArrayList(configChangedCallbacks);
     for (Iterator iter = cblist.iterator(); iter.hasNext();) {
@@ -447,6 +448,14 @@ public class ConfigManager implements LockssManager {
     runCallbacks(newConfig, oldConfig, diffs);
     haveConfig.fill();
     return true;
+  }
+
+  public void configurationChanged(Configuration config,
+				   Configuration oldConfig,
+				   Configuration.Differences changedKeys) {
+
+    reloadInterval = getTimeIntervalParam(PARAM_RELOAD_INTERVAL,
+					  DEFAULT_RELOAD_INTERVAL);
   }
 
   private void logConfigLoaded(Configuration newConfig,
@@ -613,22 +622,6 @@ public class ConfigManager implements LockssManager {
 
   boolean isUnitTesting() {
     return Boolean.getBoolean("org.lockss.unitTesting");
-  }
-
-  List getDiskSpacePaths() {
-    String dspace = currentConfig.get(PARAM_PLATFORM_DISK_SPACE_LIST);
-    return StringUtil.breakAt(dspace, ';');
-  }
-
-  public List getRepositoryList() {
-    List res = new ArrayList();
-    List paths = getDiskSpacePaths();
-    if (paths != null) {
-      for (Iterator iter = paths.iterator(); iter.hasNext(); ) {
-	res.add("local:" + (String)iter.next());
-      }
-    }
-    return res;
   }
 
   private void initCacheConfig(Configuration newConfig) {
@@ -995,9 +988,6 @@ public class ConfigManager implements LockssManager {
 	  }
 	  lastReload = TimeBase.nowMs();
 	  //	stopAndOrStartThings(true);
-	  reloadInterval = getTimeIntervalParam(PARAM_RELOAD_INTERVAL,
-						DEFAULT_RELOAD_INTERVAL);
-
 	} else {
 	  if (lastReload == 0) {
 	    if (tiny == null) {

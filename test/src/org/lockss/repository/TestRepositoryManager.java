@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryManager.java,v 1.3 2004-10-18 03:40:31 tlipkis Exp $
+ * $Id: TestRepositoryManager.java,v 1.4 2005-01-05 09:46:13 tlipkis Exp $
  */
 
 /*
@@ -82,6 +82,22 @@ public class TestRepositoryManager extends LockssTestCase {
 				  "37",
 				  "org.lockss.somethingElse", "bar");
     assertEquals(1, repo1.cnt);
+  }
+
+  public void testGetRepositoryList() throws Exception {
+    assertEmpty(mgr.getRepositoryList());
+    ConfigurationUtil.setFromArgs("org.lockss.platform.diskSpacePaths",
+				  "/foo/bar");
+    assertEquals(ListUtil.list("local:/foo/bar"), mgr.getRepositoryList());
+    ConfigurationUtil.setFromArgs("org.lockss.platform.diskSpacePaths",
+				  "/foo/bar;/cache2");
+    assertEquals(ListUtil.list("local:/foo/bar", "local:/cache2"),
+		 mgr.getRepositoryList());
+  }
+
+  public void testGetRepositoryDF () throws Exception {
+    PlatformInfo.DF df = mgr.getRepositoryDF("local:.");
+    assertNotNull(df);
   }
 
   class MyMockLockssRepositoryImpl extends LockssRepositoryImpl {

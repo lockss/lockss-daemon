@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryStatus.java,v 1.16 2005-01-04 03:01:38 tlipkis Exp $
+ * $Id: LockssRepositoryStatus.java,v 1.17 2005-01-05 09:46:13 tlipkis Exp $
  */
 
 /*
@@ -119,7 +119,7 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
     private List getRows(boolean includeInternalAus) {
       List rows = new ArrayList();
       TreeSet roots = new TreeSet();
-      List repos = daemon.getConfigManager().getRepositoryList();
+      List repos = daemon.getRepositoryManager().getRepositoryList();
       for (Iterator iter = repos.iterator(); iter.hasNext(); ) {
 	String repoSpec = (String)iter.next();
 	String path = LockssRepositoryImpl.getLocalRepositoryPath(repoSpec);
