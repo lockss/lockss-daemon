@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.2 2003-06-20 22:34:51 claire Exp $
+ * $Id: BaseCachedUrl.java,v 1.3 2003-09-13 00:46:42 troberts Exp $
  */
 
 /*
@@ -31,12 +31,12 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.plugin.base;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.util.Properties;
+import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.daemon.*;
 
 /** Abstract base class for CachedUrls.
  * Plugins may extend this to get some common CachedUrl functionality.
@@ -44,6 +44,11 @@ import org.lockss.plugin.*;
 public abstract class BaseCachedUrl implements CachedUrl {
   protected CachedUrlSet cus;
   protected String url;
+  protected static Logger logger = Logger.getLogger("CachedUrl");
+
+  private static final String PARAM_SHOULD_FILTER_HASH_STREAM =
+    Configuration.PREFIX+".baseCachedUrl.filterHashStream";
+
 
   /**
    * Must invoke this constructor in plugin subclass.
@@ -90,5 +95,32 @@ public abstract class BaseCachedUrl implements CachedUrl {
   public ArchivalUnit getArchivalUnit() {
     CachedUrlSet cus = getCachedUrlSet();
     return cus != null ? cus.getArchivalUnit() : null;
+  }
+
+  /**
+   * Currently simply returns 'openForReading()'.
+   * @return an InputStream
+   */
+  public InputStream openForHashing() {
+    if (Configuration.getBooleanParam(PARAM_SHOULD_FILTER_HASH_STREAM,
+				      true)) {
+      logger.debug3("Filtering on, returning filtered stream");
+      return getFilteredStream();
+    } else {
+      logger.debug3("Filtering off, returning unfiltered stream");
+      return openForReading();
+    }
+  }
+  private InputStream getFilteredStream() {
+    ArchivalUnit au = getArchivalUnit();
+    Properties props = getProperties();
+    String mimeType = props.getProperty("content-type");
+    FilterRule fr = au.getFilterRule(mimeType);
+    if (fr != null) {
+      return fr.createFilteredInputStream(getReader());
+    } else {
+      logger.warning("No FilterRule, not filtering");
+    }
+    return openForReading();
   }
 }

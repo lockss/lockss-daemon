@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericFileCachedUrl.java,v 1.16 2003-08-02 00:16:04 eaalto Exp $
+ * $Id: TestGenericFileCachedUrl.java,v 1.17 2003-09-13 00:46:42 troberts Exp $
  */
 
 /*
@@ -150,35 +150,35 @@ public class TestGenericFileCachedUrl extends LockssTestCase {
     assertEquals("<test stream>", baos.toString());
   }
 
-  public void testOpenForHashingCanFilter() throws Exception {
-    String config =
-      "org.lockss.genericFileCachedUrl.filterHashStream=true\n"+
-      "org.lockss.genericFileCachedUrl.useNewFilter=true";
-    Properties props = new Properties();
-    props.setProperty("content-type", "text/html");
-    ConfigurationUtil.setCurrentConfigFromString(config);
-    createLeaf("http://www.example.com/testDir/leaf1", "<test stream>", props);
+//   public void testOpenForHashingCanFilter() throws Exception {
+//     String config =
+//       "org.lockss.genericFileCachedUrl.filterHashStream=true\n"+
+//       "org.lockss.genericFileCachedUrl.useNewFilter=true";
+//     Properties props = new Properties();
+//     props.setProperty("content-type", "text/html");
+//     ConfigurationUtil.setCurrentConfigFromString(config);
+//     createLeaf("http://www.example.com/testDir/leaf1", "<test stream>", props);
 
-    CachedUrl url = mgfau.makeCachedUrl(cus, "http://www.example.com/testDir/leaf1");
-    InputStream urlIs = url.openForHashing();
-    ByteArrayOutputStream baos = new ByteArrayOutputStream(11);
-    StreamUtil.copy(urlIs, baos);
-    assertEquals("", baos.toString());
-  }
+//     CachedUrl url = mgfau.makeCachedUrl(cus, "http://www.example.com/testDir/leaf1");
+//     InputStream urlIs = url.openForHashing();
+//     ByteArrayOutputStream baos = new ByteArrayOutputStream(11);
+//     StreamUtil.copy(urlIs, baos);
+//     assertEquals("", baos.toString());
+//   }
 
-  public void testOpenForHashingDoesntFilterNonHtml() throws Exception {
-    String config = "org.lockss.genericFileCachedUrl.filterHashStream=true";
-    Properties props = new Properties();
-    props.setProperty("content-type", "blah");
-    ConfigurationUtil.setCurrentConfigFromString(config);
-    createLeaf("http://www.example.com/testDir/leaf1", "<test stream>", props);
+//   public void testOpenForHashingDoesntFilterNonHtml() throws Exception {
+//     String config = "org.lockss.genericFileCachedUrl.filterHashStream=true";
+//     Properties props = new Properties();
+//     props.setProperty("content-type", "blah");
+//     ConfigurationUtil.setCurrentConfigFromString(config);
+//     createLeaf("http://www.example.com/testDir/leaf1", "<test stream>", props);
 
-    CachedUrl url = mgfau.makeCachedUrl(cus, "http://www.example.com/testDir/leaf1");
-    InputStream urlIs = url.openForHashing();
-    ByteArrayOutputStream baos = new ByteArrayOutputStream(11);
-    StreamUtil.copy(urlIs, baos);
-    assertEquals("<test stream>", baos.toString());
-  }
+//     CachedUrl url = mgfau.makeCachedUrl(cus, "http://www.example.com/testDir/leaf1");
+//     InputStream urlIs = url.openForHashing();
+//     ByteArrayOutputStream baos = new ByteArrayOutputStream(11);
+//     StreamUtil.copy(urlIs, baos);
+//     assertEquals("<test stream>", baos.toString());
+//   }
 
   public void testOpenForHashingWontFilterIfConfiguredNotTo() throws Exception {
     String config = "org.lockss.genericFileCachedUrl.filterHashStream=false";

@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrl.java,v 1.25 2003-08-02 00:16:05 eaalto Exp $
+ * $Id: GenericFileCachedUrl.java,v 1.26 2003-09-13 00:46:42 troberts Exp $
  */
 
 /*
@@ -55,11 +55,8 @@ public class GenericFileCachedUrl extends BaseCachedUrl {
   private RepositoryNode leaf = null;
   protected static Logger logger = Logger.getLogger("CachedUrl");
 
-  private static final String PARAM_SHOULD_FILTER_HASH_STREAM =
-    Configuration.PREFIX+".genericFileCachedUrl.filterHashStream";
-
-  private static final String PARAM_SHOULD_USE_NEW_FILTER =
-    Configuration.PREFIX+".genericFileCachedUrl.useNewFilter";
+//   private static final String PARAM_SHOULD_USE_NEW_FILTER =
+//     Configuration.PREFIX+".genericFileCachedUrl.useNewFilter";
 
   public GenericFileCachedUrl(CachedUrlSet owner, String url) {
     super(owner, url);
@@ -75,61 +72,57 @@ public class GenericFileCachedUrl extends BaseCachedUrl {
     return leaf.getNodeContents().input;
   }
 
-  /**
-   * Currently simply returns 'openForReading()'.
-   * @return an InputStream
-   */
-  public InputStream openForHashing() {
-    if (Configuration.getBooleanParam(PARAM_SHOULD_FILTER_HASH_STREAM, false)) {
-      logger.debug3("Filtering on, returning filtered stream");
-      return getFilteredStream();
-    } else {
-      logger.debug3("Filtering off, returning unfiltered stream");
-      return openForReading();
-    }
-  }
+//   protected InputStream getFilteredStream() {
+//     Properties props = getProperties();
+//     if ("text/html".equals(props.getProperty("content-type"))) {
+//       logger.debug2("Filtering "+url);
+//       FilterRule fr = getFilterRule();
+//       if (fr != null) {
+// 	return fr.createFilteredInputStream(getReader());
+//       } else {
+// 	logger.warning("No FilterRule, not filtering");
+//       }
+//     }
+//     logger.debug2("Not filtering "+url);
+//     return openForReading();
+//   }
 
-  private InputStream getFilteredStream() {
-    if (Configuration.getBooleanParam(PARAM_SHOULD_USE_NEW_FILTER, false)) {
-      logger.debug3("Using new filter");
-      return getFilteredStreamNew();
-    }
-      logger.debug3("Using old filter");
-    return getFilteredStreamOld();
-  }
+//   protected FilterRule getFilterRule() {
+//     return null;
+//   }
 
-  private InputStream getFilteredStreamNew() {
-    //XXX test me
-    Properties props = getProperties();
-    if ("text/html".equals(props.getProperty("content-type"))) {
-      logger.debug2("Filtering "+url);
-      List tagList =
-	ListUtil.list(
-		      new HtmlTagFilter.TagPair("<!--", "-->"),
-		      new HtmlTagFilter.TagPair("<script", "</script>"),
-		      new HtmlTagFilter.TagPair("<", ">")
-		      );
+//   private InputStream getFilteredStreamNew() {
+//     //XXX test me
+//     Properties props = getProperties();
+//     if ("text/html".equals(props.getProperty("content-type"))) {
+//       logger.debug2("Filtering "+url);
+//       List tagList =
+// 	ListUtil.list(
+// 		      new HtmlTagFilter.TagPair("<!--", "-->"),
+// 		      new HtmlTagFilter.TagPair("<script", "</script>"),
+// 		      new HtmlTagFilter.TagPair("<", ">")
+// 		      );
 
 
-      HtmlTagFilter.TagPair tagPair = new HtmlTagFilter.TagPair("<", ">");
-      Reader filteredReader =
-	HtmlTagFilter.makeNestedFilter(getReader(), tagList);
-      return new ReaderInputStream(filteredReader);
-    }
-    logger.debug2("Not filtering "+url);
-    return openForReading();
-  }
+//       HtmlTagFilter.TagPair tagPair = new HtmlTagFilter.TagPair("<", ">");
+//       Reader filteredReader =
+// 	HtmlTagFilter.makeNestedFilter(getReader(), tagList);
+//       return new ReaderInputStream(filteredReader);
+//     }
+//     logger.debug2("Not filtering "+url);
+//     return openForReading();
+//   }
 
-  private InputStream getFilteredStreamOld() {
-    //XXX test me
-    Properties props = getProperties();
-    if ("text/html".equals(props.getProperty("content-type"))) {
-      logger.debug2("Filtering "+url);
-      return new LcapFilteredFileInputStream(openForReading());
-    }
-    logger.debug2("Not filtering "+url);
-    return openForReading();
-  }
+//   private InputStream getFilteredStreamOld() {
+//     //XXX test me
+//     Properties props = getProperties();
+//     if ("text/html".equals(props.getProperty("content-type"))) {
+//       logger.debug2("Filtering "+url);
+//       return new LcapFilteredFileInputStream(openForReading());
+//     }
+//     logger.debug2("Not filtering "+url);
+//     return openForReading();
+//   }
 
   public Reader getReader() {
     ensureLeafLoaded();
