@@ -1,5 +1,5 @@
 /*
- * $Id: ProjectMuseArchivalUnit.java,v 1.2 2003-08-27 00:26:42 eaalto Exp $
+ * $Id: ProjectMuseArchivalUnit.java,v 1.3 2003-08-27 18:38:22 eaalto Exp $
  */
 
 /*
@@ -175,8 +175,11 @@ public class ProjectMuseArchivalUnit extends BaseArchivalUnit {
       throw new ConfigurationException("Negative volume");
     }
     if (!EXPECTED_URL_PATH.equals(baseUrl.getPath())) {
+      logger.error("Illegal path: "+baseUrl.getPath() + ", expected: " +
+                   EXPECTED_URL_PATH);
       throw new ConfigurationException("Url has illegal path: " +
-                                       baseUrl.getPath());
+                                       baseUrl.getPath() + ", expected: " +
+                                       EXPECTED_URL_PATH);
     }
 
     // make our crawl spec
