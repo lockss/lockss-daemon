@@ -1,5 +1,5 @@
 /*
- * $Id: RegexpUtil.java,v 1.4 2005-01-04 03:04:45 tlipkis Exp $
+ * $Id: RegexpUtil.java,v 1.5 2005-01-13 08:11:20 tlipkis Exp $
  */
 
 /*
@@ -86,11 +86,9 @@ public class RegexpUtil {
    * cache of recently compiled patterns.
    * @param s String to match
    * @param re regular expression
+   * @return true iff s matches re
    * @throws RuntimeException if re is malformed */
   public static boolean isMatchRe(String s, String re) {
-    if (re.equals("")) {
-      return false;
-    }
     Pattern pat = (Pattern)compiledPatterns.get(s);
     if (pat == null) {
       pat = uncheckedCompile(re, Perl5Compiler.READ_ONLY_MASK);
@@ -104,4 +102,26 @@ public class RegexpUtil {
     private Perl5Matcher matcher = new Perl5Matcher();
   }
     
+  /** Static utilities intended for use with JXPath.
+   * JXPathContext.setFunctions() makes all the static methods in a class
+   * available to xpath expressions, so a separate class is used to expose
+   * only appropriate methods.
+   * @see org.lockss.daemon.TitleSetXpath
+   */
+  public static class XpathUtil {
+    /** Compile a pattern and perform a match.  As a special case, an empty
+     * pattern matches nothing.  This is because forgetting to enclose a
+     * pattern in quotes in the xpath expression can easily result in a
+     * null-string pattern instead of an error.
+     * @param s String to match
+     * @param re regular expression
+     * @return true iff s matches re
+     * @throws RuntimeException if re is malformed */
+    public static boolean isMatchRe(String s, String re) {
+      if (re.equals("")) {
+	return false;
+      }
+      return RegexpUtil.isMatchRe(s, re);
+    }
+  }
 }
