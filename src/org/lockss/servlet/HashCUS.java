@@ -1,5 +1,5 @@
 /*
- * $Id: HashCUS.java,v 1.2 2004-04-06 07:31:54 tlipkis Exp $
+ * $Id: HashCUS.java,v 1.3 2004-04-06 07:46:39 tlipkis Exp $
  */
 
 /*
@@ -115,12 +115,12 @@ public class HashCUS extends LockssServlet {
   private String statusMsg;
 
   void resetVars() {
-    String auid;
-    String url;
-    String upper;
-    String lower;
-    byte[] challenge;
-    byte[] verifier;
+    auid = null;
+    url = null;
+    upper = null;
+    lower = null;
+    challenge = null;
+    verifier = null;
 
     isHash = true;
     isRecord = false;
