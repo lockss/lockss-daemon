@@ -1,5 +1,5 @@
 /*
- * $Id: DamagedNodeSet.java,v 1.7 2004-04-19 02:18:36 tlipkis Exp $
+ * $Id: DamagedNodeSet.java,v 1.8 2004-05-11 04:01:52 clairegriffin Exp $
  */
 
 /*
@@ -187,7 +187,12 @@ public class DamagedNodeSet {
    * @param nodes HashSet the new Set
    */
   public void setDamagedNodes(HashSet nodes) {
-    this.nodesWithDamage = nodes;
+    if(nodes == null) {
+      nodesWithDamage = new HashSet();
+    }
+    else {
+      this.nodesWithDamage = nodes;
+    }
   }
 
   /**

@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.49 2004-04-13 22:24:12 eaalto Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.50 2004-05-11 04:01:53 clairegriffin Exp $
  */
 
 /*
@@ -316,7 +316,7 @@ public class HistoryRepositoryImpl
   public DamagedNodeSet loadDamagedNodeSet() {
     try {
       if (logger.isDebug3()) {
-        logger.debug3("Loading state for AU '" + storedAu.getName() + "'");
+        logger.debug3("Loading damaged nodes for AU '" + storedAu.getName() + "'");
       }
       File damFile = new File(rootLocation, DAMAGED_NODES_FILE_NAME);
       DamagedNodeSet damNodes = (DamagedNodeSet)load(damFile,
