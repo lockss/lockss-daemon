@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.76 2003-05-06 00:59:50 aalto Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.77 2003-05-07 22:07:33 claire Exp $
  */
 
 /*
@@ -388,6 +388,7 @@ public class TestNodeManagerImpl
     Vector subFiles = new Vector(2);
     subFiles.add(getCUS(mau, TEST_URL + "/branch2/file1.doc"));
     subFiles.add(getCUS(mau, TEST_URL + "/branch2/file2.doc"));
+
     mcus.setFlatItSource(subFiles);
     nodeManager.handleNamePoll(pollState, results, nodeState);
     // we should call a content poll on the subnodes here
@@ -404,27 +405,42 @@ public class TestNodeManagerImpl
         TEST_URL + "/branch2"));
     assertEquals(PollState.WON, pollState.getStatus());
 
-    // lost name poll (these are the artificial results)
-    String deleteUrl = TEST_URL + "/branch2/testentry2.html";
+    // Test a repair
     String repairUrl = TEST_URL + "/branch2/testentry4.html";
     String repairUrl2 = TEST_URL + "/branch2/testentry5.html";
-
-    contentPoll = createPoll(TEST_URL + "/branch2", false, true, 5, 15);
-    results = contentPoll.getVoteTally();
+    // unsucessful repair
+    namePoll = createPoll(TEST_URL + "/branch2", false, true, 5, 15);
+    results = namePoll.getVoteTally();
     spec = results.getPollSpec();
     pollState = new PollState(results.getType(),
                               spec.getLwrBound(),
                               spec.getUprBound(),
+                              PollState.REPAIRING,
+                              results.getStartTime(),
+                              Deadline.MAX,
+                              false);
+    nodeManager.handleNamePoll(pollState, results, nodeState);
+    assertEquals(PollState.UNREPAIRABLE, pollState.getStatus());
+    assertNull(( (MockCrawlManager) theDaemon.getCrawlManager()).getUrlStatus(
+        repairUrl));
 
+    // attempted repair
+    pollState = new PollState(results.getType(),
+                              spec.getLwrBound(),
+                              spec.getUprBound(),
                               PollState.RUNNING,
                               results.getStartTime(),
                               Deadline.MAX,
                               false);
+
+    // add url to delete
+    String deleteUrl = TEST_URL + "/branch2/testentry2.html";
     RepositoryNode repoNode = theDaemon.getLockssRepository(mau).createNewNode(
         deleteUrl);
     assertFalse(repoNode.isInactive());
+
     nodeManager.handleNamePoll(pollState, results, nodeState);
-    assertEquals(PollState.REPAIRED, pollState.getStatus());
+    assertEquals(PollState.REPAIRING, pollState.getStatus());
 
     assertEquals(MockCrawlManager.SCHEDULED,
                  ( (MockCrawlManager) theDaemon.getCrawlManager()).getUrlStatus(
@@ -432,7 +448,10 @@ public class TestNodeManagerImpl
     // only one repair per poll
     assertNull(( (MockCrawlManager) theDaemon.getCrawlManager()).getUrlStatus(
         repairUrl2));
+
+    // deleted node is marked inactive
     assertTrue(repoNode.isInactive());
+
   }
 
   public void testHandleAuPolls() throws Exception {
