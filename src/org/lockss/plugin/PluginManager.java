@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.54 2003-10-15 22:59:22 clairegriffin Exp $
+ * $Id: PluginManager.java,v 1.55 2003-11-18 00:07:16 eaalto Exp $
  */
 
 /*
@@ -620,7 +620,8 @@ public class PluginManager extends BaseLockssManager {
     "org.lockss.plugin.acs.AcsPlugin",
     "org.lockss.plugin.absinthe.AbsinthePlugin",
     "org.lockss.plugin.emls.EmlsPlugin",
-    "org.lockss.plugin.ieee.IeeePlugin"
+    "org.lockss.plugin.ieee.IeeePlugin",
+    "org.lockss.plugin.histcoop.HistoryCooperativePlugin"
 //     "org.lockss.plugin.simulated.SimulatedPlugin",
   };
 
