@@ -1,5 +1,5 @@
 /*
- * $Id: TimerQueue.java,v 1.14 2003-07-17 05:21:32 tlipkis Exp $
+ * $Id: TimerQueue.java,v 1.15 2004-02-09 22:13:47 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -177,7 +177,17 @@ public class TimerQueue /*extends BaseLockssManager*/ implements Serializable {
     }
   }
 
-  // Timer thread
+  // Timer thread.
+
+  // Timer callbacks are currently called in this thread, so hangs are
+  // possible.  However, we don't need an explicit watchdog mechanism
+  // (hence don't need to be a LockssThread) because the WatchdogService is
+  // currently implemented using the TimerQueue.  If this thread gets hung,
+  // the platform watchdog will go off.  (LockssThread's watchdog mechanism
+  // currently uses the TimerQueue, so using that mechanism here would
+  // require first determining that there are no reentrancy or recursion
+  // problems.)
+
   private class TimerThread extends Thread {
     private boolean goOn = false;
 
