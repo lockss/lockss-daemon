@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.45 2004-02-25 21:18:37 troberts Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.46 2004-02-26 19:23:25 troberts Exp $
  */
 
 /*
@@ -233,6 +233,16 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 
     waitForCrawlToFinish(sem);
     activityRegulator.assertNewContentCrawlFinished();
+  }
+
+  //If the AU throws, the crawler should trap it and call the callbacks
+  public void testCallbacksCalledWhenPassedThrowingAU() {
+    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
+    TestCrawlCB cb = new TestCrawlCB(sem);
+    ThrowingAU au = new ThrowingAU();
+    theDaemon.setActivityRegulator(activityRegulator, au);
+    crawlManager.startNewContentCrawl(au, cb, null, null);
+    assertTrue(cb.wasTriggered());
   }
 
   public void testRepairCrawlFreesActivityLockWhenDone() {
@@ -637,6 +647,40 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     public boolean doCrawl(Deadline deadline) {
       sem.give();
       return true;
+    }
+  }
+
+  private class ThrowingAU extends NullPlugin.ArchivalUnit {
+    public CachedUrlSet makeCachedUrlSet(CachedUrlSetSpec spec) {
+      throw new ExpectedRuntimeException("I throw");
+    }
+
+    public CachedUrl makeCachedUrl(CachedUrlSet owner, String url) {
+      throw new ExpectedRuntimeException("I throw");
+    }
+
+    public UrlCacher makeUrlCacher(CachedUrlSet owner, String url) {
+      throw new ExpectedRuntimeException("I throw");
+    }
+
+    public CachedUrlSet getAuCachedUrlSet() {
+      throw new ExpectedRuntimeException("I throw");
+    }
+
+    public CrawlSpec getCrawlSpec() {
+      throw new ExpectedRuntimeException("I throw");
+    }
+
+    public boolean shouldBeCached(String url) {
+      throw new ExpectedRuntimeException("I throw");
+    }
+
+    public Collection getUrlStems() {
+      throw new ExpectedRuntimeException("I throw");
+    }
+
+    public Plugin getPlugin() {
+      throw new ExpectedRuntimeException("I throw");
     }
   }
 
