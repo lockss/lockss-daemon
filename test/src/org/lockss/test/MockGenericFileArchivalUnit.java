@@ -1,5 +1,5 @@
 /*
- * $Id: MockGenericFileArchivalUnit.java,v 1.3 2003-02-13 06:28:52 claire Exp $
+ * $Id: MockGenericFileArchivalUnit.java,v 1.4 2003-02-20 22:29:39 tal Exp $
  */
 
 /*
@@ -45,11 +45,20 @@ import org.lockss.daemon.RangeCachedUrlSetSpec;
  */
 
 public class MockGenericFileArchivalUnit extends BaseArchivalUnit {
+  private Configuration config;
   private String pluginId = "mock-file";
   private String auId = "none-file";
 
   public MockGenericFileArchivalUnit(CrawlSpec spec) {
-    super(spec);
+    super(null, spec);
+  }
+
+  public void setConfiguration(Configuration config) {
+    this.config = config;
+  }
+
+  public Configuration getConfiguration() {
+    return config;
   }
 
   public CachedUrlSet cachedUrlSetFactory(ArchivalUnit owner,

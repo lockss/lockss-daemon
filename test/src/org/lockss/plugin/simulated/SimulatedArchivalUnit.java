@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.6 2003-02-13 06:28:52 claire Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.7 2003-02-20 22:29:39 tal Exp $
  */
 
 /*
@@ -62,13 +62,16 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
   private SimulatedContentGenerator scgen;
 
   public SimulatedArchivalUnit(String new_fileRoot) {
-    super(new CrawlSpec(SIMULATED_URL_START, null));
+    super(null, new CrawlSpec(SIMULATED_URL_START, null));
     fileRoot = new_fileRoot;
     scgen = new SimulatedContentGenerator(fileRoot);
   }
 
   public SimulatedArchivalUnit() {
     this("");
+  }
+
+  public void setConfiguration(Configuration config) {
   }
 
   public CachedUrlSet cachedUrlSetFactory(ArchivalUnit owner, CachedUrlSetSpec cuss) {

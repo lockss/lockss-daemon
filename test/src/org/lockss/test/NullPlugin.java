@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.16 2003-02-20 02:23:40 aalto Exp $
+ * $Id: NullPlugin.java,v 1.17 2003-02-20 22:29:39 tal Exp $
  */
 
 /*
@@ -201,6 +201,9 @@ public class NullPlugin {
 
   public static class ArchivalUnit
     implements org.lockss.daemon.ArchivalUnit {
+
+    public void setConfiguration(Configuration config) {
+    }
 
     public org.lockss.daemon.CachedUrlSet makeCachedUrlSet(String url,
 							   String lwrBound,

@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireArchivalUnit.java,v 1.5 2003-02-10 23:46:51 troberts Exp $
+ * $Id: HighWireArchivalUnit.java,v 1.6 2003-02-20 22:29:39 tal Exp $
  */
 
 /*
@@ -75,28 +75,45 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
 
 
   /**
-   * Standard constructor for HighWirePlugin.
+   * Standard constructor for HighWireArchivalUnit.
    *
-   * @param base URL to start crawl
-   * @param volume volume number
-   * @throws REException
+   * @param myPlugin owner plugin
+   * @param config configuration info for AU
    */
-  public HighWireArchivalUnit(URL base, int volume)
-      throws REException {
-    super();
+  public HighWireArchivalUnit(Plugin myPlugin, Configuration config)
+      throws ArchivalUnit.ConfigurationException {
+    super(myPlugin);
+    // tk - this is awful
+    String auId = myPlugin.getAUIdFromConfig(config);
+    int volume = HighWirePlugin.volumeFromAUId(auId);
+    URL base;
+    try {
+      base = HighWirePlugin.UrlFromAUId(auId);
+    } catch (MalformedURLException e) {
+      throw new ArchivalUnit.ConfigurationException("Illegal base url", e);
+    }
     if (base == null) {
-      throw new IllegalArgumentException("Called with null base url");
+      throw new ArchivalUnit.ConfigurationException("Null base url");
     } if (volume < 0) {
-      throw new IllegalArgumentException("Called with negative volume");
+      throw new ArchivalUnit.ConfigurationException("Negative volume");
     } if (!EXPECTED_URL_PATH.equals(base.getPath())) {
-      throw new IllegalArgumentException("Called with url that had path: "+
-					 base.getPath());
+      throw new ArchivalUnit.ConfigurationException("Url has illegal path: "+
+						    base.getPath());
     }
 
     this.volume = volume;
     this.base = base;
-    this.crawlSpec = makeCrawlSpec(base, volume);
+    try {
+      this.crawlSpec = makeCrawlSpec(base, volume);
+    } catch (REException e) {
+      // tk - not right.  Illegal RE is caused by internal error, not config
+      // error
+      throw new ArchivalUnit.ConfigurationException("Illegal RE", e);
+    }
     loadProps();
+  }
+
+  public void setConfiguration(Configuration config) {
   }
 
   public CachedUrlSet cachedUrlSetFactory(ArchivalUnit owner,
@@ -167,20 +184,8 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
     pause(pauseMS);
   }
 
-  public String getPluginId() {
-    return "highwire";
-  }
-
   public String getAUId() {
-    return getAUId(base, volume);
-  }
-
-  public static String getAUId(URL url, int vol) {
-    StringBuffer sb = new StringBuffer();
-    sb.append(url.toString());
-    sb.append("||");
-    sb.append(vol);
-    return sb.toString();
+    return HighWirePlugin.constructAUId(base, volume);
   }
 
   public int getVolumeNumber() {
