@@ -1,5 +1,5 @@
 /*
- * $Id: MockMulticastSocket.java,v 1.1 2002-11-06 21:16:19 tal Exp $
+ * $Id: MockMulticastSocket.java,v 1.2 2003-03-31 08:48:23 tal Exp $
  */
 
 /*
@@ -143,7 +143,9 @@ public class MockMulticastSocket
    * @see #close
    */
   public boolean isClosed(){
-    return mds.isClosed();
+    // Java 1.4 MulticastSocket calls this from within its constructor, before
+    // we have set mds
+    return mds != null && mds.isClosed();
   }
 
   /**

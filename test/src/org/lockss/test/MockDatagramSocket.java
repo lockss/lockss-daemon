@@ -1,5 +1,5 @@
 /*
- * $Id: MockDatagramSocket.java,v 1.6 2003-02-27 21:29:07 troberts Exp $
+ * $Id: MockDatagramSocket.java,v 1.7 2003-03-31 08:48:23 tal Exp $
  */
 
 /*
@@ -157,7 +157,12 @@ public class MockDatagramSocket
       // didn't get a packet, must have been interrupted
       throw new IOException("MockDatagramSocket.receive interrupted");
     }
+    // copy fields from "received" packet into p.
+    // In Java 1.4 setData() can make the packet larger, so we must explicitly
+    // set the length to the smaller of p and the received packet.
+    int plen = p.getLength();
     p.setData(qPkt.getData());
+    p.setLength(Math.min(plen, qPkt.getLength()));
     p.setAddress(qPkt.getAddress());
     p.setPort(qPkt.getPort());
   }
