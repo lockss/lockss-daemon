@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.48 2004-04-01 02:44:32 eaalto Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.49 2004-04-13 22:24:12 eaalto Exp $
  */
 
 /*
@@ -133,11 +133,11 @@ public class HistoryRepositoryImpl
 
   public NodeState loadNodeState(CachedUrlSet cus) {
     try {
-      String fileName = getNodeLocation(cus) + File.separator + NODE_FILE_NAME;
+      File file = new File(getNodeLocation(cus), NODE_FILE_NAME);
       if (logger.isDebug3()) {
         logger.debug3("Loading state for CUS '" + cus.getUrl() + "'");
       }
-      NodeStateBean nsb = (NodeStateBean)load(fileName, NodeStateBean.class);
+      NodeStateBean nsb = (NodeStateBean)load(file, NodeStateBean.class);
       if (nsb==null) {
         logger.debug3("No node state file for node '"+cus.getUrl()+"'");
         // default NodeState
@@ -181,12 +181,11 @@ public class HistoryRepositoryImpl
     CachedUrlSet cus = nodeState.getCachedUrlSet();
     File nodeFile = null;
     try {
-      String fileName = getNodeLocation(cus)+File.separator+HISTORY_FILE_NAME;
-      nodeFile = new File(fileName);
+      nodeFile = new File(getNodeLocation(cus), HISTORY_FILE_NAME);
       if (logger.isDebug3()) {
         logger.debug3("Loading histories for CUS '" + cus.getUrl() + "'");
       }
-      NodeHistoryBean nhb = (NodeHistoryBean)load(fileName,
+      NodeHistoryBean nhb = (NodeHistoryBean)load(nodeFile,
           NodeHistoryBean.class);
       if (nhb==null) {
         logger.debug3("No histories to load.");
@@ -235,10 +234,9 @@ public class HistoryRepositoryImpl
         logger.debug3("Loading identity agreements for AU '" +
                       storedAu.getName() + "'");
       }
+      File idFile = new File(rootLocation, IDENTITY_AGREEMENT_FILE_NAME);
       IdentityAgreementList idList =
-          (IdentityAgreementList)load(
-          rootLocation + IDENTITY_AGREEMENT_FILE_NAME,
-          IdentityAgreementList.class);
+          (IdentityAgreementList)load(idFile, IdentityAgreementList.class);
       if (idList==null) {
         logger.debug2("No identities file for AU '"+storedAu.getName()+"'");
         // empty list
@@ -277,8 +275,8 @@ public class HistoryRepositoryImpl
       if (logger.isDebug3()) {
         logger.debug3("Loading state for AU '" + storedAu.getName() + "'");
       }
-      AuStateBean asb = (AuStateBean)load(rootLocation + AU_FILE_NAME,
-          AuStateBean.class);
+      File auFile = new File(rootLocation, AU_FILE_NAME);
+      AuStateBean asb = (AuStateBean)load(auFile, AuStateBean.class);
       if (asb==null) {
         logger.debug2("No au state file for AU '"+storedAu.getName()+"'");
         // none found, so use default
@@ -320,8 +318,9 @@ public class HistoryRepositoryImpl
       if (logger.isDebug3()) {
         logger.debug3("Loading state for AU '" + storedAu.getName() + "'");
       }
-      DamagedNodeSet damNodes = (DamagedNodeSet)load(
-          rootLocation + DAMAGED_NODES_FILE_NAME, DamagedNodeSet.class);
+      File damFile = new File(rootLocation, DAMAGED_NODES_FILE_NAME);
+      DamagedNodeSet damNodes = (DamagedNodeSet)load(damFile,
+                                                     DamagedNodeSet.class);
       if (damNodes==null) {
         if (logger.isDebug2()) {
           logger.debug2("No damaged node file for AU '" + storedAu.getName() +
@@ -363,14 +362,14 @@ public class HistoryRepositoryImpl
 
   /**
    * Utility function to unmarshall classes.
-   * @param fileName the file name
+   * @param file the file
    * @param loadClass the Class type
    * @return Object the unmarshalled Object
    * @throws Exception
    */
-  Object load(String fileName, Class loadClass) throws Exception {
+  Object load(File file, Class loadClass) throws Exception {
     XmlMarshaller marshaller = new XmlMarshaller();
-    return marshaller.load(fileName, loadClass,
+    return marshaller.load(file, loadClass,
         marshaller.getMapping(MAPPING_FILES));
   }
 

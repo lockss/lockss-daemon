@@ -1,5 +1,5 @@
 /*
- * $Id: XmlMarshaller.java,v 1.2 2004-02-11 23:45:44 eaalto Exp $
+ * $Id: XmlMarshaller.java,v 1.3 2004-04-13 22:24:12 eaalto Exp $
  */
 
 /*
@@ -127,24 +127,23 @@ public class XmlMarshaller {
    */
   public Object load(String fileName, Class loadClass, String mappingFile)
       throws IOException, MarshallingException {
-    return load(fileName, loadClass, getMapping(mappingFile));
+    return load(new File(fileName), loadClass, getMapping(mappingFile));
   }
 
   /**
    * Loads an Object from the file location specified.  Returns null if
    * the file wasn't found.
-   * @param fileLoc the full name of the file
+   * @param loadFile the file
    * @param loadClass the class to be loaded
    * @param mapping the Mapping
    * @throws IOException
    * @throws MarshallingException
    * @return Object the unmarshalled object
    */
-  public Object load(String fileLoc, Class loadClass, Mapping mapping)
+  public Object load(File loadFile, Class loadClass, Mapping mapping)
       throws IOException, MarshallingException {
-    File loadFile = new File(fileLoc);
     if (!loadFile.exists()) {
-      logger.debug3("File '"+fileLoc+"' not found.");
+      logger.debug3("File '"+loadFile.getAbsolutePath()+"' not found.");
       return null;
     }
 
