@@ -1,5 +1,5 @@
 /*
- * $Id: PollSpec.java,v 1.19 2003-11-11 20:33:31 tlipkis Exp $
+ * $Id: PollSpec.java,v 1.20 2003-12-10 18:37:52 tlipkis Exp $
  */
 
 /*
@@ -261,6 +261,13 @@ public class PollSpec {
   }
 
   boolean canSchedulePoll(long pollTime, long neededTime, PollManager pm) {
+    if (neededTime > pollTime) {
+      theLog.warning("Total hash time " +
+		     StringUtil.timeIntervalToString(neededTime) +
+		     " greater than max poll time " +
+		     StringUtil.timeIntervalToString(pollTime));
+      return false;
+    }		     
     Deadline when = Deadline.in(pollTime);
     return pm.canHashBeScheduledBefore(neededTime, when);
   }
