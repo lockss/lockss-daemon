@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.44 2003-03-01 02:56:06 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.45 2003-03-01 03:21:30 aalto Exp $
  */
 
 /*
@@ -79,7 +79,7 @@ public class NodeManagerImpl implements NodeManager {
   static final int DEFAULT_TOP_LEVEL_POLL_INTERVAL = 14*24*60*60*1000; //2 weeks
 
   private static LockssDaemon theDaemon;
-  private static NodeManager theManager = null;
+  private NodeManager theManager = null;
   static HistoryRepository repository;
   private static CrawlManager theCrawlManager = null;
   private static HashMap auEstimateMap = new HashMap();
@@ -157,6 +157,7 @@ public class NodeManagerImpl implements NodeManager {
     // checkpoint here
     if (treeWalkThread!=null) {
       treeWalkThread.interrupt();
+      treeWalkThread = null;
     }
     theManager = null;
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerServiceImpl.java,v 1.1 2003-03-01 02:56:06 aalto Exp $
+ * $Id: NodeManagerServiceImpl.java,v 1.2 2003-03-01 03:21:30 aalto Exp $
  */
 
 /*
@@ -101,6 +101,7 @@ public class NodeManagerServiceImpl implements NodeManagerService {
     if (nodeManager==null) {
       nodeManager = new NodeManagerImpl(au);
       auMaps.put(au, nodeManager);
+      nodeManager.initService(theDaemon);
       nodeManager.startService();
     }
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.33 2003-03-01 02:56:06 aalto Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.34 2003-03-01 03:21:30 aalto Exp $
  */
 
 /*
@@ -37,7 +37,6 @@ import org.lockss.poller.*;
 import org.lockss.protocol.*;
 import org.lockss.hasher.HashService;
 import org.lockss.plugin.*;
-import org.lockss.plugin.AuUrl;
 
 public class TestNodeManagerImpl extends LockssTestCase {
   public static final String TEST_URL = "http://www.example.com";
@@ -85,27 +84,6 @@ public class TestNodeManagerImpl extends LockssTestCase {
     theDaemon.stopDaemon();
     TimeBase.setReal();
     super.tearDown();
-  }
-
-  public void testManagerFactory() {
-    NodeManagerService nms = new NodeManagerServiceImpl();
-    String auId = mau.getAUId();
-    nms.addNodeManager(mau);
-    NodeManager node1 = nms.getNodeManager(mau);
-    assertNotNull(node1);
-    mau.setAuId(auId + "test");
-    nms.addNodeManager(mau);
-    NodeManager node2 = nms.getNodeManager(mau);
-    assertTrue(node1 != node2);
-    mau.setAuId(auId);
-    node2 = nms.getNodeManager(mau);
-    assertEquals(node1, node2);
-
-    mau.setAuId(auId + "test2");
-    try {
-      nms.getNodeManager(mau);
-      fail("Should throw IllegalArgumentException.");
-    } catch (IllegalArgumentException iae) { }
   }
 
   public void testGetNodeState() throws Exception {
@@ -309,9 +287,8 @@ public class TestNodeManagerImpl extends LockssTestCase {
     assertEquals(auState.lastTreeWalk, thread.lastRun);
 
     nodeManager.stopService();
+    assertTrue(nodeManager.treeWalkThread == null);
 /*
-    assertTrue(thread.isInterrupted());
-
     // the thread should trigger a treewalk, and the treewalk should
     // trigger a crawl scheduled
     auState.lastTreeWalk = -123;
@@ -319,8 +296,8 @@ public class TestNodeManagerImpl extends LockssTestCase {
     nodeManager.startService();
 
     assertTrue(crawlMan.getAuStatus(mau)==MockCrawlManager.SCHEDULED);
-*/
     nodeManager.stopService();
+ */
     crawlMan.stopService();
   }
 
