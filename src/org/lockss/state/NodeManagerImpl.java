@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.165 2004-02-05 02:18:01 eaalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.166 2004-02-05 02:23:41 eaalto Exp $
  */
 
 /*
@@ -1350,9 +1350,9 @@ public class NodeManagerImpl
     damagedNodes.addToRepair(cus, urls);
 
     PollCookie cookie = new PollCookie(cus, pollKey, isNamePoll, urls);
- //   theDaemon.getCrawlManager().startRepair(managedAu, urls,
-//					    new ContentRepairCallback(),
-//					    cookie, lock);
+    theDaemon.getCrawlManager().startRepair(managedAu, urls,
+					    new ContentRepairCallback(),
+					    cookie, lock);
   }
 
   private void deleteNode(CachedUrlSet cus) throws IOException {
