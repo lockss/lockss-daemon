@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.25 2003-07-30 05:38:50 tlipkis Exp $
+ * $Id: DaemonStatus.java,v 1.25.2.1 2003-08-09 20:13:32 tlipkis Exp $
  */
 
 /*
@@ -103,6 +103,12 @@ public class DaemonStatus extends LockssServlet {
     if (html) {
       page = newPage();
 
+      // all pages but index get a select box to choose a different table
+      if (!isAllTablesTable()) {
+	Block centeredBlock = new Block(Block.Center);
+	centeredBlock.add(getSelectTableForm());
+	page.add(centeredBlock);
+      }
 
 //       page.add("<center>");
 //       page.add(srvLink(SERVLET_DAEMON_STATUS, ".",
@@ -112,12 +118,6 @@ public class DaemonStatus extends LockssServlet {
       wrtr.println("host=" + getLcapIPAddr() +
 		   ",time=" + now.getTime() +
 		   ",version=" + "0.0");
-    }
-    // all pages but index get a select box to choose a different table
-    if (!isAllTablesTable()) {
-      Block centeredBlock = new Block(Block.Center);
-      centeredBlock.add(getSelectTableForm());
-      page.add(centeredBlock);
     }
     doStatusTable(page, wrtr, tableName, key);
     if (html) {
@@ -265,9 +265,15 @@ public class DaemonStatus extends LockssServlet {
 	}
       } else {
 	for (Iterator iter = rowMap.keySet().iterator(); iter.hasNext(); ) {
-	  String key = (String)iter.next();
+	  Object o = iter.next();
+	  if (!(o instanceof String)) {
+	    // ignore special markers (eg, StatusTable.ROW_SEPARATOR)
+	    continue;
+	  }
+	  String key = (String)o;
 	  Object val = rowMap.get(key);
-	  String valStr = StatusTable.getActualValue(val).toString();
+	  Object dispVal = StatusTable.getActualValue(val);
+	  String valStr = dispVal != null ? dispVal.toString() : "(null)";
 	  wrtr.print(key + "=" + valStr);
 	  if (iter.hasNext()) {
 	    wrtr.print(",");
