@@ -1,5 +1,5 @@
 /*
- * $Id: DamagedNodeSet.java,v 1.13 2004-08-09 23:48:19 clairegriffin Exp $
+ * $Id: DamagedNodeSet.java,v 1.14 2004-09-01 23:33:35 clairegriffin Exp $
  */
 
 /*
@@ -121,7 +121,7 @@ public class DamagedNodeSet {
   }
 
   synchronized public boolean hasLocalizedDamage(CachedUrlSet cus) {
-    if(cus.isLeaf()) {
+    if(cus.getSpec().isSingleNode()) {
       Iterator damagedIt = nodesWithDamage.iterator();
       while (damagedIt.hasNext()) {
         String url = (String) damagedIt.next();

@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.184 2004-08-22 02:05:50 tlipkis Exp $
+ * $Id: NodeManagerImpl.java,v 1.185 2004-09-01 23:33:35 clairegriffin Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import org.lockss.protocol.*;
 import org.lockss.repository.*;
 import org.lockss.crawler.CrawlManager;
 import org.lockss.alert.*;
+import java.util.ArrayList;
 
 /**
  * Implementation of the NodeManager.
@@ -1126,6 +1127,26 @@ public class NodeManagerImpl
         return false;
     }
     return false;
+  }
+
+  public HashMap getLastTopLevelVoteHistory() {
+    HashMap voteMap = new HashMap();
+    NodeState node = getNodeState(managedAu.getAuCachedUrlSet());
+    Iterator history_it = node.getPollHistories();
+    while (history_it.hasNext()) {
+      PollHistory history = (PollHistory) history_it.next();
+      Iterator votes_it = history.getVotes();
+      while(votes_it.hasNext()) {
+        Vote vote = (Vote) votes_it.next();
+        ArrayList list = (ArrayList) voteMap.get(vote.getIDAddress());
+        if(list == null) {
+          list = new ArrayList();
+          voteMap.put(vote.getIDAddress(),list);
+        }
+        list.add(vote);
+      }
+    }
+    return voteMap;
   }
 
   /**
