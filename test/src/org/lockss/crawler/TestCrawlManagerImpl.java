@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.5 2003-02-27 22:36:58 troberts Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.6 2003-03-03 19:33:28 troberts Exp $
  */
 
 /*
@@ -43,11 +43,14 @@ import org.lockss.plugin.*;
  */
 public class TestCrawlManagerImpl extends LockssTestCase {
   public static final String startUrl = "http://www.example.com/index.html";
-  private CrawlManager crawlManager = null;
+  private CrawlManagerImpl crawlManager = null;
   private MockArchivalUnit mau = null;
   private List urlList = null;
   public static final String EMPTY_PAGE = "";
   public static final String LINKLESS_PAGE = "Nothing here";
+
+  private MockLockssDaemon daemon;
+  private MockNodeManager nodeManager;
 
   public TestCrawlManagerImpl(String msg) {
     super(msg);
@@ -63,12 +66,25 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 
     crawlManager = new CrawlManagerImpl();
     mau.setNewContentCrawlUrls(ListUtil.list(startUrl));
+
+    daemon = new MockLockssDaemon();
+    nodeManager = new MockNodeManager();
+    daemon.setNodeManager(nodeManager, mau);
+
+    crawlManager.initService(daemon);
+  }
+
+  public void tearDown() throws Exception {
+    nodeManager.stopService();
+    crawlManager.stopService();
+    daemon.stopDaemon();
+    super.tearDown();
   }
 
   public void testNullAUForCanTreeWalkStart() {
     try {
-      crawlManager.canTreeWalkStart(null, new MockAuState(),
-				    new TestCrawlCB(Deadline.NEVER), "blah");
+      crawlManager.canTreeWalkStart(null, new TestCrawlCB(Deadline.NEVER), 
+				    "blah");
       fail("Didn't throw an IllegalArgumentException on a null AU");
     } catch (IllegalArgumentException iae) {
     }
@@ -76,14 +92,13 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 
   public void testDoesNotStartCrawlIfShouldNot() {
     mau.setShouldCrawlForNewContent(false);
-    assertTrue(crawlManager.canTreeWalkStart(mau, new MockAuState(),
-					     null, null));
+    assertTrue(crawlManager.canTreeWalkStart(mau, null, null));
   }
 
   public void testNullCallbackForCanTreeWalkStart() {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
     cus.addUrl(LINKLESS_PAGE, startUrl);
-    crawlManager.canTreeWalkStart(mau, new MockAuState(), null, "blah");
+    crawlManager.canTreeWalkStart(mau, null, "blah");
   }
 
   public void testDoesNewContentCrawl() {
@@ -107,8 +122,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     Deadline deadline = Deadline.in(1000 * 10);
 
 
-    assertTrue(!crawlManager.canTreeWalkStart(mau, new MockAuState(),
-					      new TestCrawlCB(deadline), 
+    assertTrue(!crawlManager.canTreeWalkStart(mau, new TestCrawlCB(deadline), 
 					      null));
 
     while (!deadline.expired()) {
@@ -130,7 +144,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     cus.addUrl(LINKLESS_PAGE, startUrl);
 
     TestCrawlCB cb = new TestCrawlCB(deadline);
-    crawlManager.canTreeWalkStart(mau, new MockAuState(), cb, null);
+    crawlManager.canTreeWalkStart(mau, cb, null);
 
     while (!deadline.expired()) {
       try{
@@ -149,7 +163,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     cus.addUrl(LINKLESS_PAGE, startUrl);
 
     TestCrawlCB cb = new TestCrawlCB(deadline);
-    crawlManager.canTreeWalkStart(mau, new MockAuState(), cb, cookie);
+    crawlManager.canTreeWalkStart(mau, cb, cookie);
 
     while (!deadline.expired()) {
       try{
@@ -168,7 +182,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     cus.addUrl(LINKLESS_PAGE, startUrl);
 
     TestCrawlCB cb = new TestCrawlCB(deadline);
-    crawlManager.canTreeWalkStart(mau, new MockAuState(), cb, cookie);
+    crawlManager.canTreeWalkStart(mau, cb, cookie);
 
     while (!deadline.expired()) {
       try{
@@ -191,7 +205,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 								  1000 * 10);
     mau.setPauseCallback(pauseCB);
 
-    crawlManager.canTreeWalkStart(mau, new MockAuState(), cb, null);
+    crawlManager.canTreeWalkStart(mau, cb, null);
 
     //if the callback was triggered, the crawl completed
     assertTrue("Callback was triggered", !cb.wasTriggered());
@@ -288,6 +302,26 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 
   }
 
+  public void testCompletedCrawlUpdatesLastCrawlTime() {
+    Deadline deadline = Deadline.in(1000 * 10);
+    MockAuState maus = new MockAuState();
+    long lastCrawlTime = maus.getLastCrawlTime();
+    nodeManager.setAuState(maus);
+
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
+    cus.addUrl(LINKLESS_PAGE, startUrl);
+
+    TestCrawlCB cb = new TestCrawlCB(deadline);
+    crawlManager.canTreeWalkStart(mau, cb, null);
+
+    while (!deadline.expired()) {
+      try{
+	deadline.sleep();
+      } catch (InterruptedException ie) {
+      }
+    }
+    assertTrue(lastCrawlTime != maus.getLastCrawlTime());
+  }
   
 
   private class TestCrawlCB implements CrawlManager.Callback {
