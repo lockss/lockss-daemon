@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.14 2003-10-15 19:52:59 clairegriffin Exp $
+ * $Id: BaseUrlCacher.java,v 1.15 2003-11-01 00:06:45 eaalto Exp $
  */
 
 /*
@@ -213,8 +213,29 @@ public class BaseUrlCacher implements UrlCacher {
     Properties props = new Properties();
     // set header properties in which we have interest
     props.setProperty("content-type", conn.getContentType());
-    props.setProperty("content-url", url);
     props.setProperty("date", ""+conn.getDate());
+    props.setProperty("content-url", url);
+
+    // store all header properties (this is the only way to iterate)
+    int index = 0;
+    while (true) {
+      String key = conn.getHeaderFieldKey(index);
+      String value = conn.getHeaderField(index);
+      if ((key==null) && (value==null)) {
+        // the first header field has a null key, so we can't break just on key
+        break;
+      }
+      if (value!=null) {
+        // only store headers with values
+        if (key!=null) {
+          props.setProperty(key, value);
+        } else {
+          // the first header field has a null key
+          props.setProperty("header-"+index, value);
+        }
+      }
+      index++;
+    }
     return props;
   }
 
