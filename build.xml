@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.99 2004-08-14 00:18:18 smorabito Exp $
+ $Id: build.xml,v 1.100 2004-08-16 23:45:25 smorabito Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -847,7 +847,7 @@ java -classpath &quot;${tmp.ptool.clspth.unix}&quot; org.lockss.devtools.plugind
   </target>
 
   <!-- ==================================================================== -->
-  <target name="javadoc" depends="jar-tests,-load-build-info"
+  <target name="javadoc" depends="jar-tests,jar-tools,-load-build-info"
    description="Build the LOCKSS javadoc">
     <mkdir dir="${javadoc}"/>
     <!-- Old files can result in misleading stuff in the docs.  Since
@@ -858,11 +858,21 @@ java -classpath &quot;${tmp.ptool.clspth.unix}&quot; org.lockss.devtools.plugind
     </delete>
     <property name="javadoc.header"
               value="Built ${build.timestamp} on ${build.host}" />
-    <!-- Write the param doc into the doc tree -->
+    <!-- Write the text param doc into the doc tree -->
     <java classname="ParamDoc" fork="true">
        <classpath refid="test.run.classpath" />
        <arg line="-o ${javadoc}/paramdoc.txt lockss.jar" />
     </java>
+    <!-- Write the HTML param doc into the doc tree -->
+    <javadoc
+             sourcepath="${src}"
+	     packagenames="org.lockss.*"
+	     failonerror="true"
+	     doclet="org.lockss.doclet.ParamDoclet"
+	     docletpathref="tools.run.classpath"
+	     additionalparam="-d ${javadoc} -o paramdoc.html"
+	     classpathref="tools.run.classpath"
+	     access="protected"/>
     <javadoc
 	     failonerror="true"
              packagenames="org.lockss.*"
