@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArchivalUnit.java,v 1.16 2004-02-06 23:54:13 clairegriffin Exp $
+ * $Id: TestBaseArchivalUnit.java,v 1.17 2004-05-18 22:53:13 troberts Exp $
  */
 
 /*
@@ -142,6 +142,24 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     StringBuffer sb = new StringBuffer("laa-dee-dah-LOCK-KCOL\n\n");
     sb.append(BaseArchivalUnit.PERMISSION_STRING);
     sb.append("\n\nTheEnd!");
+    String s_ok = sb.toString();
+    String s_rev = sb.reverse().toString();
+    String s_case = s_ok.toUpperCase();
+
+    Reader reader = new StringReader(s_ok);
+    assertTrue(mbau.checkCrawlPermission(reader));
+
+    reader = new StringReader(s_case);
+    assertTrue(mbau.checkCrawlPermission(reader));
+
+    reader = new StringReader(s_rev);
+    assertFalse(mbau.checkCrawlPermission(reader));
+  }
+
+  public void testCheckCrawlPermissionWithTrailingPeriod() {
+    StringBuffer sb = new StringBuffer("");
+    sb.append(BaseArchivalUnit.PERMISSION_STRING);
+    sb.append(".");
     String s_ok = sb.toString();
     String s_rev = sb.reverse().toString();
     String s_case = s_ok.toUpperCase();
