@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.12 2003-07-11 23:31:28 tlipkis Exp $
+ * $Id: ArchivalUnit.java,v 1.13 2003-07-21 08:34:28 tlipkis Exp $
  */
 
 /*
@@ -58,6 +58,12 @@ public interface ArchivalUnit {
       throws ArchivalUnit.ConfigurationException;
 
   /**
+   * Return the AU's current configuration.
+   * @return a Configuration
+   */
+  public Configuration getConfiguration();
+
+  /**
    * Determine whether the url falls within the CrawlSpec.
    * @param url the url to test
    * @return true if it should be cached
@@ -92,6 +98,12 @@ public interface ArchivalUnit {
    * @return a Collection of URL stems
    */
   public Collection getUrlStems();
+
+  /**
+   * Returns the plugin to which this AU belongs
+   * @return the plugin
+   */
+  public Plugin getPlugin();
 
   /**
    * Returns a unique string identifier for the {@link Plugin}.
@@ -166,15 +178,15 @@ public interface ArchivalUnit {
   public boolean shouldCallTopLevelPoll(AuState aus);
 
   public class ConfigurationException extends Exception {
-    private String msg;
     private Throwable nestedException;
 
     public ConfigurationException(String msg) {
-      this(msg, null);
+      super(msg);
     }
 
     public ConfigurationException(String msg, Throwable e) {
-      this.msg = msg;
+      super(msg + ": " + e.getMessage());
+//       super(msg + ": " + e.toString());
       this.nestedException = e;
     }
 
@@ -182,18 +194,14 @@ public interface ArchivalUnit {
       return nestedException;
     }
 
-    public String getMsg() {
-      return msg;
-    }
-
-    public String toString() {
-      StringBuffer sb = new StringBuffer();
-      sb.append(msg);
-      if (nestedException != null) {
-	sb.append("\nnested exception:\n");
-	sb.append(nestedException.toString());
-      }
-      return sb.toString();
-    }
+//     public String toString() {
+//       StringBuffer sb = new StringBuffer();
+//       sb.append(msg);
+//       if (nestedException != null) {
+// 	sb.append("\nnested exception:\n");
+// 	sb.append(nestedException.toString());
+//       }
+//       return sb.toString();
+//     }
   }
 }

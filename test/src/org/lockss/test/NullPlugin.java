@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.35 2003-07-18 02:14:25 eaalto Exp $
+ * $Id: NullPlugin.java,v 1.36 2003-07-21 08:34:28 tlipkis Exp $
  */
 
 /*
@@ -294,6 +294,10 @@ public class NullPlugin {
     public void setConfiguration(Configuration config) {
     }
 
+    public Configuration getConfiguration() {
+      return null;
+    }
+
     public org.lockss.plugin.CachedUrlSet makeCachedUrlSet(CachedUrlSetSpec spec) {
       return null;
     }
@@ -312,6 +316,10 @@ public class NullPlugin {
 
     public Collection getUrlStems() {
       return Collections.EMPTY_LIST;
+    }
+
+    public org.lockss.plugin.Plugin getPlugin() {
+      return null;
     }
 
     public String getPluginId() {

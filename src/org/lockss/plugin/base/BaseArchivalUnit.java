@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.30 2003-06-20 22:34:51 claire Exp $
+ * $Id: BaseArchivalUnit.java,v 1.31 2003-07-21 08:34:28 tlipkis Exp $
  */
 
 /*
@@ -124,6 +124,10 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     auConfig = config;
   }
 
+  public Configuration getConfiguration() {
+    return auConfig;
+  }
+
   private void checkLegalConfigChange(Configuration newConfig)
       throws ArchivalUnit.ConfigurationException {
     Collection defKeys = plugin.getDefiningConfigKeys();
@@ -143,7 +147,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    * Returns the plugin for this AU
    * @return the plugin for this AU
    */
-  protected Plugin getPlugin() {
+  public Plugin getPlugin() {
     return plugin;
   }
 
