@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.20 2003-04-03 11:29:47 tal Exp $
+ * $Id: CrawlManagerImpl.java,v 1.21 2003-04-16 05:52:11 aalto Exp $
  */
 
 /*
@@ -58,6 +58,11 @@ public class CrawlManagerImpl
    * 5)check crawl schedule rules
    */
   private static final String CRAWL_STATUS_TABLE_NAME = "crawl_status_table";
+
+  //XXX fix
+  private static final long DEFAULT_CRAWL_EXPIRATION_TIME = 5 * Constants.HOUR;
+  private static final long DEFAULT_REPAIR_EXPIRATION_TIME = 5 * Constants.MINUTE;
+
   private Map newContentCrawls = new HashMap();
   private Set activeCrawls = new HashSet();
   private static Logger logger = Logger.getLogger("CrawlManagerImpl");
@@ -108,11 +113,20 @@ public class CrawlManagerImpl
       throw new IllegalArgumentException("Called with null URL");
     }
 
-
-    CrawlThread crawlThread =
-      new CrawlThread(au, ListUtil.list(url.toString()),
-		      false, Deadline.MAX, ListUtil.list(cb), cookie);
-    crawlThread.start();
+    // check with regulator and start repair
+    //XXX get real expiration time
+    long expiration = DEFAULT_REPAIR_EXPIRATION_TIME;
+    if (LockssDaemon.getActivityRegulator().startCusActivity(
+        ActivityRegulator.REPAIR_CRAWL, au.makeCachedUrlSet(
+        new SingleNodeCachedUrlSetSpec(url.toString())),
+        expiration)) {
+      CrawlThread crawlThread =
+          new CrawlThread(au, ListUtil.list(url.toString()),
+                          false, Deadline.MAX, ListUtil.list(cb), cookie);
+      crawlThread.start();
+    } else {
+      logger.debug3("Repair aborted due to activity lock.");
+    }
   }
 
   public boolean isCrawlingAU(ArchivalUnit au, CrawlManager.Callback cb,
@@ -125,7 +139,7 @@ public class CrawlManagerImpl
     NodeManager nodeManager = theDaemon.getNodeManager(au);
     synchronized (activeCrawls) {
       if (activeCrawls.contains(au)) {
-	logger.debug3("Already crawling "+au
+	logger.debug3("Already crawling "+ au
 		      +", not starting new content crawl");
 	return true;
       }
@@ -137,6 +151,20 @@ public class CrawlManagerImpl
       }
     }
     return false;
+  }
+
+  public void startNewContentCrawl(ArchivalUnit au, CrawlManager.Callback cb,
+                                   Object cookie) {
+    logger.debug3("Scheduling new content crawl for AU '" + au.getName() + "'");
+    //XXX get real expiration time
+    long expiration = DEFAULT_CRAWL_EXPIRATION_TIME;
+    if (LockssDaemon.getActivityRegulator().startAuActivity(
+        ActivityRegulator.NEW_CONTENT_CRAWL, au, expiration)) {
+      activeCrawls.add(au);
+      scheduleNewContentCrawl(au, cb, cookie);
+    } else {
+      logger.debug2("Couldn't schedule new content crawl due to activity lock.");
+    }
   }
 
   public boolean shouldRecrawl(ArchivalUnit au, NodeState ns) {
@@ -207,11 +235,22 @@ public class CrawlManagerImpl
       crawler.doCrawl(deadline);
       activeCrawls.remove(au);
       if (callbacks != null) {
-	Iterator it = callbacks.iterator();
-	while (it.hasNext()) {
-	  CrawlManager.Callback cb = (CrawlManager.Callback)it.next();
-	  cb.signalCrawlAttemptCompleted(true, cookie);
-	}
+        Iterator it = callbacks.iterator();
+        while (it.hasNext()) {
+          CrawlManager.Callback cb = (CrawlManager.Callback) it.next();
+          cb.signalCrawlAttemptCompleted(true, cookie);
+        }
+      }
+      // if followLinks is true, assume it's a new content crawl
+      if (followLinks) {
+        LockssDaemon.getActivityRegulator().auActivityFinished(
+            ActivityRegulator.NEW_CONTENT_CRAWL, au);
+      } else {
+        // otherwise, assume it's a repair crawl
+        String url = (String)urls.get(0);
+        LockssDaemon.getActivityRegulator().cusActivityFinished(
+            ActivityRegulator.REPAIR_CRAWL, au.makeCachedUrlSet(
+            new SingleNodeCachedUrlSetSpec(url)));
       }
     }
     public Crawler getCrawler() {
@@ -244,7 +283,7 @@ public class CrawlManagerImpl
     private static final String NUM_URLS_PARSED = "num_urls_parsed";
     private static final String NUM_URLS_FETCHED = "num_urls_fetched";
 
-    private List colDescs = 
+    private List colDescs =
       ListUtil.list(
 		    new ColumnDescriptor(AU_COL_NAME, "Journal Volume",
 					 ColumnDescriptor.TYPE_STRING),
@@ -257,9 +296,9 @@ public class CrawlManagerImpl
 		    new ColumnDescriptor(NUM_URLS_PARSED, "Num URLs parsed",
 					 ColumnDescriptor.TYPE_INT)
 		    );
-    
-    
-    
+
+
+
     private List getRows(String key) {
       List rows = new ArrayList();
       if (key == null) {
@@ -315,6 +354,7 @@ public class CrawlManagerImpl
     }
 
     /**
+     * @param num the long
      * @return null if num <= 0, a Long version of num otherwise
      */
     private Long makeNullOrLong(long num) {

@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawlManager.java,v 1.7 2003-03-20 21:48:29 troberts Exp $
+ * $Id: MockCrawlManager.java,v 1.8 2003-04-16 05:52:11 aalto Exp $
  */
 
 /*
@@ -63,15 +63,14 @@ public class MockCrawlManager implements CrawlManager, LockssManager {
   }
 
   /**
-   * Currently returns false if last crawl time > 0, schedules new content 
+   * Currently returns false if last crawl time > 0, schedules new content
    * crawl and returns true otherwise.
    * @param au the ArchivalUnit
-   * @param aus the AuState
    * @param cb the Callback
    * @param cookie the cookie
    * @return true if a crawl is running on this AU
    */
-  public boolean isCrawlingAU(ArchivalUnit au, 
+  public boolean isCrawlingAU(ArchivalUnit au,
 			      CrawlManager.Callback cb, Object cookie) {
     if (shouldCrawlNewContent) {
       scheduleNewContentCrawl(au, cb, cookie);
@@ -79,6 +78,11 @@ public class MockCrawlManager implements CrawlManager, LockssManager {
     }
     return false;
 
+  }
+
+  public void startNewContentCrawl(ArchivalUnit au, CrawlManager.Callback cb,
+                                   Object cookie) {
+    scheduleNewContentCrawl(au, cb, cookie);
   }
 
   public void setShouldCrawlNewContent(boolean shouldCrawlNewContent) {
