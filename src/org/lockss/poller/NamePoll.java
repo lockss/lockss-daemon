@@ -1,5 +1,5 @@
 /*
-* $Id: NamePoll.java,v 1.2 2002-10-23 06:05:59 claire Exp $
+* $Id: NamePoll.java,v 1.3 2002-10-24 23:18:14 claire Exp $
  */
 
 /*
@@ -62,7 +62,6 @@ public class NamePoll extends Poll {
   }
 
   public void run()  {
-    Thread.currentThread().setPriority(Thread.NORM_PRIORITY);
 
     if(m_msg.isLocal())	 {
       if(m_voteChecked)  {

@@ -1,5 +1,5 @@
 /*
-* $Id: ContentPoll.java,v 1.2 2002-10-23 06:05:59 claire Exp $
+* $Id: ContentPoll.java,v 1.3 2002-10-24 23:18:14 claire Exp $
  */
 
 /*
@@ -56,12 +56,10 @@ public class ContentPoll extends Poll implements Runnable {
     seq++;
 
     m_thread =  new Thread(this, "Content Poll-" + seq);
-    m_thread.start();
   }
 
-  public void run()  {
-    Thread.currentThread().setPriority(Thread.NORM_PRIORITY);
 
+  public void run()  {
     if(m_msg.isLocal())	 {
       if(m_voteChecked)  {
         log.debug(m_key + " local replay ignored");
@@ -104,6 +102,24 @@ public class ContentPoll extends Poll implements Runnable {
     }
     scheduleHash();
 
+    try {
+      m_thread.sleep(duration);
+    }
+    catch (InterruptedException ex) {
+			// we've completed the hash and need to scheduele our vote
+			if(!m_deadline.expired()) {
+				chooseVoteTime();
+				while(!m_voteTime.expired()) {
+          try {
+            m_thread.sleep(1000);
+          }
+          catch (InterruptedException ex2) {
+						// this is always an abort.
+          }
+				}
+			}
+    }
+
   }
 
   protected void tally() {
@@ -118,7 +134,7 @@ public class ContentPoll extends Poll implements Runnable {
       noWt = m_disagreeWt;
     }
     thePolls.remove(m_key);
-    //recordTally(m_urlset, this, yes, no, yesWt, noWt, m_replyOpcode);
+    //recordTally(m_arcUnit, this, yes, no, yesWt, noWt, m_replyOpcode);
   }
 
   void checkVote()  {

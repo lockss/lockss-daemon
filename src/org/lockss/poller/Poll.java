@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.2 2002-10-23 06:05:59 claire Exp $
+* $Id: Poll.java,v 1.3 2002-10-24 23:18:14 claire Exp $
  */
 
 /*
@@ -44,7 +44,7 @@ import java.net.InetAddress;
 import gnu.regexp.*;
 
 /**
- * <p>Base class for all poll objects.</p>
+ * <p>Abstract base class for all poll objects.</p>
  * @author Claire Griffin
  * @version 1.0
  */
@@ -126,9 +126,8 @@ public abstract class Poll implements Runnable {
     m_voteChecked = false;
     m_voted = false;
 
-    m_key = new String(m_url + " " + m_regExp	+ m_msg.getOpcode());
+    m_key = makeKey(m_url, m_regExp, m_msg.getOpcode());
     if(thePolls.get(m_key) == null) {
-      // we actually need to do something
       thePolls.put(m_key, this);
     }
 
@@ -181,8 +180,7 @@ public abstract class Poll implements Runnable {
    * @see <code>Poll.createPoll</code>
    */
   public static Poll findPoll(Message msg) throws IOException {
-    String key = msg.getTargetUrl() + " " + msg.getRegExp() +
-                 msg.getOpcode();
+    String key = makeKey(msg.getTargetUrl(),msg.getRegExp(),msg.getOpcode());
     Poll ret = (Poll)thePolls.get(key);
     if(ret == null) {
       ret = makePoll(msg);
@@ -206,35 +204,45 @@ public abstract class Poll implements Runnable {
     return m_arcUnit;
   }
 
+	/**
+	 * start the poll thread and run this poll.
+	 */
+	public void startPoll() {
+		m_thread.setPriority(Thread.NORM_PRIORITY);
+		m_thread.start();
+	}
+
   /**
    * run method for this thread
    */
-  public void run() {
-  }
+  abstract public void run();
 
   /**
    * schedule the appropriate hash for this poll
    * @return true if hash was successfully scheduled, false otherwise.
    */
-  boolean scheduleHash() {
-    return false;
-  }
+  abstract boolean scheduleHash();
 
   /**
    * check the result of the hash
    */
-  void checkVote() {
-  }
+  abstract void checkVote();
 
   /**
    * expire any deadlines and stop this thread
    */
-  void abort()  {
-    log.info(m_key + " aborted");
-    thePolls.remove(m_key);
-    m_voteTime.expire();
-    m_deadline.expire();
-  }
+	void abort()  {
+		log.info(m_key + " aborted");
+		thePolls.remove(m_key);
+		if(m_voteTime != null) {
+			m_voteTime.expire();
+
+		}
+		if(m_deadline != null) {
+			m_deadline.expire();
+
+		}
+	}
 
   // pre-vote actions
   /**
@@ -344,6 +352,7 @@ public abstract class Poll implements Runnable {
     long v_stddev = m_msg.getDuration()/5;
 
     m_voteTime = new ProbabilisticTimer(v_mean,v_stddev);
+
   }
 
   /**
@@ -358,9 +367,6 @@ public abstract class Poll implements Runnable {
     }
 
     log.info("I agree with " + msg.toString() + " rep " + weight);
-    //XXX - what is a reasonable delay here?
-    ProbabilisticTimer wait = new ProbabilisticTimer(1000 * 60);
-    wait.sleepUntil();
     rememberVote(msg, true);
     if (!msg.isLocal()) {
       try {
@@ -392,9 +398,6 @@ public abstract class Poll implements Runnable {
     } else {
       log.info("I disagree with" + msg.toString() + " rep " + weight);
     }
-    //XXX - what is a reasonable delay here?
-    ProbabilisticTimer wait = new ProbabilisticTimer(1000 * 60);
-    wait.sleepUntil();
     rememberVote(msg, false);
     if (!local) {
       try {
@@ -486,6 +489,11 @@ public abstract class Poll implements Runnable {
     return ret;
   }
 
+	static String makeKey(String sUrl, String sRegExp, int opcode) {
+		return new String(sUrl + " " + sRegExp	+ " " + opcode);
+	}
+
+
   class HashCallback implements HashService.Callback {
     /**
      * Called to indicate that hashing the content or names of a
@@ -505,9 +513,7 @@ public abstract class Poll implements Runnable {
 
       if(hash_completed)  {
         m_hash = hasher.digest();
-        chooseVoteTime();
-        checkVote();
-
+				checkVote();
       }
 
     }
