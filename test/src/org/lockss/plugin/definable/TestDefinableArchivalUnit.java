@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.10 2004-09-02 01:22:50 troberts Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.11 2004-09-02 18:32:55 troberts Exp $
  */
 
 /*
@@ -223,7 +223,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     map.putString(DefinableArchivalUnit.AU_URL_NORMALIZER_KEY,
 		  "org.lockss.plugin.definable.TestDefinableArchivalUnit$MyNormalizer");
     UrlNormalizer urlNormalizer = cau.makeUrlNormalizer();
-    assertTrue(urlNormalizer instanceof org.lockss.plugin.definable.TestDefinableArchivalUnit$MyNormalizer);
+    assertTrue(urlNormalizer instanceof org.lockss.plugin.definable.TestDefinableArchivalUnit.MyNormalizer);
   }
 
   public static class NegativeCrawlRuleFactory
