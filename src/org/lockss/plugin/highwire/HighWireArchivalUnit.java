@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireArchivalUnit.java,v 1.1 2003-01-03 00:17:42 aalto Exp $
+ * $Id: HighWireArchivalUnit.java,v 1.2 2003-01-03 21:49:18 aalto Exp $
  */
 
 /*
@@ -47,8 +47,16 @@ import org.lockss.plugin.*;
  */
 
 public class HighWireArchivalUnit extends BaseArchivalUnit {
-  static public final String LOG_NAME = "HighWireArchivalUnit";
+  public static final String LOG_NAME = "HighWireArchivalUnit";
+  /**
+   * Configuration parameter for pause time in Highwire crawling.
+   */
+  public static final String PARAM_HIGHWIRE_PAUSE_TIME =
+      Configuration.PREFIX + "highwire.pause.time";
+  private static final int DEFAULT_PAUSE_TIME = 10000;
+
   protected Logger logger = Logger.getLogger(LOG_NAME);
+  private int pauseMS;
 
   /**
    * Standard constructor for HighWirePlugin.
@@ -60,6 +68,7 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
   public HighWireArchivalUnit(String start)
       throws REException, MalformedURLException {
     super(makeCrawlSpec(start));
+    loadPauseTime();
   }
 
   public CachedUrlSet cachedUrlSetFactory(ArchivalUnit owner,
@@ -122,6 +131,15 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
     rules.add(new CrawlRules.RE(".*/math.*", incl));
     rules.add(new CrawlRules.RE("http://.*/.*/.*", excl));
     return new CrawlRules.FirstMatch(rules);
+  }
+
+  private void loadPauseTime() {
+    pauseMS = Configuration.getIntParam(PARAM_HIGHWIRE_PAUSE_TIME,
+                                        DEFAULT_PAUSE_TIME);
+  }
+
+  public void pause() {
+    pause(pauseMS);
   }
 
   public String getPluginId() {
