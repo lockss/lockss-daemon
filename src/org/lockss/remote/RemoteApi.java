@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.4 2004-04-27 19:40:00 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.5 2004-04-29 10:15:30 tlipkis Exp $
  */
 
 /*
@@ -297,13 +297,13 @@ public class RemoteApi extends BaseLockssManager {
   /** Comparator for sorting AuProxy lists.  Not suitable for use in a
    * TreeSet unless changed to never return 0. */
   class AuProxyOrderComparator implements Comparator {
-    CatalogueOrderComparator coc = new CatalogueOrderComparator();
+    CatalogueOrderComparator coc = CatalogueOrderComparator.SINGLETON;
     public int compare(Object o1, Object o2) {
       if (!((o1 instanceof AuProxy)
 	   && (o2 instanceof AuProxy))) {
 	throw new IllegalArgumentException("AuProxyOrderComparator(" +
-					   o1.getClass() + "," +
-					   o2.getClass() + ")");
+					   o1.getClass().getName() + "," +
+					   o2.getClass().getName() + ")");
       }
       AuProxy a1 = (AuProxy)o1;
       AuProxy a2 = (AuProxy)o2;

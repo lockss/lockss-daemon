@@ -1,5 +1,5 @@
 /*
- * $Id: TestCatalogueOrderComparator.java,v 1.1 2004-04-27 19:05:21 tlipkis Exp $
+ * $Id: TestCatalogueOrderComparator.java,v 1.2 2004-04-29 10:15:29 tlipkis Exp $
  */
 
 /*
@@ -86,9 +86,39 @@ public class TestCatalogueOrderComparator extends LockssTestCase {
     assertIsomorphic(titles, sort(tl));
   }
 
+  public void testIllType() {
+    try {
+      sort(ListUtil.list("foo", new Integer(1)));
+      fail("Should have thrown IllegalArgumentException");
+    } catch (IllegalArgumentException e) {
+    }
+  }
+
+
+  public void testCache() {
+    CountingCOC ccoc = new CountingCOC();
+    List lst = ListUtil.list("1", "2", "the 3", "a 4", "an 5");
+    ccoc.xlateCnt = 0;
+    Collections.sort(lst, ccoc);
+    // should have xlated each item once
+    assertEquals(lst.size(), ccoc.xlateCnt);
+    lst.add("a partridge");
+    Collections.shuffle(lst);
+    Collections.sort(lst, ccoc);
+    assertEquals(lst.size(), ccoc.xlateCnt);
+  }
+
   List sort(List l) {
     Collections.sort(l, new CatalogueOrderComparator());
     return l;
+  }
+
+  class CountingCOC extends CatalogueOrderComparator {
+    int xlateCnt = 0;
+    String xlate(String s) {
+      xlateCnt++;
+      return super.xlate(s);
+    }
   }
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: CatalogueOrderComparator.java,v 1.2 2004-04-27 20:10:36 tlipkis Exp $
+ * $Id: CatalogueOrderComparator.java,v 1.3 2004-04-29 10:15:29 tlipkis Exp $
  */
 
 /*
@@ -32,28 +32,31 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util;
 import java.util.*;
-import java.io.*;
-import gnu.regexp.*;
-import org.lockss.plugin.*;
-import org.lockss.remote.*;
 
 /**
  * Comparator that implements a suitable ordering for titles in a library
  * catalogue.  Punctuation and initial determiners are removed, then a
  * case-independent comparison is done.  The translated sort keys are
  * cached, so performance will be enhanced by reusing the same instance of
- * the comparator.
+ * the comparator.  The singleton {@link #SINGLETON} is provided for that
+ * purpose.
  */
 
 public class CatalogueOrderComparator implements Comparator {
+  static final String PUNCTUATION = ".,-:;\"\'/?()[]{}<>!#";
+
+  /** An instance of the comparator. */
+  public static final CatalogueOrderComparator SINGLETON =
+    new CatalogueOrderComparator();
+
   Map keyMap = new HashMap();
 
   public int compare(Object o1, Object o2) {
     if (!((o1 instanceof String)
 	 && (o2 instanceof String))) {
       throw new IllegalArgumentException("CatalogueOrderComparator(" +
-					 o1.getClass() + "," +
-					 o2.getClass() + ")");
+					 o1.getClass().getName() + "," +
+					 o2.getClass().getName() + ")");
     }
     return compare((String)o1, (String)o2);
   }
@@ -76,7 +79,7 @@ public class CatalogueOrderComparator implements Comparator {
     s = deleteInitial(s, "a");
     s = deleteInitial(s, "an");
     s = deleteInitial(s, "the");
-    s = deleteAll(s, ".,-:;\"\'");
+    s = deleteAll(s, PUNCTUATION);
     return s;
   }
 

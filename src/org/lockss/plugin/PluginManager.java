@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.80 2004-04-27 19:38:02 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.81 2004-04-29 10:15:30 tlipkis Exp $
  */
 
 /*
@@ -756,7 +756,7 @@ public class PluginManager extends BaseLockssManager {
   public List findAllTitles() {
     if (allTitles == null) {
       allTitles = new ArrayList(getTitleMap().keySet());
-      Collections.sort(allTitles, auComparator.coc);
+      Collections.sort(allTitles, CatalogueOrderComparator.SINGLETON);
     }
     return allTitles;
   }
@@ -854,7 +854,7 @@ public class PluginManager extends BaseLockssManager {
   /** Comparator for sorting Aus alphabetically by title.  This is used in a
    * TreeSet, so must return 0 only for identical objects. */
   class AuOrderComparator implements Comparator {
-    CatalogueOrderComparator coc = new CatalogueOrderComparator();
+    CatalogueOrderComparator coc = CatalogueOrderComparator.SINGLETON;
 
     public int compare(Object o1, Object o2) {
       if (o1 == o2) {
@@ -863,8 +863,8 @@ public class PluginManager extends BaseLockssManager {
       if (!((o1 instanceof ArchivalUnit)
 	   && (o2 instanceof ArchivalUnit))) {
 	throw new IllegalArgumentException("AuOrderComparator(" +
-					   o1.getClass() + "," +
-					   o2.getClass() + ")");
+					   o1.getClass().getName() + "," +
+					   o2.getClass().getName() + ")");
       }
       ArchivalUnit a1 = (ArchivalUnit)o1;
       ArchivalUnit a2 = (ArchivalUnit)o2;
@@ -883,7 +883,7 @@ public class PluginManager extends BaseLockssManager {
 
   private class Status implements StatusAccessor {
     private final List sortRules =
-      ListUtil.list(new StatusTable.SortRule("au", true));
+      ListUtil.list(new StatusTable.SortRule("au", CatalogueOrderComparator.SINGLETON));
 
     private final List colDescs =
       ListUtil.list(
