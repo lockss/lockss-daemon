@@ -1,5 +1,5 @@
 /*
- * $Id: ActivityRegulator.java,v 1.26 2004-01-13 01:09:55 eaalto Exp $
+ * $Id: ActivityRegulator.java,v 1.27 2004-02-07 06:44:05 eaalto Exp $
  */
 
 /*
@@ -134,9 +134,6 @@ public class ActivityRegulator
     // nothing to config
   }
 
-  /** Called between initService() and startService(), then whenever the
-   * AU's config changes.
-   */
   public void setAuConfig(Configuration auConfig) {
   }
 
@@ -163,14 +160,12 @@ public class ActivityRegulator
       return null;
     }
 
-    logger.debug("Started " + activityCodeToString(newActivity) + " on AU '" +
-                 au.getName() + "'");
     return setAuActivity(newActivity, expireIn);
   }
 
   /**
    * Tries to get a lock for a particular CUS-level activity.  If it can, it
-   * creates the lock to inidicate that the requested activity is now running.
+   * creates the lock to indicate that the requested activity is now running.
    * Lock.expire() should be called to free the lock.
    * @param cus the {@link CachedUrlSet}
    * @param newActivity the activity int
@@ -196,8 +191,6 @@ public class ActivityRegulator
     if (checkForRelatedCusActivity(newActivity, cus)) {
       return null;
     }
-    logger.debug("Started " + activityCodeToString(newActivity) + " on CUS '" +
-                 cus.getUrl() + "'");
     return setCusActivity(cus, newActivity, expireIn);
   }
 
@@ -471,7 +464,95 @@ public class ActivityRegulator
       curAuActivityLock.expire();
     }
     curAuActivityLock = new Lock(activity, expireIn);
+    logger.debug("Started " + activityCodeToString(activity) + " on AU '" +
+        au.getName() + "'");
     return curAuActivityLock;
+  }
+
+  /**
+   * Converts an AU-level lock into a CUS-level lock.  Returns null if not
+   * possible.
+   * @param auLock the AU Lock
+   * @param cus the CachedUrlSet
+   * @param newActivity the CUS activity
+   * @param expireIn expiration time
+   * @return Lock the CusLock
+   */
+  public synchronized Lock changeAuLockToCusLock(Lock auLock,
+      CachedUrlSet cus, int newActivity, long expireIn) {
+    // since the code is much simpler for the single CUS version,
+    // it was duplicated instead of using a single entry collection
+    if (auLock==null) {
+      logger.debug2("Null AU lock given for AU '"+au.getName()+
+          "'.  Unable to convert to CUS lock.");
+      return null;
+    }
+
+    setAuActivity(CUS_ACTIVITY, expireIn);
+    Lock cusLock = (Lock)cusMap.get(cus);
+    if (cusLock!=null) {
+      logger.debug2("CUS '"+cus.getUrl()+"' already busy with "+
+          activityCodeToString(cusLock.activity)+".  Couldn't start "+
+          activityCodeToString(newActivity) + ".");
+      return null;
+    }
+
+    logger.debug2("Changing lock on AU '"+au.getName()+ "'from "+
+        activityCodeToString(auLock.activity) + " to CUS activity "+
+        activityCodeToString(newActivity)+
+        " on CUS '"+cus.getUrl()+"' with expiration in "+
+        StringUtil.timeIntervalToString(expireIn));
+    return getCusActivityLock(cus, newActivity, expireIn);
+  }
+
+  /**
+   * Converts an AU-level lock into a group of CUS-level locks.  If any locks
+   * are unattainable, they are skipped.
+   * @param auLock the AU lock
+   * @param cusLockReq a list of CusLockRequest objects
+   * @return List of CusLocks
+   */
+  public synchronized List changeAuLockToCusLocks(Lock auLock,
+      Collection cusLockReq) {
+    if (auLock==null) {
+      logger.debug2("Null AU lock given for AU '"+au.getName()+
+          "'.  Unable to convert to CUS locks.");
+      return new ArrayList();
+    }
+
+    // temporary set to allow CUS to set properly
+    setAuActivity(CUS_ACTIVITY, STANDARD_LOCK_LENGTH);
+
+    long maxExpire = 0;
+    List lockList = new ArrayList(cusLockReq.size());
+    Iterator iter = cusLockReq.iterator();
+    while (iter.hasNext()) {
+      CusLockRequest request = (CusLockRequest)iter.next();
+      CachedUrlSet cus = request.cus;
+      int newActivity = request.activity;
+      long expireIn = request.expireIn;
+      maxExpire = Math.max(maxExpire, expireIn);
+      Lock cusLock = (Lock)cusMap.get(cus);
+      if (cusLock!=null) {
+        logger.debug2("CUS '"+cus.getUrl()+"' already busy with "+
+            activityCodeToString(cusLock.activity)+".  Couldn't start "+
+            activityCodeToString(newActivity) + ".");
+        continue;
+      }
+
+      logger.debug2("Changing lock on AU '"+au.getName()+ "'from "+
+          activityCodeToString(auLock.activity) + " to CUS activity "+
+          activityCodeToString(newActivity)+
+          " on CUS '"+cus.getUrl()+"' with expiration in "+
+          StringUtil.timeIntervalToString(expireIn));
+      Lock lock = getCusActivityLock(cus, newActivity, expireIn);
+      if (lock!=null) {
+        lockList.add(lock);
+      }
+    }
+    // set to longest CUS duration
+    setAuActivity(CUS_ACTIVITY, maxExpire);
+    return lockList;
   }
 
   int getCusActivity(CachedUrlSet cus) {
@@ -499,7 +580,9 @@ public class ActivityRegulator
     cusLock = new CusLock(cus, activity, expireIn);
     cusMap.put(cus, cusLock);
     // set AU state to indicate CUS activity (resets expiration time)
-    curAuActivityLock = new Lock(CUS_ACTIVITY, expireIn);
+    setAuActivity(CUS_ACTIVITY, expireIn);
+    logger.debug("Started " + activityCodeToString(activity) + " on CUS '" +
+        cus.getUrl() + "'");
     return cusLock;
   }
 
@@ -597,14 +680,15 @@ public class ActivityRegulator
 
     public void setNewActivity(int newActivity, long expireIn) {
       logger.debug2("Changing activity on "+
-                    (cus==null ? "AU '"+au.getName()+ "'"
-                     : "CUS '"+cus.getUrl()+"'") + "from "+
-                    activityCodeToString(activity) + " to "+
-                    activityCodeToString(newActivity)+
-                    " with expiration in "+
-                    StringUtil.timeIntervalToString(expireIn));
+          (cus==null ? "AU '"+au.getName()+ "'"
+          : "CUS '"+cus.getUrl()+"'") + "from "+
+          activityCodeToString(activity) + " to "+
+          activityCodeToString(newActivity)+
+          " with expiration in "+
+          StringUtil.timeIntervalToString(expireIn));
       activity = newActivity;
       expiration = Deadline.in(expireIn);
+      curAuActivityLock = new Lock(CUS_ACTIVITY, expireIn);
     }
 
     public ArchivalUnit getArchivalUnit() {
@@ -630,6 +714,18 @@ public class ActivityRegulator
     public void extend() {
       super.extend();
       curAuActivityLock.extend();
+    }
+  }
+
+  public static class CusLockRequest {
+    CachedUrlSet cus;
+    int activity;
+    long expireIn;
+
+    public CusLockRequest(CachedUrlSet cus, int activity, long expireIn) {
+      this.cus = cus;
+      this.activity = activity;
+      this.expireIn = expireIn;
     }
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.168 2004-02-07 02:00:01 troberts Exp $
+ * $Id: NodeManagerImpl.java,v 1.169 2004-02-07 06:44:05 eaalto Exp $
  */
 
 /*
@@ -1351,8 +1351,7 @@ public class NodeManagerImpl
 
     PollCookie cookie = new PollCookie(cus, pollKey, isNamePoll, urls);
     theDaemon.getCrawlManager().startRepair(managedAu, urls,
-					    new ContentRepairCallback(),
-					    cookie, lock);
+        new ContentRepairCallback(), cookie, lock);
   }
 
   private void deleteNode(CachedUrlSet cus) throws IOException {
@@ -1550,19 +1549,67 @@ public class NodeManagerImpl
     return !damagedNodes.getNodesToRepair().isEmpty();
   }
 
-  public void scheduleRepairs(ActivityRegulator.Lock activityLock) {
+  public void scheduleRepairs(ActivityRegulator.Lock auLock) {
     HashMap repairs = damagedNodes.getNodesToRepair();
     if (!repairs.isEmpty()) {
       logger.debug("Found nodes needing repair; scheduling repairs...");
-      Iterator cusKeys = repairs.keySet().iterator();
-      while (cusKeys.hasNext()) {
+
+      // if there's only one lock needed, use the streamlined code
+      if (repairs.keySet().size()==1) {
+        // get cus
+        Iterator cusKeys = repairs.keySet().iterator();
         String cusUrl = (String)cusKeys.next();
         CachedUrlSet cus = managedAu.getPlugin().makeCachedUrlSet(managedAu,
             new RangeCachedUrlSetSpec(cusUrl));
-        Collection localCol = new ArrayList((Collection)repairs.get(cusUrl));
+
+        // get lock
         NodeState node = getNodeState(cus);
         boolean isNamePoll = (node.getState() == NodeState.WRONG_NAMES);
-        markNodesForRepair(localCol, null, cus, isNamePoll, activityLock);
+        int activity = (isNamePoll ? regulator.STANDARD_NAME_POLL
+            : regulator.REPAIR_CRAWL);
+        ActivityRegulator.CusLock cusLock =
+            (ActivityRegulator.CusLock)regulator.changeAuLockToCusLock(
+            auLock, cus, activity, Constants.HOUR);
+        if (cusLock!=null) {
+          // schedule repair
+          Collection localCol =
+              new ArrayList((Collection)repairs.get(cus.getUrl()));
+          markNodesForRepair(localCol, null, cus, isNamePoll, cusLock);
+        } else {
+          logger.debug("Unable to obtain lock for repairs on CUS '"+cusUrl+"'");
+        }
+      } else {
+        // a little more involved if there are several locks needed
+        List cusReqList = new ArrayList();
+        Iterator cusKeys = repairs.keySet().iterator();
+        // make a list of cus activity requests
+        while (cusKeys.hasNext()) {
+          String cusUrl = (String)cusKeys.next();
+          CachedUrlSet cus = managedAu.getPlugin().makeCachedUrlSet(managedAu,
+              new RangeCachedUrlSetSpec(cusUrl));
+          NodeState node = getNodeState(cus);
+          boolean isNamePoll = (node.getState() == NodeState.WRONG_NAMES);
+          int activity = (isNamePoll ? regulator.STANDARD_NAME_POLL
+              : regulator.REPAIR_CRAWL);
+          cusReqList.add(new ActivityRegulator.CusLockRequest(cus,
+              activity, Constants.HOUR));
+        }
+
+        // get the locks back and start repairs on them
+        // if some CUSets were denied, they'll be tried again eventually
+        List lockList = regulator.changeAuLockToCusLocks(auLock,
+            cusReqList);
+        Iterator lockIter = lockList.iterator();
+        while (lockIter.hasNext()) {
+          ActivityRegulator.CusLock cusLock =
+              (ActivityRegulator.CusLock)lockIter.next();
+          CachedUrlSet cus = cusLock.getCachedUrlSet();
+          Collection localCol =
+              new ArrayList((Collection)repairs.get(cus.getUrl()));
+          NodeState node = getNodeState(cus);
+          boolean isNamePoll = (node.getState() == NodeState.WRONG_NAMES);
+          markNodesForRepair(localCol, null, cus, isNamePoll, cusLock);
+        }
       }
     }
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestActivityRegulator.java,v 1.20 2004-01-13 01:09:55 eaalto Exp $
+ * $Id: TestActivityRegulator.java,v 1.21 2004-02-07 06:44:05 eaalto Exp $
  */
 
 /*
@@ -32,11 +32,11 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.daemon;
 
-import java.util.Properties;
 import java.io.File;
+import java.util.*;
 import org.lockss.test.*;
-import org.lockss.util.TimeBase;
 import org.lockss.repository.*;
+import org.lockss.util.*;
 
 public class TestActivityRegulator extends LockssTestCase {
   private ActivityRegulator regulator;
@@ -134,6 +134,81 @@ public class TestActivityRegulator extends LockssTestCase {
 
     lock.expire();
     assertNotNull(regulator.getCusActivityLock(mcus, regulator.REPAIR_CRAWL, 123));
+  }
+
+  public void testAuToCusConversion() {
+    ActivityRegulator.Lock auLock =
+        regulator.getAuActivityLock(regulator.NEW_CONTENT_CRAWL, 123);
+    assertNotNull(auLock);
+    assertFalse(auLock.isExpired());
+    assertEquals(regulator.NEW_CONTENT_CRAWL, regulator.getAuActivity());
+    MockCachedUrlSet mcus = new MockCachedUrlSet("test url");
+    ActivityRegulator.Lock cusLock =
+        regulator.changeAuLockToCusLock(auLock, mcus, regulator.REPAIR_CRAWL,
+        123);
+    assertNotNull(cusLock);
+    assertTrue(auLock.isExpired());
+    assertEquals(regulator.CUS_ACTIVITY, regulator.getAuActivity());
+    assertEquals(regulator.REPAIR_CRAWL, cusLock.getActivity());
+  }
+
+  public void testAuToCusConversionMultiple() {
+    ActivityRegulator.Lock auLock =
+        regulator.getAuActivityLock(regulator.NEW_CONTENT_CRAWL, 123);
+    MockCachedUrlSet mcus = new MockCachedUrlSet("test url");
+    MockCachedUrlSet mcus2 = new MockCachedUrlSet("test url2");
+    // set the first AU and spec to avoid null comparisons
+    mcus.setArchivalUnit(new MockArchivalUnit());
+    mcus.setSpec(new MockCachedUrlSetSpec("test", "test"));
+    ActivityRegulator.CusLockRequest req1 =
+        new ActivityRegulator.CusLockRequest(mcus, regulator.REPAIR_CRAWL, 234);
+    ActivityRegulator.CusLockRequest req2 =
+        new ActivityRegulator.CusLockRequest(mcus2, regulator.BACKGROUND_CRAWL,
+        123);
+    List locks = regulator.changeAuLockToCusLocks(auLock,
+        ListUtil.list(req1, req2));
+    assertEquals(2, locks.size());
+
+    assertTrue(auLock.isExpired());
+    assertEquals(regulator.CUS_ACTIVITY, regulator.getAuActivity());
+    assertEquals(234,
+        regulator.curAuActivityLock.expiration.getRemainingTime());
+
+    ActivityRegulator.Lock cusLock = (ActivityRegulator.Lock)locks.get(0);
+    assertNotNull(cusLock);
+    assertEquals(regulator.REPAIR_CRAWL, cusLock.getActivity());
+    assertEquals("test url", cusLock.cus.getUrl());
+
+    cusLock = (ActivityRegulator.Lock)locks.get(1);
+    assertNotNull(cusLock);
+    assertEquals(regulator.BACKGROUND_CRAWL, cusLock.getActivity());
+    assertEquals("test url2", cusLock.cus.getUrl());
+  }
+
+  public void testAuToCusConversionMultipleConflict() {
+    ActivityRegulator.Lock auLock =
+        regulator.getAuActivityLock(regulator.NEW_CONTENT_CRAWL, 123);
+    MockCachedUrlSet mcus = new MockCachedUrlSet("test url");
+    MockCachedUrlSet mcus2 = new MockCachedUrlSet("test url2");
+    // set the first AU and spec to avoid null comparisons
+    mcus.setArchivalUnit(new MockArchivalUnit());
+    mcus.setSpec(new MockCachedUrlSetSpec("test", "test"));
+    ActivityRegulator.CusLockRequest req1 =
+        new ActivityRegulator.CusLockRequest(mcus, regulator.REPAIR_CRAWL, 234);
+    ActivityRegulator.CusLockRequest req2 =
+        new ActivityRegulator.CusLockRequest(mcus2, regulator.BACKGROUND_CRAWL,
+        123);
+    // put a lock in under the CUS
+    regulator.cusMap.put(mcus, auLock);
+
+    List locks = regulator.changeAuLockToCusLocks(auLock,
+        ListUtil.list(req1, req2));
+    assertEquals(1, locks.size());
+
+    ActivityRegulator.Lock cusLock = (ActivityRegulator.Lock)locks.get(0);
+    assertNotNull(cusLock);
+    assertEquals(regulator.BACKGROUND_CRAWL, cusLock.getActivity());
+    assertEquals("test url2", cusLock.cus.getUrl());
   }
 
   public void testAuFinished() {
