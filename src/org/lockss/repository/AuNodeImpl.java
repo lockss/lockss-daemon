@@ -1,5 +1,5 @@
 /*
- * $Id: AuNodeImpl.java,v 1.8 2004-03-27 02:37:24 eaalto Exp $
+ * $Id: AuNodeImpl.java,v 1.9 2005-01-07 09:21:46 tlipkis Exp $
  */
 
 /*
@@ -36,12 +36,24 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 import org.lockss.daemon.CachedUrlSetSpec;
+import org.lockss.config.*;
+import org.lockss.util.*;
 
 /**
  * AuNode is used to represent the top-level contents of an ArchivalUnit.
  * It overrides specific functions in RepositoryNodeImpl to list files properly.
  */
 public class AuNodeImpl extends RepositoryNodeImpl {
+  /** Change in content size that causes disk (du) size to be recalculated */
+  static final String PARAM_RECOMPUTE_DU_DELTA = Configuration.PREFIX +
+    "repository.recomputeDuDelta";
+  static final long DEFAULT_RECOMPUTE_DU_DELTA = 100 * 1024;
+
+
+  static final String DU_SIZE_PROPERTY = "node.du.size";
+  static final String DU_CONTENT_SIZE_PROPERTY = "node.du.contentSize";
+
+
   AuNodeImpl(String url, String nodeLocation,
              LockssRepositoryImpl repository) {
     super(url, nodeLocation, repository);
@@ -123,6 +135,34 @@ public class AuNodeImpl extends RepositoryNodeImpl {
       childL.add(entry.getValue());
     }
     return childL;
+  }
+
+  /** Return the disk space used by the AU, including all overhead */
+  public long getDiskUsage() {
+    // size is cached until content size changes significantly
+    ensureCurrentInfoLoaded();
+    String cachedDu = nodeProps.getProperty(DU_SIZE_PROPERTY);
+    String cachedDuContent = nodeProps.getProperty(DU_CONTENT_SIZE_PROPERTY);
+    long content = getTreeContentSize(null);
+    if (isPropValid(cachedDu) && isPropValid(cachedDuContent)) {
+      long maxDelta =
+	Configuration.getCurrentConfig().getSize(PARAM_RECOMPUTE_DU_DELTA,
+						 DEFAULT_RECOMPUTE_DU_DELTA);
+      long duContent =  Long.parseLong(cachedDuContent);
+      if (Math.abs(content - duContent) < maxDelta) {
+	long du =  Long.parseLong(cachedDu);
+	return du;
+      }
+    }
+    PlatformInfo platInfo = PlatformInfo.getInstance();
+    long du = platInfo.getDiskUsage(nodeLocation);
+    if (du > 0) {
+      nodeProps.setProperty(DU_SIZE_PROPERTY, Long.toString(du));
+      nodeProps.setProperty(DU_CONTENT_SIZE_PROPERTY,
+			    Long.toString(content));
+      writeNodeProperties();
+    }
+    return du;
   }
 
   /**

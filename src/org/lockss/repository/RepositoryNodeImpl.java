@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.60 2004-10-18 03:41:12 tlipkis Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.61 2005-01-07 09:21:46 tlipkis Exp $
  */
 
 /*
@@ -1220,7 +1220,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
   /**
    * Writes the node properties to disk.
    */
-  private void writeNodeProperties() {
+  protected void writeNodeProperties() {
     try {
       OutputStream os = new BufferedOutputStream(new FileOutputStream(nodePropsFile));
       nodeProps.store(os, "Node properties");
