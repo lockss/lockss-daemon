@@ -1,5 +1,5 @@
 /*
- * $Id: CharRing.java,v 1.7 2004-04-05 08:03:42 tlipkis Exp $
+ * $Id: CharRing.java,v 1.8 2004-04-19 02:19:19 tlipkis Exp $
  */
 
 /*
@@ -171,10 +171,10 @@ public class CharRing {
   }
 
   /**
-   * remove the next len chars from the ring
-   * @param returnChars array to write the removed chars from
-   * @param pos position to begin writting into array
-   * @param len number of chars to remove
+   * remove the next len chars from the ring into an array
+   * @param returnChars array to write the removed chars to
+   * @param pos position to begin writing into returnChars
+   * @param len max number of chars to remove
    * @return number of chars removed from the ring
    */ 
   public int remove(char returnChars[], int pos, int len) {
@@ -196,6 +196,34 @@ public class CharRing {
     }
     if (chunk2 != 0) {
       System.arraycopy(chars, 0, returnChars, pos + chunk1, chunk2);
+    }
+    head = (head + numToReturn) % capacity;
+    size -= numToReturn;
+    return numToReturn;
+  }
+
+  /**
+   * remove the next len chars from the ring into a StringBuffer.
+   * @param sb StringBuffer to append to
+   * @return number of chars removed from the ring
+   */ 
+  public int remove(StringBuffer sb, int len) {
+    int numToReturn = len < size ? len : size;
+    if (numToReturn == 0) {
+      return 0;
+    }
+    //number of chars to remove from end of array
+    int chunk1 =
+      numToReturn < (capacity - head) ? numToReturn : (capacity - head);
+
+    //number of chars to remove from start of array
+    int chunk2 = numToReturn - chunk1;
+
+    if (chunk1 != 0) {
+      sb.append(chars, head, chunk1);
+    }
+    if (chunk2 != 0) {
+      sb.append(chars, 0, chunk2);
     }
     head = (head + numToReturn) % capacity;
     size -= numToReturn;
