@@ -1,5 +1,5 @@
 /*
- * $Id: Logger.java,v 1.9 2002-12-04 20:10:16 tal Exp $
+ * $Id: Logger.java,v 1.10 2002-12-30 23:04:29 tal Exp $
  */
 
 /*
@@ -328,7 +328,7 @@ public class Logger {
   /**
    * Log a message with the specified log level
    * @param level log level (<code>Logger.LEVEL_XXX</code>)
-   * @mag log message
+   * @param msg log message
    * @param e <code>Throwable</code>
    */
   public void log(int level, String msg, Throwable e) {
@@ -348,7 +348,7 @@ public class Logger {
   /**
    * Log a message with the specified log level
    * @param level log level (<code>Logger.LEVEL_XXX</code>)
-   * @mag log message
+   * @param msg log message
    */
   public void log(int level, String msg) {
     log(level, msg, null);

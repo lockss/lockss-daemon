@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingCrawlerImpl.java,v 1.4 2002-12-17 20:59:04 troberts Exp $
+ * $Id: GoslingCrawlerImpl.java,v 1.5 2002-12-30 23:04:29 tal Exp $
  */
 
 /*
@@ -171,7 +171,7 @@ public class GoslingCrawlerImpl implements Crawler {
    * CachedUrlSet.
    *
    * @param urls List of urls to start the crawl at
-   * @returns A modifiable list of the urls (in string form)
+   * @return A modifiable list of the urls (in string form)
    */
   protected static List createInitialList (List urls) {
     return new LinkedList(urls);
@@ -242,7 +242,7 @@ public class GoslingCrawlerImpl implements Crawler {
    * @param reader Reader object to extract the link from
    * @param srcUrl URL object representing the page we are looking at
    * (for resolving relative links)
-   * @returns String representing the next url in reader
+   * @return String representing the next url in reader
    */
   protected static String ExtractNextLink(Reader reader, URL srcUrl)
       throws IOException, MalformedURLException {
@@ -307,7 +307,7 @@ public class GoslingCrawlerImpl implements Crawler {
    * between < and > (ie, "a href=http://www.test.org")
    * @param srcUrl URL object representing the page on which this
    * url was taken from (for resolving relative tags)
-   * @returns string representation of the url from the link tag
+   * @return string representation of the url from the link tag
    */
   protected static String ParseLink(StringBuffer link, URL srcUrl)
       throws MalformedURLException {

@@ -1,5 +1,5 @@
 /*
- * $Id: SystemMetrics.java,v 1.1 2002-12-19 01:28:40 aalto Exp $
+ * $Id: SystemMetrics.java,v 1.2 2002-12-30 23:04:29 tal Exp $
  */
 
 /*
@@ -69,7 +69,7 @@ public class SystemMetrics {
    * Tests by hashing the CachedUrlSet for a small period of time.
    * @param hasher the CachedUrlSetHasher to test
    * @param digest the hashing algorithm
-   * @returns an int for estimated bytes/ms
+   * @return an int for estimated bytes/ms
    * @throws IOException
    */
   public int getBytesPerMsHashEstimate(CachedUrlSetHasher hasher,
