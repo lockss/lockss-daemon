@@ -1,5 +1,5 @@
 /*
- * $Id: Interval.java,v 1.2 2003-11-03 18:14:45 tlipkis Exp $
+ * $Id: Interval.java,v 1.3 2003-11-11 20:25:47 tlipkis Exp $
  */
 
 /*
@@ -34,7 +34,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 
 import java.io.*;
-import org.lockss.util.*;
 
 
 /** A half-open interval, including the lower bound but excluding the upper
@@ -114,7 +113,7 @@ public class Interval implements Serializable {
   }
 
   public String toString() {
-    return "[" + getLB() + "," + getUB() + "]";
+    return "[" + getLB() + "," + getUB() + ")";
   }
 
 }
