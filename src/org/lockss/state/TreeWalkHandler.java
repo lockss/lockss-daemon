@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkHandler.java,v 1.49 2003-12-09 03:04:18 eaalto Exp $
+ * $Id: TreeWalkHandler.java,v 1.50 2003-12-12 00:57:19 tlipkis Exp $
  */
 
 /*
@@ -499,25 +499,40 @@ public class TreeWalkHandler {
 
         // wait on the semaphore (the callback will 'give()')
         try {
-          if (treeWalkSemaphore.take(Deadline.MAX));
-	  doingTreeWalk = true;
-	  try {
-	    doTreeWalk();
-	  } finally {
-	    doingTreeWalk = false;
+          if (treeWalkSemaphore.take(Deadline.in(start + Constants.DAY))) {
+	    // semaphore was posted, do treewalk
+	    try {
+	      doingTreeWalk = true;
+	      doTreeWalk();
+	    } finally {
+	      doingTreeWalk = false;
+	    }
+	    // tell scheduler we're done.  Necessary only if we ended early
+	    // (FINISHED event hasn't happened), but that's almost always
+	    // the case, and harmless otherwise.
+	    if (task != null) {
+	      task.taskIsFinished();
+	      task = null;
+	    }
+	    // Now, if we found a poll to run, run it after background task
+	    // has ended.
+	    callPollIfNecessary();
+	  } else {
+	    // semaphore timed out.  log it and cancel task (in finally)
+	    // in case it's really still there somewhere
+	    logger.error("Semaphore timed out.  Task lost or event delayed");
 	  }
-        } catch (InterruptedException ie) {
-          logger.error("TreeWalkThread semaphore was interrupted:" + ie);
-          continue;
-        }
-
-        // tell scheduler we're done.  (Unnecessary if it told us to stop,
-        // but harmless.)
-	if (task!=null) {
-	  task.taskIsFinished();
-        }
-
-        callPollIfNecessary();
+	} catch (InterruptedException ie) {
+	  // semaphore was interrupted.  Probably exiting, cancel task and
+	  // exit if goOn false
+	  logger.warning("TreeWalkThread semaphore was interrupted:" + ie);
+	} finally {
+	  // cancel task if it didn't end normally
+	  if (task != null) {
+	    task.cancel();
+	    task = null;
+	  }
+	}
       }
     }
 
