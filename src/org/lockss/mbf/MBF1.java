@@ -1,5 +1,5 @@
 /*
- * $Id: MBF1.java,v 1.9 2003-08-28 16:46:13 dshr Exp $
+ * $Id: MBF1.java,v 1.10 2003-09-05 22:43:48 dshr Exp $
  */
 
 /*
@@ -39,7 +39,7 @@ import org.lockss.util.*;
 
 /**
  */
-public class MBF1 extends MemoryBoundFunctionSPI {
+public class MBF1 extends MemoryBoundFunction {
   private static final String algRand = "SHA1PRNG";
   private static final String algHash = "SHA1";
   private static Random rand = null;
@@ -74,15 +74,12 @@ public class MBF1 extends MemoryBoundFunctionSPI {
   private int lowBit;
   // Hasher
   MessageDigest hasher;
-  // MemoryBoundFunction object being implemented
-  MemoryBoundFunction mbf;
 
 
   /**
    * No-argument constructor for use with Class.newInstance()
    */
   protected MBF1() {
-    mbf = null;
   }
 
   /**
@@ -91,11 +88,14 @@ public class MBF1 extends MemoryBoundFunctionSPI {
    * Cynthia Dwork, Andrew Goldberg and Moni Naor, "On Memory-
    * Bound Functions for Fighting Spam", in "Advances in Cryptology
    * (CRYPTO 2003)".
-   * @param wrapper the MemoryBoundFunction object being implemented
    */
-  protected void initialize(MemoryBoundFunction wrapper)
+  protected void initialize(byte[] nVal,
+			    long eVal,
+			    int lVal,
+			    int[] sVal,
+			    long  maxPathVal)
     throws MemoryBoundFunctionException {
-    mbf = wrapper;
+    super.initialize(nVal, eVal, lVal, sVal, maxPathVal);
     ensureConfigured();
     setup();
   }
@@ -124,15 +124,15 @@ public class MBF1 extends MemoryBoundFunctionSPI {
       createPath();
     }
     // Move up to "n" steps along the path
-    while (pathIndex < mbf.pathLen && n-- > 0) {
+    while (pathIndex < pathLen && n-- > 0) {
       stepAlongPath();
     }
     // If the current path has ended,  see if there is a match
-    if (pathIndex >= mbf.pathLen) {
+    if (pathIndex >= pathLen) {
       finishPath();
     }
     // Return true if there is more work to do.
-    return (!mbf.finished);
+    return (!finished);
   }
 
   // Return the 32-bit word at [i..(i+3)] in array arr.
@@ -153,8 +153,8 @@ public class MBF1 extends MemoryBoundFunctionSPI {
 
   // Path initialization
   private void createPath() throws MemoryBoundFunctionException {
-    if (mbf.verify)
-      k = mbf.proof[0];
+    if (verify)
+      k = proof[0];
     else
       k++;
     i = 0;
@@ -162,7 +162,7 @@ public class MBF1 extends MemoryBoundFunctionSPI {
     lowBit = -1;
     // Hash the nonce and the try count - we can always assume the
     // hasher is reset because we always leave it that way
-    hasher.update(mbf.nonce);
+    hasher.update(nonce);
     hasher.update((byte)(k & 0xff ));
     hasher.update((byte)((k >> 8) & 0xff));
     hasher.update((byte)((k >> 16) & 0xff));
@@ -223,12 +223,12 @@ public class MBF1 extends MemoryBoundFunctionSPI {
 		" >= " + ourE);
     if (lowBit >= ourE) {
       // We got a match, set finished
-      mbf.proof = new int[1];
-      mbf.proof[0] = k;
-      mbf.finished = true;
-    } else if (mbf.verify) {
-      mbf.finished = true;
-      mbf.proof = null;
+      proof = new int[1];
+      proof[0] = k;
+      finished = true;
+    } else if (verify) {
+      finished = true;
+      proof = null;
     } else {
       i = -1;
       j = -1;
@@ -240,15 +240,15 @@ public class MBF1 extends MemoryBoundFunctionSPI {
 
   // Instance initialization
   private void setup() throws MemoryBoundFunctionException {
-    if (mbf.verify) {
-      if (mbf.proof == null)
+    if (verify) {
+      if (proof == null)
 	throw new MemoryBoundFunctionException("MBF1: null proof");
-      if (mbf.proof.length != 1)
+      if (proof.length != 1)
 	throw new MemoryBoundFunctionException("MBF1: bad proof length " +
-					       mbf.proof.length);
-      if (mbf.maxPath < 1)
+					       proof.length);
+      if (maxPath < 1)
 	throw new MemoryBoundFunctionException("MBF1: too few paths " +
-					       mbf.maxPath);
+					       maxPath);
     }
     A = null;
     i = -1;
@@ -256,7 +256,7 @@ public class MBF1 extends MemoryBoundFunctionSPI {
     c = -1;
     k = 0;
     ourE = 1;
-    long tmp = (mbf.e < 0 ? -mbf.e : mbf.e);
+    long tmp = (e < 0 ? -e : e);
     while (tmp != 1) {
       ourE++;
       tmp >>>= 1;
@@ -273,14 +273,14 @@ public class MBF1 extends MemoryBoundFunctionSPI {
   // Class initialization
   private void ensureConfigured() throws MemoryBoundFunctionException {
     try {
-      logger.debug2("ensureConfigured " + mbf.basisFile.getPath() +
-		     " length " + mbf.basisFile.length());
-      FileInputStream fis = new FileInputStream(mbf.basisFile);
+      logger.debug2("ensureConfigured " + basisFile.getPath() +
+		     " length " + basisFile.length());
+      FileInputStream fis = new FileInputStream(basisFile);
       if (A0 == null) {
 	A0 = new byte[sizeA];
         int readSize = fis.read(A0);
 	if (readSize != sizeA)
-	  throw new MemoryBoundFunctionException(mbf.basisFile.getPath() +
+	  throw new MemoryBoundFunctionException(basisFile.getPath() +
 						 " short read " + readSize);
 	// We keep a second representation of A0 as a BigInteger
 	a0 = new BigInteger(A0);
@@ -292,11 +292,11 @@ public class MBF1 extends MemoryBoundFunctionSPI {
 	T = new byte[sizeT];
 	int readSize = fis.read(T);
 	if (readSize != sizeT)
-	  throw new MemoryBoundFunctionException(mbf.basisFile.getPath() +
+	  throw new MemoryBoundFunctionException(basisFile.getPath() +
 						 " short read " + readSize);
       }
     } catch (IOException ex) {
-      throw new MemoryBoundFunctionException(mbf.basisFile.getPath() +
+      throw new MemoryBoundFunctionException(basisFile.getPath() +
 					     " throws " + ex.toString());
     }
   }

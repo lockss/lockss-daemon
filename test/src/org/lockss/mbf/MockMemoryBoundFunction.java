@@ -1,5 +1,5 @@
 /*
- * $Id: MockMemoryBoundFunction.java,v 1.5 2003-08-28 16:46:14 dshr Exp $
+ * $Id: MockMemoryBoundFunction.java,v 1.6 2003-09-05 22:43:48 dshr Exp $
  */
 
 /*
@@ -40,7 +40,7 @@ import org.lockss.test.*;
  * @author David S. H. Rosenthal
  * @version 1.0
  */
-public class MockMemoryBoundFunction extends MemoryBoundFunctionSPI {
+public class MockMemoryBoundFunction extends MemoryBoundFunction {
   private long stepsDone;
   private long stepsToDo;
   private static byte[] mockNonce = null;
@@ -50,30 +50,31 @@ public class MockMemoryBoundFunction extends MemoryBoundFunctionSPI {
    * No-argument constructor for use with Class.newInstance()
    */
   protected MockMemoryBoundFunction() {
-    mbf = null;
     stepsToDo = 0;
     stepsDone = 0;
   }
 
   /**
    * Initialize an object that will generate or verify a proof of effort
-   * David S. H. Rosenthal
-   * @param wrapper the MemoryBoundFunction object being implemented
    */
-  protected void initialize(MemoryBoundFunction wrapper)
+  protected void initialize(byte[] nVal,
+			    long eVal,
+			    int lVal,
+			    int[] sVal,
+			    long  maxPathVal)
     throws MemoryBoundFunctionException {
-    mbf = wrapper;
-    mbf.basisLength = 16*1024*1024;
-    stepsToDo = mbf.e * mbf.pathLen;
-    if (mbf.verify) {
-      if (mbf.proof == null ||
-	  mbf.proof.length > mbf.e)
+    super.initialize(nVal, eVal, lVal, sVal, maxPathVal);
+    basisLength = 16*1024*1024;
+    stepsToDo = e * pathLen;
+    if (verify) {
+      if (proof == null ||
+	  proof.length > e)
 	throw new MemoryBoundFunctionException("bad proof");
-      if (mbf.maxPath < 1)
+      if (maxPath < 1)
 	throw new MemoryBoundFunctionException("too few paths");
     }
-    logger.debug("e " + mbf.e + " pathLen " + mbf.pathLen + " verify " +
-		mbf.verify + " steps " + stepsToDo);
+    logger.debug("e " + e + " pathLen " + pathLen + " verify " +
+		verify + " steps " + stepsToDo);
   }
 
   /**
@@ -86,31 +87,31 @@ public class MockMemoryBoundFunction extends MemoryBoundFunctionSPI {
   public boolean computeSteps(int n) throws MemoryBoundFunctionException {
     stepsDone += n;
     if (stepsDone >= stepsToDo) {
-      mbf.finished = true;
-      if (mbf.verify) {
+      finished = true;
+      if (verify) {
 	// We're verifying
 	boolean match = (mockProof != null &&
-			 mockProof.length == mbf.proof.length);
-	if (mockNonce != null && !MessageDigest.isEqual(mockNonce, mbf.nonce))
+			 mockProof.length == proof.length);
+	if (mockNonce != null && !MessageDigest.isEqual(mockNonce, nonce))
 	  match = false;
 	for (int i = 0; i < mockProof.length; i++)
-	  if (match && mockProof[i] != mbf.proof[i]) {
+	  if (match && mockProof[i] != proof[i]) {
 	    match = false;
 	  } else {
 	    logger.debug("proof check " + i + " " + mockProof[i] +
-			" = " + mbf.proof[i]);
+			" = " + proof[i]);
 	  }
 	if (!match)
-	  mbf.proof = null;  // Proof invalid
-	logger.debug("proof is " + (mbf.proof != null ? " valid" : "invalid"));
+	  proof = null;  // Proof invalid
+	logger.debug("proof is " + (proof != null ? " valid" : "invalid"));
       } else {
 	// We're generating
-	mbf.proof = new int[mockProof.length];
-	for (int i = 0; i < mbf.proof.length; i++)
-	  mbf.proof[i] = mockProof[i];
+	proof = new int[mockProof.length];
+	for (int i = 0; i < proof.length; i++)
+	  proof[i] = mockProof[i];
       }
     }
-    return (!mbf.finished);
+    return (!finished);
   }
 
   /**

@@ -1,5 +1,5 @@
 /*
- * $Id: MemoryBoundFunctionFactory.java,v 1.2 2003-09-05 02:45:20 dshr Exp $
+ * $Id: MemoryBoundFunctionFactory.java,v 1.3 2003-09-05 22:43:48 dshr Exp $
  */
 
 /*
@@ -97,9 +97,8 @@ public class MemoryBoundFunctionFactory {
     try {
       if (classToUse == null)
 	throw new NoSuchAlgorithmException();
-      MemoryBoundFunctionSPI spi =
-	(MemoryBoundFunctionSPI) classToUse.newInstance();
-      ret = new MemoryBoundFunction(spi, nVal, eVal, lVal, sVal, maxPathVal);
+      ret = (MemoryBoundFunction) classToUse.newInstance();
+      ret.initialize(nVal, eVal, lVal, sVal, maxPathVal);
     } catch (InstantiationException ex) {
       throw new MemoryBoundFunctionException(implToUse + ": " + ex.toString());
     } catch (IllegalAccessException ex) {

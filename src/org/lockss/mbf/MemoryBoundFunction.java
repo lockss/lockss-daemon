@@ -1,5 +1,5 @@
 /*
- * $Id: MemoryBoundFunction.java,v 1.10 2003-09-05 02:45:20 dshr Exp $
+ * $Id: MemoryBoundFunction.java,v 1.11 2003-09-05 22:43:48 dshr Exp $
  */
 
 /*
@@ -39,7 +39,7 @@ import org.lockss.util.*;
  * @author David S. H. Rosenthal
  * @version 1.0
  */
-public class MemoryBoundFunction {
+public abstract class MemoryBoundFunction {
   protected static Logger logger = Logger.getLogger("MemoryBoundFunction");
   protected static File basisFile = null;
   protected static long basisLength = 0;
@@ -52,34 +52,36 @@ public class MemoryBoundFunction {
   protected boolean finished;
   protected int pathLen;
   protected long maxPath;
-  protected MemoryBoundFunctionSPI implSPI;
 
-  protected MemoryBoundFunction(MemoryBoundFunctionSPI spi,
-			      byte[] nVal,
-			      long eVal,
-			      int lVal,
-			      int[] sVal,
-			      long  maxPathVal)
-  throws MemoryBoundFunctionException {
-    setup(spi, nVal, eVal, lVal);
+  protected MemoryBoundFunction() {
+    }
+
+  protected void initialize(byte[] nVal,
+			    long eVal,
+			    int lVal,
+			    int[] sVal,
+			    long  maxPathVal)
+    throws MemoryBoundFunctionException {
+    setup(nVal, eVal, lVal);
     if (sVal == null) {
       // Generating
       verify = false;
       proof = null;
     } else {
+      if (sVal.length > maxPathVal) {
+	throw new MemoryBoundFunctionException("proof too long " +
+					       sVal.length + " / " + maxPath);
+      }
       proof = sVal;
       verify = true;
       maxPath = maxPathVal;
     }
     trace = null;
-    implSPI.initialize(this);
   }
 
-  private void setup(MemoryBoundFunctionSPI spi,
-		     byte[] nVal,
+  private void setup(byte[] nVal,
 		     long eVal,
 		     int lVal) {
-    implSPI = spi;
     nonce = nVal;
     e = eVal;
     pathLen = lVal;
@@ -127,17 +129,6 @@ public class MemoryBoundFunction {
   }
 
   /**
-   * If there is no current path,  choose a starting point and set it
-   * as the current path.  Move up to "n" steps along the current path.
-   * Set finished if appropriate.
-   * @param n number of steps to move.
-   * 
-   */
-  public boolean computeSteps(int n) throws MemoryBoundFunctionException {
-    return (implSPI.computeSteps(n));
-  }
-
-  /**
    * Return size of basis array.
    * @return size of the basis array
    */
@@ -159,7 +150,16 @@ public class MemoryBoundFunction {
 		   " length " + basisLength);
   }
 
-  protected MemoryBoundFunctionSPI getSPI() {
-    return implSPI;
-  }
+  /**
+   * If there is no current path,  choose a starting point and set it
+   * as the current path.  Move up to "n" steps along the current path.
+   * Set finished if appropriate.
+   * @param n number of steps to move.
+   * @return true if no more work to do
+   * 
+   */
+  public abstract boolean computeSteps(int n)
+    throws MemoryBoundFunctionException;
+
+
 }

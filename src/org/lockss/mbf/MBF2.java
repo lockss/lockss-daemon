@@ -1,5 +1,5 @@
 /*
- * $Id: MBF2.java,v 1.9 2003-09-05 14:41:24 dshr Exp $
+ * $Id: MBF2.java,v 1.10 2003-09-05 22:43:48 dshr Exp $
  */
 
 /*
@@ -41,7 +41,7 @@ import org.lockss.util.*;
  * @author David S. H. Rosenthal
  * @version 1.0
  */
-public class MBF2 extends MemoryBoundFunctionSPI {
+public class MBF2 extends MemoryBoundFunction {
   private static final String algRand = "SHA1PRNG";
   private static final String algHash = "SHA1";
   private static Random rand = null;
@@ -87,7 +87,6 @@ public class MBF2 extends MemoryBoundFunctionSPI {
    * No-argument constructor for use with Class.newInstance()
    */
   protected MBF2() {
-    mbf = null;
   }
 
   /**
@@ -95,11 +94,14 @@ public class MBF2 extends MemoryBoundFunctionSPI {
    * of effort using a memory-bound function technique as
    * described in "On The Cost Distribution Of A Memory Bound Function"
    * David S. H. Rosenthal
-   * @param wrapper the MemoryBoundFunction object being implemented
    */
-  protected void initialize(MemoryBoundFunction wrapper)
+  protected void initialize(byte[] nVal,
+			    long eVal,
+			    int lVal,
+			    int[] sVal,
+			    long  maxPathVal)
     throws MemoryBoundFunctionException {
-    mbf = wrapper;
+    super.initialize(nVal, eVal, lVal, sVal, maxPathVal);
     ensureConfigured();
     setup();
     ret = new ArrayList();
@@ -138,15 +140,15 @@ public class MBF2 extends MemoryBoundFunctionSPI {
       createPath();
     }
     // Move up to "n" steps along the path
-    while (pathIndex < mbf.pathLen && n-- > 0) {
+    while (pathIndex < pathLen && n-- > 0) {
       stepAlongPath();
     }
     // If the current path has ended,  see if there is a match
-    if (pathIndex >= mbf.pathLen) {
+    if (pathIndex >= pathLen) {
       finishPath();
     }
     // Return true if there is more work to do.
-    return (!mbf.finished);
+    return (!finished);
   }
 
   // Return the 32-bit word at [i..(i+3)] in array arr.
@@ -168,9 +170,9 @@ public class MBF2 extends MemoryBoundFunctionSPI {
   // Choose the next path to try
   private void choosePath() {
     // Set k to the index of the next path to try
-    if (mbf.verify && mbf.proof.length > 0) {
+    if (verify && proof.length > 0) {
       // XXX - should choose paths in random order
-      k = mbf.proof[numPath];
+      k = proof[numPath];
     } else {
       k++;
     }
@@ -184,7 +186,7 @@ public class MBF2 extends MemoryBoundFunctionSPI {
     lowBit = -1;
     // Hash the nonce and the try count - we can always assume the
     // hasher is reset because we always leave it that way
-    hasher.update(mbf.nonce);
+    hasher.update(nonce);
     hasher.update((byte)(k & 0xff ));
     hasher.update((byte)((k >> 8) & 0xff));
     hasher.update((byte)((k >> 16) & 0xff));
@@ -247,31 +249,31 @@ public class MBF2 extends MemoryBoundFunctionSPI {
     // would have been fetched if the path had continued
     boolean proofFailed = false;
     traceArrayList.add(new Integer(wordAt(T, c)));
-    if (mbf.proof == null) {
-      logger.debug("numPath " + numPath + " max " + mbf.maxPath +
+    if (proof == null) {
+      logger.debug("numPath " + numPath + " max " + maxPath +
 		   " proof null ");
     } else {
-      logger.debug("numPath " + numPath + " max " + mbf.maxPath +
-		   " length " + mbf.proof.length);
+      logger.debug("numPath " + numPath + " max " + maxPath +
+		   " length " + proof.length);
     }
-    if (mbf.verify) {
-      if (mbf.proof.length > 0) {
+    if (verify) {
+      if (proof.length > 0) {
 	// We are verifying a non-empty proof - any mis-match means invalid.
 	if (!match()) {
 	  // This is supposed to be a match but isn't,
 	  // verification failed.
 	  logger.debug("proof invalid");
-	  for (int i = 0; i < mbf.proof.length; i++) {
-	    logger.debug("\t" + i + "\t" + mbf.proof[i]);
+	  for (int i = 0; i < proof.length; i++) {
+	    logger.debug("\t" + i + "\t" + proof[i]);
 	  }
-	  mbf.finished = true;
+	  finished = true;
 	  proofFailed = true;
-	} else if (numPath >= mbf.maxPath || numPath >= mbf.proof.length) {
+	} else if (numPath >= maxPath || numPath >= proof.length) {
 	  // XXX should check inter-proof spaces too
-	  mbf.finished = true;
+	  finished = true;
 	  logger.debug("proof valid");
-	  for (int i = 0; i < mbf.proof.length; i++) {
-	    logger.debug("\t" + i + "\t" + mbf.proof[i]);
+	  for (int i = 0; i < proof.length; i++) {
+	    logger.debug("\t" + i + "\t" + proof[i]);
 	  }
 	} else
 	  pathIndex = -1;
@@ -279,10 +281,10 @@ public class MBF2 extends MemoryBoundFunctionSPI {
 	// We are verifying an empty proof - any match means invalid
 	if (match()) {
 	  logger.debug("proof invalid");
-	  mbf.finished = true;
+	  finished = true;
 	  proofFailed = true;
-	} else if (k >= mbf.e) {
-	  mbf.finished = true;
+	} else if (k >= e) {
+	  finished = true;
 	  logger.debug("proof valid");
 	} else
 	  pathIndex = -1;
@@ -293,15 +295,15 @@ public class MBF2 extends MemoryBoundFunctionSPI {
 	// Its a match.
 	ret.add(new Integer(k));
       }
-      if (k >= mbf.e) {
-	mbf.finished = true;
+      if (k >= e) {
+	finished = true;
 	Object[] proofEntries = ret.toArray();
-	mbf.proof = new int[proofEntries.length];
+	proof = new int[proofEntries.length];
 	if (proofEntries.length > 0) {
 	  // Non-empty proof
 	  for (int i = 0; i < proofEntries.length; i++) {
 	    int proofEntry = ((Integer)proofEntries[i]).intValue();
-	    mbf.proof[i] = proofEntry;
+	    proof[i] = proofEntry;
 	    if (proofEntry <= 0 || proofEntry > traceArrayList.size())
 	      throw new MemoryBoundFunctionException("proof entry " +
 						     proofEntry +
@@ -312,25 +314,25 @@ public class MBF2 extends MemoryBoundFunctionSPI {
 	  }
 	}
 	logger.debug("proof geenrated");
-	for (int i = 0; i < mbf.proof.length; i++) {
-	  logger.debug("\t" + i + "\t" + mbf.proof[i]);
+	for (int i = 0; i < proof.length; i++) {
+	  logger.debug("\t" + i + "\t" + proof[i]);
 	}
       } else
 	pathIndex = -1;
     }
-    if (mbf.finished && !proofFailed) {
-      int[] proofs = mbf.proof;
+    if (finished && !proofFailed) {
+      int[] proofs = proof;
       Object[] traceEntries = traceArrayList.toArray();
       if (proofs.length > 0) {
 	// Non-empty proof
-	mbf.trace = new int[proofs.length];
+	trace = new int[proofs.length];
 	for (int i = 0; i < proofs.length; i++) {
 	  logger.debug("proof entry " + i + " is " + proofs[i]);
 	  int proofEntry = -1;
 	  // If we are verifying,  traceEntry only contains entries
 	  // corresponding to valid paths.  If we are generating,  it
 	  // contains entries for every index value.
-	  if (mbf.verify)
+	  if (verify)
 	    proofEntry = i + 1;
 	  else
 	    proofEntry = proofs[i];
@@ -341,33 +343,33 @@ public class MBF2 extends MemoryBoundFunctionSPI {
 						   proofs.length +
 						   " / " +
 						   traceEntries.length);
-	  mbf.trace[i] = ((Integer)traceEntries[proofEntry-1]).intValue();
-	  logger.debug("trace entry " + i + " is " + mbf.trace[i]);
+	  trace[i] = ((Integer)traceEntries[proofEntry-1]).intValue();
+	  logger.debug("trace entry " + i + " is " + trace[i]);
 	}
       } else {
 	// Empty proof
-	mbf.trace = new int[traceEntries.length];
+	trace = new int[traceEntries.length];
 	for (int i = 0; i <traceEntries.length; i++) {
-	  mbf.trace[i] = ((Integer)traceEntries[i]).intValue();
-	  logger.debug("trace entry " + i + " is " + mbf.trace[i]);
+	  trace[i] = ((Integer)traceEntries[i]).intValue();
+	  logger.debug("trace entry " + i + " is " + trace[i]);
 	}
       }
     }
-    if (mbf.verify && proofFailed)
-      mbf.proof = null;
+    if (verify && proofFailed)
+      proof = null;
   }
 
   // Instance initialization
   private void setup() throws MemoryBoundFunctionException {
-    if (mbf.verify) {
-      if (mbf.proof == null)
+    if (verify) {
+      if (proof == null)
 	throw new MemoryBoundFunctionException("MBF2: null proof");
-      if (mbf.proof.length > mbf.e)
+      if (proof.length > e)
 	throw new MemoryBoundFunctionException("MBF2: bad proof length " +
-					       mbf.proof.length + "/" + mbf.e);
-      if (mbf.maxPath < 1)
+					       proof.length + "/" + e);
+      if (maxPath < 1)
 	throw new MemoryBoundFunctionException("MBF2: too few paths " +
-					       mbf.maxPath);
+					       maxPath);
     }
     A = null;
     i = -1;
@@ -375,7 +377,7 @@ public class MBF2 extends MemoryBoundFunctionSPI {
     c = -1;
     k = 0;
     ourE = 1;
-    long tmp = (mbf.e < 0 ? -mbf.e : mbf.e);
+    long tmp = (e < 0 ? -e : e);
     while (tmp != 1) {
       ourE++;
       tmp >>>= 1;
@@ -392,14 +394,14 @@ public class MBF2 extends MemoryBoundFunctionSPI {
   // Class initialization
   private void ensureConfigured() throws MemoryBoundFunctionException {
     try {
-      logger.debug2("ensureConfigured " + mbf.basisFile.getPath() +
-		     " length " + mbf.basisFile.length());
-      FileInputStream fis = new FileInputStream(mbf.basisFile);
+      logger.debug2("ensureConfigured " + basisFile.getPath() +
+		     " length " + basisFile.length());
+      FileInputStream fis = new FileInputStream(basisFile);
       if (A0 == null) {
 	A0 = new byte[sizeA];
         int readSize = fis.read(A0);
 	if (readSize != sizeA)
-	  throw new MemoryBoundFunctionException(mbf.basisFile.getPath() +
+	  throw new MemoryBoundFunctionException(basisFile.getPath() +
 						 " short read " + readSize);
 	// We keep a second representation of A0 as a BigInteger
 	a0 = new BigInteger(A0);
@@ -411,11 +413,11 @@ public class MBF2 extends MemoryBoundFunctionSPI {
 	T = new byte[sizeT];
 	int readSize = fis.read(T);
 	if (readSize != sizeT)
-	  throw new MemoryBoundFunctionException(mbf.basisFile.getPath() +
+	  throw new MemoryBoundFunctionException(basisFile.getPath() +
 						 " short read " + readSize);
       }
     } catch (IOException e) {
-      throw new MemoryBoundFunctionException(mbf.basisFile.getPath() +
+      throw new MemoryBoundFunctionException(basisFile.getPath() +
 					     " throws " + e.toString());
     }
   }
