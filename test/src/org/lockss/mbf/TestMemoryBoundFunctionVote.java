@@ -1,5 +1,5 @@
 /*
- * $Id: TestMemoryBoundFunctionVote.java,v 1.9 2003-09-05 23:55:01 dshr Exp $
+ * $Id: TestMemoryBoundFunctionVote.java,v 1.10 2003-09-06 14:01:12 dshr Exp $
  */
 
 /*
@@ -77,6 +77,8 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
   private static byte[] badContent = null;
   private static byte[] pollID = null;
   private static LcapIdentity voterID = null;
+  private static byte[] basisT = null;
+  private static byte[] basisA0 = null;
 
   /**
    * Set up the test case
@@ -88,14 +90,15 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
       rand = new Random(100);
     else 
       rand = new Random(System.currentTimeMillis());
-    if (f == null) {
-      f = FileUtil.tempFile("mbf1test");
-      FileOutputStream fis = new FileOutputStream(f);
-      basis = new byte[16*1024*1024 + 1024];
-      rand.nextBytes(basis);
-      fis.write(basis);
-      fis.close();
-      log.info(f.getPath() + " bytes " + f.length() + " long created");
+    if (basisT == null) {
+      basisT = new byte[16*1024*1024];
+      rand.nextBytes(basisT);
+      log.info(basisT.length + " bytes of T created");
+    }
+    if (basisA0 == null) {
+      basisA0 = new byte[1024];
+      rand.nextBytes(basisA0);
+      log.info(basisA0.length + " bytes of A0 created");
     }
     if (goodContent == null) {
       goodContent = new byte[256*1024];
@@ -107,14 +110,12 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
       rand.nextBytes(badContent);
       log.info(badContent.length + "bytes of bad synthetic content created");
     }
-    if (!f.exists())
-      fail(f.getPath() + " doesn't exist");
-    MemoryBoundFunction.configure(f);
     if (MBFfactory == null) {
       MBFfactory = new MemoryBoundFunctionFactory[MBFnames.length];
       for (int i = 0; i < MBFfactory.length; i++) {
 	try {
-	  MBFfactory[i] = new MemoryBoundFunctionFactory(MBFnames[i]);
+	  MBFfactory[i] = new MemoryBoundFunctionFactory(MBFnames[i],
+							 basisA0, basisT);
 	} catch (NoSuchAlgorithmException ex) {
 	  fail(MBFnames[i] + " threw " + ex.toString());
 	}

@@ -1,5 +1,5 @@
 /*
- * $Id: MemoryBoundFunctionFactory.java,v 1.4 2003-09-05 23:55:01 dshr Exp $
+ * $Id: MemoryBoundFunctionFactory.java,v 1.5 2003-09-06 14:01:12 dshr Exp $
  */
 
 /*
@@ -31,6 +31,7 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.mbf;
+import java.io.*;
 import java.security.NoSuchAlgorithmException;
 import org.lockss.util.*;
 
@@ -39,6 +40,7 @@ import org.lockss.util.*;
  * @version 1.0
  */
 public class MemoryBoundFunctionFactory {
+  protected static Logger logger = Logger.getLogger("MemoryBoundFunction");
 
   /*
    * The following arrays must be edited whenever a new implementation
@@ -56,15 +58,21 @@ public class MemoryBoundFunctionFactory {
   };
   private Class classToUse;
   private String implToUse;
+  private byte[] A0;
+  private byte[] T;
 
   /**
    * Public constructor for an object that creates MemoryBoundFunction
    * objects of the requested implementation.
    * @param impl A String specifying the implementation to use.
+   * @param A0array The A0 basis array
+   * @param Tarray The T basis array
    * @throws NoSuchAlgorithmException if no such implementation
    */
-  public MemoryBoundFunctionFactory(String impl)
-    throws NoSuchAlgorithmException {
+  public MemoryBoundFunctionFactory(String impl, byte[] A0array, byte[] Tarray)
+    throws NoSuchAlgorithmException,
+	   ClassNotFoundException,
+	   MemoryBoundFunctionException {
     classToUse = null;
     implToUse = null;
     for (int i = 0; i < implNames.length; i++) {
@@ -73,11 +81,18 @@ public class MemoryBoundFunctionFactory {
     }
     if (implToUse != null){
       // Found it
-      try {
-	classToUse = Class.forName(implToUse);
-      } catch (ClassNotFoundException ex) {
-	throw new NoSuchAlgorithmException(implToUse);
+      if (A0array == null || Tarray == null) {
+	throw new MemoryBoundFunctionException("Array is null");
       }
+      if (A0array.length != 1024 || Tarray.length != 16*1024*1024) {
+	throw new MemoryBoundFunctionException(A0array.length + "/" +
+					       Tarray.length + " bad length");
+      }
+      classToUse = Class.forName(implToUse);
+      logger.info("factory for " + impl + " size " + A0array.length +
+		  " / " + Tarray.length);
+      A0 = A0array;
+      T = Tarray;
     } else {
       throw new NoSuchAlgorithmException(impl);
     }
@@ -89,11 +104,16 @@ public class MemoryBoundFunctionFactory {
    * @param nVal a byte array containing the nonce
    * @param eVal the effort sizer (# of low-order zeros in destination)
    * @param lVal the effort sizer (length of each path)
-   * @throws MemoryBoundFunctionException failure to create object
    * @throws NoSuchAlgorithmException no such implementation
+   * @throws InstantiationException XXX
+   * @throws IllegalAccessException XXX
+   * @throws MemoryBoundFunctionException could not initialize instance
    */
   public MemoryBoundFunction makeGenerator(byte[] nVal, int eVal, int lVal)
-    throws NoSuchAlgorithmException, MemoryBoundFunctionException {
+    throws NoSuchAlgorithmException,
+	   InstantiationException,
+	   IllegalAccessException,
+	   MemoryBoundFunctionException {
     MemoryBoundFunction ret = makeVerifier(nVal, eVal, lVal, null, 0);
     return (ret);
   }
@@ -106,26 +126,25 @@ public class MemoryBoundFunctionFactory {
    * @param lVal the effort sizer (length of each path)
    * @param sVal an array of ints containing the proof
    * @param maxPathVal maximum number of steps to verify
-   * @throws MemoryBoundFunctionException failure to create object
    * @throws NoSuchAlgorithmException no such implementation
+   * @throws InstantiationException XXX
+   * @throws IllegalAccessException XXX
+   * @throws MemoryBoundFunctionException could not initialize instance
    */
   public MemoryBoundFunction makeVerifier(byte[] nVal,
 					  int eVal,
 					  int lVal,
 					  int[] sVal,
 					  long  maxPathVal)
-    throws NoSuchAlgorithmException, MemoryBoundFunctionException {
+    throws NoSuchAlgorithmException,
+	   InstantiationException,
+	   IllegalAccessException,
+	   MemoryBoundFunctionException  {
     MemoryBoundFunction ret = null;
-    try {
-      if (classToUse == null)
-	throw new NoSuchAlgorithmException();
-      ret = (MemoryBoundFunction) classToUse.newInstance();
-      ret.initialize(nVal, eVal, lVal, sVal, maxPathVal);
-    } catch (InstantiationException ex) {
-      throw new MemoryBoundFunctionException(implToUse + ": " + ex.toString());
-    } catch (IllegalAccessException ex) {
-      throw new MemoryBoundFunctionException(implToUse + ": " + ex.toString());
-    }
+    if (classToUse == null)
+      throw new NoSuchAlgorithmException();
+    ret = (MemoryBoundFunction) classToUse.newInstance();
+    ret.initialize(nVal, eVal, lVal, sVal, maxPathVal, A0, T);
     return (ret);
   }
 

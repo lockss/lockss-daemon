@@ -1,5 +1,5 @@
 /*
- * $Id: TestMemoryBoundFunction.java,v 1.7 2003-09-05 23:55:01 dshr Exp $
+ * $Id: TestMemoryBoundFunction.java,v 1.8 2003-09-06 14:01:12 dshr Exp $
  */
 
 /*
@@ -47,12 +47,12 @@ import org.lockss.util.*;
 public class TestMemoryBoundFunction extends LockssTestCase {
   private static Logger log = null;
   private static Random rand = null;
-  private static File f = null;
-  private static byte[] basis;
+  private static byte[] basisT = null;
+  private static byte[] basisA0 = null;
   private int pathsTried;
   private static String[] names = {
     "MOCK",
-    // "MBF1",
+    "MBF1",
     "MBF2",
   };
   private static MemoryBoundFunctionFactory[] factory = null;
@@ -67,18 +67,16 @@ public class TestMemoryBoundFunction extends LockssTestCase {
       rand = new Random(100);
     else 
       rand = new Random(System.currentTimeMillis());
-    if (f == null) {
-      f = FileUtil.tempFile("mbf1test");
-      FileOutputStream fis = new FileOutputStream(f);
-      basis = new byte[16*1024*1024 + 1024];
-      rand.nextBytes(basis);
-      fis.write(basis);
-      fis.close();
-      log.info(f.getPath() + " bytes " + f.length() + " long created");
+    if (basisT == null) {
+      basisT = new byte[16*1024*1024];
+      rand.nextBytes(basisT);
+      log.info(basisT.length + " bytes of T created");
     }
-    if (!f.exists())
-      log.warning(f.getPath() + " doesn't exist");
-    MemoryBoundFunction.configure(f);
+    if (basisA0 == null) {
+      basisA0 = new byte[1024];
+      rand.nextBytes(basisA0);
+      log.info(basisA0.length + " bytes of A0 created");
+    }
   }
 
   /** tearDown method for test case
@@ -98,18 +96,34 @@ public class TestMemoryBoundFunction extends LockssTestCase {
   public void testFactory() {
     boolean gotException = false;
     try {
-      MemoryBoundFunctionFactory tmp = new MemoryBoundFunctionFactory("BOGUS");
+      MemoryBoundFunctionFactory tmp =
+	new MemoryBoundFunctionFactory("BOGUS", null, null);
     } catch (NoSuchAlgorithmException ex) {
       gotException = true;
+    } catch (Exception ex) {
+      fail("BOGUS threw " + ex.toString());
     }
     if (!gotException)
       fail("BOGUS didn't throw NoSuchAlgorithmException");
+    gotException = false;
+    try {
+      byte[] b1 = new byte[4];
+      byte[] b2 = new byte[4];
+      MemoryBoundFunctionFactory tmp =
+	new MemoryBoundFunctionFactory("MOCK", b1, b2);
+    } catch (MemoryBoundFunctionException ex) {
+      gotException = true;
+    } catch (Exception ex) {
+      fail("BOGUS threw " + ex.toString());
+    }
+    if (!gotException)
+      fail("BOGUS didn't throw MemoryBoundFunctionException");
     if (factory == null) {
       factory = new MemoryBoundFunctionFactory[names.length];
       for (int i = 0; i < names.length; i++) {
 	try {
-	  factory[i] = new MemoryBoundFunctionFactory(names[i]);
-	} catch (NoSuchAlgorithmException ex) {
+	  factory[i] = new MemoryBoundFunctionFactory(names[i], basisA0, basisT);
+	} catch (Exception ex) {
 	  fail(names[i] + " threw " + ex.toString());
 	}
       }
@@ -121,9 +135,7 @@ public class TestMemoryBoundFunction extends LockssTestCase {
 	MemoryBoundFunction tmp = factory[i].makeGenerator(nonce, 3, 2048);
 	if (tmp == null)
 	  fail(names[i] + " (generate) returned null");
-      } catch (NoSuchAlgorithmException ex) {
-	fail(names[i] + " (generate) threw " + ex.toString());
-      } catch (MemoryBoundFunctionException ex) {
+      } catch (Exception ex) {
 	fail(names[i] + " (generate) threw " + ex.toString());
       }
     }
@@ -135,9 +147,7 @@ public class TestMemoryBoundFunction extends LockssTestCase {
 							  good, 2048);
 	if (tmp == null)
 	  fail(names[i] + " (verify) returned null");
-      } catch (NoSuchAlgorithmException ex) {
-	fail(names[i] + " (verify) threw " + ex.toString());
-      } catch (MemoryBoundFunctionException ex) {
+      } catch (Exception ex) {
 	fail(names[i] + " (verify) threw " + ex.toString());
       }
     }
@@ -157,7 +167,7 @@ public class TestMemoryBoundFunction extends LockssTestCase {
 	fail(names[i] + ": didn't throw exception on too-long proof");
       } catch (MemoryBoundFunctionException ex) {
 	// No action intended
-      } catch (NoSuchAlgorithmException ex) {
+      } catch (Exception ex) {
 	fail(names[i] + ": threw " + ex.toString());
       }
     }
@@ -383,9 +393,7 @@ public class TestMemoryBoundFunction extends LockssTestCase {
 		  + pathsTried);
 	res = null;
       }
-    } catch (NoSuchAlgorithmException ex) {
-      fail(names[index] + " threw " + ex.toString());
-    } catch (MemoryBoundFunctionException ex) {
+    } catch (Exception ex) {
       fail(names[index] + " threw " + ex.toString());
     }
     return (res);
@@ -419,9 +427,7 @@ public class TestMemoryBoundFunction extends LockssTestCase {
 	    log.debug("verify [" + i + "] " + res2[i] + " OK tries " + pathsTried);
 	  }
 	}
-      } catch (NoSuchAlgorithmException ex) {
-	fail(names[index] + " threw " + ex.toString());
-      } catch (MemoryBoundFunctionException ex) {
+      } catch (Exception ex) {
 	fail(names[index] + " threw " + ex.toString());
       }
     }      
@@ -438,7 +444,6 @@ public class TestMemoryBoundFunction extends LockssTestCase {
   private void onePair(int index, int e, int l, boolean nonceOK,
 		       boolean proofOK) throws IOException {
     // Make sure its configured
-    assertTrue(f != null);
     assertTrue(MemoryBoundFunction.basisSize() > 0);
     long startTime = System.currentTimeMillis();
     byte[] nonce1 = new byte[64];

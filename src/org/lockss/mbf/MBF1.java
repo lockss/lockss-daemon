@@ -1,5 +1,5 @@
 /*
- * $Id: MBF1.java,v 1.11 2003-09-05 23:55:01 dshr Exp $
+ * $Id: MBF1.java,v 1.12 2003-09-06 14:01:12 dshr Exp $
  */
 
 /*
@@ -49,15 +49,6 @@ public class MBF1 extends MemoryBoundFunction {
   // Java needs us to represent things as byte arrays.  Note that
   // we fold their m,S,R,t into the nonce.
 
-  // Public static data shared by all instances.
-  // The A0 array is 256 32-bit words (1024 bytes)
-  private static byte[] A0 = null;
-  private static final int sizeA = 1024;
-  private static BigInteger a0 = null;
-  // The T array is 4M 32-bit words (16M bytes)
-  private static byte[] T = null;
-  private static final int sizeT = 16*1024*1024;
-
   // Instance data
   private byte[] A;
   // Indices into A - NB word indices not byte indices
@@ -76,12 +67,32 @@ public class MBF1 extends MemoryBoundFunction {
   private int lowBit;
   // Hasher
   MessageDigest hasher;
+  // The A0 array is 256 32-bit words (1024 bytes)
+  private byte[] A0;
+  // A0 as a BigInteger
+  private BigInteger a0;
+  // The T array is 4M 32-bit words (16M bytes)
+  private byte[] T;
+
 
 
   /**
    * No-argument constructor for use with Class.newInstance()
    */
   protected MBF1() {
+    A = null;
+    i = 0;
+    j = 0;
+    c = 0;
+    k = 0;
+    ourE = 0;
+    tooManyTries = 0;
+    pathIndex = 0;
+    lowBit = 0;
+    hasher = null;
+    A0 = null;
+    a0 = null;
+    T = null;
   }
 
   /**
@@ -100,9 +111,13 @@ public class MBF1 extends MemoryBoundFunction {
 			    long eVal,
 			    int lVal,
 			    int[] sVal,
-			    long  maxPathVal)
+			    long  maxPathVal,
+			    byte[] A0array,
+			    byte[] Tarray)
     throws MemoryBoundFunctionException {
-    super.initialize(nVal, eVal, lVal, sVal, maxPathVal);
+    super.initialize(nVal, eVal, lVal, sVal, maxPathVal, A0array, Tarray);
+    A0 = A0array;
+    T = Tarray;
     ensureConfigured();
     setup();
   }
@@ -175,16 +190,16 @@ public class MBF1 extends MemoryBoundFunction {
     hasher.update((byte)((k >> 16) & 0xff));
     hasher.update((byte)((k >> 24) & 0xff));
     byte[] hashOfNonceAndIndex = hasher.digest();
-    byte[] B = new byte[sizeA];
-    for (int p = 0; p < sizeA; )
+    byte[] B = new byte[A0.length];
+    for (int p = 0; p < B.length; )
       for (int q = 0; q < 16; ) // NB length of SHA1 = 160 bits not 128
 	B[p++] = hashOfNonceAndIndex[q++];
     // XXX
     BigInteger b1 = new BigInteger(B);
     BigInteger b2 = b1.xor(a0);
-    A = new byte[1024];
+    A = new byte[A0.length];
     byte[] ba = b2.toByteArray();
-    for (int m = 0; m < sizeA; m++)
+    for (int m = 0; m < A.length; m++)
       if (m < ba.length)
 	A[m] = ba[m];
       else
@@ -279,32 +294,13 @@ public class MBF1 extends MemoryBoundFunction {
 
   // Class initialization
   private void ensureConfigured() throws MemoryBoundFunctionException {
-    try {
-      logger.debug2("ensureConfigured " + basisFile.getPath() +
-		     " length " + basisFile.length());
-      FileInputStream fis = new FileInputStream(basisFile);
-      if (A0 == null) {
-	A0 = new byte[sizeA];
-        int readSize = fis.read(A0);
-	if (readSize != sizeA)
-	  throw new MemoryBoundFunctionException(basisFile.getPath() +
-						 " short read " + readSize);
-	// We keep a second representation of A0 as a BigInteger
-	a0 = new BigInteger(A0);
-	// XXX
-	if (a0 == null)
-	  throw new MemoryBoundFunctionException("a0 is null");
-      }
-      if (T == null) {
-	T = new byte[sizeT];
-	int readSize = fis.read(T);
-	if (readSize != sizeT)
-	  throw new MemoryBoundFunctionException(basisFile.getPath() +
-						 " short read " + readSize);
-      }
-    } catch (IOException ex) {
-      throw new MemoryBoundFunctionException(basisFile.getPath() +
-					     " throws " + ex.toString());
+    if (A0 == null) {
+      throw new MemoryBoundFunctionException("A0 is null");
     }
+    if (T == null) {
+      throw new MemoryBoundFunctionException("T is null");
+    }
+    // We keep a second representation of A0 as a BigInteger
+    a0 = new BigInteger(A0);
   }
 }
