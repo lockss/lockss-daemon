@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkHandler.java,v 1.44 2003-11-14 01:04:10 tlipkis Exp $
+ * $Id: TreeWalkHandler.java,v 1.45 2003-11-15 00:50:37 eaalto Exp $
  */
 
 /*
@@ -72,11 +72,18 @@ public class TreeWalkHandler {
   static final long MIN_TREEWALK_ESTIMATE = 10 * Constants.SECOND;
 
   /**
-   * Configuration parameter name for padding of first estimates, as multiplier.
+   * Configuration parameter name for growing insufficient estimates, as multiplier.
+   */
+  public static final String PARAM_TREEWALK_ESTIMATE_GROWTH_MULTIPLIER =
+      TREEWALK_PREFIX + "estimate.growth.multiplier";
+  static final double DEFAULT_TREEWALK_ESTIMATE_GROWTH_MULTIPLIER = 1.5;
+
+  /**
+   * Configuration parameter name for padding of estimates, as multiplier.
    */
   public static final String PARAM_TREEWALK_ESTIMATE_PADDING_MULTIPLIER =
       TREEWALK_PREFIX + "estimate.padding.multiplier";
-  static final double DEFAULT_TREEWALK_ESTIMATE_PADDING_MULTIPLIER = 1.5;
+  static final double DEFAULT_TREEWALK_ESTIMATE_PADDING_MULTIPLIER = 1.25;
 
   /**
    * Configuration parameter name for padding of first estimates, as multiplier.
@@ -102,6 +109,7 @@ public class TreeWalkHandler {
   static final double DEFAULT_TREEWALK_LOAD_FACTOR = .90;
 
   static final double MAX_DEVIATION = 0.4;
+  static final long MIN_SCHEDULE_ADJUSTMENT = 10 * Constants.MINUTE;
 
   NodeManagerImpl manager;
   private LockssDaemon theDaemon;
@@ -118,6 +126,7 @@ public class TreeWalkHandler {
   long treeWalkTestDuration;
   long startDelay;
   long initialEstimate;
+  float estGrowth;
   float estPadding;
   boolean useScheduler;
 
@@ -157,6 +166,9 @@ public class TreeWalkHandler {
         PARAM_TREEWALK_START_DELAY, DEFAULT_TREEWALK_START_DELAY);
     initialEstimate = config.getTimeInterval(
         PARAM_TREEWALK_INITIAL_ESTIMATE, DEFAULT_TREEWALK_INITIAL_ESTIMATE);
+    estGrowth = config.getPercentage(
+        PARAM_TREEWALK_ESTIMATE_GROWTH_MULTIPLIER,
+        DEFAULT_TREEWALK_ESTIMATE_GROWTH_MULTIPLIER);
     estPadding = config.getPercentage(
         PARAM_TREEWALK_ESTIMATE_PADDING_MULTIPLIER,
         DEFAULT_TREEWALK_ESTIMATE_PADDING_MULTIPLIER);
@@ -218,14 +230,12 @@ public class TreeWalkHandler {
         }
       } catch (Exception e) {
         logger.error("Error in treewalk: ", e);
-      }
-      finally {
-        if (!treeWalkAborted) {
+      } finally {
+        if (!activityLock.isExpired()) {
           // release the lock
           activityLock.expire();
-        } else {
-          treeWalkAborted = false;
         }
+        treeWalkAborted = false;
       }
     } else {
       logger.debug2("Treewalk couldn't start due to activity lock.");
@@ -310,6 +320,12 @@ public class TreeWalkHandler {
       nextSleep = Deadline.in(sleepInterval);
     }
 
+    // check after sleep
+    if (treeWalkAborted) {
+      // treewalk has been terminated
+      return false;
+    }
+
     // at each node, check for recrawl needed
     if (node.getCachedUrlSet().hasContent()) {
       //XXX if (theCrawlManager.shouldRecrawl(managerAu, node)) {
@@ -357,7 +373,7 @@ public class TreeWalkHandler {
 
   /*
    * Returns the current treewalk average.  INITIAL_ESTIMATE until a treewalk
-   * is run.
+   * is run.  This estimate is typically padded by ESTIMATE_PADDING_MULTIPLIER.
    * @return the estimate, in ms
    */
   long getEstimatedTreeWalkDuration() {
@@ -367,7 +383,7 @@ public class TreeWalkHandler {
     }
     // always at least minimum estimate
     if (treeWalkEstimate < MIN_TREEWALK_ESTIMATE) {
-      treeWalkEstimate += MIN_TREEWALK_ESTIMATE;
+      treeWalkEstimate = MIN_TREEWALK_ESTIMATE;
     }
     return treeWalkEstimate;
   }
@@ -376,7 +392,7 @@ public class TreeWalkHandler {
     // no averaging, just padding
     treeWalkEstimate = (long)(estPadding * elapsedTime);
     if (treeWalkEstimate < MIN_TREEWALK_ESTIMATE) {
-      treeWalkEstimate += MIN_TREEWALK_ESTIMATE;
+      treeWalkEstimate = MIN_TREEWALK_ESTIMATE;
     }
   }
 
@@ -419,8 +435,8 @@ public class TreeWalkHandler {
       if (threadWasNull) {
         treeWalkThread.start();
       } else {
-        // just wake it up
-        treeWalkThread.deadline.expire();
+        // trigger the semaphore to curtail any wait
+        treeWalkThread.treeWalkSemaphore.give();
       }
     }
   }
@@ -431,10 +447,8 @@ public class TreeWalkHandler {
   class TreeWalkThread extends Thread {
     private boolean goOn = true;
     boolean doingTreeWalk = false;
-    Deadline deadline;
     private static final long SMALL_SLEEP = Constants.SECOND;
-    static final long SCHEDULING_PAD_VALUE = 5 * Constants.SECOND;
-    private BinarySemaphore treeWalkSemaphore = new BinarySemaphore();
+    BinarySemaphore treeWalkSemaphore = new BinarySemaphore();
 
     public TreeWalkThread() {
       super("TreeWalk: " + theAu.getName());
@@ -485,7 +499,7 @@ public class TreeWalkHandler {
                             startDeadline.toString());
               break;
             } else {
-	      if (Deadline.in(3 * Constants.WEEK).before(startDeadline)) {
+	      if (startDeadline.getExpirationTime() > (3 * Constants.WEEK)) {
 		// If can't fit it into schedule in next 3 weeks, give up
 		// and try again in an hour.  Prevents infinite looping
 		// trying to create a schedule.
@@ -499,6 +513,9 @@ public class TreeWalkHandler {
 		// can't fit into existing schedule.  try adjusting by
 		// estimate length
 		logger.debug3("Schedule failed.  Trying new time.");
+                if (est < MIN_SCHEDULE_ADJUSTMENT) {
+                  est = MIN_SCHEDULE_ADJUSTMENT;
+                }
 		start += est;
 		end = start + est;
 	      }
@@ -511,7 +528,6 @@ public class TreeWalkHandler {
                               new TreeWalkTimerCallback(), null);
         }
 
-        doingTreeWalk = true;
         // wait on the semaphore (the callback will 'give()')
         try {
           treeWalkSemaphore.take(Deadline.at(end));
@@ -520,7 +536,9 @@ public class TreeWalkHandler {
           continue;
         }
 
+        doingTreeWalk = true;
         doTreeWalk();
+        doingTreeWalk = false;
 
         // if background activity finishes before end time, call
         if (!Deadline.at(end).expired()) {
@@ -529,25 +547,23 @@ public class TreeWalkHandler {
             task.taskIsFinished();
           }
         }
-
-        doingTreeWalk = false;
       }
     }
 
-    private long chooseTimeToRun(long additionalDelay) {
+    long chooseTimeToRun(long additionalDelay) {
       long timeToStart = timeUntilTreeWalkStart() + additionalDelay;
 
       // default 'start now'
-      long newStart = TimeBase.nowMs() + SCHEDULING_PAD_VALUE + additionalDelay;
+      long newStart = TimeBase.nowMs() + additionalDelay;
       // if starting in the future, create a randomized value
-      if (timeToStart > (SCHEDULING_PAD_VALUE + additionalDelay)) {
-        long delta = (long) ( (double) MAX_DEVIATION * timeToStart);
+      if (timeToStart > additionalDelay) {
+        long delta = (long)((double)MAX_DEVIATION * timeToStart);
         logger.debug3("Creating a deadline for " +
                       StringUtil.timeIntervalToString(timeToStart) +
                       " with delta of " +
                       StringUtil.timeIntervalToString(delta));
-        deadline = Deadline.inRandomRange(timeToStart,
-                                          timeToStart + delta);
+        Deadline deadline = Deadline.inRandomRange(timeToStart,
+            timeToStart + delta);
         newStart = deadline.getExpirationTime();
       }
       return newStart;
@@ -555,21 +571,14 @@ public class TreeWalkHandler {
 
     public void end() {
       goOn = false;
-      if (doingTreeWalk) {
-        // free the lock
-        activityLock.expire();
-      }
       treeWalkAborted = true;
-      if (deadline != null) {
-        deadline.expire();
-      }
     }
 
     private class TreeWalkTaskCallback implements TaskCallback {
       public void taskEvent(SchedulableTask task, Schedule.EventType event)
           throws Abort {
         if (event == Schedule.EventType.START) {
-          if (doingTreeWalk) {
+          if (!doingTreeWalk) {
             // start background activity, not in this thread.
             logger.debug3("Giving semaphore...");
             treeWalkSemaphore.give();
@@ -581,11 +590,11 @@ public class TreeWalkHandler {
           logger.debug3("Task finished.");
           // abort current treewalk, but don't stop the thread
           if (doingTreeWalk) {
+            logger.debug2("Treewalk task timed out.");
             // free the lock
-            activityLock.expire();
 	    treeWalkAborted = true;
             // couldn't finish in time; pad estimate
-            treeWalkEstimate *= estPadding;
+            treeWalkEstimate *= estGrowth;
           }
         }
       }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestTreeWalkHandler.java,v 1.32 2003-11-13 22:23:57 eaalto Exp $
+ * $Id: TestTreeWalkHandler.java,v 1.33 2003-11-15 00:50:37 eaalto Exp $
  */
 
 /*
@@ -244,6 +244,8 @@ public class TestTreeWalkHandler extends LockssTestCase {
   private void checkPollTest(int nodeState, long startTime,
                              boolean shouldSchedule, boolean isContent,
                              NodeStateImpl node) {
+    // reset treewalkaborted
+    treeWalkHandler.treeWalkAborted = false;
     node.setState(nodeState);
     assertEquals(!shouldSchedule, treeWalkHandler.checkNodeState(node));
     if (shouldSchedule) {
@@ -314,13 +316,12 @@ public class TestTreeWalkHandler extends LockssTestCase {
     assertEquals(treeWalkHandler.DEFAULT_TREEWALK_INITIAL_ESTIMATE,
                  treeWalkHandler.getEstimatedTreeWalkDuration());
     treeWalkHandler.updateEstimate(100);
-    // first value gets padded by 1.5 and MIN_TREEWALK_ESTIMATE is added
-    long expectedL = (long)((100 * treeWalkHandler.DEFAULT_TREEWALK_ESTIMATE_PADDING_MULTIPLIER) +
-        treeWalkHandler.MIN_TREEWALK_ESTIMATE);
-    assertEquals(expectedL, treeWalkHandler.getEstimatedTreeWalkDuration());
+    // first value gets set to MIN_TREEWALK_ESTIMATE, since to small
+    assertEquals(treeWalkHandler.MIN_TREEWALK_ESTIMATE,
+                 treeWalkHandler.getEstimatedTreeWalkDuration());
     treeWalkHandler.updateEstimate(treeWalkHandler.MIN_TREEWALK_ESTIMATE + 200);
-    // no averaging, so just padded by 1.5
-    expectedL = (long)((treeWalkHandler.MIN_TREEWALK_ESTIMATE + 200) *
+    // no averaging, so just padded by 1.25
+    long expectedL = (long)((treeWalkHandler.MIN_TREEWALK_ESTIMATE + 200) *
         treeWalkHandler.DEFAULT_TREEWALK_ESTIMATE_PADDING_MULTIPLIER);
     assertEquals(expectedL, treeWalkHandler.getEstimatedTreeWalkDuration());
   }
