@@ -1,5 +1,5 @@
 /*
- * $Id: BackgroundTask.java,v 1.2 2003-11-12 01:49:09 troberts Exp $
+ * $Id: BackgroundTask.java,v 1.3 2003-11-12 21:09:20 tlipkis Exp $
  */
 
 /*
@@ -76,6 +76,10 @@ public class BackgroundTask extends SchedulableTask {
     if (runner != null) {
       runner.backgroundTaskIsFinished(this);
     }
+  }
+
+  public String getShortText() {
+    return "Bckgnd";
   }
 
   public String toString() {

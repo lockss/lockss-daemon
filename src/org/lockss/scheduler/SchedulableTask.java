@@ -1,5 +1,5 @@
 /*
- * $Id: SchedulableTask.java,v 1.1 2003-11-11 20:29:45 tlipkis Exp $
+ * $Id: SchedulableTask.java,v 1.2 2003-11-12 21:09:19 tlipkis Exp $
  */
 
 /*
@@ -54,6 +54,8 @@ public class SchedulableTask implements Serializable, Cloneable {
   long timeUsed = 0;
   protected Exception e;
   boolean overrunAllowed = false;
+  boolean hasBeenNotified = false;
+  boolean hasStarted = false;
 
   int schedSeq = -1;
   Date schedDate;
@@ -109,7 +111,7 @@ public class SchedulableTask implements Serializable, Cloneable {
     return timeUsed;
   }
 
-  public Throwable getExcption() {
+  public Exception getExcption() {
     return e;
   }
 
@@ -140,6 +142,30 @@ public class SchedulableTask implements Serializable, Cloneable {
 
   public boolean isOverrunAllowed() {
     return overrunAllowed;
+  }
+
+  public boolean hasBeenNotified() {
+    return hasBeenNotified;
+  }
+
+  public void setNotified() {
+    hasBeenNotified = true;;
+  }
+
+  public boolean hasStarted() {
+    return hasStarted;
+  }
+
+  public void setStarted() {
+    hasStarted = true;;
+  }
+
+  public String getShortText() {
+    if (schedSeq != -1) {
+      return "Task " + schedSeq;
+    } else {
+      return "Task";
+    }
   }
 
   /** Return true iff this is a background task.  By default, tasks are not
