@@ -1,5 +1,5 @@
 /*
- * $Id: HashQueue.java,v 1.29 2003-03-28 23:48:13 aalto Exp $
+ * $Id: HashQueue.java,v 1.30 2003-03-29 20:25:39 tal Exp $
  */
 
 /*
@@ -216,8 +216,8 @@ class HashQueue implements Serializable {
   // Register config callback
   private void registerConfigCallback() {
     Configuration.registerConfigurationCallback(new Configuration.Callback() {
-	public void configurationChanged(Configuration oldConfig,
-					 Configuration newConfig,
+	public void configurationChanged(Configuration newConfig,
+					 Configuration oldConfig,
 					 Set changedKeys) {
 	  setConfig(newConfig, changedKeys);
 	}

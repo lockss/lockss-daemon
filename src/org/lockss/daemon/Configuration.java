@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.28 2003-03-29 02:42:24 tal Exp $
+ * $Id: Configuration.java,v 1.29 2003-03-29 20:25:39 tal Exp $
  */
 
 /*
@@ -120,31 +120,31 @@ public abstract class Configuration {
   }
 
   static void runCallback(Callback cb,
-			  Configuration oldConfig,
 			  Configuration newConfig,
+			  Configuration oldConfig,
 			  Set diffs) {
     try {
-      cb.configurationChanged(oldConfig, newConfig, diffs);
+      cb.configurationChanged(newConfig, oldConfig, diffs);
     } catch (Exception e) {
       log.error("callback threw", e);
     }
   }
 
   static void runCallback(Callback cb,
-			  Configuration oldConfig,
-			  Configuration newConfig) {
-    runCallback(cb, oldConfig, newConfig, newConfig.differentKeys(oldConfig));
+			  Configuration newConfig,
+			  Configuration oldConfig) {
+    runCallback(cb, newConfig, oldConfig, newConfig.differentKeys(oldConfig));
   }
 
-  static void runCallbacks(Configuration oldConfig,
-			   Configuration newConfig) {
+  static void runCallbacks(Configuration newConfig,
+			   Configuration oldConfig) {
     Set diffs = newConfig.differentKeys(oldConfig);
     // copy the list of callbacks as it could change during the loop.
     List cblist = new ArrayList(configChangedCallbacks);
     for (Iterator iter = cblist.iterator(); iter.hasNext();) {
       try {
 	Callback cb = (Callback)iter.next();
-	runCallback(cb, oldConfig, newConfig, diffs);
+	runCallback(cb, newConfig, oldConfig, diffs);
       } catch (RuntimeException e) {
 	throw e;
       }
@@ -200,7 +200,7 @@ public abstract class Configuration {
     if (log.isDebug()) {
       newConfig.logConfig();
     }
-    runCallbacks(oldConfig, newConfig);
+    runCallbacks(newConfig, oldConfig);
     return true;
   }
 
@@ -222,11 +222,11 @@ public abstract class Configuration {
    * immediately.
    * @param c <code>Configuration.Callback</code> to add.  */
   public static void registerConfigurationCallback(Callback c) {
-    log.debug("registering " + c);
+    log.debug2("registering " + c);
     if (!configChangedCallbacks.contains(c)) {
       configChangedCallbacks.add(c);
       if (haveConfig.isFull()) {
-	runCallback(c, emptyConfig, currentConfig);
+	runCallback(c, currentConfig, emptyConfig);
       }
     }
   }
@@ -236,7 +236,7 @@ public abstract class Configuration {
    * @param c <code>Configuration.Callback</code> to remove.
    */
   public static void unregisterConfigurationCallback(Callback c) {
-    log.debug("unregistering " + c);
+    log.debug2("unregistering " + c);
     configChangedCallbacks.remove(c);
   }
 
@@ -745,8 +745,8 @@ public abstract class Configuration {
      *                   if there was no previous config.
      * @param changedKeys  the set of keys whose value has changed.
      * @see Configuration#registerConfigurationCallback */
-    public void configurationChanged(Configuration oldConfig,
-				     Configuration newConfig,
+    public void configurationChanged(Configuration newConfig,
+				     Configuration oldConfig,
 				     Set changedKeys);
   }
 

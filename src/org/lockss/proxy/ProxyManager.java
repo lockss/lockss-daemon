@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyManager.java,v 1.2 2003-03-14 22:00:10 tal Exp $
+ * $Id: ProxyManager.java,v 1.3 2003-03-29 20:25:39 tal Exp $
  */
 
 /*
@@ -77,8 +77,8 @@ public class ProxyManager extends JettyManager {
    */
   public void startService() {
     Configuration.registerConfigurationCallback(new Configuration.Callback() {
-	public void configurationChanged(Configuration oldConfig,
-					 Configuration newConfig,
+	public void configurationChanged(Configuration newConfig,
+					 Configuration oldConfig,
 					 Set changedKeys) {
 	  setConfig(newConfig, oldConfig);
 	}

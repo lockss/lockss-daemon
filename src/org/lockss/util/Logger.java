@@ -1,5 +1,5 @@
 /*
- * $Id: Logger.java,v 1.16 2003-01-30 19:53:28 tal Exp $
+ * $Id: Logger.java,v 1.17 2003-03-29 20:25:38 tal Exp $
  */
 
 /*
@@ -338,8 +338,8 @@ public class Logger {
    */
   private static void registerConfigCallback() {
     Configuration.registerConfigurationCallback(new Configuration.Callback() {
-	public void configurationChanged(Configuration oldConfig,
-					 Configuration newConfig,
+	public void configurationChanged(Configuration newConfig,
+					 Configuration oldConfig,
 					 Set changedKeys) {
 	  setAllLogLevels();
 	  if (changedKeys.contains(PARAM_LOG_TARGETS)) {

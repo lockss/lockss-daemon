@@ -1,5 +1,5 @@
 /*
- * $Id: ServletManager.java,v 1.4 2003-03-17 08:32:24 tal Exp $
+ * $Id: ServletManager.java,v 1.5 2003-03-29 20:25:39 tal Exp $
  */
 
 /*
@@ -89,8 +89,8 @@ public class ServletManager extends JettyManager {
    */
   public void startService() {
     Configuration.registerConfigurationCallback(new Configuration.Callback() {
-	public void configurationChanged(Configuration oldConfig,
-					 Configuration newConfig,
+	public void configurationChanged(Configuration newConfig,
+					 Configuration oldConfig,
 					 Set changedKeys) {
 	  setConfig(newConfig, oldConfig);
 	}

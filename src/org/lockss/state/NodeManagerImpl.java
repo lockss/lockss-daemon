@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.71 2003-03-28 22:23:31 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.72 2003-03-29 20:25:39 tal Exp $
  */
 
 /*
@@ -107,8 +107,8 @@ public class NodeManagerImpl implements NodeManager {
     logger.debug("NodeManager being started");
 
     configCallback = new Configuration.Callback() {
-        public void configurationChanged(Configuration oldConfig,
-                                         Configuration newConfig,
+        public void configurationChanged(Configuration newConfig,
+                                         Configuration oldConfig,
                                          Set changedKeys) {
           setConfig(newConfig, oldConfig);
         }

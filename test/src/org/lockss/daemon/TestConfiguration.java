@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfiguration.java,v 1.14 2003-03-29 02:42:24 tal Exp $
+ * $Id: TestConfiguration.java,v 1.15 2003-03-29 20:25:38 tal Exp $
  */
 
 /*
@@ -252,8 +252,8 @@ public class TestConfiguration extends LockssTestCase {
 					      FileUtil.urlOfString(c1a)));
     assertEquals(0, configs.size());
     Configuration.registerConfigurationCallback(new Configuration.Callback() {
-	public void configurationChanged(Configuration oldConfig,
-					 Configuration newConfig,
+	public void configurationChanged(Configuration newConfig,
+					 Configuration oldConfig,
 					 Set changedKeys) {
 	  assertNotNull(oldConfig);
 	  configs.add(newConfig);
@@ -267,8 +267,8 @@ public class TestConfiguration extends LockssTestCase {
 					      FileUtil.urlOfString(c1a)));
     System.out.println(Configuration.getCurrentConfig().toString());
     Configuration.registerConfigurationCallback(new Configuration.Callback() {
-	public void configurationChanged(Configuration oldConfig,
-					 Configuration newConfig,
+	public void configurationChanged(Configuration newConfig,
+					 Configuration oldConfig,
 					 Set changedKeys) {
 	  System.out.println("Notify: " + changedKeys);
 	  diffSet = changedKeys;

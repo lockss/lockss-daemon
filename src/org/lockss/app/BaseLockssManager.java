@@ -1,5 +1,5 @@
 /*
- * $Id: BaseLockssManager.java,v 1.4 2003-03-29 04:02:15 claire Exp $
+ * $Id: BaseLockssManager.java,v 1.5 2003-03-29 20:25:39 tal Exp $
  */
 
 /*
@@ -90,8 +90,8 @@ public abstract class BaseLockssManager implements LockssManager {
     }
   }
 
-  protected void setConfig(Configuration oldConfig,
-                           Configuration newConfig,
+  protected void setConfig(Configuration newConfig,
+                           Configuration oldConfig,
                            Set changedKeys) {
     /** override to actually set the config **/
     log.error("setConfig called, should be overridden for correct behaviour");
@@ -99,8 +99,8 @@ public abstract class BaseLockssManager implements LockssManager {
   }
 
   class DefaultConfigCallback implements Configuration.Callback {
-    public void configurationChanged(Configuration oldConfig,
-                                     Configuration newConfig,
+    public void configurationChanged(Configuration newConfig,
+                                     Configuration oldConfig,
                                      Set changedKeys) {
       setConfig(newConfig, oldConfig, changedKeys);
     }
