@@ -1,5 +1,5 @@
 /*
- * $Id: CuResourceHandler.java,v 1.2 2003-06-20 22:34:51 claire Exp $
+ * $Id: CuResourceHandler.java,v 1.3 2004-11-10 20:07:27 smorabito Exp $
  */
 
 /*
@@ -31,12 +31,13 @@ in this Software without prior written authorization from Stanford University.
 */
 // ===========================================================================
 // Copyright (c) 1996-2002 Mort Bay Consulting Pty. Ltd. All rights reserved.
-// $Id: CuResourceHandler.java,v 1.2 2003-06-20 22:34:51 claire Exp $
+// $Id: CuResourceHandler.java,v 1.3 2004-11-10 20:07:27 smorabito Exp $
 // ---------------------------------------------------------------------------
 
 package org.lockss.jetty;
 
 import java.io.*;
+import org.lockss.app.*;
 import org.mortbay.http.*;
 import org.mortbay.http.handler.*;
 import org.mortbay.util.*;
@@ -44,6 +45,9 @@ import org.mortbay.util.*;
 /** A LockssResourceHandler that creates a Resource from the url stored in
     the X-Lockss-Cu field of the request. */
 public class CuResourceHandler extends LockssResourceHandler {
+  public CuResourceHandler(LockssDaemon daemon) {
+    super(daemon);
+  }
   public Resource getResource(HttpRequest request, String pathInContext)
       throws IOException {
     String cuurl = request.getField("Lockss-Cu");

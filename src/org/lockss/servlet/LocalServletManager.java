@@ -1,5 +1,5 @@
 /*
- * $Id: LocalServletManager.java,v 1.3 2004-10-18 03:38:12 tlipkis Exp $
+ * $Id: LocalServletManager.java,v 1.4 2004-11-10 20:07:26 smorabito Exp $
  */
 
 /*
@@ -153,7 +153,7 @@ public class LocalServletManager extends BaseServletManager {
     log.debug("Resource URL: " + resourceUrl);
 
     context.setResourceBase(resourceUrl.toString());
-    LockssResourceHandler rHandler = new LockssResourceHandler();
+    LockssResourceHandler rHandler = new LockssResourceHandler(getDaemon());
     rHandler.setDirAllowed(false);
     //       rHandler.setAcceptRanges(true);
     context.addHandler(rHandler);
@@ -176,7 +176,7 @@ public class LocalServletManager extends BaseServletManager {
     log.debug("Images resource URL: " + resourceUrl);
 
     context.setResourceBase(resourceUrl.toString());
-    LockssResourceHandler rHandler = new LockssResourceHandler();
+    LockssResourceHandler rHandler = new LockssResourceHandler(getDaemon());
     context.addHandler(rHandler);
 
     // NotFoundHandler
