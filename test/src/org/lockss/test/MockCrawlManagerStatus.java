@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawlManagerStatus.java,v 1.1 2005-01-11 01:58:56 troberts Exp $
+ * $Id: MockCrawlManagerStatus.java,v 1.1.2.1 2005-01-14 19:25:24 tlipkis Exp $
  */
 
 /*
@@ -30,8 +30,9 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.crawler;
+package org.lockss.test;
 import java.util.*;
+import org.lockss.crawler.*;
 import org.lockss.daemon.status.*;
 import org.lockss.test.*;
 import org.lockss.daemon.*;
