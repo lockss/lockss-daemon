@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlRules.java,v 1.1 2004-08-09 02:57:01 tlipkis Exp $
+ * $Id: TestCrawlRules.java,v 1.2 2004-11-11 00:37:50 troberts Exp $
  */
 
 /*
@@ -270,4 +270,18 @@ public class TestCrawlRules extends LockssTestCase {
     assertEquals(CrawlRule.INCLUDE, cr.match("/issue/two/bar"));
     assertEquals(CrawlRule.EXCLUDE, cr.match("/issue/frog/bar"));
   }
+
+  public void testMatchSetWSlashes() throws Exception {
+    CrawlRule cr =
+      new CrawlRules.REMatchSet("/(.*)/",
+				CrawlRules.RE.MATCH_INCLUDE_ELSE_EXCLUDE,
+				SetUtil.set("issue/one", "issue/two", "issue/three"));
+    assertEquals(CrawlRule.EXCLUDE, cr.match("no/match"));
+    assertEquals(CrawlRule.EXCLUDE, cr.match("no_trailingslash/issue/bar"));
+    assertEquals(CrawlRule.EXCLUDE, cr.match("foo/issue/17/bar"));
+    assertEquals(CrawlRule.INCLUDE, cr.match("foo/issue/one/bar"));
+    assertEquals(CrawlRule.INCLUDE, cr.match("/issue/two/bar"));
+    assertEquals(CrawlRule.EXCLUDE, cr.match("/issue/frog/bar"));
+  }
+
 }
