@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingCrawlerImpl.java,v 1.3 2002-12-10 23:03:41 troberts Exp $
+ * $Id: GoslingCrawlerImpl.java,v 1.4 2002-12-17 20:59:04 troberts Exp $
  */
 
 /*
@@ -85,7 +85,7 @@ import org.lockss.util.*;
  */
 
 
-public class GoslingCrawlerImpl {
+public class GoslingCrawlerImpl implements Crawler {
   /**
    * TODO
    * 1) write state to harddrive using whatever system we come up for for the
@@ -110,6 +110,7 @@ public class GoslingCrawlerImpl {
 
   private static Logger logger = Logger.getLogger("GoslingCrawlerImpl");
 
+
   /**
    * Main method of the crawler; it loops through crawling and caching
    * urls.
@@ -119,22 +120,26 @@ public class GoslingCrawlerImpl {
    * crawl and the rules for which urls to cache
    *
    */
-  public static void doCrawl(ArchivalUnit au, CrawlSpec spec) {
+  public void doCrawl(ArchivalUnit au, List urls, boolean followLinks,
+		       boolean overWrite, Deadline deadline) {
     if (au == null) {
       throw new IllegalArgumentException("Called with a null ArchivalUnit");
-    }
-    else if (spec == null) {
+    } else if (urls == null) {
       throw new IllegalArgumentException("Called with a null CrawlSpec");
+    } else if (deadline == null) {
+      throw new IllegalArgumentException("Called with a null Deadline");
     }
 
-    List list = createInitialList(spec);
+
+
+    List list = createInitialList(urls);
     CachedUrlSet cus = au.getAUCachedUrlSet();
-    while (!list.isEmpty()) {
+    while (!list.isEmpty() && !deadline.expired()) {
       String url = (String)list.remove(0);
       logger.debug("Dequeued url from list: "+url);
       UrlCacher uc = cus.makeUrlCacher(url);
       if (uc.shouldBeCached()) {
- 	if (!cus.isCached(url)) {
+ 	if (overWrite || !cus.isCached(url)) {
 	  try {
 	    logger.info("caching "+uc);
 	    uc.cache(); //IOException if there is a caching problem
@@ -142,18 +147,20 @@ public class GoslingCrawlerImpl {
 	    //XXX handle this better.  Requeue?
 	    logger.error("Problem caching "+uc+". Ignoring", ioe);
 	  }
-	  try{
-	    CachedUrl cu = uc.getCachedUrl();
-	    addUrlsToList(cu, list);//IOException if the CU can't be read
-	  } catch (IOException ioe) {
-	    //XXX handle this better.  Requeue?
-	    logger.error("Problem parsing "+uc+". Ignoring", ioe);
-	  }
-	  au.pause();
+	  au.pause(); //XXX make sure we throw InterruptedExceptions
 	}
  	else {
  	  logger.info(uc+" exists, not caching");
  	}
+	try{
+	  if (followLinks) {
+	    CachedUrl cu = uc.getCachedUrl();
+	    addUrlsToList(cu, list);//IOException if the CU can't be read
+	  }
+	} catch (IOException ioe) {
+	  //XXX handle this better.  Requeue?
+	  logger.error("Problem parsing "+uc+". Ignoring", ioe);
+	}
       }
       logger.debug("Removing from list: "+uc.getUrl());
     }
@@ -163,11 +170,11 @@ public class GoslingCrawlerImpl {
    * Method to generate a List of urls to start a crawl at from a
    * CachedUrlSet.
    *
-   * @param spec CrawlSpec from which the starting points with be fetched.
+   * @param urls List of urls to start the crawl at
    * @returns A modifiable list of the urls (in string form)
    */
-  protected static List createInitialList (CrawlSpec spec) {
-    return new LinkedList(spec.getStartingUrls());
+  protected static List createInitialList (List urls) {
+    return new LinkedList(urls);
   }
 
   /**
@@ -354,8 +361,7 @@ public class GoslingCrawlerImpl {
       if (StringUtil.getIndexIgnoringCase(link.toString(), 
 					  TABLETAG+" ") == 0 ||
 	  StringUtil.getIndexIgnoringCase(link.toString(), 
-					  TDTAG+" ") == 0)
-	{
+					  TDTAG+" ") == 0) {
 	  returnStr = getAttributeValue(BACKGROUNDSRC, link.toString());
 	}
       break;
