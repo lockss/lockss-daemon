@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyManager.java,v 1.31 2005-01-20 04:25:42 tlipkis Exp $
+ * $Id: ProxyManager.java,v 1.32 2005-01-21 17:46:51 tlipkis Exp $
  */
 
 /*
@@ -241,6 +241,7 @@ public class ProxyManager extends BaseProxyManager {
   }
 
   public void setHostDown(String host) {
+    if (log.isDebug2()) log.debug2("Set host down: " + host);
     hostsDown.put(host, "");
   }
 }
