@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfiguration.java,v 1.30 2004-06-14 03:08:44 smorabito Exp $
+ * $Id: TestConfiguration.java,v 1.31 2004-06-17 22:47:21 smorabito Exp $
  */
 
 /*
@@ -224,6 +224,29 @@ public class TestConfiguration extends LockssTestCase {
     assertEquals("xxx", config.get("prop2"));
     assertTrue(config.getBoolean("prop3", false));
     assertEquals("yyy", config.get("prop4"));
+  }
+
+  private static final String c3 =
+    "prop.p1=a;b;c;d;e;f;g";
+  
+  public void testGetList() throws IOException {
+    Configuration config = newConfiguration();
+    config.load(new ConfigFile(FileTestUtil.urlOfString(c3)));
+    try {
+      List l = config.getList("prop.p1");
+      assertNotNull(l);
+      assertEquals(7, l.size());
+      Collections.sort(l);
+      assertEquals("a", (String)l.get(0));
+      assertEquals("b", (String)l.get(1));
+      assertEquals("c", (String)l.get(2));
+      assertEquals("d", (String)l.get(3));
+      assertEquals("e", (String)l.get(4));
+      assertEquals("f", (String)l.get(5));
+      assertEquals("g", (String)l.get(6));
+    } catch (Exception ex) {
+      fail("Should not have thrown: " + ex);
+    }
   }
 
   private static final String c2 =
