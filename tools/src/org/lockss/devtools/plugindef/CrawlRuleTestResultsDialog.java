@@ -77,7 +77,7 @@ public class CrawlRuleTestResultsDialog extends JDialog {
   public CrawlRuleTestResultsDialog(ArchivalUnit au) {
     this();
     m_au = au;
-    startUrlTextField.setText((String)m_au.getPermissionPages().get(0));
+    startUrlTextField.setText((String)m_au.getNewContentCrawlUrls().get(0));
   }
 
   private void jbInit() throws Exception {
