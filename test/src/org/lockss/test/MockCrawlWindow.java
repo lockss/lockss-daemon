@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlWindow.java,v 1.2 2003-12-06 00:53:01 eaalto Exp $
+ * $Id: MockCrawlWindow.java,v 1.1 2003-12-06 00:53:00 eaalto Exp $
  */
 
 /*
@@ -30,34 +30,34 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.daemon;
+package org.lockss.test;
 
-import java.util.*;
+import java.util.Date;
+import org.lockss.daemon.CrawlWindow;
 
 /**
- * Interface for crawl windows, used to determine whether a crawl should be
- * permitted.  Plugins may implement this or use one of the supplied
- * implementations in {@link CrawlWindows}.
+ * A simple mock CrawlWindow.
  */
-public interface CrawlWindow {
-  /**
-   * Returns true if a crawl is permitted, using the current system time.
-   * @return true iff permitted
-   */
-  public boolean canCrawl();
 
-  /**
-   * Returns true if a crawl is permitted, using the given date.
-   * @param date the date
-   * @return true iff permitted
-   */
-  public boolean canCrawl(Date date);
+public class MockCrawlWindow implements CrawlWindow {
+  boolean allowCrawl = true;
 
-  /**
-   * Returns true if, for this window, a crawl is *ever* possible.  This protects
-   * against windows with mutally exclusive elements (i.e. 'Monday AND Wednesday'
-   * rather than 'Monday OR Wednesday').
-   * @return true iff a crawl is possible
-   */
-  public boolean crawlIsPossible();
+  public MockCrawlWindow() { }
+
+  public boolean canCrawl() {
+    return allowCrawl;
+  }
+
+  public boolean canCrawl(Date date) {
+    return canCrawl();
+  }
+
+  public void setAllowCrawl(boolean allowCrawl) {
+    this.allowCrawl = allowCrawl;
+  }
+
+  public boolean crawlIsPossible() {
+    return allowCrawl;
+  }
 }
+

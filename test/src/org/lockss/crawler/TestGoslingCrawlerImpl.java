@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingCrawlerImpl.java,v 1.29 2003-11-07 23:58:14 troberts Exp $
+ * $Id: TestGoslingCrawlerImpl.java,v 1.30 2003-12-06 00:53:01 eaalto Exp $
  */
 
 /*
@@ -593,7 +593,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     spec = new CrawlSpec(startUrls, crawlRule, 2);
     crawler =
       GoslingCrawlerImpl.makeNewContentCrawler(mau, spec, new MockAuState());
-    
+
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     String url1= "http://www.example.com/link1.html";
     String url2= "http://www.example.com/link2.html";
@@ -783,7 +783,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     p.setProperty(PARAM_RETRY_TIMES, String.valueOf(retryNum));
     p.setProperty(GoslingCrawlerImpl.PARAM_RETRY_PAUSE, "0");
     ConfigurationUtil.setCurrentConfigFromProps(p);
-    
+
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     String url1="http://www.example.com/blah.html";
     cus.addUrl("<a href="+url1+">test</a>", startUrl, false, true);
@@ -986,7 +986,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     crawlRule.addUrlToCrawl(url1);
     crawlRule.addUrlToCrawl(url2);
     crawlRule.addUrlToCrawl(url3);
-    
+
 
     crawler =
       GoslingCrawlerImpl.makeNewContentCrawler(mau, spec, new MockAuState());
@@ -1098,6 +1098,10 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
 
     public boolean canCrawl(Date serverDate) {
       return canCrawl();
+    }
+
+    public boolean crawlIsPossible() {
+      return true;
     }
   }
 

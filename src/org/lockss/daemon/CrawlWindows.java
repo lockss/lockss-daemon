@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlWindows.java,v 1.4 2003-11-03 20:54:10 eaalto Exp $
+ * $Id: CrawlWindows.java,v 1.5 2003-12-06 00:53:01 eaalto Exp $
  */
 
 /*
@@ -39,57 +39,80 @@ import org.lockss.util.*;
  * Several useful CrawlWindow implementations.
  */
 public class CrawlWindows {
+  // fields to include in calendar comparisons. Bit-wise additive.
+  // the first two are not public, to avoid confusion with 'TIME' and useless
+  // short intervals (using strictly 'MINUTE' is always less than an hour,
+  // which is probably too short)
+  /** Field indicating hour of day (24-hour).  Includes end point
+   * (i.e. 5-6 matches up to 6:59).
+   */
+  static final int HOUR_OF_DAY = 1;
+  /** Field indicating minute */
+  static final int MINUTE = 2;
+
+  /** Convenience value indicating hour and minute comparison. Does not
+   * include seconds, so 5->6:00 allows up to 6:00:59.
+   */
+  public static final int TIME = HOUR_OF_DAY + MINUTE;
+  /** Field indicating day of week (i.e. Monday) */
+  public static final int DAY_OF_WEEK = 4;
+  /** Field indicating day of month (1st, 2nd, etc.) */
+  public static final int DAY_OF_MONTH = 8;
+  /** Field indicating week of month */
+  public static final int WEEK_OF_MONTH = 16;
+  /** Field indicating month */
+  public static final int MONTH = 32;
+
 
   /**
    * Abstract base window which handles timezone issues.
    */
   protected abstract static class BaseCrawlWindow implements CrawlWindow {
     protected TimeZone timeZone;
+    Calendar windowCal;
 
-    // fields to include in calendar comparisons. Bit-wise additive.
-    /** Field indicating hour of day (24-hour).  Includes  end point
-     * (i.e. 5-6pm matches up to 6:59pm).
+    /**
+     * Constructor takes a {@link TimeZone} for the window.  Null defaults
+     * to the system time zone.
+     * @param windowTZ the window's TimeZone
      */
-    public static final int HOUR_OF_DAY = 1;
-    /** Field indicating minute */
-    public static final int MINUTE = 2;
-    /** Field indicating day of week (i.e. Monday) */
-    public static final int DAY_OF_WEEK = 4;
-    /** Field indicating day of month (1st, 2nd, etc.) */
-    public static final int DAY_OF_MONTH = 8;
-    /** Field indicating week of month */
-    public static final int WEEK_OF_MONTH = 16;
-    /** Field indicating month */
-    public static final int MONTH = 32;
-
-    /** Convenience value indicating hour and minute comparison. Does not
-     * include seconds, so 5->6:00 allows up to 6:00:59.
-     */
-    public static final int TIME = HOUR_OF_DAY + MINUTE;
-
-    public BaseCrawlWindow(TimeZone serverTZ) {
-      this.timeZone = serverTZ; // null uses default
+    public BaseCrawlWindow(TimeZone windowTZ) {
+      if (windowTZ==null) {
+        timeZone = TimeZone.getDefault();
+      } else {
+        timeZone = windowTZ;
+      }
+      windowCal = Calendar.getInstance(timeZone);
     }
 
-    public void setServerTimeZone(TimeZone serverTimeZone) {
-      this.timeZone = serverTimeZone;
+    /**
+     * Sets the window's {@link TimeZone}.  Null defaults to the system time
+     * zone.
+     * @param windowTZ the new TimeZone
+     */
+    public void setWindowTimeZone(TimeZone windowTZ) {
+      if (windowTZ==null) {
+        timeZone = TimeZone.getDefault();
+      } else {
+        timeZone = windowTZ;
+      }
+      windowCal = Calendar.getInstance(timeZone);
     }
 
     public boolean canCrawl() {
       return canCrawl(TimeBase.nowDate());
     }
 
-    public boolean canCrawl(Date serverDate) {
-      Calendar serverCal;
-      if (timeZone != null) {
-        serverCal = Calendar.getInstance(timeZone);
-      }
-      else {
-        serverCal = Calendar.getInstance();
-      }
+    public boolean canCrawl(Date date) {
       // set to the date to test
-      serverCal.setTime(serverDate);
-      return isMatch(serverCal);
+      windowCal.setTime(date);
+      return isMatch(windowCal);
+    }
+
+    public boolean crawlIsPossible() {
+      // crawl is always possible for the current BaseCrawlWindows,
+      // Interval and FieldSet
+      return true;
     }
 
     /**
@@ -105,10 +128,10 @@ public class CrawlWindows {
   /**
    * A window which represents an interval (from start to end, inclusive).  It
    * takes two {@link Calendar}s, and a field bit-mask for comparison.  This is
-   * constructed from the BaseCrawlWindow fields. For example,
+   * constructed from the CrawlWindows fields. For example,
    * to set a window from Monday->Thursday the start Calendar would have
    * 'DAY_OF_WEEK' set to Monday, the end to Thursday, and the field would be
-   * BaseCrawlWindow.DAY_OF_WEEK.  To compare day of the week and month (i.e.
+   * CrawlWindows.DAY_OF_WEEK.  To compare day of the week and month (i.e.
    * M-F, June-Dec), the mask would be DAY_OF_WEEK + MONTH.
    */
   public static class Interval extends BaseCrawlWindow {
@@ -119,18 +142,18 @@ public class CrawlWindows {
     /**
      * Usage: to set a window from Monday->Thursday the start Calendar would have
      * 'DAY_OF_WEEK' set to Monday, the end to Thursday, and the field would be
-     * Calendar.DAY_OF_WEEK.  The 'Interval.TIME' field examines both HOUR and
+     * Calendar.DAY_OF_WEEK.  The 'CrawlWindows.TIME' field examines both HOUR and
      * MINUTE.  Both start and end are inclusive, except for the final minute
      * when 'TIME' is chosen.
      *
      * @param start the Calendar with the start of the interval
      * @param end the Calendar with the end of the interval
      * @param fieldMask a bit-mask of the Calendar fields to examine
-     * @param serverTZ the time zone of the server
+     * @param windowTZ the time zone of the server
      */
     public Interval(Calendar start, Calendar end, int fieldMask,
-                    TimeZone serverTZ) {
-      super(serverTZ);
+                    TimeZone windowTZ) {
+      super(windowTZ);
       if ((start==null) || (end==null)) {
         throw new NullPointerException("CrawlWindows.Interval with null calendar");
       }
@@ -140,88 +163,61 @@ public class CrawlWindows {
     }
 
     public boolean isMatch(Calendar cal) {
-      if ((fieldMask & MONTH) > 0) {
+      if (bitTest(fieldMask, MONTH)) {
         if (!fieldMatches(Calendar.MONTH, cal)) {
           return false;
         }
       }
-      if ((fieldMask & WEEK_OF_MONTH) > 0) {
+      if (bitTest(fieldMask, WEEK_OF_MONTH)) {
         if (!fieldMatches(Calendar.WEEK_OF_MONTH, cal)) {
           return false;
         }
       }
-      if ((fieldMask & DAY_OF_MONTH) > 0) {
+      if (bitTest(fieldMask, DAY_OF_MONTH)) {
         if (!fieldMatches(Calendar.DAY_OF_MONTH, cal)) {
           return false;
         }
       }
-      if ((fieldMask & DAY_OF_WEEK) > 0) {
+      if (bitTest(fieldMask, DAY_OF_WEEK)) {
         if (!fieldMatches(Calendar.DAY_OF_WEEK, cal)) {
           return false;
         }
       }
-      if ((fieldMask & HOUR_OF_DAY) > 0) {
-        if ((fieldMask & MINUTE) > 0) {
-          // hours and minutes must be considered together
-          return matchesTime(cal);
-        } else {
-          // if just hours are included treat normally
-          if (!fieldMatches(Calendar.HOUR_OF_DAY, cal)) {
-            return false;
-          }
-        }
-      } else {
-        // if just minutes are included treat normally
-        if ((fieldMask & MINUTE) > 0) {
-          if (!fieldMatches(Calendar.MINUTE, cal)) {
-            return false;
-          }
-        }
+
+      // minute no longer considered separately
+      if (bitTest(fieldMask, HOUR_OF_DAY)) {
+        return matchesTime(cal);
       }
 
       return true;
     }
 
     private boolean fieldMatches(int field, Calendar cal) {
-      int serverVal = cal.get(field);
+      int testVal = cal.get(field);
       int startVal = start.get(field);
       int endVal = end.get(field);
-      boolean startIsLowest = (startVal < endVal);
 
-      if (startIsLowest) {
-        return ((serverVal >= startVal) && (serverVal <= endVal));
+      if (startVal < endVal) {
+        return ((testVal >= startVal) && (testVal <= endVal));
       } else if (startVal==endVal) {
-        return (serverVal == startVal);
+        return (testVal == startVal);
       } else {
-        return ((serverVal >= startVal) || (serverVal <= endVal));
+        return ((testVal >= startVal) || (testVal <= endVal));
       }
     }
 
     private boolean matchesTime(Calendar cal) {
-      int serverHour = cal.get(Calendar.HOUR_OF_DAY);
-      int startHour = start.get(Calendar.HOUR_OF_DAY);
-      int endHour = end.get(Calendar.HOUR_OF_DAY);
-      int serverMin = cal.get(Calendar.MINUTE);
-      int startMin = start.get(Calendar.MINUTE);
-      int endMin = end.get(Calendar.MINUTE);
+      int testVal = 60 * cal.get(Calendar.HOUR_OF_DAY) +
+          cal.get(Calendar.MINUTE);
+      int startVal = 60 * start.get(Calendar.HOUR_OF_DAY) +
+          start.get(Calendar.MINUTE);
+      int endVal = 60 * end.get(Calendar.HOUR_OF_DAY) +
+          end.get(Calendar.MINUTE);
 
-      boolean startIsLowest;
-      if (startHour != endHour) {
-        startIsLowest = (startHour < endHour);
+      if (startVal < endVal) {
+        return ((testVal >= startVal) && (testVal < endVal));
       } else {
-        startIsLowest = (startMin < endMin);
-      }
-
-      boolean aboveStart = ( (serverHour > startHour) ||
-                             (serverHour == startHour) &&
-                             (serverMin >= startMin));
-      boolean belowEnd = ( (serverHour < endHour) ||
-                           (serverHour == endHour) &&
-                           (serverMin < endMin));
-      if (startIsLowest) {
-        return (aboveStart && belowEnd);
-      } else {
-        return (aboveStart || belowEnd);
+        return ((testVal >= startVal) || (testVal < endVal));
       }
     }
 
@@ -239,11 +235,11 @@ public class CrawlWindows {
    * the field value set from the BaseCrawlWindow selection.  The value
    * may be bitwise additive.
    */
-  public static class FieldEnum extends BaseCrawlWindow {
+  public static class FieldSet extends BaseCrawlWindow {
     Set calendarSet;
     int fieldMask;
 
-    public FieldEnum(Set calendarSet, int fieldMask, TimeZone serverTZ) {
+    public FieldSet(Set calendarSet, int fieldMask, TimeZone serverTZ) {
       super(serverTZ);
       if (calendarSet==null) {
         throw new NullPointerException("CrawlWindows.FieldEnum with null set");
@@ -306,15 +302,15 @@ public class CrawlWindows {
 
   /**
    * The 'AND' operation window.  It takes a set of CrawlWindows, which can be
-   * empty (returns true).  Otherwise, it does an 'AND' operation on their
-   * 'canCrawl()' functions.
+   * empty (returns true).  Otherwise, it returns true iff all of their
+   * 'canCrawl()' functions return true.
    */
-  public static class AND implements CrawlWindow {
+  public static class And implements CrawlWindow {
     protected Set windows;
 
-    public AND(Set windowSet) {
+    public And(Set windowSet) {
       if (windowSet == null) {
-        throw new NullPointerException("CrawlWindows.AND with null set");
+        throw new NullPointerException("CrawlWindows.And with null set");
       }
       this.windows = SetUtil.immutableSetOfType(windowSet, CrawlWindow.class);
     }
@@ -323,32 +319,37 @@ public class CrawlWindows {
       return canCrawl(TimeBase.nowDate());
     }
 
-    public boolean canCrawl(Date serverDate) {
+    public boolean canCrawl(Date date) {
       for (Iterator iter = windows.iterator(); iter.hasNext(); ) {
         CrawlWindow cw = (CrawlWindow)iter.next();
-        if (!cw.canCrawl(serverDate)) {
+        if (!cw.canCrawl(date)) {
           return false;
         }
       }
       return true;
     }
 
+    public boolean crawlIsPossible() {
+      //XXX needs to check if the windows aren't exclusive
+      return true;
+    }
+
     public String toString() {
-      return "[CrawlWindows.AND: " + windows + "]";
+      return "[CrawlWindows.And: " + windows + "]";
     }
   }
 
   /**
    * The 'OR' operation window.  It takes a set of CrawlWindows, which can be
-   * empty (returns false).  Otherwise, it does an 'OR' operation on their
-   * 'canCrawl()' functions.
+   * empty (returns false).  Otherwise, it returns true if any of their
+   * 'canCrawl()' functions returns true.
    */
-  public static class OR implements CrawlWindow {
+  public static class Or implements CrawlWindow {
     protected Set windows;
 
-    public OR(Set windowSet) {
+    public Or(Set windowSet) {
       if (windowSet == null) {
-        throw new NullPointerException("CrawlWindows.OR with null set");
+        throw new NullPointerException("CrawlWindows.Or with null set");
       }
       this.windows = SetUtil.immutableSetOfType(windowSet, CrawlWindow.class);
     }
@@ -357,10 +358,21 @@ public class CrawlWindows {
       return canCrawl(TimeBase.nowDate());
     }
 
-    public boolean canCrawl(Date serverDate) {
+    public boolean canCrawl(Date date) {
       for (Iterator iter = windows.iterator(); iter.hasNext(); ) {
         CrawlWindow cw = (CrawlWindow)iter.next();
-        if (cw.canCrawl(serverDate)) {
+        if (cw.canCrawl(date)) {
+          return true;
+        }
+      }
+      return false;
+    }
+
+    public boolean crawlIsPossible() {
+      // crawl is possible if possible for any of the set
+      for (Iterator iter = windows.iterator(); iter.hasNext(); ) {
+        CrawlWindow cw = (CrawlWindow)iter.next();
+        if (cw.crawlIsPossible()) {
           return true;
         }
       }
@@ -368,20 +380,20 @@ public class CrawlWindows {
     }
 
     public String toString() {
-      return "[CrawlWindows.OR: " + windows + "]";
+      return "[CrawlWindows.Or: " + windows + "]";
     }
   }
 
   /**
-   * The 'NOT' operation window.  It takes a single CrawlWindow, and does a
-   * 'NOT' operation on its 'canCrawl()' function.
+   * The 'NOT' operation window.  It takes a single CrawlWindow, and returns
+   * the opposite of it's 'canCrawl()' function.
    */
-  public static class NOT implements CrawlWindow {
+  public static class Not implements CrawlWindow {
     CrawlWindow window;
 
-    public NOT(CrawlWindow window) {
+    public Not(CrawlWindow window) {
       if (window == null) {
-        throw new NullPointerException("CrawlWindows.NOT with null window");
+        throw new NullPointerException("CrawlWindows.Not with null window");
       }
       this.window = window;
     }
@@ -390,12 +402,27 @@ public class CrawlWindows {
       return canCrawl(TimeBase.nowDate());
     }
 
-    public boolean canCrawl(Date serverDate) {
-      return !window.canCrawl(serverDate);
+    public boolean canCrawl(Date date) {
+      return !window.canCrawl(date);
+    }
+
+    public boolean crawlIsPossible() {
+      //XXX needs to calculate if there are any forbidden times in the inner window
+      return true;
     }
 
     public String toString() {
-      return "[CrawlWindows.NOT: " + window + "]";
+      return "[CrawlWindows.Not: " + window + "]";
     }
+  }
+
+  /**
+   * Tests if a specific bit is set to 1.
+   * @param mask the mask int
+   * @param bit the bit to test
+   * @return true iff that bit is not zero.
+   */
+  public static boolean bitTest(int mask, int bit) {
+    return (mask & bit) != 0;
   }
 }

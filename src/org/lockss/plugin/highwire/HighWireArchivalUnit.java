@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireArchivalUnit.java,v 1.38 2003-11-07 04:12:00 clairegriffin Exp $
+ * $Id: HighWireArchivalUnit.java,v 1.39 2003-12-06 00:53:01 eaalto Exp $
  */
 
 /*
@@ -159,8 +159,7 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
     end.set(Calendar.HOUR_OF_DAY, 15);
     end.set(Calendar.MINUTE, 0);
 
-    return new CrawlWindows.Interval(start, end, CrawlWindows.Interval.TIME,
-                                     null);
+    return new CrawlWindows.Interval(start, end, CrawlWindows.TIME, null);
   }
 
   public int getVolumeNumber() {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlWindows.java,v 1.2 2003-10-24 07:40:25 eaalto Exp $
+ * $Id: TestCrawlWindows.java,v 1.3 2003-12-06 00:53:01 eaalto Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.daemon;
 import java.util.*;
 import org.lockss.util.SetUtil;
 import org.lockss.test.LockssTestCase;
+import org.lockss.test.MockCrawlWindow;
 
 /**
  * This is the test class for org.lockss.daemon.CrawlWindowRule.Window
@@ -52,26 +53,35 @@ public class TestCrawlWindows extends LockssTestCase {
     testCal = Calendar.getInstance();
   }
 
+  public void testDefaultTimeZone() {
+    CrawlWindows.BaseCrawlWindow interval =
+        new CrawlWindows.Interval(start, end, CrawlWindows.HOUR_OF_DAY, null);
+    assertEquals(TimeZone.getDefault().getID(), interval.timeZone.getID());
+  }
+
   public void testTimeZone() {
     TimeZone gmt = TimeZone.getTimeZone("GMT");
     start = Calendar.getInstance(gmt);
     start.set(Calendar.HOUR_OF_DAY, 7);
+    start.set(Calendar.MINUTE, 0);
     end = Calendar.getInstance(gmt);
     end.set(Calendar.HOUR_OF_DAY, 8);
+    // since the end point is non-inclusive, end a minute after the hour
+    end.set(Calendar.MINUTE, 1);
 
     // same time zone
-    CrawlWindow interval = new CrawlWindows.Interval(start, end,
-        CrawlWindows.Interval.HOUR_OF_DAY, gmt);
+    CrawlWindows.BaseCrawlWindow interval =
+        new CrawlWindows.Interval(start, end, CrawlWindows.TIME, gmt);
 
     testCal = Calendar.getInstance(gmt);
+    testCal.set(Calendar.MINUTE, 0);
     testCal.set(Calendar.HOUR_OF_DAY, 8);
     assertTrue(interval.canCrawl(testCal.getTime()));
     testCal.set(Calendar.HOUR_OF_DAY, 6);
     assertFalse(interval.canCrawl(testCal.getTime()));
 
     // different time zone
-    ((CrawlWindows.BaseCrawlWindow)interval).setServerTimeZone(
-        TimeZone.getTimeZone("GMT+1:00"));
+    interval.setWindowTimeZone(TimeZone.getTimeZone("GMT+1:00"));
     testCal.set(Calendar.HOUR_OF_DAY, 8);
     assertFalse(interval.canCrawl(testCal.getTime()));
     testCal.set(Calendar.HOUR_OF_DAY, 6);
@@ -80,109 +90,80 @@ public class TestCrawlWindows extends LockssTestCase {
 
   public void testANDSetNull() {
     try {
-      CrawlWindow cw = new CrawlWindows.AND(null);
+      CrawlWindow cw = new CrawlWindows.And(null);
       fail("CrawlWindows.AND with null list should throw");
     } catch (NullPointerException e) { }
-    CrawlWindow cw = new CrawlWindows.AND(Collections.EMPTY_SET);
+    CrawlWindow cw = new CrawlWindows.And(Collections.EMPTY_SET);
     assertTrue(cw.canCrawl(testCal.getTime()));
   }
 
   public void testORSetNull() {
     try {
-      CrawlWindow cw = new CrawlWindows.OR(null);
+      CrawlWindow cw = new CrawlWindows.Or(null);
       fail("CrawlWindows.OR with null list should throw");
     } catch (NullPointerException e) { }
-    CrawlWindow cw = new CrawlWindows.OR(Collections.EMPTY_SET);
+    CrawlWindow cw = new CrawlWindows.Or(Collections.EMPTY_SET);
     assertFalse(cw.canCrawl(testCal.getTime()));
   }
 
   public void testNOTNull() {
     try {
-      CrawlWindow cw = new CrawlWindows.NOT(null);
+      CrawlWindow cw = new CrawlWindows.Not(null);
       fail("CrawlWindows.NOT with null window should throw");
     } catch (NullPointerException e) { }
   }
 
   public void testWindowSetWrongClass() {
     try {
-      CrawlWindow cw = new CrawlWindows.AND(SetUtil.set("foo"));
+      CrawlWindow cw = new CrawlWindows.And(SetUtil.set("foo"));
       fail("CrawlWindows.WindowSet with list of non-CrawlWindows should throw");
     } catch (ClassCastException e) { }
   }
 
   public void testANDSet() {
-    start.set(Calendar.DAY_OF_WEEK, Calendar.WEDNESDAY);
-    end.set(Calendar.DAY_OF_WEEK, Calendar.FRIDAY);
-    CrawlWindows.Interval interval = new CrawlWindows.Interval(start, end,
-        CrawlWindows.Interval.DAY_OF_WEEK, null);
+    MockCrawlWindow win1 = new MockCrawlWindow();
+    win1.setAllowCrawl(false);
+    MockCrawlWindow win2 = new MockCrawlWindow();
+    win2.setAllowCrawl(false);
 
-    Calendar cal1 = Calendar.getInstance();
-    Calendar cal2 = Calendar.getInstance();
-    cal1.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
-    cal2.set(Calendar.DAY_OF_WEEK, Calendar.WEDNESDAY);
-    CrawlWindows.Interval interval2 = new CrawlWindows.Interval(cal1, cal2,
-        CrawlWindows.Interval.DAY_OF_WEEK, null);
-
-    Set s = SetUtil.set(interval, interval2);
-    CrawlWindow cw = new CrawlWindows.AND(s);
-
-    testCal.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
-    assertFalse(cw.canCrawl(testCal.getTime()));
-    testCal.set(Calendar.DAY_OF_WEEK, Calendar.THURSDAY);
-    assertFalse(cw.canCrawl(testCal.getTime()));
-
-    testCal.set(Calendar.DAY_OF_WEEK, Calendar.WEDNESDAY);
-    assertTrue(cw.canCrawl(testCal.getTime()));
-
-    testCal.set(Calendar.DAY_OF_WEEK, Calendar.SATURDAY);
-    assertFalse(cw.canCrawl(testCal.getTime()));
+    Set s = SetUtil.set(win1, win2);
+    CrawlWindow andWin = new CrawlWindows.And(s);
+    assertFalse(andWin.canCrawl(testCal.getTime()));
+    win1.setAllowCrawl(true);
+    assertFalse(andWin.canCrawl(testCal.getTime()));
+    win1.setAllowCrawl(false);
+    win2.setAllowCrawl(true);
+    assertFalse(andWin.canCrawl(testCal.getTime()));
+    win1.setAllowCrawl(true);
+    assertTrue(andWin.canCrawl(testCal.getTime()));
   }
 
   public void testORSet() {
-    start.set(Calendar.DAY_OF_WEEK, Calendar.WEDNESDAY);
-    end.set(Calendar.DAY_OF_WEEK, Calendar.FRIDAY);
-    CrawlWindows.Interval interval = new CrawlWindows.Interval(start, end,
-        CrawlWindows.Interval.DAY_OF_WEEK, null);
+    MockCrawlWindow win1 = new MockCrawlWindow();
+    win1.setAllowCrawl(false);
+    MockCrawlWindow win2 = new MockCrawlWindow();
+    win2.setAllowCrawl(false);
 
-    Calendar cal1 = Calendar.getInstance();
-    Calendar cal2 = Calendar.getInstance();
-    cal1.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
-    cal2.set(Calendar.DAY_OF_WEEK, Calendar.WEDNESDAY);
-    CrawlWindows.Interval interval2 = new CrawlWindows.Interval(cal1, cal2,
-        CrawlWindows.Interval.DAY_OF_WEEK, null);
-
-    Set s = SetUtil.set(interval, interval2);
-    CrawlWindow cw = new CrawlWindows.OR(s);
-
-    testCal.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
-    assertTrue(cw.canCrawl(testCal.getTime()));
-    testCal.set(Calendar.DAY_OF_WEEK, Calendar.THURSDAY);
-    assertTrue(cw.canCrawl(testCal.getTime()));
-
-    testCal.set(Calendar.DAY_OF_WEEK, Calendar.WEDNESDAY);
-    assertTrue(cw.canCrawl(testCal.getTime()));
-
-    testCal.set(Calendar.DAY_OF_WEEK, Calendar.SATURDAY);
-    assertFalse(cw.canCrawl(testCal.getTime()));
+    Set s = SetUtil.set(win1, win2);
+    CrawlWindow orWin = new CrawlWindows.Or(s);
+    assertFalse(orWin.canCrawl(testCal.getTime()));
+    win1.setAllowCrawl(true);
+    assertTrue(orWin.canCrawl(testCal.getTime()));
+    win1.setAllowCrawl(false);
+    win2.setAllowCrawl(true);
+    assertTrue(orWin.canCrawl(testCal.getTime()));
+    win1.setAllowCrawl(true);
+    assertTrue(orWin.canCrawl(testCal.getTime()));
   }
 
   public void testNOTWindow() {
-    start.set(Calendar.DAY_OF_WEEK, Calendar.WEDNESDAY);
-    end.set(Calendar.DAY_OF_WEEK, Calendar.FRIDAY);
-    CrawlWindows.Interval interval = new CrawlWindows.Interval(start, end,
-        CrawlWindows.Interval.DAY_OF_WEEK, null);
+    MockCrawlWindow win1 = new MockCrawlWindow();
+    win1.setAllowCrawl(false);
 
-    CrawlWindow cw = new CrawlWindows.NOT(interval);
-
-    testCal.set(Calendar.DAY_OF_WEEK, Calendar.WEDNESDAY);
-    assertFalse(cw.canCrawl(testCal.getTime()));
-    testCal.set(Calendar.DAY_OF_WEEK, Calendar.THURSDAY);
-    assertFalse(cw.canCrawl(testCal.getTime()));
-
-    testCal.set(Calendar.DAY_OF_WEEK, Calendar.SATURDAY);
-    assertTrue(cw.canCrawl(testCal.getTime()));
-    testCal.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
-    assertTrue(cw.canCrawl(testCal.getTime()));
+    CrawlWindow notWin = new CrawlWindows.Not(win1);
+    assertTrue(notWin.canCrawl(testCal.getTime()));
+    win1.setAllowCrawl(true);
+    assertFalse(notWin.canCrawl(testCal.getTime()));
   }
 
   public void testIntervalFieldStandard() {
@@ -191,7 +172,7 @@ public class TestCrawlWindows extends LockssTestCase {
     end.set(Calendar.DAY_OF_WEEK, Calendar.FRIDAY);
 
     CrawlWindows.Interval interval = new CrawlWindows.Interval(start, end,
-        CrawlWindows.Interval.DAY_OF_WEEK, null);
+        CrawlWindows.DAY_OF_WEEK, null);
 
     testCal.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
     assertFalse(interval.isMatch(testCal));
@@ -205,13 +186,13 @@ public class TestCrawlWindows extends LockssTestCase {
     assertFalse(interval.isMatch(testCal));
   }
 
-  public void testIntervalFieldInverse() {
+  public void testIntervalFieldWrapAround() {
     // invert interval
     // Fri->Tue
     start.set(Calendar.DAY_OF_WEEK, Calendar.FRIDAY);
     end.set(Calendar.DAY_OF_WEEK, Calendar.TUESDAY);
     CrawlWindows.Interval interval = new CrawlWindows.Interval(start, end,
-        CrawlWindows.Interval.DAY_OF_WEEK, null);
+        CrawlWindows.DAY_OF_WEEK, null);
 
     testCal.set(Calendar.DAY_OF_WEEK, Calendar.FRIDAY);
     assertTrue(interval.isMatch(testCal));
@@ -232,7 +213,7 @@ public class TestCrawlWindows extends LockssTestCase {
     end.set(Calendar.HOUR_OF_DAY, 15);
     end.set(Calendar.MINUTE, 45);
     CrawlWindows.Interval interval = new CrawlWindows.Interval(start, end,
-        CrawlWindows.Interval.TIME, null);
+        CrawlWindows.TIME, null);
 
     testCal.set(Calendar.HOUR_OF_DAY, 6);
     assertFalse(interval.isMatch(testCal));
@@ -257,7 +238,7 @@ public class TestCrawlWindows extends LockssTestCase {
     assertFalse(interval.isMatch(testCal));
   }
 
-  public void testIntervalTimeInverse() {
+  public void testIntervalTimeWrapAround() {
     // interval from 15:30->7:45
     start.set(Calendar.HOUR_OF_DAY, 15);
     start.set(Calendar.MINUTE, 30);
@@ -265,7 +246,7 @@ public class TestCrawlWindows extends LockssTestCase {
     end.set(Calendar.MINUTE, 45);
 
     CrawlWindows.Interval interval = new CrawlWindows.Interval(start, end,
-        CrawlWindows.Interval.TIME, null);
+        CrawlWindows.TIME, null);
 
     testCal.set(Calendar.HOUR_OF_DAY, 14);
     assertFalse(interval.isMatch(testCal));
@@ -300,7 +281,7 @@ public class TestCrawlWindows extends LockssTestCase {
     end.set(Calendar.WEEK_OF_MONTH, 1);
 
     CrawlWindows.Interval interval = new CrawlWindows.Interval(start, end,
-        CrawlWindows.Interval.WEEK_OF_MONTH + CrawlWindows.Interval.DAY_OF_WEEK,
+        CrawlWindows.WEEK_OF_MONTH + CrawlWindows.DAY_OF_WEEK,
         null);
 
     testCal.set(Calendar.WEEK_OF_MONTH, 1);
@@ -330,7 +311,7 @@ public class TestCrawlWindows extends LockssTestCase {
     end.set(Calendar.HOUR_OF_DAY, 15);
     end.set(Calendar.MINUTE, 0);
     CrawlWindows.Interval interval = new CrawlWindows.Interval(start, end,
-        CrawlWindows.Interval.TIME, null);
+        CrawlWindows.TIME, null);
 
     // interval from 7:30->15:45
     Calendar start2 = Calendar.getInstance();
@@ -338,11 +319,11 @@ public class TestCrawlWindows extends LockssTestCase {
     Calendar end2 = Calendar.getInstance();
     end2.set(Calendar.DAY_OF_MONTH, 5);
     CrawlWindows.Interval interval2 = new CrawlWindows.Interval(start2, end2,
-        CrawlWindows.Interval.DAY_OF_MONTH, null);
+        CrawlWindows.DAY_OF_MONTH, null);
 
     Set intSet = SetUtil.set(interval, interval2);
-    CrawlWindows.AND andPair = new CrawlWindows.AND(intSet);
-    CrawlWindows.OR orPair = new CrawlWindows.OR(intSet);
+    CrawlWindows.And andPair = new CrawlWindows.And(intSet);
+    CrawlWindows.Or orPair = new CrawlWindows.Or(intSet);
 
     // both true
     testCal.set(Calendar.HOUR_OF_DAY, 8);
@@ -375,9 +356,9 @@ public class TestCrawlWindows extends LockssTestCase {
     cal2.set(Calendar.DAY_OF_WEEK, Calendar.WEDNESDAY);
     cal3.set(Calendar.DAY_OF_WEEK, Calendar.FRIDAY);
 
-    CrawlWindows.FieldEnum fieldEnum =
-        new CrawlWindows.FieldEnum(SetUtil.set(cal1, cal2, cal3),
-                                   CrawlWindows.Interval.DAY_OF_WEEK, null);
+    CrawlWindows.FieldSet fieldEnum =
+        new CrawlWindows.FieldSet(SetUtil.set(cal1, cal2, cal3),
+                                   CrawlWindows.DAY_OF_WEEK, null);
     testCal.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
     assertTrue(fieldEnum.isMatch(testCal));
     testCal.set(Calendar.DAY_OF_WEEK, Calendar.TUESDAY);
@@ -399,10 +380,10 @@ public class TestCrawlWindows extends LockssTestCase {
     cal2.set(Calendar.DAY_OF_WEEK, Calendar.WEDNESDAY);
     cal2.set(Calendar.WEEK_OF_MONTH, 2);
 
-    CrawlWindows.FieldEnum fieldEnum =
-        new CrawlWindows.FieldEnum(SetUtil.set(cal1, cal2),
-                                   CrawlWindows.Interval.DAY_OF_WEEK +
-                                   CrawlWindows.Interval.WEEK_OF_MONTH, null);
+    CrawlWindows.FieldSet fieldEnum =
+        new CrawlWindows.FieldSet(SetUtil.set(cal1, cal2),
+                                   CrawlWindows.DAY_OF_WEEK +
+                                   CrawlWindows.WEEK_OF_MONTH, null);
 
     testCal.set(Calendar.WEEK_OF_MONTH, 1);
     testCal.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
