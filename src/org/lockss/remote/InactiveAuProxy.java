@@ -1,5 +1,5 @@
 /*
- * $Id: InactiveAuProxy.java,v 1.1 2004-01-08 22:42:35 tlipkis Exp $
+ * $Id: InactiveAuProxy.java,v 1.2 2004-01-12 06:19:51 tlipkis Exp $
  */
 
 /*
@@ -74,8 +74,7 @@ public class InactiveAuProxy extends AuProxy {
    * @return the plugin
    */
   public PluginProxy getPlugin() {
-    RemoteApi rmt = getRemoteApi();
-    return rmt.findPluginProxy(rmt.pluginIdFromAuId(getAuId()));
+    return getRemoteApi().findPluginProxy(getPluginId());
   }
 
   /**
@@ -83,8 +82,7 @@ public class InactiveAuProxy extends AuProxy {
    * @return the plugin's ID
    */
   public String getPluginId() {
-    PluginProxy pluginp = getPlugin();
-    return pluginp.getPluginId();
+    return getRemoteApi().pluginIdFromAuId(getAuId());
   }
 
   /**
