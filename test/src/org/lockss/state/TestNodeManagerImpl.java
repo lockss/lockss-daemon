@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.26 2003-02-24 22:13:42 claire Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.27 2003-02-25 22:07:33 troberts Exp $
  */
 
 /*
@@ -561,18 +561,18 @@ public class TestNodeManagerImpl
         subBranches.add(subMcus);
         subMcus.addUrl("test string" + ix, f_url);
         subMcus.setFlatItSource(new ArrayList());
-        subMcus.setLeafItSource(new ArrayList());
+        subMcus.setTreeItSource(new ArrayList());
       }
       mcus.addUrl("test string" + ib, b_url);
       mcus.setFlatItSource(subBranches);
-      mcus.setLeafItSource(subFiles);
+      mcus.setTreeItSource(subFiles);
       branches.add(mcus);
     }
     MockCachedUrlSet cus = new MockCachedUrlSet(mau,
                                                 new RangeCachedUrlSetSpec(
         startUrl));
     cus.addUrl("test string", startUrl);
-    cus.setLeafItSource(files);
+    cus.setTreeItSource(files);
     cus.setFlatItSource(branches);
     return cus;
   }
