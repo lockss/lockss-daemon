@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.35 2004-04-19 03:15:04 tlipkis Exp $
+ * $Id: TestStringUtil.java,v 1.36 2004-04-27 19:40:58 tlipkis Exp $
  */
 
 /*
@@ -148,8 +148,9 @@ public class TestStringUtil extends LockssTestCase {
 
   public void testReplaceStringNonExistingSubstring(){
     String testStr = "blahTestblah";
-    assertEquals(testStr, StringUtil.replaceString(testStr, "!", "8"));
-    assertEquals(testStr, StringUtil.replaceString(testStr, "lah1", "8"));
+    // if no substitutions are made, original string should be returned
+    assertSame(testStr, StringUtil.replaceString(testStr, "!", "8"));
+    assertSame(testStr, StringUtil.replaceString(testStr, "lah1", "8"));
   }
 
   public void testReplaceStringSingleExistingSubstring(){
@@ -190,7 +191,7 @@ public class TestStringUtil extends LockssTestCase {
     assertEquals("aabb", StringUtil.replaceFirst("aadd", "dd", "bb"));
     assertEquals("aabbccdd", StringUtil.replaceFirst("aaddccdd", "dd", "bb"));
     assertEquals("aabbddcc", StringUtil.replaceFirst("aaddddcc", "dd", "bb"));
-    assertEquals("aabbcc", StringUtil.replaceFirst("aabbcc", "dd", "bb"));
+    assertSame("aabbcc", StringUtil.replaceFirst("aabbcc", "dd", "bb"));
 
     String s = "foo";
     assertSame(s, StringUtil.replaceFirst(s, "123", "123"));
