@@ -1,5 +1,5 @@
 /*
-* $Id: V1Poll.java,v 1.22 2004-12-07 08:44:55 tlipkis Exp $
+* $Id: V1Poll.java,v 1.23 2004-12-08 00:52:33 tlipkis Exp $
  */
 
 /*
@@ -264,7 +264,8 @@ public abstract class V1Poll extends BasePoll {
    * agreement and reputation of the voter.
    * @param vote the Vote to check
    * @param isAgreeVote true if this vote agreed with ours, false otherwise
-   * @return true if we should called a verify poll
+   * @return the probability (0.0 <= x <= 1.0) that we should call a verify
+   * poll
    */
   double calcVerifyProb(Vote vote, boolean isAgreeVote) {
     PeerIdentity id = vote.getVoterIdentity();
