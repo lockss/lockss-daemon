@@ -1,5 +1,5 @@
 /*
- * $Id: BatchAuConfig.java,v 1.2 2005-01-05 09:47:40 tlipkis Exp $
+ * $Id: BatchAuConfig.java,v 1.3 2005-01-07 09:23:27 tlipkis Exp $
  */
 
 /*
@@ -59,8 +59,9 @@ public class BatchAuConfig extends LockssServlet {
     Configuration.PREFIX + "auconfig.includePluginInTitleSelect";
   static final boolean DEFAULT_INCLUDE_PLUGIN_IN_TITLE_SELECT = false;
 
-  static final String FOOT_REPOSITORY =
-    "Local disk on which AU will be stored";
+  static final String FOOT_REPO_CHOICE =
+    "If only one choice is shown for an AU, the contents of that AU " +
+    "already exist in the selected repository.";
 
   static Logger log = Logger.getLogger("BatchAuConfig");
 
@@ -79,6 +80,7 @@ public class BatchAuConfig extends LockssServlet {
   static final String ACTION_REMOVE_AUS = "DoRemoveAus";
 
   static final String KEY_VERB = "Verb";
+  static final String KEY_DEFAULT_REPO = "DefaultRepository";
   static final String KEY_REPO = "Repository";
   static final String KEY_TITLE_SET = "TitleSetId";
   static final String KEY_AUID = "auid";
@@ -287,6 +289,10 @@ public class BatchAuConfig extends LockssServlet {
     }
     expl += ". Then click " + buttonText + ".";
     page.add(getExplanationBlock(expl));
+    Form frm = new Form(srvURL(myServletDescr(), null));
+    frm.method("POST");
+    frm.add(new Input(Input.Hidden, ACTION_TAG));
+    frm.add(new Input(Input.Hidden, KEY_VERB, verb.valStr));
     if (repoFlg) {
       OrderedMap repoChoices = new LinkedMap();
       for (Iterator iter = repos.iterator(); iter.hasNext(); ) {
@@ -294,13 +300,9 @@ public class BatchAuConfig extends LockssServlet {
 	PlatformInfo.DF df = remoteApi.getRepositoryDF(repo);
 	repoChoices.put(repo, df);
       }
-      page.add(getRepoKeyTable(repoChoices));
+      frm.add(getRepoKeyTable(repoChoices));
       session.setAttribute(SESSION_KEY_REPO_MAP, repoChoices);
     }
-    Form frm = new Form(srvURL(myServletDescr(), null));
-    frm.method("POST");
-    frm.add(new Input(Input.Hidden, ACTION_TAG));
-    frm.add(new Input(Input.Hidden, KEY_VERB, verb.valStr));
     frm.add(getSelectAllButtons());
     frm.add(getSelectActionButton(buttonText));
     frm.add(getSelectAusTable(bas, repos, auConfs));
@@ -346,18 +348,21 @@ public class BatchAuConfig extends LockssServlet {
     tbl.addHeading(verb.cap + "?", "align=center rowSpan=2");
     boolean repoFlg = verb.isAdd && repos.size() > 1;
     int reposSize = repoFlg ? repos.size() : 0;
+    Block repoFootElement = null; 
     if (repoFlg) {
       tbl.addHeading("Repo ID", "align=center colspan=" + reposSize);
+      repoFootElement = tbl.cell(); 
     }
     tbl.addHeading("Archival Unit", "align=center rowSpan=2");
     boolean isAdd = verb.isAdd;
     if (isAdd) {
-      tbl.addHeading("Est. size", "align=center rowSpan=2");
+      tbl.addHeading("Est. size (MB)", "align=center rowSpan=2");
     }
     tbl.newRow();
     for (int ix = 0; ix < reposSize; ix++) {
       tbl.addHeading(Integer.toString(ix+1), "align=center");
     }
+    boolean isAnyAssignedRepo = false;
     for (Iterator iter = bas.getStatusList().iterator(); iter.hasNext(); ) {
       RemoteApi.BatchAuStatus.Entry rs =
 	(RemoteApi.BatchAuStatus.Entry)iter.next();
@@ -370,16 +375,18 @@ public class BatchAuConfig extends LockssServlet {
 	if (repoFlg) {
 	  java.util.List existingRepoNames = rs.getRepoNames();
 	  log.debug("existingRepoNames: " + existingRepoNames + ", " + auid);
-	  String firstRepo =
-	    (existingRepoNames == null || existingRepoNames.isEmpty())
-	    ? null : (String)existingRepoNames.get(0);
+	  String firstRepo = null;
+	  if (existingRepoNames != null && !existingRepoNames.isEmpty()) {
+	    firstRepo = (String)existingRepoNames.get(0);
+	    isAnyAssignedRepo = true;
+	  }
 	  int ix = 1;
 	  for (Iterator riter = repos.iterator(); riter.hasNext(); ix++) {
 	    String repo = (String)riter.next();
 	    tbl.newCell("align=center");
 	    if (firstRepo == null) {
 	      tbl.add(radioButton(null, Integer.toString(ix),
-				  KEY_REPO + "_" + auid, ix == 1));
+				  KEY_REPO + "_" + auid, false));
 	    } else if (repo.equals(firstRepo)) {
 	      tbl.add(radioButton(null, Integer.toString(ix),
 				  KEY_REPO + "_" + auid, true));
@@ -395,9 +402,13 @@ public class BatchAuConfig extends LockssServlet {
 	long est;
 	if (isAdd && tc != null && (est = tc.getEstimatedSize()) != 0) {
 	  tbl.newCell("align=right");
-	  tbl.add(StringUtil.sizeToString(est));
+	  long mb = (est + (512 * 1024)) / (1024 * 1024);
+	  tbl.add(Long.toString(Math.max(mb, 1)));
 	}
       }
+    }
+    if (repoFootElement != null && isAnyAssignedRepo) {
+      repoFootElement.add(addFootnote(FOOT_REPO_CHOICE));
     }
     return tbl;
   }
@@ -431,8 +442,11 @@ public class BatchAuConfig extends LockssServlet {
   Table getRepoKeyTable(OrderedMap repoMap) {
     Table tbl = new Table(0, "align=center cellspacing=4 cellpadding=0");
     tbl.newRow();
-    tbl.addHeading("Repo ID");
-    tbl.addHeading("Repository Path");
+    tbl.addHeading("Available Repositories", "colspan=6");
+    tbl.newRow();
+    tbl.addHeading("Default" + addFootnote("For AUs not explicitly assigned a repository"));
+    tbl.addHeading("ID");
+    tbl.addHeading("Location");
     tbl.addHeading("Size");
     tbl.addHeading("Free");
     tbl.addHeading("%Full");
@@ -440,7 +454,10 @@ public class BatchAuConfig extends LockssServlet {
     for (Iterator iter = repoMap.keySet().iterator(); iter.hasNext(); ix++) {
       String repo = (String)iter.next();
       PlatformInfo.DF df = (PlatformInfo.DF)repoMap.get(repo);
-      tbl.newRow();
+      tbl.newRow("align=center");
+      tbl.newCell("align=center");
+      tbl.add(radioButton(null, Integer.toString(ix),
+			  KEY_DEFAULT_REPO, ix == 1));
       tbl.newCell("align=right");
       tbl.add(ix + ".&nbsp;");
       tbl.newCell("align=left");
@@ -486,24 +503,37 @@ public class BatchAuConfig extends LockssServlet {
   }
       
   private void doAddAus() throws IOException {
-    String[] auids = req.getParameterValues(KEY_AUID);
-    if (auids == null || auids.length == 0) {
-      errMsg = "No AUs were selected";
-      displayMenu();
-      return;
-    }
     HttpSession session = req.getSession(false);
     if (session == null) {
       errMsg = "Please enable cookies";
       displayMenu();
       return;
     }
+    LinkedMap repoMap = (LinkedMap)session.getAttribute(SESSION_KEY_REPO_MAP);
+    String[] auids = req.getParameterValues(KEY_AUID);
+    String defaultRepo = null;
+    String defRepoId = getParameter(KEY_DEFAULT_REPO);
+    if (!StringUtil.isNullString(defRepoId)) {
+      try {
+	int n = Integer.parseInt(defRepoId);
+	defaultRepo = (String)repoMap.get(n - 1);
+      } catch (NumberFormatException e) {
+	log.warning("Illegal default repoId: " + defRepoId, e);
+      } catch (IndexOutOfBoundsException e) {
+	log.warning("Illegal default repoId: " + defRepoId, e);
+      }
+    }
+    if (auids == null || auids.length == 0) {
+      errMsg = "No AUs were selected";
+      displayMenu();
+      return;
+    }
     Configuration createConfig = ConfigManager.newConfiguration(); 
     Map auConfs = (Map)session.getAttribute(SESSION_KEY_AUID_MAP);
-    LinkedMap repoMap = (LinkedMap)session.getAttribute(SESSION_KEY_REPO_MAP);
     for (int ix = 0; ix < auids.length; ix++) {
       String auid = auids[ix];
       Configuration tcConfig = (Configuration)auConfs.get(auid);
+      tcConfig.remove(PluginManager.AU_PARAM_REPOSITORY);
       String repoId = getParameter(KEY_REPO + "_" + auid);
       if (!StringUtil.isNullString(repoId)) {
 	try {
@@ -517,6 +547,10 @@ public class BatchAuConfig extends LockssServlet {
 	} catch (IndexOutOfBoundsException e) {
 	  log.warning("Illegal repoId: " + repoId, e);
 	}
+      }
+      if (defaultRepo != null &&
+	  !tcConfig.containsKey(PluginManager.AU_PARAM_REPOSITORY)) {
+	tcConfig.put(PluginManager.AU_PARAM_REPOSITORY, defaultRepo);
       }
       String prefix = PluginManager.PARAM_AU_TREE + "." +
 	PluginManager.configKeyFromAuId(auid);
