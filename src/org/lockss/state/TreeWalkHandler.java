@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkHandler.java,v 1.39 2003-09-26 23:50:39 eaalto Exp $
+ * $Id: TreeWalkHandler.java,v 1.40 2003-11-13 07:43:04 eaalto Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import org.lockss.daemon.*;
 import org.lockss.crawler.CrawlManager;
 import org.lockss.poller.PollSpec;
 import org.lockss.app.LockssDaemon;
+import org.lockss.scheduler.*;
 
 /**
  * The treewalk thread handler in the NodeManager.  This starts a thread which
@@ -325,48 +326,104 @@ public class TreeWalkHandler {
     boolean randomDelay = true;
     Deadline deadline;
     private static final long SMALL_SLEEP = Constants.SECOND;
+    private static final double TREEWALK_LOAD_FACTOR = .90;
+    private static final long DEFAULT_TREEWALK_LENGTH = 3 * Constants.MINUTE;
+    static final long SCHEDULING_PAD_VALUE = 5 * Constants.SECOND;
+    private BinarySemaphore treeWalkSemaphore = new BinarySemaphore();
 
     public TreeWalkThread() {
-      super("TreeWalk: "+theAu.getName());
+      super("TreeWalk: " + theAu.getName());
     }
 
     public void run() {
       while (goOn) {
         long timeToStart = timeUntilTreeWalkStart();
-        if (timeToStart <= 0) {
-          if (randomDelay) {
-            // only random delay the first time, to allow better test communication
-            long delta = (long) ( (double) MAX_DEVIATION * startDelay);
-            deadline = Deadline.inRandomRange(startDelay, startDelay + delta);
-            logger.debug3("Random sleep for "+
-                          StringUtil.timeIntervalToString(
-                deadline.getRemainingTime()));
-            try {
-              deadline.sleep();
-            } catch (InterruptedException ie) { }
-            randomDelay = false;
-          } else if (!theDaemon.isDaemonRunning()) {
-            // if the daemon isn't up yet, do a short sleep
-            logger.debug2("Daemon not running yet. Sleeping...");
-            deadline = Deadline.in(SMALL_SLEEP);
-            try {
-              deadline.sleep();
-            } catch (InterruptedException ie) { }
-          } else {
-            doingTreeWalk = true;
-            doTreeWalk();
-            doingTreeWalk = false;
-          }
-        } else {
-          long delta = (long) ( (double) MAX_DEVIATION * timeToStart);
-          logger.debug3("Creating a deadline for " +
-                        StringUtil.timeIntervalToString(timeToStart) +
-                        " with delta of " +
-                        StringUtil.timeIntervalToString(delta));
-          deadline = Deadline.inRandomRange(timeToStart, timeToStart + delta);
+        if (randomDelay) {
+          // only random delay the first time, to allow better test communication
+          long delta = (long) ( (double) MAX_DEVIATION * startDelay);
+          deadline = Deadline.inRandomRange(startDelay, startDelay + delta);
+          logger.debug3("Random sleep for " +
+                        StringUtil.timeIntervalToString(
+              deadline.getRemainingTime()));
           try {
             deadline.sleep();
           } catch (InterruptedException ie) { }
+          randomDelay = false;
+        } else if (!theDaemon.isDaemonRunning()) {
+          // if the daemon isn't up yet, do a short sleep
+          logger.debug2("Daemon not running yet. Sleeping...");
+          deadline = Deadline.in(SMALL_SLEEP);
+          try {
+            deadline.sleep();
+          } catch (InterruptedException ie) { }
+        } else {
+          // default 'start now'
+          long start = TimeBase.nowMs() + SCHEDULING_PAD_VALUE;
+          // if starting in the future, create a randomized value
+          if (timeToStart > SCHEDULING_PAD_VALUE) {
+            long delta = (long) ( (double) MAX_DEVIATION * timeToStart);
+            logger.debug3("Creating a deadline for " +
+                          StringUtil.timeIntervalToString(timeToStart) +
+                          " with delta of " +
+                          StringUtil.timeIntervalToString(delta));
+            deadline = Deadline.inRandomRange(timeToStart,
+                                              timeToStart + delta);
+            start = deadline.getExpirationTime();
+          }
+
+          long est = getAverageTreeWalkDuration();
+          if (est<=0) {
+            est = DEFAULT_TREEWALK_LENGTH;
+          }
+          long end = start + est;
+
+          logger.debug2("Scheduling of treewalk...");
+          SchedService schedSvc = theDaemon.getSchedService();
+          TaskCallback cb = new TreeWalkTaskCallback();
+          BackgroundTask task;
+
+          // loop trying to find a time
+          while (true) {
+            Deadline startDeadline = Deadline.at(start);
+            if (logger.isDebug3()) {
+              logger.debug3("Trying to schedule for " +
+                            startDeadline.toString());
+              logger.debug3("Using estimate of " + est + "ms.");
+            }
+            task = new BackgroundTask(startDeadline, Deadline.at(end),
+                                      TREEWALK_LOAD_FACTOR, cb);
+            if (schedSvc.scheduleTask(task)) {
+              // task is scheduled, your taskEvent callback will be called at the
+              // start and end times
+              logger.debug2("Scheduled successfully for " +
+                            startDeadline.toString());
+              break;
+            } else {
+              // can't fit into existing schedule.  try another hour in the future
+              start += DEFAULT_TREEWALK_LENGTH;
+              end = start + est;
+              logger.debug3("Schedule failed.  Trying new time.");
+            }
+          }
+
+          doingTreeWalk = true;
+          // wait on the semaphore (the callback will 'give()')
+          try {
+            treeWalkSemaphore.take(Deadline.at(end));
+          } catch (InterruptedException ie) {
+            logger.error("TreeWalkThread semaphore was interrupted:" + ie);
+            continue;
+          }
+
+          doTreeWalk();
+
+          // if background activity finishes before end time, call
+          if (!Deadline.at(end).expired()) {
+            logger.debug3("Ending task early...");
+            task.taskIsFinished();
+          }
+
+          doingTreeWalk = false;
         }
       }
     }
@@ -380,6 +437,30 @@ public class TreeWalkHandler {
       treeWalkAborted = true;
       if (deadline != null) {
         deadline.expire();
+      }
+    }
+
+    private class TreeWalkTaskCallback implements TaskCallback {
+      public void taskEvent(SchedulableTask task, Schedule.EventType event)
+          throws Abort {
+        if (event == Schedule.EventType.START) {
+          if (doingTreeWalk) {
+            // start background activity, not in this thread.
+            logger.debug3("Giving semaphore...");
+            treeWalkSemaphore.give();
+          } else {
+            throw new TaskCallback.Abort();
+          }
+        } else if (event == Schedule.EventType.FINISH) {
+          // must stop background activity if it's still running
+          logger.debug3("Task finished.");
+          // abort current treewalk, but don't stop the thread
+          if (doingTreeWalk) {
+            // free the lock
+            activityLock.expire();
+          }
+          treeWalkAborted = true;
+        }
       }
     }
   }
