@@ -1,5 +1,5 @@
 /*
- * $Id: ActivityRegulator.java,v 1.6 2003-04-16 23:50:25 aalto Exp $
+ * $Id: ActivityRegulator.java,v 1.7 2003-04-16 23:59:44 aalto Exp $
  */
 
 /*
@@ -290,10 +290,14 @@ public class ActivityRegulator extends BaseLockssManager {
   static boolean isAllowedOnAu(int newActivity, int auActivity) {
     switch (auActivity) {
       case NEW_CONTENT_CRAWL:
-      case TOP_LEVEL_POLL:
       case TREEWALK:
         // no new activity allowed
         return false;
+      case TOP_LEVEL_POLL:
+        // allow other polls to be called
+        // poll manager will disallow inappropriate ones
+        return ((newActivity==TOP_LEVEL_POLL) ||
+                (newActivity==STANDARD_CONTENT_POLL));
       case CUS_ACTIVITY:
         // only other CUS activity is allowed while CUS activity is going on
         return (isCusActivity(newActivity));

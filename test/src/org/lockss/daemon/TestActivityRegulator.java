@@ -1,5 +1,5 @@
 /*
- * $Id: TestActivityRegulator.java,v 1.4 2003-04-16 05:52:39 aalto Exp $
+ * $Id: TestActivityRegulator.java,v 1.5 2003-04-16 23:59:44 aalto Exp $
  */
 
 /*
@@ -228,8 +228,14 @@ public class TestActivityRegulator extends LockssTestCase {
   public void testIsAllowedOnAu() {
     // nothing allowed on these
     assertFalse(allower.isAllowedOnAu(allower.NO_ACTIVITY, allower.NEW_CONTENT_CRAWL));
-    assertFalse(allower.isAllowedOnAu(allower.NO_ACTIVITY, allower.TOP_LEVEL_POLL));
     assertFalse(allower.isAllowedOnAu(allower.NO_ACTIVITY, allower.TREEWALK));
+
+    // only other polls are allowed, but not standard name polls
+    assertFalse(allower.isAllowedOnAu(allower.NO_ACTIVITY, allower.TOP_LEVEL_POLL));
+    assertFalse(allower.isAllowedOnAu(allower.STANDARD_NAME_POLL, allower.TOP_LEVEL_POLL));
+    assertTrue(allower.isAllowedOnAu(allower.TOP_LEVEL_POLL, allower.TOP_LEVEL_POLL));
+    assertTrue(allower.isAllowedOnAu(allower.STANDARD_CONTENT_POLL, allower.TOP_LEVEL_POLL));
+
 
     // only CUS activity allowed on CUS_ACTIVITY
     assertTrue(allower.isAllowedOnAu(allower.BACKGROUND_CRAWL, allower.CUS_ACTIVITY));
