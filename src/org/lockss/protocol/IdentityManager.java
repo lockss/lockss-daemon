@@ -1,5 +1,5 @@
 /*
-* $Id: IdentityManager.java,v 1.24 2003-04-03 11:34:10 tal Exp $
+* $Id: IdentityManager.java,v 1.25 2003-04-05 00:57:15 tal Exp $
  */
 
 /*
@@ -460,7 +460,7 @@ public class IdentityManager extends BaseLockssManager {
       if (isLocalIdentity(ip)) {
 	StatusTable.DisplayedValue val =
 	  new StatusTable.DisplayedValue(ip);
-	val.setColor("green");
+	val.setBold(true);
 	obj = val;
       }
       row.put("ip", obj);
