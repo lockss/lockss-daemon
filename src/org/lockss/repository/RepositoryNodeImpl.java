@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.37 2003-10-06 23:31:33 eaalto Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.37.2.1 2003-10-13 22:22:47 eaalto Exp $
  */
 
 /*
@@ -437,20 +437,21 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
     if (isInactive()) {
       int lastVersion = determineLastActiveVersion();
-      File inactiveCacheFile = getInactiveCacheFile();
-      File inactivePropsFile = getInactivePropsFile();
+      if (lastVersion > 0) {
+        File inactiveCacheFile = getInactiveCacheFile();
+        File inactivePropsFile = getInactivePropsFile();
 
-      if (!inactiveCacheFile.renameTo(currentCacheFile) ||
-          !inactivePropsFile.renameTo(currentPropsFile)) {
-        logger.error("Couldn't rename inactive versions: "+url);
-        throw new LockssRepository.RepositoryStateException("Couldn't rename inactive versions.");
+        if (!inactiveCacheFile.renameTo(currentCacheFile) ||
+            !inactivePropsFile.renameTo(currentPropsFile)) {
+          logger.error("Couldn't rename inactive versions: "+url);
+          throw new LockssRepository.RepositoryStateException("Couldn't rename inactive versions.");
+        }
+        currentVersion = lastVersion;
+
+        // store the deletion value
+        nodeProps.setProperty(INACTIVE_CONTENT_PROPERTY, "false");
+        writeNodeProperties();
       }
-      currentVersion = lastVersion;
-
-      // store the deletion value
-      nodeProps.setProperty(INACTIVE_CONTENT_PROPERTY, "false");
-      writeNodeProperties();
-
       return;
     }
     if ((!hasContent()) || (getCurrentVersion() == 1)) {
@@ -647,6 +648,15 @@ public class RepositoryNodeImpl implements RepositoryNode {
   }
 
   private void writeNodeProperties() {
+    if (currentVersion == 0) {
+      if (!cacheLocationFile.exists()) {
+        if (!cacheLocationFile.mkdirs()) {
+          logger.error("Couldn't create cache directory for '"+
+                       cacheLocationFile.getAbsolutePath()+"'");
+          throw new LockssRepository.RepositoryStateException("Couldn't create cache directory.");
+        }
+      }
+    }
     try {
       OutputStream os = new BufferedOutputStream(new FileOutputStream(nodePropsFile));
       nodeProps.store(os, "Node properties");
