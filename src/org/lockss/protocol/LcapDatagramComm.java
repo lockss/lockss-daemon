@@ -1,5 +1,5 @@
 /*
- * $Id: LcapDatagramComm.java,v 1.7 2005-02-16 00:41:20 tlipkis Exp $
+ * $Id: LcapDatagramComm.java,v 1.7.2.1 2005-03-14 23:32:12 tlipkis Exp $
  */
 
 /*
@@ -491,15 +491,21 @@ public class LcapDatagramComm
     }
   }
 
-  private void runHandlers(LockssReceivedDatagram ld) throws ProtocolException {
-    int proto = ld.getProtocol();
-    MessageHandler handler;
-    if (proto < messageHandlers.size() &&
-	(handler = (MessageHandler)messageHandlers.get(proto)) != null) {
-      runHandler(handler, ld);
-    } else {
-      log.warning("Received message with unregistered protocol: " + proto +
-		  " from " + ld.getSender());
+  private void runHandlers(LockssReceivedDatagram ld)
+      throws ProtocolException {
+    try {
+      int proto = ld.getProtocol();
+      MessageHandler handler;
+      if (proto >= 0 && proto < messageHandlers.size() &&
+	  (handler = (MessageHandler)messageHandlers.get(proto)) != null) {
+	runHandler(handler, ld);
+      } else {
+	log.warning("Received message with unregistered protocol: " + proto +
+		    " from " + ld.getSender());
+      }
+    } catch (RuntimeException e) {
+      log.warning("Unexpected error in runHandlers", e);
+      throw new ProtocolException(e.toString());
     }
   }
 
