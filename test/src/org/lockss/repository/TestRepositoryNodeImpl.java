@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.29 2003-09-16 23:48:24 eaalto Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.30 2003-10-13 22:15:16 eaalto Exp $
  */
 
 /*
@@ -692,6 +692,19 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
       };
     assertIsomorphic("Including inactive nodes failed.", expectedA, childL);
   }
+
+  public void testDeleteInnerNode() throws Exception {
+    createLeaf("http://www.example.com/testDir/test1", "test stream", null);
+    createLeaf("http://www.example.com/testDir/test2", "test stream", null);
+
+    RepositoryNode dirEntry = repo.getNode("http://www.example.com/testDir");
+    assertFalse(dirEntry.isDeleted());
+    dirEntry.markAsDeleted();
+    assertTrue(dirEntry.isDeleted());
+    dirEntry.markAsNotDeleted();
+    assertFalse(dirEntry.isDeleted());
+  }
+
 
   public void testGetFileStrings() throws Exception {
     RepositoryNodeImpl node = (RepositoryNodeImpl) repo.createNewNode(
