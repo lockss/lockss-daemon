@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.37 2003-04-10 21:53:59 tal Exp $
+ $Id: build.xml,v 1.38 2003-04-21 05:36:23 tal Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
@@ -261,6 +261,7 @@ Args:
     <copy todir="${classes}" >
        <fileset dir="${src}" >
           <include name="**/*.xml"/>
+          <include name="**/*.props"/>
           <include name="**/*.gif"/>  <!-- should be more selective.  now -->
           <include name="**/*.html"/>  <!-- gets files in gimp-created dirs -->
        </fileset>
