@@ -106,7 +106,7 @@ public class TestPoll extends TestCase {
 
     // good vote check
     try {
-      p.checkVote(msg.getHashed(), msg);
+      p.checkVote(msg.getHashed(), new Vote(msg, false));
     }
     catch(IllegalStateException ex) {
       // unitialized comm
@@ -119,7 +119,7 @@ public class TestPoll extends TestCase {
     rep = id.getReputation();
     // bad vote check
     try {
-      p.checkVote(pollmanager.generateRandomBytes(), msg);
+      p.checkVote(pollmanager.generateRandomBytes(), new Vote(msg, false));
     }
     catch(IllegalStateException ex) {
       // unitialized comm
@@ -205,11 +205,11 @@ public class TestPoll extends TestCase {
     assertTrue(p.m_pollstate == Poll.PS_COMPLETE);
   }
 
-  /** test for method startVote(..) */
+  /** test for method startVoteCheck(..) */
   public void testStartVote() {
     Poll p = testpolls[0];
     p.m_pendingVotes = 3;
-    p.startVote();
+    p.startVoteCheck();
     assertEquals(4, p.m_pendingVotes);
   }
 
@@ -217,7 +217,7 @@ public class TestPoll extends TestCase {
   public void testStopVote() {
     Poll p = testpolls[1];
     p.m_pendingVotes = 3;
-    p.stopVote();
+    p.stopVoteCheck();
     assertEquals(2,p.m_pendingVotes);
   }
 
