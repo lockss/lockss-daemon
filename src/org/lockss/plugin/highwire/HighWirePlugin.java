@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePlugin.java,v 1.1 2002-08-02 19:28:41 tal Exp $
+ * $Id: HighWirePlugin.java,v 1.2 2002-08-08 23:42:41 troberts Exp $
  */
 
 /*
@@ -54,6 +54,7 @@ import org.lockss.daemon.CachedUrlSet;
 import org.lockss.daemon.CachedUrlSetHasher;
 import org.lockss.daemon.CachedUrlSetSpec;
 import org.lockss.crawler.Crawler;
+import org.lockss.util.*;
 import org.lockss.plugin.*;
 
 /**
@@ -72,9 +73,11 @@ public class HighWirePlugin implements CachedUrlSet{
   private String urlRoot; //url root for the web page, eg. http://www.bmj.org
   private int volume;  //volume that this plugin is for
   private Vector rules;
+  protected Logger logger;
 
   private HighWirePlugin(){
     urls = new Vector();
+    logger = Logger.getLogger("HighWirePlugin");
   }
 
   /**

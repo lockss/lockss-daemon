@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireCachedUrl.java,v 1.1 2002-08-02 19:28:41 tal Exp $
+ * $Id: HighWireCachedUrl.java,v 1.2 2002-08-08 23:42:41 troberts Exp $
  */
 
 /*
@@ -44,6 +44,7 @@ import java.net.URLConnection;
 import java.util.Enumeration;
 import java.util.Properties;
 import org.lockss.daemon.CachedUrl;
+import org.lockss.util.*;
 import org.lockss.plugin.*;
 
 /**
@@ -77,7 +78,9 @@ public class HighWireCachedUrl implements CachedUrl{
   }
 
   public boolean shouldBeCached(){
-    System.err.println("checking: "+url);
+    
+    plugin.logger.info("checking: "+url);
+    //System.err.println("checking: "+url);
     if (url.indexOf(plugin.getUrlRoot()) != 0){ //XXX put me in the rules
       //make sure we stay on the site.
       return false;

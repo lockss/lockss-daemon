@@ -14,7 +14,9 @@ import java.net.MalformedURLException;
 import org.lockss.daemon.CachedUrl;
 import org.lockss.daemon.CachedUrlSet;
 import org.lockss.daemon.CachedUrlSetSpec;
-import org.lockss.util.StringUtils;;
+import org.lockss.util.StringUtils;
+import org.lockss.util.Logger;
+
 
 /*
 
@@ -74,6 +76,8 @@ public class Crawler{
   private static final String tdtag = "tc";
   private static final String backgroundsrc = "background";
 
+  private static Logger logger = Logger.getLogger("Crawler");
+
   //  private static final int MAX_TAG_LENGTH = 2048;
 
   /**
@@ -117,7 +121,7 @@ public class Crawler{
 	  pause(); //XXX should get from plugin
 	  InputStream is = cu.getUncachedInputStream();
 	  Properties props = cu.getUncachedProperties();
-	  System.err.println("caching "+cu);
+	  logger.info("caching "+cu);
 	  cu.storeContent(is, props);
 	}catch (Exception e){
 	  e.printStackTrace();
@@ -135,7 +139,7 @@ public class Crawler{
 	}
       }
       else{
-	System.err.println(cu+" exists, not fetching");
+	logger.info(cu+" exists, not fetching");
       }
     }
     list.remove(cu.toString());
