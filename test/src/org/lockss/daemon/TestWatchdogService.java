@@ -1,5 +1,5 @@
 /*
- * $Id: TestWatchdogService.java,v 1.1 2003-05-22 01:21:15 tal Exp $
+ * $Id: TestWatchdogService.java,v 1.2 2003-05-23 17:10:38 tal Exp $
  */
 
 /*
@@ -65,6 +65,20 @@ public class TestWatchdogService extends LockssTestCase {
 
   // ensure it doesn't do anything untoward when it's not configured
   public void testWdogOff() throws Exception {
+    wdog.startService();
+  }
+
+  // nor if the file doesn't exist
+  public void testNoFile() throws Exception {
+    String tmpfile = "/tmp/nexist-pas";
+    assertFalse(new File(tmpfile).exists());
+
+    // configure a 1 second watchdog
+    Properties props = new Properties();
+    props.put(WatchdogService.PARAM_PLATFORM_WDOG_FILE, tmpfile.toString());
+    props.put(WatchdogService.PARAM_PLATFORM_WDOG_INTERVAL, "10s");
+    ConfigurationUtil.setCurrentConfigFromProps(props);
+    TimeBase.setSimulated(9000);
     wdog.startService();
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: WatchdogService.java,v 1.1 2003-05-22 01:21:15 tal Exp $
+ * $Id: WatchdogService.java,v 1.2 2003-05-23 17:10:38 tal Exp $
  *
 
 Copyright (c) 2000-2002 Board of Trustees of Leland Stanford Jr. University,
@@ -69,6 +69,9 @@ public class WatchdogService extends BaseLockssManager {
 	log.info("Platform watchdog interval: " +
 		 StringUtil.timeIntervalToString(interval) +
 		 ", file: " + watchedFile);
+	if (!watchedFile.exists()) {
+	  log.warning("Watchdog file does not exist");
+	}
 	if (theDaemon.isDaemonRunning()) {
 	  enable();
 	}
