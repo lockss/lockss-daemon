@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.81 2003-04-18 23:29:51 claire Exp $
+* $Id: PollManager.java,v 1.82 2003-04-21 22:21:20 claire Exp $
  */
 
 /*
@@ -160,7 +160,8 @@ public class PollManager  extends BaseLockssManager {
    */
   public void sendPollRequest(int opcode, PollSpec pollspec)
       throws IOException {
-    theLog.debug("sending a request for poll of type: " + opcode +
+    theLog.debug("sending a request for polltype: "
+                 + LcapMessage.POLL_OPCODES[opcode] +
                  " for spec " + pollspec);
     CachedUrlSet cus = pollspec.getCachedUrlSet();
     long duration = calcDuration(opcode, cus);
@@ -175,8 +176,17 @@ public class PollManager  extends BaseLockssManager {
 				 duration,
 				 theIDManager.getLocalIdentity());
 
-    theLog.debug2("send poll request: " +  msg.toString());
-    sendMessage(msg,cus.getArchivalUnit());
+    // before we actually send the message make sure that another poll
+    // isn't going to conflict with this and create a split poll
+    if(checkForConflicts(msg,cus) == null) {
+      theLog.debug2("send poll request: " +  msg.toString());
+      sendMessage(msg, cus.getArchivalUnit());
+    }
+    else {
+      theLog.debug("not sending request for polltype: "
+                   + LcapMessage.POLL_OPCODES[opcode] +
+                   " for spec " + pollspec + "- conflicts with existing poll.");
+    }
   }
 
 
@@ -457,6 +467,7 @@ public class PollManager  extends BaseLockssManager {
       }
       return null;
     }
+
   /**
    * send a message to the multicast address for this archival unit
    * @param msg the LcapMessage to send
@@ -675,7 +686,7 @@ public class PollManager  extends BaseLockssManager {
       case LcapMessage.CONTENT_POLL_REP:
         long estTime = cus.estimatedHashDuration();
 //      long adjTime = estTime * SystemMetrics.getAverageHashRate() / m_lowestHashRate;
-        ret = cus.estimatedHashDuration() * 2 * (quorum + 1);
+        ret = estTime * 2 * (quorum + 1);
         ret = ret < m_minContentPollDuration ? m_minContentPollDuration :
             (ret > m_maxContentPollDuration ? m_maxContentPollDuration : ret);
         theLog.debug2("Content Poll duration: " +
