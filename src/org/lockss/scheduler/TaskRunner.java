@@ -1,5 +1,5 @@
 /*
- * $Id: TaskRunner.java,v 1.3.2.2 2003-11-18 01:19:25 tlipkis Exp $
+ * $Id: TaskRunner.java,v 1.3.2.3 2003-11-18 03:39:21 tlipkis Exp $
  */
 
 /*
@@ -561,7 +561,7 @@ class TaskRunner implements Serializable {
     task.cookie = null;
   }
 
-  void runSteps(Boolean continueStepping) {
+  void runSteps(MutableBoolean continueStepping) {
     StepTask task = runningTask;
     Deadline until = runningDeadline;
     boolean overOk = task.isOverrunAllowed();
@@ -627,7 +627,7 @@ class TaskRunner implements Serializable {
 
   // Step thread
   private class StepThread extends Thread {
-    private Boolean continueStepping;
+    private MutableBoolean continueStepping = new MutableBoolean(false);
     private boolean exit = false;
 
     private StepThread(String name) {
@@ -641,7 +641,7 @@ class TaskRunner implements Serializable {
 
       try {
 	while (!exit) {
-	  continueStepping = Boolean.TRUE;
+	  continueStepping.setValue(true);
 	  if (findTaskToRun()) {
 	    runSteps(continueStepping);
 	  } else {
@@ -658,7 +658,7 @@ class TaskRunner implements Serializable {
     }
 
     private void pokeStepper() {
-      continueStepping = Boolean.FALSE;
+      continueStepping.setValue(false);
       sem.give();
     }
 
