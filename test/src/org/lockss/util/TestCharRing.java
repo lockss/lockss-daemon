@@ -1,5 +1,5 @@
 /*
- * $Id: TestCharRing.java,v 1.7 2003-07-18 00:39:13 troberts Exp $
+ * $Id: TestCharRing.java,v 1.8 2004-04-05 08:03:42 tlipkis Exp $
  */
 
 /*
@@ -31,6 +31,7 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.util;
+import java.io.*;
 import org.lockss.test.*;
 
 public class TestCharRing extends LockssTestCase {
@@ -147,34 +148,40 @@ public class TestCharRing extends LockssTestCase {
     assertEquals(0, cr.size());
   }
 
-  public void testClearNegative() {
+  public void testSkipNegative() {
     try {
-      cr.clear(-1);
-      fail("clear(-1) should have thrown");
+      cr.skip(-1);
+      fail("skip(-1) should have thrown");
     } catch (IndexOutOfBoundsException e) {
     }
   }
 
-  public void testClearZero() {
-    cr.clear(0);
+  public void testSkipZero() {
+    cr.skip(0);
     assertEquals('a', cr.get(0));
   }
 
-  public void testClearMany() {
+  public void testSkipMany() {
     assertEquals('a', cr.get(0));
-    cr.clear(2);
+    cr.skip(2);
     assertEquals('c', cr.get(0));
-    cr.clear(1);
+    cr.skip(1);
     assertEquals('d', cr.get(0));
     assertEquals(2, cr.size());
   }
 
-  public void testClearThrowsIfOverSize() {
+  public void testSkipThrowsIfOverSize() {
     try {
-      cr.clear(cr.size()+1);
-      fail("clear(6) Should have thrown");
+      cr.skip(cr.size()+1);
+      fail("skip(6) Should have thrown");
     } catch (IndexOutOfBoundsException e) {
     }
+  }
+
+  public void testClear() {
+    assertEquals('a', cr.get(0));
+    cr.clear();
+    assertEquals(0, cr.size());
   }
 
   public void testArrayAddThrowsIfArrayTooBig() {
@@ -357,6 +364,7 @@ public class TestCharRing extends LockssTestCase {
   public void testArrayRemoveThrowsIfPosNegative()
       throws CharRing.RingFullException {
     CharRing ring = new CharRing(5);
+    ring.add('a');
     try {
       ring.remove(new char[4], -1, 3);
       fail("Removing with a negative position should have thrown");
@@ -372,5 +380,101 @@ public class TestCharRing extends LockssTestCase {
       fail("Removing with a negative length should have thrown");
     } catch (IndexOutOfBoundsException e) {
     }
+  }
+
+  public void testIndexOf() throws Exception {
+    assertEquals(1, cr.indexOf("bc", -1, false));
+    assertEquals(-1, cr.indexOf("bb", -1, false));
+    CharRing ring = new CharRing(5);
+    ring.add("12345".toCharArray());
+    ring.remove();
+    ring.remove();
+    assertEquals('3', ring.get(0));
+    ring.add("46".toCharArray());
+    assertEquals(0, ring.indexOf("34", -1, false));
+    assertEquals(1, ring.indexOf("45", -1, false));
+    assertEquals(3, ring.indexOf("46", -1, false));
+    assertEquals(1, ring.indexOf("4546", -1, false));
+    assertEquals(-1, ring.indexOf("463", -1, false));
+  }
+
+  public void testIndexOfLast() throws Exception {
+    CharRing ring = new CharRing(5);
+    ring.add("12345".toCharArray());
+    ring.remove();
+    ring.remove();
+    assertEquals('3', ring.get(0));
+    ring.add("46".toCharArray());
+    assertEquals(0, ring.indexOf("34", -1, false));
+    assertEquals(0, ring.indexOf("34", 0, false));
+    assertEquals(0, ring.indexOf("34", 1, false));
+    assertEquals(3, ring.indexOf("46", -1, false));
+    assertEquals(3, ring.indexOf("46", 3, false));
+    assertEquals(3, ring.indexOf("46", 4, false));
+    assertEquals(-1, ring.indexOf("46", 2, false));
+  }
+
+  public void testIndexOfIgn() throws Exception {
+    CharRing ring = new CharRing(5);
+    ring.add("abCDe".toCharArray());
+    ring.remove();
+    ring.add("F".toCharArray());
+    assertEquals(2, ring.indexOf("De", -1, false));
+    assertEquals(-1, ring.indexOf("de", -1, false));
+    assertEquals(-1, ring.indexOf("dE", -1, false));
+    assertEquals(-1, ring.indexOf("DE", -1, false));
+    assertEquals(2, ring.indexOf("De", -1, true));
+    assertEquals(2, ring.indexOf("de", -1, true));
+    assertEquals(2, ring.indexOf("DE", -1, true));
+  }
+
+  public void testRefillEmptyBuffer() throws IOException {
+    CharRing ring = new CharRing(10);
+    assertFalse(ring.refillBuffer(new StringReader("1234567890")));
+    assertEquals("1234567890", makeStringFromCharRing(ring));
+  }
+
+  public void testReaderSmallerThanBuffer() throws IOException {
+    CharRing ring = new CharRing(10);
+    assertTrue(ring.refillBuffer(new StringReader("123456789")));
+    assertEquals("123456789", makeStringFromCharRing(ring));
+  }
+
+  public void testRefillEmptyBufferOverflow() throws IOException {
+    CharRing ring = new CharRing(9);
+    assertFalse(ring.refillBuffer(new StringReader("1234567890")));
+    assertEquals("123456789", makeStringFromCharRing(ring));
+  }
+
+  public void testRefillFullBuffer()
+      throws IOException, CharRing.RingFullException {
+    CharRing ring = makeCharRingFromString("Test");
+    assertFalse(ring.refillBuffer(new StringReader("1234567890")));
+    assertEquals("Test", makeStringFromCharRing(ring));
+  }
+
+  public void testRefillPartiallyFullBuffer()
+      throws IOException, CharRing.RingFullException {
+    CharRing ring = new CharRing(10);
+    assertTrue(ring.refillBuffer(new StringReader("Test")));
+    assertFalse(ring.refillBuffer(new StringReader("1234567890")));
+    assertEquals("Test123456", makeStringFromCharRing(ring));
+  }
+
+  private CharRing makeCharRingFromString(String str)
+      throws CharRing.RingFullException{
+    CharRing ring = new CharRing(str.length());
+    for (int ix=0; ix<str.length(); ix++) {
+      ring.add(str.charAt(ix));
+    }
+    return ring;
+  }
+
+  private String makeStringFromCharRing(CharRing ring) {
+    StringBuffer sb = new StringBuffer();
+    for (int ix=0; ix<ring.size(); ix++) {
+      sb.append(ring.get(ix));
+    }
+    return sb.toString();
   }
 }

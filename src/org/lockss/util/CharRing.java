@@ -1,5 +1,5 @@
 /*
- * $Id: CharRing.java,v 1.6 2003-07-18 00:39:13 troberts Exp $
+ * $Id: CharRing.java,v 1.7 2004-04-05 08:03:42 tlipkis Exp $
  */
 
 /*
@@ -31,24 +31,25 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.util;
+import java.io.*;
 
 public class CharRing {
   private static Logger logger = Logger.getLogger("CharRing");
 
-  char chars[];
-  int idx = -1;
-  int head = 0;
-  int tail = 0;
-  int size = 0;
-  int capacity = 0;
-
+  protected char chars[];
+  protected int head = 0;
+  protected int tail = 0;
+  protected int size = 0;
+  protected int capacity = 0;
+  protected boolean isTrace = logger.isDebug2();
+  char[] preBuffer;
 
   public CharRing(int capacity) {
     if (capacity <= 0) {
       throw new IllegalArgumentException("Bad capacity");
     }
     this.capacity = capacity;
-    chars = new char[this.capacity];
+    chars = new char[capacity];
   }
 
   /**
@@ -78,7 +79,7 @@ public class CharRing {
 					  +" element in a ring with "
 					  +size+" elements");
     }
-    return chars[calcRealIndex(n)];
+    return chars[(head + n) % capacity];
   }
 
   /**
@@ -89,11 +90,11 @@ public class CharRing {
     if (size == capacity) {
       throw new RingFullException("Array is full");
     }
-    if (logger.isDebug2()) {
+    if (isTrace) {
       logger.debug2("Adding "+kar+" to "+toString());
     }
     chars[tail] = kar;
-    incrementTail(1);
+    tail = (tail + 1) % capacity;
     size++;
   }
 
@@ -112,18 +113,14 @@ public class CharRing {
    * @param newChars array of chars to add to this ring
    * @param pos position to begin read from newChars
    * @param length number of chars to read from newChars
+   * @throws IndexOutOfBoundsException if pos or length specify an area
+   * outside the array bounds
    * @throws RingFullException if the chars being added will exceed
    * the ring's capacity
    */
   public void add(char newChars[], int pos, int length)
       throws RingFullException {
-    if (pos < 0) {
-      throw new IndexOutOfBoundsException("Called with negative position: "
-					  +pos);
-    } else if (length < 0) {
-      throw new IndexOutOfBoundsException("Called with negative length: "
-					  +length);
-    } else if (length + size > capacity) {
+    if (length + size > capacity) {
       throw new RingFullException("Array is full");
     }
     //number of chars to add to the end of array
@@ -132,10 +129,13 @@ public class CharRing {
     //number of chars to add to the beginning of array
     int addToStart = length - addToEnd;
 
-    System.arraycopy(newChars, pos, chars, tail, addToEnd);
-    System.arraycopy(newChars, pos+addToEnd, chars, 0, addToStart);
-
-    incrementTail(length);
+    if (addToEnd != 0) {
+      System.arraycopy(newChars, pos, chars, tail, addToEnd);
+    }
+    if (addToStart != 0) {
+      System.arraycopy(newChars, pos+addToEnd, chars, 0, addToStart);
+    }
+    tail = (tail + length) % capacity;
     size += length;
   }
 
@@ -147,14 +147,14 @@ public class CharRing {
     if (size == 0) {
       throw new IndexOutOfBoundsException("remove() called on empty CharRing");
     }
-    if (logger.isDebug2()) {
+    if (isTrace) {
       logger.debug2("Removing head from "+toString());
     }
     char returnKar = chars[head];
-    incrementHead(1);
+    head = (head + 1) % capacity;
     size--;
 
-    if (logger.isDebug2()) {
+    if (isTrace) {
       logger.debug2("Returning "+returnKar);
     }
 
@@ -178,13 +178,6 @@ public class CharRing {
    * @return number of chars removed from the ring
    */ 
   public int remove(char returnChars[], int pos, int len) {
-    if (pos < 0) {
-      throw new IndexOutOfBoundsException("Called with negative postion: "
-					  +pos);
-    } else if (len < 0) {
-      throw new IndexOutOfBoundsException("Called with negative length: "
-					  +len);
-    }
 
     int numToReturn = len < size ? len : size;
     if (numToReturn == 0) {
@@ -198,36 +191,29 @@ public class CharRing {
     //number of chars to remove from start of array
     int chunk2 = numToReturn - chunk1;
 
-    System.arraycopy(chars, head, returnChars, pos, chunk1);
-    System.arraycopy(chars, 0, returnChars, pos + chunk1, chunk2);
-
-    incrementHead(numToReturn);
+    if (chunk1 != 0) {
+      System.arraycopy(chars, head, returnChars, pos, chunk1);
+    }
+    if (chunk2 != 0) {
+      System.arraycopy(chars, 0, returnChars, pos + chunk1, chunk2);
+    }
+    head = (head + numToReturn) % capacity;
     size -= numToReturn;
     return numToReturn;
   }
 
-  private int calcRealIndex(int idx) {
-    return (incrementIndex(head, idx));
+  /**
+   * Clear the ring.
+   */
+  public void clear() {
+    skip(size);
   }
-
-  private int incrementIndex(int idx, int amt) {
-    return (idx + amt) % capacity;
-  }
-
-  private void incrementHead(int amt) {
-    head = incrementIndex(head, amt);
-  }
-
-  private void incrementTail(int amt) {
-    tail = incrementIndex(tail, amt);
-  }
-
 
   /**
-   * Clear the next num chars from the ring.  Should be quicker than remove
-   * @param num number of chars to clear
+   * Skip over the next num chars from the ring.
+   * @param num number of chars to skip
    */
-  public void clear(int num) {
+  public void skip(int num) {
     if (num < 0) {
       throw new IndexOutOfBoundsException("Tried to clear a negative "
 					  +"number: "+num);
@@ -236,14 +222,155 @@ public class CharRing {
       throw new IndexOutOfBoundsException("Tried to clear "+num
 					  +" chars, but we only have "+size);
     }
-    incrementHead(num);
+    head = (head + num) % capacity;
     size -= num;
+  }
+
+  // This routine accounts for a substantial amount of the time spent in
+  // LOCKSS filtered readers, so is worth optimizing for the common cases.
+  private int indexOf(char ch, int startIdx, int lastIdx, boolean ignoreCase) {
+    if (ignoreCase) {
+      // do slow loop only if this char has different upper and lower case
+      char uch = Character.toUpperCase(ch);
+      if (ch != uch || ch != Character.toLowerCase(ch)) {
+	for (int ix = startIdx; ix <= lastIdx; ix++) {
+	  char rch = chars[(head + ix) % capacity];
+	  if (Character.toUpperCase(rch) == uch) {
+	    return ix;
+	  }
+	}
+	return -1;
+      }
+    }
+    if (startIdx > lastIdx) return -1;
+    int startPos = (head + startIdx) % capacity;
+    int endPos = (head + lastIdx) % capacity;
+    if (startPos > endPos) {
+      for (int ix = startPos; ix < capacity; ix++) {
+	if (chars[ix] == ch) {
+	  return ix + startIdx - startPos;
+	}
+      }
+      for (int ix = 0; ix <= endPos; ix++) {
+	if (chars[ix] == ch) {
+	  return (ix + (capacity - head)) % capacity;
+	}
+      }
+    } else {
+      for (int ix = startPos; ix <= endPos; ix++) {
+	if (chars[ix] == ch) {
+	  return ix + startIdx - startPos;
+	}
+      }
+    }
+    return -1;
+
+    // The code above should be equivalent to this
+    //     for (int ix = startIdx; ix <= lastIdx; ix++) {
+    //       char rch = chars[(head + ix) % capacity];
+    //       if (rch == ch) {
+    // 	       return ix;
+    //       }
+    //     }
+  }
+
+  /** Search for string in ring.
+   * @param str string to search for
+   * @param lastIdx last index at which to search for string
+   * @param ignoreCase
+   * @return index of string if found, else -1
+   */   
+  public int indexOf(String str, int lastIdx, boolean ignoreCase) {
+    int strlen = str.length();
+    int lastPossible = size - strlen;
+    if (lastPossible < 0) return -1;
+    lastIdx = (lastIdx < 0 || lastIdx > lastPossible) ? lastPossible : lastIdx;
+    int pos = 0;
+    // find position of first char of string
+    l1:
+    while ((pos = indexOf(str.charAt(0), pos, lastIdx, ignoreCase)) >= 0) {
+      int ringpos = head + pos;
+      for (int ix = 1; ix < strlen; ix++) {
+	char ch = str.charAt(ix);
+	char rch = chars[(ringpos + ix) % capacity];
+	if (ignoreCase) {
+	  ch = Character.toUpperCase(ch);
+	  rch = Character.toUpperCase(rch);
+	}
+	if (ch != rch) {
+	  pos++;
+	  continue l1;
+	}
+      }
+      return pos;
+    }
+    return -1;
+  }
+
+  /**
+   * Refill the buffer from the specified reader
+   * @param reader reader from which to refill the charBuffer
+   * @return true if the reader has reached eof
+   * @throws IllegalArgumentException if called with a null reader
+   */
+  public boolean refillBuffer(Reader reader) throws IOException {
+    if (reader == null) {
+      throw new IllegalArgumentException("Called with null reader");
+    }
+    if (isTrace) {
+      logger.debug3("Refilling buffer");
+    }
+    int maxRead;
+    while ((maxRead = capacity - size) > 0) {
+      // max chars to add to the end of array
+      int maxEnd = (maxRead <= (capacity - tail)
+		    ? maxRead : (capacity - tail));
+      // max chars to add to the beginning of array
+      int maxStart = maxRead - maxEnd;
+
+      if (maxStart > 0) {
+	// We have room at the beginning and end.  Using a temporary array
+	// seems to be cheaper than calling read() twice
+	if (preBuffer == null) {
+	  preBuffer = new char[capacity];
+	}
+	int charsRead = reader.read(preBuffer, 0, maxRead);
+	if (charsRead == -1) {
+	  return true;
+	}
+	try {
+	  add(preBuffer, 0, charsRead);
+	} catch (CharRing.RingFullException e) {
+	  logger.error("Overfilled a CharRing", e);
+	  throw new IOException("Overfilled a CharRing");
+	}
+      } else {
+	// Adding only to the middle or end, read directly into char buffer
+	int charsRead = reader.read(chars, tail, maxEnd);
+	if (charsRead == -1) {
+	  return true;
+	}
+	tail = (tail + charsRead) % capacity;
+	size += charsRead;
+	if (charsRead < maxEnd) {
+	  continue;
+	}
+      }
+    }
+    return false;
+  }
+
+  public void add0(char newChars[], int pos, int length)
+      throws RingFullException {
+
+    tail = (tail + length) % capacity;
+    size += length;
   }
 
   public String toString() {
     StringBuffer sb = new StringBuffer(size);
     for (int ix=0; ix<size; ix++) {
-      sb.append(chars[calcRealIndex(ix)]);
+      sb.append(chars[(head + ix) % capacity]);
     } 
     return sb.toString();
   }
