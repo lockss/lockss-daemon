@@ -1,5 +1,5 @@
 /*
- * $Id: AuNodeImpl.java,v 1.6 2003-06-20 22:34:52 claire Exp $
+ * $Id: AuNodeImpl.java,v 1.7 2004-03-09 23:57:50 eaalto Exp $
  */
 
 /*
@@ -33,13 +33,9 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.repository;
 
 import java.io.*;
+import java.net.*;
 import java.util.*;
-import java.net.MalformedURLException;
-import org.lockss.util.Logger;
 import org.lockss.daemon.CachedUrlSetSpec;
-import org.lockss.util.Deadline;
-import java.net.URL;
-import org.lockss.plugin.AuUrl;
 
 /**
  * AuNode is used to represent the top-level contents of an ArchivalUnit.

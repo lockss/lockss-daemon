@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.44 2004-02-23 09:16:13 tlipkis Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.45 2004-03-09 23:57:50 eaalto Exp $
  */
 
 /*
@@ -35,7 +35,6 @@ package org.lockss.repository;
 import java.io.*;
 import java.util.*;
 import java.net.MalformedURLException;
-import java.text.SimpleDateFormat;
 import org.lockss.util.*;
 import org.lockss.daemon.CachedUrlSetSpec;
 
@@ -203,15 +202,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
       if ((!child.isDirectory()) || (child.getName().equals(CONTENT_DIR))) {
         continue;
       }
-      int bufMaxLength = url.length() + child.getName().length() + 1;
-      StringBuffer buffer = new StringBuffer(bufMaxLength);
-      buffer.append(url);
-      if (!url.endsWith("/")) {
-        buffer.append('/');
-      }
-      buffer.append(child.getName());
 
-      String childUrl = buffer.toString();
+      String childUrl = constructChildUrl(url, child.getName());
       if ((filter==null) || (filter.matches(childUrl))) {
         try {
           RepositoryNode node = repository.getNode(childUrl);
@@ -231,6 +223,17 @@ public class RepositoryNodeImpl implements RepositoryNode {
       }
     }
     return childL.iterator();
+  }
+
+  static String constructChildUrl(String root, String child) {
+    int bufMaxLength = root.length() + child.length() + 1;
+    StringBuffer buffer = new StringBuffer(bufMaxLength);
+    buffer.append(root);
+    if (!root.endsWith("/")) {
+      buffer.append('/');
+    }
+    buffer.append(LockssRepositoryImpl.unescape(child));
+    return buffer.toString();
   }
 
   public int getCurrentVersion() {

@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.45 2004-01-13 01:29:22 eaalto Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.46 2004-03-09 23:57:50 eaalto Exp $
  */
 
 /*
@@ -35,7 +35,6 @@ package org.lockss.repository;
 import java.io.*;
 import java.net.*;
 import java.util.*;
-import java.net.MalformedURLException;
 import org.lockss.app.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
@@ -76,6 +75,9 @@ public class LockssRepositoryImpl
   static final String AU_ID_PROP = "au.id";
   static final String PLUGIN_ID_PROP = "plugin.id";
   static String lastPluginDir = ""+(char)('a'-1);
+  static final char ESCAPE_CHAR = '#';
+  static final String ESCAPE_STR = "#";
+  static final char ENCODED_SEPARATOR_CHAR = 's';
 
   /**
    * Maximum number of node instances to cache.
@@ -241,6 +243,10 @@ public class LockssRepositoryImpl
           // clean path, no testing needed
           urlKey = url;
         }
+        String query = testUrl.getQuery();
+        if (query!=null) {
+          urlKey += "?" + query;
+        }
       } catch (IOException ie) {
         logger.error("Error testing URL: "+ie);
         throw new MalformedURLException ("Error testing URL.");
@@ -370,8 +376,8 @@ public class LockssRepositoryImpl
    * @return the url file location
    * @throws java.net.MalformedURLException
    */
-  public static String mapUrlToFileLocation(String rootLocation, String urlStr) throws
-      MalformedURLException {
+  public static String mapUrlToFileLocation(String rootLocation, String urlStr)
+      throws MalformedURLException {
     int totalLength = rootLocation.length() + urlStr.length();
     URL url = new URL(urlStr);
     StringBuffer buffer = new StringBuffer(totalLength);
@@ -382,7 +388,13 @@ public class LockssRepositoryImpl
     buffer.append(url.getHost().toLowerCase());
     buffer.append(File.separator);
     buffer.append(url.getProtocol());
-    buffer.append(StringUtil.replaceString(url.getPath(), "/", File.separator));
+    buffer.append(escapePath(StringUtil.replaceString(url.getPath(), "/",
+        File.separator)));
+    String query = url.getQuery();
+    if (query!=null) {
+      buffer.append("?");
+      buffer.append(escapeQuery(query));
+    }
     return buffer.toString();
   }
 
@@ -503,6 +515,79 @@ public class LockssRepositoryImpl
 
   static String getAuKey(ArchivalUnit au) {
     return au.getAuId();
+  }
+
+  // lockss filename-specific encoding methods
+
+  /**
+   * Escapes instances of the ESCAPE_CHAR from the path.  This avoids name
+   * conflicts with the repository files, such as '#nodestate.xml'.
+   * @param path the path
+   * @return the escaped path
+   */
+  static String escapePath(String path) {
+    //XXX escaping disabled
+    if (false && path.indexOf(ESCAPE_CHAR) >= 0) {
+      return StringUtil.replaceString(path, ESCAPE_STR, ESCAPE_STR+ESCAPE_STR);
+    } else {
+      return path;
+    }
+  }
+
+  /**
+   * Escapes instances of File.separator from the query.  These are safe from
+   * filename overlap, but can't convert into extended paths and directories.
+   * @param query the query
+   * @return the escaped query
+   */
+  static String escapeQuery(String query) {
+    if (query.indexOf(File.separator) >= 0) {
+      return StringUtil.replaceString(query, File.separator, ESCAPE_STR +
+                                      ENCODED_SEPARATOR_CHAR);
+    } else {
+      return query;
+    }
+  }
+
+  /**
+   * Extracts '#x' encoding and converts back to 'x'.
+   * @param orig the original
+   * @return the unescaped version.
+   */
+  static String unescape(String orig) {
+    if (orig.indexOf(ESCAPE_CHAR) < 0) {
+      // fast treatment of non-escaped strings
+      return orig;
+    }
+    int index = -1;
+    StringBuffer buffer = new StringBuffer(orig.length());
+    String oldStr = orig;
+    while ((index = oldStr.indexOf(ESCAPE_CHAR)) >= 0) {
+      buffer.append(oldStr.substring(0, index));
+      buffer.append(convertCode(oldStr.substring(index, index+2)));
+      if (oldStr.length() > 2) {
+        oldStr = oldStr.substring(index + 2);
+      } else {
+        oldStr = "";
+      }
+    }
+    buffer.append(oldStr);
+    return buffer.toString();
+  }
+
+  /**
+   * Returns the second char in the escaped segment, unless it is 's', which
+   * is a stand-in for the File.separatorChar.
+   * @param code the code segment (length 2)
+   * @return the encoded char
+   */
+  static char convertCode(String code) {
+    char encodedChar = code.charAt(1);
+    if (encodedChar == ENCODED_SEPARATOR_CHAR) {
+      return File.separatorChar;
+    } else {
+      return encodedChar;
+    }
   }
 
   public static class Factory implements LockssAuManager.Factory {

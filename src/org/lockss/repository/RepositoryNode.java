@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNode.java,v 1.13 2004-01-31 02:54:26 eaalto Exp $
+ * $Id: RepositoryNode.java,v 1.14 2004-03-09 23:57:50 eaalto Exp $
  */
 
 /*
@@ -63,7 +63,7 @@ public interface RepositoryNode {
   /**
    * Determines if the node is deleted.  Deleted nodes may have old content or
    * children, but will not appear in lists of nodes
-   * @return true if the node is inactive
+   * @return true if the node is deleted
    */
   public boolean isDeleted();
 
