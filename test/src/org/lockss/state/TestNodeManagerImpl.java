@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.63 2003-04-15 02:21:22 claire Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.64 2003-04-16 01:25:29 claire Exp $
  */
 
 /*
@@ -152,7 +152,7 @@ public class TestNodeManagerImpl
   }
 
   public void testStartPoll() throws Exception {
-    contentPoll = createPoll(TEST_URL, true, false, 10, 5);
+    contentPoll = createPoll(TEST_URL, true, false, 10, 2);
     PollTally results = contentPoll.getVoteTally();
     // let's generate some history
     CachedUrlSet cus = results.getCachedUrlSet();
@@ -180,7 +180,7 @@ public class TestNodeManagerImpl
   }
 
   public void testHandleContentPoll() throws Exception {
-    contentPoll = createPoll(TEST_URL, true, true, 10, 5);
+    contentPoll = createPoll(TEST_URL, true, true, 10, 2);
     PollTally results = contentPoll.getVoteTally();
     PollSpec spec = results.getPollSpec();
 
@@ -212,7 +212,7 @@ public class TestNodeManagerImpl
     reputationChangeTest(results);
 
     // lost content poll
-    contentPoll = createPoll(TEST_URL + "/branch1", true, true, 5, 10);
+    contentPoll = createPoll(TEST_URL + "/branch1", true, true, 2, 10);
     results = contentPoll.getVoteTally();
     spec = results.getPollSpec();
     // - repairing
@@ -269,7 +269,7 @@ public class TestNodeManagerImpl
     // - internal SingleNodeCachedUrlSetSpec
     contentPoll = createPoll(TEST_URL + "/branch1",
                              PollSpec.SINGLE_NODE_LWRBOUND, null,
-                             true, true, 5, 10);
+                             true, true, 2, 10);
     results = contentPoll.getVoteTally();
     spec = results.getPollSpec();
     nodeState = nodeManager.getNodeState(getCUS(mau, TEST_URL+"/branch1"));
@@ -292,7 +292,7 @@ public class TestNodeManagerImpl
   }
 
   public void testHandleNamePoll() throws Exception {
-    namePoll = createPoll(TEST_URL + "/branch2", false, true, 10, 5);
+    namePoll = createPoll(TEST_URL + "/branch2", false, true, 10, 2);
     PollTally results = namePoll.getVoteTally();
     PollSpec spec = results.getPollSpec();
     NodeState nodeState =
@@ -330,7 +330,7 @@ public class TestNodeManagerImpl
     String repairUrl = TEST_URL + "/branch2/testentry4.html";
     String repairUrl2 = TEST_URL + "/branch2/testentry5.html";
 
-    contentPoll = createPoll(TEST_URL + "/branch2", false, true, 5, 10);
+    contentPoll = createPoll(TEST_URL + "/branch2", false, true, 2, 10);
     results = contentPoll.getVoteTally();
     spec = results.getPollSpec();
     pollState = new PollState(results.getType(),
@@ -368,7 +368,7 @@ public class TestNodeManagerImpl
     nodeManager.createNodeState(mcus);
 
     // test that a finished top-level poll sets the time right
-    contentPoll = createPoll(auUrl, true, true, 10, 5);
+    contentPoll = createPoll(auUrl, true, true, 10, 2);
     PollTally results = contentPoll.getVoteTally();
     PollSpec spec = results.getPollSpec();
 
@@ -396,7 +396,7 @@ public class TestNodeManagerImpl
     mcus.setFlatItSource(auChildren);
 
     // test that won name poll calls content polls on Au children
-    contentPoll = createPoll(auUrl, false, true, 10, 5);
+    contentPoll = createPoll(auUrl, false, true, 10, 2);
     results = contentPoll.getVoteTally();
     MockCachedUrlSet mcus2 = (MockCachedUrlSet) results.getCachedUrlSet();
     Vector subFiles = new Vector(2);
