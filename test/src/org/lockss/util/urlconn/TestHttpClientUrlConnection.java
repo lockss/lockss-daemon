@@ -1,5 +1,5 @@
 /*
- * $Id: TestHttpClientUrlConnection.java,v 1.1 2004-02-23 09:25:48 tlipkis Exp $
+ * $Id: TestHttpClientUrlConnection.java,v 1.2 2004-02-24 07:15:59 tlipkis Exp $
  */
 
 /*
@@ -55,20 +55,31 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     client = new MockHttpClient();
-    conn = newConn();
+    conn = newConn(urlString);
     method = conn.getMockMethod();
   }  
 
   public void tearDown() throws Exception {
   }
 
-  MockHttpClientUrlConnection newConn() {
-    return new MockHttpClientUrlConnection(urlString, client);
+  MockHttpClientUrlConnection newConn(String url) throws IOException {
+    return new MockHttpClientUrlConnection(url, client);
   }
 
   public void testPred() {
     assertTrue(conn.isHttp());
     assertTrue(conn.canProxy());
+  }    
+
+  public void testMalformedUrl() throws Exception {
+    try {
+      newConn("nsp://foo.bar/");
+      fail("Failed to throw MalformedURLException");
+    } catch (java.net.MalformedURLException e) {}
+    try {
+      newConn("http://foo.bar/a<");
+      fail("Failed to throw MalformedURLException");
+    } catch (java.net.MalformedURLException e) {}
   }    
 
   public void testReqProps() {
@@ -293,7 +304,8 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
   class MockHttpClientUrlConnection extends HttpClientUrlConnection {
     MyMockGetMethod mockMeth;
 
-    MockHttpClientUrlConnection(String urlString, MockHttpClient client) {
+    MockHttpClientUrlConnection(String urlString, MockHttpClient client)
+	throws IOException {
       super(urlString, client);
     }	
     protected LockssGetMethod newLockssGetMethodImpl(String urlString) {

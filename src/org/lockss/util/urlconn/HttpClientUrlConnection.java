@@ -1,5 +1,5 @@
 /*
- * $Id: HttpClientUrlConnection.java,v 1.1 2004-02-23 09:25:49 tlipkis Exp $
+ * $Id: HttpClientUrlConnection.java,v 1.2 2004-02-24 07:16:00 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -31,7 +31,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util.urlconn;
 
 import java.io.*;
-//import java.net.*;
 import java.util.*;
 import org.lockss.util.*;
 import org.apache.commons.httpclient.*;
@@ -52,10 +51,11 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
   private LockssGetMethod method;
   private int responseCode;
 
-  public HttpClientUrlConnection(String urlString, HttpClient client) {
+  public HttpClientUrlConnection(String urlString, HttpClient client)
+      throws IOException {
     this.urlString = urlString;
     this.client = client != null ? client : new HttpClient();
-    method = newLockssGetMethodImpl(urlString);
+    method = createGetMethod(urlString);
   }
 
   /** for testing */
@@ -66,8 +66,23 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     this.method = method;
   }
 
+  protected LockssGetMethod createGetMethod(String urlString)
+      throws IOException {
+    try {
+      return newLockssGetMethodImpl(urlString);
+    } catch (IllegalArgumentException e) {
+      // HttpMethodBase throws IllegalArgumentException on illegal URLs
+      // Canonicalize that to Java's MalformedURLException
+      throw new java.net.MalformedURLException(urlString);
+    } catch (IllegalStateException e) {
+      // HttpMethodBase throws IllegalArgumentException on illegal protocols
+      // Canonicalize that to Java's MalformedURLException
+      throw new java.net.MalformedURLException(urlString);
+    }
+  }
+
   protected LockssGetMethod newLockssGetMethodImpl(String urlString) {
-    return new LockssGetMethodImpl(urlString);
+      return new LockssGetMethodImpl(urlString);
   }
 
   public boolean isHttp() {
@@ -259,7 +274,7 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
 	}
       }
     } catch (URIException e) {
-      log.warning("Redirected location '" + location + "' is malformed");
+      log.warning("Redirected location '" + location + "' is malformed", e);
       return false;
     }
 
@@ -275,7 +290,13 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     //update the current location with the redirect location.
 
     String newUrlString = redirectUri.getEscapedURI();
-    LockssGetMethod newMeth = newLockssGetMethodImpl(newUrlString);
+    LockssGetMethod newMeth;
+    try {
+      newMeth = createGetMethod(newUrlString);
+    } catch (IOException e) {
+      log.warning("Redirected location '" + location + "' is malformed", e);
+      return false;
+    }
 
     Header[] rhdrs = method.getRequestHeaders();
     for (int ix = 0; ix < rhdrs.length; ix++) {
