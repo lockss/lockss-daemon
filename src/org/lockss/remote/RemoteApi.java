@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.30 2005-02-14 03:30:10 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.31 2005-02-18 23:22:01 tlipkis Exp $
  */
 
 /*
@@ -688,15 +688,20 @@ public class RemoteApi extends BaseLockssDaemonManager {
 	stat.setStatus("Error", STATUS_ORDER_ERROR);
 	stat.setExplanation("Plugin not found: " + plugName);
       } else {
-	String auid = pluginMgr.generateAuId(pluginp.getPlugin(),
-					     tc.getConfig());
-	stat = batchProcessOneAu(false, false, pluginp, auid, tc.getConfig());
+	try {
+	  String auid = pluginMgr.generateAuId(pluginp.getPlugin(),
+					       tc.getConfig());
+	  stat =
+	    batchProcessOneAu(false, false, pluginp, auid, tc.getConfig());
+	  stat.setTitleConfig(tc);
+	  if ("Unknown".equalsIgnoreCase(stat.getName())) {
+	    stat.setName(tc.getDisplayName());
+	    bas.add(stat);
+	  }
+	} catch (RuntimeException e) {
+	  log.warning("Can't generate auid for: " + tc, e);
+	}
       }
-      stat.setTitleConfig(tc);
-      if ("Unknown".equalsIgnoreCase(stat.getName())) {
-	stat.setName(tc.getDisplayName());
-      }
-      bas.add(stat);
     }
     return bas;
   }
