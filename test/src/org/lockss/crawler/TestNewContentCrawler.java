@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.30 2005-01-14 01:37:40 troberts Exp $
+ * $Id: TestNewContentCrawler.java,v 1.31 2005-03-18 18:05:12 troberts Exp $
  */
 
 /*
@@ -80,7 +80,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     mau.addUrl(permissionPage);
     spec = new SpiderCrawlSpec(startUrls, ListUtil.list(permissionPage), crawlRule, 1);
     crawler = new MyNewContentCrawler(mau, spec, aus);
-    ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MyMockPermissionChecker(1));
+    ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MockPermissionChecker(1));
 
     mau.setParser(parser);
     Properties p = new Properties();
@@ -149,7 +149,7 @@ public class TestNewContentCrawler extends LockssTestCase {
 
     spec = new SpiderCrawlSpec(urls, ListUtil.list(permissionPage), crawlRule, 1);
     crawler = new MyNewContentCrawler(mau, spec, new MockAuState());
-    ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MyMockPermissionChecker(1));
+    ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MockPermissionChecker(1));
 
     assertTrue(crawler.doCrawl());
     Set expected = SetUtil.fromList(urls);
@@ -226,7 +226,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     List updatedStartUrls = ListUtil.list(startUrl, startUrl2);
     spec = new SpiderCrawlSpec(updatedStartUrls, permissionList, crawlRule, 1);
     crawler = new MyNewContentCrawler(mau, spec, new MockAuState());
-    ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MyMockPermissionChecker(2));
+    ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MockPermissionChecker(2));
 
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     MyMockRetryableCacheException exception =
@@ -423,7 +423,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     List updatedStartUrls = ListUtil.list(startUrl, startUrl2);
     spec = new SpiderCrawlSpec(updatedStartUrls, permissionList, crawlRule, 1);
     crawler = new MyNewContentCrawler(mau, spec, new MockAuState());
-    ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MyMockPermissionChecker(2));
+    ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MockPermissionChecker(2));
 
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     mau.addUrl(startUrl, true, true);
@@ -438,7 +438,7 @@ public class TestNewContentCrawler extends LockssTestCase {
   public void testOverwritesStartingUrlsMultipleLevels() {
     spec = new SpiderCrawlSpec(startUrls, ListUtil.list(permissionPage), crawlRule, 2);
     crawler = new MyNewContentCrawler(mau, spec, new MockAuState());
-    ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MyMockPermissionChecker(1));
+    ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MockPermissionChecker(1));
 
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     String url1= "http://www.example.com/link1.html";
@@ -476,7 +476,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     List updatedStartUrls = ListUtil.list(startUrl, startUrl2);
     spec = new SpiderCrawlSpec(updatedStartUrls, permissionList, crawlRule, 2);
     crawler = new MyNewContentCrawler(mau, spec, new MockAuState());
-    ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MyMockPermissionChecker(2));
+    ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MockPermissionChecker(2));
 
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     String url1= "http://www.example.com/link1.html";
@@ -534,7 +534,7 @@ public class TestNewContentCrawler extends LockssTestCase {
 
 
     crawler = new MyNewContentCrawler(mau, spec, aus);
-    ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MyMockPermissionChecker(100));
+    ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MockPermissionChecker(100));
 
     mau.setParser(parser);
     assertFalse(crawler.doCrawl());
@@ -583,7 +583,7 @@ public class TestNewContentCrawler extends LockssTestCase {
 
     spec = new SpiderCrawlSpec(startUrls, ListUtil.list(permissionPage), crawlRule, 1);
     crawler = new MyNewContentCrawler(mau, spec, aus);
-    ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MyMockPermissionChecker(100));
+    ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MockPermissionChecker(100));
 
     mau.addUrl(startUrl, false, true);
     crawlRule.addUrlToCrawl(startUrl);
@@ -708,33 +708,6 @@ public class TestNewContentCrawler extends LockssTestCase {
     }
     public void setFailing() {
       attributeBits.set(CacheException.ATTRIBUTE_FAIL);
-    }
-  }
-
-  private class MyMockPermissionChecker implements PermissionChecker{
-    int numPermissionGranted=0;
-
-    MyMockPermissionChecker(int numPermissionGranted) {
-      this.numPermissionGranted = numPermissionGranted;
-    }
-
-    public void setNumPermissionGranted(int num){
-      numPermissionGranted = num;
-    }
-
-   /**
-     * checkPermission
-     *
-     * @param reader Reader
-     * @return boolean
-     */
-    public boolean checkPermission(Reader reader) {
-        if (numPermissionGranted-- > 0) {
-          return true;
-        } else {
-          return false;
-        }
-
     }
   }
 
