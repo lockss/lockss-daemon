@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.16 2002-12-15 00:12:13 tal Exp $
+ * $Id: LockssTestCase.java,v 1.17 2002-12-16 00:53:25 tal Exp $
  */
 
 /*
@@ -448,8 +448,10 @@ public class LockssTestCase extends TestCase {
 
     public final void run() {
       try {
-	if (doLaters == null) {
-	  doLaters = new LinkedList();
+	synchronized (LockssTestCase.this) {
+	  if (doLaters == null) {
+	    doLaters = Collections.synchronizedList(new LinkedList());
+	  }
 	}
 	doLaters.add(this);
 	if (wait != 0) {
