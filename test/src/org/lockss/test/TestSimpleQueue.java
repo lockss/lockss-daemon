@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimpleQueue.java,v 1.1 2002-11-05 21:11:21 tal Exp $
+ * $Id: TestSimpleQueue.java,v 1.2 2002-11-07 23:14:42 tal Exp $
  */
 
 /*
@@ -82,7 +82,7 @@ public class TestSimpleQueue extends TestCase {
     SimpleQueue.Fifo fifo = new SimpleQueue.Fifo();
     DoLater.Interrupter intr = null;
     try {
-      intr = DoLater.interruptMeIn(1000);
+      intr = DoLater.interruptMeIn(500);
       if (fifo.get() != null) {
 	fail("get() of empty fifo returned true");
       }
@@ -115,9 +115,9 @@ public class TestSimpleQueue extends TestCase {
     try {
       Date start = new Date();
       intr = DoLater.interruptMeIn(2000);
-      putIn(500, fifo, O1);
+      putIn(200, fifo, O1);
       assertSame(O1, fifo.get());
-      if (TimerUtil.timeSince(start) < 500) {
+      if (TimerUtil.timeSince(start) < 200) {
 	fail("get() returned before put()");
       }
       intr.cancel();
@@ -148,18 +148,18 @@ public class TestSimpleQueue extends TestCase {
     try {
       Date start = new Date();
       intr = DoLater.interruptMeIn(2000);
-      assertEquals(null, fifo.get(500));
+      assertEquals(null, fifo.get(300));
       long delay = TimerUtil.timeSince(start);
-      if (delay < 500) {
-	fail("get(500) returned early");
+      if (delay < 300) {
+	fail("get(300) returned early");
       }
       if (delay > 1000) {
-	fail("get(500) returned late");
+	fail("get(300) returned late");
       }
       intr.cancel();
     } finally {
       if (intr.did()) {
-	fail("get(500) of empty failed to timeout");
+	fail("get(300) of empty failed to timeout");
       }
     }
   }
@@ -168,20 +168,20 @@ public class TestSimpleQueue extends TestCase {
     SimpleQueue.Fifo fifo = new SimpleQueue.Fifo();
     DoLater.Interrupter intr = null;
     try {
-      putIn(500, fifo, O1);
-      putIn(700, fifo, O2);
+      putIn(200, fifo, O1);
+      putIn(400, fifo, O2);
       Date start = new Date();
       intr = DoLater.interruptMeIn(2000);
       assertSame(O1, fifo.get());
       assertSame(O2, fifo.get());
       long delay = TimerUtil.timeSince(start);
-      if (delay < 500) {
-	fail("get(500) returned early");
+      if (delay < 200) {
+	fail("get() returned early");
       }
       if (delay > 1000) {
-	fail("get(500) returned late");
+	fail("get() returned late");
       }
-      assertEquals(null, fifo.get(500));
+      assertEquals(null, fifo.get(100));
       intr.cancel();
     } finally {
       if (intr.did()) {
