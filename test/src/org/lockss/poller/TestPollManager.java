@@ -193,63 +193,33 @@ public class TestPollManager extends TestCase {
     try {
       Poll c1 = pollmanager.makePoll(sameroot[1]);
       // differnt content poll should be ok
-      CachedUrlSet cus = pollmanager.checkForConflicts(testmsg[1]);
+
+      CachedUrlSet cus = pollmanager.checkForConflicts(testmsg[1],
+          makeCachedUrlSet(testmsg[1]));
       assertNull("different content poll s/b ok", cus);
 
-      // same content poll should be a conflict
-      cus = pollmanager.checkForConflicts(sameroot[1]);
-      assertNotNull("same content poll root s/b conflict", cus);
+      // same content poll should be a conflict different entries no conflict
+      cus = pollmanager.checkForConflicts(sameroot[1],
+          makeCachedUrlSet(sameroot[1]));
+      assertNull("same content poll root s/b conflict", cus);
 
       // different name poll should be ok
-      cus = pollmanager.checkForConflicts(testmsg[0]);
+      cus = pollmanager.checkForConflicts(testmsg[0],
+          makeCachedUrlSet(testmsg[0]));
       assertNull("name poll with different root s/b ok", cus);
 
-      // same name poll should be conflict
-      cus = pollmanager.checkForConflicts(sameroot[0]);
-      assertNotNull("same name poll root s/b conflict", cus);
+      // same name poll different entries no conflict
+      cus = pollmanager.checkForConflicts(sameroot[0],
+          makeCachedUrlSet(sameroot[0]));
+      assertNull("same name poll root s/b conflict", cus);
 
-      // different verify poll should be ok
-      cus = pollmanager.checkForConflicts(testmsg[2]);
-      assertNull("verify poll s/b ok", cus);
-
-      cus = pollmanager.checkForConflicts(sameroot[2]);
+      // verify poll should be ok
+      cus = pollmanager.checkForConflicts(testmsg[2],
+          makeCachedUrlSet(testmsg[2]));
       assertNull("verify poll s/b ok", cus);
 
       // remove the poll
       pollmanager.removePoll(c1.m_key);
-    }
-    catch (IOException ex) {
-      fail("unable to make content poll");
-    }
-
-    // check name poll conflicts
-    try {
-      Poll np = pollmanager.makePoll(sameroot[0]);
-      // differnt name poll should be ok
-      CachedUrlSet cus = pollmanager.checkForConflicts(testmsg[0]);
-      assertNull("different name poll s/b ok", cus);
-
-      // same content poll should be a conflict
-      cus = pollmanager.checkForConflicts(sameroot[0]);
-      assertNotNull("same name poll root s/b conflict", cus);
-
-      // different name poll should be ok
-      cus = pollmanager.checkForConflicts(testmsg[1]);
-      assertNull("content poll with different root s/b ok", cus);
-
-      // same name poll should be conflict
-      cus = pollmanager.checkForConflicts(sameroot[1]);
-      assertNotNull("content poll root s/b conflict", cus);
-
-      // different verify poll should be ok
-      cus = pollmanager.checkForConflicts(testmsg[2]);
-      assertNull("verify poll s/b ok", cus);
-
-      cus = pollmanager.checkForConflicts(sameroot[2]);
-      assertNull("verify poll s/b ok", cus);
-
-      // remove the poll
-      pollmanager.removePoll(np.m_key);
     }
     catch (IOException ex) {
       fail("unable to make content poll");
@@ -329,6 +299,16 @@ public class TestPollManager extends TestCase {
 
   }
 
+  private CachedUrlSet makeCachedUrlSet(LcapMessage msg) {
+
+    try {
+      ArchivalUnit au = daemon.getPluginManager().findArchivalUnit(msg.getTargetUrl());
+      return au.makeCachedUrlSet(msg.getTargetUrl(), msg.getRegExp());
+    }
+    catch (Exception ex) {
+      return null;
+    }
+  }
 
   /** Executes the test case
    * @param argv array of Strings containing command line arguments
