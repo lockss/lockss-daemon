@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericNameHasher.java,v 1.7 2003-02-26 21:33:17 troberts Exp $
+ * $Id: TestGenericNameHasher.java,v 1.8 2003-03-04 01:02:06 aalto Exp $
  */
 
 /*
@@ -89,10 +89,10 @@ public class TestGenericNameHasher extends LockssTestCase {
     cus.setIsLeaf(false);
     MockCachedUrlSet root = new MockCachedUrlSet();
     root.setFlatItSource(ListUtil.list(cus));
-    
+
     CachedUrlSetHasher hasher = new GenericNameHasher(root, dig);
-    
-    assertTrue(!hasher.finished());
+
+    assertFalse(hasher.finished());
   }
 
   public void testHashOneName() throws IOException {
@@ -104,7 +104,7 @@ public class TestGenericNameHasher extends LockssTestCase {
     cus.setIsLeaf(false);
     MockCachedUrlSet root = new MockCachedUrlSet();
     root.setFlatItSource(ListUtil.list(cus));
-    
+
     CachedUrlSetHasher hasher = new GenericNameHasher(root, dig);
 
     byte[] bytes = getExpectedCUSBytes(root);
@@ -125,7 +125,7 @@ public class TestGenericNameHasher extends LockssTestCase {
      CachedUrlSet cus = makeTestCUS();
      CachedUrlSetHasher hasher = new GenericNameHasher(cus, dig);
      byte[] expectedBytes = getExpectedCUSBytes(cus);
-   
+
      int totalHashed = 0;
      while (!hasher.finished()) {
        totalHashed += hasher.hashStep(1);
@@ -141,7 +141,7 @@ public class TestGenericNameHasher extends LockssTestCase {
      CachedUrlSet cus = makeTestCUS();
      CachedUrlSetHasher hasher = new GenericNameHasher(cus, dig);
      byte[] expectedBytes = getExpectedCUSBytes(cus);
-   
+
      int totalHashed = 0;
      while (!hasher.finished()) {
        totalHashed += hasher.hashStep(20);
@@ -157,7 +157,7 @@ public class TestGenericNameHasher extends LockssTestCase {
      CachedUrlSet cus = makeTestCUS();
      CachedUrlSetHasher hasher = new GenericNameHasher(cus, dig);
      byte[] expectedBytes = getExpectedCUSBytes(cus);
-   
+
      int totalHashed = 0;
      while (!hasher.finished()) {
        totalHashed += hasher.hashStep(10000);
@@ -216,9 +216,9 @@ public class TestGenericNameHasher extends LockssTestCase {
     String name = cusn.getUrl();
     byte[] sizeBytes = ByteArray.encodeLong(name.length());
     byte[] returnArray = new byte[name.length() + sizeBytes.length + 2];
-    
+
     if (cusn.hasContent()) {
-      returnArray[0] = 
+      returnArray[0] =
 	cusn.isLeaf() ? CUSN_CONTENT_LEAF : CUSN_CONTENT_NOT_LEAF;
     } else {
       returnArray[0] = CUSN_NO_CONTENT;

@@ -1,5 +1,5 @@
 /*
- * $Id: TestPropUtil.java,v 1.1 2002-08-31 06:58:16 tal Exp $
+ * $Id: TestPropUtil.java,v 1.2 2003-03-04 01:02:05 aalto Exp $
  */
 
 /*
@@ -65,28 +65,28 @@ public class TestPropUtil extends TestCase {
   private static Properties p2 = (Properties)p1.clone(); // p2 same as p1
   static {
     p2.put("k2", new String("two"));
-  }  
+  }
 
   private static Properties p3 = (Properties)p1.clone(); // p3 has a different value
   static {
     p3.put("k2", "not two");
-  }  
+  }
 
   private static Properties p4 = (Properties)p1.clone(); // p4 has an additional value
   static {
     p4.put("k3", "foo");
-  }  
+  }
 
   private static Properties p5 = (Properties)p1.clone(); // p5 omits one value
   static {
     p5.remove("k1");
-  }  
+  }
 
   private static Properties p6 = (Properties)p1.clone(); // p6 has multiple diffs
   static {
     p6.put("k3", "foo");
     p6.put("k2", "not two");
-  }  
+  }
 
   public void testEqual() {
     System.out.println("p1: "+p1);
@@ -95,14 +95,14 @@ public class TestPropUtil extends TestCase {
     System.out.println("p4: "+p4);
     System.out.println("p5: "+p5);
     assertTrue(PropUtil.equalProps(p1, p2));
-    assertTrue(! PropUtil.equalProps(p1, p3));
-    assertTrue(! PropUtil.equalProps(p1, p4));
-    assertTrue(! PropUtil.equalProps(p1, p5));
+    assertFalse( PropUtil.equalProps(p1, p3));
+    assertFalse( PropUtil.equalProps(p1, p4));
+    assertFalse( PropUtil.equalProps(p1, p5));
     // commute args
     assertTrue(PropUtil.equalProps(p2, p1));
-    assertTrue(! PropUtil.equalProps(p3, p1));
-    assertTrue(! PropUtil.equalProps(p4, p1));
-    assertTrue(! PropUtil.equalProps(p5, p1));
+    assertFalse( PropUtil.equalProps(p3, p1));
+    assertFalse( PropUtil.equalProps(p4, p1));
+    assertFalse( PropUtil.equalProps(p5, p1));
   }
 
   public void testDifferentKeys() {

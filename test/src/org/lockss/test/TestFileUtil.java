@@ -1,5 +1,5 @@
 /*
- * $Id: TestFileUtil.java,v 1.2 2002-10-25 21:46:55 tal Exp $
+ * $Id: TestFileUtil.java,v 1.3 2003-03-04 01:02:05 aalto Exp $
  */
 
 /*
@@ -90,7 +90,7 @@ public class TestFileUtil extends LockssTestCase {
     assertTrue(dir.isDirectory());
     assertEquals(0, dir.listFiles().length);
     File f = new File(dir, "foo");
-    assertTrue(!f.exists());
+    assertFalse(f.exists());
     assertTrue(f.createNewFile());
     assertTrue(f.exists());
     assertEquals(1, dir.listFiles().length);
@@ -98,7 +98,7 @@ public class TestFileUtil extends LockssTestCase {
     assertTrue(f.delete());
     assertEquals(0, dir.listFiles().length);
     assertTrue(dir.delete());
-    assertTrue(!dir.exists());
+    assertFalse(dir.exists());
   }
 
   public void testDelTree() throws IOException {
@@ -110,7 +110,7 @@ public class TestFileUtil extends LockssTestCase {
     assertTrue(new File(dir, "f1").createNewFile());
     assertTrue(new File(d1, "d1f1").createNewFile());
     assertTrue(new File(d2, "d2f1").createNewFile());
-    assertTrue(!dir.delete());
+    assertFalse(dir.delete());
     assertTrue(FileUtil.delTree(dir));
   }
 }

@@ -36,7 +36,7 @@ public class TestDatagramSocketListener extends TestCase{
   //private static final int port = 9898;
   private int port = 12345;
   private static final String host = "127.0.0.1";
-  private DatagramSocketListener dsl = null;  
+  private DatagramSocketListener dsl = null;
   private static String lockVar = "blah"; //FIXME
 
 
@@ -44,20 +44,20 @@ public class TestDatagramSocketListener extends TestCase{
     super(msg);
   }
    public void testNoPacketSentGivesNull() throws DatagramSocketListenerException {
-     DatagramSocketListener dsl = 
+     DatagramSocketListener dsl =
        DatagramSocketListener.createOnOpenPort(0);
 
      DatagramPacket receivePacket = dsl.getPacket();
-     assertTrue(receivePacket == null);
+     assertNull(receivePacket);
    }
 
   public void testSinglePacket() throws Exception{
-     DatagramSocketListener dsl = 
+     DatagramSocketListener dsl =
        DatagramSocketListener.createOnOpenPort(1);
-     
+
     String msg = "blah";
     byte[] msgBytes = msg.getBytes();
-    
+
     DatagramPacket sentPacket =
       new DatagramPacket(msgBytes,
 			 msg.length(),
@@ -66,29 +66,29 @@ public class TestDatagramSocketListener extends TestCase{
     DatagramSocket socket = new DatagramSocket();
     socket.send(sentPacket);
     socket.close();
-    
+
     DatagramPacket receivePacket = dsl.getPacket();
     assertTrue(receivePacket != null);
-    
+
     byte[] recData = receivePacket.getData();
     byte[] sentData = sentPacket.getData();
-    
+
     assertEquals(sentPacket.getLength(), receivePacket.getLength());
-    
+
     for (int ix=0; ix<sentPacket.getLength(); ix++){
       assertEquals(sentData[ix], recData[ix]);
     }
   }
 
   public void testMultiplePackets() throws Exception{
-    DatagramSocketListener dsl = 
+    DatagramSocketListener dsl =
       DatagramSocketListener.createOnOpenPort(3);
-    
+
     Vector sentPackets = new Vector();
     for (int ix=0; ix<3; ix++){
       String msg = ix+"blah"+ix;
       byte[] msgBytes = msg.getBytes();
-      
+
       DatagramPacket sendPacket =
 	new DatagramPacket(msgBytes,
 			   msg.length(),
@@ -99,14 +99,14 @@ public class TestDatagramSocketListener extends TestCase{
       socket.close();
       sentPackets.add(sendPacket);
     }
-    
+
     for (int ix=0; ix<3; ix++){
       DatagramPacket receivePacket = dsl.getPacket();
       assertTrue(receivePacket != null);
       DatagramPacket sentPacket = (DatagramPacket)sentPackets.elementAt(ix);
       byte[] recData = receivePacket.getData();
       byte[] sentData = sentPacket.getData();
-      
+
       assertEquals(receivePacket.getLength(), sentPacket.getLength());
       for (int jx=0; jx<sentPacket.getLength(); jx++){
 	assertEquals(sentData[jx], recData[jx]);

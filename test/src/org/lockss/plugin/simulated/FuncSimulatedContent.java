@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSimulatedContent.java,v 1.26 2003-03-04 00:16:12 aalto Exp $
+ * $Id: FuncSimulatedContent.java,v 1.27 2003-03-04 01:02:05 aalto Exp $
  */
 
 /*
@@ -49,7 +49,7 @@ import org.lockss.plugin.*;
  */
 public class FuncSimulatedContent extends LockssTestCase {
   private SimulatedArchivalUnit sau;
-  private MockLockssDaemon theDaemon;
+  private MockLockssDaemon theDaemon = new MockLockssDaemon();
 
   public FuncSimulatedContent(String msg) {
     super(msg);
@@ -60,15 +60,13 @@ public class FuncSimulatedContent extends LockssTestCase {
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     sau = new SimulatedArchivalUnit();
     sau.setRootDir(tempDirPath);
-    String s = SystemMetrics.PARAM_HASH_TEST_DURATION + "=1000";
-    String s2 = SystemMetrics.PARAM_HASH_TEST_BYTE_STEP + "=1024";
+    String s = SystemMetrics.PARAM_HASH_TEST_DURATION + "=1000\n";
+    String s2 = SystemMetrics.PARAM_HASH_TEST_BYTE_STEP + "=1024\n";
     String s3 = LockssRepositoryServiceImpl.PARAM_CACHE_LOCATION + "=" +
         tempDirPath;
-    TestConfiguration.setCurrentConfigFromUrlList(ListUtil.list(FileUtil.urlOfString(s),
-      FileUtil.urlOfString(s2), FileUtil.urlOfString(s3)));
-    theDaemon = new MockLockssDaemon(ListUtil.list(FileUtil.urlOfString(s),
-      FileUtil.urlOfString(s2), FileUtil.urlOfString(s3)));
-    theDaemon.getLockssRepository(new MockArchivalUnit());
+    String configStr = s + s2 + s3;
+    TestConfiguration.setCurrentConfigFromString(configStr);
+    theDaemon.getLockssRepository(sau);
     theDaemon.getPluginManager();
   }
 
@@ -90,6 +88,7 @@ public class FuncSimulatedContent extends LockssTestCase {
     sau = new SimulatedArchivalUnit();
     sau.setRootDir(tempDirPath);
     TestLockssRepositoryServiceImpl.configCacheLocation(tempDirPath);
+    theDaemon.getLockssRepository(sau);
 
     createContent();
     crawlContent();
@@ -239,7 +238,7 @@ public class FuncSimulatedContent extends LockssTestCase {
     CachedUrlSetSpec spec = new RangeCachedUrlSetSpec(parent);
     set = sau.cachedUrlSetFactory(sau, spec);
     hash2 = getHash(set, namesOnly);
-    assertTrue(!Arrays.equals(hash, hash2));
+    assertFalse(Arrays.equals(hash, hash2));
   }
 
   private byte[] getHash(CachedUrlSet set, boolean namesOnly) throws IOException {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestRangeCachedUrlSetSpec.java,v 1.3 2003-02-26 04:39:16 tal Exp $
+ * $Id: TestRangeCachedUrlSetSpec.java,v 1.4 2003-03-04 01:02:06 aalto Exp $
  */
 
 /*
@@ -60,7 +60,7 @@ public class TestRangeCachedUrlSetSpec extends LockssTestCase {
     CachedUrlSetSpec cuss2 = new RangeCachedUrlSetSpec("foo");
     CachedUrlSetSpec cuss3 = new RangeCachedUrlSetSpec("bar");
     assertEquals(cuss1, cuss2);
-    assertTrue(!cuss2.equals(cuss3));
+    assertNotEquals(cuss2, cuss3);
 
     String uprb1 = "xyz";
     String uprb2 = "zyx";
@@ -78,12 +78,12 @@ public class TestRangeCachedUrlSetSpec extends LockssTestCase {
 
     assertEquals(cuss4,cuss8);
 
-    assertTrue(!cuss4.equals(cuss5));
-    assertTrue(!cuss5.equals(cuss6));
-    assertTrue(!cuss6.equals(cuss7));
-    assertTrue(!cuss7.equals(cuss4));
-    assertTrue(!cuss7.equals(cuss5));
-    assertTrue(!cuss6.equals(cuss4));
+    assertNotEquals(cuss4, cuss5);
+    assertNotEquals(cuss5, cuss6);
+    assertNotEquals(cuss6, cuss7);
+    assertNotEquals(cuss7, cuss4);
+    assertNotEquals(cuss7, cuss5);
+    assertNotEquals(cuss6, cuss4);
   }
 
   public void testRangeCachedUrlSetSpec() throws REException {
@@ -96,13 +96,13 @@ public class TestRangeCachedUrlSetSpec extends LockssTestCase {
     assertTrue(cuss1.matches("foo"));
     assertTrue(cuss1.matches("foobar"));
     assertTrue(cuss1.matches("foo/bar"));
-    assertTrue(!cuss1.matches("1foo"));
+    assertFalse(cuss1.matches("1foo"));
 
     // has a range must match upper and lower range
     CachedUrlSetSpec cuss2 = new RangeCachedUrlSetSpec("foo", lwrb1, uprb1);
     assertTrue(cuss2.matches("foo/camel"));
-    assertTrue(!cuss2.matches("foo/aardvark"));
-    assertTrue(!cuss2.matches("foo/zebra"));
+    assertFalse(cuss2.matches("foo/aardvark"));
+    assertFalse(cuss2.matches("foo/zebra"));
   }
 
   public void testHashCode() throws Exception {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestCachedUrlSetSpec.java,v 1.5 2003-02-20 02:23:40 aalto Exp $
+ * $Id: TestCachedUrlSetSpec.java,v 1.6 2003-03-04 01:02:06 aalto Exp $
  */
 
 /*
@@ -63,14 +63,14 @@ public class TestCachedUrlSetSpec extends LockssTestCase {
     assertEquals(cuss1, cuss2);
     assertEquals(cuss1, cuss3);
     assertEquals(cuss2, cuss3);
-    assertTrue(!cuss3.equals(cuss4));
+    assertNotEquals(cuss3, cuss4);
     String re1 = "123.*";
     String re2 = "456";
     CachedUrlSetSpec cuss5 = new RECachedUrlSetSpec("xxx", re1);
     CachedUrlSetSpec cuss6 = new RECachedUrlSetSpec("xxx", new RE(re1));
     CachedUrlSetSpec cuss7 = new RECachedUrlSetSpec("xxx", new RE(re2));
     assertEquals(cuss5, cuss6);
-    assertTrue(!cuss6.equals(cuss7));
+    assertNotEquals(cuss6, cuss7);
   }
 
   public void testRECachedUrlSetSpec() throws REException {
@@ -79,13 +79,13 @@ public class TestCachedUrlSetSpec extends LockssTestCase {
     assertTrue(cuss1.matches("foo"));
     assertTrue(cuss1.matches("foobar"));
     assertTrue(cuss1.matches("foo/bar"));
-    assertTrue(!cuss1.matches("1foo"));
+    assertFalse(cuss1.matches("1foo"));
     CachedUrlSetSpec cuss2 = new RECachedUrlSetSpec("foo", "/123");
     assertTrue(cuss2.matches("foo/bar/123/x"));
-    assertTrue(!cuss2.matches("/123foo"));
+    assertFalse(cuss2.matches("/123foo"));
     CachedUrlSetSpec cuss3 = new RECachedUrlSetSpec("foo", "123$");
     assertTrue(cuss3.matches("foo/bar/123"));
-    assertTrue(!cuss3.matches("foo/123/bar"));
+    assertFalse(cuss3.matches("foo/123/bar"));
   }
 
   public void testIllAnyCachedUrlSetSpec() {
@@ -106,8 +106,8 @@ public class TestCachedUrlSetSpec extends LockssTestCase {
 
   public void testEmptyAnyCachedUrlSetSpec() {
     CachedUrlSetSpec cuss = new AnyCachedUrlSetSpec(Collections.EMPTY_SET);
-    assertTrue(!cuss.matches(""));
-    assertTrue(!cuss.matches("foo"));
+    assertFalse(cuss.matches(""));
+    assertFalse(cuss.matches("foo"));
   }
 
   public void testAnyCachedUrlSetSpec() throws REException {
@@ -118,7 +118,7 @@ public class TestCachedUrlSetSpec extends LockssTestCase {
     AnyCachedUrlSetSpec any = new AnyCachedUrlSetSpec(s);
     assertTrue(any.matches("foo/fjfjf"));
     assertTrue(any.matches("bar/123"));
-    assertTrue(!any.matches("bar/132"));
+    assertFalse(any.matches("bar/132"));
 
     List al = any.getPrefixList();
     Set as = new HashSet(al);

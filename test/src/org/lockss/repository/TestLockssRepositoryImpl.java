@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.22 2003-03-04 00:16:12 aalto Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.23 2003-03-04 01:02:05 aalto Exp $
  */
 
 /*
@@ -66,7 +66,7 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
   public void testFileLocation() throws Exception {
     tempDirPath += RepositoryLocationUtil.mapAuToFileLocation("cache/", mau);
     File testFile = new File(tempDirPath);
-    assertTrue(!testFile.exists());
+    assertFalse(testFile.exists());
 
     createLeaf("http://www.example.com/testDir/branch1/leaf1",
                "test stream", null);
@@ -89,10 +89,10 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     createLeaf("http://www.example.com/testDir/leaf4", "test stream", null);
 
     RepositoryNode node = repo.getNode("http://www.example.com/testDir");
-    assertTrue(!node.hasContent());
+    assertFalse(node.hasContent());
     assertEquals("http://www.example.com/testDir", node.getNodeUrl());
     node = repo.getNode("http://www.example.com/testDir/branch1");
-    assertTrue(!node.hasContent());
+    assertFalse(node.hasContent());
     assertEquals("http://www.example.com/testDir/branch1", node.getNodeUrl());
     node = repo.getNode("http://www.example.com/testDir/branch2/leaf3");
     assertTrue(node.hasContent());
@@ -110,7 +110,7 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     createLeaf("ftp://www.example.com/file", "test stream", null);
 
     RepositoryNode auNode = repo.getNode(AuUrl.PROTOCOL_COLON+"//www.example.com");
-    assertTrue(!auNode.hasContent());
+    assertFalse(auNode.hasContent());
     assertEquals(AuUrl.PROTOCOL +"://www.example.com", auNode.getNodeUrl());
     Iterator childIt = auNode.listNodes(null, false);
     ArrayList childL = new ArrayList(3);
@@ -131,9 +131,9 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
 
     RepositoryNode node = repo.getNode("http://www.example.com/test1");
     assertTrue(node.hasContent());
-    assertTrue(!node.isInactive());
+    assertFalse(node.isInactive());
     repo.deleteNode("http://www.example.com/test1");
-    assertTrue(!node.hasContent());
+    assertFalse(node.hasContent());
     assertTrue(node.isInactive());
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuNodeImpl.java,v 1.2 2003-03-04 00:16:12 aalto Exp $
+ * $Id: TestAuNodeImpl.java,v 1.3 2003-03-04 01:02:05 aalto Exp $
  */
 
 /*
@@ -88,9 +88,9 @@ public class TestAuNodeImpl extends LockssTestCase {
 
   public void testIllegalOperations() throws Exception {
     RepositoryNode auNode = new AuNodeImpl("lockssAu:test", "", null);
-    assertTrue(!auNode.hasContent());
-    assertTrue(!auNode.isLeaf());
-    assertTrue(!auNode.isInactive());
+    assertFalse(auNode.hasContent());
+    assertFalse(auNode.isLeaf());
+    assertFalse(auNode.isInactive());
     try {
       auNode.makeNewVersion();
       fail("Cannot make version for AuNode.");

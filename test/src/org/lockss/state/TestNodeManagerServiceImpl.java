@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerServiceImpl.java,v 1.1 2003-03-01 03:21:30 aalto Exp $
+ * $Id: TestNodeManagerServiceImpl.java,v 1.2 2003-03-04 01:02:05 aalto Exp $
  */
 
 /*
@@ -93,7 +93,7 @@ public class TestNodeManagerServiceImpl extends LockssTestCase {
 
     nms.stopService();
     // once stopped, the thread should be null
-    assertTrue(node.treeWalkThread == null);
+    assertNull(node.treeWalkThread);
   }
 
   public static void main(String[] argv) {

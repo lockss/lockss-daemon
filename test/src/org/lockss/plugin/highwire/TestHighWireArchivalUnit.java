@@ -107,7 +107,7 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
     GenericFileCachedUrlSet cus = new GenericFileCachedUrlSet(hwAu, spec);
     UrlCacher uc =
       cus.makeUrlCacher("http://shadow2.stanford.edu/lockss-volume322.shtml");
-    assertTrue(!uc.shouldBeCached());
+    assertFalse(uc.shouldBeCached());
   }
 
   public void testPathInUrlThrowsException() throws Exception {
@@ -125,7 +125,7 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
 
     AuState aus = new MockAuState(null, TimeBase.nowMs(), -1, -1);
 
-    assertTrue(!hwAu.shouldCrawlForNewContent(aus));
+    assertFalse(hwAu.shouldCrawlForNewContent(aus));
   }
 
   public void testShouldDoNewContentCrawlFor0() throws Exception {

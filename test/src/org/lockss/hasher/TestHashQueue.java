@@ -1,5 +1,5 @@
 /*
- * $Id: TestHashQueue.java,v 1.8 2003-02-27 22:36:58 troberts Exp $
+ * $Id: TestHashQueue.java,v 1.9 2003-03-04 01:02:06 aalto Exp $
  */
 
 /*
@@ -119,7 +119,7 @@ public class TestHashQueue extends LockssTestCase {
     HashQueue.Request req1 = simpleReq(1000, 100);
     HashQueue.Request req2 = simpleReq(2000, 100);
     assertTrue(req1.runBefore(req2));
-    assertTrue(!req2.runBefore(req1));
+    assertFalse(req2.runBefore(req1));
   }
 
   public void testOverrunReqOrder() {
@@ -131,7 +131,7 @@ public class TestHashQueue extends LockssTestCase {
     HashQueue.Request reqO2 = simpleReq(1500, 100);
     reqO2.timeUsed = 1600;
     assertTrue(reqO1.runBefore(reqO2));
-    assertTrue(!reqO2.runBefore(reqO1));
+    assertFalse(reqO2.runBefore(reqO1));
     assertTrue(req1.runBefore(reqO1));
     assertTrue(req2.runBefore(reqO1));
     assertTrue(req1.runBefore(reqO2));
@@ -146,9 +146,9 @@ public class TestHashQueue extends LockssTestCase {
     r2 = simpleReq(2000, 1000);
     r3 = simpleReq(3000, 2900);
     assertEquals(null, q.head());
-    assertTrue(!q.insert(r1));
+    assertFalse(q.insert(r1));
     assertTrue(q.insert(r2));
-    assertTrue(!q.insert(r3));
+    assertFalse(q.insert(r3));
     // change r2 to overrun
     r2.timeUsed = 1200;
     // r3 should now be accepted.  It would prevent r2 from finishing in

@@ -1,5 +1,5 @@
 /*
- * $Id: TestEnumerationIterator.java,v 1.1 2002-08-31 06:58:16 tal Exp $
+ * $Id: TestEnumerationIterator.java,v 1.2 2003-03-04 01:02:05 aalto Exp $
  */
 
 /*
@@ -46,11 +46,11 @@ public class TestEnumerationIterator extends TestCase {
   public TestEnumerationIterator(String msg) {
     super(msg);
   }
-  
+
   public void testEmpty() {
     Vector v = new Vector();
     Iterator iter = new EnumerationIterator(v.elements());
-    assertTrue(!iter.hasNext());
+    assertFalse(iter.hasNext());
   }
 
   public void testN() {
@@ -63,10 +63,10 @@ public class TestEnumerationIterator extends TestCase {
     assertTrue(iter.hasNext());
     assertEquals("two", iter.next());
     assertTrue( ! iter.hasNext());
-    try { 
+    try {
       iter.next();
-      fail("Should raise java.util.NoSuchElementException"); 
-    } catch (java.util.NoSuchElementException e) { 
+      fail("Should raise java.util.NoSuchElementException");
+    } catch (java.util.NoSuchElementException e) {
     }
   }
 }

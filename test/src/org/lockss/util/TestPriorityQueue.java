@@ -1,5 +1,5 @@
 /*
- * $Id: TestPriorityQueue.java,v 1.6 2002-12-30 20:39:40 tal Exp $
+ * $Id: TestPriorityQueue.java,v 1.7 2003-03-04 01:02:05 aalto Exp $
  */
 
 /*
@@ -137,7 +137,7 @@ public class TestPriorityQueue extends LockssTestCase {
   public void testRemove() {
     PriorityQueue q = new PriorityQueue();
     q.put(O1);
-    assertTrue(!q.isEmpty());
+    assertFalse(q.isEmpty());
     q.remove(O1);
     assertTrue(q.isEmpty());
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericFileCachedUrlSet.java,v 1.20 2003-03-04 00:16:12 aalto Exp $
+ * $Id: TestGenericFileCachedUrlSet.java,v 1.21 2003-03-04 01:02:05 aalto Exp $
  */
 
 /*
@@ -176,7 +176,7 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
     if (isCus) {
       assertEquals(CachedUrlSetNode.TYPE_CACHED_URL_SET, element.getType());
       assertTrue(element instanceof CachedUrlSet);
-      assertTrue(!element.isLeaf());
+      assertFalse(element.isLeaf());
     } else {
       assertEquals(CachedUrlSetNode.TYPE_CACHED_URL, element.getType());
       assertTrue(element instanceof CachedUrl);

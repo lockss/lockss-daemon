@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfiguration.java,v 1.9 2003-02-27 23:28:44 tal Exp $
+ * $Id: TestConfiguration.java,v 1.10 2003-03-04 01:02:06 aalto Exp $
  */
 
 /*
@@ -67,9 +67,9 @@ public class TestConfiguration extends LockssTestCase {
 
     assertTrue(config.getBoolean("prop3"));
     assertTrue(config.getBoolean("prop3", false));
-    assertTrue(!config.getBoolean("prop1", false));
-    assertTrue(!config.getBoolean("prop5"));
-    assertTrue(!config.getBoolean("prop5", true));
+    assertFalse(config.getBoolean("prop1", false));
+    assertFalse(config.getBoolean("prop5"));
+    assertFalse(config.getBoolean("prop5", true));
     assertEquals(12, config.getInt("prop1"));
     assertEquals(42, config.getInt("propnot", 42));
     assertEquals(123, config.getInt("prop2", 123));
@@ -94,7 +94,7 @@ public class TestConfiguration extends LockssTestCase {
     } catch (Configuration.InvalidParam e) {
     }
     assertTrue(config.containsKey("prop1"));
-    assertTrue(! config.containsKey("propnot"));
+    assertFalse( config.containsKey("propnot"));
   }
 
   public void testLoadList() throws IOException {

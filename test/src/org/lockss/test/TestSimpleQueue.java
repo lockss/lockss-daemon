@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimpleQueue.java,v 1.6 2002-12-30 20:39:40 tal Exp $
+ * $Id: TestSimpleQueue.java,v 1.7 2003-03-04 01:02:05 aalto Exp $
  */
 
 /*
@@ -98,7 +98,7 @@ public class TestSimpleQueue extends LockssTestCase {
   public void testNotEmpty() {
     SimpleQueue.Fifo fifo = new SimpleQueue.Fifo();
     fifo.put(O1);
-    assertTrue(!fifo.isEmpty());
+    assertFalse(fifo.isEmpty());
     Interrupter intr = null;
     try {
       intr = interruptMeIn(TIMEOUT_SHOULDNT, true);

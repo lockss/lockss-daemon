@@ -80,6 +80,6 @@ public class TestMailTarget extends LockssTestCase {
     assertEquals(24, target.smtpPort);
     assertEquals("target2@t.com", target.toAddr);
     assertEquals("source2@s.com", target.fromAddr);
-    assertTrue(!target.emailEnabled);
+    assertFalse(target.emailEnabled);
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeStateImpl.java,v 1.5 2003-02-24 22:13:42 claire Exp $
+ * $Id: TestNodeStateImpl.java,v 1.6 2003-03-04 01:02:05 aalto Exp $
  */
 
 /*
@@ -70,7 +70,7 @@ public class TestNodeStateImpl
 
   public void testGetPollHistories() {
     Iterator pollIt = state.getPollHistories();
-    assertTrue(!pollIt.hasNext());
+    assertFalse(pollIt.hasNext());
 
     PollHistory history = new PollHistory(1, "test1lwr", "test1upr", 0, 0, 0, null);
     state.pollHistories = new ArrayList(1);
@@ -81,7 +81,7 @@ public class TestNodeStateImpl
     assertEquals(1, history.type);
     assertEquals("test1lwr", history.lwrBound);
     assertEquals("test1upr", history.uprBound);
-    assertTrue(!pollIt.hasNext());
+    assertFalse(pollIt.hasNext());
 
     history = new PollHistory(2, "test2lwr", "test2upr", 0, 0, 0, null);
     state.pollHistories.add(history);
@@ -93,12 +93,12 @@ public class TestNodeStateImpl
     assertEquals(2, history.type);
     assertEquals("test2lwr", history.lwrBound);
     assertEquals("test2upr", history.uprBound);
-    assertTrue(!pollIt.hasNext());
+    assertFalse(pollIt.hasNext());
   }
 
   public void testCloseActivePoll() {
     Iterator pollIt = state.getPollHistories();
-    assertTrue(!pollIt.hasNext());
+    assertFalse(pollIt.hasNext());
 
     PollHistory history = new PollHistory(1, "lwr1", "upr1", 0, 0, 0, null);
     state.closeActivePoll(history);
@@ -106,7 +106,7 @@ public class TestNodeStateImpl
     pollIt = state.getActivePolls();
     while (pollIt.hasNext()) {
       PollState pollState = (PollState) pollIt.next();
-      assertTrue(!pollState.equals(history));
+      assertNotEquals(pollState, history);
     }
 
     pollIt = state.getPollHistories();
@@ -115,7 +115,7 @@ public class TestNodeStateImpl
     assertEquals(1, history.type);
     assertEquals("lwr1", history.lwrBound);
     assertEquals("upr1", history.uprBound);
-    assertTrue(!pollIt.hasNext());
+    assertFalse(pollIt.hasNext());
   }
 
   public void testGetActivePolls() {
@@ -140,7 +140,7 @@ public class TestNodeStateImpl
     Vector childV = new Vector();
     mcus.setFlatIterator(childV.iterator());
     state = new NodeStateImpl(mcus, null, null, null);
-    assertTrue(!state.isInternalNode());
+    assertFalse(state.isInternalNode());
 
     childV.addElement("test string");
     mcus.setFlatIterator(childV.iterator());

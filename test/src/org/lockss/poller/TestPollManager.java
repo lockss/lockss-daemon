@@ -237,17 +237,17 @@ public class TestPollManager extends LockssTestCase {
       // we should now be active
       assertTrue(pollmanager.isPollActive(p1.m_key));
       // we should not be closed
-      assertTrue(!pollmanager.isPollClosed(p1.m_key));
+      assertFalse(pollmanager.isPollClosed(p1.m_key));
 
 
       pollmanager.closeThePoll(p1.m_key);
       // we should not be active
-      assertTrue(!pollmanager.isPollActive(p1.m_key));
+      assertFalse(pollmanager.isPollActive(p1.m_key));
       // we should now be closed
       assertTrue(pollmanager.isPollClosed(p1.m_key));
       // we should reject an attempt to handle a packet with this key
       pollmanager.handleMessage(testmsg[0]);
-      assertTrue(!pollmanager.isPollActive(p1.m_key));
+      assertFalse(pollmanager.isPollActive(p1.m_key));
 
    }
     catch (IOException ex) {
@@ -270,11 +270,11 @@ public class TestPollManager extends LockssTestCase {
     // check our suspend
     pollmanager.suspendPoll(p1.m_key);
     assertTrue(pollmanager.isPollSuspended(p1.m_key));
-    assertTrue(!pollmanager.isPollClosed(p1.m_key));
+    assertFalse(pollmanager.isPollClosed(p1.m_key));
 
     // now we resume...
     pollmanager.resumePoll(false, p1.m_key);
-    assertTrue(!pollmanager.isPollSuspended(p1.m_key));
+    assertFalse(pollmanager.isPollSuspended(p1.m_key));
   }
 
 

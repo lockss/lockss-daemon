@@ -1,5 +1,5 @@
 /*
- * $Id: TestSmtpMailer.java,v 1.1 2003-01-07 02:06:31 aalto Exp $
+ * $Id: TestSmtpMailer.java,v 1.2 2003-03-04 01:02:05 aalto Exp $
  */
 
 /*
@@ -84,7 +84,7 @@ public class TestSmtpMailer extends LockssTestCase {
 
     assertTrue(mailer.checkReply("220"));
     System.err.println("Ignore the following error: ");
-    assertTrue(!mailer.checkReply("220"));
+    assertFalse(mailer.checkReply("220"));
     assertTrue(mailer.checkReply("354"));
   }
 

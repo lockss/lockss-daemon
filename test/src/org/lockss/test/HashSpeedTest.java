@@ -1,5 +1,5 @@
 /*
- * $Id: HashSpeedTest.java,v 1.6 2003-03-04 00:16:12 aalto Exp $
+ * $Id: HashSpeedTest.java,v 1.7 2003-03-04 01:02:05 aalto Exp $
  */
 
 /*
@@ -89,9 +89,9 @@ public class HashSpeedTest extends LockssTestCase {
     String s2 = SystemMetrics.PARAM_HASH_TEST_BYTE_STEP + "=" + byteStep;
     String s3 = LockssRepositoryServiceImpl.PARAM_CACHE_LOCATION + "=" +
         tempDirPath;
-    TestConfiguration.setCurrentConfigFromUrlList(ListUtil.list(FileUtil.urlOfString(s),
-      FileUtil.urlOfString(s2), FileUtil.urlOfString(s3)));
-    theDaemon.getLockssRepository(new MockArchivalUnit());
+    String configStr = s + "\n" + s2 + "\n" + s3;
+    TestConfiguration.setCurrentConfigFromString(configStr);
+    theDaemon.getLockssRepository(sau);
   }
 
   public void testRunSelf() throws Exception {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericContentHasher.java,v 1.11 2003-02-26 02:40:56 troberts Exp $
+ * $Id: TestGenericContentHasher.java,v 1.12 2003-03-04 01:02:06 aalto Exp $
  */
 
 /*
@@ -110,7 +110,7 @@ public class TestGenericContentHasher extends LockssTestCase {
     int bytesHashed = 0;
     int bytesExpected = bytes.length;
     while (bytesHashed < bytesExpected) {
-      assertTrue(!hasher.finished());
+      assertFalse(hasher.finished());
       bytesHashed += hasher.hashStep(bytesExpected);
     }
     assertEquals(0, hasher.hashStep(1));
@@ -120,7 +120,7 @@ public class TestGenericContentHasher extends LockssTestCase {
     }
   }
 
-  public void testHashSingleFileBigContent() 
+  public void testHashSingleFileBigContent()
       throws IOException, FileNotFoundException {
     StringBuffer sb = new StringBuffer();
     for (int ix=0; ix<1000; ix++) {
@@ -144,7 +144,7 @@ public class TestGenericContentHasher extends LockssTestCase {
     int bytesHashed = 0;
     int bytesExpected = bytes.length;
     while (bytesHashed < bytesExpected) {
-      assertTrue(!hasher.finished());
+      assertFalse(hasher.finished());
       bytesHashed += hasher.hashStep(bytesExpected);
     }
     assertEquals(0, hasher.hashStep(1));
@@ -170,7 +170,7 @@ public class TestGenericContentHasher extends LockssTestCase {
     assertTrue(hasher.finished());
     assertTrue(is.isClosed());
   }
-  
+
   public void testISReturn0() throws IOException {
     String content = "blah;blah;blah";
     String url = "http://www.example.com";
@@ -178,7 +178,7 @@ public class TestGenericContentHasher extends LockssTestCase {
     MockInputStream is = new MockInputStream();
     is.setContent(content);
     cu.setInputStream(is);
-    
+
 
     Vector files = new Vector();
     files.add(cu);
@@ -194,7 +194,7 @@ public class TestGenericContentHasher extends LockssTestCase {
 
     int bytesLeftToHash = expectedBytes.length;
     while (bytesLeftToHash > 0) {
-      assertTrue(!hasher.finished());
+      assertFalse(hasher.finished());
       int bytesHashed = hasher.hashStep(2);
       assertTrue(bytesHashed >= 0);
       bytesLeftToHash -= bytesHashed;
@@ -314,8 +314,8 @@ public class TestGenericContentHasher extends LockssTestCase {
     }
     return returnArr;
   }
-		       
-  private CachedUrl cachedUrlSetNodeToCachedUrl(CachedUrlSetNode cusn) 
+
+  private CachedUrl cachedUrlSetNodeToCachedUrl(CachedUrlSetNode cusn)
       throws IOException {
     switch (cusn.getType()) {
       case CachedUrlSetNode.TYPE_CACHED_URL_SET:

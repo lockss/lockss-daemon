@@ -207,13 +207,13 @@ public class TestPoll extends LockssTestCase {
 
     assertEquals(3, np.m_tally.numAgree);
     assertEquals(5, np.m_tally.numDisagree);
-    assertTrue(!np.m_tally.didWinPoll());
+    assertFalse(np.m_tally.didWinPoll());
 
     // build a master list
     np.buildPollLists(np.m_tally.pollVotes.iterator());
 
     // these should be different since we lost the poll
-    assertTrue(!Arrays.equals(np.m_tally.localEntries, np.m_tally.votedEntries));
+    assertFalse(Arrays.equals(np.m_tally.localEntries, np.m_tally.votedEntries));
 
     // the expected "correct" set is in our disagree msg
     assertTrue(Arrays.equals(disagree_entries, np.m_tally.votedEntries));

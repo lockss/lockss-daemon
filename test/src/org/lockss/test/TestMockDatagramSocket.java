@@ -50,9 +50,9 @@ public class TestMockDatagramSocket extends LockssTestCase{
       se.printStackTrace();
     }
   }
-  
+
   public void testIsClosedWhenNotClosed(){
-    assertTrue(!ds.isClosed());
+    assertFalse(ds.isClosed());
   }
 
   public void testIsClosedWhenIsClosed(){
@@ -70,7 +70,7 @@ public class TestMockDatagramSocket extends LockssTestCase{
     byte[] data = dataStr.getBytes();
     InetAddress addr = InetAddress.getByName("127.0.0.1");
     int port = 1234;
-    DatagramPacket sendPacket = 
+    DatagramPacket sendPacket =
       new DatagramPacket(data, data.length, addr, port);
     ds.send(sendPacket);
     Vector packets = ds.getSentPackets();
@@ -86,7 +86,7 @@ public class TestMockDatagramSocket extends LockssTestCase{
       byte[] data = dataStr.getBytes();
       InetAddress addr = InetAddress.getByName("127.0.0.1");
       int port = 1234;
-      DatagramPacket sendPacket = 
+      DatagramPacket sendPacket =
 	new DatagramPacket(data, data.length, addr, port);
       sentPackets.add(sendPacket);
       ds.send(sendPacket);
@@ -94,11 +94,11 @@ public class TestMockDatagramSocket extends LockssTestCase{
     Vector packets = ds.getSentPackets();
     assertEquals(numPackets, packets.size());
     for (int ix=0; ix<numPackets; ix++){
-      verifyEqual((DatagramPacket)sentPackets.elementAt(ix), 
+      verifyEqual((DatagramPacket)sentPackets.elementAt(ix),
 		  (DatagramPacket)packets.elementAt(ix));
     }
   }
-  
+
   public void testReceiveWithOutSetPacketsWaits() {
     DatagramPacket packet = createEmptyPacket(10);
     Interrupter intr = null;
@@ -118,53 +118,53 @@ public class TestMockDatagramSocket extends LockssTestCase{
 
   public void testReceivePacketGetsOnePacketSameSize() throws Exception{
     byte data[] = "Test data".getBytes();
-    DatagramPacket packet = 
-      new DatagramPacket(data, data.length, 
+    DatagramPacket packet =
+      new DatagramPacket(data, data.length,
 			 InetAddress.getByName("127.0.0.1"), 1234);
     ds.addToReceiveQueue(packet);
-    
+
     DatagramPacket receivedPacket = createEmptyPacket(data.length);
     ds.receive(receivedPacket);
     verifyEqual(packet, receivedPacket);
   }
-  
+
   public void testReceivePacketHandlesTruncation() throws Exception{
     byte data[] = "Test data".getBytes();
-    DatagramPacket packet = 
-      new DatagramPacket(data, data.length, 
+    DatagramPacket packet =
+      new DatagramPacket(data, data.length,
 			 InetAddress.getByName("127.0.0.1"), 1234);
     ds.addToReceiveQueue(packet);
-    
+
     DatagramPacket receivedPacket = createEmptyPacket(data.length-1);
     ds.receive(receivedPacket);
     assertEquals(data.length-1, receivedPacket.getLength());
     verifyEqualUptoTruncation(packet, receivedPacket);
   }
-  
+
   public void testReceivePacketGetsMultiPackets() throws Exception{
     int numPackets = 5;
     Vector queuedPackets = new Vector();
     for (int ix = 0; ix <= numPackets; ix++){
       String dataStr = ix+"Test data"+ix;
       byte data[] = dataStr.getBytes();
-      DatagramPacket packet = 
-	new DatagramPacket(data, data.length, 
+      DatagramPacket packet =
+	new DatagramPacket(data, data.length,
 			   InetAddress.getByName("127.0.0.1"), 1234);
       ds.addToReceiveQueue(packet);
       queuedPackets.add(packet);
     }
-    
+
     for (int ix = 0; ix <= numPackets; ix++){
-      DatagramPacket expectedPacket = 
+      DatagramPacket expectedPacket =
 	(DatagramPacket)queuedPackets.elementAt(ix);
-      DatagramPacket receivedPacket = 
+      DatagramPacket receivedPacket =
 	createEmptyPacket(expectedPacket.getLength());
       ds.receive(receivedPacket);
       verifyEqual(receivedPacket, expectedPacket);
     }
   }
-  
-		 
+
+
 
   private void verifyEqual(DatagramPacket pac1, DatagramPacket pac2){
     assertEquals(pac1.getPort(), pac2.getPort());
@@ -177,7 +177,7 @@ public class TestMockDatagramSocket extends LockssTestCase{
     }
   }
 
-  private void verifyEqualUptoTruncation(DatagramPacket truncatedPac, 
+  private void verifyEqualUptoTruncation(DatagramPacket truncatedPac,
 					 DatagramPacket fullPac){
     assertEquals(truncatedPac.getPort(), fullPac.getPort());
     assertEquals(truncatedPac.getAddress(), fullPac.getAddress());
@@ -193,5 +193,5 @@ public class TestMockDatagramSocket extends LockssTestCase{
     DatagramPacket packet = new DatagramPacket(data, length);
     return packet;
   }
-    
+
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.16 2003-03-04 00:16:12 aalto Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.17 2003-03-04 01:02:05 aalto Exp $
  */
 
 /*
@@ -104,9 +104,9 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     tempDirPath = RepositoryLocationUtil.mapUrlToFileLocation(tempDirPath,
         "http://www.example.com/testDir/branch1/leaf1");
     File testFile = new File(tempDirPath + "/leaf1.content/leaf1.1");
-    assertTrue(!testFile.exists());
+    assertFalse(testFile.exists());
     testFile = new File(tempDirPath + "/leaf1.content/leaf1.props.1");
-    assertTrue(!testFile.exists());
+    assertFalse(testFile.exists());
 
     leaf.makeNewVersion();
     OutputStream os = leaf.getNewOutputStream();
@@ -186,7 +186,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
   public void testIllegalOperations() throws Exception {
     RepositoryNode leaf =
       repo.createNewNode("http://www.example.com/testDir/test.cache");
-    assertTrue(!leaf.hasContent());
+    assertFalse(leaf.hasContent());
     try {
       leaf.getCurrentVersion();
       fail("Cannot get current version if no content.");
@@ -245,7 +245,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
   public void testMakeNewCache() throws Exception {
     RepositoryNode leaf =
       repo.createNewNode("http://www.example.com/testDir/test.cache");
-    assertTrue(!leaf.hasContent());
+    assertFalse(leaf.hasContent());
     try {
       leaf.getCurrentVersion();
       fail("Cannot get current version if no content.");
@@ -340,10 +340,10 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     RepositoryNode leaf =
         createLeaf("http://www.example.com/test1", "test stream", null);
     assertTrue(leaf.hasContent());
-    assertTrue(!leaf.isInactive());
+    assertFalse(leaf.isInactive());
     assertEquals(1, leaf.getCurrentVersion());
     leaf.deactivate();
-    assertTrue(!leaf.hasContent());
+    assertFalse(leaf.hasContent());
     assertTrue(leaf.isInactive());
     assertEquals(RepositoryNodeImpl.INACTIVE_VERSION, leaf.getCurrentVersion());
   }
@@ -380,7 +380,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertEquals(RepositoryNodeImpl.INACTIVE_VERSION, leaf.getCurrentVersion());
 
     leaf.restoreLastVersion();
-    assertTrue(!leaf.isInactive());
+    assertFalse(leaf.isInactive());
     assertEquals(1, leaf.getCurrentVersion());
     String resultStr = getLeafContent(leaf);
     assertEquals("test stream", resultStr);
@@ -399,7 +399,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     leaf.setNewProperties(props);
     writeToLeaf(leaf, "test stream 2");
     leaf.sealNewVersion();
-    assertTrue(!leaf.isInactive());
+    assertFalse(leaf.isInactive());
     assertEquals(2, leaf.getCurrentVersion());
     String resultStr = getLeafContent(leaf);
     assertEquals("test stream 2", resultStr);

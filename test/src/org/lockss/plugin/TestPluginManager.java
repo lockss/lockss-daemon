@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.7 2003-03-04 00:16:12 aalto Exp $
+ * $Id: TestPluginManager.java,v 1.8 2003-03-04 01:02:06 aalto Exp $
  */
 
 /*
@@ -105,7 +105,7 @@ public class TestPluginManager extends LockssTestCase {
 
   public void testEnsurePluginLoaded() throws Exception {
     // non-existent class shouldn't load
-    assertTrue(!mgr.ensurePluginLoaded("org|lockss|NoSuchClass"));
+    assertFalse(mgr.ensurePluginLoaded("org|lockss|NoSuchClass"));
     // MockPlugin should load
     assertTrue(mgr.ensurePluginLoaded(mockPlugId));
     MockPlugin mpi = (MockPlugin)mgr.getPlugin(mockPlugId);
