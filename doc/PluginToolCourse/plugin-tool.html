@@ -45,16 +45,28 @@ published content to collect.&nbsp; Other information includes the
 publisher manifest page, which tells the crawler where to start,&nbsp;
 and the crawl interval, which tells it how often to start.&nbsp; We use
 examples of some real journals to show how you find this information
-from t he journal's web site, how you feed it into the tool to generate
+from the journal's web site, how you feed it into the tool to generate
 a suitable plugin, and how you test the plugin to be sure you have the
 information correct.<br>
 <h4>Obtaining and Running The Tool</h4>
-The plugin tool is available in two versions: <a href="plugintool.tgz">plugintool.tgz</a>
+The plugin tool is available in two ways, by download or on CD:<br>
+<ul>
+  <li>You can download two versions: <a href="plugintool.tgz">plugintool.tgz</a>
 for Unix and <a href="plugintool.zip">plugintool.zip</a> for Windows.
 Download and unpack the appropriate one into a directory (folder) and
-invoke the script in that directory that runs the tool, runtool for
-Unix and runtool.bat for Windows. You may have to set the JAVA_HOME
-environment variable to point to an installed version of Java 1.4.<br>
+invoke the script in that directory that runs the tool, <span
+ style="font-weight: bold;">runtool</span> for
+Unix and <span style="font-weight: bold;">runtool.bat</span> for
+Windows. You may have to set the JAVA_HOME
+environment variable to point to an installed version of Java 1.4.</li>
+  <li>The CD contains versions for Windows and Linux/x86:</li>
+  <ul>
+    <li>On Windows the CD will automatically run the tool when it is
+inserted.</li>
+    <li>On Linux/x86 you should navigate to the linux folder on the CD
+and click on the runtool icon.</li>
+  </ul>
+</ul>
 <ul>
 </ul>
 <h4>Before You Start Clicking<br>
@@ -670,34 +682,105 @@ now including and excluding the correct files. Note that among the
 files included are programs for Windows and the Mac, .gif and .jpg
 images and .wrl files.<br>
 <h4>Article-ID Journal Structure</h4>
-<br>
 XXX need example - words without borders isn't a good example XXX<br>
 <h4>Archival Unit Design</h4>
-Its a year unless the journal has volumes in which case its a
-volume.&nbsp; If its a year the manifest URL should be
-&lt;base_url&gt;lockss-&lt;year&gt;.html,&nbsp; if its a volume it
-should be &lt;base_url&gt;lockss-volume&lt;volume&gt;.html NB just a
-suggestion.&nbsp; Work with publisher's existing division.&nbsp; Goal
-is manageable units not more that a year at a time.<br>
-<br>
-Platforms with multiple journals.&nbsp; E.q. Project Muse. Two cases:<br>
-HW - different base_url<br>
-Muse - journal directory<br>
-<br>
-XXX need an example of a complex AU design XXX<br>
-XXX what principles to apply and what parameters to choose? XXX<br>
+So far, we've assumed that the publisher manifest file is a given. In
+practice, its typically the result of a negotiation between the library
+responsible for selecting a journal and generating the plugin, and the
+publisher. The questions that arise are two-fold:<br>
+<ul>
+  <li>How to divide up the publisher's content into Archival Units that
+are a manageable size, and which don't last too long? As a rule of
+thumb, if the publisher divides the journal into volumes, each volume
+should be an AU. Otherwise, each year of the journal should be an AU.</li>
+  <li>What to put in the publisher manifest page, and wher to put it?
+As a rule of thumb, if each issue of the journal has a table of
+contents page, then the publisher manifest page should point to the
+table of contents page for each issue that makes up the AU (volume or
+year). Otherwise, if there is a single table of contents page for all
+issues in a volume or year pointing directly to their contents, the
+manifest page should do the same.</li>
+</ul>
+Many journals are published using a sophisticated platform.&nbsp; In
+these cases a single plugin will generally work for all journals hosted
+on the publishing platform. To do this, the configuration parameters
+must be sufficient to distinguish between the AUs of the multiple
+journals on the platform. There are two common cases:<br>
+<ul>
+  <li>Each journal hosted on HighWire Press has its own domain name and
+thus its own <span style="font-weight: bold;">base_url</span>. For
+example, a typical article in the <span style="font-style: italic;">British
+Medical Journal</span> has a URL like <a
+ href="http://bmj.bmjjournals.com/cgi/content/full/328/7453/1405">http://bmj.bmjjournals.com/cgi/content/full/328/7453/1405</a>
+in which the base_url is <span style="font-weight: bold;">http://bmj.bmjjournals.com/</span>.
+A typical article in <span style="font-style: italic;">Proceedings of
+the National Academy of Sciences</span> has a URL like <a
+ href="http://www.pnas.org/cgi/content/full/97/12/6267">http://www.pnas.org/cgi/content/full/97/12/6267</a>
+in which the base_url is <span style="font-weight: bold;">http://www.pnas.org/</span>.
+Both journals are hosted in HighWire Press,&nbsp; as can be seen from
+the remainder of the URLs, which have the structure <span
+ style="font-weight: bold;">cgi/content/full/&lt;volume&gt;/&lt;issue&gt;/&lt;article-id&gt;</span>.
+In this case the confguration parameters needed would be <span
+ style="font-weight: bold;">base_url</span> and <span
+ style="font-weight: bold;">volume</span>.<br>
+  </li>
+  <li>Each journal hosted on Project Muse has a subdirectory of the
+single Project Muse site.&nbsp; For example, a typical article in the
+American Journal of Mathematics has a URL like <a
+ href="http://muse.jhu.edu/journals/american_journal_of_mathematics/v119/119.3li.pdf">http://muse.jhu.edu/journals/american_journal_of_mathematics/v119/119.3li.pdf</a>
+in which the <span style="font-weight: bold;">base_url</span> is <span
+ style="font-weight: bold;">http://muse.jhu.edu/journals/</span> and
+the <span style="font-weight: bold;">journal_dir</span> is <span
+ style="font-weight: bold;">american_journal_of_mathematics/</span>. A
+typical article in Postmodern Culture has a URL like <a
+ href="http://muse.jhu.edu/journals/pmc/v010/10.3chan.html">http://muse.jhu.edu/journals/pmc/v010/10.3chan.html</a>
+in which the <span style="font-weight: bold;">base_url</span> is <span
+ style="font-weight: bold;">http://muse.jhu.edu/journals/</span> and
+the <span style="font-weight: bold;">journal_dir</span> is <span
+ style="font-weight: bold;">pmc/</span>. Both are hosted on Project
+Muse, as can be seen from the shared <span style="font-weight: bold;">base_url</span>
+and the remainder of the URLs, which start with <span
+ style="font-weight: bold;">v&lt;volume&gt;/&lt;volume&gt;.&lt;issue&gt;</span>.
+Ideally, the configuration parameters needed should be <span
+ style="font-weight: bold;">journal_dir</span> and <span
+ style="font-weight: bold;">volume</span>, but for internal reasons the
+daemon requires <span style="font-weight: bold;">base_url</span> to be
+a configuration parameter in all cases.<br>
+  </li>
+</ul>
 <h4>Crawl Rule Design</h4>
-Guidelines:<br>
-- If you have a good tree structure work with it to exclude everything
-not under issue directory example EMLS<br>
-- If flat but not parameter include everything explicitly examplke
-Disputatio<br>
-- If parameter includes vol or year exclude everything that doesn't
-match it. XXX need example - BePress?<br>
-XXX need an example of complex crawl rules and principles behind them
-XXX<br>
-<br>
-Your Own Example<br>
+In the examples above we have seen two different approaches to
+designing crawl rules; <span style="font-style: italic;">inclusionary</span>
+rules which primarily list the URLs that should be fetched and exclude
+everything else, and <span style="font-style: italic;">exclusionary</span>
+rules that primarily list patterns for URLs that should not be fetched
+and fetch everything else. Which approach should you choose?<br>
+<ul>
+  <li>If the journal has a deep URL structure with a separate directory
+for each volume or year, write rules that exclude everything not under
+the appropriate volume or year directory. For example, if the URL looks
+like <a
+ href="http://bmj.bmjjournals.com/cgi/content/full/328/7453/1405">http://bmj.bmjjournals.com/cgi/content/full/328/7453/1405</a>
+then excluding everything that doesn't match&nbsp; <span
+ style="font-weight: bold;">base_url</span> followed by <span
+ style="font-weight: bold;">cgi/content/full</span> followed by <span
+ style="font-weight: bold;">volume</span> is a good approach.</li>
+  <li>If the journal uses parameters in the URL and they include the
+volume or year, write rules that exclude everything that doesn't have
+the appropriate parameters. XXX need an example.</li>
+  <li>If the journal has a flat structure, with everything in a single
+directory, write rules that include the files that are actually needed.
+For example, if the URL looks like <a
+ href="http://disputatio.com/articles/016-3.pdf">http://disputatio.com/articles/016-3.pdf</a>
+then including everything that matches <span style="font-weight: bold;">base_url</span>
+followed by <span style="font-weight: bold;">articles/</span> followed
+by a number followed by <span style="font-weight: bold;">-</span>
+followed by a number followed by anything is a good approach.</li>
+  <li>If the journal uses parameters in the URL and they don't include
+the volume or year, write rules that include the files that are
+actually needed. XXX need an example.</li>
+</ul>
+<h4>Your Own Example</h4>
 <br>
 XXX<br>
 <h4>What are the plugin generator's limits?</h4>
