@@ -1,5 +1,5 @@
 /*
- * $Id: GenericContentHasher.java,v 1.10 2003-03-18 01:32:57 troberts Exp $
+ * $Id: GenericContentHasher.java,v 1.11 2003-04-02 20:00:07 troberts Exp $
  */
 
 /*
@@ -91,7 +91,7 @@ public class GenericContentHasher extends GenericHasher {
 
   private int hashName(CachedUrl cu, int numBytes) {
     int totalHashed = 0;
-    log.debug("Hashing name");
+    log.debug3("Hashing name");
     if (nameBytes == null) {
       String url = cu.getUrl();
       StringBuffer sb = new StringBuffer(url.length());
@@ -99,7 +99,7 @@ public class GenericContentHasher extends GenericHasher {
       String nameStr = sb.toString();
       nameBytes = nameStr.getBytes();
       nameIdx = 0;
-      log.debug("got new name to hash: "+nameStr);
+      log.debug3("got new name to hash: "+nameStr);
 
       if (cu.hasContent()) {
 	byte[] sizeBytes = cu.getContentSize();
@@ -120,7 +120,7 @@ public class GenericContentHasher extends GenericHasher {
     digest.update(nameBytes, nameIdx, len);
     nameIdx += len;
     if (nameIdx >= nameBytes.length) {
-      log.debug("done hashing name: "+cu);
+      log.debug3("done hashing name: "+cu);
       hashState = HASHING_CONTENT;
       nameBytes = null;
     }
@@ -131,13 +131,13 @@ public class GenericContentHasher extends GenericHasher {
 
   private int hashContent(CachedUrl cu, int numBytes) throws IOException {
     int totalHashed = 0;
-    log.debug("hashing content");
+    log.debug3("hashing content");
     if(is == null) {
       if (cu.hasContent()) {
-	log.debug("opening "+cu+" for hashing");
+	log.debug3("opening "+cu+" for hashing");
 	is = cu.openForHashing();
       } else {
-	log.debug(cu+" has no content, not hashing");
+	log.debug3(cu+" has no content, not hashing");
 	hashState = HASHING_NAME;
 	shouldGetNextElement = true;
 	return totalHashed;
@@ -150,7 +150,7 @@ public class GenericContentHasher extends GenericHasher {
       digest.update(bytes, 0, bytesHashed);
     } 
     if (bytesHashed != 0 && bytesHashed < bytes.length) {
-      log.debug("done hashing content: "+cu);
+      log.debug3("done hashing content: "+cu);
       hashState = HASHING_NAME;
       shouldGetNextElement = true;
       is.close();
