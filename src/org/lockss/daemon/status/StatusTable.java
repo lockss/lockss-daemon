@@ -1,5 +1,5 @@
 /*
- * $Id: StatusTable.java,v 1.27 2004-01-20 18:22:51 tlipkis Exp $
+ * $Id: StatusTable.java,v 1.28 2004-04-29 10:11:39 tlipkis Exp $
  */
 
 /*
@@ -44,6 +44,8 @@ public class StatusTable {
    * before the row. */
   public static Object ROW_SEPARATOR = new Object();
 
+  public static final int OPTION_NO_ROWS = 1;
+
   private String name;
   private String key;
   private String title = null;
@@ -53,7 +55,8 @@ public class StatusTable {
   private List defaultSortRules;
   private static Logger logger = Logger.getLogger("StatusTable");
   private List summaryInfo;
-
+  private BitSet options = new BitSet();
+  private long cacheLife = -1;
 
   /**
    * @param name String representing table name
@@ -130,6 +133,14 @@ public class StatusTable {
   }
 
   /**
+   * Returns the options for this table
+   * @return BitSet in which to set and test options
+   */
+  public BitSet getOptions() {
+    return options;
+  }
+
+  /**
    * Returns a List of {@link SummaryInfo} objects for this table
    * @return List of {@link SummaryInfo} objects for this table
    */
@@ -173,6 +184,9 @@ public class StatusTable {
    * in their default sort order 
    */
   public List getSortedRows() {
+    if (rows == null) {
+      return Collections.EMPTY_LIST;
+    }
     if (defaultSortRules == null) {
       defaultSortRules = makeDefaultSortRules();
     }      
@@ -421,41 +435,11 @@ public class StatusTable {
 	// DisplayedValue.  We want to compare the actual value.
 	Object valA = getActualValue(rowA.get(colName));
 	Object valB = getActualValue(rowB.get(colName));
-	
-	switch (sortRule.getColumnType()) {
-	case ColumnDescriptor.TYPE_IP_ADDRESS:
-	  returnVal = compareIPAddrs((IPAddr)valA, (IPAddr)valB);
-	  break;
-	case ColumnDescriptor.TYPE_INT:
-	case ColumnDescriptor.TYPE_FLOAT:
-	case ColumnDescriptor.TYPE_PERCENT:
-	case ColumnDescriptor.TYPE_TIME_INTERVAL:
-	case ColumnDescriptor.TYPE_STRING:
-	default: //if we don't know the type, assume comparable
-	  returnVal = compareHandlingNulls((Comparable)valA, (Comparable)valB);
-	  break;
-	}
-	returnVal = sortRule.sortAscending ? returnVal : -returnVal;
+	returnVal = sortRule.compare(valA, valB);
       }
       return returnVal;
     }
     
-    private int compareIPAddrs(IPAddr addr1, IPAddr addr2) {
-      return (addr1.getHostAddress().compareTo(addr2.getHostAddress()));
-    }
-
-    private static int compareHandlingNulls(Comparable val1,
-					    Comparable val2) {
-      int returnVal = 0;
-      if (val1 == null) {
-	returnVal = val2 == null ? 0 : -1;
-      } else if (val2 == null) {
-	returnVal = 1;
-      } else {
-	returnVal = val1.compareTo(val2);
-      }
-      return returnVal;
-    }
   }
 
   /**
@@ -464,6 +448,7 @@ public class StatusTable {
   public static class SortRule {
     String columnName;
     boolean sortAscending;
+    Comparator comparator = null;
     int columnType = -1;
     
     public SortRule(String columnName, boolean sortAscending) {
@@ -475,6 +460,13 @@ public class StatusTable {
       this(columnName, sortAscending);
       this.columnType = columnType;
     }
+
+    public SortRule(String columnName, Comparator comparator) {
+      this.columnName = columnName;
+      this.comparator = comparator;
+      this.sortAscending = true;
+    }
+
     /**
      * @return name of the field to sort on
      */
@@ -514,6 +506,44 @@ public class StatusTable {
 //       logger.warning("Unknown type for sort column: "+ columnName);
       columnType = ColumnDescriptor.TYPE_INT;
     }
-  }
 
+    public int compare(Object valA, Object valB) {
+      int returnVal = 0;
+      if (comparator != null) {
+	returnVal = comparator.compare(valA, valB);
+      } else {
+	switch (getColumnType()) {
+	case ColumnDescriptor.TYPE_IP_ADDRESS:
+	  returnVal = compareIPAddrs((IPAddr)valA, (IPAddr)valB);
+	  break;
+	case ColumnDescriptor.TYPE_INT:
+	case ColumnDescriptor.TYPE_FLOAT:
+	case ColumnDescriptor.TYPE_PERCENT:
+	case ColumnDescriptor.TYPE_TIME_INTERVAL:
+	case ColumnDescriptor.TYPE_STRING:
+	default: //if we don't know the type, assume comparable
+	  returnVal = compareHandlingNulls((Comparable)valA, (Comparable)valB);
+	  break;
+	}
+      }
+      return sortAscending ? returnVal : -returnVal;
+    }
+
+    private static int compareIPAddrs(IPAddr addr1, IPAddr addr2) {
+      return (addr1.getHostAddress().compareTo(addr2.getHostAddress()));
+    }
+
+    private static int compareHandlingNulls(Comparable val1,
+					    Comparable val2) {
+      int returnVal = 0;
+      if (val1 == null) {
+	returnVal = val2 == null ? 0 : -1;
+      } else if (val2 == null) {
+	returnVal = 1;
+      } else {
+	returnVal = val1.compareTo(val2);
+      }
+      return returnVal;
+    }
+  }
 }
