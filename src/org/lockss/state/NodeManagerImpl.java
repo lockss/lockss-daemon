@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.25 2003-02-11 23:57:01 claire Exp $
+ * $Id: NodeManagerImpl.java,v 1.26 2003-02-12 23:57:37 aalto Exp $
  */
 
 /*
@@ -53,6 +53,14 @@ import java.net.URL;
  * Implementation of the NodeManager.
  */
 public class NodeManagerImpl implements NodeManager, LockssManager {
+  /**
+   * Configuration parameter name for duration, in ms, for which the treewalk
+   * test should run.
+   */
+  public static final String PARAM_TREEWALK_TEST_DURATION =
+      Configuration.PREFIX + "treewalk.test.duration";
+  static final int DEFAULT_TREEWALK_TEST_DURATION = 1000;
+
   private static LockssDaemon theDaemon;
   private static NodeManager theManager = null;
   private static NodeManager nodeManager = null;
@@ -227,27 +235,29 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
   public long getEstimatedTreeWalkDuration() {
     Long estimateL = (Long)auEstimateMap.get(managerAu);
     if (estimateL==null) {
-      // check size (node count) of tree
-      int nodeCount = nodeMap.size();
       // estimate via short walk
       // this is not a fake walk; it functionally walks part of the tree
+      long timeTaken = 0;
+      int nodesWalked = 0;
+      int walkDuration =
+          Configuration.getIntParam(PARAM_TREEWALK_TEST_DURATION,
+                                    DEFAULT_TREEWALK_TEST_DURATION);
       long startTime = TimeBase.nowMs();
       Iterator nodesIt = nodeMap.values().iterator();
-      String deleteSub = null;
-      int NUMBER_OF_NODES_TO_TEST = 200; //XXX fix
-      int numberNodesTested = 0;
-      //XXX do for set time?
-      for (int ii=0; ii<NUMBER_OF_NODES_TO_TEST; ii++) {
-        if (!nodesIt.hasNext()) {
-          break;
-        }
+      Deadline deadline = Deadline.in(walkDuration);
+      while (!deadline.expired() && nodesIt.hasNext()) {
         walkNodeState((NodeState)nodesIt.next());
-        numberNodesTested++;
+        nodesWalked++;
       }
-      long elapsedTime = TimeBase.nowMs() - startTime;
-
+      timeTaken = TimeBase.nowMs() - startTime;
+      if (timeTaken == 0) {
+        logger.error("Test finished in zero time: using nodesWalked estimate.");
+        return nodesWalked;
+      }
       // calculate
-      double nodesPerMs = ((double)elapsedTime / numberNodesTested);
+      double nodesPerMs = ((double)timeTaken / nodesWalked);
+      // check size (node count) of tree
+      int nodeCount = nodeMap.size();
       estimateL = new Long((long)(nodeCount * nodesPerMs));
 
       auEstimateMap.put(managerAu, estimateL);
@@ -257,6 +267,8 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
 
   void doTreeWalk() {
     if (theCrawlManager.canTreeWalkStart(managerAu, getAuState(), null, null)) {
+      //XXX check for top level poll timing
+      // if it's been a really long time, schedule a new poll
       long startTime = TimeBase.nowMs();
       nodeTreeWalk(nodeMap);
       long elapsedTime = TimeBase.nowMs() - startTime;
@@ -287,6 +299,18 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
   void walkNodeState(NodeState node) {
     CrawlState crawlState = node.getCrawlState();
 
+    // determine if there are active polls
+    boolean activePolls = false;
+    Iterator polls = node.getActivePolls();
+    while (polls.hasNext()) {
+      PollState poll = (PollState)polls.next();
+      if ((poll.getStatus()==PollState.RUNNING) ||
+          (poll.getStatus()==PollState.REPAIRING) ||
+          (poll.getStatus()==PollState.SCHEDULED)) {
+        activePolls = true;
+        break;
+      }
+    }
     // at each node, check for crawl state
     switch (crawlState.getType()) {
       case CrawlState.NODE_DELETED:
@@ -296,27 +320,45 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
       case CrawlState.NEW_CONTENT_CRAWL:
       case CrawlState.REPAIR_CRAWL:
         if (crawlState.getStatus()==CrawlState.FINISHED) {
+          // if node is cached
           if (node.getCachedUrlSet().isCached(
               node.getCachedUrlSet().getPrimaryUrl())) {
-
+            // and no poll is currently running.
+            if (!activePolls) {
+              // if CrawlManager.shouldCrawl()
+              // then CrawlManager.scheduleBackgroundCrawl()
+            }
           }
-          //XXX has content
-          // if node.getCachedUrlSet().hasContent();
-          // unless some sort of poll is currently running.
-          // and !node.getActivePolls().hasNext();
-          // if CrawlManager.shouldCrawl()
-          // then CrawlManager.scheduleBackgroundCrawl()
         }
     }
+    // check recent histories to see if something needs fixing
     Iterator historyIt = node.getPollHistories();
-    //XXX check recent histories to see if something needs fixing
-    // if latest is PollState.LOST and it's been a long time
-    // and there're no active Polls
-    // then callNamePoll(node.getCachedUrlSet());
-    // if latest is Poll.REPAIRING and it's been a long time
-    // and there're no active Polls
-    // then callNamePoll(node.getCachedUrlSet());
-    repository.storePollHistories(node);
+    PollHistory lastHistory = null;
+    while (historyIt.hasNext()) {
+      PollHistory thisHistory = (PollHistory)historyIt.next();
+      if ((lastHistory==null) ||
+          (thisHistory.startTime > lastHistory.startTime)) {
+        lastHistory = thisHistory;
+      }
+    }
+    if (lastHistory!=null) {
+      switch (lastHistory.status) {
+        // if latest is PollState.LOST or PollState.REPAIRING
+        // and it's been a long time
+        case PollState.LOST:
+        case PollState.REPAIRING:
+          //XXX calculate 'it's been a long time'
+          // or have Plugin do it?
+          if ((false) && (!activePolls)) {
+            // then call a name poll
+            callNamePoll(node.getCachedUrlSet());
+          }
+          break;
+        default:
+          break;
+      }
+      repository.storePollHistories(node);
+    }
   }
 
   private void loadStateTree() {
@@ -401,7 +443,6 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
           markNodeForRepair(nodeState.getCachedUrlSet(), results);
           closePoll(pollState, results.getDuration(), results.getPollVotes(),
                     nodeState);
-          //XXX results.suspend(nodeState.getCachedUrlSet().getPrimaryUrl());
         } catch (IOException ioe) {
           logger.error("Repair attempt failed.", ioe);
           //XXX schedule something?
@@ -486,7 +527,7 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
           LcapMessage.NAME_POLL_REQ);
     } catch (IOException ioe) {
       logger.error("Couldn't make name poll request.", ioe);
-      //XXX schedule something
+      //XXX schedule something?
     }
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.17 2003-02-11 00:58:16 aalto Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.18 2003-02-12 23:57:37 aalto Exp $
  */
 
 /*
@@ -67,6 +67,9 @@ public class TestNodeManagerImpl extends LockssTestCase {
     mau = new MockArchivalUnit();
     mau.setAUCachedUrlSet(makeFakeCachedUrlSet(TEST_URL, 2, 2));
     theDaemon.getPluginManager().registerArchivalUnit(mau);
+    theDaemon.setCrawlManager(new MockCrawlManager());
+    theDaemon.setPollManager(new MockPollManager());
+    theDaemon.setIdentityManager(new MockIdentityManager());
 
     nodeManager = new NodeManagerImpl(mau);
     nodeManager.initService(theDaemon);
@@ -251,6 +254,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
   }
 
   public void testEstimatedTreeWalk() {
+    //XXX fix using simulated time
     long estimate = nodeManager.getEstimatedTreeWalkDuration();
     assertTrue(estimate > 0);
     long newEstimate = 100;
@@ -269,6 +273,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
 
   public void testHandleContentPoll() throws Exception {
     theDaemon.getHashService().startService();
+    theDaemon.getPollManager().startService();
     contentPoll = createPoll(TEST_URL, true, 10, 5);
     Poll.VoteTally results = contentPoll.getVoteTally();
     NodeState nodeState = nodeManager.getNodeState(getCUS(TEST_URL));
@@ -280,6 +285,8 @@ public class TestNodeManagerImpl extends LockssTestCase {
                                         null);
     nodeManager.handleContentPoll(pollState, results, nodeState);
     assertEquals(PollState.WON, pollState.getStatus());
+    testReputationChanges(results);
+
     // - repairing
     pollState = new PollState(results.getType(), results.getRegExp(),
                               PollState.REPAIRING,
@@ -287,6 +294,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
                               null);
     nodeManager.handleContentPoll(pollState, results, nodeState);
     assertEquals(PollState.REPAIRED, pollState.getStatus());
+    testReputationChanges(results);
 
     // lost content poll
     contentPoll = createPoll(TEST_URL+"/branch1", true, 5, 10);
@@ -298,13 +306,21 @@ public class TestNodeManagerImpl extends LockssTestCase {
                               null);
     nodeManager.handleContentPoll(pollState, results, nodeState);
     assertEquals(PollState.UNREPAIRABLE, pollState.getStatus());
+    testReputationChanges(results);
+
     // - internal
+    nodeState = nodeManager.getNodeState(getCUS(TEST_URL+"/branch1"));
     pollState = new PollState(results.getType(), results.getRegExp(),
                               PollState.RUNNING,
                               results.getStartTime(),
                               null);
     nodeManager.handleContentPoll(pollState, results, nodeState);
     assertEquals(PollState.LOST, pollState.getStatus());
+    // assert name poll requested
+    assertEquals(MockPollManager.NAME_REQUESTED,
+                 ((MockPollManager)theDaemon.getPollManager()).getPollStatus(
+        nodeState.getCachedUrlSet().getPrimaryUrl()));
+
     // - leaf
     nodeState = nodeManager.getNodeState(getCUS(TEST_URL+"/branch1/file1.doc"));
     pollState = new PollState(results.getType(), results.getRegExp(),
@@ -313,23 +329,39 @@ public class TestNodeManagerImpl extends LockssTestCase {
                               null);
     nodeManager.handleContentPoll(pollState, results, nodeState);
     assertEquals(PollState.REPAIRING, pollState.getStatus());
+    // assert repair call scheduled
+    assertEquals(MockCrawlManager.SCHEDULED,
+                 ((MockCrawlManager)theDaemon.getCrawlManager()).getUrlStatus(
+        nodeState.getCachedUrlSet().getPrimaryUrl()));
+    // assert poll suspended
+    assertEquals(MockPollManager.SUSPENDED,
+                 ((MockPollManager)theDaemon.getPollManager()).getPollStatus(
+        results.getPollKey()));
+
     theDaemon.getHashService().stopService();
+    theDaemon.getPollManager().stopService();
   }
 
   public void testHandleNamePoll() throws Exception {
     theDaemon.getHashService().startService();
+    theDaemon.getPollManager().startService();
     contentPoll = createPoll(TEST_URL+"/branch2", false, 10, 5);
     Poll.VoteTally results = contentPoll.getVoteTally();
-    NodeState nodeState = nodeManager.getNodeState(getCUS(TEST_URL));
+    NodeState nodeState = nodeManager.getNodeState(getCUS(TEST_URL+"/branch2"));
     // won name poll
     PollState pollState = new PollState(results.getType(), results.getRegExp(),
                                         PollState.RUNNING,
                                         results.getStartTime(),
                                         null);
     nodeManager.handleNamePoll(pollState, results, nodeState);
-    // since it will try to call a content poll and fail, this becomes an error
-    // XXX figure out why this test succeeds on my machine and fails on emils
-    //assertEquals(PollState.ERR_IO, pollState.getStatus());
+    // test poll request
+    assertEquals(MockPollManager.CONTENT_REQUESTED,
+                 ((MockPollManager)theDaemon.getPollManager()).getPollStatus(
+        TEST_URL+"/branch2/file1.doc"));
+    assertEquals(MockPollManager.CONTENT_REQUESTED,
+                 ((MockPollManager)theDaemon.getPollManager()).getPollStatus(
+        TEST_URL+"/branch2/file2.doc"));
+    assertEquals(PollState.WON, pollState.getStatus());
 
     // lost name poll
     contentPoll = createPoll(TEST_URL+"/branch2/file1.doc", false, 5, 10);
@@ -343,6 +375,21 @@ public class TestNodeManagerImpl extends LockssTestCase {
     // happen and it should be marked 'REPAIRED'
     assertEquals(PollState.REPAIRED, pollState.getStatus());
     theDaemon.getHashService().stopService();
+    theDaemon.getPollManager().stopService();
+  }
+
+  private void testReputationChanges(Poll.VoteTally results) {
+    Iterator voteIt = results.getPollVotes().iterator();
+    MockIdentityManager idManager =
+        (MockIdentityManager)theDaemon.getIdentityManager();
+    while (voteIt.hasNext()) {
+      Vote vote = (Vote)voteIt.next();
+      int repChange = IdentityManager.AGREE_VOTE;
+      if (!vote.isAgreeVote()) {
+        repChange = IdentityManager.DISAGREE_VOTE;
+      }
+      assertEquals(repChange, idManager.lastChange(vote.getIdentity()));
+    }
   }
 
   private CachedUrlSet getCUS(String url) throws Exception {

@@ -215,5 +215,84 @@ public class MockLockssDaemon extends LockssDaemon {
     return identityManager;
   }
 
+  /**
+   * Set the CommManager
+   * @param commMan the new manager
+   */
+  public void setCommManager(LcapComm commMan) {
+    commManager = commMan;
+  }
+
+  /**
+   * Set the CrawlManager
+   * @param crawlMan the new manager
+   */
+  public void setCrawlManager(CrawlManager crawlMan) {
+    crawlManager = crawlMan;
+  }
+
+  /**
+   * Set the HashService
+   * @param hashServ the new service
+   */
+  public void setHashService(HashService hashServ) {
+    hashService = hashServ;
+  }
+
+  /**
+   * Set the HistoryRepository
+   * @param histRepo the new repository
+   */
+  public void setHistoryRepository(HistoryRepository histRepo) {
+    historyRepository = histRepo;
+  }
+
+  /**
+   * Set the IdentityManager
+   * @param idMan the new manager
+   */
+  public void setIdentityManager(IdentityManager idMan) {
+    identityManager = idMan;
+  }
+
+  /**
+   * Set the LockssRepository
+   * @param lockssRepo the new repository
+   */
+  public void setLockssRepository(LockssRepository lockssRepo) {
+    lockssRepository = lockssRepo;
+  }
+
+  /**
+   * Set the NodeManager
+   * @param nodeMan the new manager
+   */
+  public void setNodeManager(NodeManager nodeMan) {
+    nodeManager = nodeMan;
+  }
+
+  /**
+   * Set the PluginManager
+   * @param pluginMan the new manager
+   */
+  public void setPluginManager(PluginManager pluginMan) {
+    pluginManager = pluginMan;
+  }
+
+  /**
+   * Set the PollManager
+   * @param pollMan the new manager
+   */
+  public void setPollManager(PollManager pollMan) {
+    pollManager = pollMan;
+  }
+
+  /**
+   * Set the ProxyHandler
+   * @param proxyHand the new handler
+   */
+  public void setProxyHandler(ProxyHandler proxyHand) {
+    proxyHandler = proxyHand;
+  }
 
 }
