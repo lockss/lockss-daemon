@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkHandler.java,v 1.47 2003-12-08 06:57:19 tlipkis Exp $
+ * $Id: TreeWalkHandler.java,v 1.48 2003-12-09 02:33:37 eaalto Exp $
  */
 
 /*
@@ -137,6 +137,8 @@ public class TreeWalkHandler {
 
   boolean treeWalkAborted;
   boolean forceTreeWalk = false;
+  PollHistory cachedHistory = null;
+  NodeState cachedNode = null;
 
   long treeWalkEstimate = -1;
 
@@ -231,11 +233,8 @@ public class TreeWalkHandler {
       } catch (Exception e) {
         logger.error("Error in treewalk: ", e);
       } finally {
-        if ((activityLock.getActivity() == ActivityRegulator.TREEWALK) &&
-            !activityLock.isExpired()) {
-          // release the lock on the treewalk
-          activityLock.expire();
-        }
+        // release the lock on the treewalk
+        activityLock.expire();
         treeWalkAborted = false;
       }
     } else {
@@ -307,8 +306,10 @@ public class TreeWalkHandler {
 
   /**
    * Checks the state of a specific {@link NodeState}.  Returns true if no
-   * state was detected (or action taken) which would interfere with continuing
-   * the treewalk below this node.
+   * state was detected (or action to be taken) which would interfere with
+   * continuing the treewalk below this node.  If it finds something which needs
+   * doing, it saves the node and history and aborts the treewalk.  The action
+   * is taken by the thread after 'doTreeWalk()' has returned.
    * @param node the {@link NodeState} to check
    * @return true if treewalk can continue below
    */
@@ -338,12 +339,11 @@ public class TreeWalkHandler {
     PollHistory lastHistory = node.getLastPollHistory();
     try {
       if (manager.checkCurrentState(lastHistory, null, node, true)) {
-        logger.debug3("Calling poll on node '" +
-                      node.getCachedUrlSet().getUrl() + "'");
-        // free treewalk state
-        activityLock.expire();
-        // take appropriate action
-        manager.checkCurrentState(lastHistory, null, node, false);
+        // mark node for action
+        logger.debug3("Found necessary poll. Caching info and aborting treewalk...");
+        cachedHistory = lastHistory;
+        cachedNode = node;
+
         // abort treewalk
         treeWalkAborted = true;
         return false;
@@ -353,6 +353,27 @@ public class TreeWalkHandler {
     }
     return true;
   }
+
+  /**
+   * Checks to see if the treewalk has cached a node to call a poll on.
+   * This is done after the treewalk has fully completed, so that the scheduler
+   * can schedule properly.
+   */
+  void callPollIfNecessary() {
+    if (cachedNode != null) {
+      logger.debug3("Calling poll on node '" +
+                    cachedNode.getCachedUrlSet().getUrl() + "'");
+      try {
+        manager.checkCurrentState(cachedHistory, null, cachedNode, false);
+      } catch (Exception e) {
+        logger.error("Error calling poll: ", e);
+      }
+      // null these values for next treewalk
+      cachedHistory = null;
+      cachedNode = null;
+    }
+  }
+
 
   /**
    * The amount of time, in ms, before the next treewalk should start.
@@ -469,62 +490,9 @@ public class TreeWalkHandler {
       while (goOn) {
         long start = chooseTimeToRun(extraDelay);
         extraDelay = 0;
-
         long est = getEstimatedTreeWalkDuration();
 
-        BackgroundTask task = null;
-
-        if (useScheduler) {
-          // using SchedService
-          logger.debug2("Scheduling of treewalk...");
-          SchedService schedSvc = theDaemon.getSchedService();
-          TaskCallback cb = new TreeWalkTaskCallback();
-
-          // loop trying to find a time
-          while (true) {
-            Deadline startDeadline = Deadline.at(start);
-            if (logger.isDebug3()) {
-              logger.debug3("Trying to schedule for " +
-                            startDeadline.toString());
-              logger.debug3("Using estimate of " + est + "ms.");
-            }
-            task = new BackgroundTask(startDeadline, Deadline.at(start + est),
-                                      loadFactor, cb) {
-              public String getShortText() {
-                return "TreeWalk: " + theAu.getName();
-              }
-            };
-            if (schedSvc.scheduleTask(task)) {
-              // task is scheduled, your taskEvent callback will be called at the
-              // start and end times
-              logger.debug2("Scheduled successfully for " +
-                            startDeadline.toString());
-              break;
-            } else {
-	      if (TimeBase.msUntil(startDeadline.getExpirationTime()) >
-                  (3 * Constants.WEEK)) {
-		// If can't fit it into schedule in next 3 weeks, give up
-		// and try again in an hour.  Prevents infinite looping
-		// trying to create a schedule.
-		logger.debug("Can't schedule, waiting for an hour");
-		try {
-		  Deadline.in(Constants.HOUR).sleep();
-		} catch (InterruptedException ie) { }
-		start = chooseTimeToRun(extraDelay);
-	      } else {
-		// can't fit into existing schedule.  try adjusting by
-		// estimate length
-		logger.debug3("Schedule failed.  Trying new time.");
-		start += Math.max(est, MIN_SCHEDULE_ADJUSTMENT);
-	      }
-            }
-          }
-        } else {
-          // use TimerQueue
-          logger.debug2("Setting treewalk in TimerQueue...");
-          TimerQueue.schedule(Deadline.at(start),
-                              new TreeWalkTimerCallback(), null);
-        }
+        BackgroundTask task = scheduleTreeWalk(start, est);
 
         // wait on the semaphore (the callback will 'give()')
         try {
@@ -540,12 +508,77 @@ public class TreeWalkHandler {
           continue;
         }
 
-
         // tell scheduler we're done.  (Unnecessary if it told us to stop,
         // but harmless.)
 	if (task!=null) {
 	  task.taskIsFinished();
         }
+
+        callPollIfNecessary();
+      }
+    }
+
+    /**
+     * This function creates a BackgroundTask to schedule the treewalk.  If the
+     * scheduler is not in use, it uses the TimerQueue and returns null.
+     * @param start start time
+     * @param est estimated length
+     * @return a BackgroundTask
+     */
+    BackgroundTask scheduleTreeWalk(long start, long est) {
+      if (useScheduler) {
+        BackgroundTask task = null;
+        // using SchedService
+        logger.debug2("Scheduling of treewalk...");
+        SchedService schedSvc = theDaemon.getSchedService();
+        TaskCallback cb = new TreeWalkTaskCallback();
+
+        // loop trying to find a time
+        while (true) {
+          Deadline startDeadline = Deadline.at(start);
+          if (logger.isDebug3()) {
+            logger.debug3("Trying to schedule for " +
+                          startDeadline.toString());
+            logger.debug3("Using estimate of " + est + "ms.");
+          }
+          task = new BackgroundTask(startDeadline, Deadline.at(start + est),
+                                    loadFactor, cb) {
+            public String getShortText() {
+              return "TreeWalk: " + theAu.getName();
+            }
+          };
+          if (schedSvc.scheduleTask(task)) {
+            // task is scheduled, your taskEvent callback will be called at the
+            // start and end times
+            logger.debug2("Scheduled successfully for " +
+                          startDeadline.toString());
+            break;
+          } else {
+            if (TimeBase.msUntil(startDeadline.getExpirationTime()) >
+                (3 * Constants.WEEK)) {
+              // If can't fit it into schedule in next 3 weeks, give up
+              // and try again in an hour.  Prevents infinite looping
+              // trying to create a schedule.
+              logger.debug("Can't schedule, waiting for an hour");
+              try {
+                Deadline.in(Constants.HOUR).sleep();
+              } catch (InterruptedException ie) { }
+              start = chooseTimeToRun(0);  // no delay needed
+            } else {
+              // can't fit into existing schedule.  try adjusting by
+              // estimate length
+              logger.debug3("Schedule failed.  Trying new time.");
+              start += Math.max(est, MIN_SCHEDULE_ADJUSTMENT);
+            }
+          }
+        }
+        return task;
+      } else {
+        // use TimerQueue
+        logger.debug2("Setting treewalk in TimerQueue...");
+        TimerQueue.schedule(Deadline.at(start),
+                            new TreeWalkTimerCallback(), null);
+        return null;
       }
     }
 

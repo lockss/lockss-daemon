@@ -1,5 +1,5 @@
 /*
- * $Id: TestTreeWalkHandler.java,v 1.33 2003-11-15 00:50:37 eaalto Exp $
+ * $Id: TestTreeWalkHandler.java,v 1.34 2003-12-09 02:33:37 eaalto Exp $
  */
 
 /*
@@ -120,6 +120,7 @@ public class TestTreeWalkHandler extends LockssTestCase {
     mau.setShouldCallTopLevelPoll(false);
 
     treeWalkHandler.doTreeWalk();
+    treeWalkHandler.callPollIfNecessary();
     assertNull(crawlMan.getAuStatus(mau));
     assertNull(pollMan.getPollStatus(mau.getAuCachedUrlSet().getUrl()));
   }
@@ -130,6 +131,7 @@ public class TestTreeWalkHandler extends LockssTestCase {
     mau.setShouldCallTopLevelPoll(true);
 
     treeWalkHandler.doTreeWalk();
+    treeWalkHandler.callPollIfNecessary();
     assertNull(crawlMan.getAuStatus(mau));
     assertEquals(MockPollManager.CONTENT_REQUESTED,
 		 pollMan.getPollStatus(mau.getAuCachedUrlSet().getUrl()));
@@ -149,6 +151,7 @@ public class TestTreeWalkHandler extends LockssTestCase {
 
     // should find damage and schedule
     treeWalkHandler.doTreeWalk();
+    treeWalkHandler.callPollIfNecessary();
     assertNull(crawlMan.getAuStatus(mau));
     assertEquals(pollMan.getPollStatus(subCus.getUrl()),
                  MockPollManager.NAME_REQUESTED);
@@ -162,6 +165,7 @@ public class TestTreeWalkHandler extends LockssTestCase {
     //should abort walk and schedule crawl
     mau.setShouldCrawlForNewContent(true);
     treeWalkHandler.doTreeWalk();
+    treeWalkHandler.callPollIfNecessary();
     assertEquals(MockCrawlManager.SCHEDULED, crawlMan.getAuStatus(mau));
   }
 
@@ -177,6 +181,7 @@ public class TestTreeWalkHandler extends LockssTestCase {
     String configString = "org.lockss.treewalk.interval=10d";
     ConfigurationUtil.setCurrentConfigFromString(configString);
     treeWalkHandler.doTreeWalk();
+    treeWalkHandler.callPollIfNecessary();
     assertFalse(treeWalkHandler.timeUntilTreeWalkStart() <= 0);
   }
 
@@ -184,6 +189,7 @@ public class TestTreeWalkHandler extends LockssTestCase {
     String configString = "org.lockss.treewalk.interval=100";
     ConfigurationUtil.setCurrentConfigFromString(configString);
     treeWalkHandler.doTreeWalk();
+    treeWalkHandler.callPollIfNecessary();
 
     TimerUtil.guaranteedSleep(100);
 
@@ -195,6 +201,7 @@ public class TestTreeWalkHandler extends LockssTestCase {
         TestNodeManagerImpl.getCus(mau, TEST_URL));
 
     treeWalkHandler.checkNodeState(node);
+    treeWalkHandler.callPollIfNecessary();
     assertNull(pollMan.getPollStatus(node.getCachedUrlSet().getUrl()));
     if (node.cus.hasContent()) {
       //XXX uncomment when CrawlManager ready
@@ -222,6 +229,7 @@ public class TestTreeWalkHandler extends LockssTestCase {
                                         Deadline.MAX, true);
     node.addPollState(pollState);
     treeWalkHandler.checkNodeState(node);
+    treeWalkHandler.callPollIfNecessary();
     // no poll in manager since we just created a PollState
     assertNull(pollMan.getPollStatus(TEST_URL));
     assertNull(crawlMan.getUrlStatus(TEST_URL));
@@ -248,6 +256,7 @@ public class TestTreeWalkHandler extends LockssTestCase {
     treeWalkHandler.treeWalkAborted = false;
     node.setState(nodeState);
     assertEquals(!shouldSchedule, treeWalkHandler.checkNodeState(node));
+    treeWalkHandler.callPollIfNecessary();
     if (shouldSchedule) {
       assertEquals(pollMan.getPollStatus(node.getCachedUrlSet().getUrl()),
 		   (isContent ? MockPollManager.CONTENT_REQUESTED :
@@ -281,11 +290,13 @@ public class TestTreeWalkHandler extends LockssTestCase {
 
     // should act on the parent node
     assertFalse(treeWalkHandler.recurseTreeWalk(cus));
+    treeWalkHandler.callPollIfNecessary();
     assertEquals(pollMan.getPollStatus(cus.getUrl()),
                  MockPollManager.NAME_REQUESTED);
     assertNull(pollMan.getPollStatus(subCus.getUrl()));
     pollMan.thePolls.remove(cus.getUrl());
     // reset treewalk
+    treeWalkHandler.activityLock.expire();
     treeWalkHandler.treeWalkAborted = false;
 
     // get lock to avoid null pointer
@@ -304,6 +315,7 @@ public class TestTreeWalkHandler extends LockssTestCase {
 
     // should act on the sub-node, not the node
     assertFalse(treeWalkHandler.recurseTreeWalk(cus));
+    treeWalkHandler.callPollIfNecessary();
     assertNull(pollMan.getPollStatus(cus.getUrl()));
     assertEquals(pollMan.getPollStatus(subCus.getUrl()),
                  MockPollManager.NAME_REQUESTED);
