@@ -1,5 +1,5 @@
 /*
- * $Id: RegexpUtil.java,v 1.2 2004-08-02 03:24:19 tlipkis Exp $
+ * $Id: RegexpUtil.java,v 1.3 2004-08-04 23:47:56 tlipkis Exp $
  */
 
 /*
@@ -53,6 +53,15 @@ public class RegexpUtil {
   /** Return a thread-local Perl5Matcher */
   public static Perl5Matcher getMatcher() {
     return ((REInst)reInst.get()).matcher;
+  }
+
+  /** Compile a regexp into a pattern, without throwing a checked
+   * exception.  Intended for compiling a constant pattern in a static
+   * initializer, where exception handling is awkward, and there is no
+   * possibility of the pattern being malformed.
+   * @throws RuntimeException if RE is malformed */
+  public static Pattern uncheckedCompile(String re) {
+    return uncheckedCompile(re, Perl5Compiler.DEFAULT_MASK);
   }
 
   /** Compile a regexp into a pattern, without throwing a checked
