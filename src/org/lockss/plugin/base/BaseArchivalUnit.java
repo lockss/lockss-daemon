@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.89 2005-01-29 19:59:36 troberts Exp $
+ * $Id: BaseArchivalUnit.java,v 1.90 2005-02-14 03:30:48 tlipkis Exp $
  */
 
 /*
@@ -95,7 +95,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 
 
   public static final long
-    DEFAULT_MILLISECONDS_BETWEEN_CRAWL_HTTP_REQUESTS = 6 * Constants.SECOND;
+    DEFAULT_FETCH_DELAY = 6 * Constants.SECOND;
 
   public static final String USE_CRAWL_WINDOW = "use_crawl_window";
   private static final boolean DEFAULT_USE_CRAWL_WINDOW = false;
@@ -117,7 +117,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   protected static final long DEFAULT_AU_MAX_FILE_SIZE = 0;
 
   protected long minFetchDelay = 6 * Constants.SECOND;
-  protected long defaultFetchDelay = DEFAULT_MILLISECONDS_BETWEEN_CRAWL_HTTP_REQUESTS;
+  protected long defaultFetchDelay = DEFAULT_FETCH_DELAY;
   protected String startUrlString;
   protected long newContentCrawlIntv;
   protected long defaultContentCrawlIntv = DEFAULT_NEW_CONTENT_CRAWL_INTERVAL;
@@ -215,11 +215,13 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 
   // This pattern
   //   T value =
-  //     paramMap.getT(PARAM_MAP_KEY, config.getT(CONFIG_KEY, defaultValue));
-  //   paramMap.putT(PARAM_MAP_KEY, value);
+  //     (config.containsKey(CONFIG_KEY)
+  //      ? config.getT(CONFIG_KEY, defaultValue)
+  //      : paramMap.getT(PARAM_MAP_KEY, defaultValue));
+  //
   // is used to give precedence to the first of these values that is present:
-  //  - value already in paramMap (presumably stored by loadAuConfigDescrs)
   //  - value in AU's config
+  //  - value already in paramMap (presumably stored by loadAuConfigDescrs)
   //  - default value
 
   protected void setBaseAuParams(Configuration config)
@@ -231,18 +233,20 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 
     // get the fetch delay
     long fetchDelay =
-      paramMap.getLong(AU_FETCH_DELAY,
-		       Math.max(config.getTimeInterval(PAUSE_TIME_KEY,
-						       defaultFetchDelay),
-				minFetchDelay));
+      (config.containsKey(PAUSE_TIME_KEY)
+       ? Math.max(config.getTimeInterval(PAUSE_TIME_KEY, defaultFetchDelay),
+		  minFetchDelay)
+       : paramMap.getLong(AU_FETCH_DELAY,
+			  Math.max(defaultFetchDelay, minFetchDelay)));
     logger.debug2("Set fetch delay to " + fetchDelay);
     paramMap.putLong(AU_FETCH_DELAY, fetchDelay);
 
     // get the new content crawl interval
     newContentCrawlIntv =
-      paramMap.getLong(AU_NEW_CRAWL_INTERVAL,
-		       config.getTimeInterval(NEW_CONTENT_CRAWL_KEY,
-					      defaultContentCrawlIntv));
+      (config.containsKey(NEW_CONTENT_CRAWL_KEY)
+       ? config.getTimeInterval(NEW_CONTENT_CRAWL_KEY,
+				defaultContentCrawlIntv)
+       : paramMap.getLong(AU_NEW_CRAWL_INTERVAL, defaultContentCrawlIntv));
     logger.debug2("Setting new content crawl interval to " +
 		  StringUtil.timeIntervalToString(newContentCrawlIntv));
     paramMap.putLong(AU_NEW_CRAWL_INTERVAL, newContentCrawlIntv);
@@ -253,9 +257,10 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 
     // get crawl window setting
     boolean useCrawlWindow = 
-      paramMap.getBoolean(AU_USE_CRAWL_WINDOW,
-			  config.getBoolean(USE_CRAWL_WINDOW,
-					    DEFAULT_USE_CRAWL_WINDOW));
+      (config.containsKey(USE_CRAWL_WINDOW)
+       ? config.getBoolean(USE_CRAWL_WINDOW, DEFAULT_USE_CRAWL_WINDOW)
+       : 
+       paramMap.getBoolean(AU_USE_CRAWL_WINDOW, DEFAULT_USE_CRAWL_WINDOW));
     paramMap.putBoolean(AU_USE_CRAWL_WINDOW, useCrawlWindow);
 
     // make our crawl spec
@@ -293,7 +298,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 	 iter.hasNext(); ) {
       String title = (String)iter.next();
       TitleConfig tc = plugin.getTitleConfig(title);
-      if (tc != null && tc.matchesConfig(config)) {
+      if (tc != null && tc.matchesConfig(config) && tc.isSingleAu(plugin)) {
 	return tc;
       }
     }
@@ -421,7 +426,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 
   public long getFetchDelay() {
     return paramMap.getLong(AU_FETCH_DELAY,
-                            DEFAULT_MILLISECONDS_BETWEEN_CRAWL_HTTP_REQUESTS);
+                            DEFAULT_FETCH_DELAY);
   }
 
   public String toString() {

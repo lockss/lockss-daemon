@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArchivalUnit.java,v 1.25 2005-01-29 19:59:37 troberts Exp $
+ * $Id: TestBaseArchivalUnit.java,v 1.26 2005-02-14 03:30:40 tlipkis Exp $
  */
 
 /*
@@ -181,7 +181,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
 
   public void testGetFetchDelay() {
     long expectedReturn =
-        BaseArchivalUnit.DEFAULT_MILLISECONDS_BETWEEN_CRAWL_HTTP_REQUESTS;
+        BaseArchivalUnit.DEFAULT_FETCH_DELAY;
     long actualReturn = mbau.getFetchDelay();
     assertEquals("return value", expectedReturn, actualReturn);
   }
@@ -305,8 +305,22 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     assertTrue(mbau.getCrawlSpec().getCrawlWindow() instanceof MyMockCrawlWindow);
   }
 
+  public void testSetBaseAuParamsDefaults()
+      throws ArchivalUnit.ConfigurationException {
+    Properties props = new Properties();
+    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
+    props.setProperty(ConfigParamDescr.VOLUME_NUMBER.getKey(), "10");
+    Configuration config = ConfigurationUtil.fromProps(props);
+    mbau.setBaseAuParams(config);
+    assertEquals(BaseArchivalUnit.DEFAULT_FETCH_DELAY, mbau.getFetchDelay());
+    assertEquals(BaseArchivalUnit.DEFAULT_NEW_CONTENT_CRAWL_INTERVAL,
+		 mbau.newContentCrawlIntv);
+    assertEquals(ListUtil.list(startUrl), mbau.getNewContentCrawlUrls());
+    assertNull(mbau.getCrawlSpec().getCrawlWindow());
+  }
+
   // Check that setBaseAuParams() doesn't overwrite values already set in
-  // param map.
+  // param map with default config values.
   public void testSetBaseAuParamsWithOverride()
       throws ArchivalUnit.ConfigurationException {
     Properties props = new Properties();
@@ -318,11 +332,13 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     Configuration config = ConfigurationUtil.fromProps(props);
     mbau.doSetAuParams(true);
     mbau.loadAuConfigDescrs(config);
-    mbau.setBaseAuParams(config);
-    assertEquals(54321, mbau.getFetchDelay());
-    assertEquals(12345, mbau.newContentCrawlIntv);
-    assertEquals(auName,mbau.getName());
-    assertEquals(ListUtil.list(startUrl), mbau.getNewContentCrawlUrls());
+    props.setProperty(BaseArchivalUnit.PAUSE_TIME_KEY, "55555");
+    props.setProperty(BaseArchivalUnit.USE_CRAWL_WINDOW, "false");
+    props.setProperty(BaseArchivalUnit.NEW_CONTENT_CRAWL_KEY, "67890");
+    Configuration config2 = ConfigurationUtil.fromProps(props);
+    mbau.setBaseAuParams(config2);
+    assertEquals(55555, mbau.getFetchDelay());
+    assertEquals(67890, mbau.newContentCrawlIntv);
     assertNull(mbau.getCrawlSpec().getCrawlWindow());
   }
 
@@ -473,6 +489,8 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     TitleConfig tc = makeTitleConfig();
     mplug.setTitleConfig(tc);
     mplug.setSupportedTitles(ListUtil.list("a", "b"));
+    mplug.setAuConfigDescrs(ListUtil.list(new ConfigParamDescr("key1"),
+					  new ConfigParamDescr("key2")));
 
     Configuration config = ConfigurationUtil.fromArgs("key1", "a",
 						      "key2", "foo");
@@ -481,6 +499,12 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     Configuration config2 = ConfigurationUtil.fromArgs("key1", "b",
 						       "key2", "foo");
     assertNull(mbau.findTitleConfig(config2));
+
+    // remove one of tc's params, so it now incompletely describes the AU
+    List lst = tc.getParams();
+    lst.remove(0);
+    tc.setParams(lst);
+    assertNull(mbau.findTitleConfig(config));
   }
 
   public void testParamHandlerMap() throws ConfigurationException {
