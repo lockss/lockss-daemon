@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.8 2003-03-08 02:45:02 aalto Exp $
+ * $Id: CrawlManagerImpl.java,v 1.9 2003-03-20 00:41:58 troberts Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.crawler;
 import java.net.URL;
 import java.util.*;
 import org.lockss.daemon.*;
+import org.lockss.daemon.status.*;
 import org.lockss.state.NodeState;
 import org.lockss.util.*;
 import org.lockss.app.*;
@@ -54,8 +55,12 @@ public class CrawlManagerImpl implements CrawlManager, LockssManager {
    * 4)check for conflicting crawl types
    * 5)check crawl schedule rules
    */
-  static private CrawlManagerImpl theManager = null;
-  static private LockssDaemon theDaemon = null;
+  private static CrawlManagerImpl theManager = null;
+  private static LockssDaemon theDaemon = null;
+  private static final String CRAWL_STATUS_TABLE_NAME = "crawl_status_table";
+  private Map newContentCrawls = new HashMap();
+  
+
 
   /**
    * init the plugin manager.
@@ -78,6 +83,8 @@ public class CrawlManagerImpl implements CrawlManager, LockssManager {
    * @see org.lockss.app.LockssManager#startService()
    */
   public void startService() {
+    StatusService statusServ = theDaemon.getStatusService();
+    statusServ.registerStatusAccessor(CRAWL_STATUS_TABLE_NAME, new Status());
   }
 
   /**
@@ -86,6 +93,10 @@ public class CrawlManagerImpl implements CrawlManager, LockssManager {
    */
   public void stopService() {
     // checkpoint here
+    StatusService statusServ = theDaemon.getStatusService();
+    if (statusServ != null) {
+      statusServ.unregisterStatusAccessor(CRAWL_STATUS_TABLE_NAME);
+    }
     theManager = null;
   }
 
@@ -134,8 +145,10 @@ public class CrawlManagerImpl implements CrawlManager, LockssManager {
   private void scheduleNewContentCrawl(ArchivalUnit au,
 				       CrawlManager.Callback cb,
 				       Object cookie) {
+    NewContentCrawlInfo crawlInfo = new NewContentCrawlInfo(au);
     List callBackList =
-      ListUtil.list(new UpdateNewCrawlTimeCB(theDaemon.getNodeManager(au)));
+      ListUtil.list(new UpdateNewCrawlTimeCB(theDaemon.getNodeManager(au),
+					     crawlInfo));
     if (cb != null) {
       callBackList.add(cb);
     }
@@ -144,6 +157,20 @@ public class CrawlManagerImpl implements CrawlManager, LockssManager {
       new CrawlThread(au, au.getNewContentCrawlUrls(),
 		      true, Deadline.NEVER, callBackList, cookie);
     crawlThread.start();
+    crawlInfo.crawlStarted();
+    addNewContentCrawlInfo(au, crawlInfo);
+  }
+
+  private void addNewContentCrawlInfo(ArchivalUnit au, 
+				      NewContentCrawlInfo crawlInfo) {
+    synchronized (newContentCrawls) {
+      List crawlsForAu = (List)newContentCrawls.get(au.getGloballyUniqueId());
+      if (crawlsForAu == null) {
+	crawlsForAu = new ArrayList();
+	newContentCrawls.put(au.getGloballyUniqueId(), crawlsForAu);
+      }
+      crawlsForAu.add(crawlInfo);
+    }
   }
 
   private void triggerCrawlCallbacks(Vector callbacks) {
@@ -155,6 +182,41 @@ public class CrawlManagerImpl implements CrawlManager, LockssManager {
       }
     }
   }
+
+  private static class NewContentCrawlInfo {
+    private Long startTime;
+    private Long endTime;
+    private int crawlStatus;
+    private ArchivalUnit au;
+
+    public NewContentCrawlInfo(ArchivalUnit au) {
+      this.au = au;
+    }
+
+    public ArchivalUnit getAu() {
+      return au;
+    }
+
+    public void crawlStarted() {
+      this.startTime = new Long(TimeBase.nowMs());
+    }
+
+    public void crawlEnded() {
+      this.endTime = new Long(TimeBase.nowMs());
+    }
+
+    public void setStatus(int crawlStatus) {
+      this.crawlStatus = crawlStatus;
+    }
+
+    public Long getStartTime() {
+      return startTime;
+    }
+
+    public Long getEndTime() {
+      return endTime;
+    }
+   }
 
   public class CrawlThread extends Thread {
     private ArchivalUnit au;
@@ -191,15 +253,101 @@ public class CrawlManagerImpl implements CrawlManager, LockssManager {
 
   private class UpdateNewCrawlTimeCB implements CrawlManager.Callback {
     NodeManager nodeManager;
+    NewContentCrawlInfo crawlInfo;
 
-    public UpdateNewCrawlTimeCB(NodeManager nodeManager) {
+    public UpdateNewCrawlTimeCB(NodeManager nodeManager, 
+				NewContentCrawlInfo crawlInfo) {
       this.nodeManager = nodeManager;
+      this.crawlInfo = crawlInfo;
     }
 
     public void signalCrawlAttemptCompleted(boolean success, Object cookie) {
       if (success) {
 	nodeManager.newContentCrawlFinished();
+	crawlInfo.crawlEnded();
       }
     }
   }
+
+
+  private class Status implements StatusAccessor {
+
+    private static final String AU_COL_NAME = "au";
+    private static final String START_TIME_COL_NAME = "start";
+    private static final String END_TIME_COL_NAME = "end";
+
+    private List colDescs = 
+      ListUtil.list(
+		    new ColumnDescriptor(AU_COL_NAME, "Journal Volume",
+					 ColumnDescriptor.TYPE_STRING),
+		    new ColumnDescriptor(START_TIME_COL_NAME, "Start Time",
+					 ColumnDescriptor.TYPE_DATE),
+		    new ColumnDescriptor(END_TIME_COL_NAME, "End Time",
+					 ColumnDescriptor.TYPE_DATE)
+		    );
+    
+    
+    
+    public List getColumnDescriptors(String key) {
+      return colDescs;
+    }
+    
+    public List getRows(String key) {
+      List rows = new ArrayList();
+      if (key == null) {
+	return getAllNewContentCrawls();
+      }
+
+      synchronized(newContentCrawls) {
+	List crawlsForAu = (List) newContentCrawls.get(key);
+	if (crawlsForAu != null) {
+	  Iterator it = crawlsForAu.iterator();
+	  while (it.hasNext()) {
+	    rows.add(makeRow((NewContentCrawlInfo) it.next()));
+	  }
+	}
+      }
+      return rows;
+    }
+
+    private List getAllNewContentCrawls() {
+      List rows = new ArrayList();
+      synchronized(newContentCrawls) {
+	Iterator keys = newContentCrawls.keySet().iterator();
+	while (keys.hasNext()) {
+	  List crawls = (List)newContentCrawls.get((String)keys.next());
+	  Iterator it = crawls.iterator();
+	  while (it.hasNext()) {
+	    rows.add(makeRow((NewContentCrawlInfo)it.next()));
+	  }
+	}
+      }
+      return rows;
+    }
+
+    private Map makeRow(NewContentCrawlInfo crawlInfo) {
+      Map row = new HashMap();
+      row.put(AU_COL_NAME, crawlInfo.getAu().getName());
+      row.put(START_TIME_COL_NAME, crawlInfo.getStartTime());
+      row.put(END_TIME_COL_NAME, crawlInfo.getEndTime());
+      return row;
+    }
+
+    public List getDefaultSortRules(String key) {
+      return new ArrayList();
+    }
+
+    public String getTitle(String key) {
+      return "Crawl Status";
+    }
+
+    public boolean requiresKey() {
+      return false;
+    }
+
+    public List getHeaders(String key) {
+      return null;
+    }
+  }
+
 }
