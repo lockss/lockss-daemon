@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.88.2.3 2004-07-23 20:50:18 smorabito Exp $
+ * $Id: PluginManager.java,v 1.88.2.4 2004-07-23 22:13:43 smorabito Exp $
  */
 
 /*
@@ -217,14 +217,14 @@ public class PluginManager extends BaseLockssManager {
 
     // Don't load or start other plugins until the daemon is running.
     if (loadablePluginsReady) {
-      // Process the plugin registry.
-      if (changedKeys.contains(PARAM_PLUGIN_REGISTRY)) {
-	initPluginRegistry(config.getList(PARAM_PLUGIN_REGISTRY));
-      }
-
       // Process loadable plugin registries.
       if (changedKeys.contains(PARAM_PLUGIN_REGISTRIES)) {
 	initLoadablePluginRegistries(config.getList(PARAM_PLUGIN_REGISTRIES));
+      }
+
+      // Process the built-in plugin registry.
+      if (changedKeys.contains(PARAM_PLUGIN_REGISTRY)) {
+	initPluginRegistry(config.getList(PARAM_PLUGIN_REGISTRY));
       }
 
       configureAllPlugins(config);
@@ -776,6 +776,7 @@ public class PluginManager extends BaseLockssManager {
     if (pluginMap.containsKey(pluginKey)) {
       return true;
     }
+
     String pluginName = "";
     try {
       pluginName = pluginNameFromKey(pluginKey);
@@ -1065,7 +1066,7 @@ public class PluginManager extends BaseLockssManager {
       for (Iterator iter = pluginMap.keySet().iterator(); iter.hasNext(); ) {
 	String name = (String)iter.next();
 	String key = pluginKeyFromName(name);
-	if (!newKeys.contains(key)) {
+	if (!classloaderMap.containsKey(key) && !newKeys.contains(key)) {
 	  Configuration tree = currentAllPlugs.getConfigTree(key);
 	  if (tree == null || tree.isEmpty()) {
 	    iter.remove();
