@@ -1,5 +1,5 @@
 /*
- * $Id: Logger.java,v 1.17 2003-03-29 20:25:38 tal Exp $
+ * $Id: Logger.java,v 1.18 2003-04-03 02:29:01 tal Exp $
  */
 
 /*
@@ -53,19 +53,26 @@ public class Logger {
   static final String PARAM_LOG_LEVEL = PREFIX + "<logname>.level";
   static final String PARAM_LOG_TARGETS = PREFIX + "targets";
 
-  /** Critical errors, need immediate attention */
+  /** Critical errors require immediate attention from a human. */
   public static final int LEVEL_CRITICAL = 1;
-  /** Errors, system nay not operate correctly, but won't damage anything */
+  /** Errors indicate that the system may not operate correctly, but won't
+   * damage anything. */
   public static final int LEVEL_ERROR = 2;
-  /** Warnings are for conditions that don't prevent the system from
-      continuing to run. */
+  /** Warnings are conditions that should not normally arise but don't
+      prevent the system from continuing to run correctly. */
   public static final int LEVEL_WARNING = 3;
-  /** Informative messages. */
+  /** Informative messages that should normally be logged. */
   public static final int LEVEL_INFO = 4;
   /** Debugging messages. */
   public static final int LEVEL_DEBUG = 5;
+  /** Debugging messages. */
   public static final int LEVEL_DEBUG1 = 5;
+  /** Detailed debugging that would not produce a ridiculous amount of
+   * output if it were enabled system-wide. */
   public static final int LEVEL_DEBUG2 = 6;
+  /** Debugging messages that produce more output than would be reasonable
+   * if this level were enabled system-wide.  (<i>Eg</i>, messages in inner
+   * loops, or per-file, per-hash step, etc.) */
   public static final int LEVEL_DEBUG3 = 7;
 
   // Mapping between numeric level and string
