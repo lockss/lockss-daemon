@@ -1,5 +1,5 @@
 /*
- * $Id: TestTitleConfig.java,v 1.2 2004-02-18 17:02:08 tlipkis Exp $
+ * $Id: TestTitleConfig.java,v 1.3 2004-04-27 19:37:23 tlipkis Exp $
  */
 
 /*
@@ -92,5 +92,28 @@ public class TestTitleConfig extends LockssTestCase {
     tc1.setParams(ListUtil.list(a1, a2));
     Collection u1 = tc1.getUnEditableKeys();
     assertIsomorphic(ListUtil.list("key1"), u1);
+  }
+
+  public void testMatchesConfig() {
+    ConfigParamDescr d1 = new ConfigParamDescr("key1");
+    ConfigParamDescr d2 = new ConfigParamDescr("key2");
+    ConfigParamAssignment a1 = new ConfigParamAssignment(d1, "a");
+    ConfigParamAssignment a2 = new ConfigParamAssignment(d2, "foo");
+    TitleConfig tc1 = new TitleConfig("a", "b");
+    tc1.setParams(ListUtil.list(a1, a2));
+    Configuration config = tc1.getConfig();
+    assertTrue(tc1.matchesConfig(config));
+    // should still match with an extra param in config
+    config.put("key4", "v");
+    assertTrue(tc1.matchesConfig(config));
+    // but not with a disagreeing one
+    config.put("key1", "v");
+    assertFalse(tc1.matchesConfig(config));
+    // make it match again
+    config.put("key1", "a");
+    assertTrue(tc1.matchesConfig(config));
+    // then make a param editable, which should make it not match
+    a1.setEditable(true);
+    assertFalse(tc1.matchesConfig(config));
   }
 }
