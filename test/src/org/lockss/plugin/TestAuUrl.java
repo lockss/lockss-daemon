@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuUrl.java,v 1.2 2003-02-05 20:54:50 tal Exp $
+ * $Id: TestAuUrl.java,v 1.1 2003-02-05 23:16:30 tal Exp $
  */
 
 /*
@@ -30,7 +30,7 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.poller;
+package org.lockss.plugin;
 
 import java.io.*;
 import java.net.*;
@@ -40,7 +40,7 @@ import org.lockss.test.*;
 
 
 /**
- * Test class for org.lockss.poller.AuUrl
+ * Test class for org.lockss.plugin.AuUrl
  */
 
 public class TestAuUrl extends LockssTestCase {
