@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessage.java,v 1.52.2.1 2004-10-01 01:13:49 dshr Exp $
+ * $Id: LcapMessage.java,v 1.52.2.2 2004-10-29 03:38:19 dshr Exp $
  */
 
 /*
@@ -286,6 +286,12 @@ public class LcapMessage {
                                            PeerIdentity localID
                                            ) throws IOException {
 
+    if (pollspec.getPollVersion() == 3) {
+      Properties props = null;
+      return V3LcapMessage.makeRequestMsg(pollspec, props,
+					  challenge, opcode,
+					  timeRemaining, localID);
+    }
     LcapMessage msg = new LcapMessage(pollspec,
                                       entries,
                                       (byte) 0,
@@ -725,6 +731,8 @@ public class LcapMessage {
     sb.append("[LcapMessage: from ");
     sb.append(m_originatorID);
     sb.append(", ");
+    // XXX temporary
+    if (m_pollVersion == 1) {
     if (isNoOp()) {
       sb.append(POLL_OPCODES[m_opcode]);
     } else {
@@ -746,8 +754,11 @@ public class LcapMessage {
       if(m_entries != null) {
 
       }
-      if (m_pollVersion > 1)
-	sb.append(" ver " + m_pollVersion);
+    }
+    } else if (m_pollVersion == 3) {
+      sb.append("V3 opcode " + m_opcode);
+    } else {
+      sb.append("bad poll version " + m_pollVersion);
     }
     sb.append("]");
     return sb.toString();

@@ -1,5 +1,5 @@
 /*
- * $Id: V3LcapMessage.java,v 1.1.2.3 2004-10-04 23:06:22 dshr Exp $
+ * $Id: V3LcapMessage.java,v 1.1.2.4 2004-10-29 03:38:19 dshr Exp $
  */
 
 /*
@@ -103,35 +103,36 @@ public class V3LcapMessage extends LcapMessage implements Serializable {
 
   /**
    * make a message to request a poll using a pollspec
-   * @param pollspec the pollspec specifying the url and bounds of interest
-   * @param entries the array of entries found in the name poll
+   * @param props Properties containing the parameters
    * @param challenge the challange bytes
-   * @param verifier the verifier bytes
    * @param opcode the kind of poll being requested
    * @param timeRemaining the time remaining for this poll
    * @param localID the identity of the requestor
    * @return message the new V3LcapMessage
    * @throws IOException if unable to create message
    */
-  static public LcapMessage makeRequestMsg(PollSpec pollspec,
-                                           ArrayList entries,
-                                           byte[] challenge,
-                                           byte[] verifier,
-                                           int opcode,
+  static public LcapMessage makeRequestMsg(PollSpec pollSpec,
+					   Properties props,
+					   byte[] challenge,
+					   int opcode,
                                            long timeRemaining,
                                            PeerIdentity localID
                                            ) throws IOException {
 
-    V3LcapMessage msg = new V3LcapMessage(pollspec,
-                                      entries,
+    V3LcapMessage msg = new V3LcapMessage(pollSpec,
+					  null,
 					  (byte)0,
-                                      challenge, verifier, new byte[0], opcode);
+					  challenge,
+					  null, new byte[0], opcode);
     if (msg != null) {
       msg.m_startTime = TimeBase.nowMs();
       msg.m_stopTime = msg.m_startTime + timeRemaining;
       msg.m_originatorID = localID;
     }
-    msg.storeProps();
+    if (false) {
+      // XXX
+      msg.storeProps();
+    }
     return msg;
 
   }
@@ -207,23 +208,25 @@ public class V3LcapMessage extends LcapMessage implements Serializable {
     sb.append("[V3LcapMessage: from ");
     sb.append(m_originatorID);
     sb.append(", ");
-      sb.append(m_targetUrl);
-      sb.append(" ");
-      sb.append(m_lwrBound);
-      sb.append("-");
-      sb.append(m_uprBound);
-      sb.append(" ");
-      sb.append(POLL_MESSAGES[m_opcode]);
+    sb.append(m_targetUrl);
+    sb.append(" ");
+    sb.append(m_lwrBound);
+    sb.append("-");
+    sb.append(m_uprBound);
+    sb.append(" ");
+    sb.append(POLL_MESSAGES[m_opcode]);
+    if (m_challenge != null) {
       sb.append(" C:");
       sb.append(String.valueOf(B64Code.encode(m_challenge)));
+    }
+    if (m_verifier != null) {
       sb.append(" V:");
       sb.append(String.valueOf(B64Code.encode(m_verifier)));
-      if (m_hashed != null) { //can be null for a request message
-	sb.append(" H:");
-	sb.append(String.valueOf(B64Code.encode(m_hashed)));
-      }
-      if (m_pollVersion > 1)
-	sb.append(" ver " + m_pollVersion);
+    }
+    if (m_hashed != null) { //can be null for a request message
+      sb.append(" H:");
+      sb.append(String.valueOf(B64Code.encode(m_hashed)));
+    }
     sb.append("]");
     return sb.toString();
   }

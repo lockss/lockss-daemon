@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poll.java,v 1.1.2.12 2004-10-28 01:04:36 dshr Exp $
+ * $Id: TestV3Poll.java,v 1.1.2.13 2004-10-29 03:38:20 dshr Exp $
  */
 
 /*
@@ -70,7 +70,6 @@ public class TestV3Poll extends LockssTestCase {
     V3LcapMessage.MSG_REPAIR_REP,
     V3LcapMessage.MSG_EVALUATION_RECEIPT,
   };
-  protected LcapMessage[] testV3msg = new LcapMessage[msgType.length];;
   protected V3Voter voter;
   protected V3Poller poller;
   protected PollSpec pollSpec;
@@ -137,6 +136,7 @@ public class TestV3Poll extends LockssTestCase {
     Properties p = new Properties();
     p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
     p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    p.setProperty(IdentityManager.PARAM_LOCAL_V3_PORT, "9999");
     p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
     p.setProperty(ConfigManager.PARAM_NEW_SCHEDULER, "false");
     ConfigurationUtil.setCurrentConfigFromProps(p);
@@ -182,6 +182,13 @@ public class TestV3Poll extends LockssTestCase {
   }
 
   private void initTestMsg() throws Exception {
+
+    //  XXX not clear we need this
+
+  }
+
+  private void initTestPolls() throws Exception {
+    BasePoll p;
     PollFactory ppf = pollmanager.getPollFactory(3);
     assertNotNull("PollFactory should not be null", ppf);
     assertTrue(ppf instanceof V3PollFactory);
@@ -198,32 +205,14 @@ public class TestV3Poll extends LockssTestCase {
     log.debug("Duration is " + duration);
     byte[] challenge = pollmanager.makeVerifier(duration);
     pollSpec = spec;
-
-    for (int i= 0; i<testV3msg.length; i++) {
-      testV3msg[i] =
-	V3LcapMessage.makeRequestMsg(spec,
-				     null, // XXX entries not needed
-				     challenge,
-				     pollmanager.makeVerifier(duration),
-				     msgType[i],
-				     duration,
-				     testID1);
-      assertNotNull(testV3msg[i]);
-      log.debug("Made " + testV3msg[i] + " from " + spec);
-    }
-
-  }
-
-  private void initTestPolls() throws Exception {
-    BasePoll p;
     // Make the voter
     theDaemon.setStreamRouterManager(voterRouter);
     p = pollmanager.makePoll(pollSpec,
-			     testV3msg[0].getDuration(),
-			     testV3msg[0].getChallenge(),
-			     testV3msg[0].getVerifier(),
+			     duration,
+			     challenge,
+			     null,
 			     testID1,
-			     testV3msg[0].getHashAlgorithm());
+			     LcapMessage.getDefaultHashAlgorithm());
     log.debug("initTestPolls: V3 voter returns " + p);
     assertTrue(p instanceof V3Voter);
     voter = (V3Voter) p;
@@ -231,11 +220,11 @@ public class TestV3Poll extends LockssTestCase {
     // Make the poller
     theDaemon.setStreamRouterManager(pollerRouter);
     p = pollmanager.makePoll(pollSpec,
-			     testV3msg[0].getDuration(),
-			     testV3msg[0].getChallenge(),
-			     testV3msg[0].getVerifier(),
+			     duration,
+			     challenge,
+			     null,
 			     testID,
-			     testV3msg[0].getHashAlgorithm());
+			     LcapMessage.getDefaultHashAlgorithm());
     log.debug("initTestPolls: V3 poller returns " + p);
     assertTrue(p instanceof V3Poller);
     poller = (V3Poller) p;

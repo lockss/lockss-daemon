@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.142.2.5 2004-10-06 00:26:22 dshr Exp $
+ * $Id: PollManager.java,v 1.142.2.6 2004-10-29 03:38:18 dshr Exp $
  */
 
 /*
@@ -69,13 +69,15 @@ public class PollManager
 
   private static PollManager theManager = null;
   protected static Logger theLog = Logger.getLogger("PollManager");
-  private static LcapDatagramRouter.MessageHandler  m_msgHandler;
+  private static LcapDatagramRouter.MessageHandler  m_datagramHandler;
+  private static LcapStreamRouter.MessageHandler  m_streamHandler;
   private static Hashtable thePolls = new Hashtable();
   private static VariableTimedMap theVerifiers = new VariableTimedMap();
   private static IdentityManager theIDManager;
   private static HashService theHashService;
   private static LockssRandom theRandom = new LockssRandom();
-  private static LcapDatagramRouter theRouter = null;
+  private static LcapDatagramRouter theDatagramRouter = null;
+  private static LcapStreamRouter theStreamRouter = null;
   private AlertManager theAlertManager = null;
   private static SystemMetrics theSystemMetrics = null;
     private EffortService theEffortService = null; // XXX
@@ -108,9 +110,10 @@ public class PollManager
     theEffortService = theDaemon.getEffortService();
 
     // register a message handler with the router
-    theRouter = theDaemon.getDatagramRouterManager();
-    m_msgHandler =  new RouterMessageHandler();
-    theRouter.registerMessageHandler(m_msgHandler);
+    theDatagramRouter = theDaemon.getDatagramRouterManager();
+    theStreamRouter = theDaemon.getStreamRouterManager();
+    m_datagramHandler =  new RouterMessageHandler();
+    theDatagramRouter.registerMessageHandler(m_datagramHandler);
 
     // get System Metrics
     theSystemMetrics = theDaemon.getSystemMetrics();
@@ -139,7 +142,7 @@ public class PollManager
         PollerStatus.MANAGER_STATUS_TABLE_NAME, ArchivalUnit.class);
 
     // unregister our router
-    theRouter.unregisterMessageHandler(m_msgHandler);
+    theDatagramRouter.unregisterMessageHandler(m_datagramHandler);
 
     // null anything which might cause problems
     theIDManager = null;
@@ -552,8 +555,10 @@ public class PollManager
    * @throws IOException
    */
   void sendMessage(LcapMessage msg, ArchivalUnit au) throws IOException {
-    if(theRouter != null) {
-      theRouter.send(msg, au);
+    if(theDatagramRouter != null) {
+      theDatagramRouter.send(msg, au);
+    } else {
+      throw new ProtocolException("theDatagramRouter null");
     }
   }
 
@@ -566,7 +571,25 @@ public class PollManager
    */
   void sendMessageTo(LcapMessage msg, ArchivalUnit au, PeerIdentity id)
       throws IOException {
-    theRouter.sendTo(msg, au, id);
+    switch (msg.getPollVersion()) {
+    case 1:
+      if (theDatagramRouter != null) {
+	theDatagramRouter.sendTo(msg, au, id);
+      } else {
+	throw new ProtocolException("theDatagramRouter null");
+      }
+      break;
+    case 3:
+      if (theStreamRouter != null) {
+	theStreamRouter.sendTo(msg, au, id);
+      } else {
+	throw new ProtocolException("theStreamRouter null");
+      }
+      break;
+    default:
+      throw new ProtocolException("Unsupported protocol" +
+				      msg.getPollVersion());
+    }
   }
 
   /**
@@ -674,6 +697,10 @@ public class PollManager
   }
 
   private boolean isDuplicateMessage(LcapMessage msg) {
+    if (msg.getPollVersion() == 3) {
+      // XXX - other measures taken
+      return false;
+    }
     byte[] verifier = msg.getVerifier();
     String ver = String.valueOf(B64Code.encode(verifier));
     synchronized (theVerifiers) {

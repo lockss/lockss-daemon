@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.1.2.12 2004-10-14 01:00:05 dshr Exp $
+ * $Id: TestV3Poller.java,v 1.1.2.13 2004-10-29 03:38:20 dshr Exp $
  */
 
 /*
@@ -549,7 +549,6 @@ public class TestV3Poller extends LockssTestCase {
 	V3LcapMessage.makeRequestMsg(spec,
 				     null, // XXX entries not needed
 				     challenge,
-				     pollmanager.makeVerifier(duration),
 				     msgType[i],
 				     duration,
 				     testID[1]);

@@ -1,5 +1,5 @@
 /*
-* $Id: Vote.java,v 1.14 2004-09-29 06:38:13 tlipkis Exp $
+* $Id: Vote.java,v 1.14.2.1 2004-10-29 03:38:19 dshr Exp $
  */
 
 /*
@@ -244,36 +244,35 @@ public class Vote {
     return getChallengeString();
   }
 
+  class ActiveVote {
+    byte[] challenge;
+    byte[] verifier;
+
+    byte[] getChallenge() {
+      return challenge;
+    }
+
+    byte[] getVerifier() {
+      return verifier;
+    }
+
+    byte[] getHash() {
+      return null;
+    }
+  }
+
+  class V1ActiveVote extends ActiveVote {
+    byte[] hash;
+
+    V1ActiveVote(byte[] c, byte[] v, byte[] h) {
+      challenge = c;
+      verifier = v;
+      hash = h;
+    }
+
+    byte[] getHash() {
+      return hash;
+    }
+  }
+
 }
-
-class ActiveVote {
-  byte[] challenge;
-  byte[] verifier;
-
-  byte[] getChallenge() {
-    return challenge;
-  }
-
-  byte[] getVerifier() {
-    return verifier;
-  }
-
-  byte[] getHash() {
-    return null;
-  }
-}
-
-class V1ActiveVote extends ActiveVote {
-  byte[] hash;
-
-  V1ActiveVote(byte[] c, byte[] v, byte[] h) {
-    challenge = c;
-    verifier = v;
-    hash = h;
-  }
-
-  byte[] getHash() {
-    return hash;
-  }
-}
-

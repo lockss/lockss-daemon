@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.1.2.11 2004-10-14 01:00:05 dshr Exp $
+ * $Id: V3Poller.java,v 1.1.2.12 2004-10-29 03:38:19 dshr Exp $
  */
 
 /*
@@ -121,7 +121,8 @@ public class V3Poller extends V3Poll {
       log.error("Non-local caller for V3 poll: " + orig);
     }
 
-    m_challenge = m_pollmanager.makeVerifier(duration);
+    // m_challenge = m_pollmanager.makeVerifier(duration);
+    m_challenge = challenge;
     // XXX
     m_state = STATE_INITIALIZING;
     theEffortService = pm.getEffortService(pollspec);
@@ -310,9 +311,20 @@ public class V3Poller extends V3Poll {
 
   //  XXX - stuff for initial testing
   private List m_voterRoll = null;
+  private PeerIdentity m_currentVoter = null;
 
   protected void solicitVotesFrom(List peers) {
+    if (peers.size() == 0) {
+      log.error("No voters to solicit from");
+      // XXX throw?
+    }
     m_voterRoll = peers;
+    Object[] voters = peers.toArray();
+    if (!(voters[0] instanceof PeerIdentity)) {
+      log.error("Voter is not a PeerIdentity");
+      // XXX throw?
+    }
+    m_currentVoter = (PeerIdentity) voters[0];
     // XXX this is mock stuff for initial testing
     EffortService.ProofCallback cb = new PollEffortCallback(m_pollmanager);
     EffortService es = theEffortService;
@@ -414,8 +426,24 @@ public class V3Poller extends V3Poll {
       } else {
 	log.debug("PollEffortProofCallback: " + ((String) cookie));
 	changePollState(STATE_SENDING_POLL);
-	// XXX send the proof and the message
-	changePollState(STATE_WAITING_POLL_ACK);
+	Properties props = null;
+	//  XXX put effort etc into Properties for message
+	if (false) try {
+	  PollSpec pollspec = null; // XXX
+	  LcapMessage msg =
+	    V3LcapMessage.makeRequestMsg(pollspec, props, m_challenge,
+					 V3LcapMessage.MSG_POLL,
+					 m_deadline.getRemainingTime(),
+					 m_callerID);
+	  pollMgr.sendMessageTo(msg, m_cus.getArchivalUnit(), m_currentVoter);
+	  changePollState(STATE_WAITING_POLL_ACK);
+	} catch (IOException ex) {
+	  log.error("sending message to " + m_currentVoter.toString() +
+		    " threw " + ex.toString());
+	  nextVoter(cookie, false);
+	} else {
+	  changePollState(STATE_WAITING_POLL_ACK);
+	}
       }
     }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: PollSpec.java,v 1.27.2.1 2004-10-01 01:13:49 dshr Exp $
+ * $Id: PollSpec.java,v 1.27.2.2 2004-10-29 03:38:19 dshr Exp $
  */
 
 /*
@@ -72,7 +72,7 @@ public class PollSpec {
   private String url;
   private String uprBound = null;
   private String lwrBound = null;
-  private CachedUrlSet cus = null;
+  protected CachedUrlSet cus = null;
   private PluginManager pluginMgr = null;
   private int pollVersion; // poll protocol version
   private int pollType;    // One of the types defined by Poll
