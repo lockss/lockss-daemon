@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.17 2002-11-06 04:21:23 tal Exp $
+ $Id: build.xml,v 1.18 2002-11-06 04:52:20 tal Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
@@ -37,6 +37,8 @@ Args:
   -Dclass=pack.age.Class    Specify class for test-one, test-class, run-class
   -Dshowoutput=yes          With test-one, show System.err output as it happens
   -Dargs="args ..."         Supply cmd line args to run-class
+  -Dloglevel=debug          Set default log level to debug for
+                               test-all, test-one, test-class, run-class
 </description>
 
   <!-- Set to yes (on command line) to see output as it happens -->
