@@ -1,5 +1,5 @@
 /*
- * $Id: TitleSetActiveAus.java,v 1.3 2005-01-13 08:10:15 tlipkis Exp $
+ * $Id: TitleSetActiveAus.java,v 1.4 2005-01-19 04:15:35 tlipkis Exp $
  */
 
 /*
@@ -109,10 +109,8 @@ public class TitleSetActiveAus extends BaseTitleSet {
       new UnsupportedOperationException("This method should never be called");
   }
 
-  /** Set of all AUs on cache is only appripriate for deleting, not adding.
-   * @return true */
-  public boolean isDelOnly() {
-    return true;
+  protected int getActionables() {
+    return SET_DELABLE;
   }
 
   /** Sort this second */

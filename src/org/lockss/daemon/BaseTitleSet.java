@@ -1,5 +1,5 @@
 /*
- * $Id: BaseTitleSet.java,v 1.3 2005-01-13 08:10:15 tlipkis Exp $
+ * $Id: BaseTitleSet.java,v 1.4 2005-01-19 04:15:35 tlipkis Exp $
  */
 
 /*
@@ -56,9 +56,8 @@ public abstract class BaseTitleSet implements TitleSet {
     return name;
   }
   
-  /** Filter the collection of all known titles by the implementation's
-   * filterTitles(Collection) method.
-   * @return a collection of {@link TitleConfig} */
+  /** Return the titles in the set.
+   * @return a collection of TitleConfig */
   public Collection getTitles() {
     return filterTitles(daemon.getPluginManager().findAllTitleConfigs());
   }
@@ -69,17 +68,12 @@ public abstract class BaseTitleSet implements TitleSet {
    */
   abstract Collection filterTitles(Collection allTitles);
 
-  /** Override as appropriate.
-   * @return false */
-  public boolean isDelOnly() {
-    return false;
+  /** Match action with actionable set from implementation */
+  public final boolean isSetActionable(int action) {
+    return (action & getActionables()) != 0;
   }
 
-  /** Override as appropriate.
-   * @return false */
-  public boolean isAddOnly() {
-    return false;
-  }
+  abstract protected int getActionables();
 
   /** Allow different implementations to specify their major sort order
    * relative to other implementations.

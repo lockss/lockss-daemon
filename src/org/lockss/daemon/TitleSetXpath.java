@@ -1,5 +1,5 @@
 /*
- * $Id: TitleSetXpath.java,v 1.3 2005-01-13 08:10:15 tlipkis Exp $
+ * $Id: TitleSetXpath.java,v 1.4 2005-01-19 04:15:35 tlipkis Exp $
  */
 
 /*
@@ -94,9 +94,13 @@ public class TitleSetXpath extends BaseTitleSet {
     return xpath;
   }
 
-  /** Sort these third */
+  /** Return all the actionable bits for the set. */
+  protected int getActionables() {
+    return SET_DELABLE + SET_ADDABLE + SET_REACTABLE;
+  }
+
   protected int getMajorOrder() {
-    return 3;
+    return 4;
   }
 
   public boolean equals(Object o) {

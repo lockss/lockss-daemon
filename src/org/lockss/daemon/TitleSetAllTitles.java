@@ -1,5 +1,5 @@
 /*
- * $Id: TitleSetAllTitles.java,v 1.3 2005-01-13 08:10:15 tlipkis Exp $
+ * $Id: TitleSetAllTitles.java,v 1.4 2005-01-19 04:15:35 tlipkis Exp $
  */
 
 /*
@@ -55,10 +55,8 @@ public class TitleSetAllTitles extends BaseTitleSet {
     return allTitles;
   }
 
-  /** Set of all titles is only appripriate for adding, not deleting.
-   * @return true */
-  public boolean isAddOnly() {
-    return true;
+  protected int getActionables() {
+    return SET_ADDABLE;
   }
 
   /** Causes this set to sort first */
