@@ -1,5 +1,5 @@
 /*
- * $Id: HashQueue.java,v 1.26 2003-03-26 00:48:01 tal Exp $
+ * $Id: HashQueue.java,v 1.27 2003-03-27 03:04:33 tal Exp $
  */
 
 /*
@@ -465,25 +465,26 @@ class HashQueue implements Serializable {
   private static final List statusColDescs =
 
     ListUtil.list(
-		  new ColumnDescriptor("sched", "In",
+		  new ColumnDescriptor("sched", "Req",
 				       ColumnDescriptor.TYPE_INT, FOOT_IN),
 // 		  new ColumnDescriptor("finish", "Out",
 // 				       ColumnDescriptor.TYPE_INT),
 		  new ColumnDescriptor("state", "State",
-				       ColumnDescriptor.TYPE_STRING,
-				       FOOT_OVER),
+				       ColumnDescriptor.TYPE_STRING),
 		  new ColumnDescriptor("au", "Volume",
 				       ColumnDescriptor.TYPE_STRING),
-		  new ColumnDescriptor("type", "Type",
-				       ColumnDescriptor.TYPE_STRING),
 		  new ColumnDescriptor("cus", "Cached Url Set",
+				       ColumnDescriptor.TYPE_STRING),
+		  new ColumnDescriptor("type", "Type",
 				       ColumnDescriptor.TYPE_STRING),
 		  new ColumnDescriptor("deadline", "Deadline",
 				       ColumnDescriptor.TYPE_DATE),
 		  new ColumnDescriptor("estimate", "Estimated",
 				       ColumnDescriptor.TYPE_TIME_INTERVAL),
 		  new ColumnDescriptor("timeused", "Used",
-				       ColumnDescriptor.TYPE_TIME_INTERVAL),
+				       ColumnDescriptor.TYPE_TIME_INTERVAL,
+				       FOOT_OVER),
+
 		  new ColumnDescriptor("bytesHashed", "Bytes<br>Hashed",
 				       ColumnDescriptor.TYPE_INT)
 		  );
@@ -520,8 +521,6 @@ class HashQueue implements Serializable {
 
     private Map makeRow(Request req, boolean done, int qpos) {
       Map row = new HashMap();
-      ReqState state = (done ? REQ_STATE_DONE :
-		      (req == head()) ? REQ_STATE_DONE : REQ_STATE_WAIT);
       row.put("sort", new Integer(done ? -req.finish : qpos));
       row.put("sched", new Integer(req.sched));
 //       row.put("finish", new Integer(req.finish));
@@ -531,18 +530,27 @@ class HashQueue implements Serializable {
       row.put("type", req.type);
       row.put("deadline", req.deadline.getExpiration());
       row.put("estimate", new Long(req.origEst));
-      row.put("timeused", new Long(req.timeUsed));
+      Object used = new Long(req.timeUsed);
+      if (req.overrun()) {
+	StatusTable.DisplayedValue val = new StatusTable.DisplayedValue(used);
+	val.setColor("red");
+	used = val;
+      }
+      row.put("timeused", used);
       row.put("bytesHashed", new Long(req.bytesHashed));
       return row;
     }
 
-    private ReqState getState(Request req, boolean done) {
-      if (req.overrun()) {
-	return (done ? REQ_STATE_DONE_O :
-		(req == head()) ? REQ_STATE_RUN_O : REQ_STATE_WAIT_O);
+    private Object getState(Request req, boolean done) {
+      if (!done) {
+	return (req == head()) ? REQ_STATE_RUN : REQ_STATE_WAIT;
+      }
+      if (req.e == null) {
+	return REQ_STATE_DONE;
+      } else if (req.e instanceof HashService.Timeout) {
+	return REQ_STATE_TIMEOUT;
       } else {
-	return (done ? REQ_STATE_DONE :
-		(req == head()) ? REQ_STATE_RUN : REQ_STATE_WAIT);
+	return REQ_STATE_ERROR;
       }
     }
 
@@ -582,13 +590,6 @@ class HashQueue implements Serializable {
       this.order = order;
     }
 
-    ReqState(String name, int order, boolean red) {
-      this(name, order);
-      if (red) {
-	this.name = "<font color=red>" + this.name + "</font>";
-      }
-    }
-
     public int compareTo(Object o) {
       return order - ((ReqState)o).order;
     }
@@ -599,8 +600,14 @@ class HashQueue implements Serializable {
   static final ReqState REQ_STATE_RUN = new ReqState("Run", 1);
   static final ReqState REQ_STATE_WAIT = new ReqState("Wait", 2);
   static final ReqState REQ_STATE_DONE = new ReqState("Done", 3);
-  static final ReqState REQ_STATE_RUN_O = new ReqState("Run", 1, true);
-  static final ReqState REQ_STATE_WAIT_O = new ReqState("Wait", 2, true);
-  static final ReqState REQ_STATE_DONE_O = new ReqState("Done", 3, true);
+
+  static final StatusTable.DisplayedValue REQ_STATE_TIMEOUT =
+    new StatusTable.DisplayedValue(new ReqState("Timeout", 3));
+  static final StatusTable.DisplayedValue REQ_STATE_ERROR = 
+    new StatusTable.DisplayedValue(new ReqState("Error", 3));
     
+  static {
+    REQ_STATE_TIMEOUT.setColor("red");
+    REQ_STATE_ERROR.setColor("red");
+  }
 }
