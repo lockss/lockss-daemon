@@ -1,5 +1,5 @@
 /*
- * $Id: TestTaskRunner.java,v 1.7 2004-09-01 18:01:48 tlipkis Exp $
+ * $Id: TestTaskRunner.java,v 1.8 2004-09-02 07:47:53 tlipkis Exp $
  */
 
 /*
@@ -164,7 +164,8 @@ public class TestTaskRunner extends LockssTestCase {
 
   // one task to drop, two failed schedule tries
   public void testAddToScheduleFailNoCleanup() {
-    ConfigurationUtil.setFromArgs(TaskRunner.PARAM_DROP_TASK_MAX, "10");
+    ConfigurationUtil.setFromArgs(TaskRunner.PARAM_DROP_TASK_MAX, "10",
+				  TaskRunner.PARAM_MIN_CLEANUP_INTERVAL, "0");
     StepTask t1 = task(100, 200, 50);
     StepTask t2 = task(100, 200, 100);
     Schedule sched = sched(ListUtil.list(t1));
@@ -186,7 +187,8 @@ public class TestTaskRunner extends LockssTestCase {
   // one task not ready to start yet, so not droppable
   public void testAddToScheduleFailNoDroppable() {
     log.debug("testAddToScheduleOkAfterDrops()");
-    ConfigurationUtil.setFromArgs(TaskRunner.PARAM_DROP_TASK_MAX, "10");
+    ConfigurationUtil.setFromArgs(TaskRunner.PARAM_DROP_TASK_MAX, "10",
+				  TaskRunner.PARAM_MIN_CLEANUP_INTERVAL, "0");
     StepTask t1 = task(100, 200, 50);
     StepTask t2 = task(100, 200, 100);
     Schedule sched1 = sched(ListUtil.list(t1));
@@ -211,7 +213,8 @@ public class TestTaskRunner extends LockssTestCase {
   // one task to drop, succeeds after dropping it
   public void testAddToScheduleOkAfterDrops() {
     log.debug("testAddToScheduleOkAfterDrops()");
-    ConfigurationUtil.setFromArgs(TaskRunner.PARAM_DROP_TASK_MAX, "10");
+    ConfigurationUtil.setFromArgs(TaskRunner.PARAM_DROP_TASK_MAX, "10",
+				  TaskRunner.PARAM_MIN_CLEANUP_INTERVAL, "0");
     StepTask t1 = task(100, 200, 50);
     StepTask t2 = task(100, 200, 100);
     Schedule sched1 = sched(ListUtil.list(t1));

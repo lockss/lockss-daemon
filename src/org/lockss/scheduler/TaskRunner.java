@@ -1,5 +1,5 @@
 /*
- * $Id: TaskRunner.java,v 1.23 2004-09-01 18:01:49 tlipkis Exp $
+ * $Id: TaskRunner.java,v 1.24 2004-09-02 07:47:53 tlipkis Exp $
  */
 
 /*
@@ -54,6 +54,10 @@ class TaskRunner implements Serializable {
   static final String PARAM_DROP_TASK_MAX = PREFIX + "maxTaskDrop";
   static final int DEFAULT_DROP_TASK_MAX = 0;
 
+  static final String PARAM_MIN_CLEANUP_INTERVAL =
+    PREFIX + "minCleanupInterval";
+  static final long DEFAULT_MIN_CLEANUP_INTERVAL = Constants.SECOND;
+
   static final String PARAM_HISTORY_MAX = PREFIX + "historySize";
   static final int DEFAULT_HISTORY_MAX = 50;
 
@@ -81,6 +85,7 @@ class TaskRunner implements Serializable {
   private TreeSet overrunTasks =
     new TreeSet(SchedulableTask.latestFinishComparator());
   private int maxDrop = DEFAULT_DROP_TASK_MAX;
+  private long minCleanupInterval = DEFAULT_MIN_CLEANUP_INTERVAL;
   // last n completed requests
   private HistoryList history = new HistoryList(DEFAULT_HISTORY_MAX);
   private StepThread stepThread;
@@ -99,7 +104,8 @@ class TaskRunner implements Serializable {
   private static final int STAT_OVERRUN = 4;
   private static final int STAT_CANCELLED = 5;
   private static final int STAT_DROPPED = 6;
-  private static final int NUM_STATS = 7;
+  private static final int STAT_WAITING = 7;
+  private static final int NUM_STATS = 8;
 
   private int backgroundStats[] = new int[NUM_STATS];
   private int foregroundStats[] = new int[NUM_STATS];
@@ -130,6 +136,9 @@ class TaskRunner implements Serializable {
 			 Configuration.Differences changedKeys) {
     maxDrop = config.getInt(PARAM_DROP_TASK_MAX, DEFAULT_DROP_TASK_MAX);
 
+    minCleanupInterval = config.getTimeInterval(PARAM_MIN_CLEANUP_INTERVAL,
+						DEFAULT_MIN_CLEANUP_INTERVAL);
+
     statsUpdateInterval =
       config.getTimeInterval(PARAM_STATS_UPDATE_INTERVAL,
 			     DEFAULT_STATS_UPDATE_INTERVAL);
@@ -154,16 +163,24 @@ class TaskRunner implements Serializable {
       return true;
     } else {
       log.debug2("Can't schedule task: " + task);
-      addStats(task, STAT_REFUSED);
+      incrStats(task, STAT_REFUSED);
       return false;
     }
   }
 
-  private void addStats(SchedulableTask task, int stat) {
+  private void incrStats(SchedulableTask task, int stat) {
     if (task.isBackgroundTask()) {
       backgroundStats[stat]++;
     } else {
       foregroundStats[stat]++;
+    }
+  }
+
+  private void decrStats(SchedulableTask task, int stat) {
+    if (task.isBackgroundTask()) {
+      backgroundStats[stat]--;
+    } else {
+      foregroundStats[stat]--;
     }
   }
 
@@ -189,12 +206,18 @@ class TaskRunner implements Serializable {
     return scheduler.createSchedule(tasks);
   }
 
+  private long lastCleanup = 0;
+
   boolean cleanupSchedule(Scheduler scheduler, boolean doDrop) {
     if (currentSchedule == null) {
       log.debug("cleanupSchedule(): currentSchedule = null");
       return false;
     }
-    
+    // don't do this too often
+    if (TimeBase.msSince(lastCleanup) < minCleanupInterval) {
+      return false;
+    }
+    lastCleanup = TimeBase.nowMs();
     List unexpired = getUnexpiredTasks();
     if (scheduler.createSchedule(unexpired)) {
       // no cleanup necessary, nothing pruned
@@ -333,7 +356,8 @@ class TaskRunner implements Serializable {
       }
       task.schedSeq = ++taskCtr;
       task.schedDate = TimeBase.nowDate();
-      addStats(task, STAT_ACCEPTED);
+      incrStats(task, STAT_ACCEPTED);
+      incrStats(task, STAT_WAITING);
       return true;
     } else {
       return false;
@@ -382,7 +406,7 @@ class TaskRunner implements Serializable {
       pokeThread();
     }
     if (res) {
-      addStats(task, STAT_CANCELLED);
+      incrStats(task, STAT_CANCELLED);
     }
     return res;
   }
@@ -589,12 +613,14 @@ class TaskRunner implements Serializable {
     Schedule.EventType et = event.getType();
     if (log.isDebug2()) log.debug2("Bkgnd event: " + event);
     if (Schedule.EventType.START == et) {
-      // Redundant start events will be generated whenever the schedule is
-      // recalculated after the task has started.  (Which is necessary to
-      // ensure no start events are missed.)
+      // Silently absorb redundant start events, which appear whenever the
+      // schedule is recalculated after the task has started.  (Which is
+      // necessary to ensure no start events are missed.)
       if (!task.isFinished() && addToBackgroundTasks(task)) {
-	// Must provisionally add to backgroundTasks, as it might run and
-	// finish before we get to run again after calling its taskEvent
+	// Must add to backgroundTasks *before* signalling the taskEvent
+	// callback, as that might cause the task to run and finish, and
+	// remove itself from backgroundTasks, before we get to run again.
+	decrStats(task, STAT_WAITING);
 	try {
 	  task.callback.taskEvent(task, et);
 	} catch (TaskCallback.Abort e) {
@@ -614,7 +640,7 @@ class TaskRunner implements Serializable {
       acceptedTasks.remove(task);	// do this before callback
       if (removeFromBackgroundTasks(task)) {
 	task.setFinished();
-	addStats(task, STAT_COMPLETED);
+	incrStats(task, STAT_COMPLETED);
 	addToHistory(event);
 	try {
 	  task.callback.taskEvent(task, event.getType());
@@ -622,6 +648,10 @@ class TaskRunner implements Serializable {
 	  log.error("Background task finish callback threw", e);
 	  event.setError(e);
 	}
+      } else {
+	// if it was not in backgroundTasks, it never started, thus it is
+	// now no longer waiting
+	decrStats(task, STAT_WAITING);
       }
     }
   }
@@ -670,7 +700,7 @@ class TaskRunner implements Serializable {
 	removeTask(task);
     } else if (chunk.isTaskEnd()) {
       if (task.isOverrunAllowed()) {
-	addOverrunner(task);
+	addOverrunner(task, task.hasOverrun() ? STAT_OVERRUN : STAT_DROPPED);
       } else {
 	removeTask(task);
       }
@@ -689,7 +719,7 @@ class TaskRunner implements Serializable {
   void addOverrunner(SchedulableTask task, int statidx) {
     if (overrunTasks.add(task)) {
       if (statidx != STAT_NONE) {
-	addStats(task, statidx);
+	incrStats(task, statidx);
 	if (log.isDebug2()) log.debug2("New overruner (" + statidx + "): " +
 				       task);
       } else {
@@ -724,9 +754,9 @@ class TaskRunner implements Serializable {
   private void removeAndNotify(SchedulableTask task, String msg) {
     task.setFinished();
     if (task.e instanceof SchedService.Timeout) {
-      addStats(task, STAT_EXPIRED);
+      incrStats(task, STAT_EXPIRED);
     } else {
-      addStats(task, STAT_COMPLETED);
+      incrStats(task, STAT_COMPLETED);
     }
     if (log.isDebug()) {
       log.debug(msg + ((task.e != null) ? (task.e + ": ") : "") + task);
@@ -736,6 +766,7 @@ class TaskRunner implements Serializable {
     }
     synchronized (this) {
       acceptedTasks.remove(task);	// do this before callback
+      decrStats(task, STAT_WAITING);
     }
     overrunTasks.remove(task);
     doCallback(task);
@@ -1045,34 +1076,46 @@ class TaskRunner implements Serializable {
       return sb.toString();
     }
 
+    String taskStatsString(int stats[]) {
+      List lst = new ArrayList();
+      StringBuffer sb = new StringBuffer();
+      stxt(lst, stats[STAT_ACCEPTED], " scheduled", true);
+      stxt(lst, stats[STAT_REFUSED], " refused");
+      if (stats == backgroundStats) {
+	stxt(lst, backgroundTasks.size(), " running");
+      }
+      stxt(lst, stats[STAT_WAITING], " waiting");
+      stxt(lst, stats[STAT_COMPLETED], " completed");
+      stxt(lst, stats[STAT_EXPIRED], " expired");
+      if (stats == foregroundStats) {
+	stxt(lst, stats[STAT_DROPPED], " delayed");
+	stxt(lst, stats[STAT_OVERRUN], " overrun");
+	stxt(lst, overrunTasks.size(), " owait");
+      }
+      return StringUtil.separatedString(lst, ", ");
+    }
+
+    private void stxt(List lst, int val, String label) {
+      stxt(lst, val, label, false);
+    }
+
+    private void stxt(List lst, int val, String label, boolean always) {
+      if (always || val != 0) {
+	lst.add(val + label);
+      }
+    }
+
     private List getSummaryInfo(String key) {
       List res = new ArrayList();
-      res.add(new StatusTable.SummaryInfo("Tasks accepted",
-					  ColumnDescriptor.TYPE_STRING,
-					  combStats(STAT_ACCEPTED)));
-      res.add(new StatusTable.SummaryInfo("Tasks refused",
-					  ColumnDescriptor.TYPE_STRING,
-					  combStats(STAT_REFUSED)));
-      res.add(new StatusTable.SummaryInfo("Tasks completed",
-					  ColumnDescriptor.TYPE_STRING,
-					  combStats(STAT_COMPLETED)));
-      res.add(new StatusTable.SummaryInfo("Tasks expired",
-					  ColumnDescriptor.TYPE_STRING,
-					  combStats(STAT_EXPIRED)));
-      res.add(new StatusTable.SummaryInfo("Tasks overrun",
-					  ColumnDescriptor.TYPE_STRING,
-					  combStats(STAT_OVERRUN)));
-      res.add(new StatusTable.SummaryInfo("Tasks dropped",
-					  ColumnDescriptor.TYPE_STRING,
-					  combStats(STAT_DROPPED)));
-      res.add(new StatusTable.SummaryInfo("Total foreground time",
+      res.add(new StatusTable.SummaryInfo("Foreground time",
 					  ColumnDescriptor.TYPE_TIME_INTERVAL,
 					  new Long(totalTime)));
-      if (!overrunTasks.isEmpty()) {
-	res.add(new StatusTable.SummaryInfo("Active overrun tasks",
-					    ColumnDescriptor.TYPE_INT,
-					    new Long(overrunTasks.size())));
-      }
+      res.add(new StatusTable.SummaryInfo("Foreground Tasks",
+					  ColumnDescriptor.TYPE_STRING,
+					  taskStatsString(foregroundStats)));
+      res.add(new StatusTable.SummaryInfo("Background Tasks",
+					  ColumnDescriptor.TYPE_STRING,
+					  taskStatsString(backgroundStats)));
       return res;
     }
 
