@@ -1,5 +1,5 @@
 /*
- * $Id: LcapComm.java,v 1.33 2003-05-26 03:48:25 tal Exp $
+ * $Id: LcapComm.java,v 1.34 2003-05-28 16:13:45 tal Exp $
  */
 
 /*
@@ -34,8 +34,10 @@ package org.lockss.protocol;
 import java.io.*;
 import java.net.*;
 import java.util.*;
+import java.text.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
+import org.lockss.daemon.status.*;
 import org.apache.commons.collections.LRUMap;
 import org.lockss.app.*;
 import org.lockss.plugin.*;
@@ -103,6 +105,8 @@ public class LcapComm extends BaseLockssManager {
   public void startService() {
     super.startService();
     start();
+    getDaemon().getStatusService().registerStatusAccessor("CommStats",
+							  new Status());
   }
 
   /**
@@ -201,6 +205,7 @@ public class LcapComm extends BaseLockssManager {
     if (group == null) {
       throw new IllegalStateException("Multicast group not configured");
     }
+    updateOutStats(ld, multiPort, true);
     sendTo(ld, group, multiPort);
   }
 
@@ -224,6 +229,7 @@ public class LcapComm extends BaseLockssManager {
 
   void sendTo(LockssDatagram ld, InetAddress addr)
       throws IOException {
+    updateOutStats(ld, uniSendToPort, false);
     sendTo(ld, addr, uniSendToPort);
   }
 
@@ -333,6 +339,7 @@ public class LcapComm extends BaseLockssManager {
   private void processReceivedPacket(LockssReceivedDatagram ld) {
     if (verifyPacket(ld)) {
       log.debug2("Received " + ld);
+      updateInStats(ld);
       runHandlers(ld);
     }
   }
@@ -474,6 +481,200 @@ public class LcapComm extends BaseLockssManager {
 
     public LcapSocket newSendSocket() throws SocketException {
       return new LcapSocket();
+    }
+  }
+
+  private void updateInStats(LockssReceivedDatagram ld) {
+    LcapSocket lsock = ld.getReceiveSocket();
+    DatagramSocket sock = lsock.getSocket();
+    updateStats(ld, sock.getLocalPort(), true, ld.isMulticast());
+  }
+
+  private void updateOutStats(LockssDatagram ld, int port, boolean multicast) {
+    updateStats(ld, port, false, multicast);
+  }
+
+  private void updateStats(LockssDatagram ld, int port,
+			   boolean in, boolean multicast) {
+    int proto = ld.getProtocol();
+    Stats stats = getStatsObj(port, proto, multicast, false);
+    if (in) {
+      stats.inPkts++;
+      stats.inBytes += ld.getData().length;
+    } else {
+      stats.outPkts++;
+      stats.outBytes += ld.getData().length;
+
+}}
+
+  Stats getStatsObj(int port, int proto, boolean multicast,
+		    boolean compressed) {
+    StringBuffer sb = new StringBuffer();
+    sb.append(port);
+    sb.append(proto);
+    sb.append(multicast);
+//     sb.append(in);
+    sb.append(compressed);
+    String key = sb.toString();
+    Stats stats = (Stats)statsMap.get(key);
+    if (stats == null) {
+      stats = new Stats();
+      stats.port = port;
+      stats.proto = proto;
+      stats.multicast = multicast;
+      stats.compressed = compressed;
+      statsMap.put(key, stats);
+    }
+    return stats;
+  }
+
+  private class Stats {
+    int port;
+    int proto;
+    boolean multicast;
+    boolean compressed;
+    int inPkts;
+    long inBytes;
+    int outPkts;
+    long outBytes;
+
+    // multicast sockets see the packets they send, so discount those
+    int getInPkts() {
+      if (!multicast) {
+	return inPkts;
+      }
+      return inPkts - outPkts;
+    }
+
+    // multicast sockets see the packets they send, so discount those
+    long getInBytes() {
+      if (!multicast) {
+	return inBytes;
+      }
+      return inBytes - outBytes;
+    }
+  }
+
+  private Map statsMap = new HashMap();
+
+
+  private static final List statusSortRules =
+    ListUtil.list(new StatusTable.SortRule("sort", true),
+		  new StatusTable.SortRule("proto", true),
+		  new StatusTable.SortRule("port", true),
+		  new StatusTable.SortRule("cast", true),
+		  new StatusTable.SortRule("dir", true),
+		  new StatusTable.SortRule("comp", true));
+
+  private static final String multiExcludeNote =
+    "Excludes multicast packets sent by this cache.";
+
+  private static final List statusColDescs =
+    ListUtil.list(
+		  new ColumnDescriptor("proto", "Proto",
+				       ColumnDescriptor.TYPE_INT),
+		  new ColumnDescriptor("port", "Port",
+				       ColumnDescriptor.TYPE_INT,
+				       "U/M = Unicast/Multicast"),
+// 		  new ColumnDescriptor("cast", "U/M",
+// 				       ColumnDescriptor.TYPE_STRING,
+// 				       "Unicast/Multicast"),
+// 		  new ColumnDescriptor("comp", "Comprsd",
+// 				       ColumnDescriptor.TYPE_STRING),
+		  new ColumnDescriptor("inPkts", "Pkts in",
+				       ColumnDescriptor.TYPE_INT,
+				       multiExcludeNote),
+		  new ColumnDescriptor("inBytes", "Bytes in",
+				       ColumnDescriptor.TYPE_INT,
+				       multiExcludeNote),
+		  new ColumnDescriptor("outPkts", "Pkts out",
+				       ColumnDescriptor.TYPE_INT),
+		  new ColumnDescriptor("outBytes", "Bytes out",
+				       ColumnDescriptor.TYPE_INT)
+		  );
+
+  private class Status implements StatusAccessor {
+    // port, proto, u/m, direction, compressed, pkts, bytes
+    long start;
+
+    public void populateTable(StatusTable table) {
+      String key = table.getKey();
+      table.setTitle("Comm Statistics");
+      table.setColumnDescriptors(statusColDescs);
+      table.setDefaultSortRules(statusSortRules);
+      table.setRows(getRows(key));
+    }
+
+    public boolean requiresKey() {
+      return false;
+    }
+
+    private List getRows(String key) {
+      List table = new ArrayList();
+      Stats tot = new Stats();
+      Iterator iter = statsMap.values().iterator();
+      if (!iter.hasNext()) {
+	return table;
+      }
+      while (iter.hasNext()) {
+	Stats st = (Stats)iter.next();
+	table.add(makeRow(st, 0));
+	tot.inPkts += st.getInPkts();
+	tot.inBytes += st.getInBytes();
+	tot.outPkts += st.outPkts;
+	tot.outBytes += st.outBytes;
+      }
+      table.add(makeRow(tot, 1));
+      start = getDaemon().getStartDate().getTime();
+      if (TimeBase.msSince(start) >= Constants.HOUR) {
+	table.add(makeRow(tot, 2));
+      }
+      return table;
+    }
+
+    NumberFormat rateFormat = new DecimalFormat("0");
+
+    String rate(long n) {
+      long ms = TimeBase.msSince(start);
+      double phr = (double)n * (double)Constants.HOUR / (double)ms;
+      return rateFormat.format(phr);
+    }
+
+    private Map makeRow(Stats stats, int special) {
+      Map row = new HashMap();
+      switch (special) {
+      case 0:
+	StringBuffer sb = new StringBuffer();
+	sb.append(stats.port);
+	sb.append(stats.multicast ? " M" : " U");
+	row.put("port", sb.toString());
+	row.put("proto", new Integer(stats.proto));
+	break;
+      case 1:
+	row.put("proto", "Total");
+	row.put(StatusTable.ROW_SEPARATOR, "");
+	break;
+      case 2:
+	row.put("proto", "per hour");
+	break;
+      }
+      row.put("sort", new Integer(special));
+      switch (special) {
+      case 0:
+      case 1:
+	row.put("inPkts", new Integer(stats.getInPkts()));
+	row.put("inBytes", new Long(stats.getInBytes()));
+	row.put("outPkts", new Integer(stats.outPkts));
+	row.put("outBytes", new Long(stats.outBytes));
+	break;
+      case 2:
+	row.put("inPkts", rate(stats.getInPkts()));
+	row.put("inBytes", rate(stats.getInBytes()));
+	row.put("outPkts", rate(stats.outPkts));
+	row.put("outBytes", rate(stats.outBytes));
+	break;
+      }
+      return row;
     }
   }
 }
