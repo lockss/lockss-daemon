@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.13 2003-12-23 00:26:58 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.14 2003-12-23 01:35:04 tlipkis Exp $
  */
 
 /*
@@ -65,7 +65,7 @@ public class ConfigManager implements LockssManager {
     MYPREFIX + "fileVersion.<filename>";
 
   /** Temporary param to enable new scheduler */
-  static final String PARAM_NEW_SCHEDULER =
+  public static final String PARAM_NEW_SCHEDULER =
     HashService.PREFIX + "use.scheduler";
   static final boolean DEFAULT_NEW_SCHEDULER = true;
 
@@ -327,12 +327,16 @@ public class ConfigManager implements LockssManager {
     }
   }
 
+  static final String PARAM_HASH_SVC = "org.lockss.manager.HashService";
+
   private void copyPlatformParams(Configuration config) {
     // hack to make hash use new scheduler without directly setting
     // org.lockss.manager.HashService, which would break old daemons.
-    if (config.getBoolean(PARAM_NEW_SCHEDULER, DEFAULT_NEW_SCHEDULER)) {
-      config.put("org.lockss.manager.HashService",
-		 "org.lockss.hasher.HashSvcSchedImpl");
+    // don't set if already has a value
+    log.info(PARAM_HASH_SVC + ": " + config.get(PARAM_HASH_SVC));
+    if (config.get(PARAM_HASH_SVC) == null &&
+	config.getBoolean(PARAM_NEW_SCHEDULER, DEFAULT_NEW_SCHEDULER)) {
+      config.put(PARAM_HASH_SVC, "org.lockss.hasher.HashSvcSchedImpl");
     }
 
     String logdir = config.get(PARAM_PLATFORM_LOG_DIR);
