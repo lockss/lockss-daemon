@@ -1,5 +1,5 @@
 /*
- * $Id: NamedElement.java,v 1.1 2003-02-20 01:37:23 aalto Exp $
+ * $Id: UrlElement.java,v 1.1 2003-02-20 02:15:37 aalto Exp $
  */
 
 /*
@@ -37,11 +37,11 @@ package org.lockss.daemon;
  * It simply provides a mechanism for easily getting the urls of lists of those
  * classes.
  */
-public interface NamedElement {
+public interface UrlElement {
 
   /**
    * Returns the name of this element (typically the url).
    * @return the name
    */
-  public String getName();
+  public String getUrl();
 }
