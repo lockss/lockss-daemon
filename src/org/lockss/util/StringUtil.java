@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.30 2003-09-16 23:41:28 eaalto Exp $
+ * $Id: StringUtil.java,v 1.31 2003-10-06 23:31:33 eaalto Exp $
  */
 
 /*
@@ -384,7 +384,8 @@ public class StringUtil {
 
   /* Return a string with all the characters from an InputStream */
   public static String fromInputStream(InputStream in) throws IOException {
-    return fromReader(new InputStreamReader(in));
+    // use our default encoding rather than system default
+    return fromReader(new InputStreamReader(in, Constants.DEFAULT_ENCODING));
   }
 
   /** Reads in the entire contents of a file into a string */

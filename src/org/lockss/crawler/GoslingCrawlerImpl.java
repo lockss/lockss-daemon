@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingCrawlerImpl.java,v 1.36 2003-09-27 00:13:17 eaalto Exp $
+ * $Id: GoslingCrawlerImpl.java,v 1.37 2003-10-06 23:31:33 eaalto Exp $
  */
 
 /*
@@ -239,7 +239,9 @@ public class GoslingCrawlerImpl implements Crawler {
         // check for the permission on the page
         CachedUrl cu = plugin.makeCachedUrl(ownerCus, manifest);
         InputStream is = cu.openForReading();
-        Reader reader = new InputStreamReader(is);
+        // set the reader to our default encoding
+        //XXX try to extract encoding from source
+        Reader reader = new InputStreamReader(is, Constants.DEFAULT_ENCODING);
         crawl_ok = au.checkCrawlPermission(reader);
       }
     } catch (IOException ex) {
@@ -334,7 +336,9 @@ public class GoslingCrawlerImpl implements Crawler {
       }
 
       InputStream is = cu.openForReading();
-      Reader reader = new InputStreamReader(is); //should do this elsewhere
+      // set the reader to our default encoding
+      //XXX try to extract encoding from source
+      Reader reader = new InputStreamReader(is, Constants.DEFAULT_ENCODING); //should do this elsewhere
       URL srcUrl = new URL(cuStr);
       logger.debug2("Extracting urls from srcUrl");
       String nextUrl = null;

@@ -1,5 +1,5 @@
 /*
- * $Id: Constants.java,v 1.5 2003-09-16 23:33:54 eaalto Exp $
+ * $Id: Constants.java,v 1.6 2003-10-06 23:31:33 eaalto Exp $
  */
 
 /*
@@ -54,5 +54,8 @@ public interface Constants {
 
   /** The RE string matching the EOL string */
   public static String EOL_RE = StringUtil.escapeNonAlphaNum(EOL);
+
+  /** The default encoding used when none is detected */
+  public static String DEFAULT_ENCODING = "ISO-8859-1";
 
 }

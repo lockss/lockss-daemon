@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.36 2003-09-13 00:46:15 eaalto Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.37 2003-10-06 23:31:33 eaalto Exp $
  */
 
 /*
@@ -484,9 +484,14 @@ public class RepositoryNodeImpl implements RepositoryNode {
       InputStream is =
           new BufferedInputStream(new FileInputStream(curInputFile));
       Properties props = (Properties)curProps.clone();
-      Reader reader = new BufferedReader(new FileReader(curInputFile));
+      // the second stream is only used by the reader
+      // this allows us to set the encoding, rather than using the system default
+      InputStream is2 =
+          new BufferedInputStream(new FileInputStream(curInputFile));
+      Reader reader = new BufferedReader(new InputStreamReader(is2,
+          Constants.DEFAULT_ENCODING));
       return new RepositoryNode.RepositoryNodeContents(is, props, reader);
-    } catch (FileNotFoundException fnfe) {
+    } catch (IOException ioe) {
       logger.error("Couldn't get inputstream for '"+curInputFile.getPath()+"'");
       logger.debug3("Running consistency check on node '"+url+"'");
       repository.consistencyCheck(this);
