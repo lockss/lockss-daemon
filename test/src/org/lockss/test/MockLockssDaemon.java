@@ -1,7 +1,39 @@
+/*
+ * $Id: MockLockssDaemon.java,v 1.24 2003-05-22 01:19:41 tal Exp $
+ */
+
+/*
+
+Copyright (c) 2000-2002 Board of Trustees of Leland Stanford Jr. University,
+all rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Except as contained in this notice, the name of Stanford University shall not
+be used in advertising or otherwise to promote the sale, use or other dealings
+in this Software without prior written authorization from Stanford University.
+
+*/
+
 package org.lockss.test;
 
-import org.lockss.app.LockssDaemon;
 import java.util.*;
+import org.lockss.util.*;
 import org.lockss.hasher.*;
 import org.lockss.protocol.*;
 import org.lockss.poller.*;
@@ -16,6 +48,7 @@ import org.lockss.daemon.status.*;
 
 public class MockLockssDaemon extends LockssDaemon {
   ActivityRegulatorService activityRegulatorService = null;
+  WatchdogService wdogService = null;
   HashService hashService = null;
   SystemMetrics systemMetrics = null;
   PollManager pollManager = null;
@@ -43,6 +76,7 @@ public class MockLockssDaemon extends LockssDaemon {
 
   public void stopDaemon() {
     activityRegulatorService = null;
+    wdogService = null;
     hashService = null;
     pollManager = null;
     commManager = null;
@@ -84,6 +118,23 @@ public class MockLockssDaemon extends LockssDaemon {
     return getActivityRegulatorService().getActivityRegulator(au);
   }
 
+
+  /**
+   * return the watchdog service instance
+   * @return the WatchdogService
+   */
+  public WatchdogService getWatchdogService() {
+    if (wdogService == null) {
+      wdogService = new WatchdogService();
+      try {
+        wdogService.initService(this);
+      }
+      catch (LockssDaemonException ex) {
+      }
+      theManagers.put(LockssDaemon.WATCHDOG_SERVICE, wdogService);
+    }
+    return wdogService;
+  }
 
   /**
    * return the hash service instance
@@ -358,6 +409,15 @@ public class MockLockssDaemon extends LockssDaemon {
     activityRegulatorService = activityRegServ;
     theManagers.put(LockssDaemon.ACTIVITY_REGULATOR_SERVICE,
                     activityRegulatorService);
+  }
+
+  /**
+   * Set the WatchdogService
+   * @param wdogService the new service
+   */
+  public void setWatchdogService(WatchdogService wdogService) {
+    this.wdogService = wdogService;
+    theManagers.put(LockssDaemon.WATCHDOG_SERVICE, wdogService);
   }
 
   /**

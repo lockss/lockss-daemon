@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.29 2003-05-17 00:12:48 aalto Exp $
+ * $Id: LockssDaemon.java,v 1.30 2003-05-22 01:19:41 tal Exp $
  */
 
 /*
@@ -67,6 +67,7 @@ public class LockssDaemon {
 
   /* the parameter strings that represent our managers */
   public static String ACTIVITY_REGULATOR_SERVICE = "ActivityRegulatorService";
+  public static String WATCHDOG_SERVICE = "WatchdogService";
   public static String HASH_SERVICE = "HashService";
   public static String COMM_MANAGER = "CommManager";
   public static String ROUTER_MANAGER = "RouterManager";
@@ -87,6 +88,8 @@ public class LockssDaemon {
   private static String DEFAULT_ACTIVITY_REGULATOR_SERVICE =
       "org.lockss.daemon.ActivityRegulatorServiceImpl";
   private static String DEFAULT_HASH_SERVICE = "org.lockss.hasher.HashService";
+  private static String DEFAULT_WATCHDOG_SERVICE =
+    "org.lockss.daemon.WatchdogService";
   private static String DEFAULT_COMM_MANAGER = "org.lockss.protocol.LcapComm";
   private static String DEFAULT_ROUTER_MANAGER =
     "org.lockss.protocol.LcapRouter";
@@ -152,6 +155,7 @@ public class LockssDaemon {
     // start comm layer so we don't receive a message
     new ManagerDesc(COMM_MANAGER, DEFAULT_COMM_MANAGER),
     new ManagerDesc(ROUTER_MANAGER, DEFAULT_ROUTER_MANAGER),
+    new ManagerDesc(WATCHDOG_SERVICE, DEFAULT_WATCHDOG_SERVICE),
   };
 
   private static Logger log = Logger.getLogger("LockssDaemon");
@@ -242,6 +246,15 @@ public class LockssDaemon {
     getActivityRegulatorService().addActivityRegulator(au);
     getLockssRepositoryService().addLockssRepository(au);
     getNodeManagerService().addNodeManager(au);
+  }
+
+  /**
+   * return the watchdog service instance
+   * @return the WatchdogService
+   * @throws IllegalArgumentException if the manager is not available.
+   */
+  public WatchdogService getWatchdogService() {
+    return (WatchdogService)getManager(WATCHDOG_SERVICE);
   }
 
   /**
