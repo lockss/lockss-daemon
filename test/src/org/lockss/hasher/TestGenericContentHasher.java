@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericContentHasher.java,v 1.3 2002-12-19 01:28:40 aalto Exp $
+ * $Id: TestGenericContentHasher.java,v 1.4 2003-01-02 19:39:06 troberts Exp $
  */
 
 /*
@@ -203,10 +203,7 @@ public class TestGenericContentHasher extends LockssTestCase {
       String url = TEST_URL+ix;
       MockCachedUrl cu = new MockCachedUrl(url);
 
-      File testFile =
-	FileUtil.writeTempFile(tmpDir.getName(), TEST_FILE_CONTENT+ix);
-
-      cu.setInputStream(new FileInputStream(testFile));
+      cu.setContent(TEST_FILE_CONTENT+ix);
 
       files.add(cu);
     }
