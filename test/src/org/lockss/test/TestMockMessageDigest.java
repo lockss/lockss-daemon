@@ -1,5 +1,5 @@
 /*
- * $Id: TestMockMessageDigest.java,v 1.3 2003-06-20 22:34:56 claire Exp $
+ * $Id: TestMockMessageDigest.java,v 1.4 2004-12-09 08:19:36 tlipkis Exp $
  */
 
 /*
@@ -34,7 +34,7 @@ package org.lockss.test;
 
 import junit.framework.TestCase;
 
-public class TestMockMessageDigest extends TestCase{
+public class TestMockMessageDigest extends LockssTestCase {
 
   public TestMockMessageDigest(String msg){
     super(msg);

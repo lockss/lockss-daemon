@@ -1,5 +1,5 @@
 /*
- * $Id: TestDatagramSocketListener.java,v 1.7 2003-06-20 22:34:56 claire Exp $
+ * $Id: TestDatagramSocketListener.java,v 1.8 2004-12-09 08:19:36 tlipkis Exp $
  */
 
 /*
@@ -36,7 +36,7 @@ import java.net.*;
 import java.util.*;
 import junit.framework.TestCase;
 
-public class TestDatagramSocketListener extends TestCase{
+public class TestDatagramSocketListener extends LockssTestCase {
   //private static final int port = 9898;
   private int port = 12345;
   private static final String host = "127.0.0.1";

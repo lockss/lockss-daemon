@@ -1,5 +1,5 @@
 /*
- * $Id: TestEnumerationIterator.java,v 1.3 2003-06-20 22:34:56 claire Exp $
+ * $Id: TestEnumerationIterator.java,v 1.4 2004-12-09 08:19:36 tlipkis Exp $
  */
 
 /*
@@ -33,12 +33,12 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 
 import java.util.*;
-import junit.framework.TestCase;
+import org.lockss.test.*;
 
 /**
  * Test class for org.lockss.util.EnumerationIterator
  */
-public class TestEnumerationIterator extends TestCase {
+public class TestEnumerationIterator extends LockssTestCase {
   public static Class testedClasses[] = {
     org.lockss.util.EnumerationIterator.class
   };

@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringInputStream.java,v 1.4 2003-06-20 22:34:56 claire Exp $
+ * $Id: TestStringInputStream.java,v 1.5 2004-12-09 08:19:36 tlipkis Exp $
  */
 
 /*
@@ -41,7 +41,7 @@ import junit.framework.TestCase;
  * @version 0.0
  */
 
-public class TestStringInputStream extends TestCase {
+public class TestStringInputStream extends LockssTestCase {
 
   public TestStringInputStream(String msg) {
     super(msg);

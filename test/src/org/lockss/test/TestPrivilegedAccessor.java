@@ -1,5 +1,5 @@
 /*
- * $Id: TestPrivilegedAccessor.java,v 1.7 2004-09-21 21:25:02 dshr Exp $
+ * $Id: TestPrivilegedAccessor.java,v 1.8 2004-12-09 08:19:36 tlipkis Exp $
  */
 
 /*
@@ -33,7 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.test;
 import junit.framework.*;
 
-public class TestPrivilegedAccessor extends TestCase {
+public class TestPrivilegedAccessor extends LockssTestCase {
   public TestPrivilegedAccessor(String name) {
     super(name);
   }

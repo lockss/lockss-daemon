@@ -1,5 +1,5 @@
 /*
- * $Id: TestPropUtil.java,v 1.10 2004-08-18 20:01:23 tlipkis Exp $
+ * $Id: TestPropUtil.java,v 1.11 2004-12-09 08:19:36 tlipkis Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ import org.lockss.test.*;
  * Test class for <code>org.lockss.util.PropUtil</code>
  */
 
-public class TestPropUtil extends TestCase {
+public class TestPropUtil extends LockssTestCase {
   public static Class testedClasses[] = {
     org.lockss.util.PropUtil.class
   };
