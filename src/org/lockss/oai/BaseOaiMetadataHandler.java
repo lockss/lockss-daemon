@@ -1,5 +1,5 @@
 /*
- * $Id: BaseOaiMetadataHandler.java,v 1.2 2005-01-13 00:51:16 dcfok Exp $
+ * $Id: BaseOaiMetadataHandler.java,v 1.3 2005-01-18 10:31:18 dcfok Exp $
  */
 
 /*
@@ -40,7 +40,7 @@ import org.w3c.dom.*;
 /**
  * Base implementation of OaiMetadataHandler
  */
-public abstract class BaseOaiMetadataHandler implements OaiMetadataHandler {
+public class BaseOaiMetadataHandler implements OaiMetadataHandler{
 
   protected static Logger logger = Logger.getLogger("BaseOaiMetadataHandler");
   protected String metadataPrefix;
@@ -66,11 +66,22 @@ public abstract class BaseOaiMetadataHandler implements OaiMetadataHandler {
    */
   public BaseOaiMetadataHandler(String metadataPrefix, 
 				String metadataNamespaceUrl, 
-				String urlContainerTagName) {
-    metadataNodeList = null;
-    this.metadataPrefix = metadataPrefix;
-    this.metadataNamespaceUrl = metadataNamespaceUrl;
-    this.urlContainerTagName = urlContainerTagName;
+				String urlContainerTagName) 
+    throws NullPointerException {
+      if (metadataPrefix == null){
+	  throw new NullPointerException("metadataPrefix is null");
+      }
+      if (metadataNamespaceUrl == null){
+	  throw new NullPointerException("metadataNamespaceUrl is null");
+      }
+      if (urlContainerTagName == null){
+	  throw new NullPointerException("urlContainerTagName is null");
+      }
+      
+      metadataNodeList = null;
+      this.metadataPrefix = metadataPrefix;
+      this.metadataNamespaceUrl = metadataNamespaceUrl;
+      this.urlContainerTagName = urlContainerTagName;
   }
 
   /**
@@ -97,6 +108,8 @@ public abstract class BaseOaiMetadataHandler implements OaiMetadataHandler {
 	if(node != null) {
 	  NodeList list = 
 	    ((Element)node).getElementsByTagNameNS(metadataNamespaceUrl, urlContainerTagName);
+// 	  NodeList list = 
+// 	    ((Element)node).getElementsByTagName(urlContainerTagName);
 	  String str = list.item(0).getFirstChild().getNodeValue();
 	  extractedUrls.add(str);
 	  logger.debug3("node (" + i + ") value = " + str);
