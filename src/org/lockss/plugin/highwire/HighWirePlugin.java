@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePlugin.java,v 1.3 2002-08-13 02:20:48 tal Exp $
+ * $Id: HighWirePlugin.java,v 1.4 2002-10-01 06:12:15 tal Exp $
  */
 
 /*
@@ -176,7 +176,7 @@ public class HighWirePlugin implements CachedUrlSet{
     return 0;
   }
 
-  public long duration(long elapsed, boolean success){
+  public long duration(long elapsed, Exception err) {
     return 0;
   }
 

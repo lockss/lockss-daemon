@@ -120,7 +120,7 @@ public class MockCachedUrlSet implements CachedUrlSet{
     return 0;
   }
 
-  public long duration(long elapsed, boolean success){
+  public long duration(long elapsed, Exception err) {
     return 0;
   }
 

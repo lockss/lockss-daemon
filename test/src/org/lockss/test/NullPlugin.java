@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.1 2002-09-19 20:54:12 tal Exp $
+ * $Id: NullPlugin.java,v 1.2 2002-10-01 06:12:15 tal Exp $
  */
 
 /*
@@ -130,7 +130,7 @@ public class NullPlugin {
     public void addToList(CachedUrlSetSpec spec) {
     }
 
-    public long duration(long elapsed, boolean success) {
+    public long duration(long elapsed, Exception err) {
       return 0;
     }
 
