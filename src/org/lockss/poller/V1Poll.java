@@ -1,5 +1,5 @@
 /*
-* $Id: V1Poll.java,v 1.21 2004-12-07 05:17:52 tlipkis Exp $
+* $Id: V1Poll.java,v 1.22 2004-12-07 08:44:55 tlipkis Exp $
  */
 
 /*
@@ -220,19 +220,8 @@ public abstract class V1Poll extends BasePoll {
    * @return true if we called a verify poll, false otherwise.
    */
   boolean randomVerify(Vote vote, boolean isAgreeVote) {
-    PeerIdentity id = vote.getVoterIdentity();
-    int max = idMgr.getMaxReputation();
-    int weight = idMgr.getReputation(id);
-    double verify;
     boolean callVerifyPoll = false;
-
-    if(isAgreeVote) {
-      verify = ((double)(max - weight)) / max * m_agreeVer;
-    }
-    else {
-      verify = (((double)weight) / (2*max)) * m_disagreeVer;
-    }
-    log.debug3("probability of verifying this vote = " + verify);
+    double verify = calcVerifyProb(vote, isAgreeVote);
     try {
       if(ProbabilisticChoice.choose(verify)) {
         long remainingTime = m_deadline.getRemainingTime();
@@ -268,6 +257,31 @@ public abstract class V1Poll extends BasePoll {
       log.debug("attempt to request verify poll failed ", ex);
     }
     return callVerifyPoll;
+  }
+
+  /**
+   * Decide whether to verify a vote.  The random percentage is determined by
+   * agreement and reputation of the voter.
+   * @param vote the Vote to check
+   * @param isAgreeVote true if this vote agreed with ours, false otherwise
+   * @return true if we should called a verify poll
+   */
+  double calcVerifyProb(Vote vote, boolean isAgreeVote) {
+    PeerIdentity id = vote.getVoterIdentity();
+    int maxRep = idMgr.getMaxReputation();
+    int rep = idMgr.getReputation(id);
+    if (log.isDebug3()) log.debug3(id + "'s rep  is " + rep);
+    double verify;
+
+    double weight = ((double)rep) / maxRep;
+ 
+    if (isAgreeVote) {
+      verify = (1.0 - weight) * m_agreeVer;
+    } else {
+      verify = weight * m_disagreeVer;
+    }
+    log.debug3("probability of verifying this vote = " + verify);
+    return verify;
   }
 
   /**
