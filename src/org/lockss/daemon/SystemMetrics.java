@@ -1,5 +1,5 @@
 /*
- * $Id: SystemMetrics.java,v 1.10 2003-04-07 19:04:34 tal Exp $
+ * $Id: SystemMetrics.java,v 1.11 2003-04-24 00:51:55 aalto Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import org.lockss.util.*;
 import java.io.IOException;
 import java.util.Hashtable;
 import java.security.MessageDigest;
+import org.lockss.protocol.LcapMessage;
 
 /**
  * A singleton class which provides access to various system calculations, such
@@ -59,7 +60,8 @@ public class SystemMetrics {
 
 
   private static SystemMetrics metrics = null;
-  private static Hashtable estimateTable;
+  static Hashtable estimateTable;
+  static MessageDigest defaultAlgorithm;
   private static Logger logger = Logger.getLogger("SystemMetrics");
 
   /**
@@ -75,6 +77,16 @@ public class SystemMetrics {
 
   SystemMetrics() {
     estimateTable = new Hashtable();
+    defaultAlgorithm = LcapMessage.getDefaultHasher();
+  }
+
+  /**
+   * Update the hash estimate with a new value, presumably from an actual hash.
+   * @param digest the algorithm
+   * @param newEstimate the new estimate
+   */
+  public void updateHashEstimate(MessageDigest digest, int newEstimate) {
+    estimateTable.put(digest.getAlgorithm(), new Integer(newEstimate));
   }
 
   /**
@@ -114,5 +126,20 @@ public class SystemMetrics {
       estimateTable.put(digest.getAlgorithm(), estimate);
     }
     return estimate.intValue();
+  }
+
+  /**
+   * Returns a hash estimate based on the default algorithm.  Returns -1 if no
+   * estimate calculated.
+   * @return the estimate
+   */
+  public int getBytesPerMsHashEstimate() {
+    Integer estimate = (Integer)estimateTable.get(
+        defaultAlgorithm.getAlgorithm());
+    if (estimate==null) {
+      return -1;
+    } else {
+      return estimate.intValue();
+    }
   }
 }

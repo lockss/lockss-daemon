@@ -1,5 +1,5 @@
 /*
- * $Id: TestSystemMetrics.java,v 1.7 2003-04-18 21:37:07 aalto Exp $
+ * $Id: TestSystemMetrics.java,v 1.8 2003-04-24 00:51:55 aalto Exp $
  */
 
 /*
@@ -85,6 +85,12 @@ public class TestSystemMetrics extends LockssTestCase {
     assertTrue(duration > expectedMin);
   }
 
+  public void testDefaultEstimate() throws Exception {
+    assertEquals(-1, metrics.getBytesPerMsHashEstimate());
+    metrics.updateHashEstimate(metrics.defaultAlgorithm, 123);
+    assertEquals(123, metrics.getBytesPerMsHashEstimate());
+  }
+
   public void testEstimationCaching() throws IOException {
     MockCachedUrlSetHasher hasher = new MockCachedUrlSetHasher(10000);
     hasher.setHashStepDelay(10);
@@ -99,5 +105,10 @@ public class TestSystemMetrics extends LockssTestCase {
     String s = SystemMetrics.PARAM_HASH_TEST_DURATION + "=" + duration + "\n";
     String s2 = SystemMetrics.PARAM_HASH_TEST_BYTE_STEP + "=" + step;
     TestConfiguration.setCurrentConfigFromString(s + s2);
+  }
+
+  public static void main(String[] argv) {
+    String[] testCaseList = { TestSystemMetrics.class.getName()};
+    junit.swingui.TestRunner.main(testCaseList);
   }
 }

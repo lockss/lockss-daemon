@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessage.java,v 1.31 2003-04-17 02:16:58 troberts Exp $
+ * $Id: LcapMessage.java,v 1.32 2003-04-24 00:51:55 aalto Exp $
  */
 
 /*
@@ -59,7 +59,7 @@ public class LcapMessage
   public static final String PARAM_HASH_ALGORITHM = Configuration.PREFIX +
       "protocol.hashAlgorithm";
 
-  public static final String DEFAULT_HASH_ALGORITM = "SHA-1";
+  public static final String DEFAULT_HASH_ALGORITHM = "SHA-1";
 
   public static final String[] POLL_OPCODES = {
       "NameReq", "NameRep",
@@ -190,7 +190,7 @@ public class LcapMessage
 
   public static String getDefaultHashAlgorithm() {
     String algorithm = Configuration.getParam(PARAM_HASH_ALGORITHM,
-                                              DEFAULT_HASH_ALGORITM);
+                                              DEFAULT_HASH_ALGORITHM);
     return algorithm;
   }
 
