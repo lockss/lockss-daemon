@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkHandler.java,v 1.57 2004-02-09 22:10:58 tlipkis Exp $
+ * $Id: TreeWalkHandler.java,v 1.58 2004-02-10 02:27:12 tlipkis Exp $
  */
 
 /*
@@ -112,6 +112,9 @@ public class TreeWalkHandler {
 
   static final String WDOG_PARAM_TREEWALK = "TreeWalk";
   static final long WDOG_DEFAULT_TREEWALK = 30 * Constants.MINUTE;
+
+  static final String PRIORITY_PARAM_TREEWALK = "TreeWalk";
+  static final int PRIORITY_DEFAULT_TREEWALK = -1;
 
   NodeManagerImpl manager;
   private LockssDaemon theDaemon;
@@ -500,6 +503,7 @@ public class TreeWalkHandler {
 
     public void lockssRun() {
       triggerWDogOnExit(true);
+      setPriority(PRIORITY_PARAM_TREEWALK, PRIORITY_DEFAULT_TREEWALK);
       while (!theDaemon.isDaemonRunning()) {
         // if the daemon isn't up yet, do a short sleep
         logger.debug2("Daemon not running yet. Sleeping...");

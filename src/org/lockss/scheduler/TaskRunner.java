@@ -1,5 +1,5 @@
 /*
- * $Id: TaskRunner.java,v 1.13 2004-02-09 22:10:58 tlipkis Exp $
+ * $Id: TaskRunner.java,v 1.14 2004-02-10 02:27:12 tlipkis Exp $
  */
 
 /*
@@ -45,8 +45,6 @@ import org.lockss.util.*;
 
 class TaskRunner implements Serializable {
   static final String PREFIX = Configuration.PREFIX + "taskRunner.";
-  static final String PARAM_PRIORITY = PREFIX + "priority";
-  static final int DEFAULT_PRIORITY = Thread.NORM_PRIORITY - 1;
 
   static final String PARAM_HISTORY_MAX = PREFIX + "historySize";
   static final int DEFAULT_HISTORY_MAX = 50;
@@ -62,6 +60,9 @@ class TaskRunner implements Serializable {
   // runs at low priority and may legitimately be blocked for a long time.
   static final String WDOG_PARAM_STEPPER = "TaskRunner";
   static final long WDOG_DEFAULT_STEPPER = 1 * Constants.DAY;
+
+  static final String PRIORITY_PARAM_STEPPER = "TaskRunner";
+  static final int PRIORITY_DEFAULT_STEPPER = Thread.NORM_PRIORITY - 1;
 
   static final int PEND_REV = 1;
   static final int HIST_REV = 2;
@@ -79,7 +80,6 @@ class TaskRunner implements Serializable {
   private HistoryList history = new HistoryList(DEFAULT_HISTORY_MAX);
   private StepThread stepThread;
   private BinarySemaphore sem = new BinarySemaphore();
-  private int stepPriority = -1;
   private long statsUpdateInterval = DEFAULT_STATS_UPDATE_INTERVAL;;
   private int sortScheme = DEFAULT_SORT_SCHEME;
 
@@ -120,7 +120,6 @@ class TaskRunner implements Serializable {
   }
 
   private void setConfig(Configuration config, Set changedKeys) {
-    stepPriority = config.getInt(PARAM_PRIORITY, DEFAULT_PRIORITY);
     statsUpdateInterval =
       config.getTimeInterval(PARAM_STATS_UPDATE_INTERVAL,
 			     DEFAULT_STATS_UPDATE_INTERVAL);
@@ -689,9 +688,7 @@ class TaskRunner implements Serializable {
 
     public void lockssRun() {
       triggerWDogOnExit(true);
-      if (stepPriority > 0) {
-	Thread.currentThread().setPriority(stepPriority);
-      }
+      setPriority(PRIORITY_PARAM_STEPPER, PRIORITY_DEFAULT_STEPPER);
       startWDog(WDOG_PARAM_STEPPER, WDOG_DEFAULT_STEPPER);
 
       try {

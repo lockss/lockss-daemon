@@ -1,5 +1,5 @@
 /*
- * $Id: LcapRouter.java,v 1.30 2004-01-21 08:27:25 tlipkis Exp $
+ * $Id: LcapRouter.java,v 1.31 2004-02-10 02:27:13 tlipkis Exp $
  */
 
 /*
@@ -71,6 +71,9 @@ public class LcapRouter extends BaseLockssManager {
   static final int DEFAULT_DUP_MSG_HASH_SIZE = 100;
   static final int DEFAULT_INITIAL_HOPCOUNT = 2;
   static final int DEFAULT_BEACON_INTERVAL = 0;
+
+  static final String PRIORITY_PARAM_BEACON = "Beacon";
+  static final int PRIORITY_DEFAULT_BEACON = -1;
 
   static Logger log = Logger.getLogger("Router");
 
@@ -419,17 +422,15 @@ public class LcapRouter extends BaseLockssManager {
   }
 
   // Beacon thread
-  private class BeaconThread extends Thread {
+  private class BeaconThread extends LockssThread {
     private boolean goOn = false;
 
     private BeaconThread(String name) {
       super(name);
     }
 
-    public void run() {
-//       if (beaconPriority > 0) {
-// 	Thread.currentThread().setPriority(beaconPriority);
-//       }
+    public void lockssRun() {
+      setPriority(PRIORITY_PARAM_BEACON, PRIORITY_DEFAULT_BEACON);
       goOn = true;
 
       while (goOn) {

@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.60 2004-02-09 22:11:13 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.61 2004-02-10 02:27:13 tlipkis Exp $
  */
 
 /*
@@ -61,14 +61,11 @@ public class CrawlManagerImpl extends BaseLockssManager
   public static final String PARAM_REPAIR_CRAWL_EXPIRATION =
       Configuration.PREFIX + "crawler.repair.expiration";
 
-  /**
-   * The priority that the crawl thread should run at
-   */
-  public static final String PARAM_PRIORITY =
-      Configuration.PREFIX + "crawler.priority";
-
   static final String WDOG_PARAM_CRAWLER = "Crawler";
   static final long WDOG_DEFAULT_CRAWLER = 2 * Constants.HOUR;
+
+  static final String PRIORITY_PARAM_CRAWLER = "Crawler";
+  static final int PRIORITY_DEFAULT_CRAWLER = Thread.NORM_PRIORITY - 1;
 
   /**
    * ToDo:
@@ -82,7 +79,6 @@ public class CrawlManagerImpl extends BaseLockssManager
     10 * Constants.DAY;
   private static final long DEFAULT_REPAIR_CRAWL_EXPIRATION =
     5 * Constants.DAY;
-  private static final int DEFAULT_PRIORITY = Thread.NORM_PRIORITY-1;
 
   //Tracking crawls for the status info
   private MultiMap crawlHistory = new MultiHashMap();
@@ -92,7 +88,6 @@ public class CrawlManagerImpl extends BaseLockssManager
 
   private long contentCrawlExpiration;
   private long repairCrawlExpiration;
-  private int crawlPriority = DEFAULT_PRIORITY;
   private static Logger logger = Logger.getLogger("CrawlManager");
 
 
@@ -129,8 +124,6 @@ public class CrawlManagerImpl extends BaseLockssManager
     repairCrawlExpiration =
       newConfig.getTimeInterval(PARAM_REPAIR_CRAWL_EXPIRATION,
 				DEFAULT_REPAIR_CRAWL_EXPIRATION);
-
-    crawlPriority = newConfig.getInt(PARAM_PRIORITY, DEFAULT_PRIORITY);
   }
 
   public void cancelAuCrawls(ArchivalUnit au) {
@@ -302,13 +295,7 @@ public class CrawlManagerImpl extends BaseLockssManager
     }
 
     public void lockssRun() {
-      if (crawlPriority > 0) {
-	logger.debug("Setting crawl thread priority to "+crawlPriority);
-	Thread.currentThread().setPriority(crawlPriority);
-      } else {
-	logger.warning("Crawl thread priority less than zero, not set: "
-		       +crawlPriority);
-      }
+      setPriority(PRIORITY_PARAM_CRAWLER, PRIORITY_DEFAULT_CRAWLER);
       crawler.setWatchdog(this);
       startWDog(WDOG_PARAM_CRAWLER, WDOG_DEFAULT_CRAWLER);
 
