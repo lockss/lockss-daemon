@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.50 2004-05-16 08:44:00 tlipkis Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.50.2.1 2004-05-20 08:56:45 tlipkis Exp $
  */
 
 /*
@@ -97,6 +97,15 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
 
   String repoSpec(String path) {
     return "local:" + path;
+  }
+
+  public void testGetLocalRepositoryPath() throws Exception {
+    assertEquals("foo",
+		 LockssRepositoryImpl.getLocalRepositoryPath("local:foo"));
+    assertEquals("/cache/foo",
+		 LockssRepositoryImpl.getLocalRepositoryPath("local:/cache/foo"));
+    assertNull(LockssRepositoryImpl.getLocalRepositoryPath("other:foo"));
+    assertNull(LockssRepositoryImpl.getLocalRepositoryPath("foo"));
   }
 
   public void testLocalRepository_GetAuMap() {
