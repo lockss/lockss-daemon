@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrlSet.java,v 1.7 2002-11-23 02:21:35 aalto Exp $
+ * $Id: GenericFileCachedUrlSet.java,v 1.8 2002-11-23 03:41:20 aalto Exp $
  */
 
 /*
@@ -50,7 +50,7 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
   private long lastDuration = 0;
   private Exception lastException = null;
   private LockssRepository repository;
-  protected static Logger logger = Logger.getLogger("CachedUrlSet", Logger.LEVEL_DEBUG);
+  protected static Logger logger = Logger.getLogger("CachedUrlSet");
 
   public GenericFileCachedUrlSet(ArchivalUnit owner, CachedUrlSetSpec spec) {
     super(owner, spec);
