@@ -19,7 +19,8 @@
 <p>The LOCKSS daemon must be adapted to a new journal publishing
 platform by means of a ``plugin'',
 a set of Java classes implementing certain functions.
-This document introduces the specification for this ``plugin''.</p>
+This document introduces the specification for this ``plugin''.
+The audience is publishers and developers of plugins.</p>
 
 <h2>Introduction</h2>
 
@@ -36,10 +37,21 @@ which may be the local disk or HTTP servers on the network.
 It loads the set of plugins it needs,
 based on the configuration information stored for each AU in its disks.</p>
 
-<p>This plugin specification is preliminary and subject to change.
+<p>This specification is aimed primarily at the developers of plugins.
+It is preliminary and subject to change.
 In particular,
 we hope to provide a more generic example plugin and more detail on
-the APIs that the plugin implementors can use to get started.</p>
+the APIs that the plugin implementors can use to get started.
+</p>
+
+<p>It is important that the developers of plugins for LOCKSS make
+them available under an Open Source license.
+It is effectively impossible for a library to have confidence in an
+archive whose source code is proprietary and secret.
+It will be hard to develop a broad enough base of plugins to cover
+the variety of journals libraries wish to preserve without the
+sharing of techniques and code examples that Open Source allows.
+</p>
 
 <h2>Plugin Functions</h2>
 
