@@ -1,5 +1,5 @@
 /*
- * $Id: NewContentCrawler.java,v 1.6 2004-02-24 08:02:11 tlipkis Exp $
+ * $Id: NewContentCrawler.java,v 1.7 2004-03-03 00:37:49 troberts Exp $
  */
 
 /*
@@ -63,37 +63,40 @@ public class NewContentCrawler extends CrawlerImpl {
   }
 
 
-  protected boolean doCrawl0(Deadline deadline) {
-    boolean windowClosed = false;
+  protected boolean doCrawl0() {
     logger.info("Beginning crawl of "+au);
     crawlStatus.signalCrawlStarted();
     CachedUrlSet cus = au.getAuCachedUrlSet();
     Set parsedPages = new HashSet();
 
-    Set extractedUrls = null;
+    Set extractedUrls = new HashSet();
 
-    if (!deadline.expired() && !crawlPermission(cus)) {
+    if (!crawlPermission(cus)) {
       logger.debug("Crawling AU not permitted - aborting crawl!");
       return false;
     }
 
     int refetchDepth = spec.getRefetchDepth();
-    Iterator it = getStartingUrls();
+    Iterator it = spec.getStartingUrls().iterator(); //getStartingUrls();
     for (int ix=0; ix<refetchDepth; ix++) {
-      extractedUrls = new HashSet();
-      while (it.hasNext() && !deadline.expired() && !crawlAborted) {
+
+      //don't use clear() or it will empty the iterator
+      extractedUrls = new HashSet(); 
+
+      while (it.hasNext() && !crawlAborted) {
 	String url = (String)it.next();
 	//catch and warn if there's a url in the start urls
 	//that we shouldn't cache
+
         // check crawl window during crawl
-        if ((spec!=null) && (!spec.canCrawl())) {
-          logger.debug("Crawl canceled: outside of crawl window");
-          windowClosed = true;
-          // break from while loop
-          break;
-        }
+	if (!withinCrawlWindow()) {
+	  crawlStatus.setCrawlError(Crawler.STATUS_WINDOW_CLOSED);
+	  return false;
+	}
+
  	if (spec.isIncluded(url)) {
-	  if (!doCrawlLoop(url, extractedUrls, parsedPages, cus, true, true)) {
+	  if (!fetchAndParse(url, extractedUrls, parsedPages,
+			     cus, true, true)) {
 	    if (crawlStatus.getCrawlError() == 0) {
 	      crawlStatus.setCrawlError(Crawler.STATUS_ERROR);
 	    }
@@ -103,37 +106,27 @@ public class NewContentCrawler extends CrawlerImpl {
 			 "cache: "+url);
 	}
       }
-      if (windowClosed) {
-        // break from for loop
-        break;
-      }
       it = extractedUrls.iterator();
     }
 
     //we don't alter the crawl list from AuState until we've enumerated the
     //urls that need to be recrawled.
-
     Collection urlsToCrawl = aus.getCrawlUrls();
-    while (!extractedUrls.isEmpty()) {
-      String url = (String)extractedUrls.iterator().next();
-      extractedUrls.remove(url);
-      urlsToCrawl.add(url);
-    }
+    urlsToCrawl.addAll(extractedUrls);
+    extractedUrls.clear();
 
 
-    while (!urlsToCrawl.isEmpty() && !deadline.expired()
-	   && !windowClosed && !crawlAborted) {
+    while (!urlsToCrawl.isEmpty() && !crawlAborted) {
       String nextUrl = (String)CollectionUtil.removeElement(urlsToCrawl);
       // check crawl window during crawl
-      if ((spec!=null) && (!spec.canCrawl())) {
-        logger.debug("Crawl canceled: outside of crawl window");
-        windowClosed = true;
-        break;
+      if (!withinCrawlWindow()) {
+	crawlStatus.setCrawlError(Crawler.STATUS_WINDOW_CLOSED);
+	return false;
       }
       boolean crawlRes = false;
       try {
-	crawlRes = doCrawlLoop(nextUrl, urlsToCrawl, parsedPages, cus,
-			       false, false);
+	crawlRes = fetchAndParse(nextUrl, urlsToCrawl, parsedPages,
+				 cus, false, false);
       } catch (RuntimeException e) {
 	logger.warning("Unexpected exception in crawl", e);
       }
@@ -143,10 +136,6 @@ public class NewContentCrawler extends CrawlerImpl {
 	}
       }
       aus.updatedCrawlUrls(false);
-    }
-    // unsuccessful crawl if window closed
-    if (windowClosed) {
-      crawlStatus.setCrawlError(Crawler.STATUS_WINDOW_CLOSED);
     }
     if (crawlStatus.getCrawlError() != 0) {
       logger.info("Finished crawl (errors) of "+au);
@@ -166,31 +155,33 @@ public class NewContentCrawler extends CrawlerImpl {
     return (crawlStatus.getCrawlError() == 0);
   }
 
-
-
-  protected Iterator getStartingUrls() {
-    Collection startUrls = spec.getStartingUrls();
-    return startUrls.iterator();
+  private boolean withinCrawlWindow() {
+    if ((spec!=null) && (!spec.canCrawl())) {
+      logger.debug("Crawl canceled: outside of crawl window");
+      return false;
+    }
+    return true;
   }
 
-  protected boolean doCrawlLoop(String url, Collection extractedUrls,
+  protected boolean fetchAndParse(String url, Collection extractedUrls,
 				Set parsedPages, CachedUrlSet cus,
-				boolean overWrite, boolean reparse) {
+				boolean fetchIfChanged, boolean reparse) {
 
     int error = 0;
     logger.debug2("Dequeued url from list: "+url);
+
+    //makeUrlCacher needed to handle connection pool
     UrlCacher uc = makeUrlCacher(cus, url);
 
     // don't cache if already cached, unless overwriting
-    if (overWrite || !uc.getCachedUrl().hasContent()) {
+    if (fetchIfChanged || !uc.getCachedUrl().hasContent()) {
       try {
 	if (failedUrls.contains(uc.getUrl())) {
 	  //skip if it's already failed
 	  logger.debug3("Already failed to cache "+uc+". Not retrying.");
 	} else {
 	  cacheWithRetries(uc, Configuration.getIntParam(PARAM_RETRY_TIMES,
-							 DEFAULT_RETRY_TIMES),
-			   overWrite);
+							 DEFAULT_RETRY_TIMES));
 	  numUrlsFetched++;
 	}
       } catch (FileNotFoundException e) {
@@ -200,8 +191,7 @@ public class NewContentCrawler extends CrawlerImpl {
 	logger.error("Problem caching "+uc+". Ignoring", ioe);
 	error = Crawler.STATUS_FETCH_ERROR;
       }
-    }
-    else {
+    } else {
       if (!parsedPages.contains(uc.getUrl())) {
 	logger.debug2(uc+" exists, not caching");
       }
@@ -215,7 +205,7 @@ public class NewContentCrawler extends CrawlerImpl {
 	logger.debug3("Parsing "+uc);
 	CachedUrl cu = uc.getCachedUrl();
 
-	//XXX quick fix; if statement should be removed when we rework
+	//XXX quick fix; if-statement should be removed when we rework
 	//handling of error condition
 	if (cu.hasContent()) {
 	  ContentParser parser = getContentParser(cu);
@@ -238,21 +228,15 @@ public class NewContentCrawler extends CrawlerImpl {
     return (error == 0);
   }
 
-  private void cacheWithRetries(UrlCacher uc, int maxRetries,
-				boolean shouldForceCache)
+  private void cacheWithRetries(UrlCacher uc, int maxTries)
       throws IOException {
-    int retriesLeft = maxRetries;
+    int retriesLeft = maxTries;
     while (true) {
       try {
-	logger.debug((shouldForceCache ? "force " : "" ) + "caching "+uc);
 	if (wdog != null) {
 	  wdog.pokeWDog();
 	}
- 	if (shouldForceCache) {
- 	  uc.forceCache(); //IOException if there is a caching problem
- 	} else {
-	  uc.cache(); //IOException if there is a caching problem
- 	}
+	uc.cache(); //IOException if there is a caching problem
 	crawlStatus.signalUrlFetched();
 	return; //cache didn't throw
       } catch (IOException e) {
@@ -271,9 +255,11 @@ public class NewContentCrawler extends CrawlerImpl {
 	      // no action
 	    }
 	  }
+
+	  //makeUrlCacher needed to handle connection pool
 	  uc = makeUrlCacher(uc.getCachedUrlSet(), uc.getUrl());
 	} else {
-	  logger.warning("Failed to cache "+ maxRetries +" times.  Skipping "
+	  logger.warning("Failed to cache "+ maxTries +" times.  Skipping "
 			 + uc);
 	  failedUrls.add(uc.getUrl());
 	  throw e;
