@@ -1,5 +1,5 @@
 /*
- * $Id: TestColumnDescriptor.java,v 1.1 2003-07-01 19:45:18 troberts Exp $
+ * $Id: TestColumnDescriptor.java,v 1.2 2004-06-01 08:32:25 tlipkis Exp $
  */
 
 /*
@@ -31,9 +31,34 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.daemon.status;
+
+import java.util.*;
 import org.lockss.test.*;
 
 public class TestColumnDescriptor extends LockssTestCase {
+  public void testAccessors() {
+    ColumnDescriptor cd1 = new ColumnDescriptor("name1", "title1", 0);
+    assertEquals("name1", cd1.getColumnName());
+    assertEquals("title1", cd1.getTitle());
+    assertEquals(0, cd1.getType());
+    assertNull(cd1.getFootnote());
+    assertNull(cd1.getComparator());
+    assertTrue(cd1.isSortable());
+
+    ColumnDescriptor cd2 = new ColumnDescriptor("name2", "title2", 2, "foot2");
+    assertEquals("name2", cd2.getColumnName());
+    assertEquals("title2", cd2.getTitle());
+    assertEquals(2, cd2.getType());
+    assertEquals("foot2", cd2.getFootnote());
+
+    Comparator cmpr = new MockComparator();
+    assertSame(cd2, cd2.setComparator(cmpr));
+    assertSame(cmpr, cd2.getComparator());
+
+    assertSame(cd2, cd2.setSortable(false));
+    assertFalse(cd2.isSortable());
+  }
+
   public void testEqualsIfEqual() {
     ColumnDescriptor cd1 = new ColumnDescriptor("name", "title", 0);
     ColumnDescriptor cd2 = new ColumnDescriptor("name", "title", 0);
@@ -68,4 +93,9 @@ public class TestColumnDescriptor extends LockssTestCase {
     assertFalse(cd1.equals("String"));
   }
 
+  class MockComparator implements Comparator {
+    public int compare(Object o1, Object o2) {
+      return 0;
+    }
+  }
 }

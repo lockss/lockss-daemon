@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryStatus.java,v 1.6 2004-05-26 07:02:16 tlipkis Exp $
+ * $Id: LockssRepositoryStatus.java,v 1.7 2004-06-01 08:32:26 tlipkis Exp $
  */
 
 /*
@@ -87,9 +87,8 @@ public class LockssRepositoryStatus extends BaseLockssManager {
        new ColumnDescriptor("au", "AU", ColumnDescriptor.TYPE_STRING),
        new ColumnDescriptor("status", "Status", ColumnDescriptor.TYPE_STRING),
        new ColumnDescriptor("plugin", "Plugin", ColumnDescriptor.TYPE_STRING),
-       new ColumnDescriptor("params", "Params", ColumnDescriptor.TYPE_STRING) {
-	 { sortable=false; }
-       }
+       new ColumnDescriptor("params", "Params", ColumnDescriptor.TYPE_STRING)
+       .setSortable(false)
 //        new ColumnDescriptor("auid", "AU Key", ColumnDescriptor.TYPE_STRING)
        );
 

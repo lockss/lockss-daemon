@@ -1,5 +1,5 @@
 /*
- * $Id: StatusTable.java,v 1.30 2004-05-26 07:03:47 tlipkis Exp $
+ * $Id: StatusTable.java,v 1.31 2004-06-01 08:32:26 tlipkis Exp $
  */
 
 /*
@@ -51,6 +51,7 @@ public class StatusTable {
   private String title = null;
   private String titleFootnote;
   private List columnDescriptors;
+  private Map columnDescriptorMap;
   private List rows;
   private List defaultSortRules;
   private static Logger logger = Logger.getLogger("StatusTable");
@@ -168,6 +169,20 @@ public class StatusTable {
   }
 
   /**
+   * Returns a map that maps column name to ColumnDescriptor
+   */
+  public Map getColumnDescriptorMap() {
+    if (columnDescriptorMap == null) {
+      columnDescriptorMap = new HashMap();
+      for (Iterator iter = columnDescriptors.iterator(); iter.hasNext(); ) {
+	ColumnDescriptor col = (ColumnDescriptor)iter.next();
+	columnDescriptorMap.put(col.getColumnName(), col);
+      }
+    }
+    return columnDescriptorMap;
+  }
+
+  /**
    * Sets a list of {@link ColumnDescriptor}s in their perferred display 
    * order for this table
    * @param columnDescriptors List of {@link ColumnDescriptor}s in their 
@@ -175,6 +190,7 @@ public class StatusTable {
    */
   public void setColumnDescriptors(List columnDescriptors) {
     this.columnDescriptors = columnDescriptors;
+    columnDescriptorMap = null;
   }
 
   /**
@@ -202,8 +218,8 @@ public class StatusTable {
    * in the sort order specified by sortRules 
    */
   public List getSortedRows(List sortRules) {
-    Collections.sort(rows, 
-		     new SortRuleComparator(sortRules, columnDescriptors));
+    Collections.sort(rows, new SortRuleComparator(sortRules,
+						  getColumnDescriptorMap()));
     return rows;
   }
 
@@ -238,10 +254,19 @@ public class StatusTable {
     this.defaultSortRules = defaultSortRules;
   }
 
+  /**
+   * Gets the default {@link StatusTable.SortRule}s for this table
+   */
+  public List getDefaultSortRules() {
+    return defaultSortRules;
+  }
+
+  /** Set whether the table may be resorted by the user via the UI */
   public void setResortable(boolean isResortable) {
     this.isResortable = isResortable;
   }
 
+  /** @return true if the table allows sorting from the UI */
   public boolean isResortable() {
     return isResortable;
   }
@@ -421,20 +446,20 @@ public class StatusTable {
     }
   }
 
-  private static class SortRuleComparator implements Comparator {
+  static class SortRuleComparator implements Comparator {
     List sortRules;
 
-    public SortRuleComparator(List sortRules, List columnDescriptors) {
+    public SortRuleComparator(List sortRules, Map columnDescriptorMap) {
       this.sortRules = sortRules;
-      setSortTypes(columnDescriptors);
+      setSortTypes(columnDescriptorMap);
     }
 
-    private void setSortTypes(List columnDescriptors) {
+    private void setSortTypes(Map columnDescriptorMap) {
       Iterator it = sortRules.iterator();
       while (it.hasNext()) {
 	SortRule rule = (SortRule)it.next();
 	if (rule.getColumnType() < 0) {
-	  rule.inferColumnType(columnDescriptors);
+	  rule.inferColumnType(columnDescriptorMap);
 	}
       }
     }
@@ -479,9 +504,14 @@ public class StatusTable {
     }
 
     public SortRule(String columnName, Comparator comparator) {
+      this(columnName, comparator, true);
+    }
+
+    public SortRule(String columnName, Comparator comparator,
+		    boolean sortAscending) {
       this.columnName = columnName;
       this.comparator = comparator;
-      this.sortAscending = true;
+      this.sortAscending = sortAscending;
     }
 
     /**
@@ -507,16 +537,25 @@ public class StatusTable {
     }
 
     /**
+     * @return the comparator, or null if no explicit comparator supplied
+     */
+    public Comparator getComparator(){
+      return comparator;
+    }
+    
+    /**
      * Lookup the column type in the columnDescriptors, store in self
      * @param columnDescriptors
      */
-    void inferColumnType(List columnDescriptors){
-      for (Iterator iter = columnDescriptors.iterator(); iter.hasNext(); ) {
-	ColumnDescriptor col = (ColumnDescriptor)iter.next();
-	if (columnName.equals(col.getColumnName())) {
-	  columnType = col.getType();
-	  return;
+    void inferColumnType(Map columnDescriptorMap){
+      ColumnDescriptor col =
+	(ColumnDescriptor)columnDescriptorMap.get(columnName);
+      if (col != null) {
+	columnType = col.getType();
+	if (comparator == null) {
+	  comparator = col.getComparator();
 	}
+	return;
       }
       // XXX this isn't really an error, just somebody sorting on a
       // column that isn't displayed.
@@ -550,7 +589,7 @@ public class StatusTable {
       return (addr1.getHostAddress().compareTo(addr2.getHostAddress()));
     }
 
-    private static int compareHandlingNulls(Comparable val1,
+    static int compareHandlingNulls(Comparable val1,
 					    Comparable val2) {
       int returnVal = 0;
       if (val1 == null) {
@@ -561,6 +600,19 @@ public class StatusTable {
 	returnVal = val1.compareTo(val2);
       }
       return returnVal;
+    }
+
+    public String toString() {
+      StringBuffer sb = new StringBuffer();
+      sb.append("[SortRule: ");
+      sb.append(columnName);
+      sb.append(sortAscending ? ":A" : "D:");
+      if (comparator != null) {
+	sb.append(":");
+	sb.append(comparator.toString());
+      }
+      sb.append("]");
+      return sb.toString();
     }
   }
 }

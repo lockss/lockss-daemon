@@ -1,5 +1,5 @@
 /*
- * $Id: ColumnDescriptor.java,v 1.6 2004-05-26 07:03:47 tlipkis Exp $
+ * $Id: ColumnDescriptor.java,v 1.7 2004-06-01 08:32:26 tlipkis Exp $
  */
 
 /*
@@ -31,6 +31,7 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.daemon.status;
+import java.util.*;
 
 /**
  * Encapsulation of the info needed to describe a single column (name, 
@@ -82,6 +83,7 @@ public class ColumnDescriptor {
   private int type;
   private String footNote;
   protected boolean sortable = true;
+  protected Comparator comparator = null;
 
   public ColumnDescriptor(String columnName, String title, int type) {
     this.columnName = columnName;
@@ -111,8 +113,22 @@ public class ColumnDescriptor {
     return footNote;
   }
 
+  public Comparator getComparator() {
+    return comparator;
+  }
+
+  public ColumnDescriptor setComparator(Comparator comparator) {
+    this.comparator = comparator;
+    return this;
+  }
+
   public boolean isSortable() {
     return sortable;
+  }
+
+  public ColumnDescriptor setSortable(boolean sortable) {
+    this.sortable = sortable;
+    return this;
   }
 
   public String toString() {
