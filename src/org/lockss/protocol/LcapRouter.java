@@ -1,5 +1,5 @@
 /*
- * $Id: LcapRouter.java,v 1.16 2003-04-03 11:33:36 tal Exp $
+ * $Id: LcapRouter.java,v 1.17 2003-04-17 04:03:01 tal Exp $
  */
 
 /*
@@ -62,7 +62,7 @@ public class LcapRouter extends BaseLockssManager {
     PREFIX + "partnerAddProbability";
 
   static final String PARAM_LOCAL_IPS =
-    Configuration.PREFIX + "platform.interfaceAddresses";
+    Configuration.PREFIX + "platform.localIPs";
 
   static final int DEFAULT_ORIG_PKTS_PER_INTERVAL = 40;
   static final long DEFAULT_ORIG_PKT_INTERVAL = 10 * Constants.SECOND;

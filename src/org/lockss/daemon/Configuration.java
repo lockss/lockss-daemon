@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.36 2003-04-14 23:08:34 tal Exp $
+ * $Id: Configuration.java,v 1.37 2003-04-17 04:03:01 tal Exp $
  */
 
 /*
@@ -201,6 +201,8 @@ public abstract class Configuration {
     if (newConfig == null) {
       return false;
     }
+    copyPlatformParams(newConfig);
+    newConfig.seal();
     Configuration oldConfig = currentConfig;
     if (!oldConfig.isEmpty() && newConfig.equals(oldConfig)) {
       if (reloadInterval >= 10 * Constants.MINUTE) {
@@ -217,6 +219,27 @@ public abstract class Configuration {
     runCallbacks(newConfig, oldConfig);
     haveConfig.fill();
     return true;
+  }
+
+  private static void copyPlatformParams(Configuration config) {
+    String logdir = config.get("org.lockss.platform.logdirectory");
+    String logfile = config.get("org.lockss.platform.logfile");
+    if (logdir != null && logfile != null) {
+      setIfNotSet(config, FileTarget.PARAM_FILE,
+		  new File(logdir, logfile).toString());
+    }
+    String ip = config.get("org.lockss.platform.localIPAddress");
+    if (ip != null) {
+      setIfNotSet(config,
+		  org.lockss.protocol.IdentityManager.PARAM_LOCAL_IP, ip);
+    }
+  }
+
+  private static void setIfNotSet(Configuration config,
+				  String key, String val) {
+    if (config.get(key) == null) {
+      config.put(key, val);
+    }
   }
 
   private void logConfig() {
@@ -562,6 +585,15 @@ public abstract class Configuration {
    * or its value is null.
    */
   public abstract String get(String key);
+
+  /** Set the config value associated with <code>key</code>.
+   * @param key the config key
+   * @param val the new value
+   */
+  public abstract void put(String key, String val);
+
+  /** Seal the configuration so that no changes can be made */
+  public abstract void seal();
 
   /** Returns a Configuration instance containing all the keys at or
    * below <code>key</code>

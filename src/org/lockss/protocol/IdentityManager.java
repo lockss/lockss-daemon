@@ -1,5 +1,5 @@
 /*
-* $Id: IdentityManager.java,v 1.25 2003-04-05 00:57:15 tal Exp $
+* $Id: IdentityManager.java,v 1.26 2003-04-17 04:03:01 tal Exp $
  */
 
 /*
@@ -56,7 +56,8 @@ import org.exolab.castor.mapping.*;
 public class IdentityManager extends BaseLockssManager {
   protected static Logger log = Logger.getLogger("IDMgr");
 
-  static final String PARAM_LOCAL_IP = Configuration.PREFIX + "localIPAddress";
+  public static final String PARAM_LOCAL_IP =
+    Configuration.PREFIX + "localIPAddress";
 
   static final String PREFIX = Configuration.PREFIX + "id.";
   static final String PARAM_MAX_DELTA = PREFIX + "maxReputationDelta";

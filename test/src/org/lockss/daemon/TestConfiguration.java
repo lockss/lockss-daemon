@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfiguration.java,v 1.15 2003-03-29 20:25:38 tal Exp $
+ * $Id: TestConfiguration.java,v 1.16 2003-04-17 04:03:00 tal Exp $
  */
 
 /*
@@ -290,5 +290,16 @@ public class TestConfiguration extends LockssTestCase {
     assertEquals(SetUtil.set("prop4", "prop2"), diffSet);
     System.out.println(Configuration.getCurrentConfig().toString());
 
+  }
+
+  public void testPlatformProps() throws Exception {
+    Properties props = new Properties();
+    props.put("org.lockss.platform.localIPAddress", "1.2.3.4");
+    props.put("org.lockss.platform.logdirectory", "/var/log/foo");
+    props.put("org.lockss.platform.logfile", "bar");
+    ConfigurationUtil.setCurrentConfigFromProps(props);
+    Configuration config = Configuration.getCurrentConfig();
+    assertEquals("1.2.3.4", config.get("org.lockss.localIPAddress"));
+    assertEquals("/var/log/foo/bar", config.get(FileTarget.PARAM_FILE));
   }
 }
