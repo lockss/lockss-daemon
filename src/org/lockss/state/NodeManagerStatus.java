@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerStatus.java,v 1.14 2003-09-26 23:50:39 eaalto Exp $
+ * $Id: NodeManagerStatus.java,v 1.15 2003-12-23 00:35:12 tlipkis Exp $
  */
 
 /*
@@ -55,10 +55,9 @@ public class NodeManagerStatus {
   private static NodeManagerImpl getNodeManager(String key) throws
       StatusService.NoSuchTableException {
 
-    Iterator entries = theDaemon.getNodeManagerEntries();
-    while (entries.hasNext()) {
-      Map.Entry entry = (Map.Entry) entries.next();
-      NodeManager manager = (NodeManager) entry.getValue();
+    for (Iterator iter = theDaemon.getAllNodeManagers().iterator();
+	 iter.hasNext(); ) {
+      NodeManager manager = (NodeManager)iter.next();
       if (manager.getAuState().au.getAuId().equals(key)) {
         return (NodeManagerImpl) manager;
       }
@@ -84,10 +83,13 @@ public class NodeManagerStatus {
     private static final List sortRules =
       ListUtil.list(new StatusTable.SortRule("AuName", true));
 
+    public String getDisplayName() {
+      return TABLE_TITLE;
+    }
+
     public void populateTable(StatusTable table) throws StatusService.
         NoSuchTableException {
       String key = table.getKey();
-      table.setTitle(TABLE_TITLE);
       table.setColumnDescriptors(columnDescriptors);
       table.setDefaultSortRules(sortRules);
       table.setRows(getRows(key));
@@ -103,10 +105,9 @@ public class NodeManagerStatus {
 
     private List getRows(String key) {
       List rowL = new ArrayList();
-      Iterator entries = theDaemon.getNodeManagerEntries();
-      while (entries.hasNext()) {
-        Map.Entry entry = (Map.Entry) entries.next();
-        NodeManager manager = (NodeManager) entry.getValue();
+      for (Iterator iter = theDaemon.getAllNodeManagers().iterator();
+	   iter.hasNext(); ) {
+	NodeManager manager = (NodeManager)iter.next();
         if (key == null || matchKey(manager, key)) {
           if(manager.getAuState() != null) {
             rowL.add(makeRow(manager));
@@ -166,6 +167,11 @@ public class NodeManagerStatus {
         (new StatusTable.SortRule("PollTime", false),
          new StatusTable.SortRule("URL", true)
          );
+
+    public String getDisplayName() {
+      throw new
+	UnsupportedOperationException("Node table has no generic title");
+    }
 
     public void populateTable(StatusTable table) throws StatusService.
         NoSuchTableException {
@@ -313,6 +319,11 @@ public class NodeManagerStatus {
     private static final List sortRules = ListUtil.list
         (new StatusTable.SortRule("StartTime", false)
          );
+
+    public String getDisplayName() {
+      throw new
+	UnsupportedOperationException("Node table has no generic title");
+    }
 
     public void populateTable(StatusTable table) throws StatusService.
         NoSuchTableException {
