@@ -1,5 +1,5 @@
 /*
- * $Id: PollSpec.java,v 1.13 2003-06-20 22:34:51 claire Exp $
+ * $Id: PollSpec.java,v 1.14 2003-07-16 17:34:39 dshr Exp $
  */
 
 /*
@@ -61,7 +61,7 @@ public class PollSpec {
   private String lwrBound = null;
   private CachedUrlSet cus = null;
   private PluginManager pluginMgr = null;
-  private int version; // poll protocol version - XXX for now only 1
+  private int version; // poll protocol version
 
   /**
    * constructor for a "mock" poll spec
@@ -293,7 +293,7 @@ public class PollSpec {
 
   public String toString() {
     return "[PS: pid=" + "auid=" + auId + ", url=" + url
-      + ", l=" + lwrBound + ", u=" + uprBound + "]";
+      + ", l=" + lwrBound + ", u=" + uprBound + "version=" + version + "]";
   }
 }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestPoll.java,v 1.64 2003-07-09 19:25:19 clairegriffin Exp $
+ * $Id: TestPoll.java,v 1.65 2003-07-16 17:34:40 dshr Exp $
  */
 
 /*
@@ -49,15 +49,18 @@ import org.lockss.repository.LockssRepositoryImpl;
 /** JUnitTest case for class: org.lockss.poller.Poll */
 public class TestPoll extends LockssTestCase {
   private static Logger log = Logger.getLogger("TestPoll");
-  private static String[] rooturls = {
+  private static String[] rootV1urls = {
       "http://www.test.org",
       "http://www.test1.org", "http://www.test2.org"};
+  private static String[] rootV2urls = {
+      "http://www.test.net",
+      "http://www.test1.net", "http://www.test2.net"};
   private static String lwrbnd = "test1.doc";
   private static String uprbnd = "test3.doc";
   private static long testduration = Constants.DAY;
 
   protected ArchivalUnit testau =
-      PollTestPlugin.PTArchivalUnit.createFromListOfRootUrls(rooturls);
+      PollTestPlugin.PTArchivalUnit.createFromListOfRootUrls(rootV1urls);
   private IdentityManager idmgr;
   private MockLockssDaemon theDaemon;
   private ArrayList agree_entries = makeEntries(10, 50);
@@ -68,8 +71,10 @@ public class TestPoll extends LockssTestCase {
   protected InetAddress testaddr1;
   protected LcapIdentity testID;
   protected LcapIdentity testID1;
-  protected LcapMessage[] testmsg;
-  protected V1Poll[] testpolls;
+  protected LcapMessage[] testV1msg;
+  protected LcapMessage[] testV2msg;
+  protected V1Poll[] testV1polls;
+  protected V2Poll[] testV2polls;
   protected PollManager pollmanager;
 
   protected void setUp() throws Exception {
@@ -92,15 +97,20 @@ public class TestPoll extends LockssTestCase {
     theDaemon.getRouterManager().stopService();
     theDaemon.getSystemMetrics().stopService();
     TimeBase.setReal();
-    for(int i=0; i<3; i++) {
-      pollmanager.removePoll(testmsg[i].getKey());
+    for(int i=0; i<testV1msg.length; i++) {
+      if (testV1msg[i] != null)
+	pollmanager.removePoll(testV1msg[i].getKey());
+    }
+    for(int i=0; i<testV2msg.length; i++) {
+      if (testV2msg[i] != null)
+	pollmanager.removePoll(testV2msg[i].getKey());
     }
     super.tearDown();
   }
 
   /** test for method scheduleVote(..) */
   public void testScheduleVote() {
-    V1Poll p = testpolls[1];
+    V1Poll p = testV1polls[1];
     assertTrue(p instanceof V1ContentPoll);
     log.debug3("testScheduleVote 1");
     p.scheduleVote();
@@ -117,7 +127,7 @@ public class TestPoll extends LockssTestCase {
     log.debug3("starting testCheeckVote");
     try {
       msg = LcapMessage.makeReplyMsg(
-          testpolls[0].getMessage(),
+          testV1polls[0].getMessage(),
           pollmanager.generateRandomBytes(),
           pollmanager.generateRandomBytes(),
           null,
@@ -170,7 +180,7 @@ public class TestPoll extends LockssTestCase {
 
   /** test for method tally(..) */
   public void testTally() {
-    V1Poll p = testpolls[0];
+    V1Poll p = testV1polls[0];
     LcapMessage msg = p.getMessage();
     LcapIdentity id = idmgr.findIdentity(msg.getOriginAddr());
     p.m_tally.addVote(new Vote(msg, false), id, false);
@@ -181,7 +191,7 @@ public class TestPoll extends LockssTestCase {
     assertEquals(3, p.m_tally.numDisagree);
     assertEquals(1500, p.m_tally.wtDisagree);
 
-    p = testpolls[1];
+    p = testV1polls[1];
     msg = p.getMessage();
     p.m_tally.addVote(new Vote(msg, true), id, false);
     p.m_tally.addVote(new Vote(msg, true), id, false);
@@ -226,7 +236,7 @@ public class TestPoll extends LockssTestCase {
 
   /** test for method vote(..) */
   public void testVote() {
-    V1Poll p = testpolls[1];
+    V1Poll p = testV1polls[1];
     p.m_hash = pollmanager.generateRandomBytes();
     try {
       p.castOurVote();
@@ -239,7 +249,7 @@ public class TestPoll extends LockssTestCase {
 
   /** test for method voteInPoll(..) */
   public void testVoteInPoll() {
-    V1Poll p = testpolls[1];
+    V1Poll p = testV1polls[1];
     p.m_tally.quorum = 10;
     p.m_tally.numAgree = 5;
     p.m_tally.numDisagree = 2;
@@ -264,14 +274,14 @@ public class TestPoll extends LockssTestCase {
   }
 
   public void testStartPoll() {
-    V1Poll p = testpolls[0];
+    V1Poll p = testV1polls[0];
     p.startPoll();
     assertEquals(BasePoll.PS_WAIT_HASH, p.m_pollstate);
     p.m_pollstate = BasePoll.PS_COMPLETE;
   }
 
   public void testScheduleOurHash() {
-    V1Poll p = testpolls[0];
+    V1Poll p = testV1polls[0];
     p.m_pollstate = BasePoll.PS_WAIT_HASH;
     assertTrue(p.scheduleOurHash());
     TimeBase.step(p.m_deadline.getRemainingTime()/2);
@@ -284,7 +294,7 @@ public class TestPoll extends LockssTestCase {
 
   /** test for method stopPoll(..) */
   public void testStopPoll() {
-    V1Poll p = testpolls[1];
+    V1Poll p = testV1polls[1];
     p.m_tally.quorum = 10;
     p.m_tally.numAgree = 7;
     p.m_tally.numDisagree = 3;
@@ -297,7 +307,7 @@ public class TestPoll extends LockssTestCase {
 
   /** test for method startVoteCheck(..) */
   public void testStartVote() {
-    V1Poll p = testpolls[0];
+    V1Poll p = testV1polls[0];
     p.m_pendingVotes = 3;
     p.startVoteCheck();
     assertEquals(4, p.m_pendingVotes);
@@ -306,7 +316,7 @@ public class TestPoll extends LockssTestCase {
 
   /** test for method stopVote(..) */
   public void testStopVote() {
-    V1Poll p = testpolls[1];
+    V1Poll p = testV1polls[1];
     p.m_pendingVotes = 3;
     p.stopVoteCheck();
     assertEquals(2, p.m_pendingVotes);
@@ -324,8 +334,8 @@ public class TestPoll extends LockssTestCase {
     try {
       PollSpec spec =
 	new PollSpec(testau.getAUId(),
-		     rooturls[0],null,null,
-		     testau.makeCachedUrlSet(new RangeCachedUrlSetSpec(rooturls[0])));
+		     rootV1urls[0],null,null,
+		     testau.makeCachedUrlSet(new RangeCachedUrlSetSpec(rootV1urls[0])));
     ((MockCachedUrlSet)spec.getCachedUrlSet()).setHasContent(false);
       LcapMessage poll_msg = LcapMessage.makeRequestMsg(
           spec,
@@ -457,7 +467,7 @@ public class TestPoll extends LockssTestCase {
     pollmanager = theDaemon.getPollManager();
 
     theDaemon.getPluginManager();
-    testau = PollTestPlugin.PTArchivalUnit.createFromListOfRootUrls(rooturls);
+    testau = PollTestPlugin.PTArchivalUnit.createFromListOfRootUrls(rootV1urls);
     PluginUtil.registerArchivalUnit(testau);
 
     String tempDirPath = null;
@@ -495,17 +505,17 @@ public class TestPoll extends LockssTestCase {
 
   private void initTestMsg() {
     try {
-      testmsg = new LcapMessage[3];
+      testV1msg = new LcapMessage[3];
 
-      for(int i= 0; i<3; i++) {
+      for(int i= 0; i<testV1msg.length; i++) {
         CachedUrlSet cus = testau.makeCachedUrlSet(
-            new RangeCachedUrlSetSpec(rooturls[i], lwrbnd, uprbnd));
+            new RangeCachedUrlSetSpec(rootV1urls[i], lwrbnd, uprbnd));
         PollSpec spec = new PollSpec(testau.getAUId(),
-                                     rooturls[i],lwrbnd, uprbnd,
+                                     rootV1urls[i],lwrbnd, uprbnd,
                                      cus);
         ((MockCachedUrlSet)spec.getCachedUrlSet()).setHasContent(false);
         int opcode = LcapMessage.NAME_POLL_REQ + (i * 2);
-        testmsg[i] =  LcapMessage.makeRequestMsg(
+        testV1msg[i] =  LcapMessage.makeRequestMsg(
           spec,
           agree_entries,
           pollmanager.generateRandomBytes(),
@@ -513,6 +523,29 @@ public class TestPoll extends LockssTestCase {
           opcode,
           spec.calcDuration(opcode,cus,pollmanager),
           testID);
+      }
+
+      testV2msg = new LcapMessage[2];
+
+      for(int i= 0; i<testV2msg.length; i++) {
+        CachedUrlSet cus = testau.makeCachedUrlSet(
+            new RangeCachedUrlSetSpec(rootV2urls[i], lwrbnd, uprbnd));
+        PollSpec spec = new PollSpec(testau.getAUId(),
+                                     rootV2urls[i],lwrbnd, uprbnd,
+                                     cus);
+        ((MockCachedUrlSet)spec.getCachedUrlSet()).setHasContent(false);
+	// XXX - should have specific way to make V2 messages
+	// XXX - should have separate opcodes for V2 messages
+        int opcode = LcapMessage.NAME_POLL_REQ + (i * 2);
+        testV2msg[i] =  LcapMessage.makeRequestMsg(
+          spec,
+          agree_entries,
+          pollmanager.generateRandomBytes(),
+          pollmanager.generateRandomBytes(),
+          opcode,
+          spec.calcDuration(opcode,cus,pollmanager),
+          testID);
+	testV2msg[i].setVersion(2);
       }
     }
     catch (IOException ex) {
@@ -522,10 +555,11 @@ public class TestPoll extends LockssTestCase {
 
   private void initTestPolls() {
     try {
-     testpolls = new V1Poll[3];
-     for (int i = 0; i < 3; i++) {
-       log.debug3("initTestPolls: " + i);
-       BasePoll p = pollmanager.makePoll(testmsg[i]);
+     testV1polls = new V1Poll[testV1msg.length];
+     for (int i = 0; i < testV1polls.length; i++) {
+       log.debug3("initTestPolls: V1 " + i);
+       BasePoll p = pollmanager.makePoll(testV1msg[i]);
+       log.warning("initTestPolls: V1 " + i + " returns");
        assertTrue(p instanceof V1Poll);
        switch (i) {
        case 0:
@@ -538,8 +572,25 @@ public class TestPoll extends LockssTestCase {
 	 assertTrue(p instanceof V1VerifyPoll);
 	 break;
        }
-       testpolls[i] = (V1Poll)p;
-       assertNotNull(testpolls[i]);
+       testV1polls[i] = (V1Poll)p;
+       assertNotNull(testV1polls[i]);
+       log.debug3("initTestPolls: " + i + " " + p.toString());
+     }
+     testV2polls = new V2Poll[testV2msg.length];
+     for (int i = 0; i < testV2msg.length; i++) {
+       log.debug3("initTestPolls: V2 " + i);
+       BasePoll p = pollmanager.makePoll(testV2msg[i]);
+       assertTrue(p instanceof V2Poll);
+       switch (i) {
+       case 0:
+	 assertTrue(p instanceof V2NamePoll);
+	 break;
+       case 1:
+	 assertTrue(p instanceof V2ContentPoll);
+	 break;
+       }
+       testV2polls[i] = (V2Poll)p;
+       assertNotNull(testV2polls[i]);
        log.debug3("initTestPolls: " + i + " " + p.toString());
      }
    }

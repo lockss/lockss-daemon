@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.108 2003-07-09 19:25:19 clairegriffin Exp $
+* $Id: PollManager.java,v 1.109 2003-07-16 17:34:39 dshr Exp $
  */
 
 /*
@@ -486,6 +486,9 @@ public class PollManager  extends BaseLockssManager {
 	case 1:
 	  ret_poll = new V1ContentPoll(msg, pollspec, this);
 	  break;
+	case 2:
+	  ret_poll = new V2ContentPoll(msg, pollspec, this);
+	  break;
 	default:
 	  throw new ProtocolException("Unsupported content poll version: " +
 				      pollspec.getVersion());
@@ -497,6 +500,9 @@ public class PollManager  extends BaseLockssManager {
 	switch (pollspec.getVersion()) {
 	case 1:
 	  ret_poll = new V1NamePoll(msg, pollspec, this);
+	  break;
+	case 2:
+	  ret_poll = new V2NamePoll(msg, pollspec, this);
 	  break;
 	default:
 	  throw new ProtocolException("Unsupported name poll version: " +
@@ -523,7 +529,7 @@ public class PollManager  extends BaseLockssManager {
 
   /**
    * check for conflicts between the poll defined by the Message and any
-   * currently exsiting poll.
+   * currently existing poll.
    * @param msg the <code>Message</code> to check
    * @param cus the <code>CachedUrlSet</code> from the url and reg expression
    * @return the CachedUrlSet of the conflicting poll.

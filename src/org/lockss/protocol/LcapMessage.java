@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessage.java,v 1.42 2003-06-26 22:55:49 clairegriffin Exp $
+ * $Id: LcapMessage.java,v 1.43 2003-07-16 17:34:40 dshr Exp $
  */
 
 /*
@@ -730,6 +730,8 @@ public class LcapMessage
       if(m_entries != null) {
 
       }
+      if (m_version > 1)
+	sb.append(" ver " + m_version);
     }
     sb.append("]");
     return sb.toString();
