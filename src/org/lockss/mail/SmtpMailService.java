@@ -1,5 +1,5 @@
 /*
- * $Id: SmtpMailService.java,v 1.5 2004-08-18 07:07:44 tlipkis Exp $
+ * $Id: SmtpMailService.java,v 1.6 2004-08-22 02:05:54 tlipkis Exp $
  *
 
  Copyright (c) 2000-2004 Board of Trustees of Leland Stanford Jr. University,
@@ -38,7 +38,8 @@ import org.lockss.daemon.*;
 
 /** SmtpMailService is a MailService that sends mail directly over an smtp
  * connection, queuing it in memory */
-public class SmtpMailService extends BaseLockssManager implements MailService {
+public class SmtpMailService
+  extends BaseLockssManager implements MailService, ConfigurableManager {
   protected static Logger log = Logger.getLogger("Mail");
 
   static final String PRIORITY_PARAM_MAILQ = "MailQueue";
@@ -88,9 +89,9 @@ public class SmtpMailService extends BaseLockssManager implements MailService {
     super.stopService();
   }
 
-  protected synchronized void setConfig(Configuration config,
-					Configuration prevConfig,
-					Configuration.Differences changedKeys) {
+  public synchronized void setConfig(Configuration config,
+				     Configuration prevConfig,
+				     Configuration.Differences changedKeys) {
     // Unconditional: not under PREFIX
     localHostName = getLocalHostname();
 

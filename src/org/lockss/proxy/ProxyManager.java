@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyManager.java,v 1.23 2004-08-18 07:08:18 tlipkis Exp $
+ * $Id: ProxyManager.java,v 1.24 2004-08-22 02:05:52 tlipkis Exp $
  */
 
 /*
@@ -88,8 +88,8 @@ public class ProxyManager extends BaseProxyManager {
   public static final long DEFAULT_PROXY_QUICK_DATA_TIMEOUT =
     5  * Constants.MINUTE;
 
-  protected void setConfig(Configuration config, Configuration prevConfig,
-			   Configuration.Differences changedKeys) {
+  public void setConfig(Configuration config, Configuration prevConfig,
+			Configuration.Differences changedKeys) {
     super.setConfig(config, prevConfig, changedKeys);
     if (changedKeys.contains(PREFIX)) {
       includeIps = config.get(PARAM_IP_INCLUDE, "");

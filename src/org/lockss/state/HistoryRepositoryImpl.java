@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.53 2004-08-18 00:14:53 tlipkis Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.54 2004-08-22 02:05:50 tlipkis Exp $
  */
 
 /*
@@ -111,10 +111,6 @@ public class HistoryRepositoryImpl
   public void stopService() {
     // we want to checkpoint here
     super.stopService();
-  }
-
-  protected void setConfig(Configuration config, Configuration oldConfig,
-			   Configuration.Differences changedKeys) {
   }
 
   public void setAuConfig(Configuration auConfig) {

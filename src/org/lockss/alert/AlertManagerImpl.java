@@ -1,5 +1,5 @@
 /*
- * $Id: AlertManagerImpl.java,v 1.7 2004-08-18 00:15:01 tlipkis Exp $
+ * $Id: AlertManagerImpl.java,v 1.8 2004-08-22 02:05:57 tlipkis Exp $
  *
 
  Copyright (c) 2000-2004 Board of Trustees of Leland Stanford Jr. University,
@@ -42,7 +42,7 @@ import org.lockss.daemon.*;
  * alerts may be deferred and reported together.
  */
 public class AlertManagerImpl extends BaseLockssDaemonManager
-  implements AlertManager {
+  implements AlertManager, ConfigurableManager {
   protected static Logger log = Logger.getLogger("AlertMgr");
 
   static final String PARAM_ALERTS_ENABLED = PREFIX + "enabled";
@@ -93,9 +93,9 @@ public class AlertManagerImpl extends BaseLockssDaemonManager
   //     super.stopService();
   //   }
 
-  protected synchronized void setConfig(Configuration config,
-					Configuration prevConfig,
-					Configuration.Differences changedKeys) {
+  public synchronized void setConfig(Configuration config,
+				     Configuration prevConfig,
+				     Configuration.Differences changedKeys) {
     alertsEnabled = config.getBoolean(PARAM_ALERTS_ENABLED,
 				      DEFAULT_ALERTS_ENABLED);
     initialDelay = config.getTimeInterval(PARAM_DELAY_INITIAL,

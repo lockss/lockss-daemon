@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.52 2004-06-17 06:17:26 eaalto Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.53 2004-08-22 02:05:49 tlipkis Exp $
  */
 
 /*
@@ -58,12 +58,12 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     Properties props = new Properties();
     props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     // set small node cache; one test needs to fill it up
-    props.setProperty(LockssRepositoryImpl.PARAM_MAX_LRUMAP_SIZE, "17");
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
     mau = new MockArchivalUnit();
     repo = (LockssRepositoryImpl)LockssRepositoryImpl.createNewLockssRepository(
         mau);
+    repo.setNodeCacheSize(17);
     repo.initService(daemon);
   }
 

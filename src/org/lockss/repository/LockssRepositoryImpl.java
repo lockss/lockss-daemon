@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.60 2004-08-18 07:09:12 tlipkis Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.61 2004-08-22 02:05:51 tlipkis Exp $
  */
 
 /*
@@ -85,22 +85,13 @@ public class LockssRepositoryImpl
   static final String INITIAL_PLUGIN_DIR = String.valueOf((char)('a'-1));
   static String lastPluginDir = INITIAL_PLUGIN_DIR;
 
-  /**
-   * Parameter for maximum number of node instances to cache.  This can be
-   * fairly small because there typically isn't need for repeated access to
-   * the same nodes over a short time.
-   */
-  public static final String PARAM_MAX_LRUMAP_SIZE = Configuration.PREFIX +
-      "cache.max.lrumap.size";
-  private static final int DEFAULT_MAX_LRUMAP_SIZE = 100;
-
   // this contains a '#' so that it's not defeatable by strings which
   // match the prefix in a url (like '../tmp/')
   private static final String TEST_PREFIX = "/#tmp";
 
+  private RepositoryManager repoMgr;
   private String rootLocation;
   LRUMap nodeCache; // made non-private for testing
-  private int nodeCacheSize = DEFAULT_MAX_LRUMAP_SIZE;
   private ReferenceMap refMap;
   private int cacheHits = 0;
   private int cacheMisses = 0;
@@ -114,8 +105,14 @@ public class LockssRepositoryImpl
       // this shouldn't happen
       rootLocation += File.separator;
     }
-    nodeCache = new LRUMap(nodeCacheSize);
+    nodeCache = new LRUMap(RepositoryManager.DEFAULT_MAX_LRUMAP_SIZE);
     refMap = new ReferenceMap(ReferenceMap.HARD, ReferenceMap.WEAK);
+  }
+
+  public void startService() {
+    super.startService();
+    repoMgr = getDaemon().getRepositoryManager();
+    setNodeCacheSize(repoMgr.paramNodeCacheSize);
   }
 
   public void stopService() {
@@ -126,15 +123,9 @@ public class LockssRepositoryImpl
     super.stopService();
   }
 
-  protected void setConfig(Configuration newConfig, Configuration prevConfig,
-                           Configuration.Differences changedKeys) {
-    // at some point we'll have to respond to changes in the available disk
-    // space list
-
-    nodeCacheSize = newConfig.getInt(PARAM_MAX_LRUMAP_SIZE,
-				     DEFAULT_MAX_LRUMAP_SIZE);
-    if (nodeCache.getMaximumSize() != nodeCacheSize) {
-      nodeCache.setMaximumSize(nodeCacheSize);
+  public void setNodeCacheSize(int size) {
+    if (nodeCache != null && nodeCache.getMaximumSize() != size) {
+      nodeCache.setMaximumSize(size);
     }
   }
 

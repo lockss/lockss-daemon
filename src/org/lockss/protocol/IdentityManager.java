@@ -1,5 +1,5 @@
 /*
-* $Id: IdentityManager.java,v 1.41 2004-08-18 00:14:56 tlipkis Exp $
+* $Id: IdentityManager.java,v 1.42 2004-08-22 02:05:53 tlipkis Exp $
  */
 
 /*
@@ -46,7 +46,9 @@ import org.lockss.app.*;
  * @author Claire Griffin
  * @version 1.0
  */
-public class IdentityManager extends BaseLockssDaemonManager {
+public class IdentityManager
+  extends BaseLockssDaemonManager implements ConfigurableManager {
+
   static Logger log = Logger.getLogger("IdentityManager");
 
   public static final String PARAM_LOCAL_IP =
@@ -531,8 +533,8 @@ public class IdentityManager extends BaseLockssDaemonManager {
     return list;
   }
 
-  protected void setConfig(Configuration config, Configuration oldConfig,
-			   Configuration.Differences changedKeys) {
+  public void setConfig(Configuration config, Configuration oldConfig,
+			Configuration.Differences changedKeys) {
     reputationDeltas[MAX_DELTA] =
         config.getInt(PARAM_MAX_DELTA, DEFAULT_MAX_DELTA);
     reputationDeltas[AGREE_VOTE] =

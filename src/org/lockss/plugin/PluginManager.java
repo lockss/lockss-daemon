@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.97 2004-08-18 22:37:30 smorabito Exp $
+ * $Id: PluginManager.java,v 1.98 2004-08-22 02:05:54 tlipkis Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.jar.*;
 import java.io.*;
 import java.net.*;
 import java.security.KeyStore;
+import org.lockss.app.*;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
 import org.lockss.poller.*;
@@ -51,7 +52,9 @@ import org.lockss.crawler.CrawlManager;
  * @author  TAL
  * @version 0.0
  */
-public class PluginManager extends BaseLockssDaemonManager {
+public class PluginManager
+  extends BaseLockssDaemonManager implements ConfigurableManager {
+
   public static final String PARAM_AU_TREE = Configuration.PREFIX + "au";
 
   static final String PARAM_PLATFORM_DISK_SPACE_LIST =
@@ -222,8 +225,8 @@ public class PluginManager extends BaseLockssDaemonManager {
 
   Configuration currentAllPlugs = ConfigManager.EMPTY_CONFIGURATION;
 
-  protected void setConfig(Configuration config, Configuration oldConfig,
-			   Configuration.Differences changedKeys) {
+  public void setConfig(Configuration config, Configuration oldConfig,
+			Configuration.Differences changedKeys) {
 
     if (changedKeys.contains(PARAM_PLUGIN_LOAD_TIMEOUT)) {
       registryTimeout = config.getTimeInterval(PARAM_PLUGIN_LOAD_TIMEOUT,

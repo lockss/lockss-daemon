@@ -1,5 +1,5 @@
 /*
- * $Id: LcapComm.java,v 1.50 2004-08-18 00:14:56 tlipkis Exp $
+ * $Id: LcapComm.java,v 1.51 2004-08-22 02:05:53 tlipkis Exp $
  */
 
 /*
@@ -47,7 +47,8 @@ import org.lockss.plugin.*;
  * between LOCKSS caches.  The packets sent at this level are {@link
  * LockssDatagram}s.  They are sent and received via {@link LcapSocket}s.
  */
-public class LcapComm extends BaseLockssDaemonManager {
+public class LcapComm
+  extends BaseLockssDaemonManager implements ConfigurableManager {
 
   static final String PARAM_LOCAL_IPS =
     Configuration.PREFIX + "platform.localIPs";
@@ -144,9 +145,9 @@ public class LcapComm extends BaseLockssDaemonManager {
    * This service currently cannot be reconfigured.
    * @param config the Configuration
    */
-  protected void setConfig(Configuration config,
-			   Configuration prevConfig,
-			   Configuration.Differences changedKeys) {
+  public void setConfig(Configuration config,
+			Configuration prevConfig,
+			Configuration.Differences changedKeys) {
     if (configShot.once()) {
       configure(config, prevConfig, changedKeys);
     }

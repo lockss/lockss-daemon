@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryStatus.java,v 1.10 2004-08-18 00:14:54 tlipkis Exp $
+ * $Id: LockssRepositoryStatus.java,v 1.11 2004-08-22 02:05:51 tlipkis Exp $
  */
 
 /*
@@ -72,10 +72,6 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
     statusServ.unregisterStatusAccessor(SERVICE_STATUS_TABLE_NAME);
     statusServ.unregisterStatusAccessor(SPACE_TABLE_NAME);
     super.stopService();
-  }
-
-  protected void setConfig(Configuration config, Configuration oldConfig,
-                           Configuration.Differences changedKeys) {
   }
 
   static class RepoStatusAccessor implements StatusAccessor {

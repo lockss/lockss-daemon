@@ -1,5 +1,5 @@
 /*
- * $Id: AuTreeWalkManager.java,v 1.2 2004-08-21 07:10:33 tlipkis Exp $
+ * $Id: AuTreeWalkManager.java,v 1.3 2004-08-22 02:05:50 tlipkis Exp $
  */
 
 /*
@@ -100,12 +100,6 @@ public class AuTreeWalkManager
     } else {
       log.debug("curTask != task; " + curTask + ", " + task);
     }
-  }
-
-  protected void setConfig(Configuration newConfig,
-			   Configuration prevConfig,
-			   Configuration.Differences changedKeys) {
-    // nothing to config
   }
 
   public void setAuConfig(Configuration auConfig) {
@@ -331,7 +325,7 @@ public class AuTreeWalkManager
   }
 
   void startThread(BackgroundTask task) {
-    TreeWalkRunner runner = new TreeWalkRunner(au, task);
+    TreeWalkRunner runner = newRunner(au, task);
     try {
       executeRunner(runner);
       runningRunner = runner;
@@ -347,6 +341,10 @@ public class AuTreeWalkManager
   protected void executeRunner(TreeWalkRunner runner)
       throws InterruptedException {
     twm.execute(runner);
+  }
+
+  protected TreeWalkRunner newRunner(ArchivalUnit au, BackgroundTask task) {
+    return new TreeWalkRunner(au, task);
   }
 
   protected TreeWalker newWalker(LockssDaemon daemon, ArchivalUnit au) {

@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.17 2004-08-18 07:10:42 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.18 2004-08-22 02:05:50 tlipkis Exp $
  */
 
 /*
@@ -39,7 +39,9 @@ import org.lockss.repository.*;
 /**
  * Collect and report the status of the ArchivalUnits
  */
-public class ArchivalUnitStatus extends BaseLockssDaemonManager {
+public class ArchivalUnitStatus
+  extends BaseLockssDaemonManager implements ConfigurableManager {
+
   /**
    * The maximum number of nodes to display in a single page of the ui.
    */
@@ -79,8 +81,8 @@ public class ArchivalUnitStatus extends BaseLockssDaemonManager {
     super.stopService();
   }
 
-  protected void setConfig(Configuration config, Configuration oldConfig,
-                           Configuration.Differences changedKeys) {
+  public void setConfig(Configuration config, Configuration oldConfig,
+			Configuration.Differences changedKeys) {
     nodesToDisplay = config.getInt(PARAM_MAX_NODES_TO_DISPLAY,
                                    DEFAULT_MAX_NODES_TO_DISPLAY);
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: StatusServiceImpl.java,v 1.23 2004-08-18 00:14:59 tlipkis Exp $
+ * $Id: StatusServiceImpl.java,v 1.24 2004-08-22 02:05:56 tlipkis Exp $
  */
 
 /*
@@ -50,10 +50,6 @@ public class StatusServiceImpl
   public void startService() {
     super.startService();
     registerStatusAccessor(ALL_TABLES_TABLE, new AllTableStatusAccessor());
-  }
-
-  protected void setConfig(Configuration config, Configuration prevConfig,
-			   Configuration.Differences changedKeys) {
   }
 
   public StatusTable getTable(String tableName, String key) 

@@ -1,5 +1,5 @@
 /*
- * $Id: HashSvcSchedImpl.java,v 1.13 2004-08-18 00:14:59 tlipkis Exp $
+ * $Id: HashSvcSchedImpl.java,v 1.14 2004-08-22 02:05:55 tlipkis Exp $
  */
 
 /*
@@ -48,7 +48,7 @@ import org.lockss.plugin.*;
  * the SchedService to execute tasks.
  */
 public class HashSvcSchedImpl
-  extends BaseLockssDaemonManager implements HashService {
+  extends BaseLockssDaemonManager implements HashService, ConfigurableManager {
 
   protected static Logger log = Logger.getLogger("HashSvcSchedImpl");
 
@@ -88,8 +88,8 @@ public class HashSvcSchedImpl
     super.stopService();
   }
 
-  protected void setConfig(Configuration config, Configuration prevConfig,
-			   Configuration.Differences changedKeys) {
+  public void setConfig(Configuration config, Configuration prevConfig,
+			Configuration.Differences changedKeys) {
     estPadConstant = config.getLong(PARAM_ESTIMATE_PAD_CONSTANT,
 				    DEFAULT_ESTIMATE_PAD_CONSTANT);
     estPadPercent = config.getLong(PARAM_ESTIMATE_PAD_PERCENT,

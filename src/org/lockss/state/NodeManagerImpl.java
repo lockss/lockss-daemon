@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.183 2004-08-21 06:52:51 tlipkis Exp $
+ * $Id: NodeManagerImpl.java,v 1.184 2004-08-22 02:05:50 tlipkis Exp $
  */
 
 /*
@@ -45,34 +45,9 @@ import org.lockss.alert.*;
  */
 public class NodeManagerImpl
   extends BaseLockssDaemonManager implements NodeManager {
-  /**
-   * This parameter indicates the size of the {@link NodeStateCache} used by the
-   * node manager.
-   */
-  public static final String PARAM_NODESTATE_CACHE_SIZE =
-      Configuration.PREFIX + "state.cache.size";
-
-  static final int DEFAULT_NODESTATE_CACHE_SIZE = 100;
-
-  /**
-   * This parameter indicates how long since the last unsuccessful poll on a
-   * node the node manager should wait before recalling that poll.
-   */
-  public static final String PARAM_RECALL_DELAY =
-      Configuration.PREFIX + "state.recall.delay";
-
-  static final long DEFAULT_RECALL_DELAY = Constants.DAY;
-
-  /**
-   * This parameter indicates whether or not polls should be restarted if their
-   * deadline hasn't expired yet.
-   */
-  public static final String PARAM_RESTART_NONEXPIRED_POLLS =
-      Configuration.PREFIX + "state.restart.nonexpired.polls";
-
-  static final boolean DEFAULT_RESTART_NONEXPIRED_POLLS = false;
 
   // the various necessary managers
+  NodeManagerManager nodeMgrMgr;
   HistoryRepository historyRepo;
   AlertManager alertMgr;
   private LockssRepository lockssRepo;
@@ -85,10 +60,6 @@ public class NodeManagerImpl
   AuState auState;
   NodeStateCache nodeCache;
   HashMap activeNodes;
-  // standard start values of parameters
-  int maxCacheSize = DEFAULT_NODESTATE_CACHE_SIZE;
-  long recallDelay = DEFAULT_RECALL_DELAY;
-  boolean restartNonexpiredPolls = DEFAULT_RESTART_NONEXPIRED_POLLS;
 
    //the set of nodes marked damaged (these are nodes which have lost content
    // poll).
@@ -104,13 +75,14 @@ public class NodeManagerImpl
     super.startService();
     // gets all the managers
     if (logger.isDebug()) logger.debug("Starting: " + managedAu);
+    nodeMgrMgr = theDaemon.getNodeManagerManager();
     historyRepo = theDaemon.getHistoryRepository(managedAu);
     lockssRepo = theDaemon.getLockssRepository(managedAu);
     pollManager = theDaemon.getPollManager();
     regulator = theDaemon.getActivityRegulator(managedAu);
     alertMgr = theDaemon.getAlertManager();
     // initializes the state info
-    nodeCache = new NodeStateCache(maxCacheSize);
+    nodeCache = new NodeStateCache(nodeMgrMgr.paramNodeStateCacheSize);
     activeNodes = new HashMap();
 
     auState = historyRepo.loadAuState();
@@ -129,20 +101,9 @@ public class NodeManagerImpl
     logger.debug2("NodeManager successfully stopped");
   }
 
-  protected void setConfig(Configuration newConfig,
-                           Configuration prevConfig,
-                           Configuration.Differences changedKeys) {
-    recallDelay = newConfig.getTimeInterval(PARAM_RECALL_DELAY,
-                                            DEFAULT_RECALL_DELAY);
-    restartNonexpiredPolls =
-        newConfig.getBoolean(PARAM_RESTART_NONEXPIRED_POLLS,
-                             DEFAULT_RESTART_NONEXPIRED_POLLS);
-    if (changedKeys.contains(PARAM_NODESTATE_CACHE_SIZE)) {
-      maxCacheSize = newConfig.getInt(PARAM_NODESTATE_CACHE_SIZE,
-                                      DEFAULT_NODESTATE_CACHE_SIZE);
-      if (nodeCache != null) {
-        nodeCache.setCacheSize(maxCacheSize);
-      }
+  public void setNodeStateCacheSize(int size) {
+    if (nodeCache != null && nodeCache.getCacheSize() != size) {
+      nodeCache.setCacheSize(size);
     }
   }
 
@@ -972,7 +933,7 @@ public class NodeManagerImpl
                             " recalling.");
             } else {
               // if this poll should be running make sure it is running.
-              if (!restartNonexpiredPolls &&
+              if (!nodeMgrMgr.paramRestartNonexpiredPolls &&
                   ((lastHistory.startTime + lastHistory.duration) >
                   TimeBase.nowMs())) {
                logger.debug2("unfinished poll's duration not elapsed, so not"+
@@ -1237,7 +1198,8 @@ public class NodeManagerImpl
                                          lastHistory.lwrBound,
                                          lastHistory.uprBound);
     boolean shouldRecallLastPoll =
-        ((lastHistory.getStartTime()  + lastHistory.getDuration() + recallDelay)
+        ((lastHistory.getStartTime() + lastHistory.getDuration() +
+	  nodeMgrMgr.paramRecallDelay)
          <= TimeBase.nowMs());
     if (!shouldRecallLastPoll) {
       // too early to act, regardless of state
@@ -1254,7 +1216,7 @@ public class NodeManagerImpl
           if ((lastHistory.isOurPoll())) {
             // only restart if it has expired, since other caches will still be
             // running it otherwise
-            if (restartNonexpiredPolls ||
+            if (nodeMgrMgr.paramRestartNonexpiredPolls ||
                 ((lastHistory.startTime + lastHistory.duration) <
                 TimeBase.nowMs())) {
               if (!reportOnly) {

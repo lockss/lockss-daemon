@@ -1,5 +1,5 @@
 /*
- * $Id: BaseLockssManager.java,v 1.14 2004-08-18 00:15:01 tlipkis Exp $
+ * $Id: BaseLockssManager.java,v 1.15 2004-08-22 02:05:57 tlipkis Exp $
  */
 
 /*
@@ -105,8 +105,10 @@ public abstract class BaseLockssManager implements LockssManager {
   }
 
   private void registerDefaultConfigCallback() {
-    configCallback = new DefaultConfigCallback();
-    Configuration.registerConfigurationCallback(configCallback);
+    if (this instanceof ConfigurableManager) {
+      configCallback = new DefaultConfigCallback((ConfigurableManager)this);
+      Configuration.registerConfigurationCallback(configCallback);
+    }
   }
 
   private void unregisterConfig() {
@@ -119,28 +121,28 @@ public abstract class BaseLockssManager implements LockssManager {
   /** Convenience method to (re)invoke the manager's setConfig(new, old,
    * ...) method with the current config and empty previous config. */
   protected void resetConfig() {
-    Configuration cur = Configuration.getCurrentConfig();
-    setConfig(cur, ConfigManager.EMPTY_CONFIGURATION,
-	      Configuration.DIFFERENCES_ALL);
+    if (this instanceof ConfigurableManager) {
+      ConfigurableManager cmgr = (ConfigurableManager)this;
+      Configuration cur = Configuration.getCurrentConfig();
+      cmgr.setConfig(cur, ConfigManager.EMPTY_CONFIGURATION,
+		     Configuration.DIFFERENCES_ALL);
+    } else {
+      throw new RuntimeException("Not a ConfigurableManager");
+    }
   }
 
-  /** Managers must implement this method.  It is called once at app
-   * init time (during initService()) and again whenever the current
-   * configuration changes.  This method should not invoke other services
-   * unless isAppInited() is true.
-   * @param newConfig the new {@link Configuration}
-   * @param prevConfig the previous {@link Configuration}
-   * @param changedKeys the {@link Set} of changed keys
-   */
-  protected abstract void setConfig(Configuration newConfig,
-				    Configuration prevConfig,
-				    Configuration.Differences changedKeys);
+  private static class DefaultConfigCallback
+    implements Configuration.Callback {
 
-  private class DefaultConfigCallback implements Configuration.Callback {
+    ConfigurableManager mgr;
+    DefaultConfigCallback(ConfigurableManager mgr) {
+      this.mgr = mgr;
+    }
+
     public void configurationChanged(Configuration newConfig,
 				     Configuration prevConfig,
 				     Configuration.Differences changedKeys) {
-      setConfig(newConfig, prevConfig, changedKeys);
+      mgr.setConfig(newConfig, prevConfig, changedKeys);
     }
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: JettyManager.java,v 1.13 2004-08-18 07:08:19 tlipkis Exp $
+ * $Id: JettyManager.java,v 1.14 2004-08-22 02:05:55 tlipkis Exp $
  */
 
 /*
@@ -45,7 +45,8 @@ import org.mortbay.util.Code;
  * not running (<i>e.g.</i>, for {@link org.lockss.servlet.TinyUi}), so it
  * must not rely on any non-static app services, nor any other managers.
  */
-public abstract class JettyManager extends BaseLockssManager {
+public abstract class JettyManager
+  extends BaseLockssManager implements ConfigurableManager {
   static final String PREFIX = Configuration.PREFIX + "jetty.debug";
 
   static final String PARAM_JETTY_DEBUG = PREFIX;
@@ -87,8 +88,8 @@ public abstract class JettyManager extends BaseLockssManager {
   }
 
   // Set Jetty debug properties from config params
-  protected void setConfig(Configuration config, Configuration prevConfig,
-			   Configuration.Differences changedKeys) {
+  public void setConfig(Configuration config, Configuration prevConfig,
+			Configuration.Differences changedKeys) {
     if (jettyLogInited) {
       if (changedKeys.contains(PARAM_JETTY_DEBUG)) {
 	boolean deb = config.getBoolean(PARAM_JETTY_DEBUG, 

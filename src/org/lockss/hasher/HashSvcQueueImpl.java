@@ -1,5 +1,5 @@
 /*
- * $Id: HashSvcQueueImpl.java,v 1.5 2004-08-18 00:14:59 tlipkis Exp $
+ * $Id: HashSvcQueueImpl.java,v 1.6 2004-08-22 02:05:55 tlipkis Exp $
  */
 
 /*
@@ -49,7 +49,7 @@ import org.lockss.plugin.*;
  * not lock out smaller requests.
  */
 public class HashSvcQueueImpl
-  extends BaseLockssDaemonManager implements HashService {
+  extends BaseLockssDaemonManager implements HashService, ConfigurableManager {
 
   protected static Logger log = Logger.getLogger("HashSvcQueueImpl");
 
@@ -91,8 +91,8 @@ public class HashSvcQueueImpl
     super.stopService();
   }
 
-  protected void setConfig(Configuration config, Configuration prevConfig,
-			   Configuration.Differences changedKeys) {
+  public void setConfig(Configuration config, Configuration prevConfig,
+			Configuration.Differences changedKeys) {
     estPadConstant = config.getTimeInterval(PARAM_ESTIMATE_PAD_CONSTANT,
 					    DEFAULT_ESTIMATE_PAD_CONSTANT);
     estPadPercent = config.getLong(PARAM_ESTIMATE_PAD_PERCENT,

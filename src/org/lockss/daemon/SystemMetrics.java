@@ -1,5 +1,5 @@
 /*
- * $Id: SystemMetrics.java,v 1.23 2004-08-18 00:14:59 tlipkis Exp $
+ * $Id: SystemMetrics.java,v 1.24 2004-08-22 02:05:56 tlipkis Exp $
  */
 
 /*
@@ -44,7 +44,8 @@ import org.lockss.protocol.LcapMessage;
  * A singleton class which provides access to various system calculations, such
  * as hash speed estimates.
  */
-public class SystemMetrics extends BaseLockssDaemonManager {
+public class SystemMetrics
+  extends BaseLockssDaemonManager implements ConfigurableManager {
   static final String PREFIX = Configuration.PREFIX + "metrics.";
 
   /**

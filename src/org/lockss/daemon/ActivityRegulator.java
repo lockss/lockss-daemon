@@ -1,5 +1,5 @@
 /*
- * $Id: ActivityRegulator.java,v 1.34 2004-08-18 00:15:00 tlipkis Exp $
+ * $Id: ActivityRegulator.java,v 1.35 2004-08-22 02:05:56 tlipkis Exp $
  */
 
 /*
@@ -126,12 +126,6 @@ public class ActivityRegulator
     logger.debug2("ActivityRegulator stopped.");
     cusMap.clear();
     super.stopService();
-  }
-
-  protected void setConfig(Configuration newConfig,
-                           Configuration prevConfig,
-                           Configuration.Differences changedKeys) {
-    // nothing to config
   }
 
   public void setAuConfig(Configuration auConfig) {

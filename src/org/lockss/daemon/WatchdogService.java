@@ -1,5 +1,5 @@
 /*
- * $Id: WatchdogService.java,v 1.10 2004-08-18 00:14:59 tlipkis Exp $
+ * $Id: WatchdogService.java,v 1.11 2004-08-22 02:05:56 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -40,7 +40,8 @@ import org.lockss.util.*;
  * updated for a sufficiently long time, the platform should kill and
  * restart java.  (JVM segfaults generally cause it to loop.)
  */
-public class WatchdogService extends BaseLockssManager {
+public class WatchdogService
+  extends BaseLockssManager implements ConfigurableManager  {
 
   // It would be simpler to do this with a thread, but using the TimerQueue
   // ensures that the watchdog isn't poked if the TimerQueue dies.  If this
@@ -71,9 +72,9 @@ public class WatchdogService extends BaseLockssManager {
   String dnsProbeHost = null;
   boolean dnsProbeAttempted = false;
 
-  protected synchronized void setConfig(Configuration config,
-					Configuration prevConfig,
-					Configuration.Differences changedKeys) {
+  public synchronized void setConfig(Configuration config,
+				     Configuration prevConfig,
+				     Configuration.Differences changedKeys) {
     if (changedKeys.contains(PARAM_PLATFORM_WDOG_DNS)) {
       doDns = config.getBoolean(PARAM_PLATFORM_WDOG_DNS,
 				DEFAULT_PLATFORM_WDOG_DNS);

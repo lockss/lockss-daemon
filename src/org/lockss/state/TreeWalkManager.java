@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkManager.java,v 1.1 2004-08-21 06:52:51 tlipkis Exp $
+ * $Id: TreeWalkManager.java,v 1.2 2004-08-22 02:05:50 tlipkis Exp $
  */
 
 /*
@@ -43,7 +43,9 @@ import org.lockss.daemon.*;
  * TreeWalkManager is the center of the treewalk managers.  It manages the
  * treewalk config parameters and thread pool.
  */
-public class TreeWalkManager extends BaseLockssManager {
+public class TreeWalkManager
+  extends BaseLockssManager implements ConfigurableManager {
+
   private static Logger log = Logger.getLogger("TreeWalkManager");
 
   public static final String PREFIX = Configuration.PREFIX + "treewalk.";
@@ -57,6 +59,14 @@ public class TreeWalkManager extends BaseLockssManager {
   public static final String PARAM_TREEWALK_THREAD_POOL_MAX =
     PREFIX + "threadPool.max";
   static final int DEFAULT_TREEWALK_THREAD_POOL_MAX = 6;
+
+  /** Duration after which idle threads will be terminated..  -1 = never */
+  public static final String PARAM_TREEWALK_THREAD_POOL_KEEPALIVE =
+    PREFIX + "threadPool.keepAlive";
+  static final long DEFAULT_TREEWALK_THREAD_POOL_KEEPALIVE =
+    30 * Constants.MINUTE;
+
+
 
   /** Approximate interval between treewalks.
    * @deprecated replaced by interval.min and interval.max
@@ -146,6 +156,7 @@ public class TreeWalkManager extends BaseLockssManager {
 
   int paramMinPoolSize = DEFAULT_TREEWALK_THREAD_POOL_MIN;
   int paramMaxPoolSize = DEFAULT_TREEWALK_THREAD_POOL_MAX;
+  long paramPoolKeepaliveTime = DEFAULT_TREEWALK_THREAD_POOL_KEEPALIVE;
   long paramTreeWalkIntervalMin = DEFAULT_TREEWALK_INTERVAL_MIN;
   long paramTreeWalkIntervalMax = DEFAULT_TREEWALK_INTERVAL_MAX;
   long paramStartDelay = DEFAULT_TREEWALK_START_DELAY;
@@ -167,7 +178,8 @@ public class TreeWalkManager extends BaseLockssManager {
     // sets the managers
     pool = new PooledExecutor(paramMaxPoolSize);
     pool.setMinimumPoolSize(paramMinPoolSize);
-    log.debug("Threewalk thread pool min, max: " +
+    pool.setKeepAliveTime(paramPoolKeepaliveTime);
+    log.debug2("Threewalk thread pool min, max: " +
 	      pool.getMinimumPoolSize() + ", " + pool.getMaximumPoolSize());
     pool.abortWhenBlocked();
   }
@@ -178,14 +190,17 @@ public class TreeWalkManager extends BaseLockssManager {
     super.stopService();
   }
 
-  protected void setConfig(Configuration config, Configuration oldConfig,
-			   Configuration.Differences changedKeys) {
-
+  public void setConfig(Configuration config, Configuration oldConfig,
+			Configuration.Differences changedKeys) {
     if (changedKeys.contains(PREFIX)) {
       paramMinPoolSize = config.getInt(PARAM_TREEWALK_THREAD_POOL_MIN,
 				       DEFAULT_TREEWALK_THREAD_POOL_MIN);
       paramMaxPoolSize = config.getInt(PARAM_TREEWALK_THREAD_POOL_MAX,
 				       DEFAULT_TREEWALK_THREAD_POOL_MAX);
+      paramPoolKeepaliveTime =
+	config.getTimeInterval(PARAM_TREEWALK_THREAD_POOL_KEEPALIVE,
+			       DEFAULT_TREEWALK_THREAD_POOL_KEEPALIVE);
+
       // duplicate old behavior if only old param is set.  XXX remove this
       if (config.containsKey(PARAM_TREEWALK_INTERVAL) &&
 	  !config.containsKey(PARAM_TREEWALK_INTERVAL_MIN) &&
