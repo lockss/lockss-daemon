@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.27 2004-06-15 21:46:10 tlipkis Exp $
+ * $Id: ProxyHandler.java,v 1.28 2004-09-23 03:37:02 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.27 2004-06-15 21:46:10 tlipkis Exp $
+// $Id: ProxyHandler.java,v 1.28 2004-09-23 03:37:02 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -177,9 +177,8 @@ public class ProxyHandler extends AbstractHttpHandler {
 
     String urlString = uri.toString();
     CachedUrl cu = pluginMgr.findMostRecentCachedUrl(urlString);
-    boolean isRepairRequest =
-      org.lockss.util.StringUtil.equalStrings(request.getField("user-agent"),
-					      LockssDaemon.getUserAgent());
+    boolean isRepairRequest = isRepairRequest(request);
+
     if (log.isDebug2()) {
       log.debug2("cu: " + (isRepairRequest ? "(repair) " : "") + cu);
     }
@@ -202,6 +201,18 @@ public class ProxyHandler extends AbstractHttpHandler {
       }
     }
     doSun(pathInContext, pathParams, request, response);
+  }
+
+  private boolean isRepairRequest(HttpRequest request) {
+    if (org.lockss.util.StringUtil.equalStrings(request.getField("user-agent"),
+						LockssDaemon.getUserAgent())) {
+      return true;
+    }
+    java.util.List lockssFlags = request.getParameterValues(Constants.X_LOCKSS);
+    if (lockssFlags != null) {
+      return lockssFlags.contains(Constants.X_LOCKSS_REPAIR);
+    }
+    return false;
   }
 
   /** Proxy a connection using Java's native URLConection */
@@ -709,7 +720,7 @@ public class ProxyHandler extends AbstractHttpHandler {
     request.setField("Lockss-Cu", CuUrl.fromCu(cu).toString());
     request.setState(oldState);
     // Add a header to the response to identify content from LOCKSS cache
-    response.setField("X-LOCKSS", "from-cache");
+    response.setField(Constants.X_LOCKSS, Constants.X_LOCKSS_FROM_CACHE);
     if (log.isDebug2()) {
       log.debug2("serveFromCache(" + cu + ")");
     }
