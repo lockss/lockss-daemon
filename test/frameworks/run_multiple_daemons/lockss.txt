@@ -56,8 +56,9 @@ org.lockss.poll.maxpolls=12
 org.lockss.poll.quorum=3
 org.lockss.poll.agreeVerify=20
 org.lockss.poll.disagreeVerify=90
-org.lockss.votedelay=300000
-org.lockss.voterange=50000
+org.lockss.poll.namepoll.deadline=300000
+org.lockss.poll.contentpoll.min=180000
+org.lockss.poll.contentpoll.max=300000
 
 #test only settings
 

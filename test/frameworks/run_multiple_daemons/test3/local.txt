@@ -1,7 +1,7 @@
-org.lockss.localIPAddress=1.1.1.1
-org.lockss.poll.agreeVerify=30
-org.lockss.comm.unicast.port=9000
-org.lockss.comm.unicast.sendToPort=9001
+org.lockss.localIPAddress=3.3.3.3
+org.lockss.poll.agreeVerify=20
+org.lockss.comm.unicast.port=9002
+org.lockss.comm.unicast.sendToPort=9000
 org.lockss.comm.unicast.sendToAddr=127.0.0.1
 
 org.lockss.cache.location=.
@@ -15,7 +15,7 @@ org.lockss.test.treewalk=true
 org.lockss.treewalk.pluginId=org|lockss|plugin|simulated|SimulatedPlugin
 org.lockss.treewalk.auId=localA
 
-org.lockss.test.poll=true
+org.lockss.test.poll=false
 org.lockss.poll.type=2
 org.lockss.pollspec.pluginId=org|lockss|plugin|simulated|SimulatedPlugin
 org.lockss.pollspec.auId=localA
