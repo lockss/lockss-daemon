@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkHandler.java,v 1.51 2003-12-12 03:54:41 tlipkis Exp $
+ * $Id: TreeWalkHandler.java,v 1.52 2003-12-23 00:35:29 tlipkis Exp $
  */
 
 /*
@@ -90,7 +90,7 @@ public class TreeWalkHandler {
    */
   public static final String PARAM_TREEWALK_USE_SCHEDULER =
       TREEWALK_PREFIX + "use.scheduler";
-  static final boolean DEFAULT_TREEWALK_USE_SCHEDULER = false;
+  static final boolean DEFAULT_TREEWALK_USE_SCHEDULER = true;
 
   /**
    * Configuration parameter name for occasional sleep interval, when
