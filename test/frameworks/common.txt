@@ -41,7 +41,8 @@ org.lockss.plugin.registry=\
     org.nypl.plugin.PoetryBayPlugin;\
     gov.loc.plugin.TESLEJPlugin;\
     org.molvis.plugin.MolVisPlugin;\
-    org.lockss.plugin.ojs.OJSPlugin;
+    org.lockss.plugin.ojs.OJSPlugin;\
+    edu.upenn.library.plugin.clcweb.CLCWebPlugin;
 
 # List of plugins that should be loaded as ConfigurablePlugins with an xml
 # file.  These should still be included in the registry above, unless you
@@ -65,7 +66,8 @@ org.lockss.plugin.xmlPlugins=\
     edu.upenn.library.plugin.annualofurdustudies.AnnualOfUrduStudiesPlugin;\
     edu.indiana.lib.plugin.jcjpc.JcjpcPlugin;\
     edu.princeton.plugin.bmcr.BMCRPlugin;\
-    org.lockss.plugin.ojs.OJSPlugin;
+    org.lockss.plugin.ojs.OJSPlugin;\
+    edu.upenn.library.plugin.clcweb.CLCWebPlugin;
 
 # Title database
 
@@ -81,95 +83,53 @@ org.lockss.plugin.xmlPlugins=\
 #org.lockss.title.tal1.param.3.key=year
 #org.lockss.title.tal1.param.3.value=2003
 #org.lockss.title.tal1.param.3.editable=true
-#Title: American Imago (Project Muse)
-#Fri Jan 02 14:29:37 PST 2004
-org.lockss.title.tal2.title=American Imago Volume 60
-org.lockss.title.tal2.journalTitle=American Imago
-org.lockss.title.tal2.plugin=org.lockss.plugin.projmuse.ProjectMusePlugin
-org.lockss.title.tal2.param.1.key=base_url
-org.lockss.title.tal2.param.1.value=http\://muse.jhu.edu/
-org.lockss.title.tal2.param.2.key=journal_dir
-org.lockss.title.tal2.param.2.value=american_imago
-org.lockss.title.tal2.param.3.key=volume
-org.lockss.title.tal2.param.3.value=60
 #Title: EMLS (Early Modern Literary Studies)
 #Fri Jan 02 14:29:37 PST 2004
-org.lockss.title.tal3.title=EMLS Volume 9
-org.lockss.title.tal3.journalTitle=EMLS
-org.lockss.title.tal3.plugin=org.lockss.plugin.emls.EmlsPlugin
-org.lockss.title.tal3.param.1.key=base_url
-org.lockss.title.tal3.param.1.value=http\://www.shu.ac.uk/emls/
-org.lockss.title.tal3.param.2.key=volume
-org.lockss.title.tal3.param.2.value=9
+org.lockss.title.emls9.title=EMLS Volume 9
+org.lockss.title.emls9.journalTitle=EMLS
+org.lockss.title.emls9.plugin=org.lockss.plugin.emls.EmlsPlugin
+org.lockss.title.emls9.param.1.key=base_url
+org.lockss.title.emls9.param.1.value=http\://www.shu.ac.uk/emls/
+org.lockss.title.emls9.param.2.key=volume
+org.lockss.title.emls9.param.2.value=9
 #Title: Other Voices (Other Voices)
 #Fri Jan 02 14:29:37 PST 2004
-org.lockss.title.tal4.title=Other Voices Volume 2
-org.lockss.title.tal4.journalTitle=Other Voices
-org.lockss.title.tal4.plugin=org.lockss.plugin.othervoices.OtherVoicesPlugin
-org.lockss.title.tal4.param.1.key=base_url
-org.lockss.title.tal4.param.1.value=http\://www.othervoices.org/
-org.lockss.title.tal4.param.2.key=volume
-org.lockss.title.tal4.param.2.value=2
+org.lockss.title.othervoices2.title=Other Voices Volume 2
+org.lockss.title.othervoices2.journalTitle=Other Voices
+org.lockss.title.othervoices2.plugin=org.lockss.plugin.othervoices.OtherVoicesPlugin
+org.lockss.title.othervoices2.param.1.key=base_url
+org.lockss.title.othervoices2.param.1.value=http\://www.othervoices.org/
+org.lockss.title.othervoices2.param.2.key=volume
+org.lockss.title.othervoices2.param.2.value=2
 #Title: American Historical Review (History Cooperative)
 #Fri Jan 02 14:29:37 PST 2004
-org.lockss.title.tal5.title=American Historical Review Volume 108
-org.lockss.title.tal5.journalTitle=American Historical Review
-org.lockss.title.tal5.plugin=org.lockss.plugin.histcoop.HistoryCooperativePlugin
-org.lockss.title.tal5.param.1.key=base_url
-org.lockss.title.tal5.param.1.value=http\://www.historycooperative.org/
-org.lockss.title.tal5.param.2.key=journal_dir
-org.lockss.title.tal5.param.2.value=ahr
-org.lockss.title.tal5.param.3.key=volume
-org.lockss.title.tal5.param.3.value=108
-#Title: JCICS (ACS)
-#Fri Jan 02 14:29:37 PST 2004
-#org.lockss.title.tal6.title=JCICS
-#org.lockss.title.tal6.journalTitle=JCICS
-#org.lockss.title.tal6.plugin=org.lockss.plugin.acs.AcsPlugin
-#org.lockss.title.tal6.param.1.key=journal_key
-#org.lockss.title.tal6.param.1.value=jcisd8
-#org.lockss.title.tal6.param.2.key=article_url
-#org.lockss.title.tal6.param.2.value=http\://pubs.acs.org/
-#org.lockss.title.tal6.param.3.key=base_url
-#org.lockss.title.tal6.param.3.value=http\://pubs3.acs.org/
-#org.lockss.title.tal6.param.4.key=volume
-#org.lockss.title.tal6.param.4.value=43
-#org.lockss.title.tal6.param.4.editable=true
-#Title: JCICS 2003 (ACS)
-#Fri Jan 02 14:29:37 PST 2004
-#org.lockss.title.tal7.title=JCICS 2003
-#org.lockss.title.tal7.journalTitle=JCICS
-#org.lockss.title.tal7.plugin=org.lockss.plugin.acs.AcsPlugin
-#org.lockss.title.tal7.param.1.key=journal_key
-#org.lockss.title.tal7.param.1.value=jcisd8
-#org.lockss.title.tal7.param.2.key=article_url
-#org.lockss.title.tal7.param.2.value=http\://pubs.acs.org/
-#org.lockss.title.tal7.param.3.key=base_url
-#org.lockss.title.tal7.param.3.value=http\://pubs3.acs.org/
-#org.lockss.title.tal7.param.4.key=year
-#org.lockss.title.tal7.param.4.value=2003
-#org.lockss.title.tal7.param.4.editable=true
-#org.lockss.title.tal7.param.5.key=volume
-#org.lockss.title.tal7.param.5.value=43
-#org.lockss.title.tal7.param.5.editable=true
+org.lockss.title.ahr108.title=American Historical Review Volume 108
+org.lockss.title.ahr108.journalTitle=American Historical Review
+org.lockss.title.ahr108.plugin=org.lockss.plugin.histcoop.HistoryCooperativePlugin
+org.lockss.title.ahr108.param.1.key=base_url
+org.lockss.title.ahr108.param.1.value=http\://www.historycooperative.org/
+org.lockss.title.ahr108.param.2.key=journal_dir
+org.lockss.title.ahr108.param.2.value=ahr
+org.lockss.title.ahr108.param.3.key=volume
+org.lockss.title.ahr108.param.3.value=108
 #Title: ALR (Absinthe Literary Review)
 #Fri Jan 02 14:29:37 PST 2004
-org.lockss.title.tal8.title=ALR 2003
-org.lockss.title.tal8.journalTitle=ALR
-org.lockss.title.tal8.plugin=org.lockss.plugin.absinthe.AbsinthePlugin
-org.lockss.title.tal8.param.1.key=base_url
-org.lockss.title.tal8.param.1.value=http\://absinthe-literary-review.com/
-org.lockss.title.tal8.param.2.key=year
-org.lockss.title.tal8.param.2.value=2003
+org.lockss.title.alr2003.title=ALR 2003
+org.lockss.title.alr2003.journalTitle=ALR
+org.lockss.title.alr2003.plugin=org.lockss.plugin.absinthe.AbsinthePlugin
+org.lockss.title.alr2003.param.1.key=base_url
+org.lockss.title.alr2003.param.1.value=http\://absinthe-literary-review.com/
+org.lockss.title.alr2003.param.2.key=year
+org.lockss.title.alr2003.param.2.value=2003
 #Title: JHC (HighWire Press)
 #Fri Jan 02 14:29:37 PST 2004
-org.lockss.title.tal9.title=JHC Volume 52
-org.lockss.title.tal9.journalTitle=JHC
-org.lockss.title.tal9.plugin=org.lockss.plugin.highwire.HighWirePlugin
-org.lockss.title.tal9.param.1.key=base_url
-org.lockss.title.tal9.param.1.value=http\://www.jhc.org/
-org.lockss.title.tal9.param.2.key=volume
-org.lockss.title.tal9.param.2.value=52
+org.lockss.title.jhc52.title=JHC Volume 52
+org.lockss.title.jhc52.journalTitle=JHC
+org.lockss.title.jhc52.plugin=org.lockss.plugin.highwire.HighWirePlugin
+org.lockss.title.jhc52.param.1.key=base_url
+org.lockss.title.jhc52.param.1.value=http\://www.jhc.org/
+org.lockss.title.jhc52.param.2.key=volume
+org.lockss.title.jhc52.param.2.value=52
 #Title: Test - Shadow1 (HighWire Press)
 #Fri Jan 02 14:29:37 PST 2004
 org.lockss.title.tal10.title=Test - Shadow1 (small)
@@ -181,12 +141,12 @@ org.lockss.title.tal10.param.2.value=50
 org.lockss.title.tal10.param.3.key=year
 org.lockss.title.tal10.param.3.value=2001
 #Title: Blackbird
-org.lockss.title.tal11.title=Blackbird Volume 2
-org.lockss.title.tal11.plugin=org.lockss.plugin.blackbird.BlackbirdPlugin
-org.lockss.title.tal11.param.1.key=base_url
-org.lockss.title.tal11.param.1.value=http://www.blackbird.vcu.edu/
-org.lockss.title.tal11.param.2.key=volume
-org.lockss.title.tal11.param.2.value=2
+org.lockss.title.blackbird2.title=Blackbird Volume 2
+org.lockss.title.blackbird2.plugin=org.lockss.plugin.blackbird.BlackbirdPlugin
+org.lockss.title.blackbird2.param.1.key=base_url
+org.lockss.title.blackbird2.param.1.value=http://www.blackbird.vcu.edu/
+org.lockss.title.blackbird2.param.2.key=volume
+org.lockss.title.blackbird2.param.2.value=2
 #Title: Cultural Logic (Cultural Logic)
 #Fri Jan 02 19:43:26 PST 2004
 org.lockss.title.cl1.title=Cultural Logic 2003
@@ -214,6 +174,154 @@ org.lockss.title.ojs2.param.1.value=http://www.math.washington.edu/~ejpecp/
 org.lockss.title.ojs2.param.2.key=year
 org.lockss.title.ojs2.param.2.value=
 org.lockss.title.ojs2.param.2.editable=
+#SNDE vol. 8
+org.lockss.title.bp1.title=Studies in Nonlinear Dynamics and Econometrics Volume 8
+org.lockss.title.bp1.journalTitle=Studies in Nonlinear Dynamics and Econometrics
+org.lockss.title.bp1.plugin=org.lockss.plugin.bepress.BePressPlugin
+org.lockss.title.bp1.param.1.key=base_url
+org.lockss.title.bp1.param.1.value=http\://www.bepress.com/
+org.lockss.title.bp1.param.2.key=journal_abbr
+org.lockss.title.bp1.param.2.value=snde
+org.lockss.title.bp1.param.3.key=volume
+org.lockss.title.bp1.param.3.value=8
+
+#AMBIO: A Journal of the Human Environment
+org.lockss.title.bo1.title=AMBIO: A Journal of the Human Environment Volume 33
+org.lockss.title.bo1.journalTitle=AMBIO: A Journal of the Human Environment
+org.lockss.title.bo1.plugin=org.lockss.plugin.bioone.BioOnePlugin
+org.lockss.title.bo1.param.1.key=base_url
+org.lockss.title.bo1.param.1.value=http\://www.bioone.org/
+org.lockss.title.bo1.param.2.key=journal_id
+org.lockss.title.bo1.param.2.value=0044-7447
+org.lockss.title.bo1.param.3.key=volume
+org.lockss.title.bo1.param.3.value=33
+
+#BMCR
+org.lockss.title.bmcr2004.title=Bryn Mawr Classical Review 2004
+org.lockss.title.bmcr2004.journalTitle=Bryn Mawr Classical Review
+org.lockss.title.bmcr2004.plugin=edu.princeton.plugin.bmcr.BMCRPlugin
+org.lockss.title.bmcr2004.param.1.key=base_url
+org.lockss.title.bmcr2004.param.1.value=http\://ccat.sas.upenn.edu/bmcr/
+org.lockss.title.bmcr2004.param.2.key=year
+org.lockss.title.bmcr2004.param.2.value=2004
+
+org.lockss.title.bmcr2003.title=Bryn Mawr Classical Review 2003
+org.lockss.title.bmcr2003.journalTitle=Bryn Mawr Classical Review
+org.lockss.title.bmcr2003.plugin=edu.princeton.plugin.bmcr.BMCRPlugin
+org.lockss.title.bmcr2003.param.1.key=base_url
+org.lockss.title.bmcr2003.param.1.value=http\://ccat.sas.upenn.edu/bmcr/
+org.lockss.title.bmcr2003.param.2.key=year
+org.lockss.title.bmcr2003.param.2.value=2003
+
+org.lockss.title.bmcr2002.title=Bryn Mawr Classical Review 2002
+org.lockss.title.bmcr2002.journalTitle=Bryn Mawr Classical Review
+org.lockss.title.bmcr2002.plugin=edu.princeton.plugin.bmcr.BMCRPlugin
+org.lockss.title.bmcr2002.param.1.key=base_url
+org.lockss.title.bmcr2002.param.1.value=http\://ccat.sas.upenn.edu/bmcr/
+org.lockss.title.bmcr2002.param.2.key=year
+org.lockss.title.bmcr2002.param.2.value=2002
+
+org.lockss.title.bmcr2001.title=Bryn Mawr Classical Review 2001
+org.lockss.title.bmcr2001.journalTitle=Bryn Mawr Classical Review
+org.lockss.title.bmcr2001.plugin=edu.princeton.plugin.bmcr.BMCRPlugin
+org.lockss.title.bmcr2001.param.1.key=base_url
+org.lockss.title.bmcr2001.param.1.value=http\://ccat.sas.upenn.edu/bmcr/
+org.lockss.title.bmcr2001.param.2.key=year
+org.lockss.title.bmcr2001.param.2.value=2001
+
+org.lockss.title.bmcr1990.title=Bryn Mawr Classical Review 1990
+org.lockss.title.bmcr1990.journalTitle=Bryn Mawr Classical Review
+org.lockss.title.bmcr1990.plugin=edu.princeton.plugin.bmcr.BMCRPlugin
+org.lockss.title.bmcr1990.param.1.key=base_url
+org.lockss.title.bmcr1990.param.1.value=http\://ccat.sas.upenn.edu/bmcr/
+org.lockss.title.bmcr1990.param.2.key=year
+org.lockss.title.bmcr1990.param.2.value=1990
+
+org.lockss.title.teslej8.title=TESL-EJ Volume 8
+org.lockss.title.teslej8.journalTitle=TESL-EJ
+org.lockss.title.teslej8.plugin=gov.loc.plugin.TESLEJPlugin
+org.lockss.title.teslej8.param.1.key=base_url
+org.lockss.title.teslej8.param.1.value=http\://writing.berkeley.edu/TESL-EJ/
+org.lockss.title.teslej8.param.2.key=volume
+org.lockss.title.teslej8.param.2.value=8
+org.lockss.title.teslej8.param.3.key=num_issue_range
+org.lockss.title.teslej8.param.3.value=29-32
+
+org.lockss.title.shadowsmall.title=Shadow Small
+org.lockss.title.shadowsmall.journalTitle=Shadow
+org.lockss.title.shadowsmall.plugin=org.lockss.plugin.ShadowPlugin
+org.lockss.title.shadowsmall.param.1.key=base_url
+org.lockss.title.shadowsmall.param.1.value=http\://shadow1.lockss.org/
+org.lockss.title.shadowsmall.param.2.key=journal_id
+org.lockss.title.shadowsmall.param.2.value=small
+
+org.lockss.title.shadowbranched.title=Shadow Branched
+org.lockss.title.shadowbranched.journalTitle=Shadow
+org.lockss.title.shadowbranched.plugin=org.lockss.plugin.ShadowPlugin
+org.lockss.title.shadowbranched.param.1.key=base_url
+org.lockss.title.shadowbranched.param.1.value=http\://shadow1.lockss.org/
+org.lockss.title.shadowbranched.param.2.key=journal_id
+org.lockss.title.shadowbranched.param.2.value=branched
+
+org.lockss.title.shadowflat.title=Shadow Flat
+org.lockss.title.shadowflat.journalTitle=Shadow
+org.lockss.title.shadowflat.plugin=org.lockss.plugin.ShadowPlugin
+org.lockss.title.shadowflat.param.1.key=base_url
+org.lockss.title.shadowflat.param.1.value=http\://shadow1.lockss.org/
+org.lockss.title.shadowflat.param.2.key=journal_id
+org.lockss.title.shadowflat.param.2.value=flat
+
+org.lockss.title.shadowlong_names.title=Shadow Long Names
+org.lockss.title.shadowlong_names.journalTitle=Shadow
+org.lockss.title.shadowlong_names.plugin=org.lockss.plugin.ShadowPlugin
+org.lockss.title.shadowlong_names.param.1.key=base_url
+org.lockss.title.shadowlong_names.param.1.value=http\://shadow1.lockss.org/
+org.lockss.title.shadowlong_names.param.2.key=journal_id
+org.lockss.title.shadowlong_names.param.2.value=long_names
+
+org.lockss.title.clcweb2004.journalTitle = CLCWeb
+org.lockss.title.clcweb2004.param.1.key = base_url
+org.lockss.title.clcweb2004.param.1.value = http://clcwebjournal.lib.purdue.edu/
+org.lockss.title.clcweb2004.param.2.key = year
+org.lockss.title.clcweb2004.param.2.value = 2004
+org.lockss.title.clcweb2004.param.3.key = volume
+org.lockss.title.clcweb2004.param.3.value = 6
+org.lockss.title.clcweb2004.plugin = edu.upenn.library.plugin.clcweb.CLCWebPlugin
+org.lockss.title.clcweb2004.title = CLCWeb Volume 6 (2004)
+org.lockss.title.jcjpc10.journalTitle = Journal of Criminal Justice and Popular Culture
+org.lockss.title.jcjpc10.param.1.key = base_url
+org.lockss.title.jcjpc10.param.1.value = http://www.albany.edu/scj/jcjpc/
+org.lockss.title.jcjpc10.param.2.key = volume
+org.lockss.title.jcjpc10.param.2.value = 10
+org.lockss.title.jcjpc10.plugin = edu.indiana.lib.plugin.jcjpc.JcjpcPlugin
+org.lockss.title.jcjpc10.title = Journal of Criminal Justice and Popular Culture Volume 10
+org.lockss.title.jrs2004.journalTitle = Journal of Religion and Society
+org.lockss.title.jrs2004.param.1.key = base_url
+org.lockss.title.jrs2004.param.1.value = http://moses.creighton.edu/JRS/
+org.lockss.title.jrs2004.param.2.key = year
+org.lockss.title.jrs2004.param.2.value = 2004
+org.lockss.title.jrs2004.plugin = edu.harvard.plugin.jrs.JRSPlugin
+org.lockss.title.jrs2004.title = Journal of Religion and Society 2004
+org.lockss.title.urdu18.journalTitle = The Annual of Urdu Studies
+org.lockss.title.urdu18.param.1.key = base_url
+org.lockss.title.urdu18.param.1.value = http://www.urdustudies.com/
+org.lockss.title.urdu18.param.2.key = volume
+org.lockss.title.urdu18.param.2.value = 18
+org.lockss.title.urdu18.plugin = edu.upenn.library.plugin.annualofurdustudies.AnnualOfUrduStudiesPlugin
+org.lockss.title.urdu18.title = The Annual of Urdu Studies Volume 18 (2003)
+
+#######Project Muse############
+#Title: American Imago (Project Muse)
+#Fri Jan 02 14:29:37 PST 2004
+org.lockss.title.americanimago60.title=American Imago Volume 60
+org.lockss.title.americanimago60.journalTitle=American Imago
+org.lockss.title.americanimago60.plugin=org.lockss.plugin.projmuse.ProjectMusePlugin
+org.lockss.title.americanimago60.param.1.key=base_url
+org.lockss.title.americanimago60.param.1.value=http\://muse.jhu.edu/
+org.lockss.title.americanimago60.param.2.key=journal_dir
+org.lockss.title.americanimago60.param.2.value=american_imago
+org.lockss.title.americanimago60.param.3.key=volume
+org.lockss.title.americanimago60.param.3.value=60
 #American Jewish History (91, 2003)
 org.lockss.title.pm12.title=American Jewish History Volume 91
 org.lockss.title.pm12.journalTitle=American Jewish History
@@ -434,108 +542,12 @@ org.lockss.title.pm31.param.2.value=mln
 org.lockss.title.pm31.param.3.key=volume
 org.lockss.title.pm31.param.3.value=118
 
-#SNDE vol. 8
-org.lockss.title.bp1.title=Studies in Nonlinear Dynamics and Econometrics Volume 8
-org.lockss.title.bp1.journalTitle=Studies in Nonlinear Dynamics and Econometrics
-org.lockss.title.bp1.plugin=org.lockss.plugin.bepress.BePressPlugin
-org.lockss.title.bp1.param.1.key=base_url
-org.lockss.title.bp1.param.1.value=http\://www.bepress.com/
-org.lockss.title.bp1.param.2.key=journal_abbr
-org.lockss.title.bp1.param.2.value=snde
-org.lockss.title.bp1.param.3.key=volume
-org.lockss.title.bp1.param.3.value=8
-
-#AMBIO: A Journal of the Human Environment
-org.lockss.title.bo1.title=AMBIO: A Journal of the Human Environment Volume 33
-org.lockss.title.bo1.journalTitle=AMBIO: A Journal of the Human Environment
-org.lockss.title.bo1.plugin=org.lockss.plugin.bioone.BioOnePlugin
-org.lockss.title.bo1.param.1.key=base_url
-org.lockss.title.bo1.param.1.value=http\://www.bioone.org/
-org.lockss.title.bo1.param.2.key=journal_id
-org.lockss.title.bo1.param.2.value=0044-7447
-org.lockss.title.bo1.param.3.key=volume
-org.lockss.title.bo1.param.3.value=33
-
-#BMCR
-org.lockss.title.bmcr1.title=Bryn Mawr Classical Review 2004
-org.lockss.title.bmcr1.journalTitle=Bryn Mawr Classical Review
-org.lockss.title.bmcr1.plugin=edu.princeton.plugin.bmcr.BMCRPlugin
-org.lockss.title.bmcr1.param.1.key=base_url
-org.lockss.title.bmcr1.param.1.value=http\://ccat.sas.upenn.edu/bmcr/
-org.lockss.title.bmcr1.param.2.key=year
-org.lockss.title.bmcr1.param.2.value=2004
-
-org.lockss.title.bmcr2.title=Bryn Mawr Classical Review 2003
-org.lockss.title.bmcr2.journalTitle=Bryn Mawr Classical Review
-org.lockss.title.bmcr2.plugin=edu.princeton.plugin.bmcr.BMCRPlugin
-org.lockss.title.bmcr2.param.1.key=base_url
-org.lockss.title.bmcr2.param.1.value=http\://ccat.sas.upenn.edu/bmcr/
-org.lockss.title.bmcr2.param.2.key=year
-org.lockss.title.bmcr2.param.2.value=2003
-
-org.lockss.title.bmcr3.title=Bryn Mawr Classical Review 2002
-org.lockss.title.bmcr3.journalTitle=Bryn Mawr Classical Review
-org.lockss.title.bmcr3.plugin=edu.princeton.plugin.bmcr.BMCRPlugin
-org.lockss.title.bmcr3.param.1.key=base_url
-org.lockss.title.bmcr3.param.1.value=http\://ccat.sas.upenn.edu/bmcr/
-org.lockss.title.bmcr3.param.2.key=year
-org.lockss.title.bmcr3.param.2.value=2002
-
-org.lockss.title.bmcr4.title=Bryn Mawr Classical Review 2001
-org.lockss.title.bmcr4.journalTitle=Bryn Mawr Classical Review
-org.lockss.title.bmcr4.plugin=edu.princeton.plugin.bmcr.BMCRPlugin
-org.lockss.title.bmcr4.param.1.key=base_url
-org.lockss.title.bmcr4.param.1.value=http\://ccat.sas.upenn.edu/bmcr/
-org.lockss.title.bmcr4.param.2.key=year
-org.lockss.title.bmcr4.param.2.value=2001
-
-org.lockss.title.bmcr5.title=Bryn Mawr Classical Review 1990
-org.lockss.title.bmcr5.journalTitle=Bryn Mawr Classical Review
-org.lockss.title.bmcr5.plugin=edu.princeton.plugin.bmcr.BMCRPlugin
-org.lockss.title.bmcr5.param.1.key=base_url
-org.lockss.title.bmcr5.param.1.value=http\://ccat.sas.upenn.edu/bmcr/
-org.lockss.title.bmcr5.param.2.key=year
-org.lockss.title.bmcr5.param.2.value=1990
-
-org.lockss.title.teslej8.title=TESL-EJ Volume 8
-org.lockss.title.teslej8.journalTitle=TESL-EJ
-org.lockss.title.teslej8.plugin=gov.loc.plugin.TESLEJPlugin
-org.lockss.title.teslej8.param.1.key=base_url
-org.lockss.title.teslej8.param.1.value=http\://writing.berkeley.edu/TESL-EJ/
-org.lockss.title.teslej8.param.2.key=volume
-org.lockss.title.teslej8.param.2.value=8
-org.lockss.title.teslej8.param.3.key=num_issue_range
-org.lockss.title.teslej8.param.3.value=29-32
-
-org.lockss.title.shadowsmall.title=Shadow Small
-org.lockss.title.shadowsmall.journalTitle=Shadow
-org.lockss.title.shadowsmall.plugin=org.lockss.plugin.ShadowPlugin
-org.lockss.title.shadowsmall.param.1.key=base_url
-org.lockss.title.shadowsmall.param.1.value=http\://shadow1.lockss.org/
-org.lockss.title.shadowsmall.param.2.key=journal_id
-org.lockss.title.shadowsmall.param.2.value=small
-
-org.lockss.title.shadowbranched.title=Shadow Branched
-org.lockss.title.shadowbranched.journalTitle=Shadow
-org.lockss.title.shadowbranched.plugin=org.lockss.plugin.ShadowPlugin
-org.lockss.title.shadowbranched.param.1.key=base_url
-org.lockss.title.shadowbranched.param.1.value=http\://shadow1.lockss.org/
-org.lockss.title.shadowbranched.param.2.key=journal_id
-org.lockss.title.shadowbranched.param.2.value=branched
-
-org.lockss.title.shadowflat.title=Shadow Flat
-org.lockss.title.shadowflat.journalTitle=Shadow
-org.lockss.title.shadowflat.plugin=org.lockss.plugin.ShadowPlugin
-org.lockss.title.shadowflat.param.1.key=base_url
-org.lockss.title.shadowflat.param.1.value=http\://shadow1.lockss.org/
-org.lockss.title.shadowflat.param.2.key=journal_id
-org.lockss.title.shadowflat.param.2.value=flat
-
-org.lockss.title.shadowlong_names.title=Shadow Long Names
-org.lockss.title.shadowlong_names.journalTitle=Shadow
-org.lockss.title.shadowlong_names.plugin=org.lockss.plugin.ShadowPlugin
-org.lockss.title.shadowlong_names.param.1.key=base_url
-org.lockss.title.shadowlong_names.param.1.value=http\://shadow1.lockss.org/
-org.lockss.title.shadowlong_names.param.2.key=journal_id
-org.lockss.title.shadowlong_names.param.2.value=long_names
-
+org.lockss.title.poetrybay.title
+org.lockss.title.pm31.journalTitle=MLN
+org.lockss.title.pm31.plugin=org.lockss.plugin.projmuse.ProjectMusePlugin
+org.lockss.title.pm31.param.1.key=base_url
+org.lockss.title.pm31.param.1.value=http\://muse.jhu.edu/
+org.lockss.title.pm31.param.2.key=journal_dir
+org.lockss.title.pm31.param.2.value=mln
+org.lockss.title.pm31.param.3.key=volume
+org.lockss.title.pm31.param.3.value=118
