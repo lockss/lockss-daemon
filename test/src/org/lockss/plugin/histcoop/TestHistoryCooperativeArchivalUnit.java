@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryCooperativeArchivalUnit.java,v 1.5 2004-02-17 21:46:09 clairegriffin Exp $
+ * $Id: TestHistoryCooperativeArchivalUnit.java,v 1.6 2004-03-01 04:04:40 clairegriffin Exp $
  */
 
 /*
@@ -46,6 +46,9 @@ import org.lockss.plugin.configurable.*;
 
 public class TestHistoryCooperativeArchivalUnit extends LockssTestCase {
   private MockLockssDaemon theDaemon;
+  static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
+  static final String JRNL_KEY = ConfigParamDescr.JOURNAL_DIR.getKey();
+  static final String VOL_KEY = ConfigParamDescr.VOLUME_NUMBER.getKey();
 
   static final String ROOT_URL = "http://www.historycooperative.org/";
   static final String DIR = "ahr";
@@ -68,12 +71,12 @@ public class TestHistoryCooperativeArchivalUnit extends LockssTestCase {
   private ConfigurableArchivalUnit makeAu(URL url, int volume, String journalDir)
       throws Exception {
     Properties props = new Properties();
-    props.setProperty(HistoryCooperativePlugin.AUPARAM_VOL, Integer.toString(volume));
+    props.setProperty(VOL_KEY, Integer.toString(volume));
     if (url!=null) {
-      props.setProperty(HistoryCooperativePlugin.AUPARAM_BASE_URL, url.toString());
+      props.setProperty(BASE_URL_KEY, url.toString());
     }
     if (journalDir!=null) {
-      props.setProperty(HistoryCooperativePlugin.AUPARAM_JOURNAL_DIR, journalDir);
+      props.setProperty(JRNL_KEY, journalDir);
     }
     Configuration config = ConfigurationUtil.fromProps(props);
     ConfigurablePlugin ap = new ConfigurablePlugin();

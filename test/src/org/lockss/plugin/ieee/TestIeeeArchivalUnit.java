@@ -1,5 +1,5 @@
 /*
- * $Id: TestIeeeArchivalUnit.java,v 1.7 2004-02-17 21:46:10 clairegriffin Exp $
+ * $Id: TestIeeeArchivalUnit.java,v 1.8 2004-03-01 04:04:40 clairegriffin Exp $
  */
 
 /*
@@ -41,7 +41,9 @@ import org.lockss.plugin.configurable.*;
 public class TestIeeeArchivalUnit
     extends LockssTestCase {
   private MockLockssDaemon theDaemon;
-  private MockArchivalUnit mau;
+  static final String PUNUM_KEY = TestIeeePlugin.PU_NUMBER.getKey();
+  static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
+  static final String YEAR_KEY = ConfigParamDescr.YEAR.getKey();
 
   static final String ROOT_URL = "http://ieeexplore.ieee.org/";
   static final int PUB_NUMBER = 8;
@@ -69,10 +71,10 @@ public class TestIeeeArchivalUnit
     Properties props = new Properties();
 
     if (volUrl != null) {
-      props.setProperty(IeeePlugin.AUPARAM_BASE_URL, volUrl.toString());
+      props.setProperty(BASE_URL_KEY, volUrl.toString());
     }
-    props.setProperty(IeeePlugin.AUPARAM_PUNUM, Integer.toString(pub));
-    props.setProperty(IeeePlugin.AUPARAM_YEAR, Integer.toString(year));
+    props.setProperty(PUNUM_KEY, Integer.toString(pub));
+    props.setProperty(YEAR_KEY, Integer.toString(year));
 
     Configuration config = ConfigurationUtil.fromProps(props);
     ConfigurablePlugin ap = new ConfigurablePlugin();

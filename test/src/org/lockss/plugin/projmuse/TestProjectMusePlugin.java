@@ -1,5 +1,5 @@
 /*
- * $Id: TestProjectMusePlugin.java,v 1.12 2004-02-12 03:57:55 clairegriffin Exp $
+ * $Id: TestProjectMusePlugin.java,v 1.13 2004-03-01 04:04:40 clairegriffin Exp $
  */
 
 /*
@@ -42,6 +42,10 @@ import org.lockss.plugin.ArchivalUnit.*;
 import org.lockss.plugin.configurable.*;
 
 public class TestProjectMusePlugin extends LockssTestCase {
+  static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
+  static final String JRNL_KEY = ConfigParamDescr.JOURNAL_DIR.getKey();
+  static final String VOL_KEY = ConfigParamDescr.VOLUME_NUMBER.getKey();
+
   private ConfigurablePlugin plugin;
 
   public void setUp() throws Exception {
@@ -60,9 +64,9 @@ public class TestProjectMusePlugin extends LockssTestCase {
 
   public void testCreateAu() {
     Properties props = new Properties();
-    props.setProperty(ProjectMusePlugin.AUPARAM_BASE_URL, "http://www.example.com/");
-    props.setProperty(ProjectMusePlugin.AUPARAM_JOURNAL_DIR, "blah2");
-    props.setProperty(ProjectMusePlugin.AUPARAM_VOL, "322");
+    props.setProperty(BASE_URL_KEY, "http://www.example.com/");
+    props.setProperty(JRNL_KEY, "blah2");
+    props.setProperty(VOL_KEY, "322");
 
     ConfigurableArchivalUnit au = null;
     try {
@@ -82,9 +86,9 @@ public class TestProjectMusePlugin extends LockssTestCase {
   public void testGetAuHandlesBadUrl()
       throws ArchivalUnit.ConfigurationException, MalformedURLException {
     Properties props = new Properties();
-    props.setProperty(ProjectMusePlugin.AUPARAM_BASE_URL, "blah");
-    props.setProperty(ProjectMusePlugin.AUPARAM_JOURNAL_DIR, "blah2");
-    props.setProperty(ProjectMusePlugin.AUPARAM_VOL, "322");
+    props.setProperty(BASE_URL_KEY, "blah");
+    props.setProperty(JRNL_KEY, "blah2");
+    props.setProperty(VOL_KEY, "322");
 
     try {
       ConfigurableArchivalUnit au = makeAuFromProps(props);
@@ -99,10 +103,10 @@ public class TestProjectMusePlugin extends LockssTestCase {
   public void testGetAuConstructsProperAU()
       throws ArchivalUnit.ConfigurationException, MalformedURLException {
     Properties props = new Properties();
-    props.setProperty(ProjectMusePlugin.AUPARAM_BASE_URL,
+    props.setProperty(BASE_URL_KEY,
                       "http://www.example.com/");
-    props.setProperty(ProjectMusePlugin.AUPARAM_JOURNAL_DIR, "journal_dir");
-    props.setProperty(ProjectMusePlugin.AUPARAM_VOL, "322");
+    props.setProperty(JRNL_KEY, "journal_dir");
+    props.setProperty(VOL_KEY, "322");
 
     ConfigurableArchivalUnit au = makeAuFromProps(props);
     assertEquals("www.example.com, journal_dir, vol. 322", au.getName());

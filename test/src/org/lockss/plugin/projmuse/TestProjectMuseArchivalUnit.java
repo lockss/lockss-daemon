@@ -1,5 +1,5 @@
 /*
- * $Id: TestProjectMuseArchivalUnit.java,v 1.12 2004-02-17 21:46:11 clairegriffin Exp $
+ * $Id: TestProjectMuseArchivalUnit.java,v 1.13 2004-03-01 04:04:40 clairegriffin Exp $
  */
 
 /*
@@ -45,6 +45,10 @@ import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.plugin.configurable.*;
 
 public class TestProjectMuseArchivalUnit extends LockssTestCase {
+  static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
+  static final String JRNL_KEY = ConfigParamDescr.JOURNAL_DIR.getKey();
+  static final String VOL_KEY = ConfigParamDescr.VOLUME_NUMBER.getKey();
+
   private MockLockssDaemon theDaemon;
 
   static final String ROOT_URL = "http://muse.jhu.edu/";
@@ -68,12 +72,12 @@ public class TestProjectMuseArchivalUnit extends LockssTestCase {
   private ConfigurableArchivalUnit makeAu(URL url, int volume, String journalDir)
       throws Exception {
     Properties props = new Properties();
-    props.setProperty(ProjectMusePlugin.AUPARAM_VOL, Integer.toString(volume));
+    props.setProperty(VOL_KEY, Integer.toString(volume));
     if (url!=null) {
-      props.setProperty(ProjectMusePlugin.AUPARAM_BASE_URL, url.toString());
+      props.setProperty(BASE_URL_KEY, url.toString());
     }
     if (journalDir!=null) {
-      props.setProperty(ProjectMusePlugin.AUPARAM_JOURNAL_DIR, journalDir);
+      props.setProperty(JRNL_KEY, journalDir);
     }
     Configuration config = ConfigurationUtil.fromProps(props);
     ConfigurablePlugin ap = new ConfigurablePlugin();

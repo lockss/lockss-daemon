@@ -1,5 +1,5 @@
 /*
- * $Id: DoHighwireCrawl.java,v 1.25 2004-02-17 21:46:04 clairegriffin Exp $
+ * $Id: DoHighwireCrawl.java,v 1.26 2004-03-01 04:04:39 clairegriffin Exp $
  */
 
 /*
@@ -40,16 +40,22 @@ import org.lockss.plugin.configurable.*;
 import org.lockss.plugin.highwire.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
+import org.lockss.plugin.base.*;
 
 public class DoHighwireCrawl {
   static MockLockssDaemon theDaemon;
 
-  private static ConfigurableArchivalUnit makeAu(URL url, int volume)
+  private static ConfigurableArchivalUnit makeAu(URL url, int volume, int year)
       throws Exception {
+    String baseUrlKey = ConfigParamDescr.BASE_URL.getKey();
+    String yearKey = ConfigParamDescr.YEAR.getKey();
+    String volKey = ConfigParamDescr.VOLUME_NUMBER.getKey();
+
     Properties props = new Properties();
-    props.setProperty(HighWirePlugin.AUPARAM_VOL, Integer.toString(volume));
-    props.setProperty(HighWirePlugin.AUPARAM_BASE_URL, url.toString());
-    props.setProperty(HighWireArchivalUnit.AUPARAM_USE_CRAWL_WINDOW, ""+true);
+    props.setProperty(volKey, Integer.toString(volume));
+    props.setProperty(baseUrlKey, url.toString());
+    props.setProperty(yearKey, String.valueOf(year));
+    props.setProperty(BaseArchivalUnit.USE_CRAWL_WINDOW, ""+true);
     Configuration config = ConfigurationUtil.fromProps(props);
     ConfigurablePlugin ap = new ConfigurablePlugin();
     ap.initPlugin(theDaemon, "org.lockss.plugin.highwire.HighWirePlugin");
@@ -79,7 +85,7 @@ public class DoHighwireCrawl {
     theDaemon = new MockLockssDaemon(null);
     theDaemon.startDaemon();
 
-    ArchivalUnit au = makeAu(base, volume);
+    ArchivalUnit au = makeAu(base, volume,2004);
     PluginUtil.registerArchivalUnit(au);
     if (proxyFlg) {
 //  This should already be started now.

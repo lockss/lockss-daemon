@@ -1,5 +1,5 @@
 /*
- * $Id: TestAcsPlugin.java,v 1.11 2004-02-12 03:57:46 clairegriffin Exp $
+ * $Id: TestAcsPlugin.java,v 1.12 2004-03-01 04:04:39 clairegriffin Exp $
  */
 
 /*
@@ -42,6 +42,28 @@ import org.lockss.plugin.configurable.*;
 
 public class TestAcsPlugin extends LockssTestCase {
   private ConfigurablePlugin plugin;
+  static final ConfigParamDescr JOURNAL_KEY = new ConfigParamDescr();
+  static {
+    JOURNAL_KEY.setKey("journal_key");
+    JOURNAL_KEY.setDisplayName("Journal ID");
+    JOURNAL_KEY.setType(ConfigParamDescr.TYPE_STRING);
+    JOURNAL_KEY.setSize(20);
+    JOURNAL_KEY.setDescription("Key used to identify journal in script (e.g. 'jcisd8').");
+  }
+
+  static final ConfigParamDescr ARTICLE_URL = new ConfigParamDescr();
+  static {
+    ARTICLE_URL.setKey("article_url");
+    ARTICLE_URL.setDisplayName("Article URL");
+    ARTICLE_URL.setType(ConfigParamDescr.TYPE_URL);
+    ARTICLE_URL.setSize(40);
+    ARTICLE_URL.setDescription("base url for articles");
+  }
+  static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
+  static final String YEAR_KEY = ConfigParamDescr.YEAR.getKey();
+  static final String VOL_KEY = ConfigParamDescr.VOLUME_NUMBER.getKey();
+  static final String JRNL_KEY = JOURNAL_KEY.getKey();
+  static final String ARTICAL_KEY = ARTICLE_URL.getKey();
 
   public void setUp() throws Exception {
     super.setUp();
@@ -59,11 +81,11 @@ public class TestAcsPlugin extends LockssTestCase {
   public void testGetAuHandlesBadUrl()
       throws ArchivalUnit.ConfigurationException, MalformedURLException {
     Properties props = new Properties();
-    props.setProperty(AcsPlugin.AUPARAM_VOL, "322");
-    props.setProperty(AcsPlugin.AUPARAM_ARTICLE_URL, "http://www.example.com/");
-    props.setProperty(AcsPlugin.AUPARAM_JOURNAL_KEY,"abcd");
-    props.setProperty(AcsPlugin.AUPARAM_BASE_URL, "blah");
-    props.setProperty(AcsPlugin.AUPARAM_YEAR, "2003");
+    props.setProperty(VOL_KEY, "322");
+    props.setProperty(ARTICAL_KEY, "http://www.example.com/");
+    props.setProperty(JRNL_KEY,"abcd");
+    props.setProperty(BASE_URL_KEY, "blah");
+    props.setProperty(YEAR_KEY, "2003");
     try {
       ConfigurableArchivalUnit au = makeAuFromProps(props);
       fail ("Didn't throw InstantiationException when given a bad url");
@@ -77,11 +99,11 @@ public class TestAcsPlugin extends LockssTestCase {
   public void testGetAuConstructsProperAU()
       throws ArchivalUnit.ConfigurationException, MalformedURLException {
     Properties props = new Properties();
-    props.setProperty(AcsPlugin.AUPARAM_VOL, "322");
-    props.setProperty(AcsPlugin.AUPARAM_BASE_URL, "http://www.example.com/");
-    props.setProperty(AcsPlugin.AUPARAM_ARTICLE_URL, "http://www.example.com/");
-    props.setProperty(AcsPlugin.AUPARAM_JOURNAL_KEY,"abcd");
-    props.setProperty(AcsPlugin.AUPARAM_YEAR, "2003");
+    props.setProperty(VOL_KEY, "322");
+    props.setProperty(ARTICAL_KEY, "http://www.example.com/");
+    props.setProperty(JRNL_KEY,"abcd");
+    props.setProperty(BASE_URL_KEY, "http://www.example.com/");
+    props.setProperty(YEAR_KEY, "2003");
 
     ConfigurableArchivalUnit au = makeAuFromProps(props);
     assertEquals("www.example.com, abcd, vol. 322", au.getName());
@@ -94,8 +116,8 @@ public class TestAcsPlugin extends LockssTestCase {
 
   public void testGetAuConfigProperties() {
     assertEquals(ListUtil.list(ConfigParamDescr.BASE_URL,
-                               AcsPlugin.ARTICLE_URL,
-                               AcsPlugin.JOURNAL_KEY,
+                               ARTICLE_URL,
+                               JOURNAL_KEY,
 			       ConfigParamDescr.VOLUME_NUMBER,
                                ConfigParamDescr.YEAR),
 		 plugin.getAuConfigDescrs());

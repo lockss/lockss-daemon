@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlackbirdPlugin.java,v 1.6 2004-02-12 03:57:47 clairegriffin Exp $
+ * $Id: TestBlackbirdPlugin.java,v 1.7 2004-03-01 04:04:39 clairegriffin Exp $
  */
 
 /*
@@ -42,6 +42,9 @@ import org.lockss.plugin.configurable.*;
 
 public class TestBlackbirdPlugin extends LockssTestCase {
   private ConfigurablePlugin plugin;
+  static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
+  static final String YEAR_KEY = ConfigParamDescr.YEAR.getKey();
+  static final String VOL_KEY = ConfigParamDescr.VOLUME_NUMBER.getKey();
 
   public void setUp() throws Exception {
     super.setUp();
@@ -66,8 +69,8 @@ public class TestBlackbirdPlugin extends LockssTestCase {
   public void testGetAuHandlesBadUrl()
       throws ArchivalUnit.ConfigurationException, MalformedURLException {
     Properties props = new Properties();
-    props.setProperty(BlackbirdPlugin.AUPARAM_BASE_URL, "blah");
-    props.setProperty(BlackbirdPlugin.AUPARAM_VOL, "322");
+    props.setProperty(BASE_URL_KEY, "blah");
+    props.setProperty(VOL_KEY, "322");
 
     try {
       ConfigurableArchivalUnit au = makeAuFromProps(props);
@@ -82,9 +85,9 @@ public class TestBlackbirdPlugin extends LockssTestCase {
   public void testGetAuConstructsProperAU()
       throws ArchivalUnit.ConfigurationException, MalformedURLException {
     Properties props = new Properties();
-    props.setProperty(BlackbirdPlugin.AUPARAM_BASE_URL,
+    props.setProperty(BASE_URL_KEY,
                       "http://www.example.com/");
-    props.setProperty(BlackbirdPlugin.AUPARAM_VOL, "322");
+    props.setProperty(VOL_KEY, "322");
 
     ConfigurableArchivalUnit au = makeAuFromProps(props);
     assertEquals("www.example.com, vol. 322", au.getName());

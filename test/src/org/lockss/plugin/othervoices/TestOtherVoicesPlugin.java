@@ -1,5 +1,5 @@
 /*
- * $Id: TestOtherVoicesPlugin.java,v 1.7 2004-02-12 03:57:55 clairegriffin Exp $
+ * $Id: TestOtherVoicesPlugin.java,v 1.8 2004-03-01 04:04:40 clairegriffin Exp $
  */
 
 /*
@@ -40,8 +40,10 @@ import org.lockss.util.ListUtil;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.configurable.*;
 
-public class TestOtherVoicesPlugin
-    extends LockssTestCase {
+public class TestOtherVoicesPlugin extends LockssTestCase {
+  static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
+  static final String VOL_KEY = ConfigParamDescr.VOLUME_NUMBER.getKey();
+
   private ConfigurablePlugin plugin;
 
   public void setUp() throws Exception {
@@ -69,8 +71,8 @@ public class TestOtherVoicesPlugin
   public void testGetAuHandlesBadUrl() throws ArchivalUnit.
       ConfigurationException, MalformedURLException {
     Properties props = new Properties();
-    props.setProperty(OtherVoicesPlugin.AUPARAM_BASE_URL, "blah");
-    props.setProperty(OtherVoicesPlugin.AUPARAM_VOL, "322");
+    props.setProperty(BASE_URL_KEY, "blah");
+    props.setProperty(VOL_KEY, "322");
 
     try {
       ConfigurableArchivalUnit au = makeAuFromProps(props);
@@ -86,9 +88,9 @@ public class TestOtherVoicesPlugin
   public void testGetAuConstructsProperAU() throws ArchivalUnit.
       ConfigurationException, MalformedURLException {
     Properties props = new Properties();
-    props.setProperty(OtherVoicesPlugin.AUPARAM_BASE_URL,
+    props.setProperty(BASE_URL_KEY,
                       "http://www.example.com/");
-    props.setProperty(OtherVoicesPlugin.AUPARAM_VOL, "322");
+    props.setProperty(VOL_KEY, "322");
 
     ConfigurableArchivalUnit au = makeAuFromProps(props);
     assertEquals("www.example.com, vol. 322", au.getName());

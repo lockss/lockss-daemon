@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireArchivalUnit.java,v 1.38 2004-02-28 21:06:53 clairegriffin Exp $
+ * $Id: TestHighWireArchivalUnit.java,v 1.39 2004-03-01 04:04:40 clairegriffin Exp $
  */
 
 /*
@@ -44,10 +44,13 @@ import org.lockss.plugin.*;
 import org.lockss.plugin.base.BaseCachedUrlSet;
 import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.plugin.configurable.*;
+import org.lockss.plugin.base.*;
 
 public class TestHighWireArchivalUnit extends LockssTestCase {
   private MockLockssDaemon theDaemon;
-  private MockArchivalUnit mau;
+  static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
+  static final String YEAR_KEY = ConfigParamDescr.YEAR.getKey();
+  static final String VOL_KEY = ConfigParamDescr.VOLUME_NUMBER.getKey();
 
   public void setUp() throws Exception {
     super.setUp();
@@ -71,11 +74,11 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
   private ConfigurableArchivalUnit makeAu(URL url, int volume, int year)
       throws Exception {
     Properties props = new Properties();
-    props.setProperty(HighWirePlugin.AUPARAM_VOL, Integer.toString(volume));
+    props.setProperty(VOL_KEY, Integer.toString(volume));
     if (url != null) {
-      props.setProperty(HighWirePlugin.AUPARAM_BASE_URL, url.toString());
+      props.setProperty(BASE_URL_KEY, url.toString());
     }
-    props.setProperty(HighWireArchivalUnit.AUPARAM_USE_CRAWL_WINDOW, ""+true);
+    props.setProperty(BaseArchivalUnit.USE_CRAWL_WINDOW, ""+true);
     props.setProperty(ConfigParamDescr.YEAR.getKey(), String.valueOf(year));
     Configuration config = ConfigurationUtil.fromProps(props);
     ConfigurablePlugin ap = new ConfigurablePlugin();

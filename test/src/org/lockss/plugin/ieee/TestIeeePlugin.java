@@ -1,5 +1,5 @@
 /*
- * $Id: TestIeeePlugin.java,v 1.8 2004-02-12 03:57:54 clairegriffin Exp $
+ * $Id: TestIeeePlugin.java,v 1.9 2004-03-01 04:04:40 clairegriffin Exp $
  */
 
 /*
@@ -42,6 +42,18 @@ import org.lockss.plugin.configurable.*;
 
 public class TestIeeePlugin extends LockssTestCase {
   private ConfigurablePlugin plugin;
+  static final ConfigParamDescr PU_NUMBER = new ConfigParamDescr();
+  static {
+    PU_NUMBER.setKey("Pu_Number");
+    PU_NUMBER.setDisplayName("Publication Number");
+    PU_NUMBER.setType(ConfigParamDescr.TYPE_POS_INT);
+    PU_NUMBER.setSize(10);
+    PU_NUMBER.setDescription("IEEE publication Number(e.g. '2').");
+  }
+  static final String PUNUM_KEY = PU_NUMBER.getKey();
+  static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
+  static final String YEAR_KEY = ConfigParamDescr.YEAR.getKey();
+
 
   public void setUp() throws Exception {
     super.setUp();
@@ -67,9 +79,9 @@ public class TestIeeePlugin extends LockssTestCase {
   public void testGetAuHandlesBadUrl()
       throws ArchivalUnit.ConfigurationException, MalformedURLException {
     Properties props = new Properties();
-    props.setProperty(IeeePlugin.AUPARAM_YEAR, "2003");
-    props.setProperty(IeeePlugin.AUPARAM_BASE_URL, "foobar");
-    props.setProperty(IeeePlugin.AUPARAM_PUNUM, "4");
+    props.setProperty(YEAR_KEY, "2003");
+    props.setProperty(BASE_URL_KEY, "foobar");
+    props.setProperty(PUNUM_KEY, "4");
     try {
       ConfigurableArchivalUnit au = makeAuFromProps(props);
       fail ("Didn't throw InstantiationException when given a bad url");
@@ -83,9 +95,9 @@ public class TestIeeePlugin extends LockssTestCase {
   public void testGetAuConstructsProperAU()
       throws ArchivalUnit.ConfigurationException, MalformedURLException {
     Properties props = new Properties();
-    props.setProperty(IeeePlugin.AUPARAM_YEAR, "2003");
-    props.setProperty(IeeePlugin.AUPARAM_BASE_URL, "http://www.example.com/");
-    props.setProperty(IeeePlugin.AUPARAM_PUNUM,"4");
+    props.setProperty(YEAR_KEY, "2003");
+    props.setProperty(BASE_URL_KEY, "http://www.example.com/");
+    props.setProperty(PUNUM_KEY,"4");
 
     ConfigurableArchivalUnit au = makeAuFromProps(props);
     assertEquals("www.example.com, puNumber 4, 2003", au.getName());
@@ -98,7 +110,7 @@ public class TestIeeePlugin extends LockssTestCase {
 
   public void testGetAUConfigProperties() {
     assertEquals(ListUtil.list(ConfigParamDescr.BASE_URL,
-                               IeeePlugin.PU_NUMBER,
+                               PU_NUMBER,
 			       ConfigParamDescr.YEAR),
 		 plugin.getAuConfigDescrs());
   }

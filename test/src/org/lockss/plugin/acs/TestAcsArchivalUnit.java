@@ -1,5 +1,5 @@
 /*
- * $Id: TestAcsArchivalUnit.java,v 1.9 2004-02-17 21:46:05 clairegriffin Exp $
+ * $Id: TestAcsArchivalUnit.java,v 1.10 2004-03-01 04:04:39 clairegriffin Exp $
  */
 
 /*
@@ -41,7 +41,12 @@ import org.lockss.plugin.configurable.*;
 public class TestAcsArchivalUnit
     extends LockssTestCase {
   private MockLockssDaemon theDaemon;
-  private MockArchivalUnit mau;
+
+  static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
+  static final String YEAR_KEY = ConfigParamDescr.YEAR.getKey();
+  static final String VOL_KEY = ConfigParamDescr.VOLUME_NUMBER.getKey();
+  static final String JRNL_KEY = TestAcsPlugin.JOURNAL_KEY.getKey();
+  static final String ARTICAL_KEY = TestAcsPlugin.ARTICLE_URL.getKey();
 
   static final String ROOT_URL = "http://pubs3.acs.org/";
   static final String ARTICLE_ROOT = "http://pubs.acs.org/";
@@ -73,16 +78,16 @@ public class TestAcsArchivalUnit
     Properties props = new Properties();
 
     if (volUrl != null) {
-      props.setProperty(AcsPlugin.AUPARAM_BASE_URL, volUrl.toString());
+      props.setProperty(BASE_URL_KEY, volUrl.toString());
     }
     if (issueUrl != null) {
-      props.setProperty(AcsPlugin.AUPARAM_ARTICLE_URL, issueUrl.toString());
+      props.setProperty(ARTICAL_KEY, issueUrl.toString());
     }
     if (jkey != null) {
-      props.setProperty(AcsPlugin.AUPARAM_JOURNAL_KEY, jkey);
+      props.setProperty(JRNL_KEY, jkey);
     }
-    props.setProperty(AcsPlugin.AUPARAM_VOL, Integer.toString(volume));
-    props.setProperty(AcsPlugin.AUPARAM_YEAR, Integer.toString(year));
+    props.setProperty(VOL_KEY, Integer.toString(volume));
+    props.setProperty(YEAR_KEY, Integer.toString(year));
 
     Configuration config = ConfigurationUtil.fromProps(props);
     ConfigurablePlugin ap = new ConfigurablePlugin();

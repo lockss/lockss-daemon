@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurablePlugin.java,v 1.14 2004-02-27 22:50:18 clairegriffin Exp $
+ * $Id: ConfigurablePlugin.java,v 1.15 2004-03-01 04:04:37 clairegriffin Exp $
  */
 
 /*
@@ -137,16 +137,6 @@ public class ConfigurablePlugin extends BasePlugin {
     return class_name;
   }
 
-  // for testing writing and reading map files
-  public void writeMap(String mapLocation) {
-    if(mapName == null) {
-      ConfigurableArchivalUnit au = new ConfigurableArchivalUnit(this,
-          definitionMap);
-      mapName = getPluginId().replace('.','/') + ".xml";
-      // store the configuration map
-      definitionMap.storeMap(mapLocation, mapName);
-    }
-  }
 
   public static class InvalidDefinitionException extends RuntimeException {
     private Throwable nestedException;

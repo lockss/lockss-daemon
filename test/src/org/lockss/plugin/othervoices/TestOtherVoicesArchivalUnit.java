@@ -1,5 +1,5 @@
 /*
- * $Id: TestOtherVoicesArchivalUnit.java,v 1.5 2004-02-17 21:46:10 clairegriffin Exp $
+ * $Id: TestOtherVoicesArchivalUnit.java,v 1.6 2004-03-01 04:04:40 clairegriffin Exp $
  */
 
 /*
@@ -45,8 +45,10 @@ import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.plugin.configurable.*;
 
 public class TestOtherVoicesArchivalUnit extends LockssTestCase {
+  static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
+  static final String VOL_KEY = ConfigParamDescr.VOLUME_NUMBER.getKey();
+
   private MockLockssDaemon theDaemon;
-  private MockArchivalUnit mau;
 
   static final String ROOT_URL = "http://www.othervoices.org/";
 
@@ -68,9 +70,9 @@ public class TestOtherVoicesArchivalUnit extends LockssTestCase {
   private ConfigurableArchivalUnit makeAu(URL url, int volume)
       throws Exception {
     Properties props = new Properties();
-    props.setProperty(OtherVoicesPlugin.AUPARAM_VOL, Integer.toString(volume));
+    props.setProperty(VOL_KEY, Integer.toString(volume));
     if (url!=null) {
-      props.setProperty(OtherVoicesPlugin.AUPARAM_BASE_URL, url.toString());
+      props.setProperty(BASE_URL_KEY, url.toString());
     }
     Configuration config = ConfigurationUtil.fromProps(props);
     ConfigurablePlugin ap = new ConfigurablePlugin();

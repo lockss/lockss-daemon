@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurableArchivalUnit.java,v 1.10 2004-02-27 22:50:17 clairegriffin Exp $
+ * $Id: ConfigurableArchivalUnit.java,v 1.11 2004-03-01 04:04:37 clairegriffin Exp $
  */
 
 /*
@@ -62,7 +62,7 @@ public class ConfigurableArchivalUnit extends BaseArchivalUnit {
   static final public String CM_AU_DEFAULT_PAUSE_TIME = "au_def_pause_time";
   static final public String CM_AU_MANIFEST_KEY = "au_manifest";
 
-  protected ExternalizableMap configurationMap;
+  protected ExternalizableMap definitionMap;
   static Logger log = Logger.getLogger("ConfigurableArchivalUnit");
 
   protected ConfigurableArchivalUnit(Plugin myPlugin) {
@@ -75,12 +75,12 @@ public class ConfigurableArchivalUnit extends BaseArchivalUnit {
   protected ConfigurableArchivalUnit(ConfigurablePlugin myPlugin,
                                      ExternalizableMap definitionMap) {
     super(myPlugin);
-    configurationMap = definitionMap;
+    this.definitionMap = definitionMap;
   }
 
   public String getManifestPage() {
     String manifestString =
-        configurationMap.getString(CM_AU_MANIFEST_KEY, null);
+        definitionMap.getString(CM_AU_MANIFEST_KEY, null);
     if(manifestString == null)  {
      return super.getManifestPage();
     }
@@ -91,7 +91,7 @@ public class ConfigurableArchivalUnit extends BaseArchivalUnit {
   }
 
   protected String makeStartUrl() {
-    String startstr = configurationMap.getString(CM_AU_START_URL_KEY, "");
+    String startstr = definitionMap.getString(CM_AU_START_URL_KEY, "");
     String convstr = convertVariableString(startstr);
     log.debug2("setting start url " + convstr);
     return convstr;
@@ -110,17 +110,17 @@ public class ConfigurableArchivalUnit extends BaseArchivalUnit {
 
       try {
         Object val = descr.getValueOfType(config.get(key));
-        configurationMap.setMapElement(key, val);
+        definitionMap.setMapElement(key, val);
         // we store years in two formats - short and long
         if (descr.getType() == ConfigParamDescr.TYPE_YEAR) {
           int year = ((Integer)val).intValue() % 100;
-          configurationMap.putInt(CM_AU_SHORT_YEAR_PREFIX + key, year);
+          definitionMap.putInt(CM_AU_SHORT_YEAR_PREFIX + key, year);
         }
         if (descr.getType() == ConfigParamDescr.TYPE_URL) {
-          URL url = configurationMap.getUrl(key, null);
+          URL url = definitionMap.getUrl(key, null);
           if(url != null) {
-            configurationMap.putString(key+CM_AU_HOST_SUFFIX, url.getHost());
-            configurationMap.putString(key+CM_AU_PATH_SUFFIX, url.getPath());
+            definitionMap.putString(key+CM_AU_HOST_SUFFIX, url.getHost());
+            definitionMap.putString(key+CM_AU_PATH_SUFFIX, url.getPath());
           }
         }
 
@@ -130,17 +130,17 @@ public class ConfigurableArchivalUnit extends BaseArchivalUnit {
       }
     }
     // now load any specialized parameters
-    expectedUrlPath = configurationMap.getString(CM_AU_EXPECTED_PATH,"/");
+    expectedUrlPath = definitionMap.getString(CM_AU_EXPECTED_PATH,"/");
     defaultFetchDelay =
-        configurationMap.getLong(CM_AU_DEFAULT_PAUSE_TIME,
+        definitionMap.getLong(CM_AU_DEFAULT_PAUSE_TIME,
                                  DEFAULT_MILLISECONDS_BETWEEN_CRAWL_HTTP_REQUESTS);
     defaultContentCrawlIntv =
-        configurationMap.getLong(CM_AU_DEFAULT_NC_CRAWL_KEY,
+        definitionMap.getLong(CM_AU_DEFAULT_NC_CRAWL_KEY,
                                  DEFAULT_NEW_CONTENT_CRAWL_INTERVAL);
   }
 
   protected String makeName() {
-    String namestr = configurationMap.getString(CM_AU_NAME_KEY, "");
+    String namestr = definitionMap.getString(CM_AU_NAME_KEY, "");
     String convstr = convertVariableString(namestr);
     log.debug2("setting name string: " + convstr);
     return convstr;
@@ -148,7 +148,7 @@ public class ConfigurableArchivalUnit extends BaseArchivalUnit {
 
   protected CrawlRule makeRules() throws gnu.regexp.REException {
     List rules = new LinkedList();
-    List templates = (List) configurationMap.getCollection(CM_AU_RULES_KEY,
+    List templates = (List) definitionMap.getCollection(CM_AU_RULES_KEY,
         Collections.EMPTY_LIST);
     Iterator it = templates.iterator();
     while (it.hasNext()) {
@@ -167,14 +167,14 @@ public class ConfigurableArchivalUnit extends BaseArchivalUnit {
       throws REException {
 
     CrawlRule rule = makeRules();
-    int depth = configurationMap.getInt(CM_AU_CRAWL_DEPTH, 1);
+    int depth = definitionMap.getInt(CM_AU_CRAWL_DEPTH, 1);
     return new CrawlSpec(startUrlString, rule, depth);
   }
 
   protected CrawlWindow makeCrawlWindow() {
     CrawlWindow window = null;
     String window_class;
-    window_class = configurationMap.getString(CM_AU_CRAWL_WINDOW_KEY,
+    window_class = definitionMap.getString(CM_AU_CRAWL_WINDOW_KEY,
                                               null);
     if (window_class != null) {
       try {
@@ -191,7 +191,7 @@ public class ConfigurableArchivalUnit extends BaseArchivalUnit {
   }
 
   protected FilterRule constructFilterRule(String mimeType) {
-    String filter = configurationMap.getString(mimeType, null);
+    String filter = definitionMap.getString(mimeType, null);
     if (filter != null) {
       try {
         return (FilterRule) Class.forName(filter).newInstance();
@@ -229,7 +229,7 @@ public class ConfigurableArchivalUnit extends BaseArchivalUnit {
     boolean has_all_args = true;
     for (int i = 1; i < strs.length && has_all_args; i++) {
       String key = strs[i];
-      Object val = configurationMap.getMapElement(key);
+      Object val = definitionMap.getMapElement(key);
       if (val != null) {
         args.add(val);
       }
@@ -256,7 +256,7 @@ public class ConfigurableArchivalUnit extends BaseArchivalUnit {
     boolean has_all_args = true;
     for (int i = 2; i < strs.length && has_all_args; i++) {
       String key = strs[i];
-      Object val = configurationMap.getMapElement(key);
+      Object val = definitionMap.getMapElement(key);
       if (val != null) {
         args.add(val);
       }

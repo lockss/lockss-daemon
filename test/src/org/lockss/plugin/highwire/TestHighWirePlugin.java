@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWirePlugin.java,v 1.21 2004-02-27 22:50:21 clairegriffin Exp $
+ * $Id: TestHighWirePlugin.java,v 1.22 2004-03-01 04:04:40 clairegriffin Exp $
  */
 
 /*
@@ -41,8 +41,9 @@ import org.lockss.plugin.ArchivalUnit.*;
 import org.lockss.plugin.configurable.*;
 
 public class TestHighWirePlugin extends LockssTestCase {
-  private static final String AUPARAM_BASE_URL = HighWirePlugin.AUPARAM_BASE_URL;
-  private static final String AUPARAM_VOL = HighWirePlugin.AUPARAM_VOL;
+  static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
+  static final String YEAR_KEY = ConfigParamDescr.YEAR.getKey();
+  static final String VOL_KEY = ConfigParamDescr.VOLUME_NUMBER.getKey();
 
   private ConfigurablePlugin plugin;
 
@@ -68,9 +69,9 @@ public class TestHighWirePlugin extends LockssTestCase {
   }
   public void testCreateAu() {
     Properties props = new Properties();
-    props.setProperty(HighWirePlugin.AUPARAM_BASE_URL, "http://www.example.com/");
-    props.setProperty(HighWirePlugin.AUPARAM_VOL, "32");
-    props.setProperty(ConfigParamDescr.YEAR.getKey(), "2004");
+    props.setProperty(BASE_URL_KEY, "http://www.example.com/");
+    props.setProperty(VOL_KEY, "32");
+    props.setProperty(YEAR_KEY, "2004");
     ConfigurableArchivalUnit au = null;
     try {
       au = makeAuFromProps(props);
@@ -89,9 +90,9 @@ public class TestHighWirePlugin extends LockssTestCase {
   public void testGetAuHandlesBadUrl()
       throws ArchivalUnit.ConfigurationException, MalformedURLException {
     Properties props = new Properties();
-    props.setProperty(HighWirePlugin.AUPARAM_VOL, "322");
-    props.setProperty(HighWirePlugin.AUPARAM_BASE_URL, "blah");
-    props.setProperty(ConfigParamDescr.YEAR.getKey(), "2004");
+    props.setProperty(VOL_KEY, "322");
+    props.setProperty(BASE_URL_KEY, "blah");
+    props.setProperty(YEAR_KEY, "2004");
 
     try {
       ConfigurableArchivalUnit au = makeAuFromProps(props);
@@ -106,9 +107,9 @@ public class TestHighWirePlugin extends LockssTestCase {
   public void testGetAuConstructsProperAu()
       throws ArchivalUnit.ConfigurationException, MalformedURLException {
     Properties props = new Properties();
-    props.setProperty(AUPARAM_VOL, "322");
-    props.setProperty(AUPARAM_BASE_URL, "http://www.example.com/");
-    props.setProperty(ConfigParamDescr.YEAR.getKey(), "2004");
+    props.setProperty(VOL_KEY, "322");
+    props.setProperty(BASE_URL_KEY, "http://www.example.com/");
+    props.setProperty(YEAR_KEY, "2004");
 
     ConfigurableArchivalUnit au = makeAuFromProps(props);
     assertEquals("www.example.com, vol. 322", au.getName());

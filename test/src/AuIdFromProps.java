@@ -1,5 +1,5 @@
 /*
- * $Id: AuIdFromProps.java,v 1.2 2004-01-27 04:07:07 tlipkis Exp $
+ * $Id: AuIdFromProps.java,v 1.3 2004-03-01 04:04:39 clairegriffin Exp $
  */
 
 /*
@@ -43,7 +43,6 @@ import org.lockss.plugin.highwire.*;
 
 public class AuIdFromProps {//extends BaseArchivalUnit {
   private Class[] plugins = {
-    org.lockss.plugin.highwire.HighWirePlugin.class,
     org.lockss.plugin.simulated.SimulatedPlugin.class,
   };
 
@@ -51,7 +50,7 @@ public class AuIdFromProps {//extends BaseArchivalUnit {
     AuIdFromProps it = new AuIdFromProps();
     it.doIt();
   }
-  
+
   //BaseArchivalUnit methods
 //   public AUIdFromProps() {
 //     super(new HighWirePlugin());
@@ -73,7 +72,7 @@ public class AuIdFromProps {//extends BaseArchivalUnit {
 //     throw new UnsupportedOperationException("Not implmented");
 //   }
 
-//   public CachedUrlSet cachedUrlSetFactory(ArchivalUnit au, 
+//   public CachedUrlSet cachedUrlSetFactory(ArchivalUnit au,
 // 					  CachedUrlSetSpec cuss) {
 //     throw new UnsupportedOperationException("Not implmented");
 //   }
@@ -97,7 +96,7 @@ public class AuIdFromProps {//extends BaseArchivalUnit {
 	System.err.println(e.toString());
       }
     }
-    
+
 
     Properties props = new Properties();
     try {
@@ -118,7 +117,7 @@ public class AuIdFromProps {//extends BaseArchivalUnit {
       ioe.printStackTrace();
     }
 
-	
+
     String pluginId = plugin.getPluginId();
     String auId = PluginManager.generateAuId(pluginId, props);
     StringBuffer propBase = new StringBuffer(auId);
@@ -127,16 +126,16 @@ public class AuIdFromProps {//extends BaseArchivalUnit {
 //     Vector v = StringUtil.breakAt(auId, '&', 2);
 //     String propBase = StringUtil.separatedString(v, ".");
 //     String propBase = pluginId+"."+PluginManager.getAUKeyFromAUId(auId);
-      
+
 // 	System.out.println("AUId: "
 // 			 +);
     for (Iterator it = props.keySet().iterator(); it.hasNext();) {
       String key = (String)it.next();
       String val = props.getProperty(key);
-      System.out.println(PluginManager.PARAM_AU_TREE 
+      System.out.println(PluginManager.PARAM_AU_TREE
 			 +"."+propBase+"."+key+"="+val);
     }
-    
+
   }
-  
+
 }

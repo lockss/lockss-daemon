@@ -1,5 +1,5 @@
 /*
- * $Id: TestCulturalLogicArchivalUnit.java,v 1.4 2004-02-17 21:46:06 clairegriffin Exp $
+ * $Id: TestCulturalLogicArchivalUnit.java,v 1.5 2004-03-01 04:04:39 clairegriffin Exp $
  */
 
 /*
@@ -46,7 +46,8 @@ import org.lockss.plugin.configurable.*;
 
 public class TestCulturalLogicArchivalUnit extends LockssTestCase {
   private MockLockssDaemon theDaemon;
-  private MockArchivalUnit mau;
+  static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
+  static final String YEAR_KEY = ConfigParamDescr.YEAR.getKey();
 
   static final String ROOT_URL = "http://eserver.org/clogic/";
 
@@ -64,9 +65,9 @@ public class TestCulturalLogicArchivalUnit extends LockssTestCase {
   private ConfigurableArchivalUnit makeAu(URL url, String year)
       throws Exception {
     Properties props = new Properties();
-    props.setProperty(CulturalLogicPlugin.AUPARAM_YEAR, year);
+    props.setProperty(YEAR_KEY, year);
     if (url!=null) {
-      props.setProperty(CulturalLogicPlugin.AUPARAM_BASE_URL, url.toString());
+      props.setProperty(BASE_URL_KEY, url.toString());
     }
     Configuration config = ConfigurationUtil.fromProps(props);
     ConfigurablePlugin ap = new ConfigurablePlugin();
