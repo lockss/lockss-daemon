@@ -1,0 +1,37 @@
+#!/bin/sh
+
+stdout="test_out"
+stderr="test_err"
+
+if [ "$#" == "0" ]; then
+ echo "Usage: $0 <rpt-count> <class-name>"
+ echo "Runs <class-name> in junit <rpt-count> times,"
+ echo " sending stdout and stderr to $stdout and $stderr."
+ echo "Must be run from project base dir."
+ exit 1
+fi
+
+PROJECT_DIR=.
+
+stdout="test_out"
+stderr="test_err"
+
+rpt=$1
+class=$2
+shift
+shift
+
+# local copy of lockss jars allows recompile while we're running
+tmplib=tmplib
+mkdir -p $tmplib
+cp ${PROJECT_DIR}/lib/lockss.jar $tmplib
+cp ${PROJECT_DIR}/lib/lockss-test.jar $tmplib
+CLASSPATH=$tmplib/lockss.jar:$tmplib/lockss-test.jar:`cat test/test-classpath`
+export CLASSPATH
+
+for (( ix = 1; ix <= $rpt ; ix++)) ; do
+  echo "** iter $ix" >> $stderr
+  echo "** iter $ix" >> $stdout
+
+  java junit.textui.TestRunner -Dxorg.lockss.defaultLogLevel=warning $class >>$stdout 2>>$stderr
+done
