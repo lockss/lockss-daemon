@@ -1,5 +1,5 @@
 /*
- * $Id: XmlStatusTable.java,v 1.5 2004-03-06 00:42:59 eaalto Exp $
+ * $Id: XmlStatusTable.java,v 1.6 2004-04-29 10:11:54 tlipkis Exp $
  */
 
 /*
@@ -90,27 +90,18 @@ public class XmlStatusTable {
       rootElem = xmlBuilder.createRoot(tableDocument,
           XmlStatusConstants.TABLE);
 
-      element = xmlBuilder.createElement(rootElem, XmlStatusConstants.NAME);
-      if ((value = statusTable.getName()) != null) {
-        xmlBuilder.addText(element, value);
-      }
-
-      element = xmlBuilder.createElement(rootElem, XmlStatusConstants.KEY);
-      if ((value = statusTable.getKey()) != null) {
-        xmlBuilder.addText(element, value);
-      }
-
-      element = xmlBuilder.createElement(rootElem, XmlStatusConstants.TITLE);
-      if ((value = statusTable.getTitle()) != null) {
-        xmlBuilder.addText(element, value);
-      }
-
+      addTextElement(rootElem, XmlStatusConstants.NAME, statusTable.getName());
+      addTextElement(rootElem, XmlStatusConstants.KEY, statusTable.getKey());
+      addTextElement(rootElem, XmlStatusConstants.TITLE,
+		     statusTable.getTitle());
       /*
        * Column descriptor, row, and summary information
        */
       List colDesc = statusTable.getColumnDescriptors();
-      addColumnDescriptors(rootElem, colDesc);
-      addRows(rootElem, colDesc);
+      if (colDesc != null) {
+	addColumnDescriptors(rootElem, colDesc);
+	addRows(rootElem, colDesc);
+      }
       addSummaryInformation(rootElem, statusTable.getSummaryInfo());
       return tableDocument;
     } catch (Exception e) {
@@ -132,22 +123,11 @@ public class XmlStatusTable {
       Element cdElement = xmlBuilder.createElement(rootElem,
           XmlStatusConstants.COLUMNDESCRIPTOR);
 
-      Element element = xmlBuilder.createElement(cdElement,
-          XmlStatusConstants.NAME);
-      xmlBuilder.addText(element, cd.getColumnName());
-
-      element = xmlBuilder.createElement(cdElement, XmlStatusConstants.TYPE);
-      xmlBuilder.addText(element, Integer.toString(cd.getType()));
-
-      element = xmlBuilder.createElement(cdElement, XmlStatusConstants.TITLE);
-      if ((value = cd.getTitle()) != null) {
-        xmlBuilder.addText(element, value);
-      }
-
-      element = xmlBuilder.createElement(cdElement, XmlStatusConstants.FOOTNOTE);
-      if ((value = cd.getFootNote()) != null) {
-        xmlBuilder.addText(element, value);
-      }
+      addTextElement(cdElement, XmlStatusConstants.NAME, cd.getColumnName());
+      addTextElement(cdElement, XmlStatusConstants.TYPE,
+		     Integer.toString(cd.getType()));
+      addTextElement(cdElement, XmlStatusConstants.TITLE, cd.getTitle());
+      addTextElement(cdElement, XmlStatusConstants.FOOTNOTE, cd.getFootNote());
     }
   }
 
@@ -158,6 +138,9 @@ public class XmlStatusTable {
    */
   private void addRows(Element rootElem, List colList) {
     List rowList = statusTable.getSortedRows();
+    if (rowList == null) {
+      return;
+    }
     Iterator rowIter = rowList.iterator();
 
     int colSize = colList.size();
@@ -182,84 +165,9 @@ public class XmlStatusTable {
         String colName = colNames[ii];
         int type = colTypes[ii];
         Object object = rowMap.get(colName);
+	logger.info("Object: " + object);
 
-        if (object instanceof StatusTable.Reference) {
-          // Reference
-          StatusTable.Reference reference = (StatusTable.Reference)object;
-          String value;
-
-          Element referenceElement = xmlBuilder.createElement(rowElement,
-              XmlStatusConstants.REFERENCE_ELEM);
-
-          element = xmlBuilder.createElement(referenceElement,
-              XmlStatusConstants.COLUMN_NAME);
-          xmlBuilder.addText(element, colName);
-
-          element = xmlBuilder.createElement(referenceElement,
-              XmlStatusConstants.NAME);
-          xmlBuilder.addText(element, reference.getTableName());
-
-          element = xmlBuilder.createElement(referenceElement,
-              XmlStatusConstants.KEY);
-          if ((value = reference.getKey()) != null) {
-            xmlBuilder.addText(element, value);
-          }
-
-          element = xmlBuilder.createElement(referenceElement,
-              XmlStatusConstants.VALUE);
-          object = reference.getValue();
-
-          if (object instanceof StatusTable.DisplayedValue) {
-            // A DisplayedValue - save display characteristics
-            StatusTable.DisplayedValue dv = (StatusTable.DisplayedValue)object;
-
-            String color = dv.getColor();
-            if (color != null) {
-              xmlBuilder.setAttribute(element, XmlStatusConstants.COLOR, color);
-            }
-
-            boolean bold = dv.getBold();
-            if (bold) {
-              xmlBuilder.setAttribute(element, XmlStatusConstants.BOLD, "true");
-            }
-
-            xmlBuilder.addText(element, formatByType(dv.getValue(), type));
-          } else {
-            // Standard value field
-            xmlBuilder.addText(element, formatByType(object, type));
-          }
-          // done with Reference element
-        } else {
-          // Not a Reference element
-          String color = null;
-          boolean bold = false;
-          // Check if a DisplayedValue?
-          if (object instanceof StatusTable.DisplayedValue) {
-            // set color, object appropriately
-            StatusTable.DisplayedValue dv = (StatusTable.DisplayedValue)object;
-            color = dv.getColor();
-            bold = dv.getBold();
-            object = dv.getValue();
-          }
-          // save display charactistics as required
-          Element stanElement = xmlBuilder.createElement(rowElement,
-              XmlStatusConstants.STANDARD_ELEM);
-          // set column id
-          element = xmlBuilder.createElement(stanElement,
-              XmlStatusConstants.COLUMN_NAME);
-          xmlBuilder.addText(element, colName);
-
-          // set value
-          element = xmlBuilder.createElement(stanElement,
-              XmlStatusConstants.VALUE);
-          if (color != null) {
-            xmlBuilder.setAttribute(element, XmlStatusConstants.COLOR, color);
-          }
-          if (bold) {
-            xmlBuilder.setAttribute(element, XmlStatusConstants.BOLD, "true");
-          }
-          xmlBuilder.addText(element, formatByType(object, type));
-        }
+	addValueElement(rowElement, object, colName, type);
       }
     }
   }
@@ -282,64 +190,71 @@ public class XmlStatusTable {
       Element siElement = xmlBuilder.createElement(rootElem,
           XmlStatusConstants.SUMMARYINFO);
 
-      Element element = xmlBuilder.createElement(siElement,
-          XmlStatusConstants.TITLE);
-      xmlBuilder.addText(element, si.getTitle());
-
-      element = xmlBuilder.createElement(siElement, XmlStatusConstants.TYPE);
-      xmlBuilder.addText(element, Integer.toString(si.getType()));
-
-      element = xmlBuilder.createElement(siElement, XmlStatusConstants.VALUE);
-      xmlBuilder.addText(element, formatByType(si.getValue(), si.getType()));
+      addTextElement(siElement, XmlStatusConstants.TITLE, si.getTitle());
+      addTextElement(siElement, XmlStatusConstants.TYPE,
+		     Integer.toString(si.getType()));
+      addDisplayValueElement(siElement, si.getValue(), si.getType());
     }
+  }
+
+  Element addTextElement(Element parent, String name, String value) {
+    Element element =
+      xmlBuilder.createElement(parent, name);
+    if (value != null) {
+      xmlBuilder.addText(element, value);
+    }
+    return element;
+  }
+
+  Element addValueElement(Element parent, Object value,
+			  String colName, int type) {
+    Element element = addReferenceValueElement(parent, value, type);
+    addTextElement(element, XmlStatusConstants.COLUMN_NAME, colName);
+    return element;
+  }
+
+  Element addReferenceValueElement(Element parent, Object value,
+				   int type) {
+    if (value instanceof StatusTable.Reference) {
+      // Reference
+      Element element =
+	xmlBuilder.createElement(parent, XmlStatusConstants.REFERENCE_ELEM);
+      StatusTable.Reference reference = (StatusTable.Reference)value;
+
+      addTextElement(element, XmlStatusConstants.NAME,
+		     reference.getTableName());
+      addTextElement(element, XmlStatusConstants.KEY, reference.getKey());
+      addDisplayValueElement(element, reference.getValue(), type);
+      return element;
+    } else {
+      Element element =
+	xmlBuilder.createElement(parent, XmlStatusConstants.STANDARD_ELEM);
+      addDisplayValueElement(element, value, type);
+      return element;
+    }
+  }
+
+  Element addDisplayValueElement(Element parent, Object value, int type) {
+    Element element =
+      xmlBuilder.createElement(parent, XmlStatusConstants.VALUE);
+    if (value instanceof StatusTable.DisplayedValue) {
+      // A DisplayedValue - save display characteristics
+      StatusTable.DisplayedValue dv = (StatusTable.DisplayedValue)value;
+      String color = dv.getColor();
+      if (color != null) {
+	xmlBuilder.setAttribute(element, XmlStatusConstants.COLOR, color);
+      }
+      if (dv.getBold()) {
+	xmlBuilder.setAttribute(element, XmlStatusConstants.BOLD, "true");
+      }
+      value = dv.getValue();
+    }
+    xmlBuilder.addText(element, formatByType(value, type));
+    return element;
   }
 
   static String formatByType(Object object, int type) {
     return DaemonStatus.convertDisplayString(object, type);
   }
-    /*
-    if (object == null) {
-      return "";
-    }
-
-    try {
-      switch (type) {
-        case ColumnDescriptor.TYPE_STRING:
-        case ColumnDescriptor.TYPE_FLOAT:
-        case ColumnDescriptor.TYPE_INT:
-          return object.toString();
-
-        case ColumnDescriptor.TYPE_PERCENT:
-          float fv = ((Number)object).floatValue();
-          return Integer.toString(Math.round(fv * 100));
-
-        case ColumnDescriptor.TYPE_DATE:
-          Date date;
-
-          if (object instanceof Number) {
-            date = new Date(((Number)object).longValue());
-          } else if (object instanceof Date) {
-            date = (Date)object;
-          } else {
-            return object.toString();
-          }
-          return DaemonStatus.tableDf.format(date);
-        case ColumnDescriptor.TYPE_IP_ADDRESS:
-          return ((IPAddr)object).getHostAddress();
-        case ColumnDescriptor.TYPE_TIME_INTERVAL:
-          long milli = ((Number)object).longValue();
-          return StringUtil.timeIntervalToString(milli);
-        default:
-          logger.warning("Unanticipated data type found: " + type +
-                         ", object = " + object.toString());
-          return object.toString();
-      }
-    } catch (Exception e) {
-      logger.error("Invalid format for type " + type + ", object = " +
-                   object.toString(), e);
-      return(XmlStatusConstants.UNKNOWN + " " + object.toString());
-    }
-  }
-*/
 
 }
