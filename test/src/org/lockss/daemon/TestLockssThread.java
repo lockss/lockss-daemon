@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssThread.java,v 1.4 2004-02-12 02:58:23 tlipkis Exp $
+ * $Id: TestLockssThread.java,v 1.5 2004-06-20 00:03:52 tlipkis Exp $
  */
 
 /*
@@ -65,6 +65,7 @@ public class TestLockssThread extends LockssTestCase {
     triggerOnExit = false;
     threadHung = false;
     threadExited = false;
+    daemonExitCode = -1;
   }
 
   public void tearDown() throws Exception {
@@ -72,17 +73,6 @@ public class TestLockssThread extends LockssTestCase {
     TimeBase.setReal();
     super.tearDown();
   }
-
-  private void config(String file, String interval) {
-    config(new Properties(), file, interval);
-  }
-
-  private void config(Properties props, String file, String interval) {
-    props.put(WatchdogService.PARAM_PLATFORM_WDOG_FILE, file);
-    props.put(WatchdogService.PARAM_PLATFORM_WDOG_INTERVAL, interval);
-    ConfigurationUtil.setCurrentConfigFromProps(props);
-  }
-
 
   public void testGetIntervalFromParam() {
     Properties p = new Properties();
@@ -154,6 +144,30 @@ public class TestLockssThread extends LockssTestCase {
       fail("Thread didn't stop");
     }
     assertTrue(threadHung);
+    assertEquals(1, daemonExitCode);
+  }
+
+  // Same, but should produce a thread dump.
+  //  (Normally disabled, as it doesn't automatically test anything more
+  //   than the preceding test, and takes a couple seconds.  Used to
+  //   manually check that thread dump is produced.)
+  public void xtestDogHangThreadDump() throws Exception {
+    Properties p = new Properties();
+    p.put(LockssThread.PARAM_THREAD_WDOG_HUNG_DUMP, "true");
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+    TestThread thr = new TestThread("Test");
+    goOn = true;
+    dogInterval = 2000;
+    stepTime = 10000;
+    thr.start();
+    if (!startSem.take(TIMEOUT_SHOULDNT)) {
+      fail("Thread didn't start");
+    }
+    if (!stopSem.take(TIMEOUT_SHOULDNT * 2)) {
+      fail("Thread didn't stop");
+    }
+    assertTrue(threadHung);
+    assertEquals(1, daemonExitCode);
   }
 
   public void testTriggerOnExit() throws Exception {
@@ -172,6 +186,7 @@ public class TestLockssThread extends LockssTestCase {
     // wait until thread exits, make sure it triggered threadExited()
     thr.join(TIMEOUT_SHOULDNT);
     assertTrue(threadExited);
+    assertEquals(2, daemonExitCode);
   }
 
   public void testTriggerOnExitNoInterval() throws Exception {
@@ -190,6 +205,7 @@ public class TestLockssThread extends LockssTestCase {
     // wait until thread exits, make sure it triggered threadExited()
     thr.join(TIMEOUT_SHOULDNT);
     assertTrue(threadExited);
+    assertEquals(2, daemonExitCode);
   }
 
   SimpleBinarySemaphore startSem;
@@ -200,11 +216,17 @@ public class TestLockssThread extends LockssTestCase {
   volatile boolean triggerOnExit;
   volatile boolean threadHung;
   volatile boolean threadExited;
+  volatile int daemonExitCode;
 
   private class TestThread extends LockssThread {
+    private boolean runSuper = false;
 
     private TestThread(String name) {
       super(name);
+    }
+
+    void setRunSuper(boolean flg) {
+      runSuper = flg;
     }
 
     public void lockssRun() {
@@ -231,12 +253,18 @@ public class TestLockssThread extends LockssTestCase {
       stopSem.give();
     }
 
+    protected void exitDaemon(int exitCode, String msg) {
+      daemonExitCode = exitCode;
+    }
+      
     protected void threadHung() {
       threadHung = true;
+      super.threadHung();
     }
 
     protected void threadExited() {
       threadExited = true;
+      super.threadExited();
     }
 
   }

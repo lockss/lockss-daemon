@@ -1,5 +1,5 @@
 /*
- * $Id: DebugUtils.java,v 1.8 2003-06-20 22:34:55 claire Exp $
+ * $Id: DebugUtils.java,v 1.9 2004-06-20 00:03:51 tlipkis Exp $
  */
 
 /*
@@ -110,6 +110,14 @@ public class DebugUtils {
 
   static Runtime rt() {
     return Runtime.getRuntime();
+  }
+
+  /** Make it easy for code in main source hierarchy to invoke a thread
+   * dump via reflection.  Should go away when that's no longer
+   * necessary. */
+  public static void staticThreadDump() {
+    getInstance().threadDump();
+    TimerUtil.guaranteedSleep(2000);
   }
 
   /** Linux implementation of platform-specific code */

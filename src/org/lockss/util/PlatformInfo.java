@@ -1,5 +1,5 @@
 /*
- * $Id: PlatformInfo.java,v 1.3 2004-05-26 07:00:28 tlipkis Exp $
+ * $Id: PlatformInfo.java,v 1.4 2004-06-20 00:03:52 tlipkis Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util;
 
+import java.lang.reflect.*;
 import java.util.*;
 import java.text.*;
 import java.io.*;
@@ -173,6 +174,20 @@ public class PlatformInfo {
     }
     public String getMnt() {
       return mnt;
+    }
+  }
+
+  /** Hack to get thread dump, using DebugUtils in test hierarchy, if it's
+   * available.  Should be done differently, e.g., with 1.4 Thread.dumpStack()
+   or by asking platform support process to do it. */
+  public static void threadDump() {
+    try {
+      Class dbg = Class.forName("org.lockss.test.DebugUtils");
+      Method meth = dbg.getDeclaredMethod("staticThreadDump", new Class[0]);
+      log.info("meth: " + meth);
+      meth.invoke(null, null);
+    } catch (Exception e) {
+      log.warning("threadDump threw", e);
     }
   }
 

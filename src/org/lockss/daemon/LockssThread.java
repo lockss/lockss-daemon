@@ -1,5 +1,5 @@
 /*
- * $Id: LockssThread.java,v 1.7 2004-05-18 14:35:01 tlipkis Exp $
+ * $Id: LockssThread.java,v 1.8 2004-06-20 00:03:52 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -44,9 +44,11 @@ public abstract class LockssThread extends Thread implements LockssWatchdog {
 
   static final String PREFIX = Configuration.PREFIX + "thread.";
 
-  static final String PARAM_THREAD_WDOG_EXIT_IMM =
-    Configuration.PREFIX + "exitImmediately";
+  static final String PARAM_THREAD_WDOG_EXIT_IMM = PREFIX + "wdogExitJava";
   static final boolean DEFAULT_THREAD_WDOG_EXIT_IMM = true;
+
+  static final String PARAM_THREAD_WDOG_HUNG_DUMP = PREFIX + "hungThreadDump";
+  static final boolean DEFAULT_THREAD_WDOG_HUNG_DUMP = false;
 
   public static final String PARAM_NAMED_WDOG_INTERVAL =
     PREFIX + "<name>.watchdog.interval";
@@ -208,10 +210,14 @@ public abstract class LockssThread extends Thread implements LockssWatchdog {
   }
 
   /** Called if thread is hung (hasn't poked the watchdog in too long).
-   * Default action is to exit the daemon; can be overridden is thread is
+   * Default action is to exit the daemon; should be overridden if thread is
    * able to take some less drastic corrective action (e.g., close socket
    * for hung socket reads.) */
   protected void threadHung() {
+    if (Configuration.getBooleanParam(PARAM_THREAD_WDOG_HUNG_DUMP,
+				      DEFAULT_THREAD_WDOG_HUNG_DUMP)) {
+      PlatformInfo.threadDump();
+    }
     exitDaemon(EXIT_CODE_THREAD_HUNG,
 	       "Thread hung for " + StringUtil.timeIntervalToString(interval));
   }
@@ -223,7 +229,7 @@ public abstract class LockssThread extends Thread implements LockssWatchdog {
     exitDaemon(EXIT_CODE_THREAD_EXIT, "Thread exited");
   }
 
-  private void exitDaemon(int exitCode, String msg) {
+  protected void exitDaemon(int exitCode, String msg) {
     boolean exitImm = true;
     try {
       WatchdogService wdog = (WatchdogService)

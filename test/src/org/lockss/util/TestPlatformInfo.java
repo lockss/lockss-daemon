@@ -1,5 +1,5 @@
 /*
- * $Id: TestPlatformInfo.java,v 1.3 2004-05-26 07:00:28 tlipkis Exp $
+ * $Id: TestPlatformInfo.java,v 1.4 2004-06-20 00:03:51 tlipkis Exp $
  */
 
 /*
@@ -56,7 +56,7 @@ public class TestPlatformInfo extends LockssTestCase {
     df = info.getDF(System.getProperty("/very_unlik_elyd_irect_oryname/4x2"));
     assertNull(df);
   }
-  
+
   public void testMakeDF() throws Exception {
     String str = "/dev/hda2  26667896   9849640  15463576    39% /";
     PlatformInfo.DF df = info.makeDFFromLine(str);
@@ -67,5 +67,9 @@ public class TestPlatformInfo extends LockssTestCase {
     assertEquals("39%", df.getPercentString());
     assertEquals(.39, df.getPercent(), .0000001);
   }
-  
+
+  public void xtestThreadDump() throws Exception {
+    info.threadDump();
+  }
+
 }
