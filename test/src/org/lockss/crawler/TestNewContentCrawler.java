@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.13 2004-07-16 17:20:49 dcfok Exp $
+ * $Id: TestNewContentCrawler.java,v 1.14 2004-07-19 22:34:39 dcfok Exp $
  */
 
 /*
@@ -431,38 +431,19 @@ public class TestNewContentCrawler extends LockssTestCase {
     crawler.doCrawl();
     assertEquals(0, cus.getCachedUrls().size());
   }
-  
+
   public void testMultiPermissionPageShouldPass(){
     String permissionUrl1 = "http://www.example.com/index.html";
     String permissionUrl2 = "http://www.foo.com/index.html";
     List permissionList = ListUtil.list(permissionUrl1,permissionUrl2);
-    
+
     String url1= "http://www.example.com/link1.html";
     String url2= "http://www.example.com/link2.html";
     String url3= "http://www.foo.com/link3.html";
     String url4= "http://www.foo.com/link4.html";
-
-    MyMockArchivalUnit mmau = new MyMockArchivalUnit();
-    mmau.setPlugin(new MockPlugin());
-
     List urls = ListUtil.list(url1,url2,url3,url4,permissionUrl1,permissionUrl2);
-    MockCachedUrlSet cus = new MyMockCachedUrlSet(mmau, null);
-    mmau.setAuCachedUrlSet(cus);
-    mmau.setPermissionPages(permissionList);
-    mmau.setNumPermissionGranted(2);
-    
-    crawlRule = new MockCrawlRule();
-    
-    for (int ix=0; ix<urls.size(); ix++) {
-      String curUrl = (String)urls.get(ix);
-      cus.addUrl(curUrl);
-      crawlRule.addUrlToCrawl(curUrl);
-    }
 
-    spec = new CrawlSpec(urls, crawlRule); 
-    crawler = new NewContentCrawler(mmau, spec, new MockAuState());
-
-    mmau.setParser(parser);
+    MockCachedUrlSet cus = permissionPageTestSetup(permissionList,2,urls, new MockPlugin());
     
     assertTrue(crawler.doCrawl());
     Set expected = SetUtil.fromList(urls);
@@ -478,30 +459,13 @@ public class TestNewContentCrawler extends LockssTestCase {
     String url2= "http://www.example.com/link2.html";
     String url3= "http://www.foo.com/link3.html";
     String url4= "http://www.foo.com/link4.html";
-
-    MyMockArchivalUnit mmau = new MyMockArchivalUnit();
-    mmau.setPlugin(new MockPlugin());
-
     List urls = ListUtil.list(url1,url2,url3,url4,permissionUrl1,permissionUrl2);
-    MockCachedUrlSet cus = new MyMockCachedUrlSet(mmau, null);
-    mmau.setAuCachedUrlSet(cus);
-    mmau.setPermissionPages(permissionList);
-    mmau.setNumPermissionGranted(1);
-    
-    crawlRule = new MockCrawlRule();
-    
-    for (int ix=0; ix<urls.size(); ix++) {
-      String curUrl = (String)urls.get(ix);
-      cus.addUrl(curUrl);
-      crawlRule.addUrlToCrawl(curUrl);
-    }
 
-    spec = new CrawlSpec(urls, crawlRule); 
-    crawler = new NewContentCrawler(mmau, spec, new MockAuState());
-
-    mmau.setParser(parser);
+    MockCachedUrlSet cus = permissionPageTestSetup(permissionList,1,urls, new MockPlugin());
     
     assertFalse(crawler.doCrawl());
+    Set expected = SetUtil.set(permissionUrl1, url1, url2);
+    assertEquals(expected, cus.getCachedUrls());
   }
 
   public void testMultiPermissionPageShouldFailWithAbortWhilePermissionOtherThanOkParam(){
@@ -511,31 +475,15 @@ public class TestNewContentCrawler extends LockssTestCase {
     
     String url1= "http://www.example.com/link1.html";
     String url3= "http://www.foo.com/link3.html";
-
-    MyMockArchivalUnit mmau = new MyMockArchivalUnit();
-    mmau.setPlugin(new MockPlugin());
-
     List urls = ListUtil.list(url1,url3,permissionUrl1,permissionUrl2);
-    MockCachedUrlSet cus = new MyMockCachedUrlSet(mmau, null);
-    mmau.setAuCachedUrlSet(cus);
-    mmau.setPermissionPages(permissionList);
-    mmau.setNumPermissionGranted(1);
-    
-    crawlRule = new MockCrawlRule();
-    
-    for (int ix=0; ix<urls.size(); ix++) {
-      String curUrl = (String)urls.get(ix);
-      cus.addUrl(curUrl);
-      crawlRule.addUrlToCrawl(curUrl);
-    }
 
-    spec = new CrawlSpec(urls, crawlRule); 
-    crawler = new NewContentCrawler(mmau, spec, new MockAuState());
+    MockCachedUrlSet cus = permissionPageTestSetup(permissionList,1,urls, new MockPlugin());
 
-    mmau.setParser(parser);
     setProperty(NewContentCrawler.PARAM_ABORT_WHILE_PERMISSION_OTHER_THAN_OK,""+true);
     
     assertFalse(crawler.doCrawl());
+    Set expected = SetUtil.set(permissionUrl1);
+    assertEquals(expected, cus.getCachedUrls());
   }
 
   public void testPermissionPageShouldFailAsFetchPermissionFailTwice(){
@@ -544,36 +492,19 @@ public class TestNewContentCrawler extends LockssTestCase {
     
     String url1= "http://www.example.com/link1.html";
     String url2= "http://www.example.com/link2.html";
-
-    MyMockArchivalUnit mmau = new MyMockArchivalUnit();
-
+    List urls = ListUtil.list(url1,url2,permissionUrl1);
+    
     HashMap hMap = new HashMap();
     // makeUrlCacher in MyMockPlugin will get call 2 time, before a 
     // uc.cache() is called
     hMap.put((String) permissionUrl1.toLowerCase(),new Integer(4));
-    mmau.setPlugin(new MyMockPlugin(hMap));
 
-    List urls = ListUtil.list(url1,url2,permissionUrl1);
-    MockCachedUrlSet cus = new MyMockCachedUrlSet(mmau, null);
-    mmau.setAuCachedUrlSet(cus);
-    mmau.setPermissionPages(permissionList);
-    mmau.setNumPermissionGranted(2);
-    
-    crawlRule = new MockCrawlRule();
-    
-    for (int ix=0; ix<urls.size(); ix++) {
-      String curUrl = (String)urls.get(ix);
-      cus.addUrl(curUrl);
-      crawlRule.addUrlToCrawl(curUrl);
-    }
+    MockCachedUrlSet cus = permissionPageTestSetup(permissionList,2,urls, new MyMockPlugin(hMap));
 
-    spec = new CrawlSpec(urls, crawlRule); 
-    crawler = new NewContentCrawler(mmau, spec, new MockAuState());
-
-    mmau.setParser(parser);
     setProperty(CrawlerImpl.PARAM_REFETCH_PERMISSIONS_PAGE,""+true);
 
     assertFalse(crawler.doCrawl());
+    assertEquals(0,cus.getCachedUrls().size());
   }
 
   public void testPermissionPageFailOnceAndOkAfterRefetch(){
@@ -582,37 +513,69 @@ public class TestNewContentCrawler extends LockssTestCase {
     
     String url1= "http://www.example.com/link1.html";
     String url2= "http://www.example.com/link2.html";
-
-    MyMockArchivalUnit mmau = new MyMockArchivalUnit();
+    List urls = ListUtil.list(url1,url2,permissionUrl1);
     
     HashMap hMap = new HashMap();
     // makeUrlCacher in MyMockPlugin will get call 2 time, before a 
     // uc.cache() is called
     hMap.put((String) permissionUrl1.toLowerCase(),new Integer(2));
-    mmau.setPlugin(new MyMockPlugin(hMap));
 
-    List urls = ListUtil.list(url1,url2,permissionUrl1);
+    MockCachedUrlSet cus = permissionPageTestSetup(permissionList,2,urls, new MyMockPlugin(hMap));
 
+    setProperty(CrawlerImpl.PARAM_REFETCH_PERMISSIONS_PAGE, ""+true);
+
+    assertTrue(crawler.doCrawl());
+    Set expected = SetUtil.fromList(urls);
+    assertEquals( expected, cus.getCachedUrls());
+  }
+
+  public void testPermissionPageMissing(){
+    String permissionUrl1 = "http://www.example.com/index.html";
+    List permissionList = ListUtil.list(permissionUrl1);
+    
+    String url1= "http://www.example.com/link1.html";
+    String url3= "http://www.foo.com/link3.html";
+    List urls = ListUtil.list(url1,url3,permissionUrl1);
+
+    MockCachedUrlSet cus = permissionPageTestSetup(permissionList,1,urls, new MockPlugin());
+
+    assertFalse(crawler.doCrawl());
+    Set expected = SetUtil.set(permissionUrl1, url1);
+    assertEquals(expected, cus.getCachedUrls());
+  }
+
+  private MockCachedUrlSet permissionPageTestSetup(List permissionPages, int passPermissionCheck, 
+						   List urlsToCrawl, MockPlugin mp){
+    MyMockArchivalUnit mmau = new MyMockArchivalUnit();
+    
+    //set permissionPage and set Who to grant how many time
+    mmau.setPermissionPages(permissionPages);
+    mmau.setNumPermissionGranted(passPermissionCheck);
+
+    //set plugin
+    mmau.setPlugin(mp);
+
+    //make cus , set Cus
     MockCachedUrlSet cus = new MyMockCachedUrlSet(mmau, null);
     mmau.setAuCachedUrlSet(cus);
-    mmau.setPermissionPages(permissionList);
-    mmau.setNumPermissionGranted(2);
-    
     crawlRule = new MockCrawlRule();
     
-    for (int ix=0; ix<urls.size(); ix++) {
-      String curUrl = (String)urls.get(ix);
+    for (int ix=0; ix<urlsToCrawl.size(); ix++) {
+      String curUrl = (String)urlsToCrawl.get(ix);
       cus.addUrl(curUrl);
       crawlRule.addUrlToCrawl(curUrl);
     }
 
-    spec = new CrawlSpec(urls, crawlRule); 
+    //set Crawl spec
+    spec = new CrawlSpec(urlsToCrawl, crawlRule); 
+
+    //set Crawler
     crawler = new NewContentCrawler(mmau, spec, new MockAuState());
-
+    
+    //set parser
     mmau.setParser(parser);
-    setProperty(CrawlerImpl.PARAM_REFETCH_PERMISSIONS_PAGE, ""+true);
-
-    assertTrue(crawler.doCrawl());
+    
+    return cus;
   }
 
   private static void setProperty(String prop, String value) {
@@ -622,7 +585,7 @@ public class TestNewContentCrawler extends LockssTestCase {
   }
 
   private class MyMockArchivalUnit extends MockArchivalUnit {
-
+    
     public MyMockArchivalUnit(){
       super();
     }
@@ -650,7 +613,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     public MyMockPlugin(HashMap hMap) {
       super();
       this.hMap = hMap;
-      System.out.println("The hMap content:" + this.hMap.toString());
+      //System.out.println("The hMap content:" + this.hMap.toString());
     }
 
     public UrlCacher makeUrlCacher(CachedUrlSet owner, String url) {
@@ -660,14 +623,14 @@ public class TestNewContentCrawler extends LockssTestCase {
       if (int_numThrow != null) {
 	numExceptionThrow = int_numThrow.intValue();
 	if (numExceptionThrow > 0) {
-	  System.out.println("hMap before setException = " +  hMap.toString());
+	  //System.out.println("hMap before setException = " +  hMap.toString());
 	  muc.setCachingException(new IOException(),1);
 	  numExceptionThrow--;
 
 	  hMap.put(url.toLowerCase(), new Integer(numExceptionThrow) );
 
 	  //testing
-	  System.out.println("hMap after setException = " +  hMap.toString());
+	  //System.out.println("hMap after setException = " +  hMap.toString());
 
 	}
       }
@@ -723,7 +686,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     }
     public void cache() throws IOException {
       checkAbort();
-      System.out.println("Caching for : " + super.getUrl());
+      //System.out.println("Caching for : " + super.getUrl());
       super.cache();
     }
     private void checkAbort() {
@@ -739,3 +702,4 @@ public class TestNewContentCrawler extends LockssTestCase {
   }
 
 }
+
