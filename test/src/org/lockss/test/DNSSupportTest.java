@@ -1,5 +1,5 @@
 /*
- * $Id: DNSSupportTest.java,v 1.1 2004-02-03 15:19:16 dshr Exp $
+ * $Id: DNSSupportTest.java,v 1.2 2004-02-03 21:31:40 troberts Exp $
  */
 
 /*
@@ -30,7 +30,7 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.devtools;
+package org.lockss.test;
 import java.io.*;
 import java.util.*;
 import java.net.*;
