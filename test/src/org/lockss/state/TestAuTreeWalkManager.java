@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuTreeWalkManager.java,v 1.5 2004-09-21 21:25:02 dshr Exp $
+ * $Id: TestAuTreeWalkManager.java,v 1.6 2004-10-01 09:27:39 tlipkis Exp $
  */
 
 /*
@@ -295,8 +295,7 @@ public class TestAuTreeWalkManager extends LockssTestCase {
     }
 
     public synchronized void taskEvent(SchedulableTask task,
-				       Schedule.EventType event)
-	throws Abort {
+				       Schedule.EventType event) {
       super.taskEvent(task, event);
       if (event == Schedule.EventType.START) {
 	eventStartSem.give();

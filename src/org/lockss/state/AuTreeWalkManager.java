@@ -1,5 +1,5 @@
 /*
- * $Id: AuTreeWalkManager.java,v 1.7 2004-09-28 08:53:14 tlipkis Exp $
+ * $Id: AuTreeWalkManager.java,v 1.8 2004-10-01 09:27:40 tlipkis Exp $
  */
 
 /*
@@ -89,16 +89,18 @@ public class AuTreeWalkManager
     }
   }
 
-  synchronized void removeTask(BackgroundTask task) {
+  void removeTask(BackgroundTask task) {
     // tell scheduler we're done.  Necessary only if we ended early
     // (FINISHED event hasn't happened), but that's almost always
-    // the case, and harmless otherwise.
+    // the case.  DO NOT do this while holding lock - it calls the scheduler
     task.taskIsFinished();
-    if (curTask == task) {
-      log.debug3("Removing curTask");
-      curTask = null;
-    } else {
-      log.debug("curTask != task; " + curTask + ", " + task);
+    synchronized (this) {
+      if (curTask == task) {
+	log.debug3("Removing curTask");
+	curTask = null;
+      } else {
+	log.debug("curTask != task; " + curTask + ", " + task);
+      }
     }
   }
 
@@ -361,16 +363,19 @@ public class AuTreeWalkManager
    * Treewalk task event handler
    */
   public synchronized void taskEvent(SchedulableTask task,
-				     Schedule.EventType event)
-      throws Abort {
+				     Schedule.EventType event) {
+    if (task != curTask) {
+      log.debug("Ignoring unexpected taskEvent(" + task + ", " + event +
+		"), curTask: " + curTask);
+      return;
+    }
     if (event == Schedule.EventType.START) {
       log.debug3("Treewalk task start.");
       if (runningRunner == null) {
-	// start background activity, not in this thread.
+	// start background activity in a thread.
 	startThread((BackgroundTask)task);
       } else {
-	log.debug("Treewalk already running, aborting.");
-	throw new TaskCallback.Abort();
+	log.warning("Impossible: treewalk already running.  Igoring event.");
       }
     } else if (event == Schedule.EventType.FINISH) {
       log.debug3("Treewalk task finish.");
