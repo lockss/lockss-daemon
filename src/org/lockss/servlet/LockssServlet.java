@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.46 2004-07-12 06:17:41 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.47 2004-08-12 19:10:23 tlipkis Exp $
  */
 
 /*
@@ -93,7 +93,7 @@ public abstract class LockssServlet extends HttpServlet
 
   protected ServletContext context;
 
-  private LockssDaemon theDaemon = null;
+  private LockssApp theApp = null;
 
   // Request-local storage.  Convenient, but requires servlet instances
   // to be single threaded, and must ensure reset them to avoid carrying
@@ -261,7 +261,7 @@ public abstract class LockssServlet extends HttpServlet
   public void init(ServletConfig config) throws ServletException {
     super.init(config);
     context = config.getServletContext();
-    theDaemon = (LockssDaemon)context.getAttribute("LockssDaemon");
+    theApp = (LockssApp)context.getAttribute("LockssApp");
   }
 
   /** Servlets must implement this method. */
@@ -707,7 +707,7 @@ public abstract class LockssServlet extends HttpServlet
     table.add("</b></font>");
 
     table.add("<br>");
-    Date startDate = getLockssDaemon().getStartDate();
+    Date startDate = getLockssApp().getStartDate();
     String since =
       StringUtil.timeIntervalToString(TimeBase.msSince(startDate.getTime()));
     table.add(getMachineName() + " at " +
@@ -721,7 +721,7 @@ public abstract class LockssServlet extends HttpServlet
 //     comp.add("<center><b>" + machineName + "</b></center>");
 //     comp.add("<br><center><font size=+1><b>"+heading+"</b></font></center>");
 
-//     Date startDate = getLockssDaemon().getStartDate();
+//     Date startDate = getLockssApp().getStartDate();
 //     String since =
 //       StringUtil.timeIntervalToString(TimeBase.msSince(startDate.getTime()));
 //     comp.add("<center>" + getMachineName() + " at " +
@@ -734,7 +734,7 @@ public abstract class LockssServlet extends HttpServlet
   // Common page footer
   public Element getFooter() {
     Composite comp = new Composite();
-    String vDaemon = theDaemon.getVersionInfo();
+    String vDaemon = theApp.getVersionInfo();
 
     addNotes(comp);
     comp.add("<p>");
@@ -912,9 +912,19 @@ public abstract class LockssServlet extends HttpServlet
     return val;
   }
 
-  /** Return the daemon instance. */
+  /** Return the app instance.
+   */
+  protected LockssApp getLockssApp() {
+    return theApp;
+  }
+
+  /** Return the daemon instance, assumes that the servlet is running in
+   * the daemon.
+   * @throws ClassCastException if the servlet is running in an app other
+   * than the daemon
+   */
   protected LockssDaemon getLockssDaemon() {
-    return theDaemon;
+    return (LockssDaemon)theApp;
   }
 
   protected void logParams() {

@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServletTestCase.java,v 1.1 2003-08-09 20:38:44 tlipkis Exp $
+ * $Id: LockssServletTestCase.java,v 1.2 2004-08-12 19:10:23 tlipkis Exp $
  */
 
 /*
@@ -70,7 +70,7 @@ public class LockssServletTestCase extends LockssTestCase {
   /** Establish a servlet runner and client. */
   protected void initServletRunner() {
     sRunner = new LockssServletRunner();
-    sRunner.setServletContextAttribute("LockssDaemon", theDaemon);
+    sRunner.setServletContextAttribute("LockssApp", theDaemon);
     sClient = sRunner.newClient();
   }
 
