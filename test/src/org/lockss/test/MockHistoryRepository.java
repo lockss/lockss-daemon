@@ -1,5 +1,5 @@
 /*
- * $Id: MockHistoryRepository.java,v 1.7 2004-02-07 00:13:40 troberts Exp $
+ * $Id: MockHistoryRepository.java,v 1.8 2004-02-07 02:00:38 troberts Exp $
  */
 
 /*
@@ -47,6 +47,9 @@ public class MockHistoryRepository implements HistoryRepository {
   public AuState theAuState;
   public DamagedNodeSet theDamagedNodeSet;
   public HashMap storedNodes = new HashMap();
+
+  private List storedIdentityAgreement = null;
+  private List loadedIdentityAgreement = null;
 
   public MockHistoryRepository() { }
 
@@ -99,15 +102,19 @@ public class MockHistoryRepository implements HistoryRepository {
   }
 
   public void storeIdentityAgreement(List list) {
-    throw new UnsupportedOperationException("not implemented");
+    this.storedIdentityAgreement = list;
   }
 
   public List loadIdentityAgreement() {
-    throw new UnsupportedOperationException("not implemented");
+    return loadedIdentityAgreement;
+  }
+
+  public void setLoadedIdentityAgreement(List list) {
+    this.loadedIdentityAgreement = list;
   }
 
   public List getStoredIdentityAgreement() {
-    throw new UnsupportedOperationException("not implemented");
+    return storedIdentityAgreement;
   }
 
 }
