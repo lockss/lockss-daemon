@@ -1,5 +1,5 @@
 # LOCKSS & LCAP tuning parameters
-org.lockss.log.default.level=info
+org.lockss.log.default.level=debug3
 org.lockss.log.PollManager.level=debug
 org.lockss.log.Poll.level=debug
 org.lockss.log.Comm.level=info
@@ -11,15 +11,6 @@ org.lockss.log.USock_9001_Rcv.level=debug
 org.lockss.log.USock_9000_Rcv.level=debug
 
 #au config settings
-org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.localA.root=localA
-org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.localA.depth=2
-org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.localA.branch=2
-#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.localA.numFiles=3
-#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.<dir>.binFileSize=<n>
-#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.<dir>.maxFileName=<n>
-#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.<dir>.fileTypes=<n>
-#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.<dir>.badFileLoc=<n>
-#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.<dir>.badFileNum=<n>
 
 #lockss repository settings
 org.lockss.cache.location=./
@@ -39,7 +30,7 @@ org.lockss.history.location=./history
 
 #comm settings
 org.lockss.startNetServers=no
-org.lockss.comm.multicast.group=239.4.5.6
+org.lockss.comm.multicast.group=239.4.5.7
 #org.lockss.comm.multicast.port=3456
 org.lockss.comm.multicast.port=localIp
 org.lockss.comm.unicast.port=1025
