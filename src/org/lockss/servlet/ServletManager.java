@@ -1,5 +1,5 @@
 /*
- * $Id: ServletManager.java,v 1.25 2003-07-21 08:36:07 tlipkis Exp $
+ * $Id: ServletManager.java,v 1.26 2004-01-03 06:23:23 tlipkis Exp $
  */
 
 /*
@@ -61,7 +61,7 @@ public class ServletManager extends JettyManager {
   public static final String PARAM_IP_EXCLUDE = IP_ACCESS_PREFIX + "exclude";
   public static final String PARAM_LOG_FORBIDDEN =
     IP_ACCESS_PREFIX + "logForbidden";
-  public static final boolean DEFAULT_LOG_FORBIDDEN = false;
+  public static final boolean DEFAULT_LOG_FORBIDDEN = true;
 
   public static final String PARAM_USER_AUTH = PREFIX + "access.auth";
   public static final boolean DEFAULT_USER_AUTH = true;
