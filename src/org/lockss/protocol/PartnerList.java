@@ -1,5 +1,5 @@
 /*
- * $Id: PartnerList.java,v 1.1 2003-03-19 07:55:49 tal Exp $
+ * $Id: PartnerList.java,v 1.2 2003-03-19 23:54:01 tal Exp $
  */
 
 /*
@@ -80,6 +80,9 @@ class PartnerList {
       log.error("Default partner list is empty");
     }
     defaultPartnerList = newDefaultList;
+    if (partners.isEmpty()) {
+      addDefaultPartners();
+    }
   }
 
   Set getPartners() {
@@ -110,6 +113,13 @@ class PartnerList {
     if (partners.size() == 0) {
       addFromDefaultList();
     }      
+  }
+
+  void addDefaultPartners() {
+    for (Iterator iter = defaultPartnerList.iterator(); iter.hasNext(); ) {
+      InetAddress ip = (InetAddress)iter.next();
+      addPartner(ip);
+    }
   }
 
   void removeLeastRecent() {
