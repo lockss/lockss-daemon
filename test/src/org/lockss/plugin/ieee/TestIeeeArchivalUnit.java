@@ -1,5 +1,5 @@
 /*
- * $Id: TestIeeeArchivalUnit.java,v 1.1 2003-09-24 23:43:48 clairegriffin Exp $
+ * $Id: TestIeeeArchivalUnit.java,v 1.2 2003-09-25 00:43:42 clairegriffin Exp $
  */
 
 /*
@@ -116,38 +116,43 @@ public class TestIeeeArchivalUnit
     String b_root = base.toString();
     String url;
 
-    IeeeArchivalUnit acsAu = makeAu(base, PUB_NUMBER, VOL_YEAR);
+    IeeeArchivalUnit ieeeAu = makeAu(base, PUB_NUMBER, VOL_YEAR);
 
-    theDaemon.getLockssRepository(acsAu);
-    theDaemon.getNodeManager(acsAu);
-    BaseCachedUrlSet cus = new BaseCachedUrlSet(acsAu,
+    theDaemon.getLockssRepository(ieeeAu);
+    theDaemon.getNodeManager(ieeeAu);
+    BaseCachedUrlSet cus = new BaseCachedUrlSet(ieeeAu,
         new RangeCachedUrlSetSpec(base.toString()));
 
     // start url - should be cached
-    url = acsAu.makeStartUrl(base, PUB_NUMBER, VOL_YEAR);
-    shouldCacheTest(url, true, acsAu, cus);
+    url = ieeeAu.makeStartUrl(base, PUB_NUMBER, VOL_YEAR);
+    shouldCacheTest(url, true, ieeeAu, cus);
 
     // issue index page - should be cached
     url = b_root +"xpl/tocresult.jsp?isNumber=27564";
-    shouldCacheTest(url, true, acsAu, cus);
+    shouldCacheTest(url, true, ieeeAu, cus);
 
     // printable issue index page - should be cached
 
     //images and style sheets - should be cached
     url = b_root + "images/small-spacer.gif";
-    shouldCacheTest(url, true, acsAu, cus);
+    shouldCacheTest(url, true, ieeeAu, cus);
+
+    url = b_root.substring(0,b_root.length() - 1);
+    url = url + ":80/images/small-spacer.gif";
+    shouldCacheTest(url,true, ieeeAu, cus);
 
     url = b_root + "archives/images/rule.jpg";
-    shouldCacheTest(url, true, acsAu, cus);
+    shouldCacheTest(url, true, ieeeAu, cus);
 
     // the pdf of articles should be cached
     url = b_root + "iel5/" + PUB_NUMBER +
         "/27564/01229882.pdf?isNumber=27564&arnumber=1229882";
-    shouldCacheTest(url, true, acsAu, cus);
+    shouldCacheTest(url, true, ieeeAu, cus);
 
     // we cache abstracts
-    url = b_root + "xpls/abs_all.jsp?isNumber=27564";
-    shouldCacheTest(url, true, acsAu, cus);
+    url = b_root.substring(0,b_root.length()-1);
+    url = url + ":80/xpls/abs_all.jsp?isNumber=27564";
+    shouldCacheTest(url, true, ieeeAu, cus);
 
   }
 
@@ -161,37 +166,37 @@ public class TestIeeeArchivalUnit
     String expected = ROOT_URL +
         "xpl/RecentIssue.jsp?puNumber=" + PUB_NUMBER + "&year=" + VOL_YEAR;
     URL base = new URL(ROOT_URL);
-    IeeeArchivalUnit acsAu = makeAu(base, PUB_NUMBER, VOL_YEAR);
-    assertEquals(expected, acsAu.makeStartUrl(base, PUB_NUMBER, VOL_YEAR));
+    IeeeArchivalUnit ieeeAu = makeAu(base, PUB_NUMBER, VOL_YEAR);
+    assertEquals(expected, ieeeAu.makeStartUrl(base, PUB_NUMBER, VOL_YEAR));
   }
 
   public void testGetUrlStems() throws Exception {
     URL base = new URL(ROOT_URL);
     String stem = "http://ieeexplore.ieee.org";
-    IeeeArchivalUnit acsAu = makeAu(base, PUB_NUMBER, VOL_YEAR);
-    assertEquals(ListUtil.list(stem), acsAu.getUrlStems());
+    IeeeArchivalUnit ieeeAu = makeAu(base, PUB_NUMBER, VOL_YEAR);
+    assertEquals(ListUtil.list(stem), ieeeAu.getUrlStems());
 
   }
 
   public void testShouldDoNewContentCrawlTooEarly() throws Exception {
     URL base = new URL(ROOT_URL);
-    ArchivalUnit acsAu = makeAu(base, PUB_NUMBER, VOL_YEAR);
+    ArchivalUnit ieeeAu = makeAu(base, PUB_NUMBER, VOL_YEAR);
     AuState aus = new MockAuState(null, TimeBase.nowMs(), -1, -1, null);
-    assertFalse(acsAu.shouldCrawlForNewContent(aus));
+    assertFalse(ieeeAu.shouldCrawlForNewContent(aus));
   }
 
   public void testShouldDoNewContentCrawlForZero() throws Exception {
     URL base = new URL(ROOT_URL);
-    ArchivalUnit acsAu = makeAu(base, PUB_NUMBER, VOL_YEAR);
+    ArchivalUnit ieeeAu = makeAu(base, PUB_NUMBER, VOL_YEAR);
     AuState aus = new MockAuState(null, 0, -1, -1, null);
-    assertTrue(acsAu.shouldCrawlForNewContent(aus));
+    assertTrue(ieeeAu.shouldCrawlForNewContent(aus));
   }
 
   public void testShouldDoNewContentCrawlEachMonth() throws Exception {
     URL base = new URL(ROOT_URL);
-    ArchivalUnit acsAu = makeAu(base, PUB_NUMBER, VOL_YEAR);
+    ArchivalUnit ieeeAu = makeAu(base, PUB_NUMBER, VOL_YEAR);
     AuState aus = new MockAuState(null, 4 * Constants.WEEK, -1, -1, null);
-    assertTrue(acsAu.shouldCrawlForNewContent(aus));
+    assertTrue(ieeeAu.shouldCrawlForNewContent(aus));
   }
 
   public void testGetName() throws Exception {
