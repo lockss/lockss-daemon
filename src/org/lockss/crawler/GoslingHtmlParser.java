@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlParser.java,v 1.24 2005-02-02 09:42:47 tlipkis Exp $
+ * $Id: GoslingHtmlParser.java,v 1.25 2005-02-28 23:19:34 troberts Exp $
  */
 
 /*
@@ -88,7 +88,10 @@ public class GoslingHtmlParser implements ContentParser {
 
   private static final String METATAG = "meta";
   private static final String IMGTAG = "img";
+  private static final String EMBEDTAG = "embed";
+  private static final String OBJECTTAG = "object";
   private static final String ATAG = "a";
+  private static final String APPLETTAG = "applet";
   private static final String BASETAG = "base";
   private static final String FRAMETAG = "frame";
   private static final String LINKTAG = "link";
@@ -100,6 +103,8 @@ public class GoslingHtmlParser implements ContentParser {
   private static final String JSCRIPTTAG = "javascript";
   private static final String HREF = "href";
   private static final String SRC = "src";
+  private static final String CODE = "code";
+  private static final String CODEBASE = "codebase";
   private static final String BACKGROUNDSRC = "background";
   private static final String REFRESH = "refresh";
   private static final String HTTP_EQUIV = "http-equiv";
@@ -334,7 +339,11 @@ public class GoslingHtmlParser implements ContentParser {
 //           if (returnStr != null && returnStr.startsWith(JSCRIPTTAG)) {
 //             returnStr = extractScriptUrl(returnStr);
 //           }
-        }
+        } else {
+	  if (beginsWithTag(link, APPLETTAG)) {
+	    returnStr = getAttributeValue(CODE, link);
+	  }
+	}
         break;
       case 'f': //<frame src=frame1.html>
       case 'F':
@@ -342,9 +351,21 @@ public class GoslingHtmlParser implements ContentParser {
           returnStr = getAttributeValue(SRC, link);
         }
         break;
+      case 'o': //<object codebase=blah.java>
+      case 'O':
+        if (beginsWithTag(link, OBJECTTAG)) {
+          returnStr = getAttributeValue(CODEBASE, link);
+        }
+        break;
       case 'i': //<img src=image.gif>
       case 'I':
         if (beginsWithTag(link, IMGTAG)) {
+          returnStr = getAttributeValue(SRC, link);
+        }
+        break;
+      case 'e': //<embed src=image.gif>
+      case 'E':
+        if (beginsWithTag(link, EMBEDTAG)) {
           returnStr = getAttributeValue(SRC, link);
         }
         break;

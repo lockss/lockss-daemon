@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingHtmlParser.java,v 1.17 2004-10-04 20:58:31 troberts Exp $
+ * $Id: TestGoslingHtmlParser.java,v 1.18 2005-02-28 23:19:35 troberts Exp $
  */
 
 /*
@@ -95,9 +95,24 @@ public class TestGoslingHtmlParser extends LockssTestCase {
   			 "<a\nhref=", "</a>");
   }
 
-  public void testDoCrawlImage() throws IOException {
+  public void testParsesImage() throws IOException {
     singleTagShouldParse("http://www.example.com/web_link.jpg",
 			 "<img src=", "</img>");
+  }
+
+  public void testParsesEmbed() throws IOException {
+    singleTagShouldParse("http://www.example.com/web_link.jpg",
+			 "<embed src=", "</embed>");
+  }
+
+  public void testParsesApplet() throws IOException {
+    singleTagShouldParse("http://www.example.com/web_link.jpg",
+			 "<applet code=", "</applet>");
+  }
+
+  public void testParsesObject() throws IOException {
+    singleTagShouldParse("http://www.example.com/web_link.jpg",
+ 			 "<object codebase=", "</object>");
   }
 
   public void testDoCrawlImageWithSrcInAltTag() throws IOException {
