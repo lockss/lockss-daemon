@@ -1,5 +1,5 @@
 /*
- * $Id: MockUrlCacher.java,v 1.2 2002-11-26 18:00:56 troberts Exp $
+ * $Id: MockUrlCacher.java,v 1.3 2003-01-02 19:38:49 troberts Exp $
  */
 
 /*
@@ -94,9 +94,8 @@ public class MockUrlCacher implements UrlCacher {
   public void setupCachedUrl(String contents) {
     MockCachedUrl cu = new MockCachedUrl(url);
     cu.setProperties(getUncachedProperties());
-//      cu.setExists(true);
     if (contents != null) {
-      cu.setInputStream(new StringInputStream(contents));
+      cu.setContent(contents);
     }
     setCachedUrl(cu);
   }
