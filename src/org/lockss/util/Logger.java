@@ -1,5 +1,5 @@
 /*
- * $Id: Logger.java,v 1.35 2004-09-27 22:39:04 smorabito Exp $
+ * $Id: Logger.java,v 1.36 2004-10-02 01:16:56 tlipkis Exp $
  */
 
 /*
@@ -460,7 +460,7 @@ public class Logger {
     if (tgts != null && !tgts.isEmpty()) {
       setTargets(tgts);
     } else {
-      myLog.error("Leaving log targets unchanged");
+      myLog.debug("Leaving log targets unchanged");
     }
   }
 
