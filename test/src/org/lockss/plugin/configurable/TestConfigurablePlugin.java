@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigurablePlugin.java,v 1.5 2004-01-27 04:07:06 tlipkis Exp $
+ * $Id: TestConfigurablePlugin.java,v 1.6 2004-01-31 22:54:29 tlipkis Exp $
  */
 
 /*
@@ -46,6 +46,8 @@ import org.lockss.plugin.base.*;
  */
 
 public class TestConfigurablePlugin extends LockssTestCase {
+  static final String DEFAULT_PLUGIN_VERSION = "1";
+
   private ConfigurablePlugin configurablePlugin = null;
 
   protected void setUp() throws Exception {
@@ -107,7 +109,7 @@ public class TestConfigurablePlugin extends LockssTestCase {
 
   public void testGetVersion() {
     // no version set
-    String expectedReturn = "UNKNOWN VERSION";
+    String expectedReturn = DEFAULT_PLUGIN_VERSION;
     String actualReturn = configurablePlugin.getVersion();
     assertEquals("return value", expectedReturn, actualReturn);
 

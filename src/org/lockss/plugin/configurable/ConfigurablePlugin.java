@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurablePlugin.java,v 1.7 2004-01-27 04:07:08 tlipkis Exp $
+ * $Id: ConfigurablePlugin.java,v 1.8 2004-01-31 22:54:29 tlipkis Exp $
  */
 
 /*
@@ -52,6 +52,8 @@ public class ConfigurablePlugin extends BasePlugin {
   static final protected String CM_VERSION_KEY = "plugin_version";
   static final protected String CM_CONFIG_PROPS_KEY = "plugin_config_props";
 
+  static final String DEFAULT_PLUGIN_VERSION = "1";
+
   String mapName = null;
 
   static Logger log = Logger.getLogger("ConfigurablePlugin");
@@ -79,7 +81,7 @@ public class ConfigurablePlugin extends BasePlugin {
   }
 
   public String getVersion() {
-    return configurationMap.getString(CM_VERSION_KEY, "UNKNOWN VERSION");
+    return configurationMap.getString(CM_VERSION_KEY, DEFAULT_PLUGIN_VERSION);
   }
 
   public List getAuConfigDescrs() {
