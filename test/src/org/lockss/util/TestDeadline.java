@@ -1,5 +1,5 @@
 /*
- * $Id: TestDeadline.java,v 1.1 2002-11-19 23:49:32 tal Exp $
+ * $Id: TestDeadline.java,v 1.2 2002-11-22 17:46:04 tal Exp $
  */
 
 /*
@@ -102,7 +102,9 @@ public class TestDeadline extends LockssTestCase {
       intr = interruptMeIn(2000);
       Deadline t = Deadline.inRandomRange(450, 550);
       assertTrue(!t.expired());
-      t.sleep();
+      while (!t.expired()) {
+	t.sleep();
+      }
       long delay = TimerUtil.timeSince(start);
       if (delay < 200) {
 	fail("sleep(450, 550) returned early in " + delay);
@@ -133,7 +135,9 @@ public class TestDeadline extends LockssTestCase {
 	  }
 	};
       doer.start();
-      t.sleep();
+      while (!t.expired()) {
+	t.sleep();
+      }
       long delay = TimerUtil.timeSince(start);
       if (delay < 300) {
 	fail("sleep(950, 1050), faster(500) returned early in " + delay);
@@ -161,7 +165,9 @@ public class TestDeadline extends LockssTestCase {
       t.later(300);
       Date start = new Date();
       intr = interruptMeIn(2000);
-      t.sleep();
+      while (!t.expired()) {
+	t.sleep();
+      }
       long delay = TimerUtil.timeSince(start);
       if (delay < 300) {
 	fail("sleep(195, 205), slower(300) returned early in " + delay);
@@ -186,7 +192,9 @@ public class TestDeadline extends LockssTestCase {
       intr = interruptMeIn(2000);
       Deadline t = Deadline.inRandomRange(1450, 1550);
       expr = expireIn(500, t);
-      t.sleep();
+      while (!t.expired()) {
+	t.sleep();
+      }
       long delay = TimerUtil.timeSince(start);
       if (delay < 400) {
 	fail("sleep(1450, 1550) expired early in " + delay);
