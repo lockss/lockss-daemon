@@ -15,6 +15,8 @@ import javax.swing.*;
 
 public class FilterRuleDefiner extends JDialog
     implements ItemListener, EDPEditor {
+  ImageIcon upIcon = new ImageIcon(PluginDefiner.class.getResource("images/Up24.gif"));
+  ImageIcon dnIcon = new ImageIcon(PluginDefiner.class.getResource("images/Down24.gif"));
   static final String STRING_FILTER = "String Filter";
   static final String TAG_FILTER = "Tag Filter";
   static final String WHITE_SPACE_FILTER = "White Space Filter";

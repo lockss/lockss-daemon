@@ -3,7 +3,6 @@ package org.lockss.devtools.plugindef;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-import javax.swing.border.*;
 
 public class Configurator_AboutBox extends JDialog implements ActionListener {
 
@@ -23,12 +22,12 @@ public class Configurator_AboutBox extends JDialog implements ActionListener {
   BorderLayout borderLayout2 = new BorderLayout();
   FlowLayout flowLayout1 = new FlowLayout();
   GridLayout gridLayout1 = new GridLayout();
-  String product = "Definable Plugin Application";
+  String product = "LOCKSS-Definable Plugin Application";
   String version = "Version 1.0 beta 1";
   String copyright = "Copyright (c) 2000-2004" +
       " Board of Trustees of Leland Stanford Jr. University," +
       " all rights reserved.";
-  String comments = "Claire Griffin";
+  String comments = "LOCKSS - Lots of Copies Keep Stuff Safe";
 
   public Configurator_AboutBox(Frame parent) {
     super(parent);
@@ -47,7 +46,7 @@ public class Configurator_AboutBox extends JDialog implements ActionListener {
 
   //Component initialization
   private void jbInit() throws Exception  {
-    image1 = new ImageIcon(PluginDefiner.class.getResource("images/about.png"));
+    image1 = new ImageIcon(PluginDefiner.class.getResource("images/About24.gif"));
     imageLabel.setIcon(image1);
     this.setTitle("About");
     panel1.setLayout(borderLayout1);

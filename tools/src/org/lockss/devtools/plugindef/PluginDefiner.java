@@ -1,5 +1,5 @@
 /*
- * $Id: PluginDefiner.java,v 1.4 2004-06-15 04:14:44 clairegriffin Exp $
+ * $Id: PluginDefiner.java,v 1.5 2004-06-23 22:07:30 clairegriffin Exp $
  */
 
 /*
@@ -39,11 +39,19 @@ import org.lockss.util.*;
 
 public class PluginDefiner extends JFrame {
   JPanel contentPane;
+
+  ImageIcon newIcon = new ImageIcon(PluginDefiner.class.getResource("images/New16.gif"));
+  ImageIcon openIcon = new ImageIcon(PluginDefiner.class.getResource("images/Open16.gif"));
+  ImageIcon saveIcon = new ImageIcon(PluginDefiner.class.getResource("images/Save16.gif"));
+  ImageIcon saveAsIcon = new ImageIcon(PluginDefiner.class.getResource("images/SaveAs16.gif"));
+  ImageIcon cutIcon = new ImageIcon(PluginDefiner.class.getResource("images/Cut16.gif"));
+  ImageIcon copyIcon = new ImageIcon(PluginDefiner.class.getResource("images/Copy16.gif"));
+  ImageIcon pasteIcon = new ImageIcon(PluginDefiner.class.getResource("images/Paste16.gif"));
+  ImageIcon deleteIcon = new ImageIcon(PluginDefiner.class.getResource("images/Delete16.gif"));
+
   JMenuBar jMenuBar1 = new JMenuBar();
   JMenu jMenuFile = new JMenu();
   JMenuItem jMenuFileExit = new JMenuItem();
-  JMenu jMenuHelp = new JMenu();
-  JMenuItem jMenuHelpAbout = new JMenuItem();
   JMenuItem jMenuFileNew = new JMenuItem();
   JMenuItem jMenuFileOpen = new JMenuItem();
   JMenuItem jMenuFileSave = new JMenuItem();
@@ -53,6 +61,9 @@ public class PluginDefiner extends JFrame {
   JMenuItem jMenuEditCopy = new JMenuItem();
   JMenuItem jMenuEditPaste = new JMenuItem();
   JMenuItem jMenuEditDelete = new JMenuItem();
+  JMenu jMenuHelp = new JMenu();
+  JMenuItem jMenuHelpAbout = new JMenuItem();
+
   JFileChooser jFileChooser1 = new JFileChooser();
   { jFileChooser1.setFileFilter(
         new SimpleFileFilter(EditableDefinablePlugin.MAP_SUFFIX));
@@ -89,33 +100,54 @@ public class PluginDefiner extends JFrame {
     this.setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
     this.setSize(new Dimension(380, 320));
     this.setTitle("Plugin Configuration");
+    jMenuFile.setMnemonic('F');
     jMenuFile.setText("File");
-    jMenuFileExit.setText("Exit");
-    jMenuFileExit.addActionListener(new Configurator_jMenuFileExit_ActionAdapter(this));
-    jMenuHelp.setText("Help");
-    jMenuHelpAbout.setText("About");
-    jMenuHelpAbout.addActionListener(new Configurator_jMenuHelpAbout_ActionAdapter(this));
+    jMenuFileNew.setIcon(newIcon);
+    jMenuFileNew.setMnemonic('N');
     jMenuFileNew.setText("New");
     jMenuFileNew.setAccelerator(javax.swing.KeyStroke.getKeyStroke('N', java.awt.event.KeyEvent.CTRL_MASK, false));
     jMenuFileNew.addActionListener(new Configurator_jMenuFileNew_actionAdapter(this));
+    jMenuFileOpen.setIcon(openIcon);
+    jMenuFileOpen.setMnemonic('O');
     jMenuFileOpen.setText("Open...");
     jMenuFileOpen.setAccelerator(javax.swing.KeyStroke.getKeyStroke('O', java.awt.event.KeyEvent.CTRL_MASK, false));
     jMenuFileOpen.addActionListener(new Configurator_jMenuFileOpen_actionAdapter(this));
     jMenuFileSave.setText("Save");
     jMenuFileSave.setActionCommand("Save");
+    jMenuFileSave.setIcon(saveIcon);
+    jMenuFileSave.setMnemonic('S');
     jMenuFileSave.addActionListener(new Configurator_jMenuFileSave_actionAdapter(this));
     jMenuFileSave.setAccelerator(javax.swing.KeyStroke.getKeyStroke('S', java.awt.event.KeyEvent.CTRL_MASK, false));
     jMenuFileSaveAs.setActionCommand("SaveAs");
+    jMenuFileSaveAs.setIcon(saveAsIcon);
+    jMenuFileSaveAs.setMnemonic('A');
     jMenuFileSaveAs.setText("Save as...");
     jMenuFileSaveAs.addActionListener(new Configurator_jMenuFileSave_actionAdapter(this));
+    jMenuFileExit.setMnemonic('X');
+    jMenuFileExit.setText("Exit");
+    jMenuFileExit.addActionListener(new Configurator_jMenuFileExit_ActionAdapter(this));
+    jMenuHelp.setText("Help");
+    jMenuHelpAbout.setText("About");
+    jMenuHelpAbout.addActionListener(new Configurator_jMenuHelpAbout_ActionAdapter(this));
+    jMenuEdit.setMnemonic('E');
     jMenuEdit.setText("Edit");
+    jMenuEditCut.setIcon(cutIcon);
+    jMenuEditCut.setMnemonic('T');
     jMenuEditCut.setText("Cut");
+
     jMenuEditCut.setAccelerator(javax.swing.KeyStroke.getKeyStroke('X', java.awt.event.KeyEvent.CTRL_MASK, false));
+    jMenuEditCopy.setIcon(copyIcon);
+    jMenuEditCopy.setMnemonic('C');
     jMenuEditCopy.setText("Copy");
+
     jMenuEditCopy.setAccelerator(javax.swing.KeyStroke.getKeyStroke('C', java.awt.event.KeyEvent.CTRL_MASK, false));
+    jMenuEditPaste.setIcon(pasteIcon);
+    jMenuEditPaste.setMnemonic('P');
     jMenuEditPaste.setText("Paste");
     jMenuEditPaste.setAccelerator(javax.swing.KeyStroke.getKeyStroke('V', java.awt.event.KeyEvent.CTRL_MASK, false));
+    jMenuEditDelete.setIcon(deleteIcon);
     jMenuEditDelete.setText("Delete");
+
     jTable1.setBorder(BorderFactory.createEtchedBorder());
     jTable1.setMinimumSize(new Dimension(50, 200));
     jTable1.setOpaque(true);
