@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfiguration.java,v 1.5 2002-12-02 22:11:25 tal Exp $
+ * $Id: TestConfiguration.java,v 1.6 2003-01-05 00:46:44 tal Exp $
  */
 
 /*
@@ -53,9 +53,6 @@ public class TestConfiguration extends TestCase {
   public TestConfiguration(String msg) {
     super(msg);
   }
-
-//    public void setUp() {
-//    }
 
   private static final String c1 = "prop1=12\nprop2=foobar\nprop3=true\n" +
     "prop5=False\n"; 
@@ -186,6 +183,11 @@ public class TestConfiguration extends TestCase {
   public static boolean setCurrentConfigFromUrlList(List l) {
     Configuration config = Configuration.readConfig(l);
     return Configuration.installConfig(config);
+  }
+
+  public static boolean setCurrentConfigFromString(String s)
+      throws IOException {
+    return setCurrentConfigFromUrlList(ListUtil.list(FileUtil.urlOfString(s)));
   }
 
   public void testCurrentConfig() throws IOException {
