@@ -1,5 +1,5 @@
 /*
- * $Id: NullLockssManager.java,v 1.1 2003-06-26 01:03:13 eaalto Exp $
+ * $Id: NullLockssManager.java,v 1.2 2004-04-29 10:10:39 tlipkis Exp $
  */
 
 /*
@@ -52,7 +52,7 @@ public class NullLockssManager implements LockssManager {
     throw new UnsupportedOperationException("Unsupported operation.");
   }
 
-  protected LockssDaemon getDaemon() {
+  public LockssDaemon getDaemon() {
     throw new UnsupportedOperationException("Unsupported operation.");
   }
 

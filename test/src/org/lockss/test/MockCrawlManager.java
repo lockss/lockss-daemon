@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawlManager.java,v 1.16 2004-01-13 02:37:42 troberts Exp $
+ * $Id: MockCrawlManager.java,v 1.17 2004-04-29 10:10:40 tlipkis Exp $
  */
 
 /*
@@ -53,6 +53,10 @@ public class MockCrawlManager implements CrawlManager, LockssManager {
   public void stopService() {
     scheduledRepairs = new HashMap();
     scheduledCrawls = new HashMap();
+  }
+
+  public LockssDaemon getDaemon() {
+    throw new UnsupportedOperationException("Not implemented");
   }
 
   public void startRepair(ArchivalUnit au, Collection urls,

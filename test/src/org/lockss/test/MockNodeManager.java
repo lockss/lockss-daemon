@@ -1,5 +1,5 @@
 /*
- * $Id: MockNodeManager.java,v 1.15 2004-02-05 02:18:02 eaalto Exp $
+ * $Id: MockNodeManager.java,v 1.16 2004-04-29 10:10:39 tlipkis Exp $
  */
 
 /*
@@ -61,6 +61,10 @@ public class MockNodeManager implements NodeManager {
 
   public void stopService() {
     logger.debug3("Service stopped");
+  }
+
+  public LockssDaemon getDaemon() {
+    throw new UnsupportedOperationException("Not implemented");
   }
 
   public void setAuConfig(Configuration auConfig) {

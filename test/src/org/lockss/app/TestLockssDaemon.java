@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssDaemon.java,v 1.3 2003-12-23 00:22:27 tlipkis Exp $
+ * $Id: TestLockssDaemon.java,v 1.4 2004-04-29 10:10:40 tlipkis Exp $
  */
 
 /*
@@ -114,6 +114,10 @@ public class TestLockssDaemon extends LockssTestCase {
 
     public void stopService() {
     }
+    public LockssDaemon getDaemon() {
+      throw new UnsupportedOperationException("Not implemented");
+    }
+
     boolean isInited() {
       return isInited;
     }
@@ -240,9 +244,13 @@ public class TestLockssDaemon extends LockssTestCase {
       events.add(new Event(this, "startService"));
     }
   
-  public void stopService() {
+    public void stopService() {
       events.add(new Event(this, "stopService"));
     }
+    public LockssDaemon getDaemon() {
+      throw new UnsupportedOperationException("Not implemented");
+    }
+
     public void setAuConfig(Configuration auConfig) {
       events.add(new Event(this, "setAuConfig", auConfig));
     }

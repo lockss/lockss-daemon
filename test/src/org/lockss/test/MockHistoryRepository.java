@@ -1,5 +1,5 @@
 /*
- * $Id: MockHistoryRepository.java,v 1.9 2004-02-07 06:52:47 eaalto Exp $
+ * $Id: MockHistoryRepository.java,v 1.10 2004-04-29 10:10:40 tlipkis Exp $
  */
 
 /*
@@ -61,6 +61,10 @@ public class MockHistoryRepository implements HistoryRepository {
     theDamagedNodeSet = null;
     storedNodes = new HashMap();
   }
+  public LockssDaemon getDaemon() {
+    throw new UnsupportedOperationException("Not implemented");
+  }
+
   public void setAuConfig(Configuration auConfig) {
   }
 

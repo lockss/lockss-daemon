@@ -1,5 +1,5 @@
 /*
- * $Id: LockssManager.java,v 1.6 2003-12-17 02:09:47 tlipkis Exp $
+ * $Id: LockssManager.java,v 1.7 2004-04-29 10:10:41 tlipkis Exp $
  */
 
 /*
@@ -58,4 +58,8 @@ public interface LockssManager {
    */
   public void stopService();
 
+  /**
+   * Return the daemon instance in which this manager is running
+   */
+  public LockssDaemon getDaemon();
 }

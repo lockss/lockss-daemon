@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.19 2004-04-27 19:36:53 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.20 2004-04-29 10:10:40 tlipkis Exp $
  */
 
 /*
@@ -172,6 +172,9 @@ public class ConfigManager implements LockssManager {
     haveConfig = new OneShotSemaphore();
   }
 
+  public LockssDaemon getDaemon() {
+    return theDaemon;
+  }
   private static ConfigManager theMgr;
 
   public static ConfigManager makeConfigManager() {

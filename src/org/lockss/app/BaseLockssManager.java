@@ -1,5 +1,5 @@
 /*
- * $Id: BaseLockssManager.java,v 1.11 2004-02-23 09:10:02 tlipkis Exp $
+ * $Id: BaseLockssManager.java,v 1.12 2004-04-29 10:10:41 tlipkis Exp $
  */
 
 /*
@@ -82,7 +82,8 @@ public abstract class BaseLockssManager implements LockssManager {
     theManager = null;
   }
 
-  protected LockssDaemon getDaemon() {
+  /** Return the daemon instance in which this manager is running */
+  public LockssDaemon getDaemon() {
     return theDaemon;
   }
 
