@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.57 2004-02-23 09:13:40 tlipkis Exp $
+ * $Id: Configuration.java,v 1.58 2004-02-27 00:19:26 tlipkis Exp $
  */
 
 /*
@@ -51,7 +51,7 @@ public abstract class Configuration {
   /** The common prefix string of all LOCKSS configuration parameters. */
   public static final String PREFIX = "org.lockss.";
 
-  static final String PLATFORM = PREFIX + "platform.";
+  public static final String PLATFORM = PREFIX + "platform.";
 
   // MUST pass in explicit log level to avoid recursive call back to
   // Configuration to get Config log level.  (Others should NOT do this.)
