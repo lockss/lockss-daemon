@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSimulatedContent.java,v 1.52 2004-02-03 02:48:39 eaalto Exp $
+ * $Id: FuncSimulatedContent.java,v 1.53 2004-02-03 03:13:54 troberts Exp $
  */
 
 /*
@@ -34,7 +34,7 @@ import org.lockss.test.*;
 import org.lockss.daemon.*;
 import org.lockss.repository.*;
 import org.lockss.plugin.*;
-import org.lockss.crawler.CrawlerImpl;
+import org.lockss.crawler.NewContentCrawler;
 import org.lockss.state.HistoryRepositoryImpl;
 import junit.framework.*;
 
@@ -158,8 +158,7 @@ public class FuncSimulatedContent extends LockssTestCase {
   private void crawlContent() {
     CrawlSpec spec =
       new CrawlSpec(SimulatedArchivalUnit.SIMULATED_URL_START, null);
-    Crawler crawler =
-      CrawlerImpl.makeNewContentCrawler(sau, spec, new MockAuState());
+    Crawler crawler = new NewContentCrawler(sau, spec, new MockAuState());
     crawler.doCrawl(Deadline.MAX);
   }
 
