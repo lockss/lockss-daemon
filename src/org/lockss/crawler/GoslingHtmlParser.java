@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlParser.java,v 1.1 2004-01-13 00:45:04 troberts Exp $
+ * $Id: GoslingHtmlParser.java,v 1.2 2004-01-17 00:14:59 troberts Exp $
  */
 
 /*
@@ -123,50 +123,48 @@ public class GoslingHtmlParser implements ContentParser {
       throw new IllegalArgumentException("Called with a null set");
     } 
 
-    if (shouldExtractLinksFromCachedUrl(cu)) {
-      String cuStr = cu.getUrl();
-      if (cuStr == null) {
-	logger.error("CachedUrl has null getUrl() value: "+cu);
-	return;
-      }
-
-      InputStream is = cu.openForReading();
-      // set the reader to our default encoding
-      //XXX try to extract encoding from source
-      Reader reader = new InputStreamReader(is, Constants.DEFAULT_ENCODING); //should do this elsewhere
-      URL srcUrl = new URL(cuStr);
-      logger.debug2("Extracting urls from srcUrl");
-      String nextUrl = null;
-      while ((nextUrl = extractNextLink(reader, srcUrl)) != null) {
-	logger.debug2("Extracted "+nextUrl);
-
-	//should check if this is something we should cache first
-	if (!set.contains(nextUrl)
-	    && cb.shouldCacheUrl(nextUrl)) {
-	  set.add(nextUrl);
-	}
+    String cuStr = cu.getUrl();
+    if (cuStr == null) {
+      logger.error("CachedUrl has null getUrl() value: "+cu);
+      return;
+    }
+    
+    InputStream is = cu.openForReading();
+    // set the reader to our default encoding
+    //XXX try to extract encoding from source
+    Reader reader = new InputStreamReader(is, Constants.DEFAULT_ENCODING); //should do this elsewhere
+    URL srcUrl = new URL(cuStr);
+    logger.debug2("Extracting urls from srcUrl");
+    String nextUrl = null;
+    while ((nextUrl = extractNextLink(reader, srcUrl)) != null) {
+      logger.debug2("Extracted "+nextUrl);
+      
+      //should check if this is something we should cache first
+      if (!set.contains(nextUrl)
+	  && (cb == null || cb.shouldCacheUrl(nextUrl))) {
+	set.add(nextUrl);
       }
     }
   }
 
-  protected static boolean shouldExtractLinksFromCachedUrl(CachedUrl cu) {
-    boolean returnVal = false;
-    Properties props = cu.getProperties();
-    if (props != null) {
-      String contentType = props.getProperty("content-type");
-      if (contentType != null) {
-	//XXX check if the string starts with this
-	returnVal = contentType.toLowerCase().startsWith("text/html");
-      }
-    }
-    if (returnVal) {
-      logger.debug2("I should try to extract links from "+cu);
-    } else {
-      logger.debug2("I shouldn't try to extract links from "+cu);
-    }
+//   protected static boolean shouldExtractLinksFromCachedUrl(CachedUrl cu) {
+//     boolean returnVal = false;
+//     Properties props = cu.getProperties();
+//     if (props != null) {
+//       String contentType = props.getProperty("content-type");
+//       if (contentType != null) {
+// 	//XXX check if the string starts with this
+// 	returnVal = contentType.toLowerCase().startsWith("text/html");
+//       }
+//     }
+//     if (returnVal) {
+//       logger.debug2("I should try to extract links from "+cu);
+//     } else {
+//       logger.debug2("I shouldn't try to extract links from "+cu);
+//     }
 
-    return returnVal;
-  }
+//     return returnVal;
+//   }
 
 
   /**
