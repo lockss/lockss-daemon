@@ -1,5 +1,5 @@
 /*
- * $Id: HashSvcSchedImpl.java,v 1.3 2003-11-13 11:16:16 tlipkis Exp $
+ * $Id: HashSvcSchedImpl.java,v 1.3.2.1 2003-11-17 22:48:27 tlipkis Exp $
  */
 
 /*
@@ -238,6 +238,7 @@ public class HashSvcSchedImpl
     int sched;
     int finish;
     long bytesHashed = 0;
+    long unaccountedBytesHashed = 0;
 
     HashTask(CachedUrlSet urlset,
 	     MessageDigest hasher,
@@ -270,6 +271,7 @@ public class HashSvcSchedImpl
       try {
 	int res = urlsetHasher.hashStep(hashStepBytes);
 	bytesHashed += res;
+	unaccountedBytesHashed += res;
 	return res;
       } catch (Exception e) {
 	log.error("Hash callback threw", e);
@@ -277,15 +279,19 @@ public class HashSvcSchedImpl
       }
     }
 
+    protected void updateStats() {
+      totalTime += unaccountedTime;
+      totalBytesHashed =
+	totalBytesHashed.add(BigInteger.valueOf(unaccountedBytesHashed));
+      unaccountedBytesHashed = 0;
+      super.updateStats();
+     }
+
     public boolean isFinished() {
       return super.isFinished() || urlsetHasher.finished();
     }
 
     private void doFinished() {
-      // tk - find a way to update these after each (set of) step(s)
-      totalBytesHashed =
-	totalBytesHashed.add(BigInteger.valueOf(bytesHashed));
-      totalTime += getTimeUsed();
       try {
 	if (type == HashService.CONTENT_HASH) {
 	  // tk - change interface to tell CUS what type of hash finished
