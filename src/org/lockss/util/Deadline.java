@@ -1,5 +1,5 @@
 /*
- * $Id: Deadline.java,v 1.29 2003-11-11 20:25:30 tlipkis Exp $
+ * $Id: Deadline.java,v 1.30 2004-01-12 05:40:47 tlipkis Exp $
  */
 
 /*
@@ -436,9 +436,8 @@ public class Deadline implements Comparable {
     return expiration.hashCode();
   }
 
-  // tk - should include "+n days" or some such
-  private static final DateFormat df1 = new SimpleDateFormat("HH:mm:ss");
-  private static final DateFormat df = DateFormat.getTimeInstance();
+  private static final DateFormat dfsec = new SimpleDateFormat("HH:mm:ss");
+  private static final DateFormat dfms = new SimpleDateFormat("HH:mm:ss.SSS");
 
   public String toString() {
     if (expiration.getTime() == TimeBase.MAX) {
@@ -454,24 +453,41 @@ public class Deadline implements Comparable {
       sb.append("sim ");
       sb.append(expiration.getTime());
     } else {
-      sb.append(df1.format(expiration));
+      sb.append(dfsec.format(expiration));
     }
     sb.append("]");
     return sb.toString();
   }
 
   public String shortString() {
-    if (expiration.getTime() == TimeBase.MAX) {
+    long expMs = getExpirationTime();
+    if (expMs == TimeBase.MAX) {
       return "never";
     }
-    boolean isSim = TimeBase.isSimulated();
-    StringBuffer sb = new StringBuffer();
-    if (isSim) {
-      sb.append(expiration.getTime());
+    if (TimeBase.isSimulated()) {
+      return Long.toString(expMs);
     } else {
-      sb.append(df1.format(expiration));
+      StringBuffer sb = new StringBuffer();
+      long nowMs = TimeBase.nowMs();
+      long fromNow = expMs - nowMs;
+      long dayDiff = (expMs / Constants.DAY) - (nowMs / Constants.DAY);
+      if (fromNow >= (-2 * Constants.SECOND) &&
+	  fromNow <= (2 * Constants.SECOND)) {
+	sb.append(dfms.format(expiration));
+      } else {
+	sb.append(dfsec.format(expiration));
+      }
+      if (dayDiff > 0) {
+	sb.append("+");
+	sb.append(dayDiff);
+	sb.append("D");
+      } else if	(dayDiff < 0) {
+	sb.append("-");
+	sb.append(-dayDiff);
+	sb.append("D");
+      } 
+      return sb.toString();
     }
-    return sb.toString();
   }
 
   /**
