@@ -1,5 +1,5 @@
 /*
- * $Id: AuState.java,v 1.6 2003-02-28 22:20:07 aalto Exp $
+ * $Id: AuState.java,v 1.7 2003-03-01 02:01:24 aalto Exp $
  */
 
 /*
@@ -43,11 +43,14 @@ public class AuState {
   protected ArchivalUnit au;
   protected long lastCrawlTime;
   protected long lastTopLevelPoll;
+  protected long lastTreeWalk;
 
-  protected AuState(ArchivalUnit au, long lastCrawlTime, long lastTopLevelPoll) {
+  protected AuState(ArchivalUnit au, long lastCrawlTime, long lastTopLevelPoll,
+                    long lastTreeWalk) {
     this.au = au;
     this.lastCrawlTime = lastCrawlTime;
     this.lastTopLevelPoll = lastTopLevelPoll;
+    this.lastTreeWalk = lastTreeWalk;
   }
 
   /**
@@ -75,6 +78,14 @@ public class AuState {
   }
 
   /**
+   * Returns the last treewalk time for the au.
+   * @return the last treewalk time in ms
+   */
+  public long getLastTreeWalkTime() {
+    return lastTreeWalk;
+  }
+
+  /**
    * Sets the last crawl time to the current time.
    */
   void newCrawlFinished() {
@@ -87,6 +98,14 @@ public class AuState {
   void newPollFinished() {
     lastTopLevelPoll = TimeBase.nowMs();
   }
+
+  /**
+   * Sets the last treewalk time to the current time.
+   */
+  void treeWalkFinished() {
+    lastTreeWalk = TimeBase.nowMs();
+  }
+
 
   public String toString() {
     StringBuffer sb = new StringBuffer();

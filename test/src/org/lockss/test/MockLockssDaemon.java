@@ -19,7 +19,7 @@ public class MockLockssDaemon
   LcapComm commManager = null;
   LockssRepository lockssRepository = null;
   HistoryRepository historyRepository = null;
-  NodeManager nodeManager = null;
+  NodeManagerService nodeManagerService = null;
   ProxyHandler proxyHandler = null;
   CrawlManager crawlManager = null;
   PluginManager pluginManager = null;
@@ -38,7 +38,7 @@ public class MockLockssDaemon
     commManager = null;
     lockssRepository = null;
     historyRepository = null;
-    nodeManager = null;
+    nodeManagerService = null;
     proxyHandler = null;
     crawlManager = null;
     pluginManager = null;
@@ -141,17 +141,17 @@ public class MockLockssDaemon
    * @return the NodeManager
    */
   public NodeManager getNodeManager(ArchivalUnit au) {
-    if (nodeManager == null) {
-      NodeManagerImpl impl = new NodeManagerImpl();
+    if (nodeManagerService == null) {
+      NodeManagerService nms = new NodeManagerService();
       try {
-        impl.initService(this);
+        nms.initService(this);
       }
       catch (LockssDaemonException ex) {
       }
-      nodeManager = impl;
-      theManagers.put(LockssDaemon.NODE_MANAGER, nodeManager);
+      nodeManagerService = nms;
+      theManagers.put(LockssDaemon.NODE_MANAGER_SERVICE, nodeManagerService);
     }
-    return nodeManager.managerFactory(au);
+    return nodeManagerService.managerFactory(au);
   }
 
   /**
@@ -280,11 +280,11 @@ public class MockLockssDaemon
 
   /**
    * Set the NodeManager
-   * @param nodeMan the new manager
+   * @param nodeManService the new manager
    */
-  public void setNodeManager(NodeManager nodeMan) {
-    nodeManager = nodeMan;
-    theManagers.put(LockssDaemon.NODE_MANAGER, nodeManager);
+  public void setNodeManagerService(NodeManagerService nodeManService) {
+    nodeManagerService = nodeManService;
+    theManagers.put(LockssDaemon.NODE_MANAGER_SERVICE, nodeManagerService);
   }
 
   /**

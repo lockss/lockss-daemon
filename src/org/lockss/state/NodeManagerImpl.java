@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.42 2003-02-28 22:20:07 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.43 2003-03-01 02:01:24 aalto Exp $
  */
 
 /*
@@ -54,7 +54,7 @@ import org.lockss.plugin.*;
 /**
  * Implementation of the NodeManager.
  */
-public class NodeManagerImpl implements NodeManager, LockssManager {
+public class NodeManagerImpl implements NodeManager {
   /**
    * Configuration parameter name for duration, in ms, for which the treewalk
    * test should run.
@@ -62,6 +62,13 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
   public static final String PARAM_TREEWALK_TEST_DURATION =
       Configuration.PREFIX + "treewalk.test.duration";
   static final int DEFAULT_TREEWALK_TEST_DURATION = 1000;
+
+  /**
+   * Configuration parameter name for interval, in ms, between treewalks.
+   */
+  public static final String PARAM_TREEWALK_INTERVAL =
+      Configuration.PREFIX + "treewalk.interval";
+  static final int DEFAULT_TREEWALK_INTERVAL = 14*24*60*60*1000; //2 weeks
 
   /**
    * Configuration parameter name for default interval, in ms, after which
@@ -73,18 +80,22 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
 
   private static LockssDaemon theDaemon;
   private static NodeManager theManager = null;
-  private static NodeManager nodeManager = null;
   static HistoryRepository repository;
-  private static HashMap auMaps = new HashMap();
-  private static HashMap auEstimateMap = new HashMap();
   private static CrawlManager theCrawlManager = null;
+  private static HashMap auEstimateMap = new HashMap();
+  static long treeWalkInterval;
+  static long topPollInterval;
+  static long treeWalkTestDuration;
 
   private ArchivalUnit managerAu;
   private AuState auState;
   private TreeMap nodeMap = new TreeMap();
   private static Logger logger = Logger.getLogger("NodeManager");
+  TreeWalkThread treeWalkThread;
 
-  public NodeManagerImpl() { }
+  NodeManagerImpl(ArchivalUnit au) {
+    managerAu = au;
+  }
 
   /**
    * init the plugin manager.
@@ -96,8 +107,17 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
     if (theManager == null) {
       theDaemon = daemon;
       theManager = this;
-    }
-    else {
+      theCrawlManager = theDaemon.getCrawlManager();
+      repository = theDaemon.getHistoryRepository();
+      loadStateTree();
+
+      treeWalkInterval = Configuration.getIntParam(
+          PARAM_TREEWALK_INTERVAL, DEFAULT_TREEWALK_INTERVAL);
+      topPollInterval = Configuration.getIntParam(
+          PARAM_TOP_LEVEL_POLL_INTERVAL, DEFAULT_TOP_LEVEL_POLL_INTERVAL);
+      treeWalkTestDuration = Configuration.getIntParam(
+          PARAM_TREEWALK_TEST_DURATION, DEFAULT_TREEWALK_TEST_DURATION);
+    } else {
       throw new LockssDaemonException("Multiple Instantiation.");
     }
   }
@@ -107,8 +127,17 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
    * @see org.lockss.app.LockssManager#startService()
    */
   public void startService() {
-    theCrawlManager = theDaemon.getCrawlManager();
-    repository = theDaemon.getHistoryRepository();
+    Configuration.registerConfigurationCallback(new Configuration.Callback() {
+      public void configurationChanged(Configuration oldConfig,
+                                       Configuration newConfig,
+                                       Set changedKeys) {
+        setConfig(newConfig, oldConfig);
+      }
+    });
+
+    treeWalkThread = new TreeWalkThread(managerAu.getPluginId() + ":" +
+                                        managerAu.getAUId() + ":TreeWalkThread",
+                                        getAuState().getLastTreeWalkTime());
   }
 
   /**
@@ -117,27 +146,19 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
    */
   public void stopService() {
     // checkpoint here
-
+    if (treeWalkThread!=null) {
+      treeWalkThread.interrupt();
+    }
     theManager = null;
   }
 
-  /**
-   * Factory method to retrieve NodeManager.
-   * @param au the ArchivalUnit being managed
-   * @return the current NodeManager
-   */
-  public synchronized NodeManager managerFactory(ArchivalUnit au) {
-    nodeManager = (NodeManager)auMaps.get(au);
-    if (nodeManager==null) {
-      nodeManager = new NodeManagerImpl(au);
-      auMaps.put(au, nodeManager);
-    }
-    return nodeManager;
-  }
-
-  NodeManagerImpl(ArchivalUnit au) {
-    managerAu = au;
-    loadStateTree();
+  private void setConfig(Configuration config, Configuration oldConfig) {
+    treeWalkInterval = Configuration.getIntParam(
+        PARAM_TREEWALK_INTERVAL, DEFAULT_TREEWALK_INTERVAL);
+    topPollInterval = Configuration.getIntParam(
+        PARAM_TOP_LEVEL_POLL_INTERVAL, DEFAULT_TOP_LEVEL_POLL_INTERVAL);
+    treeWalkTestDuration = Configuration.getIntParam(
+        PARAM_TREEWALK_TEST_DURATION, DEFAULT_TREEWALK_TEST_DURATION);
   }
 
   public void startPoll(CachedUrlSet cus, Poll.VoteTally state) {
@@ -256,12 +277,9 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
       // this is not a fake walk; it functionally walks part of the tree
       long timeTaken = 0;
       int nodesWalked = 0;
-      int walkDuration =
-          Configuration.getIntParam(PARAM_TREEWALK_TEST_DURATION,
-                                    DEFAULT_TREEWALK_TEST_DURATION);
       long startTime = TimeBase.nowMs();
       Iterator nodesIt = nodeMap.values().iterator();
-      Deadline deadline = Deadline.in(walkDuration);
+      Deadline deadline = Deadline.in(treeWalkTestDuration);
       while (!deadline.expired() && nodesIt.hasNext()) {
         walkNodeState((NodeState)nodesIt.next());
         nodesWalked++;
@@ -289,14 +307,11 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
   void doTreeWalk() {
     if (theCrawlManager.canTreeWalkStart(managerAu,
 					 getAuState(), null, null)) {
-      long pollInterval =
-	Configuration.getIntParam(PARAM_TOP_LEVEL_POLL_INTERVAL,
-				  DEFAULT_TOP_LEVEL_POLL_INTERVAL);
       long startTime = TimeBase.nowMs();
       // if it's been too long, start a top level poll
       //XXX ask the Plugin
       if ((startTime - getAuState().getLastTopLevelPollTime())
-	  > pollInterval) {
+	  > topPollInterval) {
         callTopLevelPoll();
       } else {
         nodeTreeWalk(nodeMap);
@@ -304,6 +319,9 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
         updateEstimate(elapsedTime);
       }
     }
+    //alert the thread and set the AuState
+    getAuState().treeWalkFinished();
+
   }
 
   void updateEstimate(long elapsedTime) {
@@ -679,7 +697,7 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
     return set;
   }
 
-  static class ContentRepairCallback  implements CrawlManager.Callback {
+  static class ContentRepairCallback implements CrawlManager.Callback {
     /**
      * @param success whether the repair was successful or not
      * @param cookie object used by callback to designate which repair
@@ -688,7 +706,49 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
     public void signalCrawlAttemptCompleted(boolean success, Object cookie) {
       theDaemon.getPollManager().resumePoll(success, cookie);
     }
-
   }
 
+  /**
+   * The thread which runs the treeWalk().
+   */
+  class TreeWalkThread extends Thread {
+    long lastRun;
+    boolean treeWalkRunning = false;
+
+    private TreeWalkThread(String name, long lastRun) {
+      super(name);
+      this.lastRun = lastRun;
+    }
+
+    public void run() {
+      try {
+        while (true) {
+          // if it's been more than the treeWalkInterval
+          long curInterval = TimeBase.nowMs() - lastRun;
+          if (curInterval > treeWalkInterval) {
+            // if there's no treewalk running
+            if (!treeWalkRunning) {
+              treeWalkRunning = true;
+              doTreeWalk();
+            } else {
+              // sleep for the same interval again
+              // this should gradually lengthen if the treewalk
+              // is taking forever
+              sleep(curInterval);
+            }
+          } else {
+            // sleep until it's time for the next treewalk
+            sleep(treeWalkInterval-curInterval);
+          }
+        }
+      } catch (Exception e) {
+        logger.error("Unexpected exception caught in treewalk thread", e);
+      }
+    }
+
+    public void treeWalkFinished() {
+      treeWalkRunning = false;
+      lastRun = getAuState().getLastTreeWalkTime();
+    }
+  }
 }

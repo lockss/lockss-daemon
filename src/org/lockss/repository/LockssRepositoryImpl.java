@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.20 2003-02-28 22:20:07 aalto Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.21 2003-03-01 02:01:24 aalto Exp $
  */
 
 /*
@@ -52,7 +52,7 @@ import org.apache.commons.collections.ReferenceMap;
  * finalized (they go to null when the last hard reference is gone, then are
  * removed from the cache on finalize()).
  */
-public class LockssRepositoryImpl implements LockssRepository, LockssManager {
+public class LockssRepositoryImpl implements LockssRepository {
   /**
    * Configuration parameter name for Lockss cache location.
    */
@@ -105,11 +105,10 @@ public class LockssRepositoryImpl implements LockssRepository, LockssManager {
    * @see org.lockss.app.LockssManager#initService(LockssDaemon daemon)
    */
   public void initService(LockssDaemon daemon) throws LockssDaemonException {
-    if(theRepository == null) {
+    if (theRepository == null) {
       theDaemon = daemon;
       theRepository = this;
-    }
-    else {
+    } else {
       throw new LockssDaemonException("Multiple Instantiation.");
     }
   }
@@ -119,6 +118,13 @@ public class LockssRepositoryImpl implements LockssRepository, LockssManager {
    * @see org.lockss.app.LockssManager#startService()
    */
   public void startService() {
+    Configuration.registerConfigurationCallback(new Configuration.Callback() {
+        public void configurationChanged(Configuration oldConfig,
+                                         Configuration newConfig,
+                                         Set changedKeys) {
+          setConfig(newConfig, oldConfig);
+        }
+      });
   }
 
   /**
@@ -126,9 +132,15 @@ public class LockssRepositoryImpl implements LockssRepository, LockssManager {
    * @see org.lockss.app.LockssManager#stopService()
    */
   public void stopService() {
-    // TODO: checkpoint here.
-
+    //XXX checkpoint here.
     theRepository = null;
+  }
+
+  private void setConfig(Configuration config, Configuration oldConfig) {
+    String cacheLoc = config.get(PARAM_CACHE_LOCATION);
+    if (cacheLoc!=null) {
+      rootLocation = extendCacheLocation(cacheLoc);
+    }
   }
 
   public RepositoryNode getNode(String url)
@@ -212,7 +224,7 @@ public class LockssRepositoryImpl implements LockssRepository, LockssManager {
       nodeLocation = rootLocation;
       node = new AuNodeImpl(url, nodeLocation, this);
     } else {
-      nodeLocation = FileLocationUtil.mapUrlToFileLocation(rootLocation, url);
+      nodeLocation = RepositoryLocationUtil.mapUrlToFileLocation(rootLocation, url);
       node = new RepositoryNodeImpl(url, nodeLocation, this);
     }
     if (!create) {
@@ -236,7 +248,7 @@ public class LockssRepositoryImpl implements LockssRepository, LockssManager {
   /**
    * Removes a weak reference from the reference map.  Called by finalize()
    * of {@link RepositoryNodeImpl}.
-   * @param url the reference key url
+   * @param urlKey the reference key url
    */
   synchronized void removeReference(String urlKey) {
     refMap.remove(urlKey);
@@ -254,20 +266,24 @@ public class LockssRepositoryImpl implements LockssRepository, LockssManager {
         logger.error("Couldn't get "+PARAM_CACHE_LOCATION+" from Configuration");
         throw new LockssRepository.RepositoryStateException("Couldn't load param.");
       }
-      StringBuffer buffer = new StringBuffer(baseDir);
-      if (!baseDir.endsWith(File.separator)) {
-        buffer.append(File.separator);
-      }
-      buffer.append(CACHE_ROOT_NAME);
-      buffer.append(File.separator);
-      baseDir = buffer.toString();
+      baseDir = extendCacheLocation(baseDir);
     }
     LockssRepository repo = (LockssRepository)repoMap.get(au);
     if (repo==null) {
       repo = new LockssRepositoryImpl(
-          FileLocationUtil.mapAuToFileLocation(baseDir, au), au);
+          RepositoryLocationUtil.mapAuToFileLocation(baseDir, au), au);
       repoMap.put(au, repo);
     }
     return repo;
+  }
+
+  private static String extendCacheLocation(String cacheDir) {
+    StringBuffer buffer = new StringBuffer(cacheDir);
+    if (!cacheDir.endsWith(File.separator)) {
+      buffer.append(File.separator);
+    }
+    buffer.append(CACHE_ROOT_NAME);
+    buffer.append(File.separator);
+    return buffer.toString();
   }
 }

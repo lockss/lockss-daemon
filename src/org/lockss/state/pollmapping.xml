@@ -79,5 +79,9 @@
                        type="long">
                         <bind-xml name="LastPollTime" node="element"/>
                 </field>
+                <field name="lastTreeWalkTime"
+                       type="long">
+                        <bind-xml name="LastTreeWalkTime" node="element"/>
+                </field>
         </class>
 </mapping>

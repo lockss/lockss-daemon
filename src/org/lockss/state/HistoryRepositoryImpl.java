@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.12 2003-02-26 03:06:21 aalto Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.13 2003-03-01 02:01:24 aalto Exp $
  */
 
 /*
@@ -187,12 +187,14 @@ public class HistoryRepositoryImpl implements HistoryRepository, LockssManager {
       File auFile = new File(getAuLocation(au) + File.separator + AU_FILE_NAME);
       if (!auFile.exists()) {
         logger.warning("No au file found.");
-        return new AuState(au, -1, -1);
+        return new AuState(au, -1, -1, -1);
       }
       Unmarshaller unmarshaller = new Unmarshaller(AuStateBean.class);
       unmarshaller.setMapping(getMapping());
       AuStateBean asb = (AuStateBean)unmarshaller.unmarshal(new FileReader(auFile));
-      return new AuState(au, asb.getLastCrawlTime(), asb.getLastTopLevelPollTime());
+      return new AuState(au, asb.getLastCrawlTime(),
+                         asb.getLastTopLevelPollTime(),
+                         asb.getLastTreeWalkTime());
     } catch (Exception e) {
       logger.error("Couldn't load au state: ", e);
       throw new LockssRepository.RepositoryStateException("Couldn't load au state.");
@@ -218,13 +220,13 @@ public class HistoryRepositoryImpl implements HistoryRepository, LockssManager {
     }
     buffer.append(HISTORY_ROOT_NAME);
     buffer.append(File.separator);
-    String auLoc = FileLocationUtil.mapAuToFileLocation(buffer.toString(),
+    String auLoc = RepositoryLocationUtil.mapAuToFileLocation(buffer.toString(),
         cus.getArchivalUnit());
     String urlStr = (String)cus.getUrl();
     if (AuUrl.isAuUrl(urlStr)) {
       return auLoc;
     } else {
-      return FileLocationUtil.mapUrlToFileLocation(auLoc, urlStr);
+      return RepositoryLocationUtil.mapUrlToFileLocation(auLoc, urlStr);
     }
   }
 
@@ -235,7 +237,7 @@ public class HistoryRepositoryImpl implements HistoryRepository, LockssManager {
     }
     buffer.append(HISTORY_ROOT_NAME);
     buffer.append(File.separator);
-    return FileLocationUtil.mapAuToFileLocation(buffer.toString(), au);
+    return RepositoryLocationUtil.mapAuToFileLocation(buffer.toString(), au);
   }
 
   protected Mapping getMapping() throws Exception {

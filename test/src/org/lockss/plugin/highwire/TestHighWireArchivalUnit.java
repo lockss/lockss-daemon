@@ -123,7 +123,7 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
     ArchivalUnit hwAu =
       makeAU(new URL("http://shadow1.stanford.edu/"), 322);
 
-    AuState aus = new MockAuState(null, TimeBase.nowMs(), -1);
+    AuState aus = new MockAuState(null, TimeBase.nowMs(), -1, -1);
 
     assertTrue(!hwAu.shouldCrawlForNewContent(aus));
   }
@@ -132,7 +132,7 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
     ArchivalUnit hwAu =
       makeAU(new URL("http://shadow1.stanford.edu/"), 322);
 
-    AuState aus = new MockAuState(null, 0, -1);
+    AuState aus = new MockAuState(null, 0, -1, -1);
 
     assertTrue(hwAu.shouldCrawlForNewContent(aus));
   }
@@ -141,7 +141,7 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
     ArchivalUnit hwAu =
       makeAU(new URL("http://shadow1.stanford.edu/"), 322);
 
-    AuState aus = new MockAuState(null, 4 * WEEK_MS, -1);
+    AuState aus = new MockAuState(null, 4 * WEEK_MS, -1, -1);
 
     assertTrue(hwAu.shouldCrawlForNewContent(aus));
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: MockAuState.java,v 1.4 2003-02-27 21:14:25 troberts Exp $
+ * $Id: MockAuState.java,v 1.5 2003-03-01 02:01:23 aalto Exp $
  */
 
 /*
@@ -42,15 +42,16 @@ import org.lockss.plugin.ArchivalUnit;
 public class MockAuState extends AuState {
 
   public MockAuState(ArchivalUnit au) {
-    this(au, -1, -1);
+    this(au, -1, -1, -1);
   }
 
   public MockAuState() {
     this(null);
   }
 
-  public MockAuState(ArchivalUnit au, long lastCrawlTime, long lastPollTime) {
-    super(au, lastCrawlTime, lastPollTime);
+  public MockAuState(ArchivalUnit au, long lastCrawlTime, long lastPollTime,
+                     long lastTreeWalk) {
+    super(au, lastCrawlTime, lastPollTime, lastTreeWalk);
   }
 
   public void setLastCrawlTime(long newCrawlTime) {
@@ -61,6 +62,9 @@ public class MockAuState extends AuState {
     lastTopLevelPoll = newPollTime;
   }
 
+  public void setLastTreeWalkTime(long newTreeWalkTime) {
+    lastTreeWalk = newTreeWalkTime;
+  }
 
 
 }

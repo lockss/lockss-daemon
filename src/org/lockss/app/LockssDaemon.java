@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.8 2003-02-25 03:13:46 claire Exp $
+ * $Id: LockssDaemon.java,v 1.9 2003-03-01 02:01:24 aalto Exp $
  */
 
 /*
@@ -63,7 +63,7 @@ public class LockssDaemon {
   public static String POLL_MANAGER = "PollManager";
   public static String LOCKSS_REPOSITORY = "LockssRepository";
   public static String HISTORY_REPOSITORY = "HistoryRepository";
-  public static String NODE_MANAGER = "NodeManager";
+  public static String NODE_MANAGER_SERVICE = "NodeManagerService";
   public static String PROXY_HANDLER = "ProxyHandler";
 
   /* the default classes that represent our managers */
@@ -71,14 +71,17 @@ public class LockssDaemon {
   private static String DEFAULT_COMM_MANAGER = "org.lockss.protocol.LcapComm";
   private static String DEFAULT_IDENTITY_MANAGER
       = "org.lockss.protocol.IdentityManager";
-  private static String DEFAULT_CRAWL_MANAGER = "org.lockss.crawler.CrawlManagerImpl";
-  private static String DEFAULT_PLUGIN_MANAGER = "org.lockss.plugin.PluginManager";
+  private static String DEFAULT_CRAWL_MANAGER =
+      "org.lockss.crawler.CrawlManagerImpl";
+  private static String DEFAULT_PLUGIN_MANAGER =
+      "org.lockss.plugin.PluginManager";
   private static String DEFAULT_POLL_MANAGER = "org.lockss.poller.PollManager";
   private static String DEFAULT_LOCKSS_REPOSITORY
       = "org.lockss.repository.LockssRepositoryImpl";
   private static String DEFAULT_HISTORY_REPOSITORY
       = "org.lockss.state.HistoryRepositoryImpl";
-  private static String DEFAULT_NODE_MANAGER = "org.lockss.state.NodeManagerImpl";
+  private static String DEFAULT_NODE_MANAGER_SERVICE =
+      "org.lockss.state.NodeManagerService";
   private static String DEFAULT_PROXY_HANDLER = "org.lockss.proxy.ProxyHandler";
 
 
@@ -104,7 +107,7 @@ public class LockssDaemon {
     new ManagerDesc(POLL_MANAGER, DEFAULT_POLL_MANAGER),
     new ManagerDesc(LOCKSS_REPOSITORY, DEFAULT_LOCKSS_REPOSITORY),
     new ManagerDesc(HISTORY_REPOSITORY, DEFAULT_HISTORY_REPOSITORY),
-    new ManagerDesc(NODE_MANAGER, DEFAULT_NODE_MANAGER),
+    new ManagerDesc(NODE_MANAGER_SERVICE, DEFAULT_NODE_MANAGER_SERVICE),
     new ManagerDesc(CRAWL_MANAGER, DEFAULT_CRAWL_MANAGER),
     new ManagerDesc(PROXY_HANDLER, DEFAULT_PROXY_HANDLER),
     // PluginManager must be last
@@ -212,8 +215,9 @@ public class LockssDaemon {
    * @throws IllegalArgumentException if the manager is not available.
    */
   public NodeManager getNodeManager(ArchivalUnit au) {
-    NodeManager nodeMan = (NodeManager)getManager(NODE_MANAGER);
-    return nodeMan.managerFactory(au);
+    NodeManagerService nms = (NodeManagerService)getManager(
+        NODE_MANAGER_SERVICE);
+    return nms.managerFactory(au);
   }
 
   /**

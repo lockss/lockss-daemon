@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.31 2003-02-27 04:04:28 tal Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.32 2003-03-01 02:01:23 aalto Exp $
  */
 
 /*
@@ -39,8 +39,7 @@ import org.lockss.hasher.HashService;
 import org.lockss.plugin.*;
 import org.lockss.plugin.AuUrl;
 
-public class TestNodeManagerImpl
-    extends LockssTestCase {
+public class TestNodeManagerImpl extends LockssTestCase {
   public static final String TEST_URL = "http://www.example.com";
   private static Logger log = Logger.getLogger("TestNMI");
   private String tempDirPath;
@@ -74,9 +73,9 @@ public class TestNodeManagerImpl
 
     nodeManager = new NodeManagerImpl(mau);
     nodeManager.initService(theDaemon);
-    pollManager.initService(theDaemon);
-    nodeManager.startService();
     nodeManager.repository = new HistoryRepositoryImpl(tempDirPath);
+    // don't start nodemanager service because of treewalk thread
+    pollManager.initService(theDaemon);
   }
 
   public void tearDown() throws Exception {
@@ -89,14 +88,15 @@ public class TestNodeManagerImpl
   }
 
   public void testManagerFactory() {
+    NodeManagerService nms = new NodeManagerService();
     String auId = mau.getAUId();
-    NodeManager node1 = nodeManager.managerFactory(mau);
+    NodeManager node1 = nms.managerFactory(mau);
     assertNotNull(node1);
     mau.setAuId(auId + "test");
-    NodeManager node2 = nodeManager.managerFactory(mau);
+    NodeManager node2 = nms.managerFactory(mau);
     assertTrue(node1 != node2);
     mau.setAuId(auId);
-    node2 = nodeManager.managerFactory(mau);
+    node2 = nms.managerFactory(mau);
     assertEquals(node1, node2);
   }
 
@@ -282,6 +282,37 @@ public class TestNodeManagerImpl
     assertTrue(crawlMan.getAuStatus(mau)==MockCrawlManager.SCHEDULED);
 
     pollMan.stopService();
+    crawlMan.stopService();
+  }
+
+  public void testTreeWalkThread() throws Exception {
+    MockCrawlManager crawlMan = (MockCrawlManager)theDaemon.getCrawlManager();
+    crawlMan.startService();
+
+    assertTrue(nodeManager.treeWalkThread == null);
+    AuState auState = nodeManager.getAuState();
+
+    // should start thread, but thread should sleep
+    auState.lastTreeWalk = TimeBase.nowMs();
+    nodeManager.startService();
+    NodeManagerImpl.TreeWalkThread thread = nodeManager.treeWalkThread;
+    assertNotNull(thread);
+    assertTrue(!thread.treeWalkRunning);
+    assertEquals(auState.lastTreeWalk, thread.lastRun);
+
+    nodeManager.stopService();
+/*
+    assertTrue(thread.isInterrupted());
+
+    // the thread should trigger a treewalk, and the treewalk should
+    // trigger a crawl scheduled
+    auState.lastTreeWalk = -123;
+    auState.lastCrawlTime = -123;
+    nodeManager.startService();
+
+    assertTrue(crawlMan.getAuStatus(mau)==MockCrawlManager.SCHEDULED);
+*/
+    nodeManager.stopService();
     crawlMan.stopService();
   }
 
@@ -495,16 +526,17 @@ public class TestNodeManagerImpl
   public void testHandleAuContentPoll() throws Exception {
     theDaemon.getHashService().startService();
     theDaemon.getPollManager().startService();
+    nodeManager.stopService();
 
     // have to change the AUCUS for the MockArchivalUnit here
     // to properly test handling AuNode content polls
-    String auUrl = AuUrl.PROTOCOL_COLON + "//test";
+    String auUrl = AuUrl.PROTOCOL_COLON;
     MockCachedUrlSet mcus = (MockCachedUrlSet)getCUS(auUrl);
     mcus.setFlatIterator((new Vector()).iterator());
     mau.setAUCachedUrlSet(mcus);
+
     nodeManager = new NodeManagerImpl(mau);
-    nodeManager = new NodeManagerImpl(mau);
-    nodeManager.startService();
+    nodeManager.initService(theDaemon);
     nodeManager.repository = new HistoryRepositoryImpl(tempDirPath);
 
     contentPoll = createPoll(auUrl, true, 10, 5);
