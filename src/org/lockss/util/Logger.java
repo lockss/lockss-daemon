@@ -1,5 +1,5 @@
 /*
- * $Id: Logger.java,v 1.15 2003-01-13 18:08:01 tal Exp $
+ * $Id: Logger.java,v 1.16 2003-01-30 19:53:28 tal Exp $
  */
 
 /*
@@ -64,6 +64,9 @@ public class Logger {
   public static final int LEVEL_INFO = 4;
   /** Debugging messages. */
   public static final int LEVEL_DEBUG = 5;
+  public static final int LEVEL_DEBUG1 = 5;
+  public static final int LEVEL_DEBUG2 = 6;
+  public static final int LEVEL_DEBUG3 = 7;
 
   // Mapping between numeric level and string
   static LevelDescr levelDescrs[] = {
@@ -71,7 +74,12 @@ public class Logger {
     new LevelDescr(LEVEL_ERROR, "Error"),
     new LevelDescr(LEVEL_WARNING, "Warning"),
     new LevelDescr(LEVEL_INFO, "Info"),
+    // There must be entries for both "Debug" and "Debug1" in table.
+    // Whichever string is last will be used in messages
+    new LevelDescr(LEVEL_DEBUG1, "Debug1"),
     new LevelDescr(LEVEL_DEBUG, "Debug"),
+    new LevelDescr(LEVEL_DEBUG2, "Debug2"),
+    new LevelDescr(LEVEL_DEBUG3, "Debug3"),
   };
 
   // Default default log level if config parameter not set.
@@ -411,9 +419,24 @@ public class Logger {
     return this.level >= level;
   }
 
-  /** This is the common case of </code>isLevel()</code> */
+  /** Common case of </code>isLevel()</code> */
   public boolean isDebug() {
     return isLevel(LEVEL_DEBUG);
+  }
+
+  /** Common case of </code>isLevel()</code> */
+  public boolean isDebug1() {
+    return isLevel(LEVEL_DEBUG1);
+  }
+
+  /** Common case of </code>isLevel()</code> */
+  public boolean isDebug2() {
+    return isLevel(LEVEL_DEBUG2);
+  }
+
+  /** Common case of </code>isLevel()</code> */
+  public boolean isDebug3() {
+    return isLevel(LEVEL_DEBUG3);
   }
 
   /**
@@ -520,14 +543,44 @@ public class Logger {
     log(LEVEL_INFO, msg, e);
   }
 
-  /** Log a debug message */
+  /** Log a level 1 debug message */
   public void debug(String msg) {
     log(LEVEL_DEBUG, msg, null);
   }
 
-  /** Log a debug message with an exception backtrace */
+  /** Log a level 1 debug message with an exception backtrace */
   public void debug(String msg, Throwable e) {
     log(LEVEL_DEBUG, msg, e);
+  }
+
+  /** Log a level 1 debug message */
+  public void debug1(String msg) {
+    log(LEVEL_DEBUG1, msg, null);
+  }
+
+  /** Log a level 1 debug message with an exception backtrace */
+  public void debug1(String msg, Throwable e) {
+    log(LEVEL_DEBUG1, msg, e);
+  }
+
+  /** Log a level 2 debug message */
+  public void debug2(String msg) {
+    log(LEVEL_DEBUG2, msg, null);
+  }
+
+  /** Log a level 2 debug message with an exception backtrace */
+  public void debug2(String msg, Throwable e) {
+    log(LEVEL_DEBUG2, msg, e);
+  }
+
+  /** Log a level 3 debug message */
+  public void debug3(String msg) {
+    log(LEVEL_DEBUG3, msg, null);
+  }
+
+  /** Log a level 3 debug message with an exception backtrace */
+  public void debug3(String msg, Throwable e) {
+    log(LEVEL_DEBUG3, msg, e);
   }
 
   // log level descriptor class

@@ -1,5 +1,5 @@
 /*
- * $Id: TestLogger.java,v 1.10 2003-01-13 18:08:01 tal Exp $
+ * $Id: TestLogger.java,v 1.11 2003-01-30 19:53:28 tal Exp $
  */
 
 /*
@@ -52,16 +52,6 @@ public class TestLogger extends LockssTestCase {
     org.lockss.util.Logger.class
   };
 
-
-  //expected debugging levels, in ascending order of seriousness
-  private static final String[] levels = {
-    "debug",
-    "info",
-    "warning",
-    "error",
-    "critical"
-  };
-
   public TestLogger(String msg) {
     super(msg);
   }
@@ -81,6 +71,9 @@ public class TestLogger extends LockssTestCase {
     assertEquals("Info", Logger.nameOf(Logger.LEVEL_INFO));
     assertEquals(Logger.LEVEL_WARNING, Logger.levelOf("warning"));
     assertEquals(Logger.LEVEL_DEBUG, Logger.levelOf("debug"));
+    assertEquals(Logger.LEVEL_DEBUG1, Logger.levelOf("debug1"));
+    assertEquals(Logger.LEVEL_DEBUG2, Logger.levelOf("debug2"));
+    assertEquals(Logger.LEVEL_DEBUG3, Logger.levelOf("debug3"));
   }
 
   public void testLevels() {
@@ -91,6 +84,7 @@ public class TestLogger extends LockssTestCase {
     assertTrue(l.isLevel(Logger.LEVEL_CRITICAL));
     assertTrue( ! l.isLevel(Logger.LEVEL_INFO));
     assertTrue( ! l.isLevel(Logger.LEVEL_DEBUG));
+    assertTrue( ! l.isLevel(Logger.LEVEL_DEBUG3));
   }
 
   public void testTrimStackTrace() {
