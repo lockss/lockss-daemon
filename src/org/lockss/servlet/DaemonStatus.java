@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.24 2003-06-20 22:34:52 claire Exp $
+ * $Id: DaemonStatus.java,v 1.25 2003-07-30 05:38:50 tlipkis Exp $
  */
 
 /*
@@ -113,11 +113,59 @@ public class DaemonStatus extends LockssServlet {
 		   ",time=" + now.getTime() +
 		   ",version=" + "0.0");
     }
-
+    // all pages but index get a select box to choose a different table
+    if (!isAllTablesTable()) {
+      Block centeredBlock = new Block(Block.Center);
+      centeredBlock.add(getSelectTableForm());
+      page.add(centeredBlock);
+    }
     doStatusTable(page, wrtr, tableName, key);
     if (html) {
       page.add(getFooter());
       page.write(resp.getWriter());
+    }
+  }
+
+  /** Build a form with a select box that fetches a named table */
+  private Composite getSelectTableForm() {
+    try {
+      StatusTable statTable =
+	statSvc.getTable(StatusService.ALL_TABLES_TABLE, null);
+      java.util.List colList = statTable.getColumnDescriptors();
+      java.util.List rowList = statTable.getSortedRows();
+      ColumnDescriptor cd = (ColumnDescriptor)colList.get(0);
+      String opts[] = {"onchange=\"this.form.submit()\""};
+      Select sel = new Select("table", false);
+      sel.attribute("onchange", "this.form.submit()");
+      boolean foundIt = false;
+      for (Iterator rowIter = rowList.iterator(); rowIter.hasNext(); ) {
+	Map rowMap = (Map)rowIter.next();
+	Object val = rowMap.get(cd.getColumnName());
+	String display = StatusTable.getActualValue(val).toString();
+	if (val instanceof StatusTable.Reference) {
+	  StatusTable.Reference ref = (StatusTable.Reference)val;
+	  String key = ref.getTableName();
+	  // select the current table
+	  boolean isThis = tableName.equals(key);
+	  foundIt = foundIt || isThis;
+	  sel.add(display, isThis, key);
+	} else {
+	  sel.add(display, false);
+	}
+      }
+      // if not currently displaying a table in the list, select a blank entry
+      if (!foundIt) {
+	sel.add(" ", true, "");
+      }
+      Form frm = new Form(srvURL(myServletDescr(), null));
+      // use GET so user can refresh in browser
+      frm.method("GET");
+      frm.add(sel);
+      return frm;
+    } catch (Exception e) {
+      // if this fails for any reason, just don't include this form
+      log.warning("Failed to build status table selector", e);
+      return new Composite();
     }
   }
 
@@ -210,8 +258,7 @@ public class DaemonStatus extends LockssServlet {
 	  Object val = rowMap.get(cd.getColumnName());
 
 	  table.newCell("align=" + getColAlignment(cd));
-	  table.add(getDisplayString(rowMap.get(cd.getColumnName()),
-				     cd.getType()));
+	  table.add(getDisplayString(val, cd.getType()));
 	  if (ix < (cols - 1)) {
 	    table.newCell();	// empty column for spacing
 	  }
@@ -379,9 +426,12 @@ public class DaemonStatus extends LockssServlet {
     }
   }
 
+  protected boolean isAllTablesTable() {
+    return StatusService.ALL_TABLES_TABLE.equals(tableName);
+  }
 
   // make me a link in nav table unless I'm displaying table of all tables
   protected boolean linkMeInNav() {
-    return !StatusService.ALL_TABLES_TABLE.equals(tableName);
+    return !isAllTablesTable();
   }
 }
