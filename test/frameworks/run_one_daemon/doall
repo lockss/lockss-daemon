@@ -5,9 +5,10 @@ PROJECT_DIR=`( cd ../../../..; pwd )`
 export PROJECT_DIR
 
 if [ "$1" == "start" ] ; then
-    ./rundaemon &
+    shift
+    ./rundaemon "$@" &
     echo daemon started
 else
-    kill `cat dpid`
+    kill -9 `cat dpid`
     echo daemon stopped
 fi
