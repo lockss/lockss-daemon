@@ -1,5 +1,5 @@
 /*
- * $Id: IpAccessControl.java,v 1.14 2004-06-29 19:16:52 smorabito Exp $
+ * $Id: IpAccessControl.java,v 1.15 2004-08-12 22:34:12 tlipkis Exp $
  */
 
 /*
@@ -75,7 +75,7 @@ public abstract class IpAccessControl extends LockssServlet {
 
   public void init(ServletConfig config) throws ServletException {
     super.init(config);
-    configMgr = getLockssDaemon().getConfigManager();
+    configMgr = getLockssApp().getConfigManager();
   }
 
   public void lockssHandleRequest() throws IOException {
