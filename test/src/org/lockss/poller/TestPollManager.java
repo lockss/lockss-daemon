@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.56 2003-12-12 00:56:29 tlipkis Exp $
+ * $Id: TestPollManager.java,v 1.57 2003-12-23 00:37:03 tlipkis Exp $
  */
 
 /*
@@ -427,7 +427,6 @@ public class TestPollManager extends LockssTestCase {
 
     theDaemon.getHashService().startService();
     theDaemon.getRouterManager().startService();
-    theDaemon.getActivityRegulator(testau).initService(theDaemon);
 
     theDaemon.setNodeManager(new MockNodeManager(), testau);
     pollmanager.startService();

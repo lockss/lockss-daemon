@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSimulatedContent.java,v 1.49 2003-11-07 00:52:47 troberts Exp $
+ * $Id: FuncSimulatedContent.java,v 1.50 2003-12-23 00:37:03 tlipkis Exp $
  */
 
 /*
@@ -82,25 +82,32 @@ public class FuncSimulatedContent extends LockssTestCase {
     props.setProperty("org.lockss.au." + auId2 + ".depth", "2");
     props.setProperty("org.lockss.au." + auId2 + ".branch", "2");
     props.setProperty("org.lockss.au." + auId2 + ".numFiles", "2");
-    ConfigurationUtil.setCurrentConfigFromProps(props);
 
     theDaemon = new MockLockssDaemon();
+    theDaemon.getPluginManager();
+    theDaemon.getHistoryRepository();
+    theDaemon.getHashService();
+    MockSystemMetrics metrics = new MyMockSystemMetrics();
+    metrics.initService(theDaemon);
+    theDaemon.setSystemMetrics(metrics);
+
     theDaemon.setDaemonInited(true);
+    ConfigurationUtil.setCurrentConfigFromProps(props);
+
+    sau =
+      (SimulatedArchivalUnit)theDaemon.getPluginManager().getAllAus().get(0);
+
     theDaemon.getPluginManager().startService();
 
     theDaemon.getHistoryRepository().startService();
     theDaemon.getHashService().startService();
-    MockSystemMetrics metrics = new MyMockSystemMetrics();
-    metrics.initService(theDaemon);
     metrics.startService();
     metrics.setHashSpeed(100);
-    theDaemon.setSystemMetrics(metrics);
-    sau =
-        (SimulatedArchivalUnit) theDaemon.getPluginManager().getAllAus().get(0);
 
     theDaemon.getLockssRepository(sau);
-    theDaemon.getNodeManager(sau).initService(theDaemon);
     theDaemon.getNodeManager(sau).startService();
+
+
   }
 
   public void tearDown() throws Exception {
@@ -109,6 +116,7 @@ public class FuncSimulatedContent extends LockssTestCase {
     theDaemon.getPluginManager().stopService();
     theDaemon.getHashService().stopService();
     theDaemon.getSystemMetrics().stopService();
+    theDaemon.stopDaemon();
     super.tearDown();
   }
 
@@ -131,7 +139,6 @@ public class FuncSimulatedContent extends LockssTestCase {
     sau =
         (SimulatedArchivalUnit)theDaemon.getPluginManager().getAllAus().get(1);
     theDaemon.getLockssRepository(sau);
-    theDaemon.getNodeManager(sau).initService(theDaemon);
     theDaemon.getNodeManager(sau).startService();
 
     createContent();

@@ -1,5 +1,5 @@
 /*
- * $Id: TestPoll.java,v 1.71 2003-12-12 00:56:29 tlipkis Exp $
+ * $Id: TestPoll.java,v 1.72 2003-12-23 00:37:03 tlipkis Exp $
  */
 
 /*
@@ -493,7 +493,6 @@ public class TestPoll extends LockssTestCase {
     theDaemon.getHashService().startService();
     theDaemon.getRouterManager().startService();
     theDaemon.getSystemMetrics().startService();
-    theDaemon.getActivityRegulator(testau).initService(theDaemon);
     theDaemon.setNodeManager(new MockNodeManager(), testau);
     pollmanager.startService();
   }
