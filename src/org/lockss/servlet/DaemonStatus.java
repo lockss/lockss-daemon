@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.31 2004-02-21 02:10:04 eaalto Exp $
+ * $Id: DaemonStatus.java,v 1.32 2004-02-21 02:17:23 eaalto Exp $
  */
 
 /*
@@ -103,7 +103,7 @@ public class DaemonStatus extends LockssServlet {
 
     if (!isHtml) {
       wrtr = resp.getWriter();
-      resp.setContentType(isText ? "text/html" : "text/xml");
+      resp.setContentType(isText ? "text/plain" : "text/xml");
     } else {
       resp.setContentType("text/html");
     }
