@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.15 2004-10-23 01:01:03 clairegriffin Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.16 2005-01-29 20:00:15 troberts Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.definable;
 
 import java.util.*;
+import java.io.*;
 
 import org.lockss.plugin.*;
 import org.lockss.daemon.*;
@@ -253,8 +254,20 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 
     // test we find one we've added
     defMap.putString("text/ram_parser",
-		  "org.lockss.plugin.blackbird.BlackbirdRamParser");
+		     "org.lockss.plugin.blackbird.BlackbirdRamParser");
     parser = cau.getContentParser("text/ram");
+    assertTrue(parser instanceof org.lockss.plugin.blackbird.BlackbirdRamParser);
+  }
+
+  public void testGetContentParserHandlesContentType() {
+    defMap.putString("text/ram_parser",
+		     "org.lockss.plugin.blackbird.BlackbirdRamParser");
+
+    ContentParser parser = null;
+    parser = cau.getContentParser("text/ram ; random-content-type");
+    assertTrue(parser instanceof org.lockss.plugin.blackbird.BlackbirdRamParser);
+ 
+    parser = cau.getContentParser(" text/ram ");
     assertTrue(parser instanceof org.lockss.plugin.blackbird.BlackbirdRamParser);
   }
 
@@ -314,6 +327,38 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     }
   }
 
+  public void testConstructFilterRule() {
+    assertNull(cau.constructFilterRule(null));
+  }
+
+  public void testConstructFilterRuleMimeType() {
+    defMap.putString("text/html"+DefinableArchivalUnit.AU_FILTER_SUFFIX,
+		     "org.lockss.plugin.definable.TestDefinableArchivalUnit$MyMockFilterRule");
+    assertTrue(cau.constructFilterRule("text/html") instanceof
+	       org.lockss.plugin.definable.TestDefinableArchivalUnit.MyMockFilterRule);
+  }
+
+  public void testConstructFilterRuleMimeTypeSpace() {
+    defMap.putString("text/html"+DefinableArchivalUnit.AU_FILTER_SUFFIX,
+		     "org.lockss.plugin.definable.TestDefinableArchivalUnit$MyMockFilterRule");
+    assertTrue(cau.constructFilterRule(" text/html ") instanceof
+	       org.lockss.plugin.definable.TestDefinableArchivalUnit.MyMockFilterRule);
+  }
+
+  public void testConstructFilterRuleContentType() {
+    defMap.putString("text/html"+DefinableArchivalUnit.AU_FILTER_SUFFIX,
+		     "org.lockss.plugin.definable.TestDefinableArchivalUnit$MyMockFilterRule");
+    assertTrue(cau.constructFilterRule("text/html ; random-char-set") instanceof
+	       org.lockss.plugin.definable.TestDefinableArchivalUnit.MyMockFilterRule);
+  }
+
+  public void testConstructFilterRuleContentTypeSpace() {
+    defMap.putString("text/html"+DefinableArchivalUnit.AU_FILTER_SUFFIX,
+		     "org.lockss.plugin.definable.TestDefinableArchivalUnit$MyMockFilterRule");
+    assertTrue(cau.constructFilterRule(" text/html ; random-char-set") instanceof
+	       org.lockss.plugin.definable.TestDefinableArchivalUnit.MyMockFilterRule);
+  }
+
   public static class NegativeCrawlRuleFactory
     implements CrawlRuleFromAuFactory {
 
@@ -335,5 +380,13 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
       return "blah";
     }
   }
+
+  public static class MyMockFilterRule implements FilterRule {
+    public Reader createFilteredReader(Reader reader) {
+      throw new UnsupportedOperationException("not implemented");
+    }
+
+  }
+
 
 }
