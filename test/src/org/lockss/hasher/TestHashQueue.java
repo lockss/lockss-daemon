@@ -1,5 +1,5 @@
 /*
- * $Id: TestHashQueue.java,v 1.9 2003-03-04 01:02:06 aalto Exp $
+ * $Id: TestHashQueue.java,v 1.10 2003-03-05 03:26:11 tal Exp $
  */
 
 /*
@@ -68,6 +68,7 @@ public class TestHashQueue extends LockssTestCase {
       dig = MessageDigest.getInstance(hashAlgorithm);
     }
     cus = new MockCachedUrlSet(null, null);
+    TimeBase.setSimulated();
   }
 
   public void tearDown() throws Exception {
@@ -193,7 +194,6 @@ public class TestHashQueue extends LockssTestCase {
 	}
       };
     HashQueue.Request r1, r2, r3 ,r4, r5;
-    TimeBase.setSimulated();
     r1 = req(2000, 0, 100, cb);
     r2 = req(10000, 0, 200, cb);
     r3 = req(20000, 0, 0, cb);
@@ -229,7 +229,6 @@ public class TestHashQueue extends LockssTestCase {
 
   // test stepper
   public void testStep() throws Exception {
-    TimeBase.setSimulated();
     HashQueue q = new HashQueue();
     final List cookieList = new LinkedList();
     HashService.Callback cb = new HashService.Callback() {
