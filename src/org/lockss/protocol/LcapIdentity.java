@@ -1,5 +1,5 @@
 /*
- * $Id: LcapIdentity.java,v 1.14 2003-03-27 01:57:09 claire Exp $
+ * $Id: LcapIdentity.java,v 1.15 2003-04-02 10:51:09 tal Exp $
  */
 
 /*
@@ -46,9 +46,16 @@ import java.io.Serializable;
  * @version 1.0
  */
 public class LcapIdentity implements Serializable {
-  /*
-       PACKET HISTOGRAM SUPPORT - CURRENTLY NOT BEING USED
-  */
+
+  public static final int EVENT_ORIG = 0;
+  public static final int EVENT_ORIG_OP = 1;
+  public static final int EVENT_SEND_ORIG = 2;
+  public static final int EVENT_SEND_FWD = 3;
+  public static final int EVENT_ERRPKT = 4;
+
+  public static final int EVENT_MAX = 5;
+
+  long eventCount[] = new long[EVENT_MAX];
   transient long m_lastActiveTime = 0;
   transient long m_lastOpTime = 0;
   transient long m_incrPackets = 0;   // Total packets arrived this interval
@@ -105,10 +112,42 @@ public class LcapIdentity implements Serializable {
     return m_reputation;
   }
 
+  public long getLastActiveTime() {
+    return m_lastActiveTime;
+  }
+
+  public long getLastOpTime() {
+    return m_lastOpTime;
+  }
+
+  public long getLastTimeZeroed() {
+    return m_lastTimeZeroed;
+  }
+
+
   public String getIdKey() {
     return m_idKey;
   }
 
+  public void rememberEvent(int event, LcapMessage msg) {
+    checkEvent(event);
+    eventCount[event]++;
+    m_lastActiveTime = TimeBase.nowMs();
+    if (msg != null && !msg.isNoOp()) {
+      m_lastOpTime = TimeBase.nowMs();
+    }
+  }
+
+  public long getEventCount(int event) {
+    checkEvent(event);
+    return eventCount[event];
+  }
+
+  void checkEvent(int event) {
+    if (event < 0 || event >= EVENT_MAX) {
+      throw new RuntimeException("Illegal event number: " + event);
+    }
+  }
 
   // methods which may need to be overridden
 
