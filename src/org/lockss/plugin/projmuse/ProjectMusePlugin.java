@@ -1,5 +1,5 @@
 /*
- * $Id: ProjectMusePlugin.java,v 1.3 2003-08-27 19:27:32 eaalto Exp $
+ * $Id: ProjectMusePlugin.java,v 1.4 2003-08-28 00:10:56 eaalto Exp $
  */
 
 /*
@@ -51,16 +51,17 @@ public class ProjectMusePlugin extends BasePlugin {
   private static String CURRENT_VERSION = "Pre-release";
 
   static final ConfigParamDescr PD_BASE = ConfigParamDescr.BASE_URL;
-  static final ConfigParamDescr PD_VOL = ConfigParamDescr.VOLUME_NUMBER;
   static final ConfigParamDescr PD_DIR = ConfigParamDescr.JOURNAL_DIR;
+  static final ConfigParamDescr PD_VOL = ConfigParamDescr.VOLUME_NUMBER;
 
   // public only so test methods can use them
   public static final String AUPARAM_BASE_URL = PD_BASE.getKey();
-  public static final String AUPARAM_VOL = PD_VOL.getKey();
   public static final String AUPARAM_JOURNAL_DIR = PD_DIR.getKey();
+  public static final String AUPARAM_VOL = PD_VOL.getKey();
 
   private static String titleSpec[][] = {
-    {"AIM", AUPARAM_JOURNAL_DIR, "american_imago" }
+    { "American Imago", AUPARAM_BASE_URL, "http://muse.jhu.edu/",
+    AUPARAM_JOURNAL_DIR, "american_imago" }
   };
 
   public ArchivalUnit createAU(Configuration auConfig)
@@ -84,11 +85,11 @@ public class ProjectMusePlugin extends BasePlugin {
   }
 
   public List getAUConfigProperties() {
-    return ListUtil.list(PD_BASE, PD_VOL, PD_DIR);
+    return ListUtil.list(PD_BASE, PD_DIR, PD_VOL);
   }
 
   public Collection getDefiningConfigKeys() {
-    return ListUtil.list(AUPARAM_BASE_URL, AUPARAM_VOL, AUPARAM_JOURNAL_DIR);
+    return ListUtil.list(AUPARAM_BASE_URL, AUPARAM_JOURNAL_DIR, AUPARAM_VOL);
   }
 
 }

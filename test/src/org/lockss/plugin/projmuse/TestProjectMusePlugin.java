@@ -1,5 +1,5 @@
 /*
- * $Id: TestProjectMusePlugin.java,v 1.3 2003-08-27 19:27:32 eaalto Exp $
+ * $Id: TestProjectMusePlugin.java,v 1.4 2003-08-28 00:10:56 eaalto Exp $
  */
 
 /*
@@ -64,9 +64,9 @@ public class TestProjectMusePlugin extends LockssTestCase {
   public void testGetAuHandlesBadUrl()
       throws ArchivalUnit.ConfigurationException, MalformedURLException {
     Properties props = new Properties();
-    props.setProperty(ProjectMusePlugin.AUPARAM_VOL, "322");
     props.setProperty(ProjectMusePlugin.AUPARAM_BASE_URL, "blah");
     props.setProperty(ProjectMusePlugin.AUPARAM_JOURNAL_DIR, "blah2");
+    props.setProperty(ProjectMusePlugin.AUPARAM_VOL, "322");
 
     try {
       ProjectMuseArchivalUnit au = makeAuFromProps(props);
@@ -81,10 +81,10 @@ public class TestProjectMusePlugin extends LockssTestCase {
   public void testGetAuConstructsProperAU()
       throws ArchivalUnit.ConfigurationException, MalformedURLException {
     Properties props = new Properties();
-    props.setProperty(ProjectMusePlugin.AUPARAM_VOL, "322");
     props.setProperty(ProjectMusePlugin.AUPARAM_BASE_URL,
                       "http://www.example.com/");
     props.setProperty(ProjectMusePlugin.AUPARAM_JOURNAL_DIR, "journal_dir");
+    props.setProperty(ProjectMusePlugin.AUPARAM_VOL, "322");
 
     ProjectMuseArchivalUnit au = makeAuFromProps(props);
     assertEquals("www.example.com, journal_dir, vol. 322", au.getName());
@@ -97,15 +97,15 @@ public class TestProjectMusePlugin extends LockssTestCase {
 
   public void testGetAuConfigProperties() {
     assertEquals(ListUtil.list(ConfigParamDescr.BASE_URL,
-			       ConfigParamDescr.VOLUME_NUMBER,
-                               ConfigParamDescr.JOURNAL_DIR),
+                               ConfigParamDescr.JOURNAL_DIR,
+			       ConfigParamDescr.VOLUME_NUMBER),
 		 plugin.getAUConfigProperties());
   }
 
   public void testGetDefiningProperties() {
     assertEquals(ListUtil.list(ConfigParamDescr.BASE_URL.getKey(),
-			       ConfigParamDescr.VOLUME_NUMBER.getKey(),
-                               ConfigParamDescr.JOURNAL_DIR.getKey()),
+                               ConfigParamDescr.JOURNAL_DIR.getKey(),
+                               ConfigParamDescr.VOLUME_NUMBER.getKey()),
 		 plugin.getDefiningConfigKeys());
   }
 }
