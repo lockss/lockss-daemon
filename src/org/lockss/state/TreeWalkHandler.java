@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkHandler.java,v 1.44.2.3 2003-11-18 00:04:24 eaalto Exp $
+ * $Id: TreeWalkHandler.java,v 1.44.2.4 2003-12-08 21:33:46 tlipkis Exp $
  */
 
 /*
@@ -471,7 +471,6 @@ public class TreeWalkHandler {
         extraDelay = 0;
 
         long est = getEstimatedTreeWalkDuration();
-        long end = start + est;
 
         BackgroundTask task = null;
 
@@ -489,7 +488,7 @@ public class TreeWalkHandler {
                             startDeadline.toString());
               logger.debug3("Using estimate of " + est + "ms.");
             }
-            task = new BackgroundTask(startDeadline, Deadline.at(end),
+            task = new BackgroundTask(startDeadline, Deadline.at(start + est),
                                       loadFactor, cb) {
               public String getShortText() {
                 return "TreeWalk: " + theAu.getName();
@@ -502,26 +501,21 @@ public class TreeWalkHandler {
                             startDeadline.toString());
               break;
             } else {
-	      if (TimeBase.msSince(startDeadline.getExpirationTime()) >
+	      if (TimeBase.msUntil(startDeadline.getExpirationTime()) >
                   (3 * Constants.WEEK)) {
 		// If can't fit it into schedule in next 3 weeks, give up
 		// and try again in an hour.  Prevents infinite looping
 		// trying to create a schedule.
 		logger.debug("Can't schedule, waiting for an hour");
-		start = chooseTimeToRun(extraDelay);
-		end = start + est;
 		try {
 		  Deadline.in(Constants.HOUR).sleep();
 		} catch (InterruptedException ie) { }
+		start = chooseTimeToRun(extraDelay);
 	      } else {
 		// can't fit into existing schedule.  try adjusting by
 		// estimate length
 		logger.debug3("Schedule failed.  Trying new time.");
-                if (est < MIN_SCHEDULE_ADJUSTMENT) {
-                  est = MIN_SCHEDULE_ADJUSTMENT;
-                }
-		start += est;
-		end = start + est;
+		start += Math.max(est, MIN_SCHEDULE_ADJUSTMENT);
 	      }
             }
           }
@@ -534,22 +528,22 @@ public class TreeWalkHandler {
 
         // wait on the semaphore (the callback will 'give()')
         try {
-          treeWalkSemaphore.take(Deadline.at(end));
+          if (treeWalkSemaphore.take(Deadline.MAX));
+	  doingTreeWalk = true;
+	  try {
+	    doTreeWalk();
+	  } finally {
+	    doingTreeWalk = false;
+	  }
         } catch (InterruptedException ie) {
           logger.error("TreeWalkThread semaphore was interrupted:" + ie);
           continue;
         }
 
-        doingTreeWalk = true;
-        doTreeWalk();
-        doingTreeWalk = false;
-
-        // if background activity finishes before end time, call
-        if (!Deadline.at(end).expired()) {
-          logger.debug3("Ending task early...");
-          if (task!=null) {
-            task.taskIsFinished();
-          }
+        // tell scheduler we're done.  (Unnecessary if it told us to stop,
+        // but harmless.)
+	if (task!=null) {
+	  task.taskIsFinished();
         }
       }
     }

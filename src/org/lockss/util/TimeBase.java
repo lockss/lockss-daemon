@@ -1,5 +1,5 @@
 /*
- * $Id: TimeBase.java,v 1.9 2003-06-20 22:34:53 claire Exp $
+ * $Id: TimeBase.java,v 1.9.14.1 2003-12-08 21:33:45 tlipkis Exp $
  */
 
 /*
@@ -123,5 +123,12 @@ public class TimeBase {
    */
   public static long msSince(long when) {
     return nowMs() - when;
+  }
+
+  /** Return the number of milliseconds until the argument
+   * @param when the start of a time interval
+   */
+  public static long msUntil(long when) {
+    return when - nowMs();
   }
 }
