@@ -1,5 +1,5 @@
 /*
-* $Id: IdentityManager.java,v 1.36 2004-02-03 23:19:36 troberts Exp $
+* $Id: IdentityManager.java,v 1.37 2004-02-07 01:59:42 troberts Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 import org.lockss.plugin.*;
+import org.lockss.state.*;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
 import org.lockss.util.*;
@@ -117,7 +118,13 @@ public class IdentityManager extends BaseLockssManager {
   int[] reputationDeltas = new int[10];
 
   Mapping mapping = null;
-  private Map agreeMap = new HashMap();
+  private Map agreeMap = null;
+  private Map disagreeMap = null;
+
+  //derivable from the above two; included for speed
+  private Map cachesToFetchFrom = null; 
+
+  private String identityMapLock = "lock";
 
   HashMap theIdentities = new HashMap(); // all known identities
 
@@ -383,41 +390,67 @@ public class IdentityManager extends BaseLockssManager {
    * Signals that we've agreed with id on a top level poll on au.
    * Only called if we're both on the winning side
    */
-  public void signalAgreed(LcapIdentity id, ArchivalUnit au) {
+  public void signalAgreed(String cacheAddr, ArchivalUnit au) {
+    signalAgreed(cacheAddr, au, TimeBase.nowMs());
+  }
+
+  private void signalAgreed(String cacheAddr, ArchivalUnit au, long time) {
     if (au == null) {
       throw new IllegalArgumentException("Called with null au");
-    } else if (id == null) {
-      throw new IllegalArgumentException("Called with null id");
+    } else if (cacheAddr == null) {
+      throw new IllegalArgumentException("Called with null cacheAddr");
     }
-    synchronized (agreeMap) {
+    synchronized (identityMapLock) { //using as the lock for all 3 maps
+      ensureIdentityMapsLoaded(au);
       Map map = (Map)agreeMap.get(au);
       if (map == null) {
 	map = new HashMap();
 	agreeMap.put(au, map);
       }
-      map.put(id, new Long(TimeBase.nowMs()));
-    }
+      map.put(cacheAddr, new Long(time));
+
+      map = (Map)cachesToFetchFrom.get(au);
+      if (map == null) {
+	map = new HashMap();
+	cachesToFetchFrom.put(au, map);
+      }
+      map.put(cacheAddr, new Long(time));
+      storeIdentityAgreement(au);
+    } 
   }
 
   /**
    * Signals that we've disagreed with id on any level poll on au.
    * Only called if we're on the winning side
    */
-  public void signalDisagreed(LcapIdentity id, ArchivalUnit au) {
+  public void signalDisagreed(String cacheAddr, ArchivalUnit au) {
+    signalDisagreed(cacheAddr, au, TimeBase.nowMs());
+  }
+
+  private void signalDisagreed(String cacheAddr, ArchivalUnit au, long time) {
     if (au == null) {
       throw new IllegalArgumentException("Called with null au");
-    } else if (id == null) {
-      throw new IllegalArgumentException("Called with null id");
+    } else if (cacheAddr == null) {
+      throw new IllegalArgumentException("Called with null cacheAddr");
     }
-    synchronized (agreeMap) {
-      Map map = (Map)agreeMap.get(au);
+    synchronized (identityMapLock) { //using as the lock for all 3 maps
+      ensureIdentityMapsLoaded(au);
+      Map map = (Map)disagreeMap.get(au);
       if (map == null) {
-	return;
+	map = new HashMap();
+	disagreeMap.put(au, map);
       }
-      map.remove(id);
+      map.put(cacheAddr, new Long(time));
+
+      map = (Map)cachesToFetchFrom.get(au);
+      if (map == null) {
+ 	return;
+      }
+      map.remove(cacheAddr);
       if (map.size() == 0) {
-	agreeMap.remove(au);
+ 	cachesToFetchFrom.remove(au);
       }
+      storeIdentityAgreement(au);
     }
   }
 
@@ -425,14 +458,96 @@ public class IdentityManager extends BaseLockssManager {
    * @param au ArchivalUnit to look up LcapIdentities for
    * @return a map of LcapIdentity -> last agreed time.
    */
+  public Map getCachesToRepairFrom(ArchivalUnit au) {
+    if (au == null) {
+      throw new IllegalArgumentException("Called with null au");
+    }
+    synchronized (identityMapLock) { //using as the lock for all 3 maps
+      ensureIdentityMapsLoaded(au);
+      return (Map)cachesToFetchFrom.get(au);
+    }
+  }
+
   public Map getAgreed(ArchivalUnit au) {
     if (au == null) {
       throw new IllegalArgumentException("Called with null au");
     }
-    synchronized (agreeMap) {
+    synchronized (identityMapLock) { //using as the lock for all 3 maps
+      ensureIdentityMapsLoaded(au);
       return (Map)agreeMap.get(au);
     }
   }
+
+  private void ensureIdentityMapsLoaded(ArchivalUnit au) {
+    if (agreeMap == null || disagreeMap == null || cachesToFetchFrom == null) {
+      agreeMap = new HashMap();
+      disagreeMap = new HashMap();
+      cachesToFetchFrom = new HashMap();
+      loadIdentityAgreement(au);
+    }
+  }
+
+  private void loadIdentityAgreement(ArchivalUnit au) {
+    HistoryRepository hRep = getDaemon().getHistoryRepository(au);
+    List list = hRep.loadIdentityAgreement();
+    if (list != null) {
+      Iterator it = list.iterator();
+      while (it.hasNext()) {
+	IdentityAgreement ida = (IdentityAgreement)it.next();
+	if (ida.getLastAgree() > 0) {
+	  signalAgreed(ida.getId(), au, ida.getLastAgree());
+	}
+	if (ida.getLastDisagree() > 0) {
+	  signalDisagreed(ida.getId(), au, ida.getLastDisagree());
+	}
+      }
+    }
+  }
+
+  //only called within a synchronized block, so we don't need to
+  private void storeIdentityAgreement(ArchivalUnit au) {
+    HistoryRepository hRep = getDaemon().getHistoryRepository(au);
+    hRep.storeIdentityAgreement(generateIdentityAgreementList(au)); 
+  }
+
+  
+  //only called within a synchronized block, so we don't need to
+  private List generateIdentityAgreementList(ArchivalUnit au) {
+    List list = new ArrayList();
+    Map map = new HashMap();
+
+    Map agreeMapForAu = (Map)agreeMap.get(au);
+    if (agreeMapForAu != null && agreeMapForAu.size() > 0) {
+      Iterator it = agreeMapForAu.keySet().iterator();
+      while (it.hasNext()) {
+	String id = (String)it.next();
+	Long time = (Long)agreeMapForAu.get(id);
+	IdentityAgreement ida = new IdentityAgreement(id);
+	ida.setLastAgree(time.longValue());
+	
+	list.add(ida);
+	map.put(id, ida);
+      }
+    }
+
+    Map disagreeMapForAu = (Map)disagreeMap.get(au);
+    if (disagreeMapForAu != null && disagreeMapForAu.size() > 0) {
+      Iterator it = disagreeMapForAu.keySet().iterator();
+      while (it.hasNext()) {
+	String id = (String)it.next();
+	Long time = (Long)disagreeMapForAu.get(id);
+	IdentityAgreement ida = (IdentityAgreement)map.get(id);
+	if (ida == null) { //wasn't set in the previous loop
+	  ida = new IdentityAgreement(id);
+	  list.add(ida);
+	  map.put(id, ida);
+	}
+	ida.setLastDisagree(time.longValue());
+      }
+    }
+    return list;
+  }
+  
 
   Mapping getMapping() {
 
@@ -516,8 +631,76 @@ public class IdentityManager extends BaseLockssManager {
 		  );
 
 
-  private class Status implements StatusAccessor {
+  public static class IdentityAgreement {
+    private long lastAgree = 0;
+    private long lastDisagree = 0;
+    private String id = null;
 
+    public IdentityAgreement(String id) {
+      this.id = id;
+    }
+
+    public void setLastAgree(long lastAgree) {
+      this.lastAgree = lastAgree;
+    }
+
+    public void setLastDisagree(long lastDisagree) {
+      this.lastDisagree = lastDisagree;
+    }
+
+    public long getLastAgree() {
+      return this.lastAgree;
+    }
+
+    public long getLastDisagree() {
+      return this.lastDisagree;
+    }
+
+    public String getId() {
+      return this.id;
+    }
+
+    public String toString() {
+      StringBuffer sb = new StringBuffer();
+      sb.append("[IdentityAgreement: ");
+      sb.append("id=");
+      sb.append(id);
+      sb.append(", ");
+      sb.append("lastAgree=");
+      sb.append(lastAgree);
+      sb.append(", ");
+      sb.append("lastDisagree=");
+      sb.append(lastDisagree);
+      sb.append("]");
+      return sb.toString();
+    }
+
+    public boolean equals(Object obj) {
+//       System.err.println("Called for "+obj);
+//       System.err.println("and        "+this);
+      try {
+	IdentityAgreement ida = (IdentityAgreement) obj;
+// 	System.err.println("id: "+id.equals(ida.getId()));
+// 	System.err.println("lastDisagree: "
+// 			   +(ida.getLastDisagree()==lastDisagree));
+// 	System.err.println("lastAgree: "
+// 			   +(ida.getLastAgree()==lastAgree));
+	boolean isEqual =
+	  (id.equals(ida.getId())
+	   && ida.getLastDisagree() == lastDisagree
+	   && ida.getLastAgree() == lastAgree);
+// 	System.err.println("isEqual: "+isEqual);
+	return isEqual;
+      } catch (ClassCastException e) {
+// 	System.err.println("isn't equal");
+	return false;
+      }
+    }
+
+  }
+
+  private class Status implements StatusAccessor {
+    
     public String getDisplayName() {
       return "Cache Identities";
     }
