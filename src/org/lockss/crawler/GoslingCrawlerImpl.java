@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingCrawlerImpl.java,v 1.50 2003-12-23 00:23:25 tlipkis Exp $
+ * $Id: GoslingCrawlerImpl.java,v 1.51 2004-01-08 22:47:23 troberts Exp $
  */
 
 /*
@@ -298,7 +298,7 @@ public class GoslingCrawlerImpl implements Crawler {
           break;
         }
  	if (spec.isIncluded(url)) {
-	  if (!doCrawlLoop(url, extractedUrls, parsedPages, cus, true)) {
+	  if (!doCrawlLoop(url, extractedUrls, parsedPages, cus, true, true)) {
 //   	    if (crawlError == 0) {
 	    if (crawlStatus.getCrawlError() == 0) {
 	      crawlStatus.setCrawlError(Crawler.STATUS_ERROR);
@@ -336,7 +336,7 @@ public class GoslingCrawlerImpl implements Crawler {
         windowClosed = true;
         break;
       }
-      if (!doCrawlLoop(nextUrl, urlsToCrawl, parsedPages, cus, false)) {
+      if (!doCrawlLoop(nextUrl, urlsToCrawl, parsedPages, cus, false, false)) {
 // 	if (crawlError == 0) {
 	if (crawlStatus.getCrawlError() == 0) {
 	  crawlStatus.setCrawlError(Crawler.STATUS_ERROR);
@@ -413,7 +413,7 @@ public class GoslingCrawlerImpl implements Crawler {
    */
   protected boolean doCrawlLoop(String url, Collection extractedUrls,
 			     Set parsedPages, CachedUrlSet cus,
-			     boolean overWrite) {
+			     boolean overWrite, boolean reparse) {
     int error = 0;
     logger.debug2("Dequeued url from list: "+url);
     Plugin plugin = au.getPlugin();
@@ -437,6 +437,10 @@ public class GoslingCrawlerImpl implements Crawler {
     else {
       if (!parsedPages.contains(uc.getUrl())) {
 	logger.debug2(uc+" exists, not caching");
+      }
+      if (!reparse) {
+	logger.debug2(uc+" exists, not reparsing");
+	return true;
       }
     }
     try {
