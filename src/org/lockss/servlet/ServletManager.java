@@ -1,5 +1,5 @@
 /*
- * $Id: ServletManager.java,v 1.7 2003-04-04 08:41:06 tal Exp $
+ * $Id: ServletManager.java,v 1.8 2003-04-05 00:57:36 tal Exp $
  */
 
 /*
@@ -146,6 +146,7 @@ public class ServletManager extends JettyManager {
       log.debug("Resource URL: " + resourceUrl);
 
       context.setResourceBase(resourceUrl.toString());
+      // Now add handlers in the order they should be tried.
       context.addHandler(new ResourceHandler());
 
       // Create a servlet container
