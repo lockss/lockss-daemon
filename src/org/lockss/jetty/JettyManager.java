@@ -1,5 +1,5 @@
 /*
- * $Id: JettyManager.java,v 1.14 2004-08-22 02:05:55 tlipkis Exp $
+ * $Id: JettyManager.java,v 1.15 2004-09-16 21:52:13 tlipkis Exp $
  */
 
 /*
@@ -148,6 +148,9 @@ public abstract class JettyManager
   }
 
   protected void runningOnPort(int port) {
+    if (log.isDebug2()) {
+      log.debug2("runningOnPort(" + port + "), in use: " + portsInUse);
+    }
     if (runningOnPort > 0) {
       portsInUse.remove(new Integer(runningOnPort));
       runningOnPort = -1;
@@ -163,6 +166,10 @@ public abstract class JettyManager
   }
 
   public static boolean isPortInUse(int port) {
+    if (log.isDebug2()) {
+      log.debug2("portsInUse(" + port + ") = " +
+		 portsInUse.contains(new Integer(port)));
+    }
     return portsInUse.contains(new Integer(port));
   }
 }
