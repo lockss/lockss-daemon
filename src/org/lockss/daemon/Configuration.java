@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.29 2003-03-29 20:25:39 tal Exp $
+ * $Id: Configuration.java,v 1.30 2003-04-02 02:04:18 tal Exp $
  */
 
 /*
@@ -505,6 +505,9 @@ public abstract class Configuration {
    */
   public float getPercentage(String key, double dfault) {
     int val;
+    if (!containsKey(key)) {
+      return (float)dfault;
+    }
     try {
       val = getInt(key);
     } catch (InvalidParam e) {
@@ -515,7 +518,7 @@ public abstract class Configuration {
       log.warning("getPercentage(\'" + key + "\") = \"" + val + "\"");
       return (float)dfault;
     }
-    return ((float)val) / (float)100.0;
+    return ((float)val) / 100.0f;
   }
 
   // must be implemented by implementation subclass
