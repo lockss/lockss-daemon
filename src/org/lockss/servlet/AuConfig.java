@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.10 2003-09-26 23:50:39 eaalto Exp $
+ * $Id: AuConfig.java,v 1.11 2003-12-08 06:56:56 tlipkis Exp $
  */
 
 /*
@@ -105,57 +105,29 @@ public class AuConfig extends LockssServlet {
     titleConfig = null;
     submitButtonNumber = 0;
 
-    op: {
-      if (StringUtil.isNullString(action)) {
-	displayAuSummary();
-	break op;
-      }
-      if (action.equals("Add")) {
-	displayAddAu();
-	break op;
-      }
-      if (action.equals("EditNew")) {
-	displayEditNew();
-	break op;
-      }
-      if (action.equals("Create")) {
-	createAu();
-	break op;
-      }
+    if (StringUtil.isNullString(action)) displayAuSummary();
+    else if (action.equals("Add")) displayAddAu();
+    else if (action.equals("EditNew")) displayEditNew();
+    else if (action.equals("Create")) createAu();
+    else {
       // all other actions require AU.  If missing, display summary page
       String auid = req.getParameter("auid");
       ArchivalUnit au = pluginMgr.getAuFromId(auid);
       if (au == null) {
 	errMsg = "Invalid AuId: " + auid;
 	displayAuSummary();
-	break op;
+      } else if (action.equals("Edit")) displayEditAu(au);
+      else if (action.equals("Restore")) displayRestoreAu(au);
+      else if (action.equals("DoRestore")) updateAu(au);
+      else if (action.equals("Update")) updateAu(au);
+      else if (action.equals("Deactivate")) confirmDeactivateAu(au);
+      else if (action.equals("Confirm Deactivate")) doDeactivateAu(au);
+      else if (action.equals("Unconfigure")) confirmUnconfigureAu(au);
+      else if (action.equals("Confirm Unconfigure")) doUnconfigureAu(au);
+      else {
+	errMsg = "Unknown action: " + action;
+	displayAuSummary();
       }
-      if (action.equals("Edit")){
-	displayEditAu(au);
-	break op;
-      }
-      if (action.equals("Restore")) {
-	displayRestoreAu(au);
-	break op;
-      }
-      if (action.equals("DoRestore")) {
-	updateAu(au);
-	break op;
-      }
-      if (action.equals("Update")) {
-	updateAu(au);
-	break op;
-      }
-      if (action.equals("Unconfigure")) {
-	confirmUnconfigureAu(au);
-	break op;
-      }
-      if (action.equals("Confirm Unconfigure")) {
-	doUnconfigureAu(au);
-	break op;
-      }
-      errMsg = "Unknown action: " + action;
-      displayAuSummary();
     }
     resetLocals();
   }
@@ -200,7 +172,8 @@ public class AuConfig extends LockssServlet {
   /** Add an Edit row to the table */
   private void addAuSummaryRow(Table tbl, ArchivalUnit au) {
     Configuration cfg = pluginMgr.getStoredAuConfiguration(au);
-    boolean deleted = cfg.isEmpty();
+    boolean deleted = (cfg.isEmpty() ||
+		       cfg.getBoolean(PluginManager.AU_PARAM_DISABLED, false));
     tbl.newRow();
     tbl.newCell("align=right valign=center");
     String act = deleted ? "Restore": "Edit";
@@ -218,7 +191,7 @@ public class AuConfig extends LockssServlet {
     page.add(getExplanationBlock("Editing configuration of: " +
 				 encodedAuName(au)));
 
-    java.util.List actions = ListUtil.list("Unconfigure");
+    java.util.List actions = ListUtil.list("Deactivate", "Unconfigure");
     if (!getEditKeys().isEmpty()) {
       actions.add(0, "Update");
     }
@@ -350,17 +323,12 @@ public class AuConfig extends LockssServlet {
       tbl.add(sel);
       addOr(tbl);
     }
-    SortedMap pMap = new TreeMap();
-    for (Iterator iter = pluginMgr.getRegisteredPlugins().iterator();
-	 iter.hasNext(); ) {
-      Plugin p = (Plugin)iter.next();
-      pMap.put(p.getPluginName(), p);
-    }
 
+    SortedMap pMap = pluginMgr.getPluginNameMap();
     if (!pMap.isEmpty()) {
       tbl.newRow();
       tbl.newCell("colspan=3 align=center");
-      tbl.add("Choose a plugin:<br>");
+      tbl.add("Choose a publisher plugin:<br>");
       Select sel = new Select("PluginId", false);
       sel.add("-no selection-", true, "");
       for (Iterator iter = pMap.keySet().iterator(); iter.hasNext(); ) {
@@ -566,8 +534,6 @@ public class AuConfig extends LockssServlet {
     
   /** Display the Confirm Unconfigure  page */
   private void confirmUnconfigureAu(ArchivalUnit au) throws IOException {
-    String permFoot = "Permanent deletion occurs only during a reboot," +
-      " when configuration changes are backed up to the configuration floppy.";
     String unconfigureFoot =
       "Unconfigure will not take effect until the next daemon restart." +
       "  At that point the Archival Unit will be inactive, but its contents" +
@@ -600,6 +566,42 @@ public class AuConfig extends LockssServlet {
     } catch (IOException e) {
       log.error("Couldn't save AU configuraton", e);
       errMsg = "Error deleting AU:<br>" + encodeText(e.getMessage());
+    }
+    displayAuSummary();
+  }
+
+  /** Display the Confirm Deactivate  page */
+  private void confirmDeactivateAu(ArchivalUnit au) throws IOException {
+    String deactivateFoot =
+      "Deactivate will not take effect until the next daemon restart." +
+      "  At that point the Archival Unit will be inactive, but its contents" +
+      " will remain in the cache and it can be reactivated at any time.";
+
+    Page page = newPage();
+    fetchAuConfig(au);
+
+    page.add(getErrBlock());
+    page.add(getExplanationBlock("Are you sure you want to deactivate" +
+				 addFootnote(deactivateFoot) + ": " +
+				 encodedAuName(au)));
+
+    Form frm = createAuEditForm(ListUtil.list("Confirm Deactivate"),
+				au, false);
+    page.add(frm);
+    endPage(page);
+  }
+
+  /** Process the Confirm Deactivate button */
+  private void doDeactivateAu(ArchivalUnit au) throws IOException {
+    try {
+      pluginMgr.deactivateAuConfiguration(au);
+      statusMsg = "Archival Unit deactivated.";
+    } catch (ArchivalUnit.ConfigurationException e) {
+      log.error("Can't happen", e);
+      errMsg = encodeText(e.getMessage());
+    } catch (IOException e) {
+      log.error("Couldn't save AU configuraton", e);
+      errMsg = "Error deactivating AU:<br>" + encodeText(e.getMessage());
     }
     displayAuSummary();
   }
