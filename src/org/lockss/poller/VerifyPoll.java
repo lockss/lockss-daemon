@@ -1,5 +1,5 @@
 /*
-* $Id: VerifyPoll.java,v 1.14 2002-11-23 05:49:00 claire Exp $
+* $Id: VerifyPoll.java,v 1.15 2002-11-25 19:40:00 claire Exp $
  */
 
 /*
@@ -82,18 +82,22 @@ class VerifyPoll extends Poll {
     }
   }
 
+
   /**
    * schedule the hash for this poll.
+   * @param hasher the MessageDigest used to hash the content
    * @param timer the Deadline by which we must complete
    * @param key the Object which will be returned from the hasher. Always the
    * message which triggered the hash
    * @param callback the hashing callback to use on return
    * @return true if hash successfully completed.
    */
-  boolean scheduleHash(Deadline timer, Object key,
-                                HashService.Callback callback) {
+  boolean scheduleHash(MessageDigest hasher, Deadline timer,
+                                Object key, HashService.Callback callback) {
     return true;
   }
+
+
 
   /**
    * start the poll.  set a deadline in which to actually verify the message.
@@ -144,18 +148,12 @@ class VerifyPoll extends Poll {
   private boolean performHash(LcapMessage msg) {
     byte[] challenge = msg.getChallenge();
     byte[] hashed = msg.getHashed();
-    MessageDigest hasher;
+    MessageDigest hasher = PollManager.getHasher();
     // check this vote verification hashed in the message should
     // hash to the challenge, which is the verifier of the poll
     // thats being verified
-    try {
-      hasher = MessageDigest.getInstance(PollManager.HASH_ALGORITHM);
-    }
-    catch (NoSuchAlgorithmException ex) {
-      log.error(m_key + "failed to find hash algorithm");
-      return false;
-    }
-    hasher.update(hashed,0,hashed.length);
+
+    hasher.update(hashed, 0, hashed.length);
     byte[] HofHashed = hasher.digest();
     if(!Arrays.equals(challenge, HofHashed))  {
       handleDisagreeVote(msg);

@@ -1,5 +1,5 @@
 /*
-* $Id: NamePoll.java,v 1.14 2002-11-22 03:00:39 claire Exp $
+* $Id: NamePoll.java,v 1.15 2002-11-25 19:40:00 claire Exp $
  */
 
 /*
@@ -76,6 +76,7 @@ public class NamePoll extends Poll {
     return true;
   }
 
+
   /**
    * handle a message which may be a incoming vote
    * @param msg the Message to handle
@@ -88,32 +89,37 @@ public class NamePoll extends Poll {
     }
   }
 
+
   /**
    * schedule the hash for this poll.
+   * @param hasher the MessageDigest used to hash the content
    * @param timer the Deadline by which we must complete
    * @param key the Object which will be returned from the hasher. Always the
    * message which triggered the hash
    * @param callback the hashing callback to use on return
    * @return true if hash successfully completed.
    */
-  boolean scheduleHash(Deadline timer, Object key,
+  boolean scheduleHash(MessageDigest hasher, Deadline timer, Object key,
                                 HashService.Callback callback) {
-    MessageDigest hasher = PollManager.getHasher();
-    hasher.update(m_challenge, 0, m_challenge.length);
-    hasher.update(m_verifier, 0, m_verifier.length);
-    return HashService.hashNames(m_urlSet,
-                                 hasher,
-                                 timer,
-                                 callback,
-                                 this);
+    return HashService.hashNames(m_urlSet, hasher, timer, callback, key);
   }
 
+
+  /**
+   * start the hash required for a vote cast in this poll
+   * @param msg the LcapMessage containing the vote we're going to check
+   */
   void startVote(LcapMessage msg) {
     super.startVote();
     long dur = msg.getDuration();
+    byte[] challenge = msg.getChallenge();
+    byte[] verifier = msg.getVerifier();
+    MessageDigest hasher = PollManager.getHasher();
+    hasher.update(challenge, 0, challenge.length);
+    hasher.update(verifier, 0, verifier.length);
 
     if(prepareVoteCheck(msg)) {
-      if(!scheduleHash(Deadline.in(dur), msg,
+      if(!scheduleHash(hasher, Deadline.in(dur), msg,
                        new VoteHashCallback())) {
         log.info(m_key + " no time to hash vote " + dur + ":" + m_hashTime);
         stopVote();

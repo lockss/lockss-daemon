@@ -1,5 +1,5 @@
 /*
- * $Id: Poll.java,v 1.18 2002-11-23 05:49:00 claire Exp $
+ * $Id: Poll.java,v 1.19 2002-11-25 19:40:00 claire Exp $
  */
 
 /*
@@ -146,14 +146,15 @@ public abstract class Poll {
 
   /**
    * schedule the hash for this poll.
+   * @param hasher the MessageDigest used to hash the content
    * @param timer the Deadline by which we must complete
    * @param key the Object which will be returned from the hasher. Always the
    * message which triggered the hash
    * @param callback the hashing callback to use on return
    * @return true if hash successfully completed.
    */
-  abstract boolean scheduleHash(Deadline timer, Object key,
-                                HashService.Callback callback);
+  abstract boolean scheduleHash(MessageDigest hasher, Deadline timer,
+                                Object key, HashService.Callback callback);
 
   /**
    * schedule a vote by a poll.  we've already completed the hash so we're
@@ -289,7 +290,10 @@ public abstract class Poll {
     if(m_pollstate != PS_INITING)
       return;
     Deadline pt = Deadline.in(m_msg.getDuration());
-    if(!scheduleHash( pt, m_msg, new PollHashCallback())) {
+    MessageDigest hasher = PollManager.getHasher();
+    hasher.update(m_challenge, 0, m_challenge.length);
+    hasher.update(m_verifier, 0, m_verifier.length);
+    if(!scheduleHash(hasher, pt, m_msg, new PollHashCallback())) {
       m_pollstate = ERR_SCHEDULE_HASH;
       stopPoll();
       return;
