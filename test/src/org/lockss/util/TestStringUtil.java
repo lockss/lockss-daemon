@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.4 2002-10-24 23:22:08 aalto Exp $
+ * $Id: TestStringUtil.java,v 1.5 2002-10-31 01:23:12 troberts Exp $
  */
 
 /*
@@ -129,4 +129,40 @@ public class TestStringUtil extends TestCase{
     assertEquals(2, StringUtil.substringCount("testtest", "test"));
     assertEquals(2, StringUtil.substringCount("xxxxxy", "xx"));
   }
+
+  public void testReplaceStringNonExistingSubstring(){
+    String testStr = "blahTestblah";
+    assertEquals(testStr, StringUtil.replaceString(testStr, "!", "8"));
+  }
+
+  public void testReplaceStringSingleExistingSubstring(){
+    String testStr = "blahTestblah";
+    assertEquals("blahtestblah", StringUtil.replaceString(testStr, "Test", "test"));
+  }
+
+  public void testReplaceStringMultiExistingSubstring(){
+    String testStr = "blahTestblah";
+    assertEquals("BlahTestBlah", StringUtil.replaceString(testStr, "blah", "Blah"));
+  }
+
+  public void testReplacementStringContainsReplacedString(){
+    assertEquals("1234456",
+  		 StringUtil.replaceString("123456", "4", "44")); 
+  }
+  
+  public void testReplacementStringDiffLength(){
+    assertEquals("12347856",
+  		 StringUtil.replaceString("123456", "4", "478")); 
+  }
+  
+  public void testReplaceEqualStrings(){
+    assertEquals("TestBlahTest",
+		 StringUtil.replaceString("TestBlahTest", "Blah", "Blah"));
+  }
+
+
+//    public void testReplaceStringNullFirst(){
+//    }
+
 }
+
