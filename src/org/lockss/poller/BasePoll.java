@@ -1,5 +1,5 @@
 /*
-* $Id: BasePoll.java,v 1.2 2003-07-09 19:36:53 clairegriffin Exp $
+* $Id: BasePoll.java,v 1.3 2004-01-31 22:54:52 tlipkis Exp $
  */
 
 /*
@@ -119,12 +119,12 @@ public abstract class BasePoll implements Poll, Serializable {
     return m_pollspec;
   }
 
-  /* Return the version of the protocol in use
-   * @return the protocol version
+  /** Return the poll version of this poll
+   * @return the poll version
    */
-   public int getVersion() {
-     return m_pollspec.getVersion();
-   }
+  public int getVersion() {
+    return m_pollspec.getPollVersion();
+  }
 
   /**
    * get the message used to define this Poll
@@ -134,8 +134,6 @@ public abstract class BasePoll implements Poll, Serializable {
     return m_msg;
   }
 
-
-
   /**
    * get the poll identifier key
    * @return the key as a String
@@ -143,7 +141,6 @@ public abstract class BasePoll implements Poll, Serializable {
   public String getKey() {
     return m_key;
   }
-
 
   /**
    * Return the poll's deadline
@@ -153,10 +150,10 @@ public abstract class BasePoll implements Poll, Serializable {
     return m_deadline;
   }
 
-   /**
-    * get the PollTally for this Poll
-    * @return VoteTally for this poll
-    */
+  /**
+   * get the PollTally for this Poll
+   * @return VoteTally for this poll
+   */
   abstract public PollTally getVoteTally();
 
   /**
