@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawler.java,v 1.9 2004-03-03 00:38:44 troberts Exp $
+ * $Id: MockCrawler.java,v 1.10 2004-10-19 06:22:38 tlipkis Exp $
  */
 
 /*
@@ -80,6 +80,10 @@ public class MockCrawler extends NullCrawler {
 
   public boolean doCrawlCalled() {
     return doCrawlCalled;
+  }
+
+  public void setDoCrawlCalled(boolean val) {
+    doCrawlCalled = val;
   }
 
   public ArchivalUnit getAu() {
