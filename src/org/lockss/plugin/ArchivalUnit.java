@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.28 2004-09-01 23:36:48 clairegriffin Exp $
+ * $Id: ArchivalUnit.java,v 1.29 2004-09-02 01:23:22 troberts Exp $
  */
 
 /*
@@ -58,6 +58,7 @@ public interface ArchivalUnit {
   public String AU_NEW_CRAWL_INTERVAL = "au_new_crawl_interval";
   public String AU_START_URL = "au_start_url";
   public String AU_CRAWL_SPEC = "au_crawl_spec";
+  public String AU_URL_NORMALIZER = "au_url_normalizer";
   public String AU_MAX_SIZE_KEY = "au_maxsize";
   public String AU_MAX_FILE_SIZE_KEY = "au_max_file_size";
   public String AU_TITLE = "au_title";
