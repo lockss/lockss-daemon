@@ -1,5 +1,5 @@
 /*
- * $Id: HashSvcQueueImpl.java,v 1.1 2003-11-11 20:33:02 tlipkis Exp $
+ * $Id: HashSvcQueueImpl.java,v 1.2 2003-11-20 01:07:56 tlipkis Exp $
  */
 
 /*
@@ -93,8 +93,8 @@ public class HashSvcQueueImpl
 
   protected void setConfig(Configuration config, Configuration prevConfig,
 			   Set changedKeys) {
-    estPadConstant = config.getLong(PARAM_ESTIMATE_PAD_CONSTANT,
-				    DEFAULT_ESTIMATE_PAD_CONSTANT);
+    estPadConstant = config.getTimeInterval(PARAM_ESTIMATE_PAD_CONSTANT,
+					    DEFAULT_ESTIMATE_PAD_CONSTANT);
     estPadPercent = config.getLong(PARAM_ESTIMATE_PAD_PERCENT,
 				   DEFAULT_ESTIMATE_PAD_PERCENT);
   }
