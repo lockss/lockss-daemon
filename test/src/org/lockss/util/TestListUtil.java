@@ -1,5 +1,5 @@
 /*
- * $Id: TestListUtil.java,v 1.4 2003-06-25 21:07:33 troberts Exp $
+ * $Id: TestListUtil.java,v 1.5 2003-06-25 23:40:40 troberts Exp $
  */
 
 /*
@@ -109,28 +109,4 @@ public class TestListUtil extends LockssTestCase {
     assertNotSame(l0, r0);
     assertEquals(ListUtil.list(new Integer(7), "bar", "foo"), r0);
   }
-
-  public void testListToStringEmptyList() {
-    assertEquals("", ListUtil.listToString(new ArrayList(), "\n"));
-  }
-
-  public void testListToStringWithStrings() {
-    List list = ListUtil.list("Blah1", "Blah2", "Blah3");
-    String expectedStr = "Blah1\nBlah2\nBlah3";
-    assertEquals(expectedStr, ListUtil.listToString(list, "\n"));
-  }
-
-  public void testListToStringWithNonStrings() throws MalformedURLException {
-    List list = ListUtil.list(new URL("http://www.example.com/"),
-			      new URL("http://www.example2.com/"));
-    String expectedStr = "http://www.example.com/\nhttp://www.example2.com/";
-    assertEquals(expectedStr, ListUtil.listToString(list, "\n"));
-  }
-
-  public void testListToStringWithSeparator() {
-    List list = ListUtil.list("Blah1", "Blah2", "Blah3");
-    String expectedStr = "Blah1 Blah2 Blah3";
-    assertEquals(expectedStr, ListUtil.listToString(list, " "));
-  }
-
 }
