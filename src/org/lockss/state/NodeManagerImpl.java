@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.178 2004-07-12 23:41:43 clairegriffin Exp $
+ * $Id: NodeManagerImpl.java,v 1.179 2004-07-12 23:49:30 clairegriffin Exp $
  */
 
 /*
@@ -109,7 +109,7 @@ public class NodeManagerImpl
     lockssRepo = theDaemon.getLockssRepository(managedAu);
     pollManager = theDaemon.getPollManager();
     regulator = theDaemon.getActivityRegulator(managedAu);
-
+    alertMgr = theDaemon.getAlertManager();
     // initializes the state info
     nodeCache = new NodeStateCache(maxCacheSize);
     activeNodes = new HashMap();
