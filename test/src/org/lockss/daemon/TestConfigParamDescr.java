@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigParamDescr.java,v 1.2 2004-01-27 04:02:24 tlipkis Exp $
+ * $Id: TestConfigParamDescr.java,v 1.2.22.1 2005-01-19 01:34:57 tlipkis Exp $
  */
 
 /*
@@ -111,6 +111,13 @@ public class TestConfigParamDescr extends LockssTestCase {
     assertEquals(d1, d2);
     d2.setSize(10);
     assertNotEquals(d1, d2);
+  }
+
+  public void testIsReserved() {
+    assertTrue(ConfigParamDescr.isReservedParam("reserved.foo"));
+    assertTrue(ConfigParamDescr.isReservedParam("reserved."));
+    assertFalse(ConfigParamDescr.isReservedParam("year"));
+    assertFalse(ConfigParamDescr.isReservedParam("reservedfoo"));
   }
 
   public void testHash() {

@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescr.java,v 1.20 2004-10-23 01:38:21 clairegriffin Exp $
+ * $Id: ConfigParamDescr.java,v 1.20.4.1 2005-01-19 01:34:57 tlipkis Exp $
  */
 
 /*
@@ -443,8 +443,19 @@ public class ConfigParamDescr implements Comparable {
 
   public int hashCode() {
     int hash = 0x46600555;
+    hash += type;
+    hash += getSize();
     hash += key.hashCode();
     return hash;
+  }
+
+  static String PREFIX_RESERVED =
+    org.lockss.plugin.PluginManager.AU_PARAM_RESERVED + ".";
+
+  /** Return true if the key is a reserved parameter name (<i>ie</i>,
+   * starts with <code>reserved.</code>) */
+  public static boolean isReservedParam(String key) {
+    return key.startsWith(PREFIX_RESERVED);
   }
 
   public static class InvalidFormatException extends Exception {
