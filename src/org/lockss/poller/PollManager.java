@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.7 2002-11-22 03:00:39 claire Exp $
+* $Id: PollManager.java,v 1.8 2002-11-23 01:46:12 troberts Exp $
  */
 
 /*
@@ -50,7 +50,8 @@ public class PollManager {
 
   static final String HASH_ALGORITHM = "SHA-1";
 
-  private static Logger theLog=Logger.getLogger("PollManager",Logger.LEVEL_DEBUG);
+  private static Logger theLog=
+    Logger.getLogger("PollManager");
   private static HashMap thePolls = new HashMap();
   private static HashMap theVerifiers = new HashMap();
   private static Random theRandom = new Random();
@@ -92,14 +93,17 @@ public class PollManager {
     switch(msg.getOpcode()) {
       case LcapMessage.CONTENT_POLL_REP:
       case LcapMessage.CONTENT_POLL_REQ:
+	theLog.debug("Making a content poll on "+cus);
         ret_poll = new ContentPoll(msg, cus);
         break;
       case LcapMessage.NAME_POLL_REP:
       case LcapMessage.NAME_POLL_REQ:
+	theLog.debug("Making a name poll on "+cus);
         ret_poll = new NamePoll(msg, cus);
         break;
       case LcapMessage.VERIFY_POLL_REP:
       case LcapMessage.VERIFY_POLL_REQ:
+	theLog.debug("Making a verify poll on "+cus);
         ret_poll = new VerifyPoll(msg, cus);
         break;
       default:
@@ -126,12 +130,13 @@ public class PollManager {
    * @throws IOException thrown if Message construction fails.
    */
   public static void makePollRequest(String url,
-                                String regexp,
-                                int opcode,
-                                int timeToLive,
-                                InetAddress grpAddr,
-                                long duration,
-                                long voteRange) throws IOException {
+				     String regexp,
+				     int opcode,
+				     int timeToLive,
+				     InetAddress grpAddr,
+				     long duration,
+				     long voteRange)
+      throws IOException {
     if (voteRange > (duration/4)) {
       voteRange = duration/4;
     }
@@ -163,7 +168,10 @@ public class PollManager {
     String key = makeKey(msg.getChallenge());
     Poll ret = (Poll)thePolls.get(key);
     if(ret == null) {
+      theLog.info("Making new poll: "+key);
       ret = makePoll(msg);
+      theLog.info("Done making new poll: "+key);
+      ret.startPoll();
     }
     return ret;
   }
@@ -178,6 +186,7 @@ public class PollManager {
    * @throws IOException thrown if the poll was unsucessfully created
    */
   public static void handleMessage(LcapMessage msg) throws IOException {
+    theLog.info("Got a message: "+msg);
     Poll p = findPoll(msg);
     if (p == null) {
       theLog.error("Unable to create poll for Message: " + msg.toString());
