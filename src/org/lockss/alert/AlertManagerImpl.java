@@ -1,5 +1,5 @@
 /*
- * $Id: AlertManagerImpl.java,v 1.3 2004-07-12 23:53:29 tlipkis Exp $
+ * $Id: AlertManagerImpl.java,v 1.3.2.1 2004-07-19 08:25:43 tlipkis Exp $
  *
 
  Copyright (c) 2000-2004 Board of Trustees of Leland Stanford Jr. University,
@@ -48,6 +48,18 @@ public class AlertManagerImpl extends BaseLockssManager
   static final String PARAM_ALERTS_ENABLED = PREFIX + "enabled";
   static final boolean DEFAULT_ALERTS_ENABLED = false;
 
+  static final String DELAY_PREFIX = PREFIX + "notify.delay";
+
+  static final String PARAM_DELAY_INITIAL = DELAY_PREFIX + "initial";
+  static final long DEFAULT_DELAY_INITIAL = 30 * Constants.MINUTE;
+
+  static final String PARAM_DELAY_INCR = DELAY_PREFIX + "incr";
+  static final long DEFAULT_DELAY_INCR = 30 * Constants.MINUTE;
+
+  static final String PARAM_DELAY_MAX = DELAY_PREFIX + "max";
+  static final long DEFAULT_DELAY_MAX = 2 * Constants.HOUR;
+
+
   static final String PARAM_ALERT_ALL_EMAIL = PREFIX + "allEmail";
 
   public static String CONFIG_FILE_ALERT_CONFIG = "alertconfig.xml";
@@ -55,11 +67,14 @@ public class AlertManagerImpl extends BaseLockssManager
   private ConfigManager configMgr;
   private AlertConfig alertConfig;
   private boolean alertsEnabled = DEFAULT_ALERTS_ENABLED;
+  private long initialDelay;
+  private long incrDelay;
+  private long maxDelay;
 
   public void startService() {
     super.startService();
     configMgr = getDaemon().getConfigManager();
-    loadConfig();
+//     loadConfig();
   }
 
   void tmpConfig(String address) {
@@ -81,10 +96,14 @@ public class AlertManagerImpl extends BaseLockssManager
   protected synchronized void setConfig(Configuration config,
 					Configuration prevConfig,
 					Set changedKeys) {
-    if (changedKeys.contains(PARAM_ALERTS_ENABLED)) {
-      alertsEnabled = config.getBoolean(PARAM_ALERTS_ENABLED,
-					DEFAULT_ALERTS_ENABLED);
-    }
+    alertsEnabled = config.getBoolean(PARAM_ALERTS_ENABLED,
+				      DEFAULT_ALERTS_ENABLED);
+    initialDelay = config.getTimeInterval(PARAM_DELAY_INITIAL,
+				      DEFAULT_DELAY_INITIAL);
+    incrDelay = config.getTimeInterval(PARAM_DELAY_INCR,
+				      DEFAULT_DELAY_INCR);
+    maxDelay = config.getTimeInterval(PARAM_DELAY_MAX,
+				      DEFAULT_DELAY_MAX);
     if (changedKeys.contains(PARAM_ALERT_ALL_EMAIL)) {
       tmpConfig(config.get(PARAM_ALERT_ALL_EMAIL));
     }
@@ -107,9 +126,6 @@ public class AlertManagerImpl extends BaseLockssManager
 
   void storeAlertConfig(File file, AlertConfig alertConfig) throws Exception {
     try {
-      if (log.isDebug3()) {
-	log.debug3("Storing " + alertConfig);
-      }
       //       store(file, new AlertConfigBean(alertConfig));
       store(file, alertConfig);
     } catch (Exception e) {
@@ -120,9 +136,7 @@ public class AlertManagerImpl extends BaseLockssManager
 
   AlertConfig loadAlertConfig(File file) {
     try {
-      if (log.isDebug3()) {
-	log.debug3("Loading alert config");
-      }
+      log.debug3("Loading alert config");
       AlertConfig acb = (AlertConfig)load(file, AlertConfig.class);
       if (acb == null) {
 	log.debug2("No alert config");
@@ -181,7 +195,7 @@ public class AlertManagerImpl extends BaseLockssManager
       log.debug3("alerts disabled");
       return;
     }
-    log.debug3(alert.toString());
+    if (log.isDebug3()) log.debug3(alert.toString());
     Set actions = findMatchingActions(alert, alertConfig.getFilters());
     for (Iterator iter = actions.iterator(); iter.hasNext(); ) {
       AlertAction action = (AlertAction)iter.next();
@@ -230,13 +244,14 @@ public class AlertManagerImpl extends BaseLockssManager
     pend.addAlert(alert);
   }
 
-  /** Makes decisions about and keeps track of pending alerts to reports in
-   * groups */
+  /** Makes decisions about delaying notification of alerts in order to
+   * report them in groups */
   class PendingActions {
     AlertAction action;
     List alerts;
     Alert initial;
     Deadline trigger;
+    long latestTrigger;
     boolean isProcessed = false;
 
     PendingActions(AlertAction action) {
@@ -244,28 +259,37 @@ public class AlertManagerImpl extends BaseLockssManager
     }
 
     synchronized void addAlert(Alert alert) {
+      if (alert.getBool(Alert.ATTR_IS_TIME_CRITICAL) ||
+	  action.getMaxPendTime() == 0) {
+	action.record(getDaemon(), alert);
+	return;
+      }	
       if (alerts == null || isProcessed) {
-	log.debug3("Recording first: " + alert);
+	if (log.isDebug3()) log.debug3("Recording first: " + alert);
 	// record this one, start list for successive, start timer
 	action.record(getDaemon(), alert);
 	alerts = new ArrayList();
 	isProcessed = false;
+	latestTrigger = now() + min(maxDelay, action.getMaxPendTime());
+	trigger = Deadline.in(min(now() + initialDelay, latestTrigger));
 	scheduleTimer();
       } else {
-	log.debug3("Adding: " + alert);
-	if (alerts.isEmpty()) {
-	  trigger.expireIn(getMaxPendTime());
-	  log.debug3(" and resetting timer to " + trigger);
-	}
+	if (log.isDebug3()) log.debug3("Adding: " + alert);
 	alerts.add(alert);
+	trigger.expireIn(min(now() + incrDelay, latestTrigger));
+	if (log.isDebug3()) log.debug3(" and resetting timer to " + trigger);
 	if (isTime()) {
 	  execute();
 	}
       }
     }
 
-    long getMaxPendTime() {
-      return action.getMaxPendTime();
+    long now() {
+      return TimeBase.nowMs();
+    }
+
+    long min(long a, long b) {
+      return a <= b ? a : b;
     }
 
     boolean isTime() {
@@ -273,12 +297,10 @@ public class AlertManagerImpl extends BaseLockssManager
     }
 
     void scheduleTimer() {
-      trigger = Deadline.in(getMaxPendTime());
-      log.debug3("Action timer " + trigger);
+      if (log.isDebug3()) log.debug3("Action timer " + trigger);
       TimerQueue.schedule(trigger,
 			  new TimerQueue.Callback() {
 			    public void timerExpired(Object cookie) {
-			      AlertManagerImpl.this.log.debug3("Timer");
 			      execute();
 			    }},
 			  null);
@@ -286,7 +308,11 @@ public class AlertManagerImpl extends BaseLockssManager
 
     synchronized void execute() {
       if (!isProcessed && (alerts != null) && !alerts.isEmpty()) {
-	action.record(getDaemon(), alerts);
+	if (alerts.size() == 1) {
+	  action.record(getDaemon(), (Alert)alerts.get(0));
+	} else {
+	  action.record(getDaemon(), alerts);
+	}
 	alerts = null;
 	isProcessed = true;
       }
