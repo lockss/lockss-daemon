@@ -1,5 +1,5 @@
 /*
- * $Id: TestIdentityManager.java,v 1.30 2004-09-29 06:39:14 tlipkis Exp $
+ * $Id: TestIdentityManager.java,v 1.31 2004-12-02 23:53:54 troberts Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.File;
 import java.util.*;
 import java.net.UnknownHostException;
 import org.lockss.util.*;
+import org.lockss.daemon.status.*;
 import org.lockss.poller.*;
 import org.lockss.test.*;
 
@@ -43,14 +44,15 @@ import org.lockss.test.*;
  * IdentityManager has been initialized.  See TestIdentityManagerInit for
  * more IdentityManager tests. */
 public class TestIdentityManager extends LockssTestCase {
-  int testReputation;
   Object testIdKey;
 
   private MockLockssDaemon theDaemon;
-  private IdentityManager idmgr;
+  private TestableIdentityManager idmgr;
   PeerIdentity peer1;
   PeerIdentity peer2;
   PeerIdentity peer3;
+
+  private static final String LOCAL_IP = "127.1.2.3";
 
   public void setUp() throws Exception {
     super.setUp();
@@ -58,15 +60,14 @@ public class TestIdentityManager extends LockssTestCase {
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     Properties p = new Properties();
     p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
-    p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.1.2.3");
+    p.setProperty(IdentityManager.PARAM_LOCAL_IP, LOCAL_IP);
     ConfigurationUtil.setCurrentConfigFromProps(p);
 
     theDaemon = getMockLockssDaemon();
-    idmgr = theDaemon.getIdentityManager();
+    idmgr = new TestableIdentityManager();
+    idmgr.initService(theDaemon);
+    theDaemon.setIdentityManager(idmgr);
     idmgr.startService();
-
-    testReputation = IdentityManager.INITIAL_REPUTATION;
-
   }
 
   public void tearDown() throws Exception {
@@ -565,6 +566,65 @@ public class TestIdentityManager extends LockssTestCase {
     expected.put(peer2, new Long(10));
 
     assertEquals(expected, idmgr.getAgreed(mau1));
+  }
+  /**
+   * Tests that the IP address info fed to the IdentityManagerStatus object
+   * looks like an IP address (x.x.x.x)
+   */
+
+  public void testStatusInterface() throws Exception {
+    peer1 = idmgr.stringToPeerIdentity("127.0.0.1");
+    peer2 = idmgr.stringToPeerIdentity("127.0.0.2");
+
+    MockArchivalUnit mau = new MockArchivalUnit();
+
+    idmgr.signalAgreed(peer1, mau);
+    idmgr.signalAgreed(peer2, mau);
+    
+    Map idMap = idmgr.getIdentityMap();
+    Set expectedAddresses = new HashSet();
+    expectedAddresses.add("127.0.0.1");
+    expectedAddresses.add("127.0.0.2");
+    expectedAddresses.add(LOCAL_IP);
+
+    for (Iterator iter = idMap.values().iterator();
+	 iter.hasNext();) {
+      LcapIdentity id = (LcapIdentity)iter.next();
+      assertTrue(expectedAddresses.contains(id.getPeerIdentity().getIdString()));
+    }
+    
+    assertEquals(expectedAddresses.size(), idMap.size()); //2 above,plus me
+  }
+
+  private class TestableIdentityManager extends IdentityManager {
+    Map identities = null;
+
+    public Map getIdentityMap() {
+      return identities;
+    }
+
+    protected IdentityManagerStatus makeStatusAccessor(Map identities) {
+      this.identities = identities;
+      return new MockIdentityManagerStatus();
+    }
+  }
+
+  private static class MockIdentityManagerStatus
+    extends IdentityManagerStatus {
+    public MockIdentityManagerStatus() {
+      super(null);
+    }
+    public String getDisplayName() {
+      throw new UnsupportedOperationException();
+    }
+    
+    public void populateTable(StatusTable table) {
+      throw new UnsupportedOperationException();
+    }
+
+    public boolean requiresKey() {
+      throw new UnsupportedOperationException();
+    }
   }
 
   public static void main(String[] argv) {
