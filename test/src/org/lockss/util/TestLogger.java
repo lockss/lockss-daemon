@@ -1,5 +1,5 @@
 /*
- * $Id: TestLogger.java,v 1.8 2003-01-05 04:38:13 tal Exp $
+ * $Id: TestLogger.java,v 1.9 2003-01-05 23:41:22 tal Exp $
  */
 
 /*
@@ -103,34 +103,41 @@ public class TestLogger extends LockssTestCase {
     assertEquals(1, target.initCount());
   }
 
-  public void testAddTargetByName() {
-    Logger l = Logger.getLogger("test-log");
-    Logger.addTarget("org.lockss.test.MockLogTarget");
-    List tgts = Logger.getTargets();
-    int cnt = 0;
-    for (Iterator iter = tgts.iterator(); iter.hasNext(); ) {
-      LogTarget tgt = (LogTarget)iter.next();
-      if (tgt instanceof MockLogTarget) {
-	cnt++;
-      }
+  List classesOf(List instances) {
+    List res = new ArrayList();
+    for (Iterator iter = instances.iterator(); iter.hasNext(); ) {
+      res.add(iter.next().getClass());
     }
-    assertEquals(1, cnt);
+    return res;
+  }
+
+  public void testTargetListFromString() {
+    String t1 = "org.lockss.test.MockLogTarget";
+    String t2 = "org.lockss.util.SyslogTarget";
+    String t3 = "org.lockss.util.StringUtil"; // not a LogTarget
+    String t4 = "org.lockss.util.noSuchClass";	// not a class
+    String s1 = StringUtil.separatedString(ListUtil.list(t1, t3), ":");
+    String s2 = StringUtil.separatedString(ListUtil.list(t1, t4), ":");
+    String s3 = StringUtil.separatedString(ListUtil.list(t1, t2), ":");
+    assertEquals(null, Logger.targetListFromString(s1));
+    assertEquals(null, Logger.targetListFromString(s2));
+    List tgts = Logger.targetListFromString(s3);
+    List tgtClasses = classesOf(tgts);
+    assertEquals(SetUtil.set(MockLogTarget.class,
+			     SyslogTarget.class),
+		 new HashSet(tgtClasses));
   }
 
   public void testConfigureTargets() throws Exception {
     Logger l = Logger.getLogger("test-log");
     String s =
       "org.lockss.log.targets=" +
-      "org.lockss.test.MockLogTarget:org.lockss.util.SyslogTarget\n";
+      "org.lockss.test.MockLogTarget:" +
+      "org.lockss.util.SyslogTarget\n";
     TestConfiguration.setCurrentConfigFromString(s);
     List tgts = Logger.getTargets();
-    List tgtClasses = new ArrayList();
-    for (Iterator iter = tgts.iterator(); iter.hasNext(); ) {
-      LogTarget tgt = (LogTarget)iter.next();
-      tgtClasses.add(tgt.getClass());
-    }
-    assertIsomorphic(ListUtil.list(StdErrTarget.class,
-				   MockLogTarget.class,
+    List tgtClasses = classesOf(tgts);
+    assertIsomorphic(ListUtil.list(MockLogTarget.class,
 				   SyslogTarget.class),
 		     tgtClasses);
   }

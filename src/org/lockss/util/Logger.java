@@ -1,5 +1,5 @@
 /*
- * $Id: Logger.java,v 1.12 2003-01-05 04:38:13 tal Exp $
+ * $Id: Logger.java,v 1.13 2003-01-05 23:41:22 tal Exp $
  */
 
 /*
@@ -78,12 +78,13 @@ public class Logger {
   private static final int DEFAULT_LEVEL = LEVEL_INFO;
 
   private static final Map logs = new HashMap();
-  private static Vector targets = new Vector();
+  private static List targets = new ArrayList();
 
   // allow default level to be specified on command line
   private static int defaultLevel;
 
   private static boolean deferredInitDone = false;
+
   private static ThreadLocal targetStack = new ThreadLocal() {
       protected Object initialValue() {
 	return new Vector();
@@ -259,7 +260,7 @@ public class Logger {
    */
   public static void addTarget(LogTarget target) {
     if (!targets.contains(target)) {
-      targets.addElement(target);
+      targets.add(target);
       target.init();
     }
   }
@@ -289,43 +290,60 @@ public class Logger {
 	public void configurationChanged(Configuration oldConfig,
 					 Configuration newConfig,
 					 Set changedKeys) {
-	  setConfig(changedKeys);
+	  setAllLogLevels();
+	  if (changedKeys.contains(PARAM_LOG_TARGETS)) {
+	    setLogTargets();
+	  }
 	}
       });
   }
 
   /** Set log level of all logs to the currently configured value
    */
-  private static void setConfig(Set changedKeys) {
+  private static void setAllLogLevels() {
     for (Iterator iter = logs.values().iterator();
 	 iter.hasNext(); ) {
       Logger l = (Logger)iter.next();
       l.setLevel(getConfiguredLevel(l.name));
     }
-    if (changedKeys.contains(PARAM_LOG_TARGETS)) {
-      Vector v =
-	StringUtil.breakAt(Configuration.getParam(PARAM_LOG_TARGETS), ':');
-      for (Iterator iter = v.iterator(); iter.hasNext(); ) {
-	addTarget((String)iter.next());
+  }
+
+  /** Change list of targets to that specified by config param
+   */
+  private static void setLogTargets() {
+    List tgts =
+      targetListFromString(Configuration.getParam(PARAM_LOG_TARGETS));
+    if (tgts != null && !tgts.isEmpty()) {
+      targets = tgts;
+    } else {
+      myLog.error("Leaving log targets unchanged");
+    }
+  }
+
+  /** Convert colon-separated string of log target class names to a list
+   * of log target instances
+   * @return List of instances, or null if any errors occurred
+   */
+  static List targetListFromString(String s) {
+    boolean err = false;
+    List tgts = new ArrayList();
+    Vector names = StringUtil.breakAt(s, ':');
+    for (Iterator iter = names.iterator(); iter.hasNext(); ) {
+      String targetName = (String)iter.next();
+      try {
+	Class targetClass = Class.forName(targetName);
+	LogTarget target = (LogTarget)targetClass.newInstance();
+	tgts.add(target);
+      } catch (Exception e) {
+	myLog.error("Can't create log target \"" + targetName + "\": " +
+		    e.toString());
+	err = true;
       }
     }
+    return err ? null : tgts;
   }
 
-  /**
-   * Add an output target to all loggers.
-   * @param name of <code>LogTarget</code> implementation.
-   */
-  static void addTarget(String targetName) {
-    try {
-      Class targetClass = Class.forName(targetName);
-      LogTarget target = (LogTarget)targetClass.newInstance();
-      addTarget(target);
-    } catch (Exception e) {
-    myLog.error("Couldn't add log target \"" + targetName + "\"", e);
-    }
-  }
-
-  static Vector getTargets() {
+  static List getTargets() {
     return targets;
   }
 
