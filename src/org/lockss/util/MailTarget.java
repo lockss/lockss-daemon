@@ -1,5 +1,5 @@
 /*
- * $Id: MailTarget.java,v 1.2 2003-01-07 20:12:37 aalto Exp $
+ * $Id: MailTarget.java,v 1.3 2003-01-07 20:23:24 aalto Exp $
  */
 
 /*
@@ -42,8 +42,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
 /**
- * Simple SMTP client.
- * Reads smtp server name from ssmtp config in /etc/ssmtp/ssmtp.conf
+ * Log target for email logging.  Utilizes SmtpMailer.
  */
 public class MailTarget {
   /**

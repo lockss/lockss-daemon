@@ -1,5 +1,5 @@
 /*
- * $Id: SmtpMailer.java,v 1.1 2003-01-07 02:06:31 aalto Exp $
+ * $Id: SmtpMailer.java,v 1.2 2003-01-07 20:23:24 aalto Exp $
  */
 
 /*
@@ -38,7 +38,6 @@ import java.net.*;
 
 /**
  * Simple SMTP client.
- * Reads smtp server name from ssmtp config in /etc/ssmtp/ssmtp.conf
  */
 public class SmtpMailer {
   private static String smtpHost = null;
