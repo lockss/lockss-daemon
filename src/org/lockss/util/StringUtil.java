@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.47 2004-11-30 00:48:19 troberts Exp $
+ * $Id: StringUtil.java,v 1.48 2004-12-01 18:43:20 troberts Exp $
  */
 
 /*
@@ -750,10 +750,15 @@ public class StringUtil {
    * if there aren't n instances of searchStr in sourceStr
    */
   public static int nthIndexOf(int n, String sourceStr, String searchStr) {
-    int idx = -1;
-    for (int ix = 0; ix < n; ix++) {
-      idx = sourceStr.indexOf(searchStr, idx+1); 
+    if (n <= 0) {
+      return -1;
     }
+
+    int idx = -1;
+    do {
+      idx = sourceStr.indexOf(searchStr, idx+1); 
+    } while (--n > 0 && idx >= 0);
+
     return idx;
   }
 

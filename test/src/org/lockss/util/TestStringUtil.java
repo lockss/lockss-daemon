@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.41 2004-11-30 00:48:19 troberts Exp $
+ * $Id: TestStringUtil.java,v 1.42 2004-12-01 18:43:20 troberts Exp $
  */
 
 /*
@@ -524,6 +524,7 @@ System.out.println("s: "+s);
 
   public void testNthIndexOf() {
     assertEquals(-1, StringUtil.nthIndexOf(1, "xyz", "q"));
+    assertEquals(-1, StringUtil.nthIndexOf(11, "xxxyzx", "x"));
     assertEquals(0, StringUtil.nthIndexOf(1, "xyz", "x"));
     assertEquals(1, StringUtil.nthIndexOf(2, "xxyz", "x"));
 
