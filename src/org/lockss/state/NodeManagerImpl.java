@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.16 2003-01-31 09:47:19 claire Exp $
+ * $Id: NodeManagerImpl.java,v 1.17 2003-02-01 01:25:26 aalto Exp $
  */
 
 /*
@@ -174,7 +174,7 @@ public class NodeManagerImpl implements NodeManager {
       // estimate via short walk
       // this is not a fake walk; it functionally walks part of the tree
       long startTime = TimeBase.nowMs();
-      Iterator nodesIt = nodeMap.entrySet().iterator();
+      Iterator nodesIt = nodeMap.values().iterator();
       String deleteSub = null;
       int NUMBER_OF_NODES_TO_TEST = 200; //XXX fix
       int numberNodesTested = 0;
@@ -183,8 +183,7 @@ public class NodeManagerImpl implements NodeManager {
         if (!nodesIt.hasNext()) {
           break;
         }
-        Map.Entry entry = (Map.Entry)nodesIt.next();
-        walkEntry(entry);
+        walkNodeState((NodeState)nodesIt.next());
         numberNodesTested++;
       }
       long elapsedTime = TimeBase.nowMs() - startTime;
@@ -198,15 +197,16 @@ public class NodeManagerImpl implements NodeManager {
     return estimateL.longValue();
   }
 
-  private void doTreeWalk() {
+  void doTreeWalk() {
     //XXX check if ok with CrawlManager
+    // if CrawlManager.shouldDoTreeWalk();
     long startTime = TimeBase.nowMs();
     nodeTreeWalk(nodeMap);
     long elapsedTime = TimeBase.nowMs() - startTime;
     updateEstimate(elapsedTime);
   }
 
-  private void updateEstimate(long elapsedTime) {
+  void updateEstimate(long elapsedTime) {
     if (auEstimateMap==null) {
       auEstimateMap = new HashMap();
     }
@@ -220,16 +220,13 @@ public class NodeManagerImpl implements NodeManager {
   }
 
   private void nodeTreeWalk(TreeMap nodeMap) {
-    Iterator nodesIt = nodeMap.entrySet().iterator();
+    Iterator nodesIt = nodeMap.values().iterator();
     while (nodesIt.hasNext()) {
-      Map.Entry entry = (Map.Entry)nodesIt.next();
-      walkEntry(entry);
+      walkNodeState((NodeState)nodesIt.next());
     }
   }
 
-  private void walkEntry(Map.Entry entry) {
-    String key = (String)entry.getKey();
-    NodeState node = (NodeState)entry.getValue();
+  void walkNodeState(NodeState node) {
     CrawlState crawlState = node.getCrawlState();
 
     // at each node, check for crawl state
@@ -241,15 +238,22 @@ public class NodeManagerImpl implements NodeManager {
       case CrawlState.NEW_CONTENT_CRAWL:
       case CrawlState.REPAIR_CRAWL:
         if (crawlState.getStatus()==CrawlState.FINISHED) {
-          //XXX schedule crawls if it's been too long
+          //XXX has content
+          // if node.getCachedUrlSet().hasContent();
           // unless some sort of poll is currently running.
-          // check with plugin for scheduling
-          // should pass in PollManager and CrawlManager for easier testing
+          // and !node.getActivePolls().hasNext();
+          // if CrawlManager.shouldCrawl()
+          // then CrawlManager.scheduleBackgroundCrawl()
         }
     }
     Iterator historyIt = node.getPollHistories();
     //XXX check recent histories to see if something needs fixing
-    // permanently store poll histories
+    // if latest is PollState.LOST and it's been a long time
+    // and there're no active Polls
+    // then callNamePoll(node.getCachedUrlSet());
+    // if latest is Poll.REPAIRING and it's been a long time
+    // and there're no active Polls
+    // then callNamePoll(node.getCachedUrlSet());
     repository.storePollHistories(node);
   }
 
@@ -327,14 +331,7 @@ public class NodeManagerImpl implements NodeManager {
         pollState.status = PollState.LOST;
         closePoll(pollState, results.getDuration(), results.getPollVotes(),
                   nodeState);
-        long duration = calculateNamePollDuration(nodeState.getCachedUrlSet());
-        try {
-          PollManager.getPollManager().requestPoll(results.getUrl(),
-              results.getRegExp(), LcapMessage.NAME_POLL_REQ, duration);
-        } catch (IOException ioe) {
-          logger.error("Couldn't make name poll request.", ioe);
-          //XXX schedule something
-        }
+        callNamePoll(nodeState.getCachedUrlSet());
       } else {
         // if leaf node, we need to repair
         pollState.status = PollState.REPAIRING;
@@ -346,6 +343,7 @@ public class NodeManagerImpl implements NodeManager {
         } catch (IOException ioe) {
           logger.error("Repair attempt failed.", ioe);
           //XXX schedule something?
+          // or allow treewalk to fix?
         }
       }
     }
@@ -394,6 +392,7 @@ public class NodeManagerImpl implements NodeManager {
           } catch (Exception e) {
             logger.error("Couldn't fetch new node.", e);
             //XXX schedule something
+            // or allow treewalk to fix?
           }
         }
       }
@@ -410,6 +409,7 @@ public class NodeManagerImpl implements NodeManager {
         } catch (Exception e) {
           logger.error("Couldn't delete node.", e);
           //XXX schedule something
+          // or allow treewalk to fix?
         }
       }
       pollState.status = PollState.REPAIRED;
@@ -418,9 +418,19 @@ public class NodeManagerImpl implements NodeManager {
     }
   }
 
+  private void callNamePoll(CachedUrlSet cus) {
+    long duration = 10000; //XXX fix
+    try {
+      PollManager.getPollManager().requestPoll(cus.getPrimaryUrl(),
+          null, LcapMessage.NAME_POLL_REQ, duration);
+    } catch (IOException ioe) {
+      logger.error("Couldn't make name poll request.", ioe);
+      //XXX schedule something
+    }
+  }
+
   private void closePoll(PollState pollState, long duration, Collection votes,
                          NodeState nodeState) {
-    //XXX checkpoint correctly
     PollHistory history = new PollHistory(pollState, duration, votes);
     ((NodeStateImpl)nodeState).closeActivePoll(history);
     repository.storePollHistories(nodeState);
@@ -454,10 +464,10 @@ public class NodeManagerImpl implements NodeManager {
 
   private void markNodeForRepair(CachedUrlSet cus, PollState pollState)
       throws IOException {
-    // fetch new version; automatically backs up old version
     //XXX fix to asynchronize
-    // pass info to fetch queue instead
-    cus.makeUrlCacher(cus.getPrimaryUrl()).cache();
+    // CrawlManager.scheduleRepair(new URL(cus.getPrimaryUrl()),
+    // RepairCallback cb, Object cookie);
+cus.makeUrlCacher(cus.getPrimaryUrl()).cache();
   }
 
   private void deleteNode(CachedUrlSet cus) throws IOException {
@@ -473,20 +483,10 @@ public class NodeManagerImpl implements NodeManager {
     Iterator children = state.getCachedUrlSet().flatSetIterator();
     while (children.hasNext()) {
       CachedUrlSet child = (CachedUrlSet)children.next();
-      long duration = calculateContentPollDuration(child);
+      long hashEstimate = child.estimatedHashDuration();
       PollManager.getPollManager().requestPoll(child.getPrimaryUrl(), null,
-          LcapMessage.CONTENT_POLL_REQ, duration);
+          LcapMessage.CONTENT_POLL_REQ, hashEstimate);
     }
-  }
-
-  private long calculateContentPollDuration(CachedUrlSet cus) {
-    //XXX implement!
-    return 100000;
-  }
-
-  private long calculateNamePollDuration(CachedUrlSet cus) {
-    //XXX implement!
-    return 100000;
   }
 
   private void updateReputations(Poll.VoteTally results) {
