@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.94 2003-05-06 03:08:46 claire Exp $
+* $Id: PollManager.java,v 1.95 2003-05-07 22:12:38 claire Exp $
  */
 
 /*
@@ -243,16 +243,16 @@ public class PollManager  extends BaseLockssManager {
     PollTally tally = pme.poll.getVoteTally();
     long expiration = 0;
     Deadline d;
+    NodeManager nm = theDaemon.getNodeManager(tally.getArchivalUnit());
+    nm.startPoll(tally.getCachedUrlSet(), tally, true);
     if (replayNeeded) {
-      NodeManager nm = theDaemon.getNodeManager(tally.getArchivalUnit());
-      nm.startPoll(tally.getCachedUrlSet(), tally, true);
       theLog.debug2("starting replay of poll " + key);
       expiration = m_maxContentPollDuration;
       d = Deadline.in(expiration);
       tally.startReplay(d);
     }
     else {
-      pme.setPollCompleted();
+      pme.poll.stopPoll();
     }
     theLog.debug3("completed resume poll " + (String) key);
   }
