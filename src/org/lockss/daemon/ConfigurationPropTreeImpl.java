@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurationPropTreeImpl.java,v 1.10 2003-07-27 01:41:25 tlipkis Exp $
+ * $Id: ConfigurationPropTreeImpl.java,v 1.11 2003-12-23 00:30:18 tlipkis Exp $
  */
 
 /*
@@ -149,11 +149,19 @@ public class ConfigurationPropTreeImpl extends Configuration {
   }
 
   public Iterator nodeIterator() {
-    return new EnumerationIterator(props.getNodes());
+    return possiblyEmptyIterator(props.getNodes());
   }
 
   public Iterator nodeIterator(String key) {
-    return new EnumerationIterator(props.getNodes(key));
+    return possiblyEmptyIterator(props.getNodes(key));
+  }
+
+  private Iterator possiblyEmptyIterator(Enumeration enum) {
+    if (enum != null) {
+      return new EnumerationIterator(enum);
+    } else {
+      return CollectionUtil.EMPTY_ITERATOR;
+    }
   }
 
   public String toString() {

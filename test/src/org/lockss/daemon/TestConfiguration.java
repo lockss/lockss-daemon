@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfiguration.java,v 1.26 2003-09-16 23:31:20 eaalto Exp $
+ * $Id: TestConfiguration.java,v 1.27 2003-12-23 00:30:18 tlipkis Exp $
  */
 
 /*
@@ -267,6 +267,16 @@ public class TestConfiguration extends LockssTestCase {
       assertEquals(4, map.size());
       assertEquals(m2a, map);
     }
+  }
+
+  public void testEmptyTree() {
+    Configuration config = newConfiguration();
+    Iterator it1 = config.nodeIterator();
+    assertNotNull(it1);
+    assertFalse(it1.hasNext());
+    Iterator it2 = config.nodeIterator("foo.bar");
+    assertNotNull(it2);
+    assertFalse(it2.hasNext());
   }
 
   public void testPercentage() throws Exception {
