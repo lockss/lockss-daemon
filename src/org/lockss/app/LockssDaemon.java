@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.24 2003-04-30 23:38:23 tal Exp $
+ * $Id: LockssDaemon.java,v 1.25 2003-05-02 17:10:10 tal Exp $
  */
 
 /*
@@ -151,6 +151,7 @@ public class LockssDaemon {
   // set true after all managers have been inited
   private boolean daemonInited = false;
   private boolean daemonRunning = false;
+  private Date startDate;
 
   // Need to preserve order so managers are started and stopped in the
   // right order.  This does not need to be synchronized.
@@ -177,6 +178,13 @@ public class LockssDaemon {
       System.err.println("Exception thrown in main loop:");
       e.printStackTrace();
     }
+  }
+
+  /** Return the time the daemon started running.
+   * @return the time the daemon started running, as a long
+   */
+  public Date getStartDate() {
+    return startDate;
   }
 
   /**
@@ -370,6 +378,8 @@ public class LockssDaemon {
    * @throws Exception if the initialization fails
    */
   protected void runDaemon() throws Exception {
+
+    startDate = TimeBase.nowDate();
 
     // initialize our properties from the urls given
     initProperties();
