@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedUrlCacher.java,v 1.16 2004-03-08 19:32:36 tlipkis Exp $
+ * $Id: SimulatedUrlCacher.java,v 1.17 2004-03-09 23:40:02 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.plugin.simulated;
 
 import java.io.*;
 import java.util.*;
+import java.text.*;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
@@ -51,7 +52,7 @@ public class SimulatedUrlCacher extends BaseUrlCacher {
   private String fileRoot;
   private String contentName = null;
   private File contentFile = null;
-  private Properties props = null;
+  private CIProperties props = null;
 
   public SimulatedUrlCacher(CachedUrlSet owner, String url, String contentRoot) {
     super(owner, url);
@@ -70,8 +71,14 @@ public class SimulatedUrlCacher extends BaseUrlCacher {
   }
 
   // overrides base behavior to get local file
-  public InputStream getUncachedInputStream(long lastCached)
+  public InputStream getUncachedInputStream(String lastModified)
       throws IOException {
+    long lastCached = 0;
+    if (lastModified != null) {
+      try {
+	lastCached = GMT_DATE_FORMAT.parse(lastModified).getTime();
+      } catch (ParseException e) {}
+    }
     if (contentFile!=null) {
       return getDefaultStream(contentFile, lastCached);
     }
@@ -101,11 +108,11 @@ public class SimulatedUrlCacher extends BaseUrlCacher {
   }
 
   // overrides base behavior
-  public Properties getUncachedProperties() throws IOException {
+  public CIProperties getUncachedProperties() throws IOException {
     if (props!=null) {
       return props;
     }
-    props = new Properties();
+    props = new CIProperties();
     String fileName = mapUrlToContentFileName().toLowerCase();
     if (fileName.endsWith(".txt")) {
       props.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/plain");
@@ -118,10 +125,12 @@ public class SimulatedUrlCacher extends BaseUrlCacher {
     } else {
       props.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/plain");
     }
-    props.setProperty(CachedUrl.PROPERTY_URL, origUrl);
+    props.setProperty(CachedUrl.PROPERTY_ORIG_URL, origUrl);
     // set fetch time as now, since it should be the same system
-    // XXX this should be the file's write date, not the current time
-    props.setProperty(CachedUrl.PROPERTY_FETCH_DATE, ""+TimeBase.nowMs());
+    props.setProperty(CachedUrl.PROPERTY_FETCH_TIME, ""+TimeBase.nowMs());
+    // set last-modified to the file's write date
+    props.setProperty(CachedUrl.PROPERTY_LAST_MODIFIED,
+		      Long.toString(new File(fileName).lastModified()));
     return props;
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.28 2004-03-09 04:15:31 clairegriffin Exp $
+ * $Id: BaseUrlCacher.java,v 1.29 2004-03-09 23:40:02 tlipkis Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.plugin.base;
 import java.io.*;
 import java.net.*;
 import java.util.*;
+import java.text.*;
 
 import org.lockss.app.*;
 import org.lockss.plugin.*;
@@ -55,6 +56,14 @@ public class BaseUrlCacher implements UrlCacher {
   /** Maximum number of redirects that will be followed */
   static final int MAX_REDIRECTS = 10;
 
+  // Preferred date format according to RFC 2068(HTTP1.1),
+  // RFC 822 and RFC 1123
+  public static SimpleDateFormat GMT_DATE_FORMAT =
+    new SimpleDateFormat ("EEE, dd MMM yyyy HH:mm:ss 'GMT'");
+  static {
+    GMT_DATE_FORMAT.setTimeZone(TimeZone.getTimeZone("GMT"));
+  }
+
   protected CachedUrlSet cus;
   protected Plugin plugin;
   protected String origUrl;		// URL with which I was created
@@ -66,7 +75,7 @@ public class BaseUrlCacher implements UrlCacher {
   private LockssUrlConnection conn;
   private LockssRepository repository;
   private CacheResultMap resultMap;
-  private Properties uncachedProperties;
+  private CIProperties uncachedProperties;
 
   public BaseUrlCacher(CachedUrlSet owner, String url) {
     this.cus = owner;
@@ -144,34 +153,29 @@ public class BaseUrlCacher implements UrlCacher {
   }
 
   public void cache() throws IOException {
-    long lastCached = 0;
+    String lastModified = null;
     if (!forceRefetch) {
       CachedUrl cachedVersion = plugin.makeCachedUrl(cus, origUrl);
 
-      // XXX THIS IS WRONG.  SHOULD USE LAST_MODIFIED TIME
-
-      // if it's been cached, get the last caching time and use that
+      // if it's been cached, get the last modified date and use that
       if ((cachedVersion!=null) && cachedVersion.hasContent()) {
-	Properties cachedProps = cachedVersion.getProperties();
-	String datestr =
-	  cachedProps.getProperty(CachedUrl.PROPERTY_FETCH_DATE);
-	try {
-	  lastCached = Long.parseLong(datestr);
-	} catch (NumberFormatException nfe) { }
+	CIProperties cachedProps = cachedVersion.getProperties();
+	lastModified =
+	  cachedProps.getProperty(CachedUrl.PROPERTY_LAST_MODIFIED);
       }
     }
-    cache(lastCached);
+    cache(lastModified);
   }
 
-  private void cache(long lastCached) throws IOException {
+  private void cache(String lastModified) throws IOException {
     logger.debug3("Pausing before fetching content");
     getArchivalUnit().pauseBeforeFetch();
     logger.debug3("Done pausing");
-    InputStream input = getUncachedInputStream(lastCached);
+    InputStream input = getUncachedInputStream(lastModified);
     // null input indicates unmodified content, so skip caching
     if (input!=null) {
       try {
-	Properties headers = getUncachedProperties();
+	CIProperties headers = getUncachedProperties();
 	if (headers == null) {
 	  String err = "Received null headers for url '" + origUrl + "'.";
 	  logger.error(err);
@@ -189,7 +193,7 @@ public class BaseUrlCacher implements UrlCacher {
    * REDIRECT_SCHEME_STORE_ALL, store the content and headers under each
    * name in the chain of redirections.
    */
-  public void storeContent(InputStream input, Properties headers)
+  public void storeContent(InputStream input, CIProperties headers)
       throws IOException {
     if (logger.isDebug3()) logger.debug3("Storing url '"+ origUrl +"'");
     storeContentIn(origUrl, input, headers);
@@ -202,10 +206,10 @@ public class BaseUrlCacher implements UrlCacher {
 	InputStream is = cu.getUnfilteredInputStream();
 	if (name.equals(fetchUrl)) {
 	  // this one was not redirected, don't store a redirected-to property
-	  Properties newHeaders  = new Properties();
+	  CIProperties newHeaders  = new CIProperties();
 	  for (Iterator pi = headers.keySet().iterator(); pi.hasNext(); ) {
 	    String key = (String)pi.next();
-	    if (!key.equals(CachedUrl.PROPERTY_REDIRECTED_TO)) {
+	    if (!key.equalsIgnoreCase(CachedUrl.PROPERTY_REDIRECTED_TO)) {
 	      newHeaders.setProperty(key, headers.getProperty(key));
 	    }
 	  }
@@ -217,7 +221,7 @@ public class BaseUrlCacher implements UrlCacher {
     }
   }
 
-  public void storeContentIn(String url, InputStream input, Properties headers)
+  public void storeContentIn(String url, InputStream input, CIProperties headers)
       throws IOException {
     RepositoryNode leaf = null;
     try {
@@ -238,22 +242,22 @@ public class BaseUrlCacher implements UrlCacher {
   }
 
   public InputStream getUncachedInputStream() throws IOException {
-    return getUncachedInputStream(0);
+    return getUncachedInputStream(null);
   }
 
   /**
-   * Gets an InputStream for this URL, using the 'lastCached' time as
+   * Gets an InputStream for this URL, using the last modified time as
    * 'if-modified-since'.  If a 304 is generated (not modified), it returns
    * null.
-   * @param lastCached the last cached time
+   * @param lastModified the last modified time
    * @return the InputStream, or null
    * @throws IOException
    */
-  protected InputStream getUncachedInputStream(long lastCached)
+  protected InputStream getUncachedInputStream(String lastModified)
       throws IOException {
     InputStream input = null;
     try {
-      openConnection(lastCached);
+      openConnection(lastModified);
       if (conn.isHttp()) {
 	// http connection; check response code
 	int code = conn.getResponseCode();
@@ -272,23 +276,23 @@ public class BaseUrlCacher implements UrlCacher {
     return input;
   }
 
-  public Properties getUncachedProperties() throws IOException {
+  public CIProperties getUncachedProperties() throws IOException {
     if (conn == null) {
       throw new UnsupportedOperationException("Called getUncachedProperties before calling getUncachedInputStream.");
     }
 //     openConnection();
     if (uncachedProperties == null) {
-      Properties props = new Properties();
+      CIProperties props = new CIProperties();
       // set header properties in which we have interest
 
       props.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE,
 			conn.getResponseContentType());
-      props.setProperty(CachedUrl.PROPERTY_FETCH_DATE,
-			Long.toString(conn.getResponseDate()));
+      props.setProperty(CachedUrl.PROPERTY_FETCH_TIME,
+			Long.toString(TimeBase.nowMs()));
       // XXX this property does not have consistent semantics.  It will be
       // set to the first url in a chain of redirects that led to content,
       // which could be different depending on fetch order.
-      props.setProperty(CachedUrl.PROPERTY_URL, origUrl);
+      props.setProperty(CachedUrl.PROPERTY_ORIG_URL, origUrl);
       conn.storeResponseHeaderInto(props, CachedUrl.HEADER_PREFIX);
       String actualURL = conn.getActualUrl();
       if (!origUrl.equals(actualURL)) {
@@ -320,25 +324,25 @@ public class BaseUrlCacher implements UrlCacher {
    * the user-agent and ifmodifiedsince values.  Then actually connects to the
    * site and throws if we get an error code
    */
-  private void openConnection(long lastCached) throws IOException {
+  private void openConnection(String lastModified) throws IOException {
     if (conn==null) {
       switch (redirectScheme) {
       case REDIRECT_SCHEME_FOLLOW:
       case REDIRECT_SCHEME_DONT_FOLLOW:
-	openOneConnection(lastCached);
+	openOneConnection(lastModified);
 	break;
       case REDIRECT_SCHEME_STORE_ALL:
-	openWithRedirects(lastCached);
+	openWithRedirects(lastModified);
 	break;
       }
     }
   }
 
-  private void openWithRedirects(long lastCached) throws IOException {
+  private void openWithRedirects(String lastModified) throws IOException {
     int retry = 0;
     while (true) {
       try {
-	openOneConnection(lastCached);
+	openOneConnection(lastModified);
 	break;
       } catch (CacheException.NoRetryNewUrlException e) {
 	if (++retry >= MAX_REDIRECTS) {
@@ -363,7 +367,7 @@ public class BaseUrlCacher implements UrlCacher {
    * the user-agent and ifmodifiedsince values.  Then actually connects to the
    * site and throws if we get an error code
    */
-  private void openOneConnection(long lastCached) throws IOException {
+  private void openOneConnection(String lastModified) throws IOException {
     try {
       conn = makeConnection(fetchUrl, connectionPool);
       switch (redirectScheme) {
@@ -376,8 +380,8 @@ public class BaseUrlCacher implements UrlCacher {
 	break;
       }
       conn.setRequestProperty("user-agent", LockssDaemon.getUserAgent());
-      if (lastCached > 0) {
-	conn.setIfModifiedSince(lastCached);
+      if (lastModified != null) {
+	conn.setIfModifiedSince(lastModified);
       }
       conn.execute();
     }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.17 2004-03-09 04:15:32 clairegriffin Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.18 2004-03-09 23:40:02 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.plugin.base;
 
 import java.io.*;
 import java.util.*;
+import java.text.*;
 import org.lockss.plugin.*;
 import org.lockss.daemon.*;
 import org.lockss.test.*;
@@ -49,6 +50,9 @@ import org.lockss.repository.*;
  * @version 0.0
  */
 public class TestBaseUrlCacher extends LockssTestCase {
+
+  static DateFormat GMT_DATE_FORMAT = BaseUrlCacher.GMT_DATE_FORMAT;
+
   MyMockBaseUrlCacher cacher;
   MockCachedUrlSet mcus;
   MyMockPlugin plugin;
@@ -66,7 +70,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
     super.setUp();
 
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    Properties props = new Properties();
+    CIProperties props = new CIProperties();
     props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
@@ -101,7 +105,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
     pauseBeforeFetchCounter = 0;
 
     cacher._input = new StringInputStream("test stream");
-    cacher._headers = new Properties();
+    cacher._headers = new CIProperties();
     cacher.cache();
     // should cache
     assertTrue(cacher.wasStored);
@@ -110,21 +114,22 @@ public class TestBaseUrlCacher extends LockssTestCase {
 
   public void testLastModifiedCache() throws IOException {
     // add the 'cached' version
-    Properties cachedProps = new Properties();
-    cachedProps.setProperty(CachedUrl.PROPERTY_FETCH_DATE, "12345");
+    CIProperties cachedProps = new CIProperties();
+    cachedProps.setProperty(CachedUrl.PROPERTY_LAST_MODIFIED,
+			    GMT_DATE_FORMAT.format(new Date(12345)));
 //     mcus.addUrl("test stream", TEST_URL, true, true, cachedProps);
      mcus.addUrl(TEST_URL, true, true, cachedProps);
 
     TimeBase.setSimulated(10000);
     cacher._input = new StringInputStream("test stream");
-    cacher._headers = new Properties();
+    cacher._headers = new CIProperties();
     cacher.cache();
     // shouldn't cache
     assertFalse(cacher.wasStored);
 
     TimeBase.step(5000);
     cacher._input = new StringInputStream("test stream");
-    cacher._headers = new Properties();
+    cacher._headers = new CIProperties();
     cacher.cache();
     // should cache now
     assertTrue(cacher.wasStored);
@@ -134,8 +139,9 @@ public class TestBaseUrlCacher extends LockssTestCase {
 
   public void testForceCache() throws IOException {
     // add the 'cached' version
-    Properties cachedProps = new Properties();
-    cachedProps.setProperty(CachedUrl.PROPERTY_FETCH_DATE, "12345");
+    CIProperties cachedProps = new CIProperties();
+    cachedProps.setProperty(CachedUrl.PROPERTY_LAST_MODIFIED,
+			    GMT_DATE_FORMAT.format(new Date(12345)));
 //     mcus.addUrl("test stream", TEST_URL, true, true, cachedProps);
     mcus.addUrl(TEST_URL, true, true, cachedProps);
 
@@ -161,20 +167,20 @@ public class TestBaseUrlCacher extends LockssTestCase {
 
     // no exceptions from null inputstream
     cacher._input = null;
-    cacher._headers = new Properties();
+    cacher._headers = new CIProperties();
     cacher.cache();
     // should simply skip
     assertFalse(cacher.wasStored);
 
     cacher._input = new StringInputStream("test stream");
-    cacher._headers = new Properties();
+    cacher._headers = new CIProperties();
     cacher.cache();
     assertTrue(cacher.wasStored);
   }
 
   public void testFileCache() throws IOException {
     cacher._input = new StringInputStream("test content");
-    Properties props = new Properties();
+    CIProperties props = new CIProperties();
     props.setProperty("test1", "value1");
     cacher._headers = props;
     cacher.cache();
@@ -250,8 +256,11 @@ public class TestBaseUrlCacher extends LockssTestCase {
   MockConnectionMockBaseUrlCacher makeMucWithContent() {
     MockConnectionMockBaseUrlCacher muc =
       new MockConnectionMockBaseUrlCacher(mcus, TEST_URL);
-    Properties cuprops = new Properties();
-    cuprops.setProperty(CachedUrl.PROPERTY_FETCH_DATE, "12345000");
+    CIProperties cuprops = new CIProperties();
+
+    cuprops.setProperty(CachedUrl.PROPERTY_LAST_MODIFIED,
+			GMT_DATE_FORMAT.format(new Date(12345000)));
+
     mcus.addUrl(TEST_URL, true, true, cuprops);
     return muc;
   }
@@ -310,8 +319,12 @@ public class TestBaseUrlCacher extends LockssTestCase {
       fail("Should have thrown RetryNewUrlException");
     } catch (CacheException.NoRetryNewUrlException e) {
       assertEquals("301 Moved to Spain", e.getMessage());
-      Properties p = muc.getUncachedProperties();
-      assertEquals(redTo, p.getProperty("_header_location"));
+      CIProperties p = muc.getUncachedProperties();
+      // In this case the new location should be in the UrlCacher's
+      // properties, even though no CachedUrl was written
+      System.err.println("ucprops: " + p);
+      assertEquals(redTo, p.getProperty("nulllocation"));
+      assertEquals(redTo, p.getProperty("location"));
     }
   }
 
@@ -328,8 +341,8 @@ public class TestBaseUrlCacher extends LockssTestCase {
     muc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_STORE_ALL);
     mau.addUrlToBeCached(redTo);
     InputStream is = muc.getUncachedInputStream();
-    Properties p = muc.getUncachedProperties();
-    assertNull(p.getProperty("_header_location"));
+    CIProperties p = muc.getUncachedProperties();
+    assertNull(p.getProperty("location"));
     assertEquals(redTo, p.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO));
     assertReaderMatchesString("bar", new InputStreamReader(is));
     // Make sure the UrlCacher still has the original URL
@@ -349,8 +362,8 @@ public class TestBaseUrlCacher extends LockssTestCase {
       fail("Should have thrown RetryNewUrlException");
     } catch (CacheException.NoRetryNewUrlException e) {
       assertEquals("301 Moved to Fresno", e.getMessage());
-      Properties p = muc.getUncachedProperties();
-      assertEquals(redTo, p.getProperty("_header_location"));
+      CIProperties p = muc.getUncachedProperties();
+      assertEquals(redTo, p.getProperty("location"));
     }
   }
 
@@ -368,8 +381,8 @@ public class TestBaseUrlCacher extends LockssTestCase {
     mau.addUrlToBeCached("http://2.2/b");
     mau.addUrlToBeCached(redTo);
     InputStream is = muc.getUncachedInputStream();
-    Properties p = muc.getUncachedProperties();
-    assertNull(p.getProperty("_header_location"));
+    CIProperties p = muc.getUncachedProperties();
+    assertNull(p.getProperty("location"));
     assertEquals(redTo, p.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO));
     assertReaderMatchesString("bar", new InputStreamReader(is));
   }
@@ -390,8 +403,8 @@ public class TestBaseUrlCacher extends LockssTestCase {
       fail("Should have thrown NoRetryNewUrlException");
     } catch (CacheException.NoRetryNewUrlException e) {
       assertEquals("301 Moved to Spain", e.getMessage());
-      Properties p = muc.getUncachedProperties();
-      assertEquals(redTo, p.getProperty("_header_location"));
+      CIProperties p = muc.getUncachedProperties();
+      assertEquals(redTo, p.getProperty("location"));
     }
   }
 
@@ -405,8 +418,8 @@ public class TestBaseUrlCacher extends LockssTestCase {
     muc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_STORE_ALL);
     mau.addUrlToBeCached(redTo);
     muc.cache();
-    Properties p = muc.getUncachedProperties();
-    assertNull(p.getProperty("_header_location"));
+    CIProperties p = muc.getUncachedProperties();
+    assertNull(p.getProperty("location"));
     assertEquals(redTo, p.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO));
 
     assertCuContents(TEST_URL, "bar");
@@ -434,8 +447,8 @@ public class TestBaseUrlCacher extends LockssTestCase {
     mau.addUrlToBeCached(redTo2);
     mau.addUrlToBeCached(redTo3);
     muc.cache();
-    Properties p = muc.getUncachedProperties();
-    assertNull(p.getProperty("_header_location"));
+    CIProperties p = muc.getUncachedProperties();
+    assertNull(p.getProperty("location"));
     assertEquals(redTo3, p.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO));
 
     // verify all have the correct contents, and all but the last have a
@@ -458,7 +471,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
 
   void assertCuProperty(String url, String expected, String key) {
     CachedUrl cu = new BaseCachedUrl(mcus, url);
-    Properties props = cu.getProperties();
+    CIProperties props = cu.getProperties();
     assertEquals(expected, props.getProperty(key));
   }
 
@@ -510,27 +523,35 @@ public class TestBaseUrlCacher extends LockssTestCase {
   // Mock BaseUrlCacher that fakes the connection
   private class MyMockBaseUrlCacher extends BaseUrlCacher {
     InputStream _input = null;
-    Properties _headers;
+    CIProperties _headers;
     boolean wasStored = false;
 
     public MyMockBaseUrlCacher(CachedUrlSet owner, String url) {
       super(owner, url);
     }
 
-    public InputStream getUncachedInputStream(long lastCached) {
+    public InputStream getUncachedInputStream(String lastModified) {
       // simple version which returns null if shouldn't fetch
-      if (lastCached < TimeBase.nowMs()) {
+//       if (lastCached < TimeBase.nowMs()) {
+      long last = -1;
+      if (lastModified != null) {
+	try {
+	  last = BaseUrlCacher.GMT_DATE_FORMAT.parse(lastModified).getTime();
+	} catch (ParseException e) {
+	}
+      }
+      if (last < TimeBase.nowMs()) {
         return _input;
       } else {
         return null;
       }
     }
 
-    public Properties getUncachedProperties() {
+    public CIProperties getUncachedProperties() {
       return _headers;
     }
 
-    public void storeContent(InputStream input, Properties headers)
+    public void storeContent(InputStream input, CIProperties headers)
         throws IOException {
       super.storeContent(input, headers);
       wasStored = true;

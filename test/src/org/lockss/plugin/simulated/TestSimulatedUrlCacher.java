@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimulatedUrlCacher.java,v 1.21 2004-03-08 19:32:36 tlipkis Exp $
+ * $Id: TestSimulatedUrlCacher.java,v 1.22 2004-03-09 23:40:02 tlipkis Exp $
  */
 
 /*
@@ -77,7 +77,7 @@ public class TestSimulatedUrlCacher extends LockssTestCase {
     Properties prop = suc.getUncachedProperties();
     assertEquals("text/html",
 		 prop.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE));
-    assertEquals(testStr, prop.getProperty(CachedUrl.PROPERTY_URL));
+    assertEquals(testStr, prop.getProperty(CachedUrl.PROPERTY_ORIG_URL));
   }
 
   public void testTextProperties() throws Exception {
@@ -87,7 +87,7 @@ public class TestSimulatedUrlCacher extends LockssTestCase {
     Properties prop = suc.getUncachedProperties();
     assertEquals("text/plain",
 		 prop.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE));
-    assertEquals(testStr, prop.getProperty(CachedUrl.PROPERTY_URL));
+    assertEquals(testStr, prop.getProperty(CachedUrl.PROPERTY_ORIG_URL));
   }
 
   public void testPdfProperties() throws Exception {
@@ -97,7 +97,7 @@ public class TestSimulatedUrlCacher extends LockssTestCase {
     Properties prop = suc.getUncachedProperties();
     assertEquals("application/pdf",
 		 prop.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE));
-    assertEquals(testStr, prop.getProperty(CachedUrl.PROPERTY_URL));
+    assertEquals(testStr, prop.getProperty(CachedUrl.PROPERTY_ORIG_URL));
   }
 
   public void testJpegProperties() throws Exception {
@@ -107,7 +107,7 @@ public class TestSimulatedUrlCacher extends LockssTestCase {
     Properties prop = suc.getUncachedProperties();
     assertEquals("image/jpeg",
 		 prop.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE));
-    assertEquals(testStr, prop.getProperty(CachedUrl.PROPERTY_URL));
+    assertEquals(testStr, prop.getProperty(CachedUrl.PROPERTY_ORIG_URL));
   }
 
   public void testNoBranchContent() throws Exception {
@@ -117,7 +117,7 @@ public class TestSimulatedUrlCacher extends LockssTestCase {
     String testStr = "http://www.example.com/branch1";
     SimulatedUrlCacher suc = new SimulatedUrlCacher(
         new MockCachedUrlSet(mau, null), testStr, tempDirPath);
-    assertNull(suc.getUncachedInputStream(0));
+    assertNull(suc.getUncachedInputStream());
   }
 
   public void testBranchContent() throws Exception {
@@ -134,7 +134,7 @@ public class TestSimulatedUrlCacher extends LockssTestCase {
     String testStr = "http://www.example.com/branch1";
     SimulatedUrlCacher suc = new SimulatedUrlCacher(
         new MockCachedUrlSet(mau, null), testStr, tempDirPath);
-    InputStream is = suc.getUncachedInputStream(0);
+    InputStream is = suc.getUncachedInputStream();
     ByteArrayOutputStream baos = new ByteArrayOutputStream(11);
     StreamUtil.copy(is, baos);
     is.close();
