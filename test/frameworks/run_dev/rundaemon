@@ -21,12 +21,16 @@ while true ; do
       export PATH
       echo JAVA_HOME="$JAVA_HOME"
       shift; continue;;
-    "-*" )
+    -* )
       args="$args $1"
       shift; continue;;
   esac
   break;
 done
+
+if [ -z "$args" ]; then
+  args=-Dorg.lockss.defaultLogLevel=DEBUG
+fi
 
 PROP_URL_LIST="http://props.lockss.org:8001/03042003_dev/lockss.txt local.txt"
 
@@ -41,7 +45,7 @@ JVM_ARGS="-Xmx70m -Dsun.net.inetaddr.ttl=3600"
 
 echo running at `date`
 # for large caches, need to pass "-ms4m -mx64m" to java
-java -Dorg.lockss.defaultLogLevel=DEBUG "$args" org.lockss.app.LockssDaemon ${PROP_URL_LIST} >>test.out 2>&1 &
+java $args org.lockss.app.LockssDaemon ${PROP_URL_LIST} >>test.out 2>&1 &
 echo $! >dpid
 wait
 echo stopped with status $? at `date`
