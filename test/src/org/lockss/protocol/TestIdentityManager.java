@@ -36,7 +36,7 @@ public class TestIdentityManager extends LockssTestCase {
   }
 
   protected void setUp() {
-
+    super.setUp();
     try {
       fakeId = idmgr.findIdentity(LcapIdentity.stringToAddr(fakeIdString));
       testAddress = InetAddress.getByName("127.0.0.1");
