@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlerImpl.java,v 1.14 2004-07-12 06:27:30 tlipkis Exp $
+ * $Id: TestCrawlerImpl.java,v 1.15 2004-07-13 00:34:42 dcfok Exp $
  */
 
 /*
@@ -398,7 +398,7 @@ public class TestCrawlerImpl extends LockssTestCase {
       return counter;
     }
 
-    public boolean canCrawl() {
+    public boolean canCrawl() { 
       if (counter > 0) {
         counter--;
         return true;

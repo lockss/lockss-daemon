@@ -1,5 +1,5 @@
 /*
- * $Id: NewContentCrawler.java,v 1.22 2004-06-18 23:01:14 dcfok Exp $
+ * $Id: NewContentCrawler.java,v 1.23 2004-07-13 00:34:43 dcfok Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.crawler;
 import java.util.*;
+import java.net.*;
 import java.io.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
@@ -69,7 +70,12 @@ public class NewContentCrawler extends CrawlerImpl {
   //XXX testing max. crawl Depth of a site, subject to be changed
   public static final int DEFAULT_MAX_CRAWL_DEPTH = 1000;
 
+  public static final String PARAM_ABORT_WHILE_PERMISSION_OTHER_THAN_OK =
+    Configuration.PREFIX + "CrawlerImpl.abortWhilePermissionOtherThanOk";
+  public static final boolean DEFAULT_ABORT_WHILE_PERMISSION_OTHER_THAN_OK = false;
 
+  protected static HashMap permissionMap = new HashMap();
+  
   private boolean alwaysReparse;
   private boolean usePersistantList;
 
@@ -95,6 +101,10 @@ public class NewContentCrawler extends CrawlerImpl {
     int maxDepth = Configuration.getIntParam(PARAM_MAX_CRAWL_DEPTH,
 					     DEFAULT_MAX_CRAWL_DEPTH);
 
+    boolean abortWhilePermissionOtherThanOk = 
+      Configuration.getBooleanParam(PARAM_ABORT_WHILE_PERMISSION_OTHER_THAN_OK, 
+				    DEFAULT_ABORT_WHILE_PERMISSION_OTHER_THAN_OK);
+
     logger.info("Max. crawl depth is set to be " + maxDepth); 
 
     logger.info("Beginning crawl of "+au);
@@ -104,10 +114,46 @@ public class NewContentCrawler extends CrawlerImpl {
 
     Set extractedUrls = new HashSet();
 
-    if (!crawlPermission(cus)) {
-      logger.info("Crawling AU not permitted - aborting crawl!");
-      return false;
+//     //XXX original codes for checking permission
+//     if (!crawlPermission(cus)) {
+//       logger.info("Crawling AU not permitted - aborting crawl!");
+//       return false;
+//     }
+//     //-----------------------------------------------
+
+    // XXX
+    // for each url from the permissionUrls
+    // check if the permission string is in the content of the url
+    logger.info("Checking permission on host(s) of " + au);
+    List permissionList = au.getPermissionPages();
+    if (permissionList == null){
+      logger.error("au.getPermissionPages() return null list !");
+      return aborted();
     }
+    Iterator permissionUrls = permissionList.iterator();
+    //logger.debug3(permissionList.toString());
+    while (permissionUrls.hasNext()) {
+      String permissionPage = (String)permissionUrls.next();
+      int permissionStatus = crawlPermission(permissionPage);
+      // if permission status is something other than OK and the abortWhilePermissionOtherThanOk flag is on
+      if (permissionStatus != PermissionRecord.PERMISSION_OK && 
+	  abortWhilePermissionOtherThanOk) {
+	logger.info("One or more host(s) of AU do not grant crawling permission - aborting crawl!");
+	return aborted();
+      }
+      // set permissionMap
+      try {
+	if (permissionStatus == PermissionRecord.PERMISSION_OK) {
+	  logger.debug3("Permission granted on host: " + UrlUtil.getHost(permissionPage));
+	}
+	permissionMap.put(UrlUtil.getHost(permissionPage).toLowerCase(),
+			  new PermissionRecord(permissionPage,permissionStatus));
+      } catch (MalformedURLException e){
+	logger.error("The permissionPage's URL is Malformed : "+ permissionPage);
+      }
+    }
+
+    //-----------------------------------------------
 
     int refetchDepth0 = spec.getRefetchDepth();
     String key = StringUtil.replaceString(PARAM_REFETCH_DEPTH,
@@ -136,6 +182,31 @@ public class NewContentCrawler extends CrawlerImpl {
 	String url = (String)it.next();
 	//catch and warn if there's a url in the start urls
 	//that we shouldn't cache
+	logger.debug3("Trying to process " +url);
+
+	if (!checkHostPermissionRecord(url)){
+	  crawlStatus.setCrawlError("Do not have crawl permission from host(s)");
+	  return false;
+	}
+
+// 	//XXX check if the url is within the permittedHostSet
+// 	PermissionRecord urlRecord=null;
+// 	try {
+// 	  urlRecord = (PermissionRecord) permissionMap.get(UrlUtil.getHost(url).toLowerCase());
+// 	} catch (MalformedURLException e) {
+// 	  logger.error("The url is malformed :" + url);
+// 	}
+// 	if (urlRecord == null) {
+// 	  logger.warning("No permission page record for host of "+ url);
+// 	  // abort crawl here
+// 	  return aborted();
+// 	}
+
+// 	// check if permission to crawl from the url's host is granted
+// 	if (!permissionGrantedBeforeFetch(urlRecord,true)){
+// 	  return aborted();
+// 	}
+// 	//-----------------------------------------------------------
 
         // check crawl window during crawl
 	if (!withinCrawlWindow()) {
@@ -184,6 +255,30 @@ public class NewContentCrawler extends CrawlerImpl {
       
       while (!urlsToCrawl.isEmpty() && !crawlAborted) {
 	String nextUrl = (String)CollectionUtil.removeElement(urlsToCrawl);
+	
+	logger.debug3("Trying to process " + nextUrl);
+
+	if (!checkHostPermissionRecord(nextUrl)){
+	  crawlStatus.setCrawlError("Do not have crawl permission from host(s)");
+	  return false;
+	}
+// 	//XXX check if the url is within the permittedHostSet
+// 	PermissionRecord nextUrlRecord=null;
+// 	try {
+// 	  nextUrlRecord = (PermissionRecord) permissionMap.get(UrlUtil.getHost(nextUrl).toLowerCase());
+// 	}catch (MalformedURLException e){
+// 	  logger.error("The *nextUrl* is malformed :" +nextUrl);
+// 	}
+// 	if (nextUrlRecord == null) {
+// 	  logger.warning("No permission page record for host of "+ nextUrl);
+// 	  // abort crawl here
+// 	  return aborted();
+// 	}
+// 	if (!permissionGrantedBeforeFetch(nextUrlRecord,true)){
+// 	  return aborted();
+// 	}
+// 	//----------------------------------------------
+
 	// check crawl window during crawl
 	if (!withinCrawlWindow()) {
 	  crawlStatus.setCrawlError(Crawler.STATUS_WINDOW_CLOSED);
@@ -241,6 +336,62 @@ public class NewContentCrawler extends CrawlerImpl {
     }
   
     return (crawlStatus.getCrawlError() == null); 
+  }
+  
+  //XXX check if the url's host granted a permission
+  private boolean checkHostPermissionRecord(String url){
+  	PermissionRecord urlRecord=null;
+	try {
+	  urlRecord = (PermissionRecord) permissionMap.get(UrlUtil.getHost(url).toLowerCase());
+	} catch (MalformedURLException e) {
+	  logger.error("The url is malformed :" + url);
+	}
+	if (urlRecord == null) {
+	  logger.warning("No permission page record for host of "+ url);
+	  // abort crawl here
+	  return false;
+	}
+	// check if permission to crawl from the url's host is granted
+	if (!permissionGrantedBeforeFetch(urlRecord,true)){
+	  return false;
+	}
+	return true;
+  }
+
+
+  private boolean permissionGrantedBeforeFetch(PermissionRecord urlRecord ,boolean permissionFailedRetry){
+    int urlPermissionStatus = urlRecord.getPermissionStatus();
+    boolean printFailedWarning = true;
+    switch (urlPermissionStatus) {
+	case PermissionRecord.PERMISSION_OK:
+	  return true;
+	case PermissionRecord.PERMISSION_NOT_OK:
+	  logger.error("Abort crawl. No permission statement is found on host : " + urlRecord.getPermissionUrl());
+	  //abort crawl or skip all the page with this host ?
+	  return false;
+	case PermissionRecord.PERMISSION_UNCHECKED:
+	  //should not be in this state as each permissionPage should be checked in the first iteration
+	  logger.warning("permission unchecked on host : "+ urlRecord.getPermissionUrl()); 
+	  // re-fetch permission like FETCH_PERMISSION_FAILED
+	  printFailedWarning = false;
+	case PermissionRecord.FETCH_PERMISSION_FAILED:
+	  if (printFailedWarning) {
+	    logger.warning("Fail to fetch permission page on host :" + urlRecord.getPermissionUrl());
+	  }
+	  if (permissionFailedRetry) {
+	    //refetch permission page
+	    logger.info("refetching permission page on host:" + urlRecord.getPermissionUrl());
+	    urlRecord.setPermissionStatus(crawlPermission(urlRecord.getPermissionUrl()));
+	    return permissionGrantedBeforeFetch(urlRecord,false);
+	  } else {
+	    //abort crawl or skip all the page with this host ?
+	    logger.error("Abort crawl. Cannot fetch permission page");
+	    return false;
+	  }
+	default : 
+	  logger.error("Unknown Permission Status! Something is going wrong!");
+	  return false;
+    }
   }
 
   private boolean aborted() {

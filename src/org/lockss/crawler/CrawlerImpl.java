@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerImpl.java,v 1.20 2004-07-12 06:12:34 tlipkis Exp $
+ * $Id: CrawlerImpl.java,v 1.21 2004-07-13 00:34:43 dcfok Exp $
  */
 
 /*
@@ -150,25 +150,24 @@ public abstract class CrawlerImpl implements Crawler {
     }
   }
 
-  boolean crawlPermission(CachedUrlSet ownerCus) {
-    boolean crawl_ok = false;
+  int crawlPermission(String permissionPage) {
+    
+    int crawl_ok = PermissionRecord.PERMISSION_UNCHECKED;
     String err = Crawler.STATUS_PUB_PERMISSION;
+    CachedUrlSet ownerCus = au.getAuCachedUrlSet();
 
-    // fetch and cache the manifest page
-    List permissionList = au.getPermissionPages();
-    // TODO - fix this to do the right thing for the list of permission pages
-    String manifest = (String)permissionList.get(0);
-    UrlCacher uc = makeUrlCacher(ownerCus, manifest);
-    logger.debug("Checking for permissions on " + manifest);
+    // fetch and cache the permission pages
+    UrlCacher uc = makeUrlCacher(ownerCus, permissionPage);
+    logger.debug("Checking for permissions on " + permissionPage);
     uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW);
     try {
-      if (!au.shouldBeCached(manifest)) {
+      if (!au.shouldBeCached(permissionPage)) {
 // 	alertMgr.raiseAlert(Alert.auAlert(Alert.PERMISSION_PAGE_FETCH_ERROR,
 // 					  au).
 // 			    setAttribute(ATTR_TEXT, "Permission page " +
-// 					 manifest +
+// 					 permissionPage +
 // 					 " is not within the crawl spec"));
-	logger.warning("Manifest not within CrawlSpec");
+	logger.warning("Permission page not within CrawlSpec");
       } else if ((au.getCrawlSpec()!=null) && !au.getCrawlSpec().canCrawl()) {
 	logger.debug("Couldn't start crawl due to crawl window.");
 	err = Crawler.STATUS_WINDOW_CLOSED;
@@ -182,30 +181,32 @@ public abstract class CrawlerImpl implements Crawler {
 	  //XXX try to extract encoding from source
 	  Reader reader =
 	    new InputStreamReader(is, Constants.DEFAULT_ENCODING);
-	  crawl_ok = au.checkCrawlPermission(reader);
-	  if (!crawl_ok) {
+	  if (!au.checkCrawlPermission(reader)) {
 	    logger.error("Couldn't start crawl due to missing permission.");
+	    crawl_ok = PermissionRecord.PERMISSION_NOT_OK;
 	    alertMgr.raiseAlert(Alert.auAlert(Alert.NO_CRAWL_PERMISSION,
 					      au).
 				setAttribute(Alert.ATTR_TEXT,
-					     "The page at " + manifest +
+					     "The page at " + permissionPage +
 					     "\ndoes not contain the " +
 					     "LOCKSS permission statement.\n" +
 					     "No collection was done."));
 	  } else {
 	    if (Configuration.getBooleanParam(PARAM_REFETCH_PERMISSIONS_PAGE,
 					      DEFAULT_REFETCH_PERMISSIONS_PAGE)) {
-	      logger.debug2("Permission granted. Caching permission page.");
-	      storeManifest(ownerCus, manifest);
+	      logger.debug3("Permission granted. Caching permission page.");
+	      storePermissionPage(ownerCus, permissionPage);
+	      crawl_ok = PermissionRecord.PERMISSION_OK;
 	    } else {
 	      try {
-		logger.debug2("Permission granted. Storing permission page.");
+		logger.debug3("Permission granted. Storing permission page.");
 		is.reset();
 		uc.storeContent(is, uc.getUncachedProperties());
+		crawl_ok = PermissionRecord.PERMISSION_OK;
 	      } catch (IOException e) {
-		logger.debug("Couldn't store from existing stream, refetching",
-			     e);
-		storeManifest(ownerCus, manifest);
+		logger.debug("Couldn't store from existing stream, refetching", e);
+		storePermissionPage(ownerCus, permissionPage);
+		crawl_ok = PermissionRecord.PERMISSION_OK;
 	      }
 	    }
 	  }
@@ -214,27 +215,28 @@ public abstract class CrawlerImpl implements Crawler {
 	}
       }
     } catch (Exception ex) {
-      logger.error("Exception reading manifest", ex);
+      logger.error("Exception reading permission page", ex);
       alertMgr.raiseAlert(Alert.auAlert(Alert.PERMISSION_PAGE_FETCH_ERROR, au).
 			  setAttribute(Alert.ATTR_TEXT,
 				       "The LOCKSS permission page at " +
-				       manifest +
+				       permissionPage +
 				       "\ncould not be fetched. " +
 				       "The error was:\n" +
 				       ex.getMessage() + "\n"));
       crawlStatus.setCrawlError(Crawler.STATUS_FETCH_ERROR);
-      return false;
+      crawl_ok = PermissionRecord.FETCH_PERMISSION_FAILED;
     }
-    if (!crawl_ok) {
+
+    if (crawl_ok != PermissionRecord.PERMISSION_OK) {
       crawlStatus.setCrawlError(err);
     }
     return crawl_ok;
   }
 
-  void storeManifest(CachedUrlSet ownerCus, String manifest)
+  void storePermissionPage(CachedUrlSet ownerCus, String permissionPage)
       throws IOException {
     // XXX can't reuse UrlCacher
-    UrlCacher uc = makeUrlCacher(ownerCus, manifest);
+    UrlCacher uc = makeUrlCacher(ownerCus, permissionPage);
     uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW);
     uc.cache();
   }
