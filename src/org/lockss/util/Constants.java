@@ -1,5 +1,5 @@
 /*
- * $Id: Constants.java,v 1.1 2003-03-08 01:38:10 tal Exp $
+ * $Id: Constants.java,v 1.2 2003-03-12 02:26:46 tal Exp $
  */
 
 /*
@@ -37,9 +37,14 @@ import java.util.*;
  * Constants of general use
  */
 public interface Constants {
-  public static int SECOND = 1000;
-  public static int MINUTE = 60 * SECOND;
-  public static int HOUR = 60 * MINUTE;
-  public static int DAY = 24 * HOUR;
-  public static int WEEK = 7 * DAY;
+  /** The number of milliseconds in a second */
+  public static final int SECOND = 1000;
+  /** The number of milliseconds in a minute */
+  public static final int MINUTE = 60 * SECOND;
+  /** The number of milliseconds in an hour */
+  public static final int HOUR = 60 * MINUTE;
+  /** The number of milliseconds in a day */
+  public static final int DAY = 24 * HOUR;
+  /** The number of milliseconds in a week */
+  public static final int WEEK = 7 * DAY;
 }
