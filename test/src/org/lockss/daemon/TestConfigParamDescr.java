@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigParamDescr.java,v 1.1 2004-01-03 06:16:01 tlipkis Exp $
+ * $Id: TestConfigParamDescr.java,v 1.2 2004-01-27 04:02:24 tlipkis Exp $
  */
 
 /*
@@ -64,6 +64,28 @@ public class TestConfigParamDescr extends LockssTestCase {
     d1.setSize(47);
     assertEquals(3, d1.getType());
     assertEquals(47, d1.getSize());
+  }
+
+  public void testSizeDefault() {
+    ConfigParamDescr d1 = new ConfigParamDescr("k1");
+    assertEquals(0, d1.getSize());
+    d1.setType(ConfigParamDescr.TYPE_BOOLEAN);
+    assertEquals(4, d1.getSize());
+
+    ConfigParamDescr d2 = new ConfigParamDescr("k1");
+    d2.setType(ConfigParamDescr.TYPE_YEAR);
+    assertEquals(4, d2.getSize());
+
+    ConfigParamDescr d3 = new ConfigParamDescr("k1");
+    d3.setType(ConfigParamDescr.TYPE_INT);
+    assertEquals(10, d3.getSize());
+    d3.setSize(12);
+    assertEquals(12, d3.getSize());
+
+    ConfigParamDescr d4 = new ConfigParamDescr("k1");
+    d4.setSize(12);
+    d4.setType(ConfigParamDescr.TYPE_INT);
+    assertEquals(12, d4.getSize());
   }
 
   public void testCompareTo() {

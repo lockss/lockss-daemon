@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescr.java,v 1.9 2004-01-27 01:03:43 clairegriffin Exp $
+ * $Id: ConfigParamDescr.java,v 1.10 2004-01-27 04:02:24 tlipkis Exp $
  */
 
 /*
@@ -101,7 +101,7 @@ public class ConfigParamDescr implements Comparable {
   private String displayName;		// human readable name
   private String description;		// explanatory test
   private int type = TYPE_STRING;
-  private int size = 0;			// size of input field
+  private int size = -1;		// size of input field
   private boolean definitional = true;  // true if this parameter
                                         // is not required to define the au.
 
@@ -174,14 +174,23 @@ public class ConfigParamDescr implements Comparable {
    */
   public void setType(int type) {
     this.type = type;
+    // if no size has been set, set a reasonable default for some types
+    if (size == -1) {
+      switch (type) {
+      case TYPE_YEAR: size = 4; break;
+      case TYPE_BOOLEAN: size = 4; break;
+      case TYPE_INT: size = 10; break;
+      default:
+      }
+    }
   }
 
   /**
-   * Return the suggested input field size
+   * Return the suggested input field size, or 0 if no suggestion
    * @return the size int
    */
   public int getSize() {
-    return size;
+    return (size != -1) ? size : 0;
   }
 
   /**
@@ -303,7 +312,7 @@ public class ConfigParamDescr implements Comparable {
       return false;
     }
     ConfigParamDescr opd = (ConfigParamDescr)o;
-    return type == opd.getType() && size == opd.getSize() &&
+    return type == opd.getType() && getSize() == opd.getSize() &&
       key.equals(opd.getKey());
   }
 
