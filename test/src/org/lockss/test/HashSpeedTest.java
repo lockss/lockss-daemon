@@ -1,5 +1,5 @@
 /*
- * $Id: HashSpeedTest.java,v 1.8 2003-03-08 02:18:57 tal Exp $
+ * $Id: HashSpeedTest.java,v 1.9 2003-03-27 01:57:57 aalto Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ import org.lockss.protocol.*;
 
 public class HashSpeedTest extends LockssTestCase {
   private SimulatedArchivalUnit sau;
-  private MockLockssDaemon theDaemon = new MockLockssDaemon(null);
+  private MockLockssDaemon theDaemon;
   private static final int DEFAULT_DURATION = 1000;
   private static final int DEFAULT_BYTESTEP = 1024;
   private static final int DEFAULT_FILESIZE = 3000;
@@ -53,12 +53,8 @@ public class HashSpeedTest extends LockssTestCase {
   private static int byteStep = DEFAULT_BYTESTEP;
   private static int fileSize = DEFAULT_FILESIZE;
 
-  public HashSpeedTest(String msg) {
-    super(msg);
-  }
-
   public static void main(String[] args) throws Exception {
-    HashSpeedTest test = new HashSpeedTest("");
+    HashSpeedTest test = new HashSpeedTest();
     if (args.length>0) {
       try {
         duration = Integer.parseInt(args[0]);
@@ -76,11 +72,12 @@ public class HashSpeedTest extends LockssTestCase {
   }
 
   public void setUp() throws Exception {
+    super.setUp();
+    theDaemon = new MockLockssDaemon();
     this.setUp(DEFAULT_DURATION, DEFAULT_BYTESTEP);
   }
 
   public void setUp(int duration, int byteStep) throws Exception {
-    super.setUp();
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     sau = new SimulatedArchivalUnit();
     sau.setRootDir(tempDirPath);
@@ -90,7 +87,13 @@ public class HashSpeedTest extends LockssTestCase {
         tempDirPath;
     String configStr = s + "\n" + s2 + "\n" + s3;
     TestConfiguration.setCurrentConfigFromString(configStr);
+    theDaemon.getLockssRepositoryService().startService();
     theDaemon.getLockssRepository(sau);
+  }
+
+  public void tearDown() throws Exception {
+    theDaemon.getLockssRepositoryService().stopService();
+    super.tearDown();
   }
 
   public void testRunSelf() throws Exception {
