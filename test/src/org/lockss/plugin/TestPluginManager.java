@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.29 2004-01-07 21:23:29 tlipkis Exp $
+ * $Id: TestPluginManager.java,v 1.30 2004-01-14 21:39:51 tlipkis Exp $
  */
 
 /*
@@ -170,6 +170,15 @@ public class TestPluginManager extends LockssTestCase {
     assertNull(mgr.getPlugin(mgr.pluginKeyFromName(n2)));
     assertNotNull(mgr.getPlugin(mgr.pluginKeyFromName(n1)));
     assertTrue(mgr.getPlugin(mgr.pluginKeyFromName(n1)) instanceof MockPlugin);
+  }
+
+  public void testXmlPluginRegistry() {
+    String n1 = "org.lockss.test.MockPlugin";
+    String n2 = ThrowingMockPlugin.class.getName();
+    assertEmpty(mgr.getXmlPlugins());
+    ConfigurationUtil.setFromArgs(PluginManager.PARAM_PLUGIN_XML_PLUGINS,
+				  n1 + ";" + n2);
+    assertEquals(ListUtil.list(n1, n2), mgr.getXmlPlugins());
   }
 
   public void testStop() throws Exception {

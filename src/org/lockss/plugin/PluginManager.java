@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.66 2004-01-13 23:15:10 clairegriffin Exp $
+ * $Id: PluginManager.java,v 1.67 2004-01-14 21:39:51 tlipkis Exp $
  */
 
 /*
@@ -55,6 +55,9 @@ public class PluginManager extends BaseLockssManager {
   static String PARAM_PLUGIN_REGISTRY =
     Configuration.PREFIX + "plugin.registry";
 
+  static String PARAM_PLUGIN_XML_PLUGINS =
+    Configuration.PREFIX + "plugin.xmlPlugins";
+
   static String PARAM_REMOVE_STOPPED_AUS =
     Configuration.PREFIX + "plugin.removeStoppedAus";
   static boolean DEFAULT_REMOVE_STOPPED_AUS = true;
@@ -64,6 +67,9 @@ public class PluginManager extends BaseLockssManager {
   static final String AU_PARAM_WRAPPER = "reserved.wrapper";
   public static final String AU_PARAM_DISABLED = "reserved.disabled";
   public static final String AU_PARAM_DISPLAY_NAME = "reserved.displayName";
+
+  static final String CONFIGURABLE_PLUGIN_NAME =
+    ConfigurablePlugin.class.getName();
 
   private static Logger log = Logger.getLogger("PluginMgr");
 
@@ -75,6 +81,7 @@ public class PluginManager extends BaseLockssManager {
   private Map pluginMap = Collections.synchronizedMap(new HashMap());
   private Map auMap = Collections.synchronizedMap(new HashMap());
   private Set inactiveAuIds = Collections.synchronizedSet(new HashSet());
+  private List xmlPlugins = Collections.EMPTY_LIST;
 
   public PluginManager() {
   }
@@ -127,6 +134,13 @@ public class PluginManager extends BaseLockssManager {
       // process the plugin registry.
       // (do this after configuring AUs, so plugin regsitry will reflect
       // plugins loaded by AUs but not in registry param)
+
+      // Must load the xml plugin list *before* the plugin registry
+      if (changedKeys.contains(PARAM_PLUGIN_XML_PLUGINS)) {
+	xmlPlugins = StringUtil.breakAt(config.get(PARAM_PLUGIN_XML_PLUGINS),
+					';', 0, true);
+      }
+
       if (changedKeys.contains(PARAM_PLUGIN_REGISTRY)) {
 	initPluginRegistry(config.get(PARAM_PLUGIN_REGISTRY));
       }
@@ -570,7 +584,6 @@ public class PluginManager extends BaseLockssManager {
     String prefix = PARAM_AU_TREE + "." + aukey;
     return config.getConfigTree(prefix);
   }
-  static final String CONFIGURABLE_PLUGIN_KEY = "conf:";
 
   Plugin retrievePlugin(String pluginKey) throws Exception {
     if (pluginMap.containsKey(pluginKey)) {
@@ -578,9 +591,9 @@ public class PluginManager extends BaseLockssManager {
     }
     String pluginName = pluginNameFromKey(pluginKey);
     String confFile = null;
-    if(pluginName.endsWith(".xml")) {
-      confFile = pluginName;
-      pluginName = "org.lockss.plugin.configurable.ConfigurablePlugin";
+    if (xmlPlugins.contains(pluginName)) {
+      confFile = StringUtil.replaceString(pluginName, ".", "/") + ".xml";
+      pluginName = CONFIGURABLE_PLUGIN_NAME;
     }
     Class pluginClass;
     try {
@@ -603,12 +616,12 @@ public class PluginManager extends BaseLockssManager {
       log.error("Error loading " + pluginName, e);
       return null;
     }
-    log.debug("Instantiating " + pluginClass);
     Plugin plugin = (Plugin) pluginClass.newInstance();
-    if(confFile != null) {
+    if (confFile != null && plugin instanceof ConfigurablePlugin) {
+      log.debug("Instantiating Configurable plugin from " + confFile);
       ((ConfigurablePlugin)plugin).initPlugin(theDaemon, confFile);
-    }
-    else {
+    } else {
+      log.debug("Instantiating " + pluginClass);
       plugin.initPlugin(theDaemon);
     }
     return plugin;
@@ -781,6 +794,11 @@ public class PluginManager extends BaseLockssManager {
    * configured AU */
   public Collection getRegisteredPlugins() {
     return pluginMap.values();
+  }
+
+  /** @return list of xml plugin names.  For testing only. */
+  List getXmlPlugins() {
+    return xmlPlugins;
   }
 
   // Synch the plugin registry with the plugins listed in names
