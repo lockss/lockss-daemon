@@ -1589,7 +1589,7 @@
 	<property name="plugin" value="edu.fcla.plugin.arkivoc.ArkivocPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
-	  <property name="value" value="http://www.arkat-usa.org/ark/journal/" />
+	  <property name="value" value="http://www.arkat-usa.org/" />
 	</property>
 	<property name="param.2">
 	  <property name="key" value="year" />
@@ -1604,7 +1604,7 @@
 	<property name="plugin" value="edu.fcla.plugin.arkivoc.ArkivocPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
-	  <property name="value" value="http://www.arkat-usa.org/ark/journal/" />
+	  <property name="value" value="http://www.arkat-usa.org/" />
 	</property>
 	<property name="param.2">
 	  <property name="key" value="year" />
@@ -1619,7 +1619,7 @@
 	<property name="plugin" value="edu.fcla.plugin.arkivoc.ArkivocPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
-	  <property name="value" value="http://www.arkat-usa.org/ark/journal/" />
+	  <property name="value" value="http://www.arkat-usa.org/" />
 	</property>
 	<property name="param.2">
 	  <property name="key" value="year" />
@@ -1634,7 +1634,7 @@
 	<property name="plugin" value="edu.fcla.plugin.arkivoc.ArkivocPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
-	  <property name="value" value="http://www.arkat-usa.org/ark/journal/" />
+	  <property name="value" value="http://www.arkat-usa.org/" />
 	</property>
 	<property name="param.2">
 	  <property name="key" value="year" />
@@ -1649,56 +1649,11 @@
 	<property name="plugin" value="edu.fcla.plugin.arkivoc.ArkivocPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
-	  <property name="value" value="http://www.arkat-usa.org/ark/journal/" />
+	  <property name="value" value="http://www.arkat-usa.org/" />
 	</property>
 	<property name="param.2">
 	  <property name="key" value="year" />
 	  <property name="value" value="2000" />
-	</property>
-      </property>
-
-      <property name="arkivoc1999">
-	<property name="title" value="Arkivoc 1999" />
-	<property name="estSize" value="110MB" />
-	<property name="journalTitle" value="Arkivoc" />
-	<property name="plugin" value="edu.fcla.plugin.arkivoc.ArkivocPlugin" />
-	<property name="param.1">
-	  <property name="key" value="base_url" />
-	  <property name="value" value="http://www.arkat-usa.org/ark/journal/" />
-	</property>
-	<property name="param.2">
-	  <property name="key" value="year" />
-	  <property name="value" value="1999" />
-	</property>
-      </property>
-
-      <property name="arkivoc1998">
-	<property name="title" value="Arkivoc 1998" />
-	<property name="estSize" value="110MB" />
-	<property name="journalTitle" value="Arkivoc" />
-	<property name="plugin" value="edu.fcla.plugin.arkivoc.ArkivocPlugin" />
-	<property name="param.1">
-	  <property name="key" value="base_url" />
-	  <property name="value" value="http://www.arkat-usa.org/ark/journal/" />
-	</property>
-	<property name="param.2">
-	  <property name="key" value="year" />
-	  <property name="value" value="1998" />
-	</property>
-      </property>
-
-      <property name="arkivoc1997">
-	<property name="title" value="Arkivoc 1997" />
-	<property name="estSize" value="110MB" />
-	<property name="journalTitle" value="Arkivoc" />
-	<property name="plugin" value="edu.fcla.plugin.arkivoc.ArkivocPlugin" />
-	<property name="param.1">
-	  <property name="key" value="base_url" />
-	  <property name="value" value="http://www.arkat-usa.org/ark/journal/" />
-	</property>
-	<property name="param.2">
-	  <property name="key" value="year" />
-	  <property name="value" value="1997" />
 	</property>
       </property>
 
