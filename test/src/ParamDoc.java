@@ -1,5 +1,5 @@
 /*
- * $Id: ParamDoc.java,v 1.4 2003-06-20 22:34:53 claire Exp $
+ * $Id: ParamDoc.java,v 1.5 2004-01-07 18:56:14 tlipkis Exp $
  */
 
 /*
@@ -158,9 +158,13 @@ public class ParamDoc {
       String defaultSym = "DEFAULT"+paramSym.substring(5);
       Object defaultVal = defaultSymToDefVal.get(defaultSym);
 
-      putIfNotDifferent(defaultMap, paramName, 
-			defaultVal != null ? defaultVal : "(none)", 
-			"Conflicting defaults");
+      if (defaultVal != null) {
+	putIfNotDifferent(defaultMap, paramName, defaultVal,
+			  "Conflicting defaults");
+      }
+//       putIfNotDifferent(defaultMap, paramName, 
+// 			defaultVal != null ? defaultVal : "(none)", 
+// 			"Conflicting defaults");
     }
   }
 
@@ -178,6 +182,9 @@ public class ParamDoc {
 	log.error(fld.toString(), e);
 	return;
       }
+      if (paramName.indexOf("..") >= 0 && !paramMap.containsKey(paramName)) {
+	System.err.println("*** Suspicious parameter name: " + paramName);
+      }	
       addParam(paramMap, paramName, cls.getName());
       addParam(classMap, cls.getName(), paramName);
       putIfNotDifferent(paramToSymbol, paramName, fname, 
@@ -216,7 +223,7 @@ public class ParamDoc {
   static void putIfNotDifferent(Map map, Object key, Object val, String msg) {
     Object existingVal = map.get(key);
     if (existingVal != null && !existingVal.equals(val)) {
-      System.err.println(msg+" "+key+" "+val+" "+existingVal);
+      System.err.println("*** " +msg+" "+key+" "+val+" "+existingVal);
     } else {
       map.put(key, val);
     }
