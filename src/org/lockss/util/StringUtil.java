@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.29 2003-09-03 18:08:37 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.30 2003-09-16 23:41:28 eaalto Exp $
  */
 
 /*
@@ -101,8 +101,7 @@ public class StringUtil {
    * @param separator - String to put between elements
    * @return Concatenated string
    */
-  public static String
-    separatedString(Collection c, String separator) {
+  public static String separatedString(Collection c, String separator) {
     return separatedString(c, "", separator, "",
 			   new StringBuffer()).toString();
   }
@@ -113,8 +112,7 @@ public class StringUtil {
    * @param separator - String to put between elements
    * @return Concatenated string
    */
-  public static String
-    separatedString(Object arr[], String separator) {
+  public static String separatedString(Object arr[], String separator) {
     return separatedString(ListUtil.fromArray(arr), "", separator, "",
 			   new StringBuffer()).toString();
   }
@@ -126,9 +124,8 @@ public class StringUtil {
    * @param sb - StringBuffer to write result into
    * @return sb
    */
-  public static StringBuffer
-    separatedString(Collection c, String separator,
-		    StringBuffer sb) {
+  public static StringBuffer separatedString(Collection c, String separator,
+                                             StringBuffer sb) {
     return separatedString(c, "", separator, "", sb);
   }
 
@@ -140,9 +137,8 @@ public class StringUtil {
    * @param delimiter - String with which to surround each element
    * @return Concatenated string
    */
-  public static String
-    separatedDelimitedString(Collection c, String separator,
-			     String delimiter) {
+  public static String separatedDelimitedString(Collection c, String separator,
+                                                String delimiter) {
     return separatedString(c, delimiter,
 			   delimiter + separator + delimiter, delimiter,
 			   new StringBuffer()).toString();
@@ -157,12 +153,12 @@ public class StringUtil {
    * @param delimiter2 - String with which to suffix each element
    * @return Concatenated string
    */
-  public static String
-    separatedDelimitedString(Collection c, String separator,
-			     String delimiter1, String delimiter2) {
+  public static String separatedDelimitedString(Collection c, String separator,
+                                                String delimiter1,
+                                                String delimiter2) {
     return separatedString(c, delimiter1,
-			   delimiter2 + separator + delimiter1, delimiter2,
-			   new StringBuffer()).toString();
+                           delimiter2 + separator + delimiter1, delimiter2,
+                           new StringBuffer()).toString();
   }
 
   /**
@@ -173,9 +169,8 @@ public class StringUtil {
    * @param terminator - String with which to terminate result
    * @return Concatenated string
    */
-  public static String
-    terminatedSeparatedString(Collection c, String separator,
-			      String terminator) {
+  public static String terminatedSeparatedString(Collection c, String separator,
+                                                 String terminator) {
     return separatedString(c, "", separator, terminator,
 			   new StringBuffer()).toString();
   }
@@ -190,10 +185,10 @@ public class StringUtil {
    * @param separatorLast - String to place after last element
    * @return Concatenated string
    */
-  public static StringBuffer
-    separatedString(Collection c, String separatorFirst,
-		    String separatorInner, String separatorLast,
-		    StringBuffer sb) {
+  public static StringBuffer separatedString(Collection c, String separatorFirst,
+                                             String separatorInner,
+                                             String separatorLast,
+                                             StringBuffer sb) {
     if (c == null) {
       return sb;
     }
