@@ -1,5 +1,5 @@
 /*
- * $Id: ServletManager.java,v 1.12 2003-04-16 17:00:42 tal Exp $
+ * $Id: ServletManager.java,v 1.13 2003-04-16 19:08:28 tal Exp $
  */
 
 /*
@@ -199,7 +199,7 @@ public class ServletManager extends JettyManager {
       logContext.addHandler(logRHandler);
       logContext.setMimeMapping("out", "text/plain");
       logContext.setMimeMapping("gz", "text/gzip");
-      logContext.setTypeEncoding("text/gzip", "x-gzip");
+//       logContext.setTypeEncoding("text/gzip", "x-gzip");
 
       // NotFoundHandler
       logContext.addHandler(new NotFoundHandler());
