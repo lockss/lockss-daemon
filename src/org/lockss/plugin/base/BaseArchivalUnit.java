@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.21 2003-04-28 21:03:42 troberts Exp $
+ * $Id: BaseArchivalUnit.java,v 1.22 2003-04-30 23:00:58 aalto Exp $
  */
 
 /*
@@ -46,12 +46,23 @@ import org.apache.commons.collections.LRUMap;
  */
 public abstract class BaseArchivalUnit implements ArchivalUnit {
   /**
-   * Configuration parameter name for interval, in ms, after which
-   * a new top level poll should be called.
+   * Configuration parameter name for minimum interval, in ms, after which
+   * a new top level poll should be called.  Actual interval is randomly
+   * distributed between min and max.
    */
-  public static final String PARAM_TOP_LEVEL_POLL_INTERVAL =
-      Configuration.PREFIX + "baseau.toplevel.poll.interval";
-  static final long DEFAULT_TOP_LEVEL_POLL_INTERVAL = 2 * Constants.WEEK;
+  public static final String PARAM_TOP_LEVEL_POLL_INTERVAL_MIN =
+      Configuration.PREFIX + "baseau.toplevel.poll.interval.min";
+
+  /**
+   * Configuration parameter name for maximum interval, in ms, by which
+   * a new top level poll should have been called.  Actual interval is randomly
+   * distributed between min and max.
+   */
+  public static final String PARAM_TOP_LEVEL_POLL_INTERVAL_MAX =
+      Configuration.PREFIX + "baseau.toplevel.poll.interval.max";
+
+  static final long DEFAULT_TOP_LEVEL_POLL_INTERVAL_MIN = 2 * Constants.WEEK;
+  static final long DEFAULT_TOP_LEVEL_POLL_INTERVAL_MAX = 3 * Constants.WEEK;
 
   private static final long
     DEFAULT_MILLISECONDS_BETWEEN_CRAWL_HTTP_REQUESTS = 10 * Constants.SECOND;
@@ -60,6 +71,8 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   protected CrawlSpec crawlSpec;
   private String idStr = null;
   static Logger logger = Logger.getLogger("BaseArchivalUnit");
+
+  protected long nextPollInterval = -1;
 
   protected Configuration auConfig;
 
@@ -253,13 +266,26 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    * @return true iff a top level poll should be called
    */
   public boolean shouldCallTopLevelPoll(AuState aus) {
-    long pollInterval =
-      Configuration.getTimeIntervalParam(PARAM_TOP_LEVEL_POLL_INTERVAL,
-					 DEFAULT_TOP_LEVEL_POLL_INTERVAL);
+    if (nextPollInterval==-1) {
+      long minPollInterval =
+          Configuration.getTimeIntervalParam(PARAM_TOP_LEVEL_POLL_INTERVAL_MIN,
+                                             DEFAULT_TOP_LEVEL_POLL_INTERVAL_MIN);
+      long maxPollInterval =
+          Configuration.getTimeIntervalParam(PARAM_TOP_LEVEL_POLL_INTERVAL_MAX,
+                                             DEFAULT_TOP_LEVEL_POLL_INTERVAL_MAX);
+      if (maxPollInterval <= minPollInterval) {
+        maxPollInterval = 2 * minPollInterval;
+      }
+      nextPollInterval =
+          Deadline.inRandomRange(minPollInterval,
+                                 maxPollInterval).getRemainingTime();
+    }
     logger.debug("Deciding whether to call a top level poll");
-    logger.debug3("Last poll at "+aus.getLastTopLevelPollTime());
-    logger.debug3("Poll interval: "+pollInterval);
-    if (TimeBase.msSince(aus.getLastTopLevelPollTime()) > pollInterval) {
+    logger.debug3("Last poll at "+StringUtil.timeIntervalToString(
+        aus.getLastTopLevelPollTime()));
+    logger.debug3("Poll interval: "+StringUtil.timeIntervalToString(
+        nextPollInterval));
+    if (TimeBase.msSince(aus.getLastTopLevelPollTime()) > nextPollInterval) {
       return true;
     }
     return false;
@@ -270,7 +296,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     try {
       Thread thread = Thread.currentThread();
       thread.sleep(milliseconds);
-    } catch (InterruptedException ie) { 
+    } catch (InterruptedException ie) {
     }
   }
 }
