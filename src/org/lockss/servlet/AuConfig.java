@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.11 2003-12-08 06:56:56 tlipkis Exp $
+ * $Id: AuConfig.java,v 1.12 2004-01-03 06:23:57 tlipkis Exp $
  */
 
 /*
@@ -238,7 +238,10 @@ public class AuConfig extends LockssServlet {
 	return;
       }
       if (formConfig == null) {
-	formConfig = plugin.getConfigForTitle(title);
+	TitleConfig tc = plugin.getTitleConfig(title);
+	if (tc != null) {
+	  formConfig = tc.getConfig();
+	}
       }
     } else {
       String pid = req.getParameter("PluginId");
@@ -251,7 +254,7 @@ public class AuConfig extends LockssServlet {
       }
       if (!pluginMgr.ensurePluginLoaded(pKey)) {
 	if (StringUtil.isNullString(pKey)) {
-	  errMsg = "You must specify a plugin.";
+	  errMsg = "Please choose a title or a plugin.";
 	} else {
 	  errMsg = "Can't find plugin: " + pid;
 	}
@@ -282,6 +285,7 @@ public class AuConfig extends LockssServlet {
    * enter a plugin name */
   private void displayAddAu() throws IOException {
     Page page = newPage();
+    addJavaScript(page);
     page.add(getErrBlock());
     String addExp = "Adding new Archival Unit" +
       "<br>First, select a title or a publisher plugin." +
@@ -296,7 +300,8 @@ public class AuConfig extends LockssServlet {
 //     frm.add("<center>");
     Table tbl = new Table(0, "align=center cellspacing=4 cellpadding=0");
 
-    Collection titles = pluginMgr.findAllTitles();
+    ArrayList titles = new ArrayList(pluginMgr.findAllTitles());
+    Collections.sort(titles);
     if (!titles.isEmpty()) {
       boolean includePluginInTitleSelect =
 	configMgr.getBooleanParam(PARAM_INCLUDE_PLUGIN_IN_TITLE_SELECT,
@@ -305,20 +310,23 @@ public class AuConfig extends LockssServlet {
       tbl.newCell("colspan=3 align=center");
       tbl.add("Choose a title:<br>");
       Select sel = new Select("Title", false);
+      sel.attribute("onchange",
+		    "cascadeSelectEnable(this,'plugin_sel')");
       sel.add("-no selection-", true, "");
       for (Iterator iter = titles.iterator(); iter.hasNext(); ) {
 	String title = (String)iter.next();
 	String selText = encodeText(title);
+	String dispText = selText;
 	if (includePluginInTitleSelect) {
 	  Plugin titlePlugin = getTitlePlugin(title);
 	  if (titlePlugin != null) {
 	    String plugName = titlePlugin.getPluginName();
-	    String dispText = selText + " (" + plugName + ")";
-	    sel.add(dispText, false, selText);
-	    continue;
+	    dispText = selText + " (" + plugName + ")";
 	  }
 	}
-	sel.add(selText, false);
+	// always include select value, even if same as display text, so
+	// javascript can find it.  (IE doesn't copy .text to .value)
+	sel.add(dispText, false, selText);
       }
       tbl.add(sel);
       addOr(tbl);
@@ -330,6 +338,9 @@ public class AuConfig extends LockssServlet {
       tbl.newCell("colspan=3 align=center");
       tbl.add("Choose a publisher plugin:<br>");
       Select sel = new Select("PluginId", false);
+      sel.attribute("id", "plugin_sel");
+      sel.attribute("onchange",
+		    "cascadeSelectEnable(this,'plugin_input')");
       sel.add("-no selection-", true, "");
       for (Iterator iter = pMap.keySet().iterator(); iter.hasNext(); ) {
 	String pName = (String)iter.next();
@@ -344,6 +355,7 @@ public class AuConfig extends LockssServlet {
     tbl.add("Enter the class name of a plugin:<br>");
     Input in = new Input(Input.Text, "PluginClass");
     in.setSize(40);
+    in.attribute("id", "plugin_input");
     tbl.add(in);
     tbl.newRow();
     tbl.newCell("colspan=3 align=center");
