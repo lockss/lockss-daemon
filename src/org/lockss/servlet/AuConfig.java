@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.2 2003-07-23 06:40:41 tlipkis Exp $
+ * $Id: AuConfig.java,v 1.3 2003-07-27 01:42:04 tlipkis Exp $
  */
 
 /*
@@ -110,14 +110,32 @@ public class AuConfig extends LockssServlet {
 	displayAuSummary();
 	break op;
       }
-      if (action.equals("Edit")) {
+      if (action.equals("Edit")){
 	displayEditAu(au);
+	break op;
+      }
+      if (action.equals("Restore")) {
+	displayRestoreAu(au);
+	break op;
+      }
+      if (action.equals("DoRestore")) {
+	updateAu(au);
 	break op;
       }
       if (action.equals("Update")) {
 	updateAu(au);
 	break op;
       }
+      if (action.equals("Unconfigure")) {
+	confirmUnconfigureAu(au);
+	break op;
+      }
+      if (action.equals("Confirm Unconfigure")) {
+	doUnconfigureAu(au);
+	break op;
+      }
+      errMsg = "Unknown action: " + action;
+      displayAuSummary();
     }
     resetLocals();
   }
@@ -153,12 +171,14 @@ public class AuConfig extends LockssServlet {
     Form frm = new Form(srvURL(myServletDescr(), null));
     frm.method("POST");
     addAuid(frm, au);
-    frm.add(new Input(Input.Submit, "action", "Edit"));
+    Configuration cfg = pluginMgr.getStoredAuConfiguration(au);
+    boolean deleted = cfg.isEmpty();
+    frm.add(new Input(Input.Submit, "action", deleted ? "Restore": "Edit"));
     tbl.newRow();
     tbl.newCell("align=right");
     tbl.add(frm);
     tbl.newCell();
-    tbl.add(au.getName());
+    tbl.add(greyText(au.getName(), deleted));
   }
 
   private void addAuid(Composite comp, ArchivalUnit au) {
@@ -201,7 +221,8 @@ public class AuConfig extends LockssServlet {
     }
   }
 
-  private Form createAUEditForm(String action, ArchivalUnit au)
+  private Form createAUEditForm(java.util.List actions, ArchivalUnit au,
+				boolean editable)
       throws IOException {
     boolean isNew = au == null;
 
@@ -223,7 +244,7 @@ public class AuConfig extends LockssServlet {
       }
     } else {
       tbl.add("Variable Parameters");
-      addPropRows(tbl, editKeys, auConfig, true);
+      addPropRows(tbl, editKeys, auConfig, editable);
 
       tbl.newRow();
       tbl.newCell("colspan=2 align=center");
@@ -233,8 +254,16 @@ public class AuConfig extends LockssServlet {
         addAuid(tbl, au);
       }
     }
-    if (isNew || !editKeys.isEmpty()) {
-      tbl.add(new Input(Input.Submit, "action", action));
+    for (Iterator iter = actions.iterator(); iter.hasNext(); ) {
+      Object act = iter.next();
+      if (act instanceof String) {
+	tbl.add(new Input(Input.Submit, "action", (String)act));
+	if (iter.hasNext()) {
+	  tbl.add("&nbsp;");
+	}
+      } else {
+	tbl.add(act);
+      }
     }
     frm.add(tbl);
     return frm;
@@ -252,7 +281,35 @@ public class AuConfig extends LockssServlet {
     addErrMsg(page);
     page.add("</center><br>");
 
-    Form frm = createAUEditForm("Update", au);
+    java.util.List actions = ListUtil.list("Unconfigure");
+    if (!editKeys.isEmpty()) {
+      actions.add(0, "Update");
+    }
+    Form frm = createAUEditForm(actions, au, true);
+
+    page.add(frm);
+
+    page.add(getFooter());
+    page.write(resp.getWriter());
+  }
+
+
+  private void displayRestoreAu(ArchivalUnit au) throws IOException {
+    Page page = newPage();
+    fetchAuConfig(au);
+
+    page.add("<br><center>Restoring Configuration of ");
+    page.add(au.getName());
+    page.add("<br>AUID: ");
+    page.add(au.getAUId());
+    page.add("<br>");
+    addErrMsg(page);
+    page.add("</center><br>");
+
+    java.util.List actions =
+      ListUtil.list(new Input(Input.Hidden, "action", "DoRestore"),
+		    new Input(Input.Submit, "button", "Restore"));
+    Form frm = createAUEditForm(actions, au, true);
 
     page.add(frm);
 
@@ -326,7 +383,7 @@ public class AuConfig extends LockssServlet {
     page.add("</center>");
     addErrMsg(page);
 
-    Form frm = createAUEditForm("Create", null);
+    Form frm = createAUEditForm(ListUtil.list("Create"), null, true);
 
     page.add(frm);
 
@@ -364,7 +421,8 @@ public class AuConfig extends LockssServlet {
     fetchAuConfig(au);
     //    Properties p = new Properties();
     Configuration newConfig = getAuConfigFromForm(false);
-    if (isChanged(auConfig, newConfig)) {
+    if (isChanged(auConfig, newConfig) ||
+	isChanged(pluginMgr.getStoredAuConfiguration(au), newConfig)) {
       try {
 	pluginMgr.setAndSaveAUConfiguration(au, newConfig);
 	statusMsg = "AU configuration saved.";
@@ -374,12 +432,56 @@ public class AuConfig extends LockssServlet {
       } catch (IOException e) {
 	log.error("Couldn't save AU configuraton", e);
 	errMsg = "Error saving AU:<br>" + e.getMessage();
-	displayEditNew();
+	displayEditAu(au);
       }
     } else {
       statusMsg = "No changes made.";
     }
     displayEditAu(au);
+  }
+
+    
+  private void confirmUnconfigureAu(ArchivalUnit au) throws IOException {
+    String permFoot = "Permanent deletion occurs only during a reboot," +
+      " when configuration changes are backed up to the configuration floppy.";
+    String unconfigureFoot =
+      "Unconfigure will not take effect until the next daemon restart." +
+      "  At that point the volume will be inactive, but its contents" +
+      " will remain in the cache untill the deletion is made permanent" +
+      addFootnote(permFoot) + ".";
+
+    Page page = newPage();
+    fetchAuConfig(au);
+
+    page.add("<br><center>Are you sure you want to unconfigure");
+    page.add(addFootnote(unconfigureFoot));
+    page.add(" ");
+    page.add(au.getName());
+    page.add("<br>");
+    addErrMsg(page);
+    page.add("</center><br>");
+
+    Form frm = createAUEditForm(ListUtil.list("Confirm Unconfigure"),
+				au, false);
+
+    page.add(frm);
+
+    page.add(getFooter());
+    page.write(resp.getWriter());
+  }
+
+  private void doUnconfigureAu(ArchivalUnit au) throws IOException {
+    try {
+      pluginMgr.deleteAUConfiguration(au);
+      statusMsg = "AU configuration removed.";
+    } catch (ArchivalUnit.ConfigurationException e) {
+      log.error("Can't happen", e);
+      errMsg = e.getMessage();
+    } catch (IOException e) {
+      log.error("Couldn't save AU configuraton", e);
+      errMsg = "Error deleting AU:<br>" + e.getMessage();
+    }
+    displayAuSummary();
   }
 
   private void putFormVal(Properties p, String key) {
