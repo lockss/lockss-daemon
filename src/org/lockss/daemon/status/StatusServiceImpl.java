@@ -1,5 +1,5 @@
 /*
- * $Id: StatusServiceImpl.java,v 1.26 2004-09-28 08:53:18 tlipkis Exp $
+ * $Id: StatusServiceImpl.java,v 1.27 2004-10-19 10:17:15 tlipkis Exp $
  */
 
 /*
@@ -64,21 +64,26 @@ public class StatusServiceImpl
 	StatusService.NoSuchTableException("Called with null tableName");
     }
 
+    StatusTable table = new StatusTable(tableName, key);
+    if (options != null) {
+      table.setOptions(options);
+    }
+    fillInTable(table);
+    return table;
+  }
+
+  public void fillInTable(StatusTable table)
+      throws StatusService.NoSuchTableException {
     StatusAccessor statusAccessor;
+    String tableName = table.getName();
+    String key = table.getKey();
     synchronized(statusAccessors) {
       statusAccessor = (StatusAccessor)statusAccessors.get(tableName);
     }
-
     if (statusAccessor == null) {
       throw new StatusService.NoSuchTableException("Table not found: "
 						   +tableName+" "+key);
     } 
-    StatusTable table = new StatusTable(tableName, key);
-    if (options != null) {
-      BitSet tableOpts = table.getOptions();
-      tableOpts.xor(tableOpts);
-      tableOpts.or(options);
-    }
     if (statusAccessor.requiresKey() && table.getKey() == null) {
       throw new StatusService.NoSuchTableException(tableName +
 						   " requires a key value");
@@ -91,7 +96,6 @@ public class StatusServiceImpl
 	// ignored
       }
     }
-    return table;
   }
 
   static Pattern badTablePat =

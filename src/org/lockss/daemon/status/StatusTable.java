@@ -1,5 +1,5 @@
 /*
- * $Id: StatusTable.java,v 1.36 2004-09-28 08:53:18 tlipkis Exp $
+ * $Id: StatusTable.java,v 1.37 2004-10-19 10:17:15 tlipkis Exp $
  */
 
 /*
@@ -59,6 +59,7 @@ public class StatusTable {
   private List summaryInfo;
   private BitSet options = new BitSet();
   private boolean isResortable = true;
+  private Properties props;
 
   /**
    * @param name String representing table name
@@ -135,6 +136,13 @@ public class StatusTable {
   }
 
   /**
+   * Sets the options for this table
+   */
+  public void setOptions(BitSet options) {
+    this.options = options;
+  }
+
+  /**
    * Returns the options for this table
    * @return BitSet in which to set and test options
    */
@@ -142,6 +150,17 @@ public class StatusTable {
     return options;
   }
 
+  public void setProperty(String key, String val) {
+    if (props == null) {
+      props = new Properties();
+    }
+    props.setProperty(key, val);
+  }
+
+  public Properties getProperties() {
+    return props;
+  }
+    
   /**
    * Returns a List of {@link SummaryInfo} objects for this table
    * @return List of {@link SummaryInfo} objects for this table
@@ -347,6 +366,7 @@ public class StatusTable {
     private Object value;
     private String tableName;
     private String key;
+    private Properties props;
 
     /**
      * Create a Reference object with an embedded value.
@@ -365,6 +385,17 @@ public class StatusTable {
       this.key = key;
     }
 
+    public void setProperty(String key, String val) {
+      if (props == null) {
+	props = new Properties();
+      }
+      props.setProperty(key, val);
+    }
+
+    public Properties getProperties() {
+      return props;
+    }
+    
     public Object getValue() {
       return value;
     }

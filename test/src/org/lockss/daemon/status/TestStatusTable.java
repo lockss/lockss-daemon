@@ -1,5 +1,5 @@
 /*
- * $Id: TestStatusTable.java,v 1.5 2004-06-01 08:32:25 tlipkis Exp $
+ * $Id: TestStatusTable.java,v 1.6 2004-10-19 10:17:14 tlipkis Exp $
  */
 
 /*
@@ -257,6 +257,13 @@ public class TestStatusTable extends LockssTestCase {
     assertEquals(val, StatusTable.getActualValue(dval));
     assertEquals(val, StatusTable.getActualValue(rval));
     assertEquals(val, StatusTable.getActualValue(rdval));
+  }
+
+  public void testReferenceProps() {
+    StatusTable.Reference ref = new StatusTable.Reference("C", "blah", null);
+    assertNull(ref.getProperties());
+    ref.setProperty("foo", "bar");
+    assertEquals("bar", ref.getProperties().getProperty("foo"));
   }
 
   public void testReferenceEquals() {

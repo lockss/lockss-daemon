@@ -1,5 +1,5 @@
 /*
- * $Id: StatusService.java,v 1.10 2004-04-29 10:11:18 tlipkis Exp $
+ * $Id: StatusService.java,v 1.11 2004-10-19 10:17:15 tlipkis Exp $
  */
 
 /*
@@ -68,6 +68,12 @@ public interface StatusService {
    * with that name-key combination
    */
   public StatusTable getTable(String tableName, String key, BitSet options) 
+      throws StatusService.NoSuchTableException;
+
+  /**
+   * Call the StatusAccessor to fill in the table, using the already stored
+   * name, key, options, etc. */
+  public void fillInTable(StatusTable table)
       throws StatusService.NoSuchTableException;
 
   /**
