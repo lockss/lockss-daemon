@@ -1,5 +1,5 @@
 /*
- * $Id: GenericContentHasher.java,v 1.8 2003-02-25 22:08:34 troberts Exp $
+ * $Id: GenericContentHasher.java,v 1.9 2003-02-26 02:40:56 troberts Exp $
  */
 
 /*
@@ -40,7 +40,6 @@ import org.lockss.plugin.*;
  * General class to handle content hashing
  */
 public class GenericContentHasher extends GenericHasher {
-  private static final char DELIMITER = '&';
   private static final int HASHING_NAME = 1;
   private static final int HASHING_CONTENT = 2;
 
@@ -76,54 +75,77 @@ public class GenericContentHasher extends GenericHasher {
 
     int totalHashed = 0;
     if (hashState == HASHING_NAME) {
-      log.debug("Hashing name");
-      if (nameBytes == null) {
-	String url = cu.getUrl();
-	StringBuffer sb = new StringBuffer(url.length()+2);
-	sb.append(DELIMITER);
-	sb.append(url);
-	sb.append(DELIMITER);
-	String nameStr = sb.toString();
-	nameBytes = (nameStr.getBytes());
-	nameIdx = 0;
-	log.debug("got new name to hash: "+nameStr);
+      totalHashed += hashName(cu, numBytes);
+      if (totalHashed >= numBytes) {
+	return totalHashed;
       }
-      int bytesRemaining = nameBytes.length - nameIdx;
-      int len = numBytes < bytesRemaining ? numBytes : bytesRemaining;
-
-      digest.update(nameBytes, nameIdx, len);
-      nameIdx += len;
-      if (nameIdx >= nameBytes.length) {
-	log.debug("done hashing name: "+cu);
-	hashState = HASHING_CONTENT;
-	nameBytes = null;
-      }
-      totalHashed += len;
     }
     if (hashState == HASHING_CONTENT) {
-      log.debug("hashing content");
-      if(is == null) {
-	log.debug("opening "+cu+" for hashing");
-	is = cu.openForReading();
-      }
-      byte[] bytes = new byte[numBytes - totalHashed];
-      int bytesHashed = is.read(bytes);
-      log.debug3("Read "+bytesHashed+" from the input stream");
-      if (bytesHashed >= 0) {
-	digest.update(bytes, 0, bytesHashed);
-      } 
-      if (bytesHashed != 0 && bytesHashed < bytes.length) {
-	log.debug("done hashing content: "+cu);
-	hashState = HASHING_NAME;
-	shouldGetNextElement = true;
-	is.close();
-	is = null;
-      }
-      if (bytesHashed > 0) {
-	totalHashed += bytesHashed;
-      }
-      log.debug3(totalHashed+" bytes hashed in this step");
+      totalHashed += hashContent(cu, numBytes);
     }
     return totalHashed;
   }
+
+  private int hashName(CachedUrl cu, int numBytes) {
+    int totalHashed = 0;
+    log.debug("Hashing name");
+    if (nameBytes == null) {
+      String url = cu.getUrl();
+      StringBuffer sb = new StringBuffer(url.length());
+      sb.append(url);
+      String nameStr = sb.toString();
+      nameBytes = nameStr.getBytes();
+      nameIdx = 0;
+      log.debug("got new name to hash: "+nameStr);
+
+      byte[] sizeBytes = cu.getContentSize();
+      log.debug3("sizeBytes has length of "+sizeBytes.length);
+      digest.update((byte)sizeBytes.length);
+      digest.update(sizeBytes);
+      totalHashed += (sizeBytes.length+1);
+    } 
+
+    int bytesRemaining = nameBytes.length - nameIdx;
+    int len = numBytes < bytesRemaining ? numBytes : bytesRemaining;
+
+    log.debug3("Going to hash "+len+" name bytes");
+    digest.update(nameBytes, nameIdx, len);
+    nameIdx += len;
+    if (nameIdx >= nameBytes.length) {
+      log.debug("done hashing name: "+cu);
+      hashState = HASHING_CONTENT;
+      nameBytes = null;
+    }
+    totalHashed += len;
+    log.debug3(totalHashed+" bytes hashed in this step");
+    return totalHashed;
+  }
+
+  private int hashContent(CachedUrl cu, int numBytes) throws IOException {
+    int totalHashed = 0;
+    log.debug("hashing content");
+    if(is == null) {
+      log.debug("opening "+cu+" for hashing");
+      is = cu.openForReading();
+    }
+    byte[] bytes = new byte[numBytes - totalHashed];
+    int bytesHashed = is.read(bytes);
+    log.debug3("Read "+bytesHashed+" bytes from the input stream");
+    if (bytesHashed >= 0) {
+      digest.update(bytes, 0, bytesHashed);
+    } 
+    if (bytesHashed != 0 && bytesHashed < bytes.length) {
+      log.debug("done hashing content: "+cu);
+      hashState = HASHING_NAME;
+      shouldGetNextElement = true;
+      is.close();
+      is = null;
+    }
+    if (bytesHashed > 0) {
+      totalHashed += bytesHashed;
+    }
+    log.debug3(totalHashed+" bytes hashed in this step");
+    return totalHashed;
+  }
+
 }

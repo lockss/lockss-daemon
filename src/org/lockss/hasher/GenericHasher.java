@@ -1,5 +1,5 @@
 /*
- * $Id: GenericHasher.java,v 1.10 2003-02-25 22:08:34 troberts Exp $
+ * $Id: GenericHasher.java,v 1.11 2003-02-26 02:40:56 troberts Exp $
  */
 
 /*
@@ -65,8 +65,7 @@ public abstract class GenericHasher implements CachedUrlSetHasher {
    */
   public boolean finished() {
     return isFinished;
-  }
-
+  }  
   /**
    * @param numBytes maximum number of bytes to hash (counting delimiters)
    * @return number of bytes actually hashed.  This will only be less than
@@ -75,8 +74,14 @@ public abstract class GenericHasher implements CachedUrlSetHasher {
    */
   public int hashStep(int numBytes) throws IOException {
     int bytesLeftToHash = numBytes;
+    if (finished()) {
+      log.warning("Hash step called after hasher was finished");
+      return 0;
+    }
+
     log.debug(numBytes+" bytes left to hash in this step");
 
+    int totalBytesHashed = 0;
     while (bytesLeftToHash > 0) {
       if (curElement == null || shouldGetNextElement) {
 	shouldGetNextElement = false;
@@ -93,13 +98,15 @@ public abstract class GenericHasher implements CachedUrlSetHasher {
       int numBytesHashed =
 	hashElementUpToNumBytes(curElement, bytesLeftToHash);
       bytesLeftToHash -= numBytesHashed;
+      totalBytesHashed += numBytesHashed;
     }
-    return numBytes;
+    return totalBytesHashed;
   }
 
   /*
    * Subclasses should override this to correctly hash the specified element
    */
-  protected abstract int hashElementUpToNumBytes(CachedUrlSetNode element, int numBytes)
+  protected abstract int hashElementUpToNumBytes(CachedUrlSetNode element, 
+						 int numBytes)
       throws IOException;
 }
