@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.82 2004-06-03 21:45:34 clairegriffin Exp $
+ $Id: build.xml,v 1.83 2004-06-03 23:05:15 clairegriffin Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -219,7 +219,6 @@ Args:
     <path refid="test.compile.classpath" />
     <pathelement path="${lockss.test.jar}" />
     <pathelement path="${lockss.ant.jar}" />
-    <pathelement path="${lockss.tools.jar}" />
   </path>
 
   <path id="tools.compile.classpath">
@@ -914,6 +913,18 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
        <arg line="${args}" />
        <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
        <sysproperty key="java.library.path" value="${test.native}"/>
+    </java>
+  </target>
+ <!-- ==================================================================== -->
+  <target name="run-tool"
+   depends="-check-if-1.4,jar-tools-tests,check.class.arg"
+   description="Run a tools class named by class prop, with args in args prop" >
+    <!-- default args empty if not supplied on command line -->
+    <property name="args" value="" />
+    <java classname="${class}" fork="true">
+       <classpath refid="tools.test.run.classpath" />
+       <arg line="${args}" />
+       <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
     </java>
   </target>
 
