@@ -1,5 +1,5 @@
 /*
- * $Id: TestPriorityQueue.java,v 1.3 2002-11-20 19:43:12 tal Exp $
+ * $Id: TestPriorityQueue.java,v 1.4 2002-12-15 00:10:48 tal Exp $
  */
 
 /*
@@ -87,14 +87,13 @@ public class TestPriorityQueue extends LockssTestCase {
     PriorityQueue q = new PriorityQueue();
     Interrupter intr = null;
     try {
-      intr = interruptMeIn(500);
+      intr = interruptMeIn(TIMEOUT_SHOULD);
       q.get(timer(10000));
       intr.cancel();
     } catch (InterruptedException e) {
     } finally {
-      if (!intr.did()) {
-	fail("get() of empty q returned");
-      }
+      assertTrue("get() of empty q returned",
+		 intr.did());
     }
   }
 
@@ -103,7 +102,7 @@ public class TestPriorityQueue extends LockssTestCase {
     q.put(O1);
     Interrupter intr = null;
     try {
-      intr = interruptMeIn(1000);
+      intr = interruptMeIn(TIMEOUT_SHOULDNT);
       assertSame(O1, q.get(timer(10000)));
       intr.cancel();
     } catch (InterruptedException e) {
@@ -119,11 +118,11 @@ public class TestPriorityQueue extends LockssTestCase {
     Interrupter intr = null;
     try {
       Date start = new Date();
-      intr = interruptMeIn(2000);
-      putIn(200, q, O1);
+      intr = interruptMeIn(TIMEOUT_SHOULDNT);
+      putIn(100, q, O1);
       assertSame(O1, q.get(timer(10000)));
       intr.cancel();
-      if (TimerUtil.timeSince(start) < 200) {
+      if (TimerUtil.timeSince(start) < 80) {
 	fail("get() returned before put()");
       }
       assertTrue(q.isEmpty());
@@ -147,7 +146,7 @@ public class TestPriorityQueue extends LockssTestCase {
     PriorityQueue q = new PriorityQueue();
     Interrupter intr = null;
     try {
-      intr = interruptMeIn(1000);
+      intr = interruptMeIn(TIMEOUT_SHOULDNT);
       assertEquals(null, q.get(timer(0)));
       intr.cancel();
     } catch (InterruptedException e) {
@@ -163,20 +162,20 @@ public class TestPriorityQueue extends LockssTestCase {
     Interrupter intr = null;
     try {
       Date start = new Date();
-      intr = interruptMeIn(2000);
-      assertEquals(null, q.get(timer(300)));
+      intr = interruptMeIn(TIMEOUT_SHOULDNT);
+      assertEquals(null, q.get(timer(100)));
       long delay = TimerUtil.timeSince(start);
-      if (delay < 300) {
-	fail("get(300) returned early");
+      if (delay < 80) {
+	fail("get(100) returned early");
       }
       if (delay > 1000) {
-	fail("get(300) returned late");
+	fail("get(100) returned late");
       }
       intr.cancel();
     } catch (InterruptedException e) {
     } finally {
       if (intr.did()) {
-	fail("get(300) of empty failed to timeout");
+	fail("get(100) of empty failed to timeout");
       }
     }
   }
@@ -196,7 +195,7 @@ public class TestPriorityQueue extends LockssTestCase {
     PriorityQueue q = new PriorityQueue();
     Interrupter intr = null;
     try {
-      intr = interruptMeIn(2000);
+      intr = interruptMeIn(TIMEOUT_SHOULDNT);
       List l = new LinkedList();
       String ord[] = {"a", "b", "c", "d"};
       q.put("b");
@@ -227,7 +226,7 @@ public class TestPriorityQueue extends LockssTestCase {
       });
     Interrupter intr = null;
     try {
-      intr = interruptMeIn(2000);
+      intr = interruptMeIn(TIMEOUT_SHOULDNT);
       List l = new LinkedList();
       String ord[] = {"d", "c", "b", "a"};
       q.put("b");

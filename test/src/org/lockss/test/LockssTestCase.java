@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.15 2002-12-13 02:23:56 tal Exp $
+ * $Id: LockssTestCase.java,v 1.16 2002-12-15 00:12:13 tal Exp $
  */
 
 /*
@@ -41,6 +41,16 @@ import junit.framework.TestResult;
 
 
 public class LockssTestCase extends TestCase {
+  /** Timeout duration for timeouts that are expected to time out.  Setting
+   * this higher makes normal tests take longer, setting it too low might
+   * cause failing tests to erroneously succeed on slow or busy
+   * machines. */
+  public static int TIMEOUT_SHOULD = 300;
+
+  /** Timeout duration for timeouts that are expected not to time out.
+   * This should be set high to ensure catching failures. */
+  public static int TIMEOUT_SHOULDNT = 2000;
+
   List tmpDirs;
   List doLaters;
 

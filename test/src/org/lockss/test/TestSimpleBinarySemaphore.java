@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimpleBinarySemaphore.java,v 1.3 2002-11-19 23:31:29 tal Exp $
+ * $Id: TestSimpleBinarySemaphore.java,v 1.4 2002-12-15 00:10:48 tal Exp $
  */
 
 /*
@@ -77,8 +77,9 @@ public class TestSimpleBinarySemaphore extends LockssTestCase {
     SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
     Interrupter intr = null;
     try {
-      intr = interruptMeIn(1000);
+      intr = interruptMeIn(TIMEOUT_SHOULD);
       if (sem.take()) {
+	// should return false when gets interrupted
 	fail("take() of empty semaphore returned true");
       }
       intr.cancel();
@@ -94,7 +95,7 @@ public class TestSimpleBinarySemaphore extends LockssTestCase {
     sem.give();
     Interrupter intr = null;
     try {
-      intr = interruptMeIn(1000);
+      intr = interruptMeIn(TIMEOUT_SHOULDNT);
       if (!sem.take()) {
 	fail("take() of already full semaphore returned false");
       }
@@ -111,12 +112,12 @@ public class TestSimpleBinarySemaphore extends LockssTestCase {
     Interrupter intr = null;
     try {
       Date start = new Date();
-      intr = interruptMeIn(2000);
-      giveIn(500, sem);
+      intr = interruptMeIn(TIMEOUT_SHOULDNT);
+      giveIn(200, sem);
       if (!sem.take()) {
 	fail("take() of given() semaphore returned false");
       }
-      if (TimerUtil.timeSince(start) < 500) {
+      if (TimerUtil.timeSince(start) < 200) {
 	fail("take() returned before give()");
       }
       intr.cancel();
@@ -131,7 +132,7 @@ public class TestSimpleBinarySemaphore extends LockssTestCase {
     SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
     Interrupter intr = null;
     try {
-      intr = interruptMeIn(1000);
+      intr = interruptMeIn(TIMEOUT_SHOULDNT);
       if (sem.take(0)) {
 	fail("take(0) of empty semaphore returned true");
       }
@@ -148,7 +149,7 @@ public class TestSimpleBinarySemaphore extends LockssTestCase {
     sem.give();
     Interrupter intr = null;
     try {
-      intr = interruptMeIn(1000);
+      intr = interruptMeIn(TIMEOUT_SHOULDNT);
       if (!sem.take(0)) {
 	fail("take(0) of full semaphore returned false");
       }
@@ -165,21 +166,21 @@ public class TestSimpleBinarySemaphore extends LockssTestCase {
     Interrupter intr = null;
     try {
       Date start = new Date();
-      intr = interruptMeIn(2000);
-      if (sem.take(500)) {
+      intr = interruptMeIn(TIMEOUT_SHOULDNT);
+      if (sem.take(200)) {
 	fail("take() of empty semaphore returned true");
       }
       long delay = TimerUtil.timeSince(start);
-      if (delay < 500) {
-	fail("take(500) returned early");
+      if (delay < 200) {
+	fail("take(200) returned early");
       }
-      if (delay > 1000) {
-	fail("take(500) returned late");
+      if (delay > 1000) {		// possible fail on slow machine
+	fail("take(200) returned late");
       }
       intr.cancel();
     } finally {
       if (intr.did()) {
-	fail("take(500) of empty failed to timeout");
+	fail("take(200) of empty failed to timeout");
       }
     }
   }
@@ -190,7 +191,7 @@ public class TestSimpleBinarySemaphore extends LockssTestCase {
     Interrupter intr = null;
     try {
       Date start = new Date();
-      intr = interruptMeIn(2000);
+      intr = interruptMeIn(TIMEOUT_SHOULDNT);
       if (!sem.take(1000)) {
 	fail("take(1000) of full returned false");
       }
@@ -201,7 +202,7 @@ public class TestSimpleBinarySemaphore extends LockssTestCase {
       intr.cancel();
     } finally {
       if (intr.did()) {
-	fail("take(2000) of full failed to return");
+	fail("take(1000) of full failed to return");
       }
     }
   }
@@ -211,22 +212,22 @@ public class TestSimpleBinarySemaphore extends LockssTestCase {
     Interrupter intr = null;
     try {
       Date start = new Date();
-      intr = interruptMeIn(2000);
-      giveIn(500, sem);
+      intr = interruptMeIn(TIMEOUT_SHOULDNT);
+      giveIn(200, sem);
       if (!sem.take(1000)) {
-	fail("take(1000) of semaphore given() after 500 returned false");
+	fail("take(1000) of semaphore given() after 200 returned false");
       }
       long delay = TimerUtil.timeSince(start);
-      if (delay < 500) {
-	fail("take(1000), given in 500, returned early");
+      if (delay < 200) {
+	fail("take(1000), given in 200, returned early");
       }
       if (delay > 1000) {
-	fail("take(1000), given in 500, timed out");
+	fail("take(1000), given in 200, timed out");
       }
       intr.cancel();
     } finally {
       if (intr.did()) {
-	fail("take(1000), given in 500, neither returned nor timed out");
+	fail("take(1000), given in 200, failed to return");
       }
     }
   }

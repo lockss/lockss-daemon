@@ -102,7 +102,7 @@ public class TestMockDatagramSocket extends LockssTestCase{
     DatagramPacket packet = createEmptyPacket(10);
     Interrupter intr = null;
     try {
-      intr = interruptMeIn(1000);
+      intr = interruptMeIn(TIMEOUT_SHOULD);
       ds.receive(packet);
       fail("receive() returned when no packets");
     } catch (IOException e) {

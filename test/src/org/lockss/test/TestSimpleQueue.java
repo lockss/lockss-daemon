@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimpleQueue.java,v 1.4 2002-12-13 02:24:29 tal Exp $
+ * $Id: TestSimpleQueue.java,v 1.5 2002-12-15 00:10:48 tal Exp $
  */
 
 /*
@@ -83,7 +83,7 @@ public class TestSimpleQueue extends LockssTestCase {
     assertTrue(fifo.isEmpty());
     Interrupter intr = null;
     try {
-      intr = interruptMeIn(500);
+      intr = interruptMeIn(TIMEOUT_SHOULD);
       if (fifo.get() != null) {
 	fail("get() of empty fifo returned true");
       }
@@ -101,7 +101,7 @@ public class TestSimpleQueue extends LockssTestCase {
     assertTrue(!fifo.isEmpty());
     Interrupter intr = null;
     try {
-      intr = interruptMeIn(1000);
+      intr = interruptMeIn(TIMEOUT_SHOULDNT);
       assertSame(O1, fifo.get());
       intr.cancel();
     } finally {
@@ -116,7 +116,7 @@ public class TestSimpleQueue extends LockssTestCase {
     Interrupter intr = null;
     try {
       Date start = new Date();
-      intr = interruptMeIn(2000);
+      intr = interruptMeIn(TIMEOUT_SHOULDNT);
       putIn(200, fifo, O1);
       assertSame(O1, fifo.get());
       if (TimerUtil.timeSince(start) < 200) {
@@ -134,7 +134,7 @@ public class TestSimpleQueue extends LockssTestCase {
     SimpleQueue.Fifo fifo = new SimpleQueue.Fifo();
     Interrupter intr = null;
     try {
-      intr = interruptMeIn(1000);
+      intr = interruptMeIn(TIMEOUT_SHOULDNT);
       assertEquals(null, fifo.get(0));
       intr.cancel();
     } finally {
@@ -149,19 +149,19 @@ public class TestSimpleQueue extends LockssTestCase {
     Interrupter intr = null;
     try {
       Date start = new Date();
-      intr = interruptMeIn(2000);
-      assertEquals(null, fifo.get(300));
+      intr = interruptMeIn(TIMEOUT_SHOULDNT);
+      assertEquals(null, fifo.get(100));
       long delay = TimerUtil.timeSince(start);
-      if (delay < 300) {
-	fail("get(300) returned early");
+      if (delay < 80) {
+	fail("get(100) returned early");
       }
       if (delay > 1000) {
-	fail("get(300) returned late");
+	fail("get(100) returned late");
       }
       intr.cancel();
     } finally {
       if (intr.did()) {
-	fail("get(300) of empty failed to timeout");
+	fail("get(100) of empty failed to timeout");
       }
     }
   }
@@ -170,10 +170,10 @@ public class TestSimpleQueue extends LockssTestCase {
     SimpleQueue.Fifo fifo = new SimpleQueue.Fifo();
     Interrupter intr = null;
     try {
-      putIn(200, fifo, O1);
-      putIn(400, fifo, O2);
+      putIn(100, fifo, O1);
+      putIn(200, fifo, O2);
       Date start = new Date();
-      intr = interruptMeIn(2000);
+      intr = interruptMeIn(TIMEOUT_SHOULDNT);
       assertSame(O1, fifo.get());
       assertSame(O2, fifo.get());
       long delay = TimerUtil.timeSince(start);
@@ -183,11 +183,11 @@ public class TestSimpleQueue extends LockssTestCase {
       if (delay > 1000) {
 	fail("get() returned late");
       }
-      assertEquals(null, fifo.get(100));
+      assertEquals(null, fifo.get(20));
       intr.cancel();
     } finally {
       if (intr.did()) {
-	fail("get(500) of empty failed to timeout");
+	fail("get(20) of empty failed to timeout");
       }
     }
   }
