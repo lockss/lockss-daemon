@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.58 2003-12-23 01:36:59 tlipkis Exp $
+ * $Id: TestPollManager.java,v 1.59 2004-01-13 01:09:54 eaalto Exp $
  */
 
 /*
@@ -41,10 +41,8 @@ import org.lockss.plugin.*;
 import org.lockss.protocol.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
-import org.mortbay.util.*;
-import org.lockss.hasher.HashService;
-import org.lockss.repository.TestLockssRepositoryImpl;
 import org.lockss.repository.*;
+
 /** JUnitTest case for class: org.lockss.poller.PollManager */
 public class TestPollManager extends LockssTestCase {
 
@@ -428,6 +426,7 @@ public class TestPollManager extends LockssTestCase {
     theDaemon.getSchedService().startService();
     theDaemon.getHashService().startService();
     theDaemon.getRouterManager().startService();
+    theDaemon.getActivityRegulator(testau).startService();
 
     theDaemon.setNodeManager(new MockNodeManager(), testau);
     pollmanager.startService();

@@ -1,5 +1,5 @@
 /*
- * $Id: TestActivityRegulator.java,v 1.19 2003-12-23 00:37:04 tlipkis Exp $
+ * $Id: TestActivityRegulator.java,v 1.20 2004-01-13 01:09:55 eaalto Exp $
  */
 
 /*
@@ -34,7 +34,6 @@ package org.lockss.daemon;
 
 import java.util.Properties;
 import java.io.File;
-import org.lockss.plugin.*;
 import org.lockss.test.*;
 import org.lockss.util.TimeBase;
 import org.lockss.repository.*;
@@ -56,6 +55,7 @@ public class TestActivityRegulator extends LockssTestCase {
     mau = new MockArchivalUnit();
     theDaemon = new MockLockssDaemon();
     regulator = theDaemon.getActivityRegulator(mau);
+    regulator.startService();
     TimeBase.setSimulated(123);
   }
 
@@ -89,6 +89,25 @@ public class TestActivityRegulator extends LockssTestCase {
     regulator.setCusActivity(mcus2, regulator.BACKGROUND_CRAWL, 123);
     assertEquals(regulator.BACKGROUND_CRAWL, regulator.getCusActivity(mcus2));
     assertEquals(regulator.REPAIR_CRAWL, regulator.getCusActivity(mcus));
+  }
+
+  public void testStopService() {
+    // can get a lock fine
+    ActivityRegulator.Lock lock = regulator.getAuActivityLock(regulator.NEW_CONTENT_CRAWL, 123);
+    assertNotNull(lock);
+    lock.expire();
+    // can get a second lock
+    lock = regulator.getAuActivityLock(regulator.TOP_LEVEL_POLL, 123);
+    assertNotNull(lock);
+    lock.expire();
+    // stopping service
+    assertTrue(regulator.serviceActive);
+    regulator.stopService();
+    assertFalse(regulator.serviceActive);
+    // can no longer get a lock
+    assertNull(regulator.getAuActivityLock(regulator.NEW_CONTENT_CRAWL, 123));
+    MockCachedUrlSet mcus = new MockCachedUrlSet("test url");
+    assertNull(regulator.getCusActivityLock(mcus, regulator.STANDARD_CONTENT_POLL, 123));
   }
 
   public void testAuActivityAllowed() {

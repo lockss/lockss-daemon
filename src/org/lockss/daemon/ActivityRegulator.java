@@ -1,5 +1,5 @@
 /*
- * $Id: ActivityRegulator.java,v 1.25 2003-12-23 00:26:15 tlipkis Exp $
+ * $Id: ActivityRegulator.java,v 1.26 2004-01-13 01:09:55 eaalto Exp $
  */
 
 /*
@@ -110,6 +110,7 @@ public class ActivityRegulator
   HashMap cusMap = new HashMap();
   ArchivalUnit au;
   Lock curAuActivityLock = null;
+  volatile boolean serviceActive = false;
 
   public ActivityRegulator(ArchivalUnit au) {
     this.au = au;
@@ -117,9 +118,11 @@ public class ActivityRegulator
 
   public void startService() {
     super.startService();
+    serviceActive = true;
   }
 
   public void stopService() {
+    serviceActive = false;
     logger.debug2("ActivityRegulator stopped.");
     cusMap.clear();
     super.stopService();
@@ -146,6 +149,10 @@ public class ActivityRegulator
    * @return the ActivityLock iff the activity was marked as started, else null
    */
   public synchronized Lock getAuActivityLock(int newActivity, long expireIn) {
+    if (!serviceActive) {
+      // service not started, or currently stopped
+      return null;
+    }
     // check if the au is free for this activity
     int curActivity = getAuActivity();
     if (!isAllowedOnAu(newActivity, curActivity)) {
@@ -171,7 +178,11 @@ public class ActivityRegulator
    * @return the ActivityLock iff the activity was marked as started, else null
    */
   public synchronized Lock getCusActivityLock(CachedUrlSet cus, int newActivity,
-                                              long expireIn) {
+      long expireIn) {
+    if (!serviceActive) {
+      // service not started, or currently stopped
+      return null;
+    }
     // first, check if au is busy
     int auActivity = getAuActivity();
     if (!isAllowedOnAu(newActivity, auActivity)) {
@@ -308,7 +319,6 @@ public class ActivityRegulator
         return true;
     }
   }
-
 
 //XXX clean up properly
   static boolean isAllowedOnCus(int newActivity, int curActivity, int relation) {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestPoll.java,v 1.73 2003-12-23 01:37:30 tlipkis Exp $
+ * $Id: TestPoll.java,v 1.74 2004-01-13 01:09:54 eaalto Exp $
  */
 
 /*
@@ -33,13 +33,10 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.poller;
 
 import java.io.*;
-import java.security.*;
 import java.util.*;
 import java.net.*;
-import gnu.regexp.*;
 import org.lockss.app.*;
 import org.lockss.daemon.*;
-import org.lockss.hasher.*;
 import org.lockss.plugin.*;
 import org.lockss.protocol.*;
 import org.lockss.util.*;
@@ -495,6 +492,7 @@ public class TestPoll extends LockssTestCase {
     theDaemon.getHashService().startService();
     theDaemon.getRouterManager().startService();
     theDaemon.getSystemMetrics().startService();
+    theDaemon.getActivityRegulator(testau).startService();
     theDaemon.setNodeManager(new MockNodeManager(), testau);
     pollmanager.startService();
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestTreeWalkHandler.java,v 1.34 2003-12-09 02:33:37 eaalto Exp $
+ * $Id: TestTreeWalkHandler.java,v 1.35 2004-01-13 01:09:54 eaalto Exp $
  */
 
 /*
@@ -35,9 +35,7 @@ import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.poller.*;
 import org.lockss.protocol.*;
-import org.lockss.hasher.HashService;
 import org.lockss.repository.*;
-import org.lockss.plugin.base.*;
 
 public class TestTreeWalkHandler extends LockssTestCase {
   public static final String TEST_URL = "http://www.example.com";
@@ -48,7 +46,6 @@ public class TestTreeWalkHandler extends LockssTestCase {
   private TreeWalkHandler treeWalkHandler;
   private MockPollManager pollMan;
   private MockCrawlManager crawlMan;
-  private List urlList = null;
   private Random random = new Random();
 
   private MockLockssDaemon theDaemon;
@@ -89,6 +86,8 @@ public class TestTreeWalkHandler extends LockssTestCase {
     historyRepo.startService();
     nodeManager.historyRepo = historyRepo;
     theDaemon.setHistoryRepository(historyRepo);
+
+    theDaemon.getActivityRegulator(mau).startService();
 
     // can't call 'startService()' since thread can't start
     nodeManager.nodeCache = new NodeStateCache(10);
@@ -337,7 +336,7 @@ public class TestTreeWalkHandler extends LockssTestCase {
         treeWalkHandler.DEFAULT_TREEWALK_ESTIMATE_PADDING_MULTIPLIER);
     assertEquals(expectedL, treeWalkHandler.getEstimatedTreeWalkDuration());
   }
-
+/*
   private Poll createPoll(String url, boolean isContentPoll, int numAgree,
                           int numDisagree) throws Exception {
     LcapIdentity testID = null;
@@ -373,7 +372,7 @@ public class TestTreeWalkHandler extends LockssTestCase {
     TestHistoryRepositoryImpl.configHistoryParams(tempDirPath);
     return p;
   }
-
+*/
   public static void main(String[] argv) {
     String[] testCaseList = {TestTreeWalkHandler.class.getName()};
     junit.swingui.TestRunner.main(testCaseList);
