@@ -1,5 +1,5 @@
 /*
- * $Id: NodeStateMap.java,v 1.2 2003-03-20 00:01:35 aalto Exp $
+ * $Id: NodeStateMap.java,v 1.3 2003-03-22 01:15:19 aalto Exp $
  */
 
 /*
@@ -37,16 +37,11 @@ import org.apache.commons.collections.LRUMap;
 import org.apache.commons.collections.ReferenceMap;
 
 /**
- * Subclass of of the LRUMap.
+ * Subclass of the LRUMap, which holds {@link NodeState} objects and saves them
+ * via the {@link HistoryRepository} upon removal.  Also contains a weak
+ * reference map to protect against multiple instances of the same NodeState.
  */
 public class NodeStateMap extends LRUMap {
-  /**
-   * This parameter indicates the size of the LRUMap used by the node manager.
-   */
-  public static final String PARAM_NODESTATE_MAP_SIZE =
-      Configuration.PREFIX + "nodestate.map.size";
-  static final int DEFAULT_MAP_SIZE = 100;
-
   private HistoryRepository repository;
   private ReferenceMap refMap = new ReferenceMap(ReferenceMap.HARD,
                                                  ReferenceMap.WEAK);
@@ -55,16 +50,12 @@ public class NodeStateMap extends LRUMap {
   private int refHits = 0;
   private int refMisses = 0;
 
-  public NodeStateMap(HistoryRepository repo) {
-    super();
-    int mapSize = Configuration.getIntParam(PARAM_NODESTATE_MAP_SIZE,
-                                            DEFAULT_MAP_SIZE);
-    setMaximumSize(mapSize);
+  public NodeStateMap(HistoryRepository repo, int maxSize) {
+    super(maxSize);
     repository = repo;
   }
 
   public void processRemovedLRU(Object key, Object value) {
-//XXX bug?  Could change via reference, then not be saved
     super.processRemovedLRU(key, value);
     NodeState node = (NodeState)value;
     repository.storeNodeState(node);

@@ -1,5 +1,5 @@
 /*
- * $Id: PartnerList.java,v 1.4 2003-03-21 20:49:27 tal Exp $
+ * $Id: PartnerList.java,v 1.5 2003-03-22 01:15:19 aalto Exp $
  */
 
 /*
@@ -119,7 +119,7 @@ class PartnerList {
     }
     if (partners.size() == 0) {
       addFromDefaultList();
-    }      
+    }
   }
 
   void addDefaultPartners() {
@@ -174,7 +174,7 @@ class PartnerList {
 //     Element(LcapIdentity id) throws UnknownHostException {
 //       this(id.getAddress());
 //     }
-    
+
 //     Element(InetAddress ip) {
 //       addr = ip;
 //     }

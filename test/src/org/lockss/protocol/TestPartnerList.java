@@ -1,5 +1,5 @@
 /*
- * $Id: TestPartnerList.java,v 1.2 2003-03-21 07:28:56 tal Exp $
+ * $Id: TestPartnerList.java,v 1.3 2003-03-22 01:15:19 aalto Exp $
  */
 
 /*
@@ -142,21 +142,21 @@ public class TestPartnerList extends LockssTestCase {
     removeAll();
     assertEquals(new HashSet(), pl.getPartners());
     // make sure past lastPartnerRemoveTime
-    TimeBase.step(1000);		
+    TimeBase.step(1000);
     pl.addPartner(inet1);
     assertEquals(SetUtil.set(inet1), pl.getPartners());
     // want them added at different times so can predict remove order
-    TimeBase.step();		
+    TimeBase.step();
     pl.addPartner(inet2, 1.0);
     assertEquals(SetUtil.set(inet1, inet2), pl.getPartners());
-    TimeBase.step();		
+    TimeBase.step();
     pl.addPartner(inet3, 1.0);
     assertEquals(SetUtil.set(inet1, inet2, inet3), pl.getPartners());
-    TimeBase.step();		
+    TimeBase.step();
     // adding this one should cause oldest (inet1) to be removed
     pl.addPartner(inet4, 1.0);
     assertEquals(SetUtil.set(inet2, inet3, inet4), pl.getPartners());
-    TimeBase.step();		
+    TimeBase.step();
     // no removal this time; lastPartnerRemoveTime not exceeded
     pl.addPartner(inet1, 1.0);
     assertEquals(SetUtil.set(inet1, inet2, inet3, inet4), pl.getPartners());
@@ -170,7 +170,7 @@ public class TestPartnerList extends LockssTestCase {
     removeAll();
     assertEquals(new HashSet(), pl.getPartners());
     // make sure past lastPartnerRemoveTime
-    TimeBase.step(1000);		
+    TimeBase.step(1000);
     // adding this should then remove it, then add one from the default list
     pl.addPartner(inet3);
     Set p = pl.getPartners();

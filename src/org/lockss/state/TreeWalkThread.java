@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkThread.java,v 1.6 2003-03-21 19:40:52 tal Exp $
+ * $Id: TreeWalkThread.java,v 1.7 2003-03-22 01:15:19 aalto Exp $
  */
 
 /*
@@ -75,7 +75,6 @@ public class TreeWalkThread extends Thread {
 
   private Logger logger = Logger.getLogger("TreeWalkThread");
   TreeWalkThread treeWalkThread;
-  boolean treeWalkRunning = false;
   long treeWalkInterval;
   long topPollInterval;
   long treeWalkTestDuration;
@@ -151,7 +150,6 @@ public class TreeWalkThread extends Thread {
   }
 
   void doTreeWalk() {
-    treeWalkRunning = true;
     logger.debug("Attempting tree walk: "+theAu.getName());
     if (!theCrawlManager.isCrawlingAU(theAu, null, null)) {
       long startTime = TimeBase.nowMs();
@@ -166,19 +164,18 @@ public class TreeWalkThread extends Thread {
           manager.callTopLevelPoll();
         } else {
           logger.debug("Tree walk started: "+theAu.getName());
-          nodeTreeWalk(manager.nodeMap);
+          nodeTreeWalk();
           long elapsedTime = TimeBase.nowMs() - startTime;
           updateEstimate(elapsedTime);
         }
       }
     }
     //alert the AuState
-    manager.getAuState().treeWalkFinished();
+    manager.getAuState().setLastTreeWalkTime();
     logger.debug("Tree walk finished.");
-    treeWalkRunning = false;
   }
 
-  private void nodeTreeWalk(Map nodeMap) {
+  private void nodeTreeWalk() {
     CachedUrlSet cus = theAu.getAUCachedUrlSet();
     recurseTreeWalk(cus);
   }
@@ -198,6 +195,8 @@ public class TreeWalkThread extends Thread {
       CachedUrlSetNode node = (CachedUrlSetNode)children.next();
       if (node.getType()==CachedUrlSetNode.TYPE_CACHED_URL_SET) {
         // recurse on the child cus
+        //XXX recursion should be aware of total data size, and avoid
+        // stack overflow
         recurseTreeWalk((CachedUrlSet)node);
       } else if (node.getType()==CachedUrlSetNode.TYPE_CACHED_URL) {
         // open a new state for the leaf and walk
@@ -209,74 +208,38 @@ public class TreeWalkThread extends Thread {
   }
 
   boolean walkNodeState(NodeState node) {
-    CrawlState crawlState = node.getCrawlState();
-
     // determine if there are active polls
     Iterator polls = node.getActivePolls();
     while (polls.hasNext()) {
       PollState poll = (PollState)polls.next();
-      if ((poll.getStatus()==PollState.RUNNING) ||
-          (poll.getStatus()==PollState.REPAIRING) ||
-          (poll.getStatus()==PollState.SCHEDULED)) {
+      if (poll.isActive()) {
         // if there are active polls, don't interfere
         return false;
       }
     }
-    // at each node, check for crawl state
-    switch (crawlState.getType()) {
-      case CrawlState.NODE_DELETED:
-        // skip node if deleted
-        return true;
-      case CrawlState.BACKGROUND_CRAWL:
-      case CrawlState.NEW_CONTENT_CRAWL:
-      case CrawlState.REPAIR_CRAWL:
-        if (crawlState.getStatus() == CrawlState.FINISHED) {
-          // if node is cached
-          if (node.getCachedUrlSet().hasContent()) {
-            // if (theCrawlManager.shouldRecrawl(managerAu, node)) {
-            // then CrawlManager.scheduleBackgroundCrawl()
-            return false;
-          }
-        }
-      default:
-        break;
+    // at each node, check for recrawl needed
+    if (node.getCachedUrlSet().hasContent()) {
+      // if (theCrawlManager.shouldRecrawl(managerAu, node)) {
+      // then CrawlManager.scheduleBackgroundCrawl()
+      // return false;
     }
     // check recent histories to see if something needs fixing
     // if there are no current polls
     PollHistory lastHistory = node.getLastPollHistory();
     if (lastHistory != null) {
-      switch (lastHistory.status) {
-        // if latest is PollState.LOST or PollState.REPAIRING
-        // call a name poll to finish the repair which ended early
-        case PollState.LOST:
-        case PollState.REPAIRING:
-          PollSpec spec = new PollSpec(node.getCachedUrlSet(),
-                                       lastHistory.lwrBound,
-                                       lastHistory.uprBound);
-          manager.callNamePoll(spec.getCachedUrlSet());
-          return false;
-        case PollState.UNREPAIRABLE:
-          //XXX determine what to do
-          return false;
-        default:
-          break;
+      if (manager.checkLastHistory(lastHistory, node)) {
+        return false;
       }
     }
     return true;
   }
 
-  boolean shouldTreeWalkStart() {
-    if (treeWalkRunning) {
-      return false;
-    }
+  long timeUntilTreeWalkStart() {
     long lastTreeWalkTime = manager.getAuState().getLastTreeWalkTime();
     long timeSinceLastTW = TimeBase.nowMs() - lastTreeWalkTime;
     logger.debug3(timeSinceLastTW+" since last treewalk");
     logger.debug("Treewalks should happen every "+treeWalkInterval);
-    if (timeSinceLastTW >= treeWalkInterval) {
-      return true;
-    }
-    return false;
+    return treeWalkInterval - timeSinceLastTW;
   }
 
   public void end() {
@@ -285,19 +248,21 @@ public class TreeWalkThread extends Thread {
       deadline.expire();
     }
     if (estThread!=null) {
-      estThread.interrupt();
+      estThread.end();
     }
+    Configuration.unregisterConfigurationCallback(configCallback);
   }
 
   public void run() {
     while (goOn) {
-      if (shouldTreeWalkStart()) {
+      long timeToStart = timeUntilTreeWalkStart();
+      if (timeToStart <= 0) {
         doTreeWalk();
       } else {
-        long delta = (long)((double)MAX_DEVIATION*treeWalkInterval);
-        logger.debug3("Creating a deadline for " + treeWalkInterval +
+        long delta = (long)((double)MAX_DEVIATION*timeToStart);
+        logger.debug3("Creating a deadline for " + timeToStart +
                       " with delta of " + delta);
-        deadline = Deadline.inRandomDeviation(treeWalkInterval, delta);
+        deadline = Deadline.inRandomRange(timeToStart, timeToStart + delta);
         try {
           deadline.sleep();
         } catch (InterruptedException ie) { }
@@ -311,6 +276,7 @@ public class TreeWalkThread extends Thread {
   }
 
   class EstimationThread extends Thread {
+    private Deadline estDeadline = null;
 
     public void run() {
       startEstimateCalculation();
@@ -322,8 +288,8 @@ public class TreeWalkThread extends Thread {
       long startTime = TimeBase.nowMs();
       // start with top-level cus
       CachedUrlSet cus = theAu.getAUCachedUrlSet();
-      Deadline estDeadline = Deadline.in(treeWalkTestDuration);
-      int nodesWalked = recurseEstimate(cus, estDeadline, 0);
+      estDeadline = Deadline.in(treeWalkTestDuration);
+      int nodesWalked = recurseEstimate(cus, 0);
 
       timeTaken = TimeBase.nowMs() - startTime;
       logger.debug("Treewalk estimate finished in time " + timeTaken + "ms with " +
@@ -342,8 +308,7 @@ public class TreeWalkThread extends Thread {
       treeWalkEstimate = (long) (nodeCount * nodesPerMs);
     }
 
-    private int recurseEstimate(CachedUrlSet cus, Deadline estDeadline,
-                         int nodesWalked) {
+    private int recurseEstimate(CachedUrlSet cus, int nodesWalked) {
       // get the node state for the cus
       // this should be the most expensive operation, since there
       // are likely to be file operations involved
@@ -355,7 +320,7 @@ public class TreeWalkThread extends Thread {
         CachedUrlSetNode node = (CachedUrlSetNode)children.next();
         if (node.getType()==CachedUrlSetNode.TYPE_CACHED_URL_SET) {
           // recurse on the child cus
-          nodesWalked = recurseEstimate((CachedUrlSet)node, estDeadline, nodesWalked);
+          nodesWalked = recurseEstimate((CachedUrlSet)node, nodesWalked);
         } else if (node.getType()==CachedUrlSetNode.TYPE_CACHED_URL) {
           // open a new state for the leaf and increment
           state = manager.getNodeState(
@@ -364,6 +329,12 @@ public class TreeWalkThread extends Thread {
         }
       }
       return nodesWalked;
+    }
+
+    void end() {
+      if (estDeadline!=null) {
+        estDeadline.expire();
+      }
     }
   }
 }

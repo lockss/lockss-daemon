@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.47 2003-03-21 23:55:26 claire Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.48 2003-03-22 01:15:19 aalto Exp $
  */
 
 /*
@@ -74,20 +74,26 @@ public class TestNodeManagerImpl extends LockssTestCase {
     theDaemon.setPollManager(pollManager);
     theDaemon.setIdentityManager(new MockIdentityManager());
     theDaemon.useMockLockssService(true);
+    pollManager.initService(theDaemon);
+    pollManager.startService();
 
     nodeManager = new NodeManagerImpl(mau);
     nodeManager.initService(theDaemon);
     nodeManager.historyRepo = new HistoryRepositoryImpl(tempDirPath);
-    // don't start nodemanager service because of treewalk thread
-    pollManager.initService(theDaemon);
+    nodeManager.startService();
+    // don't need the thread
+    nodeManager.treeWalkThread.end();
+
+    theDaemon.getHashService().startService();
 
     loadNodeStates(mau, nodeManager);
   }
 
   public void tearDown() throws Exception {
-    PluginUtil.unregisterAllArchivalUnits();
     nodeManager.stopService();
     pollManager.stopService();
+    theDaemon.getHashService().stopService();
+    PluginUtil.unregisterAllArchivalUnits();
     theDaemon.stopDaemon();
     TimeBase.setReal();
     super.tearDown();
@@ -252,16 +258,6 @@ public class TestNodeManagerImpl extends LockssTestCase {
     assertIsomorphic(expectedA, histL);
   }
 
-  public void testThreadInstantiation() {
-    // just check if the thread is instantiated
-    assertNull(nodeManager.treeWalkThread);
-    nodeManager.startService();
-    assertNotNull(nodeManager.treeWalkThread);
-
-    nodeManager.stopService();
-    assertNull(nodeManager.treeWalkThread);
-  }
-
   public void testMapErrorCodes() {
     assertEquals(PollState.ERR_HASHING,
                  nodeManager.mapResultsErrorToPollError(Poll.ERR_HASHING));
@@ -276,9 +272,6 @@ public class TestNodeManagerImpl extends LockssTestCase {
   }
 
   public void testStartPoll() throws Exception {
-    theDaemon.getHashService().startService();
-    theDaemon.getPollManager().startService();
-
     contentPoll = createPoll(TEST_URL, true, false, 10, 5);
     Poll.VoteTally results = contentPoll.getVoteTally();
     // let's generate some history
@@ -304,14 +297,9 @@ public class TestNodeManagerImpl extends LockssTestCase {
         "", "", PollHistory.UNREPAIRABLE, 200, 456, null));
 
     assertFalse(nodeManager.startPoll(cus, results));
-
-    theDaemon.getHashService().stopService();
-    theDaemon.getPollManager().stopService();
   }
 
   public void testHandleContentPoll() throws Exception {
-    theDaemon.getHashService().startService();
-    theDaemon.getPollManager().startService();
     contentPoll = createPoll(TEST_URL, true, true, 10, 5);
     Poll.VoteTally results = contentPoll.getVoteTally();
     PollSpec spec = results.getPollSpec();
@@ -327,7 +315,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
                                         null);
     nodeManager.handleContentPoll(pollState, results, nodeState);
     assertEquals(PollState.WON, pollState.getStatus());
-    testReputationChanges(results);
+    reputationChangeTest(results);
 
     // - repairing
     pollState = new PollState(results.getType(),
@@ -339,7 +327,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     spec = results.getPollSpec();
     nodeManager.handleContentPoll(pollState, results, nodeState);
     assertEquals(PollState.REPAIRED, pollState.getStatus());
-    testReputationChanges(results);
+    reputationChangeTest(results);
 
     // lost content poll
     contentPoll = createPoll(TEST_URL + "/branch1", true, true, 5, 10);
@@ -355,7 +343,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
                               null);
     nodeManager.handleContentPoll(pollState, results, nodeState);
     assertEquals(PollState.UNREPAIRABLE, pollState.getStatus());
-    testReputationChanges(results);
+    reputationChangeTest(results);
 
     // - internal
     nodeState = nodeManager.getNodeState(getCUS(mau, TEST_URL + "/branch1"));
@@ -391,14 +379,9 @@ public class TestNodeManagerImpl extends LockssTestCase {
     assertEquals(MockPollManager.SUSPENDED,
                  ((MockPollManager)theDaemon.getPollManager()).getPollStatus(
         results.getPollKey()));
-
-    theDaemon.getHashService().stopService();
-    theDaemon.getPollManager().stopService();
   }
 
   public void testHandleNamePoll() throws Exception {
-    theDaemon.getHashService().startService();
-    theDaemon.getPollManager().startService();
     namePoll = createPoll(TEST_URL + "/branch2", false, true, 10, 5);
     Poll.VoteTally results = namePoll.getVoteTally();
     PollSpec spec = results.getPollSpec();
@@ -455,16 +438,9 @@ public class TestNodeManagerImpl extends LockssTestCase {
                  ((MockCrawlManager)theDaemon.getCrawlManager()).getUrlStatus(
         repairUrl2));
     assertTrue(repoNode.isInactive());
-
-    theDaemon.getHashService().stopService();
-    theDaemon.getPollManager().stopService();
   }
 
   public void testHandleAuPolls() throws Exception {
-    theDaemon.getHashService().startService();
-    theDaemon.getPollManager().startService();
-    nodeManager.stopService();
-
     // have to change the AUCUS for the MockArchivalUnit here
     // to properly test handling AuNode content polls
     String auUrl = AuUrl.PROTOCOL_COLON;
@@ -473,10 +449,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     mcus.setFlatItSource(auChildren);
     mau.setAUCachedUrlSet(mcus);
 
-    nodeManager = new NodeManagerImpl(mau);
-    nodeManager.initService(theDaemon);
-    nodeManager.historyRepo = new HistoryRepositoryImpl(tempDirPath);
-    nodeManager.addNodeState(mcus);
+    nodeManager.createNodeState(mcus);
 
     // test that a finished top-level poll sets the time right
     contentPoll = createPoll(auUrl, true, true, 10, 5);
@@ -530,12 +503,37 @@ public class TestNodeManagerImpl extends LockssTestCase {
     assertEquals(MockPollManager.CONTENT_REQUESTED,
                  ((MockPollManager)theDaemon.getPollManager()).getPollStatus(
         "testDir2"));
-    theDaemon.getHashService().stopService();
-    theDaemon.getPollManager().stopService();
   }
 
+  public void testCheckLastHistory() throws Exception {
+    NodeState nodeState = nodeManager.getNodeState(getCUS(mau, TEST_URL));
+    historyCheckTest(PollState.WON, nodeState, false);
+    historyCheckTest(PollState.REPAIRED, nodeState, false);
+    historyCheckTest(PollState.SCHEDULED, nodeState, false);
+    historyCheckTest(PollState.UNREPAIRABLE, nodeState, false);
 
-  private void testReputationChanges(Poll.VoteTally results) {
+    historyCheckTest(PollState.LOST, nodeState, true);
+    historyCheckTest(PollState.REPAIRING, nodeState, true);
+  }
+
+  private void historyCheckTest(int pollState, NodeState node,
+                                boolean shouldSchedule) {
+    PollHistory history = new PollHistory(1, null, null, pollState, 123,
+                                          123, null);
+    if (shouldSchedule) {
+      assertTrue(nodeManager.checkLastHistory(history, node));
+      assertEquals(MockPollManager.NAME_REQUESTED,
+                   ((MockPollManager)theDaemon.getPollManager()).getPollStatus(
+          TEST_URL));
+      ((MockPollManager)theDaemon.getPollManager()).thePolls.remove(TEST_URL);
+    } else {
+      assertFalse(nodeManager.checkLastHistory(history, node));
+      assertNull( ( (MockPollManager) theDaemon.getPollManager()).getPollStatus(
+          TEST_URL));
+    }
+  }
+
+  private void reputationChangeTest(Poll.VoteTally results) {
     Iterator voteIt = results.getPollVotes().iterator();
     MockIdentityManager idManager =
         (MockIdentityManager) theDaemon.getIdentityManager();
@@ -601,7 +599,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
   static void recurseLoadCachedUrlSets(NodeManagerImpl nodeManager,
                                        CachedUrlSet cus, ArchivalUnit au) {
     // add the nodeState for this cus
-    nodeManager.addNodeState(cus);
+    nodeManager.createNodeState(cus);
     // recurse the set's children
     Iterator children = cus.flatSetIterator();
     while (children.hasNext()) {
@@ -613,7 +611,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
         case CachedUrlSetNode.TYPE_CACHED_URL:
           CachedUrlSetSpec rSpec = new RangeCachedUrlSetSpec(child.getUrl());
           CachedUrlSet newSet = ((BaseArchivalUnit)au).makeCachedUrlSet(rSpec);
-          nodeManager.addNodeState(newSet);
+          nodeManager.createNodeState(newSet);
       }
     }
   }

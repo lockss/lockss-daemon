@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuStateImpl.java,v 1.2 2003-03-01 02:01:23 aalto Exp $
+ * $Id: TestAuStateImpl.java,v 1.3 2003-03-22 01:15:19 aalto Exp $
  */
 
 /*
@@ -50,27 +50,27 @@ public class TestAuStateImpl extends LockssTestCase {
     AuState auState = new AuState(null, 123, -1, -1);
     assertEquals(123, auState.getLastCrawlTime());
 
-    TimeBase.setSimulated(TimeBase.nowMs());
+    TimeBase.setSimulated(456);
     auState.newCrawlFinished();
-    assertEquals(TimeBase.nowMs(), auState.getLastCrawlTime());
+    assertEquals(456, auState.getLastCrawlTime());
   }
 
   public void testPollFinished() {
     AuState auState = new AuState(null, -1, 123, -1);
     assertEquals(123, auState.getLastTopLevelPollTime());
 
-    TimeBase.setSimulated(TimeBase.nowMs());
+    TimeBase.setSimulated(456);
     auState.newPollFinished();
-    assertEquals(TimeBase.nowMs(), auState.getLastTopLevelPollTime());
+    assertEquals(456, auState.getLastTopLevelPollTime());
   }
 
   public void testTreeWalkFinished() {
     AuState auState = new AuState(null, -1, -1, 123);
     assertEquals(123, auState.getLastTreeWalkTime());
 
-    TimeBase.setSimulated(TimeBase.nowMs());
-    auState.treeWalkFinished();
-    assertEquals(TimeBase.nowMs(), auState.getLastTreeWalkTime());
+    TimeBase.setSimulated(456);
+    auState.setLastTreeWalkTime();
+    assertEquals(456, auState.getLastTreeWalkTime());
   }
 
 

@@ -1,5 +1,5 @@
 /*
- * $Id: PollState.java,v 1.12 2003-03-15 02:53:29 aalto Exp $
+ * $Id: PollState.java,v 1.13 2003-03-22 01:15:19 aalto Exp $
  */
 
 /*
@@ -35,8 +35,7 @@ import org.lockss.util.Deadline;
  * PollState contains the state information for a poll current to a node.
  * There may be more than one active poll per node.
  */
-public class PollState
-    implements Comparable {
+public class PollState implements Comparable {
   public static final int SCHEDULED = 1;
   public static final int RUNNING = 2;
   public static final int REPAIRING = 4;
@@ -126,6 +125,16 @@ public class PollState
    */
   public Deadline getDeadline() {
     return deadline;
+  }
+
+  /**
+   * Returns true if the poll is in an active state.
+   * @return true if active
+   */
+  public boolean isActive() {
+    return ((status==RUNNING) ||
+            (status==REPAIRING) ||
+            (status==SCHEDULED));
   }
 
   public int compareTo(Object obj) {

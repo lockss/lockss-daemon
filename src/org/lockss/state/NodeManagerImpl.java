@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.66 2003-03-21 23:55:26 claire Exp $
+ * $Id: NodeManagerImpl.java,v 1.67 2003-03-22 01:15:19 aalto Exp $
  */
 
 /*
@@ -54,11 +54,11 @@ import org.apache.commons.collections.LRUMap;
  */
 public class NodeManagerImpl implements NodeManager {
   /**
-   * Configuration parameter name for whether the treewalk thread should
-   * be started right away
+   * This parameter indicates the size of the LRUMap used by the node manager.
    */
-  public static final String PARAM_START_TREEWALK_THREAD =
-      TreeWalkThread.PREFIX + "start_treewalk_thread";
+  public static final String PARAM_NODESTATE_MAP_SIZE =
+      Configuration.PREFIX + "nodestate.map.size";
+  static final int DEFAULT_MAP_SIZE = 100;
 
   private static LockssDaemon theDaemon;
   private NodeManager theManager = null;
@@ -68,9 +68,9 @@ public class NodeManagerImpl implements NodeManager {
   ArchivalUnit managedAu;
   private AuState auState;
   Map nodeMap;
+  int maxMapSize;
   private Logger logger = Logger.getLogger("NodeManager");
   TreeWalkThread treeWalkThread;
-  boolean shouldStartTreeWalkThread;
 
   Configuration.Callback configCallback;
 
@@ -91,7 +91,6 @@ public class NodeManagerImpl implements NodeManager {
       theManager = this;
       historyRepo = theDaemon.getHistoryRepository();
       lockssRepo = theDaemon.getLockssRepository(managedAu);
-      nodeMap = new NodeStateMap(historyRepo);
     } else {
       throw new LockssDaemonException("Multiple Instantiation.");
     }
@@ -114,13 +113,13 @@ public class NodeManagerImpl implements NodeManager {
       };
     Configuration.registerConfigurationCallback(configCallback);
 
+    nodeMap = new NodeStateMap(historyRepo, maxMapSize);
+
     historyRepo = theDaemon.getHistoryRepository();
 
-    if (shouldStartTreeWalkThread) {
-      treeWalkThread = new TreeWalkThread("TreeWalk: " + managedAu.getName(),
+    treeWalkThread = new TreeWalkThread("TreeWalk: " + managedAu.getName(),
                                           this, theDaemon.getCrawlManager());
-      treeWalkThread.start();
-    }
+    treeWalkThread.start();
     logger.debug("NodeManager sucessfully started");
   }
 
@@ -141,8 +140,7 @@ public class NodeManagerImpl implements NodeManager {
   }
 
   private void setConfig(Configuration config, Configuration oldConfig) {
-    shouldStartTreeWalkThread = config.getBoolean(PARAM_START_TREEWALK_THREAD,
-                                                  true);
+    maxMapSize = config.getInt(PARAM_NODESTATE_MAP_SIZE, DEFAULT_MAP_SIZE);
   }
 
   public boolean startPoll(CachedUrlSet cus, Poll.VoteTally state) {
@@ -182,7 +180,7 @@ public class NodeManagerImpl implements NodeManager {
       // if in repository, add
       try {
         if (lockssRepo.getNode(url) != null) {
-          node = addNodeState(cus);
+          node = createNodeState(cus);
         }
       } catch (MalformedURLException mue) {
         logger.error("Can't get NodeState due to bad CachedUrlSet: "+cus);
@@ -313,7 +311,7 @@ public class NodeManagerImpl implements NodeManager {
     return treeWalkEstimate;
   }
 
-  NodeState addNodeState(CachedUrlSet cus) {
+  NodeState createNodeState(CachedUrlSet cus) {
     logger.debug2("Loading NodeState: " + cus.toString());
     // load from file cache, or get a new one
     NodeStateImpl state = (NodeStateImpl)historyRepo.loadNodeState(cus);
@@ -459,6 +457,32 @@ public class NodeManagerImpl implements NodeManager {
         }
       }
       pollState.status = PollState.REPAIRED;
+    }
+  }
+
+  /**
+   * Looks at the last history from a node (during a treewalk), and schedules
+   * new polls if necessary.
+   * @param lastHistory the {@link PollHistory}
+   * @param node the {@link NodeState}
+   * @return true if poll scheduled
+   */
+  boolean checkLastHistory(PollHistory lastHistory, NodeState node) {
+    switch (lastHistory.status) {
+      // if latest is PollState.LOST or PollState.REPAIRING
+      // call a name poll to finish the repair which ended early
+      case PollState.LOST:
+      case PollState.REPAIRING:
+        PollSpec spec = new PollSpec(node.getCachedUrlSet(),
+                                     lastHistory.lwrBound,
+                                     lastHistory.uprBound);
+        callNamePoll(spec.getCachedUrlSet());
+        return true;
+      case PollState.UNREPAIRABLE:
+        //XXX determine what to do
+        return false;
+      default:
+        return false;
     }
   }
 

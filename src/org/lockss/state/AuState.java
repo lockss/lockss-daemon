@@ -1,5 +1,5 @@
 /*
- * $Id: AuState.java,v 1.8 2003-03-03 19:34:21 troberts Exp $
+ * $Id: AuState.java,v 1.9 2003-03-22 01:15:19 aalto Exp $
  */
 
 /*
@@ -102,7 +102,7 @@ public class AuState {
   /**
    * Sets the last treewalk time to the current time.
    */
-  void treeWalkFinished() {
+  void setLastTreeWalkTime() {
     lastTreeWalk = TimeBase.nowMs();
   }
 
