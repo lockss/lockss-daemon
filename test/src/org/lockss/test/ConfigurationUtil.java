@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurationUtil.java,v 1.2 2003-03-21 18:22:39 tal Exp $
+ * $Id: ConfigurationUtil.java,v 1.3 2003-03-27 03:06:05 tal Exp $
  *
 
 Copyright (c) 2000-2002 Board of Trustees of Leland Stanford Jr. University,
@@ -39,22 +39,51 @@ import org.mortbay.tools.*;
 /** Utilities for Configuration
  */
 public class ConfigurationUtil {
-//   public static boolean setCurrentConfigFromUrlList(List l) {
-//     Configuration config = Configuration.readConfig(l);
-//     return Configuration.installConfig(config);
-//   }
+  /** Create a Configuration from the supplied property list and install
+   * it as the current configuration.
+   */
+  public static boolean setCurrentConfigFromProps(Properties props) {
+    Configuration config = fromProps(props);
+    return installConfig(config);
+  }
 
-//   public static boolean setCurrentConfigFromString(String s)
-//       throws IOException {
-//     return setCurrentConfigFromUrlList(ListUtil.list(FileUtil.urlOfString(s)));
-//   }
+  /** Create a Configuration from the contents of the URLs in the list and
+   * install it as the current configuration.
+   */
+  public static boolean setCurrentConfigFromUrlList(List l) {
+    Configuration config = Configuration.readConfig(l);
+    return installConfig(config);
+  }
 
+  /** Create a Configuration from the supplied string and install it as the
+   * current configuration.
+   */
+  public static boolean setCurrentConfigFromString(String s)
+      throws IOException {
+    return setCurrentConfigFromUrlList(ListUtil.list(FileUtil.urlOfString(s)));
+  }
+
+  /** Install the supplied Configuration as the current configuration.
+   */
+  public static boolean installConfig(Configuration config) {
+    try {
+      PrivilegedAccessor.invokeMethod(config, "installConfig", config);
+    } catch (Exception e) {
+      throw new RuntimeException(e.toString());
+    }
+    return true;
+  }
+
+  /** Create a Configuration from the supplied string.
+   */
   public static Configuration fromString(String s)
       throws IOException {
     List l = ListUtil.list(FileUtil.urlOfString(s));
     return Configuration.readConfig(l);
   }
 
+  /** Create a Configuration from the supplied Properties.
+   */
   public static Configuration fromProps(Properties props) {
     PropertyTree tree = new PropertyTree(props);
     try {
