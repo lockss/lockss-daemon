@@ -1,5 +1,5 @@
 /*
- * $Id: TestDeadline.java,v 1.11 2003-06-20 22:34:56 claire Exp $
+ * $Id: TestDeadline.java,v 1.12 2003-09-08 19:25:42 tlipkis Exp $
  */
 
 /*
@@ -94,6 +94,14 @@ public class TestDeadline extends LockssTestCase {
     assertFalse(p1.before(p1));
     assertTrue(p1.before(p2));
     assertFalse(p2.before(p1));
+  }
+
+  public void testMinus() {
+    Deadline p1 = Deadline.in(100);
+    Deadline p2 = Deadline.in(200);
+    assertEquals(0, p1.minus(p1));
+    assertEquals(100, p2.minus(p1));
+    assertEquals(-100, p1.minus(p2));
   }
 
   public void testMAX() {
