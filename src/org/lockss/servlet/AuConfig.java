@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.1 2003-07-21 08:35:46 tlipkis Exp $
+ * $Id: AuConfig.java,v 1.2 2003-07-23 06:40:41 tlipkis Exp $
  */
 
 /*
@@ -54,16 +54,24 @@ public class AuConfig extends LockssServlet {
   private ConfigManager configMgr;
   private PluginManager pluginMgr;
 
+  // Used to insert error messages into the page
+  private String errMsg;
+  private String statusMsg;
+
   String action;
-  Configuration auConfig;
   Plugin plug;
+  Configuration auConfig;
   Collection defKeys;
   Collection allKeys;
   java.util.List editKeys;
 
-  // Used to insert error messages into the page
-  private String errMsg;
-  private String statusMsg;
+  // don't hold onto objects after request finished
+  private void resetLocals() {
+    plug = null;
+    auConfig = null;
+    defKeys = null;
+    allKeys = null;
+  }
 
   public void init(ServletConfig config) throws ServletException {
     super.init(config);
@@ -82,14 +90,20 @@ public class AuConfig extends LockssServlet {
 	displayAuSummary();
 	break op;
       }
-      log.debug("action=" + action);
       if (action.equals("Add")) {
 	displayAddAu();
 	break op;
       }
+      if (action.equals("EditNew")) {
+	displayEditNew();
+	break op;
+      }
+      if (action.equals("Create")) {
+	createAu();
+	break op;
+      }
       // all other actions require AU.  If missing, display summary page
       String auid = req.getParameter("auid");
-      log.debug("auid=" + auid);
       ArchivalUnit au = pluginMgr.getAuFromId(auid);
       if (au == null) {
 	errMsg = "Invalid AuId: " + auid;
@@ -105,17 +119,13 @@ public class AuConfig extends LockssServlet {
 	break op;
       }
     }
-    // don't hold onto objects
-    auConfig= null;
-    plug= null;
-    defKeys= null;
-    allKeys= null;
+    resetLocals();
   }
 
   private void displayAuSummary() throws IOException {
     Page page = newPage();
     addErrMsg(page);
-    Table tbl = new Table(0, "ALIGN=CENTER CELLSPACING=4 CELLPADDING=0");
+    Table tbl = new Table(0, "align=center cellspacing=4 cellpadding=0");
     addAddAuRow(tbl);
     Collection allAUs = pluginMgr.getAllAUs();
     if (!allAUs.isEmpty()) {
@@ -155,10 +165,18 @@ public class AuConfig extends LockssServlet {
     comp.add(new Input(Input.Hidden, "auid", au.getAUId()));
   }
 
+  private void addPlugId(Composite comp, Plugin plugin) {
+    comp.add(new Input(Input.Hidden, "PluginId", plugin.getPluginId()));
+  }
+
   private void fetchAuConfig(ArchivalUnit au) {
     auConfig = au.getConfiguration();
     log.debug("auConfig: " + auConfig);
-    plug = au.getPlugin();
+    fetchPluginConfig(au.getPlugin());
+  }
+
+  private void fetchPluginConfig(Plugin plug) {
+    this.plug = plug;
     defKeys = plug.getDefiningConfigKeys();
     allKeys = plug.getAUConfigProperties();
     editKeys = new LinkedList(allKeys);
@@ -166,12 +184,65 @@ public class AuConfig extends LockssServlet {
     Collections.sort(editKeys);
   }
 
-  private void displayEditAu(ArchivalUnit au) throws IOException {
-    Page page = newPage();
-    fetchAuConfig(au);
+  private void addPropRows(Table tbl, Collection keys, Configuration props,
+		      boolean editable) {
+    for (Iterator iter = keys.iterator(); iter.hasNext(); ) {
+      String key = (String)iter.next();
+      tbl.newRow();
+      tbl.newCell();
+      tbl.add(key);
+      tbl.newCell();
+      String val = props != null ? props.get(key) : null;
+      if (editable) {
+	tbl.add(new Input(Input.Text, key, val));
+      } else {
+	tbl.add(val);
+      }
+    }
+  }
+
+  private Form createAUEditForm(String action, ArchivalUnit au)
+      throws IOException {
+    boolean isNew = au == null;
 
     Form frm = new Form(srvURL(myServletDescr(), null));
     frm.method("POST");
+
+    Table tbl = new Table(0, "align=center cellspacing=4 cellpadding=0");
+    tbl.newRow();
+    tbl.newCell("colspan=2 align=center");
+    tbl.add("Volume Definition");
+//     tbl.add(isNew ? "Defining Properties" : "Fixed Properties");
+    addPropRows(tbl, defKeys, auConfig, isNew);
+    tbl.newRow();
+    tbl.newRow();
+    tbl.newCell("colspan=2 align=center");
+    if (editKeys.isEmpty()) {
+      if (!isNew) {
+	tbl.add("No Editable Properties");
+      }
+    } else {
+      tbl.add("Variable Parameters");
+      addPropRows(tbl, editKeys, auConfig, true);
+
+      tbl.newRow();
+      tbl.newCell("colspan=2 align=center");
+      if (isNew) {
+	addPlugId(tbl, plug);
+      } else {
+        addAuid(tbl, au);
+      }
+    }
+    if (isNew || !editKeys.isEmpty()) {
+      tbl.add(new Input(Input.Submit, "action", action));
+    }
+    frm.add(tbl);
+    return frm;
+  }
+
+  private void displayEditAu(ArchivalUnit au) throws IOException {
+    Page page = newPage();
+    fetchAuConfig(au);
 
     page.add("<br><center>Editing Configuration of ");
     page.add(au.getName());
@@ -181,39 +252,8 @@ public class AuConfig extends LockssServlet {
     addErrMsg(page);
     page.add("</center><br>");
 
-    Table tbl = new Table(0, "ALIGN=CENTER CELLSPACING=4 CELLPADDING=0");
-    tbl.newRow();
-    tbl.newCell("colspan=2 align=center");
-    tbl.add("Fixed Properties");
-    for (Iterator iter = defKeys.iterator(); iter.hasNext(); ) {
-      String key = (String)iter.next();
-      tbl.newRow();
-      tbl.newCell();
-      tbl.add(key);
-      tbl.newCell();
-      tbl.add(auConfig.get(key));
-    }
-    tbl.newRow();
-    tbl.newRow();
-    tbl.newCell("colspan=2 align=center");
-    if (editKeys.isEmpty()) {
-      tbl.add("No Editable Properties");
-    } else {
-      tbl.add("Editable Properties");
-      for (Iterator iter = editKeys.iterator(); iter.hasNext(); ) {
-	String key = (String)iter.next();
-	tbl.newRow();
-	tbl.newCell();
-	tbl.add(key);
-	tbl.newCell();
-	tbl.add(new Input(Input.Text, key, auConfig.get(key)));
-      }
-	tbl.newRow();
-	tbl.newCell("colspan=2 align=center");
-	addAuid(tbl, au);
-	tbl.add(new Input(Input.Submit, "action", "Update"));
-    }
-    frm.add(tbl);
+    Form frm = createAUEditForm("Update", au);
+
     page.add(frm);
 
     page.add(getFooter());
@@ -223,40 +263,118 @@ public class AuConfig extends LockssServlet {
 
   private void displayAddAu() throws IOException {
     Page page = newPage();
-    errMsg = "Not implemented yet.";
     addErrMsg(page);
+    SortedMap pMap = new TreeMap();
+    for (Iterator iter = pluginMgr.getRegisteredPlugins().iterator();
+	 iter.hasNext(); ) {
+      Plugin p = (Plugin)iter.next();
+      pMap.put(p.getPluginName(), p);
+    }
+    Form frm = new Form(srvURL(myServletDescr(), null));
+    frm.method("POST");
+    frm.add("<center>Add New Journal Volume<br>");
+    if (!pMap.isEmpty()) {
+      frm.add("<br>Choose a plugin:<br>");
+      Select sel = new Select("PluginId", false);
+	sel.add("-no selection-", true, "");
+      for (Iterator iter = pMap.keySet().iterator(); iter.hasNext(); ) {
+	String pName = (String)iter.next();
+	Plugin p = (Plugin)pMap.get(pName);
+	sel.add(pName, false, p.getPluginId());
+      }
+      frm.add(sel);
+      frm.add("<br>or");
+    }
+    frm.add("<br>Enter the class name of a plugin:<br>");
+    Input in = new Input(Input.Text, "PluginClass");
+    in.setSize(40);
+    frm.add(in);
+    frm.add("<br>");
+    frm.add(new Input(Input.Hidden, "action", "EditNew"));
+    frm.add(new Input(Input.Submit, "button", "Configure Volume"));
+    page.add(frm);
+    page.add("</center><br>");
+
     page.add(getFooter());
     page.write(resp.getWriter());
   }
 
+  private void displayEditNew() throws IOException {
+    String pid = req.getParameter("PluginId");
+    String pKey;
+    if (!StringUtil.isNullString(pid)) {
+      pKey = pluginMgr.pluginKeyFromId(pid);
+    } else {
+      pid = req.getParameter("PluginClass");
+      pKey = pluginMgr.pluginKeyFromName(pid);
+    }
+    if (!pluginMgr.ensurePluginLoaded(pKey)) {
+      if (StringUtil.isNullString(pKey)) {
+	errMsg = "You must specify a plugin.";
+      } else {
+	errMsg = "Can't find plugin: " + pid;
+      }
+      displayAddAu();
+      return;
+    }
+    fetchPluginConfig(pluginMgr.getPlugin(pKey));
+    
+    Page page = newPage();
+
+    page.add("<br><center>Creating New Journal Volume<br>with plugin ");
+    page.add(plug.getPluginName());
+    page.add("</center>");
+    addErrMsg(page);
+
+    Form frm = createAUEditForm("Create", null);
+
+    page.add(frm);
+
+    page.add(getFooter());
+    page.write(resp.getWriter());
+  }
+
+  private void createAu() throws IOException {
+    String pid = req.getParameter("PluginId");
+    String pKey = pluginMgr.pluginKeyFromId(pid);
+    if (!pluginMgr.ensurePluginLoaded(pKey)) {
+      errMsg = "Can't find plugin: " + pid;
+      displayAddAu();
+      return;
+    }
+    fetchPluginConfig(pluginMgr.getPlugin(pKey));
+    Configuration newConfig = getAuConfigFromForm(true);
+    try {
+      ArchivalUnit au =
+	pluginMgr.createAndSaveAUConfiguration(plug, newConfig);
+      statusMsg = "AU created.";
+      displayEditAu(au);
+    } catch (ArchivalUnit.ConfigurationException e) {
+      log.error("Error configuring AU", e);
+      errMsg = "Error configuring AU:<br>" + e.getMessage();
+      displayEditNew();
+    } catch (IOException e) {
+      log.error("Error saving AU configuration", e);
+      errMsg = "Error saving AU configuration:<br>" + e.getMessage();
+      displayEditNew();
+    }
+  }
+
   private void updateAu(ArchivalUnit au) throws IOException {
     fetchAuConfig(au);
-    Properties p = new Properties();
-    boolean changed = false;
-    for (Iterator iter = defKeys.iterator(); iter.hasNext(); ) {
-      String key = (String)iter.next();
-      p.put(key, auConfig.get(key));
-    }
-    for (Iterator iter = editKeys.iterator(); iter.hasNext(); ) {
-      String key = (String)iter.next();
-      String val = req.getParameter(key);
-      if (!StringUtil.isNullString(val)) {
-	p.put(key, val);
-      }
-      if (!val.equals(auConfig.get(key))) {
-	changed = true;
-	log.debug("Key " + key + " changed");
-      }
-    }
-    if (changed) {
+    //    Properties p = new Properties();
+    Configuration newConfig = getAuConfigFromForm(false);
+    if (isChanged(auConfig, newConfig)) {
       try {
-	log.debug("reconfiguring au");
-	pluginMgr.setAndSaveAUConfiguration(au, p);
+	pluginMgr.setAndSaveAUConfiguration(au, newConfig);
 	statusMsg = "AU configuration saved.";
       } catch (ArchivalUnit.ConfigurationException e) {
 	log.error("Couldn't reconfigure AU", e);
-	log.error("Couldn't reconfigure AU: " + e.getMessage());
 	errMsg = e.getMessage();
+      } catch (IOException e) {
+	log.error("Couldn't save AU configuraton", e);
+	errMsg = "Error saving AU:<br>" + e.getMessage();
+	displayEditNew();
       }
     } else {
       statusMsg = "No changes made.";
@@ -264,9 +382,58 @@ public class AuConfig extends LockssServlet {
     displayEditAu(au);
   }
 
+  private void putFormVal(Properties p, String key) {
+    String val = req.getParameter(key);
+    // Must treat empty string as unset param.
+    if (!StringUtil.isNullString(val)) {
+      p.put(key, val);
+    }
+  }
+
+  boolean isChanged(Configuration oldConfig, Configuration newConfig) {
+    Collection dk = oldConfig.differentKeys(newConfig);
+    boolean changed = false;
+    for (Iterator iter = dk.iterator(); iter.hasNext(); ) {
+      String key = (String)iter.next();
+      String oldVal = oldConfig.get(key);
+      String newVal = newConfig.get(key);
+      if (!isEqualFormVal(oldVal, newVal)) {
+	changed = true;
+	log.debug("Key " + key + " changed from \"" +
+		  oldVal + "\" to \"" + newVal + "\"");
+      }
+    }
+    return changed;
+  }
+
+  Configuration getAuConfigFromForm(boolean isNew) {
+    Properties p = new Properties();
+    for (Iterator iter = defKeys.iterator(); iter.hasNext(); ) {
+      String key = (String)iter.next();
+      if (isNew) {
+	putFormVal(p, key);
+      } else {
+	if (auConfig.get(key) != null) {
+	  p.put(key, auConfig.get(key));
+	}
+      }
+    }
+    for (Iterator iter = editKeys.iterator(); iter.hasNext(); ) {
+      String key = (String)iter.next();
+      putFormVal(p, key);
+    }
+    return ConfigManager.fromProperties(p);
+  }
+
+  private boolean isEqualFormVal(String formVal, String oldVal) {
+    return (StringUtil.isNullString(formVal))
+      ? StringUtil.isNullString(oldVal)
+      : formVal.equals(oldVal);
+    }
+
   private void addErrMsg(Composite comp) {
     if (errMsg != null) {
-      comp.add("<br><center><Font color=red>");
+      comp.add("<br><center><font color=red>");
       comp.add(errMsg);
       comp.add("</font></center><br>");
     }
