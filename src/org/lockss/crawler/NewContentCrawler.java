@@ -1,5 +1,5 @@
 /*
- * $Id: NewContentCrawler.java,v 1.34 2004-09-19 01:29:14 tlipkis Exp $
+ * $Id: NewContentCrawler.java,v 1.35 2004-09-21 23:10:39 troberts Exp $
  */
 
 /*
@@ -103,8 +103,8 @@ public class NewContentCrawler extends CrawlerImpl {
 
     logger.info("Max. crawl depth is set to be " + maxDepth);
 
-    logger.info("Beginning crawl of "+au);
-    crawlStatus.signalCrawlStarted();
+//     logger.info("Beginning crawl of "+au);
+//     crawlStatus.signalCrawlStarted();
     CachedUrlSet cus = au.getAuCachedUrlSet();
     Set parsedPages = new HashSet();
 

@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.25 2004-09-01 02:27:21 tlipkis Exp $
+ * $Id: RepairCrawler.java,v 1.26 2004-09-21 23:10:39 troberts Exp $
  */
 
 /*
@@ -130,8 +130,8 @@ public class RepairCrawler extends CrawlerImpl {
 
   protected boolean doCrawl0() {
     boolean windowClosed = false;
-    logger.info("Beginning crawl of "+au);
-    crawlStatus.signalCrawlStarted();
+//     logger.info("Beginning crawl of "+au);
+//     crawlStatus.signalCrawlStarted();
     CachedUrlSet cus = au.getAuCachedUrlSet();
 
     Iterator it = getStartingUrls();
