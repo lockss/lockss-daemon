@@ -792,7 +792,7 @@ class Client:
                               sleep=DEF_SLEEP):
         """ Block until the top-level of the AU is marked repaired. """
         def waitFunc():
-            return self.isAuRepaired(au, None)
+            return self.isAuRepaired(au)
         return wait(waitFunc, timeout, sleep)
 
     def waitForContentRepair(self, au, node, timeout=DEF_TIMEOUT,
