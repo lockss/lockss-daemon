@@ -1,5 +1,5 @@
 /*
- * $Id: TimerQueue.java,v 1.15 2004-02-09 22:13:47 tlipkis Exp $
+ * $Id: TimerQueue.java,v 1.16 2004-02-10 02:27:49 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -31,11 +31,15 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 import java.io.*;
 import java.util.*;
+import org.lockss.daemon.*;
 
 /** TimerQueue implements a queue of actions to be performed at a specific
  * time.
  */
 public class TimerQueue /*extends BaseLockssManager*/ implements Serializable {
+  static final String PRIORITY_PARAM_TIMERQUEUE = "TimerQueue";
+  static final int PRIORITY_DEFAULT_TIMERQUEUE = Thread.NORM_PRIORITY + 1;
+
   protected static Logger log = Logger.getLogger("TimerQueue");
   private static TimerQueue singleton = new TimerQueue();
 
@@ -154,7 +158,7 @@ public class TimerQueue /*extends BaseLockssManager*/ implements Serializable {
   public void stop() {
     if (timerThread != null) {
       log.info("Stopping thread");
-      timerThread.stopScheduler();
+      timerThread.stopTimer();
       timerThread = null;
     }
   }
@@ -181,24 +185,22 @@ public class TimerQueue /*extends BaseLockssManager*/ implements Serializable {
 
   // Timer callbacks are currently called in this thread, so hangs are
   // possible.  However, we don't need an explicit watchdog mechanism
-  // (hence don't need to be a LockssThread) because the WatchdogService is
-  // currently implemented using the TimerQueue.  If this thread gets hung,
-  // the platform watchdog will go off.  (LockssThread's watchdog mechanism
-  // currently uses the TimerQueue, so using that mechanism here would
-  // require first determining that there are no reentrancy or recursion
-  // problems.)
+  // because the WatchdogService is currently implemented using the
+  // TimerQueue.  If this thread gets hung, the platform watchdog will go
+  // off.  (LockssThread's watchdog mechanism currently uses the
+  // TimerQueue, so using that mechanism here would require first
+  // determining that there are no reentrancy or recursion problems.)
 
-  private class TimerThread extends Thread {
+  private class TimerThread extends LockssThread {
     private boolean goOn = false;
 
     private TimerThread(String name) {
       super(name);
     }
 
-    public void run() {
-//       if (timerPriority > 0) {
-// 	Thread.currentThread().setPriority(timerPriority);
-//       }
+    public void lockssRun() {
+      triggerWDogOnExit(true);
+      setPriority(PRIORITY_PARAM_TIMERQUEUE, PRIORITY_DEFAULT_TIMERQUEUE);
       goOn = true;
 
       while (goOn) {
@@ -220,7 +222,8 @@ public class TimerQueue /*extends BaseLockssManager*/ implements Serializable {
       }
     }
 
-    private void stopScheduler() {
+    private void stopTimer() {
+      triggerWDogOnExit(false);
       goOn = false;
       this.interrupt();
     }

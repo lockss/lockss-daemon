@@ -1,5 +1,5 @@
 /*
- * $Id: LcapComm.java,v 1.44 2004-01-20 18:22:50 tlipkis Exp $
+ * $Id: LcapComm.java,v 1.45 2004-02-10 02:27:49 tlipkis Exp $
  */
 
 /*
@@ -66,6 +66,12 @@ public class LcapComm extends BaseLockssManager {
   static final String PARAM_COMPRESS_MIN = PREFIX + "compress.min";
   static final boolean DEFAULT_COMPRESS_PACKETS = false;
   static final int DEFAULT_COMPRESS_MIN = 200;
+
+  static final String WDOG_PARAM_COMM = "Comm";
+  static final long WDOG_DEFAULT_COMM = 1 * Constants.HOUR;
+
+  static final String PRIORITY_PARAM_COMM = "Comm";
+  static final int PRIORITY_DEFAULT_COMM = -1;
 
   static Logger log = Logger.getLogger("Comm");
 
@@ -460,7 +466,7 @@ public class LcapComm extends BaseLockssManager {
 
 
   // Receive thread
-  private class ReceiveThread extends Thread {
+  private class ReceiveThread extends LockssThread {
     private boolean goOn = true;
     private long sleep = Constants.MINUTE;
     private Deadline timeout = Deadline.in(sleep);
@@ -469,12 +475,11 @@ public class LcapComm extends BaseLockssManager {
       super(name);
     }
 
-    public void run() {
-      //        if (rcvPriority > 0) {
-      //  	Thread.currentThread().setPriority(rcvPriority);
-      //        }
-
+    public void lockssRun() {
+      setPriority(PRIORITY_PARAM_COMM, PRIORITY_DEFAULT_COMM);
+      startWDog(WDOG_PARAM_COMM, WDOG_DEFAULT_COMM);
       while (goOn) {
+	pokeWDog();
 	try {
 	  synchronized (timeout) {
 	    if (goOn) {
@@ -502,6 +507,7 @@ public class LcapComm extends BaseLockssManager {
 
     private void stopRcvThread() {
       synchronized (timeout) {
+	stopWDog();
 	goOn = false;
 	timeout.expire();
       }

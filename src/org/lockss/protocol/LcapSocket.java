@@ -1,5 +1,5 @@
 /*
- * $Id: LcapSocket.java,v 1.13 2004-01-20 18:22:50 tlipkis Exp $
+ * $Id: LcapSocket.java,v 1.14 2004-02-10 02:27:49 tlipkis Exp $
  */
 
 /*
@@ -35,10 +35,14 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 import org.lockss.util.*;
+import org.lockss.daemon.*;
 
 /** Send and receive unicast and multicast datagrams.
  */
 public class LcapSocket {
+  static final String PRIORITY_PARAM_SOCKET = "Socket";
+  static final int PRIORITY_DEFAULT_SOCKET = -1;
+
   Logger log;
 
   DatagramSocket sock;
@@ -103,7 +107,7 @@ public class LcapSocket {
     /** Stop the socket's receive thread */
     public void stop() {
       if (rcvThread != null) {
-	log.info("Stopping rev thread");
+	log.info("Stopping rcv thread");
 	rcvThread.stopRcvThread();
 	rcvThread = null;
       }
@@ -125,17 +129,16 @@ public class LcapSocket {
     }
 
     // Receive thread
-    private class ReceiveThread extends Thread {
+    private class ReceiveThread extends LockssThread {
       private boolean goOn = false;
 
       private ReceiveThread(String name) {
 	super(name);
       }
 
-      public void run() {
-	//        if (rcvPriority > 0) {
-	//  	Thread.currentThread().setPriority(rcvPriority);
-	//        }
+      public void lockssRun() {
+	triggerWDogOnExit(true);
+	setPriority(PRIORITY_PARAM_SOCKET, PRIORITY_DEFAULT_SOCKET);
 	goOn = true;
 
 	try {
@@ -152,6 +155,7 @@ public class LcapSocket {
       }
 
       private void stopRcvThread() {
+	triggerWDogOnExit(false);
 	goOn = false;
 	this.interrupt();
       }
@@ -179,7 +183,9 @@ public class LcapSocket {
     /* Mark the packet as unicast, add to the queue */
     void processReceivedDatagram(LockssReceivedDatagram dg) {
       dg.setMulticast(false);
-      log.debug2("Received " + dg);
+      if (log.isDebug2()) {
+	log.debug2("Received " + dg);
+      }
       rcvQ.put(dg);
     }
 
@@ -217,7 +223,9 @@ public class LcapSocket {
     /** Mark the packet as multicast, add to the queue */
     void processReceivedDatagram(LockssReceivedDatagram dg) {
       dg.setMulticast(true);
-      log.debug2("Received " + dg);
+      if (log.isDebug2()) {
+	log.debug2("Received " + dg);
+      }
       rcvQ.put(dg);
     }
 
