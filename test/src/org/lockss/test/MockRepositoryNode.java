@@ -1,5 +1,5 @@
 /*
- * $Id: MockRepositoryNode.java,v 1.7 2003-06-20 22:34:56 claire Exp $
+ * $Id: MockRepositoryNode.java,v 1.8 2004-03-11 02:31:23 eaalto Exp $
  */
 
 /*
@@ -34,8 +34,6 @@ package org.lockss.test;
 
 import java.io.*;
 import java.util.*;
-import java.net.MalformedURLException;
-import org.lockss.util.*;
 import org.lockss.daemon.CachedUrlSetSpec;
 import org.lockss.repository.*;
 
@@ -93,6 +91,10 @@ public class MockRepositoryNode implements RepositoryNode {
 
   public long getTreeContentSize(CachedUrlSetSpec filter) {
     throw new UnsupportedOperationException("Not supported.");
+  }
+
+  public int getChildCount() {
+    return children.size();
   }
 
   public Properties getState() {

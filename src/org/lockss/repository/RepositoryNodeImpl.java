@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.45 2004-03-09 23:57:50 eaalto Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.46 2004-03-11 02:31:23 eaalto Exp $
  */
 
 /*
@@ -47,10 +47,12 @@ public class RepositoryNodeImpl implements RepositoryNode {
   static final String LOCKSS_VERSION_NUMBER = "org.lockss.version.number";
   static final String INACTIVE_CONTENT_PROPERTY = "node.content.isInactive";
   static final String DELETION_PROPERTY = "node.isDeleted";
+  static final String TREE_SIZE_PROPERTY = "node.tree.size";
+  static final String CHILD_COUNT_PROPERTY = "node.child.count";
   static final String CONTENT_DIR = "#content";
   static final String CURRENT_FILENAME = "current";
   static final String PROPS_FILENAME = "props";
-  static final String NODE_PROPS_FILENAME = "node_props";
+  static final String NODE_PROPS_FILENAME = "#node_props";
   static final String TEMP_FILENAME = "temp";
   static final String INACTIVE_FILENAME = "inactive";
   static final int INACTIVE_VERSION = -99;
@@ -116,36 +118,59 @@ public class RepositoryNodeImpl implements RepositoryNode {
   }
 
   public long getTreeContentSize(CachedUrlSetSpec filter) {
-    // do direct directory traversal, rather than creating RepositoryNodes
+    ensureCurrentInfoLoaded();
+    // only cache if not filtered
+    if (filter==null) {
+      String treeSize = nodeProps.getProperty(TREE_SIZE_PROPERTY);
+      if (treeSize != null) {
+        // return if found
+        return Long.parseLong(treeSize);
+      }
+    }
+
     long totalSize = 0;
     if (hasContent()) {
       totalSize = currentCacheFile.length();
     }
 
-    // filter the immediate level
-    File[] children = nodeRootFile.listFiles();
-    for (int ii=0; ii<children.length; ii++) {
-      File child = children[ii];
-      if ((!child.isDirectory()) || (child.getName().equals(CONTENT_DIR))) {
-        continue;
-      }
-      // check if in initial spec
-      int bufMaxLength = url.length() + child.getName().length() + 1;
-      StringBuffer buffer = new StringBuffer(bufMaxLength);
-      buffer.append(url);
-      if (!url.endsWith("/")) {
-        buffer.append('/');
-      }
-      buffer.append(child.getName());
-
-      String childUrl = buffer.toString();
-      if ( (filter == null) || (filter.matches(childUrl))) {
-        totalSize += recurseDirContentSize(child);
-      }
+    // since RepositoryNodes update and cache tree size, efficient to use them
+    for (Iterator subNodes = listNodes(filter, false); subNodes.hasNext(); ) {
+      RepositoryNode subNode = (RepositoryNode)subNodes.next();
+      totalSize += subNode.getTreeContentSize(null);
     }
 
+    if (filter==null) {
+      // store value
+      nodeProps.setProperty(TREE_SIZE_PROPERTY, Long.toString(totalSize));
+      writeNodeProperties();
+    }
     return totalSize;
   }
+
+/*
+  code for direct file measuring
+      // filter the immediate level
+      File[] children = nodeRootFile.listFiles();
+      for (int ii=0; ii<children.length; ii++) {
+        File child = children[ii];
+        if ((!child.isDirectory()) || (child.getName().equals(CONTENT_DIR))) {
+          continue;
+        }
+        // check if in initial spec
+        int bufMaxLength = url.length() + child.getName().length() + 1;
+        StringBuffer buffer = new StringBuffer(bufMaxLength);
+        buffer.append(url);
+        if (!url.endsWith("/")) {
+          buffer.append('/');
+        }
+        buffer.append(child.getName());
+
+        String childUrl = buffer.toString();
+        if ( (filter == null) || (filter.matches(childUrl))) {
+          totalSize += recurseDirContentSize(child);
+        }
+      }
+
 
   private long recurseDirContentSize(File nodeDir) {
     // add size of this dir, if any
@@ -169,24 +194,17 @@ public class RepositoryNodeImpl implements RepositoryNode {
     //XXX store here?
     return subSize;
   }
+ */
 
   public boolean isLeaf() {
-    ensureCurrentInfoLoaded();
-    if (!nodeRootFile.exists()) {
-      logger.error("No cache directory located for: "+url);
-      throw new LockssRepository.RepositoryStateException("No cache directory located.");
-    }
-    File[] children = nodeRootFile.listFiles();
-    for (int ii=0; ii<children.length; ii++) {
-      File child = children[ii];
-      if (!child.isDirectory()) continue;
-      if (child.getName().equals(cacheLocationFile.getName())) continue;
-      return false;
-    }
-    return true;
+    return (getChildCount() == 0);
   }
 
   public Iterator listNodes(CachedUrlSetSpec filter, boolean includeInactive) {
+    return getNodeList(filter, includeInactive).iterator();
+  }
+
+  private List getNodeList(CachedUrlSetSpec filter, boolean includeInactive) {
     if (nodeRootFile==null) loadNodeRoot();
     if (!nodeRootFile.exists()) {
       logger.error("No cache directory located for: "+url);
@@ -222,7 +240,33 @@ public class RepositoryNodeImpl implements RepositoryNode {
         }
       }
     }
-    return childL.iterator();
+    return childL;
+  }
+
+  public int getChildCount() {
+    ensureCurrentInfoLoaded();
+    String childCount = nodeProps.getProperty(CHILD_COUNT_PROPERTY);
+    if (childCount!=null) {
+      // return if found
+      return Integer.parseInt(childCount);
+    }
+
+    int count = getNodeList(null, false).size();
+    nodeProps.setProperty(CHILD_COUNT_PROPERTY, Integer.toString(count));
+    writeNodeProperties();
+    return count;
+  }
+
+  void invalidateCachedSizes(boolean loaded) {
+    if (!loaded) {
+      ensureCurrentInfoLoaded();
+    }
+
+    nodeProps.remove(TREE_SIZE_PROPERTY);
+    nodeProps.remove(CHILD_COUNT_PROPERTY);
+    writeNodeProperties();
+
+    //XXX call invalidate on parent
   }
 
   static String constructChildUrl(String root, String child) {
@@ -293,9 +337,9 @@ public class RepositoryNodeImpl implements RepositoryNode {
       }
       currentVersion = lastVersion;
 
-      // store the deletion value
-      nodeProps.setProperty(INACTIVE_CONTENT_PROPERTY, "false");
-      nodeProps.setProperty(DELETION_PROPERTY, "false");
+      // remove any deletion values
+      nodeProps.remove(INACTIVE_CONTENT_PROPERTY);
+      nodeProps.remove(DELETION_PROPERTY);
       writeNodeProperties();
     }
 
@@ -304,6 +348,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
   }
 
   public synchronized void sealNewVersion() {
+    boolean identicalVersion = false;
     try {
       if (curOutputStream==null) {
          throw new UnsupportedOperationException("getNewOutputStream() not called.");
@@ -321,7 +366,6 @@ public class RepositoryNodeImpl implements RepositoryNode {
         throw new UnsupportedOperationException("setNewProperties() not called.");
       }
 
-      boolean identicalVersion = false;
       // check temp vs. last version, so as not to duplicate identical versions
       if (currentCacheFile.exists()) {
         // if identical, don't rename
@@ -414,6 +458,10 @@ public class RepositoryNodeImpl implements RepositoryNode {
       newPropsSet = false;
       newVersionOpen = false;
       versionTimeout.expire();
+      // blank the stored sizes for this and its parents
+      if (!identicalVersion) {
+        invalidateCachedSizes(true);
+      }
     }
   }
 
@@ -466,7 +514,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
     // store the inactive value
     nodeProps.setProperty(INACTIVE_CONTENT_PROPERTY, "true");
-    writeNodeProperties();
+    // remove caching
+    invalidateCachedSizes(true);
 
     currentVersion = INACTIVE_VERSION;
     curProps = null;
@@ -480,7 +529,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
     // store the deletion value
     nodeProps.setProperty(DELETION_PROPERTY, "true");
-    writeNodeProperties();
+    // blank caches
+    invalidateCachedSizes(true);
 
     currentVersion = DELETED_VERSION;
   }
@@ -489,8 +539,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
     ensureCurrentInfoLoaded();
 
     // store the deletion value
-    nodeProps.setProperty(DELETION_PROPERTY, "false");
-    writeNodeProperties();
+    nodeProps.remove(DELETION_PROPERTY);
+    invalidateCachedSizes(true);
 
     currentVersion = INACTIVE_VERSION;
 
@@ -518,8 +568,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
         }
         currentVersion = lastVersion;
 
-        // store the deletion value
-        nodeProps.setProperty(INACTIVE_CONTENT_PROPERTY, "false");
+        // remove the inactivation value
+        nodeProps.remove(INACTIVE_CONTENT_PROPERTY);
         writeNodeProperties();
       }
       return;
@@ -545,6 +595,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
     currentVersion--;
     curProps = null;
+    invalidateCachedSizes(true);
   }
 
   public synchronized RepositoryNode.RepositoryNodeContents getNodeContents() {
@@ -769,11 +820,11 @@ public class RepositoryNodeImpl implements RepositoryNode {
   }
 
   private void loadNodePropsFile() {
-    StringBuffer buffer = getContentDirBuffer();
+    StringBuffer buffer = new StringBuffer(nodeLocation);
+    buffer.append(File.separator);
     buffer.append(NODE_PROPS_FILENAME);
     nodePropsFile = new File(buffer.toString());
   }
-
 
   private void loadCacheLocation() {
     cacheLocationFile = new File(getContentDirBuffer().toString());

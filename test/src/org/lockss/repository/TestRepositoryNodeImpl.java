@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.32 2004-01-31 02:54:25 eaalto Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.33 2004-03-11 02:31:23 eaalto Exp $
  */
 
 /*
@@ -88,9 +88,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertTrue(testFile.exists());
     testFile = new File(tempDirPath + "/#content/current.props");
     assertTrue(testFile.exists());
-    testFile = new File(tempDirPath + "/#content/node_props");
-    assertFalse(testFile.exists());
-    leaf.deactivateContent();
+    testFile = new File(tempDirPath + "/#node_props");
     assertTrue(testFile.exists());
   }
 
@@ -133,19 +131,16 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     File curPropsFile = new File(tempDirPath + "/#content/current.props");
     File inactFile = new File(tempDirPath + "/#content/inactive");
     File inactPropsFile = new File(tempDirPath + "/#content/inactive.props");
-    File nodePropsFile = new File(tempDirPath + "/#content/node_props");
     assertTrue(curFile.exists());
     assertTrue(curPropsFile.exists());
     assertFalse(inactFile.exists());
     assertFalse(inactPropsFile.exists());
-    assertFalse(nodePropsFile.exists());
 
     leaf.deactivateContent();
     assertFalse(curFile.exists());
     assertFalse(curPropsFile.exists());
     assertTrue(inactFile.exists());
     assertTrue(inactPropsFile.exists());
-    assertTrue(nodePropsFile.exists());
 
     //reactivate
     leaf.restoreLastVersion();
@@ -153,14 +148,12 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertTrue(curPropsFile.exists());
     assertFalse(inactFile.exists());
     assertFalse(inactPropsFile.exists());
-    assertTrue(nodePropsFile.exists());
 
     leaf.deactivateContent();
     assertFalse(curFile.exists());
     assertFalse(curPropsFile.exists());
     assertTrue(inactFile.exists());
     assertTrue(inactPropsFile.exists());
-    assertTrue(nodePropsFile.exists());
 
     // make new version
     leaf.makeNewVersion();
@@ -175,7 +168,6 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertTrue(curPropsFile.exists());
     assertFalse(inactFile.exists());
     assertFalse(inactPropsFile.exists());
-    assertTrue(nodePropsFile.exists());
   }
 
   public void testDeleteFileLocation() throws Exception {
@@ -190,19 +182,16 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     File curPropsFile = new File(tempDirPath + "/#content/current.props");
     File inactFile = new File(tempDirPath + "/#content/inactive");
     File inactPropsFile = new File(tempDirPath + "/#content/inactive.props");
-    File nodePropsFile = new File(tempDirPath + "/#content/node_props");
     assertTrue(curFile.exists());
     assertTrue(curPropsFile.exists());
     assertFalse(inactFile.exists());
     assertFalse(inactPropsFile.exists());
-    assertFalse(nodePropsFile.exists());
 
     leaf.markAsDeleted();
     assertFalse(curFile.exists());
     assertFalse(curPropsFile.exists());
     assertTrue(inactFile.exists());
     assertTrue(inactPropsFile.exists());
-    assertTrue(nodePropsFile.exists());
 
     //reactivate
     leaf.restoreLastVersion();
@@ -210,14 +199,12 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertTrue(curPropsFile.exists());
     assertFalse(inactFile.exists());
     assertFalse(inactPropsFile.exists());
-    assertTrue(nodePropsFile.exists());
 
     leaf.markAsDeleted();
     assertFalse(curFile.exists());
     assertFalse(curPropsFile.exists());
     assertTrue(inactFile.exists());
     assertTrue(inactPropsFile.exists());
-    assertTrue(nodePropsFile.exists());
 
     // make new version
     leaf.makeNewVersion();
@@ -232,7 +219,6 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertTrue(curPropsFile.exists());
     assertFalse(inactFile.exists());
     assertFalse(inactPropsFile.exists());
-    assertTrue(nodePropsFile.exists());
   }
 
   public void testListEntries() throws Exception {
@@ -570,7 +556,37 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertEquals(12, leaf.getTreeContentSize(null));
     assertEquals(6, leaf.getTreeContentSize(new RangeCachedUrlSetSpec(
         "http://www.example.com/testDir/test3", "/branch1", "/branch1")));
+  }
 
+  public void testTreeSizeCaching() throws Exception {
+    createLeaf("http://www.example.com/testDir", "test", null);
+
+    RepositoryNodeImpl leaf =
+        (RepositoryNodeImpl)repo.getNode("http://www.example.com/testDir");
+    assertNull(leaf.nodeProps.getProperty(leaf.TREE_SIZE_PROPERTY));
+    assertEquals(4, leaf.getTreeContentSize(null));
+    assertEquals("4", leaf.nodeProps.getProperty(leaf.TREE_SIZE_PROPERTY));
+    leaf.markAsDeleted();
+    assertNull(leaf.nodeProps.getProperty(leaf.TREE_SIZE_PROPERTY));
+    assertEquals(0, leaf.getTreeContentSize(null));
+    assertEquals("0", leaf.nodeProps.getProperty(leaf.TREE_SIZE_PROPERTY));
+  }
+
+  public void testChildCount() throws Exception {
+    createLeaf("http://www.example.com/testDir", "test", null);
+
+    RepositoryNodeImpl leaf =
+        (RepositoryNodeImpl)repo.getNode("http://www.example.com/testDir");
+    assertNull(leaf.nodeProps.getProperty(leaf.CHILD_COUNT_PROPERTY));
+    assertEquals(0, leaf.getChildCount());
+    assertEquals("0", leaf.nodeProps.getProperty(leaf.CHILD_COUNT_PROPERTY));
+    //XXX blank child count (until parent's invalidated properly)
+    leaf.markAsDeleted();
+
+    createLeaf("http://www.example.com/testDir/test1", "test1", null);
+    createLeaf("http://www.example.com/testDir/test2", "test2", null);
+    assertEquals(2, leaf.getChildCount());
+    assertEquals("2", leaf.nodeProps.getProperty(leaf.CHILD_COUNT_PROPERTY));
   }
 
   public void testDeactivate() throws Exception {
@@ -617,7 +633,8 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertFalse(leaf.isInactive());
     assertFalse(leaf.isDeleted());
     assertEquals(1, leaf.getCurrentVersion());
-    assertEquals("false", leaf.nodeProps.getProperty(leaf.DELETION_PROPERTY));
+    // make to null, not 'false'
+    assertNull(leaf.nodeProps.getProperty(leaf.DELETION_PROPERTY));
     String resultStr = getLeafContent(leaf);
     assertEquals("test stream", resultStr);
   }
@@ -657,7 +674,8 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     leaf.restoreLastVersion();
     assertFalse(leaf.isInactive());
     assertEquals(1, leaf.getCurrentVersion());
-    assertEquals("false", leaf.nodeProps.getProperty(leaf.INACTIVE_CONTENT_PROPERTY));
+    // back to null, not 'false'
+    assertNull(leaf.nodeProps.getProperty(leaf.INACTIVE_CONTENT_PROPERTY));
     String resultStr = getLeafContent(leaf);
     assertEquals("test stream", resultStr);
   }
@@ -679,6 +697,18 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertEquals(2, leaf.getCurrentVersion());
     String resultStr = getLeafContent(leaf);
     assertEquals("test stream 2", resultStr);
+  }
+
+
+  public void testIsLeaf() throws Exception {
+    createLeaf("http://www.example.com/testDir/test1", "test stream", null);
+    createLeaf("http://www.example.com/testDir/branch1", "test stream", null);
+    createLeaf("http://www.example.com/testDir/branch1/test4", "test stream", null);
+
+    RepositoryNode leaf = repo.getNode("http://www.example.com/testDir/test1");
+    assertTrue(leaf.isLeaf());
+    leaf = repo.getNode("http://www.example.com/testDir/branch1");
+    assertFalse(leaf.isLeaf());
   }
 
   public void testListInactiveNodes() throws Exception {

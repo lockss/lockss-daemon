@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNode.java,v 1.14 2004-03-09 23:57:50 eaalto Exp $
+ * $Id: RepositoryNode.java,v 1.15 2004-03-11 02:31:24 eaalto Exp $
  */
 
 /*
@@ -88,6 +88,12 @@ public interface RepositoryNode {
    * @return true if no children
    */
   public boolean isLeaf();
+
+  /**
+   * Returns the number of children at this node.
+   * @return the child count
+   */
+  public int getChildCount();
 
   /**
    * Returns the immediate children of the entry, possibly filtered (null
