@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigDump.java,v 1.6 2005-01-21 23:08:22 tlipkis Exp $
+ * $Id: ConfigDump.java,v 1.7 2005-01-27 00:11:48 smorabito Exp $
  */
 
 /*
@@ -51,6 +51,7 @@ public class ConfigDump {
     List configUrls = new ArrayList();
     String groupName = null;
     String outputFile = null;
+    String hostName = null;
     boolean includeTitles = false;
     boolean xmlHack = false;
 
@@ -64,6 +65,8 @@ public class ConfigDump {
 	  excludeBelow.remove(PREFIX_TITLE_DB);
 	} else if (arg.startsWith("-g")) {
 	  groupName = argv[++ix];
+	} else if (arg.startsWith("-h")) {
+	  hostName = argv[++ix];
 	} else if (arg.startsWith("-k")) {
 	  xmlHack = true;
 	} else if (arg.startsWith("-x")) {
@@ -96,8 +99,13 @@ public class ConfigDump {
       FileOutputStream fos = new FileOutputStream(outputFile);
       pout = new PrintStream(fos);
     }
-    MockLockssDaemon daemon = new MockLockssDaemon();
 
+    if (hostName != null) {
+      String localConfig = createLocalConfig(hostName);
+      configUrls.add(localConfig);
+    }
+
+    MockLockssDaemon daemon = new MockLockssDaemon();
     ConfigManager mgr = ConfigManager.makeConfigManager();
     Configuration config = mgr.readConfig(configUrls, groupName);
     SortedSet keys = new TreeSet(config.keySet());
@@ -118,9 +126,26 @@ public class ConfigDump {
     return false;
   }
 
+  static String createLocalConfig(String hostName) {
+    String result = null;
+    try {
+      File localTxt = new File(FileTestUtil.createTempDir("configdump", null),
+			       "local.txt");
+      FileWriter out = new FileWriter(localTxt);
+      out.write(ConfigManager.PARAM_PLATFORM_FQDN + "=" + hostName);
+      out.flush();
+      out.close();
+      result = localTxt.getAbsolutePath();
+    } catch (IOException ex) {
+      System.err.println("Unable to create local.txt temp file: " + ex);
+    }
+    return result;
+  }
+
   static void usage() {
     System.err.println("Usage: ConfigDump [-t] [-k] [-x excludebelow ] [-o outfile] <urls-or-files ...>");
     System.err.println("         -g <group>   set daemon group name");
+    System.err.println("         -h <nost>    set host name");
     System.err.println("         -x prefix    exclude subtree below prefix");
     System.err.println("         -t           include title db entries");
     System.err.println("         -k           enable .txt -> .xml kludge");
