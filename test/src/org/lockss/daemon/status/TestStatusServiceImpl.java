@@ -1,5 +1,5 @@
 /*
- * $Id: TestStatusServiceImpl.java,v 1.13 2003-06-20 22:34:53 claire Exp $
+ * $Id: TestStatusServiceImpl.java,v 1.14 2003-08-09 20:37:22 tlipkis Exp $
  */
 
 /*
@@ -176,8 +176,9 @@ public class TestStatusServiceImpl extends LockssTestCase {
 
   public void testGetTableHasName()
       throws StatusService.NoSuchTableException {
-    MockStatusAccessor statusAccessor = generateStatusAccessor(colArray1, 
-							       rowArray1);
+    MockStatusAccessor statusAccessor =
+      MockStatusAccessor.generateStatusAccessor(colArray1, 
+						rowArray1);
     statusAccessor.setDefaultSortRules(sortRules1, null);
     statusService.registerStatusAccessor("table1", statusAccessor);
 
@@ -190,7 +191,7 @@ public class TestStatusServiceImpl extends LockssTestCase {
       throws StatusService.NoSuchTableException {
     String key = "theKey";
     MockStatusAccessor statusAccessor = 
-      generateStatusAccessor(colArray1, rowArray1, key);
+      MockStatusAccessor.generateStatusAccessor(colArray1, rowArray1, key);
     statusAccessor.setDefaultSortRules(sortRules1, key);
     statusService.registerStatusAccessor("table1", statusAccessor);
     StatusTable table = statusService.getTable("table1", key);
@@ -202,7 +203,7 @@ public class TestStatusServiceImpl extends LockssTestCase {
     String key = "theKey";
     String tableTitle = "Table title";
     MockStatusAccessor statusAccessor = 
-      generateStatusAccessor(colArray1, rowArray1, key);
+      MockStatusAccessor.generateStatusAccessor(colArray1, rowArray1, key);
     statusAccessor.setDefaultSortRules(sortRules1, key);
     statusAccessor.setTitle(tableTitle, key);
     statusService.registerStatusAccessor("table1", statusAccessor);
@@ -220,13 +221,15 @@ public class TestStatusServiceImpl extends LockssTestCase {
       throws StatusService.NoSuchTableException {
     String key = "theKey";
     MockStatusAccessor statusAccessor = 
-      generateStatusAccessor(colArray1, rowArray1, key, summaryInfo);
+      MockStatusAccessor.generateStatusAccessor(colArray1, rowArray1,
+						key, summaryInfo);
 
     statusAccessor.setDefaultSortRules(sortRules1, key);
     statusService.registerStatusAccessor("table1", statusAccessor); 
 
     StatusTable table = statusService.getTable("table1", key);
-    List expectedSummaryInfo = makeSummaryInfoFromArray(summaryInfo);
+    List expectedSummaryInfo =
+      MockStatusAccessor.makeSummaryInfoFrom(summaryInfo);
     assertNotNull(table.getSummaryInfo());
     assertSummaryInfoEqual(expectedSummaryInfo, table.getSummaryInfo());
   }
@@ -247,34 +250,24 @@ public class TestStatusServiceImpl extends LockssTestCase {
     assertFalse(actualIt.hasNext());
   }
   
-  private List makeSummaryInfoFromArray(Object[][] summaryInfoArray) {
-    List list = new ArrayList(summaryInfoArray.length);
-    for (int ix = 0; ix < summaryInfoArray.length; ix++) {
-      StatusTable.SummaryInfo summaryInfo = 
-	new StatusTable.SummaryInfo((String)summaryInfoArray[ix][0], 
-			       ((Integer)summaryInfoArray[ix][1]).intValue(),
-			       summaryInfoArray[ix][2]);
-      list.add(summaryInfo);
-    }
-    return list;
-  }
-
   public void testGetTableWithKey() 
       throws StatusService.NoSuchTableException {
     String key = "key1";
-    MockStatusAccessor statusAccessor = generateStatusAccessor(colArray1,
-							       rowArray1, key);
+    MockStatusAccessor statusAccessor =
+      MockStatusAccessor.generateStatusAccessor(colArray1, rowArray1, key);
     statusAccessor.setDefaultSortRules(sortRules1, key);
 
     statusService.registerStatusAccessor("table1", statusAccessor);
     
     StatusTable table = statusService.getTable("table1", key);
 
-    List expectedColumns = makeColumnDescriptorsFromArray(colArray1);
+    List expectedColumns =
+      MockStatusAccessor.makeColumnDescriptorsFrom(colArray1);
     assertColumnDescriptorsEqual(expectedColumns, 
 				 table.getColumnDescriptors());
 
-    List expectedRows = makeRowsFromArray(expectedColumns, rowArray1);
+    List expectedRows =
+      MockStatusAccessor.makeRowsFrom(expectedColumns, rowArray1);
     assertRowsEqual(expectedRows, table.getSortedRows());
   }
 
@@ -284,10 +277,11 @@ public class TestStatusServiceImpl extends LockssTestCase {
     String key1 = "key1";
     String key2 = "key2";
     MockStatusAccessor statusAccessor = 
-      generateStatusAccessor(colArray1, rowArray1, key1);
+      MockStatusAccessor.generateStatusAccessor(colArray1, rowArray1, key1);
     statusAccessor.setDefaultSortRules(sortRules1, key1);
 
-    addToStatusAccessor(statusAccessor, colArray2, rowArray2, key2);
+    MockStatusAccessor.addToStatusAccessor(statusAccessor, colArray2,
+					   rowArray2, key2);
     statusAccessor.setDefaultSortRules(sortRules2, key2);
 
     statusService.registerStatusAccessor("table1", statusAccessor);
@@ -295,21 +289,23 @@ public class TestStatusServiceImpl extends LockssTestCase {
     StatusTable table = statusService.getTable("table1", key1);
     assertNotNull(table);
 
-    List expectedColumns = makeColumnDescriptorsFromArray(colArray1);
+    List expectedColumns =
+      MockStatusAccessor.makeColumnDescriptorsFrom(colArray1);
     assertColumnDescriptorsEqual(expectedColumns, 
 				 table.getColumnDescriptors());
 
-    List expectedRows = makeRowsFromArray(expectedColumns, rowArray1);
+    List expectedRows =
+      MockStatusAccessor.makeRowsFrom(expectedColumns, rowArray1);
     assertRowsEqual(expectedRows, table.getSortedRows());
 
     table = statusService.getTable("table1", key2);
     assertNotNull(table);
 
-    expectedColumns = makeColumnDescriptorsFromArray(colArray2);
+    expectedColumns = MockStatusAccessor.makeColumnDescriptorsFrom(colArray2);
     assertColumnDescriptorsEqual(expectedColumns, 
 				 table.getColumnDescriptors());
 
-    expectedRows = makeRowsFromArray(expectedColumns, rowArray2);
+    expectedRows = MockStatusAccessor.makeRowsFrom(expectedColumns, rowArray2);
     assertRowsEqual(expectedRows, table.getSortedRows());
   }
   
@@ -323,15 +319,15 @@ public class TestStatusServiceImpl extends LockssTestCase {
     expectedRowsArray[1] = rowArray3[0];
     expectedRowsArray[2] = rowArray3[2];
     
-    MockStatusAccessor statusAccessor = generateStatusAccessor(colArray3, 
-							       rowArray3);
+    MockStatusAccessor statusAccessor =
+      MockStatusAccessor.generateStatusAccessor(colArray3, rowArray3);
     statusAccessor.setDefaultSortRules(sortRules, null);
 
     statusService.registerStatusAccessor("table1", statusAccessor);
     StatusTable table = statusService.getTable("table1", null);
     List expectedRows = 
-      makeRowsFromArray(makeColumnDescriptorsFromArray(colArray3),
-			expectedRowsArray);
+      MockStatusAccessor.makeRowsFrom(MockStatusAccessor.makeColumnDescriptorsFrom(colArray3),
+				      expectedRowsArray);
     List actualRows = table.getSortedRows();
     assertRowsEqual(expectedRows, actualRows);
   }
@@ -346,15 +342,15 @@ public class TestStatusServiceImpl extends LockssTestCase {
     expectedRowsArray[1] = rowArray3[0];
     expectedRowsArray[2] = rowArray3[1];
 
-    MockStatusAccessor statusAccessor = generateStatusAccessor(colArray3, 
-							       rowArray3);
+    MockStatusAccessor statusAccessor =
+      MockStatusAccessor.generateStatusAccessor(colArray3, rowArray3);
     statusAccessor.setDefaultSortRules(sortRules, null);
 
     statusService.registerStatusAccessor("table1", statusAccessor);
     StatusTable table = statusService.getTable("table1", null);
     List expectedRows = 
-      makeRowsFromArray(makeColumnDescriptorsFromArray(colArray3), 
-			expectedRowsArray);
+      MockStatusAccessor.makeRowsFrom(MockStatusAccessor.makeColumnDescriptorsFrom(colArray3), 
+				      expectedRowsArray);
     List actualRows = table.getSortedRows(sortRules);
     assertRowsEqual(expectedRows, actualRows);
   }
@@ -370,14 +366,14 @@ public class TestStatusServiceImpl extends LockssTestCase {
     expectedRowsArray[2] = rowArray3[1];
 
     MockStatusAccessor statusAccessor = 
-      generateStatusAccessor(colArray3, rowArray3);
+      MockStatusAccessor.generateStatusAccessor(colArray3, rowArray3);
     statusAccessor.setDefaultSortRules(sortRules, null);
 
     statusService.registerStatusAccessor("table1", statusAccessor);
     StatusTable table = statusService.getTable("table1", null);
     List expectedRows = 
-      makeRowsFromArray(makeColumnDescriptorsFromArray(colArray3), 
-			expectedRowsArray);
+      MockStatusAccessor.makeRowsFrom(MockStatusAccessor.makeColumnDescriptorsFrom(colArray3), 
+				      expectedRowsArray);
     List actualRows = table.getSortedRows(sortRules);
     assertRowsEqual(expectedRows, actualRows);
   }
@@ -396,14 +392,14 @@ public class TestStatusServiceImpl extends LockssTestCase {
     expectedRowsArray[3] = rowArray4[2];
     expectedRowsArray[4] = rowArray4[0];
     
-    MockStatusAccessor statusAccessor = generateStatusAccessor(colArray4, 
-							       rowArray4);
+    MockStatusAccessor statusAccessor =
+      MockStatusAccessor.generateStatusAccessor(colArray4, rowArray4);
     statusAccessor.setDefaultSortRules(sortRules, null);
     statusService.registerStatusAccessor("table1", statusAccessor);
     StatusTable table = statusService.getTable("table1", null);
     List expectedRows = 
-      makeRowsFromArray(makeColumnDescriptorsFromArray(colArray4),
-			expectedRowsArray);
+      MockStatusAccessor.makeRowsFrom(MockStatusAccessor.makeColumnDescriptorsFrom(colArray4),
+				      expectedRowsArray);
     List actualRows = table.getSortedRows();
     assertRowsEqual(expectedRows, actualRows);
   }
@@ -417,15 +413,15 @@ public class TestStatusServiceImpl extends LockssTestCase {
     expectedRowsArray[1] = rowArray3[0];
     expectedRowsArray[2] = rowArray3[1];
 
-    MockStatusAccessor statusAccessor = generateStatusAccessor(colArray3, 
-							       rowArray3);
+    MockStatusAccessor statusAccessor =
+      MockStatusAccessor.generateStatusAccessor(colArray3, rowArray3);
     statusAccessor.setDefaultSortRules(sortRules1, null);
 
     statusService.registerStatusAccessor("table1", statusAccessor);
     StatusTable table = statusService.getTable("table1", null);
     List expectedRows = 
-      makeRowsFromArray(makeColumnDescriptorsFromArray(colArray3), 
-			expectedRowsArray);
+      MockStatusAccessor.makeRowsFrom(MockStatusAccessor.makeColumnDescriptorsFrom(colArray3), 
+				      expectedRowsArray);
     List actualRows = table.getSortedRows(sortRules);
     assertRowsEqual(expectedRows, actualRows);
   }
@@ -437,13 +433,13 @@ public class TestStatusServiceImpl extends LockssTestCase {
     expectedRowsArray[1] = rowArray3[0];
     expectedRowsArray[2] = rowArray3[2];
 
-    MockStatusAccessor statusAccessor = generateStatusAccessor(colArray3, 
-							       rowArray3);
+    MockStatusAccessor statusAccessor =
+      MockStatusAccessor.generateStatusAccessor(colArray3, rowArray3);
     statusService.registerStatusAccessor("table1", statusAccessor);
     StatusTable table = statusService.getTable("table1", null);
     List expectedRows = 
-      makeRowsFromArray(makeColumnDescriptorsFromArray(colArray3), 
-			expectedRowsArray);
+      MockStatusAccessor.makeRowsFrom(MockStatusAccessor.makeColumnDescriptorsFrom(colArray3), 
+				      expectedRowsArray);
     List actualRows = table.getSortedRows();
     assertRowsEqual(expectedRows, actualRows);
   }
@@ -479,11 +475,11 @@ public class TestStatusServiceImpl extends LockssTestCase {
 
     assertNotNull(table);
     List expectedCols = 
-      makeColumnDescriptorsFromArray(allTablesExpectedColArray);
+      MockStatusAccessor.makeColumnDescriptorsFrom(allTablesExpectedColArray);
     assertColumnDescriptorsEqual(expectedCols, 
 				 table.getColumnDescriptors());
 
-    List expectedRows = makeRowsFromArray(expectedCols,
+    List expectedRows = MockStatusAccessor.makeRowsFrom(expectedCols,
 					  allTablesExpectedRowArray);
     assertRowsEqual(expectedRows, table.getSortedRows());
   }
@@ -515,11 +511,11 @@ public class TestStatusServiceImpl extends LockssTestCase {
 
     assertNotNull(table);
     List expectedCols = 
-      makeColumnDescriptorsFromArray(allTablesExpectedColArray);
+      MockStatusAccessor.makeColumnDescriptorsFrom(allTablesExpectedColArray);
     assertColumnDescriptorsEqual(expectedCols, 
 				 table.getColumnDescriptors());
 
-    List expectedRows = makeRowsFromArray(expectedCols,
+    List expectedRows = MockStatusAccessor.makeRowsFrom(expectedCols,
 					  allTablesExpectedRowArray);
     assertRowsEqual(expectedRows, table.getSortedRows());
   }
@@ -536,14 +532,16 @@ public class TestStatusServiceImpl extends LockssTestCase {
       throws StatusService.NoSuchTableException {
     String key = "key1";
     MockStatusAccessor statusAccessor = 
-      generateStatusAccessor(colArray1, rowArrayWithNulls, key);
+      MockStatusAccessor.generateStatusAccessor(colArray1, rowArrayWithNulls,
+						key);
     statusAccessor.setDefaultSortRules(sortRules1, key);
 
     statusService.registerStatusAccessor("table1", statusAccessor);
     
     StatusTable table = statusService.getTable("table1", key);
 
-    List expectedColumns = makeColumnDescriptorsFromArray(colArray1);
+    List expectedColumns =
+      MockStatusAccessor.makeColumnDescriptorsFrom(colArray1);
     assertColumnDescriptorsEqual(expectedColumns, 
 				 table.getColumnDescriptors());
 
@@ -553,7 +551,8 @@ public class TestStatusServiceImpl extends LockssTestCase {
     expectedRowsArray[2] = rowArrayWithNulls[1];
     expectedRowsArray[3] = rowArrayWithNulls[3];
 
-    List expectedRows = makeRowsFromArray(expectedColumns, expectedRowsArray);
+    List expectedRows =
+      MockStatusAccessor.makeRowsFrom(expectedColumns, expectedRowsArray);
     assertRowsEqual(expectedRows, table.getSortedRows());
   }
 
@@ -572,7 +571,8 @@ public class TestStatusServiceImpl extends LockssTestCase {
     };    
     String key = "key1";
     MockStatusAccessor statusAccessor = 
-      generateStatusAccessor(inetAddrColArray, inetAddrRowArray, key);
+      MockStatusAccessor.generateStatusAccessor(inetAddrColArray,
+						inetAddrRowArray, key);
     List rules = ListUtil.list(new StatusTable.SortRule("address", true));
     statusAccessor.setDefaultSortRules(rules, key);
 
@@ -580,7 +580,8 @@ public class TestStatusServiceImpl extends LockssTestCase {
     
     StatusTable table = statusService.getTable("table1", key);
 
-    List expectedColumns = makeColumnDescriptorsFromArray(inetAddrColArray);
+    List expectedColumns =
+      MockStatusAccessor.makeColumnDescriptorsFrom(inetAddrColArray);
 
     Object[][] expectedRowsArray = new Object[4][];
     expectedRowsArray[0] = inetAddrRowArray[1];
@@ -588,124 +589,9 @@ public class TestStatusServiceImpl extends LockssTestCase {
     expectedRowsArray[2] = inetAddrRowArray[3];
     expectedRowsArray[3] = inetAddrRowArray[2];
 
-    List expectedRows = makeRowsFromArray(expectedColumns, expectedRowsArray);
+    List expectedRows =
+      MockStatusAccessor.makeRowsFrom(expectedColumns, expectedRowsArray);
     assertRowsEqual(expectedRows, table.getSortedRows());
-  }
-
-
-
-  /**
-   * I don't normally like to write tests for test code, but this is a pretty 
-   * simple one that can help shake out potential testing problems
-   */
-  public void testMakeColumnDescriptorsFromArray() {
-    List expectedColumns = 
-      ListUtil.list(new ColumnDescriptor("blah", "Blah", 0),
-		    new ColumnDescriptor("blah2", "Blah2", 0));
-
-    Object[][] cols = {
-      {"blah", "Blah", new Integer(0)},
-      {"blah2", "Blah2", new Integer(0)}
-    };
-    List actualColumns = makeColumnDescriptorsFromArray(cols);
-    assertColumnDescriptorsEqual(expectedColumns, actualColumns);
-  }
-
-  //see comment for testMakeColumnDescriptorsFromArray
-  public void testMakeRowsFromArray() {
-    Object[][] cols = {
-      {"col1", "Column the first", new Integer(0)},
-      {"col2", "Column the second", new Integer(0)}
-    };
-    List columns = makeColumnDescriptorsFromArray(cols);
-
-    HashMap row1 = new HashMap();
-    row1.put("col1", "val1");
-    row1.put("col2", "val2");
-
-    HashMap row2 = new HashMap();
-    row2.put("col1", "val21");
-    row2.put("col2", "val22");
-
-    HashMap row3 = new HashMap();
-    row3.put("col1", "val31");
-    row3.put("col2", "val32");
-    List expectedRows = ListUtil.list(row1, row2, row3);
-
-    Object[][] rows = {
-      {"val1", "val2"},
-      {"val21", "val22"},
-      {"val31", "val32"}
-    };
-    List actualRows = makeRowsFromArray(columns, rows);
-    assertRowsEqual(expectedRows, actualRows);
-  }
-
-  private List makeColumnDescriptorsFromArray(Object[][] cols) {
-    List list = new ArrayList(cols.length);
-    for (int ix = 0; ix < cols.length; ix++) {
-      String footNote = null;
-      if (cols[ix].length == 4) {
- 	footNote = (String) cols[ix][3];
-      }
-      ColumnDescriptor col = 
-	new ColumnDescriptor((String)cols[ix][0], (String)cols[ix][1],
-			     ((Integer)cols[ix][2]).intValue(), footNote);
-      list.add(col);
-    }
-    return list;
-  }
-
-  private List makeRowsFromArray(List cols, Object[][] rows) {
-    List rowList = new ArrayList();
-    for (int ix=0; ix<rows.length; ix++) {
-      Map row = new HashMap();
-      for (int jy=0; jy<rows[ix].length; jy++) {
-	String colName = 
-	  ((ColumnDescriptor)cols.get(jy)).getColumnName();
-	if (rows[ix][jy] != null) {
-	  row.put(colName, rows[ix][jy]);
-	}
-      }
-      rowList.add(row);
-    }
-    return rowList;
-  }
-
-  private void addToStatusAccessor(MockStatusAccessor statusAccessor,
-				   Object[][]colArray, 
-				   Object[][]rowArray, String key) {
-    List columns = makeColumnDescriptorsFromArray(colArray);
-    List rows = makeRowsFromArray(columns, rowArray);
-    statusAccessor.setColumnDescriptors(columns, key);
-    statusAccessor.setRows(rows, key);
-  }
-
-  private MockStatusAccessor generateStatusAccessor(Object[][]colArray, 
-						    Object[][]rowArray) {
-    return generateStatusAccessor(colArray, rowArray, null);
-  }
-  private MockStatusAccessor generateStatusAccessor(Object[][]colArray, 
-						    Object[][]rowArray,
-						    String key) {
-    MockStatusAccessor statusAccessor = new MockStatusAccessor();
-    List columns = makeColumnDescriptorsFromArray(colArray);
-    List rows = makeRowsFromArray(columns, rowArray);
-
-    statusAccessor.setColumnDescriptors(columns, key);
-    statusAccessor.setRows(rows, key);
-
-    return statusAccessor;
-  }
-
-  private MockStatusAccessor generateStatusAccessor(Object[][]colArray, 
-						    Object[][]rowArray,
-						    String key,
-						    Object[][]summaryInfos) {
-    MockStatusAccessor statusAccessor = 
-      generateStatusAccessor(colArray, rowArray, key);
-    statusAccessor.setSummaryInfo(key, makeSummaryInfoFromArray(summaryInfos));
-    return statusAccessor;
   }
 
   private void assertRowsEqual(List expected, List actual) {

@@ -1,5 +1,5 @@
 /*
- * $Id: MockStatusAccessor.java,v 1.11 2003-06-20 22:34:56 claire Exp $
+ * $Id: MockStatusAccessor.java,v 1.12 2003-08-09 20:37:21 tlipkis Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.test;
 
 import java.util.*;
+import org.lockss.util.*;
 import org.lockss.daemon.status.*;
 
 public class MockStatusAccessor implements StatusAccessor {
@@ -80,5 +81,95 @@ public class MockStatusAccessor implements StatusAccessor {
     table.setDefaultSortRules((List)defaultSortRules.get(key));
     table.setRows((List)rows.get(key));
     table.setSummaryInfo((List)summaryInfo.get(key));
+  }
+
+  // utilities for building rows & columns and MockStatusAccessors
+
+  public static List makeSummaryInfoFrom(Object[][] summaryInfoArray) {
+    List list = new ArrayList(summaryInfoArray.length);
+    for (int ix = 0; ix < summaryInfoArray.length; ix++) {
+      StatusTable.SummaryInfo summaryInfo = 
+	new StatusTable.SummaryInfo((String)summaryInfoArray[ix][0], 
+			       ((Integer)summaryInfoArray[ix][1]).intValue(),
+			       summaryInfoArray[ix][2]);
+      list.add(summaryInfo);
+    }
+    return list;
+  }
+
+  public static MockStatusAccessor generateStatusAccessor(Object[][]colArray, 
+							  Object[][]rowArray) {
+    return generateStatusAccessor(colArray, rowArray, null);
+  }
+
+  public static MockStatusAccessor generateStatusAccessor(Object[][]colArray, 
+							  Object[][]rowArray,
+							  String key) {
+    MockStatusAccessor statusAccessor = new MockStatusAccessor();
+    List columns = MockStatusAccessor.makeColumnDescriptorsFrom(colArray);
+    List rows = MockStatusAccessor.makeRowsFrom(columns, rowArray);
+
+    statusAccessor.setColumnDescriptors(columns, key);
+    statusAccessor.setRows(rows, key);
+
+    return statusAccessor;
+  }
+
+  public static MockStatusAccessor generateStatusAccessor(Object[][]colArray, 
+							  Object[][]rowArray,
+							  String key,
+							  Object[][]summaryInfos) {
+    MockStatusAccessor statusAccessor = 
+      generateStatusAccessor(colArray, rowArray, key);
+    statusAccessor.
+      setSummaryInfo(key,
+		     MockStatusAccessor.makeSummaryInfoFrom(summaryInfos));
+    return statusAccessor;
+  }
+
+  public static void addToStatusAccessor(MockStatusAccessor statusAccessor,
+					 Object[][]colArray, 
+					 Object[][]rowArray, String key) {
+    List columns = MockStatusAccessor.makeColumnDescriptorsFrom(colArray);
+    List rows = MockStatusAccessor.makeRowsFrom(columns, rowArray);
+    statusAccessor.setColumnDescriptors(columns, key);
+    statusAccessor.setRows(rows, key);
+  }
+
+  public static List makeColumnDescriptorsFrom(Object[][] cols) {
+    List list = new ArrayList(cols.length);
+    for (int ix = 0; ix < cols.length; ix++) {
+      String footNote = null;
+      if (cols[ix].length == 4) {
+ 	footNote = (String) cols[ix][3];
+      }
+      ColumnDescriptor col = 
+	new ColumnDescriptor((String)cols[ix][0], (String)cols[ix][1],
+			     ((Integer)cols[ix][2]).intValue(), footNote);
+      list.add(col);
+    }
+    return list;
+  }
+
+  public static List makeRowsFrom(List cols, Object[][] rows) {
+    List rowList = new ArrayList();
+    for (int ix=0; ix<rows.length; ix++) {
+      Map row = new HashMap();
+      for (int jy=0; jy<rows[ix].length; jy++) {
+	Object colEnt = cols.get(jy);
+	Object colName;
+	if (colEnt instanceof ColumnDescriptor) {
+	  colName = ((ColumnDescriptor)colEnt).getColumnName();
+	} else {
+	  colName = colEnt;
+	}
+	row.put(colName, rows[ix][jy]);
+
+// 	if (rows[ix][jy] != null) {
+// 	}
+      }
+      rowList.add(row);
+    }
+    return rowList;
   }
 }
