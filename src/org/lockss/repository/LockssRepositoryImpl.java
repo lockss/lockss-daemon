@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.35 2003-06-03 21:10:46 aalto Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.36 2003-06-06 23:13:44 aalto Exp $
  */
 
 /*
@@ -130,7 +130,14 @@ public class LockssRepositoryImpl implements LockssRepository {
   public void deleteNode(String url) throws MalformedURLException {
     RepositoryNode node = getNode(url, false);
     if (node!=null) {
-      node.deactivate();
+      node.markAsDeleted();
+    }
+  }
+
+  public void deactivateNode(String url) throws MalformedURLException {
+    RepositoryNode node = getNode(url, false);
+    if (node!=null) {
+      node.deactivateContent();
     }
   }
 
@@ -155,11 +162,11 @@ public class LockssRepositoryImpl implements LockssRepository {
       }
     }
 
-    if (!url1.endsWith(File.separator)) {
-      url1 += File.separator;
+    if (!url1.endsWith(UrlUtil.URL_PATH_SEPARATOR)) {
+      url1 += UrlUtil.URL_PATH_SEPARATOR;
     }
-    if (!url2.endsWith(File.separator)) {
-      url2 += File.separator;
+    if (!url2.endsWith(UrlUtil.URL_PATH_SEPARATOR)) {
+      url2 += UrlUtil.URL_PATH_SEPARATOR;
     }
     if (url1.equals(url2)) {
       //the urls are on the same level; check for overlap

@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.27 2003-06-02 21:39:50 troberts Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.28 2003-06-06 23:13:44 aalto Exp $
  */
 
 /*
@@ -45,22 +45,28 @@ import org.lockss.daemon.CachedUrlSetSpec;
 public class RepositoryNodeImpl implements RepositoryNode {
   static final long VERSION_TIMEOUT = 5 * Constants.HOUR; // 5 hours
   static final String LOCKSS_VERSION_NUMBER = "org.lockss.version.number";
+  static final String INACTIVE_CONTENT_PROPERTY = "node.content.isInactive";
+  static final String DELETION_PROPERTY = "node.isDeleted";
   static final String CONTENT_DIR = "#content";
   static final String CURRENT_FILENAME = "current";
   static final String PROPS_FILENAME = "props";
+  static final String NODE_PROPS_FILENAME = "node_props";
   static final String TEMP_FILENAME = "temp";
   static final String INACTIVE_FILENAME = "inactive";
   static final int INACTIVE_VERSION = -99;
+  static final int DELETED_VERSION = -98;
 
   private boolean newVersionOpen = false;
   private boolean newOutputCalled = false;
   private boolean newPropsSet = false;
   private File curInputFile;
   protected Properties curProps;
+  protected Properties nodeProps = new Properties();
   protected int currentVersion = -1;
 
   private String contentBufferStr = null;
   protected File nodeRootFile = null;
+  protected File nodePropsFile = null;
   protected File cacheLocationFile;
   protected File currentCacheFile;
   protected File currentPropsFile;
@@ -93,6 +99,11 @@ public class RepositoryNodeImpl implements RepositoryNode {
   public boolean isInactive() {
     ensureCurrentInfoLoaded();
     return currentVersion==INACTIVE_VERSION;
+  }
+
+  public boolean isDeleted() {
+    ensureCurrentInfoLoaded();
+    return currentVersion==DELETED_VERSION;
   }
 
   public long getContentSize() {
@@ -212,7 +223,10 @@ public class RepositoryNodeImpl implements RepositoryNode {
         try {
           RepositoryNode node = repository.getNode(childUrl);
           // add all nodes which are internal or active leaves
-          if (!node.isLeaf() || (!node.isInactive()) || includeInactive) {
+          boolean activeInternal = !node.isLeaf() && !node.isDeleted();
+          boolean activeLeaf = node.isLeaf() && !node.isDeleted() &&
+              (!node.isInactive() || includeInactive);
+          if (activeInternal || activeLeaf) {
             childL.add(repository.getNode(childUrl));
           }
         } catch (MalformedURLException mue) {
@@ -227,7 +241,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
   }
 
   public int getCurrentVersion() {
-    if ((!hasContent()) && (!isInactive())) {
+    if ((!hasContent()) && ((!isInactive() && !isDeleted()))) {
       logger.error("Cannot get version if no content: "+url);
       throw new UnsupportedOperationException("No content to version.");
     }
@@ -278,6 +292,18 @@ public class RepositoryNodeImpl implements RepositoryNode {
         throw new LockssRepository.RepositoryStateException("Couldn't rename inactive versions.");
       }
       currentVersion = lastVersion;
+
+      // store the deletion value
+      nodeProps.setProperty(INACTIVE_CONTENT_PROPERTY, "false");
+      try {
+        OutputStream os = new BufferedOutputStream(new FileOutputStream(nodePropsFile));
+        nodeProps.store(os, "Node properties");
+        os.close();
+      } catch (IOException ioe) {
+        logger.error("Couldn't write node properties for " +
+                     nodePropsFile.getPath()+".");
+        throw new LockssRepository.RepositoryStateException("Couldn't write node properties file.");
+      }
     }
 
     newVersionOpen = true;
@@ -338,21 +364,89 @@ public class RepositoryNodeImpl implements RepositoryNode {
     }
   }
 
-  public synchronized void deactivate() {
+  public synchronized void deactivateContent() {
     if (newVersionOpen) {
       throw new UnsupportedOperationException("Can't deactivate while new version open.");
     }
     ensureCurrentInfoLoaded();
-    if (!currentCacheFile.renameTo(getInactiveCacheFile()) ||
-        !currentPropsFile.renameTo(getInactivePropsFile())) {
-      logger.error("Couldn't deactivate: "+url);
-      throw new LockssRepository.RepositoryStateException("Couldn't deactivate.");
+    if (hasContent()) {
+      if (!currentCacheFile.renameTo(getInactiveCacheFile()) ||
+          !currentPropsFile.renameTo(getInactivePropsFile())) {
+        logger.error("Couldn't deactivate: " + url);
+        throw new LockssRepository.RepositoryStateException(
+            "Couldn't deactivate.");
+      }
+    } else {
+      if (!cacheLocationFile.exists()) {
+        cacheLocationFile.mkdirs();
+      }
     }
+
+    // store the inactive value
+    nodeProps.setProperty(INACTIVE_CONTENT_PROPERTY, "true");
+    try {
+      OutputStream os = new BufferedOutputStream(new FileOutputStream(nodePropsFile));
+      nodeProps.store(os, "Node properties");
+      os.close();
+    } catch (IOException ioe) {
+      logger.error("Couldn't write node properties for " +
+                   nodePropsFile.getPath()+".");
+      throw new LockssRepository.RepositoryStateException("Couldn't write node properties file.");
+    }
+
     currentVersion = INACTIVE_VERSION;
     curProps = null;
   }
 
+  public synchronized void markAsDeleted() {
+    ensureCurrentInfoLoaded();
+    if (hasContent()) {
+      deactivateContent();
+    }
+
+    // store the deletion value
+    nodeProps.setProperty(DELETION_PROPERTY, "true");
+    try {
+      OutputStream os = new BufferedOutputStream(new FileOutputStream(nodePropsFile));
+      nodeProps.store(os, "Node properties");
+      os.close();
+    } catch (IOException ioe) {
+      logger.error("Couldn't write node properties for " +
+                   nodePropsFile.getPath()+".");
+      throw new LockssRepository.RepositoryStateException("Couldn't write node properties file.");
+    }
+
+    currentVersion = DELETED_VERSION;
+  }
+
+  public synchronized void markAsNotDeleted() {
+    ensureCurrentInfoLoaded();
+
+    // store the deletion value
+    nodeProps.setProperty(DELETION_PROPERTY, "false");
+    try {
+      OutputStream os = new BufferedOutputStream(new FileOutputStream(nodePropsFile));
+      nodeProps.store(os, "Node properties");
+      os.close();
+    } catch (IOException ioe) {
+      logger.error("Couldn't write node properties for " +
+                   nodePropsFile.getPath()+".");
+      throw new LockssRepository.RepositoryStateException("Couldn't write node properties file.");
+    }
+
+    currentVersion = INACTIVE_VERSION;
+
+    // restore any inactivated content
+    restoreLastVersion();
+  }
+
+
   public synchronized void restoreLastVersion() {
+    if (isDeleted()) {
+      markAsNotDeleted();
+      return;
+    }
+
     if (isInactive()) {
       int lastVersion = determineLastActiveVersion();
       File inactiveCacheFile = getInactiveCacheFile();
@@ -364,6 +458,19 @@ public class RepositoryNodeImpl implements RepositoryNode {
         throw new LockssRepository.RepositoryStateException("Couldn't rename inactive versions.");
       }
       currentVersion = lastVersion;
+
+      // store the deletion value
+      nodeProps.setProperty(INACTIVE_CONTENT_PROPERTY, "false");
+      try {
+        OutputStream os = new BufferedOutputStream(new FileOutputStream(nodePropsFile));
+        nodeProps.store(os, "Node properties");
+        os.close();
+      } catch (IOException ioe) {
+        logger.error("Couldn't write node properties for " +
+                     nodePropsFile.getPath()+".");
+        throw new LockssRepository.RepositoryStateException("Couldn't write node properties file.");
+      }
+
       return;
     }
     if ((!hasContent()) || (getCurrentVersion() == 1)) {
@@ -462,7 +569,9 @@ public class RepositoryNodeImpl implements RepositoryNode {
       loadCurrentPropsFile();
       loadTempCacheFile();
       loadTempPropsFile();
-    } else if ((currentVersion==0)||(currentVersion==INACTIVE_VERSION)) {
+      loadNodePropsFile();
+    } else if ((currentVersion==0) || (currentVersion==INACTIVE_VERSION) ||
+               (currentVersion==DELETED_VERSION)) {
       return;
     }
     if (!cacheLocationFile.exists()) {
@@ -470,6 +579,26 @@ public class RepositoryNodeImpl implements RepositoryNode {
       curInputFile = null;
       curProps = null;
       return;
+    }
+    if (nodePropsFile.exists()) {
+      try {
+        // check properties to see if deleted
+        InputStream is = new BufferedInputStream(
+            new FileInputStream(nodePropsFile));
+        nodeProps.load(is);
+        is.close();
+        String isDeleted =  nodeProps.getProperty(DELETION_PROPERTY);
+        if ((isDeleted!=null) && (isDeleted.equals("true"))) {
+          currentVersion = DELETED_VERSION;
+          curInputFile = null;
+          curProps = null;
+          return;
+        }
+      } catch (Exception e) {
+        logger.error("Error loading properties from "+
+                     nodePropsFile.getPath()+".");
+        throw new LockssRepository.RepositoryStateException("Couldn't load properties file.");
+      }
     }
     if ((!currentCacheFile.exists()) && (getInactiveCacheFile().exists())) {
       currentVersion = INACTIVE_VERSION;
@@ -552,6 +681,13 @@ public class RepositoryNodeImpl implements RepositoryNode {
     buffer.append(PROPS_FILENAME);
     tempPropsFile = new File(buffer.toString());
   }
+
+  private void loadNodePropsFile() {
+    StringBuffer buffer = getContentDirBuffer();
+    buffer.append(NODE_PROPS_FILENAME);
+    nodePropsFile = new File(buffer.toString());
+  }
+
 
   private void loadCacheLocation() {
     cacheLocationFile = new File(getContentDirBuffer().toString());

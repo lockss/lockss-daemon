@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssRepository.java,v 1.1 2003-03-15 02:45:28 aalto Exp $
+ * $Id: MockLockssRepository.java,v 1.2 2003-06-06 23:13:44 aalto Exp $
  */
 
 /*
@@ -83,7 +83,14 @@ public class MockLockssRepository implements LockssRepository {
   public void deleteNode(String url) throws MalformedURLException {
     RepositoryNode node = getNode(url, false);
     if (node!=null) {
-      node.deactivate();
+      node.markAsDeleted();
+    }
+  }
+
+  public void deactivateNode(String url) throws MalformedURLException {
+    RepositoryNode node = getNode(url, false);
+    if (node!=null) {
+      node.deactivateContent();
     }
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: AuNodeImpl.java,v 1.4 2003-04-22 21:31:51 aalto Exp $
+ * $Id: AuNodeImpl.java,v 1.5 2003-06-06 23:13:44 aalto Exp $
  */
 
 /*
@@ -133,7 +133,7 @@ public class AuNodeImpl extends RepositoryNodeImpl {
   /**
    * Overriden to throw an UnsupportedOperationException.
    */
-  public synchronized void deactivate() {
+  public synchronized void deactivateContent() {
     throw new UnsupportedOperationException("Can't deactivate a top-level AuCUS.");
   }
 }

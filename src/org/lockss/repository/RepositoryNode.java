@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNode.java,v 1.10 2003-06-02 21:39:50 troberts Exp $
+ * $Id: RepositoryNode.java,v 1.11 2003-06-06 23:13:44 aalto Exp $
  */
 
 /*
@@ -59,6 +59,13 @@ public interface RepositoryNode {
    * @return true if the node is inactive
    */
   public boolean isInactive();
+
+  /**
+   * Determines if the node is deleted.  Deleted nodes may have old content or
+   * children, but will not appear in lists of nodes
+   * @return true if the node is inactive
+   */
+  public boolean isDeleted();
 
   /**
    * Returns the size of the current version of stored cache.  Throws an
@@ -128,11 +135,25 @@ public interface RepositoryNode {
   public void abandonNewVersion();
 
   /**
-   * Deactivates the node.  Throws if called while a version is open.  To
-   * reactivate, call <code>restoreLastVersion()</code> or make a new version.
+   * Deactivates the node.  This marks its content as inactive, but still allows
+   * it to be present if it has children.  Throws if called while a version is
+   * open.  To reactivate, call <code>restoreLastVersion()</code> or make a new
+   * version.
    * @throws UnsupportedOperationException
    */
-  public void deactivate();
+  public void deactivateContent();
+
+  /**
+   * Marks the node as deleted.  This also calls <code>deactivateContent()</code>.
+   * To reactivate, call <code>restoreLastVersion()</code>
+   * or make a new version (which gives it content), or call <code>markAsNotDeleted()</code>.
+   */
+  public void markAsDeleted();
+
+  /**
+   * Marks the node as no longer deleted.  This reactivates any content also.
+   */
+  public void markAsNotDeleted();
 
   /**
    * Returns the current version.  This is the open version when writing,
@@ -145,11 +166,11 @@ public interface RepositoryNode {
 
   /**
    * Reverts to the last version.  Throws if called on a node without content
-   * or only one version (and active).  Can be used to reactivate inactive nodes.
+   * or only one version (and active).  Can be used to reactivate inactive nodes
+   * or deleted nodes.
    * @throws UnsupportedOperationException
    */
   public void restoreLastVersion();
-
 
   /**
    * Return a <code>RepositoryNodeContents</code> object which accesses the

@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepository.java,v 1.12 2003-03-04 00:16:12 aalto Exp $
+ * $Id: LockssRepository.java,v 1.13 2003-06-06 23:13:44 aalto Exp $
  */
 
 /*
@@ -59,6 +59,13 @@ public interface LockssRepository extends LockssManager {
    * @throws java.net.MalformedURLException
    */
   public RepositoryNode createNewNode(String url) throws MalformedURLException;
+
+  /**
+   * Deactivate the node.
+   * @param url the url to be deactivated
+   * @throws MalformedURLException
+   */
+  public void deactivateNode(String url) throws MalformedURLException;
 
   /**
    * Delete the node.

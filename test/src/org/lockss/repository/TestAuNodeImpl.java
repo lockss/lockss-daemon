@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuNodeImpl.java,v 1.6 2003-03-25 01:26:24 aalto Exp $
+ * $Id: TestAuNodeImpl.java,v 1.7 2003-06-06 23:13:44 aalto Exp $
  */
 
 /*
@@ -101,7 +101,7 @@ public class TestAuNodeImpl extends LockssTestCase {
       fail("Cannot make version for AuNode.");
     } catch (UnsupportedOperationException uoe) { }
     try {
-      auNode.deactivate();
+      auNode.deactivateContent();
       fail("Cannot deactivate AuNode.");
     } catch (UnsupportedOperationException uoe) { }
   }
