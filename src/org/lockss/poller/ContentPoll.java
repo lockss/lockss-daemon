@@ -1,5 +1,5 @@
 /*
-* $Id: ContentPoll.java,v 1.6 2002-11-08 01:16:40 claire Exp $
+* $Id: ContentPoll.java,v 1.7 2002-11-08 19:14:55 claire Exp $
  */
 
 /*
@@ -142,10 +142,12 @@ public class ContentPoll extends Poll implements Runnable {
    * @param V the verifier
    * @param urlSet the cachedUrlSet
    * @param timer the probabilistic timer
+   * @param key the Object which will be returned from the hasher, either the
+   * poll or the VoteChecker.
    * @return true if hash successfully completed.
    */
   boolean scheduleHash(byte[] C, byte[] V, CachedUrlSet urlSet,
-                       ProbabilisticTimer timer) {
+                       ProbabilisticTimer timer, Object key) {
     MessageDigest hasher = null;
     CachedUrlSet urlset = null;
     try {
@@ -156,7 +158,7 @@ public class ContentPoll extends Poll implements Runnable {
     hasher.update(C, 0, C.length);
     hasher.update(V, 0, V.length);
     return HashService.hashContent( urlSet, hasher, timer,
-                                    new HashCallback(), this);
+                                    new HashCallback(), key);
   }
 
   static class CPVoteChecker extends VoteChecker {
@@ -175,7 +177,7 @@ public class ContentPoll extends Poll implements Runnable {
           return;
         }
         m_poll.scheduleHash(m_poll.m_challenge, m_poll.m_verifier, m_urlSet,
-                            new ProbabilisticTimer(m_msg.getDuration()));
+                            new ProbabilisticTimer(m_msg.getDuration()), this);
       } catch (Exception e) {
         m_poll.log.error(m_poll.m_key + "vote check fail", e);
       }

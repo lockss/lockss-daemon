@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.6 2002-11-08 01:16:40 claire Exp $
+* $Id: Poll.java,v 1.7 2002-11-08 19:14:55 claire Exp $
  */
 
 /*
@@ -333,7 +333,7 @@ public abstract class Poll implements Runnable {
       return;
     }
 
-    scheduleHash(m_challenge, m_verifier, m_urlSet,m_deadline);
+    scheduleHash(m_challenge, m_verifier, m_urlSet,m_deadline, this);
 
     try {
     /* wait for timer to elapse */
@@ -377,10 +377,12 @@ public abstract class Poll implements Runnable {
    * @param V the verifier
    * @param urlSet the cachedUrlSet
    * @param timer the probabilistic timer
+   * @param key the Object which will be returned from the hasher, either the
+   * poll or the VoteChecker.
    * @return true if hash successfully completed.
    */
   abstract boolean scheduleHash(byte[] C, byte[] V, CachedUrlSet urlSet,
-                                ProbabilisticTimer timer);
+                                ProbabilisticTimer timer, Object key);
 
   /**
    * prepare to run a poll.  This should check any conditions that might
