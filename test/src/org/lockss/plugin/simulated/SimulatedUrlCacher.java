@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedUrlCacher.java,v 1.3 2002-11-20 01:18:58 aalto Exp $
+ * $Id: SimulatedUrlCacher.java,v 1.4 2002-11-27 20:04:09 troberts Exp $
  */
 
 /*
@@ -56,7 +56,7 @@ public class SimulatedUrlCacher extends GenericFileUrlCacher {
     this.fileRoot = contentRoot;
   }
 
-  public InputStream getUncachedInputStream() {
+  protected InputStream getUncachedInputStream() {
     if (contentFile!=null) {
       try {
         return new BufferedInputStream(new FileInputStream(contentFile));
@@ -83,7 +83,7 @@ public class SimulatedUrlCacher extends GenericFileUrlCacher {
   }
 
 
-  public Properties getUncachedProperties() {
+  protected Properties getUncachedProperties() {
     if (props!=null) {
       return props;
     }

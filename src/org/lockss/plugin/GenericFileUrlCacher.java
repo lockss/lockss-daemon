@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileUrlCacher.java,v 1.7 2002-11-23 03:41:20 aalto Exp $
+ * $Id: GenericFileUrlCacher.java,v 1.8 2002-11-27 20:04:09 troberts Exp $
  */
 
 /*
@@ -53,10 +53,11 @@ public abstract class GenericFileUrlCacher extends BaseUrlCacher {
 
   public GenericFileUrlCacher(CachedUrlSet owner, String url) {
     super(owner, url);
-    repository = LockssRepositoryImpl.repositoryFactory(owner.getArchivalUnit());
+    repository = 
+      LockssRepositoryImpl.repositoryFactory(owner.getArchivalUnit());
   }
 
-  public void storeContent(InputStream input, Properties headers)
+  protected void storeContent(InputStream input, Properties headers)
       throws IOException {
     RepositoryNode leaf = repository.createNewNode(url);
     leaf.makeNewVersion();
@@ -76,7 +77,7 @@ public abstract class GenericFileUrlCacher extends BaseUrlCacher {
     leaf.sealNewVersion();
   }
 
-  public abstract InputStream getUncachedInputStream();
-  public abstract Properties getUncachedProperties();
+  protected abstract InputStream getUncachedInputStream();
+  protected abstract Properties getUncachedProperties();
 }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.4 2002-11-02 02:38:08 troberts Exp $
+ * $Id: BaseUrlCacher.java,v 1.5 2002-11-27 20:04:09 troberts Exp $
  */
 
 /*
@@ -97,4 +97,10 @@ public abstract class BaseUrlCacher implements UrlCacher {
     storeContent(getUncachedInputStream(),
 		 getUncachedProperties());
   }
+
+  protected abstract void storeContent(InputStream input, 
+				       Properties props)
+      throws IOException;
+  protected abstract InputStream getUncachedInputStream();
+  protected abstract Properties getUncachedProperties();
 }

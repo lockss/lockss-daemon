@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireUrlCacher.java,v 1.2 2002-10-21 23:13:41 troberts Exp $
+ * $Id: HighWireUrlCacher.java,v 1.3 2002-11-27 20:04:09 troberts Exp $
  */
 
 /*
@@ -62,7 +62,7 @@ public class HighWireUrlCacher extends BaseUrlCacher {
   
   // Write interface - used by the crawler.
   
-  public void storeContent(InputStream input,
+  protected void storeContent(InputStream input,
 			   Properties headers) throws IOException{
     if (input != null){
       File file = new File(mapUrlToFileName());
@@ -91,7 +91,7 @@ public class HighWireUrlCacher extends BaseUrlCacher {
     this.headers = headers;
   }
 
-  public InputStream getUncachedInputStream(){
+  protected InputStream getUncachedInputStream(){
     try{
       if (conn == null){
 	URL urlO = new URL(url);
@@ -105,7 +105,7 @@ public class HighWireUrlCacher extends BaseUrlCacher {
   }
 
 
-  public Properties getUncachedProperties(){
+  protected Properties getUncachedProperties(){
     Properties props = new Properties();
     try{
       if (conn == null){
