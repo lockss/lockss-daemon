@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.185 2004-09-01 23:33:35 clairegriffin Exp $
+ * $Id: NodeManagerImpl.java,v 1.186 2004-09-13 04:02:22 dshr Exp $
  */
 
 /*
@@ -1138,10 +1138,11 @@ public class NodeManagerImpl
       Iterator votes_it = history.getVotes();
       while(votes_it.hasNext()) {
         Vote vote = (Vote) votes_it.next();
-        ArrayList list = (ArrayList) voteMap.get(vote.getIDAddress());
+        String voterID = vote.getIdentityKey();
+        ArrayList list = (ArrayList) voteMap.get(voterID);
         if(list == null) {
           list = new ArrayList();
-          voteMap.put(vote.getIDAddress(),list);
+          voteMap.put(voterID,list);
         }
         list.add(vote);
       }
@@ -1368,13 +1369,13 @@ public class NodeManagerImpl
    */
   void callTopLevelPoll() {
     PollSpec spec = new PollSpec(managedAu.getAuCachedUrlSet());
-    try {
+    if (logger.isDebug2()) {
+      logger.debug2("Calling a top level poll on " + spec);
+    }
+    if (!pollManager.callPoll(Poll.CONTENT_POLL, spec)) {
       if (logger.isDebug2()) {
-        logger.debug2("Calling a top level poll on " + spec);
+	logger.debug2("Failed to call a top level poll on " + spec);
       }
-      pollManager.sendPollRequest(LcapMessage.CONTENT_POLL_REQ, spec);
-    } catch (IOException ioe) {
-      logger.error("Exception calling top level poll on " + spec, ioe);
     }
   }
 
@@ -1538,10 +1539,8 @@ public class NodeManagerImpl
    * @param cus CachedUrlSet
    * @param lwr lower bound
    * @param upr upper bound
-   * @throws IOException
    */
-  private void callContentPoll(CachedUrlSet cus, String lwr, String upr)
-      throws IOException {
+  private void callContentPoll(CachedUrlSet cus, String lwr, String upr) {
     String base = cus.getUrl();
     // check the bounds and trim the base url, if present
     if (lwr != null) {
@@ -1558,15 +1557,18 @@ public class NodeManagerImpl
     if (logger.isDebug2()) {
       logger.debug2("Calling a content poll on " + spec);
     }
-    pollManager.sendPollRequest(LcapMessage.CONTENT_POLL_REQ, spec);
+    if (!pollManager.callPoll(Poll.CONTENT_POLL, spec)) {
+      if (logger.isDebug2()) {
+	logger.debug2("Failed to call a content poll on " + spec);
+      }
+    }
   }
 
   /**
    * Calls a single node content poll on the CUS.
    * @param cus CachedUrlSet
-   * @throws IOException
    */
-  private void callSingleNodeContentPoll(CachedUrlSet cus) throws IOException {
+  private void callSingleNodeContentPoll(CachedUrlSet cus) {
     // create a 'single node' CachedUrlSet
     ArchivalUnit au = cus.getArchivalUnit();
     Plugin plugin = au.getPlugin();
@@ -1575,9 +1577,13 @@ public class NodeManagerImpl
 			      new SingleNodeCachedUrlSetSpec(cus.getUrl()));
     PollSpec spec = new PollSpec(newCus);
     if (logger.isDebug2()) {
-      logger.debug2("Calling a content poll on " + spec);
+      logger.debug2("Calling a single node content poll on " + spec);
     }
-    pollManager.sendPollRequest(LcapMessage.CONTENT_POLL_REQ, spec);
+    if (!pollManager.callPoll(Poll.CONTENT_POLL, spec)) {
+      if (logger.isDebug2()) {
+	logger.debug2("Failed to call single node content poll on " + spec);
+      }
+    }
   }
 
   /**
@@ -1586,20 +1592,15 @@ public class NodeManagerImpl
    * @param lastPoll last poll to recall
    */
   private void callLastPoll(PollSpec spec, PollState lastPoll) {
-    try {
-      if (lastPoll.type == Poll.CONTENT_POLL) {
-        if (logger.isDebug2()) {
-          logger.debug2("Calling a content poll on " + spec);
-        }
-        pollManager.sendPollRequest(LcapMessage.CONTENT_POLL_REQ, spec);
-      } else if (lastPoll.type == Poll.NAME_POLL) {
-        if (logger.isDebug2()) {
-          logger.debug2("Calling a name poll on " + spec);
-        }
-        pollManager.sendPollRequest(LcapMessage.NAME_POLL_REQ, spec);
+    if (logger.isDebug2()) {
+      logger.debug2("Re-calling a " + Poll.PollName[lastPoll.type] +
+		    " poll on " + spec);
+    }
+    if (!pollManager.callPoll(lastPoll.type, spec)) {
+      if (logger.isDebug2()) {
+	logger.debug2("Failed to re-call a " + Poll.PollName[lastPoll.type] +
+		      " poll on " + spec);
       }
-    } catch (IOException ioe) {
-      logger.error("Exception calling poll on " + spec, ioe);
     }
   }
 
@@ -1608,13 +1609,13 @@ public class NodeManagerImpl
    * @param spec PollSpec
    */
   private void callNamePoll(PollSpec spec) {
-    try {
+    if (logger.isDebug2()) {
+      logger.debug2("Calling a name poll on " + spec);
+    }
+    if (!pollManager.callPoll(Poll.NAME_POLL, spec)) {
       if (logger.isDebug2()) {
-        logger.debug2("Calling a name poll on " + spec);
+	logger.debug2("Failed to call a name poll on " + spec);
       }
-      pollManager.sendPollRequest(LcapMessage.NAME_POLL_REQ, spec);
-    } catch (IOException ioe) {
-      logger.error("Exception calling name poll on " + spec, ioe);
     }
   }
 
@@ -1623,13 +1624,13 @@ public class NodeManagerImpl
    * @param spec PollSpec
    */
   private void callContentPoll(PollSpec spec) {
-    try {
+    if (logger.isDebug2()) {
+      logger.debug2("Calling a content poll on " + spec);
+    }
+    if (!pollManager.callPoll(Poll.CONTENT_POLL, spec)) {
       if (logger.isDebug2()) {
-        logger.debug2("Calling a content poll on " + spec);
+        logger.debug2("Failed to call a content poll on " + spec);
       }
-      pollManager.sendPollRequest(LcapMessage.CONTENT_POLL_REQ, spec);
-    } catch (IOException ioe) {
-      logger.error("Exception calling content poll on " + spec, ioe);
     }
   }
 
@@ -1689,16 +1690,16 @@ public class NodeManagerImpl
       Vote vote = (Vote) voteIt.next();
       int repChange = vote.isAgreeVote() ? agreeChange : disagreeChange;
 
-      LcapIdentity id = idManager.findIdentity(vote.getIDAddress());
-      idManager.changeReputation(id, repChange);
+      String originatorID = vote.getIdentityKey();
+      idManager.changeReputation(originatorID, repChange);
       if (results.getTallyResult() == Tallier.RESULT_WON) {
 	if (vote.isAgreeVote()) {
 	  //check if is top level poll
 	  if (results.getCachedUrlSet().getSpec().isAu()) {
-	    idManager.signalAgreed(id.toHost(), managedAu);
+	    idManager.signalAgreed(originatorID, managedAu);
  	  }
 	} else {
-	  idManager.signalDisagreed(id.toHost(), managedAu);
+	  idManager.signalDisagreed(originatorID, managedAu);
 	}
       }
     }
@@ -1833,12 +1834,7 @@ public class NodeManagerImpl
         } else {
           logger.debug("Calling new SNCUSS poll...");
           state.setState(NodeState.POSSIBLE_DAMAGE_HERE);
-          try {
-            callSingleNodeContentPoll(cus);
-          } catch (IOException ie) {
-            logger.warning("Couldn't recall poll: " + ie);
-            // the treewalk will recall this if it happens
-          }
+	  callSingleNodeContentPoll(cus);
         }
       }
     }

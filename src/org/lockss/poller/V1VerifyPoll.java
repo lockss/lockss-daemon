@@ -1,5 +1,5 @@
 /*
-* $Id: V1VerifyPoll.java,v 1.5 2004-03-17 05:56:42 clairegriffin Exp $
+* $Id: V1VerifyPoll.java,v 1.6 2004-09-13 04:02:21 dshr Exp $
  */
 
 /*
@@ -61,7 +61,7 @@ class V1VerifyPoll extends V1Poll {
                               msg.getDuration(),
                               1,
                               msg.getHashAlgorithm());
-    if(idMgr.isLocalIdentity(m_caller)) {
+    if(idMgr.isLocalIdentity(m_callerID)) {
        // if we've called the poll, we aren't going to vote
        // so we set our state to wait for a tally.
        m_pollstate = PS_WAIT_TALLY;
@@ -105,7 +105,7 @@ class V1VerifyPoll extends V1Poll {
    */
   void startPoll() {
     log.debug("Starting new verify poll:" + m_key);
-    if(!idMgr.isLocalIdentity(m_caller)) {
+    if(!idMgr.isLocalIdentity(m_callerID)) {
       long now = TimeBase.nowMs();
       long remainingTime = m_deadline.getRemainingTime();
       long minTime = now + (remainingTime / 2) - (remainingTime / 4);
@@ -140,7 +140,7 @@ class V1VerifyPoll extends V1Poll {
  }
 
   private void performHash(LcapMessage msg) {
-    LcapIdentity id = idMgr.findIdentity(msg.getOriginAddr());
+    LcapIdentity id = idMgr.findIdentity(msg.getOriginatorID());
     int weight = id.getReputation();
     byte[] challenge = msg.getChallenge();
     byte[] hashed = msg.getHashed();
@@ -163,7 +163,7 @@ class V1VerifyPoll extends V1Poll {
    */
   private void updateReputation(boolean voteAgreed)  {
     log.info(m_msg.toString() + " tally " + toString());
-    LcapIdentity id = m_caller;
+    LcapIdentity id = idMgr.findIdentity(m_callerID);
     int oldRep = id.getReputation();
     int agree = m_tally.numAgree;
     int disagree = m_tally.numDisagree;
@@ -209,7 +209,7 @@ class V1VerifyPoll extends V1Poll {
         msg.getDuration(),
         idMgr.getLocalIdentity());
 
-    LcapIdentity originator = idMgr.findIdentity(msg.getOriginAddr());
+    LcapIdentity originator = idMgr.findIdentity(msg.getOriginatorID());
     log.debug("sending our verification reply to " + originator.toString());
     PollSpec spec = new PollSpec(repmsg);
     au = spec.getCachedUrlSet().getArchivalUnit();

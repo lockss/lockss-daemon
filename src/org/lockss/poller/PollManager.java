@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.130 2004-08-22 02:05:53 tlipkis Exp $
+ * $Id: PollManager.java,v 1.131 2004-09-13 04:02:21 dshr Exp $
  */
 
 /*
@@ -94,7 +94,7 @@ public class PollManager
   static final int DEFAULT_DURATION_MULTIPLIER_MAX = 7;
 
   private static PollManager theManager = null;
-  private static Logger theLog = Logger.getLogger("PollManager");
+  protected static Logger theLog = Logger.getLogger("PollManager");
   private static LcapRouter.MessageHandler  m_msgHandler;
   private static Hashtable thePolls = new Hashtable();
   private static HashMap theVerifiers = new HashMap();
@@ -193,14 +193,49 @@ public class PollManager
   }
 
   /**
-   * make an election by sending a request packet.  This is only
-   * called from the tree walk. The poll remains pending in the
-   * @param opcode the poll message opcode
-   * @param pollspec the PollSpec used to define the range and location of poll
-   * @throws IOException thrown if Message construction fails.
+   * Call a poll.  Only used by the tree walk.
+   * @param polltype one of <code>Poll.{NAME,CONTENT,VERIFY}_POLL</code>
+   * @param pollspec the <code>PollSpec</code> that defines the subject of
+   *                 the <code>Poll</code>.
+   * @return true if the poll was successfuly called.
    */
-  public void sendPollRequest(int opcode, PollSpec pollspec)
+  public boolean callPoll(int polltype, PollSpec pollspec) {
+    boolean ret = false;
+    switch (pollspec.getPollVersion()) {
+    case 1:
+      try {
+	sendV1PollRequest(polltype, pollspec);
+	ret = true;
+      } catch (IOException ioe) {
+	theLog.debug("Exception sending V1 poll request for " +
+		     pollspec + ioe);
+      }
+      break;
+    }
+    return ret;
+  }
+
+  /**
+   * cause a V1 poll by sending a request packet.
+   * @param polltype the poll type
+   * @param pollspec the <code>PollSpec</code> used to define the range,
+   *                 version, and location of poll
+   * @throws IOException thrown if <code>LcapMessage</code> construction fails.
+   */
+  private void sendV1PollRequest(int polltype, PollSpec pollspec)
       throws IOException {
+    int opcode = -1;
+    switch (polltype) {
+    case Poll.NAME_POLL:
+      opcode = LcapMessage.NAME_POLL_REQ;
+      break;
+    case Poll.CONTENT_POLL:
+      opcode = LcapMessage.CONTENT_POLL_REQ;
+      break;
+    case Poll.VERIFY_POLL:
+      opcode = LcapMessage.VERIFY_POLL_REQ;
+      break;
+    }
     theLog.debug("sending a request for polltype: "
                  + LcapMessage.POLL_OPCODES[opcode] +
                  " for spec " + pollspec);
@@ -395,9 +430,9 @@ public class PollManager
     if (msg.isVerifyPoll()) {
       // if we didn't call the poll and we don't have the verifier ignore this
       if ((getSecret(msg.getChallenge())== null) &&
-        !theIDManager.isLocalIdentity(msg.getOriginAddr())) {
+        !theIDManager.isLocalIdentity(msg.getOriginatorID())) {
        String ver = String.valueOf(B64Code.encode(msg.getChallenge()));
-       theLog.debug("ignoring verify request from " + msg.getOriginAddr()
+       theLog.debug("ignoring verify request from " + msg.getOriginatorID()
         + " on unknown verifier " + ver);
        return null;
      }
@@ -660,8 +695,11 @@ public class PollManager
         duration,
         theIDManager.getLocalIdentity());
 
-    LcapIdentity originator =  theIDManager.findIdentity(vote.getIDAddress());
-    theLog.debug2("sending our verification request to " + originator.toString());
+    String originatorID = vote.getIdentityKey();
+    //  XXX we use port 0 here because it is a V1 poll
+    LcapIdentity originator = theIDManager.findIdentity(originatorID);
+    theLog.debug2("sending our verification request to " +
+                  originator.toHost());
     sendMessageTo(reqmsg, cus.getArchivalUnit(), originator);
     // since we won't be getting this message make sure we create our own poll
     BasePoll poll = makePoll(reqmsg);

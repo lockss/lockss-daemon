@@ -1,5 +1,5 @@
 /*
- * $Id: LcapIdentity.java,v 1.21 2004-02-07 00:13:53 troberts Exp $
+ * $Id: LcapIdentity.java,v 1.22 2004-09-13 04:02:22 dshr Exp $
  */
 
 /*
@@ -72,25 +72,34 @@ public class LcapIdentity implements Serializable {
   */
 
   transient IPAddr m_address = null;
+  int m_port; // Zero for the well-known UDP port
 
   int m_reputation;
   String m_idKey;
 
   static Logger theLog=Logger.getLogger("Identity");
 
+  public LcapIdentity(String idKey)
+    throws UnknownHostException {
+    m_idKey = idKey;
+    m_reputation = IdentityManager.INITIAL_REPUTATION;
+    m_address = stringToAddr(idKey);
+    m_port = stringToPort(idKey);
+  }
   public LcapIdentity(String idKey, int reputation)
     throws UnknownHostException {
     m_idKey = idKey;
     m_reputation = reputation;
     m_address = stringToAddr(idKey);
+    m_port = stringToPort(idKey);
   }
 
   /**
    * construct a new Identity from an address
    * @param addr the IPAddr
    */
-  public LcapIdentity(IPAddr addr) {
-    m_idKey = makeIdKey(addr);
+  public LcapIdentity(IPAddr addr, int port) {
+    m_idKey = makeIdKey(addr, port);
     m_reputation = IdentityManager.INITIAL_REPUTATION;
     m_address = addr;
   }
@@ -104,6 +113,14 @@ public class LcapIdentity implements Serializable {
    */
   public IPAddr getAddress() {
     return m_address;
+  }
+
+  /**
+   * return the address of the Identity
+   * @return the <code>IPAddr<\code> for this Identity
+   */
+  public int getPort() {
+    return m_port;
   }
 
   /**
@@ -153,8 +170,8 @@ public class LcapIdentity implements Serializable {
 
   // methods which may need to be overridden
 
-  public boolean isEqual(IPAddr addr) {
-    String key = makeIdKey(addr);
+  public boolean isEqual(IPAddr addr, int port) {
+    String key = makeIdKey(addr, port);
 
     return key.equals(m_idKey);
   }
@@ -199,7 +216,7 @@ public class LcapIdentity implements Serializable {
     }
     m_incrPackets++;
     m_totalPackets++;
-    if (msg.getOriginAddr().equals(this.m_address)) {
+    if (msg.getOriginatorID().equals(m_idKey)) {
       char[] encoded = B64Code.encode(msg.getVerifier());
 
       String verifier = String.valueOf(encoded);
@@ -248,26 +265,48 @@ public class LcapIdentity implements Serializable {
     m_reputation += delta;
   }
 
-  static String makeIdKey(IPAddr addr) {
-    return addrToString(addr);
+  static String makeIdKey(IPAddr addr, int port) {
+    return addrToString(addr, port);
   }
 
   /**
-   * turn and IPAddr into a dotted quartet string since
+   * turn an IPAddr into a dotted quartet string since
    * get host address doesn't necessarily return an address
    * @param addr the address to turn into a string
+   * @param port the port
    * @return the address as dotted quartet sting
    */
-  public static String addrToString(IPAddr addr)  {
+  public static String addrToString(IPAddr addr, int port)  {
     String ret = addr.getHostAddress();
+    if (port != 0)
+      ret += ":" + port;
     return ret;
   }
 
-  public static IPAddr stringToAddr(String addr)
+  public static IPAddr stringToAddr(String idKey)
       throws UnknownHostException {
-    IPAddr ret = IPAddr.getByName(addr);
+    int colon = idKey.indexOf(':');
+    IPAddr ret = null;
+    if (colon > 0) {
+      ret = IPAddr.getByName(idKey.substring(0,colon-1));
+    } else if (colon < 0) {
+      // V1 identity,  no port part
+      ret = IPAddr.getByName(idKey);
+    }
     if(ret == null) {
-      throw new UnknownHostException("Unable to get address: " + addr);
+      throw new UnknownHostException("Unable to get address: " + idKey);
+    }
+    return ret;
+  }
+
+  public static int stringToPort(String idKey)
+      throws UnknownHostException {
+    int colon = idKey.indexOf(':');
+    int ret = 0;
+    if (colon >= 0) try {
+      ret = Short.parseShort(idKey.substring(colon+1));
+    } catch (NumberFormatException nfe) {
+      throw new UnknownHostException("Unable to get port: " + idKey);
     }
     return ret;
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessage.java,v 1.47 2004-04-05 08:02:40 tlipkis Exp $
+ * $Id: LcapMessage.java,v 1.48 2004-09-13 04:02:22 dshr Exp $
  */
 
 /*
@@ -98,7 +98,7 @@ public class LcapMessage
   int m_length; // length of remaining packet
 
   /* items which are in the property list */
-  IPAddr m_originAddr; // the address of the originator
+  String m_originatorID; // the ID key for the originator
   protected String m_hashAlgorithm; // the algorithm used to hash
   byte m_ttl; // The original time-to-live
   long m_startTime; // the original start time
@@ -172,7 +172,7 @@ public class LcapMessage
     m_startTime = 0;
     m_stopTime = 0;
     m_multicast = false;
-    m_originAddr = null;
+    m_originatorID = null;
     m_hopCount = 0;
   }
 
@@ -194,7 +194,7 @@ public class LcapMessage
     m_archivalID = trigger.getArchivalId();
     m_entries = entries;
     m_hashAlgorithm = trigger.getHashAlgorithm();
-    m_originAddr = localID.getAddress();
+    m_originatorID = localID.getIdKey();
     m_verifier = verifier;
     m_hashed = hashedContent;
     m_opcode = opcode;
@@ -242,12 +242,12 @@ public class LcapMessage
     m_props.setProperty(key, value);
   }
 
-  static public LcapMessage makeNoOpMsg(LcapIdentity originID,
+  static public LcapMessage makeNoOpMsg(LcapIdentity originator,
                                         byte[] verifier) throws
       IOException {
     LcapMessage msg = new LcapMessage();
     if (msg != null) {
-      msg.m_originAddr = originID.getAddress();
+      msg.m_originatorID = originator.getIdKey();
       msg.m_opcode = NO_OP;
       msg.m_hopCount = 0;
       msg.m_verifier = verifier;
@@ -287,7 +287,7 @@ public class LcapMessage
     if (msg != null) {
       msg.m_startTime = TimeBase.nowMs();
       msg.m_stopTime = msg.m_startTime + timeRemaining;
-      msg.m_originAddr = localID.getAddress();
+      msg.m_originatorID = localID.getIdKey();
     }
     msg.storeProps();
     return msg;
@@ -398,12 +398,8 @@ public class LcapMessage
     // the immutable stuff
     port = m_props.getInt("origPort", -1);
     String addr_str = m_props.getProperty("origIP");
-    try {
-      m_originAddr = LcapIdentity.stringToAddr(addr_str);
-    }
-    catch (UnknownHostException ex) {
-      log.warning("Unknown originating host:" + addr_str);
-    }
+    // omit :port here to indicate V1 identity
+    m_originatorID = addr_str;
 
     m_hashAlgorithm = m_props.getProperty("hashAlgorithm");
     m_ttl = (byte) m_props.getInt("ttl", 0);
@@ -443,7 +439,8 @@ public class LcapMessage
   void storeProps() throws IOException {
     // make sure the props table is up to date
     try {
-      m_props.setProperty("origIP", LcapIdentity.addrToString(m_originAddr));
+      // use port 0 here - it will be ignored in the string
+      m_props.setProperty("origIP", m_originatorID);
     }
     catch (NullPointerException npe) {
       throw new ProtocolException("encode - null origin host address.");
@@ -561,8 +558,8 @@ public class LcapMessage
     return m_ttl;
   }
 
-  public IPAddr getOriginAddr() {
-    return m_originAddr;
+  public String getOriginatorID() {
+    return m_originatorID;
   }
 
   public int getOpcode() {
@@ -720,7 +717,7 @@ public class LcapMessage
   public String toString() {
     StringBuffer sb = new StringBuffer();
     sb.append("[LcapMessage: from ");
-    sb.append(m_originAddr.getHostAddress());
+    sb.append(m_originatorID);
     sb.append(", ");
     if (isNoOp()) {
       sb.append(POLL_OPCODES[m_opcode]);

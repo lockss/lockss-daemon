@@ -1,5 +1,5 @@
 /*
- * $Id: StatusTable.java,v 1.32 2004-07-12 23:01:53 smorabito Exp $
+ * $Id: StatusTable.java,v 1.33 2004-09-13 04:02:20 dshr Exp $
  */
 
 /*
@@ -571,15 +571,32 @@ public class StatusTable {
       } else {
 	switch (getColumnType()) {
 	case ColumnDescriptor.TYPE_IP_ADDRESS:
+	  if (valA != null && ! (valA instanceof IPAddr))
+	    logger.error("StatusTable.compare: valA not IPAddr but " +
+			 valA.getClass().toString());
+	  if (valB != null && ! (valB instanceof IPAddr))
+	    logger.error("StatusTable.compare: valb not IPAddr but " +
+			 valB.getClass().toString());
 	  returnVal = compareIPAddrs((IPAddr)valA, (IPAddr)valB);
 	  break;
 	case ColumnDescriptor.TYPE_INT:
 	case ColumnDescriptor.TYPE_FLOAT:
 	case ColumnDescriptor.TYPE_PERCENT:
 	case ColumnDescriptor.TYPE_TIME_INTERVAL:
-	case ColumnDescriptor.TYPE_STRING:
-	default: //if we don't know the type, assume comparable
+	case ColumnDescriptor.TYPE_DATE:
 	  returnVal = compareHandlingNulls((Comparable)valA, (Comparable)valB);
+	  break;
+	case ColumnDescriptor.TYPE_STRING:
+	  if (valA != null && ! (valA instanceof String))
+	    logger.error("StatusTable.compare: valA not String but " +
+			 valA.getClass().toString());
+	  if (valB != null && ! (valB instanceof String))
+	    logger.error("StatusTable.compare: valB not String but " +
+			 valB.getClass().toString());
+	  returnVal = compareHandlingNulls((Comparable)valA, (Comparable)valB);
+	  break;
+	default: //if we don't know the type, assume comparable
+	  logger.error("StatusTable.compare " + getColumnType() + " unknown");
 	  break;
 	}
       }

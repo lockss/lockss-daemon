@@ -1,5 +1,5 @@
 /*
-* $Id: V1Poll.java,v 1.11 2004-08-09 23:54:04 clairegriffin Exp $
+* $Id: V1Poll.java,v 1.12 2004-09-13 04:02:21 dshr Exp $
  */
 
 /*
@@ -181,9 +181,9 @@ public abstract class V1Poll extends BasePoll {
               vote.getHashString());
 
     boolean agree = vote.setAgreeWithHash(hashResult);
-    LcapIdentity id = idMgr.findIdentity(vote.getIDAddress());
+    LcapIdentity id = idMgr.findIdentity(vote.getIdentityKey());
 
-    if(!idMgr.isLocalIdentity(vote.getIDAddress())) {
+    if(!idMgr.isLocalIdentity(vote.getIdentityKey())) {
       verify = randomVerify(vote, agree);
     }
     m_tally.addVote(vote, id, idMgr.isLocalIdentity(id));
@@ -197,7 +197,7 @@ public abstract class V1Poll extends BasePoll {
    * @return true if we called a verify poll, false otherwise.
    */
   boolean randomVerify(Vote vote, boolean isAgreeVote) {
-    LcapIdentity id = idMgr.findIdentity(vote.getIDAddress());
+    LcapIdentity id = idMgr.findIdentity(vote.getIdentityKey());
     int max = idMgr.getMaxReputation();
     int weight = id.getReputation();
     double verify;
@@ -340,7 +340,8 @@ public abstract class V1Poll extends BasePoll {
    * @return boolean true if the poll should run, false otherwise
    */
   boolean shouldCheckVote(LcapMessage msg) {
-    LcapIdentity voter = idMgr.findIdentity(msg.getOriginAddr());
+    String voterID = msg.getOriginatorID();
+    LcapIdentity voter = idMgr.findIdentity(voterID);
 
     // make sure we haven't already voted
     if(m_tally.hasVoted(voter)) {

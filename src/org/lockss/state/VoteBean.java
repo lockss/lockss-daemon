@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBean.java,v 1.6 2004-04-01 02:44:32 eaalto Exp $
+ * $Id: VoteBean.java,v 1.7 2004-09-13 04:02:23 dshr Exp $
  */
 
 /*
@@ -34,16 +34,20 @@ package org.lockss.state;
 
 import org.lockss.poller.Vote;
 import org.lockss.protocol.LcapIdentity;
+import org.lockss.protocol.IdentityManager;
 import java.net.UnknownHostException;
 
 /**
- * Simple class to allow marshalling of Vote instances.
+ * Simple class to allow marshalling of Vote instances.  It should be
+ * applied only to inactive Vote objects, i.e. those in closed Polls.
+ * XXX This makes it an open question as to why it exists at all.
  */
 public class VoteBean extends Vote {
   public String idStr = null;
   public String challengeStr = null;
   public String verifierStr = null;
-  public String hashStr = null;
+  public String hashStr = null;  // V1 only
+  // XXX Need to cope with V3
 
   /**
    * Empty constructor for bean creation during marshalling
@@ -52,11 +56,12 @@ public class VoteBean extends Vote {
   }
 
   /**
-   * Constructor for converting from a Vote object.
+   * Constructor for converting from a Vote object.  Called by
+   * PollHistoryBean.convertVotesToVoteBeans().  
    * @param vote the Vote
    */
   VoteBean(Vote vote) {
-    idStr = LcapIdentity.addrToString(vote.getIDAddress());
+    idStr = vote.getIdentityKey();
     agree = vote.isAgreeVote();
     challengeStr = vote.getChallengeString();
     verifierStr = vote.getVerifierString();
@@ -64,12 +69,21 @@ public class VoteBean extends Vote {
   }
 
   /**
-   * Returns a Vote object based off the values in the VoteBean class.
+   * Returns a Vote object in the active state based on the values in the
+   * VoteBean class.
    * @return a Vote object
-   * @throws UnknownHostException if the idString is not a valid InetAdress
    */
-  Vote getVote() throws UnknownHostException {
+  Vote getVote() {
     return super.makeVote(challengeStr, verifierStr, hashStr, idStr, agree);
+  }
+
+  /**
+   * Returns a Vote object in the inactive state based on the values in the
+   * VoteBean class.
+   * @return a Vote object
+   */
+  Vote getInactiveVote() {
+    return super.makeVote(null, null, null, idStr, agree);
   }
 
   /**

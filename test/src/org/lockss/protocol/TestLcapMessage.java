@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapMessage.java,v 1.32 2004-07-23 16:44:09 tlipkis Exp $
+ * $Id: TestLcapMessage.java,v 1.33 2004-09-13 04:02:24 dshr Exp $
  */
 
 /*
@@ -81,9 +81,9 @@ public class TestLcapMessage extends LockssTestCase {
     testmsg.m_targetUrl = urlstr;
     testmsg.m_lwrBound = lwrbnd;
     testmsg.m_uprBound = uprbnd;
-    testID = new LcapIdentity(testaddr);
+    testID = new LcapIdentity(testaddr, 0);
 
-    testmsg.m_originAddr = testaddr;
+    testmsg.m_originatorID = testaddr.toString();
     testmsg.m_hashAlgorithm = LcapMessage.getDefaultHashAlgorithm();
     testmsg.m_startTime = 123456789;
     testmsg.m_stopTime = 987654321;
@@ -150,7 +150,7 @@ public class TestLcapMessage extends LockssTestCase {
     noop_msg = LcapMessage.makeNoOpMsg(testID, testbytes);
 
     // now check the fields we expect to be valid
-    assertEquals(testaddr, noop_msg.m_originAddr);
+    assertEquals(testaddr.toString(), noop_msg.m_originatorID);
     assertEquals(LcapMessage.NO_OP, noop_msg.m_opcode);
     assertEquals(testbytes, noop_msg.m_verifier);
   }
@@ -171,7 +171,7 @@ public class TestLcapMessage extends LockssTestCase {
 
     LcapMessage msg = new LcapMessage(msgbytes);
     // now test to see if we got back what we started with
-    assertEquals(testaddr, msg.m_originAddr);
+    assertEquals(testaddr.toString(), msg.m_originatorID);
     assertEquals(LcapMessage.NO_OP, msg.m_opcode);
     assertEquals(testbytes, msg.m_verifier);
   }
@@ -189,7 +189,7 @@ public class TestLcapMessage extends LockssTestCase {
 
     // now test to see if we got back what we expected
 
-    assertEquals(testaddr, rep_msg.m_originAddr);
+    assertEquals(testaddr.toString(), rep_msg.m_originatorID);
     assertEquals(5, rep_msg.m_ttl);
     assertEquals(LcapMessage.CONTENT_POLL_REP, rep_msg.m_opcode);
     assertEquals(testmsg.m_hashAlgorithm, rep_msg.m_hashAlgorithm);
@@ -218,7 +218,7 @@ public class TestLcapMessage extends LockssTestCase {
     assertEquals(spec.getPollVersion(), 1);
     assertEquals(1, req_msg.getPollVersion());
     assertEquals("Plug42", req_msg.getPluginVersion());
-    assertEquals(testaddr, req_msg.m_originAddr);
+    assertEquals(testaddr.toString(), req_msg.m_originatorID);
     assertEquals(LcapMessage.CONTENT_POLL_REQ, req_msg.m_opcode);
     assertFalse(req_msg.m_multicast);
     assertEquals(archivalID, req_msg.m_archivalID);
@@ -237,7 +237,7 @@ public class TestLcapMessage extends LockssTestCase {
 
     LcapMessage msg = new LcapMessage(msgbytes);
     // now test to see if we got back what we started with
-    assertEquals(testaddr, msg.m_originAddr);
+    assertEquals(testaddr.toString(), msg.m_originatorID);
     assertEquals(5, msg.m_ttl);
     assertEquals(LcapMessage.CONTENT_POLL_REQ, msg.m_opcode);
     assertFalse(msg.m_multicast);
@@ -262,7 +262,7 @@ public class TestLcapMessage extends LockssTestCase {
     msg = new LcapMessage(msg.encodeMsg());
     // now test to see if we got back what we started with
     assertEquals(3, msg.m_hopCount);
-    assertEquals(testaddr, msg.m_originAddr);
+    assertEquals(testaddr.toString(), msg.m_originatorID);
     assertEquals(5, msg.m_ttl);
     assertEquals(LcapMessage.CONTENT_POLL_REQ, msg.m_opcode);
     assertFalse(msg.m_multicast);

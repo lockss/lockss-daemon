@@ -1,5 +1,5 @@
 /*
- * $Id: TestPoll.java,v 1.77 2004-01-31 23:01:37 tlipkis Exp $
+ * $Id: TestPoll.java,v 1.78 2004-09-13 04:02:24 dshr Exp $
  */
 
 /*
@@ -139,7 +139,7 @@ public class TestPoll extends LockssTestCase {
     assertTrue(p instanceof V1NamePoll);
     log.debug3("testCheeckVote 3");
     assertNotNull(p);
-    LcapIdentity id = idmgr.findIdentity(msg.getOriginAddr());
+    LcapIdentity id = idmgr.findIdentity(msg.getOriginatorID());
     assertNotNull(id);
     assertNotNull(p.m_tally);
     int rep = p.m_tally.wtAgree + id.getReputation();
@@ -164,7 +164,7 @@ public class TestPoll extends LockssTestCase {
   public void testTally() {
     V1Poll p = testV1polls[0];
     LcapMessage msg = p.getMessage();
-    LcapIdentity id = idmgr.findIdentity(msg.getOriginAddr());
+    LcapIdentity id = idmgr.findIdentity(msg.getOriginatorID());
     p.m_tally.addVote(new Vote(msg, false), id, false);
     p.m_tally.addVote(new Vote(msg, false), id, false);
     p.m_tally.addVote(new Vote(msg, false), id, false);
@@ -357,25 +357,25 @@ public class TestPoll extends LockssTestCase {
 
     // add our vote
     LcapMessage msg = np.getMessage();
-    LcapIdentity id = idmgr.findIdentity(msg.getOriginAddr());
-    np.m_tally.addVote(np.makeVote(msg, true), id, true);
+    LcapIdentity id = idmgr.findIdentity(msg.getOriginatorID());
+    np.m_tally.addVote(np.makeNameVote(msg, true), id, true);
 
     // add the agree votes
-    id =idmgr.findIdentity(agree_msg.getOriginAddr());
+    id =idmgr.findIdentity(agree_msg.getOriginatorID());
     for(int i = 0; i < numAgree; i++) {
-      np.m_tally.addVote(np.makeVote(agree_msg, true), id, false);
+      np.m_tally.addVote(np.makeNameVote(agree_msg, true), id, false);
     }
 
     // add the disagree votes
-    id =idmgr.findIdentity(disagree_msg1.getOriginAddr());
+    id =idmgr.findIdentity(disagree_msg1.getOriginatorID());
     for(int i = 0; i < numDisagree; i++) {
-      np.m_tally.addVote(np.makeVote(disagree_msg1, false), id , false);
+      np.m_tally.addVote(np.makeNameVote(disagree_msg1, false), id , false);
     }
 
     // add dissenting disagree vote
-    id =idmgr.findIdentity(disagree_msg2.getOriginAddr());
+    id =idmgr.findIdentity(disagree_msg2.getOriginatorID());
     for(int i = 0; i < numDissenting; i++) {
-      np.m_tally.addVote(np.makeVote(disagree_msg2, false), id, false);
+      np.m_tally.addVote(np.makeNameVote(disagree_msg2, false), id, false);
     }
     np.m_pollstate = BasePoll.PS_COMPLETE;
     np.m_tally.tallyVotes();
@@ -472,9 +472,9 @@ public class TestPoll extends LockssTestCase {
   private void initTestAddr() {
     try {
       testaddr = IPAddr.getByName("127.0.0.1");
-      testID = theDaemon.getIdentityManager().findIdentity(testaddr);
+      testID = theDaemon.getIdentityManager().findIdentity(testaddr, 0);
       testaddr1 = IPAddr.getByName("1.1.1.1");
-      testID1 = theDaemon.getIdentityManager().findIdentity(testaddr1);
+      testID1 = theDaemon.getIdentityManager().findIdentity(testaddr1, 0);
     }
     catch (UnknownHostException ex) {
       fail("can't open test host");

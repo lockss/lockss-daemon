@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.61 2004-01-31 22:56:09 tlipkis Exp $
+ * $Id: TestPollManager.java,v 1.62 2004-09-13 04:02:24 dshr Exp $
  */
 
 /*
@@ -146,7 +146,7 @@ public class TestPollManager extends LockssTestCase {
       cus = plugin.makeCachedUrlSet(testau,
 				    new RangeCachedUrlSetSpec(rooturls[1]));
       PollSpec spec = new PollSpec(cus, lwrbnd, uprbnd);
-      pollmanager.sendPollRequest(LcapMessage.VERIFY_POLL_REQ, spec);
+      assertTrue(pollmanager.callPoll(Poll.VERIFY_POLL, spec));
     }
     catch (IllegalStateException e) {
       // ignore this for now
@@ -437,7 +437,7 @@ public class TestPollManager extends LockssTestCase {
   private void initTestAddr() {
     try {
       testaddr = IPAddr.getByName("127.0.0.1");
-      testID = theDaemon.getIdentityManager().findIdentity(testaddr);
+      testID = theDaemon.getIdentityManager().findIdentity(testaddr, 0);
     }
     catch (UnknownHostException ex) {
       fail("can't open test host");

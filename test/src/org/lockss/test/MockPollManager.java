@@ -1,5 +1,5 @@
 /*
-* $Id: MockPollManager.java,v 1.11 2004-08-02 02:59:35 tlipkis Exp $
+* $Id: MockPollManager.java,v 1.12 2004-09-13 04:02:25 dshr Exp $
  */
 
 /*
@@ -54,30 +54,61 @@ public class MockPollManager extends PollManager {
     super();
   }
   public void initService(LockssDaemon daemon) throws LockssAppException {
+    theLog.debug("MockPollManager: initService");
     super.initService(daemon);
   }
   public void startService() {
+    theLog.debug("MockPollManager: startService");
     super.startService();
   }
 
   public void stopService() {
+    theLog.debug("MockPollManager: stopService");
     super.stopService();
     thePolls = new Hashtable();
   }
 
-  public void sendPollRequest(int opcode, PollSpec ps) throws IOException {
+  public boolean callPoll(int polltype, PollSpec pollspec) {
+    boolean ret = false;
+    theLog.debug("MockPollManager: call V" + pollspec.getPollVersion() + " poll");
+    switch (pollspec.getPollVersion()) {
+    case 1:
+      try {
+	sendV1PollRequest(polltype, pollspec);
+	ret = true;
+      } catch (IOException ioe) {
+	theLog.error("Exception sending V1 poll request for " +
+		     pollspec + ioe);
+      }
+      break;
+    default:
+      theLog.error("No support for V" + pollspec.getPollVersion() + " yet");
+      break;
+    }
+    theLog.debug("MockPollManager: call " + (ret ? "succeeds" : "fails"));
+    return ret;
+  }
+
+
+  private void sendV1PollRequest(int opcode, PollSpec ps) throws IOException {
     // note: uses a different key than the other two, since we're not
     // creating an actual challenge and verifier to key off of.
-    if (opcode == LcapMessage.CONTENT_POLL_REQ) {
+    if (opcode == Poll.CONTENT_POLL) {
+      theLog.debug("MockPollManager: send V1 content poll request");
       thePolls.put(ps.getUrl(), CONTENT_REQUESTED);
     }
-    else if (opcode == LcapMessage.NAME_POLL_REQ) {
-      thePolls.put(ps.getUrl(), NAME_REQUESTED);
+    else if (opcode == Poll.NAME_POLL) { 
+      theLog.debug("MockPollManager: send V1 name poll request");
+     thePolls.put(ps.getUrl(), NAME_REQUESTED);
+    } else {
+      theLog.debug("MockPollManager: send V1 bogus poll request");
     }
   }
 
   public boolean isPollRunning(int opcode, PollSpec ps) {
-    return thePolls.get(ps.getUrl()) != null;
+    boolean ret = thePolls.get(ps.getUrl()) != null;
+    theLog.debug("MockPollManager: isPollRunning(" + ps.getUrl() + ") " + ret);
+    return ret;
   }
 
   public void suspendPoll(String key) {
@@ -89,16 +120,43 @@ public class MockPollManager extends PollManager {
   }
 
   public String getPollStatus(String key) {
-    return (String)thePolls.get(key);
+    String ret = (String)thePolls.get(key);
+    theLog.debug("MockPollManager: getPollStatus(" + key + ") " + ret);
+    return ret;
   }
 
   public BasePoll createPoll(LcapMessage msg, PollSpec pollspec) throws ProtocolException {
-    try {
-      sendPollRequest(msg.getOpcode(), pollspec);
+    theLog.debug("MockPollManager: createPoll(" + pollspec.getUrl() + ") ");
+    int polltype = -1;
+    switch (pollspec.getPollVersion()) {
+    case 1:
+      int opcode = msg.getOpcode();
+      switch (opcode) {
+      case LcapMessage.CONTENT_POLL_REQ:
+      case LcapMessage.CONTENT_POLL_REP:
+	polltype = Poll.CONTENT_POLL;
+	break;
+      case LcapMessage.NAME_POLL_REQ:
+      case LcapMessage.NAME_POLL_REP:
+	polltype = Poll.NAME_POLL;
+	break;
+      case LcapMessage.VERIFY_POLL_REQ:
+      case LcapMessage.VERIFY_POLL_REP:
+	polltype = Poll.VERIFY_POLL;
+	break;
+      default:
+	theLog.error("Bad V1 poll message opcode: " +  opcode);
+      }
+      break;
+    default:
+      theLog.error("No support for V" + pollspec.getPollVersion() + " yet");
     }
-    catch (IOException ex) {
+    if (polltype != -1) {
+      callPoll(polltype, pollspec);
+      return super.createPoll(msg, pollspec);
+    } else {
+      return null;
     }
-    return super.createPoll(msg, pollspec);
 
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestIdentityManager.java,v 1.26 2004-02-07 06:51:18 eaalto Exp $
+ * $Id: TestIdentityManager.java,v 1.27 2004-09-13 04:02:24 dshr Exp $
  */
 
 /*
@@ -68,14 +68,14 @@ public class TestIdentityManager extends LockssTestCase {
     idmgr = theDaemon.getIdentityManager();
 
     try {
-      fakeId = idmgr.findIdentity(LcapIdentity.stringToAddr(fakeIdString));
+      fakeId = idmgr.findIdentity(fakeIdString);
       testAddress = IPAddr.getByName("127.0.0.1");
     }
     catch (UnknownHostException ex) {
       fail("can't open test host");
     }
     testReputation = IdentityManager.INITIAL_REPUTATION;
-    testIdKey = LcapIdentity.makeIdKey(testAddress);
+    testIdKey = LcapIdentity.makeIdKey(testAddress, 0);
 
   }
 
@@ -87,7 +87,7 @@ public class TestIdentityManager extends LockssTestCase {
   /** test for method getIdentity(..) */
   public void testFindIdentity() {
     assertNotNull(fakeId);
-    assertEquals(fakeId, idmgr.findIdentity(fakeId.getAddress()));
+    assertEquals(fakeId, idmgr.findIdentity(fakeId.getAddress(), 0));
   }
 
   /** test for method findIdentity(..) */
@@ -214,9 +214,9 @@ public class TestIdentityManager extends LockssTestCase {
     String fakeIdString3 = "213.239.33.102";
 
     try {
-      assertNotNull(idmgr.findIdentity(LcapIdentity.stringToAddr(fakeIdString1)));
-      assertNotNull(idmgr.findIdentity(LcapIdentity.stringToAddr(fakeIdString2)));
-      assertNotNull(idmgr.findIdentity(LcapIdentity.stringToAddr(fakeIdString3)));
+      assertNotNull(idmgr.findIdentity(fakeIdString1));
+      assertNotNull(idmgr.findIdentity(fakeIdString2));
+      assertNotNull(idmgr.findIdentity(fakeIdString3));
       idmgr.storeIdentities();
     } catch (ProtocolException ex) {
       fail("identity db store failed");

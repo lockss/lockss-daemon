@@ -1,5 +1,5 @@
 /*
- * $Id: PollTally.java,v 1.24 2004-07-23 16:44:10 tlipkis Exp $
+ * $Id: PollTally.java,v 1.25 2004-09-13 04:02:21 dshr Exp $
  */
 
 /*
@@ -194,11 +194,12 @@ public abstract class PollTally implements Tallier{
    * @param voterID the LcapIdentity of the voter to check
    * @return true if a vote can be found for this Identity.
    */
-  boolean hasVoted(LcapIdentity voterID) {
+  boolean hasVoted(LcapIdentity voter) {
     Iterator it = pollVotes.iterator();
+    String voterID = voter.getIdKey();
     while(it.hasNext()) {
       Vote vote = (Vote) it.next();
-      if(voterID.isEqual(vote.getIDAddress())) {
+      if(voterID.compareTo(vote.getIdentityKey()) == 0) {
         return true;
       }
     }

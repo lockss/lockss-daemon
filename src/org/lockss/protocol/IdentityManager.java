@@ -1,5 +1,5 @@
 /*
-* $Id: IdentityManager.java,v 1.42 2004-08-22 02:05:53 tlipkis Exp $
+* $Id: IdentityManager.java,v 1.43 2004-09-13 04:02:21 dshr Exp $
  */
 
 /*
@@ -143,7 +143,8 @@ public class IdentityManager
   protected void makeLocalIdentity() throws LockssAppException {
     try {
       IPAddr addr = IPAddr.getByName(localIdentityStr);
-      theLocalIdentity = new LcapIdentity(addr);
+      // XXX the local identity for now is V1
+      theLocalIdentity = new LcapIdentity(addr, 0);
     } catch (UnknownHostException uhe) {
       log.error("Could not resolve: " + localIdentityStr, uhe);
       throw new
@@ -180,19 +181,47 @@ public class IdentityManager
    * public constructor for the creation of an Identity object
    * from an address.
    * @param addr the IPAddr
-   * @return a newly constructed Identity
+   * @return a pre-existing or newly constructed Identity
    */
-  public LcapIdentity findIdentity(IPAddr addr) {
+  public LcapIdentity findIdentity(IPAddr addr, int port) {
     LcapIdentity ret;
 
     if(addr == null)  {
       ret = getLocalIdentity();
     }
     else  {
-      ret = getIdentity(LcapIdentity.makeIdKey(addr));
-      if(ret == null)  {
-        ret = new LcapIdentity(addr);
-        theIdentities.put(ret.getIdKey(), ret);
+      String idKey = LcapIdentity.makeIdKey(addr, port);
+      ret = getIdentity(idKey);
+      if(ret == null)  try {
+        ret = new LcapIdentity(idKey, INITIAL_REPUTATION);
+        theIdentities.put(idKey, ret);
+      } catch (UnknownHostException uhe) {
+	log.warning("Can't create identity for " + idKey);
+      }
+    }
+
+    return ret;
+  }
+
+  /**
+   * public constructor for the creation of an Identity object
+   * from an ID key.
+   * @param idKey the ID key
+   * @return a pre-existing or newly constructed Identity
+   */
+  public LcapIdentity findIdentity(String idKey) {
+    LcapIdentity ret;
+
+    if(idKey == null)  {
+      ret = getLocalIdentity();
+    }
+    else  {
+      ret = getIdentity(idKey);
+      if(ret == null)  try {
+        ret = new LcapIdentity(idKey, INITIAL_REPUTATION);
+        theIdentities.put(idKey, ret);
+      } catch (UnknownHostException uhe) {
+	log.warning("Can't create identity for " + idKey);
       }
     }
 
@@ -235,6 +264,15 @@ public class IdentityManager
   }
 
   /**
+   * return true if this Identity is the same as the local host
+   * @param id the ID string
+   * @return boolean true if this is the local identity, false otherwise
+   */
+  public boolean isLocalIdentity(String id) {
+    return (localIdentityStr.compareTo(id) == 0);
+  }
+
+  /**
    * returns true if the IPAddr is the same as the IPAddr for our
    * local host
    * @param addr the address to check
@@ -252,11 +290,16 @@ public class IdentityManager
     return REPUTATION_NUMERATOR;
   }
 
+  public void changeReputation(String idKey, int changeKind) {
+    LcapIdentity id = findIdentity(idKey);
+    changeReputation(id, changeKind);
+  }
+
   public void changeReputation(LcapIdentity id, int changeKind) {
     int delta = reputationDeltas[changeKind];
     int max_delta = reputationDeltas[MAX_DELTA];
     int reputation = id.getReputation();
-
+    
     if (id == theLocalIdentity) {
       log.debug(id.getIdKey() + " ignoring reputation delta " + delta);
       return;
@@ -266,20 +309,17 @@ public class IdentityManager
 
     if (delta > 0) {
       if (delta > max_delta) {
-        delta = max_delta;
-
+	delta = max_delta;
       }
       if (delta > (REPUTATION_NUMERATOR - reputation)) {
-        delta = (REPUTATION_NUMERATOR - reputation);
-
+	delta = (REPUTATION_NUMERATOR - reputation);
       }
-    }
-    else if (delta < 0) {
+    } else if (delta < 0) {
       if (delta < (-max_delta)) {
-        delta = -max_delta;
+	delta = -max_delta;
       }
       if ((reputation + delta) < 0) {
-        delta = -reputation;
+	delta = -reputation;
       }
     }
     if (delta != 0)
@@ -353,13 +393,13 @@ public class IdentityManager
     synchronized(theIdentities) {
       while (beanIter.hasNext()) {
         IdentityBean bean = (IdentityBean)beanIter.next();
+        String idKey = bean.getKey();
         try {
-          LcapIdentity id = new LcapIdentity(bean.getKey(), bean.getReputation());
-          theIdentities.put(id.getIdKey(), id);
+          LcapIdentity id = new LcapIdentity(idKey, bean.getReputation());
+          theIdentities.put(idKey, id);
         }
         catch (UnknownHostException ex) {
-          log.warning("Error reloading identity-Unknown Host: " +
-		      bean.getKey());
+          log.warning("Error reloading identity-Unknown Host: " + idKey);
         }
       }
     }
@@ -563,7 +603,7 @@ public class IdentityManager
   private static final List statusColDescs =
     ListUtil.list(
 		  new ColumnDescriptor("ip", "IP",
-				       ColumnDescriptor.TYPE_IP_ADDRESS),
+				       ColumnDescriptor.TYPE_STRING),
 		  new ColumnDescriptor("lastPkt", "Last Pkt",
 				       ColumnDescriptor.TYPE_DATE,
 				       "Last time a packet that originated " +
@@ -702,15 +742,15 @@ public class IdentityManager
 
     private Map makeRow(LcapIdentity id) {
       Map row = new HashMap();
-      IPAddr ip = id.getAddress();
-      Object obj = ip;
-      if (isLocalIdentity(ip)) {
+      String idKey = id.getIdKey();
+      if (isLocalIdentity(idKey)) {
 	StatusTable.DisplayedValue val =
-	  new StatusTable.DisplayedValue(ip);
+	  new StatusTable.DisplayedValue(idKey);
 	val.setBold(true);
-	obj = val;
+	row.put("ip", val);
+      } else {
+	row.put("ip", idKey);
       }
-      row.put("ip", obj);
       row.put("lastPkt", new Long(id.getLastActiveTime()));
       row.put("lastOp", new Long(id.getLastOpTime()));
       row.put("origTot", new Long(id.getEventCount(LcapIdentity.EVENT_ORIG)));

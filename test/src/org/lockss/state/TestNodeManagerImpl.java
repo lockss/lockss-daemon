@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.114 2004-08-22 02:05:48 tlipkis Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.115 2004-09-13 04:02:25 dshr Exp $
  */
 
 /*
@@ -164,7 +164,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     polls.add(new PollState(1, "lwr1", "upr1", 1, 0, Deadline.MAX, false));
 
     // start the poll
-    pollManager.sendPollRequest(LcapMessage.CONTENT_POLL_REQ, new PollSpec(cus));
+    assertTrue(pollManager.callPoll(Poll.CONTENT_POLL, new PollSpec(cus)));
 
     NodeStateImpl node = new NodeStateImpl(cus, 123, new CrawlState(-1, -1, -1),
                                            polls, historyRepo);
@@ -172,7 +172,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
 
     // should keep poll active
     node = (NodeStateImpl)nodeManager.getNodeState(cus);
-    assertEquals(1, node.polls.size());
+    assertEquals(1, node.polls.size()); // XXX failing - its 0
     assertFalse(node.getPollHistories().hasNext());
 
     cus = getCus(mau, TEST_URL + "/branch4");
@@ -784,7 +784,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     // should call SNCUSS
     assertEquals(NodeState.POSSIBLE_DAMAGE_HERE, nodeState.getState());
     assertEquals(MockPollManager.CONTENT_REQUESTED,
-                 pollManager.getPollStatus(TEST_URL));
+                 pollManager.getPollStatus(TEST_URL));  // XXX failing
   }
 
   public void testRepairOnStart() throws Exception {
@@ -907,7 +907,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     assertEquals(PollState.WON, pollState.getStatus());
     assertEquals(TimeBase.nowMs(), auState.getLastTopLevelPollTime());
     assertEquals(MockPollManager.CONTENT_REQUESTED,
-                 pollManager.getPollStatus("testDir1"));
+                 pollManager.getPollStatus("testDir1"));  // XXX failing
     assertEquals(MockPollManager.CONTENT_REQUESTED,
                  pollManager.getPollStatus("testDir2"));
   }
@@ -959,7 +959,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     NodeState nodeState = nodeManager.getNodeState(getCus(mau, TEST_URL));
 
     // these are true if the pollmanager doesn't know about them
-    historyCheckTestName(PollState.SCHEDULED, nodeState, true, true);
+    historyCheckTestName(PollState.SCHEDULED, nodeState, true, true); // XXX sched service not running
     historyCheckTestName(PollState.SCHEDULED, nodeState, false, false);
 
     historyCheckTestName(PollState.RUNNING, nodeState, true, true);
@@ -1022,7 +1022,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
 
     // schedule content polls
     nodeState.setState(NodeState.NEEDS_POLL);
-    stateCheckTest(nodeState, Poll.CONTENT_POLL, false, true, false,  false, true);
+    stateCheckTest(nodeState, Poll.CONTENT_POLL, false, true, false,  false, true);  // XXX Failing
     //- change to 'NEEDS_POLL'
     nodeState.setState(NodeState.CONTENT_RUNNING);
     stateCheckTest(nodeState, Poll.CONTENT_POLL, false, true, false,  true, true);
@@ -1192,7 +1192,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
       if (!vote.isAgreeVote()) {
         repChange = IdentityManager.DISAGREE_VOTE;
       }
-      assertEquals(repChange, idManager.lastChange(vote.getIDAddress()));
+      assertEquals(repChange, idManager.lastChange(vote.getIdentityKey()));
     }
   }
 
@@ -1313,7 +1313,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     } else {
       try {
         IPAddr testAddr = IPAddr.getByName("123.3.4.5");
-        testID = idManager.findIdentity(testAddr);
+        testID = idManager.findIdentity(testAddr, 0);
       } catch (UnknownHostException ex) {
         fail("can't open test host");
       }

@@ -1,5 +1,5 @@
 /*
- * $Id: PollHistoryBean.java,v 1.10 2004-04-01 02:44:32 eaalto Exp $
+ * $Id: PollHistoryBean.java,v 1.11 2004-09-13 04:02:23 dshr Exp $
  */
 
 /*
@@ -173,12 +173,7 @@ public class PollHistoryBean extends PollHistory {
     Iterator beanIter = voteBeans.iterator();
     while (beanIter.hasNext()) {
       VoteBean bean = (VoteBean)beanIter.next();
-      try {
-        votes.add(bean.getVote());
-      }
-      catch (UnknownHostException ex) {
-        log.error("invalid address in Vote Bean");
-      }
+      votes.add(bean.getVote());
     }
   }
 

@@ -1,5 +1,5 @@
 /*
-* $Id: MockIdentityManager.java,v 1.7 2004-08-02 02:59:35 tlipkis Exp $
+* $Id: MockIdentityManager.java,v 1.8 2004-09-13 04:02:25 dshr Exp $
  */
 
 /*
@@ -55,11 +55,11 @@ public class MockIdentityManager extends IdentityManager {
     idMap = new HashMap();
   }
 
-  public void changeReputation(IPAddr id, int changeKind) {
+  public void changeReputation(String id, int changeKind) {
     idMap.put(id, new Integer(changeKind));
   }
 
-  public int lastChange(IPAddr id) {
+  public int lastChange(String id) {
     Integer change = (Integer)idMap.get(id);
     if (change==null) {
       return -1;

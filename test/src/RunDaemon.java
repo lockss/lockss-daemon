@@ -1,5 +1,5 @@
 /*
- * $Id: RunDaemon.java,v 1.43 2004-08-21 06:54:29 tlipkis Exp $
+ * $Id: RunDaemon.java,v 1.44 2004-09-13 04:02:23 dshr Exp $
  */
 
 /*
@@ -146,7 +146,7 @@ public class RunDaemon
 
   private void callPoll() {
     int poll_type = Configuration.getIntParam(PARAM_POLL_TYPE,
-                                              LcapMessage.CONTENT_POLL_REQ);
+                                              Poll.CONTENT_POLL);
     String auId = Configuration.getParam(PARAM_PS_AUID);
     String url = Configuration.getParam(PARAM_PS_URL, "LOCKSSAU:");
     String lwrBound = Configuration.getParam(PARAM_PS_LWRBND);
@@ -157,7 +157,7 @@ public class RunDaemon
     CachedUrlSet cus = getPluginManager().findCachedUrlSet(spec);
     try {
       Thread.currentThread().sleep(10000);
-      getPollManager().sendPollRequest(poll_type, new PollSpec(cus));
+      getPollManager().callPoll(poll_type, new PollSpec(cus));
     }
     catch (Exception e) {
       e.printStackTrace();

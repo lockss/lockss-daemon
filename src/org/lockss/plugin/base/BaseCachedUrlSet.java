@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrlSet.java,v 1.12 2004-09-02 07:46:48 tlipkis Exp $
+ * $Id: BaseCachedUrlSet.java,v 1.13 2004-09-13 04:02:21 dshr Exp $
  */
 
 /*
@@ -279,11 +279,6 @@ public class BaseCachedUrlSet implements CachedUrlSet {
     SystemMetrics metrics = theDaemon.getSystemMetrics();
     long bytesPerMs = 0;
     try {
-      // SystemMetrics doesn't use the hasher currently anyway, so don't
-      // bother creating it
-//         MessageDigest hasher = LcapMessage.getDefaultHasher();
-//         CachedUrlSetHasher cush = contentHasherFactory(this, hasher);
-//         bytesPerMs = metrics.getBytesPerMsHashEstimate(cush, hasher);
       bytesPerMs = metrics.getBytesPerMsHashEstimate();
       if (bytesPerMs > 0) {
 	return /*(long)*/(size / bytesPerMs);

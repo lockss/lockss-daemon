@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.45 2004-05-19 20:06:05 clairegriffin Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.46 2004-09-13 04:02:24 dshr Exp $
  */
 
 /*
@@ -420,7 +420,7 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
   }
 
   private String createIdentityKey() throws Exception {
-    theDaemon.getIdentityManager().findIdentity(IPAddr.getByName("127.0.0.1"));
+    theDaemon.getIdentityManager().findIdentity("127.0.0.1");
     return "127.0.0.1";
   }
 

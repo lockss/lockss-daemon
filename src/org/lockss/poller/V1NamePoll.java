@@ -1,5 +1,5 @@
 /*
- * $Id: V1NamePoll.java,v 1.3 2003-10-31 18:34:30 dshr Exp $
+ * $Id: V1NamePoll.java,v 1.4 2004-09-13 04:02:21 dshr Exp $
  */
 
 /*
@@ -206,12 +206,9 @@ public class V1NamePoll extends V1Poll {
       log.debug3("buildPollLists 2");
       if (lwrRem != null) {
         // we call a new poll on the remaining entries and set the regexp
-        try {
-          PollSpec spec = new PollSpec(m_pollspec.getCachedUrlSet(),lwrRem, uprRem);
-          m_pollmanager.sendPollRequest(LcapMessage.NAME_POLL_REQ, spec);
-        }
-        catch (IOException ex) {
-          log.error("unable to create new poll request", ex);
+	PollSpec spec = new PollSpec(m_pollspec.getCachedUrlSet(),lwrRem, uprRem);
+	if (m_pollmanager.callPoll(Poll.NAME_POLL, spec)) {
+          log.error("unable to call name poll for " + spec);
         }
 	log.debug3("buildPollLists 3");
         // we make our list from whatever is in our
@@ -238,12 +235,12 @@ public class V1NamePoll extends V1Poll {
   }
 
   /**
-   * make a NameVote
+   * make a NameVote.  NB - used only by TestPoll
    * @param msg the message needed to make the vote
    * @param agree a boolean set true if this is an agree vote, false otherwise.
-   * @return the newly create NameVote object
+   * @return the newly created NameVote object
    */
-  NameVote makeVote(LcapMessage msg, boolean agree) {
+  NameVote makeNameVote(LcapMessage msg, boolean agree) {
     return new NameVote(msg, agree);
   }
 

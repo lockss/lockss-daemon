@@ -1,5 +1,5 @@
 /*
-* $Id: Vote.java,v 1.10 2004-01-20 18:22:51 tlipkis Exp $
+* $Id: Vote.java,v 1.11 2004-09-13 04:02:21 dshr Exp $
  */
 
 /*
@@ -45,71 +45,108 @@ import org.lockss.util.*;
  * to run a repair poll.
  */
 public class Vote implements Serializable {
-  private IPAddr voteAddr;
-  protected boolean agree;
-  private byte[] challenge;
-  private byte[] verifier;
-  private byte[] hash;
-
+  // We don't store the LcapIdentity object itself so that IdentityManager
+  // can change the representation of identities dynamically.
+  private String voterID = null;
+  protected boolean agree = false;
+  private ActiveVote activeInfo = null;
 
   protected Vote() {
   }
 
 
   Vote(byte[] challenge, byte[] verifier, byte[] hash,
-       IPAddr addr, boolean agree) {
-    this.voteAddr = addr;
+       LcapIdentity id, boolean agree) {
+    this.voterID = id.getIdKey();
     this.agree = agree;
-    this.challenge = challenge;
-    this.verifier = verifier;
-    this.hash = hash;
+    activeInfo = new V1ActiveVote(challenge, verifier, hash);
+  }
+
+  Vote(byte[] challenge, byte[] verifier, byte[] hash,
+       String idKey, boolean agree) {
+    this.voterID = idKey;
+    this.agree = agree;
+    activeInfo = new V1ActiveVote(challenge, verifier, hash);
   }
 
   Vote(Vote vote) {
     this(vote.getChallenge(),vote.getVerifier(),vote.getHash(),
-         vote.getIDAddress(),vote.agree);
+         vote.voterID,vote.agree);
   }
 
   Vote(LcapMessage msg, boolean agree) {
     this(msg.getChallenge(), msg.getVerifier(), msg.getHashed(),
-         msg.getOriginAddr(), agree);
+         msg.getOriginatorID(), agree);
   }
 
+  /**
+   * Create a Vote object from strings.  used by VoteBean
+   * XXX VoteBean should not need the challenge, verifier and hash.
+   * @param challengeStr B64 encoded string of the challenge
+   * @param verifierStr B64 encoded string of the challenge
+   * @param hashStr B64 encoded string of the challenge
+   * @param idStr the string ID of the voter's identity
+   * @param agree boolean indiciating agreement or disagreement
+   * @return newly created Vote object
+   */
 
   protected Vote makeVote(String challengeStr, String verifierStr, String hashStr,
-                 String idStr, boolean agree) throws java.net.UnknownHostException{
+                 String idStr, boolean agree) {
     Vote vote = new Vote();
-    vote.voteAddr = LcapIdentity.stringToAddr(idStr);
+    vote.voterID = idStr;
     vote.agree = agree;
-    vote.challenge = B64Code.decode(challengeStr.toCharArray());
-    vote.verifier = B64Code.decode(verifierStr.toCharArray());
-    vote.hash = B64Code.decode(hashStr.toCharArray());
+    // XXX the ActiveVote info should not be needed
+    if (challengeStr != null && verifierStr != null && hashStr != null) {
+      activeInfo = new V1ActiveVote(B64Code.decode(challengeStr.toCharArray()),
+				    B64Code.decode(verifierStr.toCharArray()),
+				    B64Code.decode(hashStr.toCharArray()));
+    }
     return vote;
   }
 
+  /**
+   * Discard the information no longer needed after the poll has finished.
+   */
+  protected void pollClosed() {
+    activeInfo = null;
+  }
+
+  /**
+   * Set the agreement state of the Vote according to whether the argument
+   * hash matches the stored hash.
+   * @param new_hash a byte array containing the hash to be compared
+   * @return true if the argument and stored hashes match
+   */
   boolean setAgreeWithHash(byte[] new_hash) {
-    agree = Arrays.equals(hash, new_hash);
+    if (activeInfo != null) {
+      byte[] hash = ((V1ActiveVote) activeInfo).getHash();
+      agree = Arrays.equals(hash, new_hash);
+    }
 
     return agree;
   }
 
   public String toString() {
     StringBuffer sbuf = new StringBuffer();
-    sbuf.append("[Vote: ");
-    sbuf.append("from " + voteAddr);
-    sbuf.append(" C(" + getChallengeString());
-    sbuf.append(") V(" + getVerifierString());
-    sbuf.append(") H(" + getHashString());
-    sbuf.append(")]");
+    sbuf.append(agree ? "[YesVote: " : "[NoVote: ");
+    sbuf.append("from " + voterID);
+    if (activeInfo != null) {
+      V1ActiveVote ai = (V1ActiveVote) activeInfo;
+      sbuf.append(" C(" + getChallengeString());
+      sbuf.append(") V(" + getVerifierString());
+      sbuf.append(") H(" + getHashString());
+      sbuf.append(")");
+    }
+    sbuf.append("]");
     return sbuf.toString();
   }
 
   /**
-   * Return the Identity of the voter
+   * Return the Identity key of the voter
    * @return <code>LcapIdentity</code> the id
    */
-  public IPAddr getIDAddress() {
-    return voteAddr;
+  public String getIdentityKey() {
+    return voterID;
   }
 
   /**
@@ -125,7 +162,11 @@ public class Vote implements Serializable {
    * @return the array of bytes of the challenge
    */
   public byte[] getChallenge() {
-    return challenge;
+    byte[] ret = null;
+    if (activeInfo != null) {
+      ret = activeInfo.getChallenge();
+    }
+    return ret;
   }
 
   /**
@@ -133,7 +174,11 @@ public class Vote implements Serializable {
    * @return a String representing the challenge
    */
   public String getChallengeString() {
-    return String.valueOf(B64Code.encode(challenge));
+    String ret = null;
+    if (activeInfo != null) {
+      ret = String.valueOf(B64Code.encode(activeInfo.getChallenge()));
+    }
+    return ret;
   }
 
   /**
@@ -141,7 +186,11 @@ public class Vote implements Serializable {
    * @return the array of bytes of the hash
    */
   public byte[] getHash() {
-    return hash;
+    byte[] ret = null;
+    if (activeInfo != null) {
+      ret = activeInfo.getHash();
+    }
+    return ret;
   }
 
   /**
@@ -149,11 +198,14 @@ public class Vote implements Serializable {
    * @return a String representing the hash
    */
   public String getHashString() {
-    if(hash != null) {
-      return String.valueOf(B64Code.encode(hash));
+    String ret = null;
+    if (activeInfo != null) {
+      byte[] hash = activeInfo.getHash();
+      if(hash != null) {
+	ret = String.valueOf(B64Code.encode(hash));
+      }
     }
-    else
-      return null;
+    return ret;
   }
 
   /**
@@ -161,7 +213,11 @@ public class Vote implements Serializable {
    * @return the array of bytes of the verifier
    */
   public byte[] getVerifier() {
-    return verifier;
+    byte[] ret = null;
+    if (activeInfo != null) {
+      ret = activeInfo.getVerifier();
+    }
+    return ret;
   }
 
   /**
@@ -169,7 +225,12 @@ public class Vote implements Serializable {
    * @return a String representing the verifier
    */
   public String getVerifierString() {
-    return String.valueOf(B64Code.encode(verifier));
+    String ret = null;
+    if (activeInfo != null) {
+      byte[] verifier = activeInfo.getVerifier();
+      ret = String.valueOf(B64Code.encode(verifier));
+    }
+    return ret;
   }
 
   public String getPollKey() {
@@ -177,3 +238,35 @@ public class Vote implements Serializable {
   }
 
 }
+
+class ActiveVote {
+  byte[] challenge;
+  byte[] verifier;
+
+  byte[] getChallenge() {
+    return challenge;
+  }
+
+  byte[] getVerifier() {
+    return verifier;
+  }
+
+  byte[] getHash() {
+    return null;
+  }
+}
+
+class V1ActiveVote extends ActiveVote {
+  byte[] hash;
+
+  V1ActiveVote(byte[] c, byte[] v, byte[] h) {
+    challenge = c;
+    verifier = v;
+    hash = h;
+  }
+
+  byte[] getHash() {
+    return hash;
+  }
+}
+

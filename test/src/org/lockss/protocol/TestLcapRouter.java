@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapRouter.java,v 1.12 2004-07-23 16:44:09 tlipkis Exp $
+ * $Id: TestLcapRouter.java,v 1.13 2004-09-13 04:02:24 dshr Exp $
  */
 
 /*
@@ -122,9 +122,9 @@ public class TestLcapRouter extends LockssTestCase {
     testmsg.m_targetUrl = urlstr;
     testmsg.m_lwrBound = lwrbnd;
     testmsg.m_uprBound = uprbnd;
-    testID = new LcapIdentity(testaddr);
+    testID = new LcapIdentity(testaddr, 0);
 
-    testmsg.m_originAddr = testaddr;
+    testmsg.m_originatorID = testaddr.toString();
     testmsg.m_hashAlgorithm = LcapMessage.getDefaultHashAlgorithm();
     testmsg.m_startTime = 123456789;
     testmsg.m_stopTime = 987654321;

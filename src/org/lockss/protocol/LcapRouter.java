@@ -1,5 +1,5 @@
 /*
- * $Id: LcapRouter.java,v 1.36 2004-08-22 02:05:53 tlipkis Exp $
+ * $Id: LcapRouter.java,v 1.37 2004-09-13 04:02:22 dshr Exp $
  */
 
 /*
@@ -236,46 +236,51 @@ public class LcapRouter
 
   // decide where to forward incoming message
   void routeIncomingMessage(LockssReceivedDatagram dg, LcapMessage msg) {
-    IPAddr sender = dg.getSender();
-    IPAddr originator = msg.getOriginAddr();
-    idEvent(originator, LcapIdentity.EVENT_ORIG, msg);
-    if (!msg.isNoOp()) {
-      idEvent(originator, LcapIdentity.EVENT_ORIG_OP, msg);
-    }
-    if (sender.equals(originator)) {
-      idEvent(sender, LcapIdentity.EVENT_SEND_ORIG, msg);
-    } else {
-      idEvent(sender, LcapIdentity.EVENT_SEND_FWD, msg);
-    }
-    log.debug2("incoming orig: " + originator + " , sender: " + sender);
-    if (isEligibleToForward(dg, msg)) {
-      //XXX need to clone message here to avoid overwrite problems
-      msg.setHopCount(msg.getHopCount() - 1);
-      try {
-	LockssDatagram fwddg = new LockssDatagram(dg.getProtocol(),
-						  msg.encodeMsg());
-	if (dg.isMulticast()) {
-	  partnerList.multicastPacketReceivedFrom(sender);
-	  if (!sender.equals(originator)) {
-	    partnerList.addPartner(originator, probAddPartner);
-	  }
-	  doUnicast(fwddg, fwdRateLimiter, sender, originator);
-	} else {
-	  partnerList.addPartner(sender, 1.0);
-	  if (!sender.equals(originator)) {
-	    partnerList.addPartner(originator, probAddPartner);
-	  }
-	  doMulticast(fwddg, fwdRateLimiter, null);
-	  doUnicast(fwddg, fwdRateLimiter, sender, originator);
-	}
-      } catch (IOException e) {
-	log.warning("Couldn't forward message", e);
+    try {
+      IPAddr sender = dg.getSender();
+      IPAddr originator = LcapIdentity.stringToAddr(msg.getOriginatorID());
+      idEvent(originator, LcapIdentity.EVENT_ORIG, msg);
+      if (!msg.isNoOp()) {
+	idEvent(originator, LcapIdentity.EVENT_ORIG_OP, msg);
       }
+      if (sender.equals(originator)) {
+	idEvent(sender, LcapIdentity.EVENT_SEND_ORIG, msg);
+      } else {
+	idEvent(sender, LcapIdentity.EVENT_SEND_FWD, msg);
+      }
+      log.debug2("incoming orig: " + originator + " , sender: " + sender);
+      if (isEligibleToForward(dg, msg)) {
+	//XXX need to clone message here to avoid overwrite problems
+	msg.setHopCount(msg.getHopCount() - 1);
+	try {
+	  LockssDatagram fwddg = new LockssDatagram(dg.getProtocol(),
+						  msg.encodeMsg());
+	  if (dg.isMulticast()) {
+	    partnerList.multicastPacketReceivedFrom(sender);
+	    if (!sender.equals(originator)) {
+	      partnerList.addPartner(originator, probAddPartner);
+	    }
+	    doUnicast(fwddg, fwdRateLimiter, sender, originator);
+	  } else {
+	    partnerList.addPartner(sender, 1.0);
+	    if (!sender.equals(originator)) {
+	      partnerList.addPartner(originator, probAddPartner);
+	    }
+	    doMulticast(fwddg, fwdRateLimiter, null);
+	    doUnicast(fwddg, fwdRateLimiter, sender, originator);
+	  }
+	} catch (IOException e) {
+	  log.warning("Couldn't forward message", e);
+	}
+      }
+    } catch (UnknownHostException uhe) {
+      log.warning("Couldn't find sender of " + msg.toString());
     }
   }
 
   void idEvent(IPAddr addr, int event, LcapMessage msg) {
-    LcapIdentity id = idMgr.findIdentity(addr);
+    // Use port 0 to indicate V1 identity
+    LcapIdentity id = idMgr.findIdentity(addr, 0);
     if (id != null) {
       id.rememberEvent(event, msg);
     }
@@ -318,7 +323,7 @@ public class LcapRouter
   // true if either the packet's source address is one of my interfaces,
   // or if I am (my identity is) the originator
   boolean didIOriginateOrSend(LockssReceivedDatagram dg, LcapMessage msg) {
-    if (msg.getOriginAddr().equals(getLocalIdentityAddr())) {
+    if (msg.getOriginatorID().equals(idMgr.getLocalHostName())) {
       return true;
     }
     return comm.didISend(dg);

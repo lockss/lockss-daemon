@@ -1,5 +1,5 @@
 /*
-* $Id: PollerStatus.java,v 1.14 2004-05-11 23:51:55 tlipkis Exp $
+* $Id: PollerStatus.java,v 1.15 2004-09-13 04:02:21 dshr Exp $
  */
 
 /*
@@ -350,12 +350,11 @@ public class PollerStatus {
   static class PollStatus implements StatusAccessor {
     static final String TABLE_NAME = POLL_STATUS_TABLE_NAME;
 
-    static final int IPTYPE = ColumnDescriptor.TYPE_IP_ADDRESS;
     static final int INTTYPE = ColumnDescriptor.TYPE_INT;
     static final int STRINGTYPE = ColumnDescriptor.TYPE_STRING;
 
     private static final List columnDescriptors =
-        ListUtil.list(new ColumnDescriptor("Identity", "Identity", IPTYPE),
+        ListUtil.list(new ColumnDescriptor("Identity", "Identity", STRINGTYPE),
         new ColumnDescriptor("Reputation", "Reputation", INTTYPE),
         new ColumnDescriptor("Agree", "Agree", STRINGTYPE),
         new ColumnDescriptor("Challenge", "Challenge", STRINGTYPE),
@@ -414,8 +413,8 @@ public class PollerStatus {
 					   getPollSpecString(poll)));
 
       StatusTable.SummaryInfo s1 =
-	new StatusTable.SummaryInfo("Caller", IPTYPE,
-				    poll.m_caller.getAddress());
+	new StatusTable.SummaryInfo("Caller", STRINGTYPE,
+				    poll.getCallerID());
       s1.setFootnote("Actually, the identity of the first poll packet we saw." +
 		     "  This is not necessarily the original poll caller.");
       list.add(s1);
@@ -472,9 +471,9 @@ public class PollerStatus {
     private Map makeRow(Vote vote) {
       HashMap rowMap = new HashMap();
 
-      rowMap.put("Identity", vote.getIDAddress());
+      rowMap.put("Identity", vote.getIdentityKey());
       LcapIdentity id = pollManager.getIdentityManager().findIdentity(
-          vote.getIDAddress());
+          vote.getIdentityKey());
       rowMap.put("Reputation", String.valueOf(id.getReputation()));
       rowMap.put("Agree", String.valueOf(vote.agree));
       rowMap.put("Challenge", vote.getChallengeString());

@@ -1,5 +1,5 @@
 /*
- * $Id: HashCUS.java,v 1.10 2004-08-02 03:23:55 tlipkis Exp $
+ * $Id: HashCUS.java,v 1.11 2004-09-13 04:02:22 dshr Exp $
  */
 
 /*
@@ -446,7 +446,7 @@ public class HashCUS extends LockssServlet {
   private void doit() {
     try {
       if (isHash) {
-	hasher = getHasher();
+	hasher = LcapMessage.getDefaultHasher();
 	if (hasher == null) {
 	  return;
 	}
@@ -494,19 +494,6 @@ public class HashCUS extends LockssServlet {
     log.debug("Bytes hashed: " + bytesHashed);
     showResult = true;
     hashResult = hasher.digest();
-  }
-
-  MessageDigest getHasher() {
-    MessageDigest hasher = null;
-    String algorithm = LcapMessage.getDefaultHashAlgorithm();
-    try {
-      hasher = MessageDigest.getInstance(algorithm);
-    } catch (NoSuchAlgorithmException ex) {
-      log.error("Can't create hasher", ex);
-      errMsg = "Can't create hasher: " + ex.toString();
-      return null;
-    }
-    return hasher;
   }
 
   /** Create message and error message block */
