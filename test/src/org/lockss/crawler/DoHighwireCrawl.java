@@ -1,5 +1,5 @@
 /*
- * $Id: DoHighwireCrawl.java,v 1.3 2002-10-16 04:54:45 tal Exp $
+ * $Id: DoHighwireCrawl.java,v 1.4 2002-11-27 00:26:18 troberts Exp $
  */
 
 /*
@@ -70,7 +70,7 @@ public class DoHighwireCrawl {
 
     }
     if (crawlFlg) {
-      Crawler.doCrawl(au, au.getCrawlSpec());
+      GoslingCrawlerImpl.doCrawl(au, au.getCrawlSpec());
     }
   }
 }

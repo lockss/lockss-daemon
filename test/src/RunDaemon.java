@@ -1,5 +1,5 @@
 /*
- * $Id: RunDaemon.java,v 1.3 2002-11-26 02:22:31 claire Exp $
+ * $Id: RunDaemon.java,v 1.4 2002-11-27 00:26:18 troberts Exp $
  */
 
 /*
@@ -123,6 +123,6 @@ public class RunDaemon {
 
   private void crawlContent() {
     CrawlSpec spec = new CrawlSpec(sau.SIMULATED_URL_START, null);
-    org.lockss.crawler.Crawler.doCrawl(sau, spec);
+    org.lockss.crawler.GoslingCrawlerImpl.doCrawl(sau, spec);
   }
 }
