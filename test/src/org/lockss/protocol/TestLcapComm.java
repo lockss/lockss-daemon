@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapComm.java,v 1.11 2003-06-20 22:34:54 claire Exp $
+ * $Id: TestLcapComm.java,v 1.12 2003-09-01 20:41:30 tlipkis Exp $
  */
 
 /*
@@ -163,24 +163,45 @@ public class TestLcapComm extends LockssTestCase {
     assertTrue(rcvdMsgs.isEmpty());
   }
 
+  // test multicast spoof detection
   public void testMulticastReceive() throws Exception {
     LockssReceivedDatagram rd;
     assertTrue(rcvdMsgs.isEmpty());
     msock1.addToReceiveQueue(testPacket);
-    // it should not show up until packet is received on other socket
     msock1.addToReceiveQueue(testPacket);
+    // it should not show up until packet is received on other socket
     TimerUtil.guaranteedSleep(10);
     assertTrue(rcvdMsgs.isEmpty());
     msock2.addToReceiveQueue(testPacket);
     rd = (LockssReceivedDatagram)rcvdMsgs.get(TIMEOUT);
     assertTrue(rd.isMulticast());
-    // this one should not show up
+
+    // unicast a different packet
+    usock.addToReceiveQueue(testPacket2);
+    // and make sure we get that one.  ensures multi isn't just slow to
+    // arrive  (Doesn't really - each socket runs asynchronously.)
+    rd = (LockssReceivedDatagram)rcvdMsgs.get(TIMEOUT);
+    assertFalse(rd.isMulticast());
+    assertEquals(testPort - 1, rd.getPacket().getPort());
+    assertTrue(rcvdMsgs.isEmpty());
+  }
+
+  // test multicast spoof detection state reset correctly
+  public void testMulticastSpoof2() throws Exception {
+    LockssReceivedDatagram rd;
+    assertTrue(rcvdMsgs.isEmpty());
+    msock1.addToReceiveQueue(testPacket);
+    msock2.addToReceiveQueue(testPacket);
+    rd = (LockssReceivedDatagram)rcvdMsgs.get(TIMEOUT);
+    assertTrue(rd.isMulticast());
+
+    // ensure the state was reset - this one should not show up
     msock2.addToReceiveQueue(testPacket);
     TimerUtil.guaranteedSleep(10);
     // unicast a different packet
     usock.addToReceiveQueue(testPacket2);
     // and make sure we get that one.  ensures multi isn't just slow to
-    // arrive
+    // arrive  (Doesn't really - each socket runs asynchronously.)
     rd = (LockssReceivedDatagram)rcvdMsgs.get(TIMEOUT);
     assertFalse(rd.isMulticast());
     assertEquals(testPort - 1, rd.getPacket().getPort());
