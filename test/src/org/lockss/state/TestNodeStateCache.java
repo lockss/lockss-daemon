@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeStateCache.java,v 1.3 2003-04-02 02:20:56 aalto Exp $
+ * $Id: TestNodeStateCache.java,v 1.4 2003-04-02 19:32:30 aalto Exp $
  */
 
 /*
@@ -51,18 +51,33 @@ public class TestNodeStateCache extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    String s = HistoryRepositoryImpl.PARAM_HISTORY_LOCATION +
-        "=" + tempDirPath;
-    TestConfiguration.setCurrentConfigFromString(s);
 
-    repo = new MockHistoryRepository();
-    cache = new NodeStateCache(repo, 10);
+    cache = new NodeStateCache(10);
+  }
+
+  public void testMaxCacheSize() throws Exception {
+    assertEquals(10, cache.getCacheSize());
+
+    for (int ii=0; ii<11; ii++) {
+      cache.putState("test"+ii, new NodeStateImpl());
+    }
+    assertEquals(10, cache.lruMap.size());
+
+    cache.setCacheSize(20);
+    assertEquals(20, cache.getCacheSize());
+
+    for (int ii=0; ii<21; ii++) {
+      cache.putState("test"+ii, new NodeStateImpl());
+    }
+    assertEquals(20, cache.lruMap.size());
+
+    cache.setCacheSize(10);
+    assertEquals(10, cache.getCacheSize());
+    assertEquals(10, cache.lruMap.size());
   }
 
   public void testCaching() throws Exception {
     CachedUrlSet mcus = new MockCachedUrlSet("http://www.example.com");
-    assertEquals(10, cache.getCacheSize());
 
     NodeState node = cache.getState("http://www.example.com");
     assertEquals(0, cache.getCacheHits());
