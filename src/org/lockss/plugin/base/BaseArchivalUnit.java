@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.32 2003-08-02 00:16:04 eaalto Exp $
+ * $Id: BaseArchivalUnit.java,v 1.33 2003-08-04 21:10:50 eaalto Exp $
  */
 
 /*
@@ -54,18 +54,18 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    * a new top level poll should be called.  Actual interval is randomly
    * distributed between min and max.
    */
-  public static final String PARAM_TOP_LEVEL_POLL_INTERVAL_MIN =
+  public static final String PARAM_TOPLEVEL_POLL_INTERVAL_MIN =
       TOPLEVEL_POLL_PREFIX + "interval.min";
-  static final long DEFAULT_TOP_LEVEL_POLL_INTERVAL_MIN = 2 * Constants.WEEK;
+  static final long DEFAULT_TOPLEVEL_POLL_INTERVAL_MIN = 2 * Constants.WEEK;
 
   /**
    * Configuration parameter name for maximum interval, in ms, by which
    * a new top level poll should have been called.  Actual interval is randomly
    * distributed between min and max.
    */
-  public static final String PARAM_TOP_LEVEL_POLL_INTERVAL_MAX =
+  public static final String PARAM_TOPLEVEL_POLL_INTERVAL_MAX =
       TOPLEVEL_POLL_PREFIX + "interval.max";
-  static final long DEFAULT_TOP_LEVEL_POLL_INTERVAL_MAX = 3 * Constants.WEEK;
+  static final long DEFAULT_TOPLEVEL_POLL_INTERVAL_MAX = 3 * Constants.WEEK;
 
   /**
    * Configuration parameter name for top level poll initial probability.
@@ -344,11 +344,11 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   void checkNextPollInterval() {
     Configuration config = Configuration.getCurrentConfig();
     long minPollInterval =
-        config.getTimeInterval(PARAM_TOP_LEVEL_POLL_INTERVAL_MIN,
-                               DEFAULT_TOP_LEVEL_POLL_INTERVAL_MIN);
+        config.getTimeInterval(PARAM_TOPLEVEL_POLL_INTERVAL_MIN,
+                               DEFAULT_TOPLEVEL_POLL_INTERVAL_MIN);
     long maxPollInterval =
-        config.getTimeInterval(PARAM_TOP_LEVEL_POLL_INTERVAL_MAX,
-                               DEFAULT_TOP_LEVEL_POLL_INTERVAL_MAX);
+        config.getTimeInterval(PARAM_TOPLEVEL_POLL_INTERVAL_MAX,
+                               DEFAULT_TOPLEVEL_POLL_INTERVAL_MAX);
     if (maxPollInterval <= minPollInterval) {
       maxPollInterval = 2 * minPollInterval;
     }

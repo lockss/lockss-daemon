@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArchivalUnit.java,v 1.4 2003-07-11 23:31:28 tlipkis Exp $
+ * $Id: TestBaseArchivalUnit.java,v 1.5 2003-08-04 21:10:49 eaalto Exp $
  */
 
 /*
@@ -51,8 +51,8 @@ public class TestBaseArchivalUnit extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     Properties props = new Properties();
-    props.setProperty(BaseArchivalUnit.PARAM_TOP_LEVEL_POLL_INTERVAL_MIN, "5s");
-    props.setProperty(BaseArchivalUnit.PARAM_TOP_LEVEL_POLL_INTERVAL_MAX, "10s");
+    props.setProperty(BaseArchivalUnit.PARAM_TOPLEVEL_POLL_INTERVAL_MIN, "5s");
+    props.setProperty(BaseArchivalUnit.PARAM_TOPLEVEL_POLL_INTERVAL_MAX, "10s");
     props.setProperty(BaseArchivalUnit.PARAM_TOPLEVEL_POLL_PROB_INITIAL, "50");
     props.setProperty(BaseArchivalUnit.PARAM_TOPLEVEL_POLL_PROB_INCREMENT, "5");
     props.setProperty(BaseArchivalUnit.PARAM_TOPLEVEL_POLL_PROB_MAX, "85");
@@ -75,8 +75,8 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     }
 
     Properties props = new Properties();
-    props.setProperty(BaseArchivalUnit.PARAM_TOP_LEVEL_POLL_INTERVAL_MIN, "1s");
-    props.setProperty(BaseArchivalUnit.PARAM_TOP_LEVEL_POLL_INTERVAL_MAX, "2s");
+    props.setProperty(BaseArchivalUnit.PARAM_TOPLEVEL_POLL_INTERVAL_MIN, "1s");
+    props.setProperty(BaseArchivalUnit.PARAM_TOPLEVEL_POLL_INTERVAL_MAX, "2s");
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
     mbau.checkNextPollInterval();
