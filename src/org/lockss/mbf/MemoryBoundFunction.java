@@ -1,5 +1,5 @@
 /*
- * $Id: MemoryBoundFunction.java,v 1.2 2003-07-23 02:58:20 dshr Exp $
+ * $Id: MemoryBoundFunction.java,v 1.3 2003-07-26 01:05:46 dshr Exp $
  */
 
 /*
@@ -38,7 +38,7 @@ import org.lockss.util.*;
  */
 public abstract class MemoryBoundFunction {
   protected static Logger logger = Logger.getLogger("MemoryBoundFunction");
-  protected static byte[] basis = null;
+  protected static byte[] basis = null;  // XXX move to implementation
   protected static File basisFile = null;
 
   protected byte[] nonce;

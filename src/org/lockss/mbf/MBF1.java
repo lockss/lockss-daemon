@@ -1,5 +1,5 @@
 /*
- * $Id: MBF1.java,v 1.3 2003-07-23 03:42:51 tlipkis Exp $
+ * $Id: MBF1.java,v 1.4 2003-07-26 01:05:45 dshr Exp $
  */
 
 /*
@@ -43,10 +43,38 @@ public class MBF1 extends MemoryBoundFunction {
   private static final String algRand = "SHA1PRNG";
   private static final String algHash = "SHA1";
   private static Random rand = null;
-  private static BigInteger bigArraySize = BigInteger.ZERO;
+  // We use the notation of Dwork et al.,  modified as needed because
+  // Java needs us to represent things as byte arrays.  Note that
+  // we fold their m,S,R,t into the nonce.
+
+  // Public static data shared by all instances.
+  // The A0 array is 256 32-bit words (1024 bytes)
+  private static byte[] A0 = null;
+  private static final int sizeA = 1024;
+  private static BigInteger a0 = null;
+  // The T array is 4M 32-bit words (16M bytes)
+  private static byte[] T = null;
+  private static final int sizeT = 16*1024*1024;
+
+  // Instance data
+  private byte[] A;
+  // Indices into A - NB word indices not byte indices
+  private int i, j;
+  // Index into T
+  private int c;
+  // Trial number
+  private int k;
+  // Internal version of e
+  private int ourE;
+  // Limit on number of trials (2**2e)
+  private int tooManyTries;
+  // Index in current path
   private int pathIndex;
-  private long arrayIndex;
-  private MessageDigest hasher;
+  // Lowest bit set in hash of A after path finishes
+  private int lowBit;
+  // Hasher
+  MessageDigest hasher;
+
 
   /**
    * Public constructor for an object that will compute a proof
@@ -61,9 +89,8 @@ public class MBF1 extends MemoryBoundFunction {
   public MBF1(byte[] nVal, int eVal, int lVal)
     throws MemoryBoundFunctionException {
     super(nVal, eVal, lVal);
-    pathIndex = 0;
-    arrayIndex = -1;
     ensureConfigured();
+    setup();
   }
 
   /**
@@ -76,25 +103,12 @@ public class MBF1 extends MemoryBoundFunction {
   public MBF1(byte[] nVal, int eVal, int lVal, long sVal)
     throws MemoryBoundFunctionException {
     super(nVal, eVal, lVal, sVal);
-    pathIndex = 0;
-    arrayIndex = sVal;
     ensureConfigured();
-    logger.debug("verify " + arrayIndex);
+    setup();
   }
 
   protected boolean match() throws MemoryBoundFunctionException {
-    // Turn the hasher into a BigInteger.
-    try {
-      MessageDigest h = (MessageDigest) hasher.clone();
-      BigInteger b = new BigInteger(h.digest());
-      // Find the lowest set bit.
-      int lowBit = b.getLowestSetBit();
-      logger.debug2("match " + b.toString(16) + " lowBit " + lowBit + " e " + e);
-      return ((1 << lowBit) > e);
-    } catch(CloneNotSupportedException e) {
-      throw new MemoryBoundFunctionException(algHash + " threw " +
-					     e.toString());
-    }
+    return (lowBit >= ourE);
   }
 
   /**
@@ -105,93 +119,181 @@ public class MBF1 extends MemoryBoundFunction {
    * set finished.  If no match and the object is verifying,  set
    * finished.
    * @param n number of steps to move.
+   * @return true if there is more work to do.
    * 
    */
   public boolean computeSteps(int n) throws MemoryBoundFunctionException {
-    logger.debug2("computeSteps(" + n + ") at " + arrayIndex);
-    if (basis.length <= 0)
-      throw new MemoryBoundFunctionException("no basis");
-    // Is there a current path?
-    if (arrayIndexStart < 0) {
-      // No,  create one
-      long r = rand.nextLong();
-      if (r < 0) {
-	arrayIndexStart = (-r) % basis.length;
-      } else {
-	arrayIndexStart = r % basis.length;
-      }
-      pathIndex = 0;
-      arrayIndex = arrayIndexStart;
-      logger.debug2("starting at index " + arrayIndex);
-    }
-    if (hasher == null) try {
-      hasher = MessageDigest.getInstance(algHash);
-      hasher.update(nonce);
-      logger.debug2("new hasher");
-    } catch (NoSuchAlgorithmException e) {
-      hasher = null;
-      throw new MemoryBoundFunctionException(algHash + " throws " +
-					     e.toString());
+    // If no match has been found in 2**2e tries,  give up
+    if (k >= tooManyTries)
+      throw new MemoryBoundFunctionException("give up after " + k + " tries");
+    // If there is no current try,  create one
+    if (pathIndex < 0) {
+      createPath();
     }
     // Move up to "n" steps along the path
-    for (int i = 0; i < n && pathIndex < pathLen; i++) {
-      // Do a step - update the hasher with the byte at arrayIndex
-      hasher.update(basis[(int)arrayIndex]);
-      try {
-	// Then update arrayIndex to be the current result of the hash
-	MessageDigest h = (MessageDigest) hasher.clone();
-	BigInteger b = (new BigInteger(h.digest())).mod(bigArraySize);
-	arrayIndex = b.longValue();
-	pathIndex++;
-	logger.debug3("step " + pathIndex + " at " + arrayIndex);
-      } catch(CloneNotSupportedException e) {
-	throw new MemoryBoundFunctionException(algHash + " threw " +
-					       e.toString());
-      }
+    while (pathIndex < pathLen && n-- > 0) {
+      stepAlongPath();
     }
-    // Have we finished a path?
-    boolean matchHere = false;
+    // If the current path has ended,  see if there is a match
     if (pathIndex >= pathLen) {
-      // Yes - do we have a match?
-      matchHere = match();
-      if (matchHere || verify) {
-	finished = true;
-	logger.debug2("path ended at index " + pathIndex + " at " +
-		       arrayIndex + (matchHere ? " match" : ""));
-      } else {
-	logger.debug2("path ended at index " + pathIndex + " at " + arrayIndex);
-	arrayIndex = arrayIndexStart = -1;
-	hasher = null;
-	pathIndex = 0;
-      }
+      finishPath();
     }
+    // Return true if there is more work to do.
     return (!finished);
   }
 
-  private void ensureConfigured() throws MemoryBoundFunctionException {
-    logger.debug2("ensureConfigured");
-    if (rand == null) try {
-      rand = SecureRandom.getInstance(algRand);
-      logger.debug2("new random");
-    } catch (NoSuchAlgorithmException e) {
-      rand = null;
-      throw new MemoryBoundFunctionException(algRand + " throws " +
-					     e.toString());
+  // Return the 32-bit word at [i..(i+3)] in array arr.
+  private int wordAt(byte[] arr, int i) throws MemoryBoundFunctionException {
+    if ((i & 0x3) != 0 || i < 0 || i > (arr.length-4))
+      throw new MemoryBoundFunctionException("bad index " + i + "  size " +
+					     arr.length);
+    return (arr[i] | arr[i+1]<<8 | arr[i+2]<<16 | arr[i+3]<<24);
+  }
+
+  // Set the 32-bit word at [i..(i+3)] in array arr to b
+  private void setWordAt(byte[] arr, int i, int b) {
+    arr[i] = (byte)(b & 0xff);
+    arr[i+1] = (byte)((b >> 8) & 0xff);
+    arr[i+2] = (byte)((b >> 16) & 0xff);
+    arr[i+3] = (byte)((b >> 24) & 0xff);
+  }
+
+  // Path initialization
+  private void createPath() throws MemoryBoundFunctionException {
+    if (verify)
+      k = (int)arrayIndexStart;
+    else
+      k++;
+    i = 0;
+    j = 0;
+    lowBit = -1;
+    // Hash the nonce and the try count - we can always assume the
+    // hasher is reset because we always leave it that way
+    hasher.update(nonce);
+    hasher.update((byte)(k & 0xff ));
+    hasher.update((byte)((k >> 8) & 0xff));
+    hasher.update((byte)((k >> 16) & 0xff));
+    hasher.update((byte)((k >> 24) & 0xff));
+    byte[] hashOfNonceAndIndex = hasher.digest();
+    byte[] B = new byte[sizeA];
+    for (int p = 0; p < sizeA; )
+      for (int q = 0; q < 16; ) // NB length of SHA1 = 160 bits not 128
+	B[p++] = hashOfNonceAndIndex[q++];
+    // XXX
+    BigInteger b1 = new BigInteger(B);
+    BigInteger b2 = b1.xor(a0);
+    A = new byte[1024];
+    byte[] ba = b2.toByteArray();
+    for (int m = 0; m < sizeA; m++)
+      if (m < ba.length)
+	A[m] = ba[m];
+      else
+	A[m] = 0;
+    c = wordAt(A, 0) & 0x00fffffc; // "Bottom" 22 bits of A
+  }
+
+  private int cyclicRightShift11(int a) {
+    return ((a >>> 11) | ((a & 0x7ff) << 21));
+  }
+
+  // Path step
+  private void stepAlongPath() throws MemoryBoundFunctionException {
+    // update indices into A and wrap them
+    i += 4; // i is a word index into a byte array
+    i &= 0x3fc;
+    j += wordAt(A, i);
+    j &= 0x3fc;
+    // logger.info("Step at " + c + " indices [" + i + "," + j + "]");
+    // feed bits from T into A[i] and rotate them
+    int tmp1 = wordAt(T, c);
+    int tmp2 = cyclicRightShift11(wordAt(A, i) + tmp1);
+    setWordAt(A, i, tmp2);
+    // swap A[i] and A[j]
+    tmp2 = wordAt(A, i);
+    int tmp3 = wordAt(A, j);
+    setWordAt(A, i, tmp3);
+    setWordAt(A, j, tmp2);
+    // update c
+    c = (tmp1 ^ wordAt(A, (tmp2 + tmp3) & 0x3fc)) & 0x00fffffc;
+    if (c < 0 || c > (T.length-4) || ( c & 0x3 ) != 0)
+      throw new MemoryBoundFunctionException("bad c " + c + " T[" +
+					     T.length + "]");
+    pathIndex++;
+  }
+
+  // Path termination
+  private void finishPath() {
+    // XXX actually only need to look at bottom 32 bits of A
+    BigInteger hashOfA = new BigInteger(hasher.digest(A));
+    lowBit = hashOfA.getLowestSetBit();
+    logger.debug("Finish " + k + " at " + c + " lowBit " + lowBit +
+		" >= " + ourE);
+    if (lowBit >= ourE) {
+      // We got a match, set finished
+      arrayIndexStart = k;
+      finished = true;
+    } else if (verify) {
+      finished = true;
+    } else {
+      i = -1;
+      j = -1;
+      c = -1;
+      lowBit = -1;
+      pathIndex = -1;
     }
-    if (basis == null) try {
+  }
+
+  // Instance initialization
+  private void setup() throws MemoryBoundFunctionException {
+    A = null;
+    i = -1;
+    j= -1;
+    c = -1;
+    k = 0;
+    ourE = 1;
+    long tmp = (e < 0 ? -e : e);
+    while (tmp != 1) {
+      ourE++;
+      tmp >>>= 1;
+    }
+    tooManyTries = (1 << (2*ourE));
+    pathIndex = -1;
+    try {
+      hasher = MessageDigest.getInstance(algHash);
+    } catch (NoSuchAlgorithmException ex) {
+      throw new MemoryBoundFunctionException(algHash + " not found");
+    }
+  }
+
+  // Class initialization
+  private void ensureConfigured() throws MemoryBoundFunctionException {
+    try {
       logger.debug2("ensureConfigured " + basisFile.getPath() +
 		     " length " + basisFile.length());
       FileInputStream fis = new FileInputStream(basisFile);
-      basis = new byte[(int)basisFile.length()];
-      fis.read(basis);
-      bigArraySize = BigInteger.valueOf(basis.length);
-      logger.debug2("new basis " + ((int)basisFile.length()) +
-		     "/" + basis.length + " bytes");
+      if (A0 == null) {
+	A0 = new byte[sizeA];
+        int readSize = fis.read(A0);
+	if (readSize != sizeA)
+	  throw new MemoryBoundFunctionException(basisFile.getPath() +
+						 " short read " + readSize);
+	// We keep a second representation of A0 as a BigInteger
+	a0 = new BigInteger(A0);
+	// XXX
+	if (a0 == null)
+	  throw new MemoryBoundFunctionException("a0 is null");
+      }
+      if (T == null) {
+	T = new byte[sizeT];
+	int readSize = fis.read(T);
+	if (readSize != sizeT)
+	  throw new MemoryBoundFunctionException(basisFile.getPath() +
+						 " short read " + readSize);
+      }
     } catch (IOException e) {
       basis = null;
       throw new MemoryBoundFunctionException(basisFile.getPath() + " throws " +
 					     e.toString());
     }
-    hasher = null;
   }
 }
