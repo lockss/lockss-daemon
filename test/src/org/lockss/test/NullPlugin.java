@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.10 2003-01-28 02:06:13 aalto Exp $
+ * $Id: NullPlugin.java,v 1.11 2003-02-05 22:40:15 troberts Exp $
  */
 
 /*
@@ -232,6 +232,11 @@ public class NullPlugin {
     public int hashCode() {
       return 0;
     }
+
+    public List getNewContentCrawlUrls() {
+      return null;
+    }
+    
   }
 
 /**

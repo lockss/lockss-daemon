@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.8 2003-01-28 02:06:13 aalto Exp $
+ * $Id: ArchivalUnit.java,v 1.9 2003-02-05 22:40:15 troberts Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.daemon;
 import gnu.regexp.*;
+import java.util.*;
 
 /**
  * An <code>ArchivalUnit</code> represents a publication unit
@@ -106,4 +107,11 @@ public interface ArchivalUnit {
    * @return true if equal
    */
   public boolean equals(Object obj);
+
+  /**
+   * @return list of urls which need to be recrawled during a new content
+   * crawl
+   */
+  public List getNewContentCrawlUrls();
+
 }

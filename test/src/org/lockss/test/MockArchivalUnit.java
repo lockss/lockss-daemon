@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.9 2003-01-28 02:06:13 aalto Exp $
+ * $Id: MockArchivalUnit.java,v 1.10 2003-02-05 22:40:15 troberts Exp $
  */
 
 /*
@@ -48,6 +48,7 @@ public class MockArchivalUnit implements ArchivalUnit {
   private String auId = "none";
   private CachedUrlSet cus = null;
   private MockObjectCallback pauseCallback = null;
+  private List newContentUrls = null;
 
   public MockArchivalUnit(){
   }
@@ -71,6 +72,15 @@ public class MockArchivalUnit implements ArchivalUnit {
   public void setAUCachedUrlSet(CachedUrlSet cus) {
     this.cus = cus;
   }
+
+  public List getNewContentCrawlUrls() {
+    return newContentUrls;
+  }
+
+  public void setNewContentCrawlUrls(List urls) {
+    newContentUrls = urls;
+  }
+
 
 
   /**

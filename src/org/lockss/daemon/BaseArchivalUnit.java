@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.6 2003-01-28 02:06:13 aalto Exp $
+ * $Id: BaseArchivalUnit.java,v 1.7 2003-02-05 22:40:15 troberts Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.daemon;
 
+import java.util.*;
 import gnu.regexp.*;
 import org.lockss.util.*;
 
@@ -152,6 +153,10 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    */
   public int hashCode() {
     return getPluginId().hashCode() + getAUId().hashCode();
+  }
+
+  public List getNewContentCrawlUrls() {
+    return null;
   }
 
   /**
