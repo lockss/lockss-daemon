@@ -1,0 +1,48 @@
+#!/bin/sh
+
+if [ "$#" == "0" ]; then
+ echo "Usage: $0 <java-args> <class-name> <args>"
+ echo "Runs <class-name> "
+ echo "Must be run from project base dir."
+ exit 1
+fi
+
+PROJECT_DIR=.
+
+CLASSPATH=`cat test/test-classpath`
+export CLASSPATH
+
+args=""
+
+while true ; do
+  case "$1" in
+    "-classpath" )
+      if [ -z "$CLASSPATH" ] ; then
+	CLASSPATH="$2"
+      else
+	CLASSPATH="$CLASSPATH":"$2"
+      fi
+      echo "CLASSPATH=$CLASSPATH"
+      shift; shift; continue;;
+    "-1.4" )
+      if [ -z "$JAVA_14_HOME" ] ; then
+	echo "-1.4 option requires JAVA_14_HOME to point to 1.4 install dir"
+	exit 1;
+      fi
+      JAVA_HOME="${JAVA_14_HOME}"
+      export JAVA_HOME
+      PATH="$JAVA_HOME/bin:$PATH"
+      export PATH
+      echo JAVA_HOME="$JAVA_HOME"
+      shift; continue;;
+    "-*" )
+      args="$args $1"
+      shift; continue;;
+  esac
+  break;
+done
+
+class=$1
+shift
+
+java $args $class $@
