@@ -1,5 +1,5 @@
 /*
- * $Id: FuncMailTarget.java,v 1.1 2003-01-16 22:11:12 aalto Exp $
+ * $Id: MailTargetTest.java,v 1.1 2003-02-26 21:36:37 aalto Exp $
  */
 
 /*
@@ -38,13 +38,13 @@ import org.lockss.daemon.TestConfiguration;
 /**
  * Test class for functional tests on the mail target.
  */
-public class FuncMailTarget extends LockssTestCase {
+public class MailTargetTest extends LockssTestCase {
   private MailTarget target;
-  private static final String emailTo = "aalto@cs.stanford.edu";
-  private static final String emailFrom = "lime@leland.stanford.edu";
+  private static final String emailTo = "lime@leland.stanford.edu";
+  private static final String emailFrom = "aalto@cs.stanford.edu";
   protected static Logger logger = Logger.getLogger("MailTarget");
 
-  public FuncMailTarget(String msg) {
+  public MailTargetTest(String msg) {
     super(msg);
   }
 
