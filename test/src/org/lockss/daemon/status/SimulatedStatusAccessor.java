@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedStatusAccessor.java,v 1.2 2003-03-14 01:42:15 troberts Exp $
+ * $Id: SimulatedStatusAccessor.java,v 1.3 2003-03-15 00:27:22 troberts Exp $
  */
 
 /*
@@ -86,6 +86,10 @@ public class SimulatedStatusAccessor implements StatusAccessor {
 
   public boolean requiresKey() {
     return false;
+  }
+
+  public String getTitle(String key) {
+    return "Simulated Table for key "+key;
   }
 
 }

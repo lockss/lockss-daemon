@@ -1,5 +1,5 @@
 /*
- * $Id: TestStatusServiceImpl.java,v 1.4 2003-03-14 23:04:34 troberts Exp $
+ * $Id: TestStatusServiceImpl.java,v 1.5 2003-03-15 00:27:22 troberts Exp $
  */
 
 /*
@@ -133,6 +133,24 @@ public class TestStatusServiceImpl extends LockssTestCase {
     }
   }    
 
+//   public void testRegisteringInvalidTableNameThrows() {
+//     try {
+//       statusService.registerStatusAccessor("!Table", 
+// 					   new MockStatusAccessor());
+//       fail("Should have thrown after trying to register StatusAccessor "+
+// 	   "with bad table name");
+//     } catch (StatusService.MultipleRegistrationException re) {
+//     }
+
+//     try {
+//       statusService.registerStatusAccessor("name with spaces", 
+// 					   new MockStatusAccessor());
+//       fail("Should have thrown after trying to register StatusAccessor "+
+// 	   "with bad table name");
+//     } catch (StatusService.MultipleRegistrationException re) {
+//     }
+//   }    
+
   public void testUnregisteringBadDoesntThrow() {
     statusService.unregisterStatusAccessor("table1");
   }
@@ -170,6 +188,19 @@ public class TestStatusServiceImpl extends LockssTestCase {
     statusService.registerStatusAccessor("table1", statusAccessor);
     StatusTable table = statusService.getTable("table1", key);
     assertEquals(key, table.getKey());
+  }
+
+  public void testGetTableTitle() 
+      throws StatusService.NoSuchTableException {
+    String key = "theKey";
+    String tableTitle = "Table title";
+    MockStatusAccessor statusAccessor = 
+      generateStatusAccessor(colArray1, rowArray1, key);
+    statusAccessor.setDefaultSortRules(sortRules1, key);
+    statusAccessor.setTitle(tableTitle, key);
+    statusService.registerStatusAccessor("table1", statusAccessor);
+    StatusTable table = statusService.getTable("table1", key);
+    assertEquals(tableTitle, table.getTitle());
   }
 
   public void testGetTableWithKey() 

@@ -1,5 +1,5 @@
 /*
- * $Id: StatusService.java,v 1.4 2003-03-14 01:42:15 troberts Exp $
+ * $Id: StatusService.java,v 1.5 2003-03-15 00:27:22 troberts Exp $
  */
 
 /*
@@ -63,9 +63,12 @@ public interface StatusService {
    * @param statusAccessor StatusAccessor that can provide the specified table
    * @throws StatusService.MultpleRegistrationException if multiple 
    * StatusAccessors are registered to the same tableName
+   * @throws StatusService.InvalidTableNameException if you attemtp to register
+   * a StatusAccessor for a table name that has anything other than 
+   * <i>[a-zA-Z0-9]</i>, <i>-</i>, and <i>_</i>  in it
    */
   public void registerStatusAccessor(String tableName, 
- 				     StatusAccessor statusAccessor);
+				     StatusAccessor statusAccessor);
   
   /**
    * Unregister a previously registered StatusAccessor 
@@ -79,6 +82,16 @@ public interface StatusService {
    */  
   public class NoSuchTableException extends Exception {
     public NoSuchTableException(String msg) {
+      super(msg);
+    }
+  }
+
+  /**
+   * Thrown if someone tries to register a status accessor for an 
+   * invalid table name
+   */  
+  public class InvalidTableNameException extends RuntimeException {
+    public InvalidTableNameException(String msg) {
       super(msg);
     }
   }

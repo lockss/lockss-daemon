@@ -1,5 +1,5 @@
 /*
- * $Id: StatusServiceImpl.java,v 1.7 2003-03-14 23:04:34 troberts Exp $
+ * $Id: StatusServiceImpl.java,v 1.8 2003-03-15 00:27:22 troberts Exp $
  */
 
 /*
@@ -44,7 +44,6 @@ public class StatusServiceImpl
   private static Logger logger = Logger.getLogger("StatusServiceImpl");
   private Map statusAccessors = new HashMap();
 
-
   public void startService() {
     super.startService();
     registerStatusAccessor(ALL_TABLES_TABLE, new AllTableStatusAccessor());
@@ -67,15 +66,22 @@ public class StatusServiceImpl
 						   +tableName+" "+key);
     } 
     StatusTable table = 
-      new StatusTable(tableName, key, 
+      new StatusTable(tableName, key, statusAccessor.getTitle(key),
 		      statusAccessor.getColumnDescriptors(key),
 		      statusAccessor.getDefaultSortRules(key),
 		      statusAccessor.getRows(key));
     return table;
   }
 
+  private boolean isBadTableName(String tableName) {
+    return false;
+  }
+
   public void registerStatusAccessor(String tableName, 
-				     StatusAccessor statusAccessor){
+				     StatusAccessor statusAccessor) {
+    if (isBadTableName(tableName)) {
+      throw new InvalidTableNameException("Invalid table name: "+tableName);
+    }
 
     synchronized(statusAccessors) {
       if (statusAccessors.get(tableName) != null) {
@@ -101,6 +107,7 @@ public class StatusServiceImpl
     private List sortRules;
     private static final String COL_NAME = "table_name";
     private static final String COL_TITLE = "Table name";
+    private static final String ALL_TABLE_TITLE = "Cache Overview";
 
     public AllTableStatusAccessor() {
       StatusTable.ColumnDescriptor col = 
@@ -151,6 +158,14 @@ public class StatusServiceImpl
     public List getDefaultSortRules(String key) 
 	throws StatusService.NoSuchTableException {
       return sortRules;
+    }
+
+    /**
+     * Ignores key
+     */
+    public String getTitle(String key) 
+	throws StatusService.NoSuchTableException {
+      return ALL_TABLE_TITLE;
     }
 
     public boolean requiresKey() {

@@ -1,5 +1,5 @@
 /*
- * $Id: StatusAccessor.java,v 1.5 2003-03-14 23:04:34 troberts Exp $
+ * $Id: StatusAccessor.java,v 1.6 2003-03-15 00:27:22 troberts Exp $
  */
 
 /*
@@ -73,6 +73,17 @@ public interface StatusAccessor {
    * recognize or have a table for
    */
   public List getDefaultSortRules(String key) 
+      throws StatusService.NoSuchTableException;
+
+
+  /**
+   * Returns the title for the table specified by the key
+   * @param key optional key to identify the desired table
+   * @return String representation of the table title
+   * @throws StatusService.NoSuchTableException if we get a key that we don't 
+   * recognize or have a table for
+   */
+  public String getTitle(String key) 
       throws StatusService.NoSuchTableException;
 
   /**
