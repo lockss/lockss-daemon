@@ -65,4 +65,11 @@
                 </field>
 
         </class>
+        <class name="org.lockss.state.AuStateBean">
+                <map-to xml="AuState"/>
+                <field name="lastCrawlTime"
+                       type="long">
+                        <bind-xml name="LastCrawlTime" node="element"/>
+                </field>
+        </class>
 </mapping>

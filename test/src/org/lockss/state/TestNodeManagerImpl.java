@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.13 2003-02-05 23:33:57 aalto Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.14 2003-02-06 00:51:45 aalto Exp $
  */
 
 /*
@@ -111,6 +111,11 @@ public class TestNodeManagerImpl extends LockssTestCase {
     cus = getCUS("http://www.example.com/branch3");
     node = nodeManager.getNodeState(cus);
     assertTrue(node==null);
+  }
+
+  public void testGetAuState() {
+    AuState auState = nodeManager.getAuState();
+    assertEquals(mau.getAUId(), auState.getArchivalUnit().getAUId());
   }
 
   public void testGetActiveCrawledNodes() throws Exception {
@@ -395,10 +400,8 @@ public class TestNodeManagerImpl extends LockssTestCase {
     return p;
   }
 
-
   public static void main(String[] argv) {
     String[] testCaseList = {TestNodeManagerImpl.class.getName()};
     junit.swingui.TestRunner.main(testCaseList);
   }
-
 }

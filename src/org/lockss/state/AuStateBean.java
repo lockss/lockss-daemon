@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepository.java,v 1.2 2003-02-06 00:51:45 aalto Exp $
+ * $Id: AuStateBean.java,v 1.1 2003-02-06 00:51:45 aalto Exp $
  */
 
 /*
@@ -33,36 +33,34 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.state;
 
-import java.util.List;
-import org.lockss.daemon.*;
+import org.lockss.daemon.ArchivalUnit;
 
 /**
- * HistoryRepository is an inner layer of the NodeManager which handles the actual
- * storage of NodeStates.
+ * AuStateBean is a settable version of AuState used purely for
+ * marshalling purposes.
  */
-public interface HistoryRepository {
-  /**
-   * Stores PollHistories for a given NodeState.
-   * @param nodeState to store
-   */
-  public void storePollHistories(NodeState nodeState);
+public class AuStateBean extends AuState {
+  public AuStateBean() {
+    super(null, 0);
+  }
+
+  AuStateBean(AuState auState) {
+    super(auState.au, auState.lastCrawlTime);
+  }
 
   /**
-   * Loads the poll histories into the given NodeState.
-   * @param nodeState the NodeState
+   * Sets the archival unit
+   * @param au the au
    */
-  public void loadPollHistories(NodeState nodeState);
+  public void setArchivalUnit(ArchivalUnit au) {
+    this.au = au;
+  }
 
   /**
-   * Stores the AuState for a particular ArchivalUnit
-   * @param auState the state to store
+   * Sets the last crawl time to a new value.
+   * @param newCrawlTime in ms
    */
-  public void storeAuState(AuState auState);
-
-  /**
-   * Loads the AuState for a particular ArchivalUnit
-   * @param au the ArchivalUnit state to load
-   * @return the AuState
-   */
-  public AuState loadAuState(ArchivalUnit au);
+  public void setLastCrawlTime(long newCrawlTime) {
+    lastCrawlTime = newCrawlTime;
+  }
 }

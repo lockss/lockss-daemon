@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.19 2003-02-05 22:38:49 troberts Exp $
+ * $Id: NodeManagerImpl.java,v 1.20 2003-02-06 00:51:45 aalto Exp $
  */
 
 /*
@@ -58,6 +58,7 @@ public class NodeManagerImpl implements NodeManager {
   private static HashMap auEstimateMap = new HashMap();
 
   private ArchivalUnit managerAu;
+  private AuState auState;
   private TreeMap nodeMap = new TreeMap();
   private static Logger logger = Logger.getLogger("NodeManager");
 
@@ -88,6 +89,13 @@ public class NodeManagerImpl implements NodeManager {
 
   public NodeState getNodeState(CachedUrlSet cus) {
     return (NodeState)nodeMap.get(cus.getPrimaryUrl());
+  }
+
+  public AuState getAuState() {
+    if (auState==null) {
+      auState = repository.loadAuState(managerAu);
+    }
+    return auState;
   }
 
   public Iterator getActiveCrawledNodes(CachedUrlSet cus) {
@@ -200,7 +208,7 @@ public class NodeManagerImpl implements NodeManager {
 
   void doTreeWalk() {
     //XXX check if ok with CrawlManager
-    // if CrawlManager.shouldDoTreeWalk();
+    // if CrawlManager.canTreeWalkStart(managerAu, null, null);
     long startTime = TimeBase.nowMs();
     nodeTreeWalk(nodeMap);
     long elapsedTime = TimeBase.nowMs() - startTime;
@@ -465,10 +473,9 @@ public class NodeManagerImpl implements NodeManager {
   private void markNodeForRepair(CachedUrlSet cus, Poll.VoteTally tally)
       throws IOException {
     //PollManager.getPollManager().suspendPoll(tally.getPollKey());
-    //CrawlManger.scheduleRepair(new URL(cus.getPrimaryUrl()),
-    //                           new ContentRepairCallback(),
-    //                             tally.getPollKey());
-    //cus.makeUrlCacher(cus.getPrimaryUrl()).cache();
+    //CrawlManager.scheduleRepair(managerAu, new URL(cus.getPrimaryUrl()),
+    //                            new ContentRepairCallback(),
+    //                            tally.getPollKey());
   }
 
   private void deleteNode(CachedUrlSet cus) throws IOException {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.3 2003-02-05 23:32:57 aalto Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.4 2003-02-06 00:51:45 aalto Exp $
  */
 
 /*
@@ -95,7 +95,7 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
     String filePath = FileLocationUtil.mapAuToFileLocation(tempDirPath +
         HistoryRepositoryImpl.HISTORY_ROOT_NAME, new MockArchivalUnit());
     filePath = FileLocationUtil.mapUrlToFileLocation(filePath,
-        "http://www.example.com/history.xml");
+        "http://www.example.com/"+HistoryRepositoryImpl.HISTORY_FILE_NAME);
     File xmlFile = new File(filePath);
     assertTrue(xmlFile.exists());
 
@@ -120,6 +120,23 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
     assertEquals(expectVote.challengeStr, elemVote.challengeStr);
     assertEquals(expectVote.verifierStr, elemVote.verifierStr);
     assertEquals(expectVote.hashStr, elemVote.hashStr);
+  }
+
+  public void testStoreAuState() throws Exception {
+    MockArchivalUnit mau = new MockArchivalUnit();
+    AuState auState = new AuState(mau, 123);
+    repository.storeAuState(auState);
+    String filePath = FileLocationUtil.mapAuToFileLocation(tempDirPath +
+        HistoryRepositoryImpl.HISTORY_ROOT_NAME, mau);
+    filePath += HistoryRepositoryImpl.AU_FILE_NAME;
+    System.out.println("path: "+filePath);
+    File xmlFile = new File(filePath);
+    assertTrue(xmlFile.exists());
+
+    auState = null;
+    auState = repository.loadAuState(mau);
+    assertEquals(123, auState.getLastCrawlTime());
+    assertEquals(mau.getAUId(), auState.getArchivalUnit().getAUId());
   }
 
   private PollHistoryBean createPollHistoryBean(int voteCount) {
@@ -149,5 +166,10 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
                 "=src/org/lockss/state/pollmapping.xml";
     TestConfiguration.setCurrentConfigFromUrlList(ListUtil.list(FileUtil.urlOfString(s),
         FileUtil.urlOfString(s2)));
+  }
+
+  public static void main(String[] argv) {
+    String[] testCaseList = {TestHistoryRepositoryImpl.class.getName()};
+    junit.swingui.TestRunner.main(testCaseList);
   }
 }

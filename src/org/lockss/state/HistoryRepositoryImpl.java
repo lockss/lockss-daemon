@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.4 2003-01-25 02:22:20 aalto Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.5 2003-02-06 00:51:45 aalto Exp $
  */
 
 /*
@@ -45,6 +45,7 @@ import org.exolab.castor.xml.Marshaller;
 import org.exolab.castor.xml.Unmarshaller;
 import org.exolab.castor.mapping.Mapping;
 import org.lockss.util.FileLocationUtil;
+import org.lockss.daemon.ArchivalUnit;
 
 
 /**
@@ -68,7 +69,8 @@ public class HistoryRepositoryImpl implements HistoryRepository {
    */
   public static final String HISTORY_ROOT_NAME = "cache";
 
-  private static final String HISTORY_FILE_NAME = "history.xml";
+  static final String HISTORY_FILE_NAME = "history.xml";
+  static final String AU_FILE_NAME = "au_state.xml";
 
   private static String rootDir;
   private Mapping mapping = null;
@@ -99,7 +101,6 @@ public class HistoryRepositoryImpl implements HistoryRepository {
 
   public void loadPollHistories(NodeState nodeState) {
     CachedUrlSet cus = nodeState.getCachedUrlSet();
-    String nodeDir = null;
     try {
       File nodeFile = new File(getNodeLocation(cus) + File.separator +
                                HISTORY_FILE_NAME);
@@ -115,6 +116,39 @@ public class HistoryRepositoryImpl implements HistoryRepository {
     } catch (Exception e) {
       logger.error("Couldn't load poll history: ", e);
       throw new LockssRepository.RepositoryStateException("Couldn't load history.");
+    }
+  }
+
+  public void storeAuState(AuState auState) {
+    try {
+      File nodeDir = new File(getAuLocation(auState.getArchivalUnit()));
+      if (!nodeDir.exists()) {
+        nodeDir.mkdirs();
+      }
+      File auFile = new File(nodeDir, AU_FILE_NAME);
+      Marshaller marshaller = new Marshaller(new FileWriter(auFile));
+      marshaller.setMapping(getMapping());
+      marshaller.marshal(new AuStateBean(auState));
+    } catch (Exception e) {
+      logger.error("Couldn't store au state: ", e);
+      throw new LockssRepository.RepositoryStateException("Couldn't store history.");
+    }
+  }
+
+  public AuState loadAuState(ArchivalUnit au) {
+    try {
+      File auFile = new File(getAuLocation(au) + File.separator + AU_FILE_NAME);
+      if (!auFile.exists()) {
+        logger.warning("No au file found.");
+        return new AuState(au, 0);
+      }
+      Unmarshaller unmarshaller = new Unmarshaller(AuStateBean.class);
+      unmarshaller.setMapping(getMapping());
+      AuStateBean asb = (AuStateBean)unmarshaller.unmarshal(new FileReader(auFile));
+      return new AuState(au, asb.getLastCrawlTime());
+    } catch (Exception e) {
+      logger.error("Couldn't load au state: ", e);
+      throw new LockssRepository.RepositoryStateException("Couldn't load au state.");
     }
   }
 
@@ -141,6 +175,16 @@ public class HistoryRepositoryImpl implements HistoryRepository {
         cus.getArchivalUnit());
     String urlStr = (String)cus.getPrimaryUrl();
     return FileLocationUtil.mapUrlToFileLocation(auLoc, urlStr);
+  }
+
+  protected String getAuLocation(ArchivalUnit au) {
+    StringBuffer buffer = new StringBuffer(rootDir);
+    if (!rootDir.endsWith(File.separator)) {
+      buffer.append(File.separator);
+    }
+    buffer.append(HISTORY_ROOT_NAME);
+    buffer.append(File.separator);
+    return FileLocationUtil.mapAuToFileLocation(buffer.toString(), au);
   }
 
   protected Mapping getMapping() throws Exception {
