@@ -1,5 +1,5 @@
 /*
- * $Id: TimerUtil.java,v 1.5 2003-06-20 22:34:56 claire Exp $
+ * $Id: TimerUtil.java,v 1.6 2003-07-17 05:22:30 tlipkis Exp $
  */
 
 /*
@@ -62,7 +62,7 @@ public class TimerUtil {
 //    }
 
   /**
-   * Sleep for <code>ms</code> milliseconds, ignoring interrupts
+   * Sleep for <code>ms</code> milliseconds, returning early if interrupted
    * @param ms length to sleep, in ms
    */
   public static void guaranteedSleep(long ms) {
@@ -74,6 +74,7 @@ public class TimerUtil {
       try {
 	sleep(expMS - nowMS);
       } catch (InterruptedException e) {
+	return;
       }
     }
   }
