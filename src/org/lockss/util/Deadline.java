@@ -1,5 +1,5 @@
 /*
- * $Id: Deadline.java,v 1.13 2002-12-13 23:07:29 tal Exp $
+ * $Id: Deadline.java,v 1.14 2002-12-30 20:44:02 tal Exp $
  */
 
 /*
@@ -157,7 +157,7 @@ public class Deadline implements Comparable {
 //   }
 
   /** Return the absolute expiration time, in milliseconds */
-  public long getExpirationTime() {
+  public synchronized long getExpirationTime() {
     return expiration.getTime();
   }
 
@@ -196,7 +196,7 @@ public class Deadline implements Comparable {
   }
 
   /** Return true iff this deadline expires before <code>other</code>. */
-  public boolean before(Deadline other) {
+  public synchronized boolean before(Deadline other) {
     return expiration.before(other.expiration);
   }
 
