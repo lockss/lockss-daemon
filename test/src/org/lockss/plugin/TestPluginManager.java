@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.38 2004-07-12 23:01:48 smorabito Exp $
+ * $Id: TestPluginManager.java,v 1.39 2004-07-16 22:53:07 smorabito Exp $
  */
 
 /*
@@ -87,6 +87,7 @@ public class TestPluginManager extends LockssTestCase {
     mgr = new MockPluginManager();
     theDaemon.setPluginManager(mgr);
     theDaemon.setDaemonInited(true);
+    mgr.setLoadablePluginsReady(true);
     mgr.initService(theDaemon);
   }
 

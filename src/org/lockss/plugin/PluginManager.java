@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.88 2004-07-13 00:43:18 smorabito Exp $
+ * $Id: PluginManager.java,v 1.89 2004-07-16 22:53:06 smorabito Exp $
  */
 
 /*
@@ -85,10 +85,10 @@ public class PluginManager extends BaseLockssManager {
     "password";
 
   static String PARAM_REGISTRY_CRAWL_INTERVAL =
-    Configuration.PREFIX + "plugin.registries.crawl.interval";
+    Configuration.PREFIX + "plugin.registries.crawlInterval";
   static String DEFAULT_REGISTRY_CRAWL_INTERVAL =
     "1d"; // not specified as a long value because this will be passed as
-          // a string literal to the AU config.
+	  // a string literal to the AU config.
 
   public static final String PARAM_PLUGIN_LOAD_TIMEOUT =
     Configuration.PREFIX + "plugin.load.timeout";
@@ -136,6 +136,10 @@ public class PluginManager extends BaseLockssManager {
   private KeyStore keystore;
   private JarValidator jarValidator;
   private boolean keystoreInited = false;
+  private boolean loadablePluginsReady = false;
+  private long registryTimeout = Configuration.
+    getCurrentConfig().getTimeIntervalParam(PARAM_PLUGIN_LOAD_TIMEOUT,
+					    DEFAULT_PLUGIN_LOAD_TIMEOUT);
 
   public PluginManager() {
   }
@@ -152,7 +156,6 @@ public class PluginManager extends BaseLockssManager {
     // Initialize the plugin directory.
     initPluginDir();
     //     statusSvc.registerStatusAccessor("AUS", new Status());
-    resetConfig();   // causes setConfig to think previous config was empty
   }
 
   /**
@@ -168,10 +171,44 @@ public class PluginManager extends BaseLockssManager {
     super.stopService();
   }
 
+  /**
+   * Start loadable plugins, ensure that they are properly loaded, and
+   * then start all configured AUs.  This is called by LockssDaemon
+   * after starting all the managers, and ensures everything happens
+   * in the right order.
+   */
+  public void startLoadablePlugins() {
+    if (areLoadablePluginsReady()) {
+      return;
+    }
+
+    Configuration config = Configuration.getCurrentConfig();
+    log.debug("Initializing loadable plugin registries before starting AUs");
+    initLoadablePluginRegistries(config.getList(PARAM_PLUGIN_REGISTRIES));
+    initPluginRegistry(config.getList(PARAM_PLUGIN_REGISTRY));
+    configureAllPlugins(config);
+
+    setLoadablePluginsReady(true);
+  }
+
+  private boolean areLoadablePluginsReady() {
+    return loadablePluginsReady;
+  }
+
+  public void setLoadablePluginsReady(boolean val) {
+    loadablePluginsReady = val;
+  }
+
   Configuration currentAllPlugs = ConfigManager.EMPTY_CONFIGURATION;
 
   protected void setConfig(Configuration config, Configuration oldConfig,
 			   Set changedKeys) {
+
+    if (changedKeys.contains(PARAM_PLUGIN_LOAD_TIMEOUT)) {
+      registryTimeout = Configuration.
+	getCurrentConfig().getTimeIntervalParam(PARAM_PLUGIN_LOAD_TIMEOUT,
+						DEFAULT_PLUGIN_LOAD_TIMEOUT);
+    }
 
     // Must load the xml plugin list *before* the plugin registry
     if (changedKeys.contains(PARAM_PLUGIN_XML_PLUGINS)) {
@@ -179,8 +216,7 @@ public class PluginManager extends BaseLockssManager {
     }
 
     // Don't load or start other plugins until the daemon is running.
-    if (isDaemonInited()) {
-
+    if (areLoadablePluginsReady()) {
       // Process the plugin registry.
       if (changedKeys.contains(PARAM_PLUGIN_REGISTRY)) {
 	initPluginRegistry(config.getList(PARAM_PLUGIN_REGISTRY));
@@ -191,22 +227,25 @@ public class PluginManager extends BaseLockssManager {
 	initLoadablePluginRegistries(config.getList(PARAM_PLUGIN_REGISTRIES));
       }
 
-      Configuration allPlugs = config.getConfigTree(PARAM_AU_TREE);
-      if (!allPlugs.equals(currentAllPlugs)) {
-	for (Iterator iter = allPlugs.nodeIterator(); iter.hasNext(); ) {
-	  String pluginKey = (String)iter.next();
-	  log.debug("Configuring plugin key: " + pluginKey);
-	  Configuration pluginConf = allPlugs.getConfigTree(pluginKey);
-	  Configuration prevPluginConf =
-	    currentAllPlugs.getConfigTree(pluginKey);
-
-	  configurePlugin(pluginKey, pluginConf, prevPluginConf);
-	}
-	currentAllPlugs = allPlugs;
-      }
+      configureAllPlugins(config);
     }
   }
 
+  private void configureAllPlugins(Configuration config) {
+    Configuration allPlugs = config.getConfigTree(PARAM_AU_TREE);
+    if (!allPlugs.equals(currentAllPlugs)) {
+      for (Iterator iter = allPlugs.nodeIterator(); iter.hasNext(); ) {
+	String pluginKey = (String)iter.next();
+	log.debug("Configuring plugin key: " + pluginKey);
+	Configuration pluginConf = allPlugs.getConfigTree(pluginKey);
+	Configuration prevPluginConf =
+	  currentAllPlugs.getConfigTree(pluginKey);
+
+	configurePlugin(pluginKey, pluginConf, prevPluginConf);
+      }
+      currentAllPlugs = allPlugs;
+    }
+  }
 
   /**
    * Convert plugin property key to plugin class name.
@@ -942,8 +981,10 @@ public class PluginManager extends BaseLockssManager {
 
       String auId = generateAuId(registryPlugin, auConf);
       String auKey = auKeyFromAuId(auId);
-      log.debug2("Setting Registry AU " + auKey + " recrawl interval to " +
-		 auConf.get("nc_interval"));
+      if (log.isDebug2()) {
+	log.debug2("Setting Registry AU " + auKey + " recrawl interval to " +
+		   auConf.get("nc_interval"));
+      }
 
       // Only process this registry if it is new.
       if (!auMap.containsKey(auId)) {
@@ -964,7 +1005,9 @@ public class PluginManager extends BaseLockssManager {
 	    shouldCrawlForNewContent(theDaemon.getNodeManager(registryAu).getAuState())) {
 	  // Trigger a new content crawl.  The callback will handle loading
 	  // all the loadable plugins when it is ready.
-	  log.debug("Starting a new crawl of AU: " + registryAu.getName());
+	  if (log.isDebug2()) {
+	    log.debug2("Starting a new crawl of AU: " + registryAu.getName());
+	  }
 	  theDaemon.getCrawlManager().startNewContentCrawl(registryAu, regCallback,
 							   url, null);
 
@@ -973,7 +1016,9 @@ public class PluginManager extends BaseLockssManager {
 	  // to process its plugins if it is ready.  It will only do so if
 	  // all the new content crawls it's waiting on have finished, or
 	  // if there are no new content crawls are needed.
-	  log.debug("Don't need to do a crawl of AU: " + registryAu.getName());
+	  if (log.isDebug2()) {
+	    log.debug2("Don't need to do a crawl of AU: " + registryAu.getName());
+	  }
 	  regCallback.processPluginsIfReady(url);
 	}
       } else {
@@ -985,13 +1030,12 @@ public class PluginManager extends BaseLockssManager {
     // Wait for the AU crawls to complete, or for the BinarySemaphore
     // to time out.
 
-    log.debug2("Waiting for loadable plugins to finish loading...");
+    log.debug("Waiting for loadable plugins to finish loading...");
     try {
-      // TODO: make static variable for timeout
-      long timeout = Configuration.
-	getCurrentConfig().getTimeIntervalParam(PARAM_PLUGIN_LOAD_TIMEOUT,
-						DEFAULT_PLUGIN_LOAD_TIMEOUT);
-      bs.take(Deadline.in(timeout));
+      if (!bs.take(Deadline.in(registryTimeout))) {
+	log.warning("Timed out while waiting for registries to finish loading. " +
+		    "Remaining registry URL list: " + regCallback.getRegistryUrls());
+      }
     } catch (InterruptedException ex) {
       log.warning("Binary semaphore threw InterruptedException while waiting." +
 		  "Remaining registry URL list: " + regCallback.getRegistryUrls());
@@ -1210,7 +1254,7 @@ public class PluginManager extends BaseLockssManager {
       return;
     }
 
-    log.debug2("Keystore successfully initialized.");
+    log.debug("Keystore successfully initialized.");
     keystoreInited = true;
   }
 
@@ -1255,9 +1299,8 @@ public class PluginManager extends BaseLockssManager {
    */
   private void loadLoadablePluginClasses(File blessedJar, List loadPlugins)
       throws IOException {
-    URLClassLoader pluginLoader =
-      new URLClassLoader(new URL[] { blessedJar.toURL() });
-
+    LoadablePluginClassLoader pluginLoader =
+      new LoadablePluginClassLoader(new URL[] { blessedJar.toURL() });
     String pluginName = null;
     try {
       for (Iterator pluginIter = loadPlugins.iterator();
@@ -1366,10 +1409,10 @@ public class PluginManager extends BaseLockssManager {
       // the plugin classes.
       synchronized(registryUrls) {
 	registryUrls.remove(url);
-      }
 
-      if (registryUrls.size() == 0) {
-	bs.give();
+	if (registryUrls.size() == 0) {
+	  bs.give();
+	}
       }
     }
 

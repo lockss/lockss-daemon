@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.56 2004-07-12 06:12:10 tlipkis Exp $
+ * $Id: LockssDaemon.java,v 1.57 2004-07-16 22:53:05 smorabito Exp $
  */
 
 /*
@@ -624,6 +624,9 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
 
     // startup all services
     initManagers();
+
+    // Install loadable plugin support
+    getPluginManager().startLoadablePlugins();
 
     log.info("Started");
   }

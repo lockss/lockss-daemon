@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSimulatedContent.java,v 1.62 2004-07-12 06:27:30 tlipkis Exp $
+ * $Id: FuncSimulatedContent.java,v 1.63 2004-07-16 22:53:08 smorabito Exp $
  */
 
 /*
@@ -84,7 +84,7 @@ public class FuncSimulatedContent extends LockssTestCase {
 
     theDaemon = getMockLockssDaemon();
     theDaemon.getAlertManager();
-    theDaemon.getPluginManager();
+    theDaemon.getPluginManager().setLoadablePluginsReady(true);
     theDaemon.getHashService();
     MockSystemMetrics metrics = new MyMockSystemMetrics();
     metrics.initService(theDaemon);
