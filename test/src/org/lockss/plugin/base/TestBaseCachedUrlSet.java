@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCachedUrlSet.java,v 1.1 2003-09-19 22:31:34 eaalto Exp $
+ * $Id: TestBaseCachedUrlSet.java,v 1.2 2003-09-23 07:47:52 eaalto Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ import org.lockss.plugin.*;
 import org.lockss.plugin.simulated.SimulatedArchivalUnit;
 import org.lockss.util.StreamUtil;
 import org.lockss.hasher.HashService;
+import java.security.MessageDigest;
 
 /**
  * This is the test class for
@@ -58,6 +59,7 @@ public class TestBaseCachedUrlSet extends LockssTestCase {
   private MockArchivalUnit mau;
   private MockLockssDaemon theDaemon;
   private MockPlugin plugin;
+  private MockSystemMetrics metrics;
 
   public void setUp() throws Exception {
     super.setUp();
@@ -71,7 +73,11 @@ public class TestBaseCachedUrlSet extends LockssTestCase {
     theDaemon.getHistoryRepository().startService();
     hashService = theDaemon.getHashService();
     hashService.startService();
-    theDaemon.getSystemMetrics().startService();
+    metrics = new MockSystemMetrics();
+    metrics.initService(theDaemon);
+    metrics.startService();
+    metrics.setHashSpeed(100);
+    theDaemon.setSystemMetrics(metrics);
 
     mau = new MyMockArchivalUnit();
     plugin = new MyMockPlugin();
@@ -396,10 +402,9 @@ public class TestBaseCachedUrlSet extends LockssTestCase {
         new SingleNodeCachedUrlSetSpec("http://www.example.com/testDir");
     CachedUrlSet fileSet = plugin.makeCachedUrlSet(mau, sSpec);
     long estimate = fileSet.estimatedHashDuration();
-    // XXX fix this with a MockSystemMetrics so we can set the hash speed
-//     assertTrue(estimate > 0);
-    long expectedEstimate = 1000 /
-        SystemMetrics.getSystemMetrics().getBytesPerMsHashEstimate();
+    // MockSystemMetrics set speed to avoid slow machine problems
+    assertTrue(estimate > 0);
+    long expectedEstimate = 1000 / metrics.getHashSpeed();
     assertEquals(estimate, hashService.padHashEstimate(expectedEstimate));
     // check that estimation isn't stored for single node sets
     assertEquals(-1, nodeMan.getNodeState(fileSet).getAverageHashDuration());

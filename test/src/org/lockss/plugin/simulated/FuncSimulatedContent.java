@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSimulatedContent.java,v 1.42 2003-09-17 06:10:01 troberts Exp $
+ * $Id: FuncSimulatedContent.java,v 1.43 2003-09-23 07:47:52 eaalto Exp $
  */
 
 /*
@@ -42,8 +42,7 @@ import junit.framework.*;
 /**
  * Test class for functional tests on the content.
  */
-public class FuncSimulatedContent
-  extends LockssTestCase {
+public class FuncSimulatedContent extends LockssTestCase {
   private SimulatedArchivalUnit sau;
   private MockLockssDaemon theDaemon;
 
@@ -90,9 +89,14 @@ public class FuncSimulatedContent
     theDaemon.getPluginManager().startService();
 
     theDaemon.getHistoryRepository().startService();
-    theDaemon.getHashService();
-    sau = (SimulatedArchivalUnit) theDaemon.getPluginManager().getAllAUs().get(
-      0);
+    theDaemon.getHashService().startService();
+    MockSystemMetrics metrics = new MyMockSystemMetrics();
+    metrics.initService(theDaemon);
+    metrics.startService();
+    metrics.setHashSpeed(100);
+    theDaemon.setSystemMetrics(metrics);
+    sau =
+        (SimulatedArchivalUnit) theDaemon.getPluginManager().getAllAUs().get(0);
 
     theDaemon.getLockssRepository(sau);
     theDaemon.getNodeManager(sau).initService(theDaemon);
@@ -103,6 +107,8 @@ public class FuncSimulatedContent
     theDaemon.getLockssRepository(sau).stopService();
     theDaemon.getNodeManager(sau).stopService();
     theDaemon.getPluginManager().stopService();
+    theDaemon.getHashService().stopService();
+    theDaemon.getSystemMetrics().stopService();
     super.tearDown();
   }
 
@@ -122,8 +128,8 @@ public class FuncSimulatedContent
     byte[] nameH = getHash(set, true);
     byte[] contentH = getHash(set, false);
 
-    sau = (SimulatedArchivalUnit) theDaemon.getPluginManager().getAllAUs().get(
-      1);
+    sau =
+        (SimulatedArchivalUnit)theDaemon.getPluginManager().getAllAUs().get(1);
     theDaemon.getLockssRepository(sau);
     theDaemon.getNodeManager(sau).initService(theDaemon);
     theDaemon.getNodeManager(sau).startService();
@@ -264,8 +270,7 @@ public class FuncSimulatedContent
     checkUrlContent(DAMAGED_CACHED_URL, 2, 2, 2, false, true);
   }
 
-  private void doDamageRemoveTest() throws Exception
-  {
+  private void doDamageRemoveTest() throws Exception {
     /* Cache the file again; this time the damage should be gone */
     String file = SimulatedArchivalUnit.SIMULATED_URL_ROOT + DAMAGED_CACHED_URL;
     UrlCacher uc = sau.getPlugin().makeUrlCacher(sau.getAUCachedUrlSet(),file);
@@ -273,23 +278,24 @@ public class FuncSimulatedContent
     checkUrlContent(DAMAGED_CACHED_URL, 2, 2, 2, false, false);
   }
 
-
   private void measureHashSpeed() throws Exception {
     MessageDigest dig = null;
     try {
       dig = MessageDigest.getInstance("SHA-1");
-    }
-    catch (NoSuchAlgorithmException ex) {
+    } catch (NoSuchAlgorithmException ex) {
       fail("No algorithm.");
     }
     CachedUrlSet set = sau.getAUCachedUrlSet();
     CachedUrlSetHasher hasher = set.getContentHasher(dig);
     SystemMetrics metrics = theDaemon.getSystemMetrics();
     int estimate = metrics.getBytesPerMsHashEstimate(hasher, dig);
-    assertTrue("Estimate was: "+estimate, (estimate > 0));
+    // should be protected against this being zero by MyMockSystemMetrics,
+    // but otherwise use the proper calculation.  This avoids test failure
+    // due to really slow machines
+    assertTrue(estimate > 0);
     long estimatedTime = set.estimatedHashDuration();
-    long size = ( (Long) PrivilegedAccessor.getValue(set, "totalNodeSize")).
-      longValue();
+    long size = ((Long)PrivilegedAccessor.getValue(set,
+        "totalNodeSize")).longValue();
     assertTrue(size > 0);
     System.out.println("b/ms: " + estimate);
     System.out.println("size: " + size);
@@ -316,21 +322,19 @@ public class FuncSimulatedContent
     MessageDigest dig = null;
     try {
       dig = MessageDigest.getInstance("SHA-1");
-    }
-    catch (NoSuchAlgorithmException ex) {
+    } catch (NoSuchAlgorithmException ex) {
       fail("No algorithm.");
     }
     hash(set, dig, namesOnly);
     return dig.digest();
   }
 
-  private void hash(CachedUrlSet set, MessageDigest dig, boolean namesOnly) throws
-    IOException {
+  private void hash(CachedUrlSet set, MessageDigest dig, boolean namesOnly)
+      throws IOException {
     CachedUrlSetHasher hasher = null;
     if (namesOnly) {
       hasher = set.getNameHasher(dig);
-    }
-    else {
+    } else {
       hasher = set.getContentHasher(dig);
     }
     int bytesHashed = 0;
@@ -339,10 +343,14 @@ public class FuncSimulatedContent
       bytesHashed += hasher.hashStep(256);
     }
     timeTaken = System.currentTimeMillis() - timeTaken;
-    if ( (timeTaken > 0) && (bytesHashed > 500)) {
+    if ((timeTaken > 0) && (bytesHashed > 500)) {
       System.out.println("Bytes hashed: " + bytesHashed);
       System.out.println("Time taken: " + timeTaken + "ms");
       System.out.println("Bytes/sec: " + (bytesHashed * 1000 / timeTaken));
+    } else {
+      System.out.println("No time taken, or insufficient bytes hashed.");
+      System.out.println("Bytes hashed: " + bytesHashed);
+      System.out.println("Time taken: " + timeTaken + "ms");
     }
   }
 
@@ -355,6 +363,23 @@ public class FuncSimulatedContent
     baos.close();
     return contentStr;
   }
+
+  // this version doesn't fully override the 'measureHashSpeed()' function, but
+  // protects against it returning '0' by returning the set speed
+  private class MyMockSystemMetrics extends MockSystemMetrics {
+    public int measureHashSpeed(CachedUrlSetHasher hasher, MessageDigest digest) throws
+        IOException {
+      int speed = super.measureHashSpeed(hasher, digest);
+      if (speed==0) {
+        speed = getHashSpeed();
+        if (speed<=0) {
+          throw new RuntimeException("No hash speed set.");
+        }
+      }
+      return speed;
+    }
+  }
+
 
   public static void main(String[] argv) {
     String[] testCaseList = {
