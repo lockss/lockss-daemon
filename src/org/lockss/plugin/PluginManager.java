@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.45 2003-08-27 22:12:40 eaalto Exp $
+ * $Id: PluginManager.java,v 1.46 2003-08-28 00:11:53 eaalto Exp $
  */
 
 /*
@@ -153,17 +153,16 @@ public class PluginManager extends BaseLockssManager {
    * {@see Plugin.getDefiningConfigKeys}
    */
   public static String generateAUId(String pluginId, Properties auDefProps) {
-    return generateAUId(pluginId,
+    return generateAuId(pluginId,
 			PropUtil.propsToCanonicalEncodedString(auDefProps));
   }
 
-  static String generateAUId(String pluginId, String auKey) {
+  static String generateAuId(String pluginId, String auKey) {
     return pluginKeyFromId(pluginId)+"&"+auKey;
   }
 
-  static String configKeyFromAUId(String auid) {
-    return StringUtil.replaceString(auid, "&", ".");
-
+  static String configKeyFromAuId(String auid) {
+    return StringUtil.replaceFirst(auid, "&", ".");
   }
 
   /**
@@ -187,7 +186,7 @@ public class PluginManager extends BaseLockssManager {
 	  Configuration oldAuConf = oldPluginConf.getConfigTree(auKey);
 	  if (!auConf.equals(oldAuConf)) {
 	    log.debug("Configuring AU id: " + auKey);
-	    configureAU(plugin, auConf, generateAUId(pluginKey, auKey));
+	    configureAu(plugin, auConf, generateAuId(pluginKey, auKey));
 	  } else {
 	    log.debug("Not configuring AU id: " + auKey +
 		      ", already configured");
@@ -203,7 +202,7 @@ public class PluginManager extends BaseLockssManager {
     }
   }
 
-  void configureAU(Plugin plugin, Configuration auConf, String auId)
+  void configureAu(Plugin plugin, Configuration auConf, String auId)
       throws ArchivalUnit.ConfigurationException {
     try {
       ArchivalUnit au = plugin.configureAU(auConf,
@@ -233,7 +232,7 @@ public class PluginManager extends BaseLockssManager {
     }
   }
 
-  ArchivalUnit createAU(Plugin plugin, Configuration auConf)
+  ArchivalUnit createAu(Plugin plugin, Configuration auConf)
       throws ArchivalUnit.ConfigurationException {
     try {
       ArchivalUnit au = plugin.createAU(auConf);
@@ -304,7 +303,7 @@ public class PluginManager extends BaseLockssManager {
   private void updateAuConfigFile(ArchivalUnit au, Configuration auConf)
       throws ArchivalUnit.ConfigurationException, IOException {
     String auid = au.getAUId();
-    String prefix = PARAM_AU_TREE + "." + configKeyFromAUId(auid);
+    String prefix = PARAM_AU_TREE + "." + configKeyFromAuId(auid);
     Configuration fqConfig = auConf.addPrefix(prefix);
     configMgr.updateAuConfigFile(fqConfig, prefix);
   }
@@ -340,7 +339,7 @@ public class PluginManager extends BaseLockssManager {
   public ArchivalUnit createAndSaveAUConfiguration(Plugin plugin,
 						   Configuration auConf)
       throws ArchivalUnit.ConfigurationException, IOException {
-    ArchivalUnit au = createAU(plugin, auConf);
+    ArchivalUnit au = createAu(plugin, auConf);
     updateAuConfigFile(au, auConf);
     return au;
   }
@@ -367,7 +366,7 @@ public class PluginManager extends BaseLockssManager {
   public Configuration getStoredAuConfiguration(ArchivalUnit au) {
     Configuration config = configMgr.readAuConfigFile();
     String auid = au.getAUId();
-    String prefix = PARAM_AU_TREE + "." + configKeyFromAUId(auid);
+    String prefix = PARAM_AU_TREE + "." + configKeyFromAuId(auid);
     return config.getConfigTree(prefix);
   }
 

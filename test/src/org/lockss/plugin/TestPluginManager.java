@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.21 2003-08-05 19:46:19 tlipkis Exp $
+ * $Id: TestPluginManager.java,v 1.22 2003-08-28 00:11:53 eaalto Exp $
  */
 
 /*
@@ -199,7 +199,7 @@ public class TestPluginManager extends LockssTestCase {
     ThrowingMockPlugin mpi = (ThrowingMockPlugin)mgr.getPlugin(key);
     assertNotNull(mpi);
     Configuration config = ConfigurationUtil.fromArgs("a", "b");
-    ArchivalUnit au = mgr.createAU(mpi, config);
+    ArchivalUnit au = mgr.createAu(mpi, config);
 
     // verify put in PluginManager map
     String auid = au.getAUId();
@@ -215,14 +215,14 @@ public class TestPluginManager extends LockssTestCase {
     // verify turns RuntimeException into ArchivalUnit.ConfigurationException
     mpi.setCfgEx(new ArchivalUnit.ConfigurationException("should be thrown"));
     try {
-      ArchivalUnit au2 = mgr.createAU(mpi, config);
+      ArchivalUnit au2 = mgr.createAu(mpi, config);
       fail("createAU should have thrown ArchivalUnit.ConfigurationException");
     } catch (ArchivalUnit.ConfigurationException e) {
     }
 
     mpi.setRtEx(new NullPointerException("Should be caught"));
     try {
-      ArchivalUnit au2 = mgr.createAU(mpi, config);
+      ArchivalUnit au2 = mgr.createAu(mpi, config);
       fail("createAU should have thrown ArchivalUnit.ConfigurationException");
     } catch (ArchivalUnit.ConfigurationException e) {
       // this is what's expected
@@ -240,14 +240,14 @@ public class TestPluginManager extends LockssTestCase {
     ThrowingMockPlugin mpi = (ThrowingMockPlugin)mgr.getPlugin(key);
     assertNotNull(mpi);
     Configuration config = ConfigurationUtil.fromArgs("a", "b");
-    ArchivalUnit au = mgr.createAU(mpi, config);
+    ArchivalUnit au = mgr.createAu(mpi, config);
 
     String auid = au.getAUId();
     ArchivalUnit aux = mgr.getAuFromId(auid);
     assertSame(au, aux);
 
     // verify can reconfig
-    mgr.configureAU(mpi, ConfigurationUtil.fromArgs("a", "c"), auid);
+    mgr.configureAu(mpi, ConfigurationUtil.fromArgs("a", "c"), auid);
     Configuration auConfig = au.getConfiguration();
     assertEquals("c", auConfig.get("a"));
     assertEquals(1, auConfig.keySet().size());
@@ -255,14 +255,14 @@ public class TestPluginManager extends LockssTestCase {
     // verify turns RuntimeException into ArchivalUnit.ConfigurationException
     mpi.setCfgEx(new ArchivalUnit.ConfigurationException("should be thrown"));
     try {
-      mgr.configureAU(mpi, config, auid);
+      mgr.configureAu(mpi, config, auid);
       fail("configureAU should have thrown ArchivalUnit.ConfigurationException");
     } catch (ArchivalUnit.ConfigurationException e) {
     }
 
     mpi.setRtEx(new NullPointerException("Should be caught"));
     try {
-      mgr.configureAU(mpi, config, auid);
+      mgr.configureAu(mpi, config, auid);
       fail("configureAU should have thrown ArchivalUnit.ConfigurationException");
     } catch (ArchivalUnit.ConfigurationException e) {
       // this is what's expected
@@ -384,7 +384,7 @@ public class TestPluginManager extends LockssTestCase {
     assertNull(mgr.findMostRecentCachedUrl(url2));
   }
 
-  public void testGenerateAUId() {
+  public void testGenerateAuId() {
     Properties props = new Properties();
     props.setProperty("key&1", "val=1");
     props.setProperty("key2", "val 2");
@@ -400,6 +400,16 @@ public class TestPluginManager extends LockssTestCase {
       "key2~val+2&"+
       "key4~val%2E4";
     assertEquals(expected, actual);
+  }
+
+
+  public void testConfigKeyFromAuId() {
+    String pluginId = "org|lockss|plugin|Blah";
+    String auId = "base_url~foo&volume~123";
+
+    String totalId = PluginManager.generateAuId(pluginId, auId);
+    String expectedStr = pluginId + "." + auId;
+    assertEquals(expectedStr, PluginManager.configKeyFromAuId(totalId));
   }
 
   public CachedUrlSet makeCUS(Plugin plugin, String auid, String url,

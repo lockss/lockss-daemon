@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.26 2003-08-04 07:58:46 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.27 2003-08-28 00:11:53 eaalto Exp $
  */
 
 /*
@@ -71,6 +71,26 @@ public class StringUtil {
     }
     for (int ix = oldIdx; ix < lineLen; ix++) {
       sb.append(line.charAt(ix));
+    }
+    return sb.toString();
+  }
+
+  public static String replaceFirst(String line, String oldstr, String newstr) {
+    int oldLen = oldstr.length();
+    if (oldLen == 0 || oldstr.equals(newstr)) {
+      return line;
+    }
+    int lineLen = line.length();
+    StringBuffer sb = new StringBuffer(lineLen);
+    int index = line.indexOf(oldstr);
+    if (index < 0) {
+      return line;
+    } else {
+      sb.append(line.substring(0, index));
+      sb.append(newstr);
+      if (index + oldLen < line.length()) {
+        sb.append(line.substring(index + oldLen));
+      }
     }
     return sb.toString();
   }
