@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.43 2003-05-27 21:02:43 tal Exp $
+ $Id: build.xml,v 1.44 2003-06-09 01:17:31 tal Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
@@ -34,24 +34,32 @@ in this Software without prior written authorization from Stanford University.
 
 <description>
 Args:
-  -Dclass=pack.age.Class    Specify class for test-one, test-class, run-class
-  -Dshowoutput=yes          With test-one, show System.err output as it happens
-  -Dargs="args ..."         Supply cmd line args to run-class
-  -Dloglevel=debug          Set default log level to debug for
-                               test-all, test-one, test-class, run-class
-  -Dfile=path/to/file       Specify file for print or index.
-                               File is relative to project base dir
-  -Dtimeout=msecs           Override the default test failure timeout.
-  -Dkeeptempfiles=true      Don't delete temp files after tests run.
+  -Dargs="args ..."        Supply cmd line args to run-class
+  -Dclass=pack.age.Class   Specify class for test-one, test-class, run-class
+  -Dcvstag=tag             Cvs tag to checkout for post-commit-test
+  -Dexclude=path           Exclude matching tests.
+  -Dfile=path/to/file      Specify file for print or index.
+                              File is relative to project base dir
+  -Dfork=true              Run each test in a separate jvm.
+  -Dforkc=true             Run compiler in a separate jvm.
+  -Dinclude=path           Include matching tests.
+  -Dkeeptempfiles=true     Don't delete temp files after tests run.
+  -Dloglevel=debug         Set default log level to debug for
+                              test-all, test-one, test-class, run-class.
+  -Dlogtarget=Class        Set default log target.
+  -Dshowoutput=yes         With test-one, show System.err output as it happens.
+  -Dtimeout=msecs          Override the default test failure timeout.
 </description>
 
   <!-- Defaults -->
   <property name="loglevel" value="" />
-  <property name="logtarget" value="org.lockss.util.AntTaskTarget" />
   <property name="showoutput" value="no" />
   <property name="timeout" value="" />
   <property name="keeptempfiles" value="" />
   <property name="fork" value="no" />
+  <property name="forkc" value="yes" />
+  <property name="exclude" value="" />
+
 
   <property environment="env"/>
   <!--  Ignore system classpath, to ensure consistent builds -->
@@ -118,6 +126,8 @@ Args:
   <!--  This path is also known to org.lockss.util.BuildInfo class -->
   <property name="build.info.file"
                      value="${classes}/org/lockss/htdocs/build.properties"/>
+  <property name="build.filerev.file"
+                     value="${classes}/revision-info"/>
 
   <property name="ant-contrib.resource"
                           value="net/sf/antcontrib/antcontrib.properties"/>
@@ -147,6 +157,7 @@ Args:
   <path id="test.compile.classpath">
     <path refid="compile.classpath" />
     <pathelement path="${lockss.jar}" />
+    <pathelement path="${lockss.ant.jar}" />
     <pathelement path="${junit.jar}" />
     <pathelement path="${junit.addons.jar}" />
   </path>
@@ -154,7 +165,6 @@ Args:
   <path id="test.run.classpath">
     <path refid="test.compile.classpath" />
     <pathelement path="${lockss.test.jar}" />
-    <pathelement path="${lockss.ant.jar}" />
   </path>
 
   <path id="doclet.compile.classpath">
@@ -185,7 +195,7 @@ Args:
 
   <!-- ==================================================================== -->
   <target name="prepare.test"
-      depends="prepare,-set.junit.task.available,-set.junit.available,jar-ant">
+      depends="prepare,-set.junit.task.available,-set.junit.available,jar-ant,check.contrib">
     <mkdir dir="${test.classes}" />
     <mkdir dir="${test.results}" />
     <condition property="class.arg.specified">
@@ -196,6 +206,17 @@ Args:
         </not>
       </and>
     </condition>
+
+    <!-- Default logtarget to AntTaskTarget only if not forking tests -->
+    <if>
+     <isfalse value="${fork}" />
+     <then>
+      <property name="logtarget" value="org.lockss.util.AntTaskTarget" />
+     </then>
+     <else>
+      <property name="logtarget" value="" />
+     </else>
+    </if>
   </target>
 
   <target name="prepare.run.test"
@@ -275,6 +296,7 @@ Args:
            debug="${javac.debug}"
            optimize="${javac.optimize}"
            deprecation="${javac.deprecation}"
+           fork="${forkc}"
            >
        <classpath refid="compile.classpath" />
        <include name="**/*.java"/>
@@ -297,6 +319,7 @@ Args:
            debug="${javac.debug}"
            optimize="${javac.optimize}"
            deprecation="${javac.deprecation}"
+           fork="${forkc}"
            >
        <classpath refid="test.compile.classpath" />
        <include name="**/*.java"/>
@@ -312,6 +335,7 @@ Args:
            debug="${javac.debug}"
            optimize="${javac.optimize}"
            deprecation="${javac.deprecation}"
+           fork="${forkc}"
            >
        <classpath refid="ant.compile.classpath" />
        <include name="**/*.java"/>
@@ -327,6 +351,7 @@ Args:
            debug="${javac.debug}"
            optimize="${javac.optimize}"
            deprecation="${javac.deprecation}"
+           fork="${forkc}"
            >
        <classpath refid="doclet.compile.classpath" />
        <include name="**/*.java"/>
@@ -365,7 +390,15 @@ Args:
       <entry key="build.user.name" value="${user.name}"/>
       <entry key="build.host" value="${env.HOSTNAME}"/>
       <entry key="build.releasename" value="${releasename}"/>
+      <entry key="build.cvs.tag" value="$Name: not supported by cvs2svn $"/>
     </propertyfile>
+    <!-- Put the CVS Id from all the sources files in a file in the jar -->
+    <!-- Exec the shell commend:
+       sh -c "find . -type f -print0 | xargs -0 '"'egrep '\$Id(:.*)?\$'"'"
+         It would be better to find a way to do this within Ant -->
+    <exec executable="sh" dir="${src}" output="${build.filerev.file}">
+      <arg line="-c &quot;find . -type f -print0 | xargs -0 egrep &apos;&quot;&apos;\$Id(:.*)?\$&apos;&quot;&apos;&quot;" />
+    </exec>
   </target>
 
   <!-- ==================================================================== -->
@@ -584,11 +617,13 @@ Args:
     <echo>
 Test results in ${test.results}
     </echo>
+    <property name="include" value="**/Test*.java" />
     <delete file="${test.results}/*" quiet="true" />
     <junit1 fork="no" printsummary="yes" haltonerror="yes" haltonfailure="yes">
       <batchtest fork="${fork}" todir="${test.results}">
         <fileset dir="${test.src}">
-          <include name="**/Test*.java" />
+          <include name="${include}" />
+          <exclude name="${exclude}" />
         </fileset>
       </batchtest>
       <formatter type="plain" usefile="true" />
@@ -719,17 +754,27 @@ Test results in ${test.results}
   <target name="checkout-and-build"
      depends="check.contrib"
      description="Checkout current cvs into a new temp dir and build all.  Delete temp dir iff build was successful." >
+   <property name="cvstag" value="" />
    <mkdir dir="${temp.build}" />
    <tempfile property="temp.build.dir" destdir="${temp.build}" prefix="build"/>
    <mkdir dir="${temp.build.dir}" />
    <trycatch property="recursive.error.msg">
     <try>
-     <echo>Checking out to ${temp.build.dir}</echo>
+     <if>
+      <equals arg1="${cvstag}" arg2="" />
+      <then>
+       <echo>Checking out to ${temp.build.dir}</echo>
+      </then>
+      <else>
+       <echo>Checking out tag "${cvstag}"
+  to ${temp.build.dir}</echo>
+      </else>
+     </if>
      <cvs command="-Q checkout" package="lockss-gamma" dest="${temp.build.dir}"
-       failonerror="true"/>
+       tag="${cvstag}" failonerror="true"/>
      <echo>Building and testing in ${temp.build.dir}</echo>
      <ant dir="${temp.build.dir}/${cvs.project}"
-	   target="rebuild-all"
+	   target="test-all"
 	   inheritAll="false" />
      <echo>Build was successful, deleting "${temp.build.dir}"</echo>
      <delete dir="${temp.build.dir}" quiet="true"/>
