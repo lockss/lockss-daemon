@@ -1,5 +1,5 @@
 /*
- * $Id: StatusTable.java,v 1.34 2004-09-16 21:29:16 dshr Exp $
+ * $Id: StatusTable.java,v 1.35 2004-09-19 01:28:54 tlipkis Exp $
  */
 
 /*
@@ -587,12 +587,12 @@ public class StatusTable {
 	  returnVal = compareHandlingNulls((Comparable)valA, (Comparable)valB);
 	  break;
 	case ColumnDescriptor.TYPE_STRING:
-	  if (logger.isDebug2() && valA != null && ! (valA instanceof String))
+	  if ( !(valA instanceof String) && valA != null && logger.isDebug2())
 	    logger.debug2("StatusTable.compare: valA not String but " +
-			 valA.getClass().toString());
-	  if (logger.isDebug2() && valB != null && ! (valB instanceof String))
+			  valA.getClass().toString());
+	  if ( !(valB instanceof String) && valB != null && logger.isDebug2())
 	    logger.debug2("StatusTable.compare: valB not String but " +
-			 valB.getClass().toString());
+			  valB.getClass().toString());
 	  returnVal = compareHandlingNulls((Comparable)valA, (Comparable)valB);
 	  break;
 	default: //if we don't know the type, assume comparable
