@@ -1,5 +1,5 @@
 /*
- * $Id: TestPriorityQueue.java,v 1.9 2004-09-19 01:28:37 tlipkis Exp $
+ * $Id: TestPriorityQueue.java,v 1.10 2004-09-19 01:38:51 tlipkis Exp $
  */
 
 /*
@@ -134,11 +134,11 @@ public class TestPriorityQueue extends LockssTestCase {
     }
   }
 
-  public void testAsList() {
+  public void testCopyAsList() {
     PriorityQueue q = new PriorityQueue();
     q.put("foo");
     q.put("bar");
-    assertEquals(ListUtil.list("bar", "foo"), q.asList());
+    assertEquals(ListUtil.list("bar", "foo"), q.copyAsList());
   }
 
   public void testRemove() {
