@@ -1,5 +1,5 @@
 /*
- * $Id: PTestPlugin.java,v 1.12 2003-02-27 04:04:28 tal Exp $
+ * $Id: PTestPlugin.java,v 1.13 2003-04-10 21:54:51 tal Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ import java.math.BigInteger;
  * Stub plugin for testing proxy.
  * Results are completely canned.
  */
-class PTestPlugin {
+public class PTestPlugin {
 
   static class CU implements CachedUrl {
     private String url;
@@ -59,6 +59,10 @@ class PTestPlugin {
       this.url = url;
       setContents(contents);
       props.setProperty("Content-Type", type);
+    }
+
+    public ArchivalUnit getArchivalUnit() {
+      return null;
     }
 
     private void setContents(String s) {
@@ -115,6 +119,10 @@ class PTestPlugin {
       return map.containsKey(url);
     }
 
+    public org.lockss.plugin.CachedUrlSet getAUCachedUrlSet() {
+      return null;
+    }
+
     public CachedUrl makeCachedUrl(String url) {
       return (CachedUrl)map.get(url);
     }
@@ -124,15 +132,26 @@ class PTestPlugin {
     }
   }
 
-  public static ArchivalUnit makeTest() {
-    AU au = new AU();
-    au.storeCachedUrl(new CU("http://foo.bar/one", "text/plain",
-				      "this is one text\n"));
-    au.storeCachedUrl(new CU("http://foo.bar/two", "text/html",
-				      "<html><h3>this is two html</h3></html>"));
+  public static String testUrls[] = {
+    "http://foo.bar/one",
+    "http://foo.bar/two",
+  };
 
-    MockLockssDaemon daemon = new MockLockssDaemon(null);
-    PluginUtil.registerArchivalUnit(au);
+  public static String testTypes[] = {
+    "text/plain",
+    "text/html",
+  };
+
+  public static String testContents[] = {
+    "this is one text\n",
+    "<html><h3>this is two html</h3></html>",
+  };
+
+  public static ArchivalUnit makeTestAU() {
+    AU au = new AU();
+    for (int i = 0; i < testUrls.length; i++) {
+      au.storeCachedUrl(new CU(testUrls[i], testTypes[i], testContents[i]));
+    }
     return au;
   }
 }
