@@ -1,5 +1,5 @@
 /*
- * $Id: StatusTable.java,v 1.1 2003-03-13 00:22:05 troberts Exp $
+ * $Id: StatusTable.java,v 1.2 2003-03-13 02:00:36 troberts Exp $
  */
 
 /*
@@ -34,6 +34,9 @@ package org.lockss.daemon.status;
 
 import java.util.*;
 
+/**
+ * Returned by {@link StatusService#getTable(String, Object)} 
+ */
 public class StatusTable {
   public static final int TYPE_INT=0;
   public static final int TYPE_FLOAT=1;
@@ -41,6 +44,7 @@ public class StatusTable {
   public static final int TYPE_TIME_INTERVAL=3;
   public static final int TYPE_STRING=4;
   public static final int TYPE_IP_ADDRESS=5;
+  public static final int TYPE_DATE=6;
 
 
   private String name=null;
@@ -83,18 +87,20 @@ public class StatusTable {
   }
 
   /**
-   * Gets a list of all the columns in this table in their perferred display
-   * order.
-   * @returns list of the columns in the table in the perferred display order
+   * Gets a list of {@link StatusTable.ColumnDescriptor}s representing the 
+   * columns in this table in their perferred display order.
+   * @returns list of {@link StatusTable.ColumnDescriptor}s the columns in 
+   * the table in the perferred display order
    */
   public List getColumnDescriptors() {
     return columnDescriptors;
   }
 
   /**
-   * Gets a list of TableRow objects for all the rows in the table in their
-   * default sort order.
-   * @returns list of rows in the table in the perferred order
+   * Gets a list of {@link java.util.Map} objects for all the rows in the 
+   * table in their default sort order.
+   * @returns list of {@link java.util.Map}s representing rows in the table 
+   * in their default sort order 
    */
   public List getSortedRows() {
     return getSortedRows(defaultSortRules);
@@ -103,9 +109,10 @@ public class StatusTable {
   /**
    * Same as getSortedRows(), but will sort according to the rules 
    * specified in sortRules
-   * @param sortRules list of SortRule objects describing how to sort 
-   * the rows
-   * @returns list of rows sorted by the sorter
+   * @param sortRules list of {@link StatusTable.SortRule} objects describing
+   *  how to sort  the rows
+   * @returns list of {@link java.util.Map}s representing rows in the table 
+   * in the sort order specified by sortRules 
    */
   public List getSortedRows(List sortRules) {
     Collections.sort(rows, 
@@ -163,6 +170,9 @@ public class StatusTable {
     }
   }
 
+  /**
+   * Encapsulation of the info needed to sort on a single field
+   */
   public static class SortRule {
     String field;
     boolean sortAscending;
@@ -187,6 +197,10 @@ public class StatusTable {
     }
   }
 
+  /**
+   * Encapsulation of the info needed to describe a single column (name, 
+   * display title, and type)
+   */
   public static class ColumnDescriptor {
     private String columnName;
     private String title;

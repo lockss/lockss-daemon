@@ -1,5 +1,5 @@
 /*
- * $Id: StatusService.java,v 1.1 2003-03-13 00:22:05 troberts Exp $
+ * $Id: StatusService.java,v 1.2 2003-03-13 02:00:36 troberts Exp $
  */
 
 /*
@@ -35,9 +35,8 @@ package org.lockss.daemon.status;
 import java.util.*;
 
 /**
- * This object sits between the daemon and the UI code.  Basically, it 
- * functions as a centralized place to query for status information on the 
- * system.
+ * This object sits between the daemon and the UI code to function as a 
+ * centralized place to query for status information on the system.
  */
 public interface StatusService {
 
@@ -70,13 +69,18 @@ public interface StatusService {
   public void unregisterStatusAccessor(String tableName);
 
   
-  
+  /**
+   * Thrown for various errors related to status queries
+   */  
   public class Error extends Exception {
     public Error(String msg) {
       super(msg);
     }
   }
 
+  /**
+   * Thrown for errors which we don't expect/intend to catch
+   */
   public class RuntimeError extends RuntimeException {
     public RuntimeError(String msg) {
       super(msg);

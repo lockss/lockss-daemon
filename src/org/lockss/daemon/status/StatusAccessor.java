@@ -1,5 +1,5 @@
 /*
- * $Id: StatusAccessor.java,v 1.1 2003-03-13 00:22:05 troberts Exp $
+ * $Id: StatusAccessor.java,v 1.2 2003-03-13 02:00:36 troberts Exp $
  */
 
 /*
@@ -32,6 +32,11 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.daemon.status;
 import java.util.*;
+
+/**
+ * Objects wishing to provide status information to {@link StatusService} must
+ * create an object which implements this.
+ */
 
 public interface StatusAccessor {
   /**
