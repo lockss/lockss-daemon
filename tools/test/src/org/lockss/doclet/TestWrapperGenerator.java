@@ -1,5 +1,5 @@
 /*
- * $Id: TestWrapperGenerator.java,v 1.3 2004-05-25 00:17:46 clairegriffin Exp $
+ * $Id: TestWrapperGenerator.java,v 1.4 2004-05-26 23:55:57 tyronen Exp $
  */
 
 /*
@@ -44,7 +44,7 @@ import java.util.*;
 import com.sun.tools.javadoc.*;
 import junit.framework.*;
 import org.lockss.test.LockssTestCase;
-import org.lockss.util.StringUtil;
+import org.lockss.util.*;
 
 public class TestWrapperGenerator extends LockssTestCase {
 
@@ -59,14 +59,12 @@ public class TestWrapperGenerator extends LockssTestCase {
   private final boolean debug = false;
   private final boolean INTERFACE_ONLY = false;
 
+  static Logger log = Logger.getLogger("TestWrapperGenerator");
+
   public void setUp() throws Exception {
     super.setUp();
-    if (debug) {
-      tempDirPath = "/home/tyronen/lockss-daemon/tools/";
-    } else {
-      tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    }
-    System.out.println("Using " + tempDirPath);
+    tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    log.debug("Using " + tempDirPath);
   }
 
   public void tearDown() throws Exception {
@@ -78,33 +76,23 @@ public class TestWrapperGenerator extends LockssTestCase {
   }
 
   public void testAll() throws Exception {
-
-   // try {
       makeTemplateFile(USE_PACKAGE_NONE,true);
       makeSourceFile();
       makeExpectedOutput();
       String interfaceText = (INTERFACE_ONLY) ? "-interface" : "";
       String chopped = sourceName.replaceAll(".java","");
       String[] javadocargs = {
-                             "-sourcepath", tempDirPath,
-                             "-private",
-                             "-classpath", tempDirPath,
-                             sourceName, "child" + sourceName,
-                             "-doclet", "org.lockss.doclet.WrapperGenerator",
-                             "-template", templateName,
-                             "-prefix", prefix,
-                             "-d", tempDirPath,
-                             /* interfaceText*/
-
+         tempDirPath + sourceName, tempDirPath + "child" + sourceName,
+         "-private",
+         "-doclet", "org.lockss.doclet.WrapperGenerator",
+         "-template", templateName,
+         "-prefix", prefix,
+         "-d", tempDirPath/*,
+         interfaceText*/
          };
       Main.execute(javadocargs);
       String output = tempDirPath + prefix + "child" + sourceName;
-      //areFilesIdentical(expectedOutput, output);
-  /*  } catch (Throwable e) {
-      System.err.println(e.getMessage());
-      fail(e.getMessage());
-    }*/
-
+      areFilesIdentical(expectedOutput, output);
   }
 
   static final int USE_PACKAGE_NONE = 0;
@@ -183,7 +171,8 @@ public class TestWrapperGenerator extends LockssTestCase {
   }
 
   void makeSourceFile() throws IOException {
-    FileWriter fw = new FileWriter(tempDirPath + sourceName);
+    String sourcename = tempDirPath + sourceName;
+    FileWriter fw = new FileWriter(sourcename);
     PrintWriter pw = new PrintWriter(fw);
     pw.println("import java.io.*;");
     pw.println("import java.util.*;");
