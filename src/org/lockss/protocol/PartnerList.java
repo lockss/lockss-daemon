@@ -1,5 +1,5 @@
 /*
- * $Id: PartnerList.java,v 1.14 2003-05-06 01:45:45 troberts Exp $
+ * $Id: PartnerList.java,v 1.15 2003-05-26 03:49:08 tal Exp $
  */
 
 /*
@@ -70,7 +70,7 @@ class PartnerList {
   long lastPartnerRemoveTime = 0;
 
   Map lastMulticastReceived = new LRUMap(100);
-  List defaultPartnerList;
+  List defaultPartnerList = new ArrayList();
   long recentMulticastInterval;
   long minPartnerRemoveInterval;
   int maxPartners;
@@ -86,7 +86,8 @@ class PartnerList {
   }
 
   /** Configure the PartnerList */
-  public void setConfig(Configuration config) {
+  public void setConfig(Configuration config, Configuration oldConfig,
+			Set changedKeys) {
     maxPartners = config.getInt(PARAM_MAX_PARTNERS, DEFAULT_MAX_PARTNERS);
     if (maxPartners != partners.getMaximumSize()) {
       partners.setMaximumSize(maxPartners);
@@ -97,22 +98,24 @@ class PartnerList {
     recentMulticastInterval =
       config.getTimeInterval(PARAM_RECENT_MULTICAST_INTERVAL,
 			     DEFAULT_RECENT_MULTICAST_INTERVAL);
-    String s = config.get(PARAM_DEFAULT_LIST, "");
-    List stringList = StringUtil.breakAt(s, ';');
-    List newDefaultList = new ArrayList();
-    for (Iterator iter = stringList.iterator(); iter.hasNext(); ) {
-      try {
-	newDefaultList.add(InetAddress.getByName((String)iter.next()));
-      } catch (UnknownHostException e) {
-	log.warning("Can't add default partner", e);
+    if (changedKeys.contains(PARAM_DEFAULT_LIST)) {
+      String s = config.get(PARAM_DEFAULT_LIST, "");
+      List stringList = StringUtil.breakAt(s, ';');
+      List newDefaultList = new ArrayList();
+      for (Iterator iter = stringList.iterator(); iter.hasNext(); ) {
+	try {
+	  newDefaultList.add(InetAddress.getByName((String)iter.next()));
+	} catch (UnknownHostException e) {
+	  log.warning("Can't add default partner", e);
+	}
       }
-    }
-    if (newDefaultList.isEmpty()) {
-      log.error("Default partner list is empty");
-    }
-    defaultPartnerList = newDefaultList;
-    if (partners.isEmpty()) {
-      addDefaultPartners();
+      if (newDefaultList.isEmpty()) {
+	log.error("Default partner list is empty");
+      }
+      defaultPartnerList = newDefaultList;
+      if (partners.isEmpty()) {
+	addDefaultPartners();
+      }
     }
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestPartnerList.java,v 1.6 2003-04-03 11:34:29 tal Exp $
+ * $Id: TestPartnerList.java,v 1.7 2003-05-26 03:49:08 tal Exp $
  */
 
 /*
@@ -63,12 +63,17 @@ public class TestPartnerList extends LockssTestCase {
   InetAddress inet3;
   InetAddress inet4;
 
+  private void setConfig(PartnerList pl, Configuration config) {
+    pl.setConfig(config, Configuration.EMPTY_CONFIGURATION,
+		 config.keySet());
+  }
+
   public void setUp() throws Exception {
     super.setUp();
     TimeBase.setSimulated();
     pl = new PartnerList();
-    pl.setConfig(getConfig(DEF_MIN_PARTNER_REMOVE_INTERVAL, DEF_MAX_PARTNERS,
-			   DEF_MULTICAST_INTERVAL, DEF_PARTNERS));
+    setConfig(pl, getConfig(DEF_MIN_PARTNER_REMOVE_INTERVAL, DEF_MAX_PARTNERS,
+			    DEF_MULTICAST_INTERVAL, DEF_PARTNERS));
     inet1 = InetAddress.getByName(IP1);
     inet2 = InetAddress.getByName(IP2);
     inet3 = InetAddress.getByName(IP3);
@@ -203,8 +208,8 @@ public class TestPartnerList extends LockssTestCase {
 
   public void testAddFromDefaultWhenEmpty() {
     pl = new PartnerList();
-    pl.setConfig(getConfig(DEF_MIN_PARTNER_REMOVE_INTERVAL, DEF_MAX_PARTNERS,
-			   DEF_MULTICAST_INTERVAL, ""));
+    setConfig(pl, getConfig(DEF_MIN_PARTNER_REMOVE_INTERVAL, DEF_MAX_PARTNERS,
+			    DEF_MULTICAST_INTERVAL, ""));
     removeAll();
     assertEquals(EMPTY_SET, setOf(pl.getPartners()));
     // make sure past lastPartnerRemoveTime
