@@ -1,5 +1,5 @@
 /*
- * $Id: NewContentCrawler.java,v 1.10 2004-03-09 23:37:53 tlipkis Exp $
+ * $Id: NewContentCrawler.java,v 1.11 2004-03-10 08:49:23 tlipkis Exp $
  */
 
 /*
@@ -72,7 +72,7 @@ public class NewContentCrawler extends CrawlerImpl {
     Set extractedUrls = new HashSet();
 
     if (!crawlPermission(cus)) {
-      logger.debug("Crawling AU not permitted - aborting crawl!");
+      logger.info("Crawling AU not permitted - aborting crawl!");
       return false;
     }
 
@@ -157,10 +157,17 @@ public class NewContentCrawler extends CrawlerImpl {
 
   private boolean withinCrawlWindow() {
     if ((spec!=null) && (!spec.canCrawl())) {
-      logger.debug("Crawl canceled: outside of crawl window");
+      logger.info("Crawl canceled: outside of crawl window");
       return false;
     }
     return true;
+  }
+
+  /** We always want our UrlCacher to store all redirected copies */
+  protected UrlCacher makeUrlCacher(CachedUrlSet cus, String url) {
+    UrlCacher uc = super.makeUrlCacher(cus, url);
+    uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_STORE_ALL);
+    return uc;
   }
 
   protected boolean fetchAndParse(String url, Collection extractedUrls,
@@ -168,7 +175,7 @@ public class NewContentCrawler extends CrawlerImpl {
 				boolean fetchIfChanged, boolean reparse) {
 
     int error = 0;
-    logger.debug2("Dequeued url from list: "+url);
+    logger.debug3("Dequeued url from list: "+url);
 
     //makeUrlCacher needed to handle connection pool
     UrlCacher uc = makeUrlCacher(cus, url);
@@ -224,13 +231,14 @@ public class NewContentCrawler extends CrawlerImpl {
       logger.error("Problem parsing "+uc+". Ignoring", ioe);
       error = Crawler.STATUS_FETCH_ERROR;
     }
-    logger.debug2("Removing from list: "+uc.getUrl());
+    logger.debug3("Removing from list: "+uc.getUrl());
     return (error == 0);
   }
 
   private void cacheWithRetries(UrlCacher uc, int maxTries)
       throws IOException {
     int retriesLeft = maxTries;
+    logger.debug2("Fetching " + uc.getUrl());
     while (true) {
       try {
 	if (wdog != null) {
