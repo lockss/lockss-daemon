@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.51 2004-03-02 03:41:22 eaalto Exp $
+ * $Id: LockssDaemon.java,v 1.52 2004-03-07 08:34:16 tlipkis Exp $
  */
 
 /*
@@ -253,7 +253,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   }
 
   /**
-   * True if all managers have bee started.
+   * True if all managers have been started.
    * @return true iff all managers have been started */
   public boolean isDaemonRunning() {
     return daemonRunning;
