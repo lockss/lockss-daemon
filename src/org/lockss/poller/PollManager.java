@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.48 2003-03-18 01:02:47 tal Exp $
+* $Id: PollManager.java,v 1.49 2003-03-18 02:38:28 tal Exp $
  */
 
 /*
@@ -122,6 +122,9 @@ public class PollManager  implements LockssManager {
                                       new ManagerStatus());
     statusServ.registerStatusAccessor(POLL_STATUS_TABLE_NAME,
                                       new PollStatus());
+    statusServ.registerObjectReferenceAccessor(MANAGER_STATUS_TABLE_NAME,
+					       ArchivalUnit.class,
+					       new ManagerStatusAURef());
   }
 
   /**
@@ -729,7 +732,9 @@ public class PollManager  implements LockssManager {
         { STRINGTYPE, STRINGTYPE, STRINGTYPE, STRINGTYPE, STRINGTYPE,STRINGTYPE,
     ColumnDescriptor.TYPE_DATE, STRINGTYPE};
 
-    private static String[] preferredOrder =  { "Plugin", "AU", "URL", "Deadline"};
+    private static String[] preferredOrder =  {
+      "PluginID", "AuID", "URL", "Deadline"
+    };
     private static boolean[] ascendPref = { true, true, true, false };
 
     public List getColumnDescriptors(String key) throws StatusService.NoSuchTableException {
@@ -808,7 +813,7 @@ public class PollManager  implements LockssManager {
 
     private boolean allowableKey(String []keyArray, String key) {
       for(int i=0; i< keyArray.length; i++) {
-        if(keyArray[i].startsWith(key))
+        if(key.startsWith(keyArray[i]))
           return true;
       }
       return false;
@@ -817,7 +822,7 @@ public class PollManager  implements LockssManager {
     private boolean matchKey(PollManagerEntry entry, String key) {
       boolean isMatch = false;
       PollSpec spec = entry.spec;
-      String keyValue = key.substring(key.indexOf(':'));
+      String keyValue = key.substring(key.indexOf(':') + 1);
       if(key.startsWith("Plugin:")) {
         if(spec.getPluginId().equals(keyValue)) {
           isMatch = true;
@@ -970,4 +975,22 @@ public class PollManager  implements LockssManager {
     }
   }
 
+  private static class ManagerStatusAURef implements ObjectReferenceAccessor {
+
+    int howManyPollsRunning(ArchivalUnit au) {
+      ManagerStatus ms = new ManagerStatus();
+      try {
+	return ms.getRows("AU:" + au.getAUId()).size();
+      } catch (StatusService.NoSuchTableException e) {
+	theLog.debug("no table", e);
+	return 0;
+      }
+    }					  
+
+    public StatusTable.Reference getReference(Object obj, String tableName) {
+      ArchivalUnit au = (ArchivalUnit)obj;
+      return new StatusTable.Reference(howManyPollsRunning(au) + " polls",
+				       tableName, "AU:" + au.getAUId());
+    }
+  }
 }
