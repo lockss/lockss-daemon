@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.3 2003-01-09 01:56:26 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.4 2003-01-10 23:02:25 claire Exp $
  */
 
 /*
@@ -342,13 +342,9 @@ public class NodeManagerImpl implements NodeManager {
     while (children.hasNext()) {
       CachedUrlSet child = (CachedUrlSet)children.next();
       String url = (String)child.getSpec().getPrefixList().get(0);
-      int timeToLive = 0; //XXX calculate
       long duration = 0; //XXX calculate
-      InetAddress grpAddr = null; //XXX determine
-      int voteRange = 0; //XXX calculate
       PollManager.getPollManager().makePollRequest(url, null,
-          LcapMessage.CONTENT_POLL_REQ, timeToLive, grpAddr, duration,
-          voteRange);
+          LcapMessage.CONTENT_POLL_REQ, duration);
     }
   }
 }

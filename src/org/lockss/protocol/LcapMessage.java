@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessage.java,v 1.14 2003-01-03 03:01:17 claire Exp $
+ * $Id: LcapMessage.java,v 1.15 2003-01-10 23:02:25 claire Exp $
  */
 
 /*
@@ -60,6 +60,8 @@ public class LcapMessage implements Serializable {
 
   public static final String PARAM_HASH_ALGORITHM = Configuration.PREFIX +
       "protocol.hashAlgorithm";
+  public static final String PARAM_SEND_HOPCOUNT = Configuration.PREFIX +
+      "protocol.sendHopcount";
 
   public static final String DEFAULT_HASH_ALGORITM = "SHA-1";
 
@@ -89,7 +91,6 @@ public class LcapMessage implements Serializable {
 
   /* items which are in the property list */
   LcapIdentity       m_originID;    // the address of the originator
-  InetAddress        m_group;       // The group address
   protected String   m_hashAlgorithm; // the algorithm used to hash
   byte               m_ttl;         // The original time-to-live
   long               m_startTime;   // the original start time
@@ -105,6 +106,7 @@ public class LcapMessage implements Serializable {
   private EncodedProperty m_props;
   private static byte[] signature = {'l','p','m','1'};
   private static Logger log = Logger.getLogger("Message");
+  private static byte theSendHopcount = -1;
 
   private static IdentityManager theIdentityMgr
       = IdentityManager.getIdentityManager();
@@ -129,7 +131,6 @@ public class LcapMessage implements Serializable {
   protected LcapMessage(String targetUrl,
 			String regExp,
 			String[] entries,
-			InetAddress group,
 			byte ttl,
 			byte[] challenge,
 			byte[] verifier,
@@ -139,7 +140,6 @@ public class LcapMessage implements Serializable {
     // assign the data
     m_targetUrl = targetUrl;
     m_regExp = regExp;
-    m_group = group;
     m_ttl = ttl;
     m_challenge = challenge;
     m_verifier = verifier;
@@ -164,7 +164,6 @@ public class LcapMessage implements Serializable {
     this();
     // copy the essential information from the trigger packet
     m_hopCount =trigger.getHopCount();
-    m_group = trigger.getGroupAddress();
     m_ttl = trigger.getTimeToLive();
     m_challenge = trigger.getChallenge();
     m_targetUrl = trigger.getTargetUrl();
@@ -222,8 +221,6 @@ public class LcapMessage implements Serializable {
   static public LcapMessage makeRequestMsg(String targetUrl,
 					   String regExp,
 					   String[] entries,
-					   InetAddress group,
-					   byte ttl,
 					   byte[] challenge,
 					   byte[] verifier,
 					   int opcode,
@@ -231,13 +228,13 @@ public class LcapMessage implements Serializable {
 					   LcapIdentity localID)
       throws IOException {
 
-    LcapMessage msg = new LcapMessage(targetUrl,regExp,entries,group,ttl,
+    LcapMessage msg = new LcapMessage(targetUrl,regExp,entries,(byte)0,
 				      challenge,verifier,new byte[0],opcode);
     if (msg != null) {
       msg.m_startTime = TimeBase.nowMs();
       msg.m_stopTime = msg.m_startTime + timeRemaining;
       msg.m_originID = localID;
-      msg.m_hopCount = ttl;
+      msg.m_hopCount = sendHopCount();
     }
     return msg;
 
@@ -345,13 +342,6 @@ public class LcapMessage implements Serializable {
     }
 
     addr_str = m_props.getProperty("group");
-    try {
-      m_group = LcapIdentity.stringToAddr(addr_str);
-    }
-    catch(UnknownHostException ex) {
-      log.warning("invalid group address");
-    }
-
     m_hashAlgorithm = m_props.getProperty("hashAlgorithm");
     m_ttl = (byte) m_props.getInt("ttl", 0);
     duration = m_props.getInt("duration", 0) * 1000;
@@ -383,13 +373,6 @@ public class LcapMessage implements Serializable {
     }
     catch(NullPointerException npe) {
       throw new ProtocolException("LcapMessage.encode - null origin host address.");
-    }
-
-    if(m_group == null) {
-      m_props.setProperty("group", "");
-    }
-    else {
-      m_props.setProperty("group", LcapIdentity.addrToString(m_group));
     }
 
     m_props.setProperty("hashAlgorithm", m_hashAlgorithm);
@@ -460,10 +443,6 @@ public class LcapMessage implements Serializable {
     return m_ttl;
   }
 
-  public InetAddress getGroupAddress() {
-    return m_group;    // The group address
-  }
-
   public LcapIdentity getOriginID(){
     return m_originID;
   }
@@ -523,6 +502,13 @@ public class LcapMessage implements Serializable {
 
   public String getHashAlgorithm() {
     return m_hashAlgorithm;
+  }
+
+  static byte sendHopCount() {
+    if(theSendHopcount == -1) {
+      theSendHopcount = (byte)Configuration.getIntParam(PARAM_SEND_HOPCOUNT,5);
+    }
+    return theSendHopcount;
   }
 
   String entriesToString() {

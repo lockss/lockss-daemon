@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.17 2003-01-03 03:01:17 claire Exp $
+* $Id: PollManager.java,v 1.18 2003-01-10 23:02:25 claire Exp $
  */
 
 /*
@@ -156,30 +156,21 @@ public class PollManager {
    * @param url the String representing the url for this poll
    * @param regexp the String representing the regexp for this poll
    * @param opcode the poll message opcode
-   * @param timeToLive the time to live for the new message
-   * @param grpAddr the InetAddress used to construct the message
    * @param duration the time this poll has to run
-   * @param voteRange the probabilistic vote range
    * @throws IOException thrown if Message construction fails.
    */
   public void makePollRequest(String url,
                               String regexp,
                               int opcode,
-                              int timeToLive,
-                              InetAddress grpAddr,
-                              long duration,
-                              long voteRange)
+                              long duration)
       throws IOException {
-    if (voteRange > (duration/4)) {
-      voteRange = duration/4;
-    }
+    long voteRange = duration/4;
     Deadline deadline = Deadline.inRandomRange(duration - voteRange,
         duration + voteRange);
     long timeUntilCount = deadline.getRemainingTime();
     byte[] challenge = makeVerifier();
     byte[] verifier = makeVerifier();
-    LcapMessage msg = LcapMessage.makeRequestMsg(url,regexp,null,grpAddr,
-        (byte)timeToLive,
+    LcapMessage msg = LcapMessage.makeRequestMsg(url,regexp,null,
         challenge,verifier,opcode,timeUntilCount,
         theIdMgr.getLocalIdentity());
 
@@ -410,8 +401,6 @@ public class PollManager {
     LcapMessage reqmsg = LcapMessage.makeRequestMsg(url,
         regexp,
         new String[0],
-        msg.getGroupAddress(),
-        msg.getTimeToLive(),
         msg.getVerifier(),
         makeVerifier(),
         LcapMessage.VERIFY_POLL_REQ,
