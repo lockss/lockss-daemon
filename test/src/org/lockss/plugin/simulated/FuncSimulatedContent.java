@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSimulatedContent.java,v 1.59 2004-04-07 03:35:32 eaalto Exp $
+ * $Id: FuncSimulatedContent.java,v 1.60 2004-04-10 05:41:45 tlipkis Exp $
  */
 
 /*
@@ -155,7 +155,7 @@ public class FuncSimulatedContent extends LockssTestCase {
     scgen.setFileTypes(SimulatedContentGenerator.FILE_TYPE_HTML +
                        SimulatedContentGenerator.FILE_TYPE_TXT);
     scgen.setAbnormalFile("1,1", 1);
-    //    scgen.setOddBranchesHaveContent(true);
+    scgen.setOddBranchesHaveContent(true);
 
     sau.deleteContentTree();
     sau.generateContentTree();
