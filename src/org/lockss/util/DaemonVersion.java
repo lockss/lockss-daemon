@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonVersion.java,v 1.2 2004-06-14 03:08:44 smorabito Exp $
+ * $Id: DaemonVersion.java,v 1.3 2004-06-15 21:40:38 smorabito Exp $
  */
 
 /*
@@ -88,7 +88,7 @@ public class DaemonVersion implements Version {
   }
 
   public long toLong() {
-    long base = 46656;  // 36^3
+    long base = 36 * 36 * 36;
     long num = m_versionMajor;
     num = (num * base) + m_versionMinor;
     num = (num * base) + m_versionBuild;
