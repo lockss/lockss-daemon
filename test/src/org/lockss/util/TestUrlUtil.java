@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlUtil.java,v 1.16 2004-09-01 02:34:23 tlipkis Exp $
+ * $Id: TestUrlUtil.java,v 1.17 2004-09-07 07:28:01 tlipkis Exp $
  */
 
 /*
@@ -91,6 +91,7 @@ public class TestUrlUtil extends LockssTestCase {
     assertEquals("", normalizePath("./"));
     assertEquals("../", normalizePath("../"));
     assertEquals("/..", normalizePath("/.."));
+    assertEquals("../a", normalizePath("../a"));
     assertEquals("/..", normalizePath("/a/../.."));
 
     assertEquals("/a/b", normalizePath("/a/./b"));
@@ -124,7 +125,6 @@ public class TestUrlUtil extends LockssTestCase {
     assertEquals("/../", normalizePath("/a/c/../../../"));
     assertEquals("/../../", normalizePath("/a/c/../../../../"));
     assertEquals("/", normalizePath("/a/.."));
-    assertEquals("/", normalizePath("/a/.."));
 
     assertEquals("/../x", normalizePath("/a/c/../../../x"));
   }
@@ -135,8 +135,10 @@ public class TestUrlUtil extends LockssTestCase {
 
   public void testNormalizeUrl() throws MalformedURLException {
     assertSameNormalizeUrl("http://a/b");
+
     assertEquals("http://a.com/b", UrlUtil.normalizeUrl("HTTP://A.COM/b"));
     assertEquals("http://a.com/B", UrlUtil.normalizeUrl("HTTP://A.COM/B"));
+
     assertEquals("http://a.com/", UrlUtil.normalizeUrl("http://a.com/"));
     assertEquals("http://a.com/", UrlUtil.normalizeUrl("http://a.com"));
     assertEquals("http://a.com/xy", UrlUtil.normalizeUrl("http://a.com/xy"));
@@ -147,6 +149,17 @@ public class TestUrlUtil extends LockssTestCase {
 		 UrlUtil.normalizeUrl("http://a.com/xy/ab/../"));
     assertEquals("http://a.com/",
 		 UrlUtil.normalizeUrl("http://a.com/xy/ab/../../"));
+    // port
+    assertEquals("http://a.com/b",
+		 UrlUtil.normalizeUrl("HTTP://A.COM:80/b"));
+    assertEquals("http://a.com:8000/b",
+		 UrlUtil.normalizeUrl("HTTP://A.COM:8000/b"));
+    assertEquals("ftp://example.com/",
+		 UrlUtil.normalizeUrl("ftp://example.com:21/"));
+    // query not removed
+    assertEquals("http://a.com/dd?foo=bar",
+		 UrlUtil.normalizeUrl("http://a.com/dd?foo=bar"));
+
     try {
       String s = "http://a.com/xy/ab/../../../";
       UrlUtil.normalizeUrl(s);
@@ -159,8 +172,6 @@ public class TestUrlUtil extends LockssTestCase {
       fail(s);
     } catch (MalformedURLException e) {
     }
-    assertEquals("http://a.com/dd?foo=bar",
-		 UrlUtil.normalizeUrl("http://a.com/dd?foo=bar"));
   }
 
   public void testEqualUrls() throws MalformedURLException {

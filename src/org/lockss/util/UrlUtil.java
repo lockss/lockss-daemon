@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.22 2004-09-03 16:53:20 tlipkis Exp $
+ * $Id: UrlUtil.java,v 1.23 2004-09-07 07:28:02 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -36,7 +36,7 @@ import java.net.*;
 import javax.servlet.http.HttpServletRequest;
 import org.lockss.plugin.*;
 import org.lockss.util.urlconn.*;
-import org.lockss.daemon.Configuration;
+import org.lockss.daemon.*;
 import org.apache.commons.httpclient.*;
 import org.apache.commons.httpclient.methods.*;
 
@@ -55,7 +55,9 @@ public class UrlUtil {
 
   /** Normalize URL to a canonical form: lowercase scheme and hostname,
    * normalize path.  Removes any reference part.  XXX need to add
-   * character escaping */
+   * character escaping
+   * @throws MalformedURLException
+   */
   public static String normalizeUrl(String urlString)
       throws MalformedURLException {
     urlString = urlString.trim();	// remove extra spaces
@@ -64,7 +66,7 @@ public class UrlUtil {
     }
     URL url = new URL(urlString);
 
-    String protocol = url.getProtocol();
+    String protocol = url.getProtocol(); // returns lowercase proto
     String host = url.getHost();
     int port = url.getPort();
     String file = url.getFile();
@@ -83,8 +85,10 @@ public class UrlUtil {
       }
     }
 
-    if (port == getDefaultPort(protocol)) {	// uses default port
-      port = -1;			// so don't specify it
+    if (port == getDefaultPort(protocol)) {
+      // if url includes a port that is the default port for the protocol,
+      // remove it (by passing port -1 to constructor)
+      port = -1;
       changed = true;
     }
 
@@ -114,25 +118,39 @@ public class UrlUtil {
   }
 
   /** Normalize URL to a canonical form for the specified AU.  First
-   * applies any plugin-specific normalization, then generic
-   * normalization. */
+   * applies any plugin-specific normalization, then generic normalization.
+   * Disallows changes to protocol, host or port on the theory that such
+   * changes constitute more than "normalization".  This might be too
+   * strict; transformations such as <code>publisher.com ->
+   * www.publisher.com</code> might fall within the scope of normalization.
+   * @throws MalformedURLException if the plugin's nromalizer throws, or if
+   * the URL it returns is malformed.
+   * @throws PluginBehaviorException if the plugin changes the URL in a way
+   * it should (<i>e.g.</i>, the protocol)
+   */
   public static String normalizeUrl(String url, ArchivalUnit au)
-      throws MalformedURLException {
-    String site = au.siteNormalizeUrl(url);
+      throws MalformedURLException, PluginBehaviorException {
+    String site;
+    try {
+      site = au.siteNormalizeUrl(url);
+    } catch (RuntimeException w) {
+      throw new MalformedURLException(url);
+    }
     if (site != url) {
       URL origUrl = new URL(url);
       URL siteUrl = new URL(site);
       if (! (origUrl.getProtocol().equals(siteUrl.getProtocol()) &&
 	     origUrl.getHost().equals(siteUrl.getHost()) &&
 	     origUrl.getPort() == siteUrl.getPort())) {
-	throw new RuntimeException("siteNormalizeUrl(" + url +
-				   ") altered non-alterable component: " +
+	throw new PluginBehaviorException("siteNormalizeUrl(" + url +
+					  ") altered non-alterable component: " +
 				   site);
       }      
     }
     return normalizeUrl(site);
   }
 
+  /** Return the default port for the (already lowercase) protocol */
   // 1.3 URL doesn't expose this
   static int getDefaultPort(String protocol) {
     if ("http".equals(protocol)) return 80;
@@ -169,7 +187,7 @@ public class UrlUtil {
       return path;
     }
 
-    StringTokenizer st = new StringTokenizer(path, File.separator);
+    StringTokenizer st = new StringTokenizer(path, "/");
     List names = new ArrayList();
     int dotdotcnt = 0;
     boolean prevdotdot = false;
