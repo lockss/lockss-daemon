@@ -1,5 +1,5 @@
 /*
- * $Id: MockAuState.java,v 1.2 2003-02-24 22:13:43 claire Exp $
+ * $Id: MockAuState.java,v 1.3 2003-02-26 02:15:47 aalto Exp $
  */
 
 /*
@@ -32,21 +32,25 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.test;
 
-import org.lockss.daemon.*;
 import org.lockss.state.*;
-import org.lockss.plugin.*;
+import org.lockss.plugin.ArchivalUnit;
 
 /**
  * This is a mock version of <code>ArchivalUnit</code> used for testing
  */
 
 public class MockAuState extends AuState {
-  public MockAuState() {
-    this(null, -1);
+
+  public MockAuState(ArchivalUnit au) {
+    this(au, -1, -1);
   }
 
-  public MockAuState(ArchivalUnit au, long lastCrawlTime) {
-    super(au, lastCrawlTime);
+  public MockAuState() {
+    this(null);
+  }
+
+  public MockAuState(ArchivalUnit au, long lastCrawlTime, long lastPollTime) {
+    super(au, lastCrawlTime, lastPollTime);
   }
 
   public ArchivalUnit getArchivalUnit() {
@@ -55,6 +59,18 @@ public class MockAuState extends AuState {
 
   public long getLastCrawlTime() {
     return lastCrawlTime;
+  }
+
+  public long getLastTopLevelPollTime() {
+    return lastTopLevelPoll;
+  }
+
+  public void setLastCrawlTime(long newCrawlTime) {
+    lastCrawlTime = newCrawlTime;
+  }
+
+  public void setLastTopLevelPollTime(long newPollTime) {
+    lastTopLevelPoll = newPollTime;
   }
 
 

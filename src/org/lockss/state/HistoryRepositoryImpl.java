@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.10 2003-02-24 22:13:42 claire Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.11 2003-02-26 02:15:47 aalto Exp $
  */
 
 /*
@@ -187,12 +187,12 @@ public class HistoryRepositoryImpl implements HistoryRepository, LockssManager {
       File auFile = new File(getAuLocation(au) + File.separator + AU_FILE_NAME);
       if (!auFile.exists()) {
         logger.warning("No au file found.");
-        return new AuState(au, -1);
+        return new AuState(au, -1, -1);
       }
       Unmarshaller unmarshaller = new Unmarshaller(AuStateBean.class);
       unmarshaller.setMapping(getMapping());
       AuStateBean asb = (AuStateBean)unmarshaller.unmarshal(new FileReader(auFile));
-      return new AuState(au, asb.getLastCrawlTime());
+      return new AuState(au, asb.getLastCrawlTime(), asb.getLastTopLevelPollTime());
     } catch (Exception e) {
       logger.error("Couldn't load au state: ", e);
       throw new LockssRepository.RepositoryStateException("Couldn't load au state.");

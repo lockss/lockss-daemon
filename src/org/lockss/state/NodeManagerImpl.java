@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.37 2003-02-25 03:13:47 claire Exp $
+ * $Id: NodeManagerImpl.java,v 1.38 2003-02-26 02:15:47 aalto Exp $
  */
 
 /*
@@ -62,6 +62,14 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
   public static final String PARAM_TREEWALK_TEST_DURATION =
       Configuration.PREFIX + "treewalk.test.duration";
   static final int DEFAULT_TREEWALK_TEST_DURATION = 1000;
+
+  /**
+   * Configuration parameter name for default interval, in ms, after which
+   * a new top level poll should be called.
+   */
+  public static final String PARAM_TOP_LEVEL_POLL_INTERVAL =
+      Configuration.PREFIX + "top.level.poll.duration";
+  static final int DEFAULT_TOP_LEVEL_POLL_INTERVAL = 14*24*60*60*1000; //2 weeks
 
   private static LockssDaemon theDaemon;
   private static NodeManager theManager = null;
@@ -271,13 +279,19 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
 
   void doTreeWalk() {
     if (theCrawlManager.canTreeWalkStart(managerAu, getAuState(), null, null)) {
-      //XXX check for top level poll timing
-      // ask the Plugin
-      // if it's been a really long time, schedule a new poll
+      long pollInterval =
+          Configuration.getIntParam(PARAM_TOP_LEVEL_POLL_INTERVAL,
+                                    DEFAULT_TOP_LEVEL_POLL_INTERVAL);
       long startTime = TimeBase.nowMs();
-      nodeTreeWalk(nodeMap);
-      long elapsedTime = TimeBase.nowMs() - startTime;
-      updateEstimate(elapsedTime);
+      // if it's been too long, start a top level poll
+      //XXX ask the Plugin
+      if ((startTime - getAuState().getLastTopLevelPollTime()) > pollInterval) {
+        callTopLevelPoll();
+      } else {
+        nodeTreeWalk(nodeMap);
+        long elapsedTime = TimeBase.nowMs() - startTime;
+        updateEstimate(elapsedTime);
+      }
     }
   }
 
@@ -360,7 +374,6 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
   }
 
   private void loadStateTree() {
-    // get list of aus
     // recurse through au cachedurlsets
     CachedUrlSet cus = managerAu.getAUCachedUrlSet();
     recurseLoadCachedUrlSets(cus);
@@ -529,9 +542,20 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
   private void callNamePoll(CachedUrlSet cus) {
     try {
       theDaemon.getPollManager().requestPoll(cus, null, null,
-          LcapMessage.NAME_POLL_REQ);
+                                             LcapMessage.NAME_POLL_REQ);
     } catch (IOException ioe) {
       logger.error("Couldn't make name poll request.", ioe);
+      // the treewalk will fix this eventually
+    }
+  }
+
+  private void callTopLevelPoll() {
+    try {
+      theDaemon.getPollManager().requestPoll(managerAu.getAUCachedUrlSet(),
+                                             null, null,
+                                             LcapMessage.CONTENT_POLL_REQ);
+    } catch (IOException ioe) {
+      logger.error("Couldn't make top level poll request.", ioe);
       // the treewalk will fix this eventually
     }
   }

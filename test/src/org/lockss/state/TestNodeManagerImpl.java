@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.27 2003-02-25 22:07:33 troberts Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.28 2003-02-26 02:15:47 aalto Exp $
  */
 
 /*
@@ -255,21 +255,35 @@ public class TestNodeManagerImpl
   }
 
   public void testTreeWalkStart() throws Exception {
+    MockPollManager pollMan = (MockPollManager)theDaemon.getPollManager();
     MockCrawlManager crawlMan = (MockCrawlManager)theDaemon.getCrawlManager();
+    pollMan.startService();
     crawlMan.startService();
 
     AuState auState = nodeManager.getAuState();
 
     //should allow walk to start if last crawl time >= 0
+    //should not schedule a top level poll
     auState.lastCrawlTime = 123;
+    auState.lastTopLevelPoll = TimeBase.nowMs();
     nodeManager.doTreeWalk();
     assertTrue(crawlMan.getAuStatus(mau)==null);
+    assertTrue(pollMan.getPollStatus(mau.getAUCachedUrlSet().getUrl())==null);
+
+    //should allow walk but schedule top level poll
+    auState.lastTopLevelPoll = 0;
+    nodeManager.doTreeWalk();
+    assertTrue(crawlMan.getAuStatus(mau)==null);
+    assertTrue(pollMan.getPollStatus(
+        mau.getAUCachedUrlSet().getUrl()) == MockPollManager.CONTENT_REQUESTED);
+
 
     //should abort walk and schedule crawl if last crawl time < 0
     auState.lastCrawlTime = -123;
     nodeManager.doTreeWalk();
     assertTrue(crawlMan.getAuStatus(mau)==MockCrawlManager.SCHEDULED);
 
+    pollMan.stopService();
     crawlMan.stopService();
   }
 
@@ -362,8 +376,7 @@ public class TestNodeManagerImpl
     nodeManager.walkNodeState(node);
     if (shouldSchedule) {
       assertTrue(pollMan.getPollStatus(
-          node.getCachedUrlSet().getUrl()) ==
-                 MockPollManager.NAME_REQUESTED);
+          node.getCachedUrlSet().getUrl()) == MockPollManager.NAME_REQUESTED);
     } else {
       assertTrue(pollMan.getPollStatus(
           node.getCachedUrlSet().getUrl()) == null);

@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericFileCachedUrl.java,v 1.1 2003-02-25 22:56:16 aalto Exp $
+ * $Id: TestGenericFileCachedUrl.java,v 1.2 2003-02-26 02:15:47 aalto Exp $
  */
 
 /*
@@ -33,19 +33,16 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin;
 
 import java.io.*;
-import java.util.*;
-import java.net.MalformedURLException;
+import java.util.Properties;
+import java.math.BigInteger;
 import org.lockss.daemon.*;
 import org.lockss.repository.*;
 import org.lockss.test.*;
-import org.lockss.plugin.simulated.SimulatedArchivalUnit;
 import org.lockss.util.StreamUtil;
-import org.lockss.repository.TestRepositoryNodeImpl;
-import java.math.BigInteger;
 
 /**
  * This is the test class for
- * org.lockss.plugin.simulated.GenericFileCachedUrlSet.
+ * org.lockss.plugin.GenericFileCachedUrl.
  *
  * @author  Emil Aalto
  * @version 0.0

@@ -1,5 +1,5 @@
 /*
- * $Id: AuStateBean.java,v 1.3 2003-02-24 22:13:42 claire Exp $
+ * $Id: AuStateBean.java,v 1.4 2003-02-26 02:15:47 aalto Exp $
  */
 
 /*
@@ -41,11 +41,11 @@ import org.lockss.plugin.ArchivalUnit;
  */
 public class AuStateBean extends AuState {
   public AuStateBean() {
-    super(null, -1);
+    super(null, -1, -1);
   }
 
   AuStateBean(AuState auState) {
-    super(auState.au, auState.lastCrawlTime);
+    super(auState.au, auState.lastCrawlTime, auState.lastTopLevelPoll);
   }
 
   /**
@@ -62,5 +62,13 @@ public class AuStateBean extends AuState {
    */
   public void setLastCrawlTime(long newCrawlTime) {
     lastCrawlTime = newCrawlTime;
+  }
+
+  /**
+   * Sets the last top level poll time to a new value.
+   * @param newPollTime in ms
+   */
+  public void setLastTopLevelPollTime(long newPollTime) {
+    lastTopLevelPoll = newPollTime;
   }
 }

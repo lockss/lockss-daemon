@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.8 2003-02-24 22:13:42 claire Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.9 2003-02-26 02:15:47 aalto Exp $
  */
 
 /*
@@ -128,7 +128,7 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
 
   public void testStoreAuState() throws Exception {
     MockArchivalUnit mau = new MockArchivalUnit();
-    AuState auState = new AuState(mau, 123);
+    AuState auState = new AuState(mau, 123, 321);
     repository.storeAuState(auState);
     String filePath = FileLocationUtil.mapAuToFileLocation(tempDirPath +
         HistoryRepositoryImpl.HISTORY_ROOT_NAME, mau);
@@ -140,6 +140,7 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
     auState = null;
     auState = repository.loadAuState(mau);
     assertEquals(123, auState.getLastCrawlTime());
+    assertEquals(321, auState.getLastTopLevelPollTime());
     assertEquals(mau.getAUId(), auState.getArchivalUnit().getAUId());
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: AuState.java,v 1.3 2003-02-24 22:13:42 claire Exp $
+ * $Id: AuState.java,v 1.4 2003-02-26 02:15:47 aalto Exp $
  */
 
 /*
@@ -41,10 +41,12 @@ import org.lockss.plugin.ArchivalUnit;
 public class AuState {
   protected ArchivalUnit au;
   protected long lastCrawlTime;
+  protected long lastTopLevelPoll;
 
-  protected AuState(ArchivalUnit au, long lastCrawlTime) {
+  protected AuState(ArchivalUnit au, long lastCrawlTime, long lastTopLevelPoll) {
     this.au = au;
     this.lastCrawlTime = lastCrawlTime;
+    this.lastTopLevelPoll = lastTopLevelPoll;
   }
 
   /**
@@ -61,6 +63,14 @@ public class AuState {
    */
   public long getLastCrawlTime() {
     return lastCrawlTime;
+  }
+
+  /**
+   * Returns the last top level poll time for the au.
+   * @return the last poll time in ms
+   */
+  public long getLastTopLevelPollTime() {
+    return lastTopLevelPoll;
   }
 
   public String toString() {
