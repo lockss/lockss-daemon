@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.9 2003-03-15 02:56:02 aalto Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.10 2003-03-15 03:16:46 aalto Exp $
  */
 
 /*
@@ -69,8 +69,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 
     theDaemon = new MockLockssDaemon();
     theDaemon.useMockNodeService(true);
-    nodeManager = new MockNodeManager();
-    theDaemon.getNodeManager(mau);
+    nodeManager = (MockNodeManager)theDaemon.getNodeManager(mau);
 
     crawlManager.initService(theDaemon);
   }
