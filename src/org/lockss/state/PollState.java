@@ -1,5 +1,5 @@
 /*
- * $Id: PollState.java,v 1.26 2004-09-28 08:53:14 tlipkis Exp $
+ * $Id: PollState.java,v 1.27 2004-12-08 00:43:53 troberts Exp $
  */
 
 /*
@@ -27,7 +27,7 @@
 
 package org.lockss.state;
 
-import org.lockss.util.Deadline;
+import org.lockss.util.*;
 import org.lockss.poller.PollSpec;
 
 /**
@@ -243,39 +243,32 @@ public class PollState implements Comparable {
   }
 
   /**
+   * Return <0 if int1<int2, >0 if int1>int2, 0 otherwise
+   */
+  private int compare(int int1, int int2) {
+    return int1-int2;
+  }
+
+  /**
    * Returns a String.compareTo() of the two type:lwr:upr strings.  Throws an
    * UnsupportedOperationException if called on a non-PollState.
    * @param obj must be a PollState
    * @return int results of String.compareTo()
    */
   public int compareTo(Object obj) {
-    if (obj instanceof PollState) {
-      PollState ps2 = (PollState) obj;
-      StringBuffer myKey = new StringBuffer();
-      myKey.append(type);
-      if (lwrBound != null) {
-        myKey.append(":");
-        myKey.append(lwrBound);
-      }
-      if (uprBound != null) {
-        myKey.append(":");
-        myKey.append(uprBound);
-      }
-      StringBuffer otherKey = new StringBuffer();
-      otherKey.append(ps2.getType());
-      if (ps2.getLwrBound() != null) {
-        otherKey.append(":");
-        otherKey.append(ps2.getLwrBound());
-      }
-      if (ps2.getUprBound() != null) {
-        otherKey.append(":");
-        otherKey.append(ps2.getUprBound());
-      }
-      return myKey.toString().compareTo(otherKey.toString());
-    } else {
-      throw new UnsupportedOperationException(
-          "Comparing a PollState to a non-PollState object");
+    PollState ps2 = (PollState) obj;
+    int returnVal = 0;
+
+    returnVal = compare(type, ps2.type);
+    if (returnVal != 0) {
+      return returnVal;
     }
+
+    returnVal = StringUtil.compareToHandleNull(lwrBound, ps2.lwrBound);
+    if (returnVal != 0) {
+      return returnVal;
+    }
+    return StringUtil.compareToHandleNull(uprBound, ps2.uprBound);
   }
 
   public boolean equals(Object obj) {
@@ -286,7 +279,16 @@ public class PollState implements Comparable {
     }
   }
 
-  public int hashCode() {
-    throw new UnsupportedOperationException();
-  }
+   public int hashCode() {
+     int hash = 0;
+     if (lwrBound != null) {
+       hash += lwrBound.hashCode();
+     }
+     hash = hash << 1;
+     if (uprBound != null) {
+       hash += uprBound.hashCode();
+     }
+     hash = (hash << 1) + type;
+     return hash;
+   }
 }
