@@ -1,5 +1,5 @@
 /*
- * $Id: PollTestPlugin.java,v 1.3 2002-12-16 06:04:28 claire Exp $
+ * $Id: PollTestPlugin.java,v 1.4 2003-01-22 06:14:56 claire Exp $
  */
 
 /*
@@ -62,6 +62,12 @@ public class PollTestPlugin {
 
     public long estimatedHashDuration() {
       return duration;
+    }
+
+    public Iterator flatSetIterator() {
+      ArrayList al = new ArrayList();
+      al.add(this);
+      return al.iterator();
     }
 
     /** Set the actual hash duration and size.

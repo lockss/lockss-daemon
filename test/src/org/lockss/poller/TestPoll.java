@@ -23,9 +23,12 @@ public class TestPoll extends TestCase {
 
   private static String[] testentries = {"test1.doc", "test2.doc", "test3.doc"};
   protected static ArchivalUnit testau;
+  private static IdentityManager idmgr;
   static {
     testau = PollTestPlugin.PTArchivalUnit.createFromListOfRootUrls(rooturls);
     org.lockss.plugin.Plugin.registerArchivalUnit(testau);
+    TestIdentityManager.configParams("/tmp/iddb", "src/org/lockss/protocol");
+    idmgr = IdentityManager.getIdentityManager();
   }
 
   protected InetAddress testaddr;
@@ -44,7 +47,7 @@ public class TestPoll extends TestCase {
     pollmanager = PollManager.getPollManager();
     try {
       testaddr = InetAddress.getByName("127.0.0.1");
-      testID = IdentityManager.getIdentityManager().getIdentity(testaddr);
+      testID = idmgr.getIdentity(testaddr);
     }
     catch (UnknownHostException ex) {
       fail("can't open test host");

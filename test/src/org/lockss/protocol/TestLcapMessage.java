@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapMessage.java,v 1.4 2003-01-10 23:03:33 claire Exp $
+ * $Id: TestLcapMessage.java,v 1.5 2003-01-22 06:14:56 claire Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ public class TestLcapMessage extends TestCase {
   private static String regexp = "*.doc";
   private static byte[] testbytes = {1,2,3,4,5,6,7,8,9,10};
   private static String[] testentries = {"test1.doc",
-					 "test2.doc", "test3.doc"};
+                                         "test2.doc", "test3.doc"};
 
   protected InetAddress testaddr;
   protected LcapIdentity testID;
@@ -105,11 +105,12 @@ public class TestLcapMessage extends TestCase {
 
     try {
       rep_msg = LcapMessage.makeReplyMsg(testmsg,
-					 testbytes,
-					 testbytes,
-					 LcapMessage.CONTENT_POLL_REP,
-					 100000,
-					 testID);
+                                         testbytes,
+                                         testbytes,
+                                         testentries,
+                                         LcapMessage.CONTENT_POLL_REP,
+                                         100000,
+                                         testID);
     }
     catch(IOException ex) {
       fail("message reply creation failed");
@@ -135,13 +136,13 @@ public class TestLcapMessage extends TestCase {
     LcapMessage req_msg = null;
     try {
       req_msg = LcapMessage.makeRequestMsg(urlstr,
-					   regexp,
-					   testentries,
-					   testbytes,
-					   testbytes,
-					   LcapMessage.CONTENT_POLL_REQ,
-					   100000,
-					   testID);
+                                           regexp,
+                                           testentries,
+                                           testbytes,
+                                           testbytes,
+                                           LcapMessage.CONTENT_POLL_REQ,
+                                           100000,
+                                           testID);
     }
     catch (Exception ex) {
       fail("message request creation failed.");
