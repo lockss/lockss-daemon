@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNode.java,v 1.9 2003-04-22 01:02:02 aalto Exp $
+ * $Id: RepositoryNode.java,v 1.10 2003-06-02 21:39:50 troberts Exp $
  */
 
 /*
@@ -190,10 +190,13 @@ public interface RepositoryNode {
   public class RepositoryNodeContents {
     public InputStream input;
     public Properties props;
+    public Reader reader;
 
-    public RepositoryNodeContents(InputStream input, Properties props) {
+    public RepositoryNodeContents(InputStream input, Properties props,
+				  Reader reader) {
       this.input = input;
       this.props = props;
+      this.reader = reader;
     }
   }
 }

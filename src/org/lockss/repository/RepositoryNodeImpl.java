@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.26 2003-05-07 23:46:30 aalto Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.27 2003-06-02 21:39:50 troberts Exp $
  */
 
 /*
@@ -396,8 +396,9 @@ public class RepositoryNodeImpl implements RepositoryNode {
     try {
       InputStream is =
           new BufferedInputStream(new FileInputStream(curInputFile));
-      return new RepositoryNode.RepositoryNodeContents(is,
-          (Properties)curProps.clone());
+      Properties props = (Properties)curProps.clone();
+      Reader reader = new BufferedReader(new FileReader(curInputFile));
+      return new RepositoryNode.RepositoryNodeContents(is, props, reader);
     } catch (FileNotFoundException fnfe) {
       logger.error("Couldn't get inputstream for '"+curInputFile.getPath()+"'");
       logger.debug3("Running consistency check on node '"+url+"'");
