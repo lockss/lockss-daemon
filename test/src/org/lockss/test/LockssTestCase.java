@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.30 2003-07-11 23:40:47 troberts Exp $
+ * $Id: LockssTestCase.java,v 1.31 2003-07-14 06:47:20 tlipkis Exp $
  */
 
 /*
@@ -37,12 +37,14 @@ import java.io.*;
 import java.net.*;
 import org.lockss.util.*;
 import org.lockss.daemon.Configuration;
+import org.lockss.daemon.ConfigManager;
 import junit.framework.TestCase;
 import junit.framework.TestResult;
 
 
 public class LockssTestCase extends TestCase {
-  protected static Logger log = Logger.getLogger("LockssTest");
+  protected static Logger log =
+    Logger.getLogger("LockssTest", Logger.getInitialDefaultLevel());
   /** Timeout duration for timeouts that are expected to time out.  Setting
    * this higher makes normal tests take longer, setting it too low might
    * cause failing tests to erroneously succeed on slow or busy
@@ -89,11 +91,17 @@ public class LockssTestCase extends TestCase {
     return tmpdir;
   }
 
+  /** Create a fresh config manager */
+  protected void setUp() throws Exception {
+    super.setUp();
+    ConfigManager.makeConfigManager();
+  }
+
   /**
    * Remove any temp dirs, cancel any outstanding {@link LockssTestCase.DoLater}s
    * @throws Exception
    */
-  public void tearDown() throws Exception {
+  protected void tearDown() throws Exception {
     boolean leave = Boolean.getBoolean("org.lockss.keepTempFiles");
     if (tmpDirs != null && !leave) {
       for (ListIterator iter = tmpDirs.listIterator(); iter.hasNext(); ) {
@@ -118,9 +126,10 @@ public class LockssTestCase extends TestCase {
       // doLaters list
     }
     // XXX this should be folded into LockssDaemon shutdown
-    Configuration.stopService();
-    // XXX fix Logger to unregister and reregister
-    Logger.registerConfigCallback();
+    ConfigManager cfg = ConfigManager.getConfigManager();
+    if (cfg != null) {
+      cfg.stopService();
+    }
 
     super.tearDown();
   }
