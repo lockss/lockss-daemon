@@ -1,5 +1,5 @@
 /*
- * $Id: BatchAuConfig.java,v 1.3 2005-01-07 09:23:27 tlipkis Exp $
+ * $Id: BatchAuConfig.java,v 1.4 2005-01-19 04:17:43 tlipkis Exp $
  */
 
 /*
@@ -61,23 +61,41 @@ public class BatchAuConfig extends LockssServlet {
 
   static final String FOOT_REPO_CHOICE =
     "If only one choice is shown for an AU, the contents of that AU " +
-    "already exist in the selected repository.";
+    "already exist in the selected disk.";
 
   static Logger log = Logger.getLogger("BatchAuConfig");
 
-  static final Verb VERB_ADD = new Verb(1, "add", "added", true);
-  static final Verb VERB_DEL = new Verb(2, "remove", "removed", false);
-  static final Verb VERB_RESTORE = new Verb(3, "restore", "restored", true);
-  static final Verb[] verbs = {VERB_ADD, VERB_DEL, VERB_RESTORE};
+  static final int VV_ADD = 1;
+  static final int VV_DEL = 2;
+  static final int VV_DEACT = 3;
+  static final int VV_REACT = 4;
+  static final int VV_RESTORE = 5;
 
-  static final String ACTION_ADD_TITLES = "AddTitles";
-  static final String ACTION_REMOVE_TITLES = "RemoveTitles";
+  static final Verb VERB_ADD = new Verb(VV_ADD, "add", "added", true);
+  static final Verb VERB_DEL = new Verb(VV_DEL, "remove", "removed", false);
+  static final Verb VERB_DEACT =
+    new Verb(VV_DEACT, "deactivate", "deactivated", false);
+  static final Verb VERB_REACT =
+    new Verb(VV_REACT, "reactivate", "reactivated", true);
+  static final Verb VERB_RESTORE =
+    new Verb(VV_RESTORE, "restore", "restored", true);
+  static final Verb[] verbs = {VERB_ADD, VERB_DEL,
+			       VERB_DEACT, VERB_REACT,
+			       VERB_RESTORE};
+
+  static final String ACTION_SELECT_SETS_TO_ADD = "AddTitles";
+  static final String ACTION_SELECT_SETS_TO_DEL = "RemoveTitles";
+  static final String ACTION_SELECT_SETS_TO_DEACT = "DeactivateTitles";
+  static final String ACTION_SELECT_SETS_TO_REACT = "ReactivateTitles";
   static final String ACTION_BACKUP = "Backup";
   static final String ACTION_RESTORE = "Restore";
   static final String ACTION_SELECT_RESTORE_TITLES = "SelectRestoreTitles";
-  static final String ACTION_SELECT_SET_TITLES = "SelectSetTitles";
+  static final String ACTION_SELECT_AUS = "SelectSetTitles";
   static final String ACTION_ADD_AUS = "DoAddAus";
   static final String ACTION_REMOVE_AUS = "DoRemoveAus";
+  static final String ACTION_DEACT_AUS = "DoDeactivateAus";
+  static final String ACTION_REACT_AUS = "DoReactivateAus";
+  static final String ACTION_RESTORE_AUS = "DoAddAus";
 
   static final String KEY_VERB = "Verb";
   static final String KEY_DEFAULT_REPO = "DefaultRepository";
@@ -146,58 +164,85 @@ public class BatchAuConfig extends LockssServlet {
     }
 
     if (StringUtil.isNullString(action)) displayMenu();
-    else if (action.equals(ACTION_ADD_TITLES)) chooseSets(VERB_ADD);
-    else if (action.equals(ACTION_REMOVE_TITLES)) chooseSets(VERB_DEL);
+    else if (action.equals(ACTION_SELECT_SETS_TO_ADD)) chooseSets(VERB_ADD);
+    else if (action.equals(ACTION_SELECT_SETS_TO_DEL)) chooseSets(VERB_DEL);
+    else if (action.equals(ACTION_SELECT_SETS_TO_DEACT)) chooseSets(VERB_DEACT);
+    else if (action.equals(ACTION_SELECT_SETS_TO_REACT)) chooseSets(VERB_REACT);
     else if (action.equals(ACTION_BACKUP)) doSaveAll();
     else if (action.equals(ACTION_RESTORE)) displayRestore();
-    else if (action.equals(ACTION_SELECT_SET_TITLES)) selectSetTitles();
+    else if (action.equals(ACTION_SELECT_AUS)) selectSetTitles();
     else if (action.equals(ACTION_SELECT_RESTORE_TITLES)) selectRestoreTitles();
-    else if (action.equals(ACTION_ADD_AUS)) doAddAus();
-    else if (action.equals(ACTION_REMOVE_AUS)) doRemoveAus();
+    else if (action.equals(ACTION_ADD_AUS)) doAddAus(false);
+    else if (action.equals(ACTION_REACT_AUS)) doAddAus(true);
+    else if (action.equals(ACTION_RESTORE_AUS)) doAddAus(false);
+    else if (action.equals(ACTION_REMOVE_AUS)) doRemoveAus(false);
+    else if (action.equals(ACTION_DEACT_AUS)) doRemoveAus(true);
     else {
       errMsg = "Unknown action: " + action;
       displayMenu();
     }
   }
 
-  /** Display "Add Archival Unit" button and list of configured AUs with Edit
-   * buttons */
+  /** Display top lebel batch config choices */
   private void displayMenu() throws IOException {
     Page page = newPage();
     page.add(getErrBlock());
-//     page.add(getExplanationBlock("Add a new Archival Unit" +
-// 				 (allAUs.isEmpty()
-// 				  ? "."
-// 				  : ", or edit an existing one.")));
+    int numActive = remoteApi.getAllAus().size();
+    int numInactive = remoteApi.getInactiveAus().size();
+
+
     Table tbl = new Table(0, "align=center cellspacing=2 cellpadding=4");
-    addMenuItem(tbl, "Add Titles", ACTION_ADD_TITLES,
+    addMenuItem(tbl, "Add Titles", ACTION_SELECT_SETS_TO_ADD,
 		"Add one or more groups of titles");
-    addMenuItem(tbl, "Remove Titles", ACTION_REMOVE_TITLES,
-		"Remove selected titles");
-    addMenuItem(tbl, "Backup", ACTION_BACKUP,
-		"Backup cache config to a file on your workstation");
+    if (numInactive > 0 || isDebugUser() ) {
+      addMenuItem(tbl, "Reactivate Titles", ACTION_SELECT_SETS_TO_REACT,
+		  "Reactivate selected titles", numInactive > 0);
+    }
+    if (numActive > 0 || isDebugUser() ) {
+      addMenuItem(tbl, "Remove Titles", ACTION_SELECT_SETS_TO_DEL,
+		  "Remove selected titles", numActive > 0);
+    }
+    if (numActive > 0 || isDebugUser() ) {
+      addMenuItem(tbl, "Deactivate Titles", ACTION_SELECT_SETS_TO_DEACT,
+		  "Deactivate selected titles", numActive > 0);
+    }
+    if (numActive > 0 || numInactive > 0 || isDebugUser() ) {
+      addMenuItem(tbl, "Backup", ACTION_BACKUP,
+		  "Backup cache config to a file on your workstation",
+		  numActive > 0 || numInactive > 0);
+    }
     addMenuItem(tbl, "Restore", ACTION_RESTORE,
 		"Restore cache config from a file on your workstation");
     addMenuItem(tbl, "Manual Add/Edit", "Add, Edit or Delete an individual AU",
-		SERVLET_AU_CONFIG, null);
+		SERVLET_AU_CONFIG, null, true);
     page.add(tbl);
     endPage(page);
   }
 
   void addMenuItem(Table tbl, String linkText, String expl,
-		   ServletDescr descr, String params) {
+		   ServletDescr descr, String params, boolean enabled) {
     tbl.newRow("valign=top");
     tbl.newCell();
     tbl.add("<font size=+1>");
-    tbl.add(srvLink(descr, linkText, params));
+    if (!enabled) {
+      tbl.add(greyText(linkText));
+    } else {
+      tbl.add(srvLink(descr, linkText, params));
+    }
     tbl.add("</font>");
     tbl.newCell();
     tbl.add(expl);
   }
 
+  void addMenuItem(Table tbl, String linkText, String action, String expl,
+		   boolean enabled) {
+    addMenuItem(tbl, linkText, expl, myServletDescr(), 
+		ACTION_TAG + "=" + action + "", enabled);
+  }
+
   void addMenuItem(Table tbl, String linkText, String action, String expl) {
     addMenuItem(tbl, linkText, expl, myServletDescr(), 
-		ACTION_TAG + "=" + action + "");
+		ACTION_TAG + "=" + action + "", true);
   }
 
   private void chooseSets(Verb verb) throws IOException {
@@ -217,32 +262,41 @@ public class BatchAuConfig extends LockssServlet {
     if (sets.size() >= 10) {
       tbl.newRow();
       tbl.newCell("align=center colspan=2");
-      tbl.add(submitButton("Select Titles", ACTION_SELECT_SET_TITLES));
+      tbl.add(submitButton("Select Titles", ACTION_SELECT_AUS));
     }
     for (Iterator iter = sets.iterator(); iter.hasNext(); ) {
       TitleSet ts = (TitleSet)iter.next();
-      if (isTsAppropriateFor(ts, verb)) {
-	tbl.newRow();
-	tbl.newCell("align=right valign=center");
-	tbl.add(checkBox(null, ts.getName(), KEY_TITLE_SET, false));
-	tbl.newCell("valign=center");
-	tbl.add(ts.getName());
+      if (verb.isTsAppropriateFor(ts)) {
+	RemoteApi.BatchAuStatus bas = verb.findAusInSetForVerb(remoteApi, ts);
+	int numOk = numOk(bas);
+	if (numOk > 0) {
+	  tbl.newRow();
+	  tbl.newCell("align=right valign=center");
+	  tbl.add(checkBox(null, ts.getName(), KEY_TITLE_SET, false));
+	  tbl.newCell("valign=center");
+	  tbl.add(ts.getName());
+	  tbl.add(" (");
+	  tbl.add(Integer.toString(numOk));
+	  tbl.add("}");
+	}
       }
     }
     tbl.newRow();
     tbl.newCell("align=center colspan=2");
-    tbl.add(submitButton("Select Titles", ACTION_SELECT_SET_TITLES));
+    tbl.add(submitButton("Select Titles", ACTION_SELECT_AUS));
     frm.add(tbl);
     page.add(frm);
     endPage(page);
   }
 
-  boolean isTsAppropriateFor(TitleSet ts, Verb verb) {
-    if (verb.isAdd) {
-      return !ts.isDelOnly();
-    } else {
-      return !ts.isAddOnly();
+  private int numOk(RemoteApi.BatchAuStatus bas) {
+    int ok = 0;
+    for (Iterator iter = bas.getStatusList().iterator(); iter.hasNext(); ) {
+      RemoteApi.BatchAuStatus.Entry rs =
+	(RemoteApi.BatchAuStatus.Entry)iter.next();
+      if (rs.isOk()) ok++;
     }
+    return ok;
   }
 
   private void selectSetTitles() throws IOException {
@@ -253,12 +307,7 @@ public class BatchAuConfig extends LockssServlet {
       return;
     }
     Collection sets = findTitleSetsFromNames(setNames);
-    RemoteApi.BatchAuStatus bas;
-    if (verb.isAdd) {
-      bas = remoteApi.findAusInSetsToAdd(sets);
-    } else {
-      bas = remoteApi.findAusInSetsToDelete(sets);
-    }      
+    RemoteApi.BatchAuStatus bas = verb.findAusInSetsForVerb(remoteApi, sets);
     if (bas.getStatusList().isEmpty()) {
       errMsg = "Selected set(s) contain no titles";
       chooseSets(verb);
@@ -283,12 +332,19 @@ public class BatchAuConfig extends LockssServlet {
     addJavaScript(page);
     page.add(getErrBlock());
     String buttonText = verb.cap + " Selected AUs";
-    String expl = "Select the AUs you wish to " + verb.word;
+    Object expl;
     if (repoFlg) {
-      expl += " and choose a repository for each";
-    }
-    expl += ". Then click " + buttonText + ".";
-    page.add(getExplanationBlock(expl));
+      String s = "There are multiple disks on this cache.  First, select the disk on which you want to place most AUs, then select the AUs you wish to " + verb.word + " (or Select All).";
+      s += ". Then click " + buttonText + ".";
+      Composite c = new Font(1, true);
+      c.add(s);
+      expl = c;
+    } else {
+      expl = "Select the AUs you wish to " + verb.word +
+	". Then click " + buttonText + ".";
+    }      
+    Element exp = getExplanationBlock(expl);
+    page.add(exp);
     Form frm = new Form(srvURL(myServletDescr(), null));
     frm.method("POST");
     frm.add(new Input(Input.Hidden, ACTION_TAG));
@@ -303,10 +359,10 @@ public class BatchAuConfig extends LockssServlet {
       frm.add(getRepoKeyTable(repoChoices));
       session.setAttribute(SESSION_KEY_REPO_MAP, repoChoices);
     }
-    frm.add(getSelectAllButtons());
-    frm.add(getSelectActionButton(buttonText));
+    if (isLongTable(bas)) {
+      frm.add(getSelectActionButton(buttonText));
+    }
     frm.add(getSelectAusTable(bas, repos, auConfs));
-    frm.add(getSelectAllButtons());
     frm.add(getSelectActionButton(buttonText));
     if (bas.hasNotOk()) {
       frm.add("<br>");
@@ -316,13 +372,28 @@ public class BatchAuConfig extends LockssServlet {
     endPage(page);
   }
 
+  boolean isLongTable(RemoteApi.BatchAuStatus bas) {
+    int min = 10;
+    if (bas.hasNotOk()) {
+      int size = 0;
+      for (Iterator iter = bas.getStatusList().iterator(); iter.hasNext(); ) {
+	RemoteApi.BatchAuStatus.Entry rs =
+	  (RemoteApi.BatchAuStatus.Entry)iter.next();
+	if (rs.isOk()) {
+	  if (++size >= min) return true;
+	}
+      }
+      return false;
+    } else {
+      return bas.getStatusList().size() >= min;
+    }
+  }
+			  
   Element getSelectActionButton(String buttonText) {
     Table btnTbl = new Table(0, "align=center cellspacing=4 cellpadding=0");
     btnTbl.newRow();
     btnTbl.newCell("align=center");
-    btnTbl.add(submitButton(buttonText,
-			    (verb.isAdd ?
-			     ACTION_ADD_AUS : ACTION_REMOVE_AUS)));
+    btnTbl.add(submitButton(buttonText, verb.action()));
     return btnTbl;
   }
 
@@ -331,11 +402,6 @@ public class BatchAuConfig extends LockssServlet {
     Page page = newPage();
     addJavaScript(page);
     page.add(getErrBlock());
-//     Form frm = new Form(srvURL(myServletDescr(), null));
-//     frm.method("POST");
-//     frm.add(new Input(Input.Hidden, ACTION_TAG));
-//     frm.add(nonOperableTable(bas));
-//     page.add(frm);
     page.add(getNonOperableAuTable(bas,
 				   "No AUs in set can be " + verb.past));
     endPage(page);
@@ -344,13 +410,19 @@ public class BatchAuConfig extends LockssServlet {
   Table getSelectAusTable(RemoteApi.BatchAuStatus bas, java.util.List repos,
 			  Map auConfs) {
     Table tbl = new Table(0, "align=center cellspacing=4 cellpadding=0");
+
+    if (isLongTable(bas)) {
+      tbl.newRow();
+      tbl.newCell();
+      tbl.add(getSelectAllButtons());
+    }
     tbl.newRow();
-    tbl.addHeading(verb.cap + "?", "align=center rowSpan=2");
+    tbl.addHeading(verb.cap + "?", "align=right rowSpan=2");
     boolean repoFlg = verb.isAdd && repos.size() > 1;
     int reposSize = repoFlg ? repos.size() : 0;
     Block repoFootElement = null; 
     if (repoFlg) {
-      tbl.addHeading("Repo ID", "align=center colspan=" + reposSize);
+      tbl.addHeading("Disk", "align=center colspan=" + reposSize);
       repoFootElement = tbl.cell(); 
     }
     tbl.addHeading("Archival Unit", "align=center rowSpan=2");
@@ -371,10 +443,13 @@ public class BatchAuConfig extends LockssServlet {
 	tbl.newRow();
 	tbl.newCell("align=right valign=center");
 	auConfs.put(auid, rs.getConfig());
-	tbl.add(checkBox(null, auid, KEY_AUID, false));
+	Element cb = checkBox(null, auid, KEY_AUID, false);
+	cb.attribute("onClick",
+		     "if (this.checked) selectRepo(this, this.form);");
+	tbl.add(cb);
 	if (repoFlg) {
 	  java.util.List existingRepoNames = rs.getRepoNames();
-	  log.debug("existingRepoNames: " + existingRepoNames + ", " + auid);
+	  log.debug2("existingRepoNames: " + existingRepoNames + ", " + auid);
 	  String firstRepo = null;
 	  if (existingRepoNames != null && !existingRepoNames.isEmpty()) {
 	    firstRepo = (String)existingRepoNames.get(0);
@@ -393,7 +468,7 @@ public class BatchAuConfig extends LockssServlet {
 	    } else {
 	    }
 	  }
-	} else {
+	} else if (reposSize > 0) {
 	  tbl.newCell("colspan=" + reposSize);
 	}
 	tbl.newCell();
@@ -407,6 +482,11 @@ public class BatchAuConfig extends LockssServlet {
 	}
       }
     }
+
+    tbl.newRow();
+    tbl.newCell();
+    tbl.add(getSelectAllButtons());
+
     if (repoFootElement != null && isAnyAssignedRepo) {
       repoFootElement.add(addFootnote(FOOT_REPO_CHOICE));
     }
@@ -425,16 +505,12 @@ public class BatchAuConfig extends LockssServlet {
       if (!rs.isOk()) {
 	String auid = rs.getAuId();
 	tbl.newRow();
-// 	tbl.newCell("align=right valign=center");
-// 	tbl.add(rs.getStatus());
-// 	tbl.add("&nbsp;");
 	tbl.newCell();
 	tbl.add(rs.getName());
 	tbl.newCell();
 	tbl.add(rs.getExplanation());
       }
     }
-//     return tbl;
     comp.add(tbl);
     return comp;
   }
@@ -442,10 +518,10 @@ public class BatchAuConfig extends LockssServlet {
   Table getRepoKeyTable(OrderedMap repoMap) {
     Table tbl = new Table(0, "align=center cellspacing=4 cellpadding=0");
     tbl.newRow();
-    tbl.addHeading("Available Repositories", "colspan=6");
+    tbl.addHeading("Available Disks", "colspan=6");
     tbl.newRow();
-    tbl.addHeading("Default" + addFootnote("For AUs not explicitly assigned a repository"));
-    tbl.addHeading("ID");
+    tbl.addHeading("Default");
+    tbl.addHeading("Disk");
     tbl.addHeading("Location");
     tbl.addHeading("Size");
     tbl.addHeading("Free");
@@ -481,12 +557,13 @@ public class BatchAuConfig extends LockssServlet {
   }
 
   Table getSelectAllButtons() {
-    Table tbl = new Table(0, "align=center cellspacing=4 cellpadding=0");
+    Table tbl = new Table(0, "cellspacing=4 cellpadding=0");
     tbl.newRow();
-    tbl.newCell("align=center");
-    tbl.add(jsButton("Select All AUs", "selectAll(this.form, 0);"));
-    tbl.newCell("align=center");
-    tbl.add(jsButton("Invert Selection", "selectAll(this.form, 1);"));
+    tbl.newCell("align=right");
+    tbl.add(jsButton("Select All", "selectAll(this.form, 0);"));
+    tbl.newRow();
+    tbl.newCell("align=right");
+    tbl.add(jsButton("Clear All", "selectAll(this.form, 1);"));
     return tbl;
   }
 
@@ -502,7 +579,7 @@ public class BatchAuConfig extends LockssServlet {
     return res;
   }
       
-  private void doAddAus() throws IOException {
+  private void doAddAus(boolean isReactivate) throws IOException {
     HttpSession session = req.getSession(false);
     if (session == null) {
       errMsg = "Please enable cookies";
@@ -558,11 +635,13 @@ public class BatchAuConfig extends LockssServlet {
     }
     if (log.isDebug2()) log.debug2("createConfig: " + createConfig);
 
-    RemoteApi.BatchAuStatus bas = remoteApi.batchAddAus(true, createConfig);
+    RemoteApi.BatchAuStatus bas = remoteApi.batchAddAus(true,
+							isReactivate,
+							createConfig);
     displayBatchAuStatus(bas);
   }
 
-  private void doRemoveAus() throws IOException {
+  private void doRemoveAus(boolean isDeactivate) throws IOException {
     String[] auidArr = req.getParameterValues(KEY_AUID);
     if (auidArr == null || auidArr.length == 0) {
       errMsg = "No AUs were selected";
@@ -576,7 +655,13 @@ public class BatchAuConfig extends LockssServlet {
       return;
     }
     java.util.List auids = ListUtil.fromArray(auidArr);
-    RemoteApi.BatchAuStatus bas = remoteApi.deleteAus(auids);
+
+    RemoteApi.BatchAuStatus bas;
+    if (isDeactivate) {
+      bas = remoteApi.deactivateAus(auids);
+    } else {
+      bas = remoteApi.deleteAus(auids);
+    }
     displayBatchAuStatus(bas);
   }
 
@@ -735,6 +820,54 @@ public class BatchAuConfig extends LockssServlet {
       this.cap = word.substring(0,1).toUpperCase() + word.substring(1);
       this.past = past;
       this.isAdd = isAdd;
+    }
+
+    RemoteApi.BatchAuStatus findAusInSetForVerb(RemoteApi remoteApi,
+						 TitleSet ts) {
+      return findAusInSetsForVerb(remoteApi, ListUtil.list(ts));
+    }
+    RemoteApi.BatchAuStatus findAusInSetsForVerb(RemoteApi remoteApi,
+						 Collection sets) {
+      switch (val) {
+      case VV_ADD:
+	return remoteApi.findAusInSetsToAdd(sets);
+      case VV_DEL:
+      case VV_DEACT:
+	return remoteApi.findAusInSetsToDelete(sets);
+      case VV_REACT:
+	return remoteApi.findAusInSetsToActivate(sets);
+      }
+      return null;
+    }
+
+    String action() {
+      switch (val) {
+      case VV_ADD:
+	return ACTION_ADD_AUS;
+      case VV_DEL:
+	return ACTION_REMOVE_AUS;
+      case VV_DEACT:
+	return ACTION_DEACT_AUS;
+      case VV_REACT:
+	return ACTION_REACT_AUS;
+      case VV_RESTORE:
+	return ACTION_RESTORE_AUS;
+      }
+      log.error("Unknown action " + val, new Throwable());
+      return "UnknownAction";
+    }
+
+    boolean isTsAppropriateFor(TitleSet ts) {
+      switch (val) {
+      case VV_ADD:
+	return ts.isSetActionable(TitleSet.SET_ADDABLE);
+      case VV_DEL:
+      case VV_DEACT:
+	return ts.isSetActionable(TitleSet.SET_DELABLE);
+      case VV_REACT:
+	return ts.isSetActionable(TitleSet.SET_REACTABLE);
+      }
+      return false;
     }
   }
 
