@@ -1,5 +1,5 @@
 /*
- * $Id: EffortServiceImpl.java,v 1.1.2.3 2004-10-04 17:56:34 dshr Exp $
+ * $Id: EffortServiceImpl.java,v 1.1.2.4 2004-10-04 21:55:05 dshr Exp $
  */
 
 /*
@@ -78,6 +78,27 @@ public class EffortServiceImpl extends BaseLockssDaemonManager
     return false;
   }
 
+  /**
+   * Ask for the effort proof specified by the <code>EffortService.Proof</code>
+   * object to be verified so that the result of verification can later
+   * be obtained from the object.
+   * @param ep     the <code>EffortService.Proof</code> to be generated.
+   * @param timer  the <code>Deadline</code> by which verification must be
+   *               complete.
+   * @param cb     the object whose <code>generationFinished()</code>
+   *               method will be called when verification is complete.
+   * @param cookie used to disambiguate callback
+   * @return       <code>true</code> if generation could be scheduled
+   *               <code>false</code> otherwise.
+   */
+  public boolean verifyProof(Proof ep,
+			     Deadline timer,
+			     ProofCallback cb,
+			     Serializable cookie) {
+    // XXX
+    return false;
+  }
+
   /** Test whether an effort proof could be successfully sceduled before a
    * given deadline.
    * @param proof the <code>EffortService.Proof</code> to be scheduled
@@ -106,6 +127,27 @@ public class EffortServiceImpl extends BaseLockssDaemonManager
 			      Deadline timer,
 			      VoteCallback callback,
 			      Serializable cookie) {
+    return false;
+  }
+
+  /**
+   * Ask for the vote specified by the <code>EffortService.Vote</code>
+   * object to be verified so that the result of verification can later
+   * be obtained from the object.
+   * @param vote   the <code>EffortService.Vote</code> to be generated.
+   * @param timer  the <code>Deadline</code> by which verification must be
+   *               complete.
+   * @param cb     the object whose <code>generationFinished()</code>
+   *               method will be called when verification is complete.
+   * @param cookie used to disambiguate callback
+   * @return       <code>true</code> if verification could be scheduled
+   *               <code>false</code> otherwise.
+   */
+  public boolean verifyVote(Vote vote,
+			    Deadline timer,
+			    VoteCallback cb,
+			    Serializable cookie) {
+    // XXX
     return false;
   }
 

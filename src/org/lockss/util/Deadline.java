@@ -1,5 +1,5 @@
 /*
- * $Id: Deadline.java,v 1.33 2004-09-10 17:05:07 tlipkis Exp $
+ * $Id: Deadline.java,v 1.33.2.1 2004-10-04 21:55:06 dshr Exp $
  */
 
 /*
@@ -265,7 +265,7 @@ public class Deadline implements Comparable {
   /**
    * Return the number of milliseconds by which this Deadline exceeds the
    * other.
-   * @return the differecne between the two Deadlines.
+   * @return the difference between the two Deadlines.
    */
   public long minus(Deadline other) {
     return expiration.getTime() - other.getExpirationTime();

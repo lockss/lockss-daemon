@@ -1,5 +1,5 @@
 /*
- * $Id: MockEffortService.java,v 1.1.2.3 2004-10-04 17:56:35 dshr Exp $
+ * $Id: MockEffortService.java,v 1.1.2.4 2004-10-04 21:55:06 dshr Exp $
  */
 
 /*
@@ -133,15 +133,55 @@ public class MockEffortService extends BaseLockssDaemonManager
 			     Serializable cookie) {
     final Proof ep = effortProof;
     final ProofCallback cb = callback;
+    final Deadline dl = timer;
     // XXX
     TimerQueue.Callback tqcb = new TimerQueue.Callback() {
 	public void timerExpired(Object tqCookie) {
-	  log.debug("Effort callback for " + ((String) tqCookie));
-	  cb.generationFinished(ep, (Serializable)tqCookie, myProofException);
+	  log.debug("Effort generation callback for " + ((String) tqCookie));
+	  cb.generationFinished(ep, dl, (Serializable)tqCookie,
+				myProofException);
 	}
       };
     TimerQueue.schedule(Deadline.in(proofDuration), tqcb, cookie);
-    log.debug("Callback in 500 scheduled for " + ((String) cookie));
+    log.debug("Generation callback in " + proofDuration + " scheduled for " +
+	      ((String) cookie));
+    return true;
+  }
+
+  /**
+   * Ask for the effort proof specified by the <code>EffortService.Proof</code>
+   * object to be verified so that the result of verification can later
+   * be obtained from the object.
+   * @param ep     the <code>EffortService.Proof</code> to be generated.
+   * @param timer  the <code>Deadline</code> by which verification must be
+   *               complete.
+   * @param cb     the object whose <code>generationFinished()</code>
+   *               method will be called when verification is complete.
+   * @param cookie used to disambiguate callback
+   * @return       <code>true</code> if generation could be scheduled
+   *               <code>false</code> otherwise.
+   */
+  public boolean verifyProof(Proof effortProof,
+			     Deadline timer,
+			     ProofCallback callback,
+			     Serializable cookie) {
+    final Proof ep = effortProof;
+    final ProofCallback cb = callback;
+    final Deadline dl = timer;
+    // XXX
+    TimerQueue.Callback tqcb = new TimerQueue.Callback() {
+	public void timerExpired(Object tqCookie) {
+	  log.debug("Effort callback for " + ((String) tqCookie) + " with " +
+		    dl.getRemainingTime() + " to go");
+	  cb.verificationFinished(ep,
+				  dl,
+				  (Serializable)tqCookie,
+				  myProofException);
+	}
+      };
+    TimerQueue.schedule(Deadline.in(proofDuration), tqcb, cookie);
+    log.debug("Callback in " + proofDuration + " scheduled for " +
+	      ((String) cookie));
     return true;
   }
 
@@ -175,15 +215,54 @@ public class MockEffortService extends BaseLockssDaemonManager
 			      Serializable cookie) {
     final Vote vote = voteSpec;
     final VoteCallback cb = callback;
+    final Deadline dl = timer;
     // XXX
     TimerQueue.Callback tqcb = new TimerQueue.Callback() {
 	public void timerExpired(Object tqCookie) {
-	  log.debug("Vote callback for " + ((String) tqCookie));
-	  cb.generationFinished(vote, (Serializable)tqCookie, myVoteException);
+	  log.debug("Vote generation callback for " + ((String) tqCookie));
+	  cb.generationFinished(vote, dl, (Serializable)tqCookie,
+				myVoteException);
 	}
       };
     TimerQueue.schedule(Deadline.in(voteDuration), tqcb, cookie);
-    log.debug("Callback in 500 scheduled for " + ((String) cookie));
+    log.debug("Callback in " + voteDuration + " scheduled for " +
+	      ((String) cookie));
+    return true;
+  }
+
+  /**
+   * Ask for the vote specified by the <code>EffortService.Vote</code>
+   * object to be verified so that the result of verification can later
+   * be obtained from the object.
+   * @param vote   the <code>EffortService.Vote</code> to be generated.
+   * @param timer  the <code>Deadline</code> by which verification must be
+   *               complete.
+   * @param cb     the object whose <code>generationFinished()</code>
+   *               method will be called when verification is complete.
+   * @param cookie used to disambiguate callback
+   * @return       <code>true</code> if verification could be scheduled
+   *               <code>false</code> otherwise.
+   */
+  public boolean verifyVote(Vote voteSpec,
+			    Deadline timer,
+			    VoteCallback callback,
+			    Serializable cookie) {
+    final Vote vote = voteSpec;
+    final VoteCallback cb = callback;
+    final Deadline dl = timer;
+    // XXX
+    TimerQueue.Callback tqcb = new TimerQueue.Callback() {
+	public void timerExpired(Object tqCookie) {
+	  log.debug("Vote generation callback for " + ((String) tqCookie));
+	  cb.verificationFinished(vote,
+				  dl,
+				  (Serializable)tqCookie,
+				  myVoteException);
+	}
+      };
+    TimerQueue.schedule(Deadline.in(voteDuration), tqcb, cookie);
+    log.debug("Callback in " + voteDuration + " scheduled for " +
+	      ((String) cookie));
     return true;
   }
 

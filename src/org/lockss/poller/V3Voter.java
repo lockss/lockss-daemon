@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.1.2.7 2004-10-04 17:56:34 dshr Exp $
+ * $Id: V3Voter.java,v 1.1.2.8 2004-10-04 21:55:05 dshr Exp $
  */
 
 /*
@@ -192,10 +192,15 @@ public class V3Voter extends V3Poll {
       stopPoll();
       return;
     }
-    //  XXX decide whether to even bother verifying the effort
-    //  XXX two effort service activities
-    //  XXX - verify effort from message
-    //  XXX - generate effort in reply
+    //  First apply admission control
+    if (!passAdmissionControl(msg)) {
+      log.warning("Message rejected by admission control: " + msg.toString());
+      m_pollstate = ERR_IO; // XXX choose better
+      m_state = STATE_FINALIZING;
+      stopPoll();
+      return;
+    }
+    //  Second verify the effort in the Poll message
     EffortService.ProofCallback cb = new PollAckEffortCallback(m_pollmanager);
     EffortService.Proof ep = null;
     EffortService es = null;
@@ -210,15 +215,20 @@ public class V3Voter extends V3Poll {
     }
     Deadline timer = msg.getDeadline();
     Serializable cookie = msg.getKey();
-    if (es.proveEffort(ep, timer, cb, cookie)) {
-      // effort proof for Poll Ack successfuly scheduled
-      log.debug("Scheduled callback for " + ((String)cookie));
+    if (es.verifyProof(ep, timer, cb, cookie)) {
+      // effort verification for Poll successfuly scheduled
+      log.debug("Scheduled verification callback in " +
+		timer.getRemainingTime() + " for " + ((String)cookie));
       m_state = STATE_SENDING_POLL_ACK;
     } else {
-      log.warning("could not schedule effort proof " + ep.toString() +
+      log.warning("could not schedule effort verification " + ep.toString() +
 		  " for " + msg.toString());
       m_state = STATE_FINALIZING;
     }
+  }
+
+  private boolean passAdmissionControl(V3LcapMessage msg) {
+    return true;
   }
 
   private void doPollProofMessage(V3LcapMessage msg) {
@@ -328,6 +338,7 @@ public class V3Voter extends V3Poll {
      * @param e the exception that caused the effort proof to fail
      */
     public void generationFinished(EffortService.Proof ep,
+				   Deadline timer,
 				   Serializable cookie,
 				   Exception e) {
       if (e != null) {
@@ -340,10 +351,49 @@ public class V3Voter extends V3Poll {
       } else {
 	log.debug("PollAckEffortProofCallback: " + ((String) cookie));
 	m_state = STATE_WAITING_POLL_PROOF;
-	// XXX send the proof
+	// XXX send the proof and the message
       }
     }
 
+    /**
+     * Called to indicate verification of a proof of effort is complete.
+     * @param ep the <code>EffortService.Proof</code> in question
+     * @param cookie used to disambiguate callbacks
+     * @param e the exception that caused the effort proof to fail
+     */
+    public void verificationFinished(EffortService.Proof ep,
+				     Deadline timer,
+				     Serializable cookie,
+				     Exception e) {
+      if (e != null) {
+	log.debug("Poll effort verification threw: " + e);
+	return;
+      }
+      if (!ep.isVerified()) {
+	log.debug("Poll effort verification failed");
+	m_pollstate = ERR_IO; // XXX choose better
+	m_state = STATE_FINALIZING;
+	stopPoll();
+	return;
+      }
+      //  Poll effort verified,  now generate effort for reply
+      log.debug("Poll effort verification succeeds with " +
+		timer.getRemainingTime() + " to go");
+      EffortService es = ep.getEffortService();
+      //  XXX should get spec for proof from message
+      EffortService.Proof pollAckProof = es.makeProof();
+      if (es.proveEffort(pollAckProof, timer, this, cookie)) {
+	log.debug("Scheduled generation callback in " +
+		  timer.getRemainingTime() + " for " + ((String)cookie));
+      } else {
+	log.warning("could not schedule effort generation " +
+		    pollAckProof.toString() + " for " + cookie);
+	m_pollstate = ERR_IO; // XXX choose better
+	m_state = STATE_FINALIZING;
+	stopPoll();
+      }
+      return;
+    }
   }
 
   class VoteGenerationCallback implements EffortService.VoteCallback {
@@ -358,6 +408,7 @@ public class V3Voter extends V3Poll {
      * @param e the exception that caused the effort proof to fail
      */
     public void generationFinished(EffortService.Vote vote,
+				   Deadline timer,
 				   Serializable cookie,
 				   Exception e) {
       // XXX
@@ -374,6 +425,18 @@ public class V3Voter extends V3Poll {
       }
     }
 
+    /**
+     * Called to indicate verification of a vote is complete.
+     * @param ep the <code>EffortService.Vote</code> in question
+     * @param cookie used to disambiguate callbacks
+     * @param e the exception that caused the effort proof to fail
+     */
+    public void verificationFinished(EffortService.Vote vote,
+				     Deadline timer,
+				     Serializable cookie,
+				     Exception e) {
+      // XXX
+    }
   }
 
   class RepairTimerCallback implements TimerQueue.Callback {

@@ -1,5 +1,5 @@
 /*
- * $Id: EffortService.java,v 1.1.2.5 2004-10-04 17:56:34 dshr Exp $
+ * $Id: EffortService.java,v 1.1.2.6 2004-10-04 21:55:05 dshr Exp $
  */
 
 /*
@@ -65,7 +65,25 @@ public interface EffortService extends LockssManager {
 			     ProofCallback cb,
 			     Serializable cookie);
 
-  /** Test whether an effort proof could be successfully sceduled before a
+  /**
+   * Ask for the effort proof specified by the <code>EffortService.Proof</code>
+   * object to be verified so that the result of verification can later
+   * be obtained from the object.
+   * @param ep     the <code>EffortService.Proof</code> to be generated.
+   * @param timer  the <code>Deadline</code> by which verification must be
+   *               complete.
+   * @param cb     the object whose <code>generationFinished()</code>
+   *               method will be called when verification is complete.
+   * @param cookie used to disambiguate callback
+   * @return       <code>true</code> if generation could be scheduled
+   *               <code>false</code> otherwise.
+   */
+  public boolean verifyProof(Proof ep,
+			     Deadline timer,
+			     ProofCallback cb,
+			     Serializable cookie);
+
+  /** Test whether an effort proof could be successfully scheduled before a
    * given deadline.
    * @param ep the <code>EffortService.Proof</code> to be scheduled
    * @param when the deadline
@@ -90,6 +108,24 @@ public interface EffortService extends LockssManager {
 			     Deadline timer,
 			     VoteCallback cb,
 			     Serializable cookie);
+
+  /**
+   * Ask for the vote specified by the <code>EffortService.Vote</code>
+   * object to be verified so that the result of verification can later
+   * be obtained from the object.
+   * @param vote   the <code>EffortService.Vote</code> to be generated.
+   * @param timer  the <code>Deadline</code> by which verification must be
+   *               complete.
+   * @param cb     the object whose <code>generationFinished()</code>
+   *               method will be called when verification is complete.
+   * @param cookie used to disambiguate callback
+   * @return       <code>true</code> if verification could be scheduled
+   *               <code>false</code> otherwise.
+   */
+  public boolean verifyVote(Vote vote,
+			    Deadline timer,
+			    VoteCallback cb,
+			    Serializable cookie);
 
   /** Test whether a vote generation could be successfully scheduled before a
    * given deadline.
@@ -124,8 +160,19 @@ public interface EffortService extends LockssManager {
      * @param e the exception that caused the effort proof to fail
      */
     public void generationFinished(EffortService.Proof ep,
+				   Deadline timer,
 				   Serializable cookie,
 				   Exception e);
+    /**
+     * Called to indicate verification of a proof of effort is complete.
+     * @param ep the <code>EffortService.Proof</code> in question
+     * @param cookie used to disambiguate callbacks
+     * @param e the exception that caused the effort proof to fail
+     */
+    public void verificationFinished(EffortService.Proof ep,
+				     Deadline timer,
+				     Serializable cookie,
+				     Exception e);
   }
 
   public interface VoteCallback extends Serializable {
@@ -136,8 +183,20 @@ public interface EffortService extends LockssManager {
      * @param e the exception that caused the effort proof to fail
      */
     public void generationFinished(EffortService.Vote vote,
+				   Deadline timer,
 				   Serializable cookie,
 				   Exception e);
+
+    /**
+     * Called to indicate verification of a vote is complete.
+     * @param ep the <code>EffortService.Vote</code> in question
+     * @param cookie used to disambiguate callbacks
+     * @param e the exception that caused the effort proof to fail
+     */
+    public void verificationFinished(EffortService.Vote vote,
+				     Deadline timer,
+				     Serializable cookie,
+				     Exception e);
   }
 
   /**
