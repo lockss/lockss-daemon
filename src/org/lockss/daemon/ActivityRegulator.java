@@ -1,5 +1,5 @@
 /*
- * $Id: ActivityRegulator.java,v 1.27 2004-02-07 06:44:05 eaalto Exp $
+ * $Id: ActivityRegulator.java,v 1.27.2.1 2004-03-03 01:25:40 eaalto Exp $
  */
 
 /*
@@ -154,9 +154,9 @@ public class ActivityRegulator
     int curActivity = getAuActivity();
     if (!isAllowedOnAu(newActivity, curActivity)) {
       // au is being acted upon
-      logger.debug2("AU '" + au.getName() + "' busy with " +
-                    activityCodeToString(curActivity) + ". Couldn't start " +
-                    activityCodeToString(newActivity));
+      logger.debug("AU '" + au.getName() + "' busy with " +
+                   activityCodeToString(curActivity) + ". Couldn't start " +
+                   activityCodeToString(newActivity));
       return null;
     }
 
@@ -182,10 +182,10 @@ public class ActivityRegulator
     int auActivity = getAuActivity();
     if (!isAllowedOnAu(newActivity, auActivity)) {
       // au is being acted upon at the AU level
-      logger.debug2("AU '" + cus.getArchivalUnit().getName() + "' busy with " +
-                    activityCodeToString(auActivity) + ". Couldn't start " +
-                    activityCodeToString(newActivity) + " on CUS '" +
-                    cus.getUrl() + "'");
+      logger.debug("AU '" + cus.getArchivalUnit().getName() + "' busy with " +
+                   activityCodeToString(auActivity) + ". Couldn't start " +
+                   activityCodeToString(newActivity) + " on CUS '" +
+                   cus.getUrl() + "'");
       return null;
     }
     if (checkForRelatedCusActivity(newActivity, cus)) {
@@ -203,7 +203,7 @@ public class ActivityRegulator
       Map.Entry entry = (Map.Entry)cusIt.next();
       Lock value = (Lock)entry.getValue();
       if (value.isExpired()) {
-        logger.debug3("Removing expired "+activityCodeToString(value.activity) +
+        logger.debug2("Removing expired "+activityCodeToString(value.activity) +
                       " on CUS '" + entry.getKey() + "'");
         expiredKeys.add(entry.getKey());
         continue;
@@ -229,8 +229,8 @@ public class ActivityRegulator
                       au.getName() + "', so couldn't end " +
                       activityCodeToString(CUS_ACTIVITY));
       }
-      logger.debug2("Finished " + activityCodeToString(CUS_ACTIVITY) +
-                    " on AU '" + au.getName() + "'");
+      logger.debug("Finished " + activityCodeToString(CUS_ACTIVITY) +
+                   " on AU '" + au.getName() + "'");
     }
   }
 
@@ -247,7 +247,7 @@ public class ActivityRegulator
       if (relation!=LockssRepository.NO_RELATION) {
         Lock value = (Lock)entry.getValue();
         if (value.isExpired()) {
-          logger.debug3("Removing expired " +
+          logger.debug2("Removing expired " +
                         activityCodeToString(value.activity) +
                         " on CUS '" + entryCus + "'");
           expiredKeys.add(entryCus);
@@ -268,15 +268,15 @@ public class ActivityRegulator
             relationStr = "Non-overlapping";
         }
         if (!isAllowedOnCus(newActivity, value.activity, relation)) {
-          logger.debug2(relationStr + " CUS busy with " +
-                        activityCodeToString(value.activity) +
-                        ". Couldn't start " + activityCodeToString(newActivity) +
-                        " on CUS '" + cus + "'");
+          logger.debug(relationStr + " CUS busy with " +
+                       activityCodeToString(value.activity) +
+                       ". Couldn't start " + activityCodeToString(newActivity) +
+                       " on CUS '" + cus + "'");
           // found conflicting activity
           otherActivity = true;
           break;
         } else {
-          logger.debug3(relationStr + " CUS activity " +
+          logger.debug2(relationStr + " CUS activity " +
                         activityCodeToString(value.activity) +
                         " doesn't interfere with " +
                         activityCodeToString(newActivity));
@@ -375,80 +375,12 @@ public class ActivityRegulator
         return true;
     }
   }
-/*
-  static boolean isAllowedOnCus(int newActivity, int curActivity, int relation) {
-    switch (curActivity) {
-      case BACKGROUND_CRAWL:
-      case REPAIR_CRAWL:
-        switch (relation) {
-          case LockssRepository.SAME_LEVEL_OVERLAP:
-            // only one action on a CUS at a time except for name polls
-            // (resuming after repair crawl)
-            return (newActivity==STANDARD_NAME_POLL);
-          case LockssRepository.ABOVE:
-            // if this CUS is a parent, any action allowed
-            return true;
-          case LockssRepository.BELOW:
-            return ((newActivity==BACKGROUND_CRAWL) ||
-                    (newActivity==REPAIR_CRAWL));
-          case LockssRepository.SAME_LEVEL_NO_OVERLAP:
-          default:
-            return true;
-        }
-      case STANDARD_CONTENT_POLL:
-      case STANDARD_NAME_POLL:
-        switch (relation) {
-          case LockssRepository.SAME_LEVEL_OVERLAP:
-            // only one action on a CUS at a time unless it's a name poll or
-            // a repair crawl
-            return ((newActivity==STANDARD_NAME_POLL) ||
-                    (newActivity==REPAIR_CRAWL) ||
-                    (newActivity==STANDARD_CONTENT_POLL) ||
-                    (newActivity==SINGLE_NODE_CONTENT_POLL));
-          case LockssRepository.ABOVE:
-            // if this CUS is a parent, allow content polls and repair crawls on
-            // sub-nodes (PollManager should have blocked any truly illegal ones)
-            return ((newActivity==STANDARD_CONTENT_POLL) ||
-                     (newActivity==REPAIR_CRAWL));
-           case LockssRepository.BELOW:
-            // if this CUS is a child, only crawls allowed, and single node
-            // content polls
-            return ((newActivity==BACKGROUND_CRAWL) ||
-                    (newActivity==REPAIR_CRAWL) ||
-                    (newActivity==SINGLE_NODE_CONTENT_POLL));
-          case LockssRepository.SAME_LEVEL_NO_OVERLAP:
-          default:
-            return true;
-        }
-      case SINGLE_NODE_CONTENT_POLL:
-        switch (relation) {
-          case LockssRepository.SAME_LEVEL_OVERLAP:
-            // only one action on a CUS at a time unless it's a name poll
-            return (newActivity==REPAIR_CRAWL);
-          case LockssRepository.ABOVE:
-            // if this CUS is a parent, allow anything below
-            return true;
-          case LockssRepository.BELOW:
-            // if this CUS is a child, only crawls allowed
-            return ((newActivity==BACKGROUND_CRAWL) ||
-                    (newActivity==REPAIR_CRAWL));
-          case LockssRepository.SAME_LEVEL_NO_OVERLAP:
-          default:
-            return true;
-
-        }
-      case NO_ACTIVITY:
-      default:
-        return true;
-    }
-  }
-*/
 
   int getAuActivity() {
     if (curAuActivityLock==null)  {
       return NO_ACTIVITY;
     } else if (curAuActivityLock.isExpired()) {
-      logger.debug3("Removing expired " +
+      logger.debug2("Removing expired " +
                     activityCodeToString(curAuActivityLock.activity) +
                     " on AU '" + au.getName() + "'");
       curAuActivityLock = null;
@@ -465,7 +397,7 @@ public class ActivityRegulator
     }
     curAuActivityLock = new Lock(activity, expireIn);
     logger.debug("Started " + activityCodeToString(activity) + " on AU '" +
-        au.getName() + "'");
+                 au.getName() + "'");
     return curAuActivityLock;
   }
 
@@ -479,29 +411,33 @@ public class ActivityRegulator
    * @return Lock the CusLock
    */
   public synchronized Lock changeAuLockToCusLock(Lock auLock,
-      CachedUrlSet cus, int newActivity, long expireIn) {
+                                                 CachedUrlSet cus,
+                                                 int newActivity,
+                                                 long expireIn) {
     // since the code is much simpler for the single CUS version,
     // it was duplicated instead of using a single entry collection
     if (auLock==null) {
       logger.debug2("Null AU lock given for AU '"+au.getName()+
-          "'.  Unable to convert to CUS lock.");
+                    "'.  Unable to convert to CUS lock.");
       return null;
     }
+
+    int oldAuActivity = auLock.activity;
 
     setAuActivity(CUS_ACTIVITY, expireIn);
     Lock cusLock = (Lock)cusMap.get(cus);
     if (cusLock!=null) {
-      logger.debug2("CUS '"+cus.getUrl()+"' already busy with "+
-          activityCodeToString(cusLock.activity)+".  Couldn't start "+
-          activityCodeToString(newActivity) + ".");
+      logger.debug("CUS '"+cus.getUrl()+"' already busy with "+
+                   activityCodeToString(cusLock.activity)+".  Couldn't start "+
+                   activityCodeToString(newActivity) + ".");
       return null;
     }
 
-    logger.debug2("Changing lock on AU '"+au.getName()+ "'from "+
-        activityCodeToString(auLock.activity) + " to CUS activity "+
-        activityCodeToString(newActivity)+
-        " on CUS '"+cus.getUrl()+"' with expiration in "+
-        StringUtil.timeIntervalToString(expireIn));
+    logger.debug("Changing lock on AU '"+au.getName()+ "'from "+
+                 activityCodeToString(oldAuActivity) + " to CUS activity "+
+                 activityCodeToString(newActivity)+
+                 " on CUS '"+cus.getUrl()+"' with expiration in "+
+                 StringUtil.timeIntervalToString(expireIn));
     return getCusActivityLock(cus, newActivity, expireIn);
   }
 
@@ -513,17 +449,26 @@ public class ActivityRegulator
    * @return List of CusLocks
    */
   public synchronized List changeAuLockToCusLocks(Lock auLock,
-      Collection cusLockReq) {
+                                                  Collection cusLockReq) {
     if (auLock==null) {
       logger.debug2("Null AU lock given for AU '"+au.getName()+
-          "'.  Unable to convert to CUS locks.");
+                    "'.  Unable to convert to CUS locks.");
       return new ArrayList();
     }
 
+    int oldAuActivity = auLock.activity;
     // temporary set to allow CUS to set properly
     setAuActivity(CUS_ACTIVITY, STANDARD_LOCK_LENGTH);
 
     long maxExpire = 0;
+    if (cusLockReq.size() > 0) {
+      logger.debug("Changing lock on AU '" + au.getName() + "'from " +
+                   activityCodeToString(oldAuActivity) + " to CUS activity.");
+    } else {
+      logger.debug("No CUS locks requested.  Expiring "+
+                   activityCodeToString(oldAuActivity) +
+                   "lock on AU '"+au.getName()+ "'.");
+    }
     List lockList = new ArrayList(cusLockReq.size());
     Iterator iter = cusLockReq.iterator();
     while (iter.hasNext()) {
@@ -532,19 +477,6 @@ public class ActivityRegulator
       int newActivity = request.activity;
       long expireIn = request.expireIn;
       maxExpire = Math.max(maxExpire, expireIn);
-      Lock cusLock = (Lock)cusMap.get(cus);
-      if (cusLock!=null) {
-        logger.debug2("CUS '"+cus.getUrl()+"' already busy with "+
-            activityCodeToString(cusLock.activity)+".  Couldn't start "+
-            activityCodeToString(newActivity) + ".");
-        continue;
-      }
-
-      logger.debug2("Changing lock on AU '"+au.getName()+ "'from "+
-          activityCodeToString(auLock.activity) + " to CUS activity "+
-          activityCodeToString(newActivity)+
-          " on CUS '"+cus.getUrl()+"' with expiration in "+
-          StringUtil.timeIntervalToString(expireIn));
       Lock lock = getCusActivityLock(cus, newActivity, expireIn);
       if (lock!=null) {
         lockList.add(lock);
@@ -561,7 +493,7 @@ public class ActivityRegulator
       return NO_ACTIVITY;
     } else if (entry.isExpired()) {
       cusMap.remove(cus);
-      logger.debug3("Removing expired " + activityCodeToString(entry.activity) +
+      logger.debug2("Removing expired " + activityCodeToString(entry.activity) +
                     " on AU '" + cus.getUrl() + "'");
       return NO_ACTIVITY;
     } else {
@@ -582,7 +514,7 @@ public class ActivityRegulator
     // set AU state to indicate CUS activity (resets expiration time)
     setAuActivity(CUS_ACTIVITY, expireIn);
     logger.debug("Started " + activityCodeToString(activity) + " on CUS '" +
-        cus.getUrl() + "'");
+                 cus.getUrl() + "'");
     return cusLock;
   }
 
@@ -657,21 +589,26 @@ public class ActivityRegulator
     }
 
     public void expire() {
-      logger.debug2("Ending "+activityCodeToString(activity)+" on "+
-                    (cus==null ? "AU '"+au.getName()+"'"
-                     : "CUS '"+cus.getUrl()+"'"));
+      logger.debug("Ending "+activityCodeToString(activity)+" on "+
+                   (cus==null ? "AU '"+au.getName()+"'"
+                    : "CUS '"+cus.getUrl()+"'"));
       if (expiration.expired()) {
         logger.debug2("Lock already expired.");
       }
       expiration.expire();
     }
 
+
     public void extend() {
-      expiration.later(LOCK_EXTENSION_LENGTH);
-      logger.debug2("Extending "+activityCodeToString(activity)+" on "+
-                    (cus==null ? "AU '"+au.getName()+"'"
-                     : "CUS '"+cus.getUrl()+"' by "+
-                     StringUtil.timeIntervalToString(LOCK_EXTENSION_LENGTH)));
+      extend(LOCK_EXTENSION_LENGTH);
+    }
+
+    public void extend(long extension) {
+      expiration.later(extension);
+      logger.debug("Extending "+activityCodeToString(activity)+" on "+
+                   (cus==null ? "AU '"+au.getName()+"'"
+                    : "CUS '"+cus.getUrl()+"' by "+
+                    StringUtil.timeIntervalToString(extension)));
     }
 
     public int getActivity() {
@@ -679,16 +616,23 @@ public class ActivityRegulator
     }
 
     public void setNewActivity(int newActivity, long expireIn) {
-      logger.debug2("Changing activity on "+
-          (cus==null ? "AU '"+au.getName()+ "'"
-          : "CUS '"+cus.getUrl()+"'") + "from "+
-          activityCodeToString(activity) + " to "+
-          activityCodeToString(newActivity)+
-          " with expiration in "+
-          StringUtil.timeIntervalToString(expireIn));
+      logger.debug("Changing activity on "+
+                   (cus==null ? "AU '"+au.getName()+ "'"
+                    : "CUS '"+cus.getUrl()+"'") + "from "+
+                   activityCodeToString(activity) + " to "+
+                   activityCodeToString(newActivity)+
+                   " with expiration in "+
+                   StringUtil.timeIntervalToString(expireIn));
       activity = newActivity;
       expiration = Deadline.in(expireIn);
-      curAuActivityLock = new Lock(CUS_ACTIVITY, expireIn);
+      if (cus!=null) {
+        if ((curAuActivityLock!=null) &&
+            (curAuActivityLock.getActivity()==CUS_ACTIVITY)) {
+          curAuActivityLock.extend(expireIn);
+        } else {
+          logger.debug("CUS lock changing during non-CUS activity.");
+        }
+      }
     }
 
     public ArchivalUnit getArchivalUnit() {
@@ -711,9 +655,9 @@ public class ActivityRegulator
       checkAuActivity();
     }
 
-    public void extend() {
-      super.extend();
-      curAuActivityLock.extend();
+    public void extend(long extension) {
+      super.extend(extension);
+      curAuActivityLock.extend(extension);
     }
   }
 
