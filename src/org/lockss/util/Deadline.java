@@ -1,5 +1,5 @@
 // ========================================================================
-// $Id: Deadline.java,v 1.2 2002-09-23 02:51:57 tal Exp $
+// $Id: Deadline.java,v 1.3 2002-11-05 21:06:32 tal Exp $
 // ========================================================================
 
 /*
@@ -101,6 +101,6 @@ public class Deadline {
   // tk - should include "+n days" or some such
   private static DateFormat df = DateFormat.getTimeInstance();
   public String toString() {
-    return "['til:" + df.format(expiration) + "]";
+    return "[duration: " + duration + ",'til:" + df.format(expiration) + "]";
   }
 }
