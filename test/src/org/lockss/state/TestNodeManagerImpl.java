@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.94 2003-07-23 22:56:31 eaalto Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.95 2003-07-23 23:18:01 eaalto Exp $
  */
 
 /*
@@ -743,6 +743,47 @@ public class TestNodeManagerImpl extends LockssTestCase {
                  pollManager.getPollStatus("testDir1"));
     assertEquals(MockPollManager.CONTENT_REQUESTED,
                  pollManager.getPollStatus("testDir2"));
+  }
+
+  public void testUpdateInconclusivePolls() throws Exception {
+    NodeStateImpl nodeState =
+        (NodeStateImpl)nodeManager.getNodeState(getCUS(mau, TEST_URL));
+
+    // inconclusive poll
+    namePoll = createPoll(TEST_URL, false, true, 5, 5);
+    pollManager.thePolls.remove(TEST_URL);
+    PollTally results = namePoll.getVoteTally();
+    PollState pollState = new PollState(results.getType(),
+                                        results.getPollSpec().getLwrBound(),
+                                        results.getPollSpec().getUprBound(),
+                                        PollState.RUNNING,
+                                        results.getStartTime(),
+                                        Deadline.MAX,
+                                        false);
+    nodeState.addPollState(pollState);
+    nodeState.setState(NodeState.NAME_RUNNING);
+    nodeManager.updateState(nodeState, results);
+    assertEquals(PollState.INCONCLUSIVE, pollState.getStatus());
+    assertEquals(NodeState.CONTENT_LOST, nodeState.getState());
+    assertNull(pollManager.getPollStatus(TEST_URL));
+
+    // no quorum
+    contentPoll = createPoll(TEST_URL, true, true, 1, 0);
+    pollManager.thePolls.remove(TEST_URL);
+    results = namePoll.getVoteTally();
+    pollState = new PollState(results.getType(),
+                              results.getPollSpec().getLwrBound(),
+                              results.getPollSpec().getUprBound(),
+                              PollState.RUNNING,
+                              results.getStartTime(),
+                              Deadline.MAX,
+                              false);
+    nodeState.addPollState(pollState);
+    nodeState.setState(NodeState.CONTENT_RUNNING);
+    nodeManager.updateState(nodeState, results);
+    assertEquals(PollState.INCONCLUSIVE, pollState.getStatus());
+    assertEquals(NodeState.NEEDS_POLL, nodeState.getState());
+    assertNull(pollManager.getPollStatus(TEST_URL));
   }
 
   public void testCheckLastHistory() throws Exception {
