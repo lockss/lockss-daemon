@@ -1,5 +1,5 @@
 /*
- * $Id: Poll.java,v 1.16 2002-11-22 03:00:39 claire Exp $
+ * $Id: Poll.java,v 1.17 2002-11-23 01:41:37 troberts Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.util.*;
 
 
 import gnu.regexp.*;
+import org.mortbay.util.B64Code;
 import org.lockss.daemon.*;
 import org.lockss.hasher.*;
 import org.lockss.plugin.*;
@@ -61,11 +62,11 @@ public abstract class Poll {
   static final int PS_WAIT_TALLY = 3;
   static final int PS_COMPLETE = 4;
 
-  static Logger log=Logger.getLogger("Poll",Logger.LEVEL_DEBUG);
+  static Logger log=Logger.getLogger("Poll");
 
   LcapMessage m_msg;          // The message which triggered the poll
-  int m_quorum = 0;           // The caller's quorum value
-  int m_quorumWt = 0;         // The quorum weights
+  int m_quorum = 5;           // The caller's quorum value
+  int m_quorumWt = 500;         // The quorum weights
   int m_agree = 0;            // The # of votes we've heard that agree with us
   int m_agreeWt = 0;          // the sum of the the agree weights
   int m_disagree = 0;         // The # of votes we've heard that disagree with us
@@ -158,6 +159,7 @@ public abstract class Poll {
     long vote_dev = time_remaining/4;
 
     m_voteTime = Deadline.atRandomBefore(m_deadline);
+    log.debug("Waiting until at most "+m_deadline+" to vote");
     TimerQueue.schedule(m_voteTime, new VoteTimerCallback(), this);
     m_pollstate = PS_WAIT_VOTE;
   }
@@ -170,6 +172,10 @@ public abstract class Poll {
    */
   void checkVote(byte[] hashResult, LcapMessage msg)  {
     byte[] hashed = msg.getHashed();
+    log.debug("Checking "+
+	      String.valueOf(B64Code.encode(hashResult))+
+	      " against "+
+	      String.valueOf(B64Code.encode(hashed)));
     if(Arrays.equals(hashed, hashResult)) {
       handleAgreeVote(msg);
     }
@@ -380,8 +386,9 @@ public abstract class Poll {
 
       if(hash_completed)  {
         m_hash  = hasher.digest();
-        LcapMessage msg = (LcapMessage)cookie;
-        checkVote(m_hash, msg);
+	log.debug("Hash on "+urlset+" complete: "+m_hash);
+	//        LcapMessage msg = (LcapMessage)cookie;
+	//        checkVote(m_hash, msg);
         scheduleVote();
       }
     }
@@ -419,8 +426,11 @@ public abstract class Poll {
      * @param cookie  data supplied by caller to schedule()
      */
     public void timerExpired(Object cookie) {
+      log.debug("VoteTimerCallback called, checking if I should vote");
       if(m_pollstate == PS_WAIT_VOTE) {
+	log.debug("I should vote");
         voteInPoll();
+	log.debug("Just voted");
       }
     }
   }
