@@ -1,5 +1,5 @@
 /*
- * $Id: LcapRouter.java,v 1.19 2003-04-24 02:15:14 claire Exp $
+ * $Id: LcapRouter.java,v 1.20 2003-04-24 17:25:42 tal Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.poller.PollManager;
 import org.apache.commons.collections.LRUMap;
+import org.mortbay.util.B64Code;
 
 // tk - synchronization here and in PartnerList
 
@@ -85,6 +86,8 @@ public class LcapRouter extends BaseLockssManager {
   private Deadline beaconDeadline = Deadline.at(TimeBase.MAX);;
   private PartnerList partnerList = new PartnerList();
   private List messageHandlers = new ArrayList();
+  private LRUMap recentVerifiers = new LRUMap(100);
+  private Object verObj = new Object();
 
   public void startService() {
     super.startService();
@@ -213,13 +216,14 @@ public class LcapRouter extends BaseLockssManager {
       log.error("Couldn't decode incoming message", e);
       return;
     }
-    routeIncomingMessage(dg, msg);
-    // if not a no-op, give to incoming message handlers
-    if (!msg.isNoOp()) {
-      runHandlers(msg);
+    if (!isDuplicate(dg, msg)) {
+      routeIncomingMessage(dg, msg);
+      // if not a no-op, give to incoming message handlers
+      if (!msg.isNoOp()) {
+	runHandlers(msg);
+      }
     }
   }
-
 
   private void runHandlers(LcapMessage msg) {
     for (Iterator iter = messageHandlers.iterator(); iter.hasNext();) {
@@ -233,6 +237,16 @@ public class LcapRouter extends BaseLockssManager {
     } catch (Exception e) {
       log.error("callback threw", e);
     }
+  }
+
+  boolean isDuplicate(LockssReceivedDatagram dg, LcapMessage msg) {
+    String verifier = String.valueOf(B64Code.encode(msg.getVerifier()));
+    if (recentVerifiers.put(verifier, verObj) != null) {
+      log.debug2("Discarding dup from " + dg.getSender() + ": y" + msg);
+      idEvent(dg.getSender(), LcapIdentity.EVENT_DUPLICATE, msg);
+      return true;
+    }
+    return false;
   }
 
   // decide where to forward incoming message
@@ -380,8 +394,10 @@ public class LcapRouter extends BaseLockssManager {
 
   void sendNoOp() {
     try {
-      LcapMessage noOp = LcapMessage.makeNoOpMsg(idMgr.getLocalIdentity(),
-                                                 pollMgr.generateRandomBytes());
+      LcapMessage noOp =
+	LcapMessage.makeNoOpMsg(idMgr.getLocalIdentity(),
+				pollMgr.generateRandomBytes());
+      log.debug("noop: " + noOp);
       send(noOp, null);
     } catch (IOException e) {
       log.warning("Couldn't send NoOp message", e);
