@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlSpec.java,v 1.8 2003-10-30 23:56:49 troberts Exp $
+ * $Id: CrawlSpec.java,v 1.9 2004-03-07 08:34:47 tlipkis Exp $
  */
 
 /*
@@ -56,13 +56,7 @@ public final class CrawlSpec {
    * @throws ClassCastException if any elements of startUrls is not a String.
    */
   public CrawlSpec(List startUrls, CrawlRule rule) throws ClassCastException {
-    int len = startUrls.size();
-    if (len == 0) {
-      throw new IllegalArgumentException("CrawlSpec starting point list must not be empty");
-    }
-    startList = ListUtil.immutableListOfType(startUrls, String.class);
-    this.rule = rule;
-    this.refetchDepth = 1;
+    this(startUrls, rule, 1);
   }
 
   /**
@@ -78,9 +72,9 @@ public final class CrawlSpec {
    */
   public CrawlSpec(List startUrls, CrawlRule rule, int refetchDepth)
       throws ClassCastException {
-    int len = startUrls.size();
-    if (len == 0) {
-      throw new IllegalArgumentException("CrawlSpec starting point list must not be empty");
+    if (startUrls.isEmpty()) {
+      throw
+	new IllegalArgumentException("CrawlSpec startUrls must not be empty");
     }
     if (refetchDepth < 1) {
       throw new IllegalArgumentException("refetchDepth must be at least 1");
