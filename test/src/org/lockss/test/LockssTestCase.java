@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.20 2003-02-05 01:22:46 tal Exp $
+ * $Id: LockssTestCase.java,v 1.21 2003-02-27 23:29:57 tal Exp $
  */
 
 /*
@@ -82,7 +82,8 @@ public class LockssTestCase extends TestCase {
 
   /** Remove any temp dirs, cancel any outstanding {@link DoLater}s */
   public void tearDown() throws Exception {
-    if (tmpDirs != null) {
+    boolean leave = Boolean.getBoolean("org.lockss.keepTempFiles");
+    if (tmpDirs != null && !leave) {
       for (ListIterator iter = tmpDirs.listIterator(); iter.hasNext(); ) {
 	File dir = (File)iter.next();
 	if (FileUtil.delTree(dir)) {
