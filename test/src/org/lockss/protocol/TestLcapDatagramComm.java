@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapDatagramComm.java,v 1.4 2004-09-29 23:31:37 tlipkis Exp $
+ * $Id: TestLcapDatagramComm.java,v 1.5 2005-02-16 00:41:19 tlipkis Exp $
  */
 
 /*
@@ -162,7 +162,7 @@ public class TestLcapDatagramComm extends LockssTestCase {
 
   public void testUnicastSend() throws Exception {
     assertTrue(ssock.getSentPackets().isEmpty());
-    comm.sendTo(testSend, testID, testPort);
+    comm.sendTo(testSend, testID, testPort, null);
     DatagramPacket sent = (DatagramPacket)ssock.getSentPackets().elementAt(0);
     assertEquals(testAddr, new IPAddr(sent.getAddress()));
     assertEquals(testPort, sent.getPort());
@@ -171,7 +171,7 @@ public class TestLcapDatagramComm extends LockssTestCase {
 
   public void testMulticastSend() throws Exception {
     assertTrue(ssock.getSentPackets().isEmpty());
-    comm.send(testSend, (ArchivalUnit)null);
+    comm.send(testSend, (ArchivalUnit)null, null);
     DatagramPacket sent = (DatagramPacket)ssock.getSentPackets().elementAt(0);
     assertEquals(IPAddr.getByName(config.get(PARAM_MULTI_GROUP)),
 		 new IPAddr(sent.getAddress()));

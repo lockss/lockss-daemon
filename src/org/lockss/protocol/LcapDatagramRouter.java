@@ -1,5 +1,5 @@
 /*
- * $Id: LcapDatagramRouter.java,v 1.7 2005-01-26 18:21:40 tlipkis Exp $
+ * $Id: LcapDatagramRouter.java,v 1.8 2005-02-16 00:41:20 tlipkis Exp $
  */
 
 /*
@@ -54,22 +54,32 @@ public class LcapDatagramRouter
   extends BaseLockssDaemonManager implements ConfigurableManager {
 
   static final String PREFIX = Configuration.PREFIX + "comm.router.";
-  static final String ORIGRATE_PREFIX = PREFIX + "maxOriginateRate.";
-  static final String PARAM_ORIG_PKTS_PER_INTERVAL = ORIGRATE_PREFIX+"packets";
-  static final String PARAM_ORIG_PKT_INTERVAL = ORIGRATE_PREFIX + "interval";
-  static final String FWDRATE_PREFIX = PREFIX + "maxForwardRate.";
-  static final String PARAM_FWD_PKTS_PER_INTERVAL = FWDRATE_PREFIX + "packets";
-  static final String PARAM_FWD_PKT_INTERVAL = FWDRATE_PREFIX + "interval";
+
+  /** Limits the rate at which messages originating from the cache (polls
+   * messages, beacons) will be sent.  Each message may result in several
+   * packets being sent (multicast, unicast to partners). */
+  static final String PARAM_ORIG_MSG_RATE = PREFIX + "maxOriginateMessageRate";
+  /** Limits the rate at which messages will be forwarded.  Each forwarded
+   * message may result in several packets being sent (multicast, unicast
+   * to partners). */
+  static final String PARAM_FWD_MSG_RATE = PREFIX + "maxForwardMessageRate";
+  /** Limits the rate at which packets will be sent due to messages being
+   * forwarded. */
+  static final String PARAM_ORIG_PKT_RATE = PREFIX + "maxOriginatePacketRate";
+  /** Limits the rate at which packets will be sent due to messages
+   * originating from the cache. */
+  static final String PARAM_FWD_PKT_RATE = PREFIX + "maxForwardPacketRate";
+  static final String DEFAULT_ORIG_MSG_RATE = "40/1s";
+  static final String DEFAULT_FWD_MSG_RATE = "40/10s";
+  static final String DEFAULT_ORIG_PKT_RATE = "40/1s";
+  static final String DEFAULT_FWD_PKT_RATE = "40/1s";
+
   static final String PARAM_BEACON_INTERVAL = PREFIX + "beacon.interval";
   static final String PARAM_INITIAL_HOPCOUNT = PREFIX + "maxHopCount";
   static final String PARAM_PROB_PARTNER_ADD =
     PREFIX + "partnerAddProbability";
   static final String PARAM_DUP_MSG_HASH_SIZE = PREFIX + "dupMsgHashSize";
 
-  static final int DEFAULT_ORIG_PKTS_PER_INTERVAL = 40;
-  static final long DEFAULT_ORIG_PKT_INTERVAL = 8 * Constants.MINUTE;
-  static final int DEFAULT_FWD_PKTS_PER_INTERVAL = 40;
-  static final long DEFAULT_FWD_PKT_INTERVAL = 10 * Constants.SECOND;
   static final double DEFAULT_PROB_PARTNER_ADD = 0.5;
   static final int DEFAULT_DUP_MSG_HASH_SIZE = 100;
   static final int DEFAULT_INITIAL_HOPCOUNT = 2;
@@ -84,8 +94,10 @@ public class LcapDatagramRouter
   private LcapDatagramComm comm;
   private PollManager pollMgr;
   private IdentityManager idMgr;
-  private RateLimiter fwdRateLimiter;
-  private RateLimiter origRateLimiter;
+  private RateLimiter fwdPktRateLimiter;
+  private RateLimiter origPktRateLimiter;
+  private RateLimiter fwdMsgRateLimiter;
+  private RateLimiter origMsgRateLimiter;
   private float probAddPartner;
   private long beaconInterval = 0;
   private int initialHopCount = LcapMessage.MAX_HOP_COUNT_LIMIT;
@@ -126,18 +138,30 @@ public class LcapDatagramRouter
 			Configuration.Differences changedKeys) {
     enabled = config.getBoolean(LcapDatagramComm.PARAM_ENABLED,
 				LcapDatagramComm.DEFAULT_ENABLED);
-    fwdRateLimiter =
-      RateLimiter.getConfiguredRateLimiter(config, fwdRateLimiter,
-					   PARAM_FWD_PKTS_PER_INTERVAL,
-					   DEFAULT_FWD_PKTS_PER_INTERVAL,
-					   PARAM_FWD_PKT_INTERVAL,
-					   DEFAULT_FWD_PKT_INTERVAL);
-    origRateLimiter =
-      RateLimiter.getConfiguredRateLimiter(config, origRateLimiter,
-					   PARAM_ORIG_PKTS_PER_INTERVAL,
-					   DEFAULT_ORIG_PKTS_PER_INTERVAL,
-					   PARAM_ORIG_PKT_INTERVAL,
-					   DEFAULT_ORIG_PKT_INTERVAL);
+    if (changedKeys.contains(PARAM_FWD_PKT_RATE)) {
+      fwdPktRateLimiter =
+	RateLimiter.getConfiguredRateLimiter(config, fwdPktRateLimiter,
+					     PARAM_FWD_PKT_RATE,
+					     DEFAULT_FWD_PKT_RATE);
+    }
+    if (changedKeys.contains(PARAM_ORIG_PKT_RATE)) {
+      origPktRateLimiter =
+	RateLimiter.getConfiguredRateLimiter(config, origPktRateLimiter,
+					     PARAM_ORIG_PKT_RATE,
+					     DEFAULT_ORIG_PKT_RATE);
+    }
+    if (changedKeys.contains(PARAM_FWD_MSG_RATE)) {
+      fwdMsgRateLimiter =
+	RateLimiter.getConfiguredRateLimiter(config, fwdMsgRateLimiter,
+					     PARAM_FWD_MSG_RATE,
+					     DEFAULT_FWD_MSG_RATE);
+    }
+    if (changedKeys.contains(PARAM_ORIG_MSG_RATE)) {
+      origMsgRateLimiter =
+	RateLimiter.getConfiguredRateLimiter(config, origMsgRateLimiter,
+					     PARAM_ORIG_MSG_RATE,
+					     DEFAULT_ORIG_MSG_RATE);
+    }
     if (changedKeys.contains(PARAM_BEACON_INTERVAL)) {
       beaconInterval = config.getTimeInterval(PARAM_BEACON_INTERVAL,
 					      DEFAULT_BEACON_INTERVAL);
@@ -173,10 +197,15 @@ public class LcapDatagramRouter
   public void send(LcapMessage msg, ArchivalUnit au) throws IOException {
     msg.setHopCount(initialHopCount);
     log.debug2("send(" + msg + ")");
-    LockssDatagram dg = new LockssDatagram(LockssDatagram.PROTOCOL_LCAP,
-					   msg.encodeMsg());
-    doMulticast(dg, origRateLimiter, au);
-    doUnicast(dg, origRateLimiter, null, null);
+    if (origMsgRateLimiter.isEventOk()) {
+      LockssDatagram dg = new LockssDatagram(LockssDatagram.PROTOCOL_LCAP,
+					     msg.encodeMsg());
+      doMulticast(dg, origPktRateLimiter, au);
+      doUnicast(dg, origPktRateLimiter, null, null);
+      origMsgRateLimiter.event();
+    } else {
+      log.debug("Orig Msg rate limited");
+    }
   }
 
   /** Unicast a message to a single cache.  All
@@ -192,11 +221,15 @@ public class LcapDatagramRouter
       throws IOException {
     msg.setHopCount(initialHopCount);
     log.debug2("sendTo(" + msg + ", " + id + ")");
-    LockssDatagram dg = new LockssDatagram(LockssDatagram.PROTOCOL_LCAP,
-					   msg.encodeMsg());
-    comm.sendTo(dg, au, id);
-    updateBeacon();
-    origRateLimiter.event();
+    if (origMsgRateLimiter.isEventOk()) {
+      LockssDatagram dg = new LockssDatagram(LockssDatagram.PROTOCOL_LCAP,
+					     msg.encodeMsg());
+      comm.sendTo(dg, au, id, origPktRateLimiter);
+      updateBeacon();
+      origMsgRateLimiter.event();
+    } else {
+      log.debug2("Orig Msg rate limited");
+    }
   }
 
   // handle received message.  do unicast/multicast routing, then pass msg
@@ -253,39 +286,44 @@ public class LcapDatagramRouter
     PeerIdentity senderID = idMgr.ipAddrToPeerIdentity(dg.getSender());
     PeerIdentity originatorID = msg.getOriginatorID();
     idEvent(originatorID, LcapIdentity.EVENT_ORIG, msg);
-      if (!msg.isNoOp()) {
-	idEvent(originatorID, LcapIdentity.EVENT_ORIG_OP, msg);
-      }
-      if (senderID == originatorID) {
-	idEvent(senderID, LcapIdentity.EVENT_SEND_ORIG, msg);
-      } else {
-	idEvent(senderID, LcapIdentity.EVENT_SEND_FWD, msg);
-      }
-      log.debug2("incoming orig: " + originatorID + " , sender: " + senderID);
-      if (isEligibleToForward(dg, msg)) {
+    if (!msg.isNoOp()) {
+      idEvent(originatorID, LcapIdentity.EVENT_ORIG_OP, msg);
+    }
+    if (senderID == originatorID) {
+      idEvent(senderID, LcapIdentity.EVENT_SEND_ORIG, msg);
+    } else {
+      idEvent(senderID, LcapIdentity.EVENT_SEND_FWD, msg);
+    }
+    log.debug2("incoming orig: " + originatorID + " , sender: " + senderID);
+    if (isEligibleToForward(dg, msg)) {
+      if (fwdMsgRateLimiter.isEventOk()) {
 	//XXX need to clone message here to avoid overwrite problems
 	msg.setHopCount(msg.getHopCount() - 1);
 	try {
 	  LockssDatagram fwddg = new LockssDatagram(dg.getProtocol(),
-						  msg.encodeMsg());
+						    msg.encodeMsg());
 	  if (dg.isMulticast()) {
 	    partnerList.multicastPacketReceivedFrom(senderID);
 	    if (senderID != originatorID) {
 	      partnerList.addPartner(originatorID, probAddPartner);
 	    }
-	    doUnicast(fwddg, fwdRateLimiter, senderID, originatorID);
+	    doUnicast(fwddg, fwdPktRateLimiter, senderID, originatorID);
 	  } else {
 	    partnerList.addPartner(senderID, 1.0);
 	    if (senderID != originatorID) {
 	      partnerList.addPartner(originatorID, probAddPartner);
 	    }
-	    doMulticast(fwddg, fwdRateLimiter, null);
-	    doUnicast(fwddg, fwdRateLimiter, senderID, originatorID);
+	    doMulticast(fwddg, fwdPktRateLimiter, null);
+	    doUnicast(fwddg, fwdPktRateLimiter, senderID, originatorID);
 	  }
+	  fwdMsgRateLimiter.event();
 	} catch (IOException e) {
 	  log.warning("Couldn't forward message", e);
 	}
+      } else {
+	log.debug("Fwd Msg rate limited");
       }
+    }
   }
 
   void idEvent(PeerIdentity pid, int event, LcapMessage msg) {
@@ -304,11 +342,6 @@ public class LcapDatagramRouter
     }
     if (didIOriginateOrSend(dg, msg)) {
       log.debug3("Not forwarding, I sent it");
-      return false;
-    }
-
-    if (!fwdRateLimiter.isEventOk()) {	// exceeded max send packet rate
-      log.warning("Not forwarding, forwarding rate exceeded");
       return false;
     }
 
@@ -348,9 +381,8 @@ public class LcapDatagramRouter
       //     so equals() will be false. ***
       if (!(part == senderID || part == originatorID)) {
 	try {
-	  comm.sendTo(dg, part);
+	  comm.sendTo(dg, part, limiter);
 	  updateBeacon();
-	  limiter.event();
 	} catch (IOException e) {
 	  partnerList.removePartner(part);
 	}
@@ -361,9 +393,8 @@ public class LcapDatagramRouter
   // tk - ok to send same packet here and in unicast, repeatedly?
   void doMulticast(LockssDatagram dg, RateLimiter limiter, ArchivalUnit au) {
     try {
-      comm.send(dg, au);
+      comm.send(dg, au, limiter);
       updateBeacon();
-      limiter.event();
     } catch (IOException e) {
       // tk - what to do here?
     }
@@ -433,12 +464,8 @@ public class LcapDatagramRouter
 	try {
 	  beaconDeadline.sleep();
 	  if (goOn && beaconDeadline.expired()) {
-	    if (origRateLimiter.isEventOk()) {
-	      log.debug("Beacon send");
-	      sendNoOp();
-	    } else {
-	      log.warning("Message originate rate exceeded, not sending noop");
-	    }
+	    log.debug("Beacon send");
+	    sendNoOp();
 	    beaconDeadline.expireIn(beaconInterval);
 	  }
 	} catch (InterruptedException e) {

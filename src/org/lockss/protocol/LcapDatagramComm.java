@@ -1,5 +1,5 @@
 /*
- * $Id: LcapDatagramComm.java,v 1.6 2005-01-26 18:21:40 tlipkis Exp $
+ * $Id: LcapDatagramComm.java,v 1.7 2005-02-16 00:41:20 tlipkis Exp $
  */
 
 /*
@@ -64,6 +64,10 @@ public class LcapDatagramComm
   static final String PARAM_MULTI_VERIFY = PREFIX + "multicast.verify";
   static final boolean DEFAULT_MULTI_VERIFY = false;
 
+  static final String PARAM_MULTI_DISABLE_TIMEOUT = PREFIX +
+    "multicast.disableAfterInactive";
+  static final long DEFAULT_MULTI_DISABLE_TIMEOUT = 1 * Constants.HOUR;
+
   static final String PARAM_UNI_PORT = PREFIX + "unicast.port";
   static final String PARAM_UNI_PORT_SEND = PREFIX + "unicast.sendToPort";
   static final String PARAM_UNI_ADDR_SEND = PREFIX + "unicast.sendToAddr";
@@ -82,6 +86,10 @@ public class LcapDatagramComm
   static Logger log = Logger.getLogger("Comm");
 
   private boolean enabled = DEFAULT_ENABLED;
+  private boolean isMuzzleMulticast = false;
+  private long lastMulticastTime;
+  private long muzzleMulticastAfter = DEFAULT_MULTI_DISABLE_TIMEOUT;
+
   private IdentityManager idMgr;
   private OneShot configShot = new OneShot();
   private LRUMap multicastVerifyMap = new LRUMap(100);
@@ -187,6 +195,9 @@ public class LcapDatagramComm
     } catch (Configuration.InvalidParam e) {
       log.critical("Config error, not started: " + e);
     }
+    muzzleMulticastAfter =
+      config.getTimeInterval(PARAM_MULTI_DISABLE_TIMEOUT,
+			     DEFAULT_MULTI_DISABLE_TIMEOUT);
     try {
       if (groupName != null) {
 	group = IPAddr.getByName(groupName);
@@ -233,6 +244,14 @@ public class LcapDatagramComm
     }
   }
 
+  boolean checkMuzzleMulticast() {
+    if (isMuzzleMulticast) return true;
+    if (TimeBase.msSince(lastMulticastTime) >= muzzleMulticastAfter) {
+      isMuzzleMulticast = true;
+    }
+    return isMuzzleMulticast;
+  }       
+
   /** Return true if the packet's source address is one of my interfaces. */
   boolean didISend(LockssReceivedDatagram dg) {
     IPAddr sender = dg.getSender();
@@ -274,16 +293,25 @@ public class LcapDatagramComm
    * determine which multicast socket/port to send to.
    * @throws IOException
    */
-  public void send(LockssDatagram ld, ArchivalUnit au) throws IOException {
+  public void send(LockssDatagram ld, ArchivalUnit au, RateLimiter limiter)
+      throws IOException {
     if (multiPort < 0) {
       throw new IllegalStateException("Multicast port not configured");
     }
     if (group == null) {
       throw new IllegalStateException("Multicast group not configured");
     }
-    updateOutStats(ld, multiPort, true);
-    DatagramPacket pkt = ld.makeSendPacket(group, multiPort);
-    sendSock.send(pkt);
+    if (checkMuzzleMulticast()) {
+      return;
+    }
+    if (limiter == null || limiter.isEventOk()) {
+      updateOutStats(ld, multiPort, true);
+      DatagramPacket pkt = ld.makeSendPacket(group, multiPort);
+      sendSock.send(pkt);
+      if (limiter != null) limiter.event();
+    } else {
+      log.debug2("Pkt rate limited");
+    }
   }
 
   /** Unicast a message to a single cache.
@@ -293,7 +321,8 @@ public class LcapDatagramComm
    * @param id the identity of the cache to which to send the message
    * @throws IOException
    */
-  public void sendTo(LockssDatagram ld, ArchivalUnit au, PeerIdentity id)
+  public void sendTo(LockssDatagram ld, ArchivalUnit au, PeerIdentity id,
+		     RateLimiter limiter)
       throws IOException {
     if (uniSendToPort < 0) {
       throw new IllegalStateException("Unicast port not configured");
@@ -303,21 +332,27 @@ public class LcapDatagramComm
     if (uniSendToAddr != null) {
       pid = idMgr.ipAddrToPeerIdentity(uniSendToAddr, 0);
     }
-    sendTo(ld, pid, uniSendToPort);
+    sendTo(ld, pid, uniSendToPort, limiter);
   }
 
-  void sendTo(LockssDatagram ld, PeerIdentity id)
+  void sendTo(LockssDatagram ld, PeerIdentity id, RateLimiter limiter)
       throws IOException {
-    updateOutStats(ld, uniSendToPort, false);
-    sendTo(ld, id, uniSendToPort);
+    sendTo(ld, id, uniSendToPort, limiter);
   }
 
-  void sendTo(LockssDatagram ld, PeerIdentity id, int port)
+  void sendTo(LockssDatagram ld, PeerIdentity id, int port,
+		      RateLimiter limiter)
       throws IOException {
     log.debug2("sending "+ ld +" to "+ id +":"+ port);
-    IPAddr ipAddr = idMgr.identityToIPAddr(id);
-    DatagramPacket pkt = ld.makeSendPacket(ipAddr, port);
-    sendSock.send(pkt);
+    if (limiter == null || limiter.isEventOk()) {
+      updateOutStats(ld, uniSendToPort, false);
+      IPAddr ipAddr = idMgr.identityToIPAddr(id);
+      DatagramPacket pkt = ld.makeSendPacket(ipAddr, port);
+      sendSock.send(pkt);
+      if (limiter != null) limiter.event();
+    } else {
+      log.debug2("Pkt rate limited");
+    }
   }
 
   void start() {
@@ -367,6 +402,8 @@ public class LcapDatagramComm
     } else {
       log.error("Unicast port not configured, not starting unicast receive");
     }
+    isMuzzleMulticast = false;
+    lastMulticastTime = TimeBase.nowMs();
     ensureQRunner();
   }
 
@@ -434,6 +471,10 @@ public class LcapDatagramComm
       log.debug2("Received " + ld);
       try {
 	updateInStats(ld);
+	if (ld.isMulticast() && !didISend(ld)) {
+	  isMuzzleMulticast = false;	  
+	  lastMulticastTime = TimeBase.nowMs();
+	}
 	runHandlers(ld);
       } catch (ProtocolException e) {
 	log.warning("Cannot process incoming packet", e);
@@ -607,8 +648,6 @@ public class LcapDatagramComm
 
   protected void updateInStats(LockssReceivedDatagram ld)
       throws ProtocolException {
-    LcapSocket lsock = ld.getReceiveSocket();
-    DatagramSocket sock = lsock.getSocket();
     boolean mcast = ld.isMulticast();
     if (mcast && didISend(ld)) {
       // We receive all the multicast packets we send; don't count them in
@@ -618,6 +657,8 @@ public class LcapDatagramComm
       // (which is probably not the local identity addr).
       return;
     }
+    LcapSocket lsock = ld.getReceiveSocket();
+    DatagramSocket sock = lsock.getSocket();
     updateStats(ld, sock.getLocalPort(), true, mcast);
   }
 
@@ -792,8 +833,10 @@ public class LcapDatagramComm
 
     private Map makeRow(Stats stats, int special) {
       Map row = new HashMap();
+      boolean isGrey = false;
       switch (special) {
       case 0:
+	isGrey = isMuzzleMulticast && stats.multicast;
 	StringBuffer sb = new StringBuffer();
 	sb.append(stats.port);
 	sb.append(stats.multicast ? " M" : " U");
@@ -815,9 +858,9 @@ public class LcapDatagramComm
 	row.put("inPkts", new Integer(stats.inPkts));
 	row.put("inBytes", new Long(stats.inBytes));
 // 	row.put("inUncBytes", new Long(stats.inUncBytes));
-	row.put("outPkts", new Integer(stats.outPkts));
-	row.put("outBytes", new Long(stats.outBytes));
-// 	row.put("outUncBytes", new Long(stats.outUncBytes));
+	row.put("outPkts", greyObj(new Integer(stats.outPkts), isGrey));
+	row.put("outBytes", greyObj(new Long(stats.outBytes), isGrey));
+// 	row.put("outUncBytes", greyObj(new Long(stats.outUncBytes), isGrey));
 	break;
       case 2:
 	row.put("inPkts", rate(stats.inPkts));
@@ -829,6 +872,13 @@ public class LcapDatagramComm
 	break;
       }
       return row;
+    }
+
+    Object greyObj(Object val, boolean isGrey) {
+      if (!isGrey) return val;
+      StatusTable.DisplayedValue dv = new StatusTable.DisplayedValue(val);
+      dv.setColor("gray");
+      return dv;
     }
   }
 }
