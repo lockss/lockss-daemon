@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.46.2.2 2004-04-02 23:25:00 eaalto Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.46.2.3 2004-04-03 18:53:15 tlipkis Exp $
  */
 
 /*
@@ -118,35 +118,90 @@ public class RepositoryNodeImpl implements RepositoryNode {
   }
 
   public long getTreeContentSize(CachedUrlSetSpec filter) {
-    ensureCurrentInfoLoaded();
-    // only cache if not filtered
-    if (filter==null) {
-      String treeSize = nodeProps.getProperty(TREE_SIZE_PROPERTY);
-      if (treeSize != null) {
-        // return if found
-	  //XXX temporarily removed since it's not fully functional
-	  //        return Long.parseLong(treeSize);
-      }
-    }
-
+    // do direct directory traversal, rather than creating RepositoryNodes
     long totalSize = 0;
     if (hasContent()) {
       totalSize = currentCacheFile.length();
     }
 
-    // since RepositoryNodes update and cache tree size, efficient to use them
-    for (Iterator subNodes = listNodes(filter, false); subNodes.hasNext(); ) {
-      RepositoryNode subNode = (RepositoryNode)subNodes.next();
-      totalSize += subNode.getTreeContentSize(null);
+    // filter the immediate level
+    File[] children = nodeRootFile.listFiles();
+    for (int ii=0; ii<children.length; ii++) {
+      File child = children[ii];
+      if ((!child.isDirectory()) || (child.getName().equals(CONTENT_DIR))) {
+        continue;
+      }
+      // check if in initial spec
+      int bufMaxLength = url.length() + child.getName().length() + 1;
+      StringBuffer buffer = new StringBuffer(bufMaxLength);
+      buffer.append(url);
+      if (!url.endsWith("/")) {
+        buffer.append('/');
+      }
+      buffer.append(child.getName());
+
+      String childUrl = buffer.toString();
+      if ( (filter == null) || (filter.matches(childUrl))) {
+        totalSize += recurseDirContentSize(child);
+      }
     }
 
-    if (filter==null) {
-      // store value
-      nodeProps.setProperty(TREE_SIZE_PROPERTY, Long.toString(totalSize));
-      writeNodeProperties();
-    }
     return totalSize;
   }
+
+  private long recurseDirContentSize(File nodeDir) {
+    // add size of this dir, if any
+    long subSize = 0;
+    File contentFile = new File(nodeDir, CONTENT_DIR + File.separator +
+                                CURRENT_FILENAME);
+    if (contentFile.exists()) {
+      subSize = contentFile.length();
+    }
+
+    // recurse on children
+    File[] children = nodeDir.listFiles();
+    for (int ii=0; ii<children.length; ii++) {
+      File child = children[ii];
+      if ((!child.isDirectory()) || (child.getName().equals(CONTENT_DIR))) {
+        continue;
+      }
+      subSize += recurseDirContentSize(child);
+    }
+
+    //XXX store here?
+    return subSize;
+  }
+
+//   public long getTreeContentSize(CachedUrlSetSpec filter) {
+//     ensureCurrentInfoLoaded();
+//     // only cache if not filtered
+//     if (filter==null) {
+//       String treeSize = nodeProps.getProperty(TREE_SIZE_PROPERTY);
+//       if (treeSize != null) {
+//         // return if found
+// 	  //XXX temporarily removed since it's not fully functional
+// 	  //        return Long.parseLong(treeSize);
+//       }
+//     }
+
+//     long totalSize = 0;
+//     if (hasContent()) {
+//       totalSize = currentCacheFile.length();
+//     }
+
+//     // since RepositoryNodes update and cache tree size, efficient to use them
+//     for (Iterator subNodes = listNodes(filter, false); subNodes.hasNext(); ) {
+//       RepositoryNode subNode = (RepositoryNode)subNodes.next();
+//       totalSize += subNode.getTreeContentSize(null);
+//     }
+
+//     if (filter==null) {
+//       // store value
+//       nodeProps.setProperty(TREE_SIZE_PROPERTY, Long.toString(totalSize));
+//       writeNodeProperties();
+//     }
+//     return totalSize;
+//   }
 
 /*
   code for direct file measuring
@@ -198,8 +253,24 @@ public class RepositoryNodeImpl implements RepositoryNode {
  */
 
   public boolean isLeaf() {
-    return (getChildCount() == 0);
+    ensureCurrentInfoLoaded();
+    if (!nodeRootFile.exists()) {
+      logger.error("No cache directory located for: "+url);
+      throw new LockssRepository.RepositoryStateException("No cache directory located.");
+    }
+    File[] children = nodeRootFile.listFiles();
+    for (int ii=0; ii<children.length; ii++) {
+      File child = children[ii];
+      if (!child.isDirectory()) continue;
+      if (child.getName().equals(cacheLocationFile.getName())) continue;
+      return false;
+    }
+    return true;
   }
+
+//   public boolean isLeaf() {
+//     return (getChildCount() == 0);
+//   }
 
   public Iterator listNodes(CachedUrlSetSpec filter, boolean includeInactive) {
     return getNodeList(filter, includeInactive).iterator();
