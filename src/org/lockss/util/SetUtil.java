@@ -1,5 +1,5 @@
 /*
- * $Id: SetUtil.java,v 1.2 2002-12-17 20:49:11 troberts Exp $
+ * $Id: SetUtil.java,v 1.3 2003-01-14 02:23:03 aalto Exp $
  *
 
 Copyright (c) 2000-2002 Board of Trustees of Leland Stanford Jr. University,
@@ -38,7 +38,7 @@ public class SetUtil {
    * Don't construct. */
   private SetUtil() {
   }
-    
+
   /**
    * Create set from arg list. */
   public static Set set() {
@@ -63,7 +63,7 @@ public class SetUtil {
 
   /**
    * Create set from arg list. */
-  public static Set set(Object object1, 
+  public static Set set(Object object1,
 			Object object2,
 			Object object3) {
     Set l = set(object1, object2);
@@ -73,7 +73,7 @@ public class SetUtil {
 
   /**
    * Create set from arg list. */
-  public static Set set(Object object1, 
+  public static Set set(Object object1,
 			Object object2,
 			Object object3,
 			Object object4) {
@@ -84,7 +84,7 @@ public class SetUtil {
 
   /**
    * Create set from arg list. */
-  public static Set set(Object object1, 
+  public static Set set(Object object1,
 			Object object2,
 			Object object3,
 			Object object4,
@@ -96,7 +96,7 @@ public class SetUtil {
 
   /**
    * Create set from arg list. */
-  public static Set set(Object object1, 
+  public static Set set(Object object1,
 			Object object2,
 			Object object3,
 			Object object4,
@@ -108,7 +108,7 @@ public class SetUtil {
   }
   /**
    * Create set from arg list. */
-  public static Set set(Object object1, 
+  public static Set set(Object object1,
 			Object object2,
 			Object object3,
 			Object object4,
@@ -122,7 +122,7 @@ public class SetUtil {
   }
   /**
    * Create set from arg list. */
-  public static Set set(Object object1, 
+  public static Set set(Object object1,
 			Object object2,
 			Object object3,
 			Object object4,
@@ -137,7 +137,7 @@ public class SetUtil {
   }
   /**
    * Create set from arg list. */
-  public static Set set(Object object1, 
+  public static Set set(Object object1,
 			Object object2,
 			Object object3,
 			Object object4,
@@ -153,7 +153,7 @@ public class SetUtil {
   }
   /**
    * Create set from arg list. */
-  public static Set set(Object object1, 
+  public static Set set(Object object1,
 			Object object2,
 			Object object3,
 			Object object4,
@@ -178,11 +178,20 @@ public class SetUtil {
     return l;
   }
 
-  /** Create a set containing the elements of an array */
+  /** Create a set containing the elements of a list */
   public static Set fromList(List list) {
     Set l = set();
     for (int i = 0; i < list.size(); i++) {
       l.add(list.get(i));
+    }
+    return l;
+  }
+
+  /** Create a set containing the elements of an iterator */
+  public static Set fromIterator(Iterator iterator) {
+    Set l = set();
+    while (iterator.hasNext()) {
+      l.add(iterator.next());
     }
     return l;
   }
