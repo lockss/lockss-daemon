@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.43 2004-07-23 16:45:55 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.44 2004-08-22 02:12:44 tlipkis Exp $
  */
 
 /*
@@ -609,6 +609,15 @@ public class StringUtil {
    */
   public static String timeIntervalToString(long millis) {
     StringBuffer sb = new StringBuffer();
+
+    if (millis < 0) {
+      sb.append("-");
+      millis = -millis;
+    }
+    return posTimeIntervalToString(millis, sb);
+  }
+
+  private static String posTimeIntervalToString(long millis, StringBuffer sb) {
     if (millis < 10 * Constants.SECOND) {
       sb.append(millis);
       sb.append("ms");

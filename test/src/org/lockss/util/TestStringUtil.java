@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.38 2004-06-01 08:36:07 tlipkis Exp $
+ * $Id: TestStringUtil.java,v 1.39 2004-08-22 02:12:43 tlipkis Exp $
  */
 
 /*
@@ -412,7 +412,9 @@ System.out.println("s: "+s);
   public void testTimeInterval() throws Exception {
     assertEquals("0ms", StringUtil.timeIntervalToString(0));
     assertEquals("1000ms", StringUtil.timeIntervalToString(SECOND));
+    assertEquals("-1000ms", StringUtil.timeIntervalToString(- SECOND));
     assertEquals("9000ms", StringUtil.timeIntervalToString(SECOND * 9));
+    assertEquals("-9000ms", StringUtil.timeIntervalToString(- SECOND * 9));
     assertEquals("10s", StringUtil.timeIntervalToString(SECOND * 10));
     assertEquals("1m0s", StringUtil.timeIntervalToString(MINUTE));
     assertEquals("1h0m0s", StringUtil.timeIntervalToString(HOUR));
@@ -420,6 +422,8 @@ System.out.println("s: "+s);
 		 StringUtil.timeIntervalToString(DAY * 2 + HOUR * 3));
     assertEquals("20d23h0m",
 		 StringUtil.timeIntervalToString(WEEK * 3 - (HOUR * 1)));
+    assertEquals("-20d23h0m",
+		 StringUtil.timeIntervalToString(- (WEEK * 3 - (HOUR * 1))));
     assertEquals("3w0d0h", StringUtil.timeIntervalToString(WEEK * 3));
   }
 
