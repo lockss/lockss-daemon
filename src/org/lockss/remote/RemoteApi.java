@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.28 2005-01-19 04:17:43 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.29 2005-02-09 19:10:17 tlipkis Exp $
  */
 
 /*
@@ -479,8 +479,9 @@ public class RemoteApi extends BaseLockssDaemonManager {
 	try {
 	  pluginMgr.deleteAu(au);
 	  stat.setStatus("Deleted", STATUS_ORDER_NORM);
-	} catch (IOException e) {
-	  stat.setStatus("Not Deleted", STATUS_ORDER_WARN);
+	} catch (Exception e) {
+	  log.warning("Error deleting AU", e);
+	  stat.setStatus("Possibly Not Deleted", STATUS_ORDER_WARN);
 	  stat.setExplanation("Error deleting: " + e.getMessage());
 	}
       } else {
@@ -590,7 +591,11 @@ public class RemoteApi extends BaseLockssDaemonManager {
       if (normOld.equals(normNew)) {
 	log.debug("Restore: same config: " + auid);
 	stat.setStatus("Exists", STATUS_ORDER_LOW);
-	stat.setExplanation("Already Exists");
+	if (oldConfig.getBoolean(PluginManager.AU_PARAM_DISABLED, false)) {
+	  stat.setExplanation("Already Exists (inactive)");
+	} else {
+	  stat.setExplanation("Already Exists");
+	}
       } else {
 	log.debug("Restore: conflicting config: " + auid +
 		  ", current: " + normOld + ", new: " + normNew);
