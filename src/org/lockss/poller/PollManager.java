@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.70 2003-04-10 21:28:01 claire Exp $
+* $Id: PollManager.java,v 1.71 2003-04-11 05:37:51 claire Exp $
  */
 
 /*
@@ -76,8 +76,6 @@ public class PollManager  extends BaseLockssManager {
   static final long DEFAULT_REPLAY_EXPIRATION = DEFAULT_RECENT_EXPIRATION/2;
   static final long DEFAULT_VERIFY_EXPIRATION = Constants.DAY;
 
-  public static final String MANAGER_STATUS_TABLE_NAME = "PollManagerTable";
-  public static final String POLL_STATUS_TABLE_NAME = "PollTable";
 
   private static PollManager theManager = null;
   private static Logger theLog=Logger.getLogger("PollManager");
@@ -121,13 +119,13 @@ public class PollManager  extends BaseLockssManager {
 
     // register our status
     StatusService statusServ = theDaemon.getStatusService();
-    statusServ.registerStatusAccessor(MANAGER_STATUS_TABLE_NAME,
-                                      new ManagerStatus());
-    statusServ.registerStatusAccessor(POLL_STATUS_TABLE_NAME,
-                                      new PollStatus());
-    statusServ.registerObjectReferenceAccessor(MANAGER_STATUS_TABLE_NAME,
+    statusServ.registerStatusAccessor(PollerStatus.MANAGER_STATUS_TABLE_NAME,
+                                      new PollerStatus.ManagerStatus());
+    statusServ.registerStatusAccessor(PollerStatus.POLL_STATUS_TABLE_NAME,
+                                      new PollerStatus.PollStatus());
+    statusServ.registerObjectReferenceAccessor(PollerStatus.MANAGER_STATUS_TABLE_NAME,
 					       ArchivalUnit.class,
-					       new ManagerStatusAURef());
+					       new PollerStatus.ManagerStatusAURef());
   }
 
   /**
@@ -137,8 +135,8 @@ public class PollManager  extends BaseLockssManager {
   public void stopService() {
     // unregister our status
     StatusService statusServ = theDaemon.getStatusService();
-    statusServ.unregisterStatusAccessor(MANAGER_STATUS_TABLE_NAME);
-    statusServ.unregisterStatusAccessor(POLL_STATUS_TABLE_NAME);
+    statusServ.unregisterStatusAccessor(PollerStatus.MANAGER_STATUS_TABLE_NAME);
+    statusServ.unregisterStatusAccessor(PollerStatus.POLL_STATUS_TABLE_NAME);
 
     // unregister our router
     theRouter.unregisterMessageHandler(m_msgHandler);
@@ -197,6 +195,55 @@ public class PollManager  extends BaseLockssManager {
     }
     return false;
   }
+
+  /**
+   * suspend a poll while we wait for a repair
+   * @param key the identifier key of the poll to suspend
+   */
+  public void suspendPoll(String key) {
+    PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
+    if(pme == null) {
+      theLog.debug2("ignoring suspend request for unknown key " + key);
+      return;
+    }
+    pme.setPollSuspended();
+    theLog.debug2("suspended poll " + key);
+  }
+
+
+  /**
+   * resume a poll that had been suspended for a repair and check the repair
+   * @param replayNeeded true we now need to replay the poll results
+   * @param key the key of the suspended poll
+   */
+  public void resumePoll(boolean replayNeeded, Object key) {
+    PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
+    if(pme == null) {
+      theLog.debug2("ignoring resume request for unknown key " + key);
+      return;
+    }
+    theLog.debug2("resuming poll " + key);
+    PollTally tally = pme.poll.getVoteTally();
+    long expiration = 0;
+    Deadline d;
+    if (replayNeeded) {
+      NodeManager nm = theDaemon.getNodeManager(tally.getArchivalUnit());
+      nm.startPoll(tally.getCachedUrlSet(), tally, true);
+      theLog.debug2("replaying poll " + (String) key);
+      expiration = m_replayPollExpireTime;
+      d = Deadline.in(expiration);
+      tally.startReplay(d);
+    }
+
+    // now we want to make sure we add it to the recent polls.
+    expiration += m_recentPollExpireTime;
+
+    d = Deadline.in(expiration);
+    TimerQueue.schedule(d, new ExpireRecentCallback(), (String) key);
+    pme.setPollCompleted(d);
+    theLog.debug2("completed resume poll " + (String) key);
+  }
+
 
   /**
    * handle an incoming message packet.  This will create a poll if
@@ -327,54 +374,73 @@ public class PollManager  extends BaseLockssManager {
     }
 
     /**
-     * suspend a poll while we wait for a repair
-     * @param key the identifier key of the poll to suspend
+     * create a poll of the type indicated by the LcapMessage opcode.
+     * @param msg the message which triggered this poll
+     * @param pollspec the PollSpec which describes the poll
+     * @return a newly created Poll object
+     * @throws ProtocolException if the opcode in the message is of an unknown
+     * type.
      */
-    public void suspendPoll(String key) {
-      PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
-      if(pme == null) {
-        theLog.debug2("ignoring suspend request for unknown key " + key);
-        return;
-      }
-      pme.setPollSuspended();
-      theLog.debug2("suspended poll " + key);
-    }
+    protected Poll createPoll(LcapMessage msg, PollSpec pollspec)
+        throws ProtocolException {
+      Poll ret_poll = null;
 
+      switch(msg.getOpcode()) {
+        case LcapMessage.CONTENT_POLL_REP:
+        case LcapMessage.CONTENT_POLL_REQ:
+          theLog.debug("Making a content poll on "+ pollspec);
+          ret_poll = new ContentPoll(msg, pollspec, this);
+          break;
+        case LcapMessage.NAME_POLL_REP:
+        case LcapMessage.NAME_POLL_REQ:
+          theLog.debug("Making a name poll on "+pollspec);
+          ret_poll = new NamePoll(msg, pollspec, this);
+          break;
+        case LcapMessage.VERIFY_POLL_REP:
+        case LcapMessage.VERIFY_POLL_REQ:
+          theLog.debug("Making a verify poll on "+pollspec);
+          ret_poll = new VerifyPoll(msg, pollspec, this);
+          break;
+        default:
+          throw new ProtocolException("Unknown opcode:" + msg.getOpcode());
+      }
+      addPoll(ret_poll);
+      return ret_poll;
+    }
 
     /**
-     * resume a poll that had been suspended for a repair and check the repair
-     * @param replayNeeded true we now need to replay the poll results
-     * @param key the key of the suspended poll
+     * check for conflicts between the poll defined by the Message and any
+     * currently exsiting poll.
+     * @param msg the <code>Message</code> to check
+     * @param cus the <code>CachedUrlSet</code> from the url and reg expression
+     * @return the CachedUrlSet of the conflicting poll.
      */
-    public void resumePoll(boolean replayNeeded, Object key) {
-      PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
-      if(pme == null) {
-        theLog.debug2("ignoring resume request for unknown key " + key);
-        return;
-      }
-      theLog.debug2("resuming poll " + key);
-      PollTally tally = pme.poll.getVoteTally();
-      long expiration = 0;
-      Deadline d;
-      if (replayNeeded) {
-        NodeManager nm = theDaemon.getNodeManager(tally.getArchivalUnit());
-        nm.startPoll(tally.getCachedUrlSet(), tally, true);
-        theLog.debug2("replaying poll " + (String) key);
-        expiration = m_replayPollExpireTime;
-        d = Deadline.in(expiration);
-        tally.startReplay(d);
+    CachedUrlSet checkForConflicts(LcapMessage msg, CachedUrlSet cus) {
+
+      // eliminate incoming verify polls - never conflicts
+      if(msg.isVerifyPoll()) {
+        return null;
       }
 
-      // now we want to make sure we add it to the recent polls.
-      expiration += m_recentPollExpireTime;
+      Iterator iter = thePolls.values().iterator();
+      while(iter.hasNext()) {
+        PollManagerEntry entry = (PollManagerEntry)iter.next();
+        Poll p = entry.poll;
 
-      d = Deadline.in(expiration);
-      TimerQueue.schedule(d, new ExpireRecentCallback(), (String) key);
-      pme.setPollCompleted(d);
-      theLog.debug2("completed resume poll " + (String) key);
+        // eliminate completed polls or verify polls
+        if(!entry.isPollCompleted() && !p.getMessage().isVerifyPoll()) {
+          CachedUrlSet pcus = p.getPollSpec().getCachedUrlSet();
+          ArchivalUnit au = cus.getArchivalUnit();
+          LockssRepository repo = theDaemon.getLockssRepository(au);
+          int rel_pos = repo.cusCompare(cus, pcus);
+          if(rel_pos != LockssRepository.SAME_LEVEL_NO_OVERLAP &&
+             rel_pos != LockssRepository.NO_RELATION) {
+            return pcus;
+          }
+        }
+      }
+      return null;
     }
-
-
   /**
    * send a message to the multicast address for this archival unit
    * @param msg the LcapMessage to send
@@ -399,41 +465,15 @@ public class PollManager  extends BaseLockssManager {
     theRouter.sendTo(msg, au, id);
   }
 
+
+
   /**
-   * check for conflicts between the poll defined by the Message and any
-   * currently exsiting poll.
-   * @param msg the <code>Message</code> to check
-   * @param cus the <code>CachedUrlSet</code> from the url and reg expression
-   * @return the CachedUrlSet of the conflicting poll.
+   * request a verify poll by creating a new LcapMessage and sending it.
+   * @param pollspec the PollSpec describing the request poll
+   * @param duration the duration of the poll
+   * @param vote to be verifed
+   * @throws IOException if messge creation fails or the message cannot be sent.
    */
-  CachedUrlSet checkForConflicts(LcapMessage msg, CachedUrlSet cus) {
-
-    // eliminate incoming verify polls - never conflicts
-    if(msg.isVerifyPoll()) {
-      return null;
-    }
-
-    Iterator iter = thePolls.values().iterator();
-    while(iter.hasNext()) {
-      PollManagerEntry entry = (PollManagerEntry)iter.next();
-      Poll p = entry.poll;
-
-      // eliminate completed polls or verify polls
-      if(!entry.isPollCompleted() && !p.getMessage().isVerifyPoll()) {
-        CachedUrlSet pcus = p.getPollSpec().getCachedUrlSet();
-	ArchivalUnit au = cus.getArchivalUnit();
-	LockssRepository repo = theDaemon.getLockssRepository(au);
-        int rel_pos = repo.cusCompare(cus, pcus);
-        if(rel_pos != LockssRepository.SAME_LEVEL_NO_OVERLAP &&
-           rel_pos != LockssRepository.NO_RELATION) {
-          return pcus;
-        }
-      }
-    }
-    return null;
-  }
-
-
   void requestVerifyPoll(PollSpec pollspec, long duration, Vote vote)
       throws IOException {
 
@@ -541,32 +581,17 @@ public class PollManager  extends BaseLockssManager {
     return verifier;
   }
 
-  protected Poll createPoll(LcapMessage msg, PollSpec pollspec) throws ProtocolException {
-    Poll ret_poll = null;
-
-    switch(msg.getOpcode()) {
-      case LcapMessage.CONTENT_POLL_REP:
-      case LcapMessage.CONTENT_POLL_REQ:
-        theLog.debug("Making a content poll on "+ pollspec);
-        ret_poll = new ContentPoll(msg, pollspec, this);
-        break;
-      case LcapMessage.NAME_POLL_REP:
-      case LcapMessage.NAME_POLL_REQ:
-        theLog.debug("Making a name poll on "+pollspec);
-        ret_poll = new NamePoll(msg, pollspec, this);
-        break;
-      case LcapMessage.VERIFY_POLL_REP:
-      case LcapMessage.VERIFY_POLL_REQ:
-        theLog.debug("Making a verify poll on "+pollspec);
-        ret_poll = new VerifyPoll(msg, pollspec, this);
-        break;
-      default:
-        throw new ProtocolException("Unknown opcode:" + msg.getOpcode());
-    }
-    addPoll(ret_poll);
-    return ret_poll;
+  IdentityManager getIdentityManager() {
+    return theIDManager;
   }
 
+  HashService getHashService() {
+    return theHashService;
+  }
+
+  int getQuorum() {
+    return m_quorum;
+  }
 
   private void rememberVerifier(byte[] verifier,
                                 byte[] secret) {
@@ -585,17 +610,6 @@ public class PollManager  extends BaseLockssManager {
     }
   }
 
-  IdentityManager getIdentityManager() {
-    return theIDManager;
-  }
-
-  HashService getHashService() {
-    return theHashService;
-  }
-
-  int getQuorum() {
-    return m_quorum;
-  }
 
   protected void setConfig(Configuration newConfig,
                            Configuration oldConfig,
@@ -645,6 +659,22 @@ public class PollManager  extends BaseLockssManager {
     }
 
     return ret;
+  }
+
+//--------------- PollerStatus Accessors -----------------------------
+  Iterator getPolls() {
+    Map polls = Collections.unmodifiableMap(thePolls);
+    return polls.values().iterator();
+  }
+
+  Poll getPoll(String key) {
+    Poll poll = null;
+
+    PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
+    if(pme != null) {
+      poll =  pme.poll;
+    }
+    return poll;
   }
 
 //-------------- TestPollManager Accessors ----------------------------
@@ -803,302 +833,6 @@ public class PollManager  extends BaseLockssManager {
         return this.spec.getCachedUrlSet().equals(spec.getCachedUrlSet());
       }
       return false;
-    }
-  }
-
-  static class ManagerStatus
-      implements StatusAccessor {
-    static final String TABLE_NAME = MANAGER_STATUS_TABLE_NAME;
-    private static String POLLMANAGER_TABLE_TITLE = "Poll Manager Table";
-
-    static final int STRINGTYPE = ColumnDescriptor.TYPE_STRING;
-    static final int DATETYPE = ColumnDescriptor.TYPE_DATE;
-
-    private static final List sortRules =
-        ListUtil.list(new StatusTable.SortRule("PluginID", true),
-                      new StatusTable.SortRule("AuID", true),
-                      new StatusTable.SortRule("URL", true),
-                      new StatusTable.SortRule("Deadline", false)
-                      );
-    private static final List columnDescriptors =
-        ListUtil.list(new ColumnDescriptor("PluginID", "Plugin ID", STRINGTYPE),
-                      new ColumnDescriptor("AuID", "Archive", STRINGTYPE),
-                      new ColumnDescriptor("URL", "URL", STRINGTYPE),
-                      new ColumnDescriptor("Range", "Range", STRINGTYPE),
-                      new ColumnDescriptor("PollType", "Poll Type", STRINGTYPE),
-                      new ColumnDescriptor("Status", "Status", STRINGTYPE),
-                      new ColumnDescriptor("Deadline", "Deadline", DATETYPE),
-                      new ColumnDescriptor("PollID", "Poll ID", STRINGTYPE)
-                      );
-    private static String[] allowedKeys = {
-        "Plugin:", "AU:", "URL:", "PollType:", "Status:"};
-
-    public void populateTable(StatusTable table) throws StatusService.
-        NoSuchTableException {
-      checkKey(table.getKey());
-      table.setTitle(POLLMANAGER_TABLE_TITLE);
-      table.setColumnDescriptors(columnDescriptors);
-      table.setDefaultSortRules(sortRules);
-      table.setRows(getRows(table.getKey()));
-    }
-
-    public boolean requiresKey() {
-      return false;
-    }
-
-    // utility methods for making a Reference
-
-    public StatusTable.Reference makePluginRef(Object value, String key) {
-      return new StatusTable.Reference(value, TABLE_NAME, "Plugin:" + key);
-    }
-
-    public StatusTable.Reference makeAURef(Object value, String key) {
-      return new StatusTable.Reference(value, TABLE_NAME, "AU:" + key);
-    }
-
-    public StatusTable.Reference makeURLRef(Object value, String key) {
-      return new StatusTable.Reference(value, TABLE_NAME, "URL:" + key);
-    }
-
-    public StatusTable.Reference makePollTypeRef(Object value, String key) {
-      return new StatusTable.Reference(value, TABLE_NAME, "PollType:" + key);
-    }
-
-    public StatusTable.Reference makeStatusRef(Object value, String key) {
-      return new StatusTable.Reference(value, TABLE_NAME, "Status:" + key);
-    }
-
-    // routines to make a row
-    private List getRows(String key) throws StatusService.NoSuchTableException {
-      ArrayList rowL = new ArrayList();
-      Iterator it = thePolls.values().iterator();
-      while (it.hasNext()) {
-        PollManagerEntry entry = (PollManagerEntry) it.next();
-
-        if (key == null || matchKey(entry, key)) {
-          rowL.add(makeRow(entry));
-        }
-      }
-      return rowL;
-    }
-
-    private Map makeRow(PollManagerEntry entry) {
-      HashMap rowMap = new HashMap();
-      PollSpec spec = entry.spec;
-      //"PluginID"
-      String shortID = spec.getPluginId();
-      shortID = shortID.substring(shortID.lastIndexOf('|') + 1);
-      rowMap.put("PluginID", shortID);
-      //"AuID"
-      rowMap.put("AuID", spec.getAUId());
-      //"URL"
-      rowMap.put("URL", spec.getUrl());
-      //"Range"
-      rowMap.put("Range", spec.getRangeString());
-      //"PollType"
-      rowMap.put("PollType", entry.getTypeString());
-      //"Status"
-      rowMap.put("Status", entry.getStatusString());
-      //"Deadline"
-      if (entry.pollDeadline != null) {
-        rowMap.put("Deadline", new Long(entry.pollDeadline.getExpirationTime()));
-      }
-      //"PollID"
-      rowMap.put("PollID", PollStatus.makePollRef(entry.getShortKey(),
-                                                  entry.key));
-      return rowMap;
-    }
-
-    // key support routines
-    private void checkKey(String key) throws StatusService.NoSuchTableException {
-      if (key != null && !allowableKey(allowedKeys, key)) {
-        throw new StatusService.NoSuchTableException("unknonwn key: " + key);
-      }
-    }
-
-    private boolean allowableKey(String[] keyArray, String key) {
-      for (int i = 0; i < keyArray.length; i++) {
-        if (key.startsWith(keyArray[i]))
-          return true;
-      }
-      return false;
-    }
-
-    private boolean matchKey(PollManagerEntry entry, String key) {
-      boolean isMatch = false;
-      PollSpec spec = entry.spec;
-      String keyValue = key.substring(key.indexOf(':') + 1);
-      if (key.startsWith("Plugin:")) {
-        if (spec.getPluginId().equals(keyValue)) {
-          isMatch = true;
-        }
-      }
-      else if (key.startsWith("AU:")) {
-        if (spec.getAUId().equals(keyValue)) {
-          isMatch = true;
-        }
-      }
-      else if (key.startsWith("URL:")) {
-        if (spec.getUrl().equals(keyValue)) {
-          isMatch = true;
-        }
-      }
-      else if (key.startsWith("PollType:")) {
-        if (entry.getTypeString().equals(keyValue)) {
-          isMatch = true;
-        }
-      }
-      else if (key.startsWith("Status:")) {
-        if (entry.getStatusString().equals(keyValue)) {
-          isMatch = true;
-        }
-      }
-
-      return isMatch;
-    }
-
-  }
-
-  static class PollStatus implements StatusAccessor {
-    static final String TABLE_NAME = POLL_STATUS_TABLE_NAME;
-
-    static final int IPTYPE = ColumnDescriptor.TYPE_IP_ADDRESS;
-    static final int INTTYPE = ColumnDescriptor.TYPE_INT;
-    static final int STRINGTYPE = ColumnDescriptor.TYPE_STRING;
-
-    private static final List columnDescriptors =
-        ListUtil.list(new ColumnDescriptor("Identity", "Identity", IPTYPE),
-                      new ColumnDescriptor("Reputation", "Reputation", INTTYPE),
-                      new ColumnDescriptor("Challenge", "Challenge", STRINGTYPE),
-                      new ColumnDescriptor("Verifier", "Verifier", STRINGTYPE),
-                      new ColumnDescriptor("Hash", "Hash", STRINGTYPE)
-                      );
-
-    private static final List sortRules =
-        ListUtil.list(new StatusTable.SortRule("Identity", true));
-
-
-
-    public void populateTable(StatusTable table)
-        throws StatusService.NoSuchTableException {
-      String key = table.getKey();
-      Poll poll = getPoll(key);
-      table.setTitle(getTitle(key));
-      table.setColumnDescriptors(columnDescriptors);
-      table.setDefaultSortRules(sortRules);
-      table.setRows(getRows(poll));
-      table.setSummaryInfo(getSummary(poll));
-    }
-
-    public boolean requiresKey() {
-      return true;
-    }
-
-    public String getTitle(String key) {
-      return "Table for poll " + key;
-    }
-
-    // poll summary info
-
-    private List getSummary(Poll poll){
-      PollTally tally = poll.getVoteTally();
-      List summaryList =  ListUtil.list(
-          new StatusTable.SummaryInfo("Target" , STRINGTYPE,
-                                      getPollDescription(poll)),
-          new StatusTable.SummaryInfo("Caller", IPTYPE,
-                                      poll.m_caller.getAddress()),
-          new StatusTable.SummaryInfo("Start Time", ColumnDescriptor.TYPE_DATE,
-                                      new Long(poll.m_createTime)),
-          new StatusTable.SummaryInfo("Duration",
-                                      ColumnDescriptor.TYPE_TIME_INTERVAL,
-                                      new Long(tally.duration)),
-          new StatusTable.SummaryInfo("Quorum", INTTYPE,
-                                      new Integer(tally.quorum)),
-          new StatusTable.SummaryInfo("Agree Votes", INTTYPE,
-                                      new Integer(tally.numAgree)),
-          new StatusTable.SummaryInfo("Disagree Votes", INTTYPE,
-                                      new Integer(tally.numDisagree))
-          );
-      return summaryList;
-    }
-
-    private String getPollDescription(Poll poll) {
-      StringBuffer sb = new StringBuffer();
-      sb.append(Poll.PollName[poll.m_tally.getType()]);
-      sb.append(" poll on ");
-      sb.append(poll.getPollSpec().getUrl());
-      sb.append("[");
-      sb.append(poll.getPollSpec().getRangeString());
-      sb.append("]");
-      return sb.toString();
-    }
-    // row building methods
-    private List getRows(Poll poll) {
-      PollTally tally = poll.getVoteTally();
-
-      ArrayList l = new ArrayList();
-      Iterator it = tally.pollVotes.iterator();
-      while(it.hasNext()) {
-        Vote vote = (Vote)it.next();
-        l.add(makeRow(vote));
-      }
-      return l;
-    }
-
-    private Map makeRow(Vote vote) {
-      HashMap rowMap = new HashMap();
-
-      rowMap.put("Identity", vote.getIDAddress());
-      LcapIdentity id = theIDManager.findIdentity(vote.getIDAddress());
-      rowMap.put("Reputation", String.valueOf(id.getReputation()));
-      rowMap.put("Agree", String.valueOf(vote.agree));
-      rowMap.put("Challenge", vote.getChallengeString());
-      rowMap.put("Verifier",vote.getVerifierString());
-      rowMap.put("Hash",vote.getHashString());
-
-      return rowMap;
-    }
-
-
-    // utility methods for making a Reference
-
-    public static StatusTable.Reference makePollRef(Object value, String key) {
-      return new StatusTable.Reference(value, TABLE_NAME, key);
-    }
-
-
-    // key support routines
-    private Poll getPoll(String key) throws StatusService.NoSuchTableException {
-      Poll poll = null;
-
-      PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
-      if(pme != null) {
-        poll =  pme.poll;
-      }
-      if(poll == null) {
-        throw new StatusService.NoSuchTableException("unknown poll key: " + key);
-      }
-      return poll;
-    }
-
-  }
-
-  private static class ManagerStatusAURef implements ObjectReferenceAccessor {
-
-    int howManyPollsRunning(ArchivalUnit au) {
-      ManagerStatus ms = new ManagerStatus();
-      try {
-	return ms.getRows("AU:" + au.getAUId()).size();
-      } catch (StatusService.NoSuchTableException e) {
-	theLog.debug("no table", e);
-	return 0;
-      }
-    }
-
-    public StatusTable.Reference getReference(Object obj, String tableName) {
-      ArchivalUnit au = (ArchivalUnit)obj;
-      return new StatusTable.Reference(howManyPollsRunning(au) + " polls",
-				       tableName, "AU:" + au.getAUId());
     }
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.30 2003-04-10 21:48:20 tal Exp $
+ * $Id: PluginManager.java,v 1.31 2003-04-11 05:37:51 claire Exp $
  */
 
 /*
@@ -285,7 +285,7 @@ public class PluginManager extends BaseLockssManager {
    */
   public CachedUrlSet findCachedUrlSet(PollSpec spec) {
     return findCachedUrlSet2(spec);
-  }    
+  }
 
   /**
    * Find the CachedUrlSet from a PollSpec.
@@ -355,7 +355,7 @@ public class PluginManager extends BaseLockssManager {
 		    new ColumnDescriptor("crawl", "Crawl Status",
 					 ColumnDescriptor.TYPE_STRING)
 		    );
-		    
+
     // need this because the statics above require this to be a nested,
     // not inner class.
     PluginManager mgr;
@@ -377,7 +377,7 @@ public class PluginManager extends BaseLockssManager {
 	row.put("pluginid", au.getPluginId());
 	row.put("auid", au.getAUId());
 	row.put("poll",
-		statusSvc.getReference(PollManager.MANAGER_STATUS_TABLE_NAME,
+		statusSvc.getReference(PollerStatus.MANAGER_STATUS_TABLE_NAME,
 				       au));
 	table.add(row);
       }
