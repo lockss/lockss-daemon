@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePlugin.java,v 1.21 2003-06-20 22:34:51 claire Exp $
+ * $Id: HighWirePlugin.java,v 1.22 2003-07-21 08:35:09 tlipkis Exp $
  */
 
 /*
@@ -50,7 +50,6 @@ import org.lockss.plugin.base.*;
 
 public class HighWirePlugin extends BasePlugin {
   public static final String LOG_NAME = "HighWirePlugin";
-  public Map archivalUnits = null;
 
   // public only so test methods can use them
   public static final String AUPARAM_BASE_URL = "base_url";
@@ -58,7 +57,6 @@ public class HighWirePlugin extends BasePlugin {
 
   public void initPlugin(LockssDaemon daemon) {
     super.initPlugin(daemon);
-    archivalUnits = new HashMap();
   }
 
   public void stopPlugin() {
