@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManager.java,v 1.8 2003-01-14 02:47:42 claire Exp $
+ * $Id: IdentityManager.java,v 1.9 2003-01-22 06:12:54 claire Exp $
  */
 
 /*
@@ -218,15 +218,21 @@ public class IdentityManager {
       String fn = Configuration.getParam(PARAM_IDDB_DIR, "/tmp/iddb")
                 + File.separator + IDDB_FILENAME;
       File iddbFile = new File(fn);
+      if((iddbFile != null) && iddbFile.canRead()) {
+        Unmarshaller unmarshaller = new Unmarshaller(IdentityListBean.class);
+        unmarshaller.setMapping(getMapping());
+        IdentityListBean idlb = (IdentityListBean)unmarshaller.unmarshal(
+            new FileReader(iddbFile));
+        setIdentities(idlb.getIdBeans());
+      }
+      else {
+        theLog.warning("Unable to read Identity file:" + fn);
 
-      Unmarshaller unmarshaller = new Unmarshaller(IdentityListBean.class);
-      unmarshaller.setMapping(getMapping());
-      IdentityListBean idlb = (IdentityListBean)unmarshaller.unmarshal(
-          new FileReader(iddbFile));
-      setIdentities(idlb.getIdBeans());
-
+      }
     } catch (Exception e) {
       theLog.warning("Couldn't load identity database: " + e.getMessage());
+    }
+    if(theIdentities == null) {
       theIdentities =  new HashMap();
     }
   }
@@ -240,11 +246,15 @@ public class IdentityManager {
         iddbDir.mkdirs();
       }
       File iddbFile = new File(iddbDir, IDDB_FILENAME);
-
-      IdentityListBean idlb = getIdentityListBean();
-      Marshaller marshaller = new Marshaller(new FileWriter(iddbFile));
-      marshaller.setMapping(getMapping());
-      marshaller.marshal(idlb);
+      if((iddbFile != null) && iddbFile.canWrite()) {
+        IdentityListBean idlb = getIdentityListBean();
+        Marshaller marshaller = new Marshaller(new FileWriter(iddbFile));
+        marshaller.setMapping(getMapping());
+        marshaller.marshal(idlb);
+      }
+      else {
+        throw new ProtocolException("Unable to store identity database.");
+      }
 
     } catch (Exception e) {
       theLog.error("Couldn't store identity database: ", e);

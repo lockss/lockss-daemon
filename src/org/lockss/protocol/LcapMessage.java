@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessage.java,v 1.16 2003-01-18 01:01:26 claire Exp $
+* $Id: LcapMessage.java,v 1.17 2003-01-22 06:12:54 claire Exp $
  */
 
 /*
@@ -67,8 +67,8 @@ public class LcapMessage implements Serializable {
 
   public static final String[] POLL_OPCODES =
   {"NameReq", "NameRep",
-   "ContentReq", "ContentRep",
-   "VerifyReq", "VerifyRep"};
+    "ContentReq", "ContentRep",
+    "VerifyReq", "VerifyRep"};
 
   public static final int MAX_HOP_COUNT = 16;
   public static final int SHA_LENGTH = 20;
@@ -130,13 +130,13 @@ public class LcapMessage implements Serializable {
   }
 
   protected LcapMessage(String targetUrl,
-			String regExp,
-			String[] entries,
-			byte ttl,
-			byte[] challenge,
-			byte[] verifier,
-			byte[] hashedData,
-			int opcode) throws IOException {
+                        String regExp,
+                        String[] entries,
+                        byte ttl,
+                        byte[] challenge,
+                        byte[] verifier,
+                        byte[] hashedData,
+                        int opcode) throws IOException {
     this();
     // assign the data
     m_targetUrl = targetUrl;
@@ -157,10 +157,11 @@ public class LcapMessage implements Serializable {
   }
 
   protected LcapMessage(LcapMessage trigger,
-			LcapIdentity localID,
-			byte[] verifier,
-			byte[] hashedContent,
-			int opcode) throws IOException {
+                        LcapIdentity localID,
+                        byte[] verifier,
+                        byte[] hashedContent,
+                        String[] entries,
+                        int opcode) throws IOException {
 
     this();
     // copy the essential information from the trigger packet
@@ -169,7 +170,7 @@ public class LcapMessage implements Serializable {
     m_challenge = trigger.getChallenge();
     m_targetUrl = trigger.getTargetUrl();
     m_regExp = trigger.getRegExp();
-    m_entries = trigger.getEntries();
+    m_entries = entries;
     m_hashAlgorithm = trigger.getHashAlgorithm();
     m_originID = localID;
     m_verifier = verifier;
@@ -219,17 +220,17 @@ public class LcapMessage implements Serializable {
    * @throws IOException if unable to creae message
    */
   static public LcapMessage makeRequestMsg(String targetUrl,
-					   String regExp,
-					   String[] entries,
-					   byte[] challenge,
-					   byte[] verifier,
-					   int opcode,
-					   long timeRemaining,
-					   LcapIdentity localID)
+      String regExp,
+      String[] entries,
+      byte[] challenge,
+      byte[] verifier,
+      int opcode,
+      long timeRemaining,
+      LcapIdentity localID)
       throws IOException {
 
     LcapMessage msg = new LcapMessage(targetUrl,regExp,entries,(byte)0,
-				      challenge,verifier,new byte[0],opcode);
+                                      challenge,verifier,new byte[0],opcode);
     if (msg != null) {
       msg.m_startTime = TimeBase.nowMs();
       msg.m_stopTime = msg.m_startTime + timeRemaining;
@@ -245,6 +246,7 @@ public class LcapMessage implements Serializable {
    * @param trigger the message which trggered the reply
    * @param hashedContent the hashed content bytes
    * @param verifier the veerifier bytes
+   * @param entries the entries which were used to calculate the hash
    * @param opcode an opcode for this message
    * @param timeRemaining the time remaining on the poll
    * @param localID the identity of the requestor
@@ -252,17 +254,18 @@ public class LcapMessage implements Serializable {
    * @throws IOException if message construction failed
    */
   static public LcapMessage makeReplyMsg(LcapMessage trigger,
-					 byte[] hashedContent,
-					 byte[] verifier,
-					 int opcode,
-					 long timeRemaining,
-					 LcapIdentity localID)
+      byte[] hashedContent,
+      byte[] verifier,
+      String[] entries,
+      int opcode,
+      long timeRemaining,
+      LcapIdentity localID)
       throws IOException {
     if (hashedContent == null) {
       log.error("Making a reply message with null hashed content");
     }
     LcapMessage msg = new LcapMessage(trigger, localID, verifier,
-				      hashedContent, opcode);
+                                      hashedContent, entries, opcode);
     if (msg != null) {
       msg.m_startTime = TimeBase.nowMs();
       msg.m_stopTime = msg.m_startTime + timeRemaining;
@@ -278,7 +281,7 @@ public class LcapMessage implements Serializable {
    * @throws IOException
    */
   static public LcapMessage decodeToMsg(byte[] data,
-				 boolean mcast) throws IOException {
+                                        boolean mcast) throws IOException {
     LcapMessage msg = new LcapMessage(data);
     if(msg != null) {
       msg.m_multicast = mcast;
@@ -301,7 +304,7 @@ public class LcapMessage implements Serializable {
 
     // the mutable stuff
     DataInputStream dis =
-      new DataInputStream(new ByteArrayInputStream(encodedBytes));
+        new DataInputStream(new ByteArrayInputStream(encodedBytes));
 
     // read in the header
     for(int i=0; i< signature.length; i++) {
