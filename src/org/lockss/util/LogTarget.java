@@ -1,4 +1,6 @@
-package org.lockss.util;
+/*
+ * $Id: LogTarget.java,v 1.4 2003-06-09 01:22:45 tal Exp $
+ */
 
 /*
 
@@ -27,6 +29,8 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
 */
+
+package org.lockss.util;
 
 /** 
  * Interface to represent any thing that can take a log message and output it 
