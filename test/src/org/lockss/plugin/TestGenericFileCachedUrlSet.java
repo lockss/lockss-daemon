@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericFileCachedUrlSet.java,v 1.17 2003-02-21 21:53:28 aalto Exp $
+ * $Id: TestGenericFileCachedUrlSet.java,v 1.18 2003-02-21 22:51:02 aalto Exp $
  */
 
 /*
@@ -66,12 +66,9 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
 
   public void testFlatSetIterator() throws Exception {
     createLeaf("http://www.example.com/testDir/leaf4", null, null);
-    createLeaf("http://www.example.com/testDir/branch1/leaf1",
-               null, null);
-    createLeaf("http://www.example.com/testDir/branch2/leaf3",
-               null, null);
-    createLeaf("http://www.example.com/testDir/branch1/leaf2",
-               null, null);
+    createLeaf("http://www.example.com/testDir/branch1/leaf1", null, null);
+    createLeaf("http://www.example.com/testDir/branch2/leaf3", null, null);
+    createLeaf("http://www.example.com/testDir/branch1/leaf2", null, null);
 
     CachedUrlSetSpec rSpec =
         new RangeCachedUrlSetSpec("http://www.example.com/testDir");
@@ -92,8 +89,7 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
 
   public void testFlatSetIteratorClassCreation() throws Exception {
     createLeaf("http://www.example.com/testDir/leaf1", "test stream", null);
-    createLeaf("http://www.example.com/testDir/branch1/leaf2",
-               null, null);
+    createLeaf("http://www.example.com/testDir/branch1/leaf2", null, null);
     createLeaf("http://www.example.com/testDir/branch2/leaf3",
                "test stream", null);
 
@@ -101,18 +97,12 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
         new RangeCachedUrlSetSpec("http://www.example.com/testDir");
     CachedUrlSet fileSet = mau.makeCachedUrlSet(rSpec);
     Iterator setIt = fileSet.flatSetIterator();
-    CachedUrlSetNode element = (CachedUrlSetNode)setIt.next();
-    assertEquals("http://www.example.com/testDir/branch1", element.getUrl());
-    assertEquals(CachedUrlSetNode.TYPE_CACHED_URL_SET, element.getType());
-    assertTrue(element instanceof CachedUrlSet);
-    element = (CachedUrlSetNode)setIt.next();
-    assertEquals("http://www.example.com/testDir/branch2", element.getUrl());
-    assertEquals(CachedUrlSetNode.TYPE_CACHED_URL_SET, element.getType());
-    assertTrue(element instanceof CachedUrlSet);
-    element = (CachedUrlSetNode)setIt.next();
-    assertEquals("http://www.example.com/testDir/leaf1", element.getUrl());
-    assertEquals(CachedUrlSetNode.TYPE_CACHED_URL, element.getType());
-    assertTrue(element instanceof CachedUrl);
+    testRightClass((CachedUrlSetNode)setIt.next(),
+                   "http://www.example.com/testDir/branch1", true);
+    testRightClass((CachedUrlSetNode)setIt.next(),
+                   "http://www.example.com/testDir/branch2", true);
+    testRightClass((CachedUrlSetNode)setIt.next(),
+                   "http://www.example.com/testDir/leaf1", false);
   }
 
   public void testTreeIterator() throws Exception {
@@ -145,8 +135,7 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
   }
 
   public void testTreeIteratorClassCreation() throws Exception {
-    createLeaf("http://www.example.com/testDir/branch1",
-               "test stream", null);
+    createLeaf("http://www.example.com/testDir/branch1", "test stream", null);
     createLeaf("http://www.example.com/testDir/leaf3", "test stream", null);
     createLeaf("http://www.example.com/testDir/branch2/branch3",
                "test stream", null);
@@ -159,30 +148,31 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
         new RangeCachedUrlSetSpec("http://www.example.com/testDir");
     CachedUrlSet fileSet = mau.makeCachedUrlSet(rSpec);
     Iterator setIt = fileSet.treeIterator();
-    CachedUrlSetNode element = (CachedUrlSetNode)setIt.next();
-    assertEquals("http://www.example.com/testDir/branch1", element.getUrl());
-    assertEquals(CachedUrlSetNode.TYPE_CACHED_URL_SET, element.getType());
-    assertTrue(element instanceof CachedUrlSet);
-    element = (CachedUrlSetNode)setIt.next();
-    assertEquals("http://www.example.com/testDir/branch1/leaf1", element.getUrl());
-    assertEquals(CachedUrlSetNode.TYPE_CACHED_URL, element.getType());
-    assertTrue(element instanceof CachedUrl);
-    element = (CachedUrlSetNode)setIt.next();
-    assertEquals("http://www.example.com/testDir/branch2", element.getUrl());
-    assertEquals(CachedUrlSetNode.TYPE_CACHED_URL_SET, element.getType());
-    assertTrue(element instanceof CachedUrlSet);
-    element = (CachedUrlSetNode)setIt.next();
-    assertEquals("http://www.example.com/testDir/branch2/branch3", element.getUrl());
-    assertEquals(CachedUrlSetNode.TYPE_CACHED_URL_SET, element.getType());
-    assertTrue(element instanceof CachedUrlSet);
-    element = (CachedUrlSetNode)setIt.next();
-    assertEquals("http://www.example.com/testDir/branch2/branch3/leaf2", element.getUrl());
-    assertEquals(CachedUrlSetNode.TYPE_CACHED_URL, element.getType());
-    assertTrue(element instanceof CachedUrl);
-    element = (CachedUrlSetNode)setIt.next();
-    assertEquals("http://www.example.com/testDir/leaf3", element.getUrl());
-    assertEquals(CachedUrlSetNode.TYPE_CACHED_URL, element.getType());
-    assertTrue(element instanceof CachedUrl);
+    testRightClass((CachedUrlSetNode)setIt.next(),
+                   "http://www.example.com/testDir/branch1", true);
+    testRightClass((CachedUrlSetNode)setIt.next(),
+                   "http://www.example.com/testDir/branch1/leaf1", false);
+    testRightClass((CachedUrlSetNode)setIt.next(),
+                   "http://www.example.com/testDir/branch2", true);
+    testRightClass((CachedUrlSetNode)setIt.next(),
+                   "http://www.example.com/testDir/branch2/branch3", true);
+    testRightClass((CachedUrlSetNode)setIt.next(),
+                   "http://www.example.com/testDir/branch2/branch3/leaf2", false);
+    testRightClass((CachedUrlSetNode)setIt.next(),
+                   "http://www.example.com/testDir/leaf3", false);
+  }
+
+  private void testRightClass(CachedUrlSetNode element, String url, boolean isCus) {
+    assertEquals(url, element.getUrl());
+    if (isCus) {
+      assertEquals(CachedUrlSetNode.TYPE_CACHED_URL_SET, element.getType());
+      assertTrue(element instanceof CachedUrlSet);
+      assertTrue(!element.isLeaf());
+    } else {
+      assertEquals(CachedUrlSetNode.TYPE_CACHED_URL, element.getType());
+      assertTrue(element instanceof CachedUrl);
+      assertTrue(element.isLeaf());
+    }
   }
 
   public void testNodeCounting() throws Exception {

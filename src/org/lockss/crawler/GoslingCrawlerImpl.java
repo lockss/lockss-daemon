@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingCrawlerImpl.java,v 1.11 2003-02-21 21:53:29 aalto Exp $
+ * $Id: GoslingCrawlerImpl.java,v 1.12 2003-02-21 22:51:02 aalto Exp $
  */
 
 /*
@@ -169,7 +169,8 @@ public class GoslingCrawlerImpl implements Crawler {
     logger.debug("Dequeued url from list: "+url);
     UrlCacher uc = cus.makeUrlCacher(url);
     if (uc.shouldBeCached()) {
-      if (overWrite || !cus.isCached(url)) {
+      // don't cache if already cached, unless overwriting
+      if (overWrite || !uc.getCachedUrl().hasContent()) {
 	try {
 	  logger.debug("caching "+uc);
 	  uc.cache(); //IOException if there is a caching problem

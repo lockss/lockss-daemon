@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.12 2003-02-11 00:58:16 aalto Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.13 2003-02-21 22:51:02 aalto Exp $
  */
 
 /*
@@ -407,6 +407,8 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     createLeaf("http://www.example.com/testDir/test1", "test stream", null);
     createLeaf("http://www.example.com/testDir/test2", "test stream", null);
     createLeaf("http://www.example.com/testDir/test3", "test stream", null);
+    createLeaf("http://www.example.com/testDir/branch1", "test stream", null);
+    createLeaf("http://www.example.com/testDir/branch1/test4", "test stream", null);
 
     RepositoryNode dirEntry = repo.getNode("http://www.example.com/testDir");
     Iterator childIt = dirEntry.listNodes(null, false);
@@ -416,6 +418,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
       childL.add(node.getNodeUrl());
     }
     String[] expectedA = new String[] {
+      "http://www.example.com/testDir/branch1",
       "http://www.example.com/testDir/test1",
       "http://www.example.com/testDir/test2",
       "http://www.example.com/testDir/test3"
@@ -424,6 +427,9 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
 
     RepositoryNode leaf = repo.getNode("http://www.example.com/testDir/test2");
     leaf.deactivate();
+    // this next shouldn't be excluded since it isn't a leaf node
+    leaf = repo.getNode("http://www.example.com/testDir/branch1");
+    leaf.deactivate();
     childIt = dirEntry.listNodes(null, false);
     childL = new ArrayList(2);
     while (childIt.hasNext()) {
@@ -431,6 +437,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
       childL.add(node.getNodeUrl());
     }
     expectedA = new String[] {
+      "http://www.example.com/testDir/branch1",
       "http://www.example.com/testDir/test1",
       "http://www.example.com/testDir/test3"
       };
@@ -443,6 +450,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
       childL.add(node.getNodeUrl());
     }
     expectedA = new String[] {
+      "http://www.example.com/testDir/branch1",
       "http://www.example.com/testDir/test1",
       "http://www.example.com/testDir/test2",
       "http://www.example.com/testDir/test3"

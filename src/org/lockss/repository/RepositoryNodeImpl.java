@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.13 2003-02-21 21:53:28 aalto Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.14 2003-02-21 22:51:02 aalto Exp $
  */
 
 /*
@@ -121,12 +121,11 @@ public class RepositoryNodeImpl implements RepositoryNode {
   }
 
   public boolean isLeaf() {
-    if (nodeRootFile==null) loadNodeRoot();
+    ensureCurrentInfoLoaded();
     if (!nodeRootFile.exists()) {
       logger.error("No cache directory located for: "+url);
       throw new LockssRepository.RepositoryStateException("No cache directory located.");
     }
-    if (cacheLocationFile==null) loadCacheLocation();
     File[] children = nodeRootFile.listFiles();
     for (int ii=0; ii<children.length; ii++) {
       File child = children[ii];
@@ -164,7 +163,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
       if ((filter==null) || (filter.matches(childUrl))) {
         try {
           RepositoryNode node = repository.getNode(childUrl);
-          if ((!node.isInactive()) || includeInactive) {
+          // add all nodes which are internal or active leaves
+          if (!node.isLeaf() || (!node.isInactive()) || includeInactive) {
             childL.add(repository.getNode(childUrl));
           }
         } catch (MalformedURLException mue) {

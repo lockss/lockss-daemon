@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.18 2003-02-21 21:53:28 aalto Exp $
+ * $Id: NullPlugin.java,v 1.19 2003-02-21 22:51:02 aalto Exp $
  */
 
 /*
@@ -187,11 +187,6 @@ public class NullPlugin {
 
     public long estimatedHashDuration() {
       return 1000;
-    }
-
-    public boolean isCached(String url) {
-      org.lockss.daemon.CachedUrl cu = makeCachedUrl(url);
-      return cu == null ? false : cu.hasContent();
     }
 
     public boolean hasContent() {
