@@ -1,5 +1,5 @@
 /*
- * $Id: TimerQueue.java,v 1.22 2004-09-28 08:53:14 tlipkis Exp $
+ * $Id: TimerQueue.java,v 1.23 2005-01-19 04:18:58 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -297,7 +297,7 @@ public class TimerQueue {
       if (!table.getOptions().get(StatusTable.OPTION_NO_ROWS)) {
 	table.setColumnDescriptors(statusColDescs);
 	table.setDefaultSortRules(statusSortRules);
-	table.setRows(getRows());
+	table.setRows(getRows(table));
       }
       table.setSummaryInfo(getSummaryInfo());
     }
@@ -306,20 +306,26 @@ public class TimerQueue {
       return false;
     }
 
-    private List getRows() {
+    private List getRows(StatusTable table) {
       List q = timerQ.queue.copyAsList();
-      List table = new ArrayList(q.size());
+      List rows = new ArrayList(q.size());
       int ix = 0;
       for (Iterator iter = q.iterator(); iter.hasNext();) {
-	table.add(makeRow((Request)iter.next()));
+	Request req = (Request)iter.next();
+	if (!req.cancelled ||
+	    table.getOptions().get(StatusTable.OPTION_INCLUDE_INTERNAL_AUS)) {
+	  rows.add(makeRow(req));
+	}
       }
-      return table;
+      return rows;
     }
 
     private Map makeRow(Request req) {
       Map row = new HashMap();
       row.put("Time", req.deadline);
-      row.put("In", StringUtil.timeIntervalToString(TimeBase.msUntil(req.deadline.getExpirationTime())));
+      if (!req.deadline.equals(Deadline.MAX)) {
+	row.put("In", StringUtil.timeIntervalToString(TimeBase.msUntil(req.deadline.getExpirationTime())));
+      }
       if (req.callback != null) {
 	row.put("Callback", req.callback.toString());
       }
