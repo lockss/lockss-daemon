@@ -1,5 +1,5 @@
 /*
- * $Id: TestPropUtil.java,v 1.9 2004-08-18 07:11:14 tlipkis Exp $
+ * $Id: TestPropUtil.java,v 1.10 2004-08-18 20:01:23 tlipkis Exp $
  */
 
 /*
@@ -164,10 +164,17 @@ public class TestPropUtil extends TestCase {
   public void testDifferentKeysAndPrefixes() {
     PropertyTree pt1 = new PropertyTree();
     PropertyTree pt2 = new PropertyTree();
-    // same value
     pt1.put("one.two.three", "123");
     assertEquals(SetUtil.set("one.two.three", "one.two.", "one.two",
 			     "one.", "one"),
+		 PropUtil.differentKeysAndPrefixes(pt1, pt2));
+  }
+
+  public void testDifferentKeysAndPrefixes2() {
+    PropertyTree pt1 = new PropertyTree();
+    PropertyTree pt2 = new PropertyTree();
+    pt1.put("x.y.", "123");
+    assertEquals(SetUtil.set("x.y.", "x.y", "x.", "x"),
 		 PropUtil.differentKeysAndPrefixes(pt1, pt2));
   }
 

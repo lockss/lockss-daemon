@@ -1,5 +1,5 @@
 /*
- * $Id: PropUtil.java,v 1.9 2004-08-18 07:11:14 tlipkis Exp $
+ * $Id: PropUtil.java,v 1.10 2004-08-18 20:01:24 tlipkis Exp $
  */
 /*
 
@@ -137,9 +137,10 @@ public class PropUtil {
    * <i>E.g.</i>, if the key <code>foo.bar.frob</code> is in the difference
    * set, the result will contain <code>foo.bar.frob</code>,
    * <code>foo.bar.</code>, <code>foo.bar</code> <code>foo.</code> and
-   * <code>foo</code>.  This somewhat odd behavior is for the convenience
-   * of code that wishes to quickly determine whether any part of a given
-   * subtree has changed.
+   * <code>foo</code>.  This is meant to be used to quickly determine
+   * whether any part of a given subtree has changed, by checking for the
+   * common prefix.  The somewhat odd behavior w.r.t. dots is for the
+   * convenience of code that defines its prefix string with a final dot.
    * @param p1 first PropertyTree
    * @param p2 second PropertyTree
    * @return Set of keys and prefixes whose values differ.  Returns empty
@@ -168,12 +169,19 @@ public class PropUtil {
     return res;
   }
 
+  /** Add the key and all its prefixes to the set.  Proceeds from longest
+   * to shortest, stopping if it generates a prefix already in the set
+   * (because all shorter prefixes must already be in the set */
   private static void addKeyAndPrefixes(Set set, String key) {
-    set.add(key);
-    int pos = 0;
-    while ((pos = key.indexOf(".", pos + 1)) > 0) {
-      set.add(key.substring(0, pos));
-      set.add(key.substring(0, pos + 1));
+    if (set.add(key)) {
+      int len = key.length();
+      int pos = len;
+      while ((pos = key.lastIndexOf(".", pos - 1)) > 0) {
+	if (!(((pos+1 == len) || set.add(key.substring(0, pos + 1))) &&
+	      set.add(key.substring(0, pos)))) {
+	  break;
+	}
+      }
     }
   }
 
