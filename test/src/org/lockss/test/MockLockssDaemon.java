@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssDaemon.java,v 1.28 2003-06-26 01:05:24 eaalto Exp $
+ * $Id: MockLockssDaemon.java,v 1.29 2003-09-23 07:44:47 eaalto Exp $
  */
 
 /*
@@ -440,6 +440,15 @@ public class MockLockssDaemon extends LockssDaemon {
   public void setProxyManager(ProxyManager proxyMgr) {
     proxyManager = proxyMgr;
     theManagers.put(LockssDaemon.PROXY_MANAGER, proxyManager);
+  }
+
+  /**
+   * Set the SystemMetrics
+   * @param sysMetrics the new metrics
+   */
+  public void setSystemMetrics(SystemMetrics sysMetrics) {
+    systemMetrics = sysMetrics;
+    theManagers.put(LockssDaemon.SYSTEM_METRICS, sysMetrics);
   }
 
   private boolean daemonInited = false;
