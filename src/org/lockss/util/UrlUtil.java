@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.3 2002-10-23 17:40:47 troberts Exp $
+ * $Id: UrlUtil.java,v 1.4 2003-01-28 00:08:52 tal Exp $
  *
 
 Copyright (c) 2000-2002 Board of Trustees of Leland Stanford Jr. University,
@@ -33,6 +33,7 @@ package org.lockss.util;
 import java.util.*;
 import java.io.*;
 import java.net.*;
+import javax.servlet.http.HttpServletRequest;
 
 /** Utilities for URLs
  */
@@ -73,6 +74,42 @@ public class UrlUtil {
     return url2.toString();
   }
 
+  /** Reconstructs the URL the client used to make the request, using
+   * information in the HttpServletRequest object. The returned URL
+   * contains a protocol, server name, port number, and server path, but it
+   * does not include query string parameters.  This method duplicates the
+   * deprecated method from javax.servlet.http.HttpUtils
+   * @param req - a HttpServletRequest object containing the client's request
+   * @return string containing the reconstructed URL
+   */
+  // http://hostname.com:80/mywebapp/servlet/MyServlet/a/b;c=123?d=789
+  public static String getRequestURL(HttpServletRequest req) {
+    String scheme = req.getScheme();             // http
+    String serverName = req.getServerName();     // hostname.com
+    int serverPort = req.getServerPort();        // 80
+    String contextPath = req.getContextPath();   // /mywebapp
+    String servletPath = req.getServletPath();   // /servlet/MyServlet
+    String pathInfo = req.getPathInfo();         // /a/b;c=123
+//     String queryString = req.getQueryString();          // d=789
+    
+    // Reconstruct original requesting URL
+    StringBuffer sb = new StringBuffer(40);
+    sb.append(scheme);
+    sb.append("://");
+    sb.append(serverName);
+    sb.append(":");
+    sb.append(serverPort);
+    sb.append(contextPath);
+    sb.append(servletPath);
+    if (pathInfo != null) {
+      sb.append(pathInfo);
+    }
+//     if (queryString != null) {
+//       sb.append("?");
+//       sb.append(queryString);
+//     }
+    return sb.toString();
+  }
 
 
 }
