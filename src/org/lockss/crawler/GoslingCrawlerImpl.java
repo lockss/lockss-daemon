@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingCrawlerImpl.java,v 1.22 2003-05-07 20:33:49 tal Exp $
+ * $Id: GoslingCrawlerImpl.java,v 1.23 2003-05-30 01:49:02 aalto Exp $
  */
 
 /*
@@ -124,10 +124,10 @@ public class GoslingCrawlerImpl implements Crawler {
   /**
    * Construct a crawl object; does NOT start the crawl
    * @param au {@link ArchivalUnit} that this crawl will happen on
-   * @param urls List of Strings representing the starting urls for this crawl
+   * @param startUrls List of Strings representing the starting urls for crawl
    * @param followLinks whether or not to extract and follow links
-   */  
-  public GoslingCrawlerImpl(ArchivalUnit au, List startUrls, 
+   */
+  public GoslingCrawlerImpl(ArchivalUnit au, List startUrls,
 			    boolean followLinks) {
     if (au == null) {
       throw new IllegalArgumentException("Called with a null ArchivalUnit");
@@ -154,7 +154,7 @@ public class GoslingCrawlerImpl implements Crawler {
   public long getEndTime() {
     return endTime;
   }
-  
+
   public ArchivalUnit getAU() {
     return au;
   }
@@ -164,6 +164,7 @@ public class GoslingCrawlerImpl implements Crawler {
    * urls.
    *
    * @param deadline when to terminate by
+   * @return true if no errors
    */
   public boolean doCrawl(Deadline deadline) {
     if (deadline == null) {
@@ -180,9 +181,9 @@ public class GoslingCrawlerImpl implements Crawler {
     Iterator it = startUrls.iterator();
     while (it.hasNext() && !deadline.expired()) {
       String url = (String)it.next();
-      //catch and warn if there's a url in the start urls 
+      //catch and warn if there's a url in the start urls
       //that we shouldn't cache
-      if (au.shouldBeCached(url)) { 
+      if (au.shouldBeCached(url)) {
 	if (!doCrawlLoop(url, extractedUrls, parsedPages, cus, true)) {
 	  wasError = true;
 	}
@@ -213,9 +214,10 @@ public class GoslingCrawlerImpl implements Crawler {
    * @param parsedPages set containing all the pages that have already
    * been parsed (to make sure we don't loop)
    * @param cus cached url set that the url belongs to
+   * @param overWrite true if overwriting is desired
    * @return true if there were no errors
    */
-  protected boolean doCrawlLoop(String url, Set extractedUrls, 
+  protected boolean doCrawlLoop(String url, Set extractedUrls,
 			     Set parsedPages, CachedUrlSet cus,
 			     boolean overWrite) {
     boolean wasError = false;
