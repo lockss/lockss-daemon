@@ -1,5 +1,5 @@
 /*
- * $Id: MockHistoryRepository.java,v 1.8 2004-02-07 02:00:38 troberts Exp $
+ * $Id: MockHistoryRepository.java,v 1.9 2004-02-07 06:52:47 eaalto Exp $
  */
 
 /*
@@ -101,11 +101,11 @@ public class MockHistoryRepository implements HistoryRepository {
     return (NodeState)storedNodes.get(cus);
   }
 
-  public void storeIdentityAgreement(List list) {
+  public void storeIdentityAgreements(List list) {
     this.storedIdentityAgreement = list;
   }
 
-  public List loadIdentityAgreement() {
+  public List loadIdentityAgreements() {
     return loadedIdentityAgreement;
   }
 

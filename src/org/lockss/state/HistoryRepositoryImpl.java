@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.44 2004-02-07 00:13:26 troberts Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.45 2004-02-07 06:52:48 eaalto Exp $
  */
 
 /*
@@ -37,15 +37,12 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 
-import org.exolab.castor.xml.Marshaller;
-import org.exolab.castor.xml.Unmarshaller;
-import org.exolab.castor.mapping.Mapping;
-
 import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
 import org.lockss.repository.*;
 import org.lockss.daemon.Configuration;
+import org.lockss.protocol.*;
 
 /**
  * HistoryRepository is an inner layer of the NodeManager which handles the actual
@@ -65,21 +62,29 @@ public class HistoryRepositoryImpl
    */
   public static final String HISTORY_ROOT_NAME = "cache";
 
-  // resource file
-  static final String MAPPING_FILE_NAME = "pollmapping.xml";
+  // resource file.  Fully qualify for XmlMarshaller
+  static final String MAPPING_FILE_NAME =
+      "/org/lockss/state/pollmapping.xml";
   // these share space with content, so must be prefaced by '#'
   static final String HISTORY_FILE_NAME = "#history.xml";
   static final String NODE_FILE_NAME = "#nodestate.xml";
   static final String AU_FILE_NAME = "#au_state.xml";
   static final String DAMAGED_NODES_FILE_NAME = "#damaged_nodes.xml";
+  static final String IDENTITY_AGREEMENT_FILE_NAME = "#id_agreement.xml";
   // this contains a '#' so that it's not defeatable by strings which
   // match the prefix in a url (like '../tmp/')
   private static final String TEST_PREFIX = "/#tmp";
 
+  // The map files being used
+  static final String[] MAPPING_FILES = {
+      MAPPING_FILE_NAME,
+      ExternalizableMap.MAPPING_FILE_NAME,
+      IdentityManager.MAPPING_FILE_NAME
+  };
+
   private ArchivalUnit storedAu;
 
   private String rootLocation;
-  Mapping mapping = null;
   private static Logger logger = Logger.getLogger("HistoryRepository");
 
   HistoryRepositoryImpl(ArchivalUnit au, String rootPath) {
@@ -98,13 +103,11 @@ public class HistoryRepositoryImpl
       logger.error(msg);
       throw new LockssDaemonException(msg);
     }
-    loadMapping();
     checkFileChange();
   }
 
   public void stopService() {
     // we want to checkpoint here
-    mapping = null;
     super.stopService();
   }
 
@@ -116,19 +119,10 @@ public class HistoryRepositoryImpl
   }
 
   public void storeNodeState(NodeState nodeState) {
+    CachedUrlSet cus = nodeState.getCachedUrlSet();
     try {
-      File nodeDir = new File(getNodeLocation(nodeState.getCachedUrlSet()));
-      if (!nodeDir.exists()) {
-        nodeDir.mkdirs();
-      }
-      logger.debug3("Storing state for CUS '" +
-                    nodeState.getCachedUrlSet().getUrl() + "'");
-      File nodeFile = new File(nodeDir, NODE_FILE_NAME);
-      FileWriter writer = new FileWriter(nodeFile);
-      Marshaller marshaller = new Marshaller(writer);
-      marshaller.setMapping(getPollMapping());
-      marshaller.marshal(new NodeStateBean(nodeState));
-      writer.close();
+      logger.debug3("Storing state for CUS '" + cus.getUrl() + "'");
+      store(getNodeLocation(cus), NODE_FILE_NAME, new NodeStateBean(nodeState));
     } catch (Exception e) {
       logger.error("Couldn't store node state: ", e);
       throw new LockssRepository.RepositoryStateException(
@@ -138,22 +132,17 @@ public class HistoryRepositoryImpl
 
   public NodeState loadNodeState(CachedUrlSet cus) {
     try {
-      File nodeFile = new File(getNodeLocation(cus) + File.separator +
-                               NODE_FILE_NAME);
-      if (!nodeFile.exists()) {
+      String fileName = getNodeLocation(cus) + File.separator + NODE_FILE_NAME;
+      logger.debug3("Loading state for CUS '" + cus.getUrl() + "'");
+      NodeStateBean nsb = (NodeStateBean)load(fileName, NodeStateBean.class);
+      if (nsb==null) {
         return new NodeStateImpl(cus, -1,
                                  new CrawlState(-1, CrawlState.FINISHED, 0),
                                  new ArrayList(), this);
       }
-      logger.debug3("Loading state for CUS '" + cus.getUrl() + "'");
-      FileReader reader = new FileReader(nodeFile);
-      Unmarshaller unmarshaller = new Unmarshaller(NodeStateBean.class);
-      unmarshaller.setMapping(getPollMapping());
-      NodeStateBean nsb = (NodeStateBean)unmarshaller.unmarshal(reader);
-      reader.close();
       return new NodeStateImpl(cus, nsb, this);
-    } catch (org.exolab.castor.xml.MarshalException me) {
-      logger.error("Marshalling exception on nodestate for '" +
+    } catch (XmlMarshaller.MarshallingException me) {
+      logger.error("Marshalling exception on node state for '" +
                    cus.getUrl() + "': " + me.getMessage());
       // continue
       return new NodeStateImpl(cus, -1,
@@ -170,19 +159,10 @@ public class HistoryRepositoryImpl
   public void storePollHistories(NodeState nodeState) {
     CachedUrlSet cus = nodeState.getCachedUrlSet();
     try {
-      File nodeDir = new File(getNodeLocation(cus));
-      if (!nodeDir.exists()) {
-        nodeDir.mkdirs();
-      }
       logger.debug3("Storing histories for CUS '"+cus.getUrl()+"'");
-      File nodeFile = new File(nodeDir, HISTORY_FILE_NAME);
-      FileWriter writer = new FileWriter(nodeFile);
       NodeHistoryBean nhb = new NodeHistoryBean();
       nhb.historyBeans = ((NodeStateImpl)nodeState).getPollHistoryBeanList();
-      Marshaller marshaller = new Marshaller(new FileWriter(nodeFile));
-      marshaller.setMapping(getPollMapping());
-      marshaller.marshal(nhb);
-      writer.close();
+      store(getNodeLocation(cus), HISTORY_FILE_NAME, nhb);
     } catch (Exception e) {
       logger.error("Couldn't store poll history: ", e);
       throw new LockssRepository.RepositoryStateException(
@@ -194,26 +174,23 @@ public class HistoryRepositoryImpl
     CachedUrlSet cus = nodeState.getCachedUrlSet();
     File nodeFile = null;
     try {
-      nodeFile = new File(getNodeLocation(cus) + File.separator +
-                               HISTORY_FILE_NAME);
-      if (!nodeFile.exists()) {
+      String fileName = getNodeLocation(cus)+File.separator+HISTORY_FILE_NAME;
+      nodeFile = new File(fileName);
+      logger.debug3("Loading histories for CUS '"+cus.getUrl()+"'");
+      NodeHistoryBean nhb = (NodeHistoryBean)load(fileName,
+          NodeHistoryBean.class);
+      if (nhb==null) {
+        logger.debug3("No histories to load.");
         ((NodeStateImpl)nodeState).setPollHistoryBeanList(new ArrayList());
-        logger.debug3("No history file found.");
         return;
       }
-      logger.debug3("Loading histories for CUS '"+cus.getUrl()+"'");
-      FileReader reader = new FileReader(nodeFile);
-      Unmarshaller unmarshaller = new Unmarshaller(NodeHistoryBean.class);
-      unmarshaller.setMapping(getPollMapping());
-      NodeHistoryBean nhb = (NodeHistoryBean)unmarshaller.unmarshal(reader);
       if (nhb.historyBeans==null) {
         logger.debug3("Empty history list loaded.");
         nhb.historyBeans = new ArrayList();
       }
       ((NodeStateImpl)nodeState).setPollHistoryBeanList(
           new ArrayList(nhb.historyBeans));
-      reader.close();
-    } catch (org.exolab.castor.xml.MarshalException me) {
+    } catch (XmlMarshaller.MarshallingException me) {
       logger.error("Parsing exception.  Moving file to '.old'");
       nodeFile.renameTo(new File(nodeFile.getAbsolutePath()+".old"));
       ((NodeStateImpl)nodeState).setPollHistoryBeanList(new ArrayList());
@@ -224,29 +201,49 @@ public class HistoryRepositoryImpl
     }
   }
 
-  public void storeIdentityAgreement(List list) {
-    throw new UnsupportedOperationException("not implemented");
+  public void storeIdentityAgreements(List idList) {
+    try {
+      logger.debug3("Storing identity agreements for AU '" +
+          storedAu.getName() + "'");
+      store(rootLocation, IDENTITY_AGREEMENT_FILE_NAME,
+          new IdentityAgreementList(idList));
+    } catch (Exception e) {
+      logger.error("Couldn't store identity agreements: ", e);
+      throw new LockssRepository.RepositoryStateException(
+          "Couldn't store identity agreements.");
+    }
   }
 
-  public List loadIdentityAgreement() {
-    throw new UnsupportedOperationException("not implemented");
+  public List loadIdentityAgreements() {
+    try {
+      logger.debug3("Loading identity agreements for AU '" +
+          storedAu.getName() + "'");
+      IdentityAgreementList idList =
+          (IdentityAgreementList)load(
+          rootLocation + IDENTITY_AGREEMENT_FILE_NAME,
+          IdentityAgreementList.class);
+      if (idList==null) {
+        return new ArrayList();
+      }
+      return idList.getList();
+    } catch (XmlMarshaller.MarshallingException me) {
+      logger.error("Marshalling exception for identity agreements: " +
+          me.getMessage());
+      // continue
+      return new ArrayList();
+    } catch (Exception e) {
+      logger.error("Couldn't load identity agreements: ", e);
+      throw new LockssRepository.RepositoryStateException(
+          "Couldn't load identity agreements.");
+    }
   }
 
 
   public void storeAuState(AuState auState) {
     try {
-      File nodeDir = new File(rootLocation);
-      if (!nodeDir.exists()) {
-        nodeDir.mkdirs();
-      }
       logger.debug3("Storing state for AU '" +
                     auState.getArchivalUnit().getName() + "'");
-      File auFile = new File(nodeDir, AU_FILE_NAME);
-      FileWriter writer = new FileWriter(auFile);
-      Marshaller marshaller = new Marshaller(writer);
-      marshaller.setMapping(getPollMapping());
-      marshaller.marshal(new AuStateBean(auState));
-      writer.close();
+      store(rootLocation, AU_FILE_NAME, new AuStateBean(auState));
     } catch (Exception e) {
       logger.error("Couldn't store au state: ", e);
       throw new LockssRepository.RepositoryStateException(
@@ -256,25 +253,20 @@ public class HistoryRepositoryImpl
 
   public AuState loadAuState() {
     try {
-      File auFile = new File(rootLocation + AU_FILE_NAME);
-      if (!auFile.exists()) {
-        logger.debug3("No au file found.");
+      logger.debug3("Loading state for AU '" + storedAu.getName() + "'");
+      AuStateBean asb = (AuStateBean)load(rootLocation + AU_FILE_NAME,
+          AuStateBean.class);
+      if (asb==null) {
         return new AuState(storedAu, -1, -1, -1, null, this);
       }
-      logger.debug3("Loading state for AU '" + storedAu.getName() + "'");
-      FileReader reader = new FileReader(auFile);
-      Unmarshaller unmarshaller = new Unmarshaller(AuStateBean.class);
-      unmarshaller.setMapping(getPollMapping());
-      AuStateBean asb = (AuStateBean) unmarshaller.unmarshal(reader);
       // does not load in an old treewalk time, so that one will be run
       // immediately
-      reader.close();
       return new AuState(storedAu, asb.getLastCrawlTime(),
                          asb.getLastTopLevelPollTime(),
                          -1, asb.getCrawlUrls(), this);
-    } catch (org.exolab.castor.xml.MarshalException me) {
-      logger.error("Marshalling exception for austate '"+storedAu.getName()+"': " +
-                   me.getMessage());
+    } catch (XmlMarshaller.MarshallingException me) {
+      logger.error("Marshalling exception for au state '"+
+          storedAu.getName() + "': " + me.getMessage());
       // continue
       return new AuState(storedAu, -1, -1, -1, null, this);
     } catch (Exception e) {
@@ -286,18 +278,9 @@ public class HistoryRepositoryImpl
 
   public void storeDamagedNodeSet(DamagedNodeSet nodeSet) {
     try {
-      File nodeDir = new File(rootLocation);
-      if (!nodeDir.exists()) {
-        nodeDir.mkdirs();
-      }
       logger.debug3("Storing damaged nodes for AU '" +
-                    nodeSet.theAu.getName() + "'");
-      File damFile = new File(nodeDir, DAMAGED_NODES_FILE_NAME);
-      FileWriter writer = new FileWriter(damFile);
-      Marshaller marshaller = new Marshaller(writer);
-      marshaller.setMapping(getPollMapping());
-      marshaller.marshal(nodeSet);
-      writer.close();
+          nodeSet.theAu.getName() + "'");
+      store(rootLocation, DAMAGED_NODES_FILE_NAME, nodeSet);
     } catch (Exception e) {
       logger.error("Couldn't store damaged nodes: ", e);
       throw new LockssRepository.RepositoryStateException(
@@ -307,21 +290,16 @@ public class HistoryRepositoryImpl
 
   public DamagedNodeSet loadDamagedNodeSet() {
     try {
-      File damFile = new File(rootLocation + DAMAGED_NODES_FILE_NAME);
-      if (!damFile.exists()) {
-        logger.debug3("No au file found.");
+      logger.debug3("Loading state for AU '" + storedAu.getName() + "'");
+      DamagedNodeSet damNodes = (DamagedNodeSet)load(
+          rootLocation + DAMAGED_NODES_FILE_NAME, DamagedNodeSet.class);
+      if (damNodes==null) {
         return new DamagedNodeSet(storedAu, this);
       }
-      logger.debug3("Loading state for AU '" + storedAu.getName() + "'");
-      FileReader reader = new FileReader(damFile);
-      Unmarshaller unmarshaller = new Unmarshaller(DamagedNodeSet.class);
-      unmarshaller.setMapping(getPollMapping());
-      DamagedNodeSet damNodes = (DamagedNodeSet) unmarshaller.unmarshal(reader);
-      reader.close();
       damNodes.theAu = storedAu;
       damNodes.repository = this;
       return damNodes;
-    } catch (org.exolab.castor.xml.MarshalException me) {
+    } catch (XmlMarshaller.MarshallingException me) {
       logger.error("Marshalling exception for damaged nodes for '"+
                    storedAu.getName()+"': " + me.getMessage());
       // continue
@@ -333,6 +311,18 @@ public class HistoryRepositoryImpl
     }
   }
 
+  void store(String root, String fileName, Object storeObj)
+      throws Exception {
+    XmlMarshaller marshaller = new XmlMarshaller();
+    marshaller.store(root, fileName, storeObj,
+        marshaller.getMapping(MAPPING_FILES));
+  }
+
+  Object load(String fileName, Class loadClass) throws Exception {
+    XmlMarshaller marshaller = new XmlMarshaller();
+    return marshaller.load(fileName, loadClass,
+        marshaller.getMapping(MAPPING_FILES));
+  }
 
   protected String getNodeLocation(CachedUrlSet cus)
       throws MalformedURLException {
@@ -365,36 +355,6 @@ public class HistoryRepositoryImpl
         throw new MalformedURLException ("Error testing URL.");
       }
       return LockssRepositoryImpl.mapUrlToFileLocation(rootLocation, urlStr);
-    }
-  }
-
-  private void loadMapping() {
-    if (mapping==null) {
-      URL mappingLoc = getClass().getResource(MAPPING_FILE_NAME);
-      if (mappingLoc==null) {
-        logger.error("Couldn't find resource '"+MAPPING_FILE_NAME+"'");
-        throw new LockssDaemonException("Couldn't find mapping file.");
-      }
-
-      mapping = (new ExternalizableMap()).getExtMapMapping();
-      try {
-        mapping.loadMapping(mappingLoc);
-      } catch (Exception e) {
-        logger.error("Couldn't load mapping file '"+mappingLoc+"'", e);
-        throw new LockssDaemonException("Couldn't load mapping file.");
-      }
-    }
-  }
-
-  public Mapping getPollMapping() {
-    if (mapping==null) {
-      logger.error("Mapping file not loaded.");
-      throw new LockssDaemonException("Mapping file not loaded.");
-    } else if (mapping.getRoot().getClassMappingCount()==0) {
-      logger.error("Mapping file is empty.");
-      throw new LockssDaemonException("Mapping file is empty.");
-    } else {
-      return mapping;
     }
   }
 
