@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.59 2003-03-29 04:02:15 claire Exp $
+* $Id: PollManager.java,v 1.60 2003-03-29 06:08:49 tal Exp $
  */
 
 /*
@@ -668,10 +668,15 @@ public class PollManager  extends BaseLockssManager {
 
 // ----------------  Callbacks -----------------------------------
 
-  static class RouterMessageHandler implements LcapRouter.MessageHandler {
+  class RouterMessageHandler implements LcapRouter.MessageHandler {
     public void handleMessage(LcapMessage msg) {
       theLog.debug3("received from router message:" + msg.toString());
-      handleMessage(msg);
+      try {
+	PollManager.this.handleMessage(msg);
+      }
+      catch (IOException ex) {
+	theLog.error("handle incoming message failed.");
+      }
     }
   }
 
