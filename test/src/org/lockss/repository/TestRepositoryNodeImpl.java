@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.5 2002-11-27 20:33:32 aalto Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.6 2002-11-27 22:56:17 aalto Exp $
  */
 
 /*
@@ -178,7 +178,12 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
       leaf2.makeNewVersion();
       fail("Can't make new version while version open.");
     } catch (UnsupportedOperationException e) { }
-    TimeBase.step(RepositoryNodeImpl.VERSION_TIMEOUT);
+    TimeBase.step(RepositoryNodeImpl.VERSION_TIMEOUT/2);
+    try {
+      leaf2.makeNewVersion();
+      fail("Can't make new version while version not timed out.");
+    } catch (UnsupportedOperationException e) { }
+    TimeBase.step(RepositoryNodeImpl.VERSION_TIMEOUT/2);
     leaf2.makeNewVersion();
   }
 
