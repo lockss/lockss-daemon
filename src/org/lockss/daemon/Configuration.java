@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.27 2003-03-28 08:12:22 tal Exp $
+ * $Id: Configuration.java,v 1.28 2003-03-29 02:42:24 tal Exp $
  */
 
 /*
@@ -477,6 +477,45 @@ public abstract class Configuration {
       log.warning("getTimeInterval(\'" + key + "\") = \"" + val + "\"");
       return dfault;
     }
+  }
+
+  /** Parse the config value (which must be an integer between 0 and 100)
+   * as a percentage, returning a float between 0.0 and 1.0.
+   * @param key the configuration parameter name
+   * @return a float between 0.0 and 1.0
+   * @throws Configuration.InvalidParam if the value is missing or
+   * not an integer between 0 and 100.
+   */
+  public float getPercentage(String key) throws InvalidParam {
+    int val = getInt(key);
+    if (val < 0 || val > 100) {
+      throw new InvalidParam("Not an integer between 0 and 100: " +
+			     key + " = " + val);
+    }
+    return ((float)val) / (float)100.0;
+  }
+
+  /** Parse the config value (which should be an integer between 0 and 100)
+   * as a percentage, returning a float between 0.0 and 1.0.  If the
+   * parameter is not present, return the default value.  If it's present
+   * but not parsable as an int between 0 and 100, log a warning and return
+   * the default value.
+   * @param key the configuration parameter name
+   * @return a float between 0.0 and 1.0
+   */
+  public float getPercentage(String key, double dfault) {
+    int val;
+    try {
+      val = getInt(key);
+    } catch (InvalidParam e) {
+      log.warning("getPercentage(\'" + key + "\") = \"" + get(key) + "\"");
+      return (float)dfault;
+    }
+    if (val < 0 || val > 100) {
+      log.warning("getPercentage(\'" + key + "\") = \"" + val + "\"");
+      return (float)dfault;
+    }
+    return ((float)val) / (float)100.0;
   }
 
   // must be implemented by implementation subclass

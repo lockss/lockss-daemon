@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfiguration.java,v 1.13 2003-03-17 08:35:05 tal Exp $
+ * $Id: TestConfiguration.java,v 1.14 2003-03-29 02:42:24 tal Exp $
  */
 
 /*
@@ -193,6 +193,39 @@ public class TestConfiguration extends LockssTestCase {
   public static boolean setCurrentConfigFromString(String s)
       throws IOException {
     return setCurrentConfigFromUrlList(ListUtil.list(FileUtil.urlOfString(s)));
+  }
+
+  public void testPercentage() throws Exception {
+    Properties props = new Properties();
+    props.put("p1", "-1");
+    props.put("p2", "0");
+    props.put("p3", "20");
+    props.put("p4", "100");
+    props.put("p5", "101");
+    props.put("p6", "foo");
+    Configuration config = ConfigurationUtil.fromProps(props);
+    assertEquals(0.0, config.getPercentage("p2"), 0.0);
+    assertEquals(0.2, config.getPercentage("p3"), 0.0000001);
+    assertEquals(1.0, config.getPercentage("p4"), 0.0);
+    assertEquals(0.1, config.getPercentage("p1", 0.1), 0.0000001);
+    assertEquals(0.5, config.getPercentage("p6", 0.5), 0.0);
+    assertEquals(0.1, config.getPercentage("p1", 0.1), 0.0000001);
+
+    try {
+      config.getPercentage("p1");
+      fail("getPercentage(-1) should throw");
+    } catch (Configuration.InvalidParam e) {
+    }
+    try {
+      config.getPercentage("p5");
+      fail("getPercentage(101) should throw");
+    } catch (Configuration.InvalidParam e) {
+    }
+    try {
+      config.getPercentage("p6");
+      fail("getPercentage(foo) should throw");
+    } catch (Configuration.InvalidParam e) {
+    }
   }
 
   public void testCurrentConfig() throws IOException {
