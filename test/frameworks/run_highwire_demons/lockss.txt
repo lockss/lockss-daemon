@@ -10,7 +10,7 @@ org.lockss.au.org|lockss|plugin|highwire|HighWirePlugin.base_url~http%3A%2F%2Fsh
 #lockss repository settings
 org.lockss.cache.location=./
 
-org.lockss.parameterReloadInterval = 600000
+org.lockss.parameterReloadInterval = 1m
 
 #hasher settings
 #org.lockss.hasher.numSteps
