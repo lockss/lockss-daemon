@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlWindow.java,v 1.2 2003-12-06 00:53:01 eaalto Exp $
+ * $Id: CrawlWindow.java,v 1.3 2003-12-12 02:39:48 eaalto Exp $
  */
 
 /*
@@ -52,12 +52,4 @@ public interface CrawlWindow {
    * @return true iff permitted
    */
   public boolean canCrawl(Date date);
-
-  /**
-   * Returns true if, for this window, a crawl is *ever* possible.  This protects
-   * against windows with mutally exclusive elements (i.e. 'Monday AND Wednesday'
-   * rather than 'Monday OR Wednesday').
-   * @return true iff a crawl is possible
-   */
-  public boolean crawlIsPossible();
 }

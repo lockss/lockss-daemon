@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlWindows.java,v 1.6 2003-12-06 01:32:15 eaalto Exp $
+ * $Id: CrawlWindows.java,v 1.7 2003-12-12 02:39:48 eaalto Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.daemon;
 
 import java.util.*;
+import java.text.SimpleDateFormat;
 import org.lockss.util.*;
 
 /**
@@ -63,6 +64,8 @@ public class CrawlWindows {
   /** Field indicating month */
   public static final int MONTH = 32;
 
+  static final int MAX_INTERVAL_LIST_SIZE = 100000;
+  private static Logger logger = Logger.getLogger("CrawlWindows");
 
   /**
    * Abstract base window which handles timezone issues.
@@ -215,13 +218,6 @@ public class CrawlWindows {
       }
     }
 
-    public boolean crawlIsPossible() {
-      // crawl is always possible for any given Interval, though it could
-      // be unreasonably short
-      return true;
-    }
-
-
     public String toString() {
       return "[CrawlWindows.Interval: field: " + fieldMask +
           ", "+start+", "+end+"]";
@@ -299,12 +295,6 @@ public class CrawlWindows {
 
       return true;
     }
-
-    public boolean crawlIsPossible() {
-      // crawl is possible so long as there are any members in the set
-      return !calendarSet.isEmpty();
-    }
-
   }
 
   /**
@@ -333,11 +323,6 @@ public class CrawlWindows {
           return false;
         }
       }
-      return true;
-    }
-
-    public boolean crawlIsPossible() {
-      //XXX needs to check if the windows aren't exclusive
       return true;
     }
 
@@ -375,17 +360,6 @@ public class CrawlWindows {
       return false;
     }
 
-    public boolean crawlIsPossible() {
-      // crawl is possible if possible for any of the set
-      for (Iterator iter = windows.iterator(); iter.hasNext(); ) {
-        CrawlWindow cw = (CrawlWindow)iter.next();
-        if (cw.crawlIsPossible()) {
-          return true;
-        }
-      }
-      return false;
-    }
-
     public String toString() {
       return "[CrawlWindows.Or: " + windows + "]";
     }
@@ -413,11 +387,6 @@ public class CrawlWindows {
       return !window.canCrawl(date);
     }
 
-    public boolean crawlIsPossible() {
-      //XXX needs to calculate if there are any forbidden times in the inner window
-      return true;
-    }
-
     public String toString() {
       return "[CrawlWindows.Not: " + window + "]";
     }
@@ -431,5 +400,51 @@ public class CrawlWindows {
    */
   public static boolean bitTest(int mask, int bit) {
     return (mask & bit) != 0;
+  }
+
+  /**
+   * Returns a List of {@link TimeInterval}s for the crawl window between a given
+   * start and end point.  Each represents a period when the window is open.
+   * @param window the CrawlWindow
+   * @param start the start Date
+   * @param end the end Date
+   * @return a list of TimeIntervals
+   */
+  public static List getCrawlIntervals(CrawlWindow window, Date start,
+                                       Date end) {
+    List intervals = new ArrayList();
+    boolean isOpen = false;
+    Calendar startCal = Calendar.getInstance();
+    startCal.setTime(start);
+    Date testDate = startCal.getTime();
+    Date intStartDate = null;
+    while (testDate.compareTo(end) < 0) {
+      boolean canCrawl = window.canCrawl(testDate);
+      if (canCrawl != isOpen) {
+        if (!isOpen) {
+          // cache the start of the next interval
+          intStartDate = testDate;
+        } else {
+          // close the current interval and add to list
+          intervals.add(new TimeInterval(intStartDate, testDate));
+          if (intervals.size() == MAX_INTERVAL_LIST_SIZE) {
+            logger.warning("Maximum interval list size reached: "+
+                           MAX_INTERVAL_LIST_SIZE);
+            break;
+          }
+          intStartDate = null;
+        }
+        isOpen = canCrawl;
+      }
+      // increment by one minute
+      startCal.add(Calendar.MINUTE, 1);
+      testDate = startCal.getTime();
+    }
+
+    if (intStartDate!=null) {
+      intervals.add(new TimeInterval(intStartDate, end));
+    }
+
+    return intervals;
   }
 }

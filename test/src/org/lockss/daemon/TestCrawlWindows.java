@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlWindows.java,v 1.4 2003-12-06 01:32:15 eaalto Exp $
+ * $Id: TestCrawlWindows.java,v 1.5 2003-12-12 02:39:48 eaalto Exp $
  */
 
 /*
@@ -33,7 +33,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.daemon;
 
 import java.util.*;
-import org.lockss.util.SetUtil;
+import java.text.SimpleDateFormat;
+import org.lockss.util.*;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockCrawlWindow;
 
@@ -398,46 +399,49 @@ public class TestCrawlWindows extends LockssTestCase {
     assertTrue(fieldSet.isMatch(testCal));
   }
 
-  public void testCrawlIsPossible() {
-    // interval
-    start.set(Calendar.DAY_OF_WEEK, Calendar.TUESDAY);
-    end.set(Calendar.DAY_OF_WEEK, Calendar.FRIDAY);
+  public void testGetCrawlIntervals() {
+    start.set(Calendar.HOUR_OF_DAY, 13);
+    start.set(Calendar.MINUTE, 55);
+    // make sure the dates are constant between all the calendars
+    end.setTime(start.getTime());
+    end.set(Calendar.HOUR_OF_DAY, 14);
+    end.set(Calendar.MINUTE, 0);
 
-    CrawlWindows.Interval interval = new CrawlWindows.Interval(start, end,
-        CrawlWindows.DAY_OF_WEEK, null);
-    assertTrue(interval.crawlIsPossible());
+    CrawlWindow interval = new CrawlWindows.Interval(start, end,
+        CrawlWindows.TIME, null);
+    Calendar start2 = Calendar.getInstance();
+    Calendar end2 = Calendar.getInstance();
+    start2.setTime(start.getTime());
+    start2.set(Calendar.HOUR_OF_DAY, 14);
+    start2.set(Calendar.MINUTE, 5);
+    end2.setTime(start.getTime());
+    end2.set(Calendar.HOUR_OF_DAY, 14);
+    end2.set(Calendar.MINUTE, 15);
+    CrawlWindow interval2 = new CrawlWindows.Interval(start2, end2,
+        CrawlWindows.TIME, null);
 
-    // fieldset
-    CrawlWindows.FieldSet fieldSet =
-        new CrawlWindows.FieldSet(SetUtil.set(),
-                                  CrawlWindows.DAY_OF_WEEK, null);
-    // only false for empty set
-    assertFalse(fieldSet.crawlIsPossible());
-    fieldSet.calendarSet = SetUtil.set(start);
-    assertTrue(fieldSet.crawlIsPossible());
+    CrawlWindow orWin = new CrawlWindows.Or(SetUtil.set(interval, interval2));
 
-    MockCrawlWindow win1 = new MockCrawlWindow();
-    win1.setAllowCrawl(true);
-    MockCrawlWindow win2 = new MockCrawlWindow();
-    win2.setAllowCrawl(false);
+    Calendar start3 = Calendar.getInstance();
+    Calendar end3 = Calendar.getInstance();
+    start3.setTime(start.getTime());
+    start3.set(Calendar.HOUR_OF_DAY, 13);
+    start3.set(Calendar.MINUTE, 50);
+    // make sure the dates are constant between start and end
+    end3.setTime(start.getTime());
+    end3.set(Calendar.HOUR_OF_DAY, 14);
+    end3.set(Calendar.MINUTE, 10);
 
-    // and
-    Set s = SetUtil.set(win1, win2);
-    CrawlWindow andWin = new CrawlWindows.And(s);
-    //XXX always returns true right now
-    assertTrue(andWin.crawlIsPossible());
-
-    // or
-    CrawlWindow orWin = new CrawlWindows.Or(s);
-    // true if at least one is possible
-    assertTrue(orWin.crawlIsPossible());
-    win1.setAllowCrawl(false);
-    assertFalse(orWin.crawlIsPossible());
-
-    // not
-    CrawlWindow notWin = new CrawlWindows.Not(win1);
-    //XXX always returns true right not
-    assertTrue(notWin.crawlIsPossible());
+    List expectedList = ListUtil.list(
+        new TimeInterval(start.getTime(), end.getTime()),
+        // last interval ends early
+        new TimeInterval(start2.getTime(), end3.getTime()));
+    List results = CrawlWindows.getCrawlIntervals(orWin,
+                                                  start3.getTime(),
+                                                  end3.getTime());
+    assertIsomorphic(expectedList, results);
+    long numMinutes = TimeInterval.getTotalTime(results) / (Constants.MINUTE);
+    assertEquals(10, numMinutes);
   }
 }
 
