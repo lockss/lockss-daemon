@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.50 2005-01-04 03:05:43 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.51 2005-01-27 23:02:48 troberts Exp $
  */
 
 /*
@@ -693,6 +693,19 @@ public class StringUtil {
     new UD("m", Constants.MINUTE),
     new UD("s", Constants.SECOND, 0),
   };
+
+  public static String protectedDivide(long numerator, long denominator) {
+    return protectedDivide(numerator, denominator, "inf");
+  }
+
+  public static String protectedDivide(long numerator, long denominator,
+				       String infStr) {
+    if (denominator == 0) {
+      return infStr;
+    }
+    long val = numerator / denominator;
+    return String.valueOf(val);
+  }
 
   /** Generate a string representing the time interval.
    * @param millis the time interval in milliseconds

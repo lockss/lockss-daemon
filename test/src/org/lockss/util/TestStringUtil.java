@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.44 2005-01-04 03:05:43 tlipkis Exp $
+ * $Id: TestStringUtil.java,v 1.45 2005-01-27 23:02:49 troberts Exp $
  */
 
 /*
@@ -566,6 +566,12 @@ System.out.println("s: "+s);
     assertEquals(1, StringUtil.compareToHandleNull("b", "a"));
     assertEquals(-1, StringUtil.compareToHandleNull("a", "b"));
     assertEquals(0, StringUtil.compareToHandleNull("a", "a"));
+  }
+
+  public void testProtectedDivide() {
+    assertEquals("2", StringUtil.protectedDivide(10, 5));
+    assertEquals("inf", StringUtil.protectedDivide(10, 0));
+    assertEquals("infinite", StringUtil.protectedDivide(10, 0, "infinite"));
   }
 
 }
