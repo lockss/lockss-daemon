@@ -1,5 +1,5 @@
 /*
- * $Id: OaiHandler.java,v 1.1 2005-01-12 02:21:41 dcfok Exp $
+ * $Id: OaiHandler.java,v 1.2 2005-01-13 00:51:16 dcfok Exp $
  */
 
 /*
@@ -88,7 +88,10 @@ public class OaiHandler {
    * @param untilDate create date of records the Oai request want until
    * @param maxRetrues retry limit of oai request when retriable error is encountered
    */
-  public OaiHandler(OaiRequestData oaiData, String fromDate, String untilDate, int maxRetries) {
+  public OaiHandler(OaiRequestData oaiData, 
+		    String fromDate, 
+		    String untilDate, 
+		    int maxRetries) {
 
     if (fromDate == null) {
       throw new NullPointerException("Called with null fromDate");
@@ -110,6 +113,8 @@ public class OaiHandler {
    * 1. check for error in creating ListRecords
    * 2. get all the information we need from the ListRecords
    * 3. create another ListRecords if there is a resumptionToken
+   * 
+   * @param listRecords the ListRecords object need to be processed
    */
   protected void processListRecords(ListRecords listRecords){
 
@@ -119,14 +124,16 @@ public class OaiHandler {
       try {
 	NodeList errors = listRecords.getErrors();   
 	if (errors != null && errors.getLength() > 0) {
-	  //	  errorExists = true;
 	  int length = errors.getLength();
 	  for (int i=0; i<length; ++i) {
 	    Node item = errors.item(i);
 	    
+	    //sample error code:
+	    //<error code="badResumptionToken">More info about the error</error>
 	    String errCode = ((Element)item).getAttribute("code");
 	    String errMsg = errCode +  " : " +  item.getFirstChild().getNodeValue();
-
+	    
+	    //create an error for logError
 	    OaiResponseErrorException oaiErrEx = new OaiResponseErrorException(errMsg);
 	    logError("In Oai Response's error tag", oaiErrEx);
 
@@ -154,49 +161,26 @@ public class OaiHandler {
 	logError("In calling getErrors", e);
       }
       
-      //see what is inside the response
+      //see what is inside the lisRecord
       logger.debug3("The content of listRecord : \n" + listRecords.toString() );
 
-      //collect all the oai records
+      //collect and store all the oai records
       collectOaiRecords(); //XXX info collected is not being used now, 
                            //can turn off to increase performance
 
-      //======= this should be in another object, 
-      // (some kind of interface to support different metadata format) ==============
-
-      //parse URLs out from the Oai response 
-// 	NodeList nodeList = 
-// 	  listRecords.getDocument().getElementsByTagNameNS(oaiData.getMetadataNamespaceUrl(), 
-// 							   oaiData.getUrlContainerTagName());
-	
-// 	logger.debug3("nodeList length = " + nodeList.getLength());
-
-// 	// Process the elements in the nodelist
-//         for (int i=0; i<nodeList.getLength(); i++) {
-//           // add the Urls to the updatedUrls set
-// 	  Node node = nodeList.item(i);
-// 	  if (node != null) {
-
-// 	    String str = node.getFirstChild().getNodeValue();
-
-// 	    //do not validate url here, let the crawler handle malform Url
-// 	    updatedUrls.add(str);
-// 	    logger.debug3("node (" + i + ") value = " + str);
-// 	    logger.debug3("in xml :" + nodeToString(node) );
-// 	  }
-//         }
-
-      //==============================================================================
-	NodeList metadataNodeList = 
-	  listRecords.getDocument().getElementsByTagName("metadata");
-	
-	OaiMetadataHandler metadataHandler = oaiData.getMetadataHandler();
-
-	metadataHandler.setupAndExecute(metadataNodeList);
-
-	updatedUrls.addAll(metadataHandler.getArticleUrls());
-      //======================================================================
-
+      //parser urls by some implementation of oaiMetadataHander
+      NodeList metadataNodeList = 
+	listRecords.getDocument().getElementsByTagName("metadata");
+      
+      OaiMetadataHandler metadataHandler = oaiData.getMetadataHandler();
+      
+      //apart from collecting urls, more actions might be done in the 
+      //metadata handler w.r.t. different metadata
+      metadataHandler.setupAndExecute(metadataNodeList);
+      
+      //put all the collected urls to updatedUrls
+      updatedUrls.addAll(metadataHandler.getArticleUrls());
+      
       //see if all the records are include in the response by checking the presence of
       //resumptionToken. If there is more records, request them by resumptionToken
       try {
@@ -205,7 +189,7 @@ public class OaiHandler {
 	if (resumptionToken == null || resumptionToken.length() == 0) {
 	  break; //break out of the while loop as there is no more new url
 	} else {
-	  //TODO: Before including a resumptionToken in the URL of a subsequent request, 
+	  //XXX TODO: Before including a resumptionToken in the URL of a subsequent request, 
 	  // we must encode any special characters in it.
 	  listRecords = new ListRecords(baseUrl, resumptionToken);
 	} 
@@ -224,10 +208,14 @@ public class OaiHandler {
     } //loop until there is no resumptionToken
   }
 
- /**
-  * By create a ListRecords, an Oai request is issued and the response is also 
-  * store in the ListRecords object.
-  */
+  /**
+   * By create a ListRecords, an Oai request is issued and the response is also 
+   * store in the ListRecords object.
+   * 
+   * @param oaiData oaiRequestData object that stores oai related information from OaiCrawlSpec
+   * @param fromDate date from when we want to query about
+   * @param untilDate date until when we want to query about
+   */
   protected ListRecords createListRecords(
 	    OaiRequestData oaiData, String fromDate, String untilDate){
     baseUrl = oaiData.getOaiRequestHandlerUrl();
@@ -255,6 +243,9 @@ public class OaiHandler {
     return listRecords;
   }
 
+  /**
+   * log the error message and the corresponding exception
+   */
   protected void logError(String msg, Exception ex) {
     logger.error(msg, ex);
     errList.addFirst(ex);
@@ -272,7 +263,7 @@ public class OaiHandler {
   }
 
   /**
-   * Get the Iterator of a list of Urls extracted from the OAI response
+   * Get a list of Urls extracted from the OAI response
    * 
    * @return the list of Urls extracted from Oai response
    */
@@ -280,6 +271,13 @@ public class OaiHandler {
     return updatedUrls;
   }
 
+  /**
+   * Stores <record>.......</record> element in the oai response in a list.
+   * Information collected maybe useful to our future developement.
+   * 
+   * //XXX do we want to have a place in the file system to store it ?
+   * should it be output as an xml ?
+   */
   private void collectOaiRecords(){
     NodeList nodeList = listRecords.getDocument().getElementsByTagName("record");
     for (int i=0; i<nodeList.getLength(); i++) {
@@ -308,8 +306,10 @@ public class OaiHandler {
     return queryString;
   }
 
-  // print out the content of a node, its attribute and its children
-  // it might be useful to put it in some kind of Util
+  /**
+   * print out the content of a node, its attribute and its children
+   * it might be useful to put it in some kind of Util
+   */
   private String nodeToString(Node domNode){
     // An array of names for DOM node-types
     // (Array indexes = nodeType() values.)
@@ -364,8 +364,17 @@ public class OaiHandler {
     return s;
   }
 
+  /**
+   * OaiResponseErrorException will only be thrown when there is
+   * error in the Oai Response.
+   */ 
   public static class OaiResponseErrorException extends Exception {
 
+    /**
+     * Constructor
+     *
+     * @param errMsg Error message
+     */
     public OaiResponseErrorException(String errMsg) {
       super(errMsg);
     }

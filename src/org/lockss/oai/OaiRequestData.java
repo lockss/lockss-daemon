@@ -1,5 +1,5 @@
 /*
- * $Id: OaiRequestData.java,v 1.3 2005-01-12 02:21:41 dcfok Exp $
+ * $Id: OaiRequestData.java,v 1.4 2005-01-13 00:51:15 dcfok Exp $
  */
 
 /*
@@ -102,6 +102,8 @@ public class OaiRequestData {
     this.auSetSpec = setSpec;
     this.metadataHandler = metadataHandler;
     this.metadataPrefix = metadataHandler.getMetadataPrefix();
+    this.metadataNamespaceUrl = metadataHandler.getMetadataNamespaceUrl();
+    this.urlContainerTagName = metadataHandler.getUrlContainerTagName();
   }
 
   public OaiMetadataHandler getMetadataHandler(){
@@ -110,6 +112,8 @@ public class OaiRequestData {
 
   /** 
    * Gets the OaiRequestHandlerUrl
+   *
+   * @return oai request handler url of the oai repository
    */
   public String getOaiRequestHandlerUrl(){
     return oaiRequestHandlerUrl;

@@ -1,5 +1,5 @@
 /*
- * $Id: Oai_dcHandler.java,v 1.1 2005-01-12 02:21:41 dcfok Exp $
+ * $Id: Oai_dcHandler.java,v 1.2 2005-01-13 00:51:11 dcfok Exp $
  */
 
 /*
@@ -34,14 +34,21 @@ package org.lockss.oai;
 
 import org.lockss.util.Logger;
 
+/**
+ * Oai_dcHandler extends BaseOaiMetadataHandler to handler oai response with
+ * oai_dc metadata format.
+ */
 public class Oai_dcHandler extends BaseOaiMetadataHandler {
-    protected static Logger logger = Logger.getLogger("Oai_dcHandler");
+  protected static Logger logger = Logger.getLogger("Oai_dcHandler");
 
-    public Oai_dcHandler()
-    {
-        metadataPrefix = "oai_dc";
-        metadataNamespaceUrl = "http://purl.org/dc/elements/1.1/";
-        urlContainerTagName = "identifier";
-    }
+  /**
+   * Constructor set all the necessary information to handle metadata record
+   * in oai_dc format properly.
+   */
+  public Oai_dcHandler()    {
+    metadataPrefix = "oai_dc";
+    metadataNamespaceUrl = "http://purl.org/dc/elements/1.1/";
+    urlContainerTagName = "identifier";
+  }
 
 }
