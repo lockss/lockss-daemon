@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.6 2002-11-23 03:40:49 aalto Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.7 2002-11-25 22:01:25 aalto Exp $
  */
 
 /*
@@ -207,7 +207,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
       InputStream is = new BufferedInputStream(new FileInputStream(curInputFile));
       return new RepositoryNodeContents(is, curProps);
     } catch (FileNotFoundException fnfe) {
-      logger.error("Couldn't get inputstream for '"+curInputFile.getAbsolutePath()+"'");
+      logger.error("Couldn't get inputstream for '"+curInputFile.getPath()+"'");
       throw new RepositoryStateException("Couldn't get info for node.");
     }
   }
@@ -223,7 +223,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
     try {
       return new BufferedOutputStream(new FileOutputStream(tempCacheFile));
     } catch (FileNotFoundException fnfe) {
-      logger.error("No new version file for "+tempCacheFile.getAbsolutePath()+".");
+      logger.error("No new version file for "+tempCacheFile.getPath()+".");
       throw new RepositoryStateException("Couldn't load new outputstream.");
     }
   }
@@ -244,7 +244,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
         os.close();
       } catch (IOException ioe) {
         logger.error("Couldn't write properties for " +
-                     tempPropsFile.getAbsolutePath()+".");
+                     tempPropsFile.getPath()+".");
         throw new RepositoryStateException("Couldn't write properties file.");
       }
     }
@@ -252,12 +252,13 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
   private void ensureCurrentInfoLoaded() {
     if (currentVersion==-1) {
+      loadNodeRoot();
+      versionName = nodeRootFile.getName();
       loadCacheLocation();
       loadCurrentCacheFile();
       loadCurrentPropsFile();
       loadTempCacheFile();
       loadTempPropsFile();
-      versionName = cacheLocationFile.getName();
     }
     if (!cacheLocationFile.exists()) {
       currentVersion = 0;
@@ -281,7 +282,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
               is.close();
             } catch (Exception e) {
               logger.error("Error loading version from "+
-                            currentPropsFile.getAbsolutePath()+".");
+                            currentPropsFile.getPath()+".");
               throw new RepositoryStateException("Couldn't load version from properties file.");
             }
           }
@@ -353,7 +354,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
     if (contentBufferStr==null) {
       StringBuffer buffer = new StringBuffer(nodeLocation);
       buffer.append(File.separator);
-      buffer.append(nodeLocation);
+      buffer.append(versionName);
       buffer.append(CONTENT_DIR_SUFFIX);
       buffer.append(File.separator);
       contentBufferStr = buffer.toString();

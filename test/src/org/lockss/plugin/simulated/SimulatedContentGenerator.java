@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedContentGenerator.java,v 1.2 2002-11-07 02:15:29 aalto Exp $
+ * $Id: SimulatedContentGenerator.java,v 1.3 2002-11-25 22:01:25 aalto Exp $
  */
 
 /*
@@ -405,7 +405,7 @@ public class SimulatedContentGenerator {
     if ((directory==null) || (!directory.exists()) || (!directory.isDirectory())) {
       return "";
     }
-    String fullName = directory.getPath() + File.separator + filename;
+    String fullName = directory.getName() + File.separator + filename;
     String file_content = "<HTML><HEAD><TITLE>" + fullName + "</TITLE></HEAD><BODY>";
     file_content += "<B>"+fullName+"</B>";
 
