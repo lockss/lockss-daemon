@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerImpl.java,v 1.12 2004-03-03 00:37:26 troberts Exp $
+ * $Id: CrawlerImpl.java,v 1.13 2004-03-09 23:24:31 troberts Exp $
  */
 
 /*
@@ -191,10 +191,9 @@ public abstract class CrawlerImpl implements Crawler {
 
   protected static boolean isSupportedUrlProtocol(String url) {
     try {
-//       URL ur = new URL(srcUrl, url);
       URL ur = new URL(url);
       // some 1.4 machines will allow this, so we explictly exclude it for now.
-      if (StringUtil.getIndexIgnoringCase(ur.toString(), "https") != 0) {
+      if (StringUtil.startsWithIgnoreCase(ur.toString(), "http://")) {
         return true;
       }
     }
