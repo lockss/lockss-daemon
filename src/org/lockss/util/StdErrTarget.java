@@ -31,12 +31,26 @@ package org.lockss.util;
 import java.text.DateFormat;
 import java.util.Date;
 
-public class StdErrTarget implements LogTarget{
-  public void handleMessage (String callerId, String message, String severity){
-    DateFormat df = DateFormat.getTimeInstance();
-    System.err.print(df.format(new Date()));
-    System.err.print(": "+severity+": ");
-    System.err.println(callerId+" "+message);
-  }
+/** A <code>LogTarget</code> implementation that outputs to System.err
+ */
+public class StdErrTarget implements LogTarget {
+  static final DateFormat df = DateFormat.getTimeInstance();
 
+  // Rather than synchronizing, build whole string and assume a single
+  // println will probably not get interleaved with another thread.
+  // If need to explicitly synchronize, do so on the class, not instance,
+  // as there could be multiple instances of this.  (Even that's not right,
+  // as it should synchronize with all other uses of System.err)
+
+/** A <code>LogTarget</code> implementation that outputs to System.err
+ */
+  public void handleMessage(Logger log, int msgLevel, String message) {
+    StringBuffer sb = new StringBuffer();
+    sb.append(df.format(new Date()));
+    sb.append(": ");
+    sb.append(log.nameOf(msgLevel));
+    sb.append(": ");
+    sb.append(message);
+    System.err.println(sb.toString());
+  }
 }
