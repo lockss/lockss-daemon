@@ -1,5 +1,5 @@
 /*
- * $Id: NewContentCrawler.java,v 1.40 2004-10-08 22:47:38 dcfok Exp $
+ * $Id: NewContentCrawler.java,v 1.41 2004-10-11 08:09:05 tlipkis Exp $
  */
 
 /*
@@ -79,7 +79,7 @@ public class NewContentCrawler extends FollowLinkCrawler {
     }
 
     Iterator it = spec.getStartingUrls().iterator(); //getStartingUrls();
-    for (int ix=0; ix<refetchDepth; ix++) {
+    for (int ix=0; ix<refetchDepth && it.hasNext(); ix++) {
 
       //don't use clear() or it will empty the iterator
       extractedUrls = new HashSet();
@@ -113,10 +113,10 @@ public class NewContentCrawler extends FollowLinkCrawler {
 			 "cache: "+url);
 	}
       } // end while loop
+      lvlCnt++;
       it = extractedUrls.iterator();
     } // end for loop
 
-    lvlCnt = refetchDepth;
     return extractedUrls;
   } // end of getLink()
 
