@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.85 2003-04-03 00:34:40 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.86 2003-04-03 01:50:17 aalto Exp $
  */
 
 /*
@@ -161,8 +161,17 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
   }
 
   public void newContentCrawlFinished() {
+    // notify and checkpoint the austate
     getAuState().newCrawlFinished();
     historyRepo.storeAuState(getAuState());
+
+    // checkpoint the top-level nodestate
+    NodeState topState = getNodeState(managedAu.getAUCachedUrlSet());
+    CrawlState crawl = topState.getCrawlState();
+    crawl.status = CrawlState.FINISHED;
+    crawl.type = CrawlState.NEW_CONTENT_CRAWL;
+    crawl.startTime = getAuState().getLastCrawlTime();
+    historyRepo.storeNodeState(topState);
   }
 
   public synchronized NodeState getNodeState(CachedUrlSet cus) {
