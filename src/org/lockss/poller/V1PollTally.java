@@ -1,5 +1,5 @@
 /*
- * $Id: V1PollTally.java,v 1.2 2003-06-30 23:09:09 clairegriffin Exp $
+ * $Id: V1PollTally.java,v 1.3 2003-07-09 19:25:19 clairegriffin Exp $
  */
 
 /*
@@ -136,11 +136,11 @@ public class V1PollTally extends PollTally {
 
   public String getErrString() {
     switch(poll.m_pollstate) {
-      case Poll.ERR_SCHEDULE_HASH:
+      case BasePoll.ERR_SCHEDULE_HASH:
         return "Hasher Busy";
-      case Poll.ERR_HASHING:
+      case BasePoll.ERR_HASHING:
         return "Error hashing";
-      case Poll.ERR_IO:
+      case BasePoll.ERR_IO:
         return "Error I/0";
       default:
         return "Undefined";
@@ -176,7 +176,7 @@ public class V1PollTally extends PollTally {
     }
   }
 
-  Poll getPoll() {
+  BasePoll getPoll() {
     return poll;
   }
 

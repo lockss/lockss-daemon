@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.107 2003-06-30 23:09:09 clairegriffin Exp $
+* $Id: PollManager.java,v 1.108 2003-07-09 19:25:19 clairegriffin Exp $
  */
 
 /*
@@ -283,7 +283,7 @@ public class PollManager  extends BaseLockssManager {
         return;
       }
     }
-    Poll p = findPoll(msg);
+    BasePoll p = findPoll(msg);
     if (p != null) {
       p.receiveMessage(msg);
     }
@@ -298,9 +298,9 @@ public class PollManager  extends BaseLockssManager {
    * conflict with currently running poll.
    * @see <code>Poll.createPoll</code>
    */
-  synchronized Poll findPoll(LcapMessage msg) throws IOException {
+  synchronized BasePoll findPoll(LcapMessage msg) throws IOException {
     String key = msg.getKey();
-    Poll ret = null;
+    BasePoll ret = null;
 
     PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
     if(pme == null) {
@@ -322,8 +322,8 @@ public class PollManager  extends BaseLockssManager {
    * @return a new Poll object of the required type
    * @throws ProtocolException if message opcode is unknown
    */
-  Poll makePoll(LcapMessage msg) throws ProtocolException {
-    Poll ret_poll;
+  BasePoll makePoll(LcapMessage msg) throws ProtocolException {
+    BasePoll ret_poll;
     PollSpec spec = new PollSpec(msg);
     CachedUrlSet cus = spec.getCachedUrlSet();
     theLog.debug("making poll from: " + spec);
@@ -474,9 +474,9 @@ public class PollManager  extends BaseLockssManager {
    * @throws ProtocolException if the opcode in the message is of an unknown
    * type.
    */
-  protected Poll createPoll(LcapMessage msg, PollSpec pollspec)
+  protected BasePoll createPoll(LcapMessage msg, PollSpec pollspec)
       throws ProtocolException {
-    Poll ret_poll = null;
+    BasePoll ret_poll = null;
 
     switch(msg.getOpcode()) {
       case LcapMessage.CONTENT_POLL_REP:
@@ -538,7 +538,7 @@ public class PollManager  extends BaseLockssManager {
     Iterator iter = thePolls.values().iterator();
     while(iter.hasNext()) {
       PollManagerEntry entry = (PollManagerEntry)iter.next();
-      Poll p = entry.poll;
+      BasePoll p = entry.poll;
 
       // eliminate completed polls or verify polls
       if(!entry.isPollCompleted() && !p.getMessage().isVerifyPoll()) {
@@ -607,7 +607,7 @@ public class PollManager  extends BaseLockssManager {
     theLog.debug2("sending our verification request to " + originator.toString());
     sendMessageTo(reqmsg, cus.getArchivalUnit(), originator);
     // since we won't be getting this message make sure we create our own poll
-    Poll poll = makePoll(reqmsg);
+    BasePoll poll = makePoll(reqmsg);
   }
 
 
@@ -768,8 +768,8 @@ public class PollManager  extends BaseLockssManager {
     return polls.values().iterator();
   }
 
-  Poll getPoll(String key) {
-    Poll poll = null;
+  BasePoll getPoll(String key) {
+    BasePoll poll = null;
 
     PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
     if(pme != null) {
@@ -785,12 +785,12 @@ public class PollManager  extends BaseLockssManager {
  * @param key the String representation of the polls key
  * @return Poll the poll if found or null
  */
-  Poll removePoll(String key) {
+  BasePoll removePoll(String key) {
     PollManagerEntry pme = (PollManagerEntry)thePolls.remove(key);
     return (pme != null) ? pme.poll : null;
   }
 
-  void addPoll(Poll p) {
+  void addPoll(BasePoll p) {
     thePolls.put(p.m_key, new PollManagerEntry(p));
   }
 
@@ -809,7 +809,7 @@ public class PollManager  extends BaseLockssManager {
     return (pme != null) ? pme.isPollSuspended() : false;
   }
 
-  static Poll makeTestPoll(LcapMessage msg) throws ProtocolException {
+  static BasePoll makeTestPoll(LcapMessage msg) throws ProtocolException {
     if(theManager == null) {
       theManager = new PollManager();
     }
@@ -879,7 +879,7 @@ public class PollManager  extends BaseLockssManager {
    */
 
   static class PollManagerEntry {
-    Poll poll;
+    BasePoll poll;
     PollSpec spec;
     int type;
     Deadline pollDeadline;
@@ -887,7 +887,7 @@ public class PollManager  extends BaseLockssManager {
     int status = 0;
     String key;
 
-    PollManagerEntry(Poll p) {
+    PollManagerEntry(BasePoll p) {
       poll = p;
       spec = p.getPollSpec();
       type = p.getVoteTally().getType();

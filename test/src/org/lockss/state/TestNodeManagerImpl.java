@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.91 2003-06-26 21:49:23 eaalto Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.92 2003-07-09 19:25:19 clairegriffin Exp $
  */
 
 /*
@@ -29,15 +29,15 @@ package org.lockss.state;
 import java.io.*;
 import java.net.*;
 import java.util.*;
-import org.lockss.test.*;
-import org.lockss.util.*;
+
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.base.*;
 import org.lockss.poller.*;
 import org.lockss.protocol.*;
-import org.lockss.hasher.HashService;
 import org.lockss.repository.*;
-import org.lockss.plugin.base.*;
+import org.lockss.test.*;
+import org.lockss.util.*;
 
 public class TestNodeManagerImpl extends LockssTestCase {
   public static final String TEST_URL = "http://www.example.com";
@@ -206,11 +206,11 @@ public class TestNodeManagerImpl extends LockssTestCase {
 
   public void testMapErrorCodes() {
     assertEquals(PollState.ERR_HASHING,
-                 nodeManager.mapResultsErrorToPollError(Poll.ERR_HASHING));
+                 nodeManager.mapResultsErrorToPollError(BasePoll.ERR_HASHING));
     assertEquals(PollState.ERR_IO,
-                 nodeManager.mapResultsErrorToPollError(Poll.ERR_IO));
+                 nodeManager.mapResultsErrorToPollError(BasePoll.ERR_IO));
     assertEquals(PollState.ERR_SCHEDULE_HASH,
-                 nodeManager.mapResultsErrorToPollError(Poll.ERR_SCHEDULE_HASH));
+                 nodeManager.mapResultsErrorToPollError(BasePoll.ERR_SCHEDULE_HASH));
     assertEquals(PollState.ERR_UNDEFINED,
                  nodeManager.mapResultsErrorToPollError(1));
   }

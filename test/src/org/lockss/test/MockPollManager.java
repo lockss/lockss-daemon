@@ -1,5 +1,5 @@
 /*
-* $Id: MockPollManager.java,v 1.9 2003-06-20 22:34:56 claire Exp $
+* $Id: MockPollManager.java,v 1.10 2003-07-09 19:25:19 clairegriffin Exp $
  */
 
 /*
@@ -92,7 +92,7 @@ public class MockPollManager extends PollManager {
     return (String)thePolls.get(key);
   }
 
-  public Poll createPoll(LcapMessage msg, PollSpec pollspec) throws ProtocolException {
+  public BasePoll createPoll(LcapMessage msg, PollSpec pollspec) throws ProtocolException {
     try {
       sendPollRequest(msg.getOpcode(), pollspec);
     }

@@ -1,5 +1,5 @@
 /*
- * $Id: PollTally.java,v 1.18 2003-06-30 23:09:09 clairegriffin Exp $
+ * $Id: PollTally.java,v 1.19 2003-07-09 19:25:19 clairegriffin Exp $
  */
 
 /*
@@ -51,7 +51,7 @@ import org.lockss.daemon.status.*;
  * PollTally is a struct-like class which maintains the current state of
  * votes within a poll.
  */
-public abstract class PollTally {
+public abstract class PollTally implements Tallier{
   public static final int STATE_POLLING = 0;
   public static final int STATE_ERROR = 1;
   public static final int STATE_NOQUORUM = 2;
@@ -230,7 +230,7 @@ public abstract class PollTally {
    * return the poll for which we are acting as a tally
    * @return the Poll.
    */
-  abstract Poll getPoll();
+  abstract BasePoll getPoll();
 
   /**
    * tally the votes for this poll
@@ -258,7 +258,7 @@ public abstract class PollTally {
    * replay all of the votes in a previously held poll.
    * @param deadline the deadline by which the replay must be complete
    */
-  public void startReplay(Deadline deadline) {
+  void startReplay(Deadline deadline) {
     originalVotes = pollVotes;
     pollVotes = new ArrayList(originalVotes.size());
     replayIter =  originalVotes.iterator();
@@ -277,7 +277,7 @@ public abstract class PollTally {
     if(replayIter == null) {
       log.warning("Call to replay a poll vote without call to replay all");
     }
-    Poll poll = getPoll();
+    BasePoll poll = getPoll();
     if(poll.isErrorState() || !replayIter.hasNext()) {
       replayIter = null;
       poll.stopPoll();

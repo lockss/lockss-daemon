@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.49 2003-06-26 01:50:27 clairegriffin Exp $
+ * $Id: TestPollManager.java,v 1.50 2003-07-09 19:25:19 clairegriffin Exp $
  */
 
 /*
@@ -92,7 +92,7 @@ public class TestPollManager extends LockssTestCase {
   public void testMakePoll() {
     // make a name poll
     try {
-      Poll p1 = pollmanager.makePoll(testmsg[0]);
+      BasePoll p1 = pollmanager.makePoll(testmsg[0]);
       // make sure we got the right type of poll here
       assertTrue(p1 instanceof V1NamePoll);
     }
@@ -102,7 +102,7 @@ public class TestPollManager extends LockssTestCase {
 
     // make a content poll
     try {
-      Poll p2 = pollmanager.makePoll(testmsg[1]);
+      BasePoll p2 = pollmanager.makePoll(testmsg[1]);
       // make sure we got the right type of poll here
       assertTrue(p2 instanceof V1ContentPoll);
 
@@ -114,7 +114,7 @@ public class TestPollManager extends LockssTestCase {
 
     // make a verify poll
     try {
-      Poll p3 = pollmanager.makePoll(testmsg[2]);
+      BasePoll p3 = pollmanager.makePoll(testmsg[2]);
       // make sure we got the right type of poll here
       assertTrue(p3 instanceof V1VerifyPoll);
     }
@@ -144,8 +144,8 @@ public class TestPollManager extends LockssTestCase {
   public void testFindPoll() {
     // lets see if we can find our name poll
     try {
-      Poll p1 = pollmanager.makePoll(testmsg[0]);
-      Poll p2 = pollmanager.findPoll(testmsg[0]);
+      BasePoll p1 = pollmanager.makePoll(testmsg[0]);
+      BasePoll p2 = pollmanager.findPoll(testmsg[0]);
       assertEquals(p1, p2);
     }
     catch (IOException ex) {
@@ -157,9 +157,9 @@ public class TestPollManager extends LockssTestCase {
   /** test for method removePoll(..) */
   public void testRemovePoll() {
     try {
-      Poll p1 = pollmanager.makePoll(testmsg[0]);
+      BasePoll p1 = pollmanager.makePoll(testmsg[0]);
       assertNotNull(p1);
-      Poll p2 = pollmanager.removePoll(p1.m_key);
+      BasePoll p2 = pollmanager.removePoll(p1.m_key);
       assertEquals(p1, p2);
     }
     catch (IOException ex) {
@@ -197,7 +197,7 @@ public class TestPollManager extends LockssTestCase {
 
     // check content poll conflicts
     try {
-      Poll c1 = pollmanager.makePoll(sameroot[1]);
+      BasePoll c1 = pollmanager.makePoll(sameroot[1]);
       // differnt content poll should be ok
 
       CachedUrlSet cus = pollmanager.checkForConflicts(testmsg[1],
@@ -236,7 +236,7 @@ public class TestPollManager extends LockssTestCase {
   /** test for method closeThePoll(..) */
   public void testCloseThePoll() {
     try {
-      Poll p1 = pollmanager.makePoll(testmsg[0]);
+      BasePoll p1 = pollmanager.makePoll(testmsg[0]);
 
       // we should now be active
       assertTrue(pollmanager.isPollActive(p1.m_key));
@@ -261,7 +261,7 @@ public class TestPollManager extends LockssTestCase {
   /** test for method suspendPoll(...) */
 
   public void testSuspendPoll() {
-    Poll p1 = null;
+    BasePoll p1 = null;
     try {
       p1 = TestPoll.createCompletedPoll(theDaemon, testau, testmsg[0], 7, 2);
       pollmanager.addPoll(p1);

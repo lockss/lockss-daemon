@@ -1,5 +1,5 @@
 /*
-* $Id: V1VerifyPoll.java,v 1.3 2003-06-30 23:09:09 clairegriffin Exp $
+* $Id: V1VerifyPoll.java,v 1.4 2003-07-09 19:25:19 clairegriffin Exp $
  */
 
 /*
@@ -49,7 +49,7 @@ import org.mortbay.util.B64Code;
  */
 class V1VerifyPoll extends V1Poll {
 
-  Poll originalPoll;
+  BasePoll originalPoll;
 
   public V1VerifyPoll(LcapMessage msg,
 			      PollSpec pollspec, PollManager pm) {

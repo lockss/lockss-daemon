@@ -1,5 +1,5 @@
 /*
-* $Id: PollerStatus.java,v 1.7 2003-06-30 23:09:09 clairegriffin Exp $
+* $Id: PollerStatus.java,v 1.8 2003-07-09 19:25:19 clairegriffin Exp $
  */
 
 /*
@@ -233,7 +233,7 @@ public class PollerStatus {
     public void populateTable(StatusTable table)
         throws StatusService.NoSuchTableException {
       String key = table.getKey();
-      Poll poll = getPoll(key);
+      BasePoll poll = getPoll(key);
       table.setTitle(getTitle(key));
       table.setColumnDescriptors(columnDescriptors);
       table.setDefaultSortRules(sortRules);
@@ -251,7 +251,7 @@ public class PollerStatus {
 
     // poll summary info
 
-    private List getSummary(Poll poll){
+    private List getSummary(BasePoll poll){
       PollTally tally = poll.getVoteTally();
       List summaryList =  ListUtil.list(
           new StatusTable.SummaryInfo("Target" , STRINGTYPE,
@@ -273,7 +273,7 @@ public class PollerStatus {
       return summaryList;
     }
 
-    private String getPollDescription(Poll poll) {
+    private String getPollDescription(BasePoll poll) {
       StringBuffer sb = new StringBuffer();
       sb.append(Poll.PollName[poll.getVoteTally().getType()]);
       sb.append(" poll on ");
@@ -284,7 +284,7 @@ public class PollerStatus {
       return sb.toString();
     }
     // row building methods
-    private List getRows(Poll poll) {
+    private List getRows(BasePoll poll) {
       PollTally tally = poll.getVoteTally();
 
       ArrayList l = new ArrayList();
@@ -320,8 +320,8 @@ public class PollerStatus {
 
 
     // key support routines
-    private Poll getPoll(String key) throws StatusService.NoSuchTableException {
-      Poll poll = pollManager.getPoll(key);
+    private BasePoll getPoll(String key) throws StatusService.NoSuchTableException {
+      BasePoll poll = pollManager.getPoll(key);
       if(poll == null) {
         throw new StatusService.NoSuchTableException("unknown poll key: " + key);
       }

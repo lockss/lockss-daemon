@@ -1,5 +1,5 @@
 /*
- * $Id: TestTreeWalkHandler.java,v 1.25 2003-06-25 21:19:55 eaalto Exp $
+ * $Id: TestTreeWalkHandler.java,v 1.26 2003-07-09 19:25:19 clairegriffin Exp $
  */
 
 /*
@@ -49,8 +49,6 @@ public class TestTreeWalkHandler extends LockssTestCase {
   private MockPollManager pollMan;
   private MockCrawlManager crawlMan;
   private List urlList = null;
-  private Poll namePoll = null;
-  private Poll contentPoll = null;
   private Random random = new Random();
 
   private MockLockssDaemon theDaemon;

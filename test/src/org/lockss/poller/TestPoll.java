@@ -1,5 +1,5 @@
 /*
- * $Id: TestPoll.java,v 1.63 2003-06-30 23:09:09 clairegriffin Exp $
+ * $Id: TestPoll.java,v 1.64 2003-07-09 19:25:19 clairegriffin Exp $
  */
 
 /*
@@ -234,7 +234,7 @@ public class TestPoll extends LockssTestCase {
     catch (IllegalStateException e) {
       // the socket isn't inited and should squack
     }
-    p.m_pollstate = Poll.PS_COMPLETE;
+    p.m_pollstate = BasePoll.PS_COMPLETE;
   }
 
   /** test for method voteInPoll(..) */
@@ -260,25 +260,25 @@ public class TestPoll extends LockssTestCase {
     catch (NullPointerException npe) {
       // the socket isn't inited and should squack
     }
-    p.m_pollstate = Poll.PS_COMPLETE;
+    p.m_pollstate = BasePoll.PS_COMPLETE;
   }
 
   public void testStartPoll() {
     V1Poll p = testpolls[0];
     p.startPoll();
-    assertEquals(Poll.PS_WAIT_HASH, p.m_pollstate);
-    p.m_pollstate = Poll.PS_COMPLETE;
+    assertEquals(BasePoll.PS_WAIT_HASH, p.m_pollstate);
+    p.m_pollstate = BasePoll.PS_COMPLETE;
   }
 
   public void testScheduleOurHash() {
     V1Poll p = testpolls[0];
-    p.m_pollstate = Poll.PS_WAIT_HASH;
+    p.m_pollstate = BasePoll.PS_WAIT_HASH;
     assertTrue(p.scheduleOurHash());
     TimeBase.step(p.m_deadline.getRemainingTime()/2);
     assertTrue(p.scheduleOurHash());
     TimeBase.step(p.m_deadline.getRemainingTime()- 1000);
     assertFalse(p.scheduleOurHash());
-    p.m_pollstate = Poll.PS_COMPLETE;
+    p.m_pollstate = BasePoll.PS_COMPLETE;
 
   }
 
@@ -288,11 +288,11 @@ public class TestPoll extends LockssTestCase {
     p.m_tally.quorum = 10;
     p.m_tally.numAgree = 7;
     p.m_tally.numDisagree = 3;
-    p.m_pollstate = Poll.PS_WAIT_TALLY;
+    p.m_pollstate = BasePoll.PS_WAIT_TALLY;
     p.stopPoll();
-    assertTrue(p.m_pollstate == Poll.PS_COMPLETE);
+    assertTrue(p.m_pollstate == BasePoll.PS_COMPLETE);
     p.startPoll();
-    assertTrue(p.m_pollstate == Poll.PS_COMPLETE);
+    assertTrue(p.m_pollstate == BasePoll.PS_COMPLETE);
   }
 
   /** test for method startVoteCheck(..) */
@@ -301,7 +301,7 @@ public class TestPoll extends LockssTestCase {
     p.m_pendingVotes = 3;
     p.startVoteCheck();
     assertEquals(4, p.m_pendingVotes);
-    p.m_pollstate = Poll.PS_COMPLETE;
+    p.m_pollstate = BasePoll.PS_COMPLETE;
   }
 
   /** test for method stopVote(..) */
@@ -310,7 +310,7 @@ public class TestPoll extends LockssTestCase {
     p.m_pendingVotes = 3;
     p.stopVoteCheck();
     assertEquals(2, p.m_pendingVotes);
-    p.m_pollstate = Poll.PS_COMPLETE;
+    p.m_pollstate = BasePoll.PS_COMPLETE;
   }
 
   private V1NamePoll makeCompletedNamePoll(int numAgree,
@@ -389,7 +389,7 @@ public class TestPoll extends LockssTestCase {
     for(int i = 0; i < numDissenting; i++) {
       np.m_tally.addVote(np.makeVote(disagree_msg2, false), id, false);
     }
-    np.m_pollstate = Poll.PS_COMPLETE;
+    np.m_pollstate = BasePoll.PS_COMPLETE;
     np.m_tally.tallyVotes();
     return np;
   }
@@ -415,7 +415,7 @@ public class TestPoll extends LockssTestCase {
     log.debug3("createCompletedPoll 1");
     ((MockCachedUrlSet)spec.getCachedUrlSet()).setHasContent(false);
     log.debug3("createCompletedPoll 1");
-    Poll pp = daemon.getPollManager().createPoll(testmsg, spec);
+    BasePoll pp = daemon.getPollManager().createPoll(testmsg, spec);
     log.debug3("createCompletedPoll 1");
     assertNotNull(pp);
     assertTrue(pp instanceof V1Poll);
@@ -428,7 +428,7 @@ public class TestPoll extends LockssTestCase {
     p.m_tally.localEntries = makeEntries(1,3);
     p.m_tally.votedEntries = makeEntries(1,5);
     p.m_tally.votedEntries.remove(1);
-    p.m_pollstate = Poll.PS_COMPLETE;
+    p.m_pollstate = BasePoll.PS_COMPLETE;
     log.debug3("poll " + p.toString());
     try {
       p.m_tally.tallyVotes();
@@ -525,7 +525,7 @@ public class TestPoll extends LockssTestCase {
      testpolls = new V1Poll[3];
      for (int i = 0; i < 3; i++) {
        log.debug3("initTestPolls: " + i);
-       Poll p = pollmanager.makePoll(testmsg[i]);
+       BasePoll p = pollmanager.makePoll(testmsg[i]);
        assertTrue(p instanceof V1Poll);
        switch (i) {
        case 0:

@@ -1,5 +1,5 @@
 /*
-* $Id: V1Poll.java,v 1.3 2003-06-30 23:09:09 clairegriffin Exp $
+* $Id: V1Poll.java,v 1.4 2003-07-09 19:25:19 clairegriffin Exp $
  */
 
 /*
@@ -55,7 +55,7 @@ import org.lockss.daemon.status.*;
  * @version 1.0
  */
 
-public abstract class V1Poll extends Poll {
+public abstract class V1Poll extends BasePoll {
   static final String PARAM_AGREE_VERIFY = Configuration.PREFIX +
       "poll.agreeVerify";
   static final String PARAM_DISAGREE_VERIFY = Configuration.PREFIX +
@@ -332,7 +332,7 @@ public abstract class V1Poll extends Poll {
       log.debug("poll stopped with error: " + ERROR_STRINGS[ -m_pollstate]);
     }
     else {
-      m_pollstate = Poll.PS_COMPLETE;
+      m_pollstate = BasePoll.PS_COMPLETE;
     }
     m_pollmanager.closeThePoll(m_key);
     log.debug3("closed the poll:" + m_key);
