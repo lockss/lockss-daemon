@@ -1,5 +1,5 @@
 /*
- * $Id: HashQueue.java,v 1.11 2002-12-02 00:35:49 tal Exp $
+ * $Id: HashQueue.java,v 1.12 2002-12-02 23:15:42 tal Exp $
  */
 
 /*
@@ -132,7 +132,10 @@ class HashQueue implements Serializable {
 	while (iter.hasNext()) {
 	  qreq = (Request)iter.next();
 	  if (qreq.overrun()) {
-	    // don't let overrunners prevent others from getting into queue.
+	    // Don't let overrunners prevent others from getting into queue.
+	    // (Their curEst() is zero so they wouldn't affect the
+	    //  totalDuration, but their deadline might preceed the
+	    //  new request's deadline, so might now be unachievable.)
 	    break;
 	  }
 	  totalDuration += qreq.curEst();
