@@ -1,5 +1,5 @@
 /*
- * $Id: LockssReceivedDatagram.java,v 1.4 2003-01-21 18:33:48 tal Exp $
+ * $Id: LockssReceivedDatagram.java,v 1.5 2003-03-21 20:48:45 tal Exp $
  */
 
 /*
@@ -152,7 +152,7 @@ public class LockssReceivedDatagram extends LockssDatagram {
   }
 
   public String toString() {
-    return "[LRDG: proto=" + protocol + ", " +
+    return "[LRDG: proto=" + getProtocol() + ", " +
       (isMulticast() ? "M" : "U") +
       " from " + packet.getAddress() + "]";
   }
