@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.25 2003-01-13 17:08:24 tal Exp $
+ $Id: build.xml,v 1.26 2003-02-04 07:33:57 tal Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
@@ -175,6 +175,14 @@ Args:
                classname="org.apache.tools.ant.taskdefs.optional.junit.JUnitTask" />
     <available property="junit.available" 
                classname="junit.framework.Test" />
+    <condition property="class.arg.specified">
+      <and>
+        <isset property="class" />
+        <not>
+          <equals arg1="${class}" arg2="" trim="true" />
+        </not>
+      </and>
+    </condition>
   </target>
 
   <target name="prepare.contrib">
@@ -465,7 +473,7 @@ Args:
   </target>
 
   <!-- ==================================================================== -->
-  <target name="run-class" depends="jar-tests"
+  <target name="run-class" depends="jar-tests,check.class.arg"
    description="Run a class named by class prop, with args in args prop" >
     <!-- default args empty if not supplied on command line -->
     <property name="args" value="" />
@@ -529,7 +537,7 @@ Test results in ${test.results}
 -->
   <!-- ==================================================================== -->
   <target name="test-class"
-   depends="prepare.test,check.junit,jar-ant,jar-tests"
+   depends="prepare.test,check.class.arg,check.junit,jar-ant,jar-tests"
    description="Run all tests for a single class, named by the 'class' property" >
     <property name="loglevel" value="" />
     <echo>
@@ -561,7 +569,7 @@ Test results in ${test.results}
 
   <!-- ==================================================================== -->
   <target name="test-one"
-   depends="prepare.test,check.junit,jar-tests"
+   depends="prepare.test,check.class.arg,check.junit,jar-tests"
    description="Run a single test class, named by the 'class' property" >
     <property name="loglevel" value="" />
     <property name="timeout" value="" />
@@ -620,6 +628,10 @@ Test results in ${test.results}
    description="Synonym for checkout-and-build." />
 
   <!-- ==================================================================== -->
+  <target name="check.class.arg" unless="class.arg.specified" >
+    <fail message="The &quot;class&quot; arg must be specified with -Dclass=&lt;classname&gt;" />
+  </target>
+
   <target name="check.junit"
    depends="check.junit.task,check.junit.jar">
   </target>
