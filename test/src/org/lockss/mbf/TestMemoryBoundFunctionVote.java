@@ -1,5 +1,5 @@
 /*
- * $Id: TestMemoryBoundFunctionVote.java,v 1.12 2003-09-26 23:49:01 eaalto Exp $
+ * $Id: TestMemoryBoundFunctionVote.java,v 1.13 2003-10-14 17:47:00 dshr Exp $
  */
 
 /*
@@ -81,7 +81,11 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
   private static byte[] basisA0 = null;
 
   /**
-   * Set up the test case
+   * Set up the test case by creating the two basis arrays and a good
+   * and a bad content array (if necessary),  and creating the necessary
+   * factory instances, poll ID and voter ID.
+   * 
+   * @throws Exception should not happen
    */
   protected void setUp() throws Exception {
     super.setUp();
@@ -103,12 +107,12 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
     if (goodContent == null) {
       goodContent = new byte[256*1024];
       rand.nextBytes(goodContent);
-      log.info(goodContent.length + "bytes of good synthetic content created");
+      log.info(goodContent.length + " bytes of good synthetic content created");
     }
     if (badContent == null) {
       badContent = new byte[256*1024];
       rand.nextBytes(badContent);
-      log.info(badContent.length + "bytes of bad synthetic content created");
+      log.info(badContent.length + " bytes of bad synthetic content created");
     }
     if (MBFfactory == null) {
       MBFfactory = new MemoryBoundFunctionFactory[MBFnames.length];
@@ -141,16 +145,34 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
   }
 
   /** tearDown method for test case
-   * @throws Exception if XXX
+   * @throws Exception should not happen
    */
   public void tearDown() throws Exception {
     super.tearDown();
   }
 
   /**
-   * Test factories
+   * Test factory by trying to create a bogus one.
    */
-  public void testConstructors() {
+  public void testBadFactory() {
+    boolean gotException = false;
+    try {
+      MemoryBoundFunctionVoteFactory tmp =
+	new MemoryBoundFunctionVoteFactory("BOGUS");
+    } catch (NoSuchAlgorithmException ex) {
+      gotException = true;
+    } catch (Exception ex) {
+      fail("BOGUS threw " + ex.toString());
+    }
+    if (!gotException)
+      fail("BOGUS didn't throw NoSuchAlgorithmException");
+  }
+
+  /**
+   * Test factories by creating a generator and a verifier for each
+   * possible combination of MBF Vote and MBF implementations.
+   */
+  public void testGoodFactory() {
     byte[] nonce = new byte[4];
     rand.nextBytes(nonce);
     CachedUrlSet cus = new MockCachedUrlSet();
@@ -200,7 +222,8 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
   }
 
   /**
-   * Test an agreeing vote
+   * Test an agreeing vote for each combination of MBF Vote and MBF
+   * implementation.
    */
   public void testAgreeingVote() {
     for (int j = 0; j < MBFVfactory.length; j++)
@@ -209,7 +232,9 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
   }
 
   /**
-   * Test a disagreeing vote
+   * Test a disagreeing vote for each combination of MBF Vote and MBF
+   * implementation.  The vote should not agree because the CUS content
+   * is different.
    */
   public void testDisagreeingVote() {
     for (int j = 0; j < MBFVfactory.length; j++)
@@ -218,7 +243,8 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
   }
 
   /**
-   * Test a vote whose CUS is half the length it is supposed to be
+   * Test a vote whose CUS is half the length it is supposed to be,
+   * which should not agree.
    */
   public void testShortVote() {
     for (int j = 0; j < MBFVfactory.length; j++)
@@ -228,7 +254,7 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
 
   /**
    * Test verifying a vote with a nonce different from the one
-   * used to generate it.
+   * used to generate it, which should not agree.
    */
   public void testInvalidNonce() {
     for (int j = 0; j < MBFVfactory.length; j++)
@@ -236,6 +262,9 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
 	invalidNonce(i, j);
   }
     
+  /*
+   * Test verifying a vote which should agree.
+   */
   private void agreeingVote(int i, int j) {
     byte[] nonce = new byte[4];
     rand.nextBytes(nonce);
@@ -248,6 +277,10 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
     onePair(i, j, cus1, cus2, nonce, nonce, true, true, 4096);
   }
 
+  /*
+   * Test verifying a vote which should not agree because the CUS content
+   * is different.
+   */
   private void disagreeingVote(int i, int j) {
     byte[] nonce = new byte[4];
     rand.nextBytes(nonce);

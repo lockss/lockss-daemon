@@ -1,5 +1,5 @@
 /*
- * $Id: TestMemoryBoundFunction.java,v 1.11 2003-09-10 04:09:43 dshr Exp $
+ * $Id: TestMemoryBoundFunction.java,v 1.12 2003-10-14 17:47:00 dshr Exp $
  */
 
 /*
@@ -58,7 +58,8 @@ public class TestMemoryBoundFunction extends LockssTestCase {
   private static MemoryBoundFunctionFactory[] factory = null;
 
   /**
-   * Set up test case
+   * Set up test case by creating the basis arrays (if necessary).
+   * @throws Exception should not happen
    */
   protected void setUp() throws Exception {
     super.setUp();
@@ -80,7 +81,7 @@ public class TestMemoryBoundFunction extends LockssTestCase {
   }
 
   /** tearDown method for test case
-   * @throws Exception if XXX
+   * @throws Exception should not happen
    */
   public void tearDown() throws Exception {
     super.tearDown();
@@ -91,9 +92,9 @@ public class TestMemoryBoundFunction extends LockssTestCase {
   // XXX separate timing tests etc into Func
 
   /**
-   * Test factory
+   * Test factory by attempting to create one for a BOGUS implementation.
    */
-  public void testFactory() {
+  public void testBadFactory() {
     boolean gotException = false;
     try {
       MemoryBoundFunctionFactory tmp =
@@ -105,16 +106,21 @@ public class TestMemoryBoundFunction extends LockssTestCase {
     }
     if (!gotException)
       fail("BOGUS didn't throw NoSuchAlgorithmException");
-    gotException = false;
+  }
+
+  /**
+   * Test factory by creating one for each MBF implementation
+   * and for each one create a generator and a verifier.
+   */
+  public void testGoodFactory() {
+    boolean gotException = false;
     try {
       byte[] b1 = new byte[4];
       byte[] b2 = new byte[4];
       MemoryBoundFunctionFactory tmp =
 	new MemoryBoundFunctionFactory("MOCK", b1, b2);
-    } catch (MemoryBoundFunctionException ex) {
-      gotException = true;
     } catch (Exception ex) {
-      fail("BOGUS threw " + ex.toString());
+      fail("MOCK threw " + ex.toString());
     }
     byte[] nonce = new byte[4];
     rand.nextBytes(nonce);
@@ -175,7 +181,7 @@ public class TestMemoryBoundFunction extends LockssTestCase {
   }
 
   /**
-   * Test exceptions
+   * Test that an exception is thrown if the proof is too long
    */
   public void testLongProof() {
     byte[] nonce = new byte[4];
@@ -194,6 +200,10 @@ public class TestMemoryBoundFunction extends LockssTestCase {
     }
   }
 
+  /**
+   * Test that an exception is thrown for an empty proof unless the
+   * implementation is MBF2.
+   */
   public void testEmptyProof() {
     byte[] nonce = new byte[4];
     rand.nextBytes(nonce);
@@ -217,7 +227,7 @@ public class TestMemoryBoundFunction extends LockssTestCase {
   }
 
   /**
-   * Test one generate/verify pair for valid
+   * Test one generate/verify pair with a good proof and nonce
    */
   public void testGoodProofAndNonce() throws IOException {
     for (int i = 0; i < names.length; i++)
@@ -225,7 +235,7 @@ public class TestMemoryBoundFunction extends LockssTestCase {
   }
 
   /**
-   * Test one generate/verify pair for invalid proof
+   * Test one generate/verify pair with a bad proof and good nonce
    */
   public void testBadProofGoodNonce() throws IOException {
     for (int i = 0; i < names.length; i++)
@@ -234,7 +244,7 @@ public class TestMemoryBoundFunction extends LockssTestCase {
 
 
   /**
-   * Test one generate/verify pair for invalid nonce
+   * Test one generate/verify pair with a good proof and a bad nonce
    */
   public void testGoodProofBadNonce() throws IOException {
     for (int i = 0; i < names.length; i++)
@@ -242,7 +252,7 @@ public class TestMemoryBoundFunction extends LockssTestCase {
   }
 
   /**
-   * Test one generate/verify pair for invalid nonce & proof
+   * Test one generate/verify pair with a bad proof and a bad nonce
    */
   public void testBadProofBadNonce() throws IOException {
     for (int i = 0; i < names.length; i++)
