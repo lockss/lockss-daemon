@@ -1,5 +1,5 @@
 /*
- * $Id: OaiCrawler.java,v 1.2 2004-12-04 01:09:24 dcfok Exp $
+ * $Id: OaiCrawler.java,v 1.3 2004-12-18 01:44:57 dcfok Exp $
  */
 
 /*
@@ -51,9 +51,16 @@ import java.lang.NoSuchFieldException;
 import org.xml.sax.SAXException;
 import org.apache.xpath.XPathAPI;
 import org.apache.xpath.objects.XObject;
+
 import java.text.SimpleDateFormat;
 
 public class OaiCrawler extends FollowLinkCrawler {
+
+  private static final String PARAM_OAI_REQUEST_RETRY_TIMES =
+    Configuration.PREFIX + "OaiRecords.numOaiRequestRetries";
+  private static final int DEFAULT_OAI_REQUEST_RETRY_TIMES = 3;
+
+  private int maxOaiRetries = DEFAULT_OAI_REQUEST_RETRY_TIMES;
 
   private OaiCrawlSpec spec;
 
@@ -69,6 +76,12 @@ public class OaiCrawler extends FollowLinkCrawler {
     crawlStatus = new Crawler.Status(au, ListUtil.list(oaiHandlerUrl), getType());
   }
 
+  protected void setCrawlConfig(Configuration config) {
+    super.setCrawlConfig(config);
+    maxOaiRetries = 
+      config.getInt(PARAM_OAI_REQUEST_RETRY_TIMES, DEFAULT_OAI_REQUEST_RETRY_TIMES);
+  }
+
   public int getType() {
     return Crawler.OAI;
   }
@@ -82,140 +95,90 @@ public class OaiCrawler extends FollowLinkCrawler {
    */
   protected boolean doCrawl0(){
     Set extractedUrls = new HashSet();
-    //    followLink = Configuration.getBooleanParam(PARAM_FOLLOW_LINK, DEFAULT_FOLLOW_LINK);
     if (shouldFollowLink() ) {
       logger.info("crawling in follow link mode");
-      return super.doCrawl0();
     } else {
       logger.info("crawling in not follow link mode");
-      setMaxDepth(1);
-      return super.doCrawl0();
     }
+    return super.doCrawl0();
   }
 
   /***
-   * gather information to issue a OAI request and return a set of
-   * url with updated content
+   * Issue a OAI request and get OAI response, fetch and parse the url from the oai response
+   * return the set of parsed url if it is in followLink mode
    *
-   * information needed:
-   * 1. OAI handler URL (startingUrls from crawlSpec)
-   * 2. harvest verb (ListRecords)
-   * 3. metadata format (oai_dc)
-   * 4. set name (if we use setSpec to specific a AU)
-   * 5. from  (date of last crawl)
-   * 6. until (date of this current crawl)
-   *
-   * a example request will be
-   * http://www.biomedcentral.com/oai/2.0/?verb=ListRecords&from=2004-09-05&
-   *   until=2004-09-08&metadataPrefix=oai_dc&set=journal%3A3001
-   *
-   * @return a set of Url that is updated within the from and until time range.
+   * @return a set of Url that parsed from the url in the Oai response
    */
-  protected Set getUrlsToFollow() {
-    Set updatedUrls = new HashSet();
-    OaiRequestData oaiRequestData = spec.getOaiRequestData();
-    String baseUrl = oaiRequestData.getOaiRequestHandlerUrl();
-    String setSpec = oaiRequestData.getAuSetSpec();
-    String metadataPrefix = oaiRequestData.getMetadataPrefix();    
-    String from = getFromTime();
-    String until = getUntilTime();
-    ListRecords listRecords = null;
-    
-    try {
-      listRecords = new ListRecords(baseUrl, from, until, setSpec,
-						metadataPrefix);
-    } catch (IOException e){
-      logger.error("IOException when doing new ListRecords()", e);
-    } catch (ParserConfigurationException e) {
-      logger.error("ParserConfigurationException when doing new ListRecords()", e);
-    } catch (SAXException e) {
-      logger.error("SAXException when doing new ListRecords()", e);
-    } catch (TransformerException e) {
-      logger.error("TransformerException in new ListRecords()", e);
-    }
+   protected Set getUrlsToFollow() {
+     Set extractedUrls = new HashSet();
+     OaiRequestData oaiRequestData = spec.getOaiRequestData();
+     
+     OaiRecords oaiRecords = 
+       new OaiRecords(oaiRequestData, getFromTime(), getUntilTime(), maxOaiRetries);
+     
+     List errList = oaiRecords.getErrors();
+     if ( !errList.isEmpty() ){
+       crawlStatus.setCrawlError("Error in processing Oai Records");
+       //we might want to add this Oai Error List to crawl Status as well.
+       logger.error("Error in processing Oai Records, here is the stack of error(s):\n");
+       Iterator errIt = errList.iterator();
+       while (errIt.hasNext()){
+	 Exception oaiEx = (Exception) errIt.next();
+	 logger.error("  ",oaiEx);
+       }
+     }
 
-    while (listRecords != null) {
-      try {
-	//XXX we can handle error better
-	NodeList errors = listRecords.getErrors();   
-	if (errors != null && errors.getLength() > 0) {
-	  logger.error("Found errors");
-	  int length = errors.getLength();
-	  for (int i=0; i<length; ++i) {
-	    Node item = errors.item(i);
-	    logger.debug3(item.toString());
-	  }
-	  logger.debug3("Error record: " + listRecords.toString());
-	  //abort crawl if error encountered ?
-	  crawlAborted = true;
-	  break;
-	}
-      } catch (TransformerException e) {
-	logger.error("TransformerException in getting nodeList of error from oai reply document", e);
-	crawlAborted = true;
-      } 
- 
-      //see what is inside the response
-      logger.debug3("The content of listRecord : \n" + listRecords.toString());
+     Set updatedUrls = oaiRecords.getUpdatedUrls();
+     if ( updatedUrls.isEmpty() ) {
+       logger.warning("No url found in the OAI reponse ! ");
+     } else {
+       
+       Iterator it = updatedUrls.iterator();
+       while (it.hasNext()){
+	 String url = (String) it.next();
+	 
+	 logger.debug2("Trying to process " +url);
+	 
+	 // check crawl window during crawl
+	 if (!withinCrawlWindow()) {
+	   crawlStatus.setCrawlError(Crawler.STATUS_WINDOW_CLOSED);
+	   abortCrawl();
+	  //return null;
+	 }
+	 
+	 if (parsedPages.contains(url)) {
+	   continue;
+	 }
+	 
+	 //catch and warn if there's a url in the start urls
+	 //that we shouldn't cache
+	 if (spec.isIncluded(url)) {
+	   if (!fetchAndParse(url, extractedUrls, parsedPages, true, true)) {
+	     if (crawlStatus.getCrawlError() == null) {
+	       crawlStatus.setCrawlError(Crawler.STATUS_ERROR);
+	     }
+	   }
+	 } else {
+	   logger.warning("Called with a starting url we aren't suppose to "+
+			  "cache: "+url);
+	 }
+	 
+       }
+     }
+     
+     lvlCnt = 1;
 
-      try {
-	// xpath experssion that parse through the doc and extract all the links in <dc:identifier> 
-	// XXX we can let the publisher design the path/metadataFormat in the future version
-	String xpath = "//*[namespace-uri()='"+ oaiRequestData.getMetadataNamespaceUrl() + "' and local-name()='"+ oaiRequestData.getUrlContainerTagName() +"']";
-	
-	logger.debug3("xpath to get the Urls = " + xpath);
-	
-	// Get the matching elements
-        
-	NodeList nodeList = listRecords.getNodeList(xpath);
+     if (shouldFollowLink()){
+       logger.debug3("Urls from Oai repository: \n" + extractedUrls);
+       return extractedUrls;
+     } else {
+       // it should not return any URL if not follow link
+       return Collections.EMPTY_SET;
+     }
 
-	logger.debug3("nodeList length = " + nodeList.getLength());
+   }
 
-	// Process the elements in the nodelist
-        for (int i=0; i<nodeList.getLength(); i++) {
-          // add the Urls to the updatedUrls set
-	  Node node = nodeList.item(i);
-	  if (node != null) {
-	    XObject xObject = XPathAPI.eval(node, "string()");
-	    String str = xObject.str();
-	    //XXX need to do some testing of the validity of the Url here.
 
-	    updatedUrls.add(str);
-	    //logger.debug3("node (" + i + ") value = " + str);
-	  }
-        }
-      } catch (TransformerException e) {
-	logger.error("Thrown TransformerException when getting the NodeList " + 
-                     "of <dc:idenitifer> from oai reply document", e);
-	crawlAborted = true;
-      }
-
-      try {
-	String resumptionToken = listRecords.getResumptionToken();
-	logger.debug3("resumptionToken: " + resumptionToken);
-	if (resumptionToken == null || resumptionToken.length() == 0) {
-	  listRecords = null;
-	} else {
-	  listRecords = new ListRecords(baseUrl, resumptionToken);
-	}
-      } catch (TransformerException e){
-	logger.error("TransformerException when getting resumptionToken from oai reply document",e);
-      } catch (IOException e){
-	logger.error("IOException in listRecords.getResumptionToken() ", e);
-      } catch (NoSuchFieldException e) {
-	logger.error("NoSuchFieldException in listRecords.getResumptionToken()", e);
-      } catch (ParserConfigurationException e) {
-	logger.error("ParserConfigurationException in listRecords.getResumptionToken()", e);
-      } catch (SAXException e) {
-	logger.error("SAXException in new ListRecords()", e);
-      }
-
-    } // loop until there is no resumptionToken
-    lvlCnt = 1;
-    //testing purpose
-    logger.debug3("Urls from Oai repository: \n" + updatedUrls);
-    return updatedUrls;
-  }
 
   /**
    * getting the last crawl time from AuState of the current AU

@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.15 2004-12-12 23:02:10 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.16 2004-12-18 01:44:57 dcfok Exp $
  */
 
 /*
@@ -122,10 +122,8 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
    * One can update the Max. Crawl Depth before calling doCrawl10().
    * Currently used only for "Not Follow Link" mode in OaiCrawler
    *
-   * This method will be no longer useful if we change the behavior in getUrlsToFollow()
-   * in OaiCrawler also fetch and parse the url inside the response. I want to discuss 
-   * about this, but I prefer more the way it is now, ie. OaiCrawler.getUrlsToFollow()
-   * does not fetch and parse the url inside the response
+   * XXX  This method should go away after serious testing of the new 
+   * implemenated getUrlsTOFollow() in OaiCrawler
    *
    * @param newMax the new max. crawl depth
    */
@@ -154,7 +152,8 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
     if (!checkPermissionList(permissionList)){
       return aborted();
     }
-
+ 
+    // get the Urls to follow from either NewContentCrawler or OaiCrawler
     extractedUrls = getUrlsToFollow();
     logger.debug3("Urls extracted from getUrlsToFollow() : "
 		  + extractedUrls.toString() );
@@ -220,7 +219,7 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
       lvlCnt++;
     } // end of outer while
 
-    if (!urlsToCrawl.isEmpty() && shouldFollowLink() ) {
+    if (!urlsToCrawl.isEmpty() ) {
       //when there are more Url to crawl in  new content crawl or follow link moded oai crawl
       logger.error("Site depth exceeds max. crawl depth. Stopped Crawl of " +
 		   au.getName() + " at depth " + lvlCnt);
@@ -332,6 +331,9 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
     // don't cache if already cached, unless overwriting
     if (fetchIfChanged || !uc.getCachedUrl().hasContent()) {
 
+//       if (!fetch(uc, error)){
+// 	return false;
+//       }
       try {
 	if (failedUrls.contains(uc.getUrl())) {
 	  //skip if it's already failed
@@ -405,6 +407,40 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
     logger.debug3("Removing from parsing list: "+uc.getUrl());
     return (error == null);
   }
+
+//   protected boolean fetch(UrlCacher uc, String error){
+//     try {
+//       if (failedUrls.contains(uc.getUrl())) {
+// 	//skip if it's already failed
+// 	logger.debug3("Already failed to cache "+uc+". Not retrying.");
+//       } else {
+	
+// 	// checking the crawl permission of the url's host
+// 	if (!checkHostPermission(uc.getUrl(),true)){
+// 	  if (crawlStatus.getCrawlError() == null) {
+// 	    crawlStatus.setCrawlError("No permission to collect " + uc.getUrl());
+// 	  }
+// 	  return false;
+// 	}
+// 	cacheWithRetries(uc, maxRetries);
+//       }
+//     } catch (CacheException e) {
+//       // Failed.  Don't try this one again during this crawl.
+//       failedUrls.add(uc.getUrl());
+//       if (e.isAttributeSet(CacheException.ATTRIBUTE_FAIL)) {
+// 	logger.error("Problem caching "+uc+". Continuing", e);
+// 	  error = Crawler.STATUS_FETCH_ERROR;
+//       } else {
+// 	logger.warning(uc+" not found on publisher's site", e);
+//       }
+//     } catch (Exception e) {
+// 	failedUrls.add(uc.getUrl());
+// 	//XXX not expected
+// 	logger.error("Unexpected Exception during crawl, continuing", e);
+// 	error = Crawler.STATUS_FETCH_ERROR;
+//     }
+//     return true;
+//   } 
 
   private void cacheWithRetries(UrlCacher uc, int maxTries)
       throws IOException {

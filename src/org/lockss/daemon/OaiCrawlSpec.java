@@ -1,5 +1,5 @@
 /*
- * $Id: OaiCrawlSpec.java,v 1.2 2004-12-04 01:09:24 dcfok Exp $
+ * $Id: OaiCrawlSpec.java,v 1.3 2004-12-18 01:44:57 dcfok Exp $
  */
 
 /*
@@ -55,7 +55,7 @@ public class OaiCrawlSpec extends BaseCrawlSpec {
 	 ListUtil.list("http://171.66.236.27:8181/html/permission.html"),
 	 Collections.EMPTY_LIST,
  	 rule,
- 	 true);
+ 	 false);
   }
 
   public OaiCrawlSpec(String oaiRequestHandlerUrl, CrawlRule rule, List permissionList, boolean follow) {

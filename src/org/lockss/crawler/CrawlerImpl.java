@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerImpl.java,v 1.37 2004-12-07 17:56:02 troberts Exp $
+ * $Id: CrawlerImpl.java,v 1.38 2004-12-18 01:44:57 dcfok Exp $
  */
 
 /*
@@ -212,6 +212,7 @@ public abstract class CrawlerImpl implements Crawler {
         err = Crawler.STATUS_WINDOW_CLOSED;
       }
       else {
+	// go off to fetch the url and check for the permission statement
         if(checkPermission(permissionPage)) {
           crawl_ok = PermissionMap.PERMISSION_OK;
            if (crawlStatus.getCrawlError() == err) {

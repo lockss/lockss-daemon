@@ -1,5 +1,5 @@
 /*
- * $Id: OaiRequestData.java,v 1.1 2004-10-20 18:41:21 dcfok Exp $
+ * $Id: OaiRequestData.java,v 1.2 2004-12-18 01:44:57 dcfok Exp $
  */
 
 /*
@@ -32,6 +32,10 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.oai;
 
+/**
+ * An Object that contains all the information need from the plugin to
+ * issue an Oai Request
+ */
 public class OaiRequestData {
   
   private String oaiRequestHandlerUrl;
@@ -40,6 +44,15 @@ public class OaiRequestData {
   private String auSetSpec;
   private String metadataPrefix;
   
+  /**
+   * Constructor
+   *
+   * @param oaiRequestHandlerUrl Oai request handler URL of an Oai repository
+   * @param namespaceUrl metadata name space that the Oai reponse record using
+   * @param tagName XML tag name that contain an articules' URL
+   * @param setSpec Set name an articles belongs to
+   * @param prefix metadata prefix of Oai reponse record (e.g. oai_dc)
+   */
   public OaiRequestData(String oaiRequestHandlerUrl,
 			String namespaceUrl,
 			String tagName,
@@ -66,7 +79,6 @@ public class OaiRequestData {
   
   /** 
    * Gets the OaiRequestHandlerUrl
-   *
    */
   public String getOaiRequestHandlerUrl(){
     return oaiRequestHandlerUrl;

@@ -1,5 +1,5 @@
 /*
- * $Id: TestOaiCrawler.java,v 1.2 2004-12-12 23:02:09 tlipkis Exp $
+ * $Id: TestOaiCrawler.java,v 1.3 2004-12-18 01:44:56 dcfok Exp $
  */
 
 /*
@@ -52,18 +52,12 @@ public class TestOaiCrawler extends LockssTestCase {
 //   private MockCachedUrlSet mcus = null;
      private CrawlSpec spec = null;
      private MockAuState aus = new MockAuState();
-//   private static List testUrlList = ListUtil.list("http://example.com");
      private MockCrawlRule crawlRule = null;
      private String handlerUrl = "http://www.example.com/handler.html";
      private String permissionUrl = "http://www.example.com/permission.html";
      private List permissionList = ListUtil.list(permissionUrl);  
-  //   private List startUrls = ListUtil.list(startUrl);
      private CrawlerImpl crawler = null;
-//   private MockContentParser parser = new MockContentParser();
 
-//   private static final String PARAM_RETRY_TIMES =
-//     Configuration.PREFIX + "CrawlerImpl.numCacheRetries";
-//   private static final int DEFAULT_RETRY_TIMES = 3;
      SimpleDateFormat iso8601DateFormatter = new SimpleDateFormat ("yyyy-MM-dd");
   
   public void setUp() throws Exception {
@@ -85,10 +79,6 @@ public class TestOaiCrawler extends LockssTestCase {
     crawler = new OaiCrawler(mau, spec, aus);
     ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MyMockPermissionChecker(1));
 
-//     mau.setParser(parser);
-//     Properties p = new Properties();
-//     p.setProperty(NewContentCrawler.PARAM_RETRY_PAUSE, "0");
-//     ConfigurationUtil.setCurrentConfigFromProps(p);
   }
 
   public void testMocThrowsForNullAu() {
@@ -235,7 +225,7 @@ public class TestOaiCrawler extends LockssTestCase {
   }//end of MyOaiCrawler
 
   public static void main(String[] argv) {
-    String[] testCaseList = {TestNewContentCrawler.class.getName()};
+    String[] testCaseList = {TestOaiCrawler.class.getName()};
     junit.textui.TestRunner.main(testCaseList);
   }
 
