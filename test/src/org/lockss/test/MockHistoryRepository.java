@@ -1,5 +1,5 @@
 /*
- * $Id: MockHistoryRepository.java,v 1.6 2004-02-03 02:48:39 eaalto Exp $
+ * $Id: MockHistoryRepository.java,v 1.7 2004-02-07 00:13:40 troberts Exp $
  */
 
 /*
@@ -33,7 +33,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.test;
 
-import java.util.HashMap;
+import java.util.*;
 import org.lockss.app.*;
 import org.lockss.state.*;
 import org.lockss.plugin.*;
@@ -97,4 +97,17 @@ public class MockHistoryRepository implements HistoryRepository {
   public NodeState loadNodeState(CachedUrlSet cus) {
     return (NodeState)storedNodes.get(cus);
   }
+
+  public void storeIdentityAgreement(List list) {
+    throw new UnsupportedOperationException("not implemented");
+  }
+
+  public List loadIdentityAgreement() {
+    throw new UnsupportedOperationException("not implemented");
+  }
+
+  public List getStoredIdentityAgreement() {
+    throw new UnsupportedOperationException("not implemented");
+  }
+
 }
