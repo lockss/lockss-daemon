@@ -1,5 +1,5 @@
 /*
- * $Id: NodeStateImpl.java,v 1.16 2003-04-23 00:54:47 aalto Exp $
+ * $Id: NodeStateImpl.java,v 1.17 2003-05-09 20:53:30 aalto Exp $
  */
 
 /*
@@ -98,7 +98,7 @@ public class NodeStateImpl implements NodeState {
   public Iterator getPollHistories() {
     if (pollHistories==null) {
       repository.loadPollHistories(this);
-      Collections.sort(pollHistories);
+      Collections.sort(pollHistories, new HistoryComparator());
     }
     return Collections.unmodifiableList(pollHistories).iterator();
   }
@@ -106,7 +106,7 @@ public class NodeStateImpl implements NodeState {
   public PollHistory getLastPollHistory() {
     if (pollHistories==null) {
       repository.loadPollHistories(this);
-      Collections.sort(pollHistories);
+      Collections.sort(pollHistories, new HistoryComparator());
     }
     // history list is sorted
     Iterator historyIt = pollHistories.iterator();
@@ -129,7 +129,7 @@ public class NodeStateImpl implements NodeState {
   protected synchronized void closeActivePoll(PollHistory finished_poll) {
     if (pollHistories==null) {
       repository.loadPollHistories(this);
-      Collections.sort(pollHistories);
+      Collections.sort(pollHistories, new HistoryComparator());
     }
     // since the list is sorted, find the right place to add
     Comparator comp = new HistoryComparator();
@@ -161,7 +161,7 @@ public class NodeStateImpl implements NodeState {
       PollHistoryBean bean = (PollHistoryBean)beanIter.next();
       pollHistories.add(bean.getPollHistory());
     }
-    Collections.sort(pollHistories);
+    Collections.sort(pollHistories, new HistoryComparator());
   }
 
   protected List getPollHistoryBeanList() {

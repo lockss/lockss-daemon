@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeStateImpl.java,v 1.17 2003-04-23 00:54:46 aalto Exp $
+ * $Id: TestNodeStateImpl.java,v 1.18 2003-05-09 20:53:30 aalto Exp $
  */
 
 /*
@@ -168,16 +168,25 @@ public class TestNodeStateImpl extends LockssTestCase {
     assertEquals("test1upr", history.uprBound);
     assertEquals(123, history.startTime);
 
-    history = new PollHistory(1, "test1lwr", "test1upr", 0, 789, 0, null, false);
+    history = new PollHistory(1, "test2lwr", "test2upr", 0, 789, 0, null, false);
     state.closeActivePoll(history);
-    history = new PollHistory(2, "test2lwr", "test2upr", 0, 456, 0, null, false);
+    history = new PollHistory(2, "test1lwr", "test1upr", 0, 456, 0, null, false);
     state.closeActivePoll(history);
     history = state.getLastPollHistory();
-    assertNotNull(history);
     assertEquals(1, history.type);
-    assertEquals("test1lwr", history.lwrBound);
-    assertEquals("test1upr", history.uprBound);
+    assertEquals("test2lwr", history.lwrBound);
+    assertEquals("test2upr", history.uprBound);
     assertEquals(789, history.startTime);
+
+    history = new PollHistory(2, "test2lwr", "test2upr", 0, 890, 0, null, false);
+    state.closeActivePoll(history);
+    history = new PollHistory(2, "test1lwr", "test1upr", 0, 567, 0, null, false);
+    state.closeActivePoll(history);
+    history = state.getLastPollHistory();
+    assertEquals(2, history.type);
+    assertEquals("test2lwr", history.lwrBound);
+    assertEquals("test2upr", history.uprBound);
+    assertEquals(890, history.startTime);
   }
 
   public void testGetActivePolls() {
