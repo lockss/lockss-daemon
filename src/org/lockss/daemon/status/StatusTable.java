@@ -1,5 +1,5 @@
 /*
- * $Id: StatusTable.java,v 1.7 2003-03-14 01:52:31 troberts Exp $
+ * $Id: StatusTable.java,v 1.8 2003-03-14 23:04:34 troberts Exp $
  */
 
 /*
@@ -33,27 +33,65 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.daemon.status;
 
 import java.util.*;
+import org.lockss.util.*;
 
 /**
  * Returned by {@link StatusService#getTable(String, String)} 
  */
 public class StatusTable {
+  /**
+   * Must have meaningful toString() method
+   */
   public static final int TYPE_INT=0;
+
+  /**
+   * Must have meaningful toString() method
+   */
   public static final int TYPE_FLOAT=1;
+
+  /**
+   * Instanceof floating point number (Float, Double, etc.) and floatValue() 
+   * must return between 0 and 1, inclusive
+   */
   public static final int TYPE_PERCENT=2;
+
+  /**
+   * Instanceof number (Integer, Long, Float, etc.)
+   */
   public static final int TYPE_TIME_INTERVAL=3;
-  public static final int TYPE_STRING=4;
+
+  /**
+   * Objects of this type must have meaningful toString() method
+   */
+  public static final int TYPE_STRING=4;  
+  
+  /**
+   * Instanceof InetAddress
+   */
   public static final int TYPE_IP_ADDRESS=5;
+
+  /**
+   * Instanceof number (Integer, Long, Float, etc.)
+   */
   public static final int TYPE_DATE=6;
 
 
   private String name=null;
-  private Object key=null;
+  private String key=null;
   private List columnDescriptors;
   private List rows;
   private List defaultSortRules;
-
-  protected StatusTable(String name, Object key, List columnDescriptors, 
+  /**
+   * @param name String representing table name
+   * @param key String representing the key for this table, may be null
+   * @param columnDescriptors List of {@link ColumnDescriptor} objects
+   * @param defaultSortRules List of {@link SortRule} objects specifying the 
+   * default sort rules for this table.  If null, we'll sort ascending by 
+   * first column
+   * @param rows List of {@link java.util.Map} objects, representing rows in 
+   * this table.  Not assumed to be in any specific order
+   */
+  protected StatusTable(String name, String key, List columnDescriptors, 
 			List defaultSortRules, List rows) {
     if (defaultSortRules == null) {
       throw new IllegalArgumentException("Created with an null list of "
@@ -65,7 +103,7 @@ public class StatusTable {
     }
     this.name = name;
     this.columnDescriptors = columnDescriptors;
-    this.rows = makeRowList(rows);
+    this.rows = rows;
     this.defaultSortRules = defaultSortRules;
     this.key = key;
   }
@@ -82,13 +120,13 @@ public class StatusTable {
    * Get the key for this table
    * @returns key for this table
    */
-  public Object getKey() {
+  public String getKey() {
     return key;
   }
 
   /**
    * Gets a list of {@link StatusTable.ColumnDescriptor}s representing the 
-   * columns in this table in their perferred display order.
+   * columns in this table in their preferred display order.
    * @returns list of {@link StatusTable.ColumnDescriptor}s the columns in 
    * the table in the perferred display order
    */
@@ -115,17 +153,7 @@ public class StatusTable {
    * in the sort order specified by sortRules 
    */
   public List getSortedRows(List sortRules) {
-    Collections.sort(rows, 
-		     new SortRuleComparator(sortRules, columnDescriptors));
-    return rows;
-  }
-
-  private List makeRowList(List newRows) {
-    List rows = new ArrayList(newRows.size());
-    Iterator it = newRows.iterator();
-    while (it.hasNext()) {
-      rows.add((Map)it.next());  //cast to catch bad type
-    }
+    Collections.sort(rows, new SortRuleComparator(sortRules));
     return rows;
   }
 
@@ -145,42 +173,25 @@ public class StatusTable {
 
   private static class SortRuleComparator implements Comparator {
     List sortRules;
-    Map columnTypeMap;
 
-    public SortRuleComparator(List sortRules, List columns) {
+    public SortRuleComparator(List sortRules) {
       this.sortRules = sortRules;
-      columnTypeMap = makeColumnTypeMap(columns);
-    }
-
-    private Map makeColumnTypeMap(List columns) {
-      Iterator it = columns.iterator();
-      Map columnTypeMap = new HashMap();
-      while (it.hasNext()) {
-	ColumnDescriptor col = (ColumnDescriptor) it.next();
-	columnTypeMap.put(col.getColumnName(), 
-			  new Integer(col.getType()));
-      }
-      return columnTypeMap;
     }
 
     public int compare(Object a, Object b) {
-      Map mapA = (Map)a;
-      Map mapB = (Map)b;
+      Map rowA = (Map)a;
+      Map rowB = (Map)b;
       int returnVal = 0;
       Iterator it = sortRules.iterator();
 
       while (returnVal == 0 && it.hasNext()){
 	SortRule sortRule = (SortRule)it.next();
-	int type = getType(sortRule.getFieldName());
-	Comparable val1 = (Comparable)mapA.get(sortRule.getFieldName());
-	Comparable val2 = (Comparable)mapB.get(sortRule.getFieldName());
+	Comparable val1 = (Comparable)rowA.get(sortRule.getColumnName());
+	Comparable val2 = (Comparable)rowB.get(sortRule.getColumnName());
 	returnVal = sortRule.sortAscending() ? 
 	            val1.compareTo(val2) : -val1.compareTo(val2);
       }
       return returnVal;
-    }
-    private int getType(String field) {
-      return ((Integer)columnTypeMap.get(field)).intValue();
     }
   }
 
@@ -188,23 +199,23 @@ public class StatusTable {
    * Encapsulation of the info needed to sort on a single field
    */
   public static class SortRule {
-    String field;
+    String columnName;
     boolean sortAscending;
     
-    public SortRule(String field, boolean sortAscending) {
-      this.field = field;
+    public SortRule(String columnName, boolean sortAscending) {
+      this.columnName = columnName;
       this.sortAscending = sortAscending;
     }
     /**
      * @returns name of the field to sort on
      */
-    public String getFieldName(){
-      return field;
+    public String getColumnName(){
+      return columnName;
     }
     
     /**
-     * @returns true if this field should be sorted in ascending order,
-     * false if it should be sorted in decending order
+     * @returns true if this column should be sorted in ascending order,
+     * false if it should be sorted in descending order
      */
     public boolean sortAscending(){
       return sortAscending;
@@ -312,10 +323,9 @@ public class StatusTable {
       if (!tableName.equals(ref.getTableName())) {
 	return false;
       }
-      if (key == null) {
-	return ref.getKey() == null;
-      }
-      return key.equals(ref.getKey());
+
+      //true iff both strings are equal or null
+      return StringUtil.equalStrings(key, ref.getKey());
     }
       
 

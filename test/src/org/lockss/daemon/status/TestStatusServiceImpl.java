@@ -1,5 +1,5 @@
 /*
- * $Id: TestStatusServiceImpl.java,v 1.3 2003-03-14 01:42:15 troberts Exp $
+ * $Id: TestStatusServiceImpl.java,v 1.4 2003-03-14 23:04:34 troberts Exp $
  */
 
 /*
@@ -33,7 +33,7 @@ import org.lockss.util.*;
 public class TestStatusServiceImpl extends LockssTestCase {
   private static final Object[][] colArray1 = {
     {"name", "Name", new Integer(StatusTable.TYPE_STRING)},
-    {"rank", "rank", new Integer(StatusTable.TYPE_INT)}
+    {"rank", "Rank", new Integer(StatusTable.TYPE_INT)}
   };
 
   private static final Object[][] rowArray1 = {
@@ -69,8 +69,9 @@ public class TestStatusServiceImpl extends LockssTestCase {
   };
   
   private static final Object[][] rowArray3 = {
-    {"Primary Cache", new Integer(0)},
-    {"First Cache", new Integer(1)}
+    {"Cache B", new Integer(1)},
+    {"Cache A", new Integer(2)},
+    {"Cache C", new Integer(0)}
   };
 
   private static final Object[][] colArray4 = {
@@ -95,7 +96,7 @@ public class TestStatusServiceImpl extends LockssTestCase {
   }
     
 
-  public void testGetTableTwoParamWithNullTableNameThrows() 
+  public void testGetTableWithNullTableNameThrows() 
       throws StatusService.NoSuchTableException {
     try {
       statusService.getTable(null, "blah");
@@ -104,26 +105,9 @@ public class TestStatusServiceImpl extends LockssTestCase {
     }
   }
 
-  public void testGetTwoParamTableWithUnknownTableThrows() {
+  public void testGetTableWithUnknownTableThrows() {
     try {
       statusService.getTable("Bad name", "bad key");
-      fail("Should have thrown when given a bad name and key");
-    } catch (StatusService.NoSuchTableException tnfe) {
-    }
-  }
-
-  public void testGetTableOneParamWithNullTableNameThrows() 
-      throws StatusService.NoSuchTableException {
-    try {
-      statusService.getTable(null, null);
-      fail("Should have thrown when given a null name");
-    } catch (StatusService.NoSuchTableException iae) {
-    }
-  }
-
-  public void testGetOneParamTableWithUnknownTableThrows() {
-    try {
-      statusService.getTable("Bad name", null);
       fail("Should have thrown when given a bad name and key");
     } catch (StatusService.NoSuchTableException tnfe) {
     }
@@ -140,6 +124,7 @@ public class TestStatusServiceImpl extends LockssTestCase {
 
   public void testRegisteringAllTableThrows() {
     try {
+      statusService.startService(); //registers table of all tables
       statusService.registerStatusAccessor(StatusService.ALL_TABLES_TABLE, 
 					   new MockStatusAccessor());
       fail("Should have thrown after trying to register StatusAccessor for "+
@@ -149,6 +134,11 @@ public class TestStatusServiceImpl extends LockssTestCase {
   }    
 
   public void testUnregisteringBadDoesntThrow() {
+    statusService.unregisterStatusAccessor("table1");
+  }
+
+  public void testMultipleUnregisteringDontThrow() {
+    statusService.registerStatusAccessor("table1", new MockStatusAccessor());
     statusService.unregisterStatusAccessor("table1");
     statusService.unregisterStatusAccessor("table1");
   }
@@ -241,9 +231,10 @@ public class TestStatusServiceImpl extends LockssTestCase {
     StatusTable.SortRule rule = new StatusTable.SortRule("name", true);
     List sortRules = ListUtil.list(rule);
 
-    Object[][] expectedRowsArray = new Object[2][];
+    Object[][] expectedRowsArray = new Object[3][];
     expectedRowsArray[0] = rowArray3[1];
     expectedRowsArray[1] = rowArray3[0];
+    expectedRowsArray[2] = rowArray3[2];
     
     MockStatusAccessor statusAccessor = generateStatusAccessor(colArray3, 
 							       rowArray3);
@@ -263,6 +254,11 @@ public class TestStatusServiceImpl extends LockssTestCase {
     StatusTable.SortRule rule = new StatusTable.SortRule("name", false);
     List sortRules = ListUtil.list(rule);
 
+    Object[][] expectedRowsArray = new Object[3][];
+    expectedRowsArray[0] = rowArray3[2];
+    expectedRowsArray[1] = rowArray3[0];
+    expectedRowsArray[2] = rowArray3[1];
+
     MockStatusAccessor statusAccessor = generateStatusAccessor(colArray3, 
 							       rowArray3);
     statusAccessor.setDefaultSortRules(sortRules, null);
@@ -270,7 +266,8 @@ public class TestStatusServiceImpl extends LockssTestCase {
     statusService.registerStatusAccessor("table1", statusAccessor);
     StatusTable table = statusService.getTable("table1", null);
     List expectedRows = 
-      makeRowsFromArray(makeColumnDescriptorsFromArray(colArray3), rowArray3);
+      makeRowsFromArray(makeColumnDescriptorsFromArray(colArray3), 
+			expectedRowsArray);
     List actualRows = table.getSortedRows(sortRules);
     assertRowsEqual(expectedRows, actualRows);
   }
@@ -280,6 +277,11 @@ public class TestStatusServiceImpl extends LockssTestCase {
     StatusTable.SortRule rule = new StatusTable.SortRule("rank", true);
     List sortRules = ListUtil.list(rule);
 
+    Object[][] expectedRowsArray = new Object[3][];
+    expectedRowsArray[0] = rowArray3[2];
+    expectedRowsArray[1] = rowArray3[0];
+    expectedRowsArray[2] = rowArray3[1];
+
     MockStatusAccessor statusAccessor = 
       generateStatusAccessor(colArray3, rowArray3);
     statusAccessor.setDefaultSortRules(sortRules, null);
@@ -287,7 +289,8 @@ public class TestStatusServiceImpl extends LockssTestCase {
     statusService.registerStatusAccessor("table1", statusAccessor);
     StatusTable table = statusService.getTable("table1", null);
     List expectedRows = 
-      makeRowsFromArray(makeColumnDescriptorsFromArray(colArray3), rowArray3);
+      makeRowsFromArray(makeColumnDescriptorsFromArray(colArray3), 
+			expectedRowsArray);
     List actualRows = table.getSortedRows(sortRules);
     assertRowsEqual(expectedRows, actualRows);
   }
@@ -314,13 +317,18 @@ public class TestStatusServiceImpl extends LockssTestCase {
     List expectedRows = 
       makeRowsFromArray(makeColumnDescriptorsFromArray(colArray4),
 			expectedRowsArray);
-    List actualRows = table.getSortedRows(sortRules);
+    List actualRows = table.getSortedRows();
     assertRowsEqual(expectedRows, actualRows);
   }
   
   public void testSortsByNonDefaultRules() 
       throws StatusService.NoSuchTableException {
     List sortRules = ListUtil.list(new StatusTable.SortRule("name", false));
+
+    Object[][] expectedRowsArray = new Object[3][];
+    expectedRowsArray[0] = rowArray3[2];
+    expectedRowsArray[1] = rowArray3[0];
+    expectedRowsArray[2] = rowArray3[1];
 
     MockStatusAccessor statusAccessor = generateStatusAccessor(colArray3, 
 							       rowArray3);
@@ -329,7 +337,8 @@ public class TestStatusServiceImpl extends LockssTestCase {
     statusService.registerStatusAccessor("table1", statusAccessor);
     StatusTable table = statusService.getTable("table1", null);
     List expectedRows = 
-      makeRowsFromArray(makeColumnDescriptorsFromArray(colArray3), rowArray3);
+      makeRowsFromArray(makeColumnDescriptorsFromArray(colArray3), 
+			expectedRowsArray);
     List actualRows = table.getSortedRows(sortRules);
     assertRowsEqual(expectedRows, actualRows);
   }
@@ -349,7 +358,9 @@ public class TestStatusServiceImpl extends LockssTestCase {
 			       "table of all tables", null)}
   };
 
-  public void testGetTableOfAllTables() throws StatusService.NoSuchTableException {
+  public void testGetTableOfAllTables() 
+      throws StatusService.NoSuchTableException {
+    statusService.startService(); //registers table of all tables
     statusService.registerStatusAccessor("A table", new MockStatusAccessor());
     statusService.registerStatusAccessor("B table", new MockStatusAccessor());
     statusService.registerStatusAccessor("F table", new MockStatusAccessor());
@@ -371,6 +382,7 @@ public class TestStatusServiceImpl extends LockssTestCase {
   
   public void testGetTableOfAllTablesFiltersTablesThatRequireKeys() 
       throws StatusService.NoSuchTableException {
+    statusService.startService(); //registers table of all tables
     statusService.registerStatusAccessor("A table", new MockStatusAccessor());
     statusService.registerStatusAccessor("B table", new MockStatusAccessor());
     statusService.registerStatusAccessor("F table", new MockStatusAccessor());

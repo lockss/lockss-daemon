@@ -1,5 +1,5 @@
 /*
- * $Id: StatusAccessor.java,v 1.4 2003-03-14 01:42:15 troberts Exp $
+ * $Id: StatusAccessor.java,v 1.5 2003-03-14 23:04:34 troberts Exp $
  */
 
 /*
@@ -36,15 +36,18 @@ import java.util.*;
 /**
  * Objects wishing to provide status information to {@link StatusService} must
  * create an object which implements this.
+ *
+ * Used by {@link StatusService} to generate {@link StatusTable}s.  
+ * All of the lists returned may be modified by {@link StatusService}, so 
+ * they should not mirror any internal data structures.
  */
 
 public interface StatusAccessor {
   /**
-   * Get the description (name, title and type) for the fields this 
-   * StatusAccessor will return, for the given key
+   * Get the list of {@link StatusTable.ColumnDescriptor}s for this key
    * @param key object (such as AUID) designating which table to return 
-   * @return List of ColumnDescriptor objects for the fields this 
-   * StatusAccessor supplies
+   * @return List of {@link StatusTable.ColumnDescriptor}s for the columns 
+   * this StatusAccessor supplies.
    * @throws StatusService.NoSuchTableException if we get a key that we don't 
    * recognize or have a table for
    */
@@ -54,16 +57,18 @@ public interface StatusAccessor {
   /**
    * Gets the status rows for a specified key
    * @param key string which designates a set of status rows to return
-   * @return List of status rows (Maps) for the specified key
+   * @return List of rows (which are represented by Maps) for the specified key
    * @throws StatusService.NoSuchTableException if we get a key that we don't 
    * recognize or have a table for
    */
   public List getRows(String key) throws StatusService.NoSuchTableException;
 
   /**
-   * Gives list of the default sort rules for this status info for a given key
+   * Gives list of the default {@link StatusTable.SortRule}s for this status 
+   * info for a given key
    * @param key key identifying the table for which to get the sort rules
-   * @returns list of the default sort rules for this status info
+   * @return list of {@link StatusTable.SortRule}s representing the default
+   * sort rules
    * @throws StatusService.NoSuchTableException if we get a key that we don't 
    * recognize or have a table for
    */
@@ -71,12 +76,7 @@ public interface StatusAccessor {
       throws StatusService.NoSuchTableException;
 
   /**
-   * Returns whether this StatusAccessor has status informtion that doesn't
-   * require a key.  In other words, can you call 
-   * {@link #getColumnDescriptors}, {@link #getRows} or 
-   * {@link #getDefaultSortRules} with a null key without getting a 
-   * {@link StatusService.NoSuchTableException}
-   * @returns true if this can give status information for a null key
+   * @returns true if a key is required
    */
   public boolean requiresKey();
 

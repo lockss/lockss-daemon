@@ -1,5 +1,5 @@
 /*
- * $Id: StatusServiceImpl.java,v 1.6 2003-03-14 01:42:15 troberts Exp $
+ * $Id: StatusServiceImpl.java,v 1.7 2003-03-14 23:04:34 troberts Exp $
  */
 
 /*
@@ -42,11 +42,11 @@ import org.lockss.util.*;
 public class StatusServiceImpl 
   extends BaseLockssManager implements StatusService {
   private static Logger logger = Logger.getLogger("StatusServiceImpl");
-  private Map statusAccessors;
+  private Map statusAccessors = new HashMap();
 
 
-  public StatusServiceImpl() {
-    statusAccessors = new Hashtable();
+  public void startService() {
+    super.startService();
     registerStatusAccessor(ALL_TABLES_TABLE, new AllTableStatusAccessor());
   }
 
@@ -56,8 +56,11 @@ public class StatusServiceImpl
       throw new 
 	StatusService.NoSuchTableException("Called with null tableName");
     }
-    StatusAccessor statusAccessor = 
-      (StatusAccessor)statusAccessors.get(tableName);
+
+    StatusAccessor statusAccessor;
+    synchronized(statusAccessors) {
+      statusAccessor = (StatusAccessor)statusAccessors.get(tableName);
+    }
 
     if (statusAccessor == null) {
       throw new StatusService.NoSuchTableException("Table not found: "
@@ -71,41 +74,26 @@ public class StatusServiceImpl
     return table;
   }
 
-  public synchronized void 
-    registerStatusAccessor(String tableName, StatusAccessor statusAccessor){
+  public void registerStatusAccessor(String tableName, 
+				     StatusAccessor statusAccessor){
 
-    if (statusAccessors.get(tableName) != null) {
-      throw new StatusService.MultipleRegistrationException("Called multiple "
-							    +"times for "
-							    +tableName);
-    }
-    statusAccessors.put(tableName, statusAccessor);
-    logger.info("Registered statusAccessor for table "+tableName);
-  }
-
-  public synchronized void unregisterStatusAccessor(String tableName){
-    statusAccessors.remove(tableName);
-    logger.info("Unregistered statusAccessor for table "+tableName);
-  }
-
-  private synchronized List getAllTableNames() {
-    /**
-     * keySet() calls a synchronized method, so it is thread safe, but the set
-     * returned is backed by the Hashtable, which mean that changes to that are
-     * reflected in the set.  We want a snap shot, so I synched this
-     */
-    Iterator it = statusAccessors.keySet().iterator();
-
-    List tables = new ArrayList();
-    while (it.hasNext()) {
-      String tableName = (String) it.next();
-      StatusAccessor statusAccessor = 
-	(StatusAccessor)statusAccessors.get(tableName);
-      if (!statusAccessor.requiresKey()) {
-	tables.add(tableName);
+    synchronized(statusAccessors) {
+      if (statusAccessors.get(tableName) != null) {
+	throw new 
+	  StatusService.MultipleRegistrationException(statusAccessor
+						      +" already registered "
+						      +"for "+tableName);
       }
+      statusAccessors.put(tableName, statusAccessor);
     }
-    return tables;
+    logger.debug("Registered statusAccessor for table "+tableName);
+  }
+
+  public void unregisterStatusAccessor(String tableName){
+    synchronized(statusAccessors) {
+      statusAccessors.remove(tableName);
+    }
+    logger.debug("Unregistered statusAccessor for table "+tableName);
   }
 
   private class AllTableStatusAccessor implements StatusAccessor {
@@ -126,36 +114,42 @@ public class StatusServiceImpl
       sortRules = ListUtil.list(sortRule);
     }
 
+    /**
+     * Ignores key
+     */
     public List getColumnDescriptors(String key) 
 	throws StatusService.NoSuchTableException {
-      if (key != null) {
-	throw new StatusService.NoSuchTableException("No table for key "+key);
-      }
       return columns;
     }
 
+    /**
+     * Ignores key
+     */
     public List getRows(String key) throws StatusService.NoSuchTableException {
-      if (key != null) {
-	throw new StatusService.NoSuchTableException("No table for key "+key);
+      synchronized(statusAccessors) {
+	Set tables = statusAccessors.keySet();
+	Iterator it = tables.iterator();
+	List rows = new ArrayList(tables.size());
+	while (it.hasNext()) {
+	  String tableName = (String) it.next();
+	  StatusAccessor statusAccessor = 
+	    (StatusAccessor)statusAccessors.get(tableName);
+	  if (!statusAccessor.requiresKey()) {
+	    Map row = new HashMap(1); //will only have the one key-value pair
+	    row.put(COL_NAME, 
+		    new StatusTable.Reference(tableName, tableName, null));
+	    rows.add(row);
+	  }
+	}
+	return rows;
       }
-      List tableNames =  getAllTableNames();
-      Iterator it = tableNames.iterator();
-      List rows = new ArrayList(tableNames.size());
-      while (it.hasNext()) {
-	String tableName = (String) it.next();
-	Map row = new HashMap(1); //will only have the one key-value pair
-	row.put(COL_NAME, 
-		new StatusTable.Reference(tableName, tableName, null));
-	rows.add(row);
-      }
-      return rows;
     }
 
+    /**
+     * Ignores key
+     */
     public List getDefaultSortRules(String key) 
 	throws StatusService.NoSuchTableException {
-      if (key != null) {
-	throw new StatusService.NoSuchTableException("No table for key "+key);
-      }
       return sortRules;
     }
 
