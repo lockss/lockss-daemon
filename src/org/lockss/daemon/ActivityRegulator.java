@@ -1,5 +1,5 @@
 /*
- * $Id: ActivityRegulator.java,v 1.21 2003-07-19 00:45:40 eaalto Exp $
+ * $Id: ActivityRegulator.java,v 1.22 2003-07-23 01:49:51 eaalto Exp $
  */
 
 /*
@@ -101,6 +101,10 @@ public class ActivityRegulator extends BaseLockssManager {
   static final int NO_ACTIVITY = -1;
 
   private static Logger logger = Logger.getLogger("ActivityRegulator");
+
+//XXX set properly
+  static final long STANDARD_LOCK_LENGTH = Constants.HOUR;
+  static final long LOCK_EXTENSION_LENGTH = Constants.HOUR;
 
   HashMap cusMap = new HashMap();
   ArchivalUnit au;
@@ -231,8 +235,6 @@ public class ActivityRegulator extends BaseLockssManager {
       // check each other cus to see if it's related to this one
       Map.Entry entry = (Map.Entry)cusIt.next();
       CachedUrlSet entryCus = (CachedUrlSet)entry.getKey();
-      // need to append '/' to protect against substring matches
-      // i.e. /test vs. /test2
       int relation =
           theDaemon.getLockssRepository(au).cusCompare(entryCus, cus);
       if (relation!=LockssRepository.NO_RELATION) {
@@ -244,21 +246,31 @@ public class ActivityRegulator extends BaseLockssManager {
           cusMap.remove(entryCus);
           continue;
         }
+        String relationStr = "";
+        switch (relation) {
+          case LockssRepository.ABOVE:
+            relationStr = "Parent";
+            break;
+          case LockssRepository.BELOW:
+            relationStr = "Child";
+            break;
+          case LockssRepository.SAME_LEVEL_OVERLAP:
+            relationStr = "Overlapping";
+            break;
+          case LockssRepository.SAME_LEVEL_NO_OVERLAP:
+            relationStr = "Non-overlapping";
+        }
         if (!isAllowedOnCus(newActivity, value.activity, relation)) {
-          String relationStr = "";
-          switch (relation) {
-            case LockssRepository.ABOVE:
-              relationStr = "Parent ";
-              break;
-            case LockssRepository.BELOW:
-              relationStr = "Child ";
-              break;
-          }
-          logger.debug2(relationStr + "CUS busy with " +
+          logger.debug2(relationStr + " CUS busy with " +
                         activityCodeToString(value.activity) +
                         ". Couldn't start " + activityCodeToString(newActivity) +
                         " on CUS '" + cus + "'");
           return true;
+        } else {
+          logger.debug3(relationStr + " CUS activity " +
+                        activityCodeToString(value.activity) +
+                        " doesn't interfere with " +
+                        activityCodeToString(newActivity));
         }
       }
     }
@@ -285,7 +297,6 @@ public class ActivityRegulator extends BaseLockssManager {
     }
   }
 
-//XXX fix multiple-scheduling error.
   static boolean isAllowedOnCus(int newActivity, int curActivity, int relation) {
     switch (curActivity) {
       case BACKGROUND_CRAWL:
@@ -312,7 +323,9 @@ public class ActivityRegulator extends BaseLockssManager {
             // only one action on a CUS at a time unless it's a name poll or
             // a repair crawl
             return ((newActivity==STANDARD_NAME_POLL) ||
-                    (newActivity==REPAIR_CRAWL));
+                    (newActivity==REPAIR_CRAWL) ||
+                    (newActivity==STANDARD_CONTENT_POLL) ||
+                    (newActivity==SINGLE_NODE_CONTENT_POLL));
           case LockssRepository.ABOVE:
             // if this CUS is a parent, allow content polls and repair crawls on
             // sub-nodes (PollManager should have blocked any truly illegal ones)
@@ -473,7 +486,7 @@ public class ActivityRegulator extends BaseLockssManager {
   }
 
   public static class Lock {
-    public int activity;
+    int activity;
     Deadline expiration;
 
     public Lock(int activity, long expireIn) {
@@ -484,10 +497,20 @@ public class ActivityRegulator extends BaseLockssManager {
     public boolean isExpired() {
       return expiration.expired();
     }
-  }
 
-  // lock is created for new activity, returned to caller
-  // caller can change activity, prod to keep from expiring, ask if expired
+    public void extend() {
+      expiration.later(LOCK_EXTENSION_LENGTH);
+    }
+
+    public int getActivity() {
+      return activity;
+    }
+
+    public void setNewActivity(int newActivity, long expireIn) {
+      activity = newActivity;
+      expiration = Deadline.in(expireIn);
+    }
+  }
 
   /**
    * Factory method to create ActivityRegulator instances.

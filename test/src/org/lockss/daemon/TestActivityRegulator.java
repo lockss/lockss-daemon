@@ -1,5 +1,5 @@
 /*
- * $Id: TestActivityRegulator.java,v 1.15 2003-07-19 00:45:40 eaalto Exp $
+ * $Id: TestActivityRegulator.java,v 1.16 2003-07-23 01:49:51 eaalto Exp $
  */
 
 /*
@@ -225,7 +225,7 @@ public class TestActivityRegulator extends LockssTestCase {
   }
 
   public void testIsAllowedOnAu() {
-    // using NO_ACTIVITY as a generic activity marker, since this functions
+    // using NO_ACTIVITY as a generic activity marker, since these functions
     // don't specifically handle it
 
     // nothing allowed on these
@@ -247,7 +247,7 @@ public class TestActivityRegulator extends LockssTestCase {
   }
 
   public void testIsAllowedOnCus() {
-    // using NO_ACTIVITY as a generic activity marker, since this functions
+    // using NO_ACTIVITY as a generic activity marker, since these functions
     // don't specifically handle it
 
     // if a crawl-
