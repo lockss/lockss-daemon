@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryCooperativeArchivalUnit.java,v 1.8 2004-03-06 00:48:59 clairegriffin Exp $
+ * $Id: TestHistoryCooperativeArchivalUnit.java,v 1.9 2004-07-07 22:06:02 clairegriffin Exp $
  */
 
 /*
@@ -168,7 +168,7 @@ public class TestHistoryCooperativeArchivalUnit extends LockssTestCase {
 
     String expectedStr = ROOT_URL+"journals/"+DIR+"/lockss-volume108.html";
     DefinableArchivalUnit hcAu = makeAu(url, 108, DIR);
-    assertEquals(expectedStr, hcAu.getManifestPage());
+    assertEquals(expectedStr, (String)hcAu.getPermissionPages().get(0));
   }
 
   public void testGetUrlStems() throws Exception {

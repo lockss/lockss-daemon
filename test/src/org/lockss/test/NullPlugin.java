@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.54 2004-03-27 02:34:51 eaalto Exp $
+ * $Id: NullPlugin.java,v 1.55 2004-07-07 22:06:04 clairegriffin Exp $
  */
 
 /*
@@ -390,7 +390,8 @@ public class NullPlugin {
     public boolean shouldCallTopLevelPoll(AuState aus) {
       return false;
     }
-    public String getManifestPage() {
+
+    public List getPermissionPages() {
       return null;
     }
 

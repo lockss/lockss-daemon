@@ -1,5 +1,5 @@
 /*
- * $Id: TestIeeeArchivalUnit.java,v 1.9 2004-03-01 06:10:42 clairegriffin Exp $
+ * $Id: TestIeeeArchivalUnit.java,v 1.10 2004-07-07 22:06:03 clairegriffin Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import org.lockss.state.AuState;
 import org.lockss.plugin.base.BaseCachedUrlSet;
 import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.plugin.definable.*;
+import java.util.*;
 
 public class TestIeeeArchivalUnit
     extends LockssTestCase {
@@ -127,8 +128,11 @@ public class TestIeeeArchivalUnit
         new RangeCachedUrlSetSpec(base.toString()));
 
     // start url - should be cached
-    url = ieeeAu.getManifestPage();
-    shouldCacheTest(url, true, ieeeAu, cus);
+    List permissionList = ieeeAu.getPermissionPages();
+    for(Iterator it = permissionList.iterator(); it.hasNext();) {
+      url = (String) it.next();
+      shouldCacheTest(url, true, ieeeAu, cus);
+    }
 
     // issue index page - should be cached
     url = b_root +"xpl/tocresult.jsp?isNumber=27564";
@@ -170,7 +174,7 @@ public class TestIeeeArchivalUnit
         "xpl/RecentIssue.jsp?puNumber=" + PUB_NUMBER + "&year=" + VOL_YEAR;
     URL base = new URL(ROOT_URL);
     DefinableArchivalUnit ieeeAu = makeAu(base, PUB_NUMBER, VOL_YEAR);
-    assertEquals(expected, ieeeAu.getManifestPage());
+    assertEquals(expected, (String)ieeeAu.getPermissionPages().get(0));
   }
 
   public void testGetUrlStems() throws Exception {

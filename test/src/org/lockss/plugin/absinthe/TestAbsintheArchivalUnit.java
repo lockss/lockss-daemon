@@ -1,5 +1,5 @@
 /*
- * $Id: TestAbsintheArchivalUnit.java,v 1.9 2004-03-06 00:48:58 clairegriffin Exp $
+ * $Id: TestAbsintheArchivalUnit.java,v 1.10 2004-07-07 22:05:58 clairegriffin Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import org.lockss.state.AuState;
 import org.lockss.plugin.base.BaseCachedUrlSet;
 import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.plugin.definable.*;
+import java.util.*;
 
 public class TestAbsintheArchivalUnit extends LockssTestCase {
   private MockLockssDaemon theDaemon;
@@ -176,9 +177,9 @@ public class TestAbsintheArchivalUnit extends LockssTestCase {
     URL url = new URL(ROOT_URL);
 
     // 4 digit
-    String expectedStr = ROOT_URL+"archives04.htm";
+    List expectedList = ListUtil.list(ROOT_URL+"archives04.htm");
     DefinableArchivalUnit pmAu = makeAu(url, "2004");
-    assertEquals(expectedStr, pmAu.getManifestPage());
+    assertIsomorphic(expectedList, pmAu.getPermissionPages());
   }
 
   public void testGetUrlStems() throws Exception {

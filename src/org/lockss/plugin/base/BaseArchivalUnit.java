@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.64 2004-04-28 22:52:04 clairegriffin Exp $
+ * $Id: BaseArchivalUnit.java,v 1.65 2004-07-07 22:05:56 clairegriffin Exp $
  */
 
 /*
@@ -352,8 +352,8 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     return sb.toString();
   }
 
-  public String getManifestPage() {
-    return startUrlString;
+  public List getPermissionPages() {
+    return ListUtil.list(startUrlString);
   }
 
   public String getName() {

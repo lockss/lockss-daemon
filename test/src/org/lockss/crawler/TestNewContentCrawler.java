@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.9 2004-06-14 23:54:46 dcfok Exp $
+ * $Id: TestNewContentCrawler.java,v 1.10 2004-07-07 22:05:58 clairegriffin Exp $
  */
 
 /*
@@ -50,7 +50,7 @@ public class TestNewContentCrawler extends LockssTestCase {
   private CrawlerImpl crawler = null;
   private MockContentParser parser = new MockContentParser();
 
-  
+
 
   public void setUp() throws Exception {
     super.setUp();
@@ -62,7 +62,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     startUrls = ListUtil.list(startUrl);
     MockCachedUrlSet cus = new MyMockCachedUrlSet(mau, null);
     mau.setAuCachedUrlSet(cus);
-    mau.setManifestPage(startUrl);
+    mau.setPermissionPages(ListUtil.list(startUrl));
     crawlRule = new MockCrawlRule();
     crawlRule.addUrlToCrawl(startUrl);
     spec = new CrawlSpec(startUrls, crawlRule);
@@ -351,7 +351,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     assertEquals(SetUtil.set(startUrl, url1, url2, url3),
 		 crawlUrls(SetUtil.set(url1, url2, url3)));
   }
-  
+
   public void testCrawlListEmptyOnExit() {
     setProperty(NewContentCrawler.PARAM_PERSIST_CRAWL_LIST, "true");
     String url1= "http://www.example.com/link1.html";
@@ -430,7 +430,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     crawler.doCrawl();
     assertEquals(0, cus.getCachedUrls().size());
   }
-  
+
   private static void setProperty(String prop, String value) {
     Properties p = new Properties();
     p.setProperty(prop, value);

@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.5 2004-05-14 22:31:28 clairegriffin Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.6 2004-07-07 22:06:00 clairegriffin Exp $
  */
 
 /*
@@ -161,7 +161,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     map.putString(DefinableArchivalUnit.CM_AU_MANIFEST_KEY,
             "\"http://%s/contents-by-date.%d.shtml\", HOST, YEAR");
     String expectedReturn = "http://www.example.com/contents-by-date.2003.shtml";
-    String actualReturn = cau.getManifestPage();
+    String actualReturn = (String)cau.getPermissionPages().get(0);
     assertEquals("return valuse", expectedReturn, actualReturn);
   }
 

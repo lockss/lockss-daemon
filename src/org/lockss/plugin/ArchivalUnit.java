@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.22 2004-01-28 02:20:44 troberts Exp $
+ * $Id: ArchivalUnit.java,v 1.23 2004-07-07 22:05:56 clairegriffin Exp $
  */
 
 /*
@@ -31,12 +31,12 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.plugin;
-import gnu.regexp.*;
-import java.util.*;
-import org.lockss.state.*;
-import org.lockss.daemon.*;
-import org.lockss.crawler.*;
 import java.io.*;
+import java.util.*;
+
+import org.lockss.crawler.*;
+import org.lockss.daemon.*;
+import org.lockss.state.*;
 
 /**
  * An <code>ArchivalUnit</code> represents a publication unit
@@ -123,11 +123,11 @@ public interface ArchivalUnit {
   public String getName();
 
   /**
-   * Returns the url for the publisher's manifest which can be used for checking
+   * Returns the list of url for the publisher's permission page
    * crawl permissions for this AU.
-   * @return the URL as a String;
+   * @return a List of url strings;
    */
-  public String getManifestPage();
+  public List getPermissionPages();
 
   /**
    * Returns true if this AU has permission to crawl based on the manifest page
@@ -187,7 +187,7 @@ public interface ArchivalUnit {
    * @param mimeType mime type of the content we are going to filter
    * @return {@link FilterRule} for the given mimeType or null if there
    * is none
-   */ 
+   */
   public FilterRule getFilterRule(String mimeType);
 
   public class ConfigurationException extends Exception {
