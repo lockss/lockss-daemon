@@ -1,5 +1,5 @@
 /*
- * $Id: TimerQueue.java,v 1.3 2002-11-20 02:06:02 tal Exp $
+ * $Id: TimerQueue.java,v 1.4 2002-11-20 19:43:32 tal Exp $
  *
 
 Copyright (c) 2000-2002 Board of Trustees of Leland Stanford Jr. University,
@@ -97,6 +97,7 @@ public class TimerQueue implements Serializable {
     } catch (Exception e) {
       log.error("Timer callback threw", e);
     }
+    queue.remove(req);
   }    
 
   public void stop() {
