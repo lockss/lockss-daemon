@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.23 2003-03-08 02:18:57 tal Exp $
+ * $Id: Configuration.java,v 1.24 2003-03-17 08:35:05 tal Exp $
  */
 
 /*
@@ -443,7 +443,7 @@ public abstract class Configuration {
   public long getTimeInterval(String key) throws InvalidParam {
     String val = get(key);
     try {
-      return parseTimeInterval(val);
+      return StringUtil.parseTimeInterval(val);
     } catch (NumberFormatException e) {
       throw new InvalidParam("Not a time interval value: " +
 			     key + " = " + val);
@@ -466,36 +466,10 @@ public abstract class Configuration {
       return dfault;
     }
     try {
-      return parseTimeInterval(val);
+      return StringUtil.parseTimeInterval(val);
     } catch (NumberFormatException e) {
       log.warning("getTimeInterval(\'" + key + "\") = \"" + val + "\"");
       return dfault;
-    }
-  }
-
-  long parseTimeInterval(String val) {
-    try {
-      int len = val.length();
-      char suffix = val.charAt(len - 1);
-      String numstr;
-      int mult = 1;
-      if (Character.isDigit(suffix)) {
-	numstr = val;
-      } else {
-	numstr = val.substring(0, len - 1);
-	switch (Character.toUpperCase(suffix)) {
-	case 'S': mult = Constants.SECOND; break;
-	case 'M': mult = Constants.MINUTE; break;
-	case 'H': mult = Constants.HOUR; break;
-	case 'D': mult = Constants.DAY; break;
-	case 'W': mult = Constants.WEEK; break;
-	default:
-	  throw new NumberFormatException("Illegal time interval suffix");
-	}
-      }
-      return Long.parseLong(numstr) * mult;
-    } catch (IndexOutOfBoundsException e) {
-      throw new NumberFormatException("empty string");
     }
   }
 
