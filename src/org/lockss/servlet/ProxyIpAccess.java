@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyIpAccess.java,v 1.4 2004-06-16 19:22:58 tlipkis Exp $
+ * $Id: ProxyIpAccess.java,v 1.4.8.1 2004-09-16 21:50:46 tlipkis Exp $
  */
 
 /*
@@ -61,6 +61,11 @@ public class ProxyIpAccess extends IpAccessControl {
   private String formAuditPort;
   private int auditPort;
   
+  protected void resetLocals() {
+     formAuditEnable = false;
+     formAuditPort = null;
+  }
+
   protected String getExplanation() {
     return exp;
   }
@@ -100,7 +105,10 @@ public class ProxyIpAccess extends IpAccessControl {
 	return;
       }
     }
-    if (formAuditEnable && !isLegalAuditPort(auditPort)) {
+    // Must check port legailty even if not enabling, or illegal port could
+    // get into config file, where it would erroneously cause
+    // isLegalAuditPort() to succeed next time.
+    if (!isLegalAuditPort(auditPort)) {
       errMsg = "Illegal audit proxy port number: " + formAuditPort +
 	", must be >=1024 and not in use";
       displayPage();
