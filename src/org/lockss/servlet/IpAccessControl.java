@@ -1,5 +1,5 @@
 /*
- * $Id: IpAccessControl.java,v 1.3 2003-06-20 22:34:52 claire Exp $
+ * $Id: IpAccessControl.java,v 1.4 2003-06-26 23:53:31 eaalto Exp $
  */
 
 /*
@@ -257,7 +257,7 @@ public class IpAccessControl extends LockssServlet {
    * @param incIPsList vector of ip addresses to include
    * @param excIPsList vector of ip addresses to exclude
    * @param realpath path to the cluster.txt file
-   * @return whether the save was sucessful
+   * @return whether the save was successful
    */
   public void saveIPChanges(Vector incIPsList, Vector excIPsList)
       throws IOException {
@@ -277,7 +277,7 @@ public class IpAccessControl extends LockssServlet {
    * @param filename name of the cluster property file
    * @param incStr string of included ip addresses
    * @param excStr string of excluded ip addresses
-   * @return whether the save was sucessful
+   * @return whether the save was successful
    */
 //   public boolean replacePropertyInFile(File file, String incStr,
 // 				       String excStr) {

@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.81 2003-06-20 22:34:51 claire Exp $
+* $Id: Poll.java,v 1.82 2003-06-26 23:53:34 eaalto Exp $
  */
 
 /*
@@ -102,7 +102,7 @@ public abstract class Poll implements Serializable {
   String m_key;            // the string we used to id this poll
   int m_pollstate;         // one of state constants above
   Deadline m_deadline;    // when election is over
-  
+
   /**
    * create a new poll from a message
    *
@@ -190,7 +190,7 @@ public abstract class Poll implements Serializable {
   /**
    * attempt to schedule our hash.  This will try 3 times to get a deadline
    * that will is successfully scheduled
-   * @return boolean true if we sucessfully schedule hash; false otherwise.
+   * @return boolean true if we successfully schedule hash; false otherwise.
    */
   abstract boolean scheduleOurHash();
 
@@ -282,7 +282,7 @@ public abstract class Poll implements Serializable {
 
   abstract double getMargin();
 
-  
+
   /**
    * Return a hasher preinited with the challenge and verifier
    * @param challenge the challenge bytes

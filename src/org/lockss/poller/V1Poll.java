@@ -1,5 +1,5 @@
 /*
-* $Id: V1Poll.java,v 1.1 2003-06-23 19:24:36 claire Exp $
+* $Id: V1Poll.java,v 1.2 2003-06-26 23:53:34 eaalto Exp $
  */
 
 /*
@@ -278,7 +278,7 @@ public abstract class V1Poll extends Poll {
   /**
    * attempt to schedule our hash.  This will try 3 times to get a deadline
    * that will is successfully scheduled
-   * @return boolean true if we sucessfully schedule hash; false otherwise.
+   * @return boolean true if we successfully schedule hash; false otherwise.
    */
   boolean scheduleOurHash() {
     MessageDigest hasher = getInitedHasher(m_challenge, m_verifier);

@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.105 2003-06-23 19:24:00 claire Exp $
+* $Id: PollManager.java,v 1.106 2003-06-26 23:53:34 eaalto Exp $
  */
 
 /*
@@ -267,7 +267,7 @@ public class PollManager  extends BaseLockssManager {
    * the poll.  This was moved from node state which kept track of the polls
    * running in the node.  This will need to be moved or amended to support this.
    * @param msg the message used to generate the poll
-   * @throws IOException thrown if the poll was unsucessfully created
+   * @throws IOException thrown if the poll was unsuccessfully created
    */
   void handleIncomingMessage(LcapMessage msg) throws IOException {
     theLog.info("Got a message: " + msg);
