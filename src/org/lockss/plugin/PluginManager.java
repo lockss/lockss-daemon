@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.42 2003-07-30 05:37:14 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.43 2003-08-02 00:16:05 eaalto Exp $
  */
 
 /*
@@ -110,7 +110,7 @@ public class PluginManager extends BaseLockssManager {
 	configurePlugin(pluginKey, pluginConf, prevPluginConf);
       }
       prevAllPlugs = allPlugs;
-    } 
+    }
   }
 
   /** Convert plugin property key to plugin class name. */
@@ -128,7 +128,7 @@ public class PluginManager extends BaseLockssManager {
   public static String pluginKeyFromId(String id) {
     // tk - needs to do real mapping from IDs obtained from all available
     // plugins.
-    return StringUtil.replaceString(id, ".", "|");    
+    return StringUtil.replaceString(id, ".", "|");
   }
 
   /**
@@ -138,11 +138,11 @@ public class PluginManager extends BaseLockssManager {
    * @return a unique identifier for an au based on its plugin id and defining
    * properties.
    * @param pluginId plugin id (with . not escaped)
-   * @param auDefiningProps defining properties for the au 
+   * @param auDefiningProps defining properties for the au
    * {@see Plugin.getDefiningConfigKeys}
    */
   public static String generateAUId(String pluginId, Properties auDefProps) {
-    return generateAUId(pluginId, 
+    return generateAUId(pluginId,
 			PropUtil.propsToCanonicalEncodedString(auDefProps));
   }
 
@@ -151,7 +151,7 @@ public class PluginManager extends BaseLockssManager {
   }
 
   static String configKeyFromAUId(String auid) {
-    return StringUtil.replaceString(auid, "&", ".");    
+    return StringUtil.replaceString(auid, "&", ".");
 
   }
 
@@ -195,7 +195,7 @@ public class PluginManager extends BaseLockssManager {
   void configureAU(Plugin plugin, Configuration auConf, String auId)
       throws ArchivalUnit.ConfigurationException {
     try {
-      ArchivalUnit au = plugin.configureAU(auConf, 
+      ArchivalUnit au = plugin.configureAU(auConf,
 					   (ArchivalUnit)auMap.get(auId));
       log.debug("Configured AU " + au);
       try {
@@ -345,7 +345,7 @@ public class PluginManager extends BaseLockssManager {
     String prefix = PARAM_AU_TREE + "." + configKeyFromAUId(auid);
     return config.getConfigTree(prefix);
   }
-  
+
   /**
    * load a plugin with the given class name from somewhere in our classpath
    * @param pluginKey the key for this plugin
@@ -404,7 +404,7 @@ public class PluginManager extends BaseLockssManager {
     for (Iterator iter = getAllAUs().iterator(); iter.hasNext();) {
       ArchivalUnit au = (ArchivalUnit)iter.next();
       if (au.shouldBeCached(url)) {
-	CachedUrl cu = au.getAUCachedUrlSet().makeCachedUrl(url);
+	CachedUrl cu = au.makeCachedUrl(au.getAUCachedUrlSet(), url);
 	if (cu != null && cu.hasContent() && cuNewerThan(cu, best)) {
 	  best = cu;
 	}

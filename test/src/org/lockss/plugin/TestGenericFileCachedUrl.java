@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericFileCachedUrl.java,v 1.15 2003-07-23 00:16:31 troberts Exp $
+ * $Id: TestGenericFileCachedUrl.java,v 1.16 2003-08-02 00:16:04 eaalto Exp $
  */
 
 /*
@@ -56,15 +56,19 @@ public class TestGenericFileCachedUrl extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    TestLockssRepositoryImpl.configCacheLocation(tempDirPath);
+    Properties props = new Properties();
+    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    ConfigurationUtil.setCurrentConfigFromProps(props);
 
     theDaemon = new MockLockssDaemon();
     theDaemon.getHashService();
 
     mgfau = new MockGenericFileArchivalUnit();
     MockPlugin plugin = new MockPlugin();
+    plugin.initPlugin(theDaemon);
     plugin.setDefiningConfigKeys(Collections.EMPTY_LIST);
     mgfau.setPlugin(plugin);
+
     repo = theDaemon.getLockssRepository(mgfau);
     theDaemon.getNodeManager(mgfau);
     CachedUrlSetSpec rSpec =
@@ -80,7 +84,7 @@ public class TestGenericFileCachedUrl extends LockssTestCase {
   public void testGetUrl() throws Exception {
     createLeaf("http://www.example.com/testDir/leaf1", "test stream", null);
 
-    CachedUrl url = cus.makeCachedUrl("http://www.example.com/testDir/leaf1");
+    CachedUrl url = mgfau.makeCachedUrl(cus, "http://www.example.com/testDir/leaf1");
     assertEquals("http://www.example.com/testDir/leaf1", url.getUrl());
   }
 
@@ -88,9 +92,9 @@ public class TestGenericFileCachedUrl extends LockssTestCase {
     createLeaf("http://www.example.com/testDir/leaf1", "test stream", null);
     createLeaf("http://www.example.com/testDir/leaf2", null, null);
 
-    CachedUrl url = cus.makeCachedUrl("http://www.example.com/testDir/leaf1");
+    CachedUrl url = mgfau.makeCachedUrl(cus, "http://www.example.com/testDir/leaf1");
     assertTrue(url.isLeaf());
-    url = cus.makeCachedUrl("http://www.example.com/testDir/leaf2");
+    url = mgfau.makeCachedUrl(cus, "http://www.example.com/testDir/leaf2");
     assertTrue(url.isLeaf());
   }
 
@@ -99,15 +103,15 @@ public class TestGenericFileCachedUrl extends LockssTestCase {
     createLeaf("http://www.example.com/testDir/leaf2", "test stream2", null);
     createLeaf("http://www.example.com/testDir/leaf3", "", null);
 
-    CachedUrl url = cus.makeCachedUrl("http://www.example.com/testDir/leaf1");
+    CachedUrl url = mgfau.makeCachedUrl(cus, "http://www.example.com/testDir/leaf1");
     BigInteger bi = new BigInteger(url.getUnfilteredContentSize());
     assertEquals(11, bi.intValue());
 
-    url = cus.makeCachedUrl("http://www.example.com/testDir/leaf2");
+    url = mgfau.makeCachedUrl(cus, "http://www.example.com/testDir/leaf2");
     bi = new BigInteger(url.getUnfilteredContentSize());
     assertEquals(12, bi.intValue());
 
-    url = cus.makeCachedUrl("http://www.example.com/testDir/leaf3");
+    url = mgfau.makeCachedUrl(cus, "http://www.example.com/testDir/leaf3");
     bi = new BigInteger(url.getUnfilteredContentSize());
     assertEquals(0, bi.intValue());
   }
@@ -117,19 +121,19 @@ public class TestGenericFileCachedUrl extends LockssTestCase {
     createLeaf("http://www.example.com/testDir/leaf2", "test stream2", null);
     createLeaf("http://www.example.com/testDir/leaf3", "", null);
 
-    CachedUrl url = cus.makeCachedUrl("http://www.example.com/testDir/leaf1");
+    CachedUrl url = mgfau.makeCachedUrl(cus, "http://www.example.com/testDir/leaf1");
     InputStream urlIs = url.openForReading();
     ByteArrayOutputStream baos = new ByteArrayOutputStream(11);
     StreamUtil.copy(urlIs, baos);
     assertEquals("test stream", baos.toString());
 
-    url = cus.makeCachedUrl("http://www.example.com/testDir/leaf2");
+    url = mgfau.makeCachedUrl(cus, "http://www.example.com/testDir/leaf2");
     urlIs = url.openForReading();
     baos = new ByteArrayOutputStream(12);
     StreamUtil.copy(urlIs, baos);
     assertEquals("test stream2", baos.toString());
 
-    url = cus.makeCachedUrl("http://www.example.com/testDir/leaf3");
+    url = mgfau.makeCachedUrl(cus, "http://www.example.com/testDir/leaf3");
     urlIs = url.openForReading();
     baos = new ByteArrayOutputStream(0);
     StreamUtil.copy(urlIs, baos);
@@ -139,7 +143,7 @@ public class TestGenericFileCachedUrl extends LockssTestCase {
   public void testOpenForHashingDefaultsToNoFiltering() throws Exception {
     createLeaf("http://www.example.com/testDir/leaf1", "<test stream>", null);
 
-    CachedUrl url = cus.makeCachedUrl("http://www.example.com/testDir/leaf1");
+    CachedUrl url = mgfau.makeCachedUrl(cus, "http://www.example.com/testDir/leaf1");
     InputStream urlIs = url.openForReading();
     ByteArrayOutputStream baos = new ByteArrayOutputStream(11);
     StreamUtil.copy(urlIs, baos);
@@ -155,7 +159,7 @@ public class TestGenericFileCachedUrl extends LockssTestCase {
     ConfigurationUtil.setCurrentConfigFromString(config);
     createLeaf("http://www.example.com/testDir/leaf1", "<test stream>", props);
 
-    CachedUrl url = cus.makeCachedUrl("http://www.example.com/testDir/leaf1");
+    CachedUrl url = mgfau.makeCachedUrl(cus, "http://www.example.com/testDir/leaf1");
     InputStream urlIs = url.openForHashing();
     ByteArrayOutputStream baos = new ByteArrayOutputStream(11);
     StreamUtil.copy(urlIs, baos);
@@ -169,19 +173,19 @@ public class TestGenericFileCachedUrl extends LockssTestCase {
     ConfigurationUtil.setCurrentConfigFromString(config);
     createLeaf("http://www.example.com/testDir/leaf1", "<test stream>", props);
 
-    CachedUrl url = cus.makeCachedUrl("http://www.example.com/testDir/leaf1");
+    CachedUrl url = mgfau.makeCachedUrl(cus, "http://www.example.com/testDir/leaf1");
     InputStream urlIs = url.openForHashing();
     ByteArrayOutputStream baos = new ByteArrayOutputStream(11);
     StreamUtil.copy(urlIs, baos);
     assertEquals("<test stream>", baos.toString());
   }
 
-  public void testOpenForHashingWontFilterIfConfigedNotTo() throws Exception {
+  public void testOpenForHashingWontFilterIfConfiguredNotTo() throws Exception {
     String config = "org.lockss.genericFileCachedUrl.filterHashStream=false";
     ConfigurationUtil.setCurrentConfigFromString(config);
     createLeaf("http://www.example.com/testDir/leaf1", "<test stream>", null);
 
-    CachedUrl url = cus.makeCachedUrl("http://www.example.com/testDir/leaf1");
+    CachedUrl url = mgfau.makeCachedUrl(cus, "http://www.example.com/testDir/leaf1");
     InputStream urlIs = url.openForReading();
     ByteArrayOutputStream baos = new ByteArrayOutputStream(11);
     StreamUtil.copy(urlIs, baos);
@@ -194,7 +198,7 @@ public class TestGenericFileCachedUrl extends LockssTestCase {
     newProps.setProperty("test2", "value2");
     createLeaf("http://www.example.com/testDir/leaf1", null, newProps);
 
-    CachedUrl url = cus.makeCachedUrl("http://www.example.com/testDir/leaf1");
+    CachedUrl url = mgfau.makeCachedUrl(cus, "http://www.example.com/testDir/leaf1");
     Properties urlProps = url.getProperties();
     assertEquals("value", urlProps.getProperty("test"));
     assertEquals("value2", urlProps.getProperty("test2"));
@@ -203,7 +207,7 @@ public class TestGenericFileCachedUrl extends LockssTestCase {
    public void testGetReader() throws Exception {
     createLeaf("http://www.example.com/testDir/leaf1", "test stream", null);
 
-    CachedUrl cu = cus.makeCachedUrl("http://www.example.com/testDir/leaf1");
+    CachedUrl cu = mgfau.makeCachedUrl(cus, "http://www.example.com/testDir/leaf1");
     Reader reader = cu.getReader();
     CharArrayWriter writer = new CharArrayWriter(11);
     StreamUtil.copy(reader, writer);

@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileUrlCacher.java,v 1.19 2003-07-18 02:14:25 eaalto Exp $
+ * $Id: GenericFileUrlCacher.java,v 1.20 2003-08-02 00:16:05 eaalto Exp $
  */
 
 /*
@@ -54,8 +54,8 @@ public abstract class GenericFileUrlCacher extends BaseUrlCacher {
 
   public GenericFileUrlCacher(CachedUrlSet owner, String url) {
     super(owner, url);
-    repository = (LockssRepository)LockssDaemon.getAUSpecificManager(
-        LockssDaemon.LOCKSS_REPOSITORY, owner.getArchivalUnit());
+    ArchivalUnit au = owner.getArchivalUnit();
+    repository = au.getPlugin().getDaemon().getLockssRepository(au);
   }
 
   protected void storeContent(InputStream input, Properties headers)

@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrlSet.java,v 1.6 2003-06-20 22:34:51 claire Exp $
+ * $Id: CachedUrlSet.java,v 1.7 2003-08-02 00:16:05 eaalto Exp $
  */
 
 /*
@@ -125,24 +125,6 @@ public interface CachedUrlSet extends CachedUrlSetNode {
    * succeeded
    */
   public void storeActualHashDuration(long elapsed, Exception err);
-
-  // Methods used by readers
-
-  /**
-   * Create a {@link CachedUrl} object within the set.
-   * @param url the url of interest
-   * @return a {@link CachedUrl} object representing the url.
-   */
-  public CachedUrl makeCachedUrl(String url);
-
-  // Methods used by writers
-
-  /**
-   * Create a {@link UrlCacher} object within the set.
-   * @param url the url of interest
-   * @return a {@link UrlCacher} object representing the url.
-   */
-  public UrlCacher makeUrlCacher(String url);
 
   /**
    * Needs to be overridden to hash CachedUrlSets properly.

@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrl.java,v 1.24 2003-07-23 00:22:44 troberts Exp $
+ * $Id: GenericFileCachedUrl.java,v 1.25 2003-08-02 00:16:05 eaalto Exp $
  */
 
 /*
@@ -41,7 +41,6 @@ import org.lockss.filter.*;
 import org.lockss.daemon.*;
 import org.lockss.repository.*;
 import org.lockss.util.*;
-import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
 
 /**
@@ -62,8 +61,6 @@ public class GenericFileCachedUrl extends BaseCachedUrl {
   private static final String PARAM_SHOULD_USE_NEW_FILTER =
     Configuration.PREFIX+".genericFileCachedUrl.useNewFilter";
 
-
-
   public GenericFileCachedUrl(CachedUrlSet owner, String url) {
     super(owner, url);
   }
@@ -83,14 +80,13 @@ public class GenericFileCachedUrl extends BaseCachedUrl {
    * @return an InputStream
    */
   public InputStream openForHashing() {
-     if (Configuration.getBooleanParam(PARAM_SHOULD_FILTER_HASH_STREAM,
-  				      false)) {
-       logger.debug3("Filtering on, returning filtered stream");
-       return getFilteredStream();
-     } else {
-       logger.debug3("Filtering off, returning unfiltered stream");
-       return openForReading();
-     }
+    if (Configuration.getBooleanParam(PARAM_SHOULD_FILTER_HASH_STREAM, false)) {
+      logger.debug3("Filtering on, returning filtered stream");
+      return getFilteredStream();
+    } else {
+      logger.debug3("Filtering off, returning unfiltered stream");
+      return openForReading();
+    }
   }
 
   private InputStream getFilteredStream() {
@@ -113,10 +109,10 @@ public class GenericFileCachedUrl extends BaseCachedUrl {
 		      new HtmlTagFilter.TagPair("<script", "</script>"),
 		      new HtmlTagFilter.TagPair("<", ">")
 		      );
-      
-      
+
+
       HtmlTagFilter.TagPair tagPair = new HtmlTagFilter.TagPair("<", ">");
-      Reader filteredReader = 
+      Reader filteredReader =
 	HtmlTagFilter.makeNestedFilter(getReader(), tagList);
       return new ReaderInputStream(filteredReader);
     }
@@ -152,8 +148,8 @@ public class GenericFileCachedUrl extends BaseCachedUrl {
 
   private void ensureLeafLoaded() {
     if (repository==null) {
-      repository = (LockssRepository)LockssDaemon.getAUSpecificManager(
-          LockssDaemon.LOCKSS_REPOSITORY, cus.getArchivalUnit());
+      ArchivalUnit au = getArchivalUnit();
+      repository = au.getPlugin().getDaemon().getLockssRepository(au);
     }
     if (leaf==null) {
       try {

@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.8 2003-07-30 05:36:52 tlipkis Exp $
+ * $Id: BasePlugin.java,v 1.9 2003-08-02 00:16:05 eaalto Exp $
  */
 
 /*
@@ -108,7 +108,7 @@ public abstract class BasePlugin implements Plugin {
     setTitleConfig(map);
   }
 
-  // for now use the plugin's class name 
+  // for now use the plugin's class name
   // tk - this will have to change to account for versioning
   public String getPluginId() {
     return this.getClass().getName();

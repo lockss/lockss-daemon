@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrlSet.java,v 1.47 2003-06-25 21:19:59 eaalto Exp $
+ * $Id: GenericFileCachedUrlSet.java,v 1.48 2003-08-02 00:16:05 eaalto Exp $
  */
 
 /*
@@ -36,7 +36,6 @@ import java.io.*;
 import java.util.*;
 import java.security.*;
 import java.net.MalformedURLException;
-
 import org.lockss.app.*;
 import org.lockss.daemon.*;
 import org.lockss.hasher.*;
@@ -44,7 +43,6 @@ import org.lockss.repository.*;
 import org.lockss.util.*;
 import org.lockss.poller.PollManager;
 import org.lockss.protocol.*;
-import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
 import org.lockss.state.*;
 
@@ -59,6 +57,7 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
   static final double TIMEOUT_INCREASE = 1.5;
 
   private Exception lastException = null;
+  private LockssDaemon theDaemon;
   private LockssRepository repository;
   private NodeManager nodeManager;
   private HashService hashService;
@@ -69,11 +68,10 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
 
   public GenericFileCachedUrlSet(ArchivalUnit owner, CachedUrlSetSpec spec) {
     super(owner, spec);
-    repository = (LockssRepository)LockssDaemon.getAUSpecificManager(
-        LockssDaemon.LOCKSS_REPOSITORY, owner);
-    nodeManager = (NodeManager)LockssDaemon.getAUSpecificManager(
-        LockssDaemon.NODE_MANAGER, owner);
-    hashService = (HashService)LockssDaemon.getManager(LockssDaemon.HASH_SERVICE);
+    theDaemon = owner.getPlugin().getDaemon();
+    repository = theDaemon.getLockssRepository(owner);
+    nodeManager = theDaemon.getNodeManager(owner);
+    hashService = theDaemon.getHashService();
   }
 
   public boolean isLeaf() {
@@ -98,13 +96,12 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
       while (children.hasNext()) {
         RepositoryNode child = (RepositoryNode)children.next();
         if (child.isLeaf()) {
-          CachedUrl newUrl =
-	    ((BaseArchivalUnit)au).cachedUrlFactory(this, child.getNodeUrl());
+          CachedUrl newUrl = au.makeCachedUrl(this, child.getNodeUrl());
           flatSet.add(newUrl);
         } else {
 	  CachedUrlSetSpec rSpec =
 	    new RangeCachedUrlSetSpec(child.getNodeUrl());
-          CachedUrlSet newSet = ((BaseArchivalUnit)au).makeCachedUrlSet(rSpec);
+          CachedUrlSet newSet = au.makeCachedUrlSet(rSpec);
           flatSet.add(newSet);
         }
       }
@@ -187,7 +184,7 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
         contentSize = node.getContentSize();
         MessageDigest hasher = LcapMessage.getDefaultHasher();
         CachedUrlSetHasher cush = contentHasherFactory(this, hasher);
-        SystemMetrics metrics = SystemMetrics.getSystemMetrics();
+        SystemMetrics metrics = theDaemon.getSystemMetrics();
         long bytesPerMs = metrics.getBytesPerMsHashEstimate(cush, hasher);
         if (bytesPerMs == 0) {
           logger.warning("Couldn't estimate hash time: getting 0");
@@ -215,8 +212,7 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
       MessageDigest hasher = LcapMessage.getDefaultHasher();
       CachedUrlSetHasher cush = contentHasherFactory(this, hasher);
       long bytesPerMs = 0;
-      SystemMetrics metrics = (SystemMetrics)
-          LockssDaemon.getManager(LockssDaemon.SYSTEM_METRICS);
+      SystemMetrics metrics = theDaemon.getSystemMetrics();
       try {
         bytesPerMs = metrics.getBytesPerMsHashEstimate(cush, hasher);
       } catch (IOException ie) {
@@ -232,14 +228,6 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
       nodeManager.hashFinished(this, lastDuration);
       return lastDuration;
     }
-  }
-
-  public CachedUrl makeCachedUrl(String url) {
-    return ((BaseArchivalUnit)au).cachedUrlFactory(this, url);
-  }
-
-  public UrlCacher makeUrlCacher(String url) {
-    return ((BaseArchivalUnit)au).urlCacherFactory(this, url);
   }
 
   protected CachedUrlSetHasher contentHasherFactory(CachedUrlSet owner,

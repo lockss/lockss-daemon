@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.33 2003-07-23 06:42:31 tlipkis Exp $
+ * $Id: MockArchivalUnit.java,v 1.34 2003-08-02 00:16:03 eaalto Exp $
  */
 
 /*
@@ -129,6 +129,16 @@ public class MockArchivalUnit implements ArchivalUnit {
     return new MockCachedUrlSet(this, cuss);
   }
 
+  public CachedUrl makeCachedUrl(CachedUrlSet owner, String url) {
+    // keep functionality from MockCachedUrlSet
+    return ((MockCachedUrlSet)owner).makeCachedUrl(url);
+  }
+
+  public UrlCacher makeUrlCacher(CachedUrlSet owner, String url) {
+    // keep functionality from MockCachedUrlSet
+    return ((MockCachedUrlSet)owner).makeUrlCacher(url);
+  }
+
   protected void addUrlToBeCached(String url) {
     urlsToCache.add(url);
   }
@@ -157,7 +167,7 @@ public class MockArchivalUnit implements ArchivalUnit {
   public final String getAUId() {
     if (auId != null) {
       return auId;
-    } 
+    }
     if (plugin == null) {
       return defaultAUId;
     }

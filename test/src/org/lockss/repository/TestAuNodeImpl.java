@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuNodeImpl.java,v 1.9 2003-06-25 21:19:55 eaalto Exp $
+ * $Id: TestAuNodeImpl.java,v 1.10 2003-08-02 00:16:04 eaalto Exp $
  */
 
 /*
@@ -49,7 +49,9 @@ public class TestAuNodeImpl extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    TestLockssRepositoryImpl.configCacheLocation(tempDirPath);
+    Properties props = new Properties();
+    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    ConfigurationUtil.setCurrentConfigFromProps(props);
 
     MockArchivalUnit mau = new MockArchivalUnit();
 

@@ -1,5 +1,5 @@
 /*
- * $Id: StaticContentPlugin.java,v 1.12 2003-07-30 05:36:52 tlipkis Exp $
+ * $Id: StaticContentPlugin.java,v 1.13 2003-08-02 00:16:04 eaalto Exp $
  */
 
 /*
@@ -119,6 +119,17 @@ public class StaticContentPlugin extends BasePlugin implements PluginTestable {
 
     public CachedUrlSet makeCachedUrlSet(CachedUrlSetSpec cuss) {
       return new SCUS(this, cuss);
+    }
+
+    public CachedUrl makeCachedUrl(CachedUrlSet owner, String url) {
+      CachedUrl res = (CachedUrl)cuMap.get(url);;
+      log.debug("makeCachedUrl(" + url + ") = " + res);
+      return (CachedUrl)cuMap.get(url);
+    }
+
+    public org.lockss.plugin.UrlCacher makeUrlCacher(CachedUrlSet owner,
+        String url) {
+      throw new UnsupportedOperationException("Not implemented");
     }
 
     public CachedUrlSet cachedUrlSetFactory(ArchivalUnit owner,
@@ -248,17 +259,6 @@ public class StaticContentPlugin extends BasePlugin implements PluginTestable {
 
     public long estimatedHashDuration() {
       return 1000;
-    }
-
-
-    public CachedUrl makeCachedUrl(String url) {
-      CachedUrl res = (CachedUrl)cuMap.get(url);;
-      log.debug("makeCachedUrl(" + url + ") = " + res);
-      return (CachedUrl)cuMap.get(url);
-    }
-
-    public org.lockss.plugin.UrlCacher makeUrlCacher(String url) {
-      throw new UnsupportedOperationException("Not implemented");
     }
   }
 

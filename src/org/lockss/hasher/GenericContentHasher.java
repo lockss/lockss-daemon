@@ -1,5 +1,5 @@
 /*
- * $Id: GenericContentHasher.java,v 1.17 2003-07-23 00:16:05 troberts Exp $
+ * $Id: GenericContentHasher.java,v 1.18 2003-08-02 00:16:05 eaalto Exp $
  */
 
 /*
@@ -57,7 +57,7 @@ public class GenericContentHasher extends GenericHasher {
   private boolean hashedRootCus = false;
 
   private long hashedContentSize = 0;
-  
+
 
   public GenericContentHasher(CachedUrlSet cus, MessageDigest digest) {
     super(cus, digest);
@@ -74,7 +74,7 @@ public class GenericContentHasher extends GenericHasher {
     switch (element.getType()) {
       case CachedUrlSetNode.TYPE_CACHED_URL_SET:
         CachedUrlSet cus = (CachedUrlSet)element;
-        cu = cus.makeCachedUrl(cus.getUrl());
+        cu = cus.getArchivalUnit().makeCachedUrl(cus, cus.getUrl());
         break;
       case CachedUrlSetNode.TYPE_CACHED_URL:
         cu = (CachedUrl)element;
@@ -187,7 +187,7 @@ public class GenericContentHasher extends GenericHasher {
       digest.update((byte)sizeBytes.length);
       digest.update(sizeBytes);
       totalHashed += sizeBytes.length+1;
-      
+
       hashedContentSize = 0;
       hashState = HASHING_NAME;
       shouldGetNextElement = true;

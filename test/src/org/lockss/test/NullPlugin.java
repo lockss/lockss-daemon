@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.39 2003-07-30 05:36:52 tlipkis Exp $
+ * $Id: NullPlugin.java,v 1.40 2003-08-02 00:16:04 eaalto Exp $
  */
 
 /*
@@ -275,14 +275,6 @@ public class NullPlugin {
       return false;
     }
 
-    public org.lockss.plugin.CachedUrl makeCachedUrl(String url) {
-      return new CachedUrl();
-    }
-
-    public org.lockss.plugin.UrlCacher makeUrlCacher(String url) {
-      return new UrlCacher();
-    }
-
     public boolean containsUrl(String url) {
       return false;
     }
@@ -307,6 +299,14 @@ public class NullPlugin {
     }
 
     public org.lockss.plugin.CachedUrlSet makeCachedUrlSet(CachedUrlSetSpec spec) {
+      return null;
+    }
+
+    public org.lockss.plugin.CachedUrl makeCachedUrl(org.lockss.plugin.CachedUrlSet owner, String url) {
+      return null;
+    }
+
+    public org.lockss.plugin.UrlCacher makeUrlCacher(org.lockss.plugin.CachedUrlSet owner, String url) {
       return null;
     }
 

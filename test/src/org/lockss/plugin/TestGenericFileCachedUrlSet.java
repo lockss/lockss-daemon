@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericFileCachedUrlSet.java,v 1.40 2003-07-14 06:46:39 tlipkis Exp $
+ * $Id: TestGenericFileCachedUrlSet.java,v 1.41 2003-08-02 00:16:04 eaalto Exp $
  */
 
 /*
@@ -60,11 +60,10 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    String s = LockssRepositoryImpl.PARAM_CACHE_LOCATION + "=" +
-        tempDirPath +"\n";
-    String s2 = HistoryRepositoryImpl.PARAM_HISTORY_LOCATION + "=" +
-        tempDirPath;
-    ConfigurationUtil.setCurrentConfigFromString(s + s2);
+    Properties props = new Properties();
+    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    props.setProperty(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION, tempDirPath);
+    ConfigurationUtil.setCurrentConfigFromProps(props);
 
     theDaemon = new MockLockssDaemon();
     theDaemon.getHistoryRepository().startService();
@@ -74,8 +73,10 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
 
     mgfau = new MockGenericFileArchivalUnit();
     MockPlugin plugin = new MockPlugin();
+    plugin.initPlugin(theDaemon);
     plugin.setDefiningConfigKeys(Collections.EMPTY_LIST);
     mgfau.setPlugin(plugin);
+
     repo = theDaemon.getLockssRepository(mgfau);
     nodeMan = theDaemon.getNodeManager(mgfau);
     nodeMan.initService(theDaemon);

@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedPlugin.java,v 1.12 2003-07-30 05:36:52 tlipkis Exp $
+ * $Id: SimulatedPlugin.java,v 1.13 2003-08-02 00:16:04 eaalto Exp $
  */
 
 /*
@@ -115,14 +115,16 @@ public class SimulatedPlugin extends BasePlugin implements PluginTestable {
   private int stopCtr = 0;
   private Configuration auConfig;
 
-  public SimulatedPlugin(){
+  public SimulatedPlugin() {
   }
 
   /**
    * Called after plugin is loaded to give the plugin time to perform any
    * needed initializations
+   * @param daemon the LockssDaemon
    */
   public void initPlugin(LockssDaemon daemon) {
+    super.initPlugin(daemon);
     initCtr++;
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.37 2003-07-14 06:46:38 tlipkis Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.38 2003-08-02 00:16:04 eaalto Exp $
  */
 
 /*
@@ -52,7 +52,10 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    configCacheLocation(tempDirPath);
+    Properties props = new Properties();
+    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    ConfigurationUtil.setCurrentConfigFromProps(props);
+
     mau = new MockArchivalUnit();
     repo = (LockssRepositoryImpl)LockssRepositoryImpl.createNewLockssRepository(
         mau);
@@ -429,11 +432,6 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
       LockssRepositoryImpl.mapUrlToFileLocation("root", testStr);
       fail("Should have thrown MalformedURLException");
     } catch (MalformedURLException mue) {}
-  }
-
-  public static void configCacheLocation(String location) throws IOException {
-    String s = LockssRepositoryImpl.PARAM_CACHE_LOCATION + "=" + location;
-    ConfigurationUtil.setCurrentConfigFromString(s);
   }
 
   private RepositoryNode createLeaf(String url, String content,

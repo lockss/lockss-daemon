@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireArchivalUnit.java,v 1.26 2003-07-11 23:31:28 tlipkis Exp $
+ * $Id: TestHighWireArchivalUnit.java,v 1.27 2003-08-02 00:16:04 eaalto Exp $
  */
 
 /*
@@ -41,8 +41,7 @@ import org.lockss.util.*;
 import org.lockss.state.*;
 import org.lockss.test.*;
 import org.lockss.plugin.*;
-import org.lockss.repository.TestLockssRepositoryImpl;
-import org.lockss.repository.LockssRepository;
+import org.lockss.repository.LockssRepositoryImpl;
 
 public class TestHighWireArchivalUnit extends LockssTestCase {
   private MockLockssDaemon theDaemon;
@@ -51,7 +50,9 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    TestLockssRepositoryImpl.configCacheLocation(tempDirPath);
+    Properties props = new Properties();
+    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    ConfigurationUtil.setCurrentConfigFromProps(props);
 
     theDaemon = new MockLockssDaemon();
     theDaemon.getHashService();
@@ -74,6 +75,7 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
     }
     Configuration config = ConfigurationUtil.fromProps(props);
     HighWireArchivalUnit au = new HighWireArchivalUnit(new HighWirePlugin());
+    au.getPlugin().initPlugin(theDaemon);
     au.setConfiguration(config);
     return au;
   }
@@ -105,7 +107,7 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
     CachedUrlSetSpec spec = new RangeCachedUrlSetSpec(base.toString());
     GenericFileCachedUrlSet cus = new GenericFileCachedUrlSet(hwAu, spec);
     UrlCacher uc =
-      cus.makeUrlCacher("http://shadow1.stanford.edu/lockss-volume322.shtml");
+        hwAu.makeUrlCacher(cus, "http://shadow1.stanford.edu/lockss-volume322.shtml");
     assertTrue(uc.shouldBeCached());
   }
 
@@ -118,7 +120,7 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
     CachedUrlSetSpec spec = new RangeCachedUrlSetSpec(base.toString());
     GenericFileCachedUrlSet cus = new GenericFileCachedUrlSet(hwAu, spec);
     UrlCacher uc =
-      cus.makeUrlCacher("http://shadow2.stanford.edu/lockss-volume322.shtml");
+      hwAu.makeUrlCacher(cus, "http://shadow2.stanford.edu/lockss-volume322.shtml");
     assertFalse(uc.shouldBeCached());
   }
 

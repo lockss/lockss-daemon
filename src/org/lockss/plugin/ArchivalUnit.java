@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.14 2003-07-23 06:39:35 tlipkis Exp $
+ * $Id: ArchivalUnit.java,v 1.15 2003-08-02 00:16:05 eaalto Exp $
  */
 
 /*
@@ -79,6 +79,22 @@ public interface ArchivalUnit {
   public CachedUrlSet makeCachedUrlSet(CachedUrlSetSpec spec);
 
   /**
+   * Create a {@link CachedUrl} object within the set.
+   * @param owner the {@link CachedUrlSet} owner
+   * @param url the url of interest
+   * @return a {@link CachedUrl} object representing the url.
+   */
+  public CachedUrl makeCachedUrl(CachedUrlSet owner, String url);
+
+  /**
+   * Create a {@link UrlCacher} object within the set.
+   * @param owner the {@link CachedUrlSet} owner
+   * @param url the url of interest
+   * @return a {@link UrlCacher} object representing the url.
+   */
+  public UrlCacher makeUrlCacher(CachedUrlSet owner, String url);
+
+  /**
    * Return the {@link CachedUrlSet} representing the entire contents
    * of this AU
    * @return the top-level {@link CachedUrlSet}
@@ -141,25 +157,11 @@ public interface ArchivalUnit {
   public long getFetchDelay();
 
   /**
-   * Needs to be overridden to hash <code>ArchivalUnit</code>s properly.
-   * @return the hashcode
-   */
-  public int hashCode();
-
-  /**
-   * Needs to be overridden to hash <code>ArchivalUnit</code>s properly.
-   * @param obj the object to compare to
-   * @return true if equal
-   */
-  public boolean equals(Object obj);
-
-  /**
    * Return a list of urls which need to be recrawled during a new content
    * crawl.
    * @return the {@link List} of urls to crawl
    */
   public List getNewContentCrawlUrls();
-
 
   /**
    * Query the {@link AuState} object to determine if this is the proper time to
