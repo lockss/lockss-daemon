@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.17 2003-03-08 03:37:26 aalto Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.18 2003-03-11 19:03:46 aalto Exp $
  */
 
 /*
@@ -72,6 +72,7 @@ public class HistoryRepositoryImpl implements HistoryRepository, LockssManager {
 
   static final String HISTORY_FILE_NAME = "history.xml";
   static final String AU_FILE_NAME = "au_state.xml";
+  private static final String TEST_PREFIX = "/tmp";
 
   private static String rootDir;
   private Mapping mapping = null;
@@ -236,15 +237,23 @@ public class HistoryRepositoryImpl implements HistoryRepository, LockssManager {
     if (AuUrl.isAuUrl(urlStr)) {
       return auLoc;
     } else {
-      // filtering to remove urls including '..' and such
       try {
         URL testUrl = new URL(urlStr);
         String path = testUrl.getPath();
-        if (!path.equals("")) {
+        if (path.indexOf("..")>=0) {
           // filtering to remove urls including '..' and such
+          path = TEST_PREFIX + path;
           File testFile = new File(path);
-          urlStr = testUrl.getProtocol() + "://" + testUrl.getHost().toLowerCase()
-              + testFile.getCanonicalPath();
+          String canonPath = testFile.getCanonicalPath();
+          if (canonPath.startsWith(TEST_PREFIX)) {
+            urlStr = testUrl.getProtocol() + "://" +
+                testUrl.getHost().toLowerCase()
+                + canonPath.substring(TEST_PREFIX.length());
+          }
+          else {
+            logger.error("Illegal URL detected: " + urlStr);
+            throw new MalformedURLException("Illegal URL detected.");
+          }
         }
       } catch (IOException ie) {
         logger.error("Error testing URL: "+ie);

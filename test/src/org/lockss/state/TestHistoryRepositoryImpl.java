@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.15 2003-03-08 03:37:26 aalto Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.16 2003-03-11 19:03:46 aalto Exp $
  */
 
 /*
@@ -46,6 +46,7 @@ import org.lockss.protocol.LcapIdentity;
 import org.lockss.protocol.IdentityManager;
 import org.lockss.repository.LockssRepositoryServiceImpl;
 import java.io.*;
+import java.net.MalformedURLException;
 
 public class TestHistoryRepositoryImpl extends LockssTestCase {
   private String tempDirPath;
@@ -80,19 +81,37 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
         "http://www.example.com");
 
     assertEquals(expected, location);
+  }
 
+  public void testDoubleDotUrlHandling() throws Exception {
+    //testing correction of nodes with bad '..'-including urls,
+    //filtering the first '..' but resolving the second
     // should filter out the first '..' line but resolve the second
-    mspec = new MockCachedUrlSetSpec("http://www.example.com/../branch/test/..",
-                                     null);
-    mcus = new MockCachedUrlSet(mau, mspec);
-    location = repository.getNodeLocation(mcus);
-    expected = tempDirPath + repository.HISTORY_ROOT_NAME;
+    MockCachedUrlSetSpec mspec = new MockCachedUrlSetSpec(
+        "http://www.example.com/branch/test/../test2", null);
+    MockCachedUrlSet mcus = new MockCachedUrlSet(mau, mspec);
+    String location = repository.getNodeLocation(mcus);
+    String expected = tempDirPath + repository.HISTORY_ROOT_NAME;
     expected = LockssRepositoryServiceImpl.mapAuToFileLocation(expected, mau);
     expected = LockssRepositoryServiceImpl.mapUrlToFileLocation(expected,
-        "http://www.example.com/branch");
+        "http://www.example.com/branch/test2");
 
     assertEquals(expected, location);
 
+    try {
+      mspec = new MockCachedUrlSetSpec("http://www.example.com/..", null);
+      mcus = new MockCachedUrlSet(mau, mspec);
+      location = repository.getNodeLocation(mcus);
+      fail("Should have thrown MalformedURLException.");
+    }
+    catch (MalformedURLException mue) {}
+    try {
+      mspec = new MockCachedUrlSetSpec(
+          "http://www.example.com/test/../../test2", null);
+      mcus = new MockCachedUrlSet(mau, mspec);
+      location = repository.getNodeLocation(mcus);
+      fail("Should have thrown MalformedURLException.");
+    } catch (MalformedURLException mue) {}
   }
 
   public void testGetMapping() throws Exception {
