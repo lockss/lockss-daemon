@@ -1,5 +1,5 @@
 /*
-* $Id: V1ContentPoll.java,v 1.5.2.1 2004-10-01 01:13:49 dshr Exp $
+* $Id: V1ContentPoll.java,v 1.5.2.2 2004-11-18 15:44:50 dshr Exp $
  */
 
 /*
@@ -58,7 +58,7 @@ public class V1ContentPoll extends V1Poll {
 		long duration,
 		String hashAlg) {
     super(pollspec, pm, orig, challenge, duration);
-    m_replyOpcode = LcapMessage.CONTENT_POLL_REP;
+    m_replyOpcode = V1LcapMessage.CONTENT_POLL_REP;
     m_tally = new V1PollTally(this,
                               CONTENT_POLL,
                               m_createTime,
@@ -73,10 +73,14 @@ public class V1ContentPoll extends V1Poll {
    * @param msg the Message to handle
    */
   void receiveMessage(LcapMessage msg) {
+      if (msg.getPollVersion() != 1) {
+	  log.error("Not a V1 message " + msg.toString());
+	  return;
+      }
     int opcode = msg.getOpcode();
 
-    if(opcode == LcapMessage.CONTENT_POLL_REP) {
-      startVoteCheck(msg);
+    if(opcode == V1LcapMessage.CONTENT_POLL_REP) {
+	startVoteCheck((V1LcapMessage)msg);
     }
   }
 
@@ -99,9 +103,9 @@ public class V1ContentPoll extends V1Poll {
 
   /**
    * start the hash required for a vote cast in this poll
-   * @param msg the LcapMessage containing the vote we're going to check
+   * @param msg the V1LcapMessage containing the vote we're going to check
    */
-  void startVoteCheck(LcapMessage msg) {
+  void startVoteCheck(V1LcapMessage msg) {
     super.startVoteCheck();
 
     if (shouldCheckVote(msg)) {

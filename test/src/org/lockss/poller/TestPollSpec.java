@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollSpec.java,v 1.17 2004-09-29 18:57:57 tlipkis Exp $
+ * $Id: TestPollSpec.java,v 1.17.2.1 2004-11-18 15:45:08 dshr Exp $
  */
 
 /*
@@ -110,15 +110,15 @@ public class TestPollSpec extends LockssTestCase {
     catch (IdentityManager.MalformedIdentityKeyException ex) {
       fail("can't open test host");
     }
-    LcapMessage msg = null;
+    V1LcapMessage msg = null;
       msg =
-	LcapMessage.makeRequestMsg(ps,
+	V1LcapMessage.makeRequestMsg(ps,
 				   null,
 				   testbytes,
 				   testbytes,
-				   LcapMessage.NAME_POLL_REQ,
+				   V1LcapMessage.NAME_POLL_REQ,
 				   10000000,
-				   id);
+				     id, "SHA-1");
     ps = new PollSpec(msg);
     assertEquals(auid, ps.getAuId());
     assertEquals(url, ps.getUrl());

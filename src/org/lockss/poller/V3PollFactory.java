@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollFactory.java,v 1.1.2.5 2004-10-06 00:26:22 dshr Exp $
+ * $Id: V3PollFactory.java,v 1.1.2.6 2004-11-18 15:45:06 dshr Exp $
  */
 
 /*
@@ -144,9 +144,11 @@ public class V3PollFactory implements PollFactory {
    * shouldPollBeCreated is invoked to check for conflicts or other
    * version-specific reasons why the poll should not be created at
    * this time.
-   * @param msg the LcapMessage that triggered the new Poll
    * @param pollspec the PollSpec for the poll.
    * @param pm the PollManager that called this method.
+   * @param im the IdentityManager
+   * @param challenge the challenge for the poll
+   * @param orig the PeerIdentity of the caller
    * @return true if it is OK to call the poll
    */
    public boolean shouldPollBeCreated(PollSpec pollspec,
@@ -165,7 +167,6 @@ public class V3PollFactory implements PollFactory {
   /**
    * getPollActivity returns the type of activity defined by ActivityRegulator
    * that describes this poll.
-   * @param msg the LcapMessage that triggered the new Poll
    * @param pollspec the PollSpec for the poll.
    * @param pm the PollManager that called this method.
    * @return one of the activity codes defined by ActivityRegulator

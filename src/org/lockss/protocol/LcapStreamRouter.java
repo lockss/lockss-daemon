@@ -1,5 +1,5 @@
 /*
- * $Id: LcapStreamRouter.java,v 1.1.2.1 2004-09-30 01:06:16 dshr Exp $
+ * $Id: LcapStreamRouter.java,v 1.1.2.2 2004-11-18 15:45:07 dshr Exp $
  */
 
 /*
@@ -61,7 +61,7 @@ public class LcapStreamRouter
   static final double DEFAULT_PROB_PARTNER_ADD = 0.5;
   static final int DEFAULT_INITIAL_HOPCOUNT = 2;
 
-  static Logger log = Logger.getLogger("Router");
+  static Logger log = Logger.getLogger("StreamRouter");
 
   private LcapDatagramComm comm;
   private PollManager pollMgr;
@@ -122,14 +122,14 @@ public class LcapStreamRouter
    * @param id the identity of the cache to which to send the message
    * @throws IOException if message couldn't be sent
    */
-  public void sendTo(LcapMessage msg, ArchivalUnit au, PeerIdentity id)
+  public void sendTo(V3LcapMessage msg, ArchivalUnit au, PeerIdentity id)
       throws IOException {
-    log.debug2("sendTo(" + msg + ", " + id + ")");
+      log.debug2("sendTo(" + msg.toString() + ", " + id + ")");
     if (false) {
       //  XXX need an analog of this for stream
-      LockssDatagram dg = new LockssDatagram(LockssDatagram.PROTOCOL_LCAP,
-					     msg.encodeMsg());
-      comm.sendTo(dg, au, id);
+//       LockssDatagram dg = new LockssDatagram(LockssDatagram.PROTOCOL_LCAP,
+// 					     msg.encodeMsg());
+//       comm.sendTo(dg, au, id);
     }
     origRateLimiter.event();
   }
@@ -137,30 +137,30 @@ public class LcapStreamRouter
   // handle received message.  pass msg to handlers
   // XXX do we need another class for received stream "packets"
   void processIncomingMessage(LockssReceivedDatagram dg) {
-    LcapMessage msg;
+    V3LcapMessage msg = null;
     log.debug2("rcvd message: " + dg);
     byte[] msgBytes = dg.getData();
-    try {
-      msg = LcapMessage.decodeToMsg(msgBytes, dg.isMulticast());
-    } catch (IOException e) {
-      // XXX move the constants to IdentityManager
-      PeerIdentity pid = idMgr.ipAddrToPeerIdentity(dg.getSender());
-      idEvent(pid, LcapIdentity.EVENT_ERRPKT, null);
-      log.error("Couldn't decode incoming message", e);
-      return;
-    }
+//     try {
+// 	msg = LcapMessage.decodeToMsg(msgBytes, dg.isMulticast());
+//     } catch (IOException e) {
+//       // XXX move the constants to IdentityManager
+//       PeerIdentity pid = idMgr.ipAddrToPeerIdentity(dg.getSender());
+//       idEvent(pid, LcapIdentity.EVENT_ERRPKT, null);
+//       log.error("Couldn't decode incoming message", e);
+//       return;
+//     }
     if (!msg.isNoOp()) {
       runHandlers(msg);
     }
   }
 
-  protected void runHandlers(LcapMessage msg) {
+  protected void runHandlers(V3LcapMessage msg) {
     for (Iterator iter = messageHandlers.iterator(); iter.hasNext();) {
       runHandler((MessageHandler)iter.next(), msg);
     }
   }
 
-  private void runHandler(MessageHandler handler, LcapMessage msg) {
+  private void runHandler(MessageHandler handler, V3LcapMessage msg) {
     try {
       handler.handleMessage(msg);
     } catch (Exception e) {
@@ -168,7 +168,7 @@ public class LcapStreamRouter
     }
   }
 
-  void idEvent(PeerIdentity pid, int event, LcapMessage msg) {
+  void idEvent(PeerIdentity pid, int event, V3LcapMessage msg) {
     idMgr.rememberEvent(pid, event, msg);
   }
 
@@ -201,6 +201,6 @@ public class LcapStreamRouter
      * Callback used to inform clients that an LcapMessage has been received.
      * @param msg the received LcapMessage
      * @see LcapStreamRouter#registerMessageHandler */
-    public void handleMessage(LcapMessage msg);
+    public void handleMessage(V3LcapMessage msg);
   }
 }

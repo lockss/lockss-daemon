@@ -1,5 +1,5 @@
 /*
- * $Id: SystemMetrics.java,v 1.25 2004-09-27 22:39:14 smorabito Exp $
+ * $Id: SystemMetrics.java,v 1.25.2.1 2004-11-18 15:44:50 dshr Exp $
  */
 
 /*
@@ -81,13 +81,14 @@ public class SystemMetrics
   private static Logger logger = Logger.getLogger("SystemMetrics");
 
   Hashtable estimateTable = new Hashtable();
-  MessageDigest defaultDigest = LcapMessage.getDefaultHasher();
+    MessageDigest defaultDigest = null;
   HashService hashService;
   int defaultSpeed;
 
   public void startService() {
     super.startService();
     hashService = theDaemon.getHashService();
+    defaultDigest = theDaemon.getDefaultHasher();
   }
 
   public void setConfig(Configuration newConfig,
@@ -189,8 +190,13 @@ public class SystemMetrics
       speed = hashService.getHashSpeed(defaultDigest);
     }
     if (speed <= 0) {
+	if (defaultDigest == null) {
+	    defaultDigest = theDaemon.getDefaultHasher();
+	}
+	String algorithm = defaultDigest.getAlgorithm();
+	logger.debug("getBytesPerMsHashEstimate(" + algorithm + ")" );
       Integer estimate =
-	(Integer)estimateTable.get(defaultDigest.getAlgorithm());
+	(Integer)estimateTable.get(algorithm);
       if (estimate != null) {
 	speed = estimate.intValue();
       }

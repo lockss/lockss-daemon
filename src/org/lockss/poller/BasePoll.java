@@ -1,5 +1,5 @@
 /*
-* $Id: BasePoll.java,v 1.8.2.3 2004-10-07 18:22:30 dshr Exp $
+* $Id: BasePoll.java,v 1.8.2.4 2004-11-18 15:44:50 dshr Exp $
  */
 
 /*
@@ -170,6 +170,13 @@ public abstract class BasePoll implements Poll {
    * @return VoteTally for this poll
    */
   abstract public PollTally getVoteTally();
+
+    /**
+     * Return the hash algorithm used for the poll
+     * @return String name for hash algorithm
+     */
+    abstract public String getHashAlgorithm();
+    
 
   /**
    * Recieve and incoming message from the PollManager

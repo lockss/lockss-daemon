@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapDatagramRouter.java,v 1.4 2004-09-29 23:31:37 tlipkis Exp $
+ * $Id: TestLcapDatagramRouter.java,v 1.4.2.1 2004-11-18 15:45:09 dshr Exp $
  */
 
 /*
@@ -56,7 +56,7 @@ public class TestLcapDatagramRouter extends LockssTestCase {
   private IdentityManager idmgr;
   protected IPAddr testaddr;
   protected PeerIdentity testID;
-  protected LcapMessage testmsg;
+  protected V1LcapMessage testmsg;
   LockssDatagram dg;
   LockssReceivedDatagram rdg;
   private ArrayList testentries;
@@ -82,7 +82,7 @@ public class TestLcapDatagramRouter extends LockssTestCase {
   }
 
   public void testIsEligibleToForward() throws Exception {
-//     LcapMessage msg = createTestMsg("127.0.0.1", 3);
+//     V1LcapMessage msg = createTestMsg("127.0.0.1", 3);
     createTestMsg("1.2.3.4", 3);
     TimeBase.step(100000);
     assertTrue(rtr.isEligibleToForward(rdg, testmsg));
@@ -105,7 +105,7 @@ public class TestLcapDatagramRouter extends LockssTestCase {
     ConfigurationUtil.setCurrentConfigFromProps(p);
   }
 
-  LcapMessage createTestMsg(String originator, int hopCount)
+  V1LcapMessage createTestMsg(String originator, int hopCount)
       throws IOException {
     try {
       testaddr = IPAddr.getByName(originator);
@@ -116,7 +116,7 @@ public class TestLcapDatagramRouter extends LockssTestCase {
       fail("can't open test host");
     }
     try {
-      testmsg = new LcapMessage();
+      testmsg = new V1LcapMessage();
     }
     catch (IOException ex) {
       fail("can't create test message");
@@ -127,7 +127,7 @@ public class TestLcapDatagramRouter extends LockssTestCase {
     testmsg.m_uprBound = uprbnd;
 
     testmsg.m_originatorID = testID;
-    testmsg.m_hashAlgorithm = LcapMessage.getDefaultHashAlgorithm();
+    testmsg.m_hashAlgorithm = "SHA-1";
     testmsg.m_startTime = 123456789;
     testmsg.m_stopTime = 987654321;
     testmsg.m_multicast = false;
@@ -137,8 +137,8 @@ public class TestLcapDatagramRouter extends LockssTestCase {
     testmsg.m_challenge = testbytes;
     testmsg.m_verifier = testbytes;
     testmsg.m_hashed = testbytes;
-    testmsg.m_opcode = LcapMessage.CONTENT_POLL_REQ;
-    testmsg.m_entries = testentries = TestPoll.makeEntries(1, 25);
+    testmsg.m_opcode = V1LcapMessage.CONTENT_POLL_REQ;
+    testmsg.m_entries = testentries = TestV1Poll.makeEntries(1, 25);
     testmsg.m_archivalID = archivalID;
     dg = new LockssDatagram(LockssDatagram.PROTOCOL_LCAP, testmsg.encodeMsg());
     rdg = new LockssReceivedDatagram(dg.makeSendPacket(testaddr, 0));

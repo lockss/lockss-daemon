@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poll.java,v 1.1.2.14 2004-10-29 19:43:06 dshr Exp $
+ * $Id: TestV3Poll.java,v 1.1.2.15 2004-11-18 15:45:08 dshr Exp $
  */
 
 /*
@@ -255,7 +255,7 @@ public class TestV3Poll extends LockssTestCase {
 			     challenge,
 			     null,
 			     testID1,
-			     LcapMessage.getDefaultHashAlgorithm());
+			     "SHA-1");
     log.debug("initTestPoll: V3 voter returns " + p);
     assertTrue(p instanceof V3Voter);
     voter = (V3Voter) p;
@@ -267,7 +267,7 @@ public class TestV3Poll extends LockssTestCase {
 			     challenge,
 			     null,
 			     testID,
-			     LcapMessage.getDefaultHashAlgorithm());
+			     "SHA-1");
     log.debug("initTestPoll: V3 poller returns " + p);
     assertTrue(p instanceof V3Poller);
     poller = (V3Poller) p;

@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapIdentity.java,v 1.29 2004-09-29 23:31:37 tlipkis Exp $
+ * $Id: TestLcapIdentity.java,v 1.29.2.1 2004-11-18 15:45:09 dshr Exp $
  */
 
 /*
@@ -61,7 +61,7 @@ public class TestLcapIdentity extends LockssTestCase {
   IPAddr testAddress;
   int testReputation;
   PeerIdentity testID;
-  LcapMessage testMsg= null;
+  V1LcapMessage testMsg= null;
   private MockLockssDaemon daemon;
   private IdentityManager idmgr;
 
@@ -89,13 +89,13 @@ public class TestLcapIdentity extends LockssTestCase {
     testReputation = IdentityManager.INITIAL_REPUTATION;
     PollSpec spec = new MockPollSpec(archivalid, urlstr, lwrbnd, uprbnd,
 				     Poll.CONTENT_POLL);
-    testMsg = LcapMessage.makeRequestMsg(spec,
+    testMsg = V1LcapMessage.makeRequestMsg(spec,
 					 testentries,
 					 testbytes,
 					 testbytes,
-					 LcapMessage.CONTENT_POLL_REQ,
+					 V1LcapMessage.CONTENT_POLL_REQ,
 					 100000,
-					 testID);
+					   testID, "SHA-1");
   }
 
   /** test for method toString(..) */

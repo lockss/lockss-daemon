@@ -1,5 +1,5 @@
 /*
-* $Id: V1VerifyPoll.java,v 1.10 2004-09-29 06:36:20 tlipkis Exp $
+* $Id: V1VerifyPoll.java,v 1.10.2.1 2004-11-18 15:44:51 dshr Exp $
  */
 
 /*
@@ -59,7 +59,7 @@ class V1VerifyPoll extends V1Poll {
 		      String hashAlg,
 		      byte[] verifier) {
     super(pollspec, pm, orig, challenge, duration);
-    m_replyOpcode = LcapMessage.VERIFY_POLL_REP;
+    m_replyOpcode = V1LcapMessage.VERIFY_POLL_REP;
     m_tally = new V1PollTally(this,
                               VERIFY_POLL,
                               m_createTime,
@@ -80,10 +80,15 @@ class V1VerifyPoll extends V1Poll {
    * @param msg the Message to handle
    */
   void receiveMessage(LcapMessage msg) {
-    log.debug("receiving verify message" + msg.toString());
-    int opcode = msg.getOpcode();
-    if(opcode == LcapMessage.VERIFY_POLL_REP) {
-      startVoteCheck(msg);
+      if (msg.getPollVersion() != 1) {
+	  log.error("Not a V1 message " + msg.toString());
+	  return;
+      }
+      V1LcapMessage v1msg = (V1LcapMessage)msg;
+    log.debug("receiving verify message" + v1msg.toString());
+    int opcode = v1msg.getOpcode();
+    if(opcode == V1LcapMessage.VERIFY_POLL_REP) {
+      startVoteCheck(v1msg);
     }
   }
 
@@ -132,7 +137,7 @@ class V1VerifyPoll extends V1Poll {
      try {
        log.debug("sending our verify reply now.");
        // send our reply message
-       sendVerifyReply(m_msg);
+       sendVerifyReply((V1LcapMessage)m_msg);
      }
      catch (IOException ex) {
        m_pollstate = ERR_IO;
@@ -143,7 +148,7 @@ class V1VerifyPoll extends V1Poll {
    }
  }
 
-  private void performHash(LcapMessage msg) {
+  private void performHash(V1LcapMessage msg) {
     PeerIdentity id = msg.getOriginatorID();
     int weight = idMgr.getReputation(id);
     byte[] challenge = msg.getChallenge();
@@ -193,7 +198,7 @@ class V1VerifyPoll extends V1Poll {
     }
   }
 
-  private void sendVerifyReply(LcapMessage msg) throws IOException  {
+  private void sendVerifyReply(V1LcapMessage msg) throws IOException  {
     String url = msg.getTargetUrl();
     ArchivalUnit au;
     String chal = String.valueOf(B64Code.encode(msg.getChallenge()));
@@ -204,11 +209,12 @@ class V1VerifyPoll extends V1Poll {
       return;
     }
     byte[] verifier = m_pollmanager.makeVerifier(msg.getDuration());
-    LcapMessage repmsg = LcapMessage.makeReplyMsg(msg,
+    V1LcapMessage repmsg = (V1LcapMessage)
+	V1LcapMessage.makeReplyMsg(msg,
         secret,
         verifier,
         null,
-        LcapMessage.VERIFY_POLL_REP,
+        V1LcapMessage.VERIFY_POLL_REP,
         msg.getDuration(),
         idMgr.getLocalPeerIdentity(Poll.V1_POLL));
 
@@ -221,7 +227,7 @@ class V1VerifyPoll extends V1Poll {
     performHash(repmsg);
   }
 
-  private void startVoteCheck(LcapMessage msg) {
+  private void startVoteCheck(V1LcapMessage msg) {
     log.debug("Starting new verify vote:" + m_key);
     super.startVoteCheck();
     // schedule a hash/vote
@@ -240,7 +246,7 @@ class V1VerifyPoll extends V1Poll {
       log.debug("VerifyTimerCallback called, checking if I should verify");
       if(m_pollstate == PS_WAIT_HASH) {
         log.debug("I should verify ");
-        LcapMessage msg = (LcapMessage) cookie;
+        V1LcapMessage msg = (V1LcapMessage) cookie;
         performHash(msg);
         stopVoteCheck();
       }

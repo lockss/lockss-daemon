@@ -1,5 +1,5 @@
 /*
-* $Id: MockPoll.java,v 1.2 2003-07-09 20:06:46 clairegriffin Exp $
+* $Id: MockPoll.java,v 1.2.32.1 2004-11-18 15:45:10 dshr Exp $
  */
 
 /*
@@ -49,6 +49,7 @@ public class MockPoll implements Poll {
   String m_key; // the string we used to id this poll
   Deadline m_deadline; // when election is over
   boolean m_isMine;
+    String m_hashAlgorithm = "SHA-1";
 
   public MockPoll() {
 
@@ -132,6 +133,22 @@ public class MockPoll implements Poll {
   public void setKey(String key) {
     m_key = key;
   }
+
+    /**
+     * Return the hash algorithm
+     * @return String name for hash algorithm
+     */
+    public String getHashAlgorithm() {
+	return m_hashAlgorithm;
+    }
+
+    /**
+     * Set the mhash algoprithm
+     * @param alg tthe String name for the hash algorithm
+     */
+    public void setHashAlgorithm(String alg) {
+	m_hashAlgorithm = alg;
+    }
 
   /**
    * Return the poll's deadline

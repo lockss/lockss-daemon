@@ -1,5 +1,5 @@
 /*
- * $Id: LockssApp.java,v 1.6 2004-09-27 22:39:15 smorabito Exp $
+ * $Id: LockssApp.java,v 1.6.2.1 2004-11-18 15:44:49 dshr Exp $
  */
 
 /*
@@ -286,8 +286,8 @@ public abstract class LockssApp {
   protected LockssManager initManager(ManagerDesc desc) throws Exception {
     String managerName = Configuration.getParam(MANAGER_PREFIX + desc.key,
 						desc.defaultClass);
-    LockssManager mgr = instantiateManager(desc);
     try {
+	LockssManager mgr = instantiateManager(desc);
       // call init on the service
       mgr.initService(this);
       return mgr;
@@ -304,8 +304,14 @@ public abstract class LockssApp {
     String managerName = Configuration.getParam(MANAGER_PREFIX + desc.key,
 						desc.defaultClass);
     LockssManager mgr;
+    log.debug2("instantiateManager(" + managerName + ")");
     try {
-      mgr = (LockssManager)makeInstance(managerName);
+	try {
+	    mgr = (LockssManager)makeInstance(managerName);
+	} catch (Exception e) {
+	    log.error("makeInstance() threw " + e, e);
+	    throw e;
+	}
     } catch (ClassNotFoundException e) {
       log.warning("Couldn't load manager class " + managerName);
       if (!managerName.equals(desc.defaultClass)) {
@@ -315,6 +321,7 @@ public abstract class LockssApp {
 	throw e;
       }
     }
+    log.debug2("Returning " + mgr);
     return mgr;
   }
 
@@ -323,7 +330,18 @@ public abstract class LockssApp {
 	     IllegalAccessException {
     log.debug2("Instantiating manager class " + managerClassName);
     Class mgrClass = Class.forName(managerClassName);
-    return mgrClass.newInstance();
+    if (mgrClass == null) {
+	log.error("No class found for " + managerClassName);
+	return null;
+    }
+    try {
+	Object ret = mgrClass.newInstance();
+	return ret;
+    } catch (Exception e) {
+	log.error("newInstance() threw " + e, e);
+	return null;
+    }
+    
   }
 
   /**

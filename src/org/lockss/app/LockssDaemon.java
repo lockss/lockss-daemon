@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.67.2.2 2004-10-01 18:46:57 dshr Exp $
+ * $Id: LockssDaemon.java,v 1.67.2.3 2004-11-18 15:44:49 dshr Exp $
  */
 
 /*
@@ -32,6 +32,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.app;
 
 import java.util.*;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import org.lockss.util.*;
 import org.lockss.mail.*;
 import org.lockss.alert.*;
@@ -116,6 +118,11 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   public static String AU_TREEWALK_MANAGER = "AuTreeWalkManager";
   public static String REPOSITORY_STATUS = "RepositoryStatus";
   public static String ARCHIVAL_UNIT_STATUS = "ArchivalUnitStatus";
+
+    // XXX temporary
+  public static final String PARAM_HASH_ALGORITHM = Configuration.PREFIX +
+      "protocol.hashAlgorithm";
+  public static final String DEFAULT_HASH_ALGORITHM = "SHA-1";
 
   // Manager descriptors.  The order of this table determines the order in
   // which managers are initialized and started.
@@ -391,6 +398,41 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     return (ArchivalUnitStatus) getManager(ARCHIVAL_UNIT_STATUS);
   }
 
+    /**
+     * return the default hash algorithm
+     * @return string name of default hash algorithm
+     */
+  public String getDefaultHashAlgorithm() {
+    String algorithm = Configuration.getParam(PARAM_HASH_ALGORITHM,
+                                              DEFAULT_HASH_ALGORITHM);
+    return algorithm;
+  }
+
+    /**
+     * return an instance of the default hash algorithm
+     * @return instance of default hash algorithm
+     */
+    public MessageDigest getDefaultHasher() {
+    MessageDigest hasher = null;
+    try {
+      hasher = MessageDigest.getInstance(getDefaultHashAlgorithm());
+    }
+    catch (NoSuchAlgorithmException ex) {
+      log.error("Unable to run - no hasher");
+    }
+
+    return hasher;
+    }
+
+    /**
+     * return the default hash algorithm for the poll version
+     * @param version poll version
+     * @return string name of default hash algorithm
+     */
+    public String getDefaultHashAlgorithm(int version) {
+	//  XXX temporary
+	return getDefaultHashAlgorithm();
+    }
   // LockssAuManager accessors
 
   /**

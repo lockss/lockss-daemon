@@ -1,5 +1,5 @@
 /*
-* $Id: V1Poll.java,v 1.18.2.1 2004-10-05 22:52:45 dshr Exp $
+* $Id: V1Poll.java,v 1.18.2.2 2004-11-18 15:44:50 dshr Exp $
  */
 
 /*
@@ -60,11 +60,14 @@ public abstract class V1Poll extends BasePoll {
       "poll.voteMargin";
   static final String PARAM_TRUSTED_WEIGHT = Configuration.PREFIX +
       "poll.trustedWeight";
+  static final String PARAM_HASH_ALGORITHM = Configuration.PREFIX +
+      "poll.v1HashAlgorithm";
 
   static final int DEFAULT_VOTE_MARGIN = 75;
   static final int DEFAULT_TRUSTED_WEIGHT = 350;
   static final int DEFAULT_AGREE_VERIFY = 10;
   static final int DEFAULT_DISAGREE_VERIFY = 80;
+    static final String DEFAULT_HASH_ALGORITHM = "SHA-1";
   double m_agreeVer = 0;     // the max percentage of time we will verify
   double m_disagreeVer = 0;  // the max percentage of time we will verify
   byte[] m_challenge;     // The caller's challenge string
@@ -78,6 +81,7 @@ public abstract class V1Poll extends BasePoll {
   long m_hashTime;         // an estimate of the time it will take to hash
   int m_pendingVotes = 0;  // the number of votes waiting to be tallied
   V1PollTally m_tally;
+    String m_hashAlgorithm = null;
 
   /**
    * create a new poll
@@ -158,6 +162,8 @@ public abstract class V1Poll extends BasePoll {
         DEFAULT_AGREE_VERIFY)) / 100;
     m_disagreeVer = ((double)Configuration.getIntParam(PARAM_DISAGREE_VERIFY,
         DEFAULT_DISAGREE_VERIFY)) / 100;
+    m_hashAlgorithm = Configuration.getParam(PARAM_HASH_ALGORITHM,
+                                              DEFAULT_HASH_ALGORITHM);
 
   }
 
@@ -245,13 +251,14 @@ public abstract class V1Poll extends BasePoll {
 	byte[] verifier = m_pollmanager.makeVerifier(duration);
 	PollSpec pollspec = new PollSpec(m_pollspec, Poll.VERIFY_POLL);
 	LcapMessage reqmsg =
-	  LcapMessage.makeRequestMsg(pollspec,
+	    V1LcapMessage.makeRequestMsg(pollspec,
 				     null,
 				     challenge,
 				     verifier,
-				     LcapMessage.VERIFY_POLL_REQ,
+				     V1LcapMessage.VERIFY_POLL_REQ,
 				     duration,
-				     idMgr.getLocalPeerIdentity(Poll.V1_POLL));
+					 idMgr.getLocalPeerIdentity(Poll.V1_POLL),
+					 getHashAlgorithm());
 
 	PeerIdentity originatorID = vote.getVoterIdentity();
 	log.debug2("sending our verification request to " +
@@ -274,11 +281,12 @@ public abstract class V1Poll extends BasePoll {
    * cast our vote for this poll
    */
   void castOurVote() {
-    LcapMessage msg;
+    V1LcapMessage msg;
     PeerIdentity local_id = idMgr.getLocalPeerIdentity(Poll.V1_POLL);
     long remainingTime = m_deadline.getRemainingTime();
     try {
-      msg = LcapMessage.makeReplyMsg(m_msg, m_hash, m_verifier, null,
+	msg = (V1LcapMessage)
+	    V1LcapMessage.makeReplyMsg(m_msg, m_hash, m_verifier, null,
                                      m_replyOpcode, remainingTime, local_id);
       log.debug("vote:" + msg.toString());
       m_pollmanager.sendMessage(msg, m_cus.getArchivalUnit());
@@ -381,7 +389,7 @@ public abstract class V1Poll extends BasePoll {
    * @param msg the message which is triggering the poll
    * @return boolean true if the poll should run, false otherwise
    */
-  boolean shouldCheckVote(LcapMessage msg) {
+  boolean shouldCheckVote(V1LcapMessage msg) {
     PeerIdentity voterID = msg.getOriginatorID();
 
     // make sure we haven't already voted
@@ -465,6 +473,10 @@ public abstract class V1Poll extends BasePoll {
   public byte[] getVerifier() {
     return m_verifier;
   }
+
+    public String getHashAlgorithm() {
+	return m_hashAlgorithm;
+    }
 
   class PollHashCallback implements HashService.Callback {
 

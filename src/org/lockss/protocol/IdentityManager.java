@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManager.java,v 1.50 2004-09-29 06:39:14 tlipkis Exp $
+ * $Id: IdentityManager.java,v 1.50.2.1 2004-11-18 15:45:06 dshr Exp $
  */
 
 /*
@@ -153,12 +153,14 @@ public class IdentityManager
   private Map cachesToFetchFrom = null;
 
   private Object identityMapLock = new Object();
+    private LockssDaemon theDaemon = null;
 
 
   public IdentityManager() { }
 
   public void initService(LockssDaemon daemon) throws LockssAppException {
     super.initService(daemon);
+    theDaemon = daemon;
 
     // initializing these here makes testing more predictable
     localPeerIdentities = new PeerIdentity[Poll.MAX_POLL_VERSION+1];
@@ -219,10 +221,9 @@ public class IdentityManager
     if (localPeerIdentities[Poll.V3_POLL] != null) {
       log.info("Local V3 identity: " + getLocalPeerIdentity(Poll.V3_POLL));
     }
-    getDaemon().getStatusService().registerStatusAccessor("Identities",
+    theDaemon.getStatusService().registerStatusAccessor("Identities",
 							  new Status());
     Vote.setIdentityManager(this); 
-    LcapMessage.setIdentityManager(this);
     IdentityAgreement.setIdentityManager(this);
   }
 
@@ -238,7 +239,6 @@ public class IdentityManager
     }
     super.stopService();
     Vote.setIdentityManager(null);
-    LcapMessage.setIdentityManager(null);
   }
 
   /** Find or create unique instances of both PeerIdentity and LcapIdentity.

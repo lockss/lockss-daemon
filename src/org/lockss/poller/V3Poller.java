@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.1.2.13 2004-10-29 19:43:06 dshr Exp $
+ * $Id: V3Poller.java,v 1.1.2.14 2004-11-18 15:45:06 dshr Exp $
  */
 
 /*
@@ -434,7 +434,7 @@ public class V3Poller extends V3Poll {
 	    V3LcapMessage.makeRequestMsg(pollspec, props, m_challenge,
 					 V3LcapMessage.MSG_POLL,
 					 m_deadline.getRemainingTime(),
-					 m_callerID);
+					 m_callerID, "SHA-1");
 	  pollMgr.sendMessageTo(msg, m_cus.getArchivalUnit(), m_currentVoter);
 	  changePollState(STATE_WAITING_POLL_ACK);
 	} catch (IOException ex) {

@@ -1,5 +1,5 @@
 /*
- * $Id: PollSpec.java,v 1.27.2.2 2004-10-29 03:38:19 dshr Exp $
+ * $Id: PollSpec.java,v 1.27.2.3 2004-11-18 15:44:50 dshr Exp $
  */
 
 /*
@@ -78,7 +78,6 @@ public class PollSpec {
   private int pollType;    // One of the types defined by Poll
     private int quorum;
 
-
   /**
    * Construct a PollSpec from a CachedUrlSet and an upper and lower bound
    * @param cus the CachedUrlSet
@@ -131,7 +130,28 @@ public class PollSpec {
    * Construct a PollSpec from a LcapMessage
    * @param msg the LcapMessage which defines the range of interest
    */
-  public PollSpec(LcapMessage msg) {
+  public PollSpec(V1LcapMessage msg) {
+    auId = msg.getArchivalId();
+    pluginVersion = msg.getPluginVersion();
+    url = msg.getTargetUrl();
+    uprBound = msg.getUprBound();
+    lwrBound = msg.getLwrBound();
+    pollVersion = msg.getPollVersion();
+    if (msg.isContentPoll()) {
+      pollType = Poll.CONTENT_POLL;
+    } else if (msg.isNamePoll()) {
+      pollType = Poll.NAME_POLL;
+    } else if (msg.isVerifyPoll()) {
+      pollType = Poll.VERIFY_POLL;
+    } else {
+      pollType = -1;
+    }
+    cus = getPluginManager().findCachedUrlSet(this);
+    quorum =
+	Configuration.getCurrentConfig().getIntParam(PARAM_QUORUM, DEFAULT_QUORUM);
+  }
+
+  public PollSpec(V3LcapMessage msg) {
     auId = msg.getArchivalId();
     pluginVersion = msg.getPluginVersion();
     url = msg.getTargetUrl();

@@ -1,5 +1,5 @@
 /*
- * $Id: TestPoll.java,v 1.87 2004-09-29 18:57:58 tlipkis Exp $
+ * $Id: TestV1Poll.java,v 1.1.2.1 2004-11-18 15:45:08 dshr Exp $
  */
 
 /*
@@ -45,8 +45,8 @@ import org.lockss.test.*;
 import org.lockss.repository.LockssRepositoryImpl;
 
 /** JUnitTest case for class: org.lockss.poller.Poll */
-public class TestPoll extends LockssTestCase {
-  private static Logger log = Logger.getLogger("TestPoll");
+public class TestV1Poll extends LockssTestCase {
+  private static Logger log = Logger.getLogger("TestV1Poll");
   private static String[] rootV1urls = {
       "http://www.test.org",
       "http://www.test1.org", "http://www.test2.org"};
@@ -65,7 +65,7 @@ public class TestPoll extends LockssTestCase {
 
   protected PeerIdentity testID;
   protected PeerIdentity testID1;
-  protected LcapMessage[] testV1msg;
+  protected V1LcapMessage[] testV1msg;
   protected V1Poll[] testV1polls;
   protected PollManager pollmanager;
 
@@ -114,13 +114,13 @@ public class TestPoll extends LockssTestCase {
 
   /** test for method checkVote(..) */
   public void testCheckVote() throws Exception {
-    LcapMessage msg = null;
+    V1LcapMessage msg = null;
     log.debug3("starting testCheeckVote");
-    msg = LcapMessage.makeReplyMsg(testV1polls[0].getMessage(),
+    msg = V1LcapMessage.makeReplyMsg(testV1polls[0].getMessage(),
 				   pollmanager.generateRandomBytes(),
 				   pollmanager.generateRandomBytes(),
 				   null,
-				   LcapMessage.NAME_POLL_REP,
+				   V1LcapMessage.NAME_POLL_REP,
 				   testduration,
 				   testID);
     log.debug3("testCheeckVote 2");
@@ -153,7 +153,7 @@ public class TestPoll extends LockssTestCase {
   /** test for method tally(..) */
   public void testTally() {
     V1Poll p = testV1polls[0];
-    LcapMessage msg = p.getMessage();
+    V1LcapMessage msg = (V1LcapMessage)p.getMessage();
     PeerIdentity id = msg.getOriginatorID();
     p.m_tally.addVote(new Vote(msg, false), id, false);
     p.m_tally.addVote(new Vote(msg, false), id, false);
@@ -164,7 +164,7 @@ public class TestPoll extends LockssTestCase {
     assertEquals(1500, p.m_tally.wtDisagree);
 
     p = testV1polls[1];
-    msg = p.getMessage();
+    msg = (V1LcapMessage)p.getMessage();
     p.m_tally.addVote(new Vote(msg, true), id, false);
     p.m_tally.addVote(new Vote(msg, true), id, false);
     p.m_tally.addVote(new Vote(msg, true), id, false);
@@ -300,23 +300,23 @@ public class TestPoll extends LockssTestCase {
 					   int numDissenting)
       throws Exception {
     V1NamePoll np = null;
-    LcapMessage agree_msg = null;
-    LcapMessage disagree_msg1 = null;
-    LcapMessage disagree_msg2 = null;
+    V1LcapMessage agree_msg = null;
+    V1LcapMessage disagree_msg1 = null;
+    V1LcapMessage disagree_msg2 = null;
 
     Plugin plugin = testau.getPlugin();
     PollSpec spec =
       new MockPollSpec(testau,
 		       rootV1urls[0],null,null, Poll.NAME_POLL);
     ((MockCachedUrlSet)spec.getCachedUrlSet()).setHasContent(false);
-    LcapMessage poll_msg =
-      LcapMessage.makeRequestMsg(spec,
+    V1LcapMessage poll_msg =
+      V1LcapMessage.makeRequestMsg(spec,
 				 null,
 				 pollmanager.generateRandomBytes(),
 				 pollmanager.generateRandomBytes(),
-				 LcapMessage.NAME_POLL_REQ,
+				 V1LcapMessage.NAME_POLL_REQ,
 				 testduration,
-				 testID);
+				   testID, "SHA-1");
 
     // make our poll
     np = (V1NamePoll) new V1NamePoll(spec,
@@ -328,31 +328,31 @@ public class TestPoll extends LockssTestCase {
     np.setMessage(poll_msg);
 
     // generate agree vote msg
-    agree_msg = LcapMessage.makeReplyMsg(poll_msg,
+    agree_msg = V1LcapMessage.makeReplyMsg(poll_msg,
 					 pollmanager.generateRandomBytes(),
 					 poll_msg.getVerifier(),
 					 agree_entries,
-					 LcapMessage.NAME_POLL_REP,
-					 testduration, testID);
+					 V1LcapMessage.NAME_POLL_REP,
+					   testduration, testID);
 
     // generate a disagree vote msg
-    disagree_msg1 = LcapMessage.makeReplyMsg(poll_msg,
+    disagree_msg1 = V1LcapMessage.makeReplyMsg(poll_msg,
 					     pollmanager.generateRandomBytes(),
 					     pollmanager.generateRandomBytes(),
 					     disagree_entries,
-					     LcapMessage.NAME_POLL_REP,
-					     testduration, testID1);
+					     V1LcapMessage.NAME_POLL_REP,
+					       testduration, testID1);
     // generate a losing disagree vote msg
-    disagree_msg2 = LcapMessage.makeReplyMsg(poll_msg,
+    disagree_msg2 = V1LcapMessage.makeReplyMsg(poll_msg,
 					     pollmanager.generateRandomBytes(),
 					     pollmanager.generateRandomBytes(),
 					     dissenting_entries,
-					     LcapMessage.NAME_POLL_REP,
-					     testduration, testID1);
+					     V1LcapMessage.NAME_POLL_REP,
+					       testduration, testID1);
 
 
     // add our vote
-    LcapMessage msg = np.getMessage();
+    V1LcapMessage msg = (V1LcapMessage)np.getMessage();
     PeerIdentity id = msg.getOriginatorID();
     np.m_tally.addVote(np.makeNameVote(msg, true), id, true);
 
@@ -380,7 +380,7 @@ public class TestPoll extends LockssTestCase {
 
   public static V1Poll createCompletedPoll(LockssDaemon daemon,
 					   ArchivalUnit au,
-					   LcapMessage testmsg,
+					   V1LcapMessage testmsg,
 					   int numAgree,
 					   int numDisagree,
 					   PollManager pollmanager)
@@ -503,7 +503,7 @@ public class TestPoll extends LockssTestCase {
   }
 
   private void initTestMsg() throws Exception {
-    testV1msg = new LcapMessage[3];
+    testV1msg = new V1LcapMessage[3];
     int[] pollType = {
       Poll.NAME_POLL,
       Poll.CONTENT_POLL,
@@ -519,15 +519,15 @@ public class TestPoll extends LockssTestCase {
       PollSpec spec = new MockPollSpec(testau, rootV1urls[i],
 				       lwrbnd, uprbnd, pollType[i]);
       ((MockCachedUrlSet)spec.getCachedUrlSet()).setHasContent(false);
-      int opcode = LcapMessage.NAME_POLL_REQ + (i * 2);
+      int opcode = V1LcapMessage.NAME_POLL_REQ + (i * 2);
       long duration = -1;
       //  NB calcDuration is not applied to Verify polls.
       switch (opcode) {
-      case LcapMessage.NAME_POLL_REQ:
-      case LcapMessage.CONTENT_POLL_REQ:
+      case V1LcapMessage.NAME_POLL_REQ:
+      case V1LcapMessage.CONTENT_POLL_REQ:
 	duration = pf.calcDuration(spec, pollmanager);
 	break;
-      case LcapMessage.VERIFY_POLL_REQ:
+      case V1LcapMessage.VERIFY_POLL_REQ:
 	duration = 100000; // Arbitrary
 	break;
       default:
@@ -536,13 +536,13 @@ public class TestPoll extends LockssTestCase {
       }
 	
       testV1msg[i] =
-	LcapMessage.makeRequestMsg(spec,
+	V1LcapMessage.makeRequestMsg(spec,
 				   agree_entries,
 				   pollmanager.makeVerifier(100000),
 				   pollmanager.makeVerifier(100000),
 				   opcode,
 				   duration,
-				   testID);
+				     testID, "SHA-1");
       assertNotNull(testV1msg[i]);
     }
 
@@ -584,7 +584,7 @@ public class TestPoll extends LockssTestCase {
    * */
   public static void main(String[] argv) {
     String[] testCaseList = {
-        TestPoll.class.getName()};
+        TestV1Poll.class.getName()};
     junit.swingui.TestRunner.main(testCaseList);
   }
 }

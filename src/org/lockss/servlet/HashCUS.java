@@ -1,5 +1,5 @@
 /*
- * $Id: HashCUS.java,v 1.14 2004-09-29 06:36:20 tlipkis Exp $
+ * $Id: HashCUS.java,v 1.14.2.1 2004-11-18 15:45:07 dshr Exp $
  */
 
 /*
@@ -453,7 +453,7 @@ public class HashCUS extends LockssServlet {
   private void doit() {
     try {
       if (isHash) {
-	hasher = LcapMessage.getDefaultHasher();
+	hasher = daemon.getDefaultHasher();
 	if (hasher == null) {
 	  errMsg = "Can't get default hasher";
 	  return;

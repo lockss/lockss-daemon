@@ -1,5 +1,5 @@
 /*
- * $Id: V1NamePoll.java,v 1.9.2.2 2004-10-05 22:52:45 dshr Exp $
+ * $Id: V1NamePoll.java,v 1.9.2.3 2004-11-18 15:44:50 dshr Exp $
  */
 
 /*
@@ -53,7 +53,7 @@ public class V1NamePoll extends V1Poll {
 		    long duration,
 		    String hashAlg) {
     super(pollspec, pm, orig, challenge, duration);
-    m_replyOpcode = LcapMessage.NAME_POLL_REP;
+    m_replyOpcode = V1LcapMessage.NAME_POLL_REP;
     m_tally = new V1PollTally(this,
                               NAME_POLL,
                               m_createTime,
@@ -66,12 +66,13 @@ public class V1NamePoll extends V1Poll {
    * cast our vote for this poll
    */
   void castOurVote() {
-    LcapMessage msg;
+    V1LcapMessage msg;
     PeerIdentity local_id = idMgr.getLocalPeerIdentity(Poll.V1_POLL);
     long remainingTime = m_deadline.getRemainingTime();
     log.debug("castOurVote: " + local_id);
     try {
-      msg = LcapMessage.makeReplyMsg(m_msg, m_hash, m_verifier,
+	msg = (V1LcapMessage)
+	    V1LcapMessage.makeReplyMsg(m_msg, m_hash, m_verifier,
                                      getEntries(), m_replyOpcode,
                                      remainingTime, local_id);
       log.debug("vote:" + msg.toString());
@@ -88,10 +89,15 @@ public class V1NamePoll extends V1Poll {
    * @param msg the Message to handle
    */
   void receiveMessage(LcapMessage msg) {
-    int opcode = msg.getOpcode();
+      if (msg.getPollVersion() != 1) {
+	  log.error("npt a V1 message " + msg.toString());
+	  return;
+      }
+      V1LcapMessage v1msg = (V1LcapMessage)msg;
+    int opcode = v1msg.getOpcode();
 
-    if (opcode == LcapMessage.NAME_POLL_REP) {
-      startVoteCheck(msg);
+    if (opcode == V1LcapMessage.NAME_POLL_REP) {
+      startVoteCheck(v1msg);
     }
   }
 
@@ -113,9 +119,9 @@ public class V1NamePoll extends V1Poll {
 
   /**
    * start the hash required for a vote cast in this poll
-   * @param msg the LcapMessage containing the vote we're going to check
+   * @param msg the V1LcapMessage containing the vote we're going to check
    */
-  void startVoteCheck(LcapMessage msg) {
+  void startVoteCheck(V1LcapMessage msg) {
     super.startVoteCheck();
 
     if (shouldCheckVote(msg)) {
@@ -248,7 +254,7 @@ public class V1NamePoll extends V1Poll {
    * @param agree a boolean set true if this is an agree vote, false otherwise.
    * @return the newly created NameVote object
    */
-  NameVote makeNameVote(LcapMessage msg, boolean agree) {
+  NameVote makeNameVote(V1LcapMessage msg, boolean agree) {
     return new NameVote(msg, agree);
   }
 
@@ -271,7 +277,7 @@ public class V1NamePoll extends V1Poll {
       uprRemaining = vote.getUprRemaining();
     }
 
-    NameVote(LcapMessage msg, boolean agree) {
+    NameVote(V1LcapMessage msg, boolean agree) {
       super(msg, agree);
       knownEntries = msg.getEntries();
 

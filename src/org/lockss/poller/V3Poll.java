@@ -1,5 +1,5 @@
 /*
-* $Id: V3Poll.java,v 1.1.2.4 2004-10-29 19:43:06 dshr Exp $
+* $Id: V3Poll.java,v 1.1.2.5 2004-11-18 15:45:06 dshr Exp $
  */
 
 /*
@@ -134,6 +134,14 @@ public abstract class V3Poll extends BasePoll {
 
   public abstract int getPollState();
   public abstract String getPollStateName(int state);
+
+    /**
+     * Return the hash algorithm used for the poll
+     * @return String name for hash algorithm
+     */
+    public String getHashAlgorithm() {
+	return "SHA-1"; // XXX
+    }
 
   /**
    * Return a hasher preinited with the challenge and verifier

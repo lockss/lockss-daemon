@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.121.2.1 2004-10-05 22:52:47 dshr Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.121.2.2 2004-11-18 15:45:09 dshr Exp $
  */
 
 /*
@@ -1329,7 +1329,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
                           boolean isContentPoll, boolean isLocal,
                           int numAgree, int numDisagree) throws Exception {
     PeerIdentity testID = null;
-    LcapMessage testmsg = null;
+    V1LcapMessage testmsg = null;
     if (isLocal) {
       testID = idManager.getLocalPeerIdentity(Poll.V1_POLL);
     } else {
@@ -1345,20 +1345,21 @@ public class TestNodeManagerImpl extends LockssTestCase {
     random.nextBytes(bytes);
 
     try {
-      testmsg = LcapMessage.makeRequestMsg(
+      testmsg = V1LcapMessage.makeRequestMsg(
           new MockPollSpec(mau, url, lwrBound, uprBound, Poll.NAME_POLL),
           null,
           bytes,
           bytes,
-          (isContentPoll ? LcapMessage.CONTENT_POLL_REQ :
-           LcapMessage.NAME_POLL_REQ),
+          (isContentPoll ? V1LcapMessage.CONTENT_POLL_REQ :
+           V1LcapMessage.NAME_POLL_REQ),
           123321,
-          testID);
+          testID,
+	  "SHA-1");
     } catch (IOException ex) {
       fail("can't create test name message" + ex.toString());
     }
 
-    Poll p = TestPoll.createCompletedPoll(theDaemon,
+    Poll p = TestV1Poll.createCompletedPoll(theDaemon,
 					  mau,
                                           testmsg, numAgree, numDisagree,
 					  pollManager);

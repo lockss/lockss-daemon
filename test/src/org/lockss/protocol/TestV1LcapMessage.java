@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapMessage.java,v 1.36 2004-09-29 18:57:57 tlipkis Exp $
+ * $Id: TestV1LcapMessage.java,v 1.1.2.1 2004-11-18 15:45:09 dshr Exp $
  */
 
 /*
@@ -45,18 +45,19 @@ import org.lockss.util.*;
 import org.lockss.app.LockssDaemon;
 
 /** JUnitTest case for class: org.lockss.protocol.Message */
-public class TestLcapMessage extends LockssTestCase {
+public class TestV1LcapMessage extends LockssTestCase {
 
   private static String urlstr = "http://www.example.com";
   private static byte[] testbytes = {1,2,3,4,5,6,7,8,9,10};
   private static String lwrbnd = "test1.doc";
   private static String uprbnd = "test3.doc";
   protected static String archivalID = "TestAU_1.0";
+  private static Logger log = Logger.getLogger("TestV1LcapMessage");
 
   private ArrayList testentries;
   protected IPAddr testaddr;
   protected PeerIdentity testID;
-  protected LcapMessage testmsg;
+  protected V1LcapMessage testmsg;
   private LockssDaemon theDaemon;
 
 
@@ -78,6 +79,7 @@ public class TestLcapMessage extends LockssTestCase {
     ConfigurationUtil.setCurrentConfigFromProps(p);
     IdentityManager idmgr = theDaemon.getIdentityManager();
     idmgr.startService();
+    V1LcapMessage.setIdentityManager(idmgr);
     try {
       testaddr = IPAddr.getByName("127.0.0.1");
       testID = idmgr.stringToPeerIdentity("127.0.0.1");
@@ -86,7 +88,7 @@ public class TestLcapMessage extends LockssTestCase {
       fail("can't open test host");
     }
     try {
-      testmsg = new LcapMessage();
+      testmsg = new V1LcapMessage();
     }
     catch (IOException ex) {
       fail("can't create test message");
@@ -97,7 +99,7 @@ public class TestLcapMessage extends LockssTestCase {
     testmsg.m_uprBound = uprbnd;
 
     testmsg.m_originatorID = testID;
-    testmsg.m_hashAlgorithm = LcapMessage.getDefaultHashAlgorithm();
+    testmsg.m_hashAlgorithm = "SHA-1";
     testmsg.m_startTime = 123456789;
     testmsg.m_stopTime = 987654321;
     testmsg.m_multicast = false;
@@ -107,8 +109,8 @@ public class TestLcapMessage extends LockssTestCase {
     testmsg.m_challenge = testbytes;
     testmsg.m_verifier = testbytes;
     testmsg.m_hashed = testbytes;
-    testmsg.m_opcode = LcapMessage.CONTENT_POLL_REQ;
-    testmsg.m_entries = testentries = TestPoll.makeEntries(1, 25);
+    testmsg.m_opcode = V1LcapMessage.CONTENT_POLL_REQ;
+    testmsg.m_entries = testentries = TestV1Poll.makeEntries(1, 25);
     testmsg.m_archivalID = archivalID;
     testmsg.m_pluginVersion = "PlugVer42";
   }
@@ -149,7 +151,7 @@ public class TestLcapMessage extends LockssTestCase {
 
   public void testStorePropsWithLargeNumberOfEntries() throws IOException {
     int original_maxsize = testmsg.m_maxSize;
-    testmsg.m_entries = TestPoll.makeEntries(1,20000);
+    testmsg.m_entries = TestV1Poll.makeEntries(1,20000);
     testmsg.storeProps();
 
     assertNotNull(testmsg.m_lwrRem);
@@ -158,18 +160,18 @@ public class TestLcapMessage extends LockssTestCase {
   }
 
   public void testNoOpMessageCreation() throws Exception {
-    LcapMessage noop_msg = null;
+    V1LcapMessage noop_msg = null;
 
-    noop_msg = LcapMessage.makeNoOpMsg(testID, testbytes);
+    noop_msg = V1LcapMessage.makeNoOpMsg(testID, testbytes);
 
     // now check the fields we expect to be valid
     assertTrue(testID == noop_msg.m_originatorID);
-    assertEquals(LcapMessage.NO_OP, noop_msg.m_opcode);
+    assertEquals(V1LcapMessage.NO_OP, noop_msg.m_opcode);
     assertEquals(testbytes, noop_msg.m_verifier);
   }
 
   public void testNoOpMessageToString() throws IOException {
-    LcapMessage noop_msg = LcapMessage.makeNoOpMsg(testID, testbytes);
+    V1LcapMessage noop_msg = V1LcapMessage.makeNoOpMsg(testID, testbytes);
 
     noop_msg.toString();
   }
@@ -177,26 +179,29 @@ public class TestLcapMessage extends LockssTestCase {
   public void testNoOpEncoding() throws Exception {
 
     byte[] msgbytes = new byte[0];
-    LcapMessage noop_msg = null;
+    V1LcapMessage noop_msg = null;
 
-    noop_msg = LcapMessage.makeNoOpMsg(testID, testbytes);
+    noop_msg = V1LcapMessage.makeNoOpMsg(testID, testbytes);
     msgbytes = noop_msg.encodeMsg();
 
-    LcapMessage msg = new LcapMessage(msgbytes);
+    log.debug("makeNoOpMsg() returns " + noop_msg.toString() +
+	      " and " + msgbytes.length + " bytes");
+    V1LcapMessage msg = new V1LcapMessage(msgbytes);
+    log.debug("constructor returns " + msg.toString());
     // now test to see if we got back what we started with
     assertTrue(testID == msg.m_originatorID);
-    assertEquals(LcapMessage.NO_OP, msg.m_opcode);
+    assertEquals(V1LcapMessage.NO_OP, msg.m_opcode);
     assertEquals(testbytes, msg.m_verifier);
   }
 
   public void testReplyMessageCreation() throws Exception {
-    LcapMessage rep_msg = null;
+    V1LcapMessage rep_msg = null;
 
-    rep_msg = LcapMessage.makeReplyMsg(testmsg,
+    rep_msg = V1LcapMessage.makeReplyMsg(testmsg,
 				       testbytes,
 				       testbytes,
 				       testentries,
-				       LcapMessage.CONTENT_POLL_REP,
+				       V1LcapMessage.CONTENT_POLL_REP,
 				       100000,
 				       testID);
 
@@ -204,7 +209,7 @@ public class TestLcapMessage extends LockssTestCase {
 
     assertTrue(testID == rep_msg.m_originatorID);
     assertEquals(5, rep_msg.m_ttl);
-    assertEquals(LcapMessage.CONTENT_POLL_REP, rep_msg.m_opcode);
+    assertEquals(V1LcapMessage.CONTENT_POLL_REP, rep_msg.m_opcode);
     assertEquals(testmsg.m_hashAlgorithm, rep_msg.m_hashAlgorithm);
     assertEquals(testmsg.m_pluginVersion, rep_msg.m_pluginVersion);
     // TODO: figure out how to test time
@@ -218,22 +223,23 @@ public class TestLcapMessage extends LockssTestCase {
   }
 
   public void testRequestMessageCreation() throws Exception {
-    LcapMessage req_msg = null;
+    V1LcapMessage req_msg = null;
     PollSpec spec =
       new MockPollSpec(archivalID, urlstr, lwrbnd, uprbnd, "Plug42",
 		       Poll.CONTENT_POLL);
-    req_msg = LcapMessage.makeRequestMsg(spec,
+    req_msg = V1LcapMessage.makeRequestMsg(spec,
 					 testentries,
 					 testbytes,
 					 testbytes,
-					 LcapMessage.CONTENT_POLL_REQ,
+					 V1LcapMessage.CONTENT_POLL_REQ,
 					 100000,
-					 testID);
+					   testID,
+					   "SHA-1");
     assertEquals(spec.getPollVersion(), 1);
     assertEquals(1, req_msg.getPollVersion());
     assertEquals("Plug42", req_msg.getPluginVersion());
     assertTrue(testID == req_msg.m_originatorID);
-    assertEquals(LcapMessage.CONTENT_POLL_REQ, req_msg.m_opcode);
+    assertEquals(V1LcapMessage.CONTENT_POLL_REQ, req_msg.m_opcode);
     assertFalse(req_msg.m_multicast);
     assertEquals(archivalID, req_msg.m_archivalID);
     assertEquals(testbytes, req_msg.m_challenge);
@@ -249,11 +255,11 @@ public class TestLcapMessage extends LockssTestCase {
     testmsg.storeProps();
     msgbytes = testmsg.encodeMsg();
 
-    LcapMessage msg = new LcapMessage(msgbytes);
+    V1LcapMessage msg = new V1LcapMessage(msgbytes);
     // now test to see if we got back what we started with
     assertTrue(testID == msg.m_originatorID);
     assertEquals(5, msg.m_ttl);
-    assertEquals(LcapMessage.CONTENT_POLL_REQ, msg.m_opcode);
+    assertEquals(V1LcapMessage.CONTENT_POLL_REQ, msg.m_opcode);
     assertFalse(msg.m_multicast);
     assertEquals(2, msg.m_hopCount);
 
@@ -270,15 +276,15 @@ public class TestLcapMessage extends LockssTestCase {
     byte[] msgbytes = new byte[0];
     testmsg.storeProps();
     msgbytes = testmsg.encodeMsg();
-    LcapMessage msg = new LcapMessage(msgbytes);
+    V1LcapMessage msg = new V1LcapMessage(msgbytes);
     assertEquals(2, msg.m_hopCount);
     msg.setHopCount(3);
-    msg = new LcapMessage(msg.encodeMsg());
+    msg = new V1LcapMessage(msg.encodeMsg());
     // now test to see if we got back what we started with
     assertEquals(3, msg.m_hopCount);
     assertTrue(testID == msg.m_originatorID);
     assertEquals(5, msg.m_ttl);
-    assertEquals(LcapMessage.CONTENT_POLL_REQ, msg.m_opcode);
+    assertEquals(V1LcapMessage.CONTENT_POLL_REQ, msg.m_opcode);
     assertFalse(msg.m_multicast);
 
     assertEquals(testbytes, msg.m_challenge);
@@ -308,8 +314,8 @@ public class TestLcapMessage extends LockssTestCase {
     testmsg.storeProps();
     byte[] msgbytes = testmsg.encodeMsg();
 
-    LcapMessage msg = null;
-    msg = new LcapMessage(msgbytes);
+    V1LcapMessage msg = null;
+    msg = new V1LcapMessage(msgbytes);
 
     // now make sure we're still null
     assertNull(msg.m_entries);
@@ -320,7 +326,7 @@ public class TestLcapMessage extends LockssTestCase {
   }
 
   public void testHopCount() {
-    int max = LcapMessage.MAX_HOP_COUNT_LIMIT;
+    int max = V1LcapMessage.MAX_HOP_COUNT_LIMIT;
     testmsg.setHopCount(0);
     assertEquals(0, testmsg.getHopCount());
     testmsg.setHopCount(-40);
@@ -334,7 +340,7 @@ public class TestLcapMessage extends LockssTestCase {
   }
 
   public static void main(String[] argv) {
-    String[] testCaseList = {TestLcapMessage.class.getName()};
+    String[] testCaseList = {TestV1LcapMessage.class.getName()};
     junit.swingui.TestRunner.main(testCaseList);
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: MockLcapStreamRouter.java,v 1.1.2.3 2004-10-27 17:11:58 dshr Exp $
+ * $Id: MockLcapStreamRouter.java,v 1.1.2.4 2004-11-18 15:45:10 dshr Exp $
  */
 
 /*
@@ -55,6 +55,7 @@ public class MockLcapStreamRouter extends LcapStreamRouter
   MockLcapStreamRouter partner = null;
   FifoQueue myReceiveQueue = null;
   FifoQueue mySendQueue = null;
+  static Logger log = Logger.getLogger("MockLcapStreamRouter");
 
   public MockLcapStreamRouter(FifoQueue recv, FifoQueue send) {
     myReceiveQueue = recv;
@@ -83,15 +84,18 @@ public class MockLcapStreamRouter extends LcapStreamRouter
   }
 
   public void run() {
-    LcapMessage msg = null;
+    V3LcapMessage msg = null;
+    log.debug("Q runner started");
     while (goOn) {
       Deadline dl = Deadline.in(10000);
       try {
-	msg = (LcapMessage) myReceiveQueue.get(dl);
+	msg = (V3LcapMessage) myReceiveQueue.get(dl);
       } catch (InterruptedException ex) {
+	  log.debug("Q runner interrupted");
 	// No action intended
       }
       if (msg != null && !msg.isNoOp()) {
+	  log.debug("Pulled " + msg + " from receive Q");
 	runHandlers(msg);
       }
     }
@@ -103,6 +107,7 @@ public class MockLcapStreamRouter extends LcapStreamRouter
   
   public void receiveMessage(LcapMessage msg) {
     myReceiveQueue.put(msg);
+    log.debug("Received " + msg);
   }
 
   /** Simulate unicasting a message to a single cache.
@@ -112,16 +117,19 @@ public class MockLcapStreamRouter extends LcapStreamRouter
    * @param id the identity of the cache to which to send the message
    * @throws IOException if message couldn't be sent
    */
-  public void sendTo(LcapMessage msg, ArchivalUnit au, PeerIdentity id)
+  public void sendTo(V3LcapMessage msg, ArchivalUnit au, PeerIdentity id)
       throws IOException {
+      log.debug("mock sendTo(" + msg + ")");
     mySendQueue.put(msg);
     if (partner != null) {
+	log.debug("Interrupting partner for " + msg);
       partner.myThread.interrupt();
     }
     Thread.yield();
     if (origRateLimiter != null) {
       origRateLimiter.event();
     }
+    log.debug("sent " + msg + " to " + id);
   }
 
   public FifoQueue getReceiveQueue() {

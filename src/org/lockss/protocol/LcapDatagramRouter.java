@@ -1,5 +1,5 @@
 /*
- * $Id: LcapDatagramRouter.java,v 1.4 2004-09-29 06:36:20 tlipkis Exp $
+ * $Id: LcapDatagramRouter.java,v 1.4.2.1 2004-11-18 15:45:06 dshr Exp $
  */
 
 /*
@@ -87,7 +87,7 @@ public class LcapDatagramRouter
   private RateLimiter origRateLimiter;
   private float probAddPartner;
   private long beaconInterval = 0;
-  private int initialHopCount = LcapMessage.MAX_HOP_COUNT_LIMIT;
+  private int initialHopCount = V1LcapMessage.MAX_HOP_COUNT_LIMIT;
 
   private Deadline beaconDeadline = Deadline.at(TimeBase.MAX);;
   private PartnerList partnerList;
@@ -162,7 +162,7 @@ public class LcapDatagramRouter
    * determine which multicast socket/port to send to.
    * @throws IOException if message couldn't be sent
    */
-  public void send(LcapMessage msg, ArchivalUnit au) throws IOException {
+  public void send(V1LcapMessage msg, ArchivalUnit au) throws IOException {
     msg.setHopCount(initialHopCount);
     log.debug2("send(" + msg + ")");
     LockssDatagram dg = new LockssDatagram(LockssDatagram.PROTOCOL_LCAP,
@@ -180,7 +180,7 @@ public class LcapDatagramRouter
    * @param id the identity of the cache to which to send the message
    * @throws IOException if message couldn't be sent
    */
-  public void sendTo(LcapMessage msg, ArchivalUnit au, PeerIdentity id)
+  public void sendTo(V1LcapMessage msg, ArchivalUnit au, PeerIdentity id)
       throws IOException {
     msg.setHopCount(initialHopCount);
     log.debug2("sendTo(" + msg + ", " + id + ")");
@@ -194,11 +194,11 @@ public class LcapDatagramRouter
   // handle received message.  do unicast/multicast routing, then pass msg
   // to handlers
   void processIncomingMessage(LockssReceivedDatagram dg) {
-    LcapMessage msg;
+    V1LcapMessage msg;
     log.debug2("rcvd message: " + dg);
     byte[] msgBytes = dg.getData();
     try {
-      msg = LcapMessage.decodeToMsg(msgBytes, dg.isMulticast());
+      msg = V1LcapMessage.decodeToMsg(msgBytes, dg.isMulticast());
     } catch (IOException e) {
       // XXX move the constants to IdentityManager
       PeerIdentity pid = idMgr.ipAddrToPeerIdentity(dg.getSender());
@@ -215,13 +215,13 @@ public class LcapDatagramRouter
     }
   }
 
-  private void runHandlers(LcapMessage msg) {
+  private void runHandlers(V1LcapMessage msg) {
     for (Iterator iter = messageHandlers.iterator(); iter.hasNext();) {
       runHandler((MessageHandler)iter.next(), msg);
     }
   }
 
-  private void runHandler(MessageHandler handler, LcapMessage msg) {
+  private void runHandler(MessageHandler handler, V1LcapMessage msg) {
     try {
       handler.handleMessage(msg);
     } catch (Exception e) {
@@ -229,7 +229,7 @@ public class LcapDatagramRouter
     }
   }
 
-  boolean isDuplicate(LockssReceivedDatagram dg, LcapMessage msg) {
+  boolean isDuplicate(LockssReceivedDatagram dg, V1LcapMessage msg) {
     String verifier = String.valueOf(B64Code.encode(msg.getVerifier()));
     if (recentVerifiers.put(verifier, verObj) != null) {
       log.debug2("Discarding dup from " + dg.getSender() + ": " + msg);
@@ -241,7 +241,7 @@ public class LcapDatagramRouter
   }
 
   // decide where to forward incoming message
-  void routeIncomingMessage(LockssReceivedDatagram dg, LcapMessage msg) {
+  void routeIncomingMessage(LockssReceivedDatagram dg, V1LcapMessage msg) {
     PeerIdentity senderID = idMgr.ipAddrToPeerIdentity(dg.getSender());
     PeerIdentity originatorID = msg.getOriginatorID();
     idEvent(originatorID, LcapIdentity.EVENT_ORIG, msg);
@@ -280,11 +280,11 @@ public class LcapDatagramRouter
       }
   }
 
-  void idEvent(PeerIdentity pid, int event, LcapMessage msg) {
+  void idEvent(PeerIdentity pid, int event, V1LcapMessage msg) {
     idMgr.rememberEvent(pid, event, msg);
   }
 
-  boolean isEligibleToForward(LockssReceivedDatagram dg, LcapMessage msg) {
+  boolean isEligibleToForward(LockssReceivedDatagram dg, V1LcapMessage msg) {
     // Don't forward if ...
     if (msg.getHopCount() <= 0) {	// forwarded enough times already
       log.debug3("Not forwarding, hopcount = 0");
@@ -314,13 +314,13 @@ public class LcapDatagramRouter
     return true;
   }
 
-  boolean isUnicastOpcode(LcapMessage msg) {
+  boolean isUnicastOpcode(V1LcapMessage msg) {
     return msg.isVerifyPoll();
   }
 
   // true if either the packet's source address is one of my interfaces,
   // or if I am (my identity is) the originator
-  boolean didIOriginateOrSend(LockssReceivedDatagram dg, LcapMessage msg) {
+  boolean didIOriginateOrSend(LockssReceivedDatagram dg, V1LcapMessage msg) {
     if (idMgr.isLocalIdentity(msg.getOriginatorID())) {
       return true;
     }
@@ -363,8 +363,8 @@ public class LcapDatagramRouter
 
   void sendNoOp() {
     try {
-      LcapMessage noOp =
-	LcapMessage.makeNoOpMsg(idMgr.getLocalPeerIdentity(Poll.V1_POLL),
+      V1LcapMessage noOp =
+	V1LcapMessage.makeNoOpMsg(idMgr.getLocalPeerIdentity(Poll.V1_POLL),
 				pollMgr.generateRandomBytes());
       log.debug2("noop: " + noOp);
       send(noOp, null);
@@ -477,6 +477,6 @@ public class LcapDatagramRouter
      * Callback used to inform clients that an LcapMessage has been received.
      * @param msg the received LcapMessage
      * @see LcapDatagramRouter#registerMessageHandler */
-    public void handleMessage(LcapMessage msg);
+    public void handleMessage(V1LcapMessage msg);
   }
 }

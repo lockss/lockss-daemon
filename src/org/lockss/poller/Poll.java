@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.88 2004-09-29 06:34:49 tlipkis Exp $
+* $Id: Poll.java,v 1.88.2.1 2004-11-18 15:44:50 dshr Exp $
  */
 
 /*
@@ -101,4 +101,10 @@ public interface Poll {
    * @return VoteTally for this poll
    */
   public PollTally getVoteTally();
+
+    /**
+     * Return the hash algorithm used for the poll
+     * @return String name for hash algorithm
+     */
+    public String getHashAlgorithm();
 }

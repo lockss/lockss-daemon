@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.142.2.6 2004-10-29 03:38:18 dshr Exp $
+ * $Id: PollManager.java,v 1.142.2.7 2004-11-18 15:44:50 dshr Exp $
  */
 
 /*
@@ -194,7 +194,7 @@ public class PollManager
       try {
 	BasePoll thePoll = makePoll(pollspec, duration, challenge, verifier,
 				    myID,
-				    LcapMessage.getDefaultHashAlgorithm());
+				    getDaemon().getDefaultHashAlgorithm());
 	if (pollFact.callPoll(thePoll, this, theIDManager)) {
 	  theLog.debug("poll factory returned " + thePoll);
 	  ret = thePoll;
@@ -358,7 +358,7 @@ public class PollManager
    * @return a new Poll object of the required type
    * @throws ProtocolException if message opcode is unknown
    */
-  BasePoll makePoll(LcapMessage msg) throws ProtocolException {
+  BasePoll makePoll(V1LcapMessage msg) throws ProtocolException {
     BasePoll ret_poll = null;
     PollSpec spec = new PollSpec(msg);
     long duration = msg.getDuration();
@@ -373,6 +373,37 @@ public class PollManager
     }
     return ret_poll;
   }
+
+  BasePoll makePoll(V3LcapMessage msg) throws ProtocolException {
+    BasePoll ret_poll = null;
+    PollSpec spec = new PollSpec(msg);
+    long duration = msg.getDuration();
+    byte[] challenge = msg.getChallenge();
+    byte[] verifier = msg.getVerifier();
+    PeerIdentity orig = msg.getOriginatorID();
+    String hashAlg = msg.getHashAlgorithm();
+
+    ret_poll = makePoll(spec, duration, challenge, verifier, orig, hashAlg);
+    if (ret_poll != null) {
+      ret_poll.setMessage(msg);
+    }
+    return ret_poll;
+  }
+
+    BasePoll makePoll(LcapMessage msg) throws ProtocolException {
+	BasePoll ret = null;
+	switch (msg.getPollVersion()) {
+	case 1:
+	    ret = makePoll((V1LcapMessage)msg);
+	    break;
+	case 3:
+	    ret = makePoll((V3LcapMessage)msg);
+	    break;
+	default:
+	    throw new ProtocolException("Bad version " + msg.getPollVersion());
+	}
+	return ret;
+    }
 
   BasePoll makePoll(PollSpec spec,
 		    long duration,
@@ -554,7 +585,7 @@ public class PollManager
    * @param au the ArchivalUnit for this message
    * @throws IOException
    */
-  void sendMessage(LcapMessage msg, ArchivalUnit au) throws IOException {
+  void sendMessage(V1LcapMessage msg, ArchivalUnit au) throws IOException {
     if(theDatagramRouter != null) {
       theDatagramRouter.send(msg, au);
     } else {
@@ -574,14 +605,14 @@ public class PollManager
     switch (msg.getPollVersion()) {
     case 1:
       if (theDatagramRouter != null) {
-	theDatagramRouter.sendTo(msg, au, id);
+	  theDatagramRouter.sendTo((V1LcapMessage)msg, au, id);
       } else {
 	throw new ProtocolException("theDatagramRouter null");
       }
       break;
     case 3:
       if (theStreamRouter != null) {
-	theStreamRouter.sendTo(msg, au, id);
+	  theStreamRouter.sendTo((V3LcapMessage)msg, au, id);
       } else {
 	throw new ProtocolException("theStreamRouter null");
       }
@@ -620,7 +651,7 @@ public class PollManager
     MessageDigest hasher = null;
     String algorithm;
     if(msg == null) {
-      algorithm = LcapMessage.getDefaultHashAlgorithm();
+      algorithm = theDaemon.getDefaultHashAlgorithm();
     }
     else {
       algorithm = msg.getHashAlgorithm();
@@ -821,7 +852,7 @@ public class PollManager
 // ----------------  Callbacks -----------------------------------
 
   class RouterMessageHandler implements LcapDatagramRouter.MessageHandler {
-    public void handleMessage(LcapMessage msg) {
+    public void handleMessage(V1LcapMessage msg) {
       theLog.debug3("received from router message:" + msg.toString());
       try {
 	handleIncomingMessage(msg);
