@@ -1,5 +1,5 @@
 /*
- * $Id: GenericContentHasher.java,v 1.11 2003-04-02 20:00:07 troberts Exp $
+ * $Id: GenericContentHasher.java,v 1.12 2003-04-10 01:24:35 aalto Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.util.*;
 import java.security.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.util.CollectionUtil;
 /**
  * General class to handle content hashing
  */
@@ -111,7 +112,7 @@ public class GenericContentHasher extends GenericHasher {
 	digest.update(NO_CONTENT);
 	totalHashed++;
       }
-    } 
+    }
 
     int bytesRemaining = nameBytes.length - nameIdx;
     int len = numBytes < bytesRemaining ? numBytes : bytesRemaining;
@@ -148,7 +149,7 @@ public class GenericContentHasher extends GenericHasher {
     log.debug3("Read "+bytesHashed+" bytes from the input stream");
     if (bytesHashed >= 0) {
       digest.update(bytes, 0, bytesHashed);
-    } 
+    }
     if (bytesHashed != 0 && bytesHashed < bytes.length) {
       log.debug3("done hashing content: "+cu);
       hashState = HASHING_NAME;
@@ -164,9 +165,27 @@ public class GenericContentHasher extends GenericHasher {
   }
 
   protected CachedUrlSetNode getNextElement() {
+    // check to add root cus properly
     if (!hashedRootCus) {
       hashedRootCus = true;
-      return cus.makeCachedUrl(cus.getUrl());
+      if ((cus.getSpec() instanceof RangeCachedUrlSetSpec)) {
+        RangeCachedUrlSetSpec rSpec = (RangeCachedUrlSetSpec)cus.getSpec();
+        if (rSpec.getLowerBound()==null) {
+          // add the root cus if the poll hasn't already divided into ranges
+          return cus.makeCachedUrl(cus.getUrl());
+        } else if (rSpec.getLowerBound().equals(".")) {
+          // if range is specifically '.', ignore the iterator and do a hash
+          // only on this node
+          iterator = CollectionUtil.EMPTY_ITERATOR;
+          return cus.makeCachedUrl(cus.getUrl());
+        } else {
+          // otherwise use iterator normally
+          hashedRootCus = true;
+          return super.getNextElement();
+        }
+      } else {
+        return cus.makeCachedUrl(cus.getUrl());
+      }
     }
     return super.getNextElement();
   }

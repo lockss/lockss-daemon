@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericContentHasher.java,v 1.13 2003-03-18 01:32:57 troberts Exp $
+ * $Id: TestGenericContentHasher.java,v 1.14 2003-04-10 01:24:35 aalto Exp $
  */
 
 /*
@@ -140,14 +140,14 @@ public class TestGenericContentHasher extends LockssTestCase {
     MockCachedUrlSet cus = makeFakeCachedUrlSet(3);
     cus.addUrl("blah", TEST_URL_BASE, true, true);
     GenericContentHasher hasher = new GenericContentHasher(cus, dig);
-    
+
     hashToEnd(hasher, 10);
 
     MockMessageDigest dig2 = new MockMessageDigest();
     cus = makeFakeCachedUrlSet(3);
     cus.addUrl("blah", TEST_URL_BASE, true, true);
     hasher = new GenericContentHasher(cus, dig2);
-    
+
     hashToEnd(hasher, 15);
 
     assertEquals(dig, dig2);
@@ -236,7 +236,7 @@ public class TestGenericContentHasher extends LockssTestCase {
 
 
     GenericContentHasher hasher = new GenericContentHasher(cus, dig);
-    
+
     hashAndCompare(expectedBytes, hasher, expectedBytes.length);
   }
 
@@ -271,6 +271,36 @@ public class TestGenericContentHasher extends LockssTestCase {
     hashAndCompare(expectedBytes, hasher, expectedBytes.length + 10);
   }
 
+  public void testGetNextElement() throws Exception {
+    // with a normal cus, it should return numFiles + the rootCus
+    MockCachedUrlSet mcus = makeFakeCachedUrlSet(2);
+    GenericContentHasher hasher = new GenericContentHasher(mcus, dig);
+    CachedUrlSetNode node = hasher.getNextElement();
+    assertEquals(TEST_URL_BASE, node.getUrl());
+    assertNotNull(hasher.getNextElement());
+    assertNotNull(hasher.getNextElement());
+    assertNull(hasher.getNextElement());
+
+    // with a range, it should return numFiles
+    mcus = makeFakeCachedUrlSet(2);
+    mcus.setSpec(new RangeCachedUrlSetSpec("test", "1", "2"));
+    hasher = new GenericContentHasher(mcus, dig);
+    assertNotNull(hasher.getNextElement());
+    assertNotNull(hasher.getNextElement());
+    assertNull(hasher.getNextElement());
+
+    // with a range of '.', it should return only itself
+    mcus = makeFakeCachedUrlSet(2);
+    mcus.setSpec(
+        new RangeCachedUrlSetSpec("test",
+                                  RangeCachedUrlSetSpec.SINGLE_NODE_RANGE,
+                                  null));
+    hasher = new GenericContentHasher(mcus, dig);
+    node = hasher.getNextElement();
+    assertEquals(TEST_URL_BASE, node.getUrl());
+    assertNull(hasher.getNextElement());
+  }
+
   private MockCachedUrlSet makeFakeCachedUrlSet(int numFiles)
       throws IOException, FileNotFoundException {
     Vector files = new Vector(numFiles+1);
@@ -302,7 +332,7 @@ public class TestGenericContentHasher extends LockssTestCase {
       totalSize += arr.length;
       byteArrays.add(arr);
     }
-      
+
     while (it.hasNext()) {
       cu = cachedUrlSetNodeToCachedUrl((CachedUrlSetNode) it.next());
       if (cu.hasContent()) {
@@ -362,14 +392,14 @@ public class TestGenericContentHasher extends LockssTestCase {
    * Will hash through in intervals of stepSize and then compare the hashed
    * bytes to the expected bytes
    */
-  private void hashAndCompare(byte[] expectedBytes, 
+  private void hashAndCompare(byte[] expectedBytes,
 			      GenericContentHasher hasher,
 			      int stepSize) throws IOException {
     hashToLength(hasher, expectedBytes.length, stepSize);
     assertBytesEqualDigest(expectedBytes, dig);
   }
-  
-  private void hashToLength(GenericContentHasher hasher, 
+
+  private void hashToLength(GenericContentHasher hasher,
 			    int length, int stepSize) throws IOException {
     int numBytesHashed = 0;
     while (numBytesHashed < length) {
@@ -380,14 +410,14 @@ public class TestGenericContentHasher extends LockssTestCase {
     assertTrue(hasher.finished());
   }
 
-  private void hashToEnd(GenericContentHasher hasher, int stepSize) 
+  private void hashToEnd(GenericContentHasher hasher, int stepSize)
     throws IOException {
     while (!hasher.finished()) {
       hasher.hashStep(stepSize);
     }
   }
 
-  private void assertBytesEqualDigest(byte[] expectedBytes, 
+  private void assertBytesEqualDigest(byte[] expectedBytes,
 				      MockMessageDigest dig) {
     for (int ix=0; ix<expectedBytes.length; ix++) {
       assertEquals(expectedBytes[ix], dig.getUpdatedByte());
@@ -401,7 +431,7 @@ public class TestGenericContentHasher extends LockssTestCase {
     }
   }
 
-  private void assertNotEquals(MockMessageDigest dig1, 
+  private void assertNotEquals(MockMessageDigest dig1,
 			       MockMessageDigest dig2) {
     if (dig1.getNumRemainingBytes() != dig2.getNumRemainingBytes()) {
       return;

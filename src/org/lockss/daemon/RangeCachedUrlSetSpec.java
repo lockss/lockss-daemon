@@ -1,5 +1,5 @@
 /*
- * $Id: RangeCachedUrlSetSpec.java,v 1.5 2003-03-19 04:17:50 tal Exp $
+ * $Id: RangeCachedUrlSetSpec.java,v 1.6 2003-04-10 01:24:35 aalto Exp $
  */
 
 /*
@@ -43,6 +43,12 @@ import org.lockss.util.*;
  */
 
 public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
+  /**
+   * The range for a content poll on a single node only, with no iteration
+   * below.
+   */
+  public static final String SINGLE_NODE_RANGE = ".";
+
   private String prefix;
   private String upperBound;
   private String lowerBound;

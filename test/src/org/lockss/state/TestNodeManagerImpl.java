@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.59 2003-04-10 01:09:54 claire Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.60 2003-04-10 01:24:34 aalto Exp $
  */
 
 /*
@@ -267,6 +267,30 @@ public class TestNodeManagerImpl
     assertEquals(MockPollManager.SUSPENDED,
                  ( (MockPollManager) theDaemon.getPollManager()).getPollStatus(
         results.getPollKey()));
+
+    // - internal with '.' range
+    contentPoll = createPoll(TEST_URL + "/branch1",
+                             RangeCachedUrlSetSpec.SINGLE_NODE_RANGE, null,
+                             true, true, 5, 10);
+    results = contentPoll.getVoteTally();
+    spec = results.getPollSpec();
+    nodeState = nodeManager.getNodeState(getCUS(mau, TEST_URL+"/branch1"));
+    pollState = new PollState(results.getType(), spec.getLwrBound(),
+                              spec.getUprBound(),
+                              PollState.RUNNING,
+                              results.getStartTime(),
+                              Deadline.MAX,
+                              false);
+    nodeManager.handleContentPoll(pollState, results, nodeState);
+    assertEquals(PollState.REPAIRING, pollState.getStatus());
+    // assert repair call scheduled
+    assertEquals(MockCrawlManager.SCHEDULED,
+                 ((MockCrawlManager)theDaemon.getCrawlManager()).getUrlStatus(
+        nodeState.getCachedUrlSet().getUrl()));
+    // assert poll suspended
+    assertEquals(MockPollManager.SUSPENDED,
+                 ((MockPollManager)theDaemon.getPollManager()).getPollStatus(
+        results.getPollKey()));
   }
 
   public void testHandleNamePoll() throws Exception {
@@ -296,6 +320,10 @@ public class TestNodeManagerImpl
     assertEquals(MockPollManager.CONTENT_REQUESTED,
                  ( (MockPollManager) theDaemon.getPollManager()).getPollStatus(
         TEST_URL + "/branch2/file2.doc"));
+    // and single node call
+    assertEquals(MockPollManager.CONTENT_REQUESTED,
+                 ((MockPollManager)theDaemon.getPollManager()).getPollStatus(
+        TEST_URL + "/branch2"));
 
     assertEquals(PollState.WON, pollState.getStatus());
 
@@ -531,6 +559,12 @@ public class TestNodeManagerImpl
 
   private Poll createPoll(String url, boolean isContentPoll, boolean isLocal,
                           int numAgree, int numDisagree) throws Exception {
+    return createPoll(url, null, null, isContentPoll, isLocal, numAgree,
+                      numDisagree);
+  }
+  private Poll createPoll(String url, String lwrBound, String uprBound,
+                          boolean isContentPoll, boolean isLocal,
+                          int numAgree, int numDisagree) throws Exception {
     LcapIdentity testID = null;
     LcapMessage testmsg = null;
     if (isLocal) {
@@ -554,7 +588,7 @@ public class TestNodeManagerImpl
       testmsg = LcapMessage.makeRequestMsg(
           new PollSpec(mau.getPluginId(),
                        mau.getAUId(),
-                       url, null, null, null),
+                       url, lwrBound, uprBound, null),
           null,
           bytes,
           bytes,
