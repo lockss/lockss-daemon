@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.2 2003-02-26 06:02:25 tal Exp $
+ * $Id: TestPluginManager.java,v 1.3 2003-02-27 07:31:11 tal Exp $
  */
 
 /*
@@ -37,10 +37,11 @@ import java.net.*;
 import java.util.*;
 import junit.framework.TestCase;
 //import org.lockss.util.*;
-import org.lockss.test.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.poller.*;
+import org.lockss.util.*;
+import org.lockss.test.*;
 
 /**
  * Test class for org.lockss.plugin.PluginManager
@@ -60,27 +61,27 @@ public class TestPluginManager extends LockssTestCase {
   static String mockPlugId = "org|lockss|test|MockPlugin";
   static String mauauid1 = "val1|val2";
   static String mauauidkey1 = "val1|val2";
-  static String mauauid2 = "val1|va.l3";
-  static String mauauidkey2 = "val1|va|l3";
+  static String mauauid2 = "val1|va.l3"; // auid contains a dot
+  static String mauauidkey2 = "val1|va|l3"; // so its key is escaped
 
   static String p1param = PluginManager.PARAM_AU_TREE +
     ".org|lockss|test|MockPlugin.";
 
-  static String p1a1param = p1param + mauauid1 + ".";
+  static String p1a1param = p1param + mauauidkey1 + ".";
   static String p1a2param = p1param + mauauidkey2 + ".";
 
   static String configStr =
     p1a1param + MockPlugin.CONFIG_PROP_1 + "=val1\n" +
     p1a1param + MockPlugin.CONFIG_PROP_2 + "=val2\n" +
     p1a2param + MockPlugin.CONFIG_PROP_1 + "=val1\n" +
-    p1a2param + MockPlugin.CONFIG_PROP_2 + "=va.l3\n";
+    p1a2param + MockPlugin.CONFIG_PROP_2 + "=va.l3\n"; // value contains a dot
 
   public void testNameFromId() {
     assertEquals("org.lockss.Foo", mgr.pluginNameFromId("org|lockss|Foo"));
   }
 
   public void testEnsurePluginLoaded() throws Exception {
-      assertTrue(!mgr.ensurePluginLoaded("org.lockss.NoSuchClass"));
+    assertTrue(!mgr.ensurePluginLoaded("org.lockss.NoSuchClass"));
     assertTrue(mgr.ensurePluginLoaded(mockPlugId));
     MockPlugin mpi = (MockPlugin)mgr.getPlugin(mockPlugId);
     assertEquals(1, mpi.getInitCtr());
@@ -114,6 +115,7 @@ public class TestPluginManager extends LockssTestCase {
     Configuration c2 = mau2.getConfiguration();
     assertEquals("val1", c2.get(MockPlugin.CONFIG_PROP_1));
     assertEquals("va.l3", c2.get(MockPlugin.CONFIG_PROP_2));
+    assertEquals(SetUtil.set(mau1, mau2), new HashSet(mgr.getAllAUs()));
   }
 
   public void testFindCUS() throws Exception {
