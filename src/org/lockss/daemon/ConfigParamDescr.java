@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescr.java,v 1.1 2003-08-04 07:56:11 tlipkis Exp $
+ * $Id: ConfigParamDescr.java,v 1.2 2003-08-27 00:03:49 eaalto Exp $
  */
 
 /*
@@ -65,6 +65,24 @@ public class ConfigParamDescr implements Comparable {
     BASE_URL.setDescription("Usually of the form http://<i>journal</i>.com/");
   }
 
+  public static final ConfigParamDescr JOURNAL_DIR = new ConfigParamDescr();
+  static {
+    JOURNAL_DIR.setKey("journal_dir");
+    JOURNAL_DIR.setDisplayName("Journal Directory");
+    JOURNAL_DIR.setType(TYPE_STRING);
+    JOURNAL_DIR.setSize(40);
+    JOURNAL_DIR.setDescription("Directory name for journal content (i.e. 'american_imago').");
+  }
+
+  public static final ConfigParamDescr JOURNAL_ABBR = new ConfigParamDescr();
+  static {
+    JOURNAL_ABBR.setKey("journal_abbr");
+    JOURNAL_ABBR.setDisplayName("Journal Abbreviation");
+    JOURNAL_ABBR.setType(TYPE_STRING);
+    JOURNAL_ABBR.setSize(10);
+    JOURNAL_ABBR.setDescription("Abbreviation for journal (often used as part of file names).");
+  }
+
   private String key;			// param (prop) key
   private String displayName;		// human readable name
   private String description;		// explanatory test
@@ -78,7 +96,10 @@ public class ConfigParamDescr implements Comparable {
     setKey(key);
   }
 
-  /** Create a new ConfigParamDescr with values from old ConfigParamDescr */
+  /**
+   * Create a new ConfigParamDescr with values from old ConfigParamDescr
+   * @param old the old ConfigParamDescr
+   */
   public ConfigParamDescr(ConfigParamDescr old) {
     super();
     setKey(old.getKey());
@@ -88,52 +109,82 @@ public class ConfigParamDescr implements Comparable {
     setSize(old.getSize());
   }
 
-  /** Return the parameter key */
+  /**
+   * Return the parameter key
+   * @return the key String
+   */
   public String getKey() {
     return key;
   }
 
-  /** Set the parameter key */
+  /**
+   * Set the parameter key
+   * @param key the new key
+   */
   public void setKey(String key) {
     this.key = key;
   }
 
-  /** Return the display name, or the key if no display name set */
+  /**
+   * Return the display name, or the key if no display name set
+   * @return the display name String
+   */
   public String getDisplayName() {
     return displayName != null ? displayName : getKey();
   }
 
-  /** Set the parameter key */
+  /**
+   * Set the parameter display name
+   * @param displayName the new display name
+   */
   public void setDisplayName(String displayName) {
     this.displayName = displayName;
   }
 
-  /** Return the parameter description */
+  /**
+   * Return the parameter description
+   * @return the description String
+   */
   public String getDescription() {
     return description;
   }
 
-  /** Set the parameter description */
+  /**
+   * Set the parameter description
+   * @param description the new description
+   */
   public void setDescription(String description) {
     this.description = description;
   }
 
-  /** Return the specified value type */
+  /**
+   * Return the specified value type
+   * @return the type int
+   */
   public int getType() {
     return type;
   }
 
-  /** Set the expected value type */
+  /**
+   * Set the expected value type
+   * @param type the new type
+   */
   public void setType(int type) {
     this.type = type;
   }
 
-  /** Return the suggested input field size */
+  /**
+   * Return the suggested input field size
+   * @return the size int
+   */
   public int getSize() {
     return size;
   }
 
-  /** Set the suggested input field size */
+  /**
+   * Set the suggested input field size
+   * @param size the new size
+   */
   public void setSize(int size) {
     this.size = size;
   }
