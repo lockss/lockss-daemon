@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.9 2002-11-23 05:49:00 claire Exp $
+* $Id: PollManager.java,v 1.10 2002-11-26 02:21:36 claire Exp $
  */
 
 /*
@@ -84,11 +84,12 @@ public class PollManager {
     }
 
     // check for conflicts
-    au = checkForConflicts(msg);
-    if(au != null) {
-      throw new ProtocolException(msg +
-                                  " conflicts with " + au +
-                                  " in makeElection()");
+    CachedUrlSet conflict = checkForConflicts(msg);
+    if(conflict != null) {
+      String err = msg.toString() + " conflicts with " + conflict.toString() +
+                                  " in makeElection()";
+      theLog.debug(err);
+      throw new ProtocolException(err);
     }
 
     // create the appropriate message type
@@ -220,11 +221,9 @@ public class PollManager {
    * check for conflicts between the poll defined by the Message and any
    * currently exsiting poll.
    * @param msg the <code>Message</code> to check
-   * @return the ArchivalUnit of the conflicting poll.
+   * @return the CachedUrlSet of the conflicting poll.
    */
-  static ArchivalUnit checkForConflicts(LcapMessage msg) {
-    ArchivalUnit  url_set = null;
-
+  static CachedUrlSet checkForConflicts(LcapMessage msg) {
     String url = msg.getTargetUrl();
     String regexp = msg.getRegExp();
     int    opcode = msg.getOpcode();
@@ -246,6 +245,11 @@ public class PollManager {
       int     p_opcode = p_msg.getOpcode();
       boolean p_isRegExp = p_regexp != null;
 
+      // eliminate verify polls
+      if((p_opcode == LcapMessage.VERIFY_POLL_REP)||
+         (p_opcode == LcapMessage.VERIFY_POLL_REQ)) {
+        continue;
+      }
       //XXX this should be handled by something else
       boolean alongside = p_url.equals(url);
       boolean below = (p_url.startsWith(url) &&
@@ -258,25 +262,19 @@ public class PollManager {
          (opcode == LcapMessage.CONTENT_POLL_REQ)) {
 
         if(alongside) { // only verify polls are allowed
-          if((p_opcode == LcapMessage.VERIFY_POLL_REP)||
-             (p_opcode == LcapMessage.VERIFY_POLL_REQ)) {
-            continue;
-          }
-          return p.getArchivalUnit();
+          theLog.debug("attempt to run new content or name poll alongside content poll");
+          return p.getCachedUrlSet();
         }
 
         if(above || below) { // verify and regexp polls are allowed
-          if((p_opcode == LcapMessage.VERIFY_POLL_REP)||
-             (p_opcode == LcapMessage.VERIFY_POLL_REQ)) {
-            continue;
-          }
           if((p_opcode == LcapMessage.CONTENT_POLL_REP) ||
              (p_opcode == LcapMessage.CONTENT_POLL_REQ)) {
             if(p_isRegExp) {
               continue;
             }
           }
-          return p.getArchivalUnit();
+          theLog.debug("attempt to run new name poll above or below content poll");
+          return p.getCachedUrlSet();
         }
       }
 
@@ -284,13 +282,8 @@ public class PollManager {
       if((opcode == LcapMessage.NAME_POLL_REP) ||
          (opcode == LcapMessage.NAME_POLL_REQ)) {
         if(alongside) { // only verify polls are allowed
-          if((p_opcode == LcapMessage.VERIFY_POLL_REP)||
-             (p_opcode == LcapMessage.VERIFY_POLL_REQ)) {
-            continue;
-          }
-          else {
-            return p.getArchivalUnit();
-          }
+          theLog.debug("attempt to run new content or name poll alongside name poll");
+          return p.getCachedUrlSet();
         }
         if(above) { // only reg exp polls are allowed
           if((p_opcode == LcapMessage.CONTENT_POLL_REP) ||
@@ -299,16 +292,18 @@ public class PollManager {
               continue;
             }
           }
-          return p.getArchivalUnit();
+          theLog.debug("attempt to run new name poll above name poll");
+          return p.getCachedUrlSet();
         }
 
         if(below) { // always a conflict
-          return p.getArchivalUnit();
+          theLog.debug("attempt to run new poll below name poll");
+          return p.getCachedUrlSet();
         }
       }
     }
 
-    return url_set;
+    return null;
   }
 
   /**

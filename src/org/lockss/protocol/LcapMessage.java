@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessage.java,v 1.7 2002-11-23 05:46:26 claire Exp $
+ * $Id: LcapMessage.java,v 1.8 2002-11-26 02:21:36 claire Exp $
  */
 
 /*
@@ -320,19 +320,16 @@ public class LcapMessage {
     m_props.decode(prop_bytes);
 
     // the immutable stuff
-    addr = m_props.getProperty("origIP");
     port = m_props.getInt("origPort", -1);
-    try {
-      m_originID = LcapIdentity.getIdentity(InetAddress.getByName(addr));
-    }
-    catch(UnknownHostException ex) {
-      log.error("invalid origin address");
-    }
+    byte[] ip_bytes = m_props.getByteArray("origIP", new byte[0]);
 
+    m_originID = LcapIdentity.getIdentity(bytesToAddress(ip_bytes));
+
+    ip_bytes = m_props.getByteArray("group", new byte[0]);
     try {
-      m_group =InetAddress.getByName(m_props.getProperty("group"));
+      m_group = bytesToAddress(ip_bytes);
     }
-    catch (UnknownHostException ex) {
+    catch (ProtocolException ex) {
       log.error("invalid group address");
     }
 
@@ -361,18 +358,19 @@ public class LcapMessage {
   public byte[] encodeMsg() throws IOException {
     // make sure the props table is up to date
     try {
-      m_props.setProperty("origIP",m_originID.getAddress().getHostAddress());
+      m_props.putByteArray("origIP",m_originID.getAddress().getAddress());
     }
     catch(NullPointerException npe) {
       throw new ProtocolException("LcapMessage.encode - null origin host address.");
     }
 
-    try {
-      m_props.setProperty("group",m_group.getHostAddress());
+    if(m_group == null) {
+      m_props.setProperty("group", "");
     }
-    catch(NullPointerException npe) {
-      throw new ProtocolException("LcapMessage.encode - null group host address.");
+    else {
+      m_props.putByteArray("group", m_group.getAddress());
     }
+
     m_props.putInt("ttl",m_ttl);
     m_props.putInt("duration",(int)(getDuration()/1000));
     m_props.putInt("elapsed",(int)(getElapsed()/1000));
@@ -504,6 +502,23 @@ public class LcapMessage {
       buf.append("\n");
     }
     return buf.toString();
+  }
+
+  private InetAddress bytesToAddress(byte[] inp) throws ProtocolException {
+    // inp is a 4-byte address - turn it into an InetAddress
+    Integer[] temp = new Integer[4];
+    for (int i = 0; i < 4; i++)
+      temp[i] = new Integer(inp[i] < 0 ? 256 + inp[i] : inp[i]);
+    String buf = temp[0].toString() + "." +
+      temp[1].toString() + "." +
+      temp[2].toString() + "." +
+      temp[3].toString();
+    try {
+      InetAddress ret = InetAddress.getByName(buf);
+      return ret;
+    } catch (UnknownHostException e) {
+      throw new ProtocolException("Bad Address:" + buf + ":" + e.toString());
+    }
   }
 
   public String toString() {

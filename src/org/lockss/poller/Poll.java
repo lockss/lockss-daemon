@@ -1,5 +1,5 @@
 /*
- * $Id: Poll.java,v 1.19 2002-11-25 19:40:00 claire Exp $
+ * $Id: Poll.java,v 1.20 2002-11-26 02:21:36 claire Exp $
  */
 
 /*
@@ -237,8 +237,8 @@ public abstract class Poll {
     if (!local) {
       try {
         int max = msg.getOriginID().getMaxReputaion();
-        double verify = (double)weight * 100 / max;
-        VerifyPoll.randomRequestVerify(msg, (int)verify);
+        double verify = ((double)weight) / max * 100 ;
+        VerifyPoll.randomRequestVerify(msg, (int)verify );
       }
       catch (IOException ex) {
         log.debug("attempt to verify randomly failed.", ex);
@@ -339,6 +339,7 @@ public abstract class Poll {
       tally();
     }
     PollManager.closeThePoll(m_key);
+    log.debug("closed the poll:" + m_key);
   }
 
   /**
@@ -404,7 +405,8 @@ public abstract class Poll {
 
       if(hash_completed)  {
         m_hash  = hasher.digest();
-	log.debug("Hash on "+urlset+" complete: "+m_hash);
+	log.debug("Hash on "+urlset+" complete: "+
+                  String.valueOf(B64Code.encode(m_hash)));
         scheduleVote();
       }
       else {

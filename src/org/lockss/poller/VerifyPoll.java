@@ -1,5 +1,5 @@
 /*
-* $Id: VerifyPoll.java,v 1.15 2002-11-25 19:40:00 claire Exp $
+* $Id: VerifyPoll.java,v 1.16 2002-11-26 02:21:36 claire Exp $
  */
 
 /*
@@ -77,7 +77,7 @@ class VerifyPoll extends Poll {
   void receiveMessage(LcapMessage msg) {
     int opcode = msg.getOpcode();
 
-    if(opcode == LcapMessage.NAME_POLL_REP) {
+    if(opcode == LcapMessage.VERIFY_POLL_REP) {
       startVote(msg);
     }
   }
@@ -104,25 +104,31 @@ class VerifyPoll extends Poll {
    */
   void startPoll() {
     // if someone else called the poll, we verify and we're done
+    log.debug("Starting new verify poll:" + m_key);
+    Deadline pt;
+    long end_time = m_deadline.getExpirationTime();
 
     if(m_caller != null && !m_caller.isLocalIdentity()) {
-      long time_remaining = m_deadline.getRemainingTime();
-      long vote_delay = time_remaining/2;
-      long vote_dev = time_remaining/4;
-      Deadline pt = Deadline.atRandomBefore(m_deadline);
-      TimerQueue.schedule(pt, new PollTimerCallback(), this);
-     }
+       pt = Deadline.atRandomBefore(end_time);
+    }
+    else {
+      pt = Deadline.at(end_time);
+      m_pollstate = PS_WAIT_TALLY;
+    }
+    TimerQueue.schedule(pt, new PollTimerCallback(), this);
   }
 
   /**
    * finish the poll once the deadline has expired
    */
   void stopPoll() {
-    try {
-      replyVerify(m_msg);
-    }
-    catch (IOException ex) {
-      m_pollstate = ERR_IO;
+    if(m_pollstate != PS_WAIT_TALLY) {
+      try {
+        replyVerify(m_msg);
+      }
+      catch (IOException ex) {
+        m_pollstate = ERR_IO;
+      }
     }
     super.stopPoll();
   }
@@ -141,7 +147,6 @@ class VerifyPoll extends Poll {
     } else {
       id.voteDisown();
     }
-    // TODO: Add support to disregard a vote in this poll from this id.
   }
 
 
@@ -170,20 +175,22 @@ class VerifyPoll extends Poll {
     String regexp = new String(msg.getRegExp());
     int opcode = LcapMessage.VERIFY_POLL_REQ;
 
-    byte[] verifier = PollManager.makeVerifier();
+    log.debug("Requesting a verify poll");
+
     LcapMessage reqmsg = LcapMessage.makeRequestMsg(url,
         regexp,
         new String[0],
         msg.getGroupAddress(),
         msg.getTimeToLive(),
         msg.getVerifier(),
-        verifier,
+        PollManager.makeVerifier(),
         opcode,
         msg.getDuration(),
         LcapIdentity.getLocalIdentity());
     LcapIdentity originator = msg.getOriginID();
     LcapComm.sendMessageTo(msg, Plugin.findArchivalUnit(url), originator);
     Poll poll = PollManager.findPoll(reqmsg);
+    log.debug("Calling start on new verify poll");
     poll.startPoll();
   }
 
