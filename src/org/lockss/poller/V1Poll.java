@@ -1,5 +1,5 @@
 /*
-* $Id: V1Poll.java,v 1.5 2003-08-26 23:33:40 clairegriffin Exp $
+* $Id: V1Poll.java,v 1.6 2003-10-17 22:49:05 clairegriffin Exp $
  */
 
 /*
@@ -214,7 +214,7 @@ public abstract class V1Poll extends BasePoll {
     else {
       verify = (((double)weight) / (2*max)) * m_disagreeVer;
     }
-    log.debug2("probablitiy of verifying this vote = " + verify);
+    log.debug3("probablitiy of verifying this vote = " + verify);
     try {
       if(ProbabilisticChoice.choose(verify)) {
         long remainingTime = m_deadline.getRemainingTime();
