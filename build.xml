@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.62 2003-09-23 21:11:22 tlipkis Exp $
+ $Id: build.xml,v 1.63 2003-09-23 21:31:51 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -758,8 +758,6 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
   </target>
 
   <target name="jdftp1" >
-<!--     <tempfile property="tar.file" destdir="${java.io.tmpdir}" -->
-<!--        prefix="foo" suffix=".tar"/> -->
 
     <property name="doctar" value="/tmp/lockss-javadoc.tgz" />
     <property name="script" value="lockss-jdftp" />
