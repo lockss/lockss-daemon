@@ -1,5 +1,5 @@
 /*
- * $Id: UrlCacher.java,v 1.2 2002-10-16 04:50:54 tal Exp $
+ * $Id: UrlCacher.java,v 1.3 2002-11-27 20:03:34 troberts Exp $
  */
 
 /*
@@ -74,37 +74,4 @@ public interface UrlCacher {
      * @throws java.io.IOException on many possible I/O problems.
      */
     public void cache() throws IOException;
-
-    // implementer interface - used by plugins to implement pieces of this
-
-    /**
-     * Store the content from an input stream with associated
-     * properties in the <code>UrlCacher</code> object.
-     * @param input   an <code>InputStream</code> object from which the
-     *                content can be read.
-     * @param headers a <code>Properties</code> object containing the
-     *                relevant HTTP headers.
-     * @exception java.io.IOException on many possible I/O problems.
-     */
-    public void storeContent(InputStream input,
-			     Properties headers) throws IOException;
-
-    // Un-cached read interface, accessing the underlying object,  used
-    // by the crawler to fetch content.  It is implemented by the plug-in
-    // to allow it to provide appropriate credentials.
-
-    /**
-     * Return an <code>InputStream</code> object which accesses the
-     * object being cached rather than the object in the cache.
-     * @return an <code>InputStream</code> object from which the contents of
-     *         the original object being cached can be read.
-     */
-    public InputStream getUncachedInputStream();
-    /**
-     * Return a <code>Properties</code> object containing the headers of
-     * the object being cached rather than the object in the cache.
-     * @return a <code>Properties</code> object containing the headers of
-     *         the original object being cached.
-     */
-    public Properties getUncachedProperties();
 }
