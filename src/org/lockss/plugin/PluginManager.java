@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.72 2004-03-01 06:10:39 clairegriffin Exp $
+ * $Id: PluginManager.java,v 1.73 2004-03-05 02:14:55 tlipkis Exp $
  */
 
 /*
@@ -117,6 +117,16 @@ public class PluginManager extends BaseLockssManager {
   protected void setConfig(Configuration config, Configuration oldConfig,
 			   Set changedKeys) {
     pluginDir = config.get(PARAM_PLUGIN_LOCATION);
+
+    // Must load the xml plugin list *before* the plugin registry
+    if (changedKeys.contains(PARAM_PLUGIN_XML_PLUGINS)) {
+      xmlPlugins = StringUtil.breakAt(config.get(PARAM_PLUGIN_XML_PLUGINS),
+				      ';', 0, true);
+    }
+    // Process the plugin registry.
+    if (changedKeys.contains(PARAM_PLUGIN_REGISTRY)) {
+      initPluginRegistry(config.get(PARAM_PLUGIN_REGISTRY));
+    }
     // Don't load and start plugins until the daemon is running.
     if (isDaemonInited()) {
       Configuration allPlugs = config.getConfigTree(PARAM_AU_TREE);
@@ -131,19 +141,6 @@ public class PluginManager extends BaseLockssManager {
 	  configurePlugin(pluginKey, pluginConf, prevPluginConf);
 	}
 	currentAllPlugs = allPlugs;
-      }
-      // process the plugin registry.
-      // (do this after configuring AUs, so plugin regsitry will reflect
-      // plugins loaded by AUs but not in registry param)
-
-      // Must load the xml plugin list *before* the plugin registry
-      if (changedKeys.contains(PARAM_PLUGIN_XML_PLUGINS)) {
-	xmlPlugins = StringUtil.breakAt(config.get(PARAM_PLUGIN_XML_PLUGINS),
-					';', 0, true);
-      }
-
-      if (changedKeys.contains(PARAM_PLUGIN_REGISTRY)) {
-	initPluginRegistry(config.get(PARAM_PLUGIN_REGISTRY));
       }
     }
   }
