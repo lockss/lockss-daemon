@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlTagFilter.java,v 1.9 2003-06-20 22:34:50 claire Exp $
+ * $Id: HtmlTagFilter.java,v 1.10 2003-09-02 20:12:40 troberts Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ import java.io.*;
 import java.util.*;
 import org.apache.commons.collections.*;
 import org.lockss.util.*;
+import org.lockss.daemon.Configuration;
 
 /**
  * This class is used to filter all content from a reader between two string
@@ -48,6 +49,9 @@ public class HtmlTagFilter extends Reader {
    */
 
   public static final int DEFAULT_BUFFER_CAPACITY = 256;
+  public static final String PARAM_BUFFER_CAPACITY =
+    Configuration.PREFIX + "filter.buffer_capacity";
+
 
 
   Reader reader = null;
@@ -84,7 +88,9 @@ public class HtmlTagFilter extends Reader {
     }
     this.pair = pair;
     minBufferSize = pair.getMaxTagLength();
-    bufferCapacity = Math.max(minBufferSize, DEFAULT_BUFFER_CAPACITY);
+    bufferCapacity = Configuration.getIntParam(PARAM_BUFFER_CAPACITY,
+					       DEFAULT_BUFFER_CAPACITY);
+    bufferCapacity = Math.max(minBufferSize, bufferCapacity);
     charBuffer = new CharRing(bufferCapacity);
     preBuffer = new char[bufferCapacity];
   }
@@ -113,30 +119,50 @@ public class HtmlTagFilter extends Reader {
     return (HtmlTagFilter)curReader;
   }
 
-  /**
-   * Reads the next character.
-   * @return next character or -1 if there is nothing left
-   * @throws IOException if the reader it's constructed with throws
-   */
-  public int read() throws IOException {
-    if (charBuffer.size() < minBufferSize) {
-      refillBuffer(charBuffer, reader);
-    }
 
-    while (startsWithTag(charBuffer, 0, pair.start, pair.ignoreCase)) {
-      readThroughTag(charBuffer, reader, pair);
+  public int read() throws IOException {
+    char[] buf = new char[1];
+    int ret = read(buf, 0, 1);
+    if (ret >= 0) {
+      return ((int)buf[0]);
     }
-    if (charBuffer.size() == 0) {
-      //ran out of stream while trying to read through a tag
-      logger.debug3("Read Returning -1, spot b");
-      return -1;
+    else {
+      return (ret);
     }
-    char returnChar = charBuffer.remove();
-    if (logger.isDebug3()) {
-      logger.debug3("Read returning "+returnChar);
-    }
-    return returnChar;
   }
+
+//   /**
+//    * Reads the next character.
+//    * @return next character or -1 if there is nothing left
+//    * @throws IOException if the reader it's constructed with throws
+//    */
+//   public int read() throws IOException {
+//     if (charBuffer.size() < minBufferSize) {
+//       refillBuffer(charBuffer, reader);
+//     }
+//     if (charBuffer.size() == 0) {
+//       logger.debug3("Read Returning -1, spot a");
+//       return -1;
+//     }
+//     if (charBuffer.size() >= pair.start.length()) {
+//       while (startsWithTag(charBuffer, 0, pair.start, pair.ignoreCase)) {
+// 	readThroughTag(charBuffer, reader, pair);
+// 	if (charBuffer.size() < minBufferSize) {
+// 	  refillBuffer(charBuffer, reader);
+// 	}
+//       }
+//       if (charBuffer.size() == 0) {
+// 	//ran out of stream while trying to read through a tag 
+// 	logger.debug3("Read Returning -1, spot b");
+// 	return -1;
+//       }
+//     }
+//     char returnChar = charBuffer.remove();
+//     if (logger.isDebug3()) {
+//       logger.debug3("Read returning "+returnChar);
+//     }
+//     return returnChar;
+//   }
 
 
   private void refillBuffer(CharRing charBuffer, Reader reader) 
@@ -164,6 +190,11 @@ public class HtmlTagFilter extends Reader {
   private boolean startsWithTag(CharRing charBuffer, int idx,
 				String tag, boolean ignoreCase) {
     //XXX reimplement with DNA searching algorithm
+    if ((idx + tag.length()) > charBuffer.size()) {
+      throw new RuntimeException("idx("+idx+") plus the length of the tag("
+				 +tag+") is greater than the remaining size "
+				 +"of the charBuffer("+charBuffer.size()+")");
+    }
 
     if (logger.isDebug3()) {
       logger.debug3("checking if \""+charBuffer+"\" has \""
@@ -197,12 +228,19 @@ public class HtmlTagFilter extends Reader {
     return (Character.toUpperCase(kar1) == Character.toUpperCase(kar2));
   }
 
-
+  /**
+   * Reads through the charBuffer until the end tag is reached, taking
+   * nesting into account
+   *
+   * May leave buffer empty even if there are chars left on the reader
+   */
   private void readThroughTag(CharRing charBuffer, Reader reader,
 			      TagPair pair)
   throws IOException {
     int idx = pair.start.length();
     int tagNesting = 1;
+    int maxTagLength = (pair.start.length() > pair.end.length())
+                         ? pair.start.length() : pair.end.length();
     if (logger.isDebug3()) {
       logger.debug3("reading through tag pair "+pair+" in "+charBuffer);
     }
@@ -210,7 +248,7 @@ public class HtmlTagFilter extends Reader {
       if (logger.isDebug3()) {
 	logger.debug3("tagNesting: "+tagNesting);
       }
-      if (idx == charBuffer.size()) {
+      if ((idx + maxTagLength) > charBuffer.size()) {
 	charBuffer.clear(idx);
 	refillBuffer(charBuffer, reader);
 	idx = 0;
@@ -218,16 +256,23 @@ public class HtmlTagFilter extends Reader {
       if (streamDone && charBuffer.size() == 0) {
 	return;
       }
-      if (startsWithTag(charBuffer, idx, pair.start, pair.ignoreCase)) {
-	tagNesting++;
-	idx += pair.start.length();
-      } else if (startsWithTag(charBuffer, idx, pair.end, pair.ignoreCase)) {
-	tagNesting--;
-	idx += pair.end.length();
+      if (charBuffer.size() < pair.end.length()) {
+	idx += charBuffer.size();
       } else {
-	idx++;
+	if (charBuffer.size() >= pair.start.length()
+	    && startsWithTag(charBuffer, idx, pair.start, pair.ignoreCase)) {
+	  tagNesting++;
+	  idx += pair.start.length();
+	} else if (charBuffer.size() >= pair.end.length()
+		   && startsWithTag(charBuffer, idx,
+				    pair.end, pair.ignoreCase)) {
+	  tagNesting--;
+	  idx += pair.end.length();
+	} else {
+	  idx++;
+	}
       }
-    } 
+    }
     charBuffer.clear(idx);
   }
   
@@ -256,21 +301,32 @@ public class HtmlTagFilter extends Reader {
       if (charBuffer.size() < minBufferSize) {
 	refillBuffer(charBuffer, reader);
       }
-      int idx =0;
-      while (!matchedTag && idx < numLeft && idx < charBuffer.size()) {
-	matchedTag = startsWithTag(charBuffer, idx,
-				   pair.start, pair.ignoreCase);
-	if (!matchedTag) {
-	  idx++;
+      if (charBuffer.size() < pair.start.length()) {
+	logger.debug3("Refill only returned "+charBuffer.size()+" elements, "+
+		      "which is less than the start tag length("
+		      +pair.start.length()+"), returning");
+	int numToReturn =
+	  numLeft < charBuffer.size() ? numLeft : charBuffer.size();
+	charBuffer.remove(outputBuf, off + (len - numLeft), numToReturn);
+	numLeft -= numToReturn;
+      } else {
+	int idx =0;
+	while (!matchedTag && idx < numLeft
+	       && idx+pair.start.length() <= charBuffer.size()) {
+	  matchedTag = startsWithTag(charBuffer, idx,
+				     pair.start, pair.ignoreCase);
+	  if (!matchedTag) {
+	    idx++;
+	  }
 	}
-      }
-      if (idx > 0) {
-	charBuffer.remove(outputBuf, off + (len - numLeft), idx);
-      }
-      numLeft -= idx;
-      if (matchedTag) {
-	readThroughTag(charBuffer, reader, pair);
-	matchedTag = false;
+	if (idx > 0) {
+	  charBuffer.remove(outputBuf, off + (len - numLeft), idx);
+	}
+	numLeft -= idx;
+	if (matchedTag) {
+	  readThroughTag(charBuffer, reader, pair);
+	  matchedTag = false;
+	}
       }
     }
     int numRead = len - numLeft;

@@ -1,5 +1,5 @@
 /*
- * $Id: TestHtmlTagFilter.java,v 1.8 2003-06-20 22:34:53 claire Exp $
+ * $Id: TestHtmlTagFilter.java,v 1.9 2003-09-02 20:12:41 troberts Exp $
  */
 
 /*
@@ -311,6 +311,54 @@ public class TestHtmlTagFilter extends LockssTestCase {
     assertReaderMatchesString(expectedContent, reader);
   }
 
+  /**
+   * To catch an old error case involving single char reads when the string 
+   * be filtered matched the size of the buffer
+   */
+  public void testSingleCharReadOverBuffer() throws IOException {
+    String config = "org.lockss.filter.buffer_capacity=5";
+    ConfigurationUtil.setCurrentConfigFromString(config);
+    
+    //5 chars between the start and end tags
+    String content = "This <is test >content";
+    String expectedContent = "This content";
+    
+    HtmlTagFilter reader =
+      new HtmlTagFilter(new StringReader(content),
+			new HtmlTagFilter.TagPair("<", ">"));
+    
+    assertEquals(expectedContent, readerToString(reader));
+  }
+
+  public void testTagBridgesBuffer() throws IOException {
+    String config = "org.lockss.filter.buffer_capacity=8";
+    ConfigurationUtil.setCurrentConfigFromString(config);
+    
+    
+    //<table> will get split into two different buffers
+    String content = "This <table>is test </table>content"; 
+    String expectedContent = "This content";
+
+    List list =
+      ListUtil.list(new HtmlTagFilter.TagPair("<table", "</table>", true));
+
+    HtmlTagFilter reader =
+      HtmlTagFilter.makeNestedFilter(new StringReader(content), list);
+    
+//     assertReaderMatchesString(expectedContent, reader);
+    assertEquals(expectedContent, readerToString(reader));
+  }
+
+
+  private static String readerToString(Reader reader) throws IOException {
+    int curKar;
+    StringBuffer sb = new StringBuffer();
+    while ((curKar = reader.read()) != -1) {
+      sb.append((char)curKar);
+    }
+    return sb.toString();
+  }
+
   public void testReadWithBuffer() throws IOException {
     String content = "This "+startTag1+"is test "+endTag1+"content";
     String expectedContent = "This content";
@@ -483,7 +531,4 @@ public class TestHtmlTagFilter extends LockssTestCase {
     HtmlTagFilter.TagPair pair2 = new HtmlTagFilter.TagPair("blah1", "blah2");
     assertEquals(pair1.hashCode(), pair2.hashCode());
   }
-
-
 }
-
