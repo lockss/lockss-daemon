@@ -1,5 +1,5 @@
 /*
- * $Id: Crawler.java,v 1.8 2002-10-21 23:11:13 troberts Exp $
+ * $Id: Crawler.java,v 1.9 2002-11-02 01:52:41 troberts Exp $
  */
 
 /*
@@ -113,7 +113,7 @@ public class Crawler{
     if (!uc.getCachedUrl().exists()) {
 	try{
 	  pause(); //XXX should get from plugin
-	  logger.info("caching "+uc.getUrl());
+	  logger.info("caching "+uc);
 	  uc.cache();
 	}catch (Exception e){
 	  e.printStackTrace();
@@ -132,7 +132,7 @@ public class Crawler{
 	}
       }
       else{
-	logger.info(uc.getUrl()+" exists, not fetching");
+	logger.info(uc+" exists, not fetching");
       }
     }
     list.remove(uc.getUrl());
