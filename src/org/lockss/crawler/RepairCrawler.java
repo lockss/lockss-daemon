@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.22 2004-05-26 07:04:42 tlipkis Exp $
+ * $Id: RepairCrawler.java,v 1.23 2004-06-14 23:54:46 dcfok Exp $
  */
 
 /*
@@ -116,7 +116,7 @@ public class RepairCrawler extends CrawlerImpl {
 	  logger.warning("Unexpected exception in crawl", e);
 	}
 	if (!crawlRes) {
-	  if (crawlStatus.getCrawlError() == 0) {
+	  if (crawlStatus.getCrawlError() == null) {
 	    crawlStatus.setCrawlError(Crawler.STATUS_ERROR);
 	  }
 	}
@@ -131,7 +131,7 @@ public class RepairCrawler extends CrawlerImpl {
     }
     if (crawlAborted) {
       logger.info("Crawl aborted: "+au);
-      if (crawlStatus.getCrawlError() == 0) {
+      if (crawlStatus.getCrawlError() == null) {
 	crawlStatus.setCrawlError(Crawler.STATUS_INCOMPLETE);
       }
       return false;
@@ -140,7 +140,7 @@ public class RepairCrawler extends CrawlerImpl {
       // unsuccessful crawl if window closed
       crawlStatus.setCrawlError(Crawler.STATUS_WINDOW_CLOSED);
     }
-    if (crawlStatus.getCrawlError() != 0) {
+    if (crawlStatus.getCrawlError() != null) {
       logger.info("Finished crawl (errors) of "+au);
     } else {
       logger.info("Finished crawl of "+au);
@@ -154,11 +154,11 @@ public class RepairCrawler extends CrawlerImpl {
 		    ((float)cacheHits + (float)cacheMisses));
       logger.info("Had "+cacheHits+" cache hits, with a percentage of "+per);
     }
-    return (crawlStatus.getCrawlError() == 0);
+    return (crawlStatus.getCrawlError() == null);
   }
 
   protected boolean doCrawlLoop(String url, CachedUrlSet cus) {
-    int error = 0;
+    String error = null;
     logger.debug2("Dequeued url from list: "+url);
     UrlCacher uc = makeUrlCacher(cus, url);
 
@@ -193,7 +193,7 @@ public class RepairCrawler extends CrawlerImpl {
       logger.critical("Unexpected IOException during crawl", e);
       error = Crawler.STATUS_FETCH_ERROR;
     }
-    return (error == 0);
+    return (error == null);
   }
 
   private boolean shouldFetchFromCache() {

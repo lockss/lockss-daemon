@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatus.java,v 1.12 2004-06-01 08:30:24 tlipkis Exp $
+ * $Id: CrawlManagerStatus.java,v 1.13 2004-06-14 23:54:46 dcfok Exp $
  */
 
 /*
@@ -49,14 +49,14 @@ public class CrawlManagerStatus implements StatusAccessor {
   private static final String START_URLS = "start_urls";
   private static final String CRAWL_STATUS = "crawl_status";
 
-  public static final String INCOMPLETE_STRING = "Active";
-  public static final String SUCCESSFUL_STRING = "Successful";
-  public static final String ERROR_STRING = "Error";
-  public static final String FETCH_ERROR_STRING = "Fetch error";
-  public static final String PUB_PERMISSION_STRING =
-    "No permission from publisher";
-  public static final String WINDOW_CLOSED_STRING = "Crawl window closed";
-  public static final String UNKNOWN_STRING = "Unknown";
+//   public static final String INCOMPLETE_STRING = "Active";
+//   public static final String SUCCESSFUL_STRING = "Successful";
+//   public static final String ERROR_STRING = "Error";
+//   public static final String FETCH_ERROR_STRING = "Fetch error";
+//   public static final String PUB_PERMISSION_STRING =
+//     "No permission from publisher";
+//   public static final String WINDOW_CLOSED_STRING = "Crawl window closed";
+//   public static final String UNKNOWN_STRING = "Unknown";
 
   private List sortRules = null;
 
@@ -151,7 +151,7 @@ public class CrawlManagerStatus implements StatusAccessor {
     row.put(NUM_URLS_PARSED, new Long(status.getNumParsed()));
     row.put(START_URLS,
 	    (StringUtil.separatedString(status.getStartUrls(), "\n")));
-    row.put(CRAWL_STATUS, statusToString(status.getCrawlStatus()));
+    row.put(CRAWL_STATUS, status.getCrawlStatus());
     return row;
   }
 
@@ -199,22 +199,22 @@ public class CrawlManagerStatus implements StatusAccessor {
     return sortRules;
   }
 
-  private String statusToString(int status) {
-    switch (status) {
-    case Crawler.STATUS_SUCCESSFUL : 
-      return SUCCESSFUL_STRING;
-    case Crawler.STATUS_INCOMPLETE : 
-      return INCOMPLETE_STRING;
-    case Crawler.STATUS_ERROR : 
-      return ERROR_STRING;
-    case Crawler.STATUS_FETCH_ERROR : 
-      return FETCH_ERROR_STRING;
-    case Crawler.STATUS_PUB_PERMISSION : 
-      return PUB_PERMISSION_STRING;
-    case Crawler.STATUS_WINDOW_CLOSED : 
-      return WINDOW_CLOSED_STRING;
-    default : 
-      return UNKNOWN_STRING;
-    }
-  }
+//   private String statusToString(int status) {
+//     switch (status) {
+//     case Crawler.STATUS_SUCCESSFUL : 
+//       return SUCCESSFUL_STRING;
+//     case Crawler.STATUS_INCOMPLETE : 
+//       return INCOMPLETE_STRING;
+//     case Crawler.STATUS_ERROR : 
+//       return ERROR_STRING;
+//     case Crawler.STATUS_FETCH_ERROR : 
+//       return FETCH_ERROR_STRING;
+//     case Crawler.STATUS_PUB_PERMISSION : 
+//       return PUB_PERMISSION_STRING;
+//     case Crawler.STATUS_WINDOW_CLOSED : 
+//       return WINDOW_CLOSED_STRING;
+//     default : 
+//       return UNKNOWN_STRING;
+//     }
+//   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerStatus.java,v 1.9 2004-03-22 22:06:06 troberts Exp $
+ * $Id: TestCrawlManagerStatus.java,v 1.10 2004-06-14 23:54:46 dcfok Exp $
  */
 
 /*
@@ -189,8 +189,8 @@ public class TestCrawlManagerStatus extends LockssTestCase {
   public void testCrawlType() {
     StatusTable table = new StatusTable("test");
 
-    MockCrawlStatus status = makeStatus(Crawler.NEW_CONTENT, -1);
-    MockCrawlStatus status2 = makeStatus(Crawler.REPAIR, -1);
+    MockCrawlStatus status = makeStatus(Crawler.NEW_CONTENT, "Unknown");
+    MockCrawlStatus status2 = makeStatus(Crawler.REPAIR, "Unknown");
 
     statusSource.setCrawlStatus(ListUtil.list(status), "key1");
     statusSource.setCrawlStatus(ListUtil.list(status2), "key2");
@@ -276,13 +276,13 @@ public class TestCrawlManagerStatus extends LockssTestCase {
   }
 
   private static MockCrawlStatus makeStatus(int type, long start, long end) {
-    MockCrawlStatus status = makeStatus(type, -1);
+    MockCrawlStatus status = makeStatus(type, "Unknown");
     status.setStartTime(start);
     status.setEndTime(end);
     return status;
   }
 
-  private static MockCrawlStatus makeStatus(int type, int crawlStatus) {
+  private static MockCrawlStatus makeStatus(int type, String crawlStatus) {
     MockCrawlStatus status = new MockCrawlStatus();
     status.setType(type);
     status.setAu(new MockArchivalUnit());

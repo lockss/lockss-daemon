@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlerImpl.java,v 1.11 2004-05-26 07:04:42 tlipkis Exp $
+ * $Id: TestCrawlerImpl.java,v 1.12 2004-06-14 23:54:46 dcfok Exp $
  */
 
 /*
@@ -332,6 +332,7 @@ public class TestCrawlerImpl extends LockssTestCase {
   }
 
   public void testGetStatusIncomplete() {
+    //System.out.println("CrawlStatus is " + crawler.getStatus().getCrawlStatus());
     assertEquals(Crawler.STATUS_INCOMPLETE,
 		 crawler.getStatus().getCrawlStatus());
   }

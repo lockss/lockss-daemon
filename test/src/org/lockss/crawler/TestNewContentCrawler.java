@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.8 2004-05-27 00:19:50 dcfok Exp $
+ * $Id: TestNewContentCrawler.java,v 1.9 2004-06-14 23:54:46 dcfok Exp $
  */
 
 /*
@@ -293,7 +293,7 @@ public class TestNewContentCrawler extends LockssTestCase {
   private Set crawlUrls(Set urls) {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     cus.addUrl(startUrl);
-    cus.addUrl(startUrl);
+    //cus.addUrl(startUrl);
     Iterator it = urls.iterator();
     while (it.hasNext()) {
       String url = (String)it.next();

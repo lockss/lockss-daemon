@@ -1,5 +1,5 @@
 /*
- * $Id: Crawler.java,v 1.20 2004-03-03 00:38:43 troberts Exp $
+ * $Id: Crawler.java,v 1.21 2004-06-14 23:54:46 dcfok Exp $
  */
 
 /*
@@ -52,12 +52,13 @@ public interface Crawler {
   public static final int REPAIR = 1;
   public static final int BACKGROUND = 2;
 
-  public static final int STATUS_INCOMPLETE = 1;
-  public static final int STATUS_SUCCESSFUL = 2;
-  public static final int STATUS_ERROR = 3;
-  public static final int STATUS_WINDOW_CLOSED = 4;
-  public static final int STATUS_FETCH_ERROR = 5;
-  public static final int STATUS_PUB_PERMISSION = 6;
+  public static final String STATUS_INCOMPLETE = "Active";
+  public static final String STATUS_SUCCESSFUL = "Successful";
+  public static final String STATUS_ERROR = "Error";
+  public static final String STATUS_WINDOW_CLOSED = "Crawl window closed";
+  public static final String STATUS_FETCH_ERROR = "Fetch error";
+  public static final String STATUS_PUB_PERMISSION = "No permission from publisher";
+  //public static final String STATUS_UNKNOWN = "Unknown";
 
   /**
    * Initiate a crawl starting with all the urls in urls
@@ -108,7 +109,7 @@ public interface Crawler {
     protected long endTime = -1;
     protected long numFetched = 0;
     protected long numParsed = 0;
-    protected int crawlError = 0;
+    protected String crawlError = null;
     protected Collection startUrls = null;
     protected ArchivalUnit au = null;
     protected int type = -1;
@@ -171,21 +172,20 @@ public interface Crawler {
       return startUrls;
     }
 
-
-    public int getCrawlStatus() {
+    public String getCrawlStatus() {
       if (endTime == -1) {
 	return Crawler.STATUS_INCOMPLETE;
-      } else if (crawlError != 0) {
+      } else if (crawlError != null) {
 	return crawlError;
       }
       return Crawler.STATUS_SUCCESSFUL;
     }
 
-    public void setCrawlError(int crawlError) {
+    public void setCrawlError(String crawlError) {
       this.crawlError = crawlError;
     }
 
-    public int getCrawlError() {
+    public String getCrawlError() {
       return crawlError;
     }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerImpl.java,v 1.17 2004-04-19 02:15:22 tlipkis Exp $
+ * $Id: CrawlerImpl.java,v 1.18 2004-06-14 23:54:46 dcfok Exp $
  */
 
 /*
@@ -148,7 +148,7 @@ public abstract class CrawlerImpl implements Crawler {
 
   boolean crawlPermission(CachedUrlSet ownerCus) {
     boolean crawl_ok = false;
-    int err = Crawler.STATUS_PUB_PERMISSION;
+    String err = Crawler.STATUS_PUB_PERMISSION;
 
     // fetch and cache the manifest page
     String manifest = au.getManifestPage();

@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawlStatus.java,v 1.2 2003-12-23 00:40:27 tlipkis Exp $
+ * $Id: MockCrawlStatus.java,v 1.3 2004-06-14 23:54:47 dcfok Exp $
  */
 
 /*
@@ -37,7 +37,7 @@ import org.lockss.plugin.ArchivalUnit;
 public class MockCrawlStatus extends Crawler.Status {
   private static final int UNDEFINED_TYPE = -1;
 
-  int crawlStatus = 0;
+  String crawlStatus = null;
   
   public MockCrawlStatus(int type) {
     super(null, null, type);
@@ -55,11 +55,11 @@ public class MockCrawlStatus extends Crawler.Status {
     this.endTime = endTime;
   }
 
-  public void setCrawlStatus(int crawlStatus) {
+  public void setCrawlStatus(String crawlStatus) {
     this.crawlStatus = crawlStatus;
   }
 
-  public int getCrawlStatus() {
+  public String getCrawlStatus() {
     return crawlStatus;
   }
 

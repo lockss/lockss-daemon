@@ -1,5 +1,5 @@
 /*
- * $Id: NewContentCrawler.java,v 1.19 2004-05-27 00:19:50 dcfok Exp $
+ * $Id: NewContentCrawler.java,v 1.20 2004-06-14 23:54:46 dcfok Exp $
  */
 
 /*
@@ -63,6 +63,11 @@ public class NewContentCrawler extends CrawlerImpl {
 
   public static final String PARAM_REFETCH_DEPTH =
     Configuration.PREFIX + "crawler.refetchDepth.au.<auid>";
+  
+  public static final String PARAM_MAX_CRAWL_DEPTH =
+    Configuration.PREFIX + "CrawlerImpl.maxCrawlDepth";
+  //XXX testing max. crawl Depth of a site, subject to be changed
+  public static final int DEFAULT_MAX_CRAWL_DEPTH = 1000;
 
 
   private boolean alwaysReparse;
@@ -77,7 +82,6 @@ public class NewContentCrawler extends CrawlerImpl {
     return Crawler.NEW_CONTENT;
   }
 
-
   protected boolean doCrawl0() {
     if (crawlAborted) {
       return aborted();
@@ -87,7 +91,12 @@ public class NewContentCrawler extends CrawlerImpl {
     usePersistantList =
       Configuration.getBooleanParam(PARAM_PERSIST_CRAWL_LIST,
 				    DEFAULT_PERSIST_CRAWL_LIST);
-    
+
+    int maxDepth = Configuration.getIntParam(PARAM_MAX_CRAWL_DEPTH,
+					     DEFAULT_MAX_CRAWL_DEPTH);
+
+    logger.info("Max. crawl depth is set to be " + maxDepth); 
+
     logger.info("Beginning crawl of "+au);
     crawlStatus.signalCrawlStarted();
     CachedUrlSet cus = au.getAuCachedUrlSet();
@@ -132,7 +141,7 @@ public class NewContentCrawler extends CrawlerImpl {
  	if (spec.isIncluded(url)) {
 	  if (!fetchAndParse(url, extractedUrls, parsedPages,
 			     cus, true, true)) {
-	    if (crawlStatus.getCrawlError() == 0) {
+	    if (crawlStatus.getCrawlError() == null) {
 	      crawlStatus.setCrawlError(Crawler.STATUS_ERROR);
 	    }
 	  }
@@ -146,46 +155,90 @@ public class NewContentCrawler extends CrawlerImpl {
 
     //we don't alter the crawl list from AuState until we've enumerated the
     //urls that need to be recrawled.
-    Collection urlsToCrawl;
+    Collection urlsToCrawl; // Level (N)'s Urls
 
     if (usePersistantList) {
       urlsToCrawl = aus.getCrawlUrls();
       urlsToCrawl.addAll(extractedUrls);
       extractedUrls.clear();
     } else {
-      urlsToCrawl = extractedUrls;
+      urlsToCrawl = extractedUrls; 
     }
 
-    while (!urlsToCrawl.isEmpty() && !crawlAborted) {
-      String nextUrl = (String)CollectionUtil.removeElement(urlsToCrawl);
-      // check crawl window during crawl
-      if (!withinCrawlWindow()) {
-	crawlStatus.setCrawlError(Crawler.STATUS_WINDOW_CLOSED);
-	return false;
-      }
-      boolean crawlRes = false;
-      try {
-	crawlRes = fetchAndParse(nextUrl, urlsToCrawl, parsedPages,
- 				 cus, false, alwaysReparse);
-      } catch (RuntimeException e) {
-	logger.warning("Unexpected exception in crawl", e);
-      }
-      if (!crawlRes) {
-	if (crawlStatus.getCrawlError() == 0) {
-	  crawlStatus.setCrawlError(Crawler.STATUS_ERROR);
+    int lvlCnt = refetchDepth; // count for what level (N) 
+                               // from the root we are at
+
+    int siteDepth = -1;   //XXX
+    
+    //maxDepth should be greater than refetchDepth
+    if (refetchDepth > maxDepth){
+      logger.error("Max. depth is set smaller than refetchDepth." +
+		   " Abort Crawl of " + au);
+      crawlAborted = true;
+    } else {
+      while (lvlCnt <= maxDepth) {
+
+	logger.debug2("Crawling at level " + lvlCnt);
+        extractedUrls = new HashSet(); // level (N+1)'s Urls
+
+        while (!urlsToCrawl.isEmpty() && !crawlAborted) {
+          String nextUrl = (String)CollectionUtil.removeElement(urlsToCrawl);
+          // check crawl window during crawl
+          if (!withinCrawlWindow()) {
+	    crawlStatus.setCrawlError(Crawler.STATUS_WINDOW_CLOSED);
+	    return false;
+          }
+          boolean crawlRes = false;
+          try {
+	    crawlRes = fetchAndParse(nextUrl, extractedUrls, parsedPages,
+ 	  			   cus, false, alwaysReparse);
+          } catch (RuntimeException e) {
+	    logger.warning("Unexpected exception in crawl", e);
+          }
+          if  (!crawlRes) {
+	    if (crawlStatus.getCrawlError() == null) {
+	      crawlStatus.setCrawlError(Crawler.STATUS_ERROR);
+	    }
+          }
+          if (usePersistantList) {
+	    aus.updatedCrawlUrls(false);
+          }
+        
+	} // end of inner while
+
+	if (extractedUrls.isEmpty()){
+ 	  logger.debug2("extractedUrls empty at level " + lvlCnt);
+	  siteDepth = lvlCnt;
+	  break;
+	} else {
+	  urlsToCrawl = extractedUrls;
+	  lvlCnt++;
 	}
+      } // end of outer while
+
+      if (siteDepth == -1) {
+  	Iterator itz = urlsToCrawl.iterator();
+	logger.warning("Site depth exceeds the max. depth. Stopped Crawl of " + au.getName() +
+		       " at depth " + (lvlCnt-1));
+	while (itz.hasNext()){
+ 	  logger.debug2(""+itz.next());
+	}
+	logger.info("Site depth = " + (lvlCnt-1));
+      } else {
+	logger.info("Site depth = "+ siteDepth);
       }
-      if (usePersistantList) {
-	aus.updatedCrawlUrls(false);
-      }
+
+
     }
+
     if (crawlAborted) {
       return aborted();
     }
-    if (crawlStatus.getCrawlError() != 0) {
-      logger.info("Finished crawl (errors) of "+au);
+
+    if (crawlStatus.getCrawlError() != null) {
+      logger.info("Finished crawl (errors) of "+au.getName());
     } else {
-      logger.info("Finished crawl of "+au);
+      logger.info("Finished crawl of "+au.getName());
     }
 
     if (au instanceof BaseArchivalUnit) {
@@ -197,12 +250,12 @@ public class NewContentCrawler extends CrawlerImpl {
       logger.info("Had "+cacheHits+" cache hits, with a percentage of "+per);
     }
 
-    return (crawlStatus.getCrawlError() == 0);
+    return (crawlStatus.getCrawlError() == null); 
   }
 
   private boolean aborted() {
     logger.info("Crawl aborted: "+au);
-    if (crawlStatus.getCrawlError() == 0) {
+    if (crawlStatus.getCrawlError() == null) {
       crawlStatus.setCrawlError(Crawler.STATUS_INCOMPLETE);
     }
     return false;
@@ -227,7 +280,7 @@ public class NewContentCrawler extends CrawlerImpl {
 				Set parsedPages, CachedUrlSet cus,
 				boolean fetchIfChanged, boolean reparse) {
 
-    int error = 0;
+    String error = null;
     logger.debug3("Dequeued url from list: "+url);
 
     //makeUrlCacher needed to handle connection pool
@@ -300,7 +353,7 @@ public class NewContentCrawler extends CrawlerImpl {
       error = Crawler.STATUS_FETCH_ERROR;
     }
     logger.debug3("Removing from parsing list: "+uc.getUrl());
-    return (error == 0);
+    return (error == null);
   }
 
   private void cacheWithRetries(UrlCacher uc, int maxTries)
@@ -313,6 +366,7 @@ public class NewContentCrawler extends CrawlerImpl {
 	  wdog.pokeWDog();
 	}
 	uc.cache(); //IOException if there is a caching problem
+
 	crawlStatus.signalUrlFetched();
 	return; //cache didn't throw
       } catch (CacheException.RetryableException e) {
