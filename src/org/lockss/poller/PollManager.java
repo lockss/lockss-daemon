@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.101 2003-06-04 22:00:48 tal Exp $
+* $Id: PollManager.java,v 1.102 2003-06-17 01:09:30 aalto Exp $
  */
 
 /*
@@ -960,8 +960,13 @@ public class PollManager  extends BaseLockssManager {
     synchronized void setPollCompleted() {
       Deadline d = Deadline.in(m_recentPollExpireTime);
       TimerQueue.schedule(d, new ExpireRecentCallback(), (String) key);
-      poll.getVoteTally().tallyVotes();
-      status = poll.getVoteTally().getStatus();
+      PollTally tally = poll.getVoteTally();
+      tally.tallyVotes();
+      status = tally.getStatus();
+      if((tally.type == Poll.NAME_POLL) && (status == PollTally.STATE_LOST)) {
+        theLog.debug2("lost a name poll, building poll list");
+        ((NamePoll)poll).buildPollLists(tally.pollVotes.iterator());
+      }
     }
 
     synchronized void setPollSuspended() {

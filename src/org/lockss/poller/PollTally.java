@@ -1,5 +1,5 @@
 /*
- * $Id: PollTally.java,v 1.14 2003-06-09 01:22:45 tal Exp $
+ * $Id: PollTally.java,v 1.15 2003-06-17 01:09:30 aalto Exp $
  */
 
 /*
@@ -310,11 +310,6 @@ public class PollTally {
         status = won ? STATE_WON : STATE_LOST;
       }
     }
-    if((type == Poll.NAME_POLL) && (status != STATE_WON)) {
-      log.debug2("lost a name poll, building poll list");
-      ((NamePoll)poll).buildPollLists(pollVotes.iterator());
-    }
-
   }
 
   void verifyTally() {

@@ -1,5 +1,5 @@
 /*
- * $Id: NamePoll.java,v 1.50 2003-05-08 01:19:41 claire Exp $
+ * $Id: NamePoll.java,v 1.51 2003-06-17 01:09:30 aalto Exp $
  */
 
 /*
@@ -167,6 +167,10 @@ public class NamePoll
         }
         else {
           winners.add(counter);
+          log.debug3("adding winning counter: " +
+                     counter.getKnownEntries().size() + " entries, lwr: " +
+                     counter.getLwrRemaining() + ", upr: " +
+                     counter.getUprRemaining());
         }
       }
     }
@@ -195,6 +199,8 @@ public class NamePoll
       m_tally.votedEntries = winningVote.getKnownEntries();
       String lwrRem = winningVote.getLwrRemaining();
       String uprRem = winningVote.getUprRemaining();
+      log.debug2("Voted entry count: " + m_tally.votedEntries.size() +
+                 ", lwr: " + lwrRem + ", upr: " + uprRem);
       if (lwrRem != null) {
         // we call a new poll on the remaining entries and set the regexp
         try {
@@ -211,14 +217,14 @@ public class NamePoll
         while (localIt.hasNext()) {
           PollTally.NameListEntry entry = (PollTally.NameListEntry) localIt.next();
           String url = entry.name;
-          if((lwrRem != null) && url.compareTo(lwrRem) < 0) {
+          if ((lwrRem!=null) && url.compareTo(lwrRem) < 0) {
             localSet.add(entry);
-          }
-          else if((uprRem != null) && url.compareTo(uprRem) > 0) {
+          } else if ((uprRem!=null) && url.compareTo(uprRem) > 0) {
             localSet.add(entry);
           }
         }
         m_tally.localEntries = localSet;
+        log.debug2("Local entry count: " + m_tally.localEntries.size());
       } else {
         m_tally.localEntries = getEntries();
       }
