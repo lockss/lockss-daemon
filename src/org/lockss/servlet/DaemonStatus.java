@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.28 2003-11-19 08:46:46 tlipkis Exp $
+ * $Id: DaemonStatus.java,v 1.29 2004-01-03 06:24:13 tlipkis Exp $
  */
 
 /*
@@ -144,7 +144,6 @@ public class DaemonStatus extends LockssServlet {
       java.util.List colList = statTable.getColumnDescriptors();
       java.util.List rowList = statTable.getSortedRows();
       ColumnDescriptor cd = (ColumnDescriptor)colList.get(0);
-      String opts[] = {"onchange=\"this.form.submit()\""};
       Select sel = new Select("table", false);
       sel.attribute("onchange", "this.form.submit()");
       boolean foundIt = false;
