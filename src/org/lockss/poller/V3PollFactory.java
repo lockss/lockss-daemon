@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollFactory.java,v 1.1.2.3 2004-10-01 15:12:05 dshr Exp $
+ * $Id: V3PollFactory.java,v 1.1.2.4 2004-10-06 00:12:01 dshr Exp $
  */
 
 /*
@@ -87,11 +87,13 @@ public class V3PollFactory implements PollFactory {
 			  IdentityManager im) {
     boolean ret = false;
     PollSpec pollspec = poll.getPollSpec();
-    if (pollspec.getPollVersion() != 3) {
+    if (pollspec.getPollVersion() != Poll.V3_POLL) {
       theLog.warning("Bad poll version for: " + pollspec.toString());
       return ret;
     }
     //  XXX do whatever to get poll started
+    ret = true;
+    // XXX
     return ret;
   }
  

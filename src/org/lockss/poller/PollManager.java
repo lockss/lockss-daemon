@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.142.2.3 2004-10-05 22:52:44 dshr Exp $
+ * $Id: PollManager.java,v 1.142.2.4 2004-10-06 00:12:01 dshr Exp $
  */
 
 /*
@@ -184,12 +184,18 @@ public class PollManager
       long duration = pollFact.calcDuration(pollspec, this);
       byte[] challenge = makeVerifier(duration);
       byte[] verifier = makeVerifier(duration);
+      int pollVersion = pollspec.getPollVersion();
+      theLog.debug("calling a version " + pollVersion + " poll" );
+      PeerIdentity myID = theIDManager.getLocalPeerIdentity(pollVersion);
       try {
 	BasePoll thePoll = makePoll(pollspec, duration, challenge, verifier,
-				    theIDManager.getLocalPeerIdentity(pollspec.getPollVersion()),
+				    myID,
 				    LcapMessage.getDefaultHashAlgorithm());
 	if (pollFact.callPoll(thePoll, this, theIDManager)) {
+	  theLog.debug("poll factory returned " + thePoll);
 	  ret = thePoll;
+	} else {
+	  theLog.debug("poll factory returned null");
 	}
       } catch (ProtocolException ex) {
 	theLog.debug("makePoll or callPoll threw " + ex.toString());
@@ -501,10 +507,13 @@ public class PollManager
       NodeManager nm = theDaemon.getNodeManager(tally.getArchivalUnit());
       theLog.debug("sending completed poll results " + tally);
       nm.updatePollResults(tally.getCachedUrlSet(), tally);
-      try {
-        theIDManager.storeIdentities();
-      } catch (ProtocolException ex) {
-        theLog.error("Unable to write Identity DB file.");
+      IdentityManager im = theDaemon.getIdentityManager();
+      if (im != null) {
+	try {
+	  im.storeIdentities();
+	} catch (ProtocolException ex) {
+	  theLog.error("Unable to write Identity DB file.");
+	}
       }
       // free the activity lock
       ActivityRegulator.Lock lock = tally.getActivityLock();

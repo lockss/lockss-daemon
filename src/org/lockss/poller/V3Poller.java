@@ -1,5 +1,5 @@
 /*
-* $Id: V3Poller.java,v 1.1.2.2 2004-10-01 01:13:49 dshr Exp $
+* $Id: V3Poller.java,v 1.1.2.3 2004-10-06 00:12:01 dshr Exp $
  */
 
 /*
@@ -111,19 +111,15 @@ public class V3Poller extends V3Poll {
    * start the poll.
    */
   void startPoll() {
-    if (m_pollstate != PS_INITING)
-      return;
-    // XXX
-    if (true) {
-      m_pollstate = ERR_SCHEDULE_HASH;
-      log.debug("couldn't schedule our hash:" + m_deadline + ", stopping poll.");
+    if (m_pollstate != PS_INITING) {
+      m_pollstate = ERR_IO; // XXX choose better
       stopPoll();
       return;
     }
+    // XXX
     log.debug3("scheduling poll to complete by " + m_deadline);
     TimerQueue.schedule(m_deadline, new PollTimerCallback(), this);
     m_pollstate = PS_WAIT_HASH;
-
   }
 
   /**
@@ -159,12 +155,18 @@ public class V3Poller extends V3Poll {
     sb.append(" url set:");
     sb.append(" ");
     sb.append(m_cus.toString());
-    sb.append(" ");
-    sb.append(m_msg.getOpcodeString());
+    if (m_msg != null) {
+      sb.append(" ");
+      sb.append(m_msg.getOpcodeString());
+    }
     sb.append(" key: ");
     sb.append(m_key);
-    sb.append(" state: ");
-    sb.append(stateName[m_state]);
+    if (m_state >= 0 && m_state < stateName.length) {
+      sb.append(" state: ");
+      sb.append(stateName[m_state]);
+    } else {
+      sb.append(" bad state " + m_state);
+    }
     sb.append("]");
     return sb.toString();
   }

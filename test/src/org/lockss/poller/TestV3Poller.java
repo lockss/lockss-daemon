@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.1.2.1 2004-10-05 22:52:46 dshr Exp $
+ * $Id: TestV3Poller.java,v 1.1.2.2 2004-10-06 00:12:01 dshr Exp $
  */
 
 /*
@@ -109,7 +109,7 @@ public class TestV3Poller extends LockssTestCase {
 
   // Tests
 
-  public void dontTestInitialVoterState() {
+  public void testInitialVoterState() {
     assertTrue(testV3polls[0] instanceof V3Poller);
     assertEquals("Poll " + testV3polls[0] + " should be in Initializing",
 		 V3Poller.STATE_INITIALIZING,
@@ -205,6 +205,7 @@ public class TestV3Poller extends LockssTestCase {
     p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
     p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
+    p.setProperty(IdentityManager.PARAM_LOCAL_V3_PORT,  "2048");
     p.setProperty(ConfigManager.PARAM_NEW_SCHEDULER, "false");
     ConfigurationUtil.setCurrentConfigFromProps(p);
     idmgr = theDaemon.getIdentityManager();
@@ -232,7 +233,7 @@ public class TestV3Poller extends LockssTestCase {
   }
 
   private void initTestMsg() throws Exception {
-    PollFactory ppf = pollmanager.getPollFactory(3);
+    PollFactory ppf = pollmanager.getPollFactory(Poll.V3_POLL);
     assertNotNull("PollFactory should not be null", ppf);
     assertTrue(ppf instanceof V3PollFactory);
     V3PollFactory pf = (V3PollFactory)ppf;
