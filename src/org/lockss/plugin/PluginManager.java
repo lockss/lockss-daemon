@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.2 2003-02-04 02:55:03 claire Exp $
+ * $Id: PluginManager.java,v 1.3 2003-02-05 23:32:10 aalto Exp $
  */
 
 /*
@@ -59,7 +59,7 @@ public class PluginManager implements LockssManager {
 
   /**
    * start the plugin manager.
-   * @see org.lockss.app.LockssManager.startService()
+   * @see org.lockss.app.LockssManager#startService()
    */
   public void startService() {
 
@@ -67,7 +67,7 @@ public class PluginManager implements LockssManager {
 
   /**
    * stop the plugin manager
-   * @see org.lockss.app.LockssManager.stopService()
+   * @see org.lockss.app.LockssManager#stopService()
    */
   public void stopService() {
 
