@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyManager.java,v 1.19 2004-04-19 02:18:06 tlipkis Exp $
+ * $Id: ProxyManager.java,v 1.20 2004-06-15 21:45:45 tlipkis Exp $
  */
 
 /*
@@ -42,10 +42,9 @@ import org.mortbay.util.*;
 import org.mortbay.http.*;
 import org.mortbay.http.handler.*;
 
-/* ------------------------------------------------------------ */
-/** LOCKSS proxy manager.
+/** LOCKSS proxy manager, starts main proxy.
  */
-public class ProxyManager extends JettyManager {
+public class ProxyManager extends BaseProxyManager {
 
   private static Logger log = Logger.getLogger("Proxy");
   public static final String PREFIX = Configuration.PREFIX + "proxy.";
@@ -89,50 +88,31 @@ public class ProxyManager extends JettyManager {
   public static final long DEFAULT_PROXY_QUICK_DATA_TIMEOUT =
     5  * Constants.MINUTE;
 
-  private int port;
-  private boolean start;
-  private String includeIps;
-  private String excludeIps;
-  private boolean logForbidden;
-  private ProxyAccessHandler accessHandler;
-
-  /* ------- LockssManager implementation ------------------ */
-  /**
-   * start the proxy.
-   * @see org.lockss.app.LockssManager#startService()
-   */
-  public void startService() {
-    if (start) {
-      super.startService();
-      startProxy();
-    }
-  }
-
-  /**
-   * stop the plugin manager
-   * @see org.lockss.app.LockssManager#stopService()
-   */
-  public void stopService() {
-    // XXX undo whatever we did in start proxy.
-
-    super.stopService();
-  }
-
   protected void setConfig(Configuration config, Configuration prevConfig,
 			   Set changedKeys) {
     super.setConfig(config, prevConfig, changedKeys);
-    port = config.getInt(PARAM_PORT, DEFAULT_PORT);
-    start = config.getBoolean(PARAM_START, DEFAULT_START);
     if (changedKeys.contains(PARAM_IP_INCLUDE) ||
 	changedKeys.contains(PARAM_IP_EXCLUDE) ||
 	changedKeys.contains(PARAM_LOG_FORBIDDEN)) {
       includeIps = config.get(PARAM_IP_INCLUDE, "");
       excludeIps = config.get(PARAM_IP_EXCLUDE, "");
-      logForbidden = config.getBoolean(PARAM_LOG_FORBIDDEN, 
+      logForbidden = config.getBoolean(PARAM_LOG_FORBIDDEN,
 				       DEFAULT_LOG_FORBIDDEN);
       log.debug("Installing new ip filter: incl: " + includeIps +
 		", excl: " + excludeIps);
       setIpFilter();
+    }
+    port = config.getInt(PARAM_PORT, DEFAULT_PORT);
+    start = config.getBoolean(PARAM_START, DEFAULT_START);
+    if (changedKeys.contains(PARAM_PORT) ||
+	changedKeys.contains(PARAM_START)) {
+      if (start) {
+	if (theDaemon.isDaemonRunning()) {
+	  startProxy();
+	}
+      } else {
+	stopProxy();
+      }
     }
   }
 
@@ -141,67 +121,10 @@ public class ProxyManager extends JettyManager {
     return port;
   }
 
-  void setIpFilter() {
-    if (accessHandler != null) {
-      try {
-	IpFilter filter = new IpFilter();
-	filter.setFilters(includeIps, excludeIps, ';');
-	accessHandler.setFilter(filter);
-      } catch (IpFilter.MalformedException e) {
-	log.warning("Malformed IP filter, filters not changed", e);
-      }
-      accessHandler.setLogForbidden(logForbidden);
-      accessHandler.setAllowLocal(true);
-    }
-  }
-
-  /** Start a Jetty handler for the proxy */
-  public void startProxy() {
-    try {
-      // Create the server
-      HttpServer server = new HttpServer();
-
-      // Create a port listener
-      HttpListener listener = server.addListener(new InetAddrPort(port));
-
-      // Create a context
-      HttpContext context = server.getContext(null, "/");
-
-      // In this environment there is no point in consuming memory with
-      // cached resources
-      context.setMaxCachedFileSize(0);
-
-      // ProxyAccessHandler is first
-      accessHandler = new ProxyAccessHandler(getDaemon(), "Proxy");
-      setIpFilter();
-      context.addHandler(accessHandler);
-
-      // Add a proxy handler to the context
-      context.addHandler(makeProxyHandler());
-
-      // Add a CuResourceHandler to handle requests for locally cached
-      // content that the proxy handler modified and passed on.
-      context.setBaseResource(new CuUrlResource());
-      LockssResourceHandler rHandler = new CuResourceHandler();
-//       rHandler.setDirAllowed(false);
-//       rHandler.setPutAllowed(false);
-//       rHandler.setDelAllowed(false);
-//       rHandler.setAcceptRanges(true);
-      context.addHandler(rHandler);
-      // Requests shouldn't get this far, so dump them
-      context.addHandler(new org.mortbay.http.handler.DumpHandler());
-
-      // Start the http server
-      server.start ();
-    } catch (Exception e) {
-      log.error("Couldn't start proxy", e);
-    }
-  }
-
   // Proxy handler gets two connection pools, one to proxy normal request,
   // and one with short timeouts for checking with publisher before serving
   // content from cache.
-  org.lockss.proxy.ProxyHandler makeProxyHandler() {
+  protected org.lockss.proxy.ProxyHandler makeProxyHandler() {
     LockssUrlConnectionPool connPool = new LockssUrlConnectionPool();
     LockssUrlConnectionPool quickConnPool = new LockssUrlConnectionPool();
     Configuration conf = ConfigManager.getCurrentConfig();
