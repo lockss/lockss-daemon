@@ -1,5 +1,5 @@
 /*
- * $Id: TestOrderedObject.java,v 1.1 2004-05-26 06:59:59 tlipkis Exp $
+ * $Id: TestOrderedObject.java,v 1.2 2004-05-26 22:57:38 tlipkis Exp $
  */
 
 /*
@@ -65,6 +65,9 @@ public class TestOrderedObject extends LockssTestCase {
     assertEquals("foo", o1.toString());
     assertEquals(new Integer(3), o1.getOrder());
     assertEquals("123", o2.toString());
+    OrderedObject o4 = new OrderedObject("bar");
+    assertEquals("bar", o4.getOrder());
+    assertEquals("bar", o4.getValue());
   }
 
   public void testSort() {

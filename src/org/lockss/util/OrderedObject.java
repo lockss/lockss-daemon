@@ -1,5 +1,5 @@
 /*
- * $Id: OrderedObject.java,v 1.1 2004-05-26 07:00:00 tlipkis Exp $
+ * $Id: OrderedObject.java,v 1.2 2004-05-26 22:57:38 tlipkis Exp $
  */
 
 /*
@@ -53,6 +53,13 @@ public class OrderedObject implements Comparable {
    */
   public OrderedObject(Object value, int order) {
     this(value, new Integer(order));
+  }
+
+  /** Create an OrderedObject with the same value and order
+   */
+  public OrderedObject(Comparable value) {
+    this.value = value;
+    this.order = value;
   }
 
   /** Returns the value */
