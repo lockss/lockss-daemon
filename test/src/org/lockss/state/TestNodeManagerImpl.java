@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.84 2003-06-06 23:13:44 aalto Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.85 2003-06-11 00:01:31 aalto Exp $
  */
 
 /*
@@ -262,226 +262,356 @@ public class TestNodeManagerImpl extends LockssTestCase {
     assertNull(nodeManager.activeNodes.get(results.getPollKey()));
   }
 
-/*
-  public void testHandleContentPoll() throws Exception {
+  public void testHandleStandardContentPoll() throws Exception {
+    NodeState nodeState = nodeManager.getNodeState(getCUS(mau, TEST_URL));
+
+    // won content poll
     contentPoll = createPoll(TEST_URL, true, true, 15, 5);
     PollTally results = contentPoll.getVoteTally();
-    PollSpec spec = results.getPollSpec();
 
-    NodeState nodeState = nodeManager.getNodeState(getCUS(mau, TEST_URL));
-    // won content poll
     // - running
     PollState pollState = new PollState(results.getType(),
-                                        spec.getLwrBound(),
-                                        spec.getUprBound(),
+                                        results.getPollSpec().getLwrBound(),
+                                        results.getPollSpec().getUprBound(),
                                         PollState.RUNNING,
                                         results.getStartTime(),
                                         Deadline.MAX,
                                         false);
+    nodeState.setState(NodeState.CONTENT_RUNNING);
     nodeManager.handleContentPoll(pollState, results, nodeState);
     assertEquals(PollState.WON, pollState.getStatus());
+    assertEquals(NodeState.OK, nodeState.getState());
     reputationChangeTest(results);
 
     // - repairing
     pollState = new PollState(results.getType(),
-                              spec.getLwrBound(),
-                              spec.getUprBound(),
+                              results.getPollSpec().getLwrBound(),
+                              results.getPollSpec().getUprBound(),
                               PollState.REPAIRING,
                               results.getStartTime(),
                               Deadline.MAX,
                               false);
-    spec = results.getPollSpec();
+    nodeState.setState(NodeState.CONTENT_REPLAYING);
     nodeManager.handleContentPoll(pollState, results, nodeState);
     assertEquals(PollState.REPAIRED, pollState.getStatus());
+    assertEquals(NodeState.OK, nodeState.getState());
     reputationChangeTest(results);
 
     // lost content poll
     contentPoll = createPoll(TEST_URL + "/branch1", true, true, 5, 15);
     results = contentPoll.getVoteTally();
-    spec = results.getPollSpec();
+
+    // - running
+    pollState = new PollState(results.getType(),
+                              results.getPollSpec().getLwrBound(),
+                              results.getPollSpec().getUprBound(),
+                              PollState.RUNNING,
+                              results.getStartTime(),
+                              Deadline.MAX,
+                              false);
+    nodeState.setState(NodeState.CONTENT_RUNNING);
+    nodeManager.handleContentPoll(pollState, results, nodeState);
+    assertEquals(PollState.LOST, pollState.getStatus());
+    assertEquals(NodeState.CONTENT_LOST, nodeState.getState());
+    reputationChangeTest(results);
+
     // - repairing
     pollState = new PollState(results.getType(),
-                              spec.getLwrBound(),
-                              spec.getUprBound(),
+                              results.getPollSpec().getLwrBound(),
+                              results.getPollSpec().getUprBound(),
                               PollState.REPAIRING,
                               results.getStartTime(),
                               Deadline.MAX,
                               false);
+    nodeState.setState(NodeState.CONTENT_REPLAYING);
     nodeManager.handleContentPoll(pollState, results, nodeState);
     assertEquals(PollState.UNREPAIRABLE, pollState.getStatus());
+    assertEquals(NodeState.DAMAGE_AT_OR_BELOW, nodeState.getState());
     reputationChangeTest(results);
 
-    // - internal
-    nodeState = nodeManager.getNodeState(getCUS(mau, TEST_URL + "/branch1"));
-    pollState = new PollState(results.getType(),
-                              spec.getLwrBound(),
-                              spec.getUprBound(),
-                              PollState.RUNNING,
-                              results.getStartTime(),
-                              Deadline.MAX,
-                              false);
-    nodeManager.handleContentPoll(pollState, results, nodeState);
-    assertEquals(PollState.LOST, pollState.getStatus());
-    // assert name poll requested
-    assertEquals(MockPollManager.NAME_REQUESTED, pollManager.getPollStatus(
-        nodeState.getCachedUrlSet().getUrl()));
-
-    // - leaf
-    contentPoll = createPoll(TEST_URL +"/branch1/file1.doc", true, true, 5, 15);
-    results = contentPoll.getVoteTally();
-    spec = results.getPollSpec();
-    nodeState = nodeManager.getNodeState(getCUS(mau,
-                                                TEST_URL+"/branch1/file1.doc"));
-    pollState = new PollState(results.getType(),
-                              spec.getLwrBound(),
-                              spec.getUprBound(),
-                              PollState.RUNNING,
-                              results.getStartTime(),
-                              Deadline.MAX,
-                              false);
-    nodeManager.handleContentPoll(pollState, results, nodeState);
-    assertEquals(PollState.LOST, pollState.getStatus());
-    // assert name poll requested
-    assertEquals(MockPollManager.NAME_REQUESTED, pollManager.getPollStatus(
-        nodeState.getCachedUrlSet().getUrl()));
-
-    // ranged content
-    contentPoll = createPoll(TEST_URL + "/branch2",
-                             "abc", "xyz",
-                             true, true, 5, 15);
-    results = contentPoll.getVoteTally();
-    MockCachedUrlSet mcus = (MockCachedUrlSet)results.getCachedUrlSet();
-    Vector subFiles = new Vector(2);
-    subFiles.add(getCUS(mau, TEST_URL + "/branch2/file1.doc"));
-    subFiles.add(getCUS(mau, TEST_URL + "/branch2/file2.doc"));
-    mcus.setFlatItSource(subFiles);
-    pollManager.thePolls.remove(mcus.getUrl());
-
-    spec = results.getPollSpec();
-    nodeState = nodeManager.getNodeState(getCUS(mau, TEST_URL + "/branch2"));
-    pollState = new PollState(results.getType(),
-                              spec.getLwrBound(),
-                              spec.getUprBound(),
-                              PollState.RUNNING,
-                              results.getStartTime(),
-                              Deadline.MAX,
-                              false);
-    nodeManager.handleContentPoll(pollState, results, nodeState);
-    assertEquals(PollState.LOST, pollState.getStatus());
-    // assert content polls requested on children, and nothing on this node
-    assertNull(pollManager.getPollStatus(nodeState.getCachedUrlSet().getUrl()));
-    assertEquals(MockPollManager.CONTENT_REQUESTED, pollManager.getPollStatus(
-        nodeState.getCachedUrlSet().getUrl() + "/file1.doc"));
-    assertEquals(MockPollManager.CONTENT_REQUESTED, pollManager.getPollStatus(
-        nodeState.getCachedUrlSet().getUrl() + "/file2.doc"));
-
-    // - internal SingleNodeCachedUrlSetSpec
+    // won ranged poll (should do nothing to NodeState)
     contentPoll = createPoll(TEST_URL + "/branch1",
-                             PollSpec.SINGLE_NODE_LWRBOUND, null,
-                             true, true, 5, 15);
+                             "a", "b", true, true, 15, 5);
     results = contentPoll.getVoteTally();
-    spec = results.getPollSpec();
-    nodeState = nodeManager.getNodeState(getCUS(mau, TEST_URL+"/branch1"));
+
+    // - running
     pollState = new PollState(results.getType(),
-                              spec.getLwrBound(),
-                              spec.getUprBound(),
+                              results.getPollSpec().getLwrBound(),
+                              results.getPollSpec().getUprBound(),
                               PollState.RUNNING,
                               results.getStartTime(),
                               Deadline.MAX,
                               false);
+    nodeState.setState(NodeState.POSSIBLE_DAMAGE_BELOW);
     nodeManager.handleContentPoll(pollState, results, nodeState);
-    assertEquals(PollState.REPAIRING, pollState.getStatus());
-    // assert repair call scheduled
-    assertEquals(MockCrawlManager.SCHEDULED, crawlManager.getUrlStatus(
-        nodeState.getCachedUrlSet().getUrl()));
-    // assert poll suspended
-    assertEquals(MockPollManager.SUSPENDED,
-                 pollManager.getPollStatus(results.getPollKey()));
+    assertEquals(PollState.WON, pollState.getStatus());
+    assertEquals(NodeState.POSSIBLE_DAMAGE_BELOW, nodeState.getState());
+    reputationChangeTest(results);
+
+    // lost ranged poll (should set NodeState to 'CONTENT_LOST')
+    contentPoll = createPoll(TEST_URL + "/branch1",
+                             "a", "b", true, true, 5, 15);
+    results = contentPoll.getVoteTally();
+
+    // - running
+    pollState = new PollState(results.getType(),
+                              results.getPollSpec().getLwrBound(),
+                              results.getPollSpec().getUprBound(),
+                              PollState.RUNNING,
+                              results.getStartTime(),
+                              Deadline.MAX,
+                              false);
+    nodeState.setState(NodeState.POSSIBLE_DAMAGE_BELOW);
+    nodeManager.handleContentPoll(pollState, results, nodeState);
+    assertEquals(PollState.LOST, pollState.getStatus());
+    assertEquals(NodeState.CONTENT_LOST, nodeState.getState());
+    reputationChangeTest(results);
   }
 
+  public void testHandleSingleNodeContentPoll() throws Exception {
+    NodeState nodeState = nodeManager.getNodeState(getCUS(mau, TEST_URL));
+    // won poll (not mine)
+    contentPoll = createPoll(TEST_URL + "/branch1",
+                             PollSpec.SINGLE_NODE_LWRBOUND, null,
+                             true, false, 15, 5);
+    PollTally results = contentPoll.getVoteTally();
 
 
-  public void testHandleNamePoll() throws Exception {
-    namePoll = createPoll(TEST_URL + "/branch2", false, true, 15, 5);
-    PollTally results = namePoll.getVoteTally();
-    PollSpec spec = results.getPollSpec();
-    NodeState nodeState =
-        nodeManager.getNodeState(getCUS(mau, TEST_URL + "/branch2"));
-    // won name poll
+    // - running
     PollState pollState = new PollState(results.getType(),
-                                        spec.getLwrBound(),
-                                        spec.getUprBound(),
+                                        results.getPollSpec().getLwrBound(),
+                                        results.getPollSpec().getUprBound(),
                                         PollState.RUNNING,
                                         results.getStartTime(),
                                         Deadline.MAX,
                                         false);
-    MockCachedUrlSet mcus = (MockCachedUrlSet) results.getCachedUrlSet();
-    Vector subFiles = new Vector(2);
-    subFiles.add(getCUS(mau, TEST_URL + "/branch2/file1.doc"));
-    subFiles.add(getCUS(mau, TEST_URL + "/branch2/file2.doc"));
-    mcus.setFlatItSource(subFiles);
-
-    nodeManager.handleNamePoll(pollState, results, nodeState);
-    // we should call a content poll on the subnodes here
-    assertEquals(MockPollManager.CONTENT_REQUESTED, pollManager.getPollStatus(
-        TEST_URL + "/branch2/file1.doc"));
-    assertEquals(MockPollManager.CONTENT_REQUESTED, pollManager.getPollStatus(
-        TEST_URL + "/branch2/file2.doc"));
-
-    // and single node call
-    assertEquals(MockPollManager.CONTENT_REQUESTED, pollManager.getPollStatus(
-        TEST_URL + "/branch2"));
+    nodeState.setState(NodeState.SNCUSS_POLL_RUNNING);
+    nodeManager.handleContentPoll(pollState, results, nodeState);
     assertEquals(PollState.WON, pollState.getStatus());
+    assertEquals(NodeState.OK, nodeState.getState());
+    reputationChangeTest(results);
 
-    // Test a repair
-    String deleteUrl = TEST_URL + "/branch2/testentry2.html";
-    String repairUrl = TEST_URL + "/branch2/testentry4.html";
-    String repairUrl2 = TEST_URL + "/branch2/testentry5.html";
-    // unsuccessful repair
-    namePoll = createPoll(TEST_URL + "/branch2", false, true, 5, 15);
-    results = namePoll.getVoteTally();
-    spec = results.getPollSpec();
+    // - repairing
     pollState = new PollState(results.getType(),
-                              spec.getLwrBound(),
-                              spec.getUprBound(),
+                              results.getPollSpec().getLwrBound(),
+                              results.getPollSpec().getUprBound(),
                               PollState.REPAIRING,
                               results.getStartTime(),
                               Deadline.MAX,
                               false);
-    nodeManager.handleNamePoll(pollState, results, nodeState);
-    assertEquals(PollState.UNREPAIRABLE, pollState.getStatus());
-    assertNull(crawlManager.getUrlStatus(repairUrl));
+    nodeState.setState(NodeState.SNCUSS_POLL_REPLAYING);
+    nodeManager.handleContentPoll(pollState, results, nodeState);
+    assertEquals(PollState.REPAIRED, pollState.getStatus());
+    assertEquals(NodeState.OK, nodeState.getState());
+    reputationChangeTest(results);
 
-    // attempted repair
+    // won poll (mine)
+    contentPoll = createPoll(TEST_URL + "/branch1",
+                             PollSpec.SINGLE_NODE_LWRBOUND, null,
+                             true, true, 15, 5);
+    results = contentPoll.getVoteTally();
+
+    // - running
     pollState = new PollState(results.getType(),
-                              spec.getLwrBound(),
-                              spec.getUprBound(),
+                              results.getPollSpec().getLwrBound(),
+                              results.getPollSpec().getUprBound(),
+                              PollState.RUNNING,
+                              results.getStartTime(),
+                              Deadline.MAX,
+                              true);
+    nodeState.setState(NodeState.SNCUSS_POLL_RUNNING);
+    nodeManager.handleContentPoll(pollState, results, nodeState);
+    assertEquals(PollState.WON, pollState.getStatus());
+    assertEquals(NodeState.POSSIBLE_DAMAGE_BELOW, nodeState.getState());
+    reputationChangeTest(results);
+
+    // - repairing
+    pollState = new PollState(results.getType(),
+                              results.getPollSpec().getLwrBound(),
+                              results.getPollSpec().getUprBound(),
+                              PollState.REPAIRING,
+                              results.getStartTime(),
+                              Deadline.MAX,
+                              true);
+    nodeState.setState(NodeState.SNCUSS_POLL_REPLAYING);
+    nodeManager.handleContentPoll(pollState, results, nodeState);
+    assertEquals(PollState.REPAIRED, pollState.getStatus());
+    assertEquals(NodeState.POSSIBLE_DAMAGE_BELOW, nodeState.getState());
+    reputationChangeTest(results);
+
+    // lost content poll (ownership irrelevant)
+    contentPoll = createPoll(TEST_URL + "/branch1",
+                             PollSpec.SINGLE_NODE_LWRBOUND, null,
+                             true, true, 5, 15);
+    results = contentPoll.getVoteTally();
+
+    // - running
+    pollState = new PollState(results.getType(),
+                              results.getPollSpec().getLwrBound(),
+                              results.getPollSpec().getUprBound(),
                               PollState.RUNNING,
                               results.getStartTime(),
                               Deadline.MAX,
                               false);
-
-    // add url to delete to repository (need to really add it, so it can be
-    // deactivated)
-    RepositoryNode delNode = TestRepositoryNodeImpl.createLeaf(
-        theDaemon.getLockssRepository(mau), deleteUrl, "test stream", null);
-    assertFalse(delNode.isInactive());
-    assertNull(theDaemon.getLockssRepository(mau).getNode(repairUrl));
-
-    nodeManager.handleNamePoll(pollState, results, nodeState);
+    nodeState.setState(NodeState.SNCUSS_POLL_RUNNING);
+    nodeManager.handleContentPoll(pollState, results, nodeState);
     assertEquals(PollState.REPAIRING, pollState.getStatus());
-    assertEquals(MockCrawlManager.SCHEDULED, crawlManager.getUrlStatus(
-        repairUrl));
-    // only one repair per poll
-    assertNull(crawlManager.getUrlStatus(repairUrl2));
+    assertEquals(NodeState.NEEDS_REPAIR, nodeState.getState());
+    reputationChangeTest(results);
 
-    // deleted node is marked inactive
-    assertTrue(delNode.isInactive());
-    // node is created for the repair
-    //assertNotNull(theDaemon.getLockssRepository(mau).getNode(repairUrl));
+    // - repairing
+    pollState = new PollState(results.getType(),
+                              results.getPollSpec().getLwrBound(),
+                              results.getPollSpec().getUprBound(),
+                              PollState.REPAIRING,
+                              results.getStartTime(),
+                              Deadline.MAX,
+                              false);
+    nodeState.setState(NodeState.SNCUSS_POLL_REPLAYING);
+    nodeManager.handleContentPoll(pollState, results, nodeState);
+    assertEquals(PollState.UNREPAIRABLE, pollState.getStatus());
+    assertEquals(NodeState.UNREPAIRABLE_SNCUSS, nodeState.getState());
+    reputationChangeTest(results);
   }
 
-*/
+  public void testHandleNamePoll() throws Exception {
+    NodeState nodeState = nodeManager.getNodeState(getCUS(mau, TEST_URL));
+
+    // won name poll (not mine)
+    namePoll = createPoll(TEST_URL, false, false, 15, 5);
+    PollTally results = namePoll.getVoteTally();
+
+    // - running
+    PollState pollState = new PollState(results.getType(),
+                                        results.getPollSpec().getLwrBound(),
+                                        results.getPollSpec().getUprBound(),
+                                        PollState.RUNNING,
+                                        results.getStartTime(),
+                                        Deadline.MAX,
+                                        false);
+    nodeState.setState(NodeState.NAME_RUNNING);
+    nodeManager.handleNamePoll(pollState, results, nodeState);
+    assertEquals(PollState.WON, pollState.getStatus());
+    assertEquals(NodeState.OK, nodeState.getState());
+    reputationChangeTest(results);
+
+    // - repairing
+    pollState = new PollState(results.getType(),
+                              results.getPollSpec().getLwrBound(),
+                              results.getPollSpec().getUprBound(),
+                              PollState.REPAIRING,
+                              results.getStartTime(),
+                              Deadline.MAX,
+                              false);
+    nodeState.setState(NodeState.NAME_REPLAYING);
+    nodeManager.handleNamePoll(pollState, results, nodeState);
+    assertEquals(PollState.WON, pollState.getStatus());
+    assertEquals(NodeState.NEEDS_REPLAY_POLL, nodeState.getState());
+    reputationChangeTest(results);
+
+    // won name poll (mine)
+    namePoll = createPoll(TEST_URL, false, true, 15, 5);
+    results = namePoll.getVoteTally();
+
+    // - running
+    pollState = new PollState(results.getType(),
+                              results.getPollSpec().getLwrBound(),
+                              results.getPollSpec().getUprBound(),
+                              PollState.RUNNING,
+                              results.getStartTime(),
+                              Deadline.MAX,
+                              true);
+    nodeState.setState(NodeState.NAME_RUNNING);
+    nodeManager.handleNamePoll(pollState, results, nodeState);
+    assertEquals(PollState.WON, pollState.getStatus());
+    assertEquals(NodeState.DAMAGE_AT_OR_BELOW, nodeState.getState());
+    reputationChangeTest(results);
+
+    // - repairing
+    pollState = new PollState(results.getType(),
+                              results.getPollSpec().getLwrBound(),
+                              results.getPollSpec().getUprBound(),
+                              PollState.REPAIRING,
+                              results.getStartTime(),
+                              Deadline.MAX,
+                              true);
+    nodeState.setState(NodeState.NAME_REPLAYING);
+    nodeManager.handleNamePoll(pollState, results, nodeState);
+    assertEquals(PollState.REPAIRED, pollState.getStatus());
+    assertEquals(NodeState.NEEDS_REPLAY_POLL, nodeState.getState());
+    reputationChangeTest(results);
+
+    // lost name poll (ownership irrelevant)
+    namePoll = createPoll(TEST_URL + "/branch1", false, true, 5, 15);
+    results = namePoll.getVoteTally();
+
+    // - running
+    pollState = new PollState(results.getType(),
+                              results.getPollSpec().getLwrBound(),
+                              results.getPollSpec().getUprBound(),
+                              PollState.RUNNING,
+                              results.getStartTime(),
+                              Deadline.MAX,
+                              false);
+    nodeState.setState(NodeState.NAME_RUNNING);
+    nodeManager.handleNamePoll(pollState, results, nodeState);
+    assertEquals(PollState.REPAIRING, pollState.getStatus());
+    assertEquals(NodeState.WRONG_NAMES, nodeState.getState());
+    reputationChangeTest(results);
+
+    // - repairing
+    pollState = new PollState(results.getType(),
+                              results.getPollSpec().getLwrBound(),
+                              results.getPollSpec().getUprBound(),
+                              PollState.REPAIRING,
+                              results.getStartTime(),
+                              Deadline.MAX,
+                              false);
+    nodeState.setState(NodeState.NAME_REPLAYING);
+    nodeManager.handleNamePoll(pollState, results, nodeState);
+    assertEquals(PollState.UNREPAIRABLE, pollState.getStatus());
+    assertEquals(NodeState.UNREPAIRABLE_NAMES, nodeState.getState());
+    reputationChangeTest(results);
+
+    // won ranged poll (should do nothing to NodeState)
+    namePoll = createPoll(TEST_URL + "/branch1",
+                             "a", "b", false, true, 15, 5);
+    results = namePoll.getVoteTally();
+
+    // - running
+    pollState = new PollState(results.getType(),
+                              results.getPollSpec().getLwrBound(),
+                              results.getPollSpec().getUprBound(),
+                              PollState.RUNNING,
+                              results.getStartTime(),
+                              Deadline.MAX,
+                              false);
+    nodeState.setState(NodeState.POSSIBLE_DAMAGE_BELOW);
+    nodeManager.handleNamePoll(pollState, results, nodeState);
+    assertEquals(PollState.WON, pollState.getStatus());
+    assertEquals(NodeState.POSSIBLE_DAMAGE_BELOW, nodeState.getState());
+    reputationChangeTest(results);
+
+    // lost ranged poll (should set NodeState to 'WRONG_NAMES')
+    namePoll = createPoll(TEST_URL + "/branch1",
+                             "a", "b", false, true, 5, 15);
+    results = namePoll.getVoteTally();
+
+    // - running
+    pollState = new PollState(results.getType(),
+                              results.getPollSpec().getLwrBound(),
+                              results.getPollSpec().getUprBound(),
+                              PollState.RUNNING,
+                              results.getStartTime(),
+                              Deadline.MAX,
+                              false);
+    nodeState.setState(NodeState.POSSIBLE_DAMAGE_BELOW);
+    nodeManager.handleNamePoll(pollState, results, nodeState);
+    assertEquals(PollState.REPAIRING, pollState.getStatus());
+    assertEquals(NodeState.WRONG_NAMES, nodeState.getState());
+    reputationChangeTest(results);
+  }
+
 
   public void testHandleWrongNames() throws Exception {
     Vector masterV = new Vector();
@@ -632,9 +762,9 @@ public class TestNodeManagerImpl extends LockssTestCase {
     historyCheckTestName(Poll.NAME_POLL, PollState.UNFINISHED, nodeState,
                          true, true, false);
 
-    // these call content polls
-//    historyCheckTestCallsContent(PollState.WON, nodeState);
-//    historyCheckTestCallsContent(PollState.REPAIRED, nodeState);
+    // these shouldn't act
+    historyCheckTest(Poll.CONTENT_POLL, PollState.WON, nodeState, false);
+    historyCheckTest(Poll.CONTENT_POLL, PollState.REPAIRED, nodeState, false);
 
     // this is true because we're going to try and fix unrepairable
     historyCheckTestName(PollState.UNREPAIRABLE, nodeState, true, false);
@@ -807,19 +937,6 @@ public class TestNodeManagerImpl extends LockssTestCase {
     }
   }
 
-  private void historyCheckTestCallsContent(int pollState, NodeState node) {
-    PollHistory history = new PollHistory(Poll.NAME_POLL, null, null,
-                                          pollState, 123,
-                                          123, null,
-                                          true);
-    assertTrue(nodeManager.checkLastHistory(history, node, true));
-    assertNull(pollManager.getPollStatus(TEST_URL));
-    assertTrue(nodeManager.checkLastHistory(history, node, false));
-    assertEquals(MockPollManager.CONTENT_REQUESTED,
-                 pollManager.getPollStatus(TEST_URL));
-    pollManager.thePolls.remove(TEST_URL);
-  }
-
   private void reputationChangeTest(PollTally results) {
     Iterator voteIt = results.getPollVotes().iterator();
     while (voteIt.hasNext()) {
@@ -877,6 +994,31 @@ public class TestNodeManagerImpl extends LockssTestCase {
     cus.setHashItSource(files);
     cus.setFlatItSource(branches);
     return cus;
+  }
+
+  static CachedUrlSet makeFakeAuCachedUrlSet(MockArchivalUnit mau,
+                                             String startUrl,
+                                             int numBranches, int numFiles)
+      throws Exception {
+    MockCachedUrlSet auCus = new MockCachedUrlSet(mau,
+                                                  new AUCachedUrlSetSpec());
+
+    CachedUrlSet mcus = makeFakeCachedUrlSet(mau, startUrl, numBranches,
+                                             numFiles);
+    Vector childV = new Vector(1);
+    childV.addElement(mcus);
+
+    Vector treeV = new Vector(numBranches * numFiles + 1);
+    Iterator treeIt = mcus.contentHashIterator();
+    treeV.addElement(mcus);
+    while (treeIt.hasNext()) {
+      treeV.addElement(treeIt.next());
+    }
+
+    auCus.addUrl(null, AuUrl.PROTOCOL_COLON, false, false, null);
+    auCus.setHashItSource(treeV);
+    auCus.setFlatItSource(childV);
+    return auCus;
   }
 
   static void loadNodeStates(ArchivalUnit au, NodeManagerImpl nodeManager) {

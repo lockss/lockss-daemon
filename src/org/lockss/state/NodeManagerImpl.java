@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.133 2003-06-06 23:13:44 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.134 2003-06-11 00:01:31 aalto Exp $
  */
 
 /*
@@ -477,15 +477,20 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
         logger.info("Top level poll finished.");
       }
 
-      // take next appropriate action on node
-      try {
-        logger.debug3("New node state: "+nodeState.getStateString());
-        checkCurrentState(pollState, results, nodeState, false);
-      } catch (IOException ie) {
-        logger.error("Unable to continue actions on node: ", ie);
-        pollState.status = PollState.ERR_IO;
+      // take next appropriate action on node if needed
+      // only check state for ranged polls if they changed the state
+      boolean checkState = !isRangedPoll ||
+          ((lastState != -1) && (lastState != nodeState.getState()));
+      if (checkState) {
+        try {
+          logger.debug3("New node state: " + nodeState.getStateString());
+          checkCurrentState(pollState, results, nodeState, false);
+        }
+        catch (IOException ie) {
+          logger.error("Unable to continue actions on node: ", ie);
+          pollState.status = PollState.ERR_IO;
+        }
       }
-
     }
     finally {
       if ((isRangedPoll) && (lastState != -1)) {
@@ -733,7 +738,6 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
             }
             break;
           case NodeState.NAME_REPLAYING:
-
             //XXX should replay content poll, but set to NEEDS_POLL for now
             nodeState.setState(NodeState.NEEDS_REPLAY_POLL);
         }
@@ -761,8 +765,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
             nodeState.setState(NodeState.WRONG_NAMES);
             break;
           case NodeState.NAME_REPLAYING:
-            //XXX temporarily skip 'unrepairable->needs poll' timing
-            nodeState.setState(NodeState.UNREPAIRABLE_NAMES_NEEDS_POLL);
+            nodeState.setState(NodeState.UNREPAIRABLE_NAMES);
         }
       } else {
         // if ranged, set temporary state
@@ -937,10 +940,14 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
         }
         return true;
       case NodeState.UNREPAIRABLE_SNCUSS:
-      case NodeState.UNREPAIRABLE_NAMES:
-        // block on damage
         //XXX check times, and changed to 'UNREPAIRABLE_XXX_NEEDS_POLL" if long enough
         // if long enough since first damage, change to 'UNKNOWN'
+        nodeState.setState(NodeState.UNREPAIRABLE_SNCUSS_NEEDS_POLL);
+        return false;
+      case NodeState.UNREPAIRABLE_NAMES:
+        //XXX check times, and changed to 'UNREPAIRABLE_XXX_NEEDS_POLL" if long enough
+        // if long enough since first damage, change to 'UNKNOWN'
+        nodeState.setState(NodeState.UNREPAIRABLE_NAMES_NEEDS_POLL);
         return false;
       case NodeState.POSSIBLE_DAMAGE_BELOW:
         // waiting state

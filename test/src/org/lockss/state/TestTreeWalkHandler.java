@@ -1,5 +1,5 @@
 /*
- * $Id: TestTreeWalkHandler.java,v 1.22 2003-05-30 23:27:53 aalto Exp $
+ * $Id: TestTreeWalkHandler.java,v 1.23 2003-06-11 00:01:31 aalto Exp $
  */
 
 /*
@@ -70,7 +70,7 @@ public class TestTreeWalkHandler extends LockssTestCase {
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
     mau = new MockArchivalUnit();
-    mau.setAUCachedUrlSet(TestNodeManagerImpl.makeFakeCachedUrlSet(mau,
+    mau.setAUCachedUrlSet(TestNodeManagerImpl.makeFakeAuCachedUrlSet(mau,
         TEST_URL, 2, 2));
     theDaemon.getPluginManager();
     PluginUtil.registerArchivalUnit(mau);
@@ -136,9 +136,8 @@ public class TestTreeWalkHandler extends LockssTestCase {
 
     treeWalkHandler.doTreeWalk();
     assertNull(crawlMan.getAuStatus(mau));
-//XXX fix
-//    assertEquals(MockPollManager.CONTENT_REQUESTED,
-//		 pollMan.getPollStatus(mau.getAUCachedUrlSet().getUrl()));
+    assertEquals(MockPollManager.CONTENT_REQUESTED,
+		 pollMan.getPollStatus(mau.getAUCachedUrlSet().getUrl()));
   }
 
   public void testTreeWalkSkipTopLevelPoll() {
@@ -150,18 +149,14 @@ public class TestTreeWalkHandler extends LockssTestCase {
     // set up damage in tree
     CachedUrlSet subCus = (CachedUrlSet)
         mau.getAUCachedUrlSet().flatSetIterator().next();
-    NodeStateImpl node = (NodeStateImpl)nodeManager.getNodeState(subCus);
-    PollHistory pollHist = new PollHistory(Poll.NAME_POLL, "", "",
-                                           PollState.RUNNING, 123, 1,
-                                           null, true);
-    node.closeActivePoll(pollHist);
+    NodeState node = nodeManager.getNodeState(subCus);
+    node.setState(NodeState.CONTENT_LOST);
 
     // should find damage and schedule
     treeWalkHandler.doTreeWalk();
     assertNull(crawlMan.getAuStatus(mau));
-//XXX fix
-//    assertEquals(pollMan.getPollStatus(subCus.getUrl()),
-  //               MockPollManager.NAME_REQUESTED);
+    assertEquals(pollMan.getPollStatus(subCus.getUrl()),
+                 MockPollManager.NAME_REQUESTED);
     // no top-level poll run
     assertNull(pollMan.getPollStatus(mau.getAUCachedUrlSet().getUrl()));
 
