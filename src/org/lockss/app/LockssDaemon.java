@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.69 2004-10-11 00:56:59 tlipkis Exp $
+ * $Id: LockssDaemon.java,v 1.70 2004-10-18 03:33:29 tlipkis Exp $
  */
 
 /*
@@ -118,6 +118,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   // Manager descriptors.  The order of this table determines the order in
   // which managers are initialized and started.
   protected static final ManagerDesc[] managerDescs = {
+    new ManagerDesc(RESOURCE_MANAGER, DEFAULT_RESOURCE_MANAGER),
     new ManagerDesc(MAIL_SERVICE, DEFAULT_MAIL_SERVICE),
     new ManagerDesc(ALERT_MANAGER, "org.lockss.alert.AlertManagerImpl"),
     new ManagerDesc(STATUS_SERVICE, DEFAULT_STATUS_SERVICE),

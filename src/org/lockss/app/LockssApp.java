@@ -1,5 +1,5 @@
 /*
- * $Id: LockssApp.java,v 1.7 2004-10-11 00:57:00 tlipkis Exp $
+ * $Id: LockssApp.java,v 1.8 2004-10-18 03:33:29 tlipkis Exp $
  */
 
 /*
@@ -80,6 +80,7 @@ public abstract class LockssApp {
   public static String MAIL_SERVICE = "MailService";
   public static String STATUS_SERVICE = "StatusService";
   public static String SCHED_SERVICE = "SchedService";
+  public static String RESOURCE_MANAGER = "ResourceManager";
   public static String SERVLET_MANAGER = "ServletManager";
 
   // default classes for common managers
@@ -91,6 +92,8 @@ public abstract class LockssApp {
     "org.lockss.daemon.status.StatusServiceImpl";
   protected static String DEFAULT_SCHED_SERVICE =
     "org.lockss.scheduler.SchedService";
+  protected static String DEFAULT_RESOURCE_MANAGER =
+    "org.lockss.daemon.ResourceManager";
 
   public static class ManagerDesc {
     String key;		// hash key and config param name
@@ -253,6 +256,15 @@ public abstract class LockssApp {
    */
   public SchedService getSchedService() {
     return (SchedService) getManager(SCHED_SERVICE);
+  }
+
+  /**
+   * return the resource manager instance
+   * @return the ResourceManager
+   * @throws IllegalArgumentException if the manager is not available.
+  */
+  public ResourceManager getResourceManager() {
+    return (ResourceManager) getManager(RESOURCE_MANAGER);
   }
 
   /**
