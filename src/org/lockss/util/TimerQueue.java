@@ -1,5 +1,5 @@
 /*
- * $Id: TimerQueue.java,v 1.18 2004-06-17 00:03:43 tlipkis Exp $
+ * $Id: TimerQueue.java,v 1.19 2004-07-27 19:25:04 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -45,6 +45,7 @@ public class TimerQueue /*extends BaseLockssManager*/ implements Serializable {
 
   private PriorityQueue queue = new PriorityQueue();
   private TimerThread timerThread;
+  private boolean needResort = false;
 
   /** Schedule an event.  At time <code>deadline</code>, <code>callback</code>
    * will be called with <code>cookie</code> as an argument.
@@ -87,13 +88,10 @@ public class TimerQueue /*extends BaseLockssManager*/ implements Serializable {
   }
 
   private void cancelReq(Request req) {
-    if (!req.deadline.expired()) {
-      req.cancelled = true;
-      req.deadline = Deadline.EXPIRED;
-    }
-    if (timerThread != null) {
-      timerThread.interrupt();
-    }
+    req.cancelled = true;
+    req.deadline = Deadline.EXPIRED;
+    // no need to resort or notify thread, since we don't care if the
+    // cancelled request isn't noticed immediately
   }
 
   private void runAllExpired0() {
@@ -133,7 +131,7 @@ public class TimerQueue /*extends BaseLockssManager*/ implements Serializable {
       this.cookie = cookie;
       deadlineCb = new Deadline.Callback() {
 	  public void changed(Deadline deadline) {
-	    someDeadlineChanged();
+	    deadlineChanged(deadline);
 	  }};
     }
 
@@ -171,26 +169,40 @@ public class TimerQueue /*extends BaseLockssManager*/ implements Serializable {
       timerThread.start();
       timerThread.waitRunning();
     } else {
-      timerThread.interrupt();
+      threadWait.give();
     }
   }
 
-  private void someDeadlineChanged() {
-    queue.sort();
-    if (timerThread != null) {
-      timerThread.interrupt();
+  private void deadlineChanged(Deadline deadline) {
+    // remember that we need to resort the queue
+    needResort = true;
+    // but do it now only if it would change the current sleep
+    if (deadline == threadWaitingForDeadline ||
+	(threadWaitingUntil != 0 && deadline.getExpirationTime() < threadWaitingUntil)) {
+      resort();
+      if (timerThread != null) {
+	threadWait.give();
+      }
     }
   }
+
+  private void resort() {
+    needResort = false;
+    queue.sort();
+  }      
 
   // Timer thread.
+
+  BinarySemaphore threadWait = new BinarySemaphore();
+  private Deadline threadWaitingForDeadline;
+  private long threadWaitingUntil = 0;
 
   // Timer callbacks are currently called in this thread, so hangs are
   // possible.  However, we don't need an explicit watchdog mechanism
   // because the WatchdogService is currently implemented using the
   // TimerQueue.  If this thread gets hung, the platform watchdog will go
-  // off.  (LockssThread's watchdog mechanism currently uses the
-  // TimerQueue, so using that mechanism here would require first
-  // determining that there are no reentrancy or recursion problems.)
+  // off.  (The LockssThread watchdog cannot be used here because it relies
+  // on the TimerQueue not being hung.)
 
   private class TimerThread extends LockssThread {
     private boolean goOn = false;
@@ -209,12 +221,24 @@ public class TimerQueue /*extends BaseLockssManager*/ implements Serializable {
 	try {
 	  Request req = (Request)queue.peekWait(Deadline.in(Constants.MINUTE));
 	  if (req != null) {
-	    req.deadline.sleep();
-	    // check that this request is still at the head of the queue
-	    Request newHead = (Request)queue.peek();
-	    if (req == newHead && req.deadline.expired()) {
+	    threadWaitingForDeadline = req.deadline;
+	    if (!threadWaitingForDeadline.expired()) {
+	      threadWaitingUntil = threadWaitingForDeadline.getExpirationTime();
+	      threadWait.take(threadWaitingForDeadline);
+	      threadWaitingUntil = 0;
+	    }
+	    threadWaitingForDeadline = null;
+	    // This used to check that about-to-be-executed request is still
+	    // at the head of the queue, but I can't think of a compelling
+	    // reason that that matters, as long as it's expired.
+// 	    Request newHead = (Request)queue.peek();
+// 	    if (req == newHead && req.deadline.expired()) {
+ 	    if (req.deadline.expired()) {
 	      doNotify(req);
 	    }
+	  }
+	  if (needResort) {
+	    resort();
 	  }
 	} catch (InterruptedException e) {
 	  // no action - expected when stopping or when queue reordered
