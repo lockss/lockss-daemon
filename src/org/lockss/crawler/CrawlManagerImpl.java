@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.78 2004-10-20 18:41:22 dcfok Exp $
+ * $Id: CrawlManagerImpl.java,v 1.79 2005-01-07 01:19:02 troberts Exp $
  */
 
 /*
@@ -256,14 +256,14 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 					 DEFAULT_MAX_REPAIR_CRAWLS_INTERVAL);
     if (!limiter.isEventOk()) {
       logger.debug("Repair aborted due to rate limiter.");
-      callCallback(cb, cookie, false);
+      callCallback(cb, cookie, false, null);
       return;
     }
     // check with regulator and start repair
     Map locks = getRepairLocks(au, urls, lock);
     if (locks.isEmpty()) {
       logger.debug("Repair aborted due to activity lock.");
-      callCallback(cb, cookie, false);
+      callCallback(cb, cookie, false, null);
       return;
     }
     limiter.event();
@@ -345,7 +345,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 		     DEFAULT_MAX_NEW_CONTENT_CRAWLS_INTERVAL);
     if (!limiter.isEventOk()) {
       logger.debug("New content aborted due to rate limiter.");
-      callCallback(cb, cookie, false);
+      callCallback(cb, cookie, false, null);
       return;
     }
     if ((lock==null) || (lock.isExpired())) {
@@ -357,7 +357,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     if (lock == null) {
       logger.debug("Couldn't schedule new content crawl due "+
 		   "to activity lock.");
-      callCallback(cb, cookie, false);
+      callCallback(cb, cookie, false, null);
       return;
     }
     limiter.event();
@@ -381,10 +381,10 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 
   //method that calls the callback and catches any exception
   private static void callCallback(CrawlManager.Callback cb, Object cookie,
-				   boolean successful) {
+				   boolean successful, Crawler.Status status) {
     if (cb != null) {
       try {
-	cb.signalCrawlAttemptCompleted(successful, cookie);
+	cb.signalCrawlAttemptCompleted(successful, null, cookie, status);
       } catch (Exception e) {
 	logger.error("Callback threw", e);
       }
@@ -407,7 +407,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     } catch (RuntimeException re) {
       logger.warning("Error starting crawl, freeing crawl lock", re);
       lock.expire();
-      callCallback(cb, cookie, false);
+      callCallback(cb, cookie, false, null);
       throw re;
     }
     crawlThread.waitRunning();
@@ -493,7 +493,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	synchronized(runningCrawls) {
 	  runningCrawls.remove(crawler.getAu(), crawler);
 	}
-	callCallback(cb, cookie, crawlSuccessful);
+	callCallback(cb, cookie, crawlSuccessful, crawler.getStatus());
       }
     }
   }
@@ -504,8 +504,10 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     public FailingCallbackWrapper(CrawlManager.Callback cb) {
       this.cb = cb;
     }
-    public void signalCrawlAttemptCompleted(boolean success, Object cookie) {
-      callCallback(cb, cookie, false);
+    public void signalCrawlAttemptCompleted(boolean success, Set urlsFetched,
+					    Object cookie,
+					    Crawler.Status status) {
+      callCallback(cb, cookie, false, null);
     }
   }
 

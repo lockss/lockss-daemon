@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.121 2005-01-06 02:38:49 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.122 2005-01-07 01:19:03 troberts Exp $
  */
 
 /*
@@ -1681,7 +1681,9 @@ public class PluginManager
       this.bs = bs;
     }
 
-    public void signalCrawlAttemptCompleted(boolean success, Object cookie) {
+    public void signalCrawlAttemptCompleted(boolean success, Set urlsFetched,
+					    Object cookie,
+					    Crawler.Status status) {
       String url = (String)cookie;
 
       processPluginsIfReady(url);

@@ -1,5 +1,5 @@
 /*
- * $Id: V1TreeWalkImpl.java,v 1.4 2004-10-06 23:52:56 clairegriffin Exp $
+ * $Id: V1TreeWalkImpl.java,v 1.5 2005-01-07 01:19:05 troberts Exp $
  */
 
 /*
@@ -315,7 +315,9 @@ public class V1TreeWalkImpl implements TreeWalker {
       this.registryAu = au;
     }
 
-    public void signalCrawlAttemptCompleted(boolean success, Object cookie) {
+    public void signalCrawlAttemptCompleted(boolean success, Set urlsFetched,
+					    Object cookie,
+					    Crawler.Status status) {
       if (success) {
 	log.debug2("Registry crawl completed successfully, loading new plugins (if any)...");
 	pluginMgr.processRegistryAus(ListUtil.list(registryAu));
