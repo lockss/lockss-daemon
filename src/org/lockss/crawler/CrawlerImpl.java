@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerImpl.java,v 1.9 2004-02-09 22:09:14 tlipkis Exp $
+ * $Id: CrawlerImpl.java,v 1.10 2004-02-10 00:22:31 troberts Exp $
  */
 
 /*
@@ -69,6 +69,7 @@ public abstract class CrawlerImpl implements Crawler {
 
   protected boolean crawlAborted = false;
 
+  protected LockssWatchdog wdog = null;
 
   protected abstract boolean doCrawl0(Deadline deadline);
   public abstract int getType();
@@ -176,6 +177,7 @@ public abstract class CrawlerImpl implements Crawler {
   }
 
   public void setWatchdog(LockssWatchdog wdog) {
+    this.wdog = wdog;
   }
 
   public String toString() {
