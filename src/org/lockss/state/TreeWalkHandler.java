@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkHandler.java,v 1.12 2003-04-15 01:27:00 aalto Exp $
+ * $Id: TreeWalkHandler.java,v 1.13 2003-04-16 05:53:27 aalto Exp $
  */
 
 /*
@@ -39,6 +39,8 @@ import org.lockss.crawler.CrawlManager;
 import org.lockss.poller.PollSpec;
 import org.lockss.daemon.Configuration;
 import org.lockss.daemon.RangeCachedUrlSetSpec;
+import org.lockss.app.LockssDaemon;
+import org.lockss.daemon.ActivityRegulator;
 
 /**
  * The treewalk thread handler in the NodeManager.  This starts a thread which
@@ -97,42 +99,101 @@ public class TreeWalkHandler {
     logger.debug3("treeWalkInterval reset to "+treeWalkInterval);
   }
 
-  /**
-   * The full treewalk only proceeds if no new content crawls or top level polls
-   * are needed on the content.  As part of checking whether it should execute,
-   * it triggers these actions by the CrawlManager and the NodeManager before
-   * aborting its treewalk attempt.
-   */
   void doTreeWalk() {
-    logger.debug("Attempting tree walk: "+theAu.getName());
+    logger.debug("Attempting tree walk: " + theAu.getName());
     NodeState topNode = manager.getNodeState(theAu.getAUCachedUrlSet());
-    Iterator activePolls = topNode.getActivePolls();
-    // only continue if no top level poll scheduled or running
-    if (!activePolls.hasNext()) {
-      // check with crawl manager
-      if (!theCrawlManager.isCrawlingAU(theAu, null, null)) {
-        // query the AU if a top level poll should be started
-        if (theAu.shouldCallTopLevelPoll(manager.getAuState())) {
+    if (topNode==null) {
+      logger.error("No NodeState found for AU.");
+    } else {
+      Iterator activePolls = topNode.getActivePolls();
+//    only continue if no top level poll scheduled or running
+      if (!activePolls.hasNext()) {
+        // check with crawl manager
+        if (!theCrawlManager.isCrawlingAU(theAu, null, null)) {
+          // query the AU if a top level poll should be started
+          if (theAu.shouldCallTopLevelPoll(manager.getAuState())) {
+            manager.callTopLevelPoll();
+            logger.debug("Requested top level poll.  Aborting...");
+          }
+          else {
+            // do the actual treewalk
+            logger.debug("Tree walk started: " + theAu.getName());
+            long startTime = TimeBase.nowMs();
+            nodeTreeWalk();
+            long elapsedTime = TimeBase.msSince(startTime);
+            updateEstimate(elapsedTime);
+          }
+        }
+        else {
+          logger.debug("Crawl manager active.  Aborting...");
+        }
+      }
+      else {
+        logger.debug("Top level poll active.  Aborting...");
+      }
+    }
+
+    //alert the AuState (it writes through)
+    manager.getAuState().setLastTreeWalkTime();
+    logger.debug("Tree walk finished.");
+  }
+
+/**
+ * The full treewalk only proceeds if no new content crawls or top level polls
+ * are needed on the content.  As part of checking whether it should execute,
+ * it triggers these actions by the CrawlManager and the NodeManager before
+ * aborting its treewalk attempt.
+ */
+  void doTreeWalk2() {
+    logger.debug("Attempting tree walk: " + theAu.getName());
+
+    //get expiration time
+    long expiration = DEFAULT_TREEWALK_INTERVAL;
+    if (getAverageTreeWalkDuration()!=-1) {
+      expiration = 2 * getAverageTreeWalkDuration();
+    }
+    // check with regulator to see if treewalk can proceed
+    if (LockssDaemon.getActivityRegulator().startAuActivity(
+        ActivityRegulator.TREEWALK, theAu, expiration)) {
+      try {
+        // check with crawl manager
+        if (theAu.shouldCrawlForNewContent(manager.getAuState())) {
+          LockssDaemon.getActivityRegulator().auActivityFinished(
+              ActivityRegulator.TREEWALK, theAu);
+          treeWalkAborted = true;
+          theCrawlManager.startNewContentCrawl(theAu, null, null);
+          logger.debug("Requested new content crawl.  Aborting...");
+        }
+        else if (theAu.shouldCallTopLevelPoll(manager.getAuState())) {
+          // query the AU if a top level poll should be started
+          LockssDaemon.getActivityRegulator().auActivityFinished(
+              ActivityRegulator.TREEWALK, theAu);
+          treeWalkAborted = true;
           manager.callTopLevelPoll();
           logger.debug("Requested top level poll.  Aborting...");
-        } else {
+        }
+        else {
           // do the actual treewalk
-          logger.debug("Tree walk started: "+theAu.getName());
+          logger.debug("Tree walk started: " + theAu.getName());
           long startTime = TimeBase.nowMs();
           nodeTreeWalk();
           long elapsedTime = TimeBase.msSince(startTime);
           updateEstimate(elapsedTime);
         }
-      } else {
-        logger.debug("Crawl manager active.  Aborting...");
       }
-    } else {
-      logger.debug("Top level poll active.  Aborting...");
+      finally {
+        if (!treeWalkAborted) {
+          LockssDaemon.getActivityRegulator().auActivityFinished(
+              ActivityRegulator.TREEWALK, theAu);
+        }
+      }
     }
+
     //alert the AuState (it writes through)
     manager.getAuState().setLastTreeWalkTime();
     logger.debug("Tree walk finished.");
   }
+
 
   private void nodeTreeWalk() {
     CachedUrlSet cus = theAu.getAUCachedUrlSet();
@@ -171,7 +232,10 @@ public class TreeWalkHandler {
         // open a new state for the leaf and walk
         state = manager.getNodeState(
             theAu.makeCachedUrlSet(new RangeCachedUrlSetSpec(node.getUrl())));
-        checkNodeState(state);
+        if (!checkNodeState(state)) {
+          //XXX abort without any further walking
+          return;
+        }
       }
     }
   }
@@ -184,6 +248,7 @@ public class TreeWalkHandler {
    * @return true if treewalk can continue below
    */
   boolean checkNodeState(NodeState node) {
+/* XXX no longer necessary
     // determine if there are active polls
     Iterator polls = node.getActivePolls();
     while (polls.hasNext()) {
@@ -193,6 +258,7 @@ public class TreeWalkHandler {
         return false;
       }
     }
+ */
     // at each node, check for recrawl needed
     if (node.getCachedUrlSet().hasContent()) {
       // if (theCrawlManager.shouldRecrawl(managerAu, node)) {
@@ -202,9 +268,15 @@ public class TreeWalkHandler {
     // check recent histories to see if something needs fixing
     PollHistory lastHistory = node.getLastPollHistory();
     if (lastHistory != null) {
-      // give the last history to the manager to check for consistency,
-      // and take appropriate action
-      if (manager.checkLastHistory(lastHistory, node)) {
+      // give the last history to the manager to check for consistency
+      if (manager.checkLastHistory(lastHistory, node, true)) {
+        // free treewalk state
+        LockssDaemon.getActivityRegulator().auActivityFinished(
+            ActivityRegulator.TREEWALK, theAu);
+        // take appropriate action
+        manager.checkLastHistory(lastHistory, node, false);
+        //XXX abort treewalk
+        treeWalkAborted = true;
         return false;
       }
     }

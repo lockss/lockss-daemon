@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.64 2003-04-16 01:25:29 claire Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.65 2003-04-16 05:53:27 aalto Exp $
  */
 
 /*
@@ -113,7 +113,7 @@ public class TestNodeManagerImpl
     assertNotNull(node);
     assertEquals(cus, node.getCachedUrlSet());
     assertNotNull(node.getCrawlState());
-    assertEquals( -1, node.getCrawlState().getType());
+    assertEquals(-1, node.getCrawlState().getType());
     assertEquals(CrawlState.FINISHED, node.getCrawlState().getStatus());
 
     NodeState node2 = nodeManager.getNodeState(cus);
@@ -152,7 +152,7 @@ public class TestNodeManagerImpl
   }
 
   public void testStartPoll() throws Exception {
-    contentPoll = createPoll(TEST_URL, true, false, 10, 2);
+    contentPoll = createPoll(TEST_URL, true, false, 15, 5);
     PollTally results = contentPoll.getVoteTally();
     // let's generate some history
     CachedUrlSet cus = results.getCachedUrlSet();
@@ -180,7 +180,7 @@ public class TestNodeManagerImpl
   }
 
   public void testHandleContentPoll() throws Exception {
-    contentPoll = createPoll(TEST_URL, true, true, 10, 2);
+    contentPoll = createPoll(TEST_URL, true, true, 15, 5);
     PollTally results = contentPoll.getVoteTally();
     PollSpec spec = results.getPollSpec();
 
@@ -212,7 +212,7 @@ public class TestNodeManagerImpl
     reputationChangeTest(results);
 
     // lost content poll
-    contentPoll = createPoll(TEST_URL + "/branch1", true, true, 2, 10);
+    contentPoll = createPoll(TEST_URL + "/branch1", true, true, 5, 15);
     results = contentPoll.getVoteTally();
     spec = results.getPollSpec();
     // - repairing
@@ -269,7 +269,7 @@ public class TestNodeManagerImpl
     // - internal SingleNodeCachedUrlSetSpec
     contentPoll = createPoll(TEST_URL + "/branch1",
                              PollSpec.SINGLE_NODE_LWRBOUND, null,
-                             true, true, 2, 10);
+                             true, true, 5, 15);
     results = contentPoll.getVoteTally();
     spec = results.getPollSpec();
     nodeState = nodeManager.getNodeState(getCUS(mau, TEST_URL+"/branch1"));
@@ -292,7 +292,7 @@ public class TestNodeManagerImpl
   }
 
   public void testHandleNamePoll() throws Exception {
-    namePoll = createPoll(TEST_URL + "/branch2", false, true, 10, 2);
+    namePoll = createPoll(TEST_URL + "/branch2", false, true, 15, 5);
     PollTally results = namePoll.getVoteTally();
     PollSpec spec = results.getPollSpec();
     NodeState nodeState =
@@ -330,7 +330,7 @@ public class TestNodeManagerImpl
     String repairUrl = TEST_URL + "/branch2/testentry4.html";
     String repairUrl2 = TEST_URL + "/branch2/testentry5.html";
 
-    contentPoll = createPoll(TEST_URL + "/branch2", false, true, 2, 10);
+    contentPoll = createPoll(TEST_URL + "/branch2", false, true, 5, 15);
     results = contentPoll.getVoteTally();
     spec = results.getPollSpec();
     pollState = new PollState(results.getType(),
@@ -368,7 +368,7 @@ public class TestNodeManagerImpl
     nodeManager.createNodeState(mcus);
 
     // test that a finished top-level poll sets the time right
-    contentPoll = createPoll(auUrl, true, true, 10, 2);
+    contentPoll = createPoll(auUrl, true, true, 15, 5);
     PollTally results = contentPoll.getVoteTally();
     PollSpec spec = results.getPollSpec();
 
@@ -396,7 +396,7 @@ public class TestNodeManagerImpl
     mcus.setFlatItSource(auChildren);
 
     // test that won name poll calls content polls on Au children
-    contentPoll = createPoll(auUrl, false, true, 10, 2);
+    contentPoll = createPoll(auUrl, false, true, 15, 5);
     results = contentPoll.getVoteTally();
     MockCachedUrlSet mcus2 = (MockCachedUrlSet) results.getCachedUrlSet();
     Vector subFiles = new Vector(2);
@@ -447,7 +447,6 @@ public class TestNodeManagerImpl
 
     // this true for lost content polls, false for name polls
     historyCheckTest(Poll.CONTENT_POLL, PollState.LOST, nodeState, true);
-    ( (MockPollManager) theDaemon.getPollManager()).thePolls.remove(TEST_URL);
 
     historyCheckTest(Poll.NAME_POLL, PollState.LOST, nodeState, false);
     ( (MockPollManager) theDaemon.getPollManager()).thePolls.remove(TEST_URL);
@@ -464,14 +463,17 @@ public class TestNodeManagerImpl
                                           123, null,
                                           true);
     if (shouldSchedule) {
-      assertTrue(nodeManager.checkLastHistory(history, node));
+      assertTrue(nodeManager.checkLastHistory(history, node, true));
+      assertNull(( (MockPollManager) theDaemon.getPollManager()).
+                   getPollStatus(TEST_URL));
+      assertTrue(nodeManager.checkLastHistory(history, node, false));
       assertEquals(MockPollManager.NAME_REQUESTED,
                    ( (MockPollManager) theDaemon.getPollManager()).
                    getPollStatus(
           TEST_URL));
     }
     else {
-      assertFalse(nodeManager.checkLastHistory(history, node));
+      assertFalse(nodeManager.checkLastHistory(history, node, false));
     }
   }
 

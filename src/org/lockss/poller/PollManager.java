@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.74 2003-04-16 01:18:14 claire Exp $
+* $Id: PollManager.java,v 1.75 2003-04-16 05:53:27 aalto Exp $
  */
 
 /*
@@ -119,6 +119,7 @@ public class PollManager  extends BaseLockssManager {
 
     // register our status
     StatusService statusServ = theDaemon.getStatusService();
+    PollerStatus pStatus = new PollerStatus(this);
     statusServ.registerStatusAccessor(PollerStatus.MANAGER_STATUS_TABLE_NAME,
                                       new PollerStatus.ManagerStatus());
     statusServ.registerStatusAccessor(PollerStatus.POLL_STATUS_TABLE_NAME,
@@ -137,6 +138,8 @@ public class PollManager  extends BaseLockssManager {
     StatusService statusServ = theDaemon.getStatusService();
     statusServ.unregisterStatusAccessor(PollerStatus.MANAGER_STATUS_TABLE_NAME);
     statusServ.unregisterStatusAccessor(PollerStatus.POLL_STATUS_TABLE_NAME);
+    statusServ.unregisterObjectReferenceAccessor(
+        PollerStatus.MANAGER_STATUS_TABLE_NAME, ArchivalUnit.class);
 
     // unregister our router
     theRouter.unregisterMessageHandler(m_msgHandler);
@@ -337,9 +340,34 @@ public class PollManager  extends BaseLockssManager {
           return null;
         }
       }
+
+      // check with regulator if not verify poll
+      if (!msg.isVerifyPoll()) {
+        // get expiration time for the lock
+        long expiration = ret_poll.m_deadline.getRemainingTime() * 2;
+        if (AuUrl.isAuUrl(cus.getUrl())) {
+          if (!LockssDaemon.getActivityRegulator().startAuActivity(
+              ActivityRegulator.TOP_LEVEL_POLL, cus.getArchivalUnit(),
+              expiration)) {
+            theLog.debug2("New top-level poll aborted due to activity lock.");
+            return null;
+          }
+        }
+        else {
+          int activity = (msg.isContentPoll() ?
+                          ActivityRegulator.STANDARD_CONTENT_POLL :
+                          ActivityRegulator.STANDARD_NAME_POLL);
+          if (!LockssDaemon.getActivityRegulator().startCusActivity(
+              activity, cus, expiration)) {
+            theLog.debug2("New poll aborted due to activity lock.");
+            return null;
+          }
+        }
+      }
+
       thePolls.put(ret_poll.m_key, new PollManagerEntry(ret_poll));
       ret_poll.startPoll();
-      if(!msg.isVerifyPoll()) {
+      if (!msg.isVerifyPoll()) {
         nm.startPoll(cus, ret_poll.getVoteTally(), false);
       }
       theLog.debug2("Started new poll: " + ret_poll.m_key);
