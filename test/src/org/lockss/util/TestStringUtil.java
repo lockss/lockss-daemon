@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.28 2003-11-11 20:27:30 tlipkis Exp $
+ * $Id: TestStringUtil.java,v 1.29 2003-11-12 01:05:23 eaalto Exp $
  */
 
 /*
@@ -290,8 +290,9 @@ public class TestStringUtil extends LockssTestCase {
 
   public void testStackTraceString() {
     String s = StringUtil.stackTraceString(new Exception());
-    String exp = "java.lang.Exception\n" +
+    String exp = "java.lang.Exception" + Constants.EOL +
       "\tat org.lockss.util.TestStringUtil.testStackTraceString(TestStringUtil.java:";
+System.out.println("s: "+s);
     assertTrue(s.startsWith(exp));
   }
 
