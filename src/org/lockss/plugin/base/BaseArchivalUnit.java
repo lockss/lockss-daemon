@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.37 2003-09-27 00:12:44 eaalto Exp $
+ * $Id: BaseArchivalUnit.java,v 1.38 2003-10-14 22:42:52 eaalto Exp $
  */
 
 /*
@@ -281,26 +281,34 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     int ch;
     int p_index = 0;
     String matchstr = PERMISSION_STRING.toLowerCase();
+    boolean wasWhiteSpace = false;  // last char was ws
 
     try {
       do {
         ch = reader.read();
-        if(matchstr.charAt(p_index) == Character.toLowerCase((char)ch)) {
-          if(++p_index == PERMISSION_STRING.length()) {
+        boolean chWS = Character.isWhitespace((char)ch);
+        char nextChar = matchstr.charAt(p_index);
+
+        if ((nextChar == Character.toLowerCase((char)ch)) ||
+            (Character.isWhitespace(nextChar) && chWS)) {
+          // match precisely, or any whitespace with any other
+          if (++p_index == PERMISSION_STRING.length()) {
             return true;
           }
-        }
-        else {
-          p_index = 0;
+          wasWhiteSpace = chWS;
+        } else {
+          if ((wasWhiteSpace) && chWS) {
+            // don't reset if in between words and found extra whitespace
+          } else {
+            p_index = 0;
+          }
         }
 
       } while (ch != -1); // while not eof
-    }
-    catch (IOException ex) {
+    } catch (IOException ex) {
       logger.warning("Exception occured while checking for permission: "
                      + ex.toString());
     }
-
 
     return crawl_ok;
   }
