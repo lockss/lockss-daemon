@@ -1,5 +1,5 @@
 /*
- * $Id: CacheExceptionMap.java,v 1.2 2004-02-05 03:01:21 clairegriffin Exp $
+ * $Id: CacheExceptionMap.java,v 1.3 2004-02-09 22:54:27 troberts Exp $
  */
 
 /*
@@ -43,7 +43,8 @@ import java.io.*;
  */
 
 public class CacheExceptionMap {
-  int[] SuccessCodes = {200, 203};
+//   int[] SuccessCodes = {200, 203};
+  int[] SuccessCodes = {200, 203, 304};
   int[] SameUrlCodes = {
       408, 413, 500, 502, 503, 504};
   int[] MovePermCodes = {
@@ -55,7 +56,8 @@ public class CacheExceptionMap {
   int[] ExpectedCodes = {
       401, 402, 403, 404, 405, 406, 407, 410, 305};
   int[] UnexpectedCodes = {
-      201, 202, 205, 206, 304, 306, 400, 409,
+//       201, 202, 205, 206, 304, 306, 400, 409,
+       201, 202, 205, 206, 306, 400, 409,
       411, 412, 414, 415, 416, 417, 501, 505};
 
   static final String EXCEPTION_CLASS_ROOT = "org.lockss.plugin.CacheException$";
