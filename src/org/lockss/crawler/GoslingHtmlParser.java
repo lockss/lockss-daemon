@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlParser.java,v 1.18 2004-04-19 02:16:58 tlipkis Exp $
+ * $Id: GoslingHtmlParser.java,v 1.19 2004-09-19 01:29:29 tlipkis Exp $
  */
 
 /*
@@ -152,24 +152,35 @@ public class GoslingHtmlParser implements ContentParser {
     } else if (cb == null) {
       throw new IllegalArgumentException("Called with null callback");
     }
-    srcUrl = getBaseUrl(cu);
-    if (srcUrl == null) {
-      logger.error("CachedUrl getUrl() and content-url prop are null: "+cu);
-      return;
-    }
-    baseUrl = null;
-
-    reader = cu.openForReading();
-    readerEof = false;
-    ring = new CharRing(ringCapacity);
-
-    if (isTrace) logger.debug3("Extracting urls from " + srcUrl);
-    String nextUrl = null;
-    while ((nextUrl = extractNextLink(reader, ring)) != null) {
-      if (isTrace) {
-	logger.debug3("Extracted "+nextUrl);
+    try {
+      srcUrl = getBaseUrl(cu);
+      if (srcUrl == null) {
+	logger.error("CachedUrl getUrl() and content-url prop are null: "+cu);
+	return;
       }
-      cb.foundUrl(nextUrl);
+      baseUrl = null;
+
+      reader = cu.openForReading();
+      readerEof = false;
+      ring = new CharRing(ringCapacity);
+
+      if (isTrace) logger.debug3("Extracting urls from " + srcUrl);
+      String nextUrl = null;
+      while ((nextUrl = extractNextLink(reader, ring)) != null) {
+	if (isTrace) {
+	  logger.debug3("Extracted "+nextUrl);
+	}
+	cb.foundUrl(nextUrl);
+      }
+    } finally {
+      // Let go of large objects
+      ring = null;
+      if (reader != null) {
+	try {
+	  reader.close();
+	} catch (IOException e) {}
+	reader = null;
+      }
     }
   }
 
