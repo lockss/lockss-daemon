@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawler.java,v 1.6 2002-11-07 22:40:45 troberts Exp $
+ * $Id: TestCrawler.java,v 1.7 2002-11-26 17:59:57 troberts Exp $
  */
 
 /*
@@ -49,6 +49,9 @@ import org.lockss.test.*;
 
 
 public class TestCrawler extends LockssTestCase {
+  private MockArchivalUnit mau = null;
+  private CrawlSpec spec = null;
+
   public static Class testedClasses[] = {
     org.lockss.crawler.Crawler.class
   };
@@ -61,321 +64,193 @@ public class TestCrawler extends LockssTestCase {
     super(msg);
   }
 
-  public void testCreateInitialListNullCrawlSpec() {
-    assertEquals(0, (Crawler.createInitialList(null)).size());
+  public void setUp() {
+    mau = new MockArchivalUnit();
+    spec = new CrawlSpec(startUrl, null);
+    MockCachedUrlSet cus = new MockCachedUrlSet(mau, null);
+    mau.setAUCachedUrlSet(cus);
   }
 
-  public void testCreateInitialListEmptyCrawlSpec() {
+  public void testDoCrawlThrowsForNullAU() {
     try {
-      CrawlSpec cs = new CrawlSpec(Collections.EMPTY_LIST, null);
-      fail("Shouldn't be able to create CrawlSpec with empty URL list");
-    } catch (IllegalArgumentException e) {
+      Crawler.doCrawl(null, new CrawlSpec("http://www.example.com", null));
+      fail("Calling doCrawl with a null ArchivalUnit should throw "+
+	   "an IllegalArgumentException");
+    } catch (IllegalArgumentException iae) {
     }
   }
-
-  public void testCreateInitialListOneUrlInCrawlSpec() {
-    String[] urls = {"http://test.org/"};
-    CrawlSpec cs = new CrawlSpec(urls[0], null);
-    assertIsomorphic(urls, Crawler.createInitialList(cs));
+  
+  public void testDoCrawlThrowsForNullCrawlSpec() {
+    try {
+      Crawler.doCrawl(new MockArchivalUnit(), null);
+      fail("Calling doCrawl with a null ArchivalUnit should throw "+
+	   "an IllegalArgumentException");
+    } catch (IllegalArgumentException iae) {
+    }
   }
   
-  public void testCreateInitialListOneMultipleInCrawlSpec() {
-    String[] urls = {"http://test.org/", 
-		     "http://test2.org/", 
-		     "http://test3.org/"};
-    CrawlSpec cs = new CrawlSpec(ListUtil.fromArray(urls), null);
-    assertIsomorphic(urls, Crawler.createInitialList(cs));
-  }
-  
-  public void testAddUrlsToListNullInputStream()
-      throws IOException {
-    Vector list = new Vector();
-    CachedUrl cu = new MockCachedUrl(null);
-    Crawler.addUrlsToList(cu, list);
-    assertEquals(0, list.size());
-  }
+  public static final String EMPTY_PAGE = "";
+  public static final String LINKLESS_PAGE = "Nothing here";
 
-  public void testAddUrlsToListOneHrefInputStream()
-      throws IOException {
-    String url = "http://www.test.org/index.html";
-    Vector list = new Vector();
-    String source = "<html><head>"+
-      "<title>Test</title></head>"+
-      "<body><a href=\"http://www.test.org/\"></body></html>";
-    StringInputStream strStream = new StringInputStream(source);
-    MockCachedUrl cu = new MockCachedUrl(url);
-    cu.setInputStream(strStream);
+  public static final String startUrl = 
+    "http://www.example.com/lockss-index123.html";
 
-    Properties prop = new Properties();
-    prop.setProperty("content-type", "text/html");
-    cu.setProperties(prop);
 
-    Crawler.addUrlsToList(cu, list);
-    assertTrue("List didn't contain http://www.test.org/",
-	       list.contains("http://www.test.org/"));
-    assertEquals(1, list.size());
+  public void testDoCrawlOnePageNoLinks() {
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
+    cus.addUrl(LINKLESS_PAGE, startUrl);
+    Crawler.doCrawl(mau, spec);
+    Set cachedUrls = cus.getCachedUrls();
+    assertEquals(1, cachedUrls.size());
+    assertTrue(cachedUrls.contains(startUrl));
   }
 
-  public void testExtractLinkHandlesNoLink() 
-      throws IOException, MalformedURLException {
-    StringReader strReader = 
-      new StringReader("blah blah blah");
-    assertNull(Crawler.ExtractNextLink(strReader, null));
+  public void testDoCrawlHref() {
+    singleTagCrawl("http://www.example.com/web_link.html",
+		"<a href=", "</a>");
   }
 
-  public void testExtractLinkGetsOneLink()
-      throws IOException, MalformedURLException {
-    StringReader strReader = 
-      new StringReader("This is a <a href=http://www.test.org>test</a> of "+
-		       "the parser");
-    assertEquals("http://www.test.org", 
-		 Crawler.ExtractNextLink(strReader, null));
+  public void testDoCrawlImage() {
+    singleTagCrawl("http://www.example.com/web_link.jpg",
+		"<img src=", "</img>");
   }
 
-  public void testExtractLinkGetsMultipleLink()
-      throws IOException, MalformedURLException {
-    String testStr = 
-      "<body background=backg1.gif>"+
-      "This is a <a href=http://www.test.org>test</a> of the parser"+
-      "It needs to have multiple diferent types of links, like this"+
-      "<img src=picture.gif> and this <table background=backg.jpg>"+
-      "</table></body>";
-    URL srcUrl = new URL("http://www.test.org");
-    StringReader strReader = new StringReader(testStr);
-    assertEquals("http://www.test.org/backg1.gif", 
-		 Crawler.ExtractNextLink(strReader, srcUrl));
-    assertEquals("http://www.test.org", 
-		 Crawler.ExtractNextLink(strReader, srcUrl));
-    assertEquals("http://www.test.org/picture.gif", 
-		 Crawler.ExtractNextLink(strReader, srcUrl));
-    assertEquals("http://www.test.org/backg.jpg", 
-		 Crawler.ExtractNextLink(strReader, srcUrl));
-    assertNull(Crawler.ExtractNextLink(strReader, srcUrl));
+  public void testDoCrawlFrame() {
+    singleTagCrawl("http://www.example.com/web_link.html",
+		"<frame src=", "</frame>");
   }
 
-  public void testExtractLinkGetsMixedCase()
-      throws IOException, MalformedURLException {
-    String testStr = 
-      "This is a <a HREF=http://www.test.org>test</a> of the parser";
-    URL srcUrl = new URL("http://www.test.org");
-    StringReader strReader = new StringReader(testStr);
-    assertEquals("http://www.test.org", 
-		 Crawler.ExtractNextLink(strReader, srcUrl));
+  public void testDoCrawlLink() {
+    singleTagCrawl("http://www.example.com/web_link.css",
+		"<link href=", "</link>");
   }
 
-  /*
-   * tests to write
-   * 1)skiping crap in a script
-   * 2)skip comments
-   */
-
-  public void testParseLinkReturnsNullForBadStrings() 
-      throws MalformedURLException {
-    StringBuffer link = new StringBuffer("/table");
-    URL srcUrl = new URL("http://www.test.org");
-    assertNull(Crawler.ParseLink(link, srcUrl));
+  public void testDoCrawlBody() {
+    singleTagCrawl("http://www.example.com/web_link.jpg",
+		"<body background=", "</body>");
   }
 
-  public void testParseLinkParsesQuotes() throws MalformedURLException {
-    StringBuffer link = 
-      new StringBuffer("a href=\"http://www.test.org/test/test2\"");
-    URL srcUrl = new URL("http://www.test.org");
-    assertEquals("http://www.test.org/test/test2", 
-		 Crawler.ParseLink(link, srcUrl));
+  public void testDoCrawlTable() {
+    singleTagCrawl("http://www.example.com/web_link.jpg",
+		"<table background=", "</table>");
   }
 
-  public void testParseLinkParsesHref() throws MalformedURLException {
-    StringBuffer link = 
-      new StringBuffer("a href=http://www.test.org/test/test2");
-    URL srcUrl = new URL("http://www.test.org");
-    assertEquals("http://www.test.org/test/test2", 
-		 Crawler.ParseLink(link, srcUrl));
+  public void testDoCrawlTc() {
+    singleTagCrawl("http://www.example.com/web_link.jpg",
+		"<tc background=", "</tc>");
   }
 
-  public void testParseLinkParsesHrefRelativeLink() 
-      throws MalformedURLException {
-    StringBuffer link = new StringBuffer("a href=test/test2");
-    URL srcUrl = new URL("http://www.test.org");
-    assertEquals("http://www.test.org/test/test2", 
-		 Crawler.ParseLink(link, srcUrl));
+  private void singleTagCrawl(String url, String openTag, String closeTag) {
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
+
+    cus.addUrl(makeContent(url, openTag, closeTag), startUrl);
+    cus.addUrl(LINKLESS_PAGE, url);
+    Crawler.doCrawl(mau, spec);
+    Set cachedUrls = cus.getCachedUrls();
+    Set expected = SetUtil.set(url, startUrl);
+    assertEquals(expected, cachedUrls);
   }
 
-  public void testParseLinkParsesHrefRelativeLinkWithSrcFile() 
-      throws MalformedURLException {
-    StringBuffer link = new StringBuffer("a href=test/test2");
-    URL srcUrl = new URL("http://www.test.org/index.html");
-    assertEquals("http://www.test.org/test/test2", 
-		 Crawler.ParseLink(link, srcUrl));
+  private String makeContent(String url, String openTag, String closeTag) {
+    StringBuffer sb = new StringBuffer(100);
+    sb.append("<html><head><title>Test</title></head><body>");
+    sb.append(openTag);
+    sb.append(url);
+    sb.append(">");
+    sb.append(closeTag);
+    sb.append("</body></html>");
+    return sb.toString();
   }
 
-  public void testParseLinkParsesHrefWithHash() throws MalformedURLException {
-    StringBuffer link = new StringBuffer("a href=test/test2#section1");
-    URL srcUrl = new URL("http://www.test.org");
-    assertEquals("http://www.test.org/test/test2", 
-		 Crawler.ParseLink(link, srcUrl));
-  }
+  public void testSkipsComments() {
+    String url= "http://www.example.com/link3.html";
 
-  public void testParseLinkParsesImg() throws MalformedURLException {
-    StringBuffer link = 
-      new StringBuffer("img src=http://www.test.org/test/test2.gif");
-    URL srcUrl = new URL("http://www.test.org");
-    assertEquals("http://www.test.org/test/test2.gif", 
-		 Crawler.ParseLink(link, srcUrl));
-  }
+    String source = 
+      "<html><head><title>Test</title></head><body>"+
+      "<!--<a href=http://www.example.com/link1.html>link1</a>"+
+      "Filler, with <b>bold</b> tags and<i>others</i>"+
+      "<a href=http://www.example.com/link2.html>link2</a>-->"+
+      "<a href=http://www.example.com/link3.html>link3</a>";
 
-  public void testParseLinkParsesImgRelativeLink() 
-      throws MalformedURLException {
-    StringBuffer link = new StringBuffer("img src=test/test2.gif");
-    URL srcUrl = new URL("http://www.test.org");
-    assertEquals("http://www.test.org/test/test2.gif", 
-		 Crawler.ParseLink(link, srcUrl));
-  }
-
-  public void testParseLinkParsesFrame() throws MalformedURLException {
-    StringBuffer link = 
-      new StringBuffer("frame src=http://www.test.org/test/test2.html");
-    URL srcUrl = new URL("http://www.test.org");
-    assertEquals("http://www.test.org/test/test2.html", 
-		 Crawler.ParseLink(link, srcUrl));
-  }
-
-  public void testParseLinkParsesFrameRelativeLink() 
-      throws MalformedURLException {
-    StringBuffer link = new StringBuffer("frame src=test/test2.html");
-    URL srcUrl = new URL("http://www.test.org");
-    assertEquals("http://www.test.org/test/test2.html", 
-		 Crawler.ParseLink(link, srcUrl));
-  }
-
-  public void testParseLinkParsesLink() throws MalformedURLException {
-    StringBuffer link = 
-      new StringBuffer("link href=http://www.test.org/test/test2.css");
-    URL srcUrl = new URL("http://www.test.org");
-    assertEquals("http://www.test.org/test/test2.css", 
-		 Crawler.ParseLink(link, srcUrl));
-  }
-
-  public void testParseLinkParsesLinkRelativeLink() 
-      throws MalformedURLException {
-    StringBuffer link = new StringBuffer("link href=test/test2.css");
-    URL srcUrl = new URL("http://www.test.org");
-    assertEquals("http://www.test.org/test/test2.css", 
-		 Crawler.ParseLink(link, srcUrl));
-  }
-
-  public void testParseLinkParsesBody() throws MalformedURLException {
-    StringBuffer link = 
-      new StringBuffer("body background=http://www.test.org/test/test2.gif");
-    URL srcUrl = new URL("http://www.test.org");
-    assertEquals("http://www.test.org/test/test2.gif", 
-		 Crawler.ParseLink(link, srcUrl));
-  }
-
-  public void testParseLinkParsesBodyRelativeLink() 
-      throws MalformedURLException {
-    StringBuffer link = new StringBuffer("body background=test/test2.gif");
-    URL srcUrl = new URL("http://www.test.org");
-    assertEquals("http://www.test.org/test/test2.gif", 
-		 Crawler.ParseLink(link, srcUrl));
-  }
-
-  public void testParseLinkParsesScript() throws MalformedURLException {
-    StringBuffer link = 
-      new StringBuffer("script src=http://www.test.org/test/test2.html");
-    URL srcUrl = new URL("http://www.test.org");
-    assertEquals("http://www.test.org/test/test2.html", 
-		 Crawler.ParseLink(link, srcUrl));
-  }
-
-  public void testParseLinkParsesScriptRelativeLink() 
-      throws MalformedURLException {
-    StringBuffer link = new StringBuffer("script src=test/test2.html");
-    URL srcUrl = new URL("http://www.test.org");
-    assertEquals("http://www.test.org/test/test2.html", 
-		 Crawler.ParseLink(link, srcUrl));
-  }
-
-  public void testParseLinkParsesTd() throws MalformedURLException {
-    StringBuffer link = 
-      new StringBuffer("td background=http://www.test.org/test/test2.gif");
-    URL srcUrl = new URL("http://www.test.org");
-    assertEquals("http://www.test.org/test/test2.gif", 
-		 Crawler.ParseLink(link, srcUrl));
-  }
-
-  public void testParseLinkParsesTdRelativeLink() 
-      throws MalformedURLException {
-    StringBuffer link = new StringBuffer("td background=test/test2.gif");
-    URL srcUrl = new URL("http://www.test.org");
-    assertEquals("http://www.test.org/test/test2.gif", 
-		 Crawler.ParseLink(link, srcUrl));
-  }
-
-  public void testParseLinkParsesTable() throws MalformedURLException {
-    StringBuffer link = 
-      new StringBuffer("table background=http://www.test.org/test/test2.gif");
-    URL srcUrl = new URL("http://www.test.org");
-    assertEquals("http://www.test.org/test/test2.gif", 
-		 Crawler.ParseLink(link, srcUrl));
-  }
-
-  public void testParseLinkParsesTableRelativeLink() 
-      throws MalformedURLException {
-    StringBuffer link = new StringBuffer("table background=test/test2.gif");
-    URL srcUrl = new URL("http://www.test.org");
-    assertEquals("http://www.test.org/test/test2.gif", 
-		 Crawler.ParseLink(link, srcUrl));
-  }
-
-  public void testParseLinkParsesLinksWithMultipleKeys() 
-      throws MalformedURLException {
-    StringBuffer link = 
-      new StringBuffer("body background=test/test2.gif text=white");
-    URL srcUrl = new URL("http://www.test.org");
-    assertEquals("http://www.test.org/test/test2.gif", 
-		 Crawler.ParseLink(link, srcUrl));
-  }
-
-
-  public void testCacheAndHarvestLinksOneLink() {
-    Vector list = new Vector();
-    String source = "<html><head>"+
-      "<title>Test</title></head>"+
-      "<body><a href=\"http://www.test.org/\"></body></html>";
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
+    cus.addUrl(source, startUrl);
+    cus.addUrl(LINKLESS_PAGE, url);
     
-    StringInputStream strStream = new StringInputStream(source);
-    MockUrlCacher uc = new MockUrlCacher("http://www.test.org/index.html");
-    uc.setUncachedInputStream(strStream);
-    uc.setShouldBeCached(true);
-    Properties prop = new Properties();
-    prop.setProperty("content-type", "text/html");
-    uc.setUncachedProperties(prop);
-    uc.setupCachedUrl(source);
-    CachedUrl cu = uc.getCachedUrl();
-    Crawler.cacheAndHarvestLinks(uc, list);
-    assertTrue("List didn't contain http://www.test.org/",
-	       list.contains("http://www.test.org/"));
-    assertEquals(1, list.size());
-    
+    Crawler.doCrawl(mau, spec);
+    Set expected = SetUtil.set(startUrl, url);
+    assertEquals(expected, cus.getCachedUrls());
   }
 
-  public void testCacheAndHarvestLinksDoesNotAddLinksForExistingFile() {
-    Vector list = new Vector();
-    String source = "<html><head>"+
-      "<title>Test</title></head>"+
-      "<body><a href=\"http://www.test.org/\"></body></html>";
-    
-    StringInputStream fileStream = new StringInputStream(source);
-    StringInputStream httpStream = new StringInputStream(source);
-    MockUrlCacher uc = new MockUrlCacher("http://www.test.org/index.html");
-    MockCachedUrl cu = new MockCachedUrl("http://www.test.org/index.html");
-    uc.setCachedInputStream(fileStream);
-    uc.setUncachedInputStream(httpStream);
-    uc.setShouldBeCached(true);
-    uc.setCachedUrl(cu);
-    cu.setExists(true);
+  public void testMultipleLinks() {
+    String url1= "http://www.example.com/link1.html";
+    String url2= "http://www.example.com/link2.html";
+    String url3= "http://www.example.com/link3.html";
 
-    Crawler.cacheAndHarvestLinks(uc, list);
-    assertEquals(0, list.size());
+    String source = 
+      "<html><head><title>Test</title></head><body>"+
+      "<a href=http://www.example.com/link1.html>link1</a>"+
+      "Filler, with <b>bold</b> tags and<i>others</i>"+
+      "<a href=http://www.example.com/link2.html>link2</a>"+
+      "<a href=http://www.example.com/link3.html>link3</a>";
+
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
+    cus.addUrl(source, startUrl);
+    cus.addUrl(LINKLESS_PAGE, url1);
+    cus.addUrl(LINKLESS_PAGE, url2);
+    cus.addUrl(LINKLESS_PAGE, url3);
+    
+    Crawler.doCrawl(mau, spec);
+    Set expected = SetUtil.set(startUrl, url1, url2, url3);
+    assertEquals(expected, cus.getCachedUrls());
+  }
+
+  public void testRelativeLinksLocationTagsAndMultipleKeys() {
+    String url1= "http://www.example.com/link1.html";
+    String url2= "http://www.example.com/link2.html";
+    String url3= "http://www.example.com/dir/link3.html";
+
+    String source = 
+      "<html><head><title>Test</title></head><body>"+
+      "<a href=link1.html>link1</a>"+
+      "Filler, with <b>bold</b> tags and<i>others</i>"+
+      "<a blah1=blah href=link2.html blah2=blah>link2#ref</a>"+
+      "<a href=dir/link3.html>link3</a>";
+
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
+    cus.addUrl(source, startUrl);
+    cus.addUrl(LINKLESS_PAGE, url1);
+    cus.addUrl(LINKLESS_PAGE, url2);
+    cus.addUrl(LINKLESS_PAGE, url3);
+    
+    Crawler.doCrawl(mau, spec);
+    Set expected = SetUtil.set(startUrl, url1, url2, url3);
+    assertEquals(expected, cus.getCachedUrls());
+  }
+
+  public void testMultipleStartingUrls() {
+    String[] urls = {
+      "http://www.example.com/link1.html",
+      "http://www.example.com/link2.html",
+      "http://www.example.com/link3.html",
+      startUrl
+    };
+    CrawlSpec spec = makeCrawlSpec(urls);
+
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
+    for (int ix=0; ix<urls.length; ix++) {
+      cus.addUrl(LINKLESS_PAGE, urls[ix]);
+    }
+
+    Crawler.doCrawl(mau, spec);
+    Set expected = SetUtil.fromArray(urls);
+    assertEquals(expected, cus.getCachedUrls());
+  }
+
+  private CrawlSpec makeCrawlSpec(String[] urls) {
+    List list = new LinkedList();
+    for (int ix=0; ix<urls.length; ix++) {
+      list.add(urls[ix]);
+    }
+    return new CrawlSpec(list, null);
   }
 }
