@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.36 2004-04-05 17:09:48 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.37 2004-04-19 03:15:04 tlipkis Exp $
  */
 
 /*
@@ -274,28 +274,51 @@ public class StringUtil {
     return breakAt(s, sep, maxItems, false);
   }
 
+  /** Temporary name for truncateAtAny() */
+  public static String trimAfterChars(String str, String chars) {
+    return truncateAtAny(str, chars);
+  }
+
   /**
-   * Method to trim the end off of a string as soon as it encounters
-   * any one of the characters specified
+   * Trim the end off of a string starting at any of the characters specified.
    *
    * @param str String to trim
-   * @param chars String containing the chars to trim after
-   * @return str turncated at the first occurance of any of the chars
+   * @param chars String containing the chars to trim at
+   * @return str turncated at the first occurance of any of the chars, or
+   * the original string if no occurances
    */
-  public static String trimAfterChars(String str, String chars) {
+  public static String truncateAtAny(String str, String chars) {
     if (str == null) {
       return null;
     }
     if (chars != null) {
-      for (int ix=0; ix < str.length(); ix++) {
-	for (int jx=0; jx < chars.length(); jx++) {
-	  if (str.charAt(ix) == chars.charAt(jx)) {
-	    return str.substring(0, ix);
-	  }
+      for (int jx=0; jx < chars.length(); jx++) {
+	int pos = str.indexOf(chars.charAt(jx));
+	if (pos >= 0) {
+	  return str.substring(0, pos);
 	}
       }
     }
     return str;
+  }
+
+  /**
+   * Trim the end off of a string starting at the specified character.
+   *
+   * @param str String to trim
+   * @param chr char to trim at
+   * @return str turncated at the first occurance of char, or
+   * the original string if no occurance
+   */
+  public static String truncateAt(String str, char chr) {
+    if (str == null) {
+      return null;
+    }
+    int pos = str.indexOf(chr);
+    if (pos < 0) {
+      return str;
+    }
+    return str.substring(0, pos);
   }
 
   /** Like indexOf except is case-independent */
