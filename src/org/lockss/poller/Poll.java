@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.59 2003-03-27 01:13:22 claire Exp $
+* $Id: Poll.java,v 1.60 2003-03-29 04:02:15 claire Exp $
  */
 
 /*
@@ -93,8 +93,7 @@ public abstract class Poll implements Serializable {
   double m_agreeVer = 0;     // the max percentage of time we will verify
   double m_disagreeVer = 0;  // the max percentage of time we will verify
   double m_margin = 0;    // the margin by which we must win or lose
-  ArchivalUnit m_arcUnit; // the url as an archival unit
-  CachedUrlSet m_urlSet;  // the cached url set retrieved from the archival unit
+  CachedUrlSet m_cus;     // the cached url set retrieved from the archival unit
   PollSpec m_pollspec;
   byte[] m_challenge;     // The caller's challenge string
   byte[] m_verifier;      // Our verifier string - hash of secret
@@ -107,11 +106,11 @@ public abstract class Poll implements Serializable {
   int m_replyOpcode = -1;  // opcode used to reply to poll
   long m_hashTime;         // an estimate of the time it will take to hash
   long m_createTime;       // poll creation time
-  String m_key;            // the string we use to store this poll
+  String m_key;            // the string we used to id this poll
   int m_pollstate;         // one of state constants above
-  int m_pendingVotes = 0;      // the number of votes waiting to be tallied
+  int m_pendingVotes = 0;  // the number of votes waiting to be tallied
 
-  PollTally m_tally;       // the vote tallier
+  PollTally m_tally;         // the vote tallier
   PollManager m_pollmanager; // the pollmanager which should be used by this poll.
   IdentityManager idMgr;
 
@@ -124,35 +123,27 @@ public abstract class Poll implements Serializable {
    * @param pm the pollmanager
    */
   Poll(LcapMessage msg, PollSpec pollspec, PollManager pm) {
-    /* initialize with our parameters */
-    m_agreeVer = ((double)Configuration.getIntParam(PARAM_AGREE_VERIFY,
-        DEFAULT_AGREE_VERIFY)) / 100;
-    m_disagreeVer = ((double)Configuration.getIntParam(PARAM_DISAGREE_VERIFY,
-        DEFAULT_DISAGREE_VERIFY)) / 100;
-
-    m_margin = ((double)Configuration.getIntParam(PARAM_MARGIN,
-        DEFAULT_MARGIN)) / 100;
-
     m_pollmanager = pm;
-    idMgr = pm.getDaemon().getIdentityManager();
+    idMgr = pm.getIdentityManager();
     m_msg = msg;
     m_pollspec = pollspec;
-    m_urlSet = pm.getDaemon().getPluginManager().findCachedUrlSet(pollspec);
-    m_createTime = TimeBase.nowMs();
+    m_cus = pollspec.getCachedUrlSet();
 
     // now copy the msg elements we need
-    m_arcUnit = m_urlSet.getArchivalUnit();
-    m_hashTime = m_urlSet.estimatedHashDuration();
+    m_hashTime = m_cus.estimatedHashDuration();
     m_deadline = Deadline.in(msg.getDuration());
     m_challenge = msg.getChallenge();
     m_verifier = m_pollmanager.makeVerifier();
     m_caller = idMgr.findIdentity(msg.getOriginAddr());
     m_key = msg.getKey();
 
+    m_createTime = TimeBase.nowMs();
+
     // make a new vote tally
     m_tally = new PollTally(this, -1, m_createTime, msg.getDuration(),
                             pm.getQuorum(), msg.getHashAlgorithm());
     m_pollstate = PS_INITING;
+    getConfigValues();
   }
 
 
@@ -164,7 +155,7 @@ public abstract class Poll implements Serializable {
     StringBuffer sb = new StringBuffer("[Poll: ");
     sb.append("url set:");
     sb.append(" ");
-    sb.append(m_urlSet.toString());
+    sb.append(m_cus.toString());
     sb.append(" ");
     sb.append(m_msg.getOpcodeString());
     sb.append(" key:");
@@ -179,6 +170,18 @@ public abstract class Poll implements Serializable {
    */
   public boolean isMyPoll() {
     return idMgr.isLocalIdentity(m_caller);
+  }
+
+  void getConfigValues() {
+    /* initialize with our parameters */
+    m_agreeVer = ((double)Configuration.getIntParam(PARAM_AGREE_VERIFY,
+        DEFAULT_AGREE_VERIFY)) / 100;
+    m_disagreeVer = ((double)Configuration.getIntParam(PARAM_DISAGREE_VERIFY,
+        DEFAULT_DISAGREE_VERIFY)) / 100;
+
+    m_margin = ((double)Configuration.getIntParam(PARAM_MARGIN,
+        DEFAULT_MARGIN)) / 100;
+
   }
 
   abstract void receiveMessage(LcapMessage msg);
@@ -259,26 +262,17 @@ public abstract class Poll implements Serializable {
   }
 
   /**
-   * tally the poll results
-   */
-  void tally() {
-    NodeManager nm = m_pollmanager.getDaemon().getNodeManager(m_arcUnit);
-    log.debug("sending NodeManager results " + m_tally);
-    nm.updatePollResults(m_urlSet, m_tally);
-  }
-
-  /**
    * cast our vote for this poll
    */
-  void vote() {
+  void castOurVote() {
     LcapMessage msg;
     LcapIdentity local_id = idMgr.getLocalIdentity();
     long remainingTime = m_deadline.getRemainingTime();
     try {
-      msg = LcapMessage.makeReplyMsg(m_msg, m_hash, m_verifier, null,m_replyOpcode,
-                                     remainingTime, local_id);
+      msg = LcapMessage.makeReplyMsg(m_msg, m_hash, m_verifier, null,
+                                     m_replyOpcode, remainingTime, local_id);
       log.debug("vote:" + msg.toString());
-      m_pollmanager.sendMessage(msg,m_arcUnit);
+      m_pollmanager.sendMessage(msg, m_cus.getArchivalUnit());
     }
     catch(IOException ex) {
       log.info("unable to cast our vote.", ex);
@@ -311,7 +305,7 @@ public abstract class Poll implements Serializable {
   void voteInPoll() {
     //we don't vote if we're winning by a landslide
     if(!m_tally.isLeadEnough()) {
-      vote();
+      castOurVote();
     }
     m_pollstate = PS_WAIT_TALLY;
   }
@@ -337,8 +331,7 @@ public abstract class Poll implements Serializable {
       log.debug("poll stopped with error: " + ERROR_STRINGS[ -m_pollstate]);
     }
     m_pollmanager.closeThePoll(m_key);
-    log.debug2("closed the poll:" + m_key);
-    tally();
+    log.debug3("closed the poll:" + m_key);
   }
 
   /**
@@ -488,6 +481,7 @@ public abstract class Poll implements Serializable {
         scheduleVote();
       }
       else {
+        log.debug("Hash failed : " + e.getMessage());
         m_pollstate = ERR_HASHING;
 
       }

@@ -1,5 +1,5 @@
 /*
- * $Id: PollSpec.java,v 1.5 2003-03-15 07:47:13 claire Exp $
+ * $Id: PollSpec.java,v 1.6 2003-03-29 04:02:15 claire Exp $
  */
 
 /*
@@ -48,7 +48,7 @@ public class PollSpec {
   private String uprBound = null;
   private String lwrBound = null;
   private CachedUrlSet cus = null;
-  private static PluginManager pluginMgr = null;
+  private PluginManager pluginMgr = null;
 
   /**
    * constructor for a "mock" poll spec

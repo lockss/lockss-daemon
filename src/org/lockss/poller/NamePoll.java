@@ -1,5 +1,5 @@
 /*
- * $Id: NamePoll.java,v 1.42 2003-03-27 01:13:22 claire Exp $
+ * $Id: NamePoll.java,v 1.43 2003-03-29 04:02:15 claire Exp $
  */
 
 /*
@@ -55,7 +55,7 @@ public class NamePoll
   /**
    * cast our vote for this poll
    */
-  void vote() {
+  void castOurVote() {
     LcapMessage msg;
     LcapIdentity local_id = idMgr.getLocalIdentity();
     long remainingTime = m_deadline.getRemainingTime();
@@ -64,7 +64,7 @@ public class NamePoll
                                      getEntries().toArray(), m_replyOpcode,
                                      remainingTime, local_id);
       log.debug("vote:" + msg.toString());
-      m_pollmanager.sendMessage(msg, m_arcUnit);
+      m_pollmanager.sendMessage(msg, m_cus.getArchivalUnit());
     }
     catch (IOException ex) {
       log.info("unable to cast our vote.", ex);
@@ -96,8 +96,8 @@ public class NamePoll
   boolean scheduleHash(MessageDigest hasher, Deadline timer, Serializable key,
                        HashService.Callback callback) {
 
-    HashService hs = m_pollmanager.getDaemon().getHashService();
-    return hs.hashNames(m_urlSet, hasher, timer, callback, key);
+    HashService hs = m_pollmanager.getHashService();
+    return hs.hashNames(m_cus, hasher, timer, callback, key);
   }
 
   /**
@@ -120,18 +120,22 @@ public class NamePoll
     }
   }
 
-  void tally() {
+  /**
+   * finish the poll once the deadline has expired. we update our poll record
+   * and prevent any more activity in this poll.
+   */
+  void stopPoll() {
     if(!m_tally.didWinPoll()) {
       buildPollLists(m_tally.pollVotes.iterator());
     }
-    super.tally();
+    super.stopPoll();
   }
 
   ArrayList getEntries() {
     if (m_entries == null) {
-      Iterator it = m_urlSet.flatSetIterator();
+      Iterator it = m_cus.flatSetIterator();
       ArrayList alist = new ArrayList();
-      String baseUrl = m_urlSet.getSpec().getUrl();
+      String baseUrl = m_cus.getSpec().getUrl();
       while(it.hasNext()) {
         String name = ((CachedUrlSetNode)it.next()).getUrl();
         if(name.startsWith(baseUrl)) {

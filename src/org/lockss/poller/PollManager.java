@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.58 2003-03-27 01:13:22 claire Exp $
+* $Id: PollManager.java,v 1.59 2003-03-29 04:02:15 claire Exp $
  */
 
 /*
@@ -50,7 +50,7 @@ import org.lockss.repository.LockssRepository;
 import org.lockss.daemon.status.*;
 import org.lockss.state.*;
 
-public class PollManager  implements LockssManager {
+public class PollManager  extends BaseLockssManager {
   static final String PARAM_RECENT_EXPIRATION = Configuration.PREFIX +
       "poll.expireRecent";
   static final String PARAM_REPLAY_EXPIRATION = Configuration.PREFIX +
@@ -81,32 +81,32 @@ public class PollManager  implements LockssManager {
 
   private static PollManager theManager = null;
   private static Logger theLog=Logger.getLogger("PollManager");
-
+  private static LcapRouter.MessageHandler  m_msgHandler;
   private static Hashtable thePolls = new Hashtable();
   private static HashMap theVerifiers = new HashMap();
-
+  private static IdentityManager theIDManager;
+  private static HashService theHashService;
   private static LockssRandom theRandom = new LockssRandom();
   private static LcapRouter theRouter = null;
-  private static LockssDaemon theDaemon;
+
+  // our configuration variables
+  private long m_minContentPollDuration;
+  private long m_maxContentPollDuration;
+  private long m_minNamePollDuration;
+  private long m_maxNamePollDuration;
+  private long m_recentPollExpireTime;
+  private long m_replayPollExpireTime;
+  private long m_verifierExpireTime;
+  private int m_quorum;
+
+
 
   public PollManager() {
   }
 
-
-  /**
-   * init the plugin manager.
-   * @param daemon the LockssDaemon instance
-   * @throws LockssDaemonException if we already instantiated this manager
-   * @see org.lockss.app.LockssManager#initService(LockssDaemon daemon)
-   */
-  public void initService(LockssDaemon daemon) throws LockssDaemonException {
-    if(theManager == null) {
-      theDaemon = daemon;
-      theManager = this;
-    }
-    else {
-      throw new LockssDaemonException("Multiple Instantiation.");
-    }
+  public void initService(LockssDaemon daemon) {
+    super.initService(daemon);
+    super.registerDefaultConfigCallback();
   }
 
   /**
@@ -114,18 +114,16 @@ public class PollManager  implements LockssManager {
    * @see org.lockss.app.LockssManager#startService()
    */
   public void startService() {
+    super.startService();
+    // the services we use on an ongoing basis
+    theIDManager = theDaemon.getIdentityManager();
+    theHashService = theDaemon.getHashService();
+
+    // register a message handler with the router
     theRouter = theDaemon.getRouterManager();
-    theRouter.registerMessageHandler(new LcapRouter.MessageHandler() {
-	public void handleMessage(LcapMessage msg) {
-	  theLog.debug3("handling incoming message:" + msg.toString());
-	  try {
-	    theManager.handleMessage(msg);
-	  }
-	  catch (IOException ex) {
-	    theLog.error("handle incoming message failed.");
-	  }
-	}
-      });
+    m_msgHandler =  new RouterMessageHandler();
+    theRouter.registerMessageHandler(m_msgHandler);
+
     // register our status
     StatusService statusServ = theDaemon.getStatusService();
     statusServ.registerStatusAccessor(MANAGER_STATUS_TABLE_NAME,
@@ -142,12 +140,19 @@ public class PollManager  implements LockssManager {
    * @see org.lockss.app.LockssManager#stopService()
    */
   public void stopService() {
-    // TODO: checkpoint here.
     // unregister our status
     StatusService statusServ = theDaemon.getStatusService();
     statusServ.unregisterStatusAccessor(MANAGER_STATUS_TABLE_NAME);
     statusServ.unregisterStatusAccessor(POLL_STATUS_TABLE_NAME);
-    theManager = null;
+
+    // unregister our router
+    theRouter.unregisterMessageHandler(m_msgHandler);
+
+    // null anything which might cause problems
+    theIDManager = null;
+    theHashService = null;
+
+    super.stopService();
   }
 
 
@@ -167,7 +172,6 @@ public class PollManager  implements LockssManager {
     long duration = calcDuration(opcode, cus);
     byte[] challenge = makeVerifier();
     byte[] verifier = makeVerifier();
-    IdentityManager idmgr = theDaemon.getIdentityManager();
     LcapMessage msg =
       LcapMessage.makeRequestMsg(pollspec,
 				 null,
@@ -175,7 +179,7 @@ public class PollManager  implements LockssManager {
 				 verifier,
 				 opcode,
 				 duration,
-				 idmgr.getLocalIdentity());
+				 theIDManager.getLocalIdentity());
 
     theLog.debug2("send poll request: " +  msg.toString());
     sendMessage(msg,cus.getArchivalUnit());
@@ -246,11 +250,10 @@ public class PollManager  implements LockssManager {
   Poll makePoll(LcapMessage msg) throws ProtocolException {
     Poll ret_poll;
     PollSpec spec = new PollSpec(msg);
-    CachedUrlSet cus;
+    CachedUrlSet cus = spec.getCachedUrlSet();
+    theLog.debug("making poll from: " + spec);
 
     // check for presence of item in the cache
-    cus = spec.getCachedUrlSet();
-    theLog.debug("making poll from: " + spec);
     if(cus == null) {
       theLog.debug(spec.getUrl()+ " not in this cache, ignoring poll request.");
       return null;
@@ -268,17 +271,93 @@ public class PollManager  implements LockssManager {
     // create the appropriate poll for the message type
     ret_poll = createPoll(msg, spec);
 
-    if(ret_poll != null) {
-      NodeManager nm = theDaemon.getNodeManager(cus.getArchivalUnit());
-      if(nm.startPoll(cus, ret_poll.getVoteTally())) {
-        thePolls.put(ret_poll.m_key, new PollManagerEntry(ret_poll));
-        ret_poll.startPoll();
-        theLog.debug2("Started new poll: " + ret_poll.m_key);
-        return ret_poll;
+    if (ret_poll != null) {
+      if (!msg.isVerifyPoll()) {
+        NodeManager nm = theDaemon.getNodeManager(cus.getArchivalUnit());
+        if (!nm.startPoll(cus, ret_poll.getVoteTally())) {
+          return null;
+        }
       }
+      thePolls.put(ret_poll.m_key, new PollManagerEntry(ret_poll));
+      ret_poll.startPoll();
+      theLog.debug2("Started new poll: " + ret_poll.m_key);
+      return ret_poll;
     }
     return null;
   }
+
+
+    /**
+     * close the poll from any further voting
+     * @param key the poll signature
+     */
+    void closeThePoll(String key)  {
+      Deadline d = Deadline.in(m_recentPollExpireTime);
+      TimerQueue.schedule(d, new ExpireRecentCallback(), key);
+      PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
+      // mark the poll completed because if we need to call a repair poll
+      // we don't want this one to be in conflict with it.
+      pme.setPollCompleted(d);
+      PollTally tally = pme.poll.getVoteTally();
+      if(tally.getType() != Poll.VERIFY_POLL) {
+        NodeManager nm = theDaemon.getNodeManager(tally.getArchivalUnit());
+        theLog.debug("sending completed poll results " + tally);
+        nm.updatePollResults(tally.getCachedUrlSet(), tally);
+      }
+    }
+
+    /**
+     * suspend a poll while we wait for a repair
+     * @param key the identifier key of the poll to suspend
+     */
+    public void suspendPoll(String key) {
+      PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
+      if(pme == null) {
+        theLog.debug2("ignoring suspend request for unknown key " + key);
+        return;
+      }
+      pme.setPollSuspended();
+      theLog.debug2("suspended poll " + key);
+    }
+
+
+    /**
+     * resume a poll that had been suspended for a repair and check the repair
+     * @param replayNeeded true we now need to replay the poll results
+     * @param key the key of the suspended poll
+     */
+    public void resumePoll(boolean replayNeeded, Object key) {
+      PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
+      if(pme == null) {
+        theLog.debug2("ignoring resume request for unknown key " + key);
+        return;
+      }
+      theLog.debug2("resuming poll " + key);
+      PollTally tally = pme.poll.getVoteTally();
+      long expiration = 0;
+      Deadline d;
+      if (replayNeeded) {
+
+        NodeManager nm = theDaemon.getNodeManager(tally.getArchivalUnit());
+        if(nm.startPoll(tally.getCachedUrlSet(), tally)) {
+          theLog.debug2("replaying poll " + (String) key);
+          expiration = m_replayPollExpireTime;
+          d = Deadline.in(expiration);
+          tally.startReplay(d);
+        }
+        else {
+          theLog.warning("nodemanager refused request to replay poll " + key);
+        }
+      }
+
+      // now we want to make sure we add it to the recent polls.
+      expiration += m_recentPollExpireTime;
+
+      d = Deadline.in(expiration);
+      TimerQueue.schedule(d, new ExpireRecentCallback(), (String) key);
+      pme.setPollCompleted(d);
+      theLog.debug2("completed resume poll " + (String) key);
+    }
 
 
   /**
@@ -324,7 +403,8 @@ public class PollManager  implements LockssManager {
       PollManagerEntry entry = (PollManagerEntry)iter.next();
       Poll p = entry.poll;
 
-      if(!entry.isPollCompleted() && !p.getMessage().isVerifyPoll()) { // eliminate running verify polls
+      // eliminate completed polls or verify polls
+      if(!entry.isPollCompleted() && !p.getMessage().isVerifyPoll()) {
         CachedUrlSet pcus = p.getPollSpec().getCachedUrlSet();
 	ArchivalUnit au = cus.getArchivalUnit();
 	LockssRepository repo = theDaemon.getLockssRepository(au);
@@ -339,73 +419,10 @@ public class PollManager  implements LockssManager {
   }
 
 
-  /**
-   * close the poll from any further voting
-   * @param key the poll signature
-   */
-  void closeThePoll(String key)  {
-    long expiration = Configuration.getLongParam(PARAM_RECENT_EXPIRATION,
-                      DEFAULT_RECENT_EXPIRATION);
-    Deadline d = Deadline.in(expiration);
-    TimerQueue.schedule(d, new ExpireRecentCallback(), key);
-    PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
-    pme.setPollCompleted(d);
-    theLog.debug2("completed poll " + key);
-  }
-
-  /**
-   * suspend a poll while we wait for a repair
-   * @param key the identifier key of the poll to suspend
-   */
-  public void suspendPoll(String key) {
-    PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
-    if(pme == null) {
-      theLog.debug2("ignoring suspend request for unknown key " + key);
-      return;
-    }
-    pme.setPollSuspended();
-    theLog.debug2("suspended poll " + key);
-  }
-
-
-  /**
-   * resume a poll that had been suspended for a repair and check the repair
-   * @param replayNeeded true we now need to replay the poll results
-   * @param key the key of the suspended poll
-   */
-  public void resumePoll(boolean replayNeeded, Object key) {
-    PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
-    if(pme == null) {
-      theLog.debug2("ignoring resume request for unknown key " + key);
-      return;
-    }
-    theLog.debug2("resuming poll " + key);
-    Poll p = pme.poll;
-    long expiration = 0;
-    Deadline d;
-    if (replayNeeded) {
-      theLog.debug2("replaying poll " + (String) key);
-      expiration = Configuration.getLongParam(PARAM_REPLAY_EXPIRATION,
-                                              DEFAULT_REPLAY_EXPIRATION);
-      d = Deadline.in(expiration);
-      p.getVoteTally().startReplay(d);
-    }
-
-    // now we want to make sure we add it to the recent polls.
-    expiration += Configuration.getLongParam(PARAM_RECENT_EXPIRATION,
-                                             DEFAULT_RECENT_EXPIRATION);
-
-    d = Deadline.in(expiration);
-    TimerQueue.schedule(d, new ExpireRecentCallback(), (String) key);
-    pme.setPollCompleted(d);
-    theLog.debug2("completed resume poll " + (String) key);
-  }
-
   void requestVerifyPoll(PollSpec pollspec, long duration, Vote vote)
       throws IOException {
 
     theLog.debug("Calling a verify poll...");
-    IdentityManager idmgr = theDaemon.getIdentityManager();
     CachedUrlSet cus = pollspec.getCachedUrlSet();
     LcapMessage reqmsg = LcapMessage.makeRequestMsg(pollspec,
         null,
@@ -413,9 +430,9 @@ public class PollManager  implements LockssManager {
         makeVerifier(),
         LcapMessage.VERIFY_POLL_REQ,
         duration,
-        idmgr.getLocalIdentity());
+        theIDManager.getLocalIdentity());
 
-    LcapIdentity originator =  idmgr.findIdentity(vote.getIDAddress());
+    LcapIdentity originator =  theIDManager.findIdentity(vote.getIDAddress());
     theLog.debug2("sending our verification request to " + originator.toString());
     sendMessageTo(reqmsg, cus.getArchivalUnit(), originator);
 
@@ -424,9 +441,6 @@ public class PollManager  implements LockssManager {
     poll.m_pollstate = Poll.PS_WAIT_TALLY;
   }
 
-  LockssDaemon getDaemon() {
-    return theDaemon;
-  }
 
   /**
    * Called by verify polls to get the array of bytes that represents the
@@ -543,9 +557,7 @@ public class PollManager  implements LockssManager {
                                 byte[] secret) {
     String ver = String.valueOf(B64Code.encode(verifier));
     String sec = secret == null ? "" : String.valueOf(B64Code.encode(secret));
-    long expiration = Configuration.getLongParam(PARAM_VERIFY_EXPIRATION,
-                                            DEFAULT_VERIFY_EXPIRATION);
-    Deadline d = Deadline.in(expiration);
+    Deadline d = Deadline.in(m_verifierExpireTime);
     TimerQueue.schedule(d, new ExpireVerifierCallback(), ver);
     synchronized (theVerifiers) {
       theVerifiers.put(ver, sec);
@@ -553,9 +565,39 @@ public class PollManager  implements LockssManager {
   }
 
 
+  IdentityManager getIdentityManager() {
+    return theIDManager;
+  }
+
+  HashService getHashService() {
+    return theHashService;
+  }
 
   int getQuorum() {
-    return Configuration.getIntParam(PARAM_QUORUM, DEFAULT_QUORUM);
+    return m_quorum;
+  }
+
+  protected void setConfig(Configuration oldConfig,
+                           Configuration newConfig,
+                           Set changedKeys) {
+    long aveDuration = newConfig.getLongParam(PARAM_NAMEPOLL_DEADLINE,
+                                                  DEFAULT_NAMEPOLL_DEADLINE);
+    m_minNamePollDuration = aveDuration - aveDuration / 4;
+    m_maxNamePollDuration = aveDuration + aveDuration / 4;
+
+    m_minContentPollDuration = newConfig.getLongParam(PARAM_CONTENTPOLL_MIN,
+        DEFAULT_CONTENTPOLL_MIN);
+    m_maxContentPollDuration = newConfig.getLongParam(PARAM_CONTENTPOLL_MAX,
+        DEFAULT_CONTENTPOLL_MAX);
+
+    m_quorum = newConfig.getIntParam(PARAM_QUORUM, DEFAULT_QUORUM);
+
+    m_recentPollExpireTime = newConfig.getLongParam(PARAM_RECENT_EXPIRATION,
+        DEFAULT_RECENT_EXPIRATION);
+    m_replayPollExpireTime = newConfig.getLongParam(PARAM_REPLAY_EXPIRATION,
+        DEFAULT_REPLAY_EXPIRATION);
+    m_verifierExpireTime = newConfig.getLongParam(PARAM_VERIFY_EXPIRATION,
+                                        DEFAULT_VERIFY_EXPIRATION);
   }
 
   long calcDuration(int opcode, CachedUrlSet cus) {
@@ -564,23 +606,17 @@ public class PollManager  implements LockssManager {
     switch (opcode) {
       case LcapMessage.NAME_POLL_REQ:
       case LcapMessage.NAME_POLL_REP:
-         ret = Configuration.getLongParam(PARAM_NAMEPOLL_DEADLINE,
-            DEFAULT_NAMEPOLL_DEADLINE);
-         long earliest = ret - ret/4;
-         long latest = ret + ret/4;
-         ret = earliest + theRandom.nextLong(latest - earliest);
+        ret = m_minNamePollDuration +
+            theRandom.nextLong(m_maxNamePollDuration - m_minNamePollDuration);
         theLog.debug2("Name Poll duration: " +
-		      StringUtil.timeIntervalToString(ret));
+                      StringUtil.timeIntervalToString(ret));
         break;
 
       case LcapMessage.CONTENT_POLL_REQ:
       case LcapMessage.CONTENT_POLL_REP:
-        long minContent = Configuration.getLongParam(PARAM_CONTENTPOLL_MIN,
-            DEFAULT_CONTENTPOLL_MIN);
-        long maxContent = Configuration.getLongParam(PARAM_CONTENTPOLL_MAX,
-            DEFAULT_CONTENTPOLL_MAX);
         ret = cus.estimatedHashDuration() * 2 * (quorum + 1);
-        ret = ret < minContent ? minContent : (ret > maxContent ? maxContent : ret);
+        ret = ret < m_minContentPollDuration ? m_minContentPollDuration :
+            (ret > m_maxContentPollDuration ? m_maxContentPollDuration : ret);
         theLog.debug2("Content Poll duration: " +
 		      StringUtil.timeIntervalToString(ret));
         break;
@@ -632,6 +668,12 @@ public class PollManager  implements LockssManager {
 
 // ----------------  Callbacks -----------------------------------
 
+  static class RouterMessageHandler implements LcapRouter.MessageHandler {
+    public void handleMessage(LcapMessage msg) {
+      theLog.debug3("received from router message:" + msg.toString());
+      handleMessage(msg);
+    }
+  }
 
   static class ExpireRecentCallback implements TimerQueue.Callback {
     /**
@@ -982,7 +1024,7 @@ public class PollManager  implements LockssManager {
       HashMap rowMap = new HashMap();
 
       rowMap.put("Identity", vote.getIDAddress());
-      LcapIdentity id = theDaemon.getIdentityManager().findIdentity(vote.getIDAddress());
+      LcapIdentity id = theIDManager.findIdentity(vote.getIDAddress());
       rowMap.put("Reputation", String.valueOf(id.getReputation()));
       rowMap.put("Agree", String.valueOf(vote.agree));
       rowMap.put("Challenge", vote.getChallengeString());

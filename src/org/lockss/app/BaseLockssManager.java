@@ -1,5 +1,5 @@
 /*
- * $Id: BaseLockssManager.java,v 1.3 2003-03-21 20:41:22 tal Exp $
+ * $Id: BaseLockssManager.java,v 1.4 2003-03-29 04:02:15 claire Exp $
  */
 
 /*
@@ -31,6 +31,10 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.app;
 
+import org.lockss.daemon.*;
+import java.util.*;
+import org.lockss.util.*;
+
 /**
  * Base implementation of LockssManager
  */
@@ -38,7 +42,9 @@ package org.lockss.app;
 public abstract class BaseLockssManager implements LockssManager {
 
   private LockssManager theManager = null;
-  private LockssDaemon theDaemon = null;
+  protected LockssDaemon theDaemon = null;
+  private Configuration.Callback configCallback;
+  private Logger log=Logger.getLogger("BaseLockssManager");
 
   public void initService(LockssDaemon daemon) throws LockssDaemonException {
     if(theManager == null) {
@@ -55,10 +61,48 @@ public abstract class BaseLockssManager implements LockssManager {
 
   public void stopService() {
     // checkpoint here
+    unregisterConfig();
     theManager = null;
   }
 
   protected LockssDaemon getDaemon() {
     return theDaemon;
+  }
+
+  protected void registerConfigCallback(Configuration.Callback callback) {
+    if(callback == null || this.configCallback != null) {
+      throw new LockssDaemonException("Invalid callback registration: "
+                                       + callback);
+    }
+    configCallback = callback;
+    Configuration.registerConfigurationCallback(configCallback);
+  }
+
+  protected void registerDefaultConfigCallback() {
+    configCallback = new DefaultConfigCallback();
+    Configuration.registerConfigurationCallback(configCallback);
+  }
+
+  protected void unregisterConfig() {
+    if(configCallback != null) {
+      Configuration.unregisterConfigurationCallback(configCallback);
+      configCallback = null;
+    }
+  }
+
+  protected void setConfig(Configuration oldConfig,
+                           Configuration newConfig,
+                           Set changedKeys) {
+    /** override to actually set the config **/
+    log.error("setConfig called, should be overridden for correct behaviour");
+
+  }
+
+  class DefaultConfigCallback implements Configuration.Callback {
+    public void configurationChanged(Configuration oldConfig,
+                                     Configuration newConfig,
+                                     Set changedKeys) {
+      setConfig(newConfig, oldConfig, changedKeys);
+    }
   }
 }

@@ -143,6 +143,10 @@ public class PollTally {
     return pollSpec.getCachedUrlSet();
   }
 
+  public ArchivalUnit getArchivalUnit()  {
+    return getCachedUrlSet().getArchivalUnit();
+  }
+
   /**
    * Returns poll type constant - one of Poll.NamePoll, Poll.ContentPoll,
    * Poll.VerifyPoll
@@ -182,7 +186,8 @@ public class PollTally {
    * @return the completed list of entries
    */
   public Iterator getCorrectEntries() {
-    return votedEntries == null ? null : new ArrayIterator(votedEntries);
+    return votedEntries == null ? CollectionUtil.EMPTY_ITERATOR :
+        new ArrayIterator(votedEntries);
   }
 
   /**
@@ -190,7 +195,8 @@ public class PollTally {
    * @return the list of entries
    */
   public Iterator getLocalEntries() {
-    return localEntries == null ? null : new ArrayIterator(localEntries);
+    return localEntries == null ? CollectionUtil.EMPTY_ITERATOR :
+        new ArrayIterator(localEntries);
   }
 
   /**
@@ -223,12 +229,7 @@ public class PollTally {
     if(poll.isErrorState() || !replayIter.hasNext()) {
       replayDeadline = null;
       replayIter = null;
-      if(poll.isErrorState()) {
-        // restore the original votes on error.
-        pollVotes = originalVotes;
-      }
-      originalVotes = null;
-      poll.tally();
+      poll.stopPoll();
     }
     else {
       Vote vote = (Vote)replayIter.next();
