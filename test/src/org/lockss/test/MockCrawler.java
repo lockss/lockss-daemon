@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawler.java,v 1.7 2003-12-13 01:29:30 troberts Exp $
+ * $Id: MockCrawler.java,v 1.8 2004-01-13 02:36:27 troberts Exp $
  */
 
 /*
@@ -49,8 +49,20 @@ public class MockCrawler extends NullCrawler {
   long endTime = -1;
   long numFetched = -1;
   long numParsed = -1;
+
+
   Crawler.Status status = null;
 
+  boolean wasAborted = false;
+
+
+  public void abortCrawl() {
+    wasAborted = true;
+  }
+
+  public boolean wasAborted() {
+    return wasAborted;
+  }
 
   public void setCrawlSuccessful(boolean crawlSuccessful) {
     this.crawlSuccessful = crawlSuccessful;

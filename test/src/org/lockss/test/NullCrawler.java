@@ -1,5 +1,5 @@
 /*
- * $Id: NullCrawler.java,v 1.4 2003-12-13 01:29:30 troberts Exp $
+ * $Id: NullCrawler.java,v 1.5 2004-01-13 02:36:27 troberts Exp $
  */
 
 /*
@@ -73,4 +73,7 @@ public class NullCrawler implements Crawler {
     throw new UnsupportedOperationException("Not implemented");
   }
 
+  public void abortCrawl() {
+    throw new UnsupportedOperationException("Not implemented");
+  }
 }

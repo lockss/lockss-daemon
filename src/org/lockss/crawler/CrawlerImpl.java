@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerImpl.java,v 1.1 2004-01-13 01:02:35 troberts Exp $
+ * $Id: CrawlerImpl.java,v 1.2 2004-01-13 02:36:27 troberts Exp $
  */
 
 /*
@@ -165,6 +165,10 @@ public class CrawlerImpl implements Crawler {
     return crawlStatus;
   }
 
+
+  public void abortCrawl() {
+//     throw new UnsupportedOperationException("not implemented");
+  }
 
   /**
    * Main method of the crawler; it loops through crawling and caching
