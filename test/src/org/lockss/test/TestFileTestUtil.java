@@ -1,5 +1,5 @@
 /*
- * $Id: TestFileTestUtil.java,v 1.1 2003-09-16 23:22:45 eaalto Exp $
+ * $Id: TestFileTestUtil.java,v 1.2 2004-01-03 06:30:05 tlipkis Exp $
  */
 
 /*
@@ -185,6 +185,12 @@ public class TestFileTestUtil extends LockssTestCase {
     File src = new File("/tmp/dir/test/file/path");
     File root = new File("/other/directory");
     assertNull(FileTestUtil.getPathUnderRoot(src, root));
+  }
+
+  public void testUrlOfFile() throws IOException {
+    String s = "foo/bar.txt";
+    assertEquals("file:" + new File(s).getAbsolutePath(),
+		 FileTestUtil.urlOfFile(s));
   }
 }
 
