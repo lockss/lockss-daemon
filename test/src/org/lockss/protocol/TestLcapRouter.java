@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapRouter.java,v 1.9 2003-06-20 22:34:54 claire Exp $
+ * $Id: TestLcapRouter.java,v 1.10 2003-07-17 05:21:54 tlipkis Exp $
  */
 
 /*
@@ -71,6 +71,14 @@ public class TestLcapRouter extends LockssTestCase {
     rtr = daemon.getRouterManager();
     rtr.startService();
     TimeBase.setSimulated(20000);
+  }
+
+  public void tearDown() throws Exception {
+    LcapComm comm = daemon.getCommManager();
+    if (comm != null) {
+      comm.stopService();
+    }
+    super.tearDown();
   }
 
   public void testIsEligibleToForward() throws Exception {
