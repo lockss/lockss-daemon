@@ -1,5 +1,5 @@
 /*
- * $Id: TestTreeWalkHandler.java,v 1.15 2003-04-18 21:49:51 aalto Exp $
+ * $Id: TestTreeWalkHandler.java,v 1.16 2003-05-02 22:49:38 aalto Exp $
  */
 
 /*
@@ -199,29 +199,29 @@ public class TestTreeWalkHandler extends LockssTestCase {
 
     // these are true iff the pollmanager doesn't know about them
     checkPollingTest(PollState.RUNNING, 123, true, node);
-    ( (MockPollManager) theDaemon.getPollManager()).thePolls.remove(TEST_URL);
+    pollMan.thePolls.remove(TEST_URL);
     checkPollingTest(PollState.SCHEDULED, 234, true, node);
-    ( (MockPollManager) theDaemon.getPollManager()).thePolls.remove(TEST_URL);
+    pollMan.thePolls.remove(TEST_URL);
     checkPollingTest(PollState.REPAIRING, 345, true, node);
-    ( (MockPollManager) theDaemon.getPollManager()).thePolls.remove(TEST_URL);
+    pollMan.thePolls.remove(TEST_URL);
 
     // these are always false
     checkPollingTest(PollState.WON, 456, false, node);
-    ( (MockPollManager) theDaemon.getPollManager()).thePolls.remove(TEST_URL);
+    pollMan.thePolls.remove(TEST_URL);
     checkPollingTest(PollState.REPAIRED, 567, false, node);
-    ( (MockPollManager) theDaemon.getPollManager()).thePolls.remove(TEST_URL);
+    pollMan.thePolls.remove(TEST_URL);
 
     // this is true since we're going to try again
     checkPollingTest(PollState.UNREPAIRABLE, 678, true, node);
-    ( (MockPollManager) theDaemon.getPollManager()).thePolls.remove(TEST_URL);
+    pollMan.thePolls.remove(TEST_URL);
 
     // should schedule name poll if last history is LOST or ERR_IO
     checkPollingTest(PollState.ERR_IO, 789, true, node);
-    ( (MockPollManager) theDaemon.getPollManager()).thePolls.remove(TEST_URL);
+    pollMan.thePolls.remove(TEST_URL);
 
     // should schedule a name poll if we lost a content poll
     checkPollingTest(Poll.CONTENT_POLL, PollState.LOST, 890, true, node);
-    ( (MockPollManager) theDaemon.getPollManager()).thePolls.remove(TEST_URL);
+    pollMan.thePolls.remove(TEST_URL);
 
     TimeBase.setReal();
   }
@@ -238,7 +238,7 @@ public class TestTreeWalkHandler extends LockssTestCase {
                                            null, true);
     // doesn't clear old histories, so startTime must be used appropriately
     node.closeActivePoll(pollHist);
-    treeWalkHandler.checkNodeState(node);
+    assertEquals(!shouldSchedule, treeWalkHandler.checkNodeState(node));
     if (shouldSchedule) {
       assertEquals(pollMan.getPollStatus(node.getCachedUrlSet().getUrl()),
 		   MockPollManager.NAME_REQUESTED);
@@ -246,6 +246,41 @@ public class TestTreeWalkHandler extends LockssTestCase {
       assertNull(pollMan.getPollStatus(node.getCachedUrlSet().getUrl()));
     }
     assertNull(crawlMan.getUrlStatus(node.getCachedUrlSet().getUrl()));
+  }
+
+  public void testCheckNodeStateRecursion() throws Exception {
+    TimeBase.setSimulated(10000);
+    CachedUrlSet cus = mau.getAUCachedUrlSet();
+    CachedUrlSet subCus = (CachedUrlSet)cus.flatSetIterator().next();
+    NodeStateImpl node = (NodeStateImpl)nodeManager.getNodeState(cus);
+    NodeStateImpl subNode = (NodeStateImpl)nodeManager.getNodeState(subCus);
+
+    PollHistory pollHist = new PollHistory(Poll.NAME_POLL, "", "",
+                                           PollState.RUNNING, 123, 1,
+                                           null, true);
+    node.closeActivePoll(pollHist);
+    // should act on the main node's poll state
+    assertFalse(treeWalkHandler.recurseTreeWalk(cus));
+    assertEquals(pollMan.getPollStatus(cus.getUrl()),
+                 MockPollManager.NAME_REQUESTED);
+    assertNull(pollMan.getPollStatus(subCus.getUrl()));
+    pollMan.thePolls.remove(cus.getUrl());
+    // reset treewalk
+    treeWalkHandler.treeWalkAborted = false;
+
+    // add later one to both nodes
+    pollHist = new PollHistory(Poll.NAME_POLL, "", "",
+                               PollState.RUNNING, 456, 1,
+                               null, true);
+    node.closeActivePoll(pollHist);
+    subNode.closeActivePoll(pollHist);
+    // should act on the sub-node's poll state
+    assertFalse(treeWalkHandler.recurseTreeWalk(cus));
+    assertNull(pollMan.getPollStatus(cus.getUrl()));
+    assertEquals(pollMan.getPollStatus(subCus.getUrl()),
+                 MockPollManager.NAME_REQUESTED);
+
+    TimeBase.setReal();
   }
 
   public void testAverageTreeWalkDuration() {

@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkHandler.java,v 1.23 2003-04-26 01:14:30 aalto Exp $
+ * $Id: TreeWalkHandler.java,v 1.24 2003-05-02 22:49:38 aalto Exp $
  */
 
 /*
@@ -167,25 +167,21 @@ public class TreeWalkHandler {
   }
 
   /**
-   * Recursive function which checks the state of a given CUS, then calls
-   * itself on the CUS's children.  It aborts without recursing if an action
-   * was taken on the CUS itself.
+   * Recursive function which checks a CUS's children, then checks the state of
+   * the given CUS (if no action was taken below it).
    * @param cus the {@link CachedUrlSet} to walk
+   * @return true if the treewalk should continue
    */
-  void recurseTreeWalk(CachedUrlSet cus) {
+  boolean recurseTreeWalk(CachedUrlSet cus) {
     if (treeWalkAborted) {
       // treewalk has been terminated
-      return;
+      return false;
     }
+    boolean pContinue = true;
     // get the node state for the cus
     logger.debug3("Recursing treewalk on cus: "+cus.getUrl());
     NodeState state = manager.getNodeState(cus);
-    // walk the node
-    boolean pContinue = checkNodeState(state);
-    if (!pContinue) {
-      // this node is busy, so abort without walking its children
-      return;
-    }
+    // walk the node's children first to process deepest damage first
     Iterator children = cus.flatSetIterator();
     while (children.hasNext()) {
       CachedUrlSetNode node = (CachedUrlSetNode)children.next();
@@ -193,18 +189,24 @@ public class TreeWalkHandler {
         // recurse on the child cus
         //XXX recursion should be aware of total data size, and avoid
         // stack overflow
-        recurseTreeWalk((CachedUrlSet)node);
+        // returns false if the treewalk shouldn't continue
+        pContinue = recurseTreeWalk((CachedUrlSet)node);
       } else if (node.getType()==CachedUrlSetNode.TYPE_CACHED_URL) {
         // open a new state for the leaf and walk
         state = manager.getNodeState(
             theAu.makeCachedUrlSet(new RangeCachedUrlSetSpec(node.getUrl())));
-        if (!checkNodeState(state)) {
-          // abort without any further walking
-          //XXX ok?
-          return;
-        }
+        pContinue = checkNodeState(state);
+      }
+      if (!pContinue) {
+        break;
       }
     }
+
+    // if we took no action below here, check this node
+    if (pContinue) {
+      return checkNodeState(state);
+    }
+    return false;
   }
 
   /**
