@@ -1,5 +1,5 @@
 /*
- * $Id: UrlNormalizer.java,v 1.1 2004-09-02 01:21:19 troberts Exp $
+ * $Id: UrlNormalizer.java,v 1.2 2004-09-02 23:51:37 troberts Exp $
  */
 
 /*
@@ -33,6 +33,6 @@ package org.lockss.plugin;
 
 public interface UrlNormalizer {
 
-  public String normalizeUrl(String url);
+  public String normalizeUrl(String url, ArchivalUnit au);
 
 }

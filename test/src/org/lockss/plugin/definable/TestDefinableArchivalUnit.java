@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.12 2004-09-02 19:56:21 troberts Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.13 2004-09-02 23:51:39 troberts Exp $
  */
 
 /*
@@ -255,7 +255,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
   }
 
   public static class MyNormalizer implements UrlNormalizer {
-    public String normalizeUrl (String url) {
+    public String normalizeUrl (String url, ArchivalUnit au) {
       return "blah";
     }
   }
