@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.2 2003-02-26 04:51:37 tal Exp $
+ * $Id: BaseArchivalUnit.java,v 1.3 2003-02-28 01:53:04 troberts Exp $
  */
 
 /*
@@ -194,6 +194,9 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   }
 
   public boolean shouldCrawlForNewContent(AuState aus) {
+    if (aus.getLastCrawlTime() <= 0) {
+      return true;
+    }
     return false;
   }
 
