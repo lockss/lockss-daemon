@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryServiceImpl.java,v 1.3 2003-03-08 02:45:02 aalto Exp $
+ * $Id: TestLockssRepositoryServiceImpl.java,v 1.4 2003-03-08 03:37:26 aalto Exp $
  */
 
 /*
@@ -167,6 +167,12 @@ public class TestLockssRepositoryServiceImpl extends LockssTestCase {
   public void testMapUrlToFileLocation() throws MalformedURLException {
     String testStr = "http://www.example.com/branch1/branch2/index.html";
     String expectedStr = "root/www.example.com/http/branch1/branch2/index.html";
+    assertEquals(expectedStr,
+                 LockssRepositoryServiceImpl.mapUrlToFileLocation("root",
+        testStr));
+
+    testStr = "hTTp://www.exaMPLE.com/branch1/branch2/index.html";
+    expectedStr = "root/www.example.com/http/branch1/branch2/index.html";
     assertEquals(expectedStr,
                  LockssRepositoryServiceImpl.mapUrlToFileLocation("root",
         testStr));

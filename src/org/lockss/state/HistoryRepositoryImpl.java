@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.16 2003-03-06 01:29:29 aalto Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.17 2003-03-08 03:37:26 aalto Exp $
  */
 
 /*
@@ -46,6 +46,7 @@ import org.lockss.repository.*;
 import org.lockss.daemon.Configuration;
 import org.lockss.app.*;
 import org.lockss.plugin.*;
+import java.net.URL;
 
 
 /**
@@ -235,6 +236,20 @@ public class HistoryRepositoryImpl implements HistoryRepository, LockssManager {
     if (AuUrl.isAuUrl(urlStr)) {
       return auLoc;
     } else {
+      // filtering to remove urls including '..' and such
+      try {
+        URL testUrl = new URL(urlStr);
+        String path = testUrl.getPath();
+        if (!path.equals("")) {
+          // filtering to remove urls including '..' and such
+          File testFile = new File(path);
+          urlStr = testUrl.getProtocol() + "://" + testUrl.getHost().toLowerCase()
+              + testFile.getCanonicalPath();
+        }
+      } catch (IOException ie) {
+        logger.error("Error testing URL: "+ie);
+        throw new MalformedURLException ("Error testing URL.");
+      }
       return LockssRepositoryServiceImpl.mapUrlToFileLocation(auLoc, urlStr);
     }
   }

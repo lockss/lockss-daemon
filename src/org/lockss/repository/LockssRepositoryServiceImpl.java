@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryServiceImpl.java,v 1.3 2003-03-08 02:45:02 aalto Exp $
+ * $Id: LockssRepositoryServiceImpl.java,v 1.4 2003-03-08 03:37:26 aalto Exp $
  */
 
 /*
@@ -203,7 +203,7 @@ public class LockssRepositoryServiceImpl implements LockssRepositoryService {
     if (!rootLocation.endsWith(File.separator)) {
       buffer.append(File.separator);
     }
-    buffer.append(url.getHost());
+    buffer.append(url.getHost().toLowerCase());
     buffer.append(File.separator);
     buffer.append(url.getProtocol());
     buffer.append(StringUtil.replaceString(url.getPath(), "/", File.separator));

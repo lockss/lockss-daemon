@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.14 2003-03-06 01:29:29 aalto Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.15 2003-03-08 03:37:26 aalto Exp $
  */
 
 /*
@@ -80,6 +80,19 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
         "http://www.example.com");
 
     assertEquals(expected, location);
+
+    // should filter out the first '..' line but resolve the second
+    mspec = new MockCachedUrlSetSpec("http://www.example.com/../branch/test/..",
+                                     null);
+    mcus = new MockCachedUrlSet(mau, mspec);
+    location = repository.getNodeLocation(mcus);
+    expected = tempDirPath + repository.HISTORY_ROOT_NAME;
+    expected = LockssRepositoryServiceImpl.mapAuToFileLocation(expected, mau);
+    expected = LockssRepositoryServiceImpl.mapUrlToFileLocation(expected,
+        "http://www.example.com/branch");
+
+    assertEquals(expected, location);
+
   }
 
   public void testGetMapping() throws Exception {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.24 2003-03-05 22:55:28 aalto Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.25 2003-03-08 03:37:26 aalto Exp $
  */
 
 /*
@@ -102,6 +102,14 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     node = repo.getNode("http://www.example.com/testDir/leaf4");
     assertTrue(node.hasContent());
     assertEquals("http://www.example.com/testDir/leaf4", node.getNodeUrl());
+
+    //testing correction of nodes with bad '..'-including urls,
+    //filtering the first '..' but resolving the second
+    node = repo.createNewNode("http://www.example.com/../branch/test/../");
+    assertEquals("http://www.example.com/branch", node.getNodeUrl());
+
+    node = repo.createNewNode("http://www.example.com/..");
+    assertEquals("http://www.example.com/", node.getNodeUrl());
   }
 
   public void testGetAuNode() throws Exception {
