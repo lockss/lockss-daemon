@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.33 2004-10-18 03:37:19 tlipkis Exp $
+ * $Id: ProxyHandler.java,v 1.34 2005-02-02 00:15:47 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.33 2004-10-18 03:37:19 tlipkis Exp $
+// $Id: ProxyHandler.java,v 1.34 2005-02-02 00:15:47 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -224,6 +224,7 @@ public class ProxyHandler extends AbstractHttpHandler {
 	return; 
       }
     }
+    // not in cache
     if ((proxyMgr.getHostDownAction() ==
 	 ProxyManager.HOST_DOWN_NO_CACHE_ACTION_504)
 	&& proxyMgr.isHostDown(uri.getHost())) {
@@ -507,12 +508,13 @@ public class ProxyHandler extends AbstractHttpHandler {
       try {
 	conn.execute();
       } catch (IOException e) {
+	// If connection timed out, remember host is down for a little while.
+	// Remember this only for hosts whose content we hold.
+	if (e instanceof LockssUrlConnection.ConnectionTimeoutException) {
+	  proxyMgr.setHostDown(request.getURI().getHost(), isInCache);
+	}
 	// if we get any error and it's in the cache, serve it from there
 	if (isInCache) {
-	  // if connection timed out, remember host is down for a little while
-	  if (e instanceof LockssUrlConnection.ConnectionTimeoutException) {
-	    proxyMgr.setHostDown(request.getURI().getHost());
-	  }
 	  serveFromCache(pathInContext, pathParams, request, response, cu);
 	} else {
 	  // else generate an error page

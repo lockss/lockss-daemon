@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyManager.java,v 1.32 2005-01-21 17:46:51 tlipkis Exp $
+ * $Id: ProxyManager.java,v 1.33 2005-02-02 00:15:40 tlipkis Exp $
  */
 
 /*
@@ -136,6 +136,7 @@ public class ProxyManager extends BaseProxyManager {
   private long paramHostDownRetryTime = DEFAULT_HOST_DOWN_RETRY;
   private int paramHostDownAction = HOST_DOWN_NO_CACHE_ACTION_DEFAULT;
   private FixedTimedMap hostsDown = new FixedTimedMap(paramHostDownRetryTime);
+  private Set hostsEverDown = new HashSet();
 
   public void setConfig(Configuration config, Configuration prevConfig,
 			Configuration.Differences changedKeys) {
@@ -229,19 +230,33 @@ public class ProxyManager extends BaseProxyManager {
 						LockssDaemon.getUserAgent())) {
       return true;
     }
-    java.util.List lockssFlags = request.getParameterValues(Constants.X_LOCKSS);
-    if (lockssFlags != null) {
-      return lockssFlags.contains(Constants.X_LOCKSS_REPAIR);
+    Enumeration lockssFlagsEnum = request.getFieldValues(Constants.X_LOCKSS);
+    if (lockssFlagsEnum != null) {
+      while (lockssFlagsEnum.hasMoreElements()) {
+	String val = (String)lockssFlagsEnum.nextElement();
+	if (Constants.X_LOCKSS_REPAIR.equalsIgnoreCase(val)) {
+	  return true;
+	}
+      }
     }
     return false;
   }
 
+  /** Check whether the host is known to have been down recently */
   public boolean isHostDown(String host) {
     return hostsDown.containsKey(host);
   }
 
-  public void setHostDown(String host) {
-    if (log.isDebug2()) log.debug2("Set host down: " + host);
-    hostsDown.put(host, "");
+  /** Remember that the host is down.
+   * @param isInCache always done for content that's in the cache,
+   * otherwise only if we've previously recorded this host down (which
+   * means we have some of its content).
+   */
+  public void setHostDown(String host, boolean isInCache) {
+    if (isInCache || hostsEverDown.contains(host)) {
+      if (log.isDebug2()) log.debug2("Set host down: " + host);
+      hostsDown.put(host, "");
+      hostsEverDown.add(host);
+    }
   }
 }
