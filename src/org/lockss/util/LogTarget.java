@@ -32,18 +32,16 @@ in this Software without prior written authorization from Stanford University.
  * Interface to represent any thing that can take a log message and output it 
  * to a destination (could be stderr, email, syslogd, etc.)
  */
-
 public interface LogTarget{
-  
 
   /**
-   * If the message is of a severity level which should be logged to this 
-   * target, handle outputting message to that target
+   * Output a message to a log target.  Implementations may prepend
+   * the date and/or message level to the message, if appropriate, 
    *
-   * @param callerId string representing the class that logged the error
-   * @param message message string to output
-   * @param severity string representing the severity of the message
+   * @param log the <code>Logger</code> instance making the call.
+   * @param msglevel severity level of log call.
+   * @param message string to output.
    */
-  public void handleMessage (String callerId, String message, String severity);
+  public void handleMessage(Logger log, int msglevel, String message);
 
 }
