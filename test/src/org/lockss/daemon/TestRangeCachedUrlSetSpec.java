@@ -1,5 +1,5 @@
 /*
- * $Id: TestRangeCachedUrlSetSpec.java,v 1.10 2003-06-09 21:47:16 aalto Exp $
+ * $Id: TestRangeCachedUrlSetSpec.java,v 1.11 2003-06-10 22:56:41 tal Exp $
  */
 
 /*
@@ -55,6 +55,18 @@ public class TestRangeCachedUrlSetSpec extends LockssTestCase {
       fail("RangeCachedUrlSetSpec with null url should throw");
     } catch (NullPointerException e) {
     }
+    try {
+      new RangeCachedUrlSetSpec("a", "34", "12");
+      fail("RangeCachedUrlSetSpec with null url should throw");
+    } catch (IllegalArgumentException e) {
+    }
+    try {
+      new RangeCachedUrlSetSpec("b", "34", "");
+      fail("RangeCachedUrlSetSpec with null url should throw");
+    } catch (IllegalArgumentException e) {
+    }
+    // Ok if lower == upper
+      new RangeCachedUrlSetSpec("b", "34", "34");
   }
 
   public void testGets() {
@@ -79,18 +91,20 @@ public class TestRangeCachedUrlSetSpec extends LockssTestCase {
     CachedUrlSetSpec cuss6 = new RangeCachedUrlSetSpec("foo", "a", "b");
     CachedUrlSetSpec cuss7 = new RangeCachedUrlSetSpec("foo", null, "b");
     CachedUrlSetSpec cuss8 = new RangeCachedUrlSetSpec("foo", null, "b");
-    CachedUrlSetSpec cuss9 = new RangeCachedUrlSetSpec("foo", "b", "a");
-    CachedUrlSetSpec cuss10 = new RangeCachedUrlSetSpec("bar");
+    CachedUrlSetSpec cuss9 = new RangeCachedUrlSetSpec("foo", "a", "a");
+    CachedUrlSetSpec cuss10 = new RangeCachedUrlSetSpec("foo", "", "a");
+    CachedUrlSetSpec cuss11 = new RangeCachedUrlSetSpec("bar");
     assertEquals(cuss1, cuss2);
     assertNotEquals(cuss1, cuss3);
-    assertNotEquals(cuss1, cuss10);
+    assertNotEquals(cuss1, cuss11);
     assertEquals(cuss3, cuss4);
     assertNotEquals(cuss3, cuss5);
     assertNotEquals(cuss3, cuss7);
-    assertEquals(cuss3, cuss4);
+    assertNotEquals(cuss5, cuss7);
     assertEquals(cuss5, cuss6);
     assertEquals(cuss7, cuss8);
     assertNotEquals(cuss5, cuss9);
+    assertNotEquals(cuss9, cuss10);
 
     assertNotEquals(cuss1, new AUCachedUrlSetSpec());
     assertNotEquals(cuss1, new SingleNodeCachedUrlSetSpec("foo"));
@@ -99,7 +113,7 @@ public class TestRangeCachedUrlSetSpec extends LockssTestCase {
   public void testHashCode() throws Exception {
     CachedUrlSetSpec cuss1 = new RangeCachedUrlSetSpec("foo", "/abc", "/xyz");
     CachedUrlSetSpec cuss2 = new RangeCachedUrlSetSpec("foo", "/abc", "/xyz");
-    assertTrue(cuss1.hashCode() == cuss1.hashCode());
+    assertTrue(cuss1.hashCode() == cuss2.hashCode());
   }
 
   public void testTypePredicates() {
@@ -117,12 +131,17 @@ public class TestRangeCachedUrlSetSpec extends LockssTestCase {
     assertFalse(cuss3.isSingleNode());
     assertFalse(cuss3.isAU());
     assertTrue(cuss3.isRangeRestricted());
+ 
+    CachedUrlSetSpec cuss4 = new RangeCachedUrlSetSpec("foo", "a", "b");
+    assertFalse(cuss4.isSingleNode());
+    assertFalse(cuss4.isAU());
+    assertTrue(cuss4.isRangeRestricted());
   }
 
   public void testMatchNoRange() {
     RangeCachedUrlSetSpec cuss1 = new RangeCachedUrlSetSpec("foo");
     assertTrue(cuss1.matches("foo"));// not ranged, should match prefix
-    assertFalse(cuss1.matches("foobar"));
+    assertFalse(cuss1.matches("foobar")); // no path separator
     assertTrue(cuss1.matches("foo/bar"));
     assertFalse(cuss1.matches("fo"));
     assertFalse(cuss1.matches("1foo"));
@@ -130,7 +149,7 @@ public class TestRangeCachedUrlSetSpec extends LockssTestCase {
     cuss1 = new RangeCachedUrlSetSpec("foo/");
     assertFalse(cuss1.matches("foo"));// not ranged, should match prefix
     assertFalse(cuss1.matches("foobar"));
-    assertTrue(cuss1.matches("foo/bar"));
+    assertTrue(cuss1.matches("foo/bar")); // path separator in prefix
   }
 
   public void testMatchLower() {
@@ -164,9 +183,11 @@ public class TestRangeCachedUrlSetSpec extends LockssTestCase {
     assertFalse(cuss4.matches("bar/0"));
     assertTrue(cuss4.matches("bar/222"));
     assertTrue(cuss4.matches("bar/223"));
+    assertTrue(cuss4.matches("bar/3333"));
     assertTrue(cuss4.matches("bar/555"));
     assertTrue(cuss4.matches("bar/24"));
     assertFalse(cuss4.matches("bar/556"));
+    assertFalse(cuss4.matches("bar/5555"));
     assertFalse(cuss4.matches("bar/22"));
   }
 
@@ -210,6 +231,12 @@ public class TestRangeCachedUrlSetSpec extends LockssTestCase {
     assertFalse(cuss2.isDisjoint(new SingleNodeCachedUrlSetSpec("a/b/c")));
     assertFalse(cuss3.isDisjoint(new SingleNodeCachedUrlSetSpec("a/b/c")));
     assertFalse(cuss4.isDisjoint(new SingleNodeCachedUrlSetSpec("a/b/c")));
+
+    // child SNCUSS outside range is disjoint
+    assertTrue(cuss2.isDisjoint(new SingleNodeCachedUrlSetSpec("a/b/a")));
+    assertTrue(cuss3.isDisjoint(new SingleNodeCachedUrlSetSpec("a/b/e")));
+    assertTrue(cuss4.isDisjoint(new SingleNodeCachedUrlSetSpec("a/b/a")));
+    assertTrue(cuss4.isDisjoint(new SingleNodeCachedUrlSetSpec("a/b/e")));
 
     // not disjoint with self, nor with these overlapping ranges
     assertFalse(cuss1.isDisjoint(cuss1));
@@ -269,7 +296,7 @@ public class TestRangeCachedUrlSetSpec extends LockssTestCase {
     assertFalse(cuss2.isDisjoint(new RangeCachedUrlSetSpec("a/b/", "b",null)));
     assertFalse(cuss2.isDisjoint(new RangeCachedUrlSetSpec("a/b/", "d",null)));
     assertFalse(cuss2.isDisjoint(new RangeCachedUrlSetSpec("a/b/", "d", "e")));
-    assertFalse(cuss2.isDisjoint(new RangeCachedUrlSetSpec("a/b/", "d", "c")));
+    assertFalse(cuss2.isDisjoint(new RangeCachedUrlSetSpec("a/b/", "c", "d")));
     assertTrue(cuss2.isDisjoint(new RangeCachedUrlSetSpec("a/b/", null, "b")));
     assertTrue(cuss2.isDisjoint(new RangeCachedUrlSetSpec("a/b/", "a", "b")));
 
@@ -351,6 +378,11 @@ public class TestRangeCachedUrlSetSpec extends LockssTestCase {
     assertTrue(cuss1.subsumes(cuss2));
     assertTrue(cuss1.subsumes(cuss3));
     assertTrue(cuss1.subsumes(cuss4));
+
+    // range-restricted does not subsume non range-restricted at same node
+    assertFalse(cuss2.subsumes(cuss1));
+    assertFalse(cuss3.subsumes(cuss1));
+    assertFalse(cuss4.subsumes(cuss1));
 
     // any range-restricted subsumes itself
     assertTrue(cuss2.subsumes(cuss2));

@@ -1,5 +1,5 @@
 /*
- * $Id: RangeCachedUrlSetSpec.java,v 1.13 2003-06-09 21:47:16 aalto Exp $
+ * $Id: RangeCachedUrlSetSpec.java,v 1.14 2003-06-10 22:56:42 tal Exp $
  */
 
 /*
@@ -58,12 +58,17 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
    * null, the range is unbounded at the bottom.
    * @param upperBound upper boundary of the prefix range, inclusive.  If
    * null, the range is unbounded at the top.
-   * @throws NullPointerException if the prefix is null
+   * @throws NullPointerException if the prefix is null.
+   * @throws IllegalArgumentException if lower bound is greater than upper.
    */
   public RangeCachedUrlSetSpec(String urlPrefix,
 			       String lowerBound, String upperBound) {
     if (urlPrefix == null) {
       throw new NullPointerException("RangeCachedUrlSetSpec with null URL");
+    }
+    if (lowerBound != null && upperBound != null &&
+	lowerBound.compareTo(upperBound) > 0) {
+      throw new IllegalArgumentException("RangeCachedUrlSetSpec with lower bound > upper bound");
     }
     this.prefix = urlPrefix;
     this.upperBound = upperBound;
@@ -88,27 +93,24 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
    * that node.
    */
   public boolean matches(String url) {
-    if (!isInitialPathComponent(prefix, url)) {
+    if (!url.startsWith(prefix)) {
+      // Our prefix isn't an initial substring of url
       return false;
     }
-    // if url length is same, it's this node
-    if (url.length() == prefix.length()) {
+    int plen = prefix.length();
+    // if url length is same, it's this node, so matches if we're not range
+    // restricted
+    if (url.length() == plen) {
       return !isRangeRestricted();
     }
-    return inRange(url);
-  }
-
-  private boolean isInitialPathComponent(String path, String ofPath) {
-    // is initial path if starts with
-    if (!ofPath.startsWith(path)) {
+    // url is longer than prefix.  The suffix must be separated from the
+    // prefix by a path separator character
+    if ((prefix.charAt(plen-1) != UrlUtil.URL_PATH_SEPARATOR_CHAR) &&
+	(url.charAt(plen) != UrlUtil.URL_PATH_SEPARATOR_CHAR)) {
       return false;
-    } else {
-      // and next char is '/' (so 'foo' doesn't start 'foobar' but does 'foo/bar')
-      // or last char of path was '/'
-      return ((path.length() == ofPath.length()) ||
-              (path.charAt(path.length()-1) == UrlUtil.URL_PATH_SEPARATOR_CHAR) ||
-              (ofPath.charAt(path.length()) == UrlUtil.URL_PATH_SEPARATOR_CHAR));
     }
+    // and it must be within our range, if any.
+    return inRange(url);
   }
 
   /** @return false */
@@ -171,12 +173,14 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
       RangeCachedUrlSetSpec rspec = (RangeCachedUrlSetSpec)spec;
       if (prefix.equals(rspec.getUrl())) {
 	// same node, check range1 includes range2
-	String l1 = lowerBound;
-	String u1 = upperBound;
-	String l2 = rspec.getLowerBound();
-	String u2 = rspec.getUpperBound();
-	return (l1 == null || (l2 != null && l1.compareTo(l2) <= 0)) &&
-	  (u1 == null || (u2 != null && u1.compareTo(u2) >= 0));
+	String low1 = lowerBound;
+	String up1 = upperBound;
+	String low2 = rspec.getLowerBound();
+	String up2 = rspec.getUpperBound();
+	return ((low1 == null ||
+		 (low2 != null && low1.compareTo(low2) <= 0)) &&
+		(up1 == null ||
+		 (up2 != null && up1.compareTo(up2) >= 0)));
       } else {
 	// different node, subsumed if its root is in our set
 	return matches(rspec.getUrl());
@@ -261,21 +265,21 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
   }
 
   // Cache the concatenated bounds strings used by inRange()
-  String us;
-  String ls;
+  String upperString;
+  String lowerString;
 
-  private String getUs() {
-    if (us == null) {
-      us = prefix + upperBound;
+  private String getUpperString() {
+    if (upperString == null) {
+      upperString = prefix + upperBound;
     }
-    return us;
+    return upperString;
   }
 
-  private String getLs() {
-    if (ls == null) {
-      ls = prefix + lowerBound;
+  private String getLowerString() {
+    if (lowerString == null) {
+      lowerString = prefix + lowerBound;
     }
-    return ls;
+    return lowerString;
   }
 
   /**
@@ -285,12 +289,12 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
    */
   boolean inRange(String url) {
     if (upperBound != null) {
-      if (getUs().compareTo(url) < 0) { //url is lexographically greater
+      if (getUpperString().compareTo(url) < 0) {
 	return false;
       }
     }
     if (lowerBound != null) {
-      if (getLs().compareTo(url) > 0)  {
+      if (getLowerString().compareTo(url) > 0)  {
 	return false;
       }
     }
