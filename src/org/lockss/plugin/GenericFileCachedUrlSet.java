@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrlSet.java,v 1.41 2003-05-03 00:45:51 aalto Exp $
+ * $Id: GenericFileCachedUrlSet.java,v 1.42 2003-05-03 01:23:33 aalto Exp $
  */
 
 /*
@@ -211,7 +211,8 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
       MessageDigest hasher = LcapMessage.getDefaultHasher();
       CachedUrlSetHasher cush = contentHasherFactory(this, hasher);
       long bytesPerMs = 0;
-      SystemMetrics metrics = SystemMetrics.getSystemMetrics();
+      SystemMetrics metrics = (SystemMetrics)
+          LockssDaemon.getManager(LockssDaemon.SYSTEM_METRICS);
       try {
         bytesPerMs = metrics.getBytesPerMsHashEstimate(cush, hasher);
       } catch (IOException ie) {

@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSimulatedContent.java,v 1.33 2003-04-17 01:03:59 aalto Exp $
+ * $Id: FuncSimulatedContent.java,v 1.34 2003-05-03 01:23:33 aalto Exp $
  */
 
 /*
@@ -50,7 +50,7 @@ import org.lockss.state.HistoryRepositoryImpl;
  */
 public class FuncSimulatedContent extends LockssTestCase {
   private SimulatedArchivalUnit sau;
-  private MockLockssDaemon theDaemon = new MockLockssDaemon();
+  private MockLockssDaemon theDaemon;
 
   public FuncSimulatedContent(String msg) {
     super(msg);
@@ -59,27 +59,47 @@ public class FuncSimulatedContent extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    sau = new SimulatedArchivalUnit();
-    sau.setRootDir(tempDirPath);
-    String s = SystemMetrics.PARAM_HASH_TEST_DURATION + "=1000\n";
-    String s2 = SystemMetrics.PARAM_HASH_TEST_BYTE_STEP + "=1024\n";
-    String s3 = LockssRepositoryServiceImpl.PARAM_CACHE_LOCATION + "=" +
-        tempDirPath + "\n";
-    String s4 = HistoryRepositoryImpl.PARAM_HISTORY_LOCATION + "=" +
-        tempDirPath;
-    String configStr = s + s2 + s3 + s4;
-    TestConfiguration.setCurrentConfigFromString(configStr);
+    String tempDirPath2 = getTempDir().getAbsolutePath() + File.separator;
+    String auId = "org|lockss|plugin|simulated|SimulatedPlugin.root~" +
+        PropKeyEncoder.encode(tempDirPath);
+    String auId2 = "org|lockss|plugin|simulated|SimulatedPlugin.root~" +
+        PropKeyEncoder.encode(tempDirPath2);
+    Properties props = new Properties();
+    props.setProperty(SystemMetrics.PARAM_HASH_TEST_DURATION, "1000");
+    props.setProperty(SystemMetrics.PARAM_HASH_TEST_BYTE_STEP, "1024");
+    props.setProperty(LockssRepositoryServiceImpl.PARAM_CACHE_LOCATION,
+                      tempDirPath);
+    props.setProperty(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION,
+                      tempDirPath);
+    props.setProperty("org.lockss.au."+auId + ".root", tempDirPath);
+    props.setProperty("org.lockss.au."+auId + ".depth", "2");
+    props.setProperty("org.lockss.au."+auId + ".branch", "2");
+    props.setProperty("org.lockss.au."+auId + ".numFiles", "2");
+
+    props.setProperty("org.lockss.au."+auId2 + ".root", tempDirPath2);
+    props.setProperty("org.lockss.au."+auId2 + ".depth", "2");
+    props.setProperty("org.lockss.au."+auId2 + ".branch", "2");
+    props.setProperty("org.lockss.au."+auId2 + ".numFiles", "2");
+    ConfigurationUtil.setCurrentConfigFromProps(props);
+
+    theDaemon = new MockLockssDaemon();
+    theDaemon.setDaemonInited(true);
+    theDaemon.getPluginManager().startService();
+
     theDaemon.getLockssRepositoryService().startService();
-    theDaemon.getLockssRepository(sau);
-    theDaemon.getPluginManager();
-    theDaemon.getNodeManagerService();
-    theDaemon.getNodeManager(sau);
     theDaemon.getHistoryRepository().startService();
+    theDaemon.getNodeManagerService().startService();
+    theDaemon.getHashService();
+    sau = (SimulatedArchivalUnit)theDaemon.getPluginManager().getAllAUs().get(0);
+
+    theDaemon.getLockssRepository(sau);
+    theDaemon.getNodeManager(sau);
   }
 
   public void tearDown() throws Exception {
     theDaemon.getLockssRepositoryService().stopService();
     theDaemon.getNodeManagerService().stopService();
+    theDaemon.getPluginManager().stopService();
     super.tearDown();
   }
 
@@ -97,10 +117,7 @@ public class FuncSimulatedContent extends LockssTestCase {
     byte[] nameH = getHash(set, true);
     byte[] contentH = getHash(set, false);
 
-    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    sau = new SimulatedArchivalUnit();
-    sau.setRootDir(tempDirPath);
-    TestLockssRepositoryServiceImpl.configCacheLocation(tempDirPath);
+    sau = (SimulatedArchivalUnit)theDaemon.getPluginManager().getAllAUs().get(1);
     theDaemon.getLockssRepository(sau);
     theDaemon.getNodeManager(sau);
 
@@ -116,13 +133,11 @@ public class FuncSimulatedContent extends LockssTestCase {
 
   private void createContent() {
     SimulatedContentGenerator scgen = sau.getContentGenerator();
-    scgen.setTreeDepth(2);
-    scgen.setNumBranches(2);
-    scgen.setNumFilesPerBranch(2);
     scgen.setFileTypes(scgen.FILE_TYPE_HTML+scgen.FILE_TYPE_TXT);
     scgen.setAbnormalFile("1,1", 1);
     scgen.setOddBranchesHaveContent(true);
 
+    sau.deleteContentTree();
     sau.generateContentTree();
     assertTrue(scgen.isContentTree());
   }
@@ -232,16 +247,17 @@ public class FuncSimulatedContent extends LockssTestCase {
     }
     CachedUrlSet set = sau.getAUCachedUrlSet();
     CachedUrlSetHasher hasher = set.getContentHasher(dig);
-    SystemMetrics metrics = SystemMetrics.getSystemMetrics();
+    SystemMetrics metrics = theDaemon.getSystemMetrics();
     int estimate = metrics.getBytesPerMsHashEstimate(hasher, dig);
     assertTrue(estimate > 0);
+    long estimatedTime = set.estimatedHashDuration();
     long size = ((Long)PrivilegedAccessor.getValue(set, "totalNodeSize")).longValue();
     assertTrue(size > 0);
-    long estimatedTime = set.estimatedHashDuration();
     System.out.println("b/ms: "+estimate);
     System.out.println("size: "+size);
     System.out.println("estimate: "+estimatedTime);
-    assertEquals(size / estimate, estimatedTime);
+    assertEquals(estimatedTime,
+                 theDaemon.getHashService().padHashEstimate(size / estimate));
   }
 
   private void hashSet(boolean namesOnly) throws IOException {

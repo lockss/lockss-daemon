@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.24 2003-04-17 01:03:59 aalto Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.25 2003-05-03 01:23:33 aalto Exp $
  */
 
 /*
@@ -128,11 +128,11 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
   }
 
   public CachedUrl cachedUrlFactory(CachedUrlSet owner, String url) {
-    return new GenericFileCachedUrl(owner, checkUrlFormat(url));
+    return new GenericFileCachedUrl(owner, url);
   }
 
   public UrlCacher urlCacherFactory(CachedUrlSet owner, String url) {
-    return new SimulatedUrlCacher(owner, checkUrlFormat(url), fileRoot);
+    return new SimulatedUrlCacher(owner, url, fileRoot);
   }
 
   public String getName() {
@@ -154,7 +154,8 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
    * @return the root dir
    */
   public String getRootDir() {
-    return fileRoot; }
+    return fileRoot;
+  }
 
   /**
    * Returns the {@link SimulatedContentGenerator} for setting
@@ -212,23 +213,8 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
    * @return fileName the mapping result
    */
   public static String mapUrlToContentFileName(String url) {
-    String urlStr = checkUrlFormat(url);
-    urlStr = StringUtil.replaceString(urlStr, SIMULATED_URL_ROOT,
-                             SimulatedContentGenerator.ROOT_NAME);
-    return urlStr;
-  }
-
-  private static String checkUrlFormat(String url) {
-    int lastSlashIdx = url.lastIndexOf(File.separator);
-    int lastPeriodIdx = url.lastIndexOf(".");
-
-    if ((lastSlashIdx >= lastPeriodIdx) ||
-        (StringUtil.countOccurences(url, File.separator)==2)) {
-      StringBuffer buffer = new StringBuffer(url);
-      return buffer.toString();
-    } else {
-      return url;
-    }
+    return StringUtil.replaceString(url, SIMULATED_URL_ROOT,
+                                    SimulatedContentGenerator.ROOT_NAME);
   }
 
   public List getNewContentCrawlUrls() {
