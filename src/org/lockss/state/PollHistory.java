@@ -1,5 +1,5 @@
 /*
- * $Id: PollHistory.java,v 1.2 2002-12-05 00:06:36 aalto Exp $
+ * $Id: PollHistory.java,v 1.3 2002-12-05 00:10:51 aalto Exp $
  */
 
 /*
@@ -98,7 +98,7 @@ public class PollHistory {
 
   /**
    * Returns an Iterator of Votes.
-   * @return an Iterator of PollResults.Vote objects.
+   * @return an Iterator of Poll.Vote objects.
    */
   public Iterator getVotes() {
     return votes.iterator();
