@@ -1,5 +1,5 @@
 /*
- * $Id: TestReaderInputStream.java,v 1.3 2003-10-07 22:23:17 troberts Exp $
+ * $Id: TestReaderInputStream.java,v 1.3.28.1 2005-02-13 03:56:57 tlipkis Exp $
  */
 
 /*
@@ -83,5 +83,36 @@ public class TestReaderInputStream extends LockssTestCase {
       assertEquals(expected[ix], actual[ix+2]);
     }
     assertEquals(expected[5], is.read());
+  }
+
+  public void testClose() throws IOException {
+    String testStr = "Test string";
+    MyStringReader reader = new MyStringReader(testStr);
+    InputStream is = new ReaderInputStream(reader);
+    assertEquals('T', is.read());
+    assertFalse(reader.isClosed());
+    is.close();
+    assertTrue(reader.isClosed());
+    try {
+      int c = is.read();
+      fail("Stream shouldn't be readable after close()");
+    } catch (IOException e) {
+    }
+
+
+  }
+
+  class MyStringReader extends StringReader {
+    boolean isClosed = false;
+    MyStringReader(String s) {
+      super(s);
+    }
+    public void close() {
+      isClosed = true;
+      super.close();
+    }
+    boolean isClosed() {
+      return isClosed;
+    }
   }
 }
