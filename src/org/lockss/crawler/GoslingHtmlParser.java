@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlParser.java,v 1.21 2004-09-28 08:53:19 tlipkis Exp $
+ * $Id: GoslingHtmlParser.java,v 1.22 2004-10-04 20:58:30 troberts Exp $
  */
 
 /*
@@ -73,6 +73,7 @@ package org.lockss.crawler;
 import java.util.*;
 import java.net.*;
 import java.io.*;
+import org.htmlparser.util.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
 import org.lockss.config.Configuration;
@@ -202,6 +203,7 @@ public class GoslingHtmlParser implements ContentParser {
 
   /**
    * Read through the reader stream, extract and return the next url found
+   * (after decoding any html entities in it)
    *
    * @param reader Reader object to extract the link from
    * @return String representing the next url in reader
@@ -270,7 +272,8 @@ public class GoslingHtmlParser implements ContentParser {
 	  if (tagBuf != null && tagBuf.length() >= MIN_TAG_LENGTH) {
 	    String nextLink = parseLink(tagBuf);
 	    if (nextLink != null) {
-	      return nextLink;
+	      return Translate.decode(nextLink);
+// 	      return nextLink;
 	    }
 	  }
 	}
@@ -312,7 +315,7 @@ public class GoslingHtmlParser implements ContentParser {
   /**
    * Method to take a link tag, and parse out the URL it points to, returning
    * a string representation of the url (lifted and rewritten from the Gosling
-   * crawler)
+   * crawler), including the reference tag
    *
    * @param link StringBuffer containing the text of a link tag (everything
    * between < and > (ie, "a href=http://www.test.org")
@@ -393,7 +396,8 @@ public class GoslingHtmlParser implements ContentParser {
         return null;
     }
     if (returnStr != null) {
-      returnStr = StringUtil.truncateAt(returnStr, '#');
+//       returnStr = Translate.decode(returnStr);
+//       returnStr = StringUtil.truncateAt(returnStr, '#');
       if (isTrace) {
 	logger.debug3("Generating url from: " + srcUrl + " and " + returnStr);
       }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingHtmlParser.java,v 1.16 2004-05-17 17:46:57 troberts Exp $
+ * $Id: TestGoslingHtmlParser.java,v 1.17 2004-10-04 20:58:31 troberts Exp $
  */
 
 /*
@@ -160,10 +160,11 @@ public class TestGoslingHtmlParser extends LockssTestCase {
                          "<a\nhref=", "</a");
   }
 
-  public void testDoCrawlWithAmpInUrl() throws IOException {
-    singleTagShouldParse("http://www.example.com?pageid=pid&amp;parentid=parid&amp",
-                         "<a href=", "</a");
-  }
+//XXX this looks like it was testing the incorrect behavior
+//   public void testDoCrawlWithAmpInUrl() throws IOException {
+//     singleTagShouldParse("http://www.example.com?pageid=pid&amp;parentid=parid&amp",
+//                          "<a href=", "</a");
+//   }
 
 
   private void singleTagShouldParse(String url,
@@ -379,6 +380,25 @@ public class TestGoslingHtmlParser extends LockssTestCase {
 //     assertEquals(SetUtil.set(url, url2), parseSingleSource(source));
 //   }
 
+//   public void testNormalizeHash() throws MalformedURLException {
+//     assertEquals("http://www.bioone.org/bioone/?request=get-toc&issn=0044-7447&volume=32&issue=1",
+// 		 UrlUtil.normalizeUrl("http://www.bioone.org/bioone/?request=get-toc&#38;issn=0044-7447&#38;volume=32&issue=1"));
+//   }
+
+
+  public void testResolvedHtmlEntities()
+      throws IOException {
+    String url1=
+      "http://www.example.com/bioone/?"+
+      "request=get-toc&issn=0044-7447&volume=32&issue=1";
+
+    String source =
+      "<html><head><title>Test</title></head><body>"+
+      "<a href=http://www.example.com/bioone/?"+
+      "request=get-toc&#38;issn=0044-7447&#38;volume=32&issue=1>link1</a>";
+    assertEquals(SetUtil.set(url1), parseSingleSource(source));
+  }
+
   public void testInterpretatesBase() throws IOException {
     String url1= "http://www.example.com/link1.html";
     String url2= "http://www.example2.com/link2.html";
@@ -497,7 +517,7 @@ public class TestGoslingHtmlParser extends LockssTestCase {
   public void testRelativeLinksLocationTagsAndMultipleKeys()
       throws IOException {
     String url1= "http://www.example.com/link1.html";
-    String url2= "http://www.example.com/link2.html";
+    String url2= "http://www.example.com/link2.html#ref";
     String url3= "http://www.example.com/dir/link3.html";
 
     String source =
