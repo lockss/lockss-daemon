@@ -1,5 +1,5 @@
 /*
- * $Id: NodeStateImpl.java,v 1.15 2003-04-16 05:54:35 aalto Exp $
+ * $Id: NodeStateImpl.java,v 1.16 2003-04-23 00:54:47 aalto Exp $
  */
 
 /*
@@ -118,7 +118,7 @@ public class NodeStateImpl implements NodeState {
   }
 
   public boolean isInternalNode() {
-    return cus.flatSetIterator().hasNext();
+    return !cus.isLeaf();
   }
 
   protected void addPollState(PollState new_poll) {

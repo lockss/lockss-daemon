@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrlSet.java,v 1.32 2003-04-18 22:31:02 troberts Exp $
+ * $Id: MockCachedUrlSet.java,v 1.33 2003-04-23 00:54:46 aalto Exp $
  */
 
 /*
@@ -124,7 +124,10 @@ public class MockCachedUrlSet implements CachedUrlSet {
     if (isLeafIsSet) {
       return isLeaf;
     }
-    return ((flatSetIterator()==null) && (contentHashIterator()==null));
+    return (((flatIterator==null) || (!flatIterator.hasNext())) &&
+            ((hashIterator==null) || (!hashIterator.hasNext())) &&
+            ((flatSource==null) || (flatSource.size() == 0)) &&
+            ((hashSource==null) || (hashSource.size() == 0)));
   }
 
   public void setIsLeaf(boolean isLeaf) {
@@ -264,6 +267,8 @@ public class MockCachedUrlSet implements CachedUrlSet {
 
   /**
    * To be used when you want to set up a url that will throw an exception
+   * @param url the url
+   * @param cacheException the IOException to throw
    */
   public void addUrl(String url, IOException cacheException) {
     addUrl("", url, false, true, new Properties(), cacheException);
