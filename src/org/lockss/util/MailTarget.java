@@ -1,5 +1,5 @@
 /*
- * $Id: MailTarget.java,v 1.5 2003-03-29 20:25:38 tal Exp $
+ * $Id: MailTarget.java,v 1.6 2003-05-06 00:58:26 aalto Exp $
  */
 
 /*
@@ -45,35 +45,35 @@ import java.text.SimpleDateFormat;
  * Log target for email logging.  Utilizes SmtpMailer.
  */
 public class MailTarget {
+  static final String MAIL_PREFIX = Configuration.PREFIX +
+      "log.target.MailTarget.";
   /**
    * Configuration parameter for the smtp host.
    */
-  public static final String PARAM_SMTPHOST = Configuration.PREFIX + "smtphost";
+  public static final String PARAM_SMTPHOST = MAIL_PREFIX + "smtphost";
   /**
    * Configuration parameter for the smtp port.  Defaults to 25 if not provided.
    */
-  public static final String PARAM_SMTPPORT = Configuration.PREFIX + "smtpport";
+  public static final String PARAM_SMTPPORT = MAIL_PREFIX + "smtpport";
 
   /**
    * Configuration parameter for the log email 'to' address.
    */
-  public static final String PARAM_LOG_EMAIL_TO = Configuration.PREFIX +
-      "log.email.to";
+  public static final String PARAM_EMAIL_TO = MAIL_PREFIX + "email.to";
 
   /**
    * Configuration parameter for the log email 'from' address.
    */
-  public static final String PARAM_LOG_EMAIL_FROM = Configuration.PREFIX +
-      "log.email.from";
+  public static final String PARAM_EMAIL_FROM = MAIL_PREFIX + "email.from";
 
   /**
    * Configuration parameter to enable email logging.
    */
-  public static final String PARAM_LOG_EMAIL_ENABLED = Configuration.PREFIX +
-      "log.email.enabled";
+  public static final String PARAM_EMAIL_ENABLED = MAIL_PREFIX +
+      "email.enabled";
 
   static final int DEFAULT_SMTPPORT = 25;
-  static final boolean DEFAULT_ENABLING = true;
+  static final boolean DEFAULT_LOG_EMAIL_ENABLED = true;
   static final String ERROR_SUBJECT = "Error on machine ";
   static final DateFormat df = new SimpleDateFormat("HH:mm:ss.SSS");
 
@@ -130,16 +130,16 @@ public class MailTarget {
   private void loadConfiguration() {
     smtpHost = Configuration.getParam(PARAM_SMTPHOST);
     smtpPort = Configuration.getIntParam(PARAM_SMTPPORT, DEFAULT_SMTPPORT);
-    toAddr = Configuration.getParam(PARAM_LOG_EMAIL_TO);
-    fromAddr = Configuration.getParam(PARAM_LOG_EMAIL_FROM);
-    emailEnabled = Configuration.getBooleanParam(PARAM_LOG_EMAIL_ENABLED,
-        DEFAULT_ENABLING);
+    toAddr = Configuration.getParam(PARAM_EMAIL_TO);
+    fromAddr = Configuration.getParam(PARAM_EMAIL_FROM);
+    emailEnabled = Configuration.getBooleanParam(PARAM_EMAIL_ENABLED,
+        DEFAULT_LOG_EMAIL_ENABLED);
     if ((smtpHost==null) || (toAddr==null) || (fromAddr==null)) {
       String parameter = PARAM_SMTPHOST;
       if (toAddr==null) {
-        parameter = PARAM_LOG_EMAIL_TO;
+        parameter = PARAM_EMAIL_TO;
       } else if (fromAddr==null) {
-        parameter = PARAM_LOG_EMAIL_FROM;
+        parameter = PARAM_EMAIL_FROM;
       }
       logger.error("Couldn't determine "+parameter+
                    " from Configuration.  Disabling email logging...");

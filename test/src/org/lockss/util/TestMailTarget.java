@@ -45,8 +45,8 @@ public class TestMailTarget extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     String s = MailTarget.PARAM_SMTPHOST + "=1.2.3.4";
-    String s2 = MailTarget.PARAM_LOG_EMAIL_TO + "=target@t.com";
-    String s3 = MailTarget.PARAM_LOG_EMAIL_FROM + "=source@s.com";
+    String s2 = MailTarget.PARAM_EMAIL_TO + "=target@t.com";
+    String s3 = MailTarget.PARAM_EMAIL_FROM + "=source@s.com";
     TestConfiguration.setCurrentConfigFromUrlList(ListUtil.list(
         FileUtil.urlOfString(s), FileUtil.urlOfString(s2),
         FileUtil.urlOfString(s3)));
@@ -66,9 +66,9 @@ public class TestMailTarget extends LockssTestCase {
     //retesting without defaults
     String s = MailTarget.PARAM_SMTPHOST + "=1.2.3.5";
     String s2 = MailTarget.PARAM_SMTPPORT + "=24";
-    String s3 = MailTarget.PARAM_LOG_EMAIL_TO + "=target2@t.com";
-    String s4 = MailTarget.PARAM_LOG_EMAIL_FROM + "=source2@s.com";
-    String s5 = MailTarget.PARAM_LOG_EMAIL_ENABLED + "=false";
+    String s3 = MailTarget.PARAM_EMAIL_TO + "=target2@t.com";
+    String s4 = MailTarget.PARAM_EMAIL_FROM + "=source2@s.com";
+    String s5 = MailTarget.PARAM_EMAIL_ENABLED + "=false";
     TestConfiguration.setCurrentConfigFromUrlList(ListUtil.list(
         FileUtil.urlOfString(s), FileUtil.urlOfString(s2),
         FileUtil.urlOfString(s3), FileUtil.urlOfString(s4),
