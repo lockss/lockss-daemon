@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.103 2003-04-17 00:28:10 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.104 2003-04-17 00:51:17 claire Exp $
  */
 
 /*
@@ -73,6 +73,10 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
   NodeStateCache nodeCache;
   int maxCacheSize = DEFAULT_CACHE_SIZE;
   long recallDelay = DEFAULT_RECALL_DELAY;
+  /**
+   * the set nodes marked damaged.
+   */
+  TreeSet damagedNodes = new TreeSet();
 
   private static Logger logger = Logger.getLogger("NodeManager");
   TreeWalkHandler treeWalkHandler;
@@ -340,6 +344,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
           // if repair poll, we're repaired
           logger.debug2("won repair poll, state = repaired.");
           pollState.status = PollState.REPAIRED;
+          damagedNodes.remove(results.getCachedUrlSet().getUrl());
       }
       updateReputations(results);
     }
@@ -347,7 +352,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
       // if disagree
       if (pollState.getStatus() == PollState.REPAIRING) {
         logger.debug2("lost repair content poll, state = unrepairable");
-        // if repair poll, can't be repaired
+        // if repair poll, can't be repaired and we leave it our damaged table
         pollState.status = PollState.UNREPAIRABLE;
         updateReputations(results);
       } else {
@@ -611,7 +616,10 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     return PollState.ERR_UNDEFINED;
   }
 
+
   private void markNodeForRepair(CachedUrlSet cus, PollTally tally) {
+    logger.debug2("adding to damaged node list");
+    damagedNodes.add(cus.getUrl());
     logger.debug2("suspending poll " + tally.getPollKey());
     pollManager.suspendPoll(tally.getPollKey());
     logger.debug2("scheduling repair");
@@ -732,6 +740,19 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
 
   private boolean hasDamage(CachedUrlSet cus, int pollType) {
     boolean hasDamage = false;
+    synchronized(damagedNodes) {
+      if(damagedNodes.contains(cus.getUrl())) {
+        return true;
+      }
+      Iterator damagedIt = damagedNodes.iterator();
+      while(damagedIt.hasNext()) {
+        String url = (String) damagedIt.next();
+        if(cus.containsUrl(url)) {
+          return true;
+        }
+      }
+    }
+    /*
     Iterator childIt = null;
     switch (pollType) {
       case Poll.CONTENT_POLL:
@@ -759,6 +780,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
         return true;
       }
     }
+*/
     return hasDamage;
   }
 

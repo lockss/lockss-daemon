@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.67 2003-04-16 23:50:25 aalto Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.68 2003-04-17 00:51:17 claire Exp $
  */
 
 /*
@@ -231,10 +231,9 @@ public class TestNodeManagerImpl
                                             results));
 
     // if we have a damaged node we return false
-    ( (NodeStateImpl) node).closeActivePoll(new PollHistory(Poll.CONTENT_POLL,
-        "", "", PollHistory.UNREPAIRABLE, 200, 456, null, false));
-
+    nodeManager.damagedNodes.add(cus.getUrl());
     assertFalse(nodeManager.shouldStartPoll(cus, results));
+    nodeManager.damagedNodes.remove(cus.getUrl());
   }
 
   public void testHandleContentPoll() throws Exception {

@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.78 2003-04-16 23:50:25 aalto Exp $
+* $Id: PollManager.java,v 1.79 2003-04-17 00:51:17 claire Exp $
  */
 
 /*
@@ -267,9 +267,6 @@ public class PollManager  extends BaseLockssManager {
     Poll p = findPoll(msg);
     if (p != null) {
       p.receiveMessage(msg);
-    }
-    else {
-      theLog.info("Unable to create poll for Message: " + msg);
     }
   }
 

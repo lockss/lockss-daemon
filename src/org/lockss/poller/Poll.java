@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.66 2003-04-16 03:39:23 claire Exp $
+* $Id: Poll.java,v 1.67 2003-04-17 00:51:17 claire Exp $
  */
 
 /*
@@ -74,7 +74,7 @@ public abstract class Poll implements Serializable {
   static final int DEFAULT_MARGIN = 75;
   static final int DEFAULT_TRUSTED_MARGIN = 10;
   static final int DEFAULT_AGREE_VERIFY = 10;
-  static final int DEFAULT_DISAGREE_VERIFY = 90;
+  static final int DEFAULT_DISAGREE_VERIFY = 80;
   static final String[] ERROR_STRINGS = {"Poll Complete","Hash Schedule Error",
       "Hashing Error", "IO Error"
   };
@@ -486,7 +486,7 @@ public abstract class Poll implements Serializable {
 
       if(hash_completed)  {
         m_hash  = hasher.digest();
-        log.debug("Hash on " + urlset + " complete: "+
+        log.debug2("Hash on " + urlset + " complete: "+
                   String.valueOf(B64Code.encode(m_hash)));
         m_pollstate = PS_WAIT_VOTE;
 

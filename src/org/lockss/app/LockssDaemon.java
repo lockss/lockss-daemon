@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.21 2003-04-16 20:20:15 aalto Exp $
+ * $Id: LockssDaemon.java,v 1.22 2003-04-17 00:51:17 claire Exp $
  */
 
 /*
@@ -124,8 +124,6 @@ public class LockssDaemon {
     new ManagerDesc(STATUS_SERVICE, DEFAULT_STATUS_SERVICE),
     new ManagerDesc(URL_MANAGER, DEFAULT_URL_MANAGER),
     new ManagerDesc(HASH_SERVICE, DEFAULT_HASH_SERVICE),
-    new ManagerDesc(COMM_MANAGER, DEFAULT_COMM_MANAGER),
-    new ManagerDesc(ROUTER_MANAGER, DEFAULT_ROUTER_MANAGER),
     new ManagerDesc(IDENTITY_MANAGER, DEFAULT_IDENTITY_MANAGER),
     new ManagerDesc(POLL_MANAGER, DEFAULT_POLL_MANAGER),
     new ManagerDesc(LOCKSS_REPOSITORY_SERVICE,
@@ -138,6 +136,9 @@ public class LockssDaemon {
     // start proxy and servlets after plugin manager
     new ManagerDesc(SERVLET_MANAGER, DEFAULT_SERVLET_MANAGER),
     new ManagerDesc(PROXY_MANAGER, DEFAULT_PROXY_MANAGER),
+    // start comm layer so we don't receive a message
+    new ManagerDesc(COMM_MANAGER, DEFAULT_COMM_MANAGER),
+    new ManagerDesc(ROUTER_MANAGER, DEFAULT_ROUTER_MANAGER),
   };
 
   private static Logger log = Logger.getLogger("LockssDaemon");
