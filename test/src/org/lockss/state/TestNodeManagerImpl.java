@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.82 2003-05-30 01:58:32 aalto Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.83 2003-06-03 21:10:46 aalto Exp $
  */
 
 /*
@@ -537,23 +537,22 @@ public class TestNodeManagerImpl extends LockssTestCase {
   public void testHandleAuPolls() throws Exception {
     // have to change the AUCUS for the MockArchivalUnit here
     // to properly test handling AuNode content polls
-    String auUrl = AuUrl.PROTOCOL_COLON;
-    MockCachedUrlSet mcus = (MockCachedUrlSet) getCUS(mau, auUrl);
+    MockCachedUrlSet mcus = (MockCachedUrlSet) getCUS(mau,
+        new AUCachedUrlSetSpec());
     Vector auChildren = new Vector();
     mcus.setFlatItSource(auChildren);
     mau.setAUCachedUrlSet(mcus);
 
     nodeManager.createNodeState(mcus);
 
-    contentPoll = createPoll(auUrl, true, true, 15, 5);
+    contentPoll = createPoll(mcus.getUrl(), true, true, 15, 5);
     PollTally results = contentPoll.getVoteTally();
     PollSpec spec = results.getPollSpec();
 
     AuState auState = nodeManager.getAuState();
-    assertEquals( -1, auState.getLastTopLevelPollTime());
+    assertEquals(-1, auState.getLastTopLevelPollTime());
 
-    NodeStateImpl nodeState = (NodeStateImpl)
-        nodeManager.getNodeState(getCUS(mau, auUrl));
+    NodeStateImpl nodeState = (NodeStateImpl)nodeManager.getNodeState(mcus);
     // test that error polls don't update last poll time
     PollState pollState = new PollState(results.getType(),
                                         spec.getLwrBound(),
@@ -568,7 +567,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
 
     // test that a finished top-level poll sets the time right
     TimeBase.setSimulated(TimeBase.nowMs());
-    nodeState = (NodeStateImpl)nodeManager.getNodeState(getCUS(mau, auUrl));
+    nodeState = (NodeStateImpl)nodeManager.getNodeState(mcus);
     pollState = new PollState(results.getType(),
                               spec.getLwrBound(),
                               spec.getUprBound(),
@@ -587,7 +586,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     mcus.setFlatItSource(auChildren);
 
     // test that won name poll calls content polls on Au children
-    contentPoll = createPoll(auUrl, false, true, 15, 5);
+    contentPoll = createPoll(mcus.getUrl(), false, true, 15, 5);
     results = contentPoll.getVoteTally();
     MockCachedUrlSet mcus2 = (MockCachedUrlSet) results.getCachedUrlSet();
     Vector subFiles = new Vector(2);
@@ -833,8 +832,12 @@ public class TestNodeManagerImpl extends LockssTestCase {
     }
   }
 
-  static CachedUrlSet getCUS(MockArchivalUnit mau, String url) throws Exception {
+  static CachedUrlSet getCUS(MockArchivalUnit mau, String url) {
     return new MockCachedUrlSet(mau, new RangeCachedUrlSetSpec(url));
+  }
+
+  static CachedUrlSet getCUS(MockArchivalUnit mau, CachedUrlSetSpec spec) {
+    return new MockCachedUrlSet(mau, spec);
   }
 
   static CachedUrlSet makeFakeCachedUrlSet(MockArchivalUnit mau,

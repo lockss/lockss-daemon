@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.129 2003-06-03 00:06:03 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.130 2003-06-03 21:10:46 aalto Exp $
  */
 
 /*
@@ -264,7 +264,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     int status;
 
     // if this is a ranged poll (and not an SNCUSS), don't change NodeState
-    if (isRangedSpec(cus.getSpec())) {
+    if (cus.getSpec().isRangeRestricted()) {
       if (isReplayPoll) {
         status = PollState.REPAIRING;
       } else {
@@ -387,7 +387,8 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
                                               + "non-existent poll.");
     }
 
-    boolean isRangedPoll = isRangedSpec(results.getCachedUrlSet().getSpec());
+    boolean isRangedPoll =
+        results.getCachedUrlSet().getSpec().isRangeRestricted();
     int lastState = -1;
 
     if (!isRangedPoll) {
@@ -468,7 +469,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
       // if this is an AU top-level content poll
       // update the AuState to indicate the poll is finished if it has
       // the proper status
-      if (isTopLevelPollFinished(nodeState.getCachedUrlSet().getUrl(),
+      if (isTopLevelPollFinished(nodeState.getCachedUrlSet().getSpec(),
                                pollState.getType(), pollState.getStatus())) {
         getAuState().newPollFinished();
         logger.info("Top level poll finished.");
@@ -602,7 +603,8 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     logger.debug("handling content poll results: " + results);
 
     // only update NodeState if not ranged poll
-    boolean isRangedPoll = isRangedSpec(results.getCachedUrlSet().getSpec());
+    boolean isRangedPoll =
+        results.getCachedUrlSet().getSpec().isRangeRestricted();
 
     if (results.getStatus() == PollTally.STATE_WON) {
       // if agree
@@ -659,7 +661,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
         updateReputations(results);
       } else {
         // otherwise, schedule repair (if SNCUS) or name poll
-        if (isSingleNodeSpec(results.getCachedUrlSet().getSpec())) {
+        if (results.getCachedUrlSet().getSpec().isSingleNode()) {
           logger.debug2("lost single node content poll, marking for repair.");
           // if leaf node, we need to repair
           pollState.status = PollState.REPAIRING;
@@ -700,7 +702,8 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     logger.debug2("handling name poll results " + results);
 
     // only update NodeState if not ranged poll
-    boolean isRangedPoll = isRangedSpec(results.getCachedUrlSet().getSpec());
+    boolean isRangedPoll =
+        results.getCachedUrlSet().getSpec().isRangeRestricted();
 
     if (results.getStatus() == PollTally.STATE_WON) {
       // if agree
@@ -861,9 +864,14 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
                 return true;
               } else {
                 logger.debug2("Unfinished poll's duration not elapsed, so not"+
-                              "recalling.");
+                              " recalling.");
               }
+            } else {
+              logger.debug2("Unfinished poll already running, so not"+
+                            " recalling.");
             }
+          } else {
+            logger.debug2("Unfinished poll not mine, so not recalling.");
           }
         }
         return false;
@@ -963,7 +971,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
       case NodeState.INITIAL:
       case NodeState.OK:
         // check time, switch to NEEDS_POLL if necessary and call toplevel poll
-        if (AuUrl.isAuUrl(nodeState.getCachedUrlSet().getUrl())) {
+        if (nodeState.getCachedUrlSet().getSpec().isAU()) {
           // query the AU if a top level poll should be started
           if (managedAu.shouldCallTopLevelPoll(auState)) {
             if (!reportOnly) {
@@ -983,7 +991,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
                            CachedUrlSetSpec spec) {
     boolean isContent = poll.getType()==Poll.CONTENT_POLL;
     boolean isName = poll.getType()==Poll.NAME_POLL;
-    boolean isSNCUSS = isSingleNodeSpec(spec);
+    boolean isSNCUSS = spec.isSingleNode();
     // these have to be fairly open-ended to permit error states
     boolean notRunning = poll.getStatus() != PollState.RUNNING;
     boolean notRepairing = poll.getStatus() != PollState.REPAIRING;
@@ -1417,22 +1425,8 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     return set;
   }
 
-  /**
-   * Returns true if the spec is ranged (and not a SNCUSS).
-   * @param spec the spec
-   * @return true iff ranged
-   */
-  public static boolean isRangedSpec(CachedUrlSetSpec spec) {
-    return ((spec instanceof RangeCachedUrlSetSpec) &&
-        (((RangeCachedUrlSetSpec)spec).getLowerBound() != null));
-  }
-
-  public static boolean isSingleNodeSpec(CachedUrlSetSpec spec) {
-    return (spec instanceof SingleNodeCachedUrlSetSpec);
-  }
-
-  boolean isTopLevelPollFinished(String url, int type, int status) {
-    return (AuUrl.isAuUrl(url) && (type == Poll.CONTENT_POLL) &&
+  boolean isTopLevelPollFinished(CachedUrlSetSpec spec, int type, int status) {
+    return (spec.isAU() && (type == Poll.CONTENT_POLL) &&
             ((status==PollState.WON) || (status==PollState.LOST)));
   }
 

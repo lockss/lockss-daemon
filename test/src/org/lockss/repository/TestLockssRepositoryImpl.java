@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.31 2003-06-03 00:07:36 aalto Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.32 2003-06-03 21:10:46 aalto Exp $
  */
 
 /*
@@ -215,22 +215,15 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     cus2 = new MockCachedUrlSet(mau, spec2);
     assertEquals(LockssRepository.ABOVE, repo.cusCompare(cus1, cus2));
 
-    spec1 = new RangeCachedUrlSetSpec("http://www.example.com/test");
-    spec2 = new RangeCachedUrlSetSpec("http://www.example.com/test/");
+    spec1 = new RangeCachedUrlSetSpec("http://www.example.com/test", "/a", "/b");
+    spec2 = new RangeCachedUrlSetSpec("http://www.example.com/test", "/c", "/d");
     cus1 = new MockCachedUrlSet(mau, spec1);
     cus2 = new MockCachedUrlSet(mau, spec2);
-    Vector v = new Vector(2);
-    v.addElement("test 1");
-    v.addElement("test 2");
-    Vector v2 = new Vector(1);
-    v2.addElement("test 3");
-    cus1.setFlatItSource(v);
-    cus2.setFlatIterator(v2.iterator());
     assertEquals(LockssRepository.SAME_LEVEL_NO_OVERLAP,
                  repo.cusCompare(cus1, cus2));
 
-    v2.addElement("test 2");
-    cus2.setFlatIterator(v2.iterator());
+    spec2 = new RangeCachedUrlSetSpec("http://www.example.com/test", "/b", "/d");
+    cus2 = new MockCachedUrlSet(mau, spec2);
     assertEquals(LockssRepository.SAME_LEVEL_OVERLAP,
                  repo.cusCompare(cus1, cus2));
 
@@ -246,31 +239,21 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     cus1 = new MockCachedUrlSet(mau, spec1);
     cus2 = new MockCachedUrlSet(mau, spec2);
     assertEquals(LockssRepository.SAME_LEVEL_NO_OVERLAP, repo.cusCompare(cus1, cus2));
-
-    spec1 = new RangeCachedUrlSetSpec("http://www.example.com/test");
-    spec2 = new SingleNodeCachedUrlSetSpec("http://www.example.com");
-    cus1 = new MockCachedUrlSet(mau, spec1);
-    cus2 = new MockCachedUrlSet(mau, spec2);
-    assertEquals(LockssRepository.SAME_LEVEL_NO_OVERLAP, repo.cusCompare(cus1, cus2));
+    // reverse
+    assertEquals(LockssRepository.SAME_LEVEL_NO_OVERLAP, repo.cusCompare(cus2, cus1));
 
     // test for Au urls
-    spec1 = new RangeCachedUrlSetSpec(AuUrl.PROTOCOL_COLON);
-    spec2 = new RangeCachedUrlSetSpec(AuUrl.PROTOCOL_COLON);
+    spec1 = new AUCachedUrlSetSpec();
+    spec2 = new AUCachedUrlSetSpec();
     cus1 = new MockCachedUrlSet(mau, spec1);
     cus2 = new MockCachedUrlSet(mau, spec2);
     assertEquals(LockssRepository.SAME_LEVEL_OVERLAP, repo.cusCompare(cus1, cus2));
 
-    spec1 = new RangeCachedUrlSetSpec(AuUrl.PROTOCOL_COLON);
     spec2 = new RangeCachedUrlSetSpec("http://www.example.com");
-    cus1 = new MockCachedUrlSet(mau, spec1);
     cus2 = new MockCachedUrlSet(mau, spec2);
     assertEquals(LockssRepository.ABOVE, repo.cusCompare(cus1, cus2));
-
-    spec1 = new RangeCachedUrlSetSpec("http://www.example.com");
-    spec2 = new RangeCachedUrlSetSpec(AuUrl.PROTOCOL_COLON);
-    cus1 = new MockCachedUrlSet(mau, spec1);
-    cus2 = new MockCachedUrlSet(mau, spec2);
-    assertEquals(LockssRepository.BELOW, repo.cusCompare(cus1, cus2));
+    // reverse
+    assertEquals(LockssRepository.BELOW, repo.cusCompare(cus2, cus1));
 
     // test for different AUs
     spec1 = new RangeCachedUrlSetSpec("http://www.example.com");
@@ -291,6 +274,7 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     cus1 = new MockCachedUrlSet(mau, spec1);
     // this range is exclusive, so should be no relation
     assertEquals(LockssRepository.NO_RELATION, repo.cusCompare(cus1, cus2));
+    // reverse
     assertEquals(LockssRepository.NO_RELATION, repo.cusCompare(cus2, cus1));
   }
 
