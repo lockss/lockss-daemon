@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.127 2005-01-10 06:23:34 smorabito Exp $
+ $Id: build.xml,v 1.128 2005-01-12 02:21:43 dcfok Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -162,7 +162,7 @@ Args:
   <property name="htmlparser.jar"  value="${lib}/htmlparser.jar"/>
   <property name="rdf.jar" value="${lib}/rdf-api-2001-01-19.jar" /> <!-- W3C RDF Parser -->
   <!-- Needed by OAI harvester -->
-  <!--  <property name="oai-harvester.jar" value="${lib}/harvester2.jar"/> -->
+  <property name="oai-harvester.jar" value="${lib}/harvester2-mod.jar"/>
   <property name="xalan.jar" value="${lib}/xalan.jar"/>
 
   <property name="junit.jar"      value="${test.lib}/junit.jar"/>
@@ -224,7 +224,7 @@ Args:
     <pathelement path="${htmlparser.jar}" />
     <pathelement path="${rdf.jar}" />
     <!-- jars need to run the Oai harvester -->
-    <!-- <pathelement path="${oai-harvester.jar}" /> -->
+    <pathelement path="${oai-harvester.jar}" />
     <pathelement path="${xalan.jar}" />
   </path>
 

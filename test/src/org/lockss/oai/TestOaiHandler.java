@@ -1,5 +1,5 @@
 /*
- * $Id: TestOaiRecords.java,v 1.1 2004-12-18 01:44:56 dcfok Exp $
+ * $Id: TestOaiHandler.java,v 1.1 2005-01-12 02:21:40 dcfok Exp $
  */
 
 /*
@@ -48,9 +48,9 @@ import java.io.IOException;
 import org.xml.sax.SAXException;
 
 /**
- * Test cases for OaiRecords.java
+ * Test cases for OaiHandler.java
  */
-public class TestOaiRecords extends LockssTestCase {
+public class TestOaiHandler extends LockssTestCase {
 
   private OaiRequestData oaiData;
   
@@ -65,7 +65,7 @@ public class TestOaiRecords extends LockssTestCase {
 
   private int retries = 3;
 
-  private OaiRecords records;
+  private OaiHandler oaiHandler;
   
   public void setUp() throws Exception {
     super.setUp();
@@ -74,28 +74,28 @@ public class TestOaiRecords extends LockssTestCase {
 
   public void testNullParameter(){
     try {
-      records = new OaiRecords( (OaiRequestData) null, fromDate, untilDate, retries);
-      fail("OaiRecords with null OaiRequestData should throw");
+      oaiHandler = new OaiHandler( (OaiRequestData) null, fromDate, untilDate, retries);
+      fail("OaiHandler with null OaiRequestData should throw");
     } catch (NullPointerException e) { }
     try {
-      records = new OaiRecords( oaiData , (String) null , untilDate, retries);
-      fail("OaiRecords with null fromDate should throw");
+      oaiHandler = new OaiHandler( oaiData , (String) null , untilDate, retries);
+      fail("OaiHandler with null fromDate should throw");
     } catch (NullPointerException e) { }
     try {
-      records = new OaiRecords( oaiData , fromDate , (String) null, retries);
-      fail("OaiRecords with null untilDate should throw");
+      oaiHandler = new OaiHandler( oaiData , fromDate , (String) null, retries);
+      fail("OaiHandler with null untilDate should throw");
     } catch (NullPointerException e) { }    
   
   }
 
   public void testGetErrorMockListRecords(){
-    records =  new MyMockOaiRecords( oaiData, fromDate, untilDate, retries);
+    oaiHandler =  new MyMockOaiHandler( oaiData, fromDate, untilDate, retries);
     
     
   }
 
   /**
-   * there are 4 parts in the OaiRecords
+   * there are 4 parts in the OaiHandler
    * 1. constructing and issuing an OAI request
    * 2. retriving the response and check for error
    * 3. parse the response for urls
@@ -111,11 +111,11 @@ public class TestOaiRecords extends LockssTestCase {
    */
 
 
-  // MockOaiRecords class to test listRecords.getErrors()
-  private class MyMockOaiRecords extends OaiRecords {
-    //private Logger logger = Logger.getLogger("MyMockOaiRecords");
+  // MockOaiHandler class to test listRecords.getErrors()
+  private class MyMockOaiHandler extends OaiHandler {
+
   
-    public MyMockOaiRecords(OaiRequestData oaiData, String fromDate, String untilDate, int retries ){
+    public MyMockOaiHandler(OaiRequestData oaiData, String fromDate, String untilDate, int retries ){
       super(oaiData, fromDate, untilDate, retries);    
     }
     
@@ -158,7 +158,7 @@ public class TestOaiRecords extends LockssTestCase {
   }
 
   public static void main(String[] argv) {
-    String[] testCaseList = {TestOaiRecords.class.getName()};
+    String[] testCaseList = {TestOaiHandler.class.getName()};
     junit.textui.TestRunner.main(testCaseList);
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: OaiRecords.java,v 1.1 2004-12-18 01:44:57 dcfok Exp $
+ * $Id: OaiHandler.java,v 1.1 2005-01-12 02:21:41 dcfok Exp $
  */
 
 /*
@@ -54,7 +54,7 @@ import java.io.IOException;
 import org.xml.sax.SAXException;
 
 /**   
- * there are 4 parts in the OaiRecords
+ * there are 4 parts in the OaiHandler
  * 1. constructing and issuing an OAI request
  * 2. retriving the response and check for error
  * 3. parse the response for urls
@@ -62,19 +62,24 @@ import org.xml.sax.SAXException;
  *    with resumptionToken in OAI request
  *
  */
-public class OaiRecords {
+public class OaiHandler {
 
-  protected static Logger logger = Logger.getLogger("OaiRecords");
+  protected static Logger logger = Logger.getLogger("OaiHandler");
   private Set updatedUrls = new HashSet();
   protected String queryString = null;
   private ListRecords listRecords = null;
   private String baseUrl;
   private int retries = 0;
   private int maxRetries;
+  private OaiRequestData oaiData;
+  private String fromDate;
+  private String untilDate;
 
   // the latest error is at the beginning of the list
   private LinkedList errList = new LinkedList();
   
+  // the root node of all the oai records retrieved in this request
+  private Set oaiRecords = new HashSet();
 
    /**
    * Constructor
@@ -83,7 +88,7 @@ public class OaiRecords {
    * @param untilDate create date of records the Oai request want until
    * @param maxRetrues retry limit of oai request when retriable error is encountered
    */
-  public OaiRecords(OaiRequestData oaiData, String fromDate, String untilDate, int maxRetries) {
+  public OaiHandler(OaiRequestData oaiData, String fromDate, String untilDate, int maxRetries) {
 
     if (fromDate == null) {
       throw new NullPointerException("Called with null fromDate");
@@ -91,9 +96,22 @@ public class OaiRecords {
       throw new NullPointerException("Called with null untilDate");
     }
     
+    this.oaiData = oaiData;
+    this.fromDate = fromDate;
+    this.untilDate = untilDate;
     this.maxRetries = maxRetries;
 
     listRecords = createListRecords(oaiData, fromDate, untilDate);
+    processListRecords(listRecords);
+  }
+  
+  /**
+   * Read varies things off the ListRecords
+   * 1. check for error in creating ListRecords
+   * 2. get all the information we need from the ListRecords
+   * 3. create another ListRecords if there is a resumptionToken
+   */
+  protected void processListRecords(ListRecords listRecords){
 
     while (listRecords != null) {
       
@@ -128,7 +146,7 @@ public class OaiRecords {
 	    //      logger.debug3(nodeToString(item));
 	  }
 
-	  logger.debug3("Error record: " + listRecords.toString());
+	  logger.debug3("Error record: " + listRecords.toString() );
 
 	  break; //apart from badResumptionToken, we cannot do much of other error case, thus just break
 	}
@@ -137,45 +155,47 @@ public class OaiRecords {
       }
       
       //see what is inside the response
-      logger.debug3("The content of listRecord : \n" + listRecords.toString());
- 
+      logger.debug3("The content of listRecord : \n" + listRecords.toString() );
+
+      //collect all the oai records
+      collectOaiRecords(); //XXX info collected is not being used now, 
+                           //can turn off to increase performance
+
       //======= this should be in another object, 
       // (some kind of interface to support different metadata format) ==============
 
       //parse URLs out from the Oai response 
-      try {
-
-	// xpath experssion that parse through the doc and extract all the links in <dc:identifier> 
-	// XXX we can let the publisher design the path/metadataFormat in the future version
-	String xpath = "//*[namespace-uri()='"+ oaiData.getMetadataNamespaceUrl() + "' and local-name()='"+ oaiData.getUrlContainerTagName() +"']";
-	logger.debug3("xpath to get the Urls = " + xpath);
+// 	NodeList nodeList = 
+// 	  listRecords.getDocument().getElementsByTagNameNS(oaiData.getMetadataNamespaceUrl(), 
+// 							   oaiData.getUrlContainerTagName());
 	
-	//XXX potentially we can get rid of XPath and use 
-	// NodeList nodeList = 
-	//   listRecords.getDocument().getElementsByTagNameNS(oaiData.getMetadataNamespaceUrl(), oaiData.getUrlContainerTagName());
-	NodeList nodeList = listRecords.getNodeList(xpath);
-	logger.debug3("nodeList length = " + nodeList.getLength());
+// 	logger.debug3("nodeList length = " + nodeList.getLength());
 
-	// Process the elements in the nodelist
-        for (int i=0; i<nodeList.getLength(); i++) {
-          // add the Urls to the updatedUrls set
-	  Node node = nodeList.item(i);
-	  if (node != null) {
-	    //XXX potentially we can use 
-	    //  String str = node.getNodeValue();
+// 	// Process the elements in the nodelist
+//         for (int i=0; i<nodeList.getLength(); i++) {
+//           // add the Urls to the updatedUrls set
+// 	  Node node = nodeList.item(i);
+// 	  if (node != null) {
 
-	    XObject xObject = XPathAPI.eval(node, "string()");
-	    String str = xObject.str();
-	    //do not validate url here, let the crawler handle malform Url
-	    updatedUrls.add(str);
-	    logger.debug3("node (" + i + ") value = " + str);
-	  }
-        }
-      } catch (TransformerException e) {
-	logError("In calling getNodeList" , e);
-      }
+// 	    String str = node.getFirstChild().getNodeValue();
+
+// 	    //do not validate url here, let the crawler handle malform Url
+// 	    updatedUrls.add(str);
+// 	    logger.debug3("node (" + i + ") value = " + str);
+// 	    logger.debug3("in xml :" + nodeToString(node) );
+// 	  }
+//         }
 
       //==============================================================================
+	NodeList metadataNodeList = 
+	  listRecords.getDocument().getElementsByTagName("metadata");
+	
+	OaiMetadataHandler metadataHandler = oaiData.getMetadataHandler();
+
+	metadataHandler.setupAndExecute(metadataNodeList);
+
+	updatedUrls.addAll(metadataHandler.getArticleUrls());
+      //======================================================================
 
       //see if all the records are include in the response by checking the presence of
       //resumptionToken. If there is more records, request them by resumptionToken
@@ -204,6 +224,10 @@ public class OaiRecords {
     } //loop until there is no resumptionToken
   }
 
+ /**
+  * By create a ListRecords, an Oai request is issued and the response is also 
+  * store in the ListRecords object.
+  */
   protected ListRecords createListRecords(
 	    OaiRequestData oaiData, String fromDate, String untilDate){
     baseUrl = oaiData.getOaiRequestHandlerUrl();
@@ -254,6 +278,27 @@ public class OaiRecords {
    */
   public Set getUpdatedUrls(){
     return updatedUrls;
+  }
+
+  private void collectOaiRecords(){
+    NodeList nodeList = listRecords.getDocument().getElementsByTagName("record");
+    for (int i=0; i<nodeList.getLength(); i++) {
+      Node node = nodeList.item(i);
+      if (node != null) {
+	oaiRecords.add(node);
+	logger.debug3("Record ("+ i +") :" + nodeToString(node));
+      }
+    }
+  }
+
+  /**
+   * return all the <record> nodes in the oai response
+   * each element in the Set is of class "org.w3c.dom.Node".
+   *
+   * @return the set of <record> nodes
+   */
+  public Set getOaiRecords(){
+    return oaiRecords;
   }
 
   /**

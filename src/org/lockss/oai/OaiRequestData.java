@@ -1,5 +1,5 @@
 /*
- * $Id: OaiRequestData.java,v 1.2 2004-12-18 01:44:57 dcfok Exp $
+ * $Id: OaiRequestData.java,v 1.3 2005-01-12 02:21:41 dcfok Exp $
  */
 
 /*
@@ -44,6 +44,8 @@ public class OaiRequestData {
   private String auSetSpec;
   private String metadataPrefix;
   
+  private OaiMetadataHandler metadataHandler= null;
+
   /**
    * Constructor
    *
@@ -76,7 +78,36 @@ public class OaiRequestData {
     this.auSetSpec = setSpec;
     this.metadataPrefix = prefix;
   }
-  
+
+  /**
+   * Constructor with the knowledge of metadata handler
+   *
+   * @param oaiRequestHandlerUrl Oai request handler URL of an Oai repository
+   * @param namespaceUrl metadata name space that the Oai reponse record using
+   * @param tagName XML tag name that contain an articules' URL
+   * @param setSpec Set name an articles belongs to
+   * @param prefix metadata prefix of Oai reponse record (e.g. oai_dc)
+   */
+  public OaiRequestData(String oaiRequestHandlerUrl,
+			String setSpec,
+			OaiMetadataHandler metadataHandler) { 
+    if (oaiRequestHandlerUrl == null) {
+      throw new IllegalArgumentException("Called with null Oai request handler Url");
+    } else if (setSpec == null) {
+      throw new IllegalArgumentException("Called with null url container tag name");
+    } else if (metadataHandler == null) {
+      throw new IllegalArgumentException("Called with null metadataHandler");
+    }
+    this.oaiRequestHandlerUrl = oaiRequestHandlerUrl;
+    this.auSetSpec = setSpec;
+    this.metadataHandler = metadataHandler;
+    this.metadataPrefix = metadataHandler.getMetadataPrefix();
+  }
+
+  public OaiMetadataHandler getMetadataHandler(){
+    return metadataHandler;
+  }
+
   /** 
    * Gets the OaiRequestHandlerUrl
    */

@@ -1,5 +1,5 @@
 /*
- * $Id: OaiCrawler.java,v 1.3 2004-12-18 01:44:57 dcfok Exp $
+ * $Id: OaiCrawler.java,v 1.4 2005-01-12 02:21:42 dcfok Exp $
  */
 
 /*
@@ -57,7 +57,7 @@ import java.text.SimpleDateFormat;
 public class OaiCrawler extends FollowLinkCrawler {
 
   private static final String PARAM_OAI_REQUEST_RETRY_TIMES =
-    Configuration.PREFIX + "OaiRecords.numOaiRequestRetries";
+    Configuration.PREFIX + "OaiHandler.numOaiRequestRetries";
   private static final int DEFAULT_OAI_REQUEST_RETRY_TIMES = 3;
 
   private int maxOaiRetries = DEFAULT_OAI_REQUEST_RETRY_TIMES;
@@ -113,10 +113,10 @@ public class OaiCrawler extends FollowLinkCrawler {
      Set extractedUrls = new HashSet();
      OaiRequestData oaiRequestData = spec.getOaiRequestData();
      
-     OaiRecords oaiRecords = 
-       new OaiRecords(oaiRequestData, getFromTime(), getUntilTime(), maxOaiRetries);
+     OaiHandler oaiHandler = 
+       new OaiHandler(oaiRequestData, getFromTime(), getUntilTime(), maxOaiRetries);
      
-     List errList = oaiRecords.getErrors();
+     List errList = oaiHandler.getErrors();
      if ( !errList.isEmpty() ){
        crawlStatus.setCrawlError("Error in processing Oai Records");
        //we might want to add this Oai Error List to crawl Status as well.
@@ -128,7 +128,7 @@ public class OaiCrawler extends FollowLinkCrawler {
        }
      }
 
-     Set updatedUrls = oaiRecords.getUpdatedUrls();
+     Set updatedUrls = oaiHandler.getUpdatedUrls();
      if ( updatedUrls.isEmpty() ) {
        logger.warning("No url found in the OAI reponse ! ");
      } else {
@@ -184,7 +184,8 @@ public class OaiCrawler extends FollowLinkCrawler {
    * getting the last crawl time from AuState of the current AU
    * 
    * //XXX noted: OAI protocol just enforce day granularity, we still need
-   * to check if-modified-since 
+   * to check if-modified-since. we need to implement a better getTime 
+   * method in aus to make it oai crawler work correctly.
    */  
   protected String getFromTime(){
     Date lastCrawlDate = new Date(aus.getLastCrawlTime());

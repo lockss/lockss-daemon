@@ -1,5 +1,5 @@
 /*
- * $Id: MockListRecords.java,v 1.1 2004-12-18 01:44:55 dcfok Exp $
+ * $Id: MockListRecords.java,v 1.2 2005-01-12 02:21:39 dcfok Exp $
  */
 
 /*
@@ -58,10 +58,10 @@ public class MockListRecords extends ListRecords{
   private Exception listRecordsException;
   private int numListRecordsExceptionThrown=0;
   
-  private Exception getErrorException;
+  private TransformerException getErrorException;
   private int numGetErrorExceptionThrown=0;
   
-  private Exception getNodeListException;
+  private TransformerException getNodeListException;
   private int numGetNodeListExceptionThrown=0;
   
   private Exception getResumptionTokenException;
@@ -70,10 +70,36 @@ public class MockListRecords extends ListRecords{
   //  private Document doc = null;
   private Element errElm = null;
 
+  private String baseUrl;
+  private String fromDate;
+  private String untilDate;
+  private String setSpec;
+  private String metadataPrefix;
+
+  public MockListRecords(){
+  }
+
   public MockListRecords(String baseUrl, String fromDate, String untilDate, 
-			   String setSpec, String metadataPrefix) 
-	throws IOException, ParserConfigurationException, SAXException, TransformerException {
-    super();   
+			   String setSpec, String metadataPrefix)
+	throws IOException, ParserConfigurationException, SAXException, TransformerException{
+    this();
+    this.baseUrl = baseUrl;
+    this.fromDate = fromDate;
+    this.untilDate = untilDate;
+    this.setSpec = setSpec;
+    this.metadataPrefix = metadataPrefix;
+    
+    while (numListRecordsExceptionThrown > 0) {
+      if ( listRecordsException instanceof IOException){
+	throw (IOException) listRecordsException;
+      } else if ( listRecordsException instanceof ParserConfigurationException){
+	throw (ParserConfigurationException) listRecordsException;
+      } else if ( listRecordsException instanceof SAXException){
+	throw (SAXException) listRecordsException;
+      } else if ( listRecordsException instanceof TransformerException){
+	throw (TransformerException) listRecordsException;
+      }
+    }
 
 //     // create a *Element Factory*
 //     try {
@@ -85,48 +111,97 @@ public class MockListRecords extends ListRecords{
   }
     
   public void setListRecordsException(Exception ex, int num){
-    listRecordsException = ex;
-    numListRecordsExceptionThrown = num;
-  } 
+    if ( ex instanceof IOException ||
+	 ex instanceof ParserConfigurationException ||
+	 ex instanceof SAXException ||
+	 ex instanceof TransformerException) {
+      listRecordsException = ex;
+      numListRecordsExceptionThrown = num;
+    } else {
+      logger.error("Exception set never be thrown in real ListRecords() call");
+    }
+  }
 
-  public void setGetErrorException(Exception ex, int num){
+  public void setGetErrorException(TransformerException ex, int num){
     getErrorException = ex;
     numGetErrorExceptionThrown = num;
   }
   
-  public void setGetNodeListException(Exception ex, int num){
+  public void setGetNodeListException(TransformerException ex, int num){
     getNodeListException = ex;
     numGetNodeListExceptionThrown = num;
   }
   
   public void setGetResumptionToken(Exception ex, int num){
-    getResumptionTokenException = ex;
-    numGetResumptionTokenExceptionThrown = num;
+    if ( ex instanceof NoSuchFieldException ||
+	 ex instanceof TransformerException) {
+      getResumptionTokenException = ex;
+      numGetResumptionTokenExceptionThrown = num;
+    } else {
+      logger.error("Exception set never be thrown in real ListRecords() call");
+    }
   }
  
   /**
-   * setErrors in a particular format
+   * set errors in oai response format
+   *
+   * e.g.
+   * To construct: 
+   * <error code="badArgument">This is an error statement</error>
+   * 
+   * The code is:
+   * // create a document to create an element
+   * Document doc;
+   * try {
+   *   doc = XmlDomBuilder.createDocument();
+   * } catch (XmlDomException xde) {
+   *   logger.error("", xde);
+   * }
+   * Element elm = (Element) doc.createElement("error"); 
+   * elm.setAttribute("code", "badArgument");
+   * elm.appendChild( doc.createTextNode("This is an error statement") );
+   *
+   * Note: in a real oai response there is a finit set of error code
+   * They can be found in http://www.openarchives.org/OAI/openarchivesprotocol.html#ErrorConditions
+   */
+  public void setErrors(Element elm){
+    errElm = elm;
+  }
+
+  public NodeList getErrors() throws TransformerException{
+    while (numGetErrorExceptionThrown > 0) {
+      throw getErrorException;
+    }
+    return (NodeList) new NodeSet(errElm);  
+  }
+
+  /**
+   * set a node list in a particular format
    *
    * e.g.
    * Element elm = (Element) doc.createElement("error"); 
    * elm.setAttribute("code", "InGetErrorsInMyMockListRecords");
    * elm.appendChild( doc.createTextNode("This is an error statement") );
    */
-  public void setErrors(Element elm){
-    errElm = elm;
+  public void setNodeList(Element elm){
+
   }
 
-  public NodeList getErrors() {
-    return (NodeList) new NodeSet(errElm);  
-  }
-  
   public NodeList getNodeList(String xpath){
     
     return null;
   }
   
-  public String getResumptionToken(){
+  public String getResumptionToken() throws NoSuchFieldException, TransformerException{
       
+    while (numGetResumptionTokenExceptionThrown > 0) {
+      if ( getResumptionTokenException instanceof NoSuchFieldException){
+	throw (NoSuchFieldException) getResumptionTokenException;
+      } else if ( getResumptionTokenException instanceof TransformerException){
+	throw (TransformerException) getResumptionTokenException;
+      }
+    }
+  
     return null;
   }
   
