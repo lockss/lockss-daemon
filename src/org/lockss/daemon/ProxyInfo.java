@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyInfo.java,v 1.5 2004-06-01 08:30:53 tlipkis Exp $
+ * $Id: ProxyInfo.java,v 1.6 2004-06-07 19:19:17 tlipkis Exp $
  */
 
 /*
@@ -148,7 +148,7 @@ public class ProxyInfo {
       InputStream istr = UrlUtil.openInputStream(url);
       bis = new BufferedInputStream(istr);
       String old = StringUtil.fromInputStream(bis, MAX_ENCAPSULATED_PAC_SIZE);
-      return encapsulatePacFile(urlStems, old);
+      return encapsulatePacFile(urlStems, old, " (generated from " + url + ")");
     } finally {
       if (bis != null) {
 	bis.close();
@@ -160,10 +160,11 @@ public class ProxyInfo {
    * FindProxyForURL function in the pacFileToBeEncapsulated if no match is
    * found. */
   public String encapsulatePacFile(Map urlStems,
-				   String pacFileToBeEncapsulated) {
+				   String pacFileToBeEncapsulated,
+				   String message) {
     try {
       String encapsulatedName = findUnusedName(pacFileToBeEncapsulated);
-      String encapsulaed = 
+      String encapsulated =
 	jsReplace(pacFileToBeEncapsulated, "FindProxyForURL",
 		  encapsulatedName);
       StringBuffer sb = new StringBuffer();
@@ -174,8 +175,16 @@ public class ProxyInfo {
       sb.append("\n\n");
       generatePacFunction(sb, urlStems,
 			  " return " + encapsulatedName + "(url, host);\n");
-      sb.append("\n// Encapsulated PAC file\n");
-      sb.append(encapsulaed);
+      sb.append("// Encapsulated PAC file follows");
+      if (message != null) {
+	sb.append(message);
+      }
+      sb.append("\n");
+      if (encapsulated.equals(pacFileToBeEncapsulated)) {
+	sb.append("// File is unmodified; it doesn't look like a PAC file\n");
+      }
+      sb.append("\n");
+      sb.append(encapsulated);
       return sb.toString();
     } catch (MalformedPatternException e) {
       log.error("PAC file patterns", e);
@@ -215,7 +224,7 @@ public class ProxyInfo {
   }
 
   String findUnusedName(String js) throws MalformedPatternException {
-    return findUnusedName(js, "FindProxyForURL");
+    return findUnusedName(js, "FindProxyForURL_");
   }
 
   String findUnusedName(String js, String base)

@@ -1,5 +1,5 @@
 /*
- * $Id: TestProxyInfo.java,v 1.5 2004-06-01 08:30:51 tlipkis Exp $
+ * $Id: TestProxyInfo.java,v 1.6 2004-06-07 19:19:17 tlipkis Exp $
  */
 
 /*
@@ -120,17 +120,17 @@ public class TestProxyInfo extends LockssTestCase {
       "function FindProxyForURL(url, host) {\n" +
       "return some_logic(url, host);\n}\n";
     String encapsulated = "# foo\n" +
-      "function FindProxyForURL0(url, host) {\n" +
+      "function FindProxyForURL_0(url, host) {\n" +
       "return some_logic(url, host);\n}\n";
 
     String headRE =
       "// PAC file generated .* by LOCKSS cache .*\\n\\n" +
       "function FindProxyForURL\\(url, host\\) {\\n";
-    String tailRE = " return FindProxyForURL0\\(url, host\\);\\n}\\n" +
-      "\\n// Encapsulated PAC file\\n";
+    String tailRE = " return FindProxyForURL_0\\(url, host\\);\\n}\\n" +
+      "// Encapsulated PAC file follows \\(msg\\)\\n\\n";
     RE re = new RE(headRE + ifsRE + tailRE +
 		   StringUtil.escapeNonAlphaNum(encapsulated));
-    String pf = pi.encapsulatePacFile(makeUrlStemMap(), oldfile);
+    String pf = pi.encapsulatePacFile(makeUrlStemMap(), oldfile, " (msg)");
     assertTrue("PAC file didn't match RE.  File contents:\n" + pf,
 	       re.isMatch(pf));
   }
@@ -165,8 +165,10 @@ public class TestProxyInfo extends LockssTestCase {
   }
 
   public void testJSReplace() throws Exception {
-    String js1 = "function func(foo, bar) { func(bar, foo); func0(1,2) }\n";
-    String exp = "function func1(foo, bar) { func1(bar, foo); func0(1,2) }\n";
+    String js1 =
+      "function func(foo, bar) { func(bar, foo); func0(1,2); func_3(1) }\n";
+    String exp =
+      "function func1(foo, bar) { func1(bar, foo); func0(1,2); func_3(1) }\n";
     assertEquals(exp, pi.jsReplace(js1, "func", "func1"));
   }
 
