@@ -5,23 +5,27 @@
 <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">edu.fcla.plugin.arkivoc.ArkivocPlugin</ElementValue>
 </MapElement>
 <MapElement>
-<ElementKey>au_name</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%s %d", base_url, year</ElementValue>
+<ElementKey>plugin_version</ElementKey>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">3</ElementValue>
 </MapElement>
 <MapElement>
-<ElementKey>plugin_name</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">ARKIVOC </ElementValue>
+<ElementKey>au_name</ElementKey>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%s %d", base_url, year</ElementValue>
 </MapElement>
 <MapElement>
 <ElementKey>au_def_new_content_crawl</ElementKey>
 <ElementValue xsi:type="java:java.lang.Long" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">31449600000</ElementValue>
 </MapElement>
 <MapElement>
+<ElementKey>plugin_name</ElementKey>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">ARKIVOC </ElementValue>
+</MapElement>
+<MapElement>
 <ElementKey>au_crawlrules</ElementKey>
 <ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 <string xsi:type="java:java.lang.String">4,"^%s", base_url</string>
 <string xsi:type="java:java.lang.String">1,"%s%d/arkivoc_articles_%d.asp", base_url, year, year</string>
-<string xsi:type="java:java.lang.String">1,"^%s%d.*", base_url, year</string>
+<string xsi:type="java:java.lang.String">1,"%s%d.*\.(pdf|asp|jpg|gif)$", base_url, year</string>
 </ElementValue>
 </MapElement>
 <MapElement>
