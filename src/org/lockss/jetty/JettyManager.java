@@ -1,5 +1,5 @@
 /*
- * $Id: JettyManager.java,v 1.3 2003-04-04 08:39:04 tal Exp $
+ * $Id: JettyManager.java,v 1.4 2003-04-05 00:56:09 tal Exp $
  */
 
 /*
@@ -61,6 +61,15 @@ public abstract class JettyManager extends BaseLockssManager {
    */
   public void startService() {
     super.startService();
+    // install Jetty logger once only
+    if (!jettyLogInited) {
+      org.mortbay.util.Log.instance().add(new LoggerLogSink());
+      jettyLogInited = true;
+    }
+  }
+
+  // synchronized on class
+  private static synchronized void installJettyLog() {
     // install Jetty logger once only
     if (!jettyLogInited) {
       org.mortbay.util.Log.instance().add(new LoggerLogSink());
