@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManager.java,v 1.2 2003-01-29 19:59:27 troberts Exp $
+ * $Id: CrawlManager.java,v 1.3 2003-02-05 22:41:03 troberts Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.crawler;
 import java.net.URL;
+import org.lockss.daemon.*;
 
 /**
  * This is the interface for the object which will sit between the crawler
@@ -46,5 +47,22 @@ public interface CrawlManager {
    * @param cookie object that the callback needs to understand which
    * repair we're referring to.
    */
-  public void scheduleRepair(URL url, RepairCallback cb, Object cookie);
+  public void scheduleRepair(ArchivalUnit au, URL url, 
+			     CrawlCallback cb, Object cookie);
+
+
+  /**
+   * Called at the beginning of each tree walk.  The crawler checks if there
+   * is anything it needs to do on the AU (such as a new content crawl) 
+   * before the treewalk begins.
+   *
+   * @param au ArchivalUnit that the crawl manager should check
+   * @param cb callback to be called when treewalk can start, if not now
+   * @param cookie cookie for the callback
+   * @return true if the tree walk can begin now, false otherwise
+   */
+
+  public boolean canTreeWalkStart(ArchivalUnit au, 
+				  CrawlCallback cb, Object cookie);
+
 }
