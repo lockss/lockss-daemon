@@ -1,5 +1,5 @@
 /*
- * $Id: LcapComm.java,v 1.7 2002-12-13 02:26:08 tal Exp $
+ * $Id: LcapComm.java,v 1.8 2002-12-13 23:09:40 tal Exp $
  */
 
 /*
@@ -359,7 +359,7 @@ public class LcapComm {
 	      timeout.expireIn(sleep);
 	    }
 	  }
-	    Object qObj = socketInQ.get(timeout);
+	  Object qObj = socketInQ.get(timeout);
 	  if (qObj != null) {
 	    if (qObj instanceof LockssReceivedDatagram) {
 	      processReceivedPacket((LockssReceivedDatagram)qObj);
@@ -465,7 +465,7 @@ public class LcapComm {
       throw new IllegalStateException("LcapComm singleton not created");
     }
     singleton.sendTo(new LockssDatagram(LockssDatagram.PROTOCOL_LCAP,
-				      msg.encodeMsg()),
+					msg.encodeMsg()),
 		   au, id);
   }
 }
