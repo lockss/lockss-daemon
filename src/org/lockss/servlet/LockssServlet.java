@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.17 2003-05-10 02:00:19 tal Exp $
+ * $Id: LockssServlet.java,v 1.18 2003-06-03 01:53:18 tal Exp $
  */
 
 /*
@@ -65,6 +65,10 @@ public abstract class LockssServlet extends HttpServlet
     Configuration.PREFIX + "platform.version";
   static final String PARAM_ADMIN_ADDRESS =
     Configuration.PREFIX + "admin.IPAddress";
+
+  /** Format to display date/time in headers */
+  public static final DateFormat headerDf =
+    new SimpleDateFormat("MM/dd/yy HH:mm:ss");
 
   static final String BACKGROUND_COLOR = "#FFFFFF";
   static final Image IMAGE_LOGO_LARGE = image("lockss-logo-large.gif",
@@ -556,6 +560,13 @@ public abstract class LockssServlet extends HttpServlet
     if (heading != null)
       comp.add("<br><center><font size=+1><b>"+heading+"</b></font></center>");
 
+    Date startDate = getLockssDaemon().getStartDate();
+    String since =
+      StringUtil.timeIntervalToString(TimeBase.msSince(startDate.getTime()));
+    comp.add("<center>" + getMachineName() + " at " +
+	     headerDf.format(new Date()) + ", up " + since + "</center>");
+    //       comp.add("<center>Running since " + headerDf.format(startDate) + "</center>");
+    comp.add("<br>");
     return comp;
   }
 

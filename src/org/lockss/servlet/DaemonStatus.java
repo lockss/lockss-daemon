@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.22 2003-05-28 16:14:14 tal Exp $
+ * $Id: DaemonStatus.java,v 1.23 2003-06-03 01:53:18 tal Exp $
  */
 
 /*
@@ -51,10 +51,10 @@ import org.lockss.daemon.status.*;
 public class DaemonStatus extends LockssServlet {
 
   /** Format to display date/time in tables */
-  public static final DateFormat df =
-  new SimpleDateFormat("MM/dd/yy HH:mm:ss");
+  public static final DateFormat tableDf =
+    new SimpleDateFormat("MM/dd/yy HH:mm:ss");
 
-//   public static final DateFormat df =
+//   public static final DateFormat tableDf =
 //     DateFormat.getDateTimeInstance(DateFormat.SHORT, DateFormat.SHORT);
 
   private String tableName;
@@ -103,13 +103,6 @@ public class DaemonStatus extends LockssServlet {
     if (html) {
       page = newPage();
 
-      Date startDate = getLockssDaemon().getStartDate();
-      String since =
-	StringUtil.timeIntervalToString(TimeBase.msSince(startDate.getTime()));
-      page.add("<center>" + getMachineName() + " at " +
-	       df.format(now) + ", up " + since + "</center>");
-//       page.add("<center>Running since " + df.format(startDate) + "</center>");
-      page.add("<br>");
 
 //       page.add("<center>");
 //       page.add(srvLink(SERVLET_DAEMON_STATUS, ".",
@@ -382,7 +375,7 @@ public class DaemonStatus extends LockssServlet {
     if (val == 0 || val == -1) {
       return "never";
     } else {
-      return df.format(d);
+      return tableDf.format(d);
     }
   }
 
