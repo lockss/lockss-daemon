@@ -1,5 +1,5 @@
 /*
- * $Id: HashSvcSchedImpl.java,v 1.2 2003-11-12 21:08:40 tlipkis Exp $
+ * $Id: HashSvcSchedImpl.java,v 1.3 2003-11-13 11:16:16 tlipkis Exp $
  */
 
 /*
@@ -419,7 +419,7 @@ public class HashSvcSchedImpl
       row.put("au", task.urlset.getArchivalUnit().getName());
       row.put("cus", task.urlset.getSpec());
       row.put("type", getType(task));
-      row.put("deadline", task.getLatestFinish().getExpiration());
+      row.put("deadline", task.getLatestFinish());
       row.put("estimate", new Long(task.getOrigEst()));
       Object used = new Long(task.getTimeUsed());
       if (task.hasOverrun()) {

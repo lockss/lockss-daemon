@@ -1,5 +1,5 @@
 /*
- * $Id: TaskRunner.java,v 1.2 2003-11-12 21:09:50 tlipkis Exp $
+ * $Id: TaskRunner.java,v 1.3 2003-11-13 11:16:16 tlipkis Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ in this Software without prior written authorization from Stanford University.
 //   long term drift.  (hack: reset to min when backgroundTasks empty.)
 // resched if nothing to do (if min(accepted step task start) - now > k)
 // OVERHEAD_LOAD_FACTOR (here and in Schedulers (or in Schedule?))
+// don't let expired in acceptedTasks prevent new schedule
 
 package org.lockss.scheduler;
 import java.io.*;
@@ -47,7 +48,7 @@ import org.lockss.util.*;
 class TaskRunner implements Serializable {
   static final String PREFIX = Configuration.PREFIX + "taskRunner.";
   static final String PARAM_PRIORITY = PREFIX + "priority";
-  static final int DEFAULT_PRIORITY = Thread.MIN_PRIORITY;
+  static final int DEFAULT_PRIORITY = Thread.NORM_PRIORITY - 1;
 
   static final String PARAM_COMPLETED_MAX = PREFIX + "historySize";
   static final int DEFAULT_COMPLETED_MAX = 50;
@@ -169,7 +170,7 @@ class TaskRunner implements Serializable {
     }
   }
 
-  public void stopThread() {
+  synchronized void stopThread() {
     if (stepThread != null) {
       log.info("Stopping Q runner");
       stepThread.stopStepper();
@@ -178,15 +179,14 @@ class TaskRunner implements Serializable {
   }
 
   // tk add watchdog
-  void pokeThread() {
+  synchronized void pokeThread() {
     if (stepThread == null) {
       log.info("Starting Q runner");
-      stepThread = new StepThread("HashQ");
+      stepThread = new StepThread("TaskRunner");
       stepThread.start();
     } else {
       stepThread.pokeStepper();
     }
-    sem.give();
   }
 
   // debugging accessors  (tk - remove?)
@@ -218,6 +218,10 @@ class TaskRunner implements Serializable {
       return Collections.EMPTY_LIST;
     }
     return new ArrayList(currentSchedule.getEvents());
+  }
+
+  boolean isIdle() {
+    return acceptedTasks == null || acceptedTasks.isEmpty();
   }
 
   // *******************************************************************
@@ -338,6 +342,12 @@ class TaskRunner implements Serializable {
     }
   }
 
+  void addToCompleted(Schedule.Event event) {
+    synchronized (completed) {
+      completed.add(event);
+    }
+  }
+
   /** Cause a background task to stert or finish, according to event. */
   void backgroundTaskEvent(Schedule.BackgroundEvent event) {
     BackgroundTask task = event.getTask();
@@ -347,18 +357,25 @@ class TaskRunner implements Serializable {
 	task.callback.taskEvent(task, event.getType());
       } catch (TaskCallback.Abort e) {
 	// task doesn't want to run, don't add to running background tasks
+	event.setError(e);
+	acceptedTasks.remove(task);
+	addToCompleted(event);
 	return;
       } catch (Exception e) {
 	log.error("Background task start callback threw", e);
+	event.setError(e);
       }
       addToBackgroundTasks(task);
+      addToCompleted(event);
     } else if (Schedule.EventType.FINISH == et) {
-      acceptedTasks.remove(task);
+      acceptedTasks.remove(task);	// do this before callback
       if (removeFromBackgroundTasks(task)) {
+	addToCompleted(event);
 	try {
 	  task.callback.taskEvent(task, event.getType());
 	} catch (Exception e) {
 	  log.error("Background task finish callback threw", e);
+	  event.setError(e);
 	}
       }
     }
@@ -415,6 +432,7 @@ class TaskRunner implements Serializable {
       }
     }
     currentSchedule.removeFirstEvent(chunk);
+    addToCompleted(chunk);
     if (chunk == runningChunk) {
       runningChunk = null;
     }
@@ -458,11 +476,8 @@ class TaskRunner implements Serializable {
     if (task == runningTask) {
       runningTask = null;
     }
-    synchronized (completed) {
-      completed.add(task);
-    }
     synchronized (this) {
-      acceptedTasks.remove(task);
+      acceptedTasks.remove(task);	// do this before callback
     }
     overrunTasks.remove(task);
     doCallback(task);
@@ -551,9 +566,7 @@ class TaskRunner implements Serializable {
       try {
 	while (!exit) {
 	  continueStepping = Boolean.TRUE;
-	  findTaskToRun();
-	  // tk race here
-	  if (runningTask != null) {
+	  if (findTaskToRun()) {
 	    runSteps(continueStepping);
 	  } else {
 	    sem.take(runningDeadline);
@@ -570,12 +583,12 @@ class TaskRunner implements Serializable {
 
     private void pokeStepper() {
       continueStepping = Boolean.FALSE;
+      sem.give();
     }
 
     private void stopStepper() {
       exit = true;
-      continueStepping = Boolean.FALSE;
-      this.interrupt();
+      pokeStepper();
     }
   }
 
@@ -590,40 +603,27 @@ class TaskRunner implements Serializable {
     return new Status();
   }
 
-  private static final List statusSortRules =
-    ListUtil.list(new StatusTable.SortRule("state", true),
-		  new StatusTable.SortRule("sort", true));
-
-  static final String FOOT_IN = "Order in which requests were made.";
-
-  static final String FOOT_OVER = "Red indicates overrun.";
-
   static final String FOOT_TITLE =
-    "Pending requests are first in table, in order of their completion deadline."+
-    "  Completed requests follow, in reverse completion order " +
-    "(most recent first).";
+    "Pending events are first in table, in the order they will occur."+
+    "  Completed events follow, most recent first.";
+
+  private static final List statusSortRules =
+    ListUtil.list(new StatusTable.SortRule("sort", true));
 
   private static final List statusColDescs =
     ListUtil.list(
-		  new ColumnDescriptor("sched", "Req",
-				       ColumnDescriptor.TYPE_INT, FOOT_IN),
+// 		  new ColumnDescriptor("tasknum", "Task",
+// 				       ColumnDescriptor.TYPE_INT),
 		  new ColumnDescriptor("type", "Type",
 				       ColumnDescriptor.TYPE_STRING),
-		  new ColumnDescriptor("state", "State",
+		  new ColumnDescriptor("task", "Task",
 				       ColumnDescriptor.TYPE_STRING),
-		  new ColumnDescriptor("name", "Task",
-				       ColumnDescriptor.TYPE_STRING),
-		  new ColumnDescriptor("scheddate", "Requested at",
+		  new ColumnDescriptor("load", "%CPU",
+				       ColumnDescriptor.TYPE_PERCENT),
+		  new ColumnDescriptor("start", "Start",
 				       ColumnDescriptor.TYPE_DATE),
-		  new ColumnDescriptor("earliest", "Earliest start",
-				       ColumnDescriptor.TYPE_DATE),
-		  new ColumnDescriptor("latest", "Latest finish",
-				       ColumnDescriptor.TYPE_DATE),
-		  new ColumnDescriptor("estimate", "Estimated",
-				       ColumnDescriptor.TYPE_TIME_INTERVAL),
-		  new ColumnDescriptor("timeused", "Used",
-				       ColumnDescriptor.TYPE_TIME_INTERVAL,
-				       FOOT_OVER)
+		  new ColumnDescriptor("stop", "Stop",
+				       ColumnDescriptor.TYPE_DATE)
 		  );
 
 
@@ -647,15 +647,22 @@ class TaskRunner implements Serializable {
       int ix = 0;
       for (ListIterator iter = getSchedSnapshot().listIterator();
 	   iter.hasNext();) {
-	table.add(makeRow((SchedulableTask)iter.next(), false, ix++));
+	Schedule.Event event = (Schedule.Event)iter.next();
+	// tk - hack to prevent finish event of already finished background
+	// tasks from appearing in queue.  Should mark task done instead?
+	if (!event.isBackgroundEvent() ||
+	    acceptedTasks.contains(((Schedule.BackgroundEvent)event).getTask())) {
+	  table.add(makeRow(event, ix++));
+	}
       }
-      for (ListIterator iter = getCompletedSnapshot().listIterator();
-	   iter.hasNext();) {
-	Map row = makeRow((SchedulableTask)iter.next(), true, 0);
-	// if both parts of the table are present (ix is number of pending
-	// requests), add a separator before the first displayed completed
-	// request (which is the last one in the history list)
-	if (ix != 0 && !iter.hasNext()) {
+      int seprIx = ix + 1;
+      List complet = getCompletedSnapshot();
+      Collections.reverse(complet);
+      for (Iterator iter = complet.iterator(); iter.hasNext();) {
+	Map row = makeRow((Schedule.Event)iter.next(), ix++);
+	// if both parts of the table are present , add a separator before
+	// the first completed event
+	if (ix == seprIx) {
 	  row.put(StatusTable.ROW_SEPARATOR, "");
 	}
 	table.add(row);
@@ -663,48 +670,34 @@ class TaskRunner implements Serializable {
       return table;
     }
 
-    private Map makeRow(SchedulableTask task, boolean done, int qpos) {
+    private Map makeRow(Schedule.Event event, int sort) {
       Map row = new HashMap();
-      row.put("sort", new Long(done ? -task.getFinishDate().getTime() : qpos));
-      row.put("sched", new Integer(task.getSchedSeq()));
-      row.put("state", getState(task, done));
-      row.put("type", task.isBackgroundTask() ? "Back" : "Step");
-      row.put("name", task.getShortText());
-      row.put("earliest", task.getEarlistStart().getExpiration());
-      row.put("latest", task.getLatestFinish().getExpiration());
-      row.put("scheddate", task.getSchedDate());
-      row.put("estimate", new Long(task.getOrigEst()));
-      Object used = new Long(task.getTimeUsed());
-      if (task.hasOverrun()) {
-	StatusTable.DisplayedValue val = new StatusTable.DisplayedValue(used);
-	val.setColor("red");
-	used = val;
+      row.put("sort", new Integer(sort));
+      if (event.isBackgroundEvent()) {
+	Schedule.BackgroundEvent be = (Schedule.BackgroundEvent)event;
+	BackgroundTask bt = be.getTask();
+	row.put("type", "B");
+// 	row.put("tasknum", new Integer(bt.schedSeq));
+	row.put("task", bt.schedSeq + ":" + bt.getShortText());
+	row.put("load", new Double(bt.getLoadFactor()));
+	if (Schedule.EventType.START == be.getType()) {
+	  row.put("start", be.getStart());
+	} else if (Schedule.EventType.FINISH == be.getType()) {
+	  row.put("stop", be.getStart());
+	}
+      } else {
+	Schedule.Chunk chunk = (Schedule.Chunk)event;
+	StepTask st = chunk.getTask();
+	row.put("type", "S");
+// 	row.put("tasknum", new Integer(st.schedSeq));
+	row.put("task", st.schedSeq + ":" + st.getShortText());
+	row.put("load", new Double(chunk.getLoadFactor()));
+	row.put("start", chunk.getStart());
+	row.put("stop", chunk.getFinish());
       }
-      row.put("timeused", used);
       return row;
     }
 
-    private Object getState(SchedulableTask task, boolean done) {
-      if (!done) {
-	if (task == runningTask) {
-	  return TASK_STATE_RUN;
-	} else if (task.hasStarted()) {
-	  return TASK_STATE_SUSP;
-	} else {
-	  return TASK_STATE_WAIT;
-	}
-      }
-      if (task.getExcption() == null) {
-	return TASK_STATE_DONE;
-      } else if (task.getExcption() instanceof SchedService.Timeout) {
-	return TASK_STATE_TIMEOUT;
-      } else {
-	return TASK_STATE_ERROR;
-      }
-    }
-
-    // n tasks accepted, n refused
-    // n finished(n overrun), n timed out
     private List getSummaryInfo(String key) {
       List res = new ArrayList();
       res.add(new StatusTable.SummaryInfo("Tasks accepted",
@@ -727,34 +720,4 @@ class TaskRunner implements Serializable {
 
   }
 
-  static class TaskState implements Comparable {
-    String name;
-    int order;
-
-    TaskState(String name, int order) {
-      this.name = name;
-      this.order = order;
-    }
-
-    public int compareTo(Object o) {
-      return order - ((TaskState)o).order;
-    }
-    public String toString() {
-      return name;
-    }
-  }
-  static final TaskState TASK_STATE_RUN = new TaskState("Run", 1);
-  static final TaskState TASK_STATE_SUSP = new TaskState("Susp", 1);
-  static final TaskState TASK_STATE_WAIT = new TaskState("Wait", 2);
-  static final TaskState TASK_STATE_DONE = new TaskState("Done", 3);
-
-  static final StatusTable.DisplayedValue TASK_STATE_TIMEOUT =
-    new StatusTable.DisplayedValue(new TaskState("Timeout", 3));
-  static final StatusTable.DisplayedValue TASK_STATE_ERROR =
-    new StatusTable.DisplayedValue(new TaskState("Error", 3));
-
-  static {
-    TASK_STATE_TIMEOUT.setColor("red");
-    TASK_STATE_ERROR.setColor("red");
-  }
 }

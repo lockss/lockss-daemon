@@ -1,5 +1,5 @@
 /*
- * $Id: Schedule.java,v 1.1 2003-11-11 20:29:45 tlipkis Exp $
+ * $Id: Schedule.java,v 1.2 2003-11-13 11:16:16 tlipkis Exp $
  */
 
 /*
@@ -111,11 +111,20 @@ public class Schedule {
 
   abstract static class Event {
     protected Deadline start;
+    private Exception error;
 
     abstract public boolean isBackgroundEvent();
 
     public Deadline getStart() {
       return start;
+    }
+
+    public void setError(Exception e) {
+      error = e;
+    }
+
+    public Exception getError() {
+      return error;
     }
   }      
 
@@ -213,6 +222,10 @@ public class Schedule {
 
     public long getRunTime() {
       return runTime;
+    }
+
+    public double getLoadFactor() {
+      return ((double)runTime) / ((double)finish.minus(start));
     }
 
     public void setTaskEnd() {
