@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePlugin.java,v 1.10 2002-11-05 01:46:50 aalto Exp $
+ * $Id: HighWirePlugin.java,v 1.11 2002-11-06 00:10:06 aalto Exp $
  */
 
 /*
@@ -128,7 +128,8 @@ public class HighWirePlugin extends BaseArchivalUnit {
   }
   public String getAUId() {
     try {
-      return ""+getUrlVolumeNumber((String)getCrawlSpec().getStartingUrls().get(0));
+      String url = (String)getCrawlSpec().getStartingUrls().get(0);
+      return Integer.toString(getUrlVolumeNumber(url));
     } catch (MalformedURLException ex) {
       return "null";
     }
