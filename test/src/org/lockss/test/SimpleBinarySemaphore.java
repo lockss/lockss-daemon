@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleBinarySemaphore.java,v 1.3 2003-06-20 22:34:56 claire Exp $
+ * $Id: SimpleBinarySemaphore.java,v 1.4 2004-12-07 08:46:28 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -38,7 +38,7 @@ import java.util.*;
  * then empties it and returns.
  */
 public class SimpleBinarySemaphore {
-  private boolean state = false;
+  private volatile boolean state = false;
     
   /** Wait until the semaphore is full.
    * If the semaphore is already full, return immediately.
