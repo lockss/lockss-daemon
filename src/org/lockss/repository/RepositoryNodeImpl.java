@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.8 2002-11-26 03:01:52 aalto Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.9 2002-11-27 20:33:32 aalto Exp $
  */
 
 /*
@@ -37,16 +37,19 @@ import java.util.*;
 import java.net.MalformedURLException;
 import org.lockss.util.Logger;
 import org.lockss.daemon.CachedUrlSetSpec;
+import org.lockss.util.Deadline;
 
 /**
  * RepositoryNode is used to store the contents and
  * meta-information of urls being cached.
  */
 public class RepositoryNodeImpl implements RepositoryNode {
-  private static final String CONTENT_DIR_SUFFIX = ".content";
-  private static final String CURRENT_SUFFIX = ".current";
-  private static final String PROPS_SUFFIX = ".props";
-  private static final String TEMP_SUFFIX = ".temp";
+  static final int VERSION_TIMEOUT = 5*60*60*1000; // 5 hours
+  static final String LOCKSS_VERSION_NUMBER = "org.lockss.version.number";
+  static final String CONTENT_DIR_SUFFIX = ".content";
+  static final String CURRENT_SUFFIX = ".current";
+  static final String PROPS_SUFFIX = ".props";
+  static final String TEMP_SUFFIX = ".temp";
 
   private boolean newVersionOpen = false;
   private boolean newOutputCalled = false;
@@ -68,6 +71,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
   private String nodeLocation;
   private static Logger logger = Logger.getLogger("RepositoryNode");
   private LockssRepositoryImpl repository;
+  // preset so testIllegalOperations() doesn't null pointer
+  private Deadline versionTimeout = Deadline.at(0);
 
   RepositoryNodeImpl(String url, String nodeLocation,
                      LockssRepositoryImpl repository) {
@@ -104,7 +109,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
     if (nodeRootFile==null) loadNodeRoot();
     if (!nodeRootFile.exists()) {
       logger.error("No cache directory located for: "+url);
-      throw new RepositoryStateException("No cache directory located.");
+      throw new LockssRepository.RepositoryStateException("No cache directory located.");
     }
     if (cacheLocationFile==null) loadCacheLocation();
     File[] children = nodeRootFile.listFiles();
@@ -126,7 +131,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
       String childUrl = buffer.toString();
       if ((filter==null) || (filter.matches(childUrl))) {
         try {
-          childL.add(repository.getRepositoryNode(childUrl));
+          childL.add(repository.getNode(childUrl));
         } catch (MalformedURLException mue) {
           // this can safely skip bad files because they will
           // eventually be trimmed by the repository integrity checker
@@ -148,8 +153,14 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
   public synchronized void makeNewVersion() {
     if (newVersionOpen) {
-      throw new UnsupportedOperationException("New version already"+
-                                              " initialized.");
+      // check if time since new version exceeds timeout
+      if (versionTimeout.expired()) {
+        logger.info("Current open version is timed out.  Abandoning...");
+        abandonNewVersion();
+      } else {
+        throw new UnsupportedOperationException("New version already" +
+            " initialized.");
+      }
     }
     ensureCurrentInfoLoaded();
     if (currentVersion == 0) {
@@ -157,58 +168,66 @@ public class RepositoryNodeImpl implements RepositoryNode {
         if (!cacheLocationFile.mkdirs()) {
           logger.error("Couldn't create cache directory for '"+
                        cacheLocationFile.getAbsolutePath()+"'");
-          throw new RepositoryStateException("Couldn't create cache directory.");
+          throw new LockssRepository.RepositoryStateException("Couldn't create cache directory.");
         }
       }
     }
     newVersionOpen = true;
+    versionTimeout = Deadline.in(VERSION_TIMEOUT);
   }
 
   public synchronized void sealNewVersion() {
-    if (!newVersionOpen) {
-      throw new UnsupportedOperationException("New version not initialized.");
-    }
-    if (!newOutputCalled) {
-      throw new UnsupportedOperationException("getNewOutputStream() not called.");
-    }
-    if (!newPropsSet) {
-      throw new UnsupportedOperationException("setNewProperties() not called.");
-    }
-
-    // rename current
-    if (currentCacheFile.exists()) {
-      if (!currentCacheFile.renameTo(getVersionedCacheFile(currentVersion)) ||
-          !currentPropsFile.renameTo(getVersionedPropertiesFile(currentVersion))) {
-        logger.error("Couldn't rename current versions: "+url);
-        throw new RepositoryStateException("Couldn't rename current versions.");
+    try {
+      if (!newVersionOpen) {
+        throw new UnsupportedOperationException("New version not initialized.");
       }
-    }
-    // rename new
-    if (!tempCacheFile.renameTo(currentCacheFile) ||
-        !tempPropsFile.renameTo(currentPropsFile)) {
-      logger.error("Couldn't rename temp versions: "+url);
-      throw new RepositoryStateException("Couldn't rename temp versions.");
-    }
+      if (!newOutputCalled) {
+         throw new UnsupportedOperationException("getNewOutputStream() not called.");
+      }
+      if (!newPropsSet) {
+        throw new UnsupportedOperationException("setNewProperties() not called.");
+      }
 
-    currentVersion++;
-    curProps = null;
-    newOutputCalled = false;
-    newPropsSet = false;
-    newVersionOpen = false;
+      // rename current
+      if (currentCacheFile.exists()) {
+        if (!currentCacheFile.renameTo(getVersionedCacheFile(currentVersion)) ||
+            !currentPropsFile.renameTo(getVersionedPropertiesFile(currentVersion))) {
+          logger.error("Couldn't rename current versions: "+url);
+          throw new LockssRepository.RepositoryStateException("Couldn't rename current versions.");
+        }
+      }
+      // rename new
+      if (!tempCacheFile.renameTo(currentCacheFile) ||
+          !tempPropsFile.renameTo(currentPropsFile)) {
+        logger.error("Couldn't rename temp versions: "+url);
+        throw new LockssRepository.RepositoryStateException("Couldn't rename temp versions.");
+      }
+
+      currentVersion++;
+      curProps = null;
+    } finally {
+      newOutputCalled = false;
+      newPropsSet = false;
+      newVersionOpen = false;
+      versionTimeout.expire();
+    }
   }
 
   public synchronized void abandonNewVersion() {
-    if (!newVersionOpen) {
-      throw new UnsupportedOperationException("New version not initialized.");
+    try {
+      if (!newVersionOpen) {
+        throw new UnsupportedOperationException("New version not initialized.");
+      }
+      // clear temp files
+      // unimportant if this isn't done, as they're overwritten
+      tempCacheFile.delete();
+      tempPropsFile.delete();
+    } finally {
+      newOutputCalled = false;
+      newPropsSet = false;
+      newVersionOpen = false;
+      versionTimeout.expire();
     }
-    // clear temp files
-    // unimportant if this isn't done, as they're overwritten
-    tempCacheFile.delete();
-    tempPropsFile.delete();
-
-    newOutputCalled = false;
-    newPropsSet = false;
-    newVersionOpen = false;
   }
 
 
@@ -218,10 +237,10 @@ public class RepositoryNodeImpl implements RepositoryNode {
     }
     try {
       InputStream is = new BufferedInputStream(new FileInputStream(curInputFile));
-      return new RepositoryNodeContents(is, curProps);
+      return new RepositoryNodeContents(is, (Properties)curProps.clone());
     } catch (FileNotFoundException fnfe) {
       logger.error("Couldn't get inputstream for '"+curInputFile.getPath()+"'");
-      throw new RepositoryStateException("Couldn't get info for node.");
+      throw new LockssRepository.RepositoryStateException("Couldn't get info for node.");
     }
   }
 
@@ -236,8 +255,12 @@ public class RepositoryNodeImpl implements RepositoryNode {
     try {
       return new BufferedOutputStream(new FileOutputStream(tempCacheFile));
     } catch (FileNotFoundException fnfe) {
-      logger.error("No new version file for "+tempCacheFile.getPath()+".");
-      throw new RepositoryStateException("Couldn't load new outputstream.");
+      try {
+        logger.error("No new version file for "+tempCacheFile.getPath()+".");
+        throw new LockssRepository.RepositoryStateException("Couldn't load new outputstream.");
+      } finally {
+        abandonNewVersion();
+      }
     }
   }
 
@@ -248,17 +271,22 @@ public class RepositoryNodeImpl implements RepositoryNode {
     if (newPropsSet) {
       throw new UnsupportedOperationException("setNewProperties() called twice.");
     }
-    newPropsSet = true;
     if (newProps!=null) {
+      newPropsSet = true;
+      Properties myProps = (Properties)newProps.clone();
       try {
         OutputStream os = new BufferedOutputStream(new FileOutputStream(tempPropsFile));
-        newProps.setProperty("lockss_version_number", ""+(currentVersion+1));
-        newProps.store(os, "HTTP headers for " + url);
+        myProps.setProperty(LOCKSS_VERSION_NUMBER, ""+(currentVersion+1));
+        myProps.store(os, "HTTP headers for " + url);
         os.close();
       } catch (IOException ioe) {
-        logger.error("Couldn't write properties for " +
-                     tempPropsFile.getPath()+".");
-        throw new RepositoryStateException("Couldn't write properties file.");
+        try {
+          logger.error("Couldn't write properties for " +
+                       tempPropsFile.getPath()+".");
+          throw new LockssRepository.RepositoryStateException("Couldn't write properties file.");
+        } finally {
+          abandonNewVersion();
+        }
       }
     }
   }
@@ -279,7 +307,6 @@ public class RepositoryNodeImpl implements RepositoryNode {
       curProps = null;
       return;
     }
-    //XXX getting version from props probably a mistake
     if ((curInputFile==null) || (curProps==null)) {
       synchronized (this) {
         if (curInputFile==null) {
@@ -290,20 +317,19 @@ public class RepositoryNodeImpl implements RepositoryNode {
             try {
               InputStream is = new BufferedInputStream(new FileInputStream(currentPropsFile));
               curProps = new Properties();
-//XXX load immutably
               curProps.load(is);
               is.close();
             } catch (Exception e) {
               logger.error("Error loading version from "+
                             currentPropsFile.getPath()+".");
-              throw new RepositoryStateException("Couldn't load version from properties file.");
+              throw new LockssRepository.RepositoryStateException("Couldn't load version from properties file.");
             }
           }
         }
       }
       if (curProps!=null) {
         currentVersion = Integer.parseInt(
-                       curProps.getProperty("lockss_version_number", "-1"));
+                       curProps.getProperty(LOCKSS_VERSION_NUMBER, "-1"));
       }
     }
   }
@@ -379,12 +405,6 @@ public class RepositoryNodeImpl implements RepositoryNode {
     public int compare(Object o1, Object o2) {
       // compares file pathnames
       return ((File)o1).getName().compareToIgnoreCase(((File)o2).getName());
-    }
-  }
-
-  public class RepositoryStateException extends RuntimeException {
-    public RepositoryStateException(String msg) {
-      super(msg);
     }
   }
 }

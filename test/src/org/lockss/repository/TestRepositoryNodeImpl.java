@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.4 2002-11-23 03:40:49 aalto Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.5 2002-11-27 20:33:32 aalto Exp $
  */
 
 /*
@@ -35,7 +35,7 @@ package org.lockss.repository;
 import java.io.*;
 import java.util.*;
 import org.lockss.test.*;
-import org.lockss.util.StreamUtil;
+import org.lockss.util.*;
 
 /**
  * This is the test class for org.lockss.repostiory.RepositoryNodeImpl
@@ -49,13 +49,15 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    String tempDirPath = "";
-    try {
-      tempDirPath = super.getTempDir().getAbsolutePath() + File.separator;
-    } catch (Exception e) { fail("Couldn't get tempDir."); }
+    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     TestLockssRepositoryImpl.configCacheLocation(tempDirPath);
     MockArchivalUnit mau = new MockArchivalUnit(null);
     repo = LockssRepositoryImpl.repositoryFactory(mau);
+  }
+
+  public void tearDown() throws Exception {
+    TimeBase.setReal();
+    super.tearDown();
   }
 
   public void testGetNodeUrl() {
@@ -83,7 +85,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     createLeaf("http://www.example.com/testDir/leaf4", "test stream", null);
 
     RepositoryNode dirEntry =
-        repo.getRepositoryNode("http://www.example.com/testDir");
+        repo.getNode("http://www.example.com/testDir");
     Iterator childIt = dirEntry.listNodes(null);
     ArrayList childL = new ArrayList(3);
     while (childIt.hasNext()) {
@@ -97,7 +99,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
       };
     assertIsomorphic(expectedA, childL);
 
-    dirEntry = repo.getRepositoryNode("http://www.example.com/testDir/branch1");
+    dirEntry = repo.getNode("http://www.example.com/testDir/branch1");
     childL.clear();
     childIt = dirEntry.listNodes(null);
     while (childIt.hasNext()) {
@@ -118,7 +120,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     createLeaf("http://www.example.com/testDir/leaf3", null, null);
 
     RepositoryNode dirEntry =
-        repo.getRepositoryNode("http://www.example.com/testDir");
+        repo.getNode("http://www.example.com/testDir");
     Iterator childIt = dirEntry.listNodes(null);
     ArrayList childL = new ArrayList(4);
     while (childIt.hasNext()) {
@@ -132,22 +134,6 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
       "http://www.example.com/testDir/leaf4"
       };
     assertIsomorphic(expectedA, childL);
-  }
-
-  public void testMakeNewCache() throws Exception {
-    RepositoryNode leaf =
-      repo.createNewNode("http://www.example.com/testDir/test.cache");
-    assertTrue(!leaf.hasContent());
-    try {
-      leaf.getCurrentVersion();
-      fail("Cannot get current version if no content.");
-    } catch (UnsupportedOperationException uoe) { }
-    leaf.makeNewVersion();
-    writeToLeaf(leaf, "test stream");
-    leaf.setNewProperties(new Properties());
-    leaf.sealNewVersion();
-    assertEquals(1, leaf.getCurrentVersion());
-    assertTrue(leaf.hasContent());
   }
 
   public void testIllegalOperations() throws Exception {
@@ -167,17 +153,50 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
       leaf.sealNewVersion();
       fail("Cannot seal version if getNewOutputStream() uncalled.");
     } catch (UnsupportedOperationException uoe) { }
+    leaf.makeNewVersion();
     writeToLeaf(leaf, "test stream");
     try {
       leaf.sealNewVersion();
       fail("Cannot seal version if setNewProperties() uncalled.");
     } catch (UnsupportedOperationException uoe) { }
+    leaf.makeNewVersion();
+    writeToLeaf(leaf, "test stream");
     leaf.setNewProperties(new Properties());
     leaf.sealNewVersion();
     assertEquals(1, leaf.getCurrentVersion());
     assertTrue(leaf.hasContent());
   }
 
+  public void testVersionTimeout() throws Exception {
+    TimeBase.setSimulated();
+    RepositoryNode leaf =
+      repo.createNewNode("http://www.example.com/testDir/test.cache");
+    RepositoryNode leaf2 =
+      repo.getNode("http://www.example.com/testDir/test.cache");
+    leaf.makeNewVersion();
+    try {
+      leaf2.makeNewVersion();
+      fail("Can't make new version while version open.");
+    } catch (UnsupportedOperationException e) { }
+    TimeBase.step(RepositoryNodeImpl.VERSION_TIMEOUT);
+    leaf2.makeNewVersion();
+  }
+
+  public void testMakeNewCache() throws Exception {
+    RepositoryNode leaf =
+      repo.createNewNode("http://www.example.com/testDir/test.cache");
+    assertTrue(!leaf.hasContent());
+    try {
+      leaf.getCurrentVersion();
+      fail("Cannot get current version if no content.");
+    } catch (UnsupportedOperationException uoe) { }
+    leaf.makeNewVersion();
+    writeToLeaf(leaf, "test stream");
+    leaf.setNewProperties(new Properties());
+    leaf.sealNewVersion();
+    assertTrue(leaf.hasContent());
+    assertEquals(1, leaf.getCurrentVersion());
+  }
 
   public void testMakeNewVersion() throws Exception {
     Properties props = new Properties();
@@ -198,6 +217,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     String resultStr = getLeafContent(leaf);
     assertEquals("test stream 2", resultStr);
     props = leaf.getNodeContents().props;
+    props.list(System.out);
     assertEquals("value 2", props.getProperty("test 1"));
   }
 
@@ -237,7 +257,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertTrue(leaf.hasContent());
 
     RepositoryNode dir =
-        repo.getRepositoryNode("http://www.example.com/testDir");
+        repo.getNode("http://www.example.com/testDir");
     dir.makeNewVersion();
     writeToLeaf(dir, "test stream");
     dir.setNewProperties(new Properties());
