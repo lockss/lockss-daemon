@@ -1,5 +1,5 @@
 /*
- * $Id: LcapRouter.java,v 1.8 2003-03-28 23:39:17 tal Exp $
+ * $Id: LcapRouter.java,v 1.9 2003-03-29 02:43:18 tal Exp $
  */
 
 /*
@@ -50,29 +50,37 @@ import org.apache.commons.collections.LRUMap;
  */
 public class LcapRouter extends BaseLockssManager {
   static final String PREFIX = Configuration.PREFIX + "comm.router.";
-  static final String SENDRATE_PREFIX = PREFIX + "maxSendRate.";
-  static final String PARAM_PKTS_PER_INTERVAL = SENDRATE_PREFIX + "packets";
-  static final String PARAM_PKT_INTERVAL = SENDRATE_PREFIX + "interval";
+  static final String ORIGRATE_PREFIX = PREFIX + "maxOriginateRate.";
+  static final String PARAM_ORIG_PKTS_PER_INTERVAL = ORIGRATE_PREFIX+"packets";
+  static final String PARAM_ORIG_PKT_INTERVAL = ORIGRATE_PREFIX + "interval";
+  static final String FWDRATE_PREFIX = PREFIX + "maxForwardRate.";
+  static final String PARAM_FWD_PKTS_PER_INTERVAL = FWDRATE_PREFIX + "packets";
+  static final String PARAM_FWD_PKT_INTERVAL = FWDRATE_PREFIX + "interval";
   static final String PARAM_BEACON_INTERVAL = PREFIX + "beacon.interval";
   static final String PARAM_INITIAL_HOPCOUNT = PREFIX + "maxHopCount";
-
   static final String PARAM_PROB_PARTNER_ADD =
     PREFIX + "partnerAddProbability";
+
   static final String PARAM_LOCAL_IPS =
     Configuration.PREFIX + "platform.interfaceAddresses";
 
-  static final int defaultPktsPerInterval = 40;
-  static final long defaultPktInterval = 10 * Constants.SECOND;
+  static final int DEFAULT_ORIG_PKTS_PER_INTERVAL = 40;
+  static final long DEFAULT_ORIG_PKT_INTERVAL = 10 * Constants.SECOND;
+  static final int DEFAULT_FWD_PKTS_PER_INTERVAL = 40;
+  static final long DEFAULT_FWD_PKT_INTERVAL = 10 * Constants.SECOND;
+  static final double DEFAULT_PROB_PARTNER_ADD = 0.5;
 
   static Logger log = Logger.getLogger("Router");
 
   private LcapComm comm;
   private IdentityManager idMgr;
-  private RateLimiter rateLimiter;
-  private double probAddPartner;
+  private RateLimiter fwdRateLimiter;
+  private RateLimiter origRateLimiter;
+  private float probAddPartner;
   private List localInterfaces;
   private long beaconInterval = 0;
   private int initialHopCount = LcapMessage.MAX_HOP_COUNT_LIMIT;
+
   private Deadline beaconDeadline = Deadline.at(TimeBase.NEVER);;
   private PartnerList partnerList = new PartnerList();
   private Configuration.Callback configCallback;
@@ -105,14 +113,29 @@ public class LcapRouter extends BaseLockssManager {
     super.stopService();
   }
 
-  private void setConfig(Configuration config, Set changedKeys) {
-    long interval = config.getTimeInterval(PARAM_PKT_INTERVAL,
-					   defaultPktInterval);
-    int limit = config.getInt(PARAM_PKTS_PER_INTERVAL, defaultPktsPerInterval);
-    if (rateLimiter == null || rateLimiter.getInterval() != interval ||
-	rateLimiter.getLimit() != limit) {
-      rateLimiter = new RateLimiter(limit, interval);
+  private RateLimiter getRateLimiter(Configuration config,
+				     RateLimiter currentLimiter,
+				     String pktsParam, String intervalParam,
+				     int pktsDefault, long intervalDefault) {
+    int pkts = config.getInt(pktsParam, pktsDefault);
+    long interval = config.getTimeInterval(intervalParam, intervalDefault);
+    if (currentLimiter == null || currentLimiter.getInterval() != interval ||
+	currentLimiter.getLimit() != pkts) {
+      return new RateLimiter(pkts, interval);
+    } else {
+      return currentLimiter;
     }
+  }
+
+  private void setConfig(Configuration config, Set changedKeys) {
+    fwdRateLimiter =
+      getRateLimiter(config, fwdRateLimiter,
+		     PARAM_FWD_PKTS_PER_INTERVAL, PARAM_FWD_PKT_INTERVAL,
+		     DEFAULT_FWD_PKTS_PER_INTERVAL, DEFAULT_FWD_PKT_INTERVAL);
+    origRateLimiter =
+      getRateLimiter(config, origRateLimiter,
+		     PARAM_ORIG_PKTS_PER_INTERVAL, PARAM_ORIG_PKT_INTERVAL,
+		     DEFAULT_ORIG_PKTS_PER_INTERVAL, DEFAULT_ORIG_PKT_INTERVAL);
     if (changedKeys.contains(PARAM_BEACON_INTERVAL)) {
       beaconInterval = config.getTimeInterval(PARAM_BEACON_INTERVAL, 0);
       if (beaconInterval != 0) {
@@ -121,8 +144,8 @@ public class LcapRouter extends BaseLockssManager {
 	stopBeacon();
       }
     }
-    probAddPartner = (((double)config.getInt(PARAM_PROB_PARTNER_ADD, 0))
-		      / 100.0);
+    probAddPartner = config.getPercentage(PARAM_PROB_PARTNER_ADD,
+					  DEFAULT_PROB_PARTNER_ADD);
     initialHopCount =
       config.getInt(PARAM_INITIAL_HOPCOUNT, LcapMessage.MAX_HOP_COUNT_LIMIT);
 
@@ -155,17 +178,15 @@ public class LcapRouter extends BaseLockssManager {
    * @param msg the message to send
    * @param au archival unit for which this message is relevant.  Used to
    * determine which multicast socket/port to send to.
-   * @throws IOException
+   * @throws IOException if message couldn't be sent
    */
   public void send(LcapMessage msg, ArchivalUnit au) throws IOException {
     msg.setHopCount(initialHopCount);
     log.debug("send(" + msg + ")");
     LockssDatagram dg = new LockssDatagram(LockssDatagram.PROTOCOL_LCAP,
 					   msg.encodeMsg());
-    updateBeacon();
-    comm.send(dg, au);
-    doUnicast(dg, null, null);
-    rateLimiter.event();
+    doMulticast(dg, origRateLimiter, au);
+    doUnicast(dg, origRateLimiter, null, null);
   }
 
   /** Unicast a message to a single cache.  All
@@ -175,7 +196,7 @@ public class LcapRouter extends BaseLockssManager {
    * @param au archival unit for which this message is relevant.  Used to
    * determine which multicast socket/port to send to.
    * @param id the identity of the cache to which to send the message
-   * @throws IOException
+   * @throws IOException if message couldn't be sent
    */
   public void sendTo(LcapMessage msg, ArchivalUnit au, LcapIdentity id)
       throws IOException {
@@ -183,9 +204,9 @@ public class LcapRouter extends BaseLockssManager {
     log.debug("sendTo(" + msg + ", " + id + ")");
     LockssDatagram dg = new LockssDatagram(LockssDatagram.PROTOCOL_LCAP,
 					   msg.encodeMsg());
-    updateBeacon();
     comm.sendTo(dg, au, id);
-    rateLimiter.event();
+    updateBeacon();
+    origRateLimiter.event();
   }
 
   private void updateBeacon() {
@@ -239,48 +260,43 @@ public class LcapRouter extends BaseLockssManager {
 	if (!sender.equals(originator)) {
 	  partnerList.addPartner(originator, probAddPartner);
 	}
-	doUnicast(dg, sender, originator);
+	doUnicast(dg, fwdRateLimiter, sender, originator);
       } else {
 	partnerList.addPartner(sender, 1.0);
 	if (!sender.equals(originator)) {
 	  partnerList.addPartner(originator, probAddPartner);
 	}
-	doMulticast(dg, msg);
-	doUnicast(dg, sender, originator);
+	doMulticast(dg, fwdRateLimiter, null);
+	doUnicast(dg, fwdRateLimiter, sender, originator);
       }
     }
   }
 
   boolean isEligibleToForward(LockssReceivedDatagram dg, LcapMessage msg) {
     // Don't forward if ...
-    if (msg.getHopCount() == 0) {	// forwarded enough times already
+    if (msg.getHopCount() <= 0) {	// forwarded enough times already
       return false;
     }
-    if (isUnicastOpcode(msg)) {		// is verify poll message
+    if (isUnicastOpcode(msg)) {
       return false;
     }
-    if (didISend(dg, msg)) {		// was sent be me
+    if (didISend(dg, msg)) {
       return false;
     }
 
-    if (!rateLimiter.isEventOk()) {	// exceeded max send packet rate
+    if (!fwdRateLimiter.isEventOk()) {	// exceeded max send packet rate
+      log.debug("Message forwarding rate exceeded, not forwarding" + msg);
       return false;
     }
-//      if (msg.getStopTime() >= TimeBase.nowMs()) { // poll has ended
-//        return false;
-//      }
+     if (msg.getStopTime() >= TimeBase.nowMs()) { // poll has ended
+       return false;
+     }
 
     return true;
   }
 
   boolean isUnicastOpcode(LcapMessage msg) {
-    switch (msg.getOpcode()) {
-    case LcapMessage.VERIFY_POLL_REQ:
-    case LcapMessage.VERIFY_POLL_REP:
-      return true;
-    default:
-      return false;
-    }
+    return msg.isVerifyPoll();
   }
 
   // true if either the packet's source address is one of my interfaces,
@@ -304,7 +320,7 @@ public class LcapRouter extends BaseLockssManager {
    * the sender or the originator of the message.  Either or both of sender and
    * originator may be null to disable this test.
    */
-  void doUnicast(LockssDatagram dg,
+  void doUnicast(LockssDatagram dg, RateLimiter limiter,
 		 InetAddress sender, InetAddress originator) {
     Set partners = partnerList.getPartners();
     if (partners.contains(getLocalIdentityAddr())) {
@@ -318,17 +334,21 @@ public class LcapRouter extends BaseLockssManager {
       if (!(part.equals(sender) || part.equals(originator))) {
 	try {
 	  comm.sendTo(dg, part);
+	  updateBeacon();
+	  limiter.event();
 	} catch (IOException e) {
-	  // tk - remove partner here?
+	  partnerList.removePartner(part);
 	}
       }
     }
   }
 
   // tk - ok to send same packet here and in unicast, repeatedly?
-  void doMulticast(LockssDatagram dg, LcapMessage msg) {
+  void doMulticast(LockssDatagram dg, RateLimiter limiter, ArchivalUnit au) {
     try {
-      comm.send(dg, null);
+      comm.send(dg, au);
+      updateBeacon();
+      limiter.event();
     } catch (IOException e) {
       // tk - what to do here?
     }
@@ -338,12 +358,12 @@ public class LcapRouter extends BaseLockssManager {
     return idMgr.getLocalIdentity().getAddress();
   }
 
-  void sendNoop() {
+  void sendNoOp() {
     try {
-      LcapMessage noop = LcapMessage.makeNoOpMsg(idMgr.getLocalIdentity());
-      send(noop, null);
+      LcapMessage noOp = LcapMessage.makeNoOpMsg(idMgr.getLocalIdentity());
+      send(noOp, null);
     } catch (IOException e) {
-      log.warning("Couldn't send Noop message", e);
+      log.warning("Couldn't send NoOp message", e);
     }
   }
 
@@ -384,8 +404,12 @@ public class LcapRouter extends BaseLockssManager {
 	try {
 	  beaconDeadline.sleep();
 	  if (goOn && beaconDeadline.expired()) {
-	    log.debug3("Beacon send");
-	    sendNoop();
+	    if (origRateLimiter.isEventOk()) {
+	      log.debug3("Beacon send");
+	      sendNoOp();
+	    } else {
+	      log.debug("Message originate rate exceeded, not sending noop");
+	    }
 	    beaconDeadline.expireIn(beaconInterval);
 	  }
 	} catch (InterruptedException e) {
@@ -435,4 +459,3 @@ public class LcapRouter extends BaseLockssManager {
     public void handleMessage(LcapMessage msg);
   }
 }
-

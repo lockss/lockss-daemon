@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapRouter.java,v 1.2 2003-03-27 23:53:38 tal Exp $
+ * $Id: TestLcapRouter.java,v 1.3 2003-03-29 02:43:18 tal Exp $
  */
 
 /*
@@ -85,8 +85,8 @@ public class TestLcapRouter extends LockssTestCase {
 
   void setConfig() {
     Properties p = new Properties();
-    p.put(LcapRouter.PARAM_PKTS_PER_INTERVAL, "100");
-    p.put(LcapRouter.PARAM_PKT_INTERVAL, "1");
+    p.put(LcapRouter.PARAM_FWD_PKTS_PER_INTERVAL, "100");
+    p.put(LcapRouter.PARAM_FWD_PKT_INTERVAL, "1");
     p.put(LcapRouter.PARAM_BEACON_INTERVAL, "1m");
     p.put(LcapRouter.PARAM_INITIAL_HOPCOUNT, "3");
     p.put(LcapRouter.PARAM_PROB_PARTNER_ADD, "100");
