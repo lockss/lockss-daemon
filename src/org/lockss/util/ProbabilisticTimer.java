@@ -1,5 +1,5 @@
 // ========================================================================
-// $Id: ProbabilisticTimer.java,v 1.3 2002-09-09 20:31:08 tal Exp $
+// $Id: ProbabilisticTimer.java,v 1.4 2002-09-19 20:45:34 tal Exp $
 // ========================================================================
 
 /*
@@ -37,15 +37,13 @@ import java.text.DateFormat;
 
 /** Probabilistic timers measure a duration with randomized jitter.
  */
-public class ProbabilisticTimer {
-  static Random random = null;
-  Date expiration;
-  private long duration;			// only for testing
-  Thread thread;
+public class ProbabilisticTimer extends Deadline {
+  private static Random random = null;
+  private Thread thread;
 
   /** Return a timer with the specified duration. */
   public ProbabilisticTimer(long duration) {
-    this(duration, 0.0);
+    super(duration);
   }
 
   /** Return a timer whose duration is a random, normally distrubuted value
@@ -53,47 +51,28 @@ public class ProbabilisticTimer {
    * <code>stddev</code>.
    */
   public ProbabilisticTimer(long meanDuration, double stddev) {
+    super(meanDuration + (long)(stddev * getRandom().nextGaussian()));
+  }
+
+  private static Random getRandom() {
     if (random == null) {
-      initialize();
+      random = new Random();
     }
-    duration = meanDuration + (long)(stddev * random.nextGaussian());
-    expiration = new Date(now().getTime() + duration);
-  }
-
-  private static Date now() {
-    return new Date();
-  }
-
-  private static void initialize() {
-    random = new Random();
-  }
-
-  /** For testing only. */
-  long getDuration() {
-    return duration;
-  }
-
-  /** Return the absolute expiration time, in milliseconds */
-  long getExpirationTime() {
-    return expiration.getTime();
-  }
-
-  /** Return the time remaining until expiration, in milliseconds */
-  public synchronized long getRemainingTime() {
-    return (expired() ? 0 : expiration.getTime() - now().getTime());
+    return random;
   }
 
   /** Cause the timer to expire immediately, and wake up the thread waiting
       on it, if any. */
   public synchronized void expire() {
-    expiration.setTime(0);
+    super.expire();
+//      expiration.setTime(0);
     if (thread != null)
       thread.interrupt();
   }
 
-  /** Return true iff the timer has expired */
-  public synchronized boolean expired() {
-    return (!now().before(expiration));
+  /** Return true iff this timer is shorter than <code>other</code>. */
+  public boolean isShorterThan(Deadline other) {
+    return before(other);
   }
 
   /** Add <code>delta</code> to the timer's expiration time. */
@@ -118,11 +97,6 @@ public class ProbabilisticTimer {
   /** Set the thread to be interrupted to null. */
   void clearThread() {
     thread = null;
-  }
-
-  /** Return true iff this is shorter in duration than <code>other</code>. */
-  public boolean shorterThan(ProbabilisticTimer other) {
-    return (this.getRemainingTime() < other.getRemainingTime());
   }
 
   // This needs fixing.
