@@ -1,5 +1,5 @@
 /*
- * $Id: TestAbsinthePlugin.java,v 1.6 2004-02-10 01:09:09 clairegriffin Exp $
+ * $Id: TestAbsinthePlugin.java,v 1.6.2.1 2004-02-12 04:36:44 clairegriffin Exp $
  */
 
 /*
@@ -39,13 +39,14 @@ import org.lockss.daemon.*;
 import org.lockss.util.ListUtil;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArchivalUnit.*;
+import org.lockss.plugin.configurable.*;
 
 public class TestAbsinthePlugin extends LockssTestCase {
-  private AbsinthePlugin plugin;
+  private ConfigurablePlugin plugin;
 
   public void setUp() throws Exception {
     super.setUp();
-    plugin = new AbsinthePlugin();
+    plugin = new ConfigurablePlugin();
     plugin.initPlugin(getMockLockssDaemon(),
                       "org.lockss.plugin.absinthe.AbsinthePlugin");
   }
@@ -55,7 +56,7 @@ public class TestAbsinthePlugin extends LockssTestCase {
     props.setProperty(AbsinthePlugin.AUPARAM_BASE_URL, "http://www.example.com/");
     props.setProperty(AbsinthePlugin.AUPARAM_YEAR, "2003");
 
-    AbsintheArchivalUnit au = null;
+    ConfigurableArchivalUnit au = null;
     try {
       au = makeAuFromProps(props);
     }
@@ -70,10 +71,10 @@ public class TestAbsinthePlugin extends LockssTestCase {
     } catch (ArchivalUnit.ConfigurationException e) { }
   }
 
-  private AbsintheArchivalUnit makeAuFromProps(Properties props)
+  private ConfigurableArchivalUnit makeAuFromProps(Properties props)
       throws ArchivalUnit.ConfigurationException {
     Configuration config = ConfigurationUtil.fromProps(props);
-    return (AbsintheArchivalUnit)plugin.configureAu(config, null);
+    return (ConfigurableArchivalUnit)plugin.configureAu(config, null);
   }
 
   public void testGetAuHandlesBadUrl()
@@ -83,7 +84,7 @@ public class TestAbsinthePlugin extends LockssTestCase {
     props.setProperty(AbsinthePlugin.AUPARAM_YEAR, "2003");
 
     try {
-      AbsintheArchivalUnit au = makeAuFromProps(props);
+      ConfigurableArchivalUnit au = makeAuFromProps(props);
       fail ("Didn't throw InstantiationException when given a bad url");
     } catch (ArchivalUnit.ConfigurationException auie) {
       ConfigParamDescr.InvalidFormatException murle =
@@ -99,7 +100,7 @@ public class TestAbsinthePlugin extends LockssTestCase {
                       "http://www.example.com/");
     props.setProperty(AbsinthePlugin.AUPARAM_YEAR, "2003");
 
-    AbsintheArchivalUnit au = makeAuFromProps(props);
+    ConfigurableArchivalUnit au = makeAuFromProps(props);
     assertEquals("www.example.com, 2003", au.getName());
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescr.java,v 1.11 2004-01-28 05:23:28 tlipkis Exp $
+ * $Id: ConfigParamDescr.java,v 1.11.2.1 2004-02-12 04:36:42 clairegriffin Exp $
  */
 
 /*
@@ -52,12 +52,14 @@ public class ConfigParamDescr implements Comparable {
   public static final int TYPE_YEAR = 4;
   /** Value is a true or false */
   public static final int TYPE_BOOLEAN = 5;
+  /** Value is a positive integer */
+  public static final int TYPE_POS_INT = 6;
 
   public static final ConfigParamDescr VOLUME_NUMBER = new ConfigParamDescr();
   static {
     VOLUME_NUMBER.setKey("volume");
     VOLUME_NUMBER.setDisplayName("Volume No.");
-    VOLUME_NUMBER.setType(TYPE_INT);
+    VOLUME_NUMBER.setType(TYPE_POS_INT);
     VOLUME_NUMBER.setSize(8);
   }
 
@@ -183,7 +185,8 @@ public class ConfigParamDescr implements Comparable {
       switch (type) {
       case TYPE_YEAR: size = 4; break;
       case TYPE_BOOLEAN: size = 4; break;
-      case TYPE_INT: size = 10; break;
+      case TYPE_INT:
+      case TYPE_POS_INT: size = 10; break;
       default:
       }
     }
@@ -236,6 +239,17 @@ public class ConfigParamDescr implements Comparable {
           throw new InvalidFormatException("Invalid Int: " + val);
         }
         break;
+      case TYPE_POS_INT:
+          try {
+            ret_val = new Integer(val);
+            if(((Integer)ret_val).intValue() < 0) {
+              throw new InvalidFormatException("Invalid Positive Int: " + val);
+            }
+          } catch (NumberFormatException nfe) {
+            throw new InvalidFormatException("Invalid Positive Int: " + val);
+          }
+          break;
+
       case TYPE_STRING:
         if (!StringUtil.isNullString(val)) {
           ret_val = val;

@@ -1,5 +1,5 @@
 /*
- * $Id: TestAbsintheArchivalUnit.java,v 1.4 2004-02-10 01:09:09 clairegriffin Exp $
+ * $Id: TestAbsintheArchivalUnit.java,v 1.4.2.1 2004-02-12 04:36:44 clairegriffin Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import org.lockss.plugin.*;
 import org.lockss.state.AuState;
 import org.lockss.plugin.base.BaseCachedUrlSet;
 import org.lockss.repository.LockssRepositoryImpl;
+import org.lockss.plugin.configurable.*;
 
 public class TestAbsintheArchivalUnit extends LockssTestCase {
   private MockLockssDaemon theDaemon;
@@ -58,7 +59,7 @@ public class TestAbsintheArchivalUnit extends LockssTestCase {
     super.tearDown();
   }
 
-  private AbsintheArchivalUnit makeAu(URL url, String year)
+  private ConfigurableArchivalUnit makeAu(URL url, String year)
       throws ArchivalUnit.ConfigurationException {
     Properties props = new Properties();
     props.setProperty(AbsinthePlugin.AUPARAM_YEAR, year);
@@ -66,10 +67,10 @@ public class TestAbsintheArchivalUnit extends LockssTestCase {
       props.setProperty(AbsinthePlugin.AUPARAM_BASE_URL, url.toString());
     }
     Configuration config = ConfigurationUtil.fromProps(props);
-    AbsinthePlugin ap = new AbsinthePlugin();
-    ap.initPlugin(theDaemon,ap.getClass().getName());
-    AbsintheArchivalUnit au = new AbsintheArchivalUnit(ap);
-    au.setConfiguration(config);
+    ConfigurablePlugin ap = new ConfigurablePlugin();
+    ap.initPlugin(getMockLockssDaemon(),
+                      "org.lockss.plugin.absinthe.AbsinthePlugin");
+    ConfigurableArchivalUnit au = (ConfigurableArchivalUnit)ap.createAu(config);
     return au;
   }
 
@@ -174,8 +175,8 @@ public class TestAbsintheArchivalUnit extends LockssTestCase {
 
     // 4 digit
     String expectedStr = ROOT_URL+"archives04.htm";
-    AbsintheArchivalUnit pmAu = makeAu(url, "2004");
-    assertEquals(expectedStr, pmAu.makeStartUrl());
+    ConfigurableArchivalUnit pmAu = makeAu(url, "2004");
+    assertEquals(expectedStr, pmAu.getManifestPage());
   }
 
   public void testPathInUrlThrowsException() throws Exception {
@@ -188,10 +189,10 @@ public class TestAbsintheArchivalUnit extends LockssTestCase {
 
   public void testGetUrlStems() throws Exception {
     String stem1 = "http://muse.jhu.edu";
-    AbsintheArchivalUnit pmAu1 = makeAu(new URL(stem1 + "/"), "2003");
+    ConfigurableArchivalUnit pmAu1 = makeAu(new URL(stem1 + "/"), "2003");
     assertEquals(ListUtil.list(stem1), pmAu1.getUrlStems());
     String stem2 = "http://muse.jhu.edu:8080";
-    AbsintheArchivalUnit pmAu2 = makeAu(new URL(stem2 + "/"), "2003");
+    ConfigurableArchivalUnit pmAu2 = makeAu(new URL(stem2 + "/"), "2003");
     assertEquals(ListUtil.list(stem2), pmAu2.getUrlStems());
   }
 
@@ -214,14 +215,14 @@ public class TestAbsintheArchivalUnit extends LockssTestCase {
   }
 
   public void testGetName() throws Exception {
-    AbsintheArchivalUnit au = makeAu(new URL(ROOT_URL), "2003");
+    ConfigurableArchivalUnit au = makeAu(new URL(ROOT_URL), "2003");
     assertEquals("absinthe-literary-review.com, 2003", au.getName());
     au = makeAu(new URL("http://www.bmj.com/"), "2005");
     assertEquals("www.bmj.com, 2005", au.getName());
   }
 
   public static void main(String[] argv) {
-    String[] testCaseList = {TestAbsintheArchivalUnit.class.getName()};
+    String[] testCaseList = {TestConfigurableArchivalUnit.class.getName()};
     junit.swingui.TestRunner.main(testCaseList);
   }
 

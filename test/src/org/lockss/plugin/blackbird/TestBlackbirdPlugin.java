@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlackbirdPlugin.java,v 1.5 2004-02-10 01:09:10 clairegriffin Exp $
+ * $Id: TestBlackbirdPlugin.java,v 1.5.2.1 2004-02-12 04:36:45 clairegriffin Exp $
  */
 
 /*
@@ -38,13 +38,14 @@ import org.lockss.test.*;
 import org.lockss.daemon.*;
 import org.lockss.util.ListUtil;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.configurable.*;
 
 public class TestBlackbirdPlugin extends LockssTestCase {
-  private BlackbirdPlugin plugin;
+  private ConfigurablePlugin plugin;
 
   public void setUp() throws Exception {
     super.setUp();
-    plugin = new BlackbirdPlugin();
+    plugin = new ConfigurablePlugin();
     plugin.initPlugin(getMockLockssDaemon(),
                       "org.lockss.plugin.blackbird.BlackbirdPlugin");
   }
@@ -56,10 +57,10 @@ public class TestBlackbirdPlugin extends LockssTestCase {
     } catch (ArchivalUnit.ConfigurationException e) { }
   }
 
-  private BlackbirdArchivalUnit makeAuFromProps(Properties props)
+  private ConfigurableArchivalUnit makeAuFromProps(Properties props)
       throws ArchivalUnit.ConfigurationException {
     Configuration config = ConfigurationUtil.fromProps(props);
-    return (BlackbirdArchivalUnit)plugin.configureAu(config, null);
+    return (ConfigurableArchivalUnit)plugin.configureAu(config, null);
   }
 
   public void testGetAuHandlesBadUrl()
@@ -69,7 +70,7 @@ public class TestBlackbirdPlugin extends LockssTestCase {
     props.setProperty(BlackbirdPlugin.AUPARAM_VOL, "322");
 
     try {
-      BlackbirdArchivalUnit au = makeAuFromProps(props);
+      ConfigurableArchivalUnit au = makeAuFromProps(props);
       fail ("Didn't throw InstantiationException when given a bad url");
     } catch (ArchivalUnit.ConfigurationException auie) {
       ConfigParamDescr.InvalidFormatException murle =
@@ -85,7 +86,7 @@ public class TestBlackbirdPlugin extends LockssTestCase {
                       "http://www.example.com/");
     props.setProperty(BlackbirdPlugin.AUPARAM_VOL, "322");
 
-    BlackbirdArchivalUnit au = makeAuFromProps(props);
+    ConfigurableArchivalUnit au = makeAuFromProps(props);
     assertEquals("www.example.com, vol. 322", au.getName());
   }
 

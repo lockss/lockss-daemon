@@ -1,5 +1,5 @@
 /*
- * $Id: TestEmlsPlugin.java,v 1.6 2004-02-10 01:09:10 clairegriffin Exp $
+ * $Id: TestEmlsPlugin.java,v 1.6.2.1 2004-02-12 04:36:45 clairegriffin Exp $
  */
 
 /*
@@ -38,13 +38,14 @@ import org.lockss.test.*;
 import org.lockss.daemon.*;
 import org.lockss.util.ListUtil;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.configurable.*;
 
 public class TestEmlsPlugin extends LockssTestCase {
-  private EmlsPlugin plugin;
+  private ConfigurablePlugin plugin;
 
   public void setUp() throws Exception {
     super.setUp();
-    plugin = new EmlsPlugin();
+    plugin = new ConfigurablePlugin();
     plugin.initPlugin(getMockLockssDaemon(),
                       "org.lockss.plugin.emls.EmlsPlugin");
   }
@@ -56,10 +57,10 @@ public class TestEmlsPlugin extends LockssTestCase {
     } catch (ArchivalUnit.ConfigurationException e) { }
   }
 
-  private EmlsArchivalUnit makeAuFromProps(Properties props)
+  private ConfigurableArchivalUnit makeAuFromProps(Properties props)
       throws ArchivalUnit.ConfigurationException {
     Configuration config = ConfigurationUtil.fromProps(props);
-    return (EmlsArchivalUnit)plugin.configureAu(config, null);
+    return (ConfigurableArchivalUnit)plugin.configureAu(config, null);
   }
 
   public void testGetAuHandlesBadUrl()
@@ -69,7 +70,7 @@ public class TestEmlsPlugin extends LockssTestCase {
     props.setProperty(EmlsPlugin.AUPARAM_VOL, "3");
 
     try {
-      EmlsArchivalUnit au = makeAuFromProps(props);
+      ConfigurableArchivalUnit au = makeAuFromProps(props);
       fail ("Didn't throw InstantiationException when given a bad url");
     } catch (ArchivalUnit.ConfigurationException auie) {
       ConfigParamDescr.InvalidFormatException murle =
@@ -85,7 +86,7 @@ public class TestEmlsPlugin extends LockssTestCase {
                       "http://www.example.com/emls/");
     props.setProperty(EmlsPlugin.AUPARAM_VOL, "3");
 
-    EmlsArchivalUnit au = makeAuFromProps(props);
+    ConfigurableArchivalUnit au = makeAuFromProps(props);
     assertEquals("www.example.com, vol. 3", au.getName());
   }
 

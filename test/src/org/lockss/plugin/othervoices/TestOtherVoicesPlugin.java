@@ -1,5 +1,5 @@
 /*
- * $Id: TestOtherVoicesPlugin.java,v 1.6 2004-02-10 04:41:07 clairegriffin Exp $
+ * $Id: TestOtherVoicesPlugin.java,v 1.6.2.1 2004-02-12 04:36:46 clairegriffin Exp $
  */
 
 /*
@@ -38,19 +38,20 @@ import org.lockss.test.*;
 import org.lockss.daemon.*;
 import org.lockss.util.ListUtil;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.configurable.*;
 
 public class TestOtherVoicesPlugin
     extends LockssTestCase {
-  private OtherVoicesPlugin plugin;
+  private ConfigurablePlugin plugin;
 
   public void setUp() throws Exception {
     super.setUp();
-    plugin = new OtherVoicesPlugin();
+    plugin = new ConfigurablePlugin();
     plugin.initPlugin(getMockLockssDaemon(),
                       "org.lockss.plugin.othervoices.OtherVoicesPlugin");
   }
 
-  public void testGetAuNullConfig() throws ArchivalUnit.ConfigurationException {
+  public void testGetAuNullConfig()  {
     try {
       plugin.configureAu(null, null);
       fail("Didn't throw ArchivalUnit.ConfigurationException");
@@ -59,10 +60,10 @@ public class TestOtherVoicesPlugin
 
   }
 
-  private OtherVoicesArchivalUnit makeAuFromProps(Properties props) throws
+  private ConfigurableArchivalUnit makeAuFromProps(Properties props) throws
       ArchivalUnit.ConfigurationException {
     Configuration config = ConfigurationUtil.fromProps(props);
-    return (OtherVoicesArchivalUnit) plugin.configureAu(config, null);
+    return (ConfigurableArchivalUnit) plugin.configureAu(config, null);
   }
 
   public void testGetAuHandlesBadUrl() throws ArchivalUnit.
@@ -72,7 +73,7 @@ public class TestOtherVoicesPlugin
     props.setProperty(OtherVoicesPlugin.AUPARAM_VOL, "322");
 
     try {
-      OtherVoicesArchivalUnit au = makeAuFromProps(props);
+      ConfigurableArchivalUnit au = makeAuFromProps(props);
       fail("Didn't throw InstantiationException when given a bad url");
     }
     catch (ArchivalUnit.ConfigurationException auie) {
@@ -89,7 +90,7 @@ public class TestOtherVoicesPlugin
                       "http://www.example.com/");
     props.setProperty(OtherVoicesPlugin.AUPARAM_VOL, "322");
 
-    OtherVoicesArchivalUnit au = makeAuFromProps(props);
+    ConfigurableArchivalUnit au = makeAuFromProps(props);
     assertEquals("www.example.com, vol. 322", au.getName());
   }
 

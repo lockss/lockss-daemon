@@ -1,5 +1,5 @@
 /*
- * $Id: IeeePlugin.java,v 1.9 2004-02-10 01:09:09 clairegriffin Exp $
+ * $Id: IeeePlugin.java,v 1.9.2.1 2004-02-12 04:36:44 clairegriffin Exp $
  */
 
 /*
@@ -48,7 +48,7 @@ public class IeeePlugin extends ConfigurablePlugin {
   static {
     PU_NUMBER.setKey("Pu_Number");
     PU_NUMBER.setDisplayName("Publication Number");
-    PU_NUMBER.setType(ConfigParamDescr.TYPE_INT);
+    PU_NUMBER.setType(ConfigParamDescr.TYPE_POS_INT);
     PU_NUMBER.setSize(10);
     PU_NUMBER.setDescription("IEEE publication Number(e.g. '2').");
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigurableArchivalUnit.java,v 1.3 2004-01-27 04:07:06 tlipkis Exp $
+ * $Id: TestConfigurableArchivalUnit.java,v 1.3.2.1 2004-02-12 04:36:45 clairegriffin Exp $
  */
 
 /*
@@ -75,7 +75,7 @@ public class TestConfigurableArchivalUnit extends LockssTestCase {
     map.putBoolean("BOOLEAN", true);
     map.putString("STRING", "Yo Mama!");
     map.putInt(ConfigParamDescr.YEAR.getKey(), 2003);
-    map.putInt(ConfigurableArchivalUnit.CM_AU_SHORT_YEAR_KEY +
+    map.putInt(ConfigurableArchivalUnit.CM_AU_SHORT_YEAR_PREFIX +
                ConfigParamDescr.YEAR.getKey(),3);
 
     String substr = "My Test Integer = %d\nINTEGER";

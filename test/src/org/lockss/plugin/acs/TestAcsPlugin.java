@@ -1,5 +1,5 @@
 /*
- * $Id: TestAcsPlugin.java,v 1.10 2004-02-10 04:41:07 clairegriffin Exp $
+ * $Id: TestAcsPlugin.java,v 1.10.2.1 2004-02-12 04:36:44 clairegriffin Exp $
  */
 
 /*
@@ -38,21 +38,22 @@ import org.lockss.test.*;
 import org.lockss.util.ListUtil;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.daemon.*;
+import org.lockss.plugin.configurable.*;
 
 public class TestAcsPlugin extends LockssTestCase {
-  private AcsPlugin plugin;
+  private ConfigurablePlugin plugin;
 
   public void setUp() throws Exception {
     super.setUp();
-    plugin = new AcsPlugin();
+    plugin = new ConfigurablePlugin();
     plugin.initPlugin(getMockLockssDaemon(),
                       "org.lockss.plugin.acs.AcsPlugin");
   }
 
-  private AcsArchivalUnit makeAuFromProps(Properties props)
+  private ConfigurableArchivalUnit makeAuFromProps(Properties props)
       throws ArchivalUnit.ConfigurationException {
     Configuration config = ConfigurationUtil.fromProps(props);
-    return (AcsArchivalUnit)plugin.configureAu(config, null);
+    return (ConfigurableArchivalUnit)plugin.configureAu(config, null);
   }
 
   public void testGetAuHandlesBadUrl()
@@ -64,7 +65,7 @@ public class TestAcsPlugin extends LockssTestCase {
     props.setProperty(AcsPlugin.AUPARAM_BASE_URL, "blah");
     props.setProperty(AcsPlugin.AUPARAM_YEAR, "2003");
     try {
-      AcsArchivalUnit au = makeAuFromProps(props);
+      ConfigurableArchivalUnit au = makeAuFromProps(props);
       fail ("Didn't throw InstantiationException when given a bad url");
     } catch (ArchivalUnit.ConfigurationException auie) {
       ConfigParamDescr.InvalidFormatException murle =
@@ -82,7 +83,7 @@ public class TestAcsPlugin extends LockssTestCase {
     props.setProperty(AcsPlugin.AUPARAM_JOURNAL_KEY,"abcd");
     props.setProperty(AcsPlugin.AUPARAM_YEAR, "2003");
 
-    AcsArchivalUnit au = makeAuFromProps(props);
+    ConfigurableArchivalUnit au = makeAuFromProps(props);
     assertEquals("www.example.com, abcd, vol. 322", au.getName());
   }
 
