@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedUrlCacher.java,v 1.14 2003-12-19 01:33:24 eaalto Exp $
+ * $Id: SimulatedUrlCacher.java,v 1.15 2004-03-07 08:42:17 tlipkis Exp $
  */
 
 /*
@@ -94,7 +94,7 @@ public class SimulatedUrlCacher extends BaseUrlCacher {
   protected InputStream getDefaultStream(File file, long lastCached)
       throws IOException {
     if ((file.lastModified() <= lastCached) && !toBeDamaged()) {
-      logger.debug2("Unmodified content not cached for url '"+url+"'");
+      logger.debug2("Unmodified content not cached for url '"+origUrl+"'");
       return null;
     }
     return new SimulatedContentStream(new FileInputStream(file),toBeDamaged());
@@ -118,20 +118,20 @@ public class SimulatedUrlCacher extends BaseUrlCacher {
     } else {
       props.setProperty("content-type", "text/plain");
     }
-    props.setProperty("content-url", url);
+    props.setProperty("content-url", origUrl);
     // set fetch time as now, since it should be the same system
     props.setProperty("date", ""+TimeBase.nowMs());
     return props;
   }
 
   private String mapUrlToContentFileName() {
-    return SimulatedArchivalUnit.mapUrlToContentFileName(url);
+    return SimulatedArchivalUnit.mapUrlToContentFileName(origUrl);
   }
 
   private boolean toBeDamaged() {
     try {
       SimulatedArchivalUnit unit = (SimulatedArchivalUnit) getArchivalUnit();
-      return unit.isUrlToBeDamaged(url);
+      return unit.isUrlToBeDamaged(origUrl);
     } catch (ClassCastException e ) {
       return false;
     }
