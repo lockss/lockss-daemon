@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.10 2002-11-20 00:26:18 tal Exp $
+ * $Id: LockssTestCase.java,v 1.11 2002-11-20 22:57:35 tal Exp $
  */
 
 /*
@@ -231,7 +231,7 @@ public class LockssTestCase extends TestCase {
     private boolean want = true;
     private boolean did = false;
 
-    public DoLater(long waitMs) {
+    protected DoLater(long waitMs) {
       wait = waitMs;
     }
 
