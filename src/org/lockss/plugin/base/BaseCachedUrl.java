@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.9 2004-03-09 23:37:53 tlipkis Exp $
+ * $Id: BaseCachedUrl.java,v 1.10 2004-04-05 08:00:59 tlipkis Exp $
  */
 
 /*
@@ -95,7 +95,7 @@ public class BaseCachedUrl implements CachedUrl {
   }
 
   /**
-   * Currently simply returns 'openForReading()'.
+   * Return a stream suitable for hashing.  This may be a filtered stream.
    * @return an InputStream
    */
   public InputStream openForHashing() {
