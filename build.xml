@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.39 2003-04-29 00:45:32 troberts Exp $
+ $Id: build.xml,v 1.40 2003-05-05 17:59:17 tal Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
@@ -343,7 +343,7 @@ Args:
 	     value="now"/>
       <entry key="build.user.name" value="${user.name}"/>
       <entry key="build.host" value="${env.HOSTNAME}"/>
-      <entry key="build.releasename" value="${env.DAEMONBUILDNAME}"/>
+      <entry key="build.releasename" value="${releasename}"/>
     </propertyfile>
   </target>
 
