@@ -94,15 +94,22 @@ public interface CachedUrl {
     public void storeContent(InputStream input,
 			     Properties headers) throws IOException;
 
-    // Un-cached read interface, accessing the udnerlying object
+    // Un-cached read interface, accessing the underlying object,  used
+    // by the crawler to fetch content.  It is implemented by the plug-in
+    // to allow it to provide appropriate credentials.
 
     /**
+     * Return an <code>InputStream</code> object which accesses the
+     * object being cached rather than the object in the cache (i.e.
+     * force a cache miss).
      * @return an <code>InputStream</code> object from which the contents of
      *         the original object being cached can be read.
      */
     public InputStream getUncachedInputStream();
     /**
-     * @return a <code>Properties</code> object contgaining the headers of
+     * Return a <code>Properties</code> object containing the headers of
+     * the object being cached rather than the object in the cache.
+     * @return a <code>Properties</code> object containing the headers of
      *         the original object being cached.
      */
     public Properties getUncachedProperties();
