@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.16 2003-02-26 04:52:51 tal Exp $
+ * $Id: MockArchivalUnit.java,v 1.17 2003-02-26 05:09:31 tal Exp $
  */
 
 /*
@@ -69,7 +69,7 @@ public class MockArchivalUnit implements ArchivalUnit {
   }
 
   public CachedUrlSet getAUCachedUrlSet() {
-    return cus;
+    return makeCachedUrlSet(new AUCachedUrlSetSpec());
   }
 
   public void setAUCachedUrlSet(CachedUrlSet cus) {
