@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.9 2003-02-27 04:04:28 tal Exp $
+ * $Id: PluginManager.java,v 1.10 2003-02-27 07:30:05 tal Exp $
  */
 
 /*
@@ -203,53 +203,55 @@ public class PluginManager implements LockssManager {
     }
   }
 
-  /**
-   * Register the <code>ArchivalUnit</code>, so that
-   * it can be found by <code>Plugin.findArchivalUnit()</code>.
-   * @param au <code>ArchivalUnit</code> to add.
-   */
-//   public void registerArchivalUnit(ArchivalUnit au) {
-//     if (!archivalUnits.contains(au)) {
-//       archivalUnits.addElement(au);
-//     }
-//   }
-
   // separate method so can be called by test code
   private void setPlugin(String pluginId, Plugin plugin) {
-    log.debug("setPlugin(" + pluginId + ", " + plugin + ")");
-    log.debug(this.toString());
+    log.debug3(this +".setPlugin(" + pluginId + ", " + plugin + ")");
     plugins.put(pluginId, plugin);
   }
 
   /**
-   * Unregister the <code>ArchivalUnit</code>, so that
-   * it will not be found by <code>Plugin.findArchivalUnit()</code>.
-   * @param au <code>ArchivalUnit</code> to remove.
-   */
-//   public void unregisterArchivalUnit(ArchivalUnit au) {
-//     archivalUnits.remove(au);
-//   }
-
-  /**
-   * Find the <code>ArchivalUnit</code>
-   * that contains a URL.
+   * Find an ArchivalUnit that might contain the URL.
    * @param url The URL to search for.
    * @return The <code>ArchivalUnit</code> that contains the URL, or
    * null if none found.  It is an error for more than one
    * <code>ArchivalUnit</code> to contain the url.
    */
   public ArchivalUnit findArchivalUnit(String url) {
-    for (Iterator iter = archivalUnits.iterator();
-	 iter.hasNext();) {
-      Object o = iter.next();
-      if (o instanceof ArchivalUnit) {
-	ArchivalUnit au = (ArchivalUnit)o;
-	if (au.shouldBeCached(url)) {
-	  return au;
-	}
+    for (Iterator iter = getAllAUs().iterator(); iter.hasNext();) {
+      ArchivalUnit au = (ArchivalUnit)iter.next();
+      if (au.shouldBeCached(url)) {
+	return au;
       }
     }
     return null;
+  }
+
+  /**
+   * Find all ArchivalUnits that contain (have content for) the URL.
+   * @param url The URL to search for.
+   * @return List of ArchivalUnits.
+   */
+  public List findArchivalUnitsContaining(String url) {
+    List res = new ArrayList();
+    for (Iterator iter = getAllAUs().iterator(); iter.hasNext();) {
+      ArchivalUnit au = (ArchivalUnit)iter.next();
+      if (au.shouldBeCached(url)) {
+	CachedUrl cu = au.getAUCachedUrlSet().makeCachedUrl(url);
+	if (cu.hasContent()) {
+	  res.add(au);
+	}
+      }
+    }
+    return res;
+  }
+
+  public List getAllAUs() {
+    List res = new ArrayList();
+    for (Iterator pi = plugins.values().iterator(); pi.hasNext(); ) {
+      Plugin plug = (Plugin)pi.next();
+      res.addAll(plug.getAllAUs());
+    }
+    return res;
   }
 
   /**
@@ -259,17 +261,14 @@ public class PluginManager implements LockssManager {
    * null if au not present on this cache
    */
   public CachedUrlSet findCachedUrlSet(PollSpec spec) {
-    log.debug("findCachedUrlSet("+spec+")");
-    log.debug(this.toString());
+    log.debug3(this +".findCachedUrlSet("+spec+")");
     String pluginId = spec.getPluginId();
-    log.debug("pluginId: " + pluginId);
     Plugin plugin = getPlugin(pluginId);
-    log.debug("plugin: " + plugin);
+    log.debug3("plugin: " + plugin);
     if (plugin == null) return null;
     String auId = spec.getAUId();
-    log.debug("auId: " + auId);
     ArchivalUnit au = plugin.getAU(auId);
-    log.debug("au: " + au);
+    log.debug3("au: " + au);
     if (au == null) return null;
     String url = spec.getUrl();
     CachedUrlSet cus;
@@ -278,25 +277,10 @@ public class PluginManager implements LockssManager {
     } else {
       cus = au.makeCachedUrlSet(url, spec.getLwrBound(), spec.getUprBound());
     }
-    log.debug("ret cus = " + cus);
+    log.debug3("ret cus: " + cus);
     return cus;
   }
 
-  /**
-   * Get the list of ArchivalUnits.
-   * @return an Iterator of ArchivalUnits
-   */
-//   public static Iterator getArchivalUnits() {
-//     return Collections.unmodifiableList(archivalUnits).iterator();
-//   }
-
-  /**
-   * Returns the number of archival units currently registered.
-   * @return an integer
-   */
-//   public static int getNumArchivalUnits() {
-//     return archivalUnits.size();
-//   }
 
 //    /**
 //     * Find or create a <code>CachedUrlSet</code> representing the content
