@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.23 2004-12-08 00:50:39 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.24 2004-12-08 00:51:53 tlipkis Exp $
  */
 
 /*
@@ -425,7 +425,6 @@ public class RemoteApi extends BaseLockssDaemonManager {
    * (ConfigParamDescr), but we don't have that information here. */
   Configuration canonicalizeAuConfig(Configuration auConfig) {
     canonicalizeBoolean(auConfig, PluginManager.AU_PARAM_DISABLED, false);
-//     auConfig.removeConfigTree(
     return auConfig;
   }
 
