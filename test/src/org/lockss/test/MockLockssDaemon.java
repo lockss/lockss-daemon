@@ -272,11 +272,7 @@ public class MockLockssDaemon extends LockssDaemon {
   public IdentityManager getIdentityManager() {
     if (identityManager == null) {
       identityManager = new IdentityManager();
-      try {
-        identityManager.initService(this);
-      }
-      catch (LockssDaemonException ex) {
-      }
+      identityManager.initService(this);
     }
     theManagers.put(LockssDaemon.IDENTITY_MANAGER, identityManager);
     return identityManager;
