@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessage.java,v 1.5 2002-11-22 02:58:17 claire Exp $
+ * $Id: LcapMessage.java,v 1.6 2002-11-23 01:39:28 troberts Exp $
  */
 
 /*
@@ -148,6 +148,7 @@ public class LcapMessage {
 			byte[] hashedContent,
 			int opcode) throws IOException {
 
+    this();
     // copy the essential information from the trigger packet
     m_hopCount =trigger.getHopCount();
     m_group = trigger.getGroupAddress();
@@ -241,6 +242,9 @@ public class LcapMessage {
 					 long timeRemaining,
 					 LcapIdentity localID)
       throws IOException {
+    if (hashedContent == null) {
+      log.error("Making a reply message with null hashed content");
+    }
     LcapMessage msg = new LcapMessage(trigger, localID, verifier,
 				      hashedContent, opcode);
     if (msg != null) {
@@ -505,8 +509,10 @@ public class LcapMessage {
     sb.append(String.valueOf(B64Code.encode(m_challenge)));
     sb.append(" ");
     sb.append(String.valueOf(B64Code.encode(m_verifier)));
-    sb.append(" ");
-    sb.append(String.valueOf(B64Code.encode(m_hashed)));
+    if (m_hashed != null) { //can be null for a request message
+      sb.append(" ");
+      sb.append(String.valueOf(B64Code.encode(m_hashed)));
+    }
     sb.append("]");
     return sb.toString();
   }
