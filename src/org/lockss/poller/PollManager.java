@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.25 2003-02-07 05:04:40 claire Exp $
+* $Id: PollManager.java,v 1.26 2003-02-07 08:35:26 claire Exp $
  */
 
 /*
@@ -140,7 +140,7 @@ public class PollManager  implements LockssManager {
   public void requestPoll(CachedUrlSet cus, String regexp, int opcode)
       throws IOException {
     long duration = calcDuration(opcode, cus);
-
+    ArchivalUnit au = cus.getArchivalUnit();
     byte[] challenge = makeVerifier();
     byte[] verifier = makeVerifier();
     LcapMessage msg = LcapMessage.makeRequestMsg(cus.getPrimaryUrl(),
@@ -150,10 +150,11 @@ public class PollManager  implements LockssManager {
         verifier,
         opcode,
         duration,
-        theDaemon.getIdentityManager().getLocalIdentity());
+        theDaemon.getIdentityManager().getLocalIdentity(),
+        au.getPluginId());
 
     theLog.debug("send: " +  msg.toString());
-    sendMessage(msg, cus.getArchivalUnit());
+    sendMessage(msg, au);
   }
 
 
@@ -242,26 +243,8 @@ public class PollManager  implements LockssManager {
       return null;
     }
 
-    // create the appropriate message type
-    switch(msg.getOpcode()) {
-      case LcapMessage.CONTENT_POLL_REP:
-      case LcapMessage.CONTENT_POLL_REQ:
-        theLog.debug("Making a content poll on "+cus);
-        ret_poll = new ContentPoll(msg, cus, this);
-        break;
-      case LcapMessage.NAME_POLL_REP:
-      case LcapMessage.NAME_POLL_REQ:
-        theLog.debug("Making a name poll on "+cus);
-        ret_poll = new NamePoll(msg, cus, this);
-        break;
-      case LcapMessage.VERIFY_POLL_REP:
-      case LcapMessage.VERIFY_POLL_REQ:
-        theLog.debug("Making a verify poll on "+cus);
-        ret_poll = new VerifyPoll(msg, cus, this);
-        break;
-      default:
-        throw new ProtocolException("Unknown opcode:" + msg.getOpcode());
-    }
+    // create the appropriate poll for the message type
+    ret_poll = createPoll(msg, cus);
 
     if(ret_poll != null) {
       thePolls.put(ret_poll.m_key, new PollManagerEntry(ret_poll));
@@ -396,7 +379,7 @@ public class PollManager  implements LockssManager {
       throws IOException {
 
     theLog.debug("Calling a verify poll...");
-
+    ArchivalUnit au = theDaemon.getPluginManager().findArchivalUnit(url);
     LcapMessage reqmsg = LcapMessage.makeRequestMsg(url,
         regexp,
         null,
@@ -404,11 +387,12 @@ public class PollManager  implements LockssManager {
         makeVerifier(),
         LcapMessage.VERIFY_POLL_REQ,
         duration,
-        theDaemon.getIdentityManager().getLocalIdentity());
+        theDaemon.getIdentityManager().getLocalIdentity(),
+        au.getPluginId());
 
     LcapIdentity originator = vote.getIdentity();
     theLog.debug("sending our verification request to " + originator.toString());
-    sendMessageTo(reqmsg, theDaemon.getPluginManager().findArchivalUnit(url), originator);
+    sendMessageTo(reqmsg,au, originator);
 
     theLog.debug("Creating a local poll instance...");
     Poll poll = findPoll(reqmsg);
@@ -511,6 +495,31 @@ public class PollManager  implements LockssManager {
     return verifier;
   }
 
+  Poll createPoll(LcapMessage msg, CachedUrlSet cus) throws ProtocolException {
+    Poll ret_poll = null;
+
+    switch(msg.getOpcode()) {
+      case LcapMessage.CONTENT_POLL_REP:
+      case LcapMessage.CONTENT_POLL_REQ:
+        theLog.debug("Making a content poll on "+ cus);
+        ret_poll = new ContentPoll(msg, cus, this);
+        break;
+      case LcapMessage.NAME_POLL_REP:
+      case LcapMessage.NAME_POLL_REQ:
+        theLog.debug("Making a name poll on "+cus);
+        ret_poll = new NamePoll(msg, cus, this);
+        break;
+      case LcapMessage.VERIFY_POLL_REP:
+      case LcapMessage.VERIFY_POLL_REQ:
+        theLog.debug("Making a verify poll on "+cus);
+        ret_poll = new VerifyPoll(msg, cus, this);
+        break;
+      default:
+        throw new ProtocolException("Unknown opcode:" + msg.getOpcode());
+    }
+    return ret_poll;
+  }
+
 
   private void rememberVerifier(byte[] verifier,
                                 byte[] secret) {
@@ -569,6 +578,10 @@ public class PollManager  implements LockssManager {
   Poll removePoll(String key) {
     PollManagerEntry pme = (PollManagerEntry)thePolls.remove(key);
     return (pme != null) ? pme.poll : null;
+  }
+
+  void addPoll(Poll p) {
+      thePolls.put(p.m_key, new PollManagerEntry(p));
   }
 
   boolean isPollActive(String key) {

@@ -1,5 +1,5 @@
 /*
-* $Id: LcapMessage.java,v 1.20 2003-02-06 05:16:06 claire Exp $
+* $Id: LcapMessage.java,v 1.21 2003-02-07 08:35:26 claire Exp $
  */
 
 /*
@@ -100,6 +100,7 @@ public class LcapMessage implements Serializable {
   long               m_startTime;   // the original start time
   long               m_stopTime;    // the original stop time
   int                m_opcode;      // the kind of packet
+  protected String   m_pluginID;    // the archival unit
   protected String   m_targetUrl;   // the target URL
   protected String   m_regExp;      // the target regexp
   protected byte[]   m_challenge;   // the challenge bytes
@@ -172,6 +173,7 @@ public class LcapMessage implements Serializable {
     m_challenge = trigger.getChallenge();
     m_targetUrl = trigger.getTargetUrl();
     m_regExp = trigger.getRegExp();
+    m_pluginID = trigger.getPluginID();
     m_entries = entries;
     m_hashAlgorithm = trigger.getHashAlgorithm();
     m_originID = localID;
@@ -230,6 +232,7 @@ public class LcapMessage implements Serializable {
    * @param opcode the kind of poll being requested
    * @param timeRemaining the time remaining for this poll
    * @param localID the identity of the requestor
+   * @param pluginID the plugin to be used for this au
    * @return message the new LcapMessage
    * @throws IOException if unable to creae message
    */
@@ -240,7 +243,8 @@ public class LcapMessage implements Serializable {
       byte[] verifier,
       int opcode,
       long timeRemaining,
-      LcapIdentity localID)
+      LcapIdentity localID,
+      String pluginID)
       throws IOException {
 
     LcapMessage msg = new LcapMessage(targetUrl,regExp,entries,(byte)0,
@@ -250,6 +254,7 @@ public class LcapMessage implements Serializable {
       msg.m_stopTime = msg.m_startTime + timeRemaining;
       msg.m_originID = localID;
       msg.m_hopCount = sendHopCount();
+      msg.m_pluginID = pluginID;
     }
     return msg;
 
@@ -368,6 +373,7 @@ public class LcapMessage implements Serializable {
     duration = m_props.getInt("duration", 0) * 1000;
     elapsed = m_props.getInt("elapsed", 0)* 1000;
     m_opcode = m_props.getInt("opcode", -1);
+    m_pluginID = m_props.getProperty("plugin", "UNKNOWN");
     m_targetUrl = m_props.getProperty("url");
     m_regExp = m_props.getProperty("regexp");
     m_challenge = m_props.getByteArray("challenge", new byte[0]);
@@ -407,6 +413,10 @@ public class LcapMessage implements Serializable {
     if(m_regExp != null) {
       m_props.setProperty("regexp",m_regExp);
     }
+    if(m_pluginID == null) {
+      m_pluginID = "UNKNOWN";
+    }
+    m_props.setProperty("plugin", m_pluginID);
     m_props.putByteArray("challenge", m_challenge);
     m_props.putByteArray("verifier", m_verifier);
     if(m_hashed != null) {
@@ -509,6 +519,10 @@ public class LcapMessage implements Serializable {
     return POLL_OPCODES[m_opcode];
   }
 
+  public String getPluginID() {
+    return m_pluginID;
+  }
+
   public boolean getMulticast() {
     return m_multicast;
   }
@@ -592,6 +606,31 @@ public class LcapMessage implements Serializable {
     return buf.toString();
   }
 
+  void setRERemaining(int firstIndex) {
+    String last_entry = m_entries[firstIndex - 1];
+    String first_extra = m_entries[firstIndex];
+    String last_extra = m_entries[m_entries.length - 1];
+    StringBuffer buf = new StringBuffer();
+    // everything from the first to last entry
+//    String rem = first_extra.substring(0,firstDifferentChar(last_entry,first_extra));
+//    buf.append(rem);
+
+    buf.append(first_extra);
+    buf.append(".*");
+    buf.append(last_extra);
+    m_RERemaining = buf.toString();
+  }
+
+  int firstDifferentChar(String s1, String s2) {
+    for(int i=0; i< s1.length() && i < s2.length(); i++) {
+      if(s1.charAt(i) != s2.charAt(i)) {
+        return i+1;
+      }
+    }
+    return -1;
+  }
+
+
 
   String[] stringToEntries(String estr) {
     StringTokenizer tokenizer = new StringTokenizer(estr,"\n");
@@ -602,17 +641,6 @@ public class LcapMessage implements Serializable {
       ret[i++] = tokenizer.nextToken();
     }
     return ret;
-  }
-
-  void setRERemaining(int firstIndex) {
-    String last_entry = m_entries[firstIndex -1];
-    String first_extra = m_entries[firstIndex];
-    String last_extra = m_entries[m_entries.length -1];
-    StringBuffer buf = new StringBuffer();
-    // find a reg expression to represent the remaining entries in the list
-    // our original match
-    // plus the re for what's not in the entries array
-    //m_RERemaining = buf.toString();
   }
 
   public String toString() {
