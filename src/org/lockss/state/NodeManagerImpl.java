@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.149 2003-07-24 20:41:18 clairegriffin Exp $
+ * $Id: NodeManagerImpl.java,v 1.150 2003-07-31 00:49:17 eaalto Exp $
  */
 
 /*
@@ -618,7 +618,8 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     boolean repairsDone = false;
     if (repairCol.size() > 0) {
       markNodesForRepair(repairCol, results.getPollKey(),
-                         results.getCachedUrlSet(), true);
+                         results.getCachedUrlSet(), true,
+                         results.getActivityLock());
       repairsDone = true;
     }
 
@@ -990,9 +991,17 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
         //schedule repair, replay poll (if exists)
         if (!reportOnly) {
           logger.debug2("scheduling repair");
-          String pollKey = (results==null ? null : results.getPollKey());
-          markNodesForRepair(ListUtil.list(nodeState.getCachedUrlSet().getUrl()),
-                             pollKey, nodeState.getCachedUrlSet(), false);
+          List repairUrl = ListUtil.list(nodeState.getCachedUrlSet().getUrl());
+          if (results!=null) {
+            // give poll info for replay
+            markNodesForRepair(repairUrl, results.getPollKey(),
+                               nodeState.getCachedUrlSet(), false,
+                               results.getActivityLock());
+          } else {
+            // no poll info to replay
+            markNodesForRepair(repairUrl, null, nodeState.getCachedUrlSet(),
+                               false, null);
+          }
         }
         return true;
       case NodeState.UNREPAIRABLE_SNCUSS:
@@ -1306,7 +1315,8 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
   }
 
   private void markNodesForRepair(Collection urls, String pollKey,
-                                  CachedUrlSet cus, boolean isNamePoll) {
+                                  CachedUrlSet cus, boolean isNamePoll,
+                                  ActivityRegulator.Lock lock) {
     if (pollKey!=null) {
       logger.debug2("suspending poll " + pollKey);
       pollManager.suspendPoll(pollKey);
@@ -1323,7 +1333,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     PollCookie cookie = new PollCookie(cus, pollKey, isNamePoll);
     theDaemon.getCrawlManager().startRepair(managedAu, urls,
 					    new ContentRepairCallback(),
-					    cookie);
+					    cookie, lock);
   }
 
   private void deleteNode(CachedUrlSet cus) throws IOException {

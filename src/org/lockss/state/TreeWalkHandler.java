@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkHandler.java,v 1.33 2003-06-20 22:34:52 claire Exp $
+ * $Id: TreeWalkHandler.java,v 1.34 2003-07-31 00:49:17 eaalto Exp $
  */
 
 /*
@@ -35,12 +35,10 @@ package org.lockss.state;
 import java.util.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
+import org.lockss.daemon.*;
 import org.lockss.crawler.CrawlManager;
 import org.lockss.poller.PollSpec;
-import org.lockss.daemon.Configuration;
-import org.lockss.daemon.RangeCachedUrlSetSpec;
 import org.lockss.app.LockssDaemon;
-import org.lockss.daemon.ActivityRegulator;
 
 /**
  * The treewalk thread handler in the NodeManager.  This starts a thread which
@@ -128,15 +126,14 @@ public class TreeWalkHandler {
       expiration = 2 * getAverageTreeWalkDuration();
     }
     // check with regulator to see if treewalk can proceed
-    activityLock = theRegulator.startAuActivity(ActivityRegulator.TREEWALK,
+    activityLock = theRegulator.getAuActivityLock(ActivityRegulator.TREEWALK,
                                                 expiration);
     if (activityLock != null) {
       try {
         // check with crawl manager
         if (theAu.shouldCrawlForNewContent(manager.getAuState())) {
-          theRegulator.auActivityFinished(ActivityRegulator.TREEWALK);
           treeWalkAborted = true;
-          theCrawlManager.startNewContentCrawl(theAu, null, null);
+          theCrawlManager.startNewContentCrawl(theAu, null, null, activityLock);
           logger.debug("Requested new content crawl.  Aborting...");
         }
         else {
@@ -150,7 +147,8 @@ public class TreeWalkHandler {
       }
       finally {
         if (!treeWalkAborted) {
-          theRegulator.auActivityFinished(ActivityRegulator.TREEWALK);
+          // release the lock
+          activityLock.expire();
         } else {
           treeWalkAborted = false;
         }
@@ -238,7 +236,7 @@ public class TreeWalkHandler {
         logger.debug3("Calling poll on node '" +
                       node.getCachedUrlSet().getUrl() + "'");
         // free treewalk state
-        theRegulator.auActivityFinished(ActivityRegulator.TREEWALK);
+        activityLock.expire();
         // take appropriate action
         manager.checkCurrentState(lastHistory, null, node, false);
         // abort treewalk
@@ -372,7 +370,8 @@ public class TreeWalkHandler {
     public void end() {
       goOn = false;
       if (doingTreeWalk) {
-        theRegulator.auActivityFinished(ActivityRegulator.TREEWALK);
+        // free the lock
+        activityLock.expire();
       }
       treeWalkAborted = true;
       if (deadline != null) {
