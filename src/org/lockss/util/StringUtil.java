@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.27 2003-08-28 00:11:53 eaalto Exp $
+ * $Id: StringUtil.java,v 1.28 2003-09-03 18:00:17 tlipkis Exp $
  */
 
 /*
@@ -314,6 +314,15 @@ public class StringUtil {
   public static boolean endsWithIgnoreCase(String str, String end) {
     int lend = end.length();
     return str.regionMatches(true, str.length() - lend, end, 0, lend);
+  }
+
+  /** Remove the extension from a filename */
+  public static String upToFinal(String str, String sep) {
+    int pos = str.lastIndexOf(sep);
+    if (pos < 0) {
+      return str;
+    }
+    return str.substring(0, pos);
   }
 
   /* Return the substring following the final dot */

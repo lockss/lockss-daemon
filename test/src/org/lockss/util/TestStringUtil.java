@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.26 2003-08-28 00:11:52 eaalto Exp $
+ * $Id: TestStringUtil.java,v 1.27 2003-09-03 18:00:16 tlipkis Exp $
  */
 
 /*
@@ -380,4 +380,12 @@ public class TestStringUtil extends LockssTestCase {
       fail(e.getMessage());
     }
   }
+
+  public void testUpToFinal() {
+    assertEquals("foo", StringUtil.upToFinal("foo.bar", "."));
+    assertEquals("foo.a", StringUtil.upToFinal("foo.a.bar", "."));
+    assertEquals("foo", StringUtil.upToFinal("foo", "."));
+    assertEquals("", StringUtil.upToFinal(".foo", "."));
+  }
+
 }
