@@ -1,5 +1,5 @@
 /*
- * $Id: TestPrintStreamTarget.java,v 1.2 2003-06-20 22:34:56 claire Exp $
+ * $Id: TestPrintStreamTarget.java,v 1.3 2003-09-16 23:33:54 eaalto Exp $
  */
 
 /*
@@ -56,14 +56,14 @@ public class TestPrintStreamTarget extends TestCase{
 			   errorMessage);
     }
 
-//      RE regExp = 
+//      RE regExp =
 //        new RE("\\d(\\d)?:\\d\\d:\\d\\d (A|P)M: Error: "+errorMessage+"\n");
-//     RE regExp = 
+//     RE regExp =
 //       new RE("\\d(\\d)?:\\d\\d:\\d\\d\\.\\d\\d\\d: Error: "+errorMessage+"\n");
     // Should have one Timestamp: message followed by two copies of the message
     String timestampRE = "\\d(\\d)?:\\d\\d:\\d\\d\\.\\d\\d\\d: ";
-    String line1 = timestampRE + "Timestamp: .*\\n";
-    String line2 = timestampRE + "Error: "+errorMessage+"\\n";
+    String line1 = timestampRE + "Timestamp: .*"+Constants.EOL_RE;
+    String line2 = timestampRE + "Error: "+errorMessage+Constants.EOL_RE;
     RE regExp = new RE(line1 + line2 + line2);
     String debugString = baos.toString();
     assertTrue("Debug string: \""+debugString+"\" not of correct format."+

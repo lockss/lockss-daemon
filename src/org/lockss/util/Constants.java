@@ -1,5 +1,5 @@
 /*
- * $Id: Constants.java,v 1.4 2003-06-20 22:34:53 claire Exp $
+ * $Id: Constants.java,v 1.5 2003-09-16 23:33:54 eaalto Exp $
  */
 
 /*
@@ -31,9 +31,10 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.util;
+
 import java.util.*;
 
-/** 
+/**
  * Constants of general use
  */
 public interface Constants {
@@ -47,4 +48,11 @@ public interface Constants {
   public static final long DAY = 24 * HOUR;
   /** The number of milliseconds in a week */
   public static final long WEEK = 7 * DAY;
+
+  /** The line separator string on this system */
+  public static String EOL = System.getProperty("line.separator");
+
+  /** The RE string matching the EOL string */
+  public static String EOL_RE = StringUtil.escapeNonAlphaNum(EOL);
+
 }
