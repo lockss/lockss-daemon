@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedPlugin.java,v 1.2 2003-02-27 23:29:23 tal Exp $
+ * $Id: SimulatedPlugin.java,v 1.3 2003-03-01 01:29:45 tal Exp $
  */
 
 /*
@@ -78,14 +78,6 @@ public class SimulatedPlugin extends BasePlugin implements PluginTestable {
    */
   public void stopPlugin() {
     stopCtr++;
-  }
-
-  public String getPluginId() {
-    return pluginId;
-  }
-
-  public void setPluginId(String id) {
-    pluginId = id;
   }
 
   public String getVersion() {
