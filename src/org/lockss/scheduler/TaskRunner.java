@@ -1,5 +1,5 @@
 /*
- * $Id: TaskRunner.java,v 1.17 2004-05-04 22:19:24 tlipkis Exp $
+ * $Id: TaskRunner.java,v 1.18 2004-05-26 07:03:10 tlipkis Exp $
  */
 
 /*
@@ -763,6 +763,7 @@ class TaskRunner implements Serializable {
     }
 
     public void populateTable(StatusTable table) {
+      table.setResortable(false);
       String key = table.getKey();
       int scheme = parseSortScheme(key);
 
