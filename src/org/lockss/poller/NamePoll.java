@@ -1,5 +1,5 @@
 /*
-* $Id: NamePoll.java,v 1.7 2002-11-08 19:14:55 claire Exp $
+* $Id: NamePoll.java,v 1.8 2002-11-12 23:41:29 claire Exp $
  */
 
 /*
@@ -31,7 +31,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.poller;
 
 import org.lockss.daemon.CachedUrlSet;
-import org.lockss.protocol.Message;
+import org.lockss.protocol.LcapMessage;
 import java.security.*;
 import org.lockss.hasher.*;
 import java.util.Hashtable;
@@ -51,13 +51,13 @@ public class NamePoll extends Poll {
   int m_namesSent;
   int m_seq;
 
-  public NamePoll(Message msg) {
+  public NamePoll(LcapMessage msg) {
     super(msg);
     our_expansion = new Hashtable();
     all_expansion = new Hashtable();
     m_voterState = new Hashtable();
     m_namesSent = 0;
-    m_replyOpcode = Message.NAME_POLL_REP;
+    m_replyOpcode = LcapMessage.NAME_POLL_REP;
     m_seq++;
     m_thread = new Thread(this, "NamePoll-" + m_seq);
   }
@@ -86,7 +86,7 @@ public class NamePoll extends Poll {
    * @param msg the message which is triggering the poll
    * @return boolean true if the poll should run, false otherwise
    */
-  boolean preparePoll(Message msg) {
+  boolean preparePoll(LcapMessage msg) {
     // Is this is a replay of a local packet?
     if (msg.isLocal()) {
       if (m_voteChecked) {
@@ -170,7 +170,7 @@ public class NamePoll extends Poll {
 
   static class NPVoteChecker extends VoteChecker {
 
-    NPVoteChecker(Poll poll, Message msg, CachedUrlSet urlSet, long hashTime) {
+    NPVoteChecker(Poll poll, LcapMessage msg, CachedUrlSet urlSet, long hashTime) {
       super(poll, msg, urlSet, hashTime);
     }
 

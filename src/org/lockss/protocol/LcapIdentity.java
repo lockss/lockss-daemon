@@ -1,5 +1,5 @@
 /*
-* $Id: Identity.java,v 1.3 2002-11-07 03:25:38 claire Exp $
+* $Id: LcapIdentity.java,v 1.1 2002-11-12 23:41:30 claire Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ import org.mortbay.util.B64Code;
  * @author Claire Griffin
  * @version 1.0
  */
-public class Identity {
+public class LcapIdentity {
 
   protected static final int INITIAL_REPUTATION = 500;
   protected static final int REPUTATION_NUMERATOR = 1000;
@@ -75,12 +75,12 @@ public class Identity {
   int m_reputation;
   Object m_idKey;
   static HashMap theIdentities = null; // all known identities
-  static Identity theLocalIdentity;
+  static LcapIdentity theLocalIdentity;
   static Logger theLog=Logger.getLogger("Identity",Logger.LEVEL_DEBUG);
   static Random theRandom = new Random();
 
 
-  Identity(Object idKey)  {
+  LcapIdentity(Object idKey)  {
     m_idKey = idKey;
     m_reputation = INITIAL_REPUTATION;
     m_lastActiveTime = 0;
@@ -102,7 +102,7 @@ public class Identity {
    * @param addr the InetAddress
    * @param port the port
    */
-  Identity(InetAddress addr, int port) {
+  LcapIdentity(InetAddress addr, int port) {
     m_address = addr;
     m_port = port;
     m_idKey = makeIdKey(addr,port);
@@ -127,7 +127,7 @@ public class Identity {
    * @param socket the DatagramSocket
    * @return newly constructed <code>Identity<\code>
    */
-  Identity(DatagramSocket socket) {
+  LcapIdentity(DatagramSocket socket) {
     this(socket.getInetAddress(),socket.getPort());
   }
 
@@ -138,7 +138,7 @@ public class Identity {
    * @param socket the DatagramSocket
    * @return newly constructed <code>Identity<\code>
    */
-  public static Identity getIdentity(DatagramSocket socket) {
+  public static LcapIdentity getIdentity(DatagramSocket socket) {
     return getIdentity(socket.getInetAddress(), socket.getPort());
   }
 
@@ -149,8 +149,8 @@ public class Identity {
    * @param port the port id
    * @return a newly constructed Identity
    */
-  public static Identity getIdentity(InetAddress addr, int port) {
-    Identity ret;
+  public static LcapIdentity getIdentity(InetAddress addr, int port) {
+    LcapIdentity ret;
 
     if(theIdentities == null)  {
       reloadIdentities();
@@ -162,7 +162,7 @@ public class Identity {
     else  {
       ret = findIdentity(makeIdKey(addr,port));
       if(ret == null)  {
-        ret = new Identity(addr, port);
+        ret = new LcapIdentity(addr, port);
       }
     }
 
@@ -170,12 +170,12 @@ public class Identity {
   }
 
 
-  public static Identity findIdentity(Object idKey)  {
+  public static LcapIdentity findIdentity(Object idKey)  {
     if(theIdentities == null)  {
       reloadIdentities();
     }
 
-    return (Identity) theIdentities.get(idKey);
+    return (LcapIdentity) theIdentities.get(idKey);
   }
 
   /**
@@ -184,9 +184,9 @@ public class Identity {
    * @param socket the DatagramSocket used to extract the local info.
    * @return a newly constructed Identity
    */
-  public static Identity getLocalIdentity(DatagramSocket socket) {
+  public static LcapIdentity getLocalIdentity(DatagramSocket socket) {
     if(theLocalIdentity == null) {
-      theLocalIdentity = new Identity(socket.getLocalAddress(),
+      theLocalIdentity = new LcapIdentity(socket.getLocalAddress(),
                                       socket.getLocalPort());
     }
     return theLocalIdentity;
@@ -196,10 +196,10 @@ public class Identity {
    * get the Identity of the local host
    * @return newly constructed <code>Identity<\code>
    */
-  public static Identity getLocalIdentity() {
+  public static LcapIdentity getLocalIdentity() {
     if(theLocalIdentity == null)  {
       try {
-        theLocalIdentity = new Identity(InetAddress.getLocalHost(), 0);
+        theLocalIdentity = new LcapIdentity(InetAddress.getLocalHost(), 0);
       }
       catch (UnknownHostException ex) {
       }
@@ -251,7 +251,7 @@ public class Identity {
    * @param id the Identity to compare with this one
    * @return true if the id keys are the same
    */
-  public boolean isEqual(Identity id) {
+  public boolean isEqual(LcapIdentity id) {
     String idKey = (String)id.m_idKey;
 
     return idKey.equals((String)m_idKey);
@@ -345,7 +345,7 @@ public class Identity {
    * @param NoOp boolean true if this is a no-op message
    * @param msg the active message
    */
-  public void rememberActive(boolean NoOp, Message msg) {
+  public void rememberActive(boolean NoOp, LcapMessage msg) {
     m_lastActiveTime = System.currentTimeMillis();
     if (!NoOp) {
       m_lastOpTime = m_lastActiveTime;
@@ -372,7 +372,7 @@ public class Identity {
    * increment the originator packet counter
    * @param msg Message ignored
    */
-  public void rememberValidOriginator(Message msg) {
+  public void rememberValidOriginator(LcapMessage msg) {
     m_origPackets++;
   }
 
@@ -380,7 +380,7 @@ public class Identity {
    * increment the forwarded packet counter
    * @param msg Message ignored
    */
-  public void rememberValidForward(Message msg) {
+  public void rememberValidForward(LcapMessage msg) {
     m_forwPackets++;
   }
 
@@ -388,7 +388,7 @@ public class Identity {
    * increment the duplicate packet counter
    * @param msg Message ignored
    */
-  public void rememberDuplicate(Message msg) {
+  public void rememberDuplicate(LcapMessage msg) {
     m_duplPackets++;
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: LcapComm.java,v 1.1 2002-11-05 21:16:05 tal Exp $
+ * $Id: LcapComm.java,v 1.2 2002-11-12 23:41:30 claire Exp $
  */
 
 /*
@@ -88,7 +88,7 @@ public class LcapComm {
    * @param au archival unit for which this message is relevant.  Used to
    * determine which multicast socket/port to send to.
    */
-  public static void sendMessage(Message msg, ArchivalUnit au)
+  public static void sendMessage(LcapMessage msg, ArchivalUnit au)
       throws IOException {
     sendMessageTo(msg, group, multiPort);
   }
@@ -99,13 +99,13 @@ public class LcapComm {
    * determine which multicast socket/port to send to.
    * @param id the identity of the cache to which to send the message
    */
-  public static void sendMessageTo(Message msg, ArchivalUnit au, Identity id)
+  public static void sendMessageTo(LcapMessage msg, ArchivalUnit au, LcapIdentity id)
       throws IOException {
     // tk - shouldn't be multiPort
     sendMessageTo(msg, id.getAddress(), multiPort);
   }
 
-  private static void sendMessageTo(Message msg, InetAddress addr, int port)
+  private static void sendMessageTo(LcapMessage msg, InetAddress addr, int port)
       throws IOException {
     byte data[] = msg.encodeMsg();
     DatagramPacket pkt = new DatagramPacket(data, data.length, addr, port);
@@ -149,9 +149,9 @@ public class LcapComm {
   }
 
   private void processReceivedPacket(LockssDatagram dgram) {
-    Message msg;
+    LcapMessage msg;
     try {
-      msg = Message.decodeToMsg(dgram.getPacket().getData(), 
+      msg = LcapMessage.decodeToMsg(dgram.getPacket().getData(), 
 				dgram.isMulticast());
       log.debug("Received " + msg);
     } catch (IOException e) {

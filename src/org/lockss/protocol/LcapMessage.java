@@ -1,5 +1,5 @@
 /*
-* $Id: Message.java,v 1.3 2002-10-18 18:05:24 claire Exp $
+* $Id: LcapMessage.java,v 1.1 2002-11-12 23:41:30 claire Exp $
  */
 
 /*
@@ -53,7 +53,7 @@ import java.io.ByteArrayOutputStream;
  * @version 1.0
  */
 
-public class Message {
+public class LcapMessage {
   public static final int NAME_POLL_REQ = 0;
   public static final int NAME_POLL_REP = 1;
   public static final int CONTENT_POLL_REQ = 2;
@@ -81,7 +81,7 @@ public class Message {
   int                m_length;      // length of remaining packet
 
   /* items which are in the property list */
-  Identity           m_originID;    // the address and port of the originator
+  LcapIdentity           m_originID;    // the address and port of the originator
   InetAddress        m_group;       // The group address
   byte               m_ttl;         // The original time-to-live
   long               m_startTime;   // the original start time
@@ -98,11 +98,11 @@ public class Message {
   private static byte[] signature = {'l','p','m','1'};
   private static Logger log = Logger.getLogger("Message");
 
-  protected Message() throws IOException {
+  protected LcapMessage() throws IOException {
     m_props = new EncodedProperty();
   }
 
-  protected Message(byte[] encodedBytes) throws IOException {
+  protected LcapMessage(byte[] encodedBytes) throws IOException {
     m_props = new EncodedProperty();
 
     try {
@@ -114,7 +114,7 @@ public class Message {
     }
   }
 
-  protected Message(String targetUrl,
+  protected LcapMessage(String targetUrl,
                     String regExp,
                     String[] entries,
                     InetAddress group,
@@ -142,8 +142,8 @@ public class Message {
     m_hopCount = 0;
   }
 
-  protected Message(Message trigger,
-                    Identity localID,
+  protected LcapMessage(LcapMessage trigger,
+                    LcapIdentity localID,
                     byte[] verifier,
                     byte[] hashedContent,
                     int opcode) throws IOException {
@@ -199,7 +199,7 @@ public class Message {
    * @return
    * @throws IOException
    */
-  static public Message makeRequestMsg(String targetUrl,
+  static public LcapMessage makeRequestMsg(String targetUrl,
                                        String regExp,
                                        String[] entries,
                                        InetAddress group,
@@ -208,9 +208,9 @@ public class Message {
                                        byte[] verifier,
                                        int opcode,
                                        long timeRemaining,
-                                       Identity localID) throws IOException {
+                                       LcapIdentity localID) throws IOException {
 
-    Message msg = new Message(targetUrl,regExp,entries,group,ttl,
+    LcapMessage msg = new LcapMessage(targetUrl,regExp,entries,group,ttl,
                               challenge,verifier,new byte[0],opcode);
     if (msg != null) {
       msg.m_startTime = System.currentTimeMillis();
@@ -233,13 +233,13 @@ public class Message {
    * @return a new Message object
    * @throws IOException
    */
-  static public Message makeReplyMsg(Message trigger,
+  static public LcapMessage makeReplyMsg(LcapMessage trigger,
                                      byte[] hashedContent,
                                      byte[] verifier,
                                      int opcode,
                                      long timeRemaining,
-                                     Identity localID) throws IOException {
-    Message msg = new Message(trigger, localID, verifier, hashedContent, opcode);
+                                     LcapIdentity localID) throws IOException {
+    LcapMessage msg = new LcapMessage(trigger, localID, verifier, hashedContent, opcode);
     if (msg != null) {
       msg.m_startTime = System.currentTimeMillis();
       msg.m_stopTime = msg.m_startTime + timeRemaining;
@@ -258,9 +258,9 @@ public class Message {
    * @return a new Message object
    * @throws IOException
    */
-  static Message decodeToMsg(byte[] data,
+  static LcapMessage decodeToMsg(byte[] data,
                              boolean mcast) throws IOException {
-    Message msg = new Message(data);
+    LcapMessage msg = new LcapMessage(data);
     if(msg != null) {
        msg.m_multicast = mcast;
     }
@@ -315,7 +315,7 @@ public class Message {
     addr = m_props.getProperty("origIP");
     port = m_props.getInt("origPort", -1);
     try {
-      m_originID = Identity.getIdentity(InetAddress.getByName(addr),port);
+      m_originID = LcapIdentity.getIdentity(InetAddress.getByName(addr),port);
     }
     catch(UnknownHostException ex) {
       log.error("invalid origin address");
@@ -403,7 +403,7 @@ public class Message {
   }
 
   public boolean isLocal() {
-	return (Identity.getLocalIdentity().equals(m_originID));
+        return (LcapIdentity.getLocalIdentity().equals(m_originID));
 
   }
 
@@ -424,7 +424,7 @@ public class Message {
     return m_group;    // The group address
   }
 
-  public Identity getOriginID(){
+  public LcapIdentity getOriginID(){
     return m_originID;
   }
 
@@ -524,13 +524,4 @@ public class Message {
       return new byte[0];
     }
   }
-
-
-  /** Exception thrown if packet is unparseable. */
-  public static class ProtocolException extends IOException {
-    public ProtocolException(String msg) {
-      super(msg);
-    }
-  }
-
 }

@@ -1,5 +1,5 @@
 /*
-* $Id: VerifyPoll.java,v 1.7 2002-11-08 19:14:55 claire Exp $
+* $Id: VerifyPoll.java,v 1.8 2002-11-12 23:41:29 claire Exp $
  */
 
 /*
@@ -31,7 +31,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.poller;
 
 import org.lockss.daemon.CachedUrlSet;
-import org.lockss.protocol.Message;
+import org.lockss.protocol.LcapMessage;
 import java.io.IOException;
 import org.lockss.util.ProbabilisticChoice;
 import org.lockss.protocol.*;
@@ -49,9 +49,9 @@ import org.lockss.util.ProbabilisticTimer;
 class VerifyPoll extends Poll implements Runnable {
   private static int m_seq = 0;
 
-  public VerifyPoll(Message msg) {
+  public VerifyPoll(LcapMessage msg) {
     super(msg);
-    m_replyOpcode = Message.VERIFY_POLL_REP;
+    m_replyOpcode = LcapMessage.VERIFY_POLL_REP;
     m_quorum = 1;
     m_seq++;
     m_thread = new Thread(this,"Verify Poll - "	+ m_seq);
@@ -90,7 +90,7 @@ class VerifyPoll extends Poll implements Runnable {
    * @param pct the percentage of time you should verify
    * @throws IOException thrown by ProbbilisticChoice
    */
-  protected static void randomRequestVerify(Message msg, int pct)
+  protected static void randomRequestVerify(LcapMessage msg, int pct)
       throws IOException {
     double prob = ((double) pct) / 100.0;
     if (ProbabilisticChoice.choose(prob))
@@ -127,7 +127,7 @@ class VerifyPoll extends Poll implements Runnable {
     }
     thePolls.remove(m_key);
     log.info(m_msg.toString() + " tally " + toString());
-    Identity id = m_msg.getOriginID();
+    LcapIdentity id = m_msg.getOriginID();
     if ((m_agree + m_disagree) < 1) {
       id.voteNotVerify();
     } else if (m_agree > 0 && m_disagree == 0) {
@@ -145,7 +145,7 @@ class VerifyPoll extends Poll implements Runnable {
    * @param msg the message which is triggering the poll
    * @return boolean true if the poll should run, false otherwise
    */
-  boolean preparePoll(Message msg)  {
+  boolean preparePoll(LcapMessage msg)  {
     if(msg.isLocal())  {
       log.info("Ignoring our verify vote: " + m_key);
       return false;
@@ -162,7 +162,7 @@ class VerifyPoll extends Poll implements Runnable {
     return true;
   }
 
-  private boolean performHash(Message msg) {
+  private boolean performHash(LcapMessage msg) {
     byte[] C = msg.getChallenge();
     byte[] H = msg.getHashed();
     MessageDigest hasher;
@@ -188,13 +188,13 @@ class VerifyPoll extends Poll implements Runnable {
 
   }
 
-  private static void requestVerify(Message msg) throws IOException {
+  private static void requestVerify(LcapMessage msg) throws IOException {
     String url = new String(msg.getTargetUrl());
     String regexp = new String(msg.getRegExp());
-    int opcode = Message.VERIFY_POLL_REQ;
+    int opcode = LcapMessage.VERIFY_POLL_REQ;
     Poll p = null;
     byte[] verifier = makeVerifier(p);
-    Message reqmsg = Message.makeRequestMsg(url,
+    LcapMessage reqmsg = LcapMessage.makeRequestMsg(url,
         regexp,
         new String[0],
         msg.getGroupAddress(),
@@ -203,25 +203,25 @@ class VerifyPoll extends Poll implements Runnable {
         verifier,
         opcode,
         msg.getDuration(),
-        Identity.getLocalIdentity());
-    Identity originator = msg.getOriginID();
+        LcapIdentity.getLocalIdentity());
+    LcapIdentity originator = msg.getOriginID();
     LcapComm.sendMessageTo(msg,Plugin.findArchivalUnit(url),originator);
     Poll poll = findPoll(reqmsg);
     poll.startPoll();
   }
 
-  private void replyVerify(Message msg) throws IOException  {
+  private void replyVerify(LcapMessage msg) throws IOException  {
     Poll p = null;
     byte[] secret = findSecret(msg);
     byte[] verifier = makeVerifier(p);
-    Message repmsg = Message.makeReplyMsg(msg,
+    LcapMessage repmsg = LcapMessage.makeReplyMsg(msg,
         secret,
         verifier,
-        Message.VERIFY_POLL_REP,
+        LcapMessage.VERIFY_POLL_REP,
         msg.getDuration(),
-        Identity.getLocalIdentity());
+        LcapIdentity.getLocalIdentity());
 
-    Identity originator = msg.getOriginID();
+    LcapIdentity originator = msg.getOriginID();
     LcapComm.sendMessageTo(repmsg,Plugin.findArchivalUnit(msg.getTargetUrl()),
                            originator);
 
@@ -229,7 +229,7 @@ class VerifyPoll extends Poll implements Runnable {
 
   static class VPVoteChecker extends VoteChecker {
 
-    VPVoteChecker(Poll poll, Message msg, CachedUrlSet urlSet, long hashTime) {
+    VPVoteChecker(Poll poll, LcapMessage msg, CachedUrlSet urlSet, long hashTime) {
       super(poll, msg, urlSet, hashTime);
     }
 

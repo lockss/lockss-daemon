@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.7 2002-11-08 19:14:55 claire Exp $
+* $Id: Poll.java,v 1.8 2002-11-12 23:41:29 claire Exp $
  */
 
 /*
@@ -59,7 +59,7 @@ public abstract class Poll implements Runnable {
   static HashMap thePolls = new HashMap();
   static Logger log=Logger.getLogger("Poll",Logger.LEVEL_DEBUG);
 
-  Message m_msg;          // The message which triggered the poll
+  LcapMessage m_msg;          // The message which triggered the poll
   int m_quorum;           // The caller's quorum value
   int m_quorumWt;
   int m_agree;            // The # of votes we've heard that agree with us
@@ -80,7 +80,7 @@ public abstract class Poll implements Runnable {
   Deadline m_voteTime;    // when to vote
   ProbabilisticTimer m_deadline;    // when election is over
 
-  Identity m_caller;       // who called the poll
+  LcapIdentity m_caller;       // who called the poll
   boolean m_voted;         // true if we've voted
   int m_replyOpcode = -1;  // opcode used to reply to poll
   long m_hashTime;         // an estimate of the time it will take to hash
@@ -97,7 +97,7 @@ public abstract class Poll implements Runnable {
    * @param msg the <code>Message</code> which contains the information
    * needed to create this poll.
    */
-  Poll(Message msg) {
+  Poll(LcapMessage msg) {
     m_msg = msg;
     // clear history
     m_agree = 0;
@@ -142,30 +142,30 @@ public abstract class Poll implements Runnable {
    * @throws IOException if message opcode is unknown or if new poll would
    * conflict with currently running poll.
    */
-  public static Poll makePoll(Message msg) throws IOException {
+  public static Poll makePoll(LcapMessage msg) throws IOException {
     Poll ret_poll;
 
     ArchivalUnit arcunit = checkForConflicts(msg);
     if(arcunit != null) {
-      throw new Message.ProtocolException(msg +
+      throw new ProtocolException(msg +
           " conflicts with " + arcunit +
           " in makeElection()");
     }
     switch(msg.getOpcode()) {
-      case Message.CONTENT_POLL_REP:
-      case Message.CONTENT_POLL_REQ:
+      case LcapMessage.CONTENT_POLL_REP:
+      case LcapMessage.CONTENT_POLL_REQ:
         ret_poll = new ContentPoll(msg);
         break;
-      case Message.NAME_POLL_REP:
-      case Message.NAME_POLL_REQ:
+      case LcapMessage.NAME_POLL_REP:
+      case LcapMessage.NAME_POLL_REQ:
         ret_poll = new NamePoll(msg);
         break;
-      case Message.VERIFY_POLL_REP:
-      case Message.VERIFY_POLL_REQ:
+      case LcapMessage.VERIFY_POLL_REP:
+      case LcapMessage.VERIFY_POLL_REQ:
         ret_poll = new VerifyPoll(msg);
         break;
       default:
-        throw new Message.ProtocolException("Unknown opcode:" +
+        throw new ProtocolException("Unknown opcode:" +
         msg.getOpcode());
     }
     return ret_poll;
@@ -196,13 +196,13 @@ public abstract class Poll implements Runnable {
     long timeUntilCount = deadline.getRemainingTime();
     byte[] C = makeVerifier(null);
     byte[] V = makeVerifier(null);
-    Message msg = Message.makeRequestMsg(url,regexp,null,grpAddr,
+    LcapMessage msg = LcapMessage.makeRequestMsg(url,regexp,null,grpAddr,
         (byte)timeToLive,
         C,V,opcode,timeUntilCount,
-        Identity.getLocalIdentity());
+        LcapIdentity.getLocalIdentity());
     ArchivalUnit conflict = checkForConflicts(msg);
     if (conflict != null)
-      throw new Message.ProtocolException(makeKey(url,regexp,opcode) +
+      throw new ProtocolException(makeKey(url,regexp,opcode) +
           " conflicts with " + conflict +
           " in createElection()");
     log.debug("send" +  msg.toString());
@@ -218,7 +218,7 @@ public abstract class Poll implements Runnable {
    * conflict with currently running poll.
    * @see <code>Poll.createPoll</code>
    */
-  public static Poll findPoll(Message msg) throws IOException {
+  public static Poll findPoll(LcapMessage msg) throws IOException {
     String key = makeKey(msg.getTargetUrl(),msg.getRegExp(),msg.getOpcode());
     Poll ret = (Poll)thePolls.get(key);
     if(ret == null) {
@@ -235,11 +235,11 @@ public abstract class Poll implements Runnable {
    * @param msg the message used to generate the poll
    * @throws IOException thrown if the poll was unsucessfully created
    */
-  public static void handleMessage(Message msg) throws IOException {
+  public static void handleMessage(LcapMessage msg) throws IOException {
     Poll p = findPoll(msg);
     if (p == null) {
       log.error("Unable to create poll for Message: " + msg.toString());
-      throw new Message.ProtocolException("Failed to create poll for "
+      throw new ProtocolException("Failed to create poll for "
           + msg.toString());
     }
     // XXX - we need to notify someone that this poll is running in this node!!!
@@ -252,18 +252,18 @@ public abstract class Poll implements Runnable {
    * @param msg the Message to handle
    * @param hashTime the time available for a hash
    */
-  public synchronized void receiveMessage(Message msg, long hashTime) {
+  public synchronized void receiveMessage(LcapMessage msg, long hashTime) {
     VoteChecker vc = null;
     int opcode = msg.getOpcode();
 
     switch(opcode) {
-      case Message.CONTENT_POLL_REP:
+      case LcapMessage.CONTENT_POLL_REP:
         vc = new ContentPoll.CPVoteChecker(this, msg, m_urlSet, hashTime);
         break;
-      case Message.NAME_POLL_REP:
+      case LcapMessage.NAME_POLL_REP:
         vc = new NamePoll.NPVoteChecker(this, msg, m_urlSet, hashTime);
         break;
-      case Message.VERIFY_POLL_REP:
+      case LcapMessage.VERIFY_POLL_REP:
         vc = new VerifyPoll.VPVoteChecker(this,msg,m_urlSet, hashTime);
         break;
     }
@@ -278,7 +278,7 @@ public abstract class Poll implements Runnable {
    * get the message used to define this Poll
    * @return <code>Message</code>
    */
-  public Message getMessage() {
+  public LcapMessage getMessage() {
     return m_msg;
   }
 
@@ -363,7 +363,7 @@ public abstract class Poll implements Runnable {
         tally();
       }
       else { // we don't have a quorum
-        throw new Message.ProtocolException("no quorum: " + m_arcUnit);
+        throw new ProtocolException("no quorum: " + m_arcUnit);
       }
     }
     catch(IOException ioe) {
@@ -390,7 +390,7 @@ public abstract class Poll implements Runnable {
    * @param msg the message which is triggering the poll
    * @return boolean true if the poll should run, false otherwise
    */
-  abstract boolean preparePoll(Message msg);
+  abstract boolean preparePoll(LcapMessage msg);
 
   /**
    * check the hash result obtained by the hasher with one stored in the
@@ -398,7 +398,7 @@ public abstract class Poll implements Runnable {
    * @param hashResult byte array containing the result of the hasher
    * @param msg the original Message.
    */
-  void checkVote(byte[] hashResult, Message msg)  {
+  void checkVote(byte[] hashResult, LcapMessage msg)  {
     byte[] H = msg.getHashed();
     if(Arrays.equals(H, hashResult)) {
       handleDisagreeVote(msg);
@@ -431,7 +431,7 @@ public abstract class Poll implements Runnable {
    * @param msg the <code>Message</code> to check
    * @return the ArchivalUnit of the conflicting poll.
    */
-  static ArchivalUnit checkForConflicts(Message msg) {
+  static ArchivalUnit checkForConflicts(LcapMessage msg) {
     ArchivalUnit  url_set = null;
 
     String url = msg.getTargetUrl();
@@ -440,8 +440,8 @@ public abstract class Poll implements Runnable {
     boolean isRegExp = regexp != null;
 
     // verify polls are never conflicts
-    if((opcode == Message.VERIFY_POLL_REP)||
-       (opcode == Message.VERIFY_POLL_REQ)) {
+    if((opcode == LcapMessage.VERIFY_POLL_REP)||
+       (opcode == LcapMessage.VERIFY_POLL_REQ)) {
       return null;
 
     }
@@ -449,7 +449,7 @@ public abstract class Poll implements Runnable {
     while(iter.hasNext()) {
       Poll p = (Poll)iter.next();
 
-      Message p_msg = p.getMessage();
+      LcapMessage p_msg = p.getMessage();
       String  p_url = p_msg.getTargetUrl();
       String  p_regexp = p_msg.getRegExp();
       int     p_opcode = p_msg.getOpcode();
@@ -463,24 +463,24 @@ public abstract class Poll implements Runnable {
                        p_url.endsWith(File.separator));
 
       // check for content poll conflicts
-      if((opcode == Message.CONTENT_POLL_REP) ||
-         (opcode == Message.CONTENT_POLL_REQ)) {
+      if((opcode == LcapMessage.CONTENT_POLL_REP) ||
+         (opcode == LcapMessage.CONTENT_POLL_REQ)) {
 
         if(alongside) { // only verify polls are allowed
-          if((p_opcode == Message.VERIFY_POLL_REP)||
-             (p_opcode == Message.VERIFY_POLL_REQ)) {
+          if((p_opcode == LcapMessage.VERIFY_POLL_REP)||
+             (p_opcode == LcapMessage.VERIFY_POLL_REQ)) {
             continue;
           }
           return p.getArchivalUnit();
         }
 
         if(above || below) { // verify and regexp polls are allowed
-          if((p_opcode == Message.VERIFY_POLL_REP)||
-             (p_opcode == Message.VERIFY_POLL_REQ)) {
+          if((p_opcode == LcapMessage.VERIFY_POLL_REP)||
+             (p_opcode == LcapMessage.VERIFY_POLL_REQ)) {
             continue;
           }
-          if((p_opcode == Message.CONTENT_POLL_REP) ||
-             (p_opcode == Message.CONTENT_POLL_REQ)) {
+          if((p_opcode == LcapMessage.CONTENT_POLL_REP) ||
+             (p_opcode == LcapMessage.CONTENT_POLL_REQ)) {
             if(p_isRegExp) {
               continue;
             }
@@ -490,11 +490,11 @@ public abstract class Poll implements Runnable {
       }
 
       // check for name poll conflicts
-      if((opcode == Message.NAME_POLL_REP) ||
-         (opcode == Message.NAME_POLL_REQ)) {
+      if((opcode == LcapMessage.NAME_POLL_REP) ||
+         (opcode == LcapMessage.NAME_POLL_REQ)) {
         if(alongside) { // only verify polls are allowed
-          if((p_opcode == Message.VERIFY_POLL_REP)||
-             (p_opcode == Message.VERIFY_POLL_REQ)) {
+          if((p_opcode == LcapMessage.VERIFY_POLL_REP)||
+             (p_opcode == LcapMessage.VERIFY_POLL_REQ)) {
             continue;
           }
           else {
@@ -502,8 +502,8 @@ public abstract class Poll implements Runnable {
           }
         }
         if(above) { // only reg exp polls are allowed
-          if((p_opcode == Message.CONTENT_POLL_REP) ||
-             (p_opcode == Message.CONTENT_POLL_REQ)) {
+          if((p_opcode == LcapMessage.CONTENT_POLL_REP) ||
+             (p_opcode == LcapMessage.CONTENT_POLL_REQ)) {
             if(p_isRegExp) {
               continue;
             }
@@ -539,7 +539,7 @@ public abstract class Poll implements Runnable {
    * handle an agree vote
    * @param msg the <code>Message</code> that we agree with
    */
-  void handleAgreeVote(Message msg) {
+  void handleAgreeVote(LcapMessage msg) {
     int weight = msg.getOriginID().getReputation();
     synchronized (this) {
       m_agree++;
@@ -564,7 +564,7 @@ public abstract class Poll implements Runnable {
    * handle a disagree vote
    * @param msg the <code>Message</code> that we disagree with
    */
-  void handleDisagreeVote(Message msg) {
+  void handleDisagreeVote(LcapMessage msg) {
     int weight = msg.getOriginID().getReputation();
     boolean local = msg.isLocal();
 
@@ -605,14 +605,14 @@ public abstract class Poll implements Runnable {
    * @throws IOException if there was no message which triggered this poll.
    */
   void vote() throws IOException {
-    Message msg;
-    Identity local_id = Identity.getLocalIdentity();
+    LcapMessage msg;
+    LcapIdentity local_id = LcapIdentity.getLocalIdentity();
     if(m_msg == null) {
-      throw new Message.ProtocolException("no trigger!!!");
+      throw new ProtocolException("no trigger!!!");
 
     }
     long remainingTime = m_deadline.getRemainingTime();
-    msg = Message.makeReplyMsg(m_msg, m_hash, m_verifier, m_replyOpcode,
+    msg = LcapMessage.makeReplyMsg(m_msg, m_hash, m_verifier, m_replyOpcode,
                                remainingTime, local_id);
     log.info("vote:" + msg.toString());
     LcapComm.sendMessage(msg,m_arcUnit);
@@ -654,12 +654,12 @@ public abstract class Poll implements Runnable {
     // XXX implement this
   }
 
-  void rememberVote(Message msg, boolean vote) {
+  void rememberVote(LcapMessage msg, boolean vote) {
     // XXX implement this
 
   }
 
-  byte[] findSecret(Message msg) {
+  byte[] findSecret(LcapMessage msg) {
     byte[] ret = new byte[0];
     // xxx implement this
 
@@ -705,14 +705,14 @@ public abstract class Poll implements Runnable {
   }
 
   static class VoteChecker extends Thread {
-    Message m_msg;
+    LcapMessage m_msg;
     CachedUrlSet m_urlSet;
     Poll m_poll;
     boolean m_keepGoing;
     MessageDigest m_hasher;
     long m_hashTime;
 
-    VoteChecker(Poll poll, Message msg, CachedUrlSet urlSet, long hashTime) {
+    VoteChecker(Poll poll, LcapMessage msg, CachedUrlSet urlSet, long hashTime) {
       try {
         m_hasher = MessageDigest.getInstance(HASH_ALGORITHM);
         m_poll = poll;
@@ -741,7 +741,7 @@ public abstract class Poll implements Runnable {
     }
 
 
-    Message getMessage() {
+    LcapMessage getMessage() {
       return(m_msg);
     }
   }

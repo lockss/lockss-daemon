@@ -1,5 +1,5 @@
 /*
-* $Id: ContentPoll.java,v 1.7 2002-11-08 19:14:55 claire Exp $
+* $Id: ContentPoll.java,v 1.8 2002-11-12 23:41:29 claire Exp $
  */
 
 /*
@@ -33,7 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.poller;
 
 import org.lockss.daemon.CachedUrlSet;
-import org.lockss.protocol.Message;
+import org.lockss.protocol.LcapMessage;
 import java.security.*;
 import org.lockss.hasher.*;
 import java.io.*;
@@ -51,9 +51,9 @@ public class ContentPoll extends Poll implements Runnable {
 
   private static int seq = 0;
 
-  ContentPoll(Message msg) throws IOException {
+  ContentPoll(LcapMessage msg) throws IOException {
     super(msg);
-    m_replyOpcode = Message.CONTENT_POLL_REP;
+    m_replyOpcode = LcapMessage.CONTENT_POLL_REP;
     seq++;
 
     m_thread =  new Thread(this, "Content Poll-" + seq);
@@ -84,7 +84,7 @@ public class ContentPoll extends Poll implements Runnable {
    * @param msg the message which is triggering the poll
    * @return boolean true if the poll should run, false otherwise
    */
-  boolean preparePoll(Message msg) {
+  boolean preparePoll(LcapMessage msg) {
     // Is this is a replay of a local packet?
     if (msg.isLocal()) {
       if (m_voteChecked) {
@@ -163,7 +163,7 @@ public class ContentPoll extends Poll implements Runnable {
 
   static class CPVoteChecker extends VoteChecker {
 
-    CPVoteChecker(Poll poll, Message msg, CachedUrlSet urlSet, long hashTime) {
+    CPVoteChecker(Poll poll, LcapMessage msg, CachedUrlSet urlSet, long hashTime) {
       super(poll, msg, urlSet, hashTime);
     }
 
