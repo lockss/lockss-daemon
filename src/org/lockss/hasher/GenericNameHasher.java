@@ -1,5 +1,5 @@
 /*
- * $Id: GenericNameHasher.java,v 1.6 2003-02-24 22:13:41 claire Exp $
+ * $Id: GenericNameHasher.java,v 1.7 2003-02-25 22:08:34 troberts Exp $
  */
 
 /*
@@ -50,9 +50,14 @@ public class GenericNameHasher extends GenericHasher {
   public GenericNameHasher(CachedUrlSet cus, MessageDigest dig) {
     super(cus, dig);
     iterator = cus.flatSetIterator();
+    if (iterator == null) {
+      throw new IllegalArgumentException("Called with a CachedUrlSet that "+
+					 "gave me a null flatSetIterator");
+    }
   }
 
-  protected int hashElementUpToNumBytes(CachedUrlSetNode element, int numBytes) {
+  protected int hashElementUpToNumBytes(CachedUrlSetNode element, 
+					int numBytes) {
     if (nameBytes == null) {
       String nameStr = element.getUrl();
       StringBuffer sb = new StringBuffer(nameStr.length()+1);
@@ -67,8 +72,8 @@ public class GenericNameHasher extends GenericHasher {
       nameIdx = 0;
     }
 
-    int len = numBytes < (nameBytes.length - nameIdx)
-      ? numBytes : (nameBytes.length - nameIdx);
+    int len = Math.min(numBytes, (nameBytes.length - nameIdx));
+
     digest.update(nameBytes, nameIdx, len);
     nameIdx += len;
     if (nameIdx >= nameBytes.length) {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericNameHasher.java,v 1.4 2003-02-24 22:13:42 claire Exp $
+ * $Id: TestGenericNameHasher.java,v 1.5 2003-02-25 22:08:34 troberts Exp $
  */
 
 /*
@@ -44,16 +44,50 @@ import org.lockss.plugin.*;
 public class TestGenericNameHasher extends TestCase {
   private static final char DELIMITER = '\n';
 
+  private static final byte IS_NOT_LEAF=0;
+  private static final byte IS_LEAF=1;
 
   public TestGenericNameHasher(String msg) {
     super(msg);
   }
 
   public void testNullMessageDigest() throws IOException {
-    CachedUrlSet cus = new MockCachedUrlSet(null, null);
-    CachedUrlSetHasher hasher = new GenericNameHasher(cus, null);
-    assertEquals(0, hasher.hashStep(10));
-    assertTrue(hasher.finished());
+    CachedUrlSet cus = new MockCachedUrlSet();
+    try {
+      CachedUrlSetHasher hasher = new GenericNameHasher(cus, null);
+      fail("Creating a GenericNameHasher with a null digest should throw "+
+	   "an IllegalArgumentException");
+    } catch (IllegalArgumentException iae) {
+    }
+  }
+
+  public void testNullCachedUrlSet() throws IOException {
+    MessageDigest dig = new MockMessageDigest();
+    try {
+      CachedUrlSetHasher hasher = new GenericNameHasher(null, dig);
+      fail("Creating a GenericNameHasher with a null cus should throw "+
+	   "an IllegalArgumentException");
+    } catch (IllegalArgumentException iae) {
+    }
+  }
+
+  public void testNullIterator() {
+    MockCachedUrlSet cus = new MockCachedUrlSet();
+    cus.setFlatIterator(null);
+    MessageDigest dig = new MockMessageDigest();
+    try {
+      CachedUrlSetHasher hasher = new GenericNameHasher(cus, dig);
+      fail("Creating a GenericNameHasher with a null iterator should "+
+ 	   "throw an IllegalArgumentException");
+    } catch (IllegalArgumentException iae) {
+    }
+  }
+
+  public void testUnfinishedHasherNotFinished() {
+    String name = "TestName1";
+    MockMessageDigest dig = new MockMessageDigest();
+    CachedUrlSetHasher hasher = createHasherFromName(name, dig);
+    assertTrue(!hasher.finished());
   }
 
   public void testHashOneName() throws IOException {
@@ -64,9 +98,10 @@ public class TestGenericNameHasher extends TestCase {
     byte[] bytes = name.getBytes();
     for (int ix=0; ix<bytes.length; ix++) {
       assertEquals(1, hasher.hashStep(1));
-      assertEquals("Byte mismatch at index "+ix, bytes[ix],
-		   dig.getUpdatedByte());
+      assertEquals(bytes[ix], dig.getUpdatedByte());
     }
+
+
     assertEquals(0, hasher.hashStep(1));
     assertTrue(hasher.finished());
   }
@@ -115,13 +150,6 @@ public class TestGenericNameHasher extends TestCase {
     assertTrue(hasher.finished());
   }
 
-  public void testUnfinishedHasherNotFinished() {
-    String name = "TestName1";
-    MockMessageDigest dig = new MockMessageDigest();
-    CachedUrlSetHasher hasher = createHasherFromName(name, dig);
-    assertTrue(!hasher.finished());
-  }
-
   private GenericNameHasher createHasherFromNameVector(Vector names,
 						       MessageDigest dig) {
     Iterator it = names.iterator();
@@ -132,7 +160,7 @@ public class TestGenericNameHasher extends TestCase {
       MockCachedUrlSet cus = new MockCachedUrlSet(null, cuss);
       childNodes.add(cus);
     }
-    MockCachedUrlSet root = new MockCachedUrlSet(null, null);
+    MockCachedUrlSet root = new MockCachedUrlSet();
     root.setFlatIterator(childNodes.iterator());
 
     return new GenericNameHasher(root, dig);
