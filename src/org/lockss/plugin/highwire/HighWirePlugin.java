@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePlugin.java,v 1.17 2003-02-22 03:01:05 tal Exp $
+ * $Id: HighWirePlugin.java,v 1.18 2003-03-01 01:19:16 tal Exp $
  */
 
 /*
@@ -64,10 +64,6 @@ public class HighWirePlugin extends BasePlugin {
     super.stopPlugin();
   }
 
-  public String getPluginId() {
-    return "HighWirePlugin";
-  }
-
   public String getVersion() {
     return "Pre-release";
   }
@@ -83,7 +79,7 @@ public class HighWirePlugin extends BasePlugin {
   public String getAUIdFromConfig(Configuration configInfo) 
       throws ArchivalUnit.ConfigurationException {
     if (configInfo == null) {
-      throw new IllegalArgumentException("Called with null configInfo");
+      throw new ArchivalUnit.ConfigurationException("Null configInfo");
     }
     String urlStr = configInfo.get(BASE_URL_PROP);
     if (urlStr == null) {
