@@ -1,5 +1,5 @@
 /*
- * $Id: PartnerList.java,v 1.6 2003-03-28 08:13:32 tal Exp $
+ * $Id: PartnerList.java,v 1.7 2003-03-28 23:39:41 tal Exp $
  */
 
 /*
@@ -45,32 +45,51 @@ import org.apache.commons.collections.LRUMap;
  */
 class PartnerList {
   static final String PREFIX = LcapRouter.PREFIX;
-  static final String PARAM_MAX_PARTNER_LIFE = PREFIX + "maxPartnerLife";
+  static final String PARAM_MIN_PARTNER_REMOVE_INTERVAL =
+    PREFIX + "minPartnerRemoveInterval";
   static final String PARAM_MAX_PARTNERS = PREFIX + "maxPartners";
   static final String PARAM_DEFAULT_LIST = PREFIX + "defaultPartnerList";
   static final String PARAM_RECENT_MULTICAST_INTERVAL =
     PREFIX + "recentMulticastInterval";
 
+  static final long DEFAULT_MIN_PARTNER_REMOVE_INTERVAL = Constants.HOUR;
+  static final int DEFAULT_MAX_PARTNERS = 3;
+  static final long DEFAULT_RECENT_MULTICAST_INTERVAL = Constants.HOUR;
+
   static Logger log = Logger.getLogger("PartnerList");
 
   static Random random = new Random();
 
-  Map partners = new HashMap();
+  // partners is an LRUMap that records the most recent time an entry was
+  // automatically removed
+  LRUMap partners = new LRUMap(DEFAULT_MAX_PARTNERS) {
+      protected void processRemovedLRU(Object key, Object value) {
+	lastPartnerRemoveTime = TimeBase.nowMs();
+      }
+    };
+  long lastPartnerRemoveTime = 0;
+
   Map lastMulticastReceived = new LRUMap(100);
   List defaultPartnerList;
-  long lastPartnerRemoveTime = 0;
-  long recentMulticastInterval = 0;
-  long maxPartnerLife = 0;
-  long maxPartners = 0;
+  long recentMulticastInterval;
+  long minPartnerRemoveInterval;
 
-  PartnerList() {
+  /** Create a PartnerList */
+  public PartnerList() {
   }
 
-  void setConfig(Configuration config) {
-    maxPartners = config.getInt(PARAM_MAX_PARTNERS, 2);
-    maxPartnerLife = config.getInt(PARAM_MAX_PARTNER_LIFE, 0);
+  /** Configure the PartnerList */
+  public void setConfig(Configuration config) {
+    int maxPartners = config.getInt(PARAM_MAX_PARTNERS, DEFAULT_MAX_PARTNERS);
+    if (maxPartners != partners.getMaximumSize()) {
+      partners.setMaximumSize(maxPartners);
+    }
+    minPartnerRemoveInterval =
+      config.getTimeInterval(PARAM_MIN_PARTNER_REMOVE_INTERVAL,
+			     DEFAULT_MIN_PARTNER_REMOVE_INTERVAL);
     recentMulticastInterval =
-      config.getInt(PARAM_RECENT_MULTICAST_INTERVAL, 0);
+      config.getTimeInterval(PARAM_RECENT_MULTICAST_INTERVAL,
+			     DEFAULT_RECENT_MULTICAST_INTERVAL);
     String s = config.get(PARAM_DEFAULT_LIST, "");
     List stringList = StringUtil.breakAt(s, ';');
     List newDefaultList = new ArrayList();
@@ -90,16 +109,24 @@ class PartnerList {
     }
   }
 
-  Set getPartners() {
+  /** Return a snapshot of the partner set */
+  public Set getPartners() {
     return new HashSet(partners.keySet());
   }
 
-  void multicastPacketReceivedFrom(InetAddress ip) {
+  /** Inform the PartnerList that a multicast packet was received.
+   * @param ip the address of the packet sender
+   */
+  public void multicastPacketReceivedFrom(InetAddress ip) {
     removePartner(ip);
     lastMulticastReceived.put(ip, nowLong());
   }
 
-  void addPartner(InetAddress partnerIP, double probability) {
+  /** Possibly add a partner to the list
+   * @param partnerIP the address of the partner
+   * @probability the probability of adding the partner
+   */
+  public void addPartner(InetAddress partnerIP, double probability) {
     if (ProbabilisticChoice.choose(probability)) {
       addPartner(partnerIP);
     }
@@ -109,15 +136,14 @@ class PartnerList {
     // don't add if recently received multicast from him
     Long lastRcv = (Long)lastMulticastReceived.get(partnerIP);
     if (lastRcv != null &&
-	((TimeBase.nowMs() - lastRcv.longValue()) < recentMulticastInterval)) {
+	(TimeBase.msSince(lastRcv.longValue()) < recentMulticastInterval)) {
       return;
     }
     partners.put(partnerIP, nowLong());
-    if (partners.size() > maxPartners &&
-	((TimeBase.nowMs() - lastPartnerRemoveTime) > maxPartnerLife)) {
+    if (TimeBase.msSince(lastPartnerRemoveTime) > minPartnerRemoveInterval) {
       removeLeastRecent();
     }
-    if (partners.size() == 0) {
+    if (partners.isEmpty()) {
       addFromDefaultList();
     }
   }
@@ -130,28 +156,16 @@ class PartnerList {
   }
 
   void removeLeastRecent() {
-    InetAddress oldest = findLeastRecent();
+    InetAddress oldest = (InetAddress)partners.getFirstKey();
     if (oldest != null) {
       removePartner(oldest);
     }
   }
 
-  InetAddress findLeastRecent() {
-    long oldestRcvTime = Long.MAX_VALUE;
-    InetAddress oldest = null;
-    for (Iterator iter = partners.entrySet().iterator(); iter.hasNext(); ) {
-      Map.Entry entry = (Map.Entry)iter.next();
-      InetAddress ip = (InetAddress)entry.getKey();
-      Long l = (Long)entry.getValue();
-      if (l != null && l.longValue() < oldestRcvTime) {
-	oldestRcvTime = l.longValue();
-	oldest = ip;
-      }
-    }
-    return oldest;
-  }
-
-  void removePartner(InetAddress partnerIP) {
+  /** Remove a partner from the list
+   * @param partnerIP the partner to remove
+   */
+  public void removePartner(InetAddress partnerIP) {
     if (partners.containsKey(partnerIP)) {
       partners.remove(partnerIP);
       lastPartnerRemoveTime = TimeBase.nowMs();

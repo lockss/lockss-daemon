@@ -1,5 +1,5 @@
 /*
- * $Id: TestPartnerList.java,v 1.3 2003-03-22 01:15:19 aalto Exp $
+ * $Id: TestPartnerList.java,v 1.4 2003-03-28 23:39:41 tal Exp $
  */
 
 /*
@@ -45,7 +45,10 @@ import org.lockss.test.*;
  */
 
 public class TestPartnerList extends LockssTestCase {
-  static final int DEF_MAX_LIFE = 10;
+  static Logger log = Logger.getLogger("TestPartnerList");
+
+  static final Set EMPTY_SET = Collections.EMPTY_SET;
+  static final int DEF_MIN_PARTNER_REMOVE_INTERVAL = 10;
   static final int DEF_MAX_PARTNERS = 3;
   static final int DEF_MULTICAST_INTERVAL = 10;
   static final String IP1 = "1.1.1.1";
@@ -64,7 +67,7 @@ public class TestPartnerList extends LockssTestCase {
     super.setUp();
     TimeBase.setSimulated();
     pl = new PartnerList();
-    pl.setConfig(getConfig(DEF_MAX_LIFE, DEF_MAX_PARTNERS,
+    pl.setConfig(getConfig(DEF_MIN_PARTNER_REMOVE_INTERVAL, DEF_MAX_PARTNERS,
 			   DEF_MULTICAST_INTERVAL, DEF_PARTNERS));
     inet1 = InetAddress.getByName(IP1);
     inet2 = InetAddress.getByName(IP2);
@@ -77,11 +80,13 @@ public class TestPartnerList extends LockssTestCase {
     super.tearDown();
   }
 
-  private Configuration getConfig(int maxLife, int maxPartners,
+  private Configuration getConfig(int minPartnerRemoveInterval,
+				  int maxPartners,
 				  int multicastInterval,
 				  String defaultPartners) {
     Properties prop = new Properties();
-    prop.put(PartnerList.PARAM_MAX_PARTNER_LIFE, Integer.toString(maxLife));
+    prop.put(PartnerList.PARAM_MIN_PARTNER_REMOVE_INTERVAL,
+	     Integer.toString(minPartnerRemoveInterval));
     prop.put(PartnerList.PARAM_MAX_PARTNERS, Integer.toString(maxPartners));
     prop.put(PartnerList.PARAM_RECENT_MULTICAST_INTERVAL,
 	     Integer.toString(multicastInterval));
@@ -89,7 +94,7 @@ public class TestPartnerList extends LockssTestCase {
     return ConfigurationUtil.fromProps(prop);
   }
 
-  public void removeAll() {
+  private void removeAll() {
     for (Iterator iter = pl.getPartners().iterator(); iter.hasNext(); ) {
       InetAddress ip = (InetAddress)iter.next();
       pl.removePartner(ip);
@@ -108,28 +113,28 @@ public class TestPartnerList extends LockssTestCase {
   }
 
   public void testNoAddMulticastPartner() {
-    // this depends on not exceeding max partners (which is 3)
     removeAll();
-    assertEquals(new HashSet(), pl.getPartners());
+    assertEquals(EMPTY_SET, pl.getPartners());
     pl.multicastPacketReceivedFrom(inet3);
+    // inet3 shouldn't get added because recently seen a multicast from it
     pl.addPartner(inet3);
-    assertEquals(Collections.EMPTY_SET, pl.getPartners());
+    assertEquals(EMPTY_SET, pl.getPartners());
   }
 
   public void testRemoveMulticastPartner() {
     // this depends on not exceeding max partners (which is 3)
     removeAll();
-    assertEquals(new HashSet(), pl.getPartners());
+    assertEquals(EMPTY_SET, pl.getPartners());
     pl.addPartner(inet3);
     assertEquals(SetUtil.set(inet3), pl.getPartners());
     pl.multicastPacketReceivedFrom(inet3);
-    assertEquals(Collections.EMPTY_SET, pl.getPartners());
+    assertEquals(EMPTY_SET, pl.getPartners());
   }
 
   public void testAddPartner() {
     // this depends on not exceeding max partners (which is 3)
     removeAll();
-    assertEquals(new HashSet(), pl.getPartners());
+    assertEquals(EMPTY_SET, pl.getPartners());
     pl.addPartner(inet3);
     assertEquals(SetUtil.set(inet3), pl.getPartners());
     pl.addPartner(inet4, 0.0);
@@ -140,9 +145,7 @@ public class TestPartnerList extends LockssTestCase {
 
   public void testAddPartnerOverMax() {
     removeAll();
-    assertEquals(new HashSet(), pl.getPartners());
-    // make sure past lastPartnerRemoveTime
-    TimeBase.step(1000);
+    assertEquals(EMPTY_SET, pl.getPartners());
     pl.addPartner(inet1);
     assertEquals(SetUtil.set(inet1), pl.getPartners());
     // want them added at different times so can predict remove order
@@ -157,18 +160,30 @@ public class TestPartnerList extends LockssTestCase {
     pl.addPartner(inet4, 1.0);
     assertEquals(SetUtil.set(inet2, inet3, inet4), pl.getPartners());
     TimeBase.step();
-    // no removal this time; lastPartnerRemoveTime not exceeded
     pl.addPartner(inet1, 1.0);
-    assertEquals(SetUtil.set(inet1, inet2, inet3, inet4), pl.getPartners());
+    assertEquals(SetUtil.set(inet1, inet3, inet4), pl.getPartners());
+  }
+
+  public void testAddPartnerTimeToRemove() {
+    removeAll();
+    assertEquals(EMPTY_SET, pl.getPartners());
+    pl.addPartner(inet1);
+    assertEquals(SetUtil.set(inet1), pl.getPartners());
+    // want them added at different times so can predict remove order
+    TimeBase.step();
+    pl.addPartner(inet2, 1.0);
+    assertEquals(SetUtil.set(inet1, inet2), pl.getPartners());
+    // step past minPartnerRemoveInterval
+    TimeBase.step(1000);
+    // adding this should remove oldest, inet1, because it's been more the
+    // minPartnerRemoveInterval since last remove
+    pl.addPartner(inet3, 1.0);
+    assertEquals(SetUtil.set(inet2, inet3), pl.getPartners());
   }
 
   public void testAddPartnerRestoresDefault() {
-    pl = new PartnerList();
-    // configure with maxPartners = 0
-    pl.setConfig(getConfig(DEF_MAX_LIFE, 0,
-			   DEF_MULTICAST_INTERVAL, DEF_PARTNERS));
     removeAll();
-    assertEquals(new HashSet(), pl.getPartners());
+    assertEquals(EMPTY_SET, pl.getPartners());
     // make sure past lastPartnerRemoveTime
     TimeBase.step(1000);
     // adding this should then remove it, then add one from the default list
