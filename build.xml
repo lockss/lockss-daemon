@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.58 2003-09-04 23:11:16 tyronen Exp $
+ $Id: build.xml,v 1.59 2003-09-05 06:02:27 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -50,7 +50,10 @@ Args:
   -Dlogtarget=Class        Set default log target.
   -Dshowoutput=yes         With test-one, show System.err output as it happens.
   -Dtimeout=msecs          Override the default test failure timeout.
-  -Dhalt=true              Stop a set of tests in the event of an error.
+  -Dlistfiles=true         List the source files that will be compiled.  Use if
+                              a compile step runs when nothing should need to
+                              be compiled, to find package/dir disagreements.
+  -Dhalt=false             Run all tests in group, even if some fail.
 </description>
 
   <!-- Defaults -->
@@ -395,6 +398,7 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
            optimize="${javac.optimize}"
            deprecation="${javac.deprecation}"
            fork="${forkc}"
+           listfiles="${listfiles}"
            >
        <classpath refid="compile.classpath" />
        <include name="**/*.java"/>
@@ -419,6 +423,7 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
            optimize="${javac.optimize}"
            deprecation="${javac.deprecation}"
            fork="${forkc}"
+           listfiles="${listfiles}"
            >
        <classpath refid="test.compile.classpath" />
        <include name="**/*.java"/>
@@ -435,6 +440,7 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
            optimize="${javac.optimize}"
            deprecation="${javac.deprecation}"
            fork="${forkc}"
+           listfiles="${listfiles}"
            >
        <classpath refid="ant.compile.classpath" />
        <include name="**/*.java"/>
@@ -452,6 +458,7 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
            optimize="${javac.optimize}"
            deprecation="${javac.deprecation}"
            fork="${forkc}"
+           listfiles="${listfiles}"
            >
        <classpath refid="tools.compile.classpath" />
        <include name="**/*.java"/>
@@ -467,6 +474,7 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
            optimize="${javac.optimize}"
            deprecation="${javac.deprecation}"
            fork="${forkc}"
+           listfiles="${listfiles}"
            >
        <classpath refid="generated.compile.classpath" />
        <include name="**/*.java"/>
@@ -482,6 +490,7 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
            optimize="${javac.optimize}"
            deprecation="${javac.deprecation}"
            fork="${forkc}"
+           listfiles="${listfiles}"
            >
        <classpath refid="tools.test.compile.classpath" />
        <include name="**/*.java"/>
@@ -497,6 +506,7 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
            optimize="${javac.optimize}"
            deprecation="${javac.deprecation}"
            fork="${forkc}"
+           listfiles="${listfiles}"
            >
        <classpath refid="generated.test.compile.classpath" />
        <include name="**/*.java"/>
@@ -543,13 +553,13 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
 
     <!-- Concatenate all CVS/Entries files.   Not ideal, as dir names
          must be inferred, but it's fast, done entirely within Ant,
-         and includes files that don't have $Id: build.xml,v 1.58 2003-09-04 23:11:16 tyronen Exp $ line -->
+         and includes files that don't have $Id: build.xml,v 1.59 2003-09-05 06:02:27 tlipkis Exp $ line -->
     <concat destfile="${build.filerev.file}">
        <fileset dir="${src}" includes="**/CVS/Entries" defaultexcludes="no" />
     </concat>
 <!--
  Some other ways to do this.
-     Extract cvs $Id: build.xml,v 1.58 2003-09-04 23:11:16 tyronen Exp $ lines from all files, with shell command:
+     Extract cvs $Id: build.xml,v 1.59 2003-09-05 06:02:27 tlipkis Exp $ lines from all files, with shell command:
      sh -c "find . -type f -print0 | xargs -0 '"'egrep '\$Id(:.*)?\$'"'"
     <exec executable="sh" dir="${src}" output="${build.filerev.file}">
       <arg line="-c &quot;find . -type f  -print0 | xargs -0 egrep &apos;&quot;&apos;\$Id(:.*)?\$&apos;&quot;&apos;&quot;" />
@@ -828,7 +838,9 @@ Test results in ${test.results}
     </echo>
     <property name="include" value="**/Test*.java" />
     <delete file="${test.results}/*" quiet="true" />
-    <junit1 fork="no" printsummary="yes" haltonerror="${halt}" haltonfailure="${halt}">
+    <junit1 fork="no" printsummary="yes"
+         haltonfailure="${halt}" failureproperty="failed"
+         filtertrace="yes" showoutput="${showoutput}">
      <batchtest fork="${fork}" todir="${test.results}">
         <fileset dir="${test.src}">
           <include name="${include}" />
@@ -846,6 +858,7 @@ Test results in ${test.results}
       <sysproperty key="org.lockss.keepTempFiles" value="${keeptempfiles}"/>
       <sysproperty key="org.lockss.test.timeout.shouldnt" value="${timeout}"/>
     </junit1>
+    <fail if="failed" message="Test(s) failed" />
   </target>
 
   <!-- ==================================================================== -->
@@ -856,8 +869,9 @@ Test results in ${test.results}
 Test results in ${test.results}
     </echo>
     <delete file="${test.results}/*" quiet="true" />
-    <junit1 fork="yes" printsummary="yes"
-            haltonerror="${halt}" haltonfailure="${halt}">
+    <junit1 fork="no" printsummary="yes"
+         haltonfailure="${halt}" failureproperty="failed"
+         filtertrace="yes" showoutput="${showoutput}">
       <batchtest fork="${fork}" todir="${test.results}">
         <fileset dir="${test.src}">
           <include name="**/Func*.java" />
@@ -875,6 +889,7 @@ Test results in ${test.results}
       <sysproperty key="org.lockss.keepTempFiles" value="${keeptempfiles}"/>
       <sysproperty key="org.lockss.test.timeout.shouldnt" value="${timeout}"/>
     </junit1>
+    <fail if="failed" message="Test(s) failed" />
   </target>
 
   <!-- ==================================================================== -->
@@ -964,9 +979,9 @@ Test results in ${tools.test.results}
     </echo>
     <mkdir dir="${tools.test.results}"/>
     <delete file="${tools.test.results}/*" quiet="true" />
-    <junit1 fork="no" printsummary="yes" haltonerror="${halt}" haltonfailure="${halt}"
-         filtertrace="yes"
-         showoutput="${showoutput}">
+    <junit1 fork="no" printsummary="yes"
+         haltonfailure="${halt}" failureproperty="failed"
+         filtertrace="yes" showoutput="${showoutput}">
       <batchtest fork="${fork}" todir="${tools.test.results}">
         <fileset dir="${tools.test.src}">
           <include name="**/Test*.java" />
@@ -984,6 +999,7 @@ Test results in ${tools.test.results}
       <sysproperty key="org.lockss.keepTempFiles" value="${keeptempfiles}"/>
       <sysproperty key="org.lockss.test.timeout.shouldnt" value="${timeout}"/>
     </junit1>
+    <fail if="failed" message="Test(s) failed" />
   </target>
 
     <target name="test-generated"
@@ -994,9 +1010,9 @@ Test results in ${tools.test.results}
     </echo>
     <mkdir dir="${generated.test.results}"/>
     <delete file="${generated.test.results}/*" quiet="true" />
-    <junit1 fork="no" printsummary="yes" haltonerror="${halt}" haltonfailure="${halt}"
-         filtertrace="yes"
-         showoutput="${showoutput}">
+    <junit1 fork="no" printsummary="yes"
+         haltonfailure="${halt}" failureproperty="failed"
+         filtertrace="yes" showoutput="${showoutput}">
       <batchtest fork="${fork}" todir="${generated.test.results}">
         <fileset dir="${generated.test.src}">
           <include name="org/lockss/plugin/**/Test*.java" />
@@ -1014,6 +1030,7 @@ Test results in ${tools.test.results}
       <sysproperty key="org.lockss.keepTempFiles" value="${keeptempfiles}"/>
       <sysproperty key="org.lockss.test.timeout.shouldnt" value="${timeout}"/>
     </junit1>
+    <fail if="failed" message="Test(s) failed" />
   </target>
   
   <target name="test-tools-etal"
