@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.5 2003-02-13 00:00:54 aalto Exp $
+ * $Id: LockssDaemon.java,v 1.6 2003-02-20 22:25:32 tal Exp $
  */
 
 /*
@@ -31,23 +31,18 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.app;
 
-import java.util.Vector;
+import java.util.*;
 import org.lockss.util.Logger;
-import org.lockss.daemon.Configuration;
+import org.lockss.daemon.*;
 import org.lockss.hasher.HashService;
-import java.util.List;
-import org.lockss.plugin.LockssPlugin;
 import org.lockss.plugin.PluginManager;
-import java.util.Hashtable;
 import org.lockss.poller.PollManager;
-import org.lockss.protocol.LcapComm;
+import org.lockss.protocol.*;
 import org.lockss.repository.*;
 import org.lockss.state.*;
 import org.lockss.proxy.*;
 import org.lockss.crawler.CrawlManager;
-import java.util.Iterator;
-import org.lockss.protocol.IdentityManager;
-import org.lockss.daemon.ArchivalUnit;
+import org.apache.commons.collections.SequencedHashMap;
 
 /**
  * @author Claire Griffin
@@ -56,7 +51,6 @@ import org.lockss.daemon.ArchivalUnit;
 
 public class LockssDaemon {
   private static String PARAM_CACHE_LOCATION = Configuration.PREFIX+ "cacheDir";
-  private static String PARAM_PLUGIN_LOCATION = Configuration.PREFIX+ "pluginDir";
 
   private static String MANAGER_PREFIX = Configuration.PREFIX + "manager.";
 
@@ -89,26 +83,42 @@ public class LockssDaemon {
 
 
   private static String DEFAULT_CACHE_LOCATION = "./cache";
-  private static String DEFAULT_PLUGIN_LOCATION = "./plugins";
   private static String DEFAULT_CONFIG_LOCATION = "./config";
 
-  private String[] managerKeys = {HASH_SERVICE, COMM_MANAGER, IDENTITY_MANAGER,
-    PLUGIN_MANAGER, POLL_MANAGER, LOCKSS_REPOSITORY, HISTORY_REPOSITORY,
-    NODE_MANAGER, CRAWL_MANAGER, PROXY_HANDLER};
+  private static class ManagerDesc {
+    String key;				// hash key and config param name
+    String defaultClass;		// default class name
 
-  private String[] defaultKeys = {DEFAULT_HASH_SERVICE, DEFAULT_COMM_MANAGER,
-    DEFAULT_IDENTITY_MANAGER, DEFAULT_PLUGIN_MANAGER, DEFAULT_POLL_MANAGER,
-    DEFAULT_LOCKSS_REPOSITORY, DEFAULT_HISTORY_REPOSITORY, DEFAULT_NODE_MANAGER,
-    DEFAULT_CRAWL_MANAGER, DEFAULT_PROXY_HANDLER};
+    ManagerDesc(String key, String defaultClass) {
+      this.key = key;
+      this.defaultClass = defaultClass;
+    }
+  }
+
+  // Manager descriptors.  The order of this table determines the order in
+  // which managers are initialized and started.
+  private ManagerDesc[] managerDescs = {
+    new ManagerDesc(HASH_SERVICE, DEFAULT_HASH_SERVICE),
+    new ManagerDesc(COMM_MANAGER, DEFAULT_COMM_MANAGER),
+    new ManagerDesc(IDENTITY_MANAGER, DEFAULT_IDENTITY_MANAGER),
+    new ManagerDesc(POLL_MANAGER, DEFAULT_POLL_MANAGER),
+    new ManagerDesc(LOCKSS_REPOSITORY, DEFAULT_LOCKSS_REPOSITORY),
+    new ManagerDesc(HISTORY_REPOSITORY, DEFAULT_HISTORY_REPOSITORY),
+    new ManagerDesc(NODE_MANAGER, DEFAULT_NODE_MANAGER),
+    new ManagerDesc(CRAWL_MANAGER, DEFAULT_CRAWL_MANAGER),
+    new ManagerDesc(PROXY_HANDLER, DEFAULT_PROXY_HANDLER),
+    // PluginManager must be last
+    new ManagerDesc(PLUGIN_MANAGER, DEFAULT_PLUGIN_MANAGER)
+  };
 
   private static Logger log = Logger.getLogger("RunDaemon");
   protected List propUrls = null;
-  private String pluginDir = null;
   private String cacheDir = null;
   private String configDir = null;
 
-  private static Hashtable thePlugins = new Hashtable();
-  private static Hashtable theManagers = new Hashtable();
+  // Need to preserve order so managers are started and stopped in the
+  // right order.  This does not need to be synchronized.
+  private static Map theManagers = new SequencedHashMap();
 
   boolean running = false;
 
@@ -268,8 +278,6 @@ public class LockssDaemon {
     // startup all services
     initManagers();
 
-    // load in our "plugins"
-    initPlugins();
 /*
     running = true;
 
@@ -284,15 +292,9 @@ public class LockssDaemon {
    */
   protected void stop() {
 
-    /* stop the plugins */
-    Iterator it = thePlugins.values().iterator();
-    while(it.hasNext()) {
-      LockssPlugin plugin = (LockssPlugin)it.next();
-      plugin.stopPlugin();
-    }
-
     /* stop the managers */
-    it = theManagers.values().iterator();
+    // tk - should this stop the managers in the reverse order?
+    Iterator it = theManagers.values().iterator();
     while(it.hasNext()) {
       LockssManager lm = (LockssManager)it.next();
       lm.stopService();
@@ -312,8 +314,6 @@ public class LockssDaemon {
     cacheDir = Configuration.getParam(PARAM_CACHE_LOCATION,
                                       DEFAULT_CACHE_LOCATION);
 
-    pluginDir = Configuration.getParam(PARAM_PLUGIN_LOCATION,
-                                       DEFAULT_PLUGIN_LOCATION);
   }
 
 
@@ -322,18 +322,15 @@ public class LockssDaemon {
    * @throws Exception if initilization fails
    */
   protected void initManagers() throws Exception {
-    String mgr_name;
-    LockssManager mgr;
-
-    // There are eight different services we provide
-    for(int i=0; i< managerKeys.length; i++) {
-      mgr_name = Configuration.getParam(MANAGER_PREFIX + managerKeys[i],
-      defaultKeys[i]);
-      mgr = loadManager(mgr_name);
-      theManagers.put(managerKeys[i], mgr);
+    for(int i=0; i< managerDescs.length; i++) {
+      ManagerDesc desc = managerDescs[i];
+      String mgr_name = Configuration.getParam(MANAGER_PREFIX + desc.key,
+					       desc.defaultClass);
+      LockssManager mgr = loadManager(mgr_name);
+      theManagers.put(desc.key, mgr);
     }
-
-    /* we can now safely start our managers */
+    // now start the managers in the same order in which they were created
+    // (theManagers is a SequencedHashMap)
     Iterator it = theManagers.values().iterator();
     while(it.hasNext()) {
       LockssManager lm = (LockssManager)it.next();
@@ -341,7 +338,6 @@ public class LockssDaemon {
     }
 
   }
-
 
   /**
    * load the managers with the manager class name
@@ -363,45 +359,5 @@ public class LockssDaemon {
     }
   }
 
-  /**
-   * init the plugins in the plugins directory
-   */
-  protected void initPlugins() {
-    /* grab our 3rd party plugins and load them using security manager */
-    String[] files = new java.io.File(pluginDir).list();
-    for(int i= 0; i < files.length; i++) {
-      if(files[i].endsWith(".jar")) {
-        loadPlugin(files[i].substring(0,files[i].lastIndexOf(".jar")));
-      }
-      else {
-        loadPlugin(files[i]);
-      }
-    }
-  }
-
-  /**
-   * load a plugin with the given class name from somewhere in our classpath
-   * @param pluginName the unique name for this plugin
-   */
-  void loadPlugin(String pluginName) {
-    try {
-      Class plugin_class = Class.forName(pluginName);
-      LockssPlugin plugin = (LockssPlugin) plugin_class.newInstance();
-      plugin.initPlugin();
-      String id = plugin.getPluginName();
-      if(thePlugins.contains(id)) {
-        System.err.println("Already have plugin registered for " + id);
-        return;
-      }
-      thePlugins.put(id,plugin);
-      getPluginManager().registerArchivalUnit(plugin.getArchivalUnit());
-    }
-    catch (ClassNotFoundException cnfe) {
-      System.err.println("Unable to load Lockss plugin " + pluginName);
-    }
-    catch (Exception ex) {
-      System.err.println("Unable to instatiate Lockss plugin " + pluginName);
-    }
-  }
 
 }
