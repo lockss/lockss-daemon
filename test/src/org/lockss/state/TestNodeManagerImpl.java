@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.28 2003-02-26 02:15:47 aalto Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.29 2003-02-26 03:06:21 aalto Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import org.lockss.poller.*;
 import org.lockss.protocol.*;
 import org.lockss.hasher.HashService;
 import org.lockss.plugin.*;
+import org.lockss.plugin.AuUrl;
 
 public class TestNodeManagerImpl
     extends LockssTestCase {
@@ -87,6 +88,7 @@ public class TestNodeManagerImpl
     }
     nodeManager.stopService();
     theDaemon.stopDaemon();
+    TimeBase.setReal();
     super.tearDown();
   }
 
@@ -486,6 +488,42 @@ public class TestNodeManagerImpl
     assertEquals(MockPollManager.SUSPENDED,
                  ((MockPollManager)theDaemon.getPollManager()).getPollStatus(
         results.getPollKey()));
+
+    theDaemon.getHashService().stopService();
+    theDaemon.getPollManager().stopService();
+  }
+
+  public void testHandleAuContentPoll() throws Exception {
+    theDaemon.getHashService().startService();
+    theDaemon.getPollManager().startService();
+
+    // have to change the AUCUS for the MockArchivalUnit here
+    // to properly test handling AuNode content polls
+    String auUrl = AuUrl.PROTOCOL_COLON + "//test";
+    MockCachedUrlSet mcus = (MockCachedUrlSet)getCUS(auUrl);
+    mcus.setFlatIterator((new Vector()).iterator());
+    mau.setAUCachedUrlSet(mcus);
+    nodeManager = new NodeManagerImpl(mau);
+    nodeManager = new NodeManagerImpl(mau);
+    nodeManager.startService();
+    nodeManager.repository = new HistoryRepositoryImpl(tempDirPath);
+
+    contentPoll = createPoll(auUrl, true, 10, 5);
+    Poll.VoteTally results = contentPoll.getVoteTally();
+    AuState auState = nodeManager.getAuState();
+    assertEquals(-1, auState.getLastTopLevelPollTime());
+
+    TimeBase.setSimulated(TimeBase.nowMs());
+    NodeState nodeState = nodeManager.getNodeState(getCUS(auUrl));
+    PollState pollState = new PollState(results.getType(),
+                                        results.getLwrBound(),
+                                        results.getUprBound(),
+                                        PollState.RUNNING,
+                                        results.getStartTime(),
+                                        null);
+    nodeManager.handleContentPoll(pollState, results, nodeState);
+    assertEquals(PollState.WON, pollState.getStatus());
+    assertEquals(TimeBase.nowMs(), auState.getLastTopLevelPollTime());
 
     theDaemon.getHashService().stopService();
     theDaemon.getPollManager().stopService();

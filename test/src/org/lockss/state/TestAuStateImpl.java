@@ -1,5 +1,5 @@
 /*
- * $Id: AuState.java,v 1.5 2003-02-26 03:06:21 aalto Exp $
+ * $Id: TestAuStateImpl.java,v 1.1 2003-02-26 03:06:21 aalto Exp $
  */
 
 /*
@@ -33,67 +33,40 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.state;
 
-import org.lockss.plugin.ArchivalUnit;
+import org.lockss.test.LockssTestCase;
 import org.lockss.util.TimeBase;
 
-/**
- * AuState contains the state information for an au.
- */
-public class AuState {
-  protected ArchivalUnit au;
-  protected long lastCrawlTime;
-  protected long lastTopLevelPoll;
-
-  protected AuState(ArchivalUnit au, long lastCrawlTime, long lastTopLevelPoll) {
-    this.au = au;
-    this.lastCrawlTime = lastCrawlTime;
-    this.lastTopLevelPoll = lastTopLevelPoll;
+public class TestAuStateImpl extends LockssTestCase {
+  public TestAuStateImpl(String msg) {
+    super(msg);
   }
 
-  /**
-   * Returns the au
-   * @return the au
-   */
-  public ArchivalUnit getArchivalUnit() {
-    return au;
+  public void tearDown() throws Exception {
+    TimeBase.setReal();
+    super.tearDown();
   }
 
-  /**
-   * Returns the last new content crawl time of the au.
-   * @return the last crawl time in ms
-   */
-  public long getLastCrawlTime() {
-    return lastCrawlTime;
+  public void testCrawlFinished() {
+    AuState auState = new AuState(null, 123, 321);
+    assertEquals(123, auState.getLastCrawlTime());
+
+    TimeBase.setSimulated(TimeBase.nowMs());
+    auState.newCrawlFinished();
+    assertEquals(TimeBase.nowMs(), auState.getLastCrawlTime());
   }
 
-  /**
-   * Returns the last top level poll time for the au.
-   * @return the last poll time in ms
-   */
-  public long getLastTopLevelPollTime() {
-    return lastTopLevelPoll;
+  public void testPollFinished() {
+    AuState auState = new AuState(null, 123, 321);
+    assertEquals(321, auState.getLastTopLevelPollTime());
+
+    TimeBase.setSimulated(TimeBase.nowMs());
+    auState.newPollFinished();
+    assertEquals(TimeBase.nowMs(), auState.getLastTopLevelPollTime());
   }
 
-  /**
-   * Sets the last crawl time to the current time.
-   */
-  public void newCrawlFinished() {
-    lastCrawlTime = TimeBase.nowMs();
+  public static void main(String[] argv) {
+    String[] testCaseList = { TestAuStateImpl.class.getName()};
+    junit.swingui.TestRunner.main(testCaseList);
   }
 
-  /**
-   * Sets the last poll time to the current time.
-   */
-  public void newPollFinished() {
-    lastTopLevelPoll = TimeBase.nowMs();
-  }
-
-  public String toString() {
-    StringBuffer sb = new StringBuffer();
-    sb.append("[AuState: ");
-    sb.append("lastCrawlTime=");
-    sb.append(lastCrawlTime);
-    sb.append("]");
-    return sb.toString();
-  }
 }
