@@ -1,5 +1,5 @@
 /*
- * $Id: NewContentCrawler.java,v 1.11 2004-03-10 08:49:23 tlipkis Exp $
+ * $Id: NewContentCrawler.java,v 1.12 2004-03-10 21:17:57 troberts Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.crawler;
 import java.util.*;
 import java.io.*;
 import org.lockss.util.*;
+import org.lockss.util.urlconn.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
@@ -191,11 +192,16 @@ public class NewContentCrawler extends CrawlerImpl {
 							 DEFAULT_RETRY_TIMES));
 	  numUrlsFetched++;
 	}
-      } catch (FileNotFoundException e) {
-	logger.warning(uc+" not found on publisher's site");
-      } catch (IOException ioe) {
-	//XXX handle this better.  Requeue?
-	logger.error("Problem caching "+uc+". Ignoring", ioe);
+      } catch (CacheException e) {
+	if (e.getAttribute(CacheException.ATTRIBUTE_FAIL)) {
+	  logger.error("Problem caching "+uc+". Ignoring", e);
+	  error = Crawler.STATUS_FETCH_ERROR;
+	} else {
+	  logger.warning(uc+" not found on publisher's site", e);
+	}
+      } catch (IOException e) {
+	//XXX not expected
+	logger.critical("Unexpected IOException during crawl", e);
 	error = Crawler.STATUS_FETCH_ERROR;
       }
     } else {
@@ -247,7 +253,7 @@ public class NewContentCrawler extends CrawlerImpl {
 	uc.cache(); //IOException if there is a caching problem
 	crawlStatus.signalUrlFetched();
 	return; //cache didn't throw
-      } catch (IOException e) {
+      } catch (CacheException.RetryableException e) {
 	logger.debug("Exception when trying to cache "+uc, e);
 	if (--retriesLeft > 0) {
 	  long pauseTime =
