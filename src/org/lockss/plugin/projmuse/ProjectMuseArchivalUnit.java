@@ -1,5 +1,5 @@
 /*
- * $Id: ProjectMuseArchivalUnit.java,v 1.20 2004-01-27 01:03:49 clairegriffin Exp $
+ * $Id: ProjectMuseArchivalUnit.java,v 1.21 2004-01-29 01:49:50 eaalto Exp $
  */
 
 /*
@@ -78,9 +78,11 @@ public class ProjectMuseArchivalUnit extends ConfigurableArchivalUnit {
    * @param mimeType the mime type
    * @return the FilterRule if 'text/html', else null
    */
-  public FilterRule getFilterRule(String mimeType) {
-    if ("text/html".equals(mimeType)) {
-      return new ProjectMuseFilterRule();
+  protected FilterRule constructFilterRule(String mimeType) {
+    if (mimeType!=null) {
+      if (StringUtil.startsWithIgnoreCase(mimeType, "text/html")) {
+        return new ProjectMuseFilterRule();
+      }
     }
     return null;
   }

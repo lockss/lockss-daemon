@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArchivalUnit.java,v 1.14 2004-01-28 02:22:42 troberts Exp $
+ * $Id: TestBaseArchivalUnit.java,v 1.15 2004-01-29 01:49:49 eaalto Exp $
  */
 
 /*
@@ -37,7 +37,7 @@ import java.util.*;
 import org.lockss.daemon.*;
 import org.lockss.test.*;
 import org.lockss.plugin.*;
-import org.lockss.util.TimeBase;
+import org.lockss.util.*;
 import org.lockss.daemon.Configuration;
 
 /**
@@ -47,7 +47,7 @@ import org.lockss.daemon.Configuration;
  * @version 0.0
  */
 public class TestBaseArchivalUnit extends LockssTestCase {
-  MockBaseArchivalUnit mbau;
+  MyMockBaseArchivalUnit mbau;
 
   public void setUp() throws Exception {
     super.setUp();
@@ -59,7 +59,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     props.setProperty(BaseArchivalUnit.PARAM_TOPLEVEL_POLL_PROB_MAX, "85");
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
-    mbau = new MockBaseArchivalUnit(null);
+    mbau = new MyMockBaseArchivalUnit(null);
   }
 
   public void tearDown() throws Exception {
@@ -267,18 +267,47 @@ public class TestBaseArchivalUnit extends LockssTestCase {
 	       mbau.getContentParser("text/html"));
   }
 
+  public void testFilterRuleCaching() throws IOException {
+    MockFilterRule rule1 = new MockFilterRule();
+    rule1.setFilteredInputStream(new StringInputStream("rule1"));
+    MockFilterRule rule2 = new MockFilterRule();
+    rule2.setFilteredInputStream(new StringInputStream("rule2"));
+
+    assertNull(mbau.rule);
+    assertEquals(0, mbau.cacheMiss);
+    assertNull(mbau.getFilterRule("test1"));
+    assertEquals(1, mbau.cacheMiss);
+    mbau.rule = rule1;
+    assertNotNull(mbau.getFilterRule("test1"));
+    assertEquals(2, mbau.cacheMiss);
+    mbau.rule = rule2;
+    assertNotNull(mbau.getFilterRule("test2"));
+    assertEquals(3, mbau.cacheMiss);
+
+    rule1 = (MockFilterRule)mbau.getFilterRule("test2");
+    assertEquals(3, mbau.cacheMiss);
+    assertEquals("rule2", StringUtil.fromInputStream(
+        rule1.createFilteredInputStream(null)));
+    rule2 = (MockFilterRule)mbau.getFilterRule("test1");
+    assertEquals(3, mbau.cacheMiss);
+    assertEquals("rule1", StringUtil.fromInputStream(
+        rule2.createFilteredInputStream(null)));
+  }
+
   public static void main(String[] argv) {
     String[] testCaseList = { TestBaseArchivalUnit.class.getName()};
     junit.swingui.TestRunner.main(testCaseList);
   }
 
-  static class MockBaseArchivalUnit extends BaseArchivalUnit {
+  static class MyMockBaseArchivalUnit extends BaseArchivalUnit {
 
     private String auId = null;
     private String m_startUrl = "www.example.com/index.html";
     private String m_name = "MockBaseArchivalUnit";
+    int cacheMiss = 0;
+    FilterRule rule = null;
 
-    public MockBaseArchivalUnit(Plugin myPlugin) {
+    public MyMockBaseArchivalUnit(Plugin myPlugin) {
       super(myPlugin);
     }
 
@@ -308,6 +337,11 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     }
 
     protected void loadDefiningConfig(Configuration config) {
+    }
+
+    protected FilterRule constructFilterRule(String mimeType) {
+      cacheMiss++;
+      return rule;
     }
   }
 }

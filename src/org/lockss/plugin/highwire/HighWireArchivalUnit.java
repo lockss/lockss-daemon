@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireArchivalUnit.java,v 1.42 2004-01-27 01:03:47 clairegriffin Exp $
+ * $Id: HighWireArchivalUnit.java,v 1.43 2004-01-29 01:49:51 eaalto Exp $
  */
 
 /*
@@ -76,9 +76,11 @@ public class HighWireArchivalUnit extends ConfigurableArchivalUnit {
     super(myPlugin);
   }
 
-  public FilterRule getFilterRule(String mimeType) {
-    if ("text/html".equals(mimeType)) {
-      return new HighWireFilterRule();
+  protected FilterRule constructFilterRule(String mimeType) {
+    if (mimeType!=null) {
+      if (StringUtil.startsWithIgnoreCase(mimeType, "text/html")) {
+        return new HighWireFilterRule();
+      }
     }
     return null;
   }

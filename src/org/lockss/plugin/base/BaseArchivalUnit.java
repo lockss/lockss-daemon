@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.54 2004-01-28 05:23:10 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.55 2004-01-29 01:49:54 eaalto Exp $
  */
 
 /*
@@ -128,13 +128,12 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   private String auId = null;
 
   protected GoslingHtmlParser goslingHtmlParser = null;
+  protected HashMap filterMap = new HashMap(4);
 
   // crawl spec support
   protected LRUMap crawlSpecCache = new LRUMap(1000);
   protected int hits = 0;
   protected int misses = 0;
-
-
 
   protected BaseArchivalUnit(Plugin myPlugin) {
     plugin = myPlugin;
@@ -175,8 +174,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 	String oldVal = auConfig.get(key);
 	String newVal = newConfig.get(key);
 	if (!StringUtil.equalStrings(oldVal, newVal)) {
-	  throw
-	    new ConfigurationException("Attempt to modify defining property "
+	  throw new ConfigurationException("Attempt to modify defining property "
 				       +"of existing ArchivalUnit: "+ key
 				       +". old: "+oldVal+" new: "+newVal);
 	}
@@ -502,7 +500,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     if (mimeType != null) {
       if (StringUtil.startsWithIgnoreCase(mimeType, "text/html")) {
 	if (goslingHtmlParser == null) {
-	  goslingHtmlParser =  new GoslingHtmlParser(this);
+	  goslingHtmlParser = new GoslingHtmlParser(this);
 	}
 	return goslingHtmlParser;
       }
@@ -512,10 +510,32 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 
 
   /**
+   * Returns a filter rule from the cache if found, otherwise calls
+   * 'constructFilterRule()' and caches the result if non-null.  Mime-type
+   * is converted to lowercase.  If mimetype is null, returns null.
+   * @param mimeType the mime type
+   * @return the FilterRule
+   */
+  public FilterRule getFilterRule(String mimeType) {
+    if (mimeType!=null) {
+      FilterRule rule = (FilterRule)filterMap.get(mimeType.toLowerCase());
+      if (rule==null) {
+        rule = constructFilterRule(mimeType.toLowerCase());
+        if (rule != null) {
+          filterMap.put(mimeType.toLowerCase(), rule);
+        }
+      }
+      return rule;
+    }
+    return null;
+  }
+
+  /**
+   * Override to provide proper filter rules.
    * @param mimeType the mime type
    * @return null, since we don't filter by default
    */
-  public FilterRule getFilterRule(String mimeType) {
+  protected FilterRule constructFilterRule(String mimeType) {
     logger.debug3("BaseArchivalUnit - returning default value of null");
     return null;
   }
