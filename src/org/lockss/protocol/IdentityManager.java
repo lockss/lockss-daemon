@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManager.java,v 1.57 2005-02-02 09:42:26 tlipkis Exp $
+ * $Id: IdentityManager.java,v 1.58 2005-03-18 09:09:17 smorabito Exp $
  */
 
 /*
@@ -97,7 +97,7 @@ public class IdentityManager
   static final String IDDB_FILENAME = "iddb.xml";
   // fully qualify for XmlMarshaller
   public static final String MAPPING_FILE_NAME =
-      "/org/lockss/protocol/idmapping.xml";
+    "/org/lockss/protocol/idmapping.xml";
 
   /* Reputation constants */
   public static final int MAX_DELTA = 0;
@@ -360,7 +360,7 @@ public class IdentityManager
    * @return the PeerIdentity representing the peer
    */
   public PeerIdentity stringToPeerIdentity(String idKey)
-    throws IdentityManager.MalformedIdentityKeyException {
+      throws IdentityManager.MalformedIdentityKeyException {
     if (idKey == null) {
       log.warning("stringToPeerIdentity(null) is deprecated.");
       log.warning("  Use getLocalPeerIdentity() to get a local identity");
@@ -535,9 +535,9 @@ public class IdentityManager
     try {
       String iddbDir = Configuration.getParam(PARAM_IDDB_DIR);
       if (iddbDir==null) {
-        log.warning("No value found for config parameter '" +
+	log.warning("No value found for config parameter '" +
 		    PARAM_IDDB_DIR+"'");
-        return;
+	return;
       }
       String fn = iddbDir + File.separator + IDDB_FILENAME;
 
@@ -548,9 +548,9 @@ public class IdentityManager
 					  IdentityListBean.class,
 					  MAPPING_FILE_NAME);
       if (idlb==null) {
-        log.warning("Unable to read Identity file:" + fn);
+	log.warning("Unable to read Identity file:" + fn);
       } else {
-        setIdentities(idlb.getIdBeans());
+	setIdentities(idlb.getIdBeans());
       }
     } catch (Exception e) {
       log.warning("Couldn't load identity database: " + e.getMessage());
@@ -566,9 +566,9 @@ public class IdentityManager
     try {
       String fn = Configuration.getParam(PARAM_IDDB_DIR);
       if (fn==null) {
-        log.warning("No value found for config parameter '" +
+	log.warning("No value found for config parameter '" +
 		    PARAM_IDDB_DIR+"'");
-        return;
+	return;
       }
 
       // store the identity list via the marshaller
@@ -588,9 +588,9 @@ public class IdentityManager
       List beanList = new ArrayList(theIdentities.size());
       Iterator mapIter = theIdentities.values().iterator();
       while(mapIter.hasNext()) {
-        LcapIdentity id = (LcapIdentity) mapIter.next();
-        IdentityBean bean = new IdentityBean(id.getIdKey(),id.getReputation());
-        beanList.add(bean);
+	LcapIdentity id = (LcapIdentity) mapIter.next();
+	IdentityBean bean = new IdentityBean(id.getIdKey(),id.getReputation());
+	beanList.add(bean);
       }
       IdentityListBean listBean = new IdentityListBean(beanList);
       return listBean;
@@ -601,16 +601,16 @@ public class IdentityManager
     Iterator beanIter = idList.iterator();
     synchronized(theIdentities) {
       while (beanIter.hasNext()) {
-        IdentityBean bean = (IdentityBean)beanIter.next();
-        String idKey = bean.getKey();
-        try {
+	IdentityBean bean = (IdentityBean)beanIter.next();
+	String idKey = bean.getKey();
+	try {
 	  PeerIdentity pid = findPeerIdentity(idKey);
-          LcapIdentity id = new LcapIdentity(pid, idKey, bean.getReputation());
-          theIdentities.put(pid, id);
-        }
-        catch (IdentityManager.MalformedIdentityKeyException ex) {
-          log.warning("Error reloading identity-Unknown Host: " + idKey);
-        }
+	  LcapIdentity id = new LcapIdentity(pid, idKey, bean.getReputation());
+	  theIdentities.put(pid, id);
+	}
+	catch (IdentityManager.MalformedIdentityKeyException ex) {
+	  log.warning("Error reloading identity-Unknown Host: " + idKey);
+	}
       }
     }
   }
@@ -679,11 +679,11 @@ public class IdentityManager
 
       map = (Map)cachesToFetchFrom.get(au);
       if (map == null) {
- 	return;
+	return;
       }
       map.remove(pid);
       if (map.size() == 0) {
- 	cachesToFetchFrom.remove(au);
+	cachesToFetchFrom.remove(au);
       }
       storeIdentityAgreement(au);
     }
@@ -787,25 +787,25 @@ public class IdentityManager
   public void setConfig(Configuration config, Configuration oldConfig,
 			Configuration.Differences changedKeys) {
     reputationDeltas[MAX_DELTA] =
-        config.getInt(PARAM_MAX_DELTA, DEFAULT_MAX_DELTA);
+      config.getInt(PARAM_MAX_DELTA, DEFAULT_MAX_DELTA);
     reputationDeltas[AGREE_VOTE] =
-        config.getInt(PARAM_AGREE_DELTA, DEFAULT_AGREE_DELTA);
+      config.getInt(PARAM_AGREE_DELTA, DEFAULT_AGREE_DELTA);
     reputationDeltas[DISAGREE_VOTE] =
-        config.getInt(PARAM_DISAGREE_DELTA, DEFAULT_DISAGREE_DELTA);
+      config.getInt(PARAM_DISAGREE_DELTA, DEFAULT_DISAGREE_DELTA);
     reputationDeltas[CALL_INTERNAL] =
-        config.getInt(PARAM_CALL_INTERNAL, DEFAULT_CALL_INTERNAL);
+      config.getInt(PARAM_CALL_INTERNAL, DEFAULT_CALL_INTERNAL);
     reputationDeltas[SPOOF_DETECTED] =
-        config.getInt(PARAM_SPOOF_DETECTED, DEFAULT_SPOOF_DETECTED);
+      config.getInt(PARAM_SPOOF_DETECTED, DEFAULT_SPOOF_DETECTED);
     reputationDeltas[REPLAY_DETECTED] =
-        config.getInt(PARAM_REPLAY_DETECTED, DEFAULT_REPLAY_DETECTED);
+      config.getInt(PARAM_REPLAY_DETECTED, DEFAULT_REPLAY_DETECTED);
     reputationDeltas[ATTACK_DETECTED] =
-        config.getInt(PARAM_ATTACK_DETECTED, DEFAULT_ATTACK_DETECTED);
+      config.getInt(PARAM_ATTACK_DETECTED, DEFAULT_ATTACK_DETECTED);
     reputationDeltas[VOTE_NOTVERIFIED] =
-        config.getInt(PARAM_VOTE_NOTVERIFIED, DEFAULT_VOTE_NOTVERIFIED);
+      config.getInt(PARAM_VOTE_NOTVERIFIED, DEFAULT_VOTE_NOTVERIFIED);
     reputationDeltas[VOTE_VERIFIED] =
-        config.getInt(PARAM_VOTE_VERIFIED, DEFAULT_VOTE_VERIFIED);
+      config.getInt(PARAM_VOTE_VERIFIED, DEFAULT_VOTE_VERIFIED);
     reputationDeltas[VOTE_DISOWNED] =
-        config.getInt(PARAM_VOTE_DISOWNED, DEFAULT_VOTE_DISOWNED);
+      config.getInt(PARAM_VOTE_DISOWNED, DEFAULT_VOTE_DISOWNED);
   }
 
 
@@ -877,10 +877,10 @@ public class IdentityManager
 
     public boolean equals(Object obj) {
       if (obj instanceof IdentityAgreement) {
-        IdentityAgreement ida = (IdentityAgreement)obj;
-        return (id.equals(ida.getId())
-            && ida.getLastDisagree() == lastDisagree
-            && ida.getLastAgree() == lastAgree);
+	IdentityAgreement ida = (IdentityAgreement)obj;
+	return (id.equals(ida.getId())
+		&& ida.getLastDisagree() == lastDisagree
+		&& ida.getLastAgree() == lastAgree);
       }
       return false;
     }

@@ -1,68 +1,69 @@
 /*
- * $Id: EncodedProperty.java,v 1.7 2004-09-28 08:53:14 tlipkis Exp $
+ * $Id: EncodedProperty.java,v 1.8 2005-03-18 09:09:19 smorabito Exp $
  */
 
 /*
+  Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+  all rights reserved.
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
-all rights reserved.
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+  STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+  WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+  IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
-STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
-IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+  Except as contained in this notice, the name of Stanford University shall not
+  be used in advertising or otherwise to promote the sale, use or other dealings
+  in this Software without prior written authorization from Stanford University.
+*/
 
-Except as contained in this notice, the name of Stanford University shall not
-be used in advertising or otherwise to promote the sale, use or other dealings
-in this Software without prior written authorization from Stanford University.
+package org.lockss.util;
 
-*/package org.lockss.util;
-
-import java.util.Properties;
-import java.util.Set;
-import java.util.Collection;
-import java.util.StringTokenizer;
-import java.io.ByteArrayInputStream;
-import java.io.DataInputStream;
+import java.util.*;
 import java.io.*;
 import org.mortbay.util.B64Code;
 
 /**
+ *
+ * <p>Arbitrarily nested property lists used by LCAP messages.</p>
+ *
  * @author Claire Griffin
- * @version 1.0
+ * @author Seth Morabito
+ * @version 2.0
  */
 
 public class EncodedProperty extends Properties {
 
-  private static String DEFAULT_ENCODING = "UTF-8";
+  public static final String DEFAULT_ENCODING = "UTF-8";
+  public static final byte[] EMPTY_BYTE_ARRAY = new byte[0];
 
+  private static final Logger log = Logger.getLogger("EncodedProperty");
 
   /**
    * Constructs a new, empty property map.
    *
    * @param   defaults the default property map.
-    */
+   */
   public EncodedProperty(Properties defaults) {
-      super(defaults);
+    super(defaults);
   }
 
   /**
    * Constructs a new, empty property map.
    */
   public EncodedProperty() {
-      super();
+    super();
   }
 
   /**
@@ -71,7 +72,7 @@ public class EncodedProperty extends Properties {
    */
   public void decode(byte[] encBytes)
       throws java.io.IOException {
-    decodeToMap(encBytes, DEFAULT_ENCODING, this);
+    decode(encBytes, null);
   }
 
   /**
@@ -79,9 +80,17 @@ public class EncodedProperty extends Properties {
    * @param encodedBytes the string to decode
    * @param charset the charecter set to use in decoding the string
    */
-  public void decode(byte[] encodedBytes, String charset)
+  public void decode(byte[] encBytes, String charset)
       throws java.io.IOException {
-    decodeToMap(encodedBytes, charset, this);
+    if (charset==null)
+      charset=DEFAULT_ENCODING;
+
+    // convert our data
+    byte[] converted_bytes = new String(encBytes, charset).getBytes();
+
+    // then load it into our properties
+    ByteArrayInputStream in = new ByteArrayInputStream(converted_bytes);
+    load(in);
   }
 
 
@@ -100,44 +109,9 @@ public class EncodedProperty extends Properties {
    * @return a string containing the property table in the requested char set.
    */
   public byte[] encode(String charset) throws java.io.IOException {
-    return encodeFromMap(charset, this);
-  }
-
-   /**
-   * decode a string of name-value pairs in a given charecter set to a property
-   * table.
-   * @param srcBytes - the bytes to be decoded
-   * @param charset - the charecter set (encoding) of the bytes
-   * @param map - the property map in which to store the data
-   */
-  public static void decodeToMap(byte[] srcBytes, String charset,
-                                 Properties map)
-      throws java.io.IOException {
-    if (charset==null)
-      charset=DEFAULT_ENCODING;
-
-    // convert our data
-    byte[] converted_bytes = new String(srcBytes,charset).getBytes();
-
-    //then load it into our properties
-    ByteArrayInputStream in = new ByteArrayInputStream(converted_bytes);
-    map.load(in);
-  }
-
-  /**
-   *
-   * @param charset - the charecter set to use for encoding the bytes
-   * @param map - the property map which we will be converting
-   * @return a byte array of the encoded properties
-   */
-  public static byte[] encodeFromMap(String charset, Properties map)
-      throws java.io.IOException {
     ByteArrayOutputStream out = new ByteArrayOutputStream();
-
-    map.store(out,null);
-
+    store(out, null);
     return out.toString().getBytes(charset);
-
   }
 
   public byte[] encodeString(String str) {
@@ -170,7 +144,7 @@ public class EncodedProperty extends Properties {
 
     if(value != null) {
       ret = Boolean.valueOf(value).booleanValue();
-     }
+    }
     return ret;
   }
 
@@ -190,7 +164,7 @@ public class EncodedProperty extends Properties {
     try {
       String value = getProperty(key);
       if(value != null) {
-        ret = Double.parseDouble(value);
+	ret = Double.parseDouble(value);
       }
     }
     catch (NumberFormatException ex) {
@@ -204,7 +178,7 @@ public class EncodedProperty extends Properties {
     try {
       String value = getProperty(key);
       if(value != null) {
-        ret = Float.parseFloat(value);
+	ret = Float.parseFloat(value);
       }
     }
     catch (NumberFormatException ex) {
@@ -218,7 +192,7 @@ public class EncodedProperty extends Properties {
     try {
       String value = getProperty(key);
       if(value != null) {
-        ret = Integer.parseInt(value);
+	ret = Integer.parseInt(value);
       }
     }
     catch (NumberFormatException ex) {
@@ -232,10 +206,26 @@ public class EncodedProperty extends Properties {
     try {
       String value = getProperty(key);
       if(value != null) {
-        ret = Long.parseLong(value);
+	ret = Long.parseLong(value);
       }
     }
     catch (NumberFormatException ex) {
+    }
+    return ret;
+  }
+
+  public EncodedProperty getEncodedProperty(String key) {
+    byte[] encodedVal = getByteArray(key, EMPTY_BYTE_ARRAY);
+
+    if (encodedVal == EMPTY_BYTE_ARRAY) { // ref equality should be OK.
+      return null;
+    }
+
+    EncodedProperty ret = new EncodedProperty();
+    try {
+      ret.decode(getByteArray(key, EMPTY_BYTE_ARRAY));
+    } catch (IOException ex) {
+      log.error("Unexpected IOException while decoding EncodedProperty: " + ex);
     }
     return ret;
   }
@@ -246,7 +236,7 @@ public class EncodedProperty extends Properties {
 
   public void putByteArray(String key, byte[] value) {
     char[] encoded = B64Code.encode(value);
-    setProperty(key,String.valueOf(encoded));
+    setProperty(key, String.valueOf(encoded));
   }
 
   public void putDouble(String key, double value) {
@@ -263,5 +253,78 @@ public class EncodedProperty extends Properties {
 
   public void putLong(String key, long value) {
     setProperty(key, Long.toString(value));
+  }
+
+  public void putEncodedProperty(String key, EncodedProperty value) {
+    try {
+      putByteArray(key, value.encode());
+    } catch (IOException ex) {
+      log.error("Unexpected IOException while encoding EncodedPoperty: " + ex);
+    }
+  }
+
+  /**
+   * <p>Store a list of EncodedProperty objects under this key.  Used
+   * only by the V3 Protocol to store vote blocks.</p>
+   *
+   * <p>Internally, the list is represented by zero or more encoded
+   * EncodedProperty objects, separated by carriage returns, '\n'.</p>
+   */
+  public void putEncodedPropertyList(String key, ArrayList value)
+      throws IOException {
+    int len = value.size();
+
+    StringBuffer encodedValues = new StringBuffer();
+
+    // For each value, encode and append to the string buffer.
+    for (int i = 0; i < len; i++) {
+      EncodedProperty props = (EncodedProperty)value.get(i);
+      encodedValues.append(encodedPropertyToString(props));
+      if (i < len - 1) {
+	encodedValues.append("\n");
+      }
+    }
+
+    setProperty(key, encodedValues.toString());
+  }
+
+  public ArrayList getEncodedPropertyList(String key)
+      throws IOException {
+    String value = getProperty(key);
+    if (value == null) {
+      return null;
+    }
+
+    StringTokenizer tokenizer = new StringTokenizer(value, "\n", false);
+    ArrayList entries = new ArrayList();
+
+    while (tokenizer.hasMoreTokens()) {
+      EncodedProperty p = stringToEncodedProperty(tokenizer.nextToken());
+      if (p != null) {
+	entries.add(p);
+      }
+    }
+
+    return entries;
+  }
+
+
+  // Helper methods
+
+ private EncodedProperty stringToEncodedProperty(String s) throws IOException {
+    if (s == null || s.length() <= 0) {
+      return null;
+    }
+    EncodedProperty prop = new EncodedProperty();
+    prop.decode(B64Code.decode(s.toCharArray()));
+    return prop;
+  }
+
+  private String encodedPropertyToString(EncodedProperty props) throws IOException {
+    if (props == null) {
+      return null;
+    }
+
+    return String.valueOf(B64Code.encode(props.encode()));
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: V1PollFactory.java,v 1.15 2005-02-02 09:42:26 tlipkis Exp $
+ * $Id: V1PollFactory.java,v 1.16 2005-03-18 09:09:16 smorabito Exp $
  */
 
 /*
@@ -33,10 +33,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.poller;
 
 import java.io.*;
-import java.security.*;
 import java.util.*;
 
-import org.lockss.app.*;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
@@ -44,11 +42,7 @@ import org.lockss.protocol.*;
 import org.lockss.protocol.ProtocolException;
 import org.lockss.util.*;
 import org.lockss.hasher.HashService;
-import org.lockss.daemon.status.*;
-import org.lockss.state.*;
 import org.mortbay.util.B64Code;
-import org.lockss.alert.AlertManager;
-import org.lockss.alert.*;
 
 /**
  * <p>Class that creates V1 Poll objects</p>
@@ -58,17 +52,17 @@ import org.lockss.alert.*;
 
 public class V1PollFactory implements PollFactory {
   static final String PARAM_NAMEPOLL_DEADLINE = Configuration.PREFIX +
-      "poll.namepoll.deadline";
+    "poll.namepoll.deadline";
   static final String PARAM_CONTENTPOLL_MIN = Configuration.PREFIX +
-      "poll.contentpoll.min";
+    "poll.contentpoll.min";
   static final String PARAM_CONTENTPOLL_MAX = Configuration.PREFIX +
-      "poll.contentpoll.max";
+    "poll.contentpoll.max";
 
   static final String PARAM_QUORUM = Configuration.PREFIX + "poll.quorum";
   static final String PARAM_DURATION_MULTIPLIER_MIN = Configuration.PREFIX +
-      "poll.duration.multiplier.min";
+    "poll.duration.multiplier.min";
   static final String PARAM_DURATION_MULTIPLIER_MAX = Configuration.PREFIX +
-      "poll.duration.multiplier.max";
+    "poll.duration.multiplier.max";
 
   // tk - temporary until real name hash estimates
   static final String PARAM_NAME_HASH_ESTIMATE =
@@ -128,19 +122,19 @@ public class V1PollFactory implements PollFactory {
   private void sendV1PollRequest(Poll poll,
 				 PollManager pm,
 				 IdentityManager im)
-    throws IOException {
+      throws IOException {
     PollSpec pollspec = poll.getPollSpec();
     CachedUrlSet cus = pollspec.getCachedUrlSet();
     int opcode = -1;
     switch (pollspec.getPollType()) {
     case Poll.NAME_POLL:
-      opcode = LcapMessage.NAME_POLL_REQ;
+      opcode = V1LcapMessage.NAME_POLL_REQ;
       break;
     case Poll.CONTENT_POLL:
-      opcode = LcapMessage.CONTENT_POLL_REQ;
+      opcode = V1LcapMessage.CONTENT_POLL_REQ;
       break;
     case Poll.VERIFY_POLL:
-      opcode = LcapMessage.VERIFY_POLL_REQ;
+      opcode = V1LcapMessage.VERIFY_POLL_REQ;
       break;
     }
     theLog.debug("Constructing request for poll: " + pollspec);
@@ -152,14 +146,14 @@ public class V1PollFactory implements PollFactory {
     }
     byte[] challenge = ((V1Poll)poll).getChallenge();
     byte[] verifier = pm.makeVerifier(duration);
-    LcapMessage msg =
-      LcapMessage.makeRequestMsg(pollspec,
-                                 null,
-                                 challenge,
-                                 verifier,
-                                 opcode,
-                                 duration,
-                                 im.getLocalPeerIdentity(Poll.V1_POLL));
+    V1LcapMessage msg =
+      V1LcapMessage.makeRequestMsg(pollspec,
+				   null,
+				   challenge,
+				   verifier,
+				   opcode,
+				   duration,
+				   im.getLocalPeerIdentity(Poll.V1_POLL));
     // before we actually send the message make sure that another poll
     // isn't going to conflict with this and create a split poll
     if(checkForConflicts(cus, pm, ((BasePoll)poll)) == null) {
@@ -168,8 +162,8 @@ public class V1PollFactory implements PollFactory {
     }
     else {
       theLog.debug("not sending request for polltype: "
-                   + LcapMessage.POLL_OPCODES[opcode] +
-                   " for spec " + pollspec + "- conflicts with existing poll.");
+		   + V1LcapMessage.POLL_OPCODES[opcode] +
+		   " for spec " + pollspec + "- conflicts with existing poll.");
     }
   }
 
@@ -203,27 +197,27 @@ public class V1PollFactory implements PollFactory {
       throw new ProtocolException("V1Pollfactory: bad duration " + duration);
     }
     switch (pollspec.getPollType()) {
-      case Poll.CONTENT_POLL:
-	theLog.debug2("Creating content poll for " + pollspec);
-	ret_poll = new V1ContentPoll(pollspec, pm, orig,
-				     challenge, duration,
-				     hashAlg);
-	break;
-      case Poll.NAME_POLL:
-	theLog.debug2("Creating name poll for " + pollspec);
-	ret_poll = new V1NamePoll(pollspec, pm, orig,
-				     challenge, duration,
-				     hashAlg);
-	break;
-      case Poll.VERIFY_POLL:
-	theLog.debug2("Creating verify poll for " + pollspec);
-	ret_poll = new V1VerifyPoll(pollspec, pm, orig,
-				     challenge, duration,
-				     hashAlg, verifier);
-	break;
-      default:
-        throw new ProtocolException("Unknown poll type:" +
-				    pollspec.getPollType());
+    case Poll.CONTENT_POLL:
+      theLog.debug2("Creating content poll for " + pollspec);
+      ret_poll = new V1ContentPoll(pollspec, pm, orig,
+				   challenge, duration,
+				   hashAlg);
+      break;
+    case Poll.NAME_POLL:
+      theLog.debug2("Creating name poll for " + pollspec);
+      ret_poll = new V1NamePoll(pollspec, pm, orig,
+				challenge, duration,
+				hashAlg);
+      break;
+    case Poll.VERIFY_POLL:
+      theLog.debug2("Creating verify poll for " + pollspec);
+      ret_poll = new V1VerifyPoll(pollspec, pm, orig,
+				  challenge, duration,
+				  hashAlg, verifier);
+      break;
+    default:
+      throw new ProtocolException("Unknown poll type:" +
+				  pollspec.getPollType());
     }
     return ret_poll;
   }
@@ -241,30 +235,30 @@ public class V1PollFactory implements PollFactory {
    * @param orig the PeerIdentity that called the poll
    * @return true if it is OK to call the poll
    */
-   public boolean shouldPollBeCreated(PollSpec pollspec,
-				      PollManager pm,
-				      IdentityManager im,
-				      byte[] challenge,
-				      PeerIdentity orig) {
-     if (pollspec.getPollType() == Poll.VERIFY_POLL) {
-       // if we didn't call the poll and we don't have the verifier ignore this
-       if ((pm.getSecret(challenge)== null) &&
-	   !im.isLocalIdentity(orig)) {
-	 String ver = String.valueOf(B64Code.encode(challenge));
-	 theLog.debug("ignoring verify request from " + orig
-		      + " on unknown verifier " + ver);
-	 return false;
-       }
-       theLog.debug2("OK to call verify poll");
-       return true;
-     }
-     CachedUrlSet cus = checkForConflicts(pollspec.getCachedUrlSet(), pm);
-     if (cus != null) {
-       theLog.debug("Poll on " + pollspec + " has conflicts with " + cus);
-       return false;
-     }
-     return true;
-   }
+  public boolean shouldPollBeCreated(PollSpec pollspec,
+				     PollManager pm,
+				     IdentityManager im,
+				     byte[] challenge,
+				     PeerIdentity orig) {
+    if (pollspec.getPollType() == Poll.VERIFY_POLL) {
+      // if we didn't call the poll and we don't have the verifier ignore this
+      if ((pm.getSecret(challenge)== null) &&
+	  !im.isLocalIdentity(orig)) {
+	String ver = String.valueOf(B64Code.encode(challenge));
+	theLog.debug("ignoring verify request from " + orig
+		     + " on unknown verifier " + ver);
+	return false;
+      }
+      theLog.debug2("OK to call verify poll");
+      return true;
+    }
+    CachedUrlSet cus = checkForConflicts(pollspec.getCachedUrlSet(), pm);
+    if (cus != null) {
+      theLog.debug("Poll on " + pollspec + " has conflicts with " + cus);
+      return false;
+    }
+    return true;
+  }
 
 
   /**
@@ -274,21 +268,21 @@ public class V1PollFactory implements PollFactory {
    * @param pm the PollManager that called this method.
    * @return one of the activity codes defined by ActivityRegulator
    */
-   public int getPollActivity(PollSpec pollspec,
-			      PollManager pm) {
-     int activity = ActivityRegulator.NO_ACTIVITY;
-     int pollType = pollspec.getPollType();
-     if (pollType == Poll.CONTENT_POLL) {
-       if (pollspec.getCachedUrlSet().getSpec().isSingleNode()) {
-	 activity = ActivityRegulator.SINGLE_NODE_CONTENT_POLL;
-       } else {
-	 activity = ActivityRegulator.STANDARD_CONTENT_POLL;
-       }
-     } else if (pollType == Poll.NAME_POLL) {
-       activity = ActivityRegulator.STANDARD_NAME_POLL;
-     }
-     return activity;
-   }
+  public int getPollActivity(PollSpec pollspec,
+			     PollManager pm) {
+    int activity = ActivityRegulator.NO_ACTIVITY;
+    int pollType = pollspec.getPollType();
+    if (pollType == Poll.CONTENT_POLL) {
+      if (pollspec.getCachedUrlSet().getSpec().isSingleNode()) {
+	activity = ActivityRegulator.SINGLE_NODE_CONTENT_POLL;
+      } else {
+	activity = ActivityRegulator.STANDARD_CONTENT_POLL;
+      }
+    } else if (pollType == Poll.NAME_POLL) {
+      activity = ActivityRegulator.STANDARD_NAME_POLL;
+    }
+    return activity;
+  }
 
   /**
    * check for conflicts between the poll defined by the Message and any
@@ -318,23 +312,23 @@ public class V1PollFactory implements PollFactory {
 	theLog.debug3("compare " + cus + " with " + ps.getCachedUrlSet());
       }
       if (ps.getPollType() != Poll.VERIFY_POLL) {
-        CachedUrlSet pcus = ps.getCachedUrlSet();
-        int rel_pos = cus.cusCompare(pcus);
-        if (rel_pos != CachedUrlSet.SAME_LEVEL_NO_OVERLAP &&
-            rel_pos != CachedUrlSet.NO_RELATION) {
+	CachedUrlSet pcus = ps.getCachedUrlSet();
+	int rel_pos = cus.cusCompare(pcus);
+	if (rel_pos != CachedUrlSet.SAME_LEVEL_NO_OVERLAP &&
+	    rel_pos != CachedUrlSet.NO_RELATION) {
 	  if (theLog.isDebug2()) {
 	    theLog.debug2("New poll on " + cus + " conflicts with " + pcus);
 	  }
 	  return pcus;
-//           // allow name polls to overlap
-//           if (ps.getPollType() != Poll.NAME_POLL ||
-//               rel_pos != CachedUrlSet.SAME_LEVEL_OVERLAP) {
-// 	    if (theLog.isDebug2()) {
-// 	      theLog.debug2("New poll on " + cus + " conflicts with " + pcus);
-// 	    }
-//             return pcus;
-//           }
-        }
+	  //           // allow name polls to overlap
+	  //           if (ps.getPollType() != Poll.NAME_POLL ||
+	  //               rel_pos != CachedUrlSet.SAME_LEVEL_OVERLAP) {
+	  //	    if (theLog.isDebug2()) {
+	  //	      theLog.debug2("New poll on " + cus + " conflicts with " + pcus);
+	  //	    }
+	  //             return pcus;
+	  //           }
+	}
       }
     }
     theLog.debug2("New poll on " + cus + " no conflicts");
@@ -411,7 +405,7 @@ public class V1PollFactory implements PollFactory {
   }
 
   public boolean canPollBeScheduled(long pollTime, long hashTime,
-				  PollManager pm) {
+				    PollManager pm) {
     theLog.debug("Try to schedule " + pollTime + " poll " + hashTime + " poll");
     if (hashTime > pollTime) {
       theLog.warning("Total hash time " +
@@ -425,7 +419,7 @@ public class V1PollFactory implements PollFactory {
   }
 
   boolean canHashBeScheduledBefore(long duration, Deadline when,
-					   PollManager pm) {
+				   PollManager pm) {
     boolean ret = pm.getHashService().canHashBeScheduledBefore(duration, when);
     theLog.debug("canHashBeScheduledBefore(" + duration + "," + when + ")" +
 		 " returns " + ret);
@@ -442,11 +436,11 @@ public class V1PollFactory implements PollFactory {
     catch (SystemMetrics.NoHashEstimateAvailableException e) {
       // if can't get my rate, use slowest rate to prevent adjustment
       theLog.warning("No hash estimate available, " +
-                     "not adjusting poll for slow machines");
+		     "not adjusting poll for slow machines");
       my_rate = slow_rate;
     }
     theLog.debug3("My hash speed is " + my_rate
-                  + ". Slow speed is " + slow_rate);
+		  + ". Slow speed is " + slow_rate);
 
 
     if (my_rate > slow_rate) {
@@ -466,7 +460,7 @@ public class V1PollFactory implements PollFactory {
 			Configuration oldConfig,
 			Configuration.Differences changedKeys) {
     long aveDuration = newConfig.getTimeInterval(PARAM_NAMEPOLL_DEADLINE,
-                                                  DEFAULT_NAMEPOLL_DEADLINE);
+						 DEFAULT_NAMEPOLL_DEADLINE);
     m_minNamePollDuration = aveDuration - aveDuration / 4;
     m_maxNamePollDuration = aveDuration + aveDuration / 4;
 
@@ -476,18 +470,18 @@ public class V1PollFactory implements PollFactory {
 
 
     m_minContentPollDuration = newConfig.getTimeInterval(PARAM_CONTENTPOLL_MIN,
-        DEFAULT_CONTENTPOLL_MIN);
+							 DEFAULT_CONTENTPOLL_MIN);
     m_maxContentPollDuration = newConfig.getTimeInterval(PARAM_CONTENTPOLL_MAX,
-        DEFAULT_CONTENTPOLL_MAX);
+							 DEFAULT_CONTENTPOLL_MAX);
 
-    m_quorum = newConfig.getIntParam(PARAM_QUORUM, DEFAULT_QUORUM);
+    m_quorum = Configuration.getIntParam(PARAM_QUORUM, DEFAULT_QUORUM);
 
     m_minDurationMultiplier =
-      newConfig.getIntParam(PARAM_DURATION_MULTIPLIER_MIN,
-			    DEFAULT_DURATION_MULTIPLIER_MIN);
+      Configuration.getIntParam(PARAM_DURATION_MULTIPLIER_MIN,
+				DEFAULT_DURATION_MULTIPLIER_MIN);
     m_maxDurationMultiplier =
-      newConfig.getIntParam(PARAM_DURATION_MULTIPLIER_MAX,
-			    DEFAULT_DURATION_MULTIPLIER_MAX);
+      Configuration.getIntParam(PARAM_DURATION_MULTIPLIER_MAX,
+				DEFAULT_DURATION_MULTIPLIER_MAX);
   }
 
   public long getMaxPollDuration(int pollType) {

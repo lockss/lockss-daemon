@@ -1,5 +1,5 @@
 /*
-* $Id: BasePoll.java,v 1.11 2004-12-07 05:17:52 tlipkis Exp $
+* $Id: BasePoll.java,v 1.12 2005-03-18 09:09:15 smorabito Exp $
  */
 
 /*
@@ -66,7 +66,7 @@ public abstract class BasePoll implements Poll {
   static final int PS_WAIT_TALLY = 3;
   static final int PS_COMPLETE = 4;
 
-  static Logger log=Logger.getLogger("Poll");
+  static Logger log = Logger.getLogger("Poll");
 
   LcapMessage m_msg;      // The message which triggered the poll
   CachedUrlSet m_cus;     // the cached url set from the archival unit

@@ -1,5 +1,5 @@
 /*
-* $Id: Vote.java,v 1.16 2005-02-02 09:42:26 tlipkis Exp $
+* $Id: Vote.java,v 1.17 2005-03-18 09:09:16 smorabito Exp $
  */
 
 /*
@@ -70,7 +70,7 @@ public class Vote {
 
   Vote(LcapMessage msg, boolean agree) {
     this(msg.getChallenge(), msg.getVerifier(), msg.getHashed(),
-         msg.getOriginatorID(), agree);
+         msg.getOriginatorId(), agree);
   }
 
   public static void setIdentityManager(IdentityManager im) {

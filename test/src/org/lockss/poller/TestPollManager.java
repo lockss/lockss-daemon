@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.75 2005-02-02 09:42:21 tlipkis Exp $
+ * $Id: TestPollManager.java,v 1.76 2005-03-18 09:09:20 smorabito Exp $
  */
 
 /*
@@ -33,7 +33,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.poller;
 
 import java.io.*;
-import java.net.UnknownHostException;
 import java.security.*;
 import java.util.*;
 import org.lockss.daemon.*;
@@ -47,24 +46,24 @@ import org.lockss.repository.*;
 public class TestPollManager extends LockssTestCase {
 
   private static String[] rooturls = {"http://www.test.org",
-    "http://www.test1.org",
-    "http://www.test2.org"};
+				      "http://www.test1.org",
+				      "http://www.test2.org"};
 
   private static String urlstr = "http://www.test3.org";
   private static String lwrbnd = "test1.doc";
   private static String uprbnd = "test3.doc";
   private static long testduration = Constants.HOUR;
 
-  private static ArrayList testentries = (ArrayList)ListUtil.list(
-      new PollTally.NameListEntry(true,"test1.doc"),
-      new PollTally.NameListEntry(true,"test2.doc"),
-      new PollTally.NameListEntry(true,"test3.doc"));
+  private static ArrayList testentries =
+    (ArrayList)ListUtil.list(new PollTally.NameListEntry(true,"test1.doc"),
+			     new PollTally.NameListEntry(true,"test2.doc"),
+			     new PollTally.NameListEntry(true,"test3.doc"));
 
   protected static ArchivalUnit testau;
   private MockLockssDaemon theDaemon;
 
   protected PeerIdentity testID;
-  protected LcapMessage[] testmsg;
+  protected V1LcapMessage[] testmsg;
   protected LocalMockPollManager pollmanager;
   protected IdentityManager idmanager;
 
@@ -120,9 +119,9 @@ public class TestPollManager extends LockssTestCase {
     pm.startService();
     PollFactory pf = pm.getPollFactory(1);
     int[] opcode = {
-      LcapMessage.NAME_POLL_REQ,
-      LcapMessage.CONTENT_POLL_REQ,
-      LcapMessage.VERIFY_POLL_REQ,
+      V1LcapMessage.NAME_POLL_REQ,
+      V1LcapMessage.CONTENT_POLL_REQ,
+      V1LcapMessage.VERIFY_POLL_REQ,
     };
     // pre-checks
     assertNotNull(theDaemon.getActivityRegulator(testau));
@@ -131,9 +130,9 @@ public class TestPollManager extends LockssTestCase {
       pm.msgSent = null;
 
       assertNotNull("Calling this poll should succeed",
-		 pm.callPoll(new PollSpec(testmsg[i])));
+		    pm.callPoll(new PollSpec(testmsg[i])));
       assertNotNull(pm.msgSent);
-      assertTrue(pm.msgSent instanceof LcapMessage);
+      assertTrue(pm.msgSent instanceof V1LcapMessage);
       assertEquals(pm.msgSent.getOpcode(), opcode[i]);
     }
   }
@@ -146,7 +145,7 @@ public class TestPollManager extends LockssTestCase {
       try {
 	BasePoll p = pf.createPoll(ps[i], pollmanager,
 				   idmanager,
-				   testmsg[i].getOriginatorID(),
+				   testmsg[i].getOriginatorId(),
 				   testmsg[i].getChallenge(),
 				   testmsg[i].getVerifier(),
 				   testmsg[i].getDuration(),
@@ -154,7 +153,7 @@ public class TestPollManager extends LockssTestCase {
 	assertTrue(p instanceof V1Poll);
 	// assertTrue(p.isMyPoll());
 	assertTrue(p.getPollSpec().equals(ps[i]));
-	assertTrue(p.getCallerID() == testmsg[i].getOriginatorID());
+	assertTrue(p.getCallerID() == testmsg[i].getOriginatorId());
 	p.setMessage(testmsg[i]);
 	assertTrue(p.getMessage() == testmsg[i]);
       } catch (ProtocolException pe) {
@@ -171,7 +170,7 @@ public class TestPollManager extends LockssTestCase {
     assertTrue(ppf instanceof V1PollFactory);
     V1PollFactory pf = (V1PollFactory) ppf;
 
-    LcapMessage[] sameroot = new LcapMessage[3];
+    V1LcapMessage[] sameroot = new V1LcapMessage[3];
     PollSpec[] spec = new PollSpec[3];
     int[] pollType = {
       Poll.NAME_POLL,
@@ -179,64 +178,64 @@ public class TestPollManager extends LockssTestCase {
       Poll.VERIFY_POLL,
     };
 
-   for(int i= 0; i<3; i++) {
-     spec[i] = new MockPollSpec(testau, urlstr, lwrbnd, uprbnd, pollType[i]);
-     sameroot[i] =
-       LcapMessage.makeRequestMsg(spec[i],
-				  testentries,
-				  pollmanager.generateRandomBytes(),
-				  pollmanager.generateRandomBytes(),
-				  LcapMessage.NAME_POLL_REQ + (i * 2),
-				  testduration,
-				  testID);
-   }
+    for(int i= 0; i<3; i++) {
+      spec[i] = new MockPollSpec(testau, urlstr, lwrbnd, uprbnd, pollType[i]);
+      sameroot[i] =
+	V1LcapMessage.makeRequestMsg(spec[i],
+				     testentries,
+				     pollmanager.generateRandomBytes(),
+				     pollmanager.generateRandomBytes(),
+				     V1LcapMessage.NAME_POLL_REQ + (i * 2),
+				     testduration,
+				     testID);
+    }
 
-   // check content poll conflicts
-   BasePoll c1 = pollmanager.makePoll(sameroot[1]);
-   // differnt content poll should be ok
+    // check content poll conflicts
+    BasePoll c1 = pollmanager.makePoll(sameroot[1]);
+    // differnt content poll should be ok
 
-   LcapMessage msg;
-   msg = testmsg[1];
-   assertTrue("different content poll s/b ok",
-	      pf.shouldPollBeCreated(new PollSpec(msg),
-				     pollmanager, idmanager,
-				     msg.getChallenge(),
-				     msg.getOriginatorID()));
-
-   // same content poll same range s/b a conflict
-   msg = sameroot[1];
-   assertFalse("same content poll root s/b conflict",
+    V1LcapMessage msg;
+    msg = testmsg[1];
+    assertTrue("different content poll s/b ok",
 	       pf.shouldPollBeCreated(new PollSpec(msg),
-				     pollmanager, idmanager,
-				     msg.getChallenge(),
-				     msg.getOriginatorID()));
+				      pollmanager, idmanager,
+				      msg.getChallenge(),
+				      msg.getOriginatorId()));
 
-   // different name poll should be ok
-   msg = testmsg[0];
-   assertTrue("different name poll s/b ok",
-	      pf.shouldPollBeCreated(new PollSpec(msg),
-				     pollmanager, idmanager,
-				     msg.getChallenge(),
-				     msg.getOriginatorID()));
+    // same content poll same range s/b a conflict
+    msg = sameroot[1];
+    assertFalse("same content poll root s/b conflict",
+		pf.shouldPollBeCreated(new PollSpec(msg),
+				       pollmanager, idmanager,
+				       msg.getChallenge(),
+				       msg.getOriginatorId()));
 
-   // same name poll s/b conflict
-   msg = sameroot[0];
-   assertFalse("same name poll root s/b conflict",
+    // different name poll should be ok
+    msg = testmsg[0];
+    assertTrue("different name poll s/b ok",
 	       pf.shouldPollBeCreated(new PollSpec(msg),
-				     pollmanager, idmanager,
-				     msg.getChallenge(),
-				     msg.getOriginatorID()));
+				      pollmanager, idmanager,
+				      msg.getChallenge(),
+				      msg.getOriginatorId()));
 
-   // verify poll should be ok
-   msg = testmsg[2];
-   assertTrue("verify poll s/b ok",
-	      pf.shouldPollBeCreated(new PollSpec(msg),
-				     pollmanager, idmanager,
-				     msg.getChallenge(),
-				     msg.getOriginatorID()));
+    // same name poll s/b conflict
+    msg = sameroot[0];
+    assertFalse("same name poll root s/b conflict",
+		pf.shouldPollBeCreated(new PollSpec(msg),
+				       pollmanager, idmanager,
+				       msg.getChallenge(),
+				       msg.getOriginatorId()));
 
-   // remove the poll
-   pollmanager.removePoll(c1.m_key);
+    // verify poll should be ok
+    msg = testmsg[2];
+    assertTrue("verify poll s/b ok",
+	       pf.shouldPollBeCreated(new PollSpec(msg),
+				      pollmanager, idmanager,
+				      msg.getChallenge(),
+				      msg.getOriginatorId()));
+
+    // remove the poll
+    pollmanager.removePoll(c1.m_key);
   }
 
   public void testGetPollActivity() {
@@ -329,27 +328,27 @@ public class TestPollManager extends LockssTestCase {
     MockPollSpec spec =
       new MockPollSpec(testau, urlstr, lwrbnd, uprbnd, Poll.NAME_POLL);
     spec.setPluginVersion(bogus);
-    LcapMessage msg1 =
-      LcapMessage.makeRequestMsg(spec,
-				 testentries,
-				 pollmanager.generateRandomBytes(),
-				 pollmanager.generateRandomBytes(),
-				 LcapMessage.NAME_POLL_REQ,
-				 testduration,
-				 testID);
+    V1LcapMessage msg1 =
+      V1LcapMessage.makeRequestMsg(spec,
+				   testentries,
+				   pollmanager.generateRandomBytes(),
+				   pollmanager.generateRandomBytes(),
+				   V1LcapMessage.NAME_POLL_REQ,
+				   testduration,
+				   testID);
 
     BasePoll p1 = pollmanager.makePoll(msg1);
     assertNull("Shouldn't create poll with plugin version mismatch", p1);
-
+    
     // make a content poll witha bogus plugin version
-    LcapMessage msg2 =
-      LcapMessage.makeRequestMsg(spec,
-				 testentries,
-				 pollmanager.generateRandomBytes(),
-				 pollmanager.generateRandomBytes(),
-				 LcapMessage.CONTENT_POLL_REQ,
-				 testduration,
-				 testID);
+    V1LcapMessage msg2 =
+      V1LcapMessage.makeRequestMsg(spec,
+				   testentries,
+				   pollmanager.generateRandomBytes(),
+				   pollmanager.generateRandomBytes(),
+				   V1LcapMessage.CONTENT_POLL_REQ,
+				   testduration,
+				   testID);
 
     BasePoll p2 = pollmanager.makePoll(msg2);
     assertNull("Shouldn't create poll with plugin version mismatch", p2);
@@ -426,7 +425,7 @@ public class TestPollManager extends LockssTestCase {
     pollmanager.addPoll(p1);
     // give it a pointless lock to avoid a null pointer
     ActivityRegulator.Lock lock = theDaemon.getActivityRegulator(testau).
-		      getAuActivityLock(-1, 123);
+      getAuActivityLock(-1, 123);
 
     // check our suspend
     pollmanager.suspendPoll(p1.m_key);
@@ -488,7 +487,7 @@ public class TestPollManager extends LockssTestCase {
     void setPollFactory(int i, PollFactory fact) {
       pf[i] = fact;
     }
-    void sendMessage(LcapMessage msg, ArchivalUnit au) throws IOException {
+    void sendMessage(V1LcapMessage msg, ArchivalUnit au) throws IOException {
       msgSent = msg;
     }
   }
@@ -572,7 +571,7 @@ public class TestPollManager extends LockssTestCase {
   }
 
   private void initTestMsg() throws Exception {
-    testmsg = new LcapMessage[3];
+    testmsg = new V1LcapMessage[3];
     int[] pollType = {
       Poll.NAME_POLL,
       Poll.CONTENT_POLL,
@@ -583,17 +582,17 @@ public class TestPollManager extends LockssTestCase {
       PollSpec spec = new MockPollSpec(testau, rooturls[i], lwrbnd, uprbnd,
 				       pollType[i]);
       testmsg[i] =
-	LcapMessage.makeRequestMsg(spec,
-				   testentries,
-				   pollmanager.makeVerifier(testduration),
-				   pollmanager.makeVerifier(testduration),
-				   LcapMessage.NAME_POLL_REQ + (i * 2),
-				   testduration,
-				   testID);
+	V1LcapMessage.makeRequestMsg(spec,
+				     testentries,
+				     pollmanager.makeVerifier(testduration),
+				     pollmanager.makeVerifier(testduration),
+				     V1LcapMessage.NAME_POLL_REQ + (i * 2),
+				     testduration,
+				     testID);
     }
   }
 
-  private CachedUrlSet makeCachedUrlSet(LcapMessage msg) {
+  private CachedUrlSet makeCachedUrlSet(V1LcapMessage msg) {
 
     try {
       PollSpec ps = new PollSpec(msg);

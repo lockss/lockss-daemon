@@ -1,5 +1,5 @@
 /*
- * $Id: PollSpec.java,v 1.27 2004-09-27 22:39:10 smorabito Exp $
+ * $Id: PollSpec.java,v 1.28 2005-03-18 09:09:16 smorabito Exp $
  */
 
 /*
@@ -123,10 +123,10 @@ public class PollSpec {
   }
 
   /**
-   * Construct a PollSpec from a LcapMessage
+   * Construct a PollSpec from a V1 LcapMessage
    * @param msg the LcapMessage which defines the range of interest
    */
-  public PollSpec(LcapMessage msg) {
+  public PollSpec(V1LcapMessage msg) {
     auId = msg.getArchivalId();
     pluginVersion = msg.getPluginVersion();
     url = msg.getTargetUrl();
@@ -143,6 +143,15 @@ public class PollSpec {
       pollType = -1;
     }
     cus = getPluginManager().findCachedUrlSet(this);
+  }
+
+  public PollSpec(V3LcapMessage msg) {
+    auId = msg.getArchivalId();
+    pluginVersion = msg.getPluginVersion();
+    url = msg.getTargetUrl();
+    pollVersion = msg.getPollVersion();
+    pollType = -1; // Not used by V3 Polls
+    cus = getPluginManager().findCachedUrlSet(this);    
   }
 
   /**

@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.130 2005-02-21 03:04:01 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.131 2005-03-18 09:09:15 smorabito Exp $
  */
 
 /*
@@ -1053,7 +1053,7 @@ public class PluginManager
     CachedUrlSet cus;
     if (AuUrl.isAuUrl(url)) {
       cus = au.getAuCachedUrlSet();
-    } else if ((spec.getLwrBound()!=null) &&
+    } else if ((spec.getLwrBound() != null) &&
 	       (spec.getLwrBound().equals(PollSpec.SINGLE_NODE_LWRBOUND))) {
       cus = au.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url));
     } else {

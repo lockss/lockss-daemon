@@ -1,5 +1,5 @@
 /*
-* $Id: V1Poll.java,v 1.23 2004-12-08 00:52:33 tlipkis Exp $
+ * $Id: V1Poll.java,v 1.24 2005-03-18 09:09:16 smorabito Exp $
  */
 
 /*
@@ -53,13 +53,13 @@ import org.mortbay.util.B64Code;
 
 public abstract class V1Poll extends BasePoll {
   static final String PARAM_AGREE_VERIFY = Configuration.PREFIX +
-      "poll.agreeVerify";
+    "poll.agreeVerify";
   static final String PARAM_DISAGREE_VERIFY = Configuration.PREFIX +
-      "poll.disagreeVerify";
+    "poll.disagreeVerify";
   static final String PARAM_VOTE_MARGIN = Configuration.PREFIX +
-      "poll.voteMargin";
+    "poll.voteMargin";
   static final String PARAM_TRUSTED_WEIGHT = Configuration.PREFIX +
-      "poll.trustedWeight";
+    "poll.trustedWeight";
 
   static final int DEFAULT_VOTE_MARGIN = 75;
   static final int DEFAULT_TRUSTED_WEIGHT = 350;
@@ -100,7 +100,7 @@ public abstract class V1Poll extends BasePoll {
     m_hashTime = m_cus.estimatedHashDuration();
     if(pollspec.getPollType() != Poll.VERIFY_POLL) {
       m_hashDeadline =
-          Deadline.at(m_deadline.getExpirationTime() - Constants.MINUTE);
+	Deadline.at(m_deadline.getExpirationTime() - Constants.MINUTE);
     }
 
     m_challenge = challenge;
@@ -155,9 +155,9 @@ public abstract class V1Poll extends BasePoll {
   void getConfigValues() {
     /* initialize with our parameters */
     m_agreeVer = ((double)Configuration.getIntParam(PARAM_AGREE_VERIFY,
-        DEFAULT_AGREE_VERIFY)) / 100;
+						    DEFAULT_AGREE_VERIFY)) / 100;
     m_disagreeVer = ((double)Configuration.getIntParam(PARAM_DISAGREE_VERIFY,
-        DEFAULT_DISAGREE_VERIFY)) / 100;
+						       DEFAULT_DISAGREE_VERIFY)) / 100;
 
   }
 
@@ -171,8 +171,8 @@ public abstract class V1Poll extends BasePoll {
    * @return true if hash successfully completed.
    */
   abstract boolean scheduleHash(MessageDigest hasher, Deadline timer,
-                                Object key,
-                                HashService.Callback callback);
+				Object key,
+				HashService.Callback callback);
   /**
    * schedule a vote by a poll.  we've already completed the hash so we're
    * only interested in how long we have remaining.
@@ -197,9 +197,9 @@ public abstract class V1Poll extends BasePoll {
     boolean verify = false;
     byte[] hashed = vote.getHash();
     log.debug3("Checking "+
-              String.valueOf(B64Code.encode(hashResult))+
-              " against "+
-              vote.getHashString());
+	       String.valueOf(B64Code.encode(hashResult))+
+	       " against "+
+	       vote.getHashString());
 
     boolean agree = vote.setAgreeWithHash(hashResult);
     PeerIdentity voterID = vote.getVoterIdentity();
@@ -224,23 +224,23 @@ public abstract class V1Poll extends BasePoll {
     double verify = calcVerifyProb(vote, isAgreeVote);
     try {
       if(ProbabilisticChoice.choose(verify)) {
-        long remainingTime = m_deadline.getRemainingTime();
-        long now = TimeBase.nowMs();
-        long minTime = now + (remainingTime/2) - (remainingTime/4);
-        long maxTime = now + (remainingTime/2) + (remainingTime/4);
-        long duration = Deadline.atRandomRange(minTime, maxTime).getRemainingTime();
+	long remainingTime = m_deadline.getRemainingTime();
+	long now = TimeBase.nowMs();
+	long minTime = now + (remainingTime/2) - (remainingTime/4);
+	long maxTime = now + (remainingTime/2) + (remainingTime/4);
+	long duration = Deadline.atRandomRange(minTime, maxTime).getRemainingTime();
 	log.debug("Calling a verify poll...");
 	byte[] challenge = vote.getVerifier(); // challenge is the old verifier
 	byte[] verifier = m_pollmanager.makeVerifier(duration);
 	PollSpec pollspec = new PollSpec(m_pollspec, Poll.VERIFY_POLL);
-	LcapMessage reqmsg =
-	  LcapMessage.makeRequestMsg(pollspec,
-				     null,
-				     challenge,
-				     verifier,
-				     LcapMessage.VERIFY_POLL_REQ,
-				     duration,
-				     idMgr.getLocalPeerIdentity(Poll.V1_POLL));
+	V1LcapMessage reqmsg =
+	  V1LcapMessage.makeRequestMsg(pollspec,
+				       null,
+				       challenge,
+				       verifier,
+				       V1LcapMessage.VERIFY_POLL_REQ,
+				       duration,
+				       idMgr.getLocalPeerIdentity(Poll.V1_POLL));
 
 	PeerIdentity originatorID = vote.getVoterIdentity();
 	log.debug2("sending our verification request to " +
@@ -250,7 +250,7 @@ public abstract class V1Poll extends BasePoll {
 				    originatorID);
 	// we won't be getting this message so make sure we create our own poll
 	BasePoll poll = m_pollmanager.makePoll(reqmsg);
-        callVerifyPoll = true;
+	callVerifyPoll = true;
       }
     }
     catch (IOException ex) {
@@ -275,7 +275,7 @@ public abstract class V1Poll extends BasePoll {
     double verify;
 
     double weight = ((double)rep) / maxRep;
- 
+
     if (isAgreeVote) {
       verify = (1.0 - weight) * m_agreeVer;
     } else {
@@ -293,12 +293,12 @@ public abstract class V1Poll extends BasePoll {
       log.error("no vote to cast for " + this);
       return;
     }
-    LcapMessage msg;
+    V1LcapMessage msg;
     PeerIdentity local_id = idMgr.getLocalPeerIdentity(Poll.V1_POLL);
     long remainingTime = m_deadline.getRemainingTime();
     try {
-      msg = LcapMessage.makeReplyMsg(m_msg, m_hash, m_verifier, null,
-                                     m_replyOpcode, remainingTime, local_id);
+      msg = V1LcapMessage.makeReplyMsg(m_msg, m_hash, m_verifier, null,
+				       m_replyOpcode, remainingTime, local_id);
       log.debug("vote:" + msg.toString());
       m_pollmanager.sendMessage(msg, m_cus.getArchivalUnit());
     }
@@ -345,14 +345,14 @@ public abstract class V1Poll extends BasePoll {
       log.debug3("Trying to schedule our hash at " + m_voteTime);
       scheduled = scheduleHash(hasher, m_voteTime, m_msg, new PollHashCallback());
       if (!scheduled) {
-        if (curTime < lastHashTime) {
-          maxTime += curTime - minTime;
-          minTime = curTime;
-        }
-        else {
-          log.debug("Unable to schedule our hash before " + lastHashTime);
-          break;
-        }
+	if (curTime < lastHashTime) {
+	  maxTime += curTime - minTime;
+	  minTime = curTime;
+	}
+	else {
+	  log.debug("Unable to schedule our hash before " + lastHashTime);
+	  break;
+	}
       }
     }
     return scheduled;
@@ -400,7 +400,7 @@ public abstract class V1Poll extends BasePoll {
    * @return boolean true if the poll should run, false otherwise
    */
   boolean shouldCheckVote(LcapMessage msg) {
-    PeerIdentity voterID = msg.getOriginatorID();
+    PeerIdentity voterID = msg.getOriginatorId();
 
     // make sure we haven't already voted
     if(m_tally.hasVoted(voterID)) {
@@ -420,9 +420,9 @@ public abstract class V1Poll extends BasePoll {
 
     if(!m_tally.canResolve()) {
       log.info(m_key +
-               " unable to resolve split poll, ignoring additional votes.");
+	       " unable to resolve split poll, ignoring additional votes.");
     }
-      // are we too busy
+    // are we too busy
     if(tooManyPending())  {
       log.info(m_key + " too busy to count " + m_pendingVotes + " votes");
       return false;
@@ -472,7 +472,7 @@ public abstract class V1Poll extends BasePoll {
     hasher.update(challenge, 0, challenge.length);
     hasher.update(verifier, 0, verifier.length);
     log.debug3("hashing: C[" +String.valueOf(B64Code.encode(challenge)) + "] "
-              +"V[" + String.valueOf(B64Code.encode(verifier)) + "]");
+	       +"V[" + String.valueOf(B64Code.encode(verifier)) + "]");
     return hasher;
   }
 
@@ -497,25 +497,25 @@ public abstract class V1Poll extends BasePoll {
      * @param e       the exception that caused the hash to fail.
      */
     public void hashingFinished(CachedUrlSet urlset,
-                                Object cookie,
-                                MessageDigest hasher,
-                                Exception e) {
+				Object cookie,
+				MessageDigest hasher,
+				Exception e) {
       if(m_pollstate != PS_WAIT_HASH) {
-        log.debug("hasher returned with pollstate: " + m_pollstate);
-        return;
+	log.debug("hasher returned with pollstate: " + m_pollstate);
+	return;
       }
       boolean hash_completed = e == null ? true : false;
 
       if(hash_completed)  {
-        m_hash  = hasher.digest();
-        log.debug2("Hash on " + urlset + " complete: "+
-                  String.valueOf(B64Code.encode(m_hash)));
-        m_pollstate = PS_WAIT_VOTE;
-        scheduleVote();
+	m_hash  = hasher.digest();
+	log.debug2("Hash on " + urlset + " complete: "+
+		   String.valueOf(B64Code.encode(m_hash)));
+	m_pollstate = PS_WAIT_VOTE;
+	scheduleVote();
       }
       else {
-        log.debug("Poll hash failed : " + e.getMessage());
-        m_pollstate = ERR_HASHING;
+	log.debug("Poll hash failed : " + e.getMessage());
+	m_pollstate = ERR_HASHING;
       }
     }
   }
@@ -534,19 +534,19 @@ public abstract class V1Poll extends BasePoll {
      * @param e       the exception that caused the hash to fail.
      */
     public void hashingFinished(CachedUrlSet urlset,
-                                Object cookie,
-                                MessageDigest hasher,
-                                Exception e) {
+				Object cookie,
+				MessageDigest hasher,
+				Exception e) {
       boolean hash_completed = e == null ? true : false;
 
       if(hash_completed)  {
-        byte[] out_hash = hasher.digest();
-        Vote vote = (Vote)cookie;
-        checkVote(out_hash, vote);
-        stopVoteCheck();
+	byte[] out_hash = hasher.digest();
+	Vote vote = (Vote)cookie;
+	checkVote(out_hash, vote);
+	stopVoteCheck();
       }
       else {
-        log.info("vote hash failed with exception:" + e.getMessage());
+	log.info("vote hash failed with exception:" + e.getMessage());
       }
     }
   }
@@ -560,9 +560,9 @@ public abstract class V1Poll extends BasePoll {
     public void timerExpired(Object cookie) {
       log.debug3("VoteTimerCallback called, checking if I should vote");
       if(m_pollstate == PS_WAIT_VOTE) {
-        log.debug3("I should vote");
-        voteInPoll();
-        log.debug("I just voted");
+	log.debug3("I should vote");
+	voteInPoll();
+	log.debug("I just voted");
       }
     }
   }
@@ -575,7 +575,7 @@ public abstract class V1Poll extends BasePoll {
      */
     public void timerExpired(Object cookie) {
       if(m_pollstate != PS_COMPLETE) {
-        stopPoll();
+	stopPoll();
       }
     }
   }

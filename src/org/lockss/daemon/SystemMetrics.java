@@ -1,5 +1,5 @@
 /*
- * $Id: SystemMetrics.java,v 1.27 2005-01-04 02:51:47 tlipkis Exp $
+ * $Id: SystemMetrics.java,v 1.28 2005-03-18 09:09:14 smorabito Exp $
  */
 
 /*
@@ -54,7 +54,7 @@ public class SystemMetrics
    * The interval at which memory usage should be logged, or 0 to disable
    */
   public static final String PARAM_MEM_LOG_INTERVAL =
-      PREFIX + "logMem.interval";
+    PREFIX + "logMem.interval";
   static final long DEFAULT_MEM_LOG_INTERVAL = 0;
 
   /**
@@ -62,7 +62,7 @@ public class SystemMetrics
    * should run.
    */
   public static final String PARAM_HASH_TEST_DURATION =
-      PREFIX + "hash.duration";
+    PREFIX + "hash.duration";
   static final long DEFAULT_HASH_TEST_DURATION = 100 * Constants.SECOND;
 
   /**
@@ -70,14 +70,14 @@ public class SystemMetrics
    * test.
    */
   public static final String PARAM_HASH_TEST_BYTE_STEP =
-      PREFIX + "hash.stepsize";
+    PREFIX + "hash.stepsize";
   static final int DEFAULT_HASH_TEST_BYTE_STEP = 10 * 1024;
 
   /**
    * Configuration parameter name for the default hash speed for new AUs.
    */
   public static final String PARAM_DEFAULT_HASH_SPEED =
-      PREFIX + "default.hash.speed";
+    PREFIX + "default.hash.speed";
   static final int DEFAULT_DEFAULT_HASH_SPEED = 250;
 
   /**
@@ -107,7 +107,7 @@ public class SystemMetrics
 			Configuration prevConfig,
 			Configuration.Differences changedKeys) {
     defaultSpeed = newConfig.getInt(PARAM_DEFAULT_HASH_SPEED,
-                                    DEFAULT_DEFAULT_HASH_SPEED);
+				    DEFAULT_DEFAULT_HASH_SPEED);
     if (changedKeys.contains(PARAM_MEM_LOG_INTERVAL)) {
       memLogInterval = newConfig.getTimeInterval(PARAM_MEM_LOG_INTERVAL,
 						 DEFAULT_MEM_LOG_INTERVAL);
@@ -132,7 +132,7 @@ public class SystemMetrics
    * @throws IOException
    */
   public int getBytesPerMsHashEstimate(CachedUrlSetHasher hasher,
-                                       MessageDigest digest)
+				       MessageDigest digest)
       throws IOException {
     int speed = -1;
     if (hashService != null) {
@@ -154,13 +154,13 @@ public class SystemMetrics
    * @throws IOException
    */
   private int getHashSpeedEstimate(CachedUrlSetHasher hasher,
-                                   MessageDigest digest)
+				   MessageDigest digest)
       throws IOException {
     Integer estimate = (Integer)estimateTable.get(digest.getAlgorithm());
     if (estimate==null) {
       // don't calculate; use default instead
       estimate = new Integer(defaultSpeed);
-//      estimate = new Integer(measureHashSpeed(hasher, digest));
+      //      estimate = new Integer(measureHashSpeed(hasher, digest));
       estimateTable.put(digest.getAlgorithm(), estimate);
     }
     return estimate.intValue();

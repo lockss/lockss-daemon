@@ -1,5 +1,5 @@
 /*
-* $Id: V1ContentPoll.java,v 1.7 2004-10-21 22:51:57 clairegriffin Exp $
+ * $Id: V1ContentPoll.java,v 1.8 2005-03-18 09:09:16 smorabito Exp $
  */
 
 /*
@@ -52,13 +52,13 @@ public class V1ContentPoll extends V1Poll {
 		long duration,
 		String hashAlg) {
     super(pollspec, pm, orig, challenge, duration);
-    m_replyOpcode = LcapMessage.CONTENT_POLL_REP;
+    m_replyOpcode = V1LcapMessage.CONTENT_POLL_REP;
     m_tally = new V1PollTally(this,
-                              CONTENT_POLL,
-                              m_createTime,
-                              duration,
-                              V1PollFactory.getQuorum(),
-                              hashAlg);
+			      CONTENT_POLL,
+			      m_createTime,
+			      duration,
+			      V1PollFactory.getQuorum(),
+			      hashAlg);
   }
 
 
@@ -73,8 +73,8 @@ public class V1ContentPoll extends V1Poll {
       m_msg = msg;
       log.debug("Setting message for " + this + " from " + msg);
     }
-    if(opcode == LcapMessage.CONTENT_POLL_REP) {
-      startVoteCheck(msg);
+    if(opcode == V1LcapMessage.CONTENT_POLL_REP) {
+      startVoteCheck((V1LcapMessage)msg);
     }
   }
 
@@ -89,7 +89,7 @@ public class V1ContentPoll extends V1Poll {
    * @return true if hash successfully completed.
    */
   boolean scheduleHash(MessageDigest hasher, Deadline timer, Object key,
-                                HashService.Callback callback) {
+		       HashService.Callback callback) {
     HashService hs = m_pollmanager.getHashService();
     return hs.hashContent( m_cus, hasher, timer, callback, key);
   }
@@ -97,7 +97,7 @@ public class V1ContentPoll extends V1Poll {
 
   /**
    * start the hash required for a vote cast in this poll
-   * @param msg the LcapMessage containing the vote we're going to check
+   * @param msg the V1LcapMessage containing the vote we're going to check
    */
   void startVoteCheck(LcapMessage msg) {
     super.startVoteCheck();
@@ -106,12 +106,12 @@ public class V1ContentPoll extends V1Poll {
       Vote vote = new Vote(msg, false);
 
       MessageDigest hasher = getInitedHasher(msg.getChallenge(),
-                                             msg.getVerifier());
+					     msg.getVerifier());
 
       if (!scheduleHash(hasher, m_hashDeadline, vote,
 			new VoteHashCallback())) {
-        log.info(m_key + " no time to hash vote by " + m_hashDeadline);
-        stopVoteCheck();
+	log.info(m_key + " no time to hash vote by " + m_hashDeadline);
+	stopVoteCheck();
       }
     }
   }

@@ -1,33 +1,31 @@
 /*
-* $Id: TestEncodedProperty.java,v 1.3 2003-06-20 22:34:56 claire Exp $
+ * $Id: TestEncodedProperty.java,v 1.4 2005-03-18 09:09:23 smorabito Exp $
  */
 
 /*
+  Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+  all rights reserved.
+  
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
-all rights reserved.
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+  STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+  WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+  IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
-STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
-IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-Except as contained in this notice, the name of Stanford University shall not
-be used in advertising or otherwise to promote the sale, use or other dealings
-in this Software without prior written authorization from Stanford University.
-
+  Except as contained in this notice, the name of Stanford University shall not
+  be used in advertising or otherwise to promote the sale, use or other dealings
+  in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.util;
@@ -42,142 +40,155 @@ import org.lockss.test.*;
  * Test class for <code>EncodedProperty</code>.
  */
 public class TestEncodedProperty extends LockssTestCase {
-  public static Class testedClasses[] = {
-    org.lockss.util.EncodedProperty.class
+
+  private EncodedProperty p1;
+  private EncodedProperty p2;
+  private ArrayList nestedPropList;
+
+  private byte[] testArray = new byte[] {
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15
   };
 
-  private static byte testbyte = 127;
-  private static boolean testbool = true;
-  private static byte[]  testarray = {
-    1,2,3,4,5,6,7,8,9,10,11,12,13,14,15
-  };
-  private static double testdbl = 1.0d;
-  private static float testfloat = 1.0f;
-  private static int testint = 1;
-  private static long testlong = 1280000000;
+  // Base64-encoded version of the above byte array.  If the array
+  // changes, this will need to change.
+  private String b64TestArray = "AQIDBAUGBwgJCgsMDQ4P";
 
-  private static Properties p1 = new Properties();
-  static {
-    p1.put("byte","127");
-    p1.put("boolean","true");
-    p1.put("bytearr", "0102030405060708090A0B0C0D0E0F");
-    p1.put("double","1.0d");
-    p1.put("float","1.0f");
-    p1.put("int", "1");
-    p1.put("long","1280000000");
-  };
+  public void setUp() throws Exception {
+    super.setUp();
+    p1 = new EncodedProperty();
+    p1.putBoolean("boolean", true);
+    p1.putInt("int", 1);
+    p1.putLong("long", 280000000L);
+    p1.putFloat("float", 3.14f);
+    p1.putDouble("double", 3.14159265);
+    p1.putByteArray("bytearray", testArray);
+    p1.setProperty("encbytearray", b64TestArray);
+    p1.setProperty("string", "String Value");
 
-  public TestEncodedProperty(String msg) {
-    super(msg);
+    // Add the nested property.
+    p2 = new EncodedProperty();
+    p2.setProperty("test", "Nested Value");
+    p1.putEncodedProperty("nested", p2);
+
+    // Add a list of nested properties.
+    EncodedProperty p3 = new EncodedProperty();
+    EncodedProperty p4 = new EncodedProperty();
+    EncodedProperty p5 = new EncodedProperty();
+    p3.setProperty("foo", "bar0");
+    p4.setProperty("foo", "bar1");
+    p5.setProperty("foo", "bar2");
+    nestedPropList = (ArrayList)ListUtil.list(p3, p4, p5);
+    p1.putEncodedPropertyList("nestedlist", nestedPropList);
   }
 
-  public void testDefaultTransformation() {
-    EncodedProperty props1 = new EncodedProperty(p1);
-    EncodedProperty props2 = new EncodedProperty();
-    byte[] encoded = null;
+  public void testGetters() throws IOException {
+    assertEquals(true, p1.getBoolean("boolean", false));
+    assertEquals(1, p1.getInt("int", 0));
+    assertEquals(280000000L, p1.getLong("long", 0L));
+    assertEquals(3.14f, p1.getFloat("float", 0.0f), 0.0);
+    assertEquals(3.14159265, p1.getDouble("double", 0.0), 0.0);
+    assertEquals(testArray, p1.getByteArray("bytearray", EncodedProperty.EMPTY_BYTE_ARRAY));
+    assertEquals(testArray, p1.getByteArray("encbytearray", EncodedProperty.EMPTY_BYTE_ARRAY));
+    assertEquals(b64TestArray, p1.getProperty("encbytearray"));
+    assertEquals("String Value", p1.getProperty("string"));
+
+    // Test nested property
+    EncodedProperty nested = p1.getEncodedProperty("nested");
+    assertIsomorphicProperties(p2, nested);
+    assertEquals("Nested Value", p2.getProperty("test"));
+
+    // Test nested property list
+    ArrayList l = p1.getEncodedPropertyList("nestedlist");
+    assertEquals(l.size(), nestedPropList.size());
+
+    // Should be in the same order.
+    for (int i = 0; i < l.size(); i++) {
+      assertIsomorphicProperties((EncodedProperty)(l.get(i)),
+				 (EncodedProperty)(nestedPropList.get(i)));
+    }
+  }
+
+  public void testDefaultGetters() throws IOException {
+    assertEquals(false, p1.getBoolean("foo", false));
+    assertEquals(true, p1.getBoolean("foo", true));
+    assertEquals(0, p1.getInt("foo", 0));
+    assertEquals(1, p1.getInt("foo", 1));
+
+    assertEquals(0L, p1.getLong("foo", 0L));
+    assertEquals(1L, p1.getLong("foo", 1L));
+    assertEquals(0.0f, p1.getFloat("foo", 0.0f), 0.0);
+    assertEquals(1.0f, p1.getFloat("foo", 1.0f), 0.0);
+    assertEquals(0.0, p1.getDouble("foo", 0.0), 0.0);
+    assertEquals(1.0, p1.getDouble("foo", 1.0), 0.0);
+    assertEquals(EncodedProperty.EMPTY_BYTE_ARRAY, 
+		 p1.getByteArray("foo", EncodedProperty.EMPTY_BYTE_ARRAY));
+    assertNull(p1.getProperty("foo"));
+    assertNull(p1.getEncodedProperty("foo"));
+    assertNull(p1.getEncodedPropertyList("foo"));
+  }
+
+  public void testEncodeDecode() {
+    EncodedProperty other = new EncodedProperty();
     try {
-      encoded = props1.encode();
+      byte[] encoded1 = p1.encode();
+      other.decode(encoded1);
+      assertIsomorphicProperties(p1, other);
+    } catch (IOException ex) {
+      fail("Should not have thrown.", ex);
     }
-    catch (IOException ex) {
-      fail("prop encoding failed\n");
-    }
+  }
+
+  public void testNonDefaultEncodeDecode() {
+    EncodedProperty other = new EncodedProperty();
     try {
-      props2.decode(encoded);
+      byte[] encoded2 = p1.encode("UTF-16");
+      other.decode(encoded2, "UTF-16");
+      assertIsomorphicProperties(p1, other);
+    } catch (IOException ex) {
+      fail("Should not have thrown.", ex);
     }
-    catch (IOException ex) {
-      fail("prop decoding failed\n");
-    }
-    assertEquals(props1,props2);
   }
 
-  public void testTransformation() {
-    EncodedProperty props1 = new EncodedProperty(p1);
-    EncodedProperty props2 = new EncodedProperty();
-    byte[] encoded = null;
+  public void testBadEncoding() {
+    EncodedProperty other = new EncodedProperty();
     try {
-      encoded = props1.encode("UTF-16");
+      byte[] encoded2 = p1.encode("UTF-3"); // unsupported
+      fail("Should have thrown!");
+    } catch (java.io.UnsupportedEncodingException ex) {
+      // This is expected.
+    } catch (IOException ex) {
+      fail("Should not have thrown IO Exception", ex);
     }
-    catch (IOException ex) {
-      fail("prop encoding for UTF-16 failed\n");
-    }
+  }
+
+  public void testBadDecoding() {
+    EncodedProperty other = new EncodedProperty();
     try {
-      props2.decode(encoded, "UTF-16");
+      byte[] encoded2 = p1.encode("UTF-8");
+      other.decode(encoded2, "UTF-3"); // unsupported
+      fail("Should have thrown!");
+    } catch (java.io.UnsupportedEncodingException ex) {
+      // This is expected.
+    } catch (IOException ex) {
+      fail("Should not have thrown IO Exception", ex);
     }
-    catch (IOException ex) {
-      fail("prop decoding UTF-16 failed\n");
-    }
-    assertEquals(props1,props2);
   }
 
+  /**
+   * Assert that two maps contain the same keys and values.
+   */
+  private void assertIsomorphicProperties(Properties a, Properties b) {
+    List aKeys = new ArrayList(a.keySet());
+    List bKeys = new ArrayList(b.keySet());
+    List aValues = new ArrayList(a.values());
+    List bValues = new ArrayList(b.values());
 
-  public void testBooleanData() {
-    EncodedProperty props = new EncodedProperty();
+    Collections.sort(aKeys);
+    Collections.sort(bKeys);
+    Collections.sort(aValues);
+    Collections.sort(bValues);
 
-    // check request for missing type returns requested
-    assertEquals(props.getBoolean("bool",testbool),testbool);
-
-    // check request for expected item
-    props.putBoolean("bool",testbool);
-    assertEquals(props.getBoolean("bool",false), testbool);
+    assertIsomorphic(aKeys, bKeys);
+    assertIsomorphic(aValues, bValues);
   }
-
-  public void testByteArrayData() {
-    EncodedProperty props = new EncodedProperty();
-
-    // check request for missing type returns requested
-    assertEquals(props.getByteArray("bytearr",testarray),testarray);
-
-    // check request for expected item
-    props.putByteArray("bytearr",testarray);
-    assertTrue(Arrays.equals(props.getByteArray("bytearr",new byte[0]),
-                             testarray));
-  }
-
-  public void testDoubleData() {
-    EncodedProperty props = new EncodedProperty();
-
-    // check request for missing type returns requested
-    assertEquals(props.getDouble("double",testdbl),testdbl,0);
-
-    // check request for expected item
-    props.putDouble("double",testdbl);
-    assertEquals(props.getDouble("double",0.0d),testdbl,0);
-
-  }
-
-  public void testFloatData() {
-    EncodedProperty props = new EncodedProperty();
-
-    // check request for missing type returns requested
-    assertEquals(props.getFloat("float",testfloat),testfloat,0);
-
-    // check request for expected item
-    props.putFloat("float",testfloat);
-    assertEquals(props.getFloat("float",0.0f),testfloat,0);
-
-  }
-
-  public void testIntData() {
-    EncodedProperty props = new EncodedProperty();
-
-    // check request for missing type returns requested
-    assertEquals(props.getInt("int",testint),testint);
-
-    // check request for expected item
-    props.putInt("int",testint);
-    assertEquals(props.getInt("int",0),testint);
-
-  }
-  public void testLongData() {
-    EncodedProperty props = new EncodedProperty();
-
-    // check request for missing type returns requested
-    assertEquals(props.getLong("long",testlong),testlong);
-
-    // check request for expected item
-    props.putLong("long",testlong);
-    assertEquals(props.getLong("long",0),testlong);
-  }
-
-
 }

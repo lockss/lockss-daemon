@@ -1,28 +1,28 @@
 /*
- * $Id: V1NamePoll.java,v 1.15 2004-12-07 05:17:52 tlipkis Exp $
+ * $Id: V1NamePoll.java,v 1.16 2005-03-18 09:09:16 smorabito Exp $
  */
 
 /*
- Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
- all rights reserved.
- Permission is hereby granted, free of charge, to any person obtaining a copy
- of this software and associated documentation files (the "Software"), to deal
- in the Software without restriction, including without limitation the rights
- to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- copies of the Software, and to permit persons to whom the Software is
- furnished to do so, subject to the following conditions:
- The above copyright notice and this permission notice shall be included in
- all copies or substantial portions of the Software.
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
- STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
- WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
- IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- Except as contained in this notice, the name of Stanford University shall not
- be used in advertising or otherwise to promote the sale, use or other dealings
- in this Software without prior written authorization from Stanford University.
- */
+  Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+  all rights reserved.
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+  STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+  WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+  IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+  Except as contained in this notice, the name of Stanford University shall not
+  be used in advertising or otherwise to promote the sale, use or other dealings
+  in this Software without prior written authorization from Stanford University.
+*/
 
 package org.lockss.poller;
 
@@ -37,7 +37,10 @@ import org.lockss.util.*;
 import org.lockss.plugin.*;
 
 /**
- * <p>Implements a version one name poll.</p>
+ * <p>
+ * Implements a version one name poll.
+ * </p>
+ *
  * @author Claire Griffin
  * @version 1.0
  */
@@ -45,22 +48,16 @@ import org.lockss.plugin.*;
 public class V1NamePoll extends V1Poll {
 
   ArrayList m_entries;
+
   private boolean m_calledSubpoll = false;
 
-  public V1NamePoll(PollSpec pollspec,
-		    PollManager pm,
-		    PeerIdentity orig,
-		    byte[] challenge,
-		    long duration,
-		    String hashAlg) {
+  public V1NamePoll(PollSpec pollspec, PollManager pm, PeerIdentity orig,
+		    byte[] challenge, long duration, String hashAlg) {
     super(pollspec, pm, orig, challenge, duration);
-    m_replyOpcode = LcapMessage.NAME_POLL_REP;
-    m_tally = new V1PollTally(this,
-                              NAME_POLL,
-                              m_createTime,
-                              duration,
-                              V1PollFactory.getQuorum(),  // XXX AU-specific
-                              hashAlg);
+    m_replyOpcode = V1LcapMessage.NAME_POLL_REP;
+    m_tally = new V1PollTally(this, NAME_POLL, m_createTime, duration,
+			      V1PollFactory.getQuorum(), // XXX AU-specific
+			      hashAlg);
   }
 
   /** kludge to remember whether we called a subpoll */
@@ -76,50 +73,58 @@ public class V1NamePoll extends V1Poll {
       log.error("No vote to cast for " + this);
       return;
     }
-    LcapMessage msg;
+    V1LcapMessage msg;
     PeerIdentity local_id = idMgr.getLocalPeerIdentity(Poll.V1_POLL);
     long remainingTime = m_deadline.getRemainingTime();
     log.debug("castOurVote: " + local_id);
     try {
-      msg = LcapMessage.makeReplyMsg(m_msg, m_hash, m_verifier,
-                                     getEntries(), m_replyOpcode,
-                                     remainingTime, local_id);
+      msg = V1LcapMessage.makeReplyMsg(m_msg, m_hash, m_verifier, getEntries(),
+				       m_replyOpcode, remainingTime, local_id);
       log.debug("vote:" + msg.toString());
       m_pollmanager.sendMessage(msg, m_cus.getArchivalUnit());
-    }
-    catch (IOException ex) {
+    } catch (IOException ex) {
       log.info("unable to cast our vote.", ex);
     }
   }
 
-
   /**
    * handle a message which may be a incoming vote
-   * @param msg the Message to handle
+   *
+   * @param msg
+   *          the Message to handle
    */
   void receiveMessage(LcapMessage msg) {
+    if (msg.getPollVersion() != 1) {
+      log.error("Not a V1 message: " + msg);
+      return;
+    }
     int opcode = msg.getOpcode();
 
     if (m_msg == null) {
       m_msg = msg;
       log.debug("Setting message for " + this + " from " + msg);
     }
-    if (opcode == LcapMessage.NAME_POLL_REP) {
-      startVoteCheck(msg);
+    if (opcode == V1LcapMessage.NAME_POLL_REP) {
+      startVoteCheck((V1LcapMessage)msg);
     }
   }
 
   /**
    * schedule the hash for this poll.
-   * @param hasher the MessageDigest used to hash the content
-   * @param timer the Deadline by which we must complete
-   * @param key the Object which will be returned from the hasher. Always the
-   * message which triggered the hash
-   * @param callback the hashing callback to use on return
+   *
+   * @param hasher
+   *          the MessageDigest used to hash the content
+   * @param timer
+   *          the Deadline by which we must complete
+   * @param key
+   *          the Object which will be returned from the hasher. Always the
+   *          message which triggered the hash
+   * @param callback
+   *          the hashing callback to use on return
    * @return true if hash successfully completed.
    */
   boolean scheduleHash(MessageDigest hasher, Deadline timer, Object key,
-                       HashService.Callback callback) {
+		       HashService.Callback callback) {
 
     HashService hs = m_pollmanager.getHashService();
     return hs.hashNames(m_cus, hasher, timer, callback, key);
@@ -127,22 +132,23 @@ public class V1NamePoll extends V1Poll {
 
   /**
    * start the hash required for a vote cast in this poll
-   * @param msg the LcapMessage containing the vote we're going to check
+   *
+   * @param msg
+   *          the LcapMessage containing the vote we're going to check
    */
-  void startVoteCheck(LcapMessage msg) {
+  void startVoteCheck(V1LcapMessage msg) {
     super.startVoteCheck();
 
     if (shouldCheckVote(msg)) {
       Vote vote = new NameVote(msg, false);
       log.debug3("created a new NameVote instead of a Vote");
 
-      MessageDigest hasher = getInitedHasher(msg.getChallenge(),
-                                             msg.getVerifier());
+      MessageDigest hasher = getInitedHasher(msg.getChallenge(), msg
+					     .getVerifier());
 
-      if (!scheduleHash(hasher, m_hashDeadline, vote,
-			new VoteHashCallback())) {
-        log.info(m_key + " no time to hash vote by " + m_hashDeadline);
-        stopVoteCheck();
+      if (!scheduleHash(hasher, m_hashDeadline, vote, new VoteHashCallback())) {
+	log.info(m_key + " no time to hash vote by " + m_hashDeadline);
+	stopVoteCheck();
       }
     }
   }
@@ -161,12 +167,12 @@ public class V1NamePoll extends V1Poll {
       CachedUrlSetNode cusn = (CachedUrlSetNode) it.next();
       String name = cusn.getUrl();
       if (spec.matches(name)) {
-        boolean hasContent = cusn.hasContent();
-        if (name.startsWith(baseUrl)) {
-          name = name.substring(baseUrl.length());
-        } //XXX add error message
-        log.debug3("adding file name " + name + " - hasContent=" + hasContent);
-        alist.add(new PollTally.NameListEntry(hasContent, name));
+	boolean hasContent = cusn.hasContent();
+	if (name.startsWith(baseUrl)) {
+	  name = name.substring(baseUrl.length());
+	} //XXX add error message
+	log.debug3("adding file name " + name + " - hasContent=" + hasContent);
+	alist.add(new PollTally.NameListEntry(hasContent, name));
       }
     }
     m_entries = alist;
@@ -188,21 +194,20 @@ public class V1NamePoll extends V1Poll {
     // build a list of unique disagree votes
     while (voteIter.hasNext()) {
       Object obj = voteIter.next();
-      if (! (obj instanceof NameVote)) {
-        log.error("Expected class NameVote found class " +
-                  obj.getClass().getName());
-        continue;
+      if (!(obj instanceof NameVote)) {
+	log.error("Expected class NameVote found class "
+		  + obj.getClass().getName());
+	continue;
       }
       NameVote vote = (NameVote) obj;
       if (!vote.agree) {
-        NameVoteCounter counter = new NameVoteCounter(vote);
-        if (winners.contains(counter)) {
-          counter = (NameVoteCounter) winners.get(winners.indexOf(counter));
-          counter.addVote();
-        }
-        else {
-          winners.add(counter);
-        }
+	NameVoteCounter counter = new NameVoteCounter(vote);
+	if (winners.contains(counter)) {
+	  counter = (NameVoteCounter) winners.get(winners.indexOf(counter));
+	  counter.addVote();
+	} else {
+	  winners.add(counter);
+	}
       }
     }
 
@@ -211,12 +216,11 @@ public class V1NamePoll extends V1Poll {
     while (it.hasNext()) {
       NameVoteCounter counter = (NameVoteCounter) it.next();
       if (winningCounter != null) {
-        if (winningCounter.getNumVotes() < counter.getNumVotes()) {
-          winningCounter = counter;
-        }
-      }
-      else {
-        winningCounter = counter;
+	if (winningCounter.getNumVotes() < counter.getNumVotes()) {
+	  winningCounter = counter;
+	}
+      } else {
+	winningCounter = counter;
       }
     }
 
@@ -228,41 +232,44 @@ public class V1NamePoll extends V1Poll {
     if (winningVote != null) {
       log.debug("found winning vote: " + winningVote);
       m_tally.votedEntries = winningVote.getKnownEntries();
-      if(log.isDebug3()) {
-      	for(int i=0; i< m_tally.votedEntries.size(); i++) {
-      	  log.debug3("winning entry " + i + ": " + m_tally.votedEntries.get(i));
-      	}
+      if (log.isDebug3()) {
+	for (int i = 0; i < m_tally.votedEntries.size(); i++) {
+	  log.debug3("winning entry " + i + ": " + m_tally.votedEntries.get(i));
+	}
       }
       String lwrRem = winningVote.getLwrRemaining();
       String uprRem = winningVote.getUprRemaining();
-      log.debug3("remainder lwr : "+ lwrRem + " upr: " + uprRem);
+      log.debug3("remainder lwr : " + lwrRem + " upr: " + uprRem);
       if (lwrRem != null) {
-        callNameSubPoll(m_cus, lwrRem, uprRem);
-        // we make our list from whatever is in our
-        // master list that doesn't match the remainder;
-        ArrayList localSet = new ArrayList();
-        Iterator localIt = getEntries().iterator();
-        log.debug3("finding local entries which are below our lwr remainder:" +lwrRem);
-        while (localIt.hasNext()) {
-          PollTally.NameListEntry entry = (PollTally.NameListEntry) localIt.next();
-          String url = entry.name;
-          if((lwrRem != null) && url.compareTo(lwrRem) < 0) {
-            log.debug3("adding local entry " + entry);
-            localSet.add(entry);
-          }
-        }
-        m_tally.localEntries = localSet;
+	callNameSubPoll(m_cus, lwrRem, uprRem);
+	// we make our list from whatever is in our
+	// master list that doesn't match the remainder;
+	ArrayList localSet = new ArrayList();
+	Iterator localIt = getEntries().iterator();
+	log.debug3("finding local entries which are below our lwr remainder:"
+		   + lwrRem);
+	while (localIt.hasNext()) {
+	  PollTally.NameListEntry entry = (PollTally.NameListEntry) localIt
+	    .next();
+	  String url = entry.name;
+	  if ((lwrRem != null) && url.compareTo(lwrRem) < 0) {
+	    log.debug3("adding local entry " + entry);
+	    localSet.add(entry);
+	  }
+	}
+	m_tally.localEntries = localSet;
       } else {
-        log.debug3("No entries remain to be sent, return all entries for spec: "
-                   + m_cus.getSpec());
-        m_tally.localEntries = getEntries();
+	log
+	  .debug3("No entries remain to be sent, return all entries for spec: "
+		  + m_cus.getSpec());
+	m_tally.localEntries = getEntries();
       }
     }
   }
 
-
   /**
    * Calls a name poll poll with the lower and upper bounds set.
+   *
    * @param cus CachedUrlSet
    * @param lwr lower bound
    * @param upr upper bound
@@ -277,8 +284,8 @@ public class V1NamePoll extends V1Poll {
     if (subPoll != null) {
       PollTally subTally = subPoll.getVoteTally();
       if (subTally instanceof V1PollTally) {
-	V1PollTally v1tally = (V1PollTally)subTally;
-	v1tally.setPreviousNamePollTally((V1PollTally)getVoteTally());
+	V1PollTally v1tally = (V1PollTally) subTally;
+	v1tally.setPreviousNamePollTally((V1PollTally) getVoteTally());
       }
       m_calledSubpoll = true;
     } else {
@@ -286,28 +293,29 @@ public class V1NamePoll extends V1Poll {
     }
   }
 
-
   /**
-   * make a NameVote.  NB - used only by TestPoll
+   * make a NameVote. NB - used only by TestPoll
+   *
    * @param msg the message needed to make the vote
    * @param agree a boolean set true if this is an agree vote, false otherwise.
    * @return the newly created NameVote object
    */
-  NameVote makeNameVote(LcapMessage msg, boolean agree) {
+  NameVote makeNameVote(V1LcapMessage msg, boolean agree) {
     return new NameVote(msg, agree);
   }
 
   Vote copyVote(Vote vote, boolean agree) {
-    NameVote v =  new NameVote((NameVote)vote);
+    NameVote v = new NameVote((NameVote) vote);
     v.agree = agree;
     return v;
   }
 
   static class NameVote extends Vote {
     private ArrayList knownEntries;
-    private String lwrRemaining;
-    private String uprRemaining;
 
+    private String lwrRemaining;
+
+    private String uprRemaining;
 
     NameVote(NameVote vote) {
       super(vote);
@@ -316,7 +324,7 @@ public class V1NamePoll extends V1Poll {
       uprRemaining = vote.getUprRemaining();
     }
 
-    NameVote(LcapMessage msg, boolean agree) {
+    NameVote(V1LcapMessage msg, boolean agree) {
       super(msg, agree);
       knownEntries = msg.getEntries();
 
@@ -338,7 +346,7 @@ public class V1NamePoll extends V1Poll {
 
     public boolean equals(Object obj) {
       if (obj instanceof NameVote) {
-        return (sameEntries( ( (NameVote) obj).knownEntries));
+	return (sameEntries(((NameVote) obj).knownEntries));
       }
       return false;
     }
@@ -348,7 +356,7 @@ public class V1NamePoll extends V1Poll {
     }
 
     boolean sameEntries(ArrayList entries) {
-      return CollectionUtil.isIsomorphic(knownEntries,entries);
+      return CollectionUtil.isIsomorphic(knownEntries, entries);
     }
   }
 

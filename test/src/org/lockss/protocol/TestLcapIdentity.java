@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapIdentity.java,v 1.29 2004-09-29 23:31:37 tlipkis Exp $
+ * $Id: TestLcapIdentity.java,v 1.30 2005-03-18 09:09:21 smorabito Exp $
  */
 
 /*
@@ -32,11 +32,8 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.protocol;
 
-import java.io.*;
 import java.net.*;
-import java.util.Random;
 import org.mortbay.util.B64Code;
-import org.lockss.daemon.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.poller.*;
@@ -52,10 +49,10 @@ public class TestLcapIdentity extends LockssTestCase {
   static final String uprbnd = "test3.doc";
   static final String archivalid = "testarchive 1.0";
   static final byte[] testbytes = {1,2,3,4,5,6,7,8,9,10};
-  static final ArrayList testentries = (ArrayList)ListUtil.list(
-      new PollTally.NameListEntry(true,"test1.doc"),
-      new PollTally.NameListEntry(true,"test2.doc"),
-      new PollTally.NameListEntry(true,"test3.doc"));
+  static final ArrayList testentries =
+    (ArrayList)ListUtil.list(new PollTally.NameListEntry(true,"test1.doc"),
+			     new PollTally.NameListEntry(true,"test2.doc"),
+			     new PollTally.NameListEntry(true,"test3.doc"));
 
   LcapIdentity fakeId = null;
   IPAddr testAddress;
@@ -89,13 +86,13 @@ public class TestLcapIdentity extends LockssTestCase {
     testReputation = IdentityManager.INITIAL_REPUTATION;
     PollSpec spec = new MockPollSpec(archivalid, urlstr, lwrbnd, uprbnd,
 				     Poll.CONTENT_POLL);
-    testMsg = LcapMessage.makeRequestMsg(spec,
-					 testentries,
-					 testbytes,
-					 testbytes,
-					 LcapMessage.CONTENT_POLL_REQ,
-					 100000,
-					 testID);
+    testMsg = V1LcapMessage.makeRequestMsg(spec,
+					   testentries,
+					   testbytes,
+					   testbytes,
+					   V1LcapMessage.CONTENT_POLL_REQ,
+					   100000,
+					   testID);
   }
 
   /** test for method toString(..) */

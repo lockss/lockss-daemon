@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.152 2005-02-21 03:06:41 tlipkis Exp $
+ * $Id: PollManager.java,v 1.153 2005-03-18 09:09:16 smorabito Exp $
  */
 
 /*
@@ -129,9 +129,9 @@ public class PollManager
     // register our status
     StatusService statusServ = theDaemon.getStatusService();
     statusServ.registerStatusAccessor(PollerStatus.MANAGER_STATUS_TABLE_NAME,
-                                      new PollerStatus.ManagerStatus(this));
+				      new PollerStatus.ManagerStatus(this));
     statusServ.registerStatusAccessor(PollerStatus.POLL_STATUS_TABLE_NAME,
-                                      new PollerStatus.PollStatus(this));
+				      new PollerStatus.PollStatus(this));
     statusServ.registerObjectReferenceAccessor(PollerStatus.MANAGER_STATUS_TABLE_NAME,
 					       ArchivalUnit.class,
 					       new PollerStatus.ManagerStatusAuRef(this));
@@ -147,7 +147,7 @@ public class PollManager
     statusServ.unregisterStatusAccessor(PollerStatus.MANAGER_STATUS_TABLE_NAME);
     statusServ.unregisterStatusAccessor(PollerStatus.POLL_STATUS_TABLE_NAME);
     statusServ.unregisterObjectReferenceAccessor(
-        PollerStatus.MANAGER_STATUS_TABLE_NAME, ArchivalUnit.class);
+						 PollerStatus.MANAGER_STATUS_TABLE_NAME, ArchivalUnit.class);
 
     // unregister our router
     theRouter.unregisterMessageHandler(m_msgHandler);
@@ -225,7 +225,7 @@ public class PollManager
     return null;
   }
 
-   /**
+  /**
    * Is a poll of the given type and spec currently running
    * @param type the type of the poll.
    * @param spec the PollSpec definining the location of the poll.
@@ -265,8 +265,8 @@ public class PollManager
     if(pme != null) {
       PollTally tally = pme.poll.getVoteTally();
       if(tally != null) {
-        lock = tally.getActivityLock();
-        tally.setActivityLock(null);
+	lock = tally.getActivityLock();
+	tally.setActivityLock(null);
       }
     }
     return lock;
@@ -300,8 +300,8 @@ public class PollManager
    * @param key the key of the suspended poll
    */
   public void resumePoll(boolean replayNeeded,
-                         Object key,
-                         ActivityRegulator.Lock lock) {
+			 Object key,
+			 ActivityRegulator.Lock lock) {
     PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
     if(pme == null) {
       theLog.debug2("ignoring resume request for unknown key " + key);
@@ -318,7 +318,7 @@ public class PollManager
       theLog.debug2("starting replay of poll " + key);
       PollFactory pollFact = getPollFactory(pme.poll.getVersion());
       // should be equivalent to this.  is it?
-//       PollFactory pollFact = getPollFactory(pme.spec);
+      //       PollFactory pollFact = getPollFactory(pme.spec);
       if (pollFact != null) {
 	expiration = pollFact.getMaxPollDuration(Poll.CONTENT_POLL);
       } else {
@@ -351,8 +351,8 @@ public class PollManager
     PollManagerEntry pme = getCurrentOrRecentPollEntry(key);
     if(pme != null) {
       if(pme.isPollCompleted() || pme.isPollSuspended()) {
-        theLog.debug("Message received after poll was closed." + msg);
-        return;
+	theLog.debug("Message received after poll was closed." + msg);
+	return;
       }
     }
     BasePoll p = findPoll(msg);
@@ -403,12 +403,20 @@ public class PollManager
    * @throws ProtocolException if message opcode is unknown
    */
   BasePoll makePoll(LcapMessage msg) throws ProtocolException {
+    theLog.debug("Got message: " + msg);
     BasePoll ret_poll = null;
-    PollSpec spec = new PollSpec(msg);
+    PollSpec spec = null;
+    if (msg instanceof V1LcapMessage) {
+      spec = new PollSpec((V1LcapMessage)msg);
+    } else if (msg instanceof V3LcapMessage) {
+      spec = new PollSpec((V3LcapMessage)msg);
+    } else {
+      throw new ProtocolException("Unexpected LCAP Message type.");
+    }
     long duration = msg.getDuration();
     byte[] challenge = msg.getChallenge();
     byte[] verifier = msg.getVerifier();
-    PeerIdentity orig = msg.getOriginatorID();
+    PeerIdentity orig = msg.getOriginatorId();
     String hashAlg = msg.getHashAlgorithm();
 
     ret_poll = makePoll(spec, duration, challenge, verifier, orig, hashAlg);
@@ -448,7 +456,7 @@ public class PollManager
 
     // check for conflicts
     if (!pollFact.shouldPollBeCreated(spec, this, theIDManager,
-					     challenge, orig)) {
+				      challenge, orig)) {
       theLog.debug("Poll request ignored");
       return null;
     }
@@ -457,14 +465,14 @@ public class PollManager
       // get expiration time for the lock
       long expiration = 2 * duration;
       if (AuUrl.isAuUrl(cus.getUrl())) {
-        lock = theDaemon.getActivityRegulator(au).
+	lock = theDaemon.getActivityRegulator(au).
 	  getAuActivityLock(ActivityRegulator.TOP_LEVEL_POLL, expiration);
-        if (lock==null) {
-          theLog.debug2("New top-level poll aborted due to activity lock.");
-          return null;
-        }
+	if (lock==null) {
+	  theLog.debug2("New top-level poll aborted due to activity lock.");
+	  return null;
+	}
       } else {
-        int activity = pollFact.getPollActivity(spec, this);
+	int activity = pollFact.getPollActivity(spec, this);
 	ActivityRegulator ar = theDaemon.getActivityRegulator(au);
 	if (ar == null) {
 	  theLog.warning("Activity regulator null for au: " + au.toString());
@@ -475,52 +483,52 @@ public class PollManager
 			activity + " for " +
 			StringUtil.timeIntervalToString(expiration));
 	}
-        lock = ar.getCusActivityLock(cus, activity, expiration);
-        if (lock==null) {
-          theLog.debug("New poll aborted due to activity lock.");
-          return null;
-        }
+	lock = ar.getCusActivityLock(cus, activity, expiration);
+	if (lock==null) {
+	  theLog.debug("New poll aborted due to activity lock.");
+	  return null;
+	}
       }
     }
 
     // create the appropriate poll for the message type
     try {
       ret_poll = pollFact.createPoll(spec, this, theIDManager,
-					    orig, challenge, verifier,
-					    duration, hashAlg);
+				     orig, challenge, verifier,
+				     duration, hashAlg);
     }
     catch (Exception ex) {
       if(ex instanceof ProtocolException) {
-        throw (ProtocolException) ex;
+	throw (ProtocolException) ex;
       }
       else {
-        theLog.error("Failed to create poll:" + ex);
-        if (lock!=null) {
-          // clear the lock
-          lock.expire();
-        }
-        return null;
+	theLog.error("Failed to create poll:" + ex);
+	if (lock!=null) {
+	  // clear the lock
+	  lock.expire();
+	}
+	return null;
       }
     }
 
     if (ret_poll != null) {
       NodeManager nm = theDaemon.getNodeManager(cus.getArchivalUnit());
       if (spec.getPollType() != Poll.VERIFY_POLL) {
-        if (!nm.shouldStartPoll(cus, ret_poll.getVoteTally())) {
+	if (!nm.shouldStartPoll(cus, ret_poll.getVoteTally())) {
 	  theLog.debug("NodeManager said not to start poll: "+ret_poll);
-          // clear the lock
-          lock.expire();
-          return null;
-        }
+	  // clear the lock
+	  lock.expire();
+	  return null;
+	}
       }
 
       thePolls.put(ret_poll.m_key, new PollManagerEntry(ret_poll));
       if (spec.getPollType() != Poll.VERIFY_POLL &&
 	  !(spec.getPollType() == Poll.NAME_POLL &&
 	    spec.getLwrBound() != null)) {
-        // set the activity lock in the tally
-        ret_poll.getVoteTally().setActivityLock(lock);
-        nm.startPoll(cus, ret_poll.getVoteTally(), false);
+	// set the activity lock in the tally
+	ret_poll.getVoteTally().setActivityLock(lock);
+	nm.startPoll(cus, ret_poll.getVoteTally(), false);
       }
 
       ret_poll.startPoll();
@@ -529,8 +537,8 @@ public class PollManager
     } else {
       theLog.error("Got a null ret_poll from createPoll");
       if (lock!=null) {
-        // clear the lock
-        lock.expire();
+	// clear the lock
+	lock.expire();
       }
       return null;
     }
@@ -567,14 +575,14 @@ public class PollManager
       theLog.debug("handing poll results to node manager: " + tally);
       nm.updatePollResults(tally.getCachedUrlSet(), tally);
       try {
-        theIDManager.storeIdentities();
+	theIDManager.storeIdentities();
       } catch (ProtocolException ex) {
-        theLog.error("Unable to write Identity DB file.");
+	theLog.error("Unable to write Identity DB file.");
       }
       // free the activity lock
       ActivityRegulator.Lock lock = tally.getActivityLock();
       if(lock != null) {
-        lock.expire();
+	lock.expire();
       }
     }
   }
@@ -611,7 +619,7 @@ public class PollManager
    * @param au the ArchivalUnit for this message
    * @throws IOException
    */
-  void sendMessage(LcapMessage msg, ArchivalUnit au) throws IOException {
+  void sendMessage(V1LcapMessage msg, ArchivalUnit au) throws IOException {
     if(theRouter != null) {
       theRouter.send(msg, au);
     }
@@ -624,7 +632,7 @@ public class PollManager
    * @param id the PeerIdentity of the identity to send to
    * @throws IOException
    */
-  void sendMessageTo(LcapMessage msg, ArchivalUnit au, PeerIdentity id)
+  void sendMessageTo(V1LcapMessage msg, ArchivalUnit au, PeerIdentity id)
       throws IOException {
     theRouter.sendTo(msg, au, id);
   }
@@ -726,8 +734,8 @@ public class PollManager
   }
 
   private void rememberVerifier(byte[] verifier,
-                                byte[] secret,
-                                long duration) {
+				byte[] secret,
+				long duration) {
     String ver = String.valueOf(B64Code.encode(verifier));
     String sec = secret == null ? "" : String.valueOf(B64Code.encode(secret));
     Deadline d = Deadline.in(m_verifierExpireTime + duration);
@@ -747,10 +755,10 @@ public class PollManager
       // if we have a secret and we don't have a poll
       // we made the original message but haven't made a poll yet
       if(!StringUtil.isNullString(secret) && !havePoll) {
-        return false;
+	return false;
       }
       else if(secret == null) { // we didn't make the verifier-we don't have a secret
-        rememberVerifier(verifier,null, msg.getDuration());
+	rememberVerifier(verifier,null, msg.getDuration());
       }
       return secret != null;   // we made the verifier-we should have a secret
     }
@@ -794,7 +802,7 @@ public class PollManager
   }
 
 
-//--------------- PollerStatus Accessors -----------------------------
+  //--------------- PollerStatus Accessors -----------------------------
   Iterator getPolls() {
     Map polls = new HashMap();
     synchronized (pollMapLock) {
@@ -812,13 +820,13 @@ public class PollManager
     return null;
   }
 
-//-------------- TestPollManager Accessors ----------------------------
-/**
- * remove the poll represented by the given key from the poll table and
- * return it.
- * @param key the String representation of the polls key
- * @return Poll the poll if found or null
- */
+  //-------------- TestPollManager Accessors ----------------------------
+  /**
+   * remove the poll represented by the given key from the poll table and
+   * return it.
+   * @param key the String representation of the polls key
+   * @return Poll the poll if found or null
+   */
   BasePoll removePoll(String key) {
     PollManagerEntry pme = (PollManagerEntry)thePolls.remove(key);
     return (pme != null) ? pme.poll : null;
@@ -862,7 +870,7 @@ public class PollManager
     return theSystemMetrics.getBytesPerMsHashEstimate();
   }
 
-// ----------------  Callbacks -----------------------------------
+  // ----------------  Callbacks -----------------------------------
 
   class RouterMessageHandler implements LcapDatagramRouter.MessageHandler {
     public void handleMessage(LcapMessage msg) {
@@ -920,20 +928,20 @@ public class PollManager
     synchronized void setPollSuspended() {
       poll.getVoteTally().setStateSuspended();
       if(deadline != null) {
-        deadline.expire();
-        deadline = null;
+	deadline.expire();
+	deadline = null;
       }
     }
 
     String getStatusString() {
       if (isPollCompleted()) {
-        return poll.getVoteTally().getStatusString();
+	return poll.getVoteTally().getStatusString();
       }
       else if(isPollActive()) {
-        return "Active";
+	return "Active";
       }
       else if(isPollSuspended()) {
-        return "Repairing";
+	return "Repairing";
       }
       return "Unknown";
     }
@@ -948,7 +956,7 @@ public class PollManager
 
     boolean isSamePoll(int type, PollSpec spec) {
       if(this.type == type) {
-        return this.spec.getCachedUrlSet().equals(spec.getCachedUrlSet());
+	return this.spec.getCachedUrlSet().equals(spec.getCachedUrlSet());
       }
       return false;
     }

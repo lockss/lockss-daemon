@@ -1,5 +1,5 @@
 /*
- * $Id: HashCUS.java,v 1.17 2005-01-27 23:04:44 troberts Exp $
+ * $Id: HashCUS.java,v 1.18 2005-03-18 09:09:18 smorabito Exp $
  */
 
 /*
@@ -32,15 +32,12 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.servlet;
 
-import javax.servlet.http.*;
 import javax.servlet.*;
 import java.io.*;
 import java.util.*;
-import java.net.*;
 import java.text.*;
 import java.security.*;
 import org.mortbay.html.*;
-import org.mortbay.tools.*;
 import org.mortbay.util.B64Code;
 import org.lockss.app.*;
 import org.lockss.util.*;
@@ -48,7 +45,6 @@ import org.lockss.plugin.*;
 import org.lockss.poller.*;
 import org.lockss.protocol.*;
 import org.lockss.daemon.*;
-import org.lockss.daemon.status.*;
 
 /** Hash a CUS on demand, display the results and filtered input stream
  */
@@ -311,7 +307,7 @@ public class HashCUS extends LockssServlet {
     addResultRow(tbl, "Hash", byteString(hashResult));
 
     String s = StringUtil.protectedDivide(bytesHashed, elapsedTime, "inf");
-    
+
     if (!"inf".equalsIgnoreCase(s) && Long.parseLong(s) < 100) {
       double fbpms = ((double)bytesHashed) / ((double)elapsedTime);
       s = fmt_2dec.format(fbpms);
@@ -387,7 +383,7 @@ public class HashCUS extends LockssServlet {
     addInputRow(tbl, "Verifier", KEY_VERIFIER, 50, getParameter(KEY_VERIFIER));
     tbl.newRow();
     tbl.newCell(COL2CENTER);
-    tbl.add(radioButton(HASH_TYPE_CONTENT, KEY_HASH_TYPE, 
+    tbl.add(radioButton(HASH_TYPE_CONTENT, KEY_HASH_TYPE,
 			(hashType == null ||
 			 HASH_TYPE_CONTENT.equals(hashType))));
     tbl.add("&nbsp;&nbsp;");
@@ -412,7 +408,7 @@ public class HashCUS extends LockssServlet {
   void addInputRow(Table tbl, String label, String key,
 		   int size, String initVal) {
     tbl.newRow();
-//     tbl.newCell();
+    //     tbl.newCell();
     tbl.addHeading(label + ":", "align=right");
     tbl.newCell();
     Input in = new Input(Input.Text, key, initVal);
@@ -429,10 +425,10 @@ public class HashCUS extends LockssServlet {
 	  errMsg = "Can't get default hasher";
 	  return;
 	}
- 	if (isRecord) {
- 	  recordFile = File.createTempFile("HashCUS", ".tmp");
+	if (isRecord) {
+	  recordFile = File.createTempFile("HashCUS", ".tmp");
 	  hasher = new RecordingMessageDigest(hasher, recordFile, MAX_RECORD);
-// 	  recordFile.deleteOnExit();
+	  //	  recordFile.deleteOnExit();
 	}
 	cush = null;
 	if (isContent || isSncuss) {

@@ -1,5 +1,5 @@
 /*
- * $Id: LcapIdentity.java,v 1.25 2004-09-29 06:39:41 tlipkis Exp $
+ * $Id: LcapIdentity.java,v 1.26 2005-03-18 09:09:17 smorabito Exp $
  */
 
 /*
@@ -242,7 +242,7 @@ public class LcapIdentity {
     }
     m_incrPackets++;
     m_totalPackets++;
-    if (msg.getOriginatorID() == m_pid) {
+    if (msg.getOriginatorId() == m_pid) {
       char[] encoded = B64Code.encode(msg.getVerifier());
 
       String verifier = String.valueOf(encoded);

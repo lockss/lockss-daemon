@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapDatagramRouter.java,v 1.5 2005-02-16 19:02:34 tlipkis Exp $
+ * $Id: TestLcapDatagramRouter.java,v 1.6 2005-03-18 09:09:21 smorabito Exp $
  */
 
 /*
@@ -32,7 +32,6 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.protocol;
 
-import java.io.DataInputStream;
 import java.net.*;
 import java.io.*;
 import java.util.*;
@@ -56,7 +55,7 @@ public class TestLcapDatagramRouter extends LockssTestCase {
   private IdentityManager idmgr;
   protected IPAddr testaddr;
   protected PeerIdentity testID;
-  protected LcapMessage testmsg;
+  protected V1LcapMessage testmsg;
   LockssDatagram dg;
   LockssReceivedDatagram rdg;
   private ArrayList testentries;
@@ -82,7 +81,7 @@ public class TestLcapDatagramRouter extends LockssTestCase {
   }
 
   public void testIsEligibleToForward() throws Exception {
-//     LcapMessage msg = createTestMsg("127.0.0.1", 3);
+    //     LcapMessage msg = createTestMsg("127.0.0.1", 3);
     createTestMsg("1.2.3.4", 3);
     TimeBase.step(100000);
     assertTrue(rtr.isEligibleToForward(rdg, testmsg));
@@ -115,7 +114,7 @@ public class TestLcapDatagramRouter extends LockssTestCase {
       fail("can't open test host");
     }
     try {
-      testmsg = new LcapMessage();
+      testmsg = new V1LcapMessage();
     }
     catch (IOException ex) {
       fail("can't create test message");
@@ -136,7 +135,7 @@ public class TestLcapDatagramRouter extends LockssTestCase {
     testmsg.m_challenge = testbytes;
     testmsg.m_verifier = testbytes;
     testmsg.m_hashed = testbytes;
-    testmsg.m_opcode = LcapMessage.CONTENT_POLL_REQ;
+    testmsg.m_opcode = V1LcapMessage.CONTENT_POLL_REQ;
     testmsg.m_entries = testentries = TestPoll.makeEntries(1, 25);
     testmsg.m_archivalID = archivalID;
     dg = new LockssDatagram(LockssDatagram.PROTOCOL_LCAP, testmsg.encodeMsg());

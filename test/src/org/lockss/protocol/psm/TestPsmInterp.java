@@ -1,5 +1,5 @@
 /*
- * $Id: TestPsmInterp.java,v 1.3 2005-03-01 03:50:48 tlipkis Exp $
+ * $Id: TestPsmInterp.java,v 1.4 2005-03-18 09:09:21 smorabito Exp $
  */
 
 /*
@@ -649,7 +649,7 @@ public class TestPsmInterp extends LockssTestCase {
       throw new RuntimeException(e.toString());
     }
   }
-  static class MyLcapMessage extends LcapMessage {
+  static class MyLcapMessage extends V1LcapMessage {
     private String name;
     MyLcapMessage(String name) throws IOException {
       super();

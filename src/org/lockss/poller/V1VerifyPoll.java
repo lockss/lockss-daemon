@@ -1,31 +1,31 @@
 /*
-* $Id: V1VerifyPoll.java,v 1.10 2004-09-29 06:36:20 tlipkis Exp $
+ * $Id: V1VerifyPoll.java,v 1.11 2005-03-18 09:09:16 smorabito Exp $
  */
 
 /*
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
-all rights reserved.
+  Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+  all rights reserved.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
-STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
-IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+  STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+  WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+  IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-Except as contained in this notice, the name of Stanford University shall not
-be used in advertising or otherwise to promote the sale, use or other dealings
-in this Software without prior written authorization from Stanford University.
+  Except as contained in this notice, the name of Stanford University shall not
+  be used in advertising or otherwise to promote the sale, use or other dealings
+  in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.poller;
@@ -34,8 +34,6 @@ import java.io.*;
 import java.security.*;
 import java.util.*;
 
-
-import org.lockss.daemon.*;
 import org.lockss.hasher.*;
 import org.lockss.plugin.*;
 import org.lockss.protocol.*;
@@ -59,17 +57,17 @@ class V1VerifyPoll extends V1Poll {
 		      String hashAlg,
 		      byte[] verifier) {
     super(pollspec, pm, orig, challenge, duration);
-    m_replyOpcode = LcapMessage.VERIFY_POLL_REP;
+    m_replyOpcode = V1LcapMessage.VERIFY_POLL_REP;
     m_tally = new V1PollTally(this,
-                              VERIFY_POLL,
-                              m_createTime,
-                              duration,
-                              1,
-                              hashAlg);
+			      VERIFY_POLL,
+			      m_createTime,
+			      duration,
+			      1,
+			      hashAlg);
     if(idMgr.isLocalIdentity(m_callerID)) {
-       // if we've called the poll, we aren't going to vote
-       // so we set our state to wait for a tally.
-       m_pollstate = PS_WAIT_TALLY;
+      // if we've called the poll, we aren't going to vote
+      // so we set our state to wait for a tally.
+      m_pollstate = PS_WAIT_TALLY;
     }
     originalPoll = m_pollmanager.getPoll(challengeToKey(verifier));
   }
@@ -82,7 +80,7 @@ class V1VerifyPoll extends V1Poll {
   void receiveMessage(LcapMessage msg) {
     log.debug("receiving verify message" + msg.toString());
     int opcode = msg.getOpcode();
-    if(opcode == LcapMessage.VERIFY_POLL_REP) {
+    if(opcode == V1LcapMessage.VERIFY_POLL_REP) {
       startVoteCheck(msg);
     }
   }
@@ -98,7 +96,7 @@ class V1VerifyPoll extends V1Poll {
    * @return true we never do anything here
    */
   boolean scheduleHash(MessageDigest hasher, Deadline timer,
-                       Object key, HashService.Callback callback) {
+		       Object key, HashService.Callback callback) {
     return true;
   }
 
@@ -121,30 +119,30 @@ class V1VerifyPoll extends V1Poll {
 
     }
     TimerQueue.schedule(m_deadline, new PollTimerCallback(), this);
- }
+  }
 
 
- /**
-  * cast our vote in this poll
-  */
- void voteInPoll() {
-   if(m_pollstate != PS_WAIT_TALLY) {
-     try {
-       log.debug("sending our verify reply now.");
-       // send our reply message
-       sendVerifyReply(m_msg);
-     }
-     catch (IOException ex) {
-       m_pollstate = ERR_IO;
-     }
-   }
-   else {
-     log.debug("waiting for tally - not sending reply.");
-   }
- }
+  /**
+   * cast our vote in this poll
+   */
+  void voteInPoll() {
+    if(m_pollstate != PS_WAIT_TALLY) {
+      try {
+	log.debug("sending our verify reply now.");
+	// send our reply message
+	sendVerifyReply(m_msg);
+      }
+      catch (IOException ex) {
+	m_pollstate = ERR_IO;
+      }
+    }
+    else {
+      log.debug("waiting for tally - not sending reply.");
+    }
+  }
 
   private void performHash(LcapMessage msg) {
-    PeerIdentity id = msg.getOriginatorID();
+    PeerIdentity id = msg.getOriginatorId();
     int weight = idMgr.getReputation(id);
     byte[] challenge = msg.getChallenge();
     byte[] hashed = msg.getHashed();
@@ -159,7 +157,7 @@ class V1VerifyPoll extends V1Poll {
     if(isMyPoll())
       updateReputation(agree);
     m_tally.addVote(new Vote(msg, agree),
-                    id, idMgr.isLocalIdentity(id));
+		    id, idMgr.isLocalIdentity(id));
   }
 
   /**
@@ -200,19 +198,19 @@ class V1VerifyPoll extends V1Poll {
     byte[] secret = m_pollmanager.getSecret(msg.getChallenge());
     if(secret == null) {
       log.error("Verify poll reply failed.  Unable to find secret for: "
-                + chal);
+		+ chal);
       return;
     }
     byte[] verifier = m_pollmanager.makeVerifier(msg.getDuration());
-    LcapMessage repmsg = LcapMessage.makeReplyMsg(msg,
-        secret,
-        verifier,
-        null,
-        LcapMessage.VERIFY_POLL_REP,
-        msg.getDuration(),
-        idMgr.getLocalPeerIdentity(Poll.V1_POLL));
+    V1LcapMessage repmsg = V1LcapMessage.makeReplyMsg(msg,
+						      secret,
+						      verifier,
+						      null,
+						      V1LcapMessage.VERIFY_POLL_REP,
+						      msg.getDuration(),
+						      idMgr.getLocalPeerIdentity(Poll.V1_POLL));
 
-    PeerIdentity originator = msg.getOriginatorID();
+    PeerIdentity originator = msg.getOriginatorId();
     log.debug("sending our verification reply to " + originator.toString());
     PollSpec spec = new PollSpec(repmsg);
     au = spec.getCachedUrlSet().getArchivalUnit();
@@ -239,13 +237,12 @@ class V1VerifyPoll extends V1Poll {
     public void timerExpired(Object cookie) {
       log.debug("VerifyTimerCallback called, checking if I should verify");
       if(m_pollstate == PS_WAIT_HASH) {
-        log.debug("I should verify ");
-        LcapMessage msg = (LcapMessage) cookie;
-        performHash(msg);
-        stopVoteCheck();
+	log.debug("I should verify ");
+	LcapMessage msg = (LcapMessage) cookie;
+	performHash(msg);
+	stopVoteCheck();
       }
     }
   }
 
 }
-
