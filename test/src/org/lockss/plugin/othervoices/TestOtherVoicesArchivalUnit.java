@@ -1,5 +1,5 @@
 /*
- * $Id: TestOtherVoicesArchivalUnit.java,v 1.1 2003-12-06 00:58:02 eaalto Exp $
+ * $Id: TestOtherVoicesArchivalUnit.java,v 1.2 2003-12-09 02:19:47 eaalto Exp $
  */
 
 /*
@@ -97,36 +97,36 @@ public class TestOtherVoicesArchivalUnit extends LockssTestCase {
   public void testShouldCacheProperPages() throws Exception {
     URL base = new URL(ROOT_URL);
     int volume = 2;
-    ArchivalUnit pmAu = makeAu(base, volume);
-    theDaemon.getLockssRepository(pmAu);
-    theDaemon.getNodeManager(pmAu);
-    BaseCachedUrlSet cus = new BaseCachedUrlSet(pmAu,
+    ArchivalUnit ovAu = makeAu(base, volume);
+    theDaemon.getLockssRepository(ovAu);
+    theDaemon.getNodeManager(ovAu);
+    BaseCachedUrlSet cus = new BaseCachedUrlSet(ovAu,
         new RangeCachedUrlSetSpec(base.toString()));
 
     String baseUrl = ROOT_URL + "2.1/";
 
     // root pages
-    shouldCacheTest(baseUrl+"index.html", true, pmAu, cus);
-    shouldCacheTest(ROOT_URL+"2.2/index.html", true, pmAu, cus);
+    shouldCacheTest(baseUrl+"index.html", true, ovAu, cus);
+    shouldCacheTest(ROOT_URL+"2.2/index.html", true, ovAu, cus);
 
     // info pages
-    shouldCacheTest(baseUrl+"authors.html", true, pmAu, cus);
+    shouldCacheTest(baseUrl+"authors.html", true, ovAu, cus);
 
     // article html
-    shouldCacheTest(baseUrl+"marcuse/tolerance.html", true, pmAu, cus);
-    shouldCacheTest(baseUrl+"baum/seeunderlove.html", true, pmAu, cus);
-    shouldCacheTest(baseUrl+"adlevy/poetry/index.html", true, pmAu, cus);
-    shouldCacheTest(ROOT_URL+"2.2/rickels/index.html", true, pmAu, cus);
+    shouldCacheTest(baseUrl+"marcuse/tolerance.html", true, ovAu, cus);
+    shouldCacheTest(baseUrl+"baum/seeunderlove.html", true, ovAu, cus);
+    shouldCacheTest(baseUrl+"adlevy/poetry/index.html", true, ovAu, cus);
+    shouldCacheTest(ROOT_URL+"2.2/rickels/index.html", true, ovAu, cus);
 
     // images
-    shouldCacheTest(baseUrl+"marcuse/ill1.jpg", true, pmAu, cus);
-    shouldCacheTest(baseUrl+"images/dachau.jpg", true, pmAu, cus);
-    shouldCacheTest(baseUrl+"adlevy/exp/10_17/10_31", true, pmAu, cus);
-    shouldCacheTest(ROOT_URL+"images/backthin.gif", true, pmAu, cus);
+    shouldCacheTest(baseUrl+"marcuse/ill1.jpg", true, ovAu, cus);
+    shouldCacheTest(baseUrl+"images/dachau.jpg", true, ovAu, cus);
+    shouldCacheTest(baseUrl+"adlevy/exp/10_17/10_31", true, ovAu, cus);
+    shouldCacheTest(ROOT_URL+"images/backthin.gif", true, ovAu, cus);
 
     // stylesheet
-    shouldCacheTest(baseUrl+"blkbird.css", true, pmAu, cus);
-    shouldCacheTest(baseUrl+"poetry/blkbird.css", true, pmAu, cus);
+    shouldCacheTest(baseUrl+"blkbird.css", true, ovAu, cus);
+    shouldCacheTest(baseUrl+"poetry/blkbird.css", true, ovAu, cus);
 
 
     // should not cache these
@@ -134,32 +134,32 @@ public class TestOtherVoicesArchivalUnit extends LockssTestCase {
     //XXX temporary!
     // ram files
     shouldCacheTest("http://mediamogul.seas.upenn.edu:8080/ramgen/writershouse/theorizing/rabinbach/lecture.rm",
-                    false, pmAu, cus);
+                    false, ovAu, cus);
     shouldCacheTest("http://slought.net/toc/archives/residue.php?play1=1049",
-                    false, pmAu, cus);
+                    false, ovAu, cus);
 
     // current issue
-    shouldCacheTest(ROOT_URL, false, pmAu, cus);
-    shouldCacheTest(ROOT_URL+"index2.html", false, pmAu, cus);
+    shouldCacheTest(ROOT_URL, false, ovAu, cus);
+    shouldCacheTest(ROOT_URL+"index2.html", false, ovAu, cus);
 
     // cgi
-    shouldCacheTest(ROOT_URL+"cgi/ov/search.cgi", false, pmAu, cus);
+    shouldCacheTest(ROOT_URL+"cgi/ov/search.cgi", false, ovAu, cus);
 
     // other links
-    shouldCacheTest(ROOT_URL+"statement.html", false, pmAu, cus);
-    shouldCacheTest(ROOT_URL+"forums/", false, pmAu, cus);
+    shouldCacheTest(ROOT_URL+"statement.html", false, ovAu, cus);
+    shouldCacheTest(ROOT_URL+"forums/", false, ovAu, cus);
 
     // archived root page
-    shouldCacheTest(ROOT_URL+"1.1/index.html", false, pmAu, cus);
+    shouldCacheTest(ROOT_URL+"1.1/index.html", false, ovAu, cus);
 
     // archived volume page
-    shouldCacheTest(ROOT_URL+"1.2/gallery/example.html", false, pmAu, cus);
+    shouldCacheTest(ROOT_URL+"1.2/gallery/example.html", false, ovAu, cus);
 
     // LOCKSS
-    shouldCacheTest("http://lockss.stanford.edu", false, pmAu, cus);
+    shouldCacheTest("http://lockss.stanford.edu", false, ovAu, cus);
 
     // other site
-    shouldCacheTest("http://www.icaap.org/", false, pmAu, cus);
+    shouldCacheTest("http://www.icaap.org/", false, ovAu, cus);
   }
 
   private void shouldCacheTest(String url, boolean shouldCache,
@@ -172,8 +172,8 @@ public class TestOtherVoicesArchivalUnit extends LockssTestCase {
     URL url = new URL(ROOT_URL);
 
     String expectedStr = ROOT_URL+"lockss-volume2.html";
-    OtherVoicesArchivalUnit pmAu = makeAu(url, 2);
-    assertEquals(expectedStr, pmAu.makeStartUrl());
+    OtherVoicesArchivalUnit ovAu = makeAu(url, 2);
+    assertEquals(expectedStr, ovAu.makeStartUrl());
   }
 
   public void testPathInUrlThrowsException() throws Exception {
@@ -186,29 +186,29 @@ public class TestOtherVoicesArchivalUnit extends LockssTestCase {
 
   public void testGetUrlStems() throws Exception {
     String stem1 = "http://www.othervoices.org";
-    OtherVoicesArchivalUnit pmAu1 = makeAu(new URL(stem1 + "/"), 2);
-    assertEquals(ListUtil.list(stem1), pmAu1.getUrlStems());
+    OtherVoicesArchivalUnit ovAu1 = makeAu(new URL(stem1 + "/"), 2);
+    assertEquals(ListUtil.list(stem1), ovAu1.getUrlStems());
     String stem2 = "http://www.othervoices.org:8080";
-    OtherVoicesArchivalUnit pmAu2 = makeAu(new URL(stem2 + "/"), 2);
-    assertEquals(ListUtil.list(stem2), pmAu2.getUrlStems());
+    OtherVoicesArchivalUnit ovAu2 = makeAu(new URL(stem2 + "/"), 2);
+    assertEquals(ListUtil.list(stem2), ovAu2.getUrlStems());
   }
 
   public void testShouldDoNewContentCrawlTooEarly() throws Exception {
-    ArchivalUnit pmAu = makeAu(new URL(ROOT_URL), 2);
+    ArchivalUnit ovAu = makeAu(new URL(ROOT_URL), 2);
     AuState aus = new MockAuState(null, TimeBase.nowMs(), -1, -1, null);
-    assertFalse(pmAu.shouldCrawlForNewContent(aus));
+    assertFalse(ovAu.shouldCrawlForNewContent(aus));
   }
 
   public void testShouldDoNewContentCrawlForZero() throws Exception {
-    ArchivalUnit pmAu = makeAu(new URL(ROOT_URL), 2);
+    ArchivalUnit ovAu = makeAu(new URL(ROOT_URL), 2);
     AuState aus = new MockAuState(null, 0, -1, -1, null);
-    assertTrue(pmAu.shouldCrawlForNewContent(aus));
+    assertTrue(ovAu.shouldCrawlForNewContent(aus));
   }
 
   public void testShouldDoNewContentCrawlEachMonth() throws Exception {
-    ArchivalUnit pmAu = makeAu(new URL(ROOT_URL), 2);
+    ArchivalUnit ovAu = makeAu(new URL(ROOT_URL), 2);
     AuState aus = new MockAuState(null, 4 * Constants.WEEK, -1, -1, null);
-    assertTrue(pmAu.shouldCrawlForNewContent(aus));
+    assertTrue(ovAu.shouldCrawlForNewContent(aus));
   }
 
   public void testGetName() throws Exception {
@@ -220,7 +220,7 @@ public class TestOtherVoicesArchivalUnit extends LockssTestCase {
   }
 
   public void testGetFilterRules() throws Exception {
-    OtherVoicesArchivalUnit au = makeAu(new URL(ROOT_URL), 60);
+    OtherVoicesArchivalUnit au = makeAu(new URL(ROOT_URL), 2);
     assertNull(au.getFilterRule(null));
     assertNull(au.getFilterRule("jpg"));
     assertNull(au.getFilterRule("text/html"));

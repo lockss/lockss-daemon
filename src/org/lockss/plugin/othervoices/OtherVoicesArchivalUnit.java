@@ -1,5 +1,5 @@
 /*
- * $Id: OtherVoicesArchivalUnit.java,v 1.1 2003-12-06 00:58:05 eaalto Exp $
+ * $Id: OtherVoicesArchivalUnit.java,v 1.2 2003-12-09 02:19:47 eaalto Exp $
  */
 
 /*
@@ -64,7 +64,6 @@ public class OtherVoicesArchivalUnit extends BaseArchivalUnit {
   protected Logger logger = Logger.getLogger("OtherVoicesPlugin");
 
   private int volume; // the volume index
-  private String journalDir;
 
   protected OtherVoicesArchivalUnit(Plugin myPlugin) {
     super(myPlugin);
@@ -80,15 +79,12 @@ public class OtherVoicesArchivalUnit extends BaseArchivalUnit {
     }
   }
 
-
   protected String makeName() {
     StringBuffer name = new StringBuffer(baseUrl.getHost());
     name.append(", vol. ");
     name.append(volume);
     return name.toString();
   }
-
-
 
   protected String makeStartUrl() {
     String ret;
