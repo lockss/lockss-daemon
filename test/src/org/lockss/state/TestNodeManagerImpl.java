@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.109 2004-03-24 02:24:12 eaalto Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.110 2004-04-08 01:11:57 eaalto Exp $
  */
 
 /*
@@ -320,9 +320,10 @@ public class TestNodeManagerImpl extends LockssTestCase {
                                         Deadline.MAX,
                                         false);
     nodeState.setState(NodeState.CONTENT_RUNNING);
-    nodeManager.handleContentPoll(pollState, results, nodeState);
+    int state = nodeManager.handleContentPoll(pollState, results, nodeState);
     assertEquals(PollState.WON, pollState.getStatus());
     assertEquals(NodeState.OK, nodeState.getState());
+    assertEquals(NodeState.OK, state);
     reputationChangeTest(results);
 
     // - repairing
@@ -334,9 +335,10 @@ public class TestNodeManagerImpl extends LockssTestCase {
                               Deadline.MAX,
                               false);
     nodeState.setState(NodeState.CONTENT_REPLAYING);
-    nodeManager.handleContentPoll(pollState, results, nodeState);
+    state = nodeManager.handleContentPoll(pollState, results, nodeState);
     assertEquals(PollState.REPAIRED, pollState.getStatus());
     assertEquals(NodeState.OK, nodeState.getState());
+    assertEquals(NodeState.OK, state);
     reputationChangeTest(results);
 
     // lost content poll
@@ -352,9 +354,10 @@ public class TestNodeManagerImpl extends LockssTestCase {
                               Deadline.MAX,
                               false);
     nodeState.setState(NodeState.CONTENT_RUNNING);
-    nodeManager.handleContentPoll(pollState, results, nodeState);
+    state = nodeManager.handleContentPoll(pollState, results, nodeState);
     assertEquals(PollState.LOST, pollState.getStatus());
     assertEquals(NodeState.CONTENT_LOST, nodeState.getState());
+    assertEquals(NodeState.CONTENT_LOST, state);
     reputationChangeTest(results);
 
     // - repairing
@@ -366,12 +369,13 @@ public class TestNodeManagerImpl extends LockssTestCase {
                               Deadline.MAX,
                               false);
     nodeState.setState(NodeState.CONTENT_REPLAYING);
-    nodeManager.handleContentPoll(pollState, results, nodeState);
+    state = nodeManager.handleContentPoll(pollState, results, nodeState);
     assertEquals(PollState.UNREPAIRABLE, pollState.getStatus());
     assertEquals(NodeState.DAMAGE_AT_OR_BELOW, nodeState.getState());
+    assertEquals(NodeState.DAMAGE_AT_OR_BELOW, state);
     reputationChangeTest(results);
 
-    // won ranged poll (should do nothing to NodeState)
+    // won ranged poll (should do nothing to NodeState, and return 'OK')
     contentPoll = createPoll(TEST_URL + "/branch1",
                              "a", "b", true, true, 15, 5);
     results = contentPoll.getVoteTally();
@@ -385,12 +389,14 @@ public class TestNodeManagerImpl extends LockssTestCase {
                               Deadline.MAX,
                               false);
     nodeState.setState(NodeState.POSSIBLE_DAMAGE_BELOW);
-    nodeManager.handleContentPoll(pollState, results, nodeState);
+    state = nodeManager.handleContentPoll(pollState, results, nodeState);
     assertEquals(PollState.WON, pollState.getStatus());
     assertEquals(NodeState.POSSIBLE_DAMAGE_BELOW, nodeState.getState());
+    assertEquals(NodeState.OK, state);
     reputationChangeTest(results);
 
-    // lost ranged poll (should set NodeState to 'CONTENT_LOST')
+    // lost ranged poll (should not change NodeState, but return
+    // 'RANGED_CONTENT_LOST')
     contentPoll = createPoll(TEST_URL + "/branch1",
                              "a", "b", true, true, 5, 15);
     results = contentPoll.getVoteTally();
@@ -404,9 +410,10 @@ public class TestNodeManagerImpl extends LockssTestCase {
                               Deadline.MAX,
                               false);
     nodeState.setState(NodeState.POSSIBLE_DAMAGE_BELOW);
-    nodeManager.handleContentPoll(pollState, results, nodeState);
+    state = nodeManager.handleContentPoll(pollState, results, nodeState);
     assertEquals(PollState.LOST, pollState.getStatus());
-    assertEquals(NodeState.CONTENT_LOST, nodeState.getState());
+    assertEquals(NodeState.POSSIBLE_DAMAGE_BELOW, nodeState.getState());
+    assertEquals(NodeState.RANGED_CONTENT_LOST, state);
     reputationChangeTest(results);
   }
 
@@ -428,9 +435,10 @@ public class TestNodeManagerImpl extends LockssTestCase {
                                         Deadline.MAX,
                                         false);
     nodeState.setState(NodeState.SNCUSS_POLL_RUNNING);
-    nodeManager.handleContentPoll(pollState, results, nodeState);
+    int state = nodeManager.handleContentPoll(pollState, results, nodeState);
     assertEquals(PollState.WON, pollState.getStatus());
     assertEquals(NodeState.OK, nodeState.getState());
+    assertEquals(NodeState.OK, state);
     reputationChangeTest(results);
 
     // - repairing
@@ -442,9 +450,10 @@ public class TestNodeManagerImpl extends LockssTestCase {
                               Deadline.MAX,
                               false);
     nodeState.setState(NodeState.SNCUSS_POLL_REPLAYING);
-    nodeManager.handleContentPoll(pollState, results, nodeState);
+    state = nodeManager.handleContentPoll(pollState, results, nodeState);
     assertEquals(PollState.REPAIRED, pollState.getStatus());
     assertEquals(NodeState.OK, nodeState.getState());
+    assertEquals(NodeState.OK, state);
     reputationChangeTest(results);
 
     // won poll (mine)
@@ -462,9 +471,10 @@ public class TestNodeManagerImpl extends LockssTestCase {
                               Deadline.MAX,
                               true);
     nodeState.setState(NodeState.SNCUSS_POLL_RUNNING);
-    nodeManager.handleContentPoll(pollState, results, nodeState);
+    state = nodeManager.handleContentPoll(pollState, results, nodeState);
     assertEquals(PollState.WON, pollState.getStatus());
     assertEquals(NodeState.POSSIBLE_DAMAGE_BELOW, nodeState.getState());
+    assertEquals(NodeState.POSSIBLE_DAMAGE_BELOW, state);
     reputationChangeTest(results);
 
     // - repairing
@@ -476,9 +486,10 @@ public class TestNodeManagerImpl extends LockssTestCase {
                               Deadline.MAX,
                               true);
     nodeState.setState(NodeState.SNCUSS_POLL_REPLAYING);
-    nodeManager.handleContentPoll(pollState, results, nodeState);
+    state = nodeManager.handleContentPoll(pollState, results, nodeState);
     assertEquals(PollState.REPAIRED, pollState.getStatus());
     assertEquals(NodeState.POSSIBLE_DAMAGE_BELOW, nodeState.getState());
+    assertEquals(NodeState.POSSIBLE_DAMAGE_BELOW, state);
     reputationChangeTest(results);
 
     // lost content poll (ownership irrelevant)
@@ -496,9 +507,10 @@ public class TestNodeManagerImpl extends LockssTestCase {
                               Deadline.MAX,
                               false);
     nodeState.setState(NodeState.SNCUSS_POLL_RUNNING);
-    nodeManager.handleContentPoll(pollState, results, nodeState);
+    state = nodeManager.handleContentPoll(pollState, results, nodeState);
     assertEquals(PollState.REPAIRING, pollState.getStatus());
     assertEquals(NodeState.NEEDS_REPAIR, nodeState.getState());
+    assertEquals(NodeState.NEEDS_REPAIR, state);
     reputationChangeTest(results);
 
     // - repairing
@@ -510,9 +522,10 @@ public class TestNodeManagerImpl extends LockssTestCase {
                               Deadline.MAX,
                               false);
     nodeState.setState(NodeState.SNCUSS_POLL_REPLAYING);
-    nodeManager.handleContentPoll(pollState, results, nodeState);
+    state = nodeManager.handleContentPoll(pollState, results, nodeState);
     assertEquals(PollState.UNREPAIRABLE, pollState.getStatus());
     assertEquals(NodeState.UNREPAIRABLE_SNCUSS, nodeState.getState());
+    assertEquals(NodeState.UNREPAIRABLE_SNCUSS, state);
     reputationChangeTest(results);
   }
 
@@ -532,9 +545,10 @@ public class TestNodeManagerImpl extends LockssTestCase {
                                         Deadline.MAX,
                                         false);
     nodeState.setState(NodeState.NAME_RUNNING);
-    nodeManager.handleNamePoll(pollState, results, nodeState);
+    int state = nodeManager.handleNamePoll(pollState, results, nodeState);
     assertEquals(PollState.WON, pollState.getStatus());
     assertEquals(NodeState.OK, nodeState.getState());
+    assertEquals(NodeState.OK, state);
     reputationChangeTest(results);
 
     // - repairing
@@ -546,9 +560,10 @@ public class TestNodeManagerImpl extends LockssTestCase {
                               Deadline.MAX,
                               false);
     nodeState.setState(NodeState.NAME_REPLAYING);
-    nodeManager.handleNamePoll(pollState, results, nodeState);
+    state = nodeManager.handleNamePoll(pollState, results, nodeState);
     assertEquals(PollState.WON, pollState.getStatus());
     assertEquals(NodeState.NEEDS_REPLAY_POLL, nodeState.getState());
+    assertEquals(NodeState.NEEDS_REPLAY_POLL, state);
     reputationChangeTest(results);
 
     // won name poll (mine)
@@ -564,9 +579,10 @@ public class TestNodeManagerImpl extends LockssTestCase {
                               Deadline.MAX,
                               true);
     nodeState.setState(NodeState.NAME_RUNNING);
-    nodeManager.handleNamePoll(pollState, results, nodeState);
+    state = nodeManager.handleNamePoll(pollState, results, nodeState);
     assertEquals(PollState.WON, pollState.getStatus());
     assertEquals(NodeState.DAMAGE_AT_OR_BELOW, nodeState.getState());
+    assertEquals(NodeState.DAMAGE_AT_OR_BELOW, state);
     reputationChangeTest(results);
 
     // - repairing
@@ -578,9 +594,10 @@ public class TestNodeManagerImpl extends LockssTestCase {
                               Deadline.MAX,
                               true);
     nodeState.setState(NodeState.NAME_REPLAYING);
-    nodeManager.handleNamePoll(pollState, results, nodeState);
+    state = nodeManager.handleNamePoll(pollState, results, nodeState);
     assertEquals(PollState.REPAIRED, pollState.getStatus());
     assertEquals(NodeState.NEEDS_REPLAY_POLL, nodeState.getState());
+    assertEquals(NodeState.NEEDS_REPLAY_POLL, state);
     reputationChangeTest(results);
 
     // lost name poll (ownership irrelevant)
@@ -596,9 +613,10 @@ public class TestNodeManagerImpl extends LockssTestCase {
                               Deadline.MAX,
                               false);
     nodeState.setState(NodeState.NAME_RUNNING);
-    nodeManager.handleNamePoll(pollState, results, nodeState);
+    state = nodeManager.handleNamePoll(pollState, results, nodeState);
     assertEquals(PollState.REPAIRING, pollState.getStatus());
     assertEquals(NodeState.WRONG_NAMES, nodeState.getState());
+    assertEquals(NodeState.WRONG_NAMES, state);
     reputationChangeTest(results);
 
     // - repairing
@@ -610,12 +628,13 @@ public class TestNodeManagerImpl extends LockssTestCase {
                               Deadline.MAX,
                               false);
     nodeState.setState(NodeState.NAME_REPLAYING);
-    nodeManager.handleNamePoll(pollState, results, nodeState);
+    state = nodeManager.handleNamePoll(pollState, results, nodeState);
     assertEquals(PollState.UNREPAIRABLE, pollState.getStatus());
     assertEquals(NodeState.UNREPAIRABLE_NAMES, nodeState.getState());
+    assertEquals(NodeState.UNREPAIRABLE_NAMES, state);
     reputationChangeTest(results);
 
-    // won ranged poll (should do nothing to NodeState)
+    // won ranged poll (should do nothing to NodeState, and return 'OK')
     namePoll = createPoll(TEST_URL + "/branch1",
                              "a", "b", false, true, 15, 5);
     results = namePoll.getVoteTally();
@@ -629,12 +648,14 @@ public class TestNodeManagerImpl extends LockssTestCase {
                               Deadline.MAX,
                               false);
     nodeState.setState(NodeState.POSSIBLE_DAMAGE_BELOW);
-    nodeManager.handleNamePoll(pollState, results, nodeState);
+    state = nodeManager.handleNamePoll(pollState, results, nodeState);
     assertEquals(PollState.WON, pollState.getStatus());
     assertEquals(NodeState.POSSIBLE_DAMAGE_BELOW, nodeState.getState());
+    assertEquals(NodeState.OK, state);
     reputationChangeTest(results);
 
-    // lost ranged poll (should set NodeState to 'WRONG_NAMES')
+    // lost ranged poll (should to nothing to NodeState, and return
+    // 'RANGED_WRONG_NAMES')
     namePoll = createPoll(TEST_URL + "/branch1",
                              "a", "b", false, true, 5, 15);
     results = namePoll.getVoteTally();
@@ -648,9 +669,10 @@ public class TestNodeManagerImpl extends LockssTestCase {
                               Deadline.MAX,
                               false);
     nodeState.setState(NodeState.POSSIBLE_DAMAGE_BELOW);
-    nodeManager.handleNamePoll(pollState, results, nodeState);
+    state = nodeManager.handleNamePoll(pollState, results, nodeState);
     assertEquals(PollState.REPAIRING, pollState.getStatus());
-    assertEquals(NodeState.WRONG_NAMES, nodeState.getState());
+    assertEquals(NodeState.POSSIBLE_DAMAGE_BELOW, nodeState.getState());
+    assertEquals(NodeState.RANGED_WRONG_NAMES, state);
     reputationChangeTest(results);
   }
 
@@ -715,9 +737,31 @@ public class TestNodeManagerImpl extends LockssTestCase {
     assertTrue(delNode.isDeleted());
   }
 
-  public void testHandleSNNamePollError() throws Exception {
+  public void testHandleSNNamePollErrorNoContent() throws Exception {
     CachedUrlSet cus = getCus(mau, TEST_URL);
+
     NodeState nodeState = nodeManager.getNodeState(cus);
+    // create erroneous SN name poll
+    namePoll = createPoll(TEST_URL, ".", null, false, true, 15, 5);
+    PollTally results = namePoll.getVoteTally();
+
+    // clear polls
+    pollManager.thePolls.remove(TEST_URL);
+
+    // run poll
+    nodeManager.startPoll(cus, results, false);
+    nodeManager.updatePollResults(cus, results);
+    // shouldn't call SNCUSS with no content
+    assertEquals(NodeState.POSSIBLE_DAMAGE_BELOW, nodeState.getState());
+    assertNull(pollManager.getPollStatus(TEST_URL));
+  }
+
+  public void testHandleSNNamePollErrorContent() throws Exception {
+    CachedUrlSet cus = getCus(mau, TEST_URL);
+
+    NodeState nodeState = nodeManager.getNodeState(cus);
+    // set content
+    ((MockCachedUrlSet)nodeState.getCachedUrlSet()).setHasContent(true);
     // create erroneous SN name poll
     namePoll = createPoll(TEST_URL, ".", null, false, true, 15, 5);
     PollTally results = namePoll.getVoteTally();
@@ -939,8 +983,12 @@ public class TestNodeManagerImpl extends LockssTestCase {
     // change to 'needs poll' version
     nodeState.setState(NodeState.UNREPAIRABLE_NAMES);
     stateCheckTest(nodeState, Poll.CONTENT_POLL, false, false, false,  false, true);
+    assertEquals(NodeState.UNREPAIRABLE_NAMES_WAITING, nodeState.getState());
+    stateCheckTest(nodeState, Poll.CONTENT_POLL, false, false, false,  false, true);
     assertEquals(NodeState.UNREPAIRABLE_NAMES_NEEDS_POLL, nodeState.getState());
     nodeState.setState(NodeState.UNREPAIRABLE_SNCUSS);
+    stateCheckTest(nodeState, Poll.CONTENT_POLL, false, false, false,  false, true);
+    assertEquals(NodeState.UNREPAIRABLE_SNCUSS_WAITING, nodeState.getState());
     stateCheckTest(nodeState, Poll.CONTENT_POLL, false, false, false,  false, true);
     assertEquals(NodeState.UNREPAIRABLE_SNCUSS_NEEDS_POLL, nodeState.getState());
 
@@ -1008,6 +1056,8 @@ public class TestNodeManagerImpl extends LockssTestCase {
     // subdivide and recurse, plus SNCUSS
     // change to 'POSSIBLE_DAMAGE_HERE'
     nodeState.setState(NodeState.DAMAGE_AT_OR_BELOW);
+    // make sure there's content
+    ((MockCachedUrlSet)nodeState.getCachedUrlSet()).setHasContent(true);
     stateCheckTest(nodeState, Poll.NAME_POLL, false, true, false,  false, true);
     assertEquals(NodeState.POSSIBLE_DAMAGE_HERE, nodeState.getState());
 
@@ -1042,9 +1092,11 @@ public class TestNodeManagerImpl extends LockssTestCase {
     }
 
     if (shouldScheduleName || shouldScheduleContent || shouldRepair) {
-      assertTrue(nodeManager.checkCurrentState(pollState, results, node, true));
+      assertTrue(nodeManager.checkCurrentState(pollState, results, node,
+                                               node.getState(), true));
       assertNull(pollManager.getPollStatus(TEST_URL));
-      assertTrue(nodeManager.checkCurrentState(pollState, results, node, false));
+      assertTrue(nodeManager.checkCurrentState(pollState, results, node,
+                                               node.getState(), false));
       if (shouldScheduleName) {
         assertEquals(MockPollManager.NAME_REQUESTED,
                      pollManager.getPollStatus(TEST_URL));
@@ -1065,7 +1117,8 @@ public class TestNodeManagerImpl extends LockssTestCase {
       }
       pollManager.thePolls.remove(TEST_URL);
     } else {
-      assertFalse(nodeManager.checkCurrentState(pollState, results, node, false));
+      assertFalse(nodeManager.checkCurrentState(pollState, results, node,
+                                                node.getState(), false));
       assertNull(pollManager.getPollStatus(TEST_URL));
     }
   }
@@ -1124,9 +1177,9 @@ public class TestNodeManagerImpl extends LockssTestCase {
   }
 
   static CachedUrlSet makeFakeCus(MockArchivalUnit mau,
-                                           String startUrl,
-                                           int numBranches,
-                                           int numFiles) throws Exception {
+                                  String startUrl,
+                                  int numBranches,
+                                  int numFiles) throws Exception {
     Vector files = new Vector(numFiles * numBranches);
     Vector branches = new Vector(numBranches);
 

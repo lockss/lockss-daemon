@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManager.java,v 1.28 2004-02-07 06:47:16 eaalto Exp $
+ * $Id: NodeManager.java,v 1.29 2004-04-08 01:11:58 eaalto Exp $
  */
 
 /*
@@ -55,11 +55,11 @@ public interface NodeManager extends LockssAuManager {
    * Should we allow a poll on this cached url set
    * @param cus the cached url set that represents the poll we want
    * to run.
-   * @param state the polly tally representing the poll state
+   * @param pollState the polly tally representing the poll state
    * @return false if the poll has no matching node state or
    * the poll would include damaged content.
    */
-  public boolean shouldStartPoll(CachedUrlSet cus, Tallier state);
+  public boolean shouldStartPoll(CachedUrlSet cus, Tallier pollState);
 
   /**
    * Update a node state with current poll results
@@ -107,18 +107,4 @@ public interface NodeManager extends LockssAuManager {
    * @param auLock the Activity lock for the whole AU
    */
   public void scheduleRepairs(ActivityRegulator.Lock auLock);
-
-  /**
-   * For testing only.  Forces the NodeManager to run a treewalk, if none
-   * currently running.
-   */
-  public void forceTreeWalk();
-
-  /**
-   * For testing only.  Forces the NodeManager to call a top level poll, if none
-   * currently running.
-   */
-  public void forceTopLevelPoll();
-
-
 }

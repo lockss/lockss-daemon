@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkHandler.java,v 1.60 2004-04-01 02:44:32 eaalto Exp $
+ * $Id: TreeWalkHandler.java,v 1.61 2004-04-08 01:11:58 eaalto Exp $
  */
 
 /*
@@ -375,7 +375,7 @@ public class TreeWalkHandler {
     // check recent histories to see if something needs fixing
     PollHistory lastHistory = node.getLastPollHistory();
     try {
-      if (manager.checkCurrentState(lastHistory, null, node, true)) {
+      if (manager.checkCurrentState(lastHistory, node)) {
         // mark node for action
         logger.debug2("Found necessary poll. Caching info and aborting treewalk...");
         cachedHistory = lastHistory;
@@ -401,7 +401,7 @@ public class TreeWalkHandler {
       logger.debug2("Calling poll on node '" +
                     cachedNode.getCachedUrlSet().getUrl() + "'");
       try {
-        manager.checkCurrentState(cachedHistory, null, cachedNode, false);
+        manager.callNecessaryPolls(cachedHistory, cachedNode);
       } catch (Exception e) {
         logger.error("Error calling poll: ", e);
       }

@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.175 2004-04-01 02:44:32 eaalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.176 2004-04-08 01:11:58 eaalto Exp $
  */
 
 /*
@@ -360,11 +360,13 @@ public class NodeManagerImpl
     ((NodeStateImpl)nodeState).addPollState(pollState);
     // store nodestate for active poll
     activeNodes.put(tally.getPollKey(), nodeState);
-    logger.debug2("Starting poll for url '" +
-                  nodeState.getCachedUrlSet().getUrl() + " " +
-                  pollState.getLwrBound() + "-" +
-                  pollState.getUprBound() + "'");
-    logger.debug2("New node state: "+nodeState.getStateString());
+    if (logger.isDebug2()) {
+      logger.debug2("Starting poll for url '" +
+                    nodeState.getCachedUrlSet().getUrl() + " " +
+                    pollState.getLwrBound() + "-" +
+                    pollState.getUprBound() + "'");
+      logger.debug2("New node state: " + nodeState.getStateString());
+    }
   }
 
   public void updatePollResults(CachedUrlSet cus, Tallier results) {
@@ -424,17 +426,15 @@ public class NodeManagerImpl
                                               + "non-existent poll.");
     }
 
+    CachedUrlSetSpec spec = results.getCachedUrlSet().getSpec();
     // determine if ranged, as those don't update as much
-    boolean isRangedPoll =
-        results.getCachedUrlSet().getSpec().isRangeRestricted();
-    int lastState = -1;
+    boolean isRangedPoll = spec.isRangeRestricted();
 
     // log if current state is invalid for finishing poll
     if (!isRangedPoll) {
-      if (!checkValidStatesForResults(pollState, nodeState,
-                                      results.getCachedUrlSet().getSpec())) {
+      if (!checkValidStatesForResults(pollState, nodeState,spec)) {
         StringBuffer buffer = new StringBuffer();
-        if (results.getCachedUrlSet().getSpec().isSingleNode()) {
+        if (spec.isSingleNode()) {
           buffer.append("Single Node ");
         }
         buffer.append(pollState.getTypeString());
@@ -447,6 +447,7 @@ public class NodeManagerImpl
     }
 
     // update poll state properly for errors
+    int stateToUse = -1;
     try {
       boolean notFinished = false;
       switch (results.getTallyResult()) {
@@ -470,13 +471,11 @@ public class NodeManagerImpl
           break;
         case Tallier.RESULT_WON:
         case Tallier.RESULT_LOST:
-          // set last state in case it changes
-          lastState = nodeState.getState();
           // update depending on poll type if successful
           if (results.getType() == Poll.CONTENT_POLL) {
-            handleContentPoll(pollState, results, nodeState);
+            stateToUse = handleContentPoll(pollState, results, nodeState);
           } else if (results.getType() == Poll.NAME_POLL) {
-            handleNamePoll(pollState, results, nodeState);
+            stateToUse = handleNamePoll(pollState, results, nodeState);
           } else {
             String err = "Request to update state for unknown type: " +
                 results.getType();
@@ -525,24 +524,15 @@ public class NodeManagerImpl
 
         // take next appropriate action on node if needed
         // only check state for ranged polls if they changed the state
-        boolean checkState = !isRangedPoll ||
-            ((lastState != -1) && (lastState != nodeState.getState()));
-        if (checkState) {
-          try {
-            logger.debug3("New node state: " + nodeState.getStateString());
-            checkCurrentState(pollState, results, nodeState, false);
-          } catch (IOException ie) {
-            logger.error("Unable to continue actions on node: ", ie);
-            pollState.status = PollState.ERR_IO;
-          }
+        try {
+          logger.debug3("New node state: " + nodeState.getStateString());
+          callNecessaryPolls(pollState, results, nodeState, stateToUse);
+        } catch (IOException ie) {
+          logger.error("Unable to continue actions on node: ", ie);
+          pollState.status = PollState.ERR_IO;
         }
       }
     } finally {
-      if ((isRangedPoll) && (lastState != -1)) {
-        // if it was a ranged poll, may have temporarily set state to
-        // CONTENT_LOST, so restore last state
-        nodeState.setState(lastState);
-      }
       // close the poll and update the node state
       closePoll(pollState, results.getDuration(), results.getPollVotes(),
                 nodeState);
@@ -680,18 +670,21 @@ public class NodeManagerImpl
 
   /**
    * Handles state for successful content polls.  Sets the PollState and
-   * NodeState appropriately
+   * NodeState appropriately, and returns the state to be used for
+   * 'checkCurrentState'.
    * @param pollState PollState
    * @param results Tallier
    * @param nodeState NodeState
+   * @return int for the state to use
    */
-  void handleContentPoll(PollState pollState, Tallier results,
-                         NodeState nodeState) {
+  int handleContentPoll(PollState pollState, Tallier results,
+                        NodeState nodeState) {
     logger.debug("handling content poll results: " + results);
 
     // only update NodeState if not ranged poll
     boolean isRangedPoll =
         results.getCachedUrlSet().getSpec().isRangeRestricted();
+    int state = NodeState.OK;
 
     if (results.getTallyResult() == Tallier.RESULT_WON) {
       // if agree
@@ -715,7 +708,7 @@ public class NodeManagerImpl
         switch (nodeState.getState()) {
           case NodeState.CONTENT_RUNNING:
           case NodeState.CONTENT_REPLAYING:
-            nodeState.setState(NodeState.OK);
+            state = NodeState.OK;
             if (damagedNodes.containsWithDamage(nodeState.getCachedUrlSet().getUrl())) {
               // nodes are no longer damaged when a normal content poll succeeds
               logger.debug2("removing from damaged node list");
@@ -725,12 +718,13 @@ public class NodeManagerImpl
           case NodeState.SNCUSS_POLL_RUNNING:
           case NodeState.SNCUSS_POLL_REPLAYING:
             if (results.isMyPoll()) {
-              nodeState.setState(NodeState.POSSIBLE_DAMAGE_BELOW);
+              state = NodeState.POSSIBLE_DAMAGE_BELOW;
             } else {
               // not mine, so done
-              nodeState.setState(NodeState.OK);
+              state = NodeState.OK;
             }
         }
+        nodeState.setState(state);
       }
       // for ranged polls, do nothing if won
 
@@ -760,43 +754,48 @@ public class NodeManagerImpl
         // change node state accordingly
         switch (nodeState.getState()) {
           case NodeState.CONTENT_RUNNING:
-            nodeState.setState(NodeState.CONTENT_LOST);
+            state = NodeState.CONTENT_LOST;
             // nodes are damaged when a normal content poll fails
             logger.debug2("adding to damaged node list");
             damagedNodes.addToDamage(nodeState.getCachedUrlSet().getUrl());
             break;
           case NodeState.CONTENT_REPLAYING:
-            nodeState.setState(NodeState.DAMAGE_AT_OR_BELOW);
+            state = NodeState.DAMAGE_AT_OR_BELOW;
             break;
           case NodeState.SNCUSS_POLL_RUNNING:
-            nodeState.setState(NodeState.NEEDS_REPAIR);
+            state = NodeState.NEEDS_REPAIR;
             break;
           case NodeState.SNCUSS_POLL_REPLAYING:
-            nodeState.setState(NodeState.UNREPAIRABLE_SNCUSS);
+            state = NodeState.UNREPAIRABLE_SNCUSS;
             break;
         }
+        nodeState.setState(state);
       } else {
         // if ranged, set temporary state
-        nodeState.setState(NodeState.CONTENT_LOST);
+        state = NodeState.RANGED_CONTENT_LOST;
       }
     }
+    return state;
   }
 
   /**
    * Handles state for successful name polls.  Updates PollState and NodeState
-   * appropriately.
+   * appropriately, and returns the state to be used for
+   * 'checkCurrentState'.
    * @param pollState PollState
    * @param results Tallier
    * @param nodeState NodeState
+   * @return int the state to use
    */
-  void handleNamePoll(PollState pollState, Tallier results,
-                      NodeState nodeState) {
+  int handleNamePoll(PollState pollState, Tallier results,
+                     NodeState nodeState) {
     logger.debug2("handling name poll results " + results);
 
     // only update NodeState if not ranged poll
     boolean isRangedPoll =
         results.getCachedUrlSet().getSpec().isRangeRestricted();
 
+    int state = NodeState.OK;
     if (results.getTallyResult() == Tallier.RESULT_WON) {
       // if agree
 
@@ -819,15 +818,16 @@ public class NodeManagerImpl
         switch (nodeState.getState()) {
           case NodeState.NAME_RUNNING:
             if (results.isMyPoll()) {
-              nodeState.setState(NodeState.DAMAGE_AT_OR_BELOW);
+              state = NodeState.DAMAGE_AT_OR_BELOW;
             } else {
-              nodeState.setState(NodeState.OK);
+              state = NodeState.OK;
             }
             break;
           case NodeState.NAME_REPLAYING:
             //XXX should replay content poll, but treated as NEEDS_POLL for now
-            nodeState.setState(NodeState.NEEDS_REPLAY_POLL);
+            state = NodeState.NEEDS_REPLAY_POLL;
         }
+        nodeState.setState(state);
       }
     } else {
       // if disagree
@@ -846,38 +846,89 @@ public class NodeManagerImpl
         // change node state accordingly
         switch (nodeState.getState()) {
           case NodeState.NAME_RUNNING:
-            nodeState.setState(NodeState.WRONG_NAMES);
+            state = NodeState.WRONG_NAMES;
             break;
           case NodeState.NAME_REPLAYING:
-            nodeState.setState(NodeState.UNREPAIRABLE_NAMES);
+            state = NodeState.UNREPAIRABLE_NAMES;
         }
+        nodeState.setState(state);
       } else {
         // if ranged, set temporary state
-        nodeState.setState(NodeState.WRONG_NAMES);
+        state = NodeState.RANGED_WRONG_NAMES;
       }
     }
+    return state;
+  }
+
+  /**
+   * Looks at the state of the node, and takes appropriate action.  Called
+   * from the treewalk.
+   * @param lastOrCurrentPoll the most recent poll (could be active)
+   * @param nodeState the {@link NodeState}
+   * @throws IOException
+   */
+  void callNecessaryPolls(PollState lastOrCurrentPoll, NodeState nodeState)
+      throws IOException {
+    callNecessaryPolls(lastOrCurrentPoll, null, nodeState,
+                       nodeState.getState());
+  }
+
+  /**
+   * Looks at the state of the node, and takes appropriate action.
+   * Uses 'stateToUse' instead of 'nodeState.getState()' to allow special cases
+   * such as ranged polls.  Called from the node manager.
+   * @param lastOrCurrentPoll the most recent poll (could be active)
+   * @param results the {@link Tallier}, if available
+   * @param nodeState the {@link NodeState}
+   * @param stateToUse the int state to use for checking
+   * @throws IOException
+   */
+  private void callNecessaryPolls(PollState lastOrCurrentPoll, Tallier results,
+                                  NodeState nodeState, int stateToUse)
+      throws IOException {
+    checkCurrentState(lastOrCurrentPoll, results, nodeState, stateToUse, false);
+  }
+
+
+  /**
+   * Looks at the state of the node, and indicates if a poll needs to be called.
+   * It does not schedule polls, which should be done via
+   * 'callNecessaryPolls()'.  Called from the treewalk
+   * @param lastOrCurrentPoll the most recent poll (could be active)
+   * @param nodeState the {@link NodeState}
+   * @return true if action should be taken
+   * @throws IOException
+   */
+  boolean checkCurrentState(PollState lastOrCurrentPoll, NodeState nodeState)
+      throws IOException {
+    return checkCurrentState(lastOrCurrentPoll, null, nodeState,
+                             nodeState.getState(), true);
   }
 
   /**
    * Looks at the state of the node, and takes appropriate action.  It calls
    * polls only if 'reportOnly' is false, though some conditions, such as
    * needing a top-level poll, do cause the state to change regardless.
+   * Uses 'stateToUse' instead of 'nodeState.getState()' to allow special cases
+   * such as ranged polls.
    * @param lastOrCurrentPoll the most recent poll (could be active)
    * @param results the {@link Tallier}, if available
    * @param nodeState the {@link NodeState}
+   * @param stateToUse the int state to use for checking
    * @param reportOnly if true, nothing is actually scheduled
-   * @return true if action taken
+   * @return true if action taken (or to be taken)
    * @throws IOException
    */
-  boolean checkCurrentState(PollState lastOrCurrentPoll, Tallier results,
-                            NodeState nodeState, boolean reportOnly)
+  boolean checkCurrentState(PollState lastOrCurrentPoll,
+                            Tallier results, NodeState nodeState,
+                            int stateToUse, boolean reportOnly)
       throws IOException {
     // only log when in treewalk (once) or updating results
     if ((reportOnly) || (results!=null)) {
       logger.debug3("Checking node: " + nodeState.getCachedUrlSet().getUrl());
       logger.debug3("State: " + nodeState.getStateString());
     }
-    switch (nodeState.getState()) {
+    switch (stateToUse) {
       case NodeState.NEEDS_POLL:
       case NodeState.NEEDS_REPLAY_POLL:
         // call content poll
@@ -892,6 +943,7 @@ public class NodeManagerImpl
         }
         return true;
       case NodeState.CONTENT_LOST:
+      case NodeState.RANGED_CONTENT_LOST:
         if (!reportOnly) {
           if ((results!=null) &&
               (results.getCachedUrlSet().getSpec().isRangeRestricted())) {
@@ -928,11 +980,17 @@ public class NodeManagerImpl
                                                lastHistory.uprBound);
           if ((lastHistory.isOurPoll())) {
             // if should recall and is our incomplete poll
-            if (!pollManager.isPollRunning(lastHistory.getType(), lastPollSpec)) {
+            if (pollManager.isPollRunning(lastHistory.getType(), lastPollSpec)) {
+              logger.debug2("unfinished poll already running, so not"+
+                            " recalling.");
+            } else {
               // if this poll should be running make sure it is running.
-              if (restartNonexpiredPolls ||
-                  ((lastHistory.startTime + lastHistory.duration) <
+              if (!restartNonexpiredPolls &&
+                  ((lastHistory.startTime + lastHistory.duration) >
                   TimeBase.nowMs())) {
+               logger.debug2("unfinished poll's duration not elapsed, so not"+
+                             " recalling.");
+              } else {
                 // only restart if it has expired, since other caches will still be
                 // running it otherwise
                 if (!reportOnly) {
@@ -960,13 +1018,7 @@ public class NodeManagerImpl
                   callLastPoll(lastPollSpec, lastHistory);
                 }
                 return true;
-              } else {
-                logger.debug2("unfinished poll's duration not elapsed, so not"+
-                              " recalling.");
               }
-            } else {
-              logger.debug2("unfinished poll already running, so not"+
-                            " recalling.");
             }
           } else {
             if (reportOnly) {
@@ -992,6 +1044,7 @@ public class NodeManagerImpl
         }
         return false;
       case NodeState.WRONG_NAMES:
+      case NodeState.RANGED_WRONG_NAMES:
         // go through names, fixing (if have list)
         // if not active, recall name poll
         if (!reportOnly) {
@@ -1021,14 +1074,14 @@ public class NodeManagerImpl
           // information)
           if (((lastOrCurrentPoll.getType() == Poll.NAME_POLL) ||
                (lastOrCurrentPoll.getLwrBound() == null)) &&
-              (!nodeState.getCachedUrlSet().getSpec().isAu())) {
+              nodeState.getCachedUrlSet().hasContent()) {
+            // only call SNCP if has content, since presence of content was
+            // checked in the name poll
             logger.debug2("calling single node content poll on node's contents");
-            //XXX once we're checking the content bit in the name poll,
-            // only call SNCP if has content
             nodeState.setState(NodeState.POSSIBLE_DAMAGE_HERE);
             callSingleNodeContentPoll(nodeState.getCachedUrlSet());
           } else {
-            // no damage here since ranged or top-level
+            // no damage here since ranged or no content
             logger.debug2("setting to 'possible damage below'");
             nodeState.setState(NodeState.POSSIBLE_DAMAGE_BELOW);
           }
@@ -1064,11 +1117,19 @@ public class NodeManagerImpl
         }
         return true;
       case NodeState.UNREPAIRABLE_SNCUSS:
+        //XXX delay by at least one treewalk via state shifting
+        nodeState.setState(NodeState.UNREPAIRABLE_SNCUSS_WAITING);
+        return false;
+      case NodeState.UNREPAIRABLE_SNCUSS_WAITING:
         //XXX check times, and changed to 'UNREPAIRABLE_XXX_NEEDS_POLL" if long enough
         // if long enough since first damage, change to 'UNKNOWN'
         nodeState.setState(NodeState.UNREPAIRABLE_SNCUSS_NEEDS_POLL);
         return false;
       case NodeState.UNREPAIRABLE_NAMES:
+        //XXX delay by at least one treewalk via state shifting
+        nodeState.setState(NodeState.UNREPAIRABLE_NAMES_WAITING);
+        return false;
+      case NodeState.UNREPAIRABLE_NAMES_WAITING:
         //XXX check times, and changed to 'UNREPAIRABLE_XXX_NEEDS_POLL" if long enough
         // if long enough since first damage, change to 'UNKNOWN'
         nodeState.setState(NodeState.UNREPAIRABLE_NAMES_NEEDS_POLL);

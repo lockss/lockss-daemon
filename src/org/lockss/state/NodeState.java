@@ -1,5 +1,5 @@
 /*
- * $Id: NodeState.java,v 1.13 2004-03-11 02:30:15 eaalto Exp $
+ * $Id: NodeState.java,v 1.14 2004-04-08 01:11:58 eaalto Exp $
  */
 
 /*
@@ -122,6 +122,24 @@ public interface NodeState {
    * Integer representing the 'list of names is unrepairable, time to try again' state.
    */
   public static final int UNREPAIRABLE_NAMES_NEEDS_POLL = 19;
+
+  /**
+   * Integer representing the 'content lost' state for a ranged poll.
+   */
+  public static final int RANGED_CONTENT_LOST = 20;
+
+  /**
+   * Integer representing the 'wrong names' state for a ranged poll.
+   */
+  public static final int RANGED_WRONG_NAMES = 21;
+  /**
+   * Integer representing the 'waiting' state for an unrepairable sncuss poll.
+   */
+  public static final int UNREPAIRABLE_SNCUSS_WAITING = 22;
+  /**
+   * Integer representing the 'waiting' state for an unrepairable name poll.
+   */
+  public static final int UNREPAIRABLE_NAMES_WAITING = 23;
 
   /**
    * Returns the last hash duration.
