@@ -1,5 +1,5 @@
 /*
- * $Id: StatusTable.java,v 1.19 2003-03-26 23:12:04 tal Exp $
+ * $Id: StatusTable.java,v 1.20 2003-03-27 23:52:53 tal Exp $
  */
 
 /*
@@ -205,11 +205,10 @@ public class StatusTable {
    * or a Reference.
    */
   public static Object getActualValue(Object value) {
-    if (value instanceof DisplayedValue) {
-      return getActualValue(((DisplayedValue)value).getValue());
-    } else if (value instanceof Reference) {
-      return getActualValue(((Reference)value).getValue());
-    } else return value;
+    while (value instanceof EmbeddedValue) {
+      value = ((EmbeddedValue)value).getValue();
+    }
+    return value;
   }
 
   /**
@@ -236,14 +235,25 @@ public class StatusTable {
   }
 
   /**
-   * Wrapper for a value with additional display properties
+   * Interface for embedded values
    */
-  public static class DisplayedValue {
+  public interface EmbeddedValue {
+    public Object getValue();
+  }
+
+  /**
+   * Wrapper for a value with additional display properties.
+   */
+  public static class DisplayedValue implements EmbeddedValue {
     private Object value;
     private String color = null;
 
-    /** Create a DisplayedValue with the specified value */
+    /** Create a DisplayedValue with the specified value.  Any value is
+     * legal except a Reference or another DisplayedValue. */
     public DisplayedValue(Object value) {
+      if (value instanceof EmbeddedValue) {
+	throw new IllegalArgumentException("Value of a DisplayedValue can't be a DisplayedValue or Reference");
+      }
       this.value = value;
     }
 
@@ -268,18 +278,23 @@ public class StatusTable {
   /**
    * Object which refers to another table
    */
-  public static class Reference {
+  public static class Reference implements EmbeddedValue {
     private Object value;
     private String tableName;
     private String key;
 
     /**
-     * @param value value to be displayed
+     * Create a Reference object with an embedded value.
+     * @param value value to be displayed.  Any value is
+     * legal except a Reference or a DisplayedValue.
      * @param tableName name of the {@link StatusTable} that this 
      * links to
      * @param key object further specifying the table this links to
      */
     public Reference(Object value, String tableName, String key){
+      if (value instanceof Reference) {
+	throw new IllegalArgumentException("Value of a Reference can't be a Reference");
+      }
       this.value = value;
       this.tableName = tableName;
       this.key = key;

@@ -1,5 +1,5 @@
 /*
- * $Id: TestStatusTable.java,v 1.2 2003-03-26 23:12:04 tal Exp $
+ * $Id: TestStatusTable.java,v 1.3 2003-03-27 23:52:53 tal Exp $
  */
 
 /*
@@ -32,18 +32,40 @@ import org.lockss.util.*;
 
 public class TestStatusTable extends LockssTestCase {
 
+  public void testEmbeddedValue() {
+    Integer val = new Integer(3);
+    StatusTable.DisplayedValue dval = new StatusTable.DisplayedValue(val);
+    StatusTable.Reference rval = new StatusTable.Reference(val, "foo", "bar");
+    // should be able to embed DisplayedValue in Reference
+    new StatusTable.Reference(dval, "foo", "bar");
+
+    try {
+      new StatusTable.DisplayedValue(rval);
+      fail("Shouldn't be able to embed Reference in DisplayedValue");
+    } catch (IllegalArgumentException e) {
+    }
+    try {
+      new StatusTable.DisplayedValue(dval);
+      fail("Shouldn't be able to embed DisplayedValue in DisplayedValue");
+    } catch (IllegalArgumentException e) {
+    }
+    try {
+      new StatusTable.Reference(rval, "foo", "bar");
+      fail("Shouldn't be able to embed Reference in Reference");
+    } catch (IllegalArgumentException e) {
+    }
+  }
+
   public void testGetActualValue() {
     Integer val = new Integer(3);
-    StatusTable.DisplayedValue aval = new StatusTable.DisplayedValue(val);
+    StatusTable.DisplayedValue dval = new StatusTable.DisplayedValue(val);
     StatusTable.Reference rval = new StatusTable.Reference(val, "foo", "bar");
-    StatusTable.DisplayedValue arval = new StatusTable.DisplayedValue(rval);
-    StatusTable.Reference raval = new StatusTable.Reference(aval,
+    StatusTable.Reference rdval = new StatusTable.Reference(dval,
 							    "foo", "bar");
     assertEquals(val, StatusTable.getActualValue(val));
-    assertEquals(val, StatusTable.getActualValue(aval));
+    assertEquals(val, StatusTable.getActualValue(dval));
     assertEquals(val, StatusTable.getActualValue(rval));
-    assertEquals(val, StatusTable.getActualValue(arval));
-    assertEquals(val, StatusTable.getActualValue(raval));
+    assertEquals(val, StatusTable.getActualValue(rdval));
   }
 
 //   public void testReferenceCompareTo() {
