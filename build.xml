@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.56 2003-08-04 07:55:49 tlipkis Exp $
+ $Id: build.xml,v 1.57 2003-08-06 06:25:08 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -124,6 +124,9 @@ Args:
   				  value="${lib}/commons-collections.jar"/>
   <property name="junit.jar"      value="${test.lib}/junit.jar"/>
   <property name="junit.addons.jar" value="${test.lib}/junit-addons.jar"/>
+  <property name="httpunit.jar"    value="${test.lib}/httpunit.jar"/>
+  <property name="htmlparser.jar"  value="${test.lib}/nekohtml.jar"/>
+  <property name="js.jar"  value="${test.lib}/js.jar"/>
   <property name="tools.jar"      value="${java.lib}/tools.jar"/>
 
   <property name="lockss.jar"     value="${lib}/lockss.jar"/>
@@ -173,6 +176,9 @@ Args:
     <pathelement path="${lockss.jar}" />
     <pathelement path="${junit.jar}" />
     <pathelement path="${junit.addons.jar}" />
+    <pathelement path="${httpunit.jar}" />
+    <pathelement path="${htmlparser.jar}" />
+    <pathelement path="${js.jar}" />
   </path>
 
   <path id="test.run.classpath">
@@ -444,13 +450,13 @@ Args:
 
     <!-- Concatenate all CVS/Entries files.   Not ideal, as dir names
          must be inferred, but it's fast, done entirely within Ant,
-         and includes files that don't have $Id: build.xml,v 1.56 2003-08-04 07:55:49 tlipkis Exp $ line -->
+         and includes files that don't have $Id: build.xml,v 1.57 2003-08-06 06:25:08 tlipkis Exp $ line -->
     <concat destfile="${build.filerev.file}">
        <fileset dir="${src}" includes="**/CVS/Entries" defaultexcludes="no" />
     </concat>
 <!--
  Some other ways to do this.
-     Extract cvs $Id: build.xml,v 1.56 2003-08-04 07:55:49 tlipkis Exp $ lines from all files, with shell command:
+     Extract cvs $Id: build.xml,v 1.57 2003-08-06 06:25:08 tlipkis Exp $ lines from all files, with shell command:
      sh -c "find . -type f -print0 | xargs -0 '"'egrep '\$Id(:.*)?\$'"'"
     <exec executable="sh" dir="${src}" output="${build.filerev.file}">
       <arg line="-c &quot;find . -type f  -print0 | xargs -0 egrep &apos;&quot;&apos;\$Id(:.*)?\$&apos;&quot;&apos;&quot;" />
