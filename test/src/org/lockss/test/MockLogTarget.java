@@ -1,5 +1,5 @@
 /*
- * $Id: MockLogTarget.java,v 1.9 2004-12-08 00:53:13 tlipkis Exp $
+ * $Id: MockLogTarget.java,v 1.10 2004-12-09 08:23:21 tlipkis Exp $
  */
 
 /*
@@ -63,10 +63,6 @@ public class MockLogTarget implements LogTarget{
     sb.append(message);
     String str = sb.toString();
     messages.add(str);
-    if (Logger.LEVEL_DEBUG == msgLevel) {
-      System.err.println("Recursive log call; should only happen once.");
-      log.debug("This is a recursive log message which should not be logged");
-    }
   }
 
   public Iterator messageIterator() {

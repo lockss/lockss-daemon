@@ -1,5 +1,5 @@
 /*
- * $Id: TestLogger.java,v 1.21 2004-12-08 00:53:13 tlipkis Exp $
+ * $Id: TestLogger.java,v 1.22 2004-12-09 08:23:20 tlipkis Exp $
  */
 
 /*
@@ -266,9 +266,10 @@ public class TestLogger extends LockssTestCase {
 
   public void testNoRecurse() {
     Logger l = Logger.getLogger("recurse");
-    MockLogTarget target = new MockLogTarget();
+    LocalMockLogTarget target = new LocalMockLogTarget();
     l.setTarget(target);
     l.setLevel(Logger.LEVEL_DEBUG);
+    target.setDoRecurse(true);
     l.debug("debug message, shouldn't cause recursion");
   }
 
@@ -300,5 +301,18 @@ public class TestLogger extends LockssTestCase {
     fail("No thread IDs were collected after " + rpt + " iterations.");
   }
 
+  static class LocalMockLogTarget extends MockLogTarget {
+    boolean doRecurse = false;
+    public void handleMessage(Logger log, int msgLevel, String message) {
+      super.handleMessage(log, msgLevel, message);
+      if (doRecurse) {
+	System.err.println("Recursive log call; should only happen once.");
+	log.debug("Recursive log message.  Should not appear in log");
+      }
+    }
+    public void setDoRecurse(boolean val) {
+      doRecurse = val;
+    }
+  }
 }
 

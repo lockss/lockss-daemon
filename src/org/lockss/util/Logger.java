@@ -1,5 +1,5 @@
 /*
- * $Id: Logger.java,v 1.37 2004-12-08 00:53:13 tlipkis Exp $
+ * $Id: Logger.java,v 1.38 2004-12-09 08:23:21 tlipkis Exp $
  */
 
 /*
@@ -138,6 +138,7 @@ public class Logger {
   private String name;			// this log's name
   private int defaultLevel = globalDefaultLevel;
   private String defaultLevelParam = PARAM_DEFAULT_LEVEL;
+  private boolean idThread = true;
 
   static {
     // until we get configured, output to default target
@@ -565,8 +566,10 @@ public class Logger {
   public void log(int level, String msg, Throwable e) {
     if (isLevel(level)) {
       StringBuffer sb = new StringBuffer();
-      sb.append(getThreadId(Thread.currentThread()));
-      sb.append("-");
+      if (idThread) {
+	sb.append(getThreadId(Thread.currentThread()));
+	sb.append("-");
+      }
       sb.append(name);
       sb.append(": ");
       sb.append(msg);
@@ -590,6 +593,10 @@ public class Logger {
    */
   public void log(int level, String msg) {
     log(level, msg, null);
+  }
+
+  public void setIdThread(boolean ena) {
+    idThread = ena;
   }
 
   String getThreadId(Thread thread) {
