@@ -1,5 +1,5 @@
 /*
- * $Id: AcsPlugin.java,v 1.3 2003-09-24 23:43:48 clairegriffin Exp $
+ * $Id: IeeePlugin.java,v 1.1 2003-09-24 23:43:48 clairegriffin Exp $
  */
 
 /*
@@ -29,11 +29,11 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
 */
-package org.lockss.plugin.acs;
+package org.lockss.plugin.ieee;
 
-import org.lockss.daemon.*;
 import org.lockss.plugin.base.BasePlugin;
 import org.lockss.plugin.*;
+import org.lockss.daemon.*;
 import org.lockss.util.*;
 
 import java.util.List;
@@ -41,28 +41,19 @@ import java.util.Collection;
 import org.lockss.app.*;
 
 /**
- * <p>AcsPlugin: Plugin class for the American Chemical Society Plugin</p>
+ * <p>IeeePlugin: Plugin class for the Ieee Explore Plugin</p>
  * @author Claire Griffin
  * @version 1.0
  */
 
-public class AcsPlugin extends BasePlugin {
-  static final ConfigParamDescr JOURNAL_KEY = new ConfigParamDescr();
+public class IeeePlugin extends BasePlugin {
+  static final ConfigParamDescr PU_NUMBER = new ConfigParamDescr();
   static {
-    JOURNAL_KEY.setKey("journal_key");
-    JOURNAL_KEY.setDisplayName("Journal ID");
-    JOURNAL_KEY.setType(ConfigParamDescr.TYPE_STRING);
-    JOURNAL_KEY.setSize(20);
-    JOURNAL_KEY.setDescription("Key used to identify journal in script (e.g. 'jcisd8').");
-  }
-
-  static final ConfigParamDescr ARTICLE_URL = new ConfigParamDescr();
-  static {
-    ARTICLE_URL.setKey("article_url");
-    ARTICLE_URL.setDisplayName("Article URL");
-    ARTICLE_URL.setType(ConfigParamDescr.TYPE_STRING);
-    ARTICLE_URL.setSize(40);
-    ARTICLE_URL.setDescription("base url for articles");
+    PU_NUMBER.setKey("Pu_Number");
+    PU_NUMBER.setDisplayName("Publication Number");
+    PU_NUMBER.setType(ConfigParamDescr.TYPE_INT);
+    PU_NUMBER.setSize(10);
+    PU_NUMBER.setDescription("IEEE publication Number(e.g. '2').");
   }
 
   static final ConfigParamDescr JOURNAL_YEAR = new ConfigParamDescr();
@@ -73,35 +64,33 @@ public class AcsPlugin extends BasePlugin {
     JOURNAL_YEAR.setSize(4);
     JOURNAL_YEAR.setDescription("Year of volume in form 2003 not 03");
   }
-
-  private static String PLUGIN_NAME = "ACS";
+  private static String PLUGIN_NAME = "IEEE";
   private static String CURRENT_VERSION= "Pre-release";
 
   static final ConfigParamDescr PD_BASE = ConfigParamDescr.BASE_URL;
-  static final ConfigParamDescr PD_JKEY = JOURNAL_KEY;
   static final ConfigParamDescr PD_VOL = ConfigParamDescr.VOLUME_NUMBER;
-  static final ConfigParamDescr PD_ARTICLE = ARTICLE_URL;
   static final ConfigParamDescr PD_YEAR = JOURNAL_YEAR;
+  static final ConfigParamDescr PD_PUNUM = PU_NUMBER;
+
 
   // public only so test methods can use them
   public static final String AUPARAM_BASE_URL = PD_BASE.getKey();
   public static final String AUPARAM_VOL = PD_VOL.getKey();
-  public static final String AUPARAM_JOURNAL_KEY = PD_JKEY.getKey();
-  public static final String AUPARAM_ARTICLE_URL = PD_ARTICLE.getKey();
+  public static final String AUPARAM_PUNUM = PD_PUNUM.getKey();
   public static final String AUPARAM_YEAR = PD_YEAR.getKey();
 
+
   private static String titleSpec[][] = {
-    { "JCICS",
-    AUPARAM_BASE_URL, "http://pubs3.acs.org/",
-    AUPARAM_ARTICLE_URL, "http://pubs.acs.org/",
-    AUPARAM_JOURNAL_KEY, "jcisd8",
-    AUPARAM_VOL, "43",
-    AUPARAM_YEAR, "2003"}
+      {
+      "Antennas and Propagation, Trans. of",
+      AUPARAM_BASE_URL, "http://xplqa.ieee.org/",
+      AUPARAM_PUNUM, "8",
+      AUPARAM_YEAR, "2003"}
   };
 
   public ArchivalUnit createAU(Configuration auConfig)
       throws ArchivalUnit.ConfigurationException {
-    ArchivalUnit au = new AcsArchivalUnit(this);
+    ArchivalUnit au = new IeeeArchivalUnit(this);
     au.setConfiguration(auConfig);
     return au;
   }
@@ -120,12 +109,11 @@ public class AcsPlugin extends BasePlugin {
   }
 
   public List getAUConfigProperties() {
-    return ListUtil.list(PD_BASE, PD_ARTICLE, PD_JKEY, PD_VOL, PD_YEAR);
+    return ListUtil.list(PD_BASE, PD_PUNUM, PD_YEAR);
   }
 
   public Collection getDefiningConfigKeys() {
-    return ListUtil.list(AUPARAM_BASE_URL, AUPARAM_ARTICLE_URL,
-                         AUPARAM_JOURNAL_KEY, AUPARAM_VOL, AUPARAM_YEAR);
+    return ListUtil.list(AUPARAM_BASE_URL, AUPARAM_PUNUM, AUPARAM_YEAR);
   }
 
 }
