@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.53 2003-07-23 06:09:05 tlipkis Exp $
+ $Id: build.xml,v 1.54 2003-07-24 04:22:53 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -40,7 +40,8 @@ Args:
   -Dexclude=path           Exclude matching tests.
   -Dfile=path/to/file      Specify file for print or index.
                               File is relative to project base dir
-  -Dfork=true              Run each test in a separate jvm.  (Default is true)
+  -Dfork=true              Run each test in a separate jvm.  (Default is true,
+                              setting to false will cause some tests to fail.)
   -Dforkc=true             Run compiler in a separate jvm.
   -Dinclude=path           Include matching tests.
   -Dkeeptempfiles=true     Don't delete temp files after tests run.
@@ -658,8 +659,14 @@ Args:
 
   <!-- ==================================================================== -->
   <target name="test-all"
+   depends="test-unit,test-func"
+   description="Run all unit tests and functional tests" >
+  </target>
+
+  <!-- ==================================================================== -->
+  <target name="test-unit"
    depends="prepare.run.test,check.junit,jar-tests"
-   description="Run all the junit tests (test/src/**/Test*.class" >
+   description="Run all unit tests (test/src/**/Test*.class)" >
     <echo>
 Test results in ${test.results}
     </echo>
@@ -683,12 +690,12 @@ Test results in ${test.results}
       <sysproperty key="org.lockss.keepTempFiles" value="${keeptempfiles}"/>
       <sysproperty key="org.lockss.test.timeout.shouldnt" value="${timeout}"/>
     </junit1>
-   </target>
+  </target>
 
   <!-- ==================================================================== -->
-  <target name="func-all"
+  <target name="test-func"
    depends="prepare.run.test,check.junit,jar-tests"
-   description="Run all the functional tests (test/src/**/Func*.class" >
+   description="Run all functional tests (test/src/**/Func*.class)" >
     <echo>
 Test results in ${test.results}
     </echo>
@@ -698,6 +705,7 @@ Test results in ${test.results}
       <batchtest fork="${fork}" todir="${test.results}">
         <fileset dir="${test.src}">
           <include name="**/Func*.java" />
+          <exclude name="${exclude}" />
         </fileset>
       </batchtest>
       <formatter type="plain" usefile="true" />
@@ -717,7 +725,7 @@ Test results in ${test.results}
 <!-- doesn't work
   <target name="test-all-debug"
    depends="prepare.test,check.junit,jar-tests"
-   description="Run all the junit tests (test/src/**/Test*.class, under the debugger" >
+   description="Run all junit tests (test/src/**/Test*.class), under the debugger" >
     <echo>
 Test results in ${test.results}
     </echo>
@@ -738,6 +746,7 @@ Test results in ${test.results}
   </target>
 -->
   <!-- ==================================================================== -->
+<!--
   <target name="test-class"
    depends="prepare.test,check.class.arg,check.junit,jar-ant,jar-tests"
    description="Run all tests for a single class, named by the 'class' property" >
@@ -767,7 +776,7 @@ Test results in ${test.results}
       <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
     </junit>
   </target>
-
+-->
   <!-- ==================================================================== -->
   <target name="test-one"
    depends="prepare.run.test,check.class.arg,check.junit,jar-tests"
@@ -793,7 +802,7 @@ Test results in ${test.results}
   <!-- ==================================================================== -->
   <target name="test-doclets"
    depends="prepare.run.test,check.junit,jar-doclet-tests"
-   description="Run all the doclet tests (doclet/test/src/**/Test*.class" >
+   description="Run all doclet tests (doclet/test/src/**/Test*.class)" >
     <echo>
 Test results in ${test.results}
     </echo>
@@ -829,7 +838,7 @@ Test results in ${test.results}
   <!-- ==================================================================== -->
   <target name="checkout-and-build"
      depends="check.contrib"
-     description="Checkout current cvs into a new temp dir and build all.  Delete temp dir iff build was successful." >
+     description="Checkout current cvs into temp dir, build and test all." >
    <property name="cvstag" value="" />
    <mkdir dir="${temp.build}" />
    <tempfile property="temp.build.dir" destdir="${temp.build}" prefix="build"/>
