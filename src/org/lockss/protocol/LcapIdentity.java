@@ -1,5 +1,5 @@
 /*
- * $Id: LcapIdentity.java,v 1.4 2002-11-21 20:23:45 tal Exp $
+ * $Id: LcapIdentity.java,v 1.5 2002-11-21 23:52:16 troberts Exp $
  */
 
 /*
@@ -76,29 +76,28 @@ public class LcapIdentity {
 
   InetAddress m_address;
   int m_reputation;
-  Object m_idKey;
+  String m_idKey;
   static HashMap theIdentities = null; // all known identities
   static LcapIdentity theLocalIdentity;
   static Logger theLog=Logger.getLogger("Identity",Logger.LEVEL_DEBUG);
   static Random theRandom = new Random();
 
-
-  LcapIdentity(Object idKey)  {
-    m_idKey = idKey;
-    m_reputation = INITIAL_REPUTATION;
-    m_lastActiveTime = 0;
-    m_lastOpTime = 0;
-    m_lastTimeZeroed = 0;
-    m_incrPackets = 0;
-    m_totalPackets = 0;
-    m_origPackets = 0;
-    m_forwPackets = 0;
-    m_duplPackets = 0;
-    if(theIdentities == null) {
-      reloadIdentities();
-    }
-    theIdentities.put(m_idKey, this);
-  }
+//   protected LcapIdentity(Object idKey)  {
+//     m_idKey = idKey;
+//     m_reputation = INITIAL_REPUTATION;
+//     m_lastActiveTime = 0;
+//     m_lastOpTime = 0;
+//     m_lastTimeZeroed = 0;
+//     m_incrPackets = 0;
+//     m_totalPackets = 0;
+//     m_origPackets = 0;
+//     m_forwPackets = 0;
+//     m_duplPackets = 0;
+//     if(theIdentities == null) {
+//       reloadIdentities();
+//     }
+//     theIdentities.put(m_idKey, this);
+//   }
 
   /**
    * construct a new Identity from an address
@@ -199,8 +198,12 @@ public class LcapIdentity {
     if(theLocalIdentity == null)  {
       String identStr = 
 	Configuration.getParam(Configuration.PREFIX+"localIPAddress");
-      theLocalIdentity = 
-      	new LcapIdentity(identStr);
+      try {
+	InetAddress addr = InetAddress.getByName(identStr);
+	theLocalIdentity = new LcapIdentity(addr);
+      } catch (UnknownHostException uhe) {
+	theLog.error("Could not resolve: "+identStr, uhe);
+      }
     }
     return theLocalIdentity;
   }
@@ -242,9 +245,9 @@ public class LcapIdentity {
    * @return true if the id keys are the same
    */
   public boolean isEqual(LcapIdentity id) {
-    String idKey = (String)id.m_idKey;
+    String idKey = id.m_idKey;
 
-    return idKey.equals((String)m_idKey);
+    return idKey.equals(m_idKey);
   }
 
   /**
@@ -252,7 +255,7 @@ public class LcapIdentity {
    * @return the String representation of the Identity
    */
   public String toString() {
-    return (String)m_idKey;
+    return m_idKey;
   }
 
   /**
@@ -260,7 +263,7 @@ public class LcapIdentity {
    * @return the String representation of the Host
    */
   protected String toHost() {
-    return (String)m_idKey;
+    return m_idKey;
   }
 
   //
@@ -425,7 +428,7 @@ public class LcapIdentity {
     m_reputation += delta;
   }
 
-  static Object makeIdKey(InetAddress addr)  {
+  static String makeIdKey(InetAddress addr)  {
     return addr.getHostAddress();
   }
 }
