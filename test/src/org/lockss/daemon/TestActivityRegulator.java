@@ -1,5 +1,5 @@
 /*
- * $Id: TestActivityRegulator.java,v 1.14 2003-06-20 22:34:53 claire Exp $
+ * $Id: TestActivityRegulator.java,v 1.15 2003-07-19 00:45:40 eaalto Exp $
  */
 
 /*
@@ -32,19 +32,27 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.daemon;
 
+import java.io.File;
 import org.lockss.plugin.*;
 import org.lockss.test.*;
 import org.lockss.util.TimeBase;
+import org.lockss.repository.*;
 
 public class TestActivityRegulator extends LockssTestCase {
   private ActivityRegulator regulator;
   private MockArchivalUnit mau;
+  private MockLockssDaemon theDaemon;
 
   public void setUp() throws Exception {
     super.setUp();
 
+    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    TestLockssRepositoryImpl.configCacheLocation(tempDirPath);
+
     mau = new MockArchivalUnit();
-    regulator = new ActivityRegulator(mau);
+    theDaemon = new MockLockssDaemon();
+    regulator = theDaemon.getActivityRegulator(mau);
+    regulator.initService(theDaemon);
     TimeBase.setSimulated(123);
   }
 
@@ -216,21 +224,6 @@ public class TestActivityRegulator extends LockssTestCase {
 
   }
 
-  public void testGetRelation() {
-    assertEquals(ActivityRegulator.RELATION_SAME,
-                 regulator.getRelation("http://www.example.com::range",
-                                     "http://www.example.com::range2"));
-    assertEquals(ActivityRegulator.RELATION_CHILD,
-                 regulator.getRelation("http://www.example.com/test::range",
-                                     "http://www.example.com::range2"));
-    assertEquals(ActivityRegulator.RELATION_PARENT,
-                 regulator.getRelation("http://www.example.com::range",
-                                     "http://www.example.com/test::range2"));
-    assertEquals(ActivityRegulator.RELATION_NONE,
-                 regulator.getRelation("http://www.example.com/test::range",
-                                     "http://www.example.com/test2::range2"));
-  }
-
   public void testIsAllowedOnAu() {
     // using NO_ACTIVITY as a generic activity marker, since this functions
     // don't specifically handle it
@@ -259,35 +252,35 @@ public class TestActivityRegulator extends LockssTestCase {
 
     // if a crawl-
     //   allow only name poll if same
-    assertFalse(regulator.isAllowedOnCus(regulator.NO_ACTIVITY, regulator.BACKGROUND_CRAWL, regulator.RELATION_SAME));
-    assertTrue(regulator.isAllowedOnCus(regulator.STANDARD_NAME_POLL, regulator.REPAIR_CRAWL, regulator.RELATION_SAME));
+    assertFalse(regulator.isAllowedOnCus(regulator.NO_ACTIVITY, regulator.BACKGROUND_CRAWL, LockssRepository.SAME_LEVEL_OVERLAP));
+    assertTrue(regulator.isAllowedOnCus(regulator.STANDARD_NAME_POLL, regulator.REPAIR_CRAWL, LockssRepository.SAME_LEVEL_OVERLAP));
     //   allow anything if parent
-    assertTrue(regulator.isAllowedOnCus(regulator.NO_ACTIVITY, regulator.BACKGROUND_CRAWL, regulator.RELATION_PARENT));
+    assertTrue(regulator.isAllowedOnCus(regulator.NO_ACTIVITY, regulator.BACKGROUND_CRAWL, LockssRepository.ABOVE));
     //   allow only crawls if child
-    assertFalse(regulator.isAllowedOnCus(regulator.NO_ACTIVITY, regulator.BACKGROUND_CRAWL, regulator.RELATION_CHILD));
-    assertTrue(regulator.isAllowedOnCus(regulator.REPAIR_CRAWL, regulator.BACKGROUND_CRAWL, regulator.RELATION_CHILD));
+    assertFalse(regulator.isAllowedOnCus(regulator.NO_ACTIVITY, regulator.BACKGROUND_CRAWL, LockssRepository.BELOW));
+    assertTrue(regulator.isAllowedOnCus(regulator.REPAIR_CRAWL, regulator.BACKGROUND_CRAWL, LockssRepository.BELOW));
 
     // if a poll-
     //   allow only name poll or repair crawl if same
-    assertFalse(regulator.isAllowedOnCus(regulator.NO_ACTIVITY, regulator.STANDARD_CONTENT_POLL, regulator.RELATION_SAME));
-    assertTrue(regulator.isAllowedOnCus(regulator.STANDARD_NAME_POLL, regulator.STANDARD_CONTENT_POLL, regulator.RELATION_SAME));
-    assertTrue(regulator.isAllowedOnCus(regulator.REPAIR_CRAWL, regulator.STANDARD_CONTENT_POLL, regulator.RELATION_SAME));
+    assertFalse(regulator.isAllowedOnCus(regulator.NO_ACTIVITY, regulator.STANDARD_CONTENT_POLL, LockssRepository.SAME_LEVEL_OVERLAP));
+    assertTrue(regulator.isAllowedOnCus(regulator.STANDARD_NAME_POLL, regulator.STANDARD_CONTENT_POLL, LockssRepository.SAME_LEVEL_OVERLAP));
+    assertTrue(regulator.isAllowedOnCus(regulator.REPAIR_CRAWL, regulator.STANDARD_CONTENT_POLL, LockssRepository.SAME_LEVEL_OVERLAP));
     //   allow only content polls and repairs on sub-nodes if parent with name poll
-    assertFalse(regulator.isAllowedOnCus(regulator.NO_ACTIVITY, regulator.STANDARD_CONTENT_POLL, regulator.RELATION_PARENT));
-    assertTrue(regulator.isAllowedOnCus(regulator.STANDARD_CONTENT_POLL, regulator.STANDARD_NAME_POLL, regulator.RELATION_PARENT));
-    assertTrue(regulator.isAllowedOnCus(regulator.REPAIR_CRAWL, regulator.STANDARD_NAME_POLL, regulator.RELATION_PARENT));
+    assertFalse(regulator.isAllowedOnCus(regulator.NO_ACTIVITY, regulator.STANDARD_CONTENT_POLL, LockssRepository.ABOVE));
+    assertTrue(regulator.isAllowedOnCus(regulator.STANDARD_CONTENT_POLL, regulator.STANDARD_NAME_POLL, LockssRepository.ABOVE));
+    assertTrue(regulator.isAllowedOnCus(regulator.REPAIR_CRAWL, regulator.STANDARD_NAME_POLL, LockssRepository.ABOVE));
     //   allow only crawls and single node polls if child
-    assertFalse(regulator.isAllowedOnCus(regulator.NO_ACTIVITY, regulator.STANDARD_CONTENT_POLL, regulator.RELATION_CHILD));
-    assertTrue(regulator.isAllowedOnCus(regulator.REPAIR_CRAWL, regulator.STANDARD_CONTENT_POLL, regulator.RELATION_CHILD));
-    assertTrue(regulator.isAllowedOnCus(regulator.SINGLE_NODE_CONTENT_POLL, regulator.STANDARD_CONTENT_POLL, regulator.RELATION_CHILD));
+    assertFalse(regulator.isAllowedOnCus(regulator.NO_ACTIVITY, regulator.STANDARD_CONTENT_POLL, LockssRepository.BELOW));
+    assertTrue(regulator.isAllowedOnCus(regulator.REPAIR_CRAWL, regulator.STANDARD_CONTENT_POLL, LockssRepository.BELOW));
+    assertTrue(regulator.isAllowedOnCus(regulator.SINGLE_NODE_CONTENT_POLL, regulator.STANDARD_CONTENT_POLL, LockssRepository.BELOW));
     //   for single node polls, allow only repair crawl if same
-    assertFalse(regulator.isAllowedOnCus(regulator.STANDARD_NAME_POLL, regulator.SINGLE_NODE_CONTENT_POLL, regulator.RELATION_SAME));
-    assertTrue(regulator.isAllowedOnCus(regulator.REPAIR_CRAWL, regulator.SINGLE_NODE_CONTENT_POLL, regulator.RELATION_SAME));
+    assertFalse(regulator.isAllowedOnCus(regulator.STANDARD_NAME_POLL, regulator.SINGLE_NODE_CONTENT_POLL, LockssRepository.SAME_LEVEL_OVERLAP));
+    assertTrue(regulator.isAllowedOnCus(regulator.REPAIR_CRAWL, regulator.SINGLE_NODE_CONTENT_POLL, LockssRepository.SAME_LEVEL_OVERLAP));
     //   allow anything if parent
-    assertTrue(regulator.isAllowedOnCus(regulator.NO_ACTIVITY, regulator.SINGLE_NODE_CONTENT_POLL, regulator.RELATION_PARENT));
+    assertTrue(regulator.isAllowedOnCus(regulator.NO_ACTIVITY, regulator.SINGLE_NODE_CONTENT_POLL, LockssRepository.ABOVE));
     //   allow only crawls if child
-    assertFalse(regulator.isAllowedOnCus(regulator.STANDARD_NAME_POLL, regulator.SINGLE_NODE_CONTENT_POLL, regulator.RELATION_CHILD));
-    assertTrue(regulator.isAllowedOnCus(regulator.REPAIR_CRAWL, regulator.SINGLE_NODE_CONTENT_POLL, regulator.RELATION_CHILD));
+    assertFalse(regulator.isAllowedOnCus(regulator.STANDARD_NAME_POLL, regulator.SINGLE_NODE_CONTENT_POLL, LockssRepository.BELOW));
+    assertTrue(regulator.isAllowedOnCus(regulator.REPAIR_CRAWL, regulator.SINGLE_NODE_CONTENT_POLL, LockssRepository.BELOW));
   }
 
   public void testAuExpiration() {
@@ -313,19 +306,4 @@ public class TestActivityRegulator extends LockssTestCase {
     assertEquals(regulator.NO_ACTIVITY, regulator.getCusActivity(mcus));
     assertEquals(regulator.NO_ACTIVITY, regulator.getAuActivity());
   }
-
-  public void testGetCusKeys() {
-    MockCachedUrlSet mcus = new MockCachedUrlSet("test url");
-    mcus.setSpec(new RangeCachedUrlSetSpec(mcus.getUrl()));
-
-    String expectedStr = "test url::";
-    assertEquals(expectedStr, regulator.getCusKey(mcus));
-
-    mcus = new MockCachedUrlSet(
-        new RangeCachedUrlSetSpec("test", "lwr", "upr"));
-
-    expectedStr = "test::lwr-upr";
-    assertEquals(expectedStr, regulator.getCusKey(mcus));
-  }
-
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: ActivityRegulator.java,v 1.20 2003-06-25 21:16:34 eaalto Exp $
+ * $Id: ActivityRegulator.java,v 1.21 2003-07-19 00:45:40 eaalto Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.util.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
 import org.lockss.app.BaseLockssManager;
+import org.lockss.repository.LockssRepository;
 
 /**
  * The ActivityAllower is queried by the various managers when they wish to
@@ -98,11 +99,6 @@ public class ActivityRegulator extends BaseLockssManager {
    * Integer representing no activity. AU or CUS level.
    */
   static final int NO_ACTIVITY = -1;
-
-  static final int RELATION_PARENT = -1;
-  static final int RELATION_SAME = 0;
-  static final int RELATION_CHILD = 1;
-  static final int RELATION_NONE = 99;
 
   private static Logger logger = Logger.getLogger("ActivityRegulator");
 
@@ -173,15 +169,6 @@ public class ActivityRegulator extends BaseLockssManager {
                     cus.getUrl() + "'");
       return null;
     }
-    // check if the cus is free for this activity
-    int curActivity = getCusActivity(cus);
-    if (!isAllowedOnCus(newActivity, curActivity, RELATION_SAME)) {
-      logger.debug2("CUS '" + cus.getUrl() + "' busy with " +
-                    activityCodeToString(curActivity) + ". Couldn't start " +
-                    activityCodeToString(newActivity) + " on CUS '" +
-                    cus.getUrl() + "'");
-      return null;
-    }
     if (checkForRelatedCusActivity(newActivity, cus)) {
       return null;
     }
@@ -239,52 +226,43 @@ public class ActivityRegulator extends BaseLockssManager {
   }
 
   boolean checkForRelatedCusActivity(int newActivity, CachedUrlSet cus) {
-    String cusKey = getCusKey(cus);
     Iterator cusIt = cusMap.entrySet().iterator();
     while (cusIt.hasNext()) {
       // check each other cus to see if it's related to this one
       Map.Entry entry = (Map.Entry)cusIt.next();
-      String entryKey = (String)entry.getKey();
+      CachedUrlSet entryCus = (CachedUrlSet)entry.getKey();
       // need to append '/' to protect against substring matches
       // i.e. /test vs. /test2
-      int relation = getRelation(entryKey, cusKey);
-      if ((relation!=RELATION_NONE) &&
-          (relation!=RELATION_SAME)) {
+      int relation =
+          theDaemon.getLockssRepository(au).cusCompare(entryCus, cus);
+      if (relation!=LockssRepository.NO_RELATION) {
         Lock value = (Lock)entry.getValue();
         if (value.isExpired()) {
           logger.debug3("Removing expired " +
                         activityCodeToString(value.activity) +
-                        " on CUS '" + entryKey + "'");
-          cusMap.remove(entryKey);
+                        " on CUS '" + entryCus + "'");
+          cusMap.remove(entryCus);
           continue;
         }
         if (!isAllowedOnCus(newActivity, value.activity, relation)) {
-          String relationStr = (relation==RELATION_CHILD ? "Child" : "Parent");
-          logger.debug2(relationStr + " CUS busy with " +
+          String relationStr = "";
+          switch (relation) {
+            case LockssRepository.ABOVE:
+              relationStr = "Parent ";
+              break;
+            case LockssRepository.BELOW:
+              relationStr = "Child ";
+              break;
+          }
+          logger.debug2(relationStr + "CUS busy with " +
                         activityCodeToString(value.activity) +
                         ". Couldn't start " + activityCodeToString(newActivity) +
-                        " on CUS '" + cus.getUrl() + "'");
+                        " on CUS '" + cus + "'");
           return true;
         }
       }
     }
     return false;
-  }
-
-  static int getRelation(String key1, String key2) {
-    String key1Sub = key1.substring(0, key1.lastIndexOf("::")) +
-        UrlUtil.URL_PATH_SEPARATOR;
-    String key2Sub = key2.substring(0, key2.lastIndexOf("::")) +
-        UrlUtil.URL_PATH_SEPARATOR;
-    if (key1Sub.equals(key2Sub)) {
-      return RELATION_SAME;
-    } else if (key1Sub.startsWith(key2Sub)) {
-      return RELATION_CHILD;
-    } else if (key2Sub.startsWith(key1Sub)) {
-      return RELATION_PARENT;
-    } else {
-      return RELATION_NONE;
-    }
   }
 
   static boolean isAllowedOnAu(int newActivity, int curActivity) {
@@ -313,53 +291,56 @@ public class ActivityRegulator extends BaseLockssManager {
       case BACKGROUND_CRAWL:
       case REPAIR_CRAWL:
         switch (relation) {
-          case RELATION_SAME:
+          case LockssRepository.SAME_LEVEL_OVERLAP:
             // only one action on a CUS at a time except for name polls
             // (resuming after repair crawl)
             return (newActivity==STANDARD_NAME_POLL);
-          case RELATION_PARENT:
+          case LockssRepository.ABOVE:
             // if this CUS is a parent, any action allowed
             return true;
-          case RELATION_CHILD:
+          case LockssRepository.BELOW:
             return ((newActivity==BACKGROUND_CRAWL) ||
                     (newActivity==REPAIR_CRAWL));
+          case LockssRepository.SAME_LEVEL_NO_OVERLAP:
           default:
             return true;
         }
       case STANDARD_CONTENT_POLL:
       case STANDARD_NAME_POLL:
         switch (relation) {
-          case RELATION_SAME:
+          case LockssRepository.SAME_LEVEL_OVERLAP:
             // only one action on a CUS at a time unless it's a name poll or
             // a repair crawl
             return ((newActivity==STANDARD_NAME_POLL) ||
                     (newActivity==REPAIR_CRAWL));
-          case RELATION_PARENT:
+          case LockssRepository.ABOVE:
             // if this CUS is a parent, allow content polls and repair crawls on
             // sub-nodes (PollManager should have blocked any truly illegal ones)
             return ((newActivity==STANDARD_CONTENT_POLL) ||
                      (newActivity==REPAIR_CRAWL));
-          case RELATION_CHILD:
+           case LockssRepository.BELOW:
             // if this CUS is a child, only crawls allowed, and single node
             // content polls
             return ((newActivity==BACKGROUND_CRAWL) ||
                     (newActivity==REPAIR_CRAWL) ||
                     (newActivity==SINGLE_NODE_CONTENT_POLL));
+          case LockssRepository.SAME_LEVEL_NO_OVERLAP:
           default:
             return true;
         }
       case SINGLE_NODE_CONTENT_POLL:
         switch (relation) {
-          case RELATION_SAME:
+          case LockssRepository.SAME_LEVEL_OVERLAP:
             // only one action on a CUS at a time unless it's a name poll
             return (newActivity==REPAIR_CRAWL);
-          case RELATION_PARENT:
+          case LockssRepository.ABOVE:
             // if this CUS is a parent, allow anything below
             return true;
-          case RELATION_CHILD:
+          case LockssRepository.BELOW:
             // if this CUS is a child, only crawls allowed
             return ((newActivity==BACKGROUND_CRAWL) ||
                     (newActivity==REPAIR_CRAWL));
+          case LockssRepository.SAME_LEVEL_NO_OVERLAP:
           default:
             return true;
 
@@ -403,11 +384,11 @@ public class ActivityRegulator extends BaseLockssManager {
   }
 
   int getCusActivity(CachedUrlSet cus) {
-    Lock entry = (Lock)cusMap.get(getCusKey(cus));
+    Lock entry = (Lock)cusMap.get(cus);
     if (entry==null)  {
       return NO_ACTIVITY;
     } else if (entry.isExpired()) {
-      cusMap.remove(getCusKey(cus));
+      cusMap.remove(cus);
       logger.debug3("Removing expired " + activityCodeToString(entry.activity) +
                     " on AU '" + cus.getUrl() + "'");
       return NO_ACTIVITY;
@@ -419,7 +400,7 @@ public class ActivityRegulator extends BaseLockssManager {
   Lock setCusActivity(CachedUrlSet cus, int activity, long expireIn) {
     // set CUS state
     Lock cusLock = new Lock(activity, expireIn);
-    cusMap.put(getCusKey(cus), cusLock);
+    cusMap.put(cus, cusLock);
     // set AU state to indicate CUS activity (resets expiration time)
     curAuActivity = new Lock(CUS_ACTIVITY, expireIn);
     return cusLock;
@@ -430,28 +411,12 @@ public class ActivityRegulator extends BaseLockssManager {
     // only end if this is my activity, in case it already timed out and
     // something else started
     if (curActivity == activity) {
-      cusMap.remove(getCusKey(cus));
+      cusMap.remove(cus);
     } else {
       logger.debug2(activityCodeToString(curActivity) + " running on CUS '" +
                     cus.getUrl() + "', so couldn't end " +
                     activityCodeToString(activity));
     }
-  }
-
-  static String getCusKey(CachedUrlSet cus) {
-    CachedUrlSetSpec spec = cus.getSpec();
-    StringBuffer sb = new StringBuffer(cus.getUrl().length() * 2);
-    sb.append(cus.getUrl());
-    sb.append("::");
-    if (spec.isRangeRestricted()) {
-      RangeCachedUrlSetSpec rSpec = (RangeCachedUrlSetSpec)spec;
-      sb.append(rSpec.getLowerBound());
-      sb.append("-");
-      sb.append(rSpec.getUpperBound());
-    } else if (spec.isSingleNode()) {
-      sb.append(".-.");
-    }
-    return sb.toString();
   }
 
   public static String activityCodeToString(int activity) {
