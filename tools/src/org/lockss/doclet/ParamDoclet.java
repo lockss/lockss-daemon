@@ -1,5 +1,5 @@
 /*
- * $Id: ParamDoclet.java,v 1.1 2004-08-16 23:45:25 smorabito Exp $
+ * $Id: ParamDoclet.java,v 1.2 2004-09-08 23:52:35 smorabito Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.doclet;
 import org.lockss.util.StringUtil;
 import java.util.*;
 import java.io.*;
+import java.lang.reflect.*;
 import com.sun.javadoc.*;
 
 /**
@@ -68,54 +69,40 @@ public class ParamDoclet {
       for (int j = 0; j < fields.length; j++) {
 	FieldDoc field = fields[j];
 
-	if (field.isStatic() && field.isFinal()) {
+	String name = field.name();
 
-	  String name = field.name();
+	if (isParam(name)) {
 
-	  if (isParam(name)) {
+	  String key = getParamKey(classDoc, name);
+	  ParamInfo info = (ParamInfo)params.get(key);
 
-	    String key = getParamKey(name);
-	    ParamInfo info = (ParamInfo)params.get(key);
+	  if (info == null) {
+	    info = new ParamInfo();
+	    params.put(key, info);
+	  }
 
-	    if (info == null) {
-	      info = new ParamInfo();
-	      params.put(key, info);
-	    }
-
-	    if (name.startsWith("PARAM_")) {
-	      // This is a PARAM, not a DEFAULT
-	      if (info.usedIn.size() == 0) {
-		// This is the first occurance we've encountered.
-		Object value = field.constantValue();
-
-		if (value instanceof String) {
-		  String paramName = (String)value;
-		  String comment = field.getRawCommentText();
-		  info.varName = name;
-		  info.paramName = paramName;
-		  info.comment = comment;
-		  info.usedIn.add(className);
-		  // Add to the sorted map we'll use for printing.
-		  sortedParams.put(paramName, info);
-		}
-	      } else {
-		// We've already visited this parameter before, this is
-		// just another use.
-		info.usedIn.add(className);
-	      }
-	    } else if (name.startsWith("DEFAULT_")) {
-	      // This is a default setting.
+	  if (name.startsWith("PARAM_")) {
+	    // This is a PARAM, not a DEFAULT
+	    if (info.usedIn.size() == 0) {
+	      // This is the first occurance we've encountered.
 	      Object value = field.constantValue();
-	      if (value != null) {
-		if (value instanceof Long) {
-		  String timeStr =
-		    StringUtil.timeIntervalToString(((Long)value).longValue());
-		  info.defaultValue = value + " (" + timeStr + ")";
-		} else {
-		  info.defaultValue = value;
-		}
+
+	      if (value instanceof String) {
+		String paramName = escapeName((String)value);
+		String comment = field.getRawCommentText();
+		info.paramName = paramName;
+		info.comment = comment;
+		info.usedIn.add(className);
+		// Add to the sorted map we'll use for printing.
+		sortedParams.put(paramName, info);
 	      }
+	    } else {
+	      // We've already visited this parameter before, this is
+	      // just another use.
+	      info.usedIn.add(className);
 	    }
+	  } else if (name.startsWith("DEFAULT_")) {
+	    info.defaultValue = getDefaultValue(field);
 	  }
 	}
       }
@@ -140,24 +127,29 @@ public class ParamDoclet {
     return true;
   }
 
+  // The simplest possible way to escape < and > in param names.
+  private static String escapeName(String name) {
+    String returnVal = StringUtil.replaceString(name, "<", "&lt;");
+    return StringUtil.replaceString(returnVal, ">", "&gt;");
+  }
+
   private static void printDocHeader() {
     out.println("<html>");
     out.println("<head>");
     out.println(" <title>Parameters</title>");
     out.println(" <style type=\"text/css\">");
-
-    out.println("  table { border-collapse: collapse; margin-left: 40px;");
-    out.println("      margin-right: 40px; padding: 5px; width: auto; }");
+    out.println("  .paramName { font-weight: bold; font-family: sans-serif;");
+    out.println("      font-size: 14pt; }");
+    out.println("  .defaultValue { font-family: monospace; font-size: 14pt; }");
+    out.println("  table { border-collapse: collapse; margin-left: 20px;");
+    out.println("      margin-right: 20px; padding: 0px; width: auto; }");
     out.println("  tr { margin: 0px; padding: 0px; border: 0px; }");
     out.println("  td { margin: 0px; padding-left: 6px; padding-right: 6px;");
-    out.println("      padding-top: 5px; padding-bottom: 5px; border: 0px;}");
-    out.println("  td.paramName { font-weight: bold; font-family: sans-serif;");
-    out.println("      font-size: 14pt; padding-bottom: 10px; border-top: 1px solid #000;}");
-    out.println("  td.varName { font-family: monospace; }");
-    out.println("  td.defaultValue { font-family: monospace; }");
+    out.println("      border: 0px; padding-left: 0px; padding-top: 0px; padding-right: 0px;}");
+    out.println("  td.paramHeader { padding-top: 5px; }");
     out.println("  td.comment { }");
     out.println("  td.usedIn { font-family: monospace; }");
-    out.println("  td.header { padding-left: 30px; font-style: italic; text-align: right; }");
+    out.println("  td.header { padding-left: 30px; padding-right: 10px; font-style: italic; text-align: right; }");
 
     out.println(" </style>");
     out.println("</head>");
@@ -177,31 +169,21 @@ public class ParamDoclet {
   }
 
   private static void printParamInfo(ParamInfo info) {
-    out.println("<tr>");
-    out.println("  <td colspan=\"2\" class=\"paramName\">" +
-		info.paramName.trim() + "</td>");
+    out.println("<tr>\n  <td colspan=\"2\" class=\"paramHeader\">");
+    out.print("    <span class=\"paramName\">" +
+		info.paramName.trim() + "</span> &nbsp; ");
+    out.print("<span class=\"defaultValue\">[");
+    out.print(info.defaultValue == null ?
+	      "" : info.defaultValue.toString());
+    out.println("]</span>\n  </td>");
     out.println("</tr>");
     out.println("<tr>");
-    out.println("  <td class=\"header\" valign=\"top\">Description:</td>");
+    out.println("  <td class=\"header\" valign=\"top\">Comment:</td>");
     out.print("  <td class=\"comment\">");
     if (info.comment.trim().length() == 0) {
-      out.print("(none)");
+      out.print("");
     } else {
       out.print(info.comment.trim());
-    }
-    out.println("</td>");
-    out.println("</tr>");
-    out.println("<tr>");
-    out.println("  <td class=\"header\" valign=\"top\">Member:</td>");
-    out.println("  <td class=\"varName\">" + info.varName.trim() + "</td>");
-    out.println("</tr>");
-    out.println("<tr>");
-    out.println("  <td class=\"header\" valign=\"top\">Default:</td>");
-    out.print("  <td class=\"defaultValue\">");
-    if (info.defaultValue == null) {
-      out.print("(none)");
-    } else {
-      out.print(info.defaultValue.toString());
     }
     out.println("</td>");
     out.println("</tr>");
@@ -229,14 +211,46 @@ public class ParamDoclet {
    * Given a parameter or default name, return the key used to look up
    * its info object in the unsorted hashmap.
    */
-  private static String getParamKey(String s) {
+  private static String getParamKey(ClassDoc doc, String s) {
+    StringBuffer sb = new StringBuffer(doc.qualifiedName() + ".");
     if (s.startsWith("DEFAULT_")) {
-      return s.replaceFirst("DEFAULT_", "");
+      sb.append(s.replaceFirst("DEFAULT_", ""));
     } else if (s.startsWith("PARAM_")) {
-      return s.replaceFirst("PARAM_", "");
+      sb.append(s.replaceFirst("PARAM_", ""));
     } else {
-      return s;
+      sb.append(s);
     }
+    return sb.toString();
+  }
+
+  /**
+   * Cheesily use reflection to obtain the default value.p
+   */
+  public static String getDefaultValue(FieldDoc field) {
+    String defaultVal = null;
+    try {
+      ClassDoc classDoc = field.containingClass();
+
+      Class c = Class.forName(classDoc.qualifiedName());
+      Field fld = c.getDeclaredField(field.name());
+      fld.setAccessible(true);
+      Class cls = fld.getType();
+      if (int.class == cls) {
+	defaultVal = (new Integer(fld.getInt(null))).toString();
+      } else if (long.class == cls) {
+	long timeVal = fld.getLong(null);
+	defaultVal = timeVal + " (" +
+	  StringUtil.timeIntervalToString(timeVal) + ")";
+      } else if (boolean.class == cls) {
+	defaultVal = (new Boolean(fld.getBoolean(null))).toString();
+      } else {
+	defaultVal = fld.get(null).toString();
+      }
+    } catch (Exception e) {
+      root.printError(field.name() + ": " + e);
+    }
+
+    return defaultVal;
   }
 
   /**
@@ -251,7 +265,8 @@ public class ParamDoclet {
     return 0;
   }
 
-  public static boolean validOptions(String[][] options, DocErrorReporter reporter) {
+  public static boolean validOptions(String[][] options,
+				     DocErrorReporter reporter) {
     return true;
   }
 
@@ -283,17 +298,16 @@ public class ParamDoclet {
     }
     return false;
   }
-  
+
   /**
    * Simple wrapper class to hold information about parameters.
    */
   private static class ParamInfo {
-    public String varName = "";
     public String paramName = "";
     public Object defaultValue = null;
     public String comment = "";
     // Sorted list of uses.
     public Set usedIn = new TreeSet();
   }
-  
+
 }
