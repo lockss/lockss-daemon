@@ -1,5 +1,5 @@
 /*
- * $Id: DamagedNodeSet.java,v 1.15 2004-10-19 10:16:28 tlipkis Exp $
+ * $Id: DamagedNodeSet.java,v 1.16 2004-12-09 17:43:02 troberts Exp $
  */
 
 /*
@@ -262,4 +262,13 @@ public class DamagedNodeSet {
   public void setRepairNodeBean(ExtMapBean mapBean) {
     cusToRepair = mapBean.getMap();
   }
+
+  public String toString() { 
+    StringBuffer sb = new StringBuffer();
+    sb.append("[DamagedNodeSet: ");
+    sb.append("nodesWithDamage="+cusToRepair);
+    sb.append("]");
+    return sb.toString();
+  }
+
 }
