@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.27 2003-09-03 18:00:16 tlipkis Exp $
+ * $Id: TestStringUtil.java,v 1.28 2003-11-11 20:27:30 tlipkis Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.util;
 import junit.framework.TestCase;
 import java.io.*;
 import java.util.*;
+import java.lang.reflect.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
 
@@ -179,6 +180,10 @@ public class TestStringUtil extends LockssTestCase {
     assertEquals("aabbccdd", StringUtil.replaceFirst("aaddccdd", "dd", "bb"));
     assertEquals("aabbddcc", StringUtil.replaceFirst("aaddddcc", "dd", "bb"));
     assertEquals("aabbcc", StringUtil.replaceFirst("aabbcc", "dd", "bb"));
+
+    String s = "foo";
+    assertSame(s, StringUtil.replaceFirst(s, "123", "123"));
+    assertSame(s, StringUtil.replaceFirst(s, "", "123"));
   }
 
   public void testOverlap(){
@@ -263,6 +268,39 @@ public class TestStringUtil extends LockssTestCase {
     String g2 = StringUtil.gensym(base);
     assertTrue(g1.startsWith(base));
     assertNotEquals(g1, g2);
+  }
+
+  public void testShortNameObject() {
+    Object o = null;
+    assertNull(StringUtil.shortName(o));
+    assertEquals("foo", StringUtil.shortName("foo"));
+    assertEquals("foo", StringUtil.shortName("bar.foo"));
+  }
+
+  public void testShortNameClass() {
+    assertEquals("Date", StringUtil.shortName(java.util.Date.class));
+  }
+
+  public void testShortNameMethod() throws NoSuchMethodException {
+    Method meth = this.getClass().getDeclaredMethod("testShortNameMethod",
+						    new Class[0]);
+    assertEquals("TestStringUtil.testShortNameMethod",
+		 StringUtil.shortName(meth));
+  }
+
+  public void testStackTraceString() {
+    String s = StringUtil.stackTraceString(new Exception());
+    String exp = "java.lang.Exception\n" +
+      "\tat org.lockss.util.TestStringUtil.testStackTraceString(TestStringUtil.java:";
+    assertTrue(s.startsWith(exp));
+  }
+
+  public void testTrimBlankLines() {
+    assertEquals("foo", StringUtil.trimBlankLines("foo"));
+    assertEquals("foo", StringUtil.trimBlankLines("\nfoo"));
+    assertEquals("foo", StringUtil.trimBlankLines("\nfoo\n"));
+    assertEquals("foo", StringUtil.trimBlankLines("\n\nfoo\n\n"));
+    assertEquals("foo\nbar", StringUtil.trimBlankLines("\n\nfoo\nbar\n\n"));
   }
 
   public void testTrimHostName() {
