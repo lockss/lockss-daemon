@@ -1,5 +1,5 @@
 /*
- * $Id: TitleSet.java,v 1.1 2005-01-04 02:58:13 tlipkis Exp $
+ * $Id: TitleSet.java,v 1.2 2005-01-11 19:36:51 tlipkis Exp $
  */
 
 /*
@@ -33,19 +33,20 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.daemon;
 import java.util.*;
 
-/** A set of titles */
+/** Enumerates a set of titles ({@link TitleConfig}), presumably for AU
+ * configuration purposes */
 public interface TitleSet extends Comparable {
-  /** Return the name of the set.
-   * @return the set's name */
+  /** Return the human-readable name of the set of titles.
+   * @return the name */
    String getName();
 
   /** Return the titles in the set.
-   * @return a collection of TitleConfig */
+   * @return a collection of {@link TitleConfig} */
   Collection getTitles();
 
-  /** return true iff set appropriate for delete operations only */
+  /** @return true iff set is appropriate for delete operations only */
   boolean isDelOnly();
 
-  /** return true iff set appropriate for add operations only */
+  /** @return true iff set is appropriate for add operations only */
   boolean isAddOnly();
 }

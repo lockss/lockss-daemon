@@ -1,5 +1,5 @@
 /*
- * $Id: TitleSetAllTitles.java,v 1.1 2005-01-04 02:58:13 tlipkis Exp $
+ * $Id: TitleSetAllTitles.java,v 1.2 2005-01-11 19:36:51 tlipkis Exp $
  */
 
 /*
@@ -38,7 +38,7 @@ import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
 
-/** Set of all known titles */
+/** TitleSet implementation that returns all known titles */
 public class TitleSetAllTitles extends BaseTitleSet {
   /** Create a TitleSet that consists of all known titles
    * @param daemon used to get list of all known titles
@@ -48,17 +48,20 @@ public class TitleSetAllTitles extends BaseTitleSet {
   }
 
   /** Filter a collection of titles by the xpath predicate
-   * @param allTitles collection of titles to be filtered
-   * @return a collection of TitleConfig
+   * @param allTitles collection of {@link TitleConfig}s to be filtered
+   * @return collection of {@link TitleConfig}s that match the predicate
    */
   Collection getTitles(Collection allTitles) {
     return allTitles;
   }
 
+  /** Set of all titles is only appripriate for adding, not deleting.
+   * @return true */
   public boolean isAddOnly() {
     return true;
   }
 
+  /** Causes this set to sort first */
   protected int getMajorOrder() {
     return 1;
   }

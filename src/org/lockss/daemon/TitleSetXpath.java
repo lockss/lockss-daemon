@@ -1,5 +1,5 @@
 /*
- * $Id: TitleSetXpath.java,v 1.1 2005-01-04 02:58:13 tlipkis Exp $
+ * $Id: TitleSetXpath.java,v 1.2 2005-01-11 19:36:51 tlipkis Exp $
  */
 
 /*
@@ -39,7 +39,8 @@ import org.lockss.util.*;
 import org.lockss.plugin.*;
 
 /**
- * A set of titles that match an XPath predicate */
+ * A set of titles defined as an XPath predicate used to match some subset
+ * of the known {@link TitleConfig}s */
 public class TitleSetXpath extends BaseTitleSet {
 
   // static context used to predefine RE class functions, and to compile
@@ -52,12 +53,14 @@ public class TitleSetXpath extends BaseTitleSet {
   private String xpath;
   private CompiledExpression expr;
 
-  /** Create a TitleSet that consists of all known titles whose TitleConfig
-   * matches the supplied xpath predicate.  In addition to the standard
-   * XPath functions, the extension <code>RE:isMatchRe(<i>string</i>,
-   * <i>regexp</i>)</code> performs a regexp match against the string.
+  /** Create a TitleSet that consists of all known titles whose {@link
+   * TitleConfig} matches the supplied xpath predicate.  In addition to the
+   * standard XPath functions, the extension
+   * <code>RE:isMatchRe(<i>string</i>, <i>regexp</i>)</code> performs a
+   * regexp match against the string.
    * @param daemon used to get list of all known titles
-   * @param xpathPred an XPath predicate (<i>eg</i>,  <code>[journalTitle='Dog Journal']</code> )
+   * @param xpathPred an XPath predicate (<i>eg</i>,
+   * <code>[journalTitle='Dog Journal']</code> )
    */
   public TitleSetXpath(LockssDaemon daemon, String name, String xpathPred) {
     super(daemon, name);
@@ -69,8 +72,8 @@ public class TitleSetXpath extends BaseTitleSet {
   }
 
   /** Filter a collection of titles by the xpath predicate
-   * @param allTitles collection of titles to be filtered
-   * @return a collection of TitleConfig
+   * @param allTitles collection of {@link TitleConfig}s to be filtered
+   * @return a collection of {@link TitleConfig}s
    */
   Collection getTitles(Collection allTitles) {
     JXPathContext context = JXPathContext.newContext(sharedContext, allTitles);
@@ -90,8 +93,9 @@ public class TitleSetXpath extends BaseTitleSet {
     return xpath;
   }
 
+  /** Sort these third */
   protected int getMajorOrder() {
-    return 2;
+    return 3;
   }
 
   public boolean equals(Object o) {

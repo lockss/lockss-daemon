@@ -1,5 +1,5 @@
 /*
- * $Id: BaseTitleSet.java,v 1.1 2005-01-04 02:58:13 tlipkis Exp $
+ * $Id: BaseTitleSet.java,v 1.2 2005-01-11 19:36:51 tlipkis Exp $
  */
 
 /*
@@ -54,30 +54,38 @@ public abstract class BaseTitleSet implements TitleSet {
     this.name = name;
   }
 
-  /** Return the titles in the set.
-   * @return a collection of TitleConfig */
+  /** Filter the collection of all known titles by the implementation's
+   * getTitles(Collection) method.
+   * @return a collection of {@link TitleConfig} */
   public Collection getTitles() {
     return getTitles(daemon.getPluginManager().findAllTitleConfigs());
   }
 
   /** Filter a collection of titles by the xpath predicate
-   * @param allTitles collection of titles to be filtered
-   * @return a collection of TitleConfig
+   * @param allTitles collection of {@link TitleConfig}s to be filtered
+   * @return a collection of {@link TitleConfig}s
    */
   abstract Collection getTitles(Collection allTitles);
 
+  /** Override as appropriate.
+   * @return false */
   public boolean isDelOnly() {
     return false;
   }
 
+  /** Override as appropriate.
+   * @return false */
   public boolean isAddOnly() {
     return false;
   }
 
   /** Allow different implementations to specify their major sort order
-   * relative to other implementations. */
+   * relative to other implementations.
+   * @return sort index
+   */
   abstract int getMajorOrder();
 
+  /** Compare two TitleSets, first by artificial sort order, then by name */
   public int compareTo(Object o) {
     BaseTitleSet oset = (BaseTitleSet)o;
     if (getMajorOrder() != oset.getMajorOrder()) {

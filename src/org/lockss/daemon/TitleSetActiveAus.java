@@ -1,5 +1,5 @@
 /*
- * $Id: TitleSetActiveAus.java,v 1.1 2005-01-04 02:58:13 tlipkis Exp $
+ * $Id: TitleSetActiveAus.java,v 1.2 2005-01-11 19:36:51 tlipkis Exp $
  */
 
 /*
@@ -38,18 +38,18 @@ import org.lockss.util.*;
 import org.lockss.config.*;
 import org.lockss.plugin.*;
 
-/** The set of titles configured on the cache */
+/** The set of titles currently configured on the cache */
 public class TitleSetActiveAus extends BaseTitleSet {
 
-  /** Create a TitleSet that consists of all configured titles
+  /** Create a TitleSet that consists of the titles of all configured AUs
    * @param daemon used to get list of all known titles
    */
   public TitleSetActiveAus(LockssDaemon daemon) {
     super(daemon, "All active AUs on this cache");
   }
 
-  /** Return the titles in the set.
-   * @return a collection of TitleConfig */
+  /** Return the titles currently configured on the cache.
+   * @return a collection of {@link TitleConfig} */
   public Collection getTitles() {
     List aus = daemon.getPluginManager().getAllAus();
     List res = new ArrayList(aus.size());
@@ -61,7 +61,9 @@ public class TitleSetActiveAus extends BaseTitleSet {
   }
 
   /** Return a TitleConfig for the AU.  Returns matching entry from the
-   * title db if found, else creates one */
+   * title db if found, else creates one.
+   * @param the AU
+   * @return an existing or synthesized TitleConfig describing the AU */
   TitleConfig titleConfigFromAu(ArchivalUnit au) {
     TitleConfig tc = au.getTitleConfig();
     if (tc == null) {
@@ -98,14 +100,22 @@ public class TitleSetActiveAus extends BaseTitleSet {
     return null;
   }
 
+  /** This method needs to be defined to satisfy the abstract base class,
+   * but should never be called.
+   * @throw UnsupportedOperationException
+  */
   Collection getTitles(Collection allTitles) {
-    return allTitles;
+    throw
+      new UnsupportedOperationException("This method should never be called");
   }
 
+  /** Set of all AUs on cache is only appripriate for deleting, not adding.
+   * @return true */
   public boolean isDelOnly() {
     return true;
   }
 
+  /** Sort this second */
   protected int getMajorOrder() {
     return 2;
   }
