@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.11 2002-11-20 22:57:35 tal Exp $
+ * $Id: LockssTestCase.java,v 1.12 2002-11-26 18:00:12 troberts Exp $
  */
 
 /*
@@ -162,6 +162,18 @@ public class LockssTestCase extends TestCase {
     if (message != null)
       formatted= message+" ";
     fail(formatted+"expected:<"+expected+"> but was:<"+actual+">");
+  }
+
+  static private void failNotEquals(String message,
+					Object[] expected, Object actual) {
+    StringBuffer sb = new StringBuffer(100);
+    sb.append("[");
+    for (int ix=0; ix<expected.length; ix++) {
+      sb.append(expected[ix]);
+      sb.append(", ");
+    }
+    sb.append("]");
+    failNotEquals(message, sb.toString(), actual);
   }
 
   /** Asserts that the two DatagramPackets have equal contents */
