@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.15 2003-02-28 02:10:33 troberts Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.16 2003-02-28 22:25:41 tal Exp $
  */
 
 /*
@@ -106,6 +106,7 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
 	gen.setAbnormalFile(config.get(SimulatedPlugin.PARAM_BAD_FILE_LOC),
 			    config.getInt(SimulatedPlugin.PARAM_BAD_FILE_NUM));
       }
+      resetContentTree();
     } catch (Configuration.InvalidParam e) {
       throw new ArchivalUnit.ConfigurationException("Bad config value", e);
     }
