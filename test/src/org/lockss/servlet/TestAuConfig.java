@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuConfig.java,v 1.4 2004-01-04 06:19:12 tlipkis Exp $
+ * $Id: TestAuConfig.java,v 1.4.14.1 2004-07-23 20:50:20 smorabito Exp $
  */
 
 /*
@@ -51,15 +51,16 @@ public class TestAuConfig extends LockssServletTestCase {
   static Logger log = Logger.getLogger("TestAuConfig");
 
   private MockArchivalUnit mau = null;
+  private PluginManager pluginMgr = null;
 
   public void setUp() throws Exception {
     super.setUp();
-    PluginManager mgr = new PluginManager();
-    theDaemon.setPluginManager(mgr);
+    pluginMgr = new PluginManager();
+    theDaemon.setPluginManager(pluginMgr);
     theDaemon.setDaemonInited(true);
     theDaemon.getRemoteApi().startService();
-    mgr.initService(theDaemon);
-    mgr.startService();
+    pluginMgr.initService(theDaemon);
+    pluginMgr.startService();
 
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     Properties props = new Properties();
@@ -78,7 +79,27 @@ public class TestAuConfig extends LockssServletTestCase {
   }
 
 
-  public void test1() throws Exception {
+  public void testBeforeAusLoaded() throws Exception {
+    initServletRunner();
+    WebRequest request =
+      new GetMethodWebRequest("http://null/AuConfig" );
+    WebResponse resp1 = sClient.getResponse(request);
+    log.debug2("Response 1: " + resp1.getText());
+    assertResponseOk(resp1);
+    assertEquals("Content type", "text/html", resp1.getContentType());
+
+    WebForm auForm = resp1.getFormWithID("AuSummaryForm");
+    WebTable auTable = resp1.getTableWithID("AuSummaryTable");
+    assertNull("Form named AuSummaryForm should not appear " +
+	       "until PluginManager has started all AUs", auForm);
+    assertNull("Table named AuSummaryTable should not appear " +
+	       "until PluginManager has started all AUs", auTable);
+  }
+
+
+  public void testAfterAusLoaded() throws Exception {
+    // Force PluginManager to think all AUs have started.
+    pluginMgr.setLoadablePluginsReady(true);
     initServletRunner();
     WebRequest request =
       new GetMethodWebRequest("http://null/AuConfig" );

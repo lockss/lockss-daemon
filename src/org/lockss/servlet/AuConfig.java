@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.27 2004-06-07 19:21:25 tlipkis Exp $
+ * $Id: AuConfig.java,v 1.27.4.1 2004-07-23 20:50:19 smorabito Exp $
  */
 
 /*
@@ -66,6 +66,7 @@ public class AuConfig extends LockssServlet {
   // accidental collisions
   static final String FORM_PREFIX = "lfp.";
 
+  private PluginManager pluginMgr;
   private ConfigManager configMgr;
   private RemoteApi remoteApi;
 
@@ -99,6 +100,7 @@ public class AuConfig extends LockssServlet {
   public void init(ServletConfig config) throws ServletException {
     super.init(config);
     configMgr = getLockssDaemon().getConfigManager();
+    pluginMgr = getLockssDaemon().getPluginManager();
     remoteApi = getLockssDaemon().getRemoteApi();
   }
 
@@ -249,9 +251,30 @@ public class AuConfig extends LockssServlet {
     endPage(page);
   }
 
+  /** Display a "The cache isn't ready yet, come back later" message if
+   *  not all of the AUs have started yet.
+   */
+  protected void displayNotStarted() throws IOException {
+    Page page = newPage();
+    Composite warning = new Composite();
+    warning.add("<center><font color=red size=+1>");
+    warning.add("This LOCKSS Cache is still starting.  Please try again in a moment.");
+    warning.add("</font></center><br>");
+    page.add(warning);
+    page.add(getFooter());
+    page.write(resp.getWriter());
+  }
+
   /** Display "Add Archival Unit" button and list of configured AUs with Edit
    * buttons */
   private void displayAuSummary() throws IOException {
+    // If the AUs are not started, don't display any AU summary or
+    // any form inputs.
+    if (!pluginMgr.areAusStarted()) {
+      displayNotStarted();
+      return;
+    }
+
     Page page = newPage();
     Collection allAUs = remoteApi.getAllAus();
     addJavaScript(page);
