@@ -1,5 +1,5 @@
 /*
- * $Id: LcapComm.java,v 1.3 2002-11-19 23:26:16 tal Exp $
+ * $Id: LcapComm.java,v 1.4 2002-11-23 01:35:48 troberts Exp $
  */
 
 /*
@@ -36,7 +36,7 @@ import java.io.*;
 import java.net.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
-
+import org.lockss.poller.*;
 /**
  * LcapComm implements the routing parts of the LCAP protocol, using
  * {@link LcapSocket} to send and receive packets.
@@ -79,7 +79,7 @@ public class LcapComm {
     } catch (UnknownHostException e) {
       log.critical("Can't get group addr", e);
     } catch (Configuration.Error e) {
-      log.critical("Multicase port not configured");
+      log.critical("Multicast port not configured", e);
     }
   }
 
@@ -107,6 +107,7 @@ public class LcapComm {
 
   private static void sendMessageTo(LcapMessage msg, InetAddress addr, int port)
       throws IOException {
+    log.debug("sending "+msg+" to "+group+":"+port);
     byte data[] = msg.encodeMsg();
     DatagramPacket pkt = new DatagramPacket(data, data.length, addr, port);
     sendSock.send(pkt);
@@ -154,6 +155,7 @@ public class LcapComm {
       msg = LcapMessage.decodeToMsg(dgram.getPacket().getData(), 
 				dgram.isMulticast());
       log.debug("Received " + msg);
+      PollManager.handleMessage(msg); //XXX should modify node state instead
     } catch (IOException e) {
       log.warning("Error decoding packet", e);
     }
