@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.68 2003-04-10 04:29:45 claire Exp $
+* $Id: PollManager.java,v 1.69 2003-04-10 05:39:28 claire Exp $
  */
 
 /*
@@ -294,7 +294,7 @@ public class PollManager  extends BaseLockssManager {
       thePolls.put(ret_poll.m_key, new PollManagerEntry(ret_poll));
       ret_poll.startPoll();
       if(!msg.isVerifyPoll()) {
-        nm.startPoll(cus, ret_poll.getVoteTally());
+        nm.startPoll(cus, ret_poll.getVoteTally(), false);
       }
       theLog.debug2("Started new poll: " + ret_poll.m_key);
       return ret_poll;
@@ -354,6 +354,8 @@ public class PollManager  extends BaseLockssManager {
       long expiration = 0;
       Deadline d;
       if (replayNeeded) {
+        NodeManager nm = theDaemon.getNodeManager(tally.getArchivalUnit());
+        nm.startPoll(tally.getCachedUrlSet(), tally, true);
         theLog.debug2("replaying poll " + (String) key);
         expiration = m_replayPollExpireTime;
         d = Deadline.in(expiration);

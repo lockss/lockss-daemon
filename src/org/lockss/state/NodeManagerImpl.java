@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.93 2003-04-10 04:29:45 claire Exp $
+ * $Id: NodeManagerImpl.java,v 1.94 2003-04-10 05:39:28 claire Exp $
  */
 
 /*
@@ -124,12 +124,13 @@ public class NodeManagerImpl
     }
   }
 
-  public void startPoll(CachedUrlSet cus, PollTally state) {
+  public void startPoll(CachedUrlSet cus, PollTally state, boolean isReplayPoll) {
     NodeState nodeState = getNodeState(cus);
     PollSpec spec = state.getPollSpec();
+    int status = isReplayPoll ? PollState.REPAIRING : PollState.RUNNING;
     PollState pollState = new PollState(state.getType(), spec.getLwrBound(),
                                         spec.getUprBound(),
-                                        PollState.RUNNING, state.getStartTime(),
+                                        status, state.getStartTime(),
                                         Deadline.in(state.getDuration()),
                                         state.isMyPoll());
     ( (NodeStateImpl) nodeState).addPollState(pollState);
@@ -326,6 +327,11 @@ public class NodeManagerImpl
         // if poll is mine
         logger.debug2("won name poll, calling content poll on subnodes.");
         try {
+          // call a content poll for this node's content
+          logger.debug2("calling content poll on node's contents");
+          callContentPoll(results.getCachedUrlSet(),
+                          RangeCachedUrlSetSpec.SINGLE_NODE_RANGE, null);
+          // call a content poll on this node's subnodes
           callContentPollsOnSubNodes(nodeState, results.getCachedUrlSet());
           pollState.status = PollState.WON;
         }
@@ -559,9 +565,6 @@ public class NodeManagerImpl
       for (int i = 0; i < childList.size(); i++) {
         callContentPoll((CachedUrlSet) childList.get(i), null, null);
       }
-      // and call a content poll for this node's content alone
-      logger.debug2("calling content poll on node contents");
-      callContentPoll(cus, RangeCachedUrlSetSpec.SINGLE_NODE_RANGE, null);
     }
   }
 
