@@ -1,5 +1,5 @@
 /*
- * $Id: TestAlertConfig.java,v 1.1 2004-07-12 06:09:41 tlipkis Exp $
+ * $Id: TestAlertConfig.java,v 1.2 2004-12-08 00:45:19 troberts Exp $
  */
 
 /*
@@ -61,4 +61,30 @@ public class TestAlertConfig extends LockssTestCase {
     AlertConfig c2 = new AlertConfig(c1);
     assertEquals(lst, c2.getFilters());
   }
+
+  public void testHashCodeEqual() {
+    List list = new ArrayList();
+    AlertConfig c1 = new AlertConfig(list);
+    AlertConfig c2 = new AlertConfig(list);
+    assertEquals(c1.hashCode(), c2.hashCode());
+  }
+
+  /**
+   * While it is allowed for hashCode for different objects to be equal, these
+   * tests are meant to catch simple errors which break the hash function by
+   * making it insensitive to one of the unique vars
+   */
+  public void testHashCodeNotEqual() {
+    List list1 = new ArrayList();
+    list1.add("blah");
+    List list2 = new ArrayList();
+    list2.add("blah2");
+    AlertConfig c1 = new AlertConfig(list1);
+    AlertConfig c2 = new AlertConfig(list2);
+    AlertConfig c3 = new AlertConfig();
+    assertNotEquals(c1.hashCode(), c2.hashCode());
+    assertNotEquals(c1.hashCode(), c3.hashCode());
+    assertNotEquals(c2.hashCode(), c3.hashCode());
+  }
+
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: AlertConfig.java,v 1.2 2004-09-28 08:53:20 tlipkis Exp $
+ * $Id: AlertConfig.java,v 1.3 2004-12-08 00:45:16 troberts Exp $
  */
 
 /*
@@ -92,7 +92,10 @@ public class AlertConfig {
   }
 
   public int hashCode() {
-    throw new UnsupportedOperationException();
+    if (filters == null) {
+      return 0;
+    }
+    return filters.hashCode();
   }
 
   public String toString() {
