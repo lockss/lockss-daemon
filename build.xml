@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.130 2005-02-21 03:02:27 tlipkis Exp $
+ $Id: build.xml,v 1.131 2005-02-23 00:41:38 smorabito Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -772,7 +772,7 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
     </if>
 
     <jar destfile="${plugins.dir}/${plugin-jarfile}">
-      <fileset dir="${basedir}">
+      <fileset dir="${classes}">
 	<include name="titledb.xml" if="titledb"/>
 	<include name="${plugin-path}/*.class" />
 	<include name="${plugin-path}/*.xml" />

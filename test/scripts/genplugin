@@ -9,7 +9,7 @@ from getpass import getpass
 from getopt import getopt, GetoptError
 from os import path, environ, popen, getcwd, sep
 from os import pathsep
-from os.path import exists, join
+from os.path import exists, join, expanduser, realpath
 from string import split
 
 # Constants
@@ -89,8 +89,10 @@ Used in all cases:
  jar          The name of the JAR file to create.
  plugin       The full path of the plugin class or XML file,
               complete with extension, in the form
-	      "../path/to/FooPlugin.class" or
-	      "/path/to/FooPlugin.xml" (absolute or relative path).
+	      "../classes/foo/FooPlugin.class" or
+	      "/path/to/classes/foo/FooPlugin.xml" (absolute or relative path).
+              This path must be under the 'classes' subdirectory
+              of the project directory.
  titledb      (Optional) Full or relative path to the title
               DB XML file to bundle.
 
@@ -100,13 +102,16 @@ Only used if --nosign is not set:
  password     Your signing password.
 """
 
+def get_classes_dir():
+    return path.join(projectDir, 'classes') + sep
+
 def common_path(a, b):
     # path.commonprefix is very broken in python.  It works on
     # strings and not path elements, so it thinks that the common
     # prefix of '/foo/bar' and '/foo/baz' is '/foo/ba' (!)  This
     # is a workaround.
-    prefix = path.commonprefix([a, b]);
-    if  len(prefix) == len(a):
+    prefix = path.commonprefix([a, b])
+    if len(prefix) == len(a):
         return prefix
     else:
         lastsep = (prefix.rfind(sep)) + 1
@@ -118,9 +123,9 @@ def get_plugin_info(plugin):
     the plugin file, i.e. given '/path/to/src/foo/bar/BazPlugin.xml',
     return ('foo/bar', 'BazPlugin.xml') """
 
-    pSrc = projectDir + sep
+    pClasses = get_classes_dir()
     pPath = path.abspath(plugin)
-    commonPath = common_path(pSrc, pPath)
+    commonPath = common_path(pClasses, pPath)
 
     pluginFile = pPath[len(commonPath):]
 
@@ -135,17 +140,23 @@ def prompt_for_missing_args():
     global mode
     
     while not args.has_key("jar") or len(args["jar"]) == 0:
-        args["jar"] = raw_input("JAR file: ")
+        args["jar"] = raw_input("JAR file: ").strip()
 
     while not args.has_key("plugin") or len(args["plugin"]) == 0:
-        args["plugin"] = raw_input("Plugin class or XML file: ")
+        args["plugin"] = realpath(expanduser(raw_input("Plugin file (.class or .xml): ").strip()))
 
-    if not path.isfile(args["plugin"]):
-        print("Plugin file '%s' does not exist, can't continue" % args["plugin"])
-        exit(1)
+        if not path.isfile(args["plugin"]):
+            print("Plugin file %s does not exist!" % args["plugin"])
+            del args["plugin"]
+            continue
+        if not (common_path(args["plugin"], get_classes_dir()) == get_classes_dir()):
+            print("Plugin file %s is not under %s!" % (args["plugin"], get_classes_dir()))
+            del args["plugin"]
+            continue
+
         
     while not args.has_key("titledb"):
-        args["titledb"] = raw_input("Title database file to bundle (if any): ")
+        args["titledb"] = raw_input("Title database file to bundle (if any): ").strip()
         if not args.has_key("titledb") or len(args["titledb"]) == 0:
             try:
                 del args["titledb"]
@@ -162,14 +173,15 @@ def prompt_for_missing_args():
 
     if mode == BUILD_AND_SIGN:
         while not args.has_key("alias") or len(args["alias"]) == 0:
-            args["alias"] = raw_input("Signing alias: ")
+            args["alias"] = raw_input("Signing alias: ").strip()
 
         while not args.has_key("keystore") or len(args["keystore"]) == 0:
-            args["keystore"] = raw_input("Signing keystore: ")
+            args["keystore"] = realpath(expanduser(raw_input("Signing keystore: ").strip()))
 
-        if not path.isfile(args["keystore"]):
-            print("Keystore file %s does not exist, can't continue." % args["keystore"]);
-            exit(1)
+            if not path.isfile(args["keystore"]):
+                print("Keystore '%s' does not exist!" % args["keystore"])
+                del args["keystore"]
+                continue
 
         while not args.has_key("password") or len(args["password"]) == 0:
             args["password"] = getpass("Signing Password: ")
@@ -199,15 +211,15 @@ def parse_options(options):
         elif opt == "--jar":
             args["jar"] = val
         elif opt == "--plugin":
-            args["plugin"] = val
+            args["plugin"] = realpath(expanduser(val))
         elif opt == "--titledb":
-            args["titledb"] = val
+            args["titledb"] = realpath(expanduser(val))
         elif opt == "--alias":
             args["alias"] = val
         elif opt == "--password":
             args["password"] = val
         elif opt == "--keystore":
-            args["keystore"] = val
+            args["keystore"] = realpath(expanduser(val))
 
 #
 # Search up the tree until the 'build.xml' file is found, and call
