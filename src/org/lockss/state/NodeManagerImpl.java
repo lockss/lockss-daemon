@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.62 2003-03-20 00:01:35 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.63 2003-03-20 00:14:43 aalto Exp $
  */
 
 /*
@@ -336,7 +336,7 @@ public class NodeManagerImpl implements NodeManager {
       throw new UnsupportedOperationException("Updating state for invalid "
                                               +"results type.");
     }
-    bumpLRUMap(state);
+    refreshInLRUMap(state);
   }
 
   void handleContentPoll(PollState pollState, Poll.VoteTally results,
@@ -612,7 +612,7 @@ public class NodeManagerImpl implements NodeManager {
     return set;
   }
 
-  void bumpLRUMap(NodeState node) {
+  void refreshInLRUMap(NodeState node) {
     if (nodeMap!=null) {
       nodeMap.put(node.getCachedUrlSet().getUrl(), node);
     }

@@ -1,5 +1,5 @@
 /*
- * $Id: NodeStateImpl.java,v 1.8 2003-03-20 00:01:35 aalto Exp $
+ * $Id: NodeStateImpl.java,v 1.9 2003-03-20 00:14:43 aalto Exp $
  */
 
 /*
@@ -122,7 +122,7 @@ public class NodeStateImpl implements NodeState {
   protected void addPollState(PollState new_poll) {
     polls.add(new_poll);
     if (nodeMan!=null) {
-      nodeMan.bumpLRUMap(this);
+      nodeMan.refreshInLRUMap(this);
     }
   }
 
@@ -146,7 +146,7 @@ public class NodeStateImpl implements NodeState {
     }
     polls.remove(finished_poll);
     if (nodeMan!=null) {
-      nodeMan.bumpLRUMap(this);
+      nodeMan.refreshInLRUMap(this);
     }
   }
 
