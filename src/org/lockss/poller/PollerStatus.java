@@ -1,5 +1,5 @@
 /*
-* $Id: PollerStatus.java,v 1.3 2003-04-22 22:58:01 troberts Exp $
+* $Id: PollerStatus.java,v 1.4 2003-04-23 22:49:00 claire Exp $
  */
 
 /*
@@ -64,18 +64,18 @@ public class PollerStatus {
     static final int STRINGTYPE = ColumnDescriptor.TYPE_STRING;
     static final int DATETYPE = ColumnDescriptor.TYPE_DATE;
 
-    private static final List sortRules = 
+    private static final List sortRules =
       ListUtil.list(
-		    new StatusTable.SortRule("AuID", true),
-// 		    new StatusTable.SortRule("URL", true),
+		    new StatusTable.SortRule("AuName", true),
+//		    new StatusTable.SortRule("URL", true),
 		    new StatusTable.SortRule("Deadline", false)
 		    );
     private static final List columnDescriptors =
         ListUtil.list(
-		      new ColumnDescriptor("AuID", "Archive", STRINGTYPE),
+		      new ColumnDescriptor("AuName", "Archive", STRINGTYPE),
 		      new ColumnDescriptor("URL", "URL", STRINGTYPE),
 		      new ColumnDescriptor("Range", "Range", STRINGTYPE),
-		      new ColumnDescriptor("PollType", "Poll Type", 
+		      new ColumnDescriptor("PollType", "Poll Type",
 					   STRINGTYPE),
 		      new ColumnDescriptor("Status", "Status", STRINGTYPE),
 		      new ColumnDescriptor("Deadline", "Deadline", DATETYPE),
@@ -132,8 +132,8 @@ public class PollerStatus {
     private Map makeRow(PollManager.PollManagerEntry entry) {
       HashMap rowMap = new HashMap();
       PollSpec spec = entry.spec;
-      //"AuID"
-      rowMap.put("AuID", spec.getAUId());
+      //"AuName"
+      rowMap.put("AuName", spec.getCachedUrlSet().getArchivalUnit().getName());
       //"URL"
       rowMap.put("URL", spec.getUrl());
       //"Range"

@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerStatus.java,v 1.5 2003-04-22 00:08:55 claire Exp $
+ * $Id: NodeManagerStatus.java,v 1.6 2003-04-23 22:49:00 claire Exp $
  */
 
 /*
@@ -72,7 +72,7 @@ public class NodeManagerStatus {
     static final String TABLE_TITLE = "NodeManager Service Table";
 
     private static final List columnDescriptors = ListUtil.list(
-         new ColumnDescriptor("AuID", "AU ID", ColumnDescriptor.TYPE_STRING),
+         new ColumnDescriptor("AuName", "Archive", ColumnDescriptor.TYPE_STRING),
          new ColumnDescriptor("CrawlTime", "Last Crawl Time",
                               ColumnDescriptor.TYPE_DATE),
          new ColumnDescriptor("TopLevelPoll", "Last Top Level Poll",
@@ -82,7 +82,7 @@ public class NodeManagerStatus {
          );
 
     private static final List sortRules =
-      ListUtil.list(new StatusTable.SortRule("AuID", true));
+      ListUtil.list(new StatusTable.SortRule("AuName", true));
 
     public void populateTable(StatusTable table) throws StatusService.
         NoSuchTableException {
@@ -122,7 +122,7 @@ public class NodeManagerStatus {
       ArchivalUnit au = state.getArchivalUnit();
 
       //"AuID"
-      rowMap.put("AuID", ManagerStatus.makeNodeManagerRef(au.getAUId(),
+      rowMap.put("AuID", ManagerStatus.makeNodeManagerRef(au.getName(),
           au.getAUId()));
 
       //"Status"
