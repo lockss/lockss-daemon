@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.1.2.11 2004-10-13 01:30:21 dshr Exp $
+ * $Id: TestV3Poller.java,v 1.1.2.12 2004-10-14 01:00:05 dshr Exp $
  */
 
 /*
@@ -305,7 +305,7 @@ public class TestV3Poller extends LockssTestCase {
       // Decide to solicit a vote from testID[1],  go to SendingPoll
       poll.solicitVotesFrom(peers);
       assertEquals("Poll " + poll + " vote " + i + " should be in SendingPoll",
-		   V3Poller.STATE_SENDING_POLL,
+		   V3Poller.STATE_PROVING_INTRO_EFFORT,
 		   poll.getPollState());
       assertTrue("Poll " + poll + " vote " + i + " should be active",
 		 pollmanager.isPollActive(key));
@@ -332,7 +332,17 @@ public class TestV3Poller extends LockssTestCase {
 	fail("Message " + testV3msg[1].toString() + " threw " + ex);
       }
       assertEquals("Poll " + poll + " vote " + i + " should be in SendingPollProof",
-		   V3Poller.STATE_SENDING_POLL_PROOF,
+		   V3Poller.STATE_VERIFYING_POLL_ACK_EFFORT,
+		   poll.getPollState());
+      assertTrue("Poll " + poll + " vote " + i + " should be active",
+		 pollmanager.isPollActive(key));
+      assertFalse("Poll " + poll + " vote " + i + " should not be closed",
+		  pollmanager.isPollClosed(key));
+      assertFalse("Poll " + poll + " vote " + i + " should not be suspended",
+		  pollmanager.isPollSuspended(key));
+      stepTimeUntilPollStateChanges(poll);
+      assertEquals("Poll " + poll + " vote " + i + " should be in SendingPollProof",
+		   V3Poller.STATE_PROVING_REMAINING_EFFORT,
 		   poll.getPollState());
       assertTrue("Poll " + poll + " vote " + i + " should be active",
 		 pollmanager.isPollActive(key));
@@ -351,7 +361,6 @@ public class TestV3Poller extends LockssTestCase {
 		  pollmanager.isPollClosed(key));
       assertFalse("Poll " + poll + " vote " + i + " should not be suspended",
 		  pollmanager.isPollSuspended(key));
-      TimeBase.step(500);
       //  Receive a Vote message, go to SendingPoll for next voter
       //  unless no more voters in which case go to SendingRepairRequest
       try {
@@ -367,11 +376,11 @@ public class TestV3Poller extends LockssTestCase {
 		  pollmanager.isPollSuspended(key));
       if (i > 1) {
 	assertEquals("Poll " + poll + " vote " + i + " should be in SendingPoll",
-		     V3Poller.STATE_SENDING_POLL,
+		     V3Poller.STATE_PROVING_INTRO_EFFORT,
 		     poll.getPollState());
       } else {
 	assertEquals("Poll " + poll + " vote " + i + " should be in SendingRepairReq",
-		     V3Poller.STATE_SENDING_REPAIR_REQ,
+		     V3Poller.STATE_VERIFYING_VOTE_EFFORT,
 		     poll.getPollState());
       }
       assertTrue(peers.size() == i-1);
@@ -387,28 +396,41 @@ public class TestV3Poller extends LockssTestCase {
       } else {
 	es.setAgreeVoteResult(true);
       }
-      TimeBase.step(500);
-      //  Verify the poll effort
-      TimeBase.step(500);
-      //  Verify the vote
+      assertEquals("Poll " + poll + " vote " + i + " should be in SendingRepairReq",
+		   V3Poller.STATE_VERIFYING_VOTE_EFFORT,
+		   poll.getPollState());
+      assertTrue("Poll " + poll + " vote " + i + " should be active",
+		 pollmanager.isPollActive(key));
+      assertFalse("Poll " + poll + " vote " + i + " should not be closed",
+		  pollmanager.isPollClosed(key));
+      assertFalse("Poll " + poll + " vote " + i + " should not be suspended",
+		  pollmanager.isPollSuspended(key));
+      stepTimeUntilPollStateChanges(poll);
+      assertEquals("Poll " + poll + " vote " + i + " should be in SendingRepairReq",
+		   V3Poller.STATE_PROVING_REPAIR_EFFORT,
+		   poll.getPollState());
+      assertTrue("Poll " + poll + " vote " + i + " should be active",
+		 pollmanager.isPollActive(key));
+      assertFalse("Poll " + poll + " vote " + i + " should not be closed",
+		  pollmanager.isPollClosed(key));
+      assertFalse("Poll " + poll + " vote " + i + " should not be suspended",
+		  pollmanager.isPollSuspended(key));
+      stepTimeUntilPollStateChanges(poll);
+      assertEquals("Poll " + poll + " vote " + i + " should be in SendingRepairReq",
+		   V3Poller.STATE_VERIFYING_VOTE,
+		   poll.getPollState());
+      assertTrue("Poll " + poll + " vote " + i + " should be active",
+		 pollmanager.isPollActive(key));
+      assertFalse("Poll " + poll + " vote " + i + " should not be closed",
+		  pollmanager.isPollClosed(key));
+      assertFalse("Poll " + poll + " vote " + i + " should not be suspended",
+		  pollmanager.isPollSuspended(key));
+      stepTimeUntilPollStateChanges(poll);
       if ((totalPeers - i) < numInvalid) {
 	assertEquals("Poll " + poll + " vote " + i + " should be in state SenndingRepairReq",
-		     V3Poller.STATE_SENDING_REPAIR_REQ,
+		     V3Poller.STATE_VERIFYING_VOTE_EFFORT,
 		     poll.getPollState());
-	log.debug("XXX before invalid step 500");
-	TimeBase.step(500);
       } else {
-	assertEquals("Poll " + poll + " vote " + i + " should be in SendingRepairReq",
-		     V3Poller.STATE_SENDING_REPAIR_REQ,
-		     poll.getPollState());
-	assertTrue("Poll " + poll + " vote " + i + " should be active",
-		   pollmanager.isPollActive(key));
-	assertFalse("Poll " + poll + " vote " + i + " should not be closed",
-		    pollmanager.isPollClosed(key));
-	assertFalse("Poll " + poll + " vote " + i + " should not be suspended",
-		    pollmanager.isPollSuspended(key));
-	log.debug("XXX before third step 500");
-	stepTimeUntilPollStateChanges(poll);
 	assertEquals("Poll " + poll + " vote " + i + " should be in SendingReceipt",
 		     V3Poller.STATE_SENDING_RECEIPT,
 		     poll.getPollState());
@@ -422,7 +444,7 @@ public class TestV3Poller extends LockssTestCase {
 	stepTimeUntilPollStateChanges(poll);
 	if (i > 1) {
 	  assertEquals("Poll " + poll + " vote " + i + " should be in SendingRepairReq",
-		       V3Poller.STATE_SENDING_REPAIR_REQ,
+		       V3Poller.STATE_VERIFYING_VOTE_EFFORT,
 		       poll.getPollState());
 	  assertTrue("Poll " + poll + " vote " + i + " should be active",
 		     pollmanager.isPollActive(key));
