@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.18 2003-04-03 11:28:41 tal Exp $
+ * $Id: LockssDaemon.java,v 1.19 2003-04-10 21:35:56 tal Exp $
  */
 
 /*
@@ -71,6 +71,7 @@ public class LockssDaemon {
   public static String PROXY_MANAGER = "ProxyManager";
   public static String SERVLET_MANAGER = "ServletManager";
   public static String STATUS_SERVICE = "StatusService";
+  public static String URL_MANAGER = "UrlManager";
 
   /* the default classes that represent our managers */
   private static String DEFAULT_HASH_SERVICE = "org.lockss.hasher.HashService";
@@ -96,6 +97,8 @@ public class LockssDaemon {
     "org.lockss.servlet.ServletManager";
   private static String DEFAULT_STATUS_SERVICE =
     "org.lockss.daemon.status.StatusServiceImpl";
+  private static String DEFAULT_URL_MANAGER =
+    "org.lockss.daemon.UrlManager";
 
 
   private static String DEFAULT_CACHE_LOCATION = "./cache";
@@ -115,6 +118,7 @@ public class LockssDaemon {
   // which managers are initialized and started.
   private ManagerDesc[] managerDescs = {
     new ManagerDesc(STATUS_SERVICE, DEFAULT_STATUS_SERVICE),
+    new ManagerDesc(URL_MANAGER, DEFAULT_URL_MANAGER),
     new ManagerDesc(HASH_SERVICE, DEFAULT_HASH_SERVICE),
     new ManagerDesc(COMM_MANAGER, DEFAULT_COMM_MANAGER),
     new ManagerDesc(ROUTER_MANAGER, DEFAULT_ROUTER_MANAGER),
