@@ -1,5 +1,5 @@
 /*
- * $Id: TestLogger.java,v 1.3 2002-08-31 07:04:32 tal Exp $
+ * $Id: TestLogger.java,v 1.4 2002-09-09 20:32:15 tal Exp $
  */
 
 /*
@@ -167,6 +167,14 @@ public class TestLogger extends TestCase{
 	       equalCollections(target.messageIterator(),
 				new ArrayIterator(testOutputOutput)));
     l.defaultTarget();
+  }
+
+  public void testNoRecurse() {
+    Logger l = Logger.getLogger("recurse");
+    MockLogTarget target = new MockLogTarget();
+    l.setTarget(target);
+    l.setLevel(Logger.LEVEL_DEBUG);
+    l.debug("debug message, shouldn't cause recursion");
   }
 }
 
