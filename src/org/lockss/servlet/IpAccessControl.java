@@ -1,5 +1,5 @@
 /*
- * $Id: IpAccessControl.java,v 1.13 2004-06-15 21:46:49 tlipkis Exp $
+ * $Id: IpAccessControl.java,v 1.14 2004-06-29 19:16:52 smorabito Exp $
  */
 
 /*
@@ -137,7 +137,7 @@ public abstract class IpAccessControl extends LockssServlet {
 
   private Vector getListFromParam(String param) {
     Configuration config = Configuration.getCurrentConfig();
-    return StringUtil.breakAt(config.get(param), ';');
+    return new Vector(config.getList(param));
   }
 
   /**

@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.84 2004-05-18 21:30:01 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.85 2004-06-29 19:16:53 smorabito Exp $
  */
 
 /*
@@ -130,14 +130,13 @@ public class PluginManager extends BaseLockssManager {
 
     // Must load the xml plugin list *before* the plugin registry
     if (changedKeys.contains(PARAM_PLUGIN_XML_PLUGINS)) {
-      xmlPlugins = StringUtil.breakAt(config.get(PARAM_PLUGIN_XML_PLUGINS),
-				      ';', 0, true);
+      xmlPlugins = config.getList(PARAM_PLUGIN_XML_PLUGINS);
     }
     // Don't load or start plugins until the daemon is running.
     if (isDaemonInited()) {
       // Process the plugin registry.
       if (changedKeys.contains(PARAM_PLUGIN_REGISTRY)) {
-	initPluginRegistry(config.get(PARAM_PLUGIN_REGISTRY));
+	initPluginRegistry(config.getList(PARAM_PLUGIN_REGISTRY));
       }
       Configuration allPlugs = config.getConfigTree(PARAM_AU_TREE);
       if (!allPlugs.equals(currentAllPlugs)) {
@@ -853,9 +852,8 @@ public class PluginManager extends BaseLockssManager {
   }
 
   // Synch the plugin registry with the plugins listed in names
-  void initPluginRegistry(String names) {
+  void initPluginRegistry(List nameList) {
     Collection newKeys = new HashSet();
-    List nameList = StringUtil.breakAt(names, ';', 0, true);
     for (Iterator iter = nameList.iterator(); iter.hasNext(); ) {
       String name = (String)iter.next();
       String key = pluginKeyFromName(name);

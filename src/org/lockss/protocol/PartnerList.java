@@ -1,5 +1,5 @@
 /*
- * $Id: PartnerList.java,v 1.17 2004-01-20 18:22:50 tlipkis Exp $
+ * $Id: PartnerList.java,v 1.18 2004-06-29 19:16:53 smorabito Exp $
  */
 
 /*
@@ -99,8 +99,7 @@ class PartnerList {
       config.getTimeInterval(PARAM_RECENT_MULTICAST_INTERVAL,
 			     DEFAULT_RECENT_MULTICAST_INTERVAL);
     if (changedKeys.contains(PARAM_DEFAULT_LIST)) {
-      String s = config.get(PARAM_DEFAULT_LIST, "");
-      List stringList = StringUtil.breakAt(s, ';');
+      List stringList = config.getList(PARAM_DEFAULT_LIST);
       List newDefaultList = new ArrayList();
       for (Iterator iter = stringList.iterator(); iter.hasNext(); ) {
 	try {
