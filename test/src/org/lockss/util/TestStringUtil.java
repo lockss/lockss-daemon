@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.7 2002-11-01 09:20:53 tal Exp $
+ * $Id: TestStringUtil.java,v 1.8 2002-12-30 20:41:26 tal Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 
 import junit.framework.TestCase;
+import java.io.*;
 import java.util.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
@@ -43,7 +44,7 @@ import org.lockss.test.*;
  * @author  Thomas S. Robertson
  * @version 0.0
  */
-public class TestStringUtil extends TestCase{
+public class TestStringUtil extends LockssTestCase {
   public static Class testedClasses[] = {
     org.lockss.util.StringUtil.class
   };
@@ -184,8 +185,23 @@ public class TestStringUtil extends TestCase{
     assertSame(testStr, StringUtil.replaceString(testStr, "xx", "xx"));
   }
 
-//    public void testReplaceStringNullFirst(){
-//    }
+  public void testBreakAt() {
+    Vector v = new Vector();
+    assertEquals(v, StringUtil.breakAt(null, ' '));
+    assertIsomorphic(ListUtil.list("foo"), StringUtil.breakAt("foo", ' '));
+    assertIsomorphic(ListUtil.list("foo", "bar"),
+		     StringUtil.breakAt("foo bar", ' '));
+    assertIsomorphic(ListUtil.list("foo", "", "bar"),
+		     StringUtil.breakAt("foo  bar", ' '));
+    assertIsomorphic(ListUtil.list("foo", "bar"),
+		     StringUtil.breakAt("foo bar ddd", ' ', 2));
+  }
+
+  public void testFromReader() throws Exception {
+    String s = "asdfjsfd";
+    Reader r = new InputStreamReader(new StringInputStream(s));
+    assertEquals(s, StringUtil.fromReader(r));
+  }
 
 }
 

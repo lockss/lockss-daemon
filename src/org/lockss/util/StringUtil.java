@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.8 2002-11-01 09:20:21 tal Exp $
+ * $Id: StringUtil.java,v 1.9 2002-12-30 20:41:26 tal Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util;
 import java.util.*;
+import java.io.*;
 import java.lang.reflect.*;
 import gnu.regexp.*;
 
@@ -194,6 +195,35 @@ public class StringUtil {
     return sb;
   }
 
+  /** Break a string at a separator char, returning a vector of at most
+   * maxItems strings. */
+  public static Vector breakAt(String s, char sep, int maxItems) {
+    Vector res = new Vector();
+    if (s == null) {
+      return res;
+    }
+    if (maxItems <= 0) {
+      maxItems = Integer.MAX_VALUE;
+    }
+    for (int pos = 0; maxItems > 0; maxItems-- ) {
+      int end = s.indexOf(sep, pos);
+      if (end == -1) {
+	if (pos >= s.length()) {
+	  break;
+	}
+	end = s.length();
+      }
+      res.addElement((Object) s.substring(pos, end));
+      pos = end + 1;
+    }
+    return res;
+  }
+
+  /** Break a string at a separator char, returning a vector of strings. */
+  public static Vector breakAt(String s, char sep) {
+    return breakAt(s, sep, 0);
+  }
+
   /**
    * Method to trim the end off of a string as soon as it encounters
    * any one of the characters specified
@@ -274,6 +304,17 @@ public class StringUtil {
       pos += len;
     }
     return count;
+  }
+
+  /* Return a string with all the characters from a reader */
+  public static String fromReader(Reader r) throws IOException {
+    char[] buf = new char[1000];
+    StringBuffer sb = new StringBuffer(1000);
+    int len;
+    while ((len = r.read(buf)) > 0) {
+      sb.append(buf, 0, len);
+    }
+    return sb.toString();
   }
 }
 
