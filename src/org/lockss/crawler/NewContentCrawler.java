@@ -1,5 +1,5 @@
 /*
- * $Id: NewContentCrawler.java,v 1.20 2004-06-14 23:54:46 dcfok Exp $
+ * $Id: NewContentCrawler.java,v 1.21 2004-06-16 22:26:39 dcfok Exp $
  */
 
 /*
@@ -174,6 +174,7 @@ public class NewContentCrawler extends CrawlerImpl {
     if (refetchDepth > maxDepth){
       logger.error("Max. depth is set smaller than refetchDepth." +
 		   " Abort Crawl of " + au);
+      crawlStatus.setCrawlError("Max. Crawl depth too small");
       crawlAborted = true;
     } else {
       while (lvlCnt <= maxDepth) {
@@ -217,9 +218,11 @@ public class NewContentCrawler extends CrawlerImpl {
       } // end of outer while
 
       if (siteDepth == -1) {
-  	Iterator itz = urlsToCrawl.iterator();
-	logger.warning("Site depth exceeds the max. depth. Stopped Crawl of " + au.getName() +
+	logger.error("Site depth exceeds max. crawl depth. Stopped Crawl of " + au.getName() +
 		       " at depth " + (lvlCnt-1));
+	crawlStatus.setCrawlError("Site depth exceeded max. crawl depth");
+	logger.debug2("urlsToCrawl contains:");
+  	Iterator itz = urlsToCrawl.iterator();
 	while (itz.hasNext()){
  	  logger.debug2(""+itz.next());
 	}
@@ -227,8 +230,6 @@ public class NewContentCrawler extends CrawlerImpl {
       } else {
 	logger.info("Site depth = "+ siteDepth);
       }
-
-
     }
 
     if (crawlAborted) {
