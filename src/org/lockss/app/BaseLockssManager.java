@@ -1,5 +1,5 @@
 /*
- * $Id: BaseLockssManager.java,v 1.9 2003-07-14 06:43:48 tlipkis Exp $
+ * $Id: BaseLockssManager.java,v 1.10 2003-12-23 00:20:23 tlipkis Exp $
  */
 
 /*
@@ -44,7 +44,8 @@ public abstract class BaseLockssManager implements LockssManager {
   private LockssManager theManager = null;
   protected LockssDaemon theDaemon = null;
   private Configuration.Callback configCallback;
-  private static Logger log=Logger.getLogger("BaseLockssManager");
+  private Logger log =
+    Logger.getLogger(ClassUtil.getClassNameWithoutPackage(getClass()));
 
   /**
    * Called to initialize each service in turn.  Service should extend
@@ -55,6 +56,7 @@ public abstract class BaseLockssManager implements LockssManager {
    * @throws LockssDaemonException
    */
   public void initService(LockssDaemon daemon) throws LockssDaemonException {
+    log.debug2("initService()");
     if(theManager == null) {
       theDaemon = daemon;
       theManager = this;
@@ -69,6 +71,7 @@ public abstract class BaseLockssManager implements LockssManager {
    * initialized.  Service should extend this to perform any startup
    * necessary. */
   public void startService() {
+    log.debug2("startService()");
   }
 
   /** Called to stop a service.  Service should extend this to stop all
