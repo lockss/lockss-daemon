@@ -115,6 +115,11 @@
 	<property name="class" value="xpath" />
 	<property name="xpath" value="[pluginName='org.lockss.plugin.bioone.BioOnePlugin']" />
       </property>
+      <property name="locksscard">
+	<property name="name" value="LOCKSS Card" />
+	<property name="class" value="xpath" />
+	<property name="xpath" value="[pluginName='org.lockss.plugin.locksscard.LockssCardPlugin']" />
+      </property>
       <property name="free">
 	<property name="name" value="All Free Titles" />
 	<property name="class" value="xpath" />
