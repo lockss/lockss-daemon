@@ -61,7 +61,7 @@ Windows. You may have to set the JAVA_HOME
 environment variable to point to an installed version of Java 1.4.</li>
   <li>The CD contains versions for Windows and Linux/x86:</li>
   <ul>
-    <li>On Windows the CD will automatically run the tool when it is
+    <li>On Windows the tool will automatically run when the CD is
 inserted.</li>
     <li>On Linux/x86 you should navigate to the linux folder on the CD
 and click on the runtool icon.</li>
@@ -682,7 +682,21 @@ now including and excluding the correct files. Note that among the
 files included are programs for Windows and the Mac, .gif and .jpg
 images and .wrl files.<br>
 <h4>Article-ID Journal Structure</h4>
-XXX need example - words without borders isn't a good example XXX<br>
+Some journals use parameters on their URLs for articles. An example is
+Studies in Nolinear Dynamics and Econometrics, hosted on BePress. A
+typical article has a URL like <a
+ href="http://www.bepress.com/cgi/viewcontent.cgi?article=1208&amp;context=snde">http://www.bepress.com/cgi/viewcontent.cgi?article=1208&amp;context=snde</a>.&nbsp;
+The parameters are the part after the <span style="font-weight: bold;">?</span>,
+in this case the <span style="font-weight: bold;">context=</span>
+parameter selects the journal among all the journals hosted on BePress
+and the <span style="font-weight: bold;">article=</span> parameter
+selects the individual article from the journal.&nbsp; In this case we
+want to exclude everything that doesn't match <span
+ style="font-weight: bold;">base_url</span> (<span
+ style="font-weight: bold;">http://www.bepress.com/</span>) followed by
+<span style="font-weight: bold;">cgi/viewcontent.cgi?</span> followed
+by anything followed by <span style="font-weight: bold;">context=snde</span>.<br>
+XXX need example - how to deal with intra-article links? XXX<br>
 <h4>Archival Unit Design</h4>
 So far, we've assumed that the publisher manifest file is a given. In
 practice, its typically the result of a negotiation between the library
@@ -701,7 +715,11 @@ year). Otherwise, if there is a single table of contents page for all
 issues in a volume or year pointing directly to their contents, the
 manifest page should do the same.</li>
 </ul>
-Many journals are published using a sophisticated platform.&nbsp; In
+Many journals are published using a sophisticated platform, such as <a
+ href="http://www.highwire.org/lists/allsites.dtl?view=by+publisher">HighWire
+Press</a>, Atypon, the <a
+ href="http://www.pkp.ubc.ca/ojs/journals.html">Open Journal System</a>
+or <a href="http://muse.jhu.edu/journals/">Project Muse</a>.&nbsp; In
 these cases a single plugin will generally work for all journals hosted
 on the publishing platform. To do this, the configuration parameters
 must be sufficient to distinguish between the AUs of the multiple
@@ -725,14 +743,16 @@ In this case the confguration parameters needed would be <span
  style="font-weight: bold;">volume</span>.<br>
   </li>
   <li>Each journal hosted on Project Muse has a subdirectory of the
-single Project Muse site.&nbsp; For example, a typical article in the
-American Journal of Mathematics has a URL like <a
+single Project Muse site.&nbsp; For example, a typical article in the <span
+ style="font-style: italic;">American Journal of Mathematics</span> has
+a URL like <a
  href="http://muse.jhu.edu/journals/american_journal_of_mathematics/v119/119.3li.pdf">http://muse.jhu.edu/journals/american_journal_of_mathematics/v119/119.3li.pdf</a>
 in which the <span style="font-weight: bold;">base_url</span> is <span
  style="font-weight: bold;">http://muse.jhu.edu/journals/</span> and
 the <span style="font-weight: bold;">journal_dir</span> is <span
  style="font-weight: bold;">american_journal_of_mathematics/</span>. A
-typical article in Postmodern Culture has a URL like <a
+typical article in <span style="font-style: italic;">Postmodern Culture</span>
+has a URL like <a
  href="http://muse.jhu.edu/journals/pmc/v010/10.3chan.html">http://muse.jhu.edu/journals/pmc/v010/10.3chan.html</a>
 in which the <span style="font-weight: bold;">base_url</span> is <span
  style="font-weight: bold;">http://muse.jhu.edu/journals/</span> and
@@ -778,7 +798,7 @@ by a number followed by <span style="font-weight: bold;">-</span>
 followed by a number followed by anything is a good approach.</li>
   <li>If the journal uses parameters in the URL and they don't include
 the volume or year, write rules that include the files that are
-actually needed. XXX need an example.</li>
+actually needed. XXX need to explain the BePress example.</li>
 </ul>
 <h4>Your Own Example</h4>
 <br>
