@@ -1,5 +1,5 @@
 /*
- * $Id: RunDaemon.java,v 1.14 2003-01-31 09:48:16 claire Exp $
+ * $Id: RunDaemon.java,v 1.15 2003-02-04 02:55:03 claire Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ import org.lockss.poller.*;
 import org.lockss.util.*;
 import org.lockss.crawler.*;
 import org.lockss.repository.LockssRepositoryImpl;
+import org.lockss.plugin.PluginManager;
 
 public class RunDaemon {
   private static final String DEFAULT_DIR_PATH = "./";
@@ -108,9 +109,10 @@ public class RunDaemon {
     if (shouldCallPoll) {
       try {
 	Thread.currentThread().sleep(1000);
-	pollManager.requestPoll("http://www.example.com/", ".*",
-				    poll_type,
-				    3 * 60 * 1000);
+        String url = "http://www.example.com/";
+        ArchivalUnit au = PluginManager.findArchivalUnit(url);
+        CachedUrlSet cus = au.makeCachedUrlSet(url, null);
+	pollManager.requestPoll(cus, null, poll_type);
       } catch (Exception e) {
 	e.printStackTrace();
       }

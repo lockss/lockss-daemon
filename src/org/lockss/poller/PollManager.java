@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.22 2003-01-31 09:47:19 claire Exp $
+* $Id: PollManager.java,v 1.23 2003-02-04 02:55:03 claire Exp $
  */
 
 /*
@@ -37,7 +37,7 @@ import java.net.*;
 import java.security.*;
 import java.util.*;
 
-
+import org.lockss.app.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.protocol.*;
@@ -46,7 +46,6 @@ import org.lockss.util.*;
 import org.mortbay.util.*;
 import gnu.regexp.*;
 /*
- TODO: use correct algorithm for determining deadlines for polls
  TODO: move checkForConflict into the appropriate poll class
  TODO: replace checkForConflict url position with call to NodeManager
  */
@@ -58,6 +57,19 @@ public class PollManager {
   static final String PARAM_VERIFY_EXPIRATION = Configuration.PREFIX +
       "poll.expireVerifier";
 
+  static final String PARAM_NAMEPOLL_DEADLINE = Configuration.PREFIX +
+      "poll.namepoll.deadline";
+  static final String PARAM_CONTENTPOLL_MIN = Configuration.PREFIX +
+      "poll.contentpoll.min";
+  static final String PARAM_CONTENTPOLL_MAX = Configuration.PREFIX +
+      "poll.contentpoll.max";
+
+  static final String PARAM_QUORUM = Configuration.PREFIX + "poll.quorum";
+
+  static long DEFAULT_NAMEPOLL_DEADLINE =  10 * 60 * 1000;      // 10 min
+  static long DEFAULT_CONTENTPOLL_MIN = 60 * 60 * 1000;         // 1 hr
+  static long DEFAULT_CONTENTPOLL_MAX = 5 * 24 * 60 *60 * 1000; // 5 days
+  static final int DEFAULT_QUORUM = 5;
 
   static final long DEFAULT_RECENT_EXPIRATION = 24 * 60 * 60 * 1000; // 1 day
   static final long DEFAULT_REPLAY_EXPIRATION = DEFAULT_RECENT_EXPIRATION/2;
@@ -66,7 +78,7 @@ public class PollManager {
   private static PollManager theManager = null;
   private static Logger theLog=Logger.getLogger("PollManager");
 
-  private static HashMap thePolls = new HashMap();
+  private static Hashtable thePolls = new Hashtable();
   private static HashMap theVerifiers = new HashMap();
 
   private static Random theRandom = new Random();
@@ -96,29 +108,28 @@ public class PollManager {
   /**
    * make an election by sending a request packet.  This is only
    * called from the tree walk. The poll remains pending in the
-   * @param url the String representing the url for this poll
+   * @param cus the CachedUrlSet on which to run poll
    * @param regexp the String representing the regexp for this poll
    * @param opcode the poll message opcode
-   * @param duration the time this poll has to run
    * @throws IOException thrown if Message construction fails.
    */
-  public void requestPoll(String url,
-                              String regexp,
-                              int opcode,
-                              long duration)
+  public void requestPoll(CachedUrlSet cus, String regexp, int opcode)
       throws IOException {
-    long voteRange = duration/4;
-    Deadline deadline = Deadline.inRandomRange(duration - voteRange,
-        duration + voteRange);
-    long timeUntilCount = deadline.getRemainingTime();
+    long duration = calcDuration(opcode, cus);
+
     byte[] challenge = makeVerifier();
     byte[] verifier = makeVerifier();
-    LcapMessage msg = LcapMessage.makeRequestMsg(url,regexp,null,
-        challenge,verifier,opcode,timeUntilCount,
+    LcapMessage msg = LcapMessage.makeRequestMsg(cus.getPrimaryUrl(),
+        regexp,
+        null,
+        challenge,
+        verifier,
+        opcode,
+        duration,
         theIdMgr.getLocalIdentity());
 
     theLog.debug("send: " +  msg.toString());
-    sendMessage(msg, PluginManager.findArchivalUnit(url));
+    sendMessage(msg, cus.getArchivalUnit());
   }
 
 
@@ -376,59 +387,46 @@ public class PollManager {
                       DEFAULT_RECENT_EXPIRATION);
     Deadline d = Deadline.in(expiration);
     TimerQueue.schedule(d, new ExpireRecentCallback(), key);
-    synchronized(thePolls) {
-      PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
-      if(pme != null) {
-        pme.setPollCompleted(d);
-      }
-    }
+    PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
+    pme.setPollCompleted(d);
   }
 
   /**
    * suspend a poll while we wait for a repair
-   * @param p the poll to suspend
+   * @param key the identifier key of the poll to suspend
    */
-  void suspendPoll(Poll p) {
-    synchronized(thePolls) {
-      PollManagerEntry pme = (PollManagerEntry)thePolls.get(p.m_key);
-      if(pme != null) {
-        if(pme.deadline != null) {
-          pme.deadline.expire();
-        }
-      }
-      else {
-        pme = new PollManagerEntry(p);
-        thePolls.put(p.m_key, pme);
-      }
-      pme.setPollSuspended();
-    }
-
+  public void suspendPoll(String key) {
+    PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
+    pme.setPollSuspended();
   }
 
 
   /**
    * resume a poll that had been suspended for a repair and check the repair
+   * @param replayNeeded true we now need to replay the poll results
    * @param key the key of the suspended poll
    */
-  void resumePoll(Object key) {
-    synchronized(thePolls) {
-      PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
-      if(pme != null) {
-        Poll p = pme.poll;
-        long expiration = TimeBase.nowMs() +
-                          Configuration.getLongParam(PARAM_REPLAY_EXPIRATION,
-                          DEFAULT_REPLAY_EXPIRATION);
-        Deadline d = Deadline.in(expiration);
-        p.getVoteTally().startReplay(d);
-
-        // now we want to make sure we add it to the recent polls.
-        expiration += Configuration.getLongParam(PARAM_RECENT_EXPIRATION,
-            DEFAULT_RECENT_EXPIRATION);
-
+  public void resumePoll(boolean replayNeeded, Object key) {
+    PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
+    if(pme != null) {
+      Poll p = pme.poll;
+      long expiration = 0;
+      Deadline d;
+      if(replayNeeded) {
+        expiration = TimeBase.nowMs() +
+                     Configuration.getLongParam(PARAM_REPLAY_EXPIRATION,
+                     DEFAULT_REPLAY_EXPIRATION);
         d = Deadline.in(expiration);
-        TimerQueue.schedule(d, new ExpireRecentCallback(), (String)key);
-        pme.setPollCompleted(d);
+        p.getVoteTally().startReplay(d);
       }
+
+      // now we want to make sure we add it to the recent polls.
+      expiration += Configuration.getLongParam(PARAM_RECENT_EXPIRATION,
+          DEFAULT_RECENT_EXPIRATION);
+
+      d = Deadline.in(expiration);
+      TimerQueue.schedule(d, new ExpireRecentCallback(), (String)key);
+      pme.setPollCompleted(d);
     }
   }
 
@@ -553,14 +551,48 @@ public class PollManager {
   }
 
 
+
+  int getQuorum() {
+    return Configuration.getIntParam(PARAM_QUORUM, DEFAULT_QUORUM);
+  }
+
+  long calcDuration(int pollKind, CachedUrlSet cus) {
+    long ret = 0;
+    int quorum = getQuorum();
+
+    switch (pollKind) {
+      case Poll.NAME_POLL:
+         ret = Configuration.getLongParam(PARAM_NAMEPOLL_DEADLINE,
+            DEFAULT_NAMEPOLL_DEADLINE);
+         long range = ret/4;
+         Deadline d = Deadline.inRandomRange(ret-range, ret+range);
+         ret = d.getExpirationTime() * 2 * (quorum +1);
+
+        break;
+
+      case Poll.CONTENT_POLL:
+        long minContent = Configuration.getLongParam(PARAM_CONTENTPOLL_MIN,
+            DEFAULT_CONTENTPOLL_MIN);
+        long maxContent = Configuration.getLongParam(PARAM_CONTENTPOLL_MAX,
+            DEFAULT_CONTENTPOLL_MAX);
+        ret = cus.estimatedHashDuration() * 2 * (quorum + 1);
+        ret = ret < minContent ? minContent : (ret > maxContent ? maxContent : ret);
+        break;
+
+      default:
+    }
+
+    return ret;
+  }
+
 //-------------- TestPollManager Accessors ----------------------------
-  /**
-   * remove the poll represented by the given key from the poll table and
-   * return it.
-   * @param key the String representation of the polls key
-   * @return Poll the poll if found or null
-   */
-  synchronized Poll removePoll(String key) {
+/**
+ * remove the poll represented by the given key from the poll table and
+ * return it.
+ * @param key the String representation of the polls key
+ * @return Poll the poll if found or null
+ */
+  Poll removePoll(String key) {
     PollManagerEntry pme = (PollManagerEntry)thePolls.remove(key);
     return (pme != null) ? pme.poll : null;
   }
@@ -621,6 +653,7 @@ public class PollManager {
     }
   }
 
+
   /**
    * <p>PollManagerEntry: </p>
    * <p>Description: Class to represent the data store in the polls table.
@@ -654,21 +687,18 @@ public class PollManager {
       return status == SUSPENDED;
     }
 
-
-    void setPollCompleted(Deadline d) {
+    synchronized void setPollCompleted(Deadline d) {
       poll = null;
       deadline = d;
       status = COMPLETED;
     }
 
-    void setPollSuspended() {
-      if(status == SUSPENDED) {
-        if(deadline != null) {
-          deadline.expire();
-          deadline = null;
-        }
+    synchronized void setPollSuspended() {
+      if(deadline != null) {
+        deadline.expire();
+        deadline = null;
       }
-       status = SUSPENDED;
+      status = SUSPENDED;
     }
 
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.17 2003-02-01 01:25:26 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.18 2003-02-04 02:55:03 claire Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import java.net.InetAddress;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.poller.*;
+import org.lockss.crawler.RepairCallback;
 import org.lockss.plugin.PluginManager;
 import org.lockss.protocol.LcapMessage;
 import org.lockss.protocol.IdentityManager;
@@ -336,7 +337,7 @@ public class NodeManagerImpl implements NodeManager {
         // if leaf node, we need to repair
         pollState.status = PollState.REPAIRING;
         try {
-          markNodeForRepair(nodeState.getCachedUrlSet(), pollState);
+          markNodeForRepair(nodeState.getCachedUrlSet(), results);
           closePoll(pollState, results.getDuration(), results.getPollVotes(),
                     nodeState);
           //XXX results.suspend(nodeState.getCachedUrlSet().getPrimaryUrl());
@@ -386,7 +387,7 @@ public class NodeManagerImpl implements NodeManager {
           // if not found locally, fetch
           try {
             CachedUrlSet newCus = au.makeCachedUrlSet(url, null);
-            markNodeForRepair(newCus, pollState);
+            markNodeForRepair(newCus, results);
             //add to NodeState list
             addNewNodeState(newCus);
           } catch (Exception e) {
@@ -419,10 +420,9 @@ public class NodeManagerImpl implements NodeManager {
   }
 
   private void callNamePoll(CachedUrlSet cus) {
-    long duration = 10000; //XXX fix
     try {
-      PollManager.getPollManager().requestPoll(cus.getPrimaryUrl(),
-          null, LcapMessage.NAME_POLL_REQ, duration);
+      PollManager.getPollManager().requestPoll(cus, null,
+          LcapMessage.NAME_POLL_REQ);
     } catch (IOException ioe) {
       logger.error("Couldn't make name poll request.", ioe);
       //XXX schedule something
@@ -462,12 +462,13 @@ public class NodeManagerImpl implements NodeManager {
     return PollState.ERR_UNDEFINED;
   }
 
-  private void markNodeForRepair(CachedUrlSet cus, PollState pollState)
+  private void markNodeForRepair(CachedUrlSet cus, Poll.VoteTally tally)
       throws IOException {
-    //XXX fix to asynchronize
-    // CrawlManager.scheduleRepair(new URL(cus.getPrimaryUrl()),
-    // RepairCallback cb, Object cookie);
-cus.makeUrlCacher(cus.getPrimaryUrl()).cache();
+    //PollManager.getPollManager().suspendPoll(tally.getPollKey());
+    //CrawlManger.scheduleRepair(new URL(cus.getPrimaryUrl()),
+    //                           new ContentRepairCallback(),
+    //                             tally.getPollKey());
+    //cus.makeUrlCacher(cus.getPrimaryUrl()).cache();
   }
 
   private void deleteNode(CachedUrlSet cus) throws IOException {
@@ -483,9 +484,8 @@ cus.makeUrlCacher(cus.getPrimaryUrl()).cache();
     Iterator children = state.getCachedUrlSet().flatSetIterator();
     while (children.hasNext()) {
       CachedUrlSet child = (CachedUrlSet)children.next();
-      long hashEstimate = child.estimatedHashDuration();
-      PollManager.getPollManager().requestPoll(child.getPrimaryUrl(), null,
-          LcapMessage.CONTENT_POLL_REQ, hashEstimate);
+      PollManager.getPollManager().requestPoll(child, null,
+          LcapMessage.CONTENT_POLL_REQ);
     }
   }
 
@@ -510,4 +510,16 @@ cus.makeUrlCacher(cus.getPrimaryUrl()).cache();
     }
     return set;
   }
+
+  static class ContentRepairCallback  implements RepairCallback {
+    /**
+     * @param success whether the repair was successful or not
+     * @param cookie object used by callback to designate which repair
+     * attempt this is
+     */
+    public void signalRepairAttemptCompleted(boolean success, Object cookie) {
+      PollManager.getPollManager().resumePoll(success, cookie);
+    }
+  }
+
 }

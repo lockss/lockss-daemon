@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.44 2003-01-30 03:19:05 claire Exp $
+* $Id: Poll.java,v 1.45 2003-02-04 02:55:03 claire Exp $
  */
 
 /*
@@ -59,13 +59,11 @@ public abstract class Poll implements Serializable {
   public static final int CONTENT_POLL = 1;
   public static final int VERIFY_POLL = 2;
 
-  static final String PARAM_QUORUM = Configuration.PREFIX + "poll.quorum";
   static final String PARAM_AGREE_VERIFY = Configuration.PREFIX +
       "poll.agreeVerify";
   static final String PARAM_DISAGREE_VERIFY = Configuration.PREFIX +
       "poll.disagreeVerify";
 
-  static final int DEFAULT_QUORUM = 5;
   static final int DEFAULT_AGREE_VERIFY = 20;
   static final int DEFAULT_DISAGREE_VERIFY = 90;
 
@@ -539,7 +537,7 @@ public abstract class Poll implements Serializable {
       this.numDisagree = numDisagree;
       this.wtAgree = wtAgree;
       this.wtDisagree = wtDisagree;
-      quorum = Configuration.getIntParam(PARAM_QUORUM, DEFAULT_QUORUM);
+      quorum = m_pollmanager.getQuorum();
       pollVotes = new ArrayList(quorum * 2);
       hashAlgorithm = m_msg.getHashAlgorithm();
     }
@@ -562,6 +560,13 @@ public abstract class Poll implements Serializable {
       return false;
     }
 
+    /**
+     * return the unique key for the poll for this tally
+     * @return a String representing the key
+     */
+    public String getPollKey() {
+      return m_key;
+    }
 
     /**
      * Returns true if the poll belongs to this Identity

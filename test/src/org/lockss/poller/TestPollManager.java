@@ -120,8 +120,14 @@ public class TestPollManager extends TestCase {
   /** test for method makePollRequest(..) */
   public void testMakePollRequest() {
     try {
-      pollmanager.requestPoll(urlstr,regexp,LcapMessage.VERIFY_POLL_REQ,
-                                  testduration);
+      CachedUrlSet cus = null;
+      try {
+        cus = testau.makeCachedUrlSet(rooturls[1], null);
+      }
+      catch (REException ex) {
+        // should never be thrown
+      }
+      pollmanager.requestPoll(cus,regexp,LcapMessage.VERIFY_POLL_REQ);
     }
     catch (IllegalStateException e) {
       // ignore this for now
@@ -287,12 +293,12 @@ public class TestPollManager extends TestCase {
     }
 
     // check our suspend
-    pollmanager.suspendPoll(p1);
+    pollmanager.suspendPoll(p1.m_key);
     assertTrue(pollmanager.isPollSuspended(p1.m_key));
     assertTrue(!pollmanager.isPollClosed(p1.m_key));
 
     // now we resume...
-    pollmanager.resumePoll(p1.m_key);
+    pollmanager.resumePoll(false, p1.m_key);
     assertTrue(!pollmanager.isPollSuspended(p1.m_key));
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.1 2003-01-31 09:47:19 claire Exp $
+ * $Id: PluginManager.java,v 1.2 2003-02-04 02:55:03 claire Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.plugin;
 
 import java.util.*;
 import org.lockss.daemon.*;
+import org.lockss.app.*;
 
 /**
  * Plugin global functionality
@@ -41,9 +42,36 @@ import org.lockss.daemon.*;
  * @author  TAL
  * @version 0.0
  */
-public class PluginManager {
+public class PluginManager implements LockssManager {
 
   private static Vector archivalUnits = new Vector();
+
+
+  /* ------- LockssManager implementation ------------------
+  /**
+   * init the plugin manager.
+   * @param daemon the LockssDaemon instance
+   * @see org.lockss.app.LockssManager.initService()
+   */
+  public void initService(LockssDaemon daemon) {
+
+  }
+
+  /**
+   * start the plugin manager.
+   * @see org.lockss.app.LockssManager.startService()
+   */
+  public void startService() {
+
+  }
+
+  /**
+   * stop the plugin manager
+   * @see org.lockss.app.LockssManager.stopService()
+   */
+  public void stopService() {
+
+  }
 
   /**
    * Register the <code>ArchivalUnit</code>, so that
