@@ -1,5 +1,5 @@
 /*
- * $Id: NewContentCrawler.java,v 1.14.2.1 2004-03-23 08:28:17 tlipkis Exp $
+ * $Id: NewContentCrawler.java,v 1.14.2.2 2004-03-23 20:52:56 tlipkis Exp $
  */
 
 /*
@@ -206,6 +206,8 @@ public class NewContentCrawler extends CrawlerImpl {
 	  numUrlsFetched++;
 	}
       } catch (CacheException e) {
+	// Failed.  Don't try this one again during this crawl.
+	failedUrls.add(uc.getUrl());
 	if (e.isAttributeSet(CacheException.ATTRIBUTE_FAIL)) {
 	  logger.error("Problem caching "+uc+". Continuing", e);
 	  error = Crawler.STATUS_FETCH_ERROR;
@@ -213,16 +215,21 @@ public class NewContentCrawler extends CrawlerImpl {
 	  logger.warning(uc+" not found on publisher's site", e);
 	}
       } catch (Exception e) {
+	failedUrls.add(uc.getUrl());
 	//XXX not expected
 	logger.error("Unexpected Exception during crawl, continuing", e);
 	error = Crawler.STATUS_FETCH_ERROR;
       }
     } else {
+      if (wdog != null) {
+	wdog.pokeWDog();
+      }
       if (!parsedPages.contains(uc.getUrl())) {
 	logger.debug2(uc+" exists, not caching");
       }
       if (!reparse) {
 	logger.debug2(uc+" exists, not reparsing");
+	parsedPages.add(uc.getUrl());
 	return true;
       }
     }
@@ -288,7 +295,6 @@ public class NewContentCrawler extends CrawlerImpl {
 	} else {
 	  logger.warning("Failed to cache "+ maxTries +" times.  Skipping "
 			 + uc);
-	  failedUrls.add(uc.getUrl());
 	  throw e;
 	}
       }
