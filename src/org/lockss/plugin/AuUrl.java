@@ -1,5 +1,5 @@
 /*
-* $Id: AuUrl.java,v 1.3 2003-02-25 23:22:02 tal Exp $
+* $Id: AuUrl.java,v 1.4 2003-04-10 21:46:51 tal Exp $
  */
 
 /*
@@ -33,25 +33,16 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin;
 import java.io.*;
 import java.net.*;
+import org.lockss.daemon.*;
 
 /** An AU URL is a URL with a special protocol (LOCKSSAU:), used in
- * top-level poll messages to dentify the entire contents of an AU.  This
- * class contains static utility methods to build and dissect them, and
- * one-time initialization necessary so that LOCKSSAU: URLs can be created.
- * This initialization can be done only once per JVM, so is in a separate
- * class to avoid problems that occur when running multiple junit tests in
- * the same JVM. */
+ * top-level poll messages to identify the entire contents of an AU.
+ */
 public class AuUrl {
 
-  public static final String PROTOCOL = "lockssau";
+  public static final String PROTOCOL = UrlManager.PROTOCOL_AU;
   public static final String PROTOCOL_COLON = PROTOCOL + ":";
   static final int cmp_len = PROTOCOL_COLON.length();
-
-  /** Set up the URLStreamHandlerFactory that understands the LOCKSSAU:
-   * protocol */
-  public static void init() {
-    URL.setURLStreamHandlerFactory(new AuUrlFactory());
-  }
 
   /** Return true if the supplied URL is an AuUrl.
    * @param url the URL to test.
@@ -87,20 +78,5 @@ public class AuUrl {
    */
   public static String getAuId(URL auUrl) {
     return URLDecoder.decode(auUrl.getFile());
-  }
-
-  // This allows creation of URLs with the LOCKSSAU: protocol.  They are
-  // never opened, so the stream factory doesn't need to do anything.
-  private static class AuUrlFactory implements URLStreamHandlerFactory {
-    public URLStreamHandler createURLStreamHandler(String protocol) {
-      if (PROTOCOL.equalsIgnoreCase(protocol)) {
-	return new URLStreamHandler() {
-	    protected URLConnection openConnection(URL u) throws IOException {
-	      return null;
-	    }};
-      } else {
-	return null;	 // use default stream handlers for other protocols
-      }
-    }
   }
 }
