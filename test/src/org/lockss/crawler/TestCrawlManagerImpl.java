@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.24 2003-06-26 00:19:52 troberts Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.25 2003-06-26 00:21:45 troberts Exp $
  */
 
 /*
@@ -424,9 +424,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 
     public boolean doCrawl(Deadline deadline) {
       sem1.give();
-      System.err.println("Gave sem1, Waiting on sem2");
       sem2.take();
-      System.err.println("Took sem2");
       return true;
     }
   }
