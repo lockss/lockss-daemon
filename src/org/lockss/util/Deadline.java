@@ -1,5 +1,5 @@
 /*
- * $Id: Deadline.java,v 1.30 2004-01-12 05:40:47 tlipkis Exp $
+ * $Id: Deadline.java,v 1.31 2004-06-28 22:24:30 tlipkis Exp $
  */
 
 /*
@@ -265,29 +265,33 @@ public class Deadline implements Comparable {
     return expiration;
   }
 
-  /** Return the time remaining until expiration, in milliseconds.
-   * This method should not be used to obtain a duration to sleep; use
-   * {@link #getSleepTime()} for that.
+  /** Return the time remaining until expiration, in milliseconds.  This
+   * method should not be used to obtain a duration to sleep, nor a timeout
+   * duration for Object.wait(); use {@link #getSleepTime()} for that.
    * @return remaining time
    */
   public synchronized long getRemainingTime() {
     return (expired() ? 0 : expiration.getTime() - nowMs());
   }
 
-  /** Return the time to sleep, in milliseconds.
-   * This method should be used instead of {@link #getRemainingTime()} to
-   * determine how long to sleep.  When operating with the real time base
-   * it returns the same value as getRemainingTime().  When using a fake
-   * time base for debugging, it returns a small number so that any sleeps
-   * will complete quickly, as it is impossible to predict when the fake
-   * time base will be advanced to the deadline.
-   * @return sleep time
+  /** Return the time to sleep, in milliseconds.  This method should be
+   * used instead of {@link #getRemainingTime()} to determine how long to
+   * sleep.  It differs from getRemainingTime() in two important ways:
+   * <ul><li><b>It always returns at least 1</b>, even if the expiration
+   * time has already passed.  This is because the value is often used as
+   * the timeout argument to Object.wait(), which interprets 0 as "no
+   * timeout", not "immediate timeout".  <li>When running in simulated time
+   * it returns a small number so that any sleeps will complete quickly, as
+   * it is impossible to predict how long it will be until simulated time
+   * will be advanced to the deadline.</ul>
+   * @return sleep time suitable to pass to Object.wait() or Thread.sleep()
    */
   public synchronized long getSleepTime() {
     if (TimeBase.isSimulated()) {
-      return expired() ? 0 : 5;
+      return (expired() ? 1 : 5);
     } else {
-      return getRemainingTime();
+      long res = getRemainingTime();
+      return res >= 1 ? res : 1;
     }
   }
 
@@ -485,7 +489,7 @@ public class Deadline implements Comparable {
 	sb.append("-");
 	sb.append(-dayDiff);
 	sb.append("D");
-      } 
+      }
       return sb.toString();
     }
   }
@@ -522,8 +526,8 @@ public class Deadline implements Comparable {
     long nap;
     try {
       registerCallback(cb);
-      while ((nap = getSleepTime()) > 0) {
-	Thread.sleep(nap);
+      while (!expired()) {
+	Thread.sleep(getSleepTime());
       }
     } finally {
       unregisterCallback(cb);

@@ -1,5 +1,5 @@
 /*
- * $Id: TestDeadline.java,v 1.14 2003-11-11 20:25:30 tlipkis Exp $
+ * $Id: TestDeadline.java,v 1.15 2004-06-28 22:24:29 tlipkis Exp $
  */
 
 /*
@@ -192,6 +192,12 @@ public class TestDeadline extends LockssTestCase {
     assertEquals(Deadline.in(200), Deadline.latest(p2, p1));
     assertEquals(Deadline.in(100), Deadline.latest(p1, p1));
     assertEquals(Deadline.MAX, Deadline.latest(Deadline.MAX, p1));
+  }
+
+  public void testGetSleepTime() {
+    Deadline t = Deadline.in(0);
+    assertTrue(t.expired());
+    assertTrue(t.getSleepTime() > 0);
   }
 
   public void testSleep() {
