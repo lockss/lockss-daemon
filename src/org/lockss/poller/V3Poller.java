@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.1.2.5 2004-10-07 22:14:48 dshr Exp $
+ * $Id: V3Poller.java,v 1.1.2.6 2004-10-08 00:09:27 dshr Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.poller;
 
 import java.io.*;
 import java.security.*;
+import java.util.*;
 
 import org.lockss.daemon.*;
 import org.lockss.hasher.*;
@@ -260,10 +261,11 @@ public class V3Poller extends V3Poll {
   }
 
   //  XXX - stuff for initial testing
-  private PeerIdentity voter = null;
-  public void solicitVoteFrom(PeerIdentity candidate) {
-      // XXX this is mock stuff for initial testing
-    voter = candidate;
+  private List m_voterRoll = null;
+
+  protected void solicitVotesFrom(List peers) {
+    m_voterRoll = peers;
+    // XXX this is mock stuff for initial testing
     EffortService.ProofCallback cb = new PollEffortCallback(m_pollmanager);
     EffortService es = theEffortService;
     EffortService.Proof pollProof = es.makeProof();
@@ -574,7 +576,48 @@ public class V3Poller extends V3Poll {
       log.debug("Vote: " + (String) cookie +
 		(vote.isAgreement() ? " " : " dis") + "agree");
       m_state = STATE_SENDING_RECEIPT;
+      if (m_tally != null) {
+	if (vote.isAgreement()) {
+	  m_tally.agree();
+	} else {
+	  m_tally.disagree();
+	}
+      } else {
+	log.error("Can't get poll tally for " + (String)cookie);
+      }
+      Deadline receiptDeadline = Deadline.in(400);
+      TimerQueue.schedule(receiptDeadline, new ReceiptTimerCallback(), this);
       return;
+    }
+  }
+
+  //  XXX temporary
+  class ReceiptTimerCallback implements TimerQueue.Callback {
+    /**
+     * Called when the timer expires.
+     * @param cookie  data supplied by caller to schedule()
+     */
+    public void timerExpired(Object cookie) {
+      if (m_voterRoll.isEmpty()) {
+	log.error("Voter roll empty after receipt");
+	m_state = STATE_FINALIZING;
+	if(m_pollstate != PS_COMPLETE) {
+	  stopPoll();
+	}
+      } else if ((PeerIdentity)m_voterRoll.remove(0) == null) {
+	log.error("Voter roll doesn't deliver peer id after receipt");
+	m_state = STATE_FINALIZING;
+	if(m_pollstate != PS_COMPLETE) {
+	  stopPoll();
+	}
+      } else if (!m_voterRoll.isEmpty()) {
+	solicitVotesFrom(m_voterRoll);
+      } else {
+	m_state = STATE_FINALIZING;
+	if(m_pollstate != PS_COMPLETE) {
+	  stopPoll();
+	}
+      }
     }
   }
 

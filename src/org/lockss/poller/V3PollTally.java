@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollTally.java,v 1.1.2.2 2004-10-01 15:12:05 dshr Exp $
+ * $Id: V3PollTally.java,v 1.1.2.3 2004-10-08 00:09:27 dshr Exp $
  */
 
 /*
@@ -231,6 +231,16 @@ public class V3PollTally extends PollTally {
   public int getTallyResult() {
     return result;
   }
+
+  // XXX - temporary 
+  protected void agree() {
+    numAgree++;
+  }
+
+  protected void disagree() {
+    numDisagree++;
+  }
+  // XXX - end temporary
 
   private boolean isLeadEnough() {
     return (numAgree - numDisagree) > quorum;

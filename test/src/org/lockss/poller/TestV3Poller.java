@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.1.2.6 2004-10-07 22:14:48 dshr Exp $
+ * $Id: TestV3Poller.java,v 1.1.2.7 2004-10-08 00:09:28 dshr Exp $
  */
 
 /*
@@ -181,7 +181,9 @@ public class TestV3Poller extends LockssTestCase {
 		pollmanager.isPollSuspended(key));
     TimeBase.step(500);
     // Decide to solicit a vote from testID1,  go to SendingPoll
-    poll.solicitVoteFrom(testID1);
+    List peers = new ArrayList(1);
+    peers.add(testID1);
+    poll.solicitVotesFrom(peers);
     assertEquals("Poll " + poll + " should be in SendingPoll",
 		 V3Poller.STATE_SENDING_POLL,
 		 poll.getPollState());
@@ -274,6 +276,16 @@ public class TestV3Poller extends LockssTestCase {
     assertTrue("Poll " + poll + " should be active",
 	       pollmanager.isPollActive(key));
     assertFalse("Poll " + poll + " should not be closed",
+		pollmanager.isPollClosed(key));
+    assertFalse("Poll " + poll + " should not be suspended",
+		pollmanager.isPollSuspended(key));
+    TimeBase.step(500);
+    assertEquals("Poll " + poll + " should be in Finalizing",
+		 V3Poller.STATE_FINALIZING,
+		 poll.getPollState());
+    assertFalse("Poll " + poll + " should not be active",
+	       pollmanager.isPollActive(key));
+    assertTrue("Poll " + poll + " should not be closed",
 		pollmanager.isPollClosed(key));
     assertFalse("Poll " + poll + " should not be suspended",
 		pollmanager.isPollSuspended(key));
