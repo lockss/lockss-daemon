@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkHandler.java,v 1.16 2003-04-17 00:28:10 aalto Exp $
+ * $Id: TreeWalkHandler.java,v 1.17 2003-04-17 02:13:25 aalto Exp $
  */
 
 /*
@@ -154,7 +154,7 @@ public class TreeWalkHandler {
     logger.debug("Attempting tree walk: " + theAu.getName());
 
     //get expiration time
-    long expiration = DEFAULT_TREEWALK_INTERVAL;
+    long expiration = treeWalkInterval;
     if (getAverageTreeWalkDuration() > 0) {
       expiration = 2 * getAverageTreeWalkDuration();
     }
@@ -188,6 +188,8 @@ public class TreeWalkHandler {
       finally {
         if (!treeWalkAborted) {
           theRegulator.auActivityFinished(ActivityRegulator.TREEWALK, theAu);
+        } else {
+          treeWalkAborted = false;
         }
       }
     }
@@ -251,17 +253,6 @@ public class TreeWalkHandler {
    * @return true if treewalk can continue below
    */
   boolean checkNodeState(NodeState node) {
-/* XXX no longer necessary
-    // determine if there are active polls
-    Iterator polls = node.getActivePolls();
-    while (polls.hasNext()) {
-      PollState poll = (PollState)polls.next();
-      if (poll.isActive()) {
-        // if there are active polls, don't interfere
-        return false;
-      }
-    }
- */
     // at each node, check for recrawl needed
     if (node.getCachedUrlSet().hasContent()) {
       // if (theCrawlManager.shouldRecrawl(managerAu, node)) {
@@ -273,6 +264,8 @@ public class TreeWalkHandler {
     if (lastHistory != null) {
       // give the last history to the manager to check for consistency
       if (manager.checkLastHistory(lastHistory, node, true)) {
+        logger.debug3("Calling poll on node '"+
+                      node.getCachedUrlSet().getUrl()+"'");
         // free treewalk state
         theRegulator.auActivityFinished(ActivityRegulator.TREEWALK, theAu);
         // take appropriate action
@@ -352,6 +345,7 @@ public class TreeWalkHandler {
   class TreeWalkThread extends Thread {
     private boolean goOn = true;
     boolean doingTreeWalk = false;
+    boolean randomDelay = true;
     Deadline deadline;
     private static final long SMALL_SLEEP = Constants.SECOND;
 
@@ -363,7 +357,15 @@ public class TreeWalkHandler {
       while (goOn) {
         long timeToStart = timeUntilTreeWalkStart();
         if (timeToStart <= 0) {
-          if (!theDaemon.isDaemonRunning()) {
+          if (randomDelay) {
+            // only random delay the first time, to allow better test communication
+            deadline = Deadline.inRandomRange(SMALL_SLEEP, 10*SMALL_SLEEP);
+            logger.debug3("Random sleep for "+deadline.getRemainingTime()+"ms");
+            try {
+              deadline.sleep();
+            } catch (InterruptedException ie) { }
+            randomDelay = false;
+          } else if (!theDaemon.isDaemonRunning()) {
             // if the daemon isn't up yet, do a short sleep
             logger.debug2("Daemon not running yet. Sleeping...");
             deadline = Deadline.in(SMALL_SLEEP);
@@ -389,6 +391,9 @@ public class TreeWalkHandler {
 
     public void end() {
       goOn = false;
+      if (doingTreeWalk) {
+        theRegulator.auActivityFinished(ActivityRegulator.TREEWALK, theAu);
+      }
       treeWalkAborted = true;
       if (deadline != null) {
         deadline.expire();
