@@ -1,5 +1,5 @@
 /*
- * $Id: RingArray.java,v 1.1 2003-06-04 23:21:39 troberts Exp $
+ * $Id: CharRing.java,v 1.1 2003-06-05 21:48:59 troberts Exp $
  */
 
 /*
@@ -32,8 +32,8 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util;
 
-public class RingArray {
-  private static Logger logger = Logger.getLogger("RingArray");
+public class CharRing {
+  private static Logger logger = Logger.getLogger("CharRing");
 
   char chars[];
   int idx = -1;
@@ -42,7 +42,7 @@ public class RingArray {
   int size = 0;
 
 
-  public RingArray(int size) {
+  public CharRing(int size) {
     if (size <= 0) {
       throw new IllegalArgumentException("Bad size");
     }
