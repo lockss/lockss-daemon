@@ -1,5 +1,5 @@
 /*
- * $Id: SampleArchivalUnit.java,v 1.7 2004-07-23 16:45:55 tlipkis Exp $
+ * $Id: SampleArchivalUnit.java,v 1.8 2004-09-01 23:36:50 clairegriffin Exp $
  */
 
 /*
@@ -74,7 +74,7 @@ public class SampleArchivalUnit extends DefinableArchivalUnit {
       throws ConfigurationException {
     super.loadAuConfigDescrs(config);
     // get the volume string
-    volume = definitionMap.getInt(SamplePlugin.AUPARAM_VOL, -1);
+    volume = paramMap.getInt(SamplePlugin.AUPARAM_VOL, -1);
     if (volume <= 0) {
       throw new ConfigurationException("Invalid volume: "+volume);
     }
@@ -86,6 +86,7 @@ public class SampleArchivalUnit extends DefinableArchivalUnit {
     * @return a concatenated string: <baseUrl>, vol. <vol>
     */
    protected String makeName() {
+    URL baseUrl = paramMap.getUrl(AU_BASE_URL, null);
     StringBuffer name = new StringBuffer(baseUrl.getHost());
     name.append(", vol. ");
     name.append(volume);
@@ -100,7 +101,7 @@ public class SampleArchivalUnit extends DefinableArchivalUnit {
   protected String makeStartUrl() {
     String ret;
     StringBuffer sb = new StringBuffer();
-    sb.append(baseUrl.toString());
+    sb.append(paramMap.getUrl(AU_BASE_URL, null).toString());
     sb.append("lockss-volume");
     sb.append(volume);
     sb.append(".html");
@@ -119,7 +120,7 @@ public class SampleArchivalUnit extends DefinableArchivalUnit {
     List rules = new LinkedList();
     final int incl = CrawlRules.RE.MATCH_INCLUDE;
     final int excl = CrawlRules.RE.MATCH_EXCLUDE;
-    String base = baseUrl.toString();
+    String base = paramMap.getUrl(AU_BASE_URL, null).toString();
 
     // exclude anything which doesn't start with our base url
     rules.add(new CrawlRules.RE("^" + base, CrawlRules.RE.NO_MATCH_EXCLUDE));

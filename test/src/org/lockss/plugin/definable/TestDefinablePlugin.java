@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinablePlugin.java,v 1.4 2004-05-14 22:31:41 clairegriffin Exp $
+ * $Id: TestDefinablePlugin.java,v 1.5 2004-09-01 23:36:50 clairegriffin Exp $
  */
 
 /*
@@ -71,7 +71,7 @@ public class TestDefinablePlugin extends LockssTestCase {
     map.putString(DefinablePlugin.CM_NAME_KEY, "testplugin");
     map.putCollection(DefinablePlugin.CM_CONFIG_PROPS_KEY,
                       Collections.EMPTY_LIST);
-    map.putCollection(DefinableArchivalUnit.CM_AU_RULES_KEY,rules);
+    map.putCollection(DefinableArchivalUnit.AU_RULES_KEY,rules);
     map.putString("au_start_url", "http://www.example.com/");
     ConfigurationUtil.setCurrentConfigFromProps(p);
     Configuration auConfig = Configuration.getCurrentConfig();
@@ -166,7 +166,7 @@ public class TestDefinablePlugin extends LockssTestCase {
     sb.append(ConfigParamDescr.YEAR.getKey());
     ExternalizableMap map = definablePlugin.getDefinitionMap();
     assertEquals(sb.toString(),
-                 map.getString(DefinableArchivalUnit.CM_AU_START_URL_KEY, null));
+                 map.getString(DefinableArchivalUnit.AU_START_URL_KEY, null));
 
   }
 

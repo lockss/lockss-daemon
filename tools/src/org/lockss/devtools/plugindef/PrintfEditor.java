@@ -1,5 +1,5 @@
 /*
- * $Id: PrintfEditor.java,v 1.14 2004-07-17 00:49:00 clairegriffin Exp $
+ * $Id: PrintfEditor.java,v 1.15 2004-09-01 23:36:52 clairegriffin Exp $
  */
 
 /*
@@ -303,7 +303,7 @@ public class PrintfEditor extends JDialog
           format = fbuf.toString();
           break;
         case ConfigParamDescr.TYPE_YEAR:
-          if(key.startsWith(DefinableArchivalUnit.CM_AU_SHORT_YEAR_PREFIX)) {
+          if(key.startsWith(DefinableArchivalUnit.AU_SHORT_YEAR_PREFIX)) {
             format = "%02d";
           }
           else {

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.72 2004-09-01 02:23:56 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.73 2004-09-01 23:36:48 clairegriffin Exp $
  */
 
 /*
@@ -32,17 +32,17 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.base;
 
-import java.io.*;
 import java.net.*;
+import java.text.*;
 import java.util.*;
-import java.text.SimpleDateFormat;
-import org.lockss.util.*;
+
+import org.apache.commons.collections.*;
 import org.lockss.crawler.*;
-import org.lockss.plugin.*;
-import org.lockss.state.*;
-import org.lockss.filter.*;
 import org.lockss.daemon.*;
-import org.apache.commons.collections.LRUMap;
+import org.lockss.plugin.*;
+import org.lockss.plugin.ArchivalUnit.*;
+import org.lockss.state.*;
+import org.lockss.util.*;
 
 /**
  * Abstract base class for ArchivalUnits.
@@ -133,9 +133,20 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   protected LRUMap crawlSpecCache = new LRUMap(1000);
   protected int hits = 0;
   protected int misses = 0;
+  protected TypedEntryMap paramMap;
 
   protected BaseArchivalUnit(Plugin myPlugin) {
     plugin = myPlugin;
+    paramMap = new TypedEntryMap();
+  }
+
+  /**
+   * getProperties
+   *
+   * @return TypedEntryMap
+   */
+  public TypedEntryMap getProperties() {
+    return paramMap;
   }
 
   /**
@@ -187,24 +198,29 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 
     // get the base url
     baseUrl = loadConfigUrl(ConfigParamDescr.BASE_URL, config);
+    paramMap.putUrl(AU_BASE_URL, baseUrl);
 
     // get the fetch delay
     fetchDelay = config.getTimeInterval(PAUSE_TIME_KEY, defaultFetchDelay);
     fetchDelay = Math.max(fetchDelay, minFetchDelay);
     logger.debug2("Set fetch delay to " + fetchDelay);
+    paramMap.putLong(AU_FETCH_DELAY, fetchDelay);
 
-    useCrawlWindow = config.getBoolean(USE_CRAWL_WINDOW,
+    // get crawl window setting
+    boolean useCrawlWindow = config.getBoolean(USE_CRAWL_WINDOW,
                                        DEFAULT_USE_CRAWL_WINDOW);
+    paramMap.putBoolean(AU_USE_CRAWL_WINDOW, useCrawlWindow);
 
     // get the new content crawl interval
     newContentCrawlIntv = config.getTimeInterval(NEW_CONTENT_CRAWL_KEY,
                                                  defaultContentCrawlIntv);
     logger.debug2("Setting new content crawl interval to " +
 		  StringUtil.timeIntervalToString(newContentCrawlIntv));
+    paramMap.putLong(AU_NEW_CRAWL_INTERVAL, newContentCrawlIntv);
 
     // make the start url
     startUrlString = makeStartUrl();
-
+    paramMap.putString(AU_START_URL, startUrlString);
     // make our crawl spec
     try {
       crawlSpec = makeCrawlSpec();
@@ -215,6 +231,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     } catch (LockssRegexpException e) {
       throw new ConfigurationException("Illegal RE", e);
     }
+    paramMap.setMapElement(AU_CRAWL_SPEC, crawlSpec);
 
     // make our name
     titleConfig = findTitleConfig(config);
@@ -222,6 +239,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
       auTitle = titleConfig.getDisplayName();
     }
     auName = makeName();
+    paramMap.putString(AU_TITLE, auTitle != null ? auTitle : auName);
   }
 
   TitleConfig findTitleConfig(Configuration config) {
@@ -275,7 +293,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    * @return the spec
    */
   public CrawlSpec getCrawlSpec() {
-    return crawlSpec;
+    return (CrawlSpec)paramMap.getMapElement(AU_CRAWL_SPEC);
   }
 
   /**
@@ -284,6 +302,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    */
   public Collection getUrlStems() {
     try {
+      URL baseUrl = paramMap.getUrl(AU_BASE_URL,null);
       URL stem = new URL(baseUrl.getProtocol(), baseUrl.getHost(),
                          baseUrl.getPort(), "");
       return ListUtil.list(stem.toString());
@@ -333,7 +352,6 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   }
 
   private Deadline nextFetchTime = Deadline.in(0);
-  protected boolean useCrawlWindow;
 
   public void pauseBeforeFetch() {
     if (!nextFetchTime.expired()) {
@@ -347,7 +365,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   }
 
   public long getFetchDelay() {
-    return fetchDelay;
+    return paramMap.getLong(AU_FETCH_DELAY, fetchDelay);
   }
 
   public String toString() {
@@ -367,7 +385,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   }
 
   public String getName() {
-    return (auTitle != null) ? auTitle : auName;
+    return paramMap.getString(AU_TITLE, auName);
   }
 
   /**

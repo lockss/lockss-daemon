@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.8 2004-08-20 00:12:36 troberts Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.9 2004-09-01 23:36:50 clairegriffin Exp $
  */
 
 /*
@@ -61,10 +61,10 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 
     DefinablePlugin cp = new DefinablePlugin();
     map = cp.getDefinitionMap();
-    cau = new DefinableArchivalUnit(cp, map);
     map.putString(DefinablePlugin.CM_NAME_KEY, PLUGIN_NAME);
     map.putString(DefinablePlugin.CM_VERSION_KEY, CURRENT_VERSION);
     map.putCollection(DefinablePlugin.CM_CONFIG_PROPS_KEY, configProps);
+    cau = new DefinableArchivalUnit(cp, map);
   }
 
   protected void tearDown() throws Exception {
@@ -77,7 +77,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     map.putBoolean("BOOLEAN", true);
     map.putString("STRING", "Yo Mama!");
     map.putInt(ConfigParamDescr.YEAR.getKey(), 2003);
-    map.putInt(DefinableArchivalUnit.CM_AU_SHORT_YEAR_PREFIX +
+    map.putInt(DefinableArchivalUnit.AU_SHORT_YEAR_PREFIX +
                ConfigParamDescr.YEAR.getKey(),3);
 
     String substr = "\"My Test Integer = %d\", INTEGER";
@@ -124,7 +124,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
   public void testMakeName() {
     map.putString("JOURNAL_NAME", "MyJournal");
     map.putInt("VOLUME", 43);
-    map.putString(DefinableArchivalUnit.CM_AU_NAME_KEY,
+    map.putString(DefinableArchivalUnit.AU_NAME_KEY,
                   "\"%s Vol %d\",JOURNAL_NAME,VOLUME");
     String expectedReturn = "MyJournal Vol 43";
     String actualReturn = cau.makeName();
@@ -133,7 +133,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 
   public void testMakeRules() throws LockssRegexpException {
     map.putString("base_url", "http://www.example.com/");
-    map.putCollection(DefinableArchivalUnit.CM_AU_RULES_KEY, crawlRules);
+    map.putCollection(DefinableArchivalUnit.AU_RULES_KEY, crawlRules);
 
     CrawlRule rules = cau.makeRules();
     assertEquals(CrawlRule.INCLUDE,
@@ -145,7 +145,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
   public void testMakeStartUrl() {
     map.putInt("VOLUME", 43);
     map.putString("URL", "http://www.example.com/");
-    map.putString(DefinableArchivalUnit.CM_AU_START_URL_KEY,
+    map.putString(DefinableArchivalUnit.AU_START_URL_KEY,
                   "\"%slockss-volume/%d.html\", URL, VOLUME");
 
     String expectedReturn = "http://www.example.com/lockss-volume/43.html";
@@ -157,7 +157,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 
     map.putString("HOST", "www.example.com");
     map.putInt("YEAR", 2003);
-    map.putString(DefinableArchivalUnit.CM_AU_MANIFEST_KEY,
+    map.putString(DefinableArchivalUnit.AU_MANIFEST_KEY,
             "\"http://%s/contents-by-date.%d.shtml\", HOST, YEAR");
     String expectedReturn = "http://www.example.com/contents-by-date.2003.shtml";
     String actualReturn = (String)cau.getPermissionPages().get(0);
@@ -182,7 +182,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
   }
 
   public void testGetCrawlRule() throws LockssRegexpException {
-    map.putString(DefinableArchivalUnit.CM_AU_RULES_KEY,
+    map.putString(DefinableArchivalUnit.AU_RULES_KEY,
 		  "org.lockss.test.NegativeCrawlRule");
 
     CrawlRule rules = cau.makeRules();
@@ -191,7 +191,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertEquals(CrawlRule.EXCLUDE,
                  rules.match("http://www.example.com/"));
 
-    map.putString(DefinableArchivalUnit.CM_AU_RULES_KEY,
+    map.putString(DefinableArchivalUnit.AU_RULES_KEY,
 		  "org.lockss.test.PositiveCrawlRule");
 
     rules = cau.makeRules();
@@ -202,7 +202,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
   }
 
   public void testGetCrawlRuleThrowsOnBadClass() throws LockssRegexpException {
-    map.putString(DefinableArchivalUnit.CM_AU_RULES_KEY,
+    map.putString(DefinableArchivalUnit.AU_RULES_KEY,
 		  "org.lockss.bogus.FakeClass");
 
     try {

@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.53 2004-09-01 02:23:55 tlipkis Exp $
+ * $Id: MockArchivalUnit.java,v 1.54 2004-09-01 23:36:51 clairegriffin Exp $
  */
 
 /*
@@ -64,6 +64,7 @@ public class MockArchivalUnit implements ArchivalUnit {
 
   private FilterRule filterRule = null;
   private ContentParser parser = null;
+  private TypedEntryMap propertyMap = null;
 
   public MockArchivalUnit(){
   }
@@ -117,6 +118,14 @@ public class MockArchivalUnit implements ArchivalUnit {
 
   public Configuration getConfiguration() {
     return config;
+  }
+
+  public void setPropertyMap(TypedEntryMap map) {
+    propertyMap = map;
+  }
+
+  public TypedEntryMap getProperties() {
+    return propertyMap;
   }
 
   /**

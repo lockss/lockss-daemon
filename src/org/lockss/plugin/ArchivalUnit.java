@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.27 2004-09-01 02:23:56 tlipkis Exp $
+ * $Id: ArchivalUnit.java,v 1.28 2004-09-01 23:36:48 clairegriffin Exp $
  */
 
 /*
@@ -31,13 +31,14 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.plugin;
-import java.io.*;
 import java.util.*;
 
 import org.lockss.crawler.*;
 import org.lockss.daemon.*;
 import org.lockss.state.*;
+import org.lockss.util.*;
 import org.lockss.plugin.base.*;
+
 
 /**
  * An <code>ArchivalUnit</code> represents a publication unit
@@ -51,7 +52,25 @@ import org.lockss.plugin.base.*;
  * {@link BaseArchivalUnit}).
  */
 public interface ArchivalUnit {
+  public String AU_BASE_URL  = "au_base_url";
+  public String AU_FETCH_DELAY = "au_fetch_delay";
+  public String AU_USE_CRAWL_WINDOW = "au_use_crawl_window";
+  public String AU_NEW_CRAWL_INTERVAL = "au_new_crawl_interval";
+  public String AU_START_URL = "au_start_url";
+  public String AU_CRAWL_SPEC = "au_crawl_spec";
+  public String AU_MAX_SIZE_KEY = "au_maxsize";
+  public String AU_MAX_FILE_SIZE_KEY = "au_max_file_size";
+  public String AU_TITLE = "au_title";
 
+  public String AU_PARSER_SUFFIX = "_parser";
+  public String AU_FILTER_SUFFIX = "_filter";
+
+
+  /**
+   * Return the Aus properties
+   * @return TypedEntryMap
+   */
+  public TypedEntryMap getProperties();
   /**
    * Supply (possibly changed) configuration information to an existing AU.
    * @param config the {@link Configuration}

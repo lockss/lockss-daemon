@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.46 2004-08-12 23:15:19 clairegriffin Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.47 2004-09-01 23:36:51 clairegriffin Exp $
  */
 
 /*
@@ -282,17 +282,22 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
       throws ConfigurationException {
     try {
       baseUrl = new URL(SIMULATED_URL_START);
+      paramMap.putUrl(AU_BASE_URL, baseUrl);
     }
     catch (MalformedURLException murle) {
       throw new ConfigurationException("Bad URL for " + SIMULATED_URL_START, murle);
     }
     fetchDelay = 0;
+    paramMap.putLong(AU_FETCH_DELAY, fetchDelay);
     newContentCrawlIntv = config.getTimeInterval(NEW_CONTENT_CRAWL_KEY,
                                                  defaultContentCrawlIntv);
+    paramMap.putLong(AU_NEW_CRAWL_INTERVAL, newContentCrawlIntv);
     crawlSpec = new CrawlSpec(SIMULATED_URL_START, null);
+    paramMap.setMapElement(AU_CRAWL_SPEC, crawlSpec);
     startUrlString = makeStartUrl();
+    paramMap.putString(AU_START_URL, startUrlString);
     auName = makeName();
-
+    paramMap.putString(AU_TITLE, auName);
   }
 
   boolean isUrlToBeDamaged(String url) {

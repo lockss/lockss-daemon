@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.13 2004-08-20 00:12:35 troberts Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.14 2004-09-01 23:36:49 clairegriffin Exp $
  */
 
 /*
@@ -36,7 +36,6 @@ import java.util.*;
 import org.lockss.crawler.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.ArchivalUnit.*;
 import org.lockss.plugin.base.*;
 import org.lockss.util.*;
 
@@ -48,29 +47,22 @@ import org.lockss.util.*;
  * @version 1.0
  */
 public class DefinableArchivalUnit extends BaseArchivalUnit {
-  static final public String CM_AU_START_URL_KEY = "au_start_url";
-  static final public String CM_AU_NAME_KEY = "au_name";
-  static final public String CM_AU_RULES_KEY = "au_crawlrules";
-  static final public String CM_AU_SHORT_YEAR_PREFIX = "au_short_";
-  static final public String CM_AU_HOST_SUFFIX = "_host";
-  static final public String CM_AU_PATH_SUFFIX = "_path";
-  static final public String CM_AU_CRAWL_WINDOW_KEY = "au_crawlwindow";
-  static final public String CM_AU_EXPECTED_PATH = "au_expected_base_path";
-  static final public String CM_AU_CRAWL_DEPTH = "au_crawl_depth";
-  static final public String CM_AU_DEFAULT_NC_CRAWL_KEY =
-      "au_def_new_content_crawl";
-  static final public String CM_AU_DEFAULT_PAUSE_TIME = "au_def_pause_time";
-  static final public String CM_AU_MANIFEST_KEY = "au_manifest";
-  static final public String CM_AU_MAX_SIZE_KEY = "au_maxsize";
-  static final public String CM_AU_MAX_FILE_SIZE_KEY = "au_max_file_size";
-
-  static final public String CM_AU_PARSER_SUFFIX = "_parser";
-  static final public String CM_AU_FILTER_SUFFIX = "_filter";
+  static final public String AU_SHORT_YEAR_PREFIX = "au_short_";
+  static final public String AU_HOST_SUFFIX = "_host";
+  static final public String AU_PATH_SUFFIX = "_path";
   static final public int DEFAULT_AU_CRAWL_DEPTH = 1;
+  static final public String AU_START_URL_KEY = "au_start_url";
+  static final public String AU_NAME_KEY = "au_name";
+  static final public String AU_RULES_KEY = "au_crawlrules";
+  static final public String AU_CRAWL_WINDOW_KEY = "au_crawlwindow";
+  static final public String AU_EXPECTED_PATH = "au_expected_base_path";
+  static final public String AU_CRAWL_DEPTH = "au_crawl_depth";
+  static final public String AU_DEFAULT_NC_CRAWL_KEY = "au_def_new_content_crawl";
+  static final public String AU_DEFAULT_PAUSE_TIME = "au_def_pause_time";
+  static final public String AU_MANIFEST_KEY = "au_manifest";
 
-  protected ExternalizableMap definitionMap;
   protected ClassLoader classLoader;
-
+  protected ExternalizableMap definitionMap;
   static Logger log = Logger.getLogger("ConfigurableArchivalUnit");
 
 
@@ -82,7 +74,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 
 
   protected DefinableArchivalUnit(DefinablePlugin myPlugin,
-                                     ExternalizableMap definitionMap) {
+                                  ExternalizableMap definitionMap) {
     this(myPlugin, definitionMap, myPlugin.getClass().getClassLoader());
   }
 
@@ -95,7 +87,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   }
 
   protected List getPermissionPages() {
-    Object permission_el = definitionMap.getMapElement(CM_AU_MANIFEST_KEY);
+    Object permission_el = definitionMap.getMapElement(AU_MANIFEST_KEY);
 
     if (permission_el instanceof String) {
       String permission_str = convertVariableString((String)permission_el);
@@ -111,7 +103,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   }
 
   protected String makeStartUrl() {
-    String startstr = definitionMap.getString(CM_AU_START_URL_KEY, "");
+    String startstr = definitionMap.getString(AU_START_URL_KEY, "");
     String convstr = convertVariableString(startstr);
     log.debug2("setting start url " + convstr);
     return convstr;
@@ -134,13 +126,13 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
         // we store years in two formats - short and long
         if (descr.getType() == ConfigParamDescr.TYPE_YEAR) {
           int year = ((Integer)val).intValue() % 100;
-          definitionMap.putInt(CM_AU_SHORT_YEAR_PREFIX + key, year);
+          definitionMap.putInt(AU_SHORT_YEAR_PREFIX + key, year);
         }
         if (descr.getType() == ConfigParamDescr.TYPE_URL) {
           URL url = definitionMap.getUrl(key, null);
           if(url != null) {
-            definitionMap.putString(key+CM_AU_HOST_SUFFIX, url.getHost());
-            definitionMap.putString(key+CM_AU_PATH_SUFFIX, url.getPath());
+            definitionMap.putString(key+AU_HOST_SUFFIX, url.getHost());
+            definitionMap.putString(key+AU_PATH_SUFFIX, url.getPath());
           }
         }
       }
@@ -150,52 +142,55 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     }
     // now load any specialized parameters
     defaultFetchDelay =
-        definitionMap.getLong(CM_AU_DEFAULT_PAUSE_TIME,
-                                 DEFAULT_MILLISECONDS_BETWEEN_CRAWL_HTTP_REQUESTS);
+        definitionMap.getLong(AU_DEFAULT_PAUSE_TIME,
+                         DEFAULT_MILLISECONDS_BETWEEN_CRAWL_HTTP_REQUESTS);
     defaultContentCrawlIntv =
-        definitionMap.getLong(CM_AU_DEFAULT_NC_CRAWL_KEY,
+        definitionMap.getLong(AU_DEFAULT_NC_CRAWL_KEY,
                                  DEFAULT_NEW_CONTENT_CRAWL_INTERVAL);
-    maxAuSize = definitionMap.getLong(CM_AU_MAX_SIZE_KEY, 0);
-    maxAuFileSize = definitionMap.getLong(CM_AU_MAX_FILE_SIZE_KEY, 0);
 
+    maxAuSize = definitionMap.getLong(AU_MAX_SIZE_KEY, 0);
+    maxAuFileSize = definitionMap.getLong(AU_MAX_FILE_SIZE_KEY, 0);
   }
 
   protected String makeName() {
-    String namestr = definitionMap.getString(CM_AU_NAME_KEY, "");
+    String namestr = definitionMap.getString(AU_NAME_KEY, "");
     String convstr = convertVariableString(namestr);
     log.debug2("setting name string: " + convstr);
     return convstr;
   }
 
   protected CrawlRule makeRules() throws LockssRegexpException {
-    Object rule = definitionMap.getMapElement(CM_AU_RULES_KEY);
-    
+    Object rule = definitionMap.getMapElement(AU_RULES_KEY);
+
     if (rule instanceof String) {
       try {
-	return (CrawlRule) Class.forName((String)rule,
-					 true, classLoader).newInstance();
-      } catch (Exception e) {
-	throw new DefinablePlugin.InvalidDefinitionException(auName +
-							     " unable to create crawl rule: "
-							     + rule, e);
+        return (CrawlRule) Class.forName( (String) rule,
+                                         true, classLoader).newInstance();
+      }
+      catch (Exception e) {
+        throw new DefinablePlugin.InvalidDefinitionException(auName +
+            " unable to create crawl rule: "
+            + rule, e);
       }
     }
-    List rules = new LinkedList();
-    
-//     List templates = (List) definitionMap.getCollection(CM_AU_RULES_KEY,
-//         Collections.EMPTY_LIST);
-    List templates = (List) rule;
-    Iterator it = templates.iterator();
-  while (it.hasNext()) {
-      String rule_template = (String) it.next();
-      
-      rules.add(convertRule(rule_template));
-    }
-    if(rules.size() > 0)
-      return new CrawlRules.FirstMatch(rules);
-    else {
-      log.error("No crawl rules found for plugin: " + makeName());
-      return null;
+    else  {
+      List rules = new LinkedList();
+      if(rule instanceof List) {
+        List templates = (List) rule;
+        Iterator it = templates.iterator();
+
+        while (it.hasNext()) {
+          String rule_template = (String) it.next();
+
+          rules.add(convertRule(rule_template));
+        }
+      }
+      if (rules.size() > 0)
+        return new CrawlRules.FirstMatch(rules);
+      else {
+        log.error("No crawl rules found for plugin: " + makeName());
+        return null;
+      }
     }
   }
 
@@ -203,14 +198,14 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
       throws LockssRegexpException {
 
     CrawlRule rule = makeRules();
-    int depth = definitionMap.getInt(CM_AU_CRAWL_DEPTH, DEFAULT_AU_CRAWL_DEPTH);
+    int depth = definitionMap.getInt(AU_CRAWL_DEPTH, DEFAULT_AU_CRAWL_DEPTH);
     return new CrawlSpec(startUrlString, rule, depth);
   }
 
   protected CrawlWindow makeCrawlWindow() {
     CrawlWindow window = null;
     String window_class;
-    window_class = definitionMap.getString(CM_AU_CRAWL_WINDOW_KEY,
+    window_class = definitionMap.getString(AU_CRAWL_WINDOW_KEY,
                                               null);
     if (window_class != null) {
       try {
@@ -229,7 +224,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 
   protected FilterRule constructFilterRule(String mimeType) {
     Object filter_el = definitionMap.getMapElement(mimeType
-        + CM_AU_FILTER_SUFFIX);
+        + AU_FILTER_SUFFIX);
     try {
       if (filter_el instanceof String) {
 	return (FilterRule) Class.forName( (String) filter_el, true, classLoader).newInstance();
@@ -256,7 +251,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
    * null otherwise
    */
   public ContentParser getContentParser(String mimeType) {
-    String parser_cl = definitionMap.getString(mimeType + CM_AU_PARSER_SUFFIX,
+    String parser_cl = definitionMap.getString(mimeType + AU_PARSER_SUFFIX,
                                                null);
     if (parser_cl != null) {
       try {
@@ -293,6 +288,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
         has_all_args = false;
       }
     }
+
     if (has_all_args) {
       PrintfFormat pf = new PrintfFormat(format);
       converted_string = pf.sprintf(substitute_args.toArray());
@@ -309,7 +305,6 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     int value = Integer.valueOf(val_str).intValue();
     return new CrawlRules.RE(rule, value);
   }
-
 
   public interface ConfigurableCrawlWindow {
     public CrawlWindow makeCrawlWindow();

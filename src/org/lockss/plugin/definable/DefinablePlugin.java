@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.5 2004-07-12 23:01:51 smorabito Exp $
+ * $Id: DefinablePlugin.java,v 1.6 2004-09-01 23:36:49 clairegriffin Exp $
  */
 
 /*
@@ -41,7 +41,7 @@ import java.util.*;
 import java.io.FileNotFoundException;
 
 /**
- * <p>ConfigurablePlugin: a plugin which uses the data stored in an
+ * <p>DefinablePlugin: a plugin which uses the data stored in an
 *  ExternalizableMap to configure it self.</p>
  * @author Claire Griffin
  * @version 1.0
@@ -67,7 +67,7 @@ public class DefinablePlugin extends BasePlugin {
   protected CacheResultHandler resultHandler = null;
   protected ClassLoader classLoader;
 
-  public void initPlugin(LockssDaemon daemon, String extMapName) 
+  public void initPlugin(LockssDaemon daemon, String extMapName)
       throws FileNotFoundException {
     initPlugin(daemon, extMapName, this.getClass().getClassLoader());
   }
@@ -78,7 +78,6 @@ public class DefinablePlugin extends BasePlugin {
     this.classLoader = loader;
     // load the configuration map from jar file
     String mapFile = mapName.replace('.', '/') + MAP_SUFFIX;
-
     definitionMap.loadMapFromResource(mapFile, classLoader);
 
     // then call the overridden initializaton.

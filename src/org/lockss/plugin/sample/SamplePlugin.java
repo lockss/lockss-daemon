@@ -1,5 +1,5 @@
 /*
- * $Id: SamplePlugin.java,v 1.6 2004-03-01 06:10:40 clairegriffin Exp $
+ * $Id: SamplePlugin.java,v 1.7 2004-09-01 23:36:50 clairegriffin Exp $
  */
 
 /*
@@ -31,13 +31,11 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.plugin.sample;
 
-import java.util.*;
+import org.lockss.app.*;
 import org.lockss.daemon.*;
-import org.lockss.plugin.base.BasePlugin;
-import org.lockss.plugin.ArchivalUnit;
-import org.lockss.util.ListUtil;
-import org.lockss.app.LockssDaemon;
+import org.lockss.plugin.*;
 import org.lockss.plugin.definable.*;
+import org.lockss.util.*;
 
 /**
  * <p>SamplePlugin: A template for a plugin that requires a base url and the volume

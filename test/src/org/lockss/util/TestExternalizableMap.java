@@ -1,5 +1,5 @@
 /*
- * $Id: TestExternalizableMap.java,v 1.4 2004-04-28 22:52:06 clairegriffin Exp $
+ * $Id: TestExternalizableMap.java,v 1.5 2004-09-01 23:36:52 clairegriffin Exp $
  */
 
 /*
@@ -50,100 +50,24 @@ public class TestExternalizableMap extends LockssTestCase {
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
   }
 
-  public void testString() {
-    String value = "test_value";
-    String defaultValue = "default_string";
-
-    map.putString(key, value);
-    assertEquals(value, map.getString(key, defaultValue));
-    assertNull(map.getString(wrongKey, null));
-    assertEquals(defaultValue, map.getString(wrongKey, defaultValue));
-  }
-
-  public void testBoolean() {
-    boolean value = false;
-    boolean defaultValue = true;
-
-    map.putBoolean(key, value);
-    assertEquals(value, map.getBoolean(key, defaultValue));
-
-    assertEquals(defaultValue, map.getBoolean(wrongKey, defaultValue));
-  }
-
-  public void testDouble() {
-    double value = 1.0d;
-    double defaultValue = 2.0d;
-
-    map.putDouble(key, value);
-    assertEquals(value, map.getDouble(key, defaultValue), 0);
-    assertEquals(defaultValue, map.getDouble(wrongKey, defaultValue), 0);
-  }
-
-  public void testFloat() {
-   float value = 1.0f;
-    float defaultValue = 2.0f;
-
-    map.putFloat(key, value);
-    assertEquals(value, map.getFloat(key, defaultValue),0);
-    assertEquals(defaultValue, map.getFloat(wrongKey, defaultValue),0);
-  }
-
-  public void testInt() {
-    int value = 1;
-    int defaultValue = 2;
-
-    map.putInt(key, value);
-    assertEquals(value, map.getInt(key, defaultValue));
-    assertEquals(defaultValue, map.getInt(wrongKey, defaultValue));
-  }
-
-  public void testLong() {
-    long value = 1;
-    long defaultValue = 2;
-
-    map.putLong(key, value);
-    assertEquals(value, map.getLong(key, defaultValue));
-    assertEquals(defaultValue, map.getLong(wrongKey, defaultValue));
-  }
-
-  public void testUrl() {
-    URL value = null;
-    URL defaultValue = null;
-    try {
-      value = new URL("http://www.example.com/");
-      defaultValue = new URL("http://www.example2.com/");
-    } catch (MalformedURLException ex) { }
-
-    map.putUrl(key, value);
-    assertEquals(value, map.getUrl(key, defaultValue));
-    assertNull(map.getUrl(wrongKey, null));
-    assertEquals(defaultValue, map.getUrl(wrongKey, defaultValue));
-
-  }
-
-  public void testCollection() {
-    Collection value = ListUtil.list("One", "Two", "Three");
-    Collection defaultValue = ListUtil.list("Four", "Five", "Six");
-
-    map.putCollection(key, value);
-    assertEquals(value, map.getCollection(key, defaultValue));
-    assertNull(map.getCollection(wrongKey, null));
-    assertEquals(defaultValue, map.getCollection(wrongKey, defaultValue));
-  }
-
-/*
   public void testMap() {
     Map value = new HashMap();
     value.put("ValueMap", "Entry");
     Map defaultValue = new HashMap();
     defaultValue.put("DefaultMap", "DefaultEntry");
-
-    map.putMap(key, value);
-    assertEquals(value, map.getMap(key, defaultValue));
-    assertNull(map.getMap(wrongKey, null));
-    assertEquals(defaultValue, map.getMap(wrongKey, defaultValue));
+    try {
+      map.putMap(key, value);
+      assertTrue("Exception not thrown", false);
+    }
+    catch(IllegalArgumentException iae) {
+    }
+    try {
+      map.getMap(key, value);
+      assertTrue("Exception not thrown", false);
+    }
+    catch(IllegalArgumentException iae) {
+    }
   }
-*/
 
   public void testMarshalling() throws MalformedURLException {
     Collection testCol = new ArrayList();

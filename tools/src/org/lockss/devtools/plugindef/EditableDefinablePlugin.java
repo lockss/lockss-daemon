@@ -1,5 +1,5 @@
 /*
- * $Id: EditableDefinablePlugin.java,v 1.7 2004-07-16 19:42:49 clairegriffin Exp $
+ * $Id: EditableDefinablePlugin.java,v 1.8 2004-09-01 23:36:52 clairegriffin Exp $
  */
 
 /*
@@ -55,27 +55,27 @@ public class EditableDefinablePlugin
   static final protected String PLUGIN_IDENTIFIER = "plugin_identifier";
 
   static final protected String AU_START_URL
-      = DefinableArchivalUnit.CM_AU_START_URL_KEY;
+      = DefinableArchivalUnit.AU_START_URL_KEY;
   static final protected String AU_NAME
-      = DefinableArchivalUnit.CM_AU_NAME_KEY;
+      = DefinableArchivalUnit.AU_NAME_KEY;
   static final protected String AU_RULES
-      = DefinableArchivalUnit.CM_AU_RULES_KEY;
+      = DefinableArchivalUnit.AU_RULES_KEY;
   static final protected String AU_CRAWL_WINDOW
-      = DefinableArchivalUnit.CM_AU_CRAWL_WINDOW_KEY;
+      = DefinableArchivalUnit.AU_CRAWL_WINDOW_KEY;
   static final protected String AU_EXPECTED_PATH
-      = DefinableArchivalUnit.CM_AU_EXPECTED_PATH;
+      = DefinableArchivalUnit.AU_EXPECTED_PATH;
   static final protected String AU_CRAWL_DEPTH
-      = DefinableArchivalUnit.CM_AU_CRAWL_DEPTH;
+      = DefinableArchivalUnit.AU_CRAWL_DEPTH;
   static final protected String AU_NEWCONTENT_CRAWL
-      = DefinableArchivalUnit.CM_AU_DEFAULT_NC_CRAWL_KEY;
+      = DefinableArchivalUnit.AU_DEFAULT_NC_CRAWL_KEY;
   static final protected String AU_PAUSE_TIME
-      = DefinableArchivalUnit.CM_AU_DEFAULT_PAUSE_TIME;
+      = DefinableArchivalUnit.AU_DEFAULT_PAUSE_TIME;
   static final protected String AU_MANIFEST
-      = DefinableArchivalUnit.CM_AU_MANIFEST_KEY;
+      = DefinableArchivalUnit.AU_MANIFEST_KEY;
   static final protected String AU_PARSER_SUFFIX
-      = DefinableArchivalUnit.CM_AU_PARSER_SUFFIX;
+      = DefinableArchivalUnit.AU_PARSER_SUFFIX;
   static final public String AU_FILTER_SUFFIX
-      = DefinableArchivalUnit.CM_AU_FILTER_SUFFIX;
+      = DefinableArchivalUnit.AU_FILTER_SUFFIX;
 
   static public String[] CONFIG_PARAM_TYPES = ConfigParamDescr.TYPE_STRINGS;
 
@@ -369,7 +369,7 @@ public class EditableDefinablePlugin
       int type = cpd.getType();
       pd_map.put(key, cpd);
       if (type == ConfigParamDescr.TYPE_YEAR) {
-        key = DefinableArchivalUnit.CM_AU_SHORT_YEAR_PREFIX + key;
+        key = DefinableArchivalUnit.AU_SHORT_YEAR_PREFIX + key;
         ConfigParamDescr descr = copyDescr(cpd);
         descr.setDescription(cpd.getDescription() + " (Abbrev.)");
         descr.setDisplayName(cpd.getDisplayName() + " (Abbrev.)");
@@ -377,13 +377,13 @@ public class EditableDefinablePlugin
         pd_map.put(key, descr);
       }
       else if (type == ConfigParamDescr.TYPE_URL) {
-        String mod_key = key + DefinableArchivalUnit.CM_AU_HOST_SUFFIX;
+        String mod_key = key + DefinableArchivalUnit.AU_HOST_SUFFIX;
         ConfigParamDescr descr = copyDescr(cpd);
         descr.setDescription(cpd.getDescription() + " (Host)");
         descr.setDisplayName(cpd.getDisplayName() + " (Host)");
         descr.setKey(key);
         pd_map.put(mod_key, descr);
-        mod_key = key + DefinableArchivalUnit.CM_AU_PATH_SUFFIX;
+        mod_key = key + DefinableArchivalUnit.AU_PATH_SUFFIX;
         descr = copyDescr(cpd);
         descr.setDescription(cpd.getDescription() + " (Path)");
         descr.setDisplayName(cpd.getDisplayName() + " (Path)");
