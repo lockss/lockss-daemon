@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedPlugin.java,v 1.4 2003-03-27 00:50:23 aalto Exp $
+ * $Id: SimulatedPlugin.java,v 1.5 2003-03-27 01:31:55 aalto Exp $
  */
 
 /*
@@ -46,55 +46,52 @@ import org.lockss.test.*;
 public class SimulatedPlugin extends BasePlugin implements PluginTestable {
   static Logger log = Logger.getLogger("SimulatedPlugin");
 
-  private static final String SIMPLUGIN_PREFIX = Configuration.PREFIX +
-      "test.simplugin.";
-
   /**
    * The root location for the simulated content to be generated.
    */
-  public static final String PARAM_ROOT = SIMPLUGIN_PREFIX + "root";
+  public static final String AU_PARAM_ROOT = "root";
   /**
    * The depth of the tree to generate (0 equals just the root dir).
    */
-  public static final String PARAM_DEPTH = SIMPLUGIN_PREFIX + "depth";
+  public static final String AU_PARAM_DEPTH = "depth";
   /**
    * The number of branches in each directory.
    */
-  public static final String PARAM_BRANCH = SIMPLUGIN_PREFIX + "branch";
+  public static final String AU_PARAM_BRANCH = "branch";
   /**
    * The number of files in each directory.  This will be multiplied by the
    * number of file types, so having both '.html' and '.txt' will generate
    * 'file1.html', 'file1.txt', 'file2.html', 'file2.txt', etc.
    */
-  public static final String PARAM_NUM_FILES = SIMPLUGIN_PREFIX + "numFiles";
+  public static final String AU_PARAM_NUM_FILES = "numFiles";
 
   /**
    * The size to make binary files, if chosen as a type.
    */
-  public static final String PARAM_BIN_FILE_SIZE = SIMPLUGIN_PREFIX + "binFileSize";
+  public static final String AU_PARAM_BIN_FILE_SIZE = "binFileSize";
 
   /**
    * The maximum length for file names.  Currently unused.
    */
-  public static final String PARAM_MAXFILE_NAME = SIMPLUGIN_PREFIX + "maxFileName";
+  public static final String AU_PARAM_MAXFILE_NAME = "maxFileName";
 
   /**
    * The file types to create.  A bit-wise addition of
    * {@link SimulatedContentGenerator}.FILE_TYPE_XXX values.
    */
-  public static final String PARAM_FILE_TYPES = SIMPLUGIN_PREFIX + "fileTypes";
+  public static final String AU_PARAM_FILE_TYPES = "fileTypes";
 
   /**
    * The directory location of the 'abnormal' file.  Should be a string filepath
    * (i.e. 'root/branch1/branch3').
    */
-  public static final String PARAM_BAD_FILE_LOC = SIMPLUGIN_PREFIX + "badFileLoc";
+  public static final String AU_PARAM_BAD_FILE_LOC = "badFileLoc";
 
   /**
    * The file number of the 'abnormal' file, in the directory given by the
    * location string.
    */
-  public static final String PARAM_BAD_FILE_NUM = SIMPLUGIN_PREFIX + "badFileNum";
+  public static final String AU_PARAM_BAD_FILE_NUM = "badFileNum";
 
   private String pluginId = "SimulatedPlugin";
   private int initCtr = 0;
@@ -140,11 +137,11 @@ public class SimulatedPlugin extends BasePlugin implements PluginTestable {
    * which values are needed in order to configure an AU
    */
   public List getAUConfigProperties() {
-    return ListUtil.list(PARAM_ROOT, PARAM_DEPTH,
-			 PARAM_BRANCH, PARAM_NUM_FILES,
-			 PARAM_BIN_FILE_SIZE, PARAM_MAXFILE_NAME,
-			 PARAM_FILE_TYPES, PARAM_BAD_FILE_LOC,
-			 PARAM_BAD_FILE_NUM);
+    return ListUtil.list(AU_PARAM_ROOT, AU_PARAM_DEPTH,
+			 AU_PARAM_BRANCH, AU_PARAM_NUM_FILES,
+			 AU_PARAM_BIN_FILE_SIZE, AU_PARAM_MAXFILE_NAME,
+			 AU_PARAM_FILE_TYPES, AU_PARAM_BAD_FILE_LOC,
+			 AU_PARAM_BAD_FILE_NUM);
   }
 
   /**
@@ -159,7 +156,7 @@ public class SimulatedPlugin extends BasePlugin implements PluginTestable {
   public String getAUIdFromConfig(Configuration config)
       throws ArchivalUnit.ConfigurationException {
     // tk - this should include at least the root, possibly more
-    return config.get(PARAM_ROOT);
+    return config.get(AU_PARAM_ROOT);
   }
 
   /**

@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.19 2003-03-17 08:33:15 tal Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.20 2003-03-27 01:31:55 aalto Exp $
  */
 
 /*
@@ -81,30 +81,30 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
     // tk - not right, generator might have been created already with
     // different root?
     try {
-      fileRoot = config.get(SimulatedPlugin.PARAM_ROOT);
+      fileRoot = config.get(SimulatedPlugin.AU_PARAM_ROOT);
       SimulatedContentGenerator gen = getContentGenerator();
-      if (config.containsKey(SimulatedPlugin.PARAM_DEPTH)) {
-	gen.setTreeDepth(config.getInt(SimulatedPlugin.PARAM_DEPTH));
+      if (config.containsKey(SimulatedPlugin.AU_PARAM_DEPTH)) {
+	gen.setTreeDepth(config.getInt(SimulatedPlugin.AU_PARAM_DEPTH));
       }
-      if (config.containsKey(SimulatedPlugin.PARAM_BRANCH)) {
-	gen.setNumBranches(config.getInt(SimulatedPlugin.PARAM_BRANCH));
+      if (config.containsKey(SimulatedPlugin.AU_PARAM_BRANCH)) {
+	gen.setNumBranches(config.getInt(SimulatedPlugin.AU_PARAM_BRANCH));
       }
-      if (config.containsKey(SimulatedPlugin.PARAM_NUM_FILES)) {
-	gen.setNumFilesPerBranch(config.getInt(SimulatedPlugin.PARAM_NUM_FILES));
+      if (config.containsKey(SimulatedPlugin.AU_PARAM_NUM_FILES)) {
+	gen.setNumFilesPerBranch(config.getInt(SimulatedPlugin.AU_PARAM_NUM_FILES));
       }
-      if (config.containsKey(SimulatedPlugin.PARAM_BIN_FILE_SIZE)) {
-	gen.setBinaryFileSize(config.getInt(SimulatedPlugin.PARAM_BIN_FILE_SIZE));
+      if (config.containsKey(SimulatedPlugin.AU_PARAM_BIN_FILE_SIZE)) {
+	gen.setBinaryFileSize(config.getInt(SimulatedPlugin.AU_PARAM_BIN_FILE_SIZE));
       }
-      if (config.containsKey(SimulatedPlugin.PARAM_MAXFILE_NAME)) {
-	gen.setMaxFilenameLength(config.getInt(SimulatedPlugin.PARAM_MAXFILE_NAME));
+      if (config.containsKey(SimulatedPlugin.AU_PARAM_MAXFILE_NAME)) {
+	gen.setMaxFilenameLength(config.getInt(SimulatedPlugin.AU_PARAM_MAXFILE_NAME));
       }
-      if (config.containsKey(SimulatedPlugin.PARAM_FILE_TYPES)) {
-	gen.setFileTypes(config.getInt(SimulatedPlugin.PARAM_FILE_TYPES));
+      if (config.containsKey(SimulatedPlugin.AU_PARAM_FILE_TYPES)) {
+	gen.setFileTypes(config.getInt(SimulatedPlugin.AU_PARAM_FILE_TYPES));
       }
-      if (config.containsKey(SimulatedPlugin.PARAM_BAD_FILE_LOC) &&
-	  config.containsKey(SimulatedPlugin.PARAM_BAD_FILE_NUM)) {
-	gen.setAbnormalFile(config.get(SimulatedPlugin.PARAM_BAD_FILE_LOC),
-			    config.getInt(SimulatedPlugin.PARAM_BAD_FILE_NUM));
+      if (config.containsKey(SimulatedPlugin.AU_PARAM_BAD_FILE_LOC) &&
+	  config.containsKey(SimulatedPlugin.AU_PARAM_BAD_FILE_NUM)) {
+	gen.setAbnormalFile(config.get(SimulatedPlugin.AU_PARAM_BAD_FILE_LOC),
+			    config.getInt(SimulatedPlugin.AU_PARAM_BAD_FILE_NUM));
       }
       resetContentTree();
     } catch (Configuration.InvalidParam e) {
