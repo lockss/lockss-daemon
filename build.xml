@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.100 2004-08-16 23:45:25 smorabito Exp $
+ $Id: build.xml,v 1.101 2004-08-17 01:29:53 smorabito Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -864,15 +864,14 @@ java -classpath &quot;${tmp.ptool.clspth.unix}&quot; org.lockss.devtools.plugind
        <arg line="-o ${javadoc}/paramdoc.txt lockss.jar" />
     </java>
     <!-- Write the HTML param doc into the doc tree -->
-    <javadoc
-             sourcepath="${src}"
+    <javadoc sourcepath="${src}"
 	     packagenames="org.lockss.*"
 	     failonerror="true"
 	     doclet="org.lockss.doclet.ParamDoclet"
 	     docletpathref="tools.run.classpath"
 	     additionalparam="-d ${javadoc} -o paramdoc.html"
 	     classpathref="tools.run.classpath"
-	     access="protected"/>
+	     access="package"/>
     <javadoc
 	     failonerror="true"
              packagenames="org.lockss.*"
