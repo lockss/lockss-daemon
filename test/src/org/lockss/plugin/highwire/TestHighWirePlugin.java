@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWirePlugin.java,v 1.24 2004-03-09 04:15:32 clairegriffin Exp $
+ * $Id: TestHighWirePlugin.java,v 1.25 2004-07-29 23:14:56 troberts Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ import org.lockss.util.urlconn.*;
 
 public class TestHighWirePlugin extends LockssTestCase {
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
-  static final String YEAR_KEY = ConfigParamDescr.YEAR.getKey();
+//   static final String YEAR_KEY = ConfigParamDescr.YEAR.getKey();
   static final String VOL_KEY = ConfigParamDescr.VOLUME_NUMBER.getKey();
 
   private DefinablePlugin plugin;
@@ -72,7 +72,7 @@ public class TestHighWirePlugin extends LockssTestCase {
     Properties props = new Properties();
     props.setProperty(BASE_URL_KEY, "http://www.example.com/");
     props.setProperty(VOL_KEY, "32");
-    props.setProperty(YEAR_KEY, "2004");
+//     props.setProperty(YEAR_KEY, "2004");
     DefinableArchivalUnit au = null;
     try {
       au = makeAuFromProps(props);
@@ -93,7 +93,7 @@ public class TestHighWirePlugin extends LockssTestCase {
     Properties props = new Properties();
     props.setProperty(VOL_KEY, "322");
     props.setProperty(BASE_URL_KEY, "blah");
-    props.setProperty(YEAR_KEY, "2004");
+//     props.setProperty(YEAR_KEY, "2004");
 
     try {
       DefinableArchivalUnit au = makeAuFromProps(props);
@@ -110,7 +110,7 @@ public class TestHighWirePlugin extends LockssTestCase {
     Properties props = new Properties();
     props.setProperty(VOL_KEY, "322");
     props.setProperty(BASE_URL_KEY, "http://www.example.com/");
-    props.setProperty(YEAR_KEY, "2004");
+//     props.setProperty(YEAR_KEY, "2004");
 
     DefinableArchivalUnit au = makeAuFromProps(props);
     assertEquals("www.example.com, vol. 322", au.getName());
@@ -122,9 +122,9 @@ public class TestHighWirePlugin extends LockssTestCase {
   }
 
   public void testGetAuConfigProperties() {
-    assertEquals(ListUtil.list(ConfigParamDescr.BASE_URL,
-			       ConfigParamDescr.VOLUME_NUMBER,
-                               ConfigParamDescr.YEAR),
+    assertEquals(ListUtil.list(ConfigParamDescr.VOLUME_NUMBER,
+			       ConfigParamDescr.BASE_URL),
+//                                ConfigParamDescr.YEAR),
 		 plugin.getAuConfigDescrs());
   }
 
