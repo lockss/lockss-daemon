@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.113 2003-04-29 21:52:08 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.114 2003-05-01 00:56:29 aalto Exp $
  */
 
 /*
@@ -563,7 +563,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     }
   }
 
-  private void closePoll(PollState pollState, long duration, Collection votes,
+  void closePoll(PollState pollState, long duration, Collection votes,
                          NodeState nodeState) {
     PollHistory history = new PollHistory(pollState, duration, votes);
     ( (NodeStateImpl) nodeState).closeActivePoll(history);
@@ -572,9 +572,12 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
                   pollState.getLwrBound() + "-" +
                   pollState.getUprBound() + "'");
     // if this is an AU top-level content poll
-    // update the AuState to indicate the poll is finished
+    // update the AuState to indicate the poll is finished if it has
+    // the proper status
     if ( (AuUrl.isAuUrl(nodeState.getCachedUrlSet().getUrl())) &&
-        (pollState.getType() == Poll.CONTENT_POLL)) {
+         (pollState.getType() == Poll.CONTENT_POLL) &&
+         ((pollState.getStatus()==PollState.WON) ||
+          (pollState.getStatus()==PollState.LOST))) {
       getAuState().newPollFinished();
       logger.info("Top level poll finished.");
     }

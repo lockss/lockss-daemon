@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.73 2003-04-29 01:34:53 aalto Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.74 2003-05-01 00:56:29 aalto Exp $
  */
 
 /*
@@ -428,7 +428,6 @@ public class TestNodeManagerImpl
 
     nodeManager.createNodeState(mcus);
 
-    // test that a finished top-level poll sets the time right
     contentPoll = createPoll(auUrl, true, true, 15, 5);
     PollTally results = contentPoll.getVoteTally();
     PollSpec spec = results.getPollSpec();
@@ -436,16 +435,30 @@ public class TestNodeManagerImpl
     AuState auState = nodeManager.getAuState();
     assertEquals( -1, auState.getLastTopLevelPollTime());
 
-    TimeBase.setSimulated(TimeBase.nowMs());
     NodeStateImpl nodeState = (NodeStateImpl)
         nodeManager.getNodeState(getCUS(mau, auUrl));
+    // test that error polls don't update last poll time
     PollState pollState = new PollState(results.getType(),
                                         spec.getLwrBound(),
                                         spec.getUprBound(),
-                                        PollState.RUNNING,
+                                        PollState.ERR_IO,
                                         results.getStartTime(),
                                         Deadline.MAX,
                                         false);
+    nodeState.addPollState(pollState);
+    nodeManager.updateState(nodeState, results);
+    assertEquals(-1, auState.getLastTopLevelPollTime());
+
+    // test that a finished top-level poll sets the time right
+    TimeBase.setSimulated(TimeBase.nowMs());
+    nodeState = (NodeStateImpl)nodeManager.getNodeState(getCUS(mau, auUrl));
+    pollState = new PollState(results.getType(),
+                              spec.getLwrBound(),
+                              spec.getUprBound(),
+                              PollState.RUNNING,
+                              results.getStartTime(),
+                              Deadline.MAX,
+                              false);
     nodeState.addPollState(pollState);
     nodeManager.updateState(nodeState, results);
     assertEquals(PollState.WON, pollState.getStatus());
