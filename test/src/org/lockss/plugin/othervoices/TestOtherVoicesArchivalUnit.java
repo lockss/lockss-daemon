@@ -1,5 +1,5 @@
 /*
- * $Id: TestOtherVoicesArchivalUnit.java,v 1.3 2004-02-10 01:09:11 clairegriffin Exp $
+ * $Id: TestOtherVoicesArchivalUnit.java,v 1.4 2004-02-12 03:57:54 clairegriffin Exp $
  */
 
 /*
@@ -42,6 +42,7 @@ import org.lockss.plugin.*;
 import org.lockss.plugin.base.BaseCachedUrlSet;
 import org.lockss.state.AuState;
 import org.lockss.repository.LockssRepositoryImpl;
+import org.lockss.plugin.configurable.*;
 
 public class TestOtherVoicesArchivalUnit extends LockssTestCase {
   private MockLockssDaemon theDaemon;
@@ -64,7 +65,7 @@ public class TestOtherVoicesArchivalUnit extends LockssTestCase {
     super.tearDown();
   }
 
-  private OtherVoicesArchivalUnit makeAu(URL url, int volume)
+  private ConfigurableArchivalUnit makeAu(URL url, int volume)
       throws ArchivalUnit.ConfigurationException {
     Properties props = new Properties();
     props.setProperty(OtherVoicesPlugin.AUPARAM_VOL, Integer.toString(volume));
@@ -72,10 +73,9 @@ public class TestOtherVoicesArchivalUnit extends LockssTestCase {
       props.setProperty(OtherVoicesPlugin.AUPARAM_BASE_URL, url.toString());
     }
     Configuration config = ConfigurationUtil.fromProps(props);
-    OtherVoicesPlugin ap = new OtherVoicesPlugin();
-    ap.initPlugin(theDaemon,ap.getClass().getName());
-    OtherVoicesArchivalUnit au = new OtherVoicesArchivalUnit(ap);
-    au.setConfiguration(config);
+    ConfigurablePlugin ap = new ConfigurablePlugin();
+    ap.initPlugin(theDaemon,"org.lockss.plugin.othervoices.OtherVoicesPlugin");
+    ConfigurableArchivalUnit au = (ConfigurableArchivalUnit)ap.createAu(config);
     return au;
   }
 
@@ -172,8 +172,8 @@ public class TestOtherVoicesArchivalUnit extends LockssTestCase {
     URL url = new URL(ROOT_URL);
 
     String expectedStr = ROOT_URL+"lockss-volume2.html";
-    OtherVoicesArchivalUnit ovAu = makeAu(url, 2);
-    assertEquals(expectedStr, ovAu.makeStartUrl());
+    ConfigurableArchivalUnit ovAu = makeAu(url, 2);
+    assertEquals(expectedStr, ovAu.getManifestPage());
   }
 
   public void testPathInUrlThrowsException() throws Exception {
@@ -186,10 +186,10 @@ public class TestOtherVoicesArchivalUnit extends LockssTestCase {
 
   public void testGetUrlStems() throws Exception {
     String stem1 = "http://www.othervoices.org";
-    OtherVoicesArchivalUnit ovAu1 = makeAu(new URL(stem1 + "/"), 2);
+    ConfigurableArchivalUnit ovAu1 = makeAu(new URL(stem1 + "/"), 2);
     assertEquals(ListUtil.list(stem1), ovAu1.getUrlStems());
     String stem2 = "http://www.othervoices.org:8080";
-    OtherVoicesArchivalUnit ovAu2 = makeAu(new URL(stem2 + "/"), 2);
+    ConfigurableArchivalUnit ovAu2 = makeAu(new URL(stem2 + "/"), 2);
     assertEquals(ListUtil.list(stem2), ovAu2.getUrlStems());
   }
 
@@ -212,15 +212,15 @@ public class TestOtherVoicesArchivalUnit extends LockssTestCase {
   }
 
   public void testGetName() throws Exception {
-    OtherVoicesArchivalUnit au = makeAu(new URL(ROOT_URL), 2);
+    ConfigurableArchivalUnit au = makeAu(new URL(ROOT_URL), 2);
     assertEquals("www.othervoices.org, vol. 2", au.getName());
-    OtherVoicesArchivalUnit au1 =
+    ConfigurableArchivalUnit au1 =
         makeAu(new URL("http://www.bmj.com/"), 3);
     assertEquals("www.bmj.com, vol. 3", au1.getName());
   }
 
   public void testGetFilterRules() throws Exception {
-    OtherVoicesArchivalUnit au = makeAu(new URL(ROOT_URL), 2);
+    ConfigurableArchivalUnit au = makeAu(new URL(ROOT_URL), 2);
     assertNull(au.getFilterRule(null));
     assertNull(au.getFilterRule("jpg"));
     assertNull(au.getFilterRule("text/html"));

@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryCooperativeArchivalUnit.java,v 1.3 2004-02-10 01:09:10 clairegriffin Exp $
+ * $Id: TestHistoryCooperativeArchivalUnit.java,v 1.4 2004-02-12 03:57:54 clairegriffin Exp $
  */
 
 /*
@@ -42,6 +42,7 @@ import org.lockss.plugin.*;
 import org.lockss.plugin.base.BaseCachedUrlSet;
 import org.lockss.state.AuState;
 import org.lockss.repository.LockssRepositoryImpl;
+import org.lockss.plugin.configurable.*;
 
 public class TestHistoryCooperativeArchivalUnit extends LockssTestCase {
   private MockLockssDaemon theDaemon;
@@ -64,7 +65,7 @@ public class TestHistoryCooperativeArchivalUnit extends LockssTestCase {
     super.tearDown();
   }
 
-  private HistoryCooperativeArchivalUnit makeAu(URL url, int volume, String journalDir)
+  private ConfigurableArchivalUnit makeAu(URL url, int volume, String journalDir)
       throws ArchivalUnit.ConfigurationException {
     Properties props = new Properties();
     props.setProperty(HistoryCooperativePlugin.AUPARAM_VOL, Integer.toString(volume));
@@ -75,10 +76,9 @@ public class TestHistoryCooperativeArchivalUnit extends LockssTestCase {
       props.setProperty(HistoryCooperativePlugin.AUPARAM_JOURNAL_DIR, journalDir);
     }
     Configuration config = ConfigurationUtil.fromProps(props);
-    HistoryCooperativePlugin ap = new HistoryCooperativePlugin();
-    ap.initPlugin(theDaemon,ap.getClass().getName());
-    HistoryCooperativeArchivalUnit au = new HistoryCooperativeArchivalUnit(ap);
-    au.setConfiguration(config);
+    ConfigurablePlugin ap = new ConfigurablePlugin();
+    ap.initPlugin(theDaemon,"org.lockss.plugin.histcoop.HistoryCooperativePlugin");
+    ConfigurableArchivalUnit au =(ConfigurableArchivalUnit)ap.createAu(config);
     return au;
   }
 
@@ -164,8 +164,8 @@ public class TestHistoryCooperativeArchivalUnit extends LockssTestCase {
     URL url = new URL(ROOT_URL);
 
     String expectedStr = ROOT_URL+"journals/"+DIR+"/lockss-volume108.html";
-    HistoryCooperativeArchivalUnit hcAu = makeAu(url, 108, DIR);
-    assertEquals(expectedStr, hcAu.makeStartUrl());
+    ConfigurableArchivalUnit hcAu = makeAu(url, 108, DIR);
+    assertEquals(expectedStr, hcAu.getManifestPage());
   }
 
   public void testPathInUrlThrowsException() throws Exception {
@@ -178,10 +178,10 @@ public class TestHistoryCooperativeArchivalUnit extends LockssTestCase {
 
   public void testGetUrlStems() throws Exception {
     String stem1 = "http://www.historycooperative.org";
-    HistoryCooperativeArchivalUnit hcAu1 = makeAu(new URL(stem1 + "/"), 108, DIR);
+    ConfigurableArchivalUnit hcAu1 = makeAu(new URL(stem1 + "/"), 108, DIR);
     assertEquals(ListUtil.list(stem1), hcAu1.getUrlStems());
     String stem2 = "http://www.historycooperative.org:8080";
-    HistoryCooperativeArchivalUnit hcAu2 = makeAu(new URL(stem2 + "/"), 108, DIR);
+    ConfigurableArchivalUnit hcAu2 = makeAu(new URL(stem2 + "/"), 108, DIR);
     assertEquals(ListUtil.list(stem2), hcAu2.getUrlStems());
   }
 
@@ -204,15 +204,15 @@ public class TestHistoryCooperativeArchivalUnit extends LockssTestCase {
   }
 
   public void testGetName() throws Exception {
-    HistoryCooperativeArchivalUnit au = makeAu(new URL(ROOT_URL), 108, DIR);
+    ConfigurableArchivalUnit au = makeAu(new URL(ROOT_URL), 108, DIR);
     assertEquals("www.historycooperative.org, ahr, vol. 108", au.getName());
-    HistoryCooperativeArchivalUnit au1 =
+    ConfigurableArchivalUnit au1 =
         makeAu(new URL("http://www.bmj.com/"), 109, "bmj");
     assertEquals("www.bmj.com, bmj, vol. 109", au1.getName());
   }
 
   public void testGetFilterRules() throws Exception {
-    HistoryCooperativeArchivalUnit au = makeAu(new URL(ROOT_URL), 108, DIR);
+    ConfigurableArchivalUnit au = makeAu(new URL(ROOT_URL), 108, DIR);
     assertNull(au.getFilterRule(null));
     assertNull(au.getFilterRule("jpg"));
     assertNull(au.getFilterRule("text/html"));

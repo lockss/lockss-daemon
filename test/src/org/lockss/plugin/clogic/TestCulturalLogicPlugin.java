@@ -1,5 +1,5 @@
 /*
- * $Id: TestCulturalLogicPlugin.java,v 1.5 2004-02-10 01:09:10 clairegriffin Exp $
+ * $Id: TestCulturalLogicPlugin.java,v 1.6 2004-02-12 03:57:47 clairegriffin Exp $
  */
 
 /*
@@ -38,13 +38,14 @@ import org.lockss.test.*;
 import org.lockss.daemon.*;
 import org.lockss.util.ListUtil;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.configurable.*;
 
 public class TestCulturalLogicPlugin extends LockssTestCase {
-  private CulturalLogicPlugin plugin;
+  private ConfigurablePlugin plugin;
 
   public void setUp() throws Exception {
     super.setUp();
-    plugin = new CulturalLogicPlugin();
+    plugin = new ConfigurablePlugin();
     plugin.initPlugin(getMockLockssDaemon(),
                       "org.lockss.plugin.clogic.CulturalLogicPlugin");
   }
@@ -56,10 +57,10 @@ public class TestCulturalLogicPlugin extends LockssTestCase {
     } catch (ArchivalUnit.ConfigurationException e) { }
   }
 
-  private CulturalLogicArchivalUnit makeAuFromProps(Properties props)
+  private ConfigurableArchivalUnit makeAuFromProps(Properties props)
       throws ArchivalUnit.ConfigurationException {
     Configuration config = ConfigurationUtil.fromProps(props);
-    return (CulturalLogicArchivalUnit)plugin.configureAu(config, null);
+    return (ConfigurableArchivalUnit)plugin.configureAu(config, null);
   }
 
   public void testGetAuHandlesBadUrl()
@@ -69,7 +70,7 @@ public class TestCulturalLogicPlugin extends LockssTestCase {
     props.setProperty(CulturalLogicPlugin.AUPARAM_YEAR, "2002");
 
     try {
-      CulturalLogicArchivalUnit au = makeAuFromProps(props);
+      ConfigurableArchivalUnit au = makeAuFromProps(props);
       fail ("Didn't throw InstantiationException when given a bad url");
     } catch (ArchivalUnit.ConfigurationException auie) {
       ConfigParamDescr.InvalidFormatException murle =
@@ -85,7 +86,7 @@ public class TestCulturalLogicPlugin extends LockssTestCase {
                       "http://www.example.com/clogic/");
     props.setProperty(CulturalLogicPlugin.AUPARAM_YEAR, "2002");
 
-    CulturalLogicArchivalUnit au = makeAuFromProps(props);
+    ConfigurableArchivalUnit au = makeAuFromProps(props);
     assertEquals("www.example.com/clogic/, 2002", au.getName());
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryCooperativePlugin.java,v 1.5 2004-02-10 01:09:11 clairegriffin Exp $
+ * $Id: TestHistoryCooperativePlugin.java,v 1.6 2004-02-12 03:57:54 clairegriffin Exp $
  */
 
 /*
@@ -38,13 +38,14 @@ import org.lockss.test.*;
 import org.lockss.daemon.*;
 import org.lockss.util.ListUtil;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.configurable.*;
 
 public class TestHistoryCooperativePlugin extends LockssTestCase {
-  private HistoryCooperativePlugin plugin;
+  private ConfigurablePlugin plugin;
 
   public void setUp() throws Exception {
     super.setUp();
-    plugin = new HistoryCooperativePlugin();
+    plugin = new ConfigurablePlugin();
     plugin.initPlugin(getMockLockssDaemon(),
                       "org.lockss.plugin.histcoop.HistoryCooperativePlugin");
  }
@@ -56,10 +57,10 @@ public class TestHistoryCooperativePlugin extends LockssTestCase {
     } catch (ArchivalUnit.ConfigurationException e) { }
   }
 
-  private HistoryCooperativeArchivalUnit makeAuFromProps(Properties props)
+  private ConfigurableArchivalUnit makeAuFromProps(Properties props)
       throws ArchivalUnit.ConfigurationException {
     Configuration config = ConfigurationUtil.fromProps(props);
-    return (HistoryCooperativeArchivalUnit)plugin.configureAu(config, null);
+    return (ConfigurableArchivalUnit)plugin.configureAu(config, null);
   }
 
   public void testGetAuHandlesBadUrl()
@@ -70,7 +71,7 @@ public class TestHistoryCooperativePlugin extends LockssTestCase {
     props.setProperty(HistoryCooperativePlugin.AUPARAM_VOL, "322");
 
     try {
-      HistoryCooperativeArchivalUnit au = makeAuFromProps(props);
+      ConfigurableArchivalUnit au = makeAuFromProps(props);
       fail ("Didn't throw InstantiationException when given a bad url");
     } catch (ArchivalUnit.ConfigurationException auie) {
       ConfigParamDescr.InvalidFormatException murle =
@@ -87,7 +88,7 @@ public class TestHistoryCooperativePlugin extends LockssTestCase {
     props.setProperty(HistoryCooperativePlugin.AUPARAM_JOURNAL_DIR, "journal_dir");
     props.setProperty(HistoryCooperativePlugin.AUPARAM_VOL, "322");
 
-    HistoryCooperativeArchivalUnit au = makeAuFromProps(props);
+    ConfigurableArchivalUnit au = makeAuFromProps(props);
     assertEquals("www.example.com, journal_dir, vol. 322", au.getName());
   }
 

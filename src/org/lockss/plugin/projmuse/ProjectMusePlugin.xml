@@ -1,20 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ExternalizableMap><MapKeys xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">au_start_url</MapKeys><MapKeys xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">plugin_name</MapKeys><MapKeys xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">au_crawlrules</MapKeys><MapKeys xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">au_name</MapKeys><MapKeys xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">text/html</MapKeys><MapKeys xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">plugin_config_props</MapKeys><MapKeys xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">plugin_version</MapKeys><MapValues xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">%sjournals%s/v%03d/
+<ExternalizableMap>
+  <MapKeys xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">au_start_url</MapKeys>
+  <MapKeys xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">plugin_name</MapKeys>
+  <MapKeys xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">au_crawlrules</MapKeys>
+  <MapKeys xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">au_name</MapKeys>
+  <MapKeys xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">text/html</MapKeys>
+  <MapKeys xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">plugin_config_props</MapKeys>
+  <MapKeys xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">plugin_version</MapKeys>
+  <MapKeys xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">au_crawl_depth</MapKeys>
+  <MapValues xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">%sjournals/%s/v%03d/
 base_url
 journal_dir
-volume</MapValues><MapValues xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Project Muse</MapValues><MapValues><string xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">4
+volume</MapValues>
+  <MapValues xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Project Muse</MapValues>
+  <MapValues>
+    <string xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">4
 ^%s
-base_url</string><string xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">1
-%sjournals%s/v%03d/
+base_url</string>
+    <string xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">1
+%sjournals/%s/v%03d/
 base_url
 journal_dir
-volume</string><string xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">1
+volume</string>
+    <string xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">1
 %sjournals/%s/toc/[a-zA-Z]*%d\..*
 base_url
 journal_dir
-volume</string><string xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">1
+volume</string>
+    <string xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">1
 %simages/.*
-base_url</string></MapValues><MapValues xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">%s, %s, vol. %d
+base_url</string>
+  </MapValues>
+  <MapValues xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">%s, %s, vol. %d
 base_url_host
 journal_dir
-volume</MapValues><MapValues xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">org.lockss.plugin.projmuse.ProjectMuseFilterRule</MapValues><MapValues><ConfigParamDescr><Key>base_url</Key><DisplayName>Base URL</DisplayName><Description>Usually of the form http://&lt;journal-name&gt;.com/</Description><Type>3</Type><Size>40</Size><Definitional>true</Definitional></ConfigParamDescr><ConfigParamDescr><Key>journal_dir</Key><DisplayName>Journal Directory</DisplayName><Description>Directory name for journal content (i.e. 'american_imago').</Description><Type>1</Type><Size>40</Size><Definitional>true</Definitional></ConfigParamDescr><ConfigParamDescr><Key>volume</Key><DisplayName>Volume No.</DisplayName><Type>2</Type><Size>8</Size><Definitional>true</Definitional></ConfigParamDescr></MapValues><MapValues xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Pre-release</MapValues></ExternalizableMap>
+volume</MapValues>
+  <MapValues xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">org.lockss.plugin.projmuse.ProjectMuseFilterRule</MapValues>
+  <MapValues>
+    <ConfigParamDescr>
+      <Key>base_url</Key>
+      <DisplayName>Base URL</DisplayName>
+      <Description>Usually of the form http://&lt;journal-name&gt;.com/</Description>
+      <Type>3</Type>
+      <Size>40</Size>
+      <Definitional>true</Definitional>
+    </ConfigParamDescr>
+    <ConfigParamDescr>
+      <Key>journal_dir</Key>
+      <DisplayName>Journal Directory</DisplayName>
+      <Description>Directory name for journal content (i.e. 'american_imago').</Description>
+      <Type>1</Type>
+      <Size>40</Size>
+      <Definitional>true</Definitional>
+    </ConfigParamDescr>
+    <ConfigParamDescr>
+      <Key>volume</Key>
+      <DisplayName>Volume No.</DisplayName>
+      <Type>6</Type>
+      <Size>8</Size>
+      <Definitional>true</Definitional>
+    </ConfigParamDescr>
+  </MapValues>
+  <MapValues xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Pre-release</MapValues>
+  <MapValues xsi:type="java:java.lang.Integer" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2</MapValues>
+</ExternalizableMap>

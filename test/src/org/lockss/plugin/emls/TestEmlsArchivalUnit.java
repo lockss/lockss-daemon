@@ -1,5 +1,5 @@
 /*
- * $Id: TestEmlsArchivalUnit.java,v 1.3 2004-02-10 01:09:10 clairegriffin Exp $
+ * $Id: TestEmlsArchivalUnit.java,v 1.4 2004-02-12 03:57:47 clairegriffin Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import org.lockss.plugin.*;
 import org.lockss.state.AuState;
 import org.lockss.plugin.base.BaseCachedUrlSet;
 import org.lockss.repository.LockssRepositoryImpl;
+import org.lockss.plugin.configurable.*;
 
 public class TestEmlsArchivalUnit extends LockssTestCase {
   private MockLockssDaemon theDaemon;
@@ -58,7 +59,7 @@ public class TestEmlsArchivalUnit extends LockssTestCase {
     super.tearDown();
   }
 
-  private EmlsArchivalUnit makeAu(URL url, int volume)
+  private ConfigurableArchivalUnit makeAu(URL url, int volume)
       throws ArchivalUnit.ConfigurationException {
     Properties props = new Properties();
     props.setProperty(EmlsPlugin.AUPARAM_VOL, ""+volume);
@@ -66,10 +67,9 @@ public class TestEmlsArchivalUnit extends LockssTestCase {
       props.setProperty(EmlsPlugin.AUPARAM_BASE_URL, url.toString());
     }
     Configuration config = ConfigurationUtil.fromProps(props);
-    EmlsPlugin ap = new EmlsPlugin();
-    ap.initPlugin(theDaemon,ap.getClass().getName());
-    EmlsArchivalUnit au = new EmlsArchivalUnit(ap);
-    au.setConfiguration(config);
+    ConfigurablePlugin ap = new ConfigurablePlugin();
+    ap.initPlugin(theDaemon,"org.lockss.plugin.emls.EmlsPlugin");
+    ConfigurableArchivalUnit au = (ConfigurableArchivalUnit)ap.createAu(config);
     return au;
   }
 
@@ -140,8 +140,8 @@ public class TestEmlsArchivalUnit extends LockssTestCase {
   public void testStartUrlConstruction() throws Exception {
     URL url = new URL(ROOT_URL);
     String expectedStr = ROOT_URL+"lockss-volume3.html";
-    EmlsArchivalUnit eAu = makeAu(url, 3);
-    assertEquals(expectedStr, eAu.makeStartUrl());
+    ConfigurableArchivalUnit eAu = makeAu(url, 3);
+    assertEquals(expectedStr, eAu.getManifestPage());
   }
 
   public void testBadPathInUrlThrowsException() throws Exception {
@@ -154,10 +154,10 @@ public class TestEmlsArchivalUnit extends LockssTestCase {
 
   public void testGetUrlStems() throws Exception {
     String stem1 = "http://muse.jhu.edu";
-    EmlsArchivalUnit eAu1 = makeAu(new URL(stem1 + "/emls/"), 3);
+    ConfigurableArchivalUnit eAu1 = makeAu(new URL(stem1 + "/emls/"), 3);
     assertEquals(ListUtil.list(stem1), eAu1.getUrlStems());
     String stem2 = "http://muse.jhu.edu:8080";
-    EmlsArchivalUnit eAu2 = makeAu(new URL(stem2 + "/emls/"), 3);
+    ConfigurableArchivalUnit eAu2 = makeAu(new URL(stem2 + "/emls/"), 3);
     assertEquals(ListUtil.list(stem2), eAu2.getUrlStems());
   }
 
@@ -180,10 +180,15 @@ public class TestEmlsArchivalUnit extends LockssTestCase {
   }
 
   public void testGetName() throws Exception {
-    EmlsArchivalUnit au = makeAu(new URL(ROOT_URL), 3);
+    ConfigurableArchivalUnit au = makeAu(new URL(ROOT_URL), 3);
     assertEquals("www.shu.ac.uk, vol. 3", au.getName());
     au = makeAu(new URL("http://www.bmj.com/emls/"), 5);
     assertEquals("www.bmj.com, vol. 5", au.getName());
+  }
+
+  public void testDefPauseTime() throws Exception {
+    ConfigurableArchivalUnit au = makeAu(new URL(ROOT_URL), 3);
+    assertEquals(10 * Constants.SECOND, au.getFetchDelay());
   }
 
   public static void main(String[] argv) {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestProjectMuseArchivalUnit.java,v 1.10 2004-02-10 01:09:11 clairegriffin Exp $
+ * $Id: TestProjectMuseArchivalUnit.java,v 1.11 2004-02-12 03:57:55 clairegriffin Exp $
  */
 
 /*
@@ -42,6 +42,7 @@ import org.lockss.plugin.*;
 import org.lockss.plugin.base.BaseCachedUrlSet;
 import org.lockss.state.AuState;
 import org.lockss.repository.LockssRepositoryImpl;
+import org.lockss.plugin.configurable.*;
 
 public class TestProjectMuseArchivalUnit extends LockssTestCase {
   private MockLockssDaemon theDaemon;
@@ -64,7 +65,7 @@ public class TestProjectMuseArchivalUnit extends LockssTestCase {
     super.tearDown();
   }
 
-  private ProjectMuseArchivalUnit makeAu(URL url, int volume, String journalDir)
+  private ConfigurableArchivalUnit makeAu(URL url, int volume, String journalDir)
       throws ArchivalUnit.ConfigurationException {
     Properties props = new Properties();
     props.setProperty(ProjectMusePlugin.AUPARAM_VOL, Integer.toString(volume));
@@ -75,10 +76,9 @@ public class TestProjectMuseArchivalUnit extends LockssTestCase {
       props.setProperty(ProjectMusePlugin.AUPARAM_JOURNAL_DIR, journalDir);
     }
     Configuration config = ConfigurationUtil.fromProps(props);
-    ProjectMusePlugin ap = new ProjectMusePlugin();
-    ap.initPlugin(theDaemon,ap.getClass().getName());
-    ProjectMuseArchivalUnit au = new ProjectMuseArchivalUnit(ap);
-    au.setConfiguration(config);
+    ConfigurablePlugin ap = new ConfigurablePlugin();
+    ap.initPlugin(theDaemon,"org.lockss.plugin.projmuse.ProjectMusePlugin");
+    ConfigurableArchivalUnit au = (ConfigurableArchivalUnit)ap.createAu(config);
     return au;
   }
 
@@ -180,18 +180,18 @@ public class TestProjectMuseArchivalUnit extends LockssTestCase {
 
     // 2 digit
     String expectedStr = ROOT_URL+"journals/"+DIR+"/v060/";
-    ProjectMuseArchivalUnit pmAu = makeAu(url, 60, DIR);
-    assertEquals(expectedStr, pmAu.makeStartUrl());
+    ConfigurableArchivalUnit pmAu = makeAu(url, 60, DIR);
+    assertEquals(expectedStr, pmAu.getManifestPage());
 
     // 3 digit
     expectedStr = ROOT_URL+"journals/"+DIR+"/v601/";
     pmAu = makeAu(url, 601, DIR);
-    assertEquals(expectedStr, pmAu.makeStartUrl());
+    assertEquals(expectedStr, pmAu.getManifestPage());
 
     // 1 digit
     expectedStr = ROOT_URL+"journals/"+DIR+"/v006/";
     pmAu = makeAu(url, 6, DIR);
-    assertEquals(expectedStr, pmAu.makeStartUrl());
+    assertEquals(expectedStr, pmAu.getManifestPage());
   }
 
   public void testPathInUrlThrowsException() throws Exception {
@@ -204,10 +204,10 @@ public class TestProjectMuseArchivalUnit extends LockssTestCase {
 
   public void testGetUrlStems() throws Exception {
     String stem1 = "http://muse.jhu.edu";
-    ProjectMuseArchivalUnit pmAu1 = makeAu(new URL(stem1 + "/"), 60, DIR);
+    ConfigurableArchivalUnit pmAu1 = makeAu(new URL(stem1 + "/"), 60, DIR);
     assertEquals(ListUtil.list(stem1), pmAu1.getUrlStems());
     String stem2 = "http://muse.jhu.edu:8080";
-    ProjectMuseArchivalUnit pmAu2 = makeAu(new URL(stem2 + "/"), 60, DIR);
+    ConfigurableArchivalUnit pmAu2 = makeAu(new URL(stem2 + "/"), 60, DIR);
     assertEquals(ListUtil.list(stem2), pmAu2.getUrlStems());
   }
 
@@ -230,22 +230,22 @@ public class TestProjectMuseArchivalUnit extends LockssTestCase {
   }
 
   public void testGetName() throws Exception {
-    ProjectMuseArchivalUnit au = makeAu(new URL(ROOT_URL), 60, DIR);
+    ConfigurableArchivalUnit au = makeAu(new URL(ROOT_URL), 60, DIR);
     assertEquals("muse.jhu.edu, american_imago, vol. 60", au.getName());
-    ProjectMuseArchivalUnit au1 =
+    ConfigurableArchivalUnit au1 =
         makeAu(new URL("http://www.bmj.com/"), 61, "bmj");
     assertEquals("www.bmj.com, bmj, vol. 61", au1.getName());
   }
 
   public void testGetFilterRules() throws Exception {
-    ProjectMuseArchivalUnit au = makeAu(new URL(ROOT_URL), 60, DIR);
+    ConfigurableArchivalUnit au = makeAu(new URL(ROOT_URL), 60, DIR);
     assertNull(au.getFilterRule(null));
     assertNull(au.getFilterRule("jpg"));
     assertTrue(au.getFilterRule("text/html") instanceof ProjectMuseFilterRule);
   }
 
   public void testRefetchDepth() throws Exception {
-    ProjectMuseArchivalUnit au = makeAu(new URL(ROOT_URL), 60, DIR);
+    ConfigurableArchivalUnit au = makeAu(new URL(ROOT_URL), 60, DIR);
     assertEquals(2, au.getCrawlSpec().getRefetchDepth());
   }
 

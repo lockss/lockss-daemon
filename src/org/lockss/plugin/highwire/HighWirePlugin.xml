@@ -1,24 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ExternalizableMap><MapKeys xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">au_start_url</MapKeys><MapKeys xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">plugin_name</MapKeys><MapKeys xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">au_crawlwindow</MapKeys><MapKeys xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">au_crawlrules</MapKeys><MapKeys xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">au_name</MapKeys><MapKeys xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">text/html</MapKeys><MapKeys xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">plugin_config_props</MapKeys><MapKeys xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">plugin_version</MapKeys><MapValues xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">%slockss-volume%d.shtml
+<ExternalizableMap>
+  <MapKeys xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">au_start_url</MapKeys>
+  <MapKeys xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">plugin_name</MapKeys>
+  <MapKeys xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">au_crawlwindow</MapKeys>
+  <MapKeys xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">au_crawlrules</MapKeys>
+  <MapKeys xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">au_name</MapKeys>
+  <MapKeys xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">text/html</MapKeys>
+  <MapKeys xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">plugin_config_props</MapKeys>
+  <MapKeys xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">plugin_version</MapKeys>
+  <MapValues xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">%slockss-volume%d.shtml
 base_url
-volume</MapValues><MapValues xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">HighWire Press</MapValues><MapValues xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">org.lockss.plugin.highwire.HighwireCrawlWindow</MapValues><MapValues><string xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+volume</MapValues>
+  <MapValues xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">HighWire Press</MapValues>
+  <MapValues xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">org.lockss.plugin.highwire.HighwireCrawlWindow</MapValues>
+  <MapValues>
+    <string xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">4
 ^%s
-base_url</string><string xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+base_url</string>
+    <string xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">1
 %slockss-volume%d.shtml
 base_url
-volume</string><string xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-.*ck=nck.*</string><string xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-.*adclick.*</string><string xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-.*/cgi/mailafriend.*</string><string xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-.*/content/current/.*</string><string xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+volume</string>
+    <string xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2
+.*ck=nck.*</string>
+    <string xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2
+.*adclick.*</string>
+    <string xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2
+.*/cgi/mailafriend.*</string>
+    <string xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">1
+.*/content/current/.*</string>
+    <string xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">1
 .*/content/vol%d/.*
-volume</string><string xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+volume</string>
+    <string xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">1
 .*/cgi/content/.*/%d/.*
-volume</string><string xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+volume</string>
+    <string xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">1
 .*/cgi/reprint/%d/.*
-volume</string><string xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-.*/icons.*</string><string xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-.*/math.*</string><string xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-http://.*/.*/.*</string></MapValues><MapValues xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">%s, vol. %d
+volume</string>
+    <string xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">1
+.*/icons.*</string>
+    <string xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">1
+.*/math.*</string>
+    <string xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2
+http://.*/.*/.*</string>
+  </MapValues>
+  <MapValues xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">%s, vol. %d
 base_url_host
-volume</MapValues><MapValues xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">org.lockss.plugin.highwire.HighWireFilterRule</MapValues><MapValues><ConfigParamDescr><Key>base_url</Key><DisplayName>Base URL</DisplayName><Description>Usually of the form http://&lt;journal-name&gt;.com/</Description><Type>3</Type><Size>40</Size><Definitional>true</Definitional></ConfigParamDescr><ConfigParamDescr><Key>volume</Key><DisplayName>Volume No.</DisplayName><Type>2</Type><Size>8</Size><Definitional>true</Definitional></ConfigParamDescr></MapValues><MapValues xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Pre-release</MapValues></ExternalizableMap>
+volume</MapValues>
+  <MapValues xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">org.lockss.plugin.highwire.HighWireFilterRule</MapValues>
+  <MapValues>
+    <ConfigParamDescr>
+      <Key>base_url</Key>
+      <DisplayName>Base URL</DisplayName>
+      <Description>Usually of the form http://&lt;journal-name&gt;.com/</Description>
+      <Type>3</Type>
+      <Size>40</Size>
+      <Definitional>true</Definitional>
+    </ConfigParamDescr>
+    <ConfigParamDescr>
+      <Key>volume</Key>
+      <DisplayName>Volume No.</DisplayName>
+      <Type>6</Type>
+      <Size>8</Size>
+      <Definitional>true</Definitional>
+    </ConfigParamDescr>
+  </MapValues>
+  <MapValues xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Pre-release</MapValues>
+</ExternalizableMap>
