@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.42 2003-05-26 03:46:04 tal Exp $
+ $Id: build.xml,v 1.43 2003-05-27 21:02:43 tal Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
@@ -137,7 +137,6 @@ Args:
     <pathelement path="${castor.jar}" />
     <pathelement path="${xerces.jar}" />
     <pathelement path="${xmlparser.jar}" />
-    <pathelement path="${lockss.ant.jar}" />
   </path>
 
   <path id="run.classpath">
@@ -155,6 +154,7 @@ Args:
   <path id="test.run.classpath">
     <path refid="test.compile.classpath" />
     <pathelement path="${lockss.test.jar}" />
+    <pathelement path="${lockss.ant.jar}" />
   </path>
 
   <path id="doclet.compile.classpath">
