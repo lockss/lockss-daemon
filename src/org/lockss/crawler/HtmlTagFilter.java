@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlTagFilter.java,v 1.2 2002-12-12 23:14:30 aalto Exp $
+ * $Id: HtmlTagFilter.java,v 1.3 2003-02-22 01:07:34 troberts Exp $
  */
 
 /*
@@ -39,9 +39,15 @@ import org.lockss.util.*;
  * This class is used to filter all content from a reader between two string
  * (for instance "<!--" and "-->"
  */
-public class HtmlTagFilter extends Reader{
+public class HtmlTagFilter extends Reader {
+  /**
+   * TODO
+   * 1)Check to see if we can inherit the 2 char array reads from another class
+   * 2)See how Mozilla handles nested comments
+   * 3)Use better string searching algorithm
+   */
+
   Reader reader = null;
-  //  List pairs = null;
   TagPair pair = null;
   List charBuffer = null;
   int bufferCapacity = 0;
@@ -71,7 +77,7 @@ public class HtmlTagFilter extends Reader{
       throw new IllegalArgumentException("Called with a null tag pair");
     }
     this.pair = pair;
-    bufferCapacity = pair.getMaxTagLength();//getMaxTagLength(pairs);
+    bufferCapacity = pair.getMaxTagLength();
   }
   /**
    * Create a filter with multiple tags.  When filtering with multiple tags
@@ -92,10 +98,11 @@ public class HtmlTagFilter extends Reader{
     if (pairs.size() < 1) {
       throw new IllegalArgumentException("Called with empty tag pair list");
     }
-    this.pair = (TagPair) pairs.remove(pairs.size()-1);
+    this.pair = (TagPair) pairs.get(pairs.size()-1);
     bufferCapacity = pair.getMaxTagLength();
-    if (pairs.size() > 0) {
-      this.reader = new HtmlTagFilter(reader, pairs);
+    if (pairs.size() >= 2) {
+      this.reader = new HtmlTagFilter(reader, 
+				      pairs.subList(0,pairs.size()-1));
     }
   }
 
@@ -110,9 +117,7 @@ public class HtmlTagFilter extends Reader{
 
     //XXX do this more efficiently
     while (charBuffer.size() < bufferCapacity && !streamDone) {
-      if (!addCharToBuffer(charBuffer, reader)) {
-	streamDone = true;
-      }
+      addCharToBuffer(charBuffer, reader);
     }
     if (charBuffer.size() < 1) {
       return -1;
@@ -142,6 +147,7 @@ public class HtmlTagFilter extends Reader{
       throws IOException {
     int curKar;
     if ((curKar = reader.read()) == -1) {
+      streamDone = true;
       return false;
     } else {
       logger.debug("Adding "+(char)curKar+" to charBuffer");
@@ -152,15 +158,24 @@ public class HtmlTagFilter extends Reader{
 
 
   private boolean startsWithTag(List charBuffer, String tag) {
+    //XXX reimplement with DNA searching algorithm
+
     logger.debug("checking if "+charBuffer+" starts with "+tag);
+
+    //less common case than first char not match, but we have to check for 
+    //size before that anyway
     if (charBuffer.size() < tag.length()) {
+      return false;
+    }
+    char firstChar = ((Character)charBuffer.get(0)).charValue();
+    if (!charEqualsIgnoreCase(firstChar, tag.charAt(0))) {
       return false;
     }
     Iterator it = charBuffer.listIterator();
     int charPos = 0;
     while (it.hasNext() && charPos < tag.length()) {
       char curChar = ((Character)it.next()).charValue();
-      if (curChar != tag.charAt(charPos)) {
+      if (!charEqualsIgnoreCase(curChar, tag.charAt(charPos))) {
 	logger.debug("It doesn't");
 	return false;
       }
@@ -168,6 +183,10 @@ public class HtmlTagFilter extends Reader{
     }
     logger.debug("It does");
     return true;
+  }
+
+  private boolean charEqualsIgnoreCase(char kar1, char kar2) {
+    return (Character.toUpperCase(kar1) == Character.toUpperCase(kar2));
   }
 
 
@@ -225,11 +244,11 @@ public class HtmlTagFilter extends Reader{
   public int read(char[] outputBuf) throws IOException {
     return read(outputBuf, 0, outputBuf.length);
   }
-
+  
   public int read(char[] outputBuf, int off, int len) throws IOException {
     for (int ix=0; ix<off; ix++) {
       if (read() == -1) {
-	return 0;
+ 	return 0;
       }
     }
     int size = 0;
@@ -241,7 +260,7 @@ public class HtmlTagFilter extends Reader{
     }
     return size;
   }
-
+  
   public boolean ready() {
     throw new UnsupportedOperationException("Not Implemented");
   }
@@ -261,7 +280,6 @@ public class HtmlTagFilter extends Reader{
   public static class TagPair {
     String start = null;
     String end = null;
-    boolean ignoreNested = false; //false if nested tags should be ignored
 
     public TagPair(String start, String end) {
       if (start == null || end == null) {
@@ -281,7 +299,7 @@ public class HtmlTagFilter extends Reader{
     }
 
     int getMaxTagLength() {
-      return start.length() >= end.length() ? start.length() : end.length();
+      return Math.max(start.length(), end.length());
     }
 
     public String toString() {
@@ -303,10 +321,6 @@ public class HtmlTagFilter extends Reader{
 
     public int hashCode() {
       return (start.hashCode() + end.hashCode());
-    }
-
-    public boolean shouldIgnoreNested() {
-      return ignoreNested;
     }
   }
 }

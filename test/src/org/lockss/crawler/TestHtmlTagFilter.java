@@ -1,5 +1,5 @@
 /*
- * $Id: TestHtmlTagFilter.java,v 1.2 2002-12-17 20:54:38 troberts Exp $
+ * $Id: TestHtmlTagFilter.java,v 1.3 2003-02-22 01:07:34 troberts Exp $
  */
 
 /*
@@ -38,6 +38,18 @@ import org.lockss.test.*;
 import org.lockss.util.*;
 
 public class TestHtmlTagFilter extends LockssTestCase {
+  private static final String startTag1 = "<start>";
+  private static final String endTag1 = "<end>";
+
+  private static final String startTag2 = "<script>";
+  private static final String endTag2 = "</script>";
+
+  private static final HtmlTagFilter.TagPair tagPair1 = 
+    new HtmlTagFilter.TagPair(startTag1, endTag1);
+
+  private static final HtmlTagFilter.TagPair tagPair2 = 
+    new HtmlTagFilter.TagPair(startTag2, endTag2);
+
 
   public TestHtmlTagFilter(String msg) {
     super(msg);
@@ -85,6 +97,17 @@ public class TestHtmlTagFilter extends LockssTestCase {
     } catch(IllegalArgumentException iae) {
     }
   }
+  
+  public void testDoesNotModifyTagList() {
+    List list = new LinkedList();
+    list.add(tagPair1);
+    list.add(tagPair2);
+    HtmlTagFilter filter = 
+      new HtmlTagFilter(new StringReader("blah"), list);
+    assertEquals(2, list.size());
+    assertEquals(tagPair1, (HtmlTagFilter.TagPair)list.get(0));
+    assertEquals(tagPair2, (HtmlTagFilter.TagPair)list.get(1));
+  }
 
   public void testDoesNotFilterContentWithOutTags() throws IOException {
     String content = "This is test content";
@@ -97,57 +120,96 @@ public class TestHtmlTagFilter extends LockssTestCase {
   }
 
   public void testFiltersSingleTagsNoNesting() throws IOException {
-    String startTag = "<start>";
-    String endTag = "<end>";
-    String content = "This "+startTag+"is test "+endTag+"content";
+    String content = "This "+startTag1+"is test "+endTag1+"content";
     String expectedContent = "This content";
 
     HtmlTagFilter reader = 
-      new HtmlTagFilter(new StringReader(content),
-			new HtmlTagFilter.TagPair(startTag, endTag));
+      new HtmlTagFilter(new StringReader(content), tagPair1);
+    
+    assertReaderMatchesString(expectedContent, reader);
+  }
+
+  public void testCaseInsensitive() throws IOException {
+    String content = "This <Start> is test <END>content";
+    String expectedContent = "This content";
+
+    HtmlTagFilter reader = 
+      new HtmlTagFilter(new StringReader(content), tagPair1);
+    
+    assertReaderMatchesString(expectedContent, reader);
+  }
+
+  public void testFiltersIgnoreEndTagWithNoStartTag() throws IOException {
+    String content = "This is test "+endTag1+"content";
+    String expectedContent = "This is test "+endTag1+"content";
+
+    HtmlTagFilter reader = 
+      new HtmlTagFilter(new StringReader(content), tagPair1);
     
     assertReaderMatchesString(expectedContent, reader);
   }
 
   public void testFiltersTrailingTag() throws IOException {
-    String startTag = "<start>";
-    String endTag = "<end>";
-    String content = "This "+startTag+"is test content";
+    String content = "This "+startTag1+"is test content";
     String expectedContent = "This ";
 
     HtmlTagFilter reader = 
-      new HtmlTagFilter(new StringReader(content),
-			new HtmlTagFilter.TagPair(startTag, endTag));
+      new HtmlTagFilter(new StringReader(content), tagPair1);
     
     assertReaderMatchesString(expectedContent, reader);
   }
 
-  public void testFiltersSingleTagsNesting() throws IOException {
-    String startTag = "<start>";
-    String endTag = "<end>";
+  public void testFiltersSingleTagsNestingVariant1() throws IOException {
     String content = 
-      "This "+startTag+"is "+startTag
-      +"test "+endTag+endTag+"content";
+      "This "+startTag1+startTag1
+      +"is test "+endTag1+endTag1+"content";
     String expectedContent = "This content";
 
     HtmlTagFilter reader = 
-      new HtmlTagFilter(new StringReader(content),
-			new HtmlTagFilter.TagPair(startTag, endTag));
+      new HtmlTagFilter(new StringReader(content), tagPair1);
+    
+    assertReaderMatchesString(expectedContent, reader);
+  }
+
+
+  public void testFiltersSingleTagsNestingVariant2() throws IOException {
+    String content = 
+      "This "+startTag1+"is "+startTag1
+      +"test "+endTag1+endTag1+"content";
+    String expectedContent = "This content";
+
+    HtmlTagFilter reader = 
+      new HtmlTagFilter(new StringReader(content), tagPair1);
+    
+    assertReaderMatchesString(expectedContent, reader);
+  }
+
+  public void testFiltersSingleTagsNestingVariant3() throws IOException {
+    String content = 
+      "This "+startTag1+"is "+startTag1
+      +"test "+endTag1+"error "+endTag1+"content";
+    String expectedContent = "This content";
+
+    HtmlTagFilter reader = 
+      new HtmlTagFilter(new StringReader(content), tagPair1);
+    
+    assertReaderMatchesString(expectedContent, reader);
+  }
+
+  public void testFiltersSingleTagsNestingVariant4() throws IOException {
+    String content = 
+      "This "+startTag1+startTag1
+      +"test "+endTag1+"is "+endTag1+"content";
+    String expectedContent = "This content";
+
+    HtmlTagFilter reader = 
+      new HtmlTagFilter(new StringReader(content), tagPair1);
     
     assertReaderMatchesString(expectedContent, reader);
   }
 
 
    public void testFiltersMultipleTagsNoNesting() throws IOException {
-     String startTag1 = "<start>";
-     String endTag1 = "<end>";
-     String startTag2 = "<script>";
-     String endTag2 = "</script>";
-     HtmlTagFilter.TagPair pair1 = 
-       new HtmlTagFilter.TagPair(startTag1, endTag1);
-     HtmlTagFilter.TagPair pair2 = 
-       new HtmlTagFilter.TagPair(startTag2, endTag2);
-
     String content = 
       "This "+startTag1+"is "+endTag1
       +"test "+startTag2+"content"+endTag2+"here";
@@ -155,49 +217,31 @@ public class TestHtmlTagFilter extends LockssTestCase {
 
     HtmlTagFilter reader = 
       new HtmlTagFilter(new StringReader(content),
-			ListUtil.list(pair1, pair2));
+			ListUtil.list(tagPair1, tagPair2));
     
     assertReaderMatchesString(expectedContent, reader);
   }
 
    public void testFiltersMultipleTagsComplexNesting() throws IOException {
-     String startTag1 = "<start>";
-     String endTag1 = "<end>";
-     String startTag2 = "<script>";
-     String endTag2 = "</script>";
-     HtmlTagFilter.TagPair pair1 = 
-       new HtmlTagFilter.TagPair(startTag1, endTag1);
-     HtmlTagFilter.TagPair pair2 = 
-       new HtmlTagFilter.TagPair(startTag2, endTag2);
-
     String content = 
-      startTag2+startTag1+endTag2+"blah"+endTag1+endTag2+"blah";
+      startTag2+startTag1+endTag2+"blah1"+endTag1+endTag2+"blah2";
 
-    String expectedContent = "blah";
+    String expectedContent = "blah2";
 
     HtmlTagFilter reader = 
       new HtmlTagFilter(new StringReader(content),
-			ListUtil.list(pair1, pair2));
+			ListUtil.list(tagPair1, tagPair2));
     
     assertReaderMatchesString(expectedContent, reader);
 
-    expectedContent = "blah"+endTag1+endTag2+"blah";
+    expectedContent = "blah1"+endTag1+endTag2+"blah2";
     reader = 
       new HtmlTagFilter(new StringReader(content),
-			ListUtil.list(pair2, pair1));
+			ListUtil.list(tagPair2, tagPair1));
     assertReaderMatchesString(expectedContent, reader);
   }
 
   public void testFiltersMultipleTagsSimpleNesting() throws IOException {
-     String startTag1 = "<start>";
-     String endTag1 = "<end>";
-     String startTag2 = "<script>";
-     String endTag2 = "</script>";
-     HtmlTagFilter.TagPair pair1 = 
-       new HtmlTagFilter.TagPair(startTag1, endTag1);
-     HtmlTagFilter.TagPair pair2 = 
-       new HtmlTagFilter.TagPair(startTag2, endTag2);
-
     String content = 
       "This "+startTag1+"is "+startTag2
       +"test "+endTag2+"content"+endTag1+"here";
@@ -205,20 +249,18 @@ public class TestHtmlTagFilter extends LockssTestCase {
 
     HtmlTagFilter reader = 
       new HtmlTagFilter(new StringReader(content),
-			ListUtil.list(pair2, pair1));
+			ListUtil.list(tagPair2, tagPair1));
     
     assertReaderMatchesString(expectedContent, reader);
   }
 
   public void testReadWithBuffer() throws IOException {
-    String startTag = "<start>";
-    String endTag = "<end>";
-    String content = "This "+startTag+"is test "+endTag+"content";
+    String content = "This "+startTag1+"is test "+endTag1+"content";
     String expectedContent = "This content";
 
     HtmlTagFilter reader = 
-      new HtmlTagFilter(new StringReader(content),
-			new HtmlTagFilter.TagPair(startTag, endTag));
+      new HtmlTagFilter(new StringReader(content), tagPair1);
+
     
     char actual[] = new char[expectedContent.length()];
     reader.read(actual);
@@ -227,14 +269,11 @@ public class TestHtmlTagFilter extends LockssTestCase {
   }
 
   public void testReadWithOffsetAndLength() throws IOException {
-    String startTag = "<start>";
-    String endTag = "<end>";
-    String content = "This "+startTag+"is test "+endTag+"content";
+    String content = "This "+startTag1+"is test "+endTag1+"content";
     String expectedContent = "is cont";
 
     HtmlTagFilter reader = 
-      new HtmlTagFilter(new StringReader(content),
-			new HtmlTagFilter.TagPair(startTag, endTag));
+      new HtmlTagFilter(new StringReader(content), tagPair1);
     
     char actual[] = new char[expectedContent.length()];
     assertEquals(7, reader.read(actual, 2, 7));
@@ -248,7 +287,7 @@ public class TestHtmlTagFilter extends LockssTestCase {
   
 
   private void assertReaderMatchesString(String expected, 
-					 Reader reader) //XXX should be reader
+					 Reader reader) 
   throws IOException{
     StringBuffer actual = new StringBuffer(expected.length());
     int kar;
@@ -288,10 +327,24 @@ public class TestHtmlTagFilter extends LockssTestCase {
   }
 
   public void testTagPairNotEqualHash() {
-    HtmlTagFilter.TagPair pair1 = new HtmlTagFilter.TagPair("blah1", "blah2");
-    HtmlTagFilter.TagPair pair2 = new HtmlTagFilter.TagPair("bleh3", "bleh4");
-    assertTrue(pair1.hashCode() != pair2.hashCode());
+    //To be fair, this is not guaranteed to succeed, since two objects
+    //may hash to each other.  However, if all 7 of these have the same hash
+    //value, somethign is probably wrong.
+    HtmlTagFilter.TagPair pair1 = new HtmlTagFilter.TagPair("blah1", "bleh1");
+    HtmlTagFilter.TagPair pair2 = new HtmlTagFilter.TagPair("blah2", "bleh2");
+    HtmlTagFilter.TagPair pair3 = new HtmlTagFilter.TagPair("blah3", "bleh3");
+    HtmlTagFilter.TagPair pair4 = new HtmlTagFilter.TagPair("blah4", "bleh4");
+    HtmlTagFilter.TagPair pair5 = new HtmlTagFilter.TagPair("blah5", "bleh5");
+    HtmlTagFilter.TagPair pair6 = new HtmlTagFilter.TagPair("blah6", "bleh6");
+    HtmlTagFilter.TagPair pair7 = new HtmlTagFilter.TagPair("blah7", "bleh7");
+    assertTrue(!(pair1.hashCode() == pair2.hashCode() &&
+		 pair2.hashCode() == pair3.hashCode() &&
+		 pair3.hashCode() == pair4.hashCode() &&
+		 pair4.hashCode() == pair5.hashCode() &&
+		 pair5.hashCode() == pair6.hashCode() &&
+		 pair6.hashCode() == pair7.hashCode()));
   }
+
   public void testTagPairHasEqualHash() {
     HtmlTagFilter.TagPair pair1 = new HtmlTagFilter.TagPair("blah1", "blah2");
     HtmlTagFilter.TagPair pair2 = new HtmlTagFilter.TagPair("blah1", "blah2");
