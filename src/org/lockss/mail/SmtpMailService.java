@@ -1,5 +1,5 @@
 /*
- * $Id: SmtpMailService.java,v 1.1 2004-07-12 06:11:23 tlipkis Exp $
+ * $Id: SmtpMailService.java,v 1.1.2.1 2004-07-19 08:28:16 tlipkis Exp $
  *
 
  Copyright (c) 2000-2004 Board of Trustees of Leland Stanford Jr. University,
@@ -153,9 +153,9 @@ public class SmtpMailService extends BaseLockssManager implements MailService {
 	log.debug3("Client returned " + res);
       }
       return res;
-    } catch (IOException ioe) {
-      log.error("Couldn't send mail", ioe);
-      return SmtpClient.RESULT_FAIL;
+    } catch (Exception e) {
+      log.error("Client threw", e);
+      return SmtpClient.RESULT_RETRY;
     }
   }
 
@@ -184,6 +184,8 @@ public class SmtpMailService extends BaseLockssManager implements MailService {
 
   // Queue runner
 
+  BinarySemaphore threadWait = new BinarySemaphore();
+
   synchronized void ensureThreadRunning() {
     if (mailThread == null) {
       log.info("Starting thread");
@@ -191,7 +193,7 @@ public class SmtpMailService extends BaseLockssManager implements MailService {
       mailThread.start();
       mailThread.waitRunning();
     } else {
-      mailThread.interrupt();
+      threadWait.give();
     }
   }
 
@@ -220,12 +222,14 @@ public class SmtpMailService extends BaseLockssManager implements MailService {
 	try {
 	  Req req = (Req)queue.peekWait(Deadline.in(10 * Constants.MINUTE));
 	  if (req != null) {
-	    log.debug3("req.nextRetry: " + req.nextRetry);
-	    req.nextRetry.sleep();
-	    if (req.nextRetry.expired()) {
+	    Deadline when = req.nextRetry;
+	    if (!when.expired()) {
+	      threadWait.take(when);
+	    }
+	    if (when.expired()) {
 	      if (!rateLimiter.isEventOk()) {
 		Deadline whenOk = Deadline.in(rateLimiter.timeUntilEventOk());
-		log.debug("Rate limited until " + whenOk);
+		log.info("Rate limited until " + whenOk);
 		whenOk.sleep();
 	      }
 	      rateLimiter.event();
