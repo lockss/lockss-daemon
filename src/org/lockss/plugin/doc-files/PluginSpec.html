@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+   
+  <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+  <title>LOCKSS: Plugin Specification</title>
+   
+</head>
+<body>
+<div align="Center">
+<h1>LOCKSS: Plugin Specification</h1>
+</div>
+<div align="Center">
+<h3>XXX Authors</h3>
+
+<br>
+<h3>Draft $Revision: 1.1 $, $Date: 2003-03-17 21:30:56 $</h3>
+</div>
+<h2>Abstract</h2>
+<p>XXX</p>
+
+<h2>Introduction</h2>
+
+<p>The LOCKSS system handles the content it preserves in chunks called 
+"Archival Units" (or AUs).
+In most cases for electronic journals this will be a volume.
+Each AU is configured with a plugin,
+a set of Java classes that provide all its journal-specific functions,
+and whatever information is needed to specify the volume or other chunk of
+content it is preserving.</p>
+
+<p>The LOCKSS daemon is configured with a list of sources of plugins,
+which may be the local disk or HTTP servers on the network.
+It loads the set of plugins it needs,
+based on the configuration information stored for each AU in its disks.</p>
+
+<h2>Plugin Functions</h2>
+
+<p>A LOCKSS plugin must provide the following functions:</p>
+
+<ol>
+
+<li><i>How to access the publisher.</i>
+It must be able to connect to the publisher's web site
+and fetch URLs for caching or repairing,
+including providing any authentication that may be needed.
+Some sites use IP address authentication,
+others require passwords for basic or site-specific authentication.</li>
+
+<li><i>When to crawl.</i>
+It must know when to expect new content to appear on the journal web site,
+so that the daemon can collect it promptly,
+and can determine the rate at which it should be audited.</li>
+
+<li><i>What crawl parameters to use.</i>
+It must know the correct crawl parameters to use for the publisher's web site.
+These include a set of limitiations negotiated with the publisher to
+reduce the impact of the LOCKSS caches,
+for example periods when crawling is not permitted,
+the maximum hit rate allowed,
+etc.</li>
+
+<li><i>Where to start crawling.</i>
+It must know how to find and interpret the LOCKSS-specific <i>volume index page</i>
+which gives the daemon permission to crawl the site and provides the set of
+initial URLs at which to start the process.</li>
+
+<li><i>Where to stop crawling.</i>
+It must know where the boundaries of the,
+so as to distinguish those intra-AU links that the crawl should follow,
+and those links that point outside the AU,
+and thus should not be followed.</li>
+
+<li><i>How to recognize crawl errors.</i>
+It must know how to distinguish between success and failure when fetching a URL.
+Some journals use HTTP response codes to indicate failure,
+others supply more user-friendly but less easily recognized pages without a response code.</li>
+
+<li><i>What to audit.</i>
+It must know how to distinguish between the permanent parts of the content returned,
+and the evanescent parts such as advertisements and personalizations.
+The audit that detects differences between the same file at different caches must
+eliminate the evanescent parts and compare only the permanent parts.</li>
+
+<li><i>Configure an Archival Unit.</i>
+It must know which configuration information is needed to specify one of the AUs which
+it is capable of preserving.
+The daemon's user interface needs to know this in order to ask the administrator
+the appropriate questions during journal and AU configuration.</li>
+
+</ol>
+
+<h2>Plugin Interfaces</h2>
+
+<p>A plugin consists of a <i>.jar</i> file implementing the following interfaces:
+
+<ol>
+<li>{@link org.lockss.plugin.Plugin}</li>
+<li><a href="org/lockss/plugin/Plugin.html">org.lockss.plugin.Plugin</a></li>
+<li><a href="org/lockss/plugin/ArchivalUnit.html">org.lockss.plugin.ArchivalUnit</a></li>
+<li><a href="org/lockss/daemon/CrawlRule.html">org.lockss.daemon.CrawlRule</a></li>
+<li><a href="org/lockss/plugin/UrlCacher.html">org.lockss.plugin.UrlCacher</a></li>
+
+<li><a href="org/lockss/plugin/CachedUrlSetNode.html">org.lockss.plugin.CachedUrlSetNode</a></li>
+<li><a href="org/lockss/plugin/CachedUrl.html">org.lockss.plugin.CachedUrl</a></li>
+<li><a href="org/lockss/plugin/CachedUrlSet.html">org.lockss.plugin.CachedUrlSet</a></li>
+</ol>
+
+<h3><a href="org/lockss/plugin/Plugin.html">org.lockss.plugin.Plugin</a></h3>
+
+<p>
+This is the interface that allows the daemon to manage the plugin and access the
+resources it is controlling. 
+The important methods it must implement are:</p>
+<ol>
+<li>A no-argument constructor.</li>
+
+<li><i>createAU()</i> which returns a newly-created <i>ArchivalUnit</i>
+based on the configuration information provided.</li>
+<li><i>getAU()</i> which returns an existing <i>ArchivalUnit</i> found from its
+string identifier provided.</li>
+</ol>
+
+<h3><a href="org/lockss/plugin/ArchivalUnit.html">org.lockss.plugin.ArchivalUnit</a></h3>
+
+<p>
+This is the interface shared by every class representing a unit of preserved content.
+It provides methods allowing the daemon to create and access individual pages of
+presered content,
+and methods allowing the daemon to schedule and perform crawls of the site being
+preserved.
+The important methods it must implement are:</p>
+
+<ol>
+<li><i>getAUId()</i> which returns a <i>String</i> identifying the AU.</li>
+<li><i>getAUCachedUrlSet()</i> which returns a <i>CachedUrlSet</i>
+
+representing the entire contents of the AU.</li>
+<li><i>makeCachedUrlSet()</i> which returns a <i>CachedUrlSet</i> based on
+a URL and a range representing that part of the contents of the AU.</li>
+<li><i>getCrawlSpec()</i> which returns a <i>CrawlSpec</i> instructing the
+crawler how to crawl the web site being preserved.</li>
+<li><i>shouldBeCached()</i>,
+a predicate that is true if the URL provided is within the AU's <i>CrawlSpec</i>.</li>
+
+</ol>
+
+<h3><a href="org/lockss/daemon/CrawlRule.html">org.lockss.daemon.CrawlRule</a></h3>
+
+<p>
+This interface allows the plugin to provide suitable rules for matching URLs against
+the <i>CrawlSpec</i> of the AU.
+Only one method must be implemented: </p>
+
+<ol>
+<li><i>match()</i> which returns <i>INCLUDE</i>,
+
+<i>EXCLUDE</i> or <i>IGNORE</i> according to whether the supplied URL
+should be included,
+excluded or ignored by this crawl rule.</li>
+</ol>
+
+<h3><a href="org/lockss/plugin/UrlCacher.html">org.lockss.plugin.UrlCacher</a></h3>
+
+<p>
+This interface allows the daemon to store the content of an individual URL,
+and access metadata about it.
+The imortant methods to be implemented are:
+</p>
+
+<ol>
+
+<li>A static method taking a <i>String</i> URL and returning an object implementing the interface.</li>
+<li><i>cache()</i> copies the content from the web site being preserved into the repository.</li>
+<li><i>getCachedUrl()</i> returns a <i>CachedUrl</i> representing the stored content.</li>
+<li><i>getCachedUrlSet()</i> returns the <i>CachedUrlSet</i> in which the stored content resides.</li>
+
+<li><i>getUrl()</i> returns the URL the stored content represents.</li>
+<li><i>shouldBeCached()</i> is a predicate which is true if the plugin believes this URL should be preserved.</li>
+</ol>
+
+<h3><a href="org/lockss/plugin/CachedUrlSetNode.html">org.lockss.plugin.CachedUrlSetNode</a></h3>
+
+<p>
+This is a superclass interface,
+needed because methods need to return either a single <i>CachedUrl</i> or a <i>CachedUrlSet</i>
+
+representing a list of URLs.
+The methods common to both are: </p>
+
+<ol>
+<li><i>getType()</i> returns either <i>TYPE_CACHED_URL</i> or <i>TYPE_CACHED_URL_SET</i></li>
+<li><i>getUrl()</i> returns the URL of this node.</li>
+<li><i>hasContent()</i> is a predicate which is true if this node has content.</li>
+
+<li><i>isLeaf()</i> is a predicate which is true if this node has no descendant.</li>
+</ol>
+
+<h3><a href="org/lockss/plugin/CachedUrl.html">org.lockss.plugin.CachedUrl</a></h3>
+
+<p>
+This interface inherits from <i>CachedUrlSetNode</i> and implements the methods needed
+to represent a single preserved URL.
+The important methods to be implemented are:
+</p>
+
+<ol>
+
+<li><i>openForHashing()</i> returns an <i>InputStream</i> suitable for hashing the content.</li>
+<li><i>openForReading()</i> returns an <i>InputStream</i> suitable for reading the content.</li>
+</ol>
+<h3><a href="org/lockss/plugin/CachedUrlSet.html">org.lockss.plugin.CachedUrlSet</a></h3>
+
+<p>
+This interface inherits from <i>CachedUrlSetNode</i> and implements the methods needed
+to represent a set of preserved URLs.
+The important methods to be implemented are:
+</p>
+
+<ol>
+<li><i>containsUrl()</i> is a predicate which is true if the supplied URL matches an entry in the set.</li>
+<li><i>flatSetIterator()</i> returns an <i>Iterator</i> of <i>UrlElement</i> objects
+representing the direct descendants of this <i>CachedUrlSet</i>.</li>
+
+<li><i>getContentHasher()</i>
+returns an object that can be used to hash the content of cached
+urls that match the list of <i>CachedUrlSetSpec</i> entries.</li>
+<li><i>getNameHasher()</i> returns an object that can be used to hash the names of cached
+urls that match the list of <i>CachedUrlSetSpec</i> entries.</li>
+<li><i>getSpec()</i> returns the <i>CachedUrlSetSpec</i> describing the set of URLs that
+are members of this <i>CachedUrlSet</i>.
+
+<li><i>makeCachedUrl()</i> Create a <i>CachedUrl</i> object within the set.</li>
+<li><i>makeUrlCacher()</i> Create a UrlCacher</i> object within the set.</li>
+<li><i>treeIterator()</i> Return an <i>Iterator</i> of <i>UrlElement</i> objects
+representing all the nodes of the tree rooted at this <i>CachedUrlSet</i>.</li>
+
+</ol>
+
+<h2>API for plugin implementations</h2>
+
+<p>XXX</p>
+
+<h2>Example plugin</h2>
+
+<p>XXX</p>
+
+</body>
+</html>
