@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.48 2004-02-03 23:12:47 troberts Exp $
+ * $Id: LockssTestCase.java,v 1.49 2004-02-04 18:13:45 tlipkis Exp $
  */
 
 /*
@@ -710,7 +710,7 @@ public class LockssTestCase extends TestCase {
 	sb.append(message);
 	sb.append(" ");
       }
-      sb.append("Expected empty Map, but containted ");
+      sb.append("Expected empty Map, but contained ");
       sb.append(map);
       fail(sb.toString());
     }
