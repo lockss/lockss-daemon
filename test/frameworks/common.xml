@@ -82,6 +82,7 @@
 	<value>edu.wisc.library.plugin.CortlandReview99Plugin</value>
 	<value>edu.wisc.library.plugin.CortlandReview98Plugin</value>
 	<value>edu.wisc.library.plugin.BigBridgePlugin</value>
+	<value>edu.wisc.library.plugin.BigBridgeVol1Plugin</value>
       </list>
     </property>
 
@@ -761,8 +762,6 @@
 	</property>
       </property>
 
-      <property name="biooone">
-
 	<property name="ambio33">
 	  <property name="title" value="AMBIO: A Journal of the Human Environment Volume 33" />
 	  <property name="journalTitle" value="AMBIO: A Journal of the Human Environment" />
@@ -962,7 +961,188 @@
 	  </property>
 	</property>
 
+
+	<property name="africa_today51">
+	  <property name="title" value="Africa Today Volume 51" />
+	  <property name="journalTitle" value="Africa Today" />
+	  <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+	  <property name="param.1">
+	    <property name="key" value="base_url" />
+	    <property name="value" value="http://muse.jhu.edu/" />
+	  </property>
+	  <property name="param.2">
+	    <property name="key" value="journal_dir" />
+	    <property name="value" value="africa_today" />
+	  </property>
+	  <property name="param.3">
+	    <property name="key" value="volume" />
+	    <property name="value" value="51" />
+	  </property>
+	</property>
+
+	<property name="eservice_journal">
+	  <property name="title" value="eService Journal Volume 3" />
+	  <property name="journalTitle" value="eService Journal" />
+	  <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+	  <property name="param.1">
+	    <property name="key" value="base_url" />
+	    <property name="value" value="http://muse.jhu.edu/" />
+	  </property>
+	  <property name="param.2">
+	    <property name="key" value="journal_dir" />
+	    <property name="value" value="eservice_journal" />
+	  </property>
+	  <property name="param.3">
+	    <property name="key" value="volume" />
+	    <property name="value" value="3" />
+	  </property>
+	</property>
+
+	<property name="history_and_memory16">
+	  <property name="title" value="History and Memory Volume 16" />
+	  <property name="journalTitle" value="History and Memory" />
+	  <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+	  <property name="param.1">
+	    <property name="key" value="base_url" />
+	    <property name="value" value="http://muse.jhu.edu/" />
+	  </property>
+	  <property name="param.2">
+	    <property name="key" value="journal_dir" />
+	    <property name="value" value="history_and_memory" />
+	  </property>
+	  <property name="param.3">
+	    <property name="key" value="volume" />
+	    <property name="value" value="16" />
+	  </property>
+	</property>
+
+	<property name="hypatia19">
+	  <property name="title" value="Hypatia Volume 19" />
+	  <property name="journalTitle" value="" />
+	  <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+	  <property name="param.1">
+	    <property name="key" value="base_url" />
+	    <property name="value" value="http://muse.jhu.edu/" />
+	  </property>
+	  <property name="param.2">
+	    <property name="key" value="journal_dir" />
+	    <property name="value" value="hypatia" />
+	  </property>
+	  <property name="param.3">
+	    <property name="key" value="volume" />
+	    <property name="value" value="19" />
+	  </property>
+	</property>
+
+	<property name="ij_of_global_legal_studies">
+	  <property name="title" value="Indiana Journal of Global Legal Studies Volume 11" />
+	  <property name="journalTitle" value="Indiana Journal of Global Legal Studies" />
+	  <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+	  <property name="param.1">
+	    <property name="key" value="base_url" />
+	    <property name="value" value="http://muse.jhu.edu/" />
+	  </property>
+	  <property name="param.2">
+	    <property name="key" value="journal_dir" />
+	    <property name="value" value="indiana_journal_of_global_legal_studies" />
+	  </property>
+	  <property name="param.3">
+	    <property name="key" value="volume" />
+	    <property name="value" value="11" />
+	  </property>
+	</property>
+
+	<property name="israel_studies9">
+	  <property name="title" value="Israel Studies Volume 9" />
+	  <property name="journalTitle" value="Israel Studies" />
+	  <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+	  <property name="param.1">
+	    <property name="key" value="base_url" />
+	    <property name="value" value="http://muse.jhu.edu/" />
+	  </property>
+	  <property name="param.2">
+	    <property name="key" value="journal_dir" />
+	    <property name="value" value="israel_studies" />
+	  </property>
+	  <property name="param.3">
+	    <property name="key" value="volume" />
+	    <property name="value" value="9" />
+	  </property>
+	</property>
+
+	<property name="jewish_social_studies10">
+	  <property name="title" value="Jewish Social Studies Volume 10" />
+	  <property name="journalTitle" value="Jewish Social Studies" />
+	  <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+	  <property name="param.1">
+	    <property name="key" value="base_url" />
+	    <property name="value" value="http://muse.jhu.edu/" />
+	  </property>
+	  <property name="param.2">
+	    <property name="key" value="journal_dir" />
+	    <property name="value" value="jewish_social_studies" />
+	  </property>
+	  <property name="param.3">
+	    <property name="key" value="volume" />
+	    <property name="value" value="10" />
+	  </property>
+	</property>
+
+	<property name="journal_of_folklore_research41">
+	  <property name="title" value="Journal of Folklore Research Volume 41" />
+	  <property name="journalTitle" value="Journal of Folklore Research" />
+	  <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+	  <property name="param.1">
+	    <property name="key" value="base_url" />
+	    <property name="value" value="http://muse.jhu.edu/" />
+	  </property>
+	  <property name="param.2">
+	    <property name="key" value="journal_dir" />
+	    <property name="value" value="journal_of_folklore_research" />
+	  </property>
+	  <property name="param.3">
+	    <property name="key" value="volume" />
+	    <property name="value" value="41" />
+	  </property>
+	</property>
+
+	<property name="journal_of_modern_literature27">
+	  <property name="title" value="Journal of Modern Literature Volume 27" />
+	  <property name="journalTitle" value="Journal of Modern Literature" />
+	  <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+	  <property name="param.1">
+	    <property name="key" value="base_url" />
+	    <property name="value" value="http://muse.jhu.edu/" />
+	  </property>
+	  <property name="param.2">
+	    <property name="key" value="journal_dir" />
+	    <property name="value" value="journal_of_modern_literature" />
+	  </property>
+	  <property name="param.3">
+	    <property name="key" value="volume" />
+	    <property name="value" value="27" />
+	  </property>
+	</property>
+
+	<property name="meridians4">
+	  <property name="title" value="Meridians Volume 4" />
+	  <property name="journalTitle" value="Meridians" />
+	  <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+	  <property name="param.1">
+	    <property name="key" value="base_url" />
+	    <property name="value" value="http://muse.jhu.edu/" />
+	  </property>
+	  <property name="param.2">
+	    <property name="key" value="journal_dir" />
+	    <property name="value" value="meridians" />
+	  </property>
+	  <property name="param.3">
+	    <property name="key" value="volume" />
+	    <property name="value" value="4" />
+	  </property>
+	</property>
       </property>
+
       <property name="teslej8">
 	<property name="title" value="TESL-EJ Volume 8" />
 	<property name="journalTitle" value="TESL-EJ" />
