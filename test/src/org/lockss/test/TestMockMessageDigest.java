@@ -1,4 +1,8 @@
 /*
+ * $Id: TestMockMessageDigest.java,v 1.2 2002-10-31 01:46:44 troberts Exp $
+ */
+
+/*
 
 Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.

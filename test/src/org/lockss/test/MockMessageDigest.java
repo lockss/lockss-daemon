@@ -1,3 +1,6 @@
+/*
+ * $Id: MockMessageDigest.java,v 1.2 2002-10-31 01:46:44 troberts Exp $
+ */
 
 /*
 
