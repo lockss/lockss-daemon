@@ -1,7 +1,7 @@
 # LOCKSS & LCAP tuning parameters
 org.lockss.log.default.level=info
-org.lockss.log.LockssRepository=debug
-org.lockss.log.PollManager.level=debug
+org.lockss.log.LockssRepository=info
+org.lockss.log.PollManager.level=debug2
 org.lockss.log.Poll.level=info
 org.lockss.log.Comm.level=info
 org.lockss.log.NodeManager.level=debug2

@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.55 2003-03-25 01:04:05 troberts Exp $
+* $Id: PollManager.java,v 1.56 2003-03-25 02:14:14 claire Exp $
  */
 
 /*
@@ -48,6 +48,7 @@ import gnu.regexp.*;
 import org.lockss.hasher.HashService;
 import org.lockss.repository.LockssRepository;
 import org.lockss.daemon.status.*;
+import org.lockss.state.*;
 
 public class PollManager  implements LockssManager {
   static final String PARAM_RECENT_EXPIRATION = Configuration.PREFIX +
@@ -268,12 +269,15 @@ public class PollManager  implements LockssManager {
     ret_poll = createPoll(msg, spec);
 
     if(ret_poll != null) {
-      thePolls.put(ret_poll.m_key, new PollManagerEntry(ret_poll));
-      ret_poll.startPoll();
-      theLog.debug2("Started new poll: " + ret_poll.m_key);
+      NodeManager nm = theDaemon.getNodeManager(cus.getArchivalUnit());
+      if(nm.startPoll(cus, ret_poll.getVoteTally())) {
+        thePolls.put(ret_poll.m_key, new PollManagerEntry(ret_poll));
+        ret_poll.startPoll();
+        theLog.debug2("Started new poll: " + ret_poll.m_key);
+        return ret_poll;
+      }
     }
-
-    return ret_poll;
+    return null;
   }
 
 
@@ -356,13 +360,12 @@ public class PollManager  implements LockssManager {
    */
   public void suspendPoll(String key) {
     PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
-    if(pme != null) {
-      pme.setPollSuspended();
-      theLog.debug2("suspended poll " + key);
-    }
-    else {
+    if(pme == null) {
       theLog.debug2("ignoring suspend request for unknown key " + key);
+      return;
     }
+    pme.setPollSuspended();
+    theLog.debug2("suspended poll " + key);
   }
 
 
@@ -373,28 +376,31 @@ public class PollManager  implements LockssManager {
    */
   public void resumePoll(boolean replayNeeded, Object key) {
     PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
-    if(pme != null) {
-      Poll p = pme.poll;
-      long expiration = 0;
-      Deadline d;
-      if(replayNeeded) {
-        theLog.debug2("replaying poll " + (String) key);
-        expiration = TimeBase.nowMs() +
-                     Configuration.getLongParam(PARAM_REPLAY_EXPIRATION,
-                     DEFAULT_REPLAY_EXPIRATION);
-        d = Deadline.in(expiration);
-        p.getVoteTally().startReplay(d);
-      }
-
-      // now we want to make sure we add it to the recent polls.
-      expiration += Configuration.getLongParam(PARAM_RECENT_EXPIRATION,
-          DEFAULT_RECENT_EXPIRATION);
-
-      d = Deadline.in(expiration);
-      TimerQueue.schedule(d, new ExpireRecentCallback(), (String)key);
-      pme.setPollCompleted(d);
-      theLog.debug2("completed suspended poll " + (String)key);
+    if(pme == null) {
+      theLog.debug2("ignoring resume request for unknown key " + key);
+      return;
     }
+    theLog.debug2("resuming poll " + key);
+    Poll p = pme.poll;
+    long expiration = 0;
+    Deadline d;
+    if (replayNeeded) {
+      theLog.debug2("replaying poll " + (String) key);
+      expiration = TimeBase.nowMs() +
+          Configuration.getLongParam(PARAM_REPLAY_EXPIRATION,
+                                     DEFAULT_REPLAY_EXPIRATION);
+      d = Deadline.in(expiration);
+      p.getVoteTally().startReplay(d);
+    }
+
+    // now we want to make sure we add it to the recent polls.
+    expiration += Configuration.getLongParam(PARAM_RECENT_EXPIRATION,
+                                             DEFAULT_RECENT_EXPIRATION);
+
+    d = Deadline.in(expiration);
+    TimerQueue.schedule(d, new ExpireRecentCallback(), (String) key);
+    pme.setPollCompleted(d);
+    theLog.debug2("completed resume poll " + (String) key);
   }
 
   void requestVerifyPoll(PollSpec pollspec, long duration, Vote vote)
@@ -635,6 +641,10 @@ public class PollManager  implements LockssManager {
      */
     public void timerExpired(Object cookie) {
       synchronized(thePolls) {
+        PollManagerEntry pme = (PollManagerEntry)thePolls.get(cookie);
+        if(pme != null  && pme.isPollSuspended()) {
+          return;
+        }
         thePolls.remove(cookie);
       }
     }
@@ -702,11 +712,11 @@ public class PollManager  implements LockssManager {
     }
 
     synchronized void setPollSuspended() {
+      status = SUSPENDED;
       if(deadline != null) {
         deadline.expire();
         deadline = null;
       }
-      status = SUSPENDED;
     }
 
     String getStatusString() {
@@ -773,7 +783,7 @@ public class PollManager  implements LockssManager {
       return rulesL;
     }
 
-    public void populateTable(StatusTable table) 
+    public void populateTable(StatusTable table)
 	throws StatusService.NoSuchTableException {
       String key = table.getKey();
       table.setTitle(getTitle(key));
@@ -907,7 +917,7 @@ public class PollManager  implements LockssManager {
     private static String[] preferredOrder =  { "Agree" };
 
 
-    public List getColumnDescriptors(String key) 
+    public List getColumnDescriptors(String key)
 	throws StatusService.NoSuchTableException {
       ArrayList descrsL= new ArrayList(columnDescriptors.length);
       for(int i=0; i< columnDescriptors.length; i++) {
@@ -982,7 +992,8 @@ public class PollManager  implements LockssManager {
 
       return rowMap;
     }
-    public void populateTable(StatusTable table) 
+
+    public void populateTable(StatusTable table)
 	throws StatusService.NoSuchTableException {
       String key = table.getKey();
       table.setTitle(getTitle(key));
@@ -1002,7 +1013,7 @@ public class PollManager  implements LockssManager {
 	theLog.debug("no table", e);
 	return 0;
       }
-    }					  
+    }
 
     public StatusTable.Reference getReference(Object obj, String tableName) {
       ArchivalUnit au = (ArchivalUnit)obj;
