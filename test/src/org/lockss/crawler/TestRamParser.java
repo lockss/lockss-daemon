@@ -1,5 +1,5 @@
 /*
- * $Id: TestRamParser.java,v 1.2 2004-03-05 00:51:49 troberts Exp $
+ * $Id: TestRamParser.java,v 1.3 2004-03-11 01:19:31 troberts Exp $
  */
 
 /*
@@ -44,7 +44,7 @@ public class TestRamParser extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     MockArchivalUnit mau = new MockArchivalUnit();
-    parser = new RamParser();
+    parser = RamParser.makeBasicRamParser();
     cb = new MyFoundUrlCallback();
   }
 
@@ -86,14 +86,42 @@ public class TestRamParser extends LockssTestCase {
 		 parseSourceForUrls(" \t  http://www.example.com/blah.rm  "));
   }
 
+  //verify that we don't fetch links that start with rtsp:// by default
   public void testBadLink() throws IOException {
     assertEquals(SetUtil.set(),
 		 parseSourceForUrls("rtsp://www.example.com/blah.rm"));
   }
 
-  public void testIgnoresCase() throws IOException {
+  public void testIgnoresCaseInProtocol() throws IOException {
     assertEquals(SetUtil.set("http://www.example.com/blah.rm"),
 		 parseSourceForUrls("HTTP://www.example.com/blah.rm"));
+  }
+
+  public void testIgnoresCaseInHost() throws IOException {
+    assertEquals(SetUtil.set("http://www.EXAMPLE.com/blah.rm"),
+		 parseSourceForUrls("http://www.EXAMPLE.com/blah.rm"));
+  }
+  public void testDoesntIgnoreCaseInPath() throws IOException {
+    assertEquals(SetUtil.set("http://www.example.com/BLAH.rm"),
+		 parseSourceForUrls("http://www.example.com/BLAH.rm"));
+  }
+
+  public void testIgnoresComments() throws IOException {
+    Set expected = SetUtil.set("http://www.example.com/blah.rm",
+			       "http://www.example.com/blah3.rm"); 
+    Set actual = parseSourceForUrls("http://www.example.com/blah.rm\n"+
+				    "#http://www.example.com/blah2.rm\n\n"+
+				    "http://www.example.com/blah3.rm\n");
+    assertEquals(expected, actual);
+  }
+
+  public void testStripsParams() throws IOException {
+    Set expected = SetUtil.set("http://www.example.com/blah.rm",
+			       "http://www.example.com/blah3.rm"); 
+    Set actual =
+      parseSourceForUrls("http://www.example.com/blah.rm?blah=blah\n"+
+			 "http://www.example.com/blah3.rm?blah2=blah2&blah3=asdf\n");
+    assertEquals(expected, actual);
   }
 
   public void testMultipleLinks() throws IOException {
@@ -107,8 +135,9 @@ public class TestRamParser extends LockssTestCase {
   }
 
   public void testTranslateUrls() throws IOException {
-    parser = new RamParser("rtsp://www.example.com/",
-			   "http://www.example.com/media/");
+    parser =
+      RamParser.makeTranslatingRamParser("rtsp://www.example.com/",
+					 "http://www.example.com/media/");
     
     Set expected = SetUtil.set("http://www.example.com/media/blah.rm",
 			       "http://www.example.com/blah2.rm",
@@ -116,6 +145,20 @@ public class TestRamParser extends LockssTestCase {
     Set actual = parseSourceForUrls("rtsp://www.example.com/blah.rm\n"+
 				    "http://www.example.com/blah2.rm\n\n"+
 				    "rtsp://www.example.com/blah3.rm\n");
+    assertEquals(expected, actual);
+  }
+
+  public void testTranslateUrlsHandlesCase() throws IOException {
+    parser =
+      RamParser.makeTranslatingRamParser("rtsp://www.example.com/",
+					 "http://www.example.com/media/");
+    
+    Set expected = SetUtil.set("http://www.example.com/media/blah.rm",
+			       "http://www.example.com/media/blah2.rm",
+			       "http://www.example.com/media/blah3.rm"); 
+    Set actual = parseSourceForUrls("rtsp://www.example.com/blah.rm\n"+
+				    "rtsp://www.EXAMPLE.com/blah2.rm\n\n"+
+				    "RTSP://www.example.com/blah3.rm\n");
     assertEquals(expected, actual);
   }
 

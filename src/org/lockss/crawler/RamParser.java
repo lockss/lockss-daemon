@@ -1,5 +1,5 @@
 /*
- * $Id: RamParser.java,v 1.3 2004-03-06 00:38:34 troberts Exp $
+ * $Id: RamParser.java,v 1.4 2004-03-11 01:19:30 troberts Exp $
  */
 
 /*
@@ -40,15 +40,23 @@ public class RamParser implements ContentParser {
   String source = null;
   String dest = null;
 
+  public static RamParser makeBasicRamParser() {
+    return new RamParser();
+  }
 
-  public RamParser() {
+  public static RamParser makeTranslatingRamParser(String source,
+						   String dest) {
+    return new RamParser(source, dest);
+  }
+
+  private RamParser() {
   }
 
   /**
    * Creates a RamParser which will find rtsp:// urls starting with
    * source and replace that string with dest
    */
-  public RamParser(String source, String dest) {
+  private RamParser(String source, String dest) {
     this.source = source;
     this.dest = dest;
   }
@@ -60,17 +68,29 @@ public class RamParser implements ContentParser {
     } else if (cb == null) {
       throw new IllegalArgumentException("Called with null callback");
     }
-//     reader = new BufferedReader(cu.getReader());
     reader = new BufferedReader(cu.openForReading());
     for (String line = reader.readLine();
 	 line != null;
 	 line = reader.readLine()) {
-      line = line.trim().toLowerCase();
-      if (line.startsWith("http://")) {
-	cb.foundUrl(line);
-      } else if (source != null && dest != null && line.startsWith(source)) {
-	cb.foundUrl(StringUtil.replaceFirst(line, source, dest));
+      line = line.trim();
+      if (StringUtil.startsWithIgnoreCase(line, "http://")) {
+	cb.foundUrl(UrlUtil.stripQuery(line));
+      } else if (source != null
+		 && dest != null
+		 && StringUtil.startsWithIgnoreCase(line, source)) {
+	line = translateString(line, source, dest);
+	cb.foundUrl(UrlUtil.stripQuery(line));
       }
     }
   }
+  
+  //presumes line starts with source (ignoring case)
+  private static String translateString(String line, String source,
+					String dest) {
+    StringBuffer sb = new StringBuffer();
+    sb.append(dest);
+    sb.append(line.substring(source.length()));
+    return sb.toString();
+  }
+
 }
