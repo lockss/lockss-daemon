@@ -1,5 +1,5 @@
 /*
- * $Id: LockssResourceHandler.java,v 1.6 2004-09-01 02:22:47 tlipkis Exp $
+ * $Id: LockssResourceHandler.java,v 1.6.6.1 2004-11-02 00:02:45 smorabito Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Portions of this code are:
 // ===========================================================================
 // Copyright (c) 1996-2002 Mort Bay Consulting Pty. Ltd. All rights reserved.
-// $Id: LockssResourceHandler.java,v 1.6 2004-09-01 02:22:47 tlipkis Exp $
+// $Id: LockssResourceHandler.java,v 1.6.6.1 2004-11-02 00:02:45 smorabito Exp $
 // ---------------------------------------------------------------------------
 
 package org.lockss.jetty;
@@ -45,7 +45,13 @@ import org.mortbay.http.*;
 import org.mortbay.http.handler.*;
 import org.mortbay.util.*;
 import org.lockss.plugin.*;
+import org.lockss.proxy.ProxyManager;
+import org.lockss.config.*;
 
+import com.sun.jimi.core.*;
+import com.sun.jimi.core.encoder.png.*;
+import com.sun.jimi.core.decoder.gif.*;
+import com.sun.jimi.core.raster.*;
 
 /** Extension of ResourceHandler that allows flexibility in finding the
  * Resource.  Mostly copied here because some things in ResourceHandler
@@ -699,8 +705,52 @@ public class LockssResourceHandler extends AbstractHttpHandler {
             writeHeaders(response,resource,resLength);
             
             request.setHandled(true);
-            OutputStream out = response.getOutputStream();
-            data.writeTo(out,0,resLength);
+
+	    // (sethm) Begin content rewrite hack.
+	    //
+	    // Content Rewriting: If the PARAM_REWRITE_GIF_PNG
+	    // config parameter is set, and this is GIF content, use
+	    // JIMI to rewrite as PNG
+
+	    InputStream in = data.getInputStream();
+	    OutputStream out = null;
+	    boolean enableRewrite =
+	      Configuration.getCurrentConfig().getBoolean(ProxyManager.PARAM_REWRITE_GIF_PNG,
+							  ProxyManager.DEFAULT_REWRITE_GIF_PNG);
+	    if (enableRewrite &&
+		"image/gif".equals(response.getContentType()) &&
+		"from-cache".equals(response.getField("X-Lockss"))) {
+	      try {
+		JimiRasterImage img =
+		  Jimi.getRasterImage(in, Jimi.SYNCHRONOUS);
+		// Content length cannot be known before the data is
+		// written.  Remove the Content-Length header.
+		response.removeField("Content-Length");
+		response.setContentType("image/png");
+		out = response.getOutputStream();
+		Jimi.putImage("image/png", img, out);
+		out.flush();
+	      } catch (JimiException ex) {
+		throw new IOException(ex.getMessage());
+	      }
+	    } else {
+	      out = response.getOutputStream();
+	      IO.copy(in, out, resLength);
+	    }
+
+	    if (in != null) {
+	      in.close();
+	    }
+	    if (out != null) {
+	      out.close();
+	    }
+
+	    // End hack.
+	    //
+            // OutputStream out = response.getOutputStream();
+            // data.writeTo(out,0,resLength);
+	    //
+
             return;
         }
             
