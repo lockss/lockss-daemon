@@ -1,5 +1,5 @@
 /*
- * $Id: NewContentCrawler.java,v 1.23.2.1 2004-07-16 23:10:41 dcfok Exp $
+ * $Id: NewContentCrawler.java,v 1.23.2.2 2004-07-19 22:33:02 dcfok Exp $
  */
 
 /*
@@ -444,16 +444,15 @@ public class NewContentCrawler extends CrawlerImpl {
 
   //check if the url's host granted a permission
   private boolean checkHostPermissionRecord(String url){
-  	PermissionRecord urlRecord=null;
+  	PermissionRecord urlRecord = null;
 	try {
 	  urlRecord = (PermissionRecord) permissionMap.get(UrlUtil.getHost(url).toLowerCase());
 	} catch (MalformedURLException e) {
 	  logger.error("The url is malformed :" + url);
-	}
+	} 
 	if (urlRecord == null) {
-	  logger.warning("No permission page record on host of "+ urlRecord.getPermissionUrl());
-	  crawlStatus.setCrawlError("No crawl permission record of host "+  urlRecord.getPermissionUrl() );
-
+	  logger.warning("No permission page record on host of "+ url);
+	  crawlStatus.setCrawlError("No crawl permission record on host of"+  url );
 	  // abort crawl here
 	  return false;
 	}
