@@ -1,5 +1,5 @@
 /*
- * $Id: CatalogueOrderComparator.java,v 1.1 2004-04-27 19:05:22 tlipkis Exp $
+ * $Id: CatalogueOrderComparator.java,v 1.2 2004-04-27 20:10:36 tlipkis Exp $
  */
 
 /*
@@ -39,7 +39,10 @@ import org.lockss.remote.*;
 
 /**
  * Comparator that implements a suitable ordering for titles in a library
- * catalogue.
+ * catalogue.  Punctuation and initial determiners are removed, then a
+ * case-independent comparison is done.  The translated sort keys are
+ * cached, so performance will be enhanced by reusing the same instance of
+ * the comparator.
  */
 
 public class CatalogueOrderComparator implements Comparator {
