@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.18 2003-01-10 23:02:25 claire Exp $
+* $Id: PollManager.java,v 1.19 2003-01-18 01:01:26 claire Exp $
  */
 
 /*
@@ -392,22 +392,21 @@ public class PollManager {
   }
 
 
-  void requestVerifyPoll(LcapMessage msg) throws IOException {
-    String url = new String(msg.getTargetUrl());
-    String regexp = new String(msg.getRegExp());
+  void requestVerifyPoll(String url, String regexp, long duration, Vote vote)
+      throws IOException {
 
     theLog.debug("Calling a verify poll...");
 
     LcapMessage reqmsg = LcapMessage.makeRequestMsg(url,
         regexp,
         new String[0],
-        msg.getVerifier(),
+        vote.getVerifier(),
         makeVerifier(),
         LcapMessage.VERIFY_POLL_REQ,
-        msg.getDuration(),
+        duration,
         theIdMgr.getLocalIdentity());
 
-    LcapIdentity originator = msg.getOriginID();
+    LcapIdentity originator = vote.getIdentity();
     theLog.debug("sending our verification request to " + originator.toString());
     sendMessageTo(reqmsg, Plugin.findArchivalUnit(url), originator);
 

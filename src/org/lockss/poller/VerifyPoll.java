@@ -1,5 +1,5 @@
 /*
-* $Id: VerifyPoll.java,v 1.25 2003-01-09 01:55:38 aalto Exp $
+* $Id: VerifyPoll.java,v 1.26 2003-01-18 01:01:26 claire Exp $
  */
 
 /*
@@ -65,7 +65,7 @@ class VerifyPoll extends Poll {
     log.debug("receiving verify message" + msg.toString());
     int opcode = msg.getOpcode();
     if(opcode == LcapMessage.VERIFY_POLL_REP) {
-      startVote(msg);
+      startVoteCheck(msg);
     }
   }
 
@@ -180,9 +180,9 @@ class VerifyPoll extends Poll {
     m_pollmanager.sendMessageTo(repmsg, Plugin.findArchivalUnit(url), originator);
   }
 
-  private void startVote(LcapMessage msg) {
+  private void startVoteCheck(LcapMessage msg) {
     log.debug("Starting new verify vote:" + m_key);
-    super.startVote();
+    super.startVoteCheck();
     // schedule a hash/vote
     Deadline deadline = Deadline.atRandomBefore(m_deadline);
     log.debug("Waiting until at most " + deadline + " to verify");
@@ -201,9 +201,10 @@ class VerifyPoll extends Poll {
         log.debug("I should verify ");
         LcapMessage msg = (LcapMessage) cookie;
         performHash(msg);
-        stopVote();
+        stopVoteCheck();
       }
     }
   }
 
 }
+

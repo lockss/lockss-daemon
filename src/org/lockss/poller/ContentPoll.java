@@ -1,5 +1,5 @@
 /*
-* $Id: ContentPoll.java,v 1.21 2003-01-09 01:55:38 aalto Exp $
+* $Id: ContentPoll.java,v 1.22 2003-01-18 01:01:26 claire Exp $
  */
 
 /*
@@ -89,7 +89,7 @@ public class ContentPoll extends Poll {
     int opcode = msg.getOpcode();
 
     if(opcode == LcapMessage.CONTENT_POLL_REP) {
-      startVote(msg);
+      startVoteCheck(msg);
     }
   }
 
@@ -113,17 +113,19 @@ public class ContentPoll extends Poll {
    * start the hash required for a vote cast in this poll
    * @param msg the LcapMessage containing the vote we're going to check
    */
-  void startVote(LcapMessage msg) {
-    super.startVote();
+  void startVoteCheck(LcapMessage msg) {
+    super.startVoteCheck();
 
     if(prepareVoteCheck(msg)) {
+      Vote vote = new Vote(msg, false);
+
       long dur = msg.getDuration();
       MessageDigest hasher = getInitedHasher(msg.getChallenge(),
           msg.getVerifier());
 
-     if(!scheduleHash(hasher, Deadline.in(dur), msg, new VoteHashCallback())) {
+     if(!scheduleHash(hasher, Deadline.in(dur), new Vote(msg,false), new VoteHashCallback())) {
         log.info(m_key + " no time to hash vote " + dur + ":" + m_hashTime);
-        stopVote();
+        stopVoteCheck();
       }
     }
   }

@@ -1,5 +1,5 @@
 /*
-* $Id: NamePoll.java,v 1.20 2003-01-09 01:55:38 aalto Exp $
+* $Id: NamePoll.java,v 1.21 2003-01-18 01:01:26 claire Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import org.lockss.daemon.*;
 import org.lockss.hasher.*;
 import org.lockss.protocol.*;
 import org.lockss.util.*;
+import java.util.Arrays;
 
 /**
  * @author Claire Griffin
@@ -45,6 +46,7 @@ import org.lockss.util.*;
  */
 
 public class NamePoll extends Poll {
+
 
   public NamePoll(LcapMessage msg, CachedUrlSet urlSet, PollManager pm) {
     super(msg, urlSet, pm);
@@ -85,7 +87,7 @@ public class NamePoll extends Poll {
     int opcode = msg.getOpcode();
 
     if(opcode == LcapMessage.NAME_POLL_REP) {
-      startVote(msg);
+      startVoteCheck(msg);
     }
   }
 
@@ -109,18 +111,29 @@ public class NamePoll extends Poll {
    * start the hash required for a vote cast in this poll
    * @param msg the LcapMessage containing the vote we're going to check
    */
-  void startVote(LcapMessage msg) {
-    super.startVote();
+  void startVoteCheck(LcapMessage msg) {
+    super.startVoteCheck();
 
     if(prepareVoteCheck(msg)) {
       long dur = msg.getDuration();
       MessageDigest hasher = getInitedHasher(msg.getChallenge(),
           msg.getVerifier());
 
-     if(!scheduleHash(hasher, Deadline.in(dur), msg, new VoteHashCallback())) {
+     if(!scheduleHash(hasher, Deadline.in(dur), new NameVote(msg,false), new VoteHashCallback())) {
         log.info(m_key + " no time to hash vote " + dur + ":" + m_hashTime);
-        stopVote();
+        stopVoteCheck();
       }
+    }
+  }
+
+  class NameVote extends Vote {
+    private String[] knownEntries;
+    private String   RERemainingEntries;
+
+    NameVote(LcapMessage msg, boolean agree) {
+      super(msg, agree);
+      knownEntries = msg.getEntries();
+      RERemainingEntries = msg.getRERemaining();
     }
   }
 

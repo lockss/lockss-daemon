@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessage.java,v 1.15 2003-01-10 23:02:25 claire Exp $
+ * $Id: LcapMessage.java,v 1.16 2003-01-18 01:01:26 claire Exp $
  */
 
 /*
@@ -101,7 +101,8 @@ public class LcapMessage implements Serializable {
   protected byte[]   m_challenge;   // the challenge bytes
   protected byte[]   m_verifier;    // th verifier bytes
   protected byte[]   m_hashed;      // the hash of content
-  protected String[] m_entries;     // the entry list (opt)
+  protected String   m_RERemaining; // the RegExp of the remaining entries (opt)
+  protected String[] m_entries;     // the name poll entry list (opt)
 
   private EncodedProperty m_props;
   private static byte[] signature = {'l','p','m','1'};
@@ -205,18 +206,17 @@ public class LcapMessage implements Serializable {
   }
 
   /**
-   * make a message request
-   * @param targetUrl
-   * @param regExp
-   * @param group
-   * @param ttl
-   * @param challenge
-   * @param verifier
-   * @param opcode
-   * @param timeRemaining
-   * @param localID
-   * @return message
-   * @throws IOException
+   * make a message to request a poll
+   * @param targetUrl the url of the target poll
+   * @param regExp the reg expression for the target poll
+   * @param entries the array of entries found in the name poll
+   * @param challenge the challange bytes
+   * @param verifier the verifier bytes
+   * @param opcode the kind of poll being requested
+   * @param timeRemaining the time remaining for this poll
+   * @param localID the identity of the requestor
+   * @return message the new LcapMessage
+   * @throws IOException if unable to creae message
    */
   static public LcapMessage makeRequestMsg(String targetUrl,
 					   String regExp,
@@ -247,9 +247,9 @@ public class LcapMessage implements Serializable {
    * @param verifier the veerifier bytes
    * @param opcode an opcode for this message
    * @param timeRemaining the time remaining on the poll
-   * @param s the socket
+   * @param localID the identity of the requestor
    * @return a new Message object
-   * @throws IOException
+   * @throws IOException if message construction failed
    */
   static public LcapMessage makeReplyMsg(LcapMessage trigger,
 					 byte[] hashedContent,
@@ -355,6 +355,9 @@ public class LcapMessage implements Serializable {
     if (m_props.getProperty("entries") != null) {
       m_entries = stringToEntries(m_props.getProperty("entries"));
     }
+    if( m_props.getProperty("remaining") != null) {
+      m_RERemaining = m_props.getProperty("remaining");
+    }
     // calculate start and stop times
     long now = TimeBase.nowMs();
     m_startTime = now - elapsed;
@@ -364,6 +367,7 @@ public class LcapMessage implements Serializable {
   /**
    * encode the message from a props table into a stream of bytes
    * @return the encoded message as bytes
+   * @throws IOException if the packet can not be encoded
    */
   public byte[] encodeMsg() throws IOException {
     // make sure the props table is up to date
@@ -388,7 +392,9 @@ public class LcapMessage implements Serializable {
     if (m_entries != null) {
       m_props.setProperty("entries",entriesToString());
     }
-
+    if(m_RERemaining != null) {
+      m_props.put("remaining", m_RERemaining);
+    }
     byte[] prop_bytes = m_props.encode();
     byte[] hash_bytes = computeHash(prop_bytes);
 
@@ -469,6 +475,14 @@ public class LcapMessage implements Serializable {
 
   public void setEntries(String[] entries) {
     m_entries = entries;
+  }
+
+  public String getRERemaining() {
+    return m_RERemaining;
+  }
+
+  public void setRERemaining(String REString) {
+    m_RERemaining = REString;
   }
 
   public byte getHopCount() {

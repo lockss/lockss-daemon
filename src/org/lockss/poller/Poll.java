@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.35 2003-01-15 17:37:50 claire Exp $
+* $Id: Poll.java,v 1.36 2003-01-18 01:01:26 claire Exp $
  */
 
 /*
@@ -196,30 +196,31 @@ public abstract class Poll implements Serializable {
    * check the hash result obtained by the hasher with one stored in the
    * originating message.
    * @param hashResult byte array containing the result of the hasher
-   * @param msg the original Message.
+   * @param vote the Vote to check.
    */
-  void checkVote(byte[] hashResult, LcapMessage msg)  {
-    byte[] hashed = msg.getHashed();
+  void checkVote(byte[] hashResult, Vote vote)  {
+    byte[] hashed = vote.getHash();
     log.debug("Checking "+
               String.valueOf(B64Code.encode(hashResult))+
               " against "+
-              String.valueOf(B64Code.encode(hashed)));
+              vote.getHashString());
 
-    boolean agree = Arrays.equals(hashed, hashResult);
-    m_tally.addVote(new Vote(msg, agree));
-    if(!msg.isLocal()) {
-      randomVerify(msg, agree);
+    boolean agree = vote.setAgreeWithHash(hashResult);
+    m_tally.addVote(vote);
+
+    if(!idMgr.isLocalIdentity(vote.getIdentity())) {
+      randomVerify(vote, agree);
     }
   }
 
   /**
    * randomly verify a vote.  The random percentage is determined by
    * agreement and reputation of the voter.
-   * @param msg the LcapMessage to check
+   * @param vote the Vote to check
    * @param isAgreeVote true if this vote agreed with ours, false otherwise
    */
-  void randomVerify(LcapMessage msg, boolean isAgreeVote) {
-    LcapIdentity id = msg.getOriginID();
+  void randomVerify(Vote vote, boolean isAgreeVote) {
+    LcapIdentity id = vote.getIdentity(); // should this be original ID.
     int max = idMgr.getMaxReputaion();
     int weight = id.getReputation();
     double verify;
@@ -231,7 +232,7 @@ public abstract class Poll implements Serializable {
     }
     try {
       if(ProbabilisticChoice.choose(verify)) {
-        m_pollmanager.requestVerifyPoll(msg);
+        m_pollmanager.requestVerifyPoll(m_url, m_regExp, m_tally.duration, vote);
       }
     }
     catch (IOException ex) {
@@ -324,18 +325,22 @@ public abstract class Poll implements Serializable {
   /**
    * start the hash required for a vote cast in this poll
    */
-  void startVote() {
+  void startVoteCheck() {
     m_pendingVotes++;
   }
 
   /**
    * stop and record a vote cast in this poll
    */
-  void stopVote() {
+  void stopVoteCheck() {
     m_pendingVotes--;
   }
 
 
+  /**
+   * are there too many votes waiting to be tallied
+   * @return true if we have a quorum worth of votes already pending
+   */
   boolean tooManyPending() {
     return m_pendingVotes > m_tally.quorum + 1;
   }
@@ -435,8 +440,8 @@ public abstract class Poll implements Serializable {
 
       if(hash_completed)  {
         byte[] out_hash = hasher.digest();
-        LcapMessage msg = (LcapMessage)cookie;
-        checkVote(out_hash, msg);
+        Vote vote = (Vote)cookie;
+        checkVote(out_hash, vote);
       }
     }
   }
@@ -603,34 +608,34 @@ public abstract class Poll implements Serializable {
       replayIter =  originalVotes.iterator();
       replayDeadline = deadline;
       replayNextVote();
-   }
+    }
 
-   void replayNextVote() {
-     if(replayIter == null) {
-       log.warning("Call to replay a poll vote without call to replay all");
-     }
-     if(isErrorState() || !replayIter.hasNext()) {
-       replayDeadline = null;
-       replayIter = null;
-       if(isErrorState()) {
-         // restore the original votes
-         pollVotes = originalVotes;
-       }
-       originalVotes = null;
-       //NodeManager.updatePollResults(m_urlSet, this);
-     }
-     else {
-       Vote vote = (Vote)replayIter.next();
-       MessageDigest hasher = getInitedHasher(vote.getChallenge(),
-           vote.getVerifier());
+    void replayNextVote() {
+      if(replayIter == null) {
+        log.warning("Call to replay a poll vote without call to replay all");
+      }
+      if(isErrorState() || !replayIter.hasNext()) {
+        replayDeadline = null;
+        replayIter = null;
+        if(isErrorState()) {
+          // restore the original votes
+          pollVotes = originalVotes;
+        }
+        originalVotes = null;
+        //NodeManager.updatePollResults(m_urlSet, this);
+      }
+      else {
+        Vote vote = (Vote)replayIter.next();
+        MessageDigest hasher = getInitedHasher(vote.getChallenge(),
+            vote.getVerifier());
 
-       if(!scheduleHash(hasher, replayDeadline,new Vote(vote),
-                        new ReplayVoteCallback())) {
-         m_pollstate = ERR_SCHEDULE_HASH;
-         log.debug("couldn't schedule hash - stopping replay poll");
-       }
-     }
-   }
+        if(!scheduleHash(hasher, replayDeadline,new Vote(vote),
+                         new ReplayVoteCallback())) {
+          m_pollstate = ERR_SCHEDULE_HASH;
+          log.debug("couldn't schedule hash - stopping replay poll");
+        }
+      }
+    }
 
     boolean isLeadEnough() {
       return (numAgree - numDisagree) > quorum;
@@ -639,6 +644,7 @@ public abstract class Poll implements Serializable {
     boolean haveQuorum() {
       return numAgree + numDisagree >= quorum;
     }
+
 
     void addVote(Vote vote) {
       LcapIdentity id = vote.getIdentity();
