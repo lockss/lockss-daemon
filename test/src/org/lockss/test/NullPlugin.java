@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.62 2004-09-22 02:44:02 tlipkis Exp $
+ * $Id: NullPlugin.java,v 1.63 2004-09-23 03:38:03 tlipkis Exp $
  */
 
 /*
@@ -212,6 +212,9 @@ public class NullPlugin {
     }
 
     public void setForceRefetch(boolean force) {
+    }
+
+    public void setRequestProperty(String key, String value) {
     }
 
     public void setRedirectScheme(RedirectScheme scheme) {

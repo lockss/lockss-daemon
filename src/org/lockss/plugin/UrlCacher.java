@@ -1,5 +1,5 @@
 /*
- * $Id: UrlCacher.java,v 1.15 2004-09-22 02:44:02 tlipkis Exp $
+ * $Id: UrlCacher.java,v 1.16 2004-09-23 03:38:04 tlipkis Exp $
  */
 
 /*
@@ -124,6 +124,9 @@ public interface UrlCacher {
    * @param force if true, fetches the URL unconditionally.
    */
   public void setForceRefetch(boolean force);
+
+  /** Set a request header, overwriting any previous value */
+  public void setRequestProperty(String key, String value);
 
   /** Determines the behavior if a redirect response is received. */
   public void setRedirectScheme(RedirectScheme scheme);

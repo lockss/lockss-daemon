@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.25 2004-09-01 02:27:18 tlipkis Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.26 2004-09-23 03:38:03 tlipkis Exp $
  */
 
 /*
@@ -220,14 +220,14 @@ public class TestBaseUrlCacher extends LockssTestCase {
   // BaseUrlCacher.  Mostly they test its behavior wrt the connection.
   // MockConnectionMockBaseUrlCacher is used to create a mock connection.
 
-  MockLockssUrlConnection makeConn(int respCode, String respMessage,
-				   String redirectTo) {
+  MyMockLockssUrlConnection makeConn(int respCode, String respMessage,
+				     String redirectTo) {
     return makeConn(respCode, respMessage, redirectTo, null);
   }
 
-  MockLockssUrlConnection makeConn(int respCode, String respMessage,
-				   String redirectTo, String inputStream) {
-    MockLockssUrlConnection mconn = new MockLockssUrlConnection();
+  MyMockLockssUrlConnection makeConn(int respCode, String respMessage,
+				     String redirectTo, String inputStream) {
+    MyMockLockssUrlConnection mconn = new MyMockLockssUrlConnection();
     mconn.setResponseCode(respCode);
     mconn.setResponseMessage(respMessage);
     if (redirectTo != null) {
@@ -240,6 +240,39 @@ public class TestBaseUrlCacher extends LockssTestCase {
       mconn.setResponseInputStream(new StringInputStream(inputStream));
     }
     return mconn;
+  }
+
+  public void testNoProxy() throws Exception {
+    MockConnectionMockBaseUrlCacher muc =
+      new MockConnectionMockBaseUrlCacher(mcus, TEST_URL);
+    MyMockLockssUrlConnection mconn = makeConn(200, "", null, "foo");
+    muc.addConnection(mconn);
+    muc.cache();
+    assertEquals(TEST_URL, mconn.getURL());
+    assertNull(mconn.proxyHost);
+  }
+
+  public void testProxy() throws Exception {
+    MockConnectionMockBaseUrlCacher muc =
+      new MockConnectionMockBaseUrlCacher(mcus, TEST_URL);
+    MyMockLockssUrlConnection mconn = makeConn(200, "", null, "foo");
+    muc.addConnection(mconn);
+    muc.setProxy("phost", 126);
+    muc.cache();
+    assertEquals(TEST_URL, mconn.getURL());
+    assertEquals("phost", mconn.proxyHost);
+    assertEquals(126, mconn.proxyPort);
+  }
+
+  public void testSetReqProp() throws Exception {
+    MockConnectionMockBaseUrlCacher muc =
+      new MockConnectionMockBaseUrlCacher(mcus, TEST_URL);
+    MyMockLockssUrlConnection mconn = makeConn(200, "", null, "foo");
+    muc.addConnection(mconn);
+    muc.setRequestProperty("foo-bar", "47");
+    muc.cache();
+    assertEquals(TEST_URL, mconn.getURL());
+    assertEquals("47", mconn.getRequestProperty("foo-bar"));
   }
 
   // Shouldn't generate if-modified-since header because no existing content
@@ -735,6 +768,16 @@ public class TestBaseUrlCacher extends LockssTestCase {
   private class MyMockArchivalUnit extends MockArchivalUnit {
     public void pauseBeforeFetch() {
       pauseBeforeFetchCounter++;
+    }
+  }
+
+  private class MyMockLockssUrlConnection extends MockLockssUrlConnection {
+    String proxyHost = null;
+    int proxyPort = -1;
+
+    public void setProxy(String host, int port) {
+      proxyHost = host;
+      proxyPort = port;
     }
   }
 
