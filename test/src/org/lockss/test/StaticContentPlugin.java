@@ -1,5 +1,5 @@
 /*
- * $Id: StaticContentPlugin.java,v 1.2 2003-04-15 01:24:51 aalto Exp $
+ * $Id: StaticContentPlugin.java,v 1.3 2003-04-16 03:39:23 claire Exp $
  */
 
 /*
@@ -244,7 +244,7 @@ public class StaticContentPlugin extends BasePlugin implements PluginTestable {
     public CachedUrl makeCachedUrl(String url) {
       CachedUrl res = (CachedUrl)cuMap.get(url);;
       log.debug("makeCachedUrl(" + url + ") = " + res);
-      return (CachedUrl)cuMap.get(url);;
+      return (CachedUrl)cuMap.get(url);
     }
 
     public org.lockss.plugin.UrlCacher makeUrlCacher(String url) {

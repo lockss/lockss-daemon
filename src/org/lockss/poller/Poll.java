@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.65 2003-04-16 01:18:14 claire Exp $
+* $Id: Poll.java,v 1.66 2003-04-16 03:39:23 claire Exp $
  */
 
 /*
@@ -210,10 +210,12 @@ public abstract class Poll implements Serializable {
    * only interested in how long we have remaining.
    */
   void scheduleVote() {
-    m_voteTime = Deadline.atRandomBefore(m_deadline);
-    log.debug("Waiting until at most " + m_deadline.toString() + " to vote");
+    long remainingTime = m_deadline.getRemainingTime();
+    long minTime = TimeBase.nowMs() + (remainingTime/2) - (remainingTime/4);
+    long maxTime = TimeBase.nowMs() + (remainingTime/2) + (remainingTime/4);
+    m_voteTime = Deadline.atRandomRange(minTime, maxTime);
+    log.debug("Waiting until " + m_voteTime.toString() + " to vote");
     TimerQueue.schedule(m_voteTime, new VoteTimerCallback(), this);
-    m_pollstate = PS_WAIT_VOTE;
   }
 
 
@@ -261,8 +263,13 @@ public abstract class Poll implements Serializable {
       verify = ((double)weight) / max * m_disagreeVer;
     }
     try {
-     if(ProbabilisticChoice.choose(verify)) {
-        m_pollmanager.requestVerifyPoll(m_pollspec, m_tally.duration, vote);
+      if(ProbabilisticChoice.choose(verify)) {
+        long remainingTime = m_deadline.getRemainingTime();
+        long minTime = TimeBase.nowMs() + (remainingTime/2) - (remainingTime/4);
+        long maxTime = TimeBase.nowMs() + (remainingTime/2) + (remainingTime/4);
+        long duration = Deadline.atRandomRange(minTime, maxTime).getRemainingTime();
+
+        m_pollmanager.requestVerifyPoll(m_pollspec, duration, vote);
         callVerifyPoll = true;
       }
     }
@@ -308,6 +315,7 @@ public abstract class Poll implements Serializable {
     }
     log.debug3("scheduling poll to complete by " + m_deadline);
     TimerQueue.schedule(m_deadline, new PollTimerCallback(), this);
+    scheduleVote();
   }
 
   /**
@@ -480,7 +488,8 @@ public abstract class Poll implements Serializable {
         m_hash  = hasher.digest();
         log.debug("Hash on " + urlset + " complete: "+
                   String.valueOf(B64Code.encode(m_hash)));
-        scheduleVote();
+        m_pollstate = PS_WAIT_VOTE;
+
       }
       else {
         log.debug("Hash failed : " + e.getMessage());

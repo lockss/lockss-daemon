@@ -1,5 +1,5 @@
 /*
-* $Id: VerifyPoll.java,v 1.36 2003-04-16 01:18:14 claire Exp $
+* $Id: VerifyPoll.java,v 1.37 2003-04-16 03:39:23 claire Exp $
  */
 
 /*
@@ -98,41 +98,50 @@ class VerifyPoll extends Poll {
    */
   void startPoll() {
     log.debug("Starting new verify poll:" + m_key);
-    Deadline pt;
+    if(!idMgr.isLocalIdentity(m_caller)) {
+      scheduleVote();
+    }
+    TimerQueue.schedule(m_deadline, new PollTimerCallback(), this);
+ }
 
-    if(idMgr.isLocalIdentity(m_caller)) {
-      pt = Deadline.in(m_deadline.getRemainingTime());
-    }
-    else {
-      pt = Deadline.atRandomBefore(m_deadline);
-    }
-    TimerQueue.schedule(pt, new PollTimerCallback(), this);
+
+ /**
+  * cast our vote in this poll
+  */
+ void voteInPoll() {
+   if(m_pollstate != PS_WAIT_TALLY) {
+     try {
+       // send our reply message
+       sendVerifyReply(m_msg);
+     }
+     catch (IOException ex) {
+       m_pollstate = ERR_IO;
+     }
+   }
+ }
+
+  private void performHash(LcapMessage msg) {
+    LcapIdentity id = idMgr.findIdentity(msg.getOriginAddr());
+    int weight = id.getReputation();
+    byte[] challenge = msg.getChallenge();
+    byte[] hashed = msg.getHashed();
+    MessageDigest hasher = m_pollmanager.getHasher(msg);
+    // check that vote verification hashed in the message should
+    // hash to the challenge, which is the verifier of the poll
+    // thats being verified
+
+    hasher.update(hashed, 0, hashed.length);
+    byte[] HofHashed = hasher.digest();
+    boolean agree = Arrays.equals(challenge, HofHashed);
+    updateReputation();
+    m_tally.addVote(new Vote(msg, agree),
+                    id, idMgr.isLocalIdentity(id));
   }
-
-
-  /**
-   * finish the poll once the deadline has expired
-   */
-  void stopPoll() {
-    // if we didn't call the poll
-    if(m_pollstate != PS_WAIT_TALLY) {
-      try {
-        // send our reply message
-        replyVerify(m_msg);
-      }
-      catch (IOException ex) {
-        m_pollstate = ERR_IO;
-      }
-    }
-    // this will call tally
-    super.stopPoll();
-  }
-
 
   /**
    * tally the poll results
    */
-  protected void tally()  {
+  private void updateReputation()  {
     log.info(m_msg.toString() + " tally " + toString());
     LcapIdentity id = m_caller;
 
@@ -150,26 +159,7 @@ class VerifyPoll extends Poll {
 
   }
 
-
-  private void performHash(LcapMessage msg) {
-    LcapIdentity id = idMgr.findIdentity(msg.getOriginAddr());
-    int weight = id.getReputation();
-    byte[] challenge = msg.getChallenge();
-    byte[] hashed = msg.getHashed();
-    MessageDigest hasher = m_pollmanager.getHasher(msg);
-    // check that vote verification hashed in the message should
-    // hash to the challenge, which is the verifier of the poll
-    // thats being verified
-
-    hasher.update(hashed, 0, hashed.length);
-    byte[] HofHashed = hasher.digest();
-    boolean agree = Arrays.equals(challenge, HofHashed);
-    m_tally.addVote(new Vote(msg, agree),
-                    id, idMgr.isLocalIdentity(id));
-  }
-
-
-  private void replyVerify(LcapMessage msg) throws IOException  {
+  private void sendVerifyReply(LcapMessage msg) throws IOException  {
     String url = new String(msg.getTargetUrl());
     ArchivalUnit au;
     byte[] secret = m_pollmanager.getSecret(msg.getChallenge());
