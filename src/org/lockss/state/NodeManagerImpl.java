@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.78 2003-04-01 00:57:17 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.79 2003-04-01 01:02:57 aalto Exp $
  */
 
 /*
@@ -154,7 +154,7 @@ public class NodeManagerImpl implements NodeManager {
     PollState pollState = new PollState(state.getType(), spec.getLwrBound(),
                                         spec.getUprBound(),
                                         PollState.RUNNING, state.getStartTime(),
-                                        null);
+                                        Deadline.in(state.getDuration()));
     ((NodeStateImpl)nodeState).addPollState(pollState);
   }
 
