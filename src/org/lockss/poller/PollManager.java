@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.47 2003-03-15 07:47:13 claire Exp $
+* $Id: PollManager.java,v 1.48 2003-03-18 01:02:47 tal Exp $
  */
 
 /*
@@ -75,6 +75,9 @@ public class PollManager  implements LockssManager {
   static final long DEFAULT_REPLAY_EXPIRATION = DEFAULT_RECENT_EXPIRATION/2;
   static final long DEFAULT_VERIFIER_EXPIRATION = Constants.DAY;
 
+  public static final String MANAGER_STATUS_TABLE_NAME = "PollManagerTable";
+  public static final String POLL_STATUS_TABLE_NAME = "PollTable";
+
   private static PollManager theManager = null;
   private static Logger theLog=Logger.getLogger("PollManager");
 
@@ -115,9 +118,9 @@ public class PollManager  implements LockssManager {
                                    new CommMessageHandler());
     // register our status
     StatusService statusServ = theDaemon.getStatusService();
-    statusServ.registerStatusAccessor(ManagerStatus.TABLE_NAME,
+    statusServ.registerStatusAccessor(MANAGER_STATUS_TABLE_NAME,
                                       new ManagerStatus());
-    statusServ.registerStatusAccessor(PollStatus.TABLE_NAME,
+    statusServ.registerStatusAccessor(POLL_STATUS_TABLE_NAME,
                                       new PollStatus());
   }
 
@@ -129,8 +132,8 @@ public class PollManager  implements LockssManager {
     // TODO: checkpoint here.
     // unregister our status
     StatusService statusServ = theDaemon.getStatusService();
-    statusServ.unregisterStatusAccessor(ManagerStatus.TABLE_NAME);
-    statusServ.unregisterStatusAccessor(PollStatus.TABLE_NAME);
+    statusServ.unregisterStatusAccessor(MANAGER_STATUS_TABLE_NAME);
+    statusServ.unregisterStatusAccessor(POLL_STATUS_TABLE_NAME);
     theManager = null;
   }
 
@@ -714,7 +717,7 @@ public class PollManager  implements LockssManager {
   }
 
   static class ManagerStatus implements StatusAccessor {
-    static final String TABLE_NAME = "PollManagerTable";
+    static final String TABLE_NAME = MANAGER_STATUS_TABLE_NAME;
 
     static final int STRINGTYPE = ColumnDescriptor.TYPE_STRING;
     private static String[] allowedKeys = {
@@ -877,7 +880,7 @@ public class PollManager  implements LockssManager {
   }
 
   static class PollStatus implements StatusAccessor {
-    static final String TABLE_NAME = "PollTable";
+    static final String TABLE_NAME = POLL_STATUS_TABLE_NAME;
 
     static final int IPTYPE = ColumnDescriptor.TYPE_IP_ADDRESS;
     static final int INTTYPE = ColumnDescriptor.TYPE_INT;
