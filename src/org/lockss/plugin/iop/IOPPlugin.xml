@@ -48,7 +48,7 @@
 <string xsi:type="java:java.lang.String">1,"%sEJ/volume/-lockss=1/%s/%d", base_url2, journal_id, volume</string>
 <string xsi:type="java:java.lang.String">2,".*/(help|login)/.*"</string>
 <string xsi:type="java:java.lang.String">1,"%sEJ/(abstract|refs|article|mmedia|toc)/%s/%d/.*", base_url, journal_id, volume</string>
-<string xsi:type="java:java.lang.String">1,"%slinks/.*\.pdf", base_url2</string>
+<string xsi:type="java:java.lang.String">1,"%slinks/.*", base_url2</string>
 </ElementValue>
 </MapElement>
 <MapElement>
@@ -60,7 +60,7 @@
 </MapElement>
 <MapElement>
 <ElementKey>au_def_pause_time</ElementKey>
-<ElementValue xsi:type="java:java.lang.Long" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">12000</ElementValue>
+<ElementValue xsi:type="java:java.lang.Long" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">18000</ElementValue>
 </MapElement>
 <MapElement>
 <ElementKey>text/html_filter</ElementKey>
