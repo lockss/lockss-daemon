@@ -89,6 +89,17 @@ public class Logger {
     targets.addElement(target);
   }
 
+  
+  /**
+   * Compares the two severity strings, and tells if <b>level</b> is greater
+   * or equal to <b>threshold</b>
+   *
+   * @param level string representing a severity that we want to check 
+   * against <b>threshold</b>
+   * @param threshold severity string which <b>level</b> is compared to
+   * @returns <b>true</b> if <b>level's</b> severity is above <b>threshold's</b>
+   * <b>false</b> otherwise
+   */
   public static boolean isLevelAboveThreshold(String level, String threshold){
     return (getLevel(level) <= getLevel(threshold));
   }
@@ -161,6 +172,8 @@ public class Logger {
 
   /**
    * Loads the global display level from system properties.  
+   * This is public so that other classes can refresh the logging level
+   * XXX think about this
    */
   public static void loadProps() {
     globalDisplayLevel = System.getProperty(GLOBAL_OUTPUT_LEVEL_PROP,
@@ -202,6 +215,15 @@ public class Logger {
     }
   }
 
+  /**
+   * Return a new logger object
+   *
+   * @param callerId string identifying the object which is going to 
+   * use this logger
+   * @return a new logger object, which a log level equal to the value in the
+   * system property org.lockss.log.level.<callerId> or the default log level 
+   * if that isn't specified.
+   */
   public static Logger getLogger(String callerId){
     if (callerId == null){
       return null;
@@ -209,9 +231,9 @@ public class Logger {
     String logLevel = 
       System.getProperty(CLASS_LOG_LEVEL_PROP_STUB+callerId,
 			 globalDisplayLevel);
-			 //			 DEFAULT_OUTPUT_LEVEL);
     return new Logger(callerId, logLevel);
   }
+
   //instance methods
   private Logger(String callerId, String logLevel){
     this.callerId = callerId;
