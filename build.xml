@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.134 2005-03-15 07:43:47 tlipkis Exp $
+ $Id: build.xml,v 1.135 2005-03-19 09:17:42 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -463,6 +463,7 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
     <delete dir="${classes}" quiet="true"/>
     <delete dir="${test.classes}" quiet="true"/>
     <delete dir="${plugins.classes}" quiet="true"/>
+    <delete dir="${plugins.test.classes}" quiet="true"/>
     <delete dir="${ant.classes}" quiet="true"/>
     <delete dir="${depend.cache}" quiet="true"/>
     <delete dir="${test.results}" quiet="true"/>
