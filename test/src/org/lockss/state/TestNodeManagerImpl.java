@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.69 2003-04-17 02:16:57 troberts Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.70 2003-04-17 05:29:20 aalto Exp $
  */
 
 /*
@@ -407,8 +407,8 @@ public class TestNodeManagerImpl
     assertEquals(MockCrawlManager.SCHEDULED,
                  ( (MockCrawlManager) theDaemon.getCrawlManager()).getUrlStatus(
         repairUrl));
-    assertEquals(MockCrawlManager.SCHEDULED,
-                 ( (MockCrawlManager) theDaemon.getCrawlManager()).getUrlStatus(
+    // only one repair per poll
+    assertNull(( (MockCrawlManager) theDaemon.getCrawlManager()).getUrlStatus(
         repairUrl2));
     assertTrue(repoNode.isInactive());
   }

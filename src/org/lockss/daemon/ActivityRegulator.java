@@ -1,5 +1,5 @@
 /*
- * $Id: ActivityRegulator.java,v 1.8 2003-04-17 00:55:51 troberts Exp $
+ * $Id: ActivityRegulator.java,v 1.9 2003-04-17 05:29:20 aalto Exp $
  */
 
 /*
@@ -326,14 +326,17 @@ public class ActivityRegulator extends BaseLockssManager {
       case STANDARD_CONTENT_POLL:
       case STANDARD_NAME_POLL:
         if (relation==RELATION_SAME) {
-          // only one action on a CUS at a time unless it's a name poll
+          // only one action on a CUS at a time unless it's a name poll or
+          // a repair crawl
           return ((cusActivity==STANDARD_CONTENT_POLL) &&
                   ((newActivity==STANDARD_NAME_POLL) ||
                    (newActivity==REPAIR_CRAWL)));
         } else if (relation==RELATION_PARENT) {
-          // if this CUS is a parent, allow content polls on sub-nodes
+          // if this CUS is a parent, allow content polls and repair crawls on
+          // sub-nodes
           return ((cusActivity==STANDARD_NAME_POLL) &&
-                  (newActivity==STANDARD_CONTENT_POLL));
+                  ((newActivity==STANDARD_CONTENT_POLL) ||
+                   (newActivity==REPAIR_CRAWL)));
         } else {
           // if this CUS is a child, only crawls allowed
           return ((newActivity==BACKGROUND_CRAWL) ||

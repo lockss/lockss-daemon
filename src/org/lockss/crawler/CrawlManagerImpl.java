@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.23 2003-04-17 00:55:51 troberts Exp $
+ * $Id: CrawlManagerImpl.java,v 1.24 2003-04-17 05:29:20 aalto Exp $
  */
 
 /*
@@ -237,14 +237,9 @@ public class CrawlManagerImpl
     public void run() {
       crawler.doCrawl(deadline);
       activeCrawls.remove(au);
-      if (callbacks != null) {
-        Iterator it = callbacks.iterator();
-        while (it.hasNext()) {
-          CrawlManager.Callback cb = (CrawlManager.Callback) it.next();
-          cb.signalCrawlAttemptCompleted(true, cookie);
-        }
-      }
+
       // if followLinks is true, assume it's a new content crawl
+      // free activity regulator so polls can resume
       if (followLinks) {
         regulator.auActivityFinished(ActivityRegulator.NEW_CONTENT_CRAWL, au);
       } else {
@@ -253,6 +248,14 @@ public class CrawlManagerImpl
         regulator.cusActivityFinished(ActivityRegulator.REPAIR_CRAWL,
                                       au.makeCachedUrlSet(
             new SingleNodeCachedUrlSetSpec(url)));
+      }
+
+      if (callbacks != null) {
+        Iterator it = callbacks.iterator();
+        while (it.hasNext()) {
+          CrawlManager.Callback cb = (CrawlManager.Callback) it.next();
+          cb.signalCrawlAttemptCompleted(true, cookie);
+        }
       }
     }
     public Crawler getCrawler() {

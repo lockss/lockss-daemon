@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.104 2003-04-17 00:51:17 claire Exp $
+ * $Id: NodeManagerImpl.java,v 1.105 2003-04-17 05:29:20 aalto Exp $
  */
 
 /*
@@ -417,8 +417,10 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
       Iterator masterIt = results.getCorrectEntries();
       Iterator localIt = results.getLocalEntries();
       Set localSet = createUrlSetFromCusIterator(localIt);
+      System.out.println("local size: "+localSet.size());
       ArchivalUnit au = nodeState.getCachedUrlSet().getArchivalUnit();
       // iterate through master list
+      boolean repairMarked = false;
       while (masterIt.hasNext()) {
         String url = (String) masterIt.next();
         // compare against my list
@@ -426,12 +428,14 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
           // removing from the set to leave only files for deletion
           localSet.remove(url);
         }
-        else {
+        else if (!repairMarked) {
           // if not found locally, fetch
           logger.debug2("marking missing node for repair: " + url);
           CachedUrlSet newCus = au.makeCachedUrlSet(
               new RangeCachedUrlSetSpec(baseUrl + url));
           markNodeForRepair(newCus, results);
+          // only try one repair per poll
+          repairMarked = true;
         }
       }
       localIt = localSet.iterator();
