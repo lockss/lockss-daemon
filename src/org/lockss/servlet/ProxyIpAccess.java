@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyIpAccess.java,v 1.5 2004-09-16 21:51:56 tlipkis Exp $
+ * $Id: ProxyIpAccess.java,v 1.6 2004-09-16 21:54:23 tlipkis Exp $
  */
 
 /*
@@ -62,8 +62,9 @@ public class ProxyIpAccess extends IpAccessControl {
   private int auditPort;
   
   protected void resetLocals() {
-     formAuditEnable = false;
-     formAuditPort = null;
+    super.resetLocals();
+    formAuditEnable = false;
+    formAuditPort = null;
   }
 
   protected String getExplanation() {
