@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.1 2002-07-17 09:02:22 tal Exp $
+ * $Id: ProxyHandler.java,v 1.2 2002-08-02 19:33:56 tal Exp $
  */
 
 /*
@@ -332,17 +332,19 @@ public class ProxyHandler extends NullHandler {
       long lastModified = getCuLastModified(cu);
       long date;
       
-      if ((date = msg.getDateField(HttpFields.__IfUnmodifiedSince)) > 0) {
-	if (lastModified > date) {
-	  response.sendError(response.__412_Precondition_Failed);
-	  return false;
+      if (lastModified != -1) {
+	if ((date = msg.getDateField(HttpFields.__IfUnmodifiedSince)) > 0) {
+	  if (lastModified > date) {
+	    response.sendError(response.__412_Precondition_Failed);
+	    return false;
+	  }
 	}
-      }
             
-      if ((date = msg.getDateField(HttpFields.__IfModifiedSince)) > 0) {
-	if (lastModified <= date) {
-	  response.sendError(response.__304_Not_Modified);
-	  return false;
+	if ((date = msg.getDateField(HttpFields.__IfModifiedSince)) > 0) {
+	  if (lastModified <= date) {
+	    response.sendError(response.__304_Not_Modified);
+	    return false;
+	  }
 	}
       }
     }
@@ -514,15 +516,15 @@ public class ProxyHandler extends NullHandler {
 
   static long getCuLastModified(CachedUrl cu) {
     Properties props = cu.getProperties();
-    return Long.parseLong(props.getProperty(HttpFields.__LastModified, "0"));
+    return Long.parseLong(props.getProperty(HttpFields.__LastModified, "-1"));
   }
 
   static long getCuLength(CachedUrl cu) {
     Properties props = cu.getProperties();
-    return Long.parseLong(props.getProperty(HttpFields.__ContentLength, "0"));
+    return Long.parseLong(props.getProperty(HttpFields.__ContentLength, "-1"));
   }
 
-  static String getCuConetntType(CachedUrl cu) {
+  static String getCuContentType(CachedUrl cu) {
     Properties props = cu.getProperties();
     return props.getProperty(HttpFields.__ContentType, "text/plain");
   }
@@ -553,7 +555,7 @@ public class ProxyHandler extends NullHandler {
     /* ------------------------------------------------------------ */
     public CachedUrlFile(CachedUrl cu) {
       this.cu = cu;
-      encoding = ProxyHandler.getCuConetntType(cu);
+      encoding = ProxyHandler.getCuContentType(cu);
       length = getCuLength(cu);
     }
 
