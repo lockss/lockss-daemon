@@ -1,5 +1,5 @@
 /*
- * $Id: OaiCrawlSpec.java,v 1.1 2004-10-20 18:41:21 dcfok Exp $
+ * $Id: OaiCrawlSpec.java,v 1.2 2004-12-04 01:09:24 dcfok Exp $
  */
 
 /*
@@ -55,8 +55,21 @@ public class OaiCrawlSpec extends BaseCrawlSpec {
 	 ListUtil.list("http://171.66.236.27:8181/html/permission.html"),
 	 Collections.EMPTY_LIST,
  	 rule,
- 	 false);
+ 	 true);
   }
+
+  public OaiCrawlSpec(String oaiRequestHandlerUrl, CrawlRule rule, List permissionList, boolean follow) {
+    this(new OaiRequestData(oaiRequestHandlerUrl,
+			    "http://purl.org/dc/elements/1.1/",
+			    "identifier",
+			    "",
+			    "oai_dc"), 
+	 permissionList,
+	 Collections.EMPTY_LIST,
+ 	 rule,
+ 	 follow);
+  }
+
   //----------------------------------------------------
 		      
   /**
@@ -109,5 +122,3 @@ public class OaiCrawlSpec extends BaseCrawlSpec {
 //   }
 
 }
-
-

@@ -1,5 +1,5 @@
 /*
- * $Id: TestFollowLinkCrawler.java,v 1.1 2004-11-11 01:32:07 dcfok Exp $
+ * $Id: TestFollowLinkCrawler.java,v 1.2 2004-12-04 01:09:23 dcfok Exp $
  */
 
 /*
@@ -138,6 +138,16 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     assertEquals(27, mmuc.proxyPort);
   }
 
+  public void testReturnsTrueWhenCrawlSuccessful() {
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    String url1="http://www.example.com/blah.html";
+    mau.addUrl(startUrl, false, true);
+    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(SetUtil.set(url1));
+    mau.addUrl(url1, false, true);
+
+    assertTrue(crawler.doCrawl0());
+   }
+
   //Fetch startUrl, parser will return a single url that already exists
   //we should only cache startUrl
   public void testDoesNotCacheExistingFile() {
@@ -178,16 +188,6 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 
     assertFalse(crawler.doCrawl0());
   }
-
-  public void testReturnsTrueWhenCrawlSuccessful() {
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
-    String url1="http://www.example.com/blah.html";
-    mau.addUrl(startUrl, false, true);
-    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(SetUtil.set(url1));
-    mau.addUrl(url1, false, true);
-
-    assertTrue(crawler.doCrawl0());
-   }
 
   public void testReturnsTrueWhenNonFailingUnretryableExceptionThrown() {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();

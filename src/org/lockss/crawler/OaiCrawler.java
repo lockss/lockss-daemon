@@ -1,5 +1,5 @@
 /*
- * $Id: OaiCrawler.java,v 1.1 2004-10-20 18:51:10 dcfok Exp $
+ * $Id: OaiCrawler.java,v 1.2 2004-12-04 01:09:24 dcfok Exp $
  */
 
 /*
@@ -54,12 +54,6 @@ import org.apache.xpath.objects.XObject;
 import java.text.SimpleDateFormat;
 
 public class OaiCrawler extends FollowLinkCrawler {
-
-//   public static final String PARAM_FOLLOW_LINK =
-//     Configuration.PREFIX + "CrawlerImpl.oai_crawl_follow_link";
-//   public static final boolean DEFAULT_FOLLOW_LINK = true;  //XXXOAI
-
-//  protected static boolean followLink;
 
   private OaiCrawlSpec spec;
 
@@ -168,9 +162,13 @@ public class OaiCrawler extends FollowLinkCrawler {
 	// xpath experssion that parse through the doc and extract all the links in <dc:identifier> 
 	// XXX we can let the publisher design the path/metadataFormat in the future version
 	String xpath = "//*[namespace-uri()='"+ oaiRequestData.getMetadataNamespaceUrl() + "' and local-name()='"+ oaiRequestData.getUrlContainerTagName() +"']";
-
+	
+	logger.debug3("xpath to get the Urls = " + xpath);
+	
 	// Get the matching elements
-        NodeList nodeList = listRecords.getNodeList(xpath);
+        
+	NodeList nodeList = listRecords.getNodeList(xpath);
+
 	logger.debug3("nodeList length = " + nodeList.getLength());
 
 	// Process the elements in the nodelist
@@ -180,6 +178,8 @@ public class OaiCrawler extends FollowLinkCrawler {
 	  if (node != null) {
 	    XObject xObject = XPathAPI.eval(node, "string()");
 	    String str = xObject.str();
+	    //XXX need to do some testing of the validity of the Url here.
+
 	    updatedUrls.add(str);
 	    //logger.debug3("node (" + i + ") value = " + str);
 	  }
@@ -217,58 +217,16 @@ public class OaiCrawler extends FollowLinkCrawler {
     return updatedUrls;
   }
 
-//   /**
-//    * getting the namespace's url of the metadata format
-//    * To Do:
-//    * adding code in OaiCrawlSpec and plugin class to get the url from plugin writer
-//    */
-//   private String getNamespaceUrl(){
-//     String ns = spec.getMetadataNamespaceUrl();
-//     if (ns==null) {
-//       // default namespace
-//       ns = "http://purl.org/dc/elements/1.1/";
-//     }
-//     return ns;
-//   }
-
-//   /**
-//    * getting the XML tag name whose content is the url of the page we want to crawl
-//    * To Do:
-//    * adding code in the OaiCrawlSpec and plugin class to get tag name from plugin writer
-//    */
-//   private String getTagName(){
-//     String tagName = spec.getUrlContainerTagName();
-//     if (tagName == null) {
-//       // default tagName
-//       tagName = "identifier";
-//     }
-//     return tagName;
-//   }
-
-//   /**
-//    * getting the Oai request handler url from publisher/repository
-//    * To Do:
-//    * adding code in the OaiCrawlSpec and plugin class to get this Oai request handler url
-//    */
-//   private String getOaiHandlerUrl(){
-//     //testing purposes
-//     //String oaiHandlerUrl = "http://www.biomedcentral.com/oai/2.0/";
-
-//     String oaiHandlerUrl = (String) spec.getStartingUrls().get(0);
-//     return oaiHandlerUrl;
-//   }
-
   /**
    * getting the last crawl time from AuState of the current AU
    * 
    * //XXX noted: OAI protocol just enforce day granularity, we still need
    * to check if-modified-since 
    */  
-  private String getFromTime(){
+  protected String getFromTime(){
     Date lastCrawlDate = new Date(aus.getLastCrawlTime());
-    logger.debug3("from=" + lastCrawlDate.toString());
     String lastCrawlDateString = iso8601DateFormatter.format(lastCrawlDate);
-    
+    logger.debug3("from=" + lastCrawlDateString);
     //String lastCrawlDateString = "2004-09-08";
     return lastCrawlDateString;
   }
@@ -280,44 +238,14 @@ public class OaiCrawler extends FollowLinkCrawler {
    * //XXX is this the policy we want ? 
    * Now it will return the time when this method is called
    */
-  private String getUntilTime(){
+  protected String getUntilTime(){
     Date currentDate = new Date();
-    logger.debug3("until="+currentDate.toString());
     String currentDateString = iso8601DateFormatter.format(currentDate);
-    
+    logger.debug3("until="+currentDateString);
     //String currentDateString = "2004-09-14";
     return currentDateString;
   }
 
-//   /**
-//    * getting the AU name from AU/plugin class
-//    * To Do:
-//    * adding code in AU/plugin to return the AU name set by the plugin writer 
-//    *
-//    * //XXX do we want to use SetSpec to store AU name ? 
-//    * SetSpec is implemented in OAI protocol for selective harvesting.
-//    */
-//   private String getSetSpec(){
-//     String auSetSpec = spec.getAuSetSpec();
-//     return auSetSpec;
-//   }
-
-//   /**
-//    * getting the metadata format/prefix from plugin/AU 
-//    * default as "oai_dc"
-//    * 
-//    * //XXX now it is assumed publisher/repository will have "oai_dc" as the metadata format
-//    * for future, we can let the publisher to specify its own metadataPrefix
-//    * provided that they also supply an namespace url and a tag name
-//    */
-//   private String getMetadataPrefix(){
-//     String metadataPrefix = spec.getMetadataPrefix();
-//     if (metadataPrefix == null) {
-//       metadataPrefix = "oai_dc";
-//     }
-//     return metadataPrefix;
-//   }
-  
   protected boolean shouldFollowLink(){
     return spec.getFollowLinkFlag();
   }
