@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.32 2003-04-03 11:30:27 tal Exp $
+ * $Id: Configuration.java,v 1.33 2003-04-04 08:38:38 tal Exp $
  */
 
 /*
@@ -117,7 +117,6 @@ public abstract class Configuration {
       log.warning("attempt to install null Configuration");
     }
     currentConfig = newConfig;
-    haveConfig.fill();
   }
 
   static void runCallback(Callback cb,
@@ -202,6 +201,7 @@ public abstract class Configuration {
       newConfig.logConfig();
     }
     runCallbacks(newConfig, oldConfig);
+    haveConfig.fill();
     return true;
   }
 
