@@ -1,5 +1,5 @@
 /*
- * $Id: TestTaskRunner.java,v 1.6 2004-07-21 07:05:36 tlipkis Exp $
+ * $Id: TestTaskRunner.java,v 1.7 2004-09-01 18:01:48 tlipkis Exp $
  */
 
 /*
@@ -61,6 +61,7 @@ public class TestTaskRunner extends LockssTestCase {
     removedTasks = new ArrayList();
     fact = new SchedFact(null);
     tr = new MockTaskRunner(fact);
+    tr.init();
   }
 
   public void tearDown() throws Exception {
@@ -138,15 +139,103 @@ public class TestTaskRunner extends LockssTestCase {
   public void testAddToScheduleOk() {
     StepTask t1 = task(100, 200, 50);
     StepTask t2 = task(100, 200, 100);
-    Schedule sched = sched(ListUtil.list(t1));
+    Schedule sched = sched(ListUtil.list(t1, t2));
     fact.setResult(sched);
     assertTrue(tr.addToSchedule(t1));
-    assertIsomorphic(ListUtil.list(t1), fact.tasks);
+    assertIsomorphic(ListUtil.list(t1), fact.scheduler.tasks);
+    fact.setResult(sched);
     assertTrue(tr.addToSchedule(t2));
-    assertEquals(SetUtil.set(t1, t2), SetUtil.theSet(fact.tasks));
+    assertEquals(SetUtil.set(t1, t2), SetUtil.theSet(fact.scheduler.tasks));
     assertEquals(sched, tr.getCurrentSchedule());
     assertEquals(SetUtil.set(t1, t2), SetUtil.theSet(tr.getAcceptedTasks()));
   }
+
+  // Now with task dropping on
+
+  // only one try, because no tasks to drop
+  public void testAddToScheduleFailNothingToDrop() {
+    ConfigurationUtil.setFromArgs(TaskRunner.PARAM_DROP_TASK_MAX, "2");
+    fact.setResult(null);
+    StepTask t1 = task(100, 200, 50);
+    assertFalse(tr.addToSchedule(t1));
+    assertEmpty(tr.getAcceptedTasks());
+    assertEquals(1, fact.createArgs.size());
+  }
+
+  // one task to drop, two failed schedule tries
+  public void testAddToScheduleFailNoCleanup() {
+    ConfigurationUtil.setFromArgs(TaskRunner.PARAM_DROP_TASK_MAX, "10");
+    StepTask t1 = task(100, 200, 50);
+    StepTask t2 = task(100, 200, 100);
+    Schedule sched = sched(ListUtil.list(t1));
+    fact.setResult(sched);
+    assertTrue(tr.addToSchedule(t1));
+    assertIsomorphic(ListUtil.list(t1), fact.scheduler.tasks);
+    assertEquals(SetUtil.set(t1), SetUtil.theSet(tr.getAcceptedTasks()));
+
+    assertFalse(tr.addToSchedule(t2));
+    assertEquals(ListUtil.list(ListUtil.list(t1),
+			       ListUtil.list(t1, t2),
+			       ListUtil.list(t1)),
+		 fact.createArgs);
+    assertEquals(SetUtil.set(t1), SetUtil.theSet(fact.scheduler.tasks));
+    assertEquals(sched, tr.getCurrentSchedule());
+    assertEquals(SetUtil.set(t1), SetUtil.theSet(tr.getAcceptedTasks()));
+  }
+
+  // one task not ready to start yet, so not droppable
+  public void testAddToScheduleFailNoDroppable() {
+    log.debug("testAddToScheduleOkAfterDrops()");
+    ConfigurationUtil.setFromArgs(TaskRunner.PARAM_DROP_TASK_MAX, "10");
+    StepTask t1 = task(100, 200, 50);
+    StepTask t2 = task(100, 200, 100);
+    Schedule sched1 = sched(ListUtil.list(t1));
+    Schedule sched2 = sched(ListUtil.list(t2));
+    fact.setResults(ListUtil.list(sched1, null, null, sched2, sched2));
+    assertTrue(tr.addToSchedule(t1));
+    assertIsomorphic(ListUtil.list(t1), fact.scheduler.tasks);
+    assertEquals(SetUtil.set(t1), SetUtil.theSet(tr.getAcceptedTasks()));
+
+    assertFalse(tr.addToSchedule(t2));
+    assertEquals(ListUtil.list(ListUtil.list(t1),
+			       ListUtil.list(t1, t2),
+			       ListUtil.list(t1)),
+		 fact.createArgs);
+    assertEquals(SetUtil.set(t1), SetUtil.theSet(fact.scheduler.tasks));
+    assertFalse(t1.isDropped());
+    assertEquals(sched1, tr.getCurrentSchedule());
+    assertEquals(SetUtil.set(t1), SetUtil.theSet(tr.getAcceptedTasks()));
+    assertEmpty(SetUtil.theSet(tr.getOverrunTasks()));
+  }
+
+  // one task to drop, succeeds after dropping it
+  public void testAddToScheduleOkAfterDrops() {
+    log.debug("testAddToScheduleOkAfterDrops()");
+    ConfigurationUtil.setFromArgs(TaskRunner.PARAM_DROP_TASK_MAX, "10");
+    StepTask t1 = task(100, 200, 50);
+    StepTask t2 = task(100, 200, 100);
+    Schedule sched1 = sched(ListUtil.list(t1));
+    Schedule sched2 = sched(ListUtil.list(t2));
+    fact.setResults(ListUtil.list(sched1, null, null, sched2, sched2));
+    TimeBase.step(101);
+    assertTrue(tr.addToSchedule(t1));
+    assertIsomorphic(ListUtil.list(t1), fact.scheduler.tasks);
+    assertEquals(SetUtil.set(t1), SetUtil.theSet(tr.getAcceptedTasks()));
+
+    assertTrue(tr.addToSchedule(t2));
+    assertEquals(ListUtil.list(ListUtil.list(t1),
+			       ListUtil.list(t1, t2),
+			       ListUtil.list(t1),
+			       Collections.EMPTY_SET,
+			       ListUtil.list(t1, t2)),
+		 fact.createArgs);
+    assertEquals(SetUtil.set(t1, t2), SetUtil.theSet(fact.scheduler.tasks));
+    assertTrue(t1.isDropped());
+    assertEquals(sched2, tr.getCurrentSchedule());
+    assertEquals(SetUtil.set(t1, t2), SetUtil.theSet(tr.getAcceptedTasks()));
+    assertEquals(SetUtil.set(t1), SetUtil.theSet(tr.getOverrunTasks()));
+  }
+
 
   public void testIsTaskSchedulable() {
     fact.setResult(null);
@@ -162,7 +251,7 @@ public class TestTaskRunner extends LockssTestCase {
     StepTask t2 = task(100, 300, 50);
 
     Schedule s = sched(ListUtil.list(t1, t2));
-    fact.setResult(s);
+    fact.setResults(s, s);
     assertTrue(tr.addToSchedule(t1));
     assertTrue(tr.addToSchedule(t2));
     assertFalse(tr.findTaskToRun());
@@ -184,7 +273,7 @@ public class TestTaskRunner extends LockssTestCase {
     Schedule.Chunk c2 = new Schedule.Chunk(t2, Deadline.at(200),
 					   Deadline.at(300), 100);
     Schedule s = new Schedule(ListUtil.list(c1, c2));
-    fact.setResult(s);
+    fact.setResults(s, s);
     assertTrue(tr.addToSchedule(t1));
     assertTrue(tr.addToSchedule(t2));
     assertFalse(tr.findTaskToRun());
@@ -222,7 +311,7 @@ public class TestTaskRunner extends LockssTestCase {
     StepTask texp2 = task(0, 0, 50);
 
     Schedule s = sched(ListUtil.list(texp1, texp2, t1, t2));
-    fact.setResult(s);
+    fact.setResults(s, s);
     assertTrue(tr.addToSchedule(t1));
     assertTrue(tr.addToSchedule(t2));
     assertFalse(tr.findTaskToRun());
@@ -240,7 +329,7 @@ public class TestTaskRunner extends LockssTestCase {
     StepTask texp2 = task(0, 0, 49);
 
     Schedule s = sched(ListUtil.list(t1, t2));
-    fact.setResult(s);
+    fact.setResults(s, s);
     assertTrue(tr.addToSchedule(t1));
     assertTrue(tr.addToSchedule(t2));
     tr.addOverrunner(texp1);
@@ -400,7 +489,7 @@ public class TestTaskRunner extends LockssTestCase {
 				     bEvent(t1, Schedule.EventType.FINISH),
 				     bEvent(t3, Schedule.EventType.FINISH),
 				     bEvent(t2, Schedule.EventType.FINISH)));
-    fact.setResult(s);
+    fact.setResults(ListUtil.list(s, s, s));
     assertTrue(tr.addToSchedule(t1));
     assertTrue(tr.addToSchedule(t2));
     assertTrue(tr.addToSchedule(t3));
@@ -481,7 +570,7 @@ public class TestTaskRunner extends LockssTestCase {
     //    t1.setOverrunAllowed(true);
     StepTask t2 = task(150, 250, 100, null, new MockStepper(10, -10));
     Schedule s = sched(ListUtil.list(t1, t2));
-    fact.setResult(s);
+    fact.setResults(s, s);
     assertTrue(tr.addToSchedule(t1));
     assertTrue(tr.addToSchedule(t2));
     TimeBase.setSimulated(101);
@@ -508,8 +597,8 @@ public class TestTaskRunner extends LockssTestCase {
     t1.setOverrunAllowed(true);
     StepTask t2 = task(150, 250, 100, null, new MockStepper(10, -10));
     tr = new MockTaskRunner(new TaskRunner.SchedulerFactory () {
-	public Scheduler createScheduler(Collection tasks) {
-	  return new SortScheduler(tasks);
+	public Scheduler createScheduler() {
+	  return new SortScheduler();
 	}});
     assertTrue(tr.addToSchedule(t1));
     assertTrue(tr.addToSchedule(t2));
@@ -540,8 +629,8 @@ public class TestTaskRunner extends LockssTestCase {
     t1.setOverrunAllowed(true);
     StepTask t2 = task(150, 250, 100, null, new MockStepper(10, -10));
     tr = new MockTaskRunner(new TaskRunner.SchedulerFactory () {
-	public Scheduler createScheduler(Collection tasks) {
-	  return new SortScheduler(tasks);
+	public Scheduler createScheduler() {
+	  return new SortScheduler();
 	}});
     assertTrue(tr.addToSchedule(t1));
     assertEmpty(tr.getOverrunTasks());
@@ -606,11 +695,12 @@ public class TestTaskRunner extends LockssTestCase {
   }
 
   class SchedFact implements TaskRunner.SchedulerFactory {
-    Schedule resultSchedule;
-    Collection tasks;
+    List results;
+    MockScheduler scheduler;
+    List createArgs = new ArrayList();
 
     public SchedFact(Schedule resultSchedule) {
-      this.resultSchedule = resultSchedule;
+      this.results = ListUtil.list(resultSchedule);
     }
 
     public SchedFact() {
@@ -618,28 +708,51 @@ public class TestTaskRunner extends LockssTestCase {
     }
 
     public void setResult(Schedule resultSchedule) {
-      this.resultSchedule = resultSchedule;
+      this.results = ListUtil.list(resultSchedule);
     }
 
-    public Scheduler createScheduler(Collection tasks) {
-      this.tasks = tasks;
-      return new MockScheduler(resultSchedule);
-    }
-  }
-
-  class MockScheduler implements Scheduler {
-    Schedule sched;
-
-    MockScheduler(Schedule sched) {
-      this.sched = sched;
+    public void setResults(List results) {
+      this.results = results;
     }
 
-    public boolean createSchedule() {
-      return sched != null;
+    public void setResults(Schedule s1, Schedule s2) {
+      setResults(ListUtil.list(s1, s2));
     }
 
-    public Schedule getSchedule() {
-      return sched;
+    public Scheduler createScheduler() {
+      scheduler = new MockScheduler(results);;
+      return scheduler;
+    }
+
+    class MockScheduler implements Scheduler {
+      List results;
+      Collection tasks;
+      Schedule lastSched = null;
+
+      MockScheduler(List results) {
+	this.results = results;
+      }
+
+      public boolean createSchedule(Collection tasks) {
+	log.debug("createSchedule(" + tasks + ")");
+	this.tasks = tasks;
+	createArgs.add(tasks);
+	if (results == null || results.isEmpty()) {
+	  lastSched = null;
+	} else {
+	  lastSched = (Schedule)results.remove(0);
+	}
+	return lastSched != null;
+      }
+
+      public Schedule getSchedule() {
+	log.info("getSchedule(): " + lastSched);
+	return lastSched;
+      }
+
+      public Collection getTasks() {
+	return tasks;
+      }
     }
   }
 

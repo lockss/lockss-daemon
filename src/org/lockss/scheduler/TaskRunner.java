@@ -1,5 +1,5 @@
 /*
- * $Id: TaskRunner.java,v 1.22 2004-08-22 02:11:57 tlipkis Exp $
+ * $Id: TaskRunner.java,v 1.23 2004-09-01 18:01:49 tlipkis Exp $
  */
 
 /*
@@ -51,6 +51,9 @@ class TaskRunner implements Serializable {
 
   static final String PREFIX = Configuration.PREFIX + "taskRunner.";
 
+  static final String PARAM_DROP_TASK_MAX = PREFIX + "maxTaskDrop";
+  static final int DEFAULT_DROP_TASK_MAX = 0;
+
   static final String PARAM_HISTORY_MAX = PREFIX + "historySize";
   static final int DEFAULT_HISTORY_MAX = 50;
 
@@ -77,6 +80,7 @@ class TaskRunner implements Serializable {
   // overrun tasks, sorted by finish deadline
   private TreeSet overrunTasks =
     new TreeSet(SchedulableTask.latestFinishComparator());
+  private int maxDrop = DEFAULT_DROP_TASK_MAX;
   // last n completed requests
   private HistoryList history = new HistoryList(DEFAULT_HISTORY_MAX);
   private StepThread stepThread;
@@ -87,13 +91,15 @@ class TaskRunner implements Serializable {
   private int taskCtr = 0;
   private long totalTime = 0;
 
+  private static final int STAT_NONE = -1;
   private static final int STAT_ACCEPTED = 0;
   private static final int STAT_REFUSED = 1;
   private static final int STAT_COMPLETED = 2;
   private static final int STAT_EXPIRED = 3;
   private static final int STAT_OVERRUN = 4;
   private static final int STAT_CANCELLED = 5;
-  private static final int NUM_STATS = 6;
+  private static final int STAT_DROPPED = 6;
+  private static final int NUM_STATS = 7;
 
   private int backgroundStats[] = new int[NUM_STATS];
   private int foregroundStats[] = new int[NUM_STATS];
@@ -120,7 +126,10 @@ class TaskRunner implements Serializable {
       });
   }
 
-  private void setConfig(Configuration config, Configuration.Differences changedKeys) {
+  private void setConfig(Configuration config,
+			 Configuration.Differences changedKeys) {
+    maxDrop = config.getInt(PARAM_DROP_TASK_MAX, DEFAULT_DROP_TASK_MAX);
+
     statsUpdateInterval =
       config.getTimeInterval(PARAM_STATS_UPDATE_INTERVAL,
 			     DEFAULT_STATS_UPDATE_INTERVAL);
@@ -161,13 +170,86 @@ class TaskRunner implements Serializable {
   /** Return true iff the task could be scheduled, but doesn't actually
    * schedule the task. */
   public synchronized boolean isTaskSchedulable(SchedulableTask task) {
-    Collection tasks = getCombinedTasks(task);
-    Scheduler scheduler = schedulerFactory.createScheduler(tasks);
-    boolean res = scheduler.createSchedule();
+    Scheduler scheduler = schedulerFactory.createScheduler();
+    boolean res = canAddToSchedule(scheduler, task, false);
     log.debug2((res ? "Task is schedulable: " : "Task is not schedulable: ")
 	       + task);
     return res;
   }
+
+  boolean canAddToSchedule(Scheduler scheduler, SchedulableTask task,
+			   boolean doDrop) {
+    Collection tasks = getCombinedTasks(task);
+    if (scheduler.createSchedule(tasks)) {
+      return true;
+    }
+    if (!cleanupSchedule(scheduler, doDrop)) {
+      return false;
+    }
+    return scheduler.createSchedule(tasks);
+  }
+
+  boolean cleanupSchedule(Scheduler scheduler, boolean doDrop) {
+    if (currentSchedule == null) {
+      log.debug("cleanupSchedule(): currentSchedule = null");
+      return false;
+    }
+    
+    List unexpired = getUnexpiredTasks();
+    if (scheduler.createSchedule(unexpired)) {
+      // no cleanup necessary, nothing pruned
+      log.debug("cleanupSchedule(): no cleanup necessary");
+      return false;
+    }
+    HashSet remainingTasks = new HashSet(unexpired);
+    HashSet dropped = new HashSet();
+
+    for (int ix = maxDrop; ix > 0; ix--) {
+      SchedulableTask droppable = findDroppableTask(dropped);
+      if (droppable == null) {
+	log.error("Failed to cleanup schedule: " + currentSchedule +
+		  " after dropping " + dropped);
+	return false;
+      }
+      if (log.isDebug3()) log.debug3("Considering dropping: " + droppable);
+      remainingTasks.remove(droppable);
+      dropped.add(droppable);
+      if (scheduler.createSchedule(remainingTasks)) {
+	log.debug3("succeeded");
+	if (doDrop) {
+	  for (Iterator iter = dropped.iterator(); iter.hasNext(); ) {
+	    SchedulableTask task = (SchedulableTask)iter.next();
+	    log.warning("Dropped " + task);
+	    task.setDropped();
+	    addOverrunner(task, STAT_DROPPED);
+	  }
+	}
+	return true;
+      }
+    }
+    return false;
+  }
+
+  /** Find a task worth dropping */
+  SchedulableTask findDroppableTask(Set alreadyDropped) {
+    for (Iterator iter = currentSchedule.getEvents().iterator();
+	 iter.hasNext(); ) {
+      Schedule.Event event = (Schedule.Event)iter.next();
+      if (!event.isBackgroundEvent()) {
+	Schedule.Chunk chunk = (Schedule.Chunk)event;
+	StepTask task = chunk.getTask();
+	if (alreadyDropped.contains(task)) {
+	  continue;
+	}
+	if (task.getEarlistStart().expired()) {
+	  return task;
+	}
+      }
+    }
+    return null;
+  }
+
+
 
   /** Find the earliest possible time a background task could be scheduled.
    * This is only a hint; it may not be possible to schedule the task then.
@@ -183,29 +265,38 @@ class TaskRunner implements Serializable {
   }
 
   private List getCombinedTasks(SchedulableTask newTask) {
-    List tasks = new ArrayList(acceptedTasks.size() + 1);
+    return removeExpiredAndPossiblyAdd(newTask);
+  }
+
+  private List getUnexpiredTasks() {
+    return removeExpiredAndPossiblyAdd(null);
+  }
+
+  private List removeExpiredAndPossiblyAdd(SchedulableTask newTask) {
+    List tasks = null;
+    if (newTask != null) {
+      tasks = new ArrayList(acceptedTasks.size() + 1);
+    }
     for (Iterator iter = acceptedTasks.listIterator(); iter.hasNext(); ) {
       SchedulableTask task = (SchedulableTask)iter.next();
       if (task.isExpired()) {
-	// Don't include expired tasks, because their presence precludes
-	// finding a schedule.  Adding them to overrunTasks is a convenient
-	// way to get them notified at the first opportunity.  They're not
-	// really overrunners, so add directly rather than calling
-	// addOverrunner() which would include them in overrun stats.
-
-	overrunTasks.add(task);
+	addOverrunner(task, STAT_NONE);
 
 	// Also remove expired tasks from acceptedTasks here, so don't have
 	// to look at them again.
 
 	iter.remove();
 
-      } else {
+      } else if (tasks != null) {
 	tasks.add(task);
       }
     }
-    tasks.add(newTask);
-    return tasks;
+    if (tasks != null) {
+      tasks.add(newTask);
+      return tasks;
+    } else {
+      return acceptedTasks;
+    }
   }
 
   /** Try a create a new Schedule from the union of acceptedTasks and task.
@@ -224,11 +315,10 @@ class TaskRunner implements Serializable {
 	}
       }
     }
-    List tasks = getCombinedTasks(task);
-    Scheduler scheduler = schedulerFactory.createScheduler(tasks);
-    if (scheduler.createSchedule()) {
+    Scheduler scheduler = schedulerFactory.createScheduler();
+    if (canAddToSchedule(scheduler, task, true)) {
       currentSchedule = scheduler.getSchedule();
-      acceptedTasks = tasks;
+      acceptedTasks = new ArrayList(scheduler.getTasks());
       task.setTaskRunner(this);
       Collection schedOverron = currentSchedule.getOverrunTasks();
       if (schedOverron != null && !schedOverron.isEmpty()) {
@@ -381,8 +471,8 @@ class TaskRunner implements Serializable {
   LinkedList extraBackgroundEvents = new LinkedList();
 
   void reschedule() {
-    Scheduler scheduler = schedulerFactory.createScheduler(acceptedTasks);
-    if (scheduler.createSchedule()) {
+    Scheduler scheduler = schedulerFactory.createScheduler();
+    if (scheduler.createSchedule(acceptedTasks)) {
       currentSchedule = scheduler.getSchedule();
     }
   }
@@ -593,9 +683,18 @@ class TaskRunner implements Serializable {
   }
 
   void addOverrunner(SchedulableTask task) {
+    addOverrunner(task, STAT_OVERRUN);
+  }
+
+  void addOverrunner(SchedulableTask task, int statidx) {
     if (overrunTasks.add(task)) {
-      addStats(task, STAT_OVERRUN);
-      log.debug2("New overrun: " + task);
+      if (statidx != STAT_NONE) {
+	addStats(task, statidx);
+	if (log.isDebug2()) log.debug2("New overruner (" + statidx + "): " +
+				       task);
+      } else {
+	if (log.isDebug2()) log.debug2("New overruner: " + task);
+      }
     }
   }
 
@@ -772,7 +871,7 @@ class TaskRunner implements Serializable {
 
   /** Factory supplied to constructor to create new Scheduler instances. */
   interface SchedulerFactory {
-    public Scheduler createScheduler(Collection tasks);
+    public Scheduler createScheduler();
   }
 
   // status table
@@ -963,6 +1062,9 @@ class TaskRunner implements Serializable {
       res.add(new StatusTable.SummaryInfo("Tasks overrun",
 					  ColumnDescriptor.TYPE_STRING,
 					  combStats(STAT_OVERRUN)));
+      res.add(new StatusTable.SummaryInfo("Tasks dropped",
+					  ColumnDescriptor.TYPE_STRING,
+					  combStats(STAT_DROPPED)));
       res.add(new StatusTable.SummaryInfo("Total foreground time",
 					  ColumnDescriptor.TYPE_TIME_INTERVAL,
 					  new Long(totalTime)));

@@ -1,5 +1,5 @@
 /*
- * $Id: SchedulableTask.java,v 1.6 2004-01-12 06:20:59 tlipkis Exp $
+ * $Id: SchedulableTask.java,v 1.7 2004-09-01 18:01:50 tlipkis Exp $
  */
 
 /*
@@ -62,6 +62,7 @@ public class SchedulableTask implements Serializable, Cloneable {
   int schedSeq = -1;
   Date schedDate;
   Date finishDate = null;
+  boolean isDropped = false;
 
   public SchedulableTask(Deadline earliestStart,
 		     Deadline latestFinish,
@@ -139,6 +140,14 @@ public class SchedulableTask implements Serializable, Cloneable {
 
   void setFinished() {
     finishDate = TimeBase.nowDate();
+  }
+
+  public boolean isDropped() {
+    return isDropped;
+  }
+
+  void setDropped() {
+    isDropped = true;
   }
 
   public boolean hasOverrun() {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestSortScheduler.java,v 1.3 2004-07-21 07:05:36 tlipkis Exp $
+ * $Id: TestSortScheduler.java,v 1.4 2004-09-01 18:01:49 tlipkis Exp $
  */
 
 /*
@@ -41,7 +41,7 @@ import org.lockss.test.*;
  */
 
 public class TestSortScheduler extends LockssTestCase {
-  static Logger log = Logger.getLogger("TestBTScheduler");
+  static Logger log = Logger.getLogger("TestScheduler");
   static final List EMPTY_LIST = Collections.EMPTY_LIST;
 
   public void setUp() throws Exception {
@@ -103,7 +103,7 @@ public class TestSortScheduler extends LockssTestCase {
   }
 
   /*
-    	100		200		300		400		500
+	100		200		300		400		500
 	[----- t1 ------)
 			[----- t2 ------)
 					[----- t3 ------)
@@ -210,6 +210,16 @@ public class TestSortScheduler extends LockssTestCase {
 		 theSet(intervals[6].endingTaskList));
   }
 
+  // ensure scheduling empty task list succeeds and creates a schedule
+  public void testEmptySchedule() {
+    SortScheduler scheduler = new SortScheduler();
+    assertTrue(scheduler.createSchedule(Collections.EMPTY_LIST));
+    assertEmpty(scheduler.getTasks());
+    Schedule sched = scheduler.getSchedule();
+    assertNotNull(sched);
+    assertEmpty(sched.getEvents());
+  }
+
   class MockBTS1 extends SortScheduler {
     int both[];
     int ix;
@@ -259,8 +269,7 @@ public class TestSortScheduler extends LockssTestCase {
   }
 
   public void testSchedule() {
-    SortScheduler sched =
-      new SortScheduler(ListUtil.list(t1, t2, t6, t4));
+    SortScheduler sched = new SortScheduler(ListUtil.list(t1, t2, t6, t4));
     assertTrue(sched.createSchedule());
     sched.getSchedule();
   }
@@ -298,9 +307,17 @@ public class TestSortScheduler extends LockssTestCase {
     assertTrue(sched.createSchedule());
   }
 
+  public void testSchedulePacked() {
+    TimeBase.setSimulated(150);
+    SortScheduler sched =
+      new SortScheduler(ListUtil.list(t1, t2, t3, t4, t5, t6));
+    assertTrue(sched.createSchedule());
+    sched.getSchedule();
+  }
+
 
   /*
-    	100		200		300		400		500
+	100		200		300		400		500
  80	[------------------------- h1 ---------------------------)
  35		[------------- h2---------------)
  35		[--------- h3 ----------)
@@ -494,7 +511,7 @@ public class TestSortScheduler extends LockssTestCase {
     List sh1 = ListUtil.list(chunk(h6, 100, 133, 33, false),
 			     chunk(h7, 133, 166, 33),
 			     chunk(h6, 166, 200, 34));
-			   
+
     Schedule s = sched.getSchedule();
     assertEquals(sh1, s.getEvents());
     assertEmpty(s.getOverrunTasks());
@@ -625,7 +642,7 @@ public class TestSortScheduler extends LockssTestCase {
     SortScheduler sched = new SortScheduler(EMPTY_LIST);
     assertTrue(sched.createSchedule());
     assertEquals(EMPTY_LIST, sched.getSchedule().getEvents());
-  }    
+  }
 
   public void testNull() {
     try {
@@ -645,7 +662,7 @@ public class TestSortScheduler extends LockssTestCase {
     } catch (IllegalArgumentException e) {
       // expected
     }
-  }    
+  }
 
 
   private void assertIntervalEquals(long begin, long end,

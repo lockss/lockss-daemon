@@ -1,5 +1,5 @@
 /*
- * $Id: SortScheduler.java,v 1.5 2004-07-21 07:05:36 tlipkis Exp $
+ * $Id: SortScheduler.java,v 1.6 2004-09-01 18:01:50 tlipkis Exp $
  */
 
 /*
@@ -55,12 +55,33 @@ public class SortScheduler implements Scheduler {
   boolean scheduleCreated;
   Deadline scheduledAt;
 
-  /** Create a scheduler to schedule the collection of tasks */
-  public SortScheduler(Collection tasks) {
-    rawTasks = tasks;
+  private void resetVars() {
+    rawTasks = null;
+    intervals = null;
+    nIntervals = 0;
+    ranges = new ArrayList();
+    unscheduledTasks = null;
+    maxBackgroundLoad = 0;
+    scheduleCreated = false;
+    scheduledAt = null;
+  }
+
+  /** Create a scheduler */
+  public SortScheduler() {
     Configuration config = Configuration.getCurrentConfig();
     maxBackgroundLoad = config.getPercentage(PARAM_MAX_BACKGROUND_LOAD,
 					     DEFAULT_MAX_BACKGROUND_LOAD);
+  }
+
+  /** Create a scheduler to schedule the collection of tasks */
+  SortScheduler(Collection tasks) {
+    this();
+    rawTasks = tasks;
+  }
+
+  void setTasks(Collection tasks) {
+    resetVars();
+    rawTasks = tasks;
   }
 
   /** Store list of tasks to schedule, check validity, move times in the
@@ -98,6 +119,11 @@ public class SortScheduler implements Scheduler {
     return true;
   }
 
+  public boolean createSchedule(Collection tasks) {
+    setTasks(tasks);
+    return createSchedule();
+  }
+
   public boolean createSchedule() {
     if (log.isDebug2())
       log.debug2("createSchedule: " + rawTasks.size() + " tasks");
@@ -106,6 +132,10 @@ public class SortScheduler implements Scheduler {
       initIntervalTaskLists() &&
       scheduleAll();
     return scheduleCreated;
+  }
+
+  public Collection getTasks() {
+    return rawTasks;
   }
 
   public Schedule getSchedule() {
@@ -235,7 +265,7 @@ public class SortScheduler implements Scheduler {
       if (!scheduleIntervalRange(xfirst, nIntervals - 1)) {
 	return false;
       }
-    }      
+    }
     return true;
   }
 
@@ -328,7 +358,7 @@ public class SortScheduler implements Scheduler {
     SchedulableTask task;
     Interval window;
     long totalTime;
-    long unscheduledTime;		 // remaining unscheduled time
+    long unschedTaskTime;		 // remaining unscheduled time
     int seq = nextSeq++;		 // See _endTimeComparator.
 
     TaskData(SchedulableTask t, Deadline earliestStart) {
@@ -343,10 +373,13 @@ public class SortScheduler implements Scheduler {
       reset();
     }
 
-    /** Reset unscheduledTime to totalTime */
+    /** Reset unschedTaskTime to totalTime */
     void reset() {
       this.totalTime = task.curEst();
-      unscheduledTime = totalTime;
+      unschedTaskTime = totalTime;
+      if (task.isDropped()) {
+	unschedTaskTime = 0;
+      }
     }
 
     /** Return (possibly modified) execution window */
@@ -380,13 +413,13 @@ public class SortScheduler implements Scheduler {
     public boolean equals(Object o) {
       if (o instanceof TaskData) {
 	TaskData td = (TaskData)o;
- 	return task.equals(td.task);
+	return task.equals(td.task);
       }
       return false;
     }
 
     /** Comparator for ordering tasks by ending deadline */
-    private static final Comparator _endTimeComparator = 
+    private static final Comparator _endTimeComparator =
       new Comparator() {
 	public int compare(Object o1, Object o2) {
 	  TaskData t1 = (TaskData)o1;
@@ -466,7 +499,7 @@ public class SortScheduler implements Scheduler {
 	events.addAll(chunks);
       }
       addEndingBackgroundEvents(events);
-    }      
+    }
 
     void addStartingBackgroundEvents(List events) {
       for (Iterator iter = backgroundTaskList.iterator(); iter.hasNext(); ) {
@@ -508,21 +541,21 @@ public class SortScheduler implements Scheduler {
       long chunkStart = getBegin().getExpirationTime();
       if (log.isDebug3()) log.debug3("Scheduling " + toString());
       int ntasks = tasks.length;
-      for (int tix = 0; 
+      for (int tix = 0;
 	   tix < ntasks && unscheduledTime > 0;
 	   tix++) {
 	TaskData td = tasks[tix];
 	StepTask stask = (StepTask)td.task;
 	if (log.isDebug3())
 	  log.debug3("examining task " + tix + "(" + stask.cookie +
-		     "), unsched = " + td.unscheduledTime);
-	if (td.unscheduledTime > 0 && !isDisjoint(td.getWindow())) {
-	  long taskTime = Math.min(unscheduledTime, td.unscheduledTime);
-	  long duration = (long)(taskTime / loadFactor); 
+		     "), unsched = " + td.unschedTaskTime);
+	if (td.unschedTaskTime > 0 && !isDisjoint(td.getWindow())) {
+	  long taskTime = Math.min(unscheduledTime, td.unschedTaskTime);
+	  long duration = (long)(taskTime / loadFactor);
 	  if (log.isDebug3())
 	    log.debug3("add task " + tix + "(" + stask.cookie +
 		       "), time = " + taskTime + ", duration = " + duration);
-	  td.unscheduledTime -= taskTime;
+	  td.unschedTaskTime -= taskTime;
 	  unscheduledTime -= taskTime;
 	  // these times may have past if creating a schedule with tasks
 	  // starting immediately, so suppres unreasonable deadline
@@ -534,7 +567,7 @@ public class SortScheduler implements Scheduler {
 			   Deadline.restoreDeadlineAt(chunkStart +
 						      chunkOffset + duration),
 			   taskTime);
-	  if (td.unscheduledTime <= 0) {
+	  if (td.unschedTaskTime <= 0) {
 	    chunk.setTaskEnd();
 	  }
 	  chunks.add(chunk);
@@ -542,10 +575,10 @@ public class SortScheduler implements Scheduler {
 	  unscheduledTasks.remove(stask);
 	}
       }
-      // if any tasks ending at this interval have unscheduledTime, fail
+      // if any tasks ending at this interval have unschedTaskTime, fail
       for (int eix = 0; eix < endingTasks.length; eix++) {
 	TaskData etd = endingTasks[eix];
-	if (etd.unscheduledTime > 0) {
+	if (etd.unschedTaskTime > 0) {
 	  log.debug("No schedule found");
 	  return false;
 	}
@@ -585,7 +618,7 @@ public class SortScheduler implements Scheduler {
     int last;				// index of last interval in the range
     TaskData tasks[];			// tasks to schedule during this range
     int ntasks;				// number of tasks
-    
+
     IntervalRange(SchedInterval intervals[], int first, int last) {
       this.intervals = intervals;
       this.first = first;

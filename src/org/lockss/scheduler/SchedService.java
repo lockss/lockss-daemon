@@ -1,5 +1,5 @@
 /*
- * $Id: SchedService.java,v 1.9 2004-08-22 02:05:51 tlipkis Exp $
+ * $Id: SchedService.java,v 1.10 2004-09-01 18:01:50 tlipkis Exp $
  */
 
 /*
@@ -58,8 +58,8 @@ public class SchedService extends BaseLockssManager {
     super.startService();
     log.debug("startService()");
     runner = new TaskRunner(new TaskRunner.SchedulerFactory () {
-	public Scheduler createScheduler(Collection tasks) {
-	  return new SortScheduler(tasks);
+	public Scheduler createScheduler() {
+	  return new SortScheduler();
 	}});
     runner.init();
     getApp().getStatusService().
