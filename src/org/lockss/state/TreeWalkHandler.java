@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkHandler.java,v 1.52 2003-12-23 00:35:29 tlipkis Exp $
+ * $Id: TreeWalkHandler.java,v 1.53 2004-01-12 06:23:12 tlipkis Exp $
  */
 
 /*
@@ -123,7 +123,6 @@ public class TreeWalkHandler {
   TreeWalkThread treeWalkThread;
   long treeWalkInterval;
   long topPollInterval;
-  long treeWalkTestDuration;
   long startDelay;
   long initialEstimate;
   float estGrowth;
@@ -135,7 +134,7 @@ public class TreeWalkHandler {
   Deadline nextSleep;
   float loadFactor;
 
-  boolean treeWalkAborted;
+  volatile boolean treeWalkAborted;
   boolean forceTreeWalk = false;
   PollHistory cachedHistory = null;
   NodeState cachedNode = null;
@@ -295,6 +294,9 @@ public class TreeWalkHandler {
 	  manager.getNodeState(plugin.makeCachedUrlSet(theAu, cuss));
         pContinue = checkNodeState(state);
       }
+      if (treeWalkAborted) {
+	return false;
+      }
       if (!pContinue) {
         break;
       }
@@ -321,7 +323,9 @@ public class TreeWalkHandler {
     if ((nextSleep!=null) && (nextSleep.expired())) {
       try {
         Deadline.in(sleepDuration).sleep();
-      } catch (InterruptedException ie) { }
+      } catch (InterruptedException ie) {
+	// ignored - check treeWalkAborted below
+      }
       nextSleep = Deadline.in(sleepInterval);
     }
 
@@ -495,10 +499,12 @@ public class TreeWalkHandler {
         extraDelay = 0;
         long est = getEstimatedTreeWalkDuration();
 
-        BackgroundTask task = scheduleTreeWalk(start, est);
+        BackgroundTask task = null;
 
         // wait on the semaphore (the callback will 'give()')
         try {
+	  // scheduleTreeWalk() can throw InterruptedException
+	  task = scheduleTreeWalk(start, est);
           if (treeWalkSemaphore.take(Deadline.at(start + Constants.DAY))) {
 	    // semaphore was posted, do treewalk
 	    try {
@@ -515,8 +521,10 @@ public class TreeWalkHandler {
 	      task = null;
 	    }
 	    // Now, if we found a poll to run, run it after background task
-	    // has ended.
-	    callPollIfNecessary();
+	    // has ended.  But only if we're not exiting.
+	    if (goOn) {
+	      callPollIfNecessary();
+	    }
 	  } else {
 	    // semaphore timed out.  log it and cancel task (in finally)
 	    // in case it's really still there somewhere
@@ -525,7 +533,7 @@ public class TreeWalkHandler {
 	} catch (InterruptedException ie) {
 	  // semaphore was interrupted.  Probably exiting, cancel task and
 	  // exit if goOn false
-	  logger.warning("TreeWalkThread semaphore was interrupted:" + ie);
+	  logger.warning("TreeWalkThread semaphore was interrupted");
 	} finally {
 	  // cancel task if it didn't end normally
 	  if (task != null) {
@@ -543,7 +551,8 @@ public class TreeWalkHandler {
      * @param est estimated length
      * @return a BackgroundTask
      */
-    BackgroundTask scheduleTreeWalk(long start, long est) {
+    BackgroundTask scheduleTreeWalk(long start, long est)
+	throws InterruptedException {
       if (useScheduler) {
         BackgroundTask task = null;
         // using SchedService
@@ -569,7 +578,7 @@ public class TreeWalkHandler {
             // task is scheduled, your taskEvent callback will be called at the
             // start and end times
             logger.debug2("Scheduled successfully for " +
-                          startDeadline.toString());
+                          startDeadline.shortString());
             break;
           } else {
             if (TimeBase.msUntil(startDeadline.getExpirationTime()) >
@@ -580,7 +589,10 @@ public class TreeWalkHandler {
               logger.debug("Can't schedule, waiting for an hour");
               try {
                 Deadline.in(Constants.HOUR).sleep();
-              } catch (InterruptedException ie) { }
+              } catch (InterruptedException ie) {
+		// probably stopping, throw back to caller
+		throw ie;
+	      }
               start = chooseTimeToRun(0);  // no delay needed
             } else {
               // can't fit into existing schedule.  try adjusting by
@@ -622,6 +634,9 @@ public class TreeWalkHandler {
     public void end() {
       goOn = false;
       treeWalkAborted = true;
+      if (treeWalkThread != null) {
+	treeWalkThread.interrupt();
+      }
     }
 
     private class TreeWalkTaskCallback implements TaskCallback {
