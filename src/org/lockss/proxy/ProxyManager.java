@@ -1,10 +1,10 @@
 /*
- * $Id: ProxyManager.java,v 1.12 2003-05-06 01:45:45 troberts Exp $
+ * $Id: ProxyManager.java,v 1.13 2003-06-20 22:34:52 claire Exp $
  */
 
 /*
 
-Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

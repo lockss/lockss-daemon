@@ -1,10 +1,10 @@
 /*
- * $Id: MockLockssRepository.java,v 1.2 2003-06-06 23:13:44 aalto Exp $
+ * $Id: MockLockssRepository.java,v 1.3 2003-06-20 22:34:55 claire Exp $
  */
 
 /*
 
-Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

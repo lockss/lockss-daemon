@@ -1,10 +1,10 @@
 /*
- * $Id: TestActivityRegulator.java,v 1.13 2003-06-04 22:00:48 tal Exp $
+ * $Id: TestActivityRegulator.java,v 1.14 2003-06-20 22:34:53 claire Exp $
  */
 
 /*
 
-Copyright (c) 2001-2002 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2001-2003 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

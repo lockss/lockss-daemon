@@ -1,9 +1,9 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.87 2003-06-18 01:26:21 aalto Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.88 2003-06-20 22:34:55 claire Exp $
  */
 
 /*
- Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal

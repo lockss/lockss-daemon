@@ -1,10 +1,10 @@
 /*
- * $Id: TestLcapSocket.java,v 1.10 2003-03-04 01:02:05 aalto Exp $
+ * $Id: TestLcapSocket.java,v 1.11 2003-06-20 22:34:54 claire Exp $
  */
 
 /*
 
-Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

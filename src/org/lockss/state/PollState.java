@@ -1,9 +1,9 @@
 /*
- * $Id: PollState.java,v 1.23 2003-05-08 23:17:19 claire Exp $
+ * $Id: PollState.java,v 1.24 2003-06-20 22:34:52 claire Exp $
  */
 
 /*
- Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal

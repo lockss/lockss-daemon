@@ -1,10 +1,10 @@
 /*
- * $Id: LockssDaemon.java,v 1.30 2003-05-22 01:19:41 tal Exp $
+ * $Id: LockssDaemon.java,v 1.31 2003-06-20 22:34:50 claire Exp $
  */
 
 /*
 
-Copyright (c) 2000-2002 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

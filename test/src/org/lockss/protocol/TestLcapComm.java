@@ -1,10 +1,10 @@
 /*
- * $Id: TestLcapComm.java,v 1.10 2003-06-01 21:21:30 tal Exp $
+ * $Id: TestLcapComm.java,v 1.11 2003-06-20 22:34:54 claire Exp $
  */
 
 /*
 
-Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

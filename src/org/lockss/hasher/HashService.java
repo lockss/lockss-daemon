@@ -1,10 +1,10 @@
 /*
- * $Id: HashService.java,v 1.17 2003-05-03 00:11:11 tal Exp $
+ * $Id: HashService.java,v 1.18 2003-06-20 22:34:51 claire Exp $
  */
 
 /*
 
-Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

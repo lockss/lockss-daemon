@@ -1,8 +1,8 @@
 /*
- * $Id: FileUtil.java,v 1.3 2003-04-07 21:34:25 troberts Exp $
+ * $Id: FileUtil.java,v 1.4 2003-06-20 22:34:55 claire Exp $
  *
 
-Copyright (c) 2000-2002 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

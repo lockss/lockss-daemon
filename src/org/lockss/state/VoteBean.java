@@ -1,10 +1,10 @@
 /*
- * $Id: VoteBean.java,v 1.4 2003-02-20 00:57:28 claire Exp $
+ * $Id: VoteBean.java,v 1.5 2003-06-20 22:34:52 claire Exp $
  */
 
 /*
 
-Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
