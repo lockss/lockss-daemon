@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.41 2003-11-13 01:41:54 clairegriffin Exp $
+ * $Id: BaseArchivalUnit.java,v 1.42 2003-12-11 22:40:52 eaalto Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ import java.text.SimpleDateFormat;
 import java.io.*;
 import java.net.*;
 import org.lockss.daemon.Configuration.*;
+import org.lockss.filter.*;
 
 /**
  * Abstract base class for ArchivalUnits.
@@ -421,27 +422,21 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     String matchstr = PERMISSION_STRING.toLowerCase();
     boolean wasWhiteSpace = false;  // last char was ws
 
+    Reader filteredReader = getCrawlPermissionFilter(reader);
+
     try {
       do {
-        ch = reader.read();
-        boolean chWS = Character.isWhitespace((char)ch);
+        ch = filteredReader.read();
         char nextChar = matchstr.charAt(p_index);
 
-        if ((nextChar == Character.toLowerCase((char)ch)) ||
-            (Character.isWhitespace(nextChar) && chWS)) {
+        if ((nextChar == Character.toLowerCase((char)ch))) {
           // match precisely, or any whitespace with any other
           if (++p_index == PERMISSION_STRING.length()) {
             return true;
           }
-          wasWhiteSpace = chWS;
         } else {
-          if ((wasWhiteSpace) && chWS) {
-            // don't reset if in between words and found extra whitespace
-          } else {
-            p_index = 0;
-          }
+          p_index = 0;
         }
-
       } while (ch != -1); // while not eof
     } catch (IOException ex) {
       logger.warning("Exception occured while checking for permission: "
@@ -449,6 +444,22 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     }
 
     return crawl_ok;
+  }
+
+  private Reader getCrawlPermissionFilter(Reader reader) {
+    // convert html tags to whitespace
+    Reader replaceReader = StringFilter.makeNestedFilter(reader,
+        new String[][] {
+        { "<br>", " " },
+        { "<p>", " " },
+        { "&nbsp;", " " }
+    },
+        true);
+
+    // condense whitespace
+    InputStream wsIs =
+        new WhiteSpaceFilter(new ReaderInputStream(replaceReader));
+    return new InputStreamReader(wsIs);
   }
 
   /**

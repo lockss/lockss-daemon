@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArchivalUnit.java,v 1.10 2003-11-07 04:12:00 clairegriffin Exp $
+ * $Id: TestBaseArchivalUnit.java,v 1.11 2003-12-11 22:40:52 eaalto Exp $
  */
 
 /*
@@ -206,6 +206,38 @@ public class TestBaseArchivalUnit extends LockssTestCase {
 
     reader = new StringReader(testStr);
     assertFalse(mbau.checkCrawlPermission(reader));
+  }
+
+  public void testCheckCrawlPermissionWithHtml() {
+    int firstWS = BaseArchivalUnit.PERMISSION_STRING.indexOf(' ');
+    if (firstWS <=0) {
+      fail("No spaces in permission string, or starts with space");
+    }
+
+    String subStr1 = BaseArchivalUnit.PERMISSION_STRING.substring(0, firstWS);
+    String subStr2 = BaseArchivalUnit.PERMISSION_STRING.substring(firstWS+1);
+
+    // single
+    StringBuffer sb = new StringBuffer("laa-dee-dah-LOCK-KCOL\n\n");
+    sb.append(subStr1);
+    sb.append("<br>");
+    sb.append(subStr2);
+    sb.append("\n\nTheEnd!");
+    String testStr = sb.toString();
+
+    Reader reader = new StringReader(testStr);
+    assertTrue(mbau.checkCrawlPermission(reader));
+
+    // multiple, with mixed case
+    sb = new StringBuffer("laa-dee-dah-LOCK-KCOL\n\n");
+    sb.append(subStr1);
+    sb.append("<BR>&nbsp;<p>");
+    sb.append(subStr2);
+    sb.append("\n\nTheEnd!");
+    testStr = sb.toString();
+
+    reader = new StringReader(testStr);
+    assertTrue(mbau.checkCrawlPermission(reader));
   }
 
   public static void main(String[] argv) {
