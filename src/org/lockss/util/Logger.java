@@ -1,4 +1,8 @@
 /*
+ * $Id: Logger.java,v 1.3 2002-08-31 06:52:49 tal Exp $
+ */
+
+/*
 
 Copyright (c) 2000-2002 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -30,253 +34,352 @@ package org.lockss.util;
 import java.util.*;
 import java.io.*;
 import java.net.*;
-
-//import java.text.DateFormat;
-
+import org.lockss.daemon.*;
 
 /**
- * This is a flexible logging class which will be used for all error handling
- * in the LOCKSS daemon. 
- *
- * The target of logging is abstracted away, so seperate classes can be written
- * to log to STDERR, mail, or syslog
+ * <code>Logger</code> provides message logging functions.
+ * All logging is done via a <code>Logger</code> instance obtained from
+ * <code>Logger.getLogger()</code>.  A message is output if its severity
+ * level is at least as great as the minimum severity level set in the
+ * log instance.  A log's minimum severity can be set with
+ * <code>setLevel()</code>, or with the configuration parameter
+ * <tt>org.lockss.log.level.<i>log-name</i></tt>.
+ * Output is sent to possibly many targets - see <code>addTarget()</code>
  */
-
 public class Logger {
 
-  public static final String CRITICAL = "critical";
-  public static final String ERROR = "error";
-  public static final String WARNING = "warning";
-  public static final String INFO = "info";
-  public static final String DEBUG = "debug";
-  private static final String[] severityStrings = {
-    CRITICAL,
-    ERROR,
-    WARNING,
-    INFO,
-    DEBUG
+  /** Critical errors, need immediate attention */
+  public static final int LEVEL_CRITICAL = 1;
+  /** Errors, system nay not operate correctly, but won't damage anything */
+  public static final int LEVEL_ERROR = 2;
+  /** Warnings are for conditions that don't prevent the system from
+      continuing to run. */
+  public static final int LEVEL_WARNING = 3;
+  /** Informative messages. */
+  public static final int LEVEL_INFO = 4;
+  /** Debugging messages. */
+  public static final int LEVEL_DEBUG = 5;
+
+  // Mapping between numeric level and string
+  static LevelDescr levelDescrs[] = {
+    new LevelDescr(LEVEL_CRITICAL, "Critical"),
+    new LevelDescr(LEVEL_ERROR, "Error"),
+    new LevelDescr(LEVEL_WARNING, "Warning"),
+    new LevelDescr(LEVEL_INFO, "Info"),
+    new LevelDescr(LEVEL_DEBUG, "Debug"),
   };
-  private static final String DEFAULT_OUTPUT_LEVEL = WARNING;
-  private static final String CLASS_LOG_LEVEL_PROP_STUB =
-    "org.lockss.log.level.";
-  private static final String GLOBAL_OUTPUT_LEVEL_PROP = 
-    "org.lockss.log.level.default";
 
-  private static String globalDisplayLevel = null;
+  // Default log level if config parameter not set.
+  private static final int DEFAULT_LEVEL = LEVEL_INFO;
 
-  private static Vector targets;
+  static final String PREFIX = Configuration.PREFIX + "log.";
 
-  //instance variables
-  private String callerId;
-  private String logLevel;
+  private static final Map logs = new HashMap();
+  private static Vector targets = new Vector();
+
+  private static boolean configHandlerRegistered = false;
+
+  private int level;			// this log's level
+  private String name;			// this log's name
   
-
-
-
   static {
-    targets = new Vector();
-    loadProps();
-    addTarget(new StdErrTarget()); //XXX this should go elsewhere
+    // until we get configured, output to default target
+    defaultTarget();
+  }
+
+  /** Constructor not intended for outside use - not private only so
+   * test classes can use it
+   */
+  Logger(int level, String name) {
+    this.level = level;
+    this.name = name;
   }
 
   /**
-   * Add a target object to the logger.  Targets take a log message and 
-   * write it to a form of output (stderr, a file, syslog, etc)
-   *
-   * @param target target object to add
+   * Logger factory.  Return the unique instance
+   * of <code>Logger</code> with the given name, creating it if necessary.
+   * @param name identifies the log instance, appears in output
    */
-  public static void addTarget(LogTarget target){
+  public static Logger getLogger(String name) {
+    // Ick.  But can't call this until Configuration class is fully loaded
+    if (!configHandlerRegistered) {
+      registerConfigCallback();
+      configHandlerRegistered = true;
+    }
+    if (name == null) {
+      name = genName();
+    }
+    return getLogger(name, getConfiguredLevel(name));
+  }
+
+  /**
+   * Logger factory.  Return the unique instance
+   * of <code>Logger</code> with the given name, creating it if necessary.
+   * This is here primarily so <Conde>Configuration</code> can create a
+   * log without being invoked recursively, which causes its class
+   * initialization to not complete correctly.
+   * @param name identifies the log instance, appears in output
+   * @param level the initial log level (<code>Logger.LEVEL_XXX</code>).
+   */
+  public static Logger getLogger(String name, int level) {
+    // This method MUST NOT make any reference to Configuration !!
+    if (name == null) {
+      name = genName();
+    }
+    Logger l = (Logger)logs.get(name);
+    if (l == null) {
+      l = new Logger(level, name);
+      logs.put(name, l);
+    }
+    return l;
+  }
+
+  /** Get the log level for the given log name from the configuration.
+   */
+  static int getConfiguredLevel(String name) {
+    String levelName =
+      Configuration.getParam(PREFIX + name + ".level",
+			     Configuration.getParam(PREFIX + "default.level"));
+    int level = 0;
+    try {
+      level = levelOf(levelName);
+    } catch (IllegalArgumentException e) {
+      level = DEFAULT_LEVEL;
+    }
+    return level;
+  }
+
+  static int uncnt = 0;
+  static String genName() {
+    return "Unnamed" + ++uncnt;
+  }
+
+  static Vector levelNames = null;
+
+  // Make vector for fast level -> name lookup
+  private static void initLevelNames() {
+    levelNames = new Vector();
+    for (int ix = 0; ix < levelDescrs.length; ix++) {
+      LevelDescr l = levelDescrs[ix];
+      if (levelNames.size() < l.level + 1) {
+	levelNames.setSize(l.level + 1);
+      }
+      levelNames.set(l.level, l.name);
+    }
+  }
+
+  /** Return numeric log level (<code>Logger.LEVEL_XXX</code>) for given name.
+   */
+  static int levelOf(String name) {
+    for (int ix = 0; ix < levelDescrs.length; ix++) {
+      LevelDescr l = levelDescrs[ix];
+      if (l.name.equalsIgnoreCase(name)) {
+	return l.level;
+      }
+    }
+    throw new IllegalArgumentException("Log level not found: " + name);
+  }
+
+  /** Return name of given log level (<code>Logger.LEVEL_XXX</code>).
+   */
+  public static String nameOf(int level) {
+    if (levelNames == null) {
+      initLevelNames();
+    }
+    String name = null;
+    if (level >= 0 && level < levelNames.size()) {
+      name = (String)levelNames.get(level);
+    }
+    if (name == null) {
+      name = "Unknown";
+    }
+    return name;
+  }
+
+  /**
+   * Set a single output target for all loggers.
+   * @param target object that implements <code>LogTarget</code> interface.
+   */
+  static void setTarget(LogTarget target) {
+    targets.clear();
+    addTarget(target);
+  }
+
+  /**
+   * Set the default output target for all loggers.  Used by unit tests
+   * to reset after tests.
+   */
+  static void defaultTarget() {
+    setTarget(new StdErrTarget());
+  }
+
+  /**
+   * Add an output target to all loggers.
+   * @param target instance of <code>LogTarget</code> implementation.
+   */
+  public static void addTarget(LogTarget target) {
     targets.addElement(target);
   }
 
-  
-  /**
-   * Compares the two severity strings, and tells if <b>level</b> is greater
-   * or equal to <b>threshold</b>
-   *
-   * @param level string representing a severity that we want to check 
-   * against <b>threshold</b>
-   * @param threshold severity string which <b>level</b> is compared to
-   * @returns <b>true</b> if <b>level's</b> severity is above <b>threshold's</b>
-   * <b>false</b> otherwise
-   */
-  public static boolean isLevelAboveThreshold(String level, String threshold){
-    return (getLevel(level) <= getLevel(threshold));
-  }
-
-  private static final int getLevel(String name) {
-    for (int ix = 0; ix < severityStrings.length; ix++) {
-      if (severityStrings[ix].equalsIgnoreCase(name)) {
-	return ix;
-      }
-    }
-    throw new IllegalArgumentException("Unknown log level: " + name);
-  }
-
-  /**
-   * The following 16 functions are of the form
-   * <severity>(String base, String msg[, Exception e])
-   * Each of then logs base, msg and optionally e in syslog at severity level <severity>
-   */
-  public static void critical(String base, String msg){
-    log(base, msg, null, CRITICAL);
-  }
-
-  public static void critical(String base, String msg, Exception e){
-    log(base, msg, e, CRITICAL);
-  }
-
-  public static void error(String base, String msg){
-    log(base, msg, null, ERROR);
-  }
-
-  public static void error(String base, String msg, Exception e){
-    log(base, msg, e, ERROR);
-  }
-
-  public static void warning(String base, String msg){
-    log(base, msg, null, WARNING);
-  }
-
-  public static void warning(String base, String msg, Exception e){
-    log(base, msg, e, WARNING);
-  }
-  public static void info(String base, String msg){
-    log(base, msg, null, INFO);
-  }
-
-  public static void info(String base, String msg, Exception e){
-    log(base, msg, e, INFO);
-  }
-
-  public static void debug(String base, String msg){
-    log(base, msg, null, DEBUG);
-  }
-
-  public static void debug(String base, String msg, Exception e){
-    log(base, msg, e, DEBUG);
-  }
-
-  private static void log(String base, String msg, 
-			  Exception e, String severity) {
-    log(base, msg, e, severity, globalDisplayLevel);
-  }
-  private static void log(String base, String msg, 
-			  Exception e, String severity,
-			  String logLevel) {
-    writeMsg(base, msg + stackTraceString(e), severity, logLevel);
-  }
-
-  
   //private
 
-  /**
-   * Loads the global display level from system properties.  
-   * This is public so that other classes can refresh the logging level
-   * XXX think about this
-   */
-  public static void loadProps() {
-    globalDisplayLevel = System.getProperty(GLOBAL_OUTPUT_LEVEL_PROP,
-					    DEFAULT_OUTPUT_LEVEL);
-  }
-
-  /**
-   * Translate an exception's stack trace to a string.
+  /** Translate an exception's stack trace to a string.
    */
   private static String stackTraceString(Exception exp) {
-    if (exp==null)
-      return "";
     StringWriter sw = new StringWriter();
     PrintWriter pw = new PrintWriter(sw);
-    
     exp.printStackTrace(pw);
-    return "\n"+sw.toString();
+    return sw.toString();
   }
 
-  /**
-   * Translate severity to a string.
+  /** Register callback to reset log levels when config changes
    */
-  private static String severityString(int severity) {
-    if (severity >= 0 && severity <= severityStrings.length) {
-      return severityStrings[severity];
-    } else {
-      return "Severity " + severity;
+  private static void registerConfigCallback() {
+    Configuration.registerConfigurationCallback(new ConfigurationCallback() {
+	public void configurationChanged(Configuration oldConfig,
+					 Configuration newConfig,
+					 Set changedKeys) {
+	  setConfiguredLogLevels();
+	}
+      });
+  }
+
+  /** Set log level of all logs to the currently configured value
+   */
+  private static void setConfiguredLogLevels() {
+    Iterator iter = logs.values().iterator();
+    while (iter.hasNext()) {
+      Logger l = (Logger)iter.next();
+      l.setLevel(getConfiguredLevel(l.name));
     }
   }
 
-  private synchronized static void writeMsg(String callerId, String msg, 
-					    String severity, String logLevel) {
-    Enumeration enum = targets.elements();
-    if (isLevelAboveThreshold(severity, logLevel)){
-      while (enum.hasMoreElements()){
-	LogTarget curTarget = (LogTarget) enum.nextElement();
-	curTarget.handleMessage(callerId, msg, severity);
+  /**
+   * Set minimum severity level logged by this log
+   * @param level <code>Logger.LEVEL_XXX</code>
+   */
+  void setLevel(int level) {
+    if (this.level != level) {
+//        info("Changing log level to " + nameOf(level));
+      this.level = level;
+    }
+  }
+
+  /**
+   * Return true if this log is logging at or above specified level
+   * Use this in cases where generating the log message is expensive,
+   * to avoid the overhead when the message will not be output.
+   * @param level (<code>Logger.LEVEL_XXX</code>)
+   */
+  boolean isLevel(int level) {
+    return this.level >= level;
+  }
+
+  /**
+   * Return true if this log is logging at or above specified level
+   * @param level name
+   */
+  boolean isLevel(String level) {
+    return this.level >= levelOf(level);
+  }
+
+  /**
+   * Log a message with the specified log level
+   * @param level log level (<code>Logger.LEVEL_XXX</code>)
+   * @mag log message
+   * @param e <code>Exception</code>
+   */
+  public void log(int level, String msg, Exception e) {
+    if (isLevel(level)) {
+      StringBuffer sb = new StringBuffer();
+      sb.append(name);
+      sb.append(": ");
+      sb.append(msg);
+      if (e != null) {
+	sb.append("\n");
+	sb.append(stackTraceString(e));
       }
+      writeMsg(level, sb.toString());
     }
   }
 
   /**
-   * Return a new logger object
-   *
-   * @param callerId string identifying the object which is going to 
-   * use this logger
-   * @return a new logger object, which a log level equal to the value in the
-   * system property org.lockss.log.level.<callerId> or the default log level 
-   * if that isn't specified.
+   * Log a message with the specified log level
+   * @param level log level (<code>Logger.LEVEL_XXX</code>)
+   * @mag log message
    */
-  public static Logger getLogger(String callerId){
-    if (callerId == null){
-      return null;
+  public void log(int level, String msg) {
+    log(level, msg, null);
+  }
+
+  private void writeMsg(int level, String msg) {
+    Iterator iter = targets.iterator();
+    while (iter.hasNext()) {
+      LogTarget curTarget = (LogTarget)iter.next();
+      curTarget.handleMessage(this, level, msg);
     }
-    String logLevel = 
-      System.getProperty(CLASS_LOG_LEVEL_PROP_STUB+callerId,
-			 globalDisplayLevel);
-    return new Logger(callerId, logLevel);
   }
 
-  //instance methods
-  private Logger(String callerId, String logLevel){
-    this.callerId = callerId;
-    this.logLevel = logLevel;
+  // log instance methods
+  /** Log a critical message */
+  public void critical(String msg) {
+    log(LEVEL_CRITICAL, msg, null);
   }
 
-  public void critical(String msg){
-    log(callerId, msg, null, CRITICAL, logLevel);
+  /** Log a critical message with an exception backtrace */
+  public void critical(String msg, Exception e) {
+    log(LEVEL_CRITICAL, msg, e);
   }
 
-  public void critical(String msg, Exception e){
-    log(callerId, msg, e, CRITICAL, logLevel);
+  /** Log an error message */
+  public void error(String msg) {
+    log(LEVEL_ERROR, msg, null);
   }
 
-  public void error(String msg){
-    log(callerId, msg, null, ERROR, logLevel);
+  /** Log an error message with an exception backtrace */
+  public void error(String msg, Exception e) {
+    log(LEVEL_ERROR, msg, e);
   }
 
-  public void error(String msg, Exception e){
-    log(callerId, msg, e, ERROR, logLevel);
+  /** Log a warning message */
+  public void warning(String msg) {
+    log(LEVEL_WARNING, msg, null);
   }
 
-  public void warning(String msg){
-    log(callerId, msg, null, WARNING, logLevel);
+  /** Log a warning message with an exception backtrace */
+  public void warning(String msg, Exception e) {
+    log(LEVEL_WARNING, msg, e);
   }
 
-  public void warning(String msg, Exception e){
-    log(callerId, msg, e, WARNING, logLevel);
-  }
-  public void info(String msg){
-    log(callerId, msg, null, INFO, logLevel);
+  /** Log an information message */
+  public void info(String msg) {
+    log(LEVEL_INFO, msg, null);
   }
 
-  public void info(String msg, Exception e){
-    log(callerId, msg, e, INFO, logLevel);
+  /** Log an information message with an exception backtrace */
+  public void info(String msg, Exception e) {
+    log(LEVEL_INFO, msg, e);
   }
 
-  public void debug(String msg){
-    log(callerId, msg, null, DEBUG, logLevel);
+  /** Log a debug message */
+  public void debug(String msg) {
+    log(LEVEL_DEBUG, msg, null);
   }
 
-  public void debug(String msg, Exception e){
-    log(callerId, msg, e, DEBUG, logLevel);
+  /** Log a debug message with an exception backtrace */
+  public void debug(String msg, Exception e) {
+    log(LEVEL_DEBUG, msg, e);
+  }
+
+  // log level descriptor class
+  private static class LevelDescr {
+    int level;
+    String name;
+
+    LevelDescr(int level, String name) {
+    this.level = level;
+    this.name = name;
+    }
   }
 
 }
