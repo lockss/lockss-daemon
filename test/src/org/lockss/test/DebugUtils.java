@@ -1,5 +1,5 @@
 /*
- * $Id: DebugUtils.java,v 1.1 2002-12-21 21:10:16 tal Exp $
+ * $Id: DebugUtils.java,v 1.2 2002-12-30 20:35:12 tal Exp $
  */
 
 /*
@@ -37,77 +37,193 @@ import java.io.*;
 import java.net.*;
 import org.lockss.util.*;
 
+/** Debugging utilities */
 public class DebugUtils {
   protected static Logger log = Logger.getLogger("DebugUtils");
-  private static Runtime rt = Runtime.getRuntime();
 
-//   static {
-//     System.loadLibrary("DebugUtils");
-//   }
+  static DebugUtils instance;
 
-//   public static native int getPid();
-
-  public static int getPid() {
-    int pid = getLinuxPid();
-    System.err.println("PID = " + pid);
-    return pid;
-  }
-
-  public static int getLinuxPid() {
-    try {
-    Reader r = new FileReader(new File("/proc/self/stat"));
-    char[] buf = new char[1000];
-    if (r.read(buf) < 0) {
-      throw new RuntimeException("EOF reading /proc/self/stat");
+  /** Return the singleton DebugUtils instance */
+  // no harm if happens in two threads, so not synchronized
+  public static DebugUtils getInstance() {
+    if (instance == null) {
+      String os = System.getProperty("os.name");
+      if ("linux".equalsIgnoreCase(os)) {
+	instance = new Linux();
+      }
+      if (instance == null) {
+	log.warning("No OS-specific DebugUtils for '" + os + "'");
+	instance = new DebugUtils();
+      }
     }
-    Vector v = breakString(new String(buf), ' ');
-    String ppid = (String)v.elementAt(3);
-    return Integer.parseInt(ppid);
-    } catch (FileNotFoundException e) {
-      throw new RuntimeException("Can't open /proc/self/stat");
-    } catch (IOException e) {
-      throw new RuntimeException("Error reading /proc/self/stat");
-    }      
+    return instance;
   }
 
-  public static void threadDump() {
-    int pid = getPid();
+
+  /** Return the PID of the executing process, if possible.
+   * @return PID of executing process, which is not necessarily the top
+   * java process.
+   * @throws UnsupportedException if unsupported on current platform
+   */
+  public int getPid() throws UnsupportedException {
+    throw new UnsupportedException("No OS-independent way to find PID");
+  }
+
+  /** Return the PID of the top process of this JVM, if possible.
+   * @return PID of top java process, suitable for killing or sending
+   * SIGQUIT, etc.
+   * @throws UnsupportedException if unsupported on current platform
+   */
+  public int getMainPid() throws UnsupportedException {
+    throw new UnsupportedException("No OS-independent way to find main PID");
+  }
+
+  /** Request a thread dump of this JVM.  Sump is output to JVM's stderr,
+   * which may not be the same as System.err.  If unsupported on this
+   * platform, logs an info message. */
+  public void threadDump() {
+    int pid;
     try {
-      Process p = rt.exec("kill -QUIT " + pid);
+      pid = getMainPid();
+    } catch (UnsupportedException e) {
+      log.info("Thread dump requested, not supported in this environment", e);
+      return;
+    }
+    String cmd = "kill -QUIT " + pid;
+    try {
+      Process p = rt().exec(cmd);
+//     InputStream is = p.getInputStream();
+//     org.mortbay.util.IO.copy(is, System.out);
       p.waitFor();
     } catch (IOException e) {
-      log.error("Couldn't exec 'kill -QUIT'", e);
+      log.error("Couldn't exec '" + cmd + "'", e);
     } catch (InterruptedException e) {
       log.error("waitFor()", e);
     }
-//     InputStream is = p.getInputStream();
-//     org.mortbay.util.IO.copy(is, System.out);
   }
 
-  /** Break a string at a separator char. */
-  public static Vector breakString(String s, char sep, int maxLines) {
-    Vector res = new Vector();
-    if (s == null) {
-      return res;
+  static Runtime rt() {
+    return Runtime.getRuntime();
+  }
+
+  /* Linux implementation of platform-specific code */
+  public static class Linux extends DebugUtils {
+    // offsets into /proc/<n>/stat
+    static final int STAT_OFFSET_PID = 0;
+    static final int STAT_OFFSET_PPID = 3;
+    static final int STAT_OFFSET_FLAGS = 8;
+    // flag bits
+    static final int PF_FORKNOEXEC = 0x40;	// forked but didn't exec
+
+    /** Get PID of current process */
+    public int getPid() throws UnsupportedException {
+      return getProcPid();
     }
-    if (maxLines <= 0) {
-      maxLines = Integer.MAX_VALUE;
+
+    /** Get PID of main java process */
+    public int getMainPid() throws UnsupportedException {
+      String pid;
+      String ppid = "self";
+      int flags;
+      do {
+	Vector v = getProcStats(ppid);
+	pid = (String)v.elementAt(STAT_OFFSET_PID);
+	ppid = (String)v.elementAt(STAT_OFFSET_PPID);
+	flags = getInt(v, STAT_OFFSET_FLAGS);
+//  	log.debug("getMainPid: pid = " + pid + ", ppid = " + ppid +
+//  		  ", flags = 0x" + Integer.toHexString(flags));
+      } while ((flags & PF_FORKNOEXEC) != 0);
+      return Integer.parseInt(pid);
     }
-    for (int pos = 0; maxLines > 0; maxLines-- ) {
-      int end = s.indexOf(sep, pos);
-      if (end == -1) {
-	if (pos >= s.length()) {
-	  break;
-	}
-	end = s.length();
+
+    /** Get PID from linux /proc/self/stat */
+    private int getProcPid() throws UnsupportedException {
+      Vector v = getMyProcStats();
+      String pid = (String)v.elementAt(STAT_OFFSET_PID);
+      return Integer.parseInt(pid);
+    }
+
+    // return int from string in vector
+    private int getInt(Vector v, int pos) {
+      String s = (String)v.elementAt(pos);
+      return Integer.parseInt(s);
+    }
+
+    /** Get stat vector of this java process from /proc/self/stat .
+   * Read the stat file with java code so the executing process (self) is
+   * java. */
+    Vector getMyProcStats() throws UnsupportedException {
+      return getProcStats("self");
+    }
+
+    /** Get stat vector for specified process from /proc/<n>/stat .
+     * @param pid the process for which to get stats, or "self"
+     * @return vector of strings of values in stat file
+     */
+    public Vector getProcStats(String pid) throws UnsupportedException {
+      String filename = "/proc/" + pid + "/stat";
+      try {
+	Reader r = new FileReader(new File(filename));
+	String s = StringUtil.fromReader(r);
+	Vector v = StringUtil.breakAt(s, ' ');
+	return v;
+      } catch (FileNotFoundException e) {
+	throw new UnsupportedException("Can't open " + filename, e);
+      } catch (IOException e) {
+	throw new UnsupportedException("Error reading " + filename, e);
+      }      
+    }
+
+    /** Get vector of stat vectors for all processes from /proc/<n>/stat .
+     * Read the stat files with a shell with java code so the executing
+     * process (self) is java. */
+    Vector getAllProcStats() {
+      String[] cmd = {"sh",  "-c",  "cat /proc/[0-9]*/stat"};
+      Process p;
+      try {
+	p = rt().exec(cmd);
+	//        p.waitFor();
+      } catch (IOException e) {
+	log.error("Couldn't exec '" + cmd + "'", e);
+	return null;
+	//      } catch (InterruptedException e) {
+	//        log.error("waitFor()", e);
+	//        return null;
       }
-      res.addElement((Object) s.substring(pos, end));
-      pos = end + 1;
+      Reader r =
+	new InputStreamReader(new BufferedInputStream(p.getInputStream()));
+      String s;
+      try {
+	s = StringUtil.fromReader(r);
+      } catch (IOException e) {
+	log.error("Couldn't read from '" + cmd + "'", e);
+	return null;
+      }
+      System.out.println(s);
+      System.out.println(StringUtil.breakAt(s, '\n').size());
+      return StringUtil.breakAt(s, '\n');
     }
-    return res;
   }
 
-  public static Vector breakString(String s, char sep) {
-    return breakString(s, sep, 0);
+// old, unused
+//   static {
+//     System.loadLibrary("DebugUtils");
+//   }
+//   public static native int getPid();
+
+  /** Exception thrown if no implementation is available for the current
+   * platform */
+  public class UnsupportedException extends Exception {
+    Throwable e;
+
+    public UnsupportedException(String msg) {
+      super(msg);
+    }
+
+    public UnsupportedException(String msg, Throwable e) {
+      super(msg);
+      this.e = e;
+    }
+
   }
 }
