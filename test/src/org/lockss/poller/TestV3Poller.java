@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.1.2.5 2004-10-07 18:22:30 dshr Exp $
+ * $Id: TestV3Poller.java,v 1.1.2.6 2004-10-07 22:14:48 dshr Exp $
  */
 
 /*
@@ -228,9 +228,48 @@ public class TestV3Poller extends LockssTestCase {
 		pollmanager.isPollClosed(key));
     assertFalse("Poll " + poll + " should not be suspended",
 		pollmanager.isPollSuspended(key));
+    //  Eventually go to WaitingVote
     TimeBase.step(500);
     assertEquals("Poll " + poll + " should be in WaitingPollProof",
 		 V3Poller.STATE_WAITING_VOTE,
+		 poll.getPollState());
+    assertTrue("Poll " + poll + " should be active",
+	       pollmanager.isPollActive(key));
+    assertFalse("Poll " + poll + " should not be closed",
+		pollmanager.isPollClosed(key));
+    assertFalse("Poll " + poll + " should not be suspended",
+		pollmanager.isPollSuspended(key));
+
+    //  Receive a Vote message, go to SendingRepairReq
+    try {
+      pollmanager.handleIncomingMessage(testV3msg[3]);
+    } catch (IOException ex) {
+      fail("Message " + testV3msg[3].toString() + " threw " + ex);
+    }
+    assertEquals("Poll " + poll + " should be in SendingRepairReq",
+		 V3Poller.STATE_SENDING_REPAIR_REQ,
+		 poll.getPollState());
+    assertTrue("Poll " + poll + " should be active",
+	       pollmanager.isPollActive(key));
+    assertFalse("Poll " + poll + " should not be closed",
+		pollmanager.isPollClosed(key));
+    assertFalse("Poll " + poll + " should not be suspended",
+		pollmanager.isPollSuspended(key));
+    TimeBase.step(500);
+    assertEquals("Poll " + poll + " should be in SendingPollProof",
+		 V3Poller.STATE_SENDING_REPAIR_REQ,
+		 poll.getPollState());
+    assertTrue("Poll " + poll + " should be active",
+	       pollmanager.isPollActive(key));
+    assertFalse("Poll " + poll + " should not be closed",
+		pollmanager.isPollClosed(key));
+    assertFalse("Poll " + poll + " should not be suspended",
+		pollmanager.isPollSuspended(key));
+    //  Eventually go to SendingReceipt
+    TimeBase.step(500);
+    TimeBase.step(500);
+    assertEquals("Poll " + poll + " should be in SendingReceipt",
+		 V3Poller.STATE_SENDING_RECEIPT,
 		 poll.getPollState());
     assertTrue("Poll " + poll + " should be active",
 	       pollmanager.isPollActive(key));

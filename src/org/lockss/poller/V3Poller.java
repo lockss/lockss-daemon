@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.1.2.4 2004-10-07 02:17:05 dshr Exp $
+ * $Id: V3Poller.java,v 1.1.2.5 2004-10-07 22:14:48 dshr Exp $
  */
 
 /*
@@ -76,6 +76,7 @@ public class V3Poller extends V3Poll {
   private int m_state;
   private EffortService theEffortService = null;
   private byte[] m_challenge;
+  private EffortService.Proof m_repairEffort = null;
 
   static Logger log=Logger.getLogger("V3Poller");
 
@@ -218,6 +219,39 @@ public class V3Poller extends V3Poll {
   }
 
   protected void doVoteMessage(V3LcapMessage msg) {
+    if (msg.getOpcode() != V3LcapMessage.MSG_VOTE) {
+      log.debug("Expect " + V3LcapMessage.MSG_VOTE + " got " + msg.getOpcode());
+      log.warning("Expecting a Vote but got: " + msg.toString());
+      m_pollstate = ERR_IO; // XXX choose better
+      m_state = STATE_FINALIZING;
+      stopPoll();
+      return;
+    }
+    //  Verify the effort in the Vote message
+    EffortService.ProofCallback cb = new VoteEffortCallback(m_pollmanager);
+    EffortService.Proof ep = null;
+    EffortService es = null;
+    if (false) {
+      // XXX
+      ep = msg.getEffortProof();
+      es = ep.getEffortService();
+    } else {
+      // XXX
+      es = theEffortService;
+      ep = es.makeProof();
+    }
+    Deadline timer = msg.getDeadline();
+    Serializable cookie = msg.getKey();
+    if (es.verifyProof(ep, timer, cb, cookie)) {
+      // effort verification for Poll successfuly scheduled
+      log.debug("Scheduled verification callback in " +
+		timer.getRemainingTime() + " for " + ((String)cookie));
+      m_state = STATE_SENDING_REPAIR_REQ;
+    } else {
+      log.warning("could not schedule effort verification " + ep.toString() +
+		  " for " + msg.toString());
+      m_state = STATE_FINALIZING;
+    }
     // XXX
   }
 
@@ -393,6 +427,153 @@ public class V3Poller extends V3Poll {
 	m_state = STATE_FINALIZING;
 	stopPoll();
       }
+      return;
+    }
+  }
+
+  class VoteEffortCallback implements EffortService.ProofCallback {
+    private PollManager pollMgr = null;
+    VoteEffortCallback(PollManager pm) {
+      pollMgr = pm;
+    }
+    /**
+     * Called to indicate generation of a proof of effort for
+     * the PollProof message is complete.
+     * @param ep the EffortProof in question
+     * @param cookie used to disambiguate callbacks
+     * @param e the exception that caused the effort proof to fail
+     */
+    public void generationFinished(EffortService.Proof ep,
+				   Deadline timer,
+				   Serializable cookie,
+				   Exception e) {
+      if (e != null) {
+	log.debug("VoteEffortProofCallback: " + ((String) cookie) +
+		  " threw " + e);
+	m_state = STATE_FINALIZING;
+	m_pollstate = ERR_IO; // XXX choose better
+	stopPoll();
+      } else {
+	log.debug("VoteEffortProofCallback: " + ((String) cookie));
+	m_repairEffort = ep;
+	// Now verify the vote
+	EffortService es = ep.getEffortService();
+	EffortService.Vote vote = null;
+	if (false) {
+	  //  XXX vote = msg.getVote();
+	} else {
+	  vote = es.makeVote();
+	}
+	EffortService.VoteCallback cb =
+	  new VoteVerificationCallback(m_pollmanager);
+	if (es.verifyVote(vote, timer, cb, cookie)) {
+	log.debug("Scheduled vote verification callback in " +
+		  timer.getRemainingTime() + " for " + ((String)cookie));
+	} else {
+	  log.warning("could not schedule vote verification generation " +
+		      vote.toString() + " for " + cookie);
+	  m_pollstate = ERR_IO; // XXX choose better
+	  m_state = STATE_FINALIZING;
+	  stopPoll();
+	  // XXX
+	}
+      }
+    }
+
+    /**
+     * Called to indicate verification of a proof of effort is complete.
+     * @param ep the <code>EffortService.Proof</code> in question
+     * @param cookie used to disambiguate callbacks
+     * @param e the exception that caused the effort proof to fail
+     */
+    public void verificationFinished(EffortService.Proof ep,
+				     Deadline timer,
+				     Serializable cookie,
+				     Exception e) {
+      if (e != null) {
+	log.debug("Vote effort verification threw: " + e);
+	m_pollstate = ERR_IO; // XXX choose better
+	m_state = STATE_FINALIZING;
+	stopPoll();
+	return;
+      }
+      if (!ep.isVerified()) {
+	log.debug("Vote effort verification failed");
+	m_pollstate = ERR_IO; // XXX choose better
+	m_state = STATE_FINALIZING;
+	stopPoll();
+	return;
+      }
+      //  Vote effort verified,  now generate effort for repair request
+      log.debug("Repair req effort verification succeeds with " +
+		timer.getRemainingTime() + " to go");
+      EffortService es = ep.getEffortService();
+      //  XXX should get spec for proof from message
+      EffortService.Proof pollProof = es.makeProof();
+      if (es.proveEffort(pollProof, timer, this, cookie)) {
+	log.debug("Scheduled generation callback in " +
+		  timer.getRemainingTime() + " for " + ((String)cookie));
+      } else {
+	log.warning("could not schedule effort generation " +
+		    pollProof.toString() + " for " + cookie);
+	m_pollstate = ERR_IO; // XXX choose better
+	m_state = STATE_FINALIZING;
+	stopPoll();
+      }
+      return;
+    }
+  }
+
+  class VoteVerificationCallback implements EffortService.VoteCallback {
+    private PollManager pollMgr = null;
+    VoteVerificationCallback(PollManager pm) {
+      pollMgr = pm;
+    }
+    /**
+     * Called to indicate generation of a Vote for
+     * the Vote message is complete.
+     * @param ep the Vote in question
+     * @param cookie used to disambiguate callbacks
+     * @param e the exception that caused the effort proof to fail
+     */
+    public void generationFinished(EffortService.Vote vote,
+				   Deadline timer,
+				   Serializable cookie,
+				   Exception e) {
+      log.debug("VoteVerificationCallback: " + ((String) cookie) +
+		" threw " + e + " should not happen");
+      m_state = STATE_FINALIZING;
+      m_pollstate = ERR_IO; // XXX choose better
+      stopPoll();
+    }
+
+    /**
+     * Called to indicate verification of a vote is complete.
+     * @param ep the <code>EffortService.Vote</code> in question
+     * @param cookie used to disambiguate callbacks
+     * @param e the exception that caused the effort proof to fail
+     */
+    public void verificationFinished(EffortService.Vote vote,
+				     Deadline timer,
+				     Serializable cookie,
+				     Exception e) {
+      if (e != null) {
+	log.debug("Vote effort verification threw: " + e);
+	m_pollstate = ERR_IO; // XXX choose better
+	m_state = STATE_FINALIZING;
+	stopPoll();
+	return;
+      }
+      if (!vote.isValid()) {
+	log.debug("Vote effort verification failed");
+	m_pollstate = ERR_IO; // XXX choose better
+	m_state = STATE_FINALIZING;
+	stopPoll();
+	return;
+      }
+      log.debug("Vote: " + (String) cookie +
+		(vote.isAgreement() ? " " : " dis") + "agree");
+      m_state = STATE_SENDING_RECEIPT;
       return;
     }
   }
