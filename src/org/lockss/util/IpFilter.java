@@ -1,5 +1,5 @@
 /*
- * $Id: IpFilter.java,v 1.2 2003-06-20 22:34:53 claire Exp $
+ * $Id: IpFilter.java,v 1.3 2003-07-16 00:04:33 tlipkis Exp $
  */
 
 /*
@@ -159,36 +159,36 @@ public class IpFilter {
 	      if (n < 4) {
 		continue;
 	      } else {
-		throw new MalformedException("too many dots", s);
+		throw new MalformedException("Too many dots", s);
 	      }
 	    }
 	    if ("/".equals(tok)) {
 	      if (n < 4 || seenStar || !en.hasMoreTokens()) {
-		throw new MalformedException("illegal cidr notation", s);
+		throw new MalformedException("Illegal CIDR notation", s);
 	      }
 	      tok = en.nextToken();
 	      cidr = Integer.parseInt(tok);
 	      if (cidr < 0 || cidr > 32) {
-		throw new MalformedException("illegal cidr notation", s);
+		throw new MalformedException("Illegal CIDR notation", s);
 	      }
 	      if (en.hasMoreTokens()) {
-		throw new MalformedException("junk at end", s);
+		throw new MalformedException("Junk at end", s);
 	      }
 	    }
 	  }
 	}
       } catch (NumberFormatException e) {
-	throw new MalformedException("illegal number", s);
+	throw new MalformedException("Illegal number", s);
       }
       if (n != 4) {
-	throw new MalformedException("must have 4 bytes", s);
+	throw new MalformedException("Must have 4 bytes", s);
       }
       mask = (cidr == 32) ? -1 : -(1 << (32 - cidr));
       if (mask != -1 && !maskOk) {
-	throw new MalformedException("mask not allowed", s);
+	throw new MalformedException("Mask not allowed", s);
       }
       if ((addr & ~mask) != 0) {
-	throw new MalformedException("illegal cidr notation", s);
+	throw new MalformedException("Illegal CIDR notation", s);
       }
     }
 
@@ -245,8 +245,13 @@ public class IpFilter {
 
 
   public static class MalformedException extends Exception {
+    private String ip;
     public MalformedException (String msg, String ip) {
-      super(msg + ": \"" + ip + "\"");
+      super(msg);
+      this.ip = ip;
+    }
+    public String toString() {
+      return super.toString() +": \"" + ip + "\"";
     }
   }
 
