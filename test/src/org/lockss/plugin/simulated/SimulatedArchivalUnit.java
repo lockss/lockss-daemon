@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.41 2004-02-06 23:54:14 clairegriffin Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.42 2004-06-04 21:52:29 tlipkis Exp $
  */
 
 /*
@@ -70,6 +70,7 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
   private String fileRoot; //root directory for the generated content
   private SimulatedContentGenerator scgen;
   private String auId = StringUtil.gensym("SimAU_");
+  private String simRoot; //sim root dir returned by content generator
 
   Set toBeDamaged = new HashSet();
 
@@ -135,7 +136,7 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
    */
   public void generateContentTree() {
     if (!getContentGenerator().isContentTree()) {
-      getContentGenerator().generateContentTree();
+      simRoot = getContentGenerator().generateContentTree();
     }
   }
 
@@ -148,11 +149,16 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
     if (getContentGenerator().isContentTree()) {
       getContentGenerator().deleteContentTree();
     }
-    getContentGenerator().generateContentTree();
+    simRoot = getContentGenerator().generateContentTree();
   }
 
   public void alterContentTree() {
     //XXX alters in a repeatable manner
+  }
+
+  /** @return the top of the simulated content tree */
+  public String getSimRoot() {
+    return simRoot;
   }
 
   /**
@@ -176,6 +182,15 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
   public static String mapUrlToContentFileName(String url) {
     return StringUtil.replaceString(url, SIMULATED_URL_ROOT,
                                     SimulatedContentGenerator.ROOT_NAME);
+  }
+
+  /**
+   * Map a content file location to its url.
+   * @param filename the filename to map
+   * @return fileName the mapping result
+   */
+  public String mapContentFileNameToUrl(String filename) {
+    return StringUtil.replaceString(filename, simRoot, SIMULATED_URL_ROOT);
   }
 
   public List getNewContentCrawlUrls() {
