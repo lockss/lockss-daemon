@@ -1,5 +1,5 @@
 /*
- * $Id: TestIdentityManager.java,v 1.28 2004-09-20 14:20:40 dshr Exp $
+ * $Id: TestIdentityManager.java,v 1.29 2004-09-28 08:47:25 tlipkis Exp $
  */
 
 /*
@@ -504,6 +504,40 @@ public class TestIdentityManager extends LockssTestCase {
     assertEquals(expected, idmgr.getCachesToRepairFrom(mau1));
     } catch (UnknownHostException uhe) {
       fail(uhe.toString());
+    }
+  }
+
+  public void testIdentityAgreementEquals() {
+    IdentityManager.IdentityAgreement a1 = new MyIdentityAgreement("id1");
+    IdentityManager.IdentityAgreement a2 = new MyIdentityAgreement("id1");
+    IdentityManager.IdentityAgreement a3 = new MyIdentityAgreement("id3");
+    assertEquals(a1, a2);
+    assertNotEquals(a1, a3);
+    a1.setLastAgree(8);
+    assertNotEquals(a1, a2);
+    a2.setLastAgree(8);
+    assertEquals(a1, a2);
+    a1.setLastDisagree(12);
+    assertNotEquals(a1, a2);
+    a2.setLastDisagree(12);
+    assertEquals(a1, a2);
+  }    
+
+  public void testIdentityAgreementHash() {
+    IdentityManager.IdentityAgreement a1 = new MyIdentityAgreement("id1");
+    IdentityManager.IdentityAgreement a2 = new MyIdentityAgreement("id1");
+    assertEquals(a1.hashCode(), a2.hashCode());
+    a1.setLastAgree(8);
+    a2.setLastAgree(8);
+    a1.setLastDisagree(12);
+    a2.setLastDisagree(12);
+    assertEquals(a1.hashCode(), a2.hashCode());
+  }    
+
+  static class MyIdentityAgreement extends IdentityManager.IdentityAgreement {
+    MyIdentityAgreement(String id) {
+      super();
+      setId(id);
     }
   }
 

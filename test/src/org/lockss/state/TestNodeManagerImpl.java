@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.118 2004-09-23 02:35:22 dshr Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.119 2004-09-28 08:47:24 tlipkis Exp $
  */
 
 /*
@@ -80,13 +80,11 @@ public class TestNodeManagerImpl extends LockssTestCase {
     pollManager = new MockPollManager();
     theDaemon.setPollManager(pollManager);
     pollManager.initService(theDaemon);
-    pollManager.startService();
 
     log.debug("Starting the Identity Manager");
     idManager = new MockIdentityManager();
     theDaemon.setIdentityManager(idManager);
     idManager.initService(theDaemon);
-    idManager.startService();
     log.debug("Identity Manager started");
 
     // create au state so thread doesn't throw null pointers
@@ -95,9 +93,12 @@ public class TestNodeManagerImpl extends LockssTestCase {
     nodeManager = new NodeManagerImpl(mau);
     nodeManager.initService(theDaemon);
     historyRepo = HistoryRepositoryImpl.createNewHistoryRepository(mau);
-    historyRepo.startService();
     theDaemon.setHistoryRepository(historyRepo, mau);
     nodeManager.historyRepo = historyRepo;
+
+    historyRepo.startService();
+    idManager.startService();
+    pollManager.startService();
     nodeManager.startService();
 
     theDaemon.getHashService().startService();

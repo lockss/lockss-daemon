@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.190 2004-09-27 22:39:05 smorabito Exp $
+ * $Id: NodeManagerImpl.java,v 1.191 2004-09-28 08:47:26 tlipkis Exp $
  */
 
 /*
@@ -1566,14 +1566,7 @@ public class NodeManagerImpl
     CachedUrlSet newCus =
       plugin.makeCachedUrlSet(au, new RangeCachedUrlSetSpec(base, lwr, upr));
     PollSpec spec = new PollSpec(newCus, lwr, upr, Poll.CONTENT_POLL);
-    if (logger.isDebug2()) {
-      logger.debug2("Calling a content poll on " + spec);
-    }
-    if (!pollManager.callPoll(spec)) {
-      if (logger.isDebug2()) {
-	logger.debug2("Failed to call a content poll on " + spec);
-      }
-    }
+    callPoll(spec);
   }
 
   /**
@@ -1588,14 +1581,7 @@ public class NodeManagerImpl
       plugin.makeCachedUrlSet(au,
 			      new SingleNodeCachedUrlSetSpec(cus.getUrl()));
     PollSpec spec = new PollSpec(newCus, Poll.CONTENT_POLL);
-    if (logger.isDebug2()) {
-      logger.debug2("Calling a single node content poll on " + spec);
-    }
-    if (!pollManager.callPoll(spec)) {
-      if (logger.isDebug2()) {
-	logger.debug2("Failed to call single node content poll on " + spec);
-      }
-    }
+    callPoll(spec);
   }
 
   /**
@@ -1620,22 +1606,31 @@ public class NodeManagerImpl
   }
 
   /**
+   * Calls a poll with the given spec.
+   * @param spec PollSpec
+   */
+  private void callPoll(PollSpec spec) {
+    String type = Poll.PollName[spec.getPollType()];
+    if (logger.isDebug2()) {
+      logger.debug2("Calling a poll on " + spec);
+    }
+    if (!pollManager.callPoll(spec)) {
+      if (logger.isDebug2()) {
+	logger.debug2("Failed to call a poll on " + spec);
+      }
+    }
+  }
+
+  /**
    * Calls a name poll with the given spec.
    * @param spec PollSpec
    */
   private void callNamePoll(PollSpec spec) {
-    if (logger.isDebug2()) {
-      logger.debug2("Calling a name poll on " + spec);
-    }
     if (spec.getPollType() != Poll.NAME_POLL) {
       logger.error("callNamePoll on spec for " +
 		   Poll.PollName[spec.getPollType()]);
     }
-    if (!pollManager.callPoll(spec)) {
-      if (logger.isDebug2()) {
-	logger.debug2("Failed to call a name poll on " + spec);
-      }
-    }
+    callPoll(spec);
   }
 
   /**
@@ -1647,14 +1642,7 @@ public class NodeManagerImpl
       logger.error("Calling a content poll on spec for " +
 		   Poll.PollName[spec.getPollType()]);
     }
-    if (logger.isDebug2()) {
-      logger.debug2("Calling a content poll on " + spec);
-    }
-    if (!pollManager.callPoll(spec)) {
-      if (logger.isDebug2()) {
-        logger.debug2("Failed to call a content poll on " + spec);
-      }
-    }
+    callPoll(spec);
   }
 
   /**

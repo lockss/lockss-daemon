@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapIdentity.java,v 1.26 2004-09-20 14:20:40 dshr Exp $
+ * $Id: TestLcapIdentity.java,v 1.27 2004-09-28 08:47:25 tlipkis Exp $
  */
 
 /*
@@ -76,15 +76,15 @@ public class TestLcapIdentity extends LockssTestCase {
     ConfigurationUtil.
       setCurrentConfigFromUrlList(ListUtil.list(FileTestUtil.urlOfString(prop)));
     idmgr = daemon.getIdentityManager();
+    testID = idmgr.stringToPeerIdentity(fakeIdString);
     try {
-      fakeId = new LcapIdentity(fakeIdString);
-      testAddress = IPAddr.getByName("127.0.0.1");
+      fakeId = new LcapIdentity(testID, fakeIdString);
+      testAddress = IPAddr.getByName(fakeIdString);
     }
     catch (UnknownHostException ex) {
       fail("can't open test host");
     }
     testReputation = IdentityManager.INITIAL_REPUTATION;
-    testID = idmgr.stringToPeerIdentity("127.0.0.1");
     PollSpec spec = new MockPollSpec(archivalid, urlstr, lwrbnd, uprbnd,
 				     Poll.CONTENT_POLL);
     testMsg = LcapMessage.makeRequestMsg(spec,
@@ -110,7 +110,10 @@ public class TestLcapIdentity extends LockssTestCase {
     fakeId.rememberActive(false,testMsg);
     assertEquals(inc_pkts + 1, fakeId.m_incrPackets);
     assertEquals(tot_pkts + 1, fakeId.m_totalPackets);
-
+    String verifier = String.valueOf(B64Code.encode(testMsg.getVerifier()));
+    Integer cnt = (Integer)fakeId.m_pktsThisInterval.get(verifier);
+    assertNotNull(cnt);
+    assertEquals(1, cnt.intValue());
   }
 
   /** test for method rememberValidOriginator(..) */

@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.68 2004-09-23 17:38:46 dshr Exp $
+ * $Id: TestPollManager.java,v 1.69 2004-09-28 08:47:25 tlipkis Exp $
  */
 
 /*
@@ -254,8 +254,8 @@ public class TestPollManager extends LockssTestCase {
     // name poll duration is randomized so less predictable, but should
     // always be between min and max.
     long ndur = pf.calcDuration(LcapMessage.NAME_POLL_REQ, mcus, mpm);
-    assertTrue(ndur >= pf.getMinNamePollDuration());
-    assertTrue(ndur <= pf.getMaxNamePollDuration());
+    assertTrue(ndur >= pf.getMinPollDuration(Poll.NAME_POLL));
+    assertTrue(ndur <= pf.getMaxPollDuration(Poll.NAME_POLL));
   }
 
   public void testV1CanSchedulePoll() {

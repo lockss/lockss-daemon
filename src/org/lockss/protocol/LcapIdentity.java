@@ -1,5 +1,5 @@
 /*
- * $Id: LcapIdentity.java,v 1.23 2004-09-20 14:20:37 dshr Exp $
+ * $Id: LcapIdentity.java,v 1.24 2004-09-28 08:47:27 tlipkis Exp $
  */
 
 /*
@@ -37,14 +37,13 @@ import java.util.Random;
 import org.mortbay.util.B64Code;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
-import java.io.Serializable;
 
 /**
  * quick and dirty wrapper class for a network identity.
  * @author Claire Griffin
  * @version 1.0
  */
-public class LcapIdentity implements Serializable {
+public class LcapIdentity {
 
   public static final int EVENT_ORIG = 0;
   public static final int EVENT_ORIG_OP = 1;
@@ -70,6 +69,7 @@ public class LcapIdentity implements Serializable {
     END PACKET HISTOGRAM SUPPORT - CURRENTLY NOT BEING USED
   */
 
+  private PeerIdentity m_pid;
   transient IPAddr m_address = null;
   int m_port; // Zero for the well-known UDP port
 
@@ -78,26 +78,43 @@ public class LcapIdentity implements Serializable {
 
   static Logger theLog=Logger.getLogger("LcapIdentity");
 
-  protected LcapIdentity(String idKey)
-    throws UnknownHostException {
-    m_idKey = idKey;
-    m_reputation = IdentityManager.INITIAL_REPUTATION;
-    m_address = stringToAddr(idKey);
-    m_port = stringToPort(idKey);
+//   protected LcapIdentity(PeerIdentity pid, int reputation)
+//     throws UnknownHostException {
+//     if (pid == null) {
+//       throw new NullPointerException();
+//     }
+//     m_pid = pid;
+//     m_reputation = reputation;
+//   }
+
+  // internal use only
+  private LcapIdentity(PeerIdentity pid) {
+    if (pid == null) {
+      throw new NullPointerException();
+    }
+    m_pid = pid;
   }
-  protected LcapIdentity(String idKey, int reputation)
-    throws UnknownHostException {
+
+  protected LcapIdentity(PeerIdentity pid, String idKey)
+      throws UnknownHostException {
+    this(pid, idKey, IdentityManager.INITIAL_REPUTATION);
+  }
+
+  protected LcapIdentity(PeerIdentity pid, String idKey, int reputation)
+      throws UnknownHostException {
+    this(pid);
     m_idKey = idKey;
-    m_reputation = reputation;
     m_address = stringToAddr(idKey);
     m_port = stringToPort(idKey);
+    m_reputation = reputation;
   }
 
   /**
    * construct a new Identity from an address
    * @param addr the IPAddr
    */
-  public LcapIdentity(IPAddr addr, int port) {
+  LcapIdentity(PeerIdentity pid, IPAddr addr, int port) {
+    this(pid);
     m_idKey = makeIdKey(addr, port);
     m_reputation = IdentityManager.INITIAL_REPUTATION;
     m_address = addr;
@@ -216,7 +233,7 @@ public class LcapIdentity implements Serializable {
     }
     m_incrPackets++;
     m_totalPackets++;
-    if (msg.getOriginatorID().equals(m_idKey)) {
+    if (msg.getOriginatorID() == m_pid) {
       char[] encoded = B64Code.encode(msg.getVerifier());
 
       String verifier = String.valueOf(encoded);

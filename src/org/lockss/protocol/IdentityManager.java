@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManager.java,v 1.48 2004-09-27 22:39:09 smorabito Exp $
+ * $Id: IdentityManager.java,v 1.49 2004-09-28 08:47:27 tlipkis Exp $
  */
 
 /*
@@ -51,7 +51,7 @@ import org.lockss.poller.Vote;
 public class IdentityManager
   extends BaseLockssDaemonManager implements ConfigurableManager {
 
-  public static Logger log = Logger.getLogger("IdentityManager");
+  protected static Logger log = Logger.getLogger("IdentityManager");
 
   public static final String PARAM_LOCAL_IP =
     Configuration.PREFIX + "localIPAddress";
@@ -125,10 +125,10 @@ public class IdentityManager
    * instances but it currently contains all of them.
    * XXX currently using LcapIdentity instead of PeerData
    */
-  protected static String localIdentityStr;
-  protected static LcapIdentity theLocalLcapIdentity;
-  protected static PeerIdentity theLocalPeerIdentity;
-  protected static IPAddr theLocalIPAddr = null;
+  protected String localIdentityStr;
+  protected LcapIdentity theLocalLcapIdentity;
+  protected PeerIdentity theLocalPeerIdentity;
+  protected IPAddr theLocalIPAddr = null;
 
   int[] reputationDeltas = new int[10];
 
@@ -147,21 +147,17 @@ public class IdentityManager
   public void initService(LockssDaemon daemon) throws LockssAppException {
     super.initService(daemon);
     localIdentityStr = Configuration.getParam(PARAM_LOCAL_IP);
+    if (localIdentityStr == null) {
+      String msg = "Cannot start: " + PARAM_LOCAL_IP + " is not set";
+      log.critical(msg);
+      throw new LockssAppException("IdentityManager: " + msg);
+    }
     try {
       theLocalIPAddr = IPAddr.getByName(localIdentityStr);
     } catch (UnknownHostException uhe) {
-      log.error(PARAM_LOCAL_IP +
-		" can't be looked up - IdentityManager cannot start.");
-      throw new
-	LockssAppException(PARAM_LOCAL_IP +
-			   " can't be looked up - IdentityManager cannot start.");
-    }
-    if (localIdentityStr == null) {
-      log.error(PARAM_LOCAL_IP +
-		" is not set - IdentityManager cannot start.");
-      throw new
-	LockssAppException(PARAM_LOCAL_IP +
-			      " is not set - IdentityManager cannot start.");
+      String msg = "Cannot start: Can't lookup \"" + localIdentityStr + "\"";
+      log.critical(msg);
+      throw new LockssAppException("IdentityManager: " + msg);
     }
   }
 
@@ -171,12 +167,13 @@ public class IdentityManager
    */
   public void startService() {
     super.startService();
-    theLocalPeerIdentity = PeerIdentity.stringToIdentity(localIdentityStr);
+    theLocalPeerIdentity = PeerIdentity.stringToLocalIdentity(localIdentityStr);
     synchronized (theIdentities) {
       if (!theIdentities.containsKey(theLocalPeerIdentity)) {
 	// XXX V1-specific
 	theIdentities.put(theLocalPeerIdentity,
-			  new LcapIdentity(theLocalIPAddr, 0));
+			  new LcapIdentity(theLocalPeerIdentity,
+					   theLocalIPAddr, 0));
       }
     }
     reloadIdentities();
@@ -220,7 +217,7 @@ public class IdentityManager
       ret = PeerIdentity.ipAddrToIdentity(addr, port);
       synchronized (theIdentities) {
 	if (!theIdentities.containsKey(ret)) {
-	  theIdentities.put(ret, new LcapIdentity(addr, port));
+	  theIdentities.put(ret, new LcapIdentity(ret, addr, port));
 	}
       }
     }
@@ -247,7 +244,7 @@ public class IdentityManager
       ret = PeerIdentity.stringToIdentity(idKey);
       synchronized (theIdentities) {
 	if (!theIdentities.containsKey(ret)) {
-	  theIdentities.put(ret, new LcapIdentity(idKey));
+	  theIdentities.put(ret, new LcapIdentity(ret, idKey));
 	}
       }
     }
@@ -280,7 +277,7 @@ public class IdentityManager
    * getLocalIPAddr returns the IPAddr of the local peer
    * @return the IPAddr of the local peer
    */
-  public static IPAddr getLocalIPAddr() {
+  public IPAddr getLocalIPAddr() {
     return theLocalIPAddr;
   }
 
@@ -413,8 +410,10 @@ public class IdentityManager
 
       // load the identity list via the marshaller
       XmlMarshaller marshaller = new XmlMarshaller();
-      IdentityListBean idlb = (IdentityListBean)marshaller.load(fn,
-          IdentityListBean.class, MAPPING_FILE_NAME);
+      IdentityListBean idlb =
+	(IdentityListBean)marshaller.load(fn,
+					  IdentityListBean.class,
+					  MAPPING_FILE_NAME);
       if (idlb==null) {
         log.warning("Unable to read Identity file:" + fn);
       } else {
@@ -422,7 +421,8 @@ public class IdentityManager
       }
       if (!theIdentities.containsKey(theLocalPeerIdentity)) {
 	theIdentities.put(theLocalPeerIdentity,
-			  new LcapIdentity(localIdentityStr));
+			  new LcapIdentity(theLocalPeerIdentity,
+					   localIdentityStr));
       }
     } catch (Exception e) {
       log.warning("Couldn't load identity database: " + e.getMessage());
@@ -477,7 +477,7 @@ public class IdentityManager
         String idKey = bean.getKey();
         try {
 	  PeerIdentity pid = PeerIdentity.stringToIdentity(idKey);
-          LcapIdentity id = new LcapIdentity(idKey, bean.getReputation());
+          LcapIdentity id = new LcapIdentity(pid, idKey, bean.getReputation());
           theIdentities.put(pid, id);
         }
         catch (UnknownHostException ex) {
@@ -790,6 +790,10 @@ public class IdentityManager
             && ida.getLastAgree() == lastAgree);
       }
       return false;
+    }
+
+    public int hashCode() {
+      return 7 * id.hashCode() + 3 * (int)(getLastDisagree() + getLastAgree());
     }
   }
 
