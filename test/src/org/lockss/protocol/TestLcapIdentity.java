@@ -46,7 +46,8 @@ public class TestLcapIdentity extends LockssTestCase {
     testReputation = IdentityManager.INITIAL_REPUTATION;
     testIdKey = LcapIdentity.makeIdKey(testAddress);
     try {
-      PollSpec spec = new PollSpec(archivalid, pluginid, urlstr, lwrbnd, uprbnd,null);
+      PollSpec spec = new PollSpec(pluginid, archivalid, urlstr,
+				   lwrbnd, uprbnd,null);
       testMsg = LcapMessage.makeRequestMsg(spec,
           testentries,
           testbytes,

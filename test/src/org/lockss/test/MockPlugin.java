@@ -1,5 +1,5 @@
 /*
- * $Id: MockPlugin.java,v 1.1 2003-02-22 03:01:45 tal Exp $
+ * $Id: MockPlugin.java,v 1.2 2003-02-27 04:04:28 tal Exp $
  */
 
 /*
@@ -42,12 +42,13 @@ import org.lockss.util.*;
  * This is a mock version of <code>Plugin</code> used for testing
  */
 
-public class MockPlugin extends BasePlugin {
+public class MockPlugin extends BasePlugin implements PluginTestable {
   static Logger log = Logger.getLogger("MockPlugin");
 
   public static final String CONFIG_PROP_1 = "base_url";
   public static final String CONFIG_PROP_2 = "volume";
 
+  private String pluginId = "MockPlugin";
   private int initCtr = 0;
   private int stopCtr = 0;
   private Configuration auConfig;
@@ -63,10 +64,6 @@ public class MockPlugin extends BasePlugin {
     initCtr++;
   }
 
-  public int getInitCtr() {
-    return initCtr;
-  }
-
   /**
    * Called when the application is stopping to allow the plugin to perform
    * any necessary tasks needed to cleanly halt
@@ -75,12 +72,12 @@ public class MockPlugin extends BasePlugin {
     stopCtr++;
   }
 
-  public int getStopCtr() {
-    return stopCtr;
+  public String getPluginId() {
+    return pluginId;
   }
 
-  public String getPluginId() {
-    return "MockPlugin";
+  public void setPluginId(String id) {
+    pluginId = id;
   }
 
   public String getVersion() {
@@ -132,4 +129,21 @@ public class MockPlugin extends BasePlugin {
     return au;
   }
 
+  // MockPlugin methods, not part of Plugin interface
+
+  public int getInitCtr() {
+    return initCtr;
+  }
+
+  public int getStopCtr() {
+    return stopCtr;
+  }
+
+  public void registerArchivalUnit(ArchivalUnit au) {
+    auMap.put(au.getAUId(), au);
+  }
+
+  public void unregisterArchivalUnit(ArchivalUnit au) {
+    auMap.remove(au.getAUId());
+  }
 }

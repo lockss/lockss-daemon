@@ -3,19 +3,19 @@ package org.lockss.poller;
 import java.io.*;
 import java.security.*;
 import java.util.*;
+import java.net.*;
 import gnu.regexp.*;
+import org.lockss.app.*;
 import org.lockss.daemon.*;
 import org.lockss.hasher.*;
 import org.lockss.plugin.*;
 import org.lockss.protocol.*;
 import org.lockss.util.*;
-import java.net.InetAddress;
-import java.net.UnknownHostException;
-import org.lockss.test.FileUtil;
 import org.lockss.test.*;
 
 /** JUnitTest case for class: org.lockss.poller.Poll */
 public class TestPoll extends LockssTestCase {
+  private static Logger log = Logger.getLogger("TestPoll");
   private static String[] rooturls = {
       "http://www.test.org",
       "http://www.test1.org", "http://www.test2.org"};
@@ -29,13 +29,6 @@ public class TestPoll extends LockssTestCase {
   private String[] agree_entries = makeEntries(10, 50);
   private String[] disagree_entries = makeEntries(15, 57);
   private String[] dissenting_entries = makeEntries(7, 50);
-
- static {
-    testau = PollTestPlugin.PTArchivalUnit.createFromListOfRootUrls(rooturls);
-    daemon.getPluginManager().registerArchivalUnit(testau);
-    TestIdentityManager.configParams("/tmp/iddb", "src/org/lockss/protocol");
-    idmgr = daemon.getIdentityManager();
-  }
 
   protected InetAddress testaddr;
   protected InetAddress testaddr1;
@@ -54,6 +47,11 @@ public class TestPoll extends LockssTestCase {
    */
   protected void setUp() throws Exception {
     super.setUp();
+    daemon.getPluginManager();
+    testau = PollTestPlugin.PTArchivalUnit.createFromListOfRootUrls(rooturls);
+    PluginUtil.registerArchivalUnit(testau);
+    TestIdentityManager.configParams("/tmp/iddb", "src/org/lockss/protocol");
+    idmgr = daemon.getIdentityManager();
     daemon.getHashService().startService();
     try {
       testaddr = InetAddress.getByName("127.0.0.1");
@@ -68,10 +66,11 @@ public class TestPoll extends LockssTestCase {
       testmsg = new LcapMessage[3];
 
       for (int i = 0; i < 3; i++) {
-        PollSpec spec = new PollSpec(testau.getAUId(),
-                             testau.getPluginId(),
-                             rooturls[i],lwrbnd,uprbnd,
-                             testau.makeCachedUrlSet(rooturls[i],lwrbnd,uprbnd));
+        PollSpec spec =
+	  new PollSpec(testau.getPluginId(),
+		       testau.getAUId(),
+		       rooturls[i],lwrbnd,uprbnd,
+		       testau.makeCachedUrlSet(rooturls[i],lwrbnd,uprbnd));
         testmsg[i] = LcapMessage.makeRequestMsg(
             spec,
             agree_entries,
@@ -135,7 +134,7 @@ public class TestPoll extends LockssTestCase {
     }
     Poll p = null;
     try {
-      p = createCompletedPoll(msg, 8,2);
+      p = createCompletedPoll(daemon, msg, 8,2);
     }
     catch (Exception ex2) {
     }
@@ -296,10 +295,11 @@ public class TestPoll extends LockssTestCase {
     LcapMessage disagree_msg2 = null;
 
     try {
-      PollSpec spec = new PollSpec(testau.getAUId(),
-                           testau.getPluginId(),
-                           rooturls[0],null,null,
-                           testau.makeCachedUrlSet(rooturls[0],null,null));
+      PollSpec spec =
+	new PollSpec(testau.getPluginId(),
+		     testau.getAUId(),
+		     rooturls[0],null,null,
+		     testau.makeCachedUrlSet(rooturls[0],null,null));
       LcapMessage poll_msg = LcapMessage.makeRequestMsg(
           spec,
           null,
@@ -361,16 +361,16 @@ public class TestPoll extends LockssTestCase {
   }
 
 
-  public static Poll createCompletedPoll(LcapMessage testmsg, int numAgree,
+  public static Poll createCompletedPoll(LockssDaemon daemon,
+					 LcapMessage testmsg, int numAgree,
                                          int numDisagree) throws Exception {
+    log.debug("daemon = " + daemon);
     testau = PollTestPlugin.PTArchivalUnit.createFromListOfRootUrls(rooturls);
-    daemon.getPluginManager().registerArchivalUnit(testau);
-    PollSpec spec = new PollSpec(testau.getAUId(), testau.getPluginId(),
-                                 testmsg.getTargetUrl(),
-                                 testmsg.getLwrBound(),
-                                 testmsg.getUprBound(),
-                                 testau.makeCachedUrlSet(testmsg.getTargetUrl(),
-        testmsg.getLwrBound(),testmsg.getUprBound()));
+    PluginUtil.registerArchivalUnit(testau);
+    CachedUrlSet cus = testau.makeCachedUrlSet(testmsg.getTargetUrl(),
+                                               testmsg.getLwrBound(),
+                                               testmsg.getUprBound());
+    PollSpec spec = new PollSpec(cus);
     Poll p = daemon.getPollManager().createPoll(testmsg, spec);
     p.m_tally.quorum = numAgree + numDisagree;
     p.m_tally.numAgree = numAgree;

@@ -1,5 +1,5 @@
 /*
- * $Id: PollSpec.java,v 1.2 2003-02-27 01:50:48 claire Exp $
+ * $Id: PollSpec.java,v 1.3 2003-02-27 04:04:28 tal Exp $
  */
 
 /*
@@ -59,7 +59,7 @@ public class PollSpec {
    * @param uprBound the upper bound of the url
    * @param cus the cached url set
    */
-  public PollSpec(String auId, String pluginId, String url,
+  public PollSpec(String pluginId, String auId, String url,
                   String lwrBound, String uprBound, CachedUrlSet cus) {
     this.auId = auId;
     this.pluginId = pluginId;
@@ -150,6 +150,10 @@ public class PollSpec {
     return pluginMgr;
   }
 
+  public String toString() {
+    return "[PS: pid=" + pluginId + ", auid=" + auId + ", url=" + url
+      + ", l=" + lwrBound + ", u=" + uprBound + "]";
+  }
 }
 
 

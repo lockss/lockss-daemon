@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.34 2003-02-27 01:50:48 claire Exp $
+* $Id: PollManager.java,v 1.35 2003-02-27 04:04:28 tal Exp $
  */
 
 /*
@@ -142,13 +142,15 @@ public class PollManager  implements LockssManager {
     long duration = calcDuration(opcode, cus);
     byte[] challenge = makeVerifier();
     byte[] verifier = makeVerifier();
-    LcapMessage msg = LcapMessage.makeRequestMsg(pollspec,
-        null,
-        challenge,
-        verifier,
-        opcode,
-        duration,
-        theDaemon.getIdentityManager().getLocalIdentity());
+    IdentityManager idmgr = theDaemon.getIdentityManager();    
+    LcapMessage msg =
+      LcapMessage.makeRequestMsg(pollspec,
+				 null,
+				 challenge,
+				 verifier,
+				 opcode,
+				 duration,
+				 idmgr.getLocalIdentity());
 
     theLog.debug("send: " +  msg.toString());
     sendMessage(msg,cus.getArchivalUnit());
@@ -307,8 +309,9 @@ public class PollManager  implements LockssManager {
 
       if(!p.getMessage().isVerifyPoll()) { // eliminate running verify polls
         CachedUrlSet pcus = p.getPollSpec().getCachedUrlSet();
-        int rel_pos = theDaemon.getLockssRepository(
-            cus.getArchivalUnit()).cusCompare(cus, pcus);
+	ArchivalUnit au = cus.getArchivalUnit();
+	LockssRepository repo = theDaemon.getLockssRepository(au);
+        int rel_pos = repo.cusCompare(cus, pcus);
         if(rel_pos != LockssRepository.SAME_LEVEL_NO_OVERLAP &&
            rel_pos != LockssRepository.NO_RELATION) {
           return pcus;

@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.8 2003-02-26 06:02:25 tal Exp $
+ * $Id: PluginManager.java,v 1.9 2003-02-27 04:04:28 tal Exp $
  */
 
 /*
@@ -60,6 +60,9 @@ public class PluginManager implements LockssManager {
   private static Vector archivalUnits = new Vector();
 
 
+  public PluginManager() {
+  }    
+
   /* ------- LockssManager implementation ------------------ */
   /**
    * init the plugin manager.
@@ -70,7 +73,7 @@ public class PluginManager implements LockssManager {
   public void initService(LockssDaemon daemon) throws LockssDaemonException {
     if (theManager == null) {
       theDaemon = daemon;
-      theManager = new PluginManager();
+      theManager = this;
     } else {
       throw new LockssDaemonException("Multiple Instantiation.");
     }
@@ -130,7 +133,7 @@ public class PluginManager implements LockssManager {
    * Return the plugin with the given id.  Mostly for testing.
    * @return the plugin or null
    */
-  Plugin getPlugin(String pluginId) {
+  public Plugin getPlugin(String pluginId) {
     return (Plugin)plugins.get(pluginId);
   }
 
@@ -192,7 +195,7 @@ public class PluginManager implements LockssManager {
       log.debug("Instantiating " + pluginClass);
       Plugin plugin = (Plugin)pluginClass.newInstance();
       plugin.initPlugin();
-      plugins.put(pluginId, plugin);
+      setPlugin(pluginId, plugin);
       return true;
     } catch (Exception e) {
       log.error("Error instantiating " + pluginName, e);
@@ -205,10 +208,17 @@ public class PluginManager implements LockssManager {
    * it can be found by <code>Plugin.findArchivalUnit()</code>.
    * @param au <code>ArchivalUnit</code> to add.
    */
-  public void registerArchivalUnit(ArchivalUnit au) {
-    if (!archivalUnits.contains(au)) {
-      archivalUnits.addElement(au);
-    }
+//   public void registerArchivalUnit(ArchivalUnit au) {
+//     if (!archivalUnits.contains(au)) {
+//       archivalUnits.addElement(au);
+//     }
+//   }
+
+  // separate method so can be called by test code
+  private void setPlugin(String pluginId, Plugin plugin) {
+    log.debug("setPlugin(" + pluginId + ", " + plugin + ")");
+    log.debug(this.toString());
+    plugins.put(pluginId, plugin);
   }
 
   /**
@@ -216,9 +226,9 @@ public class PluginManager implements LockssManager {
    * it will not be found by <code>Plugin.findArchivalUnit()</code>.
    * @param au <code>ArchivalUnit</code> to remove.
    */
-  public void unregisterArchivalUnit(ArchivalUnit au) {
-    archivalUnits.remove(au);
-  }
+//   public void unregisterArchivalUnit(ArchivalUnit au) {
+//     archivalUnits.remove(au);
+//   }
 
   /**
    * Find the <code>ArchivalUnit</code>
@@ -249,11 +259,17 @@ public class PluginManager implements LockssManager {
    * null if au not present on this cache
    */
   public CachedUrlSet findCachedUrlSet(PollSpec spec) {
+    log.debug("findCachedUrlSet("+spec+")");
+    log.debug(this.toString());
     String pluginId = spec.getPluginId();
+    log.debug("pluginId: " + pluginId);
     Plugin plugin = getPlugin(pluginId);
+    log.debug("plugin: " + plugin);
     if (plugin == null) return null;
     String auId = spec.getAUId();
+    log.debug("auId: " + auId);
     ArchivalUnit au = plugin.getAU(auId);
+    log.debug("au: " + au);
     if (au == null) return null;
     String url = spec.getUrl();
     CachedUrlSet cus;
@@ -262,6 +278,7 @@ public class PluginManager implements LockssManager {
     } else {
       cus = au.makeCachedUrlSet(url, spec.getLwrBound(), spec.getUprBound());
     }
+    log.debug("ret cus = " + cus);
     return cus;
   }
 
@@ -269,17 +286,17 @@ public class PluginManager implements LockssManager {
    * Get the list of ArchivalUnits.
    * @return an Iterator of ArchivalUnits
    */
-  public static Iterator getArchivalUnits() {
-    return Collections.unmodifiableList(archivalUnits).iterator();
-  }
+//   public static Iterator getArchivalUnits() {
+//     return Collections.unmodifiableList(archivalUnits).iterator();
+//   }
 
   /**
    * Returns the number of archival units currently registered.
    * @return an integer
    */
-  public static int getNumArchivalUnits() {
-    return archivalUnits.size();
-  }
+//   public static int getNumArchivalUnits() {
+//     return archivalUnits.size();
+//   }
 
 //    /**
 //     * Find or create a <code>CachedUrlSet</code> representing the content

@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.50 2003-02-27 01:50:48 claire Exp $
+* $Id: Poll.java,v 1.51 2003-02-27 04:04:28 tal Exp $
  */
 
 /*
@@ -125,6 +125,7 @@ public abstract class Poll implements Serializable {
     idMgr = pm.getDaemon().getIdentityManager();
     m_msg = msg;
     m_pollspec = pollspec;
+    log.debug("pm.getDaemon() = " + pm.getDaemon());
     m_urlSet = pm.getDaemon().getPluginManager().findCachedUrlSet(pollspec);
     m_createTime = TimeBase.nowMs();
     m_tally = new VoteTally(-1, msg.getDuration());

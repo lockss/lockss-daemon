@@ -1,5 +1,5 @@
 /*
-* $Id: MockPollManager.java,v 1.4 2003-02-24 22:13:43 claire Exp $
+* $Id: MockPollManager.java,v 1.5 2003-02-27 04:04:28 tal Exp $
  */
 
 /*
@@ -35,10 +35,9 @@ package org.lockss.test;
 import java.io.IOException;
 import java.util.Hashtable;
 import org.lockss.app.*;
-import org.lockss.plugin.CachedUrlSet;
-import org.lockss.poller.PollManager;
-import org.lockss.protocol.LcapMessage;
 import org.lockss.plugin.*;
+import org.lockss.poller.*;
+import org.lockss.protocol.LcapMessage;
 
 /**
  * Mock override of the PollManager
@@ -50,22 +49,29 @@ public class MockPollManager extends PollManager {
   public static final String SUSPENDED = "suspended";
   public static final String RESUMED = "resumed";
 
-  public MockPollManager() { }
-  public void initService(LockssDaemon daemon) throws LockssDaemonException { }
-  public void startService() { }
+  public MockPollManager() {
+    super();
+  }
+  public void initService(LockssDaemon daemon) throws LockssDaemonException {
+    super.initService(daemon);
+  }
+  public void startService() {
+    super.startService();
+  }
+
   public void stopService() {
+    super.stopService();
     thePolls = new Hashtable();
   }
 
-  public void requestPoll(CachedUrlSet cus, String lwrBound, String uprBound,
-                          int opcode) throws IOException {
+  public void requestPoll(int opcode, PollSpec ps) throws IOException {
     // note: uses a different key than the other two, since we're not
     // creating an actual challenge and verifier to key off of.
     if (opcode == LcapMessage.CONTENT_POLL_REQ) {
-      thePolls.put(cus.getUrl(), CONTENT_REQUESTED);
+      thePolls.put(ps.getUrl(), CONTENT_REQUESTED);
     }
     else if (opcode == LcapMessage.NAME_POLL_REQ) {
-      thePolls.put(cus.getUrl(), NAME_REQUESTED);
+      thePolls.put(ps.getUrl(), NAME_REQUESTED);
     }
   }
 

@@ -28,10 +28,6 @@ public class TestPollManager extends LockssTestCase {
   private static String[] testentries = {"test1.doc", "test2.doc", "test3.doc"};
   protected static ArchivalUnit testau;
   private static MockLockssDaemon daemon = new MockLockssDaemon(null);
-  static {
-    testau = PollTestPlugin.PTArchivalUnit.createFromListOfRootUrls(rooturls);
-    daemon.getPluginManager().registerArchivalUnit(testau);
-  }
 
   protected InetAddress testaddr;
   protected LcapIdentity testID;
@@ -46,6 +42,10 @@ public class TestPollManager extends LockssTestCase {
   protected void setUp() throws Exception {
     super.setUp();
     daemon.getHashService().startService();
+    daemon.getPluginManager();
+    testau = PollTestPlugin.PTArchivalUnit.createFromListOfRootUrls(rooturls);
+    daemon.getLockssRepository(testau);
+    PluginUtil.registerArchivalUnit(testau);
     try {
       testaddr = InetAddress.getByName("127.0.0.1");
       testID = daemon.getIdentityManager().findIdentity(testaddr);
@@ -57,11 +57,11 @@ public class TestPollManager extends LockssTestCase {
       testmsg = new LcapMessage[3];
 
       for(int i= 0; i<3; i++) {
-        PollSpec spec = new PollSpec(testau.getAUId(),
-                             testau.getPluginId(),
-                             rooturls[i],lwrbnd, uprbnd,
-                             testau.makeCachedUrlSet(rooturls[i],
-    lwrbnd,uprbnd));
+        PollSpec spec = new PollSpec(testau.getPluginId(),
+				     testau.getAUId(),
+				     rooturls[i],lwrbnd, uprbnd,
+				     testau.makeCachedUrlSet(rooturls[i],
+							     lwrbnd,uprbnd));
         testmsg[i] =  LcapMessage.makeRequestMsg(
           spec,
           testentries,
@@ -173,10 +173,11 @@ public class TestPollManager extends LockssTestCase {
 
     try {
       for(int i= 0; i<3; i++) {
-        PollSpec spec = new PollSpec(testau.getAUId(),
-                                     testau.getPluginId(),
-                                     urlstr,lwrbnd,uprbnd,
-                                     testau.makeCachedUrlSet(urlstr,lwrbnd,uprbnd));
+        PollSpec spec =
+	  new PollSpec(testau.getPluginId(),
+		       testau.getAUId(),
+		       urlstr,lwrbnd,uprbnd,
+		       testau.makeCachedUrlSet(urlstr,lwrbnd,uprbnd));
         sameroot[i] =  LcapMessage.makeRequestMsg(
           spec,
           testentries,
@@ -259,7 +260,7 @@ public class TestPollManager extends LockssTestCase {
   public void testSuspendPoll() {
     Poll p1 = null;
     try {
-      p1 = TestPoll.createCompletedPoll(testmsg[0], 7, 2);
+      p1 = TestPoll.createCompletedPoll(daemon, testmsg[0], 7, 2);
       pollmanager.addPoll(p1);
 
     }
@@ -306,9 +307,8 @@ public class TestPollManager extends LockssTestCase {
   private CachedUrlSet makeCachedUrlSet(LcapMessage msg) {
 
     try {
-      ArchivalUnit au = daemon.getPluginManager().findArchivalUnit(msg.getTargetUrl());
-      return au.makeCachedUrlSet(msg.getTargetUrl(), msg.getLwrBound(),
-                                 msg.getUprBound());
+      PollSpec ps = new PollSpec(msg);
+      return daemon.getPluginManager().findCachedUrlSet(ps);
     }
     catch (Exception ex) {
       return null;

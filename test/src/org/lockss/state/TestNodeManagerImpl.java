@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.30 2003-02-27 01:50:48 claire Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.31 2003-02-27 04:04:28 tal Exp $
  */
 
 /*
@@ -42,9 +42,11 @@ import org.lockss.plugin.AuUrl;
 public class TestNodeManagerImpl
     extends LockssTestCase {
   public static final String TEST_URL = "http://www.example.com";
+  private static Logger log = Logger.getLogger("TestNMI");
   private String tempDirPath;
   private MockArchivalUnit mau = null;
   private NodeManagerImpl nodeManager;
+  private PollManager pollManager;
   private List urlList = null;
   private Poll namePoll = null;
   private Poll contentPoll = null;
@@ -63,30 +65,24 @@ public class TestNodeManagerImpl
 
     mau = new MockArchivalUnit();
     mau.setAUCachedUrlSet(makeFakeCachedUrlSet(TEST_URL, 2, 2));
-    theDaemon.getPluginManager().registerArchivalUnit(mau);
+    theDaemon.getPluginManager();
+    PluginUtil.registerArchivalUnit(mau);
     theDaemon.setCrawlManager(new MockCrawlManager());
-    theDaemon.setPollManager(new MockPollManager());
+    pollManager = new MockPollManager();
+    theDaemon.setPollManager(pollManager);
     theDaemon.setIdentityManager(new MockIdentityManager());
 
     nodeManager = new NodeManagerImpl(mau);
     nodeManager.initService(theDaemon);
+    pollManager.initService(theDaemon);
     nodeManager.startService();
     nodeManager.repository = new HistoryRepositoryImpl(tempDirPath);
   }
 
   public void tearDown() throws Exception {
-    Iterator auIt = theDaemon.getPluginManager().getArchivalUnits();
-    ArrayList auList = new ArrayList(theDaemon.getPluginManager().
-                                     getNumArchivalUnits());
-    while (auIt.hasNext()) {
-      auList.add(auIt.next());
-    }
-    auIt = auList.iterator();
-    while (auIt.hasNext()) {
-      theDaemon.getPluginManager().unregisterArchivalUnit( (ArchivalUnit) auIt.
-          next());
-    }
+    PluginUtil.unregisterAllArchivalUnits();
     nodeManager.stopService();
+    pollManager.stopService();
     theDaemon.stopDaemon();
     TimeBase.setReal();
     super.tearDown();
@@ -650,7 +646,9 @@ public class TestNodeManagerImpl
     try {
 
       testmsg = LcapMessage.makeRequestMsg(
-          new PollSpec("testau", "testplugin", url, "lwr", "upr", null),
+          new PollSpec(mau.getPluginId(),
+		       mau.getAUId(),
+		       url, "lwr", "upr", null),
           null,
           bytes,
           bytes,
@@ -662,7 +660,9 @@ public class TestNodeManagerImpl
     catch (IOException ex) {
       fail("can't create test name message" + ex.toString());
     }
-    Poll p = TestPoll.createCompletedPoll(testmsg, numAgree, numDisagree);
+    log.debug("daemon = " + theDaemon);
+    Poll p = TestPoll.createCompletedPoll(theDaemon,
+					  testmsg, numAgree, numDisagree);
     TestHistoryRepositoryImpl.configHistoryParams(tempDirPath);
     return p;
   }

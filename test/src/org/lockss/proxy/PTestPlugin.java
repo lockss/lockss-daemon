@@ -1,5 +1,5 @@
 /*
- * $Id: PTestPlugin.java,v 1.11 2003-02-25 22:56:16 aalto Exp $
+ * $Id: PTestPlugin.java,v 1.12 2003-02-27 04:04:28 tal Exp $
  */
 
 /*
@@ -132,7 +132,7 @@ class PTestPlugin {
 				      "<html><h3>this is two html</h3></html>"));
 
     MockLockssDaemon daemon = new MockLockssDaemon(null);
-    daemon.getPluginManager().registerArchivalUnit(au);
+    PluginUtil.registerArchivalUnit(au);
     return au;
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSimulatedContent.java,v 1.21 2003-02-26 20:56:27 aalto Exp $
+ * $Id: FuncSimulatedContent.java,v 1.22 2003-02-27 04:04:28 tal Exp $
  */
 
 /*
@@ -71,10 +71,10 @@ public class FuncSimulatedContent extends LockssTestCase {
 
   public void testPluginRegistration() {
     MockArchivalUnit mau = new MockArchivalUnit(new CrawlSpec("http://www.mock.com", null));
-    theDaemon.getPluginManager().registerArchivalUnit(mau);
-    theDaemon.getPluginManager().registerArchivalUnit(sau);
+    PluginUtil.registerArchivalUnit(mau);
+    PluginUtil.registerArchivalUnit(sau);
     mau = new MockArchivalUnit(new CrawlSpec("http://www.mock2.com", null));
-    theDaemon.getPluginManager().registerArchivalUnit(mau);
+    PluginUtil.registerArchivalUnit(mau);
 
     ArchivalUnit au = theDaemon.getPluginManager().findArchivalUnit(SimulatedArchivalUnit.SIMULATED_URL_START);
     assertTrue(au==sau);
