@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSimulatedContent.java,v 1.67 2004-11-18 05:20:54 smorabito Exp $
+ * $Id: FuncSimulatedContent.java,v 1.68 2004-11-18 05:37:06 smorabito Exp $
  */
 
 /*
