@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.107 2004-02-05 02:18:02 eaalto Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.107.4.1 2004-03-19 06:09:29 eaalto Exp $
  */
 
 /*
@@ -218,6 +218,9 @@ public class TestNodeManagerImpl extends LockssTestCase {
     TimeBase.setSimulated(10000);
     contentPoll = createPoll(TEST_URL, true, false, 15, 5);
     PollTally results = contentPoll.getVoteTally();
+
+    // don't need crawl
+    mau.setShouldCrawlForNewContent(false);
     // let's generate some history
     CachedUrlSet cus = results.getCachedUrlSet();
     Vector subFiles = new Vector(2);
@@ -240,6 +243,11 @@ public class TestNodeManagerImpl extends LockssTestCase {
     nodeManager.damagedNodes.addToDamage(cus.getUrl());
     assertFalse(nodeManager.shouldStartPoll(cus, results));
     nodeManager.damagedNodes.removeFromDamage(cus.getUrl());
+
+    // don't allow poll if a crawl is needed
+    assertTrue(nodeManager.shouldStartPoll(cus, results));
+    mau.setShouldCrawlForNewContent(true);
+    assertFalse(nodeManager.shouldStartPoll(cus, results));
     TimeBase.setReal();
   }
 
