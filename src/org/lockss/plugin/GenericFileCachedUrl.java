@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrl.java,v 1.19 2003-05-30 00:32:48 troberts Exp $
+ * $Id: GenericFileCachedUrl.java,v 1.20 2003-06-02 21:42:37 troberts Exp $
  */
 
 /*
@@ -77,18 +77,31 @@ public class GenericFileCachedUrl extends BaseCachedUrl {
    * @return an InputStream
    */
   public InputStream openForHashing() {
-    if (Configuration.getBooleanParam(PARAM_SHOULD_FILTER_HASH_STREAM,
- 				      false)) {
+     if (Configuration.getBooleanParam(PARAM_SHOULD_FILTER_HASH_STREAM,
+  				      false)) {
+       return getFilteredStream();
+     } else {
+       return openForReading();
+     }
+  }
+
+  private InputStream getFilteredStream() {
+    //XXX test me
+    Properties props = getProperties();
+    if ("text/html".equals(props.getProperty("content-type"))) {
+      logger.debug2("Filtering "+url);
+//       return new ReaderInputStream(getReader());
       HtmlTagFilter.TagPair tagPair = new HtmlTagFilter.TagPair("<", ">");
       Reader filteredReader = new HtmlTagFilter(getReader(), tagPair);
       return new ReaderInputStream(filteredReader);
-    } else {
-      return openForReading();
     }
+    logger.debug2("Not filtering "+url);
+    return openForReading();
   }
-
+  
   public Reader getReader() {
-    return new InputStreamReader(openForReading());
+    ensureLeafLoaded();
+    return leaf.getNodeContents().reader;
   }
 
   public Properties getProperties() {
