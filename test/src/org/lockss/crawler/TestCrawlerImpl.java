@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlerImpl.java,v 1.9 2004-03-10 21:17:57 troberts Exp $
+ * $Id: TestCrawlerImpl.java,v 1.10 2004-03-23 20:54:35 tlipkis Exp $
  */
 
 /*
@@ -248,9 +248,13 @@ public class TestCrawlerImpl extends LockssTestCase {
     String url3="http://www.example.com/blah3.html";
     cus.addUrl(startUrl, false, true);
     parser.addUrlSetToReturn(startUrl, SetUtil.set(url1, url2, url3));
-    cus.addUrl(url2, false, true);
+    cus.addUrl(url2,
+	       new CacheException.UnretryableException("Test exception"),
+	       retryNum);
     parser.addUrlSetToReturn(url2, SetUtil.set(url1));
-    cus.addUrl(url3, false, true);
+    cus.addUrl(url3,
+	       new CacheException.RetryableException("Test exception"),
+	       retryNum);
     parser.addUrlSetToReturn(url3, SetUtil.set(url1));
     cus.addUrl(url1, new IOException("Test exception"), retryNum);
 
@@ -259,7 +263,12 @@ public class TestCrawlerImpl extends LockssTestCase {
     crawlRule.addUrlToCrawl(url3);
 
     crawler.doCrawl();
-    assertEquals(retryNum, cus.getNumCacheAttempts(url1));
+    // IOException should not be retried
+    assertEquals(1, cus.getNumCacheAttempts(url1));
+    // UnretryableException should not be retried
+    assertEquals(1, cus.getNumCacheAttempts(url2));
+    // RetryableException should be retried
+    assertEquals(retryNum, cus.getNumCacheAttempts(url3));
   }
 
 
