@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.13 2003-07-21 08:34:28 tlipkis Exp $
+ * $Id: ArchivalUnit.java,v 1.14 2003-07-23 06:39:35 tlipkis Exp $
  */
 
 /*
@@ -185,7 +185,7 @@ public interface ArchivalUnit {
     }
 
     public ConfigurationException(String msg, Throwable e) {
-      super(msg + ": " + e.getMessage());
+      super(msg + (e.getMessage() == null ? "" : (": " + e.getMessage())));
 //       super(msg + ": " + e.toString());
       this.nestedException = e;
     }
