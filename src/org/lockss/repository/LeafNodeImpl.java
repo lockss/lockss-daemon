@@ -1,5 +1,5 @@
 /*
- * $Id: LeafNodeImpl.java,v 1.4 2002-11-06 00:01:30 aalto Exp $
+ * $Id: LeafNodeImpl.java,v 1.5 2002-11-07 02:21:48 aalto Exp $
  */
 
 /*
@@ -37,6 +37,9 @@ import java.util.*;
 /**
  * LeafNodeImpl is a leaf-specific subclass of RepositoryNodeImpl.
  */
+
+//XXX the synchronization issues are unresolved.  How can you be sure that
+// a call to getInputStream() and getProperties() can't get out of sync?
 public class LeafNodeImpl extends RepositoryNodeImpl implements LeafNode {
   /**
    * The name of the file created in leaf cache directories.
@@ -49,13 +52,19 @@ public class LeafNodeImpl extends RepositoryNodeImpl implements LeafNode {
 
   private boolean newVersionOpen = false;
   private OutputStream newVersionOutput;
-  private InputStream curInput;
+  private File curInputFile;
   private Properties curProps;
   private String versionName;
   private int currentVersion = -1;
-  private StringBuffer buffer;
 
-  public LeafNodeImpl(String url, String cacheLocation, LockssRepositoryImpl repository) {
+  private File cacheLocationFile;
+  private File currentCacheFile;
+  private File currentPropsFile;
+  private File tempCacheFile;
+  private File tempPropsFile;
+
+  public LeafNodeImpl(String url, String cacheLocation,
+                      LockssRepositoryImpl repository) {
     super(url, cacheLocation, repository);
   }
 
@@ -80,16 +89,15 @@ public class LeafNodeImpl extends RepositoryNodeImpl implements LeafNode {
     }
     ensureCurrentVersionLoaded();
     if (currentVersion == 0) {
-      File cacheDir = getCacheLocation();
-      if (!cacheDir.exists()) {
-        cacheDir.mkdirs();
+      if (!cacheLocationFile.exists()) {
+        cacheLocationFile.mkdirs();
       }
-      File leafFile = new File(cacheDir, LEAF_FILE_NAME);
+      File leafFile = new File(cacheLocationFile, LEAF_FILE_NAME);
       try {
         leafFile.createNewFile();
       } catch (IOException ioe) {
         logger.error("Couldn't create leaf file for " +
-                     cacheDir.getAbsolutePath()+".");
+                     cacheLocationFile.getAbsolutePath()+".");
       }
     }
     newVersionOpen = true;
@@ -100,21 +108,16 @@ public class LeafNodeImpl extends RepositoryNodeImpl implements LeafNode {
       throw new UnsupportedOperationException("New version not initialized.");
     }
     synchronized (this) {
-      File curContentF = getCurrentCacheFile();
-      File curPropsF = getCurrentPropertiesFile();
-      File newContentF = getTempCacheFile();
-      File newPropsF = getTempPropertiesFile();
-
       // rename current
-      curContentF.renameTo(getVersionedCacheFile(currentVersion));
-      curPropsF.renameTo(getVersionedPropertiesFile(currentVersion));
+      currentCacheFile.renameTo(getVersionedCacheFile(currentVersion));
+      currentPropsFile.renameTo(getVersionedPropertiesFile(currentVersion));
       // rename new
-      newContentF.renameTo(getCurrentCacheFile());
-      newPropsF.renameTo(getCurrentPropertiesFile());
+      tempCacheFile.renameTo(currentCacheFile);
+      tempPropsFile.renameTo(currentPropsFile);
 
       currentVersion++;
       newVersionOutput = null;
-      curInput = null;
+      curInputFile = null;
       curProps = null;
       newVersionOpen = false;
     }
@@ -123,7 +126,12 @@ public class LeafNodeImpl extends RepositoryNodeImpl implements LeafNode {
   public InputStream getInputStream() {
     ensureCurrentVersionLoaded();
     ensureReadInfoLoaded();
-    return curInput;
+    try {
+      return new FileInputStream(curInputFile);
+    } catch (FileNotFoundException fnfe) {
+      logger.error("Couldn't get inputstream for '"+curInputFile.getAbsolutePath()+"'");
+      return null;
+    }
   }
 
   public Properties getProperties() {
@@ -139,12 +147,11 @@ public class LeafNodeImpl extends RepositoryNodeImpl implements LeafNode {
     if (newVersionOutput!=null) {
       return newVersionOutput;
     }
-    File file = getTempCacheFile();
     try {
-      newVersionOutput = new FileOutputStream(file);
+      newVersionOutput = new FileOutputStream(tempCacheFile);
       return newVersionOutput;
     } catch (FileNotFoundException fnfe) {
-      logger.error("No new version file for "+file.getAbsolutePath()+".");
+      logger.error("No new version file for "+tempCacheFile.getAbsolutePath()+".");
       return null;
     }
   }
@@ -154,45 +161,37 @@ public class LeafNodeImpl extends RepositoryNodeImpl implements LeafNode {
       throw new UnsupportedOperationException("New version not initialized.");
     }
     if (newProps!=null) {
-      File file = getTempPropertiesFile();
       try {
-        OutputStream os = new FileOutputStream(file);
+        OutputStream os = new FileOutputStream(tempPropsFile);
         newProps.setProperty("version_number", ""+(currentVersion+1));
         newProps.store(os, "HTTP headers for " + url);
         os.close();
       } catch (IOException ioe) {
         logger.error("Couldn't write properties for " +
-                     file.getAbsolutePath()+".");
+                     tempPropsFile.getAbsolutePath()+".");
       }
     }
   }
 
   private void ensureReadInfoLoaded() {
     if (currentVersion==0) {
-      curInput = null;
+      curInputFile = null;
       curProps = new Properties();
       return;
     }
-    if ((curInput==null) || (curProps==null)) {
+    if ((curInputFile==null) || (curProps==null)) {
       synchronized (this) {
-        File file = null;
-        if (curInput==null) {
-          file = getCurrentCacheFile();
-          try {
-            curInput = new FileInputStream(file);
-          } catch (FileNotFoundException fnfe) {
-            logger.error("No inputstream for "+file.getAbsolutePath()+".");
-          }
+        if (curInputFile==null) {
+          curInputFile = currentCacheFile;
         }
         if (curProps==null) {
-          file = getCurrentPropertiesFile();
           try {
-            InputStream is = new FileInputStream(file);
+            InputStream is = new FileInputStream(currentPropsFile);
             curProps = new Properties();
             curProps.load(is);
             is.close();
           } catch (IOException e) {
-            logger.error("No properties file for "+file.getAbsolutePath()+".");
+            logger.error("No properties file for "+currentPropsFile.getAbsolutePath()+".");
             curProps = new Properties();
           }
         }
@@ -202,25 +201,28 @@ public class LeafNodeImpl extends RepositoryNodeImpl implements LeafNode {
 
   private void ensureCurrentVersionLoaded() {
     if (currentVersion!=-1) return;
-    File cacheDir = getCacheLocation();
-    versionName = cacheDir.getName();
-    if (!cacheDir.exists()) {
+    cacheLocationFile = getCacheLocation();
+    versionName = cacheLocationFile.getName();
+    currentCacheFile = getCurrentCacheFile();
+    currentPropsFile = getCurrentPropsFile();
+    tempCacheFile = getTempCacheFile();
+    tempPropsFile = getTempPropsFile();
+    if (!cacheLocationFile.exists()) {
       currentVersion = 0;
       return;
     }
     //XXX getting version from props probably a mistake
     if (curProps==null) {
       synchronized (this) {
-        File curPropsFile = getCurrentPropertiesFile();
-        if (curPropsFile.exists()) {
+        if (currentPropsFile.exists()) {
           try {
-            InputStream is = new FileInputStream(curPropsFile);
+            InputStream is = new FileInputStream(currentPropsFile);
             curProps = new Properties();
             curProps.load(is);
             is.close();
           } catch (Exception e) {
             logger.error("Error loading version from "+
-                          curPropsFile.getAbsolutePath()+".");
+                          currentPropsFile.getAbsolutePath()+".");
             curProps = new Properties();
           }
         } else {
@@ -233,41 +235,53 @@ public class LeafNodeImpl extends RepositoryNodeImpl implements LeafNode {
   }
 
   private File getCurrentCacheFile() {
-    buffer = new StringBuffer(cacheLocation);
-    buffer.append(File.separator);
-    buffer.append(versionName);
-    buffer.append(CURRENT_SUFFIX);
-    return new File(buffer.toString());
+    if (currentCacheFile==null) {
+      StringBuffer buffer = new StringBuffer(cacheLocation);
+      buffer.append(File.separator);
+      buffer.append(versionName);
+      buffer.append(CURRENT_SUFFIX);
+      currentCacheFile = new File(buffer.toString());
+    }
+    return currentCacheFile;
   }
 
-  private File getCurrentPropertiesFile() {
-    buffer = new StringBuffer(cacheLocation);
-    buffer.append(File.separator);
-    buffer.append(versionName);
-    buffer.append(PROPS_SUFFIX);
-    buffer.append(CURRENT_SUFFIX);
-    return new File(buffer.toString());
+  private File getCurrentPropsFile() {
+    if (currentPropsFile==null) {
+      StringBuffer buffer = new StringBuffer(cacheLocation);
+      buffer.append(File.separator);
+      buffer.append(versionName);
+      buffer.append(PROPS_SUFFIX);
+      buffer.append(CURRENT_SUFFIX);
+      currentPropsFile = new File(buffer.toString());
+    }
+    return currentPropsFile;
   }
 
   private File getTempCacheFile() {
-    buffer = new StringBuffer(cacheLocation);
-    buffer.append(File.separator);
-    buffer.append(versionName);
-    buffer.append(TEMP_SUFFIX);
-    return new File(buffer.toString());
+    if (tempCacheFile==null) {
+      StringBuffer buffer = new StringBuffer(cacheLocation);
+      buffer.append(File.separator);
+      buffer.append(versionName);
+      buffer.append(TEMP_SUFFIX);
+      tempCacheFile = new File(buffer.toString());
+    }
+    return tempCacheFile;
   }
 
-  private File getTempPropertiesFile() {
-    buffer = new StringBuffer(cacheLocation);
-    buffer.append(File.separator);
-    buffer.append(versionName);
-    buffer.append(PROPS_SUFFIX);
-    buffer.append(TEMP_SUFFIX);
-    return new File(buffer.toString());
+  private File getTempPropsFile() {
+    if (tempPropsFile==null) {
+      StringBuffer buffer = new StringBuffer(cacheLocation);
+      buffer.append(File.separator);
+      buffer.append(versionName);
+      buffer.append(PROPS_SUFFIX);
+      buffer.append(TEMP_SUFFIX);
+      tempPropsFile = new File(buffer.toString());
+    }
+    return tempPropsFile;
   }
 
   private File getVersionedCacheFile(int version) {
-    buffer = new StringBuffer(cacheLocation);
+    StringBuffer buffer = new StringBuffer(cacheLocation);
     buffer.append(File.separator);
     buffer.append(versionName);
     buffer.append(".");
@@ -276,7 +290,7 @@ public class LeafNodeImpl extends RepositoryNodeImpl implements LeafNode {
   }
 
   private File getVersionedPropertiesFile(int version) {
-    buffer = new StringBuffer(cacheLocation);
+    StringBuffer buffer = new StringBuffer(cacheLocation);
     buffer.append(File.separator);
     buffer.append(versionName);
     buffer.append(PROPS_SUFFIX);
@@ -286,6 +300,9 @@ public class LeafNodeImpl extends RepositoryNodeImpl implements LeafNode {
   }
 
   private File getCacheLocation() {
-    return new File(cacheLocation);
+    if (cacheLocationFile==null) {
+      cacheLocationFile = new File(cacheLocation);
+    }
+    return cacheLocationFile;
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestLeafNodeImpl.java,v 1.3 2002-11-06 00:01:30 aalto Exp $
+ * $Id: TestLeafNodeImpl.java,v 1.4 2002-11-07 02:21:48 aalto Exp $
  */
 
 /*
@@ -50,8 +50,11 @@ public class TestLeafNodeImpl extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    File tempDir = super.getTempDir();
-    leaf = new LeafNodeImpl("test.cache", tempDir.getAbsolutePath() + File.separator, null);
+    String tempDirPath = "";
+    try {
+      tempDirPath = super.getTempDir().getAbsolutePath() + File.separator;
+    } catch (Exception e) { fail("Couldn't get tempDir."); }
+    leaf = new LeafNodeImpl("test.cache", tempDirPath+"test.cache", null);
   }
 
   public void testMakeNewCache() throws IOException {
@@ -72,6 +75,9 @@ public class TestLeafNodeImpl extends LockssTestCase {
   public void testMakeNewVersion() throws IOException {
     leaf.makeNewVersion();
     OutputStream os = leaf.getNewOutputStream();
+    Properties props = new Properties();
+    props.setProperty("test 1", "value 1");
+    leaf.setNewProperties(props);
     InputStream is = new StringInputStream("testing stream 1");
     StreamUtil.copy(is, os);
     os.close();
@@ -80,6 +86,9 @@ public class TestLeafNodeImpl extends LockssTestCase {
     leaf.sealNewVersion();
     assertTrue(leaf.getCurrentVersion()==1);
     leaf.makeNewVersion();
+    props = new Properties();
+    props.setProperty("test 1", "value 2");
+    leaf.setNewProperties(props);
     os = leaf.getNewOutputStream();
     is = new StringInputStream("testing stream 2");
     StreamUtil.copy(is, os);
@@ -95,6 +104,8 @@ public class TestLeafNodeImpl extends LockssTestCase {
     String resultStr = baos.toString();
     baos.close();
     assertTrue(resultStr.equals("testing stream 2"));
+    props = leaf.getProperties();
+    assertTrue(props.getProperty("test 1").equals("value 2"));
   }
 
   public void testGetInputStream() throws IOException {
@@ -117,12 +128,6 @@ public class TestLeafNodeImpl extends LockssTestCase {
 
   public void testGetProperties() throws IOException {
     leaf.makeNewVersion();
-    OutputStream os = leaf.getNewOutputStream();
-    InputStream is = new StringInputStream("testing stream");
-    StreamUtil.copy(is, os);
-    os.close();
-    is.close();
-
     Properties props = new Properties();
     props.setProperty("test 1", "value 1");
     leaf.setNewProperties(props);
@@ -132,11 +137,6 @@ public class TestLeafNodeImpl extends LockssTestCase {
     assertTrue(props.getProperty("test 1").equals("value 1"));
 
     leaf.makeNewVersion();
-    os = leaf.getNewOutputStream();
-    is = new StringInputStream("testing stream");
-    StreamUtil.copy(is, os);
-    os.close();
-    is.close();
     props = new Properties();
     props.setProperty("test 1", "value 2");
     leaf.setNewProperties(props);

@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.4 2002-11-05 01:49:54 aalto Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.5 2002-11-07 02:21:48 aalto Exp $
  */
 
 /*
@@ -32,10 +32,12 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.repository;
 import java.util.*;
-import java.io.File;
+import java.io.*;
 import junit.framework.TestCase;
 import org.lockss.test.*;
 import java.net.MalformedURLException;
+import org.lockss.daemon.*;
+import org.lockss.util.ListUtil;
 
 /**
  * This is the test class for org.lockss.daemon.LockssRepositoryImpl
@@ -53,14 +55,10 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     String tempDirPath = "";
     try {
       tempDirPath = super.getTempDir().getAbsolutePath() + File.separator;
-    } catch (Exception ex) { assertTrue("Couldn't get tempDir.", false); }
+    } catch (Exception e) { fail("Couldn't get tempDir."); }
+    configCacheLocation(tempDirPath);
     MockArchivalUnit mau = new MockArchivalUnit(null);
-    mau.setPluginId(tempDirPath);
     repo = LockssRepositoryImpl.repositoryFactory(mau);
-  }
-
-  public void tearDown() throws Exception {
-    super.tearDown();
   }
 
   public void testGetRepositoryEntry() throws MalformedURLException {
@@ -145,4 +143,11 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
       fail("Should have thrown MalformedURLException");
     } catch (MalformedURLException mue) { }
   }
+
+  public static void configCacheLocation(String location)
+    throws IOException {
+    String s = Configuration.PREFIX + "cache.location=" + location;
+    TestConfiguration.setCurrentConfigFromUrlList(ListUtil.list(FileUtil.urlOfString(s)));
+  }
+
 }
