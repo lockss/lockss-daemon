@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.67 2004-07-23 16:45:56 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.68 2004-08-09 18:45:58 tlipkis Exp $
  */
 
 /*
@@ -448,8 +448,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
         }
       } while (ch != -1); // while not eof
     } catch (IOException ex) {
-      logger.warning("Exception occured while checking for permission: "
-                     + ex.toString());
+      logger.warning("Exception occured while checking for permission", ex);
     }
 
     return crawl_ok;
