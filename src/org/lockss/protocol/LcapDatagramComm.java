@@ -1,5 +1,5 @@
 /*
- * $Id: LcapDatagramComm.java,v 1.5 2004-10-11 00:56:58 tlipkis Exp $
+ * $Id: LcapDatagramComm.java,v 1.6 2005-01-26 18:21:40 tlipkis Exp $
  */
 
 /*
@@ -432,12 +432,17 @@ public class LcapDatagramComm
   private void processReceivedPacket(LockssReceivedDatagram ld) {
     if (verifyPacket(ld)) {
       log.debug2("Received " + ld);
-      updateInStats(ld);
-      runHandlers(ld);
+      try {
+	updateInStats(ld);
+	runHandlers(ld);
+      } catch (ProtocolException e) {
+	log.warning("Cannot process incoming packet", e);
+      }
     }
   }
 
-  private void runHandler(MessageHandler handler, LockssReceivedDatagram ld) {
+  protected void runHandler(MessageHandler handler,
+			    LockssReceivedDatagram ld) {
     try {
       handler.handleMessage(ld);
     } catch (Exception e) {
@@ -445,7 +450,7 @@ public class LcapDatagramComm
     }
   }
 
-  private void runHandlers(LockssReceivedDatagram ld) {
+  private void runHandlers(LockssReceivedDatagram ld) throws ProtocolException {
     int proto = ld.getProtocol();
     MessageHandler handler;
     if (proto < messageHandlers.size() &&
@@ -600,7 +605,8 @@ public class LcapDatagramComm
 
   }
 
-  private void updateInStats(LockssReceivedDatagram ld) {
+  protected void updateInStats(LockssReceivedDatagram ld)
+      throws ProtocolException {
     LcapSocket lsock = ld.getReceiveSocket();
     DatagramSocket sock = lsock.getSocket();
     boolean mcast = ld.isMulticast();
@@ -615,12 +621,12 @@ public class LcapDatagramComm
     updateStats(ld, sock.getLocalPort(), true, mcast);
   }
 
-  private void updateOutStats(LockssDatagram ld, int port, boolean multicast) {
+  private void updateOutStats(LockssDatagram ld, int port, boolean multicast) throws ProtocolException {
     updateStats(ld, port, false, multicast);
   }
 
   private void updateStats(LockssDatagram ld, int port,
-			   boolean in, boolean multicast) {
+			   boolean in, boolean multicast) throws ProtocolException {
     int proto = ld.getProtocol();
     Stats stats = getStatsObj(port, proto, multicast, false);
     if (in) {

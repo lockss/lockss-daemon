@@ -1,5 +1,5 @@
 /*
- * $Id: LockssReceivedDatagram.java,v 1.10 2004-01-21 08:27:44 tlipkis Exp $
+ * $Id: LockssReceivedDatagram.java,v 1.11 2005-01-26 18:21:40 tlipkis Exp $
  */
 
 /*
@@ -73,7 +73,7 @@ public class LockssReceivedDatagram extends LockssDatagram {
   }
 
   /** Return the data portion of the received packet */
-  public byte[] getData() {
+  public byte[] getData() throws ProtocolException {
     if (payload == null) {
       decodePacket();
     }
@@ -81,29 +81,29 @@ public class LockssReceivedDatagram extends LockssDatagram {
   }
 
   /** Return the protocol from the received packet */
-  public int getProtocol() {
+  public int getProtocol() throws ProtocolException {
     if (payload == null) {
       decodePacket();
     }
     return protocol;
   }
 
-  private void decodePacket() {
+  private void decodePacket() throws ProtocolException {
     if (isCompressed()) {
       try {
 	decodeCompressedPacket();
       } catch (IOException e) {
-	throw new RuntimeException("Undecodable compressed packet");
+	throw new ProtocolException("Undecodable compressed packet");
       }
     } else {
       decodeUncompressedPacket();
     }
   }
 
-  private void decodeUncompressedPacket() {
+  private void decodeUncompressedPacket() throws ProtocolException {
     int len = packet.getLength() - HEADER_LENGTH;
     if (len < 0) {
-      throw new RuntimeException("short packet");
+      throw new ProtocolException("short packet, len: " + len);
     }
     byte[] pktData = packet.getData();
     protocol = ByteArray.decodeInt(pktData, 0);
@@ -120,7 +120,7 @@ public class LockssReceivedDatagram extends LockssDatagram {
     byte[] header = new byte[HEADER_LENGTH];
     int hlen = gzin.read(header, 0, HEADER_LENGTH);
     if (hlen != HEADER_LENGTH) {
-      throw new RuntimeException("short packet");
+      throw new ProtocolException("short packet");
     }
     StreamUtil.copy(gzin, baos);
     protocol = ByteArray.decodeInt(header, 0);
@@ -195,7 +195,12 @@ public class LockssReceivedDatagram extends LockssDatagram {
   }
 
   public String toString() {
-    return "[LRDG: proto=" + getProtocol() + ", " +
+    String proto = "Unknown";
+    try {
+      proto = Integer.toString(getProtocol());
+    } catch (ProtocolException e) {
+    }
+    return "[LRDG: proto=" + proto + ", " +
       (isMulticast() ? "M" : "U") +
       " from " + getSender() + "]";
   }
