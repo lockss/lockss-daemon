@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.42 2003-12-23 00:29:35 tlipkis Exp $
+ * $Id: MockArchivalUnit.java,v 1.43 2004-01-07 01:14:10 troberts Exp $
  */
 
 /*
@@ -61,6 +61,8 @@ public class MockArchivalUnit implements ArchivalUnit {
   private HashSet urlsToCache = new HashSet();
 
   private Plugin plugin;
+
+  private FilterRule filterRule = null;
 
   public MockArchivalUnit(){
   }
@@ -241,7 +243,11 @@ public class MockArchivalUnit implements ArchivalUnit {
   }
 
   public FilterRule getFilterRule(String mimeType) {
-    throw new UnsupportedOperationException("Not implemented");
+    return filterRule;
+  }
+
+  public void setFilterRule(FilterRule filterRule) {
+    this.filterRule = filterRule;
   }
 
   public String toString() {
