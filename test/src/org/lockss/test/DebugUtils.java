@@ -1,5 +1,5 @@
 /*
- * $Id: DebugUtils.java,v 1.3 2002-12-31 00:07:28 tal Exp $
+ * $Id: DebugUtils.java,v 1.4 2003-01-02 06:48:06 tal Exp $
  */
 
 /*
@@ -212,7 +212,8 @@ public class DebugUtils {
 //   public static native int getPid();
 
   /** Exception thrown if no implementation is available for the current
-   * platform */
+   * platform, or a platform-dependent error occurs.
+   * In the case of an error, the original exception is available. */
   public class UnsupportedException extends Exception {
     Throwable e;
 
@@ -225,5 +226,9 @@ public class DebugUtils {
       this.e = e;
     }
 
+    /** Return the nested Throwable */
+    public Throwable getError() {
+      return e;
+    }
   }
 }
