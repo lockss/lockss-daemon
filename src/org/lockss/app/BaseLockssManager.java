@@ -1,5 +1,5 @@
 /*
- * $Id: BaseLockssManager.java,v 1.2 2003-03-19 07:55:17 tal Exp $
+ * $Id: BaseLockssManager.java,v 1.3 2003-03-21 20:41:22 tal Exp $
  */
 
 /*
@@ -37,8 +37,8 @@ package org.lockss.app;
 
 public abstract class BaseLockssManager implements LockssManager {
 
-  static private LockssManager theManager = null;
-  static private LockssDaemon theDaemon = null;
+  private LockssManager theManager = null;
+  private LockssDaemon theDaemon = null;
 
   public void initService(LockssDaemon daemon) throws LockssDaemonException {
     if(theManager == null) {
