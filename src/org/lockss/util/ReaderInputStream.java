@@ -1,5 +1,5 @@
 /*
- * $Id: ReaderInputStream.java,v 1.5 2003-06-20 22:34:53 claire Exp $
+ * $Id: ReaderInputStream.java,v 1.6 2003-09-02 20:13:05 troberts Exp $
  */
 
 /*
@@ -39,7 +39,10 @@ import java.io.*;
 
 public class ReaderInputStream extends InputStream {
   Reader reader = null;
+  StringBuffer sb = new StringBuffer();
   protected static Logger logger = Logger.getLogger("ReaderInputStream");
+  char[] charBuffer = new char[1024];
+  
 
   public int read() throws IOException {
     logger.debug3("Calling read");
@@ -49,7 +52,19 @@ public class ReaderInputStream extends InputStream {
       logger.debug3("Reader is done");
       return kar;
     }
+    sb.append((char)kar);
     return charToByte((char)kar);
+  }
+
+  public int read(byte[] outputBuf, int off, int len) throws IOException {
+    if (len > 1024) {
+      len = 1024;
+    }
+    int numRead = reader.read(charBuffer, 0, len);
+    for (int ix=0; ix<numRead; ix++) {
+      outputBuf[off+ix] = charToByte(charBuffer[ix]);
+    }
+    return numRead;
   }
 
   private byte charToByte(char kar) {
