@@ -1,5 +1,5 @@
 /*
-* $Id: IdentityManager.java,v 1.27 2003-04-24 17:25:12 tal Exp $
+* $Id: IdentityManager.java,v 1.28 2003-04-24 22:07:16 tal Exp $
  */
 
 /*
@@ -71,7 +71,7 @@ public class IdentityManager extends BaseLockssManager {
   static final String PARAM_VOTE_VERIFIED = PREFIX + "voteVerified";
   static final String PARAM_VOTE_DISOWNED = PREFIX + "voteDisowned";
 
-  static final String PARAM_IDDB_DIR = PREFIX + "database.dir";
+  public static final String PARAM_IDDB_DIR = PREFIX + "database.dir";
 
   static final String IDDB_FILENAME = "iddb.xml";
   static final String IDDB_MAP_FILENAME = "idmapping.xml";
@@ -94,16 +94,41 @@ public class IdentityManager extends BaseLockssManager {
   static Logger theLog = Logger.getLogger("IdentityManager");
   static Random theRandom = new Random();
 
-  static String localIdentityStr = null;
+  protected static String localIdentityStr;
+  LcapIdentity theLocalIdentity;
 
   int[] reputationDeltas = new int[10];
 
-  LcapIdentity theLocalIdentity = null;
   Mapping mapping = null;
 
   HashMap theIdentities = new HashMap(); // all known identities
 
   public IdentityManager() { }
+
+  public void initService(LockssDaemon daemon) {
+    super.initService(daemon);
+    localIdentityStr = Configuration.getParam(PARAM_LOCAL_IP);
+    theLog.error("localIdentityStr: " + localIdentityStr);
+    if (localIdentityStr == null) {
+      theLog.error(PARAM_LOCAL_IP +
+		   " is not set - IdentityManager cannot start.");
+      throw new
+	LockssDaemonException(PARAM_LOCAL_IP +
+			      " is not set - IdentityManager cannot start.");
+    }
+    makeLocalIdentity();
+  }
+
+  protected void makeLocalIdentity() throws LockssDaemonException {
+    try {
+      InetAddress addr = InetAddress.getByName(localIdentityStr);
+      theLocalIdentity = new LcapIdentity(addr);
+    } catch (UnknownHostException uhe) {
+      theLog.error("Could not resolve: " + localIdentityStr, uhe);
+      throw new
+	LockssDaemonException("Could not resolve: " + localIdentityStr);
+    }
+  }
 
   /**
    * start the identity manager.
@@ -165,17 +190,9 @@ public class IdentityManager extends BaseLockssManager {
 
   /**
    * Get the Identity of the local host
-   * @return newly constructed <code>Identity<\code>
+   * @return LcapIdentity for the local host
    */
   public LcapIdentity getLocalIdentity() {
-    if (theLocalIdentity == null)  {
-      try {
-        InetAddress addr = InetAddress.getByName(getLocalHostName());
-        theLocalIdentity = new LcapIdentity(addr);
-      } catch (UnknownHostException uhe) {
-        theLog.error("Could not resolve: "+localIdentityStr, uhe);
-      }
-    }
     return theLocalIdentity;
   }
 
@@ -184,9 +201,6 @@ public class IdentityManager extends BaseLockssManager {
    * @return hostname as a String
    */
   public static String getLocalHostName() {
-    if (localIdentityStr == null)  {
-      localIdentityStr = Configuration.getParam(PARAM_LOCAL_IP);
-    }
     return localIdentityStr;
   }
 
@@ -196,10 +210,7 @@ public class IdentityManager extends BaseLockssManager {
    * @return boolean true if is the local identity, false otherwise
    */
   public boolean isLocalIdentity(LcapIdentity id) {
-    if (theLocalIdentity == null)  {
-      getLocalIdentity();
-    }
-    return id.isEqual(theLocalIdentity);
+    return theLocalIdentity.isEqual(id);
   }
 
   /**
@@ -209,9 +220,6 @@ public class IdentityManager extends BaseLockssManager {
    * @return boolean true if the this is InetAddress is considered local
    */
   public boolean isLocalIdentity(InetAddress addr) {
-    if (theLocalIdentity == null)  {
-      getLocalIdentity();
-    }
     return theLocalIdentity.m_address.equals(addr);
   }
 
