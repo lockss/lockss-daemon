@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepairCrawler.java,v 1.17 2004-10-20 18:41:16 dcfok Exp $
+ * $Id: TestRepairCrawler.java,v 1.17.2.1 2004-11-12 23:33:09 troberts Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.net.*;
 import java.io.*;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
+import org.lockss.util.urlconn.*;
 import org.lockss.plugin.*;
 import org.lockss.protocol.*;
 import org.lockss.state.*;
@@ -206,6 +207,17 @@ public class TestRepairCrawler extends LockssTestCase {
     assertFalse(crawler.doCrawl());
   }
 
+  //these tests use MyRepairCrawler, which overrides fetchFromCache and fetchFromPublisher; these methods should be tested separately
+
+  void setAgreeingPeers(int numPeers) throws MalformedIdentityKeyException {
+    Map map = new HashMap();
+    for (int ix = 0; ix < numPeers; ix++) {
+      PeerIdentity id = idm.stringToPeerIdentity("127.0.0."+ix);
+      map.put(id, new Long(10+ix));
+    }
+    idm.setAgeedForAu(mau, map);
+  }
+
   public void testFetchFromACacheOnly() throws MalformedIdentityKeyException {
     PeerIdentity id = idm.stringToPeerIdentity("127.0.0.1");
 
@@ -221,7 +233,7 @@ public class TestRepairCrawler extends LockssTestCase {
     p.setProperty(RepairCrawler.PARAM_FETCH_FROM_OTHER_CACHES_ONLY, "true");
     ConfigurationUtil.setCurrentConfigFromProps(p);
 
-    crawler.doCrawl();
+    assertTrue("doCrawl() returned false", crawler.doCrawl());
     assertEquals("Fail! fetch from "+ crawler.getContentSource(repairUrl) ,id, crawler.getContentSource(repairUrl));
     assertTrue("Fail! fetch from caches occur, fetchCacheCnt = " +
 	         crawler.getFetchCacheCnt() , crawler.getFetchCacheCnt() == 1);
@@ -230,24 +242,28 @@ public class TestRepairCrawler extends LockssTestCase {
 
   public void testFetchFromOtherCachesOnlyWithoutRetryLimit()
       throws MalformedIdentityKeyException {
-    PeerIdentity id1 = idm.stringToPeerIdentity("127.0.0.1");
-    PeerIdentity id2 = idm.stringToPeerIdentity("127.0.0.2");
-    PeerIdentity id3 = idm.stringToPeerIdentity("127.0.0.3");
-    Map map = new HashMap();
-    map.put(id1, new Long(10));
-    map.put(id2, new Long(11));
-    map.put(id3, new Long(12));
-    idm.setAgeedForAu(mau, map);
+//     PeerIdentity id1 = idm.stringToPeerIdentity("127.0.0.1");
+//     PeerIdentity id2 = idm.stringToPeerIdentity("127.0.0.2");
+//     PeerIdentity id3 = idm.stringToPeerIdentity("127.0.0.3");
+//     Map map = new HashMap();
+//     map.put(id1, new Long(10));
+//     map.put(id2, new Long(11));
+//     map.put(id3, new Long(12));
+//     idm.setAgeedForAu(mau, map);
+
+    setAgreeingPeers(3);
 
     String repairUrl = "http://example.com/blah.html";
     MyRepairCrawler crawler =
       new MyRepairCrawler(mau, spec, aus, ListUtil.list(repairUrl),0);
+    crawler.setTimesToThrow(3);
+
 
     Properties p = new Properties();
     p.setProperty(RepairCrawler.PARAM_FETCH_FROM_OTHER_CACHES_ONLY, "true");
     ConfigurationUtil.setCurrentConfigFromProps(p);
 
-    crawler.doCrawl();
+    assertFalse("doCrawl() returned true", crawler.doCrawl());
     assertTrue("Fetch from caches occur, fetchCacheCnt = " +
 	         crawler.getFetchCacheCnt() , crawler.getFetchCacheCnt() == 3);
     assertTrue("Fetch from publisher should never occur, yet FetchPubCnt = " +
@@ -255,14 +271,35 @@ public class TestRepairCrawler extends LockssTestCase {
   }
 
   public void testFetchFromOtherCachesOnlyWithRetryLimit() throws MalformedIdentityKeyException {
-    PeerIdentity id1 = idm.stringToPeerIdentity("127.0.0.1");
-    PeerIdentity id2 = idm.stringToPeerIdentity("127.0.0.2");
-    PeerIdentity id3 = idm.stringToPeerIdentity("127.0.0.3");
-    Map map = new HashMap();
-    map.put(id1, new Long(10));
-    map.put(id2, new Long(11));
-    map.put(id3, new Long(12));
-    idm.setAgeedForAu(mau, map);
+//     PeerIdentity id1 = idm.stringToPeerIdentity("127.0.0.1");
+//     PeerIdentity id2 = idm.stringToPeerIdentity("127.0.0.2");
+//     PeerIdentity id3 = idm.stringToPeerIdentity("127.0.0.3");
+//     Map map = new HashMap();
+//     map.put(id1, new Long(10));
+//     map.put(id2, new Long(11));
+//     map.put(id3, new Long(12));
+//     idm.setAgeedForAu(mau, map);
+
+    setAgreeingPeers(3);
+
+    String repairUrl = "http://example.com/blah.html";
+    MyRepairCrawler crawler =
+      new MyRepairCrawler(mau, spec, aus, ListUtil.list(repairUrl),0);
+    crawler.setTimesToThrow(3);
+
+    Properties p = new Properties();
+    p.setProperty(RepairCrawler.PARAM_FETCH_FROM_OTHER_CACHES_ONLY, "true");
+    p.setProperty(RepairCrawler.PARAM_NUM_RETRIES_FROM_CACHES, ""+2);
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+
+    assertFalse("doCrawl() returned true", crawler.doCrawl());
+    assertTrue("Fetch from caches occur, fetchCacheCnt = " +
+	       crawler.getFetchCacheCnt() , crawler.getFetchCacheCnt() == 2);
+    assertTrue("Fetch from publisher never occur", crawler.getFetchPubCnt() == 0);
+  }
+
+  public void testFetchFromCacheFailureNoMap() {
+    idm.setAgeedForAu(mau, null);
 
     String repairUrl = "http://example.com/blah.html";
     MyRepairCrawler crawler =
@@ -270,16 +307,31 @@ public class TestRepairCrawler extends LockssTestCase {
 
     Properties p = new Properties();
     p.setProperty(RepairCrawler.PARAM_FETCH_FROM_OTHER_CACHES_ONLY, "true");
-    p.setProperty(RepairCrawler.PARAM_NUM_RETRIES_FROM_CACHES, ""+2);
     ConfigurationUtil.setCurrentConfigFromProps(p);
 
-    crawler.doCrawl();
-    assertTrue("Fetch from caches occur, fetchCacheCnt = " +
-	       crawler.getFetchCacheCnt() , crawler.getFetchCacheCnt() == 2);
-    assertTrue("Fetch from publisher never occur", crawler.getFetchPubCnt() == 0);
+    assertFalse(crawler.doCrawl());
+    Crawler.Status status = crawler.getStatus();
+    assertEquals(Crawler.STATUS_FETCH_ERROR, status.getCrawlStatus());
   }
 
-  public void testFetchFromPublisherOnly() throws MalformedIdentityKeyException {
+  public void testFetchFromCacheFailureEmptyMap() {
+    idm.setAgeedForAu(mau, new HashMap());
+
+    String repairUrl = "http://example.com/blah.html";
+    MyRepairCrawler crawler =
+      new MyRepairCrawler(mau, spec, aus, ListUtil.list(repairUrl),0);
+
+    Properties p = new Properties();
+    p.setProperty(RepairCrawler.PARAM_FETCH_FROM_OTHER_CACHES_ONLY, "true");
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+
+    assertFalse(crawler.doCrawl());
+    Crawler.Status status = crawler.getStatus();
+    assertEquals(Crawler.STATUS_FETCH_ERROR, status.getCrawlStatus());
+  }
+
+  public void testFetchFromPublisherOnly()
+      throws MalformedIdentityKeyException {
     String repairUrl = "http://example.com/blah.html";
     MyRepairCrawler crawler =
       new MyRepairCrawler(mau, spec, aus, ListUtil.list(repairUrl),0);
@@ -289,7 +341,28 @@ public class TestRepairCrawler extends LockssTestCase {
     p.setProperty(RepairCrawler.PARAM_FETCH_FROM_PUBLISHER_ONLY, "true");
     ConfigurationUtil.setCurrentConfigFromProps(p);
 
-    crawler.doCrawl();
+    assertTrue("doCrawl() returned false", crawler.doCrawl());
+    assertTrue("Fetch from caches occur, fetchCacheCnt = " +
+	        crawler.getFetchCacheCnt() , crawler.getFetchCacheCnt() == 0);
+    assertTrue("Fetch from publisher" +
+	       crawler.getFetchPubCnt(), crawler.getFetchPubCnt() == 1);
+  }
+
+  public void testFetchFromPublisherOnlyFailure()
+      throws MalformedIdentityKeyException {
+    System.err.println("STOP1");
+    setAgreeingPeers(3);
+
+    String repairUrl = "http://example.com/blah.html";
+    MyRepairCrawler crawler =
+      new MyRepairCrawler(mau, spec, aus, ListUtil.list(repairUrl),0);
+    crawler.setTimesToThrow(3);
+
+    Properties p = new Properties();
+    p.setProperty(RepairCrawler.PARAM_FETCH_FROM_PUBLISHER_ONLY, "true");
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+
+    assertFalse("doCrawl() returned true", crawler.doCrawl());
     assertTrue("Fetch from caches occur, fetchCacheCnt = " +
 	        crawler.getFetchCacheCnt() , crawler.getFetchCacheCnt() == 0);
     assertTrue("Fetch from publisher" +
@@ -297,25 +370,43 @@ public class TestRepairCrawler extends LockssTestCase {
   }
 
   public void testFetchFromOtherCachesThenPublisher() throws MalformedIdentityKeyException {
-    PeerIdentity id1 = idm.stringToPeerIdentity("127.0.0.1");
-    PeerIdentity id2 = idm.stringToPeerIdentity("127.0.0.2");
-    PeerIdentity id3 = idm.stringToPeerIdentity("127.0.0.3");
-    Map map = new HashMap();
-    map.put(id1, new Long(10));
-    map.put(id2, new Long(11));
-    map.put(id3, new Long(12));
-    idm.setAgeedForAu(mau, map);
+    setAgreeingPeers(3);
+
 
     String repairUrl = "http://example.com/blah.html";
     MyRepairCrawler crawler =
       new MyRepairCrawler(mau, spec, aus, ListUtil.list(repairUrl),1);
+    crawler.setTimesToThrow(2);
 
     Properties p = new Properties();
     //p.setProperty(RepairCrawler.PARAM_FETCH_FROM_OTHER_CACHES_ONLY, "false");
     p.setProperty(RepairCrawler.PARAM_NUM_RETRIES_FROM_CACHES, ""+2);
     ConfigurationUtil.setCurrentConfigFromProps(p);
 
-    crawler.doCrawl();
+    assertTrue("doCrawl() returned false", crawler.doCrawl());
+    assertTrue("Fail fetch from other caches count, fetchCacheCnt = " +
+	       crawler.getFetchCacheCnt() , crawler.getFetchCacheCnt() == 2);
+    assertTrue("Fail fetch from publisher count, fetchPubCnt = " +
+	       crawler.getFetchPubCnt(), crawler.getFetchPubCnt() == 1);
+    assertTrue("Fail: sequence in caching from", crawler.getCacheLastCall() < crawler.getPubLastCall() );
+  }
+
+  public void testFetchFromOtherCachesThenPublisherFailure()
+      throws MalformedIdentityKeyException {
+    setAgreeingPeers(3);
+
+
+    String repairUrl = "http://example.com/blah.html";
+    MyRepairCrawler crawler =
+      new MyRepairCrawler(mau, spec, aus, ListUtil.list(repairUrl),1);
+    crawler.setTimesToThrow(3);
+
+    Properties p = new Properties();
+    //p.setProperty(RepairCrawler.PARAM_FETCH_FROM_OTHER_CACHES_ONLY, "false");
+    p.setProperty(RepairCrawler.PARAM_NUM_RETRIES_FROM_CACHES, ""+2);
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+
+    assertFalse("doCrawl() returned true", crawler.doCrawl());
     assertTrue("Fail fetch from other caches count, fetchCacheCnt = " +
 	       crawler.getFetchCacheCnt() , crawler.getFetchCacheCnt() == 2);
     assertTrue("Fail fetch from publisher count, fetchPubCnt = " +
@@ -324,25 +415,43 @@ public class TestRepairCrawler extends LockssTestCase {
   }
 
   public void testFetchFromPublisherThenOtherCaches() throws MalformedIdentityKeyException {
-    PeerIdentity id1 = idm.stringToPeerIdentity("127.0.0.1");
-    PeerIdentity id2 = idm.stringToPeerIdentity("127.0.0.2");
-    PeerIdentity id3 = idm.stringToPeerIdentity("127.0.0.3");
-    Map map = new HashMap();
-    map.put(id1, new Long(10));
-    map.put(id2, new Long(11));
-    map.put(id3, new Long(12));
-    idm.setAgeedForAu(mau, map);
+    setAgreeingPeers(3);
 
     String repairUrl = "http://example.com/blah.html";
     MyRepairCrawler crawler =
       new MyRepairCrawler(mau, spec, aus, ListUtil.list(repairUrl),0);
+    crawler.setTimesToThrow(2); //first publisher, then first other cache
+
 
     Properties p = new Properties();
     //   p.setProperty(RepairCrawler.PARAM_FETCH_FROM_OTHER_CACHES_ONLY, "false");
     p.setProperty(RepairCrawler.PARAM_NUM_RETRIES_FROM_CACHES, ""+2);
     ConfigurationUtil.setCurrentConfigFromProps(p);
 
-    crawler.doCrawl();
+    assertTrue("doCrawl() returned false", crawler.doCrawl());
+    assertTrue("Fail fetch from publisher count, fetchPubCnt = " +
+	       crawler.getFetchPubCnt(), crawler.getFetchPubCnt() == 1);
+    assertTrue("Fail fetch from other caches count, fetchCacheCnt = " +
+	       crawler.getFetchCacheCnt() , crawler.getFetchCacheCnt() == 2);
+    assertTrue("Fail: sequence in caching from", crawler.getCacheLastCall() > crawler.getPubLastCall() );
+  }
+
+  public void testFetchFromPublisherThenOtherCachesFailure()
+      throws MalformedIdentityKeyException {
+    setAgreeingPeers(3);
+
+    String repairUrl = "http://example.com/blah.html";
+    MyRepairCrawler crawler =
+      new MyRepairCrawler(mau, spec, aus, ListUtil.list(repairUrl),0);
+    crawler.setTimesToThrow(3); //first publisher, then first other cache
+
+
+    Properties p = new Properties();
+    //   p.setProperty(RepairCrawler.PARAM_FETCH_FROM_OTHER_CACHES_ONLY, "false");
+    p.setProperty(RepairCrawler.PARAM_NUM_RETRIES_FROM_CACHES, ""+2);
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+
+    assertFalse("doCrawl() returned true", crawler.doCrawl());
     assertTrue("Fail fetch from publisher count, fetchPubCnt = " +
 	       crawler.getFetchPubCnt(), crawler.getFetchPubCnt() == 1);
     assertTrue("Fail fetch from other caches count, fetchCacheCnt = " +
@@ -366,6 +475,7 @@ public class TestRepairCrawler extends LockssTestCase {
     private int fetchSequence = 0;
     private int cacheLastCall = 0;
     private int pubLastCall = 0;
+    private int timesToThrow = 0;
 
     public MyRepairCrawler(ArchivalUnit au, CrawlSpec spec,
 			   AuState aus, Collection repairUrls,
@@ -383,7 +493,19 @@ public class TestRepairCrawler extends LockssTestCase {
       fetchCacheCnt++;
       cacheLastCall = ++fetchSequence;
       contentMap.put(uc.getUrl(),id);
-      super.fetchFromCache(uc, id);
+      if (timesToThrow > 0) {
+	timesToThrow--;
+	throw new LockssUrlConnection.CantProxyException("Test");
+      }
+//       super.fetchFromCache(uc, id);
+    }
+
+    /**
+     * Set the number of times fetchFromCache and/or fetchFromPublisher
+     * should throw a LockssUrlConnection.CantProxyException
+     */
+    public void setTimesToThrow(int timesToThrow) {
+      this.timesToThrow = timesToThrow;
     }
 
     protected int getFetchCacheCnt(){
@@ -394,11 +516,12 @@ public class TestRepairCrawler extends LockssTestCase {
       fetchPubCnt++;
       pubLastCall = ++fetchSequence;
 
-      //setup so that uc.cache will throw CacheException
-      MockUrlCacher muc = new MockUrlCacher(uc.getUrl(), mau);
-      muc.setCachingException(new CacheException(),1);
+      if (timesToThrow > 0) {
+	timesToThrow--;
+	throw new CacheException("Test");
+      }
 
-      super.fetchFromPublisher(muc);
+//       super.fetchFromPublisher(muc);
     }
 
     protected int getFetchPubCnt(){
