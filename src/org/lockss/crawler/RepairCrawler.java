@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.1 2004-02-03 03:12:32 troberts Exp $
+ * $Id: RepairCrawler.java,v 1.2 2004-02-06 03:10:32 troberts Exp $
  */
 
 /*
@@ -32,9 +32,12 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.crawler;
 import java.util.*;
+import java.net.*;
 import java.io.*;
+import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
+import org.lockss.protocol.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
 import org.lockss.state.*;
@@ -42,8 +45,15 @@ import org.lockss.state.*;
 public class RepairCrawler extends CrawlerImpl {
   
   private static Logger logger = Logger.getLogger("RepairCrawler");
+
+  private IdentityManager idMgr = null;
+
   protected Collection repairUrls = null;
 
+  public static final String PARAM_FETCH_FROM_OTHER_CACHE =
+      Configuration.PREFIX + "crawler.fetch_from_other_caches";
+
+  private static final String HEADER_PREFIX = "_header";
 
   public RepairCrawler(ArchivalUnit au, CrawlSpec spec,
 		       AuState aus, Collection repairUrls) {
@@ -131,7 +141,11 @@ public class RepairCrawler extends CrawlerImpl {
 
     // don't cache if already cached, unless overwriting
     try {
-      cache(uc);
+      if (shouldFetchFromCache()) {
+	fetchFromCache(uc);
+      } else {
+	cache(uc);
+      }
       numUrlsFetched++;
     } catch (FileNotFoundException e) {
       logger.warning(uc+" not found on publisher's site");
@@ -143,6 +157,62 @@ public class RepairCrawler extends CrawlerImpl {
     return (error == 0);
   }
 
+  private boolean shouldFetchFromCache() {
+    return Configuration.getBooleanParam(PARAM_FETCH_FROM_OTHER_CACHE,
+					 false);
+  }
+  
+  protected void fetchFromCache(UrlCacher uc) throws IOException {
+    IdentityManager idm = getIdentityManager();
+    Map map = idm.getAgreed(au);
+    Iterator it = map.keySet().iterator();
+    if (it.hasNext()) {
+      fetchFromCache(uc, (LcapIdentity)it.next());
+    }
+  }
+
+  protected void fetchFromCache(UrlCacher uc, LcapIdentity id)
+      throws IOException {
+    URL url =
+      new URL(null, uc.getUrl(),
+	      new sun.net.www.protocol.http.Handler(id.toString(), 9090));
+    
+    HttpURLConnection conn = (HttpURLConnection)url.openConnection();
+    uc.storeContent(conn.getInputStream(),
+		    getPropertiesFromConn(conn, uc.getUrl()));
+  }
+
+  private Properties getPropertiesFromConn(HttpURLConnection conn, String url)
+      throws IOException {
+    Properties props = new Properties();
+    // set header properties in which we have interest
+    props.setProperty("content-type", conn.getContentType());
+    props.setProperty("date", Long.toString(conn.getDate()));
+    props.setProperty("content-url", url);
+
+    // store all header properties (this is the only way to iterate)
+    int index = 0;
+    while (true) {
+      String key = conn.getHeaderFieldKey(index);
+      String value = conn.getHeaderField(index);
+      if ((key==null) && (value==null)) {
+        // the first header field has a null key, so we can't break just on key
+        break;
+      }
+      if (value!=null) {
+        // only store headers with values
+        // qualify header names to avoid conflict with our properties
+        if (key!=null) {
+          props.setProperty(HEADER_PREFIX + key, value);
+        } else {
+          // the first header field has a null key
+          props.setProperty(HEADER_PREFIX + index, value);
+        }
+      }
+      index++;
+    }
+    return props;
+  }
 
   private void cache(UrlCacher uc) throws IOException {
     try {
@@ -151,4 +221,14 @@ public class RepairCrawler extends CrawlerImpl {
       logger.debug("Exception when trying to cache "+uc, e);
     }
   }
+
+
+  private IdentityManager getIdentityManager() {
+    if (idMgr == null) {
+      idMgr =
+	(IdentityManager)LockssDaemon.getManager(LockssDaemon.IDENTITY_MANAGER);
+    }
+    return idMgr;
+  }
+
 }
