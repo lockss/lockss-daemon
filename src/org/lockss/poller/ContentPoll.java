@@ -1,5 +1,5 @@
 /*
-* $Id: ContentPoll.java,v 1.10 2002-11-15 04:08:25 claire Exp $
+* $Id: ContentPoll.java,v 1.11 2002-11-16 02:31:28 claire Exp $
  */
 
 /*
@@ -50,12 +50,9 @@ import org.lockss.util.*;
 
 public class ContentPoll extends Poll {
 
-  private static int seq = 0;
-
   ContentPoll(LcapMessage msg, CachedUrlSet urlSet) {
     super(msg, urlSet);
     m_replyOpcode = LcapMessage.CONTENT_POLL_REP;
-    seq++;
   }
 
 
@@ -66,18 +63,6 @@ public class ContentPoll extends Poll {
    * @return boolean true if the poll should run, false otherwise
    */
   boolean prepareVoteCheck(LcapMessage msg) {
-    // make sure we have the right poll
-    byte[] challenge = msg.getChallenge();
-
-    if(challenge.length != m_challenge.length)  {
-      log.debug(m_key + " challenge length mismatch");
-      return false;
-    }
-
-    if(!Arrays.equals(challenge, m_challenge))  {
-      log.debug(m_key + " challenge mismatch");
-      return false;
-    }
 
     // make sure our vote will actually matter
     int vote_margin =  m_agree - m_disagree;
@@ -92,53 +77,49 @@ public class ContentPoll extends Poll {
       return false;
     }
 
-    // do we have time to complete the hash
-    int votes = m_agree + m_disagree + m_counting - 1;
-    long duration = msg.getDuration();
-    if (votes > 0 && duration < m_hashTime) {
-      log.info(m_key + " no time to hash vote " + duration + ":" + m_hashTime);
-      return false;
-    }
     return true;
   }
 
   /**
+   * handle a message which may be a incoming vote
+   * @param msg the Message to handle
+   */
+  void receiveMessage(LcapMessage msg) {
+    int opcode = msg.getOpcode();
+
+    if(opcode == LcapMessage.CONTENT_POLL_REP) {
+      m_counting++;
+      startVote(msg);
+    }
+  }
+
+  /**
    * schedule the hash for this poll.
-   * @param challenge the challenge
-   * @param verifier the verifier
-   * @param urlSet the cachedUrlSet
-   * @param timer the probabilistic timer
-   * @param key the Object which will be returned from the hasher, either the
-   * poll or the VoteChecker.
+   * @param timer the Deadline by which we must complete
+   * @param key the Object which will be returned from the hasher. Always the
+   * message which triggered the hash
+   * @param callback the hashing callback to use on return
    * @return true if hash successfully completed.
    */
-  boolean scheduleHash(byte[] challenge, byte[] verifier, CachedUrlSet urlSet,
-                       ProbabilisticTimer timer, Object key) {
-    MessageDigest hasher = null;
-    CachedUrlSet urlset = null;
-    try {
-      hasher = MessageDigest.getInstance(PollManager.HASH_ALGORITHM);
-    } catch (NoSuchAlgorithmException ex) {
-      return false;
-    }
-    hasher.update(challenge, 0, challenge.length);
-    hasher.update(verifier, 0, verifier.length);
-    return HashService.hashContent( urlSet, hasher, timer,
-                                    new HashCallback(), key);
+  boolean scheduleHash(Deadline timer, Object key,
+                                HashService.Callback callback) {
+    MessageDigest hasher = getHasher();
+    hasher.update(m_challenge, 0, m_challenge.length);
+    hasher.update(m_verifier, 0, m_verifier.length);
+    return HashService.hashContent( m_urlSet, hasher, timer,
+                                    callback, key);
   }
 
-  static class CPVoteChecker extends VoteChecker {
+  void startVote(LcapMessage msg) {
+    long dur = msg.getDuration();
 
-    CPVoteChecker(Poll poll, LcapMessage msg, CachedUrlSet urlSet, long hashTime) {
-      super(poll, msg, urlSet, hashTime);
-    }
-
-    void startVote() {
-      if(m_poll.prepareVoteCheck(m_msg)) {
-        m_poll.scheduleHash(m_poll.m_challenge, m_poll.m_verifier, m_urlSet,
-                            new ProbabilisticTimer(m_msg.getDuration()), this);
+    if(prepareVoteCheck(msg)) {
+      if(!scheduleHash(new Deadline(dur), msg,
+                       new VoteHashCallback())) {
+        log.info(m_key + " no time to hash vote " + dur + ":" + m_hashTime);
+        stopVote();
       }
     }
-
   }
+
 }

@@ -1,5 +1,5 @@
 /*
-* $Id: VerifyPoll.java,v 1.10 2002-11-15 04:08:25 claire Exp $
+* $Id: VerifyPoll.java,v 1.11 2002-11-16 02:31:28 claire Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.util.*;
 
 
 import org.lockss.daemon.*;
+import org.lockss.hasher.*;
 import org.lockss.plugin.*;
 import org.lockss.protocol.*;
 import org.lockss.util.*;
@@ -46,29 +47,13 @@ import org.lockss.util.*;
  * @version 1.0
  */
 class VerifyPoll extends Poll {
-  private static int m_seq = 0;
 
   public VerifyPoll(LcapMessage msg, CachedUrlSet urlSet) {
     super(msg, urlSet);
     m_replyOpcode = LcapMessage.VERIFY_POLL_REP;
     m_quorum = 1;
-    m_seq++;
   }
 
-  void startPoll() {
-    // if someone else called the poll, we verify and we're done
-
-    if(m_caller != null && !m_caller.isLocalIdentity()) {
-      try {
-        replyVerify(m_msg);
-        PollManager.removePoll(m_key);
-      }
-      catch (IOException ex) {
-        log.error(m_key + " election failed " + ex);
-        abort();
-       }
-     }
-  }
 
 
   /**
@@ -86,21 +71,58 @@ class VerifyPoll extends Poll {
   }
 
   /**
-   * schedule the hash for this poll. Provided for completeness
-   * this method always returns true and should never be called.
-   * @param challenge the challenge bytes
-   * @param verifier the verifier bytes
-   * @param urlSet the cachedUrlSet
-   * @param timer the probabilistic timer
-   * @param key the Object which will be returned from the hasher, either the
-   * poll or the VoteChecker.
+   * handle a message which may be a incoming vote
+   * @param msg the Message to handle
+   */
+  void receiveMessage(LcapMessage msg) {
+    int opcode = msg.getOpcode();
+
+    if(opcode == LcapMessage.NAME_POLL_REP) {
+      m_counting++;
+      startVote(msg);
+    }
+  }
+
+  /**
+   * schedule the hash for this poll.
+   * @param timer the Deadline by which we must complete
+   * @param key the Object which will be returned from the hasher. Always the
+   * message which triggered the hash
+   * @param callback the hashing callback to use on return
    * @return true if hash successfully completed.
    */
-  boolean scheduleHash(byte[] challenge, byte[] verifier, CachedUrlSet urlSet,
-                       ProbabilisticTimer timer, Object key) {
+  boolean scheduleHash(Deadline timer, Object key,
+                                HashService.Callback callback) {
     return true;
   }
 
+  /**
+   * start the poll.  set a deadline in which to actually verify the message.
+   */
+  void startPoll() {
+    // if someone else called the poll, we verify and we're done
+
+    if(m_caller != null && !m_caller.isLocalIdentity()) {
+      long time_remaining = m_deadline.getRemainingTime();
+      long vote_delay = time_remaining/2;
+      long vote_dev = time_remaining/4;
+      ProbabilisticTimer pt = new ProbabilisticTimer(vote_delay, vote_dev);
+      TimerQueue.schedule(pt, new PollTimerCallback(), this);
+     }
+  }
+
+  /**
+   * finish the poll once the deadline has expired
+   */
+  void stopPoll() {
+    try {
+      replyVerify(m_msg);
+      PollManager.removePoll(m_key);
+    }
+    catch (IOException ex) {
+      log.error(m_key + " election failed " + ex);
+     }
+  }
 
   /**
    * tally the poll results
@@ -116,27 +138,9 @@ class VerifyPoll extends Poll {
     } else {
       id.voteDisown();
     }
+    // TODO: Add support to disregard a vote in this poll from this id.
   }
 
-  /**
-   * prepare to check a vote.  This should check any conditions that might
-   * make running a poll unneccessary.  This will also actually perform the
-   * hash and check the results.
-   * @param msg the message which is triggering the poll
-   * @return boolean true if the poll should run, false otherwise
-   */
-  boolean prepareVoteCheck(LcapMessage msg)  {
-    byte[] challenge = msg.getChallenge();
-    if(challenge.length != m_challenge.length)  {
-      log.error(m_key + ":challenge length mismatch.");
-      return false;
-    }
-    if(!Arrays.equals(challenge, m_challenge))  {
-      log.error(m_key + ":challenge mismatch");
-      return false;
-    }
-    return true;
-  }
 
   private boolean performHash(LcapMessage msg) {
     byte[] challenge = msg.getChallenge();
@@ -203,18 +207,9 @@ class VerifyPoll extends Poll {
 
   }
 
-  static class VPVoteChecker extends VoteChecker {
-
-    VPVoteChecker(Poll poll, LcapMessage msg, CachedUrlSet urlSet, long hashTime) {
-      super(poll, msg, urlSet, hashTime);
-    }
-
-    public void startVote() {
-      if(m_poll.prepareVoteCheck(m_msg)) {
-        ((VerifyPoll)m_poll).performHash(m_msg);
-      }
-      stopVote();
-    }
+  private void startVote(LcapMessage msg) {
+    performHash(msg);
+    stopVote();
   }
 
 }

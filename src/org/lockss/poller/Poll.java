@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.10 2002-11-15 04:08:25 claire Exp $
+* $Id: Poll.java,v 1.11 2002-11-16 02:31:28 claire Exp $
  */
 
 /*
@@ -86,7 +86,6 @@ public abstract class Poll {
   long m_createTime;       // poll creation time
   boolean m_voteChecked;   // have we voted on this specific message????
   String m_key;            // the string we use to store this poll
-  HashMap m_voteCheckers;  // the vote checkers for this poll
 
   /**
    * create a new poll from a message
@@ -112,37 +111,11 @@ public abstract class Poll {
     m_caller = msg.getOriginID();
     m_voteChecked = false;
     m_voted = false;
-    m_voteCheckers = new HashMap();
     m_key = PollManager.makeKey(m_challenge);
 
   }
 
-  /**
-   * handle a message which may be a incoming vote
-   * @param msg the Message to handle
-   * @param hashTime the time available for a hash
-   */
-  public synchronized void receiveMessage(LcapMessage msg, long hashTime) {
-    VoteChecker vc = null;
-    int opcode = msg.getOpcode();
-
-    switch(opcode) {
-      case LcapMessage.CONTENT_POLL_REP:
-        vc = new ContentPoll.CPVoteChecker(this, msg, m_urlSet, hashTime);
-        break;
-      case LcapMessage.NAME_POLL_REP:
-        vc = new NamePoll.NPVoteChecker(this, msg, m_urlSet, hashTime);
-        break;
-      case LcapMessage.VERIFY_POLL_REP:
-        vc = new VerifyPoll.VPVoteChecker(this,msg,m_urlSet, hashTime);
-        break;
-    }
-    // start the vote check and increment our votecheck counter
-    if(vc != null) {
-      m_counting++;
-      vc.startVote();
-    }
-  }
+  abstract void receiveMessage(LcapMessage msg);
 
 
 
@@ -159,38 +132,26 @@ public abstract class Poll {
 
   /**
    * schedule the hash for this poll.
-   * @param challenge the challenge bytes
-   * @param verifier the verifier bytes
-   * @param urlSet the cachedUrlSet
-   * @param timer the probabilistic timer
-   * @param key the Object which will be returned from the hasher, either the
-   * poll or the VoteChecker.
+   * @param timer the Deadline by which we must complete
+   * @param key the Object which will be returned from the hasher. Always the
+   * message which triggered the hash
+   * @param callback the hashing callback to use on return
    * @return true if hash successfully completed.
    */
-  abstract boolean scheduleHash(byte[] challenge, byte[] verifier,
-                                CachedUrlSet urlSet,
-                                ProbabilisticTimer timer, Object key);
-
-  /**
-   * prepare to check a vote in a poll.  This should check any conditions
-   * that might make running a poll unneccessary.
-   * @param msg the message which is triggering the poll
-   * @return boolean true if the poll should run, false otherwise
-   */
-  abstract boolean prepareVoteCheck(LcapMessage msg);
+  abstract boolean scheduleHash(Deadline timer, Object key,
+                                HashService.Callback callback);
 
   /**
    * schedule a vote by a poll.  we've already completed the hash so we're
    * only interested in how long we have remaining.
-   * @param p the poll which is voting
    */
-  void scheduleVote(Poll p) {
+  void scheduleVote() {
     long time_remaining = m_deadline.getRemainingTime();
     long vote_delay = time_remaining/2;
     long vote_dev = time_remaining/4;
 
     m_voteTime = new ProbabilisticTimer(vote_delay, vote_dev);
-    TimerQueue.schedule(m_voteTime, new VoteTimerCallback(), p);
+    TimerQueue.schedule(m_voteTime, new VoteTimerCallback(), this);
   }
 
   /**
@@ -209,37 +170,6 @@ public abstract class Poll {
     }
   }
 
-  /**
-   * expire any deadlines, clean up any vote checkers and if
-   * we called the poll make sure we set no we're pending
-   */
-  void abort()  {
-    log.debug(m_key + " aborted");
-
-    PollManager.removePoll(m_key);
-    if(m_voteTime != null) {
-      m_voteTime.expire();
-    }
-
-    if(m_deadline != null) {
-      m_deadline.expire();
-    }
-
-    // clear our pending vote checkers
-    synchronized(m_voteCheckers) {
-      Iterator iterator = m_voteCheckers.values().iterator();
-      while(iterator.hasNext()) {
-        VoteChecker vc = (VoteChecker) iterator.next();
-        vc.abort();
-      }
-      m_voteCheckers.clear();
-    }
-
-    //  If its ours,  its still pending
-    if (m_caller == null || m_caller.isLocalIdentity()) {
-      //PollManager.setPollPending(m_urlSet,m_msg.getOpcode());
-    }
-  }
 
   /**
    * handle an agree vote
@@ -256,6 +186,7 @@ public abstract class Poll {
     PollManager.rememberVote(msg, true);
     if (!msg.isLocal()) {
       try {
+        // TODO: calculate the actual percentage
         VerifyPoll.randomRequestVerify(msg,50);
       }
       catch (IOException ex) {
@@ -286,6 +217,7 @@ public abstract class Poll {
     PollManager.rememberVote(msg, false);
     if (!local) {
       try {
+        // TODO: calculate the actual percentage
         VerifyPoll.randomRequestVerify(msg, 50);
       }
       catch (IOException ex) {
@@ -314,20 +246,20 @@ public abstract class Poll {
 
   /**
    * cast our vote for this poll
-   * @throws IOException if there was no message which triggered this poll.
    */
-  void vote() throws IOException {
+  void vote() {
     LcapMessage msg;
     LcapIdentity local_id = LcapIdentity.getLocalIdentity();
-    if(m_msg == null) {
-      throw new ProtocolException("no trigger!!!");
+    long remainingTime = m_deadline.getRemainingTime();
+    try {
+      msg = LcapMessage.makeReplyMsg(m_msg, m_hash, m_verifier, m_replyOpcode,
+                                     remainingTime, local_id);
+      log.debug("vote:" + msg.toString());
+      LcapComm.sendMessage(msg,m_arcUnit);
+    }
+    catch(IOException ioe) {
 
     }
-    long remainingTime = m_deadline.getRemainingTime();
-    msg = LcapMessage.makeReplyMsg(m_msg, m_hash, m_verifier, m_replyOpcode,
-                               remainingTime, local_id);
-    log.debug("vote:" + msg.toString());
-    LcapComm.sendMessage(msg,m_arcUnit);
   }
 
 
@@ -356,26 +288,16 @@ public abstract class Poll {
   }
 
 
-  private boolean okToRun() {
-    boolean ret = true;
-
-    if(m_deadline.expired()) {
-      log.debug("aborting because deadline expired");
-      abort();
-      return false;
-    }
-    return true;
-  }
-
   /**
    * start the poll.
    */
   void startPoll() {
-    if(okToRun()) {
-      TimerQueue.schedule(m_deadline, new PollTimerCallback(), this);
-      ProbabilisticTimer pt = new ProbabilisticTimer(m_msg.getDuration());
-      scheduleHash(m_challenge, m_verifier, m_urlSet, pt, this);
+    ProbabilisticTimer pt = new ProbabilisticTimer(m_msg.getDuration());
+    if(!scheduleHash( pt, m_msg, new PollHashCallback())) {
+      // TODO: terminate this poll
+      return;
     }
+    TimerQueue.schedule(m_deadline, new PollTimerCallback(), this);
   }
 
   /**
@@ -384,19 +306,13 @@ public abstract class Poll {
   void voteInPoll() {
     //we only vote if we don't already have a quorum
     if((m_agree - m_disagree) <= m_quorum) {
+      vote();
       m_voted = true;
-      try {
-        vote();
-      }
-      catch (IOException ex) {
-        // XXX we need to notify that we failed and why
-      }
     }
   }
 
   /**
    * finish the poll once the deadline has expired
-   * @throws ProtocolException
    */
   void stopPoll() {
     // prevent any further activity on this poll by recording the challenge
@@ -412,7 +328,54 @@ public abstract class Poll {
     }
   }
 
-  class HashCallback implements HashService.Callback {
+  void startVote() {
+  }
+
+  void stopVote() {
+    m_counting--;
+  }
+
+
+  MessageDigest getHasher() {
+    MessageDigest hasher = null;
+    try {
+      hasher = MessageDigest.getInstance(PollManager.HASH_ALGORITHM);
+    } catch (NoSuchAlgorithmException ex) {
+      log.error("Unable to run - no hasher");
+    }
+
+    return hasher;
+  }
+
+  class PollHashCallback implements HashService.Callback {
+
+    /**
+     * Called to indicate that hashing the content or names of a
+     * <code>CachedUrlSet</code> object has succeeded, if <code>e</code>
+     * is null,  or has failed otherwise.
+     * @param urlset  the <code>CachedUrlSet</code> being hashed.
+     * @param cookie  used to disambiguate callbacks.
+     * @param hasher  the <code>MessageDigest</code> object that
+     *                contains the hash.
+     * @param e       the exception that caused the hash to fail.
+     */
+    public void hashingFinished(CachedUrlSet urlset,
+                                Object cookie,
+                                MessageDigest hasher,
+                                Exception e) {
+      boolean hash_completed = e == null ? true : false;
+
+      if(hash_completed)  {
+        m_hash  = hasher.digest();
+        LcapMessage msg = (LcapMessage)cookie;
+        checkVote(m_hash, msg);
+        scheduleVote();
+      }
+    }
+  }
+
+  class VoteHashCallback implements HashService.Callback {
+
     /**
      * Called to indicate that hashing the content or names of a
      * <code>CachedUrlSet</code> object has succeeded, if <code>e</code>
@@ -431,16 +394,8 @@ public abstract class Poll {
 
       if(hash_completed)  {
         byte[] out_hash = hasher.digest();
-        if(cookie instanceof Poll) {
-          Poll p = (Poll) cookie;
-          p.m_hash = out_hash;
-          checkVote(out_hash, p.getMessage());
-          scheduleVote(p);
-        }
-        else if (cookie instanceof VoteChecker) {
-          checkVote(out_hash,((VoteChecker)cookie).m_msg);
-        }
-
+        LcapMessage msg = (LcapMessage)cookie;
+        checkVote(out_hash, msg);
       }
     }
   }
@@ -451,9 +406,7 @@ public abstract class Poll {
      * @param cookie  data supplied by caller to schedule()
      */
     public void timerExpired(Object cookie) {
-      if(cookie instanceof Poll) {
-        ((Poll)cookie).voteInPoll();
-      }
+      voteInPoll();
     }
   }
 
@@ -463,51 +416,7 @@ public abstract class Poll {
      * @param cookie  data supplied by caller to schedule()
      */
     public void timerExpired(Object cookie) {
-      if(cookie instanceof Poll) {
-        ((Poll)cookie).stopPoll();
-      }
-    }
-  }
-
-
-  static class VoteChecker {
-    LcapMessage m_msg;
-    CachedUrlSet m_urlSet;
-    Poll m_poll = null;
-    boolean m_keepGoing = false;
-    MessageDigest m_hasher;
-    long m_hashTime;
-
-    VoteChecker(Poll poll, LcapMessage msg, CachedUrlSet urlSet, long hashTime) {
-      m_msg = msg;
-      m_urlSet = urlSet;
-      try {
-        m_hasher = MessageDigest.getInstance(PollManager.HASH_ALGORITHM);
-        m_poll = poll;
-        m_keepGoing = true;
-        m_hashTime = hashTime;
-        poll.m_voteCheckers.put(this, this);
-
-      }
-      catch (java.security.NoSuchAlgorithmException e) {
-        log.debug(PollManager.HASH_ALGORITHM , e);
-       }
-    }
-
-    void startVote() {
-    }
-
-    void stopVote() {
-      m_poll.m_voteCheckers.remove(this);
-      m_poll.m_counting--;
-    }
-
-    void abort() {
-      // equivalent of the old die()
-    }
-
-    LcapMessage getMessage() {
-      return(m_msg);
+      stopPoll();
     }
   }
 

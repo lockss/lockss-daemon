@@ -152,7 +152,7 @@ public class PollManager {
                                   + msg.toString());
     }
     // XXX - we need to notify someone that this poll is running in this node!!!
-    p.receiveMessage(msg, p.m_deadline.getRemainingTime());
+    p.receiveMessage(msg);
   }
 
 
