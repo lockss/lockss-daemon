@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.20 2003-02-27 23:28:03 tal Exp $
+ * $Id: Configuration.java,v 1.21 2003-03-05 21:07:14 tal Exp $
  */
 
 /*
@@ -431,6 +431,74 @@ public abstract class Configuration {
     }
   }
 
+  /** Parse the config value as a time interval.  An interval is specified
+   * as an integer with an optional suffix.  No suffix means milliseconds,
+   * s, m, h, d, w indicates seconds, minutes, hours, days and weeks
+   * respectively.
+   * @param key the configuration parameter name
+   * @return time interval
+   * @throws Configuration.InvalidParam if the value is missing or
+   * not parsable as a time interval.
+   */
+  public long getTimeInterval(String key) throws InvalidParam {
+    String val = get(key);
+    try {
+      return parseTimeInterval(val);
+    } catch (NumberFormatException e) {
+      throw new InvalidParam("Not a time interval value: " +
+			     key + " = " + val);
+    }
+  }
+
+  /** Parse the config value as a time interval.  An interval is specified
+   * as an integer with an optional suffix.  No suffix means milliseconds,
+   * s, m, h, d, w indicates seconds, minutes, hours, days and weeks
+   * respectively.  If the parameter is not present, return the
+   * default value.  If it's present but not parsable as a long, log a
+   * warning and return the default value.
+   * @param key the configuration parameter name
+   * @param dfault the default value in milliseconds
+   * @return time interval
+   */
+  public long getTimeInterval(String key, long dfault) {
+    String val = get(key);
+    if (val == null) {
+      return dfault;
+    }
+    try {
+      return parseTimeInterval(val);
+    } catch (NumberFormatException e) {
+      log.warning("getTimeInterval(\'" + key + "\") = \"" + val + "\"");
+      return dfault;
+    }
+  }
+
+  long parseTimeInterval(String val) {
+    try {
+      int len = val.length();
+      char suffix = val.charAt(len - 1);
+      String numstr;
+      int mult = 1;
+      if (Character.isDigit(suffix)) {
+	numstr = val;
+      } else {
+	numstr = val.substring(0, len - 1);
+	switch (Character.toUpperCase(suffix)) {
+	case 'S': mult = 1000; break;
+	case 'M': mult = 1000 * 60; break;
+	case 'H': mult = 1000 * 60 * 60; break;
+	case 'D': mult = 1000 * 60 * 60 * 24; break;
+	case 'W': mult = 1000 * 60 * 60 * 24 * 7; break;
+	default:
+	  throw new NumberFormatException("Illegal time interval suffix");
+	}
+      }
+      return Long.parseLong(numstr) * mult;
+    } catch (IndexOutOfBoundsException e) {
+      throw new NumberFormatException("empty string");
+    }
+  }
+
   // must be implemented by implementation subclass
 
   abstract void reset();
@@ -527,6 +595,20 @@ public abstract class Configuration {
    */
   public static long getLongParam(String key, long dfault) {
     return currentConfig.getLong(key, dfault);
+  }
+
+  /** Static convenience method to get param from current configuration.
+   * Don't accidentally use this on a <code>Configuration</code> instance.
+   */
+  public static long getTimeIntervalParam(String key) throws InvalidParam {
+    return currentConfig.getTimeInterval(key);
+  }
+
+  /** Static convenience method to get param from current configuration.
+   * Don't accidentally use this on a <code>Configuration</code> instance.
+   */
+  public static long getTimeIntervalParam(String key, int dfault) {
+    return currentConfig.getTimeInterval(key, dfault);
   }
 
   /** Static convenience method to get a <code>Configuration</code>

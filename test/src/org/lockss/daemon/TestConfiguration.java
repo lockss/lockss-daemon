@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfiguration.java,v 1.10 2003-03-04 01:02:06 aalto Exp $
+ * $Id: TestConfiguration.java,v 1.11 2003-03-05 21:07:14 tal Exp $
  */
 
 /*
@@ -108,6 +108,7 @@ public class TestConfiguration extends LockssTestCase {
   }
 
   private static final String c2 =
+    "timeint=14d\n" +
     "prop.p1=12\n" +
     "prop.p2=foobar\n" +
     "prop.p3.a=true\n" +
@@ -118,6 +119,7 @@ public class TestConfiguration extends LockssTestCase {
   static {
     m2.put("prop.p1", "12");
     m2.put("prop.p2", "foobar");
+    m2.put("timeint", "14d");
     m2.put("prop.p3.a", "true");
     m2.put("prop.p3.b", "false");
     m2.put("otherprop.p3.b", "foo");
@@ -150,16 +152,16 @@ public class TestConfiguration extends LockssTestCase {
     for (Iterator iter = config.keyIterator(); iter.hasNext();) {
       set.add(iter.next());
     }
-    assertEquals(5, set.size());
+    assertEquals(6, set.size());
     assertEquals(m2.keySet(), set);
     {
       Map map = mapFromConfig(config);
-      assertEquals(5, map.size());
+      assertEquals(6, map.size());
       assertEquals(m2, map);
     }
     {
       Map map = mapFromIter(config.nodeIterator(), config);
-      assertEquals(2, map.size());
+      assertEquals(3, map.size());
     }
     Configuration conf2 = config.getConfigTree("prop");
     {
@@ -178,6 +180,9 @@ public class TestConfiguration extends LockssTestCase {
     assertTrue(Configuration.getBooleanParam("prop.p3.a", false));
     assertEquals(12, Configuration.getIntParam("prop.p1"));
     assertEquals(554, Configuration.getIntParam("propnot.p1", 554));
+    assertEquals(1000*3600*24*14,
+		 Configuration.getTimeIntervalParam("timeint", 554));
+    assertEquals(554, Configuration.getTimeIntervalParam("noparam", 554));
   }
 
   public static boolean setCurrentConfigFromUrlList(List l) {
@@ -203,6 +208,40 @@ public class TestConfiguration extends LockssTestCase {
     assertEquals("yyy", config.get("prop4"));
     assertEquals("def", config.get("noprop", "def"));
     assertEquals("def", Configuration.getParam("noprop", "def"));
+  }
+
+  public void testParseTimeInterval() throws Exception {
+    Configuration config = Configuration.getCurrentConfig();
+    assertEquals(0, config.parseTimeInterval("0"));
+    assertEquals(0, config.parseTimeInterval("0s"));
+    assertEquals(0, config.parseTimeInterval("0m"));
+    assertEquals(0, config.parseTimeInterval("0h"));
+    assertEquals(0, config.parseTimeInterval("0d"));
+    assertEquals(0, config.parseTimeInterval("0w"));
+    assertEquals(1000, config.parseTimeInterval("1000"));
+    assertEquals(1000, config.parseTimeInterval("1s"));
+    assertEquals(1000 * 60, config.parseTimeInterval("1m"));
+    assertEquals(1000 * 60 * 60, config.parseTimeInterval("1h"));
+    assertEquals(1000 * 60 * 60 * 24, config.parseTimeInterval("1d"));
+    assertEquals(1000 * 60 * 60 * 24 * 7, config.parseTimeInterval("1w"));
+    assertEquals(config.parseTimeInterval("60s"),
+		 config.parseTimeInterval("1m"));
+    assertEquals(config.parseTimeInterval("120m"),
+		 config.parseTimeInterval("2h"));
+    assertEquals(config.parseTimeInterval("72h"),
+		 config.parseTimeInterval("3d"));
+    assertEquals(config.parseTimeInterval("14d"),
+		 config.parseTimeInterval("2w"));
+    try {
+      config.parseTimeInterval("2x");
+      fail("should have thrown NumberFormatException");
+    } catch (NumberFormatException e) {
+    }
+    try {
+      config.parseTimeInterval("");
+      fail("should have thrown NumberFormatException");
+    } catch (NumberFormatException e) {
+    }
   }
 
   volatile Set diffSet = null;
