@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.23 2002-12-04 23:59:49 aalto Exp $
+* $Id: Poll.java,v 1.24 2002-12-06 01:51:02 claire Exp $
  */
 
 /*
@@ -44,6 +44,8 @@ import org.lockss.hasher.*;
 import org.lockss.plugin.*;
 import org.lockss.protocol.*;
 import org.lockss.util.*;
+import org.lockss.state.PollHistory;
+
 
 /**
  * <p>Abstract base class for all poll objects.</p>
@@ -325,8 +327,7 @@ public abstract class Poll {
    * cast our vote in the current poll
    */
   void voteInPoll() {
-    //we only vote if we don't already have a quorum
-//XXX m_quorum usage differs
+    //we don't vote if we're winning by a landslide
     if((m_agree - m_disagree) <= m_quorum) {
       vote();
     }
@@ -502,10 +503,10 @@ public abstract class Poll {
 
 
   /**
-   * PollResults is a struct-like class which maintains the current state of
+   * VoteTally is a struct-like class which maintains the current state of
    * votes within a poll.
    */
-  public class PollResults {
+  public class VoteTally {
     public int type;
     public long startTime;
     public long duration;
@@ -515,8 +516,9 @@ public abstract class Poll {
     public int wtNo;
     public ArrayList pollVotes;
 
-    PollResults(int type, long startTime, long duration, int numYes,
-                int numNo, int wtYes, int wtNo, int quorum) {
+
+    VoteTally(int type, long startTime, long duration, int numYes,
+              int numNo, int wtYes, int wtNo, int quorum) {
       this.type = type;
       this.startTime = startTime;
       this.duration = duration;
@@ -524,44 +526,107 @@ public abstract class Poll {
       this.numNo = numNo;
       this.wtYes = wtYes;
       this.wtNo = wtNo;
-      pollVotes = new ArrayList(quorum+1);
+      pollVotes = new ArrayList(quorum * 2);
     }
 
-    void addVote(PollVote vote) {
+    VoteTally(int type, long duration) {
+      this(type, m_createTime, duration, 0, 0, 0, 0, m_quorum);
+    }
+
+    void addVote(Vote vote) {
       pollVotes.add(vote);
     }
   }
 
 
   /**
-   * Vote is a simple class with an LcapIdentity and an agree boolean.
+   * Vote stores the information need to replay a single vote. These are needed
+   * to run a repair poll.
    */
   public class Vote {
-    public LcapIdentity id;
-    public boolean agree;
+    private LcapIdentity id;
+    private boolean agree;
+    private byte[] challenge;
+    private byte[] verifier;
+    private byte[] hash;
 
-    Vote(LcapIdentity id, boolean agree) {
+    Vote(byte[] challenge, byte[] verifier, byte[] hash,
+         LcapIdentity id, boolean agree) {
       this.id = id;
       this.agree = agree;
-    }
-  }
-
-
-  /**
-   * PollVote extends the Vote class to include the challenge, verifier,
-   * and hash values for the vote.  These are needed to run a repair poll.
-   */
-  public class PollVote extends Vote {
-    public byte[] challenge;
-    public byte[] verifier;
-    public byte[] hash;
-
-    PollVote(byte[] challenge, byte[] verifier, byte[] hash,
-             LcapIdentity id, boolean agree) {
-      super(id, agree);
       this.challenge = challenge;
       this.verifier = verifier;
       this.hash = hash;
     }
+
+    Vote(LcapMessage msg, boolean agree) {
+      this(msg.getChallenge(), msg.getVerifier(), msg.getHashed(),
+           msg.getOriginID(), agree);
+    }
+
+    /**
+     * Return the Identity of the voter
+     * @return <code>LcapIdentity</code> the id
+     */
+    public LcapIdentity getIdentity() {
+      return id;
+    }
+
+    /**
+     * return whether we agreed or disagreed with this vote
+     * @return booleean true if we agree; false otherwise
+     */
+    public boolean isAgreeVote() {
+      return agree;
+    }
+
+    /**
+     * Return the challenge bytes of the voter
+     * @return the array of bytes of the challenge
+     */
+    public byte[] getChallenge() {
+      return challenge;
+    }
+
+    /**
+     * Return the challenge bytes as a string
+     * @return a String representing the challenge
+     */
+    public String getChallengeString() {
+      return String.valueOf(B64Code.encode(challenge));
+    }
+
+    /**
+     * Return the bytes of the hash computed by this voter
+     * @return the array of bytes of the hash
+     */
+    public byte[] getHash() {
+      return hash;
+    }
+
+    /**
+     * Return the hash bytes as a string
+     * @return a String representing the hash
+     */
+    public String getHashString() {
+      return String.valueOf(B64Code.encode(hash));
+    }
+
+    /**
+     * Return the verifer bytes of the voter
+     * @return the array of bytes of the verifier
+     */
+    public byte[] getVerifier() {
+      return verifier;
+    }
+
+    /**
+     * Return the verifier bytes as a string
+     * @return a String representing the verifier
+     */
+    public String getVerifierString() {
+      return String.valueOf(B64Code.encode(verifier));
+    }
+
   }
 }

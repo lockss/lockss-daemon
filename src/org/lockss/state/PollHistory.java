@@ -1,5 +1,5 @@
 /*
- * $Id: PollHistory.java,v 1.3 2002-12-05 00:10:51 aalto Exp $
+ * $Id: PollHistory.java,v 1.4 2002-12-06 01:51:02 claire Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.state;
 
 import java.util.*;
+import org.lockss.protocol.LcapIdentity;
 
 /**
  * PollHistory contains the information for a completed poll.
@@ -103,4 +104,6 @@ public class PollHistory {
   public Iterator getVotes() {
     return votes.iterator();
   }
+
+
 }
