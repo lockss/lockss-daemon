@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.15 2002-12-11 01:15:26 tal Exp $
+ * $Id: Configuration.java,v 1.16 2002-12-16 06:57:12 tal Exp $
  */
 
 /*
@@ -245,8 +245,19 @@ public abstract class Configuration {
     return true;
   }
 
+//    (curFileName.startsWith("http:") ?
+//     HttpUtil.openInputStream(curFileName) :
+//     new FileInputStream(curFileName))
+
   void load(String url) throws IOException {
-    InputStream istr = UrlUtil.openInputStream(url);
+    InputStream istr;
+    try {
+      istr = UrlUtil.openInputStream(url);
+      log.debug("load URL: " + istr);
+    } catch (MalformedURLException e) {
+      istr = new FileInputStream(url);
+      log.debug("load file: " + url);
+    }
     load(new BufferedInputStream(istr));
   }
 
