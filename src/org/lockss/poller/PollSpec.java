@@ -1,5 +1,5 @@
 /*
- * $Id: PollSpec.java,v 1.8 2003-04-15 01:27:00 aalto Exp $
+ * $Id: PollSpec.java,v 1.9 2003-04-16 05:56:22 aalto Exp $
  */
 
 /*
@@ -154,14 +154,19 @@ public class PollSpec {
   }
 
   public String getRangeString() {
-    if(lwrBound != null || uprBound != null) {
-      if(lwrBound != null && lwrBound.startsWith("/")) {
-        lwrBound = lwrBound.substring(1);
+    if ((lwrBound!=null) && (lwrBound.equals(SINGLE_NODE_LWRBOUND))) {
+      return "single node";
+    }
+    String lwrDisplay = lwrBound;
+    String uprDisplay = uprBound;
+    if (lwrBound != null || uprBound != null) {
+      if (lwrBound != null && lwrBound.startsWith("/")) {
+        lwrDisplay = lwrBound.substring(1);
       }
-      if(uprBound != null && uprBound.startsWith("/")) {
-        uprBound = uprBound.substring(1);
+      if (uprBound != null && uprBound.startsWith("/")) {
+        uprDisplay = uprBound.substring(1);
       }
-      return lwrBound + " - " + uprBound;
+      return lwrDisplay + " - " + uprDisplay;
     }
     return null;
   }
