@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.18 2003-04-17 02:41:11 aalto Exp $
+ * $Id: BaseArchivalUnit.java,v 1.19 2003-04-23 20:32:50 tal Exp $
  */
 
 /*
@@ -58,7 +58,6 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   protected Plugin plugin;
   protected CrawlSpec crawlSpec;
   private String idStr = null;
-  private static long pollInterval = -1;
   static Logger logger = Logger.getLogger("BaseArchivalUnit");
 
   protected Configuration auConfig;
@@ -233,11 +232,9 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    * @return true iff a top level poll should be called
    */
   public boolean shouldCallTopLevelPoll(AuState aus) {
-    if (pollInterval==-1) {
-      pollInterval =
-	Configuration.getTimeIntervalParam(PARAM_TOP_LEVEL_POLL_INTERVAL,
-					   DEFAULT_TOP_LEVEL_POLL_INTERVAL);
-    }
+    long pollInterval =
+      Configuration.getTimeIntervalParam(PARAM_TOP_LEVEL_POLL_INTERVAL,
+					 DEFAULT_TOP_LEVEL_POLL_INTERVAL);
     logger.debug("Deciding whether to call a top level poll");
     logger.debug3("Last poll at "+aus.getLastTopLevelPollTime());
     logger.debug3("Poll interval: "+pollInterval);
