@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.25 2004-10-19 10:17:55 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.26 2004-12-12 23:03:35 tlipkis Exp $
  */
 
 /*
@@ -154,14 +154,9 @@ public class ArchivalUnitStatus
 	}
 	try {
 	  NodeManager nodeMan = theDaemon.getNodeManager(au);
-	  LockssRepository repo = theDaemon.getLockssRepository(au);
 	  CachedUrlSet auCus = au.getAuCachedUrlSet();
 	  NodeState topNodeState = nodeMan.getNodeState(auCus);
-	  RepositoryNode repoNode = null;
-	  try {
-	    repoNode = repo.getNode(au.getAuCachedUrlSet().getUrl());
-	  } catch (MalformedURLException ignore) { }
-	  rowL.add(makeRow(au, nodeMan.getAuState(), topNodeState, repoNode));
+	  rowL.add(makeRow(au, nodeMan.getAuState(), topNodeState));
 	} catch (Exception e) {
 	  logger.warning("Unexpected expection building row", e);
 	}
@@ -170,13 +165,12 @@ public class ArchivalUnitStatus
     }
 
     private Map makeRow(ArchivalUnit au, AuState auState,
-			NodeState topNodeState,
-                        RepositoryNode repoNode) {
+			NodeState topNodeState) {
       HashMap rowMap = new HashMap();
       //"AuID"
       rowMap.put("AuName", AuStatus.makeAuRef(au.getName(), au.getAuId()));
 //       rowMap.put("AuNodeCount", new Integer(-1));
-      rowMap.put("AuSize", new Long(repoNode.getTreeContentSize(null)));
+      rowMap.put("AuSize", new Long(PluginManager.getAuContentSize(au)));
       rowMap.put("AuLastCrawl", new Long(auState.getLastCrawlTime()));
       rowMap.put("Peers", PeersAgreement.makeAuRef("peers", au.getAuId()));
       rowMap.put("AuPolls",
@@ -336,12 +330,7 @@ public class ArchivalUnitStatus
       table.setTitle(getTitle(au.getName()));
       CachedUrlSet auCus = au.getAuCachedUrlSet();
       NodeState topNode = nodeMan.getNodeState(auCus);
-      RepositoryNode repoNode = null;
-      try {
-        repoNode = repo.getNode(auCus.getUrl());
-      } catch (MalformedURLException ignore) { }
-      table.setSummaryInfo(getSummaryInfo(au, nodeMan.getAuState(), topNode,
-                                          repoNode));
+      table.setSummaryInfo(getSummaryInfo(au, nodeMan.getAuState(), topNode));
       if (!table.getOptions().get(StatusTable.OPTION_NO_ROWS)) {
 	table.setColumnDescriptors(columnDescriptors);
 	table.setDefaultSortRules(sortRules);
@@ -467,14 +456,15 @@ public class ArchivalUnitStatus
     }
 
     private List getSummaryInfo(ArchivalUnit au, AuState state,
-                                NodeState topNode, RepositoryNode repoNode) {
+                                NodeState topNode) {
       List summaryList =  ListUtil.list(
             new StatusTable.SummaryInfo("Volume" , ColumnDescriptor.TYPE_STRING,
                                         au.getName()),
 //             new StatusTable.SummaryInfo("Nodes", ColumnDescriptor.TYPE_INT,
 //                                         new Integer(-1)),
             new StatusTable.SummaryInfo("Size", ColumnDescriptor.TYPE_INT,
-                                        new Long(repoNode.getTreeContentSize(null))),
+                                        new Long(PluginManager.
+						 getAuContentSize(au))),
             new StatusTable.SummaryInfo("Last Crawl Time",
                                         ColumnDescriptor.TYPE_DATE,
                                         new Long(state.getLastCrawlTime())),
