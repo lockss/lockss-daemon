@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.35 2003-08-06 06:25:25 tlipkis Exp $
+ * $Id: LockssDaemon.java,v 1.36 2003-08-15 21:31:51 tlipkis Exp $
  */
 
 /*
@@ -64,6 +64,9 @@ public class LockssDaemon {
   private static boolean DEFAULT_DAEMON_EXIT_ONCE = false;
 
   private static String PARAM_DEBUG = PREFIX + "debug";
+
+  static final String PARAM_PLATFORM_VERSION =
+    Configuration.PREFIX + "platform.version";
 
   private static String MANAGER_PREFIX = Configuration.PREFIX + "manager.";
 
@@ -480,6 +483,15 @@ public class LockssDaemon {
     stop();
   }
 
+  private String getVersionInfo() {
+    String vDaemon = BuildInfo.getBuildInfoString();
+    String vPlatform = Configuration.getParam(PARAM_PLATFORM_VERSION);
+    if (vPlatform != null) {
+      vDaemon = vDaemon + ", CD " + vPlatform;
+    }
+    return vDaemon;
+  }
+
   /**
    * run the daemon.  Load our properties, initialize our managers, initialize
    * the plugins.
@@ -489,11 +501,20 @@ public class LockssDaemon {
 
     startDate = TimeBase.nowDate();
 
+    log.info(getVersionInfo() + ": starting");
+
     // initialize our properties from the urls given
     initProperties();
 
+    // repeat the version info, as we may now be logging to a different target
+    // (And to include the platform version, which wasn't availabe before the
+    // config was loaded.)
+    log.info(getVersionInfo() + ": starting managers");
+
     // startup all services
     initManagers();
+
+    log.info("Started");
   }
 
   /**
