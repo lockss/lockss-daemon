@@ -2,6 +2,7 @@ import base64, glob, httplib, os, random, shutil, signal
 import sys, time, types, urllib, urllib2
 from os import path
 from xml.dom import minidom
+from lockss_util import *
 
 # Constants
 
@@ -9,11 +10,11 @@ DEF_TIMEOUT = 60 * 30  # 30 minute default timeout for waits.
 DEF_SLEEP = 10         # 10 second default sleep between loops.
 
 # Statics
-
 frameworkCount = 0
 
-# Classes
+log = Logger()
 
+# Classes
 class Framework:
     """
     A framework is a set of LOCKSS daemons and associated test
@@ -33,15 +34,15 @@ class Framework:
     clients, one per daemon.  These clients are used to perform
     functional test interactions with the daemons.
     """
-    def __init__(self, config):
+    def __init__(self):
         wd = path.abspath(config.get('workDir', './'))
         self.frameworkDir = self.__makeTestDir(wd)
         self.projectDir = config.get('projectDir')
-        self.daemonCount = int(config.get('daemonCount', 1))
+        self.daemonCount = int(config.get('daemonCount', 4))
         self.startPort = int(config.get('startPort', 8081))
-        self.username = config.get('username', 'polltestuser')
-        self.password = config.get('password', 'polltestpass')
-        self.debugLevel = config.get('debugLevel', 'debug')
+        self.username = config.get('username', 'testuser')
+        self.password = config.get('password', 'testpass')
+        self.logLevel = config.get('daemonLogLevel', 'debug3')
         self.hostname = config.get('hostname', 'localhost')
 
         self.clientList = [] # ordered list of clients.
@@ -60,7 +61,7 @@ class Framework:
 
         # write the framework global config file.
         globalConfigFile = path.join(self.frameworkDir, 'lockss.txt')
-        self.__writeLockssConfig(globalConfigFile, self.debugLevel)
+        self.__writeLockssConfig(globalConfigFile, self.logLevel)
 
         # write the 'extra' config file.  This may be empty if there
         # are no LOCKSS daemon properties defined, but that's OK.
@@ -89,6 +90,7 @@ class Framework:
             self.daemonList.append(daemon)
 
     def start(self):
+        " Start each daemon in the framework. "
         if self.isRunning:
             raise LockssError("Test framework is already started.")
 
@@ -99,6 +101,7 @@ class Framework:
         self.isRunning = True
 
     def stop(self):
+        " Stop each daemon in the framework."
         if not self.isRunning:
             raise LockssError("Daemon is not running.")
 
@@ -108,8 +111,25 @@ class Framework:
         self.isRunning = False
 
     def clean(self):
+        " Delete the current framework working directory. "
         shutil.rmtree(self.frameworkDir)
 
+    def checkForDeadlock(self):
+        """ Request that all the daemons in the framework dump their
+        threads, and then look for deadlock messages.  Returns a list of
+        log files to check, or an empty list if no deadlocks are found."""
+        deadlockList = []
+        for daemon in self.daemonList:
+            logfile = daemon.logfile
+            daemon.requestThreadDump()
+            if self.__grepDeadlock(logfile):
+                deadlockList.append(logfile)
+        return deadlockList
+
+    def __grepDeadlock(self, f):
+        """ Very naive implementation. """
+        return (open(f, 'r').read()).find('FOUND A JAVA LEVEL DEADLOCK') > -1
+    
     def __makeClasspath(self):
         cp = []
         testCpFile = path.join(self.projectDir, 'test', 'test-classpath')
@@ -162,10 +182,10 @@ class Framework:
         os.mkdir(fwDir)
         return fwDir
 
-    def __writeLockssConfig(self, file, debugLevel):
+    def __writeLockssConfig(self, file, logLevel):
         f = open(file, 'w')
         # defined at the end of this file
-        f.write(globalConfigTemplate % (debugLevel))
+        f.write(globalConfigTemplate % (logLevel))
         f.close()
 
     def __writeLocalConfig(self, file, dir, uiPort):
@@ -199,7 +219,7 @@ class Framework:
         f.close()
 
 class Client:
-    """ Client interface to a test framework. """
+    " Client interface to a test framework. "
     def __init__(self, daemonDir, url, username, password):
         if not url.endswith('/'):
             url = url + '/'
@@ -209,20 +229,16 @@ class Client:
         self.password = password
 
     def createAu(self, au):
-        """
-        Create a simulated AU.  This will block until the AU appears in
-        the daemon's status table.
-        """
+        """ Create a simulated AU.  This will block until the AU appears in
+        the daemon's status table. """
         post = self.__makeAuPost(au, 'Create')
         post.execute()
         if not self.waitForCreateAu(au):
             raise LockssError("Timed out while waiting for AU %s to appear." % au)
 
     def deleteAu(self, au):
-        """
-        Delete a simulated AU.  This will block until the AU no longer
-        appears in the daemon's status table.
-        """
+        """ Delete a simulated AU.  This will block until the AU no longer
+        appears in the daemon's status table. """
         post = self.__makeAuPost(au, 'Confirm Delete')
         post.execute()
         if not self.waitForDeleteAu(au):
@@ -230,19 +246,22 @@ class Client:
                               "AU %s to be deleted." % au)
 
     def requestTreeWalk(self, au):
-        """ Possibly a poorly named method.  This will merely deactivate
-        and then reactivate the specified AU, which may or may not trigger
-        a tree walk.  Worst case, it actually pushes the schedule back and
-        the tree walk occurs later than it would have.  Best case, a tree walk
-        happens in about 10 seconds. """
+        """
+        Possibly a poorly named method.  This will merely deactivate
+        and then reactivate the specified AU, which may or may not
+        trigger a tree walk.  Worst case, it actually pushes the
+        schedule back and the tree walk occurs later than it would
+        have.  Best case, a tree walk happens in about 10 seconds.
+        """
         self.deactivateAu(au, True)
         self.reactivateAu(au, True)
 
     def reactivateAu(self, au, doWait=True):
         """
-        Re-activate a simulated AU.  If doWait is set, wait for the AU to
-        disappear from the daemon status table before returning.
+        Re-activate a simulated AU.  If doWait is set, wait for the AU
+        to disappear from the daemon status table before returning.
         """
+
         if self.isActiveAu(au):
             return
 
@@ -255,8 +274,8 @@ class Client:
 
     def deactivateAu(self, au, doWait=True):
         """
-        Deactivate a simulated AU.  If doWait is set, wait for the AU to
-        disappear from the daemon status table before returning.
+        Deactivate a simulated AU.  If doWait is set, wait for the AU
+        to disappear from the daemon status table before returning.
         """
         if not self.isActiveAu(au):
             return
@@ -275,14 +294,14 @@ class Client:
         """
         key = None
         if not au == None:
-            key = au.getAuId()
+            key = au.auId
 
         return self.__getStatusTable('crawl_status_table', key)
 
     def getAuRepository(self, au):
         """ RepositoryStatus table does not accept key, so loop through it until
         the corresponding au is found. """
-        auid = au.getAuId()
+        auid = au.auId
         table = self.__getStatusTable('RepositoryTable')
         for row in table:
             auRef = row['au']
@@ -303,7 +322,7 @@ class Client:
 
     def hasAu(self, au):
         """ Return true iff the status table lists the given au. """
-        auid = au.getAuId()
+        auid = au.auId
         tab = self.__getStatusTable('AuIds')
         for row in tab:
             if row["AuId"] == auid:
@@ -313,7 +332,7 @@ class Client:
 
     def isActiveAu(self, au):
         """ Return true iff the au is activated."""
-        auid = au.getAuId()
+        auid = au.auId
         tab = self.__getStatusTable('RepositoryTable')
         for row in tab:
             status = row["status"]
@@ -322,7 +341,7 @@ class Client:
             # a <reference> for 'au', or a string for 'au'.  We want to
             # ignore the string versions.
             if isinstance(auRef, types.DictType):
-                if au.getAuId() == auRef['key']:
+                if au.auId == auRef['key']:
                     return (status == "Active")
             else:
                 continue
@@ -331,7 +350,7 @@ class Client:
         return False
 
     def isAuDamaged(self, au, node=None):
-        table = self.__getStatusTable('ArchivalUnitTable', au.getAuId())
+        table = self.__getStatusTable('ArchivalUnitTable', au.auId)
         if not node:
             node = self.getAuNode(au, 'lockssau')
         url = node.url
@@ -408,7 +427,7 @@ class Client:
 
     def getAuPolls(self, au, activeOnly=False):
         """ Return the full poll status of an AU """
-        key = 'AU~%s' % urllib.quote(au.getAuId()) # requires a pre-quoted key
+        key = 'AU~%s' % urllib.quote(au.auId) # requires a pre-quoted key
         if activeOnly:
             key = key + '&Status~Active'
         return self.__getStatusTable('PollManagerTable', key)
@@ -418,13 +437,26 @@ class Client:
         # Hack!  Pass the table a very large number for numrows, and
         # pray we don't have more than that.
         tab = self.__getStatusTable('ArchivalUnitTable',
-                                    key=au.getAuId(),
+                                    key=au.auId,
                                     numrows=100000)
         nodes = []
         for row in tab:
             url = row['NodeName']
             if row.has_key('NodeContentSize') \
                    and not row['NodeContentSize'] == '-':
+                nodes.append(self.getAuNode(au, url))
+        return nodes
+
+    def getAuNodesWithChildren(self, au):
+        """ Return a list of all nodes that have children. """
+        tab = self.__getStatusTable('ArchivalUnitTable',
+                                    key=au.auId,
+                                    numrows=100000)
+        nodes = []
+        for row in tab:
+            url = row['NodeName']
+            if row.has_key('NodeChildCount') \
+                   and not row['NodeChildCount'] == '-':
                 nodes.append(self.getAuNode(au, url))
         return nodes
 
@@ -661,7 +693,7 @@ class Client:
         """ Wait for the au to be deactivated, or for the timeout to
         expire."""
         def waitFunc():
-           return not self.isActiveAu(au)
+            return not self.isActiveAu(au)
         return self.wait(waitFunc, timeout, sleep)
 
     def waitForSuccessfulCrawl(self, au, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
@@ -839,30 +871,30 @@ class Client:
 
     def randomDamageSingleNode(self, au):
         """ Randomly select a node with content, and cause damage in it. """
-        node = self.__getRandomNode(au)
+        node = self.__getRandomContentNode(au)
         self.damageNode(node)
         return node
 
-    def randomDamageRandomNodes(self, au, minCount=1, maxCount=3):
+    def randomDamageRandomNodes(self, au, minCount=1, maxCount=5):
         """ Damage a random selection of between minCount and maxCount
         nodes with content for the given au.  Returns the list of
         damaged nodes. """
-        nodeList = self.__getRandomNodeList(au, minCount, maxCount)
+        nodeList = self.__getRandomContentNodeList(au, minCount, maxCount)
         for node in nodeList:
             self.damageNode(node)
         return nodeList
 
     def randomDelete(self, au):
         """ Randomly select a node with content, and delete it. """
-        node = self.__getRandomNode(au)
+        node = self.__getRandomContentNode(au)
         self.deleteNode(node)
         return node
 
-    def randomDeleteRandomNodes(self, au, minCount=1, maxCount=3):
+    def randomDeleteRandomNodes(self, au, minCount=1, maxCount=5):
         """ Delete a random selection of between minCount and maxCount
         nodes with content for the given au.  Returns the list of
         damaged nodes as a tuple. """
-        nodeList = self.__getRandomNodeList(au, minCount, maxCount)
+        nodeList = self.__getRandomContentNodeList(au, minCount, maxCount)
         for node in nodeList:
             self.deleteNode(node)
         return nodeList
@@ -918,8 +950,37 @@ class Client:
         f.close()
 
         url = au.baseUrl + '/' + filespec
-        return Node(nodeRoot, url)
+        return Node(url, nodeRoot)
 
+    def createChildNode(self, au, node, filename):
+        """ Given a branch node, create a new child under it. """
+        root = node.file
+        nodeRoot = path.join(root, filename)
+        os.mkdir(nodeRoot)
+        os.mkdir(path.join(nodeRoot, '#content'))
+        contentFile = path.join(nodeRoot, '#content', 'current')
+        f = open(contentFile, 'w')
+        f.write('Garbage File')
+        f.close()
+
+        auRoot = self.getAuRoot(au)
+        url = au.baseUrl + nodeRoot[len(auRoot):]
+
+        log.debug2("Created file: %s" % nodeRoot)
+        return Node(url, nodeRoot)
+
+    def randomCreateRandomNodes(self, au, minCount=1, maxCount=5):
+        """ Create a random number of between minCount and maxCount
+        nodes on the given au.  Return the list of new nodes. """
+        nodeList = self.__getRandomBranchNodeList(au, minCount, maxCount)
+        returnList = []
+        ix = 0
+        for node in nodeList:
+            newNode = self.createChildNode(au, node, 'newfile-%s.txt' % ix)
+            returnList.append(newNode)
+            ix += 1
+        return returnList
+            
 
     def getAuFile(self, au, filespec):
         """ Construct a node from an au and a relative file spec.
@@ -969,7 +1030,9 @@ class Client:
             post.add('numrows', numrows)
         post.add('output', 'xml')
 
-        doc = minidom.parseString(post.execute().read())
+        xml = post.execute().read()
+        log.debug2("Received XML response: \n" + xml)
+        doc = minidom.parseString(xml)
         doc.normalize() # required for python 2.2
         rowList = doc.getElementsByTagName('st:row')
 
@@ -1029,11 +1092,11 @@ class Client:
             post.add('lfp.badFileLoc', au.badFileLoc)
         if (not au.badFileNum == -1):
             post.add('lfp.badFileNum', au.badFileNum)
-        post.add('auid', au.getAuId())
+        post.add('auid', au.auId)
 
         return post
 
-    def __getRandomNode(self, au):
+    def __getRandomContentNode(self, au):
         ### Raise an error if the AU hasn't been created or
         ### crawled.
         repository = self.getAuRepository(au)
@@ -1047,7 +1110,7 @@ class Client:
 
         return randomNode
 
-    def __getRandomNodeList(self, au, minCount, maxCount):
+    def __getRandomContentNodeList(self, au, minCount, maxCount):
         """ Return a randomly sized list of nodes with content,
         between min and max in length. If there are fewer than 'max'
         nodes, this will return a list between 'min' and
@@ -1071,6 +1134,34 @@ class Client:
 
         return returnList
 
+    def __getRandomBranchNodeList(self, au, minCount, maxCount):
+        """ Return a randomly sized list of nodes with children,
+        between min and max in length. If there are fewer than 'max'
+        nodes, this will return a list between 'min' and
+        'len(allnodes)' """
+        nodes = self.getAuNodesWithChildren(au)
+        maxCount = min(maxCount, len(nodes))
+        if (maxCount == 0):
+            log.warn("getAuNodesWithChildren returned no nodes!")
+            return []
+
+        random.seed(time.time())
+        returnListLength = random.randint(minCount, maxCount)
+
+        # Build a list of nodes.
+        ix = 0
+        returnList = []
+        while ix < returnListLength:
+            random.seed(time.time())
+            node = nodes[random.randint(0, len(nodes) - 1)]
+            if node in returnList:
+                continue
+            returnList.append(node)
+            ix += 1
+
+        return returnList
+
+
     def __str__(self):
         return "%s" % self.url
 
@@ -1093,39 +1184,10 @@ class SimulatedAu:
         self.baseUrl = 'http://www.example.com'
         self.dirStruct = path.join('www.example.com', 'http')
         self.pluginId = 'org.lockss.plugin.simulated.SimulatedPlugin'
+        self.auId = "%s&root~%s" % (self.pluginId.replace('.', '|'), self.root)
 
     def __str__(self):
         return "Simulated Content: " + self.root
-
-    def setRoot(self, root):
-        self.root = root
-
-    def setDepth(self, depth):
-        self.depth = depth
-
-    def setBranch(self, branch):
-        self.branch = branch
-
-    def setNumFiles(self, numFiles):
-        self.numFiles = numFiles
-
-    def setBinFileSize(self, binFileSize):
-        self.binFileSize = binFileSize
-
-    def setMaxFileName(self, maxFileName):
-        self.maxFileName = maxFileName
-
-    def setFileTypes(self, fileTypes):
-        self.fileTypes = fileTypes
-
-    def setOddBranchCount(self, oddBranchContent):
-        self.oddBranchContent = oddBranchContent
-
-    def setBadFileLoc(self, badFileLoc):
-        self.badFileLoc = badFileLoc
-
-    def setBadFileNum(self, badFileNum):
-        self.badFileNum = badFileNum
 
     def getAuId(self):
         auIdKey = self.pluginId.replace('.', '|')
@@ -1151,24 +1213,25 @@ class LockssDaemon:
             raise LockssError("JAVA_HOME must be set.")
         javaHome = os.environ['JAVA_HOME']
         self.javaBin = path.join(javaHome, 'bin', 'java')
+        self.logfile = path.join(self.dir, 'test.out')
 
     def start(self):
         cmd = '%s -cp %s -Dorg.lockss.defaultLogLevel=debug '\
-              'org.lockss.app.LockssDaemon %s > %s/test.out 2>&1 & '\
+              'org.lockss.app.LockssDaemon %s > %s 2>&1 & '\
               'echo $! > %s/dpid'\
               % (self.javaBin, self.cp, ' '.join(self.configList),
-                 self.dir, self.dir)
+                 self.logfile, self.dir)
         os.system(cmd)
-        self.pid = open(path.join(self.dir, 'dpid'), 'r').readline()
+        self.pid = int(open(path.join(self.dir, 'dpid'), 'r').readline())
 
     def kill(self):
-        os.kill(int(self.pid), signal.SIGTERM)
+        os.kill(self.pid, signal.SIGTERM)
 
-
-class LockssError(Exception):
-    """ Base class for daemon exceptions """
-    def __init__(self, msg):
-        Exception.__init__(self, msg)
+    def requestThreadDump(self):
+        os.kill(self.pid, signal.SIGQUIT)
+        # Horrible kludge.  Pause for one second so that the VM has
+        # time to comply and flush the daemon log file.
+        time.sleep(1)
 
 class Post:
     """ A simple wrapper for HTTP post management. """
@@ -1189,114 +1252,8 @@ class Post:
         and return the contents of the file. """
         args = urllib.urlencode(self.__postData)
         opener = urllib2.build_opener()
+        log.debug2("Sending POST: %s?%s" % (self.__request.get_full_url(), args))
         return opener.open(self.__request, args)
-
-
-###########################################################################
-###
-### Utility and miscellaneous classes and functions.
-###
-###########################################################################
-
-class Config:
-    """ A safe wrapper around a dictionary.  Handles KeyErrors by
-    returning None values. """
-    def __init__(self):
-        self.dict = {}
-
-    def put(self, prop, val):
-        self.dict[prop] = val
-
-    def get(self, prop, default=None):
-        try:
-            return self.dict[prop]
-        except KeyError:
-            return default
-
-    ##
-    ## Set views
-    ##
-    def items(self):
-        """ Return the entire set of properties. """
-        return dict.items()
-
-    def testItems(self):
-        """ Return only the testsuite properties. (anything
-        with a key not starting with 'org.lockss') """
-        retDict = {}
-        for (key, val) in self.dict.items():
-            if not key.startswith('org.lockss'):
-                retDict[key] = val
-        return retDict.items()
-
-    def daemonItems(self):
-        """ Return only the daemon config properties. (anything
-        with a key starting with 'org.lockss') """
-        retDict = {}
-        for (key, val) in self.dict.items():
-            if key.startswith('org.lockss'):
-                retDict[key] = val
-        return retDict.items()
-
-
-
-def loadConfig(f):
-    """ Return a dictionary representing a property file. """
-    fd = open(f)
-    config = Config()
-    inMultiline = False
-
-    while True:
-        line = fd.readline()
-        if not line:
-            break
-
-        line = line.replace('\r', '').replace('\n', '')
-        line = line.strip()
-
-        # Ignore comments and blank lines.
-        if line.startswith('#') or line == '':
-            continue
-
-        if line.endswith('\\'):
-            inMultiline = True
-
-        if line.find('=') > -1:
-            (key, val) = line.split('=')
-            # Allow comments on the same line, then strip and
-            # clean the value.
-            val = val.split('#')[0].replace('\\', '').strip()
-            if inMultiline:
-                continue
-        elif inMultiline:
-            # Last line of the multi-line?
-            if not line.endswith('\\'):
-                inMultiline = False
-            line = line.replace('\\', '').strip()
-            val = val + line
-        else:
-            # Not a comment or a multiline or a proper key=val pair,
-            # ignore
-            continue
-
-        key = key.strip()
-
-        if key and val:
-            config.put(key, val)
-
-    fd.close()
-    return config
-
-def log(msg):
-    """ Write to stdout with a timestamp """
-    now = time.time()
-    t = time.strftime("%H:%M:%S", time.localtime(time.time()))
-    msec = int((now%1.0) * 1000)
-    mmm = "%03d" % msec
-    timestamp = t + '.' + mmm
-    sys.stdout.write("%s: %s\n" % (timestamp, msg))
-    sys.stdout.flush()
-
 
 ###########################################################################
 ##
@@ -1349,6 +1306,15 @@ org.lockss.baseau.toplevel.poll.prob.initial=1.0
 
 org.lockss.metrics.slowest.hashrate = 250
 org.lockss.state.recall.delay=5m
+
+# Turn down logging on areas that we normally
+# don't care much about during polling tests.
+org.lockss.log.LockssServlet.level=info
+org.lockss.log.GenericHasher.level=info
+org.lockss.log.GoslingHtmlParser.level=info
+org.lockss.log.StringFilter.level=info
+org.lockss.log.PluginMgr.level=info
+org.lockss.log.DaemonStatus.level=info
 """
 
 localConfigTemplate = """\
