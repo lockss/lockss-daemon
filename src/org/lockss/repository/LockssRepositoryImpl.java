@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.44 2004-01-10 00:53:36 eaalto Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.45 2004-01-13 01:29:22 eaalto Exp $
  */
 
 /*
@@ -109,6 +109,7 @@ public class LockssRepositoryImpl
     // mainly important in testing to blank this
     lastPluginDir = ""+(char)('a'-1);
     nameMap = null;
+    super.stopService();
   }
 
   protected void setConfig(Configuration config, Configuration oldConfig,
