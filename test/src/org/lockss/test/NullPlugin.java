@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.13 2003-02-13 06:28:52 claire Exp $
+ * $Id: NullPlugin.java,v 1.14 2003-02-15 01:41:55 aalto Exp $
  */
 
 /*
@@ -155,7 +155,7 @@ public class NullPlugin {
       return null;
     }
 
-    public Iterator leafIterator() {
+    public Iterator treeIterator() {
       return null;
     }
 

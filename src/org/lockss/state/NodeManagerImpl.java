@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.28 2003-02-13 06:28:52 claire Exp $
+ * $Id: NodeManagerImpl.java,v 1.29 2003-02-15 01:41:55 aalto Exp $
  */
 
 /*
@@ -562,7 +562,6 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
     theDaemon.getCrawlManager().scheduleRepair(managerAu,
         new URL(cus.getPrimaryUrl()), new ContentRepairCallback(),
                                  tally.getPollKey());
-    cus.makeUrlCacher(cus.getPrimaryUrl()).cache();
   }
 
   private void deleteNode(CachedUrlSet cus) throws IOException {

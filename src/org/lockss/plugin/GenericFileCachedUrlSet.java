@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrlSet.java,v 1.18 2003-02-13 06:28:51 claire Exp $
+ * $Id: GenericFileCachedUrlSet.java,v 1.19 2003-02-15 01:41:55 aalto Exp $
  */
 
 /*
@@ -98,7 +98,7 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
     return setTree.iterator();
   }
 
-  public Iterator leafIterator() {
+  public Iterator treeIterator() {
     List nodes = spec.getPrefixList();
     if (nodes.size()>1) {
       // currently does not support more than one prefix
@@ -114,15 +114,15 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
         RepositoryNode intNode = repository.getNode(prefix);
         Iterator children = intNode.listNodes(spec, false);
         while (children.hasNext()) {
+          // add all nodes to tree iterator, regardless of content
           RepositoryNode child = (RepositoryNode)children.next();
+          CachedUrl newUrl = ((BaseArchivalUnit)au).cachedUrlFactory(this,
+              child.getNodeUrl());
+          leafSet.add(newUrl);
           if (child.hasContent()) {
-            CachedUrl newUrl = ((BaseArchivalUnit)au).cachedUrlFactory(this,
-                child.getNodeUrl());
-            leafSet.add(newUrl);
             contentNodeCount++;
             totalNodeSize += child.getContentSize();
           }
-          // internal nodes could have content, so always recurse
           recurseLeafFetch(child, leafSet);
         }
       } catch (MalformedURLException mue) {
@@ -138,15 +138,15 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
   private void recurseLeafFetch(RepositoryNode node, TreeSet set) {
     Iterator children = node.listNodes(null, false);
     while (children.hasNext()) {
+      // add all nodes to tree iterator, regardless of content
       RepositoryNode child = (RepositoryNode)children.next();
+      CachedUrl newUrl = ((BaseArchivalUnit)au).cachedUrlFactory(this,
+          child.getNodeUrl());
+      set.add(newUrl);
       if (child.hasContent()) {
-        CachedUrl newUrl = ((BaseArchivalUnit)au).cachedUrlFactory(this,
-            child.getNodeUrl());
-        set.add(newUrl);
         contentNodeCount++;
         totalNodeSize += child.getContentSize();
       }
-      // internal nodes could have content, so always recurse
       recurseLeafFetch(child, set);
     }
   }
@@ -208,7 +208,7 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
   private void calculateNodeCountAndSize() {
     if ((contentNodeCount==0)||(totalNodeSize==0)) {
       // leafIterator calculates these when running
-      leafIterator();
+      treeIterator();
     }
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: GenericContentHasher.java,v 1.2 2002-11-23 01:23:48 troberts Exp $
+ * $Id: GenericContentHasher.java,v 1.3 2003-02-15 01:41:55 aalto Exp $
  */
 
 /*
@@ -53,7 +53,7 @@ public class GenericContentHasher extends GenericHasher {
 
   public GenericContentHasher(CachedUrlSet cus, MessageDigest digest) {
     super(cus, digest);
-    iterator = cus.leafIterator();
+    iterator = cus.treeIterator();
   }
 
   protected int hashElementUpToNumBytes(Object element, int numBytes) 

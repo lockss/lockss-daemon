@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrlSet.java,v 1.17 2003-01-28 02:06:13 aalto Exp $
+ * $Id: MockCachedUrlSet.java,v 1.18 2003-02-15 01:41:55 aalto Exp $
  */
 
 /*
@@ -102,7 +102,7 @@ public class MockCachedUrlSet implements CachedUrlSet {
     flatSource = col;
   }
 
-  public Iterator leafIterator() {
+  public Iterator treeIterator() {
     if (leafSource!=null) {
       return leafSource.iterator();
     }

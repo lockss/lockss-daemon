@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericFileCachedUrlSet.java,v 1.13 2003-02-13 06:28:52 claire Exp $
+ * $Id: TestGenericFileCachedUrlSet.java,v 1.14 2003-02-15 01:41:55 aalto Exp $
  */
 
 /*
@@ -91,7 +91,7 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
     assertIsomorphic(expectedA, childL);
   }
 
-  public void testLeafIterator() throws Exception {
+  public void testTreeIterator() throws Exception {
     createLeaf("http://www.example.com/testDir/branch1/leaf2",
                "test stream", null);
     createLeaf("http://www.example.com/testDir/leaf4", "test stream", null);
@@ -103,7 +103,7 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
     CachedUrlSetSpec rSpec =
         new RangeCachedUrlSetSpec("http://www.example.com/testDir");
     CachedUrlSet fileSet = mau.makeCachedUrlSet(rSpec);
-    Iterator setIt = fileSet.leafIterator();
+    Iterator setIt = fileSet.treeIterator();
     ArrayList childL = new ArrayList(4);
     while (setIt.hasNext()) {
       CachedUrl childUrl = (CachedUrl)setIt.next();
@@ -111,15 +111,19 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
     }
     // should be sorted
     String[] expectedA = new String[] {
+      "http://www.example.com/testDir/branch1",
       "http://www.example.com/testDir/branch1/leaf1",
       "http://www.example.com/testDir/branch1/leaf2",
+      "http://www.example.com/testDir/branch2",
       "http://www.example.com/testDir/branch2/leaf3",
       "http://www.example.com/testDir/leaf4"
       };
     assertIsomorphic(expectedA, childL);
   }
 
-  public void testLeafIteratorWithInternalContent() throws Exception {
+  public void testTreeIteratorWithInternalContent() throws Exception {
+    // no longer much difference between this and the last test, since content
+    // is now irrelevant to being included in the iteration
     createLeaf("http://www.example.com/testDir/branch1",
                "test stream", null);
     createLeaf("http://www.example.com/testDir/leaf3", "test stream", null);
@@ -133,7 +137,7 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
     CachedUrlSetSpec rSpec =
         new RangeCachedUrlSetSpec("http://www.example.com/testDir");
     CachedUrlSet fileSet = mau.makeCachedUrlSet(rSpec);
-    Iterator setIt = fileSet.leafIterator();
+    Iterator setIt = fileSet.treeIterator();
     ArrayList childL = new ArrayList(4);
     while (setIt.hasNext()) {
       CachedUrl childUrl = (CachedUrl)setIt.next();
@@ -143,6 +147,7 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
     String[] expectedA = new String[] {
       "http://www.example.com/testDir/branch1",
       "http://www.example.com/testDir/branch1/leaf1",
+      "http://www.example.com/testDir/branch2",
       "http://www.example.com/testDir/branch2/branch3",
       "http://www.example.com/testDir/branch2/branch3/leaf2",
       "http://www.example.com/testDir/leaf3"
@@ -162,7 +167,7 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
     CachedUrlSetSpec rSpec =
         new RangeCachedUrlSetSpec("http://www.example.com/testDir");
     CachedUrlSet fileSet = mau.makeCachedUrlSet(rSpec);
-    fileSet.leafIterator();
+    fileSet.treeIterator();
     assertEquals(4, ((GenericFileCachedUrlSet)fileSet).contentNodeCount);
     assertEquals(48, ((GenericFileCachedUrlSet)fileSet).totalNodeSize);
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericContentHasher.java,v 1.4 2003-01-02 19:39:06 troberts Exp $
+ * $Id: TestGenericContentHasher.java,v 1.5 2003-02-15 01:41:55 aalto Exp $
  */
 
 /*
@@ -156,7 +156,7 @@ public class TestGenericContentHasher extends LockssTestCase {
   }
 
   private Vector cachedUrlSetToBytes(CachedUrlSet cus) throws IOException {
-    Iterator it = cus.leafIterator();
+    Iterator it = cus.treeIterator();
     Vector bytes = new Vector(10000);
 
     while (it.hasNext()) {

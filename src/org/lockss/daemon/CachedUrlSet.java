@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrlSet.java,v 1.11 2003-01-28 02:06:13 aalto Exp $
+ * $Id: CachedUrlSet.java,v 1.12 2003-02-15 01:41:55 aalto Exp $
  */
 
 /*
@@ -96,14 +96,13 @@ public interface CachedUrlSet {
 
     /**
      * Return an <code>Iterator</code> of <code>CachedUrl/code>
-     * objects representing the leaves of the tree rooted at this
+     * objects representing all the nodes of the tree rooted at this
      * <code>CachedUrlSet</code> object.
      * @return an <code>Iterator</code> of <code>CachedUrl</code>s
-     *         for all the leaf (content) nodes
-     *         matching the members of the
+     *         for all the nodes matching the members of the
      *         <code>CachedUrlSetSpec</code> list.
      */
-    public Iterator leafIterator();
+    public Iterator treeIterator();
 
     /**
      * Return an estimate of the time required to hash the content.
