@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapDatagramRouter.java,v 1.4 2004-09-29 23:31:37 tlipkis Exp $
+ * $Id: TestLcapDatagramRouter.java,v 1.5 2005-02-16 19:02:34 tlipkis Exp $
  */
 
 /*
@@ -96,8 +96,7 @@ public class TestLcapDatagramRouter extends LockssTestCase {
 
   void setConfig() {
     Properties p = new Properties();
-    p.put(LcapDatagramRouter.PARAM_FWD_PKTS_PER_INTERVAL, "100");
-    p.put(LcapDatagramRouter.PARAM_FWD_PKT_INTERVAL, "1");
+    p.put(LcapDatagramRouter.PARAM_FWD_MSG_RATE, "100/1");
     p.put(LcapDatagramRouter.PARAM_BEACON_INTERVAL, "1m");
     p.put(LcapDatagramRouter.PARAM_INITIAL_HOPCOUNT, "3");
     p.put(LcapDatagramRouter.PARAM_PROB_PARTNER_ADD, "100");
