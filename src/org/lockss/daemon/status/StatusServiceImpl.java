@@ -1,5 +1,5 @@
 /*
- * $Id: StatusServiceImpl.java,v 1.24 2004-08-22 02:05:56 tlipkis Exp $
+ * $Id: StatusServiceImpl.java,v 1.24.2.1 2004-09-15 22:27:13 tlipkis Exp $
  */
 
 /*
@@ -78,6 +78,10 @@ public class StatusServiceImpl
       BitSet tableOpts = table.getOptions();
       tableOpts.xor(tableOpts);
       tableOpts.or(options);
+    }
+    if (statusAccessor.requiresKey() && table.getKey() == null) {
+      throw new StatusService.NoSuchTableException(tableName +
+						   " requires a key value");
     }
     statusAccessor.populateTable(table);
     if (table.getTitle() == null) {
