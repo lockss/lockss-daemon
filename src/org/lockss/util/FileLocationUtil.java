@@ -1,5 +1,5 @@
 /*
- * $Id: FileLocationUtil.java,v 1.1 2002-12-31 00:14:02 aalto Exp $
+ * $Id: FileLocationUtil.java,v 1.2 2002-12-31 00:19:55 aalto Exp $
  *
 
 Copyright (c) 2000-2002 Board of Trustees of Leland Stanford Jr. University,
@@ -45,14 +45,13 @@ public class FileLocationUtil {
     }
 
     /**
-     * mapAuToCacheLocation() is the name mapping method used by the
-     * LockssRepository and HistoryRepository to resolve {@link ArchivalUnit}s
+     * mapAuToFileLocation() is the method used to resolve {@link ArchivalUnit}s
      * into directory names. This maps a given au to directories, using the
-     * cache root as the base.  Given an AU with PluginId of 'plugin' and AuId
+     * cache root as the base.  Given an au with PluginId of 'plugin' and AuId
      * of 'au', it would return the string '<rootLocation>/plugin/au/'.
-     * @param rootLocation the file root of the cache
-     * @param au the ArchivalUnit to translate
-     * @return the file cache location
+     * @param rootLocation the root for all ArchivalUnits
+     * @param au the ArchivalUnit to resolve
+     * @return the directory location
      */
     public static String mapAuToFileLocation(String rootLocation, ArchivalUnit au) {
       StringBuffer buffer = new StringBuffer(rootLocation);
@@ -69,14 +68,14 @@ public class FileLocationUtil {
     }
 
     /**
-     * mapUrlToCacheLocation() is the method used to resolve urls into file names.
-     * This maps a given url to a cache file location, using the cache root as
+     * mapUrlToFileLocation() is the method used to resolve urls into file names.
+     * This maps a given url to a file location, using the au top directory as
      * the base.  It creates directories which mirror the html string, so
      * 'http://www.journal.org/issue1/index.html' would be cached in the file:
      * <rootLocation>/www.journal.org/http/issue1/index.html
-     * @param rootLocation the file root of the cache
+     * @param rootLocation the top directory for ArchivalUnit this URL is in
      * @param urlStr the url to translate
-     * @return the file cache location
+     * @return the url file location
      * @throws java.net.MalformedURLException
      */
     public static String mapUrlToFileLocation(String rootLocation, String urlStr)
