@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrlSet.java,v 1.10 2002-11-27 19:51:00 troberts Exp $
+ * $Id: MockCachedUrlSet.java,v 1.11 2003-01-02 19:40:10 troberts Exp $
  */
 
 /*
@@ -178,7 +178,7 @@ public class MockCachedUrlSet implements CachedUrlSet {
 		     boolean exists, boolean shouldCache,
 		     Properties props) {
     MockCachedUrl cu = new MockCachedUrl(url);
-    cu.setInputStream(new StringInputStream(source));
+    cu.setContent(source);
     cu.setProperties(props);
     cu.setExists(exists);
 
