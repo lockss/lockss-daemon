@@ -1,5 +1,5 @@
 /*
- * $Id: PrivilegedAccessor.java,v 1.6 2002-10-01 06:18:09 tal Exp $
+ * $Id: PrivilegedAccessor.java,v 1.7 2002-11-06 21:15:39 tal Exp $
  */
 
 /*
@@ -86,6 +86,21 @@ public class PrivilegedAccessor {
       }
     }
     return val;
+  }
+  
+  /**
+   * Calls a method on the given object instance, with no arguments.
+   *
+   * @param instance the object instance
+   * @param methodName the name of the method to invoke
+   */
+  public static Object invokeMethod(Object instance, String methodName)
+      throws NoSuchMethodException,
+	     IllegalAccessException,
+	     InvocationTargetException,
+	     AmbiguousMethodException {
+    Object[] args = {};
+    return invokeMethod(instance, methodName, args);
   }
   
   /**
