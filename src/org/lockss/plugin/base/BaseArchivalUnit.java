@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.52 2004-01-27 04:07:09 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.53 2004-01-28 02:22:42 troberts Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.util.*;
 import java.text.SimpleDateFormat;
 import gnu.regexp.*;
 import org.lockss.util.*;
+import org.lockss.crawler.*;
 import org.lockss.plugin.*;
 import org.lockss.state.*;
 import org.lockss.filter.*;
@@ -125,6 +126,8 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   protected double curTopLevelPollProb = -1;
   protected Configuration auConfig;
   private String auId = null;
+
+  protected GoslingHtmlParser goslingHtmlParser = null;
 
   // crawl spec support
   protected LRUMap crawlSpecCache = new LRUMap(1000);
@@ -487,6 +490,26 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     }
     return false;
   }
+
+  /**
+   * Currently the only ContentParser we have is GoslingHtmlParser, so this
+   * gets returned for any string that starts with "test/html".  Null otherwise
+   * @param mimeType mime type to get a content parser for
+   * @return GoslingHtmlParser if mimeType starts with "test/html",
+   * null otherwise
+   */
+  public ContentParser getContentParser(String mimeType) {
+    if (mimeType != null) {
+      if (mimeType.toLowerCase().startsWith("text/html")) {
+	if (goslingHtmlParser == null) {
+	  goslingHtmlParser =  new GoslingHtmlParser(this);
+	}
+	return goslingHtmlParser;
+      }
+    }
+    return null;
+  }
+
 
   /**
    * @param mimeType the mime type

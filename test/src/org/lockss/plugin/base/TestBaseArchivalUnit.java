@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArchivalUnit.java,v 1.13 2004-01-13 04:46:27 clairegriffin Exp $
+ * $Id: TestBaseArchivalUnit.java,v 1.14 2004-01-28 02:22:42 troberts Exp $
  */
 
 /*
@@ -239,6 +239,32 @@ public class TestBaseArchivalUnit extends LockssTestCase {
 
     reader = new StringReader(testStr);
     assertTrue(mbau.checkCrawlPermission(reader));
+  }
+
+  public void testGetContentParserReturnsNullForNullMimeTupe() {
+    assertNull(mbau.getContentParser(null));
+  }
+
+  public void testGetContentParserReturnsNullForMissingMimeType() {
+    assertNull(mbau.getContentParser(""));
+  }
+
+  public void testGetContentParserReturnsGoslingHtmlParser() {
+    assertTrue(mbau.getContentParser("text/html")
+	       instanceof org.lockss.crawler.GoslingHtmlParser);
+
+    assertTrue(mbau.getContentParser("Text/Html")
+	       instanceof org.lockss.crawler.GoslingHtmlParser);
+  }
+
+  public void testReturnsGHPWithJunkAfterContentType() {
+    assertTrue(mbau.getContentParser("text/html blah")
+	       instanceof org.lockss.crawler.GoslingHtmlParser);
+  }
+
+  public void testGetContentParserReturnsSameGoslingHtmlParser() {
+    assertSame(mbau.getContentParser("text/html"),
+	       mbau.getContentParser("text/html"));
   }
 
   public static void main(String[] argv) {
