@@ -1,5 +1,5 @@
 /*
- * $Id: SmtpMailService.java,v 1.4 2004-08-18 00:14:58 tlipkis Exp $
+ * $Id: SmtpMailService.java,v 1.5 2004-08-18 07:07:44 tlipkis Exp $
  *
 
  Copyright (c) 2000-2004 Board of Trustees of Leland Stanford Jr. University,
@@ -91,34 +91,40 @@ public class SmtpMailService extends BaseLockssManager implements MailService {
   protected synchronized void setConfig(Configuration config,
 					Configuration prevConfig,
 					Configuration.Differences changedKeys) {
-    enabled = config.getBoolean(PARAM_ENABLED, DEFAULT_ENABLED);
-    maxRetries = config.getInt(PARAM_MAX_RETRIES, DEFAULT_MAX_RETRIES);
-    maxQueuelen = config.getInt(PARAM_MAX_QUEUELEN, DEFAULT_MAX_QUEUELEN);
-    if (changedKeys.contains(PARAM_RETRY_INTERVAL)) {
+    // Unconditional: not under PREFIX
+    localHostName = getLocalHostname();
+
+    // Don't rely on change to enable by default
+    boolean doEnable = config.getBoolean(PARAM_ENABLED, DEFAULT_ENABLED);
+
+    if (changedKeys.contains(PREFIX)) {
+      maxRetries = config.getInt(PARAM_MAX_RETRIES, DEFAULT_MAX_RETRIES);
+      maxQueuelen = config.getInt(PARAM_MAX_QUEUELEN, DEFAULT_MAX_QUEUELEN);
       retryInterval = config.getTimeInterval(PARAM_RETRY_INTERVAL,
 					     DEFAULT_RETRY_INTERVAL);
+      rateLimiter =
+	RateLimiter.getConfiguredRateLimiter(config, rateLimiter,
+					     PARAM_MAX_MAILS_PER_INTERVAL,
+					     DEFAULT_MAX_MAILS_PER_INTERVAL,
+					     PARAM_MAX_MAILS_INTERVAL,
+					     DEFAULT_MAX_MAILS_INTERVAL);
+      smtpHost = config.get(PARAM_SMTPHOST);
+      smtpPort = config.getInt(PARAM_SMTPPORT, DEFAULT_SMTPPORT);
     }
-    rateLimiter =
-      RateLimiter.getConfiguredRateLimiter(config, rateLimiter,
-					   PARAM_MAX_MAILS_PER_INTERVAL,
-					   DEFAULT_MAX_MAILS_PER_INTERVAL,
-					   PARAM_MAX_MAILS_INTERVAL,
-					   DEFAULT_MAX_MAILS_INTERVAL);
-
-    localHostName = getLocalHostname();
-    smtpHost = config.get(PARAM_SMTPHOST);
-    smtpPort = config.getInt(PARAM_SMTPPORT, DEFAULT_SMTPPORT);
-    if (enabled) {
-      if (smtpHost==null) {
-	String parameter = PARAM_SMTPHOST;
-	log.error("Couldn't determine "+parameter+
-		  " from Configuration.  Disabling emails");
-	enabled = false;
-	return;
+    if (doEnable != enabled) {
+      if (doEnable) {
+	if (smtpHost==null) {
+	  String parameter = PARAM_SMTPHOST;
+	  log.error("Couldn't determine "+parameter+
+		    " from Configuration.  Disabling emails");
+	  enabled = false;
+	  return;
+	}
+	if (!queue.isEmpty()) {
+	  ensureThreadRunning();
+	} 
+	enabled = doEnable;
       }
-      if (!queue.isEmpty()) {
-	ensureThreadRunning();
-      } 
     }
   }
 

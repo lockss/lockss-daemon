@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.32 2004-08-18 00:15:00 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.33 2004-08-18 07:07:44 tlipkis Exp $
  */
 
 /*
@@ -273,12 +273,6 @@ public class ConfigManager implements LockssManager {
     }
   }
 
-  void runCallback(Configuration.Callback cb,
-		   Configuration newConfig,
-		   Configuration oldConfig) {
-    runCallback(cb, newConfig, oldConfig, newConfig.differences(oldConfig));
-  }
-
   void runCallbacks(Configuration newConfig,
 		    Configuration oldConfig,
 		    Configuration.Differences diffs) {
@@ -357,13 +351,14 @@ public class ConfigManager implements LockssManager {
     }
     setCurrentConfig(newConfig);
     Configuration.Differences diffs = newConfig.differences(oldConfig);
-    logConfigLoaded(newConfig, diffs, loadedCacheFiles);
+    logConfigLoaded(newConfig, oldConfig, diffs, loadedCacheFiles);
     runCallbacks(newConfig, oldConfig, diffs);
     haveConfig.fill();
     return true;
   }
 
   private void logConfigLoaded(Configuration newConfig,
+			       Configuration oldConfig,
 			       Configuration.Differences diffs,
 			       List loadedCacheFiles) {
     StringBuffer sb = new StringBuffer("Config updated");
@@ -379,7 +374,7 @@ public class ConfigManager implements LockssManager {
     }
     log.info(sb.toString());
     if (log.isDebug()) {
-      logConfig(newConfig, diffs);
+      logConfig(newConfig, oldConfig, diffs);
     }
   }
 
@@ -476,14 +471,19 @@ public class ConfigManager implements LockssManager {
   }
 
   private void logConfig(Configuration config,
+			 Configuration oldConfig,
 			 Configuration.Differences diffs) {
     SortedSet keys = new TreeSet(diffs.getDifferenceSet());
+    if (keys == null) {
+      // this should never happen; just being paranoid
+      return;
+    }
     for (Iterator iter = keys.iterator(); iter.hasNext(); ) {
       String key = (String)iter.next();
       if (log.isDebug2() || !key.startsWith(PARAM_TITLE_DB)) {
 	if (config.containsKey(key)) {
 	  log.debug(key + " = " + (String)config.get(key));
-	} else {
+	} else if (oldConfig.containsKey(key)) {
 	  log.debug(key + " (removed)");
 	}
       }
@@ -501,7 +501,8 @@ public class ConfigManager implements LockssManager {
     if (!configChangedCallbacks.contains(c)) {
       configChangedCallbacks.add(c);
       if (!currentConfig.isEmpty()) {
-	runCallback(c, currentConfig, EMPTY_CONFIGURATION);
+	runCallback(c, currentConfig, EMPTY_CONFIGURATION,
+		    Configuration.DIFFERENCES_ALL);
       }
     }
   }

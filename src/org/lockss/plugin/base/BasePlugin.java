@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.24 2004-08-18 00:14:56 tlipkis Exp $
+ * $Id: BasePlugin.java,v 1.25 2004-08-18 07:07:44 tlipkis Exp $
  */
 
 /*
@@ -122,7 +122,9 @@ public abstract class BasePlugin
   protected void setConfig(Configuration newConfig,
 			   Configuration prevConfig,
 			   Configuration.Differences changedKeys) {
-    setTitleConfigFromConfig(newConfig.getConfigTree(PARAM_TITLE_DB));
+    if (changedKeys.contains(PARAM_TITLE_DB)) {
+      setTitleConfigFromConfig(newConfig.getConfigTree(PARAM_TITLE_DB));
+    }
   }
 
   private void setTitleConfigFromConfig(Configuration allTitles) {
@@ -131,13 +133,20 @@ public abstract class BasePlugin
     for (Iterator iter = allTitles.nodeIterator(); iter.hasNext(); ) {
       String titleKey = (String)iter.next();
       Configuration titleConfig = allTitles.getConfigTree(titleKey);
-      log.debug3("titleKey: " + titleKey);
-      log.debug3("titleConfig: " + titleConfig);
       String pluginName = titleConfig.get(TITLE_PARAM_PLUGIN);
       if (myName.equals(pluginName)) {
+	if (log.isDebug2()) {
+	  log.debug2("my titleKey: " + titleKey);
+	  log.debug2("my titleConfig: " + titleConfig);
+	}
 	String title = titleConfig.get(TITLE_PARAM_TITLE);
 	TitleConfig tc = initOneTitle(titleConfig);
 	titleMap.put(title, tc);
+      } else {
+	if (log.isDebug3()) {
+	  log.debug3("titleKey: " + titleKey);
+	  log.debug3("titleConfig: " + titleConfig);
+	}
       }
     }
     //TODO: decide on how to support plug-ins which do not use the title registry
@@ -206,7 +215,7 @@ public abstract class BasePlugin
   }
 
   public Collection getAllAus() {
-    log.debug2("getAllAus: aus: " + aus);
+    if (log.isDebug2()) log.debug2("getAllAus: aus: " + aus);
     return aus;
   }
 

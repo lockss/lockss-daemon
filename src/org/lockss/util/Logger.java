@@ -1,5 +1,5 @@
 /*
- * $Id: Logger.java,v 1.33 2004-08-18 00:14:53 tlipkis Exp $
+ * $Id: Logger.java,v 1.34 2004-08-18 07:07:43 tlipkis Exp $
  */
 
 /*
@@ -430,9 +430,11 @@ public class Logger {
 	public void configurationChanged(Configuration newConfig,
 					 Configuration oldConfig,
 					 Configuration.Differences diffs) {
-	  setAllLogLevels();
-	  if (diffs.contains(PARAM_LOG_TARGETS)) {
-	    setLogTargets();
+	  if (diffs.contains(PREFIX)) {
+	    setAllLogLevels();
+	    if (diffs.contains(PARAM_LOG_TARGETS)) {
+	      setLogTargets();
+	    }
 	  }
 	}
       };
