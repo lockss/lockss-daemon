@@ -32,6 +32,7 @@ org.lockss.plugin.registry=\
     edu.upenn.library.plugin.annualofurdustudies.AnnualOfUrduStudiesPlugin;\
     edu.indiana.lib.plugin.jcjpc.JcjpcPlugin;\
     edu.princeton.plugin.bmcr.BMCRPlugin;\
+    edu.fcla.plugin.arkivoc.ArkivocPlugin;\
     org.lockss.plugin.ojs.OJSPlugin;
 
 # List of plugins that should be loaded as ConfigurablePlugins with an xml
