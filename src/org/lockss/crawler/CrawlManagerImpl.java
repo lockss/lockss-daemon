@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.39 2003-06-25 23:40:19 troberts Exp $
+ * $Id: CrawlManagerImpl.java,v 1.40 2003-06-26 00:18:46 troberts Exp $
  */
 
 /*
@@ -141,6 +141,7 @@ public class CrawlManagerImpl extends BaseLockssManager
    */
   public void scheduleRepair(ArchivalUnit au, URL url,
 			     CrawlManager.Callback cb, Object cookie) {
+    //XXX will go when repairs are all with lists
     if (url == null) {
       throw new IllegalArgumentException("Called with null URL");
     }
@@ -274,16 +275,6 @@ public class CrawlManagerImpl extends BaseLockssManager
     }
   }
 
-  private void triggerCrawlCallbacks(Vector callbacks) {
-    if (callbacks != null) {
-      Iterator it = callbacks.iterator();
-      while (it.hasNext()) {
-	CrawlManager.Callback cb = (CrawlManager.Callback) it.next();
-	cb.signalCrawlAttemptCompleted(true, null);
-      }
-    }
-  }
-
   protected Crawler makeCrawler(ArchivalUnit au, List urls,
 				int type, boolean followLinks) {
     return new GoslingCrawlerImpl(au, urls, type, followLinks);
@@ -325,12 +316,6 @@ public class CrawlManagerImpl extends BaseLockssManager
         ar.auActivityFinished(ActivityRegulator.NEW_CONTENT_CRAWL);
       } else {
 	releaseRepairLocks(au, crawler.getStartUrls());
-// 	String url = (String)crawler.getStartUrls().get(0); //XXX hack
-//         ar.cusActivityFinished(ActivityRegulator.REPAIR_CRAWL,
-// 			       createSingleNodeCachedUrlSet(au, url));
-// 	url = (String)crawler.getStartUrls().get(1); //XXX hack
-//         ar.cusActivityFinished(ActivityRegulator.REPAIR_CRAWL,
-// 			       createSingleNodeCachedUrlSet(au, url));
       }
 
       doCallbacks(callbacks, crawlSuccessful, cookie);
