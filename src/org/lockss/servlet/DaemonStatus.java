@@ -1,5 +1,5 @@
 // ========================================================================
-// $Id: DaemonStatus.java,v 1.2 2003-03-14 01:51:47 tal Exp $
+// $Id: DaemonStatus.java,v 1.3 2003-03-15 00:57:51 tal Exp $
 // ========================================================================
 
 /*
@@ -56,6 +56,9 @@ public class DaemonStatus extends LockssServlet {
   public static final DateFormat df =
     DateFormat.getDateTimeInstance(DateFormat.SHORT, DateFormat.SHORT);
 
+  private String tableName;
+  private String key;
+
   private boolean isForm = false;
   private boolean html = false;
   private String errorMsg = null;
@@ -76,8 +79,8 @@ public class DaemonStatus extends LockssServlet {
 
     resp.setContentType(html ? "text/html" : "text/plain");
 
-    String tableName = req.getParameter("table");
-    String key = req.getParameter("key");
+    tableName = req.getParameter("table");
+    key = req.getParameter("key");
     if (StringUtil.isNullString(tableName)) {
       tableName = StatusService.ALL_TABLES_TABLE;
     }
@@ -126,9 +129,8 @@ public class DaemonStatus extends LockssServlet {
     }
     java.util.List colList = statTable.getColumnDescriptors();
     java.util.List rowList = statTable.getSortedRows();
-//     String title = statTable.getTitle();
+    String title = statTable.getTitle();
 //     String titleFoot = statTable.getTitleFootnote();
-    String title = tableName;
     String titleFoot = null;
 
     Table table = null;
@@ -139,7 +141,8 @@ public class DaemonStatus extends LockssServlet {
     Iterator rowIter = rowList.iterator();
     if (rowIter.hasNext()) {
       // if table not empty, output column headings
-      table = new Table(0, "CELLSPACING=2 CELLPADDING=0 WIDTH=\"100%\"");
+//       table = new Table(0, "CELLSPACING=2 CELLPADDING=0 WIDTH=\"100%\"");
+      table = new Table(0, "CELLSPACING=2 CELLPADDING=0");
       if (html) {
 	// ensure title footnote numbered before ColDesc.HEADs
 	title = title + addFootnote(titleFoot);
@@ -227,7 +230,7 @@ public class DaemonStatus extends LockssServlet {
 	sb.append("&key=");
 	sb.append(key);
       }
-      return srvLink(SERVLET_DAEMON_STATUS, dispString1(ref.getValue(), cd),
+      return srvLink(myServletDescr(), dispString1(ref.getValue(), cd),
 		     sb.toString());
     } else {
       return dispString1(val, cd);
@@ -235,6 +238,9 @@ public class DaemonStatus extends LockssServlet {
   }
 
   private String dispString1(Object val, StatusTable.ColumnDescriptor cd) {
+    if (val == null) {
+      return "";
+    }
     try {
       switch (cd.getType()) {
       case StatusTable.TYPE_STRING:
@@ -281,7 +287,13 @@ public class DaemonStatus extends LockssServlet {
     } catch (NumberFormatException e) {
       log.warning("bad number: " + e.toString());
       return val.toString();
+    } catch (ClassCastException e) {
+      log.warning("wrong type value: " + val.toString() + ": " + e.toString());
+      return val.toString();
     }
   }
 
+  protected boolean includeMeInNav() {
+    return !StatusService.ALL_TABLES_TABLE.equals(tableName);
+  }
 }
