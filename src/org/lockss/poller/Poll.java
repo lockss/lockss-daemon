@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.79 2003-05-22 01:06:08 claire Exp $
+* $Id: Poll.java,v 1.80 2003-06-19 21:37:32 dshr Exp $
  */
 
 /*
@@ -91,33 +91,18 @@ public abstract class Poll implements Serializable {
   static Logger log=Logger.getLogger("Poll");
 
   LcapMessage m_msg;      // The message which triggered the poll
-
-  double m_agreeVer = 0;     // the max percentage of time we will verify
-  double m_disagreeVer = 0;  // the max percentage of time we will verify
-  double m_margin = 0;    // the margin by which we must win or lose
-  double m_trustedWeight = 0;// the min ave. weight of the winners, when we lose.
-  CachedUrlSet m_cus;     // the cached url set retrieved from the archival unit
+  CachedUrlSet m_cus;     // the cached url set from the archival unit
   PollSpec m_pollspec;
-  byte[] m_challenge;     // The caller's challenge string
-  byte[] m_verifier;      // Our verifier string - hash of secret
-  byte[] m_hash;          // Our hash of challenge, verifier and content(S)
-
-  Deadline m_voteTime;    // when to vote
-  Deadline m_deadline;    // when election is over
-  Deadline m_hashDeadline; // when our hashes must finish by
-
   LcapIdentity m_caller;   // who called the poll
-  int m_replyOpcode = -1;  // opcode used to reply to poll
-  long m_hashTime;         // an estimate of the time it will take to hash
+  PollManager m_pollmanager; // the pollmanager for this poll.
+  IdentityManager idMgr;
   long m_createTime;       // poll creation time
-  String m_key;            // the string we used to id this poll
-  int m_pollstate;         // one of state constants above
-  int m_pendingVotes = 0;  // the number of votes waiting to be tallied
 
   PollTally m_tally;         // the vote tallier
-  PollManager m_pollmanager; // the pollmanager which should be used by this poll.
-  IdentityManager idMgr;
-
+  String m_key;            // the string we used to id this poll
+  int m_pollstate;         // one of state constants above
+  Deadline m_deadline;    // when election is over
+  
   /**
    * create a new poll from a message
    *
@@ -129,52 +114,19 @@ public abstract class Poll implements Serializable {
   Poll(LcapMessage msg, PollSpec pollspec, PollManager pm) {
     m_pollmanager = pm;
     idMgr = pm.getIdentityManager();
+    m_caller = idMgr.findIdentity(msg.getOriginAddr());
     m_msg = msg;
     m_pollspec = pollspec;
     m_cus = pollspec.getCachedUrlSet();
-
-    // now copy the msg elements we need
-    m_hashTime = m_cus.estimatedHashDuration();
-    m_deadline = Deadline.in(msg.getDuration());
-    if(!msg.isVerifyPoll()) {
-      m_hashDeadline =
-          Deadline.at(m_deadline.getExpirationTime() - Constants.MINUTE);
-    }
-
-    m_caller = idMgr.findIdentity(msg.getOriginAddr());
-    m_challenge = msg.getChallenge();
-    m_key = msg.getKey();
-    m_verifier = m_pollmanager.makeVerifier(msg.getDuration());
-
-    log.debug("I think poll "+m_challenge
-	      +" will take me this long to hash "+m_hashTime);
-
     m_createTime = TimeBase.nowMs();
-
-    // make a new vote tally
-    m_tally = new PollTally(this, -1, m_createTime, msg.getDuration(),
-                            pm.getQuorum(), msg.getHashAlgorithm());
+    m_key = msg.getKey();
+    m_tally = null;
+    m_deadline = Deadline.in(msg.getDuration());
     m_pollstate = PS_INITING;
-    getConfigValues();
+
   }
 
-
-  /**
-   * create a human readable string representation of this poll
-   * @return a String
-   */
-  public String toString() {
-    StringBuffer sb = new StringBuffer("[Poll: ");
-    sb.append("url set:");
-    sb.append(" ");
-    sb.append(m_cus.toString());
-    sb.append(" ");
-    sb.append(m_msg.getOpcodeString());
-    sb.append(" key:");
-    sb.append(m_key);
-    sb.append("]");
-    return sb.toString();
-  }
+  abstract public String toString();
 
   /**
    * Returns true if the poll belongs to this Identity
@@ -184,19 +136,7 @@ public abstract class Poll implements Serializable {
     return idMgr.isLocalIdentity(m_caller);
   }
 
-  void getConfigValues() {
-    /* initialize with our parameters */
-    m_agreeVer = ((double)Configuration.getIntParam(PARAM_AGREE_VERIFY,
-        DEFAULT_AGREE_VERIFY)) / 100;
-    m_disagreeVer = ((double)Configuration.getIntParam(PARAM_DISAGREE_VERIFY,
-        DEFAULT_DISAGREE_VERIFY)) / 100;
-
-    m_trustedWeight = ((double)Configuration.getIntParam(PARAM_TRUSTED_WEIGHT,
-        DEFAULT_TRUSTED_WEIGHT));
-    m_margin = ((double)Configuration.getIntParam(PARAM_VOTE_MARGIN,
-        DEFAULT_VOTE_MARGIN)) / 100;
-
-  }
+  abstract void getConfigValues();
 
   abstract void receiveMessage(LcapMessage msg);
 
@@ -218,16 +158,7 @@ public abstract class Poll implements Serializable {
    * schedule a vote by a poll.  we've already completed the hash so we're
    * only interested in how long we have remaining.
    */
-  void scheduleVote() {
-    if(m_voteTime.expired()) {
-      voteInPoll();
-    }
-    else {
-      log.debug("Waiting until " + m_voteTime.toString() + " to vote");
-      TimerQueue.schedule(m_voteTime, new VoteTimerCallback(), this);
-    }
-  }
-
+  abstract void scheduleVote();
 
   /**
    * check the hash result obtained by the hasher with one stored in the
@@ -235,22 +166,7 @@ public abstract class Poll implements Serializable {
    * @param hashResult byte array containing the result of the hasher
    * @param vote the Vote to check.
    */
-  void checkVote(byte[] hashResult, Vote vote)  {
-    boolean verify = false;
-    byte[] hashed = vote.getHash();
-    log.debug3("Checking "+
-              String.valueOf(B64Code.encode(hashResult))+
-              " against "+
-              vote.getHashString());
-
-    boolean agree = vote.setAgreeWithHash(hashResult);
-    LcapIdentity id = idMgr.findIdentity(vote.getIDAddress());
-
-    if(!idMgr.isLocalIdentity(vote.getIDAddress())) {
-      verify = randomVerify(vote, agree);
-    }
-    m_tally.addVote(vote, id, idMgr.isLocalIdentity(id));
-  }
+  abstract void checkVote(byte[] hashResult, Vote vote);
 
   /**
    * randomly verify a vote.  The random percentage is determined by
@@ -259,142 +175,42 @@ public abstract class Poll implements Serializable {
    * @param isAgreeVote true if this vote agreed with ours, false otherwise
    * @return true if we called a verify poll, false otherwise.
    */
-  boolean randomVerify(Vote vote, boolean isAgreeVote) {
-    LcapIdentity id = idMgr.findIdentity(vote.getIDAddress());
-    int max = idMgr.getMaxReputaion();
-    int weight = id.getReputation();
-    double verify;
-    boolean callVerifyPoll = false;
-
-    if(isAgreeVote) {
-      verify = ((double)(max - weight)) / max * m_agreeVer;
-    }
-    else {
-      verify = (((double)weight) / (2*max)) * m_disagreeVer;
-    }
-    log.debug2("probablitiy of verifying this vote = " + verify);
-    try {
-      if(ProbabilisticChoice.choose(verify)) {
-        long remainingTime = m_deadline.getRemainingTime();
-        long now = TimeBase.nowMs();
-        long minTime = now + (remainingTime/2) - (remainingTime/4);
-        long maxTime = now + (remainingTime/2) + (remainingTime/4);
-        long duration = Deadline.atRandomRange(minTime, maxTime).getRemainingTime();
-
-        m_pollmanager.requestVerifyPoll(m_pollspec, duration, vote);
-        callVerifyPoll = true;
-      }
-    }
-    catch (IOException ex) {
-      log.debug("attempt to request verify poll failed ", ex);
-    }
-    return callVerifyPoll;
-  }
+  abstract boolean randomVerify(Vote vote, boolean isAgreeVote);
 
   /**
    * cast our vote for this poll
    */
-  void castOurVote() {
-    LcapMessage msg;
-    LcapIdentity local_id = idMgr.getLocalIdentity();
-    long remainingTime = m_deadline.getRemainingTime();
-    try {
-      msg = LcapMessage.makeReplyMsg(m_msg, m_hash, m_verifier, null,
-                                     m_replyOpcode, remainingTime, local_id);
-      log.debug("vote:" + msg.toString());
-      m_pollmanager.sendMessage(msg, m_cus.getArchivalUnit());
-    }
-    catch(IOException ex) {
-      log.info("unable to cast our vote.", ex);
-    }
-  }
+  abstract void castOurVote();
 
   /**
    * start the poll.
    */
-  void startPoll() {
-    if (m_pollstate != PS_INITING)
-      return;
-    log.debug3("scheduling poll to complete by " + m_deadline);
-    TimerQueue.schedule(m_deadline, new PollTimerCallback(), this);
-    m_pollstate = PS_WAIT_HASH;
-
-    if (!scheduleOurHash()) {
-      m_pollstate = ERR_SCHEDULE_HASH;
-      log.debug("couldn't schedule our hash:" + m_voteTime + ", stopping poll.");
-      stopPoll();
-      return;
-    }
-  }
+  abstract void startPoll();
 
   /**
    * attempt to schedule our hash.  This will try 3 times to get a deadline
    * that will is successfully scheduled
    * @return boolean true if we sucessfully schedule hash; false otherwise.
    */
-  boolean scheduleOurHash() {
-    MessageDigest hasher = getInitedHasher(m_challenge, m_verifier);
-
-    boolean scheduled = false;
-    long now = TimeBase.nowMs();
-    long remainingTime = m_deadline.getRemainingTime();
-    long minTime = now + (remainingTime / 2) - (remainingTime / 4);
-    long maxTime = now + (remainingTime / 2) + (remainingTime / 4);
-    long lastHashTime = now + (m_hashTime * (m_tally.quorum + 1));
-
-    for (int i = 0; !scheduled && i < 2; i++) {
-      m_voteTime = Deadline.atRandomRange(minTime, maxTime);
-      long curTime = m_voteTime.getExpirationTime();
-      log.debug3("Trying to schedule our hash at " + m_voteTime);
-      scheduled = scheduleHash(hasher, m_voteTime, m_msg, new PollHashCallback());
-      if (!scheduled) {
-        if (curTime < lastHashTime) {
-          maxTime += curTime - minTime;
-          minTime = curTime;
-        }
-        else {
-          log.debug("Unable to schedule our hash before " + lastHashTime);
-          break;
-        }
-      }
-    }
-    return scheduled;
-  }
+  abstract boolean scheduleOurHash();
 
   /**
    * cast our vote in the current poll
    */
-  void voteInPoll() {
-    //we don't vote if we're winning by a landslide
-    if(!m_tally.isLeadEnough()) {
-      castOurVote();
-    }
-    m_pollstate = PS_WAIT_TALLY;
-  }
+  abstract void voteInPoll();
 
 
   /**
    * is our poll currently in an error condition
    * @return true if the poll state is an error value
    */
-  boolean isErrorState() {
-    return m_pollstate < 0;
-  }
+  abstract boolean isErrorState();
 
   /**
    * finish the poll once the deadline has expired. we update our poll record
    * and prevent any more activity in this poll.
    */
-  void stopPoll() {
-    if(isErrorState()) {
-      log.debug("poll stopped with error: " + ERROR_STRINGS[ -m_pollstate]);
-    }
-    else {
-      m_pollstate = Poll.PS_COMPLETE;
-    }
-    m_pollmanager.closeThePoll(m_key);
-    log.debug3("closed the poll:" + m_key);
-  }
+  abstract void stopPoll();
 
   /**
    * prepare to check a vote in a poll.  This should check any conditions that
@@ -402,63 +218,25 @@ public abstract class Poll implements Serializable {
    * @param msg the message which is triggering the poll
    * @return boolean true if the poll should run, false otherwise
    */
-  boolean shouldCheckVote(LcapMessage msg) {
-    LcapIdentity voter = idMgr.findIdentity(msg.getOriginAddr());
-
-    // make sure we haven't already voted
-    if(m_tally.hasVoted(voter)) {
-      log.warning("Ignoring multiple vote from " + voter);
-      int oldRep = voter.getReputation();
-      idMgr.changeReputation(voter, IdentityManager.REPLAY_DETECTED);
-      int newRep = voter.getReputation();
-      m_tally.adjustReputation(voter,newRep-oldRep);
-      return false;
-    }
-
-    // make sure our vote will actually matter
-    if(m_tally.isLeadEnough())  {
-      log.info(m_key + " lead is enough");
-      return false;
-    }
-
-    // are we too busy
-    if(tooManyPending())  {
-      log.info(m_key + " too busy to count " + m_pendingVotes + " votes");
-      return false;
-    }
-
-    return true;
-  }
+  abstract boolean shouldCheckVote(LcapMessage msg);
 
   /**
    * start the hash required for a vote cast in this poll
    */
-  void startVoteCheck() {
-    m_pendingVotes++;
-    log.debug3("Number pending votes = " + m_pendingVotes);
-  }
+  abstract void startVoteCheck();
 
   /**
    * stop and record a vote cast in this poll
    */
-  void stopVoteCheck() {
-    m_pendingVotes--;
-    log.debug3("Number pending votes = " + m_pendingVotes);
-  }
+  abstract void stopVoteCheck();
 
   /**
    * are there too many votes waiting to be tallied
    * @return true if we have a quorum worth of votes already pending
    */
-  boolean tooManyPending() {
-    return m_pendingVotes > m_tally.quorum + 1;
-  }
+  abstract boolean tooManyPending();
 
-  Vote copyVote(Vote vote, boolean agree) {
-    Vote v = new Vote(vote);
-    v.agree = agree;
-    return v;
-  }
+  abstract Vote copyVote(Vote vote, boolean agree);
 
   /**
    * Return the poll spec used by this poll
@@ -467,6 +245,13 @@ public abstract class Poll implements Serializable {
   public PollSpec getPollSpec() {
     return m_pollspec;
   }
+
+  /* Return the version of the protocol in use
+   * @return the protocol version
+   */
+   public int getVersion() {
+     return m_pollspec.getVersion();
+   }
 
   /**
    * get the message used to define this Poll
@@ -495,123 +280,19 @@ public abstract class Poll implements Serializable {
     return "No Error";
   }
 
-  double getMargin() {
-    return m_margin;
-  }
+  abstract double getMargin();
 
+  
   /**
    * Return a hasher preinited with the challenge and verifier
    * @param challenge the challenge bytes
    * @param verifier the verifier bytes
    * @return a MessageDigest
    */
-  MessageDigest getInitedHasher(byte[] challenge, byte[] verifier) {
-    MessageDigest hasher = m_pollmanager.getHasher(m_msg);
-    hasher.update(challenge, 0, challenge.length);
-    hasher.update(verifier, 0, verifier.length);
-    log.debug3("hashing: C[" +String.valueOf(B64Code.encode(challenge)) + "] "
-              +"V[" + String.valueOf(B64Code.encode(verifier)) + "]");
-    return hasher;
+  abstract MessageDigest getInitedHasher(byte[] challenge, byte[] verifier);
+
+  public Deadline getDeadline() {
+    return m_deadline;
   }
-
-
-  class PollHashCallback implements HashService.Callback {
-
-    /**
-     * Called to indicate that hashing the content or names of a
-     * <code>CachedUrlSet</code> object has succeeded, if <code>e</code>
-     * is null,  or has failed otherwise.
-     * @param urlset  the <code>CachedUrlSet</code> being hashed.
-     * @param cookie  used to disambiguate callbacks.
-     * @param hasher  the <code>MessageDigest</code> object that
-     *                contains the hash.
-     * @param e       the exception that caused the hash to fail.
-     */
-    public void hashingFinished(CachedUrlSet urlset,
-                                Object cookie,
-                                MessageDigest hasher,
-                                Exception e) {
-      if(m_pollstate != PS_WAIT_HASH) {
-        log.debug("hasher returned with pollstate: " + m_pollstate);
-        return;
-      }
-      boolean hash_completed = e == null ? true : false;
-
-      if(hash_completed)  {
-        m_hash  = hasher.digest();
-        log.debug2("Hash on " + urlset + " complete: "+
-                  String.valueOf(B64Code.encode(m_hash)));
-        m_pollstate = PS_WAIT_VOTE;
-        scheduleVote();
-
-      }
-      else {
-        log.debug("Hash failed : " + e.getMessage());
-        m_pollstate = ERR_HASHING;
-
-      }
-    }
-  }
-
-
-  class VoteHashCallback implements HashService.Callback {
-
-    /**
-     * Called to indicate that hashing the content or names of a
-     * <code>CachedUrlSet</code> object has succeeded, if <code>e</code>
-     * is null,  or has failed otherwise.
-     * @param urlset  the <code>CachedUrlSet</code> being hashed.
-     * @param cookie  used to disambiguate callbacks.
-     * @param hasher  the <code>MessageDigest</code> object that
-     *                contains the hash.
-     * @param e       the exception that caused the hash to fail.
-     */
-    public void hashingFinished(CachedUrlSet urlset,
-                                Object cookie,
-                                MessageDigest hasher,
-                                Exception e) {
-      boolean hash_completed = e == null ? true : false;
-
-      if(hash_completed)  {
-        byte[] out_hash = hasher.digest();
-        Vote vote = (Vote)cookie;
-        checkVote(out_hash, vote);
-        stopVoteCheck();
-      }
-      else {
-        log.info("vote hash failed with exception:" + e.getMessage());
-      }
-    }
-  }
-
-
-  class VoteTimerCallback implements TimerQueue.Callback {
-    /**
-     * Called when the timer expires.
-     * @param cookie  data supplied by caller to schedule()
-     */
-    public void timerExpired(Object cookie) {
-      log.debug3("VoteTimerCallback called, checking if I should vote");
-      if(m_pollstate == PS_WAIT_VOTE) {
-        log.debug3("I should vote");
-        voteInPoll();
-        log.debug("I just voted");
-      }
-    }
-  }
-
-
-  class PollTimerCallback implements TimerQueue.Callback {
-    /**
-     * Called when the timer expires.
-     * @param cookie  data supplied by caller to schedule()
-     */
-    public void timerExpired(Object cookie) {
-      if(m_pollstate != PS_COMPLETE) {
-        stopPoll();
-      }
-    }
-  }
-
 
 }

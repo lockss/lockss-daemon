@@ -1,5 +1,5 @@
 /*
- * $Id: NamePoll.java,v 1.51 2003-06-17 01:09:30 aalto Exp $
+ * $Id: VersionOneNamePoll.java,v 1.1 2003-06-19 21:37:32 dshr Exp $
  */
 
 /*
@@ -41,12 +41,12 @@ import org.lockss.plugin.*;
  * @version 1.0
  */
 
-public class NamePoll
-    extends Poll {
+public class VersionOneNamePoll extends VersionOnePoll {
 
   ArrayList m_entries;
 
-  public NamePoll(LcapMessage msg, PollSpec pollspec, PollManager pm) {
+  public VersionOneNamePoll(LcapMessage msg,
+			    PollSpec pollspec, PollManager pm) {
     super(msg, pollspec, pm);
     m_replyOpcode = LcapMessage.NAME_POLL_REP;
     m_tally.type = NAME_POLL;
@@ -167,10 +167,6 @@ public class NamePoll
         }
         else {
           winners.add(counter);
-          log.debug3("adding winning counter: " +
-                     counter.getKnownEntries().size() + " entries, lwr: " +
-                     counter.getLwrRemaining() + ", upr: " +
-                     counter.getUprRemaining());
         }
       }
     }
@@ -193,14 +189,15 @@ public class NamePoll
   }
 
   void buildPollLists(Iterator voteIter) {
+    log.warning("buildPollLists");
     NameVote winningVote = findWinningVote(voteIter);
     log.debug("found winning vote: " + winningVote);
     if (winningVote != null) {
+      log.warning("buildPollLists 2");
       m_tally.votedEntries = winningVote.getKnownEntries();
       String lwrRem = winningVote.getLwrRemaining();
       String uprRem = winningVote.getUprRemaining();
-      log.debug2("Voted entry count: " + m_tally.votedEntries.size() +
-                 ", lwr: " + lwrRem + ", upr: " + uprRem);
+      log.warning("buildPollLists 2");
       if (lwrRem != null) {
         // we call a new poll on the remaining entries and set the regexp
         try {
@@ -210,21 +207,24 @@ public class NamePoll
         catch (IOException ex) {
           log.error("unable to create new poll request", ex);
         }
+	log.warning("buildPollLists 3");
         // we make our list from whatever is in our
         // master list that doesn't match the remainder;
         ArrayList localSet = new ArrayList();
         Iterator localIt = getEntries().iterator();
+	log.warning("buildPollLists 4");
         while (localIt.hasNext()) {
+	  log.warning("buildPollLists 5");
           PollTally.NameListEntry entry = (PollTally.NameListEntry) localIt.next();
           String url = entry.name;
-          if ((lwrRem!=null) && url.compareTo(lwrRem) < 0) {
+          if((lwrRem != null) && url.compareTo(lwrRem) < 0) {
             localSet.add(entry);
-          } else if ((uprRem!=null) && url.compareTo(uprRem) > 0) {
+          }
+          else if((uprRem != null) && url.compareTo(uprRem) > 0) {
             localSet.add(entry);
           }
         }
         m_tally.localEntries = localSet;
-        log.debug2("Local entry count: " + m_tally.localEntries.size());
       } else {
         m_tally.localEntries = getEntries();
       }

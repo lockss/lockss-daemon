@@ -1,5 +1,5 @@
 /*
-* $Id: ContentPoll.java,v 1.31 2003-05-02 18:22:41 tal Exp $
+* $Id: VersionOneContentPoll.java,v 1.1 2003-06-19 21:37:32 dshr Exp $
  */
 
 /*
@@ -45,13 +45,13 @@ import org.mortbay.util.B64Code;
 import org.lockss.plugin.*;
 
 /**
- * class which represents a content poll
+ * class which represents a version one content poll
  * @author Claire Griffin
  * @version 1.0
  */
-public class ContentPoll extends Poll {
+public class VersionOneContentPoll extends VersionOnePoll {
 
-  ContentPoll(LcapMessage msg, PollSpec pollspec, PollManager pm) {
+  VersionOneContentPoll(LcapMessage msg, PollSpec pollspec, PollManager pm) {
     super(msg, pollspec, pm);
     m_replyOpcode = LcapMessage.CONTENT_POLL_REP;
     m_tally.type = CONTENT_POLL;

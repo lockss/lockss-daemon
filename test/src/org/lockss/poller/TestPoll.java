@@ -1,5 +1,5 @@
 /*
- * $Id: TestPoll.java,v 1.58 2003-06-09 01:22:45 tal Exp $
+ * $Id: TestPoll.java,v 1.59 2003-06-19 21:37:33 dshr Exp $
  */
 
 /*
@@ -69,7 +69,7 @@ public class TestPoll extends LockssTestCase {
   protected LcapIdentity testID;
   protected LcapIdentity testID1;
   protected LcapMessage[] testmsg;
-  protected Poll[] testpolls;
+  protected VersionOnePoll[] testpolls;
   protected PollManager pollmanager;
 
   protected void setUp() throws Exception {
@@ -100,16 +100,21 @@ public class TestPoll extends LockssTestCase {
 
   /** test for method scheduleVote(..) */
   public void testScheduleVote() {
-    Poll p = testpolls[1];
+    VersionOnePoll p = testpolls[1];
+    assertTrue(p instanceof VersionOneContentPoll);
+    log.warning("testScheduleVote 1");
     p.scheduleVote();
+    log.warning("testScheduleVote 2");
     assertNotNull(p.m_voteTime);
     assertTrue(p.m_voteTime.getRemainingTime()
                < p.m_deadline.getRemainingTime());
+    log.warning("at end of testScheduleVote");
   }
 
   /** test for method checkVote(..) */
   public void testCheckVote() {
     LcapMessage msg = null;
+    log.warning("starting testCheeckVote");
     try {
       msg = LcapMessage.makeReplyMsg(
           testpolls[0].getMessage(),
@@ -122,14 +127,20 @@ public class TestPoll extends LockssTestCase {
     }
     catch (IOException ex1) {
     }
-    Poll p = null;
+    log.warning("testCheeckVote 2");
+    VersionOnePoll p = null;
     try {
       p = createCompletedPoll(theDaemon, testau, msg, 8,2);
+      assertTrue(p instanceof VersionOneNamePoll);
     }
     catch (Exception ex2) {
+      assertFalse(true);
     }
+    log.warning("testCheeckVote 3");
+    assertNotNull(p);
     LcapIdentity id = idmgr.findIdentity(msg.getOriginAddr());
-
+    assertNotNull(id);
+    assertNotNull(p.m_tally);
     int rep = p.m_tally.wtAgree + id.getReputation();
 
     // good vote check
@@ -159,7 +170,7 @@ public class TestPoll extends LockssTestCase {
 
   /** test for method tally(..) */
   public void testTally() {
-    Poll p = testpolls[0];
+    VersionOnePoll p = testpolls[0];
     LcapMessage msg = p.getMessage();
     LcapIdentity id = idmgr.findIdentity(msg.getOriginAddr());
     p.m_tally.addVote(new Vote(msg, false), id, false);
@@ -183,7 +194,7 @@ public class TestPoll extends LockssTestCase {
 
 
   public void testNamePollTally() {
-    NamePoll np;
+    VersionOneNamePoll np;
     // test a name poll we won
     np = makeCompletedNamePoll(4,1,0);
     assertEquals(5, np.m_tally.numAgree);
@@ -215,7 +226,7 @@ public class TestPoll extends LockssTestCase {
 
   /** test for method vote(..) */
   public void testVote() {
-    Poll p = testpolls[1];
+    VersionOnePoll p = testpolls[1];
     p.m_hash = pollmanager.generateRandomBytes();
     try {
       p.castOurVote();
@@ -228,7 +239,7 @@ public class TestPoll extends LockssTestCase {
 
   /** test for method voteInPoll(..) */
   public void testVoteInPoll() {
-    Poll p = testpolls[1];
+    VersionOnePoll p = testpolls[1];
     p.m_tally.quorum = 10;
     p.m_tally.numAgree = 5;
     p.m_tally.numDisagree = 2;
@@ -253,14 +264,14 @@ public class TestPoll extends LockssTestCase {
   }
 
   public void testStartPoll() {
-    Poll p = testpolls[0];
+    VersionOnePoll p = testpolls[0];
     p.startPoll();
     assertEquals(Poll.PS_WAIT_HASH, p.m_pollstate);
     p.m_pollstate = Poll.PS_COMPLETE;
   }
 
   public void testScheduleOurHash() {
-    Poll p = testpolls[0];
+    VersionOnePoll p = testpolls[0];
     p.m_pollstate = Poll.PS_WAIT_HASH;
     assertTrue(p.scheduleOurHash());
     TimeBase.step(p.m_deadline.getRemainingTime()/2);
@@ -273,7 +284,7 @@ public class TestPoll extends LockssTestCase {
 
   /** test for method stopPoll(..) */
   public void testStopPoll() {
-    Poll p = testpolls[1];
+    VersionOnePoll p = testpolls[1];
     p.m_tally.quorum = 10;
     p.m_tally.numAgree = 7;
     p.m_tally.numDisagree = 3;
@@ -286,7 +297,7 @@ public class TestPoll extends LockssTestCase {
 
   /** test for method startVoteCheck(..) */
   public void testStartVote() {
-    Poll p = testpolls[0];
+    VersionOnePoll p = testpolls[0];
     p.m_pendingVotes = 3;
     p.startVoteCheck();
     assertEquals(4, p.m_pendingVotes);
@@ -295,17 +306,17 @@ public class TestPoll extends LockssTestCase {
 
   /** test for method stopVote(..) */
   public void testStopVote() {
-    Poll p = testpolls[1];
+    VersionOnePoll p = testpolls[1];
     p.m_pendingVotes = 3;
     p.stopVoteCheck();
     assertEquals(2, p.m_pendingVotes);
     p.m_pollstate = Poll.PS_COMPLETE;
   }
 
-  private NamePoll makeCompletedNamePoll(int numAgree,
+  private VersionOneNamePoll makeCompletedNamePoll(int numAgree,
                                      int numDisagree,
                                      int numDissenting) {
-    NamePoll np = null;
+    VersionOneNamePoll np = null;
     LcapMessage agree_msg = null;
     LcapMessage disagree_msg1 = null;
     LcapMessage disagree_msg2 = null;
@@ -326,7 +337,7 @@ public class TestPoll extends LockssTestCase {
           testID);
 
       // make our poll
-      np = (NamePoll) pollmanager.createPoll(poll_msg, spec);
+      np = (VersionOneNamePoll) pollmanager.createPoll(poll_msg, spec);
 
       // generate agree vote msg
       agree_msg = LcapMessage.makeReplyMsg(poll_msg,
@@ -384,7 +395,7 @@ public class TestPoll extends LockssTestCase {
   }
 
 
-  public static Poll createCompletedPoll(LockssDaemon daemon,
+  public static VersionOnePoll createCompletedPoll(LockssDaemon daemon,
                                          ArchivalUnit au,
 					 LcapMessage testmsg, int numAgree,
                                          int numDisagree) throws Exception {
@@ -399,9 +410,16 @@ public class TestPoll extends LockssTestCase {
                                        testmsg.getUprBound());
     }
     CachedUrlSet cus = au.makeCachedUrlSet(cusSpec);
+    log.warning("createCompletedPoll 1");
     PollSpec spec = new PollSpec(cus);
+    log.warning("createCompletedPoll 1");
     ((MockCachedUrlSet)spec.getCachedUrlSet()).setHasContent(false);
-    Poll p = daemon.getPollManager().createPoll(testmsg, spec);
+    log.warning("createCompletedPoll 1");
+    Poll pp = daemon.getPollManager().createPoll(testmsg, spec);
+    log.warning("createCompletedPoll 1");
+    assertNotNull(pp);
+    assertTrue(pp instanceof VersionOnePoll);
+    VersionOnePoll p = (VersionOnePoll) pp;
     p.m_tally.quorum = numAgree + numDisagree;
     p.m_tally.numAgree = numAgree;
     p.m_tally.numDisagree = numDisagree;
@@ -411,7 +429,13 @@ public class TestPoll extends LockssTestCase {
     p.m_tally.votedEntries = makeEntries(1,5);
     p.m_tally.votedEntries.remove(1);
     p.m_pollstate = Poll.PS_COMPLETE;
-    p.m_tally.tallyVotes();
+    log.warning("poll " + p.toString());
+    try {
+      p.m_tally.tallyVotes();
+    } catch (Exception e) {
+      log.warning("createCompletedPoll: tallyVotes threw " + e.toString());
+      throw e;
+    }
     return p;
   }
 
@@ -492,7 +516,7 @@ public class TestPoll extends LockssTestCase {
           pollmanager.generateRandomBytes(),
           pollmanager.generateRandomBytes(),
           opcode,
-          pollmanager.calcDuration(opcode,cus),
+          spec.calcDuration(opcode,cus,pollmanager),
           testID);
       }
     }
@@ -503,10 +527,25 @@ public class TestPoll extends LockssTestCase {
 
   private void initTestPolls() {
     try {
-     testpolls = new Poll[3];
+     testpolls = new VersionOnePoll[3];
      for (int i = 0; i < 3; i++) {
-       testpolls[i] = pollmanager.makePoll(testmsg[i]);
+       log.warning("initTestPolls: " + i);
+       Poll p = pollmanager.makePoll(testmsg[i]);
+       assertTrue(p instanceof VersionOnePoll);
+       switch (i) {
+       case 0:
+	 assertTrue(p instanceof VersionOneNamePoll);
+	 break;
+       case 1:
+	 assertTrue(p instanceof VersionOneContentPoll);
+	 break;
+       case 2:
+	 assertTrue(p instanceof VersionOneVerifyPoll);
+	 break;
+       }
+       testpolls[i] = (VersionOnePoll)p;
        assertNotNull(testpolls[i]);
+       log.warning("initTestPolls: " + i + " " + p.toString());
      }
    }
    catch (IOException ex) {

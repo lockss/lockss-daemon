@@ -1,5 +1,5 @@
 /*
- * $Id: PollTally.java,v 1.15 2003-06-17 01:09:30 aalto Exp $
+ * $Id: PollTally.java,v 1.16 2003-06-19 21:37:32 dshr Exp $
  */
 
 /*
@@ -51,7 +51,7 @@ import org.lockss.daemon.status.*;
  * PollTally is a struct-like class which maintains the current state of
  * votes within a poll.
  */
-public class PollTally {
+public abstract class PollTally {
   public static final int STATE_POLLING = 0;
   public static final int STATE_ERROR = 1;
   public static final int STATE_NOQUORUM = 2;
@@ -82,10 +82,10 @@ public class PollTally {
 
   List localEntries = null;  // the local entries less the remaining RegExp
   List votedEntries = null;  // entries which match the won votes in a poll
-  private Deadline replayDeadline = null;
-  private Iterator replayIter = null;
-  private ArrayList originalVotes = null;
-  private static IdentityManager idManager = null;
+  protected Deadline replayDeadline = null;
+  protected Iterator replayIter = null;
+  protected ArrayList originalVotes = null;
+  protected static IdentityManager idManager = null;
 
   static Logger log=Logger.getLogger("PollTally");
 
@@ -102,32 +102,10 @@ public class PollTally {
     this.quorum = quorum;
     pollVotes = new ArrayList(quorum * 2);
     this.hashAlgorithm = hashAlgorithm;
+    log.warning("Constructor type " + type + " " + this.toString());
   }
 
-  PollTally(Poll owner, int type, long startTime, long duration, int quorum,
-            String hashAlgorithm) {
-    this(type, startTime, duration, 0, 0, 0, 0, quorum, hashAlgorithm);
-    poll = owner;
-    pollSpec = poll.getPollSpec();
-    idManager = poll.idMgr;
-    key = poll.getKey();
-  }
-
-  public String toString() {
-    StringBuffer sbuf = new StringBuffer();
-    sbuf.append("[Tally:");
-    sbuf.append(" type:" + type);
-    sbuf.append("-(" + key);
-    sbuf.append(") agree:" + numAgree);
-    sbuf.append("-wt-" + wtAgree);
-    sbuf.append(" disagree:" + numDisagree);
-    sbuf.append("-wt-" + wtDisagree);
-    sbuf.append(" quorum:" + quorum);
-    sbuf.append(" status:" + getStatusString());
-    sbuf.append("]");
-    return sbuf.toString();
-  }
-
+  abstract public String toString();
 
   /**
    * return the unique key for the poll for this tally
@@ -214,154 +192,35 @@ public class PollTally {
   }
 
 
-  public boolean isErrorState() {
-    return poll.m_pollstate < 0;
-  }
+  abstract public boolean isErrorState();
 
-  public boolean isInconclusiveState() {
-    switch(status) {
-      case STATE_NOQUORUM:
-      case STATE_RESULTS_UNTRUSTED:
-      case STATE_RESULTS_TOO_CLOSE:
-        return true;
-      default:
-        return false;
-    }
-  }
+  abstract public boolean isInconclusiveState();
 
   /**
    * get the error state for this poll
    * @return 0 == NOERR or one of the poll err conditions
    */
-  public int getErr() {
-    if(isErrorState()) {
-      return poll.m_pollstate;
-    }
-    return 0;
-  }
+  abstract public int getErr();
 
-  public String getErrString() {
-    switch(poll.m_pollstate) {
-      case Poll.ERR_SCHEDULE_HASH:
-        return "Hasher Busy";
-      case Poll.ERR_HASHING:
-        return "Error hashing";
-      case Poll.ERR_IO:
-        return "Error I/0";
-      default:
-        return "Undefined";
-    }
-  }
+  abstract public String getErrString();
 
   public int getStatus() {
     return status;
   }
 
-  public String getStatusString() {
-    switch (status) {
-      case STATE_ERROR:
-        return getErrString();
-      case STATE_NOQUORUM:
-        return "No Quorum";
-      case STATE_RESULTS_UNTRUSTED:
-          return "Untrusted Peers";
-      case STATE_RESULTS_TOO_CLOSE:
-        return "Too Close";
-      case STATE_WON:
-        if(replayDeadline != null) {
-          return "Repaired";
-        }
-        return "Won";
-      case STATE_LOST:
-        return "Lost";
-      case STATE_UNVERIFIED:
-        return "Unverified";
-      case STATE_VERIFIED:
-        return "Verified";
-      case STATE_DISOWNED:
-        return "Disowned";
-      default:
-        return "Active";
+  abstract public String getStatusString();
 
-    }
-  }
+  abstract void tallyVotes();
 
-  void tallyVotes() {
-    if(type == Poll.VERIFY_POLL) {
-      verifyTally();
-      return;
-    }
-    // if it's an error
-    if (isErrorState()) {
-      status = STATE_ERROR;
-    }
-    else if (!haveQuorum()) {
-      status = STATE_NOQUORUM;
-    }
-    else if (!isWithinMargin()) {
-      status = STATE_RESULTS_TOO_CLOSE;
-    }
-    else {
-      boolean won = numAgree > numDisagree;
-      if (!won && !isTrustedResults()) {
-        status = STATE_RESULTS_UNTRUSTED;
-      }
-      else {
-        status = won ? STATE_WON : STATE_LOST;
-      }
-    }
-  }
+  abstract void verifyTally();
 
-  void verifyTally() {
-    if(isErrorState()) {
-      status = STATE_ERROR;
-    }
-    else if(poll.isMyPoll()) {
-      if (!haveQuorum()) {
-        status = STATE_UNVERIFIED;
-      } else if (numAgree > 0 && numDisagree == 0) {
-        status = STATE_VERIFIED;
-      } else {
-        status = STATE_DISOWNED;
-      }
-    }
-    else {
-      status = STATE_VERIFIED;
-    }
-  }
+  abstract boolean isLeadEnough();
 
-  boolean isLeadEnough() {
-    return (numAgree - numDisagree) > quorum;
-  }
+  abstract boolean haveQuorum();
 
-  boolean haveQuorum() {
-    return numAgree + numDisagree >= quorum;
-  }
+  abstract boolean isWithinMargin();
 
-  boolean isWithinMargin() {
-    double num_votes = numAgree + numDisagree;
-    double req_margin = poll.getMargin();
-    double act_margin;
-
-    if (numAgree > numDisagree) {
-      act_margin = (double) numAgree / num_votes;
-    }
-    else {
-      act_margin = (double) numDisagree / num_votes;
-    }
-    if (act_margin < req_margin) {
-      log.warning("Poll results too close.  Required vote margin is " +
-                req_margin + ". This poll's margin is " + act_margin);
-      return false;
-    }
-    return true;
-  }
-
-  public boolean isTrustedResults() {
-
-    return wtDisagree/numDisagree >= poll.m_trustedWeight;
-  }
-
+  abstract public boolean isTrustedResults();
 
   boolean hasVoted(LcapIdentity voterID) {
     Iterator it = pollVotes.iterator();
@@ -374,49 +233,9 @@ public class PollTally {
     return false;
   }
 
-  void adjustReputation(LcapIdentity voterID, int repDelta) {
-    synchronized (this) {
-      Iterator it = pollVotes.iterator();
-      while (it.hasNext()) {
-        Vote vote = (Vote) it.next();
-        if (voterID.isEqual(vote.getIDAddress())) {
-          if (vote.isAgreeVote()) {
-            wtAgree += repDelta;
-          }
-          else {
-            wtDisagree += repDelta;
-          }
-          return;
-        }
-      }
-    }
-  }
+  abstract void adjustReputation(LcapIdentity voterID, int repDelta);
 
-  void addVote(Vote vote, LcapIdentity id, boolean isLocal) {
-    int weight = id.getReputation();
-
-    synchronized (this) {
-      if(vote.isAgreeVote()) {
-        numAgree++;
-        wtAgree += weight;
-        log.debug("I agree with " + vote + " rep " + weight);
-      }
-      else {
-        numDisagree++;
-        wtDisagree += weight;
-        if (isLocal) {
-          log.error("I disagree with myself about " + vote + " rep " + weight);
-        }
-        else {
-          log.debug("I disagree with " + vote + " rep " + weight);
-        }
-      }
-    }
-    synchronized(pollVotes) {
-      pollVotes.add(vote);
-    }
-  }
-
+  abstract void addVote(Vote vote, LcapIdentity id, boolean isLocal);
 
   /**
    * replay all of the votes in a previously held poll.
@@ -449,58 +268,13 @@ public class PollTally {
   }
 
 
-/**
- * replay a previously checked vote
- * @param vote the vote to recheck
- * @param deadline the deadline by which the check must complete
- */
+  /**
+   * replay a previously checked vote
+   * @param vote the vote to recheck
+   * @param deadline the deadline by which the check must complete
+   */
 
-void replayVoteCheck(Vote vote, Deadline deadline) {
-  MessageDigest hasher = poll.getInitedHasher(vote.getChallenge(),
-                                              vote.getVerifier());
-  Vote newVote;
-
-  if (!poll.scheduleHash(hasher, deadline, poll.copyVote(vote, vote.agree),
-                         new ReplayVoteCallback())) {
-    poll.m_pollstate = poll.ERR_SCHEDULE_HASH;
-    log.debug("couldn't schedule hash - stopping replay poll");
-  }
-}
-
-class ReplayVoteCallback implements HashService.Callback {
-    /**
-     * Called to indicate that hashing the content or names of a
-     * <code>CachedUrlSet</code> object has succeeded, if <code>e</code>
-     * is null,  or has failed otherwise.
-     * @param urlset  the <code>CachedUrlSet</code> being hashed.
-     * @param cookie  used to disambiguate callbacks.
-     * @param hasher  the <code>MessageDigest</code> object that
-     *                contains the hash.
-     * @param e       the exception that caused the hash to fail.
-     */
-    public void hashingFinished(CachedUrlSet urlset,
-                                Object cookie,
-                                MessageDigest hasher,
-                                Exception e) {
-      boolean hash_completed = e == null ? true : false;
-
-      if (hash_completed) {
-        Vote v = (Vote) cookie;
-        LcapIdentity id = idManager.findIdentity(v.getIDAddress());
-        if (idManager.isLocalIdentity(id)) {
-          poll.copyVote(v,true);
-        }
-        else {
-          v.setAgreeWithHash(hasher.digest());
-        }
-        addVote(v, id, idManager.isLocalIdentity(id));
-        replayNextVote();
-      }
-      else {
-        log.warning("replay vote hash failed with exception:" + e.getMessage());
-      }
-    }
-  }
+  abstract void replayVoteCheck(Vote vote, Deadline deadline);
 
   public static class NameListEntry {
     public boolean hasContent;
@@ -536,5 +310,6 @@ class ReplayVoteCallback implements HashService.Callback {
   }
 
 }
+
 
 

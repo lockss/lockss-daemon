@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.44 2003-06-09 01:22:45 tal Exp $
+ * $Id: TestPollManager.java,v 1.45 2003-06-19 21:37:33 dshr Exp $
  */
 
 /*
@@ -92,7 +92,7 @@ public class TestPollManager extends LockssTestCase {
     try {
       Poll p1 = pollmanager.makePoll(testmsg[0]);
       // make sure we got the right type of poll here
-      assertTrue(p1 instanceof NamePoll);
+      assertTrue(p1 instanceof VersionOneNamePoll);
     }
     catch (IOException ex) {
       fail("unable to make a name poll");
@@ -102,7 +102,7 @@ public class TestPollManager extends LockssTestCase {
     try {
       Poll p2 = pollmanager.makePoll(testmsg[1]);
       // make sure we got the right type of poll here
-      assertTrue(p2 instanceof ContentPoll);
+      assertTrue(p2 instanceof VersionOneContentPoll);
 
     }
     catch (IOException ex) {
@@ -114,7 +114,7 @@ public class TestPollManager extends LockssTestCase {
     try {
       Poll p3 = pollmanager.makePoll(testmsg[2]);
       // make sure we got the right type of poll here
-      assertTrue(p3 instanceof VerifyPoll);
+      assertTrue(p3 instanceof VersionOneVerifyPoll);
     }
     catch (IOException ex) {
       fail("unable to make a verify poll");
@@ -310,7 +310,10 @@ public class TestPollManager extends LockssTestCase {
    long pollTime = Constants.DAY;
    long neededTime = pollTime/4;
 
-   assertTrue(pollmanager.canSchedulePoll(pollTime,neededTime));
+   CachedUrlSet cus = null;
+   cus = testau.makeCachedUrlSet(new RangeCachedUrlSetSpec(rooturls[1]));
+   PollSpec spec = new PollSpec(cus, lwrbnd, uprbnd);
+   assertTrue(spec.canSchedulePoll(pollTime,neededTime,pollmanager));
 
   }
 

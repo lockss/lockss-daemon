@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessage.java,v 1.38 2003-06-17 01:09:29 aalto Exp $
+ * $Id: LcapMessage.java,v 1.39 2003-06-19 21:37:32 dshr Exp $
  */
 
 /*
@@ -62,6 +62,8 @@ public class LcapMessage
 
   public static final String DEFAULT_HASH_ALGORITHM = "SHA-1";
 
+  // XXX - stuff in the properties should go into a subclass for each version
+
   public static final String[] POLL_OPCODES = {
       "NameReq", "NameRep",
       "ContentReq", "ContentRep",
@@ -86,7 +88,7 @@ public class LcapMessage
     28-End    encoded properties
    */
   /* items which are not in the property list */
-  byte[] m_signature; // magic number + version (4 bytes)
+  int m_version; // protocol version number
   boolean m_multicast; // multicast flag - modifiable
   byte m_hopCount; // current hop count - modifiable
   byte[] m_pktHash; // hash of remaining packet
@@ -112,13 +114,16 @@ public class LcapMessage
 
   private EncodedProperty m_props;
   private static byte[] signature = {
-      'l', 'p', 'm', '1'};
+      'l', 'p', 'm'};
+  private static byte[] versionByte = { '1', '2' };
   private static Logger log = Logger.getLogger("LcapMessage");
   private String m_key = null;
 
   protected LcapMessage() throws IOException {
     m_props = new EncodedProperty();
-
+    m_version =
+      Configuration.getIntParam(PollSpec.PARAM_USE_PROTOCOL_VERSION,
+				PollSpec.DEFAULT_USE_PROTOCOL_VERSION);
   }
 
   protected LcapMessage(byte[] encodedBytes) throws IOException {
@@ -153,6 +158,7 @@ public class LcapMessage
     m_opcode = opcode;
     m_entries = entries;
     m_hashAlgorithm = getDefaultHashAlgorithm();
+    m_version = ps.getVersion();
     // null the remaining undefined data
     m_startTime = 0;
     m_stopTime = 0;
@@ -187,6 +193,7 @@ public class LcapMessage
     m_startTime = 0;
     m_stopTime = 0;
     m_multicast = false;
+    m_version = trigger.getVersion();
   }
 
   public static String getDefaultHashAlgorithm() {
@@ -234,6 +241,9 @@ public class LcapMessage
       msg.m_opcode = NO_OP;
       msg.m_hopCount = 0;
       msg.m_verifier = verifier;
+      msg.m_version  =
+	Configuration.getIntParam(PollSpec.PARAM_USE_PROTOCOL_VERSION,
+				  PollSpec.DEFAULT_USE_PROTOCOL_VERSION);
     }
     return msg;
   }
@@ -337,13 +347,23 @@ public class LcapMessage
     DataInputStream dis =
         new DataInputStream(new ByteArrayInputStream(encodedBytes));
 
-    // read in the header
+    // read in the three header bytes
     for (int i = 0; i < signature.length; i++) {
       if (signature[i] != dis.readByte()) {
         throw new ProtocolException("Invalid Signature");
       }
     }
-
+    // read in the version byte and decode
+    m_version = -1;
+    byte ver = dis.readByte();
+    for (int i = 0; i < versionByte.length; i++) {
+      if (versionByte[i] == ver)
+	m_version = i + 1;
+    }
+    if (m_version <= 0) {
+        throw new ProtocolException("Unsupported inbound protocol version: " + ver);
+    }
+    
     m_multicast = dis.readBoolean();
     m_hopCount = dis.readByte();
 
@@ -543,6 +563,19 @@ public class LcapMessage
     m_multicast = multicast;
   }
 
+  public int getVersion() {
+    return m_version;
+  }
+
+  public void setVersion(int vers) {
+    m_version = vers;
+  }
+
+  public boolean supportedVersion(int vers) {
+    return (vers > 0 && vers <= versionByte.length);
+  }
+    
+
   public ArrayList getEntries() {
     return m_entries;
   }
@@ -696,6 +729,9 @@ public class LcapMessage
   }
 
   private byte[] wrapPacket() throws IOException {
+    if (!supportedVersion(m_version))
+      throw new ProtocolException("Unsupported outbound protocol version: " +
+				  m_version);
     byte[] prop_bytes = m_props.encode();
     byte[] hash_bytes = computeHash(prop_bytes);
 
@@ -704,6 +740,7 @@ public class LcapMessage
     ByteArrayOutputStream baos = new ByteArrayOutputStream(enc_len);
     DataOutputStream dos = new DataOutputStream(baos);
     dos.write(signature);
+    dos.write(versionByte[m_version - 1]);
     dos.writeBoolean(m_multicast);
     dos.writeByte(m_hopCount);
     dos.writeShort(prop_bytes.length);

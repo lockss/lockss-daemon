@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.102 2003-06-17 01:09:30 aalto Exp $
+* $Id: PollManager.java,v 1.103 2003-06-19 21:37:32 dshr Exp $
  */
 
 /*
@@ -84,19 +84,19 @@ public class PollManager  extends BaseLockssManager {
   private static HashMap theVerifiers = new HashMap();
   private static IdentityManager theIDManager;
   private static HashService theHashService;
-  private static LockssRandom theRandom = new LockssRandom();
+  private static LockssRandom theRandom = new LockssRandom(); 
   private static LcapRouter theRouter = null;
   private static SystemMetrics theSystemMetrics = null;
 
   // our configuration variables
-  private static long m_minContentPollDuration;
-  private static long m_maxContentPollDuration;
-  private static long m_minNamePollDuration;
-  private static long m_maxNamePollDuration;
-  private static long m_recentPollExpireTime;
-  private static long m_verifierExpireTime;
-  private static int m_quorum;
-  private static int m_durationMultiplier;
+  protected static long m_minContentPollDuration;
+  protected static long m_maxContentPollDuration;
+  protected static long m_minNamePollDuration;
+  protected static long m_maxNamePollDuration;
+  protected static long m_recentPollExpireTime;
+  protected static long m_verifierExpireTime;
+  protected static int m_quorum;
+  protected static int m_durationMultiplier;
 
   public PollManager() {
   }
@@ -167,7 +167,7 @@ public class PollManager  extends BaseLockssManager {
                  + LcapMessage.POLL_OPCODES[opcode] +
                  " for spec " + pollspec);
     CachedUrlSet cus = pollspec.getCachedUrlSet();
-    long duration = calcDuration(opcode, cus);
+    long duration = pollspec.calcDuration(opcode, cus, this);
     if(duration <=0) {
       theLog.debug("not sending request for polltype: "
                    + LcapMessage.POLL_OPCODES[opcode] +
@@ -317,7 +317,7 @@ public class PollManager  extends BaseLockssManager {
 
 
   /**
-   * make a new poll of the type defined by the incoming message.
+   * make a new poll of the type and version defined by the incoming message.
    * @param msg <code>Message</code> to use for
    * @return a new Poll object of the required type
    * @throws ProtocolException if message opcode is unknown
@@ -481,18 +481,39 @@ public class PollManager  extends BaseLockssManager {
     switch(msg.getOpcode()) {
       case LcapMessage.CONTENT_POLL_REP:
       case LcapMessage.CONTENT_POLL_REQ:
-        theLog.debug("Making a content poll on "+ pollspec);
-        ret_poll = new ContentPoll(msg, pollspec, this);
+        theLog.warning("Making a content poll on "+ pollspec);
+	switch (pollspec.getVersion()) {
+	case 1:
+	  ret_poll = new VersionOneContentPoll(msg, pollspec, this);
+	  break;
+	default:
+	  throw new ProtocolException("Unsupported content poll version: " +
+				      pollspec.getVersion());
+	}
         break;
       case LcapMessage.NAME_POLL_REP:
       case LcapMessage.NAME_POLL_REQ:
-        theLog.debug("Making a name poll on "+pollspec);
-        ret_poll = new NamePoll(msg, pollspec, this);
+        theLog.warning("Making a name poll on "+pollspec);
+	switch (pollspec.getVersion()) {
+	case 1:
+	  ret_poll = new VersionOneNamePoll(msg, pollspec, this);
+	  break;
+	default:
+	  throw new ProtocolException("Unsupported name poll version: " +
+				      pollspec.getVersion());
+	}
         break;
       case LcapMessage.VERIFY_POLL_REP:
       case LcapMessage.VERIFY_POLL_REQ:
-        theLog.debug("Making a verify poll on "+pollspec);
-        ret_poll = new VerifyPoll(msg, pollspec, this);
+        theLog.warning("Making a verify poll on "+pollspec);
+	switch (pollspec.getVersion()) {
+	case 1:
+	  ret_poll = new VersionOneVerifyPoll(msg, pollspec, this);
+	  break;
+	default:
+	  throw new ProtocolException("Unsupported verify poll version: " +
+				      pollspec.getVersion());
+	}
         break;
       default:
         throw new ProtocolException("Unknown opcode:" + msg.getOpcode());
@@ -741,87 +762,6 @@ public class PollManager  extends BaseLockssManager {
                                         DEFAULT_VERIFY_EXPIRATION);
   }
 
-  long calcDuration(int opcode, CachedUrlSet cus) {
-    long ret = 0;
-    int quorum = getQuorum();
-    switch (opcode) {
-      case LcapMessage.NAME_POLL_REQ:
-      case LcapMessage.NAME_POLL_REP:
-        ret = m_minNamePollDuration +
-            theRandom.nextLong(m_maxNamePollDuration - m_minNamePollDuration);
-        theLog.debug2("Name Poll duration: " +
-                      StringUtil.timeIntervalToString(ret));
-        break;
-
-      case LcapMessage.CONTENT_POLL_REQ:
-      case LcapMessage.CONTENT_POLL_REP:
-        long estTime = cus.estimatedHashDuration();
-        theLog.debug3("CUS estimated hash duration = " + estTime);
-
-        estTime = getAdjustedEstimate(estTime);
-        theLog.debug3("My adjusted hash duration = " + estTime);
-
-        ret = estTime * m_durationMultiplier * (quorum + 1);
-        theLog.debug3("I think the poll should take: " + ret);
-
-        if (ret < m_minContentPollDuration) {
-          theLog.info("My poll estimate (" + ret
-                       + ") is too low, adjusting to the minimum: "
-                       + m_minContentPollDuration);
-          ret = m_minContentPollDuration;
-        }
-        else if (ret > m_maxContentPollDuration) {
-          theLog.warning("My poll estimate (" + ret
-                       + ") is too high, adjusting to the maximum: "
-                       + m_maxContentPollDuration);
-          ret = m_maxContentPollDuration;
-        }
-        if(!canSchedulePoll(ret, estTime * (quorum+1))) {
-           ret = -1;
-           theLog.info("Can't schedule this poll returning -1");
-        }
-        else {
-          theLog.debug2("Content Poll duration: " +
-                        StringUtil.timeIntervalToString(ret));
-        }
-        break;
-
-      default:
-    }
-
-    return ret;
-  }
-
-  boolean canSchedulePoll(long pollTime, long neededTime) {
-    Deadline when = Deadline.in(pollTime);
-    long timeAvail = theHashService.getAvailableHashTimeBefore(when);
-    return timeAvail >= neededTime;
-  }
-
-  long getAdjustedEstimate(long estTime) {
-    long my_estimate = estTime;
-    long my_rate;
-    long slow_rate = theSystemMetrics.getSlowestHashSpeed();
-    try {
-      my_rate = theSystemMetrics.getBytesPerMsHashEstimate();
-    }
-    catch (SystemMetrics.NoHashEstimateAvailableException e) {
-      // if can't get my rate, use slowest rate to prevent adjustment
-      theLog.warning("No hash estimate available, " +
-                     "not adjusting poll for slow machines");
-      my_rate = slow_rate;
-    }
-    theLog.debug3("My hash speed is " + my_rate
-                  + ". Slow speed is " + slow_rate);
-
-
-    if (my_rate > slow_rate) {
-      my_estimate = estTime * my_rate / slow_rate;
-      theLog.debug3("I've corrected the hash estimate to " + my_estimate);
-    }
-    return my_estimate;
-  }
-
 //--------------- PollerStatus Accessors -----------------------------
   Iterator getPolls() {
     Map polls = Collections.unmodifiableMap(thePolls);
@@ -876,6 +816,18 @@ public class PollManager  extends BaseLockssManager {
     return theManager.makePoll(msg);
   }
 
+  static long getSlowestHashSpeed() {
+    return theSystemMetrics.getSlowestHashSpeed();
+  }
+
+  static long getBytesPerMsHashEstimate()
+  throws SystemMetrics.NoHashEstimateAvailableException {
+    return theSystemMetrics.getBytesPerMsHashEstimate();
+  }
+
+  static long getAvailableHashTimeBefore(Deadline when) {
+    return theHashService.getAvailableHashTimeBefore(when);
+  }
 
 // ----------------  Callbacks -----------------------------------
 
@@ -940,7 +892,7 @@ public class PollManager  extends BaseLockssManager {
       spec = p.getPollSpec();
       type = p.getVoteTally().getType();
       key = p.getKey();
-      pollDeadline = p.m_deadline;
+      pollDeadline = p.getDeadline();
       deadline = null;
     }
 
@@ -961,11 +913,18 @@ public class PollManager  extends BaseLockssManager {
       Deadline d = Deadline.in(m_recentPollExpireTime);
       TimerQueue.schedule(d, new ExpireRecentCallback(), (String) key);
       PollTally tally = poll.getVoteTally();
+      int version = tally.getPollSpec().getVersion();
       tally.tallyVotes();
       status = tally.getStatus();
       if((tally.type == Poll.NAME_POLL) && (status == PollTally.STATE_LOST)) {
         theLog.debug2("lost a name poll, building poll list");
-        ((NamePoll)poll).buildPollLists(tally.pollVotes.iterator());
+	switch (version) {
+	case 1:
+          ((VersionOneNamePoll)poll).buildPollLists(tally.pollVotes.iterator());
+	  break;
+	default:
+	  theLog.warning("Unsupported name poll version: " + version);
+	}
       }
     }
 

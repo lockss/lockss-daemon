@@ -1,5 +1,5 @@
 /*
-* $Id: VerifyPoll.java,v 1.42 2003-05-08 05:53:28 claire Exp $
+* $Id: VersionOneVerifyPoll.java,v 1.1 2003-06-19 21:37:32 dshr Exp $
  */
 
 /*
@@ -47,11 +47,12 @@ import org.mortbay.util.B64Code;
  * @author Claire Griffin
  * @version 1.0
  */
-class VerifyPoll extends Poll {
+class VersionOneVerifyPoll extends VersionOnePoll {
 
   Poll originalPoll;
 
-  public VerifyPoll(LcapMessage msg, PollSpec pollspec, PollManager pm) {
+  public VersionOneVerifyPoll(LcapMessage msg,
+			      PollSpec pollspec, PollManager pm) {
     super(msg, pollspec, pm);
     m_replyOpcode = LcapMessage.VERIFY_POLL_REP;
     m_tally.quorum = 1;
