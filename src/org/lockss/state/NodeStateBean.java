@@ -1,5 +1,5 @@
 /*
- * $Id: NodeStateBean.java,v 1.4 2003-06-20 22:34:52 claire Exp $
+ * $Id: NodeStateBean.java,v 1.5 2004-02-07 06:46:40 eaalto Exp $
  */
 
 /*
@@ -34,7 +34,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.state;
 
 import java.util.*;
-import org.lockss.plugin.CachedUrlSet;
 
 /**
  * NodeState contains the current state information for a node, as well as the

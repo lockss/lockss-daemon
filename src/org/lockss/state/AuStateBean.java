@@ -1,5 +1,5 @@
 /*
- * $Id: AuStateBean.java,v 1.14 2003-11-13 19:53:41 troberts Exp $
+ * $Id: AuStateBean.java,v 1.15 2004-02-07 06:46:40 eaalto Exp $
  */
 
 /*
@@ -34,7 +34,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.state;
 
 import java.util.HashSet;
-import org.lockss.plugin.ArchivalUnit;
 
 /**
  * AuStateBean is a settable version of AuState used purely for

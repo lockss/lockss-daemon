@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlState.java,v 1.7 2003-06-20 22:34:52 claire Exp $
+ * $Id: CrawlState.java,v 1.8 2004-02-07 06:46:40 eaalto Exp $
  */
 
 /*
@@ -32,10 +32,6 @@ in this Software without prior written authorization from Stanford University.
 
 
 package org.lockss.state;
-
-import java.util.Iterator;
-import org.lockss.plugin.CachedUrlSet;
-import org.lockss.util.Deadline;
 
 /**
  * CrawlState contains the crawl-related state information for a node.
