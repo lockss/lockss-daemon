@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.46 2005-01-07 09:23:41 tlipkis Exp $
+ * $Id: DaemonStatus.java,v 1.46.2.1 2005-01-19 18:09:55 tlipkis Exp $
  */
 
 /*
@@ -289,6 +289,15 @@ public class DaemonStatus extends LockssServlet {
     return rowList;
   }
 
+  /** Create message and error message block */
+  private Composite getErrBlock(String errMsg) {
+    Composite comp = new Composite();
+    comp.add("<center><font size=+1>");
+    comp.add(errMsg);
+    comp.add("</font></center><br>");
+    return comp;
+  }
+
   // Build the table, adding elements to page
   private Page doHtmlStatusTable0() throws IOException {
     Page page;
@@ -297,18 +306,17 @@ public class DaemonStatus extends LockssServlet {
       statTable = makeTable();
     } catch (StatusService.NoSuchTableException e) {
       page = newTablePage();
-      page.add("No such table: ");
-      page.add(e.toString());
+      page.add(getErrBlock("No such table: " + e.getMessage()));
       return page;
     } catch (Exception e) {
       page = newTablePage();
-      page.add("Error getting table: ");
-      String emsg = e.toString();
-      page.add(emsg);
-      page.add("<br><pre>    ");
-      page.add(StringUtil.trimStackTrace(emsg,
-					 StringUtil.stackTraceString(e)));
-      page.add("</pre>");
+      page.add(getErrBlock("Error getting table: " + e.toString()));
+      if (isDebugUser()) {
+	page.add("<br><pre>    ");
+	page.add(StringUtil.trimStackTrace(e.toString(),
+					   StringUtil.stackTraceString(e)));
+	page.add("</pre>");
+      }
       return page;
     }
     java.util.List colList = statTable.getColumnDescriptors();
