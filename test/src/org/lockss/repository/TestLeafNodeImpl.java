@@ -1,5 +1,5 @@
 /*
- * $Id: TestLeafNodeImpl.java,v 1.1 2002-10-31 01:52:41 aalto Exp $
+ * $Id: TestLeafNodeImpl.java,v 1.2 2002-11-02 00:57:50 aalto Exp $
  */
 
 /*
@@ -51,7 +51,7 @@ public class TestLeafNodeImpl extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     File tempDir = super.getTempDir();
-    leaf = new LeafNodeImpl("test.cache", tempDir.getAbsolutePath() + File.separator);
+    leaf = new LeafNodeImpl("test.cache", tempDir.getAbsolutePath() + File.separator, null);
   }
 
   public void testMakeNewCache() {

@@ -1,5 +1,5 @@
 /*
- * $Id: InternalNodeImpl.java,v 1.1 2002-10-31 01:52:41 aalto Exp $
+ * $Id: InternalNodeImpl.java,v 1.2 2002-11-02 00:57:50 aalto Exp $
  */
 
 /*
@@ -39,11 +39,13 @@ import java.net.*;
 /**
  * InternalNodeImpl is an implementation of InternalNode
  */
-public class InternalNodeImpl extends RepositoryNodeImpl implements InternalNode {
+public class InternalNodeImpl extends RepositoryNodeImpl
+    implements InternalNode {
   private String rootLocation;
 
-  public InternalNodeImpl(String url, String cacheLocation, String rootLocation) {
-    super(url, cacheLocation);
+  public InternalNodeImpl(String url, String cacheLocation, String rootLocation,
+                          LockssRepositoryImpl repository) {
+    super(url, cacheLocation, repository);
     this.rootLocation = rootLocation;
   }
 
@@ -70,8 +72,7 @@ public class InternalNodeImpl extends RepositoryNodeImpl implements InternalNode
       try {
         childV.addElement(repo.getRepositoryNode(childUrl));
       } catch (MalformedURLException mue) {
-        //XXX log
-        System.out.println(mue);
+        logger.error("Malformed child url: "+childUrl);
       }
     }
     return childV.iterator();

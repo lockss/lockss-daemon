@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.2 2002-10-31 01:53:30 aalto Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.3 2002-11-02 00:57:50 aalto Exp $
  */
 
 /*
@@ -34,10 +34,13 @@ package org.lockss.repository;
 import java.io.*;
 import java.util.*;
 import java.net.*;
+import java.lang.ref.WeakReference;
 import org.lockss.util.StringUtil;
+import org.apache.commons.collections.*;
 
 /**
  * LockssRepository is used to organize the urls being cached.
+ * It keeps a memory cache of the most recently used nodes.
  */
 public class LockssRepositoryImpl implements LockssRepository {
   /**
@@ -45,46 +48,95 @@ public class LockssRepositoryImpl implements LockssRepository {
    */
   public static final String CACHE_ROOT_NAME = "cache";
 
+  /**
+   * Maximum number of node instances to cache.
+   */
+  public static final int MAX_LRUMAP_SIZE = 12;
+
   private String rootLocation;
+  private LRUMap lruMap;
+  private ReferenceMap refMap;
+
 
   public LockssRepositoryImpl(String rootPath) {
     rootLocation = rootPath;
     if (!rootLocation.endsWith(File.separator)) {
       rootLocation += File.separator;
     }
+    lruMap = new LRUMap(MAX_LRUMAP_SIZE);
+    refMap = new ReferenceMap(ReferenceMap.HARD, ReferenceMap.WEAK);
   }
 
-  public RepositoryNode getRepositoryNode(String url) throws MalformedURLException {
-//XXX cache
+  public synchronized RepositoryNode getRepositoryNode(String url)
+      throws MalformedURLException {
+    RepositoryNode node = (RepositoryNode)lruMap.get(url);
+    if (node!=null) return node;
+
+    node = (RepositoryNode)refMap.get(url);
+    if (node!=null) {
+      lruMap.put(url, node);
+      return node;
+    }
+
     String cacheLocation = rootLocation + mapUrlToCacheLocation(url);
-    File entryDir = new File(cacheLocation);
-    if (!entryDir.exists() || !entryDir.isDirectory()) {
+    File nodeDir = new File(cacheLocation);
+    if (!nodeDir.exists() || !nodeDir.isDirectory()) {
       return null;
     }
-    File leafFile = new File(entryDir, LeafNodeImpl.LEAF_FILE_NAME);
+    File leafFile = new File(nodeDir, LeafNodeImpl.LEAF_FILE_NAME);
     if (leafFile.exists()) {
-      return new LeafNodeImpl(url, cacheLocation);
+      node = new LeafNodeImpl(url, cacheLocation, this);
     } else {
-      return new InternalNodeImpl(url, cacheLocation, rootLocation);
+      node = new InternalNodeImpl(url, cacheLocation, rootLocation, this);
     }
+    lruMap.put(url, node);
+    refMap.put(url, node);
+    return node;
   }
 
-  public LeafNode createLeafNode(String url) throws MalformedURLException {
+  public synchronized LeafNode createLeafNode(String url)
+      throws MalformedURLException {
+    LeafNode node = null;
+    try {
+      node = (LeafNode)lruMap.get(url);
+    } catch (ClassCastException cce) {
+      throw new MalformedURLException("URL refers to an internal node,"+
+                                      " not a leaf: "+url);
+    }
+    if (node!=null) {
+      return node;
+    }
+
+    node = (LeafNode)refMap.get(url);
+    if (node!=null) {
+      lruMap.put(url, node);
+      return node;
+    }
+
     String cacheLocation = rootLocation + mapUrlToCacheLocation(url);
-    return new LeafNodeImpl(url, cacheLocation);
+    node = new LeafNodeImpl(url, cacheLocation, this);
+    lruMap.put(url, node);
+    refMap.put(url, node);
+    return node;
+  }
+
+  synchronized void removeReference(String url) {
+    refMap.remove(url);
   }
 
   /**
-   * mapUrlToCacheFileName() is the name mapping method used by the LockssRepository.
-   * This maps a given url to a cache file location.
-   * It creates directories under a CACHE_ROOT location which mirror the html string.
-   * So 'http://www.journal.org/issue1/index.html' would be cached in the file:
+   * mapUrlToCacheFileName() is the name mapping method used by the
+   * LockssRepository. This maps a given url to a cache file location.
+   * It creates directories under a CACHE_ROOT location which mirror the
+   * html string. So 'http://www.journal.org/issue1/index.html' would be
+   * cached in the file:
    * CACHE_ROOT/www.journal.org/http/issue1/index.html
    * @param urlStr the url to translate
    * @return the file cache location
    * @throws java.net.MalformedURLException
    */
-  public static String mapUrlToCacheLocation(String urlStr) throws MalformedURLException {
+  public static String mapUrlToCacheLocation(String urlStr)
+      throws MalformedURLException {
     URL url = new URL(urlStr);
     StringBuffer buffer = new StringBuffer(CACHE_ROOT_NAME);
     buffer.append(File.separator);

@@ -1,5 +1,5 @@
 /*
- * $Id: TestInternalNodeImpl.java,v 1.1 2002-10-31 01:52:41 aalto Exp $
+ * $Id: TestInternalNodeImpl.java,v 1.2 2002-11-02 00:57:50 aalto Exp $
  */
 
 /*
@@ -48,10 +48,10 @@ public class TestInternalNodeImpl extends LockssTestCase {
   }
 
   public void testRepositoryImpl() {
-    RepositoryNode entry = new InternalNodeImpl("testUrl", "testDir", "");
+    RepositoryNode entry = new InternalNodeImpl("testUrl", "testDir", "", null);
     assertTrue(entry.getNodeUrl().equals("testUrl"));
     assertTrue(!entry.isLeaf());
-    entry = new LeafNodeImpl("testUrl/test.txt", "testUrl/test.txt");
+    entry = new LeafNodeImpl("testUrl/test.txt", "testUrl/test.txt", null);
     assertTrue(entry.getNodeUrl().equals("testUrl/test.txt"));
     assertTrue(entry.isLeaf());
   }
@@ -69,8 +69,9 @@ public class TestInternalNodeImpl extends LockssTestCase {
     try {
       tempDirPath = super.getTempDir().getAbsolutePath() + File.separator;
     } catch (Exception ex) { fail("Couldn't create tempDir."); }
-    LockssRepository repo = new LockssRepositoryImpl(tempDirPath);
-    LeafNode leaf = repo.createLeafNode("http://www.example.com/testDir/branch1/leaf1");
+    LockssRepositoryImpl repo = new LockssRepositoryImpl(tempDirPath);
+    LeafNode leaf =
+        repo.createLeafNode("http://www.example.com/testDir/branch1/leaf1");
     leaf.makeNewVersion();
     leaf.sealNewVersion();
     leaf = repo.createLeafNode("http://www.example.com/testDir/branch1/leaf2");
@@ -83,8 +84,11 @@ public class TestInternalNodeImpl extends LockssTestCase {
     leaf.makeNewVersion();
     leaf.sealNewVersion();
 
-    String cacheLocation = tempDirPath + LockssRepositoryImpl.mapUrlToCacheLocation("http://www.example.com/testDir");
-    InternalNode dirEntry = new InternalNodeImpl("http://www.example.com/testDir", cacheLocation, tempDirPath);
+    String cacheLocation = tempDirPath +
+       LockssRepositoryImpl.mapUrlToCacheLocation("http://www.example.com/testDir");
+    InternalNode dirEntry =
+        new InternalNodeImpl("http://www.example.com/testDir", cacheLocation,
+                             tempDirPath, repo);
     Iterator childIt = dirEntry.listNodes(null);
     int count = 0;
     while (childIt.hasNext()) {
@@ -102,8 +106,10 @@ public class TestInternalNodeImpl extends LockssTestCase {
     }
     assertTrue(count==7);
 
-    cacheLocation = tempDirPath + LockssRepositoryImpl.mapUrlToCacheLocation("http://www.example.com/testDir/branch1");
-    dirEntry = new InternalNodeImpl("http://www.example.com/testDir/branch1", cacheLocation, tempDirPath);
+    cacheLocation = tempDirPath +
+      LockssRepositoryImpl.mapUrlToCacheLocation("http://www.example.com/testDir/branch1");
+    dirEntry = new InternalNodeImpl("http://www.example.com/testDir/branch1",
+                                    cacheLocation, tempDirPath, repo);
     childIt = dirEntry.listNodes(null);
     count = 0;
     while (childIt.hasNext()) {
@@ -124,7 +130,8 @@ public class TestInternalNodeImpl extends LockssTestCase {
       tempDirPath = super.getTempDir().getAbsolutePath() + File.separator;
     } catch (Exception ex) { fail("Couldn't get tempDir."); }
     LockssRepository repo = new LockssRepositoryImpl(tempDirPath);
-    LeafNode leaf = repo.createLeafNode("http://www.example.com/testDir/branch1/leaf1");
+    LeafNode leaf =
+        repo.createLeafNode("http://www.example.com/testDir/branch1/leaf1");
     leaf.makeNewVersion();
     leaf.sealNewVersion();
     leaf = repo.createLeafNode("http://www.example.com/testDir/branch2/leaf2");
@@ -137,7 +144,8 @@ public class TestInternalNodeImpl extends LockssTestCase {
     leaf.makeNewVersion();
     leaf.sealNewVersion();
 
-    InternalNode dirEntry = (InternalNode)repo.getRepositoryNode("http://www.example.com/testDir");
+    InternalNode dirEntry =
+        (InternalNode)repo.getRepositoryNode("http://www.example.com/testDir");
     Iterator childIt = dirEntry.listNodes(null);
     assertTrue(childIt.hasNext());
     RepositoryNode entry = (RepositoryNode)childIt.next();
