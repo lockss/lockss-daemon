@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.10 2004-05-04 22:20:33 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.11 2004-05-26 23:00:34 tlipkis Exp $
  */
 
 /*
@@ -50,6 +50,8 @@ public class ArchivalUnitStatus extends BaseLockssManager {
   public static final String SERVICE_STATUS_TABLE_NAME =
       "ArchivalUnitStatusTable";
   public static final String AU_STATUS_TABLE_NAME = "ArchivalUnitTable";
+
+  static final OrderedObject DASH = new OrderedObject("-", new Long(-1));
 
   private static Logger logger = Logger.getLogger("AuStatus");
   private static int nodesToDisplay;
@@ -317,21 +319,23 @@ public class ArchivalUnitStatus extends BaseLockssManager {
 	rowMap.put("NodeStatus", status);
       }
       boolean content = node.hasContent();
-      Object versionObj = "-";
-      Object sizeObj = "-";
+      Object versionObj = DASH;
+      Object sizeObj = DASH;
       if (content) {
-        versionObj = new Integer(node.getCurrentVersion());
-        sizeObj = new Long(node.getContentSize());
+        versionObj = new OrderedObject(new Long(node.getCurrentVersion()));
+        sizeObj = new OrderedObject(new Long(node.getContentSize()));
       }
       rowMap.put("NodeHasContent", (content ? "yes" : "no"));
       rowMap.put("NodeVersion", versionObj);
       rowMap.put("NodeContentSize", sizeObj);
       if (!node.isLeaf()) {
-	rowMap.put("NodeChildCount", new Integer(node.getChildCount()));
-	rowMap.put("NodeTreeSize", new Long(node.getTreeContentSize(null)));
+	rowMap.put("NodeChildCount",
+		   new OrderedObject(new Long(node.getChildCount())));
+	rowMap.put("NodeTreeSize",
+		   new OrderedObject(new Long(node.getTreeContentSize(null))));
       } else {
-	rowMap.put("NodeChildCount", "-");
-	rowMap.put("NodeTreeSize", "-");
+	rowMap.put("NodeChildCount", DASH);
+	rowMap.put("NodeTreeSize", DASH);
       }
       return rowMap;
     }

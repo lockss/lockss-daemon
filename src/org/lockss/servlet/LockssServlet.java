@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.42 2004-05-26 07:01:26 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.43 2004-05-26 23:00:35 tlipkis Exp $
  */
 
 /*
@@ -543,7 +543,7 @@ public abstract class LockssServlet extends HttpServlet
     for (Iterator iter = props.keySet().iterator(); iter.hasNext(); ) {
       String key = (String)iter.next();
       String val = props.getProperty(key);
-      list.add(key + "=" + val);
+      list.add(key + "=" + urlEncode(val));
     }
     return StringUtil.separatedString(list, "&");
   }
