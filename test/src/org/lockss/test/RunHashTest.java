@@ -1,5 +1,5 @@
 /*
- * $Id: RunHashTest.java,v 1.2 2003-06-20 22:34:56 claire Exp $
+ * $Id: RunHashTest.java,v 1.3 2003-08-21 19:28:40 eaalto Exp $
  */
 
 /*
@@ -26,24 +26,10 @@
 
 package org.lockss.test;
 
-import java.util.*;
 import java.io.*;
-import java.net.*;
-
-import org.lockss.daemon.*;
-import org.lockss.daemon.status.*;
-import org.lockss.hasher.HashService;
-import org.lockss.protocol.LcapComm;
-import org.lockss.plugin.simulated.*;
-import org.lockss.test.*;
-import org.lockss.protocol.*;
-import org.lockss.poller.*;
 import org.lockss.util.*;
-import org.lockss.crawler.*;
-import org.lockss.repository.*;
-import org.lockss.app.*;
-import org.lockss.plugin.*;
-import org.lockss.state.*;
+import org.lockss.crawler.HtmlTagFilter;
+import org.lockss.plugin.CachedUrl;
 
 public class RunHashTest {
 
@@ -91,7 +77,7 @@ public class RunHashTest {
     return new ReaderInputStream(filteredReader);
 //     return new ReaderInputStream(reader);
   }
-  
+
   private static long readStream(InputStream is, byte bytes[])
       throws IOException {
     long bytesRead = 0;
