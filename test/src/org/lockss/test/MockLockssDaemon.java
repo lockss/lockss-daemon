@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssDaemon.java,v 1.24 2003-05-22 01:19:41 tal Exp $
+ * $Id: MockLockssDaemon.java,v 1.25 2003-06-17 22:27:08 aalto Exp $
  */
 
 /*
@@ -409,6 +409,21 @@ public class MockLockssDaemon extends LockssDaemon {
     activityRegulatorService = activityRegServ;
     theManagers.put(LockssDaemon.ACTIVITY_REGULATOR_SERVICE,
                     activityRegulatorService);
+  }
+
+  /**
+   * Set the ActivityRegulator for a given AU.  Requires a MocKActivityRegulatorService.
+   * @param actReg the new regulator
+   * @param au the ArchivalUnit
+   */
+  public void setActivityRegulator(ActivityRegulator actReg, ArchivalUnit au) {
+    getActivityRegulatorService();
+    if (activityRegulatorService instanceof MockActivityRegulatorService) {
+      ((MockActivityRegulatorService)activityRegulatorService).auMaps.put(au, actReg);
+    } else {
+      throw new UnsupportedOperationException("Couldn't setActivityRegulator with "+
+                                              "a non-Mock service.");
+    }
   }
 
   /**
