@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessage.java,v 1.45 2004-01-20 18:22:50 tlipkis Exp $
+ * $Id: LcapMessage.java,v 1.46 2004-01-31 22:58:14 tlipkis Exp $
  */
 
 /*
@@ -89,7 +89,7 @@ public class LcapMessage
     28-End    encoded properties
    */
   /* items which are not in the property list */
-  int m_version; // protocol version number
+  int m_pollVersion; // poll version number
   boolean m_multicast; // multicast flag - modifiable
   byte m_hopCount; // current hop count - modifiable
   byte[] m_pktHash; // hash of remaining packet
@@ -102,6 +102,7 @@ public class LcapMessage
   long m_startTime; // the original start time
   long m_stopTime; // the original stop time
   int m_opcode; // the kind of packet
+  protected String m_pluginVersion; // the plugin version
   protected String m_archivalID; // the archival unit
   protected String m_targetUrl; // the target URL
   protected String m_lwrBound; // the boundary for the url range (opt)
@@ -117,15 +118,15 @@ public class LcapMessage
   private EncodedProperty m_props;
   private static byte[] signature = {
       'l', 'p', 'm'};
-  private static byte[] versionByte = { '1', '2' };
+  private static byte[] pollVersionByte = { '1', '2' };
   private static Logger log = Logger.getLogger("LcapMessage");
   private String m_key = null;
 
   protected LcapMessage() throws IOException {
     m_props = new EncodedProperty();
-    m_version =
-        Configuration.getIntParam(PollSpec.PARAM_USE_PROTOCOL_VERSION,
-                                  PollSpec.DEFAULT_USE_PROTOCOL_VERSION);
+    m_pollVersion =
+        Configuration.getIntParam(PollSpec.PARAM_USE_POLL_VERSION,
+                                  PollSpec.DEFAULT_USE_POLL_VERSION);
     m_maxSize = Configuration.getIntParam(PARAM_MAX_PKT_SIZE,
                                           DEFAULT_MAX_PKT_SIZE);
 
@@ -163,7 +164,8 @@ public class LcapMessage
     m_opcode = opcode;
     m_entries = entries;
     m_hashAlgorithm = getDefaultHashAlgorithm();
-    m_version = ps.getVersion();
+    m_pollVersion = ps.getPollVersion();
+    m_pluginVersion = ps.getPluginVersion();
     // null the remaining undefined data
     m_startTime = 0;
     m_stopTime = 0;
@@ -198,7 +200,8 @@ public class LcapMessage
     m_startTime = 0;
     m_stopTime = 0;
     m_multicast = false;
-    m_version = trigger.getVersion();
+    m_pollVersion = trigger.getPollVersion();
+    m_pluginVersion = trigger.getPluginVersion();
   }
 
   public static String getDefaultHashAlgorithm() {
@@ -246,9 +249,9 @@ public class LcapMessage
       msg.m_opcode = NO_OP;
       msg.m_hopCount = 0;
       msg.m_verifier = verifier;
-      msg.m_version  =
-	Configuration.getIntParam(PollSpec.PARAM_USE_PROTOCOL_VERSION,
-				  PollSpec.DEFAULT_USE_PROTOCOL_VERSION);
+      msg.m_pollVersion  =
+	Configuration.getIntParam(PollSpec.PARAM_USE_POLL_VERSION,
+				  PollSpec.DEFAULT_USE_POLL_VERSION);
     }
     msg.storeProps();
     return msg;
@@ -359,15 +362,15 @@ public class LcapMessage
         throw new ProtocolException("Invalid Signature");
       }
     }
-    // read in the version byte and decode
-    m_version = -1;
+    // read in the poll version byte and decode
+    m_pollVersion = -1;
     byte ver = dis.readByte();
-    for (int i = 0; i < versionByte.length; i++) {
-      if (versionByte[i] == ver)
-	m_version = i + 1;
+    for (int i = 0; i < pollVersionByte.length; i++) {
+      if (pollVersionByte[i] == ver)
+	m_pollVersion = i + 1;
     }
-    if (m_version <= 0) {
-        throw new ProtocolException("Unsupported inbound protocol version: " + ver);
+    if (m_pollVersion <= 0) {
+      throw new ProtocolException("Unsupported inbound poll version: " + ver);
     }
 
     m_multicast = dis.readBoolean();
@@ -415,6 +418,7 @@ public class LcapMessage
     m_entries = stringToEntries(m_props.getProperty("entries"));
     m_lwrRem = m_props.getProperty("lwrRem");
     m_uprRem = m_props.getProperty("uprRem");
+    m_pluginVersion = m_props.getProperty("plugVer");
     // calculate start and stop times
     long now = TimeBase.nowMs();
     m_startTime = now - elapsed;
@@ -494,6 +498,10 @@ public class LcapMessage
       if (m_uprRem != null) {
         m_props.setProperty("uprRem", m_uprRem);
       }
+
+      if (m_pluginVersion != null) {
+        m_props.setProperty("plugVer", m_pluginVersion);
+      }
       long pktsize = new LockssDatagram(LockssDatagram.PROTOCOL_LCAP,
                                         encodeMsg()).getPacketSize();
       diff_pktsize = pktsize - LockssDatagram.MAX_SIZE;
@@ -567,6 +575,10 @@ public class LcapMessage
     return m_archivalID;
   }
 
+  public String getPluginVersion() {
+    return m_pluginVersion;
+  }
+
   public boolean getMulticast() {
     return m_multicast;
   }
@@ -575,16 +587,16 @@ public class LcapMessage
     m_multicast = multicast;
   }
 
-  public int getVersion() {
-    return m_version;
+  public int getPollVersion() {
+    return m_pollVersion;
   }
 
-  public void setVersion(int vers) {
-    m_version = vers;
+  public void setPollVersion(int vers) {
+    m_pollVersion = vers;
   }
 
-  public boolean supportedVersion(int vers) {
-    return (vers > 0 && vers <= versionByte.length);
+  public boolean supportedPollVersion(int vers) {
+    return (vers > 0 && vers <= pollVersionByte.length);
   }
 
 
@@ -729,8 +741,8 @@ public class LcapMessage
       if(m_entries != null) {
 
       }
-      if (m_version > 1)
-	sb.append(" ver " + m_version);
+      if (m_pollVersion > 1)
+	sb.append(" ver " + m_pollVersion);
     }
     sb.append("]");
     return sb.toString();
@@ -743,9 +755,9 @@ public class LcapMessage
   }
 
   private byte[] wrapPacket() throws IOException {
-    if (!supportedVersion(m_version))
-      throw new ProtocolException("Unsupported outbound protocol version: " +
-				  m_version);
+    if (!supportedPollVersion(m_pollVersion))
+      throw new ProtocolException("Unsupported outbound poll version: " +
+				  m_pollVersion);
     byte[] prop_bytes = m_props.encode();
     byte[] hash_bytes = computeHash(prop_bytes);
 
@@ -754,7 +766,7 @@ public class LcapMessage
     ByteArrayOutputStream baos = new ByteArrayOutputStream(enc_len);
     DataOutputStream dos = new DataOutputStream(baos);
     dos.write(signature);
-    dos.write(versionByte[m_version - 1]);
+    dos.write(pollVersionByte[m_pollVersion - 1]);
     dos.writeBoolean(m_multicast);
     dos.writeByte(m_hopCount);
     dos.writeShort(prop_bytes.length);
