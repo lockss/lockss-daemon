@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollSpec.java,v 1.6 2003-04-24 22:08:52 tal Exp $
+ * $Id: TestPollSpec.java,v 1.7 2003-06-10 22:55:54 tal Exp $
  */
 
 /*
@@ -71,8 +71,8 @@ public class TestPollSpec extends LockssTestCase {
   public void testFromCus() {
     String auid = "aaai1";
     String url = "http://foo.bar/";
-    String lower = "lll";
-    String upper = "hhh";
+    String lower = "abc";
+    String upper = "xyz";
     MockArchivalUnit au = new MockArchivalUnit();
     au.setAuId(auid);
 
@@ -91,8 +91,8 @@ public class TestPollSpec extends LockssTestCase {
     byte[] testbytes = {0,1,2,3,4,5,6,8,10};
     String auid = "aaai1";
     String url = "http://foo.bar/";
-    String lower = "lll";
-    String upper = "hhh";
+    String lower = "abc";
+    String upper = "xyx";
     MockArchivalUnit au = new MockArchivalUnit();
     au.setAuId(auid);
     CachedUrlSet cus = new MockCachedUrlSet(au,

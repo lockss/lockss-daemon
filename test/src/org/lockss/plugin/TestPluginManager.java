@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.15 2003-04-17 00:55:50 troberts Exp $
+ * $Id: TestPluginManager.java,v 1.16 2003-06-10 22:55:54 tal Exp $
  */
 
 /*
@@ -182,8 +182,8 @@ public class TestPluginManager extends LockssTestCase {
 
   public void testFindCUS() throws Exception {
     String url = "http://foo.bar/";
-    String lower = "lll";
-    String upper = "hhh";
+    String lower = "abc";
+    String upper = "xyz";
 
     doConfig();
     MockPlugin mpi = (MockPlugin)mgr.getPlugin(mockPlugKey);
