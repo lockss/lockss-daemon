@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawlRule.java,v 1.1 2003-10-30 23:57:27 troberts Exp $
+ * $Id: MockCrawlRule.java,v 1.2 2004-06-10 22:03:55 tyronen Exp $
  */
 
 /*
@@ -38,7 +38,7 @@ import org.lockss.daemon.CrawlRule;
 public class MockCrawlRule implements CrawlRule {
   Set urlsToCrawl = new HashSet();
 
-  public void MockCrawlRule() {
+  public MockCrawlRule() {
   }
 
   public void addUrlToCrawl(String url) {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManagerWrapping.java,v 1.2 2004-01-27 00:41:49 tyronen Exp $
+ * $Id: TestPluginManagerWrapping.java,v 1.3 2004-06-10 22:03:54 tyronen Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import org.lockss.test.*;
 import org.lockss.repository.*;
 import org.lockss.poller.*;
 import org.lockss.plugin.wrapper.*;
+import org.lockss.state.*;
 
 /**
  * Test class for org.lockss.plugin.PluginManager
@@ -50,7 +51,6 @@ public class TestPluginManagerWrapping extends LockssTestCase {
   private MockLockssDaemon theDaemon;
 
   static String mockPlugKey = "org|lockss|test|MockPlugin";
-
   static Properties props1 = new Properties();
   static Properties props2 = new Properties();
   static {
@@ -73,18 +73,6 @@ public class TestPluginManagerWrapping extends LockssTestCase {
 
   static String p1a1param = p1param + mauauidKey1 + ".";
   static String p1a2param = p1param + mauauidKey2 + ".";
-
-  static String configStr =
-    p1a1param + MockPlugin.CONFIG_PROP_1 + "=val1\n" +
-    p1a1param + MockPlugin.CONFIG_PROP_2 + "=val2\n" +
-    p1a1param + "reserved.wrapper=true\n" +
-    p1a2param + "reserved.wrapper=true\n" +
-    p1a2param + MockPlugin.CONFIG_PROP_1 + "=val1\n" +
-    p1a2param + MockPlugin.CONFIG_PROP_2 + "=va.l3\n" + // value contains a dot
-// needed to allow PluginManager to register Aus
-// leave value blank to allow 'doConfig()' to fill it in dynamically
-    LockssRepositoryImpl.PARAM_CACHE_LOCATION + "=";
-
 
   PluginManager mgr;
 
@@ -110,18 +98,21 @@ public class TestPluginManagerWrapping extends LockssTestCase {
     super.tearDown();
   }
 
-  private void doConfig() throws Exception {
+  private void doConfig(boolean full) throws Exception {
     mgr.startService();
-    String localConfig = configStr + getTempDir().getAbsolutePath() +
-        File.separator;
-    ConfigurationUtil.setCurrentConfigFromString(localConfig);
-  }
-
-  private void minimalConfig() throws Exception {
-    mgr.startService();
-    ConfigurationUtil.setFromArgs(LockssRepositoryImpl.PARAM_CACHE_LOCATION,
-				  getTempDir().getAbsolutePath() +
-				  File.separator);
+    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    Properties p = new Properties();
+    if (full) {
+      p.setProperty(p1a1param + MockPlugin.CONFIG_PROP_1, "val1");
+      p.setProperty(p1a1param + MockPlugin.CONFIG_PROP_2, "val2");
+      p.setProperty(p1a1param + "reserved.wrapper", "true");
+      p.setProperty(p1a2param + "reserved.wrapper", "true");
+      p.setProperty(p1a2param + MockPlugin.CONFIG_PROP_1, "val1");
+      p.setProperty(p1a2param + MockPlugin.CONFIG_PROP_2, "va.l3");
+    }
+    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    p.setProperty(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION, tempDirPath);
+    ConfigurationUtil.setCurrentConfigFromProps(p);
   }
 
   WrappedPlugin getWrappedPlugin() throws Exception {
@@ -133,7 +124,7 @@ public class TestPluginManagerWrapping extends LockssTestCase {
   }
 
   public void testStop() throws Exception {
-    doConfig();
+    doConfig(true);
     WrappedPlugin wpi = getWrappedPlugin();
     MockPlugin mpi = (MockPlugin)wpi.getOriginal();
     int stopcnt = mpi.getStopCtr();
@@ -142,7 +133,7 @@ public class TestPluginManagerWrapping extends LockssTestCase {
   }
 
   public void testAuConfig() throws Exception {
-    doConfig();
+    doConfig(true);
     WrappedPlugin mpi = getWrappedPlugin();
     // plugin should be registered
     assertNotNull(mpi);
@@ -173,7 +164,7 @@ public class TestPluginManagerWrapping extends LockssTestCase {
   }
 
   public void testCreateAu() throws Exception {
-    minimalConfig();
+    doConfig(false);
     Plugin plug = new ThrowingMockPlugin();
     String pid = plug.getPluginId();
     String key = PluginManager.pluginKeyFromId(pid);
@@ -216,7 +207,7 @@ public class TestPluginManagerWrapping extends LockssTestCase {
   }
 
   public void testConfigureAu() throws Exception {
-    minimalConfig();
+    doConfig(false);
     Plugin plug = new ThrowingMockPlugin();
     String pid = plug.getPluginId();
     String key = PluginManager.pluginKeyFromId(pid);
@@ -296,7 +287,7 @@ public class TestPluginManagerWrapping extends LockssTestCase {
     String lower = "abc";
     String upper = "xyz";
 
-    doConfig();
+    doConfig(true);
     WrappedPlugin mpi = getWrappedPlugin();
 
     // make a PollSpec with info from a manually created CUS, which should
@@ -332,7 +323,7 @@ public class TestPluginManagerWrapping extends LockssTestCase {
     String url = "http://foo.bar/";
     String lower = PollSpec.SINGLE_NODE_LWRBOUND;
 
-    doConfig();
+    doConfig(true);
     WrappedPlugin mpi = getWrappedPlugin();
 
     // make a PollSpec with info from a manually created CUS, which should
@@ -353,7 +344,7 @@ public class TestPluginManagerWrapping extends LockssTestCase {
     String prefix = "http://foo.bar/";
     String url1 = "http://foo.bar/baz";
     String url2 = "http://foo.bar/not";
-    doConfig();
+    doConfig(true);
     WrappedPlugin mpi = getWrappedPlugin();
 
     // get the two archival units
@@ -399,7 +390,7 @@ public class TestPluginManagerWrapping extends LockssTestCase {
 
   public void testWrappedAu() throws Exception {
     try {
-      doConfig();
+      doConfig(true);
       WrappedArchivalUnit wau = (WrappedArchivalUnit) mgr.getAuFromId(mauauid1);
       assertNotNull(wau);
       WrappedPlugin wplug = (WrappedPlugin)wau.getPlugin();
@@ -489,12 +480,12 @@ public class TestPluginManagerWrapping extends LockssTestCase {
     ConfigurationUtil.setCurrentConfigFromProps(makeMockProperties(true,true));
     WrappedPlugin wmock = (WrappedPlugin) mgr.getPlugin(MockPlugin.KEY);
     assertNotNull(wmock);
-    ConfigurationUtil.setCurrentConfigFromProps(makeMockProperties(true,false));
+    ConfigurationUtil.setCurrentConfigFromProps(makeMockProperties(true,(false)));
     assertSame(wmock,mgr.getPlugin(MockPlugin.KEY));
   }
 
   public void testDoesntPermitWrappedIfUnwrappedExists() throws Exception {
-    ConfigurationUtil.setCurrentConfigFromProps(makeMockProperties(true,false));
+    ConfigurationUtil.setCurrentConfigFromProps(makeMockProperties(true,(false)));
     MockPlugin mock = (MockPlugin)mgr.getPlugin(MockPlugin.KEY);
     assertNotNull(mock);
     ConfigurationUtil.setCurrentConfigFromProps(makeMockProperties(true,true));
@@ -505,7 +496,7 @@ public class TestPluginManagerWrapping extends LockssTestCase {
     ConfigurationUtil.setCurrentConfigFromProps(makeMockProperties(true,true));
     WrappedPlugin wmock = (WrappedPlugin) mgr.getPlugin(MockPlugin.KEY);
     assertNotNull(wmock);
-    ConfigurationUtil.setCurrentConfigFromProps(makeMockProperties(false, true));
+    ConfigurationUtil.setCurrentConfigFromProps(makeMockProperties((false), true));
     WrappedPlugin wmock2 = (WrappedPlugin) mgr.getPlugin(Mock2Plugin.KEY);
     assertNotNull(wmock2);
     assertNotSame(wmock, wmock2);

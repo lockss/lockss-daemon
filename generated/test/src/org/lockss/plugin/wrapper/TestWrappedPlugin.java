@@ -1,5 +1,5 @@
 /*
- * $Id: TestWrappedPlugin.java,v 1.3 2004-01-27 04:07:10 tlipkis Exp $
+ * $Id: TestWrappedPlugin.java,v 1.4 2004-06-10 22:03:54 tyronen Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.net.*;
 import org.lockss.test.*;
 import org.lockss.daemon.*;
 import org.lockss.repository.TestLockssRepositoryImpl;
+import org.lockss.plugin.definable.*;
 import org.lockss.plugin.highwire.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
@@ -50,8 +51,9 @@ import org.lockss.util.*;
 
 
 public class TestWrappedPlugin extends LockssTestCase {
-  private static final String AUPARAM_BASE_URL = HighWirePlugin.AUPARAM_BASE_URL;
-  private static final String AUPARAM_VOL = HighWirePlugin.AUPARAM_VOL;
+  static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
+  static final String YEAR_KEY = ConfigParamDescr.YEAR.getKey();
+  static final String VOL_KEY = ConfigParamDescr.VOLUME_NUMBER.getKey();
 
   private WrappedPlugin plugin;
 
@@ -61,15 +63,14 @@ public class TestWrappedPlugin extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    HighWirePlugin hplug = new HighWirePlugin();
-    plugin = (WrappedPlugin)WrapperState.getWrapper(hplug);
     MockLockssDaemon daemon = new MockLockssDaemon();
-    plugin.initPlugin(daemon);
+    DefinablePlugin hplug = new DefinablePlugin();
+    hplug.initPlugin(daemon,"org.lockss.plugin.highwire.HighWirePlugin");
+    plugin = (WrappedPlugin)WrapperState.getWrapper(hplug);
   }
 
   public void testGetAuNullConfig()
-      throws ArchivalUnit.ConfigurationException {
-    try {
+      throws ArchivalUnit.ConfigurationException {    try {
       plugin.configureAu(null, null);
       fail("Didn't throw ArchivalUnit.ConfigurationException");
     } catch (ArchivalUnit.ConfigurationException e) {
@@ -85,25 +86,28 @@ public class TestWrappedPlugin extends LockssTestCase {
   public void testGetAuHandlesBadUrl()
       throws ArchivalUnit.ConfigurationException, MalformedURLException {
     Properties props = new Properties();
-    props.setProperty(HighWirePlugin.AUPARAM_VOL, "322");
-    props.setProperty(HighWirePlugin.AUPARAM_BASE_URL, "blah");
+    props.setProperty(VOL_KEY, "322");
+    props.setProperty(BASE_URL_KEY, "blah");
+    props.setProperty(YEAR_KEY,"2004");
     props.setProperty("reserved.wrapper","true");
 
     try {
       WrappedArchivalUnit au = makeAuFromProps(props);
       fail ("Didn't throw InstantiationException when given a bad url");
     } catch (ArchivalUnit.ConfigurationException auie) {
-      MalformedURLException murle =
-        (MalformedURLException)auie.getNestedException();
+      ConfigParamDescr.InvalidFormatException murle =
+        (ConfigParamDescr.InvalidFormatException)auie.getNestedException();
       assertNotNull(auie.getNestedException());
     }
   }
 
   public void testGetAuConstructsProperAu()
-      throws ArchivalUnit.ConfigurationException, MalformedURLException {
+      throws ArchivalUnit.ConfigurationException, 
+      ConfigParamDescr.InvalidFormatException {
     Properties props = new Properties();
-    props.setProperty(AUPARAM_VOL, "322");
-    props.setProperty(AUPARAM_BASE_URL, "http://www.example.com/");
+    props.setProperty(VOL_KEY, "32");
+    props.setProperty(BASE_URL_KEY, "http://www.example.com/");
+    props.setProperty(YEAR_KEY, "2004");
     props.setProperty("reserved.wrapper","true");
 
     WrappedArchivalUnit au = (WrappedArchivalUnit)makeAuFromProps(props);
@@ -116,7 +120,8 @@ public class TestWrappedPlugin extends LockssTestCase {
 
   public void testGetAuConfigDescrs() {
     assertEquals(ListUtil.list(ConfigParamDescr.BASE_URL,
-                               ConfigParamDescr.VOLUME_NUMBER),
+                               ConfigParamDescr.VOLUME_NUMBER,
+                               ConfigParamDescr.YEAR),
                  plugin.getAuConfigDescrs());
   }
 

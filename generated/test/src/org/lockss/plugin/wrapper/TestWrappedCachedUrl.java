@@ -1,5 +1,5 @@
 /*
- * $Id: TestWrappedCachedUrl.java,v 1.2 2004-01-27 00:41:49 tyronen Exp $
+ * $Id: TestWrappedCachedUrl.java,v 1.3 2004-06-10 22:03:54 tyronen Exp $
  */
 
 /*
@@ -72,7 +72,8 @@ public class TestWrappedCachedUrl extends LockssTestCase {
   }
 
   WrappedCachedUrl makeUrl() throws Exception {
-    MockCachedUrl murl = new MockCachedUrl("http://www.example.com/testDir/leaf1",mcus);
+    MockCachedUrl murl = new MockCachedUrl(
+                             "http://www.example.com/testDir/leaf1",mcus);
     murl.setContent("test stream");
     return (WrappedCachedUrl)WrapperState.getWrapper(murl);
   }
@@ -98,14 +99,14 @@ public class TestWrappedCachedUrl extends LockssTestCase {
 
   public void testOpenForReading() throws Exception {
     WrappedCachedUrl url = makeUrl();
-    InputStream urlIs = url.openForReading();
-    ByteArrayOutputStream baos = new ByteArrayOutputStream(11);
+    Reader urlIs = url.openForReading();
+    CharArrayWriter baos = new CharArrayWriter(11);
     StreamUtil.copy(urlIs, baos);
     assertEquals("test stream", baos.toString());
   }
 
   public void testGetProperties() throws Exception {
-    Properties newProps = new Properties();
+    CIProperties newProps = new CIProperties();
     newProps.setProperty("test", "value");
     newProps.setProperty("test2", "value2");
 
@@ -115,15 +116,6 @@ public class TestWrappedCachedUrl extends LockssTestCase {
     Properties urlProps = url.getProperties();
     assertEquals("value", urlProps.getProperty("test"));
     assertEquals("value2", urlProps.getProperty("test2"));
-  }
-
-   public void testGetReader() throws Exception {
-    try {
-      WrappedCachedUrl url = makeUrl();
-      Reader reader = url.getReader();
-      fail("Should have thrown an UnsupportedOperationException");
-    } catch (UnsupportedOperationException e) {
-    }
   }
 
   public static void main(String[] argv) {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestWrapperGenerator.java,v 1.4 2004-05-26 23:55:57 tyronen Exp $
+ * $Id: TestWrapperGenerator.java,v 1.5 2004-06-10 22:03:56 tyronen Exp $
  */
 
 /*
@@ -63,7 +63,8 @@ public class TestWrapperGenerator extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    tempDirPath = "/home/tyronen/lockss-daemon/tools/test/";
+         //getTempDir().getAbsolutePath() + File.separator;
     log.debug("Using " + tempDirPath);
   }
 
@@ -153,6 +154,7 @@ public class TestWrapperGenerator extends LockssTestCase {
     pw.println("}");
     pw.println("custom_#METHODNAME_val();");
     pw.println("</void>");
+    pw.println("<useWrapperConstructor/>");
     pw.println("<special class=\"childTestClass\" method=\"ret3\">");
     pw.println("    return {32767};");
     pw.println("</special>");
@@ -160,6 +162,19 @@ public class TestWrapperGenerator extends LockssTestCase {
     pw.println("  Map wrappermap = new WeakHashMap();\n");
     pw.println("  private void makeMap() {");
     pw.println("  }");
+    pw.println("</extra>");
+    pw.println("<extra>");
+    pw.println("protected void finalize() throws Throwable {");
+    pw.println("  WrapperState.removeWrapping(#INNEROBJECT);");
+    pw.println("  #INNEROBJECT = null;");
+    pw.println("  super.finalize();");
+    pw.println("}\n");
+    pw.println("public Object getOriginal() {");
+    pw.println("  return #INNEROBJECT;");
+    pw.println("}\n");
+    pw.println("public String getOriginalClassName() {");
+    pw.println("  return \"#CLASSNAME\";");
+    pw.println("}");
     pw.println("</extra>");
     pw.println("<toBeWrapped>");
     pw.println("  <wrapPackage name=\"java.util\"/>");
@@ -410,16 +425,16 @@ public class TestWrapperGenerator extends LockssTestCase {
     writeDefaultThrowable(pw);
     pw.println("    }");
     pw.println("    return custom_useFile_val(wrappedReturnValue);");
-    pw.println("  }\n");
+    pw.println("  }\n  ");
 
     pw.println("  protected void finalize() throws Throwable {");
     pw.println("    WrapperState.removeWrapping(innerchildTestClass);");
     pw.println("    innerchildTestClass = null;");
     pw.println("    super.finalize();");
-    pw.println("  }\n");
+    pw.println("  }\n  ");
     pw.println("  public Object getOriginal() {");
     pw.println("    return innerchildTestClass;");
-    pw.println("  }\n");
+    pw.println("  }\n  ");
     pw.println("  public String getOriginalClassName() {");
     pw.println("    return \"childTestClass\";");
     pw.println("  }");

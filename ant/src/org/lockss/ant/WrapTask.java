@@ -1,5 +1,5 @@
 /*
- * $Id: WrapTask.java,v 1.1 2003-09-04 23:11:16 tyronen Exp $
+ * $Id: WrapTask.java,v 1.2 2004-06-10 22:03:53 tyronen Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.ant;
 
 import java.util.*;
 import java.io.*;
+import java.lang.reflect.*;
 import org.apache.tools.ant.*;
 import org.apache.tools.ant.types.*;
 import org.apache.tools.ant.taskdefs.Javadoc;
@@ -88,7 +89,7 @@ public class WrapTask extends Task {
 
   static final String WRAPPER_DOCLET = "org.lockss.doclet.WrapperGenerator";
 
-  private String srcDir, destDir, template;
+  private String srcDir, destDir, template, prefix="Wrapped";
   private boolean interfaceOnly = true;
   private Path classpath;
   private List filesets = new ArrayList();
@@ -114,6 +115,10 @@ public class WrapTask extends Task {
     this.template = template;
   }
 
+  public void setPrefix(String prefix) {
+    this.prefix = prefix;
+  }
+
   public void setInterface(boolean interfaceOnly) {
     this.interfaceOnly = interfaceOnly;
   }
@@ -131,27 +136,31 @@ public class WrapTask extends Task {
   /** Main running method called by Ant */
   public void execute() throws BuildException {
     int filecount=0;
-
+    
     javadoc.setProject(getProject());
 
     checkJavadocAttributes();
     setJavadocAttributes();
 
-    List toBeWrapped = getClassesToBeWrapped();
+    Set toBeHidden = getClassesFromTag("hideClass");
+
     loadDatesToCheck();
+    log("Directory: " + srcDir,Project.MSG_INFO);
+    File directory = new File(srcDir);
+    String[] filelist = directory.list();
 
     FileSet fs = new FileSet();
-    fs.setDir(new File(srcDir));
+    fs.setDir(directory);
+    fs.setIncludes("*.java");
 
-    // Determine which files need updated wrappers
-    Iterator it = toBeWrapped.iterator();
-    while (it.hasNext()) {
-      String filename = (String)it.next();
-      if (needsWrapping(filename)) {
-        fs.setIncludes(filename);
-        filecount++;
+    // Determine which files in the srcDir should be excluded
+    for (int i=0; i<Array.getLength(filelist); i++) {
+      if (!filelist[i].endsWith(".java") || toBeHidden.contains(filelist[i]) 
+          || !outOfDate(filelist[i])) {
+        fs.setExcludes(filelist[i]);
+        logIfVerbose("File " + filelist[i] + " up to date or hidden.");
       } else {
-        logIfVerbose("File " + filename + " up to date.");
+        filecount++;
       }
     }
 
@@ -161,7 +170,7 @@ public class WrapTask extends Task {
       javadoc.execute();
     } else {
       log("All files up to date: skipping javadoc.",Project.MSG_INFO);
-    }
+      }
   }
 
   // Check for required attributes ("template" is the only mandatory one)
@@ -208,6 +217,11 @@ public class WrapTask extends Task {
     dParam.setName("-d");
     dParam.setValue(destDir);
 
+    // Specify prefix argument to doclet
+    Javadoc.DocletParam prefixParam = info.createParam();
+    prefixParam.setName("-prefix");
+    prefixParam.setValue(prefix);
+
     // Specify interface argument to doclet
     if (interfaceOnly) {
       Javadoc.DocletParam interfaceParam = info.createParam();
@@ -217,16 +231,15 @@ public class WrapTask extends Task {
 
   /* Load the template file; from it use the wrapClass and hideClass tags
      to determine which candidates are to be wrapped. */
-  private List getClassesToBeWrapped() throws BuildException {
-    List list = new ArrayList();
+  private Set getClassesFromTag(String tagname) throws BuildException {
+    Set classes = new HashSet();
     Document doc = parseXML(template);
-    extractFilesFromTag(list,doc,"wrapClass");
-    extractFilesFromTag(list,doc,"hideClass");
-    NodeList wrappedPackages = doc.getElementsByTagName("wrapPackage");
-    if (wrappedPackages.getLength()>0) {
+    extractFilesFromTag(classes,doc,tagname);
+    /*    NodeList packages = doc.getElementsByTagName("wrapPackage");
+    if (packages.getLength()>0) {
       throw new BuildException("wrapPackage tag not yet supported.");
-    }
-    return list;
+      }*/
+    return classes;
   }
 
   // Convenience method to load an XML file into a DOM tree
@@ -254,13 +267,13 @@ public class WrapTask extends Task {
   }
 
   // Gets the names of all items of the given tag name
-  private void extractFilesFromTag(List list, Document doc, String str) {
+  private void extractFilesFromTag(Collection coll, Document doc, String str) {
     NodeList wrappedClasses = doc.getElementsByTagName(str);
     for (int i=0; i<wrappedClasses.getLength(); i++) {
       Element elem = (Element) wrappedClasses.item(i);
       String fileToWrap = stripPrefix(elem.getAttribute("name")) + ".java";
       logIfVerbose("Wrapping " + fileToWrap + '.');
-      list.add(fileToWrap);
+      coll.add(fileToWrap);
     }
   }
 
@@ -304,9 +317,9 @@ public class WrapTask extends Task {
     }
 
   /* Returns true if the given filename needs a new wrapper generated */
-  private boolean needsWrapping(String filename) {
+  private boolean outOfDate(String filename) {
     File srcFile = new File(srcDir, filename);
-    File destFile = new File(destDir, "Wrapped" + filename);
+    File destFile = new File(destDir, prefix + filename);
     if (!destFile.exists()) {
       return true;
     }

@@ -34,13 +34,29 @@ try {
 }
 </void>
 <toBeWrapped>
-  <wrapClass name="org.lockss.plugin.ArchivalUnit"/>
-  <wrapClass name="org.lockss.plugin.CachedUrl"/>
-  <wrapClass name="org.lockss.plugin.CachedUrlSet"/>
-  <wrapClass name="org.lockss.plugin.Plugin"/>
-  <wrapClass name="org.lockss.plugin.UrlCacher"/>
-  <hideClass name="org.lockss.plugin.CachedUrlSetNode" />
+  <wrapPackage name="org.lockss.plugin" />
+  <hideClass name="org.lockss.plugin.FilterRule" />
+  <hideClass name="org.lockss.plugin.AuUrl" />
+  <hideClass name="org.lockss.plugin.WrappedMap" />
+  <hideClass name="org.lockss.plugin.WrapperState" />
+  <hideClass name="org.lockss.plugin.Wrapped" />
 </toBeWrapped>
+<useWrapperConstructor/>
+<extra>
+protected void finalize() throws Throwable {
+  WrapperState.removeWrapping(#INNEROBJECT);
+  #INNEROBJECT = null;
+  super.finalize();
+}
+
+public Object getOriginal() {
+  return #INNEROBJECT;
+}
+
+public String getOriginalClassName() {
+  return "#FULLCLASSNAME";
+}
+</extra>
 <extra class="org.lockss.plugin.CachedUrlSet">
   private class WrappedIterator implements Iterator {
     private Iterator iterator;

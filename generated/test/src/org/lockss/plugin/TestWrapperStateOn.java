@@ -1,5 +1,5 @@
 /*
- * $Id: TestWrapperStateOn.java,v 1.2 2004-01-27 00:41:49 tyronen Exp $
+ * $Id: TestWrapperStateOn.java,v 1.3 2004-06-10 22:03:54 tyronen Exp $
  */
 
 /*
@@ -33,9 +33,13 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin;
 
 import java.util.*;
+import java.io.*;
+import org.lockss.app.*;
 import org.lockss.daemon.*;
 import org.lockss.test.*;
 import org.lockss.plugin.wrapper.*;
+import org.lockss.repository.*;
+import org.lockss.state.*;
 
 /**
  * This is another test class for org.lockss.util.WrapperState.  It runs under
@@ -204,4 +208,23 @@ public class TestWrapperStateOn extends LockssTestCase {
     assertTrue(WrapperState.isWrappedPlugin(wplug));
   }
 
+  public void testDaemon() throws Exception {
+    MockLockssDaemon daemon = new MockLockssDaemon();
+    Plugin plugin = new MockPlugin();
+    WrappedPlugin wplug = (WrappedPlugin)WrapperState.getWrapper(plugin);
+    Properties p = new Properties();
+    p.setProperty(MockPlugin.KEY + "." + MockPlugin.CONFIG_PROP_1,
+                  "http://www.example.com");
+    p.setProperty(MockPlugin.KEY + "." + MockPlugin.CONFIG_PROP_2,"322");
+    p.setProperty(MockPlugin.KEY + ".reserved.wrapper","true");
+    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    p.setProperty(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION, tempDirPath);
+    Configuration config = ConfigurationUtil.fromProps(p);
+    assertNotNull(config);
+    WrappedArchivalUnit wau = (WrappedArchivalUnit)wplug.createAu(config);
+
+    assertNotNull(daemon.getNodeManager(wau));
+    assertNotNull(daemon.getHistoryRepository(wau));
+  }
 }

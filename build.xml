@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.87 2004-06-09 17:35:42 tlipkis Exp $
+ $Id: build.xml,v 1.88 2004-06-10 22:03:53 tyronen Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -51,13 +51,15 @@ Args:
                               a compile step runs when nothing should need to
                               be compiled, to find package/dir disagreements.
   -Dloglevel=debug         Set default log level to debug for
-                              test-all, test-one, test-class, run-class.
+                             test-all, test-one, test-class, run-class.
   -Dlogtarget=Class        Set default log target.
   -Dscript=name            Script run by jdftp.  Default is lockss-jdftp.
   -Dshowoutput=yes         With test-one, show System.err output as it happens.
   -Dtimeout=msecs          Override the default test failure timeout.
   -Dauthor=true            Include author info in javadoc.
   -Dversion=true           Include version info in javadoc.
+  -Dmock=pack/age          Specify package for generate-null-mock, 
+                              generate-unsupported-mock
 </description>
 
   <!-- Defaults -->
@@ -824,6 +826,37 @@ java -classpath &quot;${tmp.ptool.clspth.unix}&quot; org.lockss.devtools.plugind
     </wrap>
   </target>
 
+
+  <target name="generate-null-mock"
+          description="Generates mock classes whose methods return null"
+          depends="jar-ant,jar-tools,-set.wrap.task.available">
+    <wrap srcdir="${src}/${mock}"
+        template="${tools.src}/nullmockwrapper.xml"
+	destdir="${test.src}/${mock}"
+	interface="false"
+        prefix="Mock" >
+    <fileset dir="${tools.src}/org/lockss/doclet"
+              includes="WrapperGenerator.java"/>
+     <fileset dir="${ant.src}/org/lockss/ant" includes="WrapTask.java" />
+     <classpath refid="tools.run.classpath" />
+    </wrap>
+  </target>
+
+  <target name="generate-unsupported-mock"
+          description="Generates mock classes which throw UnsupportedOperationExceptions"
+          depends="jar-ant,jar-tools,-set.wrap.task.available">
+    <wrap srcdir="${src}/${mock}"
+        template="${tools.src}/unsupportedmockwrapper.xml"
+	destdir="${test.src}/${mock}"
+	interface="false"
+        prefix="Mock" >
+    <fileset dir="${tools.src}/org/lockss/doclet"
+              includes="WrapperGenerator.java"/>
+     <fileset dir="${ant.src}/org/lockss/ant" includes="WrapTask.java" />
+     <classpath refid="tools.run.classpath" />
+    </wrap>
+  </target>
+
   <!-- ==================================================================== -->
   <target name="jdftp" depends="javadoc,javadoc-test,jdftp1"
    description="Build javadoc and invoke script to copy it somewhere.">
@@ -1414,6 +1447,26 @@ Test results in ${tools.test.results}
        <instrumentation file="${jcoverage.ser}"/>
     </report>
 <!--     <delete file="${jcoverage.ser}" quiet="true" /> -->
+  </target>
+
+
+  <!-- Additional targets for search -->
+
+  <target name="javah" depends="jar-lockss">
+    <javah class="org.lockss.search.JavaUUID" 
+           outputFile="${tools.src}/JavaUUID.h">
+      <classpath refid="test.run.classpath"/>
+    </javah>
+  </target>
+
+  <target name="gcc" depends="javah">
+    <exec executable="g++" dir="${tools.src}">
+      <arg value="-shared"/>
+      <arg value="-o ${lib}/libJavaUUID.so"/>
+      <arg value="-fPIC"/>
+      <arg value="-ansi"/>
+      <arg value="JavaUUID.cc"/>
+    </exec>
   </target>
 
 </project>
