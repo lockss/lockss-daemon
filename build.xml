@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.88 2004-06-10 22:03:53 tyronen Exp $
+ $Id: build.xml,v 1.89 2004-06-15 21:42:59 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -82,7 +82,8 @@ Args:
   <property name="build.sysclasspath" value="ignore" />
 
   <!--  CVS-related -->
-  <property name="cvs.project"    value="lockss-daemon" />
+  <property name="cvs.module"    value="lockss-daemon-code" />
+  <property name="cvs.dir"       value="lockss-daemon" />
 
   <!--  Directories -->
   <property name="java.lib"       value="${env.JAVA_HOME}/lib" />
@@ -1268,7 +1269,7 @@ Test results in ${tools.test.results}
    <mkdir dir="${temp.build}" />
    <tempfile property="temp.build.dir" destdir="${temp.build}" prefix="build"/>
    <mkdir dir="${temp.build.dir}" />
-   <property name="temp.proj.dir" value="${temp.build.dir}/${cvs.project}" />
+   <property name="temp.proj.dir" value="${temp.build.dir}/${cvs.dir}" />
 
    <trycatch property="recursive.error.msg">
     <try>
@@ -1286,7 +1287,7 @@ Test results in ${tools.test.results}
      <if>
       <isfalse value="${nocvs}" />
       <then>
-	<cvs command="-z3 -Q checkout" package="lockss-daemon"
+	<cvs command="-z3 -Q checkout" package="${cvs.module}"
 	     dest="${temp.build.dir}" tag="${cvs.co.tag}" failonerror="true"/>
       </then>
       <else>
