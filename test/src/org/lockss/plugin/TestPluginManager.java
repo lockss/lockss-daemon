@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.48 2004-09-16 21:29:18 dshr Exp $
+ * $Id: TestPluginManager.java,v 1.49 2004-09-21 02:04:40 smorabito Exp $
  */
 
 /*
@@ -377,6 +377,22 @@ public class TestPluginManager extends LockssTestCase {
       return auMgrsStarted;
     }
 
+    // For testLoadLoadablePlugins -- need a mock repository
+    public LockssRepository getLockssRepository(ArchivalUnit au) {
+      return new MyMockLockssRepository();
+    }
+  }
+
+  static class MyMockLockssRepository extends MockLockssRepository {
+    public RepositoryNode getNode(String url) {
+      return new MyMockRepositoryNode();
+    }
+  }
+
+  static class MyMockRepositoryNode extends MockRepositoryNode {
+    public int getCurrentVersion() {
+      return 1;
+    }
   }
 
   static class MockPluginManager extends PluginManager {

@@ -1,5 +1,5 @@
 /*
- * $Id: MockRepositoryNode.java,v 1.10 2004-04-06 07:30:51 tlipkis Exp $
+ * $Id: MockRepositoryNode.java,v 1.11 2004-09-21 02:04:40 smorabito Exp $
  */
 
 /*
@@ -54,6 +54,9 @@ public class MockRepositoryNode implements RepositoryNode {
 
   public String url;
   public String nodeLocation;
+
+  public MockRepositoryNode() {
+  }
 
   MockRepositoryNode(String url, String nodeLocation) {
     this.url = url;
