@@ -7,6 +7,7 @@ import java.awt.event.*;
 import javax.swing.*;
 
 import org.lockss.daemon.*;
+import com.borland.jbcl.layout.*;
 
 public class PrintfEditor extends JDialog implements EDPEditor {
   protected PrintfTemplate originalTemplate;
@@ -28,6 +29,12 @@ public class PrintfEditor extends JDialog implements EDPEditor {
   JButton insertButton = new JButton();
   JComboBox paramComboBox = new JComboBox();
   GridBagLayout gridBagLayout1 = new GridBagLayout();
+  JLabel fieldWidthLabel = new JLabel();
+  JTextField widthTextField = new JTextField();
+  JLabel paddingLabel = new JLabel();
+  JRadioButton spacesRadioButton = new JRadioButton();
+  JRadioButton zeroRadioButton = new JRadioButton();
+  ButtonGroup buttonGroup1 = new ButtonGroup();
   GridBagLayout gridBagLayout2 = new GridBagLayout();
 
 
@@ -44,7 +51,7 @@ public class PrintfEditor extends JDialog implements EDPEditor {
   }
 
   private void jbInit() throws Exception {
-    setSize(400,260);
+    setSize(new Dimension(421, 380));
     saveButton.setText("Save");
     saveButton.addActionListener(new
                                  PrintfTemplateEditor_saveButton_actionAdapter(this));
@@ -64,13 +71,24 @@ public class PrintfEditor extends JDialog implements EDPEditor {
     parameterTextArea.setMinimumSize(new Dimension(100, 25));
     parameterTextArea.setEditable(true);
     parameterTextArea.setText("");
-    insertButton.setText("Insert Param");
+    insertButton.setToolTipText("insert the format in the format string and add parameter to list.");
+    insertButton.setText("Insert Parameter");
     insertButton.addActionListener(new
         PrintfTemplateEditor_insertButton_actionAdapter(this));
     formatTextArea.setMinimumSize(new Dimension(100, 25));
     formatTextArea.setText("");
+    parameterPanel.setBorder(BorderFactory.createEtchedBorder());
     parameterPanel.setMinimumSize(new Dimension(380, 40));
-    parameterPanel.setPreferredSize(new Dimension(380, 40));
+    parameterPanel.setPreferredSize(new Dimension(380, 150));
+    fieldWidthLabel.setToolTipText("minimum number of digits");
+    fieldWidthLabel.setText("parameter field width:");
+    widthTextField.setToolTipText("");
+    widthTextField.setSelectionStart(1);
+    widthTextField.setText("0");
+    paddingLabel.setText("padding:");
+    spacesRadioButton.setText("pad with space");
+    zeroRadioButton.setText("pad with zeros");
+    paramComboBox.addActionListener(new PrintfEditor_paramComboBox_actionAdapter(this));
     buttonPanel.add(cancelButton, null);
     buttonPanel.add(saveButton, null);
     this.getContentPane().add(formatPanel, BorderLayout.NORTH);
@@ -91,16 +109,23 @@ public class PrintfEditor extends JDialog implements EDPEditor {
     this.getContentPane().add(parameterPanel, BorderLayout.CENTER);
     this.getContentPane().add(buttonPanel, BorderLayout.SOUTH);
     buttonGroup.add(cancelButton);
-    parameterPanel.add(insertButton,
-                       new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0
-                                              , GridBagConstraints.CENTER,
-                                              GridBagConstraints.NONE,
-                                              new Insets(5, 10, 5, 0), 0, 6));
-    parameterPanel.add(paramComboBox,
-                       new GridBagConstraints(1, 0, 1, 1, 1.0, 0.0
-                                              , GridBagConstraints.CENTER,
-                                              GridBagConstraints.HORIZONTAL,
-                                              new Insets(5, 8, 5, 6), 232, 6));
+    parameterPanel.add(paramComboBox,  new GridBagConstraints(1, 0, 3, 1, 1.0, 0.0
+            ,GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL, new Insets(2, 6, 0, 15), 197, 6));
+    parameterPanel.add(widthTextField,  new GridBagConstraints(1, 1, 1, 2, 1.0, 0.0
+            ,GridBagConstraints.WEST, GridBagConstraints.HORIZONTAL, new Insets(21, 11, 38, 0), 21, 4));
+    parameterPanel.add(insertButton,  new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0
+            ,GridBagConstraints.CENTER, GridBagConstraints.NONE, new Insets(2, 15, 0, 8), 0, 6));
+    parameterPanel.add(fieldWidthLabel,  new GridBagConstraints(0, 2, 1, 1, 0.0, 0.0
+            ,GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(0, 15, 43, 0), 0, 0));
+    parameterPanel.add(spacesRadioButton,  new GridBagConstraints(3, 1, 1, 1, 0.0, 0.0
+            ,GridBagConstraints.CENTER, GridBagConstraints.NONE, new Insets(9, 0, 0, 15), 6, 0));
+    buttonGroup1.add(spacesRadioButton);
+    buttonGroup1.add(zeroRadioButton);
+    zeroRadioButton.setSelected(true);
+    parameterPanel.add(paddingLabel,  new GridBagConstraints(2, 2, 1, 1, 0.0, 0.0
+            ,GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(0, 17, 43, 0), 0, 0));
+    parameterPanel.add(zeroRadioButton,  new GridBagConstraints(3, 2, 1, 1, 0.0, 0.0
+            ,GridBagConstraints.CENTER, GridBagConstraints.NONE, new Insets(10, 0, 22, 15), 8, 0));
   }
 
   void saveButton_actionPerformed(ActionEvent e) {
@@ -128,10 +153,22 @@ public class PrintfEditor extends JDialog implements EDPEditor {
         format = "%s";
         break;
       case ConfigParamDescr.TYPE_INT:
-      case ConfigParamDescr.TYPE_YEAR:
       case ConfigParamDescr.TYPE_POS_INT:
-        format = "%d";
+        StringBuffer fbuf = new StringBuffer("%");
+        boolean is_zero = zeroRadioButton.isSelected();
+        int width = Integer.parseInt(widthTextField.getText());
+        if(width > 0) {
+          fbuf.append(".");
+          if(is_zero) {
+            fbuf.append(0);
+          }
+          fbuf.append(width);
+        }
+        fbuf.append("d");
+        format = fbuf.toString();
         break;
+      case ConfigParamDescr.TYPE_YEAR:
+        format = "%d";
     }
     // add the combobox data value to the edit box
     int pos = formatTextArea.getCaretPosition();
@@ -139,7 +176,7 @@ public class PrintfEditor extends JDialog implements EDPEditor {
     pos = parameterTextArea.getCaretPosition();
     parameterTextArea.insert(", " + key, pos);
 
-    // if the value is an integer - get the field specifics
+
   }
 
 
@@ -152,6 +189,7 @@ public class PrintfEditor extends JDialog implements EDPEditor {
     m_data = data;
     setTemplate((PrintfTemplate)data.getData());
     // initialize the combobox
+    paramComboBox.removeAllItems();
     paramKeys = data.getPlugin().getPrintfDescrs();
     if(paramKeys.size() > 0) {
       for (Iterator it = paramKeys.keySet().iterator(); it.hasNext(); ) {
@@ -176,6 +214,29 @@ public class PrintfEditor extends JDialog implements EDPEditor {
     }
     formatTextArea.setText(template.m_format);
     parameterTextArea.setText(template.getTokenString());
+  }
+
+  void paramComboBox_actionPerformed(ActionEvent e) {
+    String key = (String)paramComboBox.getSelectedItem();
+    int type = ((Integer)paramKeys.get(key)).intValue();
+    if ( (type == ConfigParamDescr.TYPE_INT) ||
+        (type == ConfigParamDescr.TYPE_POS_INT)) {
+      widthTextField.setVisible(true);
+      fieldWidthLabel.setVisible(true);
+      spacesRadioButton.setVisible(true);
+      zeroRadioButton.setVisible(true);
+      paddingLabel.setVisible(true);
+
+    }
+    else {
+      widthTextField.setVisible(false);
+      fieldWidthLabel.setVisible(false);
+      spacesRadioButton.setVisible(false);
+      zeroRadioButton.setVisible(false);
+      paddingLabel.setVisible(false);
+
+    }
+
   }
 }
 
@@ -215,5 +276,16 @@ class PrintfTemplateEditor_insertButton_actionAdapter
 
   public void actionPerformed(ActionEvent e) {
     adaptee.insertButton_actionPerformed(e);
+  }
+}
+
+class PrintfEditor_paramComboBox_actionAdapter implements java.awt.event.ActionListener {
+  PrintfEditor adaptee;
+
+  PrintfEditor_paramComboBox_actionAdapter(PrintfEditor adaptee) {
+    this.adaptee = adaptee;
+  }
+  public void actionPerformed(ActionEvent e) {
+    adaptee.paramComboBox_actionPerformed(e);
   }
 }
