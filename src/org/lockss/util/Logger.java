@@ -1,5 +1,5 @@
 /*
- * $Id: Logger.java,v 1.26 2003-06-20 22:34:53 claire Exp $
+ * $Id: Logger.java,v 1.27 2003-07-14 06:45:22 tlipkis Exp $
  */
 
 /*
@@ -160,7 +160,6 @@ public class Logger {
 
   private static void deferredInit() {
     // Can't call this until Configuration class is fully loaded.
-    registerConfigCallback();
     myLog = Logger.getLogger("Logger");
   }
 
@@ -359,12 +358,13 @@ public class Logger {
     defaultLevelName = nameOf(defaultLevel);
   }
 
-  /** Register callback to reset log levels when config changes.  XXX This
+  /** Return a callback to reset log levels when config changes.  XXX This
    * shouldn't be public.  Fix when there's a proper way to stop and
    * restart Logger
    */
-  public static void registerConfigCallback() {
-    Configuration.registerConfigurationCallback(new Configuration.Callback() {
+  public static Configuration.Callback getConfigCallback() {
+    return
+      new Configuration.Callback() {
 	public void configurationChanged(Configuration newConfig,
 					 Configuration oldConfig,
 					 Set changedKeys) {
@@ -373,7 +373,7 @@ public class Logger {
 	    setLogTargets();
 	  }
 	}
-      });
+      };
   }
 
   /** Set log level of all logs to the currently configured value
