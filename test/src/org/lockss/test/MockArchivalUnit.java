@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.29 2003-06-20 22:34:55 claire Exp $
+ * $Id: MockArchivalUnit.java,v 1.30 2003-06-30 23:08:16 troberts Exp $
  */
 
 /*
@@ -205,6 +205,13 @@ public class MockArchivalUnit implements ArchivalUnit {
     shouldCallTopLevelPoll = val;
   }
 
+  public String toString() {
+    StringBuffer sb = new StringBuffer();
+    sb.append("[MockArchivalUnit: auId=");
+    sb.append(auId);
+    sb.append("]");
+    return sb.toString();
+  }
 
 }
 
