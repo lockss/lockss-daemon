@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.12 2003-02-27 19:01:54 tal Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.13 2003-02-27 21:56:17 tal Exp $
  */
 
 /*
@@ -53,7 +53,9 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
 /**
  * This is the url which the Crawler should start at.
  */
-  public static final String SIMULATED_URL_START = "http://www.example.com/index.html";
+  public static final String SIMULATED_URL_START =
+    "http://www.example.com/index.html";
+
   /**
    * This is the root of the url which the SimAU pretends to be.
    * It is replaced with the actual directory root.
@@ -64,20 +66,20 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
   private SimulatedContentGenerator scgen;
   private String auId = StringUtil.gensym("SimAU_");
 
-  public SimulatedArchivalUnit(String new_fileRoot) {
-    super(null, new CrawlSpec(SIMULATED_URL_START, null));
-    fileRoot = new_fileRoot;
-    scgen = new SimulatedContentGenerator(fileRoot);
+  public SimulatedArchivalUnit(Plugin owner) {
+    super(owner, new CrawlSpec(SIMULATED_URL_START, null));
   }
 
+  /** Convenience methods, as most creators don't care about the plugin */
   public SimulatedArchivalUnit() {
-    this("");
+    this(new SimulatedPlugin());
   }
 
   public void setConfiguration(Configuration config) {
   }
 
-  public CachedUrlSet cachedUrlSetFactory(ArchivalUnit owner, CachedUrlSetSpec cuss) {
+  public CachedUrlSet cachedUrlSetFactory(ArchivalUnit owner,
+					  CachedUrlSetSpec cuss) {
     return new GenericFileCachedUrlSet(owner, cuss);
   }
 
@@ -89,30 +91,39 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
     return new SimulatedUrlCacher(owner, checkUrlFormat(url), fileRoot);
   }
 
-  public CachedUrlSet getAUCachedUrlSet() {
-    return new GenericFileCachedUrlSet(this,
-               new RangeCachedUrlSetSpec(AuUrl.PROTOCOL_COLON +
-        "//www.example.com"));
-  }
-
-  public String getPluginId() {
-    return "simulated";
-  }
-
   public String getAUId() {
     return auId;
-//     return "content";
   }
 
   // public methods
-  public String getUrlRoot() { return fileRoot; }
+
+  /** Set the directory where simulated content is generated */
+  public void setRootDir(String rootDir) {
+    fileRoot = rootDir;
+  }
+
+  /** Returns the directory where simulated content is generated */
+  public String getRootDir() {
+    return fileRoot; }
+
+  /**
+   * Returns the {@link SimulatedContentGenerator} for setting
+   * parameters.
+   * @return the generator
+   */
+  public SimulatedContentGenerator getContentGenerator() {
+    if (scgen == null) {
+      scgen = new SimulatedContentGenerator(fileRoot);
+    }
+    return scgen;
+  }
 
   /**
    * generateContentTree() generates the simulated content.
    */
   public void generateContentTree() {
-    if (!scgen.isContentTree()) {
-      scgen.generateContentTree();
+    if (!getContentGenerator().isContentTree()) {
+      getContentGenerator().generateContentTree();
     }
   }
 
@@ -122,8 +133,10 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
    */
   public void resetContentTree() {
     // clears and restores content tree to starting state
-    if (scgen.isContentTree()) scgen.deleteContentTree();
-    scgen.generateContentTree();
+    if (getContentGenerator().isContentTree()) {
+      getContentGenerator().deleteContentTree();
+    }
+    getContentGenerator().generateContentTree();
   }
 
   public void alterContentTree() {
@@ -134,17 +147,7 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
    * deleteContentTree() deletes the simulated content.
    */
   public void deleteContentTree() {
-    scgen.deleteContentTree();
-  }
-
-  /**
-   * Returns the {@link SimulatedContentGenerator} for setting
-   * parameters.
-   * @return the generator
-   */
-
-  public SimulatedContentGenerator getContentGenerator() {
-    return scgen;
+    getContentGenerator().deleteContentTree();
   }
 
   public void pause() {

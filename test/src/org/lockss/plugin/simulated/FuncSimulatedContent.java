@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSimulatedContent.java,v 1.23 2003-02-27 18:54:49 tal Exp $
+ * $Id: FuncSimulatedContent.java,v 1.24 2003-02-27 21:56:17 tal Exp $
  */
 
 /*
@@ -58,7 +58,8 @@ public class FuncSimulatedContent extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    sau = new SimulatedArchivalUnit(tempDirPath);
+    sau = new SimulatedArchivalUnit();
+    sau.setRootDir(tempDirPath);
     String s = SystemMetrics.PARAM_HASH_TEST_DURATION + "=1000";
     String s2 = SystemMetrics.PARAM_HASH_TEST_BYTE_STEP + "=1024";
     String s3 = LockssRepositoryImpl.PARAM_CACHE_LOCATION + "=" + tempDirPath;
@@ -96,7 +97,8 @@ public class FuncSimulatedContent extends LockssTestCase {
     byte[] contentH = getHash(set, false);
 
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    sau = new SimulatedArchivalUnit(tempDirPath);
+    sau = new SimulatedArchivalUnit();
+    sau.setRootDir(tempDirPath);
     TestLockssRepositoryImpl.configCacheLocation(tempDirPath);
 
     createContent();
