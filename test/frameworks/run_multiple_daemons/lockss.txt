@@ -4,7 +4,7 @@ org.lockss.log.default.level=debug
 #lockss repository settings
 org.lockss.cache.location=./
 
-org.lockss.parameterReloadInterval = 1m
+org.lockss.config.reloadInterval = 1m
 
 #hasher settings
 #org.lockss.hasher.numSteps
@@ -52,5 +52,8 @@ org.lockss.poll.contentpoll.max=12m
 org.lockss.treewalk.interval=5m
 org.lockss.treewalk.start.delay=10s
 org.lockss.comm.router.beacon.interval=1m
+org.lockss.baseau.toplevel.poll.interval.min=5m
+org.lockss.baseau.toplevel.poll.interval.max=15m
 
 org.lockss.metrics.slowest.hashrate = 250
+org.lockss.state.recall.delay=5m
