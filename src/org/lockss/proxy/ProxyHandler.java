@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.10 2003-02-26 06:03:35 tal Exp $
+ * $Id: ProxyHandler.java,v 1.11 2003-03-01 01:26:18 tal Exp $
  */
 
 /*
@@ -136,7 +136,8 @@ public class ProxyHandler extends NullHandler implements LockssManager {
     System.err.println("URI="+uri);
 
     String urlString = uri.toString();
-    ArchivalUnit au = pluginMgr.findArchivalUnit(urlString);
+//     ArchivalUnit au = pluginMgr.findArchivalUnit(urlString);
+    ArchivalUnit au = null;
     if (au != null) {
       CachedUrlSet cus = au.getAUCachedUrlSet();
       if (cus != null) {
