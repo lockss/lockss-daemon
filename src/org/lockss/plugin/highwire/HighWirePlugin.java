@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePlugin.java,v 1.15 2003-02-10 23:47:11 troberts Exp $
+ * $Id: HighWirePlugin.java,v 1.16 2003-02-20 22:30:02 tal Exp $
  */
 
 /*
@@ -35,9 +35,10 @@ package org.lockss.plugin.highwire;
 import java.net.*;
 import java.util.*;
 import gnu.regexp.*;
-import org.lockss.daemon.*;
 import org.lockss.util.*;
+import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.base.*;
 
 /**
  * This is a first cut at making a HighWire plugin
@@ -46,27 +47,25 @@ import org.lockss.plugin.*;
  * @version 0.0
  */
 
-public class HighWirePlugin implements LockssPlugin {
+public class HighWirePlugin extends BasePlugin {
   public static final String LOG_NAME = "HighWirePlugin";
   public Map archivalUnits = null;
 
-  private static final String PROP_BASE="org.lockss.plugin.highwire";
-  private static final String VOL_PROP=PROP_BASE+".volume";
-  private static final String BASE_URL_PROP=PROP_BASE+".base_url";
+  // public only so test methods can use them
+  public static final String BASE_URL_PROP =  "base_url";
+  public static final String VOL_PROP = "volume";
 
   public void initPlugin() {
+    super.initPlugin();
     archivalUnits = new HashMap();
   }
 
   public void stopPlugin() {
+    super.stopPlugin();
   }
 
-  public ArchivalUnit getArchivalUnit() {
-    throw new UnsupportedOperationException("Not implemented");
-  }
-
-  public String getPluginName() {
-    return this.getClass().getName();
+  public String getPluginId() {
+    return "HighWirePlugin";
   }
 
   public String getVersion() {
@@ -77,48 +76,61 @@ public class HighWirePlugin implements LockssPlugin {
     throw new UnsupportedOperationException("Not implemented");
   }
 
-  public Properties getConfigInfo(String AUName) {
-    throw new UnsupportedOperationException("Not implemented");
+  public List getAUConfigProperties() {
+    return ListUtil.list(BASE_URL_PROP, VOL_PROP);
   }
 
-  public ArchivalUnit findAU(Properties configInfo) 
-      throws ArchivalUnit.InstantiationException {
+  public String getAUIdFromConfig(Configuration configInfo) 
+      throws ArchivalUnit.ConfigurationException {
     if (configInfo == null) {
       throw new IllegalArgumentException("Called with null configInfo");
     }
-    String urlStr = configInfo.getProperty(BASE_URL_PROP);
+    String urlStr = configInfo.get(BASE_URL_PROP);
     if (urlStr == null) {
-      throw new IllegalArgumentException("Property didn't have a value for "+
-					 BASE_URL_PROP);
+      throw new
+	ArchivalUnit.ConfigurationException("No configuration value for "+
+					    BASE_URL_PROP);
     }
-    String volStr = configInfo.getProperty(VOL_PROP);
+    String volStr = configInfo.get(VOL_PROP);
     if (volStr == null) {
-      throw new IllegalArgumentException("Property didn't have a value for "+
-					 VOL_PROP);
+      throw new
+	ArchivalUnit.ConfigurationException("No Configuration value for "+
+					    VOL_PROP);
     }
 
     try {
       URL url = new URL(urlStr);
       int vol = Integer.parseInt(volStr);
-      return findAU(url, vol);
+      return constructAUId(url, vol);
     } catch (MalformedURLException murle) {
-      throw new ArchivalUnit.InstantiationException(BASE_URL_PROP+
+      throw new ArchivalUnit.ConfigurationException(BASE_URL_PROP+
 						    " set to a bad url "+
 						    urlStr, murle);
-    } catch (REException ree) {
-      throw new ArchivalUnit.InstantiationException("Regular expression "+
-						    "problem", ree);
     }
   }
 
-  private synchronized ArchivalUnit findAU(URL url, int vol) 
-      throws REException {
-    String key = HighWireArchivalUnit.getAUId(url, vol);
-    HighWireArchivalUnit au = (HighWireArchivalUnit)archivalUnits.get(key);
-    if (au == null) {
-      au = new HighWireArchivalUnit(url, vol);
-      archivalUnits.put(key, au);
-    }
-    return au;
+  // tk - MUST canonicalize URL
+  public static String constructAUId(URL url, int vol) {
+    StringBuffer sb = new StringBuffer();
+    sb.append(vol);
+    sb.append("|");
+    sb.append(url.toString());
+    return sb.toString();
+  }
+
+  public static URL UrlFromAUId(String auId)
+      throws MalformedURLException{
+    int pos = auId.indexOf("|");
+    return new URL(auId.substring(pos + 1));
+  }
+
+  public static int volumeFromAUId(String auId) {
+    int pos = auId.indexOf("|");
+    return Integer.parseInt(auId.substring(0, pos));
+  }
+
+  public ArchivalUnit createAU(Configuration configInfo) 
+      throws ArchivalUnit.ConfigurationException {
+    return new HighWireArchivalUnit(this, configInfo);
   }
 }
